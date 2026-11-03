@@ -14,15 +14,15 @@ var i = n(477900),
     E = n(289873),
     h = n(270003),
     S = n(452027),
-    x = n(73153),
-    T = n(964486),
-    p = n(793574),
-    f = n(688810),
+    T = n(73153),
+    p = n(964486),
+    f = n(793574),
+    x = n(688810),
     _ = n(531260),
     I = n(235986),
     N = n(769015),
-    C = n(75678),
-    b = n(832946),
+    b = n(75678),
+    C = n(832946),
     y = n(287809),
     v = n(174459),
     j = n(975571),
@@ -67,14 +67,14 @@ function et(e) {
                     (0, i.jsx)(K.eu, { className: ee.my, src: u, "aria-label": c, size: W._3.SIZE_24, ...d }),
                     (0, i.jsxs)(g.E, {
                         className: ee.Xh,
-                        variant: "text-sm/medium",
+                        variant: "body-sm/medium",
                         color: "text-strong",
                         children: [c, !!n && ` (${$.intl.string($.t.LuZzxn)})`],
                     }),
                     null != s &&
                         (0, i.jsxs)(g.E, {
                             className: ee.Pf,
-                            variant: "text-sm/medium",
+                            variant: "body-sm/medium",
                             color: "text-subtle",
                             children: [(0, i.jsx)("span", { className: ee.me, children: "\xb7" }), s],
                         }),
@@ -85,7 +85,7 @@ function et(e) {
                 (0, i.jsx)("div", {
                     className: ee.dM,
                     children: (0, i.jsx)(Z.Q, {
-                        textVariant: "text-sm/medium",
+                        textVariant: "body-sm/medium",
                         variant: "secondary",
                         text: a.label,
                         onClick: a.onRemove,
@@ -136,7 +136,7 @@ function er(e) {
                     }),
                     (0, i.jsx)(g.E, {
                         className: ee.Xh,
-                        variant: "text-sm/medium",
+                        variant: "body-sm/medium",
                         color: "text-strong",
                         children: $.intl.string(J.default["/x7DVG"]),
                     }),
@@ -147,7 +147,7 @@ function er(e) {
                 (0, i.jsx)("div", {
                     className: ee.dM,
                     children: (0, i.jsx)(Z.Q, {
-                        textVariant: "text-sm/medium",
+                        textVariant: "body-sm/medium",
                         variant: "secondary",
                         text: $.intl.string(J.default.O15JWp),
                         onClick: t,
@@ -189,7 +189,7 @@ function ec(e) {
                 className: eu.iQ,
                 children: [
                     (0, i.jsx)(m.D, { variant: "heading-xl/semibold", children: t }),
-                    (0, i.jsx)(g.E, { variant: "text-sm/medium", color: "text-muted", children: n }),
+                    (0, i.jsx)(g.E, { variant: "body-sm/medium", color: "text-muted", children: n }),
                 ],
             }),
             (0, i.jsx)("div", { className: eu.UD, children: l }),
@@ -270,7 +270,7 @@ function eg(e) {
                         gap: 0,
                         children: [
                             (0, i.jsx)(m.D, {
-                                variant: "heading-sm/medium",
+                                variant: "heading-xs/medium",
                                 color: "text-strong",
                                 className: eu.Or,
                                 children: $.intl.string(J.default["oqw/KW"]),
@@ -309,12 +309,12 @@ function em(e) {
                 padding: { top: 12, left: 4, right: 4, bottom: 10 },
                 children: [
                     (0, i.jsx)(m.D, {
-                        variant: "heading-sm/medium",
+                        variant: "heading-xs/medium",
                         color: "text-strong",
                         children: $.intl.string(J.default["oqw/KW"]),
                     }),
                     (0, i.jsx)(g.E, {
-                        variant: "text-xs/medium",
+                        variant: "body-xs/medium",
                         color: "text-subtle",
                         children: $.intl.format(J.default["/a/UoP"], { usedSeats: u, totalSeats: o }),
                     }),
@@ -373,8 +373,8 @@ function eA(e) {
                 return (n) => (0, i.jsx)(e, { ...n, subscription: t });
             }));
     }
-    let x = l.useMemo(() => !ea.BE.includes(t.status) && o > 0, [t.status, o]),
-        { title: T, description: p } = (function () {
+    let T = l.useMemo(() => !ea.BE.includes(t.status) && o > 0, [t.status, o]),
+        { title: p, description: f } = (function () {
             switch (A) {
                 case eo.Dmq.CANCELED:
                     return {
@@ -419,8 +419,8 @@ function eA(e) {
                 className: eu.wS,
                 children: [
                     (0, i.jsx)(ec, {
-                        title: T,
-                        description: p,
+                        title: p,
+                        description: f,
                         button: (0, O.ki)(t)
                             ? (0, i.jsx)(w.$, {
                                   variant: "expressive",
@@ -439,7 +439,7 @@ function eA(e) {
                                           fullWidth: !0,
                                           text: $.intl.string(J.default.Tcmclj),
                                           onClick: S,
-                                          disabled: !x,
+                                          disabled: !T,
                                       }),
                                       (0, i.jsx)(w.$, {
                                           variant: "secondary",
@@ -454,7 +454,7 @@ function eA(e) {
                     (0, i.jsx)(em, {
                         premiumGroupMembers: r,
                         isLoadingPremiumGroupMembers: a,
-                        canInvite: x,
+                        canInvite: T,
                         onInvite: S,
                         onRemoveMember: function (e) {
                             (v.default.track(eo.HAw.PREMIUM_GROUP_SUBSCRIPTION_CARD_REMOVE_MEMBER_CLICKED, {
@@ -495,13 +495,13 @@ function eA(e) {
 var eE = n(866665),
     eh = n(392943),
     eS = n(580630),
-    ex = n(202541),
-    eT = n(267023);
-let ep = { page: eo.liQ.USER_SETTINGS, section: eo.JJy.SETTINGS_PREMIUM, object: eo.ZSU.CARD };
-function ef(e) {
+    eT = n(202541),
+    ep = n(267023);
+let ef = { page: eo.liQ.USER_SETTINGS, section: eo.JJy.SETTINGS_PREMIUM, object: eo.ZSU.CARD };
+function ex(e) {
     let { premiumSubscription: t, discountInfo: n } = e;
     if (null == n.duration || null == n.percentage) return null;
-    let l = (0, O.y8)(ex.gD.PREMIUM_MONTH_TIER_2, !1, !1, { currency: t.currency, paymentSourceId: t.paymentSourceId }),
+    let l = (0, O.y8)(eT.gD.PREMIUM_MONTH_TIER_2, !1, !1, { currency: t.currency, paymentSourceId: t.paymentSourceId }),
         s = (0, eS.$g)(l.amount, l.currency),
         r = Math.round(l.amount * (1 - n.percentage / 100)),
         a = (0, eS.$g)(r, l.currency);
@@ -513,7 +513,7 @@ function ef(e) {
                 children: $.intl.string($.t["53BCd6"]),
             }),
             (0, i.jsx)(g.E, {
-                variant: "text-sm/medium",
+                variant: "body-sm/medium",
                 color: "text-default",
                 children: $.intl.format($.t.N43FMx, {
                     numMonths: n.duration,
@@ -528,9 +528,9 @@ function ef(e) {
 let e_ = function (e) {
     var t;
     let { subscription: l, invoicePreview: s, isLoading: r, discountInfo: a, analyticsLocation: o } = e,
-        { analyticsLocations: u } = (0, f.Ay)(p.A.REFERRAL_INCENTIVE_DISCOUNT_SUBSCRIPTION_HEADER),
+        { analyticsLocations: u } = (0, x.Ay)(f.A.REFERRAL_INCENTIVE_DISCOUNT_SUBSCRIPTION_HEADER),
         d = O.Ay.getPlanIdFromInvoice(l, s);
-    if ((0, b.m1)(d)) return null;
+    if ((0, C.m1)(d)) return null;
     let c = O.Ay.isSwitchingPlansDisabled(l),
         m = O.Ay.getSwitchingPlansDisabledMessage(l),
         A =
@@ -538,41 +538,41 @@ let e_ = function (e) {
                 ? null
                 : $.intl.formatToPlainString($.t.u8bQ1q, { expiryDate: new Date(t) });
     return (0, i.jsx)("div", {
-        className: eT.b8,
+        className: ep.b8,
         children: (0, i.jsx)(k.h, {
             color: "nitro-pink",
-            className: eT.YL,
+            className: ep.YL,
             children: (0, i.jsxs)("div", {
-                className: eT.vK,
+                className: ep.vK,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: eT.Gp,
+                        className: ep.Gp,
                         children: [
                             (0, i.jsx)(eh.A, {
                                 color: "currentcolor",
-                                className: eT.Ss,
+                                className: ep.Ss,
                                 "aria-label": $.intl.string($.t.lpNrPu),
                             }),
                             (0, i.jsx)(g.E, {
-                                className: eT.Sd,
-                                variant: "text-sm/medium",
+                                className: ep.Sd,
+                                variant: "body-sm/medium",
                                 color: "text-strong",
                                 children: A,
                             }),
                         ],
                     }),
-                    (0, i.jsx)("div", { className: eT.yF }),
+                    (0, i.jsx)("div", { className: ep.yF }),
                     (0, i.jsxs)("div", {
-                        className: eT.IH,
+                        className: ep.IH,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: eT.Tm,
+                                className: ep.Tm,
                                 children: [
-                                    (0, i.jsx)(ef, { premiumSubscription: l, discountInfo: a }),
+                                    (0, i.jsx)(ex, { premiumSubscription: l, discountInfo: a }),
                                     (0, i.jsx)("div", {
-                                        className: eT.Xc,
+                                        className: ep.Xc,
                                         children: (0, i.jsxs)("div", {
-                                            className: eT.qK,
+                                            className: ep.qK,
                                             children: [
                                                 (0, i.jsx)(eE.m, {
                                                     text: m,
@@ -584,10 +584,10 @@ let e_ = function (e) {
                                                         text: $.intl.string($.t["dylp/7"]),
                                                         size: "md",
                                                         onClick: () => {
-                                                            (0, C.A)({
+                                                            (0, b.A)({
                                                                 analyticsLocations: u,
                                                                 analyticsLocation: o,
-                                                                analyticsObject: ep,
+                                                                analyticsObject: ef,
                                                                 subscription: l,
                                                             });
                                                         },
@@ -630,7 +630,7 @@ let e_ = function (e) {
                                 ],
                             }),
                             (0, i.jsx)("img", {
-                                className: eT._e,
+                                className: ep._e,
                                 src: "https://cdn.discordapp.com/assets/content/44c174fe5b2d4d5d63ae502269342904afdfa7ea9fcc06a7ed693ae69bffebbb.svg",
                                 alt: "",
                                 draggable: !1,
@@ -644,8 +644,8 @@ let e_ = function (e) {
 };
 var eI = n(97352),
     eN = n(403581),
-    eC = n(511484),
-    eb = n(811611),
+    eb = n(511484),
+    eC = n(811611),
     ey = n(473702),
     ev = n(858432),
     ej = n(398932);
@@ -661,7 +661,7 @@ function eL(e) {
     });
     if (null == o) return null;
     let u = (0, eS.$g)(o.amount, l.currency),
-        d = (0, O.y8)(ex.gD.PREMIUM_MONTH_TIER_2, !1, !1, { currency: t.currency, paymentSourceId: t.paymentSourceId }),
+        d = (0, O.y8)(eT.gD.PREMIUM_MONTH_TIER_2, !1, !1, { currency: t.currency, paymentSourceId: t.paymentSourceId }),
         c = (0, eS.$g)(d.amount, d.currency);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -671,7 +671,7 @@ function eL(e) {
                 children: $.intl.format($.t["50bA2I"], { percent: n.percentage }),
             }),
             (0, i.jsx)(g.E, {
-                variant: "text-sm/medium",
+                variant: "body-sm/medium",
                 color: "text-default",
                 children: s
                     ? $.intl.format($.t["3ZiutU"], { percent: n.percentage, numMonths: n.duration, regularPrice: c })
@@ -687,7 +687,7 @@ function eL(e) {
 }
 function eR(e) {
     let { discountOffer: t, premiumSubscription: n } = e,
-        l = (0, eC.tQ)(n, ex.gD.PREMIUM_MONTH_TIER_2, t);
+        l = (0, eb.tQ)(n, eT.gD.PREMIUM_MONTH_TIER_2, t);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(m.D, {
@@ -696,7 +696,7 @@ function eR(e) {
                 children: $.intl.format($.t.sFO20P, { percent: t.discount.amount }),
             }),
             (0, i.jsx)(g.E, {
-                variant: "text-sm/medium",
+                variant: "body-sm/medium",
                 color: "text-default",
                 children: $.intl.format($.t["PH7Q+R"], {
                     numMonths: t.discount.intervalCount,
@@ -717,7 +717,7 @@ let eD = function (e) {
             renewalChurnDiscountInfo: o,
             discountOffer: u,
         } = e,
-        { analyticsLocations: d } = (0, f.Ay)(p.A.CHURN_DISCOUNT_SUBSCRIPTION_HEADER);
+        { analyticsLocations: d } = (0, x.Ay)(f.A.CHURN_DISCOUNT_SUBSCRIPTION_HEADER);
     function c() {
         t.status !== eo.Dmq.CANCELED && m();
     }
@@ -744,8 +744,8 @@ let eD = function (e) {
         });
     }
     let A = O.Ay.getPlanIdFromInvoice(t, l),
-        E = (0, eb.ux)(u?.expiresAt?.toISOString());
-    return (0, b.m1)(A)
+        E = (0, eC.ux)(u?.expiresAt?.toISOString());
+    return (0, C.m1)(A)
         ? null
         : (0, i.jsx)("div", {
               className: ev.S6,
@@ -765,7 +765,7 @@ let eD = function (e) {
                                   }),
                                   (0, i.jsx)(g.E, {
                                       className: ev.tD,
-                                      variant: "text-sm/medium",
+                                      variant: "body-sm/medium",
                                       color: "text-strong",
                                       children: null != u && E,
                                   }),
@@ -805,7 +805,7 @@ let eD = function (e) {
                                                                       text: $.intl.string($.t["dylp/7"]),
                                                                       size: "md",
                                                                       onClick: () => {
-                                                                          (0, C.A)({
+                                                                          (0, b.A)({
                                                                               analyticsLocations: d,
                                                                               analyticsLocation: r,
                                                                               analyticsObject: eO,
@@ -923,7 +923,7 @@ function eK(e) {
             let e = y.default.getCurrentUser();
             return (eG()(null != e, "GuildBoostingHeader: currentUser cannot be undefined"), e);
         }),
-        { analyticsLocations: c } = (0, f.Ay)(p.A.GUILD_BOOSTING_SUBSCRIPTION_HEADER);
+        { analyticsLocations: c } = (0, x.Ay)(f.A.GUILD_BOOSTING_SUBSCRIPTION_HEADER);
     if (0 === (0, O.bx)(n.additionalPlans)) return null;
     let { status: m } = n,
         A = (0, O.$k)(n),
@@ -1000,7 +1000,7 @@ function eK(e) {
             !a &&
                 (0, i.jsx)(g.E, {
                     className: eY.yW,
-                    variant: "text-sm/normal",
+                    variant: "body-sm/normal",
                     children: $.intl.format(eM.Fr ? $.t.uxYBEa : $.t.k6haR9, { openAppHook: () => (0, ek.A)("app") }),
                 }),
         ],
@@ -1015,7 +1015,7 @@ function e$(e) {
         o = (0, _.A)(),
         u = t.currentPeriodEnd;
     return (
-        o.fractionalState === ex.xc.FP_SUB_PAUSED && (u = o.endsAt.toDate()),
+        o.fractionalState === eT.xc.FP_SUB_PAUSED && (u = o.endsAt.toDate()),
         (0, i.jsxs)("div", {
             className: r()(eJ.zr, s),
             children: [
@@ -1066,7 +1066,7 @@ function e1() {
                     className: e0.Sh,
                     color: d.A.unsafe_rawColors.YELLOW_260.css,
                 }),
-                (0, i.jsx)(g.E, { className: e0.Cy, variant: "text-sm/normal", children: $.intl.string($.t.xFHEMa) }),
+                (0, i.jsx)(g.E, { className: e0.Cy, variant: "body-sm/normal", children: $.intl.string($.t.xFHEMa) }),
             ],
         })
     );
@@ -1088,7 +1088,7 @@ function e2() {
                 }),
                 (0, i.jsx)(g.E, {
                     className: e0.Cy,
-                    variant: "text-sm/normal",
+                    variant: "body-sm/normal",
                     children: $.intl.string($.t["j+nuQZ"]),
                 }),
             ],
@@ -1097,7 +1097,7 @@ function e2() {
 }
 function e3(e) {
     let { daysPastDue: t, subscription: n, openInvoiceId: s } = e,
-        { analyticsLocations: r } = (0, f.Ay)(p.A.PAST_DUE_ONE_TIME_PAYMENT_METHOD_BANNER);
+        { analyticsLocations: r } = (0, x.Ay)(f.A.PAST_DUE_ONE_TIME_PAYMENT_METHOD_BANNER);
     return (
         l.useEffect(() => {
             v.default.track(eo.HAw.TOOLTIP_VIEWED, { type: "subscription_settings_invalid_payment_method" });
@@ -1114,11 +1114,11 @@ function e3(e) {
                 }),
                 (0, i.jsx)(g.E, {
                     className: e0.Cy,
-                    variant: "text-sm/normal",
+                    variant: "body-sm/normal",
                     children: $.intl.format($.t["0nbf/G"], {
                         daysPastDue: t,
                         paymentModalRedirect: () => {
-                            (0, C.A)({ initialPlanId: n.planIdFromItems, openInvoiceId: s, analyticsLocations: r });
+                            (0, b.A)({ initialPlanId: n.planIdFromItems, openInvoiceId: s, analyticsLocations: r });
                         },
                     }),
                 }),
@@ -1131,7 +1131,7 @@ function e4(e) {
     return (0, i.jsxs)("div", {
         className: r()(e0.KF, s),
         children: [
-            (0, i.jsx)(m.D, { variant: "heading-md/semibold", className: e0.QL, children: $.intl.string($.t.KXQjfc) }),
+            (0, i.jsx)(m.D, { variant: "heading-sm/semibold", className: e0.QL, children: $.intl.string($.t.KXQjfc) }),
             (0, i.jsx)("div", { children: O.Ay.getBillingInformationString(t, n, l, !1, a) }),
         ],
     });
@@ -1178,9 +1178,9 @@ function e6(e) {
             fetchedOpenInvoice: m,
             isPremiumGroup: A,
         } = e,
-        { analyticsLocations: x } = (0, f.Ay)(p.A.SUBSCRIPTION_DETAILS),
-        T = null != c ? {} : { subscriptionId: n.id, renewal: !0, analyticsLocations: x, analyticsLocation: l },
-        [I] = (0, R.YV)(T);
+        { analyticsLocations: T } = (0, x.Ay)(f.A.SUBSCRIPTION_DETAILS),
+        p = null != c ? {} : { subscriptionId: n.id, renewal: !0, analyticsLocations: T, analyticsLocation: l },
+        [I] = (0, R.YV)(p);
     I = c ?? I;
     let N =
             null != g
@@ -1189,12 +1189,12 @@ function e6(e) {
                       subscriptionId: n.id,
                       renewal: !0,
                       applyEntitlements: !0,
-                      analyticsLocations: x,
+                      analyticsLocations: T,
                       analyticsLocation: l,
                   },
-        [C] = (0, R.YV)(N);
-    C = g ?? C;
-    let b = (0, _.A)(),
+        [b] = (0, R.YV)(N);
+    b = g ?? b;
+    let C = (0, _.A)(),
         y = (0, G.p)(),
         v = (0, D.nf)(),
         j = O.Ay.isBaseSubscriptionCanceled(n),
@@ -1207,17 +1207,17 @@ function e6(e) {
             }
             return !1;
         })(n, s);
-    if (null == I || null == C) return (0, i.jsx)(E.y, {});
-    let M = P ? (0, D.Bv)(C) : null,
-        U = null != M || (null != v && null != v.discountId && ex.i_.includes(v.discountId)),
-        V = !j && null != v && v.discountId === ex.sC,
+    if (null == I || null == b) return (0, i.jsx)(E.y, {});
+    let M = P ? (0, D.Bv)(b) : null,
+        U = null != M || (null != v && null != v.discountId && eT.i_.includes(v.discountId)),
+        V = !j && null != v && v.discountId === eT.sC,
         k = P && ((j && null != y) || (!j && U));
     return (
         (t =
             V && null != v
                 ? (0, i.jsx)(e_, {
                       subscription: n,
-                      invoicePreview: C,
+                      invoicePreview: b,
                       paymentSource: s,
                       discountInfo: v,
                       isLoading: a,
@@ -1226,7 +1226,7 @@ function e6(e) {
                 : k
                   ? (0, i.jsx)(eD, {
                         subscription: n,
-                        invoicePreview: C,
+                        invoicePreview: b,
                         paymentSource: s,
                         discountOffer: y,
                         renewalChurnDiscountInfo: M,
@@ -1237,7 +1237,7 @@ function e6(e) {
                   : (0, i.jsx)(eZ.A, {
                         subscription: n,
                         currentInvoicePreview: I,
-                        renewalInvoicePreview: C,
+                        renewalInvoicePreview: b,
                         paymentSource: s,
                         busy: a,
                         analyticsLocation: l,
@@ -1252,7 +1252,7 @@ function e6(e) {
                             subscription: n,
                             renewalInvoicePreview: I,
                             fromStandaloneBillingPage: o,
-                            fractionalPremiumInfo: b,
+                            fractionalPremiumInfo: C,
                             analyticsLocation: l,
                         }),
                     ],
@@ -1265,9 +1265,9 @@ function e6(e) {
                             children: [
                                 (0, i.jsx)(e4, {
                                     subscription: n,
-                                    renewalInvoicePreview: C,
+                                    renewalInvoicePreview: b,
                                     className: e0.g4,
-                                    fractionalPremiumInfo: b,
+                                    fractionalPremiumInfo: C,
                                     openInvoice: m,
                                 }),
                                 (0, i.jsx)("div", {
@@ -1309,7 +1309,7 @@ function e7() {
                 (0, i.jsx)(c.E, { size: "custom", width: 20, height: 20, color: d.A.unsafe_rawColors.RED_360.css }),
                 (0, i.jsx)(g.E, {
                     className: e0.dk,
-                    variant: "text-sm/normal",
+                    variant: "body-sm/normal",
                     children: $.intl.format($.t["6eXiiC"], { helpCenterLink: j.A.getArticleURL(eo.MVz.NITRO) }),
                 }),
             ],
@@ -1329,30 +1329,30 @@ function e9(e) {
         } = e;
     null != s && null != s[0] && (n = s[0]);
     let A = (0, u.bG)([y.default], () => y.default.getCurrentUser()),
-        { analyticsLocations: S } = (0, f.Ay)(p.A.SUBSCRIPTION_DETAILS),
+        { analyticsLocations: S } = (0, x.Ay)(f.A.SUBSCRIPTION_DETAILS),
         _ = (0, G.p)(),
         I = null != s ? s.slice(1) : [],
-        [N, C] = l.useState(0);
+        [N, b] = l.useState(0);
     (l.useEffect(() => {
         if (g)
             return (
-                x.h.subscribe("BILLING_SUBSCRIPTION_UPDATE_SUCCESS", e),
+                T.h.subscribe("BILLING_SUBSCRIPTION_UPDATE_SUCCESS", e),
                 () => {
-                    x.h.unsubscribe("BILLING_SUBSCRIPTION_UPDATE_SUCCESS", e);
+                    T.h.unsubscribe("BILLING_SUBSCRIPTION_UPDATE_SUCCESS", e);
                 }
             );
         function e(e) {
-            e.subscription.id === n.id && C((e) => e + 1);
+            e.subscription.id === n.id && b((e) => e + 1);
         }
     }, [n.id, g]),
-        (0, T.Ay)(() => {
+        (0, p.Ay)(() => {
             function e() {
-                return C((e) => e + 1);
+                return b((e) => e + 1);
             }
             return (
-                x.h.subscribe("BILLING_USER_OFFER_REDEEMED", e),
+                T.h.subscribe("BILLING_USER_OFFER_REDEEMED", e),
                 () => {
-                    x.h.unsubscribe("BILLING_USER_OFFER_REDEEMED", e);
+                    T.h.unsubscribe("BILLING_USER_OFFER_REDEEMED", e);
                 }
             );
         }));
@@ -1394,7 +1394,7 @@ function e9(e) {
     return null == v || null == j
         ? (0, i.jsx)(E.y, {})
         : (null != n.renewalMutations &&
-              ((n.renewalMutations.planId !== n.planId && !(0, b.m1)(n.renewalMutations.planId)) ||
+              ((n.renewalMutations.planId !== n.planId && !(0, C.m1)(n.renewalMutations.planId)) ||
                   n.hasExternalPlanChange) &&
               (t = (0, i.jsx)(e$, {
                   subscription: n,
@@ -1436,7 +1436,7 @@ function e9(e) {
                                       className: e0.HZ,
                                       children: [
                                           (0, i.jsx)(m.D, {
-                                              variant: "heading-md/semibold",
+                                              variant: "heading-sm/semibold",
                                               className: e0.dd,
                                               children: "Duplicate Subscriptions",
                                           }),

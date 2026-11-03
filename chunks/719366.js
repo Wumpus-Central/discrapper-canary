@@ -12,7 +12,7 @@ function A(t, r) {
         {
             color: "text-feedback-critical",
             style: { display: "flex", gap: "4px", margin: "8px 0 4px 0", alignItems: "center" },
-            variant: "text-sm/normal",
+            variant: "body-sm/normal",
             children: [(0, n.jsx)(s.E, { size: "custom", color: "currentColor", width: 14, height: 14 }), t],
         },
         r,
@@ -24,7 +24,7 @@ function _(t, r) {
         {
             color: "text-feedback-critical",
             style: { display: "flex", gap: "4px", margin: "8px 0 4px 0", alignItems: "center" },
-            variant: "text-sm/normal",
+            variant: "body-sm/normal",
             children: [(0, n.jsx)(s.E, { size: "custom", color: "currentColor", width: 14, height: 14 }), t],
         },
         r,

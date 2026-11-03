@@ -12,25 +12,25 @@ var r = n(477900),
     f = n(436283),
     m = n(743738),
     p = n(652215),
-    x = n(105292),
-    E = n(389760);
+    E = n(105292),
+    x = n(389760);
 function k(t) {
-    return { text: t, icon: (0, r.jsx)(o.n, { className: E.Kk, dotRadius: 3.5, themed: !0 }) };
+    return { text: t, icon: (0, r.jsx)(o.n, { className: x.Kk, dotRadius: 3.5, themed: !0 }) };
 }
 function N(t) {
     return {
-        text: t ?? x.intl.string(x.t.VCsUJu),
+        text: t ?? E.intl.string(E.t.VCsUJu),
         color: "text-feedback-critical",
-        icon: (0, r.jsx)(u.E, { size: "xs", color: "currentColor", className: s()(E.Kk, E.ik) }),
+        icon: (0, r.jsx)(u.E, { size: "xs", color: "currentColor", className: s()(x.Kk, x.ik) }),
     };
 }
 function g(t) {
     let { className: e, icon: n, text: i, color: l } = t;
     return (0, r.jsxs)("div", {
-        className: s()(E.iE, e),
+        className: s()(x.iE, e),
         children: [
             n,
-            (0, r.jsx)(h.E, { variant: "text-md/normal", color: l, scaleFontToUserSetting: !0, children: i }),
+            (0, r.jsx)(h.E, { variant: "body-md/normal", color: l, scaleFontToUserSetting: !0, children: i }),
         ],
     });
 }
@@ -53,11 +53,11 @@ let A = i.memo(function (t) {
         u = (function (t, e) {
             switch ((0, m.fK)(e, t)) {
                 case m.h0.SENDING:
-                    return k(x.intl.string(x.t.RiLfBY));
+                    return k(E.intl.string(E.t.RiLfBY));
                 case m.h0.CREATED:
-                    return k(x.intl.formatToPlainString(x.t["7ePV4t"], { applicationName: e.author.username }));
+                    return k(E.intl.formatToPlainString(E.t["7ePV4t"], { applicationName: e.author.username }));
                 case m.h0.TIMED_OUT:
-                    return N(x.intl.string(x.t.h8hzPd));
+                    return N(E.intl.string(E.t.h8hzPd));
                 case m.h0.FAILED:
                     return N(e.interactionError);
             }
@@ -67,6 +67,6 @@ let A = i.memo(function (t) {
         null != t && (u = N(t));
     }
     if (null == u) return null;
-    let { text: h, icon: E, color: A } = u;
-    return (0, r.jsx)(g, { icon: E, text: h, className: n, color: A });
+    let { text: h, icon: x, color: A } = u;
+    return (0, r.jsx)(g, { icon: x, text: h, className: n, color: A });
 });

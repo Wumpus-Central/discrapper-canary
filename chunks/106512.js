@@ -1,8 +1,8 @@
 n.d(e, { m: () => j });
 var i = n(477900),
-    l = n(582128),
-    o = n(503698),
-    s = n.n(o),
+    o = n(582128),
+    l = n(503698),
+    s = n.n(l),
     a = n(534514),
     r = n(834730),
     c = n(331322),
@@ -17,10 +17,10 @@ var i = n(477900),
     A = n(132344);
 function j(t) {
     let { className: e, config: n } = t,
-        o = (0, m.T)(n.asset),
+        l = (0, m.T)(n.asset),
         j = (0, m.T)(n.backgroundAsset),
         N = (0, h.gc)(j),
-        v = l.useMemo(() => {
+        v = o.useMemo(() => {
             let t = n.gradient;
             if (null != t && null != t.colors && !(t.colors.length < 2))
                 return (0, h.K5)({ gradient: t.colors, angle: t.angle }, { defaultAngle: 180 });
@@ -31,7 +31,7 @@ function j(t) {
         className: s()(A.WR, e),
         style: y,
         children: [
-            null != o && (0, i.jsx)("img", { alt: "", className: A.TB, "aria-hidden": !0, src: o }),
+            null != l && (0, i.jsx)("img", { alt: "", className: A.TB, "aria-hidden": !0, src: l }),
             (0, i.jsxs)("div", {
                 className: A.QT,
                 children: [
@@ -42,13 +42,13 @@ function j(t) {
                         variant: "heading-lg/semibold",
                         children: n.header,
                     }),
-                    (0, i.jsx)(r.E, { style: T, color: "text-muted", variant: "text-sm/medium", children: n.body }),
+                    (0, i.jsx)(r.E, { style: T, color: "text-muted", variant: "body-sm/medium", children: n.body }),
                     null != n.additionalTerms &&
                         (0, i.jsx)(r.E, {
                             className: A.KW,
                             style: T,
                             color: "text-muted",
-                            variant: "text-xxs/normal",
+                            variant: "footnote/normal",
                             children: n.additionalTerms,
                         }),
                     (0, i.jsxs)(c.B, {

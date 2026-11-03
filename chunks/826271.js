@@ -16,8 +16,8 @@ var n = l(477900),
     x = l(403362),
     k = l(16236),
     S = l(174459),
-    C = l(652215),
-    b = l(462617),
+    b = l(652215),
+    C = l(462617),
     j = l(760658),
     D = l(105292),
     P = l(349828),
@@ -25,15 +25,15 @@ var n = l(477900),
 function v(t) {
     let { transitionState: e, onClose: l, parentId: d, source: v } = t;
     a.useEffect(() => {
-        S.default.track(C.HAw.FAVORITES_GUILD_ADD_MODAL_OPENED, { source: v });
+        S.default.track(b.HAw.FAVORITES_GUILD_ADD_MODAL_OPENED, { source: v });
     }, [v]);
     let [w, A] = a.useState(""),
         [E, _] = a.useState([]),
-        [O, M] = a.useState(!1),
-        N = (0, b.A)(),
-        { results: y, updateSearchText: H } = (0, m.R)({
+        [O, y] = a.useState(!1),
+        M = (0, C.A)(),
+        { results: N, updateSearchText: H } = (0, m.R)({
             includeMissingDMs: !0,
-            channelFilter: N,
+            channelFilter: M,
             selectedDestinations: E,
         }),
         L = E.length,
@@ -62,15 +62,15 @@ function v(t) {
             [L, E, F],
         ),
         U = a.useCallback(async () => {
-            M(!0);
+            y(!0);
             let t = (await Promise.all(E.map(g.pk))).filter(x.Vq);
             if (0 === t.length) {
-                ((0, u.P0)({ text: D.intl.string(D.t.R0RpRX), variant: "critical" }), M(!1));
+                ((0, u.P0)({ text: D.intl.string(D.t.R0RpRX), variant: "critical" }), y(!1));
                 return;
             }
             ((0, k.S_)({ channelIds: t, parentId: d ?? null, source: "modal" }), l());
         }, [l, d, E]),
-        q = a.useMemo(() => y.filter((t) => t.type !== f.rD.HEADER), [y]),
+        q = a.useMemo(() => N.filter((t) => t.type !== f.rD.HEADER), [N]),
         V = (0, p.s)({ rowData: q, selectedDestinations: E, handleToggleDestination: T, disableSelection: F }),
         X = a.useRef(null),
         z = (0, h.A)("favorites-add-channel-modal", X),
@@ -127,7 +127,7 @@ function I() {
     return (0, n.jsx)("div", {
         className: R.p,
         children: (0, n.jsx)(d.E, {
-            variant: "text-md/normal",
+            variant: "body-md/normal",
             color: "text-muted",
             children: D.intl.string(j.default.kQL9be),
         }),

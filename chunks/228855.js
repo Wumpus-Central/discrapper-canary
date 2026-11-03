@@ -1,74 +1,74 @@
-e.d(i, { default: () => v });
-var n = e(477900),
-    s = e(582128),
-    r = e(731738),
-    a = e(17928),
-    l = e(189213),
-    c = e(858899),
-    d = e(331322),
-    u = e(834730),
-    o = e(548118),
-    m = e(807393),
-    x = e(253932),
-    D = e(71393),
-    h = e(115063),
-    S = e(510264),
-    p = e(386936),
-    A = e(105292),
-    f = e(368549);
-function v(t) {
-    let { transitionState: i, guildId: e, onClose: v } = t,
-        g = (0, a.bG)([D.A], () => D.A.getGuild(e));
+n.d(i, { default: () => f });
+var e = n(477900),
+    s = n(582128),
+    r = n(731738),
+    a = n(17928),
+    l = n(189213),
+    c = n(858899),
+    d = n(331322),
+    o = n(834730),
+    u = n(548118),
+    m = n(807393),
+    D = n(253932),
+    h = n(71393),
+    x = n(115063),
+    S = n(510264),
+    p = n(386936),
+    A = n(105292),
+    b = n(368549);
+function f(t) {
+    let { transitionState: i, guildId: n, onClose: f } = t,
+        v = (0, a.bG)([h.A], () => h.A.getGuild(n));
     if (
         (s.useEffect(() => {
-            ((0, S.Q)(e), (0, p.$)(p.s.MODAL_VIEWED, e), m.A.increment({ name: r.K.DM_SETTINGS_UPSELL_VIEW }));
-        }, [e]),
-        null == g)
+            ((0, S.Q)(n), (0, p.$)(p.s.MODAL_VIEWED, n), m.A.increment({ name: r.K.DM_SETTINGS_UPSELL_VIEW }));
+        }, [n]),
+        null == v)
     )
         return null;
-    function E(t) {
+    function g(t) {
         t.preventDefault();
-        let i = (0, h.Tb)();
-        (i.add(e),
-            x.$s
+        let i = (0, x.Tb)();
+        (i.add(n),
+            D.$s
                 .updateSetting(Array.from(i))
                 .then(() => (0, c.P0)({ text: A.intl.string(A.t.rlYD1W), variant: "success" })),
-            v(),
-            (0, p.$)(p.s.MODAL_DISABLED_DMS, e));
+            f(),
+            (0, p.$)(p.s.MODAL_DISABLED_DMS, n));
     }
-    return (0, n.jsx)("form", {
-        onSubmit: E,
-        children: (0, n.jsx)(l.a, {
+    return (0, e.jsx)("form", {
+        onSubmit: g,
+        children: (0, e.jsx)(l.a, {
             transitionState: i,
-            onClose: v,
+            onClose: f,
             title: A.intl.string(A.t.w2BvnL),
-            subtitle: A.intl.format(A.t.Depjkv, { guild_name: g.name }),
+            subtitle: A.intl.format(A.t.Depjkv, { guild_name: v.name }),
             actions: [
                 {
                     text: A.intl.string(A.t.PsWbcp),
                     onClick: function () {
-                        (v(), (0, p.$)(p.s.MODAL_DISMISSED, e));
+                        (f(), (0, p.$)(p.s.MODAL_DISMISSED, n));
                     },
                     variant: "secondary",
                 },
-                { text: A.intl.string(A.t.TD7iUx), onClick: E },
+                { text: A.intl.string(A.t.TD7iUx), onClick: g },
             ],
-            children: (0, n.jsxs)(d.B, {
+            children: (0, e.jsxs)(d.B, {
                 direction: "vertical",
                 gap: 8,
                 children: [
-                    (0, n.jsx)(u.E, {
-                        variant: "text-md/medium",
+                    (0, e.jsx)(o.E, {
+                        variant: "body-md/medium",
                         color: "text-muted",
                         children: A.intl.string(A.t.KPB2iw),
                     }),
-                    (0, n.jsx)("div", {
-                        className: f.bo,
-                        children: (0, n.jsxs)("div", {
-                            className: f.OA,
+                    (0, e.jsx)("div", {
+                        className: b.bo,
+                        children: (0, e.jsxs)("div", {
+                            className: b.OA,
                             children: [
-                                (0, n.jsx)(o.Ay, { guild: g, size: o.Ay.Sizes.SMALL }),
-                                (0, n.jsx)(u.E, { className: f.J5, variant: "text-md/semibold", children: g.name }),
+                                (0, e.jsx)(u.Ay, { guild: v, size: u.Ay.Sizes.SMALL }),
+                                (0, e.jsx)(o.E, { className: b.J5, variant: "body-md/semibold", children: v.name }),
                             ],
                         }),
                     }),

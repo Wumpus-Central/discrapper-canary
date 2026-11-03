@@ -1,9 +1,9 @@
 e.d(a, { A: () => n });
 var r = e(477900);
 e(582128);
-var t = e(529689),
-    i = e(696986),
-    o = e(834730),
+var i = e(529689),
+    o = e(696986),
+    t = e(834730),
     l = e(625189);
 function n(s) {
     let { attachment: a } = s,
@@ -11,18 +11,18 @@ function n(s) {
     return (0, r.jsxs)("div", {
         className: l.kL,
         children: [
-            (0, r.jsx)(t.D, { size: "xs", color: "currentColor", className: l.Yg }),
-            (0, r.jsx)(i.h, { size: 8, horizontal: !0 }),
-            (0, r.jsx)(o.E, {
-                variant: "text-sm/normal",
+            (0, r.jsx)(i.D, { size: "xs", color: "currentColor", className: l.Yg }),
+            (0, r.jsx)(o.h, { size: 8, horizontal: !0 }),
+            (0, r.jsx)(t.E, {
+                variant: "body-sm/normal",
                 color: "text-default",
                 className: l.Md,
                 children: a.filename,
             }),
-            (0, r.jsx)(i.h, { size: 8, horizontal: !0 }),
+            (0, r.jsx)(o.h, { size: 8, horizontal: !0 }),
             (0, r.jsx)("div", { className: l.Om }),
-            (0, r.jsx)(i.h, { size: 8, horizontal: !0 }),
-            (0, r.jsxs)(o.E, { variant: "text-sm/normal", color: "text-muted", children: [e, "MB"] }),
+            (0, r.jsx)(o.h, { size: 8, horizontal: !0 }),
+            (0, r.jsxs)(t.E, { variant: "body-sm/normal", color: "text-muted", children: [e, "MB"] }),
         ],
     });
 }

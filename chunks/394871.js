@@ -42,22 +42,22 @@ function N(e) {
         })({ customStatusActivity: n, statusOwnerId: u, location: "CustomStatusVoiceDare" }),
         S = I.statusTextOverride ?? n?.state,
         T = null != S && "" !== S,
-        C = null;
-    null == v || h || (C = (0, t.jsx)(j.A, { emoji: v, animate: x, className: i, hideTooltip: N || T }));
-    let b = T ? (null != C ? ` ${S}` : S) : null;
+        b = null;
+    null == v || h || (b = (0, t.jsx)(j.A, { emoji: v, animate: x, className: i, hideTooltip: N || T }));
+    let y = T ? (null != b ? ` ${S}` : S) : null;
     return null == n
         ? null
         : (0, t.jsx)(c.E, {
-              variant: `text-${m}/medium`,
+              variant: `body-${m}/medium`,
               color: "none",
               className: a()(g.ps, r),
               children:
                   ((l = null != v && !h && !T),
                   N || l
-                      ? (0, t.jsxs)(t.Fragment, { children: [C, b] })
+                      ? (0, t.jsxs)(t.Fragment, { children: [b, y] })
                       : null != I.presence
-                        ? (0, t.jsx)(d.m, { delay: 150, children: (0, t.jsxs)("span", { children: [C, b] }) })
-                        : (0, t.jsxs)("span", { children: [C, b] })),
+                        ? (0, t.jsx)(d.m, { delay: 150, children: (0, t.jsxs)("span", { children: [b, y] }) })
+                        : (0, t.jsxs)("span", { children: [b, y] })),
           });
 }
 var v = n(994500),
@@ -73,9 +73,9 @@ function T(e) {
         color: S.A.unsafe_rawColors.BRAND_345.css,
     });
 }
-var C = n(748562),
-    b = n(47167),
-    y = n(734057),
+var b = n(748562),
+    y = n(47167),
+    C = n(734057),
     E = n(864436),
     M = n(200041),
     R = n(105292);
@@ -92,14 +92,14 @@ function G(e) {
             canTruncate: d = !0,
             showChannelName: m = !1,
         } = e,
-        x = (0, o.bG)([y.A], () => y.A.getChannel(l.channelId)),
-        h = (0, b.Ay)(x),
+        x = (0, o.bG)([C.A], () => C.A.getChannel(l.channelId)),
+        h = (0, y.Ay)(x),
         f = n?.name === "" ? null : n?.name,
         j = null != f ? f : R.intl.string(R.t.eXan7B),
         A = null != h ? `${j} (${h})` : j,
         p = m ? A : j;
     return (0, t.jsx)(M.A, {
-        icon: r ? void 0 : (0, t.jsx)(E.A, { icon: C.U, className: a }),
+        icon: r ? void 0 : (0, t.jsx)(E.A, { icon: b.U, className: a }),
         text: p,
         tooltipText: c ? void 0 : u ? A : m ? void 0 : (h ?? void 0),
         textVariant: s,
@@ -131,7 +131,7 @@ function k(e) {
     null == x || o || (f = (0, t.jsx)(j.A, { emoji: x, animate: u, className: s, hideTooltip: d || h }));
     let A = h && (null != f ? ` ${m}` : m);
     return (0, t.jsx)(c.E, {
-        variant: `text-${r}/medium`,
+        variant: `body-${r}/medium`,
         color: "none",
         className: a()(g.ps, d && g.$9, n),
         children: (function () {
@@ -161,7 +161,7 @@ function F(e) {
             showChannelName: c = !1,
         } = e,
         d = (0, D.S3)(P.clD.ONLINE),
-        m = (0, b.Ay)(l),
+        m = (0, y.Ay)(l),
         x = l.isDM() || l.isGroupDM(),
         h = x
             ? R.intl.string(R.t["9FaEzi"])
@@ -206,12 +206,12 @@ function $(e) {
         textSize: p = "xs",
         animateEmoji: I = !0,
         hasQuest: S = !1,
-        hideEmoji: C = !1,
-        hideTooltip: b = !1,
+        hideEmoji: b = !1,
+        hideTooltip: y = !1,
     } = e;
     (0, x.A)(l?.id);
-    let y = i?.discoverable !== !1 ? i : null,
-        E = (0, h.AO)(y),
+    let C = i?.discoverable !== !1 ? i : null,
+        E = (0, h.AO)(C),
         M = s.useMemo(() => {
             let e = n?.find((e) => {
                 let { type: l } = e;
@@ -242,7 +242,7 @@ function $(e) {
         P = l?.bot === !0,
         O = (0, o.bG)([v.A], () => v.A.isBlockedOrIgnored(l?.id)),
         $ = M?.state != null,
-        z = null != y,
+        z = null != C,
         B = !z && null != c,
         H = U.length + (z || B ? 1 : 0),
         Y = H > 1,
@@ -250,12 +250,12 @@ function $(e) {
     if (O) return null;
     function Z() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-            l = !0 === e || b;
-        if (null != y)
+            l = !0 === e || y;
+        if (null != C)
             return (0, t.jsx)(G, {
-                stream: y,
+                stream: C,
                 game: D,
-                textVariant: `text-${p}/medium`,
+                textVariant: `body-${p}/medium`,
                 textClassName: j,
                 iconClassName: A,
                 hideText: W,
@@ -266,7 +266,7 @@ function $(e) {
         return null != n
             ? (0, t.jsx)(w.A, {
                   activity: n,
-                  textVariant: `text-${p}/medium`,
+                  textVariant: `body-${p}/medium`,
                   textClassName: j,
                   iconClassName: A,
                   hideText: W,
@@ -276,7 +276,7 @@ function $(e) {
             : null != c
               ? (0, t.jsx)(F, {
                     channel: c,
-                    textVariant: `text-${p}/medium`,
+                    textVariant: `body-${p}/medium`,
                     textClassName: j,
                     iconClassName: A,
                     hideText: W,
@@ -286,7 +286,7 @@ function $(e) {
     }
     function q() {
         return (0, t.jsx)(L, {
-            textVariant: `text-${p}/medium`,
+            textVariant: `body-${p}/medium`,
             className: j,
             hasCustomStatusText: $,
             totalActivityCount: H,
@@ -296,22 +296,22 @@ function $(e) {
         if (0 === H) return null;
         if (Y && !P) {
             let e, l;
-            return b
+            return y
                 ? (0, t.jsxs)("div", { className: a()(g.ht, W && g.e7), children: [Z(), q()] })
                 : (0, t.jsx)(d.m, {
                       delay: 150,
                       __unsupportedReactNodeAsText:
                           ((e = []),
                           (l = {
-                              textVariant: "text-sm/medium",
+                              textVariant: "body-sm/medium",
                               hideTooltip: !0,
                               hideIcon: !1,
                               hideText: !1,
                               canTruncate: !1,
                           }),
-                          null != y &&
+                          null != C &&
                               e.push(
-                                  (0, t.jsx)(G, { stream: y, game: n?.find(m.A), ...l, showChannelName: !0 }, "stream"),
+                                  (0, t.jsx)(G, { stream: C, game: n?.find(m.A), ...l, showChannelName: !0 }, "stream"),
                               ),
                           U.forEach((n, s) => {
                               e.push((0, t.jsx)(w.A, { activity: n, ...l }, `activity-${s}`));
@@ -334,14 +334,14 @@ function $(e) {
                             customStatusActivity: M,
                             textSize: p,
                             animateEmoji: I,
-                            hideEmoji: C,
-                            hideTooltip: b,
+                            hideEmoji: b,
+                            hideTooltip: y,
                             textClassName: j,
                             iconClassName: A,
                             tooltipClassName: J,
                             userId: l?.id,
                         }),
-                  H > 0 && (0, t.jsx)(V, { textVariant: `text-${p}/normal`, className: j }),
+                  H > 0 && (0, t.jsx)(V, { textVariant: `body-${p}/normal`, className: j }),
                   X(),
                   S && (0, t.jsx)(T, {}),
               ],
@@ -350,15 +350,15 @@ function $(e) {
               className: J,
               children: [
                   X(),
-                  null != M && H > 0 && (0, t.jsx)(V, { textVariant: `text-${p}/normal`, className: j }),
+                  null != M && H > 0 && (0, t.jsx)(V, { textVariant: `body-${p}/normal`, className: j }),
                   null == M
                       ? null
                       : (0, t.jsx)(k, {
                             customStatusActivity: M,
                             textSize: p,
                             animateEmoji: I,
-                            hideEmoji: C,
-                            hideTooltip: b,
+                            hideEmoji: b,
+                            hideTooltip: y,
                             textClassName: j,
                             iconClassName: A,
                             tooltipClassName: J,

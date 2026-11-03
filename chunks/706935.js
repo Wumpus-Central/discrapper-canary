@@ -1,4 +1,4 @@
-l.d(n, { Ay: () => k, Yg: () => N, tb: () => x });
+l.d(n, { Ay: () => k, Yg: () => y, tb: () => g });
 var t = l(477900);
 l(582128);
 var r = l(503698),
@@ -15,7 +15,7 @@ var p = l(331322),
     h = l(809526),
     A = l(105292),
     j = l(319725);
-function x(e, n) {
+function g(e, n) {
     return A.intl.format(e, {
         app: (0, t.jsxs)(
             "span",
@@ -27,7 +27,7 @@ function x(e, n) {
         ),
     });
 }
-function g(e) {
+function b(e) {
     let { kind: n } = e;
     switch (n) {
         case "channel":
@@ -49,8 +49,8 @@ function v(e) {
                     {
                         className: j.nM,
                         children: [
-                            (0, t.jsx)(g, { kind: e.kind }),
-                            (0, t.jsx)(s.E, { variant: "text-sm/medium", color: "text-subtle", children: e.label }),
+                            (0, t.jsx)(b, { kind: e.kind }),
+                            (0, t.jsx)(s.E, { variant: "body-sm/medium", color: "text-subtle", children: e.label }),
                         ],
                     },
                     e.key,
@@ -60,7 +60,7 @@ function v(e) {
         ],
     });
 }
-function b(e) {
+function x(e) {
     let { item: n, checked: l, onChange: r, disabled: a } = e;
     return (0, t.jsxs)(o.D, {
         className: i()(j.nM, j.hn, { [j.l$]: a }),
@@ -69,10 +69,10 @@ function b(e) {
         "aria-disabled": a,
         onClick: a ? void 0 : () => r(!l),
         children: [
-            (0, t.jsx)(g, { kind: n.kind }),
+            (0, t.jsx)(b, { kind: n.kind }),
             (0, t.jsx)(s.E, {
                 tag: "span",
-                variant: "text-sm/medium",
+                variant: "body-sm/medium",
                 color: "text-subtle",
                 className: j.f1,
                 children: n.label,
@@ -87,15 +87,15 @@ function k(e) {
         gap: 8,
         children: [
             (0, t.jsx)(s.E, {
-                variant: "text-md/semibold",
+                variant: "body-md/semibold",
                 color: "text-strong",
                 children: A.intl.string(h.default["+E2PqP"]),
             }),
-            (0, t.jsx)(v, { items: n, children: null != l ? (0, t.jsx)(b, { ...l }) : null }),
+            (0, t.jsx)(v, { items: n, children: null != l ? (0, t.jsx)(x, { ...l }) : null }),
         ],
     });
 }
-function N(e) {
+function y(e) {
     let { checked: n, onChange: l, items: r } = e;
     return (0, t.jsxs)(p.B, {
         gap: 8,

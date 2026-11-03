@@ -1,4 +1,4 @@
-t.d(n, { w: () => g });
+t.d(n, { w: () => m });
 var a = t(477900),
     r = t(582128),
     l = t(503698),
@@ -11,16 +11,16 @@ var a = t(477900),
     h = t(281595),
     p = t(866665),
     v = t(650583),
-    f = t(634701),
-    b = t(969490),
-    x = t(736541);
-function g(e) {
+    b = t(634701),
+    f = t(969490),
+    g = t(736541);
+function m(e) {
     let {
             inputRef: n,
             id: t,
             defaultDirty: l = !1,
-            description: g,
-            disabled: m = !1,
+            description: m,
+            disabled: x = !1,
             error: j,
             fullWidth: k = !0,
             helperText: y,
@@ -41,7 +41,7 @@ function g(e) {
             required: F,
             scrollIntoViewOnFocus: H = !1,
             size: K,
-            textVariant: L = "text-sm/normal",
+            textVariant: L = "body-sm/normal",
             trailing: M,
             value: O,
             ...V
@@ -63,7 +63,7 @@ function g(e) {
             setShouldValidate: es,
         } = (0, h.Y)({
             defaultDirty: l,
-            error: U && !m && G !== en ? void 0 : j,
+            error: U && !x && G !== en ? void 0 : j,
             maxLength: $,
             minLength: R,
             validateOn: "change",
@@ -82,17 +82,17 @@ function g(e) {
                 : eo());
     }
     (r.useEffect(() => {
-        U && !m && H && I.current?.scrollIntoView({ block: "nearest", behavior: el.enabled ? "auto" : "smooth" });
-    }, [U, m, H, el.enabled]),
+        U && !x && H && I.current?.scrollIntoView({ block: "nearest", behavior: el.enabled ? "auto" : "smooth" });
+    }, [U, x, H, el.enabled]),
         O !== X && (ee(O), Q(O), (G ?? "") === en && et(O ?? "")));
     let ec = "function" == typeof z ? z((U ? G : O) ?? "", { focused: U }) : U ? null : z,
         eh = null != ec,
-        ep = i()(f.hF, { [f.c1]: S }),
+        ep = i()(b.hF, { [b.c1]: S }),
         ev = {
             ...V,
             ref: B,
-            className: i()(ep, f.ZZ, { [b.qD]: S }),
-            disabled: m,
+            className: i()(ep, b.ZZ, { [f.qD]: S }),
+            disabled: x,
             minLength: R,
             onBlur: function (e) {
                 (W(!1), (er.current = !1), A || ed(), D?.(e));
@@ -124,14 +124,14 @@ function g(e) {
             required: F,
             value: G ?? "",
         },
-        ef = null == G || "" === G,
-        eb = (ef ? _ : G) ?? "",
-        ex = eh ? ec : `${eb}\u200b`,
-        eg = m || A || M?.disabled,
-        em = (0, a.jsx)(c.D, {
+        eb = null == G || "" === G,
+        ef = (eb ? _ : G) ?? "",
+        eg = eh ? ec : `${ef}\u200b`,
+        em = x || A || M?.disabled,
+        ex = (0, a.jsx)(c.D, {
             id: t,
-            description: g,
-            disabled: m,
+            description: m,
+            disabled: x,
             errorMessage: ei ? eu : void 0,
             helperText: ei ? void 0 : y,
             hideLabel: C,
@@ -142,15 +142,15 @@ function g(e) {
                     l = { ...ev, id: n, "aria-describedby": t, "aria-errormessage": r, "aria-invalid": ei };
                 return (0, a.jsxs)("div", {
                     ref: J,
-                    className: i()(f.kL, "inherit" !== L && x[L], {
-                        [f.V4]: eh,
-                        [f.JD]: ei,
-                        [f.j9]: null != N,
-                        [f.tY]: null != K,
-                        [f.$7]: "sm" === K,
-                        [f.pH]: null != M,
+                    className: i()(b.kL, "inherit" !== L && g[L], {
+                        [b.V4]: eh,
+                        [b.JD]: ei,
+                        [b.j9]: null != N,
+                        [b.tY]: null != K,
+                        [b.$7]: "sm" === K,
+                        [b.pH]: null != M,
                     }),
-                    "data-disabled": m,
+                    "data-disabled": x,
                     "data-padding-block": Z,
                     "data-padding-inline": q,
                     "data-read-only": A,
@@ -163,23 +163,23 @@ function g(e) {
                         }),
                         (0, a.jsx)("div", {
                             "aria-hidden": "true",
-                            className: i()(ep, f.St, { [f.tb]: !eh && ef, [f.gO]: null != N }),
+                            className: i()(ep, b.St, { [b.tb]: !eh && eb, [b.gO]: null != N }),
                             style: null != N ? { "--custom-editable-text-max-rows": N } : void 0,
-                            children: ex,
+                            children: eg,
                         }),
                         null != M &&
                             (0, a.jsx)("div", {
-                                className: f.ZY,
+                                className: b.ZY,
                                 children: (0, a.jsx)(p.m, {
                                     asContainer: !0,
                                     ariaHidden: !0,
-                                    shouldShow: !eg,
+                                    shouldShow: !em,
                                     text: M.tooltip ?? M["aria-label"],
                                     children: (0, a.jsx)(o.K, {
                                         buttonRef: M.buttonRef,
                                         "aria-haspopup": M["aria-haspopup"],
                                         "aria-label": M["aria-label"],
-                                        disabled: eg,
+                                        disabled: em,
                                         icon: M.icon,
                                         onClick: M.onClick,
                                         size: "sm",
@@ -192,5 +192,5 @@ function g(e) {
                 });
             },
         });
-    return (0, a.jsx)("div", { ref: I, className: i()(f.zr, { [f.N8]: !k }), children: em });
+    return (0, a.jsx)("div", { ref: I, className: i()(b.zr, { [b.N8]: !k }), children: ex });
 }

@@ -11,15 +11,15 @@ var l = i(477900),
     u = i(148494),
     m = i(793574),
     p = i(688810),
-    x = i(573435),
-    f = i(228427),
-    g = i(619517),
+    f = i(573435),
+    g = i(228427),
+    x = i(619517),
     A = i(451909),
-    C = i(378570),
-    y = i(223863),
-    E = i(95701),
-    j = i(734057),
-    b = i(31717),
+    y = i(378570),
+    C = i(223863),
+    b = i(95701),
+    E = i(734057),
+    j = i(31717),
     k = i(403362),
     w = i(518960),
     N = i(614584),
@@ -41,21 +41,21 @@ function F(e) {
         "" !== s &&
             ((a = (0, l.jsx)("div", {
                 className: n()(M.cR, M.JZ),
-                children: (0, l.jsx)(g.Ay, { className: M.xn, src: s, width: 56, height: 56 }),
+                children: (0, l.jsx)(x.Ay, { className: M.xn, src: s, width: 56, height: 56 }),
             })),
             t.length > 1 &&
                 (a = (0, l.jsxs)("div", {
                     className: M.EW,
                     children: [
-                        (0, l.jsx)(x.Ay, {
-                            mask: x.Ay.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
+                        (0, l.jsx)(f.Ay, {
+                            mask: f.Ay.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
                             width: 56,
                             height: 56,
                             children: a,
                         }),
                         (0, l.jsxs)(c.E, {
                             className: M.mB,
-                            variant: "text-xs/semibold",
+                            variant: "body-xs/semibold",
                             color: "text-default",
                             children: ["+", t.length - 1],
                         }),
@@ -71,7 +71,7 @@ function F(e) {
                         children: [
                             (0, l.jsx)(o.x, { className: I.$, size: "refresh_sm", color: d.A.colors.TEXT_MUTED }),
                             (0, l.jsx)(c.E, {
-                                variant: "text-md/medium",
+                                variant: "body-md/medium",
                                 color: "text-muted",
                                 children:
                                     1 === t.length
@@ -112,15 +112,15 @@ function L(e) {
                                 e.type;
                         }
                     }
-                    let p = (await Promise.all(e.map(y.pk))).filter(k.Vq).filter((e) => (0, v.t)(e));
+                    let p = (await Promise.all(e.map(C.pk))).filter(k.Vq).filter((e) => (0, v.t)(e));
                     if (0 === p.length) {
                         ((0, h.P0)({ text: S.intl.string(S.t.iufib1), variant: "critical" }), s(!1));
                         return;
                     }
                     for (let e of (d && i(), p)) {
-                        let t = j.A.getChannel(e);
+                        let t = E.A.getChannel(e);
                         null != t &&
-                            ((0, w.R)(l, t, b.C.ChannelMessage, {
+                            ((0, w.R)(l, t, j.C.ChannelMessage, {
                                 filesMetadata: m,
                                 origin: "unknown:clip_share",
                                 requireConfirm: !1,
@@ -132,7 +132,7 @@ function L(e) {
                     (a?.(),
                         c &&
                             1 === p.length &&
-                            ((0, C.iN)(p[0], { openTextInVoiceIfVoiceChannel: !0 }), r.closeAllModals()));
+                            ((0, y.iN)(p[0], { openTextInVoiceIfVoiceChannel: !0 }), r.closeAllModals()));
                 } catch (e) {
                     (0, h.P0)({ text: S.intl.string(S.t.iufib1), variant: "critical" });
                 } finally {
@@ -141,16 +141,16 @@ function L(e) {
             },
             [t, i, a, o],
         ),
-        x = s.useCallback((e) => {
-            if (e instanceof E.YB && !(0, v.t)(e.id)) return { label: S.intl.string(S.t.iufib1) };
+        f = s.useCallback((e) => {
+            if (e instanceof b.YB && !(0, v.t)(e.id)) return { label: S.intl.string(S.t.iufib1) };
         }, []);
-    return (0, l.jsx)(f.ForwardModal, {
+    return (0, l.jsx)(g.ForwardModal, {
         ...c,
         onClose: i,
         customTitle: S.intl.string(S.t.I8lglT),
         customSubtitle: S.intl.string(S.t.Ey7mOU),
         customPreview: (0, l.jsx)(F, { clips: t }),
         customSendHandler: d,
-        customValidateDestination: x,
+        customValidateDestination: f,
     });
 }

@@ -1,13 +1,13 @@
-(l.r(t), l.d(t, { playgroundConfig: () => T, aiVisualIdentityCollection: () => N }));
-var a = l(477900),
-    s = l(582128),
-    o = l(661531),
-    i = l(844222),
-    n = l(402386);
+(t.r(l), t.d(l, { playgroundConfig: () => T, aiVisualIdentityCollection: () => N }));
+var a = t(477900),
+    s = t(582128),
+    o = t(661531),
+    i = t(844222),
+    n = t(402386);
 function r(e) {
     let {
-            area: t = 0,
-            glyphSize: l = 16,
+            area: l = 0,
+            glyphSize: t = 16,
             radius: r = { x: 5, y: 5 },
             color: d = o.A.colors.TEXT_DEFAULT,
             fpsLimit: c = 30,
@@ -17,16 +17,16 @@ function r(e) {
         {
             top: m = 0,
             bottom: h = 0,
-            left: p = 0,
-            right: b = 0,
-        } = "number" == typeof t ? { top: t, bottom: t, left: t, right: t } : t;
+            left: b = 0,
+            right: y = 0,
+        } = "number" == typeof l ? { top: l, bottom: l, left: l, right: l } : l;
     return (0, a.jsx)(n.j, {
         fit: "layout",
         style: {
             position: "absolute",
-            left: -p,
+            left: -b,
             top: -m,
-            width: `calc(100% + ${p}px + ${b}px)`,
+            width: `calc(100% + ${b}px + ${y}px)`,
             height: `calc(100% + ${m}px + ${h}px)`,
             pointerEvents: "none",
         },
@@ -36,18 +36,18 @@ function r(e) {
             edgeBand: u,
             insetTop: m,
             insetBottom: h,
-            insetLeft: p,
-            insetRight: b,
+            insetLeft: b,
+            insetRight: y,
             color: d,
             radiusX: "number" == typeof r ? r : r.x,
             radiusY: "number" == typeof r ? r : r.y,
-            glyphSize: l,
+            glyphSize: t,
             fpsLimit: c,
             reducedMotion: x.reducedMotion.enabled,
         },
     });
 }
-var d = l(13316);
+var d = t(13316);
 let c = {
         "text-default": o.A.colors.TEXT_DEFAULT,
         "text-muted": o.A.colors.TEXT_MUTED,
@@ -61,8 +61,8 @@ let c = {
                 id: "ai-bloom",
                 component: function (e) {
                     let {
-                            placeholderElementArea: t,
-                            areaSize: l,
+                            placeholderElementArea: l,
+                            areaSize: t,
                             top: s,
                             right: o,
                             bottom: i,
@@ -72,14 +72,14 @@ let c = {
                             color: m,
                             edgeBand: h,
                         } = e,
-                        p = { "--__demo-area": `${t}px` };
+                        b = { "--__demo-area": `${l}px` };
                     return (0, a.jsx)("div", {
                         className: d.q,
                         children: (0, a.jsx)("div", {
                             className: d.M,
-                            style: p,
+                            style: b,
                             children: (0, a.jsx)(r, {
-                                area: { top: s ? l : 0, right: o ? l : 0, bottom: i ? l : 0, left: n ? l : 0 },
+                                area: { top: s ? t : 0, right: o ? t : 0, bottom: i ? t : 0, left: n ? t : 0 },
                                 glyphSize: u,
                                 radius: x,
                                 color: c[m],
@@ -114,26 +114,26 @@ let c = {
             },
         ],
     };
-var x = l(834730),
-    m = l(823376),
-    h = l(935651);
-let p = [12, 16, 24, 32, 48, 64],
-    b = [
+var x = t(834730),
+    m = t(823376),
+    h = t(935651);
+let b = [12, 16, 24, 32, 48, 64],
+    y = [
         { label: "Default", className: void 0, note: "2400ms loop" },
         { label: "reduce-motion", className: "reduce-motion", note: "half speed (4800ms)" },
         { label: "stop-animation", className: "stop-animation", note: "frozen on the dot" },
     ],
-    v = {
+    p = {
         title: "AILoader",
         stories: [
             {
                 name: "AILoader",
                 id: "ai-loader",
                 component: function (e) {
-                    let { size: t, color: l } = e;
+                    let { size: l, color: t } = e;
                     return (0, a.jsx)("div", {
-                        style: "" === l ? void 0 : { color: l },
-                        children: (0, a.jsx)(m.i, { size: t }),
+                        style: "" === t ? void 0 : { color: t },
+                        children: (0, a.jsx)(m.i, { size: l }),
                     });
                 },
                 controls: {
@@ -168,19 +168,19 @@ let p = [12, 16, 24, 32, 48, 64],
                                 className: h.uW,
                                 children: [
                                     (0, a.jsx)(x.E, {
-                                        variant: "text-sm/semibold",
+                                        variant: "body-sm/semibold",
                                         color: "text-default",
                                         children: "Sizes",
                                     }),
                                     (0, a.jsx)(x.E, {
-                                        variant: "text-xs/normal",
+                                        variant: "body-xs/normal",
                                         color: "text-subtle",
                                         children:
                                             "Glyphs should stay optically centered at every size, and the clip window should never reveal a neighbouring glyph. The dashed outline is the loader's own box: size tall by 3.75 \xd7 size wide.",
                                     }),
                                     (0, a.jsx)("div", {
                                         className: h.nM,
-                                        children: p.map((e) =>
+                                        children: b.map((e) =>
                                             (0, a.jsxs)(
                                                 "div",
                                                 {
@@ -192,7 +192,7 @@ let p = [12, 16, 24, 32, 48, 64],
                                                             color: o.A.colors.TEXT_DEFAULT,
                                                         }),
                                                         (0, a.jsxs)(x.E, {
-                                                            variant: "text-xs/normal",
+                                                            variant: "body-xs/normal",
                                                             color: "text-subtle",
                                                             children: [e, "px"],
                                                         }),
@@ -208,45 +208,45 @@ let p = [12, 16, 24, 32, 48, 64],
                                 className: h.uW,
                                 children: [
                                     (0, a.jsx)(x.E, {
-                                        variant: "text-sm/semibold",
+                                        variant: "body-sm/semibold",
                                         color: "text-default",
                                         children: "Motion states",
                                     }),
                                     (0, a.jsx)(x.E, {
-                                        variant: "text-xs/normal",
+                                        variant: "body-xs/normal",
                                         color: "text-subtle",
                                         children:
                                             "Reduced motion slows the cycle rather than freezing it, so the loader still reads as \u201Cworking\u201D. The loader also stops entirely while the app is unfocused, matching Mana's Spinner.",
                                     }),
                                     (0, a.jsx)("div", {
                                         className: h.nM,
-                                        children: b.map((e) => {
-                                            let { label: t, className: l, note: s } = e;
+                                        children: y.map((e) => {
+                                            let { label: l, className: t, note: s } = e;
                                             return (0, a.jsxs)(
                                                 "div",
                                                 {
                                                     className: h.Hn,
                                                     children: [
                                                         (0, a.jsx)("div", {
-                                                            className: l,
+                                                            className: t,
                                                             children: (0, a.jsx)(m.i, {
                                                                 size: 48,
                                                                 color: o.A.colors.TEXT_DEFAULT,
                                                             }),
                                                         }),
                                                         (0, a.jsx)(x.E, {
-                                                            variant: "text-xs/normal",
+                                                            variant: "body-xs/normal",
                                                             color: "text-subtle",
-                                                            children: t,
+                                                            children: l,
                                                         }),
                                                         (0, a.jsx)(x.E, {
-                                                            variant: "text-xs/normal",
+                                                            variant: "body-xs/normal",
                                                             color: "text-subtle",
                                                             children: s,
                                                         }),
                                                     ],
                                                 },
-                                                t,
+                                                l,
                                             );
                                         }),
                                     }),
@@ -258,32 +258,32 @@ let p = [12, 16, 24, 32, 48, 64],
             },
         ],
     };
-var f = l(331322),
-    y = l(864970),
-    j = l(829888);
+var v = t(331322),
+    f = t(864970),
+    j = t(829888);
 let g = ["Ask about day one survival strategies", "Ask how to build your first mineshaft", "Ask about Minecraft"];
 function E(e) {
-    let { children: t } = e,
-        l = s.useContext(i.C),
-        o = s.useMemo(() => ({ ...l, reducedMotion: { ...l.reducedMotion, enabled: !0 } }), [l]);
-    return (0, a.jsx)(i.C.Provider, { value: o, children: t });
+    let { children: l } = e,
+        t = s.useContext(i.C),
+        o = s.useMemo(() => ({ ...t, reducedMotion: { ...t.reducedMotion, enabled: !0 } }), [t]);
+    return (0, a.jsx)(i.C.Provider, { value: o, children: l });
 }
 function A() {
     let e = s.useRef(null),
-        t = s.useCallback(() => e.current?.play(), []);
+        l = s.useCallback(() => e.current?.play(), []);
     return (0, a.jsx)("div", {
         className: j.dw,
         tabIndex: 0,
-        onMouseEnter: t,
-        onFocus: t,
-        children: (0, a.jsx)(y.o, { ref: e, text: g, delay: null }),
+        onMouseEnter: l,
+        onFocus: l,
+        children: (0, a.jsx)(f.o, { ref: e, text: g, delay: null }),
     });
 }
 let N = {
         id: "ai-visual-identity",
         name: "AI Visual Identity",
         groups: [
-            v,
+            p,
             u,
             {
                 title: "AIShimmer",
@@ -292,10 +292,10 @@ let N = {
                         name: "AIShimmer",
                         id: "ai-shimmer",
                         component: function () {
-                            return (0, a.jsxs)(f.B, {
+                            return (0, a.jsxs)(v.B, {
                                 gap: 16,
                                 children: [
-                                    (0, a.jsx)(x.E, { variant: "text-md/normal", children: "Example showcase" }),
+                                    (0, a.jsx)(x.E, { variant: "body-md/normal", children: "Example showcase" }),
                                     (0, a.jsxs)("div", {
                                         className: j.GG,
                                         children: [
@@ -303,19 +303,19 @@ let N = {
                                                 className: j.uW,
                                                 children: [
                                                     (0, a.jsx)(x.E, {
-                                                        variant: "text-sm/semibold",
+                                                        variant: "body-sm/semibold",
                                                         color: "text-default",
                                                         children: "Cycling placeholders",
                                                     }),
                                                     (0, a.jsx)(x.E, {
-                                                        variant: "text-xs/normal",
+                                                        variant: "body-xs/normal",
                                                         color: "text-subtle",
                                                         children:
                                                             "Suggested prompts rotate after the configured delay.",
                                                     }),
                                                     (0, a.jsx)("div", {
                                                         className: j.dw,
-                                                        children: (0, a.jsx)(y.o, { text: g, delay: 1500 }),
+                                                        children: (0, a.jsx)(f.o, { text: g, delay: 1500 }),
                                                     }),
                                                 ],
                                             }),
@@ -323,30 +323,30 @@ let N = {
                                                 className: j.uW,
                                                 children: [
                                                     (0, a.jsx)(x.E, {
-                                                        variant: "text-sm/semibold",
+                                                        variant: "body-sm/semibold",
                                                         color: "text-default",
                                                         children: "Staggered offsets",
                                                     }),
                                                     (0, a.jsx)(x.E, {
-                                                        variant: "text-xs/normal",
+                                                        variant: "body-xs/normal",
                                                         color: "text-subtle",
                                                         children: "`initialDelay` offsets effects that start together.",
                                                     }),
-                                                    (0, a.jsx)(y.o, { text: g, delay: 1500, initialDelay: 0 }),
-                                                    (0, a.jsx)(y.o, { text: g, delay: 1500, initialDelay: 100 }),
-                                                    (0, a.jsx)(y.o, { text: g, delay: 1500, initialDelay: 200 }),
+                                                    (0, a.jsx)(f.o, { text: g, delay: 1500, initialDelay: 0 }),
+                                                    (0, a.jsx)(f.o, { text: g, delay: 1500, initialDelay: 100 }),
+                                                    (0, a.jsx)(f.o, { text: g, delay: 1500, initialDelay: 200 }),
                                                 ],
                                             }),
                                             (0, a.jsxs)("div", {
                                                 className: j.uW,
                                                 children: [
                                                     (0, a.jsx)(x.E, {
-                                                        variant: "text-sm/semibold",
+                                                        variant: "body-sm/semibold",
                                                         color: "text-default",
                                                         children: "Reduced motion",
                                                     }),
                                                     (0, a.jsx)(x.E, {
-                                                        variant: "text-xs/normal",
+                                                        variant: "body-xs/normal",
                                                         color: "text-subtle",
                                                         children:
                                                             "This example forces a simple cross-fade regardless of your system setting.",
@@ -354,7 +354,7 @@ let N = {
                                                     (0, a.jsx)("div", {
                                                         className: j.dw,
                                                         children: (0, a.jsx)(E, {
-                                                            children: (0, a.jsx)(y.o, { text: g, delay: 1500 }),
+                                                            children: (0, a.jsx)(f.o, { text: g, delay: 1500 }),
                                                         }),
                                                     }),
                                                 ],
@@ -363,12 +363,12 @@ let N = {
                                                 className: j.uW,
                                                 children: [
                                                     (0, a.jsx)(x.E, {
-                                                        variant: "text-sm/semibold",
+                                                        variant: "body-sm/semibold",
                                                         color: "text-default",
                                                         children: "Hover to play",
                                                     }),
                                                     (0, a.jsx)(x.E, {
-                                                        variant: "text-xs/normal",
+                                                        variant: "body-xs/normal",
                                                         color: "text-subtle",
                                                         children:
                                                             "A `null` delay never cycles on its own; each hover or focus calls `play()` on the ref.",
@@ -380,19 +380,19 @@ let N = {
                                                 className: j.uW,
                                                 children: [
                                                     (0, a.jsx)(x.E, {
-                                                        variant: "text-sm/semibold",
+                                                        variant: "body-sm/semibold",
                                                         color: "text-default",
                                                         children: "Single line",
                                                     }),
                                                     (0, a.jsx)(x.E, {
-                                                        variant: "text-xs/normal",
+                                                        variant: "body-xs/normal",
                                                         color: "text-subtle",
                                                         children:
                                                             "A single string animates back to itself after the initial delay.",
                                                     }),
                                                     (0, a.jsx)("div", {
                                                         className: j.dw,
-                                                        children: (0, a.jsx)(y.o, {
+                                                        children: (0, a.jsx)(f.o, {
                                                             text: "Ask about day one survival strategies",
                                                             delay: 1500,
                                                         }),

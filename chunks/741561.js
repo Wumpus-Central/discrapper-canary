@@ -185,7 +185,7 @@ function N(t) {
                             onClick: () => x(!0),
                             children: [
                                 (0, r.jsx)(f.E, {
-                                    variant: "text-sm/semibold",
+                                    variant: "body-sm/semibold",
                                     color: "text-subtle",
                                     children: h.intl.string(S.default["2tkPDy"]),
                                 }),
@@ -202,7 +202,7 @@ function N(t) {
                                 className: p.B7,
                                 children: [
                                     (0, r.jsx)(f.E, {
-                                        variant: "text-sm/normal",
+                                        variant: "body-sm/normal",
                                         color: "text-default",
                                         className: p.XY,
                                         children: h.intl.string(S.default.G3qiHu),
@@ -218,7 +218,7 @@ function N(t) {
                             onClick: () => x(!1),
                             children: [
                                 (0, r.jsx)(f.E, {
-                                    variant: "text-sm/semibold",
+                                    variant: "body-sm/semibold",
                                     color: "text-subtle",
                                     children: h.intl.string(S.default.idxnf7),
                                 }),

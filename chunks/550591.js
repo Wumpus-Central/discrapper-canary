@@ -23,7 +23,7 @@ function u(e) {
                 null == n || u
                     ? null
                     : (0, i.jsx)(l.E, {
-                          variant: "text-md/semibold",
+                          variant: "body-md/semibold",
                           color: "text-default",
                           className: d.A_,
                           children: n,

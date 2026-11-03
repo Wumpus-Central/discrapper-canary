@@ -1,4 +1,4 @@
-n.d(e, { default: () => A });
+n.d(t, { default: () => A });
 var l = n(477900),
     a = n(189213),
     i = n(331322),
@@ -6,33 +6,33 @@ var l = n(477900),
     d = n(584454),
     s = n(691885),
     u = n(123292),
-    c = n(150934),
-    o = n(47167),
+    o = n(150934),
+    c = n(47167),
     f = n(582128),
     g = n(17928),
     m = n(734057),
     h = n(576705),
-    x = n(573163),
-    v = n(181079),
-    b = n(16236),
-    y = n(266599),
+    b = n(573163),
+    y = n(181079),
+    v = n(16236),
+    x = n(266599),
     S = n(93055);
-function p(t, e) {
-    return t.length === e.length && t.every((t, n) => t.id === e[n].id && t.name === e[n].name);
+function p(e, t) {
+    return e.length === t.length && e.every((e, n) => e.id === t[n].id && e.name === t[n].name);
 }
 var j = n(826767),
     w = n(927813),
     C = n(760658),
     k = n(105292);
-function A(t) {
-    let { onClose: e, transitionState: n } = t,
-        c = (function (t) {
-            let e = (0, g.bG)([v.A], () => (0, S.m_)(v.A.getFavoriteChannels()), [], p),
+function A(e) {
+    let { onClose: t, transitionState: n } = e,
+        o = (function (e) {
+            let t = (0, g.bG)([y.A], () => (0, S.m_)(y.A.getFavoriteChannels()), [], p),
                 [n, l] = f.useState("30"),
                 [a, i] = f.useState(null),
                 [r, d] = f.useState("filter"),
                 [s, u] = f.useState(!1),
-                [c, o] = f.useState(!1),
+                [o, c] = f.useState(!1),
                 [j, w] = f.useState(0),
                 [C, k] = f.useState(new Set()),
                 [A, F] = f.useState([]),
@@ -50,24 +50,24 @@ function A(t) {
             let M = Number(n),
                 P = /^\d+$/.test(n) && Number.isSafeInteger(M) && M >= 1 && M <= 36500,
                 D = (0, g.yK)(
-                    [v.A, m.A, h.A, x.Ay],
-                    () => ("filter" === r ? [] : (0, y.wm)({ days: M, categoryId: a }).filter((t) => C.has(t.id))),
+                    [y.A, m.A, h.A, b.Ay],
+                    () => ("filter" === r ? [] : (0, x.wm)({ days: M, categoryId: a }).filter((e) => C.has(e.id))),
                     [r, M, a, C],
                 ),
-                T = D.filter((t) => A.includes(t.id)),
+                T = D.filter((e) => A.includes(e.id)),
                 Y = D.length > 0 && T.length === D.length;
             async function z() {
                 if (P && !E.current) {
-                    ((E.current = !0), u(!0), o(!1));
+                    ((E.current = !0), u(!0), c(!1));
                     try {
-                        if ((await (0, y.FT)(a), !I.current)) return;
-                        let t = (0, y.wm)({ days: M, categoryId: a }).map((t) => t.id);
-                        (k(new Set(t)),
-                            F(t),
-                            w((0, y.UY)(a).filter((t) => m.A.getChannel(t)?.threadMetadata == null).length),
+                        if ((await (0, x.FT)(a), !I.current)) return;
+                        let e = (0, x.wm)({ days: M, categoryId: a }).map((e) => e.id);
+                        (k(new Set(e)),
+                            F(e),
+                            w((0, x.UY)(a).filter((e) => m.A.getChannel(e)?.threadMetadata == null).length),
                             d("review"));
                     } catch {
-                        I.current && o(!0);
+                        I.current && c(!0);
                     } finally {
                         ((E.current = !1), I.current && u(!1));
                     }
@@ -75,22 +75,22 @@ function A(t) {
             }
             async function B() {
                 if (!E.current && 0 !== T.length) {
-                    ((E.current = !0), u(!0), o(!1));
+                    ((E.current = !0), u(!0), c(!1));
                     try {
-                        (await (0, b.pq)(
-                            T.map((t) => t.id),
+                        (await (0, v.pq)(
+                            T.map((e) => e.id),
                             { days: M, categoryId: a },
                         ),
-                            I.current && t());
+                            I.current && e());
                     } catch {
-                        I.current && o(!0);
+                        I.current && c(!0);
                     } finally {
                         ((E.current = !1), I.current && u(!1));
                     }
                 }
             }
             return {
-                categories: e.flatMap((t) => (null == t.id ? [] : [{ id: t.id, name: t.name }])),
+                categories: t.flatMap((e) => (null == e.id ? [] : [{ id: e.id, name: e.name }])),
                 days: n,
                 setDays: l,
                 validDays: P,
@@ -99,7 +99,7 @@ function A(t) {
                 stage: r,
                 setStage: d,
                 loading: s,
-                error: c,
+                error: o,
                 unknownCount: j,
                 candidates: D,
                 selectedIds: A,
@@ -107,51 +107,51 @@ function A(t) {
                 selectedThreads: T,
                 allSelected: Y,
                 toggleSelection: function () {
-                    F(Y ? [] : D.map((t) => t.id));
+                    F(Y ? [] : D.map((e) => e.id));
                 },
                 review: z,
                 remove: B,
             };
-        })(e),
-        { stage: o, loading: j, candidates: w, selectedThreads: A } = c,
+        })(t),
+        { stage: c, loading: j, candidates: w, selectedThreads: A } = o,
         E = A.length;
     return (0, l.jsx)(a.a, {
         title: k.intl.string(C.default["b081B+"]),
         transitionState: n,
-        onClose: e,
+        onClose: t,
         actions: [
             {
-                text: k.intl.string("filter" === o ? k.t["ETE/oC"] : k.t["13/7kX"]),
+                text: k.intl.string("filter" === c ? k.t["ETE/oC"] : k.t["13/7kX"]),
                 variant: "secondary",
                 disabled: j,
                 onClick: () => {
-                    "filter" === o ? e() : c.setStage("filter");
+                    "filter" === c ? t() : o.setStage("filter");
                 },
             },
             {
                 text:
-                    "filter" === o
+                    "filter" === c
                         ? k.intl.string(C.default.zAljrZ)
                         : k.intl.formatToPlainString(C.default.jiqJtj, { count: E }),
-                variant: "review" === o ? "critical-primary" : "primary",
-                disabled: j || ("filter" === o ? !c.validDays : 0 === E),
+                variant: "review" === c ? "critical-primary" : "primary",
+                disabled: j || ("filter" === c ? !o.validDays : 0 === E),
                 loading: j,
                 onClick: () => {
-                    "filter" === o ? c.review() : c.remove();
+                    "filter" === c ? o.review() : o.remove();
                 },
             },
         ],
         children: (0, l.jsxs)(i.B, {
             gap: 16,
             children: [
-                (0, l.jsx)(r.E, { variant: "text-md/normal", children: k.intl.string(C.default.DbeF7Y) }),
-                "filter" === o
+                (0, l.jsx)(r.E, { variant: "body-md/normal", children: k.intl.string(C.default.DbeF7Y) }),
+                "filter" === c
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
                               (0, l.jsx)(d.Q, {
                                   label: k.intl.string(C.default.VheZQr),
-                                  value: "" === c.days ? void 0 : Number(c.days),
-                                  onChange: (t) => c.setDays(t?.toString() ?? ""),
+                                  value: "" === o.days ? void 0 : Number(o.days),
+                                  onChange: (e) => o.setDays(e?.toString() ?? ""),
                                   min: 1,
                                   max: 36500,
                                   disabled: j,
@@ -161,12 +161,12 @@ function A(t) {
                                   label: k.intl.string(C.default.KIzpqi),
                                   selectionMode: "single",
                                   clearable: !1,
-                                  value: c.categoryId ?? "all",
-                                  onSelectionChange: (t) => c.setCategoryId("all" === t ? null : t),
+                                  value: o.categoryId ?? "all",
+                                  onSelectionChange: (e) => o.setCategoryId("all" === e ? null : e),
                                   disabled: j,
                                   options: [
                                       { id: "all", value: "all", label: k.intl.string(C.default["gOUr+P"]) },
-                                      ...c.categories.map((t) => ({ id: t.id, value: t.id, label: t.name })),
+                                      ...o.categories.map((e) => ({ id: e.id, value: e.id, label: e.name })),
                                   ],
                               }),
                           ],
@@ -174,7 +174,7 @@ function A(t) {
                     : (0, l.jsxs)(l.Fragment, {
                           children: [
                               (0, l.jsx)(r.E, {
-                                  variant: "text-sm/medium",
+                                  variant: "body-sm/medium",
                                   "aria-live": "polite",
                                   role: "status",
                                   children: k.intl.format(C.default.kdvwuo, { count: E }),
@@ -185,7 +185,7 @@ function A(t) {
                                         "aria-label": k.intl.string(C.default.wPednI),
                                         children: [
                                             (0, l.jsx)(r.E, {
-                                                variant: "text-sm/medium",
+                                                variant: "body-sm/medium",
                                                 children: k.intl.string(C.default.wPednI),
                                             }),
                                             (0, l.jsx)(i.B, {
@@ -193,45 +193,45 @@ function A(t) {
                                                 align: "start",
                                                 children: (0, l.jsx)(u.Q, {
                                                     text: k.intl.string(
-                                                        c.allSelected ? C.default.AX7Fmc : C.default.ZuaHVJ,
+                                                        o.allSelected ? C.default.AX7Fmc : C.default.ZuaHVJ,
                                                     ),
-                                                    textVariant: "text-sm/medium",
+                                                    textVariant: "body-sm/medium",
                                                     disabled: j,
-                                                    onClick: c.toggleSelection,
+                                                    onClick: o.toggleSelection,
                                                 }),
                                             }),
-                                            w.map((t) =>
+                                            w.map((e) =>
                                                 (0, l.jsx)(
                                                     F,
                                                     {
-                                                        channel: t,
-                                                        checked: c.selectedIds.includes(t.id),
+                                                        channel: e,
+                                                        checked: o.selectedIds.includes(e.id),
                                                         disabled: j,
-                                                        onChange: (e) =>
-                                                            c.setSelectedIds((n) =>
-                                                                e ? [...n, t.id] : n.filter((e) => e !== t.id),
+                                                        onChange: (t) =>
+                                                            o.setSelectedIds((n) =>
+                                                                t ? [...n, e.id] : n.filter((t) => t !== e.id),
                                                             ),
                                                     },
-                                                    t.id,
+                                                    e.id,
                                                 ),
                                             ),
                                         ],
                                     })
                                   : (0, l.jsx)(r.E, {
-                                        variant: "text-md/normal",
+                                        variant: "body-md/normal",
                                         children: k.intl.string(C.default["4KOdCv"]),
                                     }),
-                              c.unknownCount > 0
+                              o.unknownCount > 0
                                   ? (0, l.jsx)(r.E, {
-                                        variant: "text-sm/normal",
-                                        children: k.intl.format(C.default["rM/wWh"], { count: c.unknownCount }),
+                                        variant: "body-sm/normal",
+                                        children: k.intl.format(C.default["rM/wWh"], { count: o.unknownCount }),
                                     })
                                   : null,
                           ],
                       }),
-                c.error
+                o.error
                     ? (0, l.jsx)(r.E, {
-                          variant: "text-sm/normal",
+                          variant: "body-sm/normal",
                           color: "text-feedback-critical",
                           role: "alert",
                           children: k.intl.string(C.default.toOYQw),
@@ -241,19 +241,19 @@ function A(t) {
         }),
     });
 }
-function F(t) {
-    let { channel: e, checked: n, disabled: a, onChange: i } = t,
-        r = (0, o.Ay)(e),
-        d = (function (t) {
-            let [e] = f.useState(Date.now),
-                n = (0, g.bG)([x.Ay], () => (0, j.F)(t), [t]),
+function F(e) {
+    let { channel: t, checked: n, disabled: a, onChange: i } = e,
+        r = (0, c.Ay)(t),
+        d = (function (e) {
+            let [t] = f.useState(Date.now),
+                n = (0, g.bG)([b.Ay], () => (0, j.F)(e), [e]),
                 l =
                     Number.isFinite(n) && n > 0
                         ? k.intl.formatToPlainString(C.default.IzxPdG, {
-                              days: Math.max(0, Math.floor((e - n) / w.A.Millis.DAY)),
+                              days: Math.max(0, Math.floor((t - n) / w.A.Millis.DAY)),
                           })
                         : k.intl.string(C.default.rYws6y);
-            return t.threadMetadata?.archived ? k.intl.formatToPlainString(C.default.Dr1FWM, { activity: l }) : l;
-        })(e);
-    return (0, l.jsx)(c.S, { label: r ?? "", description: d, checked: n, disabled: a, onChange: i });
+            return e.threadMetadata?.archived ? k.intl.formatToPlainString(C.default.Dr1FWM, { activity: l }) : l;
+        })(t);
+    return (0, l.jsx)(o.S, { label: r ?? "", description: d, checked: n, disabled: a, onChange: i });
 }

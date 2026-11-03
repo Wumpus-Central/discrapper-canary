@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => y, eK: () => U, kE: () => C });
+n.d(t, { Ay: () => C, eK: () => b, kE: () => S });
 var s = n(477900),
     l = n(582128),
     i = n(17928),
@@ -22,8 +22,8 @@ var s = n(477900),
     I = n(652215),
     v = n(731854),
     O = n(105292),
-    S = n(357063);
-function C() {
+    y = n(357063);
+function S() {
     let [e, t] = l.useState(!1),
         n = (0, i.bG)([j.Ay], () => j.Ay.isMediaFilterSettingLoading());
     return (l.useEffect(() => {
@@ -38,25 +38,25 @@ function C() {
         );
     }, [n]),
     e)
-        ? (0, s.jsx)("div", { className: S.mB, children: (0, s.jsx)(o.y, {}) })
+        ? (0, s.jsx)("div", { className: y.mB, children: (0, s.jsx)(o.y, {}) })
         : null;
 }
-function U() {
+function b() {
     return (0, i.bG)([_.A], () => _.A.videoBackgroundPreviewUnavailable)
         ? (0, s.jsxs)("div", {
-              className: S.AJ,
+              className: y.AJ,
               children: [
                   (0, s.jsx)(r.WarningIcon, { color: c.A.colors.STATUS_WARNING_BACKGROUND, size: "lg" }),
                   (0, s.jsx)(d.E, {
                       color: "text-overlay-light",
-                      variant: "text-sm/medium",
+                      variant: "body-sm/medium",
                       children: O.intl.string(O.t["8n9gj5"]),
                   }),
               ],
           })
         : null;
 }
-function y(e) {
+function C(e) {
     let {
             hideDeviceSelector: t = !1,
             hideDeviceHeader: n = !1,
@@ -66,22 +66,22 @@ function y(e) {
             onSelectBackgroundOption: r,
             renderCamera: c,
             hidePreviewToggle: _ = !1,
-            onCancelPreview: C,
+            onCancelPreview: S,
         } = e,
-        { analyticsLocations: U } = (0, p.Ay)(),
-        { id: y } = (0, E.x5)(v.oh.VIDEO_INPUT),
-        D = (0, i.bG)([j.Ay], () => j.Ay.isVideoAvailable()),
-        T = g.bm.useSetting();
+        { analyticsLocations: b } = (0, p.Ay)(),
+        { id: C } = (0, E.x5)(v.oh.VIDEO_INPUT),
+        U = (0, i.bG)([j.Ay], () => j.Ay.isVideoAvailable()),
+        D = g.bm.useSetting();
     return (0, s.jsxs)(u.B, {
         gap: 20,
         children: [
-            c(y),
+            c(C),
             j.Ay.isEnabled()
                 ? null
                 : (0, s.jsx)(d.E, {
-                      className: S.u5,
+                      className: y.u5,
                       color: "interactive-text-default",
-                      variant: "text-sm/normal",
+                      variant: "body-sm/normal",
                       children: O.intl.format(O.t.stagfJ, { onEnableClick: () => x.default.enable(!0) }),
                   }),
             _
@@ -89,7 +89,7 @@ function y(e) {
                 : (0, s.jsx)(m.d, {
                       label: O.intl.string(O.t["3Ppr1h"]),
                       description: O.intl.string(O.t.WNbX4O),
-                      checked: T,
+                      checked: D,
                       onChange: (e) => {
                           (g.bm.updateSetting(e),
                               f.default.track(I.HAw.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e }));
@@ -102,22 +102,22 @@ function y(e) {
                         !l && (0, h.p)()
                             ? O.intl.format(O.t.aJYgRt, {
                                   onCameraSettingsClick: () => {
-                                      (C?.(),
-                                          window.open((0, h.i)(y)),
-                                          f.default.track(I.HAw.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: U }));
+                                      (S?.(),
+                                          window.open((0, h.i)(C)),
+                                          f.default.track(I.HAw.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: b }));
                                   },
                               })
                             : void 0,
                     deviceType: v.oh.VIDEO_INPUT,
                     location: "CameraSettings",
-                    isDisabled: !D,
+                    isDisabled: !U,
                 }),
             (0, s.jsx)(N.A, {
-                className: S.Jp,
+                className: y.Jp,
                 onLearnMore: a,
                 selectedBackgroundOption: o,
                 onSelectBackgroundOption: r,
-                currentDeviceId: y,
+                currentDeviceId: C,
             }),
         ],
     });

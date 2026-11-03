@@ -201,7 +201,7 @@ function z(e) {
                         (0, a.jsxs)("div", {
                             className: D.kb,
                             children: [
-                                (0, a.jsx)(E.D, { variant: "heading-sm/semibold", children: em.headerText }),
+                                (0, a.jsx)(E.D, { variant: "heading-xs/semibold", children: em.headerText }),
                                 (0, a.jsxs)(S.D, {
                                     className: D.yj,
                                     onClick: (e) => {
@@ -227,7 +227,7 @@ function z(e) {
                                     },
                                     children: [
                                         (0, a.jsx)(h.E, {
-                                            variant: "text-xs/medium",
+                                            variant: "body-xs/medium",
                                             color: "text-muted",
                                             className: D.BK,
                                             children: U.intl.format(U.t["Lm8/mH"], {

@@ -23,7 +23,7 @@ function C(e) {
         trailing: E,
         ...S
     } = e;
-    function g() {
+    function y() {
         return (0, l.jsx)(c.A, {
             className: r()(p.Xx, t),
             gradientColor: C,
@@ -33,7 +33,7 @@ function C(e) {
                 className: p.Yu,
                 children: [
                     (0, l.jsx)(s.E, {
-                        variant: "text-xs/semibold",
+                        variant: "body-xs/semibold",
                         color: "currentColor",
                         children: "string" == typeof f ? (0, d.U)(f) : f,
                     }),
@@ -43,10 +43,10 @@ function C(e) {
         });
     }
     return null != h && "object" == typeof h
-        ? (0, l.jsx)(o.u, { assetSize: 48, asContainer: !0, element: "div", ...h, children: g() })
+        ? (0, l.jsx)(o.u, { assetSize: 48, asContainer: !0, element: "div", ...h, children: y() })
         : null != h && "string" == typeof h
-          ? (0, l.jsx)(u.m, { text: h, asContainer: !0, tag: "div", children: g() })
-          : g();
+          ? (0, l.jsx)(u.m, { text: h, asContainer: !0, tag: "div", children: y() })
+          : y();
 }
 function h(e) {
     let { trailingText: t, ...n } = e;
@@ -54,7 +54,7 @@ function h(e) {
         trailing:
             null != t
                 ? (0, l.jsx)(s.E, {
-                      variant: "text-xs/medium",
+                      variant: "body-xs/medium",
                       color: "currentColor",
                       children: "string" == typeof t ? (0, d.U)(t) : t,
                   })

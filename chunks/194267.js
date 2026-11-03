@@ -16,8 +16,8 @@ var s = n(477900),
     f = n(144779),
     g = n(429913),
     p = n(409626),
-    x = n(611656),
-    _ = n(459746),
+    _ = n(611656),
+    x = n(459746),
     N = n(311043),
     R = n(454908),
     S = n(363195),
@@ -26,10 +26,10 @@ var s = n(477900),
     L = n(291749),
     j = n(590202),
     v = n(971649),
-    M = n(657792),
-    G = n(811500),
-    O = n(190107),
-    y = n(652215),
+    y = n(657792),
+    M = n(811500),
+    G = n(190107),
+    O = n(652215),
     P = n(105292),
     k = n(398889);
 function b(e) {
@@ -38,7 +38,7 @@ function b(e) {
         r,
         { quest: i, onClose: a } = e,
         m = (0, l.bG)([S.A], () => S.A.getState().theme),
-        E = (0, o.M)(m) ? y.NJ8.DARK : y.NJ8.LIGHT;
+        E = (0, o.M)(m) ? O.NJ8.DARK : O.NJ8.LIGHT;
     return (0, s.jsxs)("div", {
         className: k.N1,
         children: [
@@ -54,17 +54,17 @@ function b(e) {
                         className: k.if,
                         children: [
                             (0, s.jsx)(c.E, {
-                                variant: "text-sm/semibold",
+                                variant: "body-sm/semibold",
                                 color: "text-strong",
                                 children:
                                     ((t = {
-                                        [O.Li.PACKAGE_ACTION_ADVENTURE]: P.t.PYFVdf,
-                                        [O.Li.PACKAGE_RPG_MMO]: P.t.rFQo2F,
-                                        [O.Li.PACKAGE_RACING_SPORTS]: P.t.zDRa6g,
-                                        [O.Li.PACKAGE_SANDBOX_CREATIVE]: P.t.vz9U2Q,
-                                        [O.Li.PACKAGE_FAMILY_FRIENDLY]: P.t.IOiAE0,
-                                        [O.Li.PACKAGE_HOLIDAY_SEASON]: P.t.cJPqvD,
-                                        [O.Li.PACKAGE_NEW_YEARS]: P.t.S0w2mv,
+                                        [G.Li.PACKAGE_ACTION_ADVENTURE]: P.t.PYFVdf,
+                                        [G.Li.PACKAGE_RPG_MMO]: P.t.rFQo2F,
+                                        [G.Li.PACKAGE_RACING_SPORTS]: P.t.zDRa6g,
+                                        [G.Li.PACKAGE_SANDBOX_CREATIVE]: P.t.vz9U2Q,
+                                        [G.Li.PACKAGE_FAMILY_FRIENDLY]: P.t.IOiAE0,
+                                        [G.Li.PACKAGE_HOLIDAY_SEASON]: P.t.cJPqvD,
+                                        [G.Li.PACKAGE_NEW_YEARS]: P.t.S0w2mv,
                                     }),
                                     (r =
                                         (null != (n = i.config.features.find((e) => e in t)) ? t[n] : null) ??
@@ -72,7 +72,7 @@ function b(e) {
                                     P.intl.string(r)),
                             }),
                             (0, s.jsx)(c.E, {
-                                variant: "text-sm/normal",
+                                variant: "body-sm/normal",
                                 color: "text-muted",
                                 children: P.intl.string(P.t.VgN1Bn),
                             }),
@@ -93,7 +93,7 @@ function w(e) {
     let { quest: t, game: a, sourceQuestContent: o, onGameProfileModalOpen: c, onGameProfileModalClose: d } = e,
         A = (0, v.wW)(),
         g = (0, l.bG)([C.Ay], () => C.Ay.useReducedMotion),
-        x = r.useRef(null),
+        _ = r.useRef(null),
         N = null != a.gameRecord;
     function R() {
         (0, h.r)({
@@ -821,18 +821,18 @@ function w(e) {
     }
     let T = r.useCallback(
             (e) => {
-                if (null == x.current || g) return;
-                let t = x.current.getBoundingClientRect(),
+                if (null == _.current || g) return;
+                let t = _.current.getBoundingClientRect(),
                     n = e.clientX - t.left,
                     s = e.clientY - t.top,
                     r = t.width / 2,
                     i = t.height / 2;
-                x.current.style.transform = `rotateX(${-(((s - i) / i) * 15)}deg) rotateY(${((n - r) / r) * 15}deg)`;
+                _.current.style.transform = `rotateX(${-(((s - i) / i) * 15)}deg) rotateY(${((n - r) / r) * 15}deg)`;
             },
             [g],
         ),
         L = r.useCallback(() => {
-            null == x.current || g || (x.current.style.transform = "rotateX(0deg) rotateY(0deg)");
+            null == _.current || g || (_.current.style.transform = "rotateX(0deg) rotateY(0deg)");
         }, [g]);
     return (0, s.jsx)(E.m, {
         text: a.name,
@@ -842,11 +842,11 @@ function w(e) {
             onMouseMove: T,
             onMouseLeave: L,
             children: (0, s.jsx)("div", {
-                ref: x,
+                ref: _,
                 className: k._M,
                 children:
                     null != a.gameRecord
-                        ? (0, s.jsx)(_.Ay, { game: a.gameRecord, className: k.xe, size: _.wu.SMALL })
+                        ? (0, s.jsx)(x.Ay, { game: a.gameRecord, className: k.xe, size: x.wu.SMALL })
                         : null,
             }),
         }),
@@ -899,7 +899,7 @@ function F(e) {
         h = (0, l.yK)([N.A], () =>
             E.map((e) => N.A.getGame(e))
                 .filter((e) => null != e)
-                .filter((e) => (0, x.oS)(e.id))
+                .filter((e) => (0, _.oS)(e.id))
                 .slice(0, 10),
         ),
         f = r.useMemo(() => h.map((e) => ({ gameId: e.id, name: e.name, gameRecord: e })).slice(0, 10), [h]),
@@ -907,13 +907,13 @@ function F(e) {
             let e = f.length;
             return e <= 4 ? 4 - e : 5 === e ? 0 : e <= 8 ? 8 - e : 10 - e;
         }, [f.length]),
-        _ = !A && 0 === f.length,
-        S = C || _;
+        x = !A && 0 === f.length,
+        S = C || x;
     if (
         (r.useEffect(() => {
             if (S) {
-                let e = C ? G.W.FETCH_FAILED : G.W.NO_GAMES_AVAILABLE;
-                (T.default.track(y.HAw.QUEST_GAME_SHEET_ERROR, { quest_id: t.id, error_type: e }),
+                let e = C ? M.W.FETCH_FAILED : M.W.NO_GAMES_AVAILABLE;
+                (T.default.track(O.HAw.QUEST_GAME_SHEET_ERROR, { quest_id: t.id, error_type: e }),
                     a(),
                     (0, m.openModalLazy)(async () => {
                         let { default: e } = await n.e("791646").then(n.bind(n, 659309));
@@ -980,8 +980,8 @@ function q(e) {
         } = e,
         [C, g] = r.useState(!1),
         p = r.useRef(null),
-        x = t?.current != null,
-        _ = x ? t : p;
+        _ = t?.current != null,
+        x = _ ? t : p;
     function N() {
         g(!0);
     }
@@ -989,7 +989,7 @@ function q(e) {
         g(!1);
     }
     return (0, s.jsx)(A.Y, {
-        targetElementRef: _,
+        targetElementRef: x,
         clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: t } = e;
@@ -1019,8 +1019,8 @@ function q(e) {
             if (C) return a.oU;
             c?.();
         },
-        position: x ? "right" : "top",
-        align: x ? "bottom" : void 0,
+        position: _ ? "right" : "top",
+        align: _ ? "bottom" : void 0,
         spacing: 20,
         scrollBehavior: "close",
         ignoreModalClicks: !0,
@@ -1031,7 +1031,7 @@ let Q = function (e) {
     let t = (0, v.QK)();
     return null == e.quest || e.applications.length <= 1
         ? null
-        : (0, s.jsx)(M.R, {
+        : (0, s.jsx)(y.R, {
               questOrQuests: e.quest,
               questContent: I.uF.SPONSORED_QUEST_SHEET,
               sourceQuestContent: e.sourceQuestContent,

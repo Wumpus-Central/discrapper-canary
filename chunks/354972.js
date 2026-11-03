@@ -1,4 +1,4 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => g });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -15,28 +15,28 @@ var l = n(477900),
     f = n(105292),
     E = n(290484);
 let S = { section: C.JJy.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER, openPopoutType: "gift_effect_emoji_picker" },
-    g = h.EmojiIntention.GIFT;
-function I(e) {
+    y = h.EmojiIntention.GIFT;
+function g(e) {
     let { setEmojiConfetti: t, emojiConfetti: n } = e,
         [r, C] = i.useState(!1),
         h = i.useRef(null),
-        I = a()(E.Qq, E.Ow);
-    function A(e) {
+        g = a()(E.Qq, E.Ow);
+    function I(e) {
         return (0, l.jsxs)("div", {
             className: E.ZC,
             children: [
                 (0, l.jsxs)("div", {
                     className: E.Ry,
                     children: [
-                        (0, l.jsx)(o.E, { variant: "text-md/semibold", children: f.intl.string(f.t.Hl2Ige) }),
-                        (0, l.jsx)(o.E, { variant: "text-sm/normal", children: f.intl.string(f.t.stGFA3) }),
+                        (0, l.jsx)(o.E, { variant: "body-md/semibold", children: f.intl.string(f.t.Hl2Ige) }),
+                        (0, l.jsx)(o.E, { variant: "body-sm/normal", children: f.intl.string(f.t.stGFA3) }),
                     ],
                 }),
                 e,
             ],
         });
     }
-    function y(e) {
+    function A(e) {
         let { emoji: n } = e;
         null != t && (t(n), C(!1));
     }
@@ -52,11 +52,11 @@ function I(e) {
                 children: (0, l.jsx)(p.A, {
                     analyticsOverride: S,
                     closePopout: t,
-                    onSelectEmoji: y,
+                    onSelectEmoji: A,
                     wrapper: "div",
-                    pickerIntention: g,
+                    pickerIntention: y,
                     showAddEmojiButton: !1,
-                    renderHeader: A,
+                    renderHeader: I,
                     headerClassName: E.a8,
                     className: E.vX,
                     listHeaderClassName: E.vX,
@@ -83,8 +83,8 @@ function I(e) {
                                       height: 14,
                                   }),
                                   (0, l.jsx)(o.E, {
-                                      className: I,
-                                      variant: "text-sm/semibold",
+                                      className: g,
+                                      variant: "body-sm/semibold",
                                       lineClamp: 1,
                                       children: f.intl.string(f.t.Hl2Ige),
                                   }),
@@ -94,13 +94,13 @@ function I(e) {
                               className: E.hQ,
                               children: [
                                   (0, l.jsx)(o.E, {
-                                      className: I,
-                                      variant: "text-sm/semibold",
+                                      className: g,
+                                      variant: "body-sm/semibold",
                                       children: null == n.guildId ? n.optionallyDiverseSequence : null,
                                   }),
                                   (0, l.jsx)(o.E, {
-                                      className: I,
-                                      variant: "text-sm/semibold",
+                                      className: g,
+                                      variant: "body-sm/semibold",
                                       lineClamp: 1,
                                       children: n.name.replace(/_/g, " "),
                                   }),

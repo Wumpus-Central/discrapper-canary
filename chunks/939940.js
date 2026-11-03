@@ -14,21 +14,21 @@ var e = n(477900),
     g = n(164620);
 let p = function (t) {
     let { channel: i, onClose: n, transitionState: p } = t,
-        [x, E] = l.useState(i.defaultReactionEmoji ?? null),
-        [h, k] = l.useState(!1),
+        [E, h] = l.useState(i.defaultReactionEmoji ?? null),
+        [x, k] = l.useState(!1),
         [C, N] = l.useState(!1),
-        R = l.useRef(null),
-        v = (i.defaultReactionEmoji?.emojiId ?? null) !== (x?.emojiId ?? null),
-        y = (i.defaultReactionEmoji?.emojiName ?? null) !== (x?.emojiName ?? null),
-        I = v || y;
-    function b(t) {
-        E(null == t ? null : t?.id != null ? { emojiId: t.id } : { emojiName: t.optionallyDiverseSequence });
+        y = l.useRef(null),
+        R = (i.defaultReactionEmoji?.emojiId ?? null) !== (E?.emojiId ?? null),
+        v = (i.defaultReactionEmoji?.emojiName ?? null) !== (E?.emojiName ?? null),
+        b = R || v;
+    function I(t) {
+        h(null == t ? null : t?.id != null ? { emojiId: t.id } : { emojiName: t.optionallyDiverseSequence });
     }
     async function S() {
-        if (I) {
+        if (b) {
             (k(!0), N(!1));
             try {
-                (await (0, u.RT)(i.id, { defaultReactionEmoji: x }), n());
+                (await (0, u.RT)(i.id, { defaultReactionEmoji: E }), n());
             } catch (t) {
                 N(!0);
             } finally {
@@ -46,20 +46,20 @@ let p = function (t) {
             {
                 variant: "primary",
                 text: f.intl.string(f.t["R3BPH+"]),
-                loading: h,
-                disabled: !I,
+                loading: x,
+                disabled: !b,
                 onClick: S,
                 autoFocus: !0,
             },
         ],
         children: [
-            (0, e.jsx)(m.A, { reactionEmoji: x }),
+            (0, e.jsx)(m.A, { reactionEmoji: E }),
             (0, e.jsxs)(o.e, {
                 size: "sm",
                 className: g.v,
                 children: [
                     (0, e.jsx)(s.Y, {
-                        targetElementRef: R,
+                        targetElementRef: y,
                         renderPopout: function (t) {
                             let { closePopout: n } = t;
                             return (0, e.jsx)(d.A, {
@@ -67,7 +67,7 @@ let p = function (t) {
                                 closePopout: n,
                                 onSelectEmoji: (t) => {
                                     let { emoji: i, willClose: e } = t;
-                                    (b(i), e && n());
+                                    (I(i), e && n());
                                 },
                                 pickerIntention: j.EmojiIntention.COMMUNITY_CONTENT,
                                 channel: i,
@@ -79,7 +79,7 @@ let p = function (t) {
                         children: (t) =>
                             (0, e.jsx)(c.$, {
                                 ...t,
-                                buttonRef: R,
+                                buttonRef: y,
                                 text: f.intl.string(f.t["59QgaD"]),
                                 variant: "primary",
                                 onClick: (i) => {
@@ -87,17 +87,17 @@ let p = function (t) {
                                 },
                             }),
                     }),
-                    null != x &&
+                    null != E &&
                         (0, e.jsx)(c.$, {
                             text: f.intl.string(f.t.N86XcP),
                             variant: "critical-secondary",
-                            onClick: () => b(null),
+                            onClick: () => I(null),
                         }),
                 ],
             }),
             C
                 ? (0, e.jsx)(r.E, {
-                      variant: "text-sm/normal",
+                      variant: "body-sm/normal",
                       color: "text-feedback-critical",
                       children: f.intl.string(f.t.F75nNl),
                   })

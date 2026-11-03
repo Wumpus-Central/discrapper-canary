@@ -45,7 +45,7 @@ function c(e) {
         iconSize: c,
         customGraphic: d,
         className: m,
-        textVariant: p = "text-sm/medium",
+        textVariant: p = "body-sm/medium",
         textColor: C = "currentColor",
     } = e;
     return (0, l.jsx)(u, {

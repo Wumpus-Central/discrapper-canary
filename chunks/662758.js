@@ -1,4 +1,4 @@
-a.d(e, { default: () => p });
+a.d(e, { default: () => b });
 var s = a(477900),
     n = a(582128),
     l = a(189213),
@@ -12,11 +12,11 @@ function u(t) {
             title: e,
             actionText: a,
             children: u,
-            transitionState: p,
-            onClose: b,
-            handleSubmit: h,
-            onError: m,
-            skipErrorMsgAbortCode: y,
+            transitionState: b,
+            onClose: p,
+            handleSubmit: y,
+            onError: h,
+            skipErrorMsgAbortCode: m,
             onPasswordChange: x,
             variant: C = "primary",
         } = t,
@@ -24,29 +24,29 @@ function u(t) {
         [v, w] = n.useState(null),
         [g, j] = n.useState(!1),
         N = n.useCallback(async () => {
-            await b();
-        }, [b]),
+            await p();
+        }, [p]),
         S =
             n.Children.count(u) > 0
                 ? (0, s.jsx)(o.Z, {
                       type: o.Z.Types.WARNING,
                       className: c.Nr,
-                      children: (0, s.jsx)(r.E, { color: "currentColor", variant: "text-md/normal", children: u }),
+                      children: (0, s.jsx)(r.E, { color: "currentColor", variant: "body-md/normal", children: u }),
                   })
                 : null;
     return (0, s.jsx)("form", {
         onSubmit: function (t) {
             (t.preventDefault(),
                 j(!0),
-                h(f)
+                y(f)
                     .then(
-                        (t) => b(t ?? void 0),
+                        (t) => p(t ?? void 0),
                         (t) => {
                             var e;
                             null != t.body &&
-                                (m?.(t.body),
+                                (h?.(t.body),
                                 (e = t.body),
-                                (null == y || e?.code !== y) &&
+                                (null == m || e?.code !== m) &&
                                     (t.body.password
                                         ? (w(t.body.password), j(!1))
                                         : t.body.message && (w(t.body.message), j(!1))));
@@ -61,7 +61,7 @@ function u(t) {
                 { text: a ?? d.intl.string(d.t["cY+Oob"]), type: "submit", variant: C, disabled: g || 0 === f.length },
             ],
             onClose: N,
-            transitionState: p,
+            transitionState: b,
             children: [
                 S,
                 (0, s.jsxs)("div", {
@@ -80,7 +80,7 @@ function u(t) {
                         }),
                         null != v && "" !== v
                             ? (0, s.jsxs)(r.E, {
-                                  variant: "text-xs/normal",
+                                  variant: "body-xs/normal",
                                   color: "text-feedback-critical",
                                   className: c.z3,
                                   children: [" ", v, " "],
@@ -93,4 +93,4 @@ function u(t) {
     });
 }
 u.key = () => "password-confirm-modal";
-let p = u;
+let b = u;

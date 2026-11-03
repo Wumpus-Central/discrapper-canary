@@ -18,7 +18,7 @@ function f(e) {
     let { controls: t, children: n, listProps: r, onScroll: a, scrollerRef: s } = e;
     if (!h(n) && null == t && null == r) return null;
     let l =
-        "string" == typeof n ? (0, i.jsx)(E.E, { variant: "text-md/normal", color: "text-subtle", children: n }) : n;
+        "string" == typeof n ? (0, i.jsx)(E.E, { variant: "body-md/normal", color: "text-subtle", children: n }) : n;
     return (0, i.jsx)(I, { controls: t, children: l, listProps: r, onScroll: a, scrollerRef: s });
 }
 function I(e) {

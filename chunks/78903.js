@@ -8,40 +8,40 @@ var a = n(477900),
     o = n(976860),
     C = n(513461),
     E = n(652215),
-    u = n(746080),
-    d = n(105292),
+    d = n(746080),
+    u = n(105292),
     k = n(695416);
 let p = function (t) {
     let { guildId: i, submittedGuildJoinRequestsCount: n, onClose: p, transitionState: h, onConfirm: g } = t,
-        x = l.useCallback(
+        b = l.useCallback(
             (t) => {
                 (p(), g(t));
             },
             [p, g],
         ),
-        V = l.useCallback(() => {
-            (p(), e.A.close(), (0, o.pX)(E.BVt.CHANNEL(i, u.VV.MEMBER_SAFETY)));
+        x = l.useCallback(() => {
+            (p(), e.A.close(), (0, o.pX)(E.BVt.CHANNEL(i, d.VV.MEMBER_SAFETY)));
         }, [i, p]),
-        b = n > 200,
+        V = n > 200,
         m = [
-            { text: d.intl.string(d.t["ETE/oC"]), onClick: p, variant: "secondary" },
-            { text: d.intl.string(d.t.Gfg0rT), onClick: () => x(C.B5.REJECTED), variant: "critical-primary" },
+            { text: u.intl.string(u.t["ETE/oC"]), onClick: p, variant: "secondary" },
+            { text: u.intl.string(u.t.Gfg0rT), onClick: () => b(C.B5.REJECTED), variant: "critical-primary" },
         ];
     return (
-        b || m.push({ text: d.intl.string(d.t.VWqCvL), onClick: () => x(C.B5.APPROVED), variant: "primary" }),
+        V || m.push({ text: u.intl.string(u.t.VWqCvL), onClick: () => b(C.B5.APPROVED), variant: "primary" }),
         (0, a.jsx)(r.a, {
-            title: d.intl.formatToPlainString(d.t.chV4Jb, { count: n }),
+            title: u.intl.formatToPlainString(u.t.chV4Jb, { count: n }),
             onClose: p,
-            subtitle: b ? d.intl.string(d.t.EPoNRs) : d.intl.string(d.t["8+nq/G"]),
+            subtitle: V ? u.intl.string(u.t.EPoNRs) : u.intl.string(u.t["8+nq/G"]),
             transitionState: h,
             actions: m,
             children: (0, a.jsx)(s.D, {
                 className: k.K2,
-                onClick: V,
+                onClick: x,
                 children: (0, a.jsx)(c.E, {
-                    variant: "text-md/normal",
+                    variant: "body-md/normal",
                     color: "text-link",
-                    children: d.intl.string(d.t.szESVF),
+                    children: u.intl.string(u.t.szESVF),
                 }),
             }),
         })

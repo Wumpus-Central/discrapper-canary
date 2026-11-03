@@ -12,7 +12,7 @@ function s(e) {
               className: l.k,
               children: [
                   (0, r.jsx)(a.W, { application: t, iconSize: n }),
-                  (0, r.jsx)(i.E, { variant: "text-sm/medium", color: "text-muted", children: t.name }),
+                  (0, r.jsx)(i.E, { variant: "body-sm/medium", color: "text-muted", children: t.name }),
               ],
           });
 }

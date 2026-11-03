@@ -1,59 +1,59 @@
-e.d(t, { A: () => k });
-var o = e(477900),
-    i = e(582128),
-    s = e(503698),
-    l = e.n(s),
-    n = e(17928),
-    a = e(661531),
-    u = e(462887),
-    c = e(306471),
-    d = e(478016),
-    E = e(565787),
-    _ = e(332837),
-    f = e(834730),
-    C = e(900002),
-    h = e(682697),
-    A = e(939249),
-    I = e(140735),
-    p = e(404374),
-    N = e(464120),
-    g = e(814925),
-    m = e(363195),
-    R = e(696451),
-    x = e(287809),
-    T = e(816166),
-    D = e(953727);
+o.d(t, { A: () => k });
+var e = o(477900),
+    i = o(582128),
+    s = o(503698),
+    l = o.n(s),
+    n = o(17928),
+    a = o(661531),
+    u = o(462887),
+    c = o(306471),
+    d = o(478016),
+    E = o(565787),
+    _ = o(332837),
+    f = o(834730),
+    C = o(900002),
+    h = o(682697),
+    A = o(939249),
+    I = o(140735),
+    p = o(404374),
+    N = o(464120),
+    g = o(814925),
+    m = o(363195),
+    R = o(696451),
+    T = o(287809),
+    D = o(816166),
+    x = o(953727);
 function L(r) {
-    let { width: t = 10, height: e = 10, color: i = "currentColor", ...s } = r;
-    return (0, o.jsxs)("svg", {
-        ...(0, D.A)(s),
+    let { width: t = 10, height: o = 10, color: i = "currentColor", ...s } = r;
+    return (0, e.jsxs)("svg", {
+        ...(0, x.A)(s),
         width: t,
-        height: e,
+        height: o,
         viewBox: "0 0 17 22",
         fill: i,
         xmlns: "http://www.w3.org/2000/svg",
         children: [
-            (0, o.jsxs)("g", {
+            (0, e.jsxs)("g", {
                 filter: "url(#filter0_d_1296_1706)",
                 children: [
-                    (0, o.jsx)("path", {
+                    (0, e.jsx)("path", {
                         opacity: "0.55",
                         d: "M8.49999 3.7998L4.85999 7.4398V12.5598L8.49999 16.1998L12.14 12.5598V7.4398L8.49999 3.7998ZM10.32 11.7998L8.49999 13.6265L6.67999 11.8065V8.19314L8.49999 6.37314L10.32 8.19314V11.7998Z",
                         fill: "white",
                     }),
-                    (0, o.jsx)("path", {
+                    (0, e.jsx)("path", {
                         opacity: "0.8",
                         d: "M6.67999 8.19354V11.8069L8.49999 13.6269L10.32 11.8069V8.19354L8.49999 6.37354L6.67999 8.19354Z",
                         fill: "white",
                     }),
-                    (0, o.jsx)("path", {
+                    (0, e.jsx)("path", {
                         d: "M8.5 3.7998V6.37314L10.32 8.19314L12.14 7.4398L8.5 3.7998Z",
                         fill: "white",
                     }),
                 ],
             }),
-            (0, o.jsx)("defs", {
-                children: (0, o.jsxs)("filter", {
+            (0, e.jsx)("defs", {
+                children: (0, e.jsxs)("filter", {
                     id: "filter0_d_1296_1706",
                     x: "-3.5",
                     y: "-1",
@@ -62,25 +62,25 @@ function L(r) {
                     filterUnits: "userSpaceOnUse",
                     colorInterpolationFilters: "sRGB",
                     children: [
-                        (0, o.jsx)("feFlood", { floodOpacity: "0", result: "BackgroundImageFix" }),
-                        (0, o.jsx)("feColorMatrix", {
+                        (0, e.jsx)("feFlood", { floodOpacity: "0", result: "BackgroundImageFix" }),
+                        (0, e.jsx)("feColorMatrix", {
                             in: "SourceAlpha",
                             type: "matrix",
                             values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0",
                             result: "hardAlpha",
                         }),
-                        (0, o.jsx)("feOffset", { dy: "1" }),
-                        (0, o.jsx)("feGaussianBlur", { stdDeviation: "2" }),
-                        (0, o.jsx)("feColorMatrix", {
+                        (0, e.jsx)("feOffset", { dy: "1" }),
+                        (0, e.jsx)("feGaussianBlur", { stdDeviation: "2" }),
+                        (0, e.jsx)("feColorMatrix", {
                             type: "matrix",
                             values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.14 0",
                         }),
-                        (0, o.jsx)("feBlend", {
+                        (0, e.jsx)("feBlend", {
                             mode: "normal",
                             in2: "BackgroundImageFix",
                             result: "effect1_dropShadow_1296_1706",
                         }),
-                        (0, o.jsx)("feBlend", {
+                        (0, e.jsx)("feBlend", {
                             mode: "normal",
                             in: "SourceGraphic",
                             in2: "effect1_dropShadow_1296_1706",
@@ -92,71 +92,71 @@ function L(r) {
         ],
     });
 }
-var w = e(473145),
-    b = e(426983),
-    v = e(176128),
-    O = e(105292);
+var b = o(473145),
+    w = o(426983),
+    v = o(176128),
+    O = o(105292);
 function M(r, t) {
-    let e =
+    let o =
             t === v.qo.PUBLIC
                 ? O.intl.string(O.t.op2cJ6)
                 : t === v.qo.APPLY_TO_JOIN
                   ? O.intl.string(O.t.YwZfbt)
                   : O.intl.string(O.t.TME4LJ),
-        o = t === v.qo.PUBLIC ? O.intl.string(O.t.SiZQ0N) : O.intl.string(O.t.K7iRig);
+        e = t === v.qo.PUBLIC ? O.intl.string(O.t.SiZQ0N) : O.intl.string(O.t.K7iRig);
     switch (r) {
-        case b._.STAFF:
+        case w._.STAFF:
             return {
                 tooltipTitle: O.intl.string(O.t.lMrv96),
                 tooltipSubtitle: O.intl.string(O.t.lMrv96),
                 tooltipDescription: O.intl.string(O.t.lMrv96),
             };
-        case b._.VERIFIED:
-            return { tooltipTitle: o, tooltipSubtitle: O.intl.string(O.t.iCehw9), tooltipDescription: e };
-        case b._.PARTNERED:
-            return { tooltipTitle: o, tooltipSubtitle: O.intl.string(O.t.hfYfEE), tooltipDescription: e };
-        case b._.VERIFIED_AND_PARTNERED:
-            return { tooltipTitle: o, tooltipSubtitle: O.intl.string(O.t["TX+iFC"]), tooltipDescription: e };
-        case b._.COMMUNITY:
-            return { tooltipTitle: O.intl.string(O.t.K7iRig), tooltipDescription: e };
-        case b._.DISCOVERABLE:
+        case w._.VERIFIED:
+            return { tooltipTitle: e, tooltipSubtitle: O.intl.string(O.t.iCehw9), tooltipDescription: o };
+        case w._.PARTNERED:
+            return { tooltipTitle: e, tooltipSubtitle: O.intl.string(O.t.hfYfEE), tooltipDescription: o };
+        case w._.VERIFIED_AND_PARTNERED:
+            return { tooltipTitle: e, tooltipSubtitle: O.intl.string(O.t["TX+iFC"]), tooltipDescription: o };
+        case w._.COMMUNITY:
+            return { tooltipTitle: O.intl.string(O.t.K7iRig), tooltipDescription: o };
+        case w._.DISCOVERABLE:
             return { tooltipTitle: O.intl.string(O.t.SiZQ0N), tooltipDescription: O.intl.string(O.t.op2cJ6) };
         default:
             return { tooltipTitle: O.intl.string(O.t["iZRkC/"]) };
     }
 }
-var j = e(652215),
-    V = e(818357);
+var j = o(652215),
+    V = o(818357);
 let F = {
-    [b._.STAFF]: {
+    [w._.STAFF]: {
         IconComponent: c.V,
         foregroundDarkColor: a.A.unsafe_rawColors.WHITE.css,
         foregroundLightColor: a.A.unsafe_rawColors.WHITE.css,
         backgroundDarkColor: a.A.unsafe_rawColors.GREEN_360.css,
         backgroundLightColor: a.A.unsafe_rawColors.GREEN_360.css,
     },
-    [b._.VERIFIED_AND_PARTNERED]: {
+    [w._.VERIFIED_AND_PARTNERED]: {
         IconComponent: d.U,
         foregroundDarkColor: a.A.unsafe_rawColors.WHITE.css,
         foregroundLightColor: a.A.unsafe_rawColors.WHITE.css,
         backgroundDarkColor: a.A.unsafe_rawColors.GREEN_360.css,
         backgroundLightColor: a.A.unsafe_rawColors.GREEN_360.css,
     },
-    [b._.VERIFIED]: {
+    [w._.VERIFIED]: {
         IconComponent: d.U,
         foregroundDarkColor: a.A.unsafe_rawColors.WHITE.css,
         foregroundLightColor: a.A.unsafe_rawColors.WHITE.css,
         backgroundDarkColor: a.A.unsafe_rawColors.GREEN_360.css,
         backgroundLightColor: a.A.unsafe_rawColors.GREEN_360.css,
     },
-    [b._.PARTNERED]: {
-        IconComponent: (0, E.k)(T.A),
+    [w._.PARTNERED]: {
+        IconComponent: (0, E.k)(D.A),
         foregroundDarkColor: a.A.unsafe_rawColors.WHITE.css,
         foregroundLightColor: a.A.unsafe_rawColors.WHITE.css,
         backgroundDarkColor: a.A.unsafe_rawColors.BRAND_500.css,
         backgroundLightColor: a.A.unsafe_rawColors.BRAND_500.css,
     },
-    [b._.COMMUNITY]: {
+    [w._.COMMUNITY]: {
         IconComponent: _.HomeIcon,
         foregroundDarkColor: a.A.unsafe_rawColors.PRIMARY_500.css,
         foregroundLightColor: a.A.unsafe_rawColors.WHITE.css,
@@ -166,29 +166,29 @@ let F = {
         premiumForegroundColor: a.A.unsafe_rawColors.WHITE.css,
         sizeAdjustment: 2,
     },
-    [b._.DISCOVERABLE]: {},
-    [b._.NONE]: {},
+    [w._.DISCOVERABLE]: {},
+    [w._.NONE]: {},
 };
 function S(r) {
     let { guildTraits: t } = r;
-    return (0, o.jsxs)("div", {
+    return (0, e.jsxs)("div", {
         className: V.V8,
         children: [
-            (0, o.jsxs)("div", {
+            (0, e.jsxs)("div", {
                 className: l()(V.f, V.N5),
                 children: [
-                    (0, o.jsx)(L, { width: 18, height: 18, className: V.F8 }),
-                    (0, o.jsx)(f.E, {
-                        variant: "text-xs/semibold",
+                    (0, e.jsx)(L, { width: 18, height: 18, className: V.F8 }),
+                    (0, e.jsx)(f.E, {
+                        variant: "body-xs/semibold",
                         color: "text-overlay-light",
-                        children: w.gb(t.premiumTier),
+                        children: b.gb(t.premiumTier),
                     }),
                 ],
             }),
-            (0, o.jsx)("div", {
+            (0, e.jsx)("div", {
                 className: V.f,
-                children: (0, o.jsx)(f.E, {
-                    variant: "text-xs/semibold",
+                children: (0, e.jsx)(f.E, {
+                    variant: "body-xs/semibold",
                     color: "text-overlay-light",
                     children: O.intl.format(O.t["dR/SVH"], { count: t.premiumSubscriberCount }),
                 }),
@@ -197,25 +197,25 @@ function S(r) {
     });
 }
 function B(r) {
-    let { badgeType: t, guildTraits: e } = r,
-        { tooltipTitle: i, tooltipSubtitle: s, tooltipDescription: l } = M(t, e.visibility);
-    return (0, o.jsxs)(o.Fragment, {
+    let { badgeType: t, guildTraits: o } = r,
+        { tooltipTitle: i, tooltipSubtitle: s, tooltipDescription: l } = M(t, o.visibility);
+    return (0, e.jsxs)(e.Fragment, {
         children: [
-            (0, o.jsxs)("div", {
+            (0, e.jsxs)("div", {
                 className: V.Rf,
                 children: [
-                    (0, o.jsx)(f.E, { color: "interactive-text-active", variant: "text-xs/semibold", children: i }),
-                    null != s ? (0, o.jsx)(f.E, { color: "text-muted", variant: "text-xs/medium", children: s }) : null,
-                    null != l ? (0, o.jsx)(f.E, { color: "text-muted", variant: "text-xs/medium", children: l }) : null,
+                    (0, e.jsx)(f.E, { color: "interactive-text-active", variant: "body-xs/semibold", children: i }),
+                    null != s ? (0, e.jsx)(f.E, { color: "text-muted", variant: "body-xs/medium", children: s }) : null,
+                    null != l ? (0, e.jsx)(f.E, { color: "text-muted", variant: "body-xs/medium", children: l }) : null,
                 ],
             }),
-            e.premium ? (0, o.jsx)(S, { guildTraits: e }) : null,
+            o.premium ? (0, e.jsx)(S, { guildTraits: o }) : null,
         ],
     });
 }
 function k(r) {
     let t,
-        e,
+        o,
         {
             guild: s,
             tooltipColor: c = C.ST.Colors.BRAND,
@@ -224,23 +224,23 @@ function k(r) {
             flowerStarClassName: _,
             iconClassName: f,
             badgeStrokeColor: p,
-            badgeColor: T,
-            disableBoostClick: D,
+            badgeColor: D,
+            disableBoostClick: x,
             "aria-label": L,
-            ...w
+            ...b
         } = r,
-        O = w.size ?? 18,
-        S = (0, n.bG)([x.default, R.Ay], () => {
-            let r = x.default.getCurrentUser();
+        O = b.size ?? 18,
+        S = (0, n.bG)([T.default, R.Ay], () => {
+            let r = T.default.getCurrentUser();
             return R.Ay.isMember(s?.id, r?.id);
         }),
         k = (0, n.bG)([m.A], () => m.A.theme),
         P = i.useId(),
-        G = (0, v.Jp)(s),
-        y = (0, b.K)(G),
-        U = G.premium && S && !D;
-    if (y === b._.NONE) return null;
-    let Y = y === b._.DISCOVERABLE,
+        y = (0, v.Jp)(s),
+        G = (0, w.K)(y),
+        U = y.premium && S && !x;
+    if (G === w._.NONE) return null;
+    let Y = G === w._.DISCOVERABLE,
         {
             IconComponent: H,
             backgroundDarkColor: J,
@@ -250,19 +250,19 @@ function k(r) {
             premiumBackgroundColor: z,
             premiumForegroundColor: q,
             sizeAdjustment: Q,
-        } = F[y];
+        } = F[G];
     if (null == H && !Y) return null;
-    G.premium && ((t = q), (e = z));
+    y.premium && ((t = q), (o = z));
     let X = (0, u.M)(k) ? W : K,
         $ = (0, u.M)(k) ? J : Z;
-    ((t = t ?? X), (e = e ?? $));
+    ((t = t ?? X), (o = o ?? $));
     let rr = Math.floor(0.75 * O) - (Q ?? 0),
-        { tooltipTitle: rt, tooltipSubtitle: re } = M(y, G.visibility),
-        ro = L ?? (null != re ? re : rt),
-        ri = (0, o.jsx)(B, { badgeType: y, guildTraits: G }),
+        { tooltipTitle: rt, tooltipSubtitle: ro } = M(G, y.visibility),
+        re = L ?? (null != ro ? ro : rt),
+        ri = (0, e.jsx)(B, { badgeType: G, guildTraits: y }),
         rs =
             null == H
-                ? (0, o.jsx)(h.f, {
+                ? (0, e.jsx)(h.f, {
                       size: "custom",
                       width: O,
                       height: O,
@@ -270,14 +270,14 @@ function k(r) {
                       color: a.A.colors.BADGE_INVERTED_BACKGROUND,
                       secondaryColor: a.A.colors.BADGE_INVERTED_TEXT,
                   })
-                : (0, o.jsx)(g.A, {
+                : (0, e.jsx)(g.A, {
                       className: E,
                       flowerStarClassName: _,
                       allowFullSizedIcon: !0,
-                      color: e ?? T,
+                      color: o ?? D,
                       stroke: p,
                       size: O,
-                      children: (0, o.jsx)(H, {
+                      children: (0, e.jsx)(H, {
                           size: "custom",
                           width: rr,
                           height: rr,
@@ -285,9 +285,9 @@ function k(r) {
                           color: t ?? "currentColor",
                       }),
                   });
-    return (0, o.jsxs)(o.Fragment, {
+    return (0, e.jsxs)(e.Fragment, {
         children: [
-            (0, o.jsx)(C.ST, {
+            (0, e.jsx)(C.ST, {
                 color: c,
                 position: d,
                 "aria-label": !1,
@@ -295,9 +295,9 @@ function k(r) {
                 tooltipContentClassName: V.Hj,
                 children: (r) =>
                     U
-                        ? (0, o.jsx)(A.D, {
+                        ? (0, e.jsx)(A.D, {
                               ...r,
-                              "aria-label": ro,
+                              "aria-label": re,
                               "aria-describedby": P,
                               onClick: (t) => {
                                   (r.onClick?.(),
@@ -312,16 +312,16 @@ function k(r) {
                               tabIndex: 0,
                               children: rs,
                           })
-                        : (0, o.jsx)("div", {
+                        : (0, e.jsx)("div", {
                               ...r,
                               role: "img",
-                              "aria-label": ro,
+                              "aria-label": re,
                               "aria-describedby": P,
                               tabIndex: -1,
                               children: rs,
                           }),
             }),
-            (0, o.jsx)(I.A, { id: P, children: ri }),
+            (0, e.jsx)(I.A, { id: P, children: ri }),
         ],
     });
 }

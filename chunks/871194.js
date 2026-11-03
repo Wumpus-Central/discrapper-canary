@@ -146,7 +146,7 @@ function F(e) {
                         className: a()(B.Ix, { [B.L1]: e.type === T.rbe.GUILD_CATEGORY }),
                         children: [
                             null != s ? (0, r.jsx)(s, { className: B.p }) : null,
-                            (0, r.jsx)(h.E, { className: B.be, variant: "text-sm/normal", children: e.name }),
+                            (0, r.jsx)(h.E, { className: B.be, variant: "body-sm/normal", children: e.name }),
                         ],
                     },
                     e.id,

@@ -7,6 +7,6 @@ function a(e) {
     let { className: t } = e;
     return (0, l.jsx)("div", {
         className: t,
-        children: (0, l.jsx)(i.D, { variant: "heading-md/semibold", children: r.intl.string(r.t.eALkIR) }),
+        children: (0, l.jsx)(i.D, { variant: "heading-sm/semibold", children: r.intl.string(r.t.eALkIR) }),
     });
 }

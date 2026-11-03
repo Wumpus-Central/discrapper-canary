@@ -1,8 +1,8 @@
-i.d(l, { A: () => b });
+i.d(l, { A: () => N });
 var a = i(477900),
     s = i(582128),
-    t = i(661531),
-    n = i(3026),
+    n = i(661531),
+    t = i(3026),
     r = i(462887),
     d = i(778712),
     u = i(939249),
@@ -11,24 +11,24 @@ var a = i(477900),
     m = i(834730),
     f = i(442433),
     A = i(548118),
-    x = i(562153),
-    h = i(939496),
-    p = i(518477),
+    h = i(562153),
+    p = i(939496),
+    x = i(518477),
     v = i(996988),
     g = i(105292),
     j = i(247261);
-let N = (0, d.FT)(d._3.SIZE_16);
-function b(e) {
-    let { user: l, guild: b, nick: M, onSelect: I } = e,
-        { theme: C, themeType: S } = (0, h.E)(),
-        y = l.hasAvatarForGuild(b.id),
+let b = (0, d.FT)(d._3.SIZE_16);
+function N(e) {
+    let { user: l, guild: N, nick: M, onSelect: I } = e,
+        { theme: y, themeType: C } = (0, p.E)(),
+        S = l.hasAvatarForGuild(N.id),
         E = s.useId(),
-        k = g.intl.formatToPlainString(g.t.Ce2iXp, { guildName: b.name });
+        k = g.intl.formatToPlainString(g.t.Ce2iXp, { guildName: N.name });
     return (0, a.jsxs)(u.D, {
-        focusProps: S === v.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
+        focusProps: C === v.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
         className: j.nM,
         "aria-label": k,
-        "aria-describedby": y || null != M ? E : void 0,
+        "aria-describedby": S || null != M ? E : void 0,
         onClick: I,
         onContextMenu: function (e) {
             (0, f.L3)(e, async () => {
@@ -599,52 +599,52 @@ function b(e) {
                     i.e("415046"),
                     i.e("935277"),
                 ]).then(i.bind(i, 237600));
-                return (l) => (0, a.jsx)(e, { ...l, guild: b });
+                return (l) => (0, a.jsx)(e, { ...l, guild: N });
             });
         },
         children: [
             (0, a.jsx)(A.Ay, {
                 "aria-hidden": !0,
                 tabIndex: -1,
-                guild: b,
+                guild: N,
                 showBadge: !0,
-                className: null != b.icon ? j.Kk : j.lN,
-                badgeStrokeColor: (0, r.M)(C) ? t.A.unsafe_rawColors.PRIMARY_600.css : t.A.unsafe_rawColors.WHITE.css,
+                className: null != N.icon ? j.Kk : j.lN,
+                badgeStrokeColor: (0, r.M)(y) ? n.A.unsafe_rawColors.PRIMARY_600.css : n.A.unsafe_rawColors.WHITE.css,
                 badgeTooltipColor: o.oM.PRIMARY,
-                badgeTooltipDelay: p.In,
+                badgeTooltipDelay: x.In,
                 size: A.Ay.Sizes.MEDIUM,
                 active: !0,
             }),
             (0, a.jsxs)("div", {
                 className: j.zH,
                 children: [
-                    (0, a.jsx)("div", { className: j.UU, children: b.name }),
-                    y &&
+                    (0, a.jsx)("div", { className: j.UU, children: N.name }),
+                    S &&
                         (0, a.jsxs)("div", {
                             id: E,
                             className: j.C9,
                             children: [
                                 (0, a.jsx)(c.eu, {
-                                    src: l.getAvatarURL(b.id, N),
+                                    src: l.getAvatarURL(N.id, b),
                                     size: d._3.SIZE_16,
                                     className: j.my,
                                     "aria-hidden": !0,
                                 }),
                                 (0, a.jsx)(m.E, {
-                                    variant: "text-xs/medium",
-                                    children: (0, a.jsx)(n.A, {
-                                        delay: p.In,
-                                        children: M ?? x.Ay.getName(b.id, void 0, l),
+                                    variant: "body-xs/medium",
+                                    children: (0, a.jsx)(t.A, {
+                                        delay: x.In,
+                                        children: M ?? h.Ay.getName(N.id, void 0, l),
                                     }),
                                 }),
                             ],
                         }),
-                    !y &&
+                    !S &&
                         null != M &&
                         (0, a.jsx)(m.E, {
                             id: E,
-                            variant: "text-xs/medium",
-                            children: (0, a.jsx)(n.A, { delay: p.In, children: M }),
+                            variant: "body-xs/medium",
+                            children: (0, a.jsx)(t.A, { delay: x.In, children: M }),
                         }),
                 ],
             }),

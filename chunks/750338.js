@@ -5,8 +5,8 @@ var a = n(477900),
     r = n.n(i),
     l = n(435558),
     d = n(269115),
-    c = n(62010),
-    o = n(821609),
+    o = n(62010),
+    c = n(821609),
     u = n(745396),
     m = n(834730),
     b = n(534514),
@@ -16,8 +16,8 @@ var a = n(477900),
     g = n(303136),
     R = n(607470),
     N = n(174459),
-    x = n(676279),
-    E = n(406860),
+    E = n(676279),
+    x = n(406860),
     _ = n(610557),
     A = n(652215),
     v = n(693591),
@@ -46,10 +46,10 @@ let P = (e) => {
             boxArtContainerClassName: G,
             containerClassName: H,
         } = e,
-        X = (0, x.TM)(),
+        X = (0, E.TM)(),
         W = s.useRef(null),
         z = s.useRef(0),
-        { sectionRef: F, handleVisibilityChange: K } = (0, E.A)({ boxType: t }),
+        { sectionRef: F, handleVisibilityChange: K } = (0, x.A)({ boxType: t }),
         q = (0, h.A)("(min-width: 1140px)"),
         $ = Y === _.Tb.OVERLAY && (w !== _.A0.LARGE || !q),
         J = w === _.A0.LARGE && q && Y === _.Tb.OVERLAY,
@@ -65,7 +65,7 @@ let P = (e) => {
             className: r()(O.captionWrapper, O[`${w}`]),
             children:
                 "string" == typeof i
-                    ? (0, a.jsx)(m.E, { variant: "text-sm/normal", color: "text-muted", children: i })
+                    ? (0, a.jsx)(m.E, { variant: "body-sm/normal", color: "text-muted", children: i })
                     : i,
         });
     function et() {
@@ -86,7 +86,7 @@ let P = (e) => {
                 children: n?.map((e, t) => {
                     let { onClick: n, ...s } = e;
                     return (0, a.jsx)(
-                        o.$,
+                        c.$,
                         {
                             ...s,
                             onClick: function (e) {
@@ -121,14 +121,14 @@ let P = (e) => {
                                 })
                               : (0, a.jsx)("div", {
                                     className: O.badgeContainer,
-                                    children: (0, a.jsx)(c.E, { type: { text: L }, variant: B }),
+                                    children: (0, a.jsx)(o.E, { type: { text: L }, variant: B }),
                                 }),
                         null != i && w === _.A0.LARGE && ee,
                         (0, a.jsx)(b.D, { variant: ea, color: "text-strong", className: O.header, children: n }),
                     ],
                 }),
                 (0, a.jsx)(m.E, {
-                    variant: "text-md/medium",
+                    variant: "body-md/medium",
                     color: "text-strong",
                     className: O.description,
                     children: P,

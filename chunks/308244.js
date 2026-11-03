@@ -34,8 +34,8 @@ function p() {
 }
 var E = n(311016),
     h = n(692051),
-    x = n(713804),
-    b = n(967198),
+    b = n(713804),
+    x = n(967198),
     A = n(900179),
     _ = n(165668),
     N = n(165648);
@@ -51,7 +51,7 @@ function R(e) {
             userId: m,
             guildId: g,
         } = e,
-        A = (0, i.bG)([b.A], () => b.A.getGuildId()),
+        A = (0, i.bG)([x.A], () => x.A.getGuildId()),
         R = g ?? A,
         v = l.useMemo(
             () =>
@@ -59,7 +59,7 @@ function R(e) {
                     ? (0, a.jsx)(p, {})
                     : null == t || "" === t
                       ? null
-                      : (0, x.parseBioReact)(t, void 0, { guildId: R }),
+                      : (0, b.parseBioReact)(t, void 0, { guildId: R }),
             [m, t, R],
         ),
         j = r && !d,
@@ -69,7 +69,7 @@ function R(e) {
         : (0, a.jsx)("div", {
               className: s()(n, N.PT, _.z),
               children: (0, a.jsx)(o.E, {
-                  variant: "text-sm/normal",
+                  variant: "body-sm/normal",
                   lineClamp: u ? c : void 0,
                   color: void 0 !== f ? f : void 0,
                   className: _.w,

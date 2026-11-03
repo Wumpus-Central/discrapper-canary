@@ -25,7 +25,7 @@ let m = s.memo(function (e) {
                     null != l && (0, i.jsx)("div", { "aria-hidden": !0, className: d.nr, children: l }),
                     (0, i.jsx)(o.E, {
                         tag: "span",
-                        variant: "text-sm/semibold",
+                        variant: "body-sm/semibold",
                         color: "none",
                         lineClamp: 1,
                         className: d.Gp,

@@ -5,24 +5,24 @@ var t = r(477900),
     o = r.n(n),
     l = r(561028),
     a = r(28863),
-    c = r(707554),
-    d = r(834730),
+    d = r(707554),
+    c = r(834730),
     m = r(626584),
     h = r(53505),
     p = r(877062),
     w = r(652215),
-    x = r(105292),
+    b = r(105292),
     u = r(746820);
-let b = [
-        { id: "discord", getName: () => x.intl.string(x.t.uON9Ui), url: (0, h.SU)() },
+let x = [
+        { id: "discord", getName: () => b.intl.string(b.t.uON9Ui), url: (0, h.SU)() },
         {
             id: "chrome",
-            getName: () => x.intl.string(x.t["80Ut6e"]),
+            getName: () => b.intl.string(b.t["80Ut6e"]),
             url: "https://www.google.com/chrome/browser/desktop/",
         },
         {
             id: "firefox",
-            getName: () => x.intl.string(x.t.LVbA5X),
+            getName: () => b.intl.string(b.t.LVbA5X),
             url: "https://www.mozilla.org/en-US/firefox/new/?scene=2",
         },
     ],
@@ -34,8 +34,8 @@ class N extends i.Component {
         return (
             (e =
                 null != i
-                    ? (0, t.jsx)(a.Anchor, { className: u.btn, href: i, children: x.intl.string(x.t["1WjMbC"]) })
-                    : (0, t.jsx)(l.N_, { className: u.btn, to: w.BVt.APPS, children: x.intl.string(x.t["1WjMbC"]) })),
+                    ? (0, t.jsx)(a.Anchor, { className: u.btn, href: i, children: b.intl.string(b.t["1WjMbC"]) })
+                    : (0, t.jsx)(l.N_, { className: u.btn, to: w.BVt.APPS, children: b.intl.string(b.t["1WjMbC"]) })),
             (0, t.jsxs)("li", {
                 className: u.browserItem,
                 children: [
@@ -54,19 +54,19 @@ class j extends i.Component {
         });
     }
     render() {
-        let e = b.map((e) => (0, t.jsx)(N, { browser: e }, e.id));
+        let e = x.map((e) => (0, t.jsx)(N, { browser: e }, e.id));
         return (0, t.jsx)("div", {
             className: u.unsupportedBrowser,
             children: (0, t.jsxs)("div", {
                 className: u.wrap,
                 children: [
-                    (0, t.jsx)(c.H, { className: u.title, children: x.intl.string(x.t["3h+n+8"]) }),
-                    (0, t.jsx)(d.E, {
-                        variant: "text-sm/medium",
+                    (0, t.jsx)(d.H, { className: u.title, children: b.intl.string(b.t["3h+n+8"]) }),
+                    (0, t.jsx)(c.E, {
+                        variant: "body-sm/medium",
                         color: "none",
                         tag: "p",
                         className: u.message,
-                        children: x.intl.string(x.t.yNDLDL),
+                        children: b.intl.string(b.t.yNDLDL),
                     }),
                     (0, t.jsx)("ul", { className: u.browserList, children: e }),
                 ],

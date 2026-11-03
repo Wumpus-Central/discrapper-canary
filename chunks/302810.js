@@ -96,7 +96,7 @@ class g extends n.Component {
             actions: this.renderButtons(),
             children: [
                 (0, s.jsx)("div", { className: this.getImageStyle() }),
-                (0, s.jsx)(r.E, { variant: "text-md/normal", children: this.getMessage() }),
+                (0, s.jsx)(r.E, { variant: "body-md/normal", children: this.getMessage() }),
             ],
         });
     }

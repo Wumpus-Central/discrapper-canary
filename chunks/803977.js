@@ -9,9 +9,9 @@ var l = s(477900),
     d = s(148494),
     o = s(342384),
     m = s(429913),
-    x = s(451909),
+    b = s(451909),
     h = s(223863),
-    b = s(151054),
+    x = s(151054),
     f = s(734057),
     g = s(287809),
     p = s(957565),
@@ -21,9 +21,9 @@ var l = s(477900),
     E = s(105292);
 let N = [j.ts];
 var v = s(503698),
-    k = s.n(v),
-    S = s(536637),
-    y = s.n(S),
+    y = s.n(v),
+    k = s(536637),
+    S = s.n(k),
     L = s(837381),
     P = s(939249),
     D = s(658675),
@@ -61,17 +61,17 @@ function K(e) {
             "aria-setsize": o,
             "aria-posinset": m,
         } = e,
-        x = (0, L.rm)(t.id),
+        b = (0, L.rm)(t.id),
         h = a.useCallback(() => {
             c || d?.(t);
         }, [d, c, t]);
     return (0, l.jsxs)(P.D, {
-        className: k()(Y.HP, { [Y.r9]: c }),
+        className: y()(Y.HP, { [Y.r9]: c }),
         onClick: h,
         "aria-selected": i,
         "aria-setsize": o,
         "aria-posinset": m,
-        ...x,
+        ...b,
         children: [
             (0, l.jsxs)("div", {
                 className: Y.D_,
@@ -83,13 +83,13 @@ function K(e) {
                             (0, l.jsx)(u.E, {
                                 tag: "strong",
                                 className: Y.Pf,
-                                variant: "text-md/semibold",
+                                variant: "body-md/semibold",
                                 lineClamp: 1,
                                 children: n,
                             }),
                             (0, l.jsx)(u.E, {
                                 className: Y.J2,
-                                variant: "text-xs/normal",
+                                variant: "body-xs/normal",
                                 color: "text-muted",
                                 children: r,
                             }),
@@ -141,20 +141,20 @@ function es(e) {
             className: Y.vr,
             children: [
                 (0, l.jsx)(e, { color: w.A.colors.TEXT_SUBTLE, className: Y.Q9 }),
-                (0, l.jsx)(u.E, { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: c }),
+                (0, l.jsx)(u.E, { variant: "body-xs/medium", color: "text-subtle", lineClamp: 1, children: c }),
                 null != d
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
                               (0, l.jsx)(u.E, {
                                   className: Y.Ql,
-                                  variant: "text-xs/medium",
+                                  variant: "body-xs/medium",
                                   color: "text-subtle",
                                   children: "\u2022",
                               }),
                               (0, l.jsx)(u.E, {
-                                  variant: "text-xs/medium",
+                                  variant: "body-xs/medium",
                                   color: "text-subtle",
-                                  children: (0, J.Fe)(y()(d)),
+                                  children: (0, J.Fe)(S()(d)),
                               }),
                           ],
                       })
@@ -192,25 +192,25 @@ function el(e) {
                         )
                             return { label: E.intl.string(E.t.Icu3bf) };
                     })(u),
-                    x = d.includes(o),
-                    b = {
+                    b = d.includes(o),
+                    x = {
                         key: o,
                         destination: c,
                         subLabel: null != m ? m.label : void 0,
-                        disabled: (r && !x) || null != m,
-                        selected: x,
+                        disabled: (r && !b) || null != m,
+                        selected: b,
                         onPressDestination: n,
                         "aria-posinset": a + 1,
                         "aria-setsize": t.length,
                     };
                 switch (i) {
                     case H.rD.USER:
-                        return (0, l.jsx)(ee, { user: u, ...b });
+                        return (0, l.jsx)(ee, { user: u, ...x });
                     case H.rD.GROUP_DM:
-                        return (0, l.jsx)(et, { channel: u, ...b });
+                        return (0, l.jsx)(et, { channel: u, ...x });
                     case H.rD.TEXT_CHANNEL:
                     case H.rD.VOICE_CHANNEL:
-                        return (0, l.jsx)(es, { channel: u, ...b });
+                        return (0, l.jsx)(es, { channel: u, ...x });
                     default:
                         return (0, A.xb)(i);
                 }
@@ -218,9 +218,9 @@ function el(e) {
             [r, n, t, d],
         ),
         m = a.useRef(null),
-        x = (0, U.A)("share-command-modal", m);
+        b = (0, U.A)("share-command-modal", m);
     return (0, l.jsx)(L.hD, {
-        navigator: x,
+        navigator: b,
         children: (0, l.jsx)(L.PR, {
             children: (e) => {
                 let { ref: t, ...s } = e;
@@ -247,9 +247,9 @@ function er(e) {
             customId: s,
             linkId: j,
             channelId: v,
-            message: k,
-            onClose: S,
-            onCopyLink: y,
+            message: y,
+            onClose: k,
+            onCopyLink: S,
             onShare: L,
             transitionState: P,
         } = e,
@@ -269,7 +269,7 @@ function er(e) {
         "" === w && V.current?.focus();
     }, [w]);
     let V = a.useRef(null),
-        { results: Z, updateSearchText: O } = (0, b.R)({ selectedDestinations: M, includeMissingDMs: !0 }),
+        { results: Z, updateSearchText: O } = (0, x.R)({ selectedDestinations: M, includeMissingDMs: !0 }),
         Q = a.useCallback(
             (e) => {
                 (I(e), O(e));
@@ -307,27 +307,27 @@ function er(e) {
                     return `${a}
 
 ${n}`;
-                })(k, D, G);
+                })(y, D, G);
                 (R(!0),
                     (await Promise.all(e.map(h.pk))).filter(A.Vq).forEach(async (e) => {
                         let s = f.A.getChannel(e);
                         null != s &&
-                            (await d.A.sendMessage(e, x.Ay.parse(s, t), !1, { location: ea.Hx.ACTIVITY_SHARE }));
+                            (await d.A.sendMessage(e, b.Ay.parse(s, t), !1, { location: ea.Hx.ACTIVITY_SHARE }));
                     }),
                     (0, i.P0)({
                         text: E.intl.formatToPlainString(E.t.jQULqL, { applicationName: D.name }),
                         variant: "success",
                     }),
                     L(!0),
-                    S());
+                    k());
             },
-            [k, G, S, L, D],
+            [y, G, k, L, D],
         ),
         W = a.useCallback(() => {
             (0, p.C)(G, () => {
-                (y(), (0, i.P0)({ text: E.intl.string(E.t.t5VZ88), variant: "success" }));
+                (S(), (0, i.P0)({ text: E.intl.string(E.t.t5VZ88), variant: "success" }));
             });
-        }, [G, y]),
+        }, [G, S]),
         $ =
             Z.length > 0
                 ? (0, l.jsx)(el, {
@@ -343,7 +343,7 @@ ${n}`;
                       children: [
                           (0, l.jsx)("img", { className: Y.BJ, src: en, alt: "" }),
                           (0, l.jsx)(u.E, {
-                              variant: "text-md/normal",
+                              variant: "body-md/normal",
                               color: "text-muted",
                               children: E.intl.string(E.t.V6nAfF),
                           }),
@@ -351,9 +351,9 @@ ${n}`;
                   });
     return (0, l.jsx)(r.a, {
         transitionState: P,
-        onClose: S,
+        onClose: k,
         title: E.intl.string(E.t.r9qKow),
-        subtitle: k,
+        subtitle: y,
         size: "md",
         input: (0, l.jsx)(c.I, {
             ref: V,

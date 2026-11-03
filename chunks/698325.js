@@ -1,4 +1,4 @@
-(i.d(t, { default: () => S }), i(321073));
+(i.d(t, { default: () => v }), i(321073));
 var n = i(477900),
     l = i(582128),
     a = i(136722),
@@ -12,46 +12,46 @@ var n = i(477900),
     p = i(155718),
     m = i(495273),
     x = i(260509),
-    g = i(317525),
-    y = i(488926),
+    y = i(317525),
+    g = i(488926),
     f = i(387255),
     k = i(105292),
     w = i(403743);
 function C(e) {
     return (t) => null != t && !(0, m.N8)(e, t);
 }
-function v(e) {
+function b(e) {
     let { rolesRow: t } = e;
     return (0, n.jsx)("div", { "aria-hidden": !0, className: w.Ni, style: { backgroundColor: t?.colorString } });
 }
-let S = function (e) {
+let v = function (e) {
     let t,
         i,
-        { guild: S, channel: b, permission: j, onClose: N, transitionState: E, currentSelectedRoles: R = [] } = e,
+        { guild: v, channel: S, permission: j, onClose: N, transitionState: E, currentSelectedRoles: R = [] } = e,
         { shouldEveryonePost: A, setShouldEveryonePost: M } = (function (e, t) {
-            let i = y.MJ(t, e),
+            let i = g.MJ(t, e),
                 [n, a] = l.useState(i);
             return { shouldEveryonePost: n, setShouldEveryonePost: a };
-        })(b, j),
-        O = ((t = (0, s.bG)([g.A], () => g.A.getSortedRoles(S.id))),
-        l.useMemo(() => (0, f.i)(t).filter((e) => C(S.id)(e.id)), [S, t])).map((e) => ({
+        })(S, j),
+        O = ((t = (0, s.bG)([y.A], () => y.A.getSortedRoles(v.id))),
+        l.useMemo(() => (0, f.i)(t).filter((e) => C(v.id)(e.id)), [v, t])).map((e) => ({
             key: e.key,
             id: e.id,
             label: e.name,
             value: e.id,
-            leading: (0, n.jsx)(v, { rolesRow: e }),
+            leading: (0, n.jsx)(b, { rolesRow: e }),
         })),
-        [T, F] = l.useState(R.map((e) => e.id).filter(C(S.id))),
+        [T, F] = l.useState(R.map((e) => e.id).filter(C(v.id))),
         [G, P] = l.useState(!1),
         [W, Z] = l.useState(!1),
         q = T.length > 0 || A,
         K =
-            ((i = (0, s.bG)([g.A], () => g.A.getSortedRoles(S.id))),
+            ((i = (0, s.bG)([y.A], () => y.A.getSortedRoles(v.id))),
             l.useCallback(
                 (e, t) => {
                     let n = (0, f.i)(i),
                         l = new Set(t),
-                        s = { ...b.permissionOverwrites },
+                        s = { ...S.permissionOverwrites },
                         r = [],
                         d = [];
                     return (
@@ -61,29 +61,29 @@ let S = function (e) {
                                 ? r.push({
                                       id: i,
                                       type: p.r2.ROLE,
-                                      allow: a.WQ(s[i]?.allow ?? y.x3, e),
-                                      deny: a.TF(s[i]?.deny ?? y.x3, e),
+                                      allow: a.WQ(s[i]?.allow ?? g.x3, e),
+                                      deny: a.TF(s[i]?.deny ?? g.x3, e),
                                   })
-                                : (0, m.N8)(S.id, i)
+                                : (0, m.N8)(v.id, i)
                                   ? r.push({
                                         id: i,
                                         type: p.r2.ROLE,
-                                        allow: a.TF(s[i]?.allow ?? y.x3, e),
-                                        deny: a.WQ(s[i]?.deny ?? y.x3, e),
+                                        allow: a.TF(s[i]?.allow ?? g.x3, e),
+                                        deny: a.WQ(s[i]?.deny ?? g.x3, e),
                                     })
                                   : i in s && d.push(i);
                         }, []),
-                        (0, h.lS)(b.id, r, d)
+                        (0, h.lS)(S.id, r, d)
                     );
                 },
-                [S, i, b],
+                [v, i, S],
             ));
     async function L() {
         if (!q) return;
         (P(!0), Z(!1));
         let e = [...T];
         if (A) {
-            let t = (0, x.af)(S);
+            let t = (0, x.af)(v);
             e.push(t);
         }
         try {
@@ -132,7 +132,7 @@ let S = function (e) {
                             className: w.nM,
                             children: (0, n.jsx)(u.E, {
                                 className: w.z3,
-                                variant: "text-sm/normal",
+                                variant: "body-sm/normal",
                                 children: k.intl.string(k.t.mgZKZP),
                             }),
                         })

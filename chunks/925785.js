@@ -18,7 +18,7 @@ function o(n) {
         },
         ...u,
         children: [
-            (0, i.jsx)(c.E, { variant: "text-md/normal", children: e }),
+            (0, i.jsx)(c.E, { variant: "body-md/normal", children: e }),
             (0, i.jsx)("div", {
                 className: d.k,
                 children: (0, i.jsx)(l.S, {

@@ -1,29 +1,29 @@
-n.d(t, { A: () => u });
-var s = n(477900);
-n(582128);
-var l = n(503698),
-    i = n.n(l),
-    a = n(834730),
-    r = n(447215),
-    c = n(435470),
-    d = n(105292),
-    o = n(422256);
+t.d(n, { A: () => u });
+var s = t(477900);
+t(582128);
+var l = t(503698),
+    i = t.n(l),
+    a = t(834730),
+    r = t(447215),
+    c = t(435470),
+    d = t(105292),
+    o = t(422256);
 let u = function (e) {
-    let { message: t, channel: n, renderColon: l, hasUnreads: u } = e,
-        { user: h, author: m } = (0, c.kn)(n),
+    let { message: n, channel: t, renderColon: l, hasUnreads: u } = e,
+        { user: h, author: m } = (0, c.kn)(t),
         g = m?.nick ?? h?.username ?? "",
         x = (0, r.P)({
-            user: t?.author,
-            channelId: n.id,
-            guildId: n.guild_id,
-            messageId: t?.id,
+            user: n?.author,
+            channelId: t.id,
+            guildId: t.guild_id,
+            messageId: n?.id,
             stopPropagation: !0,
             ariaLabel: d.intl.formatToPlainString(d.t.CSIeU1, { name: g }),
-        })(m ?? void 0)(g, n.id);
+        })(m ?? void 0)(g, t.id);
     return (0, s.jsxs)(a.E, {
         tag: "span",
         className: i()(o.c, { [o.p]: u }),
-        variant: "text-sm/semibold",
+        variant: "body-sm/semibold",
         children: [x, !0 === l ? ": " : null],
     });
 };

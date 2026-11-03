@@ -16,21 +16,21 @@ var a = i(477900),
     A = i(964486),
     g = i(775602),
     k = i(793574),
-    x = i(688810),
-    S = i(206828),
+    S = i(688810),
+    x = i(206828),
     E = i(587895),
     h = i(518926),
-    L = i(928550),
-    I = i(946261),
-    R = i(209932),
-    T = i(287809),
-    y = i(174459),
+    y = i(928550),
+    L = i(946261),
+    I = i(209932),
+    R = i(287809),
+    T = i(174459),
     N = i(690521),
     j = i(339586),
     O = i(45938),
-    D = i(403362),
-    M = i(427262),
-    b = i(690493),
+    b = i(403362),
+    D = i(427262),
+    M = i(690493),
     G = i(118982),
     v = i(383089),
     w = i(41032),
@@ -53,24 +53,24 @@ function K(t) {
             onSetIgnoreCloseRequest: m,
         } = t,
         [f, g] = n.useState({ state: "LINK" }),
-        [h, I] = n.useState(!1),
-        R = (0, s.bG)([E.A], () => E.A.getApplication(i.applicationId)),
-        { startAuthorization: T, ...N } = (0, S.RD)(R),
-        { startAuthorization: O, shouldShowGoToGameHint: M } = (0, U.W)(T, { onSetIgnoreCloseRequest: m }),
-        G = { startAuthorization: O, shouldShowGoToGameHint: M, ...N },
-        { analyticsLocations: v } = (0, x.Ay)(p ?? [], k.A.SOCIAL_LAYER_GIFT_CODE_CLAIM_MODAL),
-        [w, B] = (0, L.L_)(R?.id),
-        K = (0, b.J)(R),
+        [h, L] = n.useState(!1),
+        I = (0, s.bG)([E.A], () => E.A.getApplication(i.applicationId)),
+        { startAuthorization: R, ...N } = (0, x.RD)(I),
+        { startAuthorization: O, shouldShowGoToGameHint: D } = (0, U.W)(R, { onSetIgnoreCloseRequest: m }),
+        G = { startAuthorization: O, shouldShowGoToGameHint: D, ...N },
+        { analyticsLocations: v } = (0, S.Ay)(p ?? [], k.A.SOCIAL_LAYER_GIFT_CODE_CLAIM_MODAL),
+        [w, B] = (0, y.L_)(I?.id),
+        K = (0, M.J)(I),
         Y = n.useCallback(() => {
-            R?.id != null &&
-                (y.default.track(F.HAw.SLAYER_STOREFRONT_GAME_LAUNCH_CLICKED, {
+            I?.id != null &&
+                (T.default.track(F.HAw.SLAYER_STOREFRONT_GAME_LAUNCH_CLICKED, {
                     location_stack: v,
                     sku_id: i.id,
-                    application_id: R.id,
+                    application_id: I.id,
                     is_gift: !0,
                 }),
-                j.A.launchGame(R.id));
-        }, [v, i.id, R?.id]),
+                j.A.launchGame(I.id));
+        }, [v, i.id, I?.id]),
         J = n.useMemo(
             () => ({ isLaunchable: w, isLaunchableLoading: B, isApplicationConnected: K, handleLaunchGame: Y }),
             [w, B, K, Y],
@@ -92,7 +92,7 @@ function K(t) {
     });
     ((0, A.Ay)(() => {
         let { analyticsLocations: t, skuId: e } = X.current;
-        y.default.track(F.HAw.OPEN_MODAL, { location_stack: t, type: P.Nu, sku_id: e, application_id: R?.id });
+        T.default.track(F.HAw.OPEN_MODAL, { location_stack: t, type: P.Nu, sku_id: e, application_id: I?.id });
     }),
         n.useEffect(() => {
             let {
@@ -104,7 +104,7 @@ function K(t) {
                 soundId: s,
                 skuProductLine: l,
             } = X.current;
-            y.default.track(F.HAw.GIFT_ACCEPT_STEP, {
+            T.default.track(F.HAw.GIFT_ACCEPT_STEP, {
                 to_step: f.state,
                 location_stack: t,
                 has_custom_message: e,
@@ -125,10 +125,10 @@ function K(t) {
             emojiName: n,
             soundId: s,
         } = X.current;
-        y.default.track(F.HAw.SLAYER_STOREFRONT_GIFT_CODE_CLAIM_CLICKED, {
+        T.default.track(F.HAw.SLAYER_STOREFRONT_GIFT_CODE_CLAIM_CLICKED, {
             location_stack: t,
             sku_id: e,
-            application_id: R?.id,
+            application_id: I?.id,
             gift_code: r.code,
             gift_style: r.giftStyle?.toString() ?? null,
             has_custom_message: i,
@@ -137,19 +137,19 @@ function K(t) {
             sound_id: s,
         });
         try {
-            (I(!0), await C.A.redeemGiftCode({ code: r.code, options: { channelId: c } }), g({ state: "SUCCESS" }));
+            (L(!0), await C.A.redeemGiftCode({ code: r.code, options: { channelId: c } }), g({ state: "SUCCESS" }));
         } catch (t) {
             g({ state: "ERROR", error: t });
         } finally {
-            I(!1);
+            L(!1);
         }
-    }, [r, g, c, R?.id]);
-    if (null == R) return null;
+    }, [r, g, c, I?.id]);
+    if (null == I) return null;
     switch (f.state) {
         case "LINK":
             return (0, a.jsx)(z, {
                 sku: i,
-                application: R,
+                application: I,
                 transitionState: e,
                 onClose: o,
                 successStateButtonText: H.intl.string(H.t.go1e4x),
@@ -162,7 +162,7 @@ function K(t) {
         case "SUCCESS":
             return (0, a.jsx)(V, {
                 transitionState: e,
-                application: R,
+                application: I,
                 sku: i,
                 giftCode: r,
                 customGiftMessage: u,
@@ -177,18 +177,18 @@ function K(t) {
                 transitionState: e,
                 onClose: o,
                 error: f.error,
-                application: R,
+                application: I,
                 hasAlreadyLinked: G.hasAlreadyLinked,
             });
         default:
-            (0, D.xb)(f);
+            (0, b.xb)(f);
     }
 }
 function W(t) {
     let e,
         i,
         { transitionState: n, onClose: s, error: l, application: _, hasAlreadyLinked: p } = t,
-        m = T.default.getCurrentUser();
+        m = R.default.getCurrentUser();
     return (
         l.code === F.t02.INVALID_GIFT_REDEMPTION_OWNED
             ? ((e = H.intl.string(H.t.uXnSGo)),
@@ -203,7 +203,7 @@ function W(t) {
             children: [
                 (0, a.jsx)(r.rQ, { title: e, alignCenter: !0 }),
                 (0, a.jsx)(c.c, {
-                    children: (0, a.jsx)(u.E, { variant: "text-md/normal", color: "text-subtle", children: i }),
+                    children: (0, a.jsx)(u.E, { variant: "body-md/normal", color: "text-subtle", children: i }),
                 }),
                 (0, a.jsx)(d.H, {
                     actions: [{ variant: "primary", text: H.intl.string(H.t.WAI6xu), onClick: s }],
@@ -229,20 +229,20 @@ function z(t) {
         } = t,
         {
             hasAlreadyLinked: k,
-            canStartAuthorization: x,
-            startAuthorization: S,
+            canStartAuthorization: S,
+            startAuthorization: x,
             fetched: E,
             shouldShowGoToGameHint: h,
         } = A,
-        { isLaunchable: L, isLaunchableLoading: I, isApplicationConnected: R, handleLaunchGame: T } = g,
-        N = n.useRef({ analyticsLocations: C, skuId: i.id, applicationId: s.id, canStartAuthorization: x });
+        { isLaunchable: y, isLaunchableLoading: L, isApplicationConnected: I, handleLaunchGame: R } = g,
+        N = n.useRef({ analyticsLocations: C, skuId: i.id, applicationId: s.id, canStartAuthorization: S });
     (n.useEffect(() => {
-        N.current.canStartAuthorization = x;
-    }, [x]),
+        N.current.canStartAuthorization = S;
+    }, [S]),
         n.useEffect(() => {
             if (!E) return;
             let { analyticsLocations: t, skuId: e, applicationId: i, canStartAuthorization: a } = N.current;
-            y.default.track(F.HAw.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, {
+            T.default.track(F.HAw.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, {
                 location_stack: t,
                 sku_id: e,
                 application_id: i,
@@ -253,16 +253,16 @@ function z(t) {
         }, [E, k]));
     let j = n.useCallback(() => {
             let { analyticsLocations: t, skuId: e, applicationId: i } = N.current;
-            (y.default.track(F.HAw.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, {
+            (T.default.track(F.HAw.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, {
                 location_stack: t,
                 sku_id: e,
                 application_id: i,
                 is_gift: !0,
             }),
-                S({ analyticsLocations: t }));
-        }, [S]),
+                x({ analyticsLocations: t }));
+        }, [x]),
         O = n.useMemo(() => (0, G.x0)(s, { hasAlreadyLinked: k }), [s, k]);
-    return !E || I
+    return !E || L
         ? (0, a.jsx)(o.d, {
               transitionState: l,
               onClose: r,
@@ -272,16 +272,16 @@ function z(t) {
           })
         : (k
               ? (e = { variant: "primary", text: u, onClick: d, loading: f })
-              : x
+              : S
                 ? (e = { variant: "primary", text: H.intl.string(H.t["VDAhr+"]), onClick: j, icon: p.A })
-                : L && !R && (e = { variant: "primary", text: H.intl.string(H.t["s+J8Dl"]), onClick: T, icon: m.t }),
+                : y && !I && (e = { variant: "primary", text: H.intl.string(H.t["s+J8Dl"]), onClick: R, icon: m.t }),
           (0, a.jsx)(v.m, {
               sku: i,
               application: s,
               transitionState: l,
               onClose: r,
               hasAlreadyLinked: k,
-              canStartAuthorization: x,
+              canStartAuthorization: S,
               shouldShowGoToGameHint: h,
               primaryCTAButtonProps: e,
               bodyText: O,
@@ -299,44 +299,44 @@ function V(t) {
             analyticsLocations: A,
             emojiName: g,
             soundId: k,
-            launchGameDetails: x,
+            launchGameDetails: S,
         } = t,
-        [S, E] = n.useState(null),
-        { isLaunchable: h, isLaunchableLoading: L, isApplicationConnected: I, handleLaunchGame: R } = x,
-        N = (0, s.bG)([T.default], () => T.default.getUser(p.userId)),
-        j = M.Ay.getName(N),
+        [x, E] = n.useState(null),
+        { isLaunchable: h, isLaunchableLoading: y, isApplicationConnected: L, handleLaunchGame: I } = S,
+        N = (0, s.bG)([R.default], () => R.default.getUser(p.userId)),
+        j = D.Ay.getName(N),
         O = n.useRef({
             analyticsLocations: A,
             skuId: l.id,
             applicationId: r.id,
             isLaunchable: h,
-            isApplicationConnected: I,
+            isApplicationConnected: L,
         });
     if (
         (n.useEffect(() => {
-            ((O.current.isLaunchable = h), (O.current.isApplicationConnected = I));
-        }, [h, I]),
-        L)
+            ((O.current.isLaunchable = h), (O.current.isApplicationConnected = L));
+        }, [h, L]),
+        y)
     )
         return (0, a.jsx)(o.d, {
             transitionState: e,
             onClose: i,
             children: (0, a.jsx)(c.c, { children: (0, a.jsx)(_.y, {}) }),
         });
-    let D =
-        h && !I
-            ? { variant: "primary", text: H.intl.string(H.t["s+J8Dl"]), onClick: R, icon: m.t }
+    let b =
+        h && !L
+            ? { variant: "primary", text: H.intl.string(H.t["s+J8Dl"]), onClick: I, icon: m.t }
             : {
                   variant: "primary",
                   text: H.intl.string(H.t.cpT0Cq),
                   onClick: () => {
-                      (y.default.track(F.HAw.SLAYER_STOREFRONT_CLAIM_MODAL_CLOSE_BUTTON_CLICKED, {
+                      (T.default.track(F.HAw.SLAYER_STOREFRONT_CLAIM_MODAL_CLOSE_BUTTON_CLICKED, {
                           location_stack: A,
                           sku_id: l.id,
                           application_id: r.id,
                           is_gift: !0,
                           is_launchable: h ?? !1,
-                          is_application_connected: I,
+                          is_application_connected: L,
                       }),
                           i());
                   },
@@ -350,7 +350,7 @@ function V(t) {
             (0, a.jsxs)(c.c, {
                 children: [
                     (0, a.jsx)(u.E, {
-                        variant: "text-md/normal",
+                        variant: "body-md/normal",
                         color: "text-subtle",
                         className: B.j7,
                         children: H.intl.formatToPlainString(H.t["6yrIzU"], { sender: j }),
@@ -358,7 +358,7 @@ function V(t) {
                     null != C &&
                         "" !== C &&
                         (0, a.jsx)(u.E, {
-                            variant: "text-lg/semibold",
+                            variant: "body-lg/semibold",
                             color: "text-subtle",
                             className: B.pt,
                             children: C,
@@ -374,11 +374,11 @@ function V(t) {
                             role: "none",
                         }),
                     }),
-                    null != S && (0, a.jsx)(X, { confettiTarget: S, emojiName: g }),
+                    null != x && (0, a.jsx)(X, { confettiTarget: x, emojiName: g }),
                     null != k && (0, a.jsx)(Y, { soundId: k }),
                 ],
             }),
-            (0, a.jsx)(d.H, { actions: [D], actionsFullWidth: !0 }),
+            (0, a.jsx)(d.H, { actions: [b], actionsFullWidth: !0 }),
         ],
     });
 }
@@ -386,8 +386,8 @@ function Y(t) {
     let { soundId: e } = t;
     return (
         n.useEffect(() => {
-            let t = R.A.getSoundById(e);
-            (0, I.playGiftSound)(e, t?.volume ?? 1);
+            let t = I.A.getSoundById(e);
+            (0, L.playGiftSound)(e, t?.volume ?? 1);
         }, [e]),
         null
     );

@@ -5,8 +5,8 @@ var a = s(477900),
     i = s.n(r),
     l = s(17928),
     o = s(97808),
-    u = s(778712),
-    d = s(834730),
+    d = s(778712),
+    u = s(834730),
     c = s(7807),
     m = s(661531),
     h = s(788026),
@@ -18,11 +18,11 @@ function v(e) {
     return (0, a.jsxs)("div", {
         className: S.AB,
         children: [
-            (0, a.jsx)(o.eu, { "aria-label": s, size: u._3.SIZE_24, src: t }),
-            (0, a.jsxs)(d.E, {
+            (0, a.jsx)(o.eu, { "aria-label": s, size: d._3.SIZE_24, src: t }),
+            (0, a.jsxs)(u.E, {
                 className: S.PW,
                 color: "text-overlay-light",
-                variant: "text-sm/normal",
+                variant: "body-sm/normal",
                 children: [r, n],
             }),
         ],
@@ -50,16 +50,16 @@ function f(e) {
 }
 let I = n.memo(function (e) {
     let { speakingUserIds: t, activeSoundboards: s, userIds: n, guildId: r, channelId: o } = e,
-        u = (0, l.cf)([p.default], () => i().pick(p.default.getUsers(), n));
+        d = (0, l.cf)([p.default], () => i().pick(p.default.getUsers(), n));
     return (0, a.jsxs)("div", {
         className: S.zr,
         children: [
             t.map((e) => {
-                let t = u[e];
+                let t = d[e];
                 return (0, a.jsx)(C, { user: t, guildId: r, channelId: o }, e);
             }),
             s.map((e) => {
-                let t = u[e.userId];
+                let t = d[e.userId];
                 return (0, a.jsx)(
                     f,
                     { soundboard: e, user: t, guildId: r, channelId: o },

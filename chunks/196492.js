@@ -39,7 +39,7 @@ class A extends d.A {
                               },
                           ],
                           ...e,
-                          children: (0, i.jsx)(l.E, { variant: "text-md/normal", children: u.intl.string(u.t.MAxtks) }),
+                          children: (0, i.jsx)(l.E, { variant: "body-md/normal", children: u.intl.string(u.t.MAxtks) }),
                       }),
                   { onCloseCallback: E, modalKey: _ },
                   A,

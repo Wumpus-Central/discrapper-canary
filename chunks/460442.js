@@ -33,7 +33,7 @@ function m(e) {
     return (0, r.jsx)(x, {
         style: h.RF,
         icon: (0, r.jsx)(o.E, {
-            variant: "text-sm/medium",
+            variant: "body-sm/medium",
             color: "text-overlay-light",
             children: d.intl.format(d.t.F6iMs4, { count: t }),
         }),

@@ -22,11 +22,11 @@ function S(e) {
         discountIconConfig: i,
         className: r,
         discount: a = p.rr,
-        variant: s = "text-md/semibold",
+        variant: s = "body-md/semibold",
     } = e;
     return n === C.Yr.DISCORD_ORB
-        ? (0, l.jsx)(A, { orbAmount: t, className: r, discount: a, variant: s })
-        : (0, l.jsx)(I, {
+        ? (0, l.jsx)(I, { orbAmount: t, className: r, discount: a, variant: s })
+        : (0, l.jsx)(g, {
               priceAmount: t,
               priceCurrency: n,
               discountIconConfig: i,
@@ -35,7 +35,7 @@ function S(e) {
               variant: s,
           });
 }
-function g(e) {
+function y(e) {
     let { config: t } = e,
         n = t.size ?? "md";
     switch (t.source) {
@@ -59,14 +59,14 @@ function g(e) {
             return (t.source, null);
     }
 }
-function I(e) {
+function g(e) {
     let {
             priceAmount: t,
             priceCurrency: n,
             discountIconConfig: i,
             className: a,
             discount: s = p.rr,
-            variant: o = "heading-md/semibold",
+            variant: o = "heading-sm/semibold",
         } = e,
         d = (0, m.RS)(t, n),
         C =
@@ -96,13 +96,13 @@ function I(e) {
     return (0, l.jsxs)("div", {
         className: r()(E.kL, a),
         children: [
-            null != i ? (0, l.jsx)(g, { config: i }) : null,
+            null != i ? (0, l.jsx)(y, { config: i }) : null,
             (0, l.jsx)(c.E, { variant: o, color: "currentColor", lineClamp: 1, children: C }),
         ],
     });
 }
-function A(e) {
-    let { orbAmount: t, className: n, discount: i = p.rr, variant: a = "text-md/semibold" } = e,
+function I(e) {
+    let { orbAmount: t, className: n, discount: i = p.rr, variant: a = "body-md/semibold" } = e,
         s =
             i !== p.rr && i.discountPercentage >= p.es
                 ? (0, l.jsxs)(l.Fragment, {

@@ -113,7 +113,7 @@ function R(e) {
 var L = n(477782),
     y = n(900283),
     D = n(798819);
-function v() {
+function b() {
     let e = R("MenuSeparator");
     return (0, r.jsx)("div", {
         role: "separator",
@@ -121,7 +121,7 @@ function v() {
         style: { "--custom-menu-separator-margin": e ? "8px 0" : "8px" },
     });
 }
-var b = n(661531);
+var v = n(661531);
 let P = {
         default: D.colorDefault,
         brand: D.colorBrand,
@@ -130,7 +130,7 @@ let P = {
         "premium-gradient": D.colorPremiumGradient,
         success: D.colorSuccess,
     },
-    M = -(b.A.modules.menu.BORDER_WIDTH.resolve() + b.A.modules.menu.SCROLLER_BLOCK_PADDING.resolve());
+    M = -(v.A.modules.menu.BORDER_WIDTH.resolve() + v.A.modules.menu.SCROLLER_BLOCK_PADDING.resolve());
 function U(e) {
     let { contents: t, label: n, className: i, color: a = "default" } = e;
     return 0 === t.length
@@ -245,8 +245,8 @@ function Z(e) {
             className: C,
             focusedClassName: O,
             dontCloseOnActionIfHoldingShiftKey: L,
-            dontCloseOnAction: v,
-            iconProps: b,
+            dontCloseOnAction: b,
+            iconProps: v,
         } = e,
         { onSelect: M, onInteraction: U } = a.useContext(y.x),
         H = a.useRef(null),
@@ -254,12 +254,12 @@ function Z(e) {
         Y = a.useCallback(
             (e) => {
                 if ((U?.({ type: y.Q.DEFAULT }), null == T)) return !1;
-                ((e.shiftKey && L) || v || g(),
+                ((e.shiftKey && L) || b || g(),
                     e.persist(),
                     M?.(),
                     (e.nativeEvent.view ?? window).requestAnimationFrame(() => T(e)));
             },
-            [T, g, M, L, v, U],
+            [T, g, M, L, b, U],
         );
     return (
         a.useEffect(() => {
@@ -283,8 +283,8 @@ function Z(e) {
                             className: D.iconContainerLeft,
                             children: (0, r.jsx)(o, {
                                 color: "currentColor",
-                                ...b,
-                                className: l()(D.icon, b?.className),
+                                ...v,
+                                className: l()(D.icon, v?.className),
                             }),
                         }),
                 (0, r.jsxs)("div", {
@@ -293,7 +293,7 @@ function Z(e) {
                         (0, r.jsx)(j, { children: F(i ?? n, e) }),
                         null != _ &&
                             (0, r.jsx)(G.E, {
-                                variant: "text-xs/normal",
+                                variant: "body-xs/normal",
                                 className: l()(D.subtext, { [D.subtextLineClamp]: null != E }),
                                 lineClamp: E,
                                 children: _,
@@ -323,8 +323,8 @@ function Z(e) {
                             className: D.iconContainer,
                             children: (0, r.jsx)(s, {
                                 color: "currentColor",
-                                ...b,
-                                className: l()(D.icon, b?.className),
+                                ...v,
+                                className: l()(D.icon, v?.className),
                             }),
                         }),
                 A &&
@@ -516,7 +516,7 @@ function er(e) {
                     (0, r.jsx)(j, { children: F(i ?? n, { isFocused: E, disabled: _ }) }),
                     null != o &&
                         (0, r.jsx)(G.E, {
-                            variant: "text-xs/normal",
+                            variant: "body-xs/normal",
                             className: l()(D.subtext, { [D.subtextLineClamp]: null != d }),
                             lineClamp: d,
                             children: o,
@@ -579,7 +579,7 @@ function es(e) {
                     (0, r.jsx)(j, { children: F(i ?? n, { isFocused: E, disabled: _ }) }),
                     null != o &&
                         (0, r.jsx)(G.E, {
-                            variant: "text-xs/normal",
+                            variant: "body-xs/normal",
                             className: l()(D.subtext, { [D.subtextLineClamp]: null != d }),
                             lineClamp: d,
                             children: o,
@@ -629,7 +629,7 @@ function eo(e) {
                               (0, r.jsx)(j, { children: n }),
                               null != i &&
                                   (0, r.jsx)(G.E, {
-                                      variant: "text-xs/normal",
+                                      variant: "body-xs/normal",
                                       className: l()(D.subtext, { [D.subtextLineClamp]: null != s }),
                                       lineClamp: s,
                                       children: i,
@@ -909,7 +909,7 @@ function eA(e) {
         S = a.useRef([]);
     d()(S.current, f) || (S.current = f);
     let O = R("Menu"),
-        b = h.find((e) => null != e.key)?.key,
+        v = h.find((e) => null != e.key)?.key,
         P = (function (e) {
             let {
                     navId: t,
@@ -1023,7 +1023,7 @@ function eA(e) {
                     }),
                     [t, C, O, R, L, h],
                 ),
-                v = a.useCallback(
+                b = a.useCallback(
                     (e) => {
                         let { path: n } = e;
                         return {
@@ -1036,7 +1036,7 @@ function eA(e) {
                     },
                     [t, h, y, _.focusIndex, T],
                 ),
-                b = a.useCallback(
+                v = a.useCallback(
                     (e) => {
                         let { path: n, hasSubmenu: i = !1, navigable: r = !0, role: a = "menuitem" } = e,
                             s = n.join("--");
@@ -1055,17 +1055,17 @@ function eA(e) {
                 () => ({
                     dispatch: A,
                     getContainerProps: D,
-                    getSubmenuProps: v,
-                    getItemProps: b,
+                    getSubmenuProps: b,
+                    getItemProps: v,
                     isFocused: y,
                     isUsingKeyboardNavigation: T,
                 }),
-                [A, D, v, b, y, T],
+                [A, D, b, v, y, T],
             );
         })({
             navId: t,
             items: S.current,
-            initialFocusPath: C.Ay.keyboardModeEnabled && null != b ? [b] : [],
+            initialFocusPath: C.Ay.keyboardModeEnabled && null != v ? [v] : [],
             closeMenu: _,
             defaultIsUsingKeyboardNavigation: C.Ay.keyboardModeEnabled,
         });
@@ -1112,12 +1112,12 @@ function eA(e) {
                                 let c = l.length > 0 ? l[l.length - 1] : t;
                                 switch (o.type) {
                                     case "separator":
-                                        (c.push((0, r.jsx)(v, {}, `separator-${d}`)), (s = 0));
+                                        (c.push((0, r.jsx)(b, {}, `separator-${d}`)), (s = 0));
                                         break;
                                     case "groupstart":
                                         (s > 0 &&
                                             o.length > 0 &&
-                                            (c.push((0, r.jsx)(v, {}, `separator-${d}`)), (s = 0)),
+                                            (c.push((0, r.jsx)(b, {}, `separator-${d}`)), (s = 0)),
                                             l.push([]));
                                         break;
                                     case "groupend":

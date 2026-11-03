@@ -57,9 +57,9 @@ function v(e) {
         P = (0, l.jsx)(E, { url: n }),
         R = null;
     return (T === I.Ps.EXPERIMENT_TREATMENT && null != w
-        ? (R = (0, l.jsx)(c.E, { variant: "text-xs/normal", color: "text-muted", children: w.label }))
+        ? (R = (0, l.jsx)(c.E, { variant: "body-xs/normal", color: "text-muted", children: w.label }))
         : null != M &&
-          (R = (0, l.jsxs)(c.E, { variant: "text-xs/normal", color: "text-muted", children: ["Server Config: ", _] })),
+          (R = (0, l.jsxs)(c.E, { variant: "body-xs/normal", color: "text-muted", children: ["Server Config: ", _] })),
     L)
         ? (0, l.jsxs)("div", {
               className: C.zr,
@@ -80,7 +80,7 @@ function v(e) {
                                               direction: "vertical",
                                               gap: 0,
                                               children: [
-                                                  (0, l.jsx)(c.E, { variant: "text-md/semibold", children: N.title }),
+                                                  (0, l.jsx)(c.E, { variant: "body-md/semibold", children: N.title }),
                                                   R,
                                               ],
                                           }),

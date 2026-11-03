@@ -25,8 +25,8 @@ var s = t(477900),
     N = t(871123),
     E = t(733391),
     L = t(439303),
-    M = t(353281),
-    y = t(832163),
+    y = t(353281),
+    M = t(832163),
     R = t(877624),
     C = t(554146),
     T = t(308588),
@@ -72,12 +72,12 @@ function V() {
                 children: B.intl.string(W.default["0XMNl5"]),
             }),
             (0, s.jsxs)(p.E, {
-                variant: "text-md/normal",
+                variant: "body-md/normal",
                 color: "text-subtle",
                 children: [B.intl.string(W.default.NZbasC), (0, s.jsx)("br", {}), B.intl.string(W.default.Tc8sxG)],
             }),
             (0, s.jsx)(p.E, {
-                variant: "text-md/medium",
+                variant: "body-md/medium",
                 children: (0, s.jsx)(Y.Anchor, { href: U.uy, children: B.intl.string(W.default.KPCFC9) }),
             }),
         ],
@@ -426,7 +426,7 @@ function e_(e) {
                     forceTrack: !0,
                 });
         }, [a, f, l]));
-    let et = (0, o.bG)([y.A], () => v ?? y.A.getGuildIdFromApplicationId(b), [v, b]),
+    let et = (0, o.bG)([M.A], () => v ?? M.A.getGuildIdFromApplicationId(b), [v, b]),
         es = (0, g.A)(() => (0, r.A)()),
         en = (0, o.bG)([S.Ay, A.default], () => S.Ay.isMember(et, A.default.getId()), [et]),
         ea = n.useMemo(() => (null == N || isNaN(N) || (null != q && N >= q.pages.length) ? 0 : N), [N, q]),
@@ -477,7 +477,7 @@ function e_(e) {
                           children: B.intl.string(W.default.OvBwPV),
                       }),
                       (0, s.jsx)(p.E, {
-                          variant: "text-md/normal",
+                          variant: "body-md/normal",
                           color: "text-subtle",
                           children: B.intl.string(W.default["Sy7D+/"]),
                       }),
@@ -488,7 +488,7 @@ function e_(e) {
               : (0, s.jsx)("div", { className: i()(ef.u1, Q), children: (0, s.jsx)(c.y, {}) })
         : (0, s.jsx)(m.f5, {
               value: X,
-              children: (0, s.jsx)(M.J, {
+              children: (0, s.jsx)(y.J, {
                   navigateToStorefrontPage: ed,
                   viewProductDetails: ec,
                   children: (0, s.jsx)(L.E9, {

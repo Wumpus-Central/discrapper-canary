@@ -1,10 +1,10 @@
-(n.d(t, { P: () => ed, ThirdPartyPromotionsModal: () => eo }), n(321073));
+(n.d(t, { P: () => ed, ThirdPartyPromotionsModal: () => es }), n(321073));
 var i = n(477900),
     a = n(582128),
     r = n(17928),
     l = n(52133),
-    s = n(189213),
-    o = n(366010),
+    o = n(189213),
+    s = n(366010),
     d = n(331322),
     c = n(939249),
     u = n(834730),
@@ -42,7 +42,7 @@ function x(e) {
                             className: N.yO,
                             children: [
                                 (0, i.jsx)(v.D, { variant: "heading-lg/semibold", color: "text-strong", children: t }),
-                                (0, i.jsx)(v.D, { variant: "heading-sm/medium", color: "text-subtle", children: n }),
+                                (0, i.jsx)(v.D, { variant: "heading-xs/medium", color: "text-subtle", children: n }),
                             ],
                         }),
                     ],
@@ -235,14 +235,14 @@ function ei(e) {
     var t;
     let n,
         l,
-        { records: s, claimedOutboundPromotionCodeMap: m, theme: f } = e,
+        { records: o, claimedOutboundPromotionCodeMap: m, theme: f } = e,
         [g, p] = a.useState(!1),
-        P = [...s].sort((e, t) => (t.startDate > e.startDate ? 1 : -1)),
+        P = [...o].sort((e, t) => (t.startDate > e.startDate ? 1 : -1)),
         E = g ? P : P.slice(0, 1),
         C = !g && P.length > 1,
         T =
-            ((t = s[0]?.partnerId ?? ""),
-            (n = (0, r.bG)([A.A], () => (0, o.M)(A.A.theme))),
+            ((t = o[0]?.partnerId ?? ""),
+            (n = (0, r.bG)([A.A], () => (0, s.M)(A.A.theme))),
             null == (l = Q[t]?.logos) ? void 0 : n ? l.dark : l.light);
     return (0, i.jsxs)("div", {
         children: [
@@ -285,7 +285,7 @@ function ei(e) {
                         p(!0);
                     },
                     children: (0, i.jsx)(u.E, {
-                        variant: "text-sm/medium",
+                        variant: "body-sm/medium",
                         color: "text-subtle",
                         children: G.intl.string(G.t.rjjZxV),
                     }),
@@ -305,7 +305,7 @@ function er(e) {
             subtitle: a,
             modalTeaser: r,
             showXboxCard: l = !1,
-            transitionState: o,
+            transitionState: s,
             onClose: c,
             analyticsLocationsProp: u,
         } = e,
@@ -314,7 +314,7 @@ function er(e) {
     return f
         ? (0, i.jsx)(p.f5, {
               value: g,
-              children: (0, i.jsxs)(s.a, {
+              children: (0, i.jsxs)(o.a, {
                   title: n,
                   subtitle: a,
                   actions: [],
@@ -328,7 +328,7 @@ function er(e) {
                           if (e) return C.Ay.fetchActivePromotions();
                       },
                   }),
-                  transitionState: o,
+                  transitionState: s,
                   onClose: c,
                   children: [
                       (0, i.jsxs)(d.B, {
@@ -354,18 +354,18 @@ function el(e) {
                 children: [
                     (0, i.jsx)(n, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
                     (0, i.jsx)(u.E, {
-                        variant: t.titleVariant ?? "text-sm/semibold",
+                        variant: t.titleVariant ?? "body-sm/semibold",
                         color: "text-default",
                         children: t.title,
                     }),
                 ],
             }),
-            null != t.body && (0, i.jsx)(u.E, { variant: "text-sm/medium", color: "text-muted", children: t.body }),
+            null != t.body && (0, i.jsx)(u.E, { variant: "body-sm/medium", color: "text-muted", children: t.body }),
         ],
     });
 }
-function es(e) {
-    let { partnerIds: t, title: n, subtitle: a, modalTeaser: l, transitionState: o, onClose: c } = e,
+function eo(e) {
+    let { partnerIds: t, title: n, subtitle: a, modalTeaser: l, transitionState: s, onClose: c } = e,
         f = (0, r.bG)([A.A], () => A.A.theme),
         [g, p] = (0, r.bG)(
             [_.A],
@@ -411,11 +411,11 @@ function es(e) {
                 );
             }),
         });
-    return (0, i.jsx)(s.a, {
+    return (0, i.jsx)(o.a, {
         title: n,
         subtitle: a,
         actions: [],
-        transitionState: o,
+        transitionState: s,
         onClose: c,
         children: (0, i.jsxs)("div", {
             className: N.kL,
@@ -427,7 +427,7 @@ function es(e) {
                         children: [
                             null != O &&
                                 (0, i.jsx)(u.E, {
-                                    variant: "text-md/medium",
+                                    variant: "body-md/medium",
                                     color: "text-subtle",
                                     children: O.recurring,
                                 }),
@@ -444,7 +444,7 @@ function es(e) {
                                   children: [
                                       null != O &&
                                           (0, i.jsx)(u.E, {
-                                              variant: "text-md/medium",
+                                              variant: "body-md/medium",
                                               color: "text-subtle",
                                               children: O.oneTime,
                                           }),
@@ -458,15 +458,15 @@ function es(e) {
         }),
     });
 }
-function eo(e) {
+function es(e) {
     let {
         partnerIds: t,
         isLocked: n = !1,
         title: a,
         subtitle: r,
         modalTeaser: l,
-        showXboxCard: s,
-        transitionState: o,
+        showXboxCard: o,
+        transitionState: s,
         onClose: d,
         analyticsLocations: c,
     } = e;
@@ -476,12 +476,12 @@ function eo(e) {
               title: a,
               subtitle: r,
               modalTeaser: l,
-              showXboxCard: s,
-              transitionState: o,
+              showXboxCard: o,
+              transitionState: s,
               onClose: d,
               analyticsLocationsProp: c,
           })
-        : (0, i.jsx)(es, { partnerIds: t, title: a, subtitle: r, modalTeaser: l, transitionState: o, onClose: d });
+        : (0, i.jsx)(eo, { partnerIds: t, title: a, subtitle: r, modalTeaser: l, transitionState: s, onClose: d });
 }
 function ed(e) {
     let {
@@ -489,12 +489,12 @@ function ed(e) {
             isLocked: a = !1,
             title: r,
             subtitle: l,
-            modalTeaser: s,
-            showXboxCard: o,
+            modalTeaser: o,
+            showXboxCard: s,
             analyticsLocations: d,
             onClose: c,
         } = e,
-        u = o ? [...t, "xbox"] : t;
+        u = s ? [...t, "xbox"] : t;
     (P.default.track(B.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { partner_ids: u, partner_id: u[0], location_stack: d }),
         C.Ay.fetchActivePromotions(),
         (0, g.openModalLazy)(
@@ -507,8 +507,8 @@ function ed(e) {
                         isLocked: a,
                         title: r,
                         subtitle: l,
-                        modalTeaser: s,
-                        showXboxCard: o,
+                        modalTeaser: o,
+                        showXboxCard: s,
                         analyticsLocations: d,
                     });
             },

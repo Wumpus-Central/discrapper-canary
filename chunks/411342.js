@@ -11,7 +11,7 @@ var a = e(317097),
     u = e(105292),
     d = e(840794);
 function y(t) {
-    let { locked: n, role: e, textVariant: y = "text-xs/medium" } = t,
+    let { locked: n, role: e, textVariant: y = "body-xs/medium" } = t,
         _ = (0, i.r)(c.A.colors.INTERACTIVE_TEXT_DEFAULT).hex();
     return (0, r.jsx)("div", {
         className: d.ex,

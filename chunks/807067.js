@@ -6,8 +6,8 @@ var i = t(477900),
     r = t(287174),
     o = t(487899),
     c = t(17928),
-    u = t(939249),
-    d = t(305866),
+    d = t(939249),
+    u = t(305866),
     A = t(707554),
     h = t(140735),
     m = t(323384),
@@ -24,8 +24,8 @@ var i = t(477900),
     _ = t(939635),
     T = t(267102),
     b = t(246356),
-    S = t(111162),
-    y = t(174459),
+    y = t(111162),
+    S = t(174459),
     O = t(795816),
     P = t(648027),
     R = t(855446),
@@ -37,9 +37,9 @@ let G = r.K.APP_LAUNCHER_IN_VOICE_BANNER,
 function U(e) {
     let n,
         t,
-        { channel: s, openInPopout: r, onClick: d } = e,
+        { channel: s, openInPopout: r, onClick: u } = e,
         { fetchState: A, voiceBannerCollection: h } =
-            ((n = (0, c.bG)([S.default], () => S.default.onlyShowPreviewAppCollections) ? a.W.PREVIEW : a.W.ACTIVE),
+            ((n = (0, c.bG)([y.default], () => y.default.onlyShowPreviewAppCollections) ? a.W.PREVIEW : a.W.ACTIVE),
             l.useEffect(() => {
                 (0, v.An)({ surface: G, activeState: n });
             }, [n]),
@@ -65,11 +65,11 @@ function U(e) {
         : (null != g.id &&
               null != g.image_hash &&
               (t = (0, _.DH)({ itemId: g.id, hash: g.image_hash, containerWidth: 584 })),
-          (0, i.jsxs)(u.D, {
+          (0, i.jsxs)(d.D, {
               className: M.V8,
               innerRef: x,
               onClick: () => {
-                  (d(),
+                  (u(),
                       (0, j.A)({
                           context: { type: "channel", channel: s },
                           openInPopout: r,
@@ -97,13 +97,13 @@ function V(e) {
         } = e,
         { id: v, guild_id: N } = t;
     (l.useEffect(() => {
-        y.default.track(L.HAw.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, { channel_id: v, guild_id: N });
+        S.default.track(L.HAw.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, { channel_id: v, guild_id: N });
     }, [v, N]),
         l.useEffect(() => {
             s || a();
         }, [a, s]));
     let _ = (0, T.Us)(),
-        { analyticsLocations: S, newestAnalyticsLocation: G } = (0, f.Ay)(C.A.ACTIVITIES_MINI_SHELF),
+        { analyticsLocations: y, newestAnalyticsLocation: G } = (0, f.Ay)(C.A.ACTIVITIES_MINI_SHELF),
         V = _ === L.BRT.POPOUT,
         B = ((n = t.getGuildId()), (0, P.A)({ guildId: n }).slice(0, 5));
     l.useEffect(() => {
@@ -122,7 +122,7 @@ function V(e) {
         H = l.useCallback(
             (e) => {
                 (r(),
-                    y.default.track(L.HAw.ACTIVITIES_MINI_SHELF_HOVERED, {
+                    S.default.track(L.HAw.ACTIVITIES_MINI_SHELF_HOVERED, {
                         channel_id: t.id,
                         guild_id: t.getGuildId(),
                     }));
@@ -130,9 +130,9 @@ function V(e) {
             [r, t],
         );
     return (0, i.jsx)(f.f5, {
-        value: S,
+        value: y,
         children: (0, i.jsx)(b.A, {
-            children: (0, i.jsxs)(d.l, {
+            children: (0, i.jsxs)(u.l, {
                 ref: E,
                 "aria-labelledby": k,
                 className: p,
@@ -160,17 +160,17 @@ function V(e) {
                                                 color: "var(--interactive-text-active)",
                                             }),
                                             (0, i.jsx)(g.E, {
-                                                variant: "eyebrow",
+                                                variant: "body-sm/medium",
                                                 children: D.intl.string(D.t.f3Cz25),
                                             }),
                                         ],
                                     }),
-                                    (0, i.jsxs)(u.D, {
+                                    (0, i.jsxs)(d.D, {
                                         className: M.hc,
                                         onClick: w,
                                         children: [
                                             (0, i.jsx)(g.E, {
-                                                variant: "eyebrow",
+                                                variant: "body-sm/medium",
                                                 children: D.intl.string(D.t["K8+z4S"]),
                                             }),
                                             (0, i.jsx)(x._, {

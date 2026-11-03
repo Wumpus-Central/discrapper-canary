@@ -1,114 +1,114 @@
-t.d(s, { default: () => ea });
-var a = t(477900),
-    l = t(582128),
-    i = t(503698),
-    r = t.n(i),
-    n = t(131937),
-    c = t(702841),
-    d = t(661531),
-    m = t(462887),
-    o = t(935462),
-    x = t(939249),
-    u = t(534514),
-    h = t(628284),
-    j = t(289873),
-    p = t(683071),
-    g = t(231723),
-    _ = t(789645),
-    N = t(364522),
-    E = t(834730),
-    v = t(821609),
-    T = t(22231),
-    C = t(608461),
-    I = t(666860),
-    f = t(139286),
-    S = t(363195),
-    L = t(174459),
-    y = t(636537),
-    A = t(73153),
-    D = t(652215);
-async function b(e) {
-    let s = (await y.Bo.get({ url: D.Rsh.GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES(e), rejectWithError: (0, y.fT)() }))
+a.d(s, { default: () => el });
+var l = a(477900),
+    t = a(582128),
+    i = a(503698),
+    r = a.n(i),
+    n = a(131937),
+    c = a(702841),
+    d = a(661531),
+    o = a(462887),
+    m = a(935462),
+    u = a(939249),
+    x = a(534514),
+    h = a(628284),
+    j = a(289873),
+    p = a(683071),
+    g = a(231723),
+    _ = a(789645),
+    N = a(364522),
+    E = a(834730),
+    v = a(821609),
+    T = a(22231),
+    C = a(608461),
+    I = a(666860),
+    y = a(139286),
+    b = a(363195),
+    f = a(174459),
+    S = a(636537),
+    L = a(73153),
+    A = a(652215);
+async function D(e) {
+    let s = (await S.Bo.get({ url: A.Rsh.GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES(e), rejectWithError: (0, S.fT)() }))
         .body;
     null != s.templates &&
-        A.h.dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_TEMPLATES", templates: s.templates, guildId: e });
+        L.h.dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_TEMPLATES", templates: s.templates, guildId: e });
 }
-var R = t(74399),
-    U = t(739455),
-    k = t(317097),
-    O = t(770880),
-    G = t(146151),
-    P = t(808107),
-    w = t(597050),
-    M = t(532590),
-    H = t(669281),
-    W = t(580630),
-    $ = t(35275),
-    B = t(105292),
-    X = t(873586);
+var R = a(74399),
+    U = a(739455),
+    k = a(317097),
+    O = a(770880),
+    G = a(146151),
+    P = a(808107),
+    w = a(597050),
+    M = a(532590),
+    H = a(669281),
+    W = a(580630),
+    $ = a(35275),
+    B = a(105292),
+    X = a(873586);
 function z(e) {
     let { listing: s } = e,
-        { name: t, image: l, description: i } = s,
-        r = (0, W.$g)(s.price_tier, D.Yri.USD);
-    return (0, a.jsxs)("div", {
+        { name: a, image: t, description: i } = s,
+        r = (0, W.$g)(s.price_tier, A.Yri.USD);
+    return (0, l.jsxs)("div", {
         children: [
-            (0, a.jsxs)("div", {
+            (0, l.jsxs)("div", {
                 className: X.l8,
                 children: [
-                    (0, a.jsx)("img", { src: l, alt: "", className: X.my }),
-                    (0, a.jsxs)("div", {
+                    (0, l.jsx)("img", { src: t, alt: "", className: X.my }),
+                    (0, l.jsxs)("div", {
                         children: [
-                            (0, a.jsx)(u.D, { variant: "heading-md/medium", className: X.KR, children: t }),
-                            (0, a.jsx)(E.E, { variant: "text-md/medium", tag: "span", children: r }),
-                            (0, a.jsx)(E.E, { variant: "text-xxs/medium", tag: "span", children: "/mo." }),
+                            (0, l.jsx)(x.D, { variant: "heading-sm/medium", className: X.KR, children: a }),
+                            (0, l.jsx)(E.E, { variant: "body-md/medium", tag: "span", children: r }),
+                            (0, l.jsx)(E.E, { variant: "footnote/medium", tag: "span", children: "/mo." }),
                         ],
                     }),
                 ],
             }),
-            (0, a.jsxs)("div", {
+            (0, l.jsxs)("div", {
                 className: X.FE,
                 children: [
-                    (0, a.jsx)("div", { style: { backgroundColor: (0, k.Hl)(s.role_color) }, className: X.yY }),
-                    (0, a.jsx)("img", { src: l, alt: "", className: X.UT }),
-                    (0, a.jsx)(E.E, { variant: "text-xs/medium", children: t }),
+                    (0, l.jsx)("div", { style: { backgroundColor: (0, k.Hl)(s.role_color) }, className: X.yY }),
+                    (0, l.jsx)("img", { src: t, alt: "", className: X.UT }),
+                    (0, l.jsx)(E.E, { variant: "body-xs/medium", children: a }),
                 ],
             }),
-            (0, a.jsx)(E.E, { variant: "text-xs/normal", className: X.rj, children: i }),
+            (0, l.jsx)(E.E, { variant: "body-xs/normal", className: X.rj, children: i }),
         ],
     });
 }
 function F(e) {
     let { channel: s } = e,
-        t = (function (e) {
+        a = (function (e) {
             switch (e) {
-                case D.rbe.GUILD_TEXT:
+                case A.rbe.GUILD_TEXT:
                     return O.I;
-                case D.rbe.GUILD_VOICE:
+                case A.rbe.GUILD_VOICE:
                     return G.t;
-                case D.rbe.GUILD_STAGE_VOICE:
+                case A.rbe.GUILD_STAGE_VOICE:
                     return P.D;
-                case D.rbe.GUILD_FORUM:
+                case A.rbe.GUILD_FORUM:
                     return w.Q;
-                case D.rbe.GUILD_MEDIA:
+                case A.rbe.GUILD_MEDIA:
                     return M.c;
-                case D.rbe.GUILD_ANNOUNCEMENT:
+                case A.rbe.GUILD_ANNOUNCEMENT:
                     return H.X;
                 default:
                     return null;
             }
         })(s.type);
-    return (0, a.jsxs)("div", {
+    return (0, l.jsxs)("div", {
         className: X.$r,
         children: [
-            null != t && (0, a.jsx)(t, { className: X.WH, color: "currentColor" }),
-            (0, a.jsxs)("div", {
+            null != a && (0, l.jsx)(a, { className: X.WH, color: "currentColor" }),
+            (0, l.jsxs)("div", {
                 className: X.WA,
                 children: [
-                    (0, a.jsx)(E.E, { variant: "text-sm/normal", children: s.name }),
-                    (0, a.jsx)(E.E, { variant: "text-xs/normal", className: X.zC, children: s.tagline }),
+                    (0, l.jsx)(E.E, { variant: "body-sm/normal", children: s.name }),
+                    (0, l.jsx)(E.E, { variant: "body-xs/normal", className: X.zC, children: s.tagline }),
                 ],
             }),
-            (0, a.jsx)($.A, {
+            (0, l.jsx)($.A, {
                 className: X.__invalid_emojiIcon,
                 color: d.A.colors.CREATOR_REVENUE_LOCKED_CHANNEL_ICON.css,
             }),
@@ -119,128 +119,128 @@ function Q(e) {
     let { benefit: s } = e;
     return void 0 === s
         ? null
-        : (0, a.jsxs)("div", {
+        : (0, l.jsxs)("div", {
               className: X.Rr,
               children: [
-                  (0, a.jsx)("div", { className: X.KI }),
-                  (0, a.jsx)(E.E, { variant: "text-sm/normal", children: s }),
+                  (0, l.jsx)("div", { className: X.KI }),
+                  (0, l.jsx)(E.E, { variant: "body-sm/normal", children: s }),
               ],
           });
 }
 function Y(e) {
     let { listing: s } = e;
-    return (0, a.jsxs)("div", {
+    return (0, l.jsxs)("div", {
         children: [
-            (0, a.jsx)(u.D, { variant: "heading-sm/semibold", className: X.Ts, children: B.intl.string(B.t.CjC5XZ) }),
-            (0, a.jsx)(E.E, { variant: "text-xs/semibold", className: X.hM, children: B.intl.string(B.t.rI43Wx) }),
-            s.channels.map((e) => (0, a.jsx)(F, { channel: e }, e.id)),
-            (0, a.jsx)(E.E, { variant: "text-xs/semibold", className: X.hM, children: B.intl.string(B.t.XqWRLj) }),
-            s.additional_perks.map((e, s) => (0, a.jsx)(Q, { benefit: e.name }, s)),
+            (0, l.jsx)(x.D, { variant: "heading-xs/semibold", className: X.Ts, children: B.intl.string(B.t.CjC5XZ) }),
+            (0, l.jsx)(E.E, { variant: "body-xs/semibold", className: X.hM, children: B.intl.string(B.t.rI43Wx) }),
+            s.channels.map((e) => (0, l.jsx)(F, { channel: e }, e.id)),
+            (0, l.jsx)(E.E, { variant: "body-xs/semibold", className: X.hM, children: B.intl.string(B.t.XqWRLj) }),
+            s.additional_perks.map((e, s) => (0, l.jsx)(Q, { benefit: e.name }, s)),
         ],
     });
 }
 function Z(e) {
-    let { selectedTemplate: s, handleSelectTemplate: t } = e;
+    let { selectedTemplate: s, handleSelectTemplate: a } = e;
     if (void 0 === s) return null;
-    let l = s.listings[0];
-    return (0, a.jsxs)("div", {
+    let t = s.listings[0];
+    return (0, l.jsxs)("div", {
         className: X.kL,
         children: [
-            (0, a.jsxs)(N.Ip, {
+            (0, l.jsxs)(N.Ip, {
                 className: X.Qs,
                 children: [
-                    (0, a.jsx)(z, { listing: l }),
-                    (0, a.jsx)("div", { className: X.yF }),
-                    (0, a.jsx)(Y, { listing: l }),
+                    (0, l.jsx)(z, { listing: t }),
+                    (0, l.jsx)("div", { className: X.yF }),
+                    (0, l.jsx)(Y, { listing: t }),
                 ],
             }),
-            (0, a.jsx)(v.$, {
+            (0, l.jsx)(v.$, {
                 variant: "primary",
                 text: B.intl.string(B.t["1W7mCt"]),
                 onClick: () => {
-                    t(s);
+                    a(s);
                 },
             }),
         ],
     });
 }
-var K = t(352432);
+var K = a(352432);
 function V(e) {
-    let { price: s, selected: t, onClick: l } = e;
-    return (0, a.jsxs)(x.D, {
-        className: r()(K.y3, { [K.wH]: t }),
-        onClick: l,
+    let { price: s, selected: a, onClick: t } = e;
+    return (0, l.jsxs)(u.D, {
+        className: r()(K.y3, { [K.wH]: a }),
+        onClick: t,
         children: [
-            t
-                ? (0, a.jsx)(h.y, {
+            a
+                ? (0, l.jsx)(h.y, {
                       size: "custom",
                       width: 20,
                       height: 20,
                       secondaryColor: d.A.unsafe_rawColors.WHITE.css,
                       color: d.A.unsafe_rawColors.BRAND_500.css,
                   })
-                : (0, a.jsx)("svg", {
+                : (0, l.jsx)("svg", {
                       width: "20",
                       height: "20",
-                      children: (0, a.jsx)("circle", { cx: 10, cy: 10, r: 10, className: K.n1 }),
+                      children: (0, l.jsx)("circle", { cx: 10, cy: 10, r: 10, className: K.n1 }),
                   }),
-            (0, a.jsxs)("div", {
+            (0, l.jsxs)("div", {
                 className: K.Z6,
                 children: [
-                    (0, a.jsx)(E.E, { variant: "text-sm/normal", tag: "span", children: (0, W.$g)(s, D.Yri.USD) }),
-                    (0, a.jsx)(E.E, { variant: "text-xxs/medium", tag: "span", children: "/mo." }),
+                    (0, l.jsx)(E.E, { variant: "body-sm/normal", tag: "span", children: (0, W.$g)(s, A.Yri.USD) }),
+                    (0, l.jsx)(E.E, { variant: "footnote/medium", tag: "span", children: "/mo." }),
                 ],
             }),
         ],
     });
 }
 function q(e) {
-    let { selectedTemplate: s, handleSelectTemplate: t, newPricesToPick: i } = e,
-        [r, n] = l.useState(0);
-    return (0, a.jsxs)("div", {
+    let { selectedTemplate: s, handleSelectTemplate: a, newPricesToPick: i } = e,
+        [r, n] = t.useState(0);
+    return (0, l.jsxs)("div", {
         className: K.kL,
         children: [
-            (0, a.jsxs)("div", {
+            (0, l.jsxs)("div", {
                 className: K.Qs,
                 children: [
-                    (0, a.jsx)(u.D, {
-                        variant: "heading-md/semibold",
+                    (0, l.jsx)(x.D, {
+                        variant: "heading-sm/semibold",
                         children: B.intl.format(B.t["5WZ9Ct"], { tierName: s.listings[0].name }),
                     }),
-                    (0, a.jsx)(E.E, {
-                        variant: "text-sm/normal",
+                    (0, l.jsx)(E.E, {
+                        variant: "body-sm/normal",
                         className: K.G3,
                         children: B.intl.format(B.t["5i7Uhb"], {
-                            price: (0, W.$g)(s.listings[0].price_tier, D.Yri.USD),
+                            price: (0, W.$g)(s.listings[0].price_tier, A.Yri.USD),
                         }),
                     }),
-                    i.map((e, s) => (0, a.jsx)(V, { price: e, selected: s === r, onClick: () => n(s) }, e)),
+                    i.map((e, s) => (0, l.jsx)(V, { price: e, selected: s === r, onClick: () => n(s) }, e)),
                 ],
             }),
-            (0, a.jsx)(v.$, {
+            (0, l.jsx)(v.$, {
                 variant: "primary",
                 text: B.intl.string(B.t["1W7mCt"]),
                 onClick: function () {
-                    t({ ...s, listings: [{ ...s.listings[0], price_tier: i[r] }] });
+                    a({ ...s, listings: [{ ...s.listings[0], price_tier: i[r] }] });
                 },
             }),
         ],
     });
 }
-var J = t(777942);
+var J = a(777942);
 function ee(e) {
-    let { name: s, imageUrl: t, selected: l, onTap: i } = e;
-    return (0, a.jsxs)(x.D, {
+    let { name: s, imageUrl: a, selected: t, onTap: i } = e;
+    return (0, l.jsxs)(u.D, {
         onClick: i,
         className: J.rz,
         children: [
-            (0, a.jsx)("img", { src: t, alt: "", className: J.ks }),
-            (0, a.jsxs)("div", {
+            (0, l.jsx)("img", { src: a, alt: "", className: J.ks }),
+            (0, l.jsxs)("div", {
                 className: J.GY,
                 children: [
-                    (0, a.jsx)(u.D, { variant: "heading-md/medium", className: r()({ [J.kE]: !l }), children: s }),
-                    l &&
-                        (0, a.jsx)(h.y, {
+                    (0, l.jsx)(x.D, { variant: "heading-sm/medium", className: r()({ [J.kE]: !t }), children: s }),
+                    t &&
+                        (0, l.jsx)(h.y, {
                             size: "md",
                             secondaryColor: d.A.unsafe_rawColors.WHITE.css,
                             color: d.A.unsafe_rawColors.BRAND_500.css,
@@ -251,24 +251,24 @@ function ee(e) {
     });
 }
 function es(e) {
-    let { loading: s, error: t, templates: l, selectedTemplateIndex: i, handleTapTemplate: r } = e,
-        n = (0, c.bG)([S.A], () => S.A.theme);
+    let { loading: s, error: a, templates: t, selectedTemplateIndex: i, handleTapTemplate: r } = e,
+        n = (0, c.bG)([b.A], () => b.A.theme);
     return s
-        ? (0, a.jsx)(j.y, {})
-        : null != t
-          ? (0, a.jsx)(p.w, { type: "critical", message: t.message, role: "alert" })
-          : null == l || 0 === l.length
+        ? (0, l.jsx)(j.y, {})
+        : null != a
+          ? (0, l.jsx)(p.w, { type: "critical", message: a.message, role: "alert" })
+          : null == t || 0 === t.length
             ? null
-            : (0, a.jsx)("div", {
+            : (0, l.jsx)("div", {
                   className: J.PJ,
-                  children: l.map((e, s) =>
-                      (0, a.jsx)(
+                  children: t.map((e, s) =>
+                      (0, l.jsx)(
                           ee,
                           {
                               imageUrl:
                                   s === i
                                       ? e.category_image
-                                      : (0, m.q)(n)
+                                      : (0, o.q)(n)
                                         ? e.unselected_light_theme_category_image
                                         : e.unselected_dark_theme_category_image,
                               name: e.category,
@@ -280,129 +280,129 @@ function es(e) {
                   ),
               });
 }
-function et(e) {
+function ea(e) {
     let {
             guildId: s,
-            templates: t,
+            templates: a,
             selectedTemplateIndex: i,
             priceTiers: r,
             showPriceReselection: n,
             setShowPriceReselection: c,
             handleCreateTierFromTemplate: d,
         } = e,
-        m = (0, U.zu)(s, r, null != t ? t[i]?.listings[0]?.price_tier : void 0),
-        o = null != m && m.length > 0,
-        x = l.useCallback(
+        o = (0, U.zu)(s, r, null != a ? a[i]?.listings[0]?.price_tier : void 0),
+        m = null != o && o.length > 0,
+        u = t.useCallback(
             (e) => {
-                o ? c(!0) : d(e);
+                m ? c(!0) : d(e);
             },
-            [d, o, c],
+            [d, m, c],
         );
-    return null == t || 0 === t.length
+    return null == a || 0 === a.length
         ? null
-        : n && o
-          ? (0, a.jsx)(q, { selectedTemplate: t[i], handleSelectTemplate: d, newPricesToPick: m })
-          : (0, a.jsx)(Z, { selectedTemplate: t[i], handleSelectTemplate: x });
+        : n && m
+          ? (0, l.jsx)(q, { selectedTemplate: a[i], handleSelectTemplate: d, newPricesToPick: o })
+          : (0, l.jsx)(Z, { selectedTemplate: a[i], handleSelectTemplate: u });
 }
-function ea(e) {
+function el(e) {
     let {
             transitionState: s,
-            onClose: t,
+            onClose: a,
             guildId: i,
             addNewEditStateFromTemplate: r,
             addNewEditStateFromScratch: d,
-            priceTiers: m,
+            priceTiers: o,
         } = e,
         h = (0, c.bG)([R.A], () => R.A.getTemplates(i)),
-        [j, { loading: p, error: S }] = (0, C.A)(b),
-        y = l.useRef("voluntarily_exit");
-    (l.useEffect(() => {
+        [j, { loading: p, error: b }] = (0, C.A)(D),
+        S = t.useRef("voluntarily_exit");
+    (t.useEffect(() => {
         (null == h || 0 === h.length) && j(i);
     }, [j, i, h]),
-        l.useEffect(() => {
+        t.useEffect(() => {
             s === g.ip.EXITING &&
-                L.default.track(D.HAw.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, {
-                    exit_reason: y.current,
+                f.default.track(A.HAw.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, {
+                    exit_reason: S.current,
                     ...(0, I.H$)(i),
                 });
-        }, [s, i, y]));
-    let [U, k] = l.useState(0),
-        [O, G] = l.useState(!1),
-        P = l.useCallback(
+        }, [s, i, S]));
+    let [U, k] = t.useState(0),
+        [O, G] = t.useState(!1),
+        P = t.useCallback(
             (e) => {
-                ((y.current = "template_selected"),
-                    A.h.dispatch({
+                ((S.current = "template_selected"),
+                    L.h.dispatch({
                         type: "GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS",
                         selectedTemplate: e,
                         guildId: i,
                     }),
                     r(e),
-                    t());
+                    a());
             },
-            [i, r, t],
+            [i, r, a],
         ),
-        w = l.useCallback(() => {
-            O ? G(!1) : t();
-        }, [O, t]);
+        w = t.useCallback(() => {
+            O ? G(!1) : a();
+        }, [O, a]);
     return (
-        (0, f.A)({
+        (0, y.A)({
             type: n.ImpressionTypes.MODAL,
             name: n.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR,
             properties: { guild_id: i },
         }),
-        (0, a.jsxs)(o.EO, {
+        (0, l.jsxs)(m.EO, {
             "data-migration-pending": !0,
             transitionState: s,
-            size: o.rI.DYNAMIC,
+            size: m.rI.DYNAMIC,
             className: J.CR,
             parentComponent: "GuildRoleSubscriptionsTierTemplateModal",
             children: [
-                (0, a.jsx)(x.D, {
+                (0, l.jsx)(u.D, {
                     onClick: w,
                     className: J.b,
-                    children: (0, a.jsx)(_.P, { size: "xxs", color: "currentColor" }),
+                    children: (0, l.jsx)(_.P, { size: "xxs", color: "currentColor" }),
                 }),
-                (0, a.jsxs)(o.$m, {
+                (0, l.jsxs)(m.$m, {
                     className: J.jE,
                     scrollbarGutter: !1,
                     "data-migration-pending": !0,
                     children: [
-                        (0, a.jsxs)("div", {
+                        (0, l.jsxs)("div", {
                             className: J.pv,
                             children: [
                                 O &&
-                                    (0, a.jsx)(x.D, {
+                                    (0, l.jsx)(u.D, {
                                         className: J.wZ,
                                         onClick: () => {
                                             G(!1);
                                         },
                                         "aria-label": "overlay",
                                     }),
-                                (0, a.jsxs)(N.Ip, {
+                                (0, l.jsxs)(N.Ip, {
                                     className: J.H2,
                                     children: [
-                                        (0, a.jsx)(u.D, {
+                                        (0, l.jsx)(x.D, {
                                             variant: "heading-xl/semibold",
                                             children: B.intl.string(B.t["9QQ+i+"]),
                                         }),
-                                        (0, a.jsx)(E.E, {
-                                            variant: "text-sm/normal",
+                                        (0, l.jsx)(E.E, {
+                                            variant: "body-sm/normal",
                                             className: J.jJ,
                                             children: B.intl.string(B.t.CvFFOv),
                                         }),
-                                        (0, a.jsx)(E.E, {
-                                            variant: "text-sm/normal",
+                                        (0, l.jsx)(E.E, {
+                                            variant: "body-sm/normal",
                                             className: J.uL,
                                             children: B.intl.format(B.t.iQML2g, {
                                                 creatorPortalUrl:
                                                     "https://discord.com/creator-portal/learn-from-creators?tab=lightning-lessons",
                                             }),
                                         }),
-                                        (0, a.jsx)("div", {
+                                        (0, l.jsx)("div", {
                                             className: J.QX,
-                                            children: (0, a.jsx)(es, {
+                                            children: (0, l.jsx)(es, {
                                                 loading: p,
-                                                error: S,
+                                                error: b,
                                                 templates: h,
                                                 selectedTemplateIndex: U,
                                                 handleTapTemplate: function (e) {
@@ -412,10 +412,10 @@ function ea(e) {
                                         }),
                                     ],
                                 }),
-                                (0, a.jsx)(E.E, { variant: "text-sm/normal", children: B.intl.string(B.t.jymUTC) }),
-                                (0, a.jsx)(v.$, {
+                                (0, l.jsx)(E.E, { variant: "body-sm/normal", children: B.intl.string(B.t.jymUTC) }),
+                                (0, l.jsx)(v.$, {
                                     onClick: function () {
-                                        ((y.current = "create_from_scratch"), d(), t());
+                                        ((S.current = "create_from_scratch"), d(), a());
                                     },
                                     variant: "secondary",
                                     icon: T.PencilIcon,
@@ -423,11 +423,11 @@ function ea(e) {
                                 }),
                             ],
                         }),
-                        (0, a.jsx)(et, {
+                        (0, l.jsx)(ea, {
                             guildId: i,
                             templates: h,
                             selectedTemplateIndex: U,
-                            priceTiers: m,
+                            priceTiers: o,
                             showPriceReselection: O,
                             setShowPriceReselection: G,
                             handleCreateTierFromTemplate: P,

@@ -114,8 +114,8 @@ var I = n(834730),
     j = n(661531),
     v = n(983851),
     G = n(534890),
-    R = n(331322),
-    y = n(534514),
+    y = n(331322),
+    R = n(534514),
     M = n(17839),
     T = n(760658),
     L = n(105292),
@@ -125,7 +125,7 @@ function D() {
         (0, M.A)({ source: "favorites_empty_sidebar" });
     }, []);
     return (0, i.jsx)(I.E, {
-        variant: "text-sm/medium",
+        variant: "body-sm/medium",
         color: "text-muted",
         children: L.intl.format(T.default.LyZZLX, { onClick: e }),
     });
@@ -161,16 +161,16 @@ function P() {
 }
 function O() {
     let e = (0, o.fj)();
-    return (0, i.jsxs)(R.B, {
+    return (0, i.jsxs)(y.B, {
         gap: 8,
         children: [
             e ? (0, i.jsx)("div", { className: U.yF }) : null,
-            (0, i.jsxs)(R.B, {
+            (0, i.jsxs)(y.B, {
                 gap: 8,
                 padding: { top: 16, right: 16, bottom: 0, left: 16 },
                 fullWidth: !1,
                 children: [
-                    (0, i.jsx)(y.D, { variant: "heading-md/semibold", children: L.intl.string(T.default["1n0TGE"]) }),
+                    (0, i.jsx)(R.D, { variant: "heading-sm/semibold", children: L.intl.string(T.default["1n0TGE"]) }),
                     (0, i.jsx)(D, {}),
                 ],
             }),

@@ -24,9 +24,9 @@ function p(t) {
         actions: [{ variant: "secondary", onClick: () => i(), text: c.intl.string(c.t.cpT0Cq) }],
         children: (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(s.E, { variant: "text-md/normal", children: c.intl.string(c.t["XEHDT/"]) }),
+                (0, r.jsx)(s.E, { variant: "body-md/normal", children: c.intl.string(c.t["XEHDT/"]) }),
                 (0, r.jsx)(s.E, {
-                    variant: "text-md/normal",
+                    variant: "body-md/normal",
                     children: c.intl.formatToPlainString(c.t["+5XVH+"], { countdownString: m }),
                 }),
             ],

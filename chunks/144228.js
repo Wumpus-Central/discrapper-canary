@@ -89,12 +89,12 @@ function A(e) {
                             "aria-hidden": !0,
                             focusable: !1,
                         }),
-                    (0, i.jsx)(c.E, { id: p, tag: "span", variant: "text-md/normal", children: d }),
+                    (0, i.jsx)(c.E, { id: p, tag: "span", variant: "body-md/normal", children: d }),
                     T
                         ? (0, i.jsx)(c.E, {
                               id: m,
                               className: u.description,
-                              variant: "text-sm/normal",
+                              variant: "body-sm/normal",
                               color: "text-subtle",
                               children: t,
                           })

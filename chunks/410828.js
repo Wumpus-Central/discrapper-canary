@@ -14,11 +14,11 @@ var l = n(17928),
     m = n(384059),
     A = n(715989),
     f = n(204651),
-    x = n(747376),
-    g = n(113783),
+    g = n(747376),
+    x = n(113783),
     C = n(518769),
-    j = n(776781),
-    y = n(446600),
+    y = n(776781),
+    j = n(446600),
     I = n(571909),
     N = n(623413),
     v = n(717965),
@@ -31,12 +31,12 @@ function R(e) {
     let { channel: t, inCall: n, hasConnectPermission: l, hasSpeakers: a, children: r } = e,
         { isOnStartStageScreen: o } = (0, I.Ay)();
     (0, I.vI)(t);
-    let c = (0, g.E5)(t.id, C.ip.SPEAKER);
+    let c = (0, x.E5)(t.id, C.ip.SPEAKER);
     return o
         ? (0, i.jsx)(E.A, {
               channel: t,
               onContinueClick: () => {
-                  ((0, I.ek)(!1), n || (0, x.cy)(t));
+                  ((0, I.ek)(!1), n || (0, g.cy)(t));
               },
           })
         : n
@@ -62,24 +62,24 @@ function O(e) {
     return (0, i.jsx)(h.f5, { value: n, children: (0, i.jsx)(v.A, { channel: t, isOnStartStageScreen: l }) });
 }
 function P(e) {
-    return (0, l.bG)([y.A], () => (e.isGuildStageVoice() ? y.A.getStageInstanceByChannel(e.id)?.topic : void 0), [e]);
+    return (0, l.bG)([j.A], () => (e.isGuildStageVoice() ? j.A.getStageInstanceByChannel(e.id)?.topic : void 0), [e]);
 }
 function L(e) {
     let { channel: t } = e,
-        n = (0, g.uy)(t.id),
-        l = (0, g.zy)(t.id, C.ip.AUDIENCE);
+        n = (0, x.uy)(t.id),
+        l = (0, x.zy)(t.id, C.ip.AUDIENCE);
     return (0, i.jsxs)("div", {
         className: T.Qf,
         children: [
             (0, i.jsx)(r.MicrophoneIcon, { size: "xs", color: a.A.colors.TEXT_MUTED }),
             (0, i.jsx)(o.E, {
-                variant: "text-sm/normal",
+                variant: "body-sm/normal",
                 color: "text-muted",
                 children: S.intl.format(S.t.chmM9N, { count: n }),
             }),
             (0, i.jsx)(c.n, { size: "xs", color: a.A.colors.TEXT_MUTED }),
             (0, i.jsx)(o.E, {
-                variant: "text-sm/normal",
+                variant: "body-sm/normal",
                 color: "text-muted",
                 children: S.intl.format(S.t["+v2pN2"], { count: l }),
             }),
@@ -90,17 +90,17 @@ function M(e) {
     let { channel: t, className: n } = e,
         { parentAnalyticsLocation: a } = (0, h.Ay)(),
         s = (0, l.bG)([p.A], () => p.A.getStageAudienceSidebarOpen(t.id), [t.id]),
-        r = (0, j.Ni)(t.id),
-        u = (0, g.zy)(t.id, C.ip.REQUESTED_TO_SPEAK_ONLY),
+        r = (0, y.Ni)(t.id),
+        u = (0, x.zy)(t.id, C.ip.REQUESTED_TO_SPEAK_ONLY),
         A = r ? u : 0,
-        x = S.intl.string(b.default.Ds8IST);
+        g = S.intl.string(b.default.Ds8IST);
     return (
         s
-            ? (x = S.intl.string(b.default["ZSmz+r"]))
-            : A > 0 && (x = S.intl.formatToPlainString(b.default.IQmRBE, { count: A })),
+            ? (g = S.intl.string(b.default["ZSmz+r"]))
+            : A > 0 && (g = S.intl.formatToPlainString(b.default.IQmRBE, { count: A })),
         (0, i.jsx)(f.A, {
             className: n,
-            label: x,
+            label: g,
             isActive: s,
             tooltipPosition: "bottom",
             iconComponent: (e) => {
@@ -112,7 +112,7 @@ function M(e) {
                         A > 0
                             ? (0, i.jsx)(o.E, {
                                   className: T.gC,
-                                  variant: "text-xs/semibold",
+                                  variant: "body-xs/semibold",
                                   color: "none",
                                   children: A > 99 ? "99+" : A,
                               })

@@ -6,8 +6,8 @@ var i,
     r = t.n(a),
     o = t(29477),
     c = t(696292),
-    u = t(834730),
-    d = t(939249),
+    d = t(834730),
+    u = t(939249),
     A = t(805901),
     h = t(43990),
     m = t(932413),
@@ -29,7 +29,7 @@ function N(e) {
             onActivityItemSelected: _,
             imageBackground: T,
             activityAction: b,
-            labelType: S,
+            labelType: y,
         } = (0, g.Ay)({
             context: n,
             activityItem: t,
@@ -39,7 +39,7 @@ function N(e) {
             assetNames: j,
             commandOrigin: N,
         }),
-        [y, O] = s.useState(!1),
+        [S, O] = s.useState(!1),
         P = s.useCallback(() => {
             O(!0);
         }, [O]),
@@ -50,9 +50,9 @@ function N(e) {
             () =>
                 (0, l.jsx)("div", {
                     className: E.Gz,
-                    children: (0, l.jsx)("div", { className: E.fC, children: (0, l.jsx)(C.A, { labelType: S }) }),
+                    children: (0, l.jsx)("div", { className: E.fC, children: (0, l.jsx)(C.A, { labelType: y }) }),
                 }),
-            [S],
+            [y],
         ),
         D = s.useMemo(() => {
             switch (b) {
@@ -61,8 +61,8 @@ function N(e) {
                         className: E.m9,
                         children: (0, l.jsx)("div", {
                             className: E.aF,
-                            children: (0, l.jsx)(u.E, {
-                                variant: "text-sm/medium",
+                            children: (0, l.jsx)(d.E, {
+                                variant: "body-sm/medium",
                                 color: "text-overlay-light",
                                 children: p.intl.string(p.t.VJlc0S),
                             }),
@@ -73,8 +73,8 @@ function N(e) {
                         className: E.m9,
                         children: (0, l.jsx)("div", {
                             className: r()(E.aF, E.pS),
-                            children: (0, l.jsx)(u.E, {
-                                variant: "text-sm/medium",
+                            children: (0, l.jsx)(d.E, {
+                                variant: "body-sm/medium",
                                 color: "text-overlay-light",
                                 children: p.intl.string(p.t["wH/wDO"]),
                             }),
@@ -85,7 +85,7 @@ function N(e) {
                     return null;
             }
         }, [b]);
-    return (0, l.jsx)(d.D, {
+    return (0, l.jsx)(u.D, {
         onClick: _,
         onFocus: P,
         onBlur: R,
@@ -95,7 +95,7 @@ function N(e) {
         children: (0, l.jsx)(A.c, {
             config: I,
             from: { value: 0 },
-            to: { value: +!!y },
+            to: { value: +!!S },
             children: (e) => {
                 let { value: n } = e;
                 return (0, l.jsx)(h.N, {

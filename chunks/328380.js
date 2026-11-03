@@ -1,24 +1,24 @@
-n.d(t, { A: () => h, e: () => b });
+t.d(n, { A: () => h, e: () => b });
 var i,
-    a = n(477900);
-n(582128);
-var s = n(503698),
-    l = n.n(s),
-    r = n(661531),
-    d = n(939249),
-    o = n(534514),
-    c = n(104510),
-    m = n(834730),
-    u = n(907878),
-    x = n(349085),
-    v = n(135570),
-    g = n(105292),
-    j = n(141380),
+    a = t(477900);
+t(582128);
+var s = t(503698),
+    l = t.n(s),
+    r = t(661531),
+    d = t(939249),
+    o = t(534514),
+    c = t(104510),
+    m = t(834730),
+    u = t(907878),
+    x = t(349085),
+    v = t(135570),
+    g = t(105292),
+    j = t(141380),
     b = (((i = {}).CLICKABLE = "clickable"), (i.VIEWABLE = "viewable"), (i.DISABLED = "disabled"), i);
 function h(e) {
     let {
-            className: t,
-            guildId: n,
+            className: n,
+            guildId: t,
             game: i,
             onClick: s,
             imageClassName: b,
@@ -38,7 +38,7 @@ function h(e) {
                 boostGemColor: r.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
                 boostPriceTextColor: void 0,
                 handleClick: () => {
-                    ((0, u.oT)(n, i.id, i.name, f), s?.(i));
+                    ((0, u.oT)(t, i.id, i.name, f), s?.(i));
                 },
             },
             viewable: {
@@ -56,7 +56,7 @@ function h(e) {
         }[C];
     return (0, a.jsxs)(d.D, {
         "aria-disabled": "disabled" === C,
-        className: l()(j.LO, I, t),
+        className: l()(j.LO, I, n),
         onClick: A,
         children: [
             (0, a.jsxs)("div", {
@@ -70,13 +70,13 @@ function h(e) {
             (0, a.jsxs)("div", {
                 className: l()(j.FS, h),
                 children: [
-                    (0, a.jsx)(o.D, { variant: "heading-sm/semibold", lineClamp: 2, title: i.name, children: i.name }),
+                    (0, a.jsx)(o.D, { variant: "heading-xs/semibold", lineClamp: 2, title: i.name, children: i.name }),
                     (0, a.jsxs)("div", {
                         className: j.PW,
                         children: [
                             (0, a.jsx)(c._, { size: "sm", color: N }),
                             (0, a.jsx)(m.E, {
-                                variant: "text-sm/medium",
+                                variant: "body-sm/medium",
                                 color: k,
                                 children: g.intl.formatToPlainString(
                                     i.plans.length > 1 ? v.default["G/aTXi"] : v.default.r9pa9K,

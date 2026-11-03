@@ -12,8 +12,8 @@ var i = n(477900),
     p = n(597770),
     g = n(409626),
     f = n(692969),
-    x = n(980822),
-    h = n(852105),
+    h = n(980822),
+    x = n(852105),
     A = n(240248),
     v = n(818023),
     E = n(818348),
@@ -21,7 +21,7 @@ var i = n(477900),
     j = n(584841);
 function I(e) {
     let { applicationId: t, hideApplicationName: n } = e,
-        { gameId: l, gameRecord: s } = (0, x.A)({ applicationId: t }),
+        { gameId: l, gameRecord: s } = (0, h.A)({ applicationId: t }),
         c = (0, f.A)({
             location: "SocialLayerCommerceGameDetailsButton",
             gameId: l ?? void 0,
@@ -42,7 +42,7 @@ function I(e) {
                     className: j.jy,
                     children: (0, i.jsx)("img", { className: j.Se, src: d, alt: "", "aria-hidden": !0 }),
                 }),
-                !n && (0, i.jsx)(u.E, { variant: "text-sm/normal", className: j.Wk, children: s.name }),
+                !n && (0, i.jsx)(u.E, { variant: "body-sm/normal", className: j.Wk, children: s.name }),
             ],
         }),
     });
@@ -50,12 +50,12 @@ function I(e) {
 function S(e) {
     let { userId: t, applicationId: n, channel: s, hideWhenInactive: o, idle: u } = e,
         [g, f] = l.useState(!1),
-        x = l.useRef(null),
+        h = l.useRef(null),
         A = l.useCallback(() => f(!0), []),
         v = l.useCallback(() => f(!1), []),
         I = C.intl.string(C.t["wg/30i"]);
     return (0, i.jsx)(c.Y, {
-        targetElementRef: x,
+        targetElementRef: h,
         shouldShow: g,
         animation: c.Y.Animation.FADE,
         position: "left",
@@ -65,11 +65,11 @@ function S(e) {
         renderPopout: () =>
             (0, i.jsx)(d.N, {
                 theme: E.NJ.DARK,
-                children: (e) => (0, i.jsx)(h.Z, { className: e, userId: t, channel: s, applicationId: n, onClose: v }),
+                children: (e) => (0, i.jsx)(x.Z, { className: e, userId: t, channel: s, applicationId: n, onClose: v }),
             }),
         children: () =>
             (0, i.jsx)("div", {
-                ref: x,
+                ref: h,
                 children: (0, i.jsx)(a.m, {
                     text: I,
                     shouldShow: !g && void 0,

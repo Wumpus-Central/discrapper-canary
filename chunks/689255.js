@@ -1,5 +1,5 @@
 _.exports = {
-    oU: "text-md/medium__70151",
+    Lb: "body-md/medium__70151",
     kL: "container__70151",
     Lq: "loading__70151",
     Qs: "content__70151",
@@ -7,7 +7,7 @@ _.exports = {
     HL: "accountCreditTitle__70151",
     JU: "accountCreditDescription__70151",
     O: "cardText__70151",
-    wb: "noItemsCard__70151 text-md/medium__70151",
+    wb: "noItemsCard__70151 body-md/medium__70151",
     pV: "noItemsIcon__70151",
     hr: "hr__70151",
 };

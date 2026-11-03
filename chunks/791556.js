@@ -3,8 +3,8 @@ var a = s(477900);
 s(582128);
 var i = s(503698),
     n = s.n(i),
-    t = s(342952),
-    r = s(939249),
+    r = s(342952),
+    t = s(939249),
     d = s(834730),
     u = s(692617),
     c = s(548118),
@@ -19,17 +19,17 @@ function j(e) {
         { mutualFriends: j, mutualGuilds: A } = (0, o.A)(l),
         N = null != j && j.length > 0,
         U = null != A && A.length > 0,
-        k = N && U ? "text-xs/normal" : "text-sm/normal";
+        b = N && U ? "body-xs/normal" : "body-sm/normal";
     return N || U
         ? (0, a.jsxs)("div", {
               className: n()(v.I0, s),
               children: [
                   N
-                      ? (0, a.jsxs)(r.D, {
+                      ? (0, a.jsxs)(t.D, {
                             className: v.uW,
                             onClick: () => i?.(x.RP.MUTUAL_FRIENDS),
                             children: [
-                                (0, a.jsx)(t.A, {
+                                (0, a.jsx)(r.A, {
                                     maxUsers: 3,
                                     users: j.map((e) => {
                                         let { user: l } = e;
@@ -42,7 +42,7 @@ function j(e) {
                                 }),
                                 (0, a.jsx)(d.E, {
                                     className: v.Qq,
-                                    variant: k,
+                                    variant: b,
                                     color: "interactive-text-default",
                                     children: (0, h.A)(j.length),
                                 }),
@@ -51,7 +51,7 @@ function j(e) {
                       : null,
                   N && U ? (0, a.jsx)("div", { "aria-hidden": "true", className: v.jH }) : null,
                   U
-                      ? (0, a.jsxs)(r.D, {
+                      ? (0, a.jsxs)(t.D, {
                             className: v.uW,
                             onClick: () => i?.(x.RP.MUTUAL_GUILDS),
                             children: [
@@ -68,7 +68,7 @@ function j(e) {
                                     }),
                                 (0, a.jsx)(d.E, {
                                     className: v.Qq,
-                                    variant: k,
+                                    variant: b,
                                     color: "interactive-text-default",
                                     children: (0, m.A)(A.length),
                                 }),

@@ -58,7 +58,7 @@ function A(e) {
                                   (0, i.jsx)(d.E, { size: "xs", color: l.A.colors.TEXT_FEEDBACK_CRITICAL.css }),
                                   (0, i.jsx)(u.E, {
                                       color: "text-feedback-critical",
-                                      variant: "text-sm/medium",
+                                      variant: "body-sm/medium",
                                       children: null != t && "" !== t ? t : r,
                                   }),
                               ],

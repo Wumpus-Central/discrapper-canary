@@ -21,9 +21,9 @@ function d(n) {
                     (0, i.jsxs)("div", {
                         children: [
                             (0, i.jsx)(l.h, { size: 1 }),
-                            (0, i.jsx)(c.E, { className: o.pq, variant: "text-sm/normal", children: t }),
+                            (0, i.jsx)(c.E, { className: o.pq, variant: "body-sm/normal", children: t }),
                             null != e &&
-                                (0, i.jsx)(c.E, { className: a()(o.pq, o.z3), variant: "text-sm/normal", children: e }),
+                                (0, i.jsx)(c.E, { className: a()(o.pq, o.z3), variant: "body-sm/normal", children: e }),
                         ],
                     }),
                 ],

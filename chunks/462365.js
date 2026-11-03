@@ -1,4 +1,4 @@
-t.d(e, { default: () => h });
+t.d(e, { default: () => x });
 var n = t(477900);
 t(582128);
 var i = t(189213),
@@ -27,7 +27,7 @@ function u(r) {
                     className: l.n,
                     children: [
                         (0, n.jsx)(d, { permission: r }),
-                        (0, n.jsx)(o.E, { variant: "text-md/medium", color: "text-strong", children: (0, s.Us)(r) }),
+                        (0, n.jsx)(o.E, { variant: "body-md/medium", color: "text-strong", children: (0, s.Us)(r) }),
                     ],
                 },
                 r,
@@ -36,8 +36,8 @@ function u(r) {
     });
 }
 var p = t(809526),
-    x = t(105292);
-function h(r) {
+    h = t(105292);
+function x(r) {
     let { appName: e, permissions: t, onDecide: a, ...c } = r;
     function o(r) {
         (a(r), c.onClose());
@@ -47,8 +47,8 @@ function h(r) {
         role: "alertdialog",
         title: (0, s.Et)(e),
         actions: [
-            { text: x.intl.string(p.default.rDyl56), variant: "secondary", onClick: () => o(!1) },
-            { text: x.intl.string(p.default.xbsXd9), variant: "primary", onClick: () => o(!0) },
+            { text: h.intl.string(p.default.rDyl56), variant: "secondary", onClick: () => o(!1) },
+            { text: h.intl.string(p.default.xbsXd9), variant: "primary", onClick: () => o(!0) },
         ],
         children: (0, n.jsx)(u, { permissions: t }),
     });

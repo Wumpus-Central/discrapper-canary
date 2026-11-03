@@ -75,12 +75,12 @@ function T(e) {
                 className: b.Ly,
                 children: [
                     (0, i.jsx)(x.D, {
-                        variant: "heading-md/semibold",
+                        variant: "heading-sm/semibold",
                         color: "text-strong",
                         className: b.fx,
                         children: s,
                     }),
-                    (0, i.jsx)(r.E, { variant: "text-sm/medium", color: "text-subtle", children: n }),
+                    (0, i.jsx)(r.E, { variant: "body-sm/medium", color: "text-subtle", children: n }),
                 ],
             }),
         ],
@@ -160,7 +160,7 @@ function z(e) {
         actions: [{ variant: "primary", text: y.intl.string(y.t.cpT0Cq), onClick: t }],
         onClose: t,
         transitionState: s,
-        children: (0, i.jsx)(r.E, { variant: "text-md/medium", color: "text-subtle", children: a }),
+        children: (0, i.jsx)(r.E, { variant: "body-md/medium", color: "text-subtle", children: a }),
     });
 }
 function D(e) {

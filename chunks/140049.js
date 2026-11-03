@@ -90,7 +90,7 @@ function h(r) {
                         strokeWidth: 7,
                         backgroundCircleColor: (0, c.M)(k) ? "var(--opacity-black-72)" : "var(--opacity-white-72)",
                         backgroundCircleBlurAmount: 2,
-                        children: (0, s.jsx)(i.E, { variant: "text-sm/semibold", color: "text-subtle", children: t }),
+                        children: (0, s.jsx)(i.E, { variant: "body-sm/semibold", color: "text-subtle", children: t }),
                     }),
                 }),
         ],

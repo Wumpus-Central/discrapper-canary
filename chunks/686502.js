@@ -13,11 +13,11 @@ var i = n(477900),
     m = n(192308),
     A = n(231723),
     f = n(825484),
-    x = n(821609),
-    g = n(283973),
+    g = n(821609),
+    x = n(283973),
     C = n(834730),
-    j = n(789645),
-    y = n(964486),
+    y = n(789645),
+    j = n(964486),
     I = n(648027),
     N = n(855446),
     v = n(793574),
@@ -139,14 +139,14 @@ function V(e) {
                             justify: "center",
                             align: "center",
                             children: [
-                                (0, i.jsx)(x.$, {
+                                (0, i.jsx)(g.$, {
                                     variant: "secondary",
-                                    icon: g.R,
+                                    icon: x.R,
                                     text: L.intl.string(L.t["EE+P0H"]),
                                     onClick: p,
                                 }),
                                 o &&
-                                    (0, i.jsx)(x.$, {
+                                    (0, i.jsx)(g.$, {
                                         variant: "secondary",
                                         icon: u.k,
                                         text: L.intl.string(L.t.qnFavR),
@@ -161,7 +161,7 @@ function V(e) {
 }
 function G(e) {
     let { channel: t, guild: n, handleClose: a, width: o, userParticipantCount: c } = e;
-    (0, y.Ay)(() => {
+    (0, j.Ay)(() => {
         R.default.track(P.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity suggestion",
             n_participants: c,
@@ -178,7 +178,7 @@ function G(e) {
                 o > 300
                     ? (0, i.jsx)(C.E, {
                           className: M.R_,
-                          variant: o > 550 ? "text-md/semibold" : "text-sm/semibold",
+                          variant: o > 550 ? "body-md/semibold" : "body-sm/semibold",
                           children: L.intl.string(L.t["7BKMcG"]),
                       })
                     : null,
@@ -210,7 +210,7 @@ function G(e) {
                     },
                     children: [
                         (0, i.jsx)(_.A, {}),
-                        (0, i.jsx)(C.E, { variant: "text-sm/medium", children: L.intl.string(L.t["5E9SB9"]) }),
+                        (0, i.jsx)(C.E, { variant: "body-sm/medium", children: L.intl.string(L.t["5E9SB9"]) }),
                     ],
                 }),
                 (0, i.jsx)(d.D, {
@@ -223,7 +223,7 @@ function G(e) {
                         }),
                             a());
                     },
-                    children: (0, i.jsx)(j.P, { size: "md", color: "currentColor", className: M.b }),
+                    children: (0, i.jsx)(y.P, { size: "md", color: "currentColor", className: M.b }),
                 }),
             ],
         }),

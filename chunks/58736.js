@@ -44,8 +44,8 @@ function N(e) {
             "aria-hidden": L,
             "aria-checked": y,
             "aria-expanded": D,
-            "aria-haspopup": v,
-            "data-jump-section": b,
+            "aria-haspopup": b,
+            "data-jump-section": v,
             ref: P,
         } = e,
         M = null != E ? { secondaryColorClass: E } : {};
@@ -92,10 +92,10 @@ function N(e) {
                           "aria-hidden": L,
                           "aria-disabled": l,
                           "aria-checked": y,
-                          "aria-haspopup": v,
+                          "aria-haspopup": b,
                           "aria-expanded": D,
                           tabIndex: l || null == f ? -1 : 0,
-                          "data-jump-section": b,
+                          "data-jump-section": v,
                           children: [(0, i.jsx)(C, { iconSize: h, badge: o, children: U(void 0) }), r],
                       }),
         })
@@ -156,7 +156,7 @@ function R(e) {
         y = r.useContext(p.A),
         D = (0, g.Us)();
     (0, h.g)(f.a[D], L, R && !C && !N);
-    let v = (0, i.jsxs)(i.Fragment, {
+    let b = (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
                 className: S.cM,
@@ -178,7 +178,7 @@ function R(e) {
         "aria-labelledby": A,
         role: m,
         ref: L,
-        children: O ? v : (0, i.jsx)(I.xp, { containerRef: L, children: v }),
+        children: O ? b : (0, i.jsx)(I.xp, { containerRef: L, children: b }),
     });
 }
 ((R.Icon = N),
@@ -212,7 +212,7 @@ function R(e) {
             L = (0, i.jsx)(d.F, {
                 forceLevel: p,
                 children: (0, i.jsx)(c.D, {
-                    variant: "text-md/medium",
+                    variant: "body-md/medium",
                     color: I ? "text-default" : void 0,
                     className: s()(t, S.DD, { [S.NP]: null != l }),
                     id: f,

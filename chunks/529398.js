@@ -40,7 +40,7 @@ function C(e) {
                         children: f.intl.string(f.t["0/Yz+Y"]),
                     }),
                     (0, n.jsx)(i.E, {
-                        variant: "text-sm/medium",
+                        variant: "body-sm/medium",
                         color: "text-subtle",
                         children: f.intl.format(f.t["v1u/zq"], { rewardName: s }),
                     }),

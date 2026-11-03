@@ -4,11 +4,11 @@ var a = i(477900),
     r = i(503698),
     n = i.n(r),
     t = i(866665),
-    d = i(939249),
-    c = i(534514),
+    c = i(939249),
+    d = i(534514),
     o = i(661531),
-    m = i(713517),
-    x = i(240248),
+    x = i(713517),
+    m = i(240248),
     h = i(857707),
     v = i(105292),
     u = i(228433),
@@ -17,10 +17,10 @@ function N(s) {
     let { title: e, subtitle: i, subtitleCta: r, subtitlePrefixIcon: N, isFlush: p = !1, onClick: C } = s,
         { isPortrait: g } = l.useContext(h.D),
         f = l.useRef(null),
-        { isHoveringOrFocusing: D } = (0, m.A)(f);
+        { isHoveringOrFocusing: D } = (0, x.A)(f);
     return (0, a.jsx)(t.m, {
         text: v.intl.string(v.t.EuHF34),
-        children: (0, a.jsx)(d.D, {
+        children: (0, a.jsx)(c.D, {
             onClick: C,
             className: u.vk,
             children: (0, a.jsxs)("div", {
@@ -29,8 +29,8 @@ function N(s) {
                 children: [
                     (0, a.jsx)("div", {
                         className: u.nM,
-                        children: (0, a.jsx)(c.D, {
-                            variant: "heading-md/medium",
+                        children: (0, a.jsx)(d.D, {
+                            variant: "heading-sm/medium",
                             color: "text-strong",
                             className: n()(u.Fv, { [u.am]: g }),
                             lineClamp: g ? void 0 : 1,
@@ -49,14 +49,14 @@ function N(s) {
                                       }),
                                   })
                                 : null,
-                            (0, a.jsx)(c.D, {
-                                variant: "heading-sm/medium",
+                            (0, a.jsx)(d.D, {
+                                variant: "heading-xs/medium",
                                 className: n()(u.CF, { [u.BW]: g }),
                                 color: D ? "text-strong" : "text-subtle",
                                 lineClamp: 1,
                                 children: i,
                             }),
-                            (0, x.uJ)(r)
+                            (0, m.uJ)(r)
                                 ? null
                                 : (0, a.jsxs)(a.Fragment, {
                                       children: [
@@ -64,9 +64,9 @@ function N(s) {
                                               "aria-hidden": "true",
                                               className: n()(u.SC, { [u.b2]: g }),
                                           }),
-                                          (0, a.jsx)(c.D, {
+                                          (0, a.jsx)(d.D, {
                                               className: n()(u.Fv, { [u.am]: g }),
-                                              variant: "heading-sm/medium",
+                                              variant: "heading-xs/medium",
                                               lineClamp: g ? void 0 : 1,
                                               color: D ? "text-strong" : "text-subtle",
                                               children: r,

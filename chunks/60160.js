@@ -8,9 +8,9 @@ let r = /^(.*?)\s*\(([^()]+)\)$/,
     u = /[[\]{}<>`\xab\xbb;$\\=]/,
     d = /'[^']*'|"[^"]*"/,
     o = {
-        "text-xs/normal": "text-xs/semibold",
-        "text-sm/normal": "text-sm/semibold",
-        "text-md/normal": "text-md/semibold",
+        "body-xs/normal": "body-xs/semibold",
+        "body-sm/normal": "body-sm/semibold",
+        "body-md/normal": "body-md/semibold",
     };
 function c(e, t) {
     let n;

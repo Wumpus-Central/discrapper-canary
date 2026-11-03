@@ -6,8 +6,8 @@ var n = i(477900),
     o = i(123292),
     s = i(772707),
     E = i(331322),
-    c = i(885574),
-    d = i(821609),
+    d = i(885574),
+    c = i(821609),
     u = i(632738),
     _ = i(627575),
     m = i(393033),
@@ -19,20 +19,20 @@ var n = i(477900),
     S = i(731738),
     h = i(17928),
     p = i(807393),
-    x = i(787301);
-let O = (0, i(945810).mj)({
+    O = i(787301);
+let v = (0, i(945810).mj)({
     kind: "user",
     name: "2026-03-age-verification-google-wallet",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var v = i(750481),
+var x = i(750481),
     I = i(40449),
     P = i(105292);
 let T = function (t) {
     let { onClose: e, classificationId: i, onGoogleWalletSelect: n } = t,
-        { methods: r, loading: a } = (0, h.cf)([x.A], () => ({ methods: x.A.methods, loading: x.A.loading })),
-        { initiateAgeVerification: o } = (0, v.n)({
+        { methods: r, loading: a } = (0, h.cf)([O.A], () => ({ methods: O.A.methods, loading: O.A.loading })),
+        { initiateAgeVerification: o } = (0, x.n)({
             onComplete: e,
             entryPoint: f.q1.EXPRESSIVE_GET_STARTED,
             shouldShowExpressiveModal: !0,
@@ -46,7 +46,7 @@ let T = function (t) {
                 Promise.resolve(!1).then((e) => {
                     !t &&
                         (p.A.increment({ name: S.K.GOOGLE_WALLET_AVAILABILITY_CHECK, tags: [`available:${e}`] }),
-                        E(e && O.getConfig({ location: "age_verification_methods" }).enabled));
+                        E(e && v.getConfig({ location: "age_verification_methods" }).enabled));
                 }),
                 () => {
                     t = !0;
@@ -99,18 +99,18 @@ let T = function (t) {
     );
 };
 var C = i(652215),
-    M = i(239093),
-    W = i(418528),
-    G = i(897345),
-    b = i(700129);
+    b = i(239093),
+    M = i(418528),
+    W = i(897345),
+    G = i(700129);
 function j(t) {
     let { modalSessionId: e, entryPoint: i } = t;
     return (0, m.W$)()
         ? (0, n.jsx)(a.E, {
-              variant: "text-xs/medium",
-              children: P.intl.format(W.default.htWh1G, {
+              variant: "body-xs/medium",
+              children: P.intl.format(M.default.htWh1G, {
                   handleOnHelpUrlHook: () => {
-                      (g.A.openUrl(M.d$.LEARN_MORE_UU_APPEAL_LINK),
+                      (g.A.openUrl(b.d$.LEARN_MORE_UU_APPEAL_LINK),
                           (0, f.St)(e, f.WU.EXPRESSIVE_PRIMARY, f._7.LEARN_MORE));
                   },
               }),
@@ -118,7 +118,7 @@ function j(t) {
         : i === f.q1.SAFETY_FLOWS
           ? (0, n.jsx)(o.Q, {
                 size: "sm",
-                textVariant: "text-sm/medium",
+                textVariant: "body-sm/medium",
                 text: P.intl.string(P.t["2jxGer"]),
                 onClick: () => {
                     ((0, f.St)(e, f.WU.EXPRESSIVE_PRIMARY, f._7.LOG_OUT),
@@ -130,8 +130,8 @@ function j(t) {
 let k = function (t) {
     let { transitionState: e, entryPoint: i, onClose: o, onComplete: _, dismissable: S, classificationId: h } = t,
         p = l.useMemo(() => (0, r.A)(), []),
-        x = (0, m.W$)(),
-        { loading: O, ageVerificationMethods: v } = T({
+        O = (0, m.W$)(),
+        { loading: v, ageVerificationMethods: x } = T({
             onClose: () => {
                 (_?.(), o());
             },
@@ -146,7 +146,7 @@ let k = function (t) {
             onClose: o,
             gradientColor: "blue",
             dismissable: S,
-            graphic: { type: "image", src: b.A },
+            graphic: { type: "image", src: G.A },
             title: (0, R.ST)(i),
             subtitle: (0, R.mK)(
                 i,
@@ -154,7 +154,7 @@ let k = function (t) {
                     (g.A.openUrl(A.A.getArticleURL(C.MVz.TIGGER_PAWTECT_LEARN_MORE)),
                         (0, f.St)(p, f.WU.EXPRESSIVE_PRIMARY, f._7.LEARN_MORE));
                 },
-                x,
+                O,
             ),
             actionBarInput: (0, n.jsx)(j, { modalSessionId: p, entryPoint: i }),
             children: (0, n.jsxs)(E.B, {
@@ -167,31 +167,31 @@ let k = function (t) {
                         gap: 8,
                         padding: { top: 8, bottom: 8, left: 12, right: 12 },
                         align: "center",
-                        className: G.W,
+                        className: W.W,
                         children: [
-                            (0, n.jsx)(c.CircleInformationIcon, { size: "lg", color: "currentColor" }),
+                            (0, n.jsx)(d.CircleInformationIcon, { size: "lg", color: "currentColor" }),
                             (0, n.jsx)(a.E, {
-                                variant: "text-sm/medium",
+                                variant: "body-sm/medium",
                                 color: "text-feedback-info",
-                                children: P.intl.string(W.default.ar3a3q),
+                                children: P.intl.string(M.default.ar3a3q),
                             }),
                         ],
                     }),
-                    null == v || 0 === v.length
+                    null == x || 0 === x.length
                         ? (0, n.jsxs)(E.B, {
                               direction: "vertical",
                               align: "center",
                               gap: 16,
                               children: [
                                   (0, n.jsx)(a.E, {
-                                      variant: "text-xs/medium",
+                                      variant: "body-xs/medium",
                                       color: "text-subtle",
-                                      children: P.intl.string(W.default.cR6336),
+                                      children: P.intl.string(M.default.cR6336),
                                   }),
-                                  (0, n.jsx)(d.$, {
+                                  (0, n.jsx)(c.$, {
                                       variant: "primary",
                                       size: "sm",
-                                      text: P.intl.string(W.default.hDvmYP),
+                                      text: P.intl.string(M.default.hDvmYP),
                                       onClick: () => {
                                           (0, L.DJ)();
                                       },
@@ -201,7 +201,7 @@ let k = function (t) {
                         : (0, n.jsx)(E.B, {
                               direction: "vertical",
                               gap: 8,
-                              children: v.map((t) => {
+                              children: x.map((t) => {
                                   let { title: e, description: i, onClick: l } = t;
                                   return (0, n.jsx)(
                                       u.PQ,
@@ -209,7 +209,7 @@ let k = function (t) {
                                           variant: "clickable",
                                           title: e,
                                           description: i,
-                                          buttonDisabled: O,
+                                          buttonDisabled: v,
                                           onButtonPress: () => l(p),
                                       },
                                       e,

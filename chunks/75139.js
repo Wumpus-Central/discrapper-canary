@@ -13,11 +13,11 @@ var i = n(477900),
     m = n(778712),
     A = n(834730),
     f = n(428678),
-    x = n(952270),
-    g = n(104510),
+    g = n(952270),
+    x = n(104510),
     C = n(789645),
-    j = n(177953),
-    y = n(683438),
+    y = n(177953),
+    j = n(683438),
     I = n(475825),
     N = n(367513),
     v = n(442433),
@@ -50,7 +50,7 @@ var Y = n(806931),
     q = n(645265);
 let Z = l.memo(function (e) {
     let { participant: t, channel: a, guildId: r, showRequestToSpeakActions: o = !1 } = e,
-        { user: C, userNick: j, blocked: y, ignored: I, rtsState: N } = t,
+        { user: C, userNick: y, blocked: j, ignored: I, rtsState: N } = t,
         E = l.useRef(null),
         _ = (0, L.Us)(),
         { newestAnalyticsLocation: O } = (0, S.Ay)(b.A.AUDIENCE_TILE),
@@ -134,18 +134,18 @@ let Z = l.memo(function (e) {
                             (0, i.jsx)(p.eu, {
                                 src: C.getAvatarURL(r, 32, !1),
                                 size: m._3.SIZE_32,
-                                className: s()(q.e$, { [q.zj]: y || I }),
+                                className: s()(q.e$, { [q.zj]: j || I }),
                                 "aria-hidden": !0,
                             }),
                             (0, i.jsx)(A.E, {
                                 className: q.wR,
-                                variant: "text-sm/medium",
+                                variant: "body-sm/medium",
                                 color: "text-strong",
-                                children: j,
+                                children: y,
                             }),
-                            y ? (0, i.jsx)(f.K, { size: "xs", color: u.A.colors.TEXT_FEEDBACK_CRITICAL }) : null,
-                            I ? (0, i.jsx)(x.EyeSlashIcon, { size: "xs", color: u.A.colors.ICON_MUTED }) : null,
-                            P ? (0, i.jsx)(g._, { size: "xs", color: u.A.unsafe_rawColors.GUILD_BOOSTING_PINK }) : null,
+                            j ? (0, i.jsx)(f.K, { size: "xs", color: u.A.colors.TEXT_FEEDBACK_CRITICAL }) : null,
+                            I ? (0, i.jsx)(g.EyeSlashIcon, { size: "xs", color: u.A.colors.ICON_MUTED }) : null,
+                            P ? (0, i.jsx)(x._, { size: "xs", color: u.A.unsafe_rawColors.GUILD_BOOSTING_PINK }) : null,
                         ],
                     }),
                     o ? (0, i.jsx)(W.s6, { channel: a, userId: C.id, awaitingUserAck: D }) : null,
@@ -166,9 +166,9 @@ function Q(e) {
             (n = (0, d.bG)([G.A], () => [t, G.A.getParticipantsVersion(t)], [t], V.D)),
             (a = l.useMemo(() => [...G.A.getMutableParticipants(n[0], B.ip.AUDIENCE)], [n])),
             (0, E.J)(a, (0, H.Uo)(t))),
-        [f, x] = l.useState(""),
-        g = l.useDeferredValue(f),
-        v = u ? g.trim() : "",
+        [f, g] = l.useState(""),
+        x = l.useDeferredValue(f),
+        v = u ? x.trim() : "",
         b = "" !== v,
         S = l.useMemo(() => {
             if ("" === v) return m;
@@ -198,7 +198,7 @@ function Q(e) {
                     toolbar: R,
                     "aria-label": X.intl.string(X.t.suRApw),
                     children: [
-                        (0, i.jsx)(P.Ay.ChannelIcon, { icon: j.n, "aria-label": X.intl.string(X.t.suRApw) }),
+                        (0, i.jsx)(P.Ay.ChannelIcon, { icon: y.n, "aria-label": X.intl.string(X.t.suRApw) }),
                         (0, i.jsx)(P.Ay.Title, { children: X.intl.string(X.t.suRApw) }),
                     ],
                 }),
@@ -208,10 +208,10 @@ function Q(e) {
                           children: [
                               h ? (0, i.jsx)(W.d1, { useVerboseLabel: !0, channel: s }) : null,
                               u
-                                  ? (0, i.jsx)(y.I, {
+                                  ? (0, i.jsx)(j.I, {
                                         query: f,
-                                        onChange: x,
-                                        onClear: () => x(""),
+                                        onChange: g,
+                                        onClear: () => g(""),
                                         "aria-label": X.intl.string(K.default.sFXd49),
                                         placeholder: X.intl.string(K.default.sFXd49),
                                     })
@@ -259,7 +259,7 @@ function Q(e) {
                                             className: q.p$,
                                             children: [
                                                 (0, i.jsx)(A.E, {
-                                                    variant: "text-lg/semibold",
+                                                    variant: "body-lg/semibold",
                                                     color: "text-strong",
                                                     children: b
                                                         ? X.intl.string(K.default.Hn6jKn)
@@ -267,7 +267,7 @@ function Q(e) {
                                                 }),
                                                 (0, i.jsx)(A.E, {
                                                     className: q.XG,
-                                                    variant: "text-sm/normal",
+                                                    variant: "body-sm/normal",
                                                     color: "text-default",
                                                     children: b
                                                         ? X.intl.format(K.default["0lYpuQ"], { query: v })
@@ -292,7 +292,7 @@ function Q(e) {
                                     A.E,
                                     {
                                         className: q.bV,
-                                        variant: "text-xs/semibold",
+                                        variant: "body-xs/semibold",
                                         color: "text-muted",
                                         children: X.intl.formatToPlainString(X.t["5z7q5a"], { numHands: p.length }),
                                     },
@@ -303,7 +303,7 @@ function Q(e) {
                                     A.E,
                                     {
                                         className: q.bV,
-                                        variant: "text-xs/semibold",
+                                        variant: "body-xs/semibold",
                                         color: "text-muted",
                                         children: b
                                             ? X.intl.formatToPlainString(K.default.C6rvri, {

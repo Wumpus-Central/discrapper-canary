@@ -1,32 +1,32 @@
-n.d(e, { A: () => I });
-var l = n(477900),
-    i = n(554146),
-    a = n(62010),
-    r = n(834730),
-    s = n(359549),
-    o = n(793574),
-    c = n(688810),
-    u = n(627363),
-    d = n(131607),
-    A = n(308335),
-    f = n(21241),
-    g = n(939496),
-    m = n(985629),
-    x = n(996988),
-    p = n(105292),
-    _ = n(41821);
+e.d(n, { A: () => I });
+var l = e(477900),
+    i = e(554146),
+    a = e(62010),
+    r = e(834730),
+    s = e(359549),
+    o = e(793574),
+    c = e(688810),
+    u = e(627363),
+    d = e(131607),
+    A = e(308335),
+    f = e(21241),
+    g = e(939496),
+    m = e(985629),
+    p = e(996988),
+    x = e(105292),
+    _ = e(41821);
 function I(t) {
-    let { applicationId: e, onAction: n, onClose: I, activity: N } = t,
+    let { applicationId: n, onAction: e, onClose: I, activity: N } = t,
         { analyticsLocations: E } = (0, c.Ay)(o.A.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION),
-        { data: T } = (0, u.YY)(e),
+        { data: T } = (0, u.YY)(n),
         h = (0, s.JC)(T),
         { themeType: C } = (0, g.E)(),
-        S = C === x.d.MODAL || C === x.d.MODAL_V2,
-        v = (0, A.o)(N?.application_id ?? e),
-        y = h && S && null != T && !v,
-        O = y ? [i.M.CLOUD_PLAY_NEW_BADGE] : [],
+        S = C === p.d.MODAL || C === p.d.MODAL_V2,
+        y = (0, A.o)(N?.application_id ?? n),
+        v = h && S && null != T && !y,
+        O = v ? [i.M.CLOUD_PLAY_NEW_BADGE] : [],
         [j] = (0, d.kn)(O);
-    return y
+    return v
         ? (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsx)(f.A, { className: _.Xl }),
@@ -38,10 +38,10 @@ function I(t) {
                               children: [
                                   j === i.M.CLOUD_PLAY_NEW_BADGE &&
                                       (0, l.jsx)(a.E, { type: "new", variant: "primary" }),
-                                  (0, l.jsx)(r.E, { variant: "text-xs/medium", children: p.intl.string(p.t.IQjdmV) }),
+                                  (0, l.jsx)(r.E, { variant: "body-xs/medium", children: x.intl.string(x.t.IQjdmV) }),
                               ],
                           }),
-                          (0, l.jsx)(m.A, { application: T, onAction: n, onClose: I, analyticsLocations: E }),
+                          (0, l.jsx)(m.A, { application: T, onAction: e, onClose: I, analyticsLocations: E }),
                       ],
                   }),
               ],

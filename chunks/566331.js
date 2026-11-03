@@ -39,7 +39,7 @@ function A(e) {
                             children: [
                                 (0, i.jsx)(o.D, {
                                     color: "none",
-                                    variant: "small" === A ? "heading-md/medium" : "heading-lg/medium",
+                                    variant: "small" === A ? "heading-sm/medium" : "heading-lg/medium",
                                     className: p.header,
                                     children: f.intl.formatToMarkdownString(f.t.Kb4Ukp, {}),
                                 }),

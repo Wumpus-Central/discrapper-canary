@@ -15,15 +15,15 @@ var l = i(477900),
     x = i(342384),
     v = i(429913),
     p = i(573435),
-    j = i(228427),
-    w = i(619517),
-    y = i(274652),
-    A = i(823099),
-    C = i(451909),
-    P = i(135621),
-    k = i(223863),
-    E = i(734057),
-    b = i(287809),
+    y = i(228427),
+    j = i(619517),
+    w = i(274652),
+    b = i(823099),
+    A = i(451909),
+    C = i(135621),
+    P = i(223863),
+    k = i(734057),
+    E = i(287809),
     T = i(957565),
     _ = i(403362),
     I = i(381941),
@@ -53,7 +53,7 @@ function S(t) {
                         }),
                         (0, l.jsxs)(c.E, {
                             className: R.mB,
-                            variant: "text-xs/semibold",
+                            variant: "body-xs/semibold",
                             color: "text-default",
                             children: ["+", d],
                         }),
@@ -66,14 +66,14 @@ function S(t) {
                     className: R.FG,
                     children: [
                         (0, l.jsx)(c.E, {
-                            variant: "text-md/normal",
+                            variant: "body-md/normal",
                             color: "text-default",
                             lineClamp: 1,
                             children: e,
                         }),
                         null != i &&
                             (0, l.jsx)(c.E, {
-                                variant: "text-sm/medium",
+                                variant: "body-sm/medium",
                                 color: "text-muted",
                                 lineClamp: 1,
                                 children: i,
@@ -83,7 +83,7 @@ function S(t) {
                 null != n &&
                     (0, l.jsx)("div", {
                         className: R.cR,
-                        children: (0, l.jsx)(w.Ay, { src: n, alt: "", width: 56, height: 56 }),
+                        children: (0, l.jsx)(j.Ay, { src: n, alt: "", width: 56, height: 56 }),
                     }),
                 u,
             ],
@@ -99,7 +99,7 @@ function U(t) {
             link: o,
             customId: c,
             linkId: p,
-            channelId: w,
+            channelId: j,
             imageUrl: N,
             files: R,
             previewTitle: U,
@@ -110,15 +110,15 @@ function U(t) {
             ...V
         } = t,
         [q] = (0, v.A)([a]),
-        H = (0, s.bG)([b.default], () => b.default.getCurrentUser()),
+        H = (0, s.bG)([E.default], () => E.default.getCurrentUser()),
         Z = R?.[0],
         B = n.useMemo(() => (null != Z ? URL.createObjectURL(Z) : void 0), [Z]);
     n.useEffect(() => {
         if (null != B) return () => URL.revokeObjectURL(B);
     }, [B]);
     let G = n.useMemo(
-            () => o ?? (0, x.W)({ applicationId: a, referrerId: H?.id, customId: c, linkId: p, channelId: w }),
-            [o, a, H?.id, c, p, w],
+            () => o ?? (0, x.W)({ applicationId: a, referrerId: H?.id, customId: c, linkId: p, channelId: j }),
+            [o, a, H?.id, c, p, j],
         ),
         D = n.useCallback(
             async (t, e, i) => {
@@ -133,20 +133,20 @@ function U(t) {
                 let s = 0,
                     o = 0;
                 try {
-                    let e = (await Promise.all(t.map(k.pk)))
+                    let e = (await Promise.all(t.map(P.pk)))
                         .filter(_.Vq)
-                        .map((t) => E.A.getChannel(t))
+                        .map((t) => k.A.getChannel(t))
                         .filter(_.Vq);
                     if (((o = t.length - e.length), 0 === e.length))
                         return void (0, d.P0)({ text: L.intl.string(L.t.iufib1), variant: "critical" });
                     let i = [N, r, n]
                         .filter(_.Vq)
                         .join("\n")
-                        .slice(0, (0, P.a)());
+                        .slice(0, (0, C.a)());
                     for (let t of e) {
                         let e;
                         try {
-                            e = await f.A.sendMessage(t.id, C.Ay.parse(t, i), !1, {
+                            e = await f.A.sendMessage(t.id, A.Ay.parse(t, i), !1, {
                                 location: I.Hx.ACTIVITY_SHARE,
                                 attachmentsToUpload:
                                     null != R && R.length > 0
@@ -155,7 +155,7 @@ function U(t) {
                                                   new g.bK(
                                                       {
                                                           file: new File([e], e.name, { type: e.type }),
-                                                          platform: y.x.WEB,
+                                                          platform: w.x.WEB,
                                                           origin: "unknown:activity_share",
                                                       },
                                                       t.id,
@@ -163,7 +163,7 @@ function U(t) {
                                           )
                                         : void 0,
                                 onAttachmentUploadError: (e, i, l) => {
-                                    (0, A.k)({
+                                    (0, b.k)({
                                         file: e,
                                         guildId: t.getGuildId(),
                                         analyticsLocations: [],
@@ -210,7 +210,7 @@ function U(t) {
             [F, G],
         ),
         K = q?.name ?? "";
-    return (0, l.jsx)(j.ForwardModal, {
+    return (0, l.jsx)(y.ForwardModal, {
         ...V,
         onClose: M,
         source: "frame",

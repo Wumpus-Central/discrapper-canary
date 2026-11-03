@@ -17,17 +17,17 @@ var r = i(477900),
     A = i(475358),
     p = i(191023),
     T = i(205513),
-    x = i(866665),
-    C = i(939249),
+    C = i(866665),
+    x = i(939249),
     D = i(831453),
-    w = i(775602),
-    y = i(793574),
+    y = i(775602),
+    w = i(793574),
     I = i(688810),
     _ = i(925895),
-    G = i(702211),
-    N = i(699576),
-    S = i(469054),
-    b = i(174459),
+    b = i(702211),
+    G = i(699576),
+    N = i(469054),
+    S = i(174459),
     L = i(403362),
     O = i(424632),
     H = i(902916),
@@ -197,14 +197,14 @@ function K(e) {
         } = en,
         [eE, eR] = a.useState(!1),
         [eA, ep] = a.useState(!1),
-        [eT, ex] = a.useState(0),
-        [eC, eD] = a.useState(X?.zoomRatio ?? 1),
-        [ew, ey] = a.useState(!1),
+        [eT, eC] = a.useState(0),
+        [ex, eD] = a.useState(X?.zoomRatio ?? 1),
+        [ey, ew] = a.useState(!1),
         [eI, e_] = a.useState("x"),
-        eG = (0, u.bG)([w.Ay], () => w.Ay.keyboardModeEnabled),
-        { analyticsLocations: eN } = (0, I.Ay)(y.A.IMAGE_CROPPING_MODAL),
-        { isGIF: eS, isCheckingAnimation: eb, isEditableAnimatedImage: eL } = (0, H._)(t),
-        eO = eA || eE || eb,
+        eb = (0, u.bG)([y.Ay], () => y.Ay.keyboardModeEnabled),
+        { analyticsLocations: eG } = (0, I.Ay)(w.A.IMAGE_CROPPING_MODAL),
+        { isGIF: eN, isCheckingAnimation: eS, isEditableAnimatedImage: eL } = (0, H._)(t),
+        eO = eA || eE || eS,
         eH = null != eu && el.right > 0,
         ev = null != eu && el.top > 0,
         eM = eH || ev;
@@ -220,15 +220,15 @@ function K(e) {
         eF = ez > 0 ? Math.round(((el.top - ec.y) / ez) * 100) : 0,
         eU = ez > 0 ? Math.round(((el.top + ec.y) / ez) * 100) : 0;
     a.useEffect(() => {
-        eS &&
+        eN &&
             $ &&
-            b.default.track(M.HAw.OPEN_MODAL, {
+            S.default.track(M.HAw.OPEN_MODAL, {
                 type: M.JJy.CROP_GIF_MODAL,
                 location: { page: Q },
-                location_stack: eN,
+                location_stack: eG,
                 upload_type: K,
             });
-    }, [$, Q, eS, eN, K]);
+    }, [$, Q, eN, eG, K]);
     let eK = a.useCallback(
             (e, t, i, r) => {
                 ((Z.current = (0, O.F3)(e, t, i)),
@@ -343,7 +343,7 @@ function K(e) {
                     let e = (0, O.l$)(+eu.width, +eu.height, es);
                     (eo({ type: "RESET", dragBoundaries: e }), eK(0, 0, e, 0));
                 }
-                (eD(1), ex((e) => e + 1));
+                (eD(1), eC((e) => e + 1));
             }
         }, [es, eZ, eu, ed, eK]),
         e0 = a.useCallback(() => {
@@ -438,7 +438,7 @@ function K(e) {
             (await j({
                 assetOrigin: (function (e) {
                     let { hasImageEdits: t, hasOriginalAsset: i } = e;
-                    return i ? (t ? S.E.EDITED_ARCHIVED_ASSET : S.E.ARCHIVED_ASSET) : S.E.NEW_ASSET;
+                    return i ? (t ? N.E.EDITED_ARCHIVED_ASSET : N.E.ARCHIVED_ASSET) : N.E.NEW_ASSET;
                 })({ hasImageEdits: ef, hasOriginalAsset: null != n }),
                 imageUri: i,
                 staticImageUri: r,
@@ -479,15 +479,15 @@ function K(e) {
             if (null != er.current) return () => er.current?.();
         }, []));
     let e4 = K === v.HL.AVATAR || K === v.HL.BANNER,
-        e8 = (0, G.b)(!e4);
+        e8 = (0, b.b)(!e4);
     return (0, r.jsx)(I.f5, {
-        value: eN,
+        value: eG,
         children: (0, r.jsxs)(d.a, {
             title: B.intl.string(B.t.DxAYCF),
             size: "md",
             actionBarInput: (0, r.jsx)(m.Q, {
                 text: B.intl.string(B.t.yBZMsQ),
-                textVariant: "text-md/medium",
+                textVariant: "body-md/medium",
                 onClick: eq,
                 disabled: !ef,
             }),
@@ -512,7 +512,7 @@ function K(e) {
                         type: K,
                         analyticsPage: Q,
                         analyticsSection: M.JJy.CROP_GIF_MODAL,
-                        isGIF: eS,
+                        isGIF: eN,
                         banner: i,
                     }),
                 (0, r.jsxs)("div", {
@@ -528,9 +528,9 @@ function K(e) {
                                     children: (0, r.jsxs)("div", {
                                         className: k.oW,
                                         ref: q,
-                                        onFocus: () => ey(!0),
+                                        onFocus: () => ew(!0),
                                         onBlur: (e) => {
-                                            e.currentTarget.contains(e.relatedTarget) || ey(!1);
+                                            e.currentTarget.contains(e.relatedTarget) || ew(!1);
                                         },
                                         children: [
                                             !eE &&
@@ -586,7 +586,7 @@ function K(e) {
                                                               color: E.A.colors.TEXT_FEEDBACK_CRITICAL,
                                                           }),
                                                           (0, r.jsx)(R.E, {
-                                                              variant: "text-md/normal",
+                                                              variant: "body-md/normal",
                                                               color: "text-feedback-critical",
                                                               children: B.intl.string(B.t["+ITMYX"]),
                                                           }),
@@ -642,12 +642,12 @@ function K(e) {
                                     }),
                                 }),
                                 (0, r.jsx)(h.A, { id: ei, children: eM || eE ? null : B.intl.string(B.t.jUze6F) }),
-                                eG &&
+                                eb &&
                                     !eE &&
                                     (0, r.jsx)(R.E, {
-                                        variant: "text-xs/normal",
+                                        variant: "body-xs/normal",
                                         color: "text-muted",
-                                        className: o()(k.xi, { [k.p0]: !ew && eM }),
+                                        className: o()(k.xi, { [k.p0]: !ey && eM }),
                                         "aria-hidden": !0,
                                         children: eM
                                             ? B.intl.format(B.t.YIfE3a, {
@@ -674,7 +674,7 @@ function K(e) {
                                                     T.G,
                                                     {
                                                         className: k.aw,
-                                                        initialValue: eC,
+                                                        initialValue: ex,
                                                         minValue: 1,
                                                         maxValue: 2,
                                                         keyboardStep: 0.025,
@@ -697,10 +697,10 @@ function K(e) {
                                                 }),
                                             ],
                                         }),
-                                        (0, r.jsx)(x.m, {
+                                        (0, r.jsx)(C.m, {
                                             text: B.intl.string(B.t.E36Wd4),
                                             ariaHidden: !0,
-                                            children: (0, r.jsx)(C.D, {
+                                            children: (0, r.jsx)(x.D, {
                                                 className: o()(k.On, { [k.r9]: eO }),
                                                 onClick: eO ? void 0 : eJ,
                                                 "aria-label": B.intl.string(B.t.LzFiKG),
@@ -714,7 +714,7 @@ function K(e) {
                         }),
                         $ &&
                             e8 &&
-                            (0, r.jsx)(N.A, { uploadType: K, showUpsell: !0, position: "inline", className: k.Lu }),
+                            (0, r.jsx)(G.A, { uploadType: K, showUpsell: !0, position: "inline", className: k.Lu }),
                     ],
                 }),
             ],

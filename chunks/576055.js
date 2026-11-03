@@ -48,7 +48,7 @@ function m(e) {
             (0, i.jsx)("div", {
                 className: u.rf,
                 children: (0, i.jsx)(a.E, {
-                    variant: "text-sm/normal",
+                    variant: "body-sm/normal",
                     color: "text-subtle",
                     children: o.intl.string(o.t["8mfCqY"]),
                 }),

@@ -11,7 +11,7 @@ let c = function (e) {
         c = `\xa0(@${a.Ay.getUserTag(t, { decoration: "never" })})`;
     return (0, l.jsxs)(s.E, {
         className: r()([{ [d.GS]: n }]),
-        variant: "text-md/medium",
+        variant: "body-md/medium",
         children: [
             (0, l.jsx)("span", { className: d.Xh, children: a.Ay.getName(t) }),
             i ? null : (0, l.jsx)("span", { className: d.D2, children: c }),

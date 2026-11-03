@@ -30,7 +30,7 @@ let g = function () {
                     }),
                     (0, i.jsx)(d.D, {
                         className: h.wx,
-                        variant: "heading-md/semibold",
+                        variant: "heading-sm/semibold",
                         children: m.intl.string(m.t.xfAlNx),
                     }),
                 ],
@@ -38,13 +38,13 @@ let g = function () {
             (0, i.jsx)(c.E, {
                 className: h.h_,
                 color: "text-default",
-                variant: "text-sm/normal",
+                variant: "body-sm/normal",
                 children: m.intl.string(m.t.BUZ0sl),
             }),
             (0, i.jsx)(c.E, {
                 className: h.h_,
                 color: "text-default",
-                variant: "text-sm/normal",
+                variant: "body-sm/normal",
                 children: m.intl.string(m.t.w5beJH),
             }),
         ],

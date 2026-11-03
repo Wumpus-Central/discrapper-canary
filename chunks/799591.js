@@ -1,1 +1,1 @@
-e.exports = { oU: "text-md/medium__25766", oC: "slayerStorefrontProductPreview__25766" };
+e.exports = { Lb: "body-md/medium__25766", oC: "slayerStorefrontProductPreview__25766" };

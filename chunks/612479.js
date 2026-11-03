@@ -1,4 +1,4 @@
-t.d(n, { A: () => F });
+t.d(n, { A: () => y });
 var i = t(477900),
     a = t(582128),
     l = t(503698),
@@ -27,14 +27,14 @@ var i = t(477900),
     L = t(652215),
     M = t(105292),
     S = t(694413);
-function F(e) {
+function y(e) {
     let {
             modalType: n,
             header: t,
             body: l,
             problemTitle: r,
-            problems: F,
-            transitionState: y,
+            problems: y,
+            transitionState: F,
             ratingOptions: D,
             ratingEmojiKind: P,
             ratingTextLabels: T,
@@ -48,11 +48,11 @@ function F(e) {
             impression: z,
             freeformDescription: H,
         } = e,
-        K = (0, O.Ay)(F),
+        K = (0, O.Ay)(y),
         [U, Z] = a.useState(!1),
         [Q, V] = a.useState(I),
         [X, J] = a.useState(null),
-        [W, Y] = a.useState(c().shuffle(F)),
+        [W, Y] = a.useState(c().shuffle(y)),
         [ee, en] = a.useState(""),
         et = (0, E.GV)(),
         ei = (0, d.A)(Q),
@@ -68,8 +68,8 @@ function F(e) {
               ? (ec = "PROBLEM")
               : null != X && _.includes(X.value) && (ec = "FREEFORM"),
         a.useEffect(() => {
-            c().isEqual(K, F) || Y((0, v.ed)(F, B));
-        }, [F, K, B]),
+            c().isEqual(K, y) || Y((0, v.ed)(y, B));
+        }, [y, K, B]),
         (0, A.Ay)(
             () => (
                 N.default.track(L.HAw.OPEN_MODAL, { type: n, source: "Feedback Modal" }),
@@ -86,7 +86,7 @@ function F(e) {
         (0, i.jsxs)(o.EO, {
             "data-migration-pending": !0,
             impression: z,
-            transitionState: y,
+            transitionState: F,
             className: S.CR,
             "aria-labelledby": et,
             parentComponent: "FeedbackModal",
@@ -97,7 +97,7 @@ function F(e) {
                     className: S.N1,
                     children: [
                         (0, i.jsx)(u.D, { id: et, variant: "heading-xl/semibold", color: "none", children: t }),
-                        (0, i.jsx)(h.E, { variant: "text-md/normal", color: "none", className: S.sB, children: l }),
+                        (0, i.jsx)(h.E, { variant: "body-md/normal", color: "none", className: S.sB, children: l }),
                     ],
                 }),
                 ("RATING" === ec || ("PROBLEM" === ec && null == T)) &&

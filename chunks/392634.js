@@ -1,20 +1,20 @@
-s.d(e, { A: () => d });
-var i = s(477900);
-s(582128);
-var r = s(503698),
-    a = s.n(r),
-    t = s(834730),
-    n = s(742078);
-function d(c) {
-    let { icon: e, iconClassName: s, description: r, color: d } = c;
+e.d(s, { A: () => n });
+var i = e(477900);
+e(582128);
+var r = e(503698),
+    a = e.n(r),
+    t = e(834730),
+    d = e(742078);
+function n(c) {
+    let { icon: s, iconClassName: e, description: r, color: n } = c;
     return (0, i.jsxs)("div", {
-        className: n.bK,
+        className: d.bK,
         children: [
             (0, i.jsx)("div", {
-                className: n.f8,
-                children: (0, i.jsx)(e, { color: d ?? "currentColor", className: a()(n.kf, s) }),
+                className: d.f8,
+                children: (0, i.jsx)(s, { color: n ?? "currentColor", className: a()(d.kf, e) }),
             }),
-            (0, i.jsx)(t.E, { variant: "text-md/medium", color: "interactive-text-active", children: r }),
+            (0, i.jsx)(t.E, { variant: "body-md/medium", color: "interactive-text-active", children: r }),
         ],
     });
 }

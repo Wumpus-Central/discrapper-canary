@@ -1,54 +1,54 @@
-t.d(l, { SS: () => X, cP: () => J });
-var a = t(477900),
-    n = t(582128),
-    s = t(503698),
-    i = t.n(s),
-    r = t(82495),
-    o = t(793574),
-    c = t(482589),
-    d = t(892227),
-    u = t(492462),
-    x = t(17928),
-    f = t(273875),
-    h = t(916845),
-    m = t(834730),
-    A = t(43990),
-    R = t(821609),
-    E = t(303136),
-    j = t(366505),
-    N = t(976860),
-    p = t(309954),
-    k = t(287809),
-    g = t(975571),
-    b = t(474090),
-    v = t(920050),
-    O = t(94264),
-    _ = t(549384),
-    C = t(566119),
-    L = t(202541),
-    y = t(652215),
-    T = t(901123),
-    S = t(923584),
-    w = t(105292),
-    B = t(226068),
-    M = t(268920),
-    P = t(633217),
-    D = t(909340);
+a.d(l, { SS: () => X, cP: () => J });
+var t = a(477900),
+    n = a(582128),
+    s = a(503698),
+    i = a.n(s),
+    r = a(82495),
+    o = a(793574),
+    c = a(482589),
+    d = a(892227),
+    u = a(492462),
+    f = a(17928),
+    h = a(273875),
+    m = a(916845),
+    x = a(834730),
+    A = a(43990),
+    R = a(821609),
+    E = a(303136),
+    j = a(366505),
+    N = a(976860),
+    b = a(309954),
+    p = a(287809),
+    k = a(975571),
+    g = a(474090),
+    v = a(920050),
+    O = a(94264),
+    _ = a(549384),
+    C = a(566119),
+    y = a(202541),
+    L = a(652215),
+    T = a(901123),
+    S = a(923584),
+    w = a(105292),
+    B = a(226068),
+    M = a(268920),
+    P = a(633217),
+    D = a(909340);
 function I() {
-    return (0, a.jsx)("div", {
+    return (0, t.jsx)("div", {
         className: B.s,
-        children: (0, a.jsx)(E.A, { src: P.A, fallbackImage: M.A, className: B.Cb }),
+        children: (0, t.jsx)(E.A, { src: P.A, fallbackImage: M.A, className: B.Cb }),
     });
 }
 function U() {
-    ((0, C.b)(), window.open(g.A.getArticleURL(y.MVz.ORBS_FAQ), "_blank"));
+    ((0, C.b)(), window.open(k.A.getArticleURL(L.MVz.ORBS_FAQ), "_blank"));
 }
 function W(e) {
-    let { targetElementRef: l, shouldShow: t, onRequestClose: s, onNavigate: r, ctaText: o, ctaOnClick: c } = e,
-        { passesGeneralUIInvariant: g, programReward: M } = (0, j.F)(),
-        P = (0, x.bG)([k.default], () => k.default.getCurrentUser()),
-        { balance: W } = (0, p.W)(),
-        F = !(0, b.ki)(P),
+    let { targetElementRef: l, shouldShow: a, onRequestClose: s, onNavigate: r, ctaText: o, ctaOnClick: c } = e,
+        { passesGeneralUIInvariant: k, programReward: M } = (0, j.F)(),
+        P = (0, f.bG)([p.default], () => p.default.getCurrentUser()),
+        { balance: W } = (0, b.W)(),
+        F = !(0, g.ki)(P),
         K = n.useCallback(() => {
             ((0, C.RQ)(),
                 s(),
@@ -62,64 +62,64 @@ function W(e) {
                 (0, N.pX)(T.BV.NITRO_HOME, { search: (0, u.stringify)({ section: _.L }) }));
         }, [s, r]),
         q = n.useMemo(() => {
-            let e = (0, b.YE)(P, L.PremiumTypes.TIER_2);
-            if (!g || F) return null;
+            let e = (0, g.YE)(P, y.PremiumTypes.TIER_2);
+            if (!k || F) return null;
             if (e && null != M) {
                 let e = (0, d.default)(new Date(M.next_reward_date), new Date());
-                return (0, a.jsxs)(a.Fragment, {
+                return (0, t.jsxs)(t.Fragment, {
                     children: [
-                        (0, a.jsx)(m.E, {
-                            variant: "text-xs/normal",
+                        (0, t.jsx)(x.E, {
+                            variant: "body-xs/normal",
                             color: "text-default",
                             children: w.intl.format(S.default["AvL/At"], {
                                 days: Math.max(1, e),
                                 deepLinkToNitroOrbs: K,
                             }),
                         }),
-                        (0, a.jsx)(O.A, {}),
+                        (0, t.jsx)(O.A, {}),
                     ],
                 });
             }
             return null;
-        }, [P, F, M, g, K]),
+        }, [P, F, M, k, K]),
         G = (W ?? 0) >= 4100;
-    return (0, a.jsx)(f.x, {
+    return (0, t.jsx)(h.x, {
         targetElementRef: l,
-        shouldShow: t,
+        shouldShow: a,
         onRequestClose: s,
         position: "bottom",
         gradientColor: "blue",
         modal: !0,
         closeOnClickOutside: !0,
-        children: (0, a.jsx)(A.N, {
-            theme: G ? y.NJ8.DARK : void 0,
+        children: (0, t.jsx)(A.N, {
+            theme: G ? L.NJ8.DARK : void 0,
             children: (e) =>
-                (0, a.jsxs)("div", {
+                (0, t.jsxs)("div", {
                     className: i()(e, B.j),
                     children: [
-                        G && (0, a.jsx)(E.A, { src: D.A, className: B.yG }),
-                        (0, a.jsxs)("div", {
+                        G && (0, t.jsx)(E.A, { src: D.A, className: B.yG }),
+                        (0, t.jsxs)("div", {
                             className: B.Qs,
                             children: [
-                                (0, a.jsx)(h.q, { onClick: s }),
-                                (0, a.jsxs)("div", {
+                                (0, t.jsx)(m.q, { onClick: s }),
+                                (0, t.jsxs)("div", {
                                     className: B.hQ,
                                     children: [
-                                        (0, a.jsx)(I, {}),
-                                        (0, a.jsxs)("div", {
+                                        (0, t.jsx)(I, {}),
+                                        (0, t.jsxs)("div", {
                                             className: B.y$,
                                             children: [
                                                 (W ?? 0) > 0 &&
-                                                    (0, a.jsxs)("div", {
+                                                    (0, t.jsxs)("div", {
                                                         className: B.E2,
                                                         children: [
-                                                            (0, a.jsx)(m.E, {
+                                                            (0, t.jsx)(x.E, {
                                                                 variant: "display-lg",
                                                                 className: B.K,
                                                                 children: W ?? 0,
                                                             }),
-                                                            (0, a.jsx)(m.E, {
-                                                                variant: "text-xs/normal",
+                                                            (0, t.jsx)(x.E, {
+                                                                variant: "body-xs/normal",
                                                                 color: "text-muted",
                                                                 children: w.intl.string(S.default.KclK9z),
                                                             }),
@@ -128,15 +128,15 @@ function W(e) {
                                                 q,
                                             ],
                                         }),
-                                        (0, a.jsx)(R.$, {
+                                        (0, t.jsx)(R.$, {
                                             text: o,
                                             variant: "primary",
                                             size: "sm",
                                             onClick: c,
                                             fullWidth: !0,
                                         }),
-                                        (0, a.jsx)(m.E, {
-                                            variant: "text-xs/normal",
+                                        (0, t.jsx)(x.E, {
+                                            variant: "body-xs/normal",
                                             color: F ? "text-default" : "text-muted",
                                             className: B.CU,
                                             children: F
@@ -152,21 +152,21 @@ function W(e) {
         }),
     });
 }
-var F = t(318346),
-    K = t(362862),
-    V = t(923138),
-    q = t(305003),
-    G = t(265872);
-(t(964486), t(786953));
-var H = t(505274),
-    Q = t(37402);
+var F = a(318346),
+    K = a(362862),
+    V = a(923138),
+    q = a(305003),
+    G = a(265872);
+(a(964486), a(786953));
+var H = a(505274),
+    Q = a(37402);
 function Y(e) {
-    let { pillRef: l, clickableRef: t, ...n } = e,
-        { balancePillOverlay: s } = (0, x.cf)([H.A], () => ({ balancePillOverlay: H.A.balancePillOverlay })),
-        i = (0, a.jsx)(Q.Gy, { ref: l, clickableRef: t, ...n }),
-        r = (0, a.jsx)(Q.Gy, { ...n, isInModalOverlay: !0, disabled: !0 }),
+    let { pillRef: l, clickableRef: a, ...n } = e,
+        { balancePillOverlay: s } = (0, f.cf)([H.A], () => ({ balancePillOverlay: H.A.balancePillOverlay })),
+        i = (0, t.jsx)(Q.Gy, { ref: l, clickableRef: a, ...n }),
+        r = (0, t.jsx)(Q.Gy, { ...n, isInModalOverlay: !0, disabled: !0 }),
         o = null != l.current ? l.current.offsetHeight : 36;
-    return (0, a.jsx)(G.Y, {
+    return (0, t.jsx)(G.Y, {
         fixed: !0,
         autoInvert: !1,
         renderPopout: () => r,
@@ -180,26 +180,26 @@ function Y(e) {
         children: () => i,
     });
 }
-var $ = t(646731),
-    z = t(226346);
+var $ = a(646731),
+    z = a(226346);
 let J = { START: z.Vl, END: z.Wk };
 function X(e) {
     let {
             showNotificationBadge: l,
-            ctaText: t,
+            ctaText: a,
             ctaOnClick: s,
             onNavigate: d,
             analyticsPage: u,
-            className: x,
-            pillVariant: f,
-            themeOverride: h,
+            className: f,
+            pillVariant: h,
+            themeOverride: m,
         } = e,
-        { balance: m } = (0, p.W)(),
+        { balance: x } = (0, b.W)(),
         [A, R] = n.useState(q.k.DEFAULT),
         [E, j] = n.useState(!1),
-        [N, k] = n.useState(!1),
-        g = n.useRef(null),
-        b = n.useRef(null);
+        [N, p] = n.useState(!1),
+        k = n.useRef(null),
+        g = n.useRef(null);
     (0, c.j)(!E);
     let v = (0, K.Hy)({ location: "BalanceWidgetMenu" }),
         O = n.useCallback(() => {
@@ -208,8 +208,8 @@ function X(e) {
                 null != u &&
                 (0, F.Y)({
                     pageType: u,
-                    sectionType: v ? o.A.ORB_WALLET : y.JJy.ORBS_BALANCE_MENU,
-                    ctaObject: v ? o.A.ORB_WALLET_OPEN_FROM_BALANCE_PILL : y.ZSU.OPEN_ORB_BALANCE_MENU_FROM_PILL,
+                    sectionType: v ? o.A.ORB_WALLET : L.JJy.ORBS_BALANCE_MENU,
+                    ctaObject: v ? o.A.ORB_WALLET_OPEN_FROM_BALANCE_PILL : L.ZSU.OPEN_ORB_BALANCE_MENU_FROM_PILL,
                 }),
                 R(e ? q.k.SELECTED : q.k.DEFAULT),
                 j(e));
@@ -218,34 +218,34 @@ function X(e) {
             E && O();
         }, [E, O]),
         C = (0, r.A)(null, _),
-        { hasUnreadUpdate: L } = (0, V.I)({ enabled: v }),
-        T = l ?? L,
+        { hasUnreadUpdate: y } = (0, V.I)({ enabled: v }),
+        T = l ?? y,
         S = n.useMemo(
             () =>
-                (0, a.jsx)(Y, {
-                    pillRef: g,
-                    clickableRef: b,
+                (0, t.jsx)(Y, {
+                    pillRef: k,
+                    clickableRef: g,
                     ariaExpanded: E,
-                    balance: m,
+                    balance: x,
                     balanceWidgetMode: A,
                     onMouseDown: (e) => {
                         e.stopPropagation();
                     },
                     onClick: O,
-                    variant: f,
-                    themeOverride: h,
+                    variant: h,
+                    themeOverride: m,
                     showNotificationBadge: T,
                 }),
-            [m, A, f, h, T, O, E],
+            [x, A, h, m, T, O, E],
         ),
         w = n.useCallback(
             (e) =>
                 v
                     ? e
-                        ? (0, a.jsx)($.EA, {
+                        ? (0, t.jsx)($.EA, {
                               cardRef: C,
-                              returnRef: b,
-                              targetElementRef: g,
+                              returnRef: g,
+                              targetElementRef: k,
                               shouldShow: e,
                               analyticsPage: u,
                               onCloseWallet: (e) => {
@@ -253,18 +253,18 @@ function X(e) {
                               },
                           })
                         : null
-                    : (0, a.jsx)(W, {
-                          targetElementRef: g,
+                    : (0, t.jsx)(W, {
+                          targetElementRef: k,
                           shouldShow: e,
                           onRequestClose: O,
-                          ctaText: t,
+                          ctaText: a,
                           onNavigate: d,
                           ctaOnClick: () => {
                               (O(), s());
                           },
                       }),
-            [v, C, g, O, t, s, u, d],
+            [v, C, k, O, a, s, u, d],
         );
-    return (0, a.jsxs)("div", { className: i()(z.kL, x, { [z.R]: N, [z.RK]: !N }), children: [S, w(E)] });
+    return (0, t.jsxs)("div", { className: i()(z.kL, f, { [z.R]: N, [z.RK]: !N }), children: [S, w(E)] });
 }
 X.CardAlignment = J;

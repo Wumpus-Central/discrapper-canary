@@ -21,18 +21,18 @@ var s = n(477900),
     A = n(5180),
     C = n(265872),
     I = n(499373),
-    E = n(760658),
-    k = n(105292);
-let y = i.lazy(() => Promise.all([n.e("732100"), n.e("879948")]).then(n.bind(n, 329671)));
+    y = n(760658),
+    E = n(105292);
+let k = i.lazy(() => Promise.all([n.e("732100"), n.e("879948")]).then(n.bind(n, 329671)));
 function D(e) {
     let { className: t } = e,
-        n = k.intl.string(E.default.G9fGlP),
+        n = E.intl.string(y.default.G9fGlP),
         a = i.useRef(null),
         l = i.useCallback((e) => {
             let { closePopout: t } = e;
             return (0, s.jsx)(i.Suspense, {
                 fallback: null,
-                children: (0, s.jsx)(y, { navId: "favorite-guild-header-add-context", onClose: t, onSelect: t }),
+                children: (0, s.jsx)(k, { navId: "favorite-guild-header-add-context", onClose: t, onSelect: t }),
             });
         }, []);
     return (0, s.jsx)(C.Y, {
@@ -77,7 +77,7 @@ function z() {
     let e = (0, w.op)(),
         { selectedFilter: t, setSelectedFilter: n } = (0, P.A)(),
         i = t === V.Io.BOOKMARKS,
-        a = i ? k.intl.string(k.t.HcoRu0) : k.intl.string(k.t["2pAkDA"]);
+        a = i ? E.intl.string(E.t.HcoRu0) : E.intl.string(E.t["2pAkDA"]);
     return (0, s.jsx)(u.m, {
         position: "bottom",
         text: a,
@@ -100,7 +100,7 @@ function Y() {
     let e = (0, w.op)(),
         { selectedFilter: t, setSelectedFilter: n } = (0, P.A)(),
         i = t === V.Io.MENTIONS,
-        a = i ? k.intl.string(k.t.HcoRu0) : k.intl.string(k.t.jbV6MM);
+        a = i ? E.intl.string(E.t.HcoRu0) : E.intl.string(E.t.jbV6MM);
     return (0, s.jsx)(u.m, {
         position: "bottom",
         text: a,
@@ -122,13 +122,13 @@ function K() {
     let { unreadChannelIds: e } = (0, U.U4)();
     return (0, s.jsx)(u.m, {
         position: "bottom",
-        text: k.intl.string(k.t["8k+6QY"]),
+        text: E.intl.string(E.t["8k+6QY"]),
         asContainer: !0,
         children: (0, s.jsx)(F.K, {
             icon: G.i,
             variant: "icon-only",
             size: "sm",
-            "aria-label": k.intl.string(k.t["8k+6QY"]),
+            "aria-label": E.intl.string(E.t["8k+6QY"]),
             onClick: function () {
                 let t = e
                     .map((e) => ({ channelId: e, messageId: _.Ay.lastMessageId(e) }))
@@ -174,7 +174,7 @@ function et(e) {
             children:
                 c &&
                 (0, s.jsx)(u.m, {
-                    text: k.intl.string(k.t.O8lDI2),
+                    text: E.intl.string(E.t.O8lDI2),
                     position: "right",
                     children: (0, s.jsxs)("div", {
                         className: J.Pl,
@@ -188,9 +188,9 @@ function et(e) {
                                 className: J.ju,
                             }),
                             (0, s.jsx)(m.E, {
-                                variant: "text-xs/normal",
+                                variant: "body-xs/normal",
                                 color: "none",
-                                children: k.intl.string(k.t["B/vjCu"]),
+                                children: E.intl.string(E.t["B/vjCu"]),
                             }),
                         ],
                     }),
@@ -209,7 +209,7 @@ function en() {
 }
 function es(e) {
     let { guild: t } = e;
-    return (0, s.jsx)(j.D, { variant: "text-md/semibold", lineClamp: 1, className: J.UU, children: (0, A.YC)(t) });
+    return (0, s.jsx)(j.D, { variant: "body-md/semibold", lineClamp: 1, className: J.UU, children: (0, A.YC)(t) });
 }
 function ei(e) {
     let { bannerVisible: t, guild: a, onClick: l, onContextMenu: r, ariaControls: o, ariaExpanded: d, children: x } = e,
@@ -255,7 +255,7 @@ function ei(e) {
                 ? (0, s.jsx)("div", { className: J.Bd, children: N })
                 : (0, s.jsx)(g.D, {
                       className: J.Vm,
-                      "aria-label": k.intl.formatToPlainString(k.t.xMXpl3, { guildName: m }),
+                      "aria-label": E.intl.formatToPlainString(E.t.xMXpl3, { guildName: m }),
                       "aria-controls": o,
                       "aria-expanded": d,
                       onContextMenu: r,
@@ -266,12 +266,12 @@ function ei(e) {
             !(0, A.ai)(a.id) &&
                 a.id !== Z.gNP &&
                 (0, s.jsx)(u.m, {
-                    text: k.intl.string(k.t.Sd8Ixw),
+                    text: E.intl.string(E.t.Sd8Ixw),
                     position: "bottom",
                     asContainer: !0,
                     ariaHidden: !0,
                     children: (0, s.jsx)(g.D, {
-                        "aria-label": k.intl.string(k.t.Sd8Ixw),
+                        "aria-label": E.intl.string(E.t.Sd8Ixw),
                         className: J.ak,
                         onClick: () => {
                             j();
@@ -308,9 +308,9 @@ let ea = i.memo(function (e) {
             hasSubheader: C,
         } = e,
         I = f.features.has(Z.GuildFeatures.ANIMATED_BANNER),
-        E = (0, M.A)(f),
-        k = !E && (0, W.A)(f),
-        y = !E && A,
+        y = (0, M.A)(f),
+        E = !y && (0, W.A)(f),
+        k = !y && A,
         D = (0, Q.VI)(g) && I && !m,
         [R, S] = i.useState(!1),
         B = i.useRef(!1),
@@ -348,7 +348,7 @@ let ea = i.memo(function (e) {
                             "data-has-banner": _(),
                             "data-banner-visible": n,
                             ref: T,
-                            className: l()(r, { [J.kL]: !0, [J.r9]: _(), [J.Pi]: n, [e]: !1, [J.Iv]: y || (C && k) }),
+                            className: l()(r, { [J.kL]: !0, [J.r9]: _(), [J.Pi]: n, [e]: !1, [J.Iv]: k || (C && E) }),
                             onMouseDown: x,
                             onContextMenu: u,
                             children: [
@@ -367,7 +367,7 @@ let ea = i.memo(function (e) {
                                                 children: b,
                                             }),
                                         }),
-                                        k &&
+                                        E &&
                                             (0, s.jsx)(et, {
                                                 guild: f,
                                                 controller: a,

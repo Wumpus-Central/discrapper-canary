@@ -1,61 +1,61 @@
-t.d(s, { Ay: () => j, L5: () => u });
-var l = t(477900),
-    i = t(582128),
-    r = t(503698),
-    a = t.n(r);
-t(17928);
-var n = t(947641),
-    c = t(661531),
-    d = t(834730),
-    x = t(534514);
-(t(287809), t(3738), t(801365), t(105292));
-var o = t(56999);
+l.d(s, { Ay: () => j, L5: () => u });
+var t = l(477900),
+    i = l(582128),
+    r = l(503698),
+    a = l.n(r);
+l(17928);
+var n = l(947641),
+    c = l(661531),
+    d = l(834730),
+    o = l(534514);
+(l(287809), l(3738), l(801365), l(105292));
+var x = l(56999);
 let h = i.createContext({ isCurrent: !1 });
 function m(e) {
-    let { children: s, isComplete: t, isCurrent: r, hasNextStep: d } = e,
-        x = i.useMemo(() => ({ isCurrent: r }), [r]);
-    return (0, l.jsxs)("li", {
-        className: a()(o.gY, { [o.HP]: t }, { [o.fS]: r }, { [o.h4]: d }),
+    let { children: s, isComplete: l, isCurrent: r, hasNextStep: d } = e,
+        o = i.useMemo(() => ({ isCurrent: r }), [r]);
+    return (0, t.jsxs)("li", {
+        className: a()(x.gY, { [x.HP]: l }, { [x.fS]: r }, { [x.h4]: d }),
         children: [
-            (0, l.jsxs)("div", {
-                className: o.cJ,
+            (0, t.jsxs)("div", {
+                className: x.cJ,
                 children: [
-                    (0, l.jsx)("div", {
-                        className: o.$P,
-                        children: t && (0, l.jsx)(n.r, { className: o.ap, color: c.A.colors.WHITE }),
+                    (0, t.jsx)("div", {
+                        className: x.$P,
+                        children: l && (0, t.jsx)(n.r, { className: x.ap, color: c.A.colors.WHITE }),
                     }),
-                    d && (0, l.jsx)("div", { className: o.UK }),
+                    d && (0, t.jsx)("div", { className: x.UK }),
                 ],
             }),
-            (0, l.jsx)("div", { className: o.M7, children: (0, l.jsx)(h.Provider, { value: x, children: s }) }),
+            (0, t.jsx)("div", { className: x.M7, children: (0, t.jsx)(h.Provider, { value: o, children: s }) }),
         ],
     });
 }
 function u(e) {
     let { children: s } = e,
-        { isCurrent: t } = i.useContext(h);
-    return (0, l.jsx)(d.E, { color: t ? "text-default" : "text-muted", variant: "text-xs/medium", children: s });
+        { isCurrent: l } = i.useContext(h);
+    return (0, t.jsx)(d.E, { color: l ? "text-default" : "text-muted", variant: "body-xs/medium", children: s });
 }
 let j = function (e) {
-    let { children: s, heading: t, steps: i, className: r } = e,
+    let { children: s, heading: l, steps: i, className: r } = e,
         n = i.findIndex((e) => !e.isComplete);
-    return (0, l.jsxs)("div", {
-        className: a()(o.iE, r),
+    return (0, t.jsxs)("div", {
+        className: a()(x.iE, r),
         children: [
-            (0, l.jsx)("div", {
-                className: o.Mj,
-                children: (0, l.jsx)(x.D, {
-                    className: o.R_,
+            (0, t.jsx)("div", {
+                className: x.Mj,
+                children: (0, t.jsx)(o.D, {
+                    className: x.R_,
                     color: "text-strong",
-                    variant: "text-xs/semibold",
-                    children: t,
+                    variant: "body-xs/semibold",
+                    children: l,
                 }),
             }),
-            (0, l.jsx)("div", {
-                className: o.lp,
-                children: (0, l.jsx)("ul", {
+            (0, t.jsx)("div", {
+                className: x.lp,
+                children: (0, t.jsx)("ul", {
                     children: i.map((e, s) =>
-                        (0, l.jsx)(
+                        (0, t.jsx)(
                             m,
                             {
                                 isComplete: e.isComplete,

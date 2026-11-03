@@ -1,51 +1,51 @@
-l.d(t, { A: () => $ });
-var e = l(477900),
-    n = l(582128),
-    s = l(350835),
-    a = l(17928),
-    d = l(765379),
-    o = l(90644),
-    r = l(587895),
-    c = l(429913),
-    u = l(734057),
-    A = l(71393),
-    h = l(977997),
-    x = l(580763),
-    g = l(503698),
-    m = l.n(g),
-    C = l(939249),
-    j = l(793574),
-    p = l(688810),
-    v = l(774926),
-    N = l(623671),
-    _ = l(365185),
-    f = l(915089),
-    O = l(172710),
-    E = l(92240),
-    I = l(257367),
-    L = l(160376),
-    y = l(939496),
-    S = l(282197),
-    D = l(584904),
-    M = l(351638),
-    V = l(531648),
-    b = l(753713),
-    T = l(866665),
-    P = l(835723),
-    w = l(55730),
-    G = l(353411),
-    U = l(879945),
-    k = l(993401),
-    F = l(652215),
-    R = l(996988),
-    z = l(105292),
-    B = l(260155);
+t.d(l, { A: () => $ });
+var e = t(477900),
+    n = t(582128),
+    s = t(350835),
+    a = t(17928),
+    d = t(765379),
+    o = t(90644),
+    r = t(587895),
+    c = t(429913),
+    u = t(734057),
+    A = t(71393),
+    h = t(977997),
+    x = t(580763),
+    g = t(503698),
+    C = t.n(g),
+    m = t(939249),
+    j = t(793574),
+    p = t(688810),
+    v = t(774926),
+    N = t(623671),
+    _ = t(365185),
+    f = t(915089),
+    O = t(172710),
+    y = t(92240),
+    E = t(257367),
+    I = t(160376),
+    b = t(939496),
+    L = t(282197),
+    S = t(584904),
+    D = t(351638),
+    M = t(531648),
+    V = t(753713),
+    T = t(866665),
+    P = t(835723),
+    w = t(55730),
+    G = t(353411),
+    U = t(879945),
+    k = t(993401),
+    F = t(652215),
+    R = t(996988),
+    z = t(105292),
+    B = t(260155);
 function H(i) {
-    let { user: t, activity: l, onAction: n } = i,
-        { themeType: s } = (0, y.E)(),
-        a = (0, G._B)(l, t),
-        d = (0, G.J$)(l, t);
-    if (!(0, o.A)(l) || (!(0, w.A)(l, F.jUm.PLAY) && !(0, w.A)(l, F.jUm.SYNC))) return null;
+    let { user: l, activity: t, onAction: n } = i,
+        { themeType: s } = (0, b.E)(),
+        a = (0, G._B)(t, l),
+        d = (0, G.J$)(t, l);
+    if (!(0, o.A)(t) || (!(0, w.A)(t, F.jUm.PLAY) && !(0, w.A)(t, F.jUm.SYNC))) return null;
     let r = (i) => {
             (i?.stopPropagation(), n?.({ action: "PRESS_PLAY_ON_SPOTIFY_BUTTON" }), a.onClick());
         },
@@ -102,39 +102,39 @@ function H(i) {
               ],
           });
 }
-var Q = l(269587);
+var Q = t(269587);
 function Y(i) {
-    let t,
-        { user: l, currentUser: s, activity: a, className: d, onClose: r } = i,
+    let l,
+        { user: t, currentUser: s, activity: a, className: d, onClose: r } = i,
         c = (0, f.GV)(),
         u = (0, f.GV)(),
-        { themeType: A } = (0, y.E)(),
-        h = (0, _.A)({ activity: a, user: l }),
-        x = (0, L.A)(a),
+        { themeType: A } = (0, b.E)(),
+        h = (0, _.A)({ activity: a, user: t }),
+        x = (0, I.A)(a),
         g = null != x.text && "" !== x.text,
         { largeImage: T } = (0, v.XN)(a, void 0, "user_profile_spotify"),
         { analyticsLocations: P } = (0, p.Ay)(j.A.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        w = (0, E.A)({ display: "live", user: l, activity: a, entry: h, analyticsLocations: P }),
-        G = (0, I.A)({ userId: l.id, onAction: w });
+        w = (0, y.A)({ display: "live", user: t, activity: a, entry: h, analyticsLocations: P }),
+        G = (0, E.A)({ userId: t.id, onAction: w });
     if (!(0, o.A)(a)) return null;
     function U() {
-        return l.id === s.id
+        return t.id === s.id
             ? null
-            : (0, e.jsx)("div", { className: B.o1, children: (0, e.jsx)(H, { user: l, activity: a, onAction: w }) });
+            : (0, e.jsx)("div", { className: B.o1, children: (0, e.jsx)(H, { user: t, activity: a, onAction: w }) });
     }
     return (0, e.jsx)(p.f5, {
         value: P,
-        children: (0, e.jsxs)(D.A, {
+        children: (0, e.jsxs)(S.A, {
             ref: G,
-            className: m()(B.Nr, d),
+            className: C()(B.Nr, d),
             onAction: w,
             onClose: r,
             "aria-labelledby": g ? `${u} ${c}` : c,
             children: [
-                (0, e.jsx)(M.A, {
+                (0, e.jsx)(D.A, {
                     textId: u,
                     ...x,
-                    contextMenu: (0, e.jsx)(Q.A, { display: "live", user: l, activity: a, entry: h, onClose: r }),
+                    contextMenu: (0, e.jsx)(Q.A, { display: "live", user: t, activity: a, entry: h, onClose: r }),
                 }),
                 (0, e.jsx)("div", {
                     className: B.rf,
@@ -146,7 +146,7 @@ function Y(i) {
                                 size: A === R.d.MODAL_V2 ? N.w.SIZE_100 : N.w.SIZE_60,
                                 className: B.mM,
                                 onClick: (i) => {
-                                    (i.stopPropagation(), w({ action: "OPEN_SPOTIFY_ALBUM" }), (0, O.QX)(a, l.id));
+                                    (i.stopPropagation(), w({ action: "OPEN_SPOTIFY_ALBUM" }), (0, O.QX)(a, t.id));
                                 },
                             }),
                             (0, e.jsxs)("div", {
@@ -154,37 +154,37 @@ function Y(i) {
                                 children: [
                                     (0, e.jsxs)("div", {
                                         children: [
-                                            (0, e.jsx)(V.Q, {
-                                                variant: "heading-sm/semibold",
+                                            (0, e.jsx)(M.Q, {
+                                                variant: "heading-xs/semibold",
                                                 text: a.details,
                                                 onClick: () => {
                                                     (w({ action: "OPEN_SPOTIFY_TRACK" }), (0, O.Mp)(a));
                                                 },
                                                 id: c,
                                             }),
-                                            0 === (t = a.state?.split("; ") ?? []).length
+                                            0 === (l = a.state?.split("; ") ?? []).length
                                                 ? null
                                                 : null == a.sync_id
-                                                  ? (0, e.jsx)(V.A, { variant: "text-xs/normal", text: t.join(", ") })
-                                                  : (0, e.jsx)(V.A, {
-                                                        variant: "text-xs/normal",
-                                                        text: t.map((i, s) =>
+                                                  ? (0, e.jsx)(M.A, { variant: "body-xs/normal", text: l.join(", ") })
+                                                  : (0, e.jsx)(M.A, {
+                                                        variant: "body-xs/normal",
+                                                        text: l.map((i, s) =>
                                                             (0, e.jsxs)(
                                                                 n.Fragment,
                                                                 {
                                                                     children: [
-                                                                        (0, e.jsx)(C.D, {
-                                                                            className: m()(B.sd, B.mG),
+                                                                        (0, e.jsx)(m.D, {
+                                                                            className: C()(B.sd, B.mG),
                                                                             onClick: (i) => {
                                                                                 (i.stopPropagation(),
                                                                                     w({
                                                                                         action: "OPEN_SPOTIFY_ARTIST",
                                                                                     }),
-                                                                                    (0, O.mN)(a, l.id, s));
+                                                                                    (0, O.mN)(a, t.id, s));
                                                                             },
                                                                             children: i,
                                                                         }),
-                                                                        s < t.length - 1 ? ", " : "",
+                                                                        s < l.length - 1 ? ", " : "",
                                                                     ],
                                                                 },
                                                                 s,
@@ -193,12 +193,12 @@ function Y(i) {
                                                     }),
                                         ],
                                     }),
-                                    (0, e.jsx)(S.A, { user: l, activity: a, className: B.jp }),
+                                    (0, e.jsx)(L.A, { user: t, activity: a, className: B.jp }),
                                     (function () {
                                         let { timestamps: i } = a;
                                         if (null == i) return null;
-                                        let { start: t, end: l } = i;
-                                        return null == t || null == l ? null : (0, e.jsx)(b.A, { start: t, end: l });
+                                        let { start: l, end: t } = i;
+                                        return null == l || null == t ? null : (0, e.jsx)(V.A, { start: l, end: t });
                                     })(),
                                     A === R.d.MODAL_V2 && U(),
                                 ],
@@ -213,14 +213,14 @@ function Y(i) {
     });
 }
 function $(i) {
-    let { user: t, currentUser: l, activity: n, className: g, onClose: m } = i,
-        { voiceGuild: C, voiceChannel: j } = (0, a.cf)([A.A, h.A, u.A], () => {
+    let { user: l, currentUser: t, activity: n, className: g, onClose: C } = i,
+        { voiceGuild: m, voiceChannel: j } = (0, a.cf)([A.A, h.A, u.A], () => {
             let i = (0, d.A)(n);
             if (!i && n.type !== s.$.HANG_STATUS) return {};
-            let l = i
-                    ? h.A.getVoiceStateForSession(t.id, n?.session_id)?.channelId
-                    : h.A.getVoiceStateForUser(t.id)?.channelId,
-                e = u.A.getChannel(l);
+            let t = i
+                    ? h.A.getVoiceStateForSession(l.id, n?.session_id)?.channelId
+                    : h.A.getVoiceStateForUser(l.id)?.channelId,
+                e = u.A.getChannel(t);
             return { voiceGuild: A.A.getGuild(e?.getGuildId()), voiceChannel: e };
         });
     (0, c.h)(n?.application_id);
@@ -234,15 +234,15 @@ function $(i) {
     return n?.type === s.$.CUSTOM_STATUS || n?.type === s.$.HANG_STATUS
         ? null
         : (0, o.A)(n)
-          ? (0, e.jsx)(Y, { user: t, currentUser: l, activity: n, className: g, onClose: m })
+          ? (0, e.jsx)(Y, { user: l, currentUser: t, activity: n, className: g, onClose: C })
           : (0, e.jsx)(x.A, {
-                user: t,
-                currentUser: l,
+                user: l,
+                currentUser: t,
                 activity: n,
                 application: p,
-                voiceGuild: C,
+                voiceGuild: m,
                 voiceChannel: j,
                 className: g,
-                onClose: m,
+                onClose: C,
             });
 }

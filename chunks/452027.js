@@ -98,7 +98,7 @@ function A(e) {
                 [I, u, t, _, g, i, h, m, E, p, A, o, f, d, c],
             );
         })(e, { hasTrailingAuxiliaryContent: null != O }),
-        { labelId: y, controlId: D, errorMessageId: v, describedById: b, helperTextId: P, descriptionId: M } = L,
+        { labelId: y, controlId: D, errorMessageId: b, describedById: v, helperTextId: P, descriptionId: M } = L,
         U = T?.horizontalControlColumnWidth,
         w = "group" === p || "radiogroup" === p,
         G = w ? "fieldset" : "div",
@@ -111,7 +111,7 @@ function A(e) {
                   "data-interactive": N,
                   id: y,
                   tag: w ? "span" : "label",
-                  variant: "text-md/medium",
+                  variant: "body-md/medium",
                   color: "text-strong",
                   htmlFor: D,
                   className: _.Pf,
@@ -121,7 +121,7 @@ function A(e) {
                       a &&
                           (0, i.jsx)(c.E, {
                               "aria-hidden": !0,
-                              variant: "text-md/normal",
+                              variant: "body-md/normal",
                               color: "text-feedback-critical",
                               className: _.mw,
                               children: "*",
@@ -141,7 +141,7 @@ function A(e) {
             helperText: E,
             trailing: O,
             helperTextId: P,
-            errorMessageId: v,
+            errorMessageId: b,
         });
     return (0, i.jsx)(u._.Provider, {
         value: L,
@@ -153,7 +153,7 @@ function A(e) {
             "data-has-description": F || void 0,
             style: null != U ? { "--custom-field-horizontal-control-width": U } : void 0,
             "data-disabled": o,
-            "aria-describedby": w ? b : void 0,
+            "aria-describedby": w ? v : void 0,
             "aria-required": (!!w && !!a) || void 0,
             disabled: w ? o : void 0,
             children: [
@@ -166,7 +166,7 @@ function A(e) {
                               n ? null : B,
                               F &&
                                   (0, i.jsx)(c.E, {
-                                      variant: "text-sm/normal",
+                                      variant: "body-sm/normal",
                                       color: "text-subtle",
                                       className: _.h_,
                                       id: M,
@@ -195,7 +195,7 @@ function h(e) {
               role: "alert",
               children: [
                   (0, i.jsx)(d.E, { size: "xs", color: a.A.colors.TEXT_FEEDBACK_CRITICAL }),
-                  (0, i.jsx)(c.E, { variant: "text-xs/normal", color: "text-feedback-critical", id: u, children: n }),
+                  (0, i.jsx)(c.E, { variant: "body-xs/normal", color: "text-feedback-critical", id: u, children: n }),
               ],
           })))
         : null != t && "" !== t
@@ -204,11 +204,11 @@ function h(e) {
                 className: _.lI,
                 children: [
                     (0, i.jsx)(o.y, { size: "xs", color: a.A.colors.TEXT_FEEDBACK_POSITIVE }),
-                    (0, i.jsx)(c.E, { variant: "text-xs/normal", color: "text-feedback-positive", id: l, children: t }),
+                    (0, i.jsx)(c.E, { variant: "body-xs/normal", color: "text-feedback-positive", id: l, children: t }),
                 ],
             })))
           : null != r &&
-            ((A = !0), (E = (0, i.jsx)(c.E, { variant: "text-xs/normal", color: "text-subtle", id: l, children: r }))),
+            ((A = !0), (E = (0, i.jsx)(c.E, { variant: "body-xs/normal", color: "text-subtle", id: l, children: r }))),
     A)
         ? (0, i.jsxs)("div", { className: _.JA, children: [E, s] })
         : null;

@@ -19,37 +19,37 @@ var l = n(477900),
     E = n(503698),
     C = n.n(E),
     _ = n(607399),
-    T = n(821609),
-    y = n(331322),
-    N = n(534514),
-    j = n(834730),
-    I = n(700525),
-    S = n(975571),
-    b = n(652215),
+    y = n(821609),
+    T = n(331322),
+    b = n(534514),
+    N = n(834730),
+    j = n(700525),
+    I = n(975571),
+    S = n(652215),
     R = n(105292),
     M = n(690807);
-let O = S.A.getArticleURL(b.MVz.VERIFICATION_FAQ);
+let O = I.A.getArticleURL(S.MVz.VERIFICATION_FAQ);
 class w extends i.PureComponent {
-    static defaultProps = { types: [b.Fz7.CAPTCHA], onCaptchaVerify: b.tEg, onLogout: b.tEg };
+    static defaultProps = { types: [S.Fz7.CAPTCHA], onCaptchaVerify: S.tEg, onLogout: S.tEg };
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: i } = this.props;
         return (0, l.jsx)(l.Fragment, {
             children: e.map((e) =>
-                e === b.Fz7.CAPTCHA
-                    ? (0, l.jsx)(I.A, { onVerify: i, theme: n }, t)
-                    : (0, l.jsx)(T.$, { onClick: () => this.handleClick(e), text: x.A.getButtonTitle(e) }, e),
+                e === S.Fz7.CAPTCHA
+                    ? (0, l.jsx)(j.A, { onVerify: i, theme: n }, t)
+                    : (0, l.jsx)(y.$, { onClick: () => this.handleClick(e), text: x.A.getButtonTitle(e) }, e),
             ),
         });
     }
     render() {
-        return (0, l.jsxs)(y.B, {
+        return (0, l.jsxs)(T.B, {
             gap: 16,
             className: M.Ot,
             align: "center",
             direction: "vertical",
             justify: "center",
             children: [
-                (0, l.jsxs)(y.B, {
+                (0, l.jsxs)(T.B, {
                     gap: 16,
                     fullWidth: !1,
                     className: C()(M.kL, { [M.Fr]: _.Fr }),
@@ -57,33 +57,33 @@ class w extends i.PureComponent {
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, l.jsxs)(y.B, {
+                        (0, l.jsxs)(T.B, {
                             align: "center",
                             direction: "vertical",
                             justify: "center",
                             gap: 16,
                             children: [
                                 (0, l.jsx)("div", { className: M.Sl }),
-                                (0, l.jsxs)(y.B, {
+                                (0, l.jsxs)(T.B, {
                                     className: M.FS,
                                     gap: 4,
                                     align: "center",
                                     direction: "vertical",
                                     justify: "center",
                                     children: [
-                                        (0, l.jsx)(N.D, {
+                                        (0, l.jsx)(b.D, {
                                             variant: "heading-xl/medium",
                                             children: R.intl.string(R.t.Iz0kDg),
                                         }),
-                                        (0, l.jsx)(j.E, {
-                                            variant: "text-md/normal",
+                                        (0, l.jsx)(N.E, {
+                                            variant: "body-md/normal",
                                             children: R.intl.format(R.t["0rqMV5"], { helpCenterURL: O }),
                                         }),
                                     ],
                                 }),
                             ],
                         }),
-                        (0, l.jsx)(y.B, {
+                        (0, l.jsx)(T.B, {
                             gap: 16,
                             direction: "vertical",
                             justify: "center",
@@ -92,31 +92,31 @@ class w extends i.PureComponent {
                         }),
                     ],
                 }),
-                (0, l.jsxs)(y.B, {
+                (0, l.jsxs)(T.B, {
                     gap: 8,
                     align: "center",
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, l.jsx)(j.E, {
-                            variant: "text-sm/normal",
+                        (0, l.jsx)(N.E, {
+                            variant: "body-sm/normal",
                             className: M.qr,
                             children: R.intl.string(R.t.qqYun3),
                         }),
-                        (0, l.jsxs)(y.B, {
+                        (0, l.jsxs)(T.B, {
                             gap: 8,
                             align: "center",
                             direction: "horizontal",
                             justify: "center",
                             children: [
-                                (0, l.jsx)(j.E, {
-                                    variant: "text-sm/semibold",
+                                (0, l.jsx)(N.E, {
+                                    variant: "body-sm/semibold",
                                     className: M.qr,
-                                    children: R.intl.format(R.t.WL51ZR, { supportURL: S.A.getSubmitRequestURL() }),
+                                    children: R.intl.format(R.t.WL51ZR, { supportURL: I.A.getSubmitRequestURL() }),
                                 }),
                                 (0, l.jsx)("div", { className: C()(M.qr, M.mf), children: "\u2022" }),
-                                (0, l.jsx)(j.E, {
-                                    variant: "text-sm/semibold",
+                                (0, l.jsx)(N.E, {
+                                    variant: "body-sm/semibold",
                                     className: M.qr,
                                     children: R.intl.format(R.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
                                 }),
@@ -138,8 +138,8 @@ function k() {
     let { action: e, theme: t } = (0, r.cf)([v.A, A.A], () => ({ action: v.A.getAction(), theme: A.A.theme })),
         E = x.A.getVerificationTypes(e),
         [C, _] = i.useState(0),
-        T = (0, m.Ay)(E);
-    function y() {
+        y = (0, m.Ay)(E);
+    function T() {
         ((0, c.Cw)(),
             (0, o.openModalLazy)(
                 async () => {
@@ -171,8 +171,8 @@ function k() {
             [],
         ),
         i.useEffect(() => {
-            T?.[0] === b.Fz7.PHONE &&
-                E?.[0] === b.Fz7.EMAIL &&
+            y?.[0] === S.Fz7.PHONE &&
+                E?.[0] === S.Fz7.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
                         let { Alert: e } = await Promise.all([n.e("844331"), n.e("21553")]).then(n.bind(n, 381512));
@@ -184,15 +184,15 @@ function k() {
                                 confirmText: R.intl.string(R.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: P.Pr, Layer: p.Ay, onCloseCallback: y },
+                    { modalKey: P.Pr, Layer: p.Ay, onCloseCallback: T },
                 );
-        }, [E, T]),
+        }, [E, y]),
         (0, l.jsx)(w, {
             types: E,
             captchaKey: C,
             onCaptchaVerify: function (e) {
                 s.Bo.post({
-                    url: b.Rsh.CAPTCHA,
+                    url: S.Rsh.CAPTCHA,
                     body: { captcha_key: e },
                     oldFormErrors: !0,
                     rejectWithError: !0,
@@ -202,8 +202,8 @@ function k() {
             },
             theme: t,
             onClick: (e) => {
-                e === b.Fz7.EMAIL_OR_PHONE || e === b.Fz7.EMAIL || e === b.Fz7.REVERIFY_EMAIL
-                    ? y()
+                e === S.Fz7.EMAIL_OR_PHONE || e === S.Fz7.EMAIL || e === S.Fz7.REVERIFY_EMAIL
+                    ? T()
                     : (0, o.openModalLazy)(
                           async () => {
                               let { default: e } = await Promise.all([

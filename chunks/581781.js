@@ -1,8 +1,8 @@
 l.d(s, { A: () => m });
-var t = l(477900),
+var d = l(477900),
     a = l(582128),
-    d = l(503698),
-    i = l.n(d),
+    t = l(503698),
+    i = l.n(t),
     c = l(866665),
     n = l(834730),
     r = l(145497),
@@ -10,7 +10,7 @@ var t = l(477900),
     o = l(743981),
     h = l(638855);
 function m(e) {
-    let { className: s, guildTag: l, guildBadge: d, guildId: m, guildName: x, guildIcon: g, guildIconSize: f } = e,
+    let { className: s, guildTag: l, guildBadge: t, guildId: m, guildName: x, guildIcon: g, guildIconSize: f } = e,
         p = a.useRef(null),
         [N, j] = a.useState(!1);
     return (
@@ -18,13 +18,13 @@ function m(e) {
             let e = p.current;
             null != e && null != e.offsetWidth && null != e.scrollWidth && j(e.offsetWidth < e.scrollWidth);
         }, []),
-        (0, t.jsxs)("div", {
+        (0, d.jsxs)("div", {
             className: i()(h.kL, s),
             children: [
-                (0, t.jsxs)("div", {
+                (0, d.jsxs)("div", {
                     className: h.v2,
                     children: [
-                        (0, t.jsx)(r.j, {
+                        (0, d.jsx)(r.j, {
                             guildId: m,
                             guildName: x,
                             guildIcon: g,
@@ -32,13 +32,13 @@ function m(e) {
                             className: h.rr,
                             animate: !1,
                         }),
-                        (0, t.jsx)("div", {
+                        (0, d.jsx)("div", {
                             className: h.zH,
-                            children: (0, t.jsx)(c.m, {
+                            children: (0, d.jsx)(c.m, {
                                 __unsupportedReactNodeAsText: x,
                                 shouldShow: N,
-                                children: (0, t.jsx)(n.E, {
-                                    variant: "text-md/semibold",
+                                children: (0, d.jsx)(n.E, {
+                                    variant: "body-md/semibold",
                                     color: "text-strong",
                                     tag: "span",
                                     ref: p,
@@ -49,16 +49,16 @@ function m(e) {
                         }),
                     ],
                 }),
-                (0, t.jsx)("div", {
+                (0, d.jsx)("div", {
                     className: h.I8,
-                    children: (0, t.jsx)(u.o9, {
+                    children: (0, d.jsx)(u.o9, {
                         guildId: m,
                         className: h.Tc,
                         guildTag: l,
-                        guildBadge: d,
+                        guildBadge: t,
                         badgeSize: o.Sl.SIZE_16,
                         textColor: "interactive-text-default",
-                        textVariant: "text-sm/semibold",
+                        textVariant: "body-sm/semibold",
                         badgeClassName: h.qS,
                     }),
                 }),

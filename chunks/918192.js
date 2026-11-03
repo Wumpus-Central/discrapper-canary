@@ -1,133 +1,133 @@
-s.d(n, { Bw: () => p, ld: () => b });
-var e = s(477900);
-s(582128);
-var r = s(17928),
-    l = s(661531),
-    i = s(428678),
-    a = s(834730),
-    c = s(939249),
-    o = s(952270),
-    d = s(831544),
-    x = s(778712),
-    m = s(364522),
-    u = s(442433),
-    j = s(85448),
-    h = s(994500),
-    f = s(427262),
-    v = s(312006),
-    g = s(366098),
-    E = s(105292),
-    k = s(494392);
-function p(t) {
-    let { channelId: n } = t;
-    return (0, e.jsx)(N, { channelId: n });
+r.d(s, { Bw: () => E, ld: () => p });
+var t = r(477900);
+r(582128);
+var l = r(17928),
+    e = r(661531),
+    i = r(428678),
+    a = r(834730),
+    c = r(939249),
+    o = r(952270),
+    d = r(831544),
+    m = r(778712),
+    x = r(364522),
+    u = r(442433),
+    j = r(85448),
+    h = r(994500),
+    b = r(427262),
+    f = r(312006),
+    v = r(366098),
+    g = r(105292),
+    y = r(494392);
+function E(n) {
+    let { channelId: s } = n;
+    return (0, t.jsx)(k, { channelId: s });
 }
-function N(t) {
-    let { channelId: n } = t,
-        s = (0, g.D3)(n),
-        r = (0, g.Xk)(n);
-    if (0 === s && 0 === r) return null;
-    function d(t) {
-        (0, u.jA)(t, (t) => (0, e.jsx)(A, { ...t, channelId: n }), { position: "left", align: "bottom" });
+function k(n) {
+    let { channelId: s } = n,
+        r = (0, v.D3)(s),
+        l = (0, v.Xk)(s);
+    if (0 === r && 0 === l) return null;
+    function d(n) {
+        (0, u.jA)(n, (n) => (0, t.jsx)(N, { ...n, channelId: s }), { position: "left", align: "bottom" });
     }
-    return s > 0 && r > 0
-        ? (0, e.jsxs)("div", {
-              className: k.jC,
+    return r > 0 && l > 0
+        ? (0, t.jsxs)("div", {
+              className: y.jC,
               children: [
-                  (0, e.jsx)(i.K, { size: "lg", color: l.A.unsafe_rawColors.RED_400.css }),
-                  (0, e.jsx)(a.E, {
-                      variant: "text-xs/normal",
+                  (0, t.jsx)(i.K, { size: "lg", color: e.A.unsafe_rawColors.RED_400.css }),
+                  (0, t.jsx)(a.E, {
+                      variant: "body-xs/normal",
                       color: "text-default",
-                      children: E.intl.string(E.t["P/KFXz"]),
+                      children: g.intl.string(g.t["P/KFXz"]),
                   }),
-                  (0, e.jsx)(c.D, { className: k.R5, onClick: d, children: E.intl.string(E.t.rUEjBe) }),
+                  (0, t.jsx)(c.D, { className: y.R5, onClick: d, children: g.intl.string(g.t.rUEjBe) }),
               ],
           })
-        : r > 0
-          ? (0, e.jsxs)("div", {
-                className: k.jC,
+        : l > 0
+          ? (0, t.jsxs)("div", {
+                className: y.jC,
                 children: [
-                    (0, e.jsx)(o.EyeSlashIcon, { size: "lg" }),
-                    (0, e.jsx)(a.E, {
-                        variant: "text-xs/normal",
+                    (0, t.jsx)(o.EyeSlashIcon, { size: "lg" }),
+                    (0, t.jsx)(a.E, {
+                        variant: "body-xs/normal",
                         color: "text-default",
-                        children: E.intl.format(E.t.Ri3o33, { number: r }),
+                        children: g.intl.format(g.t.Ri3o33, { number: l }),
                     }),
-                    (0, e.jsx)(c.D, { className: k.R5, onClick: d, children: E.intl.string(E.t.rUEjBe) }),
+                    (0, t.jsx)(c.D, { className: y.R5, onClick: d, children: g.intl.string(g.t.rUEjBe) }),
                 ],
             })
-          : (0, e.jsxs)("div", {
-                className: k.jC,
+          : (0, t.jsxs)("div", {
+                className: y.jC,
                 children: [
-                    (0, e.jsx)(i.K, { size: "lg", color: l.A.unsafe_rawColors.RED_400.css }),
-                    (0, e.jsx)(a.E, {
-                        variant: "text-xs/normal",
+                    (0, t.jsx)(i.K, { size: "lg", color: e.A.unsafe_rawColors.RED_400.css }),
+                    (0, t.jsx)(a.E, {
+                        variant: "body-xs/normal",
                         color: "text-default",
-                        children: E.intl.format(E.t["6Tcdt7"], { number: s }),
+                        children: g.intl.format(g.t["6Tcdt7"], { number: r }),
                     }),
-                    (0, e.jsx)(c.D, { className: k.R5, onClick: d, children: E.intl.string(E.t.rUEjBe) }),
+                    (0, t.jsx)(c.D, { className: y.R5, onClick: d, children: g.intl.string(g.t.rUEjBe) }),
                 ],
             });
 }
-function b(t) {
-    let { user: n, showStatus: s, speaker: l, channelId: i } = t,
-        c = (0, r.bG)([v.Ay], () => v.Ay.isModerator(n.id, i)),
-        o = (0, r.bG)([h.A], () => h.A.isBlocked(n.id)),
-        m = null;
+function p(n) {
+    let { user: s, showStatus: r, speaker: e, channelId: i } = n,
+        c = (0, l.bG)([f.Ay], () => f.Ay.isModerator(s.id, i)),
+        o = (0, l.bG)([h.A], () => h.A.isBlocked(s.id)),
+        x = null;
     return (
-        s && (m = l ? E.intl.string(E.t.LqMmG2) : c ? E.intl.string(E.t.GMZqSi) : E.intl.string(E.t.suRApw)),
-        (0, e.jsxs)("div", {
-            className: k.kQ,
+        r && (x = e ? g.intl.string(g.t.LqMmG2) : c ? g.intl.string(g.t.GMZqSi) : g.intl.string(g.t.suRApw)),
+        (0, t.jsxs)("div", {
+            className: y.kQ,
             children: [
-                (0, e.jsx)(
+                (0, t.jsx)(
                     j.Ay,
                     {
-                        src: n.getAvatarURL(null, 32),
-                        size: x._3.SIZE_32,
+                        src: s.getAvatarURL(null, 32),
+                        size: m._3.SIZE_32,
                         muted: !1,
                         deafen: !1,
                         ringing: !1,
-                        renderIcon: l
+                        renderIcon: e
                             ? function () {
-                                  return (0, e.jsx)(d.MicrophoneIcon, {
+                                  return (0, t.jsx)(d.MicrophoneIcon, {
                                       size: "md",
                                       color: "currentColor",
-                                      className: k.Kk,
+                                      className: y.Kk,
                                   });
                               }
                             : null,
                     },
-                    n.id,
+                    s.id,
                 ),
-                (0, e.jsxs)("div", {
-                    className: k.eF,
+                (0, t.jsxs)("div", {
+                    className: y.eF,
                     children: [
-                        (0, e.jsxs)("div", {
-                            className: k.Xh,
+                        (0, t.jsxs)("div", {
+                            className: y.Xh,
                             children: [
-                                (0, e.jsx)(a.E, {
-                                    variant: s ? "text-md/normal" : "text-sm/normal",
-                                    children: f.Ay.getName(n),
+                                (0, t.jsx)(a.E, {
+                                    variant: r ? "body-md/normal" : "body-sm/normal",
+                                    children: b.Ay.getName(s),
                                 }),
-                                (0, e.jsx)(a.E, {
-                                    variant: s ? "text-md/normal" : "text-sm/normal",
+                                (0, t.jsx)(a.E, {
+                                    variant: r ? "body-md/normal" : "body-sm/normal",
                                     color: "text-subtle",
-                                    children: `#${n.discriminator}`,
+                                    children: `#${s.discriminator}`,
                                 }),
                             ],
                         }),
-                        (0, e.jsxs)("div", {
-                            className: k.Xh,
+                        (0, t.jsxs)("div", {
+                            className: y.Xh,
                             children: [
-                                (0, e.jsx)(a.E, {
-                                    variant: "text-xs/normal",
+                                (0, t.jsx)(a.E, {
+                                    variant: "body-xs/normal",
                                     color: o ? "text-feedback-critical" : "text-default",
-                                    children: o ? E.intl.string(E.t["4bDptI"]) : E.intl.string(E.t.tFY5Zb),
+                                    children: o ? g.intl.string(g.t["4bDptI"]) : g.intl.string(g.t.tFY5Zb),
                                 }),
-                                (0, e.jsxs)(a.E, {
-                                    variant: "text-xs/normal",
+                                (0, t.jsxs)(a.E, {
+                                    variant: "body-xs/normal",
                                     color: "text-muted",
-                                    children: ["| ", m],
+                                    children: ["| ", x],
                                 }),
                             ],
                         }),
@@ -137,15 +137,15 @@ function b(t) {
         })
     );
 }
-function A(t) {
-    let { channelId: n } = t,
-        s = (0, g.mT)(n),
-        r = (0, g.Iv)(n);
-    return (0, e.jsx)(m.Ip, {
-        className: k.kL,
-        children: [...s, ...r].map((t) => {
-            let { user: s } = t;
-            return (0, e.jsx)(b, { user: s, channelId: n }, s.id);
+function N(n) {
+    let { channelId: s } = n,
+        r = (0, v.mT)(s),
+        l = (0, v.Iv)(s);
+    return (0, t.jsx)(x.Ip, {
+        className: y.kL,
+        children: [...r, ...l].map((n) => {
+            let { user: r } = n;
+            return (0, t.jsx)(p, { user: r, channelId: s }, r.id);
         }),
     });
 }

@@ -5,24 +5,24 @@ var r = a(772707),
     n = a(834730),
     l = a(503852),
     s = a(689906),
-    p = a(743569),
-    c = a(568065),
-    d = a(959456),
-    o = a(105292);
+    d = a(743569),
+    o = a(568065),
+    p = a(959456),
+    c = a(105292);
 function m(t) {
     let { guildId: i, powerup: a, onClose: m, ...u } = t,
-        k = c.HO.has(a.skuId),
+        k = o.HO.has(a.skuId),
         g = (0, s.A)(i, a);
     (0, l.Z)(i, a, l.q.DETAIL);
     let h =
-            a.type === c.o9.LEVEL
-                ? { type: "rive", rive: p.T[a.skuId], aspectRatio: "16/9" }
+            a.type === o.o9.LEVEL
+                ? { type: "rive", rive: d.T[a.skuId], aspectRatio: "16/9" }
                 : { type: "image", src: a.animatedImageUrl ?? a.staticImageUrl ?? "", aspectRatio: "16/9" },
-        f = o.intl.formatToPlainString(d.default.lFuOFF, { perkName: a.title }),
+        f = c.intl.formatToPlainString(p.default.lFuOFF, { perkName: a.title }),
         v = k
             ? [
                   {
-                      text: o.intl.string(d.default.g5Ds69),
+                      text: c.intl.string(p.default.g5Ds69),
                       variant: "primary",
                       size: "md",
                       onClick: (t) => {
@@ -32,7 +32,7 @@ function m(t) {
               ]
             : [
                   {
-                      text: o.intl.string(o.t.cpT0Cq),
+                      text: c.intl.string(c.t.cpT0Cq),
                       variant: "primary",
                       size: "md",
                       onClick: () => {
@@ -49,8 +49,8 @@ function m(t) {
         children:
             k &&
             (0, e.jsx)(n.E, {
-                variant: "text-md/normal",
-                children: o.intl.formatToPlainString(d.default.y3wHot, { perkName: a.title }),
+                variant: "body-md/normal",
+                children: c.intl.formatToPlainString(p.default.y3wHot, { perkName: a.title }),
             }),
     });
 }

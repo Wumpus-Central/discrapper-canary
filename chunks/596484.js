@@ -22,7 +22,7 @@ function d(e) {
                         onClick: e.disabled ? void 0 : e.onClick,
                         children: (0, n.jsx)(r.E, {
                             tag: "span",
-                            variant: "text-sm/medium",
+                            variant: "body-sm/medium",
                             color: "interactive-text-default",
                             children: e.text,
                         }),

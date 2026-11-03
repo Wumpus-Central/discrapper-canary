@@ -11,8 +11,8 @@ var e = n(477900),
     u = n(632738),
     A = n(67521),
     p = n(308645),
-    x = n(207913),
-    b = n(239093),
+    b = n(207913),
+    x = n(239093),
     h = n(105292);
 let _ = [
         { title: h.intl.string(h.t["1+E7LP"]), description: h.intl.string(h.t["BXiat/"]) },
@@ -21,8 +21,8 @@ let _ = [
     ],
     k = function (t) {
         let { onClose: i, transitionState: n, classificationId: k } = t,
-            E = (0, s.bG)([x.A], () => x.A.getAgeVerificationWebviewUrl()),
-            j = (0, s.bG)([x.A], () => x.A.getIsLoadingAgeVerification()),
+            E = (0, s.bG)([b.A], () => b.A.getAgeVerificationWebviewUrl()),
+            j = (0, s.bG)([b.A], () => b.A.getIsLoadingAgeVerification()),
             f = r.useCallback(() => {
                 (i(), A.A.close());
             }, [i]),
@@ -67,19 +67,19 @@ let _ = [
                                         title: h.intl.string(h.t.N9WJMM),
                                         description: h.intl.string(h.t.NHq382),
                                         buttonText: h.intl.string(h.t["9iy4lB"]),
-                                        titleVariant: "text-md/medium",
+                                        titleVariant: "body-md/medium",
                                         onButtonPress: function () {
-                                            return window.open(b.d$.AGE_VERIFICATION_LINK, "_blank");
+                                            return window.open(x.d$.AGE_VERIFICATION_LINK, "_blank");
                                         },
                                     }),
                                 }),
                                 (0, e.jsx)(c.B, {
                                     align: "center",
                                     children: (0, e.jsx)(o.E, {
-                                        variant: "text-sm/medium",
+                                        variant: "body-sm/medium",
                                         color: "text-subtle",
                                         children: h.intl.format(h.t.ZbWsOF, {
-                                            learnMoreLink: b.d$.LEARN_MORE_UU_APPEAL_LINK,
+                                            learnMoreLink: x.d$.LEARN_MORE_UU_APPEAL_LINK,
                                         }),
                                     }),
                                 }),

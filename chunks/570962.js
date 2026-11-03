@@ -38,12 +38,12 @@ function A(e) {
                               (0, i.jsx)(d.D, { size: "lg", color: s.A.colors.TEXT_DEFAULT }),
                               (0, i.jsx)(c.E, {
                                   tag: "div",
-                                  variant: "heading-md/semibold",
+                                  variant: "heading-sm/semibold",
                                   color: "text-strong",
                                   children: h ?? _.intl.string(_.t.xC8Saf),
                               }),
                               (0, i.jsx)(c.E, {
-                                  variant: "text-sm/normal",
+                                  variant: "body-sm/normal",
                                   color: "text-muted",
                                   children: f ?? _.intl.string(_.t["0fc/DG"]),
                               }),

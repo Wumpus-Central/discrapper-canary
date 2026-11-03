@@ -1,4 +1,4 @@
-n.d(t, { m: () => _, A: () => y });
+n.d(t, { m: () => C, A: () => y });
 var i = n(477900),
     l = n(582128),
     s = n(62617);
@@ -25,8 +25,8 @@ var a = n(192308),
     u = n(696986),
     m = n(683071),
     g = n(534514),
-    x = n(834730),
-    h = n(17928),
+    h = n(834730),
+    x = n(17928),
     E = n(181658),
     j = n(260509),
     f = n(71393),
@@ -34,7 +34,7 @@ var a = n(192308),
     p = n(493540),
     A = n(469993),
     I = n(105292);
-function S(e) {
+function b(e) {
     let t,
         {
             resubmittingEnableRequest: n,
@@ -64,9 +64,9 @@ function S(e) {
             : null
     );
 }
-var C = n(98332);
-let _ = "role_subscriptions_eligibility_modal";
-function T(e) {
+var S = n(98332);
+let C = "role_subscriptions_eligibility_modal";
+function _(e) {
     let { guild: t, eligibility: l, eligibilityLoading: s, eligibilityError: r, refreshEligibility: c } = e;
     return (0, i.jsx)(o.$, {
         variant: "primary",
@@ -86,7 +86,7 @@ function T(e) {
                             guildId: t.id,
                         });
                 },
-                { modalKey: _ },
+                { modalKey: C },
             );
         },
         size: "md",
@@ -94,7 +94,7 @@ function T(e) {
         icon: d.E,
     });
 }
-function v(e) {
+function T(e) {
     let { guild: t, checkboxText: n } = e,
         {
             canSubmitAcceptance: s,
@@ -102,12 +102,12 @@ function v(e) {
             loading: a,
             submitAcceptTermsRequest: d,
         } = (function (e) {
-            let t = (0, h.bG)([f.A], () => f.A.getGuild(e)),
+            let t = (0, x.bG)([f.A], () => f.A.getGuild(e)),
                 [n, i] = l.useState(),
                 [s, r] = l.useState(!1),
                 a = (0, A.ME)(t);
             return {
-                canSubmitAcceptance: (0, h.bG)(
+                canSubmitAcceptance: (0, x.bG)(
                     [N.default],
                     () => {
                         let e = N.default.getCurrentUser();
@@ -131,12 +131,12 @@ function v(e) {
                 }, [e, void 0, a]),
             };
         })(t.id),
-        [g, x] = l.useState(!1);
+        [g, h] = l.useState(!1);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(c.S, {
                 onChange: function () {
-                    x((e) => !e);
+                    h((e) => !e);
                 },
                 checked: g,
                 label: n,
@@ -159,7 +159,7 @@ function v(e) {
         ],
     });
 }
-function b(e) {
+function v(e) {
     let { guild: t, monetizationEligibility: n } = e,
         {
             eligibilityLoading: l,
@@ -172,9 +172,9 @@ function b(e) {
         } = n;
     return o
         ? c
-            ? (0, i.jsx)(S, { ...n })
-            : (0, i.jsx)(v, { guild: t, checkboxText: d })
-        : (0, i.jsx)(T, {
+            ? (0, i.jsx)(b, { ...n })
+            : (0, i.jsx)(T, { guild: t, checkboxText: d })
+        : (0, i.jsx)(_, {
               guild: t,
               eligibility: a,
               eligibilityLoading: l,
@@ -185,14 +185,14 @@ function b(e) {
 function y(e) {
     let { guild: t, monetizationEligibility: n } = e;
     return (0, i.jsxs)("div", {
-        className: C.OQ,
+        className: S.OQ,
         children: [
             (0, i.jsx)("div", {
-                className: C.hV,
+                className: S.hV,
                 children: (0, i.jsx)(r, { alt: I.intl.string(I.t.Af4klP), width: "54%" }),
             }),
             (0, i.jsxs)("div", {
-                className: C.mv,
+                className: S.mv,
                 children: [
                     (0, i.jsx)(g.D, {
                         variant: "heading-xl/semibold",
@@ -200,13 +200,13 @@ function y(e) {
                         children: I.intl.string(I.t["PqYfh/"]),
                     }),
                     (0, i.jsx)(u.h, { size: 12 }),
-                    (0, i.jsx)(x.E, {
-                        variant: "text-md/normal",
+                    (0, i.jsx)(h.E, {
+                        variant: "body-md/normal",
                         color: "text-default",
                         children: I.intl.string(I.t["41wkMc"]),
                     }),
                     (0, i.jsx)(u.h, { size: 24 }),
-                    (0, i.jsx)(b, { guild: t, monetizationEligibility: n }),
+                    (0, i.jsx)(v, { guild: t, monetizationEligibility: n }),
                 ],
             }),
         ],

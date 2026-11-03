@@ -105,7 +105,7 @@ function N(e) {
         { headingId: L } = (0, I.k)(),
         y = null != t,
         D = (0, _.Oy)(n),
-        v =
+        b =
             null != n &&
             (0, i.jsx)("div", {
                 className: s()(p.headerGraphic, { [p.headerGraphicAnimated]: D }),
@@ -114,7 +114,7 @@ function N(e) {
                     children: (0, i.jsx)(u.v, { ...n }),
                 }),
             }),
-        b = (0, i.jsx)(E.D, {
+        v = (0, i.jsx)(E.D, {
             className: p.headerTitle,
             id: L,
             variant: o ?? "heading-lg/semibold",
@@ -122,13 +122,13 @@ function N(e) {
             children: l,
         });
     "end" === a &&
-        (b = (0, i.jsxs)(h.B, {
+        (v = (0, i.jsxs)(h.B, {
             direction: "horizontal",
             gap: 8,
             align: "center",
-            children: [b, (0, i.jsx)(C, { badge: r, position: a })],
+            children: [v, (0, i.jsx)(C, { badge: r, position: a })],
         }));
-    let P = null != n ? v : b,
+    let P = null != n ? b : v,
         M = (0, i.jsx)("header", {
             className: s()(p.section, p.header, { [p.headerCentered]: f }),
             children: (0, i.jsxs)(h.B, {
@@ -154,7 +154,7 @@ function N(e) {
                         }),
                     }),
                     "top" === a && (0, i.jsx)(C, { badge: r, position: a }),
-                    null != n && null != l && b,
+                    null != n && null != l && v,
                     null != d && (0, i.jsx)(O, { subtitle: d }),
                 ],
             }),
@@ -176,7 +176,7 @@ function O(e) {
     if (null == t) return null;
     let n = (0, i.jsx)(f.E, {
             className: p.headerSubtitle,
-            variant: "text-md/normal",
+            variant: "body-md/normal",
             color: "text-subtle",
             children: "object" == typeof t && "text" in t ? t.text : t,
         }),

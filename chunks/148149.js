@@ -2,8 +2,8 @@ i.d(e, { t: () => m });
 var n = i(477900),
     l = i(582128),
     s = i(703443),
-    t = i(651392),
-    d = i(527717),
+    d = i(651392),
+    t = i(527717),
     c = i(834730),
     r = i(657718),
     o = i(219052);
@@ -12,22 +12,22 @@ function m(a) {
             items: e,
             selectedId: i,
             defaultSelectedId: l,
-            onChange: d,
+            onChange: t,
             variant: c = "default",
             disabled: r = !1,
             keyboardActivation: m = "manual",
             panelAnimation: h = "none",
-            "aria-label": x,
-            "aria-labelledby": p,
+            "aria-label": p,
+            "aria-labelledby": j,
         } = a,
-        j = (0, s.J)();
-    return (0, n.jsxs)(t.tU, {
+        x = (0, s.J)();
+    return (0, n.jsxs)(d.tU, {
         className: o.vR,
         selectedKey: i,
         defaultSelectedKey: l,
         onSelectionChange: function (a) {
             let i = e.find((e) => e.id === a);
-            null != i && d?.(i.id);
+            null != i && t?.(i.id);
         },
         keyboardActivation: m,
         isDisabled: r,
@@ -38,21 +38,21 @@ function m(a) {
                 className: o.bB,
                 children: [
                     (0, n.jsx)("div", { className: o.H$ }),
-                    (0, n.jsx)(t.wb, {
+                    (0, n.jsx)(d.wb, {
                         className: o.ld,
-                        "aria-label": x,
-                        "aria-labelledby": p,
+                        "aria-label": p,
+                        "aria-labelledby": j,
                         children: e.map((a) =>
                             (0, n.jsx)(
                                 u,
-                                { item: a, formattedCount: null != a.count ? j.format(a.count) : void 0 },
+                                { item: a, formattedCount: null != a.count ? x.format(a.count) : void 0 },
                                 a.id,
                             ),
                         ),
                     }),
                 ],
             }),
-            (0, n.jsx)(t.T2, {
+            (0, n.jsx)(d.T2, {
                 className: o.C3,
                 "data-animation": h,
                 children: e.map((a) => (0, n.jsx)(b, { item: a, animation: h }, a.id)),
@@ -63,7 +63,7 @@ function m(a) {
 function u(a) {
     let { item: e, formattedCount: i } = a,
         s = l.useRef(null);
-    return (0, n.jsx)(t.oz, {
+    return (0, n.jsx)(d.oz, {
         id: e.id,
         ref: s,
         className: o.AS,
@@ -87,20 +87,20 @@ function u(a) {
                                 }),
                             (0, n.jsx)(c.E, {
                                 tag: "span",
-                                variant: "text-md/medium",
+                                variant: "body-md/medium",
                                 color: "none",
                                 children: e.label,
                             }),
                             null != i &&
                                 (0, n.jsxs)(c.E, {
                                     tag: "span",
-                                    variant: "text-sm/medium",
+                                    variant: "body-sm/medium",
                                     color: "none",
                                     children: ["(", i, ")"],
                                 }),
                         ],
                     }),
-                    (0, n.jsx)(d.i, { className: o.q3, "aria-hidden": "true" }),
+                    (0, n.jsx)(t.i, { className: o.q3, "aria-hidden": "true" }),
                 ],
             });
         },
@@ -108,5 +108,5 @@ function u(a) {
 }
 function b(a) {
     let { item: e, animation: i } = a;
-    return (0, n.jsx)(t.Kp, { id: e.id, className: o.nd, "data-animation": i, children: e.panel() });
+    return (0, n.jsx)(d.Kp, { id: e.id, className: o.nd, "data-animation": i, children: e.panel() });
 }

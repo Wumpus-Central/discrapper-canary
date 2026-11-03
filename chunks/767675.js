@@ -528,7 +528,7 @@ function ep(e) {
     return (0, n.jsxs)(S.B, {
         gap: 16,
         children: [
-            (0, n.jsx)(c.D, { variant: "heading-md/medium", children: v }),
+            (0, n.jsx)(c.D, { variant: "heading-sm/medium", children: v }),
             (0, n.jsx)(I.V, {
                 type: "top",
                 look: "brand",
@@ -550,7 +550,7 @@ function ey(e) {
         if (!(er[t] || void 0 === e)) return (0, n.jsx)(el, { label: t, value: e }, t);
     });
     return (0, n.jsxs)(S.B, {
-        children: [(0, n.jsx)(c.D, { variant: "heading-md/medium", children: eh.intl.string(eh.t["2AGBWH"]) }), ec(r)],
+        children: [(0, n.jsx)(c.D, { variant: "heading-sm/medium", children: eh.intl.string(eh.t["2AGBWH"]) }), ec(r)],
     });
 }
 let ef = {
@@ -621,7 +621,7 @@ function eA(e) {
             ),
         (0, n.jsxs)(S.B, {
             children: [
-                (0, n.jsx)(c.D, { variant: "heading-md/medium", children: eh.intl.string(eh.t.MKrFKE) }),
+                (0, n.jsx)(c.D, { variant: "heading-sm/medium", children: eh.intl.string(eh.t.MKrFKE) }),
                 ec(r),
                 (function (e) {
                     if (null != e.buffers)
@@ -636,7 +636,7 @@ function eA(e) {
                                 {
                                     className: ed.C2,
                                     children: [
-                                        (0, n.jsx)(c.D, { variant: "heading-md/medium", children: `Buffer: ${e.key}` }),
+                                        (0, n.jsx)(c.D, { variant: "heading-sm/medium", children: `Buffer: ${e.key}` }),
                                         ec(t),
                                     ],
                                 },
@@ -726,7 +726,7 @@ class eC extends a.PureComponent {
             ? (0, n.jsx)(R.y, { type: R.y.Type.SPINNING_CIRCLE })
             : (0, n.jsxs)(S.B, {
                   children: [
-                      (0, n.jsx)(c.D, { variant: "heading-md/medium", children: eh.intl.string(eh.t["gWbr/U"]) }),
+                      (0, n.jsx)(c.D, { variant: "heading-sm/medium", children: eh.intl.string(eh.t["gWbr/U"]) }),
                       ec(
                           (function (e) {
                               let t = null != e.hybridGdiBitBltFrames && null != e.hybridGdiPrintWindowFrames,
@@ -850,7 +850,7 @@ class ek extends a.PureComponent {
             className: $._8,
             children: [
                 (0, n.jsx)(c.D, {
-                    variant: "heading-md/medium",
+                    variant: "heading-sm/medium",
                     children: eh.intl.string(eh.t.wU9IN2) + (null != t ? " - " + t : ""),
                 }),
                 ec(s),
@@ -1029,7 +1029,7 @@ function eT() {
                         element: () =>
                             (0, n.jsx)(c.D, {
                                 className: $.HA,
-                                variant: "heading-md/medium",
+                                variant: "heading-sm/medium",
                                 children: o === eB.S7L.RTC_CONNECTED ? "Connected" : "Disconnected",
                             }),
                     },

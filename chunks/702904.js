@@ -16,7 +16,7 @@ function o() {
                     body: l.intl.string(l.t["OkWAc/"]),
                     confirmText: l.intl.string(l.t.BddRzS),
                     children: (0, i.jsx)(a.E, {
-                        variant: "text-sm/normal",
+                        variant: "body-sm/normal",
                         color: "text-subtle",
                         children: l.intl.format(l.t.BPDKoA, { helpdeskArticle: s.M }),
                     }),

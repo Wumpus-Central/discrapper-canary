@@ -1,60 +1,60 @@
-l.d(n, { A: () => g });
-var e = l(477900),
-    i = l(582128),
-    r = l(834730),
-    a = l(396583),
-    s = l(927813);
-let u = (0, l(945810).mj)({
+e.d(l, { A: () => g });
+var t = e(477900),
+    i = e(582128),
+    r = e(834730),
+    a = e(396583),
+    s = e(927813);
+let u = (0, e(945810).mj)({
     name: "2026-09-invite-expiring-soon",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var o = l(330936),
-    c = l(105292);
-let m = s.A.Millis.MINUTE;
-function d(t) {
-    let { parts: n, location: l } = t,
-        { enabled: i } = u.useConfig({ location: l });
+var o = e(330936),
+    c = e(105292);
+let d = s.A.Millis.MINUTE;
+function m(n) {
+    let { parts: l, location: e } = n,
+        { enabled: i } = u.useConfig({ location: e });
     return i
-        ? (0, e.jsx)(r.E, {
+        ? (0, t.jsx)(r.E, {
               tag: "span",
-              variant: "text-sm/normal",
+              variant: "body-sm/normal",
               color: "text-muted",
-              children: (function (t) {
-                  let { unit: n, value: l } = t;
-                  switch (n) {
+              children: (function (n) {
+                  let { unit: l, value: e } = n;
+                  switch (l) {
                       case "days":
-                          return c.intl.formatToPlainString(c.t.l7PkYW, { numDays: l });
+                          return c.intl.formatToPlainString(c.t.l7PkYW, { numDays: e });
                       case "hours":
-                          return c.intl.formatToPlainString(c.t.Ifgxdy, { numHours: l });
+                          return c.intl.formatToPlainString(c.t.Ifgxdy, { numHours: e });
                       case "minutes":
-                          return c.intl.formatToPlainString(c.t["5fXjSj"], { numMinutes: l });
+                          return c.intl.formatToPlainString(c.t["5fXjSj"], { numMinutes: e });
                   }
-              })(n),
+              })(l),
           })
         : null;
 }
-function g(t) {
-    var n;
-    let { invite: l, location: r } = t,
+function g(n) {
+    var l;
+    let { invite: e, location: r } = n,
         [s, u] = i.useState(() => Date.now()),
-        c = ((n = o.TA), l?.guild != null && null == l.target_application && l.guild.id !== n)
-            ? (function (t, n) {
-                  if (null == t || "" === t) return null;
-                  let l = Date.parse(t);
-                  if (Number.isNaN(l)) return null;
-                  let e = l - n;
-                  if (e <= 0 || e > 6048e5) return null;
-                  let i = Math.floor(e / 6e4);
+        c = ((l = o.TA), e?.guild != null && null == e.target_application && e.guild.id !== l)
+            ? (function (n, l) {
+                  if (null == n || "" === n) return null;
+                  let e = Date.parse(n);
+                  if (Number.isNaN(e)) return null;
+                  let t = e - l;
+                  if (t <= 0 || t > 6048e5) return null;
+                  let i = Math.floor(t / 6e4);
                   return i >= 1440
                       ? { unit: "days", value: Math.floor(i / 1440) }
                       : i >= 60
                         ? { unit: "hours", value: Math.floor(i / 60) }
                         : { unit: "minutes", value: Math.max(1, i) };
-              })(l?.expires_at, s)
+              })(e?.expires_at, s)
             : null;
-    return ((0, a.A)(() => u(Date.now()), null == c ? null : m), null == r || null == c)
+    return ((0, a.A)(() => u(Date.now()), null == c ? null : d), null == r || null == c)
         ? null
-        : (0, e.jsx)(d, { parts: c, location: r });
+        : (0, t.jsx)(m, { parts: c, location: r });
 }

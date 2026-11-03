@@ -1,8 +1,8 @@
 a.d(s, { A: () => R, n: () => C });
 var i = a(477900);
 a(582128);
-var t = a(131937),
-    l = a(661531),
+var l = a(131937),
+    t = a(661531),
     r = a(821609),
     n = a(192308),
     d = a(43990),
@@ -42,19 +42,19 @@ function R(e) {
         a,
         { partner: n } = e,
         R = ((s = (0, p.L)(T.PremiumTypes.TIER_2)), (a = (0, v.G)()), n === j.fg2.XBOX && !1 === s && a),
-        k = (0, x.A)("(max-width: 485px)"),
-        { analyticsLocations: y } = (0, m.Ay)(N.A.XBOX_PERKS_CONNECTION_FOOTER);
+        y = (0, x.A)("(max-width: 485px)"),
+        { analyticsLocations: k } = (0, m.Ay)(N.A.XBOX_PERKS_CONNECTION_FOOTER);
     return ((0, u.A)(
         {
-            type: t.ImpressionTypes.VIEW,
-            name: t.ImpressionNames.THIRD_PARTY_PARTNER_PERK,
+            type: l.ImpressionTypes.VIEW,
+            name: l.ImpressionNames.THIRD_PARTY_PARTNER_PERK,
             properties: { type: h.wX.CONNECTION_FOOTER, third_party_partner: h.NB },
         },
         { disableTrack: !R },
     ),
     R)
         ? (0, i.jsx)(m.f5, {
-              value: y,
+              value: k,
               children: (0, i.jsx)("div", {
                   className: O.cy,
                   children: (0, i.jsx)(d.N, {
@@ -75,7 +75,7 @@ function R(e) {
                                               className: O.C,
                                               children: [
                                                   (0, i.jsx)(c.E, {
-                                                      variant: "text-sm/semibold",
+                                                      variant: "body-sm/semibold",
                                                       color: "text-default",
                                                       children: E.intl.string(f.default.f1ygW4),
                                                   }),
@@ -91,11 +91,11 @@ function R(e) {
                                                                           className: O.kf,
                                                                           children: (0, i.jsx)(o.B, {
                                                                               size: "xs",
-                                                                              color: l.A.colors.ICON_SUBTLE,
+                                                                              color: t.A.colors.ICON_SUBTLE,
                                                                           }),
                                                                       }),
                                                                       (0, i.jsx)(c.E, {
-                                                                          variant: "text-xs/normal",
+                                                                          variant: "body-xs/normal",
                                                                           color: "text-default",
                                                                           children: E.intl.string(e),
                                                                       }),
@@ -124,7 +124,7 @@ function R(e) {
                                                       children: (0, i.jsx)(_.A, {
                                                           defaultTextOverride: E.intl.string(f.default.oBYFF3),
                                                           size: "sm",
-                                                          fullWidth: k,
+                                                          fullWidth: y,
                                                           subscriptionTier: T.pe.TIER_2,
                                                       }),
                                                   }),

@@ -12,9 +12,9 @@ let d = { earn: { name: "earn", start: 0, duration: 180 }, spend: { name: "spend
     m = { earn: { name: "earn", start: 0, duration: 180 }, spend: { name: "spend", start: 240, duration: 180 } };
 var f = t(462887),
     v = t(736653),
-    p = t(802814);
-let C = { width: 60, height: 60 };
-function g(e) {
+    b = t(802814);
+let p = { width: 60, height: 60 };
+function C(e) {
     let { currentAnimationType: n, animationTypeRef: t, onSetAnimationDurationMS: a, play: l, getDuration: u } = e,
         s = u(),
         i = null != s ? 1e3 * s : 3e3;
@@ -25,7 +25,7 @@ function g(e) {
             a(i);
         }, [a, i]));
 }
-function h(e) {
+function g(e) {
     var n;
     let l,
         u,
@@ -61,11 +61,11 @@ function h(e) {
                 Component: i,
             });
     return (
-        g({ currentAnimationType: o, ...d, ...v }),
-        (0, a.jsx)(f, { ...C, size: "custom", className: p.E$, useLottieDefaultColors: !0 })
+        C({ currentAnimationType: o, ...d, ...v }),
+        (0, a.jsx)(f, { ...p, size: "custom", className: b.E$, useLottieDefaultColors: !0 })
     );
 }
-function x(e) {
+function h(e) {
     var n;
     let l,
         u,
@@ -101,20 +101,20 @@ function x(e) {
                 Component: i,
             });
     return (
-        g({ currentAnimationType: o, ...m, ...v }),
-        (0, a.jsx)(f, { ...C, size: "custom", className: p.E$, useLottieDefaultColors: !0 })
+        C({ currentAnimationType: o, ...m, ...v }),
+        (0, a.jsx)(f, { ...p, size: "custom", className: b.E$, useLottieDefaultColors: !0 })
     );
 }
-let b = function (e) {
+let k = function (e) {
     let { themeOverride: n, ...t } = e,
         r = (0, v.Ay)();
-    return (0, f.q)(n ?? r) ? (0, a.jsx)(x, { ...t }) : (0, a.jsx)(h, { ...t });
+    return (0, f.q)(n ?? r) ? (0, a.jsx)(h, { ...t }) : (0, a.jsx)(g, { ...t });
 };
-var k = t(105292);
-function j() {
-    return (0, a.jsx)("div", { className: p.V8, "aria-hidden": !0 });
+var x = t(105292);
+function y() {
+    return (0, a.jsx)("div", { className: b.V8, "aria-hidden": !0 });
 }
-function y(e) {
+function j(e) {
     let {
             balance: n,
             variant: t = "default",
@@ -125,15 +125,15 @@ function y(e) {
             showNotificationBadge: m,
             onMouseDown: f,
             disabled: v,
-            isInModalOverlay: C,
-            className: g,
-            ref: h,
-            loading: x,
-            isInteractive: k,
+            isInModalOverlay: p,
+            className: C,
+            ref: g,
+            loading: h,
+            isInteractive: x,
         } = e,
-        [y, D] = (0, r.useState)(!1),
-        E = (0, r.useMemo)(() => (d === i.k.SELECTED ? p.wH : y ? p.mr : p.Ay), [d, y]),
-        A = k && !0 !== v,
+        [j, D] = (0, r.useState)(!1),
+        E = (0, r.useMemo)(() => (d === i.k.SELECTED ? b.wH : j ? b.mr : b.Ay), [d, j]),
+        A = x && !0 !== v,
         [S, T] = (0, r.useState)(2700),
         [L, M] = (0, r.useState)(null),
         N = (0, r.useRef)(null),
@@ -151,18 +151,18 @@ function y(e) {
         onMouseDown: f,
         onMouseEnter: A ? () => D(!0) : void 0,
         onMouseLeave: A ? () => D(!1) : void 0,
-        ref: h,
-        className: u()(p.kL, E, g, {
-            [p.Wf]: "round" === l,
-            [p.D0]: "overlay-secondary" === t,
-            [p.En]: x,
-            [p.dA]: C,
-            [p.r9]: v,
+        ref: g,
+        className: u()(b.kL, E, C, {
+            [b.Wf]: "round" === l,
+            [b.D0]: "overlay-secondary" === t,
+            [b.En]: h,
+            [b.dA]: p,
+            [b.r9]: v,
         }),
         children: [
             (0, a.jsx)("div", {
-                className: u()(p.hr, x ? p.nr : void 0),
-                children: (0, a.jsx)(b, {
+                className: u()(b.hr, h ? b.nr : void 0),
+                children: (0, a.jsx)(k, {
                     currentAnimationType: L,
                     animationTypeRef: N,
                     onSetAnimationDurationMS: T,
@@ -174,11 +174,11 @@ function y(e) {
                 onValueChange: w,
                 onValueReached: R,
                 targetTotalCounterTime: S,
-                className: x ? p.F : void 0,
-                textVariant: "sm" === s ? "text-sm/semibold" : "text-md/semibold",
+                className: h ? b.F : void 0,
+                textVariant: "sm" === s ? "body-sm/semibold" : "body-md/semibold",
                 textColor: "overlay-secondary" === t ? "text-overlay-light" : void 0,
             }),
-            m && (0, a.jsx)(j, {}),
+            m && (0, a.jsx)(y, {}),
         ],
     });
 }
@@ -194,50 +194,50 @@ function D(e) {
             ...m
         } = e,
         [f, v] = (0, r.useState)(!1),
-        [C, g] = (0, r.useState)(!1),
-        h = null === t;
+        [p, C] = (0, r.useState)(!1),
+        g = null === t;
     ((0, r.useEffect)(() => {
-        h &&
+        g &&
             !f &&
             (v(!0),
             setTimeout(() => {
-                g(!0);
+                C(!0);
             }, 500));
-    }, [h, v, f]),
+    }, [g, v, f]),
         (0, r.useEffect)(() => {
-            C && !h && v(!1);
-        }, [h, C]));
-    let x = h || f,
-        b = f ? null : t,
-        j = null != i,
+            p && !g && v(!1);
+        }, [g, p]));
+    let h = g || f,
+        k = f ? null : t,
+        y = null != i,
         D = (function (e) {
             let { loading: n, balance: t, hasUnread: a } = e;
             return n
-                ? k.intl.string(k.t.y0WGqP)
+                ? x.intl.string(x.t.y0WGqP)
                 : a
-                  ? k.intl.formatToPlainString(k.t.AgMngw, { balance: t })
-                  : k.intl.formatToPlainString(k.t.zPaLL9, { balance: t });
-        })({ loading: x, balance: b ?? 0, hasUnread: !0 === l }),
-        E = { ...m, balance: b, showNotificationBadge: l, disabled: o, loading: x, isInteractive: j };
-    return j
+                  ? x.intl.formatToPlainString(x.t.AgMngw, { balance: t })
+                  : x.intl.formatToPlainString(x.t.zPaLL9, { balance: t });
+        })({ loading: h, balance: k ?? 0, hasUnread: !0 === l }),
+        E = { ...m, balance: k, showNotificationBadge: l, disabled: o, loading: h, isInteractive: y };
+    return y
         ? (0, a.jsx)(s.D, {
               innerRef: d,
-              onClick: x ? void 0 : i,
+              onClick: h ? void 0 : i,
               "aria-expanded": c,
               "aria-haspopup": null != c ? "dialog" : void 0,
               "aria-label": D,
-              "aria-busy": x,
-              className: u()(p.vk, { [p.r9]: o }),
+              "aria-busy": h,
+              className: u()(b.vk, { [b.r9]: o }),
               id: n ?? "balance-widget-pill",
-              children: (0, a.jsx)(y, { ...E }),
+              children: (0, a.jsx)(j, { ...E }),
           })
         : (0, a.jsx)("div", {
               role: "img",
               "aria-label": D,
-              "aria-busy": x,
-              className: p.Kc,
+              "aria-busy": h,
+              className: b.Kc,
               id: n,
-              children: (0, a.jsx)(y, { ...E }),
+              children: (0, a.jsx)(j, { ...E }),
           });
 }
 let E = 588245 != t.j ? D : null;

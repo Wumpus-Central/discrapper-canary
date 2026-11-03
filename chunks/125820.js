@@ -13,8 +13,8 @@ var a = t(477900),
     N = t(976860),
     E = t(427495),
     j = t(738822),
-    g = t(561844),
-    o = t(617986),
+    o = t(561844),
+    g = t(617986),
     p = t(190107),
     v = t(652215),
     A = t(613057),
@@ -42,7 +42,7 @@ function O(s) {
     l.useEffect(() => {
         I ||
             (null == t
-                ? ((0, g.av)({
+                ? ((0, o.av)({
                       questId: r,
                       event: v.HAw.QUEST_SHARE_LINK_DEEP_LINKED_INTO_DESKTOP_CLIENT,
                       properties: {},
@@ -51,7 +51,7 @@ function O(s) {
                   m.A.openNativeAppModal("quests", v.e$_.DEEP_LINK, { type: A.XK.QUEST_HOME, params: { questId: r } }))
                 : t === v.fAW.OPEN_FAIL && (0, N.bG)({ pathname: v.BVt.QUEST_HOME, hash: r }));
     }, [t, r]);
-    let S = l.useCallback(() => (0, o.QA)(r), [r]);
+    let S = l.useCallback(() => (0, g.QA)(r), [r]);
     if (I)
         return (0, a.jsxs)("div", {
             className: f.MY,
@@ -82,7 +82,7 @@ function O(s) {
                                     ],
                                 }),
                             (0, a.jsx)(c.E, {
-                                variant: "text-md/normal",
+                                variant: "body-md/normal",
                                 className: f.G3,
                                 children: _.intl.string(_.t.NweJI8),
                             }),

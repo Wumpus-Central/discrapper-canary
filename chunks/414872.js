@@ -49,7 +49,7 @@ function N() {
                             children: [
                                 (0, i.jsx)(m.t, { size: "xs", color: "white" }),
                                 (0, i.jsx)(f.E, {
-                                    variant: "text-xs/medium",
+                                    variant: "body-xs/medium",
                                     color: "text-overlay-light",
                                     lineClamp: 1,
                                     children: p.intl.string(p.t["BMw+7I"]),

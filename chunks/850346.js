@@ -32,7 +32,7 @@ let u = {
                     className: r()(o.frame, o[t]),
                     children: n
                         ? (0, l.jsx)(i.E, {
-                              variant: "text-sm/normal",
+                              variant: "body-sm/normal",
                               color: "text-muted",
                               children:
                                   "Published \u2014 the real notice unmounts here, and the tab appears for members.",
@@ -82,7 +82,7 @@ function g(e, t, a, l) {
     };
 }
 var A = a(81253);
-let v = [
+let b = [
         g("left-2", _.a.LEADERBOARD, 0, 1, { heading: "Top chatters this week" }),
         g("right-1", _.a.LEADERBOARD, 1, 0, { heading: "Top boosters" }),
         g("left-1", _.a.IMAGE_TEXT, 0, 0, {
@@ -93,7 +93,7 @@ let v = [
         }),
         g("right-2", _.a.IMAGE_TEXT, 1, 1, { title: "Events", body: "Game night every Friday." }),
     ],
-    f = v
+    v = b
         .filter((e) => {
             let { requires_hydration: t } = e;
             return t;
@@ -102,7 +102,7 @@ let v = [
             let { id: t } = e;
             return t;
         }),
-    x = {
+    f = {
         stat: p.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
         week_start_ts: 1756512e3,
         next_stat: p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
@@ -133,7 +133,7 @@ let v = [
             },
         ],
     },
-    b = {
+    y = {
         title: "Server Hub Page",
         stories: [
             {
@@ -152,7 +152,7 @@ let v = [
                                         type: "GUILD_SPACE_HYDRATE_START",
                                         guildId: t,
                                         requestId: e,
-                                        widgetIds: f,
+                                        widgetIds: v,
                                     }),
                                     "loading" !== n)
                                 ) {
@@ -167,9 +167,9 @@ let v = [
                                         type: "GUILD_SPACE_HYDRATE_SUCCESS",
                                         guildId: t,
                                         requestId: e,
-                                        widgets: f.map((e) => ({
+                                        widgets: v.map((e) => ({
                                             id: e,
-                                            data: "success" === n ? { type: _.a.LEADERBOARD, ...x } : null,
+                                            data: "success" === n ? { type: _.a.LEADERBOARD, ...f } : null,
                                         })),
                                     });
                                 }
@@ -177,7 +177,7 @@ let v = [
                             t);
                     return (0, l.jsx)("div", {
                         className: r()(A.frame, A[a]),
-                        children: (0, l.jsx)(m.A, { canEdit: !0, guildId: i, widgets: v }),
+                        children: (0, l.jsx)(m.A, { canEdit: !0, guildId: i, widgets: b }),
                     });
                 },
                 controls: {
@@ -209,7 +209,7 @@ let v = [
         ],
     };
 a(321073);
-var y = a(17928),
+var x = a(17928),
     S = a(331322),
     E = a(994500),
     w = a(711014),
@@ -255,7 +255,7 @@ function O(e) {
     let { label: t, className: a, children: s } = e;
     return (0, l.jsxs)("div", {
         className: r()(M.Gt, a),
-        children: [(0, l.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), s],
+        children: [(0, l.jsx)(i.E, { variant: "body-xs/medium", color: "text-muted", children: t }), s],
     });
 }
 let H = {
@@ -265,10 +265,10 @@ let H = {
         let t,
             a,
             { state: n, stat: r, currentUserPlacement: d } = e,
-            o = (0, y.bG)([I.default], () => I.default.getCurrentUser()?.id),
-            u = (0, y.bG)([w.Ay], () => w.Ay.getFlattenedGuildIds()[0]),
+            o = (0, x.bG)([I.default], () => I.default.getCurrentUser()?.id),
+            u = (0, x.bG)([w.Ay], () => w.Ay.getFlattenedGuildIds()[0]),
             c =
-                ((t = (0, y.yK)([E.A], () => E.A.getFriendIDs())),
+                ((t = (0, x.yK)([E.A], () => E.A.getFriendIDs())),
                 s.useMemo(
                     () =>
                         t
@@ -286,7 +286,7 @@ let H = {
                 ));
         if (null == u || 0 === c.length)
             return (0, l.jsx)(i.E, {
-                variant: "text-sm/normal",
+                variant: "body-sm/normal",
                 color: "text-muted",
                 children: "Waiting for the client to load a guild and your friends list\u2026",
             });
@@ -363,7 +363,7 @@ let H = {
                                       align: "center",
                                       gap: 8,
                                       children: [
-                                          (0, l.jsx)(i.E, { variant: "text-sm/normal", children: "Winner" }),
+                                          (0, l.jsx)(i.E, { variant: "body-sm/normal", children: "Winner" }),
                                           (0, l.jsx)(k.J, { guildId: u, userId: o, winnerData: C, leaderData: null }),
                                       ],
                                   }),
@@ -373,7 +373,7 @@ let H = {
                                       gap: 8,
                                       children: [
                                           (0, l.jsx)(i.E, {
-                                              variant: "text-sm/normal",
+                                              variant: "body-sm/normal",
                                               children: "Winner on a streak",
                                           }),
                                           (0, l.jsx)(k.J, { guildId: u, userId: o, winnerData: P, leaderData: null }),
@@ -384,7 +384,7 @@ let H = {
                                       align: "center",
                                       gap: 8,
                                       children: [
-                                          (0, l.jsx)(i.E, { variant: "text-sm/normal", children: "Current leader" }),
+                                          (0, l.jsx)(i.E, { variant: "body-sm/normal", children: "Current leader" }),
                                           (0, l.jsx)(k.J, { guildId: u, userId: o, winnerData: null, leaderData: U }),
                                       ],
                                   }),
@@ -453,7 +453,7 @@ function F(e) {
     let { label: t, className: a, children: s } = e;
     return (0, l.jsxs)("div", {
         className: `${M.Gt} ${a}`,
-        children: [(0, l.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), s],
+        children: [(0, l.jsx)(i.E, { variant: "body-xs/medium", color: "text-muted", children: t }), s],
     });
 }
 let q = {
@@ -466,9 +466,9 @@ let q = {
                 let t,
                     a,
                     { state: n } = e,
-                    r = (0, y.bG)([w.Ay], () => w.Ay.getFlattenedGuildIds()[0]),
+                    r = (0, x.bG)([w.Ay], () => w.Ay.getFlattenedGuildIds()[0]),
                     d =
-                        ((t = (0, y.yK)([E.A], () => E.A.getFriendIDs())),
+                        ((t = (0, x.yK)([E.A], () => E.A.getFriendIDs())),
                         s.useMemo(
                             () =>
                                 t
@@ -486,7 +486,7 @@ let q = {
                         ));
                 if (null == r || 0 === d.length)
                     return (0, l.jsx)(i.E, {
-                        variant: "text-sm/normal",
+                        variant: "body-sm/normal",
                         color: "text-muted",
                         children: "Waiting for the client to load a guild and your friends list\u2026",
                     });
@@ -723,14 +723,14 @@ function es(e) {
     let { label: t, className: a, children: s } = e;
     return (0, l.jsxs)("div", {
         className: `${Z.Gt} ${a}`,
-        children: [(0, l.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), s],
+        children: [(0, l.jsx)(i.E, { variant: "body-xs/medium", color: "text-muted", children: t }), s],
     });
 }
 function en(e) {
     let { label: t, className: a, children: s } = e;
     return (0, l.jsxs)("div", {
         className: `${M.Gt} ${a}`,
-        children: [(0, l.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), s],
+        children: [(0, l.jsx)(i.E, { variant: "body-xs/medium", color: "text-muted", children: t }), s],
     });
 }
 function er(e) {
@@ -769,7 +769,7 @@ let ei = {
         id: "guild-space",
         name: "Server Hub",
         groups: [
-            b,
+            y,
             u,
             {
                 title: "Server Hub Widget Framework",
@@ -825,7 +825,7 @@ let ei = {
                             let t,
                                 a,
                                 { state: n, mode: r, viewerPlacement: i } = e,
-                                d = (0, y.bG)([w.Ay], () => w.Ay.getFlattenedGuildIds()[0]),
+                                d = (0, x.bG)([w.Ay], () => w.Ay.getFlattenedGuildIds()[0]),
                                 o = (function (e, t) {
                                     switch (e) {
                                         case "populated":
@@ -841,8 +841,8 @@ let ei = {
                                     }
                                 })(
                                     n,
-                                    ((t = (0, y.bG)([I.default], () => I.default.getCurrentUser()?.id)),
-                                    (a = (0, y.yK)([E.A], () => E.A.getFriendIDs())),
+                                    ((t = (0, x.bG)([I.default], () => I.default.getCurrentUser()?.id)),
+                                    (a = (0, x.yK)([E.A], () => E.A.getFriendIDs())),
                                     s.useMemo(() => {
                                         let e = a.filter((e) => null != I.default.getUser(e)).slice(0, 5);
                                         return ("listed" === i && null != t && e.splice(1, 1, t), e);

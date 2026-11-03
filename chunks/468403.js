@@ -18,6 +18,6 @@ function c(t) {
             { variant: "secondary", text: l.intl.string(l.t["ETE/oC"]), onClick: n },
             { variant: "critical-primary", text: l.intl.string(l.t.R9GHya), onClick: o },
         ],
-        children: (0, a.jsx)(e.E, { variant: "text-md/normal", children: l.intl.string(l.t.nmBUv7) }),
+        children: (0, a.jsx)(e.E, { variant: "body-md/normal", children: l.intl.string(l.t.nmBUv7) }),
     });
 }

@@ -5,8 +5,8 @@ var n = i(477900),
     l = i(834730),
     c = i(664121),
     a = i(998445),
-    u = i(950305),
-    o = i(687966),
+    o = i(950305),
+    u = i(687966),
     d = i(253932),
     x = i(975571),
     h = i(738822),
@@ -20,8 +20,8 @@ function T(t) {
             onClose: i,
             questContent: c,
             adCreativeType: a,
-            gamePublisher: u,
-            gameTitle: o,
+            gamePublisher: o,
+            gameTitle: u,
             cosponsorName: T,
             isVideoQuest: f,
             returnRef: C,
@@ -46,12 +46,12 @@ function T(t) {
                     adCreativeType: a,
                     isTargetedDisclosure: null != p,
                     isContextualDisclosure: _,
-                    gamePublisher: u,
-                    gameTitle: o,
+                    gamePublisher: o,
+                    gameTitle: u,
                     cosponsorName: T,
                     isVideoQuest: f,
                 }),
-            [a, u, o, T, f, p, _],
+            [a, o, u, T, f, p, _],
         );
     return (0, n.jsxs)(r.a, {
         size: "sm",
@@ -61,10 +61,10 @@ function T(t) {
         title: E.intl.string(E.t.GcsZKJ),
         actions: [{ onClick: () => i(), text: E.intl.string(E.t.cpT0Cq) }],
         children: [
-            (0, n.jsx)(l.E, { variant: "text-sm/medium", color: "text-default", className: S.gt, children: A }),
+            (0, n.jsx)(l.E, { variant: "body-sm/medium", color: "text-default", className: S.gt, children: A }),
             (0, n.jsx)(j, { targetedTraits: p, isContextualDisclosure: _ }),
             (0, n.jsx)(l.E, {
-                variant: "text-xs/medium",
+                variant: "body-xs/medium",
                 color: "text-muted",
                 children: E.intl.format(E.t.tzq9Wa, {
                     privacySettingsUrl: x.A.getArticleURL(g.MVz.QUESTS_PRIVACY_CONTROLS),
@@ -86,15 +86,15 @@ function j(t) {
         className: S.OK,
         children: [
             s && (0, n.jsx)(f, { icon: a.GlobeEarthIcon, children: E.intl.string(E.t.xQSdPv) }),
-            r && (0, n.jsx)(f, { icon: u.UserIcon, children: E.intl.string(E.t.mYt7hQ) }),
-            l && (0, n.jsx)(f, { icon: o.GameControllerIcon, children: E.intl.string(E.t.XAsWxQ) }),
+            r && (0, n.jsx)(f, { icon: o.UserIcon, children: E.intl.string(E.t.mYt7hQ) }),
+            l && (0, n.jsx)(f, { icon: u.GameControllerIcon, children: E.intl.string(E.t.XAsWxQ) }),
         ],
     });
 }
 function f(t) {
     let { icon: e, children: i } = t;
     return (0, n.jsxs)(l.E, {
-        variant: "text-sm/medium",
+        variant: "body-sm/medium",
         tag: "li",
         className: S.hD,
         children: [(0, n.jsx)(e, { size: "xs", color: "currentColor" }), i],

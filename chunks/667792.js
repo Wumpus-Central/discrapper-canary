@@ -6,8 +6,8 @@ var s = n(477900),
     l = n(889137),
     u = n(17928),
     o = n(189213),
-    c = n(231723),
-    d = n(331322),
+    d = n(231723),
+    c = n(331322),
     m = n(95477),
     h = n(834730),
     g = n(631670),
@@ -26,23 +26,23 @@ function E(e) {
             let e = b.default.getCurrentUser();
             return (a()(null != e, "ChangeUsernameModal: currentUser cannot be undefined"), e);
         }),
-        k = r.useMemo(() => v.Ay.canEditDiscriminator(E) && !E.hasUniqueUsername(), [E]),
-        [y, w] = r.useState(E.username),
+        y = r.useMemo(() => v.Ay.canEditDiscriminator(E) && !E.hasUniqueUsername(), [E]),
+        [k, w] = r.useState(E.username),
         [R, S] = r.useState(E.discriminator),
         [q, A] = r.useState(""),
         [L, T] = r.useState(!1),
         W = (0, u.bG)([f.A], () => f.A.getErrors()),
         z = E.hasUniqueUsername(),
-        M = (0, x.i)(y, z, !1, E.username),
+        M = (0, x.i)(k, z, !1, E.username),
         B = r.useRef(null),
         D = r.useMemo(() => W?.username?.[0] ?? W?.discriminator?.[0], [W]);
     r.useEffect(() => {
-        n === c.ip.ENTERED && B.current?.focus();
+        n === d.ip.ENTERED && B.current?.focus();
     }, [n]);
     let N = R !== E.discriminator;
     async function P(e) {
         (e.preventDefault(), T(!0));
-        let t = await (0, g._L)({ username: y, discriminator: k ? R : void 0, password: q });
+        let t = await (0, g._L)({ username: k, discriminator: y ? R : void 0, password: q });
         (T(!1), t?.ok && i());
     }
     return (0, s.jsx)("form", {
@@ -56,12 +56,12 @@ function E(e) {
                 { variant: "secondary", text: j.intl.string(j.t["ETE/oC"]), onClick: i },
                 { variant: "primary", text: j.intl.string(j.t.i4jeWR), type: "submit", loading: L },
             ],
-            children: (0, s.jsxs)(d.B, {
+            children: (0, s.jsxs)(c.B, {
                 gap: 16,
                 children: [
                     (0, s.jsxs)("div", {
                         children: [
-                            (0, s.jsxs)(d.B, {
+                            (0, s.jsxs)(c.B, {
                                 direction: "horizontal",
                                 gap: 4,
                                 children: [
@@ -69,7 +69,7 @@ function E(e) {
                                         label: j.intl.string(j.t.TWzdWj),
                                         error: D,
                                         name: "username",
-                                        value: y,
+                                        value: k,
                                         maxLength: U.d0r,
                                         onChange: w,
                                         inputRef: B,
@@ -89,14 +89,14 @@ function E(e) {
                                             maxLength: 4,
                                             value: R,
                                             onChange: S,
-                                            disabled: !k,
+                                            disabled: !y,
                                             leading: "#",
                                         }),
                                 ],
                             }),
                             N
                                 ? (0, s.jsx)(h.E, {
-                                      variant: "text-xs/normal",
+                                      variant: "body-xs/normal",
                                       color: "text-default",
                                       className: C.Z,
                                       children: j.intl.string(j.t.mConUX),

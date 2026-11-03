@@ -17,19 +17,19 @@ var s = i(477900),
     v = i(825484),
     N = i(866665),
     C = i(408278),
-    p = i(173936),
-    A = i(821609),
-    y = i(743368),
+    y = i(173936),
+    p = i(821609),
+    A = i(743368),
     E = i(736653),
     k = i(291749),
     _ = i(590202),
     L = i(971649),
     M = i(651892),
     T = i(620954),
-    I = i(814793),
-    w = i(557637),
-    W = i(918338),
-    b = i(201805),
+    b = i(814793),
+    I = i(557637),
+    w = i(918338),
+    W = i(201805),
     D = i(491145),
     P = i(190107),
     R = i(818348),
@@ -41,7 +41,7 @@ function q(t) {
         o = (0, h.M)(l) ? R.NJ.DARK : R.NJ.LIGHT,
         d = (0, L.wW)(),
         u = (0, L.go)(),
-        x = (0, I.E0)(e.config);
+        x = (0, b.E0)(e.config);
     async function f() {
         (await r?.(),
             (0, T.pu)(e, {
@@ -55,9 +55,9 @@ function q(t) {
             let t = e.config.ctaConfig?.subtitle;
             return null != t
                 ? t
-                : (0, I.pv)(e.config) !== g.Z.GAMEPLAY ||
+                : (0, b.pv)(e.config) !== g.Z.GAMEPLAY ||
                     e.config.features.includes(P.Li.NON_GAMING_PLAY_QUEST) ||
-                    (0, I.ui)(e)
+                    (0, b.ui)(e)
                   ? O.intl.string(O.t.y8Xf3k)
                   : O.intl.string(O.t["wirwN+"]);
         }, [e]),
@@ -69,11 +69,11 @@ function q(t) {
             subtitle: q,
             ctaIconPosition: "end",
         },
-        { isLoading: G } = (0, w.zT)();
+        { isLoading: G } = (0, I.zT)();
     n.useEffect(() => {
         G || a();
     }, [G, a]);
-    let Y = (0, b.Lk)({
+    let Y = (0, W.Lk)({
         isShareable: x,
         questId: e.id,
         trackingCtx: n.useMemo(
@@ -84,12 +84,12 @@ function q(t) {
     return (0, s.jsxs)("div", {
         className: S.kL,
         children: [
-            (0, s.jsx)(w._M, {
+            (0, s.jsx)(I._M, {
                 id: "hero-display",
                 children: (t) =>
-                    (0, s.jsx)(W.A, {
+                    (0, s.jsx)(w.A, {
                         quest: e,
-                        imageSize: (0, W.k)(),
+                        imageSize: (0, w.k)(),
                         variant: "modalPanel",
                         isInteracting: !0,
                         assetRef: t,
@@ -97,7 +97,7 @@ function q(t) {
             }),
             (0, s.jsx)("div", {
                 className: S.Lt,
-                children: (0, s.jsx)(w._M, {
+                children: (0, s.jsx)(I._M, {
                     id: "partner-logotype",
                     children: (t) =>
                         (0, s.jsx)("img", {
@@ -115,15 +115,15 @@ function q(t) {
                         className: S.Ly,
                         children: [
                             (0, s.jsx)(j.D, {
-                                variant: "heading-md/semibold",
+                                variant: "heading-sm/semibold",
                                 color: "text-strong",
                                 className: S.fx,
                                 children: z.title,
                             }),
-                            (0, s.jsx)(c.E, { variant: "text-sm/medium", color: "text-subtle", children: z.subtitle }),
+                            (0, s.jsx)(c.E, { variant: "body-sm/medium", color: "text-subtle", children: z.subtitle }),
                         ],
                     }),
-                    (0, s.jsx)(w._M, {
+                    (0, s.jsx)(I._M, {
                         id: "partner-game-tile",
                         children: (t) =>
                             (0, s.jsx)("img", {
@@ -147,18 +147,18 @@ function q(t) {
                             (0, s.jsx)(N.m, {
                                 text: O.intl.string(O.t.WmfZHZ),
                                 children: (0, s.jsx)(C.K, {
-                                    icon: p.LinkIcon,
+                                    icon: y.LinkIcon,
                                     onClick: Y,
                                     "aria-label": O.intl.string(O.t.WmfZHZ),
                                     variant: "secondary",
                                 }),
                             }),
-                        (0, s.jsx)(A.$, {
+                        (0, s.jsx)(p.$, {
                             variant: z.ctaVariant,
                             text: z.ctaText,
                             onClick: z.onClickCta,
                             fullWidth: !0,
-                            icon: y.W,
+                            icon: A.W,
                             iconPosition: z.ctaIconPosition,
                         }),
                     ],
@@ -169,7 +169,7 @@ function q(t) {
 }
 function z(t) {
     let { quest: e, location: i } = t;
-    return (0, s.jsx)(w.y5, {
+    return (0, s.jsx)(I.y5, {
         source: i,
         adCreativeId: e.id,
         adCreativeType: f.p.QUEST,
@@ -187,7 +187,7 @@ function Y(t) {
         onClose: e,
         transitionState: i,
         children: (0, s.jsx)(c.E, {
-            variant: "text-md/medium",
+            variant: "body-md/medium",
             color: "text-subtle",
             children: O.intl.string(O.t.Ij97SL),
         }),
@@ -206,16 +206,16 @@ function Z(t) {
         } = t,
         v = m.uF.REWARD_MODAL,
         [N, C] = n.useState(!0),
-        p = e.config.features.some((t) => P.Tz.has(t)),
-        A = n.useCallback(async () => {
-            if (p) {
+        y = e.config.features.some((t) => P.Tz.has(t)),
+        p = n.useCallback(async () => {
+            if (y) {
                 (c(), (0, o.closeAllModals)());
                 return;
             }
             (await (0, x.f7)(e.config.ctaConfig?.link)) && (c(), (0, o.closeAllModals)());
-        }, [e.config.ctaConfig?.link, c, p]);
+        }, [e.config.ctaConfig?.link, c, y]);
     if (h) return (0, s.jsx)(Y, { onClose: c, transitionState: a });
-    let y = g || N;
+    let A = g || N;
     return (0, s.jsx)(u.R, {
         questOrQuests: e,
         questContent: v,
@@ -226,18 +226,18 @@ function Z(t) {
                 transitionState: a,
                 size: l.rI.DYNAMIC,
                 className: G.yl,
-                "aria-label": y ? O.intl.string(O.t.ZTNur7) : void 0,
+                "aria-label": A ? O.intl.string(O.t.ZTNur7) : void 0,
                 parentComponent: "QuestRewardModalBase",
                 children: [
                     (0, s.jsx)("div", {
                         className: G.b,
                         children: (0, s.jsx)(r.J, { size: "xs", variant: "overlay-secondary", onClick: c }),
                     }),
-                    y ? (0, s.jsx)(d.y, { className: G.u1, type: d.y.Type.WANDERING_CUBES }) : null,
+                    A ? (0, s.jsx)(d.y, { className: G.u1, type: d.y.Type.WANDERING_CUBES }) : null,
                     (0, s.jsx)("div", {
                         ref: t,
                         className: G.BM,
-                        style: { visibility: y ? "hidden" : "visible" },
+                        style: { visibility: A ? "hidden" : "visible" },
                         children: (0, s.jsxs)("div", {
                             className: G.jE,
                             "data-testid": "quest-reward-modal",
@@ -249,7 +249,7 @@ function Z(t) {
                                         quest: e,
                                         sourceQuestContent: i,
                                         onLoadComplete: () => C(!1),
-                                        preCtaClick: A,
+                                        preCtaClick: p,
                                         location: j,
                                     }),
                                 }),

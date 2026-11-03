@@ -19,8 +19,8 @@ function g(e) {
             actions: n,
             breadcrumb: g,
             project: x,
-            onOpenProjectSettings: j,
-            transparent: b = !1,
+            onOpenProjectSettings: b,
+            transparent: j = !1,
             onBack: v,
             hideShareTarget: y = !1,
         } = e,
@@ -29,7 +29,7 @@ function g(e) {
         N = (0, d.Ay)(y ? null : (x ?? null));
     return (0, r.jsx)(u.A, {
         hideSearch: !0,
-        transparent: b,
+        transparent: j,
         toolbar: n,
         className: h.wx,
         "aria-label": t,
@@ -66,14 +66,14 @@ function g(e) {
                           ],
                       })
                     : null,
-                null != x && null != j
+                null != x && null != b
                     ? (0, r.jsx)(l.m, {
                           asContainer: !0,
                           text: w,
                           position: "bottom",
                           children: (0, r.jsx)(a.D, {
                               className: h.FF,
-                              onClick: j,
+                              onClick: b,
                               "aria-label": w,
                               children: (0, r.jsx)(f.A, { project: x, size: "header" }),
                           }),
@@ -86,7 +86,7 @@ function g(e) {
                               (0, r.jsx)(u.A.Divider, { className: h.uN }),
                               (0, r.jsx)(c.E, {
                                   tag: "span",
-                                  variant: "text-sm/medium",
+                                  variant: "body-sm/medium",
                                   color: "text-muted",
                                   lineClamp: 1,
                                   className: h.l0,

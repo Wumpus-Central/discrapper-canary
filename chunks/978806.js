@@ -1,23 +1,23 @@
-t.d(l, { A: () => Z });
-var e = t(477900),
-    i = t(582128),
-    s = t(503698),
-    n = t.n(s),
-    r = t(540185),
-    c = t(403581),
-    d = t(661531),
-    o = t(173936),
-    p = t(245604),
-    A = t(62010),
-    u = t(939249),
-    m = t(834730),
-    x = t(793574),
-    E = t(688810),
-    L = t(206828),
-    I = t(587895),
-    N = t(429913),
-    g = t(611371),
-    j = t(403362);
+i.d(l, { A: () => Z });
+var e = i(477900),
+    t = i(582128),
+    s = i(503698),
+    n = i.n(s),
+    r = i(540185),
+    c = i(403581),
+    d = i(661531),
+    o = i(173936),
+    p = i(245604),
+    A = i(62010),
+    u = i(939249),
+    m = i(834730),
+    E = i(793574),
+    x = i(688810),
+    L = i(206828),
+    I = i(587895),
+    N = i(429913),
+    g = i(611371),
+    j = i(403362);
 let v = {
     LEAGUE_OF_LEGENDS: "1402418696126992445",
     VALORANT: "700136079562375258",
@@ -31,8 +31,8 @@ let v = {
     SILKSONG: "1413176957381771337",
 };
 Object.values(v);
-var _ = t(229231),
-    h = t(105292);
+var _ = i(229231),
+    h = i(105292);
 let f = {
     [r.x.FAVORITE_GAMES]: {
         placeholder: () => ({ variant: "details", applicationId: v.LEAGUE_OF_LEGENDS }),
@@ -73,57 +73,57 @@ let f = {
 function R(a) {
     return f[a.type].placeholder(a);
 }
-var T = t(210598),
-    P = t(735321),
-    D = t(384377),
-    O = t(492280),
-    S = t(589812),
-    C = t(598748),
-    G = t(17928),
-    b = t(141628),
-    y = t(531913),
-    k = t(287809),
-    W = t(183555),
-    F = t(378145);
+var T = i(210598),
+    P = i(735321),
+    D = i(384377),
+    O = i(492280),
+    b = i(589812),
+    y = i(598748),
+    S = i(17928),
+    C = i(141628),
+    G = i(531913),
+    k = i(287809),
+    W = i(183555),
+    F = i(378145);
 function U(a) {
-    let l = (0, G.bG)([k.default], () => k.default.getCurrentUser());
+    let l = (0, S.bG)([k.default], () => k.default.getCurrentUser());
     return null == l ? null : (0, e.jsx)(w, { ...a, userId: l.id });
 }
 function w(a) {
-    let { applicationId: l, size: t = "default", userId: i } = a,
-        s = (0, y.A)(i, l),
-        n = s.surfaceConfigs[C.m.ADD_WIDGET_PREVIEW];
+    let { applicationId: l, size: i = "default", userId: t } = a,
+        s = (0, G.A)(t, l),
+        n = s.surfaceConfigs[y.m.ADD_WIDGET_PREVIEW];
     return null == n
         ? null
         : (0, e.jsx)("div", {
               className: F.kL,
-              children: (0, e.jsx)(S.kH, {
+              children: (0, e.jsx)(b.kH, {
                   ...s,
-                  surface: C.m.ADD_WIDGET_PREVIEW,
+                  surface: y.m.ADD_WIDGET_PREVIEW,
                   surfaceConfig: n,
-                  layoutProps: { small: "small" === t },
+                  layoutProps: { small: "small" === i },
               }),
           });
 }
 function V(a) {
-    let { applicationId: l, size: t = "default" } = a,
+    let { applicationId: l, size: i = "default" } = a,
         { trackUserProfileAction: s } = (0, W.NJ)(),
         n = (0, N.h)(l),
         { hasAlreadyLinked: r, canStartAuthorization: c, startAuthorization: d, fetched: o } = (0, L.RD)(n),
-        { analyticsLocations: p } = (0, E.Ay)(x.A.USER_PROFILE_APPLICATION_WIDGET),
-        A = i.useCallback(() => {
+        { analyticsLocations: p } = (0, x.Ay)(E.A.USER_PROFILE_APPLICATION_WIDGET),
+        A = t.useCallback(() => {
             c &&
                 (s({ action: "PRESS_APPLICATION_WIDGET_PLACEHOLDER_CONNECT", applicationId: l }),
                 d({ analyticsLocations: p }));
         }, [c, s, l, d, p]);
-    return "default" !== t || null == n
+    return "default" !== i || null == n
         ? null
         : (0, e.jsxs)("div", {
               className: F.qr,
               children: [
-                  (0, e.jsx)(b.A, { size: "xs" }),
+                  (0, e.jsx)(C.A, { size: "xs" }),
                   (0, e.jsx)(m.E, {
-                      variant: "text-sm/medium",
+                      variant: "body-sm/medium",
                       color: "text-subtle",
                       children: o
                           ? r
@@ -136,28 +136,28 @@ function V(a) {
               ],
           });
 }
-t(600253);
-var B = t(307897);
+i(600253);
+var B = i(307897);
 function z(a) {
-    let { className: l, size: t } = a;
+    let { className: l, size: i } = a;
     return (0, e.jsx)("div", {
         className: n()(B.kL, l),
         "aria-hidden": !0,
         children: (0, e.jsxs)("div", {
             className: B.CX,
             children: [
-                (0, e.jsx)("div", { className: n()(B.$Q, { [B.EX]: "small" === t }) }),
+                (0, e.jsx)("div", { className: n()(B.$Q, { [B.EX]: "small" === i }) }),
                 (0, e.jsx)("div", {
                     className: B._A,
                     children: Array.from({ length: 4 }, (a, l) =>
-                        (0, e.jsx)("div", { className: n()(B.Tc, { [B.EX]: "small" === t }) }, l),
+                        (0, e.jsx)("div", { className: n()(B.Tc, { [B.EX]: "small" === i }) }, l),
                     ),
                 }),
             ],
         }),
     });
 }
-var K = t(553790);
+var K = i(553790);
 function M() {
     return (0, e.jsxs)("div", {
         className: K.yL,
@@ -169,15 +169,15 @@ function M() {
     });
 }
 function X(a) {
-    let { className: l, size: t } = a;
+    let { className: l, size: i } = a;
     return (0, e.jsxs)("div", {
-        className: n()(K.kL, l, { [K.EX]: "small" === t }),
+        className: n()(K.kL, l, { [K.EX]: "small" === i }),
         "aria-hidden": !0,
         children: [(0, e.jsx)("div", { className: K.Iv }), (0, e.jsx)(M, {}), (0, e.jsx)(M, {})],
     });
 }
-var Q = t(315629),
-    Y = t(706933);
+var Q = i(315629),
+    Y = i(706933);
 function H(a) {
     let { size: l } = a;
     return "default" !== l
@@ -189,15 +189,15 @@ function H(a) {
               children: [
                   (0, e.jsx)(g.A, { variant: "secondary" }),
                   (0, e.jsx)(m.E, {
-                      variant: "text-sm/medium",
+                      variant: "body-sm/medium",
                       color: "text-subtle",
                       children: h.intl.string(h.t.xIJpoK),
                   }),
               ],
           });
 }
-var J = t(518477),
-    q = t(866680);
+var J = i(518477),
+    q = i(866680);
 let $ = {
     [r.x.APPLICATION]: { icon: (a) => I.A.getApplication(a.applicationId)?.getIconURL(16) },
     [r.x.PERSONAL]: { icon: () => (0, e.jsx)(c.t, { size: "xs", color: d.A.colors.ICON_DEFAULT }), isNew: T.t0 },
@@ -205,7 +205,7 @@ let $ = {
 function Z(a) {
     let {
             widget: l,
-            onAddWidget: t,
+            onAddWidget: i,
             listItemProps: s,
             size: c = "default",
             compact: d = !1,
@@ -213,33 +213,33 @@ function Z(a) {
             trackUserProfileEditAction: v,
             isHighlighted: T = !1,
         } = a,
-        { icon: S, isNew: C } = $[l.type] ?? {},
-        G = "small" === c,
-        b = l.type === r.x.APPLICATION,
-        y = b ? l.applicationId : void 0,
-        k = (0, N.h)(y),
+        { icon: b, isNew: y } = $[l.type] ?? {},
+        S = "small" === c,
+        C = l.type === r.x.APPLICATION,
+        G = C ? l.applicationId : void 0,
+        k = (0, N.h)(G),
         { hasAlreadyLinked: W, canStartAuthorization: F, startAuthorization: w } = (0, L.RD)(k),
-        B = b && !W && F,
-        { analyticsLocations: K } = (0, E.Ay)(x.A.USER_PROFILE_APPLICATION_WIDGET),
-        M = i.useCallback(() => {
+        B = C && !W && F,
+        { analyticsLocations: K } = (0, x.Ay)(E.A.USER_PROFILE_APPLICATION_WIDGET),
+        M = t.useCallback(() => {
             !I &&
                 ((0, P.Y5)(l),
                 v({ action: "WIDGET_ADDED", ...l.getProfileEditAnalyticsOptions() }),
                 (0, D.XA)(J.jM.WIDGET_ADDED),
-                t?.(),
+                i?.(),
                 B && w({ analyticsLocations: K }));
-        }, [I, B, l, v, t, w, K]),
-        Q = S?.(l),
+        }, [I, B, l, v, i, w, K]),
+        Q = b?.(l),
         Y =
             null == Q
                 ? null
                 : "string" == typeof Q
                   ? (0, e.jsx)("img", { src: Q, alt: "", width: 16, height: 16, className: q.Kk })
                   : Q,
-        Z = d && b,
+        Z = d && C,
         aa = B ? o.LinkIcon : p.U,
-        al = T || (C?.() ?? !1),
-        at = !b,
+        al = T || (y?.() ?? !1),
+        ai = !C,
         ae =
             l.type === r.x.PERSONAL && "default" !== c
                 ? (0, e.jsx)(g.A, {})
@@ -250,7 +250,7 @@ function Z(a) {
         className: n()(q.LG, d && q.oE),
         children: [
             (0, e.jsxs)(u.D, {
-                className: n()(q.PH, G && q.PG, I && q.Lq),
+                className: n()(q.PH, S && q.PG, I && q.Lq),
                 ...s,
                 onClick: M,
                 "aria-label":
@@ -284,7 +284,7 @@ function Z(a) {
                                 return (0, j.xb)(a);
                         }
                     })(),
-                    at && null != ae && (0, e.jsx)("div", { className: q.X4, children: ae }),
+                    ai && null != ae && (0, e.jsx)("div", { className: q.X4, children: ae }),
                     (0, e.jsxs)("div", {
                         className: q.Lw,
                         children: [
@@ -294,7 +294,7 @@ function Z(a) {
                                 children: [
                                     !Z && Y,
                                     (0, e.jsx)(m.E, {
-                                        variant: Z ? "text-sm/semibold" : "text-md/medium",
+                                        variant: Z ? "body-sm/semibold" : "body-md/medium",
                                         color: d ? "text-default" : "text-strong",
                                         children: (function (a) {
                                             let { getTitle: l } = f[a.type];
@@ -302,7 +302,7 @@ function Z(a) {
                                         })(l),
                                     }),
                                     Z && Y,
-                                    al && !at && (0, e.jsx)(A.E, { type: "new", variant: "primary" }),
+                                    al && !ai && (0, e.jsx)(A.E, { type: "new", variant: "primary" }),
                                 ],
                             }),
                         ],

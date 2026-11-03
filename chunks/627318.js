@@ -16,7 +16,7 @@ var s,
     g = a(174459),
     f = a(333748),
     j = a(652215);
-function v(e) {
+function y(e) {
     let t = null;
     return (
         e === f.i.PLAYSTATION_APPLICATION_ID
@@ -25,8 +25,8 @@ function v(e) {
         t
     );
 }
-var y = a(231723),
-    b = a(887909),
+var b = a(231723),
+    v = a(887909),
     C = a(321987),
     A = a(284009),
     E = a.n(A),
@@ -35,7 +35,7 @@ var y = a(231723),
     I = a(370480),
     D = a(716965);
 async function T(e, t, a) {
-    let s = v(e);
+    let s = y(e);
     if (null == s) throw (await k(a, 1, "authorize"), Error("Unsupported client_id for two way link"));
     let l = null;
     try {
@@ -92,8 +92,8 @@ function P(e) {
         c = r.useCallback((e) => n(t, e), [t, n]);
     return (0, l.jsx)(C.$, {
         removeChildWrapper: !0,
-        children: (0, l.jsx)(b.OAuth2AuthorizeModal, {
-            transitionState: y.ip.ENTERED,
+        children: (0, l.jsx)(v.OAuth2AuthorizeModal, {
+            transitionState: b.ip.ENTERED,
             clientId: t.clientId,
             scopes: t.scopes,
             showLogout: !0,
@@ -119,7 +119,7 @@ function W(e) {
                 children: [
                     (0, l.jsx)(L.D, { variant: "heading-xl/semibold", children: G.intl.string(G.t["3dgwPD"]) }),
                     (0, l.jsx)(S.E, {
-                        variant: "text-md/normal",
+                        variant: "body-md/normal",
                         color: "text-default",
                         children: G.intl.string(G.t["/GAO1P"]),
                     }),
@@ -288,7 +288,7 @@ function q(e) {
                     children: [
                         (0, l.jsx)(L.D, { variant: "heading-xl/semibold", id: s, children: G.intl.string(G.t.qDtJmD) }),
                         null != n
-                            ? (0, l.jsx)(S.E, { variant: "text-md/normal", color: "text-default", children: n })
+                            ? (0, l.jsx)(S.E, { variant: "body-md/normal", color: "text-default", children: n })
                             : null,
                     ],
                 }),
@@ -371,7 +371,7 @@ function ea(e) {
                         gap: 24,
                         children: [
                             (0, l.jsx)(S.E, {
-                                variant: "text-md/medium",
+                                variant: "body-md/medium",
                                 color: "text-default",
                                 className: et.Qq,
                                 children: G.intl.string(G.t.xRHk7f),
@@ -423,17 +423,17 @@ function er() {
         r.useEffect(() => {
             if (s === t) return;
             let e = null;
-            ("user-code-input" !== s.type && "handoff" !== s.type && (e = v(s.userCodeData.clientId)),
+            ("user-code-input" !== s.type && "handoff" !== s.type && (e = y(s.userCodeData.clientId)),
                 g.default.track(j.HAw.DEVICE_LINK_STEP, {
                     previous_step: t?.type,
                     current_step: s.type,
                     platform_type: e,
                 }));
         }, [t, s]));
-    let y = r.useCallback(() => {
+    let b = r.useCallback(() => {
             u({ type: "user-code-input" });
         }, [u]),
-        b = r.useCallback(
+        v = r.useCallback(
             (e) => {
                 u({ type: "authorization", userCodeData: e });
             },
@@ -457,16 +457,16 @@ function er() {
             ((e = (0, l.jsx)(M, { code: s.code })), (E = !1));
             break;
         case "user-code-input":
-            e = (0, l.jsx)(ea, { usePrefilledCode: s.usePrefilledCode || !1, onUserCodeAccepted: b });
+            e = (0, l.jsx)(ea, { usePrefilledCode: s.usePrefilledCode || !1, onUserCodeAccepted: v });
             break;
         case "authorization":
-            ((e = (0, l.jsx)(P, { data: s.userCodeData, onDenied: y, onError: A, onSuccess: C })), (E = !1));
+            ((e = (0, l.jsx)(P, { data: s.userCodeData, onDenied: b, onError: A, onSuccess: C })), (E = !1));
             break;
         case "success":
             e = (0, l.jsx)(q, { onComplete: () => (0, m.pX)(j.BVt.ME), data: s.userCodeData });
             break;
         case "error":
-            e = (0, l.jsx)(W, { onTryAgain: y });
+            e = (0, l.jsx)(W, { onTryAgain: b });
             break;
         default:
             e = null;

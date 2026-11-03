@@ -1,47 +1,47 @@
 (n.d(l, { A: () => D, v: () => U }), n(938796));
 var s = n(477900),
-    t = n(582128),
-    a = n(503698),
-    i = n.n(a),
+    a = n(582128),
+    t = n(503698),
+    i = n.n(t),
     r = n(665260),
     c = n(17928),
     d = n(993077),
-    u = n(834730),
-    o = n(628284),
+    o = n(834730),
+    u = n(628284),
     m = n(939249);
-if (221552 == n.j) var x = n(276293);
-if (221552 == n.j) var h = n(534514);
+if (221552 == n.j) var h = n(276293);
+if (221552 == n.j) var x = n(534514);
 if (221552 == n.j) var g = n(622629);
 var j = n(47167),
     A = n(713654),
-    N = n(734057),
-    f = n(696451),
-    v = n(71393),
-    I = n(576705),
-    b = n(44234),
+    b = n(734057),
+    N = n(696451),
+    f = n(71393),
+    v = n(576705),
+    I = n(44234),
     C = n(486020),
     p = n(225142),
     E = n(701785),
-    G = n(65995),
-    M = n(111487),
-    y = n(652215),
+    y = n(65995),
+    G = n(111487),
+    M = n(652215),
     L = n(340837),
     _ = n(105292),
     k = n(374636);
 function U(e) {
-    let { title: l, emojiId: n, emojiName: t, icon: a, completed: r, Icon: c, onClick: x, ...h } = e,
-        g = "channel" === h.variant ? h.channelId : null,
-        j = "static" === h.variant ? h.subtitle : h.channelName,
-        A = null != g ? C.Ay.getNewMemberActionIconURL({ channelId: g, icon: a }) : null,
-        N = (0, s.jsxs)(d.Z, {
-            className: i()(k.XI, { [k.xU]: null != x }),
+    let { title: l, emojiId: n, emojiName: a, icon: t, completed: r, Icon: c, onClick: h, ...x } = e,
+        g = "channel" === x.variant ? x.channelId : null,
+        j = "static" === x.variant ? x.subtitle : x.channelName,
+        A = null != g ? C.Ay.getNewMemberActionIconURL({ channelId: g, icon: t }) : null,
+        b = (0, s.jsxs)(d.Z, {
+            className: i()(k.XI, { [k.xU]: null != h }),
             children: [
                 null != A
                     ? (0, s.jsx)("img", { src: A, className: k.Kk, width: 32, height: 32, alt: "", "aria-hidden": !0 })
-                    : (0, s.jsx)(M.A, {
+                    : (0, s.jsx)(G.A, {
                           emojiId: n,
-                          emojiName: t,
-                          size: M.g.LARGE,
+                          emojiName: a,
+                          size: G.g.LARGE,
                           defaultComponent: (0, s.jsx)("div", {
                               className: k.uM,
                               children: (0, s.jsx)(c, { className: k.p, color: "currentColor" }),
@@ -50,79 +50,79 @@ function U(e) {
                 (0, s.jsxs)("div", {
                     className: k.$I,
                     children: [
-                        (0, s.jsx)(u.E, { variant: "text-md/semibold", color: "text-strong", children: l }),
+                        (0, s.jsx)(o.E, { variant: "body-md/semibold", color: "text-strong", children: l }),
                         null != j
-                            ? (0, s.jsx)(u.E, { variant: "text-xs/normal", color: "text-muted", children: j })
+                            ? (0, s.jsx)(o.E, { variant: "body-xs/normal", color: "text-muted", children: j })
                             : null,
                     ],
                 }),
                 r
-                    ? (0, s.jsx)(o.y, { size: "md", color: "currentColor", secondaryColor: "#fff", className: k.Yb })
-                    : (0, s.jsx)(b.A, { className: k.t3, width: 24, height: 24 }),
+                    ? (0, s.jsx)(u.y, { size: "md", color: "currentColor", secondaryColor: "#fff", className: k.Yb })
+                    : (0, s.jsx)(I.A, { className: k.t3, width: 24, height: 24 }),
             ],
         });
-    return null != x
+    return null != h
         ? (0, s.jsx)(m.D, {
-              onClick: x,
+              onClick: h,
               "aria-label": _.intl.formatToPlainString(_.t.FXFkPg, {
                   title: null != j ? `${l}, ${j}` : l,
                   status: r ? _.intl.string(_.t.g62IJl) : _.intl.string(_.t.DaELnU),
               }),
-              children: N,
+              children: b,
           })
-        : N;
+        : b;
 }
 function R(e) {
     let { action: l, completed: n } = e,
-        { channelId: a, title: i, emoji: r, icon: d } = l,
-        { id: u, name: o } = r ?? {},
-        m = (0, c.bG)([N.A], () => N.A.getChannel(a)),
-        h = (0, j.Ay)(m, !0),
-        g = (0, c.bG)([I.A], () => I.A.can(y.xBc.VIEW_CHANNEL, m)),
-        f = t.useMemo(() => {
+        { channelId: t, title: i, emoji: r, icon: d } = l,
+        { id: o, name: u } = r ?? {},
+        m = (0, c.bG)([b.A], () => b.A.getChannel(t)),
+        x = (0, j.Ay)(m, !0),
+        g = (0, c.bG)([v.A], () => v.A.can(M.xBc.VIEW_CHANNEL, m)),
+        N = a.useMemo(() => {
             if (null != m) return () => (0, p.qo)(m.guild_id, m.id);
         }, [m]);
     if (null == m || !g) return null;
-    let v = (0, A.gU)(m) ?? x.N;
+    let f = (0, A.gU)(m) ?? h.N;
     return (0, s.jsx)(U, {
         variant: "channel",
-        channelId: a,
+        channelId: t,
         title: i,
-        channelName: h,
-        emojiId: u,
-        emojiName: o,
+        channelName: x,
+        emojiId: o,
+        emojiName: u,
         icon: d,
         completed: n,
-        Icon: v,
-        onClick: f,
+        Icon: f,
+        onClick: N,
     });
 }
 function D(e) {
     let { guildId: l } = e,
         n = (0, c.bG)([E.h], () => E.h.getNewMemberActions(l), [l]),
-        a = (0, c.bG)([G.A], () => G.A.getCompletedActions(l)),
-        o = (0, c.bG)([f.Ay], () => f.Ay.getSelfMember(l)),
-        x = (0, c.bG)([v.A], () => v.A.getGuild(l));
-    t.useEffect(() => {
-        null == a && o?.flags != null && (0, r.Lt)(o.flags ?? 0, L.D.STARTED_HOME_ACTIONS) && (0, p.aW)(l);
-    }, [a, l, o?.flags]);
-    let j = t.useCallback(() => {
-        null != x && null != x.rulesChannelId && (0, p.qo)(x.id, x.rulesChannelId);
-    }, [x]);
-    return null == o || null == n || 0 === n.length
+        t = (0, c.bG)([y.A], () => y.A.getCompletedActions(l)),
+        u = (0, c.bG)([N.Ay], () => N.Ay.getSelfMember(l)),
+        h = (0, c.bG)([f.A], () => f.A.getGuild(l));
+    a.useEffect(() => {
+        null == t && u?.flags != null && (0, r.Lt)(u.flags ?? 0, L.D.STARTED_HOME_ACTIONS) && (0, p.aW)(l);
+    }, [t, l, u?.flags]);
+    let j = a.useCallback(() => {
+        null != h && null != h.rulesChannelId && (0, p.qo)(h.id, h.rulesChannelId);
+    }, [h]);
+    return null == u || null == n || 0 === n.length
         ? null
         : (0, s.jsxs)("div", {
               className: k.kL,
               children: [
-                  (0, s.jsx)(h.D, {
+                  (0, s.jsx)(x.D, {
                       variant: "heading-lg/semibold",
                       color: "text-strong",
                       children: _.intl.string(_.t.LhlgY9),
                   }),
                   n.map((e) =>
-                      (0, s.jsx)(R, { action: e, completed: a?.[e.channelId] === !0, guildId: l }, e.channelId),
+                      (0, s.jsx)(R, { action: e, completed: t?.[e.channelId] === !0, guildId: l }, e.channelId),
                   ),
-                  x?.rulesChannelId != null &&
+                  h?.rulesChannelId != null &&
                       (0, s.jsx)(m.D, {
                           onClick: j,
                           "aria-label": _.intl.string(_.t["K/i3iQ"]),
@@ -135,8 +135,8 @@ function D(e) {
                                   }),
                                   (0, s.jsx)("div", {
                                       className: k.$I,
-                                      children: (0, s.jsx)(u.E, {
-                                          variant: "text-md/semibold",
+                                      children: (0, s.jsx)(o.E, {
+                                          variant: "body-md/semibold",
                                           color: "text-strong",
                                           children: _.intl.string(_.t["K/i3iQ"]),
                                       }),

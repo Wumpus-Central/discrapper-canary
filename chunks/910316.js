@@ -1,4 +1,4 @@
-t.d(e, { W: () => g });
+t.d(e, { W: () => b });
 var n = t(477900),
     r = t(582128),
     s = t(284009),
@@ -14,15 +14,15 @@ var n = t(477900),
     h = t(105292),
     p = t(844768);
 let j = new u.A("TwoWayLinkDiscordConsentWeb");
-function g(a) {
+function b(a) {
     let {
             platformType: e,
             clientId: t,
             scopes: s,
             authToken: u,
-            onContinue: g,
-            onError: C,
-            onClose: b,
+            onContinue: b,
+            onError: g,
+            onClose: C,
             redirectUri: v,
         } = a,
         [E, k] = r.useState(!1),
@@ -37,15 +37,15 @@ function g(a) {
                 } catch (a) {
                     (j.error(`${e} link error:`, a), (n = a.body?.code));
                 }
-                null != t ? g() : C(n);
+                null != t ? b() : g(n);
             },
-            [e, u, g, C],
+            [e, u, b, g],
         ),
         {
             header: f,
             body: w,
-            appDetails: D,
-            sendAuthorize: L,
+            appDetails: y,
+            sendAuthorize: D,
         } = (0, x.useOAuth2AuthorizeForm)({
             clientId: t,
             scopes: s,
@@ -56,9 +56,9 @@ function g(a) {
             redirectUri: v,
             isTwoWayLinkDiscordConsent: !0,
         }),
-        R = r.useCallback(() => {
-            (i()(null != L, "sendAuthorize not available"), k(!0), L(!0));
-        }, [L]);
+        L = r.useCallback(() => {
+            (i()(null != D, "sendAuthorize not available"), k(!0), D(!0));
+        }, [D]);
     return (0, n.jsxs)(N.A, {
         children: [
             (0, n.jsxs)(l.rQ, {
@@ -69,18 +69,18 @@ function g(a) {
                 children: [
                     (0, n.jsx)(c.E, {
                         className: p.u1,
-                        variant: "text-xs/semibold",
+                        variant: "body-xs/semibold",
                         color: "text-default",
                         children: h.intl.format(h.t.fHz6eR, { number: 2, total: 2 }),
                     }),
-                    null != b && (0, n.jsx)(l.s_, { "data-migration-pending": !0, className: p.b, onClick: b }),
+                    null != C && (0, n.jsx)(l.s_, { "data-migration-pending": !0, className: p.b, onClick: C }),
                 ],
             }),
             (0, n.jsxs)(l.$m, {
                 "data-migration-pending": !0,
                 className: p.mB,
                 scrollbarGutter: !1,
-                children: [(0, n.jsx)("div", { className: p.a8, children: f }), w, D],
+                children: [(0, n.jsx)("div", { className: p.a8, children: f }), w, y],
             }),
             (0, n.jsx)(l.jl, {
                 "data-migration-pending": !0,
@@ -92,7 +92,7 @@ function g(a) {
                         variant: "primary",
                         text: h.intl.string(h.t.ZN4hkc),
                         loading: E,
-                        onClick: R,
+                        onClick: L,
                     }),
                 }),
             }),

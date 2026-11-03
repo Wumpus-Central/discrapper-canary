@@ -14,7 +14,7 @@ let o = function () {
             ...e,
             children: (0, a.jsx)("div", {
                 style: { background: "pink", borderRadius: 8, padding: 12, display: "inline-block" },
-                children: (0, a.jsx)(n.E, { variant: "text-md/semibold", children: "Hover Me!" }),
+                children: (0, a.jsx)(n.E, { variant: "body-md/semibold", children: "Hover Me!" }),
             }),
         }),
     });

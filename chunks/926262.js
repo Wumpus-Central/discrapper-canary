@@ -15,33 +15,33 @@ var l = n(477900),
     A = n(548426),
     f = n(165648);
 function C(e) {
-    let { onClose: t, onConfirm: C, onCancel: x, channel: E, analyticsType: S, popoutText: I, animation: y } = e;
+    let { onClose: t, onConfirm: C, onCancel: E, channel: x, analyticsType: S, popoutText: y, animation: I } = e;
     i.useEffect(() => {
-        m.default.track(g.HAw.OPEN_POPOUT, { type: S, ...(0, u.dI)(E) });
-    }, [S, E]);
-    let _ = i.useCallback(() => {
+        m.default.track(g.HAw.OPEN_POPOUT, { type: S, ...(0, u.dI)(x) });
+    }, [S, x]);
+    let b = i.useCallback(() => {
             (C?.(), t());
         }, [C, t]),
-        j = i.useCallback(() => {
-            (x?.(), t());
-        }, [x, t]),
-        v = i.useRef(null);
+        _ = i.useCallback(() => {
+            (E?.(), t());
+        }, [E, t]),
+        j = i.useRef(null);
     return (
         i.useEffect(() => {
             let e,
                 t = h.A.theme,
                 l = !1;
             return (
-                null != y &&
+                null != I &&
                     (async () => {
                         let [{ default: i }, s] = await Promise.all([
                             n.e("996382").then(n.t.bind(n, 883885, 23)),
-                            (0, a.M)(t) ? y.dark() : y.light(),
+                            (0, a.M)(t) ? I.dark() : I.light(),
                         ]);
                         l ||
-                            null == v.current ||
+                            null == j.current ||
                             (e = i.loadAnimation({
-                                container: v.current,
+                                container: j.current,
                                 renderer: "svg",
                                 loop: !0,
                                 autoplay: !0,
@@ -52,17 +52,17 @@ function C(e) {
                     ((l = !0), null != e && (e.destroy(), (e = void 0)));
                 }
             );
-        }, [y]),
+        }, [I]),
         (0, l.jsx)(r.l, {
             "aria-labelledby": "content-warning-popout-label",
             children: (0, l.jsxs)("form", {
                 className: A.$,
-                onSubmit: _,
+                onSubmit: b,
                 children: [
                     (0, l.jsxs)("div", {
                         className: A.rf,
                         children: [
-                            null != y && (0, l.jsx)("div", { className: A.lY, ref: v }),
+                            null != I && (0, l.jsx)("div", { className: A.lY, ref: j }),
                             (0, l.jsxs)("div", {
                                 className: A.Qs,
                                 children: [
@@ -70,8 +70,8 @@ function C(e) {
                                     (0, l.jsx)(o.E, {
                                         id: "content-warning-popout-label",
                                         className: f.PT,
-                                        variant: "text-sm/normal",
-                                        children: I.body,
+                                        variant: "body-sm/normal",
+                                        children: y.body,
                                     }),
                                     (0, l.jsxs)("div", {
                                         className: A._o,
@@ -83,12 +83,12 @@ function C(e) {
                                                         className: A.x6,
                                                         children: (0, l.jsx)(c.$, {
                                                             variant: "secondary",
-                                                            onClick: j,
+                                                            onClick: _,
                                                             text: p.intl.string(p.t.fsBWmS),
                                                         }),
                                                     }),
                                                     (0, l.jsx)(o.E, {
-                                                        variant: "text-xs/normal",
+                                                        variant: "body-xs/normal",
                                                         className: A.uK,
                                                         children: p.intl.format(p.t["0LzVPZ"], {}),
                                                     }),
@@ -101,13 +101,13 @@ function C(e) {
                                                         className: A.x6,
                                                         children: (0, l.jsx)(c.$, {
                                                             variant: "primary",
-                                                            onClick: _,
+                                                            onClick: b,
                                                             text: p.intl.string(p.t.KJnHq3),
                                                             autoFocus: !0,
                                                         }),
                                                     }),
                                                     (0, l.jsx)(o.E, {
-                                                        variant: "text-xs/normal",
+                                                        variant: "body-xs/normal",
                                                         className: A.uK,
                                                         children: p.intl.format(p.t.khjqdH, {}),
                                                     }),
@@ -119,7 +119,7 @@ function C(e) {
                             }),
                         ],
                     }),
-                    null != I.footer && "" !== I.footer
+                    null != y.footer && "" !== y.footer
                         ? (0, l.jsxs)("div", {
                               className: A.qr,
                               children: [
@@ -128,7 +128,7 @@ function C(e) {
                                       color: s.A.unsafe_rawColors.PRIMARY_400.css,
                                       className: A.Kk,
                                   }),
-                                  (0, l.jsx)(o.E, { variant: "text-sm/normal", children: I.footer }),
+                                  (0, l.jsx)(o.E, { variant: "body-sm/normal", children: y.footer }),
                               ],
                           })
                         : null,

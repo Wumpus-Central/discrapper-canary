@@ -23,8 +23,8 @@ var g = n(132500),
     b = n(331322),
     v = n(534514),
     S = n(834730),
-    x = n(821609),
-    j = n(105292),
+    j = n(821609),
+    x = n(105292),
     y = n(919549);
 function w(e) {
     let { popup: t, onOpenPopup: n } = e,
@@ -33,11 +33,11 @@ function w(e) {
                 case "idle":
                     return null;
                 case "waiting":
-                    return j.intl.string(j.t.HQciZk);
+                    return x.intl.string(x.t.HQciZk);
                 case "closed":
-                    return j.intl.string(j.t.FCbNa3);
+                    return x.intl.string(x.t.FCbNa3);
                 case "blocked":
-                    return j.intl.string(j.t["3horqQ"]);
+                    return x.intl.string(x.t["3horqQ"]);
             }
         })(t);
     return (0, r.jsx)("div", {
@@ -48,23 +48,23 @@ function w(e) {
             align: "center",
             gap: 12,
             children: [
-                (0, r.jsx)(v.D, { variant: "heading-lg/semibold", children: j.intl.string(j.t.WtSSb8) }),
+                (0, r.jsx)(v.D, { variant: "heading-lg/semibold", children: x.intl.string(x.t.WtSSb8) }),
                 (0, r.jsx)(S.E, {
-                    variant: "text-md/normal",
+                    variant: "body-md/normal",
                     color: "text-muted",
-                    children: j.intl.string(j.t.Jecn0l),
+                    children: x.intl.string(x.t.Jecn0l),
                 }),
-                (0, r.jsx)(x.$, {
+                (0, r.jsx)(j.$, {
                     variant: "primary",
                     text: (function (e) {
                         switch (e) {
                             case "idle":
-                                return j.intl.string(j.t.JR4xVI);
+                                return x.intl.string(x.t.JR4xVI);
                             case "waiting":
-                                return j.intl.string(j.t["4we2oA"]);
+                                return x.intl.string(x.t["4we2oA"]);
                             case "closed":
                             case "blocked":
-                                return j.intl.string(j.t["+AbHxM"]);
+                                return x.intl.string(x.t["+AbHxM"]);
                         }
                     })(t),
                     onClick: n,
@@ -73,7 +73,7 @@ function w(e) {
                     role: "status",
                     children:
                         null != l
-                            ? (0, r.jsx)(S.E, { variant: "text-sm/normal", color: "text-muted", children: l })
+                            ? (0, r.jsx)(S.E, { variant: "body-sm/normal", color: "text-muted", children: l })
                             : null,
                 }),
             ],
@@ -218,8 +218,8 @@ function em(e) {
             onLoad: b,
             onIframeMount: v,
             onIframeUnmount: S,
-            onGuestReload: x,
-            contextSource: j,
+            onGuestReload: j,
+            contextSource: x,
             nativeView: y = !1,
         } = e,
         w = (0, W.xi)({}),
@@ -321,7 +321,7 @@ function em(e) {
     null == en.colorScheme && (en.colorScheme = et === K.NJ8.LIGHT ? "light" : "dark");
     let er = l.useRef(null);
     function eu(e) {
-        (er.current === O && ((0, q.ny)(O), (0, ei.ir)(O), (0, el.OR)(O), x?.(O)),
+        (er.current === O && ((0, q.ny)(O), (0, ei.ir)(O), (0, el.OR)(O), j?.(O)),
             (er.current = O),
             null != e.contentWindow && e.contentWindow.postMessage([P.A.HELLO, M], t ?? ""),
             k(!0),
@@ -383,7 +383,7 @@ function em(e) {
                 ),
                 [e],
             ));
-    })(O, { onIframeMount: v, onIframeUnmount: S, contextSource: (0, o.useMemoOne)(() => j, [t]) }),
+    })(O, { onIframeMount: v, onIframeUnmount: S, contextSource: (0, o.useMemoOne)(() => x, [t]) }),
     l.useEffect(() => {
         function e(e) {
             let { resizing: t } = e;

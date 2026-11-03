@@ -23,8 +23,8 @@ var n = s(477900),
     f = s(289873),
     x = s(534514),
     g = s(820739),
-    j = s(736653),
-    y = s(775602),
+    y = s(736653),
+    j = s(775602),
     R = s(793574),
     O = s(688810),
     D = s(822123),
@@ -62,7 +62,7 @@ var n = s(477900),
     ec = s(516003);
 let eu = function (e) {
     let { churnUserDiscountOffer: t, onDiscountClaim: s, onContinue: a } = e,
-        r = (0, j.Ay)(),
+        r = (0, y.Ay)(),
         i = (0, p.M)(r) ? "/assets/ff07ae06c15adc58.svg" : "/assets/dd0f35fb103d174b.svg";
     return null == t
         ? null
@@ -81,7 +81,7 @@ let eu = function (e) {
                                   className: ec.t2,
                                   children: [
                                       (0, n.jsx)(L.E, {
-                                          variant: "text-md/medium",
+                                          variant: "body-md/medium",
                                           className: ec.PU,
                                           children: eo.intl.format(eo.t["2gem05"], {
                                               percent: t.discount.amount,
@@ -105,7 +105,7 @@ let eu = function (e) {
                                                           className: ec.Fl,
                                                       }),
                                                       (0, n.jsx)(L.E, {
-                                                          variant: "text-sm/semibold",
+                                                          variant: "body-sm/semibold",
                                                           className: ec.H0,
                                                           children: eo.intl.string(eo.t.zrCzVB),
                                                       }),
@@ -153,7 +153,7 @@ let e_ = "/assets/34c8999cfe272b23.svg",
         TR: eA,
     };
 function eI() {
-    let e = (0, j.Ay)();
+    let e = (0, y.Ay)();
     return (0, p.M)(e) ? eS : eN;
 }
 function eT(e) {
@@ -165,7 +165,7 @@ function eT(e) {
             (0, n.jsxs)("div", {
                 className: i()(ep.p3, { [ep.u0]: l }),
                 children: [
-                    (0, n.jsx)(L.E, { variant: "text-md/normal", children: t }),
+                    (0, n.jsx)(L.E, { variant: "body-md/normal", children: t }),
                     (0, n.jsx)(A.Q, { onClick: s, text: eo.intl.string(eo.t.hvVgAZ) }),
                 ],
             }),
@@ -183,7 +183,7 @@ function ef(e) {
     let t,
         { currentUser: s, premiumType: a, onClose: r } = e,
         i = (0, U.Ay)(s.id),
-        l = (0, d.bG)([y.Ay], () => y.Ay.useReducedMotion),
+        l = (0, d.bG)([j.Ay], () => j.Ay.useReducedMotion),
         o = (0, w.X)("PremiumSubscriptionWhatYouLoseModal"),
         c = a === em.PremiumTypes.TIER_1;
     return (
@@ -289,7 +289,7 @@ function ex(e) {
 }
 function eg(e) {
     let { premiumType: t } = e,
-        s = (0, d.bG)([y.Ay], () => y.Ay.useReducedMotion),
+        s = (0, d.bG)([j.Ay], () => j.Ay.useReducedMotion),
         a = (0, D.Fj)(null)
             .filter((e) => e.type === P.i.GUILD && (e.animated || null != e.guildId))
             .slice(0, 3),
@@ -332,12 +332,12 @@ function eg(e) {
                 : (0, n.jsx)("img", { className: ep.OP, alt: "", src: i }),
     });
 }
-function ej(e) {
+function ey(e) {
     let { premiumType: t, onClose: s } = e;
     a.useEffect(() => {
         (0, g.CD)();
     }, []);
-    let r = (0, d.bG)([y.Ay], () => y.Ay.useReducedMotion),
+    let r = (0, d.bG)([j.Ay], () => j.Ay.useReducedMotion),
         [l, o] = (0, d.yK)([X.A, z.A], () => {
             let e = X.A.boostSlots,
                 t = new Map();
@@ -378,7 +378,7 @@ function ej(e) {
                                   className: ep.IA,
                                   children: [
                                       (0, n.jsx)(L.E, {
-                                          variant: "text-md/normal",
+                                          variant: "body-md/normal",
                                           className: i()(ep.v, ep.e0),
                                           children: l.name,
                                       }),
@@ -390,7 +390,7 @@ function ej(e) {
                                                   className: ep.jZ,
                                               }),
                                               (0, n.jsx)(L.E, {
-                                                  variant: "text-xs/normal",
+                                                  variant: "body-xs/normal",
                                                   className: i()(ep.v, ep.x2),
                                                   children: eo.intl.format(eo.t["Ou/g/P"], { boostCount: o }),
                                               }),
@@ -404,7 +404,7 @@ function ej(e) {
                 : (0, n.jsx)("img", { alt: "", src: m }),
     });
 }
-function ey() {
+function ej() {
     let e = eI().screenShareItemVisual;
     return (0, n.jsx)(eT, {
         description: eo.intl.format(eo.t.wK04T1, {}),
@@ -440,30 +440,30 @@ function eD(e) {
                     l
                         ? e.push(
                               (0, n.jsx)(ef, { currentUser: t, premiumType: s, onClose: r }, "profile-item"),
-                              (0, n.jsx)(ey, {}, "screen-share-item"),
-                              (0, n.jsx)(ej, { premiumType: s, onClose: r }, "boost-item"),
+                              (0, n.jsx)(ej, {}, "screen-share-item"),
+                              (0, n.jsx)(ey, { premiumType: s, onClose: r }, "boost-item"),
                           )
                         : e.push(
                               (0, n.jsx)(ef, { currentUser: t, premiumType: s, onClose: r }, "profile-item"),
                               (0, n.jsx)(eg, { premiumType: s }, "emoji-stickers-item"),
-                              (0, n.jsx)(ey, {}, "screen-share-item"),
+                              (0, n.jsx)(ej, {}, "screen-share-item"),
                               (0, n.jsx)(eR, { premiumType: s }, "uploads-item"),
-                              (0, n.jsx)(ej, { premiumType: s, onClose: r }, "boost-item"),
+                              (0, n.jsx)(ey, { premiumType: s, onClose: r }, "boost-item"),
                           );
                     break;
                 case em.PremiumTypes.TIER_2:
                     l
                         ? e.push(
                               (0, n.jsx)(ef, { currentUser: t, premiumType: s, onClose: r }, "profile-item"),
-                              (0, n.jsx)(ej, { premiumType: s, onClose: r }, "boost-item"),
-                              (0, n.jsx)(ey, {}, "screen-share-item"),
+                              (0, n.jsx)(ey, { premiumType: s, onClose: r }, "boost-item"),
+                              (0, n.jsx)(ej, {}, "screen-share-item"),
                           )
                         : e.push(
                               (0, n.jsx)(ex, { currentUser: t, onClose: r }, "badge-item"),
                               (0, n.jsx)(ef, { currentUser: t, premiumType: s, onClose: r }, "profile-item"),
                               (0, n.jsx)(eg, { premiumType: s }, "emoji-stickers-item"),
-                              (0, n.jsx)(ej, { premiumType: s, onClose: r }, "boost-item"),
-                              (0, n.jsx)(ey, {}, "screen-share-item"),
+                              (0, n.jsx)(ey, { premiumType: s, onClose: r }, "boost-item"),
+                              (0, n.jsx)(ej, {}, "screen-share-item"),
                               (0, n.jsx)(eR, { premiumType: s }, "uploads-item"),
                           );
             }
@@ -536,7 +536,7 @@ let eP = function (e) {
                               }),
                               (0, n.jsxs)("div", {
                                   className: S,
-                                  children: [N, (0, n.jsx)(L.E, { variant: "text-md/normal", children: r })],
+                                  children: [N, (0, n.jsx)(L.E, { variant: "body-md/normal", children: r })],
                               }),
                               (0, n.jsx)(eD, { currentUser: I, premiumType: t, onClose: l, isDowngrade: h }),
                           ],

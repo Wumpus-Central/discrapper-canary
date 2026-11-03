@@ -1,4 +1,4 @@
-l.d(t, { A: () => L });
+l.d(t, { A: () => M });
 var n = l(477900),
     i = l(582128),
     C = l(585510),
@@ -11,8 +11,8 @@ var n = l(477900),
     u = l(192308),
     m = l(793574),
     H = l(834409),
-    x = l(671576),
-    h = l(449585),
+    h = l(671576),
+    x = l(449585),
     g = l(93474),
     f = l(105292),
     j = l(666097);
@@ -52,7 +52,7 @@ function v(e) {
                             }),
                             (0, n.jsx)(o.E, {
                                 className: j.Ng,
-                                variant: "text-sm/medium",
+                                variant: "body-sm/medium",
                                 children: f.intl.format(f.t["4QIIZl"], {
                                     dateTime: new Date(C ?? "").toLocaleString(f.intl.currentLocale, s.yc),
                                 }),
@@ -98,7 +98,7 @@ function V(e) {
                                 color: "text-brand",
                                 children: p(l),
                             }),
-                            (0, n.jsx)(o.E, { className: j.Ng, variant: "text-sm/medium", children: (0, s.ql)(l, i) }),
+                            (0, n.jsx)(o.E, { className: j.Ng, variant: "body-sm/medium", children: (0, s.ql)(l, i) }),
                         ],
                     }),
                 ],
@@ -107,7 +107,7 @@ function V(e) {
         ],
     });
 }
-function A(e) {
+function b(e) {
     let { onHandleEnableLockdown: t, onHandleReportFalseAlarm: l, incidentData: i, guildName: C } = e;
     return (0, n.jsxs)("div", {
         className: j.hD,
@@ -129,7 +129,7 @@ function A(e) {
                                 color: "text-brand",
                                 children: p(i),
                             }),
-                            (0, n.jsx)(o.E, { className: j.Ng, variant: "text-sm/medium", children: (0, s.ql)(i, C) }),
+                            (0, n.jsx)(o.E, { className: j.Ng, variant: "body-sm/medium", children: (0, s.ql)(i, C) }),
                         ],
                     }),
                 ],
@@ -144,17 +144,17 @@ function A(e) {
         ],
     });
 }
-function M(e) {
+function A(e) {
     let { guild: t, incidentData: l, isUnderLockdown: C, isRaidDetected: a } = e,
         r = i.useCallback(() => {
             (0, u.openModalLazy)(async () => {
                 let e = { source: H.Eo.MEMBER_SAFETY_PAGE, location: m.A.MEMBER_SAFETY_PAGE, alertType: (0, s.$5)(l) };
-                return (l) => (0, n.jsx)(x.default, { ...l, guildId: t.id, analyticsData: e });
+                return (l) => (0, n.jsx)(h.default, { ...l, guildId: t.id, analyticsData: e });
             });
         }, [t.id, l]),
         d = i.useCallback(() => {
             let e = g.A.getLastIncidentAlertMessage(t.id);
-            (0, h.is)(e, t.id);
+            (0, x.is)(e, t.id);
         }, [t.id]),
         o = (function () {
             switch (!0) {
@@ -175,7 +175,7 @@ function M(e) {
         case 2:
             return (0, n.jsx)(V, { onHandleEnableLockdown: r, incidentData: l, guildName: t.name });
         case 3:
-            return (0, n.jsx)(A, {
+            return (0, n.jsx)(b, {
                 onHandleEnableLockdown: r,
                 onHandleReportFalseAlarm: d,
                 incidentData: l,
@@ -185,11 +185,11 @@ function M(e) {
             return null;
     }
 }
-function L(e) {
+function M(e) {
     let { guild: t } = e,
         { shouldShowIncidentActions: l, incidentData: i, isUnderLockdown: a } = (0, C.Li)(t.id),
         r = !1;
     return (null != i && (r = (0, s.k$)(i) && l), r || a)
-        ? (0, n.jsx)(M, { guild: t, incidentData: i, isUnderLockdown: a, isRaidDetected: r })
+        ? (0, n.jsx)(A, { guild: t, incidentData: i, isUnderLockdown: a, isRaidDetected: r })
         : null;
 }

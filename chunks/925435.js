@@ -1,26 +1,26 @@
 i.d(e, { B4: () => J, Mp: () => V, B8: () => X });
 var l = i(477900),
-    t = i(582128),
-    s = i(834730),
+    s = i(582128),
+    t = i(834730),
     r = i(958077);
 function a(n) {
     let {
             title: e,
             subtitle: i,
             iconSrc: a,
-            backgroundSrc: u,
-            animatedBackgroundSrc: d,
+            backgroundSrc: d,
+            animatedBackgroundSrc: u,
             prefersReducedMotion: o = !0,
         } = n,
-        c = t.useMemo(() => {
-            let n = u ?? a;
+        c = s.useMemo(() => {
+            let n = d ?? a;
             if (null != n) return { "--custom-background-url": `url(${n.toString()})` };
-        }, [u, a]),
-        m = t.useMemo(() => {
-            if (null == u) return;
-            let n = { "--custom-background-static": `url(${u.toString()}` };
-            return (o || null == d || (n["--custom-background-animated"] = `url(${d.toString()})`), n);
-        }, [d, u, o]);
+        }, [d, a]),
+        m = s.useMemo(() => {
+            if (null == d) return;
+            let n = { "--custom-background-static": `url(${d.toString()}` };
+            return (o || null == u || (n["--custom-background-animated"] = `url(${u.toString()})`), n);
+        }, [u, d, o]);
     return (0, l.jsxs)("div", {
         className: r.iE,
         children: [
@@ -35,19 +35,19 @@ function a(n) {
                         }),
                     (0, l.jsxs)("div", {
                         children: [
-                            (0, l.jsx)(s.E, { variant: "heading-xl/semibold", tag: "div", children: e }),
+                            (0, l.jsx)(t.E, { variant: "heading-xl/semibold", tag: "div", children: e }),
                             null != i &&
-                                (0, l.jsxs)(s.E, { variant: "text-sm/normal", children: ["\u201C", i, "\u201D"] }),
+                                (0, l.jsxs)(t.E, { variant: "body-sm/normal", children: ["\u201C", i, "\u201D"] }),
                         ],
                     }),
                 ],
             }),
-            null != u ? (0, l.jsx)("div", { className: r.Sl, style: m }) : null,
+            null != d ? (0, l.jsx)("div", { className: r.Sl, style: m }) : null,
         ],
     });
 }
-var u = i(503698),
-    d = i.n(u),
+var d = i(503698),
+    u = i.n(d),
     o = i(559106),
     c = i(638916),
     m = i(883510),
@@ -56,16 +56,16 @@ function h(n) {
     let {
         title: e,
         description: i,
-        headerImage: t,
+        headerImage: s,
         onDetails: r,
         onPurchase: a,
-        PurchaseButton: u,
+        PurchaseButton: d,
         GiftButton: h,
         availabilityLabel: x,
     } = n;
     return (0, l.jsx)(o.vN, {
         children: (0, l.jsxs)("div", {
-            className: d()(m.iE, p.t),
+            className: u()(m.iE, p.t),
             tabIndex: 0,
             onClick: () => {
                 null != r ? r() : null != a && a();
@@ -76,37 +76,37 @@ function h(n) {
             children: [
                 (0, l.jsx)("div", {
                     className: m.Td,
-                    style: null != t ? { backgroundImage: null != t ? `url(${t.toString()})` : void 0 } : void 0,
-                    children: null == t && (0, l.jsx)(c.q, { color: "white", size: "custom", height: 80, width: 80 }),
+                    style: null != s ? { backgroundImage: null != s ? `url(${s.toString()})` : void 0 } : void 0,
+                    children: null == s && (0, l.jsx)(c.q, { color: "white", size: "custom", height: 80, width: 80 }),
                 }),
                 (0, l.jsxs)("div", {
                     className: m.zH,
                     children: [
-                        (0, l.jsx)(s.E, { color: "text-strong", variant: "text-md/semibold", children: e }),
+                        (0, l.jsx)(t.E, { color: "text-strong", variant: "body-md/semibold", children: e }),
                         null != i &&
-                            (0, l.jsx)(s.E, {
+                            (0, l.jsx)(t.E, {
                                 className: m.h_,
                                 color: "text-muted",
-                                variant: "text-sm/normal",
+                                variant: "body-sm/normal",
                                 children: i,
                             }),
                     ],
                 }),
-                (null != u || null != h) &&
+                (null != d || null != h) &&
                     (0, l.jsxs)("div", {
                         className: m.qr,
                         children: [
-                            null != u &&
-                                (0, l.jsx)(s.E, {
+                            null != d &&
+                                (0, l.jsx)(t.E, {
                                     color: "interactive-text-default",
-                                    variant: "text-sm/normal",
+                                    variant: "body-sm/normal",
                                     children: x,
                                 }),
                             (0, l.jsxs)("div", {
                                 className: m.GC,
                                 children: [
-                                    null != u &&
-                                        (0, l.jsx)(u, {
+                                    null != d &&
+                                        (0, l.jsx)(d, {
                                             onClick: (n) => {
                                                 (n.stopPropagation(), a?.());
                                             },
@@ -121,8 +121,8 @@ function h(n) {
     });
 }
 var x = i(885996),
-    g = i(17928),
-    b = i(534514),
+    b = i(17928),
+    g = i(534514),
     v = i(192308),
     I = i(775602),
     j = i(793574),
@@ -130,11 +130,11 @@ var x = i(885996),
     A = i(75304),
     f = i(548118),
     P = i(915043),
-    E = i(163437),
-    N = i(955440),
-    S = i(638643),
-    T = i(3432),
-    y = i(185438),
+    y = i(163437),
+    E = i(955440),
+    N = i(638643),
+    S = i(3432),
+    T = i(185438),
     R = i(71393),
     M = i(67480),
     _ = i(328968),
@@ -153,24 +153,24 @@ var x = i(885996),
     q = i(80890);
 let H = new Intl.DateTimeFormat($.intl.currentLocale, { month: "short", day: "numeric" });
 function V(n) {
-    let { app: e, guildId: i, subscriptions: s, otps: r } = n,
-        u = t.useMemo(() => (0, D.A)(e, 100), [e]),
-        { bot: d } = e,
-        o = t.useMemo(() => {
-            if (d?.banner == null) return;
-            let n = (0, L.z)({ id: d.id, banner: d.banner, size: 1024, canAnimate: !1 });
+    let { app: e, guildId: i, subscriptions: t, otps: r } = n,
+        d = s.useMemo(() => (0, D.A)(e, 100), [e]),
+        { bot: u } = e,
+        o = s.useMemo(() => {
+            if (u?.banner == null) return;
+            let n = (0, L.z)({ id: u.id, banner: u.banner, size: 1024, canAnimate: !1 });
             return null != n ? (G.A.toURLSafe(n) ?? void 0) : void 0;
-        }, [d]),
-        c = t.useMemo(() => {
-            if (d?.banner == null) return;
-            let n = (0, L.z)({ id: d.id, banner: d.banner, size: 1024, canAnimate: !0 });
+        }, [u]),
+        c = s.useMemo(() => {
+            if (u?.banner == null) return;
+            let n = (0, L.z)({ id: u.id, banner: u.banner, size: 1024, canAnimate: !0 });
             return null != n ? (G.A.toURLSafe(n) ?? void 0) : void 0;
-        }, [d]),
-        m = (0, g.bG)([I.Ay], () => I.Ay.useReducedMotion),
-        p = t.useMemo(() => [...s.map((n) => n.skuId), ...r.map((n) => n.skuId)], [s, r]),
+        }, [u]),
+        m = (0, b.bG)([I.Ay], () => I.Ay.useReducedMotion),
+        p = s.useMemo(() => [...t.map((n) => n.skuId), ...r.map((n) => n.skuId)], [t, r]),
         { analyticsLocations: h } = (0, k.Ay)(j.A.APP_STOREFRONT);
     return (
-        t.useEffect(() => {
+        s.useEffect(() => {
             0 !== p.length &&
                 U.default.track(K.HAw.VIEW_PREMIUM_APP_STOREFRONT, {
                     application_id: e.id,
@@ -183,18 +183,18 @@ function V(n) {
             children: [
                 (0, l.jsx)(a, {
                     title: e.name,
-                    iconSrc: u,
+                    iconSrc: d,
                     backgroundSrc: o,
                     animatedBackgroundSrc: c,
                     prefersReducedMotion: m,
                 }),
-                (0, l.jsx)(Z, { appId: e.id, subscriptions: s, otps: r, guildId: i }),
+                (0, l.jsx)(Z, { appId: e.id, subscriptions: t, otps: r, guildId: i }),
             ],
         })
     );
 }
 function Z(n) {
-    let { appId: e, subscriptions: i, otps: t, guildId: s } = n;
+    let { appId: e, subscriptions: i, otps: s, guildId: t } = n;
     return (0, l.jsxs)("div", {
         className: q.q4,
         children: [
@@ -209,9 +209,9 @@ function Z(n) {
                                     J,
                                     {
                                         appId: e,
-                                        guildId: s,
+                                        guildId: t,
                                         listing: n,
-                                        subscriptionType: (0, E.bg)(n.skuFlags) ? "user" : "guild",
+                                        subscriptionType: (0, y.bg)(n.skuFlags) ? "user" : "guild",
                                     },
                                     n.id,
                                 ),
@@ -219,13 +219,13 @@ function Z(n) {
                         }),
                     ],
                 }),
-            t.length > 0 &&
+            s.length > 0 &&
                 (0, l.jsxs)("div", {
                     children: [
-                        (0, l.jsx)(b.D, { variant: "heading-lg/semibold", children: $.intl.string($.t.yUGTs8) }),
+                        (0, l.jsx)(g.D, { variant: "heading-lg/semibold", children: $.intl.string($.t.yUGTs8) }),
                         (0, l.jsx)("div", {
                             className: q.dD,
-                            children: t.map((n) => (0, l.jsx)(X, { skuId: n.skuId, appId: e }, n.id)),
+                            children: s.map((n) => (0, l.jsx)(X, { skuId: n.skuId, appId: e }, n.id)),
                         }),
                     ],
                 }),
@@ -233,52 +233,52 @@ function Z(n) {
     });
 }
 function J(n) {
-    let { appId: e, guildId: r, listing: a, subscriptionType: u, onDetails: d } = n,
-        { data: o } = (0, N.A)(a.skuId),
+    let { appId: e, guildId: r, listing: a, subscriptionType: d, onDetails: u } = n,
+        { data: o } = (0, E.A)(a.skuId),
         c = o?.[0],
-        m = (0, g.bG)([M.A], () => M.A.get(a.skuId), [a.skuId]),
-        p = (0, g.bG)([R.A], () => R.A.getGuild(r), [r]),
-        h = (0, g.bG)([M.A], () => M.A.getParentSKU(a.skuId), [a.skuId]),
-        b = (0, P.GD)(h, r),
-        I = b?.subscription,
+        m = (0, b.bG)([M.A], () => M.A.get(a.skuId), [a.skuId]),
+        p = (0, b.bG)([R.A], () => R.A.getGuild(r), [r]),
+        h = (0, b.bG)([M.A], () => M.A.getParentSKU(a.skuId), [a.skuId]),
+        g = (0, P.GD)(h, r),
+        I = g?.subscription,
         j = (0, P.Ko)(h, r),
-        k = null != I && (0, E.Uo)(I, m),
-        A = null != j && b?.subscriptionPlan?.id !== j?.subscriptionPlan.id,
-        S = !1 === k && j?.subscriptionPlan.skuId === a.skuId,
-        _ = b?.subscriptionPlan.skuId === a.skuId,
+        k = null != I && (0, y.Uo)(I, m),
+        A = null != j && g?.subscriptionPlan?.id !== j?.subscriptionPlan.id,
+        N = !1 === k && j?.subscriptionPlan.skuId === a.skuId,
+        _ = g?.subscriptionPlan.skuId === a.skuId,
         {
             openModal: U,
             subscriptionPurchaseButtonState: L,
             isGuildSubscribed: F,
-        } = (0, y.A)({ skuId: a.skuId, initialSubscribeForGuild: r, analyticsLocation: K.ThZ.APP_STOREFRONT }),
-        C = t.useMemo(
+        } = (0, T.A)({ skuId: a.skuId, initialSubscribeForGuild: r, analyticsLocation: K.ThZ.APP_STOREFRONT }),
+        C = s.useMemo(
             () =>
                 a.benefits?.map((n) => ({
                     id: n.id,
                     title: n.name,
                     description: n.description,
-                    icon: (0, T.N)(e, n.icon),
+                    icon: (0, S.N)(e, n.icon),
                 })),
             [e, a.benefits],
         ),
-        G = t.useMemo(() => (null != a.thumbnail ? (0, O.t)(e, a.thumbnail, 256) : void 0), [e, a.thumbnail]),
-        D = t.useCallback(
+        G = s.useMemo(() => (null != a.thumbnail ? (0, O.t)(e, a.thumbnail, 256) : void 0), [e, a.thumbnail]),
+        D = s.useCallback(
             (n) =>
                 (0, l.jsx)(B.rc, {
                     ...n,
                     appId: e,
-                    subscriptionType: u,
+                    subscriptionType: d,
                     skuId: a.skuId,
                     subscriptionPlan: c,
                     state: L,
                 }),
-            [e, u, a.skuId, c, L],
+            [e, d, a.skuId, c, L],
         ),
-        z = t.useMemo(() => {
+        z = s.useMemo(() => {
             if (A && I?.currentPeriodEnd != null) {
                 let n = H.format(I?.currentPeriodEnd);
                 if (_) return $.intl.formatToPlainString($.t.EV2lZz, { date: n });
-                if (S) return $.intl.formatToPlainString($.t["2w6+NN"], { date: n });
+                if (N) return $.intl.formatToPlainString($.t["2w6+NN"], { date: n });
             }
             if (F)
                 return (0, l.jsxs)(l.Fragment, {
@@ -287,10 +287,10 @@ function J(n) {
                         $.intl.string($.t.l8ufqL),
                     ],
                 });
-        }, [I?.currentPeriodEnd, p, A, _, F, S]),
+        }, [I?.currentPeriodEnd, p, A, _, F, N]),
         w =
             null != z
-                ? (0, l.jsx)(s.E, { color: "text-default", variant: "text-sm/normal", className: q.BJ, children: z })
+                ? (0, l.jsx)(t.E, { color: "text-default", variant: "body-sm/normal", className: q.BJ, children: z })
                 : void 0;
     return (0, l.jsx)(x.OP, {
         title: a.summary,
@@ -302,8 +302,8 @@ function J(n) {
         renderPurchaseButton: D,
         benefitItems: null != C ? C.map((n) => (0, l.jsx)(x.FY, { description: n.title, icon: n.icon }, n.id)) : void 0,
         onDetails:
-            null != d
-                ? d
+            null != u
+                ? u
                 : null != C
                   ? () => {
                         (0, v.openModalLazy)(async () => {
@@ -316,26 +316,26 @@ function J(n) {
                                 i.e("564850"),
                             ]).then(i.bind(i, 168393));
                             return (i) =>
-                                (0, l.jsx)(n, { appId: e, subscriptionType: u, skuId: a.skuId, guildId: r, ...i });
+                                (0, l.jsx)(n, { appId: e, subscriptionType: d, skuId: a.skuId, guildId: r, ...i });
                         });
                     }
                   : void 0,
     });
 }
 function X(n) {
-    let { skuId: e, appId: t, onDetails: s } = n,
+    let { skuId: e, appId: s, onDetails: t } = n,
         { analyticsLocations: r } = (0, k.Ay)(j.A.APP_STOREFRONT),
-        a = (0, g.bG)([_.A], () => _.A.getForSKU(e), [e]),
-        u = (0, g.bG)([M.A], () => M.A.get(e), [e]),
-        d = (0, z.L)(e);
-    if (null == u) return null;
-    let o = u.name ?? "",
+        a = (0, b.bG)([_.A], () => _.A.getForSKU(e), [e]),
+        d = (0, b.bG)([M.A], () => M.A.get(e), [e]),
+        u = (0, z.L)(e);
+    if (null == d) return null;
+    let o = d.name ?? "",
         c = a?.description?.trim() ?? void 0,
-        m = a?.headerBackground != null ? (G.A.toURLSafe((0, F.YE)(t, a.headerBackground, 256)) ?? void 0) : void 0,
-        p = u.type === K.Puh.DURABLE && d,
-        x = u.type === K.Puh.DURABLE ? (p ? $.intl.string($.t.bm82mm) : $.intl.string($.t["6gprwf"])) : void 0,
-        { price: b } = u;
-    return null == b
+        m = a?.headerBackground != null ? (G.A.toURLSafe((0, F.YE)(s, a.headerBackground, 256)) ?? void 0) : void 0,
+        p = d.type === K.Puh.DURABLE && u,
+        x = d.type === K.Puh.DURABLE ? (p ? $.intl.string($.t.bm82mm) : $.intl.string($.t["6gprwf"])) : void 0,
+        { price: g } = d;
+    return null == g
         ? null
         : (0, l.jsx)(h, {
               title: o,
@@ -343,20 +343,20 @@ function X(n) {
               headerImage: m,
               availabilityLabel: x,
               PurchaseButton: function (n) {
-                  return null == u ? null : (0, l.jsx)(B.$P, { ...n, appId: t, sku: u });
+                  return null == d ? null : (0, l.jsx)(B.$P, { ...n, appId: s, sku: d });
               },
               onPurchase: function () {
-                  null != u &&
-                      (0, S.k)({
-                          appId: t,
-                          skuId: u.id,
+                  null != d &&
+                      (0, N.k)({
+                          appId: s,
+                          skuId: d.id,
                           analyticsLocations: r,
                           checkoutFlow: A.C.PREMIUM_APPS_OTP_CHECKOUT,
                       });
               },
               onDetails:
-                  null != s
-                      ? s
+                  null != t
+                      ? t
                       : (0, C.uJ)(c)
                         ? void 0
                         : () => {
@@ -369,7 +369,7 @@ function X(n) {
                                       i.e("480830"),
                                       i.e("170104"),
                                   ]).then(i.bind(i, 963179));
-                                  return (i) => (0, l.jsx)(n, { appId: t, skuId: e, ...i });
+                                  return (i) => (0, l.jsx)(n, { appId: s, skuId: e, ...i });
                               });
                           },
           });

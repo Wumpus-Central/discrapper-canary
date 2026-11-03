@@ -17,13 +17,13 @@ var n = t(477900),
     I = t(652215),
     v = t(778712),
     S = t(97808),
-    x = t(863610),
-    _ = t(283973),
-    E = t(376728),
-    N = t(774300),
-    y = t(566903),
-    C = t(714114),
-    b = t(864436),
+    _ = t(863610),
+    x = t(283973),
+    y = t(376728),
+    E = t(774300),
+    N = t(566903),
+    b = t(714114),
+    C = t(864436),
     j = t(835072),
     T = t(793574),
     O = t(688810),
@@ -47,14 +47,14 @@ function q(e) {
         p = l.useRef(null),
         v = (0, P.M)(p),
         S = (0, z.kt)({ channel: i }),
-        { analyticsLocations: x } = (0, O.Ay)(T.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
+        { analyticsLocations: _ } = (0, O.Ay)(T.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
     (l.useEffect(() => {
         s && p.current?.focus();
     }, [s]),
         (0, G.A)({
             name: o.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
             type: o.ImpressionTypes.POPOUT,
-            properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: x },
+            properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: _ },
         }),
         l.useEffect(() => {
             u?.(p.current);
@@ -62,7 +62,7 @@ function q(e) {
         l.useEffect(() => {
             r?.(v);
         }, [r, v]));
-    let _ = l.useCallback(() => {
+    let x = l.useCallback(() => {
         let e = U.A.getGuild(i.guild_id);
         (d()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, A.openModalLazy)(async () => {
@@ -95,7 +95,7 @@ function q(e) {
                         S.map((e) => (0, n.jsx)($, { channel: i, user: e }, e.id)),
                         (0, n.jsxs)(g.D, {
                             tag: "li",
-                            onClick: _,
+                            onClick: x,
                             className: a()(K.nM, K.vk),
                             children: [
                                 (0, n.jsx)("div", {
@@ -103,7 +103,7 @@ function q(e) {
                                     children: (0, n.jsx)(h.n, { size: "custom", className: K.Kk }),
                                 }),
                                 (0, n.jsx)(f.E, {
-                                    variant: "text-sm/medium",
+                                    variant: "body-sm/medium",
                                     className: K.UU,
                                     lineClamp: 1,
                                     children: B.intl.string(B.t.NOP3Ry),
@@ -138,9 +138,9 @@ function $(e) {
         ),
         { activityStatusText: G, activityStatusIcon: U } = l.useMemo(() => {
             let e = O.find((e) => e.type !== u.$.CUSTOM_STATUS && e.type !== u.$.HANG_STATUS);
-            return { activityStatusText: (0, y.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, j.f)(e) };
+            return { activityStatusText: (0, N.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, j.f)(e) };
         }, [O]),
-        { voiceChannel: z } = (0, C.Ay)({ userId: t.id }),
+        { voiceChannel: z } = (0, b.Ay)({ userId: t.id }),
         q = (0, V.Ay)(z),
         $ = (0, p.S3)(I.clD.ONLINE),
         H = "success" === A || "sending" === A,
@@ -151,7 +151,7 @@ function $(e) {
                 if (null == e) {
                     if (!D.A.can(I.xBc.CREATE_INSTANT_INVITE, i)) return null;
                     try {
-                        await E.Ay.createInvite(i.id, {}, Y);
+                        await y.Ay.createInvite(i.id, {}, Y);
                     } catch (e) {
                         return null;
                     }
@@ -163,9 +163,9 @@ function $(e) {
             let n = await e();
             null == n
                 ? m(null)
-                : N.A.enqueue(
+                : E.A.enqueue(
                       {
-                          type: N.F.USER,
+                          type: E.F.USER,
                           user: t,
                           inviteKey: n,
                           location: Y,
@@ -208,7 +208,7 @@ function $(e) {
             (0, n.jsxs)("div", {
                 className: K.VW,
                 children: [
-                    (0, n.jsx)(f.E, { variant: "text-sm/medium", className: K.UU, lineClamp: 1, children: Q }),
+                    (0, n.jsx)(f.E, { variant: "body-sm/medium", className: K.UU, lineClamp: 1, children: Q }),
                     (en || et) &&
                         (0, n.jsxs)("div", {
                             className: K.J2,
@@ -216,10 +216,10 @@ function $(e) {
                                 en
                                     ? (0, n.jsx)(k.A, { size: "custom", color: $, channel: z, className: K.RI })
                                     : null != U
-                                      ? (0, n.jsx)(b.A, { icon: U, className: K.RI })
+                                      ? (0, n.jsx)(C.A, { icon: U, className: K.RI })
                                       : null,
                                 (0, n.jsx)(f.E, {
-                                    variant: "text-xs/medium",
+                                    variant: "body-xs/medium",
                                     color: "text-status-online",
                                     lineClamp: 1,
                                     children: en ? q : G.text,
@@ -229,10 +229,10 @@ function $(e) {
                 ],
             }),
             "sending" === A &&
-                (0, n.jsx)("div", { className: K.r$, children: (0, n.jsx)(x.n, { dotRadius: 2, themed: !0 }) }),
+                (0, n.jsx)("div", { className: K.r$, children: (0, n.jsx)(_.n, { dotRadius: 2, themed: !0 }) }),
             "success" === A &&
                 (0, n.jsx)(f.E, {
-                    variant: "text-xs/medium",
+                    variant: "body-xs/medium",
                     color: "text-muted",
                     className: K.h5,
                     lineClamp: 1,
@@ -241,7 +241,7 @@ function $(e) {
             null == A &&
                 (0, n.jsx)("div", {
                     className: K.SB,
-                    children: (0, n.jsx)(_.R, { color: "currentColor", size: "sm", className: K.Kk }),
+                    children: (0, n.jsx)(x.R, { color: "currentColor", size: "sm", className: K.Kk }),
                 }),
         ],
     });

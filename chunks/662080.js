@@ -26,8 +26,8 @@ var i = n(477900),
     L = n(174459),
     y = n(24482),
     D = n(796774),
-    v = n(209932),
-    b = n(453997),
+    b = n(209932),
+    v = n(453997),
     P = n(368309),
     M = n(782618),
     U = n(980504),
@@ -57,7 +57,7 @@ function F(e) {
         (0, i.jsxs)("div", {
             className: k.Sp,
             children: [
-                (0, i.jsx)(_.E, { variant: "text-sm/medium", color: "text-default", children: l }),
+                (0, i.jsx)(_.E, { variant: "body-sm/medium", color: "text-default", children: l }),
                 (0, i.jsx)(g.A, {
                     size: "sm",
                     subscriptionTier: G.pe.TIER_2,
@@ -74,7 +74,7 @@ function F(e) {
 function B() {
     return (0, i.jsx)("ul", {
         className: k.G2,
-        children: Array.from({ length: b.BE }).map((e, t) => (0, i.jsx)("li", { className: k.bP }, t)),
+        children: Array.from({ length: v.BE }).map((e, t) => (0, i.jsx)("li", { className: k.bP }, t)),
     });
 }
 function V(e) {
@@ -114,9 +114,9 @@ function V(e) {
 function H(e) {
     let { channel: t, guildId: n, analyticsSource: a, openFullPicker: o, showEchoes: d = !1 } = e,
         { analyticsLocations: f } = (0, p.Ay)(I.A.SOUNDBOARD_QUICK_ACCESS_POPOUT),
-        { sounds: T, hasLockedSound: g, isFetching: O } = (0, b.Ay)({ channel: t, currentGuildId: n }),
+        { sounds: T, hasLockedSound: g, isFetching: O } = (0, v.Ay)({ channel: t, currentGuildId: n }),
         R = (0, c.bG)([C.A], () => C.A.getMediaSessionId()),
-        L = (0, c.bG)([v.A], () => v.A.getFavorites().size);
+        L = (0, c.bG)([b.A], () => b.A.getFavorites().size);
     return (
         (0, m.A)({
             type: l.ImpressionTypes.POPOUT,
@@ -148,7 +148,7 @@ function H(e) {
                                         children: [
                                             (0, i.jsx)(E.J, { size: "xs", color: A.A.colors.ICON_DEFAULT }),
                                             (0, i.jsx)(_.E, {
-                                                variant: "text-sm/medium",
+                                                variant: "body-sm/medium",
                                                 color: "text-default",
                                                 children: x.intl.string(x.t["1a/hIV"]),
                                             }),
@@ -159,7 +159,7 @@ function H(e) {
                                         onClick: o,
                                         size: "sm",
                                         variant: "primary",
-                                        textVariant: "text-sm/medium",
+                                        textVariant: "body-sm/medium",
                                     }),
                                 ],
                             }),

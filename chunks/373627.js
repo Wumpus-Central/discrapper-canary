@@ -1,11 +1,11 @@
-a.d(s, { default: () => ec });
+a.d(e, { default: () => sc });
 var l = a(477900),
     i = a(582128),
     r = a(503698),
     n = a.n(r),
-    t = a(512750),
-    o = a(17928),
-    d = a(935462),
+    o = a(512750),
+    d = a(17928),
+    t = a(935462),
     c = a(315629),
     u = a(534514),
     m = a(279449),
@@ -16,28 +16,28 @@ var l = a(477900),
     g = a(503852),
     N = a(363487),
     p = a(72377),
-    C = a(36075),
-    f = a(328006),
-    y = a(334840),
-    I = a(48736),
-    A = a(741561),
-    k = a(483625),
-    w = a(203656),
-    E = a(525104),
-    _ = a(176201),
-    b = a(178758),
+    y = a(36075),
+    C = a(328006),
+    b = a(334840),
+    f = a(48736),
+    I = a(741561),
+    A = a(483625),
+    k = a(203656),
+    w = a(525104),
+    E = a(176201),
+    _ = a(178758),
     G = a(652215),
     z = a(743981),
     P = a(105292),
     S = a(684),
     T = a(420667);
 function D() {
-    let [e, s] = i.useState(() => {
-            let e = Math.floor(Math.random() * b.Oz.length);
-            return { primary_color: b.Oz[e].colors[0], secondary_color: b.Oz[e].colors[1], tertiary_color: null };
+    let [s, e] = i.useState(() => {
+            let s = Math.floor(Math.random() * _.Oz.length);
+            return { primary_color: _.Oz[s].colors[0], secondary_color: _.Oz[s].colors[1], tertiary_color: null };
         }),
-        { gradientStyle: a, gradientClassname: r } = (0, C.v5)({
-            colorStrings: (0, _.K3)(e),
+        { gradientStyle: a, gradientClassname: r } = (0, y.v5)({
+            colorStrings: (0, E.K3)(s),
             roleStyle: "username",
             includeConvenienceGlow: !0,
             animateGradient: !0,
@@ -47,57 +47,57 @@ function D() {
         children: [
             (0, l.jsx)("div", {
                 className: S.zC,
-                children: (0, l.jsx)(k.V, {
-                    avatar: f.A,
+                children: (0, l.jsx)(A.V, {
+                    avatar: C.A,
                     username: "Cherry",
                     usernameStyle: a,
                     usernameClassName: n()(r, T.q),
                     message: P.intl.string(P.t["6OSasb"]),
                 }),
             }),
-            (0, l.jsx)(I.default, {
+            (0, l.jsx)(f.default, {
                 defaultColor: G.TGz,
-                colors: b.Oz,
-                value: e.primary_color,
-                gradientColors: null != e.secondary_color ? [e.primary_color, e.secondary_color] : void 0,
-                onChange: (a) => s({ ...e, primary_color: a }),
-                onChangeGradientColors: (e) => s({ primary_color: e[0], secondary_color: e[1], tertiary_color: null }),
+                colors: _.Oz,
+                value: s.primary_color,
+                gradientColors: null != s.secondary_color ? [s.primary_color, s.secondary_color] : void 0,
+                onChange: (a) => e({ ...s, primary_color: a }),
+                onChangeGradientColors: (s) => e({ primary_color: s[0], secondary_color: s[1], tertiary_color: null }),
                 isGradient: !0,
             }),
         ],
     });
 }
-function L(e) {
-    let { guildId: s } = e,
+function L(s) {
+    let { guildId: e } = s,
         [a, r] = i.useState(z.bl.HEART),
-        n = (0, E.A)(),
-        t = i.useMemo(() => ({ unlockedBadges: n.unlockedBadges.slice(0, 10), lockedBadges: [] }), [n]);
+        n = (0, w.A)(),
+        o = i.useMemo(() => ({ unlockedBadges: n.unlockedBadges.slice(0, 10), lockedBadges: [] }), [n]);
     return (0, l.jsxs)("div", {
         className: S.kL,
         children: [
             (0, l.jsx)("div", {
                 className: S.zC,
-                children: (0, l.jsx)(k.V, {
-                    avatar: y.A,
+                children: (0, l.jsx)(A.V, {
+                    avatar: b.A,
                     username: "Roka",
                     usernameStyle: { color: "var(--brand-400)" },
                     message: P.intl.string(P.t["6OSasb"]),
-                    decorations: (0, l.jsx)(w.M, { guildId: s, tag: "GGEZ", badge: a }),
+                    decorations: (0, l.jsx)(k.M, { guildId: e, tag: "GGEZ", badge: a }),
                 }),
             }),
-            (0, l.jsx)(A.y, { selectedBadge: a, onBadgeClicked: r, badgeCollection: t }),
+            (0, l.jsx)(I.y, { selectedBadge: a, onBadgeClicked: r, badgeCollection: o }),
         ],
     });
 }
 var M = a(975571),
     O = a(959456),
     V = a(427629);
-function B(e) {
-    let { powerup: s } = e;
-    return s.skuId === t.FB
+function B(s) {
+    let { powerup: e } = s;
+    return e.skuId === o.FB
         ? (0, l.jsx)(h.E, {
               className: V.C,
-              variant: "text-sm/medium",
+              variant: "body-sm/medium",
               children: P.intl.format(O.default.fXE30d, { helpDeskArticle: M.A.getArticleURL(G.MVz.GUILD_VANITY_URL) }),
           })
         : null;
@@ -111,16 +111,16 @@ var R = a(438874),
     J = a(898190),
     Q = a(249286),
     W = a(933337);
-function Z(e) {
-    let { guildId: s, powerup: a, isActive: r, onError: n } = e,
-        { onActivate: t, isLoading: o, error: d } = (0, Q.A)(s, a),
-        { isLoading: c, error: u } = (0, J.A)(s, a),
-        m = (0, W.A)(s, a),
-        { disabled: x, reason: h } = (0, q.A)(s, a, r);
+function Z(s) {
+    let { guildId: e, powerup: a, isActive: r, onError: n } = s,
+        { onActivate: o, isLoading: d, error: t } = (0, Q.A)(e, a),
+        { isLoading: c, error: u } = (0, J.A)(e, a),
+        m = (0, W.A)(e, a),
+        { disabled: x, reason: h } = (0, q.A)(e, a, r);
     i.useEffect(() => {
-        n?.(d ?? u);
-    }, [d, u, n]);
-    let j = o || c;
+        n?.(t ?? u);
+    }, [t, u, n]);
+    let j = d || c;
     return r
         ? (0, l.jsx)($.u, {
               body: P.intl.formatToPlainString(O.default["5HQUzD"], { boostCount: a.cost }),
@@ -142,7 +142,7 @@ function Z(e) {
               fullWidth: !0,
               disabled: x,
               loading: j,
-              onClick: () => t(),
+              onClick: () => o(),
               icon: H._,
               iconPosition: "start",
               text: P.intl.string(P.t.JFfins),
@@ -151,11 +151,11 @@ function Z(e) {
 }
 var Y = a(509434),
     K = a(979523);
-function X(e) {
-    let { guildId: s, onPreviewOpen: a } = e,
+function X(s) {
+    let { guildId: e, onPreviewOpen: a } = s,
         r = i.useCallback(() => {
-            (0, K.m)(s, a);
-        }, [s, a]);
+            (0, K.m)(e, a);
+        }, [e, a]);
     return (0, l.jsx)(U.$, {
         variant: "secondary",
         size: "md",
@@ -166,103 +166,103 @@ function X(e) {
         onClick: r,
     });
 }
-var ee = a(439156),
-    es = a(189540);
-function ea(e) {
-    let { className: s, guildId: a, powerup: i, onClose: r, onError: o } = e,
-        { showToggleButton: d, showConfigureButton: c, isPowerupActive: u } = (0, R.A)(a, i);
-    if (i.skuId === t.d0)
+var ss = a(439156),
+    se = a(189540);
+function sa(s) {
+    let { className: e, guildId: a, powerup: i, onClose: r, onError: d } = s,
+        { showToggleButton: t, showConfigureButton: c, isPowerupActive: u } = (0, R.A)(a, i);
+    if (i.skuId === o.d0)
         return (0, l.jsx)("div", {
-            className: n()(es.kL, s),
+            className: n()(se.kL, e),
             children: (0, l.jsxs)("div", {
-                className: es.m6,
+                className: se.m6,
                 children: [
-                    d &&
+                    t &&
                         !u &&
                         (0, l.jsx)("div", {
-                            className: es.PV,
+                            className: se.PV,
                             children: (0, l.jsx)(X, { guildId: a, onPreviewOpen: r }),
                         }),
-                    d &&
+                    t &&
                         (0, l.jsx)("div", {
-                            className: es.PV,
-                            children: (0, l.jsx)(Z, { guildId: a, powerup: i, isActive: u, onError: o }),
+                            className: se.PV,
+                            children: (0, l.jsx)(Z, { guildId: a, powerup: i, isActive: u, onError: d }),
                         }),
-                    c && (0, l.jsx)(F.GU, { className: es.PV, guildId: a, powerup: i }),
+                    c && (0, l.jsx)(F.GU, { className: se.PV, guildId: a, powerup: i }),
                 ],
             }),
         });
     let m = !c;
     return (0, l.jsxs)("div", {
-        className: n()(es.kL, s),
+        className: n()(se.kL, e),
         children: [
-            d && (0, l.jsx)(ee.A, { guildId: a, powerup: i, onError: o, grow: m, compact: !m }),
+            t && (0, l.jsx)(ss.A, { guildId: a, powerup: i, onError: d, grow: m, compact: !m }),
             c && (0, l.jsx)(F.GU, { guildId: a, powerup: i }),
         ],
     });
 }
-var el = a(111159),
-    ei = a(533148),
-    er = a(927573),
-    en = a(531374);
-function et() {
-    let [e, s] = i.useState("");
+var sl = a(111159),
+    si = a(533148),
+    sr = a(927573),
+    sn = a(531374);
+function so() {
+    let [s, e] = i.useState("");
     return (0, l.jsxs)("div", {
-        className: en.kL,
+        className: sn.kL,
         children: [
             (0, l.jsxs)("div", {
-                className: en.qJ,
+                className: sn.qJ,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: en.B0,
+                        className: sn.B0,
                         children: [
                             (0, l.jsx)("div", {
-                                className: en.my,
-                                children: (0, l.jsx)(el.p, { size: "custom", width: 24, height: 24 }),
+                                className: sn.my,
+                                children: (0, l.jsx)(sl.p, { size: "custom", width: 24, height: 24 }),
                             }),
                             (0, l.jsxs)("div", {
-                                className: en.w7,
+                                className: sn.w7,
                                 children: [
                                     (0, l.jsxs)("div", {
-                                        className: en.oG,
+                                        className: sn.oG,
                                         children: [
-                                            (0, l.jsx)("div", { className: en.sg }),
-                                            (0, l.jsx)("div", { className: en.It }),
+                                            (0, l.jsx)("div", { className: sn.sg }),
+                                            (0, l.jsx)("div", { className: sn.It }),
                                         ],
                                     }),
                                     (0, l.jsxs)("div", {
-                                        className: en.Qc,
+                                        className: sn.Qc,
                                         children: [
                                             (0, l.jsx)(h.E, {
-                                                variant: "text-sm/medium",
+                                                variant: "body-sm/medium",
                                                 color: "text-muted",
-                                                className: en.pc,
-                                                children: `${er.mu}/`,
+                                                className: sn.pc,
+                                                children: `${sr.mu}/`,
                                             }),
                                             (0, l.jsx)(h.E, {
-                                                variant: "text-sm/medium",
+                                                variant: "body-sm/medium",
                                                 color: "text-link",
-                                                className: en.Po,
-                                                children: e,
+                                                className: sn.Po,
+                                                children: s,
                                             }),
                                         ],
                                     }),
                                     (0, l.jsxs)("div", {
-                                        className: en.H3,
+                                        className: sn.H3,
                                         children: [
-                                            (0, l.jsx)("div", { className: en.ns }),
+                                            (0, l.jsx)("div", { className: sn.ns }),
                                             (0, l.jsxs)("div", {
-                                                className: en.uP,
+                                                className: sn.uP,
                                                 children: [
-                                                    (0, l.jsx)("div", { className: en.sV }),
+                                                    (0, l.jsx)("div", { className: sn.sV }),
                                                     (0, l.jsxs)("div", {
-                                                        className: en.xS,
+                                                        className: sn.xS,
                                                         children: [
-                                                            (0, l.jsx)("div", { className: en.jd }),
-                                                            (0, l.jsx)("div", { className: en.r$ }),
+                                                            (0, l.jsx)("div", { className: sn.jd }),
+                                                            (0, l.jsx)("div", { className: sn.r$ }),
                                                         ],
                                                     }),
-                                                    (0, l.jsx)("div", { className: en.bi }),
+                                                    (0, l.jsx)("div", { className: sn.bi }),
                                                 ],
                                             }),
                                         ],
@@ -271,73 +271,73 @@ function et() {
                             }),
                         ],
                     }),
-                    (0, l.jsx)(ei.A, { autoFocus: !0, value: e, onChange: s }),
+                    (0, l.jsx)(si.A, { autoFocus: !0, value: s, onChange: e }),
                 ],
             }),
             (0, l.jsx)(h.E, {
-                variant: "text-xs/normal",
+                variant: "body-xs/normal",
                 color: "text-muted",
-                className: en.ed,
+                className: sn.ed,
                 children: P.intl.string(O.default.u5iNbz),
             }),
         ],
     });
 }
-var eo = a(568065),
-    ed = a(911371);
-function ec(e) {
-    let { guildId: s, powerup: a, ...r } = e,
-        [C, f] = i.useState(void 0),
-        y = i.useMemo(() => {
+var sd = a(568065),
+    st = a(911371);
+function sc(s) {
+    let { guildId: e, powerup: a, ...r } = s,
+        [y, C] = i.useState(void 0),
+        b = i.useMemo(() => {
             switch (a.skuId) {
-                case t.SL:
-                    return (0, l.jsx)(L, { guildId: s });
-                case t.aN:
+                case o.SL:
+                    return (0, l.jsx)(L, { guildId: e });
+                case o.aN:
                     return (0, l.jsx)(D, {});
-                case t.FB:
-                    return (0, l.jsx)(et, {});
+                case o.FB:
+                    return (0, l.jsx)(so, {});
                 default:
                     return;
             }
-        }, [a, s]);
-    (0, g.Z)(s, a, g.q.DETAIL);
-    let I = (0, N.A)(s),
-        A = eo.wr[a.skuId],
-        k = null != A ? eo.a8[A] : null,
-        w = (0, o.bG)([v.A], () => v.A.getStateForGuild(s)),
-        E = null != k ? w?.allPowerups[k] : null;
-    return a.skuId === t.d0
-        ? (0, l.jsx)(d.EO, {
+        }, [a, e]);
+    (0, g.Z)(e, a, g.q.DETAIL);
+    let f = (0, N.A)(e),
+        I = sd.wr[a.skuId],
+        A = null != I ? sd.a8[I] : null,
+        k = (0, d.bG)([v.A], () => v.A.getStateForGuild(e)),
+        w = null != A ? k?.allPowerups[A] : null;
+    return a.skuId === o.d0
+        ? (0, l.jsx)(t.EO, {
               "data-migration-pending": !0,
-              className: n()(ed.yl, ed._v),
-              size: d.rI.DYNAMIC,
+              className: n()(st.yl, st._v),
+              size: t.rI.DYNAMIC,
               ...r,
               parentComponent: "GuildPowerupPerkModal",
-              children: (0, l.jsx)(d.$m, {
+              children: (0, l.jsx)(t.$m, {
                   "data-migration-pending": !0,
-                  className: n()(ed.aH, { [ed.GR]: !I }),
+                  className: n()(st.aH, { [st.GR]: !f }),
                   scrollbarType: "none",
                   children: (0, l.jsxs)("div", {
-                      className: ed.lR,
+                      className: st.lR,
                       children: [
-                          (0, l.jsx)(d.s_, {
+                          (0, l.jsx)(t.s_, {
                               "data-migration-pending": !0,
-                              className: n()(ed.VN, ed.$W),
+                              className: n()(st.VN, st.$W),
                               onClick: r.onClose,
                           }),
                           (0, l.jsx)(c.h, {
-                              className: ed.ZJ,
-                              children: (0, l.jsx)(p.l, { className: ed.a, powerup: a }),
+                              className: st.ZJ,
+                              children: (0, l.jsx)(p.l, { className: st.a, powerup: a }),
                           }),
                           (0, l.jsxs)("div", {
-                              className: ed.gp,
+                              className: st.gp,
                               children: [
                                   (0, l.jsxs)("div", {
-                                      className: ed.cv,
+                                      className: st.cv,
                                       children: [
                                           (0, l.jsx)(u.D, { variant: "heading-xl/semibold", children: a.title }),
                                           (0, l.jsxs)("div", {
-                                              className: ed.uy,
+                                              className: st.uy,
                                               children: [
                                                   (0, l.jsx)(m.d, {
                                                       size: "custom",
@@ -346,74 +346,75 @@ function ec(e) {
                                                       color: x.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
                                                   }),
                                                   (0, l.jsx)(h.E, {
+                                                      tag: "div",
                                                       color: "text-muted",
-                                                      variant: "redesign/heading-18/medium",
+                                                      variant: "heading-md/medium",
                                                       children: P.intl.format(P.t.gDsyB9, { numSubscriptions: a.cost }),
                                                   }),
                                               ],
                                           }),
                                       ],
                                   }),
-                                  (0, l.jsx)(h.E, { variant: "text-md/normal", children: a.description }),
-                                  null != C &&
+                                  (0, l.jsx)(h.E, { variant: "body-md/normal", children: a.description }),
+                                  null != y &&
                                       (0, l.jsx)(h.E, {
                                           color: "text-feedback-critical",
-                                          variant: "text-sm/semibold",
-                                          children: C,
+                                          variant: "body-sm/semibold",
+                                          children: y,
                                       }),
                               ],
                           }),
-                          I &&
-                              (0, l.jsx)(ea, {
-                                  className: ed.oe,
-                                  guildId: s,
+                          f &&
+                              (0, l.jsx)(sa, {
+                                  className: st.oe,
+                                  guildId: e,
                                   powerup: a,
                                   onClose: r.onClose,
-                                  onError: f,
+                                  onError: C,
                               }),
                       ],
                   }),
               }),
           })
-        : (0, l.jsxs)(d.EO, {
+        : (0, l.jsxs)(t.EO, {
               "data-migration-pending": !0,
-              className: ed.yl,
-              size: d.rI.DYNAMIC,
+              className: st.yl,
+              size: t.rI.DYNAMIC,
               ...r,
               parentComponent: "GuildPowerupPerkModal",
               children: [
-                  (0, l.jsxs)(d.$m, {
+                  (0, l.jsxs)(t.$m, {
                       "data-migration-pending": !0,
-                      className: ed._F,
+                      className: st._F,
                       scrollbarType: "none",
                       children: [
                           (0, l.jsxs)("div", {
-                              className: ed.pz,
+                              className: st.pz,
                               children: [
                                   (0, l.jsx)(c.h, {
-                                      className: ed.Rp,
-                                      children: (0, l.jsx)(p.l, { className: ed.UZ, powerup: a }),
+                                      className: st.Rp,
+                                      children: (0, l.jsx)(p.l, { className: st.UZ, powerup: a }),
                                   }),
                                   (0, l.jsxs)("div", {
-                                      className: ed.hQ,
+                                      className: st.hQ,
                                       children: [
                                           (0, l.jsx)(u.D, { variant: "heading-xl/semibold", children: a.title }),
                                           (0, l.jsx)(h.E, {
-                                              className: ed.h_,
-                                              variant: "text-md/normal",
+                                              className: st.h_,
+                                              variant: "body-md/normal",
                                               children: a.description,
                                           }),
                                           null != a.deactivationCooldownPeriodDays &&
                                               a.deactivationCooldownPeriodDays > 0 &&
                                               (0, l.jsxs)("div", {
-                                                  className: ed.sh,
+                                                  className: st.sh,
                                                   children: [
                                                       (0, l.jsx)(j.CircleInformationIcon, {
                                                           size: "xs",
                                                           color: x.A.colors.TEXT_MUTED,
                                                       }),
                                                       (0, l.jsx)(h.E, {
-                                                          variant: "text-sm/medium",
+                                                          variant: "body-sm/medium",
                                                           color: "text-muted",
                                                           children: P.intl.formatToPlainString(O.default.GMhQcE, {
                                                               cooldownDays: a.deactivationCooldownPeriodDays,
@@ -421,38 +422,38 @@ function ec(e) {
                                                       }),
                                                   ],
                                               }),
-                                          null != E &&
+                                          null != w &&
                                               (0, l.jsx)(h.E, {
-                                                  className: ed.h_,
-                                                  variant: "text-sm/normal",
+                                                  className: st.h_,
+                                                  variant: "body-sm/normal",
                                                   children: P.intl.formatToPlainString(O.default.NAFGkH, {
-                                                      level: E.title,
+                                                      level: w.title,
                                                   }),
                                               }),
                                           (0, l.jsx)(B, { powerup: a }),
-                                          null != C &&
+                                          null != y &&
                                               (0, l.jsx)(h.E, {
-                                                  className: ed.z3,
+                                                  className: st.z3,
                                                   color: "text-feedback-critical",
-                                                  variant: "text-sm/semibold",
-                                                  children: C,
+                                                  variant: "body-sm/semibold",
+                                                  children: y,
                                               }),
-                                          I &&
-                                              (0, l.jsx)(ea, {
-                                                  className: ed.qr,
-                                                  guildId: s,
+                                          f &&
+                                              (0, l.jsx)(sa, {
+                                                  className: st.qr,
+                                                  guildId: e,
                                                   powerup: a,
                                                   onClose: r.onClose,
-                                                  onError: f,
+                                                  onError: C,
                                               }),
                                       ],
                                   }),
                               ],
                           }),
-                          null != y && (0, l.jsx)("div", { className: ed._9, children: y }),
+                          null != b && (0, l.jsx)("div", { className: st._9, children: b }),
                       ],
                   }),
-                  (0, l.jsx)(d.s_, { "data-migration-pending": !0, className: ed.VN, onClick: r.onClose }),
+                  (0, l.jsx)(t.s_, { "data-migration-pending": !0, className: st.VN, onClick: r.onClose }),
               ],
           });
 }

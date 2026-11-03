@@ -1,13 +1,13 @@
 l.d(e, { A: () => Q });
 var s = l(477900),
     i = l(582128),
-    t = l(503698),
-    a = l.n(t),
-    r = l(17928),
+    a = l(503698),
+    r = l.n(a),
+    t = l(17928),
     d = l(661531),
     u = l(834730),
-    c = l(97808),
-    o = l(778712),
+    o = l(97808),
+    c = l(778712),
     x = l(950305),
     p = l(140735),
     m = l(939249),
@@ -18,17 +18,17 @@ var s = l(477900),
     f = l(427262),
     A = l(503275),
     N = l(371169),
-    _ = l(465006),
-    S = l(845079),
-    b = l(617617),
-    y = l(573163),
+    b = l(465006),
+    y = l(845079),
+    _ = l(617617),
+    S = l(573163),
     C = l(805942),
     E = l(404373),
     I = l(260498),
     k = l(189714),
     z = l(722701),
     M = l(811587);
-let L = [I.Ay, C.A, y.Ay, b.A, z.A];
+let L = [I.Ay, C.A, S.Ay, _.A, z.A];
 var w = l(866665),
     T = l(22231),
     F = l(809526),
@@ -59,7 +59,7 @@ var B = l(731084),
     W = l(790624);
 function X(n) {
     let { projectId: e } = n,
-        l = (0, r.bG)(
+        l = (0, t.bG)(
             [C.A],
             () => {
                 let n = (0, Y.Ji)(C.A.getMessages(e));
@@ -75,9 +75,9 @@ function X(n) {
             [e],
         );
     return (0, s.jsx)(u.E, {
-        variant: "text-xs/normal",
+        variant: "body-xs/normal",
         color: "none",
-        className: a()(W.pG, V.Hz),
+        className: r()(W.pG, V.Hz),
         "aria-hidden": !0,
         children: l ?? D.intl.string(F.default["Y8pS+n"]),
     });
@@ -93,26 +93,26 @@ function Z(n) {
 }
 function K(n) {
     let { project: e, time: l, showServer: i } = n,
-        t = (0, A.vm)(e.owner_user_id),
-        r = (0, f.tx)(t),
-        d = (0, _.V)(e);
+        a = (0, A.vm)(e.owner_user_id),
+        t = (0, f.tx)(a),
+        d = (0, b.V)(e);
     return (0, s.jsxs)(u.E, {
-        variant: "text-xs/normal",
+        variant: "body-xs/normal",
         color: "none",
-        className: a()(W.pG, W.sL, W.kB),
+        className: r()(W.pG, W.sL, W.kB),
         children: [
             l,
-            null != t
+            null != a
                 ? (0, s.jsxs)(s.Fragment, {
                       children: [
                           null != l ? (0, s.jsx)("span", { "aria-hidden": !0, children: "\xb7" }) : null,
-                          (0, s.jsx)(c.eu, {
-                              src: t.getAvatarURL(e.guild_id, (0, o.FT)(o._3.SIZE_16)),
-                              size: o._3.SIZE_16,
+                          (0, s.jsx)(o.eu, {
+                              src: a.getAvatarURL(e.guild_id, (0, c.FT)(c._3.SIZE_16)),
+                              size: c._3.SIZE_16,
                               className: W.Wy,
                               "aria-hidden": !0,
                           }),
-                          (0, s.jsx)("span", { className: W.p8, children: r }),
+                          (0, s.jsx)("span", { className: W.p8, children: t }),
                       ],
                   })
                 : null,
@@ -129,13 +129,13 @@ function K(n) {
 }
 function O(n) {
     let { project: e, time: l } = n,
-        i = (0, _.V)(e),
-        t = null == i && (0, _.ns)(e);
-    return null != l || null != i || t
+        i = (0, b.V)(e),
+        a = null == i && (0, b.ns)(e);
+    return null != l || null != i || a
         ? (0, s.jsxs)(u.E, {
-              variant: "text-xs/normal",
+              variant: "body-xs/normal",
               color: "none",
-              className: a()(W.pG, W.sL, W.kB),
+              className: r()(W.pG, W.sL, W.kB),
               children: [
                   l,
                   null != i
@@ -159,7 +159,7 @@ function O(n) {
                                       }),
                             ],
                         })
-                      : t
+                      : a
                         ? (0, s.jsxs)(s.Fragment, {
                               children: [
                                   null != l ? (0, s.jsx)("span", { "aria-hidden": !0, children: "\xb7" }) : null,
@@ -174,14 +174,14 @@ function O(n) {
 let q = i.memo(function (n) {
     let e,
         l,
-        { project: i, onSelect: t, selected: d = !1, renderActions: c, onContextMenu: o, showServer: x = !1 } = n,
+        { project: i, onSelect: a, selected: d = !1, renderActions: o, onContextMenu: c, showServer: x = !1 } = n,
         {
             status: h,
             unread: f,
             deleting: A,
         } = ((e = i.id),
         (l = (i.supported_surfaces?.length ?? 0) > 0),
-        (0, r.cf)(
+        (0, t.cf)(
             L,
             () => ({
                 status: (function (n) {
@@ -198,15 +198,15 @@ let q = i.memo(function (n) {
                     publishState: z.A.getPublishStatus(e)?.publishState ?? null,
                     everPublished: l,
                 }),
-                unread: (0, E.tz)(e) && !(0, k.j)(b.A.settings, e),
+                unread: (0, E.tz)(e) && !(0, k.j)(_.A.settings, e),
                 deleting: I.Ay.isProjectDeleting(e),
             }),
             [e, l],
         )),
-        _ = !A && "in_progress" === h,
-        y = !A && f,
+        b = !A && "in_progress" === h,
+        S = !A && f,
         w = A || "published" === h ? null : h,
-        T = [null != w ? D.intl.string(U[w]) : null, y ? D.intl.string(F.default["N+3Pzk"]) : null]
+        T = [null != w ? D.intl.string(U[w]) : null, S ? D.intl.string(F.default["N+3Pzk"]) : null]
             .filter(Boolean)
             .join(", "),
         G = (function (n) {
@@ -214,7 +214,7 @@ let q = i.memo(function (n) {
             let e = Date.parse(n.updated_at);
             return Number.isNaN(e) ? null : e;
         })(i),
-        B = (0, r.bG)([v.default], () => v.default.getCurrentUser()?.id),
+        B = (0, t.bG)([v.default], () => v.default.getCurrentUser()?.id),
         H = i.owner_user_id === B,
         Y = null != G ? (0, g.Ay)({ since: G, getFormatter: g.i, includeWeeks: !0 }) : null,
         Z = (0, s.jsxs)(s.Fragment, {
@@ -222,7 +222,7 @@ let q = i.memo(function (n) {
                 (0, s.jsxs)("span", {
                     className: W.Kk,
                     children: [
-                        (0, s.jsx)(S.A, { project: i, size: "sidebar", className: null != w ? P : void 0 }),
+                        (0, s.jsx)(y.A, { project: i, size: "sidebar", className: null != w ? P : void 0 }),
                         null != w ? (0, s.jsx)(R, { status: w }) : null,
                     ],
                 }),
@@ -230,19 +230,19 @@ let q = i.memo(function (n) {
                     className: W.rf,
                     children: [
                         (0, s.jsx)(u.E, {
-                            variant: "text-md/medium",
+                            variant: "body-md/medium",
                             color: "none",
-                            className: a()(W.UU, { [V.Hz]: _ }),
+                            className: r()(W.UU, { [V.Hz]: b }),
                             children: i.name,
                         }),
                         A
                             ? (0, s.jsx)(u.E, {
-                                  variant: "text-xs/normal",
+                                  variant: "body-xs/normal",
                                   color: "none",
-                                  className: a()(W.pG, W.sL),
+                                  className: r()(W.pG, W.sL),
                                   children: D.intl.string(F.default.Yh5pAc),
                               })
-                            : _
+                            : b
                               ? (0, s.jsx)(X, { projectId: i.id })
                               : H
                                 ? (0, s.jsx)(O, { project: i, time: Y })
@@ -252,26 +252,26 @@ let q = i.memo(function (n) {
                 "" !== T ? (0, s.jsx)(p.A, { children: T }) : null,
             ],
         });
-    return null == t
+    return null == a
         ? (0, s.jsxs)("li", {
-              className: a()(W.AS, { [W.Cp]: A }),
+              className: r()(W.AS, { [W.Cp]: A }),
               "aria-busy": A,
               children: [
-                  y ? (0, s.jsx)("span", { className: W.dM, "aria-hidden": !0 }) : null,
+                  S ? (0, s.jsx)("span", { className: W.dM, "aria-hidden": !0 }) : null,
                   (0, s.jsxs)("div", {
-                      className: a()(W.nM, W.bl, { [W.gy]: y }),
-                      onContextMenu: null == o || A ? void 0 : (n) => o(n, i),
-                      children: [Z, null == c || A ? null : (0, s.jsx)("div", { className: W.a7, children: c(i) })],
+                      className: r()(W.nM, W.bl, { [W.gy]: S }),
+                      onContextMenu: null == c || A ? void 0 : (n) => c(n, i),
+                      children: [Z, null == o || A ? null : (0, s.jsx)("div", { className: W.a7, children: o(i) })],
                   }),
               ],
           })
         : (0, s.jsxs)("li", {
-              className: a()(W.AS, { [W.Cp]: A, [W.vX]: null != c }),
+              className: r()(W.AS, { [W.Cp]: A, [W.vX]: null != o }),
               "aria-busy": A,
               children: [
-                  y ? (0, s.jsx)("span", { className: W.dM, "aria-hidden": !0 }) : null,
+                  S ? (0, s.jsx)("span", { className: W.dM, "aria-hidden": !0 }) : null,
                   (0, s.jsx)(m.D, {
-                      className: a()(W.nM, { [W.wH]: d, [W.gy]: y }),
+                      className: r()(W.nM, { [W.wH]: d, [W.gy]: S }),
                       "aria-current": d ? "page" : void 0,
                       tabIndex: A ? -1 : void 0,
                       onMouseDown: A
@@ -279,14 +279,14 @@ let q = i.memo(function (n) {
                           : (n) => {
                                 0 === n.button && (0, N.tf)(i.id);
                             },
-                      onClick: A ? void 0 : () => t(i),
-                      onContextMenu: null == o || A ? void 0 : (n) => o(n, i),
+                      onClick: A ? void 0 : () => a(i),
+                      onContextMenu: null == c || A ? void 0 : (n) => c(n, i),
                       children: Z,
                   }),
-                  null != c
+                  null != o
                       ? (0, s.jsx)("div", {
-                            className: a()(W.XI, { [W.Rn]: A }),
-                            children: A ? (0, s.jsx)(j.y, { type: j.t.SPINNING_CIRCLE_SIMPLE }) : c(i),
+                            className: r()(W.XI, { [W.Rn]: A }),
+                            children: A ? (0, s.jsx)(j.y, { type: j.t.SPINNING_CIRCLE_SIMPLE }) : o(i),
                         })
                       : null,
               ],
@@ -298,18 +298,18 @@ function Q(n) {
         projects: e,
         onSelect: l,
         selectedProjectId: i = null,
-        renderProjectActions: t,
-        onProjectContextMenu: a,
-        listRef: r,
+        renderProjectActions: a,
+        onProjectContextMenu: r,
+        listRef: t,
         showServer: d = !1,
     } = n;
     return (0, s.jsx)("ul", {
-        ref: r,
+        ref: t,
         className: J.p,
         children: e.map((n) =>
             (0, s.jsx)(
                 q,
-                { project: n, onSelect: l, selected: n.id === i, renderActions: t, onContextMenu: a, showServer: d },
+                { project: n, onSelect: l, selected: n.id === i, renderActions: a, onContextMenu: r, showServer: d },
                 n.id,
             ),
         ),

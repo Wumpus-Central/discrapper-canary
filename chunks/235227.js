@@ -19,24 +19,24 @@ var l = i(477900),
     I = i(606049),
     _ = i(652215),
     R = i(105292),
-    N = i(636767),
-    b = i(318626),
-    x = i(165648);
-let y = n.memo(function (e) {
+    b = i(636767),
+    y = i(318626),
+    N = i(165648);
+let C = n.memo(function (e) {
         let { message: s, notice: i, compact: n = !1, onDismiss: a } = e;
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsxs)("div", {
-                    className: t()(N.K1, { [N.oE]: n }),
+                    className: t()(b.K1, { [b.oE]: n }),
                     children: [
                         (0, l.jsx)("div", {
-                            className: N.Oz,
-                            children: (0, l.jsx)(o.ShieldIcon, { size: "xs", color: "currentColor", className: N.F_ }),
+                            className: b.Oz,
+                            children: (0, l.jsx)(o.ShieldIcon, { size: "xs", color: "currentColor", className: b.F_ }),
                         }),
                         (0, l.jsx)("div", {
-                            className: N.jC,
+                            className: b.jC,
                             children: (0, l.jsx)(u.E, {
-                                variant: "text-sm/normal",
+                                variant: "body-sm/normal",
                                 color: "interactive-text-default",
                                 children: (0, E.Tz)(i, void 0, s.channel_id),
                             }),
@@ -44,15 +44,15 @@ let y = n.memo(function (e) {
                     ],
                 }),
                 (0, l.jsx)("div", {
-                    className: t()(N.ah, { [N.oE]: n }),
+                    className: t()(b.ah, { [b.oE]: n }),
                     children: (0, l.jsx)(p.A, {
                         message: s,
                         onDeleteMessage: a,
                         children: (0, l.jsx)(u.E, {
-                            variant: "text-xs/normal",
+                            variant: "body-xs/normal",
                             color: "interactive-text-default",
                             tag: "span",
-                            className: N.C2,
+                            className: b.C2,
                             children: R.intl.format(R.t["Nd3Gh+"], {
                                 helpUrl: h.A.getArticleURL(_.MVz.GUILD_AUTOMOD_BLOCKED_MESSAGE),
                             }),
@@ -62,12 +62,12 @@ let y = n.memo(function (e) {
             ],
         });
     }),
-    C = n.memo(function (e) {
+    x = n.memo(function (e) {
         let { className: s, compact: i, message: a, children: d, content: o, onUpdate: u, hideDismiss: h = !1 } = e,
             E = a.editedTimestamp?.toString(),
             p = n.useRef(!1),
             _ = (0, c.bG)([m.A], () => m.A.getMessage(a.id), [a.id]),
-            C = n.useCallback(() => {
+            x = n.useCallback(() => {
                 if (_?.isBlockedEdit) {
                     var e;
                     ((e = a.id), A.h.dispatch({ type: "REMOVE_AUTOMOD_MESSAGE_NOTICE", messageId: e }));
@@ -79,11 +79,11 @@ let y = n.memo(function (e) {
             }, [u, a.content, o, E, d]),
             (0, l.jsxs)("div", {
                 id: (0, M.CJ)(a),
-                className: t()(s, x.PT, {
-                    [b.BK]: !0,
-                    [b.nB]: "rtl" === r()(a.content),
-                    [N.Dy]: _?.isBlockedEdit,
-                    [N.bv]: !_?.isBlockedEdit,
+                className: t()(s, N.PT, {
+                    [y.BK]: !0,
+                    [y.nB]: "rtl" === r()(a.content),
+                    [b.Dy]: _?.isBlockedEdit,
+                    [b.bv]: !_?.isBlockedEdit,
                 }),
                 children: [
                     d ?? (0, f._A)(a, o),
@@ -97,17 +97,17 @@ let y = n.memo(function (e) {
                                     isEdited: !0,
                                     isInline: !1,
                                     children: (0, l.jsxs)("span", {
-                                        className: b.oh,
+                                        className: y.oh,
                                         children: ["(", R.intl.string(R.t.Z7eEx9), ")"],
                                     }),
                                 }),
                             ],
                         }),
-                    (0, l.jsx)(y, {
+                    (0, l.jsx)(C, {
                         notice: _?.errorMessage ?? R.intl.string(R.t.zQ69pv),
                         message: a,
                         compact: i,
-                        onDismiss: h ? void 0 : C,
+                        onDismiss: h ? void 0 : x,
                     }),
                 ],
             })
@@ -115,5 +115,5 @@ let y = n.memo(function (e) {
     }, f.sP);
 function L(e, s) {
     let { message: i, compact: n, hideAutomodDismiss: a } = e;
-    return (0, l.jsx)(C, { message: i, content: s, compact: n ?? !1, hideDismiss: a });
+    return (0, l.jsx)(x, { message: i, content: s, compact: n ?? !1, hideDismiss: a });
 }

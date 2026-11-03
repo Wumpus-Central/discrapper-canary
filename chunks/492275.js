@@ -31,7 +31,7 @@ function p(e) {
                         null != i && (0, l.jsx)("img", { src: i, alt: "", width: 40, height: 40, className: m.Kk }),
                 }),
                 (0, l.jsx)(s.E, {
-                    variant: "text-md/medium",
+                    variant: "body-md/medium",
                     children: d.intl.format(c.default["0+xfd9"], { giftsRemaining: t, nextTier: n }),
                 }),
             ],

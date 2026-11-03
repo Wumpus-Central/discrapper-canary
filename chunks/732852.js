@@ -1,11 +1,11 @@
-(i.r(e), i.d(e, { default: () => s }));
-var c = i(477900);
-i(582128);
-var r = i(834730);
+(e.r(i), e.d(i, { default: () => s }));
+var c = e(477900);
+e(582128);
+var r = e(834730);
 function s(a) {
-    let { text: e } = a;
+    let { text: i } = a;
     return (0, c.jsx)("div", {
         className: "dynamicGraphicDemoContainer",
-        children: (0, c.jsx)(r.E, { variant: "text-lg/semibold", className: "dynamicGraphicDemoText", children: e }),
+        children: (0, c.jsx)(r.E, { variant: "body-lg/semibold", className: "dynamicGraphicDemoText", children: i }),
     });
 }

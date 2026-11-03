@@ -1,8 +1,8 @@
 e.d(a, { Alert: () => g });
 var i = e(477900),
     s = e(582128),
-    t = e(503698),
-    l = e.n(t),
+    l = e(503698),
+    t = e.n(l),
     r = e(150934),
     d = e(534514),
     c = e(862482),
@@ -14,20 +14,20 @@ var i = e(477900),
 let g = function (n) {
     let a,
         e,
-        t,
+        l,
         {
             body: g,
             cancelText: j,
             className: x,
             confirmColor: f,
-            confirmText: A = p.intl.string(p.t.BddRzS),
-            secondaryConfirmText: N,
-            onCancel: b,
+            confirmText: b = p.intl.string(p.t.BddRzS),
+            secondaryConfirmText: A,
+            onCancel: N,
             onClose: D,
-            onConfirm: C,
-            onConfirmSecondary: S,
-            title: k,
-            transitionState: y,
+            onConfirm: y,
+            onConfirmSecondary: C,
+            title: S,
+            transitionState: k,
             titleClassName: v,
         } = n,
         z = c.$n.Sizes.MEDIUM,
@@ -35,9 +35,9 @@ let g = function (n) {
     return (
         s.useEffect(
             () => () => {
-                E && S?.();
+                E && C?.();
             },
-            [E, S],
+            [E, C],
         ),
         null != j &&
             "" !== j &&
@@ -47,13 +47,13 @@ let g = function (n) {
                 size: z,
                 color: c.$n.Colors.PRIMARY,
                 onClick: function () {
-                    (D?.(), b?.());
+                    (D?.(), N?.());
                 },
                 className: h.zr,
                 children: j,
             })),
-        null != A &&
-            "" !== A &&
+        null != b &&
+            "" !== b &&
             (e = (0, i.jsx)(c.$n, {
                 "data-migration-pending": !0,
                 type: "submit",
@@ -61,37 +61,37 @@ let g = function (n) {
                 size: z,
                 className: h.FS,
                 autoFocus: !0,
-                children: A,
+                children: b,
             })),
-        null != N &&
-            "" !== N &&
-            (t = (0, i.jsx)(r.S, { checked: E, onChange: (n) => R(n), label: N, labelType: "secondary" })),
+        null != A &&
+            "" !== A &&
+            (l = (0, i.jsx)(r.S, { checked: E, onChange: (n) => R(n), label: A, labelType: "secondary" })),
         (0, i.jsx)(o.EO, {
             "data-migration-pending": !0,
-            transitionState: y,
+            transitionState: k,
             size: o.rI.DYNAMIC,
-            className: l()(x, h.kL),
-            "aria-label": k,
+            className: t()(x, h.kL),
+            "aria-label": S,
             parentComponent: "Alert",
             children: (0, i.jsxs)("form", {
                 onSubmit: function (n) {
-                    (null != n && n.preventDefault(), D?.(), C?.());
+                    (null != n && n.preventDefault(), D?.(), y?.());
                 },
                 className: h.Zd,
                 children: [
                     (0, i.jsx)(o.rQ, {
                         "data-migration-pending": !0,
                         children:
-                            null != k
+                            null != S
                                 ? (0, i.jsx)(d.D, {
                                       variant: "heading-lg/semibold",
-                                      className: l()(h.DD, v),
-                                      children: k,
+                                      className: t()(h.DD, v),
+                                      children: S,
                                   })
                                 : (0, i.jsx)(d.D, {
-                                      variant: "heading-md/semibold",
-                                      className: l()(h.DD, v),
-                                      children: k,
+                                      variant: "heading-sm/semibold",
+                                      className: t()(h.DD, v),
+                                      children: S,
                                   }),
                     }),
                     (0, i.jsx)(o.$m, {
@@ -104,7 +104,7 @@ let g = function (n) {
                             children:
                                 null != g &&
                                 (0, i.jsx)(m.E, {
-                                    variant: "text-md/normal",
+                                    variant: "body-md/normal",
                                     className: h.rf,
                                     color: "text-default",
                                     children: g,
@@ -116,7 +116,7 @@ let g = function (n) {
                         justify: void 0,
                         wrap: u.A.Wrap.WRAP,
                         className: h.Hx,
-                        children: [e, a, t],
+                        children: [e, a, l],
                     }),
                 ],
             }),

@@ -3,9 +3,9 @@ var s = i(477900),
     a = i(582128),
     n = i(17928),
     t = i(189213),
-    r = i(276293),
-    c = i(939249),
-    o = i(834730),
+    o = i(276293),
+    r = i(939249),
+    c = i(834730),
     d = i(289873),
     m = i(534514),
     u = i(900002),
@@ -19,11 +19,11 @@ var s = i(477900),
     g = i(548118),
     E = i(714991),
     C = i(976860),
-    f = i(734057),
-    y = i(71393),
-    k = i(576705),
-    v = i(147925),
-    b = i(174459),
+    y = i(734057),
+    f = i(71393),
+    b = i(576705),
+    k = i(147925),
+    v = i(174459),
     I = i(225315),
     S = i(684407),
     G = i(652215),
@@ -32,16 +32,16 @@ var s = i(477900),
     D = i(138742);
 let L = (e) => {
         let { channelData: l, onClose: i, trackOptionClick: a } = e,
-            t = (0, n.bG)([f.A], () => f.A.getChannel(l.channel_id)),
+            t = (0, n.bG)([y.A], () => y.A.getChannel(l.channel_id)),
             d = (0, j.Ay)(t),
-            m = (0, n.bG)([k.A], () => null != t && k.A.can(w.xB.VIEW_CHANNEL, t)),
+            m = (0, n.bG)([b.A], () => null != t && b.A.can(w.xB.VIEW_CHANNEL, t)),
             u = (0, n.bG)([A.Ay], () => (null != l.emoji_id ? A.Ay.getCustomEmojiById(l.emoji_id) : null), [
                 l.emoji_id,
             ]),
             N = null != l.emoji_name ? p.Ay.getByName(p.Ay.convertSurrogateToName(l.emoji_name, !1)) : null,
-            _ = (0, x.gU)(t) ?? r.N;
+            _ = (0, x.gU)(t) ?? o.N;
         return null != t && m
-            ? (0, s.jsxs)(c.D, {
+            ? (0, s.jsxs)(r.D, {
                   className: D.NV,
                   onClick: () => {
                       (a(), i(), (0, C.uh)(t.guild_id, t.id));
@@ -59,9 +59,9 @@ let L = (e) => {
                       (0, s.jsxs)("div", {
                           className: D.uP,
                           children: [
-                              (0, s.jsx)(o.E, { variant: "text-md/normal", className: D.I0, children: l.description }),
-                              (0, s.jsxs)(o.E, {
-                                  variant: "text-xs/normal",
+                              (0, s.jsx)(c.E, { variant: "body-md/normal", className: D.I0, children: l.description }),
+                              (0, s.jsxs)(c.E, {
+                                  variant: "body-xs/normal",
                                   color: "text-default",
                                   children: [
                                       (0, s.jsx)(_, { className: D.nO, size: "xxs", color: "currentColor" }),
@@ -70,27 +70,27 @@ let L = (e) => {
                               }),
                           ],
                       }),
-                      (0, s.jsx)(v.A, { direction: v.A.Directions.RIGHT, className: D.R_ }),
+                      (0, s.jsx)(k.A, { direction: k.A.Directions.RIGHT, className: D.R_ }),
                   ],
               })
             : null;
     },
     P = function (e) {
-        let { onClose: l, transitionState: i, guildId: r, isPreview: c } = e,
-            h = (0, n.bG)([y.A], () => y.A.getGuild(r)),
+        let { onClose: l, transitionState: i, guildId: o, isPreview: r } = e,
+            h = (0, n.bG)([f.A], () => f.A.getGuild(o)),
             {
                 welcomeScreen: j,
                 fetching: x,
                 hasError: A,
             } = (0, n.cf)([S.A], () => ({
-                welcomeScreen: S.A.get(r),
+                welcomeScreen: S.A.get(o),
                 fetching: S.A.isFetching(),
                 hasError: S.A.hasError(),
             })),
             p = (0, _.GV)();
         (a.useEffect(() => {
-            null == j && (0, I.Fy)(r);
-        }, [r, j]),
+            null == j && (0, I.Fy)(o);
+        }, [o, j]),
             a.useEffect(() => {
                 !1 === x && !0 === A && null == j && l();
             }, [x, A, l, j]),
@@ -98,27 +98,27 @@ let L = (e) => {
                 j === S.E && !1 === x && l();
             }, [l, j, x]),
             a.useEffect(() => {
-                !0 !== c && b.default.track(G.HAw.OPEN_MODAL, { type: "Guild Welcome Screen", guild_id: r });
-            }, [r, c]));
+                !0 !== r && v.default.track(G.HAw.OPEN_MODAL, { type: "Guild Welcome Screen", guild_id: o });
+            }, [o, r]));
         let C = a.useCallback(
             (e) => {
-                if (null == j || !0 === c) return;
+                if (null == j || !0 === r) return;
                 let l = [],
                     i = [],
                     s = !1;
                 (j.welcome_channels?.forEach((e) => {
                     (l.push(e.description), i.push(e.channel_id), null != e.emoji_id && (s = !0));
                 }),
-                    b.default.track(G.HAw.GUILD_WELCOME_SCREEN_OPTION_SELECTED, {
+                    v.default.track(G.HAw.GUILD_WELCOME_SCREEN_OPTION_SELECTED, {
                         index: e,
-                        guild_id: r,
+                        guild_id: o,
                         options: l,
                         options_channel_ids: i,
                         guild_description: j.description,
                         has_custom_emojis: s,
                     }));
             },
-            [r, c, j],
+            [o, r, j],
         );
         return null == h
             ? null
@@ -178,15 +178,15 @@ let L = (e) => {
                                 }),
                             }),
                             null != j.description
-                                ? (0, s.jsx)(o.E, {
-                                      variant: "text-sm/normal",
+                                ? (0, s.jsx)(c.E, {
+                                      variant: "body-sm/normal",
                                       color: "text-default",
                                       className: D.eF,
                                       children: j.description,
                                   })
                                 : null,
                             (0, s.jsx)(m.D, {
-                                variant: "heading-sm/semibold",
+                                variant: "heading-xs/semibold",
                                 className: D.XU,
                                 children: R.intl.string(R.t["haj5+i"]),
                             }),

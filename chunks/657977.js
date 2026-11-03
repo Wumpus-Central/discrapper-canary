@@ -108,7 +108,7 @@ class w extends r.Component {
             ? null
             : (0, l.jsx)(p.E, {
                   id: S,
-                  variant: "text-xs/normal",
+                  variant: "body-xs/normal",
                   color: "text-feedback-critical",
                   className: T.gJ,
                   children: t,
@@ -135,9 +135,9 @@ class w extends r.Component {
                 inputRef: O,
             } = this.props,
             C = w ? f.y : "textarea",
-            E = this.hasError(),
-            P = this.props["aria-labelledby"] ?? this.context?.titleId,
-            R = this.getAriaDescribedBy();
+            b = this.hasError(),
+            E = this.props["aria-labelledby"] ?? this.context?.titleId,
+            P = this.getAriaDescribedBy();
         return (0, l.jsxs)("div", {
             className: a()(y.I6, { [T.Uu]: S }),
             children: [
@@ -147,10 +147,10 @@ class w extends r.Component {
                         (0, l.jsx)(g.vN, {
                             children: (0, l.jsx)(C, {
                                 type: "text",
-                                className: a()(y.hF, T.Tg, A.qD, h, { [y.z3]: E, [y.r9]: t, [T.Xl]: d }),
-                                "aria-labelledby": P,
-                                "aria-describedby": R,
-                                "aria-invalid": E,
+                                className: a()(y.hF, T.Tg, A.qD, h, { [y.z3]: b, [y.r9]: t, [T.Xl]: d }),
+                                "aria-labelledby": E,
+                                "aria-describedby": P,
+                                "aria-invalid": b,
                                 style: { paddingRight: this.getPaddingRight() },
                                 id: c,
                                 disabled: t,
@@ -203,10 +203,10 @@ var N = n(265872),
     D = n(939249),
     O = n(285796),
     C = n(788026),
-    E = n(765671),
-    P = n(964486),
-    R = n(793574),
-    b = n(688810),
+    b = n(765671),
+    E = n(964486),
+    P = n(793574),
+    R = n(688810),
     U = n(375499),
     M = n(969602),
     _ = n(287809),
@@ -326,7 +326,7 @@ var tg = n(307731),
 let tp = "CLEAR_AFTER";
 function tf(t) {
     let { transitionState: e, onClose: n, returnRef: i, sourceAnalyticsLocations: h = [], prompt: c = null } = t,
-        { analyticsLocations: g } = (0, b.Ay)(h, R.A.CUSTOM_STATUS_MODAL),
+        { analyticsLocations: g } = (0, R.Ay)(h, P.A.CUSTOM_STATUS_MODAL),
         m = (0, o.bG)([_.default], () => _.default.getCurrentUser() ?? null),
         f = (0, Z.K)(),
         [T, y] = r.useState(f?.state ?? ""),
@@ -351,7 +351,7 @@ function tf(t) {
         q = r.useRef(null),
         J = null != c ? c.label() : x.intl.string(x.t.xod367),
         [Q, W] = r.useState(J),
-        { ref: tt, width: te } = (0, E.Ay)(J);
+        { ref: tt, width: te } = (0, b.Ay)(J);
     function tn() {
         v !== tp &&
             (!(function (t) {
@@ -411,9 +411,9 @@ function tf(t) {
         }
     }, [te, J]),
         r.useEffect(() => {
-            I.default.track(B.HAw.OPEN_MODAL, { type: R.A.CUSTOM_STATUS_MODAL, location_stack: g });
+            I.default.track(B.HAw.OPEN_MODAL, { type: P.A.CUSTOM_STATUS_MODAL, location_stack: g });
         }, [g]),
-        (0, P.Ay)(() => {
+        (0, E.Ay)(() => {
             (L.current?.focus(), L.current?.setSelection(T.length, T.length));
         }),
         (0, s.$)({ currentLength: T.length, maxLength: z.hp, message: x.intl.string(x.t.c2Jqed) }));
@@ -490,7 +490,7 @@ function tf(t) {
                     (0, l.jsx)(p.E, {
                         tag: "label",
                         htmlFor: tr,
-                        variant: "heading-md/semibold",
+                        variant: "heading-sm/semibold",
                         className: tm.wW,
                         children: tl,
                     }),

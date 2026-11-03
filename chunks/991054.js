@@ -6,87 +6,87 @@ var i = l(477900),
     a = l(664121),
     c = l(939249),
     o = l(834730),
-    u = l(320448),
-    d = l(534514),
+    d = l(320448),
+    u = l(534514),
     m = l(900797),
-    x = l(661531),
-    h = l(847374),
+    h = l(661531),
+    x = l(847374),
     j = l(735991),
     p = l(717048),
     g = l(396533),
     N = l(611371),
     f = l(566615),
-    v = l(105292),
-    b = l(898514),
+    b = l(105292),
+    v = l(898514),
     y = l(165648),
     C = l(291071);
 function E(e) {
     let { application: t, onSelect: l } = e,
-        d = (0, f.i)(),
+        u = (0, f.i)(),
         { iconURL: m } = s.useMemo(() => (0, j.X2)(t, { fakeAppIconURL: C, size: 84 }), [t]),
-        x = s.useMemo(
+        h = s.useMemo(
             () =>
                 [
                     {
                         type: n.b.USER_INSTALL,
                         icon: r.R,
-                        title: v.intl.string(v.t.aCg60P),
-                        subtitle: v.intl.string(v.t.YeiIUZ),
+                        title: b.intl.string(b.t.aCg60P),
+                        subtitle: b.intl.string(b.t.YeiIUZ),
                         beta: !1,
                     },
                     {
                         type: n.b.GUILD_INSTALL,
                         icon: a.R,
-                        title: v.intl.string(v.t.E64YCz),
-                        subtitle: v.intl.string(v.t.bbtoKm),
+                        title: b.intl.string(b.t.E64YCz),
+                        subtitle: b.intl.string(b.t.bbtoKm),
                         beta: !1,
                     },
                 ].filter((e) => t.integrationTypesConfig?.[e.type]?.oauth2InstallParams != null),
             [t.integrationTypesConfig],
         );
     return (0, i.jsxs)("div", {
-        className: b.kL,
+        className: v.kL,
         children: [
             (0, i.jsxs)("header", {
-                id: d,
-                className: b.wx,
+                id: u,
+                className: v.wx,
                 children: [
-                    (0, i.jsx)(p.A, { src: m, className: b.Z2, rendersPlaceholder: !0 }),
+                    (0, i.jsx)(p.A, { src: m, className: v.Z2, rendersPlaceholder: !0 }),
                     (0, i.jsx)(T, { application: t }),
                     (0, i.jsx)(L, { application: t }),
                 ],
             }),
             (0, i.jsx)("ul", {
-                className: b.Ge,
-                children: x.map((e) =>
+                className: v.Ge,
+                children: h.map((e) =>
                     (0, i.jsxs)(
                         c.D,
                         {
                             tag: "li",
-                            className: b.nM,
+                            className: v.nM,
                             onClick: () => l(e.type),
                             children: [
-                                (0, i.jsx)(e.icon, { size: "md", color: "currentColor", className: b.hc }),
+                                (0, i.jsx)(e.icon, { size: "md", color: "currentColor", className: v.hc }),
                                 (0, i.jsxs)("div", {
-                                    className: b.bL,
+                                    className: v.bL,
                                     children: [
                                         (0, i.jsxs)("div", {
-                                            className: b.pt,
+                                            className: v.pt,
                                             children: [
                                                 (0, i.jsx)(o.E, {
-                                                    variant: "text-md/medium",
+                                                    variant: "body-md/medium",
                                                     color: "interactive-text-active",
                                                     children: e.title,
                                                 }),
                                                 (0, i.jsx)(o.E, {
-                                                    variant: "text-xs/medium",
+                                                    variant: "body-xs/medium",
                                                     color: "text-muted",
                                                     children: e.subtitle,
                                                 }),
                                             ],
                                         }),
                                         e.beta && (0, i.jsx)(N.A, {}),
-                                        (0, i.jsx)(u._, { size: "md", color: "currentColor", className: b.gN }),
+                                        (0, i.jsx)(d._, { size: "md", color: "currentColor", className: v.gN }),
                                     ],
                                 }),
                             ],
@@ -104,9 +104,9 @@ function L(e) {
     return null == l || 0 === l.length
         ? null
         : (0, i.jsx)("div", {
-              className: b.wt,
+              className: v.wt,
               children: (0, i.jsx)("div", {
-                  className: b.bH,
+                  className: v.bH,
                   children: null != l && l.length > 0 ? (0, i.jsx)(k, { description: l }) : null,
               }),
           });
@@ -116,16 +116,16 @@ function T(e) {
         l = t.name,
         s = (0, j.b7)(t);
     return (0, i.jsxs)("div", {
-        className: b.gn,
+        className: v.gn,
         children: [
-            (0, i.jsx)(d.D, { variant: "heading-xl/semibold", lineClamp: 1, children: l }),
+            (0, i.jsx)(u.D, { variant: "heading-xl/semibold", lineClamp: 1, children: l }),
             s
                 ? (0, i.jsx)("div", {
-                      className: b.s3,
+                      className: v.s3,
                       children: (0, i.jsx)(o.E, {
-                          variant: "text-xs/medium",
+                          variant: "body-xs/medium",
                           color: "text-default",
-                          children: v.intl.string(v.t.LO4f0P),
+                          children: b.intl.string(b.t.LO4f0P),
                       }),
                   })
                 : null,
@@ -141,8 +141,8 @@ function k(e) {
             return e(t);
         }, [t]),
         {
-            ref: u,
-            lineHeight: d,
+            ref: d,
+            lineHeight: u,
             lineCount: j,
         } = (function () {
             let e = s.useRef(null),
@@ -159,23 +159,23 @@ function k(e) {
             );
         })(),
         p = s.useMemo(() => {
-            if (null == d || null == j) return { key: 0 };
-            let e = d * j;
-            return { key: 1, minHeightOverride: Math.min(e, 3 * d), maxHeightOverride: e };
-        }, [j, d]),
+            if (null == u || null == j) return { key: 0 };
+            let e = u * j;
+            return { key: 1, minHeightOverride: Math.min(e, 3 * u), maxHeightOverride: e };
+        }, [j, u]),
         { ref: N, isTransitioning: f, onTransitionEnd: C } = (0, g.A)({ isExpanded: n, ...p }),
         E = n || f;
     return (0, i.jsxs)("div", {
-        className: b.iQ,
+        className: v.iQ,
         children: [
             (0, i.jsx)("div", {
                 ref: N,
-                className: b.ZT,
+                className: v.ZT,
                 onTransitionEnd: C,
                 children: (0, i.jsx)(o.E, {
-                    ref: u,
+                    ref: d,
                     className: y.PT,
-                    variant: "text-sm/medium",
+                    variant: "body-sm/medium",
                     lineClamp: E ? void 0 : 3,
                     style: { maxHeight: E ? void 0 : p.minHeightOverride },
                     children: a,
@@ -183,17 +183,17 @@ function k(e) {
             }),
             null != j && j > 3
                 ? (0, i.jsxs)(c.D, {
-                      className: b.lP,
+                      className: v.lP,
                       onClick: () => r((e) => !e),
                       children: [
                           (0, i.jsx)(o.E, {
-                              variant: "text-sm/semibold",
+                              variant: "body-sm/semibold",
                               color: "text-brand",
-                              children: E ? v.intl.string(v.t.u4YJ8g) : v.intl.string(v.t["N/tajD"]),
+                              children: E ? b.intl.string(b.t.u4YJ8g) : b.intl.string(b.t["N/tajD"]),
                           }),
                           E
-                              ? (0, i.jsx)(m.t, { size: "sm", color: x.A.colors.TEXT_BRAND })
-                              : (0, i.jsx)(h.a, { size: "sm", color: x.A.colors.TEXT_BRAND }),
+                              ? (0, i.jsx)(m.t, { size: "sm", color: h.A.colors.TEXT_BRAND })
+                              : (0, i.jsx)(x.a, { size: "sm", color: h.A.colors.TEXT_BRAND }),
                       ],
                   })
                 : null,

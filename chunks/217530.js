@@ -17,7 +17,7 @@ function h(e) {
                 className: u.lm,
                 children: (0, n.jsx)(d.E, {
                     className: u.__invalid_label,
-                    variant: "text-md/medium",
+                    variant: "body-md/medium",
                     color: "text-strong",
                     children: t,
                 }),
@@ -60,18 +60,18 @@ function f(e) {
                 }
             );
         })(),
-        x = (0, n.jsx)("div", {
+        S = (0, n.jsx)("div", {
             className: m.vi,
             children: (0, n.jsx)("div", { className: i()(m._s, l), children: t }),
         });
     return (
         a.Fr ||
-            (x = (0, n.jsxs)(n.Fragment, {
+            (S = (0, n.jsxs)(n.Fragment, {
                 children: [
                     r,
-                    (0, n.jsx)(c.Ch, { className: m.XG, orientation: "horizontal", ref: u, onScroll: d, children: x }),
+                    (0, n.jsx)(c.Ch, { className: m.XG, orientation: "horizontal", ref: u, onScroll: d, children: S }),
                 ],
             })),
-        (0, n.jsx)("div", { className: m.Rc, ref: f, children: x })
+        (0, n.jsx)("div", { className: m.Rc, ref: f, children: S })
     );
 }

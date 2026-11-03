@@ -1,35 +1,35 @@
-n.d(t, { A: () => g });
-var i = n(477900);
-n(582128);
-var r = n(503698),
-    e = n.n(r),
-    l = n(821609),
-    a = n(834730),
-    c = n(935286),
-    d = n(666860),
-    C = n(289397),
-    o = n(468689),
-    m = n(174459),
-    v = n(634654),
-    h = n(652215),
-    p = n(105292),
-    u = n(942216);
-function x(s) {
-    let { pills: t } = s;
+t.d(n, { A: () => x });
+var i = t(477900);
+t(582128);
+var r = t(503698),
+    e = t.n(r),
+    l = t(821609),
+    a = t(834730),
+    c = t(935286),
+    d = t(666860),
+    o = t(289397),
+    C = t(468689),
+    m = t(174459),
+    v = t(634654),
+    h = t(652215),
+    p = t(105292),
+    u = t(942216);
+function g(s) {
+    let { pills: n } = s;
     return (0, i.jsx)("div", {
         className: u.nM,
-        children: t.map((s) =>
+        children: n.map((s) =>
             (0, i.jsx)(
                 "div",
-                { className: u.Io, children: (0, i.jsx)(a.E, { variant: "text-sm/normal", children: s }) },
+                { className: u.Io, children: (0, i.jsx)(a.E, { variant: "body-sm/normal", children: s }) },
                 s,
             ),
         ),
     });
 }
-function g(s) {
-    let { guildId: t, showCTA: n, responsive: r = !0 } = s,
-        g = [
+function x(s) {
+    let { guildId: n, showCTA: t, responsive: r = !0 } = s,
+        x = [
             [p.intl.string(p.t["73h51J"]), p.intl.string(p.t["gbjs/6"])],
             [p.intl.string(p.t.mCoH0V), p.intl.string(p.t["l/BuSI"])],
             [p.intl.string(p.t.psQktv), p.intl.string(p.t.nMhIZQ)],
@@ -45,17 +45,17 @@ function g(s) {
                     children: [
                         (0, i.jsx)("div", {
                             className: u.V_,
-                            children: g.map((s, t) => (0, i.jsx)(x, { pills: s }, `pill-row-${t}`)),
+                            children: x.map((s, n) => (0, i.jsx)(g, { pills: s }, `pill-row-${n}`)),
                         }),
                         (0, i.jsxs)("div", {
                             className: u.mv,
                             children: [
                                 (0, i.jsx)(a.E, {
-                                    variant: "text-lg/medium",
+                                    variant: "body-lg/medium",
                                     color: "text-strong",
                                     children: p.intl.string(p.t["67arYL"]),
                                 }),
-                                n &&
+                                t &&
                                     (0, i.jsx)(l.$, {
                                         text: p.intl.string(p.t.oyzLpD),
                                         icon: c.E,
@@ -63,10 +63,10 @@ function g(s) {
                                         size: "md",
                                         onClick: function () {
                                             (m.default.track(h.HAw.GUILD_SHOP_PREVIEW_CLICK, {
-                                                ...(0, d.H$)(t),
+                                                ...(0, d.H$)(n),
                                                 action_taken: v.hN.GET_STARTED_CLICK,
                                             }),
-                                                o.A.open(t, h.BEX.GUILD_PRODUCTS));
+                                                C.A.open(n, h.BEX.GUILD_PRODUCTS));
                                         },
                                     }),
                             ],
@@ -77,12 +77,12 @@ function g(s) {
                     className: u.SN,
                     children: [
                         (0, i.jsx)("img", {
-                            src: (0, C.n)("server_products/storefront/preview-mural.png"),
+                            src: (0, o.n)("server_products/storefront/preview-mural.png"),
                             alt: "",
                             className: u.$G,
                         }),
                         (0, i.jsx)("img", {
-                            src: (0, C.n)("server_products/storefront/preview-mural-reduced.png"),
+                            src: (0, o.n)("server_products/storefront/preview-mural-reduced.png"),
                             alt: "",
                             className: u.rp,
                         }),

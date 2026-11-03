@@ -1,4 +1,4 @@
-l.d(a, { A: () => y, I: () => k });
+l.d(a, { A: () => k, I: () => C });
 var n = l(477900),
     t = l(582128),
     r = l(503698),
@@ -9,13 +9,13 @@ var n = l(477900),
     c = l(834730),
     o = l(140735),
     h = l(364522),
-    x = l(939249),
-    m = l(97808),
-    _ = l(305866),
-    b = l(265872),
+    m = l(939249),
+    x = l(97808),
+    b = l(305866),
+    _ = l(265872),
     j = l(442433),
-    I = l(538451),
-    f = l(562153),
+    f = l(538451),
+    I = l(562153),
     g = l(427262),
     p = l(778712),
     S = l(105292),
@@ -45,31 +45,31 @@ function Z(e) {
             disableUsernameTooltip: o,
         } = e,
         h = v(s),
-        x = c ? l - 1 : Math.min(a.length, l),
-        _ = x - 1,
-        b = d()(a)
-            .take(x)
+        m = c ? l - 1 : Math.min(a.length, l),
+        b = m - 1,
+        _ = d()(a)
+            .take(m)
             .map((e, a) => {
-                let l = f.Ay.getNickname(t, r, e) ?? g.Ay.getName(e),
-                    d = i()(E.my, h, a === _ && !c && E.NE),
-                    x = (0, n.jsx)(m.eu, { src: e.getAvatarURL(t, (0, p.FT)(s)), size: s, "aria-hidden": !0 });
+                let l = I.Ay.getNickname(t, r, e) ?? g.Ay.getName(e),
+                    d = i()(E.my, h, a === b && !c && E.NE),
+                    m = (0, n.jsx)(x.eu, { src: e.getAvatarURL(t, (0, p.FT)(s)), size: s, "aria-hidden": !0 });
                 return (0, n.jsx)(
                     "li",
                     {
                         className: d,
                         children: o
-                            ? (0, n.jsx)("span", { role: "img", "aria-label": l, children: x })
+                            ? (0, n.jsx)("span", { role: "img", "aria-label": l, children: m })
                             : (0, n.jsx)(u.m, {
                                   text: l,
                                   ariaHidden: !0,
-                                  children: (0, n.jsx)("span", { role: "img", "aria-label": l, children: x }),
+                                  children: (0, n.jsx)("span", { role: "img", "aria-label": l, children: m }),
                               }),
                     },
                     e.id,
                 );
             })
             .value();
-    return (0, n.jsx)("ul", { className: E.HD, children: b });
+    return (0, n.jsx)("ul", { className: E.HD, children: _ });
 }
 function N(e) {
     let { count: a, textVariant: l, color: t = "interactive-text-default", size: r = p._3.SIZE_24, className: s } = e,
@@ -81,12 +81,12 @@ function N(e) {
                 switch (e) {
                     case p._3.SIZE_16:
                     case p._3.SIZE_20:
-                        return "text-xxs/semibold";
+                        return "footnote/semibold";
                     case p._3.SIZE_32:
-                        return "text-sm/medium";
+                        return "body-sm/medium";
                     case p._3.SIZE_24:
                     default:
-                        return "text-xs/medium";
+                        return "body-xs/medium";
                 }
             })(r);
     return (0, n.jsxs)(c.E, {
@@ -99,7 +99,7 @@ function N(e) {
         ],
     });
 }
-function C(e) {
+function y(e) {
     let {
             users: a,
             maxUsers: l,
@@ -129,7 +129,7 @@ function C(e) {
               ],
           });
 }
-function k(e) {
+function C(e) {
     let { className: a, "aria-label": l, "aria-labelledby": t, "aria-hidden": r, ...s } = e;
     return (0, n.jsx)("div", {
         role: "group",
@@ -137,10 +137,10 @@ function k(e) {
         "aria-label": l,
         "aria-labelledby": t,
         "aria-hidden": r,
-        children: (0, n.jsx)(C, { ...s }),
+        children: (0, n.jsx)(y, { ...s }),
     });
 }
-function y(e) {
+function k(e) {
     let {
             ref: a,
             users: r,
@@ -149,12 +149,12 @@ function y(e) {
             channelId: u,
             className: c,
             size: o = p._3.SIZE_24,
-            overflowCountVariant: m,
+            overflowCountVariant: x,
             overflowCountColor: g = "interactive-text-default",
             overflowCountClassName: v,
-            popoutClassName: C,
-            hideOverflowCount: k = !1,
-            disableUsernameTooltip: y = !1,
+            popoutClassName: y,
+            hideOverflowCount: C = !1,
+            disableUsernameTooltip: k = !1,
             disableUserPopout: w = !1,
             onClickOverflow: R,
             onFocusOverflow: A,
@@ -170,7 +170,7 @@ function y(e) {
         G = t.useRef(null),
         L = r.length - s,
         O = L + 1,
-        V = L > 0 && !k && !q,
+        V = L > 0 && !C && !q,
         X = t.useCallback(() => {
             ((G.current = null), F(!1), P?.(!1));
         }, [P]),
@@ -198,10 +198,10 @@ function y(e) {
                               channelId: u,
                               size: o,
                               shouldShowOverflowCount: V,
-                              disableUsernameTooltip: y,
+                              disableUsernameTooltip: k,
                           }),
                           V &&
-                              (0, n.jsx)(x.D, {
+                              (0, n.jsx)(m.D, {
                                   innerRef: M,
                                   className: E.x6,
                                   onFocus: A,
@@ -212,7 +212,7 @@ function y(e) {
                                   "aria-label": S.intl.formatToPlainString(S.t.R8Z8Qr, { count: O }),
                                   children: (0, n.jsx)(N, {
                                       count: O,
-                                      textVariant: m,
+                                      textVariant: x,
                                       color: "interactive-text-default" === g ? "currentColor" : g,
                                       size: o,
                                       className: v,
@@ -221,23 +221,23 @@ function y(e) {
                       ],
                   }),
                   D &&
-                      (0, n.jsx)(b.Y, {
+                      (0, n.jsx)(_.Y, {
                           targetElementRef: G,
                           renderPopout: () =>
-                              (0, n.jsx)(_.l, {
+                              (0, n.jsx)(b.l, {
                                   className: E.XM,
                                   "aria-label": T,
                                   "aria-labelledby": U,
                                   children: (0, n.jsx)(h.Ip, {
-                                      className: i()(E.XG, C),
+                                      className: i()(E.XG, y),
                                       children: r.map((e) =>
                                           (0, n.jsx)(
-                                              I.A,
+                                              f.A,
                                               {
                                                   user: e,
                                                   guildId: d,
                                                   channelId: u,
-                                                  nick: f.Ay.getNickname(d, u, e),
+                                                  nick: I.Ay.getNickname(d, u, e),
                                                   disablePopout: "function" == typeof w ? w(e.id) : w,
                                                   onClick: H,
                                                   onPopoutRequestClose: () => {

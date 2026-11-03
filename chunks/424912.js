@@ -1,4 +1,4 @@
-s.d(t, { A: () => y, D: () => A });
+s.d(t, { A: () => A, D: () => k });
 var n = s(477900),
     a = s(582128),
     i = s(935462),
@@ -9,22 +9,22 @@ var n = s(477900),
     o = s(834730),
     u = s(95477),
     m = s(193249),
-    x = s(66834),
-    g = s(356343),
+    g = s(66834),
+    x = s(356343),
     h = s(235986),
     f = s(915089),
     p = s(287809),
     j = s(695184),
     v = s(943457),
     b = s(652215),
-    N = s(105292),
-    k = s(753240);
-function A(e) {
+    y = s(105292),
+    N = s(753240);
+function k(e) {
     let {
             guildTemplate: t,
             onClose: s,
-            onBack: A,
-            onHubGuildInfoSet: y,
+            onBack: k,
+            onHubGuildInfoSet: A,
             onGuildCreated: E,
             isSlideReady: C,
             hasFooter: _ = !0,
@@ -46,10 +46,10 @@ function A(e) {
                 if ((e.preventDefault(), null != t)) {
                     (F(!0), I(null));
                     try {
-                        if (null != y) y(D, w);
+                        if (null != A) A(D, w);
                         else {
                             let e = await v.A.createGuildFromTemplate(D, w, t, S, Q);
-                            (x.A.transitionToGuildSync(e.id), E?.(e.id));
+                            (g.A.transitionToGuildSync(e.id), E?.(e.id));
                         }
                     } catch (e) {
                         I(e);
@@ -57,7 +57,7 @@ function A(e) {
                     F(!1);
                 }
             },
-            [t, y, D, w, S, Q, E],
+            [t, A, D, w, S, Q, E],
         ),
         X = (0, n.jsxs)(l.B, {
             fullWidth: !0,
@@ -65,10 +65,10 @@ function A(e) {
             justify: "space-between",
             direction: "horizontal",
             children: [
-                (0, n.jsx)(r.Q, { size: "sm", variant: "secondary", text: N.intl.string(N.t["13/7kX"]), onClick: A }),
+                (0, n.jsx)(r.Q, { size: "sm", variant: "secondary", text: y.intl.string(y.t["13/7kX"]), onClick: k }),
                 (0, n.jsx)(c.$, {
                     variant: "primary",
-                    text: null != y ? N.intl.string(N.t.PDTjLN) : N.intl.string(N.t.CumH4u),
+                    text: null != A ? y.intl.string(y.t.PDTjLN) : y.intl.string(y.t.CumH4u),
                     onClick: W,
                     disabled: 0 === D.length,
                     loading: R,
@@ -81,35 +81,35 @@ function A(e) {
                 (0, n.jsxs)(i.rQ, {
                     "data-migration-pending": !0,
                     direction: h.A.Direction.VERTICAL,
-                    className: k.wx,
+                    className: N.wx,
                     separator: !1,
                     children: [
                         (0, n.jsx)(d.D, {
-                            className: k.DD,
+                            className: N.DD,
                             variant: "heading-xl/semibold",
-                            children: N.intl.string(N.t["2H6Nij"]),
+                            children: y.intl.string(y.t["2H6Nij"]),
                         }),
                         (0, n.jsx)(o.E, {
-                            className: k.VA,
+                            className: N.VA,
                             color: "text-default",
-                            variant: "text-md/normal",
-                            children: N.intl.string(N.t.AAfVqR),
+                            variant: "body-md/normal",
+                            children: y.intl.string(y.t.AAfVqR),
                         }),
-                        null != s && (0, n.jsx)(i.s_, { "data-migration-pending": !0, className: k.b, onClick: s }),
+                        null != s && (0, n.jsx)(i.s_, { "data-migration-pending": !0, className: N.b, onClick: s }),
                     ],
                 }),
                 (0, n.jsxs)(i.$m, {
                     "data-migration-pending": !0,
-                    className: k.iW,
+                    className: N.iW,
                     children: [
-                        (0, n.jsx)("div", { className: k.T3, children: (0, n.jsx)(g.A, { icon: w, onChange: L }) }),
+                        (0, n.jsx)("div", { className: N.T3, children: (0, n.jsx)(x.A, { icon: w, onChange: L }) }),
                         (0, n.jsx)("form", {
                             onSubmit: W,
                             children: (0, n.jsxs)(l.B, {
                                 gap: 16,
                                 children: [
                                     (0, n.jsx)(u.k, {
-                                        label: N.intl.string(N.t.dBih7e),
+                                        label: y.intl.string(y.t.dBih7e),
                                         required: !0,
                                         error: T?.getFirstFieldErrorMessage("name"),
                                         value: D,
@@ -121,15 +121,15 @@ function A(e) {
                                     U &&
                                         (0, n.jsx)(m.d, {
                                             label: "Staff Only",
-                                            description: N.intl.string(N.t.edQ5va),
+                                            description: y.intl.string(y.t.edQ5va),
                                             checked: Q,
                                             onChange: (e) => V(e),
                                         }),
                                     (0, n.jsx)(o.E, {
-                                        className: k.I4,
-                                        variant: "text-xs/normal",
+                                        className: N.I4,
+                                        variant: "body-xs/normal",
                                         color: "text-muted",
-                                        children: N.intl.format(N.t["2bprXx"], { guidelinesURL: b.X7G.GUIDELINES }),
+                                        children: y.intl.format(y.t["2bprXx"], { guidelinesURL: b.X7G.GUIDELINES }),
                                     }),
                                 ],
                             }),
@@ -137,7 +137,7 @@ function A(e) {
                         null == T || T.hasFieldErrors()
                             ? null
                             : (0, n.jsx)(o.E, {
-                                  variant: "text-xs/normal",
+                                  variant: "body-xs/normal",
                                   color: "text-feedback-critical",
                                   children: T.message,
                               }),
@@ -149,7 +149,7 @@ function A(e) {
         footer: X,
     };
 }
-function y(e) {
-    let { content: t } = A(e);
+function A(e) {
+    let { content: t } = k(e);
     return t;
 }

@@ -14,7 +14,7 @@ function m(t) {
     a.useEffect(() => {
         (0, l.Ak)("success", 0.1);
     }, []);
-    let [f] = a.useState(() => {
+    let [d] = a.useState(() => {
         let t;
         return (t = [
             o.intl.format(o.t.ZAbzbA, {}),
@@ -35,8 +35,8 @@ function m(t) {
             className: c.jE,
             children: (0, i.jsxs)(e.E, {
                 className: c.KP,
-                variant: "text-sm/normal",
-                children: [o.intl.string(o.t["4z1Tq0"]), (0, i.jsx)("br", {}), f],
+                variant: "body-sm/normal",
+                children: [o.intl.string(o.t["4z1Tq0"]), (0, i.jsx)("br", {}), d],
             }),
         }),
     });

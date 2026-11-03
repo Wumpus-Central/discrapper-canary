@@ -15,8 +15,8 @@ var l = n(477900),
     g = n(287809),
     x = n(24482),
     E = n(192308),
-    S = n(939249),
-    y = n(404374),
+    y = n(939249),
+    S = n(404374),
     C = n(10392),
     A = n(82498),
     b = n(734057),
@@ -48,7 +48,7 @@ function _(e) {
                 (0, C.sq)(N.U7l.PREMIUM_UPSELL_VIEWED, a, () => (0, A.uq)("longer messages inline")));
         }, [r, a]),
         n
-            ? (0, l.jsx)(S.D, {
+            ? (0, l.jsx)(y.D, {
                   className: k.e7,
                   onClick: () => j(),
                   children: (0, l.jsx)(u.m, {
@@ -60,10 +60,10 @@ function _(e) {
             : (0, l.jsxs)("div", {
                   className: s()(k.zr, t),
                   children: [
-                      (0, l.jsx)(c.t, { size: "md", className: k.M2, color: y.k0.PREMIUM_TIER_2 }),
+                      (0, l.jsx)(c.t, { size: "md", className: k.M2, color: S.k0.PREMIUM_TIER_2 }),
                       (0, l.jsx)(d.E, {
                           className: k.Qq,
-                          variant: "text-sm/normal",
+                          variant: "body-sm/normal",
                           children: T.intl.format(T.t.BNAIBU, { onLearnMore: j }),
                       }),
                   ],
@@ -74,13 +74,13 @@ var R = n(263582),
     w = n(412028);
 function O(e) {
     let { type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r, className: E } = e,
-        S = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
-        y = (0, p.A)(),
-        C = i ?? y,
-        A = r ?? i ?? y / 10,
+        y = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
+        S = (0, p.A)(),
+        C = i ?? S,
+        A = r ?? i ?? S / 10,
         b = n.length,
-        I = null != t.upsellLongMessages && (b ?? 0) > N.uvi && S,
-        v = null != t.upsellLongMessages && !S,
+        I = null != t.upsellLongMessages && (b ?? 0) > N.uvi && y,
+        v = null != t.upsellLongMessages && !y,
         k = C - b,
         j = k > A;
     (0, a.$)({ currentLength: b, maxLength: C, message: T.intl.string(T.t.c2Jqed) });
@@ -115,7 +115,7 @@ function O(e) {
                                   text: O,
                                   position: "top",
                                   children: (0, l.jsx)(d.E, {
-                                      variant: "text-sm/semibold",
+                                      variant: "body-sm/semibold",
                                       tabularNumbers: !0,
                                       "aria-hidden": !0,
                                       color: P ? "text-default" : "text-feedback-critical",

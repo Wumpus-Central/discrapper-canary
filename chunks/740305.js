@@ -21,13 +21,13 @@ var n = t(477900),
     A = t(132500),
     T = t(172218),
     L = t(834730),
-    O = t(123292),
-    y = t(140735),
+    y = t(123292),
+    O = t(140735),
     C = t(192308),
     _ = t(43990),
-    v = t(444927),
-    k = t(793574),
-    b = t(688810),
+    b = t(444927),
+    v = t(793574),
+    k = t(688810),
     w = t(999291),
     R = t(101928),
     E = t(920601),
@@ -58,15 +58,15 @@ function Z(i) {
                 className: K.hy,
                 children: [
                     (0, n.jsx)(r.D, { variant: "heading-lg/semibold", children: e }),
-                    null != t && (0, n.jsx)(L.E, { variant: "text-sm/medium", children: t }),
+                    null != t && (0, n.jsx)(L.E, { variant: "body-sm/medium", children: t }),
                 ],
             }),
             s &&
                 (0, n.jsx)("div", {
                     className: K.Rb,
-                    children: (0, n.jsx)(O.Q, {
+                    children: (0, n.jsx)(y.Q, {
                         variant: "secondary",
-                        textVariant: "text-xs/normal",
+                        textVariant: "body-xs/normal",
                         text: X.intl.string(X.t.y6PSA3),
                         onClick: a,
                     }),
@@ -78,7 +78,7 @@ function q(i) {
     let { wishlistInDmLength: e } = i;
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(y.A, { children: X.intl.string(X.t.pfChQr) }),
+            (0, n.jsx)(O.A, { children: X.intl.string(X.t.pfChQr) }),
             (0, n.jsx)("div", {
                 className: j()(K.Md, K.e6),
                 children: Array.from({ length: e }, (i, e) => (0, n.jsx)(F.O, {}, `placeholder-${e}`)),
@@ -147,8 +147,8 @@ function ie(i) {
             defaultWishlistId: o,
             footerNotice: d,
         } = i,
-        { analyticsLocations: u } = (0, b.Ay)(k.A.WISHLIST_BANNER),
-        h = (0, v.A)(() => (0, A.A)()),
+        { analyticsLocations: u } = (0, k.Ay)(v.A.WISHLIST_BANNER),
+        h = (0, b.A)(() => (0, A.A)()),
         { theme: m, primaryColor: g, secondaryColor: p } = (0, R.A)({ user: e, displayProfile: l }),
         { profileThemeStyle: I, profileThemeClassName: x } = (0, E.A)({
             theme: m,
@@ -192,9 +192,9 @@ function ie(i) {
                 }
             }, [a, l]);
         })({ totalUnownedWishlistItemCount: a, wishlistInDmLength: H.pl, displayItems: r, recipientName: N }),
-        O = l?.getBannerURL({ canAnimate: !1, size: 713 }),
-        y = a > H.pl,
-        C = s.useMemo(() => (y ? r.slice(0, H.pl) : r), [r, y]),
+        y = l?.getBannerURL({ canAnimate: !1, size: 713 }),
+        O = a > H.pl,
+        C = s.useMemo(() => (O ? r.slice(0, H.pl) : r), [r, O]),
         [w, G] = s.useState(!1),
         D = s.useCallback(
             (i) => {
@@ -241,7 +241,7 @@ function ie(i) {
                   className: j()(K.A1, x),
                   style: I,
                   children: [
-                      null != O && (0, n.jsx)("div", { className: K.iL, style: { backgroundImage: `url(${O})` } }),
+                      null != y && (0, n.jsx)("div", { className: K.iL, style: { backgroundImage: `url(${y})` } }),
                       (0, n.jsx)(_.N, {
                           disableAdaptiveTheme: !0,
                           children: (i) =>
@@ -406,7 +406,7 @@ function ic(i) {
                     direction: "horizontal",
                     justify: "space-between",
                     children: [
-                        (0, n.jsx)(r.D, { variant: "heading-md/semibold", children: X.intl.string(X.t["wg/30i"]) }),
+                        (0, n.jsx)(r.D, { variant: "heading-sm/semibold", children: X.intl.string(X.t["wg/30i"]) }),
                         (0, n.jsx)(l.s_, { onClick: t, "data-migration-pending": !0 }),
                     ],
                 }),

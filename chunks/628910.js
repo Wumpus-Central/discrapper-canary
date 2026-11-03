@@ -9,8 +9,8 @@ var s = i(477900),
     d = i(683071),
     u = i(834730),
     p = i(503852),
-    x = i(470934),
-    m = i(363487),
+    m = i(470934),
+    x = i(363487),
     k = i(998418),
     f = i(249286),
     v = i(933337),
@@ -31,7 +31,7 @@ function T(t) {
                     className: E.d_,
                     children: [
                         (0, s.jsx)(e, { color: r.A.colors.TEXT_SUBTLE, className: E.Kk }),
-                        (0, s.jsx)(u.E, { className: E.Qq, variant: "text-sm/normal", children: t.description }),
+                        (0, s.jsx)(u.E, { className: E.Qq, variant: "body-sm/normal", children: t.description }),
                     ],
                 },
                 `perk-${t.perkIcon}`,
@@ -40,11 +40,11 @@ function T(t) {
     });
 }
 var _ = i(568065),
-    j = i(652215),
-    b = i(959456),
+    b = i(652215),
+    j = i(959456),
     g = i(105292),
-    N = i(115087);
-function y(t) {
+    y = i(115087);
+function N(t) {
     return (0, s.jsx)(a._, { ...t, color: r.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH });
 }
 function C(t) {
@@ -56,8 +56,8 @@ function C(t) {
         R = (0, k.Ay)(h, A),
         S = R.type !== _.b_.INACTIVE,
         w = R.type === _.b_.TIER_OVERRIDE_ACTIVATED,
-        D = (0, m.A)(h),
-        { disabled: O, reason: V } = (0, x.A)(h, A, S),
+        D = (0, x.A)(h),
+        { disabled: O, reason: V } = (0, m.A)(h, A, S),
         { onActivate: z, isLoading: B, error: Q } = (0, f.A)(h, A),
         U = (0, v.A)(h, A);
     (n.useEffect(() => {
@@ -70,7 +70,7 @@ function C(t) {
             G && !S
                 ? [
                       {
-                          text: g.intl.string(b.default.AOQgki),
+                          text: g.intl.string(j.default.AOQgki),
                           icon: a._,
                           variant: "primary",
                           size: "md",
@@ -82,7 +82,7 @@ function C(t) {
                       },
                   ]
                 : void 0,
-        K = g.intl.formatToPlainString(b.default["5HQUzD"], { boostCount: A.cost }),
+        K = g.intl.formatToPlainString(j.default["5HQUzD"], { boostCount: A.cost }),
         $ =
             G && S
                 ? (0, s.jsx)(l.m, {
@@ -94,7 +94,7 @@ function C(t) {
                           fullWidth: !0,
                           disabled: O,
                           loading: B,
-                          text: g.intl.string(b.default.PYPdl4),
+                          text: g.intl.string(j.default.PYPdl4),
                           onClick: () => {
                               U();
                           },
@@ -107,10 +107,10 @@ function C(t) {
         subtitle: {
             text:
                 ((e = A.skuId),
-                (i = _.y7[e] ?? j.TVA.NONE),
-                (r = j.M2T[i]),
+                (i = _.y7[e] ?? b.TVA.NONE),
+                (r = b.M2T[i]),
                 g.intl.formatToPlainString(g.t["pob/cL"], { subscriptions: r })),
-            leadingIcon: y,
+            leadingIcon: N,
         },
         actions: H,
         actionBarInput: $,
@@ -122,10 +122,10 @@ function C(t) {
                 !S &&
                 null != V &&
                 (0, s.jsx)("div", {
-                    className: N.P,
+                    className: y.P,
                     children: (0, s.jsx)(d.w, { type: "info", message: V, role: "none" }),
                 }),
-            null != L && (0, s.jsx)(u.E, { color: "text-feedback-critical", variant: "text-sm/semibold", children: L }),
+            null != L && (0, s.jsx)(u.E, { color: "text-feedback-critical", variant: "body-sm/semibold", children: L }),
         ],
     });
 }

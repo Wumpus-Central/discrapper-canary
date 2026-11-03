@@ -16,7 +16,7 @@ function c(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(d.E, {
-                    variant: "text-xs/normal",
+                    variant: "body-xs/normal",
                     color: "text-subtle",
                     tabularNumbers: !0,
                     "aria-hidden": null != n,

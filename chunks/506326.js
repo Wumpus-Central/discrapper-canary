@@ -57,9 +57,9 @@ var l,
     V = n(403362),
     G = n(935208),
     F = n(20805),
-    B = n(202195),
-    Y = n(583846),
-    b = n(299846),
+    b = n(202195),
+    B = n(583846),
+    Y = n(299846),
     H = n(693879);
 n(424994);
 var k = n(105292),
@@ -103,7 +103,7 @@ function J(t) {
                 (0, r.jsx)(e, { size: "xxs", color: l ?? u }),
                 null != a && (0, r.jsx)(T.A, { children: a }),
                 (0, r.jsx)(E.E, {
-                    variant: "text-xs/normal",
+                    variant: "body-xs/normal",
                     color: s,
                     className: W.KT,
                     scaleFontToUserSetting: 5 === c,
@@ -116,7 +116,7 @@ function J(t) {
 }
 function Q(t) {
     let { entry: e } = t,
-        { channel: n } = (0, B.A)(e),
+        { channel: n } = (0, b.A)(e),
         { location: l } = X(),
         i = (0, M.Ay)(n);
     return null == n || (0, V.S1)(l, [1, 2, 3, 4]) ? null : (0, r.jsx)(J, { Icon: f.H, text: i });
@@ -124,9 +124,9 @@ function Q(t) {
 function $(t) {
     let { entry: e, hovered: n } = t,
         { defaultTextColor: l, defaultIconColor: i, location: o } = X(),
-        a = (0, Y.Hd)(e) && (0, V.S1)(o, [0, 4, 7, 9]),
+        a = (0, B.Hd)(e) && (0, V.S1)(o, [0, 4, 7, 9]),
         s = a ? _.A.colors.TEXT_FEEDBACK_POSITIVE : i,
-        { streamPreviewUrl: u } = (0, B.A)(e),
+        { streamPreviewUrl: u } = (0, b.A)(e),
         c = null != u ? p.F : (0, F.yl)(e) ? y.k : I.GameControllerIcon;
     return (0, r.jsxs)(q, {
         children: [
@@ -143,21 +143,21 @@ function $(t) {
 function tt(t) {
     let { entry: e } = t,
         { defaultTextColor: n, defaultIconColor: l } = X(),
-        { state: i, party: o } = (0, b.u)(e),
-        a = (0, Y.gF)(i, o);
+        { state: i, party: o } = (0, Y.u)(e),
+        a = (0, B.gF)(i, o);
     return null == a
         ? null
         : (0, r.jsxs)(q, {
               children: [
                   (0, r.jsx)(v.n, { size: "xxs", color: l }),
-                  (0, r.jsx)(E.E, { variant: "text-xs/normal", color: n, lineClamp: 1, children: a }),
+                  (0, r.jsx)(E.E, { variant: "body-xs/normal", color: n, lineClamp: 1, children: a }),
               ],
           });
 }
 function te(t) {
     let { entry: e, hovered: n } = t,
         { defaultTextColor: l, defaultIconColor: i, location: o } = X(),
-        a = (0, Y.Hd)(e) && (0, V.S1)(o, [0, 4]),
+        a = (0, B.Hd)(e) && (0, V.S1)(o, [0, 4]),
         s = a ? _.A.colors.TEXT_FEEDBACK_POSITIVE : i;
     return (0, r.jsxs)("div", {
         className: W.fC,
@@ -171,14 +171,14 @@ function tn(t) {
     let { entry: e } = t,
         { location: n } = X(),
         l = (0, V.S1)(n, [0, 3]) ? _.A.colors.STATUS_POSITIVE : void 0;
-    return (0, Y.Rf)(e) ? (0, r.jsx)(J, { Icon: m.P, text: k.intl.string(k.t.keY6mW), iconColor: l }) : null;
+    return (0, B.Rf)(e) ? (0, r.jsx)(J, { Icon: m.P, text: k.intl.string(k.t.keY6mW), iconColor: l }) : null;
 }
 function tl(t) {
     let { entry: e } = t,
         { location: n } = X();
-    if (!(0, Y.L7)(e)) return null;
-    let l = (0, Y.JM)(e),
-        { text: i, tooltipText: o, a11yText: a } = (0, Y.Pj)(e);
+    if (!(0, B.L7)(e)) return null;
+    let l = (0, B.JM)(e),
+        { text: i, tooltipText: o, a11yText: a } = (0, B.Pj)(e);
     return null == i
         ? null
         : (0, r.jsx)(J, { Icon: P.x, text: i, tooltipText: o, showTooltip: 0 === n && !l, a11yText: a });
@@ -187,9 +187,9 @@ function tr(t) {
     let { entry: e } = t,
         { location: n } = X(),
         l = 0 !== n,
-        i = (0, Y.KH)(e);
+        i = (0, B.KH)(e);
     if (null == i) return null;
-    let o = (0, Y.us)(i);
+    let o = (0, B.us)(i);
     return (0, r.jsx)(J, {
         Icon: j.RetryIcon,
         showTooltip: !l,
@@ -200,8 +200,8 @@ function tr(t) {
 function ti(t) {
     let { entry: e } = t,
         { location: n } = X(),
-        l = (0, Y.iy)(e);
-    return (0, Y.BZ)(e)
+        l = (0, B.iy)(e);
+    return (0, B.BZ)(e)
         ? (0, r.jsx)(J, {
               Icon: R.g,
               showTooltip: 0 === n,
@@ -215,7 +215,7 @@ function to(t) {
     let { entry: e } = t,
         { location: n } = X(),
         l = 0 !== n,
-        i = (0, Y.ty)(e);
+        i = (0, B.ty)(e);
     if (null == i) return null;
     let o = l ? k.t.C0AxoR : k.t.SDRHgr;
     return (0, r.jsx)(J, {
@@ -232,7 +232,7 @@ function to(t) {
 function ta(t) {
     let { entry: e } = t,
         { location: n } = X(),
-        l = (0, Y.Pv)(e, C.K.AGGREGATE_COUNT)?.count;
+        l = (0, B.Pv)(e, C.K.AGGREGATE_COUNT)?.count;
     if (null == l) return null;
     let i = (0, V.S1)(n, [1, 2, 5])
         ? k.intl.formatToPlainString(k.t.HtifnG, { count: l })
@@ -243,7 +243,7 @@ function ts(t) {
     let { entry: e } = t,
         { location: n } = X();
     if (3 === n) return null;
-    let l = (0, Y.CZ)(e);
+    let l = (0, B.CZ)(e);
     return null == l || l === A.m.TRENDING_TYPE_UNSPECIFIED
         ? null
         : (0, r.jsx)(J, { Icon: S.FireIcon, text: k.intl.string(k.t.kAlUsy) });
@@ -258,7 +258,7 @@ function tu(t) {
 function tc(t) {
     let { entry: e, hovered: n } = t,
         { defaultTextColor: l, defaultIconColor: i, location: o } = X(),
-        a = (0, Y.Hd)(e) && 4 === o,
+        a = (0, B.Hd)(e) && 4 === o,
         s = a ? _.A.colors.TEXT_FEEDBACK_POSITIVE : i;
     return (0, r.jsxs)("div", {
         className: W.fC,
@@ -270,9 +270,9 @@ function tc(t) {
 }
 function td(t) {
     let { entry: e } = t,
-        n = (0, Y.kR)(e.extra.media_assets_large_text);
+        n = (0, B.kR)(e.extra.media_assets_large_text);
     if (null == n) return null;
-    let l = (0, Y.WC)(e.extra.media_assets_large_text);
+    let l = (0, B.WC)(e.extra.media_assets_large_text);
     return (0, r.jsx)(J, { Icon: w.K, text: n, a11yText: l });
 }
 function tx(t) {

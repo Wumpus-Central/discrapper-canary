@@ -86,7 +86,7 @@ function L() {
                                         }),
                                 }),
                             }),
-                            (0, n.jsx)(D.E, { color: "text-default", variant: "text-sm/normal", children: d }),
+                            (0, n.jsx)(D.E, { color: "text-default", variant: "body-sm/normal", children: d }),
                         ],
                     }),
                     (0, n.jsxs)("div", {
@@ -119,7 +119,7 @@ function L() {
                                                 hook: (t) =>
                                                     (0, n.jsx)(D.E, {
                                                         color: "text-default",
-                                                        variant: "text-sm/normal",
+                                                        variant: "body-sm/normal",
                                                         className: P.Rh,
                                                         children: t,
                                                     }),
@@ -137,16 +137,16 @@ function L() {
     });
 }
 var R = s(503698),
-    M = s.n(R),
-    k = s(939249),
-    U = s(738188),
-    b = s(661531),
+    b = s.n(R),
+    M = s(939249),
+    k = s(738188),
+    U = s(661531),
     K = s(369606),
-    G = s(192308),
-    V = s(761508),
-    B = s(147925),
-    w = s(303727),
-    y = s(935208),
+    y = s(192308),
+    G = s(761508),
+    V = s(147925),
+    B = s(303727),
+    w = s(935208),
     Y = s(393033),
     z = s(985481),
     H = s(239093),
@@ -154,22 +154,22 @@ var R = s(503698),
     F = s(557398);
 function X(t) {
     let { status: e, onClick: s, opened: i, count: r } = t;
-    return (0, n.jsxs)(k.D, {
+    return (0, n.jsxs)(M.D, {
         className: F.wx,
         onClick: s,
         children: [
             (0, n.jsx)("div", {
                 className: F.Y5,
-                children: (0, n.jsx)(U.WarningIcon, {
+                children: (0, n.jsx)(k.WarningIcon, {
                     size: "md",
-                    color: "active" === e ? b.A.colors.INTERACTIVE_TEXT_ACTIVE : b.A.colors.ICON_MUTED,
+                    color: "active" === e ? U.A.colors.INTERACTIVE_TEXT_ACTIVE : U.A.colors.ICON_MUTED,
                 }),
             }),
             (0, n.jsxs)("div", {
                 className: F.DD,
                 children: [
                     (0, n.jsx)(_.D, {
-                        variant: "heading-md/semibold",
+                        variant: "heading-sm/semibold",
                         color: "text-default",
                         children:
                             "active" === e
@@ -177,7 +177,7 @@ function X(t) {
                                 : p.intl.formatToPlainString(p.t.fZAHBT, { count: r.toString() }),
                     }),
                     (0, n.jsx)(_.D, {
-                        variant: "text-sm/normal",
+                        variant: "body-sm/normal",
                         color: "text-muted",
                         children: "active" === e ? p.intl.string(p.t.XJ2YVR) : p.intl.string(p.t.SzGV0g),
                     }),
@@ -185,10 +185,10 @@ function X(t) {
             }),
             (0, n.jsx)("div", {
                 className: F.OW,
-                children: (0, n.jsx)(B.A, {
+                children: (0, n.jsx)(V.A, {
                     width: 18,
                     height: 18,
-                    direction: i ? B.A.Directions.UP : B.A.Directions.DOWN,
+                    direction: i ? V.A.Directions.UP : V.A.Directions.DOWN,
                 }),
             }),
         ],
@@ -205,32 +205,32 @@ function $() {
                         className: F.Wk,
                         children: (0, n.jsx)(K.TrophyIcon, { size: "md", color: "currentColor", className: F.Kk }),
                     }),
-                    (0, n.jsx)(w.A, { className: F.uf }),
+                    (0, n.jsx)(B.A, { className: F.uf }),
                 ],
             }),
-            (0, n.jsx)(_.D, { variant: "heading-md/semibold", className: F.q6, children: p.intl.string(p.t.reLFaV) }),
-            (0, n.jsx)(D.E, { variant: "text-xs/normal", className: F.WO, children: p.intl.string(p.t.ERdH1o) }),
+            (0, n.jsx)(_.D, { variant: "heading-sm/semibold", className: F.q6, children: p.intl.string(p.t.reLFaV) }),
+            (0, n.jsx)(D.E, { variant: "body-xs/normal", className: F.WO, children: p.intl.string(p.t.ERdH1o) }),
         ],
     });
 }
 function Q() {
     return (0, n.jsx)("div", {
         className: F.p$,
-        children: (0, n.jsx)(D.E, { variant: "text-xs/normal", className: F.WO, children: p.intl.string(p.t.RV3AXf) }),
+        children: (0, n.jsx)(D.E, { variant: "body-xs/normal", className: F.WO, children: p.intl.string(p.t.RV3AXf) }),
     });
 }
 function Z(t) {
     let { timestamp: e } = t;
-    return (0, n.jsx)(D.E, { variant: "text-xs/normal", className: F.vE, children: (0, Y._W)(e) });
+    return (0, n.jsx)(D.E, { variant: "body-xs/normal", className: F.vE, children: (0, Y._W)(e) });
 }
 function q() {
-    return (0, n.jsx)(D.E, { variant: "text-xs/semibold", className: F.Ad, children: p.intl.string(p.t.QKMRC4) });
+    return (0, n.jsx)(D.E, { variant: "body-xs/semibold", className: F.Ad, children: p.intl.string(p.t.QKMRC4) });
 }
 function J(t) {
     let { classification: e } = t,
         { id: r, description: a } = e,
-        l = y.default.extractTimestamp(r),
-        o = 864e5 > Math.abs(y.default.extractTimestamp(e.id) - new Date().getTime()),
+        l = w.default.extractTimestamp(r),
+        o = 864e5 > Math.abs(w.default.extractTimestamp(e.id) - new Date().getTime()),
         c = i.useMemo(() => {
             let t = {
                 description: a,
@@ -247,10 +247,10 @@ function J(t) {
                 : p.intl.format(p.t.QY4g5t, t);
         }, [e, a]);
     return (0, n.jsx)(
-        k.D,
+        M.D,
         {
             onClick: function () {
-                (0, G.openModalLazy)(async () => {
+                (0, y.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
                         s.e("252964"),
                         s.e("384054"),
@@ -297,7 +297,7 @@ function J(t) {
                     return (e) => (0, n.jsx)(t, { classificationId: r, source: H.XN.StandingTab, ...e });
                 });
             },
-            className: M()(F.zk, { [F.V5]: o }),
+            className: b()(F.zk, { [F.V5]: o }),
             children: (0, n.jsxs)("div", {
                 className: F.iQ,
                 children: [
@@ -336,12 +336,12 @@ function tt(t) {
                 (0, n.jsxs)("div", {
                     className: F.ld,
                     children: [
-                        (0, n.jsx)(V.V.Separator, { style: { height: "1px", width: "100%" } }),
+                        (0, n.jsx)(G.V.Separator, { style: { height: "1px", width: "100%" } }),
                         h.length > 0 && h.map((t) => (0, n.jsx)(J, { classification: t }, t.id)),
                         h.length < s.length &&
                             (0, n.jsxs)(n.Fragment, {
                                 children: [
-                                    (0, n.jsx)(V.V.Separator, { style: { height: "1px", width: "100%" } }),
+                                    (0, n.jsx)(G.V.Separator, { style: { height: "1px", width: "100%" } }),
                                     (0, n.jsx)("button", {
                                         className: F.Hr,
                                         onClick: () => o((t) => t + I),

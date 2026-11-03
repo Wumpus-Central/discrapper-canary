@@ -57,7 +57,7 @@ function h(e) {
                                         (0, s.jsx)(d.E, {
                                             className: _.b1,
                                             color: o,
-                                            variant: "heading-md/semibold",
+                                            variant: "heading-sm/semibold",
                                             tag: "span",
                                             children: e.getQuestion(),
                                         }),
@@ -73,7 +73,7 @@ function h(e) {
                                     (0, s.jsx)(d.E, {
                                         className: _.ZF,
                                         color: "text-muted",
-                                        variant: "text-sm/medium",
+                                        variant: "body-sm/medium",
                                         children: e.getAnswer(),
                                     }),
                             ],

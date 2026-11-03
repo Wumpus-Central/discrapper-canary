@@ -14,35 +14,35 @@ var l = s(477900),
     h = s(696208),
     C = s(964486),
     p = s(414121),
-    N = s(174459),
-    g = s(10005),
-    j = s(438732),
-    v = s(834981),
-    A = s(191627),
-    E = s(652215),
-    k = s(83152),
-    y = s(105292),
-    R = s(804050),
-    b = s(221851);
+    y = s(174459),
+    N = s(10005),
+    g = s(438732),
+    j = s(834981),
+    b = s(191627),
+    v = s(652215),
+    A = s(83152),
+    E = s(105292),
+    k = s(804050),
+    R = s(221851);
 let T = function (t) {
     let { transitionState: e, onClose: s } = t,
-        i = (0, j.A)(),
+        i = (0, g.A)(),
         [r, T] = n.useState(!1),
-        { getLinkCode: z, isGetLinkCodeLoading: I } = (0, g.A)({}),
-        _ = (0, v.VE)(),
-        w = (0, v.VT)(),
+        { getLinkCode: z, isGetLinkCodeLoading: I } = (0, N.A)({}),
+        _ = (0, j.VE)(),
+        w = (0, j.VT)(),
         H = n.useRef(w);
     function Q() {
         (T(
             (t) => (
-                N.default.track(E.HAw.FAMILY_CENTER_ACTION, { action: r ? A.qb.HideQRCode : A.qb.RevealQRCode }),
+                y.default.track(v.HAw.FAMILY_CENTER_ACTION, { action: r ? b.qb.HideQRCode : b.qb.RevealQRCode }),
                 !t
             ),
         ),
             r ||
                 setTimeout(() => {
                     s();
-                }, A.nz));
+                }, b.nz));
     }
     (o()(!i, "FamilyCenterQRCodeModal should only be rendered for teens."),
         (0, C.Ay)(() => {
@@ -57,57 +57,57 @@ let T = function (t) {
         onClose: s,
         children: [
             (0, l.jsxs)(d.$T, {
-                className: R.lm,
+                className: k.lm,
                 color: d.Hv.WARNING,
                 children: [
                     (0, l.jsx)(u.CircleInformationIcon, { size: "sm", color: "currentColor" }),
-                    y.intl.string(k.default.iHYMAz),
+                    E.intl.string(A.default.iHYMAz),
                 ],
             }),
             (0, l.jsxs)(x.c, {
                 children: [
                     (0, l.jsx)(m.E, {
-                        className: b.QB,
-                        variant: "text-lg/semibold",
+                        className: R.QB,
+                        variant: "body-lg/semibold",
                         color: "text-strong",
-                        children: y.intl.string(k.default.AVTZaN),
+                        children: E.intl.string(A.default.AVTZaN),
                     }),
                     (0, l.jsx)(m.E, {
-                        className: b.SX,
-                        variant: "text-sm/normal",
+                        className: R.SX,
+                        variant: "body-sm/normal",
                         color: "text-default",
-                        children: y.intl.format(k.default.LyyCsE, {
+                        children: E.intl.format(A.default.LyyCsE, {
                             link: "https://support.discord.com/hc/articles/14155060633623",
                         }),
                     }),
                     (0, l.jsx)("div", {
-                        className: R.Ac,
+                        className: k.Ac,
                         children: (0, l.jsx)(f.D, {
-                            className: a()(R.u3, { [R.RK]: S }),
+                            className: a()(k.u3, { [k.RK]: S }),
                             onClick: Q,
                             children: (0, l.jsx)(p.Lx, {
                                 size: 272,
-                                text: S ? _ : A.EC,
+                                text: S ? _ : b.EC,
                                 overlaySize: p.Zs.SIZE_60,
-                                className: R.R6,
+                                className: k.R6,
                             }),
                         }),
                     }),
                     (0, l.jsx)(m.E, {
-                        className: R.z_,
-                        variant: "text-xs/semibold",
+                        className: k.z_,
+                        variant: "body-xs/semibold",
                         color: "text-default",
-                        children: y.intl.string(k.default.goDyoe),
+                        children: E.intl.string(A.default.goDyoe),
                     }),
                 ],
             }),
             (0, l.jsx)(h.H, {
                 actionsFullWidth: !0,
                 actions: [
-                    { variant: "secondary", text: y.intl.string(y.t.cpT0Cq), onClick: s },
+                    { variant: "secondary", text: E.intl.string(E.t.cpT0Cq), onClick: s },
                     {
                         variant: "primary",
-                        text: r ? y.intl.string(k.default.wg2xwQ) : y.intl.string(k.default["10dX6U"]),
+                        text: r ? E.intl.string(A.default.wg2xwQ) : E.intl.string(A.default["10dX6U"]),
                         onClick: Q,
                         loading: r && I,
                     },

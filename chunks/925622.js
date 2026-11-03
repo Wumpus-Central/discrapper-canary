@@ -69,7 +69,7 @@ function G(e) {
         className: l()(w.kL, t),
         children: [
             (0, i.jsx)(k.E, {
-                variant: "text-sm/normal",
+                variant: "body-sm/normal",
                 className: w.Qq,
                 children: Y.intl.format(o, {
                     privacySettingsLink: (e, t) =>
@@ -213,7 +213,7 @@ function ee(e) {
         u = o === Z.d.MODAL,
         _ = u ? Q.xq : Q.K1,
         I = l()(Q.Zd, u && Q.Xv),
-        R = (0, i.jsx)(E.D, { variant: "text-sm/normal", id: a, children: Y.intl.string(Y.t.EIYbj6) }),
+        R = (0, i.jsx)(E.D, { variant: "body-sm/normal", id: a, children: Y.intl.string(Y.t.EIYbj6) }),
         f = (0, i.jsx)(X, { onClose: r }),
         m = (0, i.jsx)($, { isPremiumUser: t, isRefreshEnabled: c, onInteraction: n, tiny: u }),
         x = u

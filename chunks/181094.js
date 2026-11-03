@@ -1,47 +1,47 @@
-a.d(e, { default: () => v });
-var i = a(477900),
-    l = a(189213),
-    s = a(834730),
-    n = a(663417),
-    c = a(429913),
-    r = a(47167),
-    o = a(713654),
-    d = a(46054),
-    p = a(975571),
-    h = a(652215),
-    u = a(105292),
-    m = a(742514),
-    x = a(165648);
-function v(t) {
-    let { channel: e, guild: a, onClose: v, transitionState: j } = t,
-        k = (0, o.gU)(e, a) ?? void 0,
-        N = (0, r.Ay)(e, !1),
-        b = (0, c.h)(e.linkedLobby?.application_id);
+t.d(e, { default: () => v });
+var i = t(477900),
+    l = t(189213),
+    s = t(834730),
+    n = t(663417),
+    c = t(429913),
+    o = t(47167),
+    d = t(713654),
+    r = t(46054),
+    p = t(975571),
+    h = t(652215),
+    u = t(105292),
+    m = t(742514),
+    b = t(165648);
+function v(a) {
+    let { channel: e, guild: t, onClose: v, transitionState: x } = a,
+        j = (0, d.gU)(e, t) ?? void 0,
+        k = (0, o.Ay)(e, !1),
+        N = (0, c.h)(e.linkedLobby?.application_id);
     return (0, i.jsxs)(l.a, {
         title: u.intl.string(u.t.X8jMDh),
-        subtitle: null != N ? { text: N, leadingIcon: k } : void 0,
+        subtitle: null != k ? { text: k, leadingIcon: j } : void 0,
         actions: void 0,
-        transitionState: j,
+        transitionState: x,
         onClose: v,
         children: [
             (0, i.jsx)(s.E, {
                 selectable: !0,
-                variant: "text-md/normal",
-                className: x.PT,
-                children: d.A.parseTopic(e.topic, !0, { channelId: e.id }),
+                variant: "body-md/normal",
+                className: b.PT,
+                children: r.A.parseTopic(e.topic, !0, { channelId: e.id }),
             }),
-            null != b
+            null != N
                 ? (0, i.jsxs)("div", {
                       className: m.a6,
                       children: [
                           (0, i.jsx)(n.RefreshIcon, { className: m.NB }),
                           (0, i.jsx)(s.E, {
-                              variant: "text-sm/normal",
+                              variant: "body-sm/normal",
                               color: "text-default",
                               children: u.intl.format(u.t.Ud5ryv, {
-                                  applicationName: b.name,
+                                  applicationName: N.name,
                                   helpdeskArticle: p.A.getArticleURL(h.MVz.LINKED_LOBBIES),
-                                  separatorHook: (t, e) => (0, i.jsx)("span", { className: m.fY, children: t }, e),
+                                  separatorHook: (a, e) => (0, i.jsx)("span", { className: m.fY, children: a }, e),
                               }),
                           }),
                       ],

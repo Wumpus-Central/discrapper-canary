@@ -7,10 +7,10 @@ var a = n(477900),
     s = n(105292),
     u = n(721158);
 function c(t) {
-    let { onConfirm: e, onClose: n, guildName: c, transitionState: m } = t,
-        [d, p] = i.useState(""),
-        [f, x] = i.useState(null),
-        C = i.useMemo(
+    let { onConfirm: e, onClose: n, guildName: c, transitionState: d } = t,
+        [m, p] = i.useState(""),
+        [f, C] = i.useState(null),
+        h = i.useMemo(
             () => [
                 { text: s.intl.string(s.t["ETE/oC"]), onClick: n, variant: "secondary" },
                 { text: s.intl.string(s.t.l3hWP6), variant: "critical-primary", type: "submit" },
@@ -19,20 +19,20 @@ function c(t) {
         );
     return (0, a.jsx)("form", {
         onSubmit: function (t) {
-            (t.preventDefault(), d.toLowerCase() !== c.toLowerCase()) ? x(s.intl.string(s.t["c2/DS/"])) : (e?.(), n());
+            (t.preventDefault(), m.toLowerCase() !== c.toLowerCase()) ? C(s.intl.string(s.t["c2/DS/"])) : (e?.(), n());
         },
         children: (0, a.jsxs)(r.a, {
             title: s.intl.formatToPlainString(s.t.us7mC1, { name: c }),
             subtitle: s.intl.format(s.t["Zuo+Vd"], { name: c }),
-            actions: C,
+            actions: h,
             onClose: n,
-            transitionState: m,
+            transitionState: d,
             children: [
                 (0, a.jsx)(l.k, {
                     id: "text-entry-confirm",
                     type: "text",
                     label: s.intl.string(s.t.abprOC),
-                    value: d,
+                    value: m,
                     autoComplete: "off",
                     onChange: p,
                     autoFocus: !0,
@@ -40,7 +40,7 @@ function c(t) {
                 null != f && "" !== f
                     ? (0, a.jsx)(o.E, {
                           color: "text-feedback-critical",
-                          variant: "text-xs/normal",
+                          variant: "body-xs/normal",
                           className: u.z,
                           children: f,
                       })

@@ -1,11 +1,11 @@
-s.d(t, { default: () => y });
+s.d(t, { default: () => N });
 var e = s(477900),
     a = s(582128),
     n = s(935399),
     c = s(933436),
     r = s(22856),
-    l = s(224640),
-    d = s(315629),
+    d = s(224640),
+    l = s(315629),
     o = s(20742),
     x = s(534514),
     m = s(834730),
@@ -16,12 +16,12 @@ var e = s(477900),
     f = s(580630),
     j = s(87719),
     v = s(783420),
-    k = s(202541),
-    b = s(49999),
+    b = s(202541),
+    k = s(49999),
     S = s(105292),
-    N = s(431901);
-function y(i) {
-    let { renderModalProps: t, dismissibleContent: s, markAsDismissed: y } = i,
+    y = s(431901);
+function N(i) {
+    let { renderModalProps: t, dismissibleContent: s, markAsDismissed: N } = i,
         { onClose: C, transitionState: w } = t,
         { headingId: D } = (0, r.k)(),
         M = (0, f.$g)(0, (0, g.Rr)(), { minimumFractionDigits: 0, maximumFractionDigits: 0 });
@@ -31,46 +31,46 @@ function y(i) {
         }),
         a.useEffect(
             () => () => {
-                y(b.i.AUTO_DISMISS);
+                N(k.i.AUTO_DISMISS);
             },
-            [y],
+            [N],
         ),
         (0, e.jsx)(v.A, {
-            subscriptionTier: k.pe.TIER_2,
+            subscriptionTier: b.pe.TIER_2,
             children: (i) => {
                 let { onClick: t } = i;
-                return (0, e.jsx)(l.d, {
+                return (0, e.jsx)(d.d, {
                     transitionState: w,
                     onClose: C,
                     size: "md",
                     paddingSize: "lg",
-                    children: (0, e.jsxs)(d.h, {
+                    children: (0, e.jsxs)(l.h, {
                         color: "nitro-pink",
-                        className: N.D7,
+                        className: y.D7,
                         children: [
-                            (0, e.jsx)("div", { className: N.cG, children: (0, e.jsx)(o.s_, { shouldColorMix: !0 }) }),
+                            (0, e.jsx)("div", { className: y.cG, children: (0, e.jsx)(o.s_, { shouldColorMix: !0 }) }),
                             (0, e.jsx)("div", {
-                                className: N.tW,
+                                className: y.tW,
                                 children: (0, e.jsx)(c.x, { alt: "", width: 400, height: "auto" }),
                             }),
                             (0, e.jsxs)("div", {
-                                className: N.Qs,
+                                className: y.Qs,
                                 children: [
                                     (0, e.jsx)(x.D, {
                                         id: D,
                                         variant: "nitro-md",
                                         color: "text-strong",
-                                        className: N.wx,
+                                        className: y.wx,
                                         children: S.intl.string(S.t["M/ytwa"]),
                                     }),
                                     (0, e.jsx)(m.E, {
-                                        variant: "text-md/normal",
+                                        variant: "body-md/normal",
                                         color: "text-subtle",
-                                        className: N.rf,
+                                        className: y.rf,
                                         children: S.intl.formatToPlainString(S.t.xMkRkc, { price: M }),
                                     }),
                                     (0, e.jsxs)("div", {
-                                        className: N.v0,
+                                        className: y.v0,
                                         children: [
                                             (0, e.jsx)(h.$, {
                                                 variant: "secondary",

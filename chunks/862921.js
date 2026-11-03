@@ -4,8 +4,8 @@ var n,
     a = l(477900),
     s = l(582128),
     i = l(834730),
-    c = l(534514),
-    o = l(821609),
+    o = l(534514),
+    c = l(821609),
     d = l(976860),
     u = l(105292);
 let h = {
@@ -28,10 +28,10 @@ function m(e) {
     }
     return e;
 }
-let x = function (e) {
+let b = function (e) {
         let { href: t, ctaText: l, variant: n = "secondary" } = e,
             r = m(l);
-        return (0, a.jsx)(o.$, {
+        return (0, a.jsx)(c.$, {
             variant: n,
             text: r,
             onClick: () => {
@@ -39,10 +39,10 @@ let x = function (e) {
             },
         });
     },
-    b = function (e) {
+    x = function (e) {
         let { content: t, ...l } = e,
             n = m(String(t));
-        return (0, a.jsx)(c.D, { ...l, children: n });
+        return (0, a.jsx)(o.D, { ...l, children: n });
     };
 var p = l(331322);
 let f = function (e) {
@@ -55,13 +55,13 @@ let f = function (e) {
         return (0, a.jsx)(i.E, { ...l, children: n });
     };
 var j = l(866665);
-let v = function (e) {
+let y = function (e) {
     let { text: t, ...l } = e,
         n = m(String(t));
     return (0, a.jsx)(j.m, { text: n, ...l, asContainer: !0 });
 };
-var y = l(503698),
-    k = l.n(y),
+var v = l(503698),
+    k = l.n(v),
     S = l(123292),
     E = l(770178),
     C = (((n = {}).PAGE = "page"), (n.ITEM = "item"), n),
@@ -84,11 +84,11 @@ function L(e) {
 function A(e) {
     let { page: t, pages: l, setPage: n } = e,
         [r, i] = s.useState(0),
-        c = (0, E.w)((e) => {
+        o = (0, E.w)((e) => {
             let { contentRect: t } = e;
             i(t.width);
         }),
-        o = s.useMemo(() => {
+        c = s.useMemo(() => {
             let e;
             if (null == l || l < 1) return null;
             let s = Math.min(8, Math.max(3, Math.floor((r - 160) / 32)));
@@ -108,14 +108,14 @@ function A(e) {
                           "div",
                           {
                               className: w.page,
-                              children: (0, a.jsx)(g, { variant: "text-md/semibold", content: "..." }),
+                              children: (0, a.jsx)(g, { variant: "body-md/semibold", content: "..." }),
                           },
                           `ellipsis-${l}`,
                       ),
             );
         }, [t, l, n, r]);
     return (0, a.jsx)("div", {
-        ref: c,
+        ref: o,
         className: w.pagination,
         children: (0, a.jsxs)(f, {
             direction: "horizontal",
@@ -136,7 +136,7 @@ function A(e) {
                         direction: "horizontal",
                         justify: "center",
                         align: "center",
-                        children: o,
+                        children: c,
                     }),
                 }),
                 (0, a.jsx)(S.Q, {
@@ -162,21 +162,21 @@ function _(e, t, l) {
             paginationPosition: a = "bottom",
             scrollToTop: i = !0,
         } = t ?? {},
-        c = n === T.TRUNCATE,
-        [o, d] = s.useState(0),
+        o = n === T.TRUNCATE,
+        [c, d] = s.useState(0),
         [u, h] = s.useState(r),
-        [m, x] = s.useState(e),
-        b = null == r || r < 1 ? 0 : Math.ceil(e / r),
+        [m, b] = s.useState(e),
+        x = null == r || r < 1 ? 0 : Math.ceil(e / r),
         p = null != r && r > 0;
     return (
-        (u !== r || m !== e) && (h(r), x(e), d(0)),
+        (u !== r || m !== e) && (h(r), b(e), d(0)),
         {
-            page: o,
-            pages: b,
+            page: c,
+            pages: x,
             paginate: p,
-            showPagination: !c && p && b > 1,
+            showPagination: !o && p && x > 1,
             paginationPosition: a,
-            truncate: c,
+            truncate: o,
             perPage: r,
             setPage: s.useCallback(
                 (e) => {
@@ -192,30 +192,30 @@ let P = function (e) {
         let { columns: t = 3, paginationOptions: l, children: n } = e,
             r = Math.max(1, Math.min(6, Math.floor(t))),
             i = s.Children.count(n),
-            c = s.useRef(null),
+            o = s.useRef(null),
             {
-                page: o,
+                page: c,
                 pages: d,
                 paginate: u,
                 showPagination: h,
                 paginationPosition: m,
-                truncate: x,
-                perPage: b,
+                truncate: b,
+                perPage: x,
                 setPage: p,
-            } = _(i, l, c),
-            f = s.useMemo(() => M(s.Children.toArray(n), u ? o : void 0, b, x), [o, b, n, u, x]);
+            } = _(i, l, o),
+            f = s.useMemo(() => M(s.Children.toArray(n), u ? c : void 0, x, b), [c, x, n, u, b]);
         return (0, a.jsxs)(a.Fragment, {
             children: [
-                h && "top" === m && (0, a.jsx)(A, { page: o, pages: d, setPage: p }),
+                h && "top" === m && (0, a.jsx)(A, { page: c, pages: d, setPage: p }),
                 (0, a.jsx)(V.Provider, {
                     value: l,
                     children: (0, a.jsx)("div", {
-                        ref: c,
+                        ref: o,
                         className: w.gridContainer,
                         children: (0, a.jsx)("div", { className: k()(w.grid, w[`columns${r}`]), children: f }),
                     }),
                 }),
-                h && "bottom" === m && (0, a.jsx)(A, { page: o, pages: d, setPage: p }),
+                h && "bottom" === m && (0, a.jsx)(A, { page: c, pages: d, setPage: p }),
             ],
         });
     },
@@ -340,14 +340,14 @@ let Q = function (e) {
             backgroundRepeat: r = "no-repeat",
             backgroundColor: s,
             padding: i = 16,
-            children: c,
+            children: o,
         } = e,
-        o = z(t),
-        d = D(o?.mimeType);
+        c = z(t),
+        d = D(c?.mimeType);
     return (0, a.jsxs)("div", {
         className: K.k,
         style: {
-            ...(!d && null != o ? { backgroundImage: `url(${o.src})` } : {}),
+            ...(!d && null != c ? { backgroundImage: `url(${c.src})` } : {}),
             backgroundSize: l,
             backgroundPosition: n,
             backgroundRepeat: r,
@@ -356,9 +356,9 @@ let Q = function (e) {
         },
         children: [
             d &&
-                null != o &&
-                (0, a.jsx)(N.A, { className: K.O, src: o.src, autoPlay: !0, loop: !0, muted: !0, playsInline: !0 }),
-            c,
+                null != c &&
+                (0, a.jsx)(N.A, { className: K.O, src: c.src, autoPlay: !0, loop: !0, muted: !0, playsInline: !0 }),
+            o,
         ],
     });
 };
@@ -407,7 +407,7 @@ let en = function (e) {
                                 (0, a.jsx)("div", {}),
                                 null != l &&
                                     (0, a.jsx)("div", { className: el.wm, children: (0, a.jsx)(et, { src: l }) }),
-                                null != s && (0, a.jsx)(x, { ctaText: s, variant: "overlay-primary", href: r }),
+                                null != s && (0, a.jsx)(b, { ctaText: s, variant: "overlay-primary", href: r }),
                             ],
                         }),
                     }),
@@ -426,8 +426,8 @@ function es(e) {
 let ei = (e) => {
     let { children: t, paused: l = !1, slideDuration: n = 5e3 } = e,
         [r, i] = s.useState(0),
-        c = s.useRef(null),
-        o = (0, er.M)(c),
+        o = s.useRef(null),
+        c = (0, er.M)(o),
         d = s.useRef(void 0),
         u = s.useMemo(
             () =>
@@ -443,7 +443,7 @@ let ei = (e) => {
     s.useEffect(() => {
         Array.isArray(u) ? i(r >= u?.length ? Math.max(u?.length - 1, 0) : r) : i(0);
     }, [u, r]);
-    let h = l || o;
+    let h = l || c;
     return (s.useEffect(() => {
         if (h) {
             null != d.current && (window.clearTimeout(d.current), (d.current = void 0));
@@ -468,7 +468,7 @@ let ei = (e) => {
         ? null
         : Array.isArray(u)
           ? (0, a.jsx)("div", {
-                ref: c,
+                ref: o,
                 className: ea.carousel,
                 children: (0, a.jsx)("div", {
                     className: ea.children,
@@ -492,7 +492,7 @@ let ei = (e) => {
                 }),
             })
           : (0, a.jsx)("div", {
-                ref: c,
+                ref: o,
                 className: ea.carousel,
                 children: (0, a.jsx)("div", {
                     className: ea.children,
@@ -500,13 +500,13 @@ let ei = (e) => {
                 }),
             });
 };
-function ec() {
+function eo() {
     return (0, a.jsx)("div", {
         style: { display: "flex", justifyContent: "center", alignItems: "center" },
         children: (0, a.jsx)("div", { style: { height: 96, width: 96, borderRadius: 48, background: "grey" } }),
     });
 }
-function eo() {
+function ec() {
     return (0, a.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)", height: 240 } });
 }
 var ed = l(395399);
@@ -526,8 +526,8 @@ let eu = function (e) {
             r = Math.max(1, Math.min(6, Math.floor(l))),
             s = Math.max(1, Math.min(6, Math.floor(n))),
             i = w[`gridItemColumns${r}`],
-            c = w[`gridItemRows${s}`];
-        return (0, a.jsx)("div", { className: `${w.gridItem} ${i} ${c}`, children: t });
+            o = w[`gridItemRows${s}`];
+        return (0, a.jsx)("div", { className: `${w.gridItem} ${i} ${o}`, children: t });
     };
 function em(e) {
     let { color: t, children: l } = e;
@@ -546,7 +546,7 @@ function em(e) {
         children: l,
     });
 }
-let ex = {
+let eb = {
     name: "Grid",
     id: "grid",
     component: function (e) {
@@ -556,18 +556,18 @@ let ex = {
             perPage: n,
             paginationPosition: r,
             gridItemColumns: s,
-            gridItemRows: c,
+            gridItemRows: o,
         } = e;
         return (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsx)(i.E, {
-                    variant: "text-lg/semibold",
+                    variant: "body-lg/semibold",
                     children:
                         "Grid is used to create a responsive grid layout. It takes a columns prop to define the number of columns (1-6). The grid automatically becomes responsive on smaller screens.",
                 }),
                 (0, a.jsx)("br", {}),
                 (0, a.jsx)(i.E, {
-                    variant: "text-lg/semibold",
+                    variant: "body-lg/semibold",
                     children: "GridItem is (optionally) used to set the size of a grid itme in the grid.",
                 }),
                 (0, a.jsx)("div", {
@@ -579,10 +579,10 @@ let ex = {
                             (0, a.jsx)(em, { color: "red" }),
                             (0, a.jsx)(eh, {
                                 columns: s,
-                                rows: c,
+                                rows: o,
                                 children: (0, a.jsx)(em, {
                                     color: "orange",
-                                    children: (0, a.jsx)(i.E, { variant: "text-lg/semibold", children: "GridItem" }),
+                                    children: (0, a.jsx)(i.E, { variant: "body-lg/semibold", children: "GridItem" }),
                                 }),
                             }),
                             (0, a.jsx)(em, { color: "yellow" }),
@@ -608,7 +608,7 @@ let ex = {
                             (0, a.jsx)(em, { color: "blue" }),
                             (0, a.jsx)(em, {
                                 color: "violet",
-                                children: (0, a.jsx)(i.E, { variant: "text-lg/semibold", children: "Last Child" }),
+                                children: (0, a.jsx)(i.E, { variant: "body-lg/semibold", children: "Last Child" }),
                             }),
                         ],
                     }),
@@ -641,13 +641,13 @@ let ex = {
         gridItemRows: { label: "Grid Item Rows", type: "number", defaultValue: 1 },
     },
 };
-var eb = l(150934),
+var ex = l(150934),
     ep = l(95477),
     ef = l(691885),
     eg = l(349738),
     ej = l(17928),
-    ev = l(408278),
-    ey = l(548411),
+    ey = l(408278),
+    ev = l(548411),
     ek = l(554830),
     eS = l(59520),
     eE = l(775602),
@@ -662,19 +662,19 @@ let eI = function (e) {
             edgeFade: n = "xl",
             hideActionsWhenDisabled: r = !0,
             className: i,
-            iconButtonSize: c,
-            scrollBehavior: o = C.PAGE,
+            iconButtonSize: o,
+            scrollBehavior: c = C.PAGE,
             "aria-label": d,
             gridContainerProps: h,
             gridRowProps: m,
         } = e,
-        x = s.useId(),
-        b = null != h,
+        b = s.useId(),
+        x = null != h,
         f = s.useRef(0),
         g = s.useRef(0),
         j = s.useRef(0),
-        v = s.useRef(!1),
         y = s.useRef(!1),
+        v = s.useRef(!1),
         S = s.useRef(null),
         T = s.useRef(null),
         I = (0, ej.bG)([eE.Ay], () => eE.Ay.keyboardModeEnabled),
@@ -698,7 +698,7 @@ let eI = function (e) {
     }
     let B = s.useCallback(() => {
             let e;
-            if (b || y.current) return null;
+            if (x || v.current) return null;
             let t = D.current;
             if (null == t || 0 === t.childElementCount) return null;
             let l = j.current,
@@ -718,13 +718,13 @@ let eI = function (e) {
                 e = a;
             }
             return ((S.current = e), e);
-        }, [b]),
+        }, [x]),
         F = s.useCallback(() => {
             let e = D.current;
             null != e && (_(j.current > 0), O(j.current + e.clientWidth < e.scrollWidth), B());
         }, [B]),
         R = s.useCallback(() => {
-            if (b) return;
+            if (x) return;
             let e = D.current;
             if (null == e) return;
             let t = S.current;
@@ -733,7 +733,7 @@ let eI = function (e) {
                     I && l !== t ? e.setAttribute("inert", "true") : e.removeAttribute("inert");
                 });
             });
-        }, [I, b]),
+        }, [I, x]),
         H = (0, E.w)((e) => {
             let { contentRect: t } = e;
             ((f.current = t.width), null != D.current && (j.current = D.current?.scrollLeft), N(), F(), R());
@@ -756,7 +756,7 @@ let eI = function (e) {
                 null != T.current && T.current >= e.childElementCount && (T.current = null));
         });
         function n() {
-            null != e && (o === C.ITEM && (j.current = e.scrollLeft), F());
+            null != e && (c === C.ITEM && (j.current = e.scrollLeft), F());
         }
         return (
             l.observe(e, { childList: !0 }),
@@ -765,35 +765,35 @@ let eI = function (e) {
                 (t.disconnect(), l.disconnect(), e.removeEventListener("scrollend", n));
             }
         );
-    }, [F, o]);
+    }, [F, c]);
     let G = s.useCallback(
             (e) => {
                 let t = D.current;
                 if (null == t) return;
                 let l = w ? "auto" : "smooth",
                     n = Math.max(0, t.scrollWidth - t.clientWidth);
-                if (b) {
+                if (x) {
                     let r = "right" === e ? t.clientWidth : -t.clientWidth,
                         a = Math.max(0, Math.min(n, j.current + r));
                     ((j.current = a),
-                        (v.current = !0),
-                        t.addEventListener("scrollend", () => (v.current = !1), { once: !0 }),
+                        (y.current = !0),
+                        t.addEventListener("scrollend", () => (y.current = !1), { once: !0 }),
                         t.scrollTo({ left: a, behavior: l }),
                         F());
                     return;
                 }
-                if (o === C.ITEM && null != t.firstElementChild) {
+                if (c === C.ITEM && null != t.firstElementChild) {
                     let r = S.current ?? B() ?? 0,
                         a = Math.max(0, Math.min(t.childElementCount - 1, r + ("right" === e ? 1 : -1))),
                         s = t.children[a];
                     if (null != s) {
                         let e = Math.max(0, Math.min(n, s.offsetLeft));
                         ((j.current = e),
-                            (v.current = !0),
+                            (y.current = !0),
                             t.addEventListener(
                                 "scrollend",
                                 () => {
-                                    ((v.current = !1), (S.current = a), (T.current = a));
+                                    ((y.current = !1), (S.current = a), (T.current = a));
                                 },
                                 { once: !0 },
                             ),
@@ -807,14 +807,14 @@ let eI = function (e) {
                 let r = "right" === e ? f.current : -f.current,
                     a = Math.max(0, Math.min(n, j.current + r));
                 ((j.current = a),
-                    (v.current = !0),
-                    t.addEventListener("scrollend", () => (v.current = !1), { once: !0 }),
+                    (y.current = !0),
+                    t.addEventListener("scrollend", () => (y.current = !1), { once: !0 }),
                     t.scrollTo({ left: a, behavior: l }),
                     F());
                 let s = B();
                 null != s && (T.current = s);
             },
-            [b, o, w, F, B],
+            [x, c, w, F, B],
         ),
         U = s.useCallback(() => G("left"), [G]),
         Y = s.useCallback(() => G("right"), [G]),
@@ -839,8 +839,8 @@ let eI = function (e) {
             }, 10);
         }, [z, K]);
     (s.useLayoutEffect(() => {
-        b || z() || K();
-    }, [L, b, z, K]),
+        x || z() || K();
+    }, [L, x, z, K]),
         s.useEffect(() => {
             R();
         }, [I, R]));
@@ -859,51 +859,51 @@ let eI = function (e) {
                     children: [
                         (0, a.jsx)("div", {
                             className: k()(eC.x6, { [eC.r9]: !M && r }),
-                            children: (0, a.jsx)(ev.K, {
-                                icon: ey.Z,
-                                size: c,
+                            children: (0, a.jsx)(ey.K, {
+                                icon: ev.Z,
+                                size: o,
                                 variant: "overlay-secondary",
                                 onClick: $,
                                 disabled: !M,
                                 "aria-label": u.intl.string(u.t.FQx1Ru),
                                 "aria-hidden": !M && r,
-                                "aria-controls": x,
+                                "aria-controls": b,
                             }),
                         }),
                         (0, a.jsx)("div", {
                             className: k()(eC.x6, { [eC.r9]: !P && r }),
-                            children: (0, a.jsx)(ev.K, {
+                            children: (0, a.jsx)(ey.K, {
                                 icon: ek.K,
-                                size: c,
+                                size: o,
                                 variant: "overlay-secondary",
                                 onClick: W,
                                 disabled: !P,
                                 "aria-label": u.intl.string(u.t.H4hwjn),
                                 "aria-hidden": !P && r,
-                                "aria-controls": x,
+                                "aria-controls": b,
                             }),
                         }),
                     ],
                 }),
-            b
+            x
                 ? (0, a.jsx)(p.B, {
                       direction: "horizontal",
                       gap: l,
-                      id: x,
+                      id: b,
                       "aria-label": d,
                       ref: D,
                       className: k()(eC.Y_, { [eC.jL]: M, [eC.w6]: P, [eC.XG]: M && P, [eC.DY]: I }),
                       ...h,
                       tabIndex: -1,
                       onScroll: (e) => {
-                          v.current || ((j.current = e.target.scrollLeft), F());
+                          y.current || ((j.current = e.target.scrollLeft), F());
                       },
                       children: (0, a.jsx)("div", { ...m, className: eC.lJ, style: { gap: eT(l) }, children: t }),
                   })
                 : (0, a.jsx)(p.B, {
                       direction: "horizontal",
                       gap: l,
-                      id: x,
+                      id: b,
                       "aria-label": d,
                       ref: D,
                       className: k()(eC.Y_, { [eC.jL]: M, [eC.w6]: P, [eC.XG]: M && P, [eC.DY]: I }),
@@ -950,12 +950,12 @@ let eI = function (e) {
                                       l = Math.max(0, Math.min(t.scrollWidth - t.clientWidth, e));
                                   ((j.current = l),
                                       l !== t.scrollLeft &&
-                                          ((v.current = !0),
-                                          (y.current = !0),
+                                          ((y.current = !0),
+                                          (v.current = !0),
                                           t.addEventListener(
                                               "scrollend",
                                               () => {
-                                                  ((v.current = !1), (y.current = !1));
+                                                  ((y.current = !1), (v.current = !1));
                                               },
                                               { once: !0 },
                                           ),
@@ -966,7 +966,7 @@ let eI = function (e) {
                               } else (t.setAttribute("tabIndex", "0"), B());
                       },
                       onScroll: (e) => {
-                          v.current || ((j.current = e.target.scrollLeft), F());
+                          y.current || ((j.current = e.target.scrollLeft), F());
                       },
                       children: L,
                   }),
@@ -1005,17 +1005,17 @@ let eP = function (e) {
         {
             flattenProductVariants: r,
             productOverride: i,
-            prioritizedCurrency: c,
-            standalonePreview: o,
+            prioritizedCurrency: o,
+            standalonePreview: c,
         } = s.useContext(e_.v3),
         d = s.useMemo(
             () => ({
                 flattenProductVariants: r ?? !1,
                 productOverride: i,
-                prioritizedCurrency: c,
-                standalonePreview: o,
+                prioritizedCurrency: o,
+                standalonePreview: c,
             }),
-            [r, i, c, o],
+            [r, i, o, c],
         );
     return null == n
         ? null
@@ -1041,7 +1041,7 @@ let eB = function (e) {
     eF = {
         title: "Containers",
         stories: [
-            ex,
+            eb,
             {
                 name: "Card",
                 id: "card",
@@ -1049,12 +1049,12 @@ let eB = function (e) {
                     return (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)(i.E, {
-                                variant: "text-lg/semibold",
+                                variant: "body-lg/semibold",
                                 children:
                                     "Card wraps its children in a container that has border-radius and elevation on hover.",
                             }),
                             (0, a.jsx)(i.E, {
-                                variant: "text-lg/semibold",
+                                variant: "body-lg/semibold",
                                 children:
                                     "It will take up the full width of the parent, and the minimum height for its children",
                             }),
@@ -1101,7 +1101,7 @@ let eB = function (e) {
                             (0, a.jsxs)(O, {
                                 children: [
                                     (0, a.jsx)(i.E, {
-                                        variant: "text-md/normal",
+                                        variant: "body-md/normal",
                                         children: "Cards inside of a horizontal stack with a min-width of 120px",
                                     }),
                                     (0, a.jsxs)(f, {
@@ -1160,7 +1160,7 @@ let eB = function (e) {
                     return (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)(i.E, {
-                                variant: "text-lg/semibold",
+                                variant: "body-lg/semibold",
                                 children:
                                     "Section is used to space out sections of the page. It takes a vertical margin to apply margin above and below, as well as padding to inset its children.",
                             }),
@@ -1232,7 +1232,7 @@ let eB = function (e) {
                     return (0, a.jsxs)("div", {
                         children: [
                             (0, a.jsx)(i.E, {
-                                variant: "text-lg/semibold",
+                                variant: "body-lg/semibold",
                                 children:
                                     "Background Image just takes children and displays them in with a background image behind them, and some padding to add inset",
                             }),
@@ -1244,12 +1244,12 @@ let eB = function (e) {
                                         children: (0, a.jsxs)(f, {
                                             direction: "vertical",
                                             children: [
-                                                (0, a.jsx)(c.D, {
+                                                (0, a.jsx)(o.D, {
                                                     variant: "heading-xxl/semibold",
                                                     children: "What can I get with orbs?",
                                                 }),
                                                 (0, a.jsx)(i.E, {
-                                                    variant: "text-md/normal",
+                                                    variant: "body-md/normal",
                                                     children:
                                                         "Spend Orbs on exclusives or grab your favorites from the shop",
                                                 }),
@@ -1260,7 +1260,7 @@ let eB = function (e) {
                             }),
                             (0, a.jsx)(O, {
                                 children: (0, a.jsx)(i.E, {
-                                    variant: "text-lg/semibold",
+                                    variant: "body-lg/semibold",
                                     children: "It also automatically handles animated asset urls",
                                 }),
                             }),
@@ -1272,12 +1272,12 @@ let eB = function (e) {
                                         children: (0, a.jsxs)(f, {
                                             direction: "vertical",
                                             children: [
-                                                (0, a.jsx)(c.D, {
+                                                (0, a.jsx)(o.D, {
                                                     variant: "heading-xxl/semibold",
                                                     children: "What can I get with orbs?",
                                                 }),
                                                 (0, a.jsx)(i.E, {
-                                                    variant: "text-md/normal",
+                                                    variant: "body-md/normal",
                                                     children:
                                                         "Spend Orbs on exclusives or grab your favorites from the shop",
                                                 }),
@@ -1313,7 +1313,7 @@ let eB = function (e) {
                     return (0, a.jsxs)("div", {
                         children: [
                             (0, a.jsx)(i.E, {
-                                variant: "text-lg/semibold",
+                                variant: "body-lg/semibold",
                                 children:
                                     "GradientBackground takes a `colors` array and renders a linear gradient behind its children at the given angle.",
                             }),
@@ -1326,12 +1326,12 @@ let eB = function (e) {
                                         children: (0, a.jsxs)(f, {
                                             direction: "vertical",
                                             children: [
-                                                (0, a.jsx)(c.D, {
+                                                (0, a.jsx)(o.D, {
                                                     variant: "heading-xxl/semibold",
                                                     children: "What can I get with orbs?",
                                                 }),
                                                 (0, a.jsx)(i.E, {
-                                                    variant: "text-md/normal",
+                                                    variant: "body-md/normal",
                                                     children:
                                                         "Spend Orbs on exclusives or grab your favorites from the shop",
                                                 }),
@@ -1357,7 +1357,7 @@ let eB = function (e) {
                     let [e, t] = s.useState(15),
                         [l, n] = s.useState(8),
                         [r, i] = s.useState("xl"),
-                        [c, d] = s.useState(!0),
+                        [o, d] = s.useState(!0),
                         u = s.useMemo(
                             () =>
                                 [...Array(e)].map((e, t) =>
@@ -1373,7 +1373,7 @@ let eB = function (e) {
                                                 children: [
                                                     (0, a.jsx)("div", { children: t }),
                                                     t % 3 == 0 &&
-                                                        (0, a.jsx)(o.$, {
+                                                        (0, a.jsx)(c.$, {
                                                             onClick: () => console.log(`clicked button ${t}`),
                                                             text: "Click Me",
                                                         }),
@@ -1387,13 +1387,13 @@ let eB = function (e) {
                         );
                     return (0, a.jsxs)("div", {
                         children: [
-                            (0, a.jsx)(eI, { gap: l, edgeFade: r, hideActionsWhenDisabled: c, children: u }),
+                            (0, a.jsx)(eI, { gap: l, edgeFade: r, hideActionsWhenDisabled: o, children: u }),
                             (0, a.jsx)(eg.nB, {}),
                             (0, a.jsxs)(eg.MG, {
                                 children: [
-                                    (0, a.jsx)(eb.S, {
-                                        checked: c,
-                                        onChange: () => d(!c),
+                                    (0, a.jsx)(ex.S, {
+                                        checked: o,
+                                        onChange: () => d(!o),
                                         label: "Hide Actions When Disabled",
                                     }),
                                     (0, a.jsx)(ep.k, {
@@ -1439,16 +1439,16 @@ let eB = function (e) {
                     return (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)(i.E, {
-                                variant: "text-lg/normal",
+                                variant: "body-lg/normal",
                                 children: "Carousel steps through the children with a swipe and fade animation.",
                             }),
                             (0, a.jsx)(i.E, {
-                                variant: "text-md/normal",
+                                variant: "body-md/normal",
                                 children:
                                     "It has very minimal configuration options, instead choosing to be opinionated about the functionality of a carousel in a Layout System world.",
                             }),
                             (0, a.jsx)(i.E, {
-                                variant: "text-md/normal",
+                                variant: "body-md/normal",
                                 children:
                                     "The carousel will pause slidding when the mouse hovers it, and resume on mouse leave.",
                             }),
@@ -1458,27 +1458,27 @@ let eB = function (e) {
                                     children: [
                                         (0, a.jsx)("div", {
                                             style: { background: "red" },
-                                            children: (0, a.jsx)(eo, {}),
+                                            children: (0, a.jsx)(ec, {}),
                                         }),
                                         (0, a.jsx)("div", {
                                             style: { background: "orange" },
-                                            children: (0, a.jsx)(eo, {}),
+                                            children: (0, a.jsx)(ec, {}),
                                         }),
                                         (0, a.jsx)("div", {
                                             style: { background: "yellow" },
-                                            children: (0, a.jsx)(eo, {}),
+                                            children: (0, a.jsx)(ec, {}),
                                         }),
                                         (0, a.jsx)("div", {
                                             style: { background: "green" },
-                                            children: (0, a.jsx)(eo, {}),
+                                            children: (0, a.jsx)(ec, {}),
                                         }),
                                         (0, a.jsx)("div", {
                                             style: { background: "blue" },
-                                            children: (0, a.jsx)(eo, {}),
+                                            children: (0, a.jsx)(ec, {}),
                                         }),
                                         (0, a.jsx)("div", {
                                             style: { background: "violet" },
-                                            children: (0, a.jsx)(eo, {}),
+                                            children: (0, a.jsx)(ec, {}),
                                         }),
                                     ],
                                 }),
@@ -1486,7 +1486,7 @@ let eB = function (e) {
                             (0, a.jsxs)(O, {
                                 children: [
                                     (0, a.jsx)(i.E, {
-                                        variant: "text-md/normal",
+                                        variant: "body-md/normal",
                                         children:
                                             "Here is an example of what a carousel inside of a card might look like for showing off different products",
                                     }),
@@ -1505,11 +1505,11 @@ let eB = function (e) {
                                             children: (0, a.jsxs)(ei, {
                                                 ...e,
                                                 children: [
-                                                    (0, a.jsx)(ec, {}),
-                                                    (0, a.jsx)(ec, {}),
-                                                    (0, a.jsx)(ec, {}),
-                                                    (0, a.jsx)(ec, {}),
-                                                    (0, a.jsx)(ec, {}),
+                                                    (0, a.jsx)(eo, {}),
+                                                    (0, a.jsx)(eo, {}),
+                                                    (0, a.jsx)(eo, {}),
+                                                    (0, a.jsx)(eo, {}),
+                                                    (0, a.jsx)(eo, {}),
                                                 ],
                                             }),
                                         }),
@@ -1519,7 +1519,7 @@ let eB = function (e) {
                             (0, a.jsxs)(O, {
                                 children: [
                                     (0, a.jsx)(i.E, {
-                                        variant: "text-md/normal",
+                                        variant: "body-md/normal",
                                         children: "And here is an example of a FeaturedBlock Carousel",
                                     }),
                                     (0, a.jsx)("br", {}),
@@ -1601,24 +1601,24 @@ let eB = function (e) {
                     return (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)(i.E, {
-                                variant: "text-lg/semibold",
+                                variant: "body-lg/semibold",
                                 children:
                                     "Skeleton provides a loading placeholder with a shimmer effect while content is being loaded.",
                             }),
                             (0, a.jsx)(i.E, {
-                                variant: "text-lg/normal",
+                                variant: "body-lg/normal",
                                 children:
                                     "Skeleton hides its children and applies a mask over the whole container of the child",
                             }),
                             (0, a.jsx)(i.E, {
-                                variant: "text-lg/normal",
+                                variant: "body-lg/normal",
                                 children:
                                     "Skeleton always puts a border radius on the shimmer. It might not match the child's radius.",
                             }),
                             (0, a.jsxs)(O, {
                                 children: [
                                     (0, a.jsx)(i.E, {
-                                        variant: "text-md/normal",
+                                        variant: "body-md/normal",
                                         children: "Basic rectangular skeleton",
                                     }),
                                     (0, a.jsx)(eB, {
@@ -1629,7 +1629,7 @@ let eB = function (e) {
                                 ],
                             }),
                             (0, a.jsx)(i.E, {
-                                variant: "text-lg/normal",
+                                variant: "body-lg/normal",
                                 children:
                                     "Here we have a Grid with three Skeleton children that are wrapping three ShopProductCard to simulate a shop loading state",
                             }),
@@ -1644,7 +1644,7 @@ let eB = function (e) {
                                 }),
                             }),
                             (0, a.jsx)(i.E, {
-                                variant: "text-lg/normal",
+                                variant: "body-lg/normal",
                                 children:
                                     "Here we have a Grid with two Skeleton children that are wrapping two FeaturedCollection to simulate a shop loading state",
                             }),
@@ -1716,7 +1716,7 @@ let eY = function (e) {
                 children: (0, a.jsx)("div", {
                     className: eU.j,
                     children: (0, a.jsx)(i.E, {
-                        variant: "text-lg/semibold",
+                        variant: "body-lg/semibold",
                         color: "text-overlay-light",
                         children: r,
                     }),
@@ -1736,7 +1736,7 @@ let eW = function (e) {
             backgroundPosition: "left",
             children: (0, a.jsx)("div", {
                 className: e$.R,
-                children: (0, a.jsx)(i.E, { variant: "text-lg/semibold", color: "text-overlay-light", children: r }),
+                children: (0, a.jsx)(i.E, { variant: "body-lg/semibold", color: "text-overlay-light", children: r }),
             }),
         }),
     });
@@ -1761,7 +1761,7 @@ let eK = function (e) {
                         children: [
                             null != l && (0, a.jsx)("div", { className: ez.wm, children: (0, a.jsx)(et, { src: l }) }),
                             null != r &&
-                                (0, a.jsx)(x, {
+                                (0, a.jsx)(b, {
                                     variant: "overlay-primary",
                                     href: r,
                                     ctaText: "COLLECTIBLES_SHOP_THE_COLLECTION",
@@ -1796,7 +1796,7 @@ let eJ = function (e) {
                         children: [
                             null != l && (0, a.jsx)("div", { className: eq.wm, children: (0, a.jsx)(et, { src: l }) }),
                             null != r &&
-                                (0, a.jsx)(x, {
+                                (0, a.jsx)(b, {
                                     variant: "overlay-primary",
                                     href: r,
                                     ctaText: "COLLECTIBLES_SHOP_THE_COLLECTION",
@@ -1826,9 +1826,9 @@ let eZ = {
                         animatedBannerSrc: r,
                         logoSrc: s,
                         href: i,
-                        backgroundColor: c,
+                        backgroundColor: o,
                     } = e;
-                    function o() {
+                    function c() {
                         return l
                             ? (0, a.jsxs)(eI, {
                                   children: [
@@ -1854,8 +1854,8 @@ let eZ = {
                                     bannerSrc: { src: n },
                                     logoSrc: { src: s },
                                     href: i,
-                                    backgroundColor: c,
-                                    children: o(),
+                                    backgroundColor: o,
+                                    children: c(),
                                 }),
                             }),
                             (0, a.jsx)("br", {}),
@@ -1865,8 +1865,8 @@ let eZ = {
                                     bannerSrc: { src: r },
                                     logoSrc: { src: s },
                                     href: i,
-                                    backgroundColor: c,
-                                    children: o(),
+                                    backgroundColor: o,
+                                    children: c(),
                                 }),
                             }),
                         ],
@@ -2015,7 +2015,7 @@ let eZ = {
                 block: "Section",
                 verticalMargin: 32,
                 padding: 0,
-                children: [{ block: "Text", variant: "text-lg/semibold", content: "Popular Picks" }],
+                children: [{ block: "Text", variant: "body-lg/semibold", content: "Popular Picks" }],
             },
             {
                 block: "Section",
@@ -2186,31 +2186,31 @@ function te(e) {
             skuBlockProps: n,
             sortPurchased: r = !1,
             showSkeleton: i = !1,
-            componentMap: c,
-            pagedSkuIds: o,
+            componentMap: o,
+            pagedSkuIds: c,
             page: d,
             perPage: u,
             truncate: h,
         } = e,
         m = (0, e9.D)(t, !0),
-        { purchases: x, isFetching: b } = (0, e3.b5)(),
+        { purchases: b, isFetching: x } = (0, e3.b5)(),
         p = (0, s.useMemo)(
             () =>
                 r
                     ? M(
-                          [...t].sort((e, t) => (null != x.get(e)) - (null != x.get(t))),
+                          [...t].sort((e, t) => (null != b.get(e)) - (null != b.get(t))),
                           d,
                           u,
                           h,
                       )
-                    : o,
-            [t, o, r, x, d, u, h],
+                    : c,
+            [t, c, r, b, d, u, h],
         ),
-        f = c[l],
-        g = c.Skeleton;
+        f = o[l],
+        g = o.Skeleton;
     return null == f
         ? null
-        : (m || (r && b)) && i
+        : (m || (r && x)) && i
           ? p.map((e, t) =>
                 null != g
                     ? (0, a.jsx)(g, { children: (0, a.jsx)(f, { ...n, skuId: e, productId: e }) }, `${e}-${t}`)
@@ -2225,24 +2225,24 @@ let tt = function (e) {
             skuBlockProps: n,
             sortPurchased: r = !1,
             eagerLoad: i = !1,
-            showSkeleton: c = !1,
-            componentMap: o,
+            showSkeleton: o = !1,
+            componentMap: c,
             paginationOptions: d,
         } = e,
         u = s.useContext(V),
         h = d ?? u,
         m = s.useRef(null),
         {
-            page: x,
-            pages: b,
+            page: b,
+            pages: x,
             paginate: p,
             showPagination: f,
             paginationPosition: g,
             truncate: j,
-            perPage: v,
-            setPage: y,
+            perPage: y,
+            setPage: v,
         } = _(t.length, h, m),
-        k = (0, s.useMemo)(() => M(t, p ? x : void 0, v, j), [t, p, x, v, j]),
+        k = (0, s.useMemo)(() => M(t, p ? b : void 0, y, j), [t, p, b, y, j]),
         S = f && "top" === g,
         E = f && "bottom" === g,
         C =
@@ -2257,31 +2257,31 @@ let tt = function (e) {
         return (0, a.jsxs)(a.Fragment, {
             children: [
                 C,
-                S && (0, a.jsx)(A, { page: x, pages: b, setPage: y }),
+                S && (0, a.jsx)(A, { page: b, pages: x, setPage: v }),
                 (0, a.jsx)(te, {
                     skuIds: t,
                     skuBlock: l,
                     skuBlockProps: n,
                     sortPurchased: r,
-                    showSkeleton: c,
-                    componentMap: o,
+                    showSkeleton: o,
+                    componentMap: c,
                     pagedSkuIds: k,
-                    page: p ? x : void 0,
-                    perPage: p ? v : void 0,
+                    page: p ? b : void 0,
+                    perPage: p ? y : void 0,
                     truncate: j,
                 }),
-                E && (0, a.jsx)(A, { page: x, pages: b, setPage: y }),
+                E && (0, a.jsx)(A, { page: b, pages: x, setPage: v }),
             ],
         });
-    let T = o[l];
+    let T = c[l];
     return null == T
         ? null
         : (0, a.jsxs)(a.Fragment, {
               children: [
                   C,
-                  S && (0, a.jsx)(A, { page: x, pages: b, setPage: y }),
+                  S && (0, a.jsx)(A, { page: b, pages: x, setPage: v }),
                   k.map((e, t) => (0, a.jsx)(T, { ...n, skuId: e, productId: e }, `${e}-${t}`)),
-                  E && (0, a.jsx)(A, { page: x, pages: b, setPage: y }),
+                  E && (0, a.jsx)(A, { page: b, pages: x, setPage: v }),
               ],
           });
 };
@@ -2321,16 +2321,16 @@ let ti = (0, ts.m6)()
               },
           }
         : {},
-    tc = (0, ts.m6)() ? ["dummy-skeleton"] : [],
-    to = (0, ts.m6)() ? { [e0]: { "dummy-popular-picks": e8 } } : {},
+    to = (0, ts.m6)() ? ["dummy-skeleton"] : [],
+    tc = (0, ts.m6)() ? { [e0]: { "dummy-popular-picks": e8 } } : {},
     td = (0, ts.m6)() ? ["dummy-skeleton-template"] : [];
 function tu(e, t) {
     return `${e}/${t}`;
 }
 let th = ti,
-    tm = new Set(tc),
-    tx = {},
-    tb = to,
+    tm = new Set(to),
+    tb = {},
+    tx = tc,
     tp = new Set(td),
     tf = {};
 function tg(e) {
@@ -2357,12 +2357,12 @@ class tj extends ej.Ay.Store {
         return null != e && null != t && tm.has(tu(e, t));
     }
     getFetchError(e, t) {
-        return null == e || null == t ? null : (tx[tu(e, t)] ?? null);
+        return null == e || null == t ? null : (tb[tu(e, t)] ?? null);
     }
     getTemplateLayout(e, t, l) {
         if (null == e || null == t) return null;
         let n = tg(t, l);
-        return tb[e]?.[n] ?? null;
+        return tx[e]?.[n] ?? null;
     }
     isFetchingTemplate(e, t, l) {
         let n = tg(t ?? "", l);
@@ -2372,18 +2372,18 @@ class tj extends ej.Ay.Store {
         return null == e || null == t ? null : (tf[tu(e, tg(t ?? "", l))] ?? null);
     }
 }
-let tv = new tj(tr.h, {
+let ty = new tj(tr.h, {
     LAYOUT_SYSTEM_FETCH: function (e) {
         let { tenantId: t, layoutId: l } = e;
         tm.add(tu(t, l));
     },
     LAYOUT_SYSTEM_FETCH_SUCCESS: function (e) {
         let { tenantId: t, layout: l } = e;
-        (((th[t] ??= {})[l.id] = l), delete tx[tu(t, l.id)], tm.delete(tu(t, l.id)));
+        (((th[t] ??= {})[l.id] = l), delete tb[tu(t, l.id)], tm.delete(tu(t, l.id)));
     },
     LAYOUT_SYSTEM_FETCH_FAILURE: function (e) {
         let { tenantId: t, layoutId: l, apiError: n } = e;
-        ((tx[tu(t, l)] = n), tm.delete(tu(t, l)));
+        ((tb[tu(t, l)] = n), tm.delete(tu(t, l)));
     },
     LAYOUT_SYSTEM_TEMPLATE_FETCH: function (e) {
         let { tenantId: t, templateId: l, requestParams: n } = e;
@@ -2392,7 +2392,7 @@ let tv = new tj(tr.h, {
     LAYOUT_SYSTEM_TEMPLATE_FETCH_SUCCESS: function (e) {
         let { tenantId: t, templateId: l, requestParams: n, layout: r } = e,
             a = tg(l, n);
-        (((tb[t] ??= {})[a] = r), delete tf[tu(t, a)], tp.delete(tu(t, a)));
+        (((tx[t] ??= {})[a] = r), delete tf[tu(t, a)], tp.delete(tu(t, a)));
     },
     LAYOUT_SYSTEM_TEMPLATE_FETCH_FAILURE: function (e) {
         let { tenantId: t, templateId: l, requestParams: n, apiError: r } = e,
@@ -2400,10 +2400,10 @@ let tv = new tj(tr.h, {
         ((tf[tu(t, a)] = r), tp.delete(tu(t, a)));
     },
     LOGOUT: function () {
-        ((th = {}), (tm = new Set()), (tx = {}), (tb = {}), (tp = new Set()), (tf = {}));
+        ((th = {}), (tm = new Set()), (tb = {}), (tx = {}), (tp = new Set()), (tf = {}));
     },
 });
-var ty = l(652215);
+var tv = l(652215);
 let tk = ["request_params"];
 function tS(e) {
     return (0, B.isObject)(e)
@@ -2421,10 +2421,10 @@ function tS(e) {
 }
 async function tE(e) {
     let { tenantId: t, layoutId: l, abortSignal: n } = e;
-    if (!tv.isFetchingLayout(t, l))
+    if (!ty.isFetchingLayout(t, l))
         try {
             tr.h.dispatch({ type: "LAYOUT_SYSTEM_FETCH", tenantId: t, layoutId: l });
-            let e = await tn.Bo.get({ url: ty.Rsh.LAYOUT_SYSTEM(t, l), rejectWithError: !0, signal: n });
+            let e = await tn.Bo.get({ url: tv.Rsh.LAYOUT_SYSTEM(t, l), rejectWithError: !0, signal: n });
             tr.h.dispatch({ type: "LAYOUT_SYSTEM_FETCH_SUCCESS", tenantId: t, layout: tS(e.body) });
         } catch (n) {
             let e = new ta.LG(n);
@@ -2433,11 +2433,11 @@ async function tE(e) {
 }
 async function tC(e) {
     let { tenantId: t, templateId: l, abortSignal: n, requestParams: r } = e;
-    if (!tv.isFetchingTemplate(t, l, r))
+    if (!ty.isFetchingTemplate(t, l, r))
         try {
             tr.h.dispatch({ type: "LAYOUT_SYSTEM_TEMPLATE_FETCH", tenantId: t, templateId: l, requestParams: r });
             let e = await tn.Bo.get({
-                url: ty.Rsh.LAYOUT_SYSTEM_TEMPLATE(t, l),
+                url: tv.Rsh.LAYOUT_SYSTEM_TEMPLATE(t, l),
                 rejectWithError: !0,
                 signal: n,
                 query: r,
@@ -2465,7 +2465,7 @@ async function tC(e) {
 }
 let tT = function (e, t) {
         let l = (0, ej.bG)([tl.A], () => tl.A.hasLoadedExperiments),
-            [n, r, a] = (0, ej.yK)([tv], () => [tv.getLayout(e, t), tv.isFetchingLayout(e, t), tv.getFetchError(e, t)]),
+            [n, r, a] = (0, ej.yK)([ty], () => [ty.getLayout(e, t), ty.isFetchingLayout(e, t), ty.getFetchError(e, t)]),
             i = null == n && null != t && l && !r && null == a;
         return (
             s.useEffect(() => {
@@ -2476,16 +2476,16 @@ let tT = function (e, t) {
     },
     tI = function (e, t, l) {
         let n = (0, ej.bG)([tl.A], () => tl.A.hasLoadedExperiments),
-            [r, a, i] = (0, ej.yK)([tv], () => [
-                tv.getTemplateLayout(e, t, l),
-                tv.isFetchingTemplate(e, t, l),
-                tv.getTemplateFetchError(e, t, l),
+            [r, a, i] = (0, ej.yK)([ty], () => [
+                ty.getTemplateLayout(e, t, l),
+                ty.isFetchingTemplate(e, t, l),
+                ty.getTemplateFetchError(e, t, l),
             ]),
-            c = null == r && null != t && n && !a && null == i;
+            o = null == r && null != t && n && !a && null == i;
         return (
             s.useEffect(() => {
-                c && tC({ tenantId: e, templateId: t, requestParams: l }).catch(() => {});
-            }, [c, e, t, l]),
+                o && tC({ tenantId: e, templateId: t, requestParams: l }).catch(() => {});
+            }, [o, e, t, l]),
             { layout: r, loading: a, error: i }
         );
     };
@@ -2515,19 +2515,19 @@ let tL = function () {
             let { skuId: t, auto: l, columns: n, rows: r } = e,
                 { product: i } = (0, eV.q)(t, !0),
                 {
-                    flattenProductVariants: c,
-                    productOverride: o,
+                    flattenProductVariants: o,
+                    productOverride: c,
                     prioritizedCurrency: d,
                     standalonePreview: u,
                 } = s.useContext(e_.v3),
                 h = s.useMemo(
                     () => ({
-                        flattenProductVariants: c ?? !1,
-                        productOverride: o,
+                        flattenProductVariants: o ?? !1,
+                        productOverride: c,
                         prioritizedCurrency: d,
                         standalonePreview: u,
                     }),
-                    [c, o, d, u],
+                    [o, c, d, u],
                 );
             if (null == i) return null;
             if (i.type === tw.R.BUNDLE) {
@@ -2579,18 +2579,18 @@ let tL = function () {
         },
         SubTemplate: function (e) {
             let { templateId: t, tenantId: l, skeleton: n, requestParams: r, componentMap: a, renderLayout: s } = e,
-                { layout: i, loading: c } = tI(l, t, r);
-            return c && null != n
+                { layout: i, loading: o } = tI(l, t, r);
+            return o && null != n
                 ? s({ overrides: a, layout: { id: "skeleton", children: n } })
                 : null == i
                   ? null
                   : s({ layout: i, overrides: a });
         },
-        Button: x,
-        Heading: b,
+        Button: b,
+        Heading: x,
         Stack: f,
         Text: g,
-        Tooltip: v,
+        Tooltip: y,
         Image: et,
         Any: tL,
     };
@@ -2610,15 +2610,15 @@ function tM(e, t) {
                 { block: r, ...s } = t,
                 i = l[n] ?? l[r];
             if (null == i) return null;
-            let c = (() => {
+            let o = (() => {
                     if ("children" in t) {
                         if (!Array.isArray(t.children) && null != t.children) return e(t.children, l);
                         if (null != t.children && t.children.length > 0) return t.children.map((t) => e(t, l));
                     }
                     return null;
                 })(),
-                o = I.has(r) ? { ...s, componentMap: l, renderLayout: tN } : s;
-            return (0, a.jsx)(i, { ...o, children: c }, (0, e6.A)());
+                c = I.has(r) ? { ...s, componentMap: l, renderLayout: tN } : s;
+            return (0, a.jsx)(i, { ...c, children: o }, (0, e6.A)());
         })(e, t),
     );
 }
@@ -2659,7 +2659,7 @@ function tD(e) {
     let { color: t, children: l } = e;
     return (0, a.jsx)(tH.Z, {
         style: { backgroundColor: t, padding: "16px", minWidth: "100px", minHeight: "100px" },
-        children: (0, a.jsx)(i.E, { variant: "text-md/semibold", children: l }),
+        children: (0, a.jsx)(i.E, { variant: "body-md/semibold", children: l }),
     });
 }
 let tG = {
@@ -2672,38 +2672,38 @@ let tG = {
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)(i.E, {
-                            variant: "text-lg/semibold",
+                            variant: "body-lg/semibold",
                             children: "Button component for Layout System interactions.",
                         }),
                         (0, a.jsxs)(p.B, {
                             direction: "vertical",
                             children: [
-                                (0, a.jsx)(x, { ...e }),
+                                (0, a.jsx)(b, { ...e }),
                                 (0, a.jsx)("hr", {}),
-                                (0, a.jsx)(x, { href: e.href, ctaText: "Variant = primary", variant: "primary" }),
-                                (0, a.jsx)(x, { href: e.href, ctaText: "Variant = secondary", variant: "secondary" }),
-                                (0, a.jsx)(x, {
+                                (0, a.jsx)(b, { href: e.href, ctaText: "Variant = primary", variant: "primary" }),
+                                (0, a.jsx)(b, { href: e.href, ctaText: "Variant = secondary", variant: "secondary" }),
+                                (0, a.jsx)(b, {
                                     href: e.href,
                                     ctaText: "Variant = critical-primary",
                                     variant: "critical-primary",
                                 }),
-                                (0, a.jsx)(x, {
+                                (0, a.jsx)(b, {
                                     href: e.href,
                                     ctaText: "Variant = critical-secondary",
                                     variant: "critical-secondary",
                                 }),
-                                (0, a.jsx)(x, { href: e.href, ctaText: "Variant = active", variant: "active" }),
-                                (0, a.jsx)(x, {
+                                (0, a.jsx)(b, { href: e.href, ctaText: "Variant = active", variant: "active" }),
+                                (0, a.jsx)(b, {
                                     href: e.href,
                                     ctaText: "Variant = overlay-primary",
                                     variant: "overlay-primary",
                                 }),
-                                (0, a.jsx)(x, {
+                                (0, a.jsx)(b, {
                                     href: e.href,
                                     ctaText: "Variant = overlay-secondary",
                                     variant: "overlay-secondary",
                                 }),
-                                (0, a.jsx)(x, { href: e.href, ctaText: "Variant = expressive", variant: "expressive" }),
+                                (0, a.jsx)(b, { href: e.href, ctaText: "Variant = expressive", variant: "expressive" }),
                             ],
                         }),
                     ],
@@ -2736,17 +2736,17 @@ let tG = {
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)(i.E, {
-                            variant: "text-lg/semibold",
+                            variant: "body-lg/semibold",
                             children: "Heading component for Layout System content.",
                         }),
-                        (0, a.jsx)(b, { ...e }),
+                        (0, a.jsx)(x, { ...e }),
                         (0, a.jsx)("hr", {}),
-                        (0, a.jsx)(b, { content: "Variant = heading-sm/medium", variant: "heading-sm/medium" }),
-                        (0, a.jsx)(b, { content: "Variant = heading-sm/semibold", variant: "heading-sm/semibold" }),
-                        (0, a.jsx)(b, { content: "Variant = heading-md/medium", variant: "heading-md/medium" }),
-                        (0, a.jsx)(b, { content: "Variant = heading-md/semibold", variant: "heading-md/semibold" }),
-                        (0, a.jsx)(b, { content: "Variant = heading-lg/medium", variant: "heading-lg/medium" }),
-                        (0, a.jsx)(b, { content: "Variant = heading-lg/semibold", variant: "heading-lg/semibold" }),
+                        (0, a.jsx)(x, { content: "Variant = heading-xs/medium", variant: "heading-xs/medium" }),
+                        (0, a.jsx)(x, { content: "Variant = heading-xs/semibold", variant: "heading-xs/semibold" }),
+                        (0, a.jsx)(x, { content: "Variant = heading-sm/medium", variant: "heading-sm/medium" }),
+                        (0, a.jsx)(x, { content: "Variant = heading-sm/semibold", variant: "heading-sm/semibold" }),
+                        (0, a.jsx)(x, { content: "Variant = heading-lg/medium", variant: "heading-lg/medium" }),
+                        (0, a.jsx)(x, { content: "Variant = heading-lg/semibold", variant: "heading-lg/semibold" }),
                     ],
                 });
             },
@@ -2755,12 +2755,12 @@ let tG = {
                 variant: {
                     type: "select",
                     label: "Variant",
-                    defaultValue: "heading-md/semibold",
+                    defaultValue: "heading-sm/semibold",
                     options: [
+                        { label: "heading-xs/medium", value: "heading-xs/medium" },
+                        { label: "heading-xs/semibold", value: "heading-xs/semibold" },
                         { label: "heading-sm/medium", value: "heading-sm/medium" },
                         { label: "heading-sm/semibold", value: "heading-sm/semibold" },
-                        { label: "heading-md/medium", value: "heading-md/medium" },
-                        { label: "heading-md/semibold", value: "heading-md/semibold" },
                         { label: "heading-lg/medium", value: "heading-lg/medium" },
                         { label: "heading-lg/semibold", value: "heading-lg/semibold" },
                     ],
@@ -2774,7 +2774,7 @@ let tG = {
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)(i.E, {
-                            variant: "text-lg/semibold",
+                            variant: "body-lg/semibold",
                             children: "Stack component for Layout System.",
                         }),
                         (0, a.jsx)("div", {
@@ -2789,7 +2789,7 @@ let tG = {
                             }),
                         }),
                         (0, a.jsx)("hr", {}),
-                        (0, a.jsx)(i.E, { variant: "text-md/semibold", children: "Horizontal Stack" }),
+                        (0, a.jsx)(i.E, { variant: "body-md/semibold", children: "Horizontal Stack" }),
                         (0, a.jsx)("div", {
                             style: { border: "1px dashed #ccc", padding: "16px" },
                             children: (0, a.jsxs)(f, {
@@ -2802,7 +2802,7 @@ let tG = {
                                 ],
                             }),
                         }),
-                        (0, a.jsx)(i.E, { variant: "text-md/semibold", children: "Vertical Stack" }),
+                        (0, a.jsx)(i.E, { variant: "body-md/semibold", children: "Vertical Stack" }),
                         (0, a.jsx)("div", {
                             style: { border: "1px dashed #ccc", padding: "16px" },
                             children: (0, a.jsxs)(f, {
@@ -2860,21 +2860,21 @@ let tG = {
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)(i.E, {
-                            variant: "text-lg/semibold",
+                            variant: "body-lg/semibold",
                             children: "Text component for Layout System content.",
                         }),
                         (0, a.jsx)(g, { ...e }),
                         (0, a.jsx)("hr", {}),
-                        (0, a.jsx)(g, { content: "Variant = text-xs/normal", variant: "text-xs/normal" }),
-                        (0, a.jsx)(g, { content: "Variant = text-sm/normal", variant: "text-sm/normal" }),
-                        (0, a.jsx)(g, { content: "Variant = text-sm/medium", variant: "text-sm/medium" }),
-                        (0, a.jsx)(g, { content: "Variant = text-sm/semibold", variant: "text-sm/semibold" }),
-                        (0, a.jsx)(g, { content: "Variant = text-md/normal", variant: "text-md/normal" }),
-                        (0, a.jsx)(g, { content: "Variant = text-md/medium", variant: "text-md/medium" }),
-                        (0, a.jsx)(g, { content: "Variant = text-md/semibold", variant: "text-md/semibold" }),
-                        (0, a.jsx)(g, { content: "Variant = text-lg/normal", variant: "text-lg/normal" }),
-                        (0, a.jsx)(g, { content: "Variant = text-lg/medium", variant: "text-lg/medium" }),
-                        (0, a.jsx)(g, { content: "Variant = text-lg/semibold", variant: "text-lg/semibold" }),
+                        (0, a.jsx)(g, { content: "Variant = body-xs/normal", variant: "body-xs/normal" }),
+                        (0, a.jsx)(g, { content: "Variant = body-sm/normal", variant: "body-sm/normal" }),
+                        (0, a.jsx)(g, { content: "Variant = body-sm/medium", variant: "body-sm/medium" }),
+                        (0, a.jsx)(g, { content: "Variant = body-sm/semibold", variant: "body-sm/semibold" }),
+                        (0, a.jsx)(g, { content: "Variant = body-md/normal", variant: "body-md/normal" }),
+                        (0, a.jsx)(g, { content: "Variant = body-md/medium", variant: "body-md/medium" }),
+                        (0, a.jsx)(g, { content: "Variant = body-md/semibold", variant: "body-md/semibold" }),
+                        (0, a.jsx)(g, { content: "Variant = body-lg/normal", variant: "body-lg/normal" }),
+                        (0, a.jsx)(g, { content: "Variant = body-lg/medium", variant: "body-lg/medium" }),
+                        (0, a.jsx)(g, { content: "Variant = body-lg/semibold", variant: "body-lg/semibold" }),
                     ],
                 });
             },
@@ -2883,18 +2883,18 @@ let tG = {
                 variant: {
                     type: "select",
                     label: "Variant",
-                    defaultValue: "text-md/normal",
+                    defaultValue: "body-md/normal",
                     options: [
-                        { label: "text-xs/normal", value: "text-xs/normal" },
-                        { label: "text-sm/normal", value: "text-sm/normal" },
-                        { label: "text-sm/medium", value: "text-sm/medium" },
-                        { label: "text-sm/semibold", value: "text-sm/semibold" },
-                        { label: "text-md/normal", value: "text-md/normal" },
-                        { label: "text-md/medium", value: "text-md/medium" },
-                        { label: "text-md/semibold", value: "text-md/semibold" },
-                        { label: "text-lg/normal", value: "text-lg/normal" },
-                        { label: "text-lg/medium", value: "text-lg/medium" },
-                        { label: "text-lg/semibold", value: "text-lg/semibold" },
+                        { label: "body-xs/normal", value: "body-xs/normal" },
+                        { label: "body-sm/normal", value: "body-sm/normal" },
+                        { label: "body-sm/medium", value: "body-sm/medium" },
+                        { label: "body-sm/semibold", value: "body-sm/semibold" },
+                        { label: "body-md/normal", value: "body-md/normal" },
+                        { label: "body-md/medium", value: "body-md/medium" },
+                        { label: "body-md/semibold", value: "body-md/semibold" },
+                        { label: "body-lg/normal", value: "body-lg/normal" },
+                        { label: "body-lg/medium", value: "body-lg/medium" },
+                        { label: "body-lg/semibold", value: "body-lg/semibold" },
                     ],
                 },
             },
@@ -2903,11 +2903,11 @@ let tG = {
             name: "Tooltip",
             id: "layout-system-tooltip",
             component: function (e) {
-                return (0, a.jsx)(v, {
+                return (0, a.jsx)(y, {
                     ...e,
                     children: (0, a.jsx)("div", {
                         style: { width: 300, background: "pink", borderRadius: 8, padding: 12 },
-                        children: (0, a.jsx)(i.E, { variant: "text-lg/semibold", children: "Hover me." }),
+                        children: (0, a.jsx)(i.E, { variant: "body-lg/semibold", children: "Hover me." }),
                     }),
                 });
             },
@@ -3001,17 +3001,17 @@ let tY = {
                         s = tV();
                     return (0, a.jsxs)("div", {
                         children: [
-                            (0, a.jsx)(c.D, {
+                            (0, a.jsx)(o.D, {
                                 variant: "heading-lg/semibold",
                                 children: "The SkuList component takes a list of skus and maps them into a block",
                             }),
                             (0, a.jsx)(i.E, {
-                                variant: "text-md/semibold",
+                                variant: "body-md/semibold",
                                 children:
                                     "Here, we have a list of 3 skuIds and we map over them, pushing them into ShopProductCards",
                             }),
                             (0, a.jsx)(i.E, {
-                                variant: "text-md/semibold",
+                                variant: "body-md/semibold",
                                 children:
                                     "This will be useful when wanting to get a dynamic list of sku ids from the server (like popular picks) and push them into a product grid",
                             }),
@@ -3028,11 +3028,11 @@ let tY = {
                                 }),
                             }),
                             (0, a.jsx)("hr", {}),
-                            (0, a.jsx)(i.E, { variant: "text-md/semibold", children: "Sample Skus:" }),
+                            (0, a.jsx)(i.E, { variant: "body-md/semibold", children: "Sample Skus:" }),
                             (0, a.jsxs)(p.B, {
                                 direction: "horizontal",
                                 children: [
-                                    (0, a.jsx)(i.E, { variant: "text-sm/semibold", children: "Avatar Decoration" }),
+                                    (0, a.jsx)(i.E, { variant: "body-sm/semibold", children: "Avatar Decoration" }),
                                     (0, a.jsx)(tU.A, {
                                         text: u.intl.string(u.t.OpuAlK),
                                         delay: 0,
@@ -3043,7 +3043,7 @@ let tY = {
                                                 ...e,
                                                 style: { cursor: "pointer" },
                                                 children: (0, a.jsx)(i.E, {
-                                                    variant: "text-sm/normal",
+                                                    variant: "body-sm/normal",
                                                     children: "1458472704192811088",
                                                 }),
                                             }),
@@ -3053,7 +3053,7 @@ let tY = {
                             (0, a.jsxs)(p.B, {
                                 direction: "horizontal",
                                 children: [
-                                    (0, a.jsx)(i.E, { variant: "text-sm/semibold", children: "Profile Effect" }),
+                                    (0, a.jsx)(i.E, { variant: "body-sm/semibold", children: "Profile Effect" }),
                                     (0, a.jsx)(tU.A, {
                                         text: u.intl.string(u.t.OpuAlK),
                                         delay: 0,
@@ -3064,7 +3064,7 @@ let tY = {
                                                 ...e,
                                                 style: { cursor: "pointer" },
                                                 children: (0, a.jsx)(i.E, {
-                                                    variant: "text-sm/normal",
+                                                    variant: "body-sm/normal",
                                                     children: "1458479739110166560",
                                                 }),
                                             }),
@@ -3074,7 +3074,7 @@ let tY = {
                             (0, a.jsxs)(p.B, {
                                 direction: "horizontal",
                                 children: [
-                                    (0, a.jsx)(i.E, { variant: "text-sm/semibold", children: "Nameplate" }),
+                                    (0, a.jsx)(i.E, { variant: "body-sm/semibold", children: "Nameplate" }),
                                     (0, a.jsx)(tU.A, {
                                         text: u.intl.string(u.t.OpuAlK),
                                         delay: 0,
@@ -3085,7 +3085,7 @@ let tY = {
                                                 ...e,
                                                 style: { cursor: "pointer" },
                                                 children: (0, a.jsx)(i.E, {
-                                                    variant: "text-sm/normal",
+                                                    variant: "body-sm/normal",
                                                     children: "1458472704524156959",
                                                 }),
                                             }),
@@ -3112,17 +3112,17 @@ let tY = {
                 component: function () {
                     return (0, a.jsxs)("div", {
                         children: [
-                            (0, a.jsx)(c.D, {
+                            (0, a.jsx)(o.D, {
                                 variant: "heading-lg/semibold",
                                 children: 'The SubLayout component accepts a layout id and "get or fetch"es the layout',
                             }),
                             (0, a.jsx)(i.E, {
-                                variant: "text-md/semibold",
+                                variant: "body-md/semibold",
                                 children:
                                     "When resolved, the layout trees are merged into one layout. This allows for the asynchronous resolution of layouts, for faster first paints",
                             }),
                             (0, a.jsx)(i.E, {
-                                variant: "text-md/semibold",
+                                variant: "body-md/semibold",
                                 children:
                                     "Here, the \"popular picks\" are actually a sub layout with the id 'dummy-popular-picks'",
                             }),
@@ -3141,13 +3141,13 @@ let tY = {
                 component: function () {
                     return (0, a.jsxs)("div", {
                         children: [
-                            (0, a.jsx)(c.D, {
+                            (0, a.jsx)(o.D, {
                                 variant: "heading-lg/semibold",
                                 children:
                                     'The SubLayout can take a "Skeleton" property which is just `children` to display if the layout is being fetched from the api',
                             }),
                             (0, a.jsx)(i.E, {
-                                variant: "text-md/semibold",
+                                variant: "body-md/semibold",
                                 children:
                                     "Here we use the `Skeleton` component to show the shop cards loading while the (dummy) Shop Cards SubLayout are resolving (it will never stop loading for demonstration purposes)",
                             }),
@@ -3249,7 +3249,7 @@ let tq = function (e) {
                                                             },
                                                             {
                                                                 block: "Text",
-                                                                variant: "text-lg/normal",
+                                                                variant: "body-lg/normal",
                                                                 content:
                                                                     "Reward your play. Earn through Quests. Spend in the Shop",
                                                             },
@@ -3313,7 +3313,7 @@ let tq = function (e) {
                                                                             },
                                                                             {
                                                                                 block: "Text",
-                                                                                variant: "text-md/normal",
+                                                                                variant: "body-md/normal",
                                                                                 content:
                                                                                     "Spend Orbs on exclusives or grab your favorites from the shop",
                                                                             },
@@ -3382,12 +3382,12 @@ let tq = function (e) {
                                                         },
                                                         {
                                                             block: "Text",
-                                                            variant: "text-md/normal",
+                                                            variant: "body-md/normal",
                                                             content: "Switch your app theme to see this change",
                                                         },
                                                         {
                                                             block: "Text",
-                                                            variant: "text-sm/normal",
+                                                            variant: "body-sm/normal",
                                                             content:
                                                                 "(Light shows multiple orbs, dark shows hands holding an orb)",
                                                         },
@@ -3424,21 +3424,21 @@ let tq = function (e) {
                             return (0, a.jsxs)("div", {
                                 children: [
                                     (0, a.jsxs)(i.E, {
-                                        variant: "text-lg/semibold",
+                                        variant: "body-lg/semibold",
                                         children: [
                                             "Any registered string key can be used to reference client-side international strings",
                                             " ",
                                         ],
                                     }),
                                     (0, a.jsx)(i.E, {
-                                        variant: "text-md/normal",
+                                        variant: "body-md/normal",
                                         children: "Strings are registered in `useLayoutSystemString.tsx`",
                                     }),
                                     (0, a.jsx)("br", {}),
                                     (0, a.jsx)("hr", {}),
                                     (0, a.jsx)("br", {}),
-                                    (0, a.jsxs)(i.E, { variant: "text-md/semibold", children: ["Received: ", t] }),
-                                    (0, a.jsxs)(i.E, { variant: "text-md/semibold", children: ["Resolved: ", l] }),
+                                    (0, a.jsxs)(i.E, { variant: "body-md/semibold", children: ["Received: ", t] }),
+                                    (0, a.jsxs)(i.E, { variant: "body-md/semibold", children: ["Resolved: ", l] }),
                                 ],
                             });
                         },
@@ -3503,14 +3503,14 @@ let tq = function (e) {
                             return (0, a.jsxs)("div", {
                                 children: [
                                     (0, a.jsx)(i.E, {
-                                        variant: "text-lg/semibold",
+                                        variant: "body-lg/semibold",
                                         children:
                                             "Featured Chip will take up the full width of the parent, so it is best suited for LayoutSystemStack or Grid parents",
                                     }),
                                     (0, a.jsx)(O, { children: (0, a.jsx)(eY, { ...n }) }),
                                     (0, a.jsxs)(O, {
                                         children: [
-                                            (0, a.jsx)(i.E, { variant: "text-lg/semibold", children: "Grid (3):" }),
+                                            (0, a.jsx)(i.E, { variant: "body-lg/semibold", children: "Grid (3):" }),
                                             (0, a.jsxs)(P, {
                                                 columns: 3,
                                                 children: [
@@ -3526,7 +3526,7 @@ let tq = function (e) {
                                     }),
                                     (0, a.jsxs)(O, {
                                         children: [
-                                            (0, a.jsx)(i.E, { variant: "text-lg/semibold", children: "Stack:" }),
+                                            (0, a.jsx)(i.E, { variant: "body-lg/semibold", children: "Stack:" }),
                                             (0, a.jsxs)(f, {
                                                 direction: "horizontal",
                                                 children: [
@@ -3562,45 +3562,45 @@ let tq = function (e) {
                                     logoSrc: n,
                                     supplementalImage: r,
                                     ctaText: s,
-                                    href: c,
+                                    href: o,
                                 } = e,
-                                o = {
+                                c = {
                                     backgroundImage: { src: l },
                                     logoSrc: { src: n },
                                     supplementalImage: { src: r },
                                     ctaText: s,
-                                    href: c,
+                                    href: o,
                                 };
                             return (0, a.jsxs)("div", {
                                 children: [
                                     (0, a.jsx)(i.E, {
-                                        variant: "text-lg/semibold",
+                                        variant: "body-lg/semibold",
                                         children:
                                             "Featured Collection will take up the full width of the parent, so it is best suited for LayoutSystemStack or Grid parents",
                                     }),
-                                    (0, a.jsx)(O, { children: (0, a.jsx)(en, { ...o }) }),
+                                    (0, a.jsx)(O, { children: (0, a.jsx)(en, { ...c }) }),
                                     (0, a.jsxs)(O, {
                                         children: [
                                             (0, a.jsxs)(i.E, {
-                                                variant: "text-lg/semibold",
+                                                variant: "body-lg/semibold",
                                                 children: ["Grid (", t, "):"],
                                             }),
                                             (0, a.jsxs)(P, {
                                                 columns: t,
-                                                children: [(0, a.jsx)(en, { ...o }), (0, a.jsx)(en, { ...o })],
+                                                children: [(0, a.jsx)(en, { ...c }), (0, a.jsx)(en, { ...c })],
                                             }),
                                         ],
                                     }),
                                     (0, a.jsxs)(O, {
                                         children: [
-                                            (0, a.jsx)(i.E, { variant: "text-lg/semibold", children: "Stack:" }),
+                                            (0, a.jsx)(i.E, { variant: "body-lg/semibold", children: "Stack:" }),
                                             (0, a.jsxs)(f, {
                                                 direction: "horizontal",
                                                 children: [
-                                                    (0, a.jsx)(en, { ...o }),
-                                                    (0, a.jsx)(en, { ...o }),
-                                                    (0, a.jsx)(en, { ...o }),
-                                                    (0, a.jsx)(en, { ...o }),
+                                                    (0, a.jsx)(en, { ...c }),
+                                                    (0, a.jsx)(en, { ...c }),
+                                                    (0, a.jsx)(en, { ...c }),
+                                                    (0, a.jsx)(en, { ...c }),
                                                 ],
                                             }),
                                         ],
@@ -3640,11 +3640,11 @@ let tq = function (e) {
                                 n = { backgroundImage: { src: t }, ...l };
                             return (0, a.jsxs)("div", {
                                 children: [
-                                    (0, a.jsx)(i.E, { variant: "text-lg/semibold", children: "PLACEHOLDER" }),
+                                    (0, a.jsx)(i.E, { variant: "body-lg/semibold", children: "PLACEHOLDER" }),
                                     (0, a.jsx)(O, { children: (0, a.jsx)(eW, { ...n }) }),
                                     (0, a.jsxs)(O, {
                                         children: [
-                                            (0, a.jsx)(i.E, { variant: "text-lg/semibold", children: "Grid (3):" }),
+                                            (0, a.jsx)(i.E, { variant: "body-lg/semibold", children: "Grid (3):" }),
                                             (0, a.jsxs)(P, {
                                                 columns: 3,
                                                 children: [
@@ -3660,7 +3660,7 @@ let tq = function (e) {
                                     }),
                                     (0, a.jsxs)(O, {
                                         children: [
-                                            (0, a.jsx)(i.E, { variant: "text-lg/semibold", children: "Stack:" }),
+                                            (0, a.jsx)(i.E, { variant: "body-lg/semibold", children: "Stack:" }),
                                             (0, a.jsxs)(f, {
                                                 direction: "horizontal",
                                                 children: [
@@ -3712,12 +3712,12 @@ let tq = function (e) {
                                 children: [
                                     (0, a.jsx)(tq, { skuId: t }),
                                     (0, a.jsx)("hr", {}),
-                                    (0, a.jsx)(i.E, { variant: "text-md/semibold", children: "Sample Skus:" }),
+                                    (0, a.jsx)(i.E, { variant: "body-md/semibold", children: "Sample Skus:" }),
                                     (0, a.jsxs)(p.B, {
                                         direction: "horizontal",
                                         children: [
                                             (0, a.jsx)(i.E, {
-                                                variant: "text-sm/semibold",
+                                                variant: "body-sm/semibold",
                                                 children: "Avatar Decoration",
                                             }),
                                             (0, a.jsx)(tU.A, {
@@ -3730,7 +3730,7 @@ let tq = function (e) {
                                                         ...e,
                                                         style: { cursor: "pointer" },
                                                         children: (0, a.jsx)(i.E, {
-                                                            variant: "text-sm/normal",
+                                                            variant: "body-sm/normal",
                                                             children: "1458472704192811088",
                                                         }),
                                                     }),
@@ -3741,7 +3741,7 @@ let tq = function (e) {
                                         direction: "horizontal",
                                         children: [
                                             (0, a.jsx)(i.E, {
-                                                variant: "text-sm/semibold",
+                                                variant: "body-sm/semibold",
                                                 children: "Profile Effect",
                                             }),
                                             (0, a.jsx)(tU.A, {
@@ -3754,7 +3754,7 @@ let tq = function (e) {
                                                         ...e,
                                                         style: { cursor: "pointer" },
                                                         children: (0, a.jsx)(i.E, {
-                                                            variant: "text-sm/normal",
+                                                            variant: "body-sm/normal",
                                                             children: "1458479739110166560",
                                                         }),
                                                     }),
@@ -3764,7 +3764,7 @@ let tq = function (e) {
                                     (0, a.jsxs)(p.B, {
                                         direction: "horizontal",
                                         children: [
-                                            (0, a.jsx)(i.E, { variant: "text-sm/semibold", children: "Nameplate" }),
+                                            (0, a.jsx)(i.E, { variant: "body-sm/semibold", children: "Nameplate" }),
                                             (0, a.jsx)(tU.A, {
                                                 text: u.intl.string(u.t.OpuAlK),
                                                 delay: 0,
@@ -3775,7 +3775,7 @@ let tq = function (e) {
                                                         ...e,
                                                         style: { cursor: "pointer" },
                                                         children: (0, a.jsx)(i.E, {
-                                                            variant: "text-sm/normal",
+                                                            variant: "body-sm/normal",
                                                             children: "1458472704524156959",
                                                         }),
                                                     }),
@@ -3799,12 +3799,12 @@ let tq = function (e) {
                             return (0, a.jsxs)("div", {
                                 children: [
                                     (0, a.jsx)(i.E, {
-                                        variant: "text-md/semibold",
+                                        variant: "body-md/semibold",
                                         children:
                                             "The Any component is used to allow injecting super-bespoke components into a layout without defining a new block type.",
                                     }),
                                     (0, a.jsx)(i.E, {
-                                        variant: "text-md/semibold",
+                                        variant: "body-md/semibold",
                                         children:
                                             "It's ONLY use is to be overriden by another block in `useComponentRegistry`",
                                     }),
@@ -3823,7 +3823,7 @@ let tq = function (e) {
                                 children: [
                                     (0, a.jsxs)(O, {
                                         children: [
-                                            (0, a.jsx)(i.E, { variant: "text-lg/semibold", children: "Static image" }),
+                                            (0, a.jsx)(i.E, { variant: "body-lg/semibold", children: "Static image" }),
                                             (0, a.jsx)("div", {
                                                 style: { height: 200 },
                                                 children: (0, a.jsx)(et, { src: { src: t } }),
@@ -3832,7 +3832,7 @@ let tq = function (e) {
                                     }),
                                     (0, a.jsxs)(O, {
                                         children: [
-                                            (0, a.jsx)(i.E, { variant: "text-lg/semibold", children: "Video asset" }),
+                                            (0, a.jsx)(i.E, { variant: "body-lg/semibold", children: "Video asset" }),
                                             (0, a.jsx)("div", {
                                                 style: { height: 200 },
                                                 children: (0, a.jsx)(et, { src: { src: l } }),

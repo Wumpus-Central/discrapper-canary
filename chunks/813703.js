@@ -305,7 +305,7 @@ class $ extends n.PureComponent {
                     className: V.XK,
                     children: [
                         (0, r.jsx)(o.D, {
-                            variant: "heading-md/semibold",
+                            variant: "heading-sm/semibold",
                             color: s,
                             className: V.wL,
                             children: O.intl.string(O.t.y3LQCG),
@@ -324,7 +324,7 @@ class $ extends n.PureComponent {
                 });
             case k.dD.TRENDING_GIFS:
                 return (0, r.jsx)(o.D, {
-                    variant: "heading-md/semibold",
+                    variant: "heading-sm/semibold",
                     color: s,
                     className: V.wL,
                     children: O.intl.string(O.t.H6zNFz),

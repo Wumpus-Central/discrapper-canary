@@ -41,7 +41,7 @@ function T(e) {
                                 (0, s.jsx)(d.E, {
                                     className: m.h_,
                                     color: "text-muted",
-                                    variant: "text-md/medium",
+                                    variant: "body-md/medium",
                                     children: e.getText(),
                                 }),
                             ],

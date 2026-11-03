@@ -1,4 +1,4 @@
-n.d(t, { default: () => O });
+n.d(t, { default: () => b });
 var a = n(477900),
     r = n(582128),
     s = n(575593),
@@ -15,8 +15,8 @@ var a = n(477900),
     A = n(836602),
     f = n(287809),
     v = n(38405),
-    x = n(427495),
-    C = n(738822),
+    C = n(427495),
+    x = n(738822),
     j = n(77870),
     k = n(291749),
     R = n(801365),
@@ -52,7 +52,7 @@ function S(e) {
                         className: I.R_,
                         children: _.intl.string(_.t["0/Yz+Y"]),
                     }),
-                    (0, a.jsx)(u.E, { variant: "text-sm/medium", color: "text-subtle", children: g }),
+                    (0, a.jsx)(u.E, { variant: "body-sm/medium", color: "text-subtle", children: g }),
                 ],
             }),
             (0, a.jsx)(o.$, {
@@ -67,12 +67,12 @@ function S(e) {
         ],
     });
 }
-function O(e) {
+function b(e) {
     let { initialQuest: t, onClose: n, transitionState: l, preview: d, location: u, sourceQuestContent: o } = e,
         m = (0, j.C5)(t.id) ?? t,
         k = r.useMemo(() => (0, R.nj)(m.config), [m]),
         _ = (0, i.bG)([f.default], () => f.default.getCurrentUser()),
-        [I, O] = (function (e) {
+        [I, b] = (function (e) {
             let { product: t, isFetching: n } = (0, g.q)(e),
                 a = r.useMemo(
                     () => (null == t || n ? null : (t.items.find((e) => e.type === s.R.AVATAR_DECORATION) ?? null)),
@@ -89,21 +89,21 @@ function O(e) {
             }
             return [a, i];
         })(k?.skuId ?? null),
-        b = m.userStatus?.claimedAt != null,
-        L = !d && !b,
-        [N, y] = r.useState(L ? "loading" : "claimed");
+        O = m.userStatus?.claimedAt != null,
+        y = !d && !O,
+        [L, N] = r.useState(y ? "loading" : "claimed");
     r.useEffect(() => {
-        L &&
-            (0, x.Oq)(m.id, C.pY.CROSS_PLATFORM, u)
-                .then(() => y("claimed"))
-                .catch(() => y("error"));
-    }, [m.id, u, L]);
+        y &&
+            (0, C.Oq)(m.id, x.pY.CROSS_PLATFORM, u)
+                .then(() => N("claimed"))
+                .catch(() => N("error"));
+    }, [m.id, u, y]);
     let Y = !0 === d && null === I && k?.skuId !== "",
         q = null == _,
-        M = q || (null == I && !0 !== d) || Y || "loading" === N,
-        T = "error" === N || null == k;
+        M = q || (null == I && !0 !== d) || Y || "loading" === L,
+        T = "error" === L || null == k;
     async function W() {
-        (y("applying"), y((await O()) ? "applied" : "claimed"));
+        (N("applying"), N((await b()) ? "applied" : "claimed"));
     }
     return (0, a.jsx)(E.A, {
         onClose: n,
@@ -118,7 +118,7 @@ function O(e) {
                 ? null
                 : (0, a.jsx)(w.A, {
                       rewardName: k.messages.name,
-                      children: (0, a.jsx)(S, { quest: m, avatarDeco: I, user: _, mode: N, onUseNow: W }),
+                      children: (0, a.jsx)(S, { quest: m, avatarDeco: I, user: _, mode: L, onUseNow: W }),
                   }),
     });
 }

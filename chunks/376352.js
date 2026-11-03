@@ -13,11 +13,11 @@ var i = n(477900),
     m = n(597770),
     A = n(43990),
     f = n(265872),
-    x = n(206828),
-    g = n(294323),
+    g = n(206828),
+    x = n(294323),
     C = n(429913),
-    j = n(853735),
-    y = n(131607),
+    y = n(853735),
+    j = n(131607),
     I = n(409626),
     N = n(613902),
     v = n(692969),
@@ -33,7 +33,7 @@ var i = n(477900),
     M = n(105292),
     w = n(472344);
 function U(e) {
-    let [t, n] = (0, y.RF)(e, (0, j.c)(e), void 0, !0);
+    let [t, n] = (0, j.RF)(e, (0, y.c)(e), void 0, !0);
     return [t === e, n];
 }
 function D(e) {
@@ -59,7 +59,7 @@ function D(e) {
                 "aria-haspopup": m,
                 children: [
                     null != l && (0, i.jsx)("div", { className: s()(w.zc, { [w.RT]: a }), children: l }),
-                    (0, i.jsx)(d.E, { variant: "text-sm/normal", color: "text-strong", lineClamp: 1, children: r }),
+                    (0, i.jsx)(d.E, { variant: "body-sm/normal", color: "text-strong", lineClamp: 1, children: r }),
                 ],
             }),
             o && (0, i.jsx)(u.E, { type: "new", variant: "primary" }),
@@ -88,24 +88,24 @@ function G(e) {
         { user: n, stream: a, channel: s } = e,
         [c, d] = l.useState(!1),
         u = (0, b.AO)(a),
-        j = u?.id,
-        y = (0, r.bG)([T.A], () => T.A.getDetectableIdsToApplicationIds()),
-        I = null != j ? y[j] : null,
+        y = u?.id,
+        j = (0, r.bG)([T.A], () => T.A.getDetectableIdsToApplicationIds()),
+        I = null != y ? j[y] : null,
         v = (0, C.h)(I),
         E = (0, N.E)({ location: "SocialLayerCommerceStreamHeader" }),
-        O = E ? (I ?? j ?? null) : I,
+        O = E ? (I ?? y ?? null) : I,
         G = (0, C.h)(O),
         {
             isLoading: k,
             applicationWidgetConfig: B,
             profileApplicationWidget: F,
             userApplicationIdentity: z,
-        } = (0, g.A)(n.id, O),
+        } = (0, x.A)(n.id, O),
         H = (0, r.bG)([R.default], () => R.default.getId()),
         W = l.useRef(null),
         [Y, $] = U(o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE),
         [K, X] = U(o.M.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA),
-        { hasAlreadyLinked: q, canStartAuthorization: Z, fetched: Q } = (0, x.RD)(H === n.id ? G : null),
+        { hasAlreadyLinked: q, canStartAuthorization: Z, fetched: Q } = (0, g.RD)(H === n.id ? G : null),
         J = H === n.id && Z && !Q,
         ee = l.useCallback(() => {
             d(!1);
@@ -180,7 +180,7 @@ function G(e) {
               theme: L.NJ.DARK,
               children: (e) =>
                   null == ec
-                      ? (0, i.jsx)(V, { className: e, applicationId: j })
+                      ? (0, i.jsx)(V, { className: e, applicationId: y })
                       : (0, i.jsx)(f.Y, {
                             targetElementRef: W,
                             shouldShow: c,

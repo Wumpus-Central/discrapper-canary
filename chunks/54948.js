@@ -16,23 +16,23 @@ var i = t(477900),
     v = t(834730),
     p = t(772838),
     g = t(939249),
-    E = t(22231),
-    P = t(241326),
-    y = t(828208),
-    w = t(105292),
-    b = t(136516);
+    y = t(22231),
+    E = t(241326),
+    P = t(828208),
+    b = t(105292),
+    w = t(136516);
 function R(e) {
     let { type: n } = e,
         t = l.useMemo(() => {
             switch (n) {
                 case a.rX.MULTIPLE_CHOICE:
-                    return { icon: m.ListBulletsIcon, text: w.intl.string(w.t.ooKh3m) };
+                    return { icon: m.ListBulletsIcon, text: b.intl.string(b.t.ooKh3m) };
                 case a.rX.PARAGRAPH:
-                    return { icon: f.$, text: w.intl.string(w.t.gG0JBN) };
+                    return { icon: f.$, text: b.intl.string(b.t.gG0JBN) };
                 case a.rX.TEXT_INPUT:
-                    return { icon: (0, h.k)(y.A), text: w.intl.string(w.t.w6Q9wz) };
+                    return { icon: (0, h.k)(P.A), text: b.intl.string(b.t.w6Q9wz) };
                 case a.rX.TERMS:
-                    return { icon: j.B, text: w.intl.string(w.t["3pz9t3"]) };
+                    return { icon: j.B, text: b.intl.string(b.t["3pz9t3"]) };
                 default:
                     return null;
             }
@@ -40,21 +40,21 @@ function R(e) {
     return null == t
         ? null
         : (0, i.jsxs)("div", {
-              className: b.L6,
+              className: w.L6,
               children: [
                   (0, i.jsx)(t.icon, { size: "xs", color: "currentColor" }),
-                  (0, i.jsx)(v.E, { variant: "text-sm/medium", tag: "span", children: t.text }),
+                  (0, i.jsx)(v.E, { variant: "body-sm/medium", tag: "span", children: t.text }),
               ],
           });
 }
 function T(e) {
     let { title: n, field: t } = e;
     return (0, i.jsx)("div", {
-        className: b._Q,
+        className: w._Q,
         children: (0, i.jsxs)("div", {
-            className: b.ds,
+            className: w.ds,
             children: [
-                (0, i.jsx)(v.E, { variant: "text-md/medium", className: b.ID, children: n }),
+                (0, i.jsx)(v.E, { variant: "body-md/medium", className: w.ID, children: n }),
                 (0, i.jsx)(R, { type: t.field_type }),
             ],
         }),
@@ -102,13 +102,13 @@ function A(e) {
         (0, i.jsxs)("div", {
             ref: m,
             "data-dnd-name": `field-${n}`,
-            className: c()(b.cK, { [b.TG]: s }),
+            className: c()(w.cK, { [w.TG]: s }),
             children: [
                 (0, i.jsx)("div", {
-                    className: c()(b.VU, b.oE),
+                    className: c()(w.VU, w.oE),
                     children: (0, i.jsx)(p.W, {
                         size: "xs",
-                        className: b.co,
+                        className: w.co,
                         color: x.A.unsafe_rawColors.PRIMARY_400.css,
                     }),
                 }),
@@ -119,28 +119,28 @@ function A(e) {
 }
 function C(e) {
     return (0, i.jsxs)("div", {
-        className: c()(b.e4, b.oE),
+        className: c()(w.e4, w.oE),
         children: [
             (0, i.jsx)("div", {
-                className: b.Th,
+                className: w.Th,
                 children: e.isDragEnabled ? (0, i.jsx)(A, { ...e }) : (0, i.jsx)(T, { ...e }),
             }),
             "side" === e.actionsLocation &&
                 (0, i.jsxs)("div", {
-                    className: c()(b.fc, b.oE, { [b.ZM]: e.canRemove }),
+                    className: c()(w.fc, w.oE, { [w.ZM]: e.canRemove }),
                     children: [
                         (0, i.jsx)(g.D, {
-                            className: b.hP,
+                            className: w.hP,
                             onClick: e.onEdit,
-                            "aria-label": w.intl.string(w.t.bt75uw),
-                            children: (0, i.jsx)(E.PencilIcon, { size: "xs" }),
+                            "aria-label": b.intl.string(b.t.bt75uw),
+                            children: (0, i.jsx)(y.PencilIcon, { size: "xs" }),
                         }),
                         e.canRemove &&
                             (0, i.jsx)(g.D, {
-                                className: b.hP,
+                                className: w.hP,
                                 onClick: e.onRemove,
-                                "aria-label": w.intl.string(w.t.N86XcP),
-                                children: (0, i.jsx)(P.TrashIcon, { size: "xs" }),
+                                "aria-label": b.intl.string(b.t.N86XcP),
+                                children: (0, i.jsx)(E.TrashIcon, { size: "xs" }),
                             }),
                     ],
                 }),
@@ -271,13 +271,13 @@ function M(e) {
     async function g(e, n, t) {
         await f(e, n, t);
     }
-    let E = (0, r.uniqueId)(),
-        P = n === c,
-        y = {
-            key: E,
+    let y = (0, r.uniqueId)(),
+        E = n === c,
+        P = {
+            key: y,
             index: c,
             isDragEnabled: d,
-            isDropHovered: P,
+            isDropHovered: E,
             onEdit: function () {
                 0 === u
                     ? z(l, p, o)
@@ -299,13 +299,13 @@ function M(e) {
         };
     switch (l.field_type) {
         case a.rX.TERMS:
-            return (0, i.jsx)(N, { title: w.intl.string(w.t["55+gic"]), formField: l, ...y });
+            return (0, i.jsx)(N, { title: b.intl.string(b.t["55+gic"]), formField: l, ...P });
         case a.rX.PARAGRAPH:
-            return (0, i.jsx)(X, { formField: l, ...y });
+            return (0, i.jsx)(X, { formField: l, ...P });
         case a.rX.TEXT_INPUT:
-            return (0, i.jsx)(D, { formField: l, ...y });
+            return (0, i.jsx)(D, { formField: l, ...P });
         case a.rX.MULTIPLE_CHOICE:
-            return (0, i.jsx)(I, { formField: l, ...y });
+            return (0, i.jsx)(I, { formField: l, ...P });
         default:
             return null;
     }

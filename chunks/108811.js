@@ -12,7 +12,7 @@ function o(e) {
         className: c.kL,
         children: [
             (0, i.jsx)(l.D, { variant: "heading-xl/semibold", color: "text-strong", className: c.DD, children: t }),
-            (0, i.jsx)(a.E, { variant: "text-sm/medium", color: "text-subtle", className: c.VA, children: s }),
+            (0, i.jsx)(a.E, { variant: "body-sm/medium", color: "text-subtle", className: c.VA, children: s }),
             null != o &&
                 o.length > 0 &&
                 o.map(

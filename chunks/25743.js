@@ -24,7 +24,7 @@ function h(e) {
             className: r()(A.hj, { [A.jQ]: a }),
             children: [
                 (0, n.jsx)(p.E, {
-                    variant: "text-sm/medium",
+                    variant: "body-sm/medium",
                     color: s ? "text-strong" : "text-muted",
                     children: t.label,
                 }),
@@ -73,8 +73,8 @@ let x = function (e) {
     );
 };
 var g = s(202541),
-    j = s(88001),
-    y = s(910705),
+    y = s(88001),
+    j = s(910705),
     R = s(592551),
     O = s(232266),
     D = s(243002),
@@ -84,14 +84,14 @@ function M(e) {
     let { isOneStepCheckout: t, headerText: s, step: a, filteredBreadcrumbs: r } = e;
     if (t)
         return (0, n.jsx)("div", {
-            className: y.r9,
-            children: (0, n.jsx)(o.D, { variant: "heading-md/semibold", children: s }),
+            className: j.r9,
+            children: (0, n.jsx)(o.D, { variant: "heading-sm/semibold", children: s }),
         });
     let i = r.length > 1;
     return (0, n.jsxs)("div", {
-        className: y.go,
+        className: j.go,
         children: [
-            (0, n.jsx)(o.D, { variant: "text-lg/semibold", children: s }),
+            (0, n.jsx)(o.D, { variant: "body-lg/semibold", children: s }),
             i && (0, n.jsx)(N, { activeId: a, breadcrumbs: r }),
         ],
     });
@@ -101,9 +101,9 @@ function b(e) {
         s = t ? D : "/assets/947416a0e8a7172a.svg";
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)("img", { src: t ? O : "/assets/792ab98da2b21b02.svg", alt: "", className: y.mR }),
-            (0, n.jsx)("img", { src: s, alt: "", className: y.dz }),
-            (0, n.jsx)("img", { src: s, alt: "", className: y.lM }),
+            (0, n.jsx)("img", { src: t ? O : "/assets/792ab98da2b21b02.svg", alt: "", className: j.mR }),
+            (0, n.jsx)("img", { src: s, alt: "", className: j.dz }),
+            (0, n.jsx)("img", { src: s, alt: "", className: j.lM }),
         ],
     });
 }
@@ -145,9 +145,9 @@ let w = function (e) {
         H = (null == B || B !== E.pn.PLAN_SELECT) && null != V && null != B,
         W = w && H && B === E.pn.REVIEW,
         Y = C ? "nitro-pink" : "nitro-green",
-        z = N ? (0, j.DP)() : C ? L.intl.string(L.t.lG6a5x) : L.intl.string(L.t["t9uG/o"]),
-        K = y.kL,
-        X = r()(y.N1, R.headerGradient);
+        z = N ? (0, y.DP)() : C ? L.intl.string(L.t.lG6a5x) : L.intl.string(L.t["t9uG/o"]),
+        K = j.kL,
+        X = r()(j.N1, R.headerGradient);
     return U
         ? (0, n.jsx)("div", { className: K, children: (0, n.jsx)(c.h, { color: Y, className: X }) })
         : (0, n.jsxs)("div", {
@@ -155,7 +155,7 @@ let w = function (e) {
               children: [
                   (0, n.jsxs)(c.h, {
                       color: Y,
-                      className: r()(X, { [y.s1]: !H }),
+                      className: r()(X, { [j.s1]: !H }),
                       children: [
                           (0, n.jsx)(b, { isTier2: C }),
                           !t &&
@@ -163,15 +163,15 @@ let w = function (e) {
                                   "data-migration-pending": !0,
                                   hideOnFullscreen: s,
                                   onClick: a,
-                                  className: y.Ep,
+                                  className: j.Ep,
                               }),
-                          (0, n.jsx)("img", { src: C ? v : P, alt: "", className: W ? y.i_ : y.kX }),
+                          (0, n.jsx)("img", { src: C ? v : P, alt: "", className: W ? j.i_ : j.kX }),
                           (0, n.jsxs)("div", {
-                              className: y.FS,
+                              className: j.FS,
                               children: [
                                   N &&
                                       (0, n.jsx)("div", {
-                                          className: y.$N,
+                                          className: j.$N,
                                           children: (0, n.jsx)(u.E, { type: "beta", variant: "expressive" }),
                                       }),
                                   (0, n.jsx)(o.D, { variant: "nitro-sm", color: "text-strong", children: z }),

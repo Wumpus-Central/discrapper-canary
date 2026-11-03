@@ -1,4 +1,4 @@
-(n.d(t, { default: () => b }), n(321073));
+(n.d(t, { default: () => T }), n(321073));
 var i = n(477900),
     e = n(582128),
     l = n(136722),
@@ -33,17 +33,17 @@ function C(s) {
             (0, i.jsx)(d.W, { className: M.m4, color: l.toString(), background: !1, tooltip: !1 }),
             (0, i.jsx)(u.E, {
                 className: M.S3,
-                variant: "text-sm/medium",
+                variant: "body-sm/medium",
                 color: "interactive-text-active",
                 children: e,
             }),
         ],
     });
 }
-function A(s) {
+function y(s) {
     return s.toString() === I.xBc.MENTION_EVERYONE.toString() ? _.intl.string(_.t.yCpsQw) : (0, h.hx)(s);
 }
-function O(s) {
+function A(s) {
     let { permissions: t, step: n } = s;
     return 2 === n
         ? null
@@ -52,7 +52,7 @@ function O(s) {
               children: [
                   (0, i.jsx)(u.E, {
                       className: M.qd,
-                      variant: "text-xs/semibold",
+                      variant: "body-xs/semibold",
                       color: "text-muted",
                       children: 0 === n ? _.intl.string(_.t["0WZKI4"]) : _.intl.string(_.t.xU8RDk),
                   }),
@@ -66,9 +66,9 @@ function O(s) {
                                   children: [
                                       (0, i.jsx)("div", { className: 0 === n ? M.I0 : M.dT }),
                                       (0, i.jsx)(u.E, {
-                                          variant: "text-sm/normal",
+                                          variant: "body-sm/normal",
                                           color: "text-default",
-                                          children: A(s),
+                                          children: y(s),
                                       }),
                                   ],
                               },
@@ -79,7 +79,7 @@ function O(s) {
               ],
           });
 }
-function R(s) {
+function b(s) {
     let { permissions: t, step: n } = s;
     return 0 === t.length && 2 !== n
         ? null
@@ -89,7 +89,7 @@ function R(s) {
               children: [
                   (0, i.jsx)(u.E, {
                       className: M.qd,
-                      variant: "text-xs/semibold",
+                      variant: "body-xs/semibold",
                       color: "text-muted",
                       children: 2 === n ? _.intl.string(_.t.FgMS6i) : _.intl.string(_.t.Yo5qlq),
                   }),
@@ -103,9 +103,9 @@ function R(s) {
                                   children: [
                                       (0, i.jsx)("div", { className: M.xE }),
                                       (0, i.jsx)(u.E, {
-                                          variant: "text-sm/normal",
+                                          variant: "body-sm/normal",
                                           color: "text-muted",
-                                          children: A(s),
+                                          children: y(s),
                                       }),
                                   ],
                               },
@@ -116,7 +116,7 @@ function R(s) {
               ],
           }));
 }
-function T(s) {
+function O(s) {
     let { permissions: t, step: n } = s,
         { enabledPermissions: e, disabledPermissions: l } = t;
     return 0 === e.length && 2 !== n
@@ -124,12 +124,12 @@ function T(s) {
         : (0, i.jsxs)("div", {
               className: M.tp,
               children: [
-                  2 !== n ? (0, i.jsx)(O, { permissions: e, step: n }) : null,
-                  (0, i.jsx)(R, { permissions: l, step: n }),
+                  2 !== n ? (0, i.jsx)(A, { permissions: e, step: n }) : null,
+                  (0, i.jsx)(b, { permissions: l, step: n }),
               ],
           });
 }
-function y(s) {
+function R(s) {
     let { guild: t, permissions: n, step: e, canEveryoneModerate: l, isDefaultNotificationsAllMessages: r } = s;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -144,7 +144,7 @@ function y(s) {
                               secondaryColor: o.A.unsafe_rawColors.WHITE.css,
                           }),
                           (0, i.jsx)(u.E, {
-                              variant: "text-md/normal",
+                              variant: "body-md/normal",
                               children: _.intl.format(_.t.K8Eg4P, {
                                   infoHook: () =>
                                       (0, i.jsx)(x.m, {
@@ -176,16 +176,16 @@ function y(s) {
                               color: o.A.unsafe_rawColors.GREEN_360.css,
                               secondaryColor: o.A.unsafe_rawColors.WHITE.css,
                           }),
-                          (0, i.jsx)(u.E, { variant: "text-md/normal", children: _.intl.string(_.t.LfeFFr) }),
+                          (0, i.jsx)(u.E, { variant: "body-md/normal", children: _.intl.string(_.t.LfeFFr) }),
                           (0, i.jsx)(C, { guild: t }),
                       ],
                   })
                 : null,
-            (0, i.jsx)(T, { permissions: n, step: e }),
+            (0, i.jsx)(O, { permissions: n, step: e }),
         ],
     });
 }
-function b(s) {
+function T(s) {
     let { guild: t, canEveryoneModerate: n, isDefaultNotificationsAllMessages: r, transitionState: o, onClose: d } = s,
         [u, m] = e.useState(0),
         x = e.useMemo(() => {
@@ -251,7 +251,7 @@ function b(s) {
         title: n ? _.intl.string(_.t["7/ux15"]) : _.intl.string(_.t.sRcn4z),
         subtitle: n ? _.intl.string(_.t.aliKPx) : _.intl.string(_.t.F4KDOH),
         actions: h,
-        children: (0, i.jsx)(y, {
+        children: (0, i.jsx)(R, {
             guild: t,
             permissions: x,
             step: u,

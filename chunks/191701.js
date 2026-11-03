@@ -24,8 +24,8 @@ var n = i(284009),
     T = i(763827),
     v = i(994500),
     O = i(309010),
-    L = i(461213),
-    b = i(351906),
+    b = i(461213),
+    L = i(351906),
     x = i(287809),
     D = i(977997),
     R = i(90165),
@@ -101,8 +101,8 @@ var to = i(387755),
     tT = i(481484),
     tv = i(793574),
     tO = i(486350),
-    tL = i(485045),
-    tb = i(609145),
+    tb = i(485045),
+    tL = i(609145),
     tx = i(46282),
     tD = i(51685);
 function tR(t, e, i, n, l) {
@@ -130,7 +130,7 @@ function tR(t, e, i, n, l) {
             o();
         },
         onConfirmClick: (i, n) => {
-            let l = (0, tL.n)({ location: "requestToStreamNotification" });
+            let l = (0, tb.n)({ location: "requestToStreamNotification" });
             ((0, tx.H)({
                 pid: w.A.getTargetPID(),
                 analyticsLocations: [tv.A.OVERLAY, tv.A.REQUEST_TO_STREAM_OVERLAY_NOTIFICATION],
@@ -144,12 +144,12 @@ function tR(t, e, i, n, l) {
                 appContext: $.BRT.OVERLAY,
                 selectSource: !0,
             }),
-                (0, tb.A)(e, t.id, { ...d, object: $.ZSU.ACK_ACCEPT_REQUEST_TO_STREAM }));
+                (0, tL.A)(e, t.id, { ...d, object: $.ZSU.ACK_ACCEPT_REQUEST_TO_STREAM }));
             let a = "request-to-stream";
             (c(l ? `${a}-go-live-modal` : a), u.A.updateNotificationStatus(n));
         },
         onCancelClick: (i, n) => {
-            ((0, tb.A)(e, t.id, { ...d, object: $.ZSU.ACK_DECLINE_REQUEST_TO_STREAM }),
+            ((0, tL.A)(e, t.id, { ...d, object: $.ZSU.ACK_DECLINE_REQUEST_TO_STREAM }),
                 (0, tO.q)(e),
                 u.A.updateNotificationStatus(n),
                 c("decline"));
@@ -442,7 +442,7 @@ function eN() {
                                               (0, z.jsx)("div", {
                                                   className: tN.rf,
                                                   children: (0, z.jsx)(tp.E, {
-                                                      variant: "text-sm/medium",
+                                                      variant: "body-sm/medium",
                                                       color: "interactive-text-default",
                                                       className: tN.G3,
                                                       children: J.intl.format(J.t["q7/rgv"], {
@@ -540,7 +540,7 @@ function eC(t) {
     if (!Object.keys(i).includes(E.default.getId())) return eI(n);
     if (null != n) return !1;
     let l = _.A.getChannel(e);
-    if (null == l || !l.isRingable() || L.A.getStatus() === $.clD.DND || g.NO.getSetting()) return !1;
+    if (null == l || !l.isRingable() || b.A.getStatus() === $.clD.DND || g.NO.getSetting()) return !1;
     let a = eo.find((t) => t.type === K.zb.TEXT && t.channelId === e && t.messageType === $.lAJ.CALL);
     (null != a && eI(a.id),
         e_(
@@ -612,8 +612,8 @@ class eh extends s.Ay.Store {
             v.A,
             f.Ay,
             O.Ay,
-            L.A,
             b.A,
+            L.A,
             x.default,
             D.A,
         ),
@@ -774,10 +774,10 @@ let eT = new eh(o.h, {
                             (a = (t) => null != t.party && t.party.id === y));
                         break;
                     case $.xL.JOIN_REQUEST:
-                        ((n = (t) => L.A.getApplicationActivity(t)), (a = (t) => null != t.party && t.party.id === y));
+                        ((n = (t) => b.A.getApplicationActivity(t)), (a = (t) => null != t.party && t.party.id === y));
                         break;
                     case $.xL.STREAM_REQUEST:
-                        ((n = (t) => L.A.getApplicationActivity(t)), (a = (t, e) => t.application_id === e));
+                        ((n = (t) => b.A.getApplicationActivity(t)), (a = (t, e) => t.application_id === e));
                         break;
                     default:
                         return !1;
@@ -892,7 +892,7 @@ let eT = new eh(o.h, {
             })(n, i, a);
             if (!1 !== t) return t;
         }
-        if (P.A.isNotificationDisabled(H.KS.TextChat) || b.A.disableNotifications || !(0, p.lx)(i, e)) return !1;
+        if (P.A.isNotificationDisabled(H.KS.TextChat) || L.A.disableNotifications || !(0, p.lx)(i, e)) return !1;
         let r = !N.A.isSoundDisabled(k.cH),
             s = (function (t, e, i, n) {
                 let { hasChat: l } = (0, V.NI)("textChatNotification");

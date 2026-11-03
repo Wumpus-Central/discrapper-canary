@@ -21,7 +21,7 @@ function h(t) {
         onClick: () => p._.dispatchKeyed(g.zOV.CLIP_SEEK_VIDEO, n, { timestampMs: (0, E.$)(e) }),
         children: (0, s.jsxs)(o.E, {
             tag: "span",
-            variant: "text-md/normal",
+            variant: "body-md/normal",
             color: "text-link",
             className: A.v,
             children: ["@", (0, u.rB)(e / 1e3)],

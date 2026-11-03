@@ -10,7 +10,7 @@ var i = n(146806),
 let c = a.memo(function (e) {
     let {
             text: t,
-            variant: n = "text-md/normal",
+            variant: n = "body-md/normal",
             color: c,
             delay: f = 3e3,
             initialDelay: d = 0,
@@ -22,12 +22,12 @@ let c = a.memo(function (e) {
             ref: w,
         } = e,
         C = a.useRef(null),
-        x = a.useRef(null),
-        M = Array.isArray(t) ? t.join("\0") : t,
-        N = a.useMemo(() => M.split("\0"), [M]),
+        M = a.useRef(null),
+        x = Array.isArray(t) ? t.join("\0") : t,
+        N = a.useMemo(() => x.split("\0"), [x]),
         [A, R] = a.useState(0),
         { reducedMotion: v } = a.useContext(l.C),
-        E = (function () {
+        b = (function () {
             let [e, t] = a.useState(() => "u" < typeof document || document.hasFocus());
             return (
                 a.useEffect(() => {
@@ -48,8 +48,8 @@ let c = a.memo(function (e) {
                 e
             );
         })(),
-        S = a.useRef(0),
-        b = a.useRef(null),
+        E = a.useRef(0),
+        S = a.useRef(null),
         L = a.useRef(null),
         F = a.useRef(!0),
         $ = a.useRef(h),
@@ -60,15 +60,15 @@ let c = a.memo(function (e) {
     a.useEffect(() => {
         (($.current = h), (T.current = p), (q.current = N), (j.current = m), (k.current = v.enabled));
     });
-    let [W, B] = a.useState(M);
-    W !== M && (B(M), R(0));
+    let [W, B] = a.useState(x);
+    W !== x && (B(x), R(0));
     let z = N.length > 0 ? A % N.length : 0,
         H = N[z] ?? "",
         G = a.useCallback(() => {
             R((e) => e + 1);
         }, []);
     return (
-        a.useImperativeHandle(w, () => ({ play: G, stop: () => x.current?.stop() }), [G]),
+        a.useImperativeHandle(w, () => ({ play: G, stop: () => M.current?.stop() }), [G]),
         a.useEffect(() => {
             let e = C.current;
             if (null == e) return;
@@ -104,15 +104,15 @@ let c = a.memo(function (e) {
                     g = [],
                     w = !1,
                     C = 0,
-                    x = 0,
                     M = 0,
+                    x = 0,
                     N = 0,
                     A = 0,
                     R = 0,
                     v = 0,
-                    E = 0,
-                    S = !1;
-                function b() {
+                    b = 0,
+                    E = !1;
+                function S() {
                     ((o = Array.from(n.from)),
                         (u = Array.from(n.to)),
                         (C = Math.max(o.length, u.length)),
@@ -136,7 +136,7 @@ let c = a.memo(function (e) {
                                 (p = Array(C).fill(0)),
                                 null == a || null == l || "function" != typeof getComputedStyle)
                             ) {
-                                x = Math.max(1, C);
+                                M = Math.max(1, C);
                                 return;
                             }
                             let e = a.getBoundingClientRect().width;
@@ -149,26 +149,26 @@ let c = a.memo(function (e) {
                             let r = parseFloat(getComputedStyle(l).fontSize),
                                 c = Number.isFinite(r) && 0 !== r ? r : 16,
                                 f = Math.max(e, t);
-                            x = (0, i.xf)(f, c, C, n.trailingWidth);
+                            M = (0, i.xf)(f, c, C, n.trailingWidth);
                         })(),
-                        (c = Array(x)),
-                        (y = Array(x).fill(-1)),
-                        (g = (0, i.k6)(x, n.rng)));
-                    for (let e = 0; e < x; e++) {
+                        (c = Array(M)),
+                        (y = Array(M).fill(-1)),
+                        (g = (0, i.k6)(M, n.rng)));
+                    for (let e = 0; e < M; e++) {
                         let t = document.createElement("span");
                         ((t.className = n.classNames.glyphCell), l.appendChild(t), (c[e] = t));
                     }
                     ((v = 0),
-                        (E = 0),
+                        (b = 0),
                         d ||
                             "u" < typeof document ||
                             null == document.fonts ||
                             ("loaded" !== document.fonts.status &&
                                 ((d = !0),
                                 document.fonts.ready.then(() => {
-                                    if (((d = !1), null == a || 0 === C || S)) return;
+                                    if (((d = !1), null == a || 0 === C || E)) return;
                                     let e = 4 === f[C - 1];
-                                    (b(), e && j());
+                                    (S(), e && j());
                                 }))));
                 }
                 function L(e, t) {
@@ -190,15 +190,15 @@ let c = a.memo(function (e) {
                     let t = Math.min(1, Math.max(0, (e - N) / n.duration)),
                         r = (0, i.xm)(t),
                         { start: a, end: o } = (0, i.py)(r, C),
-                        u = Math.min(s.length, Math.max(o, E));
+                        u = Math.min(s.length, Math.max(o, b));
                     for (let e = Math.min(a, v); e < u; e++) L(e, (0, i.Xu)(e, r, C));
                     ((v = a),
-                        (E = o),
+                        (b = o),
                         (function (e) {
                             let t = Math.round(100 * (0, i.M8)(e));
                             t !== m && null != l && ((l.style.opacity = String(t / 100)), (m = t));
-                            for (let t = 0; t < x; t++) {
-                                let r = (0, i.GL)(t, e, x);
+                            for (let t = 0; t < M; t++) {
+                                let r = (0, i.GL)(t, e, M);
                                 if (r !== y[t]) {
                                     var n;
                                     ((c[t].textContent = r < 0 ? "" : ((n = t), r < 6 ? "123456".charAt(r) : g[n])),
@@ -206,11 +206,11 @@ let c = a.memo(function (e) {
                                 }
                             }
                         })(r),
-                        r < 1 ? (M = requestAnimationFrame(F)) : (j(), (S = !1), n.onComplete?.()));
+                        r < 1 ? (x = requestAnimationFrame(F)) : (j(), (E = !1), n.onComplete?.()));
                 }
                 function $() {
                     (null != l && (l.style.opacity = "0"), (m = 0));
-                    for (let e = 0; e < x; e++) -1 !== y[e] && ((c[e].textContent = ""), (y[e] = -1));
+                    for (let e = 0; e < M; e++) -1 !== y[e] && ((c[e].textContent = ""), (y[e] = -1));
                 }
                 function T(e) {
                     w !== e &&
@@ -225,55 +225,55 @@ let c = a.memo(function (e) {
                 }
                 function j() {
                     for (let e = 0; e < C; e++) L(e, 4);
-                    (q(!1), T(!1), $(), (v = 0), (E = 0));
+                    (q(!1), T(!1), $(), (v = 0), (b = 0));
                 }
                 function k() {
                     (0 !== R && clearTimeout(R), (R = 0));
                 }
                 function W() {
-                    (0 !== M && cancelAnimationFrame(M), (M = 0), k(), (A = 0), (S = !1), j());
+                    (0 !== x && cancelAnimationFrame(x), (x = 0), k(), (A = 0), (E = !1), j());
                 }
                 return (
-                    b(),
+                    S(),
                     {
                         play: function () {
-                            if ((0 !== M && cancelAnimationFrame(M), (M = 0), k(), 0 === C))
+                            if ((0 !== x && cancelAnimationFrame(x), (x = 0), k(), 0 === C))
                                 return void n.onComplete?.();
                             let e = n.reducedMotion ?? r?.matches === !0;
                             if (n.respectReducedMotion && e) {
                                 ($(),
                                     q(!0),
                                     T(!0),
-                                    (S = !0),
+                                    (E = !0),
                                     n.onStart?.(),
                                     (R = window.setTimeout(() => {
                                         R = 0;
                                         for (let e = 0; e < C; e++) L(e, 4);
                                         ((v = 0),
-                                            (E = 0),
+                                            (b = 0),
                                             T(!1),
                                             (R = window.setTimeout(() => {
-                                                ((R = 0), q(!1), (S = !1), n.onComplete?.());
+                                                ((R = 0), q(!1), (E = !1), n.onComplete?.());
                                             }, 220)));
                                     }, 220)));
                                 return;
                             }
                             (q(!1),
-                                (S = !0),
+                                (E = !0),
                                 (A = 0),
                                 (N = performance.now()),
                                 n.onStart?.(),
-                                (M = requestAnimationFrame(F)));
+                                (x = requestAnimationFrame(F)));
                         },
                         pause: function () {
-                            S && 0 === A && 0 !== M && (cancelAnimationFrame(M), (M = 0), (A = performance.now()));
+                            E && 0 === A && 0 !== x && (cancelAnimationFrame(x), (x = 0), (A = performance.now()));
                         },
                         resume: function () {
-                            S && 0 !== A && ((N += performance.now() - A), (A = 0), (M = requestAnimationFrame(F)));
+                            E && 0 !== A && ((N += performance.now() - A), (A = 0), (x = requestAnimationFrame(F)));
                         },
                         stop: W,
                         setTransition: function (e, t) {
-                            (W(), (n.from = e), (n.to = t), b());
+                            (W(), (n.from = e), (n.to = t), S());
                         },
                         setOptions: function (e) {
                             (void 0 !== e.duration && (n.duration = e.duration),
@@ -281,11 +281,11 @@ let c = a.memo(function (e) {
                                 void 0 !== e.trailingWidth && (n.trailingWidth = e.trailingWidth));
                         },
                         destroy: function () {
-                            (0 !== M && cancelAnimationFrame(M),
-                                (M = 0),
+                            (0 !== x && cancelAnimationFrame(x),
+                                (x = 0),
                                 k(),
                                 (A = 0),
-                                (S = !1),
+                                (E = !1),
                                 (e.textContent = n.to),
                                 (w = !1),
                                 (a = null),
@@ -300,10 +300,10 @@ let c = a.memo(function (e) {
                                 (y = []),
                                 (g = []),
                                 (C = 0),
-                                (x = 0));
+                                (M = 0));
                         },
                         get running() {
-                            return S;
+                            return E;
                         },
                     }
                 );
@@ -323,42 +323,42 @@ let c = a.memo(function (e) {
                 onStart: () => T.current?.(),
             });
             return (
-                (x.current = t),
+                (M.current = t),
                 () => {
-                    (t.destroy(), (x.current = null));
+                    (t.destroy(), (M.current = null));
                 }
             );
         }, []),
         a.useEffect(() => {
-            x.current?.setOptions({ duration: m, reducedMotion: v.enabled, trailingWidth: y });
+            M.current?.setOptions({ duration: m, reducedMotion: v.enabled, trailingWidth: y });
         }, [m, v.enabled, y]),
         a.useEffect(() => {
-            let e = x.current;
+            let e = M.current;
             if (null == e) return;
-            let t = `${M}:${A}`;
+            let t = `${x}:${A}`;
             if (L.current !== t) {
                 L.current = t;
-                let n = b.current;
-                ((b.current = H),
+                let n = S.current;
+                ((S.current = H),
                     (F.current = null == n),
                     null == n ? e.setTransition(H, H) : (e.setTransition(n, H), e.play()));
             }
             if (null != f) {
                 let e = k.current ? 440 : j.current;
-                S.current = F.current ? f + d : f + e;
+                E.current = F.current ? f + d : f + e;
             }
-        }, [M, A, z, H, f, d]),
+        }, [x, A, z, H, f, d]),
         a.useEffect(() => {
-            let e = x.current;
+            let e = M.current;
             if (null == e) return;
-            if (!E) return void e.pause();
+            if (!b) return void e.pause();
             if ((e.resume(), null == f)) return;
-            let t = Date.now() + S.current,
-                n = window.setTimeout(G, S.current);
+            let t = Date.now() + E.current,
+                n = window.setTimeout(G, E.current);
             return () => {
-                (window.clearTimeout(n), (S.current = Math.max(0, t - Date.now())));
+                (window.clearTimeout(n), (E.current = Math.max(0, t - Date.now())));
             };
-        }, [E, A, G, f]),
+        }, [b, A, G, f]),
         (0, r.jsxs)(o.E, {
             variant: n,
             color: c,

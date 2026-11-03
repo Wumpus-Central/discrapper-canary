@@ -1,4 +1,4 @@
-i.d(e, { default: () => S });
+i.d(e, { default: () => N });
 var n = i(477900),
     a = i(582128),
     l = i(575593),
@@ -10,8 +10,8 @@ var n = i(477900),
     u = i(228427),
     m = i(451909),
     p = i(223863),
-    x = i(734057),
-    C = i(174459),
+    C = i(734057),
+    x = i(174459),
     L = i(957565),
     h = i(403362),
     k = i(993408),
@@ -26,8 +26,8 @@ var w = i(623373),
     O = i(381941),
     P = i(105292),
     j = i(242232);
-let I = (t) => t.type === d.rD.USER || t.type === d.rD.GROUP_DM;
-function N(t) {
+let y = (t) => t.type === d.rD.USER || t.type === d.rD.GROUP_DM;
+function I(t) {
     let e,
         { product: i, productName: a } = t;
     return (0, n.jsxs)("div", {
@@ -36,9 +36,9 @@ function N(t) {
             (0, n.jsxs)("div", {
                 className: j.kx,
                 children: [
-                    (0, n.jsx)(r.E, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: a }),
+                    (0, n.jsx)(r.E, { variant: "body-md/medium", color: "text-default", lineClamp: 1, children: a }),
                     (0, n.jsx)(r.E, {
-                        variant: "text-sm/medium",
+                        variant: "body-sm/medium",
                         color: "text-muted",
                         children:
                             (e = (0, w.YW)(i)) === l.R.BUNDLE
@@ -51,7 +51,7 @@ function N(t) {
         ],
     });
 }
-function S(t) {
+function N(t) {
     let { skuId: e, product: i, productName: l, tab: r, source: d, onClose: k, ...v } = t,
         w = a.useCallback(
             async (t, i, n) => {
@@ -65,7 +65,7 @@ function S(t) {
 
 `;
                     for (let t of i) {
-                        let e = x.A.getChannel(t);
+                        let e = C.A.getChannel(t);
                         null != e &&
                             (await o.A.sendMessage(e.id, m.Ay.parse(e, c + (a ?? "")), !1, {
                                 location: O.Hx.COLLECTIBLES_SHOP,
@@ -86,7 +86,7 @@ function S(t) {
                     variant: "secondary",
                     text: void 0,
                     onClick: () => {
-                        (C.default.track(E.HAw.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: e }),
+                        (x.default.track(E.HAw.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: e }),
                             (0, L.C)(f(e, r), () =>
                                 (0, s.P0)({ text: P.intl.string(P.t["L/PwZf"]), variant: "success" }),
                             ));
@@ -100,9 +100,9 @@ function S(t) {
         ...v,
         onClose: k,
         source: d,
-        customPreview: (0, n.jsx)(N, { product: i, productName: l }),
+        customPreview: (0, n.jsx)(I, { product: i, productName: l }),
         customSendHandler: w,
         additionalActions: _,
-        channelFilter: I,
+        channelFilter: y,
     });
 }

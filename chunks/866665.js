@@ -39,8 +39,8 @@ function E(e) {
         ),
         {
             tooltipId: D,
-            isVisible: v,
-            targetElementRef: b,
+            isVisible: b,
+            targetElementRef: v,
             trigger: P,
         } = (0, u.D)({ children: t, targetElementRef: y, asContainer: h, containerTag: f, ariaHidden: C, ...O }),
         [M, U] = r.useState(!1),
@@ -54,7 +54,7 @@ function E(e) {
                         ? (0, i.jsxs)("div", {
                               className: _.Cl,
                               children: [
-                                  (0, i.jsx)(l.E, { variant: "text-sm/medium", children: n }),
+                                  (0, i.jsx)(l.E, { variant: "body-sm/medium", children: n }),
                                   (0, i.jsx)(s.e, { shortcut: E }),
                               ],
                           })
@@ -62,23 +62,23 @@ function E(e) {
             [n, E, A],
         ),
         G = null != w && ("string" != typeof w || "" !== w),
-        x = v || M;
+        x = b || M;
     r.useEffect(() => {
-        v && G ? U(!0) : G || U(!1);
-    }, [v, G]);
+        b && G ? U(!0) : G || U(!1);
+    }, [b, G]);
     let k = r.useCallback(() => {
             U(!1);
         }, []),
-        F = (0, c.j)({ shouldShow: v, onExitComplete: k });
-    if (!G && (v || !M)) return t;
+        F = (0, c.j)({ shouldShow: b, onExitComplete: k });
+    if (!G && (b || !M)) return t;
     if (null == t || (!h && !r.isValidElement(t))) return null;
     let B = N ?? (0, d.Xj)(n),
         V = F((e, t) =>
             t
                 ? (0, i.jsx)(o.R, {
-                      isVisible: v,
+                      isVisible: b,
                       isRendered: x,
-                      targetElementRef: b,
+                      targetElementRef: v,
                       targetElement: R,
                       anchorRef: g,
                       id: D,

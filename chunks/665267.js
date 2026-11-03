@@ -14,23 +14,23 @@ var i = n(477900),
     E = n(724651),
     h = n(732280),
     S = n(792656),
-    x = n(511484),
-    T = n(811611),
-    p = n(174459),
-    f = n(830543),
+    T = n(511484),
+    p = n(811611),
+    f = n(174459),
+    x = n(830543),
     _ = n(652215),
     I = n(385803),
     N = n(202541),
-    C = n(105292),
-    b = n(510081);
+    b = n(105292),
+    C = n(510081);
 function y() {
-    ((0, g.nf)(g.HP.CLIENT_THEMES), (0, f.default)());
+    ((0, g.nf)(g.HP.CLIENT_THEMES), (0, x.default)());
 }
 function v() {
     let e = (0, E.O)(),
-        t = (0, x.U9)(e, N.pe.TIER_2)
-            ? C.intl.formatToPlainString(C.t.bkQ4bH, { percent: e?.discount.amount })
-            : C.intl.string(C.t.mr4K7D);
+        t = (0, T.U9)(e, N.pe.TIER_2)
+            ? b.intl.formatToPlainString(b.t.bkQ4bH, { percent: e?.discount.amount })
+            : b.intl.string(b.t.mr4K7D);
     return (0, i.jsx)(S.A, {
         subscriptionTier: N.pe.TIER_2,
         defaultTextOverride: t,
@@ -44,9 +44,9 @@ function j() {
     return !e || t
         ? null
         : (0, i.jsxs)("div", {
-              className: b.gY,
+              className: C.gY,
               children: [
-                  (0, i.jsx)(r.$, { variant: "secondary", text: C.intl.string(C.t["E+COuA"]), onClick: y }),
+                  (0, i.jsx)(r.$, { variant: "secondary", text: b.intl.string(b.t["E+COuA"]), onClick: y }),
                   (0, i.jsx)(v, {}),
               ],
           });
@@ -57,14 +57,14 @@ function O(e) {
         { analyticsLocations: r } = (0, u.Ay)(o.A.USER_SETTINGS);
     return (l.useEffect(() => {
         n &&
-            (p.default.track(_.HAw.PREMIUM_UPSELL_VIEWED, {
+            (f.default.track(_.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: N.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                 location_stack: r,
             }),
             (0, m.sq)(_.U7l.PREMIUM_UPSELL_VIEWED, r, () => (0, A.uq)(N.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT)));
     }, [n, r]),
     n)
-        ? (0, i.jsx)("div", { className: b._$, children: t })
+        ? (0, i.jsx)("div", { className: C._$, children: t })
         : t;
 }
 function L() {
@@ -74,16 +74,16 @@ function L() {
         ? (0, i.jsxs)("div", {
               children: [
                   (0, i.jsx)("div", {
-                      className: b.c7,
+                      className: C.c7,
                       children: (0, i.jsx)(r.$, {
                           variant: "secondary",
                           fullWidth: !0,
-                          text: C.intl.string(C.t["E+COuA"]),
+                          text: b.intl.string(b.t["E+COuA"]),
                           onClick: () => y(),
                       }),
                   }),
-                  (0, i.jsx)("div", { className: b.BU }),
-                  (0, i.jsx)(T.Ay, { type: N.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: N.pe.TIER_2 }),
+                  (0, i.jsx)("div", { className: C.BU }),
+                  (0, i.jsx)(p.Ay, { type: N.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: N.pe.TIER_2 }),
               ],
           })
         : null;
@@ -96,10 +96,10 @@ function R() {
                 (0, i.jsx)(c.ew, {
                     isCoachmark: !1,
                     renderCTAButtons: () => (0, i.jsx)(j, {}),
-                    headingClassName: b.EK,
-                    titleTextVariant: "text-md/semibold",
-                    titleClassName: b.cI,
-                    titleIconClassName: b.Hq,
+                    headingClassName: C.EK,
+                    titleTextVariant: "body-md/semibold",
+                    titleClassName: C.cI,
+                    titleIconClassName: C.Hq,
                 }),
                 (0, i.jsx)(a.B, {
                     direction: "horizontal",

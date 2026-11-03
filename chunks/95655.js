@@ -8,24 +8,24 @@ var t = l(477900),
     o = l(778712),
     d = l(834730),
     u = l(22231),
-    x = l(442433),
-    h = l(793574),
+    h = l(442433),
+    x = l(793574),
     m = l(47167),
     A = l(598104),
     j = l(73028),
     g = l(665691),
-    p = l(174459),
-    E = l(652215),
-    f = l(105292),
-    b = l(77709);
+    b = l(174459),
+    p = l(652215),
+    E = l(105292),
+    f = l(77709);
 function N(e) {
     let { channel: n } = e;
     return (0, g.bG)({ channelId: n.id })
         ? (0, t.jsx)(s.m, {
-              text: f.intl.string(f.t.QyZ4Td),
+              text: E.intl.string(E.t.QyZ4Td),
               children: (0, t.jsx)(r.m, {
                   size: "xs",
-                  "aria-label": f.intl.string(f.t.VHXh8a),
+                  "aria-label": E.intl.string(E.t.VHXh8a),
                   color: a.A.colors.INTERACTIVE_TEXT_DEFAULT,
               }),
           })
@@ -39,15 +39,15 @@ let I = i.memo(function (e) {
         children: [
             (0, t.jsx)(s.m, {
                 asContainer: !0,
-                text: f.intl.string(f.t["5Q9+/L"]),
+                text: E.intl.string(E.t["5Q9+/L"]),
                 position: "bottom",
                 children: (0, t.jsxs)(c.D, {
-                    className: b.cD,
+                    className: f.cD,
                     onClick: () => {
-                        (0, j.U)(i, h.A.HEADER_BAR);
+                        (0, j.U)(i, x.A.HEADER_BAR);
                     },
                     onContextMenu: (e) =>
-                        (0, x.L3)(
+                        (0, h.L3)(
                             e,
                             () =>
                                 Promise.all([
@@ -77,23 +77,23 @@ let I = i.memo(function (e) {
                         ),
                     onDoubleClick: (e) => e.stopPropagation(),
                     onMouseEnter: () => {
-                        p.default.track(E.HAw.GDM_EDIT_INTERACTED, {
+                        b.default.track(p.HAw.GDM_EDIT_INTERACTED, {
                             channel_id: n.id,
                             action: "entry_point_hovered",
-                            location: h.A.HEADER_BAR,
+                            location: x.A.HEADER_BAR,
                         });
                     },
-                    "aria-label": f.intl.string(f.t["5Q9+/L"]),
+                    "aria-label": E.intl.string(E.t["5Q9+/L"]),
                     children: [
                         (0, t.jsx)(A.A, {
-                            className: b.gn,
+                            className: f.gn,
                             "aria-hidden": !0,
                             channel: n,
                             size: o._3.SIZE_20,
                             facepileSizeOverride: o._3.SIZE_24,
                         }),
-                        (0, t.jsx)(d.E, { variant: "text-md/medium", color: "text-strong", children: r ?? "" }),
-                        (0, t.jsx)(u.PencilIcon, { className: b.IZ, size: "xs", color: "currentColor" }),
+                        (0, t.jsx)(d.E, { variant: "body-md/medium", color: "text-strong", children: r ?? "" }),
+                        (0, t.jsx)(u.PencilIcon, { className: f.IZ, size: "xs", color: "currentColor" }),
                     ],
                 }),
             }),

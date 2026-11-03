@@ -14,13 +14,13 @@ var s,
     p = i(352413),
     A = i(696451),
     v = i(287809),
-    x = i(174459),
-    I = i(24482),
+    I = i(174459),
+    x = i(24482),
     j = i(815996),
     S = i(993408),
     k = i(821701),
-    C = i(841702),
-    y = i(727170),
+    y = i(841702),
+    C = i(727170),
     f = i(907391),
     N = i(503698),
     _ = i.n(N),
@@ -198,7 +198,7 @@ let en = function (e) {
             onOpenShop: l,
         } = e,
         u = Y(),
-        c = I.Ay.canUseCollectibles(t);
+        c = x.Ay.canUseCollectibles(t);
     return (0, n.jsx)(G.f, {
         fade: !0,
         className: ee.p_,
@@ -225,7 +225,7 @@ let en = function (e) {
                         children: [
                             (0, n.jsx)(M.K, { size: "md", color: "currentColor", className: ee.Kk }),
                             (0, n.jsx)(z.E, {
-                                variant: "text-xs/normal",
+                                variant: "body-xs/normal",
                                 color: "text-strong",
                                 children: (0, $.uZ)(t, i) ? R.intl.string(R.t.CHf9iJ) : R.intl.string(R.t.PoWNfe),
                             }),
@@ -248,7 +248,7 @@ let en = function (e) {
                                 className: ee.sV,
                             }),
                             (0, n.jsx)(z.E, {
-                                variant: "text-xs/normal",
+                                variant: "body-xs/normal",
                                 color: "text-strong",
                                 children: R.intl.string(R.t.pWG4ze),
                             }),
@@ -280,7 +280,7 @@ let en = function (e) {
             return (0, n.jsx)("div", {
                 className: ee.so,
                 style: { ...t, position: "absolute" },
-                children: (0, n.jsx)(o.D, { variant: "heading-md/semibold", children: i }),
+                children: (0, n.jsx)(o.D, { variant: "heading-sm/semibold", children: i }),
             });
         },
         getSectionHeight: (e) => u[e].height,
@@ -298,18 +298,18 @@ function el(e) {
             analyticsLocations: c,
             modalHeadingId: m,
             onClose: v,
-            initialSelectedDecoration: x,
-            guild: C,
+            initialSelectedDecoration: I,
+            guild: y,
         } = e,
-        N = (0, a.bG)([A.Ay], () => (null != C ? A.Ay.getMember(C.id, t.id) : null)),
+        N = (0, a.bG)([A.Ay], () => (null != y ? A.Ay.getMember(y.id, t.id) : null)),
         _ = null != N ? N.avatarDecoration : t.avatarDecoration,
         { pendingAvatarDecoration: E, setPendingAvatarDecoration: D } = (0, p.A)({
             analyticsLocations: c,
-            guildId: C?.id,
+            guildId: y?.id,
         }),
         [b, w] = r.useState(() =>
-            null != x
-                ? x
+            null != I
+                ? I
                 : void 0 !== E
                   ? E
                   : null == _
@@ -323,13 +323,13 @@ function el(e) {
             pendingValue: b,
             userValue: t?.avatarDecoration,
             guildValue: N?.avatarDecoration,
-            guildId: C?.id,
+            guildId: y?.id,
         }),
         { product: O, purchase: H } = (0, k.A)(b?.skuId),
         M = null != H ? (0, S.gA)(H) : (0, S.G0)(O),
-        z = I.Ay.canUseCollectibles(t),
+        z = x.Ay.canUseCollectibles(t),
         U = r.useRef(null),
-        G = (0, y.A)(c),
+        G = (0, C.A)(c),
         V = void 0 === E ? b?.skuId === _?.skuId : b?.skuId === E?.skuId,
         K = r.useCallback(
             (e) => {
@@ -360,7 +360,7 @@ function el(e) {
                 children: [
                     (0, n.jsx)(en, {
                         user: t,
-                        guild: C,
+                        guild: y,
                         pendingAvatarDecoration: b,
                         selectedAvatarDecorationRef: U,
                         onSelect: function (e) {
@@ -371,7 +371,7 @@ function el(e) {
                     (0, n.jsx)(P, {
                         className: ea.kk,
                         user: t,
-                        guildId: C?.id,
+                        guildId: y?.id,
                         avatarDecoration: T,
                         decorationName: b?.label ?? null,
                     }),
@@ -398,7 +398,7 @@ function el(e) {
                             })
                           : (0, n.jsx)(f.A, {
                                 showGradient: !z,
-                                text: I.Ay.isPremium(t)
+                                text: x.Ay.isPremium(t)
                                     ? R.intl.string(R.t.KXLX7l)
                                     : z
                                       ? R.intl.string(R.t.mr4K7D)
@@ -424,12 +424,12 @@ function eu(e) {
         } = e,
         p = (0, a.bG)([v.default], () => v.default.getCurrentUser()),
         { analyticsLocations: A } = (0, m.Ay)(i, d.A.EDIT_AVATAR_DECORATION_MODAL),
-        { categories: I, purchases: j, isFetchingCategories: S, isFetchingPurchases: k } = (0, C.Ay)(),
-        y = S || (k && 0 === j.size),
+        { categories: x, purchases: j, isFetchingCategories: S, isFetchingPurchases: k } = (0, y.Ay)(),
+        C = S || (k && 0 === j.size),
         f = r.useId();
     return (
         r.useEffect(() => {
-            x.default.track(er.HAw.OPEN_MODAL, { type: er.JJy.AVATAR_DECORATION_CUSTOMIZATION, location_stack: A });
+            I.default.track(er.HAw.OPEN_MODAL, { type: er.JJy.AVATAR_DECORATION_CUSTOMIZATION, location_stack: A });
         }, [A]),
         null == p
             ? null
@@ -438,18 +438,18 @@ function eu(e) {
                   children: (0, n.jsx)(l.EO, {
                       transitionState: t,
                       className: ea.yl,
-                      size: y ? l.rI.DYNAMIC : l.rI.MEDIUM,
+                      size: C ? l.rI.DYNAMIC : l.rI.MEDIUM,
                       parentComponent: "AvatarDecorationModal",
                       returnRef: g,
-                      "aria-label": y ? R.intl.string(R.t.HykynS) : void 0,
-                      "aria-labelledby": y ? void 0 : f,
+                      "aria-label": C ? R.intl.string(R.t.HykynS) : void 0,
+                      "aria-labelledby": C ? void 0 : f,
                       "data-migration-pending": !0,
-                      children: y
+                      children: C
                           ? (0, n.jsx)(c.y, { className: ea.u1, type: c.y.Type.SPINNING_CIRCLE })
                           : (0, n.jsx)(el, {
                                 user: p,
                                 guild: h,
-                                categories: I,
+                                categories: x,
                                 purchases: j,
                                 analyticsLocations: A,
                                 modalHeadingId: f,

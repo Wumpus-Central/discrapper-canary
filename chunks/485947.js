@@ -8,7 +8,7 @@ var s = n(503698),
 let u = function (e) {
     let { className: l, children: n, "aria-label": s, id: u } = e;
     return (0, t.jsx)(a.D, {
-        variant: "text-sm/medium",
+        variant: "body-sm/medium",
         className: i()(l, r.k),
         "aria-label": s,
         id: u,

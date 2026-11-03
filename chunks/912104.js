@@ -1,9 +1,9 @@
 _.exports = {
-    BK: "text-sm/medium__3aab5",
+    sk: "body-sm/medium__3aab5",
     aK: "summaryDivider__3aab5",
     Ke: "summaryDividerStart__3aab5",
     hO: "summaryDividerEnd__3aab5",
-    Ew: "summaryStartContent__3aab5 text-sm/medium__3aab5",
+    Ew: "summaryStartContent__3aab5 body-sm/medium__3aab5",
     rD: "summaryEndContent__3aab5",
     cR: "summaryStartIcon__3aab5",
     Jq: "summaryEndIcon__3aab5",

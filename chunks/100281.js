@@ -1,5 +1,5 @@
 _.exports = {
-    oU: "text-md/medium__124c8",
+    Lb: "body-md/medium__124c8",
     iE: "wrapper__124c8",
     lS: "titleRegion__124c8",
     G: "infoIcon__124c8",
@@ -12,7 +12,7 @@ _.exports = {
     NT: "buildInfo__124c8",
     V$: "subHead__124c8",
     Kk: "icon__124c8",
-    Jb: "buildDetails__124c8 text-md/medium__124c8",
+    Jb: "buildDetails__124c8 body-md/medium__124c8",
     Pz: "barLoader__124c8",
     w9: "barTitle__124c8",
     MM: "buttonLoader__124c8",

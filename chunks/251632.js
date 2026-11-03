@@ -15,8 +15,8 @@ var t = l(477900),
     x = l(123292),
     j = l(534514),
     v = l(95477),
-    A = l(890497),
-    b = l(834730),
+    b = l(890497),
+    A = l(834730),
     y = l(265872),
     C = l(144228),
     N = l(788026),
@@ -117,14 +117,14 @@ function X(e) {
         ep = (0, a.bG)([H.A], () => H.A.getNewMemberAction(L?.channelId)?.icon),
         ex = L?.channelId,
         ej = (0, a.bG)([H.A], () => H.A.getPendingDataForChannel(ex), [ex]),
-        [ev, eA] = i.useState(
+        [ev, eb] = i.useState(
             null != ej && null != ej.iconData
                 ? ej.iconData
                 : null != ep && null != $
                   ? P.Ay.getNewMemberActionIconURL({ channelId: $, icon: ep })
                   : null,
         ),
-        eb = (0, S.Ay)(eh),
+        eA = (0, S.Ay)(eh),
         ey = (0, S.Ay)(ev),
         eC = null == es || 0 === es.length || null == er || null == $,
         eN = Object.values(ei).flat().length > 0,
@@ -135,7 +135,7 @@ function X(e) {
                 t = null != eh || void 0 !== ev,
                 i = { icon: ev ?? null, emoji: eh };
             (e || (n && t)) && (n && (0, U.Rp)(ex), (0, U.J4)($, i));
-            let a = eh !== eb,
+            let a = eh !== eA,
                 s = ev !== ey;
             (X(
                 {
@@ -150,7 +150,7 @@ function X(e) {
                 (a || s) && !e,
             ),
                 l());
-        }, [X, l, es, er, $, eh, ep, ev, eb, ey, ex, ej]),
+        }, [X, l, es, er, $, eh, ep, ev, eA, ey, ex, ej]),
         ef = i.useCallback(() => {
             (q?.(), l());
         }, [q, l]),
@@ -217,7 +217,7 @@ function X(e) {
         ),
         ek = i.useCallback(function (e) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            (eg(n), eA(e));
+            (eg(n), eb(e));
         }, []),
         eD = i.useCallback(() => (null != ev ? ev : null), [ev, eh])(),
         ew = i.useCallback(
@@ -247,7 +247,7 @@ function X(e) {
                 className: J.eH,
                 children: [
                     (0, t.jsxs)(j.D, {
-                        variant: "heading-md/semibold",
+                        variant: "heading-sm/semibold",
                         color: "text-strong",
                         children: [B.intl.string(B.t["j+fhOY"]), (0, t.jsx)(V.A, {})],
                     }),
@@ -265,18 +265,18 @@ function X(e) {
                 className: J.eH,
                 children: [
                     (0, t.jsxs)(j.D, {
-                        variant: "heading-md/semibold",
+                        variant: "heading-sm/semibold",
                         color: "text-strong",
                         children: [B.intl.string(B.t.jVDc5W), (0, t.jsx)(V.A, {})],
                     }),
-                    (0, t.jsx)(A.Z, {
+                    (0, t.jsx)(b.Z, {
                         selectionMode: "single",
                         value: $ ?? void 0,
                         options: eM,
                         onSelectionChange: eI,
                     }),
-                    (0, t.jsx)(b.E, {
-                        variant: "text-xs/medium",
+                    (0, t.jsx)(A.E, {
+                        variant: "body-xs/medium",
                         color: "text-muted",
                         children: B.intl.string(B.t.cypQPz),
                     }),
@@ -289,13 +289,13 @@ function X(e) {
                     (0, t.jsxs)("div", {
                         children: [
                             (0, t.jsx)(j.D, {
-                                variant: "heading-md/semibold",
+                                variant: "heading-sm/semibold",
                                 color: "text-strong",
                                 id: eR,
                                 children: B.intl.string(B.t.gs5rQm),
                             }),
-                            (0, t.jsx)(b.E, {
-                                variant: "text-xs/medium",
+                            (0, t.jsx)(A.E, {
+                                variant: "body-xs/medium",
                                 color: "text-muted",
                                 children: B.intl.string(B.t.LjsoiT),
                             }),
@@ -482,7 +482,7 @@ function X(e) {
                 className: J.eH,
                 children: [
                     (0, t.jsxs)(j.D, {
-                        variant: "heading-md/semibold",
+                        variant: "heading-sm/semibold",
                         color: "text-strong",
                         children: [B.intl.string(B.t.MIMVLa), (0, t.jsx)(V.A, {})],
                     }),
@@ -494,8 +494,8 @@ function X(e) {
                     null != er && ei.actionType.length > 0
                         ? ei.actionType.map((e) =>
                               (0, t.jsx)(
-                                  b.E,
-                                  { variant: "text-xs/normal", color: "text-feedback-critical", children: e },
+                                  A.E,
+                                  { variant: "body-xs/normal", color: "text-feedback-critical", children: e },
                                   e,
                               ),
                           )

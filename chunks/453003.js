@@ -21,11 +21,11 @@ var i,
     C = n(452295),
     _ = n(729937),
     j = n(572211),
-    N = n(354287),
-    y = n(693879),
-    T = n(583846),
-    S = n(366430),
-    b = n(205184),
+    y = n(354287),
+    N = n(693879),
+    b = n(583846),
+    T = n(366430),
+    S = n(205184),
     k = n(928550),
     R = n(689168),
     L = n(403362),
@@ -170,7 +170,7 @@ function en(e) {
                 className: et.E6,
                 children: a.map((e, t) => (0, l.jsx)("div", { className: et.F2, children: e }, t)),
             }),
-            (0, l.jsx)(f.E, { variant: "text-sm/medium", color: "currentColor", className: et.kB, children: d }),
+            (0, l.jsx)(f.E, { variant: "body-sm/medium", color: "currentColor", className: et.kB, children: d }),
         ],
     });
 }
@@ -183,7 +183,7 @@ function ei(e) {
               className: a()(et.Ym, n),
               children: [
                   (0, l.jsx)(I.GameControllerIcon, { size: "xxs", color: "currentColor" }),
-                  (0, l.jsx)(y.z, {
+                  (0, l.jsx)(N.z, {
                       entry: { start: i, end: t?.timestamps?.end },
                       textColor: "currentColor",
                       textTabularNumbers: !1,
@@ -206,7 +206,7 @@ function el(e) {
             iconSrc: A,
             onView: x,
             presenceActivity: I,
-            currentUserPresenceActivity: y,
+            currentUserPresenceActivity: N,
             hideParty: L,
             hideBanner: Z = !1,
             partyStatusElement: q,
@@ -215,10 +215,10 @@ function el(e) {
             startAuthorization: es,
         } = e,
         er = (0, D.v)(t),
-        ea = (0, b.s)(n.id),
+        ea = (0, S.s)(n.id),
         eo = s.useMemo(
             () =>
-                ea.some((e) => (0, T.CZ)(e) === d.m.GLOBAL)
+                ea.some((e) => (0, b.CZ)(e) === d.m.GLOBAL)
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
                               (0, l.jsx)(E.FireIcon, { size: "xxs", color: "currentColor" }),
@@ -231,7 +231,7 @@ function el(e) {
         ed = s.useMemo(
             () =>
                 (0, l.jsxs)(f.E, {
-                    variant: "text-xs/normal",
+                    variant: "body-xs/normal",
                     className: et.dS,
                     color: "none",
                     lineClamp: 2,
@@ -243,14 +243,14 @@ function el(e) {
             let e = I?.details;
             return null == e || "" === e
                 ? null
-                : (0, l.jsx)(f.E, { variant: "text-xs/normal", color: "none", lineClamp: 1, children: e });
+                : (0, l.jsx)(f.E, { variant: "body-xs/normal", color: "none", lineClamp: 1, children: e });
         }, [I?.details]),
         eu = s.useMemo(
             () => (0, l.jsxs)("div", { className: et.pq, children: [ec, ed, L || er ? null : q] }),
             [ed, L, er, q, ec],
         ),
         em = !!(0, k.au)(n.id),
-        eh = (0, S.VS)(n),
+        eh = (0, T.VS)(n),
         { canJoin: eg, remoteJoinPlatform: ep } = (function (e) {
             let {
                 presenceActivity: t,
@@ -294,7 +294,7 @@ function el(e) {
                 : { canJoin: !1, remoteJoinPlatform: null };
         })({
             presenceActivity: I,
-            currentUserPresenceActivity: y,
+            currentUserPresenceActivity: N,
             currentUserId: c,
             message: t,
             application: n,
@@ -307,7 +307,7 @@ function el(e) {
             !(0, K.A)(I, t, n.id) ||
             !(0, z.A)(I, F.jUm.SYNC) ||
             !P.isPlatformEmbedded ||
-            (0, O.w)(y, I)
+            (0, O.w)(N, I)
         ),
         ex = (function (e, t, n, i) {
             if (
@@ -320,7 +320,7 @@ function el(e) {
             let l = (0, U._)(e);
             return !(!(0, Y.A)(l) || (0, W.U)(l));
         })(I, t, n, c),
-        ef = (0, O.w)(y, I),
+        ef = (0, O.w)(N, I),
         eI = null != I && (0, z.A)(I, F.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN),
         eE = (0, u.bG)(
             [R.A],
@@ -332,7 +332,7 @@ function el(e) {
                 eg
                     ? (e = {
                           label: J.intl.string(J.t.VJlc0S),
-                          trackingArea: N.kY.JOIN,
+                          trackingArea: y.kY.JOIN,
                           submitting: eE,
                           onClick: () => {
                               (C.A.join({
@@ -363,7 +363,7 @@ function el(e) {
                     : eI && el
                       ? (e = {
                             label: J.intl.string(J.t.lw71Nf),
-                            trackingArea: N.kY.CONNECT_ACCOUNT,
+                            trackingArea: y.kY.CONNECT_ACCOUNT,
                             onClick: () => {
                                 es({ analyticsLocations: $ });
                             },
@@ -371,7 +371,7 @@ function el(e) {
                       : eA
                         ? (e = {
                               label: J.intl.string(J.t.VJlc0S),
-                              trackingArea: N.kY.SYNC,
+                              trackingArea: y.kY.SYNC,
                               onClick: () => {
                                   null != I && _.OH(I, t.author.id);
                               },
@@ -379,7 +379,7 @@ function el(e) {
                         : ex
                           ? (e = {
                                 label: J.intl.string(J.t["hC/Zey"]),
-                                trackingArea: N.kY.INVITE,
+                                trackingArea: y.kY.INVITE,
                                 onClick: () => {
                                     null != I &&
                                         v.A.sendActivityInvite({
@@ -395,7 +395,7 @@ function el(e) {
                           : ef
                             ? (e = {
                                   label: J.intl.string(J.t.KC26NR),
-                                  trackingArea: N.kY.PLAY,
+                                  trackingArea: y.kY.PLAY,
                                   onClick: () => {},
                                   disabled: !0,
                               })
@@ -403,7 +403,7 @@ function el(e) {
                 null != e ? [e] : []
             );
         }, [eg, eA, ex, ef, h, t.author.id, t.id, I, r.id, r.guild_id, $, ep, c, eE, es, el, eI]),
-        eC = ev.some((e) => e.trackingArea === N.kY.CLOUD_PLAY);
+        eC = ev.some((e) => e.trackingArea === y.kY.CLOUD_PLAY);
     (0, Q.A)(eC, $);
     let e_ = s.useMemo(
         () => (ef ? null : (0, l.jsx)(en, { presenceActivity: I, remoteJoinPlatform: ep, isGameLaunchable: em })),

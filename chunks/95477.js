@@ -36,7 +36,7 @@ function O(e) {
     let { accessory: t, inputSize: n, disabled: r } = e;
     if ("string" == typeof t)
         return (0, i.jsx)(m.E, {
-            variant: "text-md/normal",
+            variant: "body-md/normal",
             color: "input-placeholder-text-default",
             className: N.leadingText,
             children: t,
@@ -90,8 +90,8 @@ function L(e) {
             defaultDirty: T = !1,
             leading: L,
             trailing: D,
-            validateOn: v = "change",
-            size: b = "md",
+            validateOn: b = "change",
+            size: v = "md",
             fullWidth: P = !1,
             clearable: M = !1,
             showCharacterCount: U = !1,
@@ -99,7 +99,7 @@ function L(e) {
         } = e,
         { fieldProps: G, props: x } = (0, _.n)(w),
         k = (0, S.Y)({
-            validateOn: v,
+            validateOn: b,
             error: m,
             value: h,
             minLength: p,
@@ -119,7 +119,7 @@ function L(e) {
     let K = null;
     ("boolean" == typeof M ? M && null != h && "" !== h && !Y : M.show)
         ? (K = (0, i.jsx)(R, {
-              inputSize: b,
+              inputSize: v,
               onClick: function (e) {
                   (null != w.onClear ? w.onClear(e) : w.onChange?.("", d),
                       requestAnimationFrame(() => {
@@ -127,9 +127,9 @@ function L(e) {
                       }));
               },
           }))
-        : null != D && (K = (0, i.jsx)(O, { accessory: D, inputSize: b }));
+        : null != D && (K = (0, i.jsx)(O, { accessory: D, inputSize: v }));
     let $ = null;
-    null != L && ($ = (0, i.jsx)(O, { accessory: L, inputSize: b }));
+    null != L && ($ = (0, i.jsx)(O, { accessory: L, inputSize: v }));
     let z = U ? (0, i.jsx)(g.n, { value: h, maxLength: A }) : null;
     return (0, i.jsx)(_.D, {
         ...G,
@@ -141,7 +141,7 @@ function L(e) {
             validation: k,
             fullWidth: P,
             readOnly: Y,
-            className: s()(N.container, N[b], {
+            className: s()(N.container, N[v], {
                 [N.hasLeading]: null != $,
                 [N.hasTrailing]: null != K,
                 [N.hasTags]: V,

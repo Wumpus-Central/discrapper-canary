@@ -13,11 +13,11 @@ var i = n(477900),
     m = n(254138),
     A = n(661531),
     f = n(730134),
-    x = n(440594),
-    g = n(793574),
+    g = n(440594),
+    x = n(793574),
     C = n(429913),
-    j = n(47167),
-    y = n(882840),
+    y = n(47167),
+    j = n(882840),
     I = n(713654),
     N = n(522265),
     v = n(649045),
@@ -60,7 +60,7 @@ function en(e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(f.A, { className: ee.my, size: o._3.SIZE_24, user: t, animate: !1 }),
-                  (0, i.jsx)(c.E, { variant: "text-md/medium", color: a, lineClamp: 1, children: s }),
+                  (0, i.jsx)(c.E, { variant: "body-md/medium", color: a, lineClamp: 1, children: s }),
               ],
           });
 }
@@ -90,9 +90,9 @@ function ei(e) {
                     }),
                     (0, i.jsx)(c.E, {
                         className: ee.W$,
-                        variant: "text-md/normal",
+                        variant: "body-md/normal",
                         color: "none",
-                        children: (0, x.A)(n.name),
+                        children: (0, g.A)(n.name),
                     }),
                 ],
             }));
@@ -115,7 +115,7 @@ function el(e) {
             guild: a,
             appContext: o,
             inCall: f,
-            isChatOpen: x,
+            isChatOpen: g,
             isStageAudienceSidebarOpen: N,
             exitFullScreen: v,
             guildRoomVisible: b,
@@ -126,7 +126,7 @@ function el(e) {
         D = (0, r.bG)([R.A], () => R.A.getVideoOverlayVisibility()),
         H = (0, W.kM)(t) && (0, Y.F)(o),
         en = M && !b && !H,
-        el = (0, j.Ay)(t),
+        el = (0, y.Ay)(t),
         ea = t.isGuildStageVoice(),
         es = (0, F.nd)(t),
         er = en ? Q.intl.string(J.default.f7g0DK) : b ? `${el} \xb7 ${Q.intl.string(J.default.wRLmM0)}` : (es ?? el),
@@ -138,7 +138,7 @@ function el(e) {
         : t.isDM()
           ? (ed = Q.intl.string(Q.t.jN2DfZ))
           : t.isGroupDM() && (ed = Q.intl.string(Q.t["e5y+gm"]));
-    let eu = (0, S.G)((0, y.l)(t)),
+    let eu = (0, S.G)((0, j.l)(t)),
         eh = t.isGuildVoice() && f && null != eu && eu.length > 0,
         ep = (0, K.Ay)(t),
         em = eh
@@ -163,7 +163,7 @@ function el(e) {
                                 }
                               : void 0,
                           children: (0, i.jsx)(c.E, {
-                              variant: "text-xs/normal",
+                              variant: "body-xs/normal",
                               className: s()(ee.Gh, et.PT),
                               children: G.A.parseVoiceChannelStatus(eu, !0, { channelId: t.id }),
                           }),
@@ -180,7 +180,7 @@ function el(e) {
                       (0, _.yt)({
                           channelId: t.id,
                           guildId: t.guild_id,
-                          location: g.A.CHANNEL_CALL,
+                          location: x.A.CHANNEL_CALL,
                           guildRoomOpen: !0,
                       })));
         }, [en, t.id, t.guild_id, D]);
@@ -198,7 +198,7 @@ function el(e) {
                     channel: t,
                     appContext: o,
                     inCall: f,
-                    isChatOpen: x,
+                    isChatOpen: g,
                     isStageAudienceSidebarOpen: N,
                     exitFullScreen: v,
                     focusedApplication: ec,

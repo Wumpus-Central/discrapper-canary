@@ -21,7 +21,7 @@ function h(e, t) {
 function k(e, t, n, s) {
     let a = [...e].map((e) => c.default.getUser(e));
     function i(e) {
-        return (0, r.jsx)(o.E, { variant: "text-md/semibold", className: d.Xh, children: u.Ay.getName(n, s, e) });
+        return (0, r.jsx)(o.E, { variant: "body-md/semibold", className: d.Xh, children: u.Ay.getName(n, s, e) });
     }
     return t >= 4
         ? m.intl.format(m.t.qfo6KR, {

@@ -11,14 +11,14 @@ var s,
     g = n(780964),
     p = n(466034),
     h = n(766075),
-    x = n(723702),
-    m = n(38405),
-    C = n(19575),
-    N = n(84948),
-    y = n(917136),
+    m = n(723702),
+    C = n(38405),
+    x = n(19575),
+    y = n(84948),
+    N = n(917136),
     S = n(293731),
-    E = (((s = {}).INIT = "INIT"), (s.NAME = "NAME"), (s.SUCCESS = "SUCCESS"), s),
-    b = n(652215),
+    b = (((s = {}).INIT = "INIT"), (s.NAME = "NAME"), (s.SUCCESS = "SUCCESS"), s),
+    E = n(652215),
     k = n(105292),
     A = n(159986);
 function B(t) {
@@ -42,7 +42,7 @@ function P(t) {
             ticket: o,
             challenge: P,
             showAccountSettingsButton: j = !1,
-            initialStep: v = E.INIT,
+            initialStep: v = b.INIT,
         } = t,
         [I, f] = i.useState(k.intl.string(k.t["I/sJtJ"])),
         [w, z] = i.useState(v),
@@ -52,31 +52,31 @@ function P(t) {
         H = i.useCallback(async () => {
             (U(null), J(!0));
             let t =
-                x.isPlatformEmbedded && C.Ay.supportsFeature(b.BYE.WEBAUTHN) ? C.Ay.webAuthnRegister(P) : (0, S.v)(P);
+                m.isPlatformEmbedded && x.Ay.supportsFeature(E.BYE.WEBAUTHN) ? x.Ay.webAuthnRegister(P) : (0, S.v)(P);
             try {
                 return (T(await t), !0);
             } catch (t) {
-                return (m.A.captureException(t), U(k.intl.string(k.t.xSCvBf)), !1);
+                return (C.A.captureException(t), U(k.intl.string(k.t.xSCvBf)), !1);
             } finally {
                 J(!1);
             }
         }, [P]),
         W = i.useCallback(async () => {
             try {
-                if ((await y.AF(I, o, M), j)) return !0;
+                if ((await N.AF(I, o, M), j)) return !0;
                 return (await (0, p.sy)(!1), s(), !1);
             } catch (t) {
                 return (
-                    t instanceof r.oh && t.status >= 400 && t.status < 500 && N.A.signalUnknownCredential(M),
+                    t instanceof r.oh && t.status >= 400 && t.status < 500 && y.A.signalUnknownCredential(M),
                     U(k.intl.string(k.t.fEptJP)),
-                    z(E.INIT),
+                    z(b.INIT),
                     !1
                 );
             }
         }, [I, o, M, j, s]),
         L = [
             {
-                stepKey: E.INIT,
+                stepKey: b.INIT,
                 modalProps: {
                     title: F ? k.intl.string(k.t.wePEBF) : k.intl.string(k.t.vrOCCk),
                     notice: null != K ? { message: K, type: "critical", role: "alert" } : void 0,
@@ -84,7 +84,7 @@ function P(t) {
                 body: (0, a.jsx)(c.B, {
                     className: A.PM,
                     children: (0, a.jsx)(u.E, {
-                        variant: "text-md/normal",
+                        variant: "body-md/normal",
                         className: A.zH,
                         children: F ? k.intl.string(k.t.aVMiX3) : k.intl.string(k.t.Lh5vTW),
                     }),
@@ -93,7 +93,7 @@ function P(t) {
                 onNext: H,
             },
             {
-                stepKey: E.NAME,
+                stepKey: b.NAME,
                 modalProps: { title: k.intl.string(k.t["cY/IOu"]) },
                 body: (0, a.jsxs)(c.B, {
                     direction: "horizontal",
@@ -106,7 +106,7 @@ function P(t) {
                             gap: 8,
                             className: A.zH,
                             children: [
-                                (0, a.jsx)(u.E, { variant: "text-md/normal", children: k.intl.string(k.t["Jzd+z/"]) }),
+                                (0, a.jsx)(u.E, { variant: "body-md/normal", children: k.intl.string(k.t["Jzd+z/"]) }),
                                 (0, a.jsx)(B, { name: I, onNameChange: f }),
                             ],
                         }),
@@ -119,7 +119,7 @@ function P(t) {
         ];
     j &&
         L.push({
-            stepKey: E.SUCCESS,
+            stepKey: b.SUCCESS,
             hideBackButton: !0,
             modalProps: {
                 title: k.intl.string(k.t.FXC7ZC).replace(/:([^\s:]+):/g, (t, e) => d.Ay.convertNameToSurrogate(e, t)),
@@ -132,7 +132,7 @@ function P(t) {
                 children: [
                     (0, a.jsx)("img", { className: A.Kk, alt: "", src: n(179644) }),
                     (0, a.jsx)(u.E, {
-                        variant: "text-md/normal",
+                        variant: "body-md/normal",
                         className: A.zH,
                         children: k.intl.string(k.t.e1qv6i),
                     }),

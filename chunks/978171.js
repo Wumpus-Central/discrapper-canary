@@ -69,7 +69,7 @@ let U = function (e) {
                                     children: (0, i.jsx)(N.A, { dataPoints: e.pings, width: 258, height: 80 }),
                                 }),
                                 (0, i.jsx)(f.E, {
-                                    variant: "text-sm/semibold",
+                                    variant: "body-sm/semibold",
                                     color: "text-default",
                                     className: w.VU,
                                     children: D.A.getShortHostname(t),
@@ -82,14 +82,14 @@ let U = function (e) {
                             className: w.zS,
                             children: [
                                 (0, i.jsx)(f.E, {
-                                    variant: "text-xs/normal",
+                                    variant: "body-xs/normal",
                                     color: "text-default",
                                     className: w.VU,
                                     children: x.intl.format(x.t["X58/lN"], { averagePing: n.toFixed(0) }),
                                 }),
                                 null != r
                                     ? (0, i.jsx)(f.E, {
-                                          variant: "text-xs/normal",
+                                          variant: "body-xs/normal",
                                           color: "text-default",
                                           className: w.VU,
                                           children: x.intl.format(x.t["6iv2TF"], { lastPing: r.toFixed(0) }),
@@ -97,7 +97,7 @@ let U = function (e) {
                                     : null,
                                 null != s
                                     ? (0, i.jsx)(f.E, {
-                                          variant: "text-xs/normal",
+                                          variant: "body-xs/normal",
                                           color: "text-default",
                                           className: w.VU,
                                           children: x.intl.format(x.t["VIBJM+"], { outboundLossRate: s.toFixed(1) }),
@@ -106,7 +106,7 @@ let U = function (e) {
                             ],
                         }),
                     }),
-                    (0, i.jsx)(f.E, { variant: "text-xs/normal", color: "text-muted", children: u }),
+                    (0, i.jsx)(f.E, { variant: "body-xs/normal", color: "text-muted", children: u }),
                 ],
             });
         }, [e, u]),
@@ -131,7 +131,7 @@ let U = function (e) {
         children: [
             "function" == typeof P
                 ? P()
-                : (0, i.jsx)(f.E, { tag: "p", variant: "text-sm/normal", color: "text-muted", children: P }),
+                : (0, i.jsx)(f.E, { tag: "p", variant: "body-sm/normal", color: "text-muted", children: P }),
             !__OVERLAY__ &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
@@ -168,7 +168,7 @@ let U = function (e) {
                 className: L.g4,
                 children: [
                     (0, i.jsx)(E.LockIcon, { size: "xxs", color: S.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
-                    (0, i.jsx)(f.E, { variant: "text-xs/medium", color: "text-feedback-positive", children: h }),
+                    (0, i.jsx)(f.E, { variant: "body-xs/medium", color: "text-feedback-positive", children: h }),
                 ],
             }),
         ],
@@ -198,9 +198,9 @@ function W(e) {
     return (0, i.jsxs)("div", {
         className: B.kL,
         children: [
-            (0, i.jsx)(P.D, { variant: "text-sm/semibold", color: "text-strong", children: x.intl.string(x.t.cTQI5t) }),
+            (0, i.jsx)(P.D, { variant: "body-sm/semibold", color: "text-strong", children: x.intl.string(x.t.cTQI5t) }),
             (0, i.jsx)(f.E, {
-                variant: "text-xs/normal",
+                variant: "body-xs/normal",
                 color: "text-muted",
                 children: x.intl.format(x.t.wKxADe, { helpArticle: (0, j.aW)() }),
             }),
@@ -236,14 +236,14 @@ function W(e) {
                     ],
                 }),
             (0, i.jsx)("hr", { className: L.me }),
-            (0, i.jsx)(f.E, { variant: "text-xs/normal", color: "text-subtle", children: x.intl.string(x.t.B9JNsl) }),
+            (0, i.jsx)(f.E, { variant: "body-xs/normal", color: "text-subtle", children: x.intl.string(x.t.B9JNsl) }),
             (0, i.jsxs)(I.Z, {
                 type: I.Z.Types.SUCCESS,
                 className: L.g4,
                 children: [
                     (0, i.jsx)(E.LockIcon, { size: "xxs", color: S.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
                     (0, i.jsx)(f.E, {
-                        variant: "text-xs/medium",
+                        variant: "body-xs/medium",
                         color: "text-feedback-positive",
                         children: x.intl.string(x.t["3BogKe"]),
                     }),

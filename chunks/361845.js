@@ -14,8 +14,8 @@ var n = i(477900),
     m = i(775602),
     g = i(793574),
     A = i(688810),
-    x = i(627363),
-    y = i(587895),
+    y = i(627363),
+    x = i(587895),
     R = i(590180),
     S = i(993408),
     C = i(674658),
@@ -129,7 +129,7 @@ var ti = i(946261),
     tm = i(843170),
     tg = i(105292),
     tA = i(368773);
-function tx(t) {
+function ty(t) {
     let { openedGift: e } = t,
         { createMultipleConfettiAt: i } = s.useContext(K.x);
     return (
@@ -139,7 +139,7 @@ function tx(t) {
         null
     );
 }
-function ty(t) {
+function tx(t) {
     let { step: e, soundId: i } = t;
     return (
         s.useEffect(() => {
@@ -163,7 +163,7 @@ class tR extends s.Component {
     modalRef = s.createRef();
     componentDidMount() {
         let { application: t, sku: e, customGiftMessage: i, giftCode: n, emojiName: s } = this.props;
-        null == t && null != e && x.Ay.fetchApplication(e.applicationId);
+        null == t && null != e && y.Ay.fetchApplication(e.applicationId);
         let l = null != i || null != n.giftStyle,
             a = (0, S.hU)(n),
             r = null != s ? to.Ay.getURL(s) : void 0;
@@ -306,7 +306,7 @@ class tR extends s.Component {
                 soundId: g,
             } = this.props,
             A = N.default.getUser(s.userId),
-            { isCustomGift: x, isCollectiblesGift: y, accepted: R, opened: S, emojiURL: C } = this.state,
+            { isCustomGift: y, isCollectiblesGift: x, accepted: R, opened: S, emojiURL: C } = this.state,
             I = N.default.getCurrentUser(),
             T = this.step === tt.frR.ERROR,
             j = s?.userId != null && null != I && I?.id != null && s.userId === I.id;
@@ -329,43 +329,43 @@ class tR extends s.Component {
                     parentComponent: "GiftCodeModal",
                     children: [
                         null != s.giftStyle &&
-                            !x &&
                             !y &&
+                            !x &&
                             (0, n.jsx)(v.A, {
                                 defaultAnimationState: this.getDefaultAnimationStatus(),
                                 idleAnimationState: this.getIdleAnimationStatus(),
                                 giftStyle: s.giftStyle,
                                 className: tA.C9,
                             }),
-                        !x && (0, n.jsx)("div", { className: tA.Dv }),
-                        !y && (0, n.jsx)(u.s_, { "data-migration-pending": !0, onClick: i, className: tA.b }),
+                        !y && (0, n.jsx)("div", { className: tA.Dv }),
+                        !x && (0, n.jsx)(u.s_, { "data-migration-pending": !0, onClick: i, className: tA.b }),
                         (0, n.jsxs)(u.$m, {
                             "data-migration-pending": !0,
-                            className: a()({ [tA.Qs]: !x, [tA.Fl]: x }),
+                            className: a()({ [tA.Qs]: !y, [tA.Fl]: y }),
                             children: [
-                                !y && (null == s.giftStyle || (x && R))
+                                !x && (null == s.giftStyle || (y && R))
                                     ? (0, n.jsx)($.A, { size: $.M.LARGE, game: t, skuId: s.skuId })
                                     : null,
                                 (0, n.jsxs)(d.D, {
                                     id: l,
-                                    className: a()({ [tA.Ry]: x && !R, [tA.wx]: !x || R }),
-                                    variant: "heading-sm/semibold",
+                                    className: a()({ [tA.Ry]: y && !R, [tA.wx]: !y || R }),
+                                    variant: "heading-xs/semibold",
                                     children: [
                                         (0, n.jsx)("div", {
-                                            className: a()({ [tA.Qw]: x }),
+                                            className: a()({ [tA.Qw]: y }),
                                             children: this.firstHeaderText,
                                         }),
                                         (0, n.jsx)("div", { children: this.secondHeaderText }),
                                     ],
                                 }),
-                                !(x && !R) &&
+                                !(y && !R) &&
                                     (0, n.jsx)(c.E, {
                                         className: tA.rf,
-                                        variant: "text-sm/normal",
+                                        variant: "body-sm/normal",
                                         children: this.bodyText,
                                     }),
-                                x &&
-                                    !y &&
+                                y &&
+                                    !x &&
                                     null != s.giftStyle &&
                                     !R &&
                                     !T &&
@@ -375,14 +375,14 @@ class tR extends s.Component {
                                         className: tA.l$,
                                         giftStyle: s.giftStyle,
                                     }),
-                                this.state.opened && !T && y && (0, n.jsx)(B, { giftCode: s }),
+                                this.state.opened && !T && x && (0, n.jsx)(B, { giftCode: s }),
                                 T &&
                                     (0, n.jsx)(c.E, {
                                         className: tA.rf,
-                                        variant: "text-md/normal",
+                                        variant: "body-md/normal",
                                         children: this.errorMessage,
                                     }),
-                                x &&
+                                y &&
                                     this.state.opened &&
                                     !this.state.accepted &&
                                     !T &&
@@ -393,12 +393,12 @@ class tR extends s.Component {
                                         children: [
                                             (0, n.jsx)(d.D, {
                                                 id: l,
-                                                variant: "heading-md/semibold",
+                                                variant: "heading-sm/semibold",
                                                 children: tg.intl.format(tg.t.DDO4Wz, { sender: tc.Ay.getName(A) }),
                                             }),
                                             (0, n.jsx)(c.E, {
                                                 className: tA.$B,
-                                                variant: "text-md/semibold",
+                                                variant: "body-md/semibold",
                                                 children: p,
                                             }),
                                         ],
@@ -422,17 +422,17 @@ class tR extends s.Component {
                     !e &&
                     S &&
                     (null == m || null == C
-                        ? (0, n.jsx)(tx, { openedGift: !0 })
+                        ? (0, n.jsx)(ty, { openedGift: !0 })
                         : (0, n.jsx)(tf.A, { confettiTarget: this.modalRef.current, emojiURL: C })),
-                !R && !e && S && null != g && (0, n.jsx)(ty, { soundId: g, step: this.step }),
+                !R && !e && S && null != g && (0, n.jsx)(tx, { soundId: g, step: this.step }),
             ],
         });
     }
 }
-let tS = o.Ay.connectStores([tl.A, tr.A, y.A, ts.A, ta.A, m.Ay, R.A], (t) => {
+let tS = o.Ay.connectStores([tl.A, tr.A, x.A, ts.A, ta.A, m.Ay, R.A], (t) => {
         let { giftCode: e } = t,
             i = tr.A.get(e.skuId),
-            n = null != i ? y.A.getApplication(i.applicationId) : null,
+            n = null != i ? x.A.getApplication(i.applicationId) : null,
             s = m.Ay.useReducedMotion;
         return {
             sku: i,

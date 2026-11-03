@@ -19,8 +19,8 @@ function E(e) {
             labelId: r,
             noticeText: E,
             primaryAction: h,
-            secondaryAction: x,
-            isEmphasized: b = !1,
+            secondaryAction: b,
+            isEmphasized: x = !1,
             a11yAnnounceOnShow: A,
             a11yAnnounceOnHide: _,
         } = e,
@@ -53,11 +53,11 @@ function E(e) {
                       style: e,
                       children: (0, a.jsxs)("footer", {
                           ...(!0 === t ? { [p]: "" } : null),
-                          className: s()(g.Qs, { [g.hO]: b }),
+                          className: s()(g.Qs, { [g.hO]: x }),
                           "aria-labelledby": r,
                           children: [
                               (0, a.jsx)(u.E, {
-                                  variant: "text-sm/normal",
+                                  variant: "body-sm/normal",
                                   color: "none",
                                   id: r,
                                   className: g.ut,
@@ -66,7 +66,7 @@ function E(e) {
                               (0, a.jsxs)("div", {
                                   className: g.o1,
                                   children: [
-                                      (0, a.jsx)(f.$, { variant: "secondary", size: "sm", ...x }),
+                                      (0, a.jsx)(f.$, { variant: "secondary", size: "sm", ...b }),
                                       (0, a.jsx)(f.$, { variant: "primary", size: "sm", ...h }),
                                   ],
                               }),

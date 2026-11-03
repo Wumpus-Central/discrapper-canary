@@ -1,4 +1,4 @@
-l.d(t, { default: () => j });
+l.d(t, { default: () => g });
 var a = l(477900),
     s = l(582128),
     n = l(189213),
@@ -8,111 +8,111 @@ var a = l(477900),
     d = l(957565),
     u = l(322227),
     c = l(1665),
-    x = l(564963),
-    m = l(688954);
+    m = l(564963),
+    x = l(688954);
 class h extends Error {}
 async function f(e, t) {
-    let l = await (0, m.h)(e, "/agent/secrets", { method: "PUT", json: t });
+    let l = await (0, x.h)(e, "/agent/secrets", { method: "PUT", json: t });
     if (410 === l.status) throw new h("secret request expired");
     if (!l.ok) throw Error(`secret submission failed (${l.status})`);
 }
-var p = l(809526),
-    v = l(105292),
-    g = l(622344);
-function j(e) {
-    let { projectId: t, request: l, transitionState: m, onClose: j } = e,
-        [b, _] = s.useState({}),
-        [k, w] = s.useState(!1),
-        [y, C] = s.useState(!1),
+var b = l(809526),
+    p = l(105292),
+    v = l(622344);
+function g(e) {
+    let { projectId: t, request: l, transitionState: x, onClose: g } = e,
+        [j, y] = s.useState({}),
+        [_, k] = s.useState(!1),
+        [w, C] = s.useState(!1),
         [E, q] = s.useState(null),
         S = s.useCallback((e) => {
             (0, d.C)(e, () => q(e));
         }, []),
         M = s.useCallback((e, t) => {
-            null != t && (C(!1), _((l) => ({ ...l, [t]: e })));
+            null != t && (C(!1), y((l) => ({ ...l, [t]: e })));
         }, []),
-        N = l.fields.map((e) => e.name).filter((e) => "" !== (b[e] ?? "").trim()),
+        N = l.fields.map((e) => e.name).filter((e) => "" !== (j[e] ?? "").trim()),
         U = N.length > 0,
         O = N.length < l.fields.length,
         T = s.useCallback(
             async (e) => {
-                if ((e.preventDefault(), U && !k)) {
-                    (w(!0), C(!1), !0 === l.over_mcp && (0, x.oF)(l.request_id));
+                if ((e.preventDefault(), U && !_)) {
+                    (k(!0), C(!1), !0 === l.over_mcp && (0, m.oF)(l.request_id));
                     try {
                         (await f(t, {
-                            secrets: Object.fromEntries(N.map((e) => [e, b[e].trim()])),
+                            secrets: Object.fromEntries(N.map((e) => [e, j[e].trim()])),
                             ...(null != l.request_id ? { request_id: l.request_id } : {}),
                         }),
                             !0 !== l.over_mcp &&
-                                (0, u.sendUserMessage)(t, v.intl.string(O ? p.default.sMQt5O : p.default.UGqnoV)),
-                            await j());
+                                (0, u.sendUserMessage)(t, p.intl.string(O ? b.default.sMQt5O : b.default.UGqnoV)),
+                            await g());
                     } catch (e) {
-                        if (((0, x.j$)(l.request_id), e instanceof h)) {
-                            (!0 !== l.over_mcp && (0, u.sendUserMessage)(t, v.intl.string(p.default.KVBvVy)),
-                                await j());
+                        if (((0, m.j$)(l.request_id), e instanceof h)) {
+                            (!0 !== l.over_mcp && (0, u.sendUserMessage)(t, p.intl.string(b.default.KVBvVy)),
+                                await g());
                             return;
                         }
                         C(!0);
                     } finally {
-                        w(!1);
+                        k(!1);
                     }
                 }
             },
-            [U, N, O, j, t, l.over_mcp, l.request_id, k, b],
+            [U, N, O, g, t, l.over_mcp, l.request_id, _, j],
         );
     return (0, a.jsx)("form", {
         onSubmit: T,
         children: (0, a.jsx)(n.a, {
-            transitionState: m,
-            onClose: j,
-            title: v.intl.string(p.default.TuMGZp),
+            transitionState: x,
+            onClose: g,
+            title: p.intl.string(b.default.TuMGZp),
             size: "md",
             actions: [
-                { text: v.intl.string(v.t["ETE/oC"]), variant: "secondary", onClick: j, disabled: k },
-                { text: v.intl.string(p.default.DUdtms), variant: "primary", type: "submit", loading: k, disabled: !U },
+                { text: p.intl.string(p.t["ETE/oC"]), variant: "secondary", onClick: g, disabled: _ },
+                { text: p.intl.string(b.default.DUdtms), variant: "primary", type: "submit", loading: _, disabled: !U },
             ],
             children: (0, a.jsxs)("div", {
-                className: g._I,
+                className: v._I,
                 children: [
                     null != l.note && "" !== l.note
-                        ? (0, a.jsx)(c.A, { text: l.note, variant: "text-sm/normal", color: "text-default" })
+                        ? (0, a.jsx)(c.A, { text: l.note, variant: "body-sm/normal", color: "text-default" })
                         : null,
                     (0, a.jsx)(i.E, {
-                        variant: "text-xs/normal",
+                        variant: "body-xs/normal",
                         color: "text-muted",
                         selectable: !0,
-                        children: v.intl.string(p.default.jgDBJZ),
+                        children: p.intl.string(b.default.jgDBJZ),
                     }),
                     l.fields.length > 1
                         ? (0, a.jsx)(i.E, {
-                              variant: "text-xs/normal",
+                              variant: "body-xs/normal",
                               color: "text-muted",
                               selectable: !0,
-                              children: v.intl.string(p.default["La+pe4"]),
+                              children: p.intl.string(b.default["La+pe4"]),
                           })
                         : null,
                     (l.copy_values ?? []).length > 0
                         ? (0, a.jsx)("ul", {
-                              className: g.vU,
+                              className: v.vU,
                               children: (l.copy_values ?? []).map((e) =>
                                   (0, a.jsxs)(
                                       "li",
                                       {
-                                          className: g.Jq,
+                                          className: v.Jq,
                                           children: [
                                               (0, a.jsxs)("div", {
-                                                  className: g.ll,
+                                                  className: v.ll,
                                                   children: [
                                                       (0, a.jsx)(i.E, {
-                                                          variant: "text-xs/semibold",
+                                                          variant: "body-xs/semibold",
                                                           color: "text-muted",
                                                           tag: "span",
                                                           children: e.label,
                                                       }),
                                                       (0, a.jsx)("span", {
-                                                          className: g.Ml,
+                                                          className: v.Ml,
                                                           children: (0, a.jsx)(i.E, {
-                                                              variant: "text-xs/normal",
+                                                              variant: "body-xs/normal",
                                                               color: "text-default",
                                                               selectable: !0,
                                                               children: e.value,
@@ -123,7 +123,7 @@ function j(e) {
                                               (0, a.jsx)(r.$, {
                                                   variant: "secondary",
                                                   size: "sm",
-                                                  text: v.intl.string(E === e.value ? v.t.t5VZ88 : v.t.OpuAlK),
+                                                  text: p.intl.string(E === e.value ? p.t.t5VZ88 : p.t.OpuAlK),
                                                   onClick: () => S(e.value),
                                               }),
                                           ],
@@ -137,31 +137,31 @@ function j(e) {
                         (0, a.jsxs)(
                             "div",
                             {
-                                className: g.QI,
+                                className: v.QI,
                                 children: [
                                     (0, a.jsx)(o.k, {
                                         label: e.label,
                                         name: e.name,
                                         type: "password",
                                         autoComplete: "off",
-                                        value: b[e.name] ?? "",
+                                        value: j[e.name] ?? "",
                                         onChange: M,
-                                        disabled: k,
+                                        disabled: _,
                                         fullWidth: !0,
                                     }),
                                     null != e.hint && "" !== e.hint
                                         ? (0, a.jsx)(c.A, {
                                               text: e.hint,
-                                              variant: "text-xs/normal",
+                                              variant: "body-xs/normal",
                                               color: "text-muted",
                                           })
                                         : null,
                                     (e.hosts ?? []).length > 0
                                         ? (0, a.jsx)(i.E, {
-                                              variant: "text-xs/normal",
+                                              variant: "body-xs/normal",
                                               color: "text-muted",
                                               selectable: !0,
-                                              children: v.intl.formatToPlainString(p.default.Ww9HFO, {
+                                              children: p.intl.formatToPlainString(b.default.Ww9HFO, {
                                                   hosts: (e.hosts ?? []).join(", "),
                                               }),
                                           })
@@ -171,12 +171,12 @@ function j(e) {
                             e.name,
                         ),
                     ),
-                    y
+                    w
                         ? (0, a.jsx)(i.E, {
-                              variant: "text-xs/normal",
+                              variant: "body-xs/normal",
                               color: "text-feedback-critical",
                               role: "alert",
-                              children: v.intl.string(p.default.IrMuew),
+                              children: p.intl.string(b.default.IrMuew),
                           })
                         : null,
                 ],

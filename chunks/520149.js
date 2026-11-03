@@ -11,10 +11,10 @@ function h(e) {
         className: i.uL,
         children: [
             (0, l.jsx)("img", { alt: "", className: i.bI, src: (0, r.t)(a) }),
-            (0, l.jsx)(n.E, { variant: "text-md/normal", color: "text-subtle", children: (0, s.j7)((0, s.ni)(a)) }),
-            (0, l.jsx)(n.E, { variant: "text-md/normal", color: "text-subtle", className: i.B5, children: "\u2192" }),
+            (0, l.jsx)(n.E, { variant: "body-md/normal", color: "text-subtle", children: (0, s.j7)((0, s.ni)(a)) }),
+            (0, l.jsx)(n.E, { variant: "body-md/normal", color: "text-subtle", className: i.B5, children: "\u2192" }),
             (0, l.jsx)("img", { alt: "", className: i.bI, src: (0, r.t)(t) }),
-            (0, l.jsx)(n.E, { variant: "text-md/normal", color: "text-subtle", children: (0, s.j7)((0, s.ni)(t)) }),
+            (0, l.jsx)(n.E, { variant: "body-md/normal", color: "text-subtle", children: (0, s.j7)((0, s.ni)(t)) }),
         ],
     });
 }

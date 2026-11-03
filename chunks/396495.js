@@ -7,8 +7,8 @@ var l = t(503698),
     r = t(862482),
     o = t(789645),
     c = t(834730),
-    u = t(403581),
-    d = t(139286),
+    d = t(403581),
+    u = t(139286),
     A = t(174459),
     h = t(222643),
     m = t(652215),
@@ -17,7 +17,7 @@ var l = t(503698),
 function C(e) {
     let { hidden: n, onDismiss: t } = e;
     return (
-        (0, d.A)({ type: a.ImpressionTypes.VIEW, name: a.ImpressionNames.HD_STREAMING_POPOUT }, { disableTrack: n }, [
+        (0, u.A)({ type: a.ImpressionTypes.VIEW, name: a.ImpressionNames.HD_STREAMING_POPOUT }, { disableTrack: n }, [
             n,
         ]),
         (0, i.jsxs)("div", {
@@ -46,16 +46,16 @@ function C(e) {
                         children: [
                             (0, i.jsx)(c.E, {
                                 className: x.aV,
-                                variant: "text-sm/medium",
+                                variant: "body-sm/medium",
                                 children: g.intl.format(g.t.ruvD7i, {}),
                             }),
                             (0, i.jsxs)("div", {
                                 className: x.vX,
                                 children: [
-                                    (0, i.jsx)(u.t, { size: "xs" }),
+                                    (0, i.jsx)(d.t, { size: "xs" }),
                                     (0, i.jsx)(c.E, {
                                         className: x.aV,
-                                        variant: "text-sm/medium",
+                                        variant: "body-sm/medium",
                                         children: g.intl.string(g.t["BMw+7I"]),
                                     }),
                                 ],

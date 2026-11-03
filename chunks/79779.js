@@ -16,8 +16,8 @@ function d(t) {
             onFormSubmit: n,
             onResend: d,
             onSuccess: h,
-            onClose: x,
-            headerText: f,
+            onClose: f,
+            headerText: x,
             confirmButtonText: m,
             confirmButtonVariant: k = "primary",
             impression: b,
@@ -31,7 +31,7 @@ function d(t) {
         (t.preventDefault(), M(null), w(!0));
         try {
             let t = await n(C);
-            (null != h && h(t), x());
+            (null != h && h(t), f());
         } catch (t) {
             M(new p.A(t).getAnyErrorMessage());
         } finally {
@@ -58,13 +58,13 @@ function d(t) {
             transitionState: e,
             trackingProps: { impression: b, impressionType: s.ImpressionTypes.MODAL },
             graphic: { src: g, type: "image" },
-            title: f,
+            title: x,
             subtitle: y.intl.string(y.t.SZJowy),
             actions: [
-                { text: y.intl.string(y.t["ETE/oC"]), onClick: x, variant: "secondary", disabled: Q },
+                { text: y.intl.string(y.t["ETE/oC"]), onClick: f, variant: "secondary", disabled: Q },
                 { text: m, variant: k, loading: Q, type: "submit" },
             ],
-            onClose: x,
+            onClose: f,
             children: (0, i.jsxs)(c.B, {
                 gap: 8,
                 children: [
@@ -75,7 +75,7 @@ function d(t) {
                         onChange: S,
                         inputRef: P,
                     }),
-                    (0, i.jsx)(u.Q, { textVariant: "text-sm/normal", text: y.intl.string(y.t.K0NPQ6), onClick: D }),
+                    (0, i.jsx)(u.Q, { textVariant: "body-sm/normal", text: y.intl.string(y.t.K0NPQ6), onClick: D }),
                 ],
             }),
         }),

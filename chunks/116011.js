@@ -3,8 +3,8 @@ var i,
     a = n(477900),
     r = n(582128),
     l = n(834730),
-    s = n(947641),
-    o = n(661531),
+    o = n(947641),
+    s = n(661531),
     d = n(408278),
     c = n(624479),
     u = n(821609),
@@ -32,7 +32,7 @@ function I() {
         className: `${x.G9} ${x.sQ}`,
         children: [
             (0, a.jsx)(l.E, {
-                variant: "text-sm/normal",
+                variant: "body-sm/normal",
                 color: "text-muted",
                 className: x.kT,
                 children: N.intl.format(h.default["65EEvD"], { days: t }),
@@ -51,7 +51,7 @@ function y(e) {
 }
 let L = (e) => {
     let { recurrence: t, analyticsLocations: n = [] } = e,
-        i = (0, a.jsx)(s.r, { color: o.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
+        i = (0, a.jsx)(o.r, { color: s.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
         m = (0, a.jsx)("span", {
             className: x.nP,
             children: (0, a.jsx)(d.K, {
@@ -82,7 +82,7 @@ let L = (e) => {
                     (0, a.jsx)("div", {
                         className: x.cD,
                         children: (0, a.jsx)(l.E, {
-                            variant: "text-md/medium",
+                            variant: "body-md/medium",
                             color: "text-strong",
                             children: t.code,
                         }),
@@ -118,8 +118,8 @@ function M(e) {
         hasClaimError: i,
         setCode: r,
         setHasClaimError: l,
-        className: s,
-        analyticsLocations: o = [],
+        className: o,
+        analyticsLocations: s = [],
         onClaim: d,
         onClaimError: c,
         isClaiming: g,
@@ -127,7 +127,7 @@ function M(e) {
     return n
         ? i
             ? (0, a.jsx)("div", {
-                  className: s,
+                  className: o,
                   children: (0, a.jsx)(u.$, {
                       icon: m.E,
                       variant: "critical-secondary",
@@ -137,7 +137,7 @@ function M(e) {
                   }),
               })
             : (0, a.jsx)("div", {
-                  className: s,
+                  className: o,
                   children: (0, a.jsx)(u.$, {
                       icon: f.LockIcon,
                       variant: "secondary",
@@ -151,7 +151,7 @@ function M(e) {
                                     promotionId: t.id,
                                     promotionTitle: t.outboundTitle,
                                     partnerId: t.partnerId,
-                                    analyticsLocations: o,
+                                    analyticsLocations: s,
                                 }).then((e) => ((0, O.LI)(e), e.code))
                           )
                               .then((e) => {
@@ -172,8 +172,8 @@ function U(e) {
             titleClassName: n,
             partnerLogo: i,
             showPartnerImage: l = !1,
-            roundPromotionImage: s = !1,
-            titleVariant: o = "primary",
+            roundPromotionImage: o = !1,
+            titleVariant: s = "primary",
             claimButtonPlacement: d = "inline",
             footerContent: c,
             analyticsLocations: u = [],
@@ -199,7 +199,7 @@ function U(e) {
                                 className: null != n ? `${x.yO} ${n}` : x.yO,
                                 children: [
                                     (0, a.jsx)(g.D, {
-                                        variant: "secondary" === o ? "heading-md/semibold" : "heading-lg/semibold",
+                                        variant: "secondary" === s ? "heading-sm/semibold" : "heading-lg/semibold",
                                         color: "text-strong",
                                         children: t.title,
                                     }),
@@ -208,7 +208,7 @@ function U(e) {
                                         gap: 8,
                                         children: [
                                             (0, a.jsx)(g.D, {
-                                                variant: "heading-sm/medium",
+                                                variant: "heading-xs/medium",
                                                 color: "text-subtle",
                                                 children: _
                                                     ? N.intl.format(N.t.i2EuFO, {
@@ -222,7 +222,7 @@ function U(e) {
                                             }),
                                             null != t.bodyNote &&
                                                 (0, a.jsx)(g.D, {
-                                                    variant: "heading-sm/medium",
+                                                    variant: "heading-xs/medium",
                                                     color: "text-subtle",
                                                     children: N.intl.format(t.bodyNote, {
                                                         partnerName: R.CD[t.partnerId].label,
@@ -254,7 +254,7 @@ function U(e) {
                             children: (0, a.jsx)(p._, {
                                 src: t.asset ?? "",
                                 className: x.Ys,
-                                imageClassName: s || t.partnerId === R.XY ? x.Cy : void 0,
+                                imageClassName: o || t.partnerId === R.XY ? x.Cy : void 0,
                                 width: 100,
                                 height: 100,
                                 zoomable: !1,

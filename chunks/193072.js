@@ -96,7 +96,7 @@ function V(e) {
                                   : { item: g, checked: u, onChange: c, disabled: !n.canRemovePreviewBot },
                       })
                     : null,
-                null != y ? (0, r.jsx)(K.E, { variant: "text-sm/normal", color: "text-muted", children: y }) : null,
+                null != y ? (0, r.jsx)(K.E, { variant: "body-sm/normal", color: "text-muted", children: y }) : null,
             ],
         }),
     });

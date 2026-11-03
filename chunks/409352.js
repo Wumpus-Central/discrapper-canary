@@ -22,19 +22,19 @@ function N(e) {
     return (0, i.jsx)(p.VP, {
         ...t,
         className: v.fi,
-        children: (0, i.jsx)(x.E, { variant: "eyebrow", className: v.QP, children: s }),
+        children: (0, i.jsx)(x.E, { variant: "body-sm/medium", className: v.QP, children: s }),
     });
 }
 function g(e) {
     return (0, i.jsx)(p.fI, { ...e, className: v.nM });
 }
-function C(e) {
+function y(e) {
     return (0, i.jsx)(p.BF, { ...e, className: v.rf });
 }
-function E(e) {
+function C(e) {
     return (0, i.jsx)(p.A0, { ...e, className: v.wx });
 }
-function y(e) {
+function E(e) {
     let { header: s, footer: t, children: n, ...r } = e;
     return (0, i.jsx)("div", {
         className: v.kL,
@@ -51,9 +51,9 @@ function y(e) {
 }
 var I = t(331322),
     f = t(408278),
-    k = t(241326),
-    w = t(396478),
-    b = t(376728),
+    b = t(241326),
+    k = t(396478),
+    w = t(376728),
     R = t(414079),
     D = t(297413),
     S = t(966327),
@@ -100,7 +100,7 @@ class q extends n.PureComponent {
                     className: K.Kf,
                     children: (0, i.jsx)(x.E, {
                         className: K.aY,
-                        variant: "text-sm/normal",
+                        variant: "body-sm/normal",
                         children: t ? "..." : e.code,
                     }),
                 }),
@@ -114,7 +114,7 @@ class q extends n.PureComponent {
                     children: [
                         (0, i.jsx)(x.E, {
                             className: K.qW,
-                            variant: "text-sm/normal",
+                            variant: "body-sm/normal",
                             children: (0, i.jsx)(L.A, { deadline: e.getExpiresAt(), showDays: !1 }),
                         }),
                         (0, i.jsx)(R.A, { className: K.eb, onClick: this.handleRevokeInvite }),
@@ -154,18 +154,18 @@ class V extends n.PureComponent {
             .value();
         return (0, i.jsx)(j.Gt, {
             orientation: "horizontal",
-            children: (0, i.jsxs)(y, {
+            children: (0, i.jsxs)(E, {
                 "aria-label": W.intl.string(W.t["9F90ic"]),
                 selectionMode: "none",
                 children: [
-                    (0, i.jsxs)(E, {
+                    (0, i.jsxs)(C, {
                         children: [
                             (0, i.jsx)(N, { isRowHeader: !0, children: W.intl.string(W.t.EgHyKy) }),
                             (0, i.jsx)(N, { children: W.intl.string(W.t.LBlFEN) }),
                             (0, i.jsx)(N, { children: W.intl.string(W.t["1aM27d"]) }),
                         ],
                     }),
-                    (0, i.jsx)(C, {
+                    (0, i.jsx)(y, {
                         items: r,
                         children: (e) => {
                             let s = new G.A(e.inviter);
@@ -186,7 +186,7 @@ class V extends n.PureComponent {
                                     (0, i.jsx)(A, {
                                         children: (0, i.jsx)(x.E, {
                                             className: K.aY,
-                                            variant: "text-sm/normal",
+                                            variant: "body-sm/normal",
                                             children: n ? "..." : e.code,
                                         }),
                                     }),
@@ -198,7 +198,7 @@ class V extends n.PureComponent {
                                             children: [
                                                 (0, i.jsx)(x.E, {
                                                     className: K.qW,
-                                                    variant: "text-sm/normal",
+                                                    variant: "body-sm/normal",
                                                     children: (0, i.jsx)(L.A, {
                                                         deadline: e.getExpiresAt(),
                                                         showDays: !1,
@@ -208,7 +208,7 @@ class V extends n.PureComponent {
                                                     size: "sm",
                                                     "aria-label": W.intl.string(W.t.N86XcP),
                                                     variant: "critical-secondary",
-                                                    icon: k.TrashIcon,
+                                                    icon: b.TrashIcon,
                                                     onClick: () => this.handleRevoke(e),
                                                 }),
                                             ],
@@ -223,17 +223,17 @@ class V extends n.PureComponent {
         });
     }
     renderEmpty() {
-        return (0, i.jsxs)(w.pp, {
+        return (0, i.jsxs)(k.pp, {
             theme: this.props.theme,
             children: [
-                (0, i.jsx)(w.G8, {
+                (0, i.jsx)(k.G8, {
                     darkSrc: t(774125),
                     lightSrc: t(151803),
                     width: 256,
                     height: 130,
                     style: { marginBottom: 0 },
                 }),
-                (0, i.jsx)(w.SG, { className: Q.QX, children: W.intl.string(W.t["03/rlQ"]) }),
+                (0, i.jsx)(k.SG, { className: Q.QX, children: W.intl.string(W.t["03/rlQ"]) }),
             ],
         });
     }
@@ -262,7 +262,7 @@ class V extends n.PureComponent {
         });
     }
     handleRevoke = (e) => {
-        (b.Ay.revokeInvite(e), this.setState({ invites: this.state.invites.filter((s) => s !== e) }));
+        (w.Ay.revokeInvite(e), this.setState({ invites: this.state.invites.filter((s) => s !== e) }));
     };
     handleClose = () => {
         let { onClose: e } = this.props;

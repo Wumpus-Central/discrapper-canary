@@ -11,21 +11,21 @@ var l = n(477900),
     m = n(738188),
     f = n(256905),
     h = n(922329),
-    x = n(919790),
-    p = n(463660),
-    k = n(115982),
+    p = n(919790),
+    k = n(463660),
+    x = n(115982),
     g = n(17928),
     _ = n(778712),
     j = n(730134),
-    v = n(287809),
-    b = n(427262),
+    b = n(287809),
+    v = n(427262),
     y = n(809526),
     w = n(105292),
     N = n(59678);
 function S(e) {
     let { userId: t } = e,
-        n = (0, g.bG)([v.default], () => v.default.getUser(t), [t]),
-        a = (0, b.tx)(n);
+        n = (0, g.bG)([b.default], () => b.default.getUser(t), [t]),
+        a = (0, v.tx)(n);
     if (null == n || null == a) return null;
     let s = w.intl.formatToPlainString(y.default["664n2O"], { name: a });
     return (0, l.jsx)(c.m, {
@@ -43,20 +43,20 @@ var A = n(60160),
     C = n(162052);
 function E(e) {
     let { projectId: t, node: n, presentation: s = "row", active: f = !1 } = e,
-        [h, p] = a.useState(!1),
+        [h, k] = a.useState(!1),
         g = a.useId(),
-        _ = a.useCallback(() => p((e) => !e), []),
-        j = (0, k.WQ)(n),
-        v = n.detail,
-        b = "failed" === n.status ? "text-feedback-critical" : "detail" === s ? "text-muted" : "text-default",
-        E = "text-muted" === b,
-        I = f && E ? "none" : h && E ? "currentColor" : b,
+        _ = a.useCallback(() => k((e) => !e), []),
+        j = (0, x.WQ)(n),
+        b = n.detail,
+        v = "failed" === n.status ? "text-feedback-critical" : "detail" === s ? "text-muted" : "text-default",
+        E = "text-muted" === v,
+        I = f && E ? "none" : h && E ? "currentColor" : v,
         $ = r()(N.iq, { [C.Hz]: f && E }),
-        M = "detail" === s ? "text-md/normal" : "text-sm/normal",
-        K = "detail" === s ? "text-sm/normal" : "text-xs/normal",
+        M = "detail" === s ? "body-md/normal" : "body-sm/normal",
+        K = "detail" === s ? "body-sm/normal" : "body-xs/normal",
         B = null != t ? n.screenshots : [],
         W = null != t ? n.attachments : [];
-    if (0 === v.length && 0 === B.length && 0 === W.length)
+    if (0 === b.length && 0 === B.length && 0 === W.length)
         return (0, l.jsx)("li", {
             "data-step-kind": n.labelKey ?? "step",
             "data-conjure-entrance": !0,
@@ -100,7 +100,7 @@ function E(e) {
                 "data-conjure-entrance": !0,
                 className: N.yJ,
                 children: [
-                    v.map((e, t) => {
+                    b.map((e, t) => {
                         let a = n.detailDrivenBy[t],
                             s = n.detailError[t] ?? null;
                         return (0, l.jsxs)(
@@ -143,7 +143,7 @@ function E(e) {
                               children: B.map((e) => (0, l.jsx)(T, { projectId: t, screenshotId: e }, e)),
                           })
                         : null,
-                    null != t && W.length > 0 ? (0, l.jsx)(x.A, { projectId: t, attachments: W }) : null,
+                    null != t && W.length > 0 ? (0, l.jsx)(p.A, { projectId: t, attachments: W }) : null,
                 ],
             }),
         ],
@@ -157,7 +157,7 @@ function T(e) {
     a.useEffect(() => {
         let e = !1;
         return (
-            (0, p.aF)(t, n).then(
+            (0, k.aF)(t, n).then(
                 (t) => {
                     e || r(t);
                 },
@@ -172,7 +172,7 @@ function T(e) {
     }, [t, n]);
     let d = w.intl.string(y.default["5kjnI/"]),
         o = a.useCallback(() => {
-            (0, p.aF)(t, n).then((e) => {
+            (0, k.aF)(t, n).then((e) => {
                 (0, f.R)({
                     items: [{ type: "IMAGE", url: e, alt: d }],
                     startingIndex: 0,

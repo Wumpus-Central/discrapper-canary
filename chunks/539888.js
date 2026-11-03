@@ -9,10 +9,10 @@ var n = l(477900),
     o = l(22231),
     u = l(241326),
     m = l(331322),
-    x = l(834730),
-    f = l(104510),
-    g = l(661531),
-    h = l(821609),
+    f = l(834730),
+    g = l(104510),
+    h = l(661531),
+    x = l(821609),
     p = l(645619),
     j = l(915667),
     _ = l(451395),
@@ -26,11 +26,11 @@ let N = [
     { avatar: A.A, topBarWidth: "48%", bottomBarWidths: ["26%", "100%"] },
     { avatar: I.A, topBarWidth: "96%", bottomBarWidths: ["26%", "24%"] },
 ];
-function C(e) {
+function y(e) {
     let { width: t } = e;
     return (0, n.jsx)("div", { className: E.M0, style: { width: t } });
 }
-function S(e) {
+function C(e) {
     let { rank: t, row: l } = e;
     return (0, n.jsxs)("div", {
         className: E.nM,
@@ -38,8 +38,8 @@ function S(e) {
             (0, n.jsx)("div", {
                 className: E.Tm,
                 "aria-hidden": !0,
-                children: (0, n.jsx)(x.E, {
-                    variant: "text-xs/medium",
+                children: (0, n.jsx)(f.E, {
+                    variant: "body-xs/medium",
                     color: "text-muted",
                     className: E._k,
                     children: t,
@@ -50,12 +50,12 @@ function S(e) {
                 className: E.n_,
                 "aria-hidden": !0,
                 children: [
-                    (0, n.jsx)(C, { width: l.topBarWidth }),
+                    (0, n.jsx)(y, { width: l.topBarWidth }),
                     (0, n.jsxs)("div", {
                         className: E.O3,
                         children: [
-                            (0, n.jsx)(C, { width: l.bottomBarWidths[0] }),
-                            (0, n.jsx)(C, { width: l.bottomBarWidths[1] }),
+                            (0, n.jsx)(y, { width: l.bottomBarWidths[0] }),
+                            (0, n.jsx)(y, { width: l.bottomBarWidths[1] }),
                         ],
                     }),
                 ],
@@ -63,8 +63,8 @@ function S(e) {
         ],
     });
 }
-function y() {
-    return (0, n.jsx)("div", { className: E.kL, children: N.map((e, t) => (0, n.jsx)(S, { rank: t + 1, row: e }, t)) });
+function S() {
+    return (0, n.jsx)("div", { className: E.kL, children: N.map((e, t) => (0, n.jsx)(C, { rank: t + 1, row: e }, t)) });
 }
 var k = l(562073),
     T = l(189213),
@@ -81,9 +81,9 @@ function U(e) {
         accessory: s,
         disabled: r = !1,
         dragHandleRef: m,
-        canEdit: x = !1,
-        onEdit: f,
-        onRemove: g,
+        canEdit: f = !1,
+        onEdit: g,
+        onRemove: h,
     } = e;
     return (0, n.jsxs)("div", {
         className: a()(M.wx, { [M.kZ]: null != m }),
@@ -112,7 +112,7 @@ function U(e) {
             (0, n.jsxs)("div", {
                 className: M.o1,
                 children: [
-                    x &&
+                    f &&
                         (0, n.jsx)(d.m, {
                             text: L.intl.string(L.t.bt75uw),
                             children: (0, n.jsx)(c.K, {
@@ -121,10 +121,10 @@ function U(e) {
                                 icon: o.PencilIcon,
                                 "aria-label": L.intl.string(L.t.bt75uw),
                                 disabled: r,
-                                onClick: f,
+                                onClick: g,
                             }),
                         }),
-                    null != g &&
+                    null != h &&
                         (0, n.jsx)(d.m, {
                             text: L.intl.string(L.t.Mm07Yc),
                             children: (0, n.jsx)(c.K, {
@@ -136,7 +136,7 @@ function U(e) {
                                         ? L.intl.string(L.t.Mm07Yc)
                                         : L.intl.formatToPlainString(D.default.hmNYxk, { widgetName: l }),
                                 disabled: r,
-                                onClick: g,
+                                onClick: h,
                             }),
                         }),
                 ],
@@ -179,14 +179,14 @@ function P(e) {
                 children: [
                     (0, n.jsx)("div", {
                         className: M.$x,
-                        children: null != s ? (0, n.jsx)(s, { alt: "", ariaHidden: !0 }) : (0, n.jsx)(y, {}),
+                        children: null != s ? (0, n.jsx)(s, { alt: "", ariaHidden: !0 }) : (0, n.jsx)(S, {}),
                     }),
                     (0, n.jsxs)(m.B, {
                         align: "center",
                         gap: 8,
                         children: [
-                            (0, n.jsx)(x.E, {
-                                variant: "text-md/semibold",
+                            (0, n.jsx)(f.E, {
+                                variant: "body-md/semibold",
                                 color: "text-default",
                                 children: L.intl.formatToPlainString(D.default.G5zCGV, { widgetName: t }),
                             }),
@@ -198,12 +198,12 @@ function P(e) {
                                     justify: "center",
                                     gap: 4,
                                     children: [
-                                        (0, n.jsx)(f._, {
+                                        (0, n.jsx)(g._, {
                                             size: "sm",
-                                            color: g.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                                            color: h.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
                                         }),
-                                        (0, n.jsx)(x.E, {
-                                            variant: "text-sm/normal",
+                                        (0, n.jsx)(f.E, {
+                                            variant: "body-sm/normal",
                                             color: "text-muted",
                                             children: L.intl.format(D.default["8wD0Un"], { boostPrice: l }),
                                         }),
@@ -213,10 +213,10 @@ function P(e) {
                     }),
                 ],
             }),
-            (0, n.jsx)(h.$, {
+            (0, n.jsx)(x.$, {
                 variant: "expressive",
                 size: "sm",
-                icon: f._,
+                icon: g._,
                 text: L.intl.string(L.t["+7XY31"]),
                 disabled: null == d,
                 loading: null != i && null == d,
@@ -240,7 +240,7 @@ function O(e) {
             lock: u,
         } = e,
         m = R.m[l.type],
-        x = i.useCallback(() => {
+        f = i.useCallback(() => {
             m?.Edit != null &&
                 null != d &&
                 null == u &&
@@ -266,55 +266,55 @@ function O(e) {
                 })({ widget: l, Edit: m.Edit, onCommit: d }));
         }, [l, m, d, u, t]);
     if (null == m) return null;
-    let { View: f, Edit: g, HeaderAccessory: h, HeaderActions: p, Title: j, TitleIcon: _, ViewHeaderTrailing: b } = m,
+    let { View: g, Edit: h, HeaderAccessory: x, HeaderActions: p, Title: j, TitleIcon: _, ViewHeaderTrailing: b } = m,
         A = "edit" === s,
-        I = null != g && null != d && null == u,
-        E = null != h ? (0, n.jsx)(h, { hydration: a, guildId: t }) : null,
+        I = null != h && null != d && null == u,
+        E = null != x ? (0, n.jsx)(x, { hydration: a, guildId: t }) : null,
         N = null != _ ? (0, n.jsx)(_, { hydration: a }) : null,
-        C = null == u && null != p ? (0, n.jsx)(p, { hydration: a, guildId: t, column: l.position.column }) : null,
-        S = l.default_title ?? "",
-        y =
+        y = null == u && null != p ? (0, n.jsx)(p, { hydration: a, guildId: t, column: l.position.column }) : null,
+        C = l.default_title ?? "",
+        S =
             null != j && null == u
                 ? (0, n.jsx)(j, { widget: l, hydration: a, guildSpaceMode: s, guildId: t })
-                : (0, n.jsx)(k.q, { children: S });
+                : (0, n.jsx)(k.q, { children: C });
     return (0, n.jsxs)("div", {
         className: M.kL,
         "data-guild-space-widget": "",
         children: [
             A
                 ? (0, n.jsx)(U, {
-                      title: y,
-                      widgetName: S,
+                      title: S,
+                      widgetName: C,
                       titleIcon: N,
                       accessory: E,
                       disabled: o,
                       dragHandleRef: c,
                       canEdit: I,
-                      onEdit: x,
+                      onEdit: f,
                       onRemove: r,
                   })
                 : (0, n.jsx)(G, {
-                      title: y,
+                      title: S,
                       titleIcon: N,
                       accessory: E,
                       trailing:
                           null != b && null == u
-                              ? (0, n.jsx)(b, { widget: l, hydration: a, title: S, guildId: t })
+                              ? (0, n.jsx)(b, { widget: l, hydration: a, title: C, guildId: t })
                               : null,
-                      actions: C,
+                      actions: y,
                   }),
             (0, n.jsx)("div", {
                 className: M.rf,
                 children:
                     null != u
                         ? (0, n.jsx)(P, {
-                              title: S,
+                              title: C,
                               boostPrice: u.boostPrice,
                               powerupSkuId: u.powerupSkuId,
                               LockedPreview: m.LockedPreview,
                               guildId: t,
                           })
-                        : (0, n.jsx)(f, { widget: l, hydration: a, guildSpaceMode: s, guildId: t }),
+                        : (0, n.jsx)(g, { widget: l, hydration: a, guildSpaceMode: s, guildId: t }),
             }),
         ],
     });

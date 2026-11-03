@@ -1,4 +1,4 @@
-(r.r(e), r.d(e, { default: () => D }));
+(r.r(e), r.d(e, { default: () => y }));
 var a = r(477900),
     i = r(582128),
     n = r(132500),
@@ -21,8 +21,8 @@ var f = r(17928),
     x = r(976860),
     v = r(287809),
     P = r(257269),
-    g = r(105292);
-function k(t) {
+    b = r(105292);
+function g(t) {
     let { match: e } = t,
         r = (0, x.UC)() ?? [],
         { analyticsLocations: a } = (0, A.Ay)([...r, I.A.ACTIVITY_DETAIL_PAGE]),
@@ -56,7 +56,7 @@ function k(t) {
         }, [a, n, l, c]),
         i.useEffect(() => {
             let t = setTimeout(() => {
-                null == l && m.A.show({ title: g.intl.string(g.t.PtobXW), body: g.intl.string(g.t["IOy+I5"]) });
+                null == l && m.A.show({ title: b.intl.string(b.t.PtobXW), body: b.intl.string(b.t["IOy+I5"]) });
             }, 5e3);
             return () => {
                 clearTimeout(t);
@@ -65,10 +65,10 @@ function k(t) {
         null
     );
 }
-var C = r(652215),
-    b = r(613057),
+var k = r(652215),
+    C = r(613057),
     w = r(168071);
-function D(t) {
+function y(t) {
     let { applicationId: e } = t.match.params,
         [f, m] = i.useState(!1),
         _ = i.useRef(!1),
@@ -82,14 +82,14 @@ function D(t) {
                 .then(r.bind(r, 129014))
                 .then((t) => {
                     let { default: r } = t;
-                    r.request(C.e$_.DEEP_LINK, {
-                        type: b.XK.ACTIVITIES,
+                    r.request(k.e$_.DEEP_LINK, {
+                        type: C.XK.ACTIVITIES,
                         params: { applicationId: e, url: location.href, attemptId: E },
                     })
                         .then((t) => {
                             let r = t ?? !1;
                             (I(r),
-                                o.default.track(C.HAw.ACTIVITY_DEEP_LINK_ATTEMPTED, {
+                                o.default.track(k.HAw.ACTIVITY_DEEP_LINK_ATTEMPTED, {
                                     application_id: e,
                                     source_url: location.href,
                                     attempt_id: E,
@@ -98,7 +98,7 @@ function D(t) {
                         })
                         .catch(() => {
                             (I(!1),
-                                o.default.track(C.HAw.ACTIVITY_DEEP_LINK_ATTEMPTED, {
+                                o.default.track(k.HAw.ACTIVITY_DEEP_LINK_ATTEMPTED, {
                                     application_id: e,
                                     source_url: location.href,
                                     attempt_id: E,
@@ -114,17 +114,17 @@ function D(t) {
             ? (0, a.jsxs)("div", {
                   className: w.k,
                   children: [
-                      (0, a.jsx)(c.D, { variant: "heading-xxl/semibold", children: g.intl.string(g.t.csrAMJ) }),
-                      (0, a.jsx)(u.E, { variant: "text-xs/semibold", children: g.intl.string(g.t["m1+IBn"]) }),
-                      (0, a.jsx)(l.$, { variant: "primary", text: g.intl.string(g.t.fIv16B), onClick: () => m(!0) }),
+                      (0, a.jsx)(c.D, { variant: "heading-xxl/semibold", children: b.intl.string(b.t.csrAMJ) }),
+                      (0, a.jsx)(u.E, { variant: "body-xs/semibold", children: b.intl.string(b.t["m1+IBn"]) }),
+                      (0, a.jsx)(l.$, { variant: "primary", text: b.intl.string(b.t.fIv16B), onClick: () => m(!0) }),
                   ],
               })
             : (0, a.jsxs)("div", {
                   className: w.k,
                   children: [
-                      (0, a.jsx)(c.D, { variant: "heading-xxl/semibold", children: g.intl.string(g.t["Z+hCVU"]) }),
+                      (0, a.jsx)(c.D, { variant: "heading-xxl/semibold", children: b.intl.string(b.t["Z+hCVU"]) }),
                       (0, a.jsx)(d.y, {}),
                   ],
               })
-        : (0, a.jsx)(k, { ...t });
+        : (0, a.jsx)(g, { ...t });
 }

@@ -16,8 +16,8 @@ var i,
     m = n(146151),
     C = n(983851),
     I = n(597050),
-    N = n(56059),
-    b = n(434831),
+    b = n(56059),
+    N = n(434831),
     S = n(532590),
     _ = n(191023),
     f = n(778492),
@@ -152,8 +152,8 @@ let eC = (0, ea.mj)({
     variations: { 1: { enabled: !0 } },
 });
 var eI = n(807632),
-    eN = n(778747),
-    eb = n(471677),
+    eb = n(778747),
+    eN = n(471677),
     eS = n(219444);
 n(938796);
 var e_ = n(279116),
@@ -198,7 +198,7 @@ function eV() {
         layout: "horizontal",
         role: "group",
         children: (0, l.jsx)(U.E, {
-            variant: "text-md/normal",
+            variant: "body-md/normal",
             color: "text-muted",
             children: q.intl.string(q.t.PoWNfe),
         }),
@@ -313,7 +313,7 @@ function e9(e) {
         ? null
         : (0, l.jsx)(l.Fragment, {
               children: h.map((e, t) =>
-                  (0, l.jsx)(U.E, { className: i, variant: "text-sm/normal", children: e }, `description-${t}`),
+                  (0, l.jsx)(U.E, { className: i, variant: "body-sm/normal", children: e }, `description-${t}`),
               ),
           });
 }
@@ -357,15 +357,15 @@ function to(e) {
         } = e,
         [A, m] = a.useState(""),
         [C, I] = a.useState({}),
-        N = a.useRef(null),
-        b = (0, g.bG)([ej.A], () => ej.A.getGuild(u)),
+        b = a.useRef(null),
+        N = (0, g.bG)([ej.A], () => ej.A.getGuild(u)),
         S = s === eH.rbe.GUILD_STAGE_VOICE,
-        { roles: _, members: f, getRichTag: O } = (0, eh.K)(b, null, S ? ez.QY : (0, eK.TA)(s), A, S),
+        { roles: _, members: f, getRichTag: O } = (0, eh.K)(N, null, S ? ez.QY : (0, eK.TA)(s), A, S),
         L = eu.A.useSections({ roles: _, members: f });
     return (a.useEffect(() => {
         p(C);
     }, [C, p]),
-    null == b)
+    null == N)
         ? null
         : ((t =
               0 === Object.keys(E).length
@@ -374,7 +374,7 @@ function to(e) {
                     ? q.intl.string(q.t["ISN+NM"])
                     : q.intl.string(q.t["fUYU+j"])),
           (0, l.jsx)(eu.A.Provider, {
-              listRef: N,
+              listRef: b,
               query: A,
               setQuery: m,
               pendingAdditions: C,
@@ -393,14 +393,14 @@ function to(e) {
                               ? (0, l.jsx)(U.E, {
                                     color: "text-default",
                                     className: tl.h_,
-                                    variant: "text-sm/normal",
+                                    variant: "body-sm/normal",
                                     children: q.intl.string(q.t.f7VbhF),
                                 })
                               : void 0,
                           (0, l.jsx)(eu.A.SearchBox, { placeholderText: q.intl.string(q.t.iezLLn) }),
                           (0, l.jsx)(U.E, {
                               className: tl.pK,
-                              variant: "text-xs/normal",
+                              variant: "body-xs/normal",
                               children: q.intl.string(q.t.rwFx85),
                           }),
                       ],
@@ -609,26 +609,26 @@ class tu extends a.PureComponent {
                 branchId: m,
                 applicationId: C,
                 isPrivate: I,
-                contentFlags: N,
+                contentFlags: b,
             } = this.state,
-            b = ts(E),
-            S = ((E === ta ? e4.lx.IS_GAME_INVITES_CHANNEL : null) ?? 0) | N | ((l?.flags ?? 0) & eM),
+            N = ts(E),
+            S = ((E === ta ? e4.lx.IS_GAME_INVITES_CHANNEL : null) ?? 0) | b | ((l?.flags ?? 0) & eM),
             _ = (function (e) {
                 if (e === ta) return [{ name: eI.Dg }];
             })(E),
             f = this.getGuildId();
         if (null != f) {
             if (null != l) ((t = h().values(l.permissionOverwrites)), (n = l.bitrate), (i = l.userLimit));
-            else if (b === eH.rbe.GUILD_ANNOUNCEMENT) t = (0, e1.IP)(f);
+            else if (N === eH.rbe.GUILD_ANNOUNCEMENT) t = (0, e1.IP)(f);
             else {
                 if (I) {
-                    t = (0, e1.CG)(f, b, [], !0);
-                    let e = (0, ed.D4)(p, b);
+                    t = (0, e1.CG)(f, N, [], !0);
+                    let e = (0, ed.D4)(p, N);
                     e.length > 0 && (t = t.concat(e));
                     let n = null != u && s.id === u.id;
-                    t.some((e) => r.has(e.id)) || o || n || t.push((0, e1.n3)(s.id, b));
+                    t.some((e) => r.has(e.id)) || o || n || t.push((0, e1.n3)(s.id, N));
                 }
-                b === eH.rbe.GUILD_STAGE_VOICE &&
+                N === eH.rbe.GUILD_STAGE_VOICE &&
                     ((t = []),
                     Object.values(p).forEach((e) => {
                         let { row: n } = e;
@@ -643,12 +643,12 @@ class tu extends a.PureComponent {
             try {
                 let e = await V.A.createChannel({
                     guildId: f,
-                    type: b,
+                    type: N,
                     name: g,
                     permissionOverwrites: t,
                     bitrate: n,
                     userLimit: i,
-                    parentId: b !== eH.rbe.GUILD_CATEGORY ? a : null,
+                    parentId: N !== eH.rbe.GUILD_CATEGORY ? a : null,
                     skuId: A,
                     branchId: m,
                     applicationId: C,
@@ -658,7 +658,7 @@ class tu extends a.PureComponent {
                 });
                 if (null == e || 201 !== e.status) return void this.setState({ submitting: !1 });
                 let l = e.body;
-                ((0, eK.ig)(b) && (0, eZ.uh)(l.guild_id, l.id), this.setState({ submitting: !1 }), d());
+                ((0, eK.ig)(N) && (0, eZ.uh)(l.guild_id, l.id), this.setState({ submitting: !1 }), d());
             } catch (e) {
                 null != e.body && "object" == typeof e.body
                     ? this.setState({ errors: e.body, submitting: !1 })
@@ -672,7 +672,7 @@ class tu extends a.PureComponent {
             case eH.rbe.GUILD_TEXT:
                 return e ? E.I : A.N;
             case eH.rbe.GUILD_FORUM:
-                return N.b;
+                return b.b;
             case eH.rbe.GUILD_MEDIA:
                 return _.ImageIcon;
             case eH.rbe.GUILD_VOICE:
@@ -684,7 +684,7 @@ class tu extends a.PureComponent {
             case eH.rbe.GUILD_STAGE_VOICE:
                 return L.q;
             case ta:
-                return b.t;
+                return N.t;
             case eH.rbe.GUILD_APP:
                 return e ? G.Z : M.k;
             default:
@@ -796,7 +796,7 @@ class tu extends a.PureComponent {
                             desc: q.intl.string(q.t.pqfkoF),
                         },
                         {
-                            leadingIcon: t ? I.Q : N.b,
+                            leadingIcon: t ? I.Q : b.b,
                             name: q.intl.string(q.t.eAVID5),
                             value: eH.rbe.GUILD_FORUM,
                             desc: q.intl.string(q.t.iZ5pgg),
@@ -805,7 +805,7 @@ class tu extends a.PureComponent {
                 return (
                     s &&
                         o.push({
-                            leadingIcon: b.t,
+                            leadingIcon: N.t,
                             name: q.intl.string(ti.default["h/GwWL"]),
                             value: ta,
                             desc: q.intl.string(ti.default.DxwBMf),
@@ -1135,13 +1135,13 @@ function th(e) {
         m = (0, eS.V)(o?.guild),
         C = eC.useConfig({ guildId: s, location: "CreateChannel" }).enabled,
         I = es.useConfig({ guildId: s, location: "CreateChannel web" }).enabled,
-        [N, b] = a.useState(""),
+        [b, N] = a.useState(""),
         [S, _] = a.useState(null),
         {
             results: f,
             isLoading: O,
             onSelect: L,
-        } = (0, eb.J$)(N, { surface: eN.K.CREATE_CHANNEL, filterGroup: c.m.DEFAULT }),
+        } = (0, eN.J$)(b, { surface: eb.K.CREATE_CHANNEL, filterGroup: c.m.DEFAULT }),
         G = a.useCallback(
             (e) => {
                 (null != e && L(e.id), _(e));
@@ -1161,7 +1161,7 @@ function th(e) {
         width: 496,
         games: f,
         isGamesQueryLoading: O,
-        onGameQueryChange: b,
+        onGameQueryChange: N,
         selectedGame: S,
         onSelectedGameChange: G,
     });

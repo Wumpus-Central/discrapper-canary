@@ -51,7 +51,7 @@ function b() {
               },
               children: [
                   (0, n.jsx)(l.E, {
-                      variant: "text-sm/semibold",
+                      variant: "body-sm/semibold",
                       color: "text-feedback-critical",
                       children: "Accessibility compliance issue(s) detected, check in-app DevTools",
                   }),

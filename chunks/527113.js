@@ -129,7 +129,7 @@ function _(e) {
             : (0, s.jsx)(l.P, { size: "md", color: "currentColor", className: T.i3 })
         : (0, s.jsx)(o.E, {
               color: i ? "text-strong" : "text-muted",
-              variant: i ? "text-md/semibold" : "text-md/medium",
+              variant: i ? "body-md/semibold" : "body-md/medium",
               children: t,
           });
 }
@@ -154,7 +154,7 @@ function p(e) {
               children: (0, s.jsx)(o.E, {
                   className: T.uQ,
                   color: "text-overlay-light",
-                  variant: "text-xs/semibold",
+                  variant: "body-xs/semibold",
                   children: t === u.TVA.TIER_3 ? g.intl.string(g.t.d849Up) : g.intl.string(g.t.dZeX1z),
               }),
           });
@@ -199,7 +199,7 @@ function h(e) {
                                                 }),
                                                 (0, s.jsx)(o.E, {
                                                     color: "text-muted",
-                                                    variant: "text-sm/medium",
+                                                    variant: "body-sm/medium",
                                                     children: g.intl.format(g.t["pob/cL"], {
                                                         subscriptions: u.M2T[u.TVA.NONE],
                                                     }),
@@ -216,7 +216,7 @@ function h(e) {
                                             }),
                                             (0, s.jsx)(o.E, {
                                                 color: "text-muted",
-                                                variant: "text-sm/medium",
+                                                variant: "body-sm/medium",
                                                 children: g.intl.format(g.t["pob/cL"], {
                                                     subscriptions: u.M2T[u.TVA.TIER_1],
                                                 }),
@@ -233,7 +233,7 @@ function h(e) {
                                             }),
                                             (0, s.jsx)(o.E, {
                                                 color: "text-muted",
-                                                variant: "text-sm/medium",
+                                                variant: "body-sm/medium",
                                                 children: g.intl.format(g.t["pob/cL"], {
                                                     subscriptions: u.M2T[u.TVA.TIER_2],
                                                 }),
@@ -250,7 +250,7 @@ function h(e) {
                                             }),
                                             (0, s.jsx)(o.E, {
                                                 color: "text-muted",
-                                                variant: "text-sm/medium",
+                                                variant: "body-sm/medium",
                                                 children: g.intl.format(g.t["pob/cL"], {
                                                     subscriptions: u.M2T[u.TVA.TIER_3],
                                                 }),
@@ -269,7 +269,7 @@ function h(e) {
                                                 className: r()(T.Hn, T.DV),
                                                 children: (0, s.jsx)(o.E, {
                                                     color: "text-muted",
-                                                    variant: "text-md/medium",
+                                                    variant: "body-md/medium",
                                                     children: e.getPerkLabel(),
                                                 }),
                                             }),

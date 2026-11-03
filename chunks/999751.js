@@ -20,7 +20,7 @@ var i = n(477900),
     C = n(105292),
     _ = n(177129);
 let N = function (e) {
-    let { className: t, hasVideo: n, text: l, hasConnectedChannel: r, textVariant: a = "text-md/medium" } = e,
+    let { className: t, hasVideo: n, text: l, hasConnectedChannel: r, textVariant: a = "body-md/medium" } = e,
         o = n ? C.intl.string(C.t.IlHdW8) : C.intl.string(C.t.WsOisp);
     return (0, i.jsx)(S.A, {
         className: s()(t, _.H),

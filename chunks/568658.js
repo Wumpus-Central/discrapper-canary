@@ -14,15 +14,15 @@ var s = t(477900),
     g = t(486020),
     j = t(515718),
     x = t(652215),
-    f = t(307731);
-async function b(e) {
-    let i = await fetch((0, g._O)({ id: e, animated: !1, size: f.EMOJI_URL_BASE_SIZE, forcePNG: !0 })),
+    b = t(307731);
+async function f(e) {
+    let i = await fetch((0, g._O)({ id: e, animated: !1, size: b.EMOJI_URL_BASE_SIZE, forcePNG: !0 })),
         t = await (0, j.We)(await i.blob());
     return x.Pt0 + t.slice(t.indexOf(",") + 1);
 }
 var N = t(105292),
-    C = t(347570);
-function y() {
+    y = t(347570);
+function C() {
     return [{ name: N.intl.string(N.t["Sp2NF+"]), extensions: ["jpg", "jpeg", "png"] }];
 }
 let I = function (e) {
@@ -31,7 +31,7 @@ let I = function (e) {
         v = h.Ay.getDefaultChannel(i),
         [E, S] = a.useState("tab-id-role-icon-file-upload"),
         [w, k] = a.useState(!1),
-        z = (0, c.A)(y);
+        z = (0, c.A)(C);
     return (
         a.useEffect(() => {
             k(!1);
@@ -40,11 +40,11 @@ let I = function (e) {
             transitionState: x,
             "aria-labelledby": I,
             size: l.rI.MEDIUM,
-            className: C.CR,
+            className: y.CR,
             parentComponent: "CustomRoleIconUploadModal",
             "data-migration-pending": !0,
             children: (0, s.jsxs)("div", {
-                className: C.FG,
+                className: y.FG,
                 children: [
                     (0, s.jsxs)(n.V, {
                         selectedItem: E,
@@ -52,7 +52,7 @@ let I = function (e) {
                         type: "top",
                         look: "grey",
                         "aria-label": N.intl.string(N.t.Utlwvi),
-                        className: C.C$,
+                        className: y.C$,
                         children: [
                             (0, s.jsx)(n.V.Item, {
                                 id: "tab-id-role-icon-file-upload",
@@ -68,26 +68,26 @@ let I = function (e) {
                         ? (0, s.jsx)(l.$m, {
                               "data-migration-pending": !0,
                               children: (0, s.jsxs)("div", {
-                                  className: C.PO,
+                                  className: y.PO,
                                   children: [
                                       (0, s.jsxs)("div", {
-                                          className: C.HK,
+                                          className: y.HK,
                                           children: [
                                               (0, s.jsx)("img", {
                                                   src: "/assets/4c12db677c616b52.svg",
                                                   alt: "sparkles",
                                               }),
                                               (0, s.jsx)("div", {
-                                                  className: C.sk,
+                                                  className: y.sk,
                                                   children: (0, s.jsx)(r.X, {
                                                       size: "md",
                                                       color: "currentColor",
-                                                      className: C.T3,
+                                                      className: y.T3,
                                                   }),
                                               }),
                                           ],
                                       }),
-                                      (0, s.jsx)("div", { className: C.WG, children: N.intl.string(N.t["mz++Qq"]) }),
+                                      (0, s.jsx)("div", { className: y.WG, children: N.intl.string(N.t["mz++Qq"]) }),
                                       (0, s.jsx)(p.A, {
                                           onChange: (e) => {
                                               (k(!1), t(e), j());
@@ -103,9 +103,9 @@ let I = function (e) {
                                       }),
                                       w
                                           ? (0, s.jsx)(o.E, {
-                                                className: C.Qw,
+                                                className: y.Qw,
                                                 color: "text-feedback-critical",
-                                                variant: "text-sm/normal",
+                                                variant: "body-sm/normal",
                                                 children: N.intl.string(N.t.HFyKsa),
                                             })
                                           : null,
@@ -122,13 +122,13 @@ let I = function (e) {
                                   if (i?.id != null)
                                       switch (i.type) {
                                           case u.i.GUILD:
-                                              t(await b(i.id));
+                                              t(await f(i.id));
                                           case u.i.PACK:
                                       }
                                   else i?.surrogates != null && g(i.defaultDiversityChild?.surrogates ?? i.surrogates);
                                   j();
                               },
-                              pickerIntention: f.EmojiIntention.COMMUNITY_CONTENT,
+                              pickerIntention: b.EmojiIntention.COMMUNITY_CONTENT,
                               channel: v,
                           })
                         : null,

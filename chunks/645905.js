@@ -2,21 +2,21 @@ i.d(s, { default: () => g });
 var r = i(477900),
     a = i(582128),
     n = i(935462),
-    e = i(534514),
-    l = i(475358),
+    l = i(534514),
+    e = i(475358),
     d = i(834730),
-    c = i(821609),
-    o = i(675704),
-    x = i(28647),
-    h = i(915089),
-    m = i(975571),
+    o = i(821609),
+    c = i(675704),
+    h = i(28647),
+    m = i(915089),
+    x = i(975571),
     j = i(955572),
-    u = i(652215),
-    b = i(105292),
+    b = i(652215),
+    u = i(105292),
     p = i(44571);
 function g(t) {
     let { transitionState: s, onClose: i } = t,
-        g = (0, h.GV)();
+        g = (0, m.GV)();
     return (
         a.useEffect(() => {
             j.Er();
@@ -31,49 +31,49 @@ function g(t) {
                     className: p.Qs,
                     scrollbarGutter: !1,
                     children: [
-                        (0, r.jsx)(e.D, {
+                        (0, r.jsx)(l.D, {
                             variant: "heading-xl/semibold",
                             id: g,
                             className: p.wx,
-                            children: b.intl.format(b.t.V4fxrp, {
-                                tab: (t, s) => (0, r.jsx)(l.e, { shortcut: "tab", className: p.Wj }, s),
+                            children: u.intl.format(u.t.V4fxrp, {
+                                tab: (t, s) => (0, r.jsx)(e.e, { shortcut: "tab", className: p.Wj }, s),
                             }),
                         }),
-                        (0, r.jsx)(d.E, { variant: "text-md/normal", children: b.intl.string(b.t["oQA/OB"]) }),
+                        (0, r.jsx)(d.E, { variant: "body-md/normal", children: u.intl.string(u.t["oQA/OB"]) }),
                         (0, r.jsxs)("ul", {
                             className: p.Xq,
                             children: [
                                 (0, r.jsxs)("li", {
                                     children: [
-                                        (0, r.jsx)(l.e, { shortcut: x.z.binds["0"] }),
+                                        (0, r.jsx)(e.e, { shortcut: h.z.binds["0"] }),
                                         (0, r.jsx)(d.E, {
-                                            variant: "text-md/normal",
-                                            children: b.intl.string(b.t["43Qn2r"]),
+                                            variant: "body-md/normal",
+                                            children: u.intl.string(u.t["43Qn2r"]),
                                         }),
                                     ],
                                 }),
                                 (0, r.jsxs)("li", {
                                     children: [
-                                        (0, r.jsx)(l.e, { shortcut: o.R.binds["0"] }),
+                                        (0, r.jsx)(e.e, { shortcut: c.R.binds["0"] }),
                                         (0, r.jsx)(d.E, {
-                                            variant: "text-md/normal",
-                                            children: b.intl.string(b.t.zJg4FY),
+                                            variant: "body-md/normal",
+                                            children: u.intl.string(u.t.zJg4FY),
                                         }),
                                     ],
                                 }),
                             ],
                         }),
                         (0, r.jsx)(d.E, {
-                            variant: "text-md/normal",
-                            children: b.intl.format(b.t.EWFVSW, { link: m.A.getArticleURL(u.MVz.KEYBOARD_NAVIGATION) }),
+                            variant: "body-md/normal",
+                            children: u.intl.format(u.t.EWFVSW, { link: x.A.getArticleURL(b.MVz.KEYBOARD_NAVIGATION) }),
                         }),
                     ],
                 }),
                 (0, r.jsx)(n.jl, {
-                    children: (0, r.jsx)(c.$, {
+                    children: (0, r.jsx)(o.$, {
                         variant: "primary",
                         size: "sm",
-                        text: b.intl.string(b.t.BddRzS),
+                        text: u.intl.string(u.t.BddRzS),
                         onClick: i,
                         autoFocus: !0,
                     }),

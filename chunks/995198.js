@@ -1,27 +1,27 @@
-(e.r(t), e.d(t, { MemberVerificationPreviewDisabled: () => q, default: () => z }));
-var l = e(477900),
-    n = e(582128),
-    s = e(17928),
-    a = e(314116),
-    r = e(765671),
-    c = e(4616),
-    d = e(743674),
-    u = e(976860),
-    o = e(71393),
-    m = e(486020),
-    h = e(998304),
-    x = e(624458),
-    g = e(202384),
-    f = e(513461),
-    j = e(212455),
-    A = e(115723),
-    p = e(661531),
-    v = e(534514),
-    E = e(821609),
-    N = e(105292),
-    T = e(449341);
-function C(i) {
-    let { onDiscardApplication: t, onContinueApplication: e, guild: n } = i;
+(t.r(e), t.d(e, { MemberVerificationPreviewDisabled: () => q, default: () => z }));
+var l = t(477900),
+    n = t(582128),
+    s = t(17928),
+    a = t(314116),
+    r = t(765671),
+    c = t(4616),
+    d = t(743674),
+    o = t(976860),
+    u = t(71393),
+    m = t(486020),
+    h = t(998304),
+    x = t(624458),
+    g = t(202384),
+    f = t(513461),
+    j = t(212455),
+    A = t(115723),
+    p = t(661531),
+    v = t(534514),
+    E = t(821609),
+    N = t(105292),
+    T = t(449341);
+function b(i) {
+    let { onDiscardApplication: e, onContinueApplication: t, guild: n } = i;
     return (0, l.jsxs)("div", {
         className: T.EL,
         children: [
@@ -45,14 +45,14 @@ function C(i) {
                 children: [
                     (0, l.jsx)(E.$, {
                         fullWidth: !0,
-                        onClick: e,
+                        onClick: t,
                         variant: "secondary",
                         size: "md",
                         text: N.intl.string(N.t.h3aGmv),
                     }),
                     (0, l.jsx)(E.$, {
                         fullWidth: !0,
-                        onClick: t,
+                        onClick: e,
                         variant: "critical-primary",
                         size: "md",
                         text: N.intl.string(N.t.OQFlFD),
@@ -62,64 +62,64 @@ function C(i) {
         ],
     });
 }
-var b = e(401432),
-    R = e(834730),
-    y = e(299091),
-    I = e(408213),
-    G = e(652215);
+var C = t(401432),
+    y = t(834730),
+    R = t(299091),
+    I = t(408213),
+    G = t(652215);
 let V = function (i) {
     let {
-            headerId: t,
-            reapplyText: e,
+            headerId: e,
+            reapplyText: t,
             onReapply: a,
             confirmText: r,
             onWithdrawApplication: c,
             rejectionReason: d = null,
-            guild: u = null,
+            guild: o = null,
         } = i,
-        { canReapply: o, isLoading: m } = (function (i) {
-            let [t, e] = n.useState(!0),
+        { canReapply: u, isLoading: m } = (function (i) {
+            let [e, t] = n.useState(!0),
                 l = (0, s.bG)([j.A], () => (null != i ? j.A.getJoinRequestGuild(i) : void 0)),
                 a = n.useCallback(async (i) => {
                     try {
-                        let t = y.A.getInviteKeyForGuildId(i);
-                        null != t && (await I.Ay.fetchVerificationForm(i, t));
+                        let e = R.A.getInviteKeyForGuildId(i);
+                        null != e && (await I.Ay.fetchVerificationForm(i, e));
                     } finally {
-                        e(!1);
+                        t(!1);
                     }
                 }, []);
             return (
                 n.useEffect(() => {
-                    null == i ? e(!1) : (e(!0), a(i));
+                    null == i ? t(!1) : (t(!0), a(i));
                 }, [i, a]),
                 {
                     canReapply: null != l && l.features.has(G.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL),
-                    isLoading: t,
+                    isLoading: e,
                 }
             );
-        })(u?.id);
+        })(o?.id);
     return (0, l.jsxs)("div", {
         className: T.EL,
         children: [
             (0, l.jsx)("div", {
                 className: T.P0,
-                children: (0, l.jsx)(b.a, { size: "md", color: p.A.colors.INTERACTIVE_TEXT_ACTIVE }),
+                children: (0, l.jsx)(C.a, { size: "md", color: p.A.colors.INTERACTIVE_TEXT_ACTIVE }),
             }),
             (0, l.jsxs)("div", {
                 className: T.bc,
                 children: [
                     (0, l.jsx)(v.D, {
-                        id: t,
+                        id: e,
                         variant: "heading-lg/semibold",
                         color: "text-strong",
                         children:
-                            u?.name != null
-                                ? N.intl.formatToPlainString(N.t["P+/gzA"], { guildName: u.name })
+                            o?.name != null
+                                ? N.intl.formatToPlainString(N.t["P+/gzA"], { guildName: o.name })
                                 : N.intl.string(N.t.gBPcuP),
                     }),
                     null != d && "" !== d
-                        ? (0, l.jsxs)(R.E, {
-                              variant: "text-md/medium",
+                        ? (0, l.jsxs)(y.E, {
+                              variant: "body-md/medium",
                               color: "text-default",
                               children: [
                                   (0, l.jsx)("span", { className: T.Wj, children: N.intl.string(N.t.cf1psW) }),
@@ -132,19 +132,19 @@ let V = function (i) {
             (0, l.jsxs)("div", {
                 className: T.Ow,
                 children: [
-                    o || m
+                    u || m
                         ? (0, l.jsx)(E.$, {
                               onClick: a,
                               variant: "secondary",
                               size: "md",
                               loading: m,
                               disabled: m,
-                              text: e,
+                              text: t,
                               fullWidth: !0,
                           })
                         : null,
                     (0, l.jsx)(E.$, {
-                        onClick: () => c(o || m),
+                        onClick: () => c(u || m),
                         variant: "critical-primary",
                         size: "md",
                         text: r,
@@ -155,11 +155,11 @@ let V = function (i) {
         ],
     });
 };
-var w = e(339350),
-    k = e(51271);
+var w = t(339350),
+    k = t(51271);
 let P = function (i) {
-    let { onWithdrawApplication: t, guild: e = null } = i,
-        s = e?.id;
+    let { onWithdrawApplication: e, guild: t = null } = i,
+        s = t?.id;
     return (
         n.useEffect(() => {
             null != s && (0, k.NC)(s);
@@ -178,12 +178,12 @@ let P = function (i) {
                             variant: "heading-lg/semibold",
                             color: "text-strong",
                             children:
-                                e?.name != null
-                                    ? N.intl.formatToPlainString(N.t["0Qlu/6"], { guildName: e.name })
+                                t?.name != null
+                                    ? N.intl.formatToPlainString(N.t["0Qlu/6"], { guildName: t.name })
                                     : N.intl.string(N.t["5iLvSx"]),
                         }),
-                        (0, l.jsx)(R.E, {
-                            variant: "text-md/medium",
+                        (0, l.jsx)(y.E, {
+                            variant: "body-md/medium",
                             color: "text-default",
                             children: N.intl.string(N.t.FdsK4h),
                         }),
@@ -191,7 +191,7 @@ let P = function (i) {
                 }),
                 (0, l.jsx)(E.$, {
                     fullWidth: !0,
-                    onClick: t,
+                    onClick: e,
                     variant: "critical-primary",
                     size: "md",
                     text: N.intl.string(N.t.g9tK0o),
@@ -200,19 +200,19 @@ let P = function (i) {
         })
     );
 };
-var F = e(223810);
+var F = t(223810);
 function _(i) {
-    let { guild: t, width: e, height: s } = i,
+    let { guild: e, width: t, height: s } = i,
         a = n.useMemo(
-            () => (t?.splash != null ? m.Ay.getGuildSplashURL({ id: t?.id, splash: t?.splash }) : null),
-            [t?.splash, t?.id],
+            () => (e?.splash != null ? m.Ay.getGuildSplashURL({ id: e?.id, splash: e?.splash }) : null),
+            [e?.splash, e?.id],
         ),
         r = (0, d.S)(a);
     return null == a
         ? (0, l.jsx)("div", { className: F.Eq })
         : (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, l.jsx)(c.A, { className: F.Yi, src: a, imageClassName: F.Iv, width: e, height: s }),
+                  (0, l.jsx)(c.A, { className: F.Yi, src: a, imageClassName: F.Iv, width: t, height: s }),
                   null != r &&
                       (0, l.jsx)("div", {
                           className: F.qj,
@@ -225,44 +225,44 @@ function _(i) {
           });
 }
 function q(i) {
-    let { guildId: t } = i,
-        { ref: e, width: c, height: d } = (0, r.Ay)(),
-        m = (0, s.bG)([j.A], () => j.A.getRequest(t)),
-        h = (0, s.bG)([o.A], () => o.A.getGuild(t)),
+    let { guildId: e } = i,
+        { ref: t, width: c, height: d } = (0, r.Ay)(),
+        m = (0, s.bG)([j.A], () => j.A.getRequest(e)),
+        h = (0, s.bG)([u.A], () => u.A.getGuild(e)),
         { hasFetchedRequestToJoinGuilds: A, guildPreviewDisabled: p } = (0, s.cf)([j.A], () => ({
             hasFetchedRequestToJoinGuilds: j.A.hasFetchedRequestToJoinGuilds,
-            guildPreviewDisabled: j.A.getJoinRequestGuild(t),
+            guildPreviewDisabled: j.A.getJoinRequestGuild(e),
         }));
     (n.useEffect(() => {
-        null != h && (0, u.pX)(G.BVt.CHANNEL(t));
-    }, [h, t]),
+        null != h && (0, o.pX)(G.BVt.CHANNEL(e));
+    }, [h, e]),
         n.useEffect(() => {
             A || x.A.fetchRequestToJoinGuilds();
         }, [A]));
     let v = n.useCallback(() => {
-        (x.A.removeGuildJoinRequest(t), (0, u.pX)(G.BVt.ME));
-    }, [t]);
-    function E(i, t) {
+        (x.A.removeGuildJoinRequest(e), (0, o.pX)(G.BVt.ME));
+    }, [e]);
+    function E(i, e) {
         return () => {
             (0, a.A)({
                 title: N.intl.string(N.t.y0CVes),
                 subtitle: i,
                 cancelText: N.intl.string(N.t.oEAioF),
-                onConfirm: t,
+                onConfirm: e,
                 confirmText: N.intl.string(N.t.p89ACt),
             });
         };
     }
     async function T() {
-        (await x.A.resetGuildJoinRequest(t), (0, g.Ze)(t));
+        (await x.A.resetGuildJoinRequest(e), (0, g.Ze)(e));
     }
-    function b(i) {
+    function C(i) {
         i ? E(N.intl.format(N.t["9ZezpN"], { name: p?.name }), v)() : v();
     }
-    let R = E(N.intl.format(N.t.fJwWVt, { name: p?.name }), v);
+    let y = E(N.intl.format(N.t.fJwWVt, { name: p?.name }), v);
     return (0, l.jsxs)("div", {
         className: F.MY,
-        ref: e,
+        ref: t,
         children: [
             (0, l.jsx)(_, { guild: p, height: d, width: c }),
             (0, l.jsx)("div", {
@@ -271,20 +271,20 @@ function q(i) {
                     if (null == m) return null;
                     switch (m.applicationStatus) {
                         case f.B5.SUBMITTED:
-                            return (0, l.jsx)(P, { onWithdrawApplication: () => b(!0), guild: p });
+                            return (0, l.jsx)(P, { onWithdrawApplication: () => C(!0), guild: p });
                         case f.B5.REJECTED:
                             return (0, l.jsx)(V, {
                                 reapplyText: N.intl.string(N.t.I1LYVk),
                                 onReapply: T,
                                 confirmText: N.intl.string(N.t.g9tK0o),
-                                onWithdrawApplication: b,
+                                onWithdrawApplication: C,
                                 rejectionReason: m.rejectionReason,
                                 guild: p,
                             });
                         default:
-                            return (0, l.jsx)(C, {
-                                onDiscardApplication: R,
-                                onContinueApplication: () => (0, g.Ze)(t),
+                            return (0, l.jsx)(b, {
+                                onDiscardApplication: y,
+                                onContinueApplication: () => (0, g.Ze)(e),
                                 guild: p,
                             });
                     }

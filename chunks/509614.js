@@ -12,13 +12,13 @@ var i,
     p = n(17928),
     S = n(772707),
     C = n(834730),
-    g = n(683071),
-    y = n(158032),
+    y = n(683071),
+    g = n(158032),
     h = n(925847),
     x = n(773669),
     I = n(469778),
-    E = n(174459),
-    b = n(580630),
+    b = n(174459),
+    E = n(580630),
     f = n(501957),
     j = (((i = {})[(i.CONFIRM = 1)] = "CONFIRM"), (i[(i.SUCCESS = 2)] = "SUCCESS"), i),
     A = n(202541),
@@ -40,7 +40,7 @@ let P = (t) => {
         P = new Date(o.subscriptionPeriodStart);
     a.isBoostOnly || (P = m.Ay.extendDateWithUnconsumedFractionalPremium(P, c.unactivatedUnits));
     let R = (0, p.bG)([I.A], () => I.A.getForApplication(A.tv)),
-        k = (0, b.$g)(l.total, l.currency),
+        k = (0, E.$g)(l.total, l.currency),
         [U, _] = (0, s.useState)(!1),
         [F, w] = (0, s.useState)(!1),
         O = P.toLocaleDateString(d, { month: "long", day: "numeric", year: "numeric" }),
@@ -48,19 +48,19 @@ let P = (t) => {
     async function D() {
         (_(!0), w(!1));
         try {
-            (await y.Ir(a, e), u(j.SUCCESS));
+            (await g.Ir(a, e), u(j.SUCCESS));
         } catch (t) {
             (w(!0), _(!1));
         }
     }
     s.useEffect(() => {
-        E.default.track(T.HAw.PREMIUM_RESUBSCRIBE_FLOW_STARTED, { location_stack: e, load_id: N, ...(0, f.j)(a) });
+        b.default.track(T.HAw.PREMIUM_RESUBSCRIBE_FLOW_STARTED, { location_stack: e, load_id: N, ...(0, f.j)(a) });
     }, [e, a, N]);
     let G = [{ text: M.intl.string(M.t["cY+Oob"]), onClick: () => D(), variant: "primary", loading: U, disabled: U }],
         W = M.intl.format(M.t.dbGGui, { price: k, date: O }),
         L = a.premiumPlanIdFromItems;
     if (m.Ay.hasUnconsumedGiftForSubscriptionPlan(R, L)) {
-        let t = (0, b.$g)(o.total, o.currency),
+        let t = (0, E.$g)(o.total, o.currency),
             e = m.Ay.getIntervalForInvoice(o),
             n = {
                 discountedPrice: t,
@@ -79,11 +79,11 @@ let P = (t) => {
         onClose: async () => n(),
         children: [
             (0, r.jsxs)(C.E, {
-                variant: "text-md/normal",
+                variant: "body-md/normal",
                 style: { textAlign: "center" },
                 children: [(0, r.jsx)("p", { children: W }), (0, r.jsx)("p", { children: M.intl.string(M.t.UQolSy) })],
             }),
-            F ? (0, r.jsx)(g.w, { type: "critical", message: M.intl.string(M.t["5mlOCW"]), role: "alert" }) : null,
+            F ? (0, r.jsx)(y.w, { type: "critical", message: M.intl.string(M.t["5mlOCW"]), role: "alert" }) : null,
         ],
     });
 };
@@ -95,7 +95,7 @@ var R = n(935462),
     w = n(926063);
 function O(t) {
     let { onClose: e } = t,
-        n = (0, r.jsx)(C.E, { className: w.h, variant: "text-md/normal", children: M.intl.string(M.t.FCsTCk) });
+        n = (0, r.jsx)(C.E, { className: w.h, variant: "body-md/normal", children: M.intl.string(M.t.FCsTCk) });
     return (0, r.jsx)(_.A, {
         type: U.Ay.Types.PREMIUM_ACTIVATED,
         text: n,
@@ -131,7 +131,7 @@ function L(t) {
     l()(null != a, "Should not be resubscribing Nitro without premiumType");
     let p = a === A.PremiumTypes.TIER_0,
         [S, C] = s.useState(j.CONFIRM),
-        g = s.useCallback(() => {
+        y = s.useCallback(() => {
             switch (S) {
                 case j.CONFIRM:
                     return (0, r.jsx)(P, { ...t, setStep: C });
@@ -152,7 +152,7 @@ function L(t) {
                     isConfirmationStep: S === j.SUCCESS,
                     isEligibleForWowMoment: !p,
                     shouldPrefetchWowMoment: !p,
-                    children: g(),
+                    children: y(),
                 }),
             }),
         }),

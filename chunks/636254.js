@@ -96,7 +96,7 @@ class R extends r.PureComponent {
                     target: "blank",
                     children: (0, n.jsx)(x.L, { size: "xs", color: "currentColor" }),
                 }),
-                (0, n.jsx)(_.E, { variant: "text-xs/normal", children: j.intl.string(j.t.EjVVI7) }),
+                (0, n.jsx)(_.E, { variant: "body-xs/normal", children: j.intl.string(j.t.EjVVI7) }),
             ],
         });
     }

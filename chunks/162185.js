@@ -29,7 +29,7 @@ function u(a) {
                 className: m.rf,
                 scrollbarGutter: !1,
                 children: [
-                    (0, n.jsx)(i.E, { tag: "p", variant: "text-md/normal", color: "text-default", children: x }),
+                    (0, n.jsx)(i.E, { tag: "p", variant: "body-md/normal", color: "text-default", children: x }),
                     N,
                 ],
             }),

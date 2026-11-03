@@ -20,23 +20,23 @@ let I = function (e) {
     let { type: t, guild: i, closePopout: N, ctaRef: I } = e,
         T = (0, f.GV)(),
         [j, R] = o.useState(!1),
-        x = (0, a.bG)([h.A], () => h.A.isLurking(i.id), [i.id]);
+        b = (0, a.bG)([h.A], () => h.A.isLurking(i.id), [i.id]);
     o.useEffect(() => {
-        j && !x && N();
-    }, [j, x, N]);
-    let b = null,
+        j && !b && N();
+    }, [j, b, N]);
+    let x = null,
         C = A.intl.string(A.t.d7b1p6);
     switch (t) {
         case 0:
-            b = A.intl.string(A.t.Xiwf1Q);
+            x = A.intl.string(A.t.Xiwf1Q);
             break;
         case 1:
-            b = A.intl.string(A.t.GXvlU9);
+            x = A.intl.string(A.t.GXvlU9);
             break;
         default:
             return (0, g.xb)(t);
     }
-    if (null == b) return null;
+    if (null == x) return null;
     async function v() {
         R(!0);
         try {
@@ -53,8 +53,8 @@ let I = function (e) {
             (0, l.jsxs)("div", {
                 className: E.Qs,
                 children: [
-                    (0, l.jsx)(c.D, { variant: "heading-md/semibold", id: T, children: b }),
-                    (0, l.jsx)(u.E, { color: "text-default", variant: "text-sm/normal", children: C }),
+                    (0, l.jsx)(c.D, { variant: "heading-sm/semibold", id: T, children: x }),
+                    (0, l.jsx)(u.E, { color: "text-default", variant: "body-sm/normal", children: C }),
                     (0, l.jsxs)("div", {
                         className: E.UD,
                         children: [

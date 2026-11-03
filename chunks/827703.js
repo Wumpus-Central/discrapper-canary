@@ -21,8 +21,8 @@ var a,
     b = l(735305),
     h = l(635358),
     x = l(702841),
-    f = l(834730),
-    y = l(28863),
+    y = l(834730),
+    f = l(28863),
     v = l(231723),
     g = l(830382),
     E = l(73825),
@@ -63,10 +63,10 @@ function k(e) {
     return (0, s.jsxs)("div", {
         style: { padding: 20 },
         children: [
-            (0, s.jsx)(f.E, { variant: "text-md/normal", children: e.text }),
+            (0, s.jsx)(y.E, { variant: "body-md/normal", children: e.text }),
             (0, s.jsx)("div", {
                 style: { marginTop: 16 },
-                children: (0, s.jsx)(y.Anchor, {
+                children: (0, s.jsx)(f.Anchor, {
                     onClick: () => e.handleStepChange(e.originStep),
                     children: "\u2190 Go Back",
                 }),
@@ -176,8 +176,8 @@ function Y(e) {
                 className: G.kx,
                 children: [
                     void 0 !== n &&
-                        (0, s.jsxs)(f.E, { variant: "text-xs/normal", className: G.D5, children: [n, "\xa0"] }),
-                    (0, s.jsx)(y.Anchor, {
+                        (0, s.jsxs)(y.E, { variant: "body-xs/normal", className: G.D5, children: [n, "\xa0"] }),
+                    (0, s.jsx)(f.Anchor, {
                         target: "_blank",
                         rel: "author",
                         href: B.A.getArticleURL(M.MVz.ORBS_FAQ),
@@ -387,8 +387,8 @@ var eo = l(488428),
     eb = l(95477),
     eh = l(866665),
     ex = l(270003),
-    ef = l(289873),
-    ey = l(20742),
+    ey = l(289873),
+    ef = l(20742),
     ev = l(192308),
     eg = l(534514),
     eE = l(277984),
@@ -432,8 +432,8 @@ function eW() {
             gap: 8,
             fullWidth: !1,
             children: [
-                (0, s.jsx)(f.E, {
-                    variant: "text-sm/normal",
+                (0, s.jsx)(y.E, {
+                    variant: "body-sm/normal",
                     children:
                         "PaymentModal Step within CheckoutRootProvider loaded. Click below to navigate to a mock error step that will throw \u2014 the CheckoutErrorBoundary baked into CheckoutRootProvider will catch it.",
                 }),
@@ -579,7 +579,7 @@ let eY = {
                                     direction: "vertical",
                                     gap: 8,
                                     children: [
-                                        (0, s.jsx)(y.Anchor, {
+                                        (0, s.jsx)(f.Anchor, {
                                             href: "https://i.dis.gd/createPromo",
                                             children: "How to create promotion",
                                         }),
@@ -672,21 +672,21 @@ let eY = {
                                             gap: 8,
                                             align: "end",
                                             children: [
-                                                (0, s.jsx)(f.E, {
-                                                    variant: "text-sm/normal",
+                                                (0, s.jsx)(y.E, {
+                                                    variant: "body-sm/normal",
                                                     children: "Virtual Currency Balance:",
                                                 }),
                                                 k
                                                     ? (0, s.jsx)("div", {
                                                           className: q.wG,
-                                                          children: (0, s.jsx)(ef.y, { type: ef.t.SPINNING_CIRCLE }),
+                                                          children: (0, s.jsx)(ey.y, { type: ey.t.SPINNING_CIRCLE }),
                                                       })
                                                     : (0, s.jsxs)("div", {
                                                           className: q.dB,
                                                           children: [
                                                               null !== R &&
-                                                                  (0, s.jsxs)(f.E, {
-                                                                      variant: "text-sm/normal",
+                                                                  (0, s.jsxs)(y.E, {
+                                                                      variant: "body-sm/normal",
                                                                       children: [
                                                                           "Error fetching Virtual Currency Balance: ",
                                                                           R.message,
@@ -712,7 +712,7 @@ let eY = {
                                             loading: N,
                                             onClick: () => L(V, (0, d.A)()),
                                         }),
-                                        null != D && (0, s.jsx)(f.E, { variant: "text-sm/normal", children: D }),
+                                        null != D && (0, s.jsx)(y.E, { variant: "body-sm/normal", children: D }),
                                     ],
                                 }),
                                 (0, s.jsx)(em.c, {}),
@@ -727,8 +727,8 @@ let eY = {
                                             selectionMode: "single",
                                             fullWidth: !0,
                                         }),
-                                        (0, s.jsx)(f.E, {
-                                            variant: "text-md/semibold",
+                                        (0, s.jsx)(y.E, {
+                                            variant: "body-md/semibold",
                                             children: "This is disabled because of a circular dependency",
                                         }),
                                         (0, s.jsx)(eI.H, {
@@ -868,8 +868,8 @@ let eY = {
                                     variant: "heading-lg/semibold",
                                     children: "Checkout Error Boundary",
                                 }),
-                                (0, s.jsxs)(f.E, {
-                                    variant: "text-md/normal",
+                                (0, s.jsxs)(y.E, {
+                                    variant: "body-md/normal",
                                     children: [
                                         "Opens a ",
                                         "<PaymentModal>",
@@ -889,7 +889,7 @@ let eY = {
                                                         key: m.pn.PLAN_SELECT,
                                                         renderStep: () => (0, s.jsx)(eW, {}),
                                                         renderHeader: () =>
-                                                            (0, s.jsx)(ey.rQ, {
+                                                            (0, s.jsx)(ef.rQ, {
                                                                 title: "Checkout Error Boundary Test",
                                                             }),
                                                     },
@@ -948,8 +948,8 @@ let eY = {
                             padding: { top: 16 },
                             children: [
                                 (0, s.jsx)(eg.D, { variant: "heading-lg/semibold", children: "Other Checkout Errors" }),
-                                (0, s.jsx)(f.E, {
-                                    variant: "text-md/normal",
+                                (0, s.jsx)(y.E, {
+                                    variant: "body-md/normal",
                                     children: "Simulate known checkout error from discountOfferHasTierError():",
                                 }),
                                 (0, s.jsx)(O.$, {
@@ -1037,7 +1037,7 @@ let eQ = [
     e0 = [{ key: m.pn.REVIEW, renderStep: (e) => (0, s.jsx)(ez.p, { ...e }) }, ...eQ],
     e1 = [{ key: m.pn.REVIEW, renderStep: (e) => (0, s.jsx)(eK.E, { ...e }) }, ...eQ];
 function e2() {
-    return (0, s.jsx)(f.E, { variant: "text-sm/normal", children: "Purchase button is disabled for this story" });
+    return (0, s.jsx)(y.E, { variant: "body-sm/normal", children: "Purchase button is disabled for this story" });
 }
 let e3 = { isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 } },
     e8 = eZ(),
@@ -1103,7 +1103,7 @@ let e3 = { isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 } },
             u.useEffect(() => {
                 h.current || null == p || ((h.current = !0), b(p));
             }, [p, m]);
-            let { isLoadedForPremiumSKUs: f, selectedPlan: y } = (function (e) {
+            let { isLoadedForPremiumSKUs: y, selectedPlan: f } = (function (e) {
                 let { subscriptionPlanId: t } = e;
                 u.useEffect(() => {
                     A.A.isLoadedForPremiumSKUs() || (0, E.zS)();
@@ -1114,7 +1114,7 @@ let e3 = { isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 } },
                     selectedPlan: l,
                 };
             })({ subscriptionPlanId: m });
-            return !o && null != d && f && c && null != y
+            return !o && null != d && y && c && null != f
                 ? (0, s.jsxs)("div", {
                       className: q.Cd,
                       children: [
@@ -1202,13 +1202,13 @@ let to = {
                         (0, s.jsxs)("div", {
                             className: tr.Iv,
                             children: [
-                                (0, s.jsx)(f.E, {
-                                    variant: "text-sm/semibold",
+                                (0, s.jsx)(y.E, {
+                                    variant: "body-sm/semibold",
                                     color: "text-default",
                                     children: "Participants",
                                 }),
-                                (0, s.jsxs)(f.E, {
-                                    variant: "text-xs/normal",
+                                (0, s.jsxs)(y.E, {
+                                    variant: "body-xs/normal",
                                     color: "text-muted",
                                     children: [r.size, " selected"],
                                 }),
@@ -1218,8 +1218,8 @@ let to = {
                         0 === i.length
                             ? (0, s.jsx)("div", {
                                   className: tr.p$,
-                                  children: (0, s.jsx)(f.E, {
-                                      variant: "text-sm/normal",
+                                  children: (0, s.jsx)(y.E, {
+                                      variant: "body-sm/normal",
                                       color: "text-muted",
                                       children: "No friends found in local store.",
                                   }),
@@ -1243,8 +1243,8 @@ let to = {
                                                       size: el._3.SIZE_24,
                                                       "aria-hidden": !0,
                                                   }),
-                                                  (0, s.jsx)(f.E, {
-                                                      variant: "text-sm/normal",
+                                                  (0, s.jsx)(y.E, {
+                                                      variant: "body-sm/normal",
                                                       color: "interactive-text-default",
                                                       children: e.username,
                                                   }),
@@ -1444,8 +1444,8 @@ var tm = l(687021),
     tb = l(487233),
     th = l(120386),
     tx = l(374654);
-let tf = { value: "", label: "No Guild (main profile)" };
-var ty = l(99696),
+let ty = { value: "", label: "No Guild (main profile)" };
+var tf = l(99696),
     tv = l(599147),
     tg = l(808411),
     tE = l(435558),
@@ -1561,13 +1561,13 @@ let tB = { name: "Expressive Progress", component: tg.A, id: "expressive-progres
                                     style: { padding: 16, display: "flex", flexDirection: "column", gap: 8 },
                                     children: [
                                         (0, s.jsx)(eg.D, { variant: "heading-lg/semibold", children: "Card Title" }),
-                                        (0, s.jsx)(f.E, {
-                                            variant: "text-sm/normal",
+                                        (0, s.jsx)(y.E, {
+                                            variant: "body-sm/normal",
                                             color: "text-default",
                                             children: "This is sample card content using design system tokens.",
                                         }),
-                                        (0, s.jsx)(f.E, {
-                                            variant: "text-sm/normal",
+                                        (0, s.jsx)(y.E, {
+                                            variant: "body-sm/normal",
                                             color: "text-muted",
                                             children: "This is more sample content.",
                                         }),
@@ -1733,8 +1733,8 @@ let tB = { name: "Expressive Progress", component: tg.A, id: "expressive-progres
                         ).toLocaleUpperCase();
                     return (0, s.jsxs)("div", {
                         children: [
-                            (0, s.jsx)(f.E, {
-                                variant: "text-md/normal",
+                            (0, s.jsx)(y.E, {
+                                variant: "body-md/normal",
                                 color: "text-muted",
                                 children:
                                     'Hover or focus a badge to see the mini tooltip. Renders as `role="tooltip"` \u2014 title and body are announced via `aria-describedby` injected on the trigger by MiniPremiumTooltip.',
@@ -1752,7 +1752,7 @@ let tB = { name: "Expressive Progress", component: tg.A, id: "expressive-progres
                                             badgeName: c,
                                             rarity: d,
                                             variant: a,
-                                            children: (0, s.jsx)(y.Anchor, {
+                                            children: (0, s.jsx)(f.Anchor, {
                                                 href: "#",
                                                 ref: n,
                                                 "aria-label": w.intl.string(w.t["JEiq/c"]),
@@ -1775,7 +1775,7 @@ let tB = { name: "Expressive Progress", component: tg.A, id: "expressive-progres
                                             badgeName: c,
                                             rarity: d,
                                             variant: a,
-                                            children: (0, s.jsx)(y.Anchor, {
+                                            children: (0, s.jsx)(f.Anchor, {
                                                 href: "#",
                                                 ref: i,
                                                 "aria-label": w.intl.string(w.t["JEiq/c"]),
@@ -1841,7 +1841,7 @@ let tB = { name: "Expressive Progress", component: tg.A, id: "expressive-progres
                             estimatedTooltipHeight: h,
                         } = e,
                         x = u.useRef(null),
-                        y = u.useRef(null),
+                        f = u.useRef(null),
                         v = u.useMemo(
                             () =>
                                 ({
@@ -1892,8 +1892,8 @@ let tB = { name: "Expressive Progress", component: tg.A, id: "expressive-progres
                         };
                     return (0, s.jsxs)("div", {
                         children: [
-                            (0, s.jsx)(f.E, {
-                                variant: "text-md/normal",
+                            (0, s.jsx)(y.E, {
+                                variant: "body-md/normal",
                                 color: "text-muted",
                                 children: "Hover or focus these buttons.",
                             }),
@@ -1913,9 +1913,9 @@ let tB = { name: "Expressive Progress", component: tg.A, id: "expressive-progres
                                         children: (0, s.jsx)(O.$, { buttonRef: x, variant: "primary", text: "Left" }),
                                     }),
                                     (0, s.jsx)(tD.L, {
-                                        targetElementRef: y,
+                                        targetElementRef: f,
                                         ...j,
-                                        children: (0, s.jsx)(O.$, { buttonRef: y, variant: "primary", text: "Right" }),
+                                        children: (0, s.jsx)(O.$, { buttonRef: f, variant: "primary", text: "Right" }),
                                     }),
                                 ],
                             }),
@@ -2026,25 +2026,25 @@ let tz = { none: void 0, nitroWheel: r.t },
                 badgeText: b,
                 badgeVariant: h,
                 isReducedMotion: x,
-                previewImageStyle: f,
+                previewImageStyle: y,
             } = e;
-            function y() {
+            function f() {
                 return (0, tG.P0)({ text: "CTA clicked!", variant: "success" });
             }
             let v = tz[d],
                 g =
                     "descriptionCta" === a
-                        ? { descriptionCta: n, onClick: y }
+                        ? { descriptionCta: n, onClick: f }
                         : "actions" === a
                           ? {
                                 actions: [
                                     {
                                         text: i,
                                         variant: r,
-                                        onClick: y,
+                                        onClick: f,
                                         ...(null != v ? { icon: v, iconPosition: c } : {}),
                                     },
-                                    ...(o.length > 0 ? [{ text: o, variant: u, onClick: y }] : []),
+                                    ...(o.length > 0 ? [{ text: o, variant: u, onClick: f }] : []),
                                 ],
                             }
                           : {};
@@ -2061,7 +2061,7 @@ let tz = { none: void 0, nitroWheel: r.t },
                     badgeText: b.length > 0 ? b : void 0,
                     badgeVariant: h,
                     isReducedMotion: x,
-                    previewImageStyle: f,
+                    previewImageStyle: y,
                     ...g,
                 }),
             });
@@ -2220,8 +2220,8 @@ function t0() {
                     ((0, tq.jH)(), (0, tZ.pX)(M.BVt.ME), setTimeout(() => (0, tZ.pX)(l), 200));
                 },
             }),
-            (0, s.jsxs)(f.E, {
-                variant: "text-xs/normal",
+            (0, s.jsxs)(y.E, {
+                variant: "body-xs/normal",
                 color: "text-muted",
                 style: { userSelect: "text" },
                 children: [
@@ -2431,15 +2431,15 @@ function lh() {
         u.useEffect(() => {
             null != x && null == p && m(x);
         }, [x, p]));
-    let y = u.useRef(null);
+    let f = u.useRef(null);
     u.useEffect(() => {
         if (null == r || "" === r) {
-            y.current = p;
+            f.current = p;
             return;
         }
-        if (p !== y.current) {
+        if (p !== f.current) {
             if (null == p || "" === p) {
-                y.current = p;
+                f.current = p;
                 return;
             }
             (lb(r, p)
@@ -2452,7 +2452,7 @@ Payment source changed.`);
                     let t = e instanceof Error ? e.message : String(e);
                     i(`Failed to update order: ${t}`);
                 }),
-                (y.current = p));
+                (f.current = p));
         }
     }, [r, p]);
     let v = u.useMemo(
@@ -2635,8 +2635,8 @@ Error: ${t}`);
                 label: "Test Order Creation, Signing & 3DS",
                 direction: "vertical",
                 children: [
-                    (0, s.jsx)(f.E, {
-                        variant: "text-md/normal",
+                    (0, s.jsx)(y.E, {
+                        variant: "body-md/normal",
                         className: ld.cW,
                         children:
                             "This section tests the orderSKU function, order signing, and 3DS authentication. Select SKU ID and payment source from the dropdowns below. Check the console for detailed logs.",
@@ -2674,8 +2674,8 @@ Error: ${t}`);
                                         clearable: !0,
                                     }),
                                     !h &&
-                                        (0, s.jsx)(f.E, {
-                                            variant: "text-sm/normal",
+                                        (0, s.jsx)(y.E, {
+                                            variant: "body-sm/normal",
                                             color: "text-muted",
                                             className: ld.cW,
                                             children: "Loading payment sources...",
@@ -2710,9 +2710,9 @@ Error: ${t}`);
                                 .split("\n")
                                 .map((e, t) =>
                                     (0, s.jsx)(
-                                        f.E,
+                                        y.E,
                                         {
-                                            variant: "text-md/normal",
+                                            variant: "body-md/normal",
                                             style: {
                                                 display: "block",
                                                 marginBottom: t < n.split("\n").length - 1 ? "4px" : "0",
@@ -2729,8 +2729,8 @@ Error: ${t}`);
     });
 }
 var lx = l(150934),
-    lf = l(36167);
-let ly = [
+    ly = l(36167);
+let lf = [
         { id: "tier_2", value: ew.gD.PREMIUM_MONTH_TIER_2, label: "Nitro (Monthly)" },
         { id: "tier_1", value: ew.gD.PREMIUM_MONTH_TIER_1, label: "Nitro Classic (Monthly)" },
         { id: "tier_0", value: ew.gD.PREMIUM_MONTH_TIER_0, label: "Nitro Basic (Monthly)" },
@@ -2759,7 +2759,7 @@ function lE(e) {
         { error: r, handleSuccess: o, handleFailure: c } = lg(),
         p = u.useCallback(() => {
             let e = (0, d.A)();
-            (0, lf.OD)({ planId: l, isGift: n, loadId: e, flowType: t }, o, c);
+            (0, ly.OD)({ planId: l, isGift: n, loadId: e, flowType: t }, o, c);
         }, [l, n, t, o, c]);
     return (0, s.jsxs)(tj.Hq, {
         label: "Nitro Checkout",
@@ -2773,7 +2773,7 @@ function lE(e) {
                     (0, s.jsx)(ep.l, {
                         label: "Plan",
                         value: l,
-                        options: ly,
+                        options: lf,
                         onSelectionChange: a,
                         selectionMode: "single",
                         fullWidth: !0,
@@ -2792,7 +2792,7 @@ function lE(e) {
                 ],
             }),
             (0, s.jsx)(O.$, { variant: "primary", size: "sm", text: "Open Nitro Checkout", onClick: p }),
-            null != r && (0, s.jsx)(f.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: r }),
+            null != r && (0, s.jsx)(y.E, { variant: "body-xs/normal", color: "text-feedback-critical", children: r }),
         ],
     });
 }
@@ -2803,7 +2803,7 @@ function lS(e) {
             if (null == t) return;
             let e = (0, d.A)(),
                 l = M.BVt.BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE(t, e);
-            (0, lf.xq)(l, a, n);
+            (0, ly.xq)(l, a, n);
         }, [t, a, n]);
     return (0, s.jsxs)(tj.Hq, {
         label: "Manage Subscription",
@@ -2816,7 +2816,7 @@ function lS(e) {
                 onClick: i,
                 disabled: null == t,
             }),
-            null != l && (0, s.jsx)(f.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: l }),
+            null != l && (0, s.jsx)(y.E, { variant: "body-xs/normal", color: "text-feedback-critical", children: l }),
         ],
     });
 }
@@ -2828,7 +2828,7 @@ function lj(e) {
             if (0 === l.length || null == t) return;
             let e = (0, d.A)(),
                 a = M.BVt.BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(l, void 0, e, t);
-            (0, lf.xq)(a, i, r);
+            (0, ly.xq)(a, i, r);
         }, [l, i, r, t]);
     return (0, s.jsxs)(tj.Hq, {
         label: "Guild Boosts",
@@ -2842,7 +2842,7 @@ function lj(e) {
                 disabled: 0 === l.length || null == t,
                 onClick: o,
             }),
-            null != n && (0, s.jsx)(f.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: n }),
+            null != n && (0, s.jsx)(y.E, { variant: "body-xs/normal", color: "text-feedback-critical", children: n }),
         ],
     });
 }
@@ -2890,8 +2890,8 @@ function lM() {
         );
     return (0, s.jsxs)("div", {
         children: [
-            (0, s.jsxs)(f.E, {
-                variant: "text-md/normal",
+            (0, s.jsxs)(y.E, {
+                variant: "body-md/normal",
                 className: ld.cW,
                 children: [
                     "Try configuring options for the Stripe Element container and Express Checkout Element here. Not all settings will change the appearance or functionality of the checkout button - use this to figure out the customizability of the Express Checkout Element.",
@@ -2900,8 +2900,8 @@ function lM() {
                     "Start by changing the `borderRadius` or `buttonHeight` as a test!",
                 ],
             }),
-            (0, s.jsxs)(f.E, {
-                variant: "text-md/normal",
+            (0, s.jsxs)(y.E, {
+                variant: "body-md/normal",
                 className: ld.cW,
                 children: [
                     (0, s.jsx)("b", { children: "elements.options:" }),
@@ -2921,8 +2921,8 @@ function lM() {
                     rows: 7,
                 }),
             }),
-            (0, s.jsxs)(f.E, {
-                variant: "text-md/normal",
+            (0, s.jsxs)(y.E, {
+                variant: "body-md/normal",
                 className: ld.cW,
                 children: [
                     (0, s.jsx)("b", { children: "expressCheckoutElement.options:" }),
@@ -2946,7 +2946,7 @@ function lM() {
                     rows: 7,
                 }),
             }),
-            null != d && (0, s.jsx)(f.E, { variant: "text-md/normal", color: "text-feedback-critical", children: d }),
+            null != d && (0, s.jsx)(y.E, { variant: "body-md/normal", color: "text-feedback-critical", children: d }),
             (0, s.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
                 className: ld.Ut,
@@ -2962,8 +2962,8 @@ function lM() {
                                 m(
                                     (0, s.jsxs)(s.Fragment, {
                                         children: [
-                                            (0, s.jsxs)(f.E, {
-                                                variant: "text-md/normal",
+                                            (0, s.jsxs)(y.E, {
+                                                variant: "body-md/normal",
                                                 className: ld.cW,
                                                 children: ["Element updated at: ", new Date().toString()],
                                             }),
@@ -2990,18 +2990,18 @@ function lM() {
                     },
                 }),
             }),
-            (0, s.jsx)(f.E, { variant: "text-md/normal", className: ld.cW, children: "Current Element Options:" }),
-            (0, s.jsx)(f.E, {
-                variant: "text-md/normal",
+            (0, s.jsx)(y.E, { variant: "body-md/normal", className: ld.cW, children: "Current Element Options:" }),
+            (0, s.jsx)(y.E, {
+                variant: "body-md/normal",
                 children: (0, s.jsx)(lA.A, { className: ld.wD, children: `\`\` ${lR(l)} \`\`` }),
             }),
-            (0, s.jsx)(f.E, {
-                variant: "text-md/normal",
+            (0, s.jsx)(y.E, {
+                variant: "body-md/normal",
                 className: ld.cW,
                 children: "Current Express Checkout Element Options:",
             }),
-            (0, s.jsx)(f.E, {
-                variant: "text-md/normal",
+            (0, s.jsx)(y.E, {
+                variant: "body-md/normal",
                 children: (0, s.jsx)(lA.A, { className: ld.wD, children: `\`\` ${lR(r)} \`\`` }),
             }),
             p,
@@ -3024,8 +3024,8 @@ function lW(e) {
     return (0, s.jsxs)("div", {
         className: l$.I,
         children: [
-            (0, s.jsxs)(f.E, { variant: "text-sm/medium", children: [t, ":"] }),
-            (0, s.jsx)(f.E, { variant: "text-sm/normal", children: l }),
+            (0, s.jsxs)(y.E, { variant: "body-sm/medium", children: [t, ":"] }),
+            (0, s.jsx)(y.E, { variant: "body-sm/normal", children: l }),
             (0, s.jsx)(lG.K, {
                 size: "sm",
                 "aria-label": "Copy Link",
@@ -3099,7 +3099,7 @@ function lX(e) {
     u.useEffect(() => {
         h !== t && (b(t), c());
     }, [t, h, b, c]);
-    let { stripePaymentElementProps: x, stripeAddressElementProps: f } = (0, lU.wD)({
+    let { stripePaymentElementProps: x, stripeAddressElementProps: y } = (0, lU.wD)({
             step: m.pn.PAYMENT_ELEMENT,
             handleStepChange: M.tEg,
             onBillingAddressChange: M.tEg,
@@ -3108,7 +3108,7 @@ function lX(e) {
             continueSessionToInitialStep: void 0,
         }),
         {
-            elementsOptions: y,
+            elementsOptions: f,
             isLoading: v,
             setupError: g,
             customPaymentMethodIdsToSourceTypes: E,
@@ -3148,7 +3148,7 @@ function lX(e) {
                                   className: L()(lY.o6, "joined-payment-address-elements" === d ? lY.fF : lY.u1),
                                   children: (0, s.jsxs)(lC.Elements, {
                                       stripe: p,
-                                      options: y,
+                                      options: f,
                                       children: [
                                           "stripe-address-element" === d
                                               ? (0, s.jsx)("div", {
@@ -3166,7 +3166,7 @@ function lX(e) {
                                                 }),
                                           ("joined-payment-address-elements" === d || "stripe-address-element" === d) &&
                                               (0, s.jsx)(lL.KS, {
-                                                  ...f,
+                                                  ...y,
                                                   billingAddressInfo: {
                                                       email: "",
                                                       name: "",
@@ -3325,7 +3325,7 @@ let at = {
                             },
                         ],
                     }),
-                    (0, s.jsxs)(f.E, { variant: "text-sm/normal", children: ["Selected plan index: ", b] }),
+                    (0, s.jsxs)(y.E, { variant: "body-sm/normal", children: ["Selected plan index: ", b] }),
                 ],
             });
         },
@@ -3374,8 +3374,8 @@ let at = {
                     item1Amount: b,
                     item1Tooltip: h,
                     item1LabelSubText: x,
-                    item1SubText: f,
-                    item1SubTextHasStrikethrough: y,
+                    item1SubText: y,
+                    item1SubTextHasStrikethrough: f,
                     item2Label: v,
                     item2Amount: g,
                     item2FormatWithoutRate: E,
@@ -3391,8 +3391,8 @@ let at = {
                               amount: b,
                               tooltip: "" !== h ? h : void 0,
                               labelSubText: "" !== x ? x : void 0,
-                              subText: "" !== f ? f : void 0,
-                              subTextHasStrikethrough: y,
+                              subText: "" !== y ? y : void 0,
+                              subTextHasStrikethrough: f,
                           },
                           ...("" !== v
                               ? [
@@ -3488,8 +3488,8 @@ let at = {
                 gap: 16,
                 align: "center",
                 children: [
-                    (0, s.jsx)(f.E, {
-                        variant: "text-md/normal",
+                    (0, s.jsx)(y.E, {
+                        variant: "body-md/normal",
                         children: "Click the button below to open the Unified Checkout modal",
                     }),
                     (0, s.jsx)(O.$, {
@@ -3707,8 +3707,8 @@ let at = {
                                 disabled: t,
                                 error: l ? a : void 0,
                             }),
-                            (0, s.jsxs)(f.E, {
-                                variant: "text-sm/normal",
+                            (0, s.jsxs)(y.E, {
+                                variant: "body-sm/normal",
                                 children: ["Selected payment: ", i ?? "None"],
                             }),
                         ],
@@ -3762,10 +3762,10 @@ let at = {
                 component: function () {
                     return (0, s.jsxs)("div", {
                         children: [
-                            (0, s.jsx)(f.E, { variant: "text-sm/normal", children: "Stateless Component:" }),
+                            (0, s.jsx)(y.E, { variant: "body-sm/normal", children: "Stateless Component:" }),
                             (0, s.jsx)(l5.y, { onClick: M.tEg }),
                             (0, s.jsx)("br", {}),
-                            (0, s.jsx)(f.E, { variant: "text-sm/normal", children: "Link with Modal:" }),
+                            (0, s.jsx)(y.E, { variant: "body-sm/normal", children: "Link with Modal:" }),
                             (0, s.jsx)(l5.Z4, { onComplete: M.tEg }),
                         ],
                     });
@@ -3851,11 +3851,11 @@ function ax(e) {
         placeholder: 0 === l.length ? "Waiting for client to connect\u2026" : void 0,
     });
 }
-function af(e) {
+function ay(e) {
     let { children: t } = e;
     return (0, s.jsx)("div", { className: ah.t, children: t });
 }
-let ay = "default";
+let af = "default";
 var av =
     (((a = {}).PAYMENTS = "payments"),
     (a.VIRTUAL_CURRENCY = "virtual-currency"),
@@ -3879,8 +3879,8 @@ let ag = ["Revenue Storybook", "Revenue Playground"],
                             return (0, s.jsxs)(ec.B, {
                                 gap: 8,
                                 children: [
-                                    (0, s.jsx)(f.E, {
-                                        variant: "text-sm/normal",
+                                    (0, s.jsx)(y.E, {
+                                        variant: "body-sm/normal",
                                         children:
                                             "Click the button below to open the gift card redemption modal (enter code form). On success it will open the success modal.",
                                     }),
@@ -3888,7 +3888,7 @@ let ag = ["Revenue Storybook", "Revenue Playground"],
                                         variant: "primary",
                                         text: "Open Redemption Modal",
                                         onClick: () =>
-                                            (0, ty.HF)({
+                                            (0, tf.HF)({
                                                 withRedemptionSuccessModal: !0,
                                                 onComplete: () => {},
                                                 onClose: () => {},
@@ -3905,8 +3905,8 @@ let ag = ["Revenue Storybook", "Revenue Playground"],
                             return (0, s.jsxs)(ec.B, {
                                 gap: 8,
                                 children: [
-                                    (0, s.jsx)(f.E, {
-                                        variant: "text-sm/normal",
+                                    (0, s.jsx)(y.E, {
+                                        variant: "body-sm/normal",
                                         children:
                                             "Click the button below to open the gift card redemption success modal (post-redemption).",
                                     }),
@@ -3914,7 +3914,7 @@ let ag = ["Revenue Storybook", "Revenue Playground"],
                                         variant: "primary",
                                         text: "Open Success Modal",
                                         onClick: () =>
-                                            (0, ty.cV)({
+                                            (0, tf.cV)({
                                                 amountRedeemed: 5e3,
                                                 currencyCode: M.Yri.USD,
                                                 onClose: () => {},
@@ -4000,8 +4000,8 @@ let ag = ["Revenue Storybook", "Revenue Playground"],
                                             }),
                                         ],
                                     }),
-                                    (0, s.jsx)(f.E, {
-                                        variant: "text-xs/normal",
+                                    (0, s.jsx)(y.E, {
+                                        variant: "body-xs/normal",
                                         color: "text-muted",
                                         children: "Some link outs require enabling the flow type to work.",
                                     }),
@@ -4061,13 +4061,13 @@ let ag = ["Revenue Storybook", "Revenue Playground"],
                                                     label: t,
                                                     children: (0, s.jsxs)("div", {
                                                         children: [
-                                                            (0, s.jsx)(f.E, {
-                                                                variant: "text-md/normal",
+                                                            (0, s.jsx)(y.E, {
+                                                                variant: "body-md/normal",
                                                                 className: ld.cW,
                                                                 children: "expressCheckoutElement.options:",
                                                             }),
-                                                            (0, s.jsx)(f.E, {
-                                                                variant: "text-md/normal",
+                                                            (0, s.jsx)(y.E, {
+                                                                variant: "body-md/normal",
                                                                 children: (0, s.jsx)(lA.A, {
                                                                     className: ld.wD,
                                                                     children: `\`\`${lR(l_[e])} \`\``,
@@ -4145,8 +4145,8 @@ let ag = ["Revenue Storybook", "Revenue Playground"],
                             return (0, s.jsxs)("div", {
                                 className: q.YG,
                                 children: [
-                                    (0, s.jsx)(f.E, {
-                                        variant: "text-md/normal",
+                                    (0, s.jsx)(y.E, {
+                                        variant: "body-md/normal",
                                         color: "text-feedback-info",
                                         style: { marginBottom: "8px" },
                                         children: "Use this to reset your user's DCF Orb Onboarding state.",
@@ -4558,7 +4558,7 @@ let ag = ["Revenue Storybook", "Revenue Playground"],
                                               onChange: function (e) {
                                                   l(e?.id ?? "");
                                               },
-                                              globalOption: tf,
+                                              globalOption: ty,
                                           }),
                                           (0, s.jsx)(tb.A, { user: a, guildId: "" === t ? null : t }),
                                       ],
@@ -4586,7 +4586,7 @@ let ag = ["Revenue Storybook", "Revenue Playground"],
                                               onChange: function (e) {
                                                   l(e?.id ?? "");
                                               },
-                                              globalOption: tf,
+                                              globalOption: ty,
                                           }),
                                           (0, s.jsx)(th.A, { user: a, guildId: "" === t ? null : t }),
                                       ],
@@ -4614,7 +4614,7 @@ let ag = ["Revenue Storybook", "Revenue Playground"],
                                               onChange: function (e) {
                                                   l(e?.id ?? "");
                                               },
-                                              globalOption: tf,
+                                              globalOption: ty,
                                           }),
                                           (0, s.jsx)(tx.A, { user: a, guildId: "" === t ? null : t }),
                                       ],
@@ -4666,12 +4666,12 @@ let ag = ["Revenue Storybook", "Revenue Playground"],
                                         [l],
                                     )),
                                 [i, r] = u.useState(),
-                                [o, d] = u.useState(ay),
+                                [o, d] = u.useState(af),
                                 c = i ?? a[0]?.value,
                                 p = u.useMemo(
                                     () => [
                                         { id: "dm", label: "DM", value: "dm" },
-                                        { id: ay, label: "Default (main profile)", value: ay },
+                                        { id: af, label: "Default (main profile)", value: af },
                                         ...n,
                                     ],
                                     [n],
@@ -4684,7 +4684,7 @@ let ag = ["Revenue Storybook", "Revenue Playground"],
                                             : (ac.A.getDMFromUserId(c) ?? ac.A.getSortedPrivateChannels()[0]?.id),
                                     [c],
                                 ),
-                                b = o === ay || "dm" === o ? void 0 : o,
+                                b = o === af || "dm" === o ? void 0 : o,
                                 h = "dm" === o ? m : void 0;
                             return (
                                 u.useEffect(() => {
@@ -4702,7 +4702,7 @@ let ag = ["Revenue Storybook", "Revenue Playground"],
                                                 (0, s.jsx)(ax, { label: "Context", options: p, value: o, onChange: d }),
                                             ],
                                         }),
-                                        (0, s.jsx)(af, {
+                                        (0, s.jsx)(ay, {
                                             children:
                                                 null != c && (0, s.jsx)(ad.G, { userId: c, guildId: b, channelId: h }),
                                         }),

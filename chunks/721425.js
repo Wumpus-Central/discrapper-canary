@@ -11,7 +11,7 @@ var n = l(477900),
 function m() {
     let e = (0, u.Ay)();
     return (0, n.jsx)(s.E, {
-        variant: "text-sm/medium",
+        variant: "body-sm/medium",
         className: c.Q,
         children: r.intl.format(o.default.fcJiY8, {
             provider: (0, n.jsx)(

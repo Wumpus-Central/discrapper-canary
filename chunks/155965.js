@@ -1,22 +1,22 @@
-n.d(t, { A: () => M });
-var l = n(477900),
-    i = n(582128),
-    a = n(17928),
-    r = n(666860),
-    o = n(688810),
-    s = n(206828),
-    c = n(627363),
-    d = n(587895),
-    u = n(769015),
-    m = n(174459),
-    h = n(834730),
-    p = n(289873),
-    g = n(628284),
-    x = n(821609),
-    f = n(105292),
-    A = n(469792);
+t.d(n, { A: () => k });
+var l = t(477900),
+    i = t(582128),
+    a = t(17928),
+    r = t(666860),
+    o = t(688810),
+    s = t(206828),
+    c = t(627363),
+    d = t(587895),
+    u = t(769015),
+    m = t(174459),
+    h = t(834730),
+    p = t(289873),
+    g = t(628284),
+    x = t(821609),
+    f = t(105292),
+    A = t(469792);
 function j(e) {
-    let { displayName: t, description: n, icon: i, isLoading: a, isConnected: r, canConnect: o, onConnect: s } = e;
+    let { displayName: n, description: t, icon: i, isLoading: a, isConnected: r, canConnect: o, onConnect: s } = e;
     return (0, l.jsxs)("div", {
         className: A.Nr,
         children: [
@@ -27,10 +27,10 @@ function j(e) {
                     (0, l.jsxs)("div", {
                         className: A.P_,
                         children: [
-                            (0, l.jsx)(h.E, { variant: "text-md/medium", color: "text-strong", children: t }),
-                            null != n &&
-                                n.length > 0 &&
-                                (0, l.jsx)(h.E, { variant: "text-sm/medium", color: "text-muted", children: n }),
+                            (0, l.jsx)(h.E, { variant: "body-md/medium", color: "text-strong", children: n }),
+                            null != t &&
+                                t.length > 0 &&
+                                (0, l.jsx)(h.E, { variant: "body-sm/medium", color: "text-muted", children: t }),
                         ],
                     }),
                 ],
@@ -42,7 +42,7 @@ function j(e) {
                         className: A.ul,
                         children: [
                             (0, l.jsx)(h.E, {
-                                variant: "text-md/medium",
+                                variant: "body-md/medium",
                                 color: "text-feedback-positive",
                                 children: f.intl.string(f.t["LV+CXH"]),
                             }),
@@ -59,35 +59,35 @@ function j(e) {
         ],
     });
 }
-var C = n(652215);
+var C = t(652215);
 function v(e) {
-    let { connection: t, guildId: n, location: h } = e,
-        p = (0, a.bG)([d.A], () => (null != t.application_id ? d.A.getApplication(t.application_id) : null), [
-            t.application_id,
+    let { connection: n, guildId: t, location: h } = e,
+        p = (0, a.bG)([d.A], () => (null != n.application_id ? d.A.getApplication(n.application_id) : null), [
+            n.application_id,
         ]),
         { analyticsLocations: g } = (0, o.Ay)(h);
     i.useEffect(() => {
         null != p ||
-            null == t.application_id ||
-            d.A.isFetchingApplication(t.application_id) ||
-            d.A.didFetchingApplicationFail(t.application_id) ||
-            (0, c.TA)(t.application_id).catch(() => {});
-    }, [p, t.application_id]);
+            null == n.application_id ||
+            d.A.isFetchingApplication(n.application_id) ||
+            d.A.didFetchingApplicationFail(n.application_id) ||
+            (0, c.TA)(n.application_id).catch(() => {});
+    }, [p, n.application_id]);
     let x = p?.name ?? f.intl.string(f.t.cgPbaZ),
         { hasAlreadyLinked: A, canStartAuthorization: v, startAuthorization: y, fetched: _ } = (0, s.RD)(p),
         N = (0, l.jsx)(u.A, { game: p, size: u.M.MEDIUM }),
         E = i.useCallback(() => {
             (m.default.track(C.HAw.GUILD_ONBOARDING_CONNECTION_CLICKED, {
-                ...(0, r.H$)(n),
+                ...(0, r.H$)(t),
                 connection_type: "application",
-                application_id: t.application_id ?? void 0,
+                application_id: n.application_id ?? void 0,
                 location: h,
             }),
                 y({ analyticsLocations: g }));
-        }, [y, n, t.application_id, h, g]);
+        }, [y, t, n.application_id, h, g]);
     return (0, l.jsx)(j, {
         displayName: x,
-        description: t.description,
+        description: n.description,
         icon: N,
         isLoading: !_,
         isConnected: A,
@@ -95,18 +95,18 @@ function v(e) {
         onConnect: E,
     });
 }
-var y = n(462887),
-    _ = n(173936),
-    N = n(736653),
-    E = n(573648),
-    w = n(456647);
+var y = t(462887),
+    _ = t(173936),
+    N = t(736653),
+    E = t(573648),
+    w = t(456647);
 function I(e) {
-    let { connection: t, guildId: n, location: a } = e,
+    let { connection: n, guildId: t, location: a } = e,
         o = (0, N.Ay)(),
-        s = (null != t.provider_id ? E.A.get(t.provider_id)?.name : null) ?? f.intl.string(f.t.NzCoRx),
+        s = (null != n.provider_id ? E.A.get(n.provider_id)?.name : null) ?? f.intl.string(f.t.NzCoRx),
         c =
-            null != t.description && t.description.length > 0
-                ? t.description
+            null != n.description && n.description.length > 0
+                ? n.description
                 : (function (e) {
                       switch (e) {
                           case C.fg2.TWITCH:
@@ -116,23 +116,23 @@ function I(e) {
                           default:
                               return;
                       }
-                  })(t.provider_id),
+                  })(n.provider_id),
         {
             hasConnection: d,
             canConnect: u,
             startConnection: h,
             loading: p,
         } = (function (e) {
-            let { loading: t, hasConnection: n, canConnect: l, startConnection: a, account: r } = (0, w.X)(e);
+            let { loading: n, hasConnection: t, canConnect: l, startConnection: a, account: r } = (0, w.X)(e);
             return {
-                loading: t,
-                hasConnection: n,
+                loading: n,
+                hasConnection: t,
                 canConnect: l,
                 startConnection: i.useCallback(
                     async (e) => {
-                        let t = await a(e);
-                        if (t.success && null != t.url) {
-                            let e = window.open(t.url, "_blank");
+                        let n = await a(e);
+                        if (n.success && null != n.url) {
+                            let e = window.open(n.url, "_blank");
                             return null == e ? { success: !1 } : { success: !0, popup: e };
                         }
                         return { success: !1 };
@@ -141,24 +141,24 @@ function I(e) {
                 ),
                 account: r,
             };
-        })(t.provider_id),
+        })(n.provider_id),
         g = i.useCallback(async () => {
             (m.default.track(C.HAw.GUILD_ONBOARDING_CONNECTION_CLICKED, {
-                ...(0, r.H$)(n),
+                ...(0, r.H$)(t),
                 connection_type: "provider",
-                provider_id: t.provider_id ?? void 0,
+                provider_id: n.provider_id ?? void 0,
                 location: a,
             }),
                 await h(a));
-        }, [h, n, t.provider_id, a]),
+        }, [h, t, n.provider_id, a]),
         x = i.useMemo(() => {
-            if (null != t.provider_id) {
-                let e = E.A.get(t.provider_id),
-                    n = e?.icon != null ? ((0, y.M)(o) ? e.icon.darkPNG : e.icon.lightPNG) : null;
-                if (null != n) return (0, l.jsx)("img", { src: n, alt: s, width: 40, height: 40 });
+            if (null != n.provider_id) {
+                let e = E.A.get(n.provider_id),
+                    t = e?.icon != null ? ((0, y.M)(o) ? e.icon.darkPNG : e.icon.lightPNG) : null;
+                if (null != t) return (0, l.jsx)("img", { src: t, alt: s, width: 40, height: 40 });
             }
             return (0, l.jsx)(_.LinkIcon, { size: "custom", width: 40, height: 40, color: "currentColor" });
-        }, [t.provider_id, o, s]);
+        }, [n.provider_id, o, s]);
     return (0, l.jsx)(j, {
         displayName: s,
         description: c,
@@ -169,15 +169,15 @@ function I(e) {
         onConnect: g,
     });
 }
-var k = n(539916);
-function M(e) {
-    let { connection: t, guildId: n, location: i } = e;
-    switch (t.connection_type) {
-        case k.wZ.APPLICATION:
-            return (0, l.jsx)(v, { connection: t, guildId: n, location: i });
-        case k.wZ.PROVIDER_CONNECTED_ACCOUNT:
-            return (0, l.jsx)(I, { connection: t, guildId: n, location: i });
+var b = t(539916);
+function k(e) {
+    let { connection: n, guildId: t, location: i } = e;
+    switch (n.connection_type) {
+        case b.wZ.APPLICATION:
+            return (0, l.jsx)(v, { connection: n, guildId: t, location: i });
+        case b.wZ.PROVIDER_CONNECTED_ACCOUNT:
+            return (0, l.jsx)(I, { connection: n, guildId: t, location: i });
         default:
-            return (t.connection_type, null);
+            return (n.connection_type, null);
     }
 }

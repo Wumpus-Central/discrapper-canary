@@ -1,6 +1,6 @@
-e.exports = {
-    YS: "text-xs/medium__8a969",
-    Mz: "text-md/semibold__8a969",
+o.exports = {
+    hY: "body-xs/medium__8a969",
+    Jh: "body-md/semibold__8a969",
     kL: "container__8a969",
     zc: "iconContainer__8a969",
     b: "actionable__8a969",

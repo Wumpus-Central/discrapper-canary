@@ -1,30 +1,30 @@
-a.d(e, { A: () => A });
-var t = a(477900),
-    n = a(582128),
-    s = a(503698),
-    i = a.n(s),
-    c = a(17928),
-    r = a(289873),
-    d = a(834730),
-    o = a(734057),
-    h = a(576705),
-    u = a(450149),
-    v = a(652215),
-    g = a(105292),
-    f = a(142893);
+e.d(a, { A: () => A });
+var t = e(477900),
+    n = e(582128),
+    s = e(503698),
+    i = e.n(s),
+    c = e(17928),
+    r = e(289873),
+    d = e(834730),
+    o = e(734057),
+    h = e(576705),
+    u = e(450149),
+    v = e(652215),
+    g = e(105292),
+    f = e(142893);
 function N(l) {
-    let { isLoading: e, noText: a, noImage: n, previewText: s, className: c } = l;
+    let { isLoading: a, noText: e, noImage: n, previewText: s, className: c } = l;
     return (0, t.jsx)("div", {
         className: i()(f.Hd, c),
-        children: e
+        children: a
             ? (0, t.jsx)(r.y, {})
             : (0, t.jsxs)(t.Fragment, {
                   children: [
                       n ? null : (0, t.jsx)("div", { className: f.js }),
-                      a
+                      e
                           ? null
                           : (0, t.jsx)(d.E, {
-                                variant: "text-sm/normal",
+                                variant: "body-sm/normal",
                                 color: "text-default",
                                 className: f.pY,
                                 children: s ?? g.intl.string(g.t.uQZTBV),
@@ -34,25 +34,25 @@ function N(l) {
     });
 }
 function A(l) {
-    let { stream: e, className: a, noText: s = !1, noImage: i = !1 } = l,
-        r = (0, c.bG)([o.A], () => o.A.getBasicChannel(e.channelId)),
+    let { stream: a, className: e, noText: s = !1, noImage: i = !1 } = l,
+        r = (0, c.bG)([o.A], () => o.A.getBasicChannel(a.channelId)),
         d = (0, c.bG)([h.A], () => null != r && h.A.canBasicChannel(v.hVb.CONNECT, r)),
-        { previewUrl: A, isLoading: p } = (0, u.A)(e.guildId, e.channelId, e.ownerId),
-        x = n.useRef(p ? null : A);
+        { previewUrl: A, isLoading: p } = (0, u.A)(a.guildId, a.channelId, a.ownerId),
+        m = n.useRef(p ? null : A);
     n.useEffect(() => {
-        p || (x.current = A);
+        p || (m.current = A);
     }, [A, p]);
-    let m = null == A || p ? x.current : A;
-    return null == m
+    let w = null == A || p ? m.current : A;
+    return null == w
         ? (0, t.jsx)(N, {
-              className: a,
+              className: e,
               isLoading: p,
               noText: s,
               noImage: i,
               previewText: d ? void 0 : g.intl.string(g.t.pgUTZC),
           })
         : (0, t.jsx)("div", {
-              className: a,
-              children: (0, t.jsx)("img", { src: m, alt: "", className: f.Sl, draggable: !1 }),
+              className: e,
+              children: (0, t.jsx)("img", { src: w, alt: "", className: f.Sl, draggable: !1 }),
           });
 }

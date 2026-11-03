@@ -2,8 +2,8 @@ n.d(e, { default: () => b, i: () => w });
 var s = n(477900),
     i = n(582128),
     r = n(503698),
-    a = n.n(r),
-    o = n(323889),
+    o = n.n(r),
+    a = n(323889),
     l = n(17928),
     u = n(189213),
     c = n(462887),
@@ -16,13 +16,13 @@ var s = n(477900),
     I = n(200192),
     T = n(738188),
     O = n(192308),
-    L = n(775602),
-    g = n(507395),
-    y = n(144779),
+    y = n(775602),
+    L = n(507395),
+    g = n(144779),
     N = n(363195),
     _ = n(178540),
-    S = n(738822),
-    m = n(77870),
+    m = n(738822),
+    S = n(77870),
     Q = n(291749),
     R = n(590202),
     v = n(971649),
@@ -37,24 +37,24 @@ function b(t) {
     let { quest: e, transitionState: n, onClose: r, sourceQuestContent: f, refreshOnOpen: I = !1 } = t,
         T = (0, _.O)((t) => t.getErrorHints(e.id)),
         O = (0, i.useRef)(!1),
-        D = (0, m.UX)(),
+        D = (0, S.UX)(),
         b = (0, v.vU)()?.getId(),
-        w = (0, l.bG)([L.Ay], () => L.Ay.useReducedMotion),
+        w = (0, l.bG)([y.Ay], () => y.Ay.useReducedMotion),
         W = (0, p.Xf)({ useReducedMotion: w, className: M.Zf }),
         X = T.filter((t) => ["xbox", "playstation"].includes(t.connected_account_type)),
         k = (0, h.YL)(e),
         z = (0, l.bG)([N.A], () => N.A.getState().theme),
         V = (0, c.M)(z) ? j.NJ.DARK : j.NJ.LIGHT,
-        { startConsoleQuest: F, startingConsoleQuest: K } = (0, m.Wj)({
+        { startConsoleQuest: F, startingConsoleQuest: K } = (0, S.Wj)({
             questId: e.id,
             beforeRequest: () => {
                 (W.startAnimation(),
-                    (0, g.r)({
-                        type: y.F.CLICK_INTERNAL,
-                        adCreativeType: o.p.QUEST,
+                    (0, L.r)({
+                        type: g.F.CLICK_INTERNAL,
+                        adCreativeType: a.p.QUEST,
                         adCreativeId: e.id,
                         questContentCTA: R.Cy.DEFIBRILLATOR,
-                        surfaceId: S.uF.CONNECTIONS_MODAL,
+                        surfaceId: m.uF.CONNECTIONS_MODAL,
                         sourceQuestContent: f,
                         impressionId: b,
                     }));
@@ -80,7 +80,7 @@ function b(t) {
                         (0, P.b6)(
                             { quest: e },
                             {
-                                content: S.uF.CONNECTIONS_MODAL,
+                                content: m.uF.CONNECTIONS_MODAL,
                                 ctaContent: R.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
                                 impressionId: b,
                                 sourceQuestContent: f,
@@ -96,17 +96,17 @@ function b(t) {
                         className: M.$Q,
                         children: [
                             (0, s.jsx)(d.E, {
-                                variant: "eyebrow",
+                                variant: "body-sm/medium",
                                 color: "text-default",
                                 children: U.intl.string(U.t["+/hZM/"]),
                             }),
                             (0, s.jsxs)(E.D, {
-                                className: a()(M.Tm, { [M.r9]: K }),
+                                className: o()(M.Tm, { [M.r9]: K }),
                                 onClick: F,
                                 children: [
                                     W.render(),
                                     (0, s.jsx)(d.E, {
-                                        variant: "text-sm/medium",
+                                        variant: "body-sm/medium",
                                         color: "currentColor",
                                         className: M.Zf,
                                         children: U.intl.string(U.t.wzzjk9),
@@ -130,11 +130,11 @@ function b(t) {
                                               className: M.YL,
                                               children: [
                                                   (0, s.jsx)(d.E, {
-                                                      variant: "text-sm/medium",
+                                                      variant: "body-sm/medium",
                                                       children: e.config.messages.gameTitle,
                                                   }),
                                                   (0, s.jsx)(d.E, {
-                                                      variant: "text-xs/normal",
+                                                      variant: "body-xs/normal",
                                                       color: "text-muted",
                                                       children: U.intl.string(U.t.STpNEC),
                                                   }),
@@ -157,19 +157,19 @@ function b(t) {
 }
 function q(t) {
     let { icon: e, text: n, errors: i = [], gameTile: r } = t,
-        o = i.length > 0,
-        l = o ? f.e : I.Q;
+        a = i.length > 0,
+        l = a ? f.e : I.Q;
     return (0, s.jsxs)("div", {
         className: M.dJ,
         children: [
             (0, s.jsxs)("div", {
-                className: a()(M.w_, { [M.qu]: o }),
+                className: o()(M.w_, { [M.qu]: a }),
                 children: [
                     (0, s.jsxs)("div", {
                         className: M.d3,
                         children: [
                             e,
-                            (0, s.jsx)(d.E, { variant: "text-sm/medium", color: "text-default", children: n }),
+                            (0, s.jsx)(d.E, { variant: "body-sm/medium", color: "text-default", children: n }),
                         ],
                     }),
                     (0, s.jsxs)("div", {
@@ -179,7 +179,7 @@ function q(t) {
                             (0, s.jsx)(l, {
                                 color: "currentColor",
                                 size: "sm",
-                                className: a()({ [M.kX]: !o, [M.z3]: o }),
+                                className: o()({ [M.kX]: !a, [M.z3]: a }),
                             }),
                         ],
                     }),
@@ -194,7 +194,7 @@ function q(t) {
                             className: M.Ff,
                             children: [
                                 (0, s.jsx)(T.WarningIcon, { size: "sm", color: "currentColor", className: M.z3 }),
-                                (0, s.jsx)(d.E, { variant: "text-xs/medium", color: "text-muted", children: t }),
+                                (0, s.jsx)(d.E, { variant: "body-xs/medium", color: "text-muted", children: t }),
                             ],
                         },
                         t,
@@ -211,7 +211,7 @@ function w(t) {
             return (0, s.jsx)(D.R, {
                 overrideVisibility: !0,
                 questOrQuests: t.quest,
-                questContent: S.uF.CONNECTIONS_MODAL,
+                questContent: m.uF.CONNECTIONS_MODAL,
                 sourceQuestContent: t.sourceQuestContent,
                 children: () => (0, s.jsx)(e, { ...n, ...t }),
             });

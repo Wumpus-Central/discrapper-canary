@@ -1,4 +1,4 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => T });
 var i = n(477900),
     l = n(582128),
     s = n(834730),
@@ -17,7 +17,7 @@ function S(e) {
     let { children: t, className: n } = e;
     return (0, i.jsx)(s.E, { variant: "body-xs/semibold", color: "none", className: n, children: t });
 }
-class x extends l.PureComponent {
+class T extends l.PureComponent {
     static defaultProps = {
         isForSubscription: !1,
         isDefault: !1,
@@ -99,7 +99,7 @@ class x extends l.PureComponent {
     }
     renderDescription() {
         let { paymentSource: e, descriptionClassName: t } = this.props;
-        return (0, i.jsx)(s.E, { className: t, variant: "text-md/semibold", children: this.getLabel(e) });
+        return (0, i.jsx)(s.E, { className: t, variant: "body-md/semibold", children: this.getLabel(e) });
     }
     renderSubText() {
         let { paymentSource: e, locale: t } = this.props,
@@ -152,7 +152,7 @@ class x extends l.PureComponent {
                         }),
                         n && null != u
                             ? (0, i.jsx)(s.E, {
-                                  variant: "text-sm/normal",
+                                  variant: "body-sm/normal",
                                   color: "text-subtle",
                                   className: h.Sv,
                                   children: u,

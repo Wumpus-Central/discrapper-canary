@@ -55,7 +55,7 @@ function T(e) {
                         className: m.jw,
                     }),
                     (0, i.jsx)(c.E, {
-                        variant: "text-lg/medium",
+                        variant: "body-lg/medium",
                         color: "text-overlay-light",
                         className: m.h_,
                         children: S,
@@ -65,7 +65,7 @@ function T(e) {
             (0, i.jsx)("div", {
                 className: `${m.qr} ${m.vx}`,
                 children: (0, i.jsx)(c.E, {
-                    variant: "text-sm/medium",
+                    variant: "body-sm/medium",
                     color: "text-subtle",
                     children: h.intl.format(p.default.iqeKDz, {
                         username: s,

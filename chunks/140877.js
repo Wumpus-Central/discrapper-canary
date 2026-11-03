@@ -13,14 +13,14 @@ var r = n(477900),
     v = n(219103),
     p = n(561769),
     g = n(57020),
-    x = n(105292),
-    m = n(178287);
-function A(e) {
+    m = n(105292),
+    A = n(178287);
+function x(e) {
     let { product: t, prioritizedCurrency: n } = e,
         o = (0, s.bG)([l.default], () => l.default.getCurrentUser()),
         f = u.Ay.canUseCollectibles(o),
         p = (0, d.xM)(o),
-        A = null != p,
+        x = null != p,
         { isDisabled: _ } = (0, c.I)(t.skuId),
         { isPurchased: h, isPartiallyOwnedBundle: E } = (0, I.h)(t),
         C = (0, d.G0)(t),
@@ -29,43 +29,43 @@ function A(e) {
             checkoutEligiblePrices: k,
             hasSufficientOrbs: R,
             shouldCheckoutWithOrbs: y,
-        } = (0, g.F)({ product: t, hasShopDiscount: A, prioritizedCurrency: n }),
+        } = (0, g.F)({ product: t, hasShopDiscount: x, prioritizedCurrency: n }),
         j = k[0]?.currency,
-        T = i.useMemo(() => (0, d.fT)(t, A, j), [t, A, j]);
+        T = i.useMemo(() => (0, d.fT)(t, x, j), [t, x, j]);
     return _
         ? (0, r.jsx)(a.E, {
-              variant: "text-md/medium",
+              variant: "body-md/medium",
               color: "text-muted",
               lineClamp: 1,
-              children: x.intl.string(x.t.wu4gyV),
+              children: m.intl.string(m.t.wu4gyV),
           })
         : E
           ? (0, r.jsx)(a.E, {
-                variant: "text-md/medium",
+                variant: "body-md/medium",
                 color: "text-muted",
                 lineClamp: 1,
-                children: x.intl.string(x.t.BEjTij),
+                children: m.intl.string(m.t.BEjTij),
             })
           : h && !(C && !f)
             ? (0, r.jsx)(a.E, {
-                  variant: "text-md/medium",
+                  variant: "body-md/medium",
                   color: "text-muted",
                   lineClamp: 1,
-                  children: x.intl.string(x.t["6cfuDj"]),
+                  children: m.intl.string(m.t["6cfuDj"]),
               })
             : b
               ? (0, r.jsx)(a.E, {
-                    variant: "text-md/semibold",
+                    variant: "body-md/semibold",
                     color: "text-strong",
                     lineClamp: 1,
-                    children: x.intl.string(x.t.nBtvYB),
+                    children: m.intl.string(m.t.nBtvYB),
                 })
               : C
                 ? (0, r.jsx)(a.E, {
-                      variant: "text-md/semibold",
+                      variant: "body-md/semibold",
                       color: "text-strong",
                       lineClamp: 1,
-                      children: x.intl.string(x.t.rt69oo),
+                      children: m.intl.string(m.t.rt69oo),
                   })
                 : 0 === k.length
                   ? null
@@ -73,11 +73,11 @@ function A(e) {
                         priceAmount: k[0].amount,
                         priceCurrency: k[0].currency,
                         discount: T,
-                        discountIconConfig: A
+                        discountIconConfig: x
                             ? { displayMode: "default", source: p ?? d.D0.NITRO, size: "sm" }
                             : void 0,
-                        className: y && !R ? m.c : void 0,
-                        variant: "text-md/semibold",
+                        className: y && !R ? A.c : void 0,
+                        variant: "body-md/semibold",
                     });
 }
 let _ = function (e) {
@@ -86,5 +86,5 @@ let _ = function (e) {
         s = (0, o.Q)(i);
     if (null == i) return null;
     let a = (0, f.rb)(i, s);
-    return (0, r.jsx)(A, { product: a, prioritizedCurrency: n });
+    return (0, r.jsx)(x, { product: a, prioritizedCurrency: n });
 };

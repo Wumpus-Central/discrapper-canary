@@ -42,7 +42,7 @@ function S(e) {
                               i.Fragment,
                               {
                                   children: [
-                                      (0, t.jsx)(m.E, { variant: "text-md/semibold", className: f.nx, children: n }),
+                                      (0, t.jsx)(m.E, { variant: "body-md/semibold", className: f.nx, children: n }),
                                       a.map((e) => (0, t.jsx)(d.e, { shortcut: e, className: f.LE }, e)),
                                       s < l.length - 1 ? (0, t.jsx)("span", { className: f.me }) : null,
                                   ],

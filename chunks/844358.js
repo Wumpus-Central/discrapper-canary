@@ -8,8 +8,8 @@ var r = s(477900),
     c = s(834730),
     u = s(289873),
     h = s(642277),
-    x = s(723702),
-    o = s(652215),
+    o = s(723702),
+    x = s(652215),
     f = s(613057),
     m = s(105292),
     p = s(168071);
@@ -18,7 +18,7 @@ function j(e) {
         [j, v] = i.useState(null),
         [b, k] = i.useState(!1),
         g = i.useRef(!1),
-        E = !x.isPlatformEmbedded && !a.Fr,
+        E = !o.isPlatformEmbedded && !a.Fr,
         I = i.useMemo(() => (0, n.A)(), []);
     if (
         (i.useEffect(() => {
@@ -27,7 +27,7 @@ function j(e) {
                       .then(s.bind(s, 129014))
                       .then((e) => {
                           let { default: s } = e;
-                          s.request(o.e$_.DEEP_LINK, {
+                          s.request(x.e$_.DEEP_LINK, {
                               type: f.XK.ACTIVITIES,
                               params: { applicationId: t, url: location.href, attemptId: I },
                           })
@@ -52,7 +52,7 @@ function j(e) {
                 className: p.k,
                 children: [
                     (0, r.jsx)(d.D, { variant: "heading-xxl/semibold", children: m.intl.string(m.t.csrAMJ) }),
-                    (0, r.jsx)(c.E, { variant: "text-xs/semibold", children: m.intl.string(m.t["m1+IBn"]) }),
+                    (0, r.jsx)(c.E, { variant: "body-xs/semibold", children: m.intl.string(m.t["m1+IBn"]) }),
                     (0, r.jsx)(l.$, { variant: "primary", text: m.intl.string(m.t.fIv16B), onClick: () => k(!0) }),
                 ],
             });

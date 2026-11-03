@@ -32,8 +32,8 @@ function O(e) {
             closeOnSelect: L,
             shouldFocusWrap: y,
             placeholder: D = t.SELECT_PLACEHOLDER,
-            name: v,
-            form: b,
+            name: b,
+            form: v,
             autoComplete: P,
             maxOptionsVisible: M = 5,
             fitContent: U = !1,
@@ -248,16 +248,16 @@ function O(e) {
         eD = r.useMemo(() => {
             if (!O || U) return `${Math.max(eh ?? 200, 200) * ("multiple" === n ? 1.5 : 1) + 24 * !!I + 36 + 12}px`;
         }, [O, U, eh, n, I]),
-        ev = "multiple" === n && eN.length > 0,
-        eb = r.useRef(null);
+        eb = "multiple" === n && eN.length > 0,
+        ev = r.useRef(null);
     r.useEffect(() => {
-        (clearTimeout(eb.current),
-            ev &&
+        (clearTimeout(ev.current),
+            eb &&
                 !F &&
-                (eb.current = setTimeout(() => {
+                (ev.current = setTimeout(() => {
                     H.current?.lastElementChild?.scrollIntoView({ behavior: "smooth", inline: "end", block: "end" });
                 }, 10)));
-    }, [eN, ev, F]);
+    }, [eN, eb, F]);
     let eP = (0, o.A)(es, q.setReference),
         eM = r.useCallback(
             (e) => {
@@ -347,8 +347,8 @@ function O(e) {
                             }),
                         }),
                         (0, i.jsx)(p.H, {
-                            name: v,
-                            form: b,
+                            name: b,
+                            form: v,
                             disabled: eA,
                             autoComplete: P,
                             selectionMode: n,
@@ -392,7 +392,7 @@ function R(e) {
         ? (0, i.jsx)("div", {
               className: C.qf,
               children: (0, i.jsx)(I.E, {
-                  variant: "text-md/normal",
+                  variant: "body-md/normal",
                   color: "currentColor",
                   lineClamp: 1,
                   children: t,

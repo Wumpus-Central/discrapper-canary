@@ -5,8 +5,8 @@ var e = n(503698),
     a = n.n(e),
     i = n(534514),
     c = n(933832),
-    t = n(834730),
-    d = n(789645),
+    d = n(834730),
+    t = n(789645),
     o = n(376092),
     h = n(750382);
 function x(s) {
@@ -24,7 +24,7 @@ function x(s) {
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           null != e
-                              ? (0, r.jsx)(i.D, { variant: "heading-sm/semibold", color: "text-strong", children: e })
+                              ? (0, r.jsx)(i.D, { variant: "heading-xs/semibold", color: "text-strong", children: e })
                               : null,
                           (0, r.jsx)("div", {
                               className: h.kL,
@@ -39,7 +39,7 @@ function x(s) {
                                                   color: "currentColor",
                                                   className: h.z6,
                                               }),
-                                              (0, r.jsx)(t.E, { variant: "text-sm/normal", children: (0, o.hx)(s) }),
+                                              (0, r.jsx)(d.E, { variant: "body-sm/normal", children: (0, o.hx)(s) }),
                                           ],
                                       },
                                       s.toString(),
@@ -53,7 +53,7 @@ function x(s) {
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           null != x
-                              ? (0, r.jsx)(i.D, { variant: "heading-sm/semibold", color: "text-strong", children: x })
+                              ? (0, r.jsx)(i.D, { variant: "heading-xs/semibold", color: "text-strong", children: x })
                               : null,
                           (0, r.jsx)("div", {
                               className: h.kL,
@@ -63,8 +63,8 @@ function x(s) {
                                       {
                                           className: h.EK,
                                           children: [
-                                              (0, r.jsx)(d.P, { size: "xs", color: "currentColor", className: h.$A }),
-                                              (0, r.jsx)(t.E, { variant: "text-sm/normal", children: (0, o.hx)(s) }),
+                                              (0, r.jsx)(t.P, { size: "xs", color: "currentColor", className: h.$A }),
+                                              (0, r.jsx)(d.E, { variant: "body-sm/normal", children: (0, o.hx)(s) }),
                                           ],
                                       },
                                       s.toString(),

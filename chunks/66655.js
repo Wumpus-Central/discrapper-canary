@@ -18,20 +18,20 @@ var r = a(477900),
     M = a(698013);
 function R(e) {
     let { transitionState: t, onClose: a, roleId: R, guildId: h } = e,
-        S = (0, i.bG)([g.A], () => g.A.getRole(R), [R]),
-        [v, x] = n.useState(""),
-        [y, w] = n.useState({}),
+        y = (0, i.bG)([g.A], () => g.A.getRole(R), [R]),
+        [S, v] = n.useState(""),
+        [w, x] = n.useState({}),
         [T, f] = n.useState(!1),
         [C, O] = n.useState(null),
         j = n.useRef(null);
     n.useEffect(() => {
-        u.A.requestMembers(h, v.trim().toLowerCase(), p.uc);
-    }, [h, v]);
+        u.A.requestMembers(h, S.trim().toLowerCase(), p.uc);
+    }, [h, S]);
     let B = n.useCallback((e) => !e.roles.includes(R), [R]),
         H = (0, p.SB)(h, B),
-        P = n.useMemo(() => H.filter((e) => (0, p.EF)(v, e)), [v, H]),
+        P = n.useMemo(() => H.filter((e) => (0, p.EF)(S, e)), [S, H]),
         L = n.useCallback(async () => {
-            let e = Object.values(y).map((e) => e.row.id);
+            let e = Object.values(w).map((e) => e.row.id);
             f(!0);
             try {
                 (await b.A.bulkAddMemberRoles(h, R, e), (0, m.a)(h, R, !1), a());
@@ -39,7 +39,7 @@ function R(e) {
                 let e = new o.LG(t);
                 (f(!1), O(e));
             }
-        }, [h, R, y, a]),
+        }, [h, R, w, a]),
         _ = n.useMemo(
             () =>
                 P.map((e) => {
@@ -67,13 +67,13 @@ function R(e) {
                     : null,
             [],
         ),
-        N = n.useMemo(() => Object.keys(y).length, [y]);
+        N = n.useMemo(() => Object.keys(w).length, [w]);
     return (0, r.jsx)(d.A.Provider, {
         listRef: j,
-        query: v,
-        setQuery: x,
-        pendingAdditions: y,
-        setPendingAdditions: w,
+        query: S,
+        setQuery: v,
+        pendingAdditions: w,
+        setPendingAdditions: x,
         members: _,
         getRichTag: G,
         maxPendingRows: k.$S,
@@ -82,8 +82,8 @@ function R(e) {
             transitionState: t,
             title: E.intl.string(E.t.ZYOK46),
             subtitle:
-                null != S
-                    ? E.intl.format(E.t["qP+nuZ"], { numMembers: k.$S, roleName: S.name })
+                null != y
+                    ? E.intl.format(E.t["qP+nuZ"], { numMembers: k.$S, roleName: y.name })
                     : E.intl.format(E.t["3OxP4q"], { numMembers: k.$S }),
             input: (0, r.jsxs)("div", {
                 children: [
@@ -91,7 +91,7 @@ function R(e) {
                     null != C
                         ? (0, r.jsx)(s.E, {
                               className: M.k,
-                              variant: "text-xs/normal",
+                              variant: "body-xs/normal",
                               color: "text-feedback-critical",
                               children: C.getAnyErrorMessage(),
                           })

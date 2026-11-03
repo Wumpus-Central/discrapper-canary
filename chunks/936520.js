@@ -36,13 +36,13 @@ var i,
     V = t(609425),
     P = t(73392),
     U = t(769015);
-let K = (0, t(945810).mj)({
+let F = (0, t(945810).mj)({
     name: "2026-09-guild-sidebar-stream-preview",
     kind: "guild",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var F = t(450149),
+var K = t(450149),
     w = t(430363),
     z = t(823854),
     H = t(602853),
@@ -170,9 +170,9 @@ function ec(e) {
             soundboardMuted: Y,
         } = e,
         $ = C || v,
-        { enabled: q } = K.useConfig({ guildId: H ?? "", location: "VoiceUserIcons" }),
+        { enabled: q } = F.useConfig({ guildId: H ?? "", location: "VoiceUserIcons" }),
         ee = (0, _.UK)(J),
-        { previewUrl: es } = (0, F.A)(H, J, q && b && !$ && !ee ? Z.id : void 0),
+        { previewUrl: es } = (0, K.A)(H, J, q && b && !$ && !ee ? Z.id : void 0),
         er = null != es && "" !== es.trim();
     if ($) return null;
     let ea = [],
@@ -363,7 +363,7 @@ function ec(e) {
                               children: [
                                   (0, n.jsx)("img", { src: es, alt: en.intl.string(en.t.cxSpOM), className: el.Rh }),
                                   (0, n.jsx)("div", {
-                                      className: el.yo,
+                                      className: el.OF,
                                       children: (0, n.jsx)(u.k, {
                                           height: 10,
                                           width: 10,
@@ -409,8 +409,8 @@ let eo = function (e) {
             serverMute: M,
             deaf: G,
             serverDeaf: U,
-            guildId: K,
-            nick: F,
+            guildId: F,
+            nick: K,
             isGuest: H,
             flipped: J,
             className: Z,
@@ -421,7 +421,7 @@ let eo = function (e) {
             user: X,
             soundboardMuted: Q,
         } = N,
-        et = (0, V.A)({ userId: X.id, guildId: K }),
+        et = (0, V.A)({ userId: X.id, guildId: F }),
         ei = (0, P.a)({ displayNameStyles: et }),
         ea = (0, v.A)(X.id),
         eo = (0, y.v)({
@@ -432,7 +432,7 @@ let eo = function (e) {
         [ed, eu] = l.useState(!1),
         em = (() => {
             if (null != W) return W;
-            let e = F ?? X.username,
+            let e = K ?? X.username,
                 s = null;
             return ($
                 ? (s = en.intl.string(en.t["7LkwqE"]))
@@ -496,12 +496,12 @@ let eo = function (e) {
                       })
                     : null,
                 ((s = a()(el.my, { [el.Jb]: d === es.OSZ.LARGE, [el.dT]: d === es.OSZ.SMALL, [el.DF]: Y })),
-                (t = { backgroundImage: `url(${X.getAvatarURL(K, d === es.OSZ.LARGE ? 38 : 24)})`, ...eo }),
+                (t = { backgroundImage: `url(${X.getAvatarURL(F, d === es.OSZ.LARGE ? 38 : 24)})`, ...eo }),
                 Y
                     ? (0, n.jsx)(D.Ay, {
                           size: d === es.OSZ.LARGE ? C._3.SIZE_40 : C._3.SIZE_24,
                           ringing: !0,
-                          src: X.getAvatarURL(K, d === es.OSZ.LARGE ? 40 : 24),
+                          src: X.getAvatarURL(F, d === es.OSZ.LARGE ? 40 : 24),
                           className: a()(c, s),
                       })
                     : eA
@@ -514,7 +514,7 @@ let eo = function (e) {
                 ((i = (0, n.jsxs)("div", {
                     className: a()(o, el.oF, ei, { [el.Pi]: !_ && !M && T, [el.DF]: Y }),
                     children: [
-                        F ?? ee.Ay.getName(X),
+                        K ?? ee.Ay.getName(X),
                         H
                             ? (0, n.jsxs)("span", {
                                   className: el.IW,
@@ -526,7 +526,7 @@ let eo = function (e) {
                 (r = {
                     primaryGuild: X.primaryGuild,
                     userId: X.id,
-                    contextGuildId: K,
+                    contextGuildId: F,
                     isOverlay: h,
                     disableTooltip: !0,
                     className: a()(el.fc, h && el.zW),

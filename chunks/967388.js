@@ -13,11 +13,11 @@ var i = n(477900),
     m = n(866665),
     A = n(241326),
     f = n(46054),
-    x = n(734057),
-    g = n(309010),
+    g = n(734057),
+    x = n(309010),
     C = n(287809),
-    j = n(562153),
-    y = n(446243),
+    y = n(562153),
+    j = n(446243),
     I = n(920639),
     N = n(538638),
     v = n(781137),
@@ -31,9 +31,9 @@ function R(e) {
         [R, O] = (0, l.useState)(!1),
         P = (0, l.useRef)(null),
         L = (0, r.bG)([C.default], () => C.default.getUser(n.createdBy)),
-        M = (0, r.bG)([x.A], () => x.A.getChannel(t)?.guild_id),
-        w = (0, r.bG)([g.Ay], () => g.Ay.getVoiceChannelId() === t, [t]),
-        U = (0, j.tx)(M, t, L),
+        M = (0, r.bG)([g.A], () => g.A.getChannel(t)?.guild_id),
+        w = (0, r.bG)([x.Ay], () => x.Ay.getVoiceChannelId() === t, [t]),
+        U = (0, y.tx)(M, t, L),
         D = (0, E.Sb)({
             position: n.position,
             targetLabel: S.intl.formatToPlainString(b.default.w5Latp, { userName: U }),
@@ -78,7 +78,7 @@ function R(e) {
                                                       className: _.my,
                                                   }),
                                                   (0, i.jsx)(p.E, {
-                                                      variant: "text-md/normal",
+                                                      variant: "body-md/normal",
                                                       lineClamp: 1,
                                                       children: U,
                                                   }),
@@ -90,7 +90,7 @@ function R(e) {
                                                   onClick: w
                                                       ? function () {
                                                             null != M &&
-                                                                (0, y.yF)(M, t, n.objectId).catch((e) => (0, N.b)());
+                                                                (0, j.yF)(M, t, n.objectId).catch((e) => (0, N.b)());
                                                         }
                                                       : void 0,
                                                   "aria-disabled": !w,
@@ -104,7 +104,7 @@ function R(e) {
                                       ],
                                   }),
                                   (0, i.jsx)(p.E, {
-                                      variant: "text-sm/normal",
+                                      variant: "body-sm/normal",
                                       color: "text-muted",
                                       className: _.Qs,
                                       children: f.A.parseTopic(n.content, !0, { channelId: t }),

@@ -499,7 +499,7 @@ let en = {
                                       style: { padding: 16 },
                                       children: [
                                           (0, o.jsx)(i.E, {
-                                              variant: "text-sm/normal",
+                                              variant: "body-sm/normal",
                                               color: "text-muted",
                                               children:
                                                   "Opens the redesigned PDP modal with the configured mock data. Close with the X button or Escape.",
@@ -586,7 +586,7 @@ let en = {
                                       style: { padding: 16 },
                                       children: [
                                           (0, o.jsx)(i.E, {
-                                              variant: "text-sm/normal",
+                                              variant: "body-sm/normal",
                                               color: "text-muted",
                                               children:
                                                   "Opens the announcement modal with the configured mock data. Close with the X button or Escape.",
@@ -637,7 +637,7 @@ let en = {
                                 gap: 16,
                                 children: [
                                     (0, o.jsx)(i.E, {
-                                        variant: "text-sm/normal",
+                                        variant: "body-sm/normal",
                                         color: "text-muted",
                                         children:
                                             "The exclusive badge shown on storefront cards and the PDP modal for exclusive items.",
@@ -656,7 +656,7 @@ let en = {
                                 gap: 16,
                                 children: [
                                     (0, o.jsx)(i.E, {
-                                        variant: "text-sm/normal",
+                                        variant: "body-sm/normal",
                                         color: "text-muted",
                                         children:
                                             "The in-game item indicator tag shown on storefront cards and the PDP modal.",

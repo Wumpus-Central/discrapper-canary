@@ -1,4 +1,4 @@
-i.d(t, { _: () => N });
+i.d(t, { _: () => y });
 var a = i(477900),
     s = i(582128),
     l = i(503698),
@@ -31,13 +31,13 @@ var o = i(264927),
     p = i(838541),
     v = i(105292),
     b = i(774702);
-let N = (e) => {
+let y = (e) => {
     var t, i, l, c;
     let h,
         {
             className: u,
             imageClassName: x,
-            readyState: N = f.Rv1.READY,
+            readyState: y = f.Rv1.READY,
             src: w,
             placeholder: j,
             placeholderVersion: I,
@@ -59,7 +59,7 @@ let N = (e) => {
                     className: l ?? void 0,
                     alt: s ?? v.intl.string(v.t.X4IxWL),
                     src: t,
-                    style: y(i, n),
+                    style: R(i, n),
                 });
             },
             renderAccessory: _,
@@ -77,16 +77,16 @@ let N = (e) => {
     if (1 === E && 1 === A) return null;
     let K = (0, m.Uj)({ width: E, height: A, maxWidth: L, maxHeight: W, minWidth: k, minHeight: C }),
         Z = 0 !== K.width ? K.width / K.height : 1;
-    ("" !== w && N !== f.Rv1.ERROR
+    ("" !== w && y !== f.Rv1.ERROR
         ? (h = P({ src: w, size: K, alt: S, className: x, mediaLayoutType: D }))
-        : N !== f.Rv1.LOADING && (h = (0, a.jsx)(R, { size: K, mediaLayoutType: D, alt: S })),
+        : y !== f.Rv1.LOADING && (h = (0, a.jsx)(N, { size: K, mediaLayoutType: D, alt: S })),
         (h = (0, a.jsx)(g.y, {
             disableSpinner: z,
-            readyState: N,
+            readyState: y,
             aspectRatio: Z,
             placeholder: j,
             placeholderVersion: I,
-            placeholderStyle: y(K, D),
+            placeholderStyle: R(K, D),
             children: h,
         })));
     let q = null != _ ? _() : null;
@@ -97,7 +97,7 @@ let N = (e) => {
             focusTarget: J,
             children: (0, a.jsxs)("div", {
                 ref: F,
-                className: n()("imageWrapper", b.h4, { [b.j3]: H, [b.LF]: N !== f.Rv1.READY, [b.vk]: null != T }, u),
+                className: n()("imageWrapper", b.h4, { [b.j3]: H, [b.LF]: y !== f.Rv1.READY, [b.vk]: null != T }, u),
                 style:
                     ((t = K),
                     (i = G),
@@ -144,7 +144,7 @@ let N = (e) => {
         })
     );
 };
-function R(e) {
+function N(e) {
     let { size: t, mediaLayoutType: i, alt: s } = e;
     return (0, a.jsxs)("div", {
         className: b.x5,
@@ -171,14 +171,14 @@ function R(e) {
             }),
             (0, a.jsx)(c.E, {
                 className: b.b4,
-                variant: "text-sm/medium",
+                variant: "body-sm/medium",
                 color: "text-subtle",
                 children: v.intl.string(v.t.sAfT1K),
             }),
         ],
     });
 }
-function y(e, t) {
+function R(e, t) {
     switch (t) {
         case p.dG.MOSAIC:
             return {
@@ -198,4 +198,4 @@ function w(e) {
     let { width: t, height: i } = e;
     return { maxWidth: t, maxHeight: i, width: "100%", display: "block", aspectRatio: `${t} / ${i}` };
 }
-N.displayName = "Image";
+y.displayName = "Image";

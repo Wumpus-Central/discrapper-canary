@@ -1,7 +1,7 @@
-e.d(t, { A: () => p });
-var i = e(477900);
+e.d(i, { A: () => b });
+var n = e(477900);
 e(582128);
-var n = e(17928),
+var t = e(17928),
     l = e(189213),
     a = e(939249),
     c = e(834730),
@@ -13,25 +13,25 @@ var n = e(17928),
     x = e(105292),
     h = e(599127);
 function j(s) {
-    let { guild: t, onClick: e } = s,
-        l = (0, n.bG)([u.A], () => u.A.getMemberCount(t.id));
-    return (0, i.jsxs)(a.D, {
+    let { guild: i, onClick: e } = s,
+        l = (0, t.bG)([u.A], () => u.A.getMemberCount(i.id));
+    return (0, n.jsxs)(a.D, {
         className: h._S,
         onClick: e,
         children: [
-            (0, i.jsx)(m.Ay, { className: h.$f, guild: t, size: m.Ay.Sizes.MEDIUM, active: !0 }),
-            (0, i.jsxs)("div", {
+            (0, n.jsx)(m.Ay, { className: h.$f, guild: i, size: m.Ay.Sizes.MEDIUM, active: !0 }),
+            (0, n.jsxs)("div", {
                 className: h.OA,
                 children: [
-                    (0, i.jsx)(c.E, {
+                    (0, n.jsx)(c.E, {
                         className: h.J5,
-                        variant: "text-md/medium",
+                        variant: "body-md/medium",
                         color: "text-subtle",
-                        children: t.name,
+                        children: i.name,
                     }),
                     null != l &&
-                        (0, i.jsx)(c.E, {
-                            variant: "text-sm/normal",
+                        (0, n.jsx)(c.E, {
+                            variant: "body-sm/normal",
                             color: "text-subtle",
                             children: x.intl.formatToPlainString(x.t.zRl6XR, { count: l }),
                         }),
@@ -40,45 +40,45 @@ function j(s) {
         ],
     });
 }
-function p(s) {
+function b(s) {
     let {
-        title: t,
+        title: i,
         subtitle: e,
-        listLabel: n,
+        listLabel: t,
         listLabelTooltip: a,
         guilds: u,
         onSelectGuild: m,
         onClose: x,
-        transitionState: p,
-        returnRef: b,
+        transitionState: b,
+        returnRef: p,
     } = s;
     async function v() {
         await x();
     }
-    return (0, i.jsxs)(l.a, {
-        transitionState: p,
+    return (0, n.jsxs)(l.a, {
+        transitionState: b,
         onClose: v,
-        title: t,
+        title: i,
         subtitle: e,
         actions: [],
-        returnRef: b,
+        returnRef: p,
         children: [
-            null != n &&
-                (0, i.jsxs)("div", {
+            null != t &&
+                (0, n.jsxs)("div", {
                     className: h.RO,
                     children: [
-                        (0, i.jsx)(c.E, { variant: "text-sm/semibold", children: n }),
+                        (0, n.jsx)(c.E, { variant: "body-sm/semibold", children: t }),
                         null != a &&
-                            (0, i.jsx)(r.m, {
+                            (0, n.jsx)(r.m, {
                                 position: "top",
                                 text: a,
-                                children: (0, i.jsx)(o.CircleInformationIcon, { size: "xs", className: h.G }),
+                                children: (0, n.jsx)(o.CircleInformationIcon, { size: "xs", className: h.G }),
                             }),
                     ],
                 }),
-            (0, i.jsx)(d.Ip, {
+            (0, n.jsx)(d.Ip, {
                 className: h.OW,
-                children: u.map((s) => (0, i.jsx)(j, { guild: s, onClick: () => m(s) }, s.id)),
+                children: u.map((s) => (0, n.jsx)(j, { guild: s, onClick: () => m(s) }, s.id)),
             }),
         ],
     });

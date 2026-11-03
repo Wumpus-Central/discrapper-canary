@@ -12,8 +12,8 @@ var n = t(477900),
     m = t(683071),
     h = t(289873),
     f = t(743674),
-    x = t(27620),
-    C = t(45837),
+    C = t(27620),
+    x = t(45837),
     j = t(888697),
     b = t(26741),
     y = t(636537),
@@ -142,11 +142,11 @@ function Q(e) {
                 }),
             [m, g, h],
         ),
-        x = s.useCallback(() => (null != a.current ? a.current.getItemGrid() : []), []),
-        C = s.useCallback(() => (null != a.current ? a.current.getCoordsMap() : {}), []);
+        C = s.useCallback(() => (null != a.current ? a.current.getItemGrid() : []), []),
+        x = s.useCallback(() => (null != a.current ? a.current.getCoordsMap() : {}), []);
     return (0, n.jsx)(U.A, {
-        getItemGrid: x,
-        getCoordsMap: C,
+        getItemGrid: C,
+        getCoordsMap: x,
         onFocus: d,
         onSelect: o,
         children: (0, n.jsx)(w.A, { desiredItemWidth: 200, maxColumns: 6, children: f }),
@@ -175,14 +175,14 @@ function V(e) {
         f = s.useCallback((e, l, t) => {
             (T.$P(e, l, t), g("" === e ? null : l));
         }, []),
-        x = s.useCallback(
+        C = s.useCallback(
             (e) => {
                 let l = h.current;
                 t(e, null != l ? { source: "category", categoryType: l } : { source: "custom_search" });
             },
             [t],
         ),
-        C = s.useCallback(() => {
+        x = s.useCallback(() => {
             (T.Se(), g(null), (h.current = null), m.current?.focus());
         }, []);
     (s.useEffect(
@@ -198,9 +198,9 @@ function V(e) {
             if (null != o)
                 return (document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e));
             function e(e) {
-                e.key === K.dh.ESCAPE && (e.preventDefault(), e.stopPropagation(), e.stopImmediatePropagation(), C());
+                e.key === K.dh.ESCAPE && (e.preventDefault(), e.stopPropagation(), e.stopImmediatePropagation(), x());
             }
-        }, [o, C]));
+        }, [o, x]));
     let j = s.useCallback(
             (e) => {
                 ((h.current = null), f(e, z.dD.SEARCH));
@@ -234,7 +234,7 @@ function V(e) {
                     children: [
                         k
                             ? (0, n.jsx)(c.D, {
-                                  onClick: C,
+                                  onClick: x,
                                   className: W.Gv,
                                   "aria-label": I.intl.string(I.t["13/7kX"]),
                                   children: (0, n.jsx)(R.r, { size: "md", color: "currentColor" }),
@@ -243,7 +243,7 @@ function V(e) {
                         (0, n.jsx)(G.I, {
                             query: a,
                             onChange: j,
-                            onClear: C,
+                            onClear: x,
                             placeholder: p,
                             "aria-label": p,
                             ref: m,
@@ -259,7 +259,7 @@ function V(e) {
                         ? (0, n.jsx)(Q, { onSelectCategory: y })
                         : (0, n.jsx)(D.Ay, {
                               data: u,
-                              onSelectGIF: x,
+                              onSelectGIF: C,
                               resultType: o,
                               resultQuery: i,
                               query: a,
@@ -437,7 +437,7 @@ function ea(e) {
 }
 function ei(e) {
     let { onOpenGIFPicker: l, onOpenRecentUploads: t } = e,
-        { shouldAnimate: s, onMouseEnter: r, onMouseLeave: a } = (0, C.A)();
+        { shouldAnimate: s, onMouseEnter: r, onMouseLeave: a } = (0, x.A)();
     return (0, n.jsxs)("ul", {
         className: el.f9,
         children: [
@@ -450,7 +450,7 @@ function ei(e) {
                         children: [
                             (0, n.jsx)(d.X, { size: "md", color: "currentColor" }),
                             (0, n.jsx)(o.E, {
-                                variant: "text-sm/semibold",
+                                variant: "body-sm/semibold",
                                 color: "currentColor",
                                 children: I.intl.string(E.default.zetfRy),
                             }),
@@ -471,7 +471,7 @@ function ei(e) {
                             children: [
                                 (0, n.jsx)(g.O, { size: "md", color: "currentColor" }),
                                 (0, n.jsx)(o.E, {
-                                    variant: "text-sm/semibold",
+                                    variant: "body-sm/semibold",
                                     color: "currentColor",
                                     children: I.intl.string(E.default.HkszWk),
                                 }),
@@ -487,9 +487,9 @@ function eu(e) {
     let { onSelect: l } = e;
     return (0, n.jsxs)("div", {
         children: [
-            (0, n.jsx)(o.E, { variant: "text-sm/semibold", children: I.intl.string(E.default.SQb1dl) }),
+            (0, n.jsx)(o.E, { variant: "body-sm/semibold", children: I.intl.string(E.default.SQb1dl) }),
             (0, n.jsx)(o.E, {
-                variant: "text-xs/normal",
+                variant: "body-xs/normal",
                 color: "text-muted",
                 className: el.u2,
                 children: I.intl.string(E.default["2THN2i"]),
@@ -534,7 +534,7 @@ function ed(e) {
     let { guildId: l, hashes: t, onSelect: s } = e;
     return (0, n.jsxs)("div", {
         children: [
-            (0, n.jsx)(o.E, { variant: "text-sm/semibold", children: I.intl.string(E.default.dDID2M) }),
+            (0, n.jsx)(o.E, { variant: "body-sm/semibold", children: I.intl.string(E.default.dDID2M) }),
             (0, n.jsx)("div", {
                 className: el.si,
                 children: t.slice(0, 9).map((e) => (0, n.jsx)(ec, { guildId: l, hash: e, onSelect: s }, e)),
@@ -547,7 +547,7 @@ function eo(e) {
     let t,
         c,
         { transitionState: d, onClose: o, channel: g } = e,
-        [f, C] = s.useState("HOME"),
+        [f, x] = s.useState("HOME"),
         [y, N] = s.useState(null),
         { recentImageHashes: S, isLoading: v } =
             ((l = g.guild_id),
@@ -562,7 +562,7 @@ function eo(e) {
                 try {
                     (await (0, j.Hd)(g.id, e),
                         (0, b.z6)({ guildId: g.guild_id, channelId: g.id, contentType: l, gifCategoryType: t }),
-                        (0, x.hs)(r.w.HANGOUT_WINDOW_SET),
+                        (0, C.hs)(r.w.HANGOUT_WINDOW_SET),
                         o());
                 } catch (e) {
                     N(p(e));
@@ -576,7 +576,7 @@ function eo(e) {
                 try {
                     (await (0, j.B$)(g.id, e),
                         (0, b.z6)({ guildId: g.guild_id, channelId: g.id, contentType: b.cM.RECENT_IMAGE }),
-                        (0, x.hs)(r.w.HANGOUT_WINDOW_SET),
+                        (0, C.hs)(r.w.HANGOUT_WINDOW_SET),
                         o());
                 } catch (e) {
                     N(p(e));
@@ -600,7 +600,7 @@ function eo(e) {
         ),
         T = s.useCallback((e) => _(e, b.cM.RECENT_IMAGE), [_]),
         H = s.useCallback((e) => _(e, b.cM.PRESET_GIF), [_]),
-        D = s.useCallback(() => (N(null), C("HOME"), Promise.resolve()), []),
+        D = s.useCallback(() => (N(null), x("HOME"), Promise.resolve()), []),
         F = null != y ? (0, n.jsx)(m.w, { type: "critical", message: y, role: "alert" }) : null;
     if ("RECENT_UPLOADS" === f) {
         let e = I.intl.string(E.default.aBnIyR);
@@ -653,10 +653,10 @@ function eo(e) {
             children: [
                 (0, n.jsx)(ei, {
                     onOpenGIFPicker: () => {
-                        (N(null), C("GIF_PICKER"));
+                        (N(null), x("GIF_PICKER"));
                     },
                     onOpenRecentUploads: () => {
-                        (N(null), C("RECENT_UPLOADS"));
+                        (N(null), x("RECENT_UPLOADS"));
                     },
                 }),
                 v

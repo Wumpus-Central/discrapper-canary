@@ -19,8 +19,8 @@ let N = function (a) {
             (0, n.jsxs)("div", {
                 className: x.ET,
                 children: [
-                    (0, n.jsx)(c.E, { variant: "text-sm/medium", color: "text-default", children: e }),
-                    null != t && (0, n.jsx)(c.E, { variant: "text-xs/normal", color: "text-subtle", children: t }),
+                    (0, n.jsx)(c.E, { variant: "body-sm/medium", color: "text-default", children: e }),
+                    null != t && (0, n.jsx)(c.E, { variant: "body-xs/normal", color: "text-subtle", children: t }),
                 ],
             }),
         ],
@@ -33,9 +33,9 @@ function p(a) {
             onContinue: t,
             onClose: p,
             img: j,
-            headerConnect: g,
-            headerReconnect: C,
-            body: b,
+            headerConnect: b,
+            headerReconnect: g,
+            body: C,
             learnMoreLink: v,
             valueProps: E,
         } = a,
@@ -55,7 +55,7 @@ function p(a) {
                     (0, n.jsx)(l.D, {
                         className: x.DD,
                         variant: "heading-xl/semibold",
-                        children: k && null != C ? C : g,
+                        children: k && null != g ? g : b,
                     }),
                     (0, n.jsx)(i.s_, { "data-migration-pending": !0, className: x.b, onClick: p }),
                 ],
@@ -64,7 +64,7 @@ function p(a) {
                 "data-migration-pending": !0,
                 className: x.rf,
                 children: [
-                    (0, n.jsx)(c.E, { tag: "p", variant: "text-md/normal", color: "text-default", children: b }),
+                    (0, n.jsx)(c.E, { tag: "p", variant: "body-md/normal", color: "text-default", children: C }),
                     (0, n.jsx)("div", {
                         className: x.Mh,
                         children: E.map((a, e) => {
@@ -84,7 +84,7 @@ function p(a) {
                     null != v
                         ? (0, n.jsx)(c.E, {
                               tag: "p",
-                              variant: "text-sm/normal",
+                              variant: "body-sm/normal",
                               color: "text-default",
                               children: h.intl.format(h.t["/l3n+1"], { helpCenterLink: v }),
                           })

@@ -11,21 +11,21 @@ var e = i(17928),
     u = i(98278),
     m = i(869388),
     h = i(105292),
-    x = i(585878);
-function p(t) {
+    p = i(585878);
+function x(t) {
     let { transform: n } = t;
     return (0, a.jsxs)("div", {
-        className: x.nM,
+        className: p.nM,
         children: [
             (0, a.jsxs)("div", {
-                className: x.u4,
+                className: p.u4,
                 children: [
-                    (0, a.jsx)(l.E, { variant: "text-md/semibold", children: n.name }),
-                    (0, a.jsx)(l.E, { variant: "text-sm/normal", color: "text-muted", children: n.prompt }),
+                    (0, a.jsx)(l.E, { variant: "body-md/semibold", children: n.name }),
+                    (0, a.jsx)(l.E, { variant: "body-sm/normal", color: "text-muted", children: n.prompt }),
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: x.cm,
+                className: p.cm,
                 children: [
                     (0, a.jsx)(c.K, {
                         icon: o.PencilIcon,
@@ -66,16 +66,16 @@ function T(t) {
         subtitle: h.intl.string(h.t.tNavX9),
         onClose: c,
         input: (0, a.jsx)("div", {
-            className: x.kL,
+            className: p.kL,
             children:
                 0 === o.length
                     ? (0, a.jsx)(l.E, {
-                          variant: "text-md/normal",
+                          variant: "body-md/normal",
                           color: "text-muted",
-                          className: x.Ie,
+                          className: p.Ie,
                           children: h.intl.string(h.t["Euo+Gq"]),
                       })
-                    : o.map((t) => (0, a.jsx)(p, { transform: t }, t.id)),
+                    : o.map((t) => (0, a.jsx)(x, { transform: t }, t.id)),
         }),
         actions: [
             { variant: "secondary", text: h.intl.string(h.t.cpT0Cq), onClick: c },

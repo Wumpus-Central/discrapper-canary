@@ -13,11 +13,11 @@ var n = t(477900),
     C = t(408018),
     m = t(845207),
     g = t(994500),
-    x = t(287809),
+    b = t(287809),
     p = t(17928),
-    b = t(148494),
-    k = t(451909),
-    y = t(135621),
+    x = t(148494),
+    y = t(451909),
+    k = t(135621),
     v = t(808728),
     E = t(246338),
     S = t(506774),
@@ -74,7 +74,7 @@ function M(e) {
                     [t],
                 ),
                 u = (0, p.bG)([v.Ay], () => (0, E.i8)(t, n), [t, n]),
-                c = (0, y.A)() - w(A).length,
+                c = (0, k.A)() - w(A).length,
                 d = a.useRef(c);
             d.current = c;
             let o = a.useRef(r);
@@ -84,7 +84,7 @@ function M(e) {
                     return null != e && s.some((l) => l.id === e) ? e : null;
                 }),
                 [C, m] = a.useState(!0),
-                [g, x] = a.useState(!1),
+                [g, b] = a.useState(!1),
                 [j, N] = a.useState(void 0),
                 [_, G] = a.useState(!1),
                 R = a.useRef(!1),
@@ -101,14 +101,14 @@ function M(e) {
                                 t = await (0, T.$C)(l);
                             } catch {
                                 if (e.cancelled) return;
-                                (m(!1), x(!0));
+                                (m(!1), b(!0));
                                 return;
                             }
                             !e.cancelled &&
                                 (m(!1),
                                 N(t.source_sha),
                                 !0 !== t.ok
-                                    ? x(!0)
+                                    ? b(!0)
                                     : null == t.notes ||
                                       "" === t.notes ||
                                       R.current ||
@@ -133,8 +133,8 @@ function M(e) {
                         G(!0);
                         try {
                             var a;
-                            let r = k.Ay.parse(V, null == $ ? e : `${e}${$}`),
-                                s = await b.A.sendMessage(V.id, r, !1, { location: I.Hx.CONJURE_PATCH_NOTES });
+                            let r = y.Ay.parse(V, null == $ ? e : `${e}${$}`),
+                                s = await x.A.sendMessage(V.id, r, !1, { location: I.Hx.CONJURE_PATCH_NOTES });
                             if (s?.ok === !1) throw Error("send failed");
                             ((a = V.id), S.w.set(P, { ...S.w.get(P), [n]: a }));
                             let u = s?.body?.id;
@@ -178,7 +178,7 @@ function M(e) {
             [q],
         ),
         el = a.useMemo(
-            () => H.map((e) => ({ id: e.id, value: e.id, label: (0, o.m1)(e, x.default, g.A), leading: (0, h.gU)(e) })),
+            () => H.map((e) => ({ id: e.id, value: e.id, label: (0, o.m1)(e, b.default, g.A), leading: (0, h.gU)(e) })),
             [H],
         ),
         et = Y ?? H[0] ?? null,
@@ -209,7 +209,7 @@ function M(e) {
                           className: G.dY,
                           children: [
                               (0, n.jsx)(s.D, {
-                                  variant: "heading-md/semibold",
+                                  variant: "heading-sm/semibold",
                                   children: N.intl.string(j.default.r4du8k),
                               }),
                               (0, n.jsxs)("div", {
@@ -237,7 +237,7 @@ function M(e) {
                                       z ? (0, n.jsx)(u.y, { type: u.t.SPINNING_CIRCLE_SIMPLE, className: G.n5 }) : null,
                                       W
                                           ? (0, n.jsx)(c.E, {
-                                                variant: "text-sm/normal",
+                                                variant: "body-sm/normal",
                                                 color: "text-muted",
                                                 children: N.intl.string(j.default["Em8bo+"]),
                                             })
@@ -246,7 +246,7 @@ function M(e) {
                                           className: G.Q6,
                                           children: [
                                               (0, n.jsx)(c.E, {
-                                                  variant: "text-sm/medium",
+                                                  variant: "body-sm/medium",
                                                   color: "text-subtle",
                                                   children: N.intl.string(j.default.Gd63Fl),
                                               }),

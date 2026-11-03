@@ -1,37 +1,37 @@
-n.d(t, { A: () => E });
-var l = n(477900),
-    i = n(582128),
-    a = n(503698),
-    r = n.n(a),
-    o = n(29477),
-    s = n(702841),
-    c = n(661531),
-    d = n(462887),
-    u = n(844222),
-    m = n(717421),
-    h = n(602853),
-    p = n(866323),
-    g = n(939249),
-    x = n(834730),
-    f = n(933832),
-    A = n(62010),
-    j = n(788026),
-    C = n(736653),
-    v = n(236285),
-    y = n(386784),
-    _ = n(105292),
-    N = n(455168);
+t.d(n, { A: () => E });
+var l = t(477900),
+    i = t(582128),
+    a = t(503698),
+    r = t.n(a),
+    o = t(29477),
+    s = t(702841),
+    c = t(661531),
+    d = t(462887),
+    u = t(844222),
+    m = t(717421),
+    h = t(602853),
+    p = t(866323),
+    g = t(939249),
+    x = t(834730),
+    f = t(933832),
+    A = t(62010),
+    j = t(788026),
+    C = t(736653),
+    v = t(236285),
+    y = t(386784),
+    _ = t(105292),
+    N = t(455168);
 function E(e) {
-    let { guildId: t, option: n, selected: a, onSelect: E, hideMemberCount: w, canBeNew: I } = e,
-        k = (0, d.M)((0, C.Ay)()),
-        [M, b] = i.useState(!1),
-        R = M && !w,
+    let { guildId: n, option: t, selected: a, onSelect: E, hideMemberCount: w, canBeNew: I } = e,
+        b = (0, d.M)((0, C.Ay)()),
+        [k, M] = i.useState(!1),
+        R = k && !w,
         O = i.useRef(null),
         { reducedMotion: T } = i.useContext(u.C),
-        D = (0, s.bG)([v.Ay], () => n.emoji?.id != null && (v.Ay.getCustomEmojiById(n.emoji?.id)?.animated ?? !1)),
-        H = (0, y.A)(t, 1e3),
-        K = null == H || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => H[e])),
-        L = I && !a && n.isUnseen,
+        D = (0, s.bG)([v.Ay], () => t.emoji?.id != null && (v.Ay.getCustomEmojiById(t.emoji?.id)?.animated ?? !1)),
+        H = (0, y.A)(n, 1e3),
+        K = null == H || null == t.roleIds ? 0 : Math.max(...t.roleIds.map((e) => H[e])),
+        L = I && !a && t.isUnseen,
         U = (0, m.z)(
             { transform: a || T.enabled ? "scale(1)" : "scale(0.7)", opacity: +!!a, config: { duration: 150 } },
             "animate-always",
@@ -41,7 +41,7 @@ function E(e) {
         B = (0, m.z)(
             {
                 from: { color: P.spring() },
-                color: G.spring({ opacity: k ? 0.5 : 0.25 }),
+                color: G.spring({ opacity: b ? 0.5 : 0.25 }),
                 config: { duration: 300 },
                 delay: 500,
             },
@@ -63,7 +63,7 @@ function E(e) {
         if (R)
             return (
                 (O.current = setTimeout(() => {
-                    (b(!1), (O.current = null));
+                    (M(!1), (O.current = null));
                 }, 3e3)),
                 () => {
                     null != O.current && clearTimeout(O.current);
@@ -78,29 +78,29 @@ function E(e) {
         children: (0, l.jsxs)(g.D, {
             className: N.AP,
             onClick: function () {
-                (b(!a), E(!a));
+                (M(!a), E(!a));
             },
             onMouseDown: () => S(!0),
             onMouseUp: () => S(!1),
             "aria-pressed": a,
             children: [
-                null != n.emoji && (null != n.emoji.id || null != n.emoji.name)
+                null != t.emoji && (null != t.emoji.id || null != t.emoji.name)
                     ? (0, l.jsx)(j.A, {
-                          animated: n.emoji.animated || D,
+                          animated: t.emoji.animated || D,
                           className: N.t0,
-                          emojiId: n.emoji.id,
-                          emojiName: n.emoji.name,
+                          emojiId: t.emoji.id,
+                          emojiName: t.emoji.name,
                       })
                     : null,
                 (0, l.jsxs)("div", {
                     className: N._d,
                     children: [
-                        (0, l.jsx)(x.E, { variant: "text-md/medium", color: "text-strong", children: n.title }),
-                        n.description.length > 0
+                        (0, l.jsx)(x.E, { variant: "body-md/medium", color: "text-strong", children: t.title }),
+                        t.description.length > 0
                             ? (0, l.jsx)(x.E, {
-                                  variant: "text-xs/normal",
+                                  variant: "body-xs/normal",
                                   color: "text-default",
-                                  children: n.description,
+                                  children: t.description,
                               })
                             : null,
                     ],
@@ -116,14 +116,14 @@ function E(e) {
                     }),
                 }),
                 W(
-                    (e, t) =>
+                    (e, n) =>
                         K > 0 &&
-                        t &&
+                        n &&
                         (0, l.jsx)(o.animated.div, {
                             className: N.Kl,
                             style: e,
                             children: (0, l.jsx)(x.E, {
-                                variant: "text-xs/normal",
+                                variant: "body-xs/normal",
                                 color: "text-overlay-light",
                                 children: _.intl.format(_.t.EgKsZA, { memberCount: K }),
                             }),

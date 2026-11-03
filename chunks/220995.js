@@ -17,13 +17,13 @@ var n = t(477900),
     I = t(320448),
     v = t(775602),
     S = t(793574),
-    x = t(688810),
-    _ = t(139286),
-    E = t(713517),
-    N = t(71393),
-    y = t(576705),
-    C = t(174459),
-    b = t(778768),
+    _ = t(688810),
+    x = t(139286),
+    y = t(713517),
+    E = t(71393),
+    N = t(576705),
+    b = t(174459),
+    C = t(778768),
     j = t(652215);
 t(281405);
 var T = t(105292),
@@ -38,26 +38,26 @@ function P(e) {
         w = l.useRef(null),
         [k, R] = l.useState(!1),
         [U, M] = l.useState(0),
-        { analyticsLocations: D } = (0, x.Ay)(S.A.VOICE_INVITE_SUGGESTIONS);
-    (0, _.A)({
+        { analyticsLocations: D } = (0, _.Ay)(S.A.VOICE_INVITE_SUGGESTIONS);
+    (0, x.A)({
         name: d.ImpressionNames.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT,
         type: d.ImpressionTypes.VIEW,
         properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: D },
     });
-    let L = (0, o.bG)([y.A], () => y.A.can(j.xBc.CREATE_INSTANT_INVITE, i), [i]),
-        F = (0, o.bG)([N.A], () => N.A.getGuild(i.guild_id)),
+    let L = (0, o.bG)([N.A], () => N.A.can(j.xBc.CREATE_INSTANT_INVITE, i), [i]),
+        F = (0, o.bG)([E.A], () => E.A.getGuild(i.guild_id)),
         z = (0, o.bG)([v.Ay], () => v.Ay.useReducedMotion),
         [B, K] = l.useState(!1),
         Y = l.useRef(null),
-        q = (0, E.M)(L ? P : Y),
+        q = (0, y.M)(L ? P : Y),
         [$, H] = l.useState(!1),
-        { isFocusing: W } = (0, E.A)(w),
+        { isFocusing: W } = (0, y.A)(w),
         [Z, J] = l.useState(!1),
         X = q || $ || Z,
         Q = l.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown";
-                (C.default.track(j.HAw.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
+                (b.default.track(j.HAw.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
                     reason: e,
                     channel_id: i.id,
                     guild_id: i.guild_id,
@@ -134,7 +134,7 @@ function P(e) {
               align: "top",
               spacing: 17,
               popoutKey: "voice-invite-suggestions-button",
-              renderPopout: (e) => (0, n.jsx)(b.w, { channel: i, onHover: H, forceOpen: Z, ...e }),
+              renderPopout: (e) => (0, n.jsx)(C.w, { channel: i, onHover: H, forceOpen: Z, ...e }),
               onRequestOpen: es,
               onRequestClose: ea,
               children: (e) => {
@@ -188,7 +188,7 @@ function P(e) {
                                       text: T.intl.string(T.t["EE+P0H"]),
                                       overflowOnly: !0,
                                       children: (0, n.jsx)(f.E, {
-                                          variant: "text-sm/medium",
+                                          variant: "body-sm/medium",
                                           className: O.Pf,
                                           lineClamp: 1,
                                           children: T.intl.string(T.t["EE+P0H"]),

@@ -19,8 +19,8 @@ var i = n(477900),
     _ = n(676279),
     N = n(24482),
     C = n(10392),
-    x = n(82498),
-    y = n(732280),
+    y = n(82498),
+    x = n(732280),
     j = n(369805),
     T = n(989790),
     O = n(632150),
@@ -50,11 +50,11 @@ function k(e) {
     s.useEffect(() => {
         (A.default.track(R.HAw.PREMIUM_UPSELL_VIEWED, U),
             (0, C.sq)(R.U7l.PREMIUM_UPSELL_VIEWED, U.location_stack, () =>
-                (0, x.uq)(U.type, U.has_premium_stream_fps, U.has_premium_stream_resolution),
+                (0, y.uq)(U.type, U.has_premium_stream_fps, U.has_premium_stream_resolution),
             ),
             F?.());
     }, [F, U]);
-    let H = (0, y.V)(),
+    let H = (0, x.V)(),
         W = s.useCallback(() => (0, N.LE)(H, b.pe.TIER_2) ?? L.intl.string(L.t.pj0XBN), [H]),
         X = (0, j.A)(b.pe.TIER_2),
         z = (0, T.O9)();
@@ -96,7 +96,7 @@ function k(e) {
                                             children: n,
                                         }),
                                         (0, i.jsx)(E.E, {
-                                            variant: "text-md/medium",
+                                            variant: "body-md/medium",
                                             color: "text-subtle",
                                             className: P.rf,
                                             children: l,

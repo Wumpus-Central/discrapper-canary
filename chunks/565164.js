@@ -3,8 +3,8 @@ var r = n(477900),
     l = n(582128),
     i = n(61491),
     a = n(834730),
-    u = n(584669),
-    o = n(984212),
+    o = n(584669),
+    u = n(984212),
     s = n(42388);
 let c = /#xywh=(\d+),(\d+),(\d+),(\d+)/i,
     d = [];
@@ -18,7 +18,7 @@ function m(e) {
 }
 function f(e, t, n, r) {
     let [i, a] = l.useState(null),
-        [u, s] = l.useState(null);
+        [o, s] = l.useState(null);
     return (
         l.useEffect(() => {
             if (null == n || 0 === n.length || !e) return;
@@ -36,7 +36,7 @@ function f(e, t, n, r) {
                     l = [];
                 for (let e = 0; e < t.length; e++) {
                     let n = t[e];
-                    if (!(0, o.C)(n)) continue;
+                    if (!(0, u.C)(n)) continue;
                     let r = m(n.text);
                     null != r && l.push({ startSec: n.startTime, endSec: n.endTime, ...r });
                 }
@@ -54,7 +54,7 @@ function f(e, t, n, r) {
                 }
             );
         }, [r, e]),
-        null != i && i?.url === n && u === r ? i.cues : d
+        null != i && i?.url === n && o === r ? i.cues : d
     );
 }
 function p(e, t) {
@@ -73,21 +73,21 @@ function p(e, t) {
     return e[Math.max(0, Math.min(n, e.length - 1))];
 }
 function h(e) {
-    let { cue: t, timeSec: n, cursorXPx: l, timelineWidthPx: o } = e;
+    let { cue: t, timeSec: n, cursorXPx: l, timelineWidthPx: u } = e;
     if (t.w <= 0 || t.h <= 0) return null;
     let c = t.w / 2,
         d = 8 + c,
-        m = Math.max(d, o - 8 - c),
+        m = Math.max(d, u - 8 - c),
         f = Math.max(d, Math.min(l, m));
     return (0, r.jsxs)("div", {
         className: s.kL,
         "aria-hidden": !0,
         style: { left: `${f}px`, bottom: "16px", width: `${t.w}px` },
         children: [
-            (0, r.jsx)("div", { className: s.FF, style: (0, u.u)(t) }),
+            (0, r.jsx)("div", { className: s.FF, style: (0, o.u)(t) }),
             (0, r.jsx)(a.E, {
                 className: s.Sp,
-                variant: "text-xs/normal",
+                variant: "body-xs/normal",
                 color: "text-overlay-light",
                 tabularNumbers: !0,
                 children: (0, i.rB)(n),

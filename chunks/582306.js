@@ -54,7 +54,7 @@ function A(e) {
                         className: E.k,
                         onClick: I ? void 0 : n,
                         children: [
-                            (0, i.jsx)(o.E, { variant: "text-md/normal", children: t?.format(A) }),
+                            (0, i.jsx)(o.E, { variant: "body-md/normal", children: t?.format(A) }),
                             (0, i.jsx)(d.CalendarIcon, { size: "sm" }),
                         ],
                     }),

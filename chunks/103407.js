@@ -20,10 +20,10 @@ var r = n(477900),
     T = n(652215),
     g = n(49999),
     O = n(105292),
-    x = n(696918);
+    b = n(696918);
 (n(323874), n(14289), n(35956));
-var b = n(503698),
-    I = n.n(b),
+var x = n(503698),
+    I = n.n(x),
     L = n(131937),
     y = n(877624),
     v = n(17928),
@@ -62,8 +62,8 @@ function Q(e) {
             (0, r.jsxs)("div", {
                 className: I()(z.Zz, { [z.tF]: l }),
                 children: [
-                    (0, r.jsx)(k.D, { variant: "heading-md/semibold", className: z.Hf, children: t }),
-                    (0, r.jsxs)(P.E, { variant: "text-md/medium", color: "text-subtle", children: [n, a?.()] }),
+                    (0, r.jsx)(k.D, { variant: "heading-sm/semibold", className: z.Hf, children: t }),
+                    (0, r.jsxs)(P.E, { variant: "body-md/medium", color: "text-subtle", children: [n, a?.()] }),
                 ],
             }),
         ],
@@ -85,8 +85,8 @@ function W(e) {
             subHeaderExtra: h,
             featureCards: M,
             changeLogId: f,
-            button: x,
-            body: b,
+            button: b,
+            body: x,
             disclaimer: D,
             disclaimerExtra: q,
         } = e,
@@ -320,16 +320,16 @@ function W(e) {
                                 children: [
                                     (0, r.jsx)(k.D, { variant: "nitro-md", className: I()(z.TK, m), children: u }),
                                     (0, r.jsxs)(P.E, {
-                                        variant: "text-md/medium",
+                                        variant: "body-md/medium",
                                         color: "text-subtle",
                                         className: z.uI,
                                         children: [E, h?.()],
                                     }),
                                 ],
                             }),
-                            null != b &&
-                                "" !== b &&
-                                (0, r.jsx)(k.D, { variant: "heading-lg/semibold", className: z.G3, children: b }),
+                            null != x &&
+                                "" !== x &&
+                                (0, r.jsx)(k.D, { variant: "heading-lg/semibold", className: z.G3, children: x }),
                             M.length > 0 &&
                                 (0, r.jsx)("div", {
                                     className: z.IS,
@@ -342,11 +342,11 @@ function W(e) {
                     (0, r.jsxs)("div", {
                         className: z.xQ,
                         children: [
-                            x(),
+                            b(),
                             null != D &&
                                 "" !== D &&
                                 (0, r.jsxs)(P.E, {
-                                    variant: "text-xs/medium",
+                                    variant: "body-xs/medium",
                                     color: "text-subtle",
                                     className: z.ed,
                                     children: [D, q?.()],
@@ -369,7 +369,7 @@ function Z(e) {
 }
 function J(e) {
     let { componentId: t, promotionId: n, promotion: a, renderModalProps: i, properties: m } = e,
-        { location: b } = (0, s.p)(),
+        { location: x } = (0, s.p)(),
         { analyticsLocations: I } = (0, u.Ay)(d.A.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
         L = (0, c.Ay)(),
         y = (0, l.q)(L);
@@ -387,7 +387,7 @@ function J(e) {
                 } = e,
                 u = `AnnouncementModalVariant1_${t}`,
                 { onClose: m } = l,
-                b = i.button?.copy ?? O.intl.string(O.t.YScQSF),
+                x = i.button?.copy ?? O.intl.string(O.t.YScQSF),
                 I = i.button?.buttonAction,
                 L =
                     I === p.d.OPEN_MARKETING_PAGE
@@ -410,7 +410,7 @@ function J(e) {
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       "\xa0",
-                                      (0, r.jsx)(h.Anchor, { className: x.$T, href: v.url, children: v.linkText }),
+                                      (0, r.jsx)(h.Anchor, { className: b.$T, href: v.url, children: v.linkText }),
                                   ],
                               })
                         : void 0,
@@ -421,7 +421,7 @@ function J(e) {
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       "\xa0",
-                                      (0, r.jsx)(h.Anchor, { className: x.$T, href: C.url, children: C.linkText }),
+                                      (0, r.jsx)(h.Anchor, { className: b.$T, href: C.url, children: C.linkText }),
                                   ],
                               })
                         : void 0,
@@ -455,7 +455,7 @@ function J(e) {
                                               children: [
                                                   "\xa0",
                                                   (0, r.jsx)(h.Anchor, {
-                                                      className: x.$T,
+                                                      className: b.$T,
                                                       href: t.url,
                                                       children: t.linkText,
                                                   }),
@@ -496,7 +496,7 @@ function J(e) {
                             variant: "expressive",
                             size: "md",
                             onClick: t,
-                            text: b,
+                            text: x,
                             icon: a,
                             iconPosition: l,
                         });
@@ -512,7 +512,7 @@ function J(e) {
             content: m.properties.announcementModalVariant1,
             renderModalProps: i,
             analyticsLocations: I,
-            analyticsLocation: b,
+            analyticsLocation: x,
             isLightTheme: y,
         });
         return (0, r.jsx)(W, { ...e });

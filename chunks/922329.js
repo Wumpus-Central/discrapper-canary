@@ -22,7 +22,7 @@ function c(e) {
             (0, l.jsxs)("div", {
                 className: d.Wd,
                 children: [
-                    (0, l.jsx)(i.E, { variant: "text-sm/medium", color: "text-default", className: d.Rr, children: t }),
+                    (0, l.jsx)(i.E, { variant: "body-sm/medium", color: "text-default", className: d.Rr, children: t }),
                     u,
                 ],
             }),

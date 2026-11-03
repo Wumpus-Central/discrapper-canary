@@ -35,7 +35,7 @@ function p(e) {
                         height: 20,
                     }),
                     (0, i.jsx)(c.D, {
-                        variant: "heading-md/medium",
+                        variant: "heading-sm/medium",
                         className: I.TK,
                         color: "text-overlay-light",
                         children: t,

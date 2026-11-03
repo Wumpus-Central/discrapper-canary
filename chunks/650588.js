@@ -17,20 +17,20 @@ let E = [54, 8, 8, 8];
 function S(e) {
     let { onSelect: t, sound: n } = e,
         [r, S] = i.useState(!1),
-        g = i.useRef(null),
-        I = a()(f.Qq, f.Ow);
-    function A(e) {
+        y = i.useRef(null),
+        g = a()(f.Qq, f.Ow);
+    function I(e) {
         (S(!1), t?.(e));
     }
-    function y(e) {
+    function A(e) {
         return (0, l.jsxs)("div", {
             className: f.Ry,
             children: [
                 (0, l.jsxs)("div", {
                     className: f.__invalid_customGiftHeaderText,
                     children: [
-                        (0, l.jsx)(o.E, { variant: "text-md/semibold", children: h.intl.string(h.t.aThJz8) }),
-                        (0, l.jsx)(o.E, { variant: "text-sm/normal", children: h.intl.string(h.t.stGFA3) }),
+                        (0, l.jsx)(o.E, { variant: "body-md/semibold", children: h.intl.string(h.t.aThJz8) }),
+                        (0, l.jsx)(o.E, { variant: "body-sm/normal", children: h.intl.string(h.t.stGFA3) }),
                     ],
                 }),
                 (0, l.jsx)("div", { className: f.$H, children: e }),
@@ -38,7 +38,7 @@ function S(e) {
         });
     }
     return (0, l.jsx)(u.Y, {
-        targetElementRef: g,
+        targetElementRef: y,
         shouldShow: r,
         position: "bottom",
         align: "left",
@@ -52,11 +52,11 @@ function S(e) {
                     guildId: null,
                     channel: null,
                     onClose: t,
-                    onSelect: A,
+                    onSelect: I,
                     analyticsSource: "gift soundboard",
                     soundButtonOverlay: p.If.ADD,
                     listPadding: E,
-                    renderHeader: y,
+                    renderHeader: A,
                     defaultSoundsOnly: !0,
                 }),
             });
@@ -65,7 +65,7 @@ function S(e) {
             (0, l.jsx)(d.D, {
                 className: a()(f.kL, f.Ow),
                 onClick: () => S(!0),
-                innerRef: g,
+                innerRef: y,
                 children:
                     null == n
                         ? (0, l.jsxs)("div", {
@@ -79,8 +79,8 @@ function S(e) {
                                       height: 14,
                                   }),
                                   (0, l.jsx)(o.E, {
-                                      className: I,
-                                      variant: "text-sm/semibold",
+                                      className: g,
+                                      variant: "body-sm/semibold",
                                       lineClamp: 1,
                                       children: h.intl.string(h.t.aThJz8),
                                   }),
@@ -90,14 +90,14 @@ function S(e) {
                               className: f.hQ,
                               children: [
                                   (0, l.jsx)(o.E, {
-                                      className: I,
-                                      variant: "text-sm/semibold",
+                                      className: g,
+                                      variant: "body-sm/semibold",
                                       lineClamp: 1,
                                       children: n.emojiName,
                                   }),
                                   (0, l.jsx)(o.E, {
-                                      className: I,
-                                      variant: "text-sm/semibold",
+                                      className: g,
+                                      variant: "body-sm/semibold",
                                       lineClamp: 1,
                                       children: n.name,
                                   }),

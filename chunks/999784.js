@@ -13,7 +13,7 @@ function d() {
         className: i()(c.iG, o.Uu, o.Hu),
         children: [
             (0, l.jsx)(a.LockIcon, { size: "sm", color: "currentColor", className: c.hz }),
-            (0, l.jsx)(s.E, { variant: "text-sm/medium", className: c.aK, children: u.intl.string(u.t.Kv6Z4I) }),
+            (0, l.jsx)(s.E, { variant: "body-sm/medium", className: c.aK, children: u.intl.string(u.t.Kv6Z4I) }),
         ],
     });
 }

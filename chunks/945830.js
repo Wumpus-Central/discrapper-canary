@@ -19,11 +19,11 @@ var i = t(477900),
     v = t(928039),
     N = t(12351),
     P = t(642213),
-    E = t(679164),
-    b = t(636922),
+    b = t(679164),
+    E = t(636922),
     k = t(145530),
-    D = t(363195),
-    y = t(966833),
+    y = t(363195),
+    D = t(966833),
     C = t(232835),
     O = t(576705),
     S = t(573163),
@@ -39,18 +39,18 @@ function K(e) {
         r = n.useRef(null),
         x = (0, v.A)("pins", r);
     (0, P.xN)(r);
-    let { items: f, state: b } = (0, a.cf)([y.A], () => {
-            let e = y.A.getPins(s.id);
-            return { items: e?.items ?? R, state: e?.state ?? y.e.LOADING };
+    let { items: f, state: E } = (0, a.cf)([D.A], () => {
+            let e = D.A.getPins(s.id);
+            return { items: e?.items ?? R, state: e?.state ?? D.e.LOADING };
         }),
-        k = b !== y.e.LOADING && 0 === f.length,
-        D = n.useMemo(() => f.map((e) => e.message), [f]),
+        k = E !== D.e.LOADING && 0 === f.length,
+        y = n.useMemo(() => f.map((e) => e.message), [f]),
         C = (0, a.bG)([S.Ay], () => S.Ay.hasUnreadPins(s.id));
     (n.useEffect(() => {
         C && j.A.ackPins(s.id);
     }, [C, s.id]),
         (0, p.Ay)(() => {
-            D.some(E.$r) && j.A.fetchPins(s.id, { reset: !0 });
+            y.some(b.$r) && j.A.fetchPins(s.id, { reset: !0 });
         }),
         n.useEffect(() => {
             j.A.fetchPins(s.id);
@@ -62,9 +62,9 @@ function K(e) {
         let e = r.current?.getScrollerState();
         null != e &&
             e.scrollHeight - e.scrollTop - e.offsetHeight < 250 &&
-            b === y.e.LOADED_HAS_MORE &&
+            E === D.e.LOADED_HAS_MORE &&
             j.A.fetchPins(s.id, { before: f.at(-1)?.pinnedAt });
-    }, [b, s, f]);
+    }, [E, s, f]);
     return (0, i.jsx)(c.l, {
         "aria-label": I.intl.string(I.t["mp1N/2"]),
         children: (0, i.jsx)("div", {
@@ -80,7 +80,7 @@ function K(e) {
                         children: [
                             (0, i.jsx)(o.t, { color: u.A.colors.INTERACTIVE_TEXT_DEFAULT }),
                             (0, i.jsx)(h.E, {
-                                variant: "text-lg/semibold",
+                                variant: "body-lg/semibold",
                                 color: "interactive-text-active",
                                 children: I.intl.string(I.t["mp1N/2"]),
                             }),
@@ -98,18 +98,18 @@ function K(e) {
                                         ((r.current = e), (n.current = e?.getScrollerNode() ?? null));
                                     },
                                     className: L.m4,
-                                    onScroll: b === y.e.LOADED_HAS_MORE ? O : void 0,
+                                    onScroll: E === D.e.LOADED_HAS_MORE ? O : void 0,
                                     ...l,
                                     children: [
-                                        D.map((e) => (0, i.jsx)(U, { message: e, channel: s, onJump: t }, e.id)),
-                                        b === y.e.LOADING
+                                        y.map((e) => (0, i.jsx)(U, { message: e, channel: s, onJump: t }, e.id)),
+                                        E === D.e.LOADING
                                             ? (0, i.jsx)("div", {
-                                                  className: 0 === D.length ? L.k$ : L.sw,
+                                                  className: 0 === y.length ? L.k$ : L.sw,
                                                   children: (0, i.jsx)(A.y, {}),
                                               })
-                                            : 0 === D.length
+                                            : 0 === y.length
                                               ? (0, i.jsx)(w, { channel: s })
-                                              : b === y.e.LOADED_HAS_MORE
+                                              : E === D.e.LOADED_HAS_MORE
                                                 ? (0, i.jsx)("div", {
                                                       className: L.u9,
                                                       children: (0, i.jsx)(g.$, {
@@ -150,7 +150,7 @@ function U(e) {
     return (0, i.jsxs)("div", {
         className: L.Uc,
         children: [
-            (0, i.jsx)(b.A, {
+            (0, i.jsx)(E.A, {
                 className: L.i0,
                 message: s,
                 channel: t,
@@ -193,13 +193,13 @@ function U(e) {
 }
 function w(e) {
     let { channel: s } = e,
-        n = (0, a.bG)([D.A], () => (0, r.q)(D.A.theme));
+        n = (0, a.bG)([y.A], () => (0, r.q)(y.A.theme));
     return (0, i.jsxs)("div", {
         className: L.zC,
         children: [
             (0, i.jsx)("div", { className: L.Sl, style: { backgroundImage: `url(${n ? t(395236) : t(90367)})` } }),
             (0, i.jsx)(h.E, {
-                variant: "text-md/medium",
+                variant: "body-md/medium",
                 color: "text-default",
                 className: L.rf,
                 children: I.intl.string(s.isPrivate() ? I.t.rhqcbJ : I.t.fmyaWJ),

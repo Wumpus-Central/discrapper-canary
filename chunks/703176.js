@@ -1,5 +1,5 @@
 e.exports = {
-    yg: "text-lg/semibold_adfd79",
+    f8: "body-lg/semibold_adfd79",
     xY: "refreshContent_adfd79",
     K3: "refreshStepRow_adfd79",
     bk: "refreshStepCurrent_adfd79",
@@ -19,6 +19,6 @@ e.exports = {
     ue: "refreshDiscountCalloutIcon_adfd79",
     yP: "refreshDiscountCalloutText_adfd79",
     O3: "refreshSubtotalLabel_adfd79",
-    BU: "refreshSubtotalPrice_adfd79 text-lg/semibold_adfd79",
+    BU: "refreshSubtotalPrice_adfd79 body-lg/semibold_adfd79",
     jH: "refreshLegalNote_adfd79",
 };

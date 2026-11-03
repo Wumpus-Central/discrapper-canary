@@ -37,8 +37,8 @@ function k(e) {
             emptyStateHeader: A,
             onQueryChange: E,
         } = e,
-        { i18n: D } = (0, m.G9)(),
-        [y, R] = a.useState(""),
+        { i18n: y } = (0, m.G9)(),
+        [D, R] = a.useState(""),
         _ = a.useCallback(
             (e) => {
                 (R(e), E?.(e));
@@ -54,9 +54,9 @@ function k(e) {
             l = H.current;
         null != l && null != e && l.scrollIntoViewNode({ node: e, padding: 12 });
     }, [P]);
-    let q = t(y),
+    let q = t(D),
         G = 0 === q.length,
-        F = A ?? D.AUTOCOMPLETE_NO_RESULTS_HEADER,
+        F = A ?? y.AUTOCOMPLETE_NO_RESULTS_HEADER,
         U = a.useId(),
         z = a.useCallback(
             () =>
@@ -104,7 +104,7 @@ function k(e) {
                                 size: "sm",
                                 autoFocus: f,
                                 placeholder: l,
-                                query: y,
+                                query: D,
                                 onChange: _,
                                 onKeyDown: a,
                                 onBlur: () => I(null),
@@ -119,11 +119,11 @@ function k(e) {
                                     ? (0, n.jsxs)("div", {
                                           className: b.Ie,
                                           children: [
-                                              (0, n.jsx)(d.D, { variant: "heading-md/semibold", children: F }),
+                                              (0, n.jsx)(d.D, { variant: "heading-sm/semibold", children: F }),
                                               (0, n.jsx)(C.E, {
                                                   color: "text-muted",
-                                                  variant: "text-md/normal",
-                                                  children: T ?? D.AUTOCOMPLETE_NO_RESULTS_BODY,
+                                                  variant: "body-md/normal",
+                                                  children: T ?? y.AUTOCOMPLETE_NO_RESULTS_BODY,
                                               }),
                                           ],
                                       })

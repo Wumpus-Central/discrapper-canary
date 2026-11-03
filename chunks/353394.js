@@ -2,9 +2,9 @@ s.d(a, { A: () => $ });
 var i = s(477900);
 s(582128);
 var n = s(793574),
-    t = s(688810),
-    l = s(20805),
-    r = s(351638),
+    l = s(688810),
+    r = s(20805),
+    t = s(351638),
     c = s(503698),
     o = s.n(c),
     d = s(681154),
@@ -16,9 +16,9 @@ var n = s(793574),
     A = s(468581),
     h = s(322789),
     u = s(363670),
-    E = s(977001),
-    I = s(514243),
-    y = s(506326),
+    y = s(977001),
+    E = s(514243),
+    I = s(506326),
     N = s(299846),
     C = s(915089),
     S = s(409626),
@@ -37,11 +37,11 @@ var n = s(793574),
     V = s(996988),
     z = s(260155);
 function U(e) {
-    let { user: a, entry: s, header: n, className: l, onClose: r } = e,
+    let { user: a, entry: s, header: n, className: r, onClose: t } = e,
         c = (0, C.GV)(),
         { themeType: j } = (0, P.E)(),
         { largeImage: A } = (0, p.nO)({ entry: s, showCoverImage: !1, trackingSource: "user_profile_gaming_entry" }),
-        { appName: u, activity: I } = (0, N.u)(s),
+        { appName: u, activity: E } = (0, N.u)(s),
         M = (0, T.A)({
             location: "UserProfileRecentActivityCard",
             applicationId: s.extra.application_id,
@@ -49,14 +49,14 @@ function U(e) {
             sourceUserId: a.id,
             trackEntryPointImpression: !0,
         }),
-        { analyticsLocations: G } = (0, t.Ay)(),
+        { analyticsLocations: G } = (0, l.Ay)(),
         U = (0, R.A)({ display: "recent", user: a, entry: s, analyticsLocations: G }),
         w = (0, f.A)({ userId: a.id, onAction: U });
     return null == M
         ? (0, i.jsx)("article", {
               "aria-labelledby": c,
               children: (0, i.jsxs)(g.A.Overlay, {
-                  className: o()(z.Nr, l),
+                  className: o()(z.Nr, r),
                   ref: w,
                   children: [
                       n,
@@ -69,7 +69,7 @@ function U(e) {
                                   (0, i.jsx)("div", {
                                       className: z.zH,
                                       children: (0, i.jsx)("div", {
-                                          children: (0, i.jsx)(k.Q, { variant: "heading-sm/semibold", text: u, id: c }),
+                                          children: (0, i.jsx)(k.Q, { variant: "heading-xs/semibold", text: u, id: c }),
                                       }),
                                   }),
                               ],
@@ -80,10 +80,10 @@ function U(e) {
           })
         : (0, i.jsxs)(O.A, {
               ref: w,
-              className: l,
+              className: r,
               profileModalScrollTarget: L.bk.RECENT_ACTIVITY,
               onAction: U,
-              onClose: r,
+              onClose: t,
               "aria-labelledby": c,
               children: [
                   n,
@@ -105,7 +105,7 @@ function U(e) {
                                               (e.stopPropagation(),
                                                   U({ action: "PRESS_IMAGE" }),
                                                   M(e),
-                                                  j !== V.d.MODAL && j !== V.d.MODAL_V2 && r?.());
+                                                  j !== V.d.MODAL && j !== V.d.MODAL_V2 && t?.());
                                           },
                                       }),
                                       (0, i.jsxs)("div", {
@@ -117,20 +117,20 @@ function U(e) {
                                                       (e.stopPropagation(),
                                                           U({ action: "PRESS_TEXT" }),
                                                           M(e),
-                                                          j !== V.d.MODAL && j !== V.d.MODAL_V2 && r?.());
+                                                          j !== V.d.MODAL && j !== V.d.MODAL_V2 && t?.());
                                                   },
                                                   children: (0, i.jsx)(k.Q, {
-                                                      variant: "heading-sm/semibold",
+                                                      variant: "heading-xs/semibold",
                                                       text: u,
                                                       id: c,
                                                   }),
                                               }),
-                                              (0, i.jsx)(y.mG, {
-                                                  location: y.N5.USER_PROFILE,
+                                              (0, i.jsx)(I.mG, {
+                                                  location: I.N5.USER_PROFILE,
                                                   className: z.jp,
                                                   children:
                                                       s.content_type === d.ContentInventoryEntryType.TOP_GAME
-                                                          ? E.ac.map((e, a) =>
+                                                          ? y.ac.map((e, a) =>
                                                                 (0, i.jsx)(e, { entry: s }, `entry-${a}`),
                                                             )
                                                           : h.n.map((e, a) =>
@@ -143,24 +143,24 @@ function U(e) {
                               }),
                           }),
                   }),
-                  (0, i.jsx)(b.A, { applicationId: s.extra.application_id, onAction: U, onClose: r, activity: I }),
+                  (0, i.jsx)(b.A, { applicationId: s.extra.application_id, onAction: U, onClose: t, activity: E }),
               ],
           });
 }
 function w(e) {
-    let { user: a, entry: s, header: n, className: l, onClose: r } = e,
+    let { user: a, entry: s, header: n, className: r, onClose: t } = e,
         c = (0, C.GV)(),
         { largeImage: o } = (0, p.nO)({ entry: s, trackingSource: "user_profile_watch_entry" }),
         { url: d } = s.extra,
-        { analyticsLocations: x } = (0, t.Ay)(),
+        { analyticsLocations: x } = (0, l.Ay)(),
         A = (0, R.A)({ display: "recent", user: a, entry: s, analyticsLocations: x }),
         h = (0, f.A)({ userId: a.id, onAction: A });
     return (0, i.jsxs)(O.A, {
         ref: h,
-        className: l,
+        className: r,
         profileModalScrollTarget: L.bk.RECENT_ACTIVITY,
         onAction: A,
-        onClose: r,
+        onClose: t,
         "aria-labelledby": c,
         children: [
             n,
@@ -192,12 +192,12 @@ function w(e) {
                                     ? (0, i.jsxs)("div", {
                                           children: [
                                               (0, i.jsx)(k.Q, {
-                                                  variant: "heading-sm/semibold",
+                                                  variant: "heading-xs/semibold",
                                                   text: s.extra.media_title,
                                                   id: c,
                                               }),
                                               (0, i.jsx)(k.A, {
-                                                  variant: "text-xs/normal",
+                                                  variant: "body-xs/normal",
                                                   text: s.extra.media_subtitle,
                                               }),
                                           ],
@@ -209,20 +209,20 @@ function w(e) {
                                           },
                                           children: [
                                               (0, i.jsx)(k.Q, {
-                                                  variant: "heading-sm/semibold",
+                                                  variant: "heading-xs/semibold",
                                                   text: s.extra.media_title,
                                                   id: c,
                                               }),
                                               (0, i.jsx)(k.A, {
-                                                  variant: "text-xs/normal",
+                                                  variant: "body-xs/normal",
                                                   text: s.extra.media_subtitle,
                                               }),
                                           ],
                                       }),
-                                (0, i.jsx)(y.mG, {
-                                    location: y.N5.USER_PROFILE,
+                                (0, i.jsx)(I.mG, {
+                                    location: I.N5.USER_PROFILE,
                                     className: z.jp,
-                                    children: I.R.map((e, a) => (0, i.jsx)(e, { entry: s }, `entry-${a}`)),
+                                    children: E.R.map((e, a) => (0, i.jsx)(e, { entry: s }, `entry-${a}`)),
                                 }),
                             ],
                         }),
@@ -233,10 +233,10 @@ function w(e) {
     });
 }
 function Q(e) {
-    let { user: a, entry: s, header: n, className: l, onClose: r } = e,
+    let { user: a, entry: s, header: n, className: r, onClose: t } = e,
         c = (0, C.GV)(),
         { largeImage: o } = (0, p.nO)({ entry: s, trackingSource: "user_profile_listened_session_entry" }),
-        { analyticsLocations: d } = (0, t.Ay)(),
+        { analyticsLocations: d } = (0, l.Ay)(),
         x = (0, R.A)({ display: "recent", user: a, entry: s, analyticsLocations: d }),
         m = (0, f.A)({ userId: a.id, onAction: x }),
         A = s.extra.entries[0]?.media;
@@ -244,10 +244,10 @@ function Q(e) {
         ? null
         : (0, i.jsxs)(O.A, {
               ref: m,
-              className: l,
+              className: r,
               profileModalScrollTarget: L.bk.RECENT_ACTIVITY,
               onAction: x,
-              onClose: r,
+              onClose: t,
               "aria-labelledby": c,
               children: [
                   n,
@@ -272,7 +272,7 @@ function Q(e) {
                                       (0, i.jsxs)("div", {
                                           children: [
                                               (0, i.jsx)(k.Q, {
-                                                  variant: "heading-sm/semibold",
+                                                  variant: "heading-xs/semibold",
                                                   text: A.title,
                                                   onClick: () => {
                                                       (x({ action: "OPEN_SPOTIFY_TRACK" }),
@@ -281,7 +281,7 @@ function Q(e) {
                                                   id: c,
                                               }),
                                               (0, i.jsx)(k.A, {
-                                                  variant: "text-xs/normal",
+                                                  variant: "body-xs/normal",
                                                   text: A.artists[0]?.name,
                                                   onClick: () => {
                                                       (x({ action: "OPEN_SPOTIFY_ARTIST" }),
@@ -290,8 +290,8 @@ function Q(e) {
                                               }),
                                           ],
                                       }),
-                                      (0, i.jsx)(y.mG, {
-                                          location: y.N5.USER_PROFILE,
+                                      (0, i.jsx)(I.mG, {
+                                          location: I.N5.USER_PROFILE,
                                           className: z.jp,
                                           children: u.hh.map((e, a) => (0, i.jsx)(e, { entry: s }, `entry-${a}`)),
                                       }),
@@ -304,23 +304,23 @@ function Q(e) {
           });
 }
 function F(e) {
-    let { user: a, entry: s, header: n, className: l, onClose: r } = e,
+    let { user: a, entry: s, header: n, className: r, onClose: t } = e,
         c = (0, C.GV)(),
         { largeImage: o } = (0, p.nO)({
             entry: s,
             showCoverImage: !1,
             trackingSource: "user_profile_launched_activity_entry",
         }),
-        { analyticsLocations: d } = (0, t.Ay)(),
+        { analyticsLocations: d } = (0, l.Ay)(),
         m = (0, R.A)({ display: "recent", user: a, entry: s, analyticsLocations: d }),
         j = (0, f.A)({ userId: a.id, onAction: m }),
-        h = (0, M.A)({ applicationId: s.extra.application_id, onClose: r });
+        h = (0, M.A)({ applicationId: s.extra.application_id, onClose: t });
     return (0, i.jsxs)(O.A, {
         ref: j,
-        className: l,
+        className: r,
         profileModalScrollTarget: L.bk.RECENT_ACTIVITY,
         onAction: m,
-        onClose: r,
+        onClose: t,
         "aria-labelledby": c,
         children: [
             n,
@@ -347,7 +347,7 @@ function F(e) {
                                     children: [
                                         (0, i.jsx)("div", {
                                             children: (0, i.jsx)(k.Q, {
-                                                variant: "heading-sm/semibold",
+                                                variant: "heading-xs/semibold",
                                                 text: s.extra.activity_name,
                                                 onClick: () => {
                                                     (m({ action: "PRESS_TEXT" }), h());
@@ -355,8 +355,8 @@ function F(e) {
                                                 id: c,
                                             }),
                                         }),
-                                        (0, i.jsx)(y.mG, {
-                                            location: y.N5.USER_PROFILE,
+                                        (0, i.jsx)(I.mG, {
+                                            location: I.N5.USER_PROFILE,
                                             className: z.jp,
                                             children: A.$.map((e, a) => (0, i.jsx)(e, { entry: s }, `entry-${a}`)),
                                         }),
@@ -371,29 +371,29 @@ function F(e) {
 }
 function Y(e) {
     let { entry: a, ...s } = e;
-    return (0, l.zD)(a)
+    return (0, r.zD)(a)
         ? (0, i.jsx)(U, { entry: a, ...s })
-        : (0, l.Lf)(a)
+        : (0, r.Lf)(a)
           ? (0, i.jsx)(w, { entry: a, ...s })
-          : (0, l.Tq)(a)
+          : (0, r.Tq)(a)
             ? (0, i.jsx)(Q, { entry: a, ...s })
-            : (0, l.yl)(a)
+            : (0, r.yl)(a)
               ? (0, i.jsx)(F, { entry: a, ...s })
               : null;
 }
 var D = s(269587);
 function $(e) {
     let { user: a, entry: s, className: c, onClose: o, hideContextMenu: d = !1, appContext: x } = e,
-        { analyticsLocations: m } = (0, t.Ay)(n.A.USER_PROFILE_RECENT_ACTIVITY_CARD);
-    return (0, l.$R)(s)
-        ? (0, i.jsx)(t.f5, {
+        { analyticsLocations: m } = (0, l.Ay)(n.A.USER_PROFILE_RECENT_ACTIVITY_CARD);
+    return (0, r.$R)(s)
+        ? (0, i.jsx)(l.f5, {
               value: m,
               children: (0, i.jsx)(Y, {
                   entry: s,
                   user: a,
                   className: c,
                   onClose: o,
-                  header: (0, i.jsx)(r.A, {
+                  header: (0, i.jsx)(t.A, {
                       contextMenu: d
                           ? null
                           : (0, i.jsx)(D.A, { display: "recent", entry: s, user: a, onClose: o, appContext: x }),

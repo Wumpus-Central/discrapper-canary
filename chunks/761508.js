@@ -16,7 +16,13 @@ function h(e) {
     return null == n
         ? (0, i.jsx)("div", {
               className: s()(E.wx, t),
-              children: (0, i.jsx)(u.E, { variant: "eyebrow", color: "none", className: E.TK, ref: o, children: r }),
+              children: (0, i.jsx)(u.E, {
+                  variant: "body-sm/medium",
+                  color: "none",
+                  className: E.TK,
+                  ref: o,
+                  children: r,
+              }),
           })
         : (0, i.jsx)(c.D, {
               innerRef: o,
@@ -25,7 +31,7 @@ function h(e) {
               "aria-expanded": a,
               "aria-controls": l,
               focusProps: { offset: { top: -6 } },
-              children: (0, i.jsx)(u.E, { variant: "eyebrow", color: "none", className: E.TK, children: r }),
+              children: (0, i.jsx)(u.E, { variant: "body-sm/medium", color: "none", className: E.TK, children: r }),
           });
 }
 function f(e) {
@@ -133,7 +139,7 @@ class T extends r.Component {
             innerRef: A,
             ref: _,
             children: (0, i.jsx)(u.E, {
-                variant: "top" === this.props.itemType ? "text-sm/semibold" : "text-md/medium",
+                variant: "top" === this.props.itemType ? "body-sm/semibold" : "body-md/medium",
                 color: "none",
                 className: E.rv,
                 children: e,

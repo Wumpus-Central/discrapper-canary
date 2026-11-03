@@ -7,10 +7,10 @@ n.d(t, {
     ME: () => P,
     R1: () => w,
     _V: () => R,
-    eB: () => b,
+    eB: () => v,
     eu: () => L,
     hE: () => C,
-    pd: () => v,
+    pd: () => b,
     tK: () => O,
     xt: () => G,
 });
@@ -42,7 +42,7 @@ function C(e) {
 }
 function O(e) {
     let { className: t, children: n } = e;
-    return (0, i.jsx)(o.E, { variant: "text-md/normal", color: "text-default", className: t, children: n });
+    return (0, i.jsx)(o.E, { variant: "body-md/normal", color: "text-default", className: t, children: n });
 }
 function R(e) {
     let { className: t, src: n } = e;
@@ -60,7 +60,7 @@ function D(e) {
     let { className: t, channel: n, size: r } = e;
     return (0, i.jsx)(N, { src: (0, E.Y)(n), size: r, className: a()(S.TP, t), "aria-hidden": !0 });
 }
-function v(e) {
+function b(e) {
     let {
             label: t,
             error: n,
@@ -103,13 +103,13 @@ function v(e) {
         });
     return null != s ? (0, i.jsx)("div", { className: s, children: S }) : S;
 }
-function b(e) {
+function v(e) {
     let { className: t, children: n } = e;
     return (0, i.jsx)("div", { className: a()(S.om, t), children: n });
 }
 function P(e) {
     let { className: t, children: n } = e;
-    return (0, i.jsx)(o.E, { variant: "text-xs/normal", className: a()(S.Sv, t), children: n });
+    return (0, i.jsx)(o.E, { variant: "body-xs/normal", className: a()(S.Sv, t), children: n });
 }
 function M(e) {
     let { className: t } = e;
@@ -124,7 +124,7 @@ function U(e) {
     return (0, i.jsx)(o.E, {
         tag: "span",
         className: e?.className,
-        variant: "text-sm/normal",
+        variant: "body-sm/normal",
         color: "text-default",
         children: e?.children,
     });
@@ -167,7 +167,7 @@ function G(e) {
               children: [
                   (0, i.jsx)(o.E, {
                       tag: "span",
-                      variant: "text-md/normal",
+                      variant: "body-md/normal",
                       color: "text-default",
                       children: g.intl.string(g.t["/8WWvE"]),
                   }),
@@ -180,7 +180,7 @@ function G(e) {
                   (0, i.jsx)(o.E, {
                       className: S.pp,
                       tag: "span",
-                      variant: "text-md/semibold",
+                      variant: "body-md/semibold",
                       color: "text-strong",
                       children: t.username,
                   }),
@@ -189,7 +189,7 @@ function G(e) {
 }
 function x(e) {
     let { className: t } = e;
-    return (0, i.jsxs)(b, {
+    return (0, i.jsxs)(v, {
         className: t,
         children: [
             (0, i.jsx)(u.$, {

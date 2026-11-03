@@ -29,8 +29,8 @@ function h(e) {
 function m(e) {
     let { className: t, product: n, title: r, subtitle: m, badge: p } = e,
         C = (0, s.bG)([d.default], () => d.default.getCurrentUser()),
-        E = (0, c.tP)(n);
-    return null == E
+        y = (0, c.tP)(n);
+    return null == y
         ? null
         : (0, l.jsx)(h, {
               className: t,
@@ -45,7 +45,7 @@ function m(e) {
                           [f.l2]: n?.type === a.R.BUNDLE,
                       }),
                       children: (0, l.jsx)(o.pL, {
-                          collectiblesItem: E,
+                          collectiblesItem: y,
                           user: C,
                           nameplatePreviewStyle: f.M4,
                           nameplatePreviewRescalerStyle: f.N1,
@@ -53,7 +53,7 @@ function m(e) {
                   }),
               }),
               badge: p,
-              title: null != r && (0, l.jsx)(u.E, { variant: "text-md/medium", color: "text-default", children: r }),
-              body: null != m && (0, l.jsx)(u.E, { variant: "text-sm/medium", color: "text-muted", children: m }),
+              title: null != r && (0, l.jsx)(u.E, { variant: "body-md/medium", color: "text-default", children: r }),
+              body: null != m && (0, l.jsx)(u.E, { variant: "body-sm/medium", color: "text-muted", children: m }),
           });
 }

@@ -214,7 +214,11 @@ function R(e) {
         : (0, i.jsxs)("div", {
               className: H.T,
               children: [
-                  (0, i.jsx)(l.E, { variant: "eyebrow", color: "text-muted", children: V.intl.string(V.t.s64CMg) }),
+                  (0, i.jsx)(l.E, {
+                      variant: "body-sm/medium",
+                      color: "text-muted",
+                      children: V.intl.string(V.t.s64CMg),
+                  }),
                   (0, i.jsx)(U, { flaggedContent: t }),
               ],
           });

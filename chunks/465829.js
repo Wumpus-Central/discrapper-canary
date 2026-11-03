@@ -15,8 +15,8 @@ var l = n(503698),
     p = n(660184),
     E = n(534400),
     h = n(518477),
-    x = n(105292),
-    b = n(956495);
+    b = n(105292),
+    x = n(956495);
 let A = { sm: "heading-lg/semibold", lg: "heading-xl/semibold" };
 function _(e) {
     let {
@@ -39,7 +39,7 @@ function _(e) {
                   userName: l,
                   displayNameStyles: f,
                   effectDisplayType: g.G.ANIMATED,
-                  textClassName: b.QC,
+                  textClassName: x.QC,
                   shouldWrap: !0,
                   loop: !0,
                   inProfile: !0,
@@ -47,7 +47,7 @@ function _(e) {
                   appendedInlineContent: null != c ? (0, a.jsxs)(a.Fragment, { children: [" ", c] }) : null,
               }),
           })
-        : (0, a.jsxs)(s.E, { className: r()(b.QC, b.O2, u), variant: E, children: [l, " ", c] });
+        : (0, a.jsxs)(s.E, { className: r()(x.QC, x.O2, u), variant: E, children: [l, " ", c] });
 }
 function N(e) {
     let {
@@ -60,7 +60,7 @@ function N(e) {
             onClickDisplayName: c,
         } = e,
         m = (0, u.r)(t),
-        g = null != m ? (0, a.jsx)(f.A, { type: m, verified: t.isVerifiedBot(), className: b.AO }) : null,
+        g = null != m ? (0, a.jsx)(f.A, { type: m, verified: t.isVerifiedBot(), className: x.AO }) : null,
         p = (0, a.jsx)(_, {
             user: t,
             guildId: n,
@@ -71,27 +71,27 @@ function N(e) {
             displayNameTrailing: g,
         });
     return (0, a.jsxs)("div", {
-        className: r()(b.K$, "lg" === o && b.lg),
+        className: r()(x.K$, "lg" === o && x.lg),
         children: [
-            null != c ? (0, a.jsx)(i.D, { onClick: c, className: b.vk, children: p }) : p,
-            null != s && !1 !== s && (0, a.jsx)("div", { className: b.MU, children: s }),
+            null != c ? (0, a.jsx)(i.D, { onClick: c, className: x.vk, children: p }) : p,
+            null != s && !1 !== s && (0, a.jsx)("div", { className: x.MU, children: s }),
         ],
     });
 }
 function R(e) {
     let { pronouns: t, className: n } = e;
     return (0, a.jsxs)(s.E, {
-        className: r()(b.hI, n),
-        variant: "text-sm/medium",
+        className: r()(x.hI, n),
+        variant: "body-sm/medium",
         color: "text-strong",
         children: [
-            (0, a.jsx)(o.A, { tag: "span", children: x.intl.formatToPlainString(x.t["DRI+T7"], { pronouns: t }) }),
+            (0, a.jsx)(o.A, { tag: "span", children: b.intl.formatToPlainString(b.t["DRI+T7"], { pronouns: t }) }),
             (0, a.jsx)("span", { "aria-hidden": "true", children: t }),
         ],
     });
 }
 function v() {
-    return (0, a.jsx)("div", { "aria-hidden": "true", className: b.SC });
+    return (0, a.jsx)("div", { "aria-hidden": "true", className: x.SC });
 }
 function j(e) {
     let {
@@ -113,24 +113,24 @@ function j(e) {
                   user: t,
                   usernameIcon: n,
                   forceUsername: !0,
-                  className: b.a1,
-                  usernameClass: b.eb,
-                  discriminatorClass: b.sw,
+                  className: x.a1,
+                  usernameClass: x.eb,
+                  discriminatorClass: x.sw,
                   hideBotTag: !0,
               });
     return (0, a.jsxs)("div", {
-        className: r()(b.AK, { [b.j6]: A, [b.w2]: null != _ }),
+        className: r()(x.AK, { [x.j6]: A, [x.w2]: null != _ }),
         children: [
-            null != N && null != l ? (0, a.jsx)(i.D, { onClick: l, className: r()(b.qp, b.vk), children: N }) : N,
+            null != N && null != l ? (0, a.jsx)(i.D, { onClick: l, className: r()(x.qp, x.vk), children: N }) : N,
             A &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)(v, {}),
                         (0, a.jsx)(d.m, {
-                            text: x.intl.string(x.t.GI2A8C),
+                            text: b.intl.string(b.t.GI2A8C),
                             delay: h.In,
                             ariaHidden: !0,
-                            children: (0, a.jsx)("span", { className: b.Ez, children: (0, a.jsx)(R, { pronouns: s }) }),
+                            children: (0, a.jsx)("span", { className: x.Ez, children: (0, a.jsx)(R, { pronouns: s }) }),
                         }),
                     ],
                 }),
@@ -140,8 +140,8 @@ function j(e) {
                 contextGuildId: f,
                 onClose: g,
                 onCreateTag: p,
-                textVariant: "text-xs/normal",
-                className: b.Bb,
+                textVariant: "body-xs/normal",
+                className: x.Bb,
             }),
             m,
         ],

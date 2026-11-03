@@ -18,7 +18,7 @@ var r = n(477900),
 function S(e, t) {
     return t >= e.startSec && t < e.startSec + e.durationSec;
 }
-function E(e, t, n) {
+function y(e, t, n) {
     return (
         !S(t, n) ||
         (null != e &&
@@ -27,25 +27,25 @@ function E(e, t, n) {
             0.35 >= Math.abs(e.currentTime - (n - t.startSec)))
     );
 }
-function y(e, t) {
+function E(e, t) {
     if (t < e.startSec) return e.startSec - t;
     let n = e.startSec + e.durationSec;
     return t >= n ? n - t : 0;
 }
-var A = n(185973),
-    b = n(105292),
+var b = n(185973),
+    A = n(105292),
     C = n(243189);
 let j = l.memo(function (e) {
     let t,
-        { source: n, masterSec: i, isPlaying: u, playbackRate: s, isGridView: o, onMediaElement: d, children: E } = e,
+        { source: n, masterSec: i, isPlaying: u, playbackRate: s, isGridView: o, onMediaElement: d, children: y } = e,
         j = l.useRef(null),
         [I, _] = l.useState(!1),
         T = S(n, i),
         M = i - n.startSec,
         N = i < n.startSec,
-        w = Math.ceil(y(n, i)),
+        w = Math.ceil(E(n, i)),
         L = (0, h.rB)(w),
-        R = n.owner?.name ?? n.label ?? b.intl.string(A.default["6XuC8e"]),
+        R = n.owner?.name ?? n.label ?? A.intl.string(b.default["6XuC8e"]),
         { ref: k, width: P, height: O } = (0, c.Ay)();
     (l.useEffect(() => {
         let e = j.current;
@@ -62,8 +62,8 @@ let j = l.memo(function (e) {
     let G = o && !T && 0 !== w;
     return (
         o && T
-            ? (t = b.intl.formatToPlainString(A.default.zc1itm, { name: R }))
-            : o && (t = b.intl.formatToPlainString(N ? A.default.dUPcpR : A.default.q8TlkE, { name: R, time: L })),
+            ? (t = A.intl.formatToPlainString(b.default.zc1itm, { name: R }))
+            : o && (t = A.intl.formatToPlainString(N ? b.default.dUPcpR : b.default.q8TlkE, { name: R, time: L })),
         (0, r.jsxs)("div", {
             className: C.Vs,
             role: o ? "group" : void 0,
@@ -74,7 +74,7 @@ let j = l.memo(function (e) {
                     ref: k,
                     className: a()(C.iH, { [C.om]: o }),
                     children: [
-                        E ??
+                        y ??
                             (0, r.jsx)(m.A, {
                                 ref: j,
                                 className: a()(C.cr, { [C.qb]: G }),
@@ -107,7 +107,7 @@ let j = l.memo(function (e) {
                         "aria-hidden": !0,
                         children: [
                             (0, r.jsx)(v.Q, { size: "xs", color: "currentColor" }),
-                            (0, r.jsx)(x.E, { variant: "text-xs/medium", color: "none", children: L }),
+                            (0, r.jsx)(x.E, { variant: "body-xs/medium", color: "none", children: L }),
                         ],
                     }),
             ],
@@ -118,11 +118,11 @@ var I = n(683063),
     _ = n(599507);
 let T = l.memo(function (e) {
     let { source: t, label: n, isActive: l, isOriginal: i, currentMasterTimeSec: u, onSelect: s } = e,
-        d = t.owner?.name ?? n ?? b.intl.string(A.default["6XuC8e"]),
+        d = t.owner?.name ?? n ?? A.intl.string(b.default["6XuC8e"]),
         m = S(t, u),
-        { ref: x, width: E, height: C } = (0, c.Ay)(m, l, i);
+        { ref: x, width: y, height: C } = (0, c.Ay)(m, l, i);
     if (!m && !l && !i) {
-        let e = (0, h.rB)(y(t, u));
+        let e = (0, h.rB)(E(t, u));
         return (0, r.jsx)(I.u, {
             asset: (0, r.jsx)(v.Q, { size: "xs" }),
             assetSize: 16,
@@ -131,7 +131,7 @@ let T = l.memo(function (e) {
             ariaHidden: !0,
             children: (0, r.jsx)("div", {
                 className: _.RG,
-                "aria-label": b.intl.formatToPlainString(A.default.JFaxs2, { name: d, time: e }),
+                "aria-label": A.intl.formatToPlainString(b.default.JFaxs2, { name: d, time: e }),
                 "data-testid": "discord-web-multi-video-player-pov-out-of-range",
                 children: (0, r.jsx)(g.eu, { src: t.owner?.avatarUrl, size: p._3.SIZE_32, "aria-hidden": !0 }),
             }),
@@ -140,8 +140,8 @@ let T = l.memo(function (e) {
     return (0, r.jsxs)(o.D, {
         className: a()(_.uF, { [_._]: l }),
         "aria-label": l
-            ? b.intl.formatToPlainString(A.default["RSMzC/"], { name: d })
-            : b.intl.formatToPlainString(A.default["4AH1Vb"], { name: d }),
+            ? A.intl.formatToPlainString(b.default["RSMzC/"], { name: d })
+            : A.intl.formatToPlainString(b.default["4AH1Vb"], { name: d }),
         "aria-current": l,
         onClick: function (e) {
             (e.stopPropagation(), s(t));
@@ -155,7 +155,7 @@ let T = l.memo(function (e) {
                     (0, r.jsx)("img", {
                         ref: x,
                         className: _.a1,
-                        src: (0, f.s)(t.poster, t, E, C),
+                        src: (0, f.s)(t.poster, t, y, C),
                         alt: "",
                         "aria-hidden": !0,
                     }),
@@ -180,7 +180,7 @@ function N(e) {
             onTimeUpdate: p,
             onEnded: v,
             onLoadedMetadata: x,
-            onError: y,
+            onError: E,
             onPlay: C,
             onPause: I,
             children: _,
@@ -297,7 +297,7 @@ function N(e) {
                             r = t.current;
                         if (null == r || r.paused || !n) return;
                         let { sources: l, getSourceElement: i } = f.current;
-                        l.every((t) => E(i(t), t, e)) ||
+                        l.every((t) => y(i(t), t, e)) ||
                             ((o.current = !0), (s.current = e), r.pause(), r.dispatchEvent(new Event("waiting")), u(e));
                     },
                     [t],
@@ -338,7 +338,7 @@ function N(e) {
                     if (null == a) return;
                     let e = n.map(m).filter((e) => null != e);
                     function t() {
-                        n.every((e) => E(m(e), e, a)) && p(!0);
+                        n.every((e) => y(m(e), e, a)) && p(!0);
                     }
                     let r = setTimeout(() => p(!0), 2500);
                     return (
@@ -395,13 +395,13 @@ function N(e) {
                     (e.preload = "metadata"),
                     e.load(),
                     (eg.current = setTimeout(() => {
-                        ((ef.current = !0), eE.current.applyDeferredSwitch());
+                        ((ef.current = !0), ey.current.applyDeferredSwitch());
                     }, 5e3))));
             return;
         }
-        let r = s()(t, 0, eE.current.masterDurationSec),
+        let r = s()(t, 0, ey.current.masterDurationSec),
             l = O.current;
-        if (n.id === eE.current.activeSource.id) {
+        if (n.id === ey.current.activeSource.id) {
             ((ed.current = null), null != l && (l.currentTime = r - n.startSec));
             return;
         }
@@ -412,14 +412,14 @@ function N(e) {
                 playbackRate: l?.playbackRate ?? 1,
             }),
             (ed.current = r),
-            (eE.current = { ...eE.current, activeSource: n }),
+            (ey.current = { ...ey.current, activeSource: n }),
             F(n.id),
             B(r));
     }
     function eS(e) {
         ex(N.id, e);
     }
-    let eE = l.useRef({
+    let ey = l.useRef({
         activeSource: er,
         masterDurationSec: H,
         isScrubbing: g,
@@ -427,8 +427,8 @@ function N(e) {
         applyDeferredSwitch: ev,
     });
     l.useLayoutEffect(() => {
-        eE.current = {
-            ...eE.current,
+        ey.current = {
+            ...ey.current,
             activeSource: er,
             masterDurationSec: H,
             isScrubbing: g,
@@ -436,10 +436,10 @@ function N(e) {
             applyDeferredSwitch: ev,
         };
     });
-    let ey = l.useRef(null);
+    let eE = l.useRef(null);
     (l.useLayoutEffect(
         () => (
-            (ey.current ??= (function (e) {
+            (eE.current ??= (function (e) {
                 let t = null;
                 function n() {
                     let n = e.getElement();
@@ -486,27 +486,27 @@ function N(e) {
                 );
             })({
                 getElement: () => O.current,
-                getDurationSec: () => eE.current.masterDurationSec,
-                getActiveStartSec: () => eE.current.activeSource.startSec,
+                getDurationSec: () => ey.current.masterDurationSec,
+                getActiveStartSec: () => ey.current.activeSource.startSec,
                 getCurrentTimeSec: () => {
                     let e = ed.current;
                     return null != e
                         ? e
-                        : Math.max(0, eE.current.activeSource.startSec + (O.current?.currentTime ?? 0));
+                        : Math.max(0, ey.current.activeSource.startSec + (O.current?.currentTime ?? 0));
                 },
                 seekTo: (e) => {
-                    let t = s()(e, 0, eE.current.masterDurationSec);
-                    if ((B(t), S(eE.current.activeSource, t))) {
+                    let t = s()(e, 0, ey.current.masterDurationSec);
+                    if ((B(t), S(ey.current.activeSource, t))) {
                         ed.current = null;
                         let e = O.current;
-                        (null != e && (e.currentTime = t - eE.current.activeSource.startSec),
-                            eE.current.isScrubbing || ea(t));
+                        (null != e && (e.currentTime = t - ey.current.activeSource.startSec),
+                            ey.current.isScrubbing || ea(t));
                         return;
                     }
-                    ((ed.current = t), eE.current.isScrubbing || eE.current.revertToOriginal(t));
+                    ((ed.current = t), ey.current.isScrubbing || ey.current.revertToOriginal(t));
                 },
             })),
-            t(ey.current),
+            t(eE.current),
             () => {
                 t(null);
             }
@@ -519,20 +519,20 @@ function N(e) {
             },
             [],
         ));
-    let eA = l.useRef($);
-    function eb(e) {
+    let eb = l.useRef($);
+    function eA(e) {
         e.id !== er.id && ex(e.id, Z);
     }
     function eC(e) {
         ei() || P.onCanPlay?.(e);
     }
     (l.useEffect(() => {
-        eA.current !== $ && ((eA.current = $), O.current?.load());
+        eb.current !== $ && ((eb.current = $), O.current?.load());
     }, [$]),
         l.useEffect(() => {
             if (g) return;
             let e = ed.current;
-            null == e || null != eo.current || S(eE.current.activeSource, e) || eE.current.revertToOriginal(e);
+            null == e || null != eo.current || S(ey.current.activeSource, e) || ey.current.revertToOriginal(e);
         }, [g]));
     let ej = !S(er, Z);
     return (0, r.jsxs)(r.Fragment, {
@@ -576,7 +576,7 @@ function N(e) {
                                             ((ef.current = !0),
                                             Number.isFinite(t.duration) &&
                                                 (z(t.duration),
-                                                (eE.current = { ...eE.current, masterDurationSec: t.duration }))),
+                                                (ey.current = { ...ey.current, masterDurationSec: t.duration }))),
                                         null == n)
                                     ) {
                                         (x?.(e), ev());
@@ -592,7 +592,7 @@ function N(e) {
                                     ((ed.current = null), et());
                                 },
                                 onError: function (e) {
-                                    er.id !== N.id ? eS(er.startSec + (O.current?.currentTime ?? 0)) : y?.(e);
+                                    er.id !== N.id ? eS(er.startSec + (O.current?.currentTime ?? 0)) : E?.(e);
                                 },
                                 onPlay: function (e) {
                                     (K(!0), es(Z), C?.(e));
@@ -641,18 +641,18 @@ function N(e) {
                                     {
                                         source: e,
                                         label:
-                                            e.id === N.id ? (e.label ?? b.intl.string(A.default["9tdsDk"])) : e.label,
+                                            e.id === N.id ? (e.label ?? A.intl.string(b.default["9tdsDk"])) : e.label,
                                         isActive: e.id === er.id,
                                         isOriginal: e.id === N.id,
                                         currentMasterTimeSec: Z,
-                                        onSelect: eb,
+                                        onSelect: eA,
                                     },
                                     e.id,
                                 ),
                             ),
                         (0, r.jsx)(o.D, {
                             className: M.LI,
-                            "aria-label": b.intl.string(A.default.lykjkX),
+                            "aria-label": A.intl.string(b.default.lykjkX),
                             "aria-pressed": !1,
                             onClick: function (e) {
                                 if ((e.stopPropagation(), L)) {

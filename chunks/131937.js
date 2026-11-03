@@ -46,8 +46,8 @@ let R = "x-science-test",
     L = new C.Vy("AnalyticsTrackingStore"),
     y = [0, 100, 1e3],
     D = 1500,
-    v = 0,
     b = 0,
+    v = 0,
     P = 0,
     M = 0,
     U = 0,
@@ -156,10 +156,10 @@ let Y = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                     rpc_success_count: P,
                     rpc_failure_count: M,
                     first_seen_event_sequence_number: U,
-                    last_seen_event_sequence_number: v,
+                    last_seen_event_sequence_number: b,
                     telemetry_period_start_timestamp: w,
                     telemetry_period_end_timestamp: Date.now(),
-                    event_queue_rejection_count: b,
+                    event_queue_rejection_count: v,
                     event_queue_batch_count: G,
                     event_queue_batch_min_size: x === Number.MAX_SAFE_INTEGER ? 0 : x,
                     event_queue_batch_max_size: k,
@@ -170,7 +170,7 @@ let Y = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 },
             };
             return (
-                (b = 0),
+                (v = 0),
                 (P = 0),
                 (M = 0),
                 (G = 0),
@@ -178,7 +178,7 @@ let Y = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 (k = 0),
                 (F = 0),
                 (w = Date.now()),
-                (U = v),
+                (U = b),
                 I([e], O.mX.CLIENT_TELEMETRY).catch((e) => {
                     L.trace(`client telemetry flush failed (status ${e?.status ?? "unknown"})`);
                 })
@@ -260,7 +260,7 @@ let Y = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                                 properties: {
                                     client_track_timestamp: Date.now(),
                                     client_heartbeat_session_id: s,
-                                    event_sequence_number: ++v,
+                                    event_sequence_number: ++b,
                                     ...n,
                                 },
                                 resolve: o,
@@ -272,7 +272,7 @@ let Y = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                             })(d);
                         if ((null != c && (d.properties.client_uuid = K.generate(c)), z.push(d), z.length > 1e4)) {
                             let e = z.length - 1e4;
-                            ((b = W(b, e)), (z = z.slice(-1e4)));
+                            ((v = W(v, e)), (z = z.slice(-1e4)));
                         }
                         i ? h({ shouldFlushOnNextTick: !0 }) : h({ shouldFlushOnNextTick: !1 });
                     }),
@@ -536,7 +536,7 @@ eg(
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("661828", 10))) || (l.client_build_number = d),
+    isNaN((d = parseInt("661839", 10))) || (l.client_build_number = d),
     null == (c = eE?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {

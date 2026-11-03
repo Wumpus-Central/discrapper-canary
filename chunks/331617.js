@@ -1,78 +1,78 @@
-i.d(t, { default: () => j });
-var s = i(477900);
-i(582128);
-var l = i(772707),
-    a = i(331322),
-    c = i(834730),
-    n = i(661531),
-    r = i(793574),
-    o = i(688810),
-    d = i(473145),
-    u = i(944304),
-    m = i(652215),
-    p = i(105292),
-    h = i(544891);
-let x = { type: "image", src: i(387103).A, aspectRatio: "16/9" };
+t.d(i, { default: () => j });
+var s = t(477900);
+t(582128);
+var l = t(772707),
+    a = t(331322),
+    c = t(834730),
+    n = t(661531),
+    r = t(793574),
+    o = t(688810),
+    d = t(473145),
+    u = t(944304),
+    m = t(652215),
+    p = t(105292),
+    h = t(544891);
+let x = { type: "image", src: t(387103).A, aspectRatio: "16/9" };
 function j(e) {
     let {
-            analyticsSourceLocation: t,
-            guild: i,
+            analyticsSourceLocation: i,
+            guild: t,
             targetBoostedGuildTier: j,
             perks: T,
-            perkIntro: g,
-            headerProps: v,
-            onClose: b,
+            perkIntro: b,
+            headerProps: g,
+            onClose: v,
             ...k
         } = e,
-        { analyticsLocations: A } = (0, o.Ay)(r.A.ACTIVITY_DIRECTORY),
-        C = {
+        { analyticsLocations: y } = (0, o.Ay)(r.A.ACTIVITY_DIRECTORY),
+        A = {
             section: m.JJy.PREMIUM_GUILD_UPSELL_MODAL,
             object: m.ZSU.BUTTON_CTA,
             objectType: null != j ? (0, d.k1)(j) : null,
         };
     return (0, s.jsx)(o.f5, {
-        value: A,
+        value: y,
         children: (0, s.jsx)(l.k, {
             ...k,
-            onClose: b,
+            onClose: v,
             graphic: x,
             gradientColor: "pink",
-            title: v?.title ?? p.intl.string(p.t["6Qbqxw"]),
-            subtitle: v?.subtitle,
+            title: g?.title ?? p.intl.string(p.t["6Qbqxw"]),
+            subtitle: g?.subtitle,
             actionBarInput: (0, s.jsx)(u.A, {
                 useExpressiveButton: !0,
                 fullWidth: !0,
-                analyticsLocation: C,
-                analyticsSourceLocation: t,
-                guild: i,
+                analyticsLocation: A,
+                analyticsSourceLocation: i,
+                guild: t,
                 targetBoostedGuildTier: j,
-                onClose: b,
+                onClose: v,
             }),
             children: (0, s.jsxs)(a.B, {
                 direction: "vertical",
                 gap: 16,
                 children: [
-                    v?.image != null && (0, s.jsx)("div", { className: h.Pg, children: v.image }),
-                    null != g && (0, s.jsx)(c.E, { variant: "text-md/normal", children: g }),
+                    g?.image != null && (0, s.jsx)("div", { className: h.Pg, children: g.image }),
+                    null != b && (0, s.jsx)(c.E, { variant: "body-md/normal", children: b }),
                     (0, s.jsx)("div", {
                         className: h.md,
-                        children: T.map((e, t) => {
-                            let { icon: i, description: l } = e;
+                        children: T.map((e, i) => {
+                            let { icon: t, description: l } = e;
                             return (0, s.jsxs)(
                                 "div",
                                 {
                                     className: h.bK,
                                     children: [
-                                        (0, s.jsx)(i, { className: h.kf, color: n.A.colors.TEXT_MUTED.css }),
+                                        (0, s.jsx)(t, { className: h.kf, color: n.A.colors.TEXT_MUTED.css }),
                                         (0, s.jsx)(c.E, {
                                             className: h.uL,
                                             color: "text-muted",
-                                            variant: "text-sm/medium",
+                                            variant: "body-sm/medium",
                                             children: l,
                                         }),
                                     ],
                                 },
-                                t,
+                                i,
                             );
                         }),
                     }),

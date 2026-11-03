@@ -13,7 +13,7 @@ var i = s(477900),
     x = s(464477),
     u = s(105292),
     p = s(902123);
-function j(t) {
+function b(t) {
     let { image: e, label: s, text: a, children: n } = t;
     return (0, i.jsxs)("div", {
         className: p.uW,
@@ -23,8 +23,8 @@ function j(t) {
                 className: p.f5,
                 children: (0, i.jsxs)("div", {
                     children: [
-                        (0, i.jsx)(l.D, { variant: "heading-sm/semibold", className: p.p_, children: s }),
-                        (0, i.jsx)(r.E, { variant: "text-md/normal", children: a }),
+                        (0, i.jsx)(l.D, { variant: "heading-xs/semibold", className: p.p_, children: s }),
+                        (0, i.jsx)(r.E, { variant: "body-md/normal", children: a }),
                         n,
                     ],
                 }),
@@ -32,11 +32,11 @@ function j(t) {
         ],
     });
 }
-class b extends a.PureComponent {
+class j extends a.PureComponent {
     state = { code: "", totpSecret: (0, x.tn)(), error: null, isVerifying: !1 };
     render() {
         let { transitionState: t, onClose: e } = this.props,
-            { totpSecret: a, code: o, isVerifying: b } = this.state,
+            { totpSecret: a, code: o, isVerifying: j } = this.state,
             v = m.default.getCurrentUser()?.email,
             f = (0, x.V3)(v ?? "", a),
             y = (0, i.jsx)("form", {
@@ -60,7 +60,7 @@ class b extends a.PureComponent {
                             variant: "primary",
                             text: u.intl.string(u.t["/a5+YV"]),
                             type: "submit",
-                            loading: b,
+                            loading: j,
                         }),
                     ],
                 }),
@@ -72,7 +72,7 @@ class b extends a.PureComponent {
             onClose: e,
             actions: [],
             children: [
-                (0, i.jsx)(j, {
+                (0, i.jsx)(b, {
                     image: (0, i.jsx)("img", { alt: "", src: s(582248), width: 100, height: 100 }),
                     label: u.intl.string(u.t["9E74Dx"]),
                     text: u.intl.format(u.t.A7Aehw, {
@@ -81,7 +81,7 @@ class b extends a.PureComponent {
                     }),
                 }),
                 (0, i.jsx)(d.c, { className: p.yF }),
-                (0, i.jsx)(j, {
+                (0, i.jsx)(b, {
                     image: (0, i.jsx)(g.Ay, { text: f, ariaLabel: u.intl.string(u.t["91InF1"]) }),
                     label: u.intl.string(u.t["91InF1"]),
                     text: u.intl.string(u.t.hFeBkl),
@@ -89,12 +89,12 @@ class b extends a.PureComponent {
                         className: p.h8,
                         children: [
                             (0, i.jsx)(l.D, {
-                                variant: "heading-sm/semibold",
+                                variant: "heading-xs/semibold",
                                 className: p.p_,
                                 children: u.intl.string(u.t["76IPwr"]),
                             }),
                             (0, i.jsx)(r.E, {
-                                variant: "text-md/normal",
+                                variant: "body-md/normal",
                                 className: p.rJ,
                                 selectable: !0,
                                 children: a,
@@ -103,7 +103,7 @@ class b extends a.PureComponent {
                     }),
                 }),
                 (0, i.jsx)(d.c, { className: p.yF }),
-                (0, i.jsx)(j, {
+                (0, i.jsx)(b, {
                     image: (0, i.jsx)("img", { alt: "", src: s(87282) }),
                     label: u.intl.string(u.t["SaD/LY"]),
                     text: u.intl.string(u.t.vI1zic),
@@ -128,4 +128,4 @@ class b extends a.PureComponent {
         (this.setState({ isVerifying: !1 }), e(), t?.());
     };
 }
-let v = b;
+let v = j;

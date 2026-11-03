@@ -1,4 +1,4 @@
-i.d(n, { default: () => d });
+i.d(n, { default: () => p });
 var e = i(477900),
     a = i(582128),
     l = i(189213),
@@ -7,39 +7,39 @@ var e = i(477900),
     u = i(123292),
     o = i(49229),
     c = i(427262),
-    p = i(105292);
-function d(t) {
-    let { user: n, nickname: i, transitionState: d, onClose: h } = t,
-        [g, x] = a.useState(!1),
+    d = i(105292);
+function p(t) {
+    let { user: n, nickname: i, transitionState: p, onClose: h } = t,
+        [g, b] = a.useState(!1),
         [f, m] = a.useState(i),
-        b = a.useRef(null);
-    async function k(t) {
-        (t.preventDefault(), x(!0));
+        x = a.useRef(null);
+    async function y(t) {
+        (t.preventDefault(), b(!0));
         try {
             (await o.A.updateRelationship(n.id, f), h());
         } catch (t) {
         } finally {
-            x(!1);
+            b(!1);
         }
     }
-    let y = null == i ? p.intl.string(p.t.BGYkaH) : p.intl.string(p.t["8pOYUE"]);
+    let k = null == i ? d.intl.string(d.t.BGYkaH) : d.intl.string(d.t["8pOYUE"]);
     return (0, e.jsx)("form", {
-        onSubmit: k,
+        onSubmit: y,
         children: (0, e.jsx)(l.a, {
-            title: y,
-            transitionState: d,
-            subtitle: p.intl.string(p.t["NdQ+lP"]),
+            title: k,
+            transitionState: p,
+            subtitle: d.intl.string(d.t["NdQ+lP"]),
             onClose: h,
             actions: [
-                { text: p.intl.string(p.t["ETE/oC"]), onClick: h, variant: "secondary" },
-                { text: p.intl.string(p.t["R3BPH+"]), onSubmit: k, variant: "primary", disabled: g, type: "submit" },
+                { text: d.intl.string(d.t["ETE/oC"]), onClick: h, variant: "secondary" },
+                { text: d.intl.string(d.t["R3BPH+"]), onSubmit: y, variant: "primary", disabled: g, type: "submit" },
             ],
             children: (0, e.jsxs)(s.B, {
                 gap: 8,
                 children: [
                     (0, e.jsx)(r.k, {
-                        label: p.intl.string(p.t.pqG6GS),
-                        inputRef: b,
+                        label: d.intl.string(d.t.pqG6GS),
+                        inputRef: x,
                         value: f ?? "",
                         placeholder: c.Ay.getName(n),
                         onChange: m,
@@ -48,10 +48,10 @@ function d(t) {
                     }),
                     (0, e.jsx)(u.Q, {
                         onClick: function () {
-                            (m(null), b.current?.focus());
+                            (m(null), x.current?.focus());
                         },
-                        text: p.intl.string(p.t["9qSBvB"]),
-                        textVariant: "text-sm/medium",
+                        text: d.intl.string(d.t["9qSBvB"]),
+                        textVariant: "body-sm/medium",
                         type: "button",
                     }),
                 ],

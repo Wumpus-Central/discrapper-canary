@@ -8405,17 +8405,17 @@ let { Themes: c } = d.zv,
                 CHANNEL_LIST_SUBTITLE_TEXT_STYLE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
-                        if (0 === t.length) return "text-xs/medium";
-                        for (let e of t) if ("mobile-visual-refresh" === e) return "text-sm/medium";
-                        return "text-xs/medium";
+                        if (0 === t.length) return "body-xs/medium";
+                        for (let e of t) if ("mobile-visual-refresh" === e) return "body-sm/medium";
+                        return "body-xs/medium";
                     },
                 },
                 CHANNEL_LIST_TITLE_TEXT_STYLE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
-                        if (0 === t.length) return "redesign/heading-18/semibold";
+                        if (0 === t.length) return "heading-md/semibold";
                         for (let e of t) if ("mobile-visual-refresh" === e) return "heading-lg/semibold";
-                        return "redesign/heading-18/semibold";
+                        return "heading-md/semibold";
                     },
                 },
                 CHANNEL_NAME_CHANNEL_BORDER_WIDTH: {
@@ -8932,9 +8932,9 @@ let { Themes: c } = d.zv,
                 HEADER_TITLE_TEXT_STYLE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
-                        if (0 === t.length) return "heading-md/semibold";
+                        if (0 === t.length) return "heading-sm/semibold";
                         for (let e of t) if ("mobile-visual-refresh" === e) return "heading-lg/semibold";
-                        return "heading-md/semibold";
+                        return "heading-sm/semibold";
                     },
                 },
                 INPUT_FIELD_BORDER_WIDTH: {
@@ -8988,25 +8988,25 @@ let { Themes: c } = d.zv,
                 INPUT_FIELD_TEXT_STYLE_LG: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
-                        if (0 === t.length) return "text-md/medium";
-                        for (let e of t) if ("mobile-visual-refresh" === e) return "text-md/normal";
-                        return "text-md/medium";
+                        if (0 === t.length) return "body-md/medium";
+                        for (let e of t) if ("mobile-visual-refresh" === e) return "body-md/normal";
+                        return "body-md/medium";
                     },
                 },
                 INPUT_FIELD_TEXT_STYLE_MD: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
-                        if (0 === t.length) return "text-sm/medium";
-                        for (let e of t) if ("mobile-visual-refresh" === e) return "text-md/normal";
-                        return "text-sm/medium";
+                        if (0 === t.length) return "body-sm/medium";
+                        for (let e of t) if ("mobile-visual-refresh" === e) return "body-md/normal";
+                        return "body-sm/medium";
                     },
                 },
                 INPUT_FIELD_TEXT_STYLE_SM: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
-                        if (0 === t.length) return "text-xs/medium";
-                        for (let e of t) if ("mobile-visual-refresh" === e) return "text-xs/normal";
-                        return "text-xs/medium";
+                        if (0 === t.length) return "body-xs/medium";
+                        for (let e of t) if ("mobile-visual-refresh" === e) return "body-xs/normal";
+                        return "body-xs/medium";
                     },
                 },
                 JUMP_TO_PRESENT_BOTTOM_SPACING: {
@@ -9096,9 +9096,9 @@ let { Themes: c } = d.zv,
                 MEDIA_KEYBOARD_BUTTON_TEXT_VARIANT: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
-                        if (0 === t.length) return "text-xs/semibold";
-                        for (let e of t) if ("mobile-visual-refresh" === e) return "text-xs/medium";
-                        return "text-xs/semibold";
+                        if (0 === t.length) return "body-xs/semibold";
+                        for (let e of t) if ("mobile-visual-refresh" === e) return "body-xs/medium";
+                        return "body-xs/semibold";
                     },
                 },
                 MEDIA_KEYBOARD_SEND_VERTICAL_INSET: {
@@ -9138,9 +9138,9 @@ let { Themes: c } = d.zv,
                 MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
-                        if (0 === t.length) return "redesign/channel-title/semibold";
-                        for (let e of t) if ("mobile-visual-refresh" === e) return "text-md/medium";
-                        return "redesign/channel-title/semibold";
+                        if (0 === t.length) return "heading-sm/semibold";
+                        for (let e of t) if ("mobile-visual-refresh" === e) return "body-md/medium";
+                        return "heading-sm/semibold";
                     },
                 },
                 MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM: {
@@ -9269,9 +9269,9 @@ let { Themes: c } = d.zv,
                 TABLE_ROW_GROUP_HELPER_TEXT_STYLE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
-                        if (0 === t.length) return "text-sm/medium";
-                        for (let e of t) if ("mobile-visual-refresh" === e) return "text-sm/normal";
-                        return "text-sm/medium";
+                        if (0 === t.length) return "body-sm/medium";
+                        for (let e of t) if ("mobile-visual-refresh" === e) return "body-sm/normal";
+                        return "body-sm/medium";
                     },
                 },
                 TABLE_ROW_HEIGHT: {
@@ -9287,9 +9287,9 @@ let { Themes: c } = d.zv,
                 TABLE_ROW_LABEL_TEXT_STYLE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
-                        if (0 === t.length) return "text-md/semibold";
-                        for (let e of t) if ("mobile-visual-refresh" === e) return "text-md/medium";
-                        return "text-md/semibold";
+                        if (0 === t.length) return "body-md/semibold";
+                        for (let e of t) if ("mobile-visual-refresh" === e) return "body-md/medium";
+                        return "body-md/semibold";
                     },
                 },
                 TABLE_ROW_PADDING: { resolve: () => 12 },
@@ -9312,17 +9312,17 @@ let { Themes: c } = d.zv,
                 TAB_LABEL_TEXT_STYLE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
-                        if (0 === t.length) return "text-xxs/semibold";
-                        for (let e of t) if ("mobile-visual-refresh" === e) return "text-xs/medium";
-                        return "text-xxs/semibold";
+                        if (0 === t.length) return "footnote/semibold";
+                        for (let e of t) if ("mobile-visual-refresh" === e) return "body-xs/medium";
+                        return "footnote/semibold";
                     },
                 },
                 USER_PROFILE_ABOUT_ME_HEADING_TEXT_STYLE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
-                        if (0 === t.length) return "text-sm/semibold";
-                        for (let e of t) if ("mobile-visual-refresh" === e) return "text-sm/medium";
-                        return "text-sm/semibold";
+                        if (0 === t.length) return "body-sm/semibold";
+                        for (let e of t) if ("mobile-visual-refresh" === e) return "body-sm/medium";
+                        return "body-sm/semibold";
                     },
                 },
                 USER_ROW_LABEL_LINE_HEIGHT_ANDROID: { resolve: () => 16 },
@@ -9363,15 +9363,15 @@ let { Themes: c } = d.zv,
                 VOICE_MESSAGE_DURATION_TEXT_STYLE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
-                        if (0 === t.length) return "text-sm/semibold";
+                        if (0 === t.length) return "body-sm/semibold";
                         for (let e of t)
                             switch (e) {
                                 case "mobile-visual-refresh":
-                                    return "text-xs/semibold";
+                                    return "body-xs/semibold";
                                 case "mobile-visual-refresh-floating":
-                                    return "text-sm/semibold";
+                                    return "body-sm/semibold";
                             }
-                        return "text-sm/semibold";
+                        return "body-sm/semibold";
                     },
                 },
                 VOICE_MESSAGE_RECORDING_CHAT_CONTAINER_HEIGHT: {
@@ -9742,7 +9742,7 @@ let { Themes: c } = d.zv,
         },
     },
     D = o()(T, (e) => r()(e)),
-    v = {
+    b = {
         themes: d.NJ,
         modules: O,
         colors: o()(m, (e, t) => ({
@@ -9761,16 +9761,16 @@ let { Themes: c } = d.zv,
                     let e = S[t]?.[i];
                     null != e && ((a = e.raw ?? a), (s = e.opacity ?? s));
                 }
-                if (1 === s) return v.unsafe_rawColors[a].resolve(n);
+                if (1 === s) return b.unsafe_rawColors[a].resolve(n);
                 {
                     let e = D[a];
-                    return (0 !== e.alpha() && 1 !== s && (e = e.alpha(s)), b(e, n.saturation));
+                    return (0 !== e.alpha() && 1 !== s && (e = e.alpha(s)), v(e, n.saturation));
                 }
             },
         })),
         unsafe_rawColors: o()(T, (e, t) => {
             let n = D[t];
-            return { css: U(t), resolve: (e) => b(n, e?.saturation ?? 1) };
+            return { css: U(t), resolve: (e) => v(n, e?.saturation ?? 1) };
         }),
         shadows: o()(N, (e, t) => ({
             css: U(t),
@@ -9793,7 +9793,7 @@ let { Themes: c } = d.zv,
             ...o()(y, (e) => `${e}px`),
         },
     };
-function b(e, t) {
+function v(e, t) {
     return {
         spring() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -9832,4 +9832,4 @@ function U(e, t) {
         i = M(e);
     return `var(--${[n, i].filter(Boolean).join("-")})`;
 }
-let w = v;
+let w = b;

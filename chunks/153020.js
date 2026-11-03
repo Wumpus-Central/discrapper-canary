@@ -29,7 +29,7 @@ function g(e) {
         className: h.Z,
         children: [
             (0, o.jsx)(l.E, {
-                variant: "text-xs/normal",
+                variant: "body-xs/normal",
                 color: "text-muted",
                 children: `Quest: ${s.config.messages.gameTitle}${(0, m.ui)(s) ? "" : " (not a sponsored play quest, so enter game IDs)"}`,
             }),
@@ -53,7 +53,7 @@ function g(e) {
                 }),
             }),
             (0, o.jsx)(l.E, {
-                variant: "text-xs/normal",
+                variant: "body-xs/normal",
                 color: "text-muted",
                 children:
                     "Clicking a game opens its profile and sends quest click analytics for this quest. Games that fail to load open the game sheet error modal.",
@@ -79,7 +79,7 @@ let f = {
                                 });
                             return null == t
                                 ? (0, o.jsx)(l.E, {
-                                      variant: "text-sm/normal",
+                                      variant: "body-sm/normal",
                                       color: "text-muted",
                                       children: "No quests are loaded yet. Open Quest Home once, then come back.",
                                   })

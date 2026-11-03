@@ -5,13 +5,13 @@ var l = n(503698),
     a = n.n(l),
     s = n(939249),
     r = n(789645),
-    d = n(534514),
-    o = n(915089),
+    o = n(534514),
+    d = n(915089),
     c = n(105292),
     u = n(772168);
 function m(e) {
-    let { onDismiss: t, children: n, className: l, headingVariant: m = "text-xs/medium", compactHeader: g = !1 } = e,
-        x = (0, o.GV)();
+    let { onDismiss: t, children: n, className: l, headingVariant: m = "body-xs/medium", compactHeader: g = !1 } = e,
+        x = (0, d.GV)();
     return (0, i.jsxs)("aside", {
         className: a()(u.kL, l),
         "aria-labelledby": x,
@@ -25,7 +25,7 @@ function m(e) {
                         onClick: t,
                         children: (0, i.jsx)(r.P, { size: "sm", color: "currentColor" }),
                     }),
-                    (0, i.jsx)(d.D, { id: x, variant: m, color: "text-subtle", children: c.intl.string(c.t.zMUr6Z) }),
+                    (0, i.jsx)(o.D, { id: x, variant: m, color: "text-subtle", children: c.intl.string(c.t.zMUr6Z) }),
                 ],
             }),
             n,

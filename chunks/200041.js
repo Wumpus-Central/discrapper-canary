@@ -11,7 +11,7 @@ function p(t) {
     let {
             text: l,
             tooltipText: e,
-            textVariant: i = "text-xs/medium",
+            textVariant: i = "body-xs/medium",
             textClassName: p,
             "aria-label": c,
             icon: d,
@@ -22,24 +22,24 @@ function p(t) {
         T = a.useRef(null),
         [N, S] = a.useState(!1),
         f = { variant: i, color: "none", className: o()(A && u.ps, p) },
-        I = null != l && null == e && A,
-        h = !m && (null != e || I || x),
-        y = e ?? l ?? "",
-        E = i?.startsWith("text-sm") ? u.WV : u.Dk,
+        y = null != l && null == e && A,
+        I = !m && (null != e || y || x),
+        h = e ?? l ?? "",
+        E = i?.startsWith("body-sm") ? u.WV : u.Dk,
         v = a.useCallback(() => {
-            if (I) {
+            if (y) {
                 let { current: t } = T;
                 S((null != t && t.offsetWidth < t.scrollWidth) || x);
             } else S(!0);
-        }, [I, x]),
+        }, [y, x]),
         C = a.useCallback(() => {
             S(!1);
         }, []);
     return null == d && x
         ? null
-        : h
+        : I
           ? (0, n.jsx)(s.u, {
-                body: y,
+                body: h,
                 asset: d,
                 assetSize: 16,
                 delay: 150,

@@ -1,71 +1,71 @@
-t.d(n, { A: () => _ });
-var r = t(477900),
-    l = t(582128),
-    s = t(503698),
-    i = t.n(s),
-    o = t(837381),
-    a = t(189213),
-    c = t(27192),
-    d = t(534514),
-    u = t(939249),
-    x = t(834730),
-    h = t(957485),
-    w = t(97808),
-    m = t(778712),
-    S = t(928039),
-    g = t(709066),
-    E = t(915089),
-    R = t(548118),
-    j = t(495273),
-    v = t(39255);
-let b = function (e) {
+r.d(n, { A: () => _ });
+var l = r(477900),
+    t = r(582128),
+    s = r(503698),
+    o = r.n(s),
+    i = r(837381),
+    a = r(189213),
+    c = r(27192),
+    d = r(534514),
+    u = r(939249),
+    h = r(834730),
+    x = r(957485),
+    w = r(97808),
+    m = r(778712),
+    S = r(928039),
+    b = r(709066),
+    g = r(915089),
+    E = r(548118),
+    R = r(495273),
+    j = r(39255);
+let v = function (e) {
     let {
         query: n,
-        onQueryChange: t,
-        onRemoveTag: l,
+        onQueryChange: r,
+        onRemoveTag: t,
         onSelect: s,
-        onSelectionChange: i,
-        selectedSection: o,
+        onSelectionChange: o,
+        selectedSection: i,
         selectedRow: a,
         tags: c,
         sections: d,
         placeholder: u = "",
-        focusAfterReady: x,
-        isReady: h,
+        focusAfterReady: h,
+        isReady: x,
         "aria-labelledby": w,
         "aria-controls": m,
         "aria-activedescendant": S,
-        ref: g,
+        ref: b,
     } = e;
-    return (0, r.jsx)(v.A, {
+    return (0, l.jsx)(j.A, {
         autoFocus: !0,
         maxHeight: 100,
-        onQueryChange: t,
-        onRemoveTag: l,
-        selectedSection: o,
+        onQueryChange: r,
+        onRemoveTag: t,
+        selectedSection: i,
         selectedRow: a,
         onSelect: s,
-        onSelectionChange: i,
+        onSelectionChange: o,
         placeholder: 0 === c.length ? u : "",
         query: n,
-        ref: g,
-        size: v.A.Sizes.MEDIUM,
+        ref: b,
+        size: j.A.Sizes.MEDIUM,
         tags: c,
         sections: d,
-        focusAfterReady: x,
-        isReady: h,
+        focusAfterReady: h,
+        isReady: x,
         inputProps: { "aria-labelledby": w, "aria-controls": m, "aria-expanded": !0, "aria-activedescendant": S },
     });
 };
-var f = t(719366),
-    y = t(105292),
-    O = t(633846);
-let p = (0, E.Ld)(),
-    C = (0, E.Ld)();
+var y = r(719366),
+    f = r(105292),
+    O = r(633846);
+let p = (0, g.Ld)(),
+    C = (0, g.Ld)();
 function k(e) {
     return `${e.rowType}:${e.id}`;
 }
-let T = l.createContext({
+let T = t.createContext({
     searchRef: { current: null },
     listRef: { current: null },
     selectedSection: 0,
@@ -84,90 +84,90 @@ let T = l.createContext({
     onRemovePendingAddition: () => {},
 });
 function M() {
-    return l.useContext(T);
+    return t.useContext(T);
 }
 let I = [];
 function L(e) {
-    let { roles: n = I, members: t = I, users: r = I, guilds: s = I } = e;
-    return l.useMemo(() => [n.length, t.length, r.length, s.length], [n.length, t.length, r.length, s.length]);
+    let { roles: n = I, members: r = I, users: l = I, guilds: s = I } = e;
+    return t.useMemo(() => [n.length, r.length, l.length, s.length], [n.length, r.length, l.length, s.length]);
 }
 let A = (e) => {
     let { title: n } = e;
-    return (0, r.jsx)(d.D, { variant: "heading-sm/semibold", className: i()(O.Gf, O.iw), children: n }, n);
+    return (0, l.jsx)(d.D, { variant: "heading-xs/semibold", className: o()(O.Gf, O.iw), children: n }, n);
 };
 function N(e) {
-    let { id: n, sectionIndex: t, rowIndex: s, rows: a, children: d, showCheckbox: h, showRowLabel: w } = e,
-        m = (0, o.rm)(n),
+    let { id: n, sectionIndex: r, rowIndex: s, rows: a, children: d, showCheckbox: x, showRowLabel: w } = e,
+        m = (0, i.rm)(n),
         {
             selectedSection: S,
-            selectedRow: g,
-            onSelectionChange: E,
-            pendingAdditions: R,
-            onRowClick: v,
-            isAtMaxPendingRows: b,
+            selectedRow: b,
+            onSelectionChange: g,
+            pendingAdditions: E,
+            onRowClick: j,
+            isAtMaxPendingRows: v,
         } = M(),
-        y = a[s],
-        p = k(y),
-        C = y.disabled || p in R,
-        T = y.disabled || (!C && b);
-    return (0, l.createElement)(u.D, {
+        f = a[s],
+        p = k(f),
+        C = f.disabled || p in E,
+        T = f.disabled || (!C && v);
+    return (0, t.createElement)(u.D, {
         ...m,
         id: n,
         key: p,
         role: "option",
-        className: i()(O.d, { [O.A5]: S === t && g === s }),
+        className: o()(O.d, { [O.A5]: S === r && b === s }),
         onClick: (e) => {
-            T || (e.preventDefault(), y.rowType !== f.T6.EMPTY_STATE && v(y, 0 !== e.detail));
+            T || (e.preventDefault(), f.rowType !== y.T6.EMPTY_STATE && j(f, 0 !== e.detail));
         },
-        onMouseEnter: () => E(t, s, !1),
+        onMouseEnter: () => g(r, s, !1),
         "aria-disabled": T,
         "aria-selected": C,
         "aria-setsize": a.length,
         "aria-posinset": s + 1,
         children: [
-            h
-                ? (0, r.jsx)(c.Kj, {
+            x
+                ? (0, l.jsx)(c.Kj, {
                       className: O.kv,
                       displayOnly: !0,
                       size: 18,
                       value: C,
                       type: c.Or.INVERTED,
                       disabled: T,
-                      children: (0, r.jsx)("div", { className: O.fw, children: d }),
+                      children: (0, l.jsx)("div", { className: O.fw, children: d }),
                   })
-                : (0, r.jsx)("div", { className: O.fw, children: d }),
-            w ? (0, r.jsx)(x.E, { color: "text-muted", variant: "text-xs/normal", children: j.vV(y.rowType) }) : null,
+                : (0, l.jsx)("div", { className: O.fw, children: d }),
+            w ? (0, l.jsx)(h.E, { color: "text-muted", variant: "body-xs/normal", children: R.vV(f.rowType) }) : null,
         ],
     });
 }
 let U = (e) => {
-        let { index: n, disabledText: t } = e,
-            { roles: l } = M(),
-            s = l[n];
+        let { index: n, disabledText: r } = e,
+            { roles: t } = M(),
+            s = t[n];
         return null == s
             ? null
-            : (0, r.jsxs)(N, {
+            : (0, l.jsxs)(N, {
                   id: `roles-row-${n}`,
-                  sectionIndex: f.oO.ROLES,
+                  sectionIndex: y.oO.ROLES,
                   rowIndex: n,
-                  rows: l,
+                  rows: t,
                   showCheckbox: !0,
                   showRowLabel: !0,
                   children: [
-                      (0, r.jsx)("div", {
-                          className: i()(O.iw, O.Hu),
-                          children: (0, r.jsx)(h.i, { size: "custom", color: s.colorString, height: 20 }),
+                      (0, l.jsx)("div", {
+                          className: o()(O.iw, O.Hu),
+                          children: (0, l.jsx)(x.i, { size: "custom", color: s.colorString, height: 20 }),
                       }),
-                      (0, r.jsxs)("div", {
+                      (0, l.jsxs)("div", {
                           className: O.xZ,
                           children: [
-                              (0, r.jsx)(x.E, {
-                                  variant: "text-sm/medium",
-                                  color: s.rowType === f.T6.EMPTY_STATE ? "text-muted" : "text-default",
+                              (0, l.jsx)(h.E, {
+                                  variant: "body-sm/medium",
+                                  color: s.rowType === y.T6.EMPTY_STATE ? "text-muted" : "text-default",
                                   children: s.name,
                               }),
-                              s.disabled && null != t
-                                  ? (0, r.jsx)(x.E, { color: "text-default", variant: "text-xs/normal", children: t })
+                              s.disabled && null != r
+                                  ? (0, l.jsx)(h.E, { color: "text-default", variant: "body-xs/normal", children: r })
                                   : null,
                           ],
                       }),
@@ -176,52 +176,52 @@ let U = (e) => {
     },
     D = (e) => {
         let { index: n } = e,
-            { members: t } = M(),
-            l = t[n];
-        return null == l
+            { members: r } = M(),
+            t = r[n];
+        return null == t
             ? null
-            : (0, r.jsxs)(N, {
+            : (0, l.jsxs)(N, {
                   id: `members-row-${n}`,
-                  sectionIndex: f.oO.MEMBERS,
+                  sectionIndex: y.oO.MEMBERS,
+                  rowIndex: n,
+                  rows: r,
+                  showCheckbox: !0,
+                  showRowLabel: !0,
+                  children: [
+                      (0, l.jsx)(w.eu, { src: t.avatarURL, size: m._3.SIZE_24, "aria-label": "" }),
+                      (0, l.jsx)(h.E, { className: O.xZ, variant: "body-sm/normal", children: t.name }),
+                      (0, l.jsx)(h.E, {
+                          color: "text-muted",
+                          className: O.Gq,
+                          variant: "body-sm/normal",
+                          "aria-hidden": !0,
+                          children: t.username,
+                      }),
+                      t.bot && (0, l.jsx)(b.A, { verified: t.verifiedBot }),
+                  ],
+              });
+    },
+    P = (e) => {
+        let { index: n, disabledText: r } = e,
+            { users: t } = M(),
+            s = t[n];
+        return null == s
+            ? null
+            : (0, l.jsxs)(N, {
+                  id: `users-row-${n}`,
+                  sectionIndex: y.oO.USERS,
                   rowIndex: n,
                   rows: t,
                   showCheckbox: !0,
                   showRowLabel: !0,
                   children: [
-                      (0, r.jsx)(w.eu, { src: l.avatarURL, size: m._3.SIZE_24, "aria-label": "" }),
-                      (0, r.jsx)(x.E, { className: O.xZ, variant: "text-sm/normal", children: l.name }),
-                      (0, r.jsx)(x.E, {
-                          color: "text-muted",
-                          className: O.Gq,
-                          variant: "text-sm/normal",
-                          "aria-hidden": !0,
-                          children: l.username,
-                      }),
-                      l.bot && (0, r.jsx)(g.A, { verified: l.verifiedBot }),
-                  ],
-              });
-    },
-    P = (e) => {
-        let { index: n, disabledText: t } = e,
-            { users: l } = M(),
-            s = l[n];
-        return null == s
-            ? null
-            : (0, r.jsxs)(N, {
-                  id: `users-row-${n}`,
-                  sectionIndex: f.oO.USERS,
-                  rowIndex: n,
-                  rows: l,
-                  showCheckbox: !0,
-                  showRowLabel: !0,
-                  children: [
-                      (0, r.jsx)(w.eu, { src: s.avatarURL, size: m._3.SIZE_24, "aria-label": "" }),
-                      (0, r.jsxs)("div", {
+                      (0, l.jsx)(w.eu, { src: s.avatarURL, size: m._3.SIZE_24, "aria-label": "" }),
+                      (0, l.jsxs)("div", {
                           className: O.xZ,
                           children: [
-                              (0, r.jsx)(x.E, { variant: "text-sm/normal", children: s.name }),
-                              s.disabled && null != t
-                                  ? (0, r.jsx)(x.E, { color: "text-default", variant: "text-xs/normal", children: t })
+                              (0, l.jsx)(h.E, { variant: "body-sm/normal", children: s.name }),
+                              s.disabled && null != r
+                                  ? (0, l.jsx)(h.E, { color: "text-default", variant: "body-xs/normal", children: r })
                                   : null,
                           ],
                       }),
@@ -230,25 +230,25 @@ let U = (e) => {
     },
     $ = (e) => {
         let { index: n } = e,
-            { guilds: t } = M(),
-            l = t[n];
-        return null == l
+            { guilds: r } = M(),
+            t = r[n];
+        return null == t
             ? null
-            : (0, r.jsxs)(N, {
+            : (0, l.jsxs)(N, {
                   id: `guilds-row-${n}`,
-                  sectionIndex: f.oO.GUILDS,
+                  sectionIndex: y.oO.GUILDS,
                   rowIndex: n,
-                  rows: t,
+                  rows: r,
                   showCheckbox: !0,
                   showRowLabel: !0,
                   children: [
-                      (0, r.jsx)(R.Ay, { guild: l.guild, active: !0, size: R.Ay.Sizes.SMALLER }),
-                      (0, r.jsx)("div", {
+                      (0, l.jsx)(E.Ay, { guild: t.guild, active: !0, size: E.Ay.Sizes.SMALLER }),
+                      (0, l.jsx)("div", {
                           className: O.xZ,
-                          children: (0, r.jsx)(x.E, {
-                              variant: "text-sm/medium",
+                          children: (0, l.jsx)(h.E, {
+                              variant: "body-sm/medium",
                               color: "text-default",
-                              children: l.name,
+                              children: t.name,
                           }),
                       }),
                   ],
@@ -260,121 +260,121 @@ let U = (e) => {
         Provider: function (e) {
             let {
                     children: n,
-                    listRef: t,
+                    listRef: r,
                     query: s,
-                    setQuery: i,
+                    setQuery: o,
                     pendingAdditions: a,
                     setPendingAdditions: c,
                     roles: d = I,
                     members: u = I,
-                    users: x = I,
-                    guilds: h = I,
+                    users: h = I,
+                    guilds: x = I,
                     getRichTag: w,
                     maxPendingRows: m,
                 } = e,
-                g = l.useRef(null),
-                [E, R] = l.useState({ section: 0, row: -1 }),
-                j = (0, S.A)("audience-selector-list", t);
-            l.useEffect(() => {
-                g.current?.focus();
+                b = t.useRef(null),
+                [g, E] = t.useState({ section: 0, row: -1 }),
+                R = (0, S.A)("audience-selector-list", r);
+            t.useEffect(() => {
+                b.current?.focus();
             }, []);
-            let v = l.useCallback(
+            let j = t.useCallback(
                     function (e, n) {
-                        let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-                        (R((t) => (t.section === e && t.row === n ? t : { section: e ?? 0, row: n ?? -1 })),
-                            r && t.current?.scrollToIndex({ section: e ?? 0, row: n ?? 0, padding: 8 }));
+                        let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+                        (E((r) => (r.section === e && r.row === n ? r : { section: e ?? 0, row: n ?? -1 })),
+                            l && r.current?.scrollToIndex({ section: e ?? 0, row: n ?? 0, padding: 8 }));
                     },
-                    [t],
+                    [r],
                 ),
-                b = l.useCallback(
+                v = t.useCallback(
                     function (e) {
                         let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                            t = k(e);
+                            r = k(e);
                         (c((n) => {
-                            if (t in n) {
-                                let { [t]: e, ...r } = n;
-                                return r;
+                            if (r in n) {
+                                let { [r]: e, ...l } = n;
+                                return l;
                             }
                             {
-                                let r = w(e);
-                                if (null != r) {
-                                    let l = { ...n };
-                                    return ((l[t] = { display: r, row: e }), l);
+                                let l = w(e);
+                                if (null != l) {
+                                    let t = { ...n };
+                                    return ((t[r] = { display: l, row: e }), t);
                                 }
                             }
                             return n;
                         }),
-                            n && (i(""), g.current?.focus()));
+                            n && (o(""), b.current?.focus()));
                     },
-                    [w, c, i],
+                    [w, c, o],
                 ),
-                y = l.useCallback(
+                f = t.useCallback(
                     (e, n) => {
                         if (null == n) return;
-                        i("");
-                        let t = [];
+                        o("");
+                        let r = [];
                         switch (e) {
-                            case f.oO.ROLES:
-                                t = d;
+                            case y.oO.ROLES:
+                                r = d;
                                 break;
-                            case f.oO.MEMBERS:
-                                t = u;
+                            case y.oO.MEMBERS:
+                                r = u;
                                 break;
-                            case f.oO.USERS:
-                                t = x;
+                            case y.oO.USERS:
+                                r = h;
                                 break;
-                            case f.oO.GUILDS:
-                                t = h;
+                            case y.oO.GUILDS:
+                                r = x;
                         }
-                        let r = t[n];
-                        null != r && r.rowType !== f.T6.EMPTY_STATE && b(r);
+                        let l = r[n];
+                        null != l && l.rowType !== y.T6.EMPTY_STATE && v(l);
                     },
-                    [h, b, u, d, i, x],
+                    [x, v, u, d, o, h],
                 ),
-                O = l.useCallback(
+                O = t.useCallback(
                     (e) => {
                         c((n) => {
-                            let { [e]: t, ...r } = n;
-                            return r;
+                            let { [e]: r, ...l } = n;
+                            return l;
                         });
                     },
                     [c],
                 ),
                 p = null != m && Object.keys(a).length >= m,
-                C = l.useMemo(
+                C = t.useMemo(
                     () => ({
-                        searchRef: g,
-                        listRef: t,
-                        selectedSection: E.section,
-                        selectedRow: E.row,
+                        searchRef: b,
+                        listRef: r,
+                        selectedSection: g.section,
+                        selectedRow: g.row,
                         roles: d,
                         members: u,
-                        users: x,
-                        guilds: h,
+                        users: h,
+                        guilds: x,
                         pendingAdditions: a,
                         isAtMaxPendingRows: p,
-                        onSelectionChange: v,
-                        onRowClick: b,
+                        onSelectionChange: j,
+                        onRowClick: v,
                         query: s,
-                        onQueryChange: i,
-                        onQueryClick: y,
+                        onQueryChange: o,
+                        onQueryClick: f,
                         onRemovePendingAddition: O,
                     }),
-                    [h, y, O, b, v, p, t, u, a, s, d, E.row, E.section, i, x],
+                    [x, f, O, v, j, p, r, u, a, s, d, g.row, g.section, o, h],
                 );
-            return (0, r.jsx)(T.Provider, { value: C, children: (0, r.jsx)(o.hD, { navigator: j, children: n }) });
+            return (0, l.jsx)(T.Provider, { value: C, children: (0, l.jsx)(i.hD, { navigator: R, children: n }) });
         },
         Modal: function (e) {
-            let { listProps: n, ...t } = e,
-                { listRef: l } = M(),
-                { ref: s, role: i, ...c } = (0, o.$y)();
-            return (0, r.jsx)(a.a, {
-                ...t,
+            let { listProps: n, ...r } = e,
+                { listRef: t } = M(),
+                { ref: s, role: o, ...c } = (0, i.$y)();
+            return (0, l.jsx)(a.a, {
+                ...r,
                 listProps: {
                     ...n,
                     ...c,
                     ref: (e) => {
-                        ((l.current = e), (s.current = e?.getScrollerNode() ?? null));
+                        ((t.current = e), (s.current = e?.getScrollerNode() ?? null));
                     },
                     innerId: C,
                     innerAriaMultiselectable: !0,
@@ -382,87 +382,87 @@ let U = (e) => {
             });
         },
         SearchBox: (e) => {
-            let { placeholderText: n, focusSearchAfterReady: t, isReady: s } = e,
+            let { placeholderText: n, focusSearchAfterReady: r, isReady: s } = e,
                 {
-                    searchRef: i,
-                    selectedSection: o,
+                    searchRef: o,
+                    selectedSection: i,
                     selectedRow: a,
                     pendingAdditions: c,
                     query: d,
                     onSelectionChange: u,
-                    onQueryChange: x,
-                    onQueryClick: h,
+                    onQueryChange: h,
+                    onQueryClick: x,
                     onRemovePendingAddition: w,
                     roles: m,
                     members: S,
-                    users: g,
-                    guilds: E,
+                    users: b,
+                    guilds: g,
                 } = M(),
-                { keys: R, tags: j } = l.useMemo(() => {
+                { keys: E, tags: R } = t.useMemo(() => {
                     let e = Object.keys(c),
                         n = e.map((e) => c[e].display);
                     return { keys: e, tags: n };
                 }, [c]),
-                v = L({ roles: m, members: S, users: g, guilds: E });
-            return (0, r.jsx)(b, {
-                ref: i,
+                j = L({ roles: m, members: S, users: b, guilds: g });
+            return (0, l.jsx)(v, {
+                ref: o,
                 query: d,
-                onQueryChange: x,
-                selectedSection: o,
+                onQueryChange: h,
+                selectedSection: i,
                 selectedRow: a,
                 onSelectionChange: u,
-                onSelect: h,
-                tags: j,
-                sections: v,
-                onRemoveTag: (e) => w(R[e]),
+                onSelect: x,
+                tags: R,
+                sections: j,
+                onRemoveTag: (e) => w(E[e]),
                 placeholder: n,
-                focusAfterReady: t,
+                focusAfterReady: r,
                 isReady: s,
                 "aria-labelledby": p,
                 "aria-controls": C,
                 "aria-activedescendant":
-                    a >= 0 && a < v[o]
+                    a >= 0 && a < j[i]
                         ? (function (e, n) {
                               switch (e) {
-                                  case f.oO.ROLES:
+                                  case y.oO.ROLES:
                                       return `roles-row-${n}`;
-                                  case f.oO.MEMBERS:
+                                  case y.oO.MEMBERS:
                                       return `members-row-${n}`;
-                                  case f.oO.USERS:
+                                  case y.oO.USERS:
                                       return `users-row-${n}`;
-                                  case f.oO.GUILDS:
+                                  case y.oO.GUILDS:
                                       return `guilds-row-${n}`;
                               }
-                          })(o, a)
+                          })(i, a)
                         : void 0,
             });
         },
         renderSection: (e) => {
             let { section: n } = e;
             switch (n) {
-                case f.oO.ROLES:
-                    return (0, r.jsx)(A, { title: y.intl.string(y.t["LPJmL/"]) });
-                case f.oO.MEMBERS:
-                    return (0, r.jsx)(A, { title: y.intl.string(y.t["9Oq93m"]) });
-                case f.oO.USERS:
-                    return (0, r.jsx)(A, { title: y.intl.string(y.t.nqDUBX) });
-                case f.oO.GUILDS:
-                    return (0, r.jsx)(A, { title: y.intl.string(y.t["7hB4kg"]) });
+                case y.oO.ROLES:
+                    return (0, l.jsx)(A, { title: f.intl.string(f.t["LPJmL/"]) });
+                case y.oO.MEMBERS:
+                    return (0, l.jsx)(A, { title: f.intl.string(f.t["9Oq93m"]) });
+                case y.oO.USERS:
+                    return (0, l.jsx)(A, { title: f.intl.string(f.t.nqDUBX) });
+                case y.oO.GUILDS:
+                    return (0, l.jsx)(A, { title: f.intl.string(f.t["7hB4kg"]) });
                 default:
                     return null;
             }
         },
         renderRow: (e) => {
-            let { section: n, row: t } = e;
+            let { section: n, row: r } = e;
             switch (n) {
-                case f.oO.ROLES:
-                    return (0, r.jsx)(U, { index: t });
-                case f.oO.MEMBERS:
-                    return (0, r.jsx)(D, { index: t });
-                case f.oO.USERS:
-                    return (0, r.jsx)(P, { index: t });
-                case f.oO.GUILDS:
-                    return (0, r.jsx)($, { index: t });
+                case y.oO.ROLES:
+                    return (0, l.jsx)(U, { index: r });
+                case y.oO.MEMBERS:
+                    return (0, l.jsx)(D, { index: r });
+                case y.oO.USERS:
+                    return (0, l.jsx)(P, { index: r });
+                case y.oO.GUILDS:
+                    return (0, l.jsx)($, { index: r });
             }
             return null;
         },

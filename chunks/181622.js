@@ -9,47 +9,47 @@ var i = t(477900),
     d = t(47167),
     o = t(598104),
     h = t(255266),
-    x = t(734057),
-    A = t(71393),
-    m = t(290863),
+    A = t(734057),
+    m = t(71393),
+    x = t(290863),
     f = t(994500),
     j = t(287809),
-    p = t(427262),
-    b = t(294454),
+    b = t(427262),
+    p = t(294454),
     g = t(105292),
-    _ = t(285738);
-function y(e) {
+    y = t(285738);
+function _(e) {
     let { icon: n, label: t } = e;
     return (0, i.jsxs)("div", {
-        className: _.us,
-        children: [n, (0, i.jsx)(a.E, { className: _.Pf, variant: "text-md/medium", lineClamp: 1, children: t })],
+        className: y.us,
+        children: [n, (0, i.jsx)(a.E, { className: y.Pf, variant: "body-md/medium", lineClamp: 1, children: t })],
     });
 }
 function k(e) {
     let { channel: n } = e,
         t = (0, d.Ay)(n);
-    return (0, i.jsx)(y, { icon: (0, i.jsx)(o.A, { "aria-hidden": !0, size: r._3.SIZE_32, channel: n }), label: t });
+    return (0, i.jsx)(_, { icon: (0, i.jsx)(o.A, { "aria-hidden": !0, size: r._3.SIZE_32, channel: n }), label: t });
 }
 function v(e) {
     let { user: n } = e,
-        t = p.Ay.useName(n),
+        t = b.Ay.useName(n),
         l = (0, s.bG)([f.A], () => f.A.getNickname(n.id)),
-        a = (0, s.bG)([m.A], () => m.A.getStatus(n.id));
-    return (0, i.jsx)(y, {
+        a = (0, s.bG)([x.A], () => x.A.getStatus(n.id));
+    return (0, i.jsx)(_, {
         icon: (0, i.jsx)(c.A, { "aria-hidden": !0, size: r._3.SIZE_32, user: n, status: a }),
         label: l ?? t,
     });
 }
 function C(e) {
     let { channel: n } = e,
-        t = (0, s.bG)([A.A], () => A.A.getGuild(n?.guild_id)),
+        t = (0, s.bG)([m.A], () => m.A.getGuild(n?.guild_id)),
         l = (0, d.Ay)(n);
-    return (0, i.jsx)(y, { icon: (0, i.jsx)(h.A, { size: h.q.SMALL_32, guild: t, channel: n }), label: l });
+    return (0, i.jsx)(_, { icon: (0, i.jsx)(h.A, { size: h.q.SMALL_32, guild: t, channel: n }), label: l });
 }
 function G(e) {
     let { destination: n } = e,
-        { channel: t, user: l } = (0, s.cf)([x.A, j.default], () => ({
-            channel: "channel" === n.type ? x.A.getChannel(n.id) : null,
+        { channel: t, user: l } = (0, s.cf)([A.A, j.default], () => ({
+            channel: "channel" === n.type ? A.A.getChannel(n.id) : null,
             user: "user" === n.type ? j.default.getUser(n.id) : null,
         }));
     return t?.isGroupDM()
@@ -63,7 +63,7 @@ function G(e) {
 function N(e) {
     let { message: n, failedDestinations: t, forwardOptions: s, ...a } = e,
         r = l.useCallback(() => {
-            (0, b.fO)({ message: n, source: "retry-modal", initialSelectedDestinations: t, forwardOptions: s });
+            (0, p.fO)({ message: n, source: "retry-modal", initialSelectedDestinations: t, forwardOptions: s });
         }, [t, n, s]);
     return (0, i.jsx)(u.u, {
         title: g.intl.string(g.t["/OPIaM"]),
@@ -73,7 +73,7 @@ function N(e) {
         ...a,
         variant: "primary",
         children: (0, i.jsx)("div", {
-            className: _.Zc,
+            className: y.Zc,
             children: t.map((e, n) => (0, i.jsx)(G, { destination: e }, n)),
         }),
     });

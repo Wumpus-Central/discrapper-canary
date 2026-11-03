@@ -16,7 +16,7 @@ function d(e) {
             (0, i.jsxs)("div", {
                 className: s()(c.MY, { [c.zE]: d }),
                 children: [
-                    (0, i.jsx)(r.E, { variant: "text-sm/semibold", children: u }),
+                    (0, i.jsx)(r.E, { variant: "body-sm/semibold", children: u }),
                     (0, i.jsx)("div", { children: t }),
                 ],
             }),

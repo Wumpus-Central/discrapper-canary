@@ -32,7 +32,7 @@ function g(t) {
                     className: a()(A.zr, s),
                     children: [
                         (0, i.jsx)(u.E, {
-                            variant: "text-sm/semibold",
+                            variant: "body-sm/semibold",
                             color: "text-default",
                             className: A.Ed,
                             children: f.intl.string(f.t.stcSfI),

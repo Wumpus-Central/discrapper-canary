@@ -27,7 +27,7 @@ function A(e) {
             children: [
                 (0, l.jsx)(r.E, {
                     className: p.E5,
-                    variant: "text-sm/normal",
+                    variant: "body-sm/normal",
                     color: "text-default",
                     children: g.intl.string(g.t.iOWmmB),
                 }),

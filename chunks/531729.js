@@ -10,19 +10,19 @@ var l = n(477900),
     u = n(355622),
     m = n(408018),
     h = n(845207),
-    x = n(376310),
-    g = n(230397),
+    g = n(376310),
+    x = n(230397),
     f = n(747926),
     j = n(55294),
     v = n(807632),
     p = n(17928),
-    A = n(454292),
-    C = n(960850),
-    N = n(985253),
-    b = n(659617),
-    E = n(480595),
-    S = n(461213),
-    y = n(101392),
+    b = n(454292),
+    A = n(960850),
+    C = n(985253),
+    y = n(659617),
+    N = n(480595),
+    E = n(461213),
+    S = n(101392),
     T = n(652215),
     I = n(746080),
     _ = n(834730),
@@ -50,7 +50,7 @@ function G(e) {
             className: O._,
             children: [
                 (0, l.jsx)(P.A, { game: n, size: P.M.MEDIUM }),
-                (0, l.jsx)(_.E, { variant: "text-sm/medium", color: "text-default", className: O.d, children: t }),
+                (0, l.jsx)(_.E, { variant: "body-sm/medium", color: "text-default", className: O.d, children: t }),
                 h
                     ? (0, l.jsx)(M.Q, {
                           variant: "primary",
@@ -101,12 +101,12 @@ function V(e) {
         } = (function (e) {
             let { parentChannel: t, description: n, appliedTagIds: l, upload: s, onThreadCreated: a } = e,
                 { application: r } = (0, v._k)(t.id),
-                o = (0, N.T)(t.gameId),
+                o = (0, C.T)(t.gameId),
                 c = (0, p.bG)(
-                    [E.A, S.A],
+                    [N.A, E.A],
                     () => {
                         for (let e of o) {
-                            let t = (0, A.A)(E.A, S.A, e);
+                            let t = (0, b.A)(N.A, E.A, e);
                             if (null != t && (0, v.Ij)(t)) return t;
                         }
                         return null;
@@ -117,7 +117,7 @@ function V(e) {
                 h = i.useMemo(() => {
                     if (null != c && (0, v.Ij)(c)) return { type: T.xL.JOIN, activity: c };
                 }, [c]),
-                x = (0, b.w0)({
+                g = (0, y.w0)({
                     parentChannel: t,
                     name: (0, v.Zu)(n),
                     appliedTags: l,
@@ -127,12 +127,12 @@ function V(e) {
                     upload: s,
                     onThreadCreated: a,
                 }),
-                g = t.hasFlag(I.lx.REQUIRE_TAG),
-                f = g && 0 === l.size,
+                x = t.hasFlag(I.lx.REQUIRE_TAG),
+                f = x && 0 === l.size,
                 { rateLimitPerUser: j } = t,
                 _ = j > 0,
-                M = (0, p.bG)([y.A], () => y.A.getSlowmodeCooldownGuess(t.id, y.R.CreateThread)),
-                R = (0, C._i)(t),
+                M = (0, p.bG)([S.A], () => S.A.getSlowmodeCooldownGuess(t.id, S.R.CreateThread)),
+                R = (0, A._i)(t),
                 [k, w] = i.useState(!1),
                 [P, L] = i.useState(!1),
                 D = !k && n.trim().length > 0 && n.length <= v.YS && !(_ && !R && M > 0),
@@ -141,18 +141,18 @@ function V(e) {
                         if (f) return void L(!0);
                         w(!0);
                         try {
-                            await x(n);
+                            await g(n);
                         } catch {
                             w(!1);
                         }
                     }
-                }, [D, f, x, n]);
+                }, [D, f, g, n]);
             return {
                 application: r,
                 noMicTag: d,
                 voiceChatEnabled: u,
                 voiceToggleDisabled: m,
-                isTagRequired: g,
+                isTagRequired: x,
                 hasTagRequiredError: P && f,
                 isSlowmodeEnabled: _,
                 rateLimitPerUser: j,
@@ -232,10 +232,10 @@ function V(e) {
                               className: F.GA,
                               children: u.map((e) =>
                                   (0, l.jsx)(
-                                      x.Ay,
+                                      g.Ay,
                                       {
                                           tag: e,
-                                          size: x.Ay.Sizes.SMALL,
+                                          size: g.Ay.Sizes.SMALL,
                                           selected: P.has(e.id),
                                           onClick: !H || P.has(e.id) ? () => ei(e.id) : void 0,
                                           disabled: !P.has(e.id) && H,
@@ -266,7 +266,7 @@ function V(e) {
                 Q
                     ? (0, l.jsx)("div", {
                           className: F.Vw,
-                          children: (0, l.jsx)(g.A, {
+                          children: (0, l.jsx)(x.A, {
                               rateLimitPerUser: X,
                               slowmodeCooldownGuess: J,
                               isBypassSlowmode: Z,

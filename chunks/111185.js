@@ -4,8 +4,8 @@ var l = i(477900),
     a = i(582128),
     r = i(503698),
     o = i.n(r),
-    c = i(131937),
-    d = i(17928),
+    d = i(131937),
+    c = i(17928),
     m = i(935462),
     u = i(43990),
     N = i(430690),
@@ -27,10 +27,10 @@ var l = i(477900),
     U = i(862482),
     O = i(111159),
     G = i(534514),
-    S = i(86182),
-    b = i(955437),
-    k = i(201505),
-    y = i(975571),
+    b = i(86182),
+    S = i(955437),
+    y = i(201505),
+    k = i(975571),
     R = i(652215),
     M = i(204925),
     P = i(105292),
@@ -39,16 +39,16 @@ function W(e) {
     let { onComplete: s, onClose: i } = e,
         [t, n] = a.useState(null),
         [r, o] = a.useState(null),
-        [c, m] = a.useState(!1),
-        u = (0, d.bG)([A.default], () => A.default.getCurrentUser()),
+        [d, m] = a.useState(!1),
+        u = (0, c.bG)([A.default], () => A.default.getCurrentUser()),
         N = a.useRef(null);
     async function E(e) {
         (e.preventDefault(), L()(null != t, "Cannot submit null birthday."), m(!0));
         try {
-            (await b.n7(t, M.w_.NEW_USER_FLOW), s());
+            (await S.n7(t, M.w_.NEW_USER_FLOW), s());
         } catch (e) {
             null != e.body && null != e.body.date_of_birth
-                ? (b.Xv(M.w_.NEW_USER_FLOW), b.$2(M.w_.NEW_USER_FLOW), i())
+                ? (S.Xv(M.w_.NEW_USER_FLOW), S.$2(M.w_.NEW_USER_FLOW), i())
                 : e?.body?.username != null
                   ? o(P.intl.string(P.t["TGg/2k"]))
                   : o(e?.body.message);
@@ -88,12 +88,12 @@ function W(e) {
                   (0, l.jsx)(h.E, {
                       color: "text-default",
                       className: w.h_,
-                      variant: "text-md/normal",
-                      children: P.intl.format(P.t.fa8kW1, { helpURL: y.A.getArticleURL(R.MVz.AGE_GATE) }),
+                      variant: "body-md/normal",
+                      children: P.intl.format(P.t.fa8kW1, { helpURL: k.A.getArticleURL(R.MVz.AGE_GATE) }),
                   }),
-                  (0, l.jsx)(S.w, {
+                  (0, l.jsx)(b.w, {
                       theme: R.NJ8.LIGHT,
-                      children: (0, l.jsx)(k.A, {
+                      children: (0, l.jsx)(y.A, {
                           required: !0,
                           autoFocus: !0,
                           wrapperClassName: w.kz,
@@ -114,7 +114,7 @@ function W(e) {
                               buttonRef: N,
                               type: "submit",
                               size: U.$n.Sizes.LARGE,
-                              submitting: c,
+                              submitting: d,
                               disabled: null == t,
                               fullWidth: !0,
                               children: P.intl.string(P.t.PDTjLN),
@@ -170,21 +170,21 @@ function es(e) {
         n = s === X.i.CUSTOMIZE_GUILD,
         a = s === X.i.CHANNEL_PROMPT || s === X.i.JOIN_GUILD,
         r = n || a,
-        c = t || r;
+        d = t || r;
     return (0, l.jsxs)("div", {
         className: ee.pz,
         children: [
             (0, l.jsx)("div", { className: o()(ee.Qo, { [ee.WU]: i }) }),
-            (0, l.jsx)("div", { className: o()(ee.NF, { [ee.WU]: c }) }),
+            (0, l.jsx)("div", { className: o()(ee.NF, { [ee.WU]: d }) }),
             (0, l.jsx)("div", { className: o()(ee.MW, { [ee.WU]: r }) }),
-            (0, l.jsx)("div", { className: o()(ee._e, { [ee.WU]: c }) }),
-            (0, l.jsx)("div", { className: o()(ee.ss, { [ee.WU]: c }) }),
+            (0, l.jsx)("div", { className: o()(ee._e, { [ee.WU]: d }) }),
+            (0, l.jsx)("div", { className: o()(ee.ss, { [ee.WU]: d }) }),
             (0, l.jsx)("div", { className: o()(ee.mJ, { [ee.WU]: t }) }),
             (0, l.jsx)("div", { className: o()(ee.Gx, { [ee.WU]: t }) }),
             (0, l.jsx)("div", { className: o()(ee.p, { [ee.WU]: r }) }),
             (0, l.jsx)("div", { className: o()(ee.hV, { [ee.WU]: n }) }),
             (0, l.jsx)("div", { className: o()(ee.s3, { [ee.WU]: a }) }),
-            (0, l.jsx)("div", { className: o()(ee.mq, { [ee.WU]: c }) }),
+            (0, l.jsx)("div", { className: o()(ee.mq, { [ee.WU]: d }) }),
         ],
     });
 }
@@ -197,59 +197,59 @@ function ea(e) {
         { onSlideChange: i, ...t } = e,
         { onClose: n } = t,
         [r, v] = a.useState(!1),
-        L = (0, d.bG)([A.default], () => A.default.getCurrentUser()),
+        L = (0, c.bG)([A.default], () => A.default.getCurrentUser()),
         D = null != L && null == L.nsfwAllowed,
-        [O, S] = a.useState(D ? X.i.AGE_GATE : X.i.CHOOSE_TEMPLATE),
-        [b, k] = a.useState(null);
+        [O, b] = a.useState(D ? X.i.AGE_GATE : X.i.CHOOSE_TEMPLATE),
+        [S, y] = a.useState(null);
     a.useEffect(() => {
         i(r ? X.i.COMPLETE : O);
     }, [i, O, r]);
-    let [y, M] = a.useState(null),
+    let [k, M] = a.useState(null),
         [w, H] = a.useState(null),
         [J, ee] = a.useState(!1),
-        ea = (0, d.bG)([f.A], () => f.A.getType() === ei.zY.INVITE_UNCLAIMED),
+        ea = (0, c.bG)([f.A], () => f.A.getType() === ei.zY.INVITE_UNCLAIMED),
         er = a.useCallback(
             (e) => {
                 (H(e),
-                    S(X.i.CREATION_INTENT),
+                    b(X.i.CREATION_INTENT),
                     g.default.track(R.HAw.GUILD_TEMPLATE_SELECTED, { template_name: e.label, template_code: e.code }));
             },
-            [H, S],
+            [H, b],
         ),
-        { content: eo, footer: ec } = (0, j.u)({
+        { content: eo, footer: ed } = (0, j.u)({
             hasFooter: !1,
             onBack: () => {
-                (H(null), S(X.i.CHOOSE_TEMPLATE));
+                (H(null), b(X.i.CHOOSE_TEMPLATE));
             },
             onCreationIntentChosen: (e) => {
-                (ee(e === en.IR.COMMUNITY), S(X.i.CUSTOMIZE_GUILD));
+                (ee(e === en.IR.COMMUNITY), b(X.i.CUSTOMIZE_GUILD));
             },
         }),
-        { content: ed, footer: em } = (0, I.D)({
+        { content: ec, footer: em } = (0, I.D)({
             guildTemplate: w,
             titleClassName: el.RH,
             hasFooter: !1,
             onGuildCreated: (e) => {
-                (M(e), w?.id === et.v.CREATE ? S(X.i.CHANNEL_PROMPT) : v(!0));
+                (M(e), w?.id === et.v.CREATE ? b(X.i.CHANNEL_PROMPT) : v(!0));
             },
             onBack: () => {
-                S(X.i.CREATION_INTENT);
+                b(X.i.CREATION_INTENT);
             },
-            isSlideReady: b === X.i.CUSTOMIZE_GUILD,
+            isSlideReady: S === X.i.CUSTOMIZE_GUILD,
             isCommunity: J,
         }),
         { content: eu, footer: eN } = (0, T.m)({
-            createdGuildId: y,
+            createdGuildId: k,
             hasFooter: !1,
             onChannelPromptCompleted: () => {
                 v(!0);
             },
-            isSlideReady: b === X.i.CHANNEL_PROMPT,
+            isSlideReady: S === X.i.CHANNEL_PROMPT,
         }),
         { content: eE, footer: eh } = (function (e) {
             let { onBack: s, onComplete: i, onConnect: t, isSlideReady: n } = e,
                 [r, o] = a.useState(""),
-                [c, d] = a.useState(!1),
+                [d, c] = a.useState(!1),
                 [u, N] = a.useState(null),
                 E = a.useRef(null);
             a.useEffect(() => {
@@ -260,13 +260,13 @@ function ea(e) {
                     e.preventDefault();
                     let s = r.trim();
                     if ("" === s) return void N(P.intl.string(P.t.IRq5ah));
-                    (N(null), d(!0));
+                    (N(null), c(!0));
                     let t = s.split("/"),
                         n = t[t.length - 1];
                     z.Ay.resolveInvite(n, "Join Guild", { inputValue: s }).then(
                         (e) => {
                             let { invite: s } = e;
-                            if ((d(!1), null == s)) return void N(P.intl.string(P.t["GEYI+Z"]));
+                            if ((c(!1), null == s)) return void N(P.intl.string(P.t["GEYI+Z"]));
                             if (null != s.channel) {
                                 let e = z.Ay.getInviteContext("Join Guild", s);
                                 z.Ay.acceptInvite({
@@ -283,13 +283,13 @@ function ea(e) {
                             } else N(P.intl.string(P.t["GEYI+Z"]));
                         },
                         (e) => {
-                            d(!1);
+                            c(!1);
                             let s = new B.Wl(e);
                             N((0, K.s)(s.code));
                         },
                     );
                 },
-                [r, d, N, i],
+                [r, c, N, i],
             );
             return {
                 content: (0, l.jsxs)(l.Fragment, {
@@ -307,7 +307,7 @@ function ea(e) {
                                     children: P.intl.string(P.t.riOUtB),
                                 }),
                                 (0, l.jsx)(h.E, {
-                                    variant: "text-md/normal",
+                                    variant: "body-md/normal",
                                     color: "text-default",
                                     children: P.intl.string(P.t["7jub2t"]),
                                 }),
@@ -329,11 +329,11 @@ function ea(e) {
                                 }),
                                 (0, l.jsx)(h.E, {
                                     color: "text-default",
-                                    variant: "text-xs/normal",
+                                    variant: "body-xs/normal",
                                     children: P.intl.format(P.t.lHTZl2, { examples: `${Q}wumpus-friends, hTKzmak` }),
                                 }),
                                 (0, l.jsx)(h.E, {
-                                    variant: "text-xs/normal",
+                                    variant: "body-xs/normal",
                                     color: "text-default",
                                     className: Y.LR,
                                     children: P.intl.format(P.t["8F/who"], {
@@ -353,7 +353,7 @@ function ea(e) {
                             text: P.intl.string(P.t.VJlc0S),
                             onClick: x,
                             disabled: 0 === r.length,
-                            loading: c,
+                            loading: d,
                         }),
                         (0, l.jsx)(U.$n, {
                             "data-migration-pending": !0,
@@ -367,12 +367,12 @@ function ea(e) {
                 }),
             };
         })({
-            onBack: () => S(X.i.CHOOSE_TEMPLATE),
+            onBack: () => b(X.i.CHOOSE_TEMPLATE),
             onComplete: () => {
                 n();
             },
             onConnect: n,
-            isSlideReady: b === X.i.JOIN_GUILD,
+            isSlideReady: S === X.i.JOIN_GUILD,
         }),
         ex = null;
     switch (O) {
@@ -386,7 +386,7 @@ function ea(e) {
             ex = eh;
             break;
         case X.i.CREATION_INTENT:
-            ex = ec;
+            ex = ed;
     }
     let { ref: ep, width: e_ } = (0, x.Ay)();
     if (r)
@@ -399,7 +399,7 @@ function ea(e) {
             parentComponent: "NUFModal",
             children: (0, l.jsx)($, { onComplete: n }),
         });
-    let eT = { impression_group: c.ImpressionGroups.GUILD_ADD_NUF };
+    let eT = { impression_group: d.ImpressionGroups.GUILD_ADD_NUF };
     return (0, l.jsxs)(m.EO, {
         ...t,
         "data-migration-pending": !0,
@@ -420,7 +420,7 @@ function ea(e) {
                                 className: el.WT,
                                 children: (0, l.jsxs)(N.t, {
                                     activeSlide: O,
-                                    onSlideReady: (e) => k(e),
+                                    onSlideReady: (e) => y(e),
                                     centered: !1,
                                     width: e_,
                                     children: [
@@ -430,7 +430,7 @@ function ea(e) {
                                                 className: el.kL,
                                                 children: (0, l.jsx)(W, {
                                                     onComplete: () => {
-                                                        ea ? n() : S(X.i.CHOOSE_TEMPLATE);
+                                                        ea ? n() : b(X.i.CHOOSE_TEMPLATE);
                                                     },
                                                     onClose: n,
                                                 }),
@@ -438,7 +438,7 @@ function ea(e) {
                                         }),
                                         (0, l.jsx)(N.q, {
                                             id: X.i.CHOOSE_TEMPLATE,
-                                            impressionName: c.ImpressionNames.GUILD_ADD_LANDING,
+                                            impressionName: d.ImpressionNames.GUILD_ADD_LANDING,
                                             impressionProperties: eT,
                                             children: (0, l.jsx)("div", {
                                                 className: o()(el.kL, el.yT),
@@ -451,25 +451,25 @@ function ea(e) {
                                         }),
                                         (0, l.jsx)(N.q, {
                                             id: X.i.CREATION_INTENT,
-                                            impressionName: c.ImpressionNames.GUILD_ADD_INTENT_SELECTION,
+                                            impressionName: d.ImpressionNames.GUILD_ADD_INTENT_SELECTION,
                                             impressionProperties: eT,
                                             children: (0, l.jsx)("div", { className: o()(el.kL, el.tn), children: eo }),
                                         }),
                                         (0, l.jsx)(N.q, {
                                             id: X.i.CUSTOMIZE_GUILD,
-                                            impressionName: c.ImpressionNames.GUILD_ADD_CUSTOMIZE,
+                                            impressionName: d.ImpressionNames.GUILD_ADD_CUSTOMIZE,
                                             impressionProperties: eT,
-                                            children: (0, l.jsx)("div", { className: o()(el.kL, el.tn), children: ed }),
+                                            children: (0, l.jsx)("div", { className: o()(el.kL, el.tn), children: ec }),
                                         }),
                                         (0, l.jsx)(N.q, {
                                             id: X.i.CHANNEL_PROMPT,
-                                            impressionName: c.ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
+                                            impressionName: d.ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
                                             impressionProperties: eT,
                                             children: (0, l.jsx)("div", { className: o()(el.kL, el.tn), children: eu }),
                                         }),
                                         (0, l.jsx)(N.q, {
                                             id: X.i.JOIN_GUILD,
-                                            impressionName: c.ImpressionNames.GUILD_ADD_JOIN,
+                                            impressionName: d.ImpressionNames.GUILD_ADD_JOIN,
                                             impressionProperties: eT,
                                             children: (0, l.jsx)("div", { className: o()(el.kL, el.tn), children: eE }),
                                         }),
@@ -487,10 +487,10 @@ function ea(e) {
                                       children: (0, l.jsx)(E.Anchor, {
                                           className: el.D3,
                                           onClick: () => {
-                                              S(X.i.JOIN_GUILD);
+                                              b(X.i.JOIN_GUILD);
                                           },
                                           children: (0, l.jsxs)(h.E, {
-                                              variant: "text-sm/medium",
+                                              variant: "body-sm/medium",
                                               className: el.D3,
                                               children: [P.intl.string(P.t["N+Mi/U"]), " ", P.intl.string(P.t.yRjK4p)],
                                           }),

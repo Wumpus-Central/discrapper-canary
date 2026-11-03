@@ -1,7 +1,7 @@
 (l.r(t), l.d(t, { default: () => H }));
 var r = l(477900),
-    s = l(582128),
-    n = l(979186);
+    n = l(582128),
+    s = l(979186);
 l(321073);
 var a = l(17928),
     i = l(364522),
@@ -47,13 +47,13 @@ class M {
         for (let e of this.listeners) e();
     }
 }
-let j = s.createContext(null);
+let j = n.createContext(null);
 function y(e) {
     let { store: t, children: l } = e;
     return (0, r.jsx)(j.Provider, { value: t, children: l });
 }
 function b() {
-    return s.useContext(j);
+    return n.useContext(j);
 }
 function N(e, t) {
     var l;
@@ -65,29 +65,29 @@ function N(e, t) {
 function k(e) {
     let t,
         l,
-        n,
+        s,
         a,
         { rows: i, format: o, bucketMs: c } = e,
         u = b(),
         d =
-            ((t = s.useCallback((e) => u?.subscribe(e) ?? (() => {}), [u])),
-            (l = s.useCallback(() => u?.time ?? null, [u])),
-            s.useSyncExternalStore(t, l)),
+            ((t = n.useCallback((e) => u?.subscribe(e) ?? (() => {}), [u])),
+            (l = n.useCallback(() => u?.time ?? null, [u])),
+            n.useSyncExternalStore(t, l)),
         m =
-            ((n = s.useCallback((e) => u?.subscribe(e) ?? (() => {}), [u])),
-            (a = s.useCallback(() => u?.pinned ?? !1, [u])),
-            s.useSyncExternalStore(n, a));
+            ((s = n.useCallback((e) => u?.subscribe(e) ?? (() => {}), [u])),
+            (a = n.useCallback(() => u?.pinned ?? !1, [u])),
+            n.useSyncExternalStore(s, a));
     if (null == d) return null;
     let h = i
         .map((e) => ({
             row: e,
             value: (function (e, t, l) {
                 let r = null;
-                for (let s = 0; s < e.length; s++) {
-                    let n = e.at(s);
-                    if (null != n) {
-                        if (n.time > t) break;
-                        r = null != l && t - n.time > l ? null : n.value;
+                for (let n = 0; n < e.length; n++) {
+                    let s = e.at(n);
+                    if (null != s) {
+                        if (s.time > t) break;
+                        r = null != l && t - s.time > l ? null : s.value;
                     }
                 }
                 return r;
@@ -126,7 +126,7 @@ function k(e) {
           });
 }
 function A(e) {
-    let { dataPoints: t, width: l, height: s, windowMs: n, label: a, format: i, markers: o } = e,
+    let { dataPoints: t, width: l, height: n, windowMs: s, label: a, format: i, markers: o } = e,
         c = b(),
         u = (0, p.r)(f.A.unsafe_rawColors.BRAND_500).hsl();
     return (0, r.jsxs)("div", {
@@ -135,8 +135,8 @@ function A(e) {
             (0, r.jsx)(w.A, {
                 dataPoints: t,
                 width: l,
-                height: s,
-                windowMs: n,
+                height: n,
+                windowMs: s,
                 markers: o,
                 hoverSource: c ?? void 0,
                 onHoverTime: null != c ? (e) => c.set(e) : void 0,
@@ -148,25 +148,25 @@ function A(e) {
 }
 let S = 1e3 / 30;
 function _(e) {
-    let t = s.useRef(null),
+    let t = n.useRef(null),
         l = (0, p.r)(f.A.colors.BACKGROUND_BASE_LOW).hsl(),
-        n = (0, p.r)(f.A.colors.BACKGROUND_MOD_MUTED).hsl(),
+        s = (0, p.r)(f.A.colors.BACKGROUND_MOD_MUTED).hsl(),
         a = (0, p.r)(f.A.colors.TEXT_DEFAULT).hsl(),
-        i = s.useRef(e);
-    s.useEffect(() => {
+        i = n.useRef(e);
+    n.useEffect(() => {
         i.current = e;
     });
-    let o = s.useRef(new Float64Array(0)),
-        c = s.useRef(0),
+    let o = n.useRef(new Float64Array(0)),
+        c = n.useRef(0),
         u = window.devicePixelRatio ?? 1,
         d = Math.round(e.width * u),
         m = Math.round(e.height * u);
-    s.useEffect(() => {
+    n.useEffect(() => {
         let e = 0,
             r = 0;
         return (
-            (e = requestAnimationFrame(function s(u) {
-                if (((e = requestAnimationFrame(s)), u - r < S)) return;
+            (e = requestAnimationFrame(function n(u) {
+                if (((e = requestAnimationFrame(n)), u - r < S)) return;
                 r = u;
                 let d = t.current;
                 if (null == d) return;
@@ -193,8 +193,8 @@ function _(e) {
                     for (let r = 0; r < l; r++) {
                         let l = t.at(r);
                         if (null == l) continue;
-                        let s = Math.floor((l.time - N) / 1e3);
-                        s < 0 || s >= b || (A[e * b + s] = l.value);
+                        let n = Math.floor((l.time - N) / 1e3);
+                        n < 0 || n >= b || (A[e * b + n] = l.value);
                     }
                 }
                 for (let e = 0; e < b; e++) {
@@ -221,13 +221,13 @@ function _(e) {
                     let t = Math.floor((e / b) * w),
                         l = v;
                     for (let r = 0; r < j; r++) {
-                        let s = A[r * b + e];
-                        if (s <= 0) continue;
-                        let n = (s / R) * P;
-                        ((m.fillStyle = M[r].color), m.fillRect(t, l - n, E, n), (l -= n));
+                        let n = A[r * b + e];
+                        if (n <= 0) continue;
+                        let s = (n / R) * P;
+                        ((m.fillStyle = M[r].color), m.fillRect(t, l - s, E, s), (l -= s));
                     }
                 }
-                ((m.strokeStyle = n),
+                ((m.strokeStyle = s),
                     (m.lineWidth = g),
                     m.beginPath(),
                     m.moveTo(0, C),
@@ -239,9 +239,9 @@ function _(e) {
                     (m.textBaseline = "top"),
                     m.fillText(x(R), w - Math.round(4 * g), Math.round(2 * g)),
                     (function (e, t, l) {
-                        let { time: r, now: s, windowMs: n, color: a, bottomReserve: i } = l;
+                        let { time: r, now: n, windowMs: s, color: a, bottomReserve: i } = l;
                         if (null == r) return;
-                        let o = 1 - (s - r) / n;
+                        let o = 1 - (n - r) / s;
                         if (o < 0 || o > 1) return;
                         let c = window.devicePixelRatio ?? 1,
                             u = Math.round(t.width * o);
@@ -263,7 +263,7 @@ function _(e) {
             })),
             () => cancelAnimationFrame(e)
         );
-    }, [l, n, a]);
+    }, [l, s, a]);
     let { hoverStore: h, windowMs: x } = e,
         g =
             null != h
@@ -292,20 +292,20 @@ function _(e) {
     });
 }
 function D(e) {
-    let { title: t, value: l, points: n, format: a, children: i } = e,
-        c = s.useRef(null),
-        [u, d] = s.useState(320);
+    let { title: t, value: l, points: s, format: a, children: i } = e,
+        c = n.useRef(null),
+        [u, d] = n.useState(320);
     return (
-        s.useEffect(() => {
+        n.useEffect(() => {
             let e = c.current;
             if (null == e) return;
             let t = null,
                 l = 0,
                 r = new ResizeObserver((e) => {
                     let [r] = e,
-                        s = Math.max(80, Math.min(4096, Math.floor(r.contentRect.width)));
-                    s === l ||
-                        ((l = s),
+                        n = Math.max(80, Math.min(4096, Math.floor(r.contentRect.width)));
+                    n === l ||
+                        ((l = n),
                         null == t &&
                             (t = requestAnimationFrame(() => {
                                 ((t = null), d(l));
@@ -327,7 +327,7 @@ function D(e) {
                     children: [
                         (0, r.jsx)("span", { className: v.DD, children: t }),
                         (0, r.jsx)(o.E, {
-                            variant: "text-sm/semibold",
+                            variant: "body-sm/semibold",
                             color: "text-strong",
                             tag: "span",
                             className: v.Uq,
@@ -336,7 +336,7 @@ function D(e) {
                     ],
                 }),
                 (0, r.jsx)(A, {
-                    dataPoints: n,
+                    dataPoints: s,
                     width: u,
                     height: 80,
                     windowMs: 12e4,
@@ -390,25 +390,25 @@ function B(e) {
     return `${Math.round(e)} MB`;
 }
 function G(e) {
-    let { title: t, value: l, series: n, yFloor: a, formatMax: i, formatValue: c, labelByKey: u } = e,
-        d = s.useRef(null),
-        [m, h] = s.useState(320),
+    let { title: t, value: l, series: s, yFloor: a, formatMax: i, formatValue: c, labelByKey: u } = e,
+        d = n.useRef(null),
+        [m, h] = n.useState(320),
         f = b(),
-        p = n
+        p = s
             .slice()
             .sort((e, t) => t.stackOrder - e.stackOrder)
             .map((e) => ({ key: e.key, label: u.get(e.key) ?? String(e.key), color: e.color, series: e.buffer }));
     return (
-        s.useEffect(() => {
+        n.useEffect(() => {
             let e = d.current;
             if (null == e) return;
             let t = null,
                 l = 0,
                 r = new ResizeObserver((e) => {
                     let [r] = e,
-                        s = Math.max(80, Math.min(4096, Math.floor(r.contentRect.width)));
-                    s === l ||
-                        ((l = s),
+                        n = Math.max(80, Math.min(4096, Math.floor(r.contentRect.width)));
+                    n === l ||
+                        ((l = n),
                         null == t &&
                             (t = requestAnimationFrame(() => {
                                 ((t = null), h(l));
@@ -430,7 +430,7 @@ function G(e) {
                     children: [
                         (0, r.jsx)("span", { className: v.DD, children: t }),
                         (0, r.jsx)(o.E, {
-                            variant: "text-sm/semibold",
+                            variant: "body-sm/semibold",
                             color: "text-strong",
                             tag: "span",
                             className: v.Uq,
@@ -442,7 +442,7 @@ function G(e) {
                     className: v.jm,
                     children: [
                         (0, r.jsx)(_, {
-                            series: n,
+                            series: s,
                             width: m,
                             height: 80,
                             windowMs: 3e5,
@@ -459,14 +459,14 @@ function G(e) {
 }
 function $(e) {
     let { view: t, colorFor: l } = e,
-        { adapterName: s, entries: n } = t,
-        a = n.map((e) => ({
+        { adapterName: n, entries: s } = t,
+        a = s.map((e) => ({
             key: e.process.pid,
             buffer: e.gpu,
             color: l(e.process),
             stackOrder: e.process.stackOrder,
         })),
-        i = n.map((e) => ({
+        i = s.map((e) => ({
             key: e.process.pid,
             buffer: e.vram,
             color: l(e.process),
@@ -474,9 +474,9 @@ function $(e) {
         })),
         c = 0,
         u = 0;
-    for (let e of n) ((c += O(e.gpu)), (u += O(e.vram)));
-    let d = new Map(n.map((e) => [e.process.pid, e.process.name])),
-        m = n.slice().sort((e, t) => {
+    for (let e of s) ((c += O(e.gpu)), (u += O(e.vram)));
+    let d = new Map(s.map((e) => [e.process.pid, e.process.name])),
+        m = s.slice().sort((e, t) => {
             let l = t.process.lastSampleAt - e.process.lastSampleAt;
             return 0 !== l ? l : e.process.stackOrder - t.process.stackOrder;
         });
@@ -484,11 +484,11 @@ function $(e) {
         className: v.yT,
         children: [
             (0, r.jsx)(o.E, {
-                variant: "text-xxs/semibold",
+                variant: "footnote/semibold",
                 color: "text-muted",
                 tag: "span",
                 className: v.Xk,
-                children: s,
+                children: n,
             }),
             (0, r.jsxs)("div", {
                 className: v.Ss,
@@ -522,16 +522,16 @@ function $(e) {
 }
 function z(e) {
     let { entry: t, color: l } = e,
-        { process: s } = t,
-        { data: n } = (0, g.I)(s.gameId);
+        { process: n } = t,
+        { data: s } = (0, g.I)(n.gameId);
     return (0, r.jsxs)("div", {
         className: v.eI,
         children: [
             (0, r.jsx)("div", { className: v.A9, style: { background: l } }),
-            s.isDiscord
+            n.isDiscord
                 ? (0, r.jsx)(h.p, { size: "sm", className: v.Gt })
-                : (0, r.jsx)(x.A, { game: n, size: x.M.SMALL, allowUnknownGameIcon: !0, className: v.Gt }),
-            (0, r.jsx)("span", { className: v.V1, children: s.name }),
+                : (0, r.jsx)(x.A, { game: s, size: x.M.SMALL, allowUnknownGameIcon: !0, className: v.Gt }),
+            (0, r.jsx)("span", { className: v.V1, children: n.name }),
             (0, r.jsxs)("span", { className: v.rz, children: [R(O(t.gpu)), " \xb7 ", B(O(t.vram))] }),
         ],
     });
@@ -539,19 +539,19 @@ function z(e) {
 function I(e) {
     let { enabled: t } = e,
         l = (function (e) {
-            let [t, l] = s.useState([]),
-                r = s.useRef(new Map()),
-                n = s.useRef(new Map()),
-                a = s.useRef(0);
+            let [t, l] = n.useState([]),
+                r = n.useRef(new Map()),
+                s = n.useRef(new Map()),
+                a = n.useRef(0);
             return (
-                s.useEffect(() => {
+                n.useEffect(() => {
                     let t;
                     if (!e) return;
-                    let s = !1;
+                    let n = !1;
                     return (
                         !(function e() {
                             let i;
-                            if (s) return;
+                            if (n) return;
                             let o = null == (i = window.DiscordNative?.process?.pid) || isNaN(i) ? null : i,
                                 c = [];
                             for (let e of (null != o && c.push({ pid: o, isDiscord: !0 }),
@@ -565,14 +565,14 @@ function I(e) {
                                 ),
                             )
                                 .then((e) => {
-                                    if (s) return;
+                                    if (n) return;
                                     let t = Date.now(),
                                         i = new Set(c.map((e) => e.pid)),
                                         o = new Map(r.current);
                                     for (let { target: l, adapters: r } of e) {
                                         let e = l.pid,
-                                            s = o.get(e);
-                                        if (null != s) o.set(e, { ...s, lastSampleAt: t });
+                                            n = o.get(e);
+                                        if (null != n) o.set(e, { ...n, lastSampleAt: t });
                                         else if (l.isDiscord)
                                             o.set(e, {
                                                 pid: e,
@@ -585,14 +585,14 @@ function I(e) {
                                             });
                                         else {
                                             let r = l.game,
-                                                s = a.current++;
+                                                n = a.current++;
                                             o.set(e, {
                                                 pid: e,
                                                 isDiscord: !1,
                                                 name: r.gameName ?? r.name ?? r.processName ?? `pid ${e}`,
                                                 gameId: P.A.findGame(r)?.id ?? null,
-                                                colorIndex: ((s % 6) + 6) % 6,
-                                                stackOrder: s,
+                                                colorIndex: ((n % 6) + 6) % 6,
+                                                stackOrder: n,
                                                 lastSampleAt: t,
                                             });
                                         }
@@ -614,8 +614,8 @@ function I(e) {
                                             return t;
                                         })(r);
                                         if (0 === i.size) continue;
-                                        let c = n.current.get(e);
-                                        for (let [l, r] of (null == c && ((c = new Map()), n.current.set(e, c)), i)) {
+                                        let c = s.current.get(e);
+                                        for (let [l, r] of (null == c && ((c = new Map()), s.current.set(e, c)), i)) {
                                             let e = c.get(l);
                                             (null == e && ((e = { gpu: new U(300), vram: new U(300) }), c.set(l, e)),
                                                 e.gpu.push(r.utilization_percent, t),
@@ -626,8 +626,8 @@ function I(e) {
                                         l.isDiscord ||
                                             i.has(e) ||
                                             !(t - l.lastSampleAt > 3e5) ||
-                                            (o.delete(e), n.current.delete(e));
-                                    for (let e of n.current.keys()) i.has(e) || o.has(e) || n.current.delete(e);
+                                            (o.delete(e), s.current.delete(e));
+                                    for (let e of s.current.keys()) i.has(e) || o.has(e) || s.current.delete(e);
                                     ((r.current = o),
                                         l(
                                             (function (e, t) {
@@ -635,10 +635,10 @@ function I(e) {
                                                 for (let r of e.values()) {
                                                     let e = t.get(r.pid);
                                                     if (null != e)
-                                                        for (let [t, s] of e) {
+                                                        for (let [t, n] of e) {
                                                             let e = l.get(t);
                                                             (null == e && ((e = []), l.set(t, e)),
-                                                                e.push({ process: r, gpu: s.gpu, vram: s.vram }));
+                                                                e.push({ process: r, gpu: n.gpu, vram: n.vram }));
                                                         }
                                                 }
                                                 return Array.from(l.entries())
@@ -651,21 +651,21 @@ function I(e) {
                                                         let [t, l] = e;
                                                         return { adapterName: t, entries: l };
                                                     });
-                                            })(o, n.current),
+                                            })(o, s.current),
                                         ));
                                 })
                                 .catch(() => {}),
                                 (t = setTimeout(e, 1e3)));
                         })(),
                         () => {
-                            ((s = !0), null != t && clearTimeout(t));
+                            ((n = !0), null != t && clearTimeout(t));
                         }
                     );
                 }, [e]),
                 t
             );
         })(t),
-        n = (0, p.r)(f.A.unsafe_rawColors.BRAND_500).hsl(),
+        s = (0, p.r)(f.A.unsafe_rawColors.BRAND_500).hsl(),
         a = [
             (0, p.r)(f.A.unsafe_rawColors.RED_400).hsl(),
             (0, p.r)(f.A.unsafe_rawColors.ORANGE_400).hsl(),
@@ -675,7 +675,7 @@ function I(e) {
             (0, p.r)(f.A.unsafe_rawColors.BLUE_400).hsl(),
         ];
     function i(e) {
-        return e.isDiscord || e.colorIndex < 0 ? n : a[e.colorIndex % a.length];
+        return e.isDiscord || e.colorIndex < 0 ? s : a[e.colorIndex % a.length];
     }
     return t && 0 !== l.length
         ? (0, r.jsx)(r.Fragment, { children: l.map((e) => (0, r.jsx)($, { view: e, colorFor: i }, e.adapterName)) })
@@ -691,30 +691,30 @@ function K(e) {
 }
 function V() {
     let e = (0, a.bG)([c.default], () => c.default.getCurrentUser()?.isStaff() ?? !1),
-        [t, l] = s.useState(null),
-        [n, m] = s.useState(null),
-        [h, f] = s.useState([]),
-        [p, x] = s.useState(() => new Set()),
-        g = s.useRef(null),
-        [w, j] = s.useState(320),
-        [b] = s.useState(() => new U(120)),
-        [N] = s.useState(() => new Map()),
-        [k] = s.useState(() => new Map()),
-        [S] = s.useState(() => new U(120)),
-        [_, C] = s.useState(null),
-        P = s.useRef(0),
-        [E] = s.useState(() => new M());
+        [t, l] = n.useState(null),
+        [s, m] = n.useState(null),
+        [h, f] = n.useState([]),
+        [p, x] = n.useState(() => new Set()),
+        g = n.useRef(null),
+        [w, j] = n.useState(320),
+        [b] = n.useState(() => new U(120)),
+        [N] = n.useState(() => new Map()),
+        [k] = n.useState(() => new Map()),
+        [S] = n.useState(() => new U(120)),
+        [_, C] = n.useState(null),
+        P = n.useRef(0),
+        [E] = n.useState(() => new M());
     if (
-        (s.useEffect(() => {
+        (n.useEffect(() => {
             let e = g.current;
             if (null == e) return;
             let t = null,
                 l = 0,
                 r = new ResizeObserver((e) => {
                     let [r] = e,
-                        s = Math.max(320, Math.min(4096, Math.floor(r.contentRect.width)));
-                    s === l ||
-                        ((l = s),
+                        n = Math.max(320, Math.min(4096, Math.floor(r.contentRect.width)));
+                    n === l ||
+                        ((l = n),
                         null == t &&
                             (t = requestAnimationFrame(() => {
                                 ((t = null), j(l));
@@ -727,54 +727,54 @@ function V() {
                 }
             );
         }, []),
-        s.useEffect(() => {
+        n.useEffect(() => {
             let e = requestAnimationFrame(function t() {
                 ((P.current += 1), (e = requestAnimationFrame(t)));
             });
             return () => cancelAnimationFrame(e);
         }, []),
-        s.useEffect(() => {
+        n.useEffect(() => {
             let e = !1,
                 t = performance.now(),
                 r = !1,
-                s = window.DiscordNative?.gcEvents?.addGCListener?.((t) => {
+                n = window.DiscordNative?.gcEvents?.addGCListener?.((t) => {
                     let { timestamp: l, kind: r } = t;
                     e || f((e) => [...e.filter((e) => e.time > l - 12e4), { time: l, kind: r }]);
                 });
             return (
-                !(function s() {
+                !(function n() {
                     if (e) return;
-                    let n = Date.now(),
+                    let s = Date.now(),
                         a = performance.now(),
                         i = d.A.getCurrentCPUUsagePercent() ?? 0,
                         o = d.A.getCpuUsageElectronProcessTypeDetails();
                     l(performance.now() - a);
                     let c = performance.now(),
                         u = d.A.getMemoryUsageElectronProcessTypeDetails();
-                    if ((m(performance.now() - c), b.push(i, n), null != o))
+                    if ((m(performance.now() - c), b.push(i, s), null != o))
                         for (let e of Object.keys(o)) {
                             let t = o[e];
                             if (null == t) continue;
                             let l = N.get(e);
-                            (null == l && ((l = new U(120)), N.set(e, l)), l.push(K(t), n));
+                            (null == l && ((l = new U(120)), N.set(e, l)), l.push(K(t), s));
                         }
                     if (null != u)
                         for (let e of Object.keys(u)) {
                             let t = u[e];
                             if (null == t) continue;
                             let l = k.get(e);
-                            (null == l && ((l = new U(120)), k.set(e, l)), l.push(q(t), n));
+                            (null == l && ((l = new U(120)), k.set(e, l)), l.push(q(t), s));
                         }
                     let h = performance.now(),
                         f = (h - t) / 1e3;
                     if (r && f > 0) {
                         let e = P.current / f;
-                        (C(e), S.push(e, n));
+                        (C(e), S.push(e, s));
                     }
-                    ((P.current = 0), (t = h), (r = !0), setTimeout(s, 1e3));
+                    ((P.current = 0), (t = h), (r = !0), setTimeout(n, 1e3));
                 })(),
                 () => {
-                    ((e = !0), s?.());
+                    ((e = !0), n?.());
                 }
             );
         }, [b, N, k, S]),
@@ -828,7 +828,7 @@ function V() {
                                     children: [
                                         (0, r.jsx)("span", { className: v.DD, children: "Utilization" }),
                                         (0, r.jsx)(o.E, {
-                                            variant: "text-sm/semibold",
+                                            variant: "body-sm/semibold",
                                             color: "text-strong",
                                             tag: "span",
                                             className: v.Uq,
@@ -854,14 +854,14 @@ function V() {
                                         { kind: 8, label: "Weak-cb" },
                                     ].map((e) => {
                                         let { kind: t, label: l } = e,
-                                            s = !p.has(t);
+                                            n = !p.has(t);
                                         return (0, r.jsxs)(
                                             "button",
                                             {
                                                 type: "button",
                                                 className: v.$d,
-                                                "aria-pressed": s,
-                                                title: `${s ? "Hide" : "Show"} ${l} markers`,
+                                                "aria-pressed": n,
+                                                title: `${n ? "Hide" : "Show"} ${l} markers`,
                                                 onClick: () => {
                                                     x((e) => {
                                                         let l = new Set(e);
@@ -885,8 +885,8 @@ function V() {
                                 let t = N.get(e);
                                 if (null == t || 0 === t.length) return null;
                                 let l = T[e],
-                                    s = null != l ? K(l) : 0;
-                                return (0, r.jsx)(D, { title: e, value: R(s), points: t, format: R }, e);
+                                    n = null != l ? K(l) : 0;
+                                return (0, r.jsx)(D, { title: e, value: R(n), points: t, format: R }, e);
                             }),
                         }),
                     ],
@@ -898,7 +898,7 @@ function V() {
                             className: v.x_,
                             children: [
                                 (0, r.jsx)("span", { className: v.AM, children: "Memory" }),
-                                (0, r.jsx)("span", { className: v.rh, children: G(n) }),
+                                (0, r.jsx)("span", { className: v.rh, children: G(s) }),
                             ],
                         }),
                         (0, r.jsxs)("div", {
@@ -914,13 +914,13 @@ function V() {
                                 let t = k.get(e);
                                 if (null == t || 0 === t.length) return null;
                                 let l = O[e],
-                                    s = null != l ? q(l) : 0,
-                                    n = l?.wss_priv_kb != null;
+                                    n = null != l ? q(l) : 0,
+                                    s = l?.wss_priv_kb != null;
                                 return (0, r.jsx)(
                                     D,
                                     {
-                                        title: `${e}${n ? " (private)" : ""}`,
-                                        value: `${s.toFixed(0)} MB`,
+                                        title: `${e}${s ? " (private)" : ""}`,
+                                        value: `${n.toFixed(0)} MB`,
                                         points: t,
                                         format: (e) => `${e.toFixed(0)} MB`,
                                     },
@@ -951,5 +951,5 @@ function V() {
 }
 function H(e) {
     let { windowKey: t } = e;
-    return (0, r.jsx)(n.A, { withTitleBar: !0, windowKey: t, title: "Discord Stats", children: (0, r.jsx)(V, {}) });
+    return (0, r.jsx)(s.A, { withTitleBar: !0, windowKey: t, title: "Discord Stats", children: (0, r.jsx)(V, {}) });
 }

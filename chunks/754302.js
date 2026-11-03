@@ -5,11 +5,11 @@ var l = r(503698),
     n = r.n(l),
     c = r(947641),
     i = r(534514),
-    t = r(834730),
-    d = r(563682);
+    d = r(834730),
+    t = r(563682);
 function o(s) {
     let { children: e } = s;
-    return (0, a.jsx)("div", { className: d.MD, children: (0, a.jsx)("div", { className: d.Qs, children: e }) });
+    return (0, a.jsx)("div", { className: t.MD, children: (0, a.jsx)("div", { className: t.Qs, children: e }) });
 }
 function u(s) {
     let {
@@ -19,46 +19,46 @@ function u(s) {
         iconClassName: o,
         color: u,
         listType: m = "icon",
-        completed: x = !1,
-        index: h,
+        completed: h = !1,
+        index: x,
     } = s;
     return (0, a.jsxs)("div", {
-        className: d.Hn,
+        className: t.Hn,
         children: [
             (function () {
-                if ("numbered" === m && null != h)
-                    if (x)
+                if ("numbered" === m && null != x)
+                    if (h)
                         return (0, a.jsx)("div", {
-                            className: d.ai,
-                            children: (0, a.jsx)(c.r, { color: "green", className: n()(d.Kk, o) }),
+                            className: t.ai,
+                            children: (0, a.jsx)(c.r, { color: "green", className: n()(t.Kk, o) }),
                         });
                     else
                         return (0, a.jsx)(i.D, {
-                            variant: "heading-md/semibold",
+                            variant: "heading-sm/semibold",
                             color: "text-brand",
-                            className: d.ai,
-                            children: h + 1,
+                            className: t.ai,
+                            children: x + 1,
                         });
                 if (null != e)
                     return (0, a.jsx)("div", {
-                        className: d.zc,
-                        children: (0, a.jsx)(e, { color: u ?? "currentColor", className: n()(d.Kk, o) }),
+                        className: t.zc,
+                        children: (0, a.jsx)(e, { color: u ?? "currentColor", className: n()(t.Kk, o) }),
                     });
             })(),
             (0, a.jsxs)("div", {
-                className: d.FS,
+                className: t.FS,
                 children: [
-                    (0, a.jsx)(t.E, {
-                        variant: "text-md/semibold",
+                    (0, a.jsx)(d.E, {
+                        variant: "body-md/semibold",
                         color: "text-strong",
-                        className: n()({ [d.VA]: x }),
+                        className: n()({ [t.VA]: h }),
                         children: r,
                     }),
                     null != l &&
-                        (0, a.jsx)(t.E, {
-                            variant: "text-xs/medium",
+                        (0, a.jsx)(d.E, {
+                            variant: "body-xs/medium",
                             color: "text-subtle",
-                            className: n()({ [d.VA]: x }),
+                            className: n()({ [t.VA]: h }),
                             children: l,
                         }),
                 ],

@@ -1,4 +1,4 @@
-e.d(a, { A: () => t });
+e.d(a, { A: () => h });
 var i = e(477900);
 e(582128);
 var d = e(503698),
@@ -6,7 +6,7 @@ var d = e(503698),
     l = e(534514),
     n = e(834730),
     r = e(903919);
-function t(s) {
+function h(s) {
     let { tips: a, className: e, headerText: d } = s;
     return (0, i.jsxs)("div", {
         className: c()(r.iB, e),
@@ -24,12 +24,12 @@ function t(s) {
                             className: r.eL,
                             children: [
                                 (0, i.jsx)(l.D, {
-                                    variant: "heading-md/semibold",
+                                    variant: "heading-sm/semibold",
                                     color: "text-brand",
                                     className: r.VX,
                                     children: a + 1,
                                 }),
-                                (0, i.jsx)(n.E, { variant: "text-sm/medium", children: s }),
+                                (0, i.jsx)(n.E, { variant: "body-sm/medium", children: s }),
                             ],
                         },
                         `safety-tips-${a}`,

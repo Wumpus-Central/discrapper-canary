@@ -1,5 +1,5 @@
 _.exports = {
-    oU: "text-md/medium__91a9d",
+    Lb: "body-md/medium__91a9d",
     kL: "container__91a9d",
     SU: "muted__91a9d",
     sn: "childContainer__91a9d",
@@ -11,7 +11,7 @@ _.exports = {
     Zp: "layout__91a9d",
     Ib: "wrappedLayout__91a9d",
     Qs: "content__91a9d",
-    UU: "name__91a9d text-md/medium__91a9d",
+    UU: "name__91a9d body-md/medium__91a9d",
     to: "wrappedName__91a9d",
     BG: "nameAndDecorators__91a9d",
     Sv: "subText__91a9d",

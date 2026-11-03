@@ -1,35 +1,35 @@
-n.d(e, { default: () => p });
-var a = n(477900);
-n(582128);
-var r = n(772707),
-    i = n(364522),
-    s = n(834730),
-    l = n(60888),
-    o = n(969623);
-function c(t) {
-    let { url: e } = t,
-        { protocol: n, hostname: r, theRestOfTheUrl: c } = (0, l.L)(e);
-    return (0, a.jsxs)(i.Ip, {
+a.d(n, { default: () => p });
+var r = a(477900);
+a(582128);
+var e = a(772707),
+    i = a(364522),
+    s = a(834730),
+    l = a(60888),
+    o = a(969623);
+function d(t) {
+    let { url: n } = t,
+        { protocol: a, hostname: e, theRestOfTheUrl: d } = (0, l.L)(n);
+    return (0, r.jsxs)(i.Ip, {
         className: o.u,
         children: [
-            (0, a.jsxs)(s.E, { tag: "span", variant: "text-md/normal", color: "text-muted", children: [n, "//"] }),
-            (0, a.jsx)(s.E, { tag: "span", variant: "text-md/semibold", color: "text-default", children: r }),
-            (0, a.jsx)(s.E, { tag: "span", variant: "text-md/normal", color: "text-muted", children: c }),
+            (0, r.jsxs)(s.E, { tag: "span", variant: "body-md/normal", color: "text-muted", children: [a, "//"] }),
+            (0, r.jsx)(s.E, { tag: "span", variant: "body-md/semibold", color: "text-default", children: e }),
+            (0, r.jsx)(s.E, { tag: "span", variant: "body-md/normal", color: "text-muted", children: d }),
         ],
     });
 }
-var d = n(105292),
-    u = n(117816);
+var c = a(105292),
+    u = a(117816);
 function p(t) {
-    let { url: e, onClose: n, transitionState: i } = t;
-    return (0, a.jsx)(r.k, {
+    let { url: n, onClose: a, transitionState: i } = t;
+    return (0, r.jsx)(e.k, {
         transitionState: i,
-        onClose: n,
+        onClose: a,
         graphic: { src: u.A, type: "image" },
         gradientColor: "blue",
-        title: d.intl.string(d.t["2B3wj8"]),
-        subtitle: d.intl.format(d.t.jnHyYU, {}),
-        actions: [{ text: d.intl.string(d.t["/g10LC"]), onClick: n }],
-        children: (0, a.jsx)(c, { url: e }),
+        title: c.intl.string(c.t["2B3wj8"]),
+        subtitle: c.intl.format(c.t.jnHyYU, {}),
+        actions: [{ text: c.intl.string(c.t["/g10LC"]), onClick: a }],
+        children: (0, r.jsx)(d, { url: n }),
     });
 }

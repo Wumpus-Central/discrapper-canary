@@ -49,7 +49,7 @@ function G() {
     return (0, a.jsx)("div", {
         className: O.w,
         children: (0, a.jsx)(c.E, {
-            variant: "text-md/normal",
+            variant: "body-md/normal",
             color: "text-muted",
             children: H.intl.string(H.t.V6nAfF),
         }),
@@ -239,7 +239,7 @@ function V(e) {
                                   (0, a.jsx)("img", { alt: n, src: z, className: O.o }),
                                   ee.length >= 10
                                       ? (0, a.jsx)(c.E, {
-                                            variant: "text-xs/normal",
+                                            variant: "body-xs/normal",
                                             children: H.intl.format(H.t.mdE9iE, { maxShares: 10 }),
                                         })
                                       : null,

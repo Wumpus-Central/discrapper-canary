@@ -9,24 +9,24 @@ var s = i(477900),
     d = i(534514),
     u = i(736653),
     m = i(793574),
-    x = i(688810),
-    g = i(531260),
+    g = i(688810),
+    x = i(531260),
     p = i(160946),
     f = i(287809),
     h = i(166403),
     N = i(24482),
     A = i(89366),
-    j = i(724651),
-    E = i(732280),
-    b = i(331322),
+    b = i(724651),
+    j = i(732280),
+    E = i(331322),
     T = i(62010),
     C = i(834730),
     R = i(441574),
     I = i(989790),
     _ = i(427262),
     v = i(622017),
-    P = i(113090),
-    y = i(88001),
+    y = i(113090),
+    P = i(88001),
     S = i(899082),
     D = i(105292);
 let M = function (e, t) {
@@ -34,7 +34,7 @@ let M = function (e, t) {
         s = (function () {
             let { useCachedData: e = !0, fetch: t = !0 } =
                     arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                { premiumGroupMembership: i } = (0, P.A)({ useCachedData: e, fetch: t }),
+                { premiumGroupMembership: i } = (0, y.A)({ useCachedData: e, fetch: t }),
                 { premiumGroupMembers: s } = (0, v.A)(i?.subscriptionId ?? null, { useCachedData: e, fetch: t });
             return s?.primary != null ? (0, _.$3)(s?.primary) : null;
         })({ useCachedData: !0, fetch: e === R.qT.MEMBER }),
@@ -49,16 +49,16 @@ let M = function (e, t) {
                           ? (0, I.bV)(n, { withIntervals: !0 })
                           : null == s
                             ? null
-                            : D.intl.format(S.default.Nu9LNm, { primaryName: s, premiumGroupProductName: (0, y.DP)() }))
+                            : D.intl.format(S.default.Nu9LNm, { primaryName: s, premiumGroupProductName: (0, P.DP)() }))
                       ? "..."
                       : i,
               bodyString:
                   e === R.qT.PRIMARY
                       ? D.intl.format(S.default["+R/K74"], {
-                            helpCenterLink: y.TE,
-                            premiumGroupProductName: (0, y.DP)(),
+                            helpCenterLink: P.TE,
+                            premiumGroupProductName: (0, P.DP)(),
                         })
-                      : D.intl.format(t ? S.default["xF+upx"] : S.default.qqfnOm, { helpCenterLink: y.TE }),
+                      : D.intl.format(t ? S.default["xF+upx"] : S.default.qqfnOm, { helpCenterLink: P.TE }),
           };
 };
 var O = i(139996);
@@ -70,18 +70,18 @@ function L(e) {
     return (0, s.jsxs)("div", {
         className: l()(O.kL, t),
         children: [
-            (0, s.jsxs)(b.B, {
+            (0, s.jsxs)(E.B, {
                 direction: "horizontal",
                 gap: 8,
                 align: "center",
                 className: O.wx,
                 children: [
-                    (0, s.jsx)(d.D, { variant: "nitro-sm", children: (0, y.DP)() }),
+                    (0, s.jsx)(d.D, { variant: "nitro-sm", children: (0, P.DP)() }),
                     (0, s.jsx)(T.E, { type: "beta", variant: "expressive" }),
                 ],
             }),
-            (0, s.jsx)(C.E, { variant: "text-md/medium", className: O.m_, color: "text-default", children: a }),
-            (0, s.jsx)(C.E, { variant: "text-md/medium", color: "text-default", children: r }),
+            (0, s.jsx)(C.E, { variant: "body-md/medium", className: O.m_, color: "text-default", children: a }),
+            (0, s.jsx)(C.E, { variant: "body-md/medium", color: "text-default", children: r }),
         ],
     });
 }
@@ -102,13 +102,13 @@ function Z(e) {
     let { text: t, badge: i, variant: n } = e;
     return (0, s.jsxs)(C.E, {
         color: "text-default",
-        variant: null != n ? n : "text-sm/normal",
+        variant: null != n ? n : "body-sm/normal",
         children: [t, " ", i],
     });
 }
 function J(e) {
     let { text: t, variant: i } = e;
-    return (0, s.jsx)(C.E, { color: "text-strong", variant: null != i ? i : "text-md/semibold", children: t });
+    return (0, s.jsx)(C.E, { color: "text-strong", variant: null != i ? i : "body-md/semibold", children: t });
 }
 function q(e) {
     let { includes: t } = e;
@@ -136,7 +136,7 @@ function Q() {
         className: K.Wm,
         children: (0, s.jsx)(d.D, {
             className: K.uC,
-            variant: "heading-deprecated-12/semibold",
+            variant: "body-xs/semibold",
             children: D.intl.string(D.t["o/oRJB"]),
         }),
     });
@@ -195,7 +195,7 @@ let ei = function (e) {
     var t;
     let i,
         a,
-        b,
+        E,
         {
             className: T,
             hideCTAs: C = !1,
@@ -204,18 +204,18 @@ let ei = function (e) {
             selectedPlanColumnClassName: _,
             selectedPlanTier: v = z.PremiumTypes.TIER_2,
         } = e,
-        { analyticsLocations: P } = (0, x.Ay)(m.A.PREMIUM_MARKETING_PLAN_COMPARISON),
-        y = (0, r.bG)([h.A], () => h.A.hasFetchedSubscriptions()),
+        { analyticsLocations: y } = (0, g.Ay)(m.A.PREMIUM_MARKETING_PLAN_COMPARISON),
+        P = (0, r.bG)([h.A], () => h.A.hasFetchedSubscriptions()),
         S = (0, p.Y)(z.T7),
         M = (0, u.Ay)(),
         O = (0, c.q)(M),
         B = (0, r.bG)([f.default], () => f.default.getCurrentUser()),
         H = null != B && B.isPremiumWithPremiumGroup(),
         F = (0, N.YE)(B, z.PremiumTypes.TIER_2),
-        ei = (0, E.V)(),
+        ei = (0, j.V)(),
         es = ei?.subscriptionTrial?.skuId,
         en = (0, A.Us)(),
-        ea = (0, j.O)(),
+        ea = (0, b.O)(),
         el = (0, G.YJ)(ea),
         er = null != ea && (0, G.U9)(ea, z.pe.TIER_2) && el === z.gD.PREMIUM_MONTH_TIER_2,
         ec = (0, G.N1)(el),
@@ -223,7 +223,7 @@ let ei = function (e) {
         ed = (0, N.JM)(z.gD.PREMIUM_MONTH_TIER_0),
         eu = (0, N.JM)(z.gD.PREMIUM_MONTH_TIER_2),
         em =
-            ((t = (0, g.A)().fractionalState),
+            ((t = (0, x.A)().fractionalState),
             (i = {
                 0: {
                     label: (0, s.jsx)(Z, { text: D.intl.string(D.t["09yRK3"]) }),
@@ -400,8 +400,8 @@ let ei = function (e) {
                 i[23],
                 i[24],
             ]);
-    if (!y || !S) return null;
-    let ex = {
+    if (!P || !S) return null;
+    let eg = {
         label: (0, s.jsx)(d.D, {
             className: K.__invalid_textColor,
             variant: "heading-lg/semibold",
@@ -458,7 +458,7 @@ let ei = function (e) {
               withBottomBorderRadius: !0,
               buttonsRow: null == es,
           }),
-        (b = I
+        (E = I
             ? null
             : null != es || null != en
               ? (0, s.jsx)(w.HU, {
@@ -476,9 +476,9 @@ let ei = function (e) {
                               : w.at.PREMIUM_TIER_2_WHITE_FILL,
                 })
               : (0, s.jsx)(Q, {})));
-    let eg = es === z.pe.TIER_0 || en === z.PremiumTypes.TIER_0 || v === z.PremiumTypes.TIER_0;
-    return (0, s.jsx)(x.f5, {
-        value: P,
+    let ex = es === z.pe.TIER_0 || en === z.PremiumTypes.TIER_0 || v === z.PremiumTypes.TIER_0;
+    return (0, s.jsx)(g.f5, {
+        value: y,
         children: (0, s.jsxs)("div", {
             className: l()(K.zr, T),
             "data-testid": "v2-marketing-page-comparison-table",
@@ -492,11 +492,11 @@ let ei = function (e) {
                 (0, s.jsxs)("div", {
                     className: K.wY,
                     children: [
-                        (0, s.jsx)("div", { className: l()(_, { [K.A9]: eg, [K.ce]: !eg && !H }), children: !eg && b }),
+                        (0, s.jsx)("div", { className: l()(_, { [K.A9]: ex, [K.ce]: !ex && !H }), children: !ex && E }),
                         (0, s.jsxs)("table", {
                             className: K.tp,
                             children: [
-                                (0, s.jsx)("thead", { children: (0, s.jsx)(ee, { ...ex }) }),
+                                (0, s.jsx)("thead", { children: (0, s.jsx)(ee, { ...eg }) }),
                                 (0, s.jsx)("tbody", {
                                     children: em.map((e, t) => (0, n.createElement)(et, { ...e, key: t })),
                                 }),

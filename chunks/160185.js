@@ -6,8 +6,8 @@ var n = s(477900),
     r = s(821609),
     o = s(534514),
     c = s(834730),
-    u = s(507395),
-    d = s(144779),
+    d = s(507395),
+    u = s(144779),
     m = s(18437),
     x = s(590202),
     h = s(617986),
@@ -24,8 +24,8 @@ function C(e) {
             variant: "primary",
             onClick: function () {
                 ((0, h.mA)({ fromContent: s }),
-                    (0, u.r)({
-                        type: d.F.CLICK_INTERNAL,
+                    (0, d.r)({
+                        type: u.F.CLICK_INTERNAL,
                         questContentCTA: x.Cy.VIEW_QUESTS,
                         surfaceId: s,
                         sourceQuestContent: s,
@@ -39,7 +39,7 @@ function C(e) {
 }
 function v(e) {
     let { questId: t, fallbackReason: s, bodyText: a, questContent: r } = e,
-        { containerRef: u, size: d } = (function () {
+        { containerRef: d, size: u } = (function () {
             let [e, t] = i.useState("lg"),
                 [s, n] = i.useState(void 0),
                 a = (0, j.A)((e) => {
@@ -53,25 +53,25 @@ function v(e) {
         (0, m.Ii)(s, t),
         (0, n.jsxs)("div", {
             ref: (e) => {
-                u.current = e;
+                d.current = e;
             },
-            className: l()(f.kL, { [f.U]: "lg" === d, [f.SP]: "lg" !== d }),
+            className: l()(f.kL, { [f.U]: "lg" === u, [f.SP]: "lg" !== u }),
             children: [
                 (0, n.jsxs)("div", {
                     className: f.hQ,
                     children: [
                         (0, n.jsx)(o.D, {
-                            variant: "lg" === d ? "heading-xl/semibold" : "heading-lg/semibold",
+                            variant: "lg" === u ? "heading-xl/semibold" : "heading-lg/semibold",
                             color: "text-strong",
                             children: g.intl.string(g.t.vnP31W),
                         }),
                         (0, n.jsx)(c.E, {
-                            variant: "lg" === d ? "text-sm/medium" : "text-xs/medium",
+                            variant: "lg" === u ? "body-sm/medium" : "body-xs/medium",
                             color: "text-default",
                             className: f.__invalid_mobileWebCopy,
                             children: a,
                         }),
-                        (0, n.jsx)(C, { questId: t, questContent: r, fullWidth: "lg" !== d }),
+                        (0, n.jsx)(C, { questId: t, questContent: r, fullWidth: "lg" !== u }),
                     ],
                 }),
                 (0, n.jsx)("div", {

@@ -1,4 +1,4 @@
-s.d(e, { A: () => D });
+s.d(e, { A: () => y });
 var i = s(477900),
     l = s(582128),
     a = s(503698),
@@ -12,28 +12,28 @@ var i = s(477900),
     E = s(793574),
     _ = s(688810),
     p = s(611371),
-    x = s(944304),
-    L = s(763827),
-    g = s(174459),
-    h = s(24482),
+    L = s(944304),
+    g = s(763827),
+    h = s(174459),
+    x = s(24482),
     A = s(10392),
     N = s(82498),
     f = s(286320),
     j = s(724651),
     M = s(732280),
-    k = s(725807),
-    I = s(511484),
-    T = s(811611),
-    v = s(579245),
-    S = s(778712),
-    b = s(105292),
+    b = s(725807),
+    k = s(511484),
+    I = s(811611),
+    T = s(579245),
+    v = s(778712),
+    S = s(105292),
     C = s(135916);
 function U(n) {
     let { affinities: e, className: s } = n,
         a = l.useMemo(() => {
             if (e.length > 1) {
                 var n;
-                return b.intl.formatToPlainString(b.t.HaVk0X, {
+                return S.intl.formatToPlainString(S.t.HaVk0X, {
                     username: null != (n = e[0]).globalName ? n.globalName : n.username,
                     numFriends: e.length - 1,
                 });
@@ -41,14 +41,14 @@ function U(n) {
             return "";
         }, [e]);
     if (e.length <= 1) return null;
-    let r = e.map((n, s) => (0, i.jsx)(v.n, { affinity: n, applyMask: s !== e.length - 1, size: S._3.SIZE_20 }, n.id));
+    let r = e.map((n, s) => (0, i.jsx)(T.n, { affinity: n, applyMask: s !== e.length - 1, size: v._3.SIZE_20 }, n.id));
     return (0, i.jsxs)("div", {
         className: t()(C.kL, s),
         children: [
             (0, i.jsx)("div", { className: C.zc, children: r }),
             (0, i.jsx)("div", {
                 className: C.FS,
-                children: (0, i.jsx)(u.E, { variant: "text-sm/medium", children: a }),
+                children: (0, i.jsx)(u.E, { variant: "body-sm/medium", children: a }),
             }),
         ],
     });
@@ -56,16 +56,16 @@ function U(n) {
 var O = s(202541),
     P = s(652215),
     R = s(777133);
-function D(n) {
+function y(n) {
     let {
             title: e,
             type: s,
             guildBoostProps: a,
-            analyticsSource: v,
-            analyticsLocation: S,
+            analyticsSource: T,
+            analyticsLocation: v,
             body: C,
-            context: D,
-            glowUp: y,
+            context: y,
+            glowUp: D,
             modalClassName: $,
             modalContentClassName: w,
             artContainerClassName: z,
@@ -99,11 +99,11 @@ function D(n) {
             ...n_
         } = n,
         np = null != a,
-        nx = (0, M.V)(),
-        nL = (0, j.O)(),
-        ng = !nc && (nx?.subscriptionTrial?.skuId === ne || (0, I.U9)(nL, ne)) && !np,
-        { analyticsLocations: nh } = (0, _.Ay)(E.A.PREMIUM_UPSELL_MODAL),
-        nA = { analyticsLocation: S, analyticsLocations: nh, analyticsSource: v, guildBoostProps: a, type: s },
+        nL = (0, M.V)(),
+        ng = (0, j.O)(),
+        nh = !nc && (nL?.subscriptionTrial?.skuId === ne || (0, k.U9)(ng, ne)) && !np,
+        { analyticsLocations: nx } = (0, _.Ay)(E.A.PREMIUM_UPSELL_MODAL),
+        nA = { analyticsLocation: v, analyticsLocations: nx, analyticsSource: T, guildBoostProps: a, type: s },
         nN = l.useRef(nA);
     (l.useEffect(() => {
         nN.current = nA;
@@ -118,20 +118,20 @@ function D(n) {
                 type: l,
             } = nN.current;
             np
-                ? g.default.track(P.HAw.PREMIUM_GUILD_UPSELL_VIEWED, {
+                ? h.default.track(P.HAw.PREMIUM_GUILD_UPSELL_VIEWED, {
                       type: `${l} - Tier ${i?.boostedGuildTier}`,
                       guild_id: i?.guild.id,
                       channel_id: i?.channelId,
                       location: n,
                       location_stack: e,
                   })
-                : (g.default.track(P.HAw.PREMIUM_UPSELL_VIEWED, {
+                : (h.default.track(P.HAw.PREMIUM_UPSELL_VIEWED, {
                       type: l,
                       source: s,
                       location: n,
                       location_stack: e,
-                      sku_id: (0, h.mH)(ne),
-                      voice_guild_id: L.A.getGuildId() ?? null,
+                      sku_id: (0, x.mH)(ne),
+                      voice_guild_id: g.A.getGuildId() ?? null,
                   }),
                   (0, A.sq)(P.U7l.PREMIUM_UPSELL_VIEWED, e, () => (0, N.uq)(l)));
         }, [np, ne, ns]));
@@ -150,23 +150,23 @@ function D(n) {
                 }
             })(s),
         nM = nn ? t()(R.JS, R.OV, z) : t()(R.JS, z),
-        nk = null;
+        nb = null;
     return (
         null != n_.artURL
-            ? (nk = (0, i.jsx)("img", { className: t()(V, R.Qw), alt: "", src: n_.artURL }))
-            : null != n_.artElement && (nk = n_.artElement),
+            ? (nb = (0, i.jsx)("img", { className: t()(V, R.Qw), alt: "", src: n_.artURL }))
+            : null != n_.artElement && (nb = n_.artElement),
         (0, i.jsxs)(c.EO, {
             "data-migration-pending": !0,
-            className: t()(R.zr, !ng && $),
+            className: t()(R.zr, !nh && $),
             "aria-label": e,
             transitionState: Q,
             parentComponent: "PremiumUpsellModal",
             children: [
-                null != nk &&
+                null != nb &&
                     (0, i.jsxs)("div", {
                         className: nM,
                         children: [
-                            nk,
+                            nb,
                             Z
                                 ? (0, i.jsx)("img", { className: R.CI, alt: "", src: "/assets/4fa3a10f129d5e31.png" })
                                 : null,
@@ -175,20 +175,20 @@ function D(n) {
                 (0, i.jsx)(c.$m, {
                     "data-migration-pending": !0,
                     scrollbarType: "none",
-                    className: t()(na ? R.es : R.Qs, !ng && w),
+                    className: t()(na ? R.es : R.Qs, !nh && w),
                     children: ns
                         ? (0, i.jsx)(o.y, {})
-                        : ng
-                          ? (0, i.jsx)(T.Ay, {
+                        : nh
+                          ? (0, i.jsx)(I.Ay, {
                                 onClose: G,
                                 type: s,
-                                subscriptionTier: nx?.subscriptionTrial?.skuId ?? O.pe.TIER_2,
+                                subscriptionTier: nL?.subscriptionTrial?.skuId ?? O.pe.TIER_2,
                                 headingText: e,
-                                context: D,
-                                analyticsLocationObject: S,
-                                discountOffer: nL,
-                                trialOffer: nx,
-                                children: y,
+                                context: y,
+                                analyticsLocationObject: v,
+                                discountOffer: ng,
+                                trialOffer: nL,
+                                children: D,
                             })
                           : (0, i.jsxs)("div", {
                                 className: R.hQ,
@@ -205,7 +205,7 @@ function D(n) {
                                             nj ? (0, i.jsx)(U, { affinities: nf }) : void 0,
                                             no,
                                             (0, i.jsx)(u.E, {
-                                                variant: nm ? "text-sm/normal" : "text-md/normal",
+                                                variant: nm ? "body-sm/normal" : "body-md/normal",
                                                 className: t()(H, R.uI),
                                                 children: C,
                                             }),
@@ -234,23 +234,23 @@ function D(n) {
                                     : null,
                                 (function () {
                                     if (np)
-                                        return (0, i.jsx)(x.A, { analyticsLocation: S, guild: a.guild, onClose: G });
-                                    let n = na ? b.intl.string(b.t.pj0XBN) : void 0;
+                                        return (0, i.jsx)(L.A, { analyticsLocation: v, guild: a.guild, onClose: G });
+                                    let n = na ? S.intl.string(S.t.pj0XBN) : void 0;
                                     return (
-                                        ng &&
-                                            (null != nx
-                                                ? (n = (0, h.FY)({
-                                                      intervalType: nx?.subscriptionTrial?.interval,
-                                                      intervalCount: nx?.subscriptionTrial?.intervalCount,
+                                        nh &&
+                                            (null != nL
+                                                ? (n = (0, x.FY)({
+                                                      intervalType: nL?.subscriptionTrial?.interval,
+                                                      intervalCount: nL?.subscriptionTrial?.intervalCount,
                                                   }))
-                                                : null != nL &&
-                                                  (n = b.intl.formatToPlainString(b.t.bkQ4bH, {
-                                                      percent: nL.discount.amount,
+                                                : null != ng &&
+                                                  (n = S.intl.formatToPlainString(S.t.bkQ4bH, {
+                                                      percent: ng.discount.amount,
                                                   }))),
-                                        (0, i.jsx)(k.A, {
+                                        (0, i.jsx)(b.A, {
                                             className: nr,
                                             showGradient: na || nt,
-                                            premiumModalAnalyticsLocation: S,
+                                            premiumModalAnalyticsLocation: v,
                                             subscriptionTier: ne,
                                             size: r.$n.Sizes.SMALL,
                                             color: na || nt ? r.$n.Colors.CUSTOM : r.$n.Colors.GREEN,
@@ -269,7 +269,7 @@ function D(n) {
                             (0, i.jsx)(m.$, {
                                 variant: "secondary",
                                 size: "sm",
-                                text: null != nl ? nl : b.intl.string(b.t["13/7kX"]),
+                                text: null != nl ? nl : S.intl.string(S.t["13/7kX"]),
                                 onClick: G,
                             }),
                     ],

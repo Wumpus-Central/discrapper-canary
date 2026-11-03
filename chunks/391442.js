@@ -1,16 +1,16 @@
-t.d(e, { A: () => d });
-var a = t(477900);
-t(582128);
-var i = t(834730),
-    r = t(696986),
-    c = t(329990);
+e.d(a, { A: () => d });
+var i = e(477900);
+e(582128);
+var r = e(834730),
+    t = e(696986),
+    c = e(329990);
 function d(s) {
-    let { children: e, label: t } = s;
-    return (0, a.jsxs)("li", {
+    let { children: a, label: e } = s;
+    return (0, i.jsxs)("li", {
         children: [
-            (0, a.jsx)(i.E, { variant: "text-xs/semibold", color: "text-default", className: c.a, children: t }),
-            (0, a.jsx)(r.h, { size: 12 }),
-            e,
+            (0, i.jsx)(r.E, { variant: "body-xs/semibold", color: "text-default", className: c.a, children: e }),
+            (0, i.jsx)(t.h, { size: 12 }),
+            a,
         ],
     });
 }

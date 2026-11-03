@@ -1,54 +1,54 @@
-l.d(t, { DevToolsLinkEmbed: () => x });
-var n = l(477900),
-    i = l(582128),
-    s = l(17928),
-    a = l(331322),
-    r = l(346411),
-    o = l(834730),
-    c = l(821609),
-    d = l(287809),
-    u = l(538064),
-    p = l(333421),
-    h = l(614367);
+n.d(l, { DevToolsLinkEmbed: () => T });
+var t = n(477900),
+    i = n(582128),
+    s = n(17928),
+    a = n(331322),
+    r = n(346411),
+    o = n(834730),
+    d = n(821609),
+    c = n(287809),
+    u = n(538064),
+    p = n(333421),
+    h = n(614367);
 function f(e) {
     return e
         .split(/[_-]/)
         .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
         .join(" ");
 }
-function x(e) {
-    let { url: t } = e,
-        l = i.useMemo(() => (0, p.AG)(t), [t]),
-        x = i.useMemo(() => (0, p.uJ)(t), [t]),
-        T = (0, s.bG)([d.default], () => {
-            let e = d.default.getCurrentUser();
+function T(e) {
+    let { url: l } = e,
+        n = i.useMemo(() => (0, p.AG)(l), [l]),
+        T = i.useMemo(() => (0, p.uJ)(l), [l]),
+        b = (0, s.bG)([c.default], () => {
+            let e = c.default.getCurrentUser();
             return e?.isStaff() || e?.isStaffPersonal();
         }),
         m = i.useCallback(() => {
-            null != l && (0, u.Ft)(l, x ?? void 0);
-        }, [l, x]);
-    if (!T || null == l) return null;
-    let v = f(l),
-        b = null != x ? f(x) : null,
-        j = null != b ? `${v} > ${b}` : v;
-    return (0, n.jsxs)("div", {
+            null != n && (0, u.Ft)(n, T ?? void 0);
+        }, [n, T]);
+    if (!b || null == n) return null;
+    let v = f(n),
+        x = null != T ? f(T) : null,
+        j = null != x ? `${v} > ${x}` : v;
+    return (0, t.jsxs)("div", {
         className: h.z,
         children: [
-            (0, n.jsx)("div", {
+            (0, t.jsx)("div", {
                 className: h.w,
-                children: (0, n.jsxs)(a.B, {
+                children: (0, t.jsxs)(a.B, {
                     direction: "horizontal",
                     align: "center",
                     gap: 8,
                     children: [
-                        (0, n.jsx)(r.WrenchIcon, { size: "lg" }),
-                        (0, n.jsxs)(a.B, {
+                        (0, t.jsx)(r.WrenchIcon, { size: "lg" }),
+                        (0, t.jsxs)(a.B, {
                             direction: "vertical",
                             gap: 0,
                             children: [
-                                (0, n.jsx)(o.E, { variant: "text-md/semibold", children: j }),
-                                (0, n.jsx)(o.E, {
-                                    variant: "text-xs/normal",
+                                (0, t.jsx)(o.E, { variant: "body-md/semibold", children: j }),
+                                (0, t.jsx)(o.E, {
+                                    variant: "body-xs/normal",
                                     color: "text-muted",
                                     children: "DevTools",
                                 }),
@@ -57,7 +57,7 @@ function x(e) {
                     ],
                 }),
             }),
-            (0, n.jsx)(c.$, { fullWidth: !0, variant: "primary", text: `Open ${j}`, onClick: m }),
+            (0, t.jsx)(d.$, { fullWidth: !0, variant: "primary", text: `Open ${j}`, onClick: m }),
         ],
     });
 }

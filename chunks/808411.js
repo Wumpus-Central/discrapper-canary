@@ -13,7 +13,7 @@ let p = function () {
         [l, p] = n.useState(4),
         [m, b] = n.useState(2),
         [h, x] = n.useState(d.fh.LIGHT),
-        [f, y] = n.useState(d.qP.BLUE),
+        [y, f] = n.useState(d.qP.BLUE),
         [v, g] = n.useState("darkslategray"),
         [E, S] = n.useState("blanchedalmond"),
         [j, C] = n.useState("pink"),
@@ -41,7 +41,7 @@ let p = function () {
                 minimum: e,
                 maximum: l,
                 weight: h,
-                variant: f,
+                variant: y,
                 override: { default: { background: v, gradientStart: E, gradientEnd: j } },
                 glowing: T,
             }),
@@ -82,9 +82,9 @@ let p = function () {
                     hideLabel: !0,
                     placeholder: "Variant",
                     onSelectionChange: (e) => {
-                        null !== e && y(e);
+                        null !== e && f(e);
                     },
-                    value: f,
+                    value: y,
                     options: _,
                     selectionMode: "single",
                     fullWidth: !0,
@@ -113,12 +113,12 @@ let p = function () {
             }),
             (0, a.jsx)(c.nB, {}),
             (0, a.jsx)(u.E, {
-                variant: "text-lg/semibold",
+                variant: "body-lg/semibold",
                 color: "text-feedback-critical",
                 children: "To use overrides, the variant must be set to UNSET",
             }),
             (0, a.jsx)(u.E, {
-                variant: "text-md/normal",
+                variant: "body-md/normal",
                 children:
                     'Note: this component allows setting overrides per theme. For simplicity in this story, we only set the "default" override which applies to all themes',
             }),

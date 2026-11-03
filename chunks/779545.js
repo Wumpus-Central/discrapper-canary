@@ -11,54 +11,54 @@ var n = l(477900),
     u = l(683438),
     m = l(265872),
     H = l(821609),
-    x = l(112173),
-    h = l(71393),
+    h = l(112173),
+    x = l(71393),
     g = l(576705),
     f = l(287809),
     j = l(504049),
     p = l(134413),
     v = l(151781),
     V = l(221950),
-    A = l(435558),
-    M = l.n(A),
-    L = l(17928),
-    b = l(189213),
+    b = l(435558),
+    A = l.n(b),
+    M = l(17928),
+    L = l(189213),
     D = l(144228),
     R = l(364522),
     E = l(890497),
     S = l(834730),
     N = l(73153),
-    Z = l(636537),
-    I = l(652215);
-let y = {
+    y = l(636537),
+    Z = l(652215);
+let I = {
     async updateEstimate(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 7,
             l = arguments.length > 2 ? arguments[2] : void 0;
         return (
-            await Z.Bo.get({
-                url: I.Rsh.GUILD_PRUNE(e),
+            await y.Bo.get({
+                url: Z.Rsh.GUILD_PRUNE(e),
                 query: { days: t, include_roles: l },
                 oldFormErrors: !0,
-                rejectWithError: (0, Z.fT)(),
+                rejectWithError: (0, y.fT)(),
             })
         ).body.pruned;
     },
     async updateEstimateV2(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 7,
             l = arguments.length > 2 ? arguments[2] : void 0;
-        await Z.Bo.get({
-            url: I.Rsh.GUILD_PRUNE_V2(e),
+        await y.Bo.get({
+            url: Z.Rsh.GUILD_PRUNE_V2(e),
             query: { days: t, include_roles: l },
             oldFormErrors: !0,
-            rejectWithError: (0, Z.fT)(),
+            rejectWithError: (0, y.fT)(),
         });
     },
     prune: (e, t, l) =>
-        Z.Bo.post({
-            url: I.Rsh.GUILD_PRUNE(e),
+        y.Bo.post({
+            url: Z.Rsh.GUILD_PRUNE(e),
             body: { days: t, compute_prune_count: !1, include_roles: l },
             oldFormErrors: !0,
-            rejectWithError: (0, Z.fT)(),
+            rejectWithError: (0, y.fT)(),
         }),
 };
 var _ = l(34457),
@@ -121,16 +121,16 @@ function F(e) {
         );
     }, [C.id, r, o]),
         i.useEffect(() => {
-            null == u && y.updateEstimateV2(C.id, r, o);
+            null == u && I.updateEstimateV2(C.id, r, o);
         }, [C.id, r, o, u]));
     let H = i.useCallback(() => {
-            (y.prune(C.id, r, o), a(), T.getState().clear());
+            (I.prune(C.id, r, o), a(), T.getState().clear());
         }, [C.id, r, o, a]),
-        x = (0, L.yK)(
+        h = (0, M.yK)(
             [g.A, w.A],
             () => {
                 let e = g.A.getHighestRole(C);
-                return M()(w.A.getSortedRoles(C.id))
+                return A()(w.A.getSortedRoles(C.id))
                     .filter((t) => !(0, _.Oy)(t) && g.A.isRoleHigher(C, e, t))
                     .map((e) => {
                         let { id: t, name: l } = e;
@@ -140,7 +140,7 @@ function F(e) {
             },
             [C],
         );
-    return (0, n.jsx)(b.a, {
+    return (0, n.jsx)(L.a, {
         title: `${O.intl.string(O.t.zbyz7p)}\u{2014}${null != C ? C.name : ""}`,
         actions: [
             { text: O.intl.string(O.t["ETE/oC"]), onClick: a, variant: "secondary" },
@@ -172,11 +172,11 @@ function F(e) {
                         maxOptionsVisible: 10,
                         value: o,
                         onSelectionChange: (e) => c(e),
-                        options: x,
+                        options: h,
                     }),
                 }),
                 (0, n.jsx)(S.E, {
-                    variant: "text-sm/normal",
+                    variant: "body-sm/normal",
                     children:
                         o.length > 0
                             ? O.intl.format(m ? O.t.xSDcLk : O.t["5WxHHp"], { members: u ?? -1, days: r })
@@ -187,9 +187,9 @@ function F(e) {
     });
 }
 let G = function (e) {
-    return (0, L.bG)(
-        [h.A, g.A, f.default],
-        () => (0, p.dQ)(h.A.getGuild(e.guild.id) ?? e.guild, f.default.getCurrentUser(), g.A),
+    return (0, M.bG)(
+        [x.A, g.A, f.default],
+        () => (0, p.dQ)(x.A.getGuild(e.guild.id) ?? e.guild, f.default.getCurrentUser(), g.A),
         [e.guild],
     )
         ? (0, n.jsx)(F, { ...e })
@@ -201,23 +201,23 @@ let q = function (e) {
     let { guild: t, ref: l } = e,
         C = i.useRef(null),
         a = (0, d.bG)([v.A], () => v.A.hasDefaultSearchStateByGuildId(t.id), [t.id]),
-        A = (0, d.bG)(
-            [h.A, g.A, f.default],
-            () => (0, p.dQ)(h.A.getGuild(t.id) ?? t, f.default.getCurrentUser(), g.A),
+        b = (0, d.bG)(
+            [x.A, g.A, f.default],
+            () => (0, p.dQ)(x.A.getGuild(t.id) ?? t, f.default.getCurrentUser(), g.A),
             [t],
         ),
-        M = i.useCallback(() => {
-            null != t && A && (0, o.openModalLazy)(async () => (e) => (0, n.jsx)(G, { ...e, guild: t }));
-        }, [t, A]),
-        L = (0, d.bG)([v.A], () => v.A.getSearchStateByGuildId(t.id), [t.id], r()),
-        b = (0, j.Ks)(t.id),
-        [D, R] = i.useState(L.query),
+        A = i.useCallback(() => {
+            null != t && b && (0, o.openModalLazy)(async () => (e) => (0, n.jsx)(G, { ...e, guild: t }));
+        }, [t, b]),
+        M = (0, d.bG)([v.A], () => v.A.getSearchStateByGuildId(t.id), [t.id], r()),
+        L = (0, j.Ks)(t.id),
+        [D, R] = i.useState(M.query),
         E = i.useCallback(
             (e) => {
                 let l = e.trim();
-                (l.length > 0 && b(), (0, V.Ld)(t.id, { query: l }));
+                (l.length > 0 && L(), (0, V.Ld)(t.id, { query: l }));
             },
-            [t.id, b],
+            [t.id, L],
         ),
         S = i.useMemo(() => s()(E, 300), [E]),
         N = i.useCallback(
@@ -226,7 +226,7 @@ let q = function (e) {
             },
             [S],
         ),
-        Z = i.useCallback(() => {
+        y = i.useCallback(() => {
             (R(""), E(""));
         }, [E]);
     return (
@@ -241,8 +241,8 @@ let q = function (e) {
                 (0, n.jsx)("div", {
                     className: P.wL,
                     children: a
-                        ? (0, n.jsx)(c.D, { variant: "heading-md/medium", children: O.intl.string(O.t.y12ALM) })
-                        : (0, n.jsx)(c.D, { variant: "heading-md/medium", children: O.intl.string(O.t.BUqwK8) }),
+                        ? (0, n.jsx)(c.D, { variant: "heading-sm/medium", children: O.intl.string(O.t.y12ALM) })
+                        : (0, n.jsx)(c.D, { variant: "heading-sm/medium", children: O.intl.string(O.t.BUqwK8) }),
                 }),
                 (0, n.jsx)("div", {
                     className: P.Rt,
@@ -253,7 +253,7 @@ let q = function (e) {
                             query: D,
                             placeholder: O.intl.string(O.t["NVoAM+"]),
                             onChange: N,
-                            onClear: Z,
+                            onClear: y,
                             autoComplete: "off",
                             inputProps: { autoCapitalize: "none", autoCorrect: "off", spellCheck: "false" },
                         }),
@@ -279,7 +279,7 @@ let q = function (e) {
                                 onClick: t,
                                 size: "sm",
                                 variant: "secondary",
-                                icon: x.J,
+                                icon: h.J,
                             });
                         },
                     }),
@@ -287,7 +287,7 @@ let q = function (e) {
                 (0, n.jsx)("div", {
                     className: P.nw,
                     children:
-                        A &&
+                        b &&
                         (0, n.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: P.__invalid_pruneButton,
@@ -295,7 +295,7 @@ let q = function (e) {
                                 variant: "critical-secondary",
                                 size: "sm",
                                 text: O.intl.string(O.t["2mIlKQ"]),
-                                onClick: M,
+                                onClick: A,
                                 "aria-label": O.intl.string(O.t.zbyz7p),
                             }),
                         }),

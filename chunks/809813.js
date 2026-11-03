@@ -1,4 +1,4 @@
-(i.r(e), i.d(e, { TrialsSharedConfirmationModal: () => S }));
+(i.r(e), i.d(e, { TrialsSharedConfirmationModal: () => y }));
 var s = i(477900),
     r = i(582128),
     n = i(503698),
@@ -17,17 +17,17 @@ var s = i(477900),
     x = i(854627),
     f = i(830543),
     C = i(975571),
-    E = i(427262),
-    v = i(326084),
-    j = i(851746),
-    b = i(652215),
+    b = i(427262),
+    E = i(326084),
+    v = i(851746),
+    j = i(652215),
     k = i(105292),
     N = i(37576);
 function _(t) {
     let { recipient: e, status: i, onClose: r } = t,
         { avatarSrc: n, eventHandlers: l } = (0, x.A)({ userId: e?.id, size: d._3.SIZE_56 }),
-        c = E.Ay.getName(e),
-        g = i === v.o.FAIL;
+        c = b.Ay.getName(e),
+        g = i === E.o.FAIL;
     return (0, s.jsxs)("div", {
         className: N.w4,
         children: [
@@ -37,19 +37,19 @@ function _(t) {
                       children: [
                           (0, s.jsx)(m.E, {
                               className: N.E0,
-                              variant: "text-md/medium",
+                              variant: "body-md/medium",
                               color: "text-strong",
                               children: c,
                           }),
                           (0, s.jsx)(m.E, {
-                              variant: "text-md/medium",
+                              variant: "body-md/medium",
                               className: N.nT,
                               color: "text-strong",
                               children: k.intl.format(k.t.RO3T4B, { userName: c }),
                           }),
                       ],
                   })
-                : (0, s.jsx)(m.E, { variant: "text-md/medium", className: N.Pm, color: "text-strong", children: c }),
+                : (0, s.jsx)(m.E, { variant: "body-md/medium", className: N.Pm, color: "text-strong", children: c }),
             (0, s.jsx)(u.$, {
                 variant: "secondary",
                 size: "sm",
@@ -63,7 +63,7 @@ function _(t) {
         ],
     });
 }
-function S(t) {
+function y(t) {
     let {
             transitionState: e,
             results: i,
@@ -72,7 +72,7 @@ function S(t) {
             showRecipientList: d = !0,
             recipientName: o,
         } = t,
-        m = (0, l.bG)([j.A], () => j.A.getReferralsRemaining()),
+        m = (0, l.bG)([v.A], () => v.A.getReferralsRemaining()),
         { reducedMotion: u } = r.useContext(c.C);
     return null === m
         ? (0, s.jsx)(g.y, {})
@@ -85,7 +85,7 @@ function S(t) {
                   : { rive: A.l, type: "rive" },
               gradientColor: "nitro-pink",
               title:
-                  0 === i.filter((t) => t.status === v.o.SUCCESS).length
+                  0 === i.filter((t) => t.status === E.o.SUCCESS).length
                       ? k.intl.string(k.t["7VBEue"])
                       : !0 === a
                         ? k.intl.string(k.t.GP5lbq)
@@ -94,11 +94,11 @@ function S(t) {
                   null != o
                       ? k.intl.format(k.t.s8VHbZ, {
                             recipientName: o,
-                            helpdeskArticle: C.A.getArticleURL(b.MVz.REFERRAL_PROGRAM),
+                            helpdeskArticle: C.A.getArticleURL(j.MVz.REFERRAL_PROGRAM),
                         })
                       : !0 === a
-                        ? k.intl.format(k.t["4gJJfD"], { helpdeskArticle: C.A.getArticleURL(b.MVz.REFERRAL_PROGRAM) })
-                        : k.intl.format(k.t.AwGSWl, { helpdeskArticle: C.A.getArticleURL(b.MVz.REFERRAL_PROGRAM) }),
+                        ? k.intl.format(k.t["4gJJfD"], { helpdeskArticle: C.A.getArticleURL(j.MVz.REFERRAL_PROGRAM) })
+                        : k.intl.format(k.t.AwGSWl, { helpdeskArticle: C.A.getArticleURL(j.MVz.REFERRAL_PROGRAM) }),
               onClose: n,
               transitionState: e,
               children: d

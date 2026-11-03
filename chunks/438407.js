@@ -1,4 +1,4 @@
-(n.d(t, { H: () => f, r: () => p }), n(321073));
+(n.d(t, { H: () => x, r: () => p }), n(321073));
 var l = n(477900),
     r = n(582128),
     a = n(503698),
@@ -30,10 +30,10 @@ function U(e) {
         n = (0, g.h)(t);
     return (0, l.jsx)("strong", { children: n?.name ?? t });
 }
-function x(e, t) {
+function f(e, t) {
     return (0, l.jsx)("div", { className: C.colorHook, style: { backgroundColor: t } }, e);
 }
-class f extends r.PureComponent {
+class x extends r.PureComponent {
     render() {
         let { actionType: e, targetType: t, action: n, themeOverride: r } = this.props,
             a = null != r ? C[`themeOverride${(0, m.$G)(r)}`] : null,
@@ -228,13 +228,13 @@ function p(e) {
                                                                         (0, l.jsxs)("div", {
                                                                             className: C.onboardingChangeLogItemTitle,
                                                                             children: [
-                                                                                (0, l.jsx)(f, {
+                                                                                (0, l.jsx)(x, {
                                                                                     actionType: L.RWi.CREATE,
                                                                                     targetType: t.targetType,
                                                                                     action: t.action,
                                                                                 }),
                                                                                 (0, l.jsx)(c.E, {
-                                                                                    variant: "text-md/normal",
+                                                                                    variant: "body-md/normal",
                                                                                     children: h.intl.format(
                                                                                         h.t.CZ1tyo,
                                                                                         { title: a },
@@ -247,7 +247,7 @@ function p(e) {
                                                                             children: [
                                                                                 u.length > 0 &&
                                                                                     (0, l.jsx)(c.E, {
-                                                                                        variant: "text-md/normal",
+                                                                                        variant: "body-md/normal",
                                                                                         children: h.intl.format(
                                                                                             h.t["gt/5z1"],
                                                                                             { roles: u.join(", ") },
@@ -255,7 +255,7 @@ function p(e) {
                                                                                     }),
                                                                                 o.length > 0 &&
                                                                                     (0, l.jsx)(c.E, {
-                                                                                        variant: "text-md/normal",
+                                                                                        variant: "body-md/normal",
                                                                                         children: h.intl.format(
                                                                                             h.t["4q006W"],
                                                                                             { channels: o.join(", ") },
@@ -275,13 +275,13 @@ function p(e) {
                                                                     children: (0, l.jsxs)("div", {
                                                                         className: C.onboardingChangeLogItemTitle,
                                                                         children: [
-                                                                            (0, l.jsx)(f, {
+                                                                            (0, l.jsx)(x, {
                                                                                 actionType: L.RWi.DELETE,
                                                                                 targetType: t.targetType,
                                                                                 action: t.action,
                                                                             }),
                                                                             (0, l.jsx)(c.E, {
-                                                                                variant: "text-md/normal",
+                                                                                variant: "body-md/normal",
                                                                                 children: h.intl.format(h.t["m3dt+K"], {
                                                                                     title: e.title,
                                                                                 }),
@@ -322,13 +322,13 @@ function p(e) {
                                                                                       className:
                                                                                           C.onboardingChangeLogItemTitle,
                                                                                       children: [
-                                                                                          (0, l.jsx)(f, {
+                                                                                          (0, l.jsx)(x, {
                                                                                               actionType: L.RWi.UPDATE,
                                                                                               targetType: t.targetType,
                                                                                               action: t.action,
                                                                                           }),
                                                                                           (0, l.jsx)(c.E, {
-                                                                                              variant: "text-md/normal",
+                                                                                              variant: "body-md/normal",
                                                                                               children: h.intl.format(
                                                                                                   h.t["WZO+ia"],
                                                                                                   { title: r },
@@ -343,7 +343,7 @@ function p(e) {
                                                                                           A.length > 0 &&
                                                                                               (0, l.jsx)(c.E, {
                                                                                                   variant:
-                                                                                                      "text-md/normal",
+                                                                                                      "body-md/normal",
                                                                                                   children:
                                                                                                       h.intl.format(
                                                                                                           h.t["R+km+d"],
@@ -357,7 +357,7 @@ function p(e) {
                                                                                           g.length > 0 &&
                                                                                               (0, l.jsx)(c.E, {
                                                                                                   variant:
-                                                                                                      "text-md/normal",
+                                                                                                      "body-md/normal",
                                                                                                   children:
                                                                                                       h.intl.format(
                                                                                                           h.t.xIVRoU,
@@ -371,7 +371,7 @@ function p(e) {
                                                                                           T.length > 0 &&
                                                                                               (0, l.jsx)(c.E, {
                                                                                                   variant:
-                                                                                                      "text-md/normal",
+                                                                                                      "body-md/normal",
                                                                                                   children:
                                                                                                       h.intl.format(
                                                                                                           h.t.iYowX4,
@@ -386,7 +386,7 @@ function p(e) {
                                                                                           I.length > 0 &&
                                                                                               (0, l.jsx)(c.E, {
                                                                                                   variant:
-                                                                                                      "text-md/normal",
+                                                                                                      "body-md/normal",
                                                                                                   children:
                                                                                                       h.intl.format(
                                                                                                           h.t.JLdJpL,
@@ -403,7 +403,7 @@ function p(e) {
                                                                                                   c.E,
                                                                                                   {
                                                                                                       variant:
-                                                                                                          "text-md/normal",
+                                                                                                          "body-md/normal",
                                                                                                       children:
                                                                                                           h.intl.format(
                                                                                                               h.t[
@@ -458,7 +458,7 @@ function p(e) {
                                                                       children: (0, l.jsx)("div", {
                                                                           className: C.onboardingChangeLogItemTitle,
                                                                           children: (0, l.jsx)(c.E, {
-                                                                              variant: "text-md/normal",
+                                                                              variant: "body-md/normal",
                                                                               children: h.intl.format(h.t["PrOzA+"], {
                                                                                   oldUser:
                                                                                       _?.username ??
@@ -477,7 +477,7 @@ function p(e) {
                                                                       children: (0, l.jsx)("div", {
                                                                           className: C.onboardingChangeLogItemTitle,
                                                                           children: (0, l.jsx)(c.E, {
-                                                                              variant: "text-md/normal",
+                                                                              variant: "body-md/normal",
                                                                               children: h.intl.format(h.t.oB7rBb, {
                                                                                   oldMessage:
                                                                                       a?.message ??
@@ -509,13 +509,13 @@ function p(e) {
                                                                                 className:
                                                                                     C.onboardingChangeLogItemTitle,
                                                                                 children: [
-                                                                                    (0, l.jsx)(f, {
+                                                                                    (0, l.jsx)(x, {
                                                                                         actionType: L.RWi.CREATE,
                                                                                         targetType: u,
                                                                                         action: o,
                                                                                     }),
                                                                                     (0, l.jsx)(c.E, {
-                                                                                        variant: "text-md/normal",
+                                                                                        variant: "body-md/normal",
                                                                                         children: h.intl.format(
                                                                                             h.t.oFSu66,
                                                                                             { name: e.title },
@@ -535,13 +535,13 @@ function p(e) {
                                                                                 className:
                                                                                     C.onboardingChangeLogItemTitle,
                                                                                 children: [
-                                                                                    (0, l.jsx)(f, {
+                                                                                    (0, l.jsx)(x, {
                                                                                         actionType: L.RWi.DELETE,
                                                                                         targetType: u,
                                                                                         action: o,
                                                                                     }),
                                                                                     (0, l.jsx)(c.E, {
-                                                                                        variant: "text-md/normal",
+                                                                                        variant: "body-md/normal",
                                                                                         children: h.intl.format(
                                                                                             h.t.GssWar,
                                                                                             { name: e.title },
@@ -557,17 +557,17 @@ function p(e) {
                                                         })
                                                     );
                                                 case L.gGk.RESOURCE_CHANNELS:
-                                                    let D, R, M, U, x, p;
+                                                    let D, R, M, U, f, p;
                                                     return (
                                                         (D = (r = a ?? []).map((e) => e.channel_id)),
                                                         (R = i.map((e) => e.channel_id)),
                                                         (M = E().difference(R, D)),
                                                         (U = E().difference(D, R)),
-                                                        (x = i.filter((e) => M.includes(e.channel_id))),
+                                                        (f = i.filter((e) => M.includes(e.channel_id))),
                                                         (p = r.filter((e) => U.includes(e.channel_id))),
                                                         (0, l.jsxs)("ul", {
                                                             children: [
-                                                                x.map((e) =>
+                                                                f.map((e) =>
                                                                     (0, l.jsx)(
                                                                         "li",
                                                                         {
@@ -575,13 +575,13 @@ function p(e) {
                                                                                 className:
                                                                                     C.onboardingChangeLogItemTitle,
                                                                                 children: [
-                                                                                    (0, l.jsx)(f, {
+                                                                                    (0, l.jsx)(x, {
                                                                                         actionType: L.RWi.CREATE,
                                                                                         targetType: u,
                                                                                         action: o,
                                                                                     }),
                                                                                     (0, l.jsx)(c.E, {
-                                                                                        variant: "text-md/normal",
+                                                                                        variant: "body-md/normal",
                                                                                         children: h.intl.format(
                                                                                             h.t.HlGndE,
                                                                                             { name: e.title },
@@ -601,13 +601,13 @@ function p(e) {
                                                                                 className:
                                                                                     C.onboardingChangeLogItemTitle,
                                                                                 children: [
-                                                                                    (0, l.jsx)(f, {
+                                                                                    (0, l.jsx)(x, {
                                                                                         actionType: L.RWi.DELETE,
                                                                                         targetType: u,
                                                                                         action: o,
                                                                                     }),
                                                                                     (0, l.jsx)(c.E, {
-                                                                                        variant: "text-md/normal",
+                                                                                        variant: "body-md/normal",
                                                                                         children: h.intl.format(
                                                                                             h.t["7pysg6"],
                                                                                             { name: e.title },
@@ -645,7 +645,7 @@ function p(e) {
                                     newValue: E,
                                     count: Array.isArray(E) ? E.length : 0,
                                     subtarget: i.options.subtarget ?? u.subtarget ?? "",
-                                    newColorHook: (e, t) => x(t, u.newValue),
+                                    newColorHook: (e, t) => f(t, u.newValue),
                                     newColorsHook: (e, t) => {
                                         let { primary_color: n, secondary_color: a, tertiary_color: i } = E;
                                         return (0, l.jsx)(
@@ -662,7 +662,7 @@ function p(e) {
                                                                         className: C.colorsHook,
                                                                         children: `${n > 0 ? ", " : ""}${(0, _.Hl)(e).toUpperCase()} `,
                                                                     }),
-                                                                    x(t, (0, _.Hl)(e)),
+                                                                    f(t, (0, _.Hl)(e)),
                                                                 ],
                                                             },
                                                             n,
@@ -672,7 +672,7 @@ function p(e) {
                                             t,
                                         );
                                     },
-                                    oldColorHook: (e, t) => x(t, u.oldValue),
+                                    oldColorHook: (e, t) => f(t, u.oldValue),
                                     oldTagHook: (e, t) => (0, l.jsx)(T.Ay, { tag: s, size: T.Ay.Sizes.SMALL }, t),
                                     newTagHook: (e, t) => (0, l.jsx)(T.Ay, { tag: E, size: T.Ay.Sizes.SMALL }, t),
                                     oldEmojiHook: (e, t) => (0, l.jsx)(A.A, { emojiId: s }, t),
@@ -692,7 +692,7 @@ function p(e) {
                                               children: [
                                                   (0, l.jsxs)(c.E, {
                                                       className: C.prefix,
-                                                      variant: "code",
+                                                      variant: "mono-md/bold",
                                                       color: (function (e) {
                                                           switch (e) {
                                                               case L.RWi.CREATE:

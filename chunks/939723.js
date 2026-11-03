@@ -14,8 +14,8 @@ var r = n(477900),
     p = n(214947),
     m = n(34188),
     x = n(577473),
-    C = n(27232),
-    b = n(812993),
+    b = n(27232),
+    C = n(812993),
     y = n(939249),
     k = n(834730),
     w = n(366605),
@@ -178,7 +178,7 @@ function X(e) {
               ? (ep = (0, r.jsx)(m.U, { size: "xs", color: "currentColor", className: G.PA }))
               : t.routePath === L.BVt.QUEST_HOME &&
                 (ep = (0, r.jsx)(x.r, { size: "xs", color: "currentColor", className: G.PA }));
-    else if ((0, E.ai)(t.guildId)) ep = (0, r.jsx)(C.StarIcon, { size: "xs", color: "currentColor", className: G.PA });
+    else if ((0, E.ai)(t.guildId)) ep = (0, r.jsx)(b.StarIcon, { size: "xs", color: "currentColor", className: G.PA });
     else if (null != Z && Z.isThread()) {
         let e = (0, N.gU)(Z);
         null != e && (ep = (0, r.jsx)(e, { size: "xs", color: "currentColor", className: G.PA }));
@@ -193,7 +193,7 @@ function X(e) {
             (em = (0, r.jsx)("div", {
                 className: G.WK,
                 "aria-hidden": !0,
-                children: (0, r.jsx)(b.hV, {
+                children: (0, r.jsx)(C.hV, {
                     count: ef,
                     color: eh ? g.A.colors.BACKGROUND_MOD_STRONG.css : g.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
                 }),
@@ -217,7 +217,7 @@ function X(e) {
                     children: [
                         null != ep && (0, r.jsxs)("span", { className: G.P0, children: [ep, em] }),
                         (0, r.jsxs)(k.E, {
-                            variant: "text-sm/medium",
+                            variant: "body-sm/medium",
                             className: G.HA,
                             children: [et, (0, r.jsx)("span", { className: G.Zi, "aria-hidden": !0 })],
                         }),
@@ -284,8 +284,8 @@ function q() {
         p,
         m,
         x,
-        C,
         b,
+        C,
         y,
         k,
         w,
@@ -326,8 +326,8 @@ function q() {
         (p = l.useRef([])),
         (m = l.useRef(0)),
         (x = l.useRef(0)),
-        (C = l.useRef(0)),
         (b = l.useRef(0)),
+        (C = l.useRef(0)),
         (y = l.useRef(0)),
         (k = l.useRef(0)),
         (w = l.useRef(0)),
@@ -433,7 +433,7 @@ function q() {
                 if (null == s || null == i) return;
                 let a = s.getBoundingClientRect(),
                     u = parseFloat(getComputedStyle(s).columnGap);
-                C.current = Number.isFinite(u) ? u : 0;
+                b.current = Number.isFinite(u) ? u : 0;
                 let c = [];
                 z.forEach((e) => {
                     let n = t.current.get(e.id);
@@ -476,7 +476,7 @@ function q() {
                 let M = parseFloat(i.style.left);
                 g.current = M;
                 let N = Number.isFinite(v) ? v : 0;
-                ((b.current = Math.min(m.current, M)),
+                ((C.current = Math.min(m.current, M)),
                     (y.current = Math.max(N - x.current, M)),
                     (k.current = z.findIndex((e) => e.id === r)),
                     (w.current = M),
@@ -495,7 +495,7 @@ function q() {
                 if (f.current !== e) return;
                 let r = t.current.get(e);
                 if (null == r) return;
-                let l = Math.min(Math.max(g.current + n - h.current, b.current), y.current);
+                let l = Math.min(Math.max(g.current + n - h.current, C.current), y.current);
                 r.style.left = `${l}px`;
                 let s = p.current,
                     i = x.current,
@@ -506,7 +506,7 @@ function q() {
                     let t = e.center > u ? a : l;
                     e.center < t && c++;
                 }
-                let o = C.current,
+                let o = b.current,
                     d = m.current,
                     A = d;
                 (s.forEach((e, t) => {

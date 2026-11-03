@@ -15,8 +15,8 @@ var l = t(477900),
     g = t(531142),
     A = t(191023),
     E = t(812282),
-    x = t(633018),
-    p = t(831544),
+    p = t(633018),
+    x = t(831544),
     D = t(793574),
     S = t(688810),
     j = t(18697),
@@ -114,9 +114,9 @@ function $(e, s, t, a, n, r) {
         D
             ? (u = (0, l.jsx)(E.s, { size: "custom", color: "currentColor", className: d, width: N, height: N }))
             : S
-              ? (u = (0, l.jsx)(x.k, { size: "custom", color: "currentColor", className: d, width: N, height: N }))
+              ? (u = (0, l.jsx)(p.k, { size: "custom", color: "currentColor", className: d, width: N, height: N }))
               : j
-                ? (u = (0, l.jsx)(p.MicrophoneIcon, {
+                ? (u = (0, l.jsx)(x.MicrophoneIcon, {
                       size: "custom",
                       color: "currentColor",
                       className: d,
@@ -143,8 +143,8 @@ function K(e) {
             baseMessage: r,
             referencedMessage: A,
             renderPopout: E,
-            isReplySpineClickable: x,
-            showReplySpine: p,
+            isReplySpineClickable: p,
+            showReplySpine: x,
         } = e,
         [I, M] = a.useState(!1),
         _ = a.useMemo(() => (null != E && A.state === P.a.LOADED ? (e) => E(e, A.message) : void 0), [A, E]),
@@ -161,8 +161,8 @@ function K(e) {
                     onContextMenu: A,
                     onPopoutRequestClose: E,
                 } = e,
-                { analyticsLocations: x } = (0, S.Ay)(D.A.AVATAR),
-                p = a.useRef(null),
+                { analyticsLocations: p } = (0, S.Ay)(D.A.AVATAR),
+                x = a.useRef(null),
                 j = n.state === P.a.LOADED && n.message.hasFlag(z.pr7.HIDDEN_SUSPENDED_USER);
             if (o || n.state !== P.a.LOADED || d || j)
                 return t === z.lAJ.CONTEXT_MENU_COMMAND
@@ -193,14 +193,14 @@ function K(e) {
                           onClick: g,
                           onContextMenu: A,
                           className: i()({ [F.mf]: !0, [F.vk]: null != g }),
-                          ref: p,
+                          ref: x,
                       }));
             }
             return null != s && null != N
                 ? (0, l.jsx)(S.f5, {
-                      value: x,
+                      value: p,
                       children: (0, l.jsx)(h.Y, {
-                          targetElementRef: p,
+                          targetElementRef: x,
                           renderPopout: s,
                           shouldShow: N,
                           position: "right",
@@ -208,7 +208,7 @@ function K(e) {
                           children: I,
                       }),
                   })
-                : (0, l.jsx)(S.f5, { value: x, children: I() });
+                : (0, l.jsx)(S.f5, { value: p, children: I() });
         })(e, _, r.type),
         k = (function (e, s) {
             let {
@@ -277,14 +277,14 @@ function K(e) {
                                             e.isClip &&
                                                 (0, l.jsx)(C.x, { size: "xs", color: "currentColor", className: F.te }),
                                             (0, l.jsx)(N.E, {
-                                                variant: "text-sm/semibold",
+                                                variant: "body-sm/semibold",
                                                 color: "text-default",
                                                 className: F.CD,
                                                 children: e.title ?? G.intl.string(G.t.Cyxddp),
                                             }),
                                             (0, l.jsxs)(N.E, {
                                                 ref: n,
-                                                variant: "text-sm/normal",
+                                                variant: "body-sm/normal",
                                                 color: "text-link",
                                                 children: ["@", e.timestamp],
                                             }),
@@ -344,11 +344,11 @@ function K(e) {
     let q = r.type === z.lAJ.CONTEXT_MENU_COMMAND;
     return (0, l.jsxs)("div", {
         id: (0, y.nS)(r),
-        className: i()(F.JZ, K, q ? F.C4 : { [F.NB]: !x && p }),
+        className: i()(F.JZ, K, q ? F.C4 : { [F.NB]: !p && x }),
         "aria-label": s,
         children: [
-            x &&
-                p &&
+            p &&
+                x &&
                 (0, l.jsx)(d.D, {
                     tag: "div",
                     "aria-label": G.intl.string(G.t.dpjpOp),

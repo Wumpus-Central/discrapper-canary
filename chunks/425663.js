@@ -14,9 +14,9 @@ var a = n(477900),
     A = n(939249),
     L = n(34188),
     S = n(661531),
-    x = n(926268),
-    I = n(885574),
-    m = n(834730),
+    I = n(926268),
+    m = n(885574),
+    x = n(834730),
     f = n(793574),
     g = n(688810),
     _ = n(742589),
@@ -27,8 +27,8 @@ var a = n(477900),
     T = n(287809),
     k = n(174459),
     N = n(975571),
-    R = n(225647),
-    y = n(980707),
+    y = n(225647),
+    R = n(980707),
     M = n(477782),
     v = n(478016),
     B = n(847374),
@@ -47,7 +47,7 @@ function X(e) {
     return (0, a.jsx)("div", {
         onMouseEnter: i,
         onMouseLeave: o,
-        children: (0, a.jsx)(y.W, {
+        children: (0, a.jsx)(R.W, {
             "data-menu-migrated": !0,
             navId: "slayer-storefront-shop-dropdown",
             onClose: l,
@@ -83,7 +83,7 @@ function q(e) {
         { selectedApplicationId: r, className: c } = e,
         d = l.useRef(null),
         { isHovered: u, setIsHovered: C, onMouseEnter: E, onMouseLeave: L, cancelTimers: S } = (0, w.A)(100, 100),
-        x =
+        I =
             ((t = (0, s.yK)([p.A], () =>
                 (p.A.getConfig()?.storefronts ?? []).filter((e) => e.collectiblesShopNavigationEnabled),
             )),
@@ -100,7 +100,7 @@ function q(e) {
                     }),
                 [t, i],
             )),
-        I = (0, s.bG)([U.A], () => U.A.getApplication(r)),
+        m = (0, s.bG)([U.A], () => U.A.getApplication(r)),
         f = l.useCallback(
             (e) => {
                 (S(), C(e));
@@ -110,13 +110,13 @@ function q(e) {
         g = l.useCallback(() => {
             f(!u);
         }, [u, f]);
-    if (null == I)
+    if (null == m)
         return (0, a.jsxs)("div", {
             className: o()(Y.hZ, Y.qf, c),
             "aria-hidden": "true",
             children: [(0, a.jsx)("span", { className: Y.wm }), (0, a.jsx)(B.a, { size: "xs", color: "currentColor" })],
         });
-    let _ = null != I.icon ? F.Ay.getApplicationIconURL({ id: I.id, icon: I.icon, size: 32 }) : null;
+    let _ = null != m.icon ? F.Ay.getApplicationIconURL({ id: m.id, icon: m.icon, size: 32 }) : null;
     return (0, a.jsx)(P.Y, {
         targetElementRef: d,
         shouldShow: u,
@@ -127,7 +127,7 @@ function q(e) {
         onRequestClose: () => f(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, a.jsx)(X, { shops: x, currentApplicationId: r, onClose: t, onMouseEnter: E, onMouseLeave: L });
+            return (0, a.jsx)(X, { shops: I, currentApplicationId: r, onClose: t, onMouseEnter: E, onMouseLeave: L });
         },
         children: (e) => {
             let t = u ? H.t : B.a;
@@ -137,12 +137,12 @@ function q(e) {
                 onClick: g,
                 onMouseLeave: L,
                 className: o()(Y.hZ, c),
-                "aria-label": I.name,
+                "aria-label": m.name,
                 "aria-haspopup": "menu",
                 "aria-expanded": u,
                 children: [
                     null != _ && (0, a.jsx)("img", { className: Y.wm, src: _, alt: "" }),
-                    (0, a.jsx)(m.E, { variant: "text-md/medium", color: "text-default", children: I.name }),
+                    (0, a.jsx)(x.E, { variant: "body-md/medium", color: "text-default", children: m.name }),
                     (0, a.jsx)(t, { size: "xs", color: "currentColor" }),
                 ],
             });
@@ -178,7 +178,7 @@ function $() {
                 });
         }, [e]);
     return (0, a.jsx)(Q, {
-        content: (0, a.jsx)(x.HeartIcon, { size: "xs", color: "currentColor" }),
+        content: (0, a.jsx)(I.HeartIcon, { size: "xs", color: "currentColor" }),
         onClick: t,
         ariaLabel: G.intl.string(G.t["7lZ31J"]),
     });
@@ -211,7 +211,7 @@ function et() {
                 window.open(N.A.getArticleURL(z.MVz.SOCIAL_LAYER_STOREFRONT), "_blank", "noopener,noreferrer"));
         }, [e, t]);
     return (0, a.jsx)(Q, {
-        content: (0, a.jsx)(I.CircleInformationIcon, { size: "xs", color: "currentColor" }),
+        content: (0, a.jsx)(m.CircleInformationIcon, { size: "xs", color: "currentColor" }),
         onClick: n,
         ariaLabel: G.intl.string(G.t.hvVgAZ),
     });
@@ -245,9 +245,9 @@ function en(e) {
                                       },
                                       wrapperClassName: J.oB,
                                       className: o()(J.xT, { [J.ys]: n === l }),
-                                      children: (0, a.jsx)(m.E, {
-                                          variant: "text-sm/medium",
-                                          children: (0, R.A)(e.title),
+                                      children: (0, a.jsx)(x.E, {
+                                          variant: "body-sm/medium",
+                                          children: (0, y.A)(e.title),
                                       }),
                                   },
                                   `${e.title}-${l}`,
@@ -273,8 +273,8 @@ function ei(e) {
         l.useEffect(() => {
             "idle" !== A.state && "loading" !== A.state && L?.state === "error" && (0, d.pX)(ea.BV.COLLECTIBLES_SHOP);
         }, [A.state, L?.state]));
-    let x = l.useCallback((e, t) => (0, a.jsx)(en, { storefront: t, selectedPageIndex: e }), []),
-        I = l.useCallback((e, n, a) => ea.BV.COLLECTIBLES_SHOP_GAME_SHOP(t, e, n, a), [t]);
+    let I = l.useCallback((e, t) => (0, a.jsx)(en, { storefront: t, selectedPageIndex: e }), []),
+        m = l.useCallback((e, n, a) => ea.BV.COLLECTIBLES_SHOP_GAME_SHOP(t, e, n, a), [t]);
     return null == t || "success" !== A.state
         ? (0, a.jsx)("div", { className: o()(el.u1, el.kL, el.gI), children: (0, a.jsx)(r.y, {}) })
         : (0, a.jsx)(C.SocialLayerStorefrontInnerWrapper, {
@@ -283,7 +283,7 @@ function ei(e) {
               skuId: i,
               pageIndex: S,
               analyticsPlacement: u.Ye.COLLECTIBLES_SHOP,
-              renderHeader: x,
-              getSocialLayerStorefrontLink: I,
+              renderHeader: I,
+              getSocialLayerStorefrontLink: m,
           });
 }

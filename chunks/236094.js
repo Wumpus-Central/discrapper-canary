@@ -628,13 +628,13 @@ let tf = (e) => {
                             children: [
                                 (0, r.jsx)(tl.E, {
                                     className: tA.Qq,
-                                    variant: "text-xs/semibold",
+                                    variant: "body-xs/semibold",
                                     children: ef.intl.string(e7.default.NI6Ihe),
                                 }),
                                 i >= n &&
                                     (0, r.jsx)(tl.E, {
                                         className: tA.Qq,
-                                        variant: "text-xs/semibold",
+                                        variant: "body-xs/semibold",
                                         children: "\uD83C\uDF89",
                                     }),
                             ],
@@ -644,7 +644,7 @@ let tf = (e) => {
                             children: [
                                 (0, r.jsx)(tl.E, {
                                     className: eJ()(tA.Qq, tA.ue),
-                                    variant: "text-xs/semibold",
+                                    variant: "body-xs/semibold",
                                     children: o
                                         ? ef.intl.formatToPlainString(e7.default["Ehpq+7"], { appliedBoostCount: t })
                                         : ef.intl.formatToPlainString(e7.default["/rbPDs"], {
@@ -1257,7 +1257,7 @@ function n1(e) {
             (0, r.jsxs)(tl.E, {
                 tag: "span",
                 color: "text-subtle",
-                variant: "text-xs/medium",
+                variant: "body-xs/medium",
                 className: eJ()(n0.VV, { [n0.Ki]: i, [n0.$G]: n >= 100 }),
                 children: [
                     i ? (0, r.jsx)(nQ.VideoIcon, { size: "md", color: "currentColor", className: n0.LB }) : null,
@@ -1267,7 +1267,7 @@ function n1(e) {
             (0, r.jsx)(tl.E, {
                 tag: "span",
                 color: "text-subtle",
-                variant: "text-xs/medium",
+                variant: "body-xs/medium",
                 className: eJ()(n0.X5, { [n0.$G]: t >= 100 }),
                 children: t.toString().padStart(2, "0"),
             }),
@@ -1484,7 +1484,7 @@ let ie = a.memo(function (e) {
                                 className: eJ()(n5.Y5, n5.__invalid_threadMainContent),
                                 children: [
                                     (0, r.jsx)(tl.E, {
-                                        variant: "text-sm/medium",
+                                        variant: "body-sm/medium",
                                         color: "none",
                                         className: n5.UU,
                                         children: (0, r.jsx)(t1.A, { "aria-hidden": !0, children: m }),
@@ -1650,7 +1650,7 @@ let io = a.memo(function (e) {
                             children: [
                                 (0, r.jsx)(nT.A, { project: t, size: "header" }),
                                 (0, r.jsx)(tl.E, {
-                                    variant: "text-sm/medium",
+                                    variant: "body-sm/medium",
                                     color: "none",
                                     className: n5.UU,
                                     children: (0, r.jsx)(t1.A, {
@@ -2094,7 +2094,7 @@ let iY = a.memo(function (e) {
                             className: e,
                         }),
                     text: (0, r.jsx)(tl.E, {
-                        variant: "text-md/medium",
+                        variant: "body-md/medium",
                         className: n5.UU,
                         children: ef.intl.string(ef.t.vyaWs7),
                     }),
@@ -2221,7 +2221,7 @@ var i1 = n(534514),
     i9 = n(65995),
     i2 = n(195702);
 function i6(e, t) {
-    return (0, r.jsx)(tl.E, { variant: "text-xs/semibold", color: "text-default", children: e }, t);
+    return (0, r.jsx)(tl.E, { variant: "body-xs/semibold", color: "text-default", children: e }, t);
 }
 let i5 = a.memo(function (e) {
     let { guild: t } = e,
@@ -2256,14 +2256,14 @@ let i5 = a.memo(function (e) {
                               className: i2.A1,
                               children: [
                                   (0, r.jsx)(i1.D, {
-                                      variant: "heading-sm/semibold",
+                                      variant: "heading-xs/semibold",
                                       children: ef.intl.string(ef.t.SnrR3x),
                                   }),
                                   (0, r.jsxs)("div", {
                                       className: i2.Ib,
                                       children: [
                                           (0, r.jsx)(tl.E, {
-                                              variant: "text-xs/medium",
+                                              variant: "body-xs/medium",
                                               color: "text-muted",
                                               className: i2.Cv,
                                               children: ef.intl.format(ef.t.eqZ1lW, {
@@ -2530,8 +2530,8 @@ let lT = function (e) {
                   (0, r.jsxs)("div", {
                       className: lR.Qs,
                       children: [
-                          (0, r.jsx)(i1.D, { variant: "heading-md/semibold", id: s, children: g }),
-                          (0, r.jsx)(tl.E, { color: "text-default", variant: "text-sm/normal", children: A }),
+                          (0, r.jsx)(i1.D, { variant: "heading-sm/semibold", id: s, children: g }),
+                          (0, r.jsx)(tl.E, { color: "text-default", variant: "body-sm/normal", children: A }),
                           (0, r.jsxs)("div", {
                               className: lR.UD,
                               children: [
@@ -2640,7 +2640,7 @@ function lQ(e) {
                     ? (0, r.jsx)(lZ.A, { game: n[1].application, className: l$.wK })
                     : (0, r.jsx)(tl.E, {
                           className: l$.ju,
-                          variant: "text-xs/semibold",
+                          variant: "body-xs/semibold",
                           color: "interactive-text-active",
                           children: `+${e}`,
                       }),
@@ -2695,13 +2695,13 @@ function l1(e) {
     if (c) return (0, r.jsx)(eo.E, { type: "new", variant: "primary" });
     if (!u && m === it.e.ALL_MESSAGES && t.isForumLikeChannel() && null != _ && _ > 0)
         return (0, r.jsx)(tl.E, {
-            variant: "text-xs/semibold",
+            variant: "body-xs/semibold",
             color: "text-brand",
             className: l0.O,
             children: ef.intl.format(ef.t.GkAbqY, { count: (0, eb.Gu)(_) }),
         });
     if (!u && t.isForumLikeChannel() && null != S && S > 0)
-        return (0, r.jsx)(tl.E, { variant: "text-xs/semibold", color: "text-muted", children: (0, eb.Gu)(S) });
+        return (0, r.jsx)(tl.E, { variant: "body-xs/semibold", color: "text-muted", children: (0, eb.Gu)(S) });
     let b = l?.length ?? 0;
     return null != s && s && N
         ? (0, r.jsx)(n3, { userCount: b, video: E || x, channel: t })
@@ -3140,7 +3140,7 @@ function sN(e) {
             className: sx.SW,
             children: [
                 (0, r.jsx)(tl.E, {
-                    variant: "text-sm/medium",
+                    variant: "body-sm/medium",
                     color: "text-muted",
                     className: sx.DD,
                     children: t.isForumLikeChannel() ? ef.intl.string(ef.t.ioVdO2) : ef.intl.string(ef.t.VNYs2v),
@@ -3193,7 +3193,7 @@ function sN(e) {
                                 (0, r.jsx)("div", {
                                     className: sx.Pf,
                                     children: (0, r.jsx)(tl.E, {
-                                        variant: "text-sm/normal",
+                                        variant: "body-sm/normal",
                                         color: "none",
                                         children: ef.intl.string(ef.t["4qdZ93"]),
                                     }),
@@ -3230,11 +3230,11 @@ function s_(e) {
             (0, r.jsxs)("div", {
                 className: sx.Pf,
                 children: [
-                    (0, r.jsx)(tl.E, { className: sx.UU, variant: "text-sm/normal", color: "none", children: t.name }),
-                    (0, r.jsx)(tl.E, { variant: "text-sm/normal", color: "text-muted", children: "\u2022" }),
+                    (0, r.jsx)(tl.E, { className: sx.UU, variant: "body-sm/normal", color: "none", children: t.name }),
+                    (0, r.jsx)(tl.E, { variant: "body-sm/normal", color: "text-muted", children: "\u2022" }),
                     (0, r.jsx)(tl.E, {
                         className: sx.vE,
-                        variant: "text-sm/normal",
+                        variant: "body-sm/normal",
                         color: "text-muted",
                         children: (0, sC.aK)(i),
                     }),
@@ -3312,7 +3312,7 @@ function sP(e) {
                     className: sL.X0,
                     children: [
                         (0, r.jsx)(i1.D, {
-                            variant: "heading-sm/semibold",
+                            variant: "heading-xs/semibold",
                             color: "text-strong",
                             className: sL.wx,
                             lineClamp: 1,
@@ -3321,7 +3321,7 @@ function sP(e) {
                         t?.details != null &&
                             "" !== t.details &&
                             (0, r.jsx)(tl.E, {
-                                variant: "text-xs/normal",
+                                variant: "body-xs/normal",
                                 color: "text-strong",
                                 lineClamp: 1,
                                 children: t.details,
@@ -3329,7 +3329,7 @@ function sP(e) {
                         t?.state != null &&
                             "" !== t.state &&
                             (0, r.jsx)(tl.E, {
-                                variant: "text-xs/normal",
+                                variant: "body-xs/normal",
                                 color: "text-strong",
                                 lineClamp: 1,
                                 children: t.state,
@@ -3410,7 +3410,7 @@ function sk(e) {
               children: [
                   (0, r.jsx)(l, { className: sH.p }),
                   (0, r.jsx)(tl.E, {
-                      variant: "text-md/semibold",
+                      variant: "body-md/semibold",
                       color: "interactive-text-default",
                       className: sH.HA,
                       children: i,
@@ -4066,7 +4066,7 @@ function rs(e) {
         children: [
             (0, r.jsx)(t7.H, { size: "custom", className: ri.Gs, width: 14, height: 14, color: "currentColor" }),
             (0, r.jsx)(tl.E, {
-                variant: "text-xs/semibold",
+                variant: "body-xs/semibold",
                 className: ri.pM,
                 children: ef.intl.format(ef.t["fDlr+F"], { count: d.length }),
             }),
@@ -4131,7 +4131,7 @@ function rr(e) {
                                           width: 14,
                                       }),
                                 (0, r.jsx)(tl.E, {
-                                    variant: "text-xs/semibold",
+                                    variant: "body-xs/semibold",
                                     color: "interactive-text-default",
                                     className: ri.pM,
                                     children: ef.intl.string(ef.t.FCRiT3),
@@ -4143,7 +4143,7 @@ function rr(e) {
                             className: eJ()(ri.M0, ri.vU),
                             onClick: p,
                             children: (0, r.jsx)(tl.E, {
-                                variant: "text-xs/semibold",
+                                variant: "body-xs/semibold",
                                 color: "badge-primary-text",
                                 className: ri.pM,
                                 children: ef.intl.format(ef.t.EQcLyp, { count: m }),
@@ -4328,7 +4328,7 @@ function rT(e) {
             children: [
                 (0, r.jsx)(rS.X, { size: "xs", color: "currentColor" }),
                 (0, r.jsx)(tl.E, {
-                    variant: "text-sm/medium",
+                    variant: "body-sm/medium",
                     color: "currentColor",
                     children: ef.intl.string(ry.default.NGcIOF),
                 }),
@@ -4391,7 +4391,7 @@ function rB(e) {
               className: A,
               onClick: m ? o : void 0,
               children: (0, r.jsx)(tl.E, {
-                  variant: "text-xs/medium",
+                  variant: "body-xs/medium",
                   className: eJ()(rH.qS, rk.PT),
                   children: (0, r.jsx)(t1.A, {
                       shouldShow: !s,
@@ -4405,7 +4405,7 @@ function rB(e) {
                 onClick: o,
                 children: [
                     (0, r.jsx)(tl.E, {
-                        variant: "text-xs/medium",
+                        variant: "body-xs/medium",
                         className: rH.qS,
                         children: ef.intl.string(ef.t.Mgpxiw),
                     }),

@@ -4,12 +4,12 @@ var i = n(477900),
     a = n(866665),
     s = n(939249),
     r = n(789645),
-    d = n(753437),
-    o = n(105292),
+    o = n(753437),
+    d = n(105292),
     c = n(382701);
 function u(e) {
     let { tag: t, variant: n = "default", onRemove: u, className: m, ref: g } = e,
-        x = (0, d.W3)(t);
+        x = (0, o.W3)(t);
     if (null == x) return null;
     let { getText: f, icon: h } = x,
         p = "filled" === n;
@@ -19,18 +19,18 @@ function u(e) {
         children: [
             (0, i.jsx)(h, { size: "xxs", color: p ? "currentColor" : void 0 }),
             (0, i.jsx)(l.E, {
-                variant: "text-xxs/medium",
+                variant: "footnote/medium",
                 color: p ? "text-overlay-light" : "text-subtle",
                 children: f(),
             }),
             null != u &&
                 (0, i.jsx)(a.m, {
-                    text: o.intl.string(o.t.Otv9fP),
+                    text: d.intl.string(d.t.Otv9fP),
                     ariaHidden: !0,
                     children: (0, i.jsx)(s.D, {
                         onClick: u,
                         className: p ? c.to : c.DT,
-                        "aria-label": o.intl.formatToPlainString(o.t.GCn1ne, { tag: f() }),
+                        "aria-label": d.intl.formatToPlainString(d.t.GCn1ne, { tag: f() }),
                         children: (0, i.jsx)(r.P, { size: "xxs", color: "currentColor" }),
                     }),
                 }),

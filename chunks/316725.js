@@ -15,8 +15,8 @@ var n = i(477900),
     f = i(871123),
     S = i(453774),
     m = i(831024),
-    x = i(435558),
-    _ = i.n(x),
+    _ = i(435558),
+    x = i.n(_),
     T = i(52133),
     A = i(793574),
     v = i(688810),
@@ -26,12 +26,12 @@ var n = i(477900),
     R = i(532423),
     O = i(287809),
     k = i(403362),
-    N = i(317560),
-    H = i(82343),
-    b = i(202541),
-    y = i(699976),
+    b = i(317560),
+    y = i(82343),
+    N = i(202541),
+    H = i(699976),
     F = i(105292);
-let L = y.Z.SIZE_90;
+let L = H.Z.SIZE_90;
 function G(e) {
     let {
             sku: t,
@@ -44,22 +44,22 @@ function G(e) {
             userIdsForRecommendation: c,
             spec: g = L,
         } = e,
-        [p, h] = l.useState(_().uniq(o)),
+        [p, h] = l.useState(x().uniq(o)),
         [f, S] = l.useState(!1),
-        [m, x] = l.useState(_().uniq(c)),
-        { analyticsLocations: y } = (0, v.Ay)(
+        [m, _] = l.useState(x().uniq(c)),
+        { analyticsLocations: H } = (0, v.Ay)(
             A.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD,
             A.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON,
         );
     (l.useEffect(() => {
-        x((e) => {
-            let t = _().uniq(c);
+        _((e) => {
+            let t = x().uniq(c);
             return (0, T.v)(e, t) ? e : t;
         });
     }, [c]),
         l.useEffect(() => {
             h((e) => {
-                let t = _().uniq(o);
+                let t = x().uniq(o);
                 return (0, T.v)(e, t) ? e : t;
             });
         }, [o]));
@@ -68,27 +68,27 @@ function G(e) {
         P = l.useCallback(() => {
             null != s &&
                 null != s.guildId &&
-                (0, N.R)({
+                (0, b.R)({
                     skuId: t.id,
                     applicationId: t.applicationId,
                     isStorefront: !1,
                     giftRecipient: G,
-                    giftingOrigin: b.vQ.SHOP_PAGE,
-                    analyticsLocations: y,
+                    giftingOrigin: N.vQ.SHOP_PAGE,
+                    analyticsLocations: H,
                 });
-        }, [s, t.id, t.applicationId, G, y]),
+        }, [s, t.id, t.applicationId, G, H]),
         w = l.useCallback(() => {
-            (0, H.a)(
+            (0, y.a)(
                 t,
                 {
                     isGift: !0,
                     giftRecipient: G,
                     additionalUserIds: p.length > 1 ? p : void 0,
-                    giftingOrigin: b.vQ.SHOP_PAGE,
+                    giftingOrigin: N.vQ.SHOP_PAGE,
                 },
-                { analyticsLocations: y },
+                { analyticsLocations: H },
             );
-        }, [t, G, p, y]),
+        }, [t, G, p, H]),
         { label: B, icon: U } = (0, j.h)({ wishlistOwner: G, isOwned: !1, shortText: !0 });
     return (0, n.jsxs)(C.A, {
         sku: t,
@@ -127,7 +127,7 @@ function W(e) {
             iconSize: l,
             gradientColor: s,
             ...o,
-            children: null != a && (0, n.jsx)(u.E, { variant: "text-sm/semibold", color: "currentColor", children: a }),
+            children: null != a && (0, n.jsx)(u.E, { variant: "body-sm/semibold", color: "currentColor", children: a }),
         });
     }
     return null != d && "object" == typeof d
@@ -143,8 +143,8 @@ function Z(e) {
             className: t,
             applicationId: i,
             userIds: s,
-            location: x,
-            guildId: _,
+            location: _,
+            guildId: x,
             channelId: T,
             numWishlistItems: A = 2,
             cardSpec: v,
@@ -155,19 +155,19 @@ function Z(e) {
         O = null == E && !R,
         k = l.useMemo(() => (C?.id != null ? [C.id] : []), [C]),
         {
-            status: N,
-            recommendations: H,
-            skusToUserAndReason: b,
+            status: b,
+            recommendations: y,
+            skusToUserAndReason: N,
         } = (0, g.XQ)({ applicationIds: k, numItems: A, userIds: s }),
-        y = l.useMemo(() => new Set(s), [s]),
-        { hasWishlist: L, hasPopular: M } = l.useMemo(() => (0, f.wH)(H, b, y), [H, b, y]),
+        H = l.useMemo(() => new Set(s), [s]),
+        { hasWishlist: L, hasPopular: M } = l.useMemo(() => (0, f.wH)(y, N, H), [y, N, H]),
         P = l.useMemo(() => {
             let e = L && M;
-            return H.map((t) => {
-                let i = Object.entries(b[t.id] ?? {})
+            return y.map((t) => {
+                let i = Object.entries(N[t.id] ?? {})
                     .filter((e) => {
                         let [t, i] = e;
-                        return i === p.j.WISHLIST && y.has(t);
+                        return i === p.j.WISHLIST && H.has(t);
                     })
                     .map((e) => {
                         let [t] = e;
@@ -180,7 +180,7 @@ function Z(e) {
                         source: i.length > 0 ? I.uS.WISHLIST : I.uS.POPULAR,
                         application: C,
                         showIcons: e,
-                        guildId: _,
+                        guildId: x,
                         channelId: T,
                         userIdsForGifting: s,
                         userIdsForRecommendation: i,
@@ -189,19 +189,19 @@ function Z(e) {
                     t.id,
                 );
             });
-        }, [L, M, H, b, C, _, T, s, v, y]);
+        }, [L, M, y, N, C, x, T, s, v, H]);
     l.useEffect(() => {
-        0 !== H.length &&
+        0 !== y.length &&
             h.default.track(q.HAw.COMMERCE_SHOP_GIFTING_BREADCRUMB_VIEWED, {
-                guild_id: _,
+                guild_id: x,
                 channel_id: T,
-                sku_ids: H.map((e) => e.id),
-                location: x,
+                sku_ids: y.map((e) => e.id),
+                location: _,
             });
-    }, [_, T, H, x]);
+    }, [x, T, y, _]);
     let w = (0, m.u)({ surface: "storefront_badge", applicationId: i }),
-        B = "loading" === N || j || O;
-    return B || 0 !== H.length
+        B = "loading" === b || j || O;
+    return B || 0 !== y.length
         ? (0, n.jsxs)("div", {
               className: r()(D.kL, t),
               children: [
@@ -209,7 +209,7 @@ function Z(e) {
                       className: D.wx,
                       children: [
                           (0, n.jsx)(u.E, {
-                              variant: "text-xs/medium",
+                              variant: "body-xs/medium",
                               color: "text-muted",
                               children: L && !M ? F.intl.string(F.t["7lZ31J"]) : F.intl.string(F.t.BCi1gT),
                           }),

@@ -100,9 +100,9 @@ function L(e) {
             ref: S,
         } = e,
         { name: L, emojiId: y, emojiName: D } = t,
-        v = (0, o.bG)([p.default], () => p.default.getCurrentUser()),
+        b = (0, o.bG)([p.default], () => p.default.getCurrentUser()),
         {
-            playSoundboardSound: b,
+            playSoundboardSound: v,
             previewSound: P,
             isPlayingSound: M,
         } = (0, g.A)(t, n?.id ?? null, I.dG.getSetting()?.volume ?? 100, n?.isVocal() ? N.a.VOICE : N.a.DEFAULT),
@@ -111,13 +111,13 @@ function L(e) {
         G = (0, l.rm)(w),
         x = r.useMemo(() => ({ ...G, id: w, role: "button" }), [G, w]),
         k = null != y || null != D,
-        F = !(0, m.Ir)(v, t, n, !1),
+        F = !(0, m.Ir)(b, t, n, !1),
         [B, V] = r.useState(!1),
         H = r.useCallback(
             (e) => {
-                F ? E?.(e) : b(T);
+                F ? E?.(e) : v(T);
             },
-            [F, E, b, T],
+            [F, E, v, T],
         );
     return (0, i.jsx)("li", {
         ref: S,
@@ -141,7 +141,7 @@ function L(e) {
                         children: [
                             k && (0, i.jsx)(f.A, { emojiId: y, emojiName: D, className: O.Zg }),
                             (0, i.jsx)(h.E, {
-                                variant: "text-xs/medium",
+                                variant: "body-xs/medium",
                                 color: c ? "text-default" : "text-muted",
                                 className: s()(O.TW, { [O.hn]: k }),
                                 children: L,

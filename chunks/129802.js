@@ -5,8 +5,8 @@ var n = a(477900),
     i = a.n(r),
     u = a(17928),
     d = a(499979),
-    s = a(189213),
-    o = a(192308),
+    o = a(189213),
+    s = a(192308),
     m = a(568602),
     c = a(834730),
     g = a(691885),
@@ -15,14 +15,14 @@ var n = a(477900),
     p = a(56562),
     v = a(964486),
     h = a(77729),
-    _ = a(736056),
-    b = a(763827),
+    b = a(736056),
+    _ = a(763827),
     I = a(773371),
     A = a(174459),
     N = a(220478),
     S = a(9302),
-    x = a(41984),
-    G = a(181435),
+    G = a(41984),
+    x = a(181435),
     w = a(78878),
     E = a(651930);
 a(321073);
@@ -155,13 +155,13 @@ let Z = new Set([
     ]),
     X = {
         HandleFocusChanged: (e, t) => {
-            if (!(0, G.$8)(e, "HandleFocusChanged")) return !0;
+            if (!(0, x.$8)(e, "HandleFocusChanged")) return !0;
             let a = null != t ? (U.A.getKnownWindowHandlesForPID(t) ?? new Set()) : new Set(),
                 { focusedPid: n, focusedWindowHandle: l } = e.data;
             return null != l && null != n && -1 !== n && !!a.has(l) && n === t;
         },
         EventHook: (e, t) => {
-            if (!(0, G.$8)(e, "EventHook")) return !0;
+            if (!(0, x.$8)(e, "EventHook")) return !0;
             let a = null != t ? (U.A.getKnownWindowHandlesForPID(t) ?? new Set()) : new Set();
             try {
                 let { receivedWindow: n, targetPid: l } = e.data;
@@ -244,8 +244,8 @@ function $(e) {
         [ea, en] = l.useState(et?.fullscreenType ?? $?.fullscreenType ?? null),
         [el, er] = l.useState(et),
         [ei, eu] = l.useState(!1),
-        [ed, es] = l.useState(!1),
-        [eo, em] = l.useState(!1),
+        [ed, eo] = l.useState(!1),
+        [es, em] = l.useState(!1),
         {
             nativeState: ec,
             breadcrumbs: [eg],
@@ -290,7 +290,7 @@ function $(e) {
             return [...Z].map((t) => ({ id: t.toString(), label: z.intl.string(e[t]), value: t }));
         }, []);
     async function ep() {
-        (es(!0), await (0, d.yy)(500), es(!1));
+        (eo(!0), await (0, d.yy)(500), eo(!1));
     }
     async function ev() {
         if (null === V && 0 === Q.length) {
@@ -301,9 +301,9 @@ function $(e) {
         let e = I.default.getFocusedPID() ?? (0, S.getPID)(),
             t = T.default.getTrackedGameByPid(e),
             l = B.A.getPopoutInitializationStages(),
-            r = t?.overlayMethod != null ? x.Ue[t.overlayMethod] : null,
+            r = t?.overlayMethod != null ? G.Ue[t.overlayMethod] : null,
             i = t?.fullscreenType ?? p.aI.UNKNOWN,
-            u = (0, G.tn)(eg, (t) => {
+            u = (0, x.tn)(eg, (t) => {
                 for (let a of Object.values(X))
                     try {
                         if (!a(t, e)) return !1;
@@ -312,8 +312,8 @@ function $(e) {
                     }
                 return !0;
             }),
-            s = w.A.getRecentActions(10),
-            m = N.A.getRecentExperimentBuckets(_.A.getAllExperimentAssignments(), new Date(Date.now() - 7776e6)),
+            o = w.A.getRecentActions(10),
+            m = N.A.getRecentExperimentBuckets(b.A.getAllExperimentAssignments(), new Date(Date.now() - 7776e6)),
             c =
                 t?.fullscreenHistory == null
                     ? null
@@ -336,14 +336,14 @@ function $(e) {
                 application_id: t?.gameId,
                 application_name: t?.gameName,
                 game_pid: t?.pid,
-                recent_overlay_flux_actions: s,
+                recent_overlay_flux_actions: o,
                 overlay_module_state: t?.state,
                 overlay_native_state: JSON.stringify(ec),
                 overlay_module_oop_initialization_state: JSON.stringify(l),
                 overlay_module_error_message: H.A.errorMessage,
                 overlay_module_breadcrumbs: JSON.stringify(u),
                 fullscreen_history_for_pid: c,
-                media_session_id: b.A.getMediaSessionId(),
+                media_session_id: _.A.getMediaSessionId(),
                 recent_experiment_buckets: JSON.stringify(m),
                 location: C,
             };
@@ -351,19 +351,19 @@ function $(e) {
             await (0, d.yy)(1e3),
             eu(!1),
             j?.(),
-            (0, o.openModalLazy)(
+            (0, s.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([a.e("216656"), a.e("836058")]).then(a.bind(a, 823777));
                     return (t) => (0, n.jsx)(e, { ...t });
                 },
-                { contextKey: (0, o.modalContextFromAppContext)(L) },
+                { contextKey: (0, s.modalContextFromAppContext)(L) },
             ));
     }
     return (
         (0, v.Ay)(() => {
             A.default.track(K.HAw.OPEN_MODAL, { type: "overlay_bug_reporter_modal", location: C });
         }),
-        (0, n.jsx)(s.a, {
+        (0, n.jsx)(o.a, {
             transitionState: M,
             title: z.intl.string(z.t.OKmenM),
             actions: [
@@ -381,8 +381,8 @@ function $(e) {
                                 isShaking: ed,
                                 intensity: 1.5,
                                 children: (0, n.jsx)(c.E, {
-                                    variant: "text-md/medium",
-                                    color: eo ? "text-feedback-critical" : "text-strong",
+                                    variant: "body-md/medium",
+                                    color: es ? "text-feedback-critical" : "text-strong",
                                     children: z.intl.string(z.t.Trx7eJ),
                                 }),
                             }),
@@ -393,14 +393,14 @@ function $(e) {
                                 options: ef,
                                 value: V,
                                 onSelectionChange: function (e) {
-                                    (Y(e), em(!1), es(!1));
+                                    (Y(e), em(!1), eo(!1));
                                 },
                                 selectionMode: "single",
                                 fullWidth: !0,
                             }),
-                            eo &&
+                            es &&
                                 (0, n.jsx)(c.E, {
-                                    variant: "text-xs/semibold",
+                                    variant: "body-xs/semibold",
                                     color: "text-feedback-critical",
                                     children: z.intl.string(z.t["5cqa9J"]),
                                 }),
@@ -410,7 +410,7 @@ function $(e) {
                         className: q.DB,
                         children: [
                             (0, n.jsx)(c.E, {
-                                variant: "text-md/medium",
+                                variant: "body-md/medium",
                                 color: "text-strong",
                                 children: z.intl.string(z.t.iZufAY),
                             }),
@@ -423,7 +423,7 @@ function $(e) {
                                 onChange: ee,
                             }),
                             (0, n.jsx)(c.E, {
-                                variant: "text-xs/normal",
+                                variant: "body-xs/normal",
                                 color: "text-muted",
                                 children: z.intl.string(z.t.TzkM2a),
                             }),
@@ -434,7 +434,7 @@ function $(e) {
                         className: q.DB,
                         children: [
                             (0, n.jsx)(c.E, {
-                                variant: "text-md/medium",
+                                variant: "body-md/medium",
                                 color: "text-strong",
                                 children: z.intl.string(z.t["8+SU+a"]),
                             }),

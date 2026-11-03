@@ -1,4 +1,4 @@
-n.d(e, { default: () => _ });
+n.d(e, { default: () => y });
 var s = n(477900),
     i = n(582128),
     r = n(284009),
@@ -12,12 +12,12 @@ var s = n(477900),
     p = n(404778),
     C = n(73153),
     m = n(900686),
-    x = n(976910),
-    g = n(665671),
+    g = n(976910),
+    x = n(665671),
     A = n(670492),
     k = n(287809),
-    P = n(975571),
-    b = n(652215),
+    b = n(975571),
+    P = n(652215),
     S = n(105292),
     T = n(478516);
 function f(t) {
@@ -26,8 +26,8 @@ function f(t) {
         className: T.jx,
         ...r,
         children: [
-            (0, s.jsx)(c.D, { variant: "heading-md/semibold", children: e }),
-            null != n ? (0, s.jsx)(h.E, { variant: "text-md/normal", className: T.gt, children: n }) : null,
+            (0, s.jsx)(c.D, { variant: "heading-sm/semibold", children: e }),
+            null != n ? (0, s.jsx)(h.E, { variant: "body-md/normal", className: T.gt, children: n }) : null,
             (0, s.jsx)("div", { children: i }),
         ],
     });
@@ -61,20 +61,20 @@ class j extends i.PureComponent {
         });
     }
     handleAddPasskey = () => {
-        (this.props.onClose(), (0, g.A)());
+        (this.props.onClose(), (0, x.A)());
     };
     renderPasskeyCTASection() {
-        return x.A.hasCredentials
+        return g.A.hasCredentials
             ? null
             : (0, s.jsxs)(f, {
                   label: S.intl.string(S.t.xMDCHa),
                   text: S.intl.string(S.t.okgGTu),
                   children: [
                       (0, s.jsx)(h.E, {
-                          variant: "text-md/normal",
+                          variant: "body-md/normal",
                           className: T.gt,
                           children: S.intl.format(S.t.OeGXVv, {
-                              learnMoreLink: P.A.getArticleURL(b.MVz.SETTING_UP_TWO_FACTOR),
+                              learnMoreLink: b.A.getArticleURL(P.MVz.SETTING_UP_TWO_FACTOR),
                           }),
                       }),
                       (0, s.jsx)(u.$, {
@@ -129,7 +129,7 @@ class j extends i.PureComponent {
 ${t}`;
     };
 }
-let _ = a.Ay.connectStores([k.default, A.A], () => {
+let y = a.Ay.connectStores([k.default, A.A], () => {
     let t = k.default.getCurrentUser();
     return (
         l()(null != t, "MFAEnableSuccess: currentUser cannot be undefined"),

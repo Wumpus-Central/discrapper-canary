@@ -29,7 +29,7 @@ function E(e) {
         children: [
             (0, i.jsx)(a.CircleInformationIcon, { size: "md" }),
             (0, i.jsx)(o.E, {
-                variant: "text-sm/medium",
+                variant: "body-sm/medium",
                 color: "interactive-text-active",
                 children:
                     null != r

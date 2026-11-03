@@ -48,8 +48,8 @@ function p(e) {
     return (0, l.jsxs)("div", {
         className: g.E,
         children: [
-            (0, l.jsx)(m.E, { variant: "text-xs/semibold", color: "text-default", children: i }),
-            (0, l.jsx)(m.E, { variant: "text-sm/normal", color: "text-muted", children: r }),
+            (0, l.jsx)(m.E, { variant: "body-xs/semibold", color: "text-default", children: i }),
+            (0, l.jsx)(m.E, { variant: "body-sm/normal", color: "text-muted", children: r }),
         ],
     });
 }

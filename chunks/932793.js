@@ -14,7 +14,7 @@ t(321073);
 var p = t(435558),
     P = t.n(p),
     m = (((s = {}).PAGE = "PAGE"), (s.GAP = "GAP"), (s.BACK = "BACK"), (s.NEXT = "NEXT"), s);
-class k extends l.PureComponent {
+class x extends l.PureComponent {
     static defaultProps = { maxVisiblePages: 9, hideMaxPage: !1 };
     changePageTo = (e) => {
         let { selectedPage: a, onPageChange: t } = this.props;
@@ -78,7 +78,7 @@ class k extends l.PureComponent {
         return a({ pages: this.getPageList(), hasMultiplePages: e > 1 });
     }
 }
-var x = t(105292),
+var k = t(105292),
     C = t(875634);
 function N(e) {
     let { page: a, totalPageCount: t, disabled: s, onPageChange: i } = e,
@@ -88,7 +88,7 @@ function N(e) {
     return s
         ? (0, n.jsx)(
               o.D,
-              { className: C.rQ, "aria-hidden": !0, variant: "heading-sm/semibold", children: "\u2026" },
+              { className: C.rQ, "aria-hidden": !0, variant: "heading-xs/semibold", children: "\u2026" },
               a.key,
           )
         : h
@@ -121,7 +121,7 @@ function N(e) {
                     children: (0, n.jsx)(o.D, {
                         className: r()(C.hJ, C.rQ),
                         "aria-hidden": !0,
-                        variant: "heading-sm/semibold",
+                        variant: "heading-xs/semibold",
                         children: "\u2026",
                     }),
                 },
@@ -141,7 +141,7 @@ function v(e) {
             renderPageWrapper: P,
         } = e,
         v = Math.ceil(t / s);
-    return (0, n.jsx)(k, {
+    return (0, n.jsx)(x, {
         totalPageCount: v,
         selectedPage: a,
         maxVisiblePages: l,
@@ -178,7 +178,7 @@ function v(e) {
                                                           className: C.B7,
                                                           "aria-hidden": !0,
                                                       }),
-                                                      (0, n.jsx)("span", { children: x.intl.string(x.t.vgfxaA) }),
+                                                      (0, n.jsx)("span", { children: k.intl.string(k.t.vgfxaA) }),
                                                   ],
                                               },
                                               a,
@@ -192,7 +192,7 @@ function v(e) {
                                               {
                                                   className: r()(C.hJ, { [C.Xs]: e.selected }),
                                                   onClick: e.selected ? void 0 : e.navigateToPage,
-                                                  "aria-label": x.intl.formatToPlainString(x.t.IGMs8S, {
+                                                  "aria-label": k.intl.formatToPlainString(k.t.IGMs8S, {
                                                       pageNumber: e.targetPage,
                                                   }),
                                                   "aria-current": e.selected ? "page" : void 0,
@@ -222,7 +222,7 @@ function v(e) {
                                                   disabled: t,
                                                   rel: "next",
                                                   children: [
-                                                      (0, n.jsx)("span", { children: x.intl.string(x.t.XiOHRX) }),
+                                                      (0, n.jsx)("span", { children: k.intl.string(k.t.XiOHRX) }),
                                                       (0, n.jsx)(c._, {
                                                           size: "md",
                                                           color: "currentColor",

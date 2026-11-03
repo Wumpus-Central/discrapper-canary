@@ -24,9 +24,9 @@ var n,
     P = i(986687),
     E = i(101058),
     S = i(836602),
-    N = i(814390),
-    R = i(448429),
-    b = i(105292),
+    b = i(814390),
+    N = i(448429),
+    R = i(105292),
     _ = i(788991);
 let M = function (e) {
     let { user: t, profileFrame: i, guild: n } = e,
@@ -45,7 +45,7 @@ let M = function (e) {
             pendingPrimaryGuildId: f,
         } = (0, l.cf)([S.A], () => S.A.getPendingChanges(n?.id)),
         x = A.Ay.canUsePremiumProfileCustomization(t),
-        C = (0, N.A)() && null != o ? k.Ay.parse(void 0, o).content : o;
+        C = (0, b.A)() && null != o ? k.Ay.parse(void 0, o).content : o;
     return (0, s.jsxs)("div", {
         className: _.i,
         children: [
@@ -69,11 +69,11 @@ let M = function (e) {
                 disabledInputs: !0,
                 hideCustomStatus: !0,
             }),
-            (0, s.jsx)(R.A, {
+            (0, s.jsx)(N.A, {
                 user: t,
                 previewSkuId: i?.skuId,
-                nitroChurnCTA: b.intl.string(b.t.RPIwEb),
-                nitroJoinCTA: b.intl.string(b.t.iu352Z),
+                nitroChurnCTA: R.intl.string(R.t.RPIwEb),
+                nitroJoinCTA: R.intl.string(R.t.iu352Z),
             }),
         ],
     });
@@ -114,16 +114,16 @@ let W = { skuId: "None" },
                         },
                         { purchase: [], premium_purchase: [], preview: [] },
                     ),
-                    s = b.intl.string(b.t.TiLCgw);
+                    s = R.intl.string(R.t.TiLCgw);
                 return [
                     {
                         section: "purchase",
                         items: [W, $, ...n.purchase],
                         height: 12,
-                        header: b.intl.string(b.t["9eZ4aO"]),
+                        header: R.intl.string(R.t["9eZ4aO"]),
                     },
                     { section: "premium_purchase", items: n.premium_purchase, height: 12, header: s },
-                    { section: "preview", items: n.preview, height: 12, header: b.intl.string(b.t["1vbbee"]) },
+                    { section: "preview", items: n.preview, height: 12, header: R.intl.string(R.t["1vbbee"]) },
                 ].filter((e) => {
                     let { items: t } = e;
                     return t.length > 0;
@@ -197,9 +197,9 @@ let ei = function (e) {
                             children: [
                                 (0, s.jsx)(w.K, { size: "md", color: "currentColor", className: Y.vo }),
                                 (0, s.jsx)(G.E, {
-                                    variant: "text-xs/normal",
+                                    variant: "body-xs/normal",
                                     color: "text-strong",
-                                    children: null != i ? b.intl.string(b.t.CHf9iJ) : b.intl.string(b.t.PoWNfe),
+                                    children: null != i ? R.intl.string(R.t.CHf9iJ) : R.intl.string(R.t.PoWNfe),
                                 }),
                             ],
                         },
@@ -220,9 +220,9 @@ let ei = function (e) {
                                     className: Y.sV,
                                 }),
                                 (0, s.jsx)(G.E, {
-                                    variant: "text-xs/normal",
+                                    variant: "body-xs/normal",
                                     color: "text-strong",
-                                    children: b.intl.string(b.t.pWG4ze),
+                                    children: R.intl.string(R.t.pWG4ze),
                                 }),
                             ],
                         },
@@ -250,7 +250,7 @@ let ei = function (e) {
                 let { header: i } = u[e];
                 return (0, s.jsx)("div", {
                     style: { ...t, height: "16px", position: "absolute" },
-                    children: (0, s.jsx)(o.D, { variant: "heading-md/medium", children: i }),
+                    children: (0, s.jsx)(o.D, { variant: "heading-sm/medium", children: i }),
                 });
             },
             getSectionHeight: () => 16,
@@ -282,11 +282,11 @@ function el(e) {
             className: er.Hx,
             children: [
                 (null != n && (c || !h)) || null === p
-                    ? (0, s.jsx)(u.$, { variant: "primary", text: b.intl.string(b.t.Jh8fJz), onClick: r, disabled: d })
+                    ? (0, s.jsx)(u.$, { variant: "primary", text: R.intl.string(R.t.Jh8fJz), onClick: r, disabled: d })
                     : null == n && (c || !h)
                       ? (0, s.jsx)(u.$, {
                             variant: "primary",
-                            text: b.intl.string(b.t.fYfGgK),
+                            text: R.intl.string(R.t.fYfGgK),
                             onClick: () => o(p?.skuId),
                         })
                       : (0, s.jsx)(g.A, {
@@ -294,15 +294,15 @@ function el(e) {
                             showGradient: !c,
                             textOptions: {
                                 textOverride: A.Ay.isPremium(t)
-                                    ? b.intl.string(b.t.KXLX7l)
+                                    ? R.intl.string(R.t.KXLX7l)
                                     : c
-                                      ? b.intl.string(b.t.mr4K7D)
-                                      : b.intl.string(b.t.pj0XBN),
+                                      ? R.intl.string(R.t.mr4K7D)
+                                      : R.intl.string(R.t.pj0XBN),
                             },
                         }),
                 !c && h
                     ? (0, s.jsx)(m.A, { itemType: n?.type ?? i?.type, onClose: l })
-                    : (0, s.jsx)(u.$, { variant: "secondary", text: b.intl.string(b.t["ETE/oC"]), onClick: l }),
+                    : (0, s.jsx)(u.$, { variant: "secondary", text: R.intl.string(R.t["ETE/oC"]), onClick: l }),
             ],
         }),
     });
@@ -331,8 +331,8 @@ function ea(e) {
             [v, x],
         ),
         { product: E, purchase: S } = (0, y.A)(P?.skuId),
-        N = r.useRef(null),
-        R = A.Ay.canUseCollectibles(t),
+        b = r.useRef(null),
+        N = A.Ay.canUseCollectibles(t),
         _ = void 0 === f ? v?.skuId === u?.skuId : v?.skuId === f?.skuId,
         F = r.useCallback(
             (e) => {
@@ -358,7 +358,7 @@ function ea(e) {
                 separator: !1,
                 className: er.Hc,
                 children: [
-                    (0, s.jsx)(o.D, { id: p, variant: "heading-lg/semibold", children: b.intl.string(b.t["oTSa/q"]) }),
+                    (0, s.jsx)(o.D, { id: p, variant: "heading-lg/semibold", children: R.intl.string(R.t["oTSa/q"]) }),
                     (0, s.jsx)(a.s_, { "data-migration-pending": !0, className: er.iT, onClick: g }),
                 ],
             }),
@@ -370,7 +370,7 @@ function ea(e) {
                         user: t,
                         guild: i,
                         pendingProfileFrame: v,
-                        selectedProfileFrameRef: N,
+                        selectedProfileFrameRef: b,
                         onSelect: F,
                         onOpenShop: O,
                     }),
@@ -386,7 +386,7 @@ function ea(e) {
                 onOpenShop: O,
                 product: E,
                 purchase: S,
-                canUsePremiumCollectibles: R,
+                canUsePremiumCollectibles: N,
                 selectedProfileFrame: v,
                 disableApplyButton: _,
             }),
@@ -420,7 +420,7 @@ function eu(e) {
                 size: j ? a.rI.DYNAMIC : a.rI.MEDIUM,
                 parentComponent: "ProfileFrameModal",
                 returnRef: m,
-                "aria-label": j ? b.intl.string(b.t["oTSa/q"]) : void 0,
+                "aria-label": j ? R.intl.string(R.t["oTSa/q"]) : void 0,
                 "aria-labelledby": j ? void 0 : y,
                 "data-migration-pending": !0,
                 children: j

@@ -19,7 +19,7 @@ function h(e) {
             (0, n.jsxs)("div", {
                 children: [
                     (0, n.jsx)(l.A, { inputClassName: d.IX, onSubmit: p }),
-                    null != h ? (0, n.jsx)(r.E, { className: d.z3, variant: "text-sm/normal", children: h }) : null,
+                    null != h ? (0, n.jsx)(r.E, { className: d.z3, variant: "body-sm/normal", children: h }) : null,
                 ],
             }),
             null != m &&

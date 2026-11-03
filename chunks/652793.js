@@ -51,7 +51,7 @@ function h(e) {
                         h(u.Kk),
                         (0, i.jsx)(d.E, {
                             color: "none",
-                            variant: "text-md/medium",
+                            variant: "body-md/medium",
                             className: u.UU,
                             "aria-hidden": !0,
                             children: m,

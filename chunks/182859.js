@@ -1,6 +1,6 @@
 i.d(s, { A: () => k });
-var e = i(477900),
-    l = i(582128),
+var l = i(477900),
+    e = i(582128),
     n = i(503698),
     t = i.n(n),
     c = i(408278),
@@ -12,8 +12,8 @@ var e = i(477900),
     h = i(821209),
     u = i(959456),
     j = i(105292),
-    v = i(554937),
-    b = i(519636);
+    b = i(554937),
+    v = i(519636);
 function k(a) {
     let {
             guildId: s,
@@ -24,11 +24,11 @@ function k(a) {
             onDismiss: p,
         } = a,
         { analyticsLocations: y } = (0, x.Ay)(),
-        A = l.useCallback(() => {
+        A = e.useCallback(() => {
             (0, r.openModalLazy)(async () => {
                 let { default: a } = await Promise.all([i.e("601031"), i.e("585810")]).then(i.bind(i, 872233));
                 return (i) =>
-                    (0, e.jsx)(a, {
+                    (0, l.jsx)(a, {
                         ...i,
                         guildId: s,
                         analyticsLocation: N,
@@ -38,30 +38,30 @@ function k(a) {
             });
         }, [N, y, s, g]);
     return "member" === n
-        ? (0, e.jsxs)(d.D, {
-              className: t()(v.iR, k),
+        ? (0, l.jsxs)(d.D, {
+              className: t()(b.iR, k),
               onClick: A,
               "aria-label": j.intl.string(u.default["103aY+"]),
               children: [
-                  (0, e.jsx)("img", { alt: "", className: v.xn, src: b.A }),
-                  (0, e.jsx)("div", { className: v.b1 }),
-                  (0, e.jsx)("div", {
-                      className: v.i5,
-                      children: (0, e.jsx)(o.E, {
-                          variant: "text-sm/semibold",
+                  (0, l.jsx)("img", { alt: "", className: b.xn, src: v.A }),
+                  (0, l.jsx)("div", { className: b.b1 }),
+                  (0, l.jsx)("div", {
+                      className: b.i5,
+                      children: (0, l.jsx)(o.E, {
+                          variant: "body-sm/semibold",
                           color: "text-overlay-light",
                           children: j.intl.string(u.default.diMhWc),
                       }),
                   }),
-                  (0, e.jsx)(h.A, { className: v.Rr, inactive: !0, renderLinkComponent: () => null }),
+                  (0, l.jsx)(h.A, { className: b.Rr, inactive: !0, renderLinkComponent: () => null }),
               ],
           })
-        : (0, e.jsxs)("div", {
-              className: v.kL,
+        : (0, l.jsxs)("div", {
+              className: b.kL,
               children: [
-                  (0, e.jsx)("div", {
-                      className: t()(v.X8, "theme-dark"),
-                      children: (0, e.jsx)(c.K, {
+                  (0, l.jsx)("div", {
+                      className: t()(b.X8, "theme-dark"),
+                      children: (0, l.jsx)(c.K, {
                           variant: "icon-only",
                           size: "md",
                           "aria-label": j.intl.string(j.t.WAI6xu),
@@ -69,25 +69,25 @@ function k(a) {
                           icon: m.P,
                       }),
                   }),
-                  (0, e.jsxs)(d.D, {
-                      className: v.iT,
+                  (0, l.jsxs)(d.D, {
+                      className: b.iT,
                       onClick: A,
                       "aria-label": j.intl.string(u.default["103aY+"]),
                       children: [
-                          (0, e.jsx)("img", { alt: "", className: v.xn, src: b.A }),
-                          (0, e.jsx)("div", { className: v.TQ }),
-                          (0, e.jsx)(h.A, { className: v.Rr, inactive: !0, renderLinkComponent: () => null }),
+                          (0, l.jsx)("img", { alt: "", className: b.xn, src: v.A }),
+                          (0, l.jsx)("div", { className: b.TQ }),
+                          (0, l.jsx)(h.A, { className: b.Rr, inactive: !0, renderLinkComponent: () => null }),
                       ],
                   }),
-                  (0, e.jsxs)("div", {
-                      className: v.FS,
+                  (0, l.jsxs)("div", {
+                      className: b.FS,
                       children: [
-                          (0, e.jsx)(o.E, {
-                              variant: "text-md/semibold",
+                          (0, l.jsx)(o.E, {
+                              variant: "body-md/semibold",
                               color: "text-strong",
                               children: j.intl.string(u.default.diMhWc),
                           }),
-                          (0, e.jsx)(o.E, { variant: "text-sm/normal", children: j.intl.string(u.default.pycxTr) }),
+                          (0, l.jsx)(o.E, { variant: "body-sm/normal", children: j.intl.string(u.default.pycxTr) }),
                       ],
                   }),
               ],

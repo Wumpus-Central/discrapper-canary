@@ -67,7 +67,7 @@ function g(e) {
                 subtitle:
                     "gate" === L.state
                         ? (0, s.jsx)(d.E, {
-                              variant: "text-md/normal",
+                              variant: "body-md/normal",
                               color: "text-muted",
                               className: f.h_,
                               children: v,

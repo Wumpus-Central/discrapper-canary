@@ -35,7 +35,7 @@ function d(t) {
                             (0, l.jsx)(o.n, { affinity: t, applyMask: e !== n.length - 1, size: f._3.SIZE_20 }, t.id),
                         ),
                 }),
-            (0, l.jsx)(u.E, { variant: "text-md/medium", color: "text-default", className: c.VA, children: e }),
+            (0, l.jsx)(u.E, { variant: "body-md/medium", color: "text-default", className: c.VA, children: e }),
             (0, l.jsx)(r._, { size: "sm", color: a.A.colors.INTERACTIVE_ICON_DEFAULT }),
         ],
     });

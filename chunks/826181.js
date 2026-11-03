@@ -83,7 +83,7 @@ function B(t) {
                     (0, i.jsx)("div", {
                         className: G.FS,
                         children: (0, i.jsx)(I.E, {
-                            variant: "text-md/medium",
+                            variant: "body-md/medium",
                             color: "text-muted",
                             children: h.intl.format(a ? L.default.axh0pl : L.default["+KAArL"], {
                                 premiumGroupProductName: (0, C.DP)(),
@@ -107,7 +107,7 @@ function B(t) {
         }),
     });
 }
-function A(t) {
+function y(t) {
     let {
             setModalState: e,
             onClose: a,
@@ -212,7 +212,7 @@ function A(t) {
         })
     );
 }
-function y(t) {
+function A(t) {
     let e,
         a,
         { error: n, onClose: r, ...s } = t,
@@ -288,7 +288,7 @@ function k(t) {
     let S = null;
     switch (d) {
         case 0:
-            S = (0, i.jsx)(A, {
+            S = (0, i.jsx)(y, {
                 setModalState: _,
                 premiumGroupSubscriptionId: e,
                 premiumGroupInviteId: a,
@@ -303,7 +303,7 @@ function k(t) {
             S = (0, i.jsx)(B, { ...c, isExistingSub: r, premiumGroupPrimaryName: o, currentUser: f });
             break;
         case 2:
-            S = (0, i.jsx)(y, { error: u, ...c });
+            S = (0, i.jsx)(A, { error: u, ...c });
     }
     return (0, i.jsx)(p.A, {
         isConfirmationStep: 1 === d,

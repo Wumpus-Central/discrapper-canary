@@ -14,21 +14,21 @@ var l = a(477900),
     f = a(105292);
 function p(t) {
     let { transitionState: e, onClose: a } = t,
-        [p, k] = n.useState(""),
-        [x, b] = n.useState(null),
-        [m, v] = n.useState(!1),
+        [p, b] = n.useState(""),
+        [k, m] = n.useState(null),
+        [v, x] = n.useState(!1),
         y = n.useMemo(() => (0, C.oX)("ConjureCustomWidgetModal"), []),
         S = n.useCallback(() => {
             a().catch(() => void 0);
         }, [a]),
         w = n.useCallback((t) => {
-            (k(t), b(null));
+            (b(t), m(null));
         }, []),
         j = n.useCallback(async () => {
             let t = p.trim();
-            if ("" === t) return void b(f.intl.string(h.default.AuyDIq));
-            if (null == y || m) return;
-            (v(!0), b(null));
+            if ("" === t) return void m(f.intl.string(h.default.AuyDIq));
+            if (null == y || v) return;
+            (x(!0), m(null));
             let e = null;
             try {
                 ((e = await (0, c.gA)({ guild_id: y, install_scope: "user" })),
@@ -41,11 +41,11 @@ function p(t) {
                     ((0, d.A)(e, "create"), S());
                     return;
                 }
-                b((0, o.mG)(t));
+                m((0, o.mG)(t));
             } finally {
-                v(!1);
+                x(!1);
             }
-        }, [p, y, m, S]),
+        }, [p, y, v, S]),
         A = n.useCallback(() => {
             j().catch(() => void 0);
         }, [j]);
@@ -56,7 +56,7 @@ function p(t) {
               title: f.intl.string(h.default.rCU6IG),
               actions: [{ text: f.intl.string(f.t.cpT0Cq), variant: "secondary", onClick: S }],
               children: (0, l.jsx)(r.E, {
-                  variant: "text-md/normal",
+                  variant: "body-md/normal",
                   color: "text-muted",
                   children: f.intl.string(h.default["UN2H+/"]),
               }),
@@ -66,12 +66,12 @@ function p(t) {
               onClose: a,
               title: f.intl.string(h.default.yI85oV),
               actions: [
-                  { text: f.intl.string(f.t["ETE/oC"]), variant: "secondary", onClick: S, disabled: m },
+                  { text: f.intl.string(f.t["ETE/oC"]), variant: "secondary", onClick: S, disabled: v },
                   {
                       text: f.intl.string(h.default.MDZXiK),
                       variant: "primary",
                       onClick: A,
-                      loading: m,
+                      loading: v,
                       disabled: "" === p.trim(),
                   },
               ],
@@ -85,8 +85,8 @@ function p(t) {
                   showCharacterCount: !0,
                   rows: 5,
                   autoFocus: !0,
-                  error: x,
-                  disabled: m,
+                  error: k,
+                  disabled: v,
               }),
           });
 }

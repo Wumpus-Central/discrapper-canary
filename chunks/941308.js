@@ -21,8 +21,8 @@ var f = t(954403),
     I = t(143145),
     y = t(441136),
     A = t(957565),
-    k = t(165648),
-    b = t(969490);
+    b = t(165648),
+    k = t(969490);
 function C(e) {
     let { text: n } = e,
         [t, i] = r.useState(!1);
@@ -73,7 +73,7 @@ function _(e) {
     );
 }
 function z() {
-    return m()?.formatInline === !0 ? k.tZ : void 0;
+    return m()?.formatInline === !0 ? b.tZ : void 0;
 }
 var G = t(588975),
     T = t(442433),
@@ -158,8 +158,8 @@ var ei = t(192308),
     eI = t(994500),
     ey = t(287809),
     eA = t(147036),
-    ek = t(403362);
-let eb = { home: "home", browse: "browse", customize: "customize", guide: "guide", linked_roles: "linked-roles" };
+    eb = t(403362);
+let ek = { home: "home", browse: "browse", customize: "customize", guide: "guide", linked_roles: "linked-roles" };
 var eC = t(73510),
     eS = t(105292);
 function ew(e) {
@@ -506,7 +506,7 @@ let e3 = [],
         },
         list: function (e) {
             let { type: n, children: t, value: r, items: i } = e,
-                a = m()?.formatInline === !0 ? k.tZ : void 0;
+                a = m()?.formatInline === !0 ? b.tZ : void 0;
             switch (n) {
                 case "ordered":
                     let u = (r + i.length - 1).toString().length;
@@ -539,10 +539,10 @@ let e3 = [],
             }
             return (0, l.jsx)("pre", {
                 children: (0, l.jsxs)("div", {
-                    className: k.Hy,
+                    className: b.Hy,
                     children: [
-                        A.p5 ? (0, l.jsx)("div", { className: k.lB, children: (0, l.jsx)(C, { text: t }) }) : null,
-                        (0, l.jsx)(y.E, { code: t, lang: n, className: g()(b.kw, "hljs") }),
+                        A.p5 ? (0, l.jsx)("div", { className: b.lB, children: (0, l.jsx)(C, { text: t }) }) : null,
+                        (0, l.jsx)(y.E, { code: t, lang: n, className: g()(k.kw, "hljs") }),
                     ],
                 }),
             });
@@ -550,8 +550,8 @@ let e3 = [],
         quote: function (e) {
             let { children: n } = e;
             return (0, l.jsxs)("div", {
-                className: k.h,
-                children: [(0, l.jsx)("div", { className: k.r }), (0, l.jsx)("blockquote", { children: n })],
+                className: b.h,
+                children: [(0, l.jsx)("div", { className: b.r }), (0, l.jsx)("blockquote", { children: n })],
             });
         },
         bold: function (e) {
@@ -589,11 +589,11 @@ let e3 = [],
                     return (0, l.jsx)(e_, { id: String(t.id), name: t.name });
                 case "static":
                     return (0, l.jsx)(e$, {
-                        route: eb[t.type],
+                        route: ek[t.type],
                         itemId: "linked_roles" === t.type && null != t.value ? String(t.value) : void 0,
                     });
             }
-            (0, ek.xb)(n);
+            (0, eb.xb)(n);
         },
         heading: function (e) {
             let { level: n, children: t } = e,
@@ -725,7 +725,7 @@ function e4(e) {
             children: [
                 (0, l.jsx)("span", { children: n }),
                 (0, l.jsxs)(s.E, {
-                    variant: "text-md/normal",
+                    variant: "body-md/normal",
                     color: "text-feedback-critical",
                     className: e1.g,
                     children: [(0, l.jsx)(o.A, { width: 16, height: 16 }), eS.intl.string(eS.t.dpFK4M)],

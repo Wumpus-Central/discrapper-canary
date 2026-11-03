@@ -1,42 +1,42 @@
-n.d(e, { default: () => H });
+e.d(n, { default: () => H });
 var i,
-    s = n(477900),
-    a = n(582128),
-    r = n(935462),
-    l = n(430690),
-    c = n(123292),
-    d = n(544231),
-    o = n(665909),
-    m = n(62617),
-    u = n(117816);
-function x(t) {
-    let { alt: e, ariaLabel: n, ariaHidden: i, role: r, width: l, height: c, className: d, style: o } = t,
-        x = a.useMemo(
+    s = e(477900),
+    a = e(582128),
+    r = e(935462),
+    l = e(430690),
+    c = e(123292),
+    d = e(544231),
+    o = e(665909),
+    m = e(62617),
+    u = e(117816);
+function A(t) {
+    let { alt: n, ariaLabel: e, ariaHidden: i, role: r, width: l, height: c, className: d, style: o } = t,
+        A = a.useMemo(
             () => (0, m.H)({ width: l, height: c, intrinsicWidth: 288, intrinsicHeight: 162, style: o }),
             [l, c, o],
         );
     return (0, s.jsx)("img", {
-        style: x,
+        style: A,
         src: u.A,
         className: (0, m.Z)(d),
-        alt: e,
-        "aria-label": n,
+        alt: n,
+        "aria-label": e,
         "aria-hidden": i,
         role: r ?? "img",
     });
 }
-var A = n(821609),
-    h = n(17928),
-    E = n(287809),
-    T = n(427262),
-    g = n(534514),
-    _ = n(834730),
-    O = n(512967);
+var h = e(821609),
+    x = e(17928),
+    E = e(287809),
+    T = e(427262),
+    g = e(534514),
+    _ = e(834730),
+    O = e(512967);
 function S(t) {
-    let { heroImage: e, children: n, header: i, description: a } = t;
+    let { heroImage: n, children: e, header: i, description: a } = t;
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            void 0 !== e && (0, s.jsx)("div", { className: O.c8, children: e }),
+            void 0 !== n && (0, s.jsx)("div", { className: O.c8, children: n }),
             (0, s.jsxs)(r.$m, {
                 "data-migration-pending": !0,
                 className: O.rf,
@@ -47,14 +47,14 @@ function S(t) {
                             (0, s.jsx)(g.D, { variant: "heading-xl/semibold", color: "text-strong", children: i }),
                             null != a &&
                                 (0, s.jsx)(_.E, {
-                                    variant: "text-md/medium",
+                                    variant: "body-md/medium",
                                     color: "text-default",
                                     className: O.h_,
                                     children: a,
                                 }),
                         ],
                     }),
-                    n,
+                    e,
                 ],
             }),
         ],
@@ -65,43 +65,43 @@ var j =
         (i[(i.SAFETY_TIPS = 1)] = "SAFETY_TIPS"),
         (i[(i.TAKE_ACTION = 2)] = "TAKE_ACTION"),
         i),
-    R = n(105292);
+    R = e(105292);
 function v(t) {
-    let { senderId: e, trackAnalyticsEvent: n, onNavigate: i } = t,
-        a = (0, h.bG)([E.default], () => {
-            let t = E.default.getUser(e);
+    let { senderId: n, trackAnalyticsEvent: e, onNavigate: i } = t,
+        a = (0, x.bG)([E.default], () => {
+            let t = E.default.getUser(n);
             return T.Ay.getName(t);
         });
     return (0, s.jsx)(S, {
         header: R.intl.string(R.t.sSMgC6),
         description: R.intl.formatToPlainString(R.t.q2QrTY, { username: a }),
-        heroImage: (0, s.jsx)(x, { alt: R.intl.string(R.t["3QhxXJ"]) }),
+        heroImage: (0, s.jsx)(A, { alt: R.intl.string(R.t["3QhxXJ"]) }),
         children: (0, s.jsxs)("div", {
             className: O.UD,
             children: [
-                (0, s.jsx)(A.$, {
+                (0, s.jsx)(h.$, {
                     text: R.intl.string(R.t["+o4Q7e"]),
                     variant: "primary",
                     fullWidth: !0,
                     onClick: () => {
-                        (i(j.TAKE_ACTION), n(o.Wm.USER_TAKEOVER_MODAL_TAKE_ACTION));
+                        (i(j.TAKE_ACTION), e(o.Wm.USER_TAKEOVER_MODAL_TAKE_ACTION));
                     },
                 }),
-                (0, s.jsx)(A.$, {
+                (0, s.jsx)(h.$, {
                     text: R.intl.string(R.t.xLkGzP),
                     variant: "secondary",
                     fullWidth: !0,
                     onClick: () => {
-                        (i(j.SAFETY_TIPS), n(o.Wm.USER_TAKEOVER_MODAL_SAFETY_TIPS));
+                        (i(j.SAFETY_TIPS), e(o.Wm.USER_TAKEOVER_MODAL_SAFETY_TIPS));
                     },
                 }),
             ],
         }),
     });
 }
-var I = n(546);
+var I = e(546);
 function N(t) {
-    let { alt: e, ariaLabel: n, ariaHidden: i, role: r, width: l, height: c, className: d, style: o } = t,
+    let { alt: n, ariaLabel: e, ariaHidden: i, role: r, width: l, height: c, className: d, style: o } = t,
         u = a.useMemo(
             () => (0, m.H)({ width: l, height: c, intrinsicWidth: 288, intrinsicHeight: 162, style: o }),
             [l, c, o],
@@ -110,55 +110,55 @@ function N(t) {
         style: u,
         src: I.A,
         className: (0, m.Z)(d),
-        alt: e,
-        "aria-label": n,
+        alt: n,
+        "aria-label": e,
         "aria-hidden": i,
         role: r ?? "img",
     });
 }
-var f = n(889229),
-    p = n(327337);
+var f = e(889229),
+    p = e(327337);
 function C(t) {
     let {} = t,
-        e = (0, p.RU)();
+        n = (0, p.RU)();
     return (0, s.jsx)(S, {
         heroImage: (0, s.jsx)(N, { alt: R.intl.string(R.t["2mJo21"]) }),
         header: R.intl.string(R.t.eAbVfS),
         children: (0, s.jsx)("div", {
             className: O.lG,
-            children: (0, s.jsx)(f.A, { tips: e, headerText: R.intl.string(R.t["0QSL1C"]) }),
+            children: (0, s.jsx)(f.A, { tips: n, headerText: R.intl.string(R.t["0QSL1C"]) }),
         }),
     });
 }
-var k = n(285796),
-    y = n(138134),
-    K = n(534890),
-    L = n(49229),
-    W = n(975807),
-    M = n(928658),
-    U = n(426190),
-    w = n(662502),
-    D = n(994500),
-    b = n(192311);
+var y = e(285796),
+    k = e(138134),
+    K = e(534890),
+    L = e(49229),
+    W = e(975807),
+    M = e(928658),
+    U = e(426190),
+    b = e(662502),
+    w = e(994500),
+    D = e(192311);
 function F(t) {
-    let { senderId: e, channelId: n, hasReported: i, onReport: r, trackAnalyticsEvent: l } = t,
-        c = (0, h.bG)([D.A], () => D.A.isBlocked(e)),
+    let { senderId: n, channelId: e, hasReported: i, onReport: r, trackAnalyticsEvent: l } = t,
+        c = (0, x.bG)([w.A], () => w.A.isBlocked(n)),
         [d, m] = a.useState(c),
         u = (0, U.N)(),
-        x = (0, U.z)(),
+        A = (0, U.z)(),
         [E, T] = a.useState(!1),
-        g = (0, b.W)(n),
-        _ = a.useMemo(() => (u ? 0 : x ? 2 : 1), [u, x]);
+        g = (0, D.W)(e),
+        _ = a.useMemo(() => (u ? 0 : A ? 2 : 1), [u, A]);
     async function j() {
         null != g &&
             (T(!0),
             await (0, M.LF)(
                 g,
                 () => {
-                    (w.A.showReportSuccessToast(e, n), r());
+                    (b.A.showReportSuccessToast(n, e), r());
                 },
                 () => {
-                    w.A.showFailedToast();
+                    b.A.showFailedToast();
                 },
             ),
             T(!1),
@@ -180,34 +180,34 @@ function F(t) {
         children: (0, s.jsxs)("div", {
             className: O.UD,
             children: [
-                (0, s.jsx)(A.$, {
+                (0, s.jsx)(h.$, {
                     text: d ? R.intl.string(R.t.XyHpKH) : R.intl.string(R.t.l4Emac),
                     variant: "primary",
                     fullWidth: !0,
-                    icon: k.a,
+                    icon: y.a,
                     onClick: () => {
                         d
                             ? (m(!1),
-                              L.A.unblockUser(e, { location: p.Ht }, n),
+                              L.A.unblockUser(n, { location: p.Ht }, e),
                               l(o.Wm.USER_TAKEOVER_MODAL_UNBLOCK),
-                              w.A.showUnblockSuccessToast(e, n))
+                              b.A.showUnblockSuccessToast(n, e))
                             : (m(!0),
                               l(o.Wm.USER_TAKEOVER_MODAL_BLOCK),
-                              L.A.blockUser(e, { location: p.Ht }, n).then(() => {
-                                  w.A.showBlockSuccessToast(e, n);
+                              L.A.blockUser(n, { location: p.Ht }, e).then(() => {
+                                  b.A.showBlockSuccessToast(n, e);
                               }));
                     },
                 }),
-                (0, s.jsx)(A.$, {
+                (0, s.jsx)(h.$, {
                     text: i ? R.intl.string(R.t.QvwOJ6) : R.intl.string(R.t["7fHyE6"]),
                     variant: "secondary",
                     fullWidth: !0,
-                    icon: y.FlagIcon,
+                    icon: k.FlagIcon,
                     onClick: j,
                     loading: E,
                     disabled: i,
                 }),
-                (0, s.jsx)(A.$, {
+                (0, s.jsx)(h.$, {
                     text: v,
                     variant: "secondary",
                     fullWidth: !0,
@@ -224,26 +224,26 @@ function F(t) {
         }),
     });
 }
-var V = n(715918);
+var V = e(715918);
 let H = (t) => {
-    let { warningId: e, warningType: n, senderId: i, modalProps: m, channelId: u } = t,
-        [x, A] = a.useState(j.INTRO),
-        h = a.useMemo(
-            () => ({ channelId: u, senderId: i, warningId: e, warningType: n, isNudgeWarning: !1 }),
-            [u, i, e, n],
+    let { warningId: n, warningType: e, senderId: i, modalProps: m, channelId: u } = t,
+        [A, h] = a.useState(j.INTRO),
+        x = a.useMemo(
+            () => ({ channelId: u, senderId: i, warningId: n, warningType: e, isNudgeWarning: !1 }),
+            [u, i, n, e],
         );
     a.useEffect(() => {
-        (0, o.QF)({ ...h, viewName: o.gN.SAFETY_TAKEOVER_MODAL });
-    }, [h]);
+        (0, o.QF)({ ...x, viewName: o.gN.SAFETY_TAKEOVER_MODAL });
+    }, [x]);
     let E = a.useCallback(
             (t) => {
-                (0, o._$)({ ...h, cta: t });
+                (0, o._$)({ ...x, cta: t });
             },
-            [h],
+            [x],
         ),
         [T, g] = a.useState(!1);
     function _(t) {
-        A(t);
+        h(t);
     }
     return (0, s.jsxs)(r.EO, {
         "data-migration-pending": !0,
@@ -254,7 +254,7 @@ let H = (t) => {
                 className: V.kL,
                 children: (0, s.jsxs)(l.t, {
                     width: 440,
-                    activeSlide: x,
+                    activeSlide: A,
                     centered: !1,
                     overflow: "visible",
                     contentDisplay: "flex",
@@ -262,7 +262,7 @@ let H = (t) => {
                         (0, s.jsx)(l.q, {
                             id: j.INTRO,
                             children: (0, s.jsx)(v, {
-                                warningId: e,
+                                warningId: n,
                                 senderId: i,
                                 trackAnalyticsEvent: E,
                                 onNavigate: _,
@@ -270,12 +270,12 @@ let H = (t) => {
                         }),
                         (0, s.jsx)(l.q, {
                             id: j.SAFETY_TIPS,
-                            children: (0, s.jsx)(C, { warningId: e, senderId: i, trackAnalyticsEvent: E }),
+                            children: (0, s.jsx)(C, { warningId: n, senderId: i, trackAnalyticsEvent: E }),
                         }),
                         (0, s.jsx)(l.q, {
                             id: j.TAKE_ACTION,
                             children: (0, s.jsx)(F, {
-                                warningId: e,
+                                warningId: n,
                                 senderId: i,
                                 trackAnalyticsEvent: E,
                                 channelId: u,
@@ -297,16 +297,16 @@ let H = (t) => {
                         size: "sm",
                         text: R.intl.string(R.t.cpT0Cq),
                         onClick: function () {
-                            (m.onClose(), (0, d.xi)(u, [e]), E(o.Wm.USER_TAKEOVER_MODAL_DISMISS));
+                            (m.onClose(), (0, d.xi)(u, [n]), E(o.Wm.USER_TAKEOVER_MODAL_DISMISS));
                         },
-                        textVariant: "text-sm/normal",
+                        textVariant: "body-sm/normal",
                     }),
-                    x !== j.INTRO &&
+                    A !== j.INTRO &&
                         (0, s.jsx)(c.Q, {
                             variant: "secondary",
                             size: "sm",
                             text: R.intl.string(R.t["13/7kX"]),
-                            textVariant: "text-sm/normal",
+                            textVariant: "body-sm/normal",
                             onClick: () => _(j.INTRO),
                         }),
                 ],

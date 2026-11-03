@@ -12,18 +12,18 @@ var i = e(477900),
     g = e(913122),
     o = e(235986),
     E = e(915089),
-    C = e(548118),
-    T = e(808728),
-    b = e(71393),
+    b = e(548118),
+    C = e(808728),
+    T = e(71393),
     G = e(105292),
     I = e(645781);
 function D(t) {
     let { createdGuildId: n, hasFooter: e = !0, onClose: D, onChannelPromptCompleted: u, isSlideReady: L } = t,
-        [U, x] = a.useState(""),
-        [A, y] = a.useState(null),
+        [U, y] = a.useState(""),
+        [A, x] = a.useState(null),
         [O, S] = a.useState(!1),
         h = (0, E.GV)(),
-        N = (0, r.bG)([b.A], () => b.A.getGuild(n), [n]),
+        N = (0, r.bG)([T.A], () => T.A.getGuild(n), [n]),
         v = a.useRef(null);
     a.useEffect(() => {
         L && v.current?.focus();
@@ -31,13 +31,13 @@ function D(t) {
     let R = a.useCallback(
             async (t) => {
                 if ((t.preventDefault(), null == N)) return;
-                (S(!0), y(null));
-                let n = T.Ay.getDefaultChannel(N.id);
+                (S(!0), x(null));
+                let n = C.Ay.getDefaultChannel(N.id);
                 try {
                     let t = G.intl.formatToPlainString(G.t.V4lepJ, { topic: U });
                     (await _.A.createTextChannel(N.id, U, n?.parent_id, t), u());
                 } catch (t) {
-                    y(new g.Wl(t));
+                    x(new g.Wl(t));
                 }
                 S(!1);
             },
@@ -71,22 +71,22 @@ function D(t) {
                     direction: o.A.Direction.VERTICAL,
                     separator: !1,
                     children: [
-                        null != N && (0, i.jsx)(C.Ay, { guild: N }),
+                        null != N && (0, i.jsx)(b.Ay, { guild: N }),
                         (0, i.jsx)(c.E, {
                             className: I.J5,
                             color: "text-strong",
-                            variant: "text-sm/semibold",
+                            variant: "body-sm/semibold",
                             children: N?.name,
                         }),
                         (0, i.jsx)(p.D, {
                             className: I.DD,
-                            variant: "heading-sm/semibold",
+                            variant: "heading-xs/semibold",
                             children: G.intl.string(G.t["8VRa7d"]),
                         }),
                         (0, i.jsx)(c.E, {
                             className: I.VA,
                             color: "text-default",
-                            variant: "text-md/normal",
+                            variant: "body-md/normal",
                             children: G.intl.string(G.t["+855Pm"]),
                         }),
                         null != D && (0, i.jsx)(s.s_, { "data-migration-pending": !0, className: I.b, onClick: D }),
@@ -105,7 +105,7 @@ function D(t) {
                                 type: "text",
                                 value: U,
                                 id: h,
-                                onChange: x,
+                                onChange: y,
                                 placeholder: G.intl.string(G.t.xGOYA8),
                                 inputRef: v,
                             }),
@@ -113,7 +113,7 @@ function D(t) {
                         null != A &&
                             0 === Object.keys(A.fields).length &&
                             (0, i.jsx)(c.E, {
-                                variant: "text-xs/normal",
+                                variant: "body-xs/normal",
                                 color: "text-feedback-critical",
                                 children: A.message,
                             }),

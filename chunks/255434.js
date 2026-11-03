@@ -124,7 +124,7 @@ function I(e) {
                                 className: c.rv,
                                 children:
                                     "string" == typeof I
-                                        ? (0, i.jsx)(d.E, { variant: "text-sm/medium", children: I })
+                                        ? (0, i.jsx)(d.E, { variant: "body-sm/medium", children: I })
                                         : I,
                             }),
                         ],

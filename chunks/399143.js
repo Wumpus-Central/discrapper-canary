@@ -1,4 +1,4 @@
-(e.d(n, { GuildSubscriptionSelectionModal: () => h }), e(667532), e(321073));
+(e.d(n, { GuildSubscriptionSelectionModal: () => b }), e(667532), e(321073));
 var i = e(477900),
     l = e(582128),
     r = e(444550),
@@ -9,55 +9,55 @@ var i = e(477900),
     d = e(548118),
     c = e(71393),
     p = e(915043),
-    x = e(105292),
-    g = e(315357);
-function h(t) {
-    let { transitionState: n, onClose: e, sku: h, onSelect: b, currentGuildId: f } = t,
-        [y, m] = l.useState(),
-        { guilds: v, isFetching: I } = (0, p.sD)(h.applicationId, h.id, !0),
+    g = e(105292),
+    x = e(315357);
+function b(t) {
+    let { transitionState: n, onClose: e, sku: b, onSelect: h, currentGuildId: y } = t,
+        [f, m] = l.useState(),
+        { guilds: v, isFetching: I } = (0, p.sD)(b.applicationId, b.id, !0),
         j = l.useMemo(() => {
-            if (!I && null != f)
+            if (!I && null != y)
                 return (
                     v.findIndex((t) => {
                         let { id: n } = t;
-                        return n === f;
+                        return n === y;
                     }) >= 0
                 );
-        }, [f, v, I]);
+        }, [y, v, I]);
     l.useLayoutEffect(() => {
-        j && m(f);
-    }, [f, j]);
+        j && m(y);
+    }, [y, j]);
     let S = l.useMemo(() => {
         let t = [];
         for (let n of v) {
             let e = { value: n.id, label: n.name };
-            j && n.id === f ? t.unshift(e) : t.push(e);
+            j && n.id === y ? t.unshift(e) : t.push(e);
         }
         return t;
-    }, [f, v, j]);
+    }, [y, v, j]);
     return (0, i.jsx)(a.a, {
-        title: x.intl.string(x.t["xgtI/K"]),
-        subtitle: x.intl.string(x.t.rAXXxN),
+        title: g.intl.string(g.t["xgtI/K"]),
+        subtitle: g.intl.string(g.t.rAXXxN),
         transitionState: n,
         onClose: e,
         actions: [
-            { variant: "secondary", text: x.intl.string(x.t.cpT0Cq), onClick: e },
+            { variant: "secondary", text: g.intl.string(g.t.cpT0Cq), onClick: e },
             {
                 variant: "primary",
-                text: x.intl.string(x.t["cY+Oob"]),
-                disabled: null == y,
+                text: g.intl.string(g.t["cY+Oob"]),
+                disabled: null == f,
                 onClick: function () {
-                    null != y && (b(y), e());
+                    null != f && (h(f), e());
                 },
             },
         ],
         children: I
-            ? (0, i.jsx)(s.y, { type: s.y.Type.PULSING_ELLIPSIS, className: g.u })
+            ? (0, i.jsx)(s.y, { type: s.y.Type.PULSING_ELLIPSIS, className: x.u })
             : S.length > 0
               ? (0, i.jsx)(r.p, {
-                    "aria-label": x.intl.string(x.t["5qyruI"]),
+                    "aria-label": g.intl.string(g.t["5qyruI"]),
                     options: S,
-                    value: y,
+                    value: f,
                     onChange: m,
                     renderOptionPrefix: (t) => {
                         let n = t?.value,
@@ -68,18 +68,18 @@ function h(t) {
                         let { label: n, value: e } = t;
                         return (0, i.jsxs)("div", {
                             children: [
-                                (0, i.jsx)(u.E, { variant: "text-md/normal", children: n }),
-                                e === f &&
+                                (0, i.jsx)(u.E, { variant: "body-md/normal", children: n }),
+                                e === y &&
                                     (0, i.jsx)(u.E, {
-                                        variant: "text-xs/normal",
+                                        variant: "body-xs/normal",
                                         color: "text-default",
-                                        children: x.intl.string(x.t.RjtuAI),
+                                        children: g.intl.string(g.t.RjtuAI),
                                     }),
                             ],
                         });
                     },
                     "data-migration-pending": !0,
                 })
-              : (0, i.jsx)(o.w, { type: "warning", message: x.intl.string(x.t.M2TbbK), role: "none" }),
+              : (0, i.jsx)(o.w, { type: "warning", message: g.intl.string(g.t.M2TbbK), role: "none" }),
     });
 }

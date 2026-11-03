@@ -1,4 +1,4 @@
-n.d(t, { K: () => I, A: () => T });
+n.d(t, { K: () => I, A: () => y });
 var a = n(477900);
 n(582128);
 var l = n(503698),
@@ -15,8 +15,8 @@ var l = n(503698),
     p = n(140735),
     E = n(260981),
     h = n(540418),
-    x = n(907085),
-    b = n(179820),
+    b = n(907085),
+    x = n(179820),
     A = n(105292),
     _ = n(381134);
 function N(e) {
@@ -28,9 +28,9 @@ function N(e) {
                 case s.x.RARE:
                     return { Icon: h.A, className: _.D3, label: A.intl.string(A.t["sTx/5z"]) };
                 case s.x.EPIC:
-                    return { Icon: x.b, className: _.mk, label: A.intl.string(A.t.RD8RiN) };
+                    return { Icon: b.b, className: _.mk, label: A.intl.string(A.t.RD8RiN) };
                 case s.x.MYTHIC:
-                    return { Icon: b.O, className: _.nM, label: A.intl.string(A.t.vqc1ol) };
+                    return { Icon: x.O, className: _.nM, label: A.intl.string(A.t.vqc1ol) };
                 default:
                     return null;
             }
@@ -54,13 +54,13 @@ function I(e) {
             eyebrow: l,
             body: E,
             variant: h = "default",
-            badgeImage: x,
-            badgeName: b,
+            badgeImage: b,
+            badgeName: x,
             progressCircle: A,
             rarity: _,
             isAnimated: I = !1,
-            targetElementRef: T,
-            onShow: y,
+            targetElementRef: y,
+            onShow: T,
             position: C = "top",
             shouldShow: S,
         } = e,
@@ -70,7 +70,7 @@ function I(e) {
             isVisible: O,
             targetElementRef: P,
             trigger: U,
-        } = (0, i.D)({ children: t, targetElementRef: T, delay: v.In, onTooltipShow: y, shouldShow: S }),
+        } = (0, i.D)({ children: t, targetElementRef: y, delay: v.In, onTooltipShow: T, shouldShow: S }),
         B = null != _ && _ !== s.x.COMMON,
         G = (0, a.jsxs)("div", {
             className: j.Qs,
@@ -81,8 +81,8 @@ function I(e) {
                     className: r()(j.fA, { [j.qJ]: D }),
                     "aria-hidden": !0,
                     children: (0, a.jsx)(R.BadgeImageWithProgressCircle, {
-                        src: x,
-                        alt: b,
+                        src: b,
+                        alt: x,
                         progressCircleText: A?.text,
                         progressCirclePercent: A?.percent,
                         progressCircleUrgency: A?.urgency,
@@ -96,7 +96,7 @@ function I(e) {
                     children: [
                         null != l &&
                             (0, a.jsx)(d.E, {
-                                variant: "text-sm/medium",
+                                variant: "body-sm/medium",
                                 color: "text-subtle",
                                 className: j.UP,
                                 children: l,
@@ -109,7 +109,7 @@ function I(e) {
                         }),
                         null != E &&
                             (0, a.jsx)(d.E, {
-                                variant: "text-sm/medium",
+                                variant: "body-sm/medium",
                                 color: "text-subtle",
                                 className: j.rf,
                                 children: E,
@@ -118,7 +118,7 @@ function I(e) {
                 }),
             ],
         }),
-        w = null != E ? `${b}. ${E}` : b,
+        w = null != E ? `${x}. ${E}` : x,
         k = (0, u.j)({ shouldShow: O })((e, t) =>
             t
                 ? (0, a.jsx)(f.Bc, {
@@ -138,4 +138,4 @@ function I(e) {
         );
     return (0, a.jsxs)(a.Fragment, { children: [U, (0, a.jsx)(p.A, { id: M, children: w }), k] });
 }
-let T = I;
+let y = I;

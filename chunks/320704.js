@@ -23,8 +23,8 @@ var n = s(477900),
 s(321073);
 var C = s(738768),
     R = s(457699),
-    L = s(146849),
-    b = s(521981),
+    b = s(146849),
+    L = s(521981),
     y = s(383233),
     F = s(994500),
     v = s(65600);
@@ -81,12 +81,12 @@ function ee(e) {
         [M, S] = r.useState(null),
         E = r.useMemo(() => (p ? [] : [a.M.CROSS_DM_SEARCH_SETTING_EDUCATION_POPOVER]), [p]),
         [C, R] = (0, h.kn)(E),
-        L = C === a.M.CROSS_DM_SEARCH_SETTING_EDUCATION_POPOVER,
-        b = r.useCallback(
+        b = C === a.M.CROSS_DM_SEARCH_SETTING_EDUCATION_POPOVER,
+        L = r.useCallback(
             (e) => {
-                (null != e && L && R(X.i.USER_DISMISS), S(e));
+                (null != e && b && R(X.i.USER_DISMISS), S(e));
             },
-            [L, R, S],
+            [b, R, S],
         ),
         y = r.useCallback(
             (e) => {
@@ -95,8 +95,8 @@ function ee(e) {
             [R],
         ),
         F = r.useCallback(() => {
-            (b(null), A.A.openSearchFiltersModal(s));
-        }, [b, s]),
+            (L(null), A.A.openSearchFiltersModal(s));
+        }, [L, s]),
         I = r.useMemo(() => (m > 0 ? J.intl.format(J.t.uaR4sI, { filterCount: m }) : J.intl.string(J.t.UdhTtk)), [m]),
         N = !(0, G.DZ)() && (s.type === $.I4_.DMS || s.type === $.I4_.CHANNEL);
     return (0, n.jsxs)("header", {
@@ -121,15 +121,15 @@ function ee(e) {
                         searchMode: l,
                         onSearchModeChange: c,
                         isPopoutOpen: "sort" === M,
-                        setOpenPopout: b,
+                        setOpenPopout: L,
                     }),
                     N &&
                         (0, n.jsx)(eo, {
                             searchContext: s,
                             selectedChannelId: k,
                             isPopoutOpen: "settings" === M,
-                            setOpenPopout: b,
-                            isPopoverVisible: L,
+                            setOpenPopout: L,
+                            isPopoverVisible: b,
                             onPopoverRequestClose: y,
                         }),
                 ],
@@ -160,7 +160,7 @@ function en(e) {
             className: K.q_,
             children: [
                 (0, n.jsx)(O.E, {
-                    variant: "text-md/medium",
+                    variant: "body-md/medium",
                     color: "text-muted",
                     children: (0, n.jsx)(w.Anchor, {
                         className: K.Zd,
@@ -176,7 +176,7 @@ function en(e) {
 function er() {
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(O.E, { variant: "text-md/medium", color: "text-default", children: J.intl.string(J.t.uixzLf) }),
+            (0, n.jsx)(O.E, { variant: "body-md/medium", color: "text-default", children: J.intl.string(J.t.uixzLf) }),
             (0, n.jsx)(es, {}),
         ],
     });
@@ -184,14 +184,14 @@ function er() {
 function el(e) {
     let { totalResults: t, subtitle: s } = e,
         r = (0, n.jsx)(O.E, {
-            variant: "text-md/medium",
+            variant: "body-md/medium",
             color: "text-strong",
             children: J.intl.format(J.t.ZGVL3g, { count: t }),
         });
     return null != s
         ? (0, n.jsxs)("div", {
               className: K.hy,
-              children: [r, (0, n.jsx)(O.E, { variant: "text-xs/medium", color: "text-subtle", children: s })],
+              children: [r, (0, n.jsx)(O.E, { variant: "body-xs/medium", color: "text-subtle", children: s })],
           })
         : r;
 }
@@ -874,7 +874,7 @@ let eR = function (e) {
         className: eE.kL,
         children: [
             (0, n.jsx)(O.E, {
-                variant: "text-sm/medium",
+                variant: "body-sm/medium",
                 color: "text-strong",
                 children: J.intl.string(J.t["I+4OJC"]),
             }),
@@ -888,8 +888,8 @@ let eR = function (e) {
         ],
     });
 };
-var eL = s(36537);
-class eb extends r.Component {
+var eb = s(36537);
+class eL extends r.Component {
     componentDidMount() {
         this.autoAnalytics();
     }
@@ -946,7 +946,7 @@ class eb extends r.Component {
 }
 function ey(e) {
     let { children: t } = e;
-    return (0, n.jsx)("div", { className: eL.Oq, children: (0, n.jsx)("div", { className: eL.de, children: t }) });
+    return (0, n.jsx)("div", { className: eb.Oq, children: (0, n.jsx)("div", { className: eb.de, children: t }) });
 }
 function eF(e) {
     let { searchContext: t, isFeedbackVisible: s, dismissFeedbackEntrypoint: r } = e;
@@ -970,14 +970,14 @@ function ev(e) {
     if (m)
         return (0, n.jsxs)(ey, {
             children: [
-                (0, n.jsx)("div", { className: eL.M6 }),
-                (0, n.jsx)("div", { className: o()(eL.pZ, eL.gJ), children: J.intl.string(J.t.uvDZBZ) }),
+                (0, n.jsx)("div", { className: eb.M6 }),
+                (0, n.jsx)("div", { className: o()(eb.pZ, eb.gJ), children: J.intl.string(J.t.uvDZBZ) }),
             ],
         });
     if (g) {
         let e = (0, j.Y7)(i);
         return (0, n.jsxs)(ey, {
-            children: [(0, n.jsx)(ek, {}), (0, n.jsx)("div", { className: (eL.pZ, eL.Jy), children: e })],
+            children: [(0, n.jsx)(ek, {}), (0, n.jsx)("div", { className: (eb.pZ, eb.Jy), children: e })],
         });
     }
     if (k) return null;
@@ -998,8 +998,8 @@ function ev(e) {
         M = f ? J.intl.string(J.t["VrK/2R"]) : J.intl.string(J.t.V6nAfF);
     return (0, n.jsxs)(ey, {
         children: [
-            (0, n.jsx)("div", { className: o()(eL.$l, { [eL.CC]: f }) }),
-            (0, n.jsx)("div", { className: o()(eL.pZ, eL.wV, { [eL.CC]: f }), children: M }),
+            (0, n.jsx)("div", { className: o()(eb.$l, { [eb.CC]: f }) }),
+            (0, n.jsx)("div", { className: o()(eb.pZ, eb.wV, { [eb.CC]: f }), children: M }),
         ],
     });
 }
@@ -1019,8 +1019,8 @@ let eI = [],
                 onPageChange: E,
                 searchMode: C,
                 onBlockedResultsClick: R,
-                searchResultsQuery: L,
-                searchResultsQueryString: b,
+                searchResultsQuery: b,
+                searchResultsQueryString: L,
                 selectedChannelId: y,
             } = e,
             F = r.useRef(null),
@@ -1050,7 +1050,7 @@ let eI = [],
                 let r = n.getScrollerState().scrollTop - e;
                 n.scrollTo({ to: r, animate: t, callback: s });
             }, []),
-            H = null != b ? `${C}:${b}` : void 0,
+            H = null != L ? `${C}:${L}` : void 0,
             {
                 paginationTotalCount: W,
                 paginationMaxVisiblePage: D,
@@ -1127,7 +1127,7 @@ let eI = [],
                 A.A.appendToSearchInputText(t, e);
             }, [t, s.isSearching]);
         return (0, n.jsxs)("section", {
-            className: eL.zt,
+            className: eb.zt,
             "aria-label": J.intl.string(J.t["zkoeq/"]),
             children: [
                 (0, n.jsx)(ee, {
@@ -1142,12 +1142,12 @@ let eI = [],
                 }),
                 (0, n.jsxs)(c.Ch, {
                     ref: F,
-                    className: eL.XG,
+                    className: eb.XG,
                     children: [
                         O &&
                             !s.isSearching &&
                             (0, n.jsx)("div", {
-                                className: eL.VC,
+                                className: eb.VC,
                                 children: (0, n.jsx)(d.w, {
                                     type: "warning",
                                     message: J.intl.formatToPlainString(J.t["E+2azY"], { maxPages: D }),
@@ -1156,7 +1156,7 @@ let eI = [],
                             }),
                         Y &&
                             (0, n.jsx)("div", {
-                                className: eL.QR,
+                                className: eb.QR,
                                 children: (0, n.jsx)(d.w, {
                                     type: "info",
                                     message: J.intl.format(J.t["gQeg/R"], { handleClick: Z }),
@@ -1174,14 +1174,14 @@ let eI = [],
                             onScrollTo: z,
                             onBlockedResultsClick: R,
                             searchRequestAnalyticsId: o,
-                            searchResultsQuery: L,
+                            searchResultsQuery: b,
                         }),
                     ],
                 }),
                 (0, n.jsx)(eF, { searchContext: t, isFeedbackVisible: m, dismissFeedbackEntrypoint: f }),
                 Q &&
                     (0, n.jsx)(eg.A, {
-                        className: eL.cu,
+                        className: eb.cu,
                         onPageChange: q,
                         offset: s.offset,
                         totalCount: W,
@@ -1232,7 +1232,7 @@ function e_(e) {
             blockCount: g,
         } = (function (e) {
             let { searchContext: t } = e,
-                s = (0, L.I2)({ location: "useRenderedSearchResults" }).enabled,
+                s = (0, b.I2)({ location: "useRenderedSearchResults" }).enabled,
                 n = (0, i.bG)(
                     [v.A, m.A, R.A],
                     () => {
@@ -1255,7 +1255,7 @@ function e_(e) {
                                     s ||
                                         (t = t.set(
                                             "customRenderedContent",
-                                            (0, b.Ay)(t, {
+                                            (0, L.Ay)(t, {
                                                 postProcessor: l,
                                                 allowHeading: !0,
                                                 allowList: !0,
@@ -1333,7 +1333,7 @@ function e_(e) {
                 searchResultsQueryString: T,
                 selectedChannelId: s,
             }),
-            (0, n.jsx)(eb, {
+            (0, n.jsx)(eL, {
                 searchContext: t,
                 searchRequestAnalyticsId: D,
                 messages: H,

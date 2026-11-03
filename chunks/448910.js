@@ -1,4 +1,4 @@
-n.d(t, { Y: () => b });
+n.d(t, { Y: () => N });
 var l = n(477900),
     i = n(582128),
     r = n(284009),
@@ -15,42 +15,42 @@ var l = n(477900),
     f = n(710525),
     E = n(901930),
     S = n(725836),
-    g = n(580133),
-    I = n(281044),
-    A = n(758476),
-    y = n(105292),
-    x = n(663466);
-function P() {
-    let e = (0, I.t4)((e) => (0, f.qn)(e.order));
+    y = n(580133),
+    g = n(281044),
+    I = n(758476),
+    A = n(105292),
+    P = n(663466);
+function v() {
+    let e = (0, g.t4)((e) => (0, f.qn)(e.order));
     return null == e || null == e.redirect_url
         ? null
         : (0, l.jsx)(m.E, {
-              variant: "text-md/normal",
-              children: y.intl.format(A.default.fJnl1h, {
+              variant: "body-md/normal",
+              children: A.intl.format(I.default.fJnl1h, {
                   reopenHook: (t, n) => (0, l.jsx)(p.Anchor, { onClick: () => (0, f.DL)(e), children: t }, n),
               }),
           });
 }
-function v() {
+function x() {
     let { error: e, errorMessage: t } = (0, E.j)({});
     return null != e
         ? (0, l.jsx)("div", {
-              className: x.l,
+              className: P.l,
               children: (0, l.jsx)(C.w, { type: "critical", message: t, role: "alert" }),
           })
-        : (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(h.N, {}), (0, l.jsx)(P, {})] });
+        : (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(h.N, {}), (0, l.jsx)(v, {})] });
 }
 function _() {
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(S.UY, { children: (0, l.jsx)(g.f, {}) }),
-            (0, l.jsx)("div", { className: x.k, role: "status", children: (0, l.jsx)(v, {}) }),
+            (0, l.jsx)(S.UY, { children: (0, l.jsx)(y.f, {}) }),
+            (0, l.jsx)("div", { className: P.k, role: "status", children: (0, l.jsx)(x, {}) }),
         ],
     });
 }
 var T = n(202475),
-    N = n(883645);
-function b(e) {
+    b = n(883645);
+function N(e) {
     let {
             renderStepBody: t,
             tenantCheckoutFooterProps: n,
@@ -64,30 +64,30 @@ function b(e) {
         {
             paymentSourceId: E,
             purchaseError: S,
-            setCheckoutCurrency: g,
-            isOrderSigningInProgress: A,
-        } = (0, I.t4)((e) => ({
+            setCheckoutCurrency: y,
+            isOrderSigningInProgress: I,
+        } = (0, g.t4)((e) => ({
             paymentSourceId: e.paymentSourceId,
             purchaseError: e.purchaseError,
             setCheckoutCurrency: e.setCheckoutCurrency,
             isOrderSigningInProgress: e.get("isOrderSigningInProgress"),
         })),
-        y = (0, N.s2)();
-    a()(null != y, "Step should be set");
-    let x = i.useRef(null),
-        { paymentSources: P } = (0, T.j)(),
-        v = (0, c.W)(P, E),
-        b = (0, s.iB)({ paymentSourceId: E, location: "CheckoutBaseReviewStep" }),
-        j = (0, I.t4)((e) =>
-            e.getIsReviewSubmitDisabled({ paymentSource: v, isWalletPurchaseDisabled: b, isTrial: r }),
+        A = (0, b.s2)();
+    a()(null != A, "Step should be set");
+    let P = i.useRef(null),
+        { paymentSources: v } = (0, T.j)(),
+        x = (0, c.W)(v, E),
+        N = (0, s.iB)({ paymentSourceId: E, location: "CheckoutBaseReviewStep" }),
+        j = (0, g.t4)((e) =>
+            e.getIsReviewSubmitDisabled({ paymentSource: x, isWalletPurchaseDisabled: N, isTrial: r }),
         );
     i.useEffect(() => {
-        null != S && null != x.current && x.current.scrollIntoView({ behavior: "smooth" });
+        null != S && null != P.current && P.current.scrollIntoView({ behavior: "smooth" });
     }, [S]);
     let R = n.onBack,
         O = i.useCallback(() => {
-            (g(void 0), null != R && R());
-        }, [g, R]),
+            (y(void 0), null != R && R());
+        }, [y, R]),
         M = i.useMemo(() => t(), [t]),
         L = (0, l.jsx)(d.U, {
             ...n,
@@ -101,6 +101,6 @@ function b(e) {
             postPurchaseStep: o.pn.CONFIRM,
         });
     return (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(u.dZ, { children: A ? (0, l.jsx)(_, {}) : M }), (0, l.jsx)(u.UX, { children: L })],
+        children: [(0, l.jsx)(u.dZ, { children: I ? (0, l.jsx)(_, {}) : M }), (0, l.jsx)(u.UX, { children: L })],
     });
 }

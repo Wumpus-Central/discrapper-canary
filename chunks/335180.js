@@ -467,7 +467,7 @@ function et(e) {
                                 (0, s.jsx)(g.InboxIcon, { size: "md", color: "icon-default", className: C.yH }),
                                 (0, s.jsx)(N.D, {
                                     className: C.Hi,
-                                    variant: "text-lg/semibold",
+                                    variant: "body-lg/semibold",
                                     color: "interactive-text-active",
                                     children: S.intl.string(S.t.GSmTKJ),
                                 }),

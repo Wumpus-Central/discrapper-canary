@@ -8,8 +8,8 @@ var n = s(477900),
     o = s(56059),
     d = s(276293),
     c = s(661531),
-    m = s(834730),
-    b = s(658675),
+    b = s(834730),
+    m = s(658675),
     g = s(966327),
     A = s(115718),
     f = s(47167),
@@ -17,17 +17,17 @@ var n = s(477900),
     h = s(255266),
     E = s(72563),
     C = s(223863),
-    x = s(734057),
-    L = s(71393),
-    S = s(290863),
+    L = s(734057),
+    S = s(71393),
+    x = s(290863),
     _ = s(573163),
     D = s(994500),
     N = s(287809),
     I = s(58703),
-    P = s(403362),
-    j = s(427262),
-    v = s(473511),
-    y = s(359378),
+    y = s(403362),
+    P = s(427262),
+    j = s(473511),
+    v = s(359378),
     G = s(790782),
     T = s(837695);
 function R(e, t) {
@@ -35,13 +35,13 @@ function R(e, t) {
 }
 function z(e) {
     let { user: t, subLabel: s, ...a } = e,
-        i = j.Ay.useName(t),
-        l = j.Ay.useUserTag(t, { decoration: "never" }),
+        i = P.Ay.useName(t),
+        l = P.Ay.useUserTag(t, { decoration: "never" }),
         o = (0, r.bG)([D.A], () => D.A.getNickname(t.id)),
-        d = (0, r.bG)([S.A], () => S.A.getStatus(t.id)),
+        d = (0, r.bG)([x.A], () => x.A.getStatus(t.id)),
         c = o ?? i,
-        m = a["aria-label"] ?? R(c, s ?? l);
-    return (0, n.jsx)(y.A, {
+        b = a["aria-label"] ?? R(c, s ?? l);
+    return (0, n.jsx)(v.A, {
         listItemId: a.destination.id,
         icon: (0, n.jsx)(g.A, { "aria-hidden": !0, size: u._3.SIZE_32, user: t, status: d }),
         label: c,
@@ -51,7 +51,7 @@ function z(e) {
         disabled: a.disabled,
         trailing: a.trailing,
         onPress: null != a.onPressDestination ? () => a.onPressDestination?.(a.destination, c) : void 0,
-        "aria-label": m,
+        "aria-label": b,
         "aria-setsize": a["aria-setsize"],
         "aria-posinset": a["aria-posinset"],
         className: a.className,
@@ -63,7 +63,7 @@ function M(e) {
         l = (0, E.i)(t),
         r = i ?? void 0,
         o = a["aria-label"] ?? R(r, s ?? l);
-    return (0, n.jsx)(y.A, {
+    return (0, n.jsx)(v.A, {
         listItemId: a.destination.id,
         icon: (0, n.jsx)(p.A, { "aria-hidden": !0, size: u._3.SIZE_32, channel: t }),
         label: i,
@@ -81,10 +81,10 @@ function M(e) {
 }
 function k(e) {
     let { channel: t, subLabel: s, ...a } = e,
-        i = (0, r.bG)([L.A], () => L.A.getGuild(t?.guild_id)),
+        i = (0, r.bG)([S.A], () => S.A.getGuild(t?.guild_id)),
         u = (0, f.Ay)(t),
-        b = (0, r.bG)([x.A, N.default, D.A], () => {
-            let e = x.A.getChannel(t.parent_id);
+        m = (0, r.bG)([L.A, N.default, D.A], () => {
+            let e = L.A.getChannel(t.parent_id);
             return null == e ? null : (0, f.m1)(e, N.default, D.A, !1);
         }),
         g = (0, r.bG)([_.Ay], () => _.Ay.lastMessageTimestamp(t.id, G.P.CHANNEL)),
@@ -96,18 +96,18 @@ function k(e) {
             className: T.vr,
             children: [
                 (0, n.jsx)(e, { color: c.A.colors.TEXT_SUBTLE, className: T.Q9 }),
-                (0, n.jsx)(m.E, { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: b }),
+                (0, n.jsx)(b.E, { variant: "body-xs/medium", color: "text-subtle", lineClamp: 1, children: m }),
                 null != g
                     ? (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, n.jsx)(m.E, {
+                              (0, n.jsx)(b.E, {
                                   className: T.Ql,
-                                  variant: "text-xs/medium",
+                                  variant: "body-xs/medium",
                                   color: "text-subtle",
                                   children: "\u2022",
                               }),
-                              (0, n.jsx)(m.E, {
-                                  variant: "text-xs/medium",
+                              (0, n.jsx)(b.E, {
+                                  variant: "body-xs/medium",
                                   color: "text-subtle",
                                   children: (0, I.Fe)(l()(g)),
                               }),
@@ -116,11 +116,11 @@ function k(e) {
                     : null,
             ],
         })),
-            (p = b));
+            (p = m));
     }
     let E = u ?? void 0,
         C = a["aria-label"] ?? R(E, s ?? p);
-    return (0, n.jsx)(y.A, {
+    return (0, n.jsx)(v.A, {
         listItemId: a.destination.id,
         icon: (0, n.jsx)(h.A, { size: h.q.SMALL_32, guild: i, channel: t }),
         label: u,
@@ -150,7 +150,7 @@ function H(e) {
         case A.rD.VOICE_CHANNEL:
             return (0, n.jsx)(k, { channel: i, destination: l, ...s });
         default:
-            return (0, P.xb)(a);
+            return (0, y.xb)(a);
     }
 }
 function U(e) {
@@ -165,26 +165,26 @@ function U(e) {
             validateDestination: d,
         } = e,
         c = a.useMemo(() => l?.map(C.I) ?? [], [l]),
-        m = a.useCallback(
+        b = a.useCallback(
             (e) => {
                 let { section: a, row: l } = e;
                 if (a > 0) return;
-                let m = t[l],
-                    { type: g, record: f } = m;
+                let b = t[l],
+                    { type: g, record: f } = b;
                 if (g === A.rD.HEADER) return;
-                let p = (0, C.I)((0, C.hY)(m)),
-                    h = (0, v.pE)(s, i, f, d),
+                let p = (0, C.I)((0, C.hY)(b)),
+                    h = (0, j.pE)(s, i, f, d),
                     E = c.includes(p),
-                    x = (u && !E) || null != h;
+                    L = (u && !E) || null != h;
                 return (0, n.jsx)(
                     H,
                     {
-                        result: m,
+                        result: b,
                         subLabel: null != h ? h.label : void 0,
                         subLabelLineClamp: h?.lineClamp,
-                        disabled: x,
+                        disabled: L,
                         selected: E,
-                        trailing: (0, n.jsx)(b.P, { checked: E, disabled: x }),
+                        trailing: (0, n.jsx)(m.P, { checked: E, disabled: L }),
                         onPressDestination: r,
                         "aria-posinset": l + 1,
                         "aria-setsize": t.length,
@@ -195,5 +195,5 @@ function U(e) {
             },
             [u, r, s, i, t, c, o, d],
         );
-    return { sections: [t.length], sectionHeight: 0, rowHeight: 48, renderRow: m };
+    return { sections: [t.length], sectionHeight: 0, rowHeight: 48, renderRow: b };
 }

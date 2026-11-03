@@ -8,8 +8,8 @@ var l = n(477900),
     c = n(428678),
     u = n(39623),
     o = n(873298),
-    x = n(184287);
-function m(e) {
+    m = n(184287);
+function x(e) {
     let { redactionType: t, label: n } = e,
         r = i.useMemo(() => {
             switch (t) {
@@ -24,16 +24,16 @@ function m(e) {
             }
         }, [t]);
     return (0, l.jsxs)("div", {
-        className: x.q,
+        className: m.q,
         children: [
             null != r && (0, l.jsx)(r, { size: "xs", color: "currentColor" }),
-            (0, l.jsx)(s.E, { variant: "text-md/normal", color: "text-default", children: n }),
+            (0, l.jsx)(s.E, { variant: "body-md/normal", color: "text-default", children: n }),
         ],
     });
 }
 let h = i.memo(function (e) {
     let { option: t } = e;
-    return (0, l.jsx)(m, { redactionType: t.value, label: t.label });
+    return (0, l.jsx)(x, { redactionType: t.value, label: t.label });
 });
 var f = n(641685);
 function j(e) {
@@ -42,7 +42,7 @@ function j(e) {
         className: f.ar,
         children: [
             (0, l.jsx)(s.E, {
-                variant: "text-md/medium",
+                variant: "body-md/medium",
                 color: d ? "text-muted" : "text-strong",
                 className: f.DD,
                 children: t,

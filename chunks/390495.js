@@ -105,7 +105,7 @@ function b(e) {
                     ref: n,
                     className: C.P,
                     tabIndex: 0,
-                    children: (0, i.jsx)(r.E, { variant: "text-sm/medium", color: "text-muted", children: o }),
+                    children: (0, i.jsx)(r.E, { variant: "body-sm/medium", color: "text-muted", children: o }),
                 }),
             }),
             (0, i.jsx)(E, { channel: t, targetElementRef: n, position: "bottom" }),

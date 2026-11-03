@@ -49,7 +49,7 @@ function _(t) {
         onClose: a,
         ...l,
         children: (0, e.jsx)(r.E, {
-            variant: "text-md/normal",
+            variant: "body-md/normal",
             children: m.intl.format(m.t.jkvpmk, {
                 listingName: i.name,
                 monetizationTermsUrl: f.A.getArticleURL(u.MVz.CREATOR_TERMS),

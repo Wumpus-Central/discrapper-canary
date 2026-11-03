@@ -16,13 +16,13 @@ class u extends n.PureComponent {
             style: l,
             children: [
                 (0, i.jsxs)(a.E, {
-                    variant: "text-sm/semibold",
+                    variant: "body-sm/semibold",
                     tag: "div",
                     color: "text-feedback-positive",
                     className: d.AD,
                     children: [E.intl.string(E.t["8tvIiN"]), ":"],
                 }),
-                (0, i.jsx)(a.E, { className: r()(d.uN, s), variant: "text-sm/normal", children: e }),
+                (0, i.jsx)(a.E, { className: r()(d.uN, s), variant: "body-sm/normal", children: e }),
             ],
         });
     }

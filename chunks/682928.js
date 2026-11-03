@@ -3,8 +3,8 @@ var l = n(477900),
     s = n(582128),
     a = n(503698),
     r = n.n(a),
-    u = n(478676),
-    o = n.n(u);
+    o = n(478676),
+    u = n.n(o);
 (n(323874), n(14289), n(35956), n(321073));
 let i = "media.discordapp.net",
     c = /^\/attachments\/\d+\/\d+\/[^/]+$/,
@@ -28,8 +28,8 @@ function h(e, t) {
 }
 var f = n(707554),
     R = n(192308),
-    k = n(28863),
-    b = n(398590),
+    b = n(28863),
+    k = n(398590),
     y = n(693875),
     x = n(253932),
     v = n(910379);
@@ -37,12 +37,12 @@ let N = /^([a-z][a-z\d+.-]*:|\/\/)/i;
 function A(e) {
     let t,
         a,
-        { target: r, alt: u, title: o } = e,
+        { target: r, alt: o, title: u } = e,
         c = x.kt.useSetting(),
         [h, f] = s.useState(!1),
-        [R, k] = s.useState(!1),
-        b = g(r),
-        A = b
+        [R, b] = s.useState(!1),
+        k = g(r),
+        A = k
             ? r
             : (function (e) {
                   if (N.test(e)) return null;
@@ -53,14 +53,14 @@ function A(e) {
                   }
               })(r);
     if (null == A || h) return null;
-    let C = b
+    let C = k
             ? (function (e) {
                   let t = null != e ? p.exec(e.trim()) : null;
                   if (null == t) return null;
                   let n = Number(t[1]),
                       l = Number(t[2]);
                   return n > 0 && l > 0 ? { width: n, height: l } : null;
-              })(o)
+              })(u)
             : null,
         j =
             null != C
@@ -68,7 +68,7 @@ function A(e) {
                   { width: Math.max(1, Math.round(C.width * t)), height: Math.max(1, Math.round(C.height * t)) })
                 : null,
         w =
-            b && !c && null != (a = m(A)) && d.test(a.pathname)
+            k && !c && null != (a = m(A)) && d.test(a.pathname)
                 ? (function (e) {
                       if (!g(e)) return null;
                       let t = new URL(e);
@@ -78,10 +78,10 @@ function A(e) {
         E = null != w,
         _ = E && !R;
     function I() {
-        k(!0);
+        b(!0);
     }
     function M() {
-        k(!1);
+        b(!1);
     }
     return (0, l.jsxs)("div", {
         className: v.inlineImage,
@@ -89,7 +89,7 @@ function A(e) {
             (0, l.jsx)("img", {
                 className: v.inlineImageMedia,
                 src: _ ? w : A,
-                alt: u,
+                alt: o,
                 width: j?.width,
                 height: j?.height,
                 loading: "lazy",
@@ -113,14 +113,14 @@ var C = n(46054),
     M = n(652215),
     L = n(559868),
     O = n(736541);
-let D = o().defaultRules.link,
+let D = u().defaultRules.link,
     T = { section: M.JJy.SETTINGS_CHANGELOG };
 function G(e) {
     let { level: t, children: n, className: l } = e,
         a = (0, f.$)(),
         r = parseInt(t, 10),
-        u = isNaN(r) ? 1 : r;
-    return s.createElement(`h${a + u - 1}`, { className: l }, n);
+        o = isNaN(r) ? 1 : r;
+    return s.createElement(`h${a + o - 1}`, { className: l }, n);
 }
 let S = (function () {
         if (null == C.A) return null;
@@ -153,7 +153,7 @@ let S = (function () {
                                     n.changeLog.track(M.HAw.CHANGE_LOG_CTA_CLICKED, {
                                         ...I.default.getCampaignParams(s),
                                     }),
-                                    (0, b.bz)(),
+                                    (0, k.bz)(),
                                     (0, R.closeModal)(L.lb),
                                     e.preventDefault());
                             }
@@ -170,9 +170,9 @@ let S = (function () {
             },
             react: (e, t, n) =>
                 (0, l.jsx)(
-                    k.Anchor,
+                    b.Anchor,
                     {
-                        href: o().sanitizeUrl(e.target),
+                        href: u().sanitizeUrl(e.target),
                         title: e.title,
                         onClick: e.callToAction,
                         target: "_blank",
@@ -190,7 +190,7 @@ let S = (function () {
                     {
                         level: t.level,
                         className: r()(
-                            O["heading-md/semibold"],
+                            O["heading-sm/semibold"],
                             ...(null == (a = t.className) ? [] : a.split(" ").map((t) => e[t])),
                         ),
                         children: n(t.content, s),
@@ -203,7 +203,7 @@ let S = (function () {
             react: (e, t, n) =>
                 (0, l.jsx)(
                     G,
-                    { level: e.level, className: O["heading-md/semibold"], children: t(e.content, n) },
+                    { level: e.level, className: O["heading-sm/semibold"], children: t(e.content, n) },
                     n.key,
                 ),
         },
@@ -217,23 +217,23 @@ let S = (function () {
         list: (e) => ({
             react(t, n, s) {
                 let a = t.ordered ? "ol" : "ul",
-                    u = t.items.map((t, a) =>
+                    o = t.items.map((t, a) =>
                         (0, l.jsx)(
                             "li",
                             {
-                                className: r()(O["text-md/normal"], e.listItem),
+                                className: r()(O["body-md/normal"], e.listItem),
                                 children: n(t, { ...s, changelogImagesDisabled: !0 }),
                             },
                             a,
                         ),
                     );
-                return (0, l.jsx)(a, { className: e.list, start: t.start, children: u }, s.key);
+                return (0, l.jsx)(a, { className: e.list, start: t.start, children: o }, s.key);
             },
         }),
         paragraph: (e) => ({
             react(t, n, a) {
-                let u = r()(O["text-md/normal"], e.paragraph),
-                    o = (function (e) {
+                let o = r()(O["body-md/normal"], e.paragraph),
+                    u = (function (e) {
                         let t = [],
                             n = [],
                             l = !1;
@@ -260,23 +260,23 @@ let S = (function () {
                             t
                         );
                     })(t.content);
-                return !0 !== a.changelogImagesDisabled && o.some((e) => "image" === e.type)
+                return !0 !== a.changelogImagesDisabled && u.some((e) => "image" === e.type)
                     ? (0, l.jsx)(
                           s.Fragment,
                           {
-                              children: o.map((e, t) =>
+                              children: u.map((e, t) =>
                                   "image" === e.type
                                       ? (0, l.jsx)(
                                             s.Fragment,
                                             { children: n([e.node], { ...a, changelogBlockImage: !0 }) },
                                             t,
                                         )
-                                      : (0, l.jsx)("p", { className: u, children: n(e.nodes, a) }, t),
+                                      : (0, l.jsx)("p", { className: o, children: n(e.nodes, a) }, t),
                               ),
                           },
                           a.key,
                       )
-                    : (0, l.jsx)("p", { className: u, children: n(t.content, a) }, a.key);
+                    : (0, l.jsx)("p", { className: o, children: n(t.content, a) }, a.key);
             },
         }),
     };

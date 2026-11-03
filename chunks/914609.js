@@ -94,9 +94,9 @@ function k(e) {
                     (0, l.jsxs)("div", {
                         className: L.C,
                         children: [
-                            (0, l.jsx)(f.D, { variant: "heading-md/semibold", children: d }),
+                            (0, l.jsx)(f.D, { variant: "heading-sm/semibold", children: d }),
                             null != A
-                                ? (0, l.jsx)(m.E, { variant: "text-sm/normal", color: "text-muted", children: A })
+                                ? (0, l.jsx)(m.E, { variant: "body-sm/normal", color: "text-muted", children: A })
                                 : null,
                         ],
                     }),

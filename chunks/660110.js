@@ -3,15 +3,15 @@ var t,
     i = r(477900);
 r(582128);
 var s = r(28863),
-    a = r(683071),
-    l = r(331322),
-    o = r(885574),
+    o = r(683071),
+    a = r(331322),
+    l = r(885574),
     c = r(738188),
     d = r(834730),
     u = r(404778),
     h = r(975807),
-    x = r(379257),
-    f = r(306537),
+    f = r(379257),
+    x = r(306537),
     j = r(36149),
     p = r(975571),
     A = r(418208),
@@ -37,7 +37,7 @@ function v(e) {
                       onClick: (e) => {
                           (e.preventDefault(),
                               e.stopPropagation(),
-                              x.A.showAgeVerificationGetStartedModal({ entryPoint: f.q1.START_STAGE_PROMPT }));
+                              f.A.showAgeVerificationGetStartedModal({ entryPoint: x.q1.START_STAGE_PROMPT }));
                       },
                       useDefaultUnderlineStyles: !1,
                       children: e.join(""),
@@ -50,7 +50,7 @@ function T(e) {
         t = v(r);
     return (0, i.jsx)("div", {
         className: n,
-        children: (0, i.jsx)(a.w, { type: r ? "info" : "warning", message: t, role: "none" }),
+        children: (0, i.jsx)(o.w, { type: r ? "info" : "warning", message: t, role: "none" }),
     });
 }
 function y(e) {
@@ -59,15 +59,15 @@ function y(e) {
         t = v(r);
     return (0, i.jsx)("div", {
         className: n,
-        children: (0, i.jsxs)(l.B, {
+        children: (0, i.jsxs)(a.B, {
             direction: "horizontal",
             gap: 4,
             align: "center",
             children: [
                 r
-                    ? (0, i.jsx)(o.CircleInformationIcon, { size: "refresh_sm", color: "var(--text-default)" })
+                    ? (0, i.jsx)(l.CircleInformationIcon, { size: "refresh_sm", color: "var(--text-default)" })
                     : (0, i.jsx)(c.WarningIcon, { size: "refresh_sm", color: "var(--text-default)" }),
-                (0, i.jsx)(d.E, { color: "text-default", variant: "text-sm/medium", children: t }),
+                (0, i.jsx)(d.E, { color: "text-default", variant: "body-sm/medium", children: t }),
             ],
         }),
     });
@@ -76,12 +76,12 @@ var _ = (((t = {})[(t.TOP = 0)] = "TOP"), (t[(t.BOTTOM = 1)] = "BOTTOM"), t);
 function k(e) {
     let { className: n, noBackground: r, divider: t, channelId: s } = e;
     if (!(0, A.Vv)(s ?? void 0)) return null;
-    let a = Array.isArray(t) ? t : null != t ? [t] : [];
+    let o = Array.isArray(t) ? t : null != t ? [t] : [];
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            a.includes(0) && (0, i.jsx)(u.c, { gap: 16 }),
+            o.includes(0) && (0, i.jsx)(u.c, { gap: 16 }),
             (0, i.jsx)("div", { className: n, children: r ? (0, i.jsx)(y, {}) : (0, i.jsx)(T, {}) }),
-            a?.includes(1) && (0, i.jsx)(u.c, { gap: 16 }),
+            o?.includes(1) && (0, i.jsx)(u.c, { gap: 16 }),
         ],
     });
 }

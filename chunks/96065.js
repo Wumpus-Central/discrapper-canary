@@ -34,13 +34,13 @@ var h = l(503698),
     v = l.n(x),
     g = l(194498),
     b = l(607470),
-    j = l(176781),
-    y = l(901127);
+    y = l(176781),
+    j = l(901127);
 function C(e) {
     let { className: t } = e;
     return (0, a.jsx)("div", {
-        className: p()(y.L, t),
-        children: (0, a.jsx)(j.x, { size: "lg", color: "currentColor" }),
+        className: p()(j.L, t),
+        children: (0, a.jsx)(y.x, { size: "lg", color: "currentColor" }),
     });
 }
 var N = l(367974),
@@ -128,19 +128,19 @@ function O(e) {
             applicationAudioEnabled: f,
             voiceAudioEnabled: h,
             soundboardAudioEnabled: v,
-            clip: j,
+            clip: y,
         } = (0, k.T)(),
-        y = n.useRef({}),
+        j = n.useRef({}),
         w = n.useRef(null),
         E = n.useRef(!1),
         [A, L] = n.useState([]),
         O = n.useCallback(() => {
-            let e = y.current.main;
+            let e = j.current.main;
             if (null == e) return;
             let t = (0, x.round)(e.currentTime, 3),
                 l = (0, x.round)(o, 3);
             if (t >= (null != c ? (0, x.round)(c, 3) : (0, x.round)(e.duration, 3)) || t < l) {
-                for (let e of Object.values(y.current)) null != e && (e.currentTime = o);
+                for (let e of Object.values(j.current)) null != e && (e.currentTime = o);
                 return !0;
             }
         }, [o, c]),
@@ -155,15 +155,15 @@ function O(e) {
             L(t);
         }, []),
         _ = n.useCallback(() => {
-            for (let e of ((E.current = !0), O(), Object.values(y.current))) null != e && e.play();
+            for (let e of ((E.current = !0), O(), Object.values(j.current))) null != e && e.play();
         }, [O]),
         z = n.useCallback(() => {
-            for (let e of Object.values(y.current)) null != e && e.pause();
+            for (let e of Object.values(j.current)) null != e && e.pause();
         }, []);
     (0, g.A)(() => {
         if (E.current) {
             if (!r) {
-                let e = y.current.main;
+                let e = j.current.main;
                 if (null != e) {
                     let t = null != c ? (0, x.round)(c, 3) : (0, x.round)(e.duration, 3);
                     if ((0, x.round)(e.currentTime, 3) >= t) {
@@ -176,32 +176,32 @@ function O(e) {
         }
     });
     let $ = n.useCallback((e) => {
-            for (let t of (y.current.main?.paused && (E.current = !1), Object.values(y.current)))
+            for (let t of (j.current.main?.paused && (E.current = !1), Object.values(j.current)))
                 null != t && (t.currentTime = e);
         }, []),
         U = n.useCallback(() => {
-            y.current.main?.paused ? _() : z();
+            j.current.main?.paused ? _() : z();
         }, [_, z]),
         G = n.useCallback((e) => {
-            y.current.main = e;
+            j.current.main = e;
         }, []),
         B = n.useCallback((e, t) => {
-            y.current[t] = e;
+            j.current[t] = e;
         }, []);
     n.useImperativeHandle(s, () => {
-        let e = { play: _, seek: $, pause: z, videoElement: y.current.main };
+        let e = { play: _, seek: $, pause: z, videoElement: j.current.main };
         return (u(e), e);
     }, [_, $, z, u]);
     let H = n.useCallback(() => {
         $(o);
     }, [$, o]);
     n.useLayoutEffect(() => {
-        let e = y.current;
+        let e = j.current;
         return () => {
             for (let t of Object.values(e)) (0, N.A)(t);
         };
     }, []);
-    let X = j.type === T.nQ.VOICE_CLIP,
+    let X = y.type === T.nQ.VOICE_CLIP,
         F = !0 === l && !X && null != i;
     return (n.useLayoutEffect(() => {
         let e = w.current;
@@ -212,7 +212,7 @@ function O(e) {
         }
         function t() {
             let e = w.current,
-                t = y.current.main;
+                t = j.current.main;
             null != e &&
                 null != t &&
                 ((e.style.width = ""),
@@ -328,7 +328,7 @@ function er(e) {
         className: ei.Ho,
         children: [
             null != t && (0, a.jsx)("div", { className: ei.t8, children: t }),
-            (0, a.jsx)(G.E, { variant: "text-xs/normal", color: "text-subtle", className: ei.Mk, children: l }),
+            (0, a.jsx)(G.E, { variant: "body-xs/normal", color: "text-subtle", className: ei.Mk, children: l }),
         ],
     });
 }
@@ -469,8 +469,8 @@ function eh(e) {
             onChange: g,
             children: b,
         } = e,
-        j = n.useRef(null),
         y = n.useRef(null),
+        j = n.useRef(null),
         C = n.useRef(null),
         N = n.useRef(l),
         w = n.useRef(i),
@@ -479,7 +479,7 @@ function eh(e) {
         L = n.useCallback(
             (e) => {
                 let t,
-                    l = y.current;
+                    l = j.current;
                 if (null == l) return;
                 let { x: a, y: n } = N.current;
                 if (
@@ -524,7 +524,7 @@ function eh(e) {
                 }, [e, t, l]),
                 a
             );
-        })(j, L);
+        })(y, L);
     n.useEffect(() => {
         ((N.current = l), (w.current = i), (E.current = r), (A.current = d));
         let e = R.current;
@@ -534,7 +534,7 @@ function eh(e) {
             (e) => {
                 let t = C.current,
                     l = R.current,
-                    a = j.current?.getBoundingClientRect();
+                    a = y.current?.getBoundingClientRect();
                 if (null != t && null != l && null != a)
                     switch (t.mode) {
                         case "move":
@@ -574,9 +574,9 @@ function eh(e) {
     );
     let D = n.useCallback(
             (e) => (t) => {
-                (t.stopPropagation(), t.preventDefault(), v(), y.current?.focus({ preventScroll: !0 }));
+                (t.stopPropagation(), t.preventDefault(), v(), j.current?.focus({ preventScroll: !0 }));
                 let a = R.current,
-                    n = j.current?.getBoundingClientRect();
+                    n = y.current?.getBoundingClientRect();
                 if (null == a || null == n || 0 === a.width || 0 === a.height) return;
                 let s = n.left + a.left + l.x * a.width,
                     o = n.top + a.top + l.y * a.height;
@@ -634,10 +634,10 @@ function eh(e) {
             [g, l, i],
         );
     return (0, a.jsx)("div", {
-        ref: j,
+        ref: y,
         className: em.DW,
         children: (0, a.jsxs)(s.D, {
-            innerRef: y,
+            innerRef: j,
             className: p()(em.aP, { [em.$A]: f }),
             style: { display: h ? void 0 : "none" },
             "aria-label": t,
@@ -700,7 +700,7 @@ function eb(e) {
         ),
         g = o >= t.startSec - 0.05 && o <= t.endSec + 0.05,
         b = T.EC[p],
-        j =
+        y =
             b > 0
                 ? `drop-shadow(0 calc(${b * T.HA} * var(--clip-track-scale)) calc(${b} * var(--clip-track-scale)) ${x})`
                 : void 0;
@@ -723,12 +723,12 @@ function eb(e) {
             alt: "",
             "aria-hidden": !0,
             draggable: !1,
-            style: { filter: j },
+            style: { filter: y },
         }),
     });
 }
-var ej = l(637526);
-function ey(e) {
+var ey = l(637526);
+function ej(e) {
     let { track: t, selected: l, onSelect: i } = e,
         { useCurrentTime: r } = (0, k.T)(),
         { updateTextTrackData: s } = (0, ex.fn)(),
@@ -766,7 +766,7 @@ function ey(e) {
             p > 0 &&
                 (0, a.jsx)("span", {
                     "aria-hidden": !0,
-                    className: ej.C,
+                    className: ey.C,
                     style: {
                         color: d.strokeColor,
                         WebkitTextStrokeColor: d.strokeColor,
@@ -774,7 +774,7 @@ function ey(e) {
                     },
                     children: c,
                 }),
-            (0, a.jsx)("span", { className: ej.L, style: { color: d.color }, children: c }),
+            (0, a.jsx)("span", { className: ey.L, style: { color: d.color }, children: c }),
         ],
     });
 }
@@ -1074,7 +1074,7 @@ let eY = n.memo(function (e) {
                             children: [
                                 (0, a.jsx)("div", { className: eK.d9 }),
                                 (0, a.jsxs)(G.E, {
-                                    variant: "text-xxs/normal",
+                                    variant: "footnote/normal",
                                     color: "text-muted",
                                     className: eK.Mz,
                                     children: [Math.round(e.time), "s"],
@@ -1111,7 +1111,7 @@ function eQ(e) {
             let t = e.getBoundingClientRect();
             return 0 === t.width ? 0 : c / t.width;
         }, [c]),
-        j = n.useCallback(
+        y = n.useCallback(
             (e) => {
                 let t = h.current;
                 if (null == t) return;
@@ -1128,19 +1128,19 @@ function eQ(e) {
             },
             [b, m, c],
         ),
-        y = n.useCallback(() => {
+        j = n.useCallback(() => {
             ((h.current = null), g(null));
         }, []);
     n.useEffect(() => {
         if (null != v)
             return (
-                document.addEventListener("mousemove", j),
-                document.addEventListener("mouseup", y),
+                document.addEventListener("mousemove", y),
+                document.addEventListener("mouseup", j),
                 () => {
-                    (document.removeEventListener("mousemove", j), document.removeEventListener("mouseup", y));
+                    (document.removeEventListener("mousemove", y), document.removeEventListener("mouseup", j));
                 }
             );
-    }, [v, j, y]);
+    }, [v, y, j]);
     let C = n.useCallback(
             (e) => (t) => {
                 (t.stopPropagation(),
@@ -1205,7 +1205,7 @@ function eQ(e) {
                         children: (0, a.jsx)("div", {
                             className: eZ.Kq,
                             children: (0, a.jsx)(G.E, {
-                                variant: "text-sm/medium",
+                                variant: "body-sm/medium",
                                 color: "none",
                                 className: eZ.Vd,
                                 children: l,
@@ -1278,8 +1278,8 @@ function e5(e) {
             subscribe: v,
             seek: g,
             clip: b,
-            generateThumbnails: j,
-            videoDimensions: y,
+            generateThumbnails: y,
+            videoDimensions: j,
         } = (0, k.T)(),
         { tracks: C, selectedTrackId: N, setSelectedTrackId: w, updateTrackRange: E } = (0, ex.fn)(),
         A = i(),
@@ -1386,10 +1386,10 @@ function e5(e) {
         [Q, J],
     );
     let { numberOfPreviews: q, timelinePreviewWidth: ee } = n.useMemo(() => {
-        if (null == y) return { numberOfPreviews: 0, timelinePreviewWidth: 0 };
-        let e = Math.ceil(U * (y.width / y.height));
+        if (null == j) return { numberOfPreviews: 0, timelinePreviewWidth: 0 };
+        let e = Math.ceil(U * (j.width / j.height));
         return { numberOfPreviews: Math.ceil($ / e), timelinePreviewWidth: e };
-    }, [U, $, y]);
+    }, [U, $, j]);
     n.useEffect(() => {
         if (0 === q || 0 === ee) return;
         let e = z.current;
@@ -1400,10 +1400,10 @@ function e5(e) {
         ((t.fillStyle = "transparent"), t.fillRect(0, 0, $, U));
         let l = [];
         for (let e = 0; e < q; e++) l.push((ee / $) * r * e);
-        return j(l, ee, U, (e) => {
+        return y(l, ee, U, (e) => {
             for (let l = 0; l < e.length; l++) (t.drawImage(e[l], ee * l, 0, ee, U), e[l].close());
         });
-    }, [U, z, r, q, ee, j, $]);
+    }, [U, z, r, q, ee, y, $]);
     let et = A - o,
         el = n.useCallback(() => {
             g(Math.max(o, A - 10));
@@ -1432,7 +1432,7 @@ function e5(e) {
                             ref: M,
                             className: eq.re,
                             children: (0, a.jsxs)(G.E, {
-                                variant: "text-xs/medium",
+                                variant: "body-xs/medium",
                                 className: eq.g7,
                                 color: "text-muted",
                                 children: [
@@ -1647,8 +1647,8 @@ function e2(e) {
             audioTracks: v,
             clip: g,
             activeTool: b,
-            cropPreset: j,
-            videoDimensions: y,
+            cropPreset: y,
+            videoDimensions: j,
         } = (0, k.T)(),
         { analyticsLocations: C } = (0, c.Ay)(o.A.CLIPS_EDITOR),
         { tracks: N, selectedTrackId: w, setSelectedTrackId: E, removeTrack: A } = (0, ex.fn)(),
@@ -1720,7 +1720,7 @@ function e2(e) {
     let D = null == x || t !== r.ip.ENTERED,
         S = g.type === T.nQ.VOICE_CLIP,
         _ = b === d.Y.CROP,
-        $ = null != y ? y.width / y.height : null,
+        $ = null != j ? j.width / j.height : null,
         U = _
             ? $
             : (function (e, t) {
@@ -1733,7 +1733,7 @@ function e2(e) {
                       default:
                           return t;
                   }
-              })(j, $),
+              })(y, $),
         G = null;
     return (
         (G =
@@ -1742,7 +1742,7 @@ function e2(e) {
                 : N.map((e) => {
                       switch (e.type) {
                           case T.Me.TEXT:
-                              return (0, a.jsx)(ey, { track: e, selected: e.id === w, onSelect: () => E(e.id) }, e.id);
+                              return (0, a.jsx)(ej, { track: e, selected: e.id === w, onSelect: () => E(e.id) }, e.id);
                           case T.Me.IMAGE:
                               return (0, a.jsx)(eb, { track: e, selected: e.id === w, onSelect: () => E(e.id) }, e.id);
                           default:

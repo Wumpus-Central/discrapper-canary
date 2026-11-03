@@ -37,7 +37,7 @@ function N() {
                 onConfirm: S,
                 confirmButtonColor: r.$n.Colors.BRAND,
                 ...e,
-                children: (0, i.jsx)(l.E, { variant: "text-md/normal", children: T.intl.string(T.t.h66vlB) }),
+                children: (0, i.jsx)(l.E, { variant: "body-md/normal", children: T.intl.string(T.t.h66vlB) }),
             }),
         ),
         !0)

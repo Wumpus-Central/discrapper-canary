@@ -14,7 +14,7 @@ function o(t) {
         subtitle: r.intl.string(r.t.i4AbAS),
         actions: [{ text: r.intl.string(r.t.WAI6xu), onClick: o }],
         children: (0, e.jsx)(s.E, {
-            variant: "text-md/normal",
+            variant: "body-md/normal",
             color: "text-default",
             children: r.intl.format(r.t.Ge0HUi, {
                 handleFalsePositiveHook: () => {

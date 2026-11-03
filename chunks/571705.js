@@ -24,25 +24,25 @@ let f = (0, l(945810).mj)({
 });
 var v = l(1592),
     N = l(152313),
-    C = l(105292),
-    b = l(34236);
+    b = l(105292),
+    C = l(34236);
 function k(e) {
     let { onClose: s, onCreateTag: l, returnRef: r } = e,
         a = n.useId(),
         { creatableGuilds: t, isUpsellVisible: d } = (0, v.Z)("GuildProfileCreateTagUpsell", f);
     return d
         ? (0, i.jsxs)("div", {
-              className: b.U,
+              className: C.U,
               children: [
                   (0, i.jsx)(j.E, {
                       id: a,
-                      variant: "text-sm/normal",
+                      variant: "body-sm/normal",
                       color: "text-muted",
-                      children: C.intl.string(C.t.s76lNz),
+                      children: b.intl.string(b.t.s76lNz),
                   }),
                   (0, i.jsx)(g.Q, {
-                      text: C.intl.string(C.t.SI8PNw),
-                      textVariant: "text-sm/medium",
+                      text: b.intl.string(b.t.SI8PNw),
+                      textVariant: "body-sm/medium",
                       "aria-describedby": a,
                       onClick: function () {
                           null != l
@@ -55,30 +55,30 @@ function k(e) {
         : null;
 }
 var I = l(534514),
-    A = l(939249),
-    p = l(695366),
-    E = l(573435),
-    y = l(145497),
+    y = l(939249),
+    A = l(695366),
+    p = l(573435),
+    E = l(145497),
     L = l(649640),
     w = l(377476);
 function R(e) {
     let { name: s, onRetry: l } = e,
         n = (0, L.b2)(),
         r = (0, L.n6)(n.hex()),
-        a = s ?? C.intl.string(C.t.DmIUGK);
+        a = s ?? b.intl.string(b.t.DmIUGK);
     return (0, i.jsxs)("div", {
         className: w.kL,
         children: [
             (0, i.jsx)("div", { className: w.vK, style: { background: r } }),
             (0, i.jsx)("div", {
                 className: w.H,
-                children: (0, i.jsx)(E.Ay, {
-                    mask: E.hW.CLAN_ICON,
+                children: (0, i.jsx)(p.Ay, {
+                    mask: p.hW.CLAN_ICON,
                     width: 70,
                     height: 70,
                     children: (0, i.jsx)("div", {
                         className: w.R3,
-                        children: (0, i.jsx)(y.B$, { guildName: a, iconSize: 64 }),
+                        children: (0, i.jsx)(E.B$, { guildName: a, iconSize: 64 }),
                     }),
                 }),
             }),
@@ -86,15 +86,15 @@ function R(e) {
                 className: w.wx,
                 children: [
                     (0, i.jsx)(I.D, { variant: "heading-lg/medium", color: "text-strong", children: a }),
-                    (0, i.jsxs)(A.D, {
+                    (0, i.jsxs)(y.D, {
                         className: w.z3,
                         onClick: l,
                         children: [
-                            (0, i.jsx)(p.E, { size: "sm", color: "currentColor" }),
+                            (0, i.jsx)(A.E, { size: "sm", color: "currentColor" }),
                             (0, i.jsx)(j.E, {
-                                variant: "text-sm/normal",
+                                variant: "body-sm/normal",
                                 color: "text-feedback-warning",
-                                children: C.intl.string(C.t.tmGHjc),
+                                children: b.intl.string(b.t.tmGHjc),
                             }),
                         ],
                     }),
@@ -109,24 +109,24 @@ var D = l(42780),
 function _(e) {
     let { guildId: s, name: l, setPopoutRef: r, onClose: j, onCreateTag: g, returnRef: f } = e,
         { analyticsLocations: v } = (0, u.Ay)(o.A.GUILD_PROFILE),
-        { guildProfile: N, fetchGuildProfile: C, fetchStatus: b } = (0, h.u)(s),
+        { guildProfile: N, fetchGuildProfile: b, fetchStatus: C } = (0, h.u)(s),
         I = (0, t.bG)([x.A], () => x.A.getErrorCode(s)),
-        A = n.useRef(null),
-        p = n.useCallback(() => {
-            C(!0);
-        }, [C]);
+        y = n.useRef(null),
+        A = n.useCallback(() => {
+            b(!0);
+        }, [b]);
     (n.useEffect(() => {
-        C();
-    }, [C]),
+        b();
+    }, [b]),
         n.useEffect(() => {
             (0, m.sf)(s, v);
         }, [s, v]),
         n.useEffect(() => {
-            r?.(A?.current);
-        }, [A, r]));
-    let E = n.useMemo(
+            r?.(y?.current);
+        }, [y, r]));
+    let p = n.useMemo(
         () =>
-            b === x.X.NOT_FETCHED || b === x.X.FETCHING
+            C === x.X.NOT_FETCHED || C === x.X.FETCHING
                 ? (0, i.jsx)("div", { className: a()(P.k, P.d), children: (0, i.jsx)(d.y, {}) })
                 : null == N && 50001 === I
                   ? (0, i.jsx)("div", {
@@ -138,7 +138,7 @@ function _(e) {
                         }),
                     })
                   : null == N
-                    ? (0, i.jsx)("div", { className: P.k, children: (0, i.jsx)(R, { name: l, onRetry: p }) })
+                    ? (0, i.jsx)("div", { className: P.k, children: (0, i.jsx)(R, { name: l, onRetry: A }) })
                     : (0, i.jsx)("div", {
                           className: P.k,
                           children: (0, i.jsx)(D.Ay, {
@@ -148,7 +148,7 @@ function _(e) {
                                   null != N.tag ? (0, i.jsx)(k, { onClose: j, onCreateTag: g, returnRef: f }) : null,
                           }),
                       }),
-        [b, N, I, s, l, p, j, g, f],
+        [C, N, I, s, l, A, j, g, f],
     );
-    return (0, i.jsx)(c.l, { ref: A, "aria-label": N?.name, children: E });
+    return (0, i.jsx)(c.l, { ref: y, "aria-label": N?.name, children: p });
 }

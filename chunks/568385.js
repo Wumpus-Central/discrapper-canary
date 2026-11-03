@@ -31,8 +31,8 @@ function _(e) {
         [R, L] = (0, r.useState)(void 0),
         y = (0, r.useRef)(!1),
         D = null != A && "" !== A,
-        v = null != n && "" !== n,
-        b = null != f ? f : null;
+        b = null != n && "" !== n,
+        v = null != f ? f : null;
     (0, r.useEffect)(() => {
         if (!y.current) {
             y.current = !0;
@@ -42,7 +42,7 @@ function _(e) {
     }, [t]);
     let P = s()(u.nj, {
             [u.GA]: D,
-            [u.Gu]: D && null != b,
+            [u.Gu]: D && null != v,
             [u.HY]: "animateIn" === R,
             [u.U9]: "animateOut" === R,
             [u.YK]: "indicator" !== m,
@@ -75,8 +75,8 @@ function _(e) {
                 D &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
-                            null != b &&
-                                (0, i.jsx)(b, {
+                            null != v &&
+                                (0, i.jsx)(v, {
                                     className: u.iE,
                                     size: "sm",
                                     color: "currentColor",
@@ -87,15 +87,15 @@ function _(e) {
                                 id: C,
                                 tag: "span",
                                 className: u.Pf,
-                                variant: "text-md/normal",
+                                variant: "body-md/normal",
                                 color: "primary" === p ? "text-strong" : "text-subtle",
                                 children: A,
                             }),
-                            v &&
+                            b &&
                                 (0, i.jsx)(c.E, {
                                     id: O,
                                     className: u.h_,
-                                    variant: "text-sm/normal",
+                                    variant: "body-sm/normal",
                                     color: "text-subtle",
                                     children: n,
                                 }),
@@ -112,7 +112,7 @@ function _(e) {
                   ref: S,
                   inputRef: g,
                   "aria-labelledby": h ?? (D ? C : void 0),
-                  "aria-describedby": D && v ? O : void 0,
+                  "aria-describedby": D && b ? O : void 0,
                   isSelected: t,
                   onChange: function (e) {
                       null != a && a(e);

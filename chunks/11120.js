@@ -13,9 +13,9 @@ var n = l(477900),
     g = l(300344),
     h = l(614733),
     p = l(904363),
-    x = l(1665),
-    v = l(442331),
-    b = l(661095),
+    b = l(1665),
+    x = l(442331),
+    v = l(661095),
     y = l(743082);
 function j(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -108,7 +108,7 @@ function R(e) {
         gap: 8,
         "data-conjure-game-setting": t.key,
         children: [
-            (0, n.jsx)(d.E, { variant: "text-sm/normal", color: "text-default", children: h }),
+            (0, n.jsx)(d.E, { variant: "body-sm/normal", color: "text-default", children: h }),
             (0, n.jsx)(I, {
                 label: t.label,
                 hideLabel: !0,
@@ -124,7 +124,7 @@ function R(e) {
             i
                 ? (0, n.jsx)(d.E, {
                       id: g,
-                      variant: "text-xs/normal",
+                      variant: "body-xs/normal",
                       color: "text-feedback-critical",
                       role: "alert",
                       children: S.intl.string(C.default["/++Pf+"]),
@@ -145,7 +145,7 @@ var z = l(183265);
 let D = { values: {}, secrets: {} };
 function G(e) {
     let { projectId: t, scopeKeys: l, note: m, notifyAgent: g = !1, isPreview: h = !1, onSaved: p, children: E } = e,
-        T = (0, r.bG)([v.A], () => v.A.getSettings(t)),
+        T = (0, r.bG)([x.A], () => x.A.getSettings(t)),
         [w, M] = a.useState(D),
         [P, N] = a.useState({}),
         [_, U] = a.useState(!1),
@@ -177,12 +177,12 @@ function G(e) {
             for (let [t, l] of Object.entries(w.values)) {
                 let n = B.find((e) => e.key === t);
                 if (null == n) continue;
-                let a = (0, b.Ui)(n, l);
-                void 0 === a || (0, b.Nc)(a, (0, b.KZ)(n, H[t])) || (e[t] = a);
+                let a = (0, v.Ui)(n, l);
+                void 0 === a || (0, v.Nc)(a, (0, v.KZ)(n, H[t])) || (e[t] = a);
             }
             let t = {};
             for (let [e, l] of Object.entries(w.secrets)) "" !== l.trim() && (t[e] = l.trim());
-            return { ...(Object.keys(e).length > 0 ? { values: e } : {}), ...(0, b.mU)(B, t) };
+            return { ...(Object.keys(e).length > 0 ? { values: e } : {}), ...(0, v.mU)(B, t) };
         }, [w, B, H]),
         ee = B.some((e) => "game" === e.type && !0 === G[e.key]),
         et = (null != X.values || null != X.secrets) && !ee,
@@ -249,7 +249,7 @@ function G(e) {
                                   disabled: _,
                                   fullWidth: !0,
                               }),
-                        null != l ? (0, n.jsx)(x.A, { text: l, variant: "text-xs/normal", color: "text-muted" }) : null,
+                        null != l ? (0, n.jsx)(b.A, { text: l, variant: "body-xs/normal", color: "text-muted" }) : null,
                     ],
                 },
                 e.key,
@@ -268,7 +268,7 @@ function G(e) {
                             onChange: (t) => $(e.key, t),
                             disabled: _,
                         }),
-                        null != l ? (0, n.jsx)(x.A, { text: l, variant: "text-xs/normal", color: "text-muted" }) : null,
+                        null != l ? (0, n.jsx)(b.A, { text: l, variant: "body-xs/normal", color: "text-muted" }) : null,
                     ],
                 },
                 e.key,
@@ -340,7 +340,7 @@ function G(e) {
                               ...("number" === e.type ? { type: "number", min: e.min, max: e.max, step: e.step } : {}),
                           }),
                           null != t
-                              ? (0, n.jsx)(x.A, { text: t, variant: "text-xs/normal", color: "text-muted" })
+                              ? (0, n.jsx)(b.A, { text: t, variant: "body-xs/normal", color: "text-muted" })
                               : null,
                       ],
                   },
@@ -359,16 +359,16 @@ function G(e) {
                           (0, n.jsxs)("div", {
                               className: z.DE,
                               children: [
-                                  (0, n.jsx)(d.E, { variant: "text-sm/medium", color: "text-default", children: t }),
+                                  (0, n.jsx)(d.E, { variant: "body-sm/medium", color: "text-default", children: t }),
                                   (0, n.jsx)(d.E, {
-                                      variant: "text-sm/normal",
+                                      variant: "body-sm/normal",
                                       color: "text-muted",
                                       tag: "span",
                                       children:
                                           "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022",
                                   }),
                                   null != l
-                                      ? (0, n.jsx)(x.A, { text: l, variant: "text-xs/normal", color: "text-muted" })
+                                      ? (0, n.jsx)(b.A, { text: l, variant: "body-xs/normal", color: "text-muted" })
                                       : null,
                               ],
                           }),
@@ -404,7 +404,7 @@ function G(e) {
                               fullWidth: !0,
                           }),
                           null != l
-                              ? (0, n.jsx)(x.A, { text: l, variant: "text-xs/normal", color: "text-muted" })
+                              ? (0, n.jsx)(b.A, { text: l, variant: "body-xs/normal", color: "text-muted" })
                               : null,
                       ],
                   },
@@ -413,7 +413,7 @@ function G(e) {
     }
     let es = I
             ? (0, n.jsx)(d.E, {
-                  variant: "text-xs/normal",
+                  variant: "body-xs/normal",
                   color: "text-feedback-critical",
                   role: "alert",
                   children: S.intl.string(C.default["A5TC+K"]),
@@ -423,13 +423,13 @@ function G(e) {
             className: z.Ek,
             children: [
                 null != m && "" !== m
-                    ? (0, n.jsx)(x.A, { text: m, variant: "text-sm/normal", color: "text-default" })
+                    ? (0, n.jsx)(b.A, { text: m, variant: "body-sm/normal", color: "text-default" })
                     : null,
                 null == T
                     ? (0, n.jsx)("div", { className: z.kZ, children: (0, n.jsx)(f.y, {}) })
                     : 0 === K.length && 0 === V.length
                       ? (0, n.jsx)(d.E, {
-                            variant: "text-sm/normal",
+                            variant: "body-sm/normal",
                             color: "text-muted",
                             children: S.intl.string(C.default.lJJayk),
                         })
@@ -441,7 +441,7 @@ function G(e) {
                             children: [
                                 J
                                     ? (0, n.jsx)(d.E, {
-                                          variant: "text-xs/normal",
+                                          variant: "body-xs/normal",
                                           color: "text-muted",
                                           selectable: !0,
                                           children: S.intl.string(C.default.dsHRPK),
@@ -463,7 +463,7 @@ function G(e) {
             className: z.Ek,
             children: [
                 (0, n.jsx)(d.E, {
-                    variant: "text-xs/normal",
+                    variant: "body-xs/normal",
                     color: "text-muted",
                     selectable: !0,
                     children: S.intl.string(C.default.dsHRPK),
@@ -517,7 +517,7 @@ function O(e) {
             !0 === t.multiple
                 ? (0, n.jsx)(m.Z, { ...g, selectionMode: "multiple", value: c, onSelectionChange: (e) => i(e ?? []) })
                 : (0, n.jsx)(m.Z, { ...g, selectionMode: "single", value: c[0], onSelectionChange: (e) => i(e ?? "") }),
-            null != l ? (0, n.jsx)(x.A, { text: l, variant: "text-xs/normal", color: "text-muted" }) : null,
+            null != l ? (0, n.jsx)(b.A, { text: l, variant: "body-xs/normal", color: "text-muted" }) : null,
         ],
     });
 }

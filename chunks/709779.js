@@ -10,16 +10,16 @@ var n = i(477900),
     u = i(834730),
     p = i(452027),
     g = i(150934),
-    x = i(347704),
-    f = i(47167),
+    f = i(347704),
+    x = i(47167),
     S = i(468689),
     E = i(555337),
     m = i(636042),
     h = i(376092),
     j = i(808728),
-    C = i(317525),
-    I = i(994500),
-    b = i(287809),
+    b = i(317525),
+    C = i(994500),
+    I = i(287809),
     N = i(174459),
     v = i(975571),
     A = i(488926),
@@ -60,7 +60,7 @@ function T(t) {
     return (
         u[j.I6].forEach((t) => {
             let { channel: e } = t;
-            e.type === P.rbe.GUILD_TEXT && g.push({ value: e.id, label: (0, f.m1)(e, b.default, I.A, !0) });
+            e.type === P.rbe.GUILD_TEXT && g.push({ value: e.id, label: (0, x.m1)(e, I.default, C.A, !0) });
         }),
         (0, n.jsxs)(o.B, {
             gap: 16,
@@ -102,8 +102,8 @@ function B(t) {
             (0, n.jsxs)(o.B, {
                 gap: 4,
                 children: [
-                    (0, n.jsx)(u.E, { variant: "text-md/normal", children: e }),
-                    (0, n.jsx)(u.E, { variant: "text-xs/normal", color: "text-subtle", children: i }),
+                    (0, n.jsx)(u.E, { variant: "body-md/normal", children: e }),
+                    (0, n.jsx)(u.E, { variant: "body-xs/normal", color: "text-subtle", children: i }),
                 ],
             }),
         ],
@@ -116,7 +116,7 @@ function G(t) {
         children: [
             (0, n.jsx)(u.E, {
                 className: L.qd,
-                variant: "text-xs/semibold",
+                variant: "body-xs/semibold",
                 color: "text-muted",
                 children: M.intl.string(M.t.xU8RDk),
             }),
@@ -129,7 +129,7 @@ function G(t) {
                             className: L.ce,
                             children: [
                                 (0, n.jsx)("div", { className: L.dT }),
-                                (0, n.jsx)(u.E, { variant: "text-sm/normal", color: "text-default", children: i(t) }),
+                                (0, n.jsx)(u.E, { variant: "body-sm/normal", color: "text-default", children: i(t) }),
                             ],
                         },
                         e,
@@ -147,7 +147,7 @@ function R(t) {
         (0, n.jsxs)("div", {
             className: L.CZ,
             children: [
-                (0, n.jsx)(u.E, { className: L.qd, variant: "text-xs/semibold", color: "text-muted", children: l }),
+                (0, n.jsx)(u.E, { className: L.qd, variant: "body-xs/semibold", color: "text-muted", children: l }),
                 (0, n.jsx)("div", {
                     className: L.lM,
                     children: e.map((t, e) =>
@@ -157,7 +157,7 @@ function R(t) {
                                 className: L.ce,
                                 children: [
                                     (0, n.jsx)("div", { className: L.xE }),
-                                    (0, n.jsx)(u.E, { variant: "text-sm/normal", color: "text-muted", children: i(t) }),
+                                    (0, n.jsx)(u.E, { variant: "body-sm/normal", color: "text-muted", children: i(t) }),
                                 ],
                             },
                             e,
@@ -251,25 +251,25 @@ function w(t) {
         u = null != d && d > P.PvD.NONE,
         p = c === P.gh6.ALL_MEMBERS,
         g = !(u && p),
-        [f, h] = l.useState(_.SP),
-        [j, I] = l.useState(i?.publicUpdatesChannelId ?? null),
-        [b] = l.useState(() => !_.dR.some((t) => A.Ib(t, i))),
+        [x, h] = l.useState(_.SP),
+        [j, C] = l.useState(i?.publicUpdatesChannelId ?? null),
+        [I] = l.useState(() => !_.dR.some((t) => A.Ib(t, i))),
         [v] = l.useState(() => i?.defaultMessageNotifications),
         L = v === P.orn.ONLY_MENTIONS,
-        B = !L || !b,
-        G = (0, r.bG)([C.A], () => (null != i ? C.A.getEveryoneRole(i) : void 0)),
+        B = !L || !I,
+        G = (0, r.bG)([b.A], () => (null != i ? b.A.getEveryoneRole(i) : void 0)),
         [R, Y] = l.useState(!1);
     if (null == i) return null;
     async function w() {
         if (null == i || null == G || !R) return;
-        let t = b ? null : s.TF(G.permissions, _.e$);
+        let t = I ? null : s.TF(G.permissions, _.e$);
         if (null != t && t !== G.permissions) {
             let e = { ...G, permissions: t };
             await (0, m.JY)(i.id, [e], void 0, void 0, void 0, { throwErr: !0 });
         }
         let e = {
             features: new Set([...i.features, P.GuildFeatures.COMMUNITY]),
-            rulesChannelId: f,
+            rulesChannelId: x,
             publicUpdatesChannelId: j,
             ...(!u && { verificationLevel: P.PvD.LOW }),
             ...(!p && { explicitContentFilter: P.gh6.ALL_MEMBERS }),
@@ -305,16 +305,16 @@ function w(t) {
                 modalProps: { title: M.intl.string(M.t.YtXpEh), subtitle: M.intl.string(M.t["J/fYR8"]) },
                 body: (0, n.jsx)(T, {
                     guild: i,
-                    rulesChannelId: f,
+                    rulesChannelId: x,
                     publicUpdatesChannelId: j,
                     onRulesChannelChange: h,
-                    onPublicUpdatesChannelChange: I,
+                    onPublicUpdatesChannelChange: C,
                 }),
             },
             {
                 stepKey: _.pj.FINISH,
                 modalProps: { title: M.intl.string(M.t.EzGuSr) },
-                body: (0, n.jsx)(D, { guild: i, defaultNotificationSettingsMet: L, everyonePermissionsMet: b }),
+                body: (0, n.jsx)(D, { guild: i, defaultNotificationSettingsMet: L, everyonePermissionsMet: I }),
                 nextButtonProps: { text: M.intl.string(M.t.JFfins) },
             },
             {
@@ -326,7 +326,7 @@ function w(t) {
             },
         ].filter((t) => (t.stepKey !== _.pj.SAFETY_CHECK || !!g) && (t.stepKey !== _.pj.FINISH || !!B)),
         k = K.slice(1).map((t) => t.stepKey);
-    return (0, n.jsx)(x.t, {
+    return (0, n.jsx)(f.t, {
         ...e,
         steps: K,
         numberedSteps: k,

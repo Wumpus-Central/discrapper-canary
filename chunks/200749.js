@@ -34,19 +34,19 @@ function d(e) {
                 null != g &&
                 (0, i.jsx)("div", { className: l()(u.art, u[m]), style: { backgroundImage: `url(${g})` } }),
             null != r
-                ? (0, i.jsx)(s.E, { color: "none", variant: "text-md/semibold", className: u.header, children: r })
+                ? (0, i.jsx)(s.E, { color: "none", variant: "body-md/semibold", className: u.header, children: r })
                 : null,
             null != d
                 ? (0, i.jsx)(s.E, {
                       className: u.errorCodeMessage,
-                      variant: "text-sm/semibold",
+                      variant: "body-sm/semibold",
                       color: "text-muted",
                       selectable: !0,
                       children: d,
                   })
                 : null,
             null != c && (null == d || "small" !== m)
-                ? (0, i.jsx)(s.E, { color: "none", className: u.description, variant: "text-sm/medium", children: c })
+                ? (0, i.jsx)(s.E, { color: "none", className: u.description, variant: "body-sm/medium", children: c })
                 : null,
             p || null == n
                 ? null

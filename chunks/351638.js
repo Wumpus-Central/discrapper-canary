@@ -1,30 +1,30 @@
-n.d(e, { A: () => d });
-var l = n(477900);
-n(582128);
-var i = n(503698),
-    a = n.n(i),
-    r = n(3026),
-    s = n(834730),
-    o = n(939496),
-    c = n(996988),
-    u = n(260155);
+e.d(n, { A: () => d });
+var l = e(477900);
+e(582128);
+var i = e(503698),
+    a = e.n(i),
+    r = e(3026),
+    s = e(834730),
+    o = e(939496),
+    c = e(996988),
+    u = e(260155);
 function d(t) {
-    let { text: e, textId: n, tags: i, platformIcon: d, platformLabel: A, contextMenu: f } = t,
+    let { text: n, textId: e, tags: i, platformIcon: d, platformLabel: A, contextMenu: f } = t,
         { themeType: g } = (0, o.E)();
-    return (null == e || "" === e) && null == f
+    return (null == n || "" === n) && null == f
         ? null
-        : null == e || "" === e
+        : null == n || "" === n
           ? (0, l.jsx)("div", { className: a()(u.Si, u.ys), children: f })
           : (0, l.jsxs)("div", {
                 className: u.wx,
                 children: [
                     (0, l.jsxs)(s.E, {
                         className: u.TK,
-                        variant: g === c.d.SIDEBAR ? "text-sm/medium" : "text-xs/medium",
+                        variant: g === c.d.SIDEBAR ? "body-sm/medium" : "body-xs/medium",
                         color: "text-strong",
-                        id: n,
+                        id: e,
                         children: [
-                            (0, l.jsx)(r.A, { children: e }),
+                            (0, l.jsx)(r.A, { children: n }),
                             null != d &&
                                 (0, l.jsx)("div", {
                                     role: "image",

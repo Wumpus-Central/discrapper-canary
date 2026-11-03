@@ -1,9 +1,9 @@
-(n.d(l, { PlaygroundEmbed: () => b }), n(323874), n(14289), n(35956));
+(n.d(l, { PlaygroundEmbed: () => y }), n(323874), n(14289), n(35956));
 var t = n(477900),
     r = n(582128),
     u = n(659421),
-    i = n(700623),
-    o = n(17928),
+    o = n(700623),
+    i = n(17928),
     a = n(821609),
     s = n(28863),
     d = n(331322),
@@ -14,14 +14,14 @@ var t = n(477900),
     p = n(836156),
     g = n(101715),
     x = n(652215),
-    S = n(302569);
-let C = {
+    b = n(302569);
+let S = {
     mana: { name: "Mana", icon: u.H, defaultSubtitle: "Explore the Mana Design System" },
-    revenue: { name: "Revenue", icon: i.d, defaultSubtitle: "Explore Revenue Components" },
+    revenue: { name: "Revenue", icon: o.d, defaultSubtitle: "Explore Revenue Components" },
     void: { name: "Void", icon: u.H, defaultSubtitle: "Explore the Void Design System" },
 };
-function b(e) {
-    let l = (0, o.bG)([m.default], () => {
+function y(e) {
+    let l = (0, i.bG)([m.default], () => {
             let e = m.default.getCurrentUser();
             return e?.isStaff() || e?.isStaffPersonal();
         }),
@@ -29,39 +29,39 @@ function b(e) {
             let l;
             return null == (l = e.url.match(p.S)) || null == l[1] ? null : l[1].toLowerCase();
         }, [e.url]),
-        i = (0, h.useComponentPlaygroundConfigs)(),
-        b = r.useMemo(
+        o = (0, h.useComponentPlaygroundConfigs)(),
+        y = r.useMemo(
             () =>
                 (function (e) {
                     let l = new Map();
                     for (let n of e) for (let e of n.collections) l.set(e.id.toLowerCase(), e);
                     return l;
-                })(i),
-            [i],
+                })(o),
+            [o],
         ),
-        j = null != n ? b.get(n) : null,
-        v = null != n ? C[n] : null,
-        y = r.useMemo(() => {
+        C = null != n ? y.get(n) : null,
+        j = null != n ? S[n] : null,
+        v = r.useMemo(() => {
             let l;
-            if (null == j) return;
+            if (null == C) return;
             let n = null == (l = e.url.match(p.S)) ? null : (l[3] ?? null);
             if (null != n)
-                for (let e of j.groups) {
+                for (let e of C.groups) {
                     let l = e.stories.find((e) => e.id === n);
                     if (null != l) return l;
                 }
-        }, [e.url, j]),
-        P = y?.name ?? (null != j ? `${j.name} Playground` : "Playground"),
+        }, [e.url, C]),
+        P = v?.name ?? (null != C ? `${C.name} Playground` : "Playground"),
         w =
-            null != y && null != y.docs
-                ? (0, t.jsx)(s.Anchor, { href: y.docs, children: "Documentation" })
-                : null != v
-                  ? v.defaultSubtitle
+            null != v && null != v.docs
+                ? (0, t.jsx)(s.Anchor, { href: v.docs, children: "Documentation" })
+                : null != j
+                  ? j.defaultSubtitle
                   : "Explore Components",
         E = r.useCallback(() => {
-            if (null == j) return;
+            if (null == C) return;
             let l =
-                null != y
+                null != v
                     ? (function (e) {
                           let l = e.match(p.S),
                               n = l?.[4],
@@ -72,26 +72,26 @@ function b(e) {
                       })(e.url)
                     : {};
             (g.x.setState({
-                selectedCollection: j.id,
-                selectedStory: y?.id ?? null,
+                selectedCollection: C.id,
+                selectedStory: v?.id ?? null,
                 controlOverrides: Object.keys(l).length > 0 ? l : null,
                 currentProps: null,
             }),
                 (0, f.id)(x.zgK.COMPONENT_PLAYGROUND));
-        }, [y, j, e.url]);
-    if (!l || null == j) return null;
-    let k = v?.icon ?? u.H;
+        }, [v, C, e.url]);
+    if (!l || null == C) return null;
+    let k = j?.icon ?? u.H;
     return (0, t.jsx)("div", {
-        className: S.z,
-        "data-has-story": null != y,
+        className: b.z,
+        "data-has-story": null != v,
         children: (0, t.jsxs)(d.B, {
-            direction: null == y ? "vertical" : "horizontal",
-            align: null == y ? "start" : "center",
+            direction: null == v ? "vertical" : "horizontal",
+            align: null == v ? "start" : "center",
             gap: 12,
-            justify: null == y ? "end" : "space-between",
+            justify: null == v ? "end" : "space-between",
             children: [
                 (0, t.jsx)("div", {
-                    className: S.w,
+                    className: b.w,
                     children: (0, t.jsxs)(d.B, {
                         direction: "horizontal",
                         align: "start",
@@ -102,14 +102,14 @@ function b(e) {
                                 direction: "vertical",
                                 gap: 0,
                                 children: [
-                                    (0, t.jsx)(c.E, { variant: "text-md/semibold", children: P }),
-                                    (0, t.jsx)(c.E, { variant: "text-sm/normal", children: w }),
+                                    (0, t.jsx)(c.E, { variant: "body-md/semibold", children: P }),
+                                    (0, t.jsx)(c.E, { variant: "body-sm/normal", children: w }),
                                 ],
                             }),
                         ],
                     }),
                 }),
-                (0, t.jsx)(a.$, { size: "sm", onClick: E, text: "Open Playground", fullWidth: null == y }),
+                (0, t.jsx)(a.$, { size: "sm", onClick: E, text: "Open Playground", fullWidth: null == v }),
             ],
         }),
     });

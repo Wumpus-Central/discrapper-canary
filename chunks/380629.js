@@ -32,8 +32,8 @@ function T(e) {
     });
 }
 var b = s(927813),
-    x = s(824744),
-    M = s(475815),
+    M = s(824744),
+    x = s(475815),
     w = s(953584),
     A = s(122641),
     _ = s(584307);
@@ -133,7 +133,7 @@ function H(e) {
                       "aria-haspopup": "menu",
                       children: (0, a.jsx)(I.E, {
                           "aria-hidden": !0,
-                          variant: "text-sm/semibold",
+                          variant: "body-sm/semibold",
                           color: "none",
                           className: l()(B.Lu, { [B.EX]: m }),
                           tabularNumbers: !0,
@@ -463,13 +463,13 @@ class eu extends i.PureComponent {
             r &&
                 null == this._analytics.metadata.hasValidFrame &&
                 this._analytics.checkVideoDecodability(this.mediaRef.current, this.props.type === es.VIDEO));
-        let f = (0, M.qf)(m.parentNode, m);
+        let f = (0, x.qf)(m.parentNode, m);
         (o && !t.fullscreen && null != f
-            ? ((0, M.tl)(f), f.addEventListener(M.Wb, this.handleFullScreenExit))
+            ? ((0, x.tl)(f), f.addEventListener(x.Wb, this.handleFullScreenExit))
             : !o &&
               t.fullscreen &&
               null != f &&
-              (f.removeEventListener(M.Wb, this.handleFullScreenExit), (0, M.sP)(f, f.ownerDocument)),
+              (f.removeEventListener(x.Wb, this.handleFullScreenExit), (0, x.sP)(f, f.ownerDocument)),
             h === A.A.Types.DURATION && t.dragging !== A.A.Types.DURATION && r
                 ? m.pause()
                 : h !== A.A.Types.DURATION && t.dragging === A.A.Types.DURATION && r && m.play(),
@@ -486,8 +486,8 @@ class eu extends i.PureComponent {
                 this.props.type === es.VIDEO && w.Ay.clearVideoStats(this.props.src)));
         let { current: e } = this.mediaRef;
         if (null == e) return;
-        let t = (0, M.qf)(e.parentNode, e);
-        null != t && (t.removeEventListener(M.Wb, this.handleFullScreenExit), (0, M.sP)(t));
+        let t = (0, x.qf)(e.parentNode, e);
+        null != t && (t.removeEventListener(x.Wb, this.handleFullScreenExit), (0, x.sP)(t));
     }
     play() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -520,8 +520,8 @@ class eu extends i.PureComponent {
     handleFullScreenExit = () => {
         let { current: e } = this.mediaRef;
         if (null == e) return;
-        let t = (0, M.qf)(e.parentNode, e);
-        (null != t && (0, M._U)(t, t?.ownerDocument)) || this.setState({ fullscreen: !1 });
+        let t = (0, x.qf)(e.parentNode, e);
+        (null != t && (0, x._U)(t, t?.ownerDocument)) || this.setState({ fullscreen: !1 });
     };
     toggleFullscreen = () => {
         if (null != this.props.onFullscreenChange) return void this.props.onFullscreenChange(!this.state.fullscreen);
@@ -573,7 +573,7 @@ class eu extends i.PureComponent {
         let { current: s } = this.mediaRef;
         if (t === A.A.Types.DURATION) null != s && isFinite(s.duration) && this.setTime(s.duration * e, !1);
         else if (t === A.A.Types.VOLUME) {
-            let t = (0, x.w)(e, 1);
+            let t = (0, M.w)(e, 1);
             0 === t
                 ? this.setState({ muted: !0, volume: t })
                 : this.state.muted && t > 0
@@ -823,7 +823,7 @@ class eu extends i.PureComponent {
                   buffers: u,
                   currentTime: h,
                   duration: d,
-                  volume: (0, x.M)(v, 1),
+                  volume: (0, M.M)(v, 1),
                   hide: t === es.VIDEO && p,
                   muted: m,
                   autoPlay: s,
@@ -861,7 +861,7 @@ class eu extends i.PureComponent {
                                 iconClassName: B.pd,
                                 guestWindow: window,
                                 onClick: this.toggleFullscreen,
-                                node: (0, M.qf)(e?.parentNode, e),
+                                node: (0, x.qf)(e?.parentNode, e),
                             })
                           : null,
                   ],

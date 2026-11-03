@@ -17,41 +17,41 @@ var i = s(477900),
     S = s(233317),
     I = s(503698),
     N = s.n(I),
-    x = s(778712),
-    b = s(97808),
+    b = s(778712),
+    x = s(97808),
     C = s(534514),
     E = s(834730),
     v = s(534890),
     P = s(308528),
     k = s(854627),
     M = s(830543),
-    j = s(899082),
-    y = s(105292),
+    y = s(899082),
+    j = s(105292),
     A = s(329476);
 function R(e) {
     let { recipient: t, isSuccess: s, onClose: a } = e,
-        { avatarSrc: n, eventHandlers: l } = (0, k.A)({ userId: t?.id, size: x._3.SIZE_56 }),
+        { avatarSrc: n, eventHandlers: l } = (0, k.A)({ userId: t?.id, size: b._3.SIZE_56 }),
         r = g.Ay.getName(t),
         c = !s;
     return (0, i.jsxs)("div", {
         className: N()(A.nM, { [A.z3]: c }),
         children: [
-            (0, i.jsx)(b.eu, { src: n, "aria-label": r, size: x._3.SIZE_32, ...l }),
+            (0, i.jsx)(x.eu, { src: n, "aria-label": r, size: b._3.SIZE_32, ...l }),
             (0, i.jsxs)("div", {
                 className: A.Qs,
                 children: [
                     (0, i.jsx)(C.D, {
-                        variant: "heading-md/semibold",
+                        variant: "heading-sm/semibold",
                         color: "text-strong",
                         className: A.QC,
                         children: r,
                     }),
                     c &&
                         (0, i.jsx)(E.E, {
-                            variant: "text-xs/normal",
+                            variant: "body-xs/normal",
                             color: "text-strong",
                             className: A.kc,
-                            children: y.intl.format(j.default["Y/oMwY"], { userName: r }),
+                            children: j.intl.format(y.default["Y/oMwY"], { userName: r }),
                         }),
                 ],
             }),
@@ -59,7 +59,7 @@ function R(e) {
                 (0, i.jsx)(u.$, {
                     variant: "secondary",
                     size: "sm",
-                    text: y.intl.string(y.t["g33r/P"]),
+                    text: j.intl.string(j.t["g33r/P"]),
                     icon: v.ChatIcon,
                     onClick: () => {
                         var e;
@@ -76,8 +76,8 @@ function T(e) {
     let { onInvite: t, onClose: s, subscriptionId: c, ...o } = e,
         [f, m] = a.useState([]),
         [I, N] = a.useState(""),
-        x = (0, d.A)(I, 400),
-        b = (0, n.bG)([S.A], () => S.A.getNumAvailableInvites()),
+        b = (0, d.A)(I, 400),
+        x = (0, n.bG)([S.A], () => S.A.getNumAvailableInvites()),
         {
             eligibleUsers: C,
             getNextRows: E,
@@ -107,7 +107,7 @@ function T(e) {
                 }, [t, s]),
                 { eligibleUsers: i, isFetching: u, hasError: d, getNextRows: () => f(l) }
             );
-        })({ subscriptionId: c, searchQuery: x }),
+        })({ subscriptionId: c, searchQuery: b }),
         [k, M] = a.useState(!1),
         A = a.useCallback(
             (e) => {
@@ -119,17 +119,17 @@ function T(e) {
     return v
         ? (0, i.jsx)(l.a, {
               size: "sm",
-              title: y.intl.string(j.default["54lM5y"]),
-              subtitle: y.intl.string(j.default.zrtwpV),
+              title: j.intl.string(y.default["54lM5y"]),
+              subtitle: j.intl.string(y.default.zrtwpV),
               onClose: s,
               actions: [],
               ...o,
           })
-        : 0 !== C.length || P || 0 !== x.length
+        : 0 !== C.length || P || 0 !== b.length
           ? (0, i.jsx)(l.a, {
                 size: "md",
-                title: y.intl.string(j.default["Um/7BM"]),
-                subtitle: y.intl.format(j.default.qSWXaf, {
+                title: j.intl.string(y.default["Um/7BM"]),
+                subtitle: j.intl.format(y.default.qSWXaf, {
                     totalSeats: U.LM,
                     premiumGroupProductName: (0, U.DP)(),
                     helpCenterLink: U.TE,
@@ -140,15 +140,15 @@ function T(e) {
                     children: (0, i.jsx)(r.k, {
                         value: I,
                         onChange: N,
-                        placeholder: 0 === f.length ? y.intl.string(j.default.wRS8vo) : "",
-                        leading: { type: "tags", label: y.intl.string(j.default["Um/7BM"]), items: R, onRemove: A },
+                        placeholder: 0 === f.length ? j.intl.string(y.default.wRS8vo) : "",
+                        leading: { type: "tags", label: j.intl.string(y.default["Um/7BM"]), items: R, onRemove: A },
                     }),
                 }),
                 actions: [],
                 actionBarInput: (0, i.jsx)(u.$, {
                     variant: "primary",
                     disabled: 0 === f.length || k,
-                    text: y.intl.string(j.default["5fZHp3"]),
+                    text: j.intl.string(y.default["5fZHp3"]),
                     size: "md",
                     fullWidth: !0,
                     onClick: async () => {
@@ -167,18 +167,18 @@ function T(e) {
                     onSelectionChange: (e, t) => {
                         (m((s) => (t ? [...s, e] : s.filter((t) => t.id !== e.id))), t && N(""));
                     },
-                    isUserDisabled: (e) => (f.length >= b && !f.some((t) => t.id === e.id)) || !e.eligible,
+                    isUserDisabled: (e) => (f.length >= x && !f.some((t) => t.id === e.id)) || !e.eligible,
                     isFetching: P,
                     onFetchMore: E,
-                    searchQuery: x,
+                    searchQuery: b,
                     emptySearchContent: {
-                        header: y.intl.string(j.default.gaamNe),
-                        body: y.intl.string(j.default.nQcM39),
+                        header: j.intl.string(y.default.gaamNe),
+                        body: j.intl.string(y.default.nQcM39),
                     },
                     className: D.p_,
                     tooltipConfig: {
                         text: (e) =>
-                            y.intl.formatToPlainString(j.default["5tzM9V"], {
+                            j.intl.formatToPlainString(y.default["5tzM9V"], {
                                 disabledUserName: g.Ay.getName(e),
                                 premiumGroupProductName: (0, U.DP)(),
                             }),
@@ -188,8 +188,8 @@ function T(e) {
             })
           : (0, i.jsx)(l.a, {
                 size: "sm",
-                title: y.intl.string(j.default.ONaJLH),
-                subtitle: y.intl.format(j.default["0LHbPc"], { helpCenterLink: U.TE }),
+                title: j.intl.string(y.default.ONaJLH),
+                subtitle: j.intl.format(y.default["0LHbPc"], { helpCenterLink: U.TE }),
                 onClose: s,
                 actions: [],
                 ...o,
@@ -203,11 +203,11 @@ function z(e) {
             src: "https://cdn.discordapp.com/assets/content/824b13be7b78cc0e651ea50dbb8e459044a59c44a6c15678761d9ef2739c7fc8.png",
         },
         gradientColor: "nitro-pink",
-        title: y.intl.formatToPlainString(j.default.MIiPur, {
+        title: j.intl.formatToPlainString(y.default.MIiPur, {
             premiumGroupProductName: (0, U.DP)(),
             sentCount: s.filter((e) => e.isSuccess).length,
         }),
-        subtitle: y.intl.format(j.default.olkQkj, {
+        subtitle: j.intl.format(y.default.olkQkj, {
             onClick: () => {
                 (t(), (0, m.openUserSettings)(f.X.SUBSCRIPTIONS_PANEL));
             },

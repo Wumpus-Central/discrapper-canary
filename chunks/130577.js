@@ -11,28 +11,28 @@ var i = e(477900),
     h = e(105292);
 function m(t) {
     let { action: n, onClose: e, transitionState: m } = t,
-        { message: p, thread: x, notice: b, guildId: k } = n,
-        v = (0, s.bG)(
+        { message: p, thread: b, notice: k, guildId: v } = n,
+        x = (0, s.bG)(
             [u.A],
-            () => (null != p ? u.A.getChannel(p.channel_id) : void 0) ?? (null != x ? (0, c.UE)(x, k) : void 0),
-            [p, x, k],
+            () => (null != p ? u.A.getChannel(p.channel_id) : void 0) ?? (null != b ? (0, c.UE)(b, v) : void 0),
+            [p, b, v],
         ),
         A = l.useMemo(() => (null != p ? (0, o.rh)(p) : void 0), [p]);
     return (0, i.jsx)(a.a, {
         onClose: e,
         transitionState: m,
-        title: h.intl.string(null != x ? h.t["8czF24"] : h.t.StrErG),
-        subtitle: x?.name,
+        title: h.intl.string(null != b ? h.t["8czF24"] : h.t.StrErG),
+        subtitle: b?.name,
         actions: [{ text: h.intl.string(h.t.BddRzS), onClick: e }],
         children:
-            null != A && null != v
+            null != A && null != x
                 ? (0, i.jsx)(r.A, {
                       message: A,
-                      channel: v,
+                      channel: x,
                       hideAccessories: !0,
                       disableInteraction: !0,
                       hideAutomodDismiss: !0,
                   })
-                : (0, i.jsx)(d.E, { variant: "text-md/normal", color: "text-default", children: b }),
+                : (0, i.jsx)(d.E, { variant: "body-md/normal", color: "text-default", children: k }),
     });
 }

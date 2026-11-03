@@ -19,23 +19,23 @@ let p = function (e) {
             buttonText: A,
             buttonIcon: f,
             buttonSubmitting: C,
-            onButtonClick: x,
-            imageSrc: E,
+            onButtonClick: E,
+            imageSrc: x,
             animationSrc: S,
-            secondaryButtonText: I,
-            onSecondaryButtonClick: y,
-            children: _,
-            useReducedMotion: j = !1,
-            buttonVariant: v,
+            secondaryButtonText: y,
+            onSecondaryButtonClick: I,
+            children: b,
+            useReducedMotion: _ = !1,
+            buttonVariant: j,
         } = e,
-        b = (0, a.bG)([m.Ay], () => m.Ay.getState().isMembersOpen);
-    if (s.Fr && b) return null;
-    if (null == t) return (0, l.jsx)(l.Fragment, { children: i.Children.only(_) });
+        v = (0, a.bG)([m.Ay], () => m.Ay.getState().isMembersOpen);
+    if (s.Fr && v) return null;
+    if (null == t) return (0, l.jsx)(l.Fragment, { children: i.Children.only(b) });
     let N = null;
     return (
-        null != E
-            ? (N = (0, l.jsx)("img", { alt: "", src: E, className: g.Sl }))
-            : null != S && (N = (0, l.jsx)(r.a, { importData: S, shouldAnimate: !j, className: g.lY })),
+        null != x
+            ? (N = (0, l.jsx)("img", { alt: "", src: x, className: g.Sl }))
+            : null != S && (N = (0, l.jsx)(r.a, { importData: S, shouldAnimate: !_, className: g.lY })),
         (0, l.jsxs)("div", {
             className: g.iE,
             children: [
@@ -46,9 +46,9 @@ let p = function (e) {
                         (0, l.jsxs)("div", {
                             className: g.Qq,
                             children: [
-                                (0, l.jsx)(o.D, { variant: "heading-md/semibold", className: g.DD, children: t }),
+                                (0, l.jsx)(o.D, { variant: "heading-sm/semibold", className: g.DD, children: t }),
                                 null != n &&
-                                    (0, l.jsx)(c.E, { color: "text-muted", variant: "text-xs/normal", children: n }),
+                                    (0, l.jsx)(c.E, { color: "text-muted", variant: "body-xs/normal", children: n }),
                             ],
                         }),
                     ],
@@ -56,10 +56,10 @@ let p = function (e) {
                 (0, l.jsxs)("div", {
                     className: g.UD,
                     children: [
-                        null != I &&
+                        null != y &&
                             (0, l.jsx)("div", {
                                 className: g.x6,
-                                children: (0, l.jsx)(d.Q, { textVariant: "text-sm/semibold", text: I, onClick: y }),
+                                children: (0, l.jsx)(d.Q, { textVariant: "body-sm/semibold", text: y, onClick: I }),
                             }),
                         null != A &&
                             (0, l.jsx)("div", {
@@ -67,8 +67,8 @@ let p = function (e) {
                                 children: (0, l.jsx)(u.$, {
                                     text: A,
                                     size: "sm",
-                                    variant: v ?? "secondary",
-                                    onClick: x,
+                                    variant: j ?? "secondary",
+                                    onClick: E,
                                     loading: C,
                                     icon: f,
                                 }),

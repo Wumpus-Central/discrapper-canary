@@ -18,8 +18,8 @@ var a = i(477900),
     _ = i(362311),
     L = i(243460),
     T = i(424912),
-    x = i(360475),
-    h = i(939249),
+    h = i(360475),
+    x = i(939249),
     A = i(534514),
     G = i(834730),
     f = i(95477),
@@ -28,45 +28,45 @@ var a = i(477900),
     g = i(376728),
     O = i(913122),
     v = i(235986),
-    k = i(976860),
-    M = i(4274),
-    y = i(652215),
+    y = i(976860),
+    k = i(4274),
+    M = i(652215),
     R = i(105292),
-    w = i(479043),
-    P = i(906471),
-    b = i(168482);
+    b = i(479043),
+    w = i(906471),
+    P = i(168482);
 let J = "hTKzmak",
     H = "wumpus-friends",
     $ =
         ((n = window.GLOBAL_ENV.INVITE_HOST),
         (l = ""),
-        null == n && ((n = location.host), (l = y.BVt.INVITE(""))),
+        null == n && ((n = location.host), (l = M.BVt.INVITE(""))),
         `${location.protocol}//${n}${l}/`),
     q = [J, `${$}${J}`, `${$}${H}`];
 function B(e) {
     let { onClick: t } = e;
-    return (0, a.jsxs)(h.D, {
-        className: w.qd,
+    return (0, a.jsxs)(x.D, {
+        className: b.qd,
         onClick: function () {
-            (t(), (0, k.pX)(y.BVt.GUILD_DISCOVERY));
+            (t(), (0, y.pX)(M.BVt.GUILD_DISCOVERY));
         },
         children: [
-            (0, a.jsx)("img", { width: 40, height: 40, className: w.aL, alt: "", src: b }),
+            (0, a.jsx)("img", { width: 40, height: 40, className: b.aL, alt: "", src: P }),
             (0, a.jsxs)("div", {
                 children: [
                     (0, a.jsx)(A.D, {
-                        className: w.qg,
-                        variant: "heading-md/semibold",
+                        className: b.qg,
+                        variant: "heading-sm/semibold",
                         children: R.intl.string(R.t.DwDxDU),
                     }),
                     (0, a.jsx)(G.E, {
-                        className: w.qg,
-                        variant: "text-xs/normal",
+                        className: b.qg,
+                        variant: "body-xs/normal",
                         children: R.intl.string(R.t["5RL4CD"]),
                     }),
                 ],
             }),
-            (0, a.jsx)("img", { className: w.y8, alt: "", src: P }),
+            (0, a.jsx)("img", { className: b.y8, alt: "", src: w }),
         ],
     });
 }
@@ -105,7 +105,7 @@ function V(e) {
             "string" == typeof e
                 ? I(e)
                 : e instanceof O.Wl || e instanceof O.LG
-                  ? I((0, M.s)(e.code))
+                  ? I((0, k.s)(e.code))
                   : I(R.intl.string(R.t.dDZRdy));
         } finally {
             ((u.current = !1), c(!1));
@@ -119,31 +119,31 @@ function V(e) {
             children: [
                 (0, a.jsxs)(C.rQ, {
                     "data-migration-pending": !0,
-                    className: w.wx,
+                    className: b.wx,
                     direction: v.A.Direction.VERTICAL,
                     separator: !1,
                     children: [
                         (0, a.jsx)(A.D, {
-                            className: w.DD,
+                            className: b.DD,
                             variant: "heading-xl/semibold",
                             children: R.intl.string(R.t.riOUtB),
                         }),
                         (0, a.jsx)(G.E, {
                             color: "text-default",
-                            variant: "text-sm/normal",
+                            variant: "body-sm/normal",
                             children: R.intl.string(R.t["7jub2t"]),
                         }),
-                        (0, a.jsx)(C.s_, { "data-migration-pending": !0, className: w.b, onClick: n }),
+                        (0, a.jsx)(C.s_, { "data-migration-pending": !0, className: b.b, onClick: n }),
                     ],
                 }),
                 (0, a.jsxs)(C.$m, {
                     "data-migration-pending": !0,
-                    className: null != i ? w.uN : w.__invalid_content,
+                    className: null != i ? b.uN : b.__invalid_content,
                     scrollbarGutter: null == i && void 0,
                     children: [
                         (0, a.jsx)("form", {
                             onSubmit: S,
-                            className: w.$j,
+                            className: b.$j,
                             children: (0, a.jsx)(f.k, {
                                 label: R.intl.string(R.t.qreV25),
                                 required: !0,
@@ -159,14 +159,14 @@ function V(e) {
                         }),
                         null != i
                             ? (0, a.jsxs)("div", {
-                                  className: w.IR,
+                                  className: b.IR,
                                   children: [
                                       (0, a.jsx)(j.$, {
                                           variant: "secondary",
                                           fullWidth: !0,
                                           text: R.intl.string(R.t.EHWhyt),
                                           onClick: function () {
-                                              (n(), (0, k.pX)(y.BVt.GUILD_DISCOVERY));
+                                              (n(), (0, y.pX)(M.BVt.GUILD_DISCOVERY));
                                           },
                                       }),
                                       (0, a.jsx)(j.$, {
@@ -181,14 +181,14 @@ function V(e) {
                             : (0, a.jsxs)(a.Fragment, {
                                   children: [
                                       (0, a.jsx)(G.E, {
-                                          variant: "text-sm/medium",
+                                          variant: "body-sm/medium",
                                           color: "text-subtle",
                                           children: R.intl.string(R.t.Bnq46H),
                                       }),
                                       (0, a.jsx)("div", {
-                                          className: w.eU,
+                                          className: b.eU,
                                           children: q.map((e) =>
-                                              (0, a.jsx)(h.D, { className: w.Bb, onClick: () => r(e), children: e }, e),
+                                              (0, a.jsx)(x.D, { className: b.Bb, onClick: () => r(e), children: e }, e),
                                           ),
                                       }),
                                       (0, a.jsx)(B, { onClick: n }),
@@ -199,15 +199,15 @@ function V(e) {
                 null != i
                     ? (0, a.jsx)(C.jl, {
                           "data-migration-pending": !0,
-                          className: w.cQ,
+                          className: b.cQ,
                           children: (0, a.jsx)(G.E, {
-                              variant: "text-sm/medium",
+                              variant: "body-sm/medium",
                               color: "text-default",
                               children: R.intl.format(R.t["9BRB6M"], {
                                   createServerHook: (e, t) =>
                                       (0, a.jsx)(
                                           U.Q,
-                                          { variant: "primary", text: e, textVariant: "text-sm/medium", onClick: i },
+                                          { variant: "primary", text: e, textVariant: "body-sm/medium", onClick: i },
                                           t,
                                       ),
                               }),
@@ -215,7 +215,7 @@ function V(e) {
                       })
                     : (0, a.jsxs)(C.jl, {
                           "data-migration-pending": !0,
-                          className: w.qr,
+                          className: b.qr,
                           children: [
                               (0, a.jsx)(j.$, {
                                   variant: "primary",
@@ -226,7 +226,7 @@ function V(e) {
                               (0, a.jsx)(U.Q, {
                                   size: "sm",
                                   variant: "primary",
-                                  textVariant: "text-sm/medium",
+                                  textVariant: "body-sm/medium",
                                   text: R.intl.string(R.t["13/7kX"]),
                                   onClick: t,
                               }),
@@ -248,31 +248,31 @@ function F(e) {
             hasJoinButton: r,
             joinFirst: c = !1,
         } = e,
-        [m, h] = s.useState(i),
+        [m, x] = s.useState(i),
         A = (0, D.Ay)(m),
         [G, f] = s.useState(null),
         [j, U] = s.useState(null),
         [g, O] = s.useState(null),
-        [v, k] = s.useState(!1);
+        [v, y] = s.useState(!1);
     (s.useEffect(() => {
-        h(i);
-    }, [h, i]),
+        x(i);
+    }, [x, i]),
         s.useEffect(() => {
             m !== A && o(m, A);
         }, [o, m, A]));
-    let M = s.useCallback((e) => {
-            (h(Z.oS.CREATION_INTENT),
+    let k = s.useCallback((e) => {
+            (x(Z.oS.CREATION_INTENT),
                 U(e),
-                d.default.track(y.HAw.GUILD_TEMPLATE_SELECTED, { template_name: e.id, template_code: e.code }));
+                d.default.track(M.HAw.GUILD_TEMPLATE_SELECTED, { template_name: e.id, template_code: e.code }));
         }, []),
         R = s.useCallback((e) => {
-            (k(e === Z.IR.COMMUNITY), h(Z.oS.CUSTOMIZE_GUILD));
+            (y(e === Z.IR.COMMUNITY), x(Z.oS.CUSTOMIZE_GUILD));
         }, []),
-        w = s.useCallback(() => h(Z.oS.JOIN_GUILD), [h]),
-        P = s.useCallback(() => {
-            m === Z.oS.CUSTOMIZE_GUILD ? h(Z.oS.CREATION_INTENT) : (h(Z.oS.GUILD_TEMPLATES), U(null));
+        b = s.useCallback(() => x(Z.oS.JOIN_GUILD), [x]),
+        w = s.useCallback(() => {
+            m === Z.oS.CUSTOMIZE_GUILD ? x(Z.oS.CREATION_INTENT) : (x(Z.oS.GUILD_TEMPLATES), U(null));
         }, [m]),
-        b = s.useCallback(
+        P = s.useCallback(
             (e) => {
                 (O(e), n(e));
             },
@@ -290,8 +290,8 @@ function F(e) {
                 impressionName: p.ImpressionNames.GUILD_ADD_JOIN,
                 impressionProperties: H,
                 children: (0, a.jsx)(V, {
-                    onBack: c ? void 0 : P,
-                    onCreate: c ? P : void 0,
+                    onBack: c ? void 0 : w,
+                    onCreate: c ? w : void 0,
                     onClose: l,
                     isSlideReady: G === Z.oS.JOIN_GUILD,
                 }),
@@ -305,10 +305,10 @@ function F(e) {
                     id: Z.oS.GUILD_TEMPLATES,
                     impressionName: p.ImpressionNames.GUILD_ADD_LANDING,
                     impressionProperties: H,
-                    children: (0, a.jsx)(x.A, {
+                    children: (0, a.jsx)(h.A, {
                         isNewUser: !1,
-                        onJoin: r ? w : void 0,
-                        onChooseTemplate: M,
+                        onJoin: r ? b : void 0,
+                        onChooseTemplate: k,
                         onClose: l,
                         isSlideReady: c ? G === Z.oS.GUILD_TEMPLATES : void 0,
                     }),
@@ -321,7 +321,7 @@ function F(e) {
                     id: Z.oS.CREATION_INTENT,
                     impressionName: p.ImpressionNames.GUILD_ADD_INTENT_SELECTION,
                     impressionProperties: H,
-                    children: (0, a.jsx)(L.A, { onClose: l, onBack: P, onCreationIntentChosen: R }),
+                    children: (0, a.jsx)(L.A, { onClose: l, onBack: w, onCreationIntentChosen: R }),
                 },
                 Z.oS.CREATION_INTENT,
             ),
@@ -333,9 +333,9 @@ function F(e) {
                     impressionProperties: H,
                     children: (0, a.jsx)(T.A, {
                         guildTemplate: j,
-                        onGuildCreated: b,
+                        onGuildCreated: P,
                         onClose: l,
-                        onBack: P,
+                        onBack: w,
                         isSlideReady: G === Z.oS.CUSTOMIZE_GUILD,
                         isCommunity: v,
                     }),
@@ -390,20 +390,20 @@ function K(e, t, i, n) {
                 switch (e) {
                     case Z.oS.GUILD_TEMPLATES:
                         (r.A.flowStepOrStart(Q.do.CREATE_GUILD, Q.jC.GUILD_TEMPLATES),
-                            d.default.track(y.HAw.OPEN_MODAL, { type: "Create Guild Templates", location: t }));
+                            d.default.track(M.HAw.OPEN_MODAL, { type: "Create Guild Templates", location: t }));
                         break;
                     case Z.oS.CUSTOMIZE_GUILD:
                         (r.A.flowStep(Q.do.CREATE_GUILD, Q.jC.GUILD_CREATE),
-                            d.default.track(y.HAw.OPEN_MODAL, { type: "Create Guild Step 2", location: t }));
+                            d.default.track(M.HAw.OPEN_MODAL, { type: "Create Guild Step 2", location: t }));
                         break;
                     case Z.oS.CREATION_INTENT:
-                        d.default.track(y.HAw.OPEN_MODAL, { type: "Server Intent Discovery", location: t });
+                        d.default.track(M.HAw.OPEN_MODAL, { type: "Server Intent Discovery", location: t });
                         break;
                     case Z.oS.JOIN_GUILD:
                         (i
                             ? r.A.flowStepOrStart(Q.do.CREATE_GUILD, Q.jC.JOIN_GUILD)
                             : r.A.flowStep(Q.do.CREATE_GUILD, Q.jC.JOIN_GUILD),
-                            d.default.track(y.HAw.OPEN_MODAL, { type: "Join Guild", location: t }));
+                            d.default.track(M.HAw.OPEN_MODAL, { type: "Join Guild", location: t }));
                 }
             })(e, n && "Guild List" === i ? "Guild List - Join First" : i, n);
         },

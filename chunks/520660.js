@@ -11,19 +11,19 @@ var t = n(477900),
     h = n(285796),
     f = n(772838),
     m = n(939249),
-    x = n(245604),
-    g = n(834730),
+    g = n(245604),
+    x = n(834730),
     p = n(913122),
     C = n(44234),
     j = n(513461),
     v = n(242273),
     y = n(260197),
-    N = n(105292),
-    b = n(94499);
+    b = n(105292),
+    N = n(94499);
 let k = "MULTIPLE_CHOICE";
 function E(e) {
-    let { choice: l, index: n, onChange: s, onClear: o, onReorder: m, isDropHovered: x } = e,
-        g = i.useRef(null),
+    let { choice: l, index: n, onChange: s, onClear: o, onReorder: m, isDropHovered: g } = e,
+        x = i.useRef(null),
         p = i.useRef(null),
         [, j, v] = (0, c.i)({
             type: k,
@@ -36,7 +36,7 @@ function E(e) {
             accept: k,
             hover: (e, l) => {
                 let { index: t } = e,
-                    i = g.current?.getBoundingClientRect(),
+                    i = x.current?.getBoundingClientRect(),
                     s = l.getClientOffset();
                 if (null == i || null == s) return;
                 let r = (i.bottom - i.top) / 2,
@@ -51,7 +51,7 @@ function E(e) {
         i.useLayoutEffect(
             () => (
                 j(p),
-                v(y(g)),
+                v(y(x)),
                 () => {
                     (j(null), y(null));
                 }
@@ -59,29 +59,29 @@ function E(e) {
             [j, y, v],
         ),
         (0, t.jsxs)("div", {
-            ref: g,
-            className: r()(b.XQ, { [b.cB]: x }),
+            ref: x,
+            className: r()(N.XQ, { [N.cB]: g }),
             "data-dnd-name": l,
             children: [
                 (0, t.jsx)("div", {
-                    className: b.R6,
-                    children: (0, t.jsx)(C.A, { height: 20, width: 20, className: b.IC }),
+                    className: N.R6,
+                    children: (0, t.jsx)(C.A, { height: 20, width: 20, className: N.IC }),
                 }),
                 (0, t.jsxs)("div", {
-                    className: b.I6,
+                    className: N.I6,
                     children: [
                         (0, t.jsx)(u.k, {
                             autoFocus: !0,
                             onChange: (e) => s(e),
-                            placeholder: N.intl.formatToPlainString(N.t["Ep/pbH"], { index: n + 1 }),
+                            placeholder: b.intl.formatToPlainString(b.t["Ep/pbH"], { index: n + 1 }),
                             value: l,
                         }),
                         (0, t.jsx)("div", {
-                            className: b.mt,
+                            className: N.mt,
                             children: (0, t.jsx)(d.K, {
                                 icon: h.a,
                                 size: "sm",
-                                "aria-label": N.intl.string(N.t.VkKicb),
+                                "aria-label": b.intl.string(b.t.VkKicb),
                                 variant: "icon-only",
                                 onClick: o,
                             }),
@@ -90,9 +90,9 @@ function E(e) {
                 }),
                 (0, t.jsx)("div", {
                     ref: p,
-                    className: b.cK,
+                    className: N.cK,
                     "data-dnd-name": l,
-                    children: (0, t.jsx)(f.W, { size: "xs", color: "currentColor", className: b.co }),
+                    children: (0, t.jsx)(f.W, { size: "xs", color: "currentColor", className: N.co }),
                 }),
             ],
         })
@@ -115,8 +115,8 @@ let H = function (e) {
     async function I() {
         null != h && f(null);
         let e = r.trim();
-        if ("" === e) return void f(N.intl.string(N.t["G+TI44"]));
-        if (0 === a.map((e) => e.trim()).filter((e) => "" !== e).length) return void f(N.intl.string(N.t.jZoHgI));
+        if ("" === e) return void f(b.intl.string(b.t["G+TI44"]));
+        if (0 === a.map((e) => e.trim()).filter((e) => "" !== e).length) return void f(b.intl.string(b.t.jZoHgI));
         let l = { field_type: j.rX.MULTIPLE_CHOICE, label: e, choices: a, required: !0 };
         try {
             (await n(l), s());
@@ -127,12 +127,12 @@ let H = function (e) {
     return (0, t.jsxs)(v.A, {
         ...e,
         errorText: h,
-        title: N.intl.string(N.t.ooKh3m),
+        title: b.intl.string(b.t.ooKh3m),
         onConfirm: I,
         onCancel: s,
         children: [
             (0, t.jsx)("div", {
-                className: b.Ef,
+                className: N.Ef,
                 children: (0, t.jsx)(u.k, {
                     autoFocus: !0,
                     onChange: function (e) {
@@ -140,11 +140,11 @@ let H = function (e) {
                         let l = e.replace(/(\r\n|\n|\r)/g, " ");
                         (l.length > y.Ty && (l = e.slice(0, y.Ty)), c(l));
                     },
-                    placeholder: N.intl.string(N.t.fqVmbL),
+                    placeholder: b.intl.string(b.t.fqVmbL),
                     value: r,
                 }),
             }),
-            (0, t.jsx)("div", { className: b.yF }),
+            (0, t.jsx)("div", { className: N.yF }),
             a.map((e, l) =>
                 (0, t.jsx)(
                     E,
@@ -174,23 +174,23 @@ let H = function (e) {
             ),
             a.length !== y.Hz &&
                 (0, t.jsx)("div", {
-                    className: b.C5,
+                    className: N.C5,
                     children: (0, t.jsxs)(m.D, {
-                        className: b.bK,
+                        className: N.bK,
                         onClick: function () {
                             (null != h && f(null), a.length !== y.Hz && d([...a, ""]));
                         },
                         children: [
-                            (0, t.jsx)(x.U, {
+                            (0, t.jsx)(g.U, {
                                 size: "custom",
                                 height: 17,
                                 width: 17,
                                 color: o.A.unsafe_rawColors.BLUE_345.css,
                             }),
-                            (0, t.jsx)(g.E, {
+                            (0, t.jsx)(x.E, {
                                 color: "text-link",
-                                variant: "text-md/normal",
-                                children: N.intl.string(N.t.sVfx9r),
+                                variant: "body-md/normal",
+                                children: b.intl.string(b.t.sVfx9r),
                             }),
                         ],
                     }),

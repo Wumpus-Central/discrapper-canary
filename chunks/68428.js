@@ -1414,7 +1414,7 @@ function tC(e) {
                         }),
                     l &&
                         (0, a.jsx)(tS.E, {
-                            variant: "text-md/normal",
+                            variant: "body-md/normal",
                             color: "text-strong",
                             className: tx.qS,
                             children: s,
@@ -1448,12 +1448,12 @@ function tN(e) {
                       (0, a.jsxs)("div", {
                           className: tw.Vx,
                           children: [
-                              (0, a.jsx)(tS.E, { variant: "text-md/semibold", color: "text-strong", children: l.name }),
+                              (0, a.jsx)(tS.E, { variant: "body-md/semibold", color: "text-strong", children: l.name }),
                               u &&
                                   (0, a.jsx)("div", {
                                       className: tw.qS,
                                       children: (0, a.jsx)(tS.E, {
-                                          variant: "text-xs/semibold",
+                                          variant: "body-xs/semibold",
                                           color: "text-brand",
                                           children: eu.intl.string(eu.t["/50eHi"]),
                                       }),
@@ -1499,15 +1499,15 @@ function tY(e) {
             (0, a.jsx)("div", {
                 className: tF.At,
                 children: (0, a.jsx)(tS.E, {
-                    variant: "text-sm/semibold",
+                    variant: "body-sm/semibold",
                     color: l ? "status-positive" : "text-brand",
                     children: _,
                 }),
             }),
-            (0, a.jsx)(tS.E, { variant: "text-lg/semibold", className: f ? tF.X_ : void 0, children: n.name }),
+            (0, a.jsx)(tS.E, { variant: "body-lg/semibold", className: f ? tF.X_ : void 0, children: n.name }),
             f &&
                 (0, a.jsx)(tS.E, {
-                    variant: "text-md/normal",
+                    variant: "body-md/normal",
                     color: "text-subtle",
                     className: tF.tj,
                     children: (0, tL.l)(n.description ?? "", !0, { guildId: i.id }),
@@ -1521,7 +1521,7 @@ function tY(e) {
                         children: [
                             (0, a.jsx)(tb.n, { size: "xs", color: "currentColor" }),
                             (0, a.jsx)(tS.E, {
-                                variant: "text-xs/normal",
+                                variant: "body-xs/normal",
                                 color: "text-muted",
                                 children: eu.intl.format(eu.t["+DLsD8"], { count: u }),
                             }),
@@ -1532,7 +1532,7 @@ function tY(e) {
                         children: [
                             null != p ? (0, a.jsx)(p, { size: "xs", color: "currentColor" }) : null,
                             (0, a.jsx)(tS.E, {
-                                variant: "text-xs/normal",
+                                variant: "body-xs/normal",
                                 color: "text-muted",
                                 className: tF.HA,
                                 children: g ?? (null != h ? (0, tL.y)(h, !0) : null),
@@ -1788,21 +1788,21 @@ function t4(e) {
                                       children: [
                                           "guild" === n && null != _
                                               ? (0, a.jsx)(tS.E, {
-                                                    variant: "text-md/semibold",
+                                                    variant: "body-md/semibold",
                                                     color: "text-strong",
                                                     className: t2.DD,
                                                     children: _.name,
                                                 })
                                               : "user" === n && null != g
                                                 ? (0, a.jsx)(tS.E, {
-                                                      variant: "text-md/semibold",
+                                                      variant: "body-md/semibold",
                                                       color: "text-strong",
                                                       className: t2.DD,
                                                       children: g.username,
                                                   })
                                                 : null,
                                           (0, a.jsx)(tS.E, {
-                                              variant: "text-xs/normal",
+                                              variant: "body-xs/normal",
                                               color: "text-muted",
                                               className: t2.vE,
                                               children: (0, t9.jb)(l),
@@ -1839,7 +1839,7 @@ function t4(e) {
                                       return (0, a.jsx)("div", {
                                           className: t2.VA,
                                           children: (0, a.jsx)(tS.E, {
-                                              variant: "text-sm/medium",
+                                              variant: "body-sm/medium",
                                               color: "text-subtle",
                                               tag: "span",
                                               className: t2.o4,
@@ -1852,21 +1852,21 @@ function t4(e) {
                                           className: t2.VA,
                                           children: [
                                               (0, a.jsx)(tS.E, {
-                                                  variant: "text-sm/medium",
+                                                  variant: "body-sm/medium",
                                                   color: "text-subtle",
                                                   tag: "span",
                                                   className: t2.o4,
                                                   children: e,
                                               }),
                                               (0, a.jsx)(tS.E, {
-                                                  variant: "text-sm/medium",
+                                                  variant: "body-sm/medium",
                                                   color: "text-subtle",
                                                   tag: "span",
                                                   className: t2.o4,
                                                   children: eu.intl.string(eu.t.CHUAYk),
                                               }),
                                               (0, a.jsxs)(tS.E, {
-                                                  variant: "text-sm/medium",
+                                                  variant: "body-sm/medium",
                                                   color: "text-subtle",
                                                   tag: "span",
                                                   className: t2.o4,
@@ -1888,7 +1888,7 @@ function t4(e) {
                                       ? (0, a.jsx)("div", {
                                             className: t2.VA,
                                             children: (0, a.jsx)(tS.E, {
-                                                variant: "text-sm/medium",
+                                                variant: "body-sm/medium",
                                                 color: "text-subtle",
                                                 tag: "span",
                                                 className: t2.o4,

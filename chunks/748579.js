@@ -15,8 +15,8 @@ var n = a(477900),
     _ = a(764231),
     f = a(878784),
     g = a(202541),
-    x = a(652215),
-    v = a(105292),
+    v = a(652215),
+    x = a(105292),
     T = a(31233);
 function N(e) {
     let { levelUpData: t } = e,
@@ -55,7 +55,7 @@ function N(e) {
                 (R.current.style.display = "none"),
                 R.current.offsetWidth,
                 (R.current.style.display = ""),
-                p.default.track(x.HAw.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED, { new_badge_id: I.id }));
+                p.default.track(v.HAw.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED, { new_badge_id: I.id }));
         }, [I.id, P]),
         C = {
             "--custom-old-badge-color": `linear-gradient(to right, ${t.prevBadgeTextGradient ?? "transparent"})`,
@@ -82,18 +82,18 @@ function N(e) {
                         (0, n.jsx)(d.E, {
                             variant: "nitro-md",
                             className: i()(T.Vv, T.km),
-                            children: v.intl.string(U.nameUnformatted),
+                            children: x.intl.string(U.nameUnformatted),
                         }),
                     (0, n.jsx)(d.E, {
                         variant: "nitro-md",
                         className: i()(T.Vv, T.Hl),
-                        children: v.intl.string(I.nameUnformatted),
+                        children: x.intl.string(I.nameUnformatted),
                     }),
                     null != k &&
                         (0, n.jsx)(d.E, {
-                            variant: "text-xs/medium",
+                            variant: "body-xs/medium",
                             className: T.SD,
-                            children: v.intl.formatToPlainString(v.t["f/OGgM"], {
+                            children: x.intl.formatToPlainString(x.t["f/OGgM"], {
                                 timeFrame: (0, _.T)(I.id, I.tenureReqNumMonths),
                                 date: k,
                             }),
@@ -101,13 +101,13 @@ function N(e) {
                     (0, n.jsx)("div", {
                         className: T.uu,
                         children: (0, n.jsx)(c.m, {
-                            text: v.intl.string(v.t.hsvh0i),
+                            text: x.intl.string(x.t.hsvh0i),
                             children: (0, n.jsx)(u.K, {
                                 icon: o.PlayIcon,
                                 variant: "secondary",
                                 size: "sm",
                                 onClick: w,
-                                "aria-label": v.intl.string(v.t.hsvh0i),
+                                "aria-label": x.intl.string(x.t.hsvh0i),
                             }),
                         }),
                     }),

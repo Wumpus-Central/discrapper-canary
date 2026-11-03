@@ -1,18 +1,18 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => A });
 var l = n(477900);
 n(582128);
 var r = n(575593),
     i = n(192308),
-    s = n(403581),
-    a = n(834730),
-    o = n(519707),
+    o = n(403581),
+    s = n(834730),
+    a = n(519707),
     c = n(404374),
     u = n(202541),
     d = n(105292),
     m = n(180985);
-function x(e) {
-    let { itemType: t, onClose: o } = e,
-        x =
+function A(e) {
+    let { itemType: t, onClose: a } = e,
+        A =
             t === r.R.AVATAR_DECORATION
                 ? u.e.AVATAR_DECORATION_MODAL_UPSELL
                 : t === r.R.PROFILE_EFFECT
@@ -21,18 +21,18 @@ function x(e) {
                     ? u.e.NAMEPLATE_MODAL_UPSELL
                     : null,
         E = t === r.R.AVATAR_DECORATION || t === r.R.PROFILE_EFFECT;
-    if (null == x) return null;
-    function f(e) {
+    if (null == A) return null;
+    function h(e) {
         return (0, l.jsxs)("div", {
             className: m.hc,
             children: [
-                !e && (0, l.jsx)(s.t, { className: m.ax, size: "md", color: c.k0.PREMIUM_TIER_2 }),
-                (0, l.jsx)(a.E, {
+                !e && (0, l.jsx)(o.t, { className: m.ax, size: "md", color: c.k0.PREMIUM_TIER_2 }),
+                (0, l.jsx)(s.E, {
                     className: m.cf,
-                    variant: "text-md/medium",
+                    variant: "body-md/medium",
                     children: (function () {
-                        if (null == x) return null;
-                        switch (x) {
+                        if (null == A) return null;
+                        switch (A) {
                             case u.e.AVATAR_DECORATION_MODAL_UPSELL:
                                 return d.intl.format(d.t["aFR/EI"], {
                                     onClick: () => {
@@ -42,10 +42,10 @@ function x(e) {
                                             );
                                             return (t) =>
                                                 (0, l.jsx)(e, {
-                                                    premiumUpsellType: x,
+                                                    premiumUpsellType: A,
                                                     title: d.intl.string(d.t.JI7uhc),
                                                     body: d.intl.string(d.t["5XvsdZ"]),
-                                                    onSecondaryClick: o,
+                                                    onSecondaryClick: a,
                                                     ...t,
                                                 });
                                         });
@@ -60,10 +60,10 @@ function x(e) {
                                             );
                                             return (t) =>
                                                 (0, l.jsx)(e, {
-                                                    premiumUpsellType: x,
+                                                    premiumUpsellType: A,
                                                     title: d.intl.string(d.t.sYm15X),
                                                     body: d.intl.string(d.t["Hza+Bu"]),
-                                                    onSecondaryClick: o,
+                                                    onSecondaryClick: a,
                                                     ...t,
                                                 });
                                         });
@@ -78,10 +78,10 @@ function x(e) {
                                             );
                                             return (t) =>
                                                 (0, l.jsx)(e, {
-                                                    premiumUpsellType: x,
+                                                    premiumUpsellType: A,
                                                     title: d.intl.string(d.t.k7UN4k),
                                                     body: d.intl.string(d.t["0/QPxO"]),
-                                                    onSecondaryClick: o,
+                                                    onSecondaryClick: a,
                                                     ...t,
                                                 });
                                         });
@@ -95,9 +95,9 @@ function x(e) {
             ],
         });
     }
-    return E ? (0, l.jsx)(A, { render: f }) : f(!1);
+    return E ? (0, l.jsx)(f, { render: h }) : h(!1);
 }
-function A(e) {
+function f(e) {
     let { render: t } = e;
-    return t((0, o.J)("profile_decoration_upsell_icon"));
+    return t((0, a.J)("profile_decoration_upsell_icon"));
 }

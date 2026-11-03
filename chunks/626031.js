@@ -14,14 +14,14 @@ var r = n(477900),
     h = n(115093),
     N = n(398293);
 let p = new o.A("BalanceCounter"),
-    A = (0, f._$)(void 0) === h.B.PRODUCTION;
-function b(e) {
+    b = (0, f._$)(void 0) === h.B.PRODUCTION;
+function A(e) {
     return null == e ? 0 : `${e.toFixed(0)}`.length;
 }
 function w(e) {
     let {
             value: t,
-            textVariant: n = "text-md/semibold",
+            textVariant: n = "body-md/semibold",
             horizontalAlignment: l = "right",
             textColor: s,
             ariaHidden: c,
@@ -30,11 +30,11 @@ function w(e) {
         } = e,
         m = null === t,
         [g, h] = (0, a.useState)(null),
-        p = (0, a.useMemo)(() => b(t), [t]),
-        A = (0, d.Ay)(p) ?? 0,
-        w = (0, a.useMemo)(() => (null === g ? Math.max(A, p) : Math.max(p, g)), [A, p, g]),
+        p = (0, a.useMemo)(() => A(t), [t]),
+        b = (0, d.Ay)(p) ?? 0,
+        w = (0, a.useMemo)(() => (null === g ? Math.max(b, p) : Math.max(p, g)), [b, p, g]),
         R = `${m ? 0 : w}ch`,
-        { marginClassName: x, textAlignClassName: C } = (0, a.useMemo)(
+        { marginClassName: C, textAlignClassName: E } = (0, a.useMemo)(
             () =>
                 "left" === l
                     ? { marginClassName: N.v6, textAlignClassName: N.Sc }
@@ -45,7 +45,7 @@ function w(e) {
         "aria-hidden": c,
         variant: n,
         color: s,
-        className: u()(N.SP, m ? void 0 : x, C, o),
+        className: u()(N.SP, m ? void 0 : C, E, o),
         style: { width: R, opacity: m ? "0" : 1 },
         children: m
             ? null
@@ -83,31 +83,31 @@ let D = (e) => {
         }, [t, l]);
         let D = t ?? 0,
             R = N.current ?? D,
-            { duration: x, delay: C } = (0, m.v)(D - R, { targetTime: i, isRenderedWithoutLottieAnimation: d }),
-            { number: E } = (0, c.z)({
+            { duration: C, delay: E } = (0, m.v)(D - R, { targetTime: i, isRenderedWithoutLottieAnimation: d }),
+            { number: v } = (0, c.z)({
                 from: { number: N.current ?? D },
                 number: D,
-                config: { mass: 1, tension: 20, friction: 10, duration: x },
-                delay: C,
+                config: { mass: 1, tension: 20, friction: 10, duration: C },
+                delay: E,
                 onStart: () => {
-                    n(b(R));
+                    n(A(R));
                 },
                 onRest: () => {
-                    if ((h(f + 1), u(), !A && null !== w.current && null !== N.current)) {
+                    if ((h(f + 1), u(), !b && null !== w.current && null !== N.current)) {
                         let e = Date.now();
                         p.log("Balance Counter finished updating: ", {
                             time: e - w.current.lastChangedAt,
                             delta: D - N.current,
                         });
                     }
-                    (n(b(D)), (N.current = D));
+                    (n(A(D)), (N.current = D));
                 },
             }),
-            v = b(Math.max(t ?? 0, E.get()));
+            x = A(Math.max(t ?? 0, v.get()));
         return (0, r.jsx)(s.animated.div, {
-            style: { width: `calc(${v}ch)` },
+            style: { width: `calc(${x}ch)` },
             className: o,
-            children: E.to((e) => `${e.toFixed(0)}`),
+            children: v.to((e) => `${e.toFixed(0)}`),
         });
     },
     R = w;

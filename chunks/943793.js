@@ -5,8 +5,8 @@ var i = n(477900),
     s = n.n(a);
 n(926675);
 var r = n(534514),
-    d = n(939249),
-    o = n(140735),
+    o = n(939249),
+    d = n(140735),
     c = n(834730),
     u = n(216964),
     m = n(661531),
@@ -21,19 +21,19 @@ var r = n(534514),
     v = n(451395),
     C = n(823016),
     A = n(788593),
-    N = n(492280),
-    b = n(866665),
-    T = n(147925),
-    w = n(123181),
-    R = n(229087),
-    y = n(753437),
+    b = n(492280),
+    N = n(866665),
+    y = n(147925),
+    T = n(123181),
+    w = n(229087),
+    R = n(753437),
     S = n(229231),
     k = n(105292),
     L = n(149253);
 function _(e) {
-    let { tags: t, allowEditing: n, widgetType: a, gameId: r, className: d, disableInteraction: o = !1 } = e,
-        c = n && !o,
-        u = t?.filter((e) => null != (0, y.W3)(e)) ?? [],
+    let { tags: t, allowEditing: n, widgetType: a, gameId: r, className: o, disableInteraction: d = !1 } = e,
+        c = n && !d,
+        u = t?.filter((e) => null != (0, R.W3)(e)) ?? [],
         m = u.length > 0,
         g = c && (0, S.mS)(a) && u.length < 20,
         { trackUserProfileAction: x, trackUserProfileEditAction: f } = (0, I.NJ)(),
@@ -41,9 +41,9 @@ function _(e) {
         p = (0, l.useRef)(null),
         j = (0, l.useRef)(null),
         [v, C] = (0, l.useState)(0),
-        [A, N] = (0, l.useState)(!1),
-        b = G(p, j, u, h, C),
-        T = (0, l.useCallback)(
+        [A, b] = (0, l.useState)(!1),
+        N = G(p, j, u, h, C),
+        y = (0, l.useCallback)(
             (e, t) => {
                 ((0, E.s1)(a, r, e),
                     f({ action: "added" === t ? "TAG_ADDED" : "TAG_REMOVED", widgetEdited: a, gameId: r }));
@@ -56,20 +56,20 @@ function _(e) {
     if (
         ((0, l.useEffect)(
             () => (
-                b(),
-                window.addEventListener("resize", b),
+                N(),
+                window.addEventListener("resize", N),
                 () => {
-                    window.removeEventListener("resize", b);
+                    window.removeEventListener("resize", N);
                 }
             ),
-            [b, u?.join("")],
+            [N, u?.join("")],
         ),
         !m && !g)
     )
         return null;
     let P = A ? u : u.slice(0, u.length - v);
     return (0, i.jsxs)("div", {
-        className: s()(L.I4, d),
+        className: s()(L.I4, o),
         children: [
             m &&
                 (0, i.jsxs)(i.Fragment, {
@@ -79,7 +79,7 @@ function _(e) {
                             "aria-label": k.intl.string(k.t.EfjTi4),
                             children: P.map((e) =>
                                 (0, i.jsx)(
-                                    R.A,
+                                    w.A,
                                     {
                                         tag: e,
                                         onRemove: c
@@ -102,25 +102,25 @@ function _(e) {
                                 isExpanded: A,
                                 numberOfOverflowingTags: v,
                                 onExpandTags: () => {
-                                    (N(!0), x({ action: "EXPAND_GAME_TAGS" }));
+                                    (b(!0), x({ action: "EXPAND_GAME_TAGS" }));
                                 },
                                 onCollapseTags: () => {
-                                    (N(!1), x({ action: "COLLAPSE_GAME_TAGS" }));
+                                    (b(!1), x({ action: "COLLAPSE_GAME_TAGS" }));
                                 },
-                                disableInteraction: o,
+                                disableInteraction: d,
                             }),
                     ],
                 }),
-            g && (0, i.jsx)(w.A, { tags: t, onTagsChange: T, onOpen: _, ref: j }),
+            g && (0, i.jsx)(T.A, { tags: t, onTagsChange: y, onOpen: _, ref: j }),
         ],
     });
 }
 function P(e) {
     let { numberOfOverflowingTags: t } = e;
-    return (0, i.jsx)(c.E, { variant: "text-xxs/medium", color: "none", children: `+${t}` });
+    return (0, i.jsx)(c.E, { variant: "footnote/medium", color: "none", children: `+${t}` });
 }
 function D() {
-    return (0, i.jsx)(T.A, { direction: T.A.Directions.LEFT, width: 12, height: 12, className: L.OW });
+    return (0, i.jsx)(y.A, { direction: y.A.Directions.LEFT, width: 12, height: 12, className: L.OW });
 }
 function O(e) {
     let {
@@ -129,21 +129,21 @@ function O(e) {
             onExpandTags: l,
             onCollapseTags: a,
             disableInteraction: r,
-            buttonRef: o,
+            buttonRef: d,
         } = e,
         c = t ? k.intl.string(k.t.z9VPrQ) : k.intl.string(k.t.mriLXL),
         u = t ? k.intl.string(k.t.z9VPrQ) : k.intl.formatToPlainString(k.t.F6iMs4, { count: n });
     return r
         ? (0, i.jsx)("div", {
               className: s()(L.X1, L.r9),
-              ref: o,
+              ref: d,
               children: (0, i.jsx)(P, { numberOfOverflowingTags: n }),
           })
-        : (0, i.jsx)(b.m, {
+        : (0, i.jsx)(N.m, {
               text: c,
               ariaHidden: t,
-              children: (0, i.jsx)(d.D, {
-                  innerRef: o,
+              children: (0, i.jsx)(o.D, {
+                  innerRef: d,
                   onClick: t ? a : l,
                   "aria-label": u,
                   className: t ? L.cS : L.X1,
@@ -157,25 +157,25 @@ let G = (e, t, n, i, a) =>
         let l = e.current?.getBoundingClientRect().width ?? 0,
             s = t.current?.getBoundingClientRect().width ?? 0,
             r = s > 0 ? 8 : 4,
-            d = 0,
             o = 0,
+            d = 0,
             c = i.current;
         for (let e = 0; e < n.length; e++) {
             let t = c.get(n[e]);
             if (null != t) {
-                if ((o += t.offsetWidth + 4) > 296) break;
-                d++;
+                if ((d += t.offsetWidth + 4) > 296) break;
+                o++;
             }
         }
-        o = 0;
-        for (let e = d; e < n.length; e++) {
+        d = 0;
+        for (let e = o; e < n.length; e++) {
             let t = c.get(n[e]);
             if (null != t) {
-                if ((o += t.offsetWidth + 4) > 296 - l - s - r) break;
-                d++;
+                if ((d += t.offsetWidth + 4) > 296 - l - s - r) break;
+                o++;
             }
         }
-        a(n.length - d);
+        a(n.length - o);
     }, [e, t, n?.join(""), i, a]);
 var M = n(858808),
     F = n(404760),
@@ -211,15 +211,15 @@ function K(e) {
         });
     return null == s
         ? (0, i.jsx)(r.D, { ...a, children: l })
-        : (0, i.jsx)(r.D, { ...a, children: (0, i.jsx)(d.D, { onClick: s, className: W.sd, children: l }) });
+        : (0, i.jsx)(r.D, { ...a, children: (0, i.jsx)(o.D, { onClick: s, className: W.sd, children: l }) });
 }
 function X(e) {
     let { user: t, guildId: n, channelId: l, id: a } = e;
-    return (0, i.jsx)(o.A, { id: a, children: k.intl.format(k.t.TM0XDY, { name: j.Ay.getName(n, l, t) }) });
+    return (0, i.jsx)(d.A, { id: a, children: k.intl.format(k.t.TM0XDY, { name: j.Ay.getName(n, l, t) }) });
 }
 function V(e) {
     let { text: t, className: n } = e;
-    return (0, i.jsx)(c.E, { variant: "text-sm/normal", color: "text-muted", className: n, children: t });
+    return (0, i.jsx)(c.E, { variant: "body-sm/normal", color: "text-muted", className: n, children: t });
 }
 function Y(e) {
     let { text: t, user: n, guildId: l, channelId: a } = e,
@@ -237,7 +237,7 @@ function Y(e) {
           });
 }
 function B(e) {
-    let { text: t, user: n, guildId: a, channelId: r, widgetType: d, gameId: o } = e,
+    let { text: t, user: n, guildId: a, channelId: r, widgetType: o, gameId: d } = e,
         c = (0, x.GV)(),
         { trackUserProfileEditAction: u } = (0, I.NJ)(),
         m = k.intl.string(k.t.xKSfBT),
@@ -246,14 +246,14 @@ function B(e) {
         p = l.useCallback(
             (e) => {
                 let t = e.trim();
-                ((0, E.oc)(d, o, "" !== t ? t : void 0),
-                    t !== f.trim() && u({ action: "COMMENTARY_EDITED", widgetEdited: d, gameId: o }));
+                ((0, E.oc)(o, d, "" !== t ? t : void 0),
+                    t !== f.trim() && u({ action: "COMMENTARY_EDITED", widgetEdited: o, gameId: d }));
             },
-            [d, o, f, u],
+            [o, d, f, u],
         ),
         j = l.useCallback(() => {
-            u({ action: "PRESS_ADD_COMMENTARY", widgetEdited: d });
-        }, [d, u]),
+            u({ action: "PRESS_ADD_COMMENTARY", widgetEdited: o });
+        }, [o, u]),
         v = (0, i.jsx)("div", { children: (0, i.jsx)(V, { text: h ? f : m, className: s()(W.qC, !h && W.qf) }) });
     return (0, i.jsxs)("div", {
         className: s()(F.kL, W.Im),
@@ -284,8 +284,8 @@ function z(e) {
             user: t,
             guildId: n,
             channelId: a,
-            game: d,
-            widgetType: o,
+            game: o,
+            widgetType: d,
             allowEditing: c,
             disableInteraction: u = !1,
             index: m,
@@ -294,22 +294,22 @@ function z(e) {
             className: f,
         } = e,
         h = l.useRef(null),
-        { gameId: j, comment: I, tags: b } = d,
-        { coverImageUrl: T, iconImageUrl: w, gameName: R, isLoading: y } = (0, p.A)(j),
-        k = { variant: "heading-sm/medium", color: "text-default" },
+        { gameId: j, comment: I, tags: N } = o,
+        { coverImageUrl: y, iconImageUrl: T, gameName: w, isLoading: R } = (0, p.A)(j),
+        k = { variant: "heading-xs/medium", color: "text-default" },
         L = c && !u,
-        P = 1 === (0, E.cv)(o),
-        D = L && (0, S.y9)(o),
+        P = 1 === (0, E.cv)(d),
+        D = L && (0, S.y9)(d),
         O = L && !P,
         { registerDragHandleRef: G } = (0, C.r)();
-    if (y) return (0, i.jsx)(N.E, {});
+    if (R) return (0, i.jsx)(b.E, {});
     function F() {
         return (0, i.jsx)(A.A, {
             coverRef: x,
-            className: (null == T && null == w) || u ? void 0 : U.iL,
-            imageSrc: T,
-            iconSrc: w,
-            gameName: R,
+            className: (null == y && null == T) || u ? void 0 : U.iL,
+            imageSrc: y,
+            iconSrc: T,
+            gameName: w,
             gameId: j,
             userId: t.id,
             disableInteraction: u,
@@ -324,37 +324,37 @@ function z(e) {
                 O
                     ? (0, i.jsxs)("div", {
                           className: W.An,
-                          children: [F(), (0, i.jsx)(v.jV, { buttonRef: G(d.gameId), className: W.BU })],
+                          children: [F(), (0, i.jsx)(v.jV, { buttonRef: G(o.gameId), className: W.BU })],
                       })
                     : F(),
                 (0, i.jsxs)("div", {
                     className: W.zH,
                     children: [
                         u
-                            ? (0, i.jsx)(r.D, { ...k, children: R })
-                            : (0, i.jsx)(K, { gameId: j, userId: t.id, gameName: R, ...k }),
+                            ? (0, i.jsx)(r.D, { ...k, children: w })
+                            : (0, i.jsx)(K, { gameId: j, userId: t.id, gameName: w, ...k }),
                         D
-                            ? (0, i.jsx)(B, { text: I, user: t, guildId: n, channelId: a, widgetType: o, gameId: j })
+                            ? (0, i.jsx)(B, { text: I, user: t, guildId: n, channelId: a, widgetType: d, gameId: j })
                             : (0, i.jsx)(Y, { text: I, user: t, guildId: n, channelId: a }),
                         (0, i.jsx)(_, {
-                            tags: b,
+                            tags: N,
                             allowEditing: c,
-                            widgetType: o,
+                            widgetType: d,
                             gameId: j,
                             disableInteraction: u,
                             className: W._A,
                         }),
                     ],
                 }),
-                L && (0, i.jsx)(M.A, { game: d, widgetType: o, className: W.vS, onRemove: () => g?.(d.gameId) }),
+                L && (0, i.jsx)(M.A, { game: o, widgetType: d, className: W.vS, onRemove: () => g?.(o.gameId) }),
             ],
         });
     }
     return O
         ? (0, i.jsx)(H, {
               index: m ?? 0,
-              widgetType: o,
-              game: d,
+              widgetType: d,
+              game: o,
               getWidth: () => h.current?.offsetWidth,
               children: X(),
           })

@@ -24,7 +24,7 @@ function d(e) {
                 children: (0, l.jsx)(s.E, {
                     ref: x,
                     className: h ? i()(d, f) : d,
-                    variant: "text-sm/semibold",
+                    variant: "body-sm/semibold",
                     color: "text-strong",
                     lineClamp: 1,
                     scaleFontToUserSetting: !0,

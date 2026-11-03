@@ -1,4 +1,4 @@
-l.d(t, { A: () => S, Z: () => b });
+l.d(t, { A: () => S, Z: () => v });
 var n = l(477900),
     i = l(582128),
     a = l(503698),
@@ -14,16 +14,16 @@ var n = l(477900),
     h = l(604913),
     C = l(65238),
     m = l(174459),
-    x = l(975571),
-    E = l(440938),
+    E = l(975571),
+    x = l(440938),
     I = l(758461),
     k = l(22007),
     L = l(758836),
     N = l(652215),
     T = l(105292),
     g = l(899737);
-let v = { [h.Pz.DEFAULT]: g.Hk, [h.Pz.NITRO]: g.O5 };
-function b(e) {
+let b = { [h.Pz.DEFAULT]: g.Hk, [h.Pz.NITRO]: g.O5 };
+function v(e) {
     let {
             tab: t,
             promotionFlavor: l = h.Pz.DEFAULT,
@@ -31,17 +31,17 @@ function b(e) {
             headerText: C,
             helpCenterId: I,
             helpCenterLinkText: L,
-            ctaText: b,
+            ctaText: v,
             ctaIcon: S,
             onCtaClick: O,
             hideCta: y,
             onDismiss: R,
         } = e,
         { analyticsLocations: j } = (0, u.Ay)(_.A.COLLECTIBLES_SHOP_NAGBAR),
-        f = i.useMemo(() => (null == I ? null : x.A.getArticleURL(I)), [I]),
+        f = i.useMemo(() => (null == I ? null : E.A.getArticleURL(I)), [I]),
         B = (0, k.s)(a),
-        P = v[l] ?? g.Hk,
-        H = (0, E.uM)(),
+        P = b[l] ?? g.Hk,
+        H = (0, x.uM)(),
         M = i.useCallback(() => {
             m.default.track(N.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: H?.sessionId,
@@ -69,7 +69,7 @@ function b(e) {
                                     children: [
                                         null != B && (0, n.jsx)(B, { size: "sm", colorClass: g.d7, className: g.Kk }),
                                         (0, n.jsxs)(c.E, {
-                                            variant: "text-sm/normal",
+                                            variant: "body-sm/normal",
                                             color: "text-overlay-light",
                                             children: [
                                                 null != C ? (0, A.U)(C) : null,
@@ -94,11 +94,11 @@ function b(e) {
                                     className: g.uJ,
                                     children: [
                                         !y &&
-                                            null != b &&
+                                            null != v &&
                                             (0, n.jsx)(p.$, {
                                                 variant: "overlay-primary",
                                                 size: "sm",
-                                                text: b,
+                                                text: v,
                                                 icon: S,
                                                 onClick: O,
                                             }),
@@ -121,7 +121,7 @@ let S =
     221552 == l.j
         ? function (e) {
               let { tab: t, handleTransition: l } = e,
-                  a = (0, E.uM)(),
+                  a = (0, x.uM)(),
                   s = (0, I.HH)(),
                   o = (0, C.ml)(s)?.reward,
                   c = o?.storefront?.nagbar,
@@ -139,7 +139,7 @@ let S =
                   }, [l, t, a]);
               return t === L.G2.ORBS || null == c
                   ? null
-                  : (0, n.jsx)(b, {
+                  : (0, n.jsx)(v, {
                         tab: t,
                         promotionFlavor: r,
                         icon: c.icon,

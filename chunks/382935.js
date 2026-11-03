@@ -16,11 +16,11 @@ var i = l(477900),
     j = l(475743),
     x = l(235986),
     v = l(915089),
-    C = l(124480),
-    b = l(975571),
+    b = l(124480),
+    C = l(975571),
     k = l(321563),
-    A = l(670455),
-    y = l(105292),
+    y = l(670455),
+    A = l(105292),
     O = l(830141);
 function S(e) {
     return o().shuffle(
@@ -78,7 +78,7 @@ function N(e) {
                               emojiKind: L,
                               selectedRating: I,
                               onChangeRating: function (e) {
-                                  (M(e), e === A.P0.GOOD && N());
+                                  (M(e), e === y.P0.GOOD && N());
                               },
                           }),
                       }),
@@ -90,19 +90,19 @@ function N(e) {
                               children: (0, i.jsx)(u.S, {
                                   checked: z,
                                   onChange: () => F(!z),
-                                  label: y.intl.string(y.t["5E9SB9"]),
+                                  label: A.intl.string(A.t["5E9SB9"]),
                                   labelType: "secondary",
                               }),
                           }),
                   ],
               })),
               (W = !1))
-            : I !== A.P0.GOOD && null == V
+            : I !== y.P0.GOOD && null == V
               ? ((n = (0, i.jsx)(d.$m, {
                     "data-migration-pending": !0,
                     children: (0, i.jsx)(c.D, {
                         label: T,
-                        children: (0, i.jsx)(C.A, { options: G, onClick: Z, hideCaret: () => !0 }),
+                        children: (0, i.jsx)(b.A, { options: G, onClick: Z, hideCaret: () => !0 }),
                     }),
                 })),
                 (l = () => M(null)))
@@ -110,7 +110,7 @@ function N(e) {
                 ? ((n = (0, i.jsx)(d.$m, {
                       children: (0, i.jsx)(c.D, {
                           label: V.problemsHeader,
-                          children: (0, i.jsx)(C.A, {
+                          children: (0, i.jsx)(b.A, {
                               options: V.problemOptions,
                               onClick: function (e) {
                                   (Q(e), null != V && null != e && V.freeformConfig?.value !== e.value && N());
@@ -129,12 +129,12 @@ function N(e) {
                   ((n = (0, i.jsx)(d.$m, {
                       "data-migration-pending": !0,
                       children: (0, i.jsx)(m.f, {
-                          label: y.intl.string(y.t.h95hcn),
+                          label: A.intl.string(A.t.h95hcn),
                           helperText: V.freeformConfig.hideHelpdeskLink
                               ? void 0
-                              : y.intl.format(y.t.ybi2tD, { helpdeskURL: b.A.getSubmitRequestURL() }),
+                              : A.intl.format(A.t.ybi2tD, { helpdeskURL: C.A.getSubmitRequestURL() }),
                           value: X,
-                          maxLength: A.u0,
+                          maxLength: y.u0,
                           onChange: J,
                       }),
                   })),
@@ -156,7 +156,7 @@ function N(e) {
                     className: O.N1,
                     children: [
                         (0, i.jsx)(h.D, { id: w, variant: "heading-xl/semibold", color: "none", children: D }),
-                        (0, i.jsx)(f.E, { variant: "text-md/normal", color: "none", className: O.sB, children: E }),
+                        (0, i.jsx)(f.E, { variant: "body-md/normal", color: "none", className: O.sB, children: E }),
                     ],
                 }),
                 n,
@@ -169,14 +169,14 @@ function N(e) {
                             (0, i.jsx)(g.$, {
                                 variant: "secondary",
                                 size: "sm",
-                                text: y.intl.string(y.t["13/7kX"]),
+                                text: A.intl.string(A.t["13/7kX"]),
                                 onClick: l,
                             }),
                             Y &&
                                 (0, i.jsx)(g.$, {
                                     variant: "primary",
                                     size: "sm",
-                                    text: y.intl.string(y.t.geKm7t),
+                                    text: A.intl.string(A.t.geKm7t),
                                     onClick: N,
                                 }),
                         ],

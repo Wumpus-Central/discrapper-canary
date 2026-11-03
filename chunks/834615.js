@@ -24,10 +24,10 @@ var i = s(477900),
     p = s(590202),
     _ = s(651892),
     v = s(801365),
-    F = s(792620),
-    L = s(814793),
-    k = s(617986),
-    y = s(630037),
+    y = s(792620),
+    F = s(814793),
+    L = s(617986),
+    k = s(630037),
     S = s(190107),
     b = s(652215),
     Y = s(105292),
@@ -38,7 +38,7 @@ let V = function (t) {
         Q = a.useCallback((t) => {
             t.stopPropagation();
         }, []),
-        R = (0, y.D)({ quest: e, questContent: E.uF.ACTIVITY_PANEL, sourceQuestContent: E.uF.ACTIVITY_PANEL }),
+        R = (0, k.D)({ quest: e, questContent: E.uF.ACTIVITY_PANEL, sourceQuestContent: E.uF.ACTIVITY_PANEL }),
         W = e.userStatus?.enrolledAt != null,
         G = e.userStatus?.completedAt != null,
         z = (0, f.fc)(e),
@@ -52,7 +52,7 @@ let V = function (t) {
                 case h.WM.SUCCESS:
                     ((0, h.g5)(e.id, E.uF.ACTIVITY_PANEL),
                         V ? (0, h.L4)(E.uF.ACTIVITY_PANEL, e.id) : s?.(),
-                        (0, k.mA)({ fromContent: E.uF.ACTIVITY_PANEL, questId: e.id }));
+                        (0, L.mA)({ fromContent: E.uF.ACTIVITY_PANEL, questId: e.id }));
                     break;
                 case h.WM.UNKNOWN_ERROR:
                     A.A.show({ title: Y.intl.string(Y.t.R0RpRX), body: Y.intl.string(Y.t.OXD41D) });
@@ -73,7 +73,7 @@ let V = function (t) {
             gameProfileSource: C.GameProfileSources.QuestActivityPanel,
         }),
         $ = (0, j.tW)(e, j.fY.GAME_TILE, D).url,
-        B = (0, F.I6)(e) ? (0, F.xc)(e) : (0, F._3)(e)?.[0],
+        B = (0, y.I6)(e) ? (0, y.xc)(e) : (0, y._3)(e)?.[0],
         Z = (0, T.A)({
             applicationId: B,
             location: S.rE.QUEST_INSTRUCTIONS,
@@ -86,7 +86,7 @@ let V = function (t) {
             ctaContent: p.Cy.OPEN_GAME_LINK,
             sourceQuestContent: E.uF.ACTIVITY_PANEL,
         }),
-        ts = (0, L.vA)(e),
+        ts = (0, F.vA)(e),
         ti = (0, P.NA)({ quest: e }),
         ta = ts ? ti : Y.intl.string(Y.t.l7E81v),
         tn =
@@ -122,7 +122,7 @@ let V = function (t) {
             onClick: tl,
             onKeyPress: Q,
             loading: w,
-            icon: (0, k.Oz)(e),
+            icon: (0, L.Oz)(e),
         });
     return (0, i.jsx)("div", {
         className: U.iE,
@@ -146,7 +146,7 @@ let V = function (t) {
                             className: U.Xj,
                             children: [
                                 (0, i.jsx)(d.D, {
-                                    variant: "heading-sm/semibold",
+                                    variant: "heading-xs/semibold",
                                     color: "text-strong",
                                     children: H
                                         ? Y.intl.format(Y.t["0IUT4Y"], {
@@ -164,7 +164,7 @@ let V = function (t) {
                                           })
                                         : Y.intl.format(Y.t["0IUT4Y"], { rewardWithArticleHook: () => X }),
                                 }),
-                                (0, i.jsx)(m.E, { variant: "text-xs/medium", color: "text-muted", children: J }),
+                                (0, i.jsx)(m.E, { variant: "body-xs/medium", color: "text-muted", children: J }),
                             ],
                         }),
                     ],

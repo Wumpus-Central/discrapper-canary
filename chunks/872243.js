@@ -1,18 +1,18 @@
-n.d(e, { default: () => x });
+n.d(e, { default: () => k });
 var a = n(477900),
     i = n(582128),
     s = n(17928),
-    r = n(189213),
-    l = n(95477),
-    o = n(834730),
+    o = n(189213),
+    r = n(95477),
+    l = n(834730),
     c = n(47167),
     u = n(734057),
     d = n(181079),
     h = n(16236),
     p = n(105292),
     m = n(275585);
-function x(t) {
-    let { channelId: e, onClose: n, transitionState: x, heading: k, formTitle: v } = t,
+function k(t) {
+    let { channelId: e, onClose: n, transitionState: k, heading: v, formTitle: x } = t,
         C = (0, s.bG)([u.A], () => u.A.getChannel(e)),
         b = (0, c.Ay)(C),
         f = d.A.getNickname(e),
@@ -22,26 +22,26 @@ function x(t) {
     }
     return (0, a.jsx)("form", {
         onSubmit: j,
-        children: (0, a.jsxs)(r.a, {
-            title: k,
+        children: (0, a.jsxs)(o.a, {
+            title: v,
             actions: [
                 { text: p.intl.string(p.t["ETE/oC"]), onClick: n, variant: "secondary" },
-                { text: k, onClick: j, variant: "primary", type: "submit" },
+                { text: v, onClick: j, variant: "primary", type: "submit" },
             ],
             onClose: n,
-            transitionState: x,
+            transitionState: k,
             children: [
-                (0, a.jsx)(l.k, {
-                    label: v,
+                (0, a.jsx)(r.k, {
+                    label: x,
                     value: g,
                     onChange: y,
                     placeholder: b ?? void 0,
                     maxLength: 100,
                     autoFocus: !0,
                 }),
-                (0, a.jsx)(o.E, {
+                (0, a.jsx)(l.E, {
                     className: m.h,
-                    variant: "text-sm/normal",
+                    variant: "body-sm/normal",
                     color: "text-default",
                     children: p.intl.string(p.t["2vyz+N"]),
                 }),

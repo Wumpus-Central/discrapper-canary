@@ -1,138 +1,138 @@
-c.d(a, { default: () => p });
+c.d(a, { default: () => j });
 var e = c(477900),
-    t = c(582128),
-    i = c(935399),
+    i = c(582128),
+    t = c(935399),
     r = c(554146),
     n = c(815021),
     d = c(534514),
     l = c(834730),
     o = c(821609),
     m = c(224640),
-    x = c(793574),
-    N = c(826673),
-    E = c(501419),
+    N = c(793574),
+    E = c(826673),
+    x = c(501419),
     h = c(815996),
-    u = c(49999),
-    f = c(105292),
-    j = c(616004);
-function p(s) {
+    b = c(49999),
+    u = c(105292),
+    f = c(616004);
+function j(s) {
     let { onClose: a, ...c } = s,
-        p = t.useRef(!1);
-    ((0, i.Ay)(() => {
-        (0, E.Wx)(r.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT);
+        j = i.useRef(!1);
+    ((0, t.Ay)(() => {
+        (0, x.Wx)(r.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT);
     }),
-        t.useEffect(
+        i.useEffect(
             () => () => {
-                p.current ||
-                    (0, N.Dr)(r.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, {
-                        dismissAction: u.i.AUTO_DISMISS,
+                j.current ||
+                    (0, E.Dr)(r.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, {
+                        dismissAction: b.i.AUTO_DISMISS,
                         forceTrack: !0,
                     });
             },
             [],
         ));
-    let C = t.useCallback(async () => {
-            ((p.current = !0),
-                (0, N.Dr)(r.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, {
-                    dismissAction: u.i.USER_DISMISS,
+    let p = i.useCallback(async () => {
+            ((j.current = !0),
+                (0, E.Dr)(r.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, {
+                    dismissAction: b.i.USER_DISMISS,
                     forceTrack: !0,
                 }),
                 await a());
         }, [a]),
-        g = t.useCallback(async () => {
-            ((p.current = !0),
-                (0, N.Dr)(r.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, {
-                    dismissAction: u.i.TAKE_ACTION,
+        C = i.useCallback(async () => {
+            ((j.current = !0),
+                (0, E.Dr)(r.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, {
+                    dismissAction: b.i.TAKE_ACTION,
                     forceTrack: !0,
                 }),
-                (0, h.Cz)({ analyticsLocations: [], analyticsSource: x.A.COLLECTIBLES_SHOP }),
+                (0, h.Cz)({ analyticsLocations: [], analyticsSource: N.A.COLLECTIBLES_SHOP }),
                 await a());
         }, [a]);
     return (0, e.jsx)(m.d, {
         ...c,
-        onClose: C,
+        onClose: p,
         size: "lg",
         children: (0, e.jsxs)("div", {
-            className: j.Qs,
+            className: f.Qs,
             children: [
                 (0, e.jsx)("div", {
-                    className: j.Tp,
+                    className: f.Tp,
                     style: {
                         backgroundImage:
                             "url(https://cdn.discordapp.com/assets/content/1a3e6059912682527c3fdd25719dbee27c89e23c2c3aba2acc9348e951e5acad.jpg)",
                     },
                 }),
                 (0, e.jsx)("div", {
-                    className: j.b,
-                    children: (0, e.jsx)(n.J, { onClick: C, variant: "overlay-secondary" }),
+                    className: f.b,
+                    children: (0, e.jsx)(n.J, { onClick: p, variant: "overlay-secondary" }),
                 }),
                 (0, e.jsxs)("div", {
-                    className: j.rf,
+                    className: f.rf,
                     children: [
                         (0, e.jsxs)("div", {
-                            className: j.gn,
+                            className: f.gn,
                             children: [
                                 (0, e.jsx)(d.D, {
                                     variant: "display-md",
                                     color: "text-strong",
-                                    className: j.DD,
-                                    children: f.intl.string(f.t.W3MtdV),
+                                    className: f.DD,
+                                    children: u.intl.string(u.t.W3MtdV),
                                 }),
                                 (0, e.jsx)(l.E, {
-                                    variant: "text-sm/medium",
+                                    variant: "body-sm/medium",
                                     color: "text-muted",
-                                    children: f.intl.string(f.t["v72/pr"]),
+                                    children: u.intl.string(u.t["v72/pr"]),
                                 }),
                             ],
                         }),
                         (0, e.jsxs)("div", {
-                            className: j.kR,
+                            className: f.kR,
                             children: [
                                 (0, e.jsxs)("div", {
-                                    className: j.Nr,
+                                    className: f.Nr,
                                     children: [
                                         (0, e.jsx)("img", {
                                             src: "https://cdn.discordapp.com/assets/content/2c67362cb5834dffecbfce5e2b725245d0120a869b0d5245f2d8d71f6a4f5be9.png",
                                             alt: "",
-                                            className: j.wP,
+                                            className: f.wP,
                                         }),
                                         (0, e.jsxs)("div", {
-                                            className: j.Mo,
+                                            className: f.Mo,
                                             children: [
                                                 (0, e.jsx)(d.D, {
-                                                    variant: "heading-md/semibold",
+                                                    variant: "heading-sm/semibold",
                                                     color: "text-strong",
-                                                    children: f.intl.string(f.t.zOtryQ),
+                                                    children: u.intl.string(u.t.zOtryQ),
                                                 }),
                                                 (0, e.jsx)(l.E, {
-                                                    variant: "text-sm/medium",
+                                                    variant: "body-sm/medium",
                                                     color: "text-muted",
-                                                    children: f.intl.string(f.t.azn85l),
+                                                    children: u.intl.string(u.t.azn85l),
                                                 }),
                                             ],
                                         }),
                                     ],
                                 }),
                                 (0, e.jsxs)("div", {
-                                    className: j.Nr,
+                                    className: f.Nr,
                                     children: [
                                         (0, e.jsx)("img", {
                                             src: "https://cdn.discordapp.com/assets/content/ac2f61afc0a4de0533067bef49b716c95e9b05bba9ec10ffa634c5ed9662a533.png",
                                             alt: "",
-                                            className: j.wP,
+                                            className: f.wP,
                                         }),
                                         (0, e.jsxs)("div", {
-                                            className: j.Mo,
+                                            className: f.Mo,
                                             children: [
                                                 (0, e.jsx)(d.D, {
-                                                    variant: "heading-md/semibold",
+                                                    variant: "heading-sm/semibold",
                                                     color: "text-strong",
-                                                    children: f.intl.string(f.t.Ky01Mq),
+                                                    children: u.intl.string(u.t.Ky01Mq),
                                                 }),
                                                 (0, e.jsx)(l.E, {
-                                                    variant: "text-sm/medium",
+                                                    variant: "body-sm/medium",
                                                     color: "text-muted",
-                                                    children: f.intl.string(f.t.VgVDbe),
+                                                    children: u.intl.string(u.t.VgVDbe),
                                                 }),
                                             ],
                                         }),
@@ -141,11 +141,11 @@ function p(s) {
                             ],
                         }),
                         (0, e.jsx)("div", {
-                            className: j.UD,
+                            className: f.UD,
                             children: (0, e.jsx)(o.$, {
                                 variant: "primary",
-                                text: f.intl.string(f.t.c7U9yf),
-                                onClick: g,
+                                text: u.intl.string(u.t.c7U9yf),
+                                onClick: C,
                                 fullWidth: !0,
                             }),
                         }),

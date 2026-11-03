@@ -41,7 +41,7 @@ class m extends n.PureComponent {
                 ? (0, i.jsx)(r.Z, {
                       type: r.Z.Types.SUCCESS,
                       className: g.Nr,
-                      children: (0, i.jsx)(o.E, { variant: "text-md/normal", children: u.intl.string(u.t.j4qu8n) }),
+                      children: (0, i.jsx)(o.E, { variant: "body-md/normal", children: u.intl.string(u.t.j4qu8n) }),
                   })
                 : null;
         return (0, i.jsx)(a.a, {
@@ -68,7 +68,7 @@ class m extends n.PureComponent {
                 children: [
                     (0, i.jsx)(o.E, {
                         color: "text-default",
-                        variant: "text-md/normal",
+                        variant: "body-md/normal",
                         className: g.YK,
                         children: u.intl.string(u.t["37S9yU"]),
                     }),
@@ -84,7 +84,7 @@ class m extends n.PureComponent {
                         error: s,
                     }),
                     (0, i.jsx)(o.E, {
-                        variant: "text-sm/normal",
+                        variant: "body-sm/normal",
                         children: (0, i.jsx)(h.D, {
                             onClick: this.handleRetry,
                             children: (0, i.jsx)(c.Anchor, { children: u.intl.string(u.t.PZgmxv) }),

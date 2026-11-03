@@ -1,31 +1,31 @@
-t.d(l, { u: () => j });
-var n = t(477900),
-    i = t(582128),
-    s = t(503698),
-    a = t.n(s),
-    r = t(353795),
-    c = t(140735),
-    u = t(834730),
-    d = t(255434),
-    o = t(747556),
-    h = t(710778),
-    m = t(280336),
-    p = t(194981),
-    x = t(8777);
-function j(e) {
+n.d(l, { u: () => x });
+var t = n(477900),
+    i = n(582128),
+    s = n(503698),
+    a = n.n(s),
+    r = n(353795),
+    c = n(140735),
+    d = n(834730),
+    u = n(255434),
+    o = n(747556),
+    h = n(710778),
+    m = n(280336),
+    p = n(194981),
+    j = n(8777);
+function x(e) {
     let {
             children: l,
-            title: t,
+            title: n,
             titleLineClamp: s,
-            body: j,
+            body: x,
             asset: f,
             assetSize: g = 48,
             padding: E = "default",
-            asContainer: v = !1,
-            element: R = "span",
-            position: b = "top",
-            align: k = "center",
-            spacing: y,
+            asContainer: b = !1,
+            element: y = "span",
+            position: v = "top",
+            align: R = "center",
+            spacing: k,
             caretConfig: C,
             targetElementRef: w,
             anchorRef: S,
@@ -49,45 +49,45 @@ function j(e) {
             isVisible: A,
             targetElementRef: B,
             trigger: D,
-        } = (0, p.D)({ children: l, targetElementRef: X, asContainer: v, containerTag: R, ariaHidden: T, ..._ }),
-        F = null != t && ("string" != typeof t || "" !== t),
+        } = (0, p.D)({ children: l, targetElementRef: X, asContainer: b, containerTag: y, ariaHidden: T, ..._ }),
+        F = null != n && ("string" != typeof n || "" !== n),
         L = null != f && !i.isValidElement(f),
         M = i.useMemo(
             () =>
-                (0, n.jsxs)("div", {
-                    className: a()(x.jk, { [x.eb]: null == f, [x.Sx]: "lg" === E }),
+                (0, t.jsxs)("div", {
+                    className: a()(j.jk, { [j.eb]: null == f, [j.Sx]: "lg" === E }),
                     children: [
                         null != f &&
-                            (0, n.jsx)("div", {
-                                className: x.s,
+                            (0, t.jsx)("div", {
+                                className: j.s,
                                 style: { width: g },
-                                children: L ? (0, n.jsx)(r.v, { ...f }) : f,
+                                children: L ? (0, t.jsx)(r.v, { ...f }) : f,
                             }),
-                        (0, n.jsxs)("div", {
-                            className: x.P_,
+                        (0, t.jsxs)("div", {
+                            className: j.P_,
                             children: [
-                                F && (0, n.jsx)(u.E, { variant: "text-sm/medium", lineClamp: s, children: t }),
-                                (0, n.jsx)(u.E, {
-                                    variant: "text-sm/normal",
+                                F && (0, t.jsx)(d.E, { variant: "body-sm/medium", lineClamp: s, children: n }),
+                                (0, t.jsx)(d.E, {
+                                    variant: "body-sm/normal",
                                     color: F ? "text-subtle" : "text-default",
                                     lineClamp: V,
-                                    children: j,
+                                    children: x,
                                 }),
                             ],
                         }),
                     ],
                 }),
-            [f, g, E, t, s, j, F, L, V],
+            [f, g, E, n, s, x, F, L, V],
         ),
-        Z = N ?? `${(0, h.Xj)(t ?? "")}|${(0, h.Xj)(j)}`,
+        Z = N ?? `${(0, h.Xj)(n ?? "")}|${(0, h.Xj)(x)}`,
         q = (0, m.j)({ shouldShow: A });
-    if (!v && !i.isValidElement(l)) return null;
+    if (!b && !i.isValidElement(l)) return null;
     let z = q((e, l) =>
         l
-            ? (0, n.jsx)(o.Bc, {
+            ? (0, t.jsx)(o.Bc, {
                   isRichTooltip: !0,
                   richTooltipPadding: E,
-                  children: (0, n.jsx)(d.R, {
+                  children: (0, t.jsx)(u.R, {
                       isVisible: A,
                       isRendered: !0,
                       targetElementRef: B,
@@ -95,9 +95,9 @@ function j(e) {
                       anchorRef: S,
                       id: $,
                       content: M,
-                      position: b,
-                      align: k,
-                      spacing: y,
+                      position: v,
+                      align: R,
+                      spacing: k,
                       caretConfig: C,
                       animationStyle: e,
                       positionKey: Z,
@@ -105,7 +105,7 @@ function j(e) {
               })
             : null,
     );
-    return (0, n.jsxs)(n.Fragment, {
-        children: [D, T || null == M ? null : (0, n.jsx)(c.A, { id: $, children: M }), z],
+    return (0, t.jsxs)(t.Fragment, {
+        children: [D, T || null == M ? null : (0, t.jsx)(c.A, { id: $, children: M }), z],
     });
 }

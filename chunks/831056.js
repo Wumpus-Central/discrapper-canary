@@ -1,4 +1,4 @@
-n.d(t, { KP: () => f, Kb: () => x, OH: () => M, lx: () => v, nY: () => S, pK: () => h, zj: () => g });
+n.d(t, { KP: () => f, Kb: () => g, OH: () => M, lx: () => v, nY: () => S, pK: () => h, zj: () => x });
 var s = n(477900),
     l = n(582128),
     r = n(503698),
@@ -16,11 +16,11 @@ function S(e) {
 function f() {
     return (0, s.jsx)("div", { className: o.MM, "data-testid": "discord-web-video-player-end-screen" });
 }
-function g(e) {
+function x(e) {
     let { orientation: t, children: n } = e;
     return (0, s.jsx)("div", { className: a()(o.Pb, { [o.II]: "portrait" === t }), children: n });
 }
-function x(e) {
+function g(e) {
     let { url: t, orientation: n, ref: l } = e;
     return null == t
         ? null
@@ -49,8 +49,8 @@ function j(e) {
     return (0, s.jsxs)("div", {
         className: o.PH,
         children: [
-            (0, s.jsx)(u.D, { variant: "heading-md/semibold", className: o.m5, children: t }),
-            (0, s.jsx)(u.D, { variant: "heading-sm/medium", className: o.s$, children: n }),
+            (0, s.jsx)(u.D, { variant: "heading-sm/semibold", className: o.m5, children: t }),
+            (0, s.jsx)(u.D, { variant: "heading-xs/medium", className: o.s$, children: n }),
         ],
     });
 }
@@ -60,18 +60,18 @@ function b(e) {
     function f() {
         S(!0);
     }
-    function g() {
+    function x() {
         S(!1);
     }
     return (0, s.jsxs)(i.D, {
         className: a()(o.uU, o.iM, m),
         onMouseEnter: f,
-        onMouseLeave: g,
+        onMouseLeave: x,
         onFocus: f,
-        onBlur: g,
+        onBlur: x,
         onClick: r,
         children: [
-            (0, s.jsx)(u.D, { variant: "heading-md/semibold", className: o.ce, children: t }),
+            (0, s.jsx)(u.D, { variant: "heading-sm/semibold", className: o.ce, children: t }),
             null != n && (0, s.jsx)(n, { size: "md", color: d ? c.A.colors.WHITE : "#B5BAC1", className: o.J5 }),
         ],
     });
@@ -79,18 +79,18 @@ function b(e) {
 function M(e) {
     let { title: t, subtitle: n, icon: r, onClick: c, className: m, divider: d } = e,
         [S, f] = l.useState(!1);
-    function g() {
+    function x() {
         f(!0);
     }
-    function x() {
+    function g() {
         f(!1);
     }
     return (0, s.jsx)(i.D, {
         className: a()(o.Mr, o.iM, m),
-        onMouseEnter: g,
-        onMouseLeave: x,
-        onFocus: g,
-        onBlur: x,
+        onMouseEnter: x,
+        onMouseLeave: g,
+        onFocus: x,
+        onBlur: g,
         onClick: c,
         children: (0, s.jsxs)("div", {
             className: o.ee,
@@ -98,8 +98,8 @@ function M(e) {
                 (0, s.jsxs)("div", {
                     className: o.XU,
                     children: [
-                        (0, s.jsx)(u.D, { variant: "heading-md/semibold", className: o.Zr, children: t }),
-                        (0, s.jsx)(u.D, { variant: "heading-sm/medium", className: o.Hk, children: n }),
+                        (0, s.jsx)(u.D, { variant: "heading-sm/semibold", className: o.Zr, children: t }),
+                        (0, s.jsx)(u.D, { variant: "heading-xs/medium", className: o.Hk, children: n }),
                     ],
                 }),
                 d,

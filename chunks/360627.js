@@ -13,11 +13,11 @@ var i = n(477900),
     m = n(265872),
     A = n(43990),
     f = n(939249),
-    x = n(140735),
-    g = n(421773),
+    g = n(140735),
+    x = n(421773),
     C = n(363195),
-    j = n(809369),
-    y = n(618922),
+    y = n(809369),
+    j = n(618922),
     I = n(105292),
     N = n(531281);
 function v(e) {
@@ -36,7 +36,7 @@ function v(e) {
                 fullWidth: !1,
                 className: N.x8,
                 children: [
-                    (0, i.jsx)(u.E, { variant: "text-md/medium", lineClamp: 1, className: N.x9, children: t }),
+                    (0, i.jsx)(u.E, { variant: "body-md/medium", lineClamp: 1, className: N.x9, children: t }),
                     (0, i.jsxs)(d.B, {
                         direction: "horizontal",
                         align: "center",
@@ -45,9 +45,9 @@ function v(e) {
                         children: [
                             (0, i.jsx)(h.U, { size: "xs", color: p.A.colors.TEXT_FEEDBACK_POSITIVE }),
                             (0, i.jsx)(u.E, {
-                                variant: "text-sm/normal",
+                                variant: "body-sm/normal",
                                 color: "text-feedback-positive",
-                                children: I.intl.string(y.default["2Ll0vk"]),
+                                children: I.intl.string(j.default["2Ll0vk"]),
                             }),
                         ],
                     }),
@@ -66,7 +66,7 @@ function b(e) {
         b = l.useId(),
         S = l.useRef(null),
         T = (0, r.bG)([C.A], () => C.A.theme),
-        { isHovered: _, setIsHovered: R, onMouseEnter: O, onMouseLeave: P } = (0, g.A)(100, 100);
+        { isHovered: _, setIsHovered: R, onMouseEnter: O, onMouseLeave: P } = (0, x.A)(100, 100);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(m.Y, {
@@ -89,13 +89,13 @@ function b(e) {
                                     ? (0, i.jsx)(f.D, {
                                           tag: "div",
                                           className: h,
-                                          "aria-label": I.intl.formatToPlainString(y.default.hZobvN, { username: t }),
+                                          "aria-label": I.intl.formatToPlainString(j.default.hZobvN, { username: t }),
                                           onMouseEnter: O,
                                           onMouseLeave: P,
                                           onFocus: O,
                                           onBlur: P,
                                           onClick: () => {
-                                              ((0, j.k)(e.stream), a());
+                                              ((0, y.k)(e.stream), a());
                                           },
                                           children: (0, i.jsxs)("div", {
                                               ref: r,
@@ -122,11 +122,11 @@ function b(e) {
                         children: l.cloneElement(p, { "aria-describedby": b }),
                     }),
             }),
-            (0, i.jsxs)(x.A, {
+            (0, i.jsxs)(g.A, {
                 id: b,
                 children: [
-                    (0, i.jsx)(u.E, { variant: "text-sm/medium", children: t }),
-                    (0, i.jsx)(u.E, { variant: "text-sm/normal", children: I.intl.string(y.default["2Ll0vk"]) }),
+                    (0, i.jsx)(u.E, { variant: "body-sm/medium", children: t }),
+                    (0, i.jsx)(u.E, { variant: "body-sm/normal", children: I.intl.string(j.default["2Ll0vk"]) }),
                 ],
             }),
         ],

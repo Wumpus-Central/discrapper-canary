@@ -19,9 +19,9 @@ var l = n(477900),
     _ = n(773669),
     C = n(318346),
     y = n(287809),
-    S = n(174459),
-    I = n(440938),
-    b = n(993408);
+    b = n(174459),
+    S = n(440938),
+    I = n(993408);
 let A = (0, n(945810).mj)({
     name: "2026-09-orbs-hero-carousel",
     kind: "user",
@@ -80,7 +80,7 @@ let V = (e) => {
         Z = (0, M.yB)("HeroBlock"),
         J = (0, u.bG)([y.default], () => y.default.getCurrentUser()),
         Q = (0, u.bG)([_.default], () => _.default.locale),
-        ee = (0, I.uM)(),
+        ee = (0, S.uM)(),
         { analyticsLocations: et } = (0, f.Ay)(x.A.COLLECTIBLES_SHOP_HERO),
         en = (0, j.ST)(),
         el = r.useMemo(
@@ -126,8 +126,8 @@ let V = (e) => {
         e_ = V === w.G2.ORBS,
         eC = null != s && s.isOrbsExclusive,
         ey = V === w.G2.COLLECTION_INDEX ? P.S.COLLECTION_INDEX : P.S.HOME,
-        eS = e_ ? U.intl.string(U.t["1CdL8d"]) : U.intl.string(U.t.xYKa1T);
-    function eI() {
+        eb = e_ ? U.intl.string(U.t["1CdL8d"]) : U.intl.string(U.t.xYKa1T);
+    function eS() {
         e_
             ? ((0, C.Y)({
                   pageType: H.liQ.SHOP_ORBS_TAB,
@@ -141,7 +141,7 @@ let V = (e) => {
                   isInternalShopDeeplink: !0,
                   isOrbsExclusive: eC,
               }),
-              S.default.track(H.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+              b.default.track(H.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                   collectibles_shop_session_id: ee?.sessionId,
                   sku_id: eu.categorySkuId,
                   page_type: V,
@@ -151,8 +151,8 @@ let V = (e) => {
               }));
     }
     if (null == J || (!t && eu === $)) return null;
-    function eb() {
-        return t || z ? null : (0, l.jsx)(p.$, { variant: "overlay-primary", onClick: eI, text: eS });
+    function eI() {
+        return t || z ? null : (0, l.jsx)(p.$, { variant: "overlay-primary", onClick: eS, text: eb });
     }
     return (0, l.jsx)(f.f5, {
         value: et,
@@ -178,7 +178,7 @@ let V = (e) => {
                     className: a()(G.xX, { [G.ub]: ec }),
                     children: [
                         ev
-                            ? (0, l.jsx)("div", { className: G.fy, children: eb() })
+                            ? (0, l.jsx)("div", { className: G.fy, children: eI() })
                             : (0, l.jsxs)("div", {
                                   className: a()(G.uZ, { [G.no]: ef, [G.RD]: ec }),
                                   children: [
@@ -187,7 +187,7 @@ let V = (e) => {
                                           : (0, l.jsxs)("div", {
                                                 className: G.Hw,
                                                 children: [
-                                                    (0, b.HF)(eu.unpublishedAt) &&
+                                                    (0, I.HF)(eu.unpublishedAt) &&
                                                         (0, l.jsx)("div", {
                                                             className: G.v0,
                                                             children: (0, l.jsx)(d.E, {
@@ -223,8 +223,8 @@ let V = (e) => {
                                                                             : void 0,
                                                                     children: (0, l.jsx)(h.E, {
                                                                         variant: eo
-                                                                            ? "text-sm/normal"
-                                                                            : "text-md/normal",
+                                                                            ? "body-sm/normal"
+                                                                            : "body-md/normal",
                                                                         className: a()(e_ ? G.h4 : G.Tm, {
                                                                             [G.vd]: eo || ea,
                                                                         }),
@@ -246,7 +246,7 @@ let V = (e) => {
                                                         }),
                                                 ],
                                             }),
-                                      !z && !t && (0, l.jsx)("div", { className: G.IS, children: eb() }),
+                                      !z && !t && (0, l.jsx)("div", { className: G.IS, children: eI() }),
                                   ],
                               }),
                         !Y &&

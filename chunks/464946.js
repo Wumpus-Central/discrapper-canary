@@ -1,31 +1,31 @@
-e.d(r, { _: () => d, h: () => h });
-var s = e(477900);
-e(582128);
-var a = e(503698),
-    n = e.n(a),
-    c = e(534514),
-    l = e(834730),
-    i = e(140038);
-function d(t) {
-    let { header: r, description: e, relatedId: a, disabled: d } = t;
-    return (0, s.jsxs)("div", {
-        className: i.wx,
+s.d(e, { _: () => i, h: () => o });
+var t = s(477900);
+s(582128);
+var a = s(503698),
+    n = s.n(a),
+    c = s(534514),
+    d = s(834730),
+    l = s(140038);
+function i(r) {
+    let { header: e, description: s, relatedId: a, disabled: i } = r;
+    return (0, t.jsxs)("div", {
+        className: l.wx,
         children: [
-            (0, s.jsx)(c.D, {
-                variant: "text-md/medium",
+            (0, t.jsx)(c.D, {
+                variant: "body-md/medium",
                 color: "text-strong",
-                children: (0, s.jsx)("label", { htmlFor: a, className: n()(i.DD, { [i.r9]: d }), children: r }),
+                children: (0, t.jsx)("label", { htmlFor: a, className: n()(l.DD, { [l.r9]: i }), children: e }),
             }),
-            (0, s.jsx)(l.E, {
-                variant: "text-sm/normal",
+            (0, t.jsx)(d.E, {
+                variant: "body-sm/normal",
                 color: "text-default",
-                className: n()(i.h_, { [i.r9]: d }),
-                children: e,
+                className: n()(l.h_, { [l.r9]: i }),
+                children: s,
             }),
         ],
     });
 }
-function h(t) {
-    let { className: r, children: e } = t;
-    return (0, s.jsx)("div", { className: n()(i.kL, r), children: e });
+function o(r) {
+    let { className: e, children: s } = r;
+    return (0, t.jsx)("div", { className: n()(l.kL, e), children: s });
 }

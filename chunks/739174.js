@@ -14,8 +14,8 @@ var i = n(477900),
     x = n(866665),
     p = n(194261),
     A = n(442433),
-    f = n(392054),
-    b = n(168186),
+    b = n(392054),
+    f = n(168186),
     j = n(47167),
     N = n(713654),
     E = n(69282),
@@ -23,8 +23,8 @@ var i = n(477900),
     v = n(734057),
     T = n(696451),
     I = n(317525),
-    S = n(994500),
-    y = n(351906),
+    y = n(994500),
+    S = n(351906),
     k = n(287809),
     O = n(427262),
     L = n(652215),
@@ -44,31 +44,31 @@ function M(e) {
         [s],
     );
     switch (a) {
-        case f.RA.CHANNEL:
+        case b.RA.CHANNEL:
             return (0, i.jsx)(_, { guild: t, id: s, isLocked: r, lockTooltipText: c, openEntryContextMenu: u });
-        case f.RA.ROLE:
+        case b.RA.ROLE:
             return (0, i.jsx)(P, { guild: t, id: s, isLocked: r, lockTooltipText: c, openEntryContextMenu: u });
-        case f.RA.USER:
+        case b.RA.USER:
             return (0, i.jsx)(W, { guild: t, id: s, isLocked: r, lockTooltipText: c, openEntryContextMenu: u });
     }
 }
 function _(e) {
     let { guild: t, id: n, isLocked: s, lockTooltipText: r, openEntryContextMenu: o } = e,
-        m = (0, b.Ap)(t.id),
+        m = (0, f.Ap)(t.id),
         {
             icon: g,
             name: h,
             categoryName: x,
         } = (0, c.cf)(
-            [v.A, k.default, S.A],
+            [v.A, k.default, y.A],
             () => {
                 if (m === n) return { name: w.intl.string(w.t["7YqSGx"]), icon: d.N };
                 let e = v.A.getChannel(n),
                     i = e?.parent_id != null ? v.A.getChannel(e.parent_id) : null;
                 return {
                     icon: null != e ? (0, N.gU)(e, t) : null,
-                    name: null != e ? (0, j.m1)(e, k.default, S.A) : void 0,
-                    categoryName: null != i ? (0, j.m1)(i, k.default, S.A) : void 0,
+                    name: null != e ? (0, j.m1)(e, k.default, y.A) : void 0,
+                    categoryName: null != i ? (0, j.m1)(i, k.default, y.A) : void 0,
                 };
             },
             [m, t, n],
@@ -92,9 +92,9 @@ function _(e) {
                       color: "currentColor",
                       className: a()(R.p, R.Sl),
                   }),
-                  (0, i.jsx)(u.E, { className: R.S3, color: "text-strong", variant: "text-md/normal", children: h }),
+                  (0, i.jsx)(u.E, { className: R.S3, color: "text-strong", variant: "body-md/normal", children: h }),
                   null != x
-                      ? (0, i.jsxs)(u.E, { className: R.Tc, variant: "text-sm/normal", children: ["(", x, ")"] })
+                      ? (0, i.jsxs)(u.E, { className: R.Tc, variant: "body-sm/normal", children: ["(", x, ")"] })
                       : null,
                   s ? (0, i.jsx)(D, { tooltipText: r }) : null,
               ],
@@ -133,7 +133,7 @@ function P(e) {
                   (0, i.jsx)(u.E, {
                       className: R.S3,
                       color: "text-strong",
-                      variant: "text-md/normal",
+                      variant: "body-md/normal",
                       children: d.name,
                   }),
                   r ? (0, i.jsx)(D, { tooltipText: o }) : null,
@@ -144,7 +144,7 @@ function W(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: s, openEntryContextMenu: a } = e,
         r = (0, c.bG)([k.default], () => k.default.getUser(n)),
         o = (0, c.bG)([T.Ay], () => T.Ay.getMember(t.id, n)?.nick, [t.id, n]),
-        d = (0, c.bG)([y.A], () => y.A.hidePersonalInformation);
+        d = (0, c.bG)([S.A], () => S.A.hidePersonalInformation);
     return null == r
         ? null
         : (0, i.jsxs)("div", {
@@ -160,12 +160,12 @@ function W(e) {
                   (0, i.jsx)(u.E, {
                       className: R.S3,
                       color: "text-strong",
-                      variant: "text-md/normal",
+                      variant: "body-md/normal",
                       children: o ?? r.username,
                   }),
                   d
                       ? null
-                      : (0, i.jsx)(u.E, { className: R.Tc, variant: "text-sm/normal", children: O.Ay.getUserTag(r) }),
+                      : (0, i.jsx)(u.E, { className: R.Tc, variant: "body-sm/normal", children: O.Ay.getUserTag(r) }),
                   l ? (0, i.jsx)(D, { tooltipText: s }) : null,
               ],
           });

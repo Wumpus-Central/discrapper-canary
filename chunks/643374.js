@@ -1,36 +1,36 @@
-n.d(t, { A: () => p });
-var s = n(477900),
-    i = n(582128),
-    r = n(503698),
-    a = n.n(r),
-    l = n(559106),
-    d = n(862301),
-    c = n(95635),
-    u = n(834730),
-    h = n(821609),
-    o = n(780777),
-    x = n(18218);
-function p(e) {
-    let { filename: t, className: n, filters: r, buttonText: p, placeholder: f, onFileSelect: m } = e,
+s.d(n, { A: () => x });
+var t = s(477900),
+    i = s(582128),
+    r = s(503698),
+    a = s.n(r),
+    l = s(559106),
+    d = s(862301),
+    c = s(95635),
+    u = s(834730),
+    o = s(821609),
+    h = s(780777),
+    p = s(18218);
+function x(e) {
+    let { filename: n, className: s, filters: r, buttonText: x, placeholder: f, onFileSelect: m } = e,
         j = i.useRef(null),
-        g = i.useRef(null);
-    return (0, s.jsx)(l.vN, {
+        b = i.useRef(null);
+    return (0, t.jsx)(l.vN, {
         ringTarget: j,
         within: !0,
-        children: (0, s.jsxs)(d.F, {
+        children: (0, t.jsxs)(d.F, {
             ref: j,
-            className: a()(n, x.U),
+            className: a()(s, p.U),
             children: [
-                (0, s.jsx)(c.UploadIcon, { size: "sm" }),
-                (0, s.jsx)(u.E, {
-                    variant: "text-md/normal",
-                    color: "" !== t ? "text-default" : "text-muted",
+                (0, t.jsx)(c.UploadIcon, { size: "sm" }),
+                (0, t.jsx)(u.E, {
+                    variant: "body-md/normal",
+                    color: "" !== n ? "text-default" : "text-muted",
                     lineClamp: 1,
-                    children: "" !== t ? t : f,
+                    children: "" !== n ? n : f,
                 }),
-                (0, s.jsx)(h.$, { "aria-hidden": !0, variant: "secondary", size: "sm", text: p, tabIndex: -1 }),
-                (0, s.jsx)(o.A, {
-                    ref: g,
+                (0, t.jsx)(o.$, { "aria-hidden": !0, variant: "secondary", size: "sm", text: x, tabIndex: -1 }),
+                (0, t.jsx)(h.A, {
+                    ref: b,
                     onChange: function (e) {
                         m(e.currentTarget.files?.[0]);
                     },

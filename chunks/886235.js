@@ -14,8 +14,8 @@ var i = n(477900),
     x = n(778712),
     p = n(834730),
     A = n(866665),
-    f = n(885574),
-    b = n(192308),
+    b = n(885574),
+    f = n(192308),
     j = n(534514),
     N = n(821609),
     E = n(695366),
@@ -23,8 +23,8 @@ var i = n(477900),
     v = n(289873),
     T = n(376728),
     I = n(579872),
-    S = n(414079),
-    y = n(297413),
+    y = n(414079),
+    S = n(297413),
     k = n(361739),
     O = n(966327),
     L = n(429913),
@@ -68,7 +68,7 @@ function V(e) {
                           children: (0, i.jsx)(A.m, {
                               text: H.intl.string(H.t.DY6n4q),
                               children: (0, i.jsxs)(p.E, {
-                                  variant: "text-xs/medium",
+                                  variant: "body-xs/medium",
                                   color: "text-strong",
                                   children: ["+", o],
                               }),
@@ -111,7 +111,7 @@ function et(e) {
         className: ee.o,
         children: [
             (0, i.jsx)(j.D, {
-                variant: "text-xs/semibold",
+                variant: "body-xs/semibold",
                 color: "text-muted",
                 className: ee.U,
                 children: t ? H.intl.string(H.t.DjWsya) : H.intl.string(H.t.AmwmLg),
@@ -162,11 +162,11 @@ function ea(e) {
                     null != n && (0, i.jsx)(O.A, { user: n, size: x._3.SIZE_24, className: ei.my }),
                     (0, i.jsxs)("div", {
                         children: [
-                            null != n && (0, i.jsx)(y.A, { discriminatorClass: ei.D2, user: n }),
+                            null != n && (0, i.jsx)(S.A, { discriminatorClass: ei.D2, user: n }),
                             l &&
                                 null != s &&
                                 (0, i.jsx)(p.E, {
-                                    variant: "text-xs/normal",
+                                    variant: "body-xs/normal",
                                     color: "text-default",
                                     children: (0, w.m1)(s, Z.default, Q.A, !0),
                                 }),
@@ -187,14 +187,14 @@ function ea(e) {
                 basis: 0,
                 align: M.A.Align.CENTER,
                 className: ei.Qq,
-                children: (0, i.jsx)(p.E, { className: ei.r9, variant: "text-sm/normal", children: c }),
+                children: (0, i.jsx)(p.E, { className: ei.r9, variant: "body-sm/normal", children: c }),
             }),
             (0, i.jsx)(M.A, {
                 grow: 2,
                 basis: 0,
                 align: M.A.Align.CENTER,
                 className: a()(ei.Qq, ei.sA),
-                children: (0, i.jsx)(p.E, { className: ei.qW, variant: "text-sm/normal", children: d }),
+                children: (0, i.jsx)(p.E, { className: ei.qW, variant: "body-sm/normal", children: d }),
             }),
             null != m &&
                 (0, i.jsx)(M.A, {
@@ -204,7 +204,7 @@ function ea(e) {
                     className: ei.Qq,
                     children: (0, i.jsx)(V, { roles: u, guildId: m }),
                 }),
-            (0, i.jsx)(S.A, { className: ei.eb, onClick: g }),
+            (0, i.jsx)(y.A, { className: ei.eb, onClick: g }),
         ],
     });
 }
@@ -224,7 +224,7 @@ function er(e) {
         inviter: t.inviter,
         showChannel: n,
         channel: d,
-        inviteSource: (0, i.jsx)(p.E, { className: ei.Rg, variant: "text-sm/normal", children: a ? "..." : t.code }),
+        inviteSource: (0, i.jsx)(p.E, { className: ei.Rg, variant: "body-sm/normal", children: a ? "..." : t.code }),
         inviteSourceTrailingContent:
             !a && (0, m.Lt)(t.flags ?? 0, u.Q.IS_APPLICATION_BYPASS)
                 ? (0, i.jsxs)("div", {
@@ -232,13 +232,13 @@ function er(e) {
                       children: [
                           (0, i.jsx)(p.E, {
                               className: ei.Qq,
-                              variant: "text-xs/normal",
+                              variant: "body-xs/normal",
                               color: "text-muted",
                               children: H.intl.string(H.t["1i1bUl"]),
                           }),
                           (0, i.jsx)(A.m, {
                               text: H.intl.string(H.t["jvd/LF"]),
-                              children: (0, i.jsx)(f.CircleInformationIcon, {
+                              children: (0, i.jsx)(b.CircleInformationIcon, {
                                   size: "xxs",
                                   color: "currentColor",
                                   className: ei.G,
@@ -270,7 +270,7 @@ function eo(e) {
             className: ei._z,
             children: [
                 (0, i.jsx)(_.A, { game: r, size: _.M.XXSMALL }),
-                (0, i.jsx)(p.E, { className: ei.PD, variant: "text-sm/normal", children: r?.name }),
+                (0, i.jsx)(p.E, { className: ei.PD, variant: "body-sm/normal", children: r?.name }),
             ],
         }),
         uses: H.intl.string(H.t.jHpxwo),
@@ -279,7 +279,7 @@ function eo(e) {
         guildId: l.guild_id,
         onRevokeInvite: function () {
             c && null != r
-                ? (0, b.openModalLazy)(async () => {
+                ? (0, f.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([n.e("243486"), n.e("673380")]).then(n.bind(n, 106895));
                       return (t) => (0, i.jsx)(e, { ...t, channel: l, application: r });
                   })
@@ -301,7 +301,7 @@ function ec(e) {
     o()(null != n, "guild is required");
     let x = (0, J.Fi)(n),
         A = (0, J.Wr)(n),
-        f = l.useMemo(
+        b = l.useMemo(
             () =>
                 null == t || m
                     ? []
@@ -315,19 +315,19 @@ function ec(e) {
             () =>
                 m
                     ? []
-                    : [...f.map((e) => ({ type: "invite", data: e })), ...T.map((e) => ({ type: "channel", data: e }))],
-            [f, T, m],
+                    : [...b.map((e) => ({ type: "invite", data: e })), ...T.map((e) => ({ type: "channel", data: e }))],
+            [b, T, m],
         ),
-        S = () => {
-            (0, b.openModalLazy)(
+        y = () => {
+            (0, f.openModalLazy)(
                 async () => (e) =>
                     (0, i.jsx)(D.default, { ...e, channel: c, guild: n, source: en.PE1.SETTINGS_INVITE }),
             );
         },
-        [y, O] = l.useState(62),
+        [S, O] = l.useState(62),
         L = () => {
             let e = { source: P.Eo.GUILD_SETTINGS };
-            (0, b.openModalLazy)(async () => (t) => (0, i.jsx)(W.default, { ...t, guildId: n.id, analyticsData: e }));
+            (0, f.openModalLazy)(async () => (t) => (0, i.jsx)(W.default, { ...t, guildId: n.id, analyticsData: e }));
         };
     return (0, i.jsx)(k.ic, {
         sections: [1, +!r, +!!r, Math.max(1, I.length)],
@@ -343,7 +343,7 @@ function ec(e) {
                                 basis: 0,
                                 className: es.Gf,
                                 children: (0, i.jsx)(p.E, {
-                                    variant: "text-md/medium",
+                                    variant: "body-md/medium",
                                     children: H.intl.string(H.t.EgHyKy),
                                 }),
                             }),
@@ -352,7 +352,7 @@ function ec(e) {
                                 grow: 3,
                                 className: es.Gf,
                                 children: (0, i.jsx)(p.E, {
-                                    variant: "text-md/medium",
+                                    variant: "body-md/medium",
                                     children: T.length > 0 ? H.intl.string(H.t.l7VISQ) : H.intl.string(H.t.LBlFEN),
                                 }),
                             }),
@@ -360,7 +360,7 @@ function ec(e) {
                                 grow: 1,
                                 basis: 0,
                                 children: (0, i.jsx)(p.E, {
-                                    variant: "text-md/medium",
+                                    variant: "body-md/medium",
                                     children: H.intl.string(H.t.erWrmA),
                                 }),
                             }),
@@ -368,7 +368,7 @@ function ec(e) {
                                 grow: 2,
                                 basis: 0,
                                 children: (0, i.jsx)(p.E, {
-                                    variant: "text-md/medium",
+                                    variant: "body-md/medium",
                                     children: H.intl.string(H.t["1aM27d"]),
                                 }),
                             }),
@@ -376,7 +376,7 @@ function ec(e) {
                                 grow: 2,
                                 basis: 0,
                                 children: (0, i.jsx)(p.E, {
-                                    variant: "text-md/medium",
+                                    variant: "body-md/medium",
                                     children: H.intl.string(H.t["LPJmL/"]),
                                 }),
                             }),
@@ -399,7 +399,7 @@ function ec(e) {
                         }),
                         !0 === r
                             ? (0, i.jsx)(p.E, {
-                                  variant: "text-md/medium",
+                                  variant: "body-md/medium",
                                   color: "text-default",
                                   className: ei.Hu,
                                   children: H.intl.string(H.t.gn3Poi),
@@ -413,11 +413,11 @@ function ec(e) {
                     children: [
                         (0, i.jsx)(p.E, {
                             className: es.SX,
-                            variant: "text-sm/normal",
+                            variant: "body-sm/normal",
                             color: "text-subtle",
                             children:
                                 !0 === a
-                                    ? H.intl.format(H.t["97VdNm"], { onCreateInvite: S })
+                                    ? H.intl.format(H.t["97VdNm"], { onCreateInvite: y })
                                     : H.intl.string(H.t.WDw38H),
                         }),
                         (0, i.jsxs)("div", {
@@ -441,7 +441,7 @@ function ec(e) {
                                                 color: h.A.unsafe_rawColors.YELLOW_300.css,
                                             }),
                                             (0, i.jsx)(p.E, {
-                                                variant: "text-sm/normal",
+                                                variant: "body-sm/normal",
                                                 children: H.intl.string(H.t["2LLbj9"]),
                                             }),
                                         ],
@@ -455,10 +455,10 @@ function ec(e) {
                 return (0, i.jsx)(
                     et,
                     {
-                        hasInvites: f.length > 0,
+                        hasInvites: b.length > 0,
                         setHeight: O,
                         onShowDisableInvites: L,
-                        onShowInviteModal: S,
+                        onShowInviteModal: y,
                         hasInviteDisabledPermission: x,
                         invitesDisabled: A,
                         canCreateInvites: a,
@@ -500,7 +500,7 @@ function ec(e) {
                 : 1 === e
                   ? 109
                   : 2 === e
-                    ? y
+                    ? S
                     : 3 === e
                       ? 0 === I.length && 0 === t && m
                           ? 62

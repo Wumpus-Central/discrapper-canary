@@ -135,7 +135,7 @@ function F(e) {
                 (0, t.jsx)(y.A, { ref: C, getSlateEditor: P, containerRef: j }),
                 (0, t.jsx)(v.vN, {
                     children: (0, t.jsxs)("div", {
-                        className: i()(G.I6, B["text-sm/normal"]),
+                        className: i()(G.I6, B["body-sm/normal"]),
                         "data-error": I || void 0,
                         "data-disabled": r || void 0,
                         children: [

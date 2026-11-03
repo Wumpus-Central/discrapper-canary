@@ -15,8 +15,8 @@ var l = n(477900),
     h = n(291749),
     C = n(590202),
     v = n(971649),
-    N = n(620954),
-    y = n(557637),
+    y = n(620954),
+    N = n(557637),
     g = n(398025),
     j = n(617986),
     A = n(139210),
@@ -56,7 +56,7 @@ function F(e) {
                         id: "open-game-link",
                         label: s.cta.buttonLabel,
                         action: function () {
-                            (0, N._Q)(
+                            (0, y._Q)(
                                 { adContentId: s.id, adCreativeType: o.p.BOUNTY, cta: s.cta },
                                 {
                                     content: f.uF.QUEST_BAR_V2,
@@ -165,7 +165,7 @@ function L() {
             });
         }, [t]),
         M = s.useCallback(() => {
-            (0, N._Q)(
+            (0, y._Q)(
                 { adContentId: e.id, adCreativeType: o.p.BOUNTY, cta: e.cta },
                 {
                     content: f.uF.QUEST_BAR_HEADER,
@@ -194,7 +194,7 @@ function L() {
                                 style: {
                                     transform: a.to({ range: [0, 1], output: [1, 0.75] }).to((e) => `scale(${e})`),
                                 },
-                                children: (0, l.jsx)(y._M, {
+                                children: (0, l.jsx)(N._M, {
                                     id: "QuestBarBounty_productIcon",
                                     children: (t) =>
                                         (0, l.jsx)("img", {
@@ -220,7 +220,7 @@ function L() {
                                         className: r()(t, D.it),
                                         style: { opacity: (0, g.a)(a.to({ range: [0, 1], output: [1, 0] })) },
                                         children: (0, l.jsx)(d.E, {
-                                            variant: "text-sm/medium",
+                                            variant: "body-sm/medium",
                                             color: "text-strong",
                                             lineClamp: 2,
                                             children: e.productName ?? "",
@@ -235,7 +235,7 @@ function L() {
                                     children: [
                                         (0, l.jsx)(d.E, {
                                             color: "text-overlay-light",
-                                            variant: "text-xs/normal",
+                                            variant: "body-xs/normal",
                                             children: P.intl.string(P.t.o6FLcF),
                                         }),
                                         (0, l.jsx)(p.CircleQuestionIcon, { color: m.A.colors.WHITE, className: D.P$ }),
@@ -301,7 +301,7 @@ let ea = { url: el.A, mimetype: "video/webm", isAnimated: !0 },
 function ei() {
     let e = (0, U.o5)(),
         { imagePreview: t, videoPreview: a, productName: u, videoDurationSeconds: p } = e,
-        { isExpanded: m, isExpansionAnimationComplete: x, collapsedHeight: N } = (0, V.H)(),
+        { isExpanded: m, isExpansionAnimationComplete: x, collapsedHeight: y } = (0, V.H)(),
         { expansionSpring: j } = s.useContext(E.PW),
         A = (0, v.wW)(),
         _ = (0, W.bG)([G.Ay], () => G.Ay.useReducedMotion),
@@ -367,12 +367,12 @@ function ei() {
                         style: { opacity: (0, g.a)(j.to({ range: [0, 1], output: [0, 1] })) },
                         children: [
                             null != t &&
-                                (0, l.jsx)(y._M, {
+                                (0, l.jsx)(N._M, {
                                     id: "QuestBarBounty_previewImage",
                                     children: (e) => (0, l.jsx)("img", { ref: e, src: t, alt: "", className: en.$_ }),
                                 }),
                             null != Q &&
-                                (0, l.jsx)(y._M, {
+                                (0, l.jsx)(N._M, {
                                     id: "QuestBarBounty_previewVideo",
                                     children: (e) =>
                                         (0, l.jsx)(et.X, {
@@ -387,7 +387,7 @@ function ei() {
                     }),
                     (0, l.jsx)(i.animated.div, {
                         className: en.PY,
-                        style: { top: N, opacity: (0, g.a)(j.to({ range: [0, 1], output: [1, 0] })) },
+                        style: { top: y, opacity: (0, g.a)(j.to({ range: [0, 1], output: [1, 0] })) },
                         children: (0, l.jsx)(J, { isAnimated: !F }),
                     }),
                     (0, l.jsx)(i.animated.div, {
@@ -436,12 +436,12 @@ function ei() {
                                     children: [
                                         (0, l.jsx)(q.D, {
                                             color: "text-strong",
-                                            variant: "heading-md/medium",
+                                            variant: "heading-sm/medium",
                                             lineClamp: 2,
                                             children: u ?? "",
                                         }),
                                         (0, l.jsx)(d.E, {
-                                            variant: "text-xs/normal",
+                                            variant: "body-xs/normal",
                                             children: P.intl.string(P.t["1uzE2S"]),
                                         }),
                                     ],

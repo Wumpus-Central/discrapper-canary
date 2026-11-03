@@ -7,8 +7,8 @@ var l = s(477900),
     a = s(323889),
     o = s(17928),
     c = s(462887),
-    E = s(534514),
-    d = s(939249),
+    d = s(534514),
+    E = s(939249),
     A = s(365199),
     S = s(834730),
     T = s(331322),
@@ -28,9 +28,9 @@ var l = s(477900),
     R = s(287809),
     U = s(427495),
     j = s(859703),
-    M = s(738822),
-    y = s(112142),
-    b = s(3738),
+    y = s(738822),
+    b = s(112142),
+    M = s(3738),
     F = s(77870),
     q = s(291749),
     D = s(590202),
@@ -65,7 +65,7 @@ let J = function (e) {
             }),
             (0, l.jsx)(S.E, {
                 color: t ? "text-muted" : "text-overlay-light",
-                variant: t ? "text-xs/normal" : "text-xxs/normal",
+                variant: t ? "body-xs/normal" : "footnote/normal",
                 children: n,
             }),
         ],
@@ -85,7 +85,7 @@ let ee = function (e) {
                   (0, l.jsxs)("div", {
                       className: Z.O,
                       children: [
-                          (0, l.jsx)(S.E, { variant: "text-xs/semibold", className: Z.Df, color: "none", children: o }),
+                          (0, l.jsx)(S.E, { variant: "body-xs/semibold", className: Z.Df, color: "none", children: o }),
                           (0, l.jsx)("div", { className: Z.Cj, style: { width: `${100 - a}%` } }),
                       ],
                   }),
@@ -107,7 +107,7 @@ let en = function (e) {
         r = (0, et.DP)(),
         u = (0, c.M)(r);
     return (0, l.jsxs)(S.E, {
-        variant: "text-xxs/medium",
+        variant: "footnote/medium",
         color: s,
         className: i()(el.P, t),
         children: [
@@ -122,7 +122,7 @@ var er = s(62405),
     ea = s(117634),
     eo = s(442734),
     ec = s(423121);
-let eE = function (e) {
+let ed = function (e) {
     let {
             className: t,
             autoplay: s,
@@ -133,10 +133,10 @@ let eE = function (e) {
             sourceQuestContent: o,
             gameProfileSource: c,
         } = e,
-        E = (0, b.mU)({ quest: n, taskDetails: u, location: a, sourceQuestContent: o, gameProfileSource: c }),
-        d = (0, ei.z)(),
-        A = (0, F.SD)(n, d),
-        T = A && d === eu.MA.NITRO;
+        d = (0, M.mU)({ quest: n, taskDetails: u, location: a, sourceQuestContent: o, gameProfileSource: c }),
+        E = (0, ei.z)(),
+        A = (0, F.SD)(n, E),
+        T = A && E === eu.MA.NITRO;
     return (0, l.jsxs)("div", {
         className: i()(ec.iE, t),
         children: [
@@ -154,15 +154,15 @@ let eE = function (e) {
                 children: (0, l.jsxs)("div", {
                     className: ec.P2,
                     children: [
-                        (0, l.jsx)(S.E, { variant: "text-sm/normal", color: "text-default", children: E }),
-                        A && (0, l.jsx)(eo.e, { questId: n.id, orbMultiplierEligibility: d }),
+                        (0, l.jsx)(S.E, { variant: "body-sm/normal", color: "text-default", children: d }),
+                        A && (0, l.jsx)(eo.e, { questId: n.id, orbMultiplierEligibility: E }),
                     ],
                 }),
             }),
         ],
     });
 };
-var ed = s(617986),
+var eE = s(617986),
     eA = s(630037),
     eS = s(190107),
     eT = s(652215),
@@ -178,7 +178,7 @@ function e_(e) {
         el = (0, o.bG)([I.A], () => I.A.getState().theme),
         ei = (0, c.M)(el) ? eT.NJ8.DARK : eT.NJ8.LIGHT,
         eu = (0, o.bG)([v.A], () => v.A.getParticipants(e.channelId), [e.channelId]),
-        ea = (0, O.Dp)(M.p9.DESKTOP_ACCOUNT_PANEL_AREA),
+        ea = (0, O.Dp)(y.p9.DESKTOP_ACCOUNT_PANEL_AREA),
         eo = (0, f.Yz)(ea?.creative),
         ec = (0, o.bG)([j.A], () => (null != eo ? (j.A.quests.get(eo) ?? null) : null), [eo]),
         { isCurrentUserStreamingQuestApplication: e_, isQuestInQuestBar: ex } = (0, o.cf)(
@@ -219,9 +219,9 @@ function e_(e) {
         eN = (0, F.S5)(s?.config.rewardsConfig.rewardsExpireAt),
         eg = n.useCallback(async () => {
             let { type: e } = await (0, U.Oy)(s.id, {
-                questContent: M.uF.QUEST_LIVE_STREAM,
+                questContent: y.uF.QUEST_LIVE_STREAM,
                 questContentCTA: D.Cy.ACCEPT_QUEST,
-                sourceQuestContent: M.uF.QUEST_LIVE_STREAM,
+                sourceQuestContent: y.uF.QUEST_LIVE_STREAM,
             });
             switch (e) {
                 case U.WM.SUCCESS:
@@ -237,11 +237,11 @@ function e_(e) {
                 adCreativeType: a.p.QUEST,
                 adCreativeId: s.id,
                 questContentCTA: D.Cy.TRACK_PROGRESS,
-                surfaceId: M.uF.QUEST_LIVE_STREAM,
-                sourceQuestContent: M.uF.QUEST_LIVE_STREAM,
+                surfaceId: y.uF.QUEST_LIVE_STREAM,
+                sourceQuestContent: y.uF.QUEST_LIVE_STREAM,
                 impressionId: W(),
             }),
-                (0, ed.mA)({ fromContent: M.uF.QUEST_LIVE_STREAM, questId: s.id }));
+                (0, eE.mA)({ fromContent: y.uF.QUEST_LIVE_STREAM, questId: s.id }));
         }, [s, W]),
         eU = n.useCallback(() => {
             ((0, x.r)({
@@ -249,27 +249,27 @@ function e_(e) {
                 adCreativeType: a.p.QUEST,
                 adCreativeId: s.id,
                 questContentCTA: D.Cy.LEARN_MORE,
-                surfaceId: M.uF.QUEST_LIVE_STREAM,
-                sourceQuestContent: M.uF.QUEST_LIVE_STREAM,
+                surfaceId: y.uF.QUEST_LIVE_STREAM,
+                sourceQuestContent: y.uF.QUEST_LIVE_STREAM,
                 impressionId: W(),
             }),
-                (0, ed.mA)({ fromContent: M.uF.QUEST_LIVE_STREAM, questId: s.id }));
+                (0, eE.mA)({ fromContent: y.uF.QUEST_LIVE_STREAM, questId: s.id }));
         }, [s, W]),
-        ej = (0, eA.D)({ quest: s, questContent: M.uF.QUEST_LIVE_STREAM, sourceQuestContent: M.uF.QUEST_LIVE_STREAM }),
-        eM = n.useMemo(() => (0, G.L)({ quest: s, location: eS.rE.QUEST_CHANNEL_CALL_HEADER }), [s]),
-        ey = (0, b.NA)({ quest: s }),
-        eb = (0, z.vA)(s),
+        ej = (0, eA.D)({ quest: s, questContent: y.uF.QUEST_LIVE_STREAM, sourceQuestContent: y.uF.QUEST_LIVE_STREAM }),
+        ey = n.useMemo(() => (0, G.L)({ quest: s, location: eS.rE.QUEST_CHANNEL_CALL_HEADER }), [s]),
+        eb = (0, M.NA)({ quest: s }),
+        eM = (0, z.vA)(s),
         eF = (0, F.LS)(s),
         eq = s.userStatus?.enrolledAt != null,
         eD = s.userStatus?.completedAt != null,
         eV = null != r && s.userStatus?.claimedAt == null,
-        eG = null != s.userStatus && (0, w.gO)(s.userStatus, M.uF.QUEST_LIVE_STREAM),
-        eO = null != s.userStatus && (0, w.gO)(s.userStatus, M.uF.QUEST_BAR),
+        eG = null != s.userStatus && (0, w.gO)(s.userStatus, y.uF.QUEST_LIVE_STREAM),
+        eO = null != s.userStatus && (0, w.gO)(s.userStatus, y.uF.QUEST_BAR),
         eP = ex && !eO,
-        ew = y.t.useConfig({ location: eS.rE.QUEST_CHANNEL_CALL_HEADER }),
+        ew = b.t.useConfig({ location: eS.rE.QUEST_CHANNEL_CALL_HEADER }),
         ek = (0, K.Pd)(s);
     if (
-        (eM.info({
+        (ey.info({
             isQuestCallHeaderDismissed: eG,
             isQuestExpired: eF,
             isQuestBarShowing: eP,
@@ -284,8 +284,8 @@ function e_(e) {
             autoplay: Y,
             quest: s,
             location: eS.rE.QUEST_CHANNEL_CALL_HEADER,
-            questContent: M.uF.QUEST_LIVE_STREAM,
-            sourceQuestContent: M.uF.QUEST_LIVE_STREAM,
+            questContent: y.uF.QUEST_LIVE_STREAM,
+            sourceQuestContent: y.uF.QUEST_LIVE_STREAM,
         });
     return (0, l.jsxs)("div", {
         className: i()(em.iE, { [em.rH]: eq }),
@@ -317,9 +317,9 @@ function e_(e) {
                                     (0, l.jsxs)("div", {
                                         className: em.Mg,
                                         children: [
-                                            (0, l.jsx)(E.D, {
+                                            (0, l.jsx)(d.D, {
                                                 className: em.bB,
-                                                variant: "heading-md/semibold",
+                                                variant: "heading-sm/semibold",
                                                 color: "text-strong",
                                                 children: ev
                                                     ? (0, P.YT)({ quest: s, taskDetails: eH })
@@ -328,13 +328,13 @@ function e_(e) {
                                                       }),
                                             }),
                                             (0, l.jsx)(B.C, {
-                                                questContent: M.uF.QUEST_LIVE_STREAM,
-                                                sourceQuestContent: M.uF.QUEST_LIVE_STREAM,
+                                                questContent: y.uF.QUEST_LIVE_STREAM,
+                                                sourceQuestContent: y.uF.QUEST_LIVE_STREAM,
                                                 quest: s,
                                                 preventIdle: !0,
                                                 shouldShowDisclosure: s.userStatus?.enrolledAt == null,
                                                 children: (e) =>
-                                                    (0, l.jsx)(d.D, {
+                                                    (0, l.jsx)(E.D, {
                                                         ...e,
                                                         className: em.rb,
                                                         "aria-label": es.intl.string(es.t.DEoVWZ),
@@ -349,7 +349,7 @@ function e_(e) {
                                     }),
                                     (0, l.jsx)(S.E, {
                                         color: "text-default",
-                                        variant: "text-xs/medium",
+                                        variant: "body-xs/medium",
                                         children: eD
                                             ? es.intl.formatToPlainString(es.t.APddvF, { expirationDate: eN })
                                             : es.intl.formatToPlainString(es.t["pX+fmn"], { expirationDate: eI }),
@@ -361,13 +361,13 @@ function e_(e) {
                     eq &&
                         !eD &&
                         !ev &&
-                        (0, l.jsx)(eE, {
+                        (0, l.jsx)(ed, {
                             autoplay: Y,
                             quest: s,
-                            questContent: M.uF.QUEST_LIVE_STREAM,
+                            questContent: y.uF.QUEST_LIVE_STREAM,
                             taskDetails: eH,
                             location: eS.rE.QUEST_CHANNEL_CALL_HEADER,
-                            sourceQuestContent: M.uF.QUEST_LIVE_STREAM,
+                            sourceQuestContent: y.uF.QUEST_LIVE_STREAM,
                             gameProfileSource: L.GameProfileSources.QuestLiveStream,
                         }),
                     (0, l.jsxs)("div", {
@@ -382,7 +382,7 @@ function e_(e) {
                                             variant: "secondary",
                                             text: es.intl.string(es.t.LLLLPD),
                                             onClick: eU,
-                                            fullWidth: !eb || s.config.features.includes(eS.Li.CLOUD_GAMING_ACTIVITY),
+                                            fullWidth: !eM || s.config.features.includes(eS.Li.CLOUD_GAMING_ACTIVITY),
                                         }),
                                         ew.enabled &&
                                         ek === K.UA.UNENROLLED &&
@@ -392,14 +392,14 @@ function e_(e) {
                                                   quest: s,
                                                   surface: K.V3.VOICE_CALL_HEADER,
                                                   size: "sm",
-                                                  analyticsCtxQuestContent: M.uF.QUEST_LIVE_STREAM,
-                                                  analyticsCtxSourceQuestContent: M.uF.QUEST_LIVE_STREAM,
+                                                  analyticsCtxQuestContent: y.uF.QUEST_LIVE_STREAM,
+                                                  analyticsCtxSourceQuestContent: y.uF.QUEST_LIVE_STREAM,
                                               })
                                             : (0, l.jsx)(C.$, {
                                                   size: "sm",
                                                   variant: "primary",
                                                   fullWidth: !0,
-                                                  text: ey,
+                                                  text: eb,
                                                   onClick: eg,
                                                   loading: eh,
                                               }),
@@ -461,33 +461,33 @@ function ex(e) {
                       })(a, u, g.A),
             [a, u, i, e.previewQuest],
         ),
-        E = c?.id ?? null;
+        d = c?.id ?? null;
     n.useEffect(() => {
-        null == e.previewQuest && null != E && (0, U.yO)([E], M.uF.QUEST_LIVE_STREAM, "QuestChannelCallHeader");
-    }, [E, e.previewQuest]);
-    let d = (0, o.bG)(
+        null == e.previewQuest && null != d && (0, U.yO)([d], y.uF.QUEST_LIVE_STREAM, "QuestChannelCallHeader");
+    }, [d, e.previewQuest]);
+    let E = (0, o.bG)(
             [j.A],
             () => {
-                let e = j.A.earnedQuestForPlacement.get(M.uF.QUEST_LIVE_STREAM);
-                if (null == e || null == E) return null;
-                let t = e.earnedDecisionByQuestId.get(E);
-                return (0, w.Oh)(t) && t.shouldDeliver ? j.A.getQuest(E) : null;
+                let e = j.A.earnedQuestForPlacement.get(y.uF.QUEST_LIVE_STREAM);
+                if (null == e || null == d) return null;
+                let t = e.earnedDecisionByQuestId.get(d);
+                return (0, w.Oh)(t) && t.shouldDeliver ? j.A.getQuest(d) : null;
             },
-            [E],
+            [d],
         ),
         [A, S] = n.useState(null);
     n.useEffect(() => {
-        null != d ? S(d) : null === E && S(null);
-    }, [d, E]);
-    let T = d ?? (null !== E ? A : null),
+        null != E ? S(E) : null === d && S(null);
+    }, [E, d]);
+    let T = E ?? (null !== d ? A : null),
         C = e.previewQuest ?? T;
     return null == C || s
         ? null
         : (0, l.jsx)(W.R, {
               questOrQuests: C,
               overrideVisibility: !t,
-              questContent: M.uF.QUEST_LIVE_STREAM,
-              sourceQuestContent: M.uF.QUEST_LIVE_STREAM,
+              questContent: y.uF.QUEST_LIVE_STREAM,
+              sourceQuestContent: y.uF.QUEST_LIVE_STREAM,
               children: () => (0, l.jsx)(e_, { ...e, quest: C }),
           });
 }
@@ -497,7 +497,7 @@ let eQ = function (e) {
             e.channelId,
             t,
         ]),
-        n = (0, o.bG)([j.A], () => j.A.getQuestPreviewOverride(M.uF.QUEST_LIVE_STREAM), []);
+        n = (0, o.bG)([j.A], () => j.A.getQuestPreviewOverride(y.uF.QUEST_LIVE_STREAM), []);
     if (null == e.previewQuest && !s) return null;
     let r = e.previewQuest ?? n;
     return (0, l.jsx)(ex, { ...e, previewQuest: r });

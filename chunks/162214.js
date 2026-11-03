@@ -38,33 +38,33 @@ var c = n(778492),
     O = n(477155),
     G = n(935286),
     p = n(717421),
-    x = n(105292),
-    L = n(757412);
-function C(t) {
+    L = n(105292),
+    C = n(757412);
+function j(t) {
     let { testimonial: e, className: n } = t,
         { message: l, profilePic: s, adminTitle: r, emphasisColor: a = "interactive-text-default" } = e;
     return (0, i.jsxs)("div", {
         className: n,
         children: [
             (0, i.jsx)(I.E, {
-                variant: "text-sm/medium",
+                variant: "body-sm/medium",
                 color: "text-default",
-                children: x.intl.format(l, {
+                children: L.intl.format(l, {
                     testimonialHook: (t, e) =>
-                        (0, i.jsx)(I.E, { tag: "span", variant: "text-sm/semibold", color: a, children: t }, e),
+                        (0, i.jsx)(I.E, { tag: "span", variant: "body-sm/semibold", color: a, children: t }, e),
                 }),
             }),
             (0, i.jsxs)("div", {
-                className: L.f1,
+                className: C.f1,
                 children: [
                     (0, i.jsx)(T.eu, { src: s, size: A._3.SIZE_16, "aria-hidden": !0 }),
-                    (0, i.jsx)(I.E, { variant: "text-sm/medium", color: "text-default", children: r }),
+                    (0, i.jsx)(I.E, { variant: "body-sm/medium", color: "text-default", children: r }),
                 ],
             }),
         ],
     });
 }
-function j(t) {
+function x(t) {
     let { testimonials: e } = t,
         [[n, s], r] = l.useState([0, "right"]),
         a = l.useCallback(() => {
@@ -80,38 +80,38 @@ function j(t) {
             });
         }, [r, e.length]),
         o = e[n],
-        c = l.useCallback((t, e, n, l) => (0, i.jsx)(v, { item: e, state: n, cleanup: l, direction: s }, t), [s]);
+        c = l.useCallback((t, e, n, l) => (0, i.jsx)(b, { item: e, state: n, cleanup: l, direction: s }, t), [s]);
     return (0, i.jsxs)("div", {
-        className: L.FD,
+        className: C.FD,
         children: [
             (0, i.jsx)("div", {
-                className: L.nI,
+                className: C.nI,
                 children: (0, i.jsx)(D.F, { items: [o], renderItem: c, getItemKey: (t) => t.adminTitle }),
             }),
-            (0, i.jsx)(I.E, { variant: "text-lg/semibold", className: L.wV, "aria-hidden": !0, children: "\u201C" }),
+            (0, i.jsx)(I.E, { variant: "body-lg/semibold", className: C.wV, "aria-hidden": !0, children: "\u201C" }),
             (0, i.jsxs)("div", {
-                className: L.Jv,
+                className: C.Jv,
                 children: [
                     (0, i.jsx)(f.K, {
                         size: "sm",
                         variant: "secondary",
                         icon: O.r,
                         onClick: a,
-                        "aria-label": x.intl.string(x.t["13/7kX"]),
+                        "aria-label": L.intl.string(L.t["13/7kX"]),
                     }),
                     (0, i.jsx)(f.K, {
                         size: "sm",
                         variant: "secondary",
                         icon: G.E,
                         onClick: d,
-                        "aria-label": x.intl.string(x.t.PDTjLN),
+                        "aria-label": L.intl.string(L.t.PDTjLN),
                     }),
                 ],
             }),
         ],
     });
 }
-function v(t) {
+function b(t) {
     let { item: e, state: n, cleanup: l, direction: s } = t,
         [r] = (0, p.z)(
             () => {
@@ -134,13 +134,13 @@ function v(t) {
             "respect-motion-settings",
             [n],
         );
-    return (0, i.jsx)(_.animated.div, { style: r, children: (0, i.jsx)(C, { className: L.EV, testimonial: e }) });
+    return (0, i.jsx)(_.animated.div, { style: r, children: (0, i.jsx)(j, { className: C.EV, testimonial: e }) });
 }
-var R = n(283012),
-    b = n(913423),
+var v = n(283012),
+    R = n(913423),
     P = n(71393),
-    U = n(287809),
-    y = n(174459),
+    y = n(287809),
+    U = n(174459),
     M = n(555337),
     w = n(527678),
     B = n(400812),
@@ -151,34 +151,34 @@ function F(t) {
         n = [
             {
                 emoji: "\uD83E\uDDD9",
-                emojiDescription: x.intl.string(x.t.Jh9uif),
-                title: x.intl.string(x.t.ATF45v),
+                emojiDescription: L.intl.string(L.t.Jh9uif),
+                title: L.intl.string(L.t.ATF45v),
                 selected: !0,
             },
             {
                 emoji: "\uD83C\uDFA4",
-                emojiDescription: x.intl.string(x.t["nGt+MV"]),
-                title: x.intl.string(x.t["30uo7D"]),
+                emojiDescription: L.intl.string(L.t["nGt+MV"]),
+                title: L.intl.string(L.t["30uo7D"]),
                 selected: !1,
             },
             {
                 emoji: "\uD83D\uDC40",
-                emojiDescription: x.intl.string(x.t.hOMH5o),
-                title: x.intl.string(x.t["5Z5sgj"]),
+                emojiDescription: L.intl.string(L.t.hOMH5o),
+                title: L.intl.string(L.t["5Z5sgj"]),
                 selected: !1,
             },
         ];
     e && n.pop();
     let l = e
             ? (0, i.jsx)(I.E, {
-                  variant: "text-sm/semibold",
+                  variant: "body-sm/semibold",
                   color: "text-strong",
-                  children: x.intl.string(x.t.nTI2mQ),
+                  children: L.intl.string(L.t.nTI2mQ),
               })
-            : (0, i.jsx)(N.D, { variant: "heading-md/semibold", children: x.intl.string(x.t.g1OQtu) }),
+            : (0, i.jsx)(N.D, { variant: "heading-sm/semibold", children: L.intl.string(L.t.g1OQtu) }),
         s = e
-            ? (0, i.jsx)(I.E, { variant: "text-xxs/normal", children: x.intl.format(x.t.hGwDPV, {}) })
-            : (0, i.jsx)(I.E, { variant: "text-xs/normal", children: x.intl.format(x.t["8XLD3r"], {}) });
+            ? (0, i.jsx)(I.E, { variant: "footnote/normal", children: L.intl.format(L.t.hGwDPV, {}) })
+            : (0, i.jsx)(I.E, { variant: "body-xs/normal", children: L.intl.format(L.t["8XLD3r"], {}) });
     return (0, i.jsxs)("div", {
         className: r()(k.SI, k.f5, { [k.YL]: e }),
         children: [
@@ -193,7 +193,7 @@ function F(t) {
                             className: r()(k.CQ, { [k.wH]: a }),
                             children: [
                                 (0, i.jsx)("span", { role: "img", "aria-label": l, children: n }),
-                                (0, i.jsx)(I.E, { variant: "text-sm/medium", color: "text-strong", children: s }),
+                                (0, i.jsx)(I.E, { variant: "body-sm/medium", color: "text-strong", children: s }),
                                 a &&
                                     (0, i.jsx)("div", {
                                         className: k.ct,
@@ -216,36 +216,36 @@ function F(t) {
 function V() {
     let t = [
         {
-            message: x.t.FUUXXk,
+            message: L.t.FUUXXk,
             profilePic:
                 "https://cdn.discordapp.com/avatars/302407541994946561/bb3fd59e6c2ea0a86a2bdabf5dff7856.webp?size=80",
-            adminTitle: x.intl.string(x.t.RZVpuo),
+            adminTitle: L.intl.string(L.t.RZVpuo),
         },
         {
-            message: x.t.JAXvDe,
+            message: L.t.JAXvDe,
             profilePic:
                 "https://cdn.discordapp.com/avatars/433499434098229249/b6d433308debef625537e33df04023e5.webp?size=80",
-            adminTitle: x.intl.string(x.t.xyrlg7),
+            adminTitle: L.intl.string(L.t.xyrlg7),
         },
         {
-            message: x.t.Wj9Djq,
+            message: L.t.Wj9Djq,
             profilePic:
                 "https://cdn.discordapp.com/avatars/555460020494663691/599bfcdb0b0700b415f4c695890f272c.webp?size=80",
-            adminTitle: x.intl.string(x.t["o/LQMi"]),
+            adminTitle: L.intl.string(L.t["o/LQMi"]),
         },
         {
-            message: x.t.ALsMNZ,
+            message: L.t.ALsMNZ,
             profilePic:
                 "https://cdn.discordapp.com/guilds/936317138904440892/users/125526751064489984/avatars/f35679626acac9943e102533fc170d41.webp?size=80",
-            adminTitle: x.intl.string(x.t["uvM+xc"]),
+            adminTitle: L.intl.string(L.t["uvM+xc"]),
         },
     ];
-    return (0, i.jsx)(j, { testimonials: t });
+    return (0, i.jsx)(x, { testimonials: t });
 }
 function z() {
     let t = (0, a.bG)([M.A], () => M.A.getGuildId()),
         e = (0, a.bG)([P.A], () => P.A.getGuild(t)),
-        n = (0, a.bG)([U.default], () => U.default.getCurrentUser());
+        n = (0, a.bG)([y.default], () => y.default.getCurrentUser());
     return null == t || null == e || null == n
         ? null
         : (0, i.jsxs)("div", {
@@ -260,19 +260,19 @@ function z() {
                               children: [
                                   (0, i.jsx)(N.D, {
                                       variant: "heading-xl/semibold",
-                                      children: x.intl.string(x.t.GnKOAx),
+                                      children: L.intl.string(L.t.GnKOAx),
                                   }),
-                                  (0, i.jsx)(I.E, { variant: "text-md/normal", children: x.intl.string(x.t.SJRFJj) }),
+                                  (0, i.jsx)(I.E, { variant: "body-md/normal", children: L.intl.string(L.t.SJRFJj) }),
                               ],
                           }),
                           (0, i.jsx)("div", {
                               className: k.JO,
                               children: (0, i.jsx)(m.$, {
                                   variant: "primary",
-                                  text: x.intl.string(x.t.RzWDqY),
+                                  text: L.intl.string(L.t.RzWDqY),
                                   onClick: function () {
                                       null != t &&
-                                          (y.default.track(
+                                          (U.default.track(
                                               H.HAw.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
                                               { ...(0, h.H$)(t), step: B.Hy[B.Hy.LANDING], back: !1, skip: !1 },
                                           ),
@@ -297,12 +297,12 @@ function z() {
                                       className: k.Ru,
                                       children: [
                                           (0, i.jsx)(N.D, {
-                                              variant: "heading-md/semibold",
-                                              children: x.intl.string(x.t.Z7kqKZ),
+                                              variant: "heading-sm/semibold",
+                                              children: L.intl.string(L.t.Z7kqKZ),
                                           }),
                                           (0, i.jsx)(I.E, {
-                                              variant: "text-sm/normal",
-                                              children: x.intl.string(x.t.di3UC5),
+                                              variant: "body-sm/normal",
+                                              children: L.intl.string(L.t.di3UC5),
                                           }),
                                       ],
                                   }),
@@ -315,32 +315,32 @@ function z() {
                                       className: k.Ru,
                                       children: [
                                           (0, i.jsx)(N.D, {
-                                              variant: "heading-md/semibold",
-                                              children: x.intl.string(x.t.O4jYEh),
+                                              variant: "heading-sm/semibold",
+                                              children: L.intl.string(L.t.O4jYEh),
                                           }),
                                           (0, i.jsx)(I.E, {
-                                              variant: "text-sm/normal",
-                                              children: x.intl.string(x.t["l/l/Gw"]),
+                                              variant: "body-sm/normal",
+                                              children: L.intl.string(L.t["l/l/Gw"]),
                                           }),
                                       ],
                                   }),
                                   (0, i.jsxs)("div", {
                                       className: r()(k.SI, k.f5),
                                       children: [
-                                          (0, i.jsx)(b.A, {
+                                          (0, i.jsx)(R.A, {
                                               guildId: t,
-                                              welcomeMessage: { authorIds: [n.id], message: x.intl.string(x.t.hIWAft) },
+                                              welcomeMessage: { authorIds: [n.id], message: L.intl.string(L.t.hIWAft) },
                                           }),
-                                          (0, i.jsx)(R.v, {
-                                              title: x.intl.string(x.t["47zu7B"]),
-                                              subtitle: x.intl.string(x.t["amoSN/"]),
+                                          (0, i.jsx)(v.v, {
+                                              title: L.intl.string(L.t["47zu7B"]),
+                                              subtitle: L.intl.string(L.t["amoSN/"]),
                                               completed: !0,
                                               Icon: u.N,
                                               variant: "static",
                                           }),
-                                          (0, i.jsx)(R.v, {
-                                              title: x.intl.string(x.t.EZfTKE),
-                                              subtitle: x.intl.string(x.t["/sYelW"]),
+                                          (0, i.jsx)(v.v, {
+                                              title: L.intl.string(L.t.EZfTKE),
+                                              subtitle: L.intl.string(L.t["/sYelW"]),
                                               completed: !0,
                                               Icon: u.N,
                                               variant: "static",
@@ -362,7 +362,7 @@ function z() {
                                                       color: "currentColor",
                                                       className: k.p,
                                                   }),
-                                              channel: x.intl.string(x.t.MXJozL),
+                                              channel: L.intl.string(L.t.MXJozL),
                                               selected: !0,
                                           },
                                           {
@@ -372,7 +372,7 @@ function z() {
                                                       color: "currentColor",
                                                       className: k.p,
                                                   }),
-                                              channel: x.intl.string(x.t.Pkj0f6),
+                                              channel: L.intl.string(L.t.Pkj0f6),
                                               selected: !0,
                                           },
                                           {
@@ -382,7 +382,7 @@ function z() {
                                                       color: "currentColor",
                                                       className: k.p,
                                                   }),
-                                              channel: x.intl.string(x.t["imVD+u"]),
+                                              channel: L.intl.string(L.t["imVD+u"]),
                                               selected: !1,
                                           },
                                           {
@@ -392,7 +392,7 @@ function z() {
                                                       color: "currentColor",
                                                       className: k.p,
                                                   }),
-                                              channel: x.intl.string(x.t["Pj/Wpt"]),
+                                              channel: L.intl.string(L.t["Pj/Wpt"]),
                                               selected: !0,
                                           },
                                       ].map((t, e) => {
@@ -407,7 +407,7 @@ function z() {
                                                           children: [
                                                               n(),
                                                               (0, i.jsx)(I.E, {
-                                                                  variant: "text-md/medium",
+                                                                  variant: "body-md/medium",
                                                                   color: "text-strong",
                                                                   children: l,
                                                               }),
@@ -433,12 +433,12 @@ function z() {
                                       className: k.Ru,
                                       children: [
                                           (0, i.jsx)(N.D, {
-                                              variant: "heading-md/semibold",
-                                              children: x.intl.string(x.t["3T9aHG"]),
+                                              variant: "heading-sm/semibold",
+                                              children: L.intl.string(L.t["3T9aHG"]),
                                           }),
                                           (0, i.jsx)(I.E, {
-                                              variant: "text-sm/normal",
-                                              children: x.intl.string(x.t.dA7Cag),
+                                              variant: "body-sm/normal",
+                                              children: L.intl.string(L.t.dA7Cag),
                                           }),
                                       ],
                                   }),

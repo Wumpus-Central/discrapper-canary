@@ -574,7 +574,7 @@ function V(e) {
                 style: { width: o },
                 children: (0, t.jsx)(O.E, {
                     color: "text-muted",
-                    variant: "text-md/normal",
+                    variant: "body-md/normal",
                     children: q.intl.string(q.t["Xe+fJM"]),
                 }),
             })

@@ -1,5 +1,5 @@
 e.exports = {
-    fu: "heading-md/semibold_a36dee",
+    kL: "heading-sm/semibold_a36dee",
     Qs: "content_a36dee",
     qB: "progress_a36dee",
     mm: "progressWithSubscriptions_a36dee progress_a36dee",
@@ -22,7 +22,7 @@ e.exports = {
     Xx: "tierHeaderUnlocked_a36dee tierHeader_a36dee",
     w5: "tierIcon_a36dee",
     AU: "tierIconLocked_a36dee",
-    TJ: "tierTitle_a36dee heading-md/semibold_a36dee",
+    TJ: "tierTitle_a36dee heading-sm/semibold_a36dee",
     bY: "tierTitleActive_a36dee",
     Qe: "tierLock_a36dee",
     mM: "tierUnlocked_a36dee",

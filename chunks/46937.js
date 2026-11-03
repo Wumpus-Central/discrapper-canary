@@ -1,8 +1,8 @@
-(n.d(l, { Ay: () => P, Wc: () => S, wQ: () => w }), n(321073));
+(n.d(l, { Ay: () => P, Wc: () => w, wQ: () => S }), n(321073));
 var a = n(477900);
 n(582128);
-var t = n(503698),
-    s = n.n(t),
+var s = n(503698),
+    t = n.n(s),
     i = n(661531),
     r = n(462887),
     c = n(602853),
@@ -30,10 +30,10 @@ var t = n(503698),
     k = n(488995),
     O = n(105292),
     R = n(576307);
-function w(e) {
+function S(e) {
     let l,
         n,
-        t,
+        s,
         {
             connectedAccount: h,
             theme: x,
@@ -45,8 +45,8 @@ function w(e) {
         } = e;
     null == _ && (_ = !0);
     let k = h.metadata ?? {},
-        w = _ ? (0, E.An)(k[D.pK.CREATED_AT], p) : null,
-        S = (0, c.r)(i.A.unsafe_rawColors.PLATFORM_TWITTER).hex(),
+        S = _ ? (0, E.An)(k[D.pK.CREATED_AT], p) : null,
+        w = (0, c.r)(i.A.unsafe_rawColors.PLATFORM_TWITTER).hex(),
         P = O.intl.string(O.t["6H6h1r"]);
     if (_)
         switch (h.type) {
@@ -62,7 +62,7 @@ function w(e) {
             case C.fg2.BLUESKY:
             case C.fg2.MASTODON:
             case C.fg2.TWITTER:
-                ((l = (0, v.ED)(k)), "1" === k[D.pK.TWITTER_VERIFIED] && ((n = S), (P = O.intl.string(O.t.Jebrww))));
+                ((l = (0, v.ED)(k)), "1" === k[D.pK.TWITTER_VERIFIED] && ((n = w), (P = O.intl.string(O.t.Jebrww))));
                 break;
             case C.fg2.PAYPAL:
                 l = (0, v.gZ)(k);
@@ -76,13 +76,13 @@ function w(e) {
     let L = f.A.get((0, j.ML)(h.type)),
         W = L?.getPlatformUserUrl?.(h);
     null != y && y
-        ? (t = (0, a.jsx)(o.EyeSlashIcon, {
+        ? (s = (0, a.jsx)(o.EyeSlashIcon, {
               size: "md",
               color: "currentColor",
-              className: s()(R.__invalid_connectedAccountOpenIconContainer, R.gE),
+              className: t()(R.__invalid_connectedAccountOpenIconContainer, R.gE),
           }))
         : null != W &&
-          (t = (0, a.jsx)(d.Anchor, {
+          (s = (0, a.jsx)(d.Anchor, {
               href: W,
               "aria-label":
                   L?.name != null
@@ -102,7 +102,7 @@ function w(e) {
             ? (0, a.jsx)(A.A, { className: R.sU, color: n ?? U, forcedIconColor: V, size: 16, tooltipText: P })
             : null;
     return (0, a.jsxs)("li", {
-        className: s()(R.WD, (null != l && l.length > 0) || null != w ? R.l1 : null, g),
+        className: t()(R.WD, (null != l && l.length > 0) || null != S ? R.l1 : null, g),
         children: [
             (0, a.jsxs)("div", {
                 className: R.dF,
@@ -128,7 +128,7 @@ function w(e) {
                                                 overflowOnly: !0,
                                                 text: h.name,
                                                 children: (0, a.jsx)(u.E, {
-                                                    variant: "text-sm/medium",
+                                                    variant: "body-sm/medium",
                                                     color: "interactive-text-active",
                                                     className: R.vc,
                                                     children: h.name,
@@ -137,14 +137,14 @@ function w(e) {
                                             G,
                                         ],
                                     }),
-                                    t,
+                                    s,
                                 ],
                             }),
-                            null != w
+                            null != S
                                 ? (0, a.jsx)(u.E, {
-                                      variant: "text-xs/normal",
+                                      variant: "body-xs/normal",
                                       color: "text-default",
-                                      children: O.intl.format(O.t["9rfonh"], { date: w }),
+                                      children: O.intl.format(O.t["9rfonh"], { date: S }),
                                   })
                                 : null,
                         ],
@@ -155,9 +155,9 @@ function w(e) {
         ],
     });
 }
-function S(e) {
-    let { applicationRoleConnection: l, className: n, locale: t, onApplicationClicked: i, selectedGuildId: r } = e,
-        c = (0, v.VW)(l, t);
+function w(e) {
+    let { applicationRoleConnection: l, className: n, locale: s, onApplicationClicked: i, selectedGuildId: r } = e,
+        c = (0, v.VW)(l, s);
     function o() {
         (i?.(),
             (0, N.transitionToGlobalDiscovery)({
@@ -167,17 +167,17 @@ function S(e) {
             }));
     }
     return (0, a.jsxs)("li", {
-        className: s()(R.WD, null != c && c.length > 0 ? R.l1 : null, n),
+        className: t()(R.WD, null != c && c.length > 0 ? R.l1 : null, n),
         children: [
             (0, a.jsx)("div", {
                 className: R.dF,
                 children: (0, a.jsxs)(h.D, {
-                    className: s()(R.Hm, R.b1),
+                    className: t()(R.Hm, R.b1),
                     onClick: o,
                     children: [
                         null != l.platform_name
                             ? (0, a.jsx)(u.E, {
-                                  variant: "eyebrow",
+                                  variant: "body-sm/medium",
                                   color: "interactive-text-default",
                                   children: l.platform_name,
                               })
@@ -188,7 +188,7 @@ function S(e) {
                                   children: (0, a.jsx)("div", {
                                       className: R.O3,
                                       children: (0, a.jsx)(u.E, {
-                                          variant: "text-sm/medium",
+                                          variant: "body-sm/medium",
                                           color: "interactive-text-active",
                                           className: R.vc,
                                           children: l.platform_username,
@@ -199,13 +199,13 @@ function S(e) {
                     ],
                 }),
             }),
-            null != c && c.length > 0 ? (0, a.jsx)("div", { className: s()(R.Gm, R.en), children: c }) : null,
+            null != c && c.length > 0 ? (0, a.jsx)("div", { className: t()(R.Gm, R.en), children: c }) : null,
             (0, a.jsx)("div", {
                 children: (0, a.jsx)(h.D, {
                     className: R.od,
                     onClick: o,
                     children: (0, a.jsx)(u.E, {
-                        variant: "text-xs/normal",
+                        variant: "body-xs/normal",
                         color: "text-muted",
                         children: O.intl.format(O.t.zIT9YA, {
                             applicationHook: () =>
@@ -216,7 +216,7 @@ function S(e) {
                                             ? (0, a.jsx)(p.A, { user: new _.A(l.application.bot), size: x._3.SIZE_16 })
                                             : null,
                                         (0, a.jsx)(u.E, {
-                                            variant: "text-xs/normal",
+                                            variant: "body-xs/normal",
                                             color: "text-default",
                                             children: l.application.name,
                                         }),
@@ -230,10 +230,10 @@ function S(e) {
     });
 }
 function P(e) {
-    let { connectedAccounts: l, locale: n, className: t, userId: i } = e,
+    let { connectedAccounts: l, locale: n, className: s, userId: i } = e,
         { theme: r } = (0, y.E)();
     if (null == l || 0 === l.length) return null;
-    let c = l.map((e) => (0, a.jsx)(w, { connectedAccount: e, theme: r, locale: n, userId: i }, `${e.type}:${e.id}`)),
+    let c = l.map((e) => (0, a.jsx)(S, { connectedAccount: e, theme: r, locale: n, userId: i }, `${e.type}:${e.id}`)),
         o = [],
         d = [];
     for (let e = 0; e < c.length; e++) {
@@ -241,7 +241,7 @@ function P(e) {
         e % 2 == 0 ? o.push(l) : d.push(l);
     }
     return (0, a.jsxs)("ul", {
-        className: s()(R._0, t),
+        className: t()(R._0, s),
         children: [
             (0, a.jsx)("div", { className: R.Yy, children: o }),
             (0, a.jsx)("div", { className: R.Yy, children: d }),

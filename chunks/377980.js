@@ -43,8 +43,8 @@ var f = t(834730),
     h = t(107384),
     p = t(176524);
 t(321073);
-var v = t(47899);
-function y(e) {
+var y = t(47899);
+function v(e) {
     let { persistentBadge: n, dismissibleBadges: t } = e;
     return (function (e) {
         let { persistentBadgeType: n, dismissibleBadgeType: t } = e;
@@ -62,12 +62,12 @@ function y(e) {
                     n
                 );
             }, [e]);
-            if ((0, v.uW)(n)) return "new";
+            if ((0, y.uW)(n)) return "new";
         })(t),
     });
 }
-var E = t(174459),
-    b = t(324593),
+var b = t(174459),
+    E = t(324593),
     S = t(652215);
 function T(e) {
     return l.useCallback(() => {
@@ -75,10 +75,10 @@ function T(e) {
         for (; "parent" in n && null != n.parent;) n = n.parent;
         let t = "analyticsKey" in e ? e.analyticsKey : e.key;
         null != t &&
-            E.default.track(S.HAw.UI_SETTING_INTERACTED, {
+            b.default.track(S.HAw.UI_SETTING_INTERACTED, {
                 key: t,
                 setting_type: n.analyticsKey ?? n.key,
-                search_session_id: b.A.getSearchSessionId(),
+                search_session_id: E.A.getSearchSessionId(),
             });
     }, [e]);
 }
@@ -111,11 +111,11 @@ function I(e) {
                         (0, r.jsxs)("div", {
                             className: A.eg,
                             children: [
-                                (0, r.jsx)(N.D, { variant: "heading-md/medium", color: "text-strong", children: i }),
+                                (0, r.jsx)(N.D, { variant: "heading-sm/medium", color: "text-strong", children: i }),
                                 null != o && (0, r.jsx)(k.E, { type: o, variant: "primary" }),
                             ],
                         }),
-                        null != s && (0, r.jsx)(f.E, { variant: "text-sm/normal", color: "text-subtle", children: s }),
+                        null != s && (0, r.jsx)(f.E, { variant: "body-sm/normal", color: "text-subtle", children: s }),
                     ],
                 }),
                 null != l && (0, r.jsx)("div", { className: A.EY, children: l }),
@@ -137,7 +137,7 @@ function B(e) {
 }
 function R(e) {
     let { decoration: n } = e;
-    return (0, r.jsx)(f.E, { variant: "text-md/medium", children: n.text });
+    return (0, r.jsx)(f.E, { variant: "body-md/medium", children: n.text });
 }
 function L(e) {
     let { decoration: n } = e;
@@ -165,8 +165,8 @@ function _(e) {
         } = n,
         h = T(n),
         p = u?.() ?? !1,
-        [v, E] = l.useState(!1),
-        b = i(),
+        [y, b] = l.useState(!1),
+        E = i(),
         S = a?.(),
         N = t(),
         k = s?.(),
@@ -174,9 +174,9 @@ function _(e) {
         A = c?.(),
         B = d?.(),
         R = j?.(),
-        _ = y({ persistentBadge: void 0, dismissibleBadges: m?.() });
+        _ = v({ persistentBadge: void 0, dismissibleBadges: m?.() });
     return (0, r.jsx)(I, {
-        title: b,
+        title: E,
         badge: _,
         description: S,
         leadingElement: null != B ? (0, r.jsx)(O, { decoration: B }) : null,
@@ -191,13 +191,13 @@ function _(e) {
                     onClick: function () {
                         h();
                         let e = f();
-                        e instanceof Promise && (E(!0), e.finally(() => E(!1)));
+                        e instanceof Promise && (b(!0), e.finally(() => b(!1)));
                     },
                     text: N,
                     "aria-label": k,
                     variant: C,
                     disabled: A,
-                    loading: v || p,
+                    loading: y || p,
                 }),
             ],
         }),
@@ -269,10 +269,10 @@ function q(e) {
         j = s?.(),
         f = t(),
         g = o(),
-        h = y({ persistentBadge: c?.(), dismissibleBadges: u?.() }),
+        h = v({ persistentBadge: c?.(), dismissibleBadges: u?.() }),
         p = a?.(),
-        v = T(n),
-        E = d?.();
+        y = T(n),
+        b = d?.();
     return (0, r.jsx)(m, {
         children: (0, r.jsx)(X.z, {
             label: x,
@@ -281,10 +281,10 @@ function q(e) {
             value: f,
             badge: h,
             onChange: (e) => {
-                (v(), l(e));
+                (y(), l(e));
             },
             disabled: p,
-            helperText: E,
+            helperText: b,
         }),
     });
 }
@@ -307,16 +307,16 @@ function V(e) {
         } = n,
         h = t(),
         p = i?.(),
-        v = s(),
-        E = o(),
-        b = c?.(),
-        S = y({ persistentBadge: f?.(), dismissibleBadges: g?.() }),
+        y = s(),
+        b = o(),
+        E = c?.(),
+        S = v({ persistentBadge: f?.(), dismissibleBadges: g?.() }),
         N = T(n),
         k = l.useMemo(() => {
             var e, n;
             return {
                 selectionMode: j,
-                value: v,
+                value: y,
                 onSelectionChange:
                     ((e = a),
                     (n = N),
@@ -324,17 +324,17 @@ function V(e) {
                         (n(), e(t));
                     }),
             };
-        }, [j, v, a, N]);
+        }, [j, y, a, N]);
     return (0, r.jsx)(m, {
         children: (0, r.jsx)(z.l, {
             ...k,
             label: h,
             description: p,
-            options: E,
+            options: b,
             wrapTags: x,
             closeOnSelect: d,
             clearable: u,
-            disabled: b,
+            disabled: E,
             layout: "horizontal-responsive",
             fullWidth: !0,
             fitContent: !0,
@@ -360,9 +360,9 @@ function Y(e) {
             markers: g,
             onMarkerRender: h,
             stickToMarkers: p,
-            fieldLayout: v,
-            usePersistentBadge: E,
-            getDismissibleBadges: b,
+            fieldLayout: y,
+            usePersistentBadge: b,
+            getDismissibleBadges: E,
             useHelperText: S,
         } = n,
         N = x?.(),
@@ -373,7 +373,7 @@ function Y(e) {
         B = u?.(),
         R = d?.(),
         L = o?.(),
-        _ = y({ persistentBadge: E?.(), dismissibleBadges: b?.() }),
+        _ = v({ persistentBadge: b?.(), dismissibleBadges: E?.() }),
         D = S?.(),
         w = T(n),
         Z = g?.map((e) => {
@@ -400,7 +400,7 @@ function Y(e) {
             },
             marks: Z,
             snapToMarks: p,
-            layout: v,
+            layout: y,
             badge: _,
             helperText: D,
         }),
@@ -413,7 +413,7 @@ function $(e) {
 }
 function H(e) {
     let { decoration: n } = e;
-    return (0, r.jsx)(f.E, { variant: "text-md/medium", children: n.text });
+    return (0, r.jsx)(f.E, { variant: "body-md/medium", children: n.text });
 }
 function J(e) {
     let { decoration: n } = e;
@@ -426,7 +426,7 @@ function Q(e) {
         c = l?.(),
         u = i?.(),
         d = s?.(),
-        x = y({ persistentBadge: void 0, dismissibleBadges: a?.() });
+        x = v({ persistentBadge: void 0, dismissibleBadges: a?.() });
     return (0, r.jsx)(I, {
         title: o,
         badge: x,
@@ -455,9 +455,9 @@ function et(e) {
         g = s?.(),
         h = t(),
         p = a?.() ?? !1,
-        v = o?.(),
-        E = y({ persistentBadge: u?.(), dismissibleBadges: j?.() }),
-        b = T(n);
+        y = o?.(),
+        b = v({ persistentBadge: u?.(), dismissibleBadges: j?.() }),
+        E = T(n);
     return (0, r.jsx)(m, {
         children: (0, r.jsxs)(x.B, {
             gap: 12,
@@ -465,15 +465,15 @@ function et(e) {
                 (0, r.jsx)(ee.d, {
                     label: f,
                     description: g,
-                    badge: E,
+                    badge: b,
                     checked: h,
                     hasIcon: d,
                     onChange: function (e) {
-                        (b(), l(e));
+                        (E(), l(e));
                     },
                     disabled: p,
                 }),
-                p && null != v ? (0, r.jsx)(en.w, { type: c, message: v, role: "status" }) : null,
+                p && null != y ? (0, r.jsx)(en.w, { type: c, message: y, role: "status" }) : null,
             ],
         }),
     });
@@ -572,15 +572,15 @@ let ej = l.memo(function (e) {
         g = l.useMemo(() => (0, er.debounce)(f, 50), [f]),
         h = (0, el.w)(g),
         p = i?.(d),
-        v = a?.(),
-        y = T(n);
+        y = a?.(),
+        v = T(n);
     return (0, r.jsx)(ed, {
         ref: h,
         title: p,
-        collapsedSubtitle: v,
+        collapsedSubtitle: y,
         isExpanded: d,
         onExpandedChange: function (e) {
-            ((m.current = "user"), y(), x(e));
+            ((m.current = "user"), v(), x(e));
         },
         animate: o,
         children: s.map(t),
@@ -603,8 +603,8 @@ function ef(e) {
 var eg = t(215566),
     eh = t(885574),
     ep = t(43105),
-    ev = t(939249);
-function ey(e) {
+    ey = t(939249);
+function ev(e) {
     let { decoration: n } = e,
         t = l.useRef(null),
         {
@@ -670,7 +670,7 @@ function ey(e) {
         m = l.useMemo(() => x(o), [x, o]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(ev.D, {
+            (0, r.jsx)(ey.D, {
                 tag: "span",
                 innerRef: t,
                 "aria-label": u,
@@ -692,11 +692,11 @@ function ey(e) {
         ],
     });
 }
-function eE(e) {
-    let { decoration: n } = e;
-    if (n.type === h.p3.INFO_POPOVER) return (0, r.jsx)(ey, { decoration: n });
-}
 function eb(e) {
+    let { decoration: n } = e;
+    if (n.type === h.p3.INFO_POPOVER) return (0, r.jsx)(ev, { decoration: n });
+}
+function eE(e) {
     let { decoration: n } = e,
         { type: t, id: l, ...i } = n;
     return (0, r.jsx)(g.$, { variant: "secondary", ...i });
@@ -715,7 +715,7 @@ function eT(e) {
         children: n.buttons.map((e) => {
             switch (e.type) {
                 case h.UV.BUTTON:
-                    return (0, r.jsx)(eb, { decoration: e }, e.id);
+                    return (0, r.jsx)(eE, { decoration: e }, e.id);
                 case h.UV.STRONGLY_DISCOURAGED_CUSTOM:
                     return (0, r.jsx)(eS, { decoration: e }, e.id);
             }
@@ -763,8 +763,8 @@ function eC(e) {
                             align: "center",
                             gap: 4,
                             children: [
-                                (0, r.jsx)(f.E, { variant: "text-sm/normal", color: "text-subtle", children: t }),
-                                null != l && (0, r.jsx)(eE, { decoration: l }),
+                                (0, r.jsx)(f.E, { variant: "body-sm/normal", color: "text-subtle", children: t }),
+                                null != l && (0, r.jsx)(eb, { decoration: l }),
                             ],
                         }),
                 ],
@@ -837,11 +837,11 @@ let e_ = l.memo(function (e) {
         g = c?.(),
         h = u?.(),
         p = null != l || null != i,
-        v = d?.();
+        y = d?.();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null != j &&
-                (0, r.jsx)(eC, { title: j, subtitle: m, subtitleDecoration: h, decoration: g, persistentBadge: v }),
+                (0, r.jsx)(eC, { title: j, subtitle: m, subtitleDecoration: h, decoration: g, persistentBadge: y }),
             (0, r.jsx)("div", {
                 "data-settings-category-key": p ? n.key : void 0,
                 "aria-hidden": !0,
@@ -861,7 +861,7 @@ function eZ(e) {
           ? (0, r.jsx)(eD.A, { tag: "legend", children: n })
           : (0, r.jsx)(f.E, {
                 tag: "legend",
-                variant: "text-md/semibold",
+                variant: "body-md/semibold",
                 color: "text-strong",
                 className: a()(ew.D, { [ew.h]: null != t && "" !== t }),
                 children: n,
@@ -887,7 +887,7 @@ let eF = l.memo(function (e) {
         "aria-describedby": g ? j : void 0,
         children: [
             (0, r.jsx)(eZ, { title: u, subtitle: d, isHiddenVisually: c }),
-            g ? (0, r.jsx)(f.E, { variant: "text-sm/normal", color: "text-default", id: j, children: d }) : null,
+            g ? (0, r.jsx)(f.E, { variant: "body-sm/normal", color: "text-default", id: j, children: d }) : null,
             (0, r.jsx)(x.B, { gap: h, padding: { top: m && !c ? 16 : 0 }, children: a.map(t) }),
         ],
     });
@@ -949,7 +949,7 @@ function eU(e) {
 var eX = t(552585);
 function eq(e) {
     let { decoration: n } = e;
-    return null == n.text ? null : (0, r.jsx)(f.E, { variant: "text-md/medium", className: eX.q, children: n.text });
+    return null == n.text ? null : (0, r.jsx)(f.E, { variant: "body-md/medium", className: eX.q, children: n.text });
 }
 function ez(e) {
     let { decoration: n } = e;
@@ -1093,7 +1093,7 @@ function e9(e) {
         padding: { top: 8 },
         children: [
             (0, r.jsx)(N.D, {
-                variant: "heading-md/semibold",
+                variant: "heading-sm/semibold",
                 color: "text-muted",
                 className: e3.D,
                 children: eP.intl.string(eP.t.rPREPG),

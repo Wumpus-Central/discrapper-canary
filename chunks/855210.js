@@ -8,8 +8,8 @@ var s = i(477900),
     d = i(834730),
     o = i(597770),
     u = i(793574),
-    x = i(688810),
-    m = i(982240),
+    m = i(688810),
+    x = i(982240),
     h = i(402860),
     g = i(287809),
     j = i(139486),
@@ -18,78 +18,78 @@ var s = i(477900),
     T = i.n(v),
     N = i(914410),
     p = i(889158),
-    M = i(105292),
-    b = i(304958);
-function w(e) {
+    b = i(105292),
+    y = i(304958);
+function M(e) {
     let { progress: t, currentTier: i, newTier: r, className: l } = e,
-        n = (0, m.rL)(i ?? void 0),
-        a = (0, m.rL)(r),
+        n = (0, x.rL)(i ?? void 0),
+        a = (0, x.rL)(r),
         c = a > 0 ? Math.min(Math.max((t / a) * 100, 0), 100) : 100,
         o = (0, j.Se)(i ?? void 0),
         u = (0, j.Se)(r);
     return (0, s.jsxs)("div", {
-        className: T()(b.kL, l),
+        className: T()(y.kL, l),
         children: [
             (0, s.jsxs)("div", {
-                className: b.O3,
+                className: y.O3,
                 children: [
-                    null != o && (0, s.jsx)("img", { src: o, alt: "", width: 24, height: 24, className: b.w5 }),
+                    null != o && (0, s.jsx)("img", { src: o, alt: "", width: 24, height: 24, className: y.w5 }),
                     (0, s.jsx)("div", {
-                        className: b.hr,
+                        className: y.hr,
                         children: (0, s.jsx)(N.Ay, { variant: N.qP.BLUE, weight: N.fh.MEDIUM, progress: c }),
                     }),
-                    null != u && (0, s.jsx)("img", { src: u, alt: "", width: 24, height: 24, className: b.w5 }),
+                    null != u && (0, s.jsx)("img", { src: u, alt: "", width: 24, height: 24, className: y.w5 }),
                 ],
             }),
             (0, s.jsxs)("div", {
-                className: b.WD,
+                className: y.WD,
                 children: [
                     (0, s.jsx)(d.E, {
-                        variant: "text-xs/normal",
+                        variant: "body-xs/normal",
                         color: "text-muted",
-                        children: M.intl.format(p.default.QsbVMM, { count: n }),
+                        children: b.intl.format(p.default.QsbVMM, { count: n }),
                     }),
                     (0, s.jsx)(d.E, {
-                        variant: "text-xs/normal",
+                        variant: "body-xs/normal",
                         color: "text-strong",
-                        children: M.intl.format(p.default.QsbVMM, { count: a }),
+                        children: b.intl.format(p.default.QsbVMM, { count: a }),
                     }),
                 ],
             }),
         ],
     });
 }
-var y = i(803691);
+var w = i(803691);
 function k(e) {
     let { progress: t, currentTier: i, nextTier: r, iconSize: l = 24, title: n } = e,
-        a = (0, m.rL)(r),
+        a = (0, x.rL)(r),
         o = (0, j.Se)(i),
         u = (0, j.Se)(r),
-        x = 100;
+        m = 100;
     return (
-        null != r && a > 0 && (x = Math.min(Math.max((t / a) * 100, 0), 100)),
+        null != r && a > 0 && (m = Math.min(Math.max((t / a) * 100, 0), 100)),
         (0, s.jsxs)("div", {
-            className: y.nM,
+            className: w.nM,
             children: [
-                null != o && (0, s.jsx)("img", { src: o, alt: "", width: l, height: l, className: y.w5 }),
+                null != o && (0, s.jsx)("img", { src: o, alt: "", width: l, height: l, className: w.w5 }),
                 (0, s.jsxs)("div", {
-                    className: y.Qs,
+                    className: w.Qs,
                     children: [
-                        null != n && (0, s.jsx)(c.D, { variant: "heading-md/semibold", children: n }),
-                        (0, s.jsx)(N.Ay, { variant: N.qP.BLUE, weight: N.fh.MEDIUM, progress: x }),
+                        null != n && (0, s.jsx)(c.D, { variant: "heading-sm/semibold", children: n }),
+                        (0, s.jsx)(N.Ay, { variant: N.qP.BLUE, weight: N.fh.MEDIUM, progress: m }),
                         (0, s.jsx)("div", {
-                            className: y.WD,
+                            className: w.WD,
                             children:
                                 null != r &&
                                 (0, s.jsx)(d.E, {
-                                    variant: "text-xs/normal",
+                                    variant: "body-xs/normal",
                                     color: "text-muted",
-                                    children: M.intl.format(p.default.iIpfQe, { count: t, threshold: a }),
+                                    children: b.intl.format(p.default.iIpfQe, { count: t, threshold: a }),
                                 }),
                         }),
                     ],
                 }),
-                null != u && (0, s.jsx)("img", { src: u, alt: "", width: l, height: l, className: y.w5 }),
+                null != u && (0, s.jsx)("img", { src: u, alt: "", width: l, height: l, className: w.w5 }),
             ],
         })
     );
@@ -110,7 +110,7 @@ function S(e) {
                 className: I.TA,
                 children: [
                     (0, s.jsx)(c.D, { variant: "heading-xxl/semibold", children: i }),
-                    (0, s.jsx)(d.E, { variant: "text-sm/normal", color: "text-subtle", className: I.h_, children: l }),
+                    (0, s.jsx)(d.E, { variant: "body-sm/normal", color: "text-subtle", className: I.h_, children: l }),
                 ],
             }),
         ],
@@ -129,15 +129,15 @@ function B(e) {
                 children: [
                     (0, s.jsx)(c.D, {
                         variant: "heading-xxl/semibold",
-                        children: M.intl.format(p.default.k8MmO8, { tierName: r.name ?? "" }),
+                        children: b.intl.format(p.default.k8MmO8, { tierName: r.name ?? "" }),
                     }),
-                    (0, s.jsx)(w, { progress: t, currentTier: i, newTier: r, className: I.$c }),
+                    (0, s.jsx)(M, { progress: t, currentTier: i, newTier: r, className: I.$c }),
                     a &&
                         (0, s.jsx)(d.E, {
-                            variant: "text-sm/normal",
+                            variant: "body-sm/normal",
                             color: "text-muted",
                             className: I.kA,
-                            children: M.intl.format(p.default["6QVlxw"], { count: n, nextTierName: l.name ?? "" }),
+                            children: b.intl.format(p.default["6QVlxw"], { count: n, nextTierName: l.name ?? "" }),
                         }),
                 ],
             }),
@@ -146,31 +146,31 @@ function B(e) {
 }
 function D(e) {
     let { currentProgress: t, quantity: i } = e,
-        r = (0, n.bG)([m.Ay], () => m.Ay.getBadgeById(l.$.GIFTING)?.tiers);
+        r = (0, n.bG)([x.Ay], () => x.Ay.getBadgeById(l.$.GIFTING)?.tiers);
     if (null == r) return null;
     let a = (0, A.XX)(r, t),
         c = t + i,
         d = (0, A.XX)(r, c),
         o = d?.key !== a?.key,
         u = (0, A.aZ)(r, c),
-        x = (0, A.cz)(r, c),
-        h = 1 === x;
+        m = (0, A.cz)(r, c),
+        h = 1 === m;
     return o && null != d
-        ? (0, s.jsx)(B, { simulatedProgress: c, currentTier: a, newTier: d, nextTier: u, giftsToNextTier: x })
+        ? (0, s.jsx)(B, { simulatedProgress: c, currentTier: a, newTier: d, nextTier: u, giftsToNextTier: m })
         : h
           ? (0, s.jsx)(S, {
-                title: M.intl.formatToPlainString(p.default.KjdBPz, { nextTier: u?.name ?? "" }),
-                description: M.intl.string(p.default.oqDrEM),
-                progressBarTitle: M.intl.string(p.default["Ka5s+Q"]),
+                title: b.intl.formatToPlainString(p.default.KjdBPz, { nextTier: u?.name ?? "" }),
+                description: b.intl.string(p.default.oqDrEM),
+                progressBarTitle: b.intl.string(p.default["Ka5s+Q"]),
                 progress: c,
                 currentTier: d ?? void 0,
                 nextTier: u ?? void 0,
             })
           : (0, s.jsx)(S, {
-                title: M.intl.string(p.default["/rBQud"]),
-                description: M.intl.string(p.default.DDQMlx),
+                title: b.intl.string(p.default["/rBQud"]),
+                description: b.intl.string(p.default.DDQMlx),
                 progressBarTitle:
-                    a?.name != null ? M.intl.formatToPlainString(p.default.bwyQt8, { tierName: a?.name }) : "",
+                    a?.name != null ? b.intl.formatToPlainString(p.default.bwyQt8, { tierName: a?.name }) : "",
                 progress: c,
                 currentTier: d ?? void 0,
                 nextTier: u ?? void 0,
@@ -178,14 +178,14 @@ function D(e) {
 }
 function Q(e) {
     let { transitionState: t, onClose: i, currentProgress: l, quantity: n } = e,
-        { analyticsLocations: c } = (0, x.Ay)(u.A.GIFTING_BADGE_POST_PURCHASE),
+        { analyticsLocations: c } = (0, m.Ay)(u.A.GIFTING_BADGE_POST_PURCHASE),
         { openGiftModal: d } = (0, f.$)({
             giftRecipient: void 0,
             analyticsLocations: c,
             analyticsObject: { object: E.ZSU.BUTTON_CTA, objectType: E.AnalyticsObjectTypes.GIFT },
             location: "gifting-badge-post-purchase",
         }),
-        m = r.useCallback(() => {
+        x = r.useCallback(() => {
             i();
             let e = g.default.getCurrentUser();
             null != e && (0, h.openUserProfileModal)({ userId: e.id });
@@ -199,8 +199,8 @@ function Q(e) {
         onClose: i,
         title: void 0,
         actions: [
-            { variant: "secondary", text: M.intl.string(p.default["sa/cfM"]), onClick: m },
-            { variant: "primary", text: M.intl.string(p.default.g86YiI), icon: o.GiftIcon, onClick: j },
+            { variant: "secondary", text: b.intl.string(p.default["sa/cfM"]), onClick: x },
+            { variant: "primary", text: b.intl.string(p.default.g86YiI), icon: o.GiftIcon, onClick: j },
         ],
         children: (0, s.jsx)(D, { currentProgress: l, quantity: n }),
     });

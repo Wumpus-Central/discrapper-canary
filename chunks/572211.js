@@ -34,18 +34,18 @@ function _(e) {
         videoBannerSrc: v,
         hideBanner: _ = !1,
         bannerAspectRatio: j = 0,
-        iconSrc: N,
-        actions: y = [],
-        primaryActionFirst: T = !1,
-        trackingConfig: S,
-        onClickContent: b,
+        iconSrc: y,
+        actions: N = [],
+        primaryActionFirst: b = !1,
+        trackingConfig: T,
+        onClickContent: S,
         onClickBanner: k,
     } = e;
-    S = (0, f.Q)(S);
-    let { primaryColor: R, secondaryColor: L } = (0, A.A)(N ?? c),
+    T = (0, f.Q)(T);
+    let { primaryColor: R, secondaryColor: L } = (0, A.A)(y ?? c),
         M = `linear-gradient(45deg, ${R}, ${L})`,
         P = (0, d.bG)([p.Ay], () => p.Ay.useReducedMotion),
-        D = (0, x.DC)(S),
+        D = (0, x.DC)(T),
         O = null != c && !_,
         U = null != v && !1 === P && !_,
         G = O || U,
@@ -57,37 +57,37 @@ function _(e) {
         }, []),
         V = s.useMemo(() => !!U && new URL(v).pathname.endsWith(".gif"), [U, v]),
         F = s.useMemo(() => {
-            if (null != b)
+            if (null != S)
                 return (e) => {
-                    (b(e),
+                    (S(e),
                         (0, x.gx)({
-                            applicationId: S.id,
-                            linkType: S.linkType,
+                            applicationId: T.id,
+                            linkType: T.linkType,
                             area: x.kY.CONTENT,
-                            referrerId: S.referrerId,
-                            customId: S.activityCustomId,
-                            isDeadEnd: S.isDeadEnd,
-                            messageId: S.messageId,
-                            analyticsLocations: S.analyticsLocations,
+                            referrerId: T.referrerId,
+                            customId: T.activityCustomId,
+                            isDeadEnd: T.isDeadEnd,
+                            messageId: T.messageId,
+                            analyticsLocations: T.analyticsLocations,
                         }));
                 };
-        }, [b, S]),
+        }, [S, T]),
         z = s.useMemo(() => {
             if (null != k)
                 return (e) => {
                     (k(e),
                         (0, x.gx)({
-                            applicationId: S.id,
-                            linkType: S.linkType,
+                            applicationId: T.id,
+                            linkType: T.linkType,
                             area: x.kY.BANNER,
-                            referrerId: S.referrerId,
-                            customId: S.activityCustomId,
-                            isDeadEnd: S.isDeadEnd,
-                            messageId: S.messageId,
-                            analyticsLocations: S.analyticsLocations,
+                            referrerId: T.referrerId,
+                            customId: T.activityCustomId,
+                            isDeadEnd: T.isDeadEnd,
+                            messageId: T.messageId,
+                            analyticsLocations: T.analyticsLocations,
                         }));
                 };
-        }, [k, S]);
+        }, [k, T]);
     return (0, l.jsxs)("div", {
         ref: D,
         className: E.E6,
@@ -124,7 +124,7 @@ function _(e) {
                         children: [
                             null != n &&
                                 (0, l.jsx)(u.E, {
-                                    variant: "text-sm/semibold",
+                                    variant: "body-sm/semibold",
                                     color: "none",
                                     className: E.wx,
                                     children: n,
@@ -133,13 +133,13 @@ function _(e) {
                                 onClick: F,
                                 className: a()(E.FG, { [E.ry]: null != F }),
                                 children: [
-                                    null != N &&
-                                        (0, l.jsx)("div", { className: E._8, style: { backgroundImage: `url(${N})` } }),
+                                    null != y &&
+                                        (0, l.jsx)("div", { className: E._8, style: { backgroundImage: `url(${y})` } }),
                                     (0, l.jsxs)("div", {
                                         className: E.Qs,
                                         children: [
                                             (0, l.jsx)(u.E, {
-                                                variant: "text-md/semibold",
+                                                variant: "body-md/semibold",
                                                 color: "none",
                                                 lineClamp: 1,
                                                 className: E.eu,
@@ -150,10 +150,10 @@ function _(e) {
                                     }),
                                 ],
                             }),
-                            y.length > 0 &&
+                            N.length > 0 &&
                                 (0, l.jsx)("div", {
-                                    className: a()(E.AC, T ? E.ad : null),
-                                    children: y.map((e, t) => {
+                                    className: a()(E.AC, b ? E.ad : null),
+                                    children: N.map((e, t) => {
                                         let {
                                                 label: n,
                                                 icon: i,
@@ -184,14 +184,14 @@ function _(e) {
                                                           onClick: (e) => {
                                                               (s(e),
                                                                   (0, x.gx)({
-                                                                      applicationId: S.id,
-                                                                      linkType: S.linkType,
+                                                                      applicationId: T.id,
+                                                                      linkType: T.linkType,
                                                                       area: d,
-                                                                      referrerId: S.referrerId,
-                                                                      customId: S.activityCustomId,
+                                                                      referrerId: T.referrerId,
+                                                                      customId: T.activityCustomId,
                                                                       isDeadEnd: c,
-                                                                      messageId: S.messageId,
-                                                                      analyticsLocations: S.analyticsLocations,
+                                                                      messageId: T.messageId,
+                                                                      analyticsLocations: T.analyticsLocations,
                                                                   }));
                                                           },
                                                       }),
@@ -214,21 +214,21 @@ function _(e) {
                                                               onClick: (e) => {
                                                                   (s(e),
                                                                       (0, x.gx)({
-                                                                          applicationId: S.id,
-                                                                          linkType: S.linkType,
+                                                                          applicationId: T.id,
+                                                                          linkType: T.linkType,
                                                                           area: d,
-                                                                          referrerId: S.referrerId,
-                                                                          customId: S.activityCustomId,
+                                                                          referrerId: T.referrerId,
+                                                                          customId: T.activityCustomId,
                                                                           isDeadEnd: c,
-                                                                          messageId: S.messageId,
-                                                                          analyticsLocations: S.analyticsLocations,
+                                                                          messageId: T.messageId,
+                                                                          analyticsLocations: T.analyticsLocations,
                                                                       }));
                                                               },
                                                               fullWidth: !0,
                                                           }),
                                                           null != a &&
                                                               (0, l.jsx)(u.E, {
-                                                                  variant: "text-xs/medium",
+                                                                  variant: "body-xs/medium",
                                                                   color: "none",
                                                                   className: E.H$,
                                                                   children: a,

@@ -4,8 +4,8 @@ var n = i(477900),
     a = i(17928),
     s = i(224640),
     r = i(289873),
-    c = i(376728),
-    o = i(299091),
+    o = i(376728),
+    c = i(299091),
     u = i(189213),
     d = i(95477),
     g = i(834730),
@@ -17,13 +17,13 @@ var n = i(477900),
     S = i(105292),
     I = i(523442);
 let E = function (t) {
-    let { setStep: e, setGuildsInfo: i, email: a, setEmail: s, setGuildId: r, invite: c, ...o } = t,
+    let { setStep: e, setGuildsInfo: i, email: a, setEmail: s, setGuildId: r, invite: o, ...c } = t,
         [E, v] = l.useState(null),
         [A, j] = l.useState(!1);
     async function p(t) {
         (t.preventDefault(), v(null), j(!0));
         try {
-            let t = c?.guild?.id ?? f.A.getChannel(c?.channel?.id)?.getGuildId() ?? void 0;
+            let t = o?.guild?.id ?? f.A.getChannel(o?.channel?.id)?.getGuildId() ?? void 0;
             t === x.TA && (t = void 0);
             let n = await m.A.sendVerificationEmail(a, !0, t),
                 l = n.guilds_info;
@@ -41,15 +41,15 @@ let E = function (t) {
         }
     }
     let C = S.intl.string(S.t.H1jCHH);
-    if (c?.guild != null && c.guild.id !== x.TA && c?.approximate_member_count != null) {
-        let { name: t } = c.guild;
-        C = S.intl.formatToPlainString(S.t["4T4+p1"], { guildName: t, count: c.approximate_member_count });
+    if (o?.guild != null && o.guild.id !== x.TA && o?.approximate_member_count != null) {
+        let { name: t } = o.guild;
+        C = S.intl.formatToPlainString(S.t["4T4+p1"], { guildName: t, count: o.approximate_member_count });
     }
     return (0, n.jsx)("form", {
         className: I.o,
         onSubmit: p,
         children: (0, n.jsxs)(u.a, {
-            ...o,
+            ...c,
             title: C,
             actions: [{ variant: "primary", type: "submit", loading: A, text: S.intl.string(S.t["8vmKO0"]) }],
             children: [
@@ -64,7 +64,7 @@ let E = function (t) {
                 (0, n.jsx)(g.E, {
                     className: I.V,
                     color: "text-muted",
-                    variant: "text-xs/normal",
+                    variant: "body-xs/normal",
                     children: S.intl.format(S.t.cgT481, { termsURL: y.X7G.TERMS, privacyURL: y.X7G.PRIVACY }),
                 }),
             ],
@@ -77,8 +77,8 @@ var v = i(503698),
     p = i.n(j),
     C = i(939249),
     L = i(683438),
-    _ = i(534514),
-    b = i(573435),
+    b = i(534514),
+    _ = i(573435),
     k = i(548118),
     D = i(486020),
     N = i(149790),
@@ -91,8 +91,8 @@ function w(t) {
         className: T.oG,
         onClick: i,
         children: [
-            (0, n.jsx)(b.Ay, {
-                mask: b.Ay.Masks.AVATAR_DEFAULT,
+            (0, n.jsx)(_.Ay, {
+                mask: _.Ay.Masks.AVATAR_DEFAULT,
                 width: 40,
                 height: 40,
                 children: (0, n.jsx)(k.Ay, {
@@ -102,14 +102,14 @@ function w(t) {
                     size: k.Ay.Sizes.MEDIUM,
                 }),
             }),
-            (0, n.jsx)(g.E, { className: T.J5, variant: "text-md/semibold", children: e.name }),
+            (0, n.jsx)(g.E, { className: T.J5, variant: "body-md/semibold", children: e.name }),
             l ? (0, n.jsx)(r.y, { type: r.y.Type.PULSING_ELLIPSIS }) : (0, n.jsx)("img", { alt: "", src: M }),
         ],
     });
 }
 let R = function (t) {
     let { setStep: e, email: i, guildsInfo: a, setGuildId: s, ...r } = t,
-        [c, o] = l.useState(null),
+        [o, c] = l.useState(null),
         [d, f] = l.useState(void 0),
         [y, I] = l.useState(null);
     function E() {
@@ -137,8 +137,8 @@ let R = function (t) {
                     }),
                     (0, n.jsx)(g.E, {
                         color: "text-feedback-critical",
-                        variant: "text-xs/normal",
-                        children: c?.getAnyErrorMessage(),
+                        variant: "body-xs/normal",
+                        children: o?.getAnyErrorMessage(),
                     }),
                 ],
             }),
@@ -158,11 +158,11 @@ let R = function (t) {
                                             onClick:
                                                 ((l = t.id),
                                                 async () => {
-                                                    (o(null), s(l), I(l));
+                                                    (c(null), s(l), I(l));
                                                     try {
                                                         (await m.A.sendVerificationEmail(i, !0, l), e(x.Di.VERIFY_PIN));
                                                     } catch (t) {
-                                                        o(new h.LG(t));
+                                                        c(new h.LG(t));
                                                     } finally {
                                                         I(null);
                                                     }
@@ -178,14 +178,14 @@ let R = function (t) {
                           children: (0, n.jsxs)("div", {
                               className: T.rv,
                               children: [
-                                  (0, n.jsx)(_.D, {
+                                  (0, n.jsx)(b.D, {
                                       className: A()(T.He, T.wx),
                                       variant: "heading-xl/semibold",
                                       children: S.intl.string(S.t["1eUrDc"]),
                                   }),
                                   (0, n.jsx)(g.E, {
                                       className: T.He,
-                                      variant: "text-md/normal",
+                                      variant: "body-md/normal",
                                       children: S.intl.format(S.t.flgDKM, { onJoinWaitlist: E }),
                                   }),
                               ],
@@ -196,8 +196,8 @@ let R = function (t) {
 };
 var O = i(650583);
 let G = function (t) {
-    let { email: e, setStep: i, onBack: a, school: s, setSchool: r, ...c } = t,
-        [o, g] = l.useState(null),
+    let { email: e, setStep: i, onBack: a, school: s, setSchool: r, ...o } = t,
+        [c, g] = l.useState(null),
         [f, y] = l.useState(!1);
     async function I() {
         (g(null), y(!0));
@@ -213,7 +213,7 @@ let G = function (t) {
         null != s && "" !== s && t.key === O.dh.ENTER && (await I());
     }
     return (0, n.jsx)(u.a, {
-        ...c,
+        ...o,
         title: S.intl.string(S.t["2FNWBG"]),
         subtitle: S.intl.string(S.t["/4y6ox"]),
         actions: [
@@ -227,7 +227,7 @@ let G = function (t) {
             onChange: function (t) {
                 r(t);
             },
-            error: o?.getAnyErrorMessage(),
+            error: c?.getAnyErrorMessage(),
         }),
     });
 };
@@ -236,8 +236,8 @@ var V = i(435558),
     H = i(976860);
 let F = function (t) {
     let { email: e, guildId: i, transitionState: a, onClose: s } = t,
-        [r, c] = l.useState(""),
-        [o, g] = l.useState(null),
+        [r, o] = l.useState(""),
+        [c, g] = l.useState(null),
         f = l.useCallback(async () => {
             if (null != i)
                 try {
@@ -263,9 +263,9 @@ let F = function (t) {
             label: S.intl.string(S.t.rpWT1s),
             onKeyPress: I,
             onChange: function (t) {
-                null != t && "" !== t && c(t);
+                null != t && "" !== t && o(t);
             },
-            error: o?.getAnyErrorMessage(),
+            error: c?.getAnyErrorMessage(),
         }),
     });
 };
@@ -292,9 +292,9 @@ function J(t) {
     let { inviteCode: e, ...i } = t,
         [u, d] = l.useState(null != e);
     l.useEffect(() => {
-        null != e && c.Ay.resolveInvite(e, "Hub").finally(() => d(!1));
+        null != e && o.Ay.resolveInvite(e, "Hub").finally(() => d(!1));
     }, [e]);
-    let g = (0, a.bG)([o.A], () => (null != e ? o.A.getInvite(e) : null)),
+    let g = (0, a.bG)([c.A], () => (null != e ? c.A.getInvite(e) : null)),
         [m, h] = l.useState([x.Di.VERIFY_EMAIL]),
         [f, y] = l.useState(""),
         [S, I] = l.useState(""),

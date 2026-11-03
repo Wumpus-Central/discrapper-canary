@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => E, WK: () => f, cr: () => C, j1: () => x });
+n.d(t, { Ay: () => x, WK: () => f, cr: () => C, j1: () => E });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -35,11 +35,11 @@ function C(e) {
         children: t,
     });
 }
-function x(e) {
+function E(e) {
     let { children: t, className: n } = e;
-    return (0, l.jsx)(m.E, { variant: "text-md/normal", color: "none", className: s()(A.h_, n), children: t });
+    return (0, l.jsx)(m.E, { variant: "body-md/normal", color: "none", className: s()(A.h_, n), children: t });
 }
-let E = function (e) {
+let x = function (e) {
     let { className: t, channelId: n, children: i, ...a } = e;
     return (0, l.jsx)("div", { className: s()(t, A.kL), id: (0, g.j)(n, n), ...a, children: i });
 };

@@ -15,7 +15,7 @@ function u(e) {
         className: d.zr,
         children: [
             (0, i.jsx)(a.E, {
-                variant: "text-xs/semibold",
+                variant: "body-xs/semibold",
                 className: d.wx,
                 children: c.intl.format(c.t.e95u3C, { count: n.length }),
             }),

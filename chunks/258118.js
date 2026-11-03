@@ -1,4 +1,4 @@
-l.d(i, { default: () => y });
+l.d(i, { default: () => w });
 var s = l(477900),
     a = l(582128),
     n = l(189213),
@@ -14,9 +14,9 @@ var s = l(477900),
     m = l(661531),
     g = l(285796),
     v = l(534514),
-    A = l(834730),
-    C = l(821609),
-    b = l(953727);
+    b = l(834730),
+    A = l(821609),
+    C = l(953727);
 function p(e) {
     let {
         width: i = 24,
@@ -26,7 +26,7 @@ function p(e) {
         ...t
     } = e;
     return (0, s.jsxs)("svg", {
-        ...(0, b.A)(t),
+        ...(0, C.A)(t),
         width: i,
         height: l,
         viewBox: "0 0 14 14",
@@ -40,8 +40,8 @@ function p(e) {
     });
 }
 var k = l(105292),
-    E = l(916423);
-function M(e) {
+    y = l(916423);
+function E(e) {
     let { name: i, description: l, checked: a, actionLabel: n, actionHandler: t } = e,
         c = null;
     return (
@@ -49,29 +49,29 @@ function M(e) {
             ? (0, s.jsx)(p, { width: 20, height: 20 })
             : (0, s.jsx)(g.a, { size: "custom", color: m.A.colors.ICON_FEEDBACK_CRITICAL, width: 20, height: 20 })),
         (0, s.jsxs)("div", {
-            className: E.gd,
+            className: y.gd,
             children: [
-                (0, s.jsx)("div", { className: E.aV, children: c }),
+                (0, s.jsx)("div", { className: y.aV, children: c }),
                 (0, s.jsxs)("div", {
-                    className: j()(E.__invalid_checklistText, a && E.lu),
+                    className: j()(y.__invalid_checklistText, a && y.lu),
                     children: [
-                        (0, s.jsx)(v.D, { variant: "heading-md/semibold", className: E.LA, children: i }),
-                        (0, s.jsx)(A.E, { color: "interactive-text-default", variant: "text-sm/normal", children: l }),
+                        (0, s.jsx)(v.D, { variant: "heading-sm/semibold", className: y.LA, children: i }),
+                        (0, s.jsx)(b.E, { color: "interactive-text-default", variant: "body-sm/normal", children: l }),
                     ],
                 }),
                 null != n &&
                     (0, s.jsx)("div", {
-                        className: E.dT,
-                        children: (0, s.jsx)(C.$, { variant: "primary", onClick: t, text: n, size: "sm" }),
+                        className: y.dT,
+                        children: (0, s.jsx)(A.$, { variant: "primary", onClick: t, text: n, size: "sm" }),
                     }),
             ],
         })
     );
 }
 l(848887);
-var _ = l(879752),
-    f = l(652215);
-function w(e) {
+var M = l(879752),
+    _ = l(652215);
+function f(e) {
     let { eligibility: i, eligibilityLoading: l, eligibilityError: n, guildId: x, onEligibilityBecameStale: j } = e,
         m = a.useMemo(
             () => ({
@@ -80,7 +80,7 @@ function w(e) {
                 actions: {
                     onEnableMFAClick: u.Ay.enableMFA,
                     onRequireModeratorMFAClick: () => {
-                        ((0, t.closeModal)(_.m), h.A.open(x, f.BEX.SAFETY, void 0, f.nd0.SAFETY_PERMISSIONS));
+                        ((0, t.closeModal)(M.m), h.A.open(x, _.BEX.SAFETY, void 0, _.nd0.SAFETY_PERMISSIONS));
                     },
                 },
             }),
@@ -97,7 +97,7 @@ function w(e) {
                         a.Fragment,
                         {
                             children: [
-                                (0, s.jsx)(M, {
+                                (0, s.jsx)(E, {
                                     name: e.checked ? e.checkedLabel : e.uncheckedLabel,
                                     description: e.description,
                                     checked: e.checked,
@@ -112,7 +112,7 @@ function w(e) {
                 ),
             });
 }
-function y(e) {
+function w(e) {
     let {
         eligibility: i,
         eligibilityLoading: l,
@@ -126,9 +126,9 @@ function y(e) {
         title: k.intl.string(k.t["3s47iN"]),
         actions: [],
         onClose: async () => {
-            await (0, t.closeModal)(_.m);
+            await (0, t.closeModal)(M.m);
         },
-        children: (0, s.jsx)(w, {
+        children: (0, s.jsx)(f, {
             eligibility: i,
             eligibilityLoading: l,
             eligibilityError: a,

@@ -35,7 +35,7 @@ function h(e) {
         }),
         children: [
             (0, r.jsx)(o.E, {
-                variant: "text-xs/semibold",
+                variant: "body-xs/semibold",
                 className: s()(E.YY, {
                     [E.Zz]: 0 !== i && 2 !== i,
                     [E.oo]: 0 === i,

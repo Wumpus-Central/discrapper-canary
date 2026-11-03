@@ -1,4 +1,4 @@
-n.d(e, { A9: () => x, mU: () => U, Jf: () => Q, tH: () => q, NA: () => V, XR: () => Y, VX: () => b });
+n.d(e, { A9: () => x, mU: () => U, Jf: () => Q, tH: () => b, NA: () => V, XR: () => Y, VX: () => q });
 var i = n(582128),
     r = n(731355),
     l = n(118751),
@@ -29,10 +29,10 @@ var a = n(409626),
     D = n(652215),
     P = n(202541),
     O = n(105292);
-function w(t, e, n) {
+function y(t, e, n) {
     return n ? O.intl.formatToPlainString(t, e) : O.intl.format(t, e);
 }
-function y(t) {
+function w(t) {
     let { hasRewardDuration: e, shouldShowGameProfileLink: n } = t;
     return e ? (n ? O.t["/4XT0b"] : O.t["0hwcvM"]) : n ? O.t.tQoqXX : O.t["eb/Sna"];
 }
@@ -115,7 +115,7 @@ function U(t) {
                                         style: { display: "inline-block", cursor: "pointer" },
                                         innerRef: n,
                                         children: (0, d.jsx)(I.E, {
-                                            variant: "text-xs/normal",
+                                            variant: "body-xs/normal",
                                             color: "text-link",
                                             className: T.s3,
                                             children: t,
@@ -174,14 +174,14 @@ function U(t) {
                     f = (0, G.Y7)(e.config),
                     g = e.config.features.includes(h.Li.NON_GAMING_PLAY_QUEST),
                     m = null != u;
-                return w(
+                return y(
                     r && c
                         ? f
                             ? g
                                 ? null != l
                                     ? O.t.u5QXpw
                                     : O.t.ztXW8V
-                                : y({ hasRewardDuration: null != l, shouldShowGameProfileLink: m })
+                                : w({ hasRewardDuration: null != l, shouldShowGameProfileLink: m })
                             : g
                               ? O.t["1AcTqm"]
                               : k(m)
@@ -227,10 +227,10 @@ function U(t) {
                     c = (0, G.JX)(e.config),
                     f = (0, G.Y7)(e.config),
                     g = null != u;
-                return w(
+                return y(
                     r && c
                         ? f
-                            ? y({ hasRewardDuration: null != l, shouldShowGameProfileLink: g })
+                            ? w({ hasRewardDuration: null != l, shouldShowGameProfileLink: g })
                             : k(g)
                         : c || null != l
                           ? X(g)
@@ -272,7 +272,7 @@ function U(t) {
                     g = (0, G.Y7)(n.config),
                     m = n.config.features.includes(h.Li.NON_GAMING_PLAY_QUEST),
                     d = null != a;
-                return w(
+                return y(
                     (e =
                         l && f
                             ? g
@@ -280,7 +280,7 @@ function U(t) {
                                     ? null != u
                                         ? O.t.u5QXpw
                                         : O.t.ztXW8V
-                                    : y({ hasRewardDuration: null != u, shouldShowGameProfileLink: d })
+                                    : w({ hasRewardDuration: null != u, shouldShowGameProfileLink: d })
                                 : m
                                   ? O.t["1AcTqm"]
                                   : k(d)
@@ -317,7 +317,7 @@ function U(t) {
                 let { quest: e, taskDetails: n, withoutMarkdown: i, onGameTitleClick: r } = t,
                     { targetMinutes: l } = n,
                     u = e.config.messages.gameTitle;
-                return w(
+                return y(
                     null != r ? O.t.HHVg4i : O.t["a/ia7F"],
                     { gameTitle: u, streamingDurationRequirement: l, onGameTitleClick: r },
                     i,
@@ -336,7 +336,7 @@ function U(t) {
                     a = u?.messages.videoTitle ?? "video",
                     o = (0, G.JX)(e.config),
                     s = (0, G.Y7)(e.config);
-                return w(
+                return y(
                     o && i
                         ? s
                             ? null != n
@@ -357,10 +357,10 @@ function U(t) {
                 let { quest: e, taskDetails: n, withoutMarkdown: i, rewardNameWithArticle: r } = t,
                     l = n.targetMinutes;
                 return (0, R._e)(e)
-                    ? w(O.t.VYwSSu, { streamingDurationRequirement: l, questReward: r }, i)
+                    ? y(O.t.VYwSSu, { streamingDurationRequirement: l, questReward: r }, i)
                     : e.config.features.includes(h.Li.CLOUD_GAMING_ACTIVITY) &&
                         e.config.features.includes(h.Li.CLOUD_GAMING_PROVIDER_NVIDIA)
-                      ? w(
+                      ? y(
                             O.t["0NNM3l"],
                             {
                                 activityName: e.config.messages.gameTitle,
@@ -371,7 +371,7 @@ function U(t) {
                             },
                             i,
                         )
-                      : w(
+                      : y(
                             O.t.UuzHh8,
                             {
                                 activityName: e.config.messages.gameTitle,
@@ -397,7 +397,7 @@ function U(t) {
                     c = (0, G.JX)(e.config),
                     f = (0, G.Y7)(e.config),
                     g = null != u;
-                return w(
+                return y(
                     o
                         ? g
                             ? O.t["0SLl/G"]
@@ -455,7 +455,7 @@ function U(t) {
                       c = (0, G.JX)(e.config),
                       f = (0, G.Y7)(e.config),
                       g = null != u;
-                  return w(
+                  return y(
                       r && c
                           ? f
                               ? null != l
@@ -516,7 +516,7 @@ function x(t, e, n, i, r) {
         o = (0, L.S5)(t.userStatus?.claimedAt);
     return a ? O.intl.formatToPlainString(O.t.lOVr0O, { claimDate: o }) : u;
 }
-function q(t) {
+function b(t) {
     let {
             quest: e,
             isExpanded: n,
@@ -568,7 +568,7 @@ function q(t) {
                 : O.intl.string(O.t.mOrpXG)
           : O.intl.string(O.t.S6UUc5);
 }
-function b(t, e) {
+function q(t, e) {
     let n = (0, u.bG)([s.default], () => s.default.locale),
         i = (0, L.fc)(t),
         [r] = (0, L.Qo)(t, i),

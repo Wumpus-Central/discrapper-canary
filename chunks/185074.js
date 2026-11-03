@@ -15,6 +15,6 @@ function e(t) {
             { text: l.intl.string(l.t["ETE/oC"]), variant: "secondary", onClick: i },
             { text: l.intl.string(l.t.dO8DLI), variant: "critical-primary", onClick: n },
         ],
-        children: (0, a.jsx)(s.E, { variant: "text-md/normal", children: l.intl.string(l.t["9sgGbL"]) }),
+        children: (0, a.jsx)(s.E, { variant: "body-md/normal", children: l.intl.string(l.t["9sgGbL"]) }),
     });
 }

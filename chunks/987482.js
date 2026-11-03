@@ -10,15 +10,15 @@ var l = n(477900),
     d = n(17928),
     m = n(821609),
     p = n(138017),
-    x = n(715482),
-    f = n(224640),
+    f = n(715482),
+    x = n(224640),
     g = n(20742),
     j = n(430993),
     h = n(364840),
-    v = n(980707),
-    y = n(477782),
-    K = n(265872),
-    b = n(534514),
+    y = n(980707),
+    v = n(477782),
+    b = n(265872),
+    K = n(534514),
     A = n(834730),
     N = n(315982),
     k = n(280450),
@@ -54,7 +54,7 @@ function R(t) {
             (t) => {
                 let { closePopout: i } = t;
                 return Array.isArray(n)
-                    ? (0, l.jsx)(v.W, {
+                    ? (0, l.jsx)(y.W, {
                           "data-menu-migrated": !0,
                           navId: "download-app-menu",
                           "aria-label": D.intl.string(D.t["+1H47t"]),
@@ -62,7 +62,7 @@ function R(t) {
                           onSelect: void 0,
                           children: n.map((t) =>
                               (0, l.jsx)(
-                                  y.Dr,
+                                  v.Dr,
                                   { id: t.url(), label: t.getText(), action: () => s(e, t.url()) },
                                   t.url(),
                               ),
@@ -73,7 +73,7 @@ function R(t) {
             [e, n, s],
         );
     return Array.isArray(n)
-        ? (0, l.jsx)(K.Y, {
+        ? (0, l.jsx)(b.Y, {
               renderPopout: c,
               targetElementRef: r,
               align: "left",
@@ -88,7 +88,7 @@ function R(t) {
                       variant: "primary",
                       size: "sm",
                       fullWidth: !0,
-                      icon: a ? p.j : x.g,
+                      icon: a ? p.j : f.g,
                       iconPosition: "end",
                   }),
           })
@@ -118,7 +118,7 @@ function _(t) {
                 }),
                 (0, l.jsxs)("div", {
                     children: [
-                        (0, l.jsx)(b.D, { className: E.$r, variant: "heading-lg/semibold", children: d }),
+                        (0, l.jsx)(K.D, { className: E.$r, variant: "heading-lg/semibold", children: d }),
                         (0, l.jsx)("div", { className: E.l6, children: (0, l.jsx)(R, { os: d, url: c, onClick: n }) }),
                     ],
                 }),
@@ -131,7 +131,7 @@ function P(t) {
         a = (0, d.bG)([O.default], () => O.default.getCurrentUser()),
         m = (0, d.bG)([k.default], () => k.default.getFingerprint()),
         p = null == a || a.isClaimed(),
-        [x, v] = i.useState(
+        [f, y] = i.useState(
             (function () {
                 switch (o().os?.family) {
                     case "OS X":
@@ -154,7 +154,7 @@ function P(t) {
                 }
             })(),
         );
-    function y(t, l) {
+    function v(t, l) {
         ((null != u.getToken() || null != m) &&
             w.default.track(S.HAw.DOWNLOAD_APP, {
                 platform: t,
@@ -166,14 +166,14 @@ function P(t) {
             }),
             p ? window.open(l, "_blank") : (n(), N.R()));
     }
-    function K(t) {
-        v(t);
+    function b(t) {
+        y(t);
     }
     return (
         i.useEffect(() => {
             w.default.track(S.HAw.OPEN_MODAL, { type: "Download App", source: { location: e } });
         }, [e]),
-        (0, l.jsxs)(f.d, {
+        (0, l.jsxs)(x.d, {
             size: c.Fr ? "md" : "lg",
             onClose: n,
             transitionState: s,
@@ -188,8 +188,8 @@ function P(t) {
                                 (0, l.jsxs)("div", {
                                     className: E.Fp,
                                     children: [
-                                        (0, l.jsx)(b.D, {
-                                            variant: "heading-md/medium",
+                                        (0, l.jsx)(K.D, {
+                                            variant: "heading-sm/medium",
                                             color: "text-subtle",
                                             className: E.wx,
                                             children: D.intl.string(D.t["0KK0bP"]),
@@ -201,10 +201,10 @@ function P(t) {
                                                     (0, l.jsx)(
                                                         _,
                                                         {
-                                                            isActive: x === t.platformKey,
+                                                            isActive: f === t.platformKey,
                                                             platform: t,
-                                                            onClick: y,
-                                                            onMouseEnter: K,
+                                                            onClick: v,
+                                                            onMouseEnter: b,
                                                         },
                                                         t.platformKey,
                                                     ),
@@ -212,10 +212,10 @@ function P(t) {
                                                 (0, l.jsx)(
                                                     _,
                                                     {
-                                                        isActive: x === F.platformKey,
+                                                        isActive: f === F.platformKey,
                                                         platform: F,
-                                                        onClick: y,
-                                                        onMouseEnter: K,
+                                                        onClick: v,
+                                                        onMouseEnter: b,
                                                     },
                                                     F.platformKey,
                                                 ),
@@ -227,8 +227,8 @@ function P(t) {
                                 className: E.Fp,
                                 children: [
                                     !c.Fr &&
-                                        (0, l.jsx)(b.D, {
-                                            variant: "heading-md/medium",
+                                        (0, l.jsx)(K.D, {
+                                            variant: "heading-sm/medium",
                                             color: "text-subtle",
                                             className: E.wx,
                                             children: D.intl.string(D.t.RdSNWa),
@@ -239,10 +239,10 @@ function P(t) {
                                             (0, l.jsx)(
                                                 _,
                                                 {
-                                                    isActive: x === t.platformKey,
+                                                    isActive: f === t.platformKey,
                                                     platform: t,
-                                                    onClick: y,
-                                                    onMouseEnter: K,
+                                                    onClick: v,
+                                                    onMouseEnter: b,
                                                 },
                                                 t.platformKey,
                                             ),
@@ -255,7 +255,7 @@ function P(t) {
                 }),
                 (0, l.jsx)(h.j, {
                     children: (0, l.jsx)(A.E, {
-                        variant: "text-sm/normal",
+                        variant: "body-sm/normal",
                         children: D.intl.format(D.t["RJS+1P"], {}),
                     }),
                 }),

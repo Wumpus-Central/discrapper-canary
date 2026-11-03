@@ -3,13 +3,13 @@ var n = t(477900);
 t(582128);
 var l = t(503698),
     i = t.n(l),
-    a = t(661531),
-    s = t(20742),
+    s = t(661531),
+    a = t(20742),
     c = t(462887),
-    u = t(534514),
-    o = t(834730),
-    m = t(430993),
-    d = t(993077),
+    o = t(534514),
+    u = t(834730),
+    d = t(430993),
+    m = t(993077),
     p = t(695366),
     x = t(736653),
     h = t(975571),
@@ -24,10 +24,10 @@ function f(e) {
     return (0, n.jsxs)("div", {
         className: i()(E.kL, r),
         children: [
-            (0, n.jsx)(u.D, { className: E.wx, variant: "heading-xl/semibold", children: I.intl.string(I.t.vwMEHS) }),
-            (0, n.jsxs)(o.E, {
+            (0, n.jsx)(o.D, { className: E.wx, variant: "heading-xl/semibold", children: I.intl.string(I.t.vwMEHS) }),
+            (0, n.jsxs)(u.E, {
                 className: E.h_,
-                variant: "text-md/normal",
+                variant: "body-md/normal",
                 color: "text-default",
                 children: [
                     (0, n.jsx)("p", { children: I.intl.string(I.t.fev8MQ) }),
@@ -47,25 +47,25 @@ function g() {
 }
 function R() {
     return (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(s.rQ, {}), (0, n.jsx)(m.c, { children: (0, n.jsx)(f, { className: E.yl }) })],
+        children: [(0, n.jsx)(a.rQ, {}), (0, n.jsx)(d.c, { children: (0, n.jsx)(f, { className: E.yl }) })],
     });
 }
 function _(e) {
     let { className: r } = e;
     return (0, A.Hp)()
-        ? (0, n.jsxs)(d.Z, {
+        ? (0, n.jsxs)(m.Z, {
               className: i()(E.ek, r),
-              type: d.Z.Types.CUSTOM,
+              type: m.Z.Types.CUSTOM,
               children: [
                   (0, n.jsx)(p.E, {
                       size: "custom",
                       width: 20,
                       height: 20,
                       className: E.XJ,
-                      color: a.A.unsafe_rawColors.YELLOW_300.css,
+                      color: s.A.unsafe_rawColors.YELLOW_300.css,
                   }),
-                  (0, n.jsx)(o.E, {
-                      variant: "text-sm/normal",
+                  (0, n.jsx)(u.E, {
+                      variant: "body-sm/normal",
                       children: I.intl.format(I.t.NYkcCh, {
                           helpdeskArticle: h.A.getArticleURL(T.MVz.BLOCKED_PAYMENTS),
                       }),

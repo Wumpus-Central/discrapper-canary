@@ -1,155 +1,155 @@
-(t.d(n, { I: () => m, p: () => P }), t(938796));
-var l = t(477900),
-    a = t(582128),
-    s = t(821418),
-    i = t(665260),
-    r = t(17928),
-    c = t(862482),
-    o = t(331322),
-    d = t(193249),
-    u = t(834730),
-    x = t(28863),
-    h = t(416052),
-    A = t(967198),
-    g = t(351906),
-    I = t(174459),
-    p = t(735547),
-    N = t(939249),
-    _ = t(181658),
-    C = t(468689),
-    k = t(576705),
-    b = t(652215),
-    j = t(105292),
-    E = t(87617);
-function v(e) {
-    let { guild: n, error: t, onClose: s } = e,
-        i = n.id,
+(e.d(l, { I: () => m, p: () => P }), e(938796));
+var t = e(477900),
+    a = e(582128),
+    s = e(821418),
+    i = e(665260),
+    r = e(17928),
+    o = e(862482),
+    c = e(331322),
+    d = e(193249),
+    u = e(834730),
+    h = e(28863),
+    A = e(416052),
+    x = e(967198),
+    g = e(351906),
+    I = e(174459),
+    b = e(735547),
+    p = e(939249),
+    N = e(181658),
+    _ = e(468689),
+    C = e(576705),
+    k = e(652215),
+    j = e(105292),
+    E = e(87617);
+function v(n) {
+    let { guild: l, error: e, onClose: s } = n,
+        i = l.id,
         r = a.useCallback(() => {
-            (s(), C.A.open(i, b.BEX.INVITES));
+            (s(), _.A.open(i, k.BEX.INVITES));
         }, [i, s]),
-        c = a.useCallback(
-            (e) =>
-                (0, l.jsx)(N.D, {
+        o = a.useCallback(
+            (n) =>
+                (0, t.jsx)(p.D, {
                     className: E.P5,
                     onClick: r,
-                    children: (0, l.jsx)(u.E, {
-                        variant: "text-xs/normal",
+                    children: (0, t.jsx)(u.E, {
+                        variant: "body-xs/normal",
                         color: "text-link",
                         tag: "span",
-                        children: e,
+                        children: n,
                     }),
                 }),
             [r],
         ),
-        o = a.useCallback(
-            (e) =>
-                (0, l.jsx)(x.Anchor, {
-                    href: b.X7G.INVITES_HELP,
+        c = a.useCallback(
+            (n) =>
+                (0, t.jsx)(h.Anchor, {
+                    href: k.X7G.INVITES_HELP,
                     target: "_blank",
-                    children: (0, l.jsx)(u.E, {
-                        variant: "text-xs/normal",
+                    children: (0, t.jsx)(u.E, {
+                        variant: "body-xs/normal",
                         color: "text-link",
                         tag: "span",
-                        children: e,
+                        children: n,
                     }),
                 }),
             [],
         ),
         d =
-            t instanceof _.A
-                ? t.code !== b.t02.TOO_MANY_INVITES
-                    ? t.getAnyErrorMessage()
-                    : k.A.can(b.xBc.MANAGE_GUILD, n)
-                      ? j.intl.format(j.t["H/RUY1"], { inviteListHook: c, inviteHelpHook: o })
+            e instanceof N.A
+                ? e.code !== k.t02.TOO_MANY_INVITES
+                    ? e.getAnyErrorMessage()
+                    : C.A.can(k.xBc.MANAGE_GUILD, l)
+                      ? j.intl.format(j.t["H/RUY1"], { inviteListHook: o, inviteHelpHook: c })
                       : j.intl.string(j.t["/FxH6G"])
-                : "message" in t
-                  ? t.message
+                : "message" in e
+                  ? e.message
                   : j.intl.string(j.t.eAn6z2);
-    return (0, l.jsx)(u.E, {
+    return (0, t.jsx)(u.E, {
         className: E.gJ,
-        variant: "text-xs/normal",
+        variant: "body-xs/normal",
         color: "text-feedback-critical",
         children: d,
     });
 }
-var S = t(172799);
-let m = r.Ay.connectStores([g.A], () => ({ hideValue: g.A.hideInstantInvites }))((e) => {
-    let { value: n, autoFocus: t, hideValue: a, onCopy: s, disabled: i } = e;
-    return (0, l.jsx)(h.A, {
-        value: n,
+var S = e(172799);
+let m = r.Ay.connectStores([g.A], () => ({ hideValue: g.A.hideInstantInvites }))((n) => {
+    let { value: l, autoFocus: e, hideValue: a, onCopy: s, disabled: i } = n;
+    return (0, t.jsx)(A.A, {
+        value: l,
         hideMessage: a ? j.intl.string(j.t["6HzNgZ"]) : null,
-        buttonColor: c.$n.Colors.BRAND,
+        buttonColor: o.$n.Colors.BRAND,
         onCopy: s,
-        autoFocus: t,
+        autoFocus: e,
         disabled: i,
     });
 });
-function P(e) {
+function P(n) {
     let {
-            guild: n,
-            noInvitesAvailable: t,
+            guild: l,
+            noInvitesAvailable: e,
             showFriends: r,
-            onClose: c,
-            modalState: h,
+            onClose: o,
+            modalState: A,
             isApplicationBypassToggleEnabled: g,
-            setInviteFlags: N,
-            copyValue: _,
-            changePage: C,
-            inviteChannel: k,
+            setInviteFlags: p,
+            copyValue: N,
+            changePage: _,
+            inviteChannel: C,
             source: P,
-            code: T,
-            guildScheduledEvent: f,
-            disabled: B,
-            application: y,
-        } = e,
-        { maxAge: G, maxUses: L, networkError: V, showVanityURL: H, flags: M } = h,
+            code: y,
+            guildScheduledEvent: T,
+            disabled: f,
+            application: B,
+        } = n,
+        { maxAge: G, maxUses: L, networkError: V, showVanityURL: H, flags: M } = A,
         O = a.useCallback(() => {
-            I.default.track(b.HAw.COPY_INSTANT_INVITE, {
-                server: A.A.getGuildId(),
-                channel: k?.id,
-                channel_type: k?.type,
+            I.default.track(k.HAw.COPY_INSTANT_INVITE, {
+                server: x.A.getGuildId(),
+                channel: C?.id,
+                channel_type: C?.type,
                 location: P,
-                code: T,
-                guild_scheduled_event_id: f?.id,
-                application_id: y?.id,
+                code: y,
+                guild_scheduled_event_id: T?.id,
+                application_id: B?.id,
             });
-        }, [y?.id, k, P, T, f]);
-    return (0, l.jsxs)(o.B, {
+        }, [B?.id, C, P, y, T]);
+    return (0, t.jsxs)(c.B, {
         gap: 16,
         children: [
-            (0, l.jsx)(m, { value: _, autoFocus: r, onCopy: O, disabled: B }),
+            (0, t.jsx)(m, { value: N, autoFocus: r, onCopy: O, disabled: f }),
             g &&
-                (0, l.jsx)(d.d, {
+                (0, t.jsx)(d.d, {
                     checked: (0, i.Lt)(M, s.Q.IS_APPLICATION_BYPASS),
-                    onChange: (e) => N((0, i.lA)(M, s.Q.IS_APPLICATION_BYPASS, e)),
-                    disabled: B,
+                    onChange: (n) => p((0, i.lA)(M, s.Q.IS_APPLICATION_BYPASS, n)),
+                    disabled: f,
                     label: j.intl.string(j.t["1i1bUl"]),
                     description: j.intl.string(j.t["jvd/LF"]),
                 }),
-            t || H
+            e || H
                 ? null
-                : (0, l.jsxs)(u.E, {
-                      variant: "text-xs/normal",
+                : (0, t.jsxs)(u.E, {
+                      variant: "body-xs/normal",
                       className: E.PJ,
                       children: [
-                          (0, p.Be)(G, L),
+                          (0, b.Be)(G, L),
                           " ",
                           r
-                              ? (0, l.jsx)(x.Anchor, {
-                                    onClick: () => C(S.QR.SETTINGS),
+                              ? (0, t.jsx)(h.Anchor, {
+                                    onClick: () => _(S.QR.SETTINGS),
                                     children: j.intl.string(j.t["VNe8P/"]),
                                 })
                               : null,
                       ],
                   }),
-            !t && r && H
-                ? (0, l.jsxs)(u.E, {
-                      variant: "text-xs/normal",
+            !e && r && H
+                ? (0, t.jsxs)(u.E, {
+                      variant: "body-xs/normal",
                       className: E.PJ,
                       children: [j.intl.string(j.t["0M2U95"]), " "],
                   })
                 : null,
-            null != V ? (0, l.jsx)(v, { guild: n, error: V, onClose: c }) : null,
+            null != V ? (0, t.jsx)(v, { guild: l, error: V, onClose: o }) : null,
         ],
     });
 }

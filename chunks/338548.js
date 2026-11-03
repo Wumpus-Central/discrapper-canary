@@ -19,7 +19,7 @@ let T = function (e) {
         children: (0, s.jsx)("div", {
             className: r()(g.bE, { [g._k]: !t && n }),
             children: (0, s.jsx)(o.E, {
-                variant: "eyebrow",
+                variant: "body-sm/medium",
                 color: t ? "text-overlay-light" : void 0,
                 className: g.gp,
                 children: m.intl.string(m.t["5nrJDO"]),

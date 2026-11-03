@@ -27,6 +27,6 @@ function f(t) {
                 },
             },
         ],
-        children: (0, r.jsx)(n.E, { variant: "text-md/normal", children: m }),
+        children: (0, r.jsx)(n.E, { variant: "body-md/normal", children: m }),
     });
 }

@@ -4,8 +4,8 @@ var l = n(477900),
     r = n(806163),
     a = n(97005),
     i = n(16619),
-    c = n(751841),
-    o = n(381991),
+    o = n(751841),
+    c = n(381991),
     d = n(503698),
     u = n.n(d),
     j = n(17928),
@@ -16,15 +16,15 @@ var l = n(477900),
     k = n(364522),
     g = n(683438),
     C = n(939249),
-    f = n(152367),
-    A = n(834730),
-    v = n(525113),
-    b = n(441935),
-    N = n(281091),
-    P = n(260498);
-function w(e) {
-    let t = (0, N.Ay)(),
-        n = (0, j.bG)([P.Ay], () => P.Ay.getOwnedProjectsFetchState()),
+    b = n(152367),
+    f = n(834730),
+    A = n(525113),
+    v = n(441935),
+    y = n(281091),
+    N = n(260498);
+function P(e) {
+    let t = (0, y.Ay)(),
+        n = (0, j.bG)([N.Ay], () => N.Ay.getOwnedProjectsFetchState()),
         l = e.trim().toLocaleLowerCase(),
         r = s.useMemo(() => ("" === l ? t : t.filter((e) => e.name.toLocaleLowerCase().includes(l))), [t, l]);
     return r.length > 0
@@ -37,7 +37,7 @@ function w(e) {
               ? { kind: "loading" }
               : { kind: "empty" };
 }
-var y = n(821609),
+var w = n(821609),
     I = n(289873),
     S = n(371169),
     D = n(186340),
@@ -52,7 +52,7 @@ function _(e) {
             renderProjectActions: r,
             onProjectContextMenu: a,
         } = e,
-        i = w(n);
+        i = P(n);
     return "projects" === i.kind
         ? (0, l.jsx)(D.A, {
               projects: i.projects,
@@ -62,8 +62,8 @@ function _(e) {
               onProjectContextMenu: a,
           })
         : "no_match" === i.kind
-          ? (0, l.jsx)(A.E, {
-                variant: "text-sm/normal",
+          ? (0, l.jsx)(f.E, {
+                variant: "body-sm/normal",
                 color: "text-subtle",
                 className: W.I,
                 children: E.intl.string(L.default.X37fkR),
@@ -72,12 +72,12 @@ function _(e) {
             ? (0, l.jsxs)("div", {
                   className: W.E,
                   children: [
-                      (0, l.jsx)(A.E, {
-                          variant: "text-sm/normal",
+                      (0, l.jsx)(f.E, {
+                          variant: "body-sm/normal",
                           color: "text-muted",
                           children: E.intl.string(L.default.DJAPMO),
                       }),
-                      (0, l.jsx)(y.$, {
+                      (0, l.jsx)(w.$, {
                           variant: "secondary",
                           size: "sm",
                           text: E.intl.string(L.default["WFJ/vb"]),
@@ -101,11 +101,11 @@ var M = n(602991),
 function K(e) {
     let { selectedProjectId: t, workspaceGuildId: n, onNavigate: r } = e,
         [a, i] = s.useState(""),
-        c = (0, q.A)("sidebar"),
-        o = (0, N.$x)(),
+        o = (0, q.A)("sidebar"),
+        c = (0, y.$x)(),
         d = a.trim().toLocaleLowerCase(),
-        P = s.useMemo(() => o.filter((e) => e.name.toLocaleLowerCase().includes(d)), [o, d]),
-        y = "empty" === w(a).kind && 0 === o.length,
+        N = s.useMemo(() => c.filter((e) => e.name.toLocaleLowerCase().includes(d)), [c, d]),
+        w = "empty" === P(a).kind && 0 === c.length,
         I = s.useCallback((e) => r(e.id, "project_list"), [r]),
         S = s.useCallback(
             (e) => {
@@ -137,19 +137,19 @@ function K(e) {
                         className: F.DD,
                         children: [
                             (0, l.jsx)(m.D, {
-                                variant: "text-md/semibold",
+                                variant: "body-md/semibold",
                                 color: "text-strong",
                                 lineClamp: 1,
                                 className: F.UU,
                                 children: E.intl.string(L.default.uk6jhJ),
                             }),
-                            (0, l.jsx)(v.A, { className: F.vr }),
+                            (0, l.jsx)(A.A, { className: F.vr }),
                         ],
                     }),
                     (0, l.jsxs)("div", {
                         className: F.$s,
                         children: [
-                            (0, l.jsx)(b.A, { importing: O.importing, disabled: null == n, onClick: O.open }),
+                            (0, l.jsx)(v.A, { importing: O.importing, disabled: null == n, onClick: O.open }),
                             V
                                 ? null
                                 : (0, l.jsx)(x.m, {
@@ -171,7 +171,7 @@ function K(e) {
                 ],
             }),
             (0, l.jsxs)(k.Ip, {
-                ref: c,
+                ref: o,
                 className: F.XG,
                 fade: !0,
                 children: [
@@ -193,10 +193,10 @@ function K(e) {
                         children: [
                             (0, l.jsx)("span", {
                                 className: F.DW,
-                                children: (0, l.jsx)(f.D, { size: "md", color: "currentColor" }),
+                                children: (0, l.jsx)(b.D, { size: "md", color: "currentColor" }),
                             }),
-                            (0, l.jsx)(A.E, {
-                                variant: "text-md/medium",
+                            (0, l.jsx)(f.E, {
+                                variant: "body-md/medium",
                                 color: "none",
                                 children: E.intl.string(L.default.koUZKY),
                             }),
@@ -213,12 +213,12 @@ function K(e) {
                             onProjectContextMenu: W,
                         }),
                     }),
-                    P.length > 0
+                    N.length > 0
                         ? (0, l.jsx)(z.A, {
                               title: E.intl.string(L.default.ygVWuJ),
                               className: F.uW,
                               children: (0, l.jsx)(D.A, {
-                                  projects: P,
+                                  projects: N,
                                   onSelect: I,
                                   selectedProjectId: t,
                                   renderProjectActions: S,
@@ -229,14 +229,14 @@ function K(e) {
                         : null,
                 ],
             }),
-            y ? (0, l.jsx)(J.A, {}) : null,
+            w ? (0, l.jsx)(J.A, {}) : null,
         ],
     });
 }
 function O() {
-    let e = (0, r.W5)({ path: c._g, exact: !0 }),
+    let e = (0, r.W5)({ path: o._g, exact: !0 }),
         t = (0, i.rX)("ConjureAppSidebar");
-    return (0, l.jsx)(K, { selectedProjectId: e?.params.projectId ?? null, workspaceGuildId: t, onNavigate: o.A });
+    return (0, l.jsx)(K, { selectedProjectId: e?.params.projectId ?? null, workspaceGuildId: t, onNavigate: c.A });
 }
 function V() {
     return (0, a.TW)("ConjureAppSidebar") ? (0, l.jsx)(O, {}) : null;

@@ -1,11 +1,11 @@
-n.d(t, { A: () => S, e: () => v });
+n.d(t, { A: () => v, e: () => y });
 var l = n(477900),
     s = n(582128),
     a = n(503698),
     i = n.n(a),
     r = n(796873),
-    c = n.n(r),
-    o = n(17928),
+    o = n.n(r),
+    c = n(17928),
     u = n(911608),
     d = n(939249),
     m = n(789645),
@@ -14,7 +14,7 @@ var l = n(477900),
     p = n(73153),
     g = n(31717),
     A = n(399263);
-let x = {
+let C = {
     cancel(e, t) {
         p.h.dispatch({ type: "UPLOAD_CANCEL_REQUEST", channelId: e, file: t });
         let n = A.A.getMessageForFile(t.id);
@@ -28,7 +28,7 @@ let x = {
                 }));
     },
 };
-var C = n(46054),
+var x = n(46054),
     E = n(453771),
     _ = n(105292),
     N = n(745268);
@@ -43,9 +43,9 @@ function j(e) {
         title: s,
     });
 }
-function v(e) {
+function y(e) {
     let { channelId: t, file: n } = e,
-        a = (0, o.bG)([A.A], () => A.A.getMessageForFile(n.id)?.content),
+        a = (0, c.bG)([A.A], () => A.A.getMessageForFile(n.id)?.content),
         i = s.useMemo(() => {
             let e = n.items;
             return null == e
@@ -55,11 +55,11 @@ function v(e) {
                   : _.intl.formatToPlainString(_.t.D0noUt, { count: e.length });
         }, [n.items]),
         r = s.useCallback(() => {
-            x.cancel(t, n);
+            C.cancel(t, n);
         }, [t, n]),
         h = 100 === n.progress,
         f = !h && n.currentSize > 0,
-        p = s.useMemo(() => (null == a || "" === a.trim() ? null : C.A.parse(a)), [a]);
+        p = s.useMemo(() => (null == a || "" === a.trim() ? null : x.A.parse(a)), [a]);
     return (0, l.jsxs)(l.Fragment, {
         children: [
             null != p && (0, l.jsx)("div", { className: N.Qs, children: p }),
@@ -79,7 +79,7 @@ function v(e) {
                                         f
                                             ? (0, l.jsx)("div", {
                                                   className: N.Ej,
-                                                  children: `\u{2014} ${c().filesize(n.currentSize)}`,
+                                                  children: `\u{2014} ${o().filesize(n.currentSize)}`,
                                               })
                                             : null,
                                     ],
@@ -104,8 +104,8 @@ function v(e) {
         ],
     });
 }
-let S = function (e) {
-    let { className: t, url: n, fileName: s, fileSize: a, onClick: r, onContextMenu: o, renderAdjacentContent: u } = e;
+let v = function (e) {
+    let { className: t, url: n, fileName: s, fileSize: a, onClick: r, onContextMenu: c, renderAdjacentContent: u } = e;
     return (0, l.jsxs)("div", {
         className: i()(N.Ig, t),
         children: [
@@ -122,14 +122,14 @@ let S = function (e) {
                                     className: N.AD,
                                     href: n,
                                     onClick: r,
-                                    onContextMenu: o,
+                                    onContextMenu: c,
                                     children: s,
                                 }),
                             }),
                             (0, l.jsx)(f.E, {
-                                variant: "text-xs/normal",
+                                variant: "body-xs/normal",
                                 color: "text-muted",
-                                children: c().filesize(a),
+                                children: o().filesize(a),
                             }),
                         ],
                     }),

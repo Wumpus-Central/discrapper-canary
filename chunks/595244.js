@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => b, Sm: () => w, bc: () => F, dR: () => M, gz: () => x, i8: () => k, jX: () => P, xb: () => G }),
+(n.d(t, { Ay: () => v, Sm: () => w, bc: () => F, dR: () => M, gz: () => x, i8: () => k, jX: () => P, xb: () => G }),
     n(142703),
     n(321073));
 var i = n(477900),
@@ -28,23 +28,23 @@ var i = n(477900),
     L = n(321987),
     y = n(652215),
     D = n(105292),
-    v = n(6612);
-function b(e) {
+    b = n(6612);
+function v(e) {
     let { message: t, footer: n, headerClassName: r, illustration: a, showsCloseWindowText: l, spinner: o } = e;
     return (
         (0, f.HU)({ location: D.intl.string(D.t["3S2494"]) }),
         (0, i.jsxs)("div", {
-            className: v.iE,
+            className: b.iE,
             children: [
                 o ? (0, i.jsx)(_.y, {}) : null,
-                null != a ? a : (0, i.jsx)("div", { className: s()(v.wx, r) }),
-                (0, i.jsx)(E.D, { variant: "heading-lg/semibold", className: v.Qq, children: t }),
+                null != a ? a : (0, i.jsx)("div", { className: s()(b.wx, r) }),
+                (0, i.jsx)(E.D, { variant: "heading-lg/semibold", className: b.Qq, children: t }),
                 null != n ? n : null,
                 l
                     ? (0, i.jsx)(A.E, {
-                          variant: "text-sm/normal",
+                          variant: "body-sm/normal",
                           color: "text-muted",
-                          className: v.lO,
+                          className: b.lO,
                           children: D.intl.string(D.t["k7J/w/"]),
                       })
                     : null,
@@ -53,7 +53,7 @@ function b(e) {
     );
 }
 function P(e) {
-    return (0, i.jsx)(b, { ...e, headerClassName: v.nQ });
+    return (0, i.jsx)(v, { ...e, headerClassName: b.nQ });
 }
 function M(e) {
     let { guild: t, application: n, ...a } = e,
@@ -117,8 +117,8 @@ function U(e) {
                     : D.intl.string(D.t["Dp+rgP"]),
             [n, t],
         ),
-        o = (0, i.jsx)(A.E, { variant: "text-md/normal", className: v.OY, children: l });
-    return (0, i.jsx)(b, { message: s, footer: o, ...a, illustration: (0, i.jsx)(c.l, { alt: "", ariaHidden: !0 }) });
+        o = (0, i.jsx)(A.E, { variant: "body-md/normal", className: b.OY, children: l });
+    return (0, i.jsx)(v, { message: s, footer: o, ...a, illustration: (0, i.jsx)(c.l, { alt: "", ariaHidden: !0 }) });
 }
 function w(e) {
     let { application: t, ...n } = e,
@@ -133,18 +133,18 @@ function w(e) {
         ...n,
         actions: [{ variant: "primary", text: D.intl.string(D.t["31Bci5"]), onClick: s }],
         children: (0, i.jsxs)("div", {
-            className: v.kV,
+            className: b.kV,
             children: [
                 (0, i.jsx)(h.Ay, {
                     mask: h.hW.SQUIRCLE,
-                    className: v.LR,
+                    className: b.LR,
                     children: (0, i.jsx)("img", {
                         alt: t.name,
                         src: C.Ay.getApplicationIconURL({ id: t.id, icon: t.icon }),
                     }),
                 }),
                 (0, i.jsxs)("div", {
-                    className: v.fv,
+                    className: b.fv,
                     children: [
                         (0, i.jsx)(E.D, {
                             variant: "heading-xl/semibold",
@@ -152,7 +152,7 @@ function w(e) {
                             children: D.intl.format(D.t["1Q+p1k"], { appName: t.name }),
                         }),
                         (0, i.jsx)(A.E, {
-                            variant: "text-md/normal",
+                            variant: "body-md/normal",
                             color: "text-muted",
                             children: D.intl.format(D.t.Mr7x5U, { appName: t.name }),
                         }),
@@ -171,7 +171,7 @@ function G(e) {
     });
 }
 function x(e) {
-    return (0, i.jsx)(b, { ...e, headerClassName: v.gW });
+    return (0, i.jsx)(v, { ...e, headerClassName: b.gW });
 }
 function k() {
     let e = (0, o.zy)();

@@ -1,5 +1,5 @@
 e.exports = {
-    YS: "text-xs/medium_e7d73e",
+    hY: "body-xs/medium_e7d73e",
     tp: "table_e7d73e",
     qd: "tableHeader_e7d73e",
     bg: "tableBody_e7d73e",

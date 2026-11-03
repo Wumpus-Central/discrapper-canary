@@ -26,8 +26,8 @@ var i = n(477900),
     L = n(331322),
     y = n(683438),
     D = n(834730),
-    v = n(761508);
-function b(e) {
+    b = n(761508);
+function v(e) {
     let { groups: t, selectedStory: n, onStorySelect: a } = e,
         [s, l] = r.useState(""),
         o = r.useMemo(() => {
@@ -51,8 +51,8 @@ function b(e) {
                 }),
             }),
             0 === o.length
-                ? (0, i.jsx)(D.E, { variant: "text-sm/normal", color: "text-muted", children: "No results" })
-                : (0, i.jsx)(v.V, {
+                ? (0, i.jsx)(D.E, { variant: "body-sm/normal", color: "text-muted", children: "No results" })
+                : (0, i.jsx)(b.V, {
                       selectedItem: n,
                       orientation: "vertical",
                       onItemSelect: (e) => {
@@ -63,10 +63,10 @@ function b(e) {
                               r.Fragment,
                               {
                                   children: [
-                                      (0, i.jsx)(v.V.Header, { children: e.title }),
+                                      (0, i.jsx)(b.V.Header, { children: e.title }),
                                       e.stories.map((e) =>
                                           (0, i.jsx)(
-                                              v.V.Item,
+                                              b.V.Item,
                                               {
                                                   selectedItem: n,
                                                   id: e.id,
@@ -82,7 +82,7 @@ function b(e) {
                                               e.id,
                                           ),
                                       ),
-                                      t < o.length - 1 && (0, i.jsx)(v.V.Separator, {}),
+                                      t < o.length - 1 && (0, i.jsx)(b.V.Separator, {}),
                                   ],
                               },
                               e.title,
@@ -186,7 +186,7 @@ function H(e) {
                                           className: B.fJ,
                                           children: [
                                               (0, i.jsx)(D.E, {
-                                                  variant: "text-md/medium",
+                                                  variant: "body-md/medium",
                                                   color: "text-strong",
                                                   tag: "label",
                                                   children: a.label,
@@ -215,7 +215,7 @@ function H(e) {
                                   null == a.hint
                                       ? null
                                       : (0, i.jsx)(D.E, {
-                                            variant: "text-xs/normal",
+                                            variant: "body-xs/normal",
                                             color: "text-muted",
                                             className: B.Hy,
                                             children: a.hint,
@@ -601,7 +601,7 @@ function et(e) {
                                 className: B.pz,
                                 children:
                                     null != c
-                                        ? (0, i.jsx)(b, {
+                                        ? (0, i.jsx)(v, {
                                               groups: c.groups,
                                               selectedStory: a,
                                               onStorySelect: function (e) {

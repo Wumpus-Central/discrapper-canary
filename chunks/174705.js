@@ -18,8 +18,8 @@ var i = e(477900),
     S = e(295405),
     N = e(97352),
     P = e(174459),
-    L = e(24482),
-    b = e(580630),
+    b = e(24482),
+    L = e(580630),
     h = e(83617),
     E = e(615396),
     U = e(543767),
@@ -29,8 +29,8 @@ var i = e(477900),
     T = e(652215),
     k = e(105292);
 let v = (t) => {
-    let { daysLeft: n, premiumType: e, premiumSubscription: l, analyticsSource: v, onClose: w, transitionState: x } = t,
-        [R, D] = r.useState(!1),
+    let { daysLeft: n, premiumType: e, premiumSubscription: l, analyticsSource: v, onClose: w, transitionState: R } = t,
+        [x, D] = r.useState(!1),
         { analyticsLocations: O } = (0, y.Ay)(p.A.PREMIUM_UNCANCEL_MODAL),
         j = (0, u.bG)([C.default], () => {
             let t = C.default.getCurrentUser();
@@ -38,7 +38,7 @@ let v = (t) => {
         }),
         G = (0, u.bG)([S.A], () => (l?.paymentSourceId != null ? S.A.getPaymentSource(l.paymentSourceId) : null), [l]),
         W = l.items[0].planId,
-        B = (0, L.mH)(M.hd[W].skuId),
+        B = (0, b.mH)(M.hd[W].skuId),
         { priceOptions: K } = (0, I.A)({
             activeSubscription: null,
             skuIDs: [B],
@@ -59,19 +59,19 @@ let v = (t) => {
         X = z?.invoiceItems
             ?.find((t) => t.subscriptionPlanId === W)
             ?.discounts?.find((t) => t.type === m.iS.SUBSCRIPTION_PLAN)?.amount,
-        $ = null != F ? (0, L.y8)(F.id, !1, !1, K) : null,
-        J = null != $ && null != X ? (0, b.$g)($.amount - (X ?? 0), $.currency) : null,
-        { intervalType: Y, intervalCount: Z } = L.Ay.getInterval(W),
+        $ = null != F ? (0, b.y8)(F.id, !1, !1, K) : null,
+        J = null != $ && null != X ? (0, L.$g)($.amount - (X ?? 0), $.currency) : null,
+        { intervalType: Y, intervalCount: Z } = b.Ay.getInterval(W),
         q = e === M.PremiumTypes.TIER_1,
-        V = null != $ ? (0, b.$g)($.amount, $.currency) : null;
+        V = null != $ ? (0, L.$g)($.amount, $.currency) : null;
     return (r.useEffect(() => {
         P.default.track(T.HAw.OPEN_MODAL, { type: "Premium Uncancel Winback", source: v });
     }, [v]),
-    R)
+    x)
         ? (0, i.jsx)(c.a, {
               actions: [],
               onClose: w,
-              transitionState: x,
+              transitionState: R,
               title: "",
               children: (0, i.jsx)(f.M, {
                   activeSubscription: l,
@@ -90,7 +90,7 @@ let v = (t) => {
               preview:
                   null !== V
                       ? (0, i.jsx)(s.E, {
-                            variant: "text-sm/normal",
+                            variant: "body-sm/normal",
                             children: (function (t) {
                                 switch (Y) {
                                     case M.WT.YEAR:
@@ -130,7 +130,7 @@ let v = (t) => {
                       },
                   },
               ],
-              transitionState: x,
+              transitionState: R,
               children: (0, i.jsx)(_.l, {
                   currentUser: j,
                   premiumType: e,

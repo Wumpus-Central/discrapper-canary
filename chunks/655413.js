@@ -17,7 +17,7 @@ function c(e) {
         A = (0, a.j)({ shouldShow: h }),
         f = (0, i.jsx)("div", {
             className: o.Qs,
-            children: (0, i.jsx)(s.E, { variant: "text-md/medium", color: "text-strong", lineClamp: 1, children: t }),
+            children: (0, i.jsx)(s.E, { variant: "body-md/medium", color: "text-strong", lineClamp: 1, children: t }),
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [

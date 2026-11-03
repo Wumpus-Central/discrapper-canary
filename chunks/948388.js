@@ -21,8 +21,8 @@ function p(e) {
                       className: m.Ui,
                       children: [
                           (0, l.jsx)(u.A, { user: n, size: s._3.SIZE_44 }),
-                          (0, l.jsx)(o.E, { className: m.Xp, variant: "text-md/normal", children: c.Ay.getName(n) }),
-                          (0, l.jsx)(o.E, { className: m.Ik, variant: "text-md/normal", children: c.Ay.getUserTag(n) }),
+                          (0, l.jsx)(o.E, { className: m.Xp, variant: "body-md/normal", children: c.Ay.getName(n) }),
+                          (0, l.jsx)(o.E, { className: m.Ik, variant: "body-md/normal", children: c.Ay.getUserTag(n) }),
                       ],
                   }),
               }),

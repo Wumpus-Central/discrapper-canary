@@ -4,13 +4,13 @@ var e = n(477900),
     r = n(131937),
     l = n(862482),
     a = n(628284),
-    c = n(885574),
-    o = n(640238),
+    o = n(885574),
+    c = n(640238),
     d = n(97808),
     u = n(778712),
-    x = n(952270),
-    m = n(534514),
-    E = n(834730),
+    m = n(952270),
+    E = n(534514),
+    x = n(834730),
     I = n(192308),
     N = n(49229),
     g = n(754302),
@@ -30,13 +30,13 @@ function T() {
             (0, e.jsx)(g.B, {
                 title: R.intl.string(R.t["4ycGE0"]),
                 description: R.intl.string(R.t["5yfN+o"]),
-                icon: c.CircleInformationIcon,
+                icon: o.CircleInformationIcon,
             }),
         ],
     });
 }
 function O(t) {
-    let { user: i, guildId: a, channelId: c, onIgnore: g, onBlock: O, location: v = "ContextMenu", ...k } = t;
+    let { user: i, guildId: a, channelId: o, onIgnore: g, onBlock: O, location: v = "ContextMenu", ...y } = t;
     return (
         s.useLayoutEffect(
             () => () => {
@@ -44,18 +44,18 @@ function O(t) {
             },
             [v],
         ),
-        (0, e.jsx)(o.a, {
+        (0, e.jsx)(c.a, {
             confirmText: R.intl.string(R.t.ytCpKs),
             cancelText: R.intl.string(R.t["ETE/oC"]),
             onConfirm: () => {
-                (g?.(), N.A.ignoreUser(i.id, v, c ?? void 0), A.default.track(_.HAw.IGNORE_USER_CONFIRMED));
+                (g?.(), N.A.ignoreUser(i.id, v, o ?? void 0), A.default.track(_.HAw.IGNORE_USER_CONFIRMED));
             },
             onCancel: function () {
                 A.default.track(_.HAw.USER_REMEDIATION_ACTION, { action: p.p.CANCEL_IGNORE, location: v });
             },
             impression: { impressionName: r.ImpressionNames.IGNORE_USER_CONFIRMATION },
             confirmButtonColor: l.$n.Colors.BRAND,
-            ...k,
+            ...y,
             children: (0, e.jsxs)("div", {
                 className: C.kL,
                 children: [
@@ -70,18 +70,18 @@ function O(t) {
                                         src: i.getAvatarURL(void 0, 64),
                                         "aria-hidden": !0,
                                     }),
-                                    (0, e.jsx)("div", { className: C.Kk, children: (0, e.jsx)(x.EyeSlashIcon, {}) }),
+                                    (0, e.jsx)("div", { className: C.Kk, children: (0, e.jsx)(m.EyeSlashIcon, {}) }),
                                 ],
                             }),
                             (0, e.jsxs)("div", {
                                 children: [
-                                    (0, e.jsx)(m.D, {
+                                    (0, e.jsx)(E.D, {
                                         variant: "heading-xl/semibold",
                                         color: "text-strong",
-                                        children: R.intl.format(R.t["WrQD/Y"], { username: j.Ay.getName(a, c, i) }),
+                                        children: R.intl.format(R.t["WrQD/Y"], { username: j.Ay.getName(a, o, i) }),
                                     }),
-                                    (0, e.jsx)(E.E, {
-                                        variant: "text-md/medium",
+                                    (0, e.jsx)(x.E, {
+                                        variant: "body-md/medium",
                                         color: "text-default",
                                         children: R.intl.string(R.t.JKL1u1),
                                     }),
@@ -98,8 +98,8 @@ function O(t) {
                                 children: (0, e.jsx)(h.PQ, {
                                     title: R.intl.string(R.t.bwxY30),
                                     description: R.intl.string(R.t.NTnf1T),
-                                    titleVariant: "text-md/medium",
-                                    descriptionVariant: "text-xs/medium",
+                                    titleVariant: "body-md/medium",
+                                    descriptionVariant: "body-xs/medium",
                                     buttonText: R.intl.string(R.t.QdfUHE),
                                     onButtonPress: () => {
                                         (A.default.track(_.HAw.USER_REMEDIATION_ACTION, {
@@ -117,7 +117,7 @@ function O(t) {
                                                         ...n,
                                                         user: i,
                                                         guildId: a,
-                                                        channelId: c,
+                                                        channelId: o,
                                                         onBlock: O,
                                                         onIgnore: g,
                                                         location: v,
@@ -126,8 +126,8 @@ function O(t) {
                                     },
                                 }),
                             }),
-                            (0, e.jsx)(E.E, {
-                                variant: "text-sm/medium",
+                            (0, e.jsx)(x.E, {
+                                variant: "body-sm/medium",
                                 className: C.FV,
                                 children: R.intl.format(R.t.Hjvqr6, {
                                     articleLink: f.A.getArticleURL(_.MVz.STEALTH_REMEDIATION_FEATURE_GUIDE),

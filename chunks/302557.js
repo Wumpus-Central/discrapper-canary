@@ -9,23 +9,23 @@ var i = n(477900),
     c = n(319060),
     m = n(935462),
     h = n(559106),
-    x = n(933832),
-    u = n(534514),
+    u = n(933832),
+    x = n(534514),
     g = n(194117),
     j = n(834730),
     f = n(939249),
     p = n(957485),
     v = n(276293),
     N = n(825484),
-    C = n(821609),
-    b = n(430690),
+    b = n(821609),
+    C = n(430690),
     _ = n(788026),
-    E = n(444927),
-    S = n(47167),
-    A = n(713654),
-    I = n(915089),
-    k = n(236285),
-    y = n(69282),
+    y = n(444927),
+    E = n(47167),
+    S = n(713654),
+    A = n(915089),
+    I = n(236285),
+    k = n(69282),
     M = n(657048),
     T = n(95701),
     w = n(34457),
@@ -52,12 +52,12 @@ var q = n(417360),
     H = n(898612),
     $ = n(105292),
     V = n(397515);
-let W = (0, I.Ld)(),
-    Z = (0, I.Ld)(),
+let W = (0, A.Ld)(),
+    Z = (0, A.Ld)(),
     U = (0, R.xI)(c.A.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
 function X(e) {
     let { emojiId: t, emojiName: n, className: l } = e,
-        s = (0, a.bG)([k.Ay], () => (null != t ? k.Ay.getCustomEmojiById(t) : void 0));
+        s = (0, a.bG)([I.Ay], () => (null != t ? I.Ay.getCustomEmojiById(t) : void 0));
     return (0, i.jsx)(_.A, { emojiId: t, emojiName: n, animated: s?.animated ?? !1, className: l });
 }
 function Y(e) {
@@ -84,7 +84,7 @@ function Y(e) {
                     }),
                     (0, i.jsx)("div", {
                         className: V.Ew,
-                        children: (0, i.jsx)(x.CheckmarkLargeIcon, {
+                        children: (0, i.jsx)(u.CheckmarkLargeIcon, {
                             size: "md",
                             color: "currentColor",
                             className: V.pc,
@@ -103,7 +103,7 @@ function ee(e) {
         ? (0, i.jsxs)("div", {
               className: V.uW,
               children: [
-                  (0, i.jsx)(u.D, { variant: "heading-md/semibold", color: "text-strong", children: t }),
+                  (0, i.jsx)(x.D, { variant: "heading-sm/semibold", color: "text-strong", children: t }),
                   l.length - s.size > 1 &&
                       (0, i.jsx)("div", {
                           className: V.p_,
@@ -115,7 +115,7 @@ function ee(e) {
                               },
                               children: (0, i.jsx)(j.E, {
                                   color: "text-strong",
-                                  variant: "text-md/normal",
+                                  variant: "body-md/normal",
                                   children: n,
                               }),
                           }),
@@ -137,12 +137,12 @@ function ee(e) {
                                   children: [
                                       (0, i.jsx)(j.E, {
                                           color: "text-strong",
-                                          variant: "text-md/semibold",
+                                          variant: "body-md/semibold",
                                           children: (0, H.A)(e),
                                       }),
                                       (0, i.jsx)(j.E, {
                                           color: "interactive-text-default",
-                                          variant: "text-sm/normal",
+                                          variant: "body-sm/normal",
                                           children: e.description,
                                       }),
                                   ],
@@ -165,19 +165,19 @@ function et(e) {
             onClose: c,
         } = e,
         m = n.role_benefits.benefits,
-        [h, x] = l.useState(() => new Set(m)),
-        u = l.useMemo(() => m.filter(F.B1), [m]),
-        g = (0, q.A)(u),
+        [h, u] = l.useState(() => new Set(m)),
+        x = l.useMemo(() => m.filter(F.B1), [m]),
+        g = (0, q.A)(x),
         f = l.useMemo(() => m.filter(F.b1), [m]),
         p = l.useMemo(() => new Set(g.filter((e) => s.some((t) => t.ref_id === e.ref_id))), [g, s]),
         v = l.useMemo(() => new Set(f.filter((e) => r.some((t) => (0, o.A)(e, t)))), [r, f]);
     function N(e, t) {
-        x((n) => {
+        u((n) => {
             let i = new Set(n);
             return (t ? i.add(e) : i.delete(e), i);
         });
     }
-    function C(e) {
+    function b(e) {
         e.preventDefault();
         let t = m.filter((e) => h.has(e));
         (a(
@@ -187,19 +187,19 @@ function et(e) {
             c());
     }
     return (0, i.jsx)("form", {
-        onSubmit: C,
+        onSubmit: b,
         children: (0, i.jsxs)(d.a, {
             transitionState: t,
             onClose: c,
             title: $.intl.format($.t["7zpiYL"], { tierName: n.name }).toString(),
             actions: [
                 { variant: "secondary", text: $.intl.string($.t["ETE/oC"]), onClick: c },
-                { variant: "primary", text: $.intl.string($.t["27a21y"]), disabled: 0 === h.size, onClick: C },
+                { variant: "primary", text: $.intl.string($.t["27a21y"]), disabled: 0 === h.size, onClick: b },
             ],
             children: [
                 0 === g.length &&
                     0 === f.length &&
-                    (0, i.jsx)(j.E, { variant: "text-md/normal", children: $.intl.string($.t["I+16xv"]) }),
+                    (0, i.jsx)(j.E, { variant: "body-md/normal", children: $.intl.string($.t["I+16xv"]) }),
                 (0, i.jsx)(ee, {
                     title: $.intl.string($.t.S2kKzP),
                     selectAllText: $.intl.string($.t["5Q/fLO"]),
@@ -222,7 +222,7 @@ function et(e) {
 }
 function en(e) {
     let { guildId: t, role: n, channelCount: l, onSelect: s } = e,
-        r = (0, y.Xx)({ guildId: t, roleId: n.id, size: U });
+        r = (0, k.Xx)({ guildId: t, roleId: n.id, size: U });
     return (0, i.jsxs)(f.D, {
         className: V.xf,
         onClick: s,
@@ -245,13 +245,13 @@ function en(e) {
                 children: [
                     (0, i.jsx)(j.E, {
                         color: "text-strong",
-                        variant: "text-md/normal",
+                        variant: "body-md/normal",
                         className: V.__invalid_benefitTitle,
                         children: n.name,
                     }),
                     (0, i.jsx)(j.E, {
                         color: "text-default",
-                        variant: "text-sm/normal",
+                        variant: "body-sm/normal",
                         children: $.intl.format($.t["2KzH89"], { num: l }),
                     }),
                 ],
@@ -299,7 +299,7 @@ function ei(e) {
                   ),
               ),
           })
-        : (0, i.jsx)(j.E, { variant: "text-md/normal", children: $.intl.string($.t.u09gKk) });
+        : (0, i.jsx)(j.E, { variant: "body-md/normal", children: $.intl.string($.t.u09gKk) });
 }
 function el(e) {
     let { onClose: t, guildId: n, onSelect: l } = e,
@@ -311,9 +311,9 @@ function el(e) {
                   (0, i.jsxs)(m.rQ, {
                       "data-migration-pending": !0,
                       children: [
-                          (0, i.jsx)(u.D, {
+                          (0, i.jsx)(x.D, {
                               id: W,
-                              variant: "heading-md/semibold",
+                              variant: "heading-sm/semibold",
                               children: $.intl.string($.t["3JrZ/P"]),
                           }),
                           (0, i.jsx)(m.s_, { "data-migration-pending": !0, className: V.iT, onClick: t }),
@@ -332,7 +332,7 @@ function es(e) {
         o = l.useRef(s);
     null != s && (o.current = s);
     let d = s ?? o.current,
-        c = (0, E.A)(() => {
+        c = (0, y.A)(() => {
             let e = B.A.getCategories(n);
             return e._categories.flatMap((t) =>
                 e[t.channel.id]
@@ -347,7 +347,7 @@ function es(e) {
             );
         }),
         h = l.useMemo(() => Q(c, d), [c, d]),
-        [x, f] = l.useState(() => new Set(h.map((e) => e.id)));
+        [u, f] = l.useState(() => new Set(h.map((e) => e.id)));
     function p(e, t) {
         f((n) => {
             let i = new Set(n);
@@ -356,16 +356,16 @@ function es(e) {
     }
     return (0, i.jsxs)("form", {
         onSubmit: function (e) {
-            (e.preventDefault(), a(h.map((e) => e.id).filter((e) => x.has(e))), t());
+            (e.preventDefault(), a(h.map((e) => e.id).filter((e) => u.has(e))), t());
         },
         className: V.ID,
         children: [
             (0, i.jsxs)(m.rQ, {
                 "data-migration-pending": !0,
                 children: [
-                    (0, i.jsx)(u.D, {
+                    (0, i.jsx)(x.D, {
                         id: Z,
-                        variant: "heading-md/semibold",
+                        variant: "heading-sm/semibold",
                         children: $.intl.format($.t.iuPodG, { roleName: d.name }),
                     }),
                     (0, i.jsx)(m.s_, { "data-migration-pending": !0, className: V.iT, onClick: t }),
@@ -380,13 +380,13 @@ function es(e) {
                             className: V.p_,
                             children: (0, i.jsx)(Y, {
                                 icon: (0, i.jsx)(g.f, { size: "md", color: "currentColor" }),
-                                checked: x.size === h.length,
+                                checked: u.size === h.length,
                                 onChange: function (e) {
                                     for (let t of h) p(t.id, e);
                                 },
                                 children: (0, i.jsx)(j.E, {
                                     color: "text-strong",
-                                    variant: "text-md/normal",
+                                    variant: "body-md/normal",
                                     children: $.intl.string($.t["5Q/fLO"]),
                                 }),
                             }),
@@ -394,7 +394,7 @@ function es(e) {
                     (0, i.jsx)("div", {
                         className: V.p_,
                         children: h.map((e) => {
-                            let t = (0, A._U)(e.type) ?? v.N;
+                            let t = (0, S._U)(e.type) ?? v.N;
                             return (0, i.jsx)(
                                 Y,
                                 {
@@ -407,13 +407,13 @@ function es(e) {
                                             height: "100%",
                                         }),
                                     }),
-                                    checked: x.has(e.id),
+                                    checked: u.has(e.id),
                                     onChange: (t) => p(e.id, t),
                                     children: (0, i.jsx)(j.E, {
                                         color: "text-strong",
-                                        variant: "text-md/normal",
+                                        variant: "body-md/normal",
                                         className: V.__invalid_benefitTitle,
-                                        children: (0, S.m1)(e, O.default, D.A),
+                                        children: (0, E.m1)(e, O.default, D.A),
                                     }),
                                 },
                                 e.id,
@@ -427,8 +427,8 @@ function es(e) {
                 children: (0, i.jsxs)(N.e, {
                     direction: "horizontal-reverse",
                     children: [
-                        (0, i.jsx)(C.$, { variant: "primary", text: $.intl.string($.t["1j8Sow"]), type: "submit" }),
-                        (0, i.jsx)(C.$, { variant: "secondary", text: $.intl.string($.t["ETE/oC"]), onClick: r }),
+                        (0, i.jsx)(b.$, { variant: "primary", text: $.intl.string($.t["1j8Sow"]), type: "submit" }),
+                        (0, i.jsx)(b.$, { variant: "secondary", text: $.intl.string($.t["ETE/oC"]), onClick: r }),
                     ],
                 }),
             }),
@@ -443,13 +443,13 @@ function er(e) {
         transitionState: t,
         "aria-labelledby": null == a ? W : Z,
         parentComponent: "ImportBenefitsModal",
-        children: (0, i.jsxs)(b.t, {
+        children: (0, i.jsxs)(C.t, {
             contentDisplay: "flex",
             activeSlide: +(null != a),
             width: 440,
             children: [
-                (0, i.jsx)(b.q, { id: 0, children: (0, i.jsx)(el, { onClose: s, guildId: n, onSelect: o }) }),
-                (0, i.jsx)(b.q, {
+                (0, i.jsx)(C.q, { id: 0, children: (0, i.jsx)(el, { onClose: s, guildId: n, onSelect: o }) }),
+                (0, i.jsx)(C.q, {
                     id: 1,
                     children: (0, i.jsx)(es, {
                         onClose: s,

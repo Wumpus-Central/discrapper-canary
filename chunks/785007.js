@@ -76,9 +76,9 @@ function I(e) {
                 (0, i.jsxs)("div", {
                     className: s()(A.pq, d),
                     children: [
-                        (0, i.jsx)(u.E, { variant: "text-md/medium", className: c, color: "none", children: r.name }),
+                        (0, i.jsx)(u.E, { variant: "body-md/medium", className: c, color: "none", children: r.name }),
                         null != r.desc && "" !== r.desc
-                            ? (0, i.jsx)(u.E, { color: "none", variant: "text-sm/normal", children: r.desc })
+                            ? (0, i.jsx)(u.E, { color: "none", variant: "body-sm/normal", children: r.desc })
                             : null,
                     ],
                 }),

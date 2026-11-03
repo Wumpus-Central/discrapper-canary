@@ -26,8 +26,8 @@ var i = n(477900),
     L = n(806931),
     y = n(652215),
     D = n(105292),
-    v = n(552244);
-function b(e, t) {
+    b = n(552244);
+function v(e, t) {
     switch (e) {
         case L.lp.ACTIVITY:
             return D.intl.formatToPlainString(D.t.TCM94S, { numUsers: t });
@@ -39,15 +39,15 @@ function b(e, t) {
 }
 function P(e) {
     let { users: t, disableInteraction: n, guildId: r, participantType: a, channelId: l, handleUserContextMenu: o } = e,
-        d = b(a, t.length);
+        d = v(a, t.length);
     return (0, i.jsx)(u.l, {
         "aria-label": d,
-        className: v.XM,
+        className: b.XM,
         children: (0, i.jsxs)(_.Ch, {
-            className: v.XG,
+            className: b.XG,
             disableFocusRingScope: !0,
             children: [
-                (0, i.jsx)(E.D, { variant: "heading-deprecated-12/semibold", className: v.o, children: d }),
+                (0, i.jsx)(E.D, { variant: "body-xs/semibold", className: b.o, children: d }),
                 (0, i.jsx)("div", {
                     children: t.map((e) =>
                         (0, i.jsx)(
@@ -57,8 +57,8 @@ function P(e) {
                                 guildId: r ?? void 0,
                                 channelId: l,
                                 nick: R.Ay.getNickname(r, l, e),
-                                className: s()(v.kp, { [v.YR]: n }),
-                                textClassName: v.vc,
+                                className: s()(b.kp, { [b.YR]: n }),
+                                textClassName: b.vc,
                                 disablePopout: n,
                                 onContextMenu: (t) => (n ? null : o(t, e)),
                             },
@@ -72,7 +72,7 @@ function P(e) {
 }
 function M(e) {
     let { users: t, guildId: n, channelId: r, maxVisibleUsers: a = 3, className: l, participantType: o } = e,
-        d = b(o, t.length),
+        d = v(o, t.length),
         c =
             t.length < a
                 ? D.intl.format(D.t["A+bT9O"], {
@@ -89,9 +89,9 @@ function M(e) {
     return (0, i.jsx)(A.m, {
         text: c,
         children: (0, i.jsxs)("div", {
-            className: s()(v.Mj, l),
+            className: s()(b.Mj, l),
             children: [
-                (0, i.jsx)(h.EyeIcon, { size: "xs", color: "currentColor", className: v.N0 }),
+                (0, i.jsx)(h.EyeIcon, { size: "xs", color: "currentColor", className: b.N0 }),
                 (0, i.jsx)("span", { "aria-hidden": "true", children: t.length }),
             ],
         }),
@@ -111,7 +111,7 @@ function w(e) {
         h = r.useRef(null),
         S = (0, g.A)(),
         [R, D] = r.useState(!1),
-        b = r.useRef(new c.J_(150, () => D(!1))),
+        v = r.useRef(new c.J_(150, () => D(!1))),
         w = (0, d.yK)(
             [N.A, C.default],
             () => {
@@ -128,13 +128,13 @@ function w(e) {
             [l],
         );
     r.useEffect(() => {
-        S && (b.current.cancel(), D(!1));
+        S && (v.current.cancel(), D(!1));
     }, [S]);
     let G = r.useCallback(() => {
-            (b.current.cancel(), D(!0));
+            (v.current.cancel(), D(!0));
         }, []),
         x = r.useCallback(() => {
-            b.current.delay();
+            v.current.delay();
         }, []),
         k = r.useCallback(
             (e, t) => {
@@ -201,14 +201,14 @@ function w(e) {
         .map((e) =>
             (0, i.jsx)(
                 f.eu,
-                { src: e.getAvatarURL(a, 24), "aria-label": e.username, size: I._3.SIZE_24, className: v.lJ },
+                { src: e.getAvatarURL(a, 24), "aria-label": e.username, size: I._3.SIZE_24, className: b.lJ },
                 e.id,
             ),
         )
         .value();
     return (
         w.length > A &&
-            (F[F.length - 1] = (0, i.jsxs)("div", { className: v.ju, children: ["+", w.length - A + 1] }, "overflow")),
+            (F[F.length - 1] = (0, i.jsxs)("div", { className: b.ju, children: ["+", w.length - A + 1] }, "overflow")),
         (0, i.jsx)(T.A, {
             section: y.JJy.STREAM_VIEWER_POPOUT,
             children: (0, i.jsx)("div", {
@@ -227,7 +227,7 @@ function w(e) {
                         }),
                     shouldShow: R && !S,
                     position: "top",
-                    children: () => (0, i.jsx)("div", { ref: h, className: s()(v.Mj, u), children: F }),
+                    children: () => (0, i.jsx)("div", { ref: h, className: s()(b.Mj, u), children: F }),
                 }),
             }),
         })

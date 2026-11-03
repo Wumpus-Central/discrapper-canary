@@ -1,7 +1,7 @@
 (d.r(s), d.d(s, { default: () => k }));
 var i = d(477900),
-    t = d(582128),
-    a = d(17928),
+    a = d(582128),
+    t = d(17928),
     l = d(305866),
     r = d(534514),
     n = d(834730),
@@ -14,9 +14,9 @@ var i = d(477900),
     f = d(183555),
     E = d(47675),
     P = d(999291),
-    x = d(249790),
-    j = d(946356),
-    m = d(254828),
+    j = d(249790),
+    m = d(946356),
+    x = d(254828),
     I = d(783123),
     _ = d(518477),
     p = d(996988),
@@ -32,21 +32,21 @@ function k(e) {
             roleId: b,
             openedAt: g,
             onHide: D,
-            newAnalyticsLocations: C = [],
-            disableAutoFocus: T = !1,
-            onClickContainer: y,
+            newAnalyticsLocations: y = [],
+            disableAutoFocus: C = !1,
+            onClickContainer: T,
         } = e,
-        F = (0, a.bG)([A.A], () => A.A.isBlocked(s.id)),
-        { analyticsLocations: W } = (0, u.Ay)([...C, F ? h.A.BLOCKED_PROFILE_POPOUT : h.A.IGNORED_PROFILE_POPOUT]),
+        F = (0, t.bG)([A.A], () => A.A.isBlocked(s.id)),
+        { analyticsLocations: W } = (0, u.Ay)([...y, F ? h.A.BLOCKED_PROFILE_POPOUT : h.A.IGNORED_PROFILE_POPOUT]),
         B = (0, f.pb)({ layout: "POPOUT", userId: s.id, guildId: d, channelId: v, messageId: R, roleId: b }),
-        G = t.useRef(null),
+        G = a.useRef(null),
         U = (0, P.Ay)(s.id, d);
     ((0, O.A)(W, U, _.R7.POPOUT),
-        t.useEffect(() => {
+        a.useEffect(() => {
             k?.(G?.current);
         }, [G, k]));
     let S = F ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
-        V = T ? "div" : l.l;
+        V = C ? "div" : l.l;
     return (0, i.jsx)(u.f5, {
         value: W,
         children: (0, i.jsx)(f.of, {
@@ -58,8 +58,8 @@ function k(e) {
             children: (0, i.jsx)(V, {
                 ref: G,
                 "aria-label": s.username,
-                onClick: y,
-                children: (0, i.jsx)(j.A, {
+                onClick: T,
+                children: (0, i.jsx)(m.A, {
                     user: s,
                     displayProfile: U,
                     themeType: p.d.POPOUT,
@@ -78,13 +78,13 @@ function k(e) {
                                     (0, i.jsxs)("div", {
                                         className: L.N1,
                                         children: [
-                                            (0, i.jsx)(x.A, { user: s, guildId: d }),
+                                            (0, i.jsx)(j.A, { user: s, guildId: d }),
                                             (0, i.jsx)(r.D, {
                                                 variant: "heading-lg/semibold",
                                                 children: N.intl.string(N.t.b33pLD),
                                             }),
                                             (0, i.jsx)(n.E, {
-                                                variant: "text-sm/medium",
+                                                variant: "body-sm/medium",
                                                 children: N.intl.format(F ? N.t["8F+WNz"] : N.t["/cZp5s"], {
                                                     username: o.Ay.getName(d, v, s),
                                                 }),
@@ -100,7 +100,7 @@ function k(e) {
                                                     (D(), (0, E.Wn)({ action: S, analyticsLocations: W, ...B }));
                                                 },
                                             }),
-                                            (0, i.jsx)(m.A, {
+                                            (0, i.jsx)(x.A, {
                                                 userId: s.id,
                                                 onClick: () => {
                                                     (D(),

@@ -15,19 +15,19 @@ var s = n(477900),
     p = n(438437),
     g = n(306417),
     A = n(105292),
-    f = n(588466);
-function j(e) {
+    y = n(588466);
+function f(e) {
     let { didSelfVote: t, label: n, percentage: i } = e;
     return (0, s.jsxs)("div", {
-        className: f.AA,
+        className: y.AA,
         children: [
             t && (0, s.jsx)(w.s, { children: A.intl.string(A.t["8DAM+5"]) }),
-            (0, s.jsxs)(u.E, { variant: "text-md/semibold", color: "none", children: [i, "%"] }),
-            (0, s.jsx)(u.E, { variant: "text-xs/semibold", color: "none", children: n }),
+            (0, s.jsxs)(u.E, { variant: "body-md/semibold", color: "none", children: [i, "%"] }),
+            (0, s.jsx)(u.E, { variant: "body-xs/semibold", color: "none", children: n }),
         ],
     });
 }
-function S(e) {
+function j(e) {
     let { answer: t, isExpired: n, myAvatarUrl: i, canShowVoteCounts: a } = e,
         l = !0 === t.isSelected,
         o = !0 === t.didSelfVote,
@@ -35,42 +35,42 @@ function S(e) {
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(g.Dt, {
-                attachmentClassName: r()(f.oh, { [f.Wx]: a }),
-                emojiClassName: f.Zg,
+                attachmentClassName: r()(y.oh, { [y.Wx]: a }),
+                emojiClassName: y.Zg,
                 media: t.pollMedia,
-                fallback: (0, s.jsx)("div", { className: r()(f.oh, f.nb) }),
+                fallback: (0, s.jsx)("div", { className: r()(y.oh, y.nb) }),
             }),
-            l && (0, s.jsx)(g.Vx, { size: 40, isVictor: c, isExpired: n, className: f.Dt }),
+            l && (0, s.jsx)(g.Vx, { size: 40, isVictor: c, isExpired: n, className: y.Dt }),
             a &&
                 (0, s.jsxs)(s.Fragment, {
                     children: [
-                        (0, s.jsx)(j, {
+                        (0, s.jsx)(f, {
                             didSelfVote: o,
                             percentage: t.votesPercentage,
                             label: t.votes,
                             myAvatarUrl: o ? i : void 0,
                         }),
-                        ((!n && o) || c) && (0, s.jsx)(g.Vx, { size: 18, isVictor: c, isExpired: n, className: f.Po }),
+                        ((!n && o) || c) && (0, s.jsx)(g.Vx, { size: 18, isVictor: c, isExpired: n, className: y.Po }),
                     ],
                 }),
         ],
     });
 }
-function y(e) {
+function b(e) {
     let { isExpired: t, myAvatarUrl: n, answersInteraction: i, canShowVoteCounts: a, ...l } = e;
     return (0, s.jsx)(g.Fh, {
-        className: f.ry,
-        answerClassName: r()(f.ZF, { [f.EK]: i !== p.CQ.LIST }),
+        className: y.ry,
+        answerClassName: r()(y.ZF, { [y.EK]: i !== p.CQ.LIST }),
         myAvatarUrl: n,
         answersInteraction: i,
         renderAnswerContent: (e) =>
-            (0, s.jsx)(S, { answer: e, isExpired: t, myAvatarUrl: n, answersInteraction: i, canShowVoteCounts: a }),
+            (0, s.jsx)(j, { answer: e, isExpired: t, myAvatarUrl: n, answersInteraction: i, canShowVoteCounts: a }),
         ...l,
     });
 }
-var v = n(290794),
-    C = n(789646),
-    b = n(29477),
+var S = n(290794),
+    v = n(789646),
+    C = n(29477),
     N = n(615300),
     E = n(866665),
     I = n(717421),
@@ -81,32 +81,32 @@ var v = n(290794),
 function L(e) {
     let { percentage: t, label: n, canShowVoterDetails: a, answerId: r } = e,
         l = (0, T.GV)(),
-        { channelId: o, messageId: c } = (0, v.Tu)(),
+        { channelId: o, messageId: c } = (0, S.Tu)(),
         [h, m] = i.useState(""),
         [p, g] = i.useState(!1),
         A = "" !== h && p,
-        f = i.useCallback(() => {
+        y = i.useCallback(() => {
             m((0, V.$m)(c, o, r));
         }, [c, o, r]),
+        f = i.useCallback(() => {
+            (y(), g(!0));
+        }, [y]),
         j = i.useCallback(() => {
-            (f(), g(!0));
-        }, [f]),
-        S = i.useCallback(() => {
             g(!1);
         }, []),
-        y = i.useCallback(() => {
+        b = i.useCallback(() => {
             (0, x.e)({ channelId: o, messageId: c, answerId: r });
         }, [o, c, r]);
     return (
         i.useEffect(() => {
             if (p)
                 return (
-                    _.A.addReactChangeListener(f),
+                    _.A.addReactChangeListener(y),
                     () => {
-                        _.A.removeReactChangeListener(f);
+                        _.A.removeReactChangeListener(y);
                     }
                 );
-        }, [p, f]),
+        }, [p, y]),
         (0, s.jsxs)("div", {
             className: k.AA,
             children: [
@@ -116,7 +116,7 @@ function L(e) {
                               "" !== h
                                   ? (0, s.jsx)(E.m, {
                                         __unsupportedReactNodeAsText: (0, s.jsx)(u.E, {
-                                            variant: "text-sm/normal",
+                                            variant: "body-sm/normal",
                                             color: "text-muted",
                                             scaleFontToUserSetting: !0,
                                             children: h,
@@ -124,38 +124,38 @@ function L(e) {
                                         forceOpen: A,
                                         "aria-label": !1,
                                         children: (0, s.jsx)(d.Q, {
-                                            onMouseEnter: j,
-                                            onMouseLeave: S,
-                                            onFocus: j,
-                                            onBlur: S,
-                                            onClick: y,
+                                            onMouseEnter: f,
+                                            onMouseLeave: j,
+                                            onFocus: f,
+                                            onBlur: j,
+                                            onClick: b,
                                             "aria-describedby": A ? l : void 0,
                                             text: n,
                                             variant: "secondary",
-                                            textVariant: "text-xs/semibold",
+                                            textVariant: "body-xs/semibold",
                                         }),
                                     })
                                   : (0, s.jsx)(d.Q, {
-                                        onMouseEnter: j,
-                                        onMouseLeave: S,
-                                        onFocus: j,
-                                        onBlur: S,
-                                        onClick: y,
+                                        onMouseEnter: f,
+                                        onMouseLeave: j,
+                                        onFocus: f,
+                                        onBlur: j,
+                                        onClick: b,
                                         text: n,
                                         variant: "secondary",
-                                        textVariant: "text-xs/semibold",
+                                        textVariant: "body-xs/semibold",
                                     }),
                               A && (0, s.jsx)(w.s, { id: l, children: h }),
                           ],
                       })
                     : (0, s.jsx)(u.E, {
-                          variant: "text-xs/semibold",
+                          variant: "body-xs/semibold",
                           color: "none",
                           scaleFontToUserSetting: !0,
                           children: n,
                       }),
                 (0, s.jsxs)(u.E, {
-                    variant: "text-md/semibold",
+                    variant: "body-md/semibold",
                     color: "none",
                     scaleFontToUserSetting: !0,
                     children: [t, "%"],
@@ -174,7 +174,7 @@ function M(e) {
             },
             "animate-always",
         );
-    return (0, s.jsx)(b.animated.span, { className: k.an, style: i, "aria-hidden": !0 });
+    return (0, s.jsx)(C.animated.span, { className: k.an, style: i, "aria-hidden": !0 });
 }
 function R(e) {
     let { answersInteraction: t, isSelected: n, didSelfVote: i, isVictor: a, isExpired: r, className: o } = e;
@@ -203,7 +203,7 @@ function F(e) {
             null != t.pollMedia.emoji && (0, s.jsx)(g.Fb, { className: k.Zg, emoji: t.pollMedia.emoji }),
             (0, s.jsx)(u.E, {
                 className: k.Pf,
-                variant: "text-sm/semibold",
+                variant: "body-sm/semibold",
                 color: "none",
                 scaleFontToUserSetting: !0,
                 children: t.pollMedia.text,
@@ -249,7 +249,7 @@ var U = n(984778);
 function B(e) {
     let { media: t } = e;
     return (0, s.jsx)(c.D, {
-        variant: "text-md/medium",
+        variant: "body-md/medium",
         className: U.b1,
         scaleFontToUserSetting: !0,
         children: t.text,
@@ -261,16 +261,16 @@ function D(e) {
         className: r()(U.ez, l),
         children: [
             a
-                ? (0, s.jsx)(d.Q, { text: t, onClick: i, variant: "secondary", textVariant: "text-sm/medium" })
+                ? (0, s.jsx)(d.Q, { text: t, onClick: i, variant: "secondary", textVariant: "body-sm/medium" })
                 : (0, s.jsx)(u.E, {
-                      variant: "text-sm/normal",
+                      variant: "body-sm/normal",
                       color: "text-muted",
                       scaleFontToUserSetting: !0,
                       children: t,
                   }),
             null != n &&
                 (0, s.jsx)(u.E, {
-                    variant: "text-sm/normal",
+                    variant: "body-sm/normal",
                     color: "text-muted",
                     scaleFontToUserSetting: !0,
                     children: n,
@@ -280,7 +280,7 @@ function D(e) {
 }
 function W(e) {
     let { action: t, channelId: n, messageId: a, isInteractive: r, className: l } = e,
-        { actionButtonRef: o, manageFocusOnAction: c } = (0, C.Mg)(),
+        { actionButtonRef: o, manageFocusOnAction: c } = (0, v.Mg)(),
         u = i.useCallback(async () => {
             t?.type != null &&
                 (await x.A.handlePollActionTapped({ channelId: n, messageId: a, type: t.type }), c(t.type));
@@ -306,7 +306,7 @@ function W(e) {
                   onClick: u,
                   text: t.label,
                   variant: "secondary",
-                  textVariant: "text-sm/medium",
+                  textVariant: "body-sm/medium",
               })
             : (0, s.jsx)(D, {
                   buttonLabel: t.label,
@@ -319,7 +319,7 @@ function W(e) {
 function P(e) {
     let t,
         { message: n, poll: i, className: a } = e,
-        c = (0, v.hd)(i.containerStyle),
+        c = (0, S.hd)(i.containerStyle),
         d =
             ((t = {
                 answers: i.answers,
@@ -333,7 +333,7 @@ function P(e) {
             }),
             (0, l.YW)(i.layoutType)
                 .with(o.Z.DEFAULT, () => (0, s.jsx)(O, { ...t }))
-                .with(o.Z.IMAGE_ONLY_ANSWERS, () => (0, s.jsx)(y, { ...t }))
+                .with(o.Z.IMAGE_ONLY_ANSWERS, () => (0, s.jsx)(b, { ...t }))
                 .otherwise(() => null));
     return null == d
         ? null
@@ -347,7 +347,7 @@ function P(e) {
                               (0, s.jsx)(B, { media: i.question }),
                               null != i.promptLabel &&
                                   (0, s.jsx)(u.E, {
-                                      variant: "text-sm/normal",
+                                      variant: "body-sm/normal",
                                       color: "text-muted",
                                       className: U.J1,
                                       scaleFontToUserSetting: !0,
@@ -381,9 +381,9 @@ function P(e) {
 }
 function Q(e) {
     let { message: t, poll: n, className: i } = e;
-    return (0, s.jsx)(v.y5, {
+    return (0, s.jsx)(S.y5, {
         message: t,
         poll: n,
-        children: (0, s.jsx)(C.RZ, { children: (0, s.jsx)(P, { message: t, poll: n, className: i }) }),
+        children: (0, s.jsx)(v.RZ, { children: (0, s.jsx)(P, { message: t, poll: n, className: i }) }),
     });
 }

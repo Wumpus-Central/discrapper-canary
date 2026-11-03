@@ -19,9 +19,9 @@ var l = n(477900),
     _ = n(65238),
     C = n(773669),
     y = n(975571),
-    S = n(304210),
-    I = n(324157),
-    b = n(480750),
+    b = n(304210),
+    S = n(324157),
+    I = n(480750),
     A = n(727142);
 let j = function (e) {
     let { text: t, icon: n, indicatorColor: r } = e;
@@ -36,7 +36,7 @@ let j = function (e) {
                     children: (0, l.jsx)("circle", { cx: "4", cy: "4", r: "3.5", fill: r }),
                 }),
             null != n && (0, l.jsx)(n, { size: "xxs", color: "currentColor" }),
-            (0, l.jsx)(c.E, { variant: "text-xs/medium", color: "none", children: t }),
+            (0, l.jsx)(c.E, { variant: "body-xs/medium", color: "none", children: t }),
         ],
     });
 };
@@ -140,14 +140,14 @@ let V = { [v.RB.LIGHT]: "theme-light", [v.RB.DARK]: "theme-dark" },
     K = { [v.RB.LIGHT]: "overlay-secondary", [v.RB.DARK]: "overlay-primary" },
     W = v.RB.DARK;
 function z(e, t, n) {
-    let l = r.useCallback((n) => (0, b.h)(n, e, t), [e, t]);
+    let l = r.useCallback((n) => (0, I.h)(n, e, t), [e, t]);
     return {
         handleInlineHelpTextClick: l,
         handleClaim: r.useCallback(() => {
-            ((0, b.l)(e, t, $.Z.CLAIM_BUTTON_CLICKED), n());
+            ((0, I.l)(e, t, $.Z.CLAIM_BUTTON_CLICKED), n());
         }, [e, t, n]),
         handleUseNowClick: r.useCallback(() => {
-            (0, b.l)(e, t, $.Z.USE_NOW_BUTTON_CLICKED);
+            (0, I.l)(e, t, $.Z.USE_NOW_BUTTON_CLICKED);
         }, [e, t]),
     };
 }
@@ -184,7 +184,7 @@ function Y(e) {
                 onClick: _,
                 children: [
                     null != v &&
-                        (0, l.jsx)(c.E, { variant: "text-md/semibold", color: "text-strong", children: (0, f.U)(v) }),
+                        (0, l.jsx)(c.E, { variant: "body-md/semibold", color: "text-strong", children: (0, f.U)(v) }),
                     null != m && (0, l.jsx)(j, { icon: u.ClockIcon, text: m }),
                     (0, l.jsx)(w, {
                         promotionRewardStatus: t.rewardStatus,
@@ -210,8 +210,8 @@ function X(e) {
             backgroundUrl: v,
             title: _,
             description: C,
-            progressText: S,
-            timeLeftText: I,
+            progressText: b,
+            timeLeftText: S,
             contentThemeClassName: A,
             rewardProduct: k,
             claimRewardButtonVariant: N,
@@ -222,7 +222,7 @@ function X(e) {
         B = null != O && "" !== O ? y.A.getArticleURL(O) : null,
         { handleInlineHelpTextClick: P, handleClaim: H, handleUseNowClick: U } = z(t, n, M),
         G = r.useCallback(() => {
-            null != B && ((0, b.l)(t, n, $.Z.INFO_BUTTON_CLICKED), (0, p.A)(B));
+            null != B && ((0, I.l)(t, n, $.Z.INFO_BUTTON_CLICKED), (0, p.A)(B));
         }, [t, n, B]);
     return (0, l.jsxs)(o.B, {
         direction: "horizontal",
@@ -233,7 +233,7 @@ function X(e) {
         className: a()(F.N, A),
         style: { backgroundImage: `url(${v})` },
         children: [
-            (0, l.jsx)(T, { assetPath: s, progress: i, progressText: S, progressColor: x }),
+            (0, l.jsx)(T, { assetPath: s, progress: i, progressText: b, progressColor: x }),
             (0, l.jsxs)(o.B, {
                 direction: "vertical",
                 gap: 10,
@@ -253,7 +253,7 @@ function X(e) {
                             }),
                             null != C &&
                                 (0, l.jsx)(c.E, {
-                                    variant: "text-sm/medium",
+                                    variant: "body-sm/medium",
                                     color: "text-subtle",
                                     children: (0, f.U)(C),
                                 }),
@@ -265,8 +265,8 @@ function X(e) {
                         align: "center",
                         wrap: !0,
                         children: [
-                            null != S && (0, l.jsx)(j, { text: S, indicatorColor: x ?? L.W }),
-                            null != I && (0, l.jsx)(j, { icon: u.ClockIcon, text: I }),
+                            null != b && (0, l.jsx)(j, { text: b, indicatorColor: x ?? L.W }),
+                            null != S && (0, l.jsx)(j, { icon: u.ClockIcon, text: S }),
                         ],
                     }),
                 ],
@@ -307,7 +307,7 @@ function q(e) {
     let { variant: t, surface: n, promotion: s, collectAndClaim: a, rewardProduct: o, isClaiming: c, onClaim: u } = e,
         d = (0, i.bG)([C.default], () => C.default.locale);
     r.useEffect(() => {
-        (0, b.l)(s, n, $.Z.PROMO_VIEWED);
+        (0, I.l)(s, n, $.Z.PROMO_VIEWED);
     }, [s.id, n]);
     let { shared: m } = a,
         { assets: g, style: h } = m.progressIndicator,
@@ -338,11 +338,11 @@ function q(e) {
         return null;
     let y = f.showProgressRing && null != _,
         {
-            title: S,
+            title: b,
             description: A,
             progressText: j,
             timeLeftText: L,
-        } = (0, I.MZ)({
+        } = (0, S.MZ)({
             promotion: s,
             promotionProgress: _,
             progressIndicator: m.progressIndicator,
@@ -357,7 +357,7 @@ function q(e) {
             progress: y ? _ : null,
             progressColor: h?.progressColor,
             backgroundUrl: g.backgroundUrl,
-            title: S,
+            title: b,
             description: A,
             progressText: j,
             timeLeftText: L,
@@ -372,7 +372,7 @@ function q(e) {
 }
 let Z = function (e) {
     let { variant: t, surface: n, collectionId: s } = e,
-        a = (0, S.ST)(),
+        a = (0, b.ST)(),
         { analyticsLocations: i } = (0, x.Ay)(),
         o = r.useCallback(
             (e) => {

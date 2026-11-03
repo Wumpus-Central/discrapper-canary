@@ -10010,8 +10010,8 @@
     --mobile-channel-drawer-spacing: 8px;
     --mobile-channel-header-icon-size: md;
     --mobile-channel-item-radius: 12px;
-    --mobile-channel-list-subtitle-text-style: text-xs/medium;
-    --mobile-channel-list-title-text-style: redesign/heading-18/semibold;
+    --mobile-channel-list-subtitle-text-style: body-xs/medium;
+    --mobile-channel-list-title-text-style: heading-md/semibold;
     --mobile-channel-name-channel-border-width: 1px;
     --mobile-channel-name-channel-icon-radius: 12px;
     --mobile-channel-safe-area-bottom-background: background-base-lower;
@@ -10083,16 +10083,16 @@
     --mobile-guild-folder-preview-icon-margin: 6px;
     --mobile-guild-folder-preview-opacity: 0.4px;
     --mobile-guild-item-selected-border-radius: 16px;
-    --mobile-header-title-text-style: heading-md/semibold;
+    --mobile-header-title-text-style: heading-sm/semibold;
     --mobile-input-field-border-width: 0px;
     --mobile-input-field-padding-vertical-sm-ios: 8px;
     --mobile-input-field-radius-lg: 16px;
     --mobile-input-field-radius-md: 12px;
     --mobile-input-field-radius-sm: 12px;
     --mobile-input-field-round-radius: 2147483647px;
-    --mobile-input-field-text-style-lg: text-md/medium;
-    --mobile-input-field-text-style-md: text-sm/medium;
-    --mobile-input-field-text-style-sm: text-xs/medium;
+    --mobile-input-field-text-style-lg: body-md/medium;
+    --mobile-input-field-text-style-md: body-sm/medium;
+    --mobile-input-field-text-style-sm: body-xs/medium;
     --mobile-jump-to-present-bottom-spacing: 12px;
     --mobile-jump-to-present-button-size: 40px;
     --mobile-jump-to-present-icon-size: 20px;
@@ -10107,14 +10107,14 @@
     --mobile-media-keyboard-button-icon-color-active: icon-default;
     --mobile-media-keyboard-button-padding: 0px;
     --mobile-media-keyboard-button-text-color-active: text-default;
-    --mobile-media-keyboard-button-text-variant: text-xs/semibold;
+    --mobile-media-keyboard-button-text-variant: body-xs/semibold;
     --mobile-media-keyboard-send-vertical-inset: 0px;
     --mobile-messages-header-button-gap: 8px;
     --mobile-messages-header-button-layout: row;
     --mobile-messages-header-padding-bottom: 16px;
     --mobile-messages-item-channel-avatar-margin-end: 8px;
     --mobile-messages-item-channel-avatar-size: 32px;
-    --mobile-messages-item-channel-name-text-style: redesign/channel-title/semibold;
+    --mobile-messages-item-channel-name-text-style: heading-sm/semibold;
     --mobile-messages-item-happening-now-padding-bottom: 8px;
     --mobile-mobile-keyboard-top-border-radius: 15px;
     --mobile-mobile-media-keyboard-top-border-radius: 0px;
@@ -10129,20 +10129,20 @@
     --mobile-sheet-header-padding-horizontal: 16px;
     --mobile-tab-bar-unread-badge-size: 22px;
     --mobile-tab-label-margin-top: -6px;
-    --mobile-tab-label-text-style: text-xxs/semibold;
+    --mobile-tab-label-text-style: footnote/semibold;
     --mobile-table-row-arrow-margin-end: 0px;
     --mobile-table-row-arrow-margin-start: 14px;
     --mobile-table-row-arrow-width: 8px;
     --mobile-table-row-border-radius: 16px;
     --mobile-table-row-content-height: 36px;
     --mobile-table-row-divider-padding: 56px;
-    --mobile-table-row-group-helper-text-style: text-sm/medium;
+    --mobile-table-row-group-helper-text-style: body-sm/medium;
     --mobile-table-row-height: 60px;
     --mobile-table-row-icon-size: 32px;
     --mobile-table-row-label-color: text-strong;
-    --mobile-table-row-label-text-style: text-md/semibold;
+    --mobile-table-row-label-text-style: body-md/semibold;
     --mobile-table-row-padding: 12px;
-    --mobile-user-profile-about-me-heading-text-style: text-sm/semibold;
+    --mobile-user-profile-about-me-heading-text-style: body-sm/semibold;
     --mobile-user-row-label-line-height-android: 16px;
     --mobile-user-row-label-line-height-ios: 22px;
     --mobile-voice-channel-user-limit-border-width: 0px;
@@ -10150,7 +10150,7 @@
     --mobile-voice-message-duration-line-height-android: 14px;
     --mobile-voice-message-duration-line-height-ios: 17px;
     --mobile-voice-message-duration-margin-left: 4px;
-    --mobile-voice-message-duration-text-style: text-sm/semibold;
+    --mobile-voice-message-duration-text-style: body-sm/semibold;
     --mobile-voice-message-recording-chat-container-height: 40px;
     --mobile-voice-message-recording-chat-container-margin-right: 8px;
     --mobile-voice-message-recording-container-padding-bottom: 9px;
@@ -10192,7 +10192,7 @@
     --mobile-channel-details-nav-icon-button-variant: icon-only;
     --mobile-channel-header-icon-size: xs;
     --mobile-channel-item-radius: 8px;
-    --mobile-channel-list-subtitle-text-style: text-sm/medium;
+    --mobile-channel-list-subtitle-text-style: body-sm/medium;
     --mobile-channel-list-title-text-style: heading-lg/semibold;
     --mobile-channel-name-channel-border-width: 0px;
     --mobile-channel-name-channel-icon-radius: 8px;
@@ -10246,9 +10246,9 @@
     --mobile-input-field-radius-md: 8px;
     --mobile-input-field-radius-sm: 8px;
     --mobile-input-field-round-radius: 8px;
-    --mobile-input-field-text-style-lg: text-md/normal;
-    --mobile-input-field-text-style-md: text-md/normal;
-    --mobile-input-field-text-style-sm: text-xs/normal;
+    --mobile-input-field-text-style-lg: body-md/normal;
+    --mobile-input-field-text-style-md: body-md/normal;
+    --mobile-input-field-text-style-sm: body-xs/normal;
     --mobile-jump-to-present-bottom-spacing: 8px;
     --mobile-jump-to-present-right-spacing: 16px;
     --mobile-media-keyboard-bar-border-radius: 16px;
@@ -10259,12 +10259,12 @@
     --mobile-media-keyboard-bar-padding-horizontal: 8px;
     --mobile-media-keyboard-button-border-radius: 8px;
     --mobile-media-keyboard-button-padding: 4px;
-    --mobile-media-keyboard-button-text-variant: text-xs/medium;
+    --mobile-media-keyboard-button-text-variant: body-xs/medium;
     --mobile-media-keyboard-send-vertical-inset: 8px;
     --mobile-messages-header-button-gap: 12px;
     --mobile-messages-header-padding-bottom: 12px;
     --mobile-messages-item-channel-avatar-margin-end: 12px;
-    --mobile-messages-item-channel-name-text-style: text-md/medium;
+    --mobile-messages-item-channel-name-text-style: body-md/medium;
     --mobile-messages-item-happening-now-padding-bottom: 16px;
     --mobile-quest-dock-border-radius: 16px;
     --mobile-segmented-control-border-radius: 8px;
@@ -10275,19 +10275,19 @@
     --mobile-sheet-header-padding-horizontal: 0px;
     --mobile-tab-bar-unread-badge-size: 12px;
     --mobile-tab-label-margin-top: -4px;
-    --mobile-tab-label-text-style: text-xs/medium;
+    --mobile-tab-label-text-style: body-xs/medium;
     --mobile-table-row-arrow-margin-end: 8px;
     --mobile-table-row-arrow-margin-start: 8px;
     --mobile-table-row-arrow-width: 12px;
     --mobile-table-row-border-radius: 12px;
     --mobile-table-row-content-height: 32px;
-    --mobile-table-row-group-helper-text-style: text-sm/normal;
+    --mobile-table-row-group-helper-text-style: body-sm/normal;
     --mobile-table-row-height: 56px;
-    --mobile-table-row-label-text-style: text-md/medium;
-    --mobile-user-profile-about-me-heading-text-style: text-sm/medium;
+    --mobile-table-row-label-text-style: body-md/medium;
+    --mobile-user-profile-about-me-heading-text-style: body-sm/medium;
     --mobile-user-row-label-line-height-ios: 20px;
     --mobile-voice-channel-user-limit-border-width: 1px;
-    --mobile-voice-message-duration-text-style: text-xs/semibold;
+    --mobile-voice-message-duration-text-style: body-xs/semibold;
     --mobile-voice-message-recording-chat-container-height: 32px;
     --mobile-voice-message-recording-container-padding-vertical: 6px;
     --mobile-voice-message-recording-lock-pill-width: 32px;
@@ -10323,7 +10323,7 @@
     --mobile-mobile-media-keyboard-top-border-radius: 24px;
     --mobile-voice-message-chat-gap: 10px;
     --mobile-voice-message-duration-margin-left: 0px;
-    --mobile-voice-message-duration-text-style: text-sm/semibold;
+    --mobile-voice-message-duration-text-style: body-sm/semibold;
     --mobile-voice-message-recording-chat-container-height: 58px;
     --mobile-voice-message-recording-chat-container-margin-right: 0px;
     --mobile-voice-message-recording-container-padding-bottom: 0px;
@@ -10378,4 +10378,4 @@
     --motion-spring-subtle-duration: 598ms
 }
 
-/*# sourceMappingURL=952007.ca48d3754707e459.css.map*/
+/*# sourceMappingURL=952007.70811ac59e539589.css.map*/

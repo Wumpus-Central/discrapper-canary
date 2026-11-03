@@ -9,25 +9,25 @@ var s = i(477900),
     d = i(401432),
     u = i(834730),
     m = i(534514),
-    x = i(403581),
-    g = i(793574),
+    g = i(403581),
+    x = i(793574),
     p = i(688810),
     f = i(24482),
     h = i(580630),
     N = i(724651),
     A = i(732280),
-    j = i(511484),
-    E = i(795269);
+    b = i(511484),
+    j = i(795269);
 i(321073);
-var b = i(325499),
+var E = i(325499),
     T = i(192444),
     C = i(773669),
     R = i(975571),
     I = i(398523),
     _ = i(881373),
     v = i(202541),
-    P = i(652215),
-    y = i(190107),
+    y = i(652215),
+    P = i(190107),
     S = i(795670),
     D = i(923584),
     M = i(105292),
@@ -59,20 +59,20 @@ function w(e) {
             (0, s.jsx)("th", {
                 scope: "row",
                 className: U.nx,
-                children: (0, s.jsx)(u.E, { variant: "text-md/medium", children: t }),
+                children: (0, s.jsx)(u.E, { variant: "body-md/medium", children: t }),
             }),
             (0, s.jsx)("td", {
                 className: U.Hn,
                 children:
                     null != i.text
-                        ? (0, s.jsx)(u.E, { variant: "text-md/medium", children: i.text })
+                        ? (0, s.jsx)(u.E, { variant: "body-md/medium", children: i.text })
                         : (0, s.jsx)(G, { includes: !!i.includes }),
             }),
             (0, s.jsx)("td", {
                 className: U.Hn,
                 children:
                     null != n.text
-                        ? (0, s.jsx)(u.E, { variant: "text-md/medium", children: n.text })
+                        ? (0, s.jsx)(u.E, { variant: "body-md/medium", children: n.text })
                         : (0, s.jsx)(G, { includes: !!n.includes }),
             }),
         ],
@@ -89,7 +89,7 @@ function B(e) {
                     colSpan: 3,
                     children: [
                         (0, s.jsx)(m.D, { variant: "heading-lg/semibold", children: t }),
-                        null != i && (0, s.jsx)(u.E, { variant: "text-xs/medium", children: i }),
+                        null != i && (0, s.jsx)(u.E, { variant: "body-xs/medium", children: i }),
                     ],
                 }),
             }),
@@ -106,11 +106,11 @@ function H(e) {
             (0, s.jsxs)("div", {
                 className: U.KS,
                 children: [
-                    (0, s.jsx)(x.t, { colorClass: U.oG }),
-                    (0, s.jsx)(m.D, { variant: "heading-sm/semibold", children: n }),
+                    (0, s.jsx)(g.t, { colorClass: U.oG }),
+                    (0, s.jsx)(m.D, { variant: "heading-xs/semibold", children: n }),
                 ],
             }),
-            (0, s.jsx)(m.D, { variant: "heading-sm/semibold", children: i }),
+            (0, s.jsx)(m.D, { variant: "heading-xs/semibold", children: i }),
         ],
     });
 }
@@ -162,18 +162,18 @@ let V = function (e) {
             variant: o = "default",
         } = e,
         d = "settings" === o,
-        { analyticsLocations: u } = (0, p.Ay)(g.A.PREMIUM_MARKETING_PLAN_COMPARISON),
-        x = (0, A.V)(),
-        G = x?.subscriptionTrial?.skuId,
+        { analyticsLocations: u } = (0, p.Ay)(x.A.PREMIUM_MARKETING_PLAN_COMPARISON),
+        g = (0, A.V)(),
+        G = g?.subscriptionTrial?.skuId,
         w = (0, N.O)(),
-        H = (0, j.YJ)(w),
-        V = null != w && (0, j.U9)(w, v.pe.TIER_2) && H === v.gD.PREMIUM_MONTH_TIER_2,
-        W = (0, j.N1)(H),
+        H = (0, b.YJ)(w),
+        V = null != w && (0, b.U9)(w, v.pe.TIER_2) && H === v.gD.PREMIUM_MONTH_TIER_2,
+        W = (0, b.N1)(H),
         z = null != W ? `${W}/${(0, f.FJ)(v.WT.MONTH)}` : "",
         Y = (0, f.JM)(v.gD.PREMIUM_MONTH_TIER_0),
         X = (0, f.JM)(v.gD.PREMIUM_MONTH_TIER_2),
         K = (function () {
-            let e = (0, b.b)("premium_marketing_comparison"),
+            let e = (0, E.b)("premium_marketing_comparison"),
                 t = [
                     {
                         id: 10,
@@ -202,7 +202,7 @@ let V = function (e) {
                 ],
                 i = null,
                 s = [],
-                { shouldShowBonusOrbsUX: n, multiplier: a } = (0, T.lk)(y.rE.NITRO_HOME_MARKETING),
+                { shouldShowBonusOrbsUX: n, multiplier: a } = (0, T.lk)(P.rE.NITRO_HOME_MARKETING),
                 { enabled: l } = I.A.useConfig({ location: "useGetV2PlanComparisonTableRowsApplicationHome" }),
                 { functionalityEnabled: r } = (0, _.YS)({ location: "useGetV2PlanComparisonTableRowsApplicationHome" });
             return (
@@ -211,7 +211,7 @@ let V = function (e) {
                         id: 23,
                         title: M.intl.string(M.t.NG1e6l),
                         subtitle: M.intl.format(L.default.uJcbMv, {
-                            termsLink: R.A.getArticleURL(P.MVz.NITRO_2_POINT_0),
+                            termsLink: R.A.getArticleURL(y.MVz.NITRO_2_POINT_0),
                         }),
                         rows: [
                             {
@@ -352,7 +352,7 @@ let V = function (e) {
                             ...s,
                             {
                                 id: 15,
-                                label: M.intl.formatToPlainString(M.t["8crdzJ"], { maxChars: P.CS1 }),
+                                label: M.intl.formatToPlainString(M.t["8crdzJ"], { maxChars: y.CS1 }),
                                 tier0ColumnData: { includes: !1 },
                                 tier2ColumnData: { includes: !0 },
                             },
@@ -369,8 +369,8 @@ let V = function (e) {
         })();
     if (r) t = null;
     else {
-        let e = null != x ? M.intl.string(M.t.IBYG5U) : M.intl.string(M.t.TR2B4T);
-        t = (0, s.jsx)(E.R, { className: l()(U.Io, U.SP), text: e });
+        let e = null != g ? M.intl.string(M.t.IBYG5U) : M.intl.string(M.t.TR2B4T);
+        t = (0, s.jsx)(j.R, { className: l()(U.Io, U.SP), text: e });
     }
     let Z = G === v.pe.TIER_0 || c === v.PremiumTypes.TIER_0;
     return (0, s.jsx)(p.f5, {

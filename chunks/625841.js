@@ -1,8 +1,8 @@
-n.d(t, { A: () => N, U: () => U });
+n.d(t, { A: () => y, U: () => U });
 var i = n(477900),
     l = n(582128),
-    s = n(503698),
-    o = n.n(s),
+    o = n(503698),
+    s = n.n(o),
     a = n(17928),
     c = n(843282),
     r = n(462887),
@@ -53,7 +53,7 @@ function T(e) {
 function j(e) {
     let {
             devices: t,
-            location: s,
+            location: o,
             selectedDeviceId: u,
             onSelectDevice: d,
             hideDeviceTypeIcon: p = !1,
@@ -63,33 +63,33 @@ function j(e) {
         } = e,
         { analyticsLocations: j } = (0, D.Ay)(),
         U = (0, a.bG)([x.A], () => x.A.theme),
-        N = l.useMemo(() => t.reduce((e, t) => ({ ...e, [t.id]: t }), {}), [t]),
-        _ = N[u]?.deviceType ?? null,
-        w = (0, a.bG)([C.Ay], () => null == _ || T(_).getCanSetDevice(C.Ay)),
-        { showDeviceFormFactorIndicators: V } = I.A.useConfig({ location: "SingleSelectDevices" }),
-        y = null != _ ? (0, i.jsx)(g.w, { type: "warning", message: T(_).getWarningMessage(), role: "status" }) : null,
+        y = l.useMemo(() => t.reduce((e, t) => ({ ...e, [t.id]: t }), {}), [t]),
+        N = y[u]?.deviceType ?? null,
+        _ = (0, a.bG)([C.Ay], () => null == N || T(N).getCanSetDevice(C.Ay)),
+        { showDeviceFormFactorIndicators: w } = I.A.useConfig({ location: "SingleSelectDevices" }),
+        V = null != N ? (0, i.jsx)(g.w, { type: "warning", message: T(N).getWarningMessage(), role: "status" }) : null,
         E = l.useCallback(
             (e) => {
                 if (!(d?.(e) ?? !0)) return;
-                let t = N[e]?.deviceType;
+                let t = y[e]?.deviceType;
                 if (null == t) return;
                 let { setDevice: n, getLocation: i } = T(t);
-                n(e, { location: i(s), analyticsLocations: j });
+                n(e, { location: i(o), analyticsLocations: j });
             },
-            [N, s, j, d],
+            [y, o, j, d],
         );
     function M(e) {
         let t,
             l = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            { prefix: s, subName: a } = (0, b.d)(e),
-            c = h.A.getCertifiedDeviceName(e.id, s);
+            { prefix: o, subName: a } = (0, b.d)(e),
+            c = h.A.getCertifiedDeviceName(e.id, o);
         if (h.A.isCertified(e.id)) {
             let e = (0, r.q)(U) ? n(961392) : n(848672);
             t = (0, i.jsx)("img", { src: e, alt: S.intl.string(S.t.smSKsj) });
         }
-        let u = null == e ? null : V ? (0, b.d4)(e) : T(e.deviceType).IconComponent;
+        let u = null == e ? null : w ? (0, b.d4)(e) : T(e.deviceType).IconComponent;
         return (0, i.jsxs)("div", {
-            className: o()(A.Mg, { [A.S2]: l && null != a, [A.Sy]: !p }),
+            className: s()(A.Mg, { [A.S2]: l && null != a, [A.Sy]: !p }),
             children: [
                 !p &&
                     null != u &&
@@ -99,7 +99,7 @@ function j(e) {
                     }),
                 (0, i.jsx)(m.E, {
                     lineClamp: 2,
-                    variant: f ?? "text-md/medium",
+                    variant: f ?? "body-md/medium",
                     color: l ? "text-subtle" : "text-default",
                     className: A.hV,
                     children: c,
@@ -107,7 +107,7 @@ function j(e) {
                 null != a &&
                     (0, i.jsx)(m.E, {
                         lineClamp: 2,
-                        variant: f ?? (l ? "text-xs/medium" : "text-md/medium"),
+                        variant: f ?? (l ? "body-xs/medium" : "body-md/medium"),
                         color: "text-muted",
                         className: A.VT,
                         children: a,
@@ -126,30 +126,30 @@ function j(e) {
                     let { id: t, name: n } = e;
                     return { value: t, label: n };
                 }),
-                isDisabled: !w,
+                isDisabled: !_,
                 popoutPosition: "bottom",
                 renderOptionLabel: (e) => {
                     let { value: t } = e;
-                    return M(N[t], !0);
+                    return M(y[t], !0);
                 },
                 renderOptionValue: (e) => {
                     let [{ value: t }] = e;
-                    return M(N[t]);
+                    return M(y[t]);
                 },
                 optionClassName: A.OS,
                 ...O,
                 "data-migration-pending": !0,
             }),
-            !w && y,
+            !_ && V,
         ],
     });
 }
 function U(e) {
     let { deviceType: t, selectedDeviceId: n, ...l } = e,
-        s = (0, b.tR)(t),
-        { id: o } = (0, b.x5)(t);
-    return (0, i.jsx)(j, { ...l, devices: s, selectedDeviceId: n ?? o });
+        o = (0, b.tR)(t),
+        { id: s } = (0, b.x5)(t);
+    return (0, i.jsx)(j, { ...l, devices: o, selectedDeviceId: n ?? s });
 }
-function N(e) {
+function y(e) {
     return (0, i.jsx)(j, { ...e });
 }

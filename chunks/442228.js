@@ -24,11 +24,11 @@ let h = i.memo(function (e) {
         } = e,
         { context: E } = (0, u.NJ)(),
         { analyticsLocations: R } = (0, o.Ay)(),
-        [p, C] = i.useState(!1),
-        [y, j] = i.useState(!1),
+        [p, y] = i.useState(!1),
+        [C, j] = i.useState(!1),
         v = i.useRef(null);
     if (m || null == n || "" === n) return null;
-    let P = p || y;
+    let P = p || C;
     return (0, l.jsxs)(f.A, {
         heading: A.intl.string(A.t.ZzAR2Y),
         hideHeading: !0,
@@ -37,10 +37,10 @@ let h = i.memo(function (e) {
                 ref: (e) => {
                     ((v.current = e),
                         null == e ||
-                            (C(!y && e.scrollHeight - e.clientHeight > 1),
+                            (y(!C && e.scrollHeight - e.clientHeight > 1),
                             e.getBoundingClientRect().height > 57.75 && j(!0)));
                 },
-                className: a()(S.mA, y && S.Em, P && S.ps),
+                className: a()(S.mA, C && S.Em, P && S.ps),
                 onBlur: function (e) {
                     null == v.current ||
                         v.current.contains(e.relatedTarget) ||
@@ -61,7 +61,7 @@ let h = i.memo(function (e) {
                 (0, l.jsx)("div", {
                     className: S.HV,
                     children: (0, l.jsx)(s.Q, {
-                        textVariant: "text-xs/normal",
+                        textVariant: "body-xs/normal",
                         size: "sm",
                         variant: "secondary",
                         text: A.intl.string(A.t.YDiPq8),

@@ -288,7 +288,7 @@ class W extends n.PureComponent {
                           className: T.Xe,
                           children: [
                               (0, r.jsx)(m.E, {
-                                  variant: "text-md/medium",
+                                  variant: "body-md/medium",
                                   color: "text-feedback-warning",
                                   className: T.Z4,
                                   children: D.intl.string(D.t["3JGJo2"]),

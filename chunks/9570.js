@@ -1,5 +1,5 @@
 _.exports = {
-    YS: "text-xs/medium__432f4",
+    hY: "body-xs/medium__432f4",
     KQ: "messagesPopoutWrap__432f4",
     wx: "header__432f4",
     gn: "titleContainer__432f4",

@@ -1,10 +1,10 @@
-e.d(n, { default: () => N });
+e.d(n, { default: () => S });
 var r = e(477900),
     s = e(582128),
     i = e(636537),
     l = e(109802),
-    a = e(452027),
-    o = e(95477),
+    o = e(452027),
+    a = e(95477),
     u = e(331322),
     d = e(834730),
     c = e(683071),
@@ -15,8 +15,8 @@ var r = e(477900),
     h = e(637219);
 function f(t) {
     let { name: n, value: e } = t,
-        [i, o] = s.useState(l.q.DEFAULT);
-    return (0, r.jsx)(a.D, {
+        [i, a] = s.useState(l.q.DEFAULT);
+    return (0, r.jsx)(o.D, {
         label: n,
         children: (0, r.jsx)(l.e, {
             value: e,
@@ -25,8 +25,8 @@ function f(t) {
             onCopy: () => {
                 (0, x.C)(
                     e,
-                    () => o(l.q.SUCCESS),
-                    () => o(l.q.ERROR),
+                    () => a(l.q.SUCCESS),
+                    () => a(l.q.ERROR),
                 );
             },
         }),
@@ -34,7 +34,7 @@ function f(t) {
 }
 function j(t) {
     let { domain: n, error: e, disabled: s, onDomainChange: i } = t;
-    return (0, r.jsx)(o.k, {
+    return (0, r.jsx)(a.k, {
         label: m.intl.string(m.t["4jIAa+"]),
         error: e,
         onChange: i,
@@ -56,7 +56,7 @@ function y(t) {
                     (0, r.jsx)("li", {
                         children: (0, r.jsx)(d.E, {
                             tag: "span",
-                            variant: "text-md/normal",
+                            variant: "body-md/normal",
                             children: m.intl.string(m.t["yOxxA+"]),
                         }),
                     }),
@@ -64,7 +64,7 @@ function y(t) {
                         children: [
                             (0, r.jsx)(d.E, {
                                 tag: "span",
-                                variant: "text-md/normal",
+                                variant: "body-md/normal",
                                 children: m.intl.string(m.t.cSURbq),
                             }),
                             (0, r.jsxs)(u.B, {
@@ -85,12 +85,12 @@ function y(t) {
         ],
     });
 }
-function S(t) {
+function b(t) {
     let { domain: n, proof: e } = t;
     return (0, r.jsxs)(u.B, {
         gap: 16,
         children: [
-            (0, r.jsx)(d.E, { tag: "span", variant: "text-md/normal", children: m.intl.string(m.t.p4ql7y) }),
+            (0, r.jsx)(d.E, { tag: "span", variant: "body-md/normal", children: m.intl.string(m.t.p4ql7y) }),
             (0, r.jsxs)(u.B, {
                 gap: 12,
                 children: [
@@ -101,14 +101,14 @@ function S(t) {
         ],
     });
 }
-function N(t) {
+function S(t) {
     let { onClose: n, transitionState: e } = t,
-        [l, a] = s.useState(""),
-        [o, u] = s.useState(""),
+        [l, o] = s.useState(""),
+        [a, u] = s.useState(""),
         [d, c] = s.useState(null),
         [x, h] = s.useState(!1),
-        [f, N] = s.useState("DOMAIN"),
-        [b, C] = s.useState("DNS"),
+        [f, S] = s.useState("DOMAIN"),
+        [N, C] = s.useState("DNS"),
         D = s.useId();
     function v(t) {
         return t.body?.errors?.domain?._errors?.[0]?.message ?? t.body?.message ?? t.message;
@@ -150,7 +150,7 @@ function N(t) {
                     domain: l,
                     error: "DOMAIN" === f ? d : null,
                     disabled: x,
-                    onDomainChange: a,
+                    onDomainChange: o,
                 }),
             }),
             nextButtonProps: { type: "submit", text: m.intl.string(m.t.PDTjLN), form: D, loading: x },
@@ -162,11 +162,11 @@ function N(t) {
                 title: m.intl.string(m.t["7lo8+e"]),
                 notice: null != d ? { message: d, type: "critical", role: "alert" } : void 0,
             },
-            body: "DNS" === b ? (0, r.jsx)(y, { domain: l, proof: o }) : (0, r.jsx)(S, { domain: l, proof: o }),
+            body: "DNS" === N ? (0, r.jsx)(y, { domain: l, proof: a }) : (0, r.jsx)(b, { domain: l, proof: a }),
             secondaryActionButtonProps: {
-                text: "DNS" === b ? m.intl.string(m.t.CkfdNx) : m.intl.string(m.t.RhJMVQ),
+                text: "DNS" === N ? m.intl.string(m.t.CkfdNx) : m.intl.string(m.t.RhJMVQ),
                 onClick: () => {
-                    (C("DNS" === b ? "HTTP" : "DNS"), c(null));
+                    (C("DNS" === N ? "HTTP" : "DNS"), c(null));
                 },
             },
             nextButtonProps: { text: m.intl.string(m.t["13ofGu"]) },
@@ -179,7 +179,7 @@ function N(t) {
         steps: O,
         currentStepKey: f,
         onStepChange: function (t) {
-            (c(null), N(t));
+            (c(null), S(t));
         },
     });
 }

@@ -1,6 +1,6 @@
 n.d(t, { C: () => g });
 var i = n(477900);
-let r = { xs: "text-xs/normal", sm: "text-sm/normal", md: "text-md/normal" },
+let r = { xs: "body-xs/normal", sm: "body-sm/normal", md: "body-md/normal" },
     a = { xs: "xxs", sm: "xs", md: "sm" };
 var s = n(582128),
     l = n(154467),

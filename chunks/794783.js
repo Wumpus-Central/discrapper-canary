@@ -3,62 +3,62 @@ var a = t(477900),
     l = t(582128),
     i = t(172218),
     n = t(534514),
-    r = t(834730),
-    d = t(364522),
+    d = t(834730),
+    r = t(364522),
     c = t(289873),
     o = t(503698),
     u = t.n(o),
-    x = t(778712),
-    m = t(866665),
+    m = t(778712),
+    x = t(866665),
     h = t(939249),
     j = t(97808),
     v = t(658675),
-    f = t(854627),
-    b = t(879308);
+    b = t(854627),
+    f = t(879308);
 function p(e) {
-    let { user: s, checked: t, onChange: i, disabled: n, tooltipConfig: d } = e,
+    let { user: s, checked: t, onChange: i, disabled: n, tooltipConfig: r } = e,
         c = l.useRef(null),
-        { avatarSrc: o, eventHandlers: p } = (0, f.A)({ userId: s?.id, size: x._3.SIZE_32 }),
+        { avatarSrc: o, eventHandlers: p } = (0, b.A)({ userId: s?.id, size: m._3.SIZE_32 }),
         k = s.globalName ?? s.username;
-    return (0, a.jsx)(m.m, {
-        text: d?.isActive(s, n) ? d.text(s) : null,
+    return (0, a.jsx)(x.m, {
+        text: r?.isActive(s, n) ? r.text(s) : null,
         position: "top",
         anchorRef: c,
         asContainer: !0,
         children: (0, a.jsxs)(h.D, {
-            className: u()(b.kL, { [b.vk]: !n }),
+            className: u()(f.kL, { [f.vk]: !n }),
             onClick: function () {
                 n || i(s, !t);
             },
             children: [
                 (0, a.jsx)("div", {
-                    className: b.dj,
+                    className: f.dj,
                     children: (0, a.jsx)(j.eu, {
-                        className: u()({ [b.SU]: n }),
+                        className: u()({ [f.SU]: n }),
                         src: o,
                         "aria-label": k,
-                        size: x._3.SIZE_32,
+                        size: m._3.SIZE_32,
                         ...p,
                     }),
                 }),
                 (0, a.jsxs)("div", {
-                    className: b.QV,
+                    className: f.QV,
                     children: [
-                        (0, a.jsx)(r.E, {
-                            className: b.nT,
+                        (0, a.jsx)(d.E, {
+                            className: f.nT,
                             color: n ? "text-muted" : "text-default",
-                            variant: "text-md/semibold",
+                            variant: "body-md/semibold",
                             children: k,
                         }),
-                        (0, a.jsx)(r.E, {
-                            className: b.nT,
+                        (0, a.jsx)(d.E, {
+                            className: f.nT,
                             color: n ? "text-muted" : "text-subtle",
-                            variant: "text-xs/normal",
+                            variant: "body-xs/normal",
                             children: s.username,
                         }),
                     ],
                 }),
-                (0, a.jsx)("div", { ref: c, className: b.kv, children: (0, a.jsx)(v.P, { checked: t, disabled: n }) }),
+                (0, a.jsx)("div", { ref: c, className: f.kv, children: (0, a.jsx)(v.P, { checked: t, disabled: n }) }),
             ],
         }),
     });
@@ -71,35 +71,35 @@ function N(e) {
             onSelectionChange: l,
             isFetching: o,
             onFetchMore: u,
-            isUserDisabled: x,
-            searchQuery: m = "",
+            isUserDisabled: m,
+            searchQuery: x = "",
             emptySearchContent: h,
             className: j,
             tooltipConfig: v,
         } = e,
-        f = (0, i.K)((e) => {
+        b = (0, i.K)((e) => {
             e && !o && u?.();
         });
-    return m.length > 0 && 0 === s.length && null != h
+    return x.length > 0 && 0 === s.length && null != h
         ? (0, a.jsxs)("div", {
               className: k.t,
               children: [
-                  (0, a.jsx)(n.D, { variant: "heading-md/semibold", color: "text-strong", children: h.header }),
-                  (0, a.jsx)(r.E, { variant: "text-md/medium", color: "text-subtle", children: h.body }),
+                  (0, a.jsx)(n.D, { variant: "heading-sm/semibold", color: "text-strong", children: h.header }),
+                  (0, a.jsx)(d.E, { variant: "body-md/medium", color: "text-subtle", children: h.body }),
               ],
           })
-        : (0, a.jsxs)(d.d_, {
+        : (0, a.jsxs)(r.d_, {
               className: j,
               children: [
                   s.map((e) =>
                       (0, a.jsx)(
                           p,
-                          { user: e, checked: t(e), disabled: !!x?.(e), onChange: l, tooltipConfig: v },
+                          { user: e, checked: t(e), disabled: !!m?.(e), onChange: l, tooltipConfig: v },
                           e.id,
                       ),
                   ),
                   o && (0, a.jsx)(c.y, {}),
-                  (0, a.jsx)("div", { ref: f }),
+                  (0, a.jsx)("div", { ref: b }),
               ],
           });
 }

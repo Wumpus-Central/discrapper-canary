@@ -1,36 +1,36 @@
-e.d(i, { default: () => C });
+e.d(i, { default: () => f });
 var n = e(477900),
     s = e(582128),
     a = e(503698),
     l = e.n(a),
-    c = e(189213),
-    d = e(834730),
-    r = e(46054),
-    o = e(625494),
+    d = e(189213),
+    c = e(834730),
+    o = e(46054),
+    r = e(625494),
     u = e(652215),
     h = e(105292),
     p = e(478832),
-    x = e(165648);
-function C(t) {
-    let { channel: i, isFromComposer: e, transitionState: a, onClose: C } = t;
+    C = e(165648);
+function f(t) {
+    let { channel: i, isFromComposer: e, transitionState: a, onClose: f } = t;
     return (
         s.useEffect(
             () => () => {
-                e && o._.dispatch(u.jej.FOCUS_COMPOSER_TITLE);
+                e && r._.dispatch(u.jej.FOCUS_COMPOSER_TITLE);
             },
             [e],
         ),
-        (0, n.jsx)(c.a, {
+        (0, n.jsx)(d.a, {
             transitionState: a,
-            onClose: C,
+            onClose: f,
             title: h.intl.string(h.t["4d4T4l"]),
-            actions: [{ text: h.intl.string(h.t["NX+WJN"]), onClick: C }],
-            children: (0, n.jsx)(d.E, {
-                className: l()(p.Q, x.PT),
-                variant: "text-sm/normal",
+            actions: [{ text: h.intl.string(h.t["NX+WJN"]), onClick: f }],
+            children: (0, n.jsx)(c.E, {
+                className: l()(p.Q, C.PT),
+                variant: "body-sm/normal",
                 color: "text-default",
                 children: (0, n.jsx)("div", {
-                    children: r.A.parseForumPostGuidelines(i.topic, !0, {
+                    children: o.A.parseForumPostGuidelines(i.topic, !0, {
                         channelId: i.id,
                         allowHeading: !0,
                         allowList: !0,

@@ -26,37 +26,37 @@ var l = n(477900),
     C = n(696451),
     M = n(351906),
     U = n(287809),
-    x = n(509402),
-    f = n(562153),
+    f = n(509402),
+    x = n(562153),
     p = n(151781),
     F = n(221950),
     P = n(11541),
     k = n(105292),
-    j = n(113525);
-let v = r.memo(function () {
+    b = n(113525);
+let j = r.memo(function () {
         return (0, l.jsx)(E.m, {
             "data-pending-richtooltip-migration": !0,
             text: k.intl.string(k.t["vu/MiQ"]),
             children: (0, l.jsx)(u.E, {
-                variant: "text-sm/medium",
+                variant: "body-sm/medium",
                 color: "text-muted",
-                className: j.IV,
+                className: b.IV,
                 children: k.intl.string(k.t.yobFdm),
             }),
         });
     }),
-    X = r.memo(function () {
+    y = r.memo(function () {
         return (0, l.jsx)(E.m, {
             text: k.intl.string(k.t.OrCp9h),
             children: (0, l.jsx)(u.E, {
-                variant: "text-sm/medium",
+                variant: "body-sm/medium",
                 color: "text-muted",
-                className: j.IV,
+                className: b.IV,
                 children: k.intl.string(k.t["4upToT"]),
             }),
         });
     }),
-    b = {
+    v = {
         [P.UP.UNSPECIFIED]: {
             type: P.UP.UNSPECIFIED,
             getJoinTypeLabel: () => k.intl.string(k.t.DvMBkS),
@@ -69,7 +69,7 @@ let v = r.memo(function () {
             icon: (0, l.jsx)(o.RobotIcon, {
                 size: "custom",
                 color: "currentColor",
-                className: j.XY,
+                className: b.XY,
                 height: 12,
                 width: 12,
             }),
@@ -109,7 +109,7 @@ let v = r.memo(function () {
             type: P.UP.MANUAL_MEMBER_VERIFICATION,
             getJoinTypeLabel: (e) =>
                 null != e ? k.intl.formatToPlainString(k.t["VHLp+u"], { code: e }) : k.intl.string(k.t.vdu7oS),
-            icon: (0, l.jsx)(x.A, { height: 12, width: 12 }),
+            icon: (0, l.jsx)(f.A, { height: 12, width: 12 }),
             hasTooltip: !0,
         },
         [P.UP.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL]: {
@@ -119,7 +119,7 @@ let v = r.memo(function () {
             hasTooltip: !0,
         },
     };
-function y(e) {
+function X(e) {
     let { guildId: t, inviterUser: n, joinSourceType: a, className: E, onClickInviter: o } = e,
         _ = (0, s.bG)([C.Ay], () => (null == n ? null : C.Ay.getMember(t, n.id)), [n, t]),
         c = (0, R.gn)(_?.guildId, _?.userId, _?.colorStrings ?? null),
@@ -132,22 +132,22 @@ function y(e) {
     return null == n
         ? null
         : (0, l.jsxs)("div", {
-              className: i()(j.u6, E),
+              className: i()(b.u6, E),
               children: [
                   (0, l.jsx)(u.E, {
-                      variant: "text-xs/medium",
+                      variant: "body-xs/medium",
                       children: a !== P.UP.BOT ? k.intl.string(k.t.azhY2u) : k.intl.string(k.t["2ByN2n"]),
                   }),
                   (0, l.jsxs)(T.D, {
-                      className: i()(j.kp, null != o && j.vk),
+                      className: i()(b.kp, null != o && b.vk),
                       onClick: d,
                       tabIndex: null != o ? 0 : -1,
                       children: [
                           (0, l.jsx)(O.A, { user: n, size: I._3.SIZE_16 }),
                           (0, l.jsx)(u.E, {
-                              variant: "text-xs/medium",
+                              variant: "body-xs/medium",
                               children: (0, l.jsx)(N.g, {
-                                  name: f.Ay.getName(t, null, n),
+                                  name: x.Ay.getName(t, null, n),
                                   colorString: _?.colorString ?? null,
                                   colorStrings: c,
                               }),
@@ -161,9 +161,9 @@ function B(e) {
     let { channel: t, className: n } = e,
         r = (0, m.Ay)(t, !0);
     return (0, l.jsx)("div", {
-        className: i()(j.kp, n),
+        className: i()(b.kp, n),
         children: (0, l.jsx)(u.E, {
-            variant: "text-xs/medium",
+            variant: "body-xs/medium",
             children: k.intl.format(k.t["2VQq2p"], { channelName: r ?? k.intl.string(k.t.zLZPmk) }),
         }),
     });
@@ -176,7 +176,7 @@ function V(e) {
             () =>
                 u === P.UP.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL
                     ? (0, l.jsx)(B, { channel: _ })
-                    : (0, l.jsx)(y, { guildId: a, inviterUser: i, joinSourceType: u }),
+                    : (0, l.jsx)(X, { guildId: a, inviterUser: i, joinSourceType: u }),
             [u, a, i, _],
         );
     return c ? (0, l.jsx)(E.m, { __unsupportedReactNodeAsText: d, children: t }) : t;
@@ -186,7 +186,7 @@ function H(e) {
         n = (0, P.eN)(t);
     return null == n
         ? null
-        : (0, l.jsx)("div", { className: j.c5, style: { width: 12, height: 12, backgroundImage: n } });
+        : (0, l.jsx)("div", { className: b.c5, style: { width: 12, height: 12, backgroundImage: n } });
 }
 function w(e) {
     let {
@@ -201,7 +201,7 @@ function w(e) {
             onClickInviter: A,
             ...g
         } = e,
-        I = null != n ? b[n] : null,
+        I = null != n ? v[n] : null,
         N = n === P.UP.INTEGRATION && null != E,
         G = (0, S.h)(a),
         O = (0, s.bG)([h.A], () => h.A.getChannel(o)),
@@ -229,10 +229,10 @@ function w(e) {
         case null == I:
         case null == n:
         case n === P.UP.UNSPECIFIED:
-            return (0, l.jsx)(v, { ...g });
+            return (0, l.jsx)(j, { ...g });
         case null != E && N:
             return (0, l.jsxs)(T.D, {
-                className: j.B$,
+                className: b.B$,
                 ...g,
                 "aria-label": (0, P.v8)(E),
                 role: "button",
@@ -240,15 +240,15 @@ function w(e) {
                 onClick: m,
                 children: [
                     (0, l.jsx)(H, { type: E }),
-                    (0, l.jsx)(u.E, { variant: "text-sm/medium", children: (0, P.v8)(E) }),
+                    (0, l.jsx)(u.E, { variant: "body-sm/medium", children: (0, P.v8)(E) }),
                 ],
             });
         case n === P.UP.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL && null != G:
             return (0, l.jsxs)("div", {
-                className: i()(_ && j.TS),
+                className: i()(_ && b.TS),
                 children: [
                     (0, l.jsxs)(T.D, {
-                        className: j.SH,
+                        className: b.SH,
                         ...g,
                         "aria-label": I?.getJoinTypeLabel(t ?? void 0),
                         role: "button",
@@ -256,7 +256,7 @@ function w(e) {
                         onClick: m,
                         children: [
                             (0, l.jsx)(D.A, { game: G, size: D.M.XXSMALL }),
-                            (0, l.jsx)(u.E, { variant: "text-sm/medium", className: j.YL, children: G.name }),
+                            (0, l.jsx)(u.E, { variant: "body-sm/medium", className: b.YL, children: G.name }),
                         ],
                     }),
                     _ && (0, l.jsx)(B, { channel: O }),
@@ -264,10 +264,10 @@ function w(e) {
             });
         case null != I:
             return (0, l.jsxs)("div", {
-                className: i()(_ && j.TS),
+                className: i()(_ && b.TS),
                 children: [
                     (0, l.jsxs)(T.D, {
-                        className: j.B$,
+                        className: b.B$,
                         ...g,
                         "aria-label": I?.getJoinTypeLabel(t ?? void 0),
                         role: "button",
@@ -275,21 +275,21 @@ function w(e) {
                         onClick: m,
                         children: [
                             I?.icon,
-                            (0, l.jsx)(u.E, { variant: "text-sm/medium", children: I?.getJoinTypeLabel(t ?? void 0) }),
+                            (0, l.jsx)(u.E, { variant: "body-sm/medium", children: I?.getJoinTypeLabel(t ?? void 0) }),
                         ],
                     }),
                     _ &&
-                        (0, l.jsx)(y, {
+                        (0, l.jsx)(X, {
                             guildId: c,
                             inviterUser: d,
                             joinSourceType: n,
-                            className: j.nz,
+                            className: b.nz,
                             onClickInviter: A,
                         }),
                 ],
             });
         default:
-            return (0, l.jsx)(v, { ...g });
+            return (0, l.jsx)(j, { ...g });
     }
 }
 let W = r.memo(function (e) {
@@ -301,7 +301,7 @@ let W = r.memo(function (e) {
         null != u && (G.A.requestMembersById(n, [u]), (0, L.A)(u, void 0, { guildId: n }));
     }, [n, u]);
     let _ = (0, s.bG)([M.A], () => M.A.hideInstantInvites, []);
-    if (null == E) return (0, l.jsx)(v, {});
+    if (null == E) return (0, l.jsx)(j, {});
     let {
             sourceInviteCode: c,
             joinSourceType: d,
@@ -309,10 +309,10 @@ let W = r.memo(function (e) {
             joinSourceApplicationId: g,
             integrationType: T,
         } = E,
-        I = null != d ? b[d] : null,
+        I = null != d ? v[d] : null,
         N = I?.hasTooltip ?? !1;
     return (d === P.UP.INVITE || d === P.UP.VANITY_URL || (d === P.UP.MANUAL_MEMBER_VERIFICATION && null != c)) && _
-        ? (0, l.jsx)(X, {})
+        ? (0, l.jsx)(y, {})
         : (0, l.jsx)(V, {
               hasTooltip: N && !a,
               inviterUser: o ?? null,

@@ -1,4 +1,4 @@
-l.d(t, { A: () => h });
+l.d(t, { A: () => x });
 var n = l(477900),
     i = l(582128),
     C = l(702841),
@@ -11,36 +11,36 @@ var n = l(477900),
     u = l(151781),
     m = l(221950),
     H = l(105292),
-    x = l(58636);
-function h(e) {
+    h = l(58636);
+function x(e) {
     let { guildId: t, onPageChange: l } = e,
-        [h, g] = i.useTransition(),
+        [x, g] = i.useTransition(),
         f = (0, C.bG)([u.A], () => u.A.getEstimatedMemberSearchCountByGuildId(t), [t]),
         j = (0, C.cf)([u.A], () => u.A.getPaginationStateByGuildId(t), [t]),
         p = (0, c.Ms)(t),
         v = i.useMemo(() => o.MO.map((e) => ({ id: e.toString(), value: e, label: Number(e).toLocaleString() })), []),
         V = new Intl.NumberFormat(H.intl.currentLocale).format(f),
-        A = H.intl.formatToPlainString(H.t["RNDnQ/"], { count: p ? "..." : V }),
-        M = f > j.pageSize || p,
-        L = f > o.MO["0"];
+        b = H.intl.formatToPlainString(H.t["RNDnQ/"], { count: p ? "..." : V }),
+        A = f > j.pageSize || p,
+        M = f > o.MO["0"];
     return (0, n.jsxs)("div", {
-        className: x.Ej,
+        className: h.Ej,
         children: [
             (0, n.jsx)("div", {
-                className: x.PO,
-                children: L
+                className: h.PO,
+                children: M
                     ? (0, n.jsxs)(n.Fragment, {
                           children: [
                               (0, n.jsx)(s.E, {
-                                  variant: "text-md/normal",
+                                  variant: "body-md/normal",
                                   color: "text-muted",
                                   children: H.intl.string(H.t.jNwLu2),
                               }),
                               (0, n.jsx)("div", {
-                                  className: x.H9,
+                                  className: h.H9,
                                   children: (0, n.jsx)(a.l, {
                                       selectionMode: "single",
-                                      label: A,
+                                      label: b,
                                       hideLabel: !0,
                                       fullWidth: !0,
                                       options: v,
@@ -56,26 +56,26 @@ function h(e) {
                                   text: H.intl.string(H.t.ZTNur7),
                                   shouldShow: p,
                                   children: (0, n.jsx)(s.E, {
-                                      variant: "text-md/normal",
+                                      variant: "body-md/normal",
                                       color: "text-muted",
-                                      className: x.Qh,
-                                      children: A,
+                                      className: h.Qh,
+                                      children: b,
                                   }),
                               }),
                           ],
                       })
                     : (0, n.jsx)(s.E, {
-                          variant: "text-md/normal",
+                          variant: "body-md/normal",
                           color: "text-muted",
                           children: H.intl.format(H.t.GZpwME, { count: f }),
                       }),
             }),
             (0, n.jsx)("div", {
-                className: x.X$,
+                className: h.X$,
                 children:
-                    M &&
+                    A &&
                     (0, n.jsx)(d.m, {
-                        className: x.JV,
+                        className: h.JV,
                         totalCount: f,
                         pageSize: j.pageSize,
                         disablePaginationGap: !0,

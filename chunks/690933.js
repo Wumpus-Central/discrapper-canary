@@ -4,8 +4,8 @@ var r = n(477900),
     a = n(503698),
     s = n.n(a),
     i = n(621466),
-    u = n(17928),
-    o = n(866665),
+    o = n(17928),
+    u = n(866665),
     c = n(408278),
     d = n(834730),
     m = n(26430),
@@ -47,7 +47,7 @@ function _(e) {
         a = K.intl.string(l ? H.default.bd0Ufh : H.default.dxBzpe);
     return (0, r.jsx)("div", {
         className: n,
-        children: (0, r.jsx)(o.m, {
+        children: (0, r.jsx)(u.m, {
             text: a,
             children: (0, r.jsx)(c.K, {
                 size: "sm",
@@ -82,36 +82,36 @@ function W(e) {
         n,
         l,
         a,
-        { frameId: s, level: i, overlay: u } = e,
-        o = (0, T.L1)(s);
+        { frameId: s, level: i, overlay: o } = e,
+        u = (0, T.L1)(s);
     return (0, r.jsx)("div", {
         className: $.GL,
         style:
-            null != o
-                ? ((t = q(o)),
-                  (n = (320 - o.width * t) / 2),
-                  (l = (180 - o.height * t) / 2),
-                  { width: o.width, height: o.height, transform: `translate(${n}px, ${l}px) scale(${t})` })
+            null != u
+                ? ((t = q(u)),
+                  (n = (320 - u.width * t) / 2),
+                  (l = (180 - u.height * t) / 2),
+                  { width: u.width, height: u.height, transform: `translate(${n}px, ${l}px) scale(${t})` })
                 : void 0,
         children: (0, r.jsx)(k.A, {
             frameId: s,
             level: i,
             className: $.Z7,
             overlay:
-                null != o && null != u
+                null != u && null != o
                     ? (0, r.jsx)("div", {
                           className: $.bW,
                           style:
-                              ((a = q(o)), { width: o.width * a, height: o.height * a, transform: `scale(${1 / a})` }),
-                          children: u,
+                              ((a = q(u)), { width: u.width * a, height: u.height * a, transform: `scale(${1 / a})` }),
+                          children: o,
                       })
-                    : u,
+                    : o,
         }),
     });
 }
 function Y(e) {
     let { label: t, icon: n, onClick: l } = e;
-    return (0, r.jsx)(o.m, {
+    return (0, r.jsx)(u.m, {
         text: t,
         position: "top",
         asContainer: !0,
@@ -121,7 +121,7 @@ function Y(e) {
 function Z(e) {
     let { frame: t, applicationName: n, interactive: l } = e,
         a = (0, x.A)(t.surface),
-        s = (0, u.bG)([A.A], () => A.A.getGuild(a), [a]);
+        s = (0, o.bG)([A.A], () => A.A.getGuild(a), [a]);
     return (0, r.jsx)("div", {
         className: $.Q,
         children: (0, r.jsxs)("div", {
@@ -129,7 +129,7 @@ function Z(e) {
             children: [
                 null != s ? (0, r.jsx)(E.Ay, { guild: s, size: E.Ay.Sizes.MINI, className: $.$f }) : null,
                 (0, r.jsx)(d.E, {
-                    variant: "text-sm/medium",
+                    variant: "body-sm/medium",
                     color: "text-strong",
                     lineClamp: 1,
                     className: $.JB,
@@ -162,8 +162,8 @@ function Z(e) {
     });
 }
 function ee(e) {
-    let { frameId: t, onHoverChange: n, onPress: a, onUnmount: o, shouldIgnoreClick: c } = e,
-        d = (0, u.bG)([C.A], () => (0, X.ny)(C.A.getFrame(t)), [t]),
+    let { frameId: t, onHoverChange: n, onPress: a, onUnmount: u, shouldIgnoreClick: c } = e,
+        d = (0, o.bG)([C.A], () => (0, X.ny)(C.A.getFrame(t)), [t]),
         m = (0, g.h)(d?.applicationId)?.name ?? "",
         f = (0, z.Gl)(t),
         v = l.useSyncExternalStore(L.A.subscribe, () => L.A.getFrameEntry(t)?.container ?? null),
@@ -185,9 +185,9 @@ function ee(e) {
     }, [t, f, n, v]),
     l.useEffect(
         () => () => {
-            (o(t), n(t, !1));
+            (u(t), n(t, !1));
         },
-        [t, n, o],
+        [t, n, u],
     ),
     null == d)
         ? null
@@ -247,12 +247,12 @@ function et(e) {
 function en(e) {
     let t,
         n,
-        { maxX: a, maxY: i, appContext: o, floatingPictureInPicture: c } = e,
+        { maxX: a, maxY: i, appContext: u, floatingPictureInPicture: c } = e,
         d = (0, z.DU)();
     (0, z.W4)(d);
     let { shown: m, hidden: f } =
             ((t = (0, D.sI)()),
-            (n = (0, u.yK)(
+            (n = (0, o.yK)(
                 [C.A],
                 () =>
                     d.filter((e) => {
@@ -262,7 +262,7 @@ function en(e) {
                 [d, t],
             )),
             l.useMemo(() => ({ shown: d.filter((e) => !n.includes(e)), hidden: n }), [d, n])),
-        v = (0, u.bG)([w.A], () => w.A.hasLayers()),
+        v = (0, o.bG)([w.A], () => w.A.hasLayers()),
         [h, p] = l.useState(() => new Map()),
         [g, x] = l.useState(() => new Map()),
         [b, j] = l.useState(!1),
@@ -278,8 +278,8 @@ function en(e) {
                 [n, r] = l.useState(null),
                 [a, s] = l.useState(null),
                 i = l.useRef(null),
-                u = l.useRef(null),
-                o = l.useCallback((e, n) => {
+                o = l.useRef(null),
+                u = l.useCallback((e, n) => {
                     t((t) => (n ? e : t === e ? null : t));
                 }, []),
                 c = l.useCallback(
@@ -295,13 +295,13 @@ function en(e) {
                     (i.current?.removeListeners(), (i.current = null), r(null));
                 }, []),
                 m = l.useCallback(() => {
-                    (u.current?.removeListeners(), (u.current = null), s(null));
+                    (o.current?.removeListeners(), (o.current = null), s(null));
                 }, []),
                 f = l.useCallback(
                     (e, t) => {
-                        u.current?.frameId !== e && o(e, t);
+                        o.current?.frameId !== e && u(e, t);
                     },
-                    [o],
+                    [u],
                 ),
                 v = l.useCallback(
                     (e, t, n, l) => {
@@ -309,24 +309,24 @@ function en(e) {
                         let a = t.ownerDocument.defaultView;
                         if (0 !== n.button || null == a) return;
                         let s = { frameId: e, pressed: !0, dragged: !1, view: a, removeListeners: () => {} };
-                        function u() {
+                        function o() {
                             s.dragged || d();
                         }
-                        function o(e) {
-                            s.pressed && (1 & e.buttons) == 0 && u();
+                        function u(e) {
+                            s.pressed && (1 & e.buttons) == 0 && o();
                         }
                         function c(e) {
-                            0 === e.button && s.pressed && ((s.pressed = !1), u());
+                            0 === e.button && s.pressed && ((s.pressed = !1), o());
                         }
-                        (a.addEventListener("mousemove", o),
+                        (a.addEventListener("mousemove", u),
                             a.addEventListener("mouseup", c),
                             a.addEventListener("pointercancel", d),
-                            a.addEventListener("blur", u),
+                            a.addEventListener("blur", o),
                             (s.removeListeners = () => {
-                                (a.removeEventListener("mousemove", o),
+                                (a.removeEventListener("mousemove", u),
                                     a.removeEventListener("mouseup", c),
                                     a.removeEventListener("pointercancel", d),
-                                    a.removeEventListener("blur", u));
+                                    a.removeEventListener("blur", o));
                             }),
                             (i.current = s),
                             l && r(e));
@@ -341,35 +341,35 @@ function en(e) {
                         let r = i.current;
                         if ((d(), m(), null == r || r.frameId !== e || null == n)) return;
                         let { frameId: l, view: a } = r;
-                        o(l, c(n, t.x, t.y));
+                        u(l, c(n, t.x, t.y));
                         let f = { frameId: l, rect: n, x: t.x, y: t.y, removeListeners: () => {} };
                         function v(e) {
-                            ((f.x = e.clientX), (f.y = e.clientY), o(l, c(f.rect, f.x, f.y)));
+                            ((f.x = e.clientX), (f.y = e.clientY), u(l, c(f.rect, f.x, f.y)));
                         }
                         (a.addEventListener("mousemove", v),
                             (f.removeListeners = () => a.removeEventListener("mousemove", v)),
-                            (u.current = f),
+                            (o.current = f),
                             s(l));
                     },
-                    [d, m, c, o],
+                    [d, m, c, u],
                 ),
                 g = l.useCallback(
                     (e, t) => {
-                        let n = u.current;
-                        null != n && n.frameId === e && (m(), null != t && o(n.frameId, c(t, n.x, n.y)));
+                        let n = o.current;
+                        null != n && n.frameId === e && (m(), null != t && u(n.frameId, c(t, n.x, n.y)));
                     },
-                    [m, c, o],
+                    [m, c, u],
                 ),
                 x = l.useCallback(
                     (e) => {
-                        (i.current?.frameId === e && d(), u.current?.frameId === e && m());
+                        (i.current?.frameId === e && d(), o.current?.frameId === e && m());
                     },
                     [d, m],
                 );
             return (
                 l.useEffect(
                     () => () => {
-                        (i.current?.removeListeners(), u.current?.removeListeners());
+                        (i.current?.removeListeners(), o.current?.removeListeners());
                     },
                     [],
                 ),
@@ -410,7 +410,7 @@ function en(e) {
                                 n = F.get(t) ?? 0,
                                 l = g.get(e) ?? 0;
                             l > 0 && F.set(t, n + l + 8);
-                            let u = t === U.CUs.TOP_LEFT || t === U.CUs.TOP_RIGHT;
+                            let o = t === U.CUs.TOP_LEFT || t === U.CUs.TOP_RIGHT;
                             return (0, r.jsx)(
                                 y.S8,
                                 {
@@ -418,11 +418,11 @@ function en(e) {
                                     className: s()($.x, { [$.yo]: A.isToolbarShown(e), [$.HJ]: A.isSnapping(e) }),
                                     position: t,
                                     hidden: v,
-                                    appContext: o,
+                                    appContext: u,
                                     maxX: a,
                                     maxY: i,
-                                    edgeOffsetTop: y.X8.top + (u ? n : 0),
-                                    edgeOffsetBottom: y.X8.bottom + (u ? 0 : n),
+                                    edgeOffsetTop: y.X8.top + (o ? n : 0),
+                                    edgeOffsetBottom: y.X8.bottom + (o ? 0 : n),
                                     edgeOffsetLeft: y.X8.left,
                                     edgeOffsetRight: y.X8.right,
                                     onMove: L,

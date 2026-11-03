@@ -22,38 +22,38 @@ function p(e) {
 var A = n(832712),
     f = n(543465),
     C = n(477427),
-    x = n(393432),
-    E = n(652215),
+    E = n(393432),
+    x = n(652215),
     S = n(790782),
-    I = n(355097),
-    y = n(105292),
-    _ = n(113528);
-function j(e) {
+    y = n(355097),
+    I = n(105292),
+    b = n(113528);
+function _(e) {
     let { channel: t, clearUnreadsNotice: n } = e;
     return (0, l.jsxs)("div", {
-        className: _.l,
+        className: b.l,
         children: [
             (0, l.jsx)(p, { id: t.id }),
             (0, l.jsx)("div", {
-                className: _.p,
-                children: (0, l.jsx)(d.E, { variant: "text-sm/medium", children: y.intl.format(y.t.P6Y2N1, {}) }),
+                className: b.p,
+                children: (0, l.jsx)(d.E, { variant: "body-sm/medium", children: I.intl.format(I.t.P6Y2N1, {}) }),
             }),
             (0, l.jsx)(u.$, {
                 variant: "secondary",
-                text: y.intl.string(y.t.KyUKhT),
+                text: I.intl.string(I.t.KyUKhT),
                 icon: h.e,
                 size: "sm",
                 onClick: () => {
                     var e, l, i;
                     ((e = t.guild_id),
                         (l = t.id),
-                        (i = I.vv.UNREADS_ONLY_MENTIONS),
+                        (i = y.vv.UNREADS_ONLY_MENTIONS),
                         A.A.updateChannelOverrideSettings({
                             guildId: e,
                             channelId: l,
-                            settings: { flags: (0, x.mD)(f.Ay.getChannelIdFlags(e, l), i) },
-                            label: C.G_.unreads(i === I.vv.UNREADS_ALL_MESSAGES ? S.e.ALL_MESSAGES : S.e.ONLY_MENTIONS),
-                            location: { object: E.ZSU.NOTIFICATION_SETTING_UNREAD_NOTICE },
+                            settings: { flags: (0, E.mD)(f.Ay.getChannelIdFlags(e, l), i) },
+                            label: C.G_.unreads(i === y.vv.UNREADS_ALL_MESSAGES ? S.e.ALL_MESSAGES : S.e.ONLY_MENTIONS),
+                            location: { object: x.ZSU.NOTIFICATION_SETTING_UNREAD_NOTICE },
                         }),
                         n());
                 },
@@ -61,8 +61,8 @@ function j(e) {
         ],
     });
 }
-var v = n(228098),
-    b = n(157259),
+var j = n(228098),
+    v = n(157259),
     N = n(755752),
     T = n(503698),
     M = n.n(T),
@@ -76,7 +76,7 @@ function O(e) {
         s = (0, L.lK)(t);
     return (
         i.useEffect(() => {
-            D.default.track(E.HAw.CHANNEL_BANNER_VIEWED, {
+            D.default.track(x.HAw.CHANNEL_BANNER_VIEWED, {
                 ...(0, R.H$)(t.getGuildId()),
                 ...(0, R.dI)(t),
                 banner_type: "thread",
@@ -87,16 +87,16 @@ function O(e) {
             children: [
                 (0, l.jsx)(d.E, {
                     className: P.E5,
-                    variant: "text-sm/normal",
+                    variant: "body-sm/normal",
                     color: "text-default",
-                    children: t.isForumPost() ? y.intl.string(y.t["833FDn"]) : y.intl.string(y.t.rEeodK),
+                    children: t.isForumPost() ? I.intl.string(I.t["833FDn"]) : I.intl.string(I.t.rEeodK),
                 }),
                 s
                     ? (0, l.jsx)(u.$, {
                           variant: "secondary",
-                          text: y.intl.string(y.t["0dvvEi"]),
+                          text: I.intl.string(I.t["0dvvEi"]),
                           onClick: function () {
-                              (D.default.track(E.HAw.CHANNEL_BANNER_CTA_CLICKED, {
+                              (D.default.track(x.HAw.CHANNEL_BANNER_CTA_CLICKED, {
                                   ...(0, R.H$)(t.getGuildId()),
                                   ...(0, R.dI)(t),
                                   banner_type: "thread",
@@ -116,7 +116,7 @@ function G(e) {
         s = (0, L.H_)(t);
     return (
         i.useEffect(() => {
-            D.default.track(E.HAw.CHANNEL_BANNER_VIEWED, {
+            D.default.track(x.HAw.CHANNEL_BANNER_VIEWED, {
                 ...(0, R.H$)(t.getGuildId()),
                 ...(0, R.dI)(t),
                 banner_type: "thread",
@@ -127,16 +127,16 @@ function G(e) {
             children: [
                 (0, l.jsx)(d.E, {
                     className: P.E5,
-                    variant: "text-sm/normal",
+                    variant: "body-sm/normal",
                     color: "text-default",
-                    children: t.isForumPost() ? y.intl.string(y.t.E7oO8u) : y.intl.string(y.t["V/JF2N"]),
+                    children: t.isForumPost() ? I.intl.string(I.t.E7oO8u) : I.intl.string(I.t["V/JF2N"]),
                 }),
                 s
                     ? (0, l.jsx)(u.$, {
                           variant: "secondary",
-                          text: y.intl.string(y.t.zA9d1J),
+                          text: I.intl.string(I.t.zA9d1J),
                           onClick: function () {
-                              (D.default.track(E.HAw.CHANNEL_BANNER_CTA_CLICKED, {
+                              (D.default.track(x.HAw.CHANNEL_BANNER_CTA_CLICKED, {
                                   ...(0, R.H$)(t.getGuildId()),
                                   ...(0, R.dI)(t),
                                   banner_type: "thread",
@@ -154,7 +154,7 @@ function G(e) {
 var U = n(626360);
 let w = i.memo(function (e) {
     let { channel: t, narrow: n } = e,
-        d = (0, v.A)(t),
+        d = (0, j.A)(t),
         u = (0, s.A)(),
         { showUnreadsNotice: h, clearUnreadsNotice: m } = (function (e) {
             let t = (0, o.os)("useShouldRenderBanner"),
@@ -177,10 +177,10 @@ let w = i.memo(function (e) {
           : t.isLockedThread()
             ? (0, l.jsx)(G, { channel: t, narrow: n })
             : h
-              ? (0, l.jsx)(j, { channel: t, clearUnreadsNotice: m })
+              ? (0, l.jsx)(_, { channel: t, clearUnreadsNotice: m })
               : g.visible
                 ? (0, l.jsx)(N.KT, { channel: t, onDismiss: g.dismiss })
                 : d && u.includes(U.i.OPT_IN_CHANNEL)
-                  ? (0, l.jsx)(b.A, { channel: t, narrow: n })
+                  ? (0, l.jsx)(v.A, { channel: t, narrow: n })
                   : null;
 });

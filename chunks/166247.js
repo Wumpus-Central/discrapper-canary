@@ -2,8 +2,8 @@ e.d(t, { default: () => N });
 var i = e(477900),
     a = e(582128),
     n = e(935399),
-    c = e(400829),
-    d = e(22856),
+    d = e(400829),
+    c = e(22856),
     r = e(224640),
     l = e(315629),
     o = e(20742),
@@ -21,7 +21,7 @@ var i = e(477900),
 function N(s) {
     let { renderModalProps: t, dismissibleContent: e, markAsDismissed: N } = s,
         { onClose: S, transitionState: w } = t,
-        { headingId: A } = (0, d.k)();
+        { headingId: y } = (0, c.k)();
     return (
         (0, n.Ay)(() => {
             (0, b.Wx)(e);
@@ -44,20 +44,20 @@ function N(s) {
                     (0, i.jsx)("div", { className: k.cG, children: (0, i.jsx)(o.s_, { shouldColorMix: !0 }) }),
                     (0, i.jsx)("div", {
                         className: k.JS,
-                        children: (0, i.jsx)(c.D, { alt: "", width: 360, height: "auto" }),
+                        children: (0, i.jsx)(d.D, { alt: "", width: 360, height: "auto" }),
                     }),
                     (0, i.jsxs)("div", {
                         className: k.Qs,
                         children: [
                             (0, i.jsx)(x.D, {
-                                id: A,
+                                id: y,
                                 variant: "nitro-md",
                                 color: "text-strong",
                                 className: k.wx,
                                 children: f.intl.string(f.t.Xm5q5l),
                             }),
                             (0, i.jsx)(h.E, {
-                                variant: "text-md/normal",
+                                variant: "body-md/normal",
                                 color: "text-subtle",
                                 className: k.rf,
                                 children: f.intl.string(f.t.svsMII),

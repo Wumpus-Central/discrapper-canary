@@ -15,9 +15,9 @@ var r = n(477900),
     A = n(798286),
     p = n(814278);
 n(603266);
-var h = n(763827),
-    E = n(728557),
-    b = n(665691),
+var b = n(763827),
+    h = n(728557),
+    E = n(665691),
     x = n(998759);
 (n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162));
 var k = n(827762),
@@ -29,8 +29,8 @@ var k = n(827762),
 let j = new Map();
 async function T(e) {
     let t = R.default.getId(),
-        n = h.A.getSecureFramesRosterMapEntry(e),
-        r = h.A.getSecureFramesRosterMapEntry(t);
+        n = b.A.getSecureFramesRosterMapEntry(e),
+        r = b.A.getSecureFramesRosterMapEntry(t);
     return null == n || null == r
         ? null
         : {
@@ -50,8 +50,8 @@ async function T(e) {
 }
 var U = n(731854);
 async function v(e) {
-    let t = h.A.getSecureFramesRosterMapEntry(e),
-        n = h.A.getRTCConnection();
+    let t = b.A.getSecureFramesRosterMapEntry(e),
+        n = b.A.getRTCConnection();
     if (null == t || null == n) return null;
     let r = await new Promise((t) => {
         n.getMLSPairwiseFingerprint(0, e, (e) => t(new Uint8Array(e)));
@@ -81,8 +81,8 @@ function z(e) {
             C()(r !== t, "[useSecureFramesPairwiseFingerprint] Should not pass current user id.");
             let [s, a] = l.useState(null),
                 [i, c] = l.useState(!1),
-                o = (0, u.bG)([h.A], () => h.A.getSecureFramesRosterMapEntry(t)),
-                f = (0, u.bG)([h.A], () => h.A.getSecureFramesRosterMapEntry(r)),
+                o = (0, u.bG)([b.A], () => b.A.getSecureFramesRosterMapEntry(t)),
+                f = (0, u.bG)([b.A], () => b.A.getSecureFramesRosterMapEntry(r)),
                 m = l.useCallback(
                     async () => (S.Ay.supports(U.O5.MLS_PAIRWISE_FINGERPRINTS) ? await v(t) : await T(t)),
                     [t],
@@ -122,12 +122,12 @@ function z(e) {
         K = l.useCallback(() => {
             (0, A.Hb)({ userId: n, channelId: a });
         }, [a, n]),
-        V = (0, b.UF)({ userId: n, channelId: a, userKey: B });
+        V = (0, E.UF)({ userId: n, channelId: a, userKey: B });
     !(function (e) {
         let { channelId: t, userId: n, nickname: r, onAlertOpen: s } = e,
             a = (function (e) {
                 let { userId: t } = e;
-                return (0, u.bG)([h.A, E.A], () => (0, p.m8)(t, [h.A, E.A]));
+                return (0, u.bG)([b.A, h.A], () => (0, p.m8)(t, [b.A, h.A]));
             })({ userId: n }),
             i = l.useRef(null);
         l.useEffect(() => {
@@ -226,7 +226,7 @@ function z(e) {
                             className: O.wx,
                             children: [
                                 (0, r.jsx)(c.D, {
-                                    variant: "text-sm/semibold",
+                                    variant: "body-sm/semibold",
                                     color: "text-strong",
                                     children: _.intl.string(_.t["/WPGnF"]),
                                 }),
@@ -249,7 +249,7 @@ function z(e) {
                         (0, r.jsx)(I.j, { className: O.aY, chunks: D, columns: 3 }),
                     ],
                 }),
-                (0, r.jsx)(m.E, { className: O.qr, variant: "text-sm/normal", color: "text-muted", children: Q }),
+                (0, r.jsx)(m.E, { className: O.qr, variant: "body-sm/normal", color: "text-muted", children: Q }),
             ],
         }),
         en = {

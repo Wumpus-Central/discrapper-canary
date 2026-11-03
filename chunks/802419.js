@@ -87,9 +87,9 @@ async function m(t) {
     }
 }
 var G = l(923121),
-    x = l(539916),
-    D = l(105292),
-    y = l(925891);
+    y = l(539916),
+    x = l(105292),
+    D = l(925891);
 function b(t) {
     let { transitionState: e, onClose: l, connection: L, index: N } = t,
         f = (0, A.Ay)(),
@@ -115,12 +115,12 @@ function b(t) {
             },
             [T],
         ),
-        [b, P] = n.useState(() => (null != L ? (0, x.Sq)(L) : void 0)),
+        [b, P] = n.useState(() => (null != L ? (0, y.Sq)(L) : void 0)),
         [j, F] = n.useState(L?.description ?? ""),
         [U, R] = n.useState([]),
         W = n.useMemo(() => {
             let t = [];
-            for (let e of I.A.filter((t) => t.enabled && !x.tb.has(t.type))) {
+            for (let e of I.A.filter((t) => t.enabled && !y.tb.has(t.type))) {
                 let l = "light" === f ? e.icon?.lightPNG : e.icon?.darkPNG;
                 t.push({ label: e.name, value: `provider:${e.type}`, icon: l });
             }
@@ -133,7 +133,7 @@ function b(t) {
         }, [v, T, f]),
         B = n.useCallback(() => {
             if (null == b || "" === b) return void R(["Please select a connection"]);
-            let t = (0, x.vK)(b);
+            let t = (0, y.vK)(b);
             if (null == t) return void R(["Invalid connection selected"]);
             let e = j.trim(),
                 i = {
@@ -142,7 +142,7 @@ function b(t) {
                     ...(null != t.applicationId && { application_id: t.applicationId }),
                     ...(null != t.providerId && { provider_id: t.providerId }),
                 },
-                n = (0, x.Ii)(i);
+                n = (0, y.Ii)(i);
             n.length > 0 ? R(n) : (E ? (0, G.yM)(N, i) : (0, G.sF)(i), l());
         }, [b, j, E, N, l]),
         k = n.useCallback(
@@ -156,25 +156,25 @@ function b(t) {
         );
     return (0, i.jsx)(r.a, {
         transitionState: e,
-        title: E ? D.intl.string(D.t.yqegs1) : D.intl.string(D.t.B6qOe2),
+        title: E ? x.intl.string(x.t.yqegs1) : x.intl.string(x.t.B6qOe2),
         onClose: l,
         actions: [
-            { variant: "secondary", text: D.intl.string(D.t["ETE/oC"]), onClick: l },
-            { variant: "primary", text: E ? D.intl.string(D.t["R3BPH+"]) : D.intl.string(D.t.qMOnJu), onClick: B },
+            { variant: "secondary", text: x.intl.string(x.t["ETE/oC"]), onClick: l },
+            { variant: "primary", text: E ? x.intl.string(x.t["R3BPH+"]) : x.intl.string(x.t.qMOnJu), onClick: B },
         ],
         children: (0, i.jsxs)("div", {
-            className: y.Qs,
+            className: D.Qs,
             children: [
                 !E &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(s.E, {
-                                variant: "text-sm/normal",
+                                variant: "body-sm/normal",
                                 color: "text-default",
-                                children: D.intl.string(D.t.mGhCgX),
+                                children: x.intl.string(x.t.mGhCgX),
                             }),
                             (0, i.jsx)(c.e, {
-                                title: D.intl.string(D.t.joNLrt),
+                                title: x.intl.string(x.t.joNLrt),
                                 children: (0, i.jsx)(d.l, {
                                     selectionMode: "single",
                                     value: b,
@@ -183,8 +183,8 @@ function b(t) {
                                     },
                                     options: W,
                                     formatOption: k,
-                                    placeholder: D.intl.string(D.t.Wq1LfI),
-                                    label: D.intl.string(D.t.joNLrt),
+                                    placeholder: x.intl.string(x.t.Wq1LfI),
+                                    label: x.intl.string(x.t.joNLrt),
                                     hideLabel: !0,
                                     required: !0,
                                     fullWidth: !0,
@@ -192,16 +192,16 @@ function b(t) {
                             }),
                             U.length > 0 &&
                                 (0, i.jsx)("div", {
-                                    className: y.sO,
+                                    className: D.sO,
                                     children: U.map((t, e) =>
                                         (0, i.jsxs)(
                                             "div",
                                             {
-                                                className: y.Ff,
+                                                className: D.Ff,
                                                 children: [
                                                     (0, i.jsx)(p.E, { size: "sm", color: "currentColor" }),
                                                     (0, i.jsx)(s.E, {
-                                                        variant: "text-sm/normal",
+                                                        variant: "body-sm/normal",
                                                         color: "text-feedback-critical",
                                                         children: t,
                                                     }),
@@ -219,22 +219,22 @@ function b(t) {
                             style: { display: "flex", flexDirection: "column", gap: "4px", marginBottom: "8px" },
                             children: [
                                 (0, i.jsx)(s.E, {
-                                    variant: "text-md/medium",
+                                    variant: "body-md/medium",
                                     color: "text-strong",
-                                    children: D.intl.string(D.t.WoyrU8),
+                                    children: x.intl.string(x.t.WoyrU8),
                                 }),
                                 (0, i.jsx)(s.E, {
-                                    variant: "text-sm/normal",
+                                    variant: "body-sm/normal",
                                     color: "text-subtle",
-                                    children: D.intl.string(D.t.zdWNET),
+                                    children: x.intl.string(x.t.zdWNET),
                                 }),
                             ],
                         }),
                         (0, i.jsx)(u.f, {
                             value: j,
                             onChange: F,
-                            placeholder: D.intl.string(D.t["28bQNf"]),
-                            maxLength: x.sd,
+                            placeholder: x.intl.string(x.t["28bQNf"]),
+                            maxLength: y.sd,
                         }),
                     ],
                 }),

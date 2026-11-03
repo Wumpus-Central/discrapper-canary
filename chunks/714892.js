@@ -1,54 +1,54 @@
-a.d(t, { default: () => A });
-var e = a(477900),
-    n = a(582128),
-    l = a(834730),
-    s = a(173936),
-    o = a(858899),
-    c = a(148494),
-    d = a(9578),
-    r = a(429913),
-    u = a(228427),
-    m = a(451909),
-    p = a(223863),
-    _ = a(734057),
-    h = a(174459),
-    k = a(957565),
-    g = a(403362),
-    x = a(871123),
-    f = a(366523),
-    C = a(652215),
-    N = a(381941),
-    E = a(105292),
-    v = a(884540);
+n.d(a, { default: () => A });
+var t = n(477900),
+    e = n(582128),
+    l = n(834730),
+    s = n(173936),
+    o = n(858899),
+    d = n(148494),
+    c = n(9578),
+    r = n(429913),
+    u = n(228427),
+    m = n(451909),
+    p = n(223863),
+    _ = n(734057),
+    h = n(174459),
+    k = n(957565),
+    g = n(403362),
+    x = n(871123),
+    f = n(366523),
+    C = n(652215),
+    N = n(381941),
+    E = n(105292),
+    v = n(884540);
 function j(i) {
-    let { skus: t } = i,
-        [a] = t,
-        o = (0, r.h)(a?.applicationId),
-        c = n.useMemo(() => t.map((i) => i.id), [t]),
-        u = n.useMemo(() => (null != a ? (0, x.aU)(a.applicationId, c) : ""), [a, c]),
-        m = t.length > 1 ? E.intl.formatToPlainString(E.t.j7Go5A, { count: t.length }) : a?.name;
-    return (0, e.jsxs)("div", {
+    let { skus: a } = i,
+        [n] = a,
+        o = (0, r.h)(n?.applicationId),
+        d = e.useMemo(() => a.map((i) => i.id), [a]),
+        u = e.useMemo(() => (null != n ? (0, x.aU)(n.applicationId, d) : ""), [n, d]),
+        m = a.length > 1 ? E.intl.formatToPlainString(E.t.j7Go5A, { count: a.length }) : n?.name;
+    return (0, t.jsxs)("div", {
         className: v.sq,
         children: [
-            (0, e.jsxs)("div", {
+            (0, t.jsxs)("div", {
                 className: v.kx,
                 children: [
-                    (0, e.jsx)(d.A, {
+                    (0, t.jsx)(c.A, {
                         title: m,
                         href: u,
-                        children: (0, e.jsx)(l.E, {
-                            variant: "text-md/medium",
+                        children: (0, t.jsx)(l.E, {
+                            variant: "body-md/medium",
                             color: "text-link",
                             lineClamp: 1,
                             children: m,
                         }),
                     }),
-                    (0, e.jsxs)("div", {
+                    (0, t.jsxs)("div", {
                         className: v.Bo,
                         children: [
-                            (0, e.jsx)(s.LinkIcon, { size: "xs", color: "currentColor", className: v.wP }),
-                            (0, e.jsx)(l.E, {
-                                variant: "text-sm/medium",
+                            (0, t.jsx)(s.LinkIcon, { size: "xs", color: "currentColor", className: v.wP }),
+                            (0, t.jsx)(l.E, {
+                                variant: "body-sm/medium",
                                 color: "text-muted",
                                 children: E.intl.formatToPlainString(E.t["CqpEC+"], { applicationName: o?.name }),
                             }),
@@ -56,10 +56,10 @@ function j(i) {
                     }),
                 ],
             }),
-            (0, e.jsx)("div", {
+            (0, t.jsx)("div", {
                 className: v.sN,
-                children: t.map((i) =>
-                    (0, e.jsx)(
+                children: a.map((i) =>
+                    (0, t.jsx)(
                         f.e,
                         {
                             containerClassName: v.Pq,
@@ -76,22 +76,22 @@ function j(i) {
     });
 }
 function A(i) {
-    let { skus: t, source: a, onClose: l, ...d } = i,
-        f = t[0]?.applicationId,
+    let { skus: a, source: n, onClose: l, ...c } = i,
+        f = a[0]?.applicationId,
         v = (0, r.h)(f),
-        A = n.useMemo(() => t.map((i) => i.id), [t]),
-        w = n.useCallback(
-            async (i, t, a) => {
-                let { withMessage: e, closeAfterSend: n } = t;
-                a(!0);
+        A = e.useMemo(() => a.map((i) => i.id), [a]),
+        w = e.useCallback(
+            async (i, a, n) => {
+                let { withMessage: t, closeAfterSend: e } = a;
+                n(!0);
                 try {
-                    let t = (await Promise.all(i.map(p.pk))).filter(g.Vq);
-                    if (0 === t.length || (n && l(), null == f)) return void a(!1);
+                    let a = (await Promise.all(i.map(p.pk))).filter(g.Vq);
+                    if (0 === a.length || (e && l(), null == f)) return void n(!1);
                     let s = (0, x.c2)(f, A);
-                    for (let i of t) {
-                        let t = _.A.getChannel(i);
-                        if (null != t) {
-                            let i = await c.A.sendMessage(t.id, m.Ay.parse(t, s + (e ?? "")), !1, {
+                    for (let i of a) {
+                        let a = _.A.getChannel(i);
+                        if (null != a) {
+                            let i = await d.A.sendMessage(a.id, m.Ay.parse(a, s + (t ?? "")), !1, {
                                 location: N.Hx.SOCIAL_LAYER_STOREFRONT,
                             });
                             i?.ok === !0 &&
@@ -99,8 +99,8 @@ function A(i) {
                                     application_id: f,
                                     application_name: v?.name ?? null,
                                     guild_id: (0, x.n5)(f) ?? null,
-                                    destination_guild_id: t.getGuildId() ?? null,
-                                    channel_id: t.id,
+                                    destination_guild_id: a.getGuildId() ?? null,
+                                    channel_id: a.id,
                                     message_id: i.body?.id ?? null,
                                     sku_ids: A,
                                     sku_count: A.length,
@@ -111,12 +111,12 @@ function A(i) {
                 } catch (i) {
                     (0, o.P0)({ text: E.intl.string(E.t.iufib1), variant: "critical" });
                 } finally {
-                    a(!1);
+                    n(!1);
                 }
             },
             [v, f, l, A],
         ),
-        I = n.useMemo(
+        I = e.useMemo(
             () => [
                 {
                     variant: "secondary",
@@ -139,11 +139,11 @@ function A(i) {
             ],
             [v, f, A],
         );
-    return (0, e.jsx)(u.ForwardModal, {
-        ...d,
+    return (0, t.jsx)(u.ForwardModal, {
+        ...c,
         onClose: l,
-        source: a,
-        customPreview: (0, e.jsx)(j, { skus: t }),
+        source: n,
+        customPreview: (0, t.jsx)(j, { skus: a }),
         customSubtitle: E.intl.string(E.t.yiaXeN),
         customSendHandler: w,
         additionalActions: I,

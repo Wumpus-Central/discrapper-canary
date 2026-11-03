@@ -33,7 +33,7 @@ function E(e) {
         children: [
             t === d.tm.TOP_GUILD_EMOJI ? (0, i.jsx)(c, { foreground: f.Gb }) : (0, i.jsx)(u.A, { foreground: f.Gb }),
             (0, i.jsx)(r.E, {
-                variant: "text-sm/semibold",
+                variant: "body-sm/semibold",
                 color: "text-overlay-light",
                 children: t === d.tm.TOP_GUILD_EMOJI ? m.intl.string(m.t.TR2B4T) : m.intl.string(m.t["1aZ4V6"]),
             }),
@@ -59,7 +59,7 @@ let I = function (e) {
                 children: [
                     (0, i.jsxs)(r.E, {
                         className: f.jn,
-                        variant: "text-md/semibold",
+                        variant: "body-md/semibold",
                         children: [
                             u
                                 ? (0, i.jsx)(a.StarIcon, {
@@ -74,7 +74,7 @@ let I = function (e) {
                             o,
                         ],
                     }),
-                    null != c && (0, i.jsx)(r.E, { className: f.Fm, variant: "text-xs/normal", children: c }),
+                    null != c && (0, i.jsx)(r.E, { className: f.Fm, variant: "body-xs/normal", children: c }),
                 ],
             }),
             I === d.tm.NONE

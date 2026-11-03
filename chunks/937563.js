@@ -206,7 +206,7 @@ let ei = function (e) {
                             children: [
                                 (0, s.jsx)(D.K, { size: "md", color: "currentColor", className: Z.vo }),
                                 (0, s.jsx)(G.E, {
-                                    variant: "text-xs/normal",
+                                    variant: "body-xs/normal",
                                     color: "text-strong",
                                     children: null != n ? _.intl.string(_.t.CHf9iJ) : _.intl.string(_.t.PoWNfe),
                                 }),
@@ -229,7 +229,7 @@ let ei = function (e) {
                                     className: Z.sV,
                                 }),
                                 (0, s.jsx)(G.E, {
-                                    variant: "text-xs/normal",
+                                    variant: "body-xs/normal",
                                     color: "text-strong",
                                     children: _.intl.string(_.t.pWG4ze),
                                 }),
@@ -259,7 +259,7 @@ let ei = function (e) {
                 let { header: n } = u[e];
                 return (0, s.jsx)("div", {
                     style: { ...t, height: "16px", position: "absolute" },
-                    children: (0, s.jsx)(c.D, { variant: "heading-md/medium", children: n }),
+                    children: (0, s.jsx)(c.D, { variant: "heading-sm/medium", children: n }),
                 });
             },
             getSectionHeight: () => 16,

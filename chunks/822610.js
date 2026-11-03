@@ -15,8 +15,8 @@ var l = n(477900),
     g = n(522602),
     x = n(234320),
     E = n(215497),
-    S = n(834730),
-    y = n(939249),
+    y = n(834730),
+    S = n(939249),
     C = n(780777),
     A = n(424170),
     b = n(274652),
@@ -82,10 +82,10 @@ function j(e) {
               draftType: I.C.SlashCommand,
               label: (0, l.jsxs)(i.Fragment, {
                   children: [
-                      (0, l.jsxs)(S.E, { tag: "span", variant: "text-md/normal", children: [n.displayName, ": "] }),
-                      (0, l.jsx)(S.E, {
+                      (0, l.jsxs)(y.E, { tag: "span", variant: "body-md/normal", children: [n.displayName, ": "] }),
+                      (0, l.jsx)(y.E, {
                           tag: "span",
-                          variant: "text-md/normal",
+                          variant: "body-md/normal",
                           color: "text-brand",
                           children: c.filename,
                       }),
@@ -105,16 +105,16 @@ function j(e) {
               ref: m,
               children: [
                   (0, l.jsx)("span", { className: s()(k.fS, { [k.Vg]: o }), children: n.displayName }),
-                  (0, l.jsx)(y.D, {
+                  (0, l.jsx)(S.D, {
                       className: k.uN,
                       onClick: () => a.current?.activateUploadDialogue(),
                       children: (0, l.jsxs)("div", {
                           className: k.wi,
                           children: [
                               (0, l.jsx)("img", { src: "/assets/27c3681a77f271c6.svg", className: k.H9, alt: "" }),
-                              (0, l.jsx)(S.E, {
+                              (0, l.jsx)(y.E, {
                                   className: k.L,
-                                  variant: "text-sm/normal",
+                                  variant: "body-sm/normal",
                                   children:
                                       null != x ? T.intl.format(T.t.JJzx48, { types: x }) : T.intl.string(T.t.IJyOUf),
                               }),
@@ -141,8 +141,8 @@ var _ = n(652215),
     w = n(969490);
 let O = [];
 function L(e) {
-    let { channelId: t, type: n, ignoreUploadId: r, smallAttachments: S = !1 } = e,
-        y = (0, u.bG)([m.Ay], () => m.Ay.keyboardModeEnabled),
+    let { channelId: t, type: n, ignoreUploadId: r, smallAttachments: y = !1 } = e,
+        S = (0, u.bG)([m.Ay], () => m.Ay.keyboardModeEnabled),
         C = (0, f.A)("attachments", o.Gl.HORIZONTAL),
         A = (0, u.bG)([g.A], () => g.A.getUploads(t, n.drafts.type)),
         {
@@ -201,7 +201,7 @@ function L(e) {
                           ...r,
                           className: s()(R.I, w.KK),
                           children: b
-                              ? T.map((e) => (0, l.jsx)(j, { channelId: t, keyboardModeEnabled: y, option: e }, e.name))
+                              ? T.map((e) => (0, l.jsx)(j, { channelId: t, keyboardModeEnabled: S, option: e }, e.name))
                               : U.map((e) =>
                                     (0, l.jsx)(
                                         v.A,
@@ -209,9 +209,9 @@ function L(e) {
                                             channelId: t,
                                             draftType: n.drafts.type,
                                             upload: e,
-                                            keyboardModeEnabled: y,
+                                            keyboardModeEnabled: S,
                                             clip: e.clip,
-                                            size: S ? E.L.SMALL : E.L.MEDIUM,
+                                            size: y ? E.L.SMALL : E.L.MEDIUM,
                                         },
                                         e.id,
                                     ),

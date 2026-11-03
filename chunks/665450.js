@@ -32,11 +32,11 @@ function m(e) {
             }),
             (0, i.jsx)(o.D, {
                 className: p.wx,
-                variant: "heading-md/semibold",
+                variant: "heading-sm/semibold",
                 children: h.intl.string(h.t["C+tj1c"]),
             }),
             (0, i.jsx)(c.E, {
-                variant: "text-md/normal",
+                variant: "body-md/normal",
                 color: "text-default",
                 children: h.intl.format(h.t["nNHd/y"], { onCancel: u.ZG }),
             }),

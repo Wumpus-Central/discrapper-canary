@@ -26,8 +26,8 @@ var i,
     L = n(363195),
     y = n(964404),
     D = n(253932),
-    v = n(830543),
-    b = n(174459),
+    b = n(830543),
+    v = n(174459),
     P = n(823459),
     M = n(147248),
     U = n(11029),
@@ -162,7 +162,7 @@ let es = Object.freeze({ EDITOR: en.Sb.SLOW_USER_ACTION, SETTINGS: en.Sb.INFREQU
     el = a.createContext({});
 function eo(e) {
     let { isPersisted: t, themeName: n, analyticsLocations: i } = e;
-    b.default.track(J.HAw.CLIENT_THEME_UPDATED, {
+    v.default.track(J.HAw.CLIENT_THEME_UPDATED, {
         feature_name: ee.Ae.CLIENT_THEME,
         theme_name: n,
         is_persisted: t,
@@ -176,7 +176,7 @@ function ed(e) {
             isCoachmark: i,
             textClassName: a,
             iconClassName: s,
-            textVariant: d = "text-md/medium",
+            textVariant: d = "body-md/medium",
         } = e,
         c = (0, o.YW)({ type: t, isPreview: n, isCoachmark: i })
             .with({ type: "EDITOR", isCoachmark: !0, isPreview: !0 }, () => z.intl.string(z.t.D29k16))
@@ -199,7 +199,7 @@ function ec(e) {
         .with({ type: "EDITOR", isPreview: !1 }, () => z.intl.string(z.t.dqDFwe))
         .with({ isPreview: !0 }, () => z.intl.format(z.t["DWIjJ/"], { onPremiumClick: S.e }))
         .otherwise(() => z.intl.string(z.t["np0X/u"]));
-    return (0, r.jsx)(_.D, { variant: "text-sm/normal", className: er.W$, children: a });
+    return (0, r.jsx)(_.D, { variant: "body-sm/normal", className: er.W$, children: a });
 }
 function eu(e) {
     let {
@@ -251,14 +251,14 @@ function e_(e) {
         L = "SETTINGS" === s,
         y = (0, g.GV)(),
         D = L && u ? y : void 0,
-        b = L ? y : void 0;
+        v = L ? y : void 0;
     function w(e, t) {
         var n;
         if (
             ((0, P.bc)(e.id),
             eo({ isPersisted: !u, analyticsLocations: o, themeName: c.ju[e.id] }),
             u && "SETTINGS" === s
-                ? ((n = e), (0, R.GQ)(n.theme), (0, T.nf)(T.HP.CLIENT_THEMES), (0, v.default)())
+                ? ((n = e), (0, R.GQ)(n.theme), (0, T.nf)(T.HP.CLIENT_THEMES), (0, b.default)())
                 : u
                   ? (0, R.GQ)(e.theme)
                   : (0, f.u_)({ backgroundGradientPresetId: e.id, theme: e.theme }, l),
@@ -279,12 +279,12 @@ function e_(e) {
                 (0, r.jsx)(Z, {
                     size: i,
                     isDisabled: t,
-                    ariaDescribedBy: b,
+                    ariaDescribedBy: v,
                     onSelect: () => {
                         ((0, T.nf)(T.HP.CUSTOM_THEME, {
                             from: "SETTINGS" === s ? T.xv.SETTING : T.xv.CLIENT_THEMES_EDITOR,
                         }),
-                            "SETTINGS" === s && (0, v.default)());
+                            "SETTINGS" === s && (0, b.default)());
                     },
                 }),
                 Q.Jm.filter(Q.Qm).map((e, n) =>
@@ -419,7 +419,7 @@ function eA(e) {
                     a &&
                     (0, r.jsx)(_.D, {
                         className: er.tD,
-                        variant: "heading-sm/semibold",
+                        variant: "heading-xs/semibold",
                         children: z.intl.string(z.t.POSLGY),
                     }),
                 (0, r.jsxs)(h.B, {

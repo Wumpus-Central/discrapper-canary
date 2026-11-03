@@ -1,4 +1,4 @@
-a.d(s, { default: () => f });
+a.d(t, { default: () => f });
 var e = a(477900);
 a(582128);
 var i = a(435558),
@@ -14,8 +14,8 @@ var i = a(435558),
     b = a(105292),
     p = a(536338);
 let h = ["/assets/36668e0a5832822f.svg", "/assets/3a31d989497ba4f1.svg", "/assets/f959ee6e6a8d2d0b.svg"],
-    x = ["/assets/6dadee9234160dc1.svg", "/assets/62d886a31822c89a.svg", "/assets/377cb29b8f197452.svg"],
-    u = [
+    u = ["/assets/6dadee9234160dc1.svg", "/assets/62d886a31822c89a.svg", "/assets/377cb29b8f197452.svg"],
+    x = [
         () => b.intl.string(b.t["w2o/60"]),
         () => b.intl.string(b.t.FiAvKg),
         () => b.intl.string(b.t.vKUFek),
@@ -27,15 +27,15 @@ let h = ["/assets/36668e0a5832822f.svg", "/assets/3a31d989497ba4f1.svg", "/asset
         () => b.intl.string(b.t.hedHel),
         () => b.intl.string(b.t.jgC65t),
     ],
-    f = function (t) {
-        let { transitionState: s, onClose: a } = t,
+    f = function (s) {
+        let { transitionState: t, onClose: a } = s,
             i = (0, o.Ay)(),
             f = (0, v.GV)(),
-            j = (0, r.M)(i) ? x : h,
+            j = (0, r.M)(i) ? u : h,
             k = (0, l.A)(() => n().sample(j), [j]),
-            N = (0, l.A)(() => n().sample(u), []);
+            N = (0, l.A)(() => n().sample(x), []);
         return (0, e.jsxs)(d.EO, {
-            transitionState: s,
+            transitionState: t,
             className: p.zr,
             "aria-labelledby": f,
             parentComponent: "FollowSuccessModal",
@@ -47,7 +47,7 @@ let h = ["/assets/36668e0a5832822f.svg", "/assets/3a31d989497ba4f1.svg", "/asset
                         (0, e.jsx)(c.D, { variant: "heading-xl/semibold", className: p._J, id: f, children: N() }),
                         (0, e.jsx)(g.E, {
                             color: "text-muted",
-                            variant: "text-md/medium",
+                            variant: "body-md/medium",
                             className: p.rf,
                             children: b.intl.string(b.t["2QbSea"]),
                         }),

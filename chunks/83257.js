@@ -116,7 +116,7 @@ class N extends s.PureComponent {
             } = e,
             _ = null;
         null != e.decoration
-            ? (_ = (0, n.jsx)(l.E, { variant: "text-md/normal", color: "text-muted", children: e.decoration }))
+            ? (_ = (0, n.jsx)(l.E, { variant: "body-md/normal", color: "text-muted", children: e.decoration }))
             : null != i && f?.includes(i) && !t
               ? (_ = m ?? (0, n.jsx)(o.E, { type: "new", variant: "primary" }))
               : null != b

@@ -61,7 +61,7 @@ function x(e) {
         thumbSrc: t.previewUrl,
         subText:
             "error" === t.status
-                ? (0, r.jsx)(a.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: t.errorText })
+                ? (0, r.jsx)(a.E, { variant: "body-xs/normal", color: "text-feedback-critical", children: t.errorText })
                 : null,
         children: [
             "uploading" === t.status ? (0, r.jsx)(i.y, { type: i.t.SPINNING_CIRCLE_SIMPLE, className: p.Rk }) : null,

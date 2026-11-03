@@ -1,8 +1,8 @@
-n.d(e, { I: () => L });
+n.d(e, { I: () => E });
 var i = n(477900);
 n(582128);
-var l = n(131937),
-    o = n(877624),
+var o = n(131937),
+    l = n(877624),
     s = n(17928),
     a = n(462887),
     r = n(315629),
@@ -24,16 +24,16 @@ var l = n(131937),
     I = n(412260),
     C = n(852218),
     _ = n(105292),
-    E = n(734165);
-function L(t) {
+    f = n(734165);
+function E(t) {
     let { component: e, endDate: n } = t,
-        { analyticsLocations: L } = (0, g.Ay)(),
-        f = (0, h.p)(),
+        { analyticsLocations: E } = (0, g.Ay)(),
+        L = (0, h.p)(),
         M = (0, a.M)((0, b.Ay)());
     (0, A.A)({
-        type: l.ImpressionTypes.VIEW,
-        name: l.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
-        properties: { component_type: o.C.BILLING_SETTINGS_BANNER, component_id: e.id, promotion_id: e.promotionId },
+        type: o.ImpressionTypes.VIEW,
+        name: o.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
+        properties: { component_type: l.C.BILLING_SETTINGS_BANNER, component_id: e.id, promotion_id: e.promotionId },
     });
     let k = (0, s.bG)([I.A], () => I.A.getPromotionByTypeAndId(C.pt.MARKETING_MOMENT, e.promotionId)?.endDate),
         H = e.properties.properties,
@@ -45,20 +45,20 @@ function L(t) {
             buttonAction: R.button?.buttonAction,
             deeplinkSection: R.button?.deeplinkSection,
             applicationId: R.button?.navigableStorefrontApplicationId?.value,
-            analyticsLocations: L,
-            analyticsLocation: f.location,
+            analyticsLocations: E,
+            analyticsLocation: L.location,
         }),
         P = (0, T.C)(R.helpArticle, ""),
         { icon: G, iconPosition: O } = (0, N.x)({ buttonAction: R.button?.buttonAction }),
         U = (0, v.ux)((n ?? k)?.toISOString());
     return (0, i.jsx)(r.h, {
         color: "nitro-pink",
-        className: E.kL,
+        className: f.kL,
         children: (0, i.jsxs)(c.B, {
             direction: "vertical",
             gap: 12,
             padding: { top: 16, right: 24, bottom: 24, left: 24 },
-            className: E.Zp,
+            className: f.Zp,
             children: [
                 (0, i.jsxs)(c.B, {
                     direction: "horizontal",
@@ -68,12 +68,12 @@ function L(t) {
                     children: [
                         (0, i.jsx)(j.A, {
                             color: "currentcolor",
-                            className: E.Ss,
+                            className: f.Ss,
                             "aria-label": _.intl.string(_.t.lpNrPu),
                         }),
                         null != U &&
                             (0, i.jsx)(d.E, {
-                                variant: "text-sm/medium",
+                                variant: "body-sm/medium",
                                 color: M ? "text-subtle" : "text-default",
                                 children: U,
                             }),
@@ -91,7 +91,7 @@ function L(t) {
                             align: "start",
                             gap: 8,
                             fullWidth: !1,
-                            className: E.pq,
+                            className: f.pq,
                             children: [
                                 (0, i.jsx)(u.D, {
                                     variant: "heading-xl/semibold",
@@ -99,7 +99,7 @@ function L(t) {
                                     children: R.header,
                                 }),
                                 (0, i.jsxs)(d.E, {
-                                    variant: "text-sm/medium",
+                                    variant: "body-sm/medium",
                                     color: "text-subtle",
                                     children: [
                                         S,
@@ -114,7 +114,7 @@ function L(t) {
                                 }),
                                 null != R.button &&
                                     (0, i.jsx)("div", {
-                                        className: E.UD,
+                                        className: f.UD,
                                         children: (0, i.jsx)(x.$, {
                                             variant: "expressive",
                                             size: "md",
@@ -126,7 +126,7 @@ function L(t) {
                                     }),
                             ],
                         }),
-                        null != w && (0, i.jsx)("img", { src: w, className: E.LY, alt: "" }),
+                        null != w && (0, i.jsx)("img", { src: w, className: f.LY, alt: "" }),
                     ],
                 }),
             ],

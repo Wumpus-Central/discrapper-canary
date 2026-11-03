@@ -14,7 +14,7 @@ var l = n(503698),
     m = n(698833);
 function _(e) {
     let { children: t } = e;
-    return (0, o.jsx)(i.D, { variant: "heading-sm/medium", color: "text-strong", className: m.ut, children: t });
+    return (0, o.jsx)(i.D, { variant: "heading-xs/medium", color: "text-strong", className: m.ut, children: t });
 }
 function A(e) {
     let { text: t, onClick: n, icon: l = d.t, iconPosition: a } = e;

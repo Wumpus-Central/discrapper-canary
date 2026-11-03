@@ -1,1 +1,1 @@
-s.exports = { Dm: "text-sm/semibold__3befb", nf: "link__3befb text-sm/semibold__3befb" };
+b.exports = { op: "body-sm/semibold__3befb", nf: "link__3befb body-sm/semibold__3befb" };

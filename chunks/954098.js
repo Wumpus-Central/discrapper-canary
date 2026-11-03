@@ -7,8 +7,8 @@ var t = e(477900),
     c = e(766075),
     o = e(393033),
     d = e(257110),
-    u = e(503698),
-    m = e.n(u),
+    m = e(503698),
+    u = e.n(m),
     x = e(731738),
     p = e(661531),
     h = e(534514),
@@ -22,24 +22,24 @@ var t = e(477900),
     v = e(462924),
     L = e(807393),
     k = e(773669),
-    I = e(174459),
-    T = e(67521),
-    C = e(739010),
-    U = e(207913),
-    y = e(335891),
-    D = e(985481),
-    G = e(259960),
-    O = e(239093),
-    w = e(105292),
+    y = e(174459),
+    I = e(67521),
+    T = e(739010),
+    C = e(207913),
+    U = e(335891),
+    b = e(985481),
+    D = e(259960),
+    G = e(239093),
+    O = e(105292),
     S = e(52111);
-function b() {
-    return (0, t.jsx)(j.E, { variant: "text-md/normal", color: "text-muted", children: w.intl.string(w.t["I2H0/E"]) });
+function w() {
+    return (0, t.jsx)(j.E, { variant: "body-md/normal", color: "text-muted", children: O.intl.string(O.t["I2H0/E"]) });
 }
 function R(i) {
     return (0, t.jsx)(j.E, {
-        variant: "text-md/normal",
+        variant: "body-md/normal",
         color: "text-muted",
-        children: w.intl.format(w.t.IFxUaT, {
+        children: O.intl.format(O.t.IFxUaT, {
             letUsKnowHook: (n, e) =>
                 (0, t.jsx)(
                     E.Anchor,
@@ -53,8 +53,8 @@ function F() {
     return (0, t.jsxs)("div", {
         className: S.Jx,
         children: [
-            (0, t.jsx)(j.E, { variant: "text-md/medium", color: "text-default", children: w.intl.string(w.t.PHriyz) }),
-            (0, t.jsx)(j.E, { variant: "text-sm/normal", color: "text-muted", children: w.intl.string(w.t.YsxY1D) }),
+            (0, t.jsx)(j.E, { variant: "body-md/medium", color: "text-default", children: O.intl.string(O.t.PHriyz) }),
+            (0, t.jsx)(j.E, { variant: "body-sm/normal", color: "text-muted", children: O.intl.string(O.t.YsxY1D) }),
         ],
     });
 }
@@ -62,11 +62,11 @@ function H(i) {
     return (0, t.jsx)("div", {
         className: S.OW,
         children: i.hasBeenAppealed
-            ? (0, t.jsx)(b, {})
+            ? (0, t.jsx)(w, {})
             : i.isAppealWindowExpired
               ? (0, t.jsx)(F, {})
               : (0, t.jsx)(R, {
-                    appealLink: O.d$.APPEALS_LINK,
+                    appealLink: G.d$.APPEALS_LINK,
                     letUsKnowClick: i.onLetUsKnowClick,
                     isAppealEligible: i.isAppealEligible,
                 }),
@@ -81,18 +81,18 @@ function $(i) {
         s = l.useMemo(() => {
             let i = { classification_type: n, classificationHook: (i, n) => (0, t.jsx)("strong", { children: i }, n) };
             return null == e
-                ? w.intl.format(w.t.HpvELh, i)
-                : e?.member_type === C.Z9.OWNER
-                  ? w.intl.format(w.t.X1ngSd, { ...i, guildName: e?.name })
-                  : w.intl.format(w.t.rmpEPD, { ...i, guildName: e?.name });
+                ? O.intl.format(O.t.HpvELh, i)
+                : e?.member_type === T.Z9.OWNER
+                  ? O.intl.format(O.t.X1ngSd, { ...i, guildName: e?.name })
+                  : O.intl.format(O.t.rmpEPD, { ...i, guildName: e?.name });
         }, [n, e]);
     return (0, t.jsx)(h.D, { variant: "heading-xl/medium", children: s });
 }
 function P(i) {
     let { children: n, plain: e = !1 } = i;
     return e
-        ? (0, t.jsx)(j.E, { variant: "text-sm/medium", color: "text-subtle", children: n })
-        : (0, t.jsx)(j.E, { variant: "eyebrow", color: "text-muted", children: n });
+        ? (0, t.jsx)(j.E, { variant: "body-sm/medium", color: "text-subtle", children: n })
+        : (0, t.jsx)(j.E, { variant: "body-sm/medium", color: "text-muted", children: n });
 }
 function B(i) {
     let { actions: n, classificationExpiration: e, plainHeader: l } = i,
@@ -101,7 +101,7 @@ function B(i) {
         ? null
         : (0, t.jsxs)("div", {
               children: [
-                  (0, t.jsx)(P, { plain: l, children: w.intl.string(w.t["O2nYk+"]) }),
+                  (0, t.jsx)(P, { plain: l, children: O.intl.string(O.t["O2nYk+"]) }),
                   (0, t.jsxs)("ul", {
                       className: S.nq,
                       children: [
@@ -113,9 +113,9 @@ function B(i) {
                                         className: S.DJ,
                                         children: (0, t.jsx)(j.E, {
                                             tag: "span",
-                                            variant: "heading-md/medium",
+                                            variant: "heading-sm/medium",
                                             color: "text-default",
-                                            children: w.intl.format(w.t.TByIjT, {
+                                            children: O.intl.format(O.t.TByIjT, {
                                                 expirationDate: e.toLocaleDateString(s, { dateStyle: "medium" }),
                                             }),
                                         }),
@@ -131,16 +131,16 @@ function B(i) {
 function W() {
     return (0, t.jsxs)("div", {
         children: [
-            (0, t.jsx)(P, { plain: !0, children: w.intl.string(w.t["O2nYk+"]) }),
+            (0, t.jsx)(P, { plain: !0, children: O.intl.string(O.t["O2nYk+"]) }),
             (0, t.jsx)("ul", {
                 className: S.nq,
                 children: (0, t.jsx)("li", {
                     className: S.DJ,
                     children: (0, t.jsx)(j.E, {
                         tag: "span",
-                        variant: "heading-md/medium",
+                        variant: "heading-sm/medium",
                         color: "text-default",
-                        children: w.intl.string(V.default.rn3Gto),
+                        children: O.intl.string(V.default.rn3Gto),
                     }),
                 }),
             }),
@@ -157,7 +157,7 @@ function J(i) {
                     className: S.DJ,
                     children: (0, t.jsx)(j.E, {
                         tag: "span",
-                        variant: "heading-md/medium",
+                        variant: "heading-sm/medium",
                         color: "text-default",
                         children: i,
                     }),
@@ -181,8 +181,8 @@ function q(i) {
             (0, t.jsx)("div", {
                 className: S.wC,
                 children: (0, t.jsx)(j.E, {
-                    variant: "text-md/normal",
-                    children: w.intl.format(w.t.zxUdpj, { classificationDescription: n }),
+                    variant: "body-md/normal",
+                    children: O.intl.format(O.t.zxUdpj, { classificationDescription: n }),
                 }),
             }),
             (0, t.jsx)("div", {
@@ -197,24 +197,24 @@ function z(i) {
     return (0, t.jsxs)("div", {
         className: S.vq,
         children: [
-            (0, t.jsx)(P, { plain: !0, children: w.intl.string(w.t.RVEiD0) }),
+            (0, t.jsx)(P, { plain: !0, children: O.intl.string(O.t.RVEiD0) }),
             (0, t.jsxs)(_.D, {
                 className: S._m,
                 onClick: l,
                 children: [
                     (0, t.jsx)(j.E, {
-                        variant: "text-md/normal",
+                        variant: "body-md/normal",
                         color: "text-default",
-                        children: w.intl.string(w.t.YQPbuc),
+                        children: O.intl.string(O.t.YQPbuc),
                     }),
                     (0, t.jsx)(g._, { size: "md", color: p.A.colors.INTERACTIVE_TEXT_DEFAULT }),
                 ],
             }),
             (0, t.jsx)(j.E, {
-                variant: "text-sm/normal",
+                variant: "body-sm/normal",
                 color: "text-muted",
                 className: S.$L,
-                children: w.intl.format(w.t["1Z/+aA"], { tosLink: n, communityGuidelinesLink: e }),
+                children: O.intl.format(O.t["1Z/+aA"], { tosLink: n, communityGuidelinesLink: e }),
             }),
         ],
     });
@@ -222,25 +222,25 @@ function z(i) {
 function Z(i) {
     let { tosLink: n, communityGuidelinesLink: e } = i;
     return (0, t.jsx)(j.E, {
-        variant: "text-sm/normal",
+        variant: "body-sm/normal",
         color: "text-muted",
         className: S.yC,
-        children: w.intl.format(V.default.vPOpia, { tosLink: n, communityGuidelinesLink: e }),
+        children: O.intl.format(V.default.vPOpia, { tosLink: n, communityGuidelinesLink: e }),
     });
 }
 function X() {
     return (0, t.jsxs)("div", {
         children: [
-            (0, t.jsx)(P, { plain: !0, children: w.intl.string(w.t["977iei"]) }),
+            (0, t.jsx)(P, { plain: !0, children: O.intl.string(O.t["977iei"]) }),
             (0, t.jsx)("ul", {
                 className: S.nq,
                 children: (0, t.jsx)("li", {
                     className: S.DJ,
                     children: (0, t.jsx)(j.E, {
                         tag: "span",
-                        variant: "heading-md/medium",
+                        variant: "heading-sm/medium",
                         color: "text-default",
-                        children: w.intl.string(V.default["yV/t/V"]),
+                        children: O.intl.string(V.default["yV/t/V"]),
                     }),
                 }),
             }),
@@ -257,11 +257,11 @@ function Q(i) {
     } = i;
     return (0, t.jsxs)("div", {
         children: [
-            (0, t.jsx)(j.E, { variant: "eyebrow", color: "text-muted", children: w.intl.string(w.t["977iei"]) }),
+            (0, t.jsx)(j.E, { variant: "body-sm/medium", color: "text-muted", children: O.intl.string(O.t["977iei"]) }),
             (0, t.jsx)(j.E, {
                 className: S.t8,
-                variant: "text-sm/normal",
-                children: w.intl.format(w.t["1Z/+aA"], { tosLink: n, communityGuidelinesLink: e }),
+                variant: "body-sm/normal",
+                children: O.intl.format(O.t["1Z/+aA"], { tosLink: n, communityGuidelinesLink: e }),
             }),
             (0, t.jsx)(q, { classificationTypeText: l, policyExplainerLink: s }),
             a,
@@ -273,7 +273,7 @@ function ii() {
         children: [
             (0, t.jsx)(W, {}),
             (0, t.jsx)(X, {}),
-            (0, t.jsx)(Z, { tosLink: O.d$.TOS_LINK, communityGuidelinesLink: O.d$.COMMUNITY_GUIDELINES }),
+            (0, t.jsx)(Z, { tosLink: G.d$.TOS_LINK, communityGuidelinesLink: G.d$.COMMUNITY_GUIDELINES }),
         ],
     });
 }
@@ -283,42 +283,42 @@ let ie = (i) => {
             classification: r,
             classificationRequestState: c,
             isAppealEligible: d,
-            isDsaEligible: u,
+            isDsaEligible: m,
             violationType: p,
-        } = (0, D.LJ)(n),
-        h = (0, A.bG)([U.A], () => U.A.getAppealEligibility()),
-        j = (0, y.K)(),
+        } = (0, b.LJ)(n),
+        h = (0, A.bG)([C.A], () => C.A.getAppealEligibility()),
+        j = (0, U.K)(),
         E = null != r && null != r.flagged_content && r.flagged_content.length > 0,
-        f = (0, G.v)(),
-        g = !!r?.is_coppa && h.includes(C.RH.AGE_VERIFY_ELIGIBLE),
-        _ = !!r?.is_coppa && h.includes(C.RH.AGE_VERIFY_GLOBAL_ELIGIBLE),
+        f = (0, D.v)(),
+        g = !!r?.is_coppa && h.includes(T.RH.AGE_VERIFY_ELIGIBLE),
+        _ = !!r?.is_coppa && h.includes(T.RH.AGE_VERIFY_GLOBAL_ELIGIBLE),
         k = (0, v.M)(N.q1.AUTOMATED_UNDERAGE_APPEALS),
-        w = _ && k,
-        b = (0, A.bG)([U.A], () => U.A.getIsManualReviewDecidedUnderage()),
-        R = !!r?.is_coppa && b,
+        O = _ && k,
+        w = (0, A.bG)([C.A], () => C.A.getIsManualReviewDecidedUnderage()),
+        R = !!r?.is_coppa && w,
         F = {
             accountStanding: j,
             classificationId: n,
             hasFlaggedContent: E,
-            isDsaEligible: u,
+            isDsaEligible: m,
             source: e,
             violationType: p,
         },
         V = l.useRef(F);
     function P() {
-        (I.default.track(M.HAw.SAFETY_HUB_ACTION, {
-            action: O.ZU.ClickLetUsKnow,
+        (y.default.track(M.HAw.SAFETY_HUB_ACTION, {
+            action: G.ZU.ClickLetUsKnow,
             account_standing: j.state,
             classification_ids: [Number(n)],
             source: e,
             is_violative_content_shown: E,
-            is_dsa_eligible: u,
+            is_dsa_eligible: m,
             violation_type: p,
         }),
             _
-                ? T.A.openV2(n, a)
+                ? I.A.openV2(n, a)
                 : g
-                  ? T.A.open(n, a)
+                  ? I.A.open(n, a)
                   : d && (L.A.increment({ name: x.K.APPEAL_INGESTION_VIEW }), K.A.open(n)));
     }
     return (l.useEffect(() => {
@@ -334,8 +334,8 @@ let ie = (i) => {
             violationType: s,
         } = V.current;
         f &&
-            I.default.track(M.HAw.SAFETY_HUB_ACTION, {
-                action: O.ZU.ViewViolationDetail,
+            y.default.track(M.HAw.SAFETY_HUB_ACTION, {
+                action: G.ZU.ViewViolationDetail,
                 account_standing: i.state,
                 classification_ids: [Number(n)],
                 source: l,
@@ -344,7 +344,7 @@ let ie = (i) => {
                 violation_type: s,
             });
     }, [f]),
-    null == r && c === C.nU.FAILED)
+    null == r && c === T.nU.FAILED)
         ? (s(), null)
         : null == r
           ? null
@@ -359,7 +359,7 @@ let ie = (i) => {
                         }),
                     }),
                     (0, t.jsxs)("div", {
-                        className: m()(S.rf, S.uW),
+                        className: u()(S.rf, S.uW),
                         children: [
                             (0, t.jsx)(Y.U, { flaggedContent: r.flagged_content ?? [] }),
                             R
@@ -369,18 +369,18 @@ let ie = (i) => {
                                           (0, t.jsx)(B, {
                                               actions: r.actions,
                                               classificationExpiration: (0, o.$r)(r),
-                                              plainHeader: w,
+                                              plainHeader: O,
                                           }),
-                                          w
+                                          O
                                               ? (0, t.jsx)(z, {
-                                                    tosLink: O.d$.TOS_LINK,
-                                                    communityGuidelinesLink: O.d$.COMMUNITY_GUIDELINES,
+                                                    tosLink: G.d$.TOS_LINK,
+                                                    communityGuidelinesLink: G.d$.COMMUNITY_GUIDELINES,
                                                     onLetUsKnowClick: P,
                                                 })
                                               : (0, t.jsx)(Q, {
                                                     classificationTypeText: r.description,
-                                                    tosLink: O.d$.TOS_LINK,
-                                                    communityGuidelinesLink: O.d$.COMMUNITY_GUIDELINES,
+                                                    tosLink: G.d$.TOS_LINK,
+                                                    communityGuidelinesLink: G.d$.COMMUNITY_GUIDELINES,
                                                     policyExplainerLink: r.explainer_link,
                                                     appealComponent: (0, t.jsx)(H, {
                                                         hasBeenAppealed: null != r.appeal_status,
@@ -398,8 +398,8 @@ let ie = (i) => {
 };
 var it = e(987926);
 let il = function (i) {
-    let { transitionState: n, onClose: e, classificationId: l, source: u } = i,
-        m = (0, d.A)(),
+    let { transitionState: n, onClose: e, classificationId: l, source: m } = i,
+        u = (0, d.A)(),
         x = (0, o.W$)();
     function p() {
         (e(), x || (0, c.openUserSettings)(r.X.ACCOUNT_STANDING_CATEGORY));
@@ -417,9 +417,9 @@ let il = function (i) {
             (0, t.jsx)(s.$m, {
                 "data-migration-pending": !0,
                 className: it.jE,
-                children: m
+                children: u
                     ? (0, t.jsx)(a.y, {})
-                    : (0, t.jsx)(ie, { classificationId: l, source: u, onError: p, onClose: p }),
+                    : (0, t.jsx)(ie, { classificationId: l, source: m, onError: p, onClose: p }),
             }),
         ],
     });

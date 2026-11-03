@@ -20,8 +20,8 @@ var i = n(477900),
     j = n(765548),
     S = n(379257),
     _ = n(306537),
-    p = n(36149),
-    b = n(287809),
+    b = n(36149),
+    p = n(287809),
     A = n(486020),
     y = n(899847),
     v = n(191627);
@@ -64,7 +64,7 @@ var O = n(923531),
     P = n(936223),
     V = n(31008);
 function M(t) {
-    let e = (0, s.bG)([b.default], () => b.default.getCurrentUser()?.ageVerificationStatus),
+    let e = (0, s.bG)([p.default], () => p.default.getCurrentUser()?.ageVerificationStatus),
         n = (0, g.Ay)(e);
     a.useEffect(() => {
         null == n || n === e || (null != e && e !== N.Tk.UNVERIFIED && t());
@@ -169,7 +169,7 @@ function q(t) {
 }
 function B(t) {
     let { transitionState: e, failureCode: n, onClose: a } = t,
-        r = (0, s.bG)([b.default], () => b.default.getCurrentUser()),
+        r = (0, s.bG)([p.default], () => p.default.getCurrentUser()),
         l = (0, G.A)(),
         o = v.H1[n],
         c = { isAdult: l, email: r?.email ?? void 0 };
@@ -184,7 +184,7 @@ function B(t) {
 }
 function H(t) {
     let { teenIdentity: e } = t,
-        n = (0, s.bG)([b.default], () => b.default.getCurrentUser()),
+        n = (0, s.bG)([p.default], () => p.default.getCurrentUser()),
         a = e.global_name ?? e.username;
     return (0, i.jsxs)("div", {
         className: P.Il,
@@ -221,7 +221,7 @@ function H(t) {
             }),
             (0, i.jsx)(x.D, { variant: "heading-xl/semibold", className: P._V, children: a }),
             (0, i.jsx)(I.E, {
-                variant: "text-sm/normal",
+                variant: "body-sm/normal",
                 color: "text-muted",
                 className: P.vJ,
                 children: L.intl.format(F.default.yiUJNU, { username: a }),
@@ -280,7 +280,7 @@ function J(t) {
 }
 function X(t) {
     let { transitionState: e, onClose: n } = t,
-        a = (0, s.bG)([b.default], () => b.default.getCurrentUser());
+        a = (0, s.bG)([p.default], () => p.default.getCurrentUser());
     return (0, i.jsx)(c.k, {
         transitionState: e,
         onClose: n,
@@ -293,8 +293,8 @@ function X(t) {
 }
 function Z(t) {
     let { transitionState: e, onVerified: n, onFailed: r, onClose: l } = t,
-        o = (0, p.b8)(),
-        c = (0, s.bG)([b.default], () => b.default.getCurrentUser()?.ageVerificationStatus),
+        o = (0, b.b8)(),
+        c = (0, s.bG)([p.default], () => p.default.getCurrentUser()?.ageVerificationStatus),
         u = a.useRef(!1),
         d = (0, j.A)(n),
         f = (0, j.A)(r);

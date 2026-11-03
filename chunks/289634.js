@@ -1,14 +1,14 @@
-i.d(s, { default: () => S });
+i.d(s, { default: () => f });
 var t = i(477900),
     a = i(189213),
     r = i(834730),
     n = i(363487),
     l = i(582128),
-    c = i(503698),
-    d = i.n(c),
-    o = i(62010),
-    x = i(104510),
-    u = i(661531),
+    d = i(503698),
+    o = i.n(d),
+    c = i(62010),
+    u = i(104510),
+    x = i(661531),
     m = i(939249),
     p = i(470934),
     v = i(998418),
@@ -16,67 +16,67 @@ var t = i(477900),
     j = i(612400),
     g = i(72377),
     N = i(439156),
-    I = i(249286),
-    A = i(867060),
-    b = i(105292),
-    k = i(434031);
-function w(e) {
-    let { canUseBoosts: s, guildId: i, powerup: a, isNewPerk: n, forceStaticImages: c } = e,
-        [w, f] = l.useState(!1),
-        S = (0, v.Ay)(i, a),
-        y = (0, h.e)(a, S, !1),
-        _ = (0, v.dy)(S),
+    b = i(249286),
+    I = i(867060),
+    A = i(105292),
+    y = i(434031);
+function k(e) {
+    let { canUseBoosts: s, guildId: i, powerup: a, isNewPerk: n, forceStaticImages: d } = e,
+        [k, w] = l.useState(!1),
+        f = (0, v.Ay)(i, a),
+        S = (0, h.e)(a, f, !1),
+        _ = (0, v.dy)(f),
         { disabled: E } = (0, p.A)(i, a, _),
-        { onActivate: C, error: M } = (0, I.A)(i, a);
-    (0, A.A)(M);
+        { onActivate: C, error: M } = (0, b.A)(i, a);
+    (0, I.A)(M);
     let P = !s || E,
         T = _ && !P,
         q = (0, t.jsxs)(t.Fragment, {
             children: [
                 (0, t.jsxs)("div", {
-                    className: k.R9,
+                    className: y.R9,
                     children: [
                         (0, t.jsx)("div", {
-                            className: d()(k._W, { [k.vu]: _ }),
-                            children: (0, t.jsx)(g.l, { powerup: a, isHovering: !P && w, forceStaticImage: c }),
+                            className: o()(y._W, { [y.vu]: _ }),
+                            children: (0, t.jsx)(g.l, { powerup: a, isHovering: !P && k, forceStaticImage: d }),
                         }),
                         n &&
                             (0, t.jsx)("div", {
-                                className: k.qS,
-                                children: (0, t.jsx)(o.E, { type: "new", variant: "primary" }),
+                                className: y.qS,
+                                children: (0, t.jsx)(c.E, { type: "new", variant: "primary" }),
                             }),
                     ],
                 }),
                 (0, t.jsxs)("div", {
-                    className: k.xQ,
+                    className: y.xQ,
                     children: [
                         (0, t.jsxs)("div", {
-                            className: k.U7,
+                            className: y.U7,
                             children: [
                                 (0, t.jsx)("div", {
                                     children: (0, t.jsx)(r.E, {
-                                        variant: "text-sm/medium",
-                                        color: (_ || w) && !P ? "text-strong" : "text-subtle",
+                                        variant: "body-sm/medium",
+                                        color: (_ || k) && !P ? "text-strong" : "text-subtle",
                                         children: a.description,
                                     }),
                                 }),
                                 (0, t.jsxs)("div", {
                                     children: [
-                                        y?.type === "expiring" && (0, t.jsx)(j.P5, { dateString: y.expiringAt }),
-                                        y?.type === "removing" && (0, t.jsx)(j.Yq, { removingAt: y.removingAt }),
-                                        y?.type === "active" && (0, t.jsx)(j.TG, { text: y.statusText }),
-                                        null == y &&
+                                        S?.type === "expiring" && (0, t.jsx)(j.P5, { dateString: S.expiringAt }),
+                                        S?.type === "removing" && (0, t.jsx)(j.Yq, { removingAt: S.removingAt }),
+                                        S?.type === "active" && (0, t.jsx)(j.TG, { text: S.statusText }),
+                                        null == S &&
                                             (0, t.jsxs)("div", {
-                                                className: k.II,
+                                                className: y.II,
                                                 children: [
-                                                    (0, t.jsx)(x._, {
+                                                    (0, t.jsx)(u._, {
                                                         size: "sm",
-                                                        color: u.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                                                        color: x.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
                                                     }),
                                                     (0, t.jsx)(r.E, {
-                                                        variant: "text-sm/medium",
+                                                        variant: "body-sm/medium",
                                                         color: "text-subtle",
-                                                        children: b.intl.formatToPlainString(b.t.t2Wbo1, {
+                                                        children: A.intl.formatToPlainString(A.t.t2Wbo1, {
                                                             required: a.cost,
                                                             decorator: "",
                                                         }),
@@ -87,22 +87,22 @@ function w(e) {
                                 }),
                             ],
                         }),
-                        T && (0, t.jsx)(N.A, { compact: !0, iconSize: "md", guildId: i, powerup: a, className: k.Rm }),
+                        T && (0, t.jsx)(N.A, { compact: !0, iconSize: "md", guildId: i, powerup: a, className: y.Rm }),
                     ],
                 }),
             ],
         });
     return _
         ? (0, t.jsx)("div", {
-              className: d()(k.nK, k.RO, { [k.r9]: P }),
-              onMouseEnter: () => f(!0),
-              onMouseLeave: () => f(!1),
+              className: o()(y.nK, y.RO, { [y.r9]: P }),
+              onMouseEnter: () => w(!0),
+              onMouseLeave: () => w(!1),
               children: q,
           })
         : (0, t.jsx)(m.D, {
-              className: d()(k.nK, { [k.r9]: P }),
-              onMouseEnter: () => f(!0),
-              onMouseLeave: () => f(!1),
+              className: o()(y.nK, { [y.r9]: P }),
+              onMouseEnter: () => w(!0),
+              onMouseLeave: () => w(!1),
               "aria-disabled": P,
               onClick: (e) => {
                   (e.stopPropagation(), P || C?.({ shouldCloseAllModals: !1 }));
@@ -110,28 +110,28 @@ function w(e) {
               children: q,
           });
 }
-var f = i(620968);
-function S(e) {
+var w = i(620968);
+function f(e) {
     let {
             guildId: s,
             title: i,
             description: l,
-            powerups: c,
-            newPowerupSkuIdSet: d,
-            forceStaticImages: o,
-            footerInfoText: x,
-            footerAction: u,
+            powerups: d,
+            newPowerupSkuIdSet: o,
+            forceStaticImages: c,
+            footerInfoText: u,
+            footerAction: x,
             ...m
         } = e,
         p = (0, n.A)(s),
         v =
-            null != x && x.length > 0
+            null != u && u.length > 0
                 ? (0, t.jsx)("div", {
-                      className: f.x,
+                      className: w.x,
                       children: (0, t.jsx)(r.E, {
-                          variant: "text-sm/semibold",
+                          variant: "body-sm/semibold",
                           color: "text-feedback-warning",
-                          children: x,
+                          children: u,
                       }),
                   })
                 : void 0;
@@ -139,14 +139,14 @@ function S(e) {
         title: i,
         subtitle: l,
         actionBarInput: v,
-        actions: null != u ? [u] : [],
+        actions: null != x ? [x] : [],
         ...m,
         children: (0, t.jsx)("div", {
-            className: f.p,
-            children: c.map((e) =>
+            className: w.p,
+            children: d.map((e) =>
                 (0, t.jsx)(
-                    w,
-                    { guildId: s, powerup: e, canUseBoosts: p ?? !1, isNewPerk: d?.has(e.skuId), forceStaticImages: o },
+                    k,
+                    { guildId: s, powerup: e, canUseBoosts: p ?? !1, isNewPerk: o?.has(e.skuId), forceStaticImages: c },
                     e.skuId,
                 ),
             ),

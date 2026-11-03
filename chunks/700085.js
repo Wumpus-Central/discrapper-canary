@@ -1,26 +1,26 @@
-n.d(i, { default: () => c });
+n.d(i, { default: () => l });
 var s = n(477900),
     r = n(189213),
-    e = n(834730),
-    a = n(780964),
-    l = n(766075),
-    o = n(105292);
-function c(t) {
+    a = n(834730),
+    e = n(780964),
+    o = n(766075),
+    d = n(105292);
+function l(t) {
     let { transitionState: i, onClose: n } = t;
     return (0, s.jsx)(r.a, {
         size: "sm",
         transitionState: i,
         onClose: n,
-        title: o.intl.string(o.t.WfwodX),
+        title: d.intl.string(d.t.WfwodX),
         actions: [
             {
                 variant: "primary",
                 onClick: () => {
-                    (n(), (0, l.openUserSettings)(a.X.ACCOUNT_STANDING_PANEL));
+                    (n(), (0, o.openUserSettings)(e.X.ACCOUNT_STANDING_PANEL));
                 },
-                text: o.intl.string(o.t.hvVgAZ),
+                text: d.intl.string(d.t.hvVgAZ),
             },
         ],
-        children: (0, s.jsx)(e.E, { variant: "text-md/normal", children: o.intl.string(o.t.I27WXW) }),
+        children: (0, s.jsx)(a.E, { variant: "body-md/normal", children: d.intl.string(d.t.I27WXW) }),
     });
 }

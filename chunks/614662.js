@@ -13,15 +13,15 @@ var l = n(477900),
     m = n(452027),
     p = n(778712),
     C = n(534514),
-    E = n(289873),
-    y = n(890497),
+    y = n(289873),
+    E = n(890497),
     _ = n(398590),
     g = n(49229),
     I = n(966327),
     S = n(674658),
     A = n(769015),
-    x = n(242874),
-    P = n(810498),
+    P = n(242874),
+    x = n(810498),
     v = n(531536),
     R = n(175452),
     M = n(427358),
@@ -65,9 +65,9 @@ function el(e) {
             openGiftingBadgePostPurchaseModal: h,
             onClose: m,
         } = e,
-        [C, E] = r.useState([]),
+        [C, y] = r.useState([]),
         [S, A] = r.useState(!1),
-        { isLoading: P, potentialRecipients: v } = (function () {
+        { isLoading: x, potentialRecipients: v } = (function () {
             r.useEffect(() => {
                 (g.A.fetchRelationships(), (0, R.u)());
             }, []);
@@ -115,7 +115,7 @@ function el(e) {
         try {
             if (U) {
                 let e = b[0];
-                (await (0, x.UN)(e, t), (r = { recipients: [e], failedRecipients: [] }));
+                (await (0, P.UN)(e, t), (r = { recipients: [e], failedRecipients: [] }));
             } else {
                 if (null == a) throw Error("Checkout session ID must be defined");
                 let e = await (0, Z.kW)(C, a),
@@ -144,7 +144,7 @@ function el(e) {
             }));
     }
     function ed(e) {
-        e.length <= i && E(e);
+        e.length <= i && y(e);
     }
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -164,13 +164,13 @@ function el(e) {
                                               justify: "space-between",
                                               children: [
                                                   (0, l.jsx)(D.E, {
-                                                      variant: "text-md/medium",
+                                                      variant: "body-md/medium",
                                                       color: "text-strong",
                                                       "aria-hidden": !0,
                                                       children: ee.intl.string(et.default.ZolTTE),
                                                   }),
                                                   (0, l.jsx)(D.E, {
-                                                      variant: "text-md/medium",
+                                                      variant: "body-md/medium",
                                                       color: "text-strong",
                                                       tabularNumbers: !0,
                                                       role: "status",
@@ -181,12 +181,12 @@ function el(e) {
                                                   }),
                                               ],
                                           }),
-                                          (0, l.jsx)(y.Z, {
+                                          (0, l.jsx)(E.Z, {
                                               selectionMode: "multiple",
                                               label: ee.intl.string(et.default.ZolTTE),
                                               hideLabel: !0,
                                               placeholder: ee.intl.string(et.default.xdDO7f),
-                                              loading: P || k,
+                                              loading: x || k,
                                               disabled: k || S,
                                               value: C,
                                               onSelectionChange: ed,
@@ -194,11 +194,11 @@ function el(e) {
                                           }),
                                       ],
                                   })
-                                : (0, l.jsx)(y.Z, {
+                                : (0, l.jsx)(E.Z, {
                                       selectionMode: "single",
                                       label: ee.intl.string(ee.t.MJw05f),
                                       placeholder: ee.intl.string(ee.t.J019jZ),
-                                      loading: P || k,
+                                      loading: x || k,
                                       disabled: k || S,
                                       value: C[0],
                                       onSelectionChange: (e) => ed(null != e ? [e] : []),
@@ -276,10 +276,10 @@ function eu(e) {
             checkoutSessionId: i,
             giftCodeDeliveryReady: s = !1,
             shouldUsePostPurchaseRecipientDelivery: u = !1,
-            application: y,
+            application: E,
             sku: g,
             subscriptionPlan: S,
-            selectedGiftStyle: x,
+            selectedGiftStyle: P,
             onClose: v,
             hasSentMessage: R,
             giftRecipient: M,
@@ -288,14 +288,14 @@ function eu(e) {
         } = e,
         [F, D] = r.useState(h.e.Modes.DEFAULT),
         B = (0, c.bG)([b.A], () => b.A.enabled),
-        G = R || (null != x && null != M),
+        G = R || (null != P && null != M),
         Z = g?.productLine === ei.EZt.COLLECTIBLES,
         {
             selectedGiftingPromotionRewards: K,
             openGiftingBadgePostPurchaseModal: W,
             canShowGiftingBadgePostPurchase: Y,
         } = (0, H.Pv)(),
-        q = (0, P.Mq)(S) && K.length > 0,
+        q = (0, x.Mq)(S) && K.length > 0,
         z = Y && 0 === K.length;
     function Q() {
         return null != S ? S.skuId : null != g ? g.id : null;
@@ -352,10 +352,10 @@ function eu(e) {
         ? (0, l.jsxs)("div", {
               className: es.EL,
               children: [
-                  null != y
-                      ? (0, l.jsx)(A.A, { game: y, className: es.__invalid_icon, size: A.M.LARGE, skuId: Q() })
+                  null != E
+                      ? (0, l.jsx)(A.A, { game: E, className: es.__invalid_icon, size: A.M.LARGE, skuId: Q() })
                       : null,
-                  (0, l.jsx)(E.y, { type: E.t.PULSING_ELLIPSIS }),
+                  (0, l.jsx)(y.y, { type: y.t.PULSING_ELLIPSIS }),
               ],
           })
         : u
@@ -375,9 +375,9 @@ function eu(e) {
                     (0, l.jsxs)("div", {
                         className: a()(es.EL, { [es.L1]: q }),
                         children: [
-                            null != y
+                            null != E
                                 ? (0, l.jsx)(A.A, {
-                                      game: y,
+                                      game: E,
                                       className: es.__invalid_icon,
                                       size: A.M.LARGE,
                                       skuId: Q(),
@@ -385,7 +385,7 @@ function eu(e) {
                                 : null,
                             (0, l.jsx)(C.D, {
                                 variant: "heading-lg/semibold",
-                                className: a()({ [es.wx]: null == x && !Z, [es.$A]: null != x && !Z }),
+                                className: a()({ [es.wx]: null == P && !Z, [es.$A]: null != P && !Z }),
                                 children:
                                     null != M || (R && null == L)
                                         ? ee.intl.string(ee.t.zOmK9N)
@@ -485,20 +485,20 @@ function eo(e) {
             userAffinities: M.A.getUserAffinitiesMap(),
             isLoading: M.A.isFetching(),
         })),
-        E = Array.from(m.keys()).sort((e, t) => M.A.compare(e, t)),
+        y = Array.from(m.keys()).sort((e, t) => M.A.compare(e, t)),
         _ = (0, c.bG)([L.A], () => L.A.getFriendIDs()),
-        S = u().difference(_, E),
-        A = [...E, ...S],
-        P = (0, c.bG)([j.default], () => j.default.filter((e) => A.includes(e.id) && !e.bot), [A]);
-    if (null == P || 0 === P.length) return null;
-    let v = u().sortBy(P, (e) => A.indexOf(e.id));
+        S = u().difference(_, y),
+        A = [...y, ...S],
+        x = (0, c.bG)([j.default], () => j.default.filter((e) => A.includes(e.id) && !e.bot), [A]);
+    if (null == x || 0 === x.length) return null;
+    let v = u().sortBy(x, (e) => A.indexOf(e.id));
     return (0, l.jsxs)("div", {
         className: es.vt,
         children: [
             (0, l.jsxs)("div", {
                 className: es.AQ,
                 children: [
-                    (0, l.jsx)(y.Z, {
+                    (0, l.jsx)(E.Z, {
                         selectionMode: "single",
                         label: ee.intl.string(ee.t.MJw05f),
                         placeholder: ee.intl.string(ee.t.J019jZ),
@@ -521,7 +521,7 @@ function eo(e) {
                             loading: f,
                             onClick: () => {
                                 (h(!0),
-                                    (0, x.UN)(i, t)
+                                    (0, P.UN)(i, t)
                                         .then(() => {
                                             n();
                                         })

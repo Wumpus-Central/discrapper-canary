@@ -5,11 +5,11 @@ var r = s(834730),
     e = s(772707),
     c = s(83107),
     a = s(960027),
-    l = s(297152),
-    o = s(105292),
+    o = s(297152),
+    l = s(105292),
     d = s(756537),
-    x = s(973324);
-function u(t) {
+    u = s(973324);
+function x(t) {
     let { text: i, icon: s, foreground: e } = t;
     return (0, n.jsxs)("div", {
         className: d.OI,
@@ -24,7 +24,7 @@ function u(t) {
                     width: 40,
                 }),
             }),
-            (0, n.jsx)(r.E, { variant: "text-md/normal", color: "text-default", className: d.Ct, children: i }),
+            (0, n.jsx)(r.E, { variant: "body-md/normal", color: "text-default", className: d.Ct, children: i }),
         ],
     });
 }
@@ -32,15 +32,15 @@ function h(t) {
     let { transitionState: i, onClose: s, ...r } = t;
     return (0, n.jsxs)(e.k, {
         ...r,
-        graphic: { type: "image", src: x.A },
-        title: o.intl.string(o.t.UVuXCs),
+        graphic: { type: "image", src: u.A },
+        title: l.intl.string(l.t.UVuXCs),
         onClose: s,
         transitionState: i,
-        actions: [{ text: o.intl.string(o.t.obLqZ8), variant: "primary", onClick: s }],
+        actions: [{ text: l.intl.string(l.t.obLqZ8), variant: "primary", onClick: s }],
         children: [
-            (0, n.jsx)(u, { text: o.intl.string(o.t.sBDfo6), icon: c.z, foreground: "var(--icon-feedback-critical)" }),
-            (0, n.jsx)(u, { text: o.intl.string(o.t.x58YtH), icon: a.z }),
-            (0, n.jsx)(u, { text: o.intl.string(o.t.XtVqla), icon: l.E }),
+            (0, n.jsx)(x, { text: l.intl.string(l.t.sBDfo6), icon: c.z, foreground: "var(--icon-feedback-critical)" }),
+            (0, n.jsx)(x, { text: l.intl.string(l.t.x58YtH), icon: a.z }),
+            (0, n.jsx)(x, { text: l.intl.string(l.t.XtVqla), icon: o.E }),
         ],
     });
 }

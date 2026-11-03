@@ -10,8 +10,8 @@ var i = n(477900),
     u = n(10862),
     h = n(734057),
     m = n(576705),
-    x = n(342952),
-    g = n(834730),
+    g = n(342952),
+    x = n(834730),
     A = n(778712),
     j = n(821609),
     p = n(693879),
@@ -19,21 +19,21 @@ var i = n(477900),
     N = n(188645),
     f = n(747376),
     I = n(575731),
-    C = n(616356),
-    b = n(977997),
-    E = n(47167),
-    y = n(475889),
+    b = n(616356),
+    C = n(977997),
+    y = n(47167),
+    E = n(475889),
     _ = n(262763),
     S = n(402216),
     M = n(105292),
     R = n(971718);
 let T = function (e) {
     let { channel: l } = e,
-        n = (0, s.bG)([b.A], () => b.A.isInChannel(l.id)),
+        n = (0, s.bG)([C.A], () => C.A.isInChannel(l.id)),
         t = (0, I.A)(l),
-        a = (0, E.Ay)(l),
-        r = (0, y.H)(l),
-        o = (0, s.bG)([C.A], () => C.A.getAllApplicationStreamsForChannel(l.id)[0]);
+        a = (0, y.Ay)(l),
+        r = (0, E.H)(l),
+        o = (0, s.bG)([b.A], () => b.A.getAllApplicationStreamsForChannel(l.id)[0]);
     return (0, i.jsxs)(N.Uq, {
         className: R.jC,
         children: [
@@ -53,8 +53,8 @@ let T = function (e) {
                             }),
                             (0, i.jsx)("div", {
                                 className: R.Mw,
-                                children: (0, i.jsx)(g.E, {
-                                    variant: "text-sm/medium",
+                                children: (0, i.jsx)(x.E, {
+                                    variant: "body-sm/medium",
                                     color: "text-default",
                                     className: R.Kw,
                                     children: a,
@@ -80,7 +80,7 @@ let T = function (e) {
                                 (0, i.jsx)(S.Ay, { size: S.Ay.Sizes.SMALL, className: R.wI }),
                             ],
                         }),
-                    (0, i.jsx)(x.A, {
+                    (0, i.jsx)(g.A, {
                         users: t,
                         guildId: l.guild_id,
                         channelId: l.id,
@@ -136,7 +136,7 @@ function k(e) {
     let m = t.useCallback(() => {
             (h.current.cancel(), u.current.delay());
         }, []),
-        x = t.useCallback(() => {
+        g = t.useCallback(() => {
             (u.current.cancel(), h.current.delay());
         }, []);
     return (0, i.jsx)(r.Y, {
@@ -148,20 +148,20 @@ function k(e) {
         position: "right",
         shouldShow: c,
         renderPopout: () =>
-            (0, i.jsx)("div", { onMouseEnter: m, onMouseLeave: x, children: (0, i.jsx)(T, { channel: l }) }),
-        children: () => (0, i.jsx)("div", { className: s, ref: o, onMouseEnter: m, onMouseLeave: x, children: n }),
+            (0, i.jsx)("div", { onMouseEnter: m, onMouseLeave: g, children: (0, i.jsx)(T, { channel: l }) }),
+        children: () => (0, i.jsx)("div", { className: s, ref: o, onMouseEnter: m, onMouseLeave: g, children: n }),
     });
 }
 function G(e) {
     let { guild: l, message: n } = e,
         { voiceState: t, voiceChannel: a } = (0, o.Ay)({ userId: n.author.id, guildId: l.id }),
         r = (0, s.bG)([h.A], () => h.A.getChannel(n.channel_id)?.isVocal()),
-        x = (0, s.bG)([m.A], () => {
+        g = (0, s.bG)([m.A], () => {
             if (null == a) return !1;
             let e = (0, d.r)() && (0, c.UK)(a.id);
             return (a.isPrivate() || (m.A.can(w.xBc.VIEW_CHANNEL, a) && m.A.can(w.xBc.CONNECT, a))) && !e;
         });
-    return null != t && null != a && a.isGuildVocal() && x && !r
+    return null != t && null != a && a.isGuildVocal() && g && !r
         ? (0, i.jsx)(k, {
               channel: a,
               childWrapperClassName: O.y,

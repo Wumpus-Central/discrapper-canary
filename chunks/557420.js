@@ -13,7 +13,7 @@ function c(e) {
               className: o.k,
               children: [
                   (0, i.jsx)(l.j, { size: "md", color: "currentColor", className: o.K }),
-                  (0, i.jsx)(r.E, { color: "interactive-text-active", variant: "text-md/semibold", children: n }),
+                  (0, i.jsx)(r.E, { color: "interactive-text-active", variant: "body-md/semibold", children: n }),
               ],
           })
         : (0, i.jsx)(s.m, {
@@ -24,7 +24,7 @@ function c(e) {
                   onClick: c,
                   children: [
                       (0, i.jsx)(l.j, { size: "md", color: "currentColor", className: o.K }),
-                      (0, i.jsx)(r.E, { color: "interactive-text-active", variant: "text-md/semibold", children: n }),
+                      (0, i.jsx)(r.E, { color: "interactive-text-active", variant: "body-md/semibold", children: n }),
                   ],
               }),
           });

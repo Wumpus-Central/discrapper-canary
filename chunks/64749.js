@@ -10,8 +10,8 @@ var i = n(477900),
     u = n(661531),
     m = n(545442),
     g = n(834730),
-    x = n(561392),
-    h = n(939249),
+    h = n(561392),
+    x = n(939249),
     E = n(404778),
     j = n(534514),
     f = n(475825),
@@ -19,18 +19,18 @@ var i = n(477900),
     p = n(47167),
     A = n(713654),
     I = n(915089),
-    S = n(967144),
-    C = n(69282),
-    _ = n(657048),
-    T = n(963307),
-    v = n(734057),
-    b = n(317525),
+    b = n(967144),
+    S = n(69282),
+    C = n(657048),
+    _ = n(963307),
+    T = n(734057),
+    v = n(317525),
     y = n(994500),
     R = n(287809),
     L = n(105292),
     G = n(830175);
 let D = (0, I.Ld)(),
-    O = "text-sm/medium";
+    O = "body-sm/medium";
 function M(e) {
     return 1 === e.type;
 }
@@ -38,7 +38,7 @@ function k(e) {
     return 0 === e.type;
 }
 function U(e) {
-    let t = `${!e.name.includes(T.QP) ? "@" : ""}${e.name}`;
+    let t = `${!e.name.includes(_.QP) ? "@" : ""}${e.name}`;
     return { tag: { type: N._.ROLE, label: t }, row: { id: e.id, display: t, type: 1, record: e } };
 }
 function P(e) {
@@ -48,17 +48,17 @@ function P(e) {
 let w = l.memo(function (e) {
     let { row: t, guildId: n, className: l } = e,
         { id: s, name: a } = t.record,
-        o = (0, C.Xx)({ guildId: n, roleId: s, size: 16 }),
-        x = (0, d.bG)([b.A], () => b.A.getRole(n, s)),
-        h = a.includes(T.QP) ? "" : "@",
+        o = (0, S.Xx)({ guildId: n, roleId: s, size: 16 }),
+        h = (0, d.bG)([v.A], () => v.A.getRole(n, s)),
+        x = a.includes(_.QP) ? "" : "@",
         E = (0, c.r)(u.A.unsafe_rawColors.PRIMARY_300).hsl(),
-        j = x?.colorString ?? E,
-        f = (0, S.X_)(n, x, x?.colorStrings);
+        j = h?.colorString ?? E,
+        f = (0, b.X_)(n, h, h?.colorStrings);
     return (0, i.jsxs)("div", {
         className: r()(G.xZ, G.ex, l),
         children: [
             (0, i.jsx)(m.W, { className: G.__invalid_roleDot, color: j, colors: f, background: !1, tooltip: !1 }),
-            null != o ? (0, i.jsx)(_.A, { className: G.YS, ...o, enableTooltip: !1 }) : h,
+            null != o ? (0, i.jsx)(C.A, { className: G.YS, ...o, enableTooltip: !1 }) : x,
             (0, i.jsx)(g.E, { variant: O, className: G.pP, children: a }),
         ],
     });
@@ -71,7 +71,7 @@ function F(e) {
         className: r()(G.xZ, G.sM, { [G.p7]: s }, l),
         children: [
             null != a && (0, i.jsx)(a, { size: "xs", color: "currentColor", className: G.p }),
-            (0, i.jsx)(g.E, { variant: t.isCategory() ? "eyebrow" : O, children: n.display }),
+            (0, i.jsx)(g.E, { variant: t.isCategory() ? "body-sm/medium" : O, children: n.display }),
         ],
     });
 }
@@ -94,16 +94,16 @@ function H(e) {
             helperText: p,
             className: A,
         } = e,
-        S = (0, I.GV)(),
-        C = (0, d.bG)([b.A], () => b.A.getRolesSnapshot(t)),
-        _ = l.useMemo(
+        b = (0, I.GV)(),
+        S = (0, d.bG)([v.A], () => v.A.getRolesSnapshot(t)),
+        C = l.useMemo(
             () =>
                 (function (e, t, n) {
                     if (null == e) return {};
                     let i = {};
                     return (
                         e.forEach((e) => {
-                            let t = v.A.getChannel(e);
+                            let t = T.A.getChannel(e);
                             null != t && (i[e] = P(t));
                         }),
                         t.forEach((e) => {
@@ -111,16 +111,16 @@ function H(e) {
                         }),
                         i
                     );
-                })(a, c, C),
-            [a, c, C],
+                })(a, c, S),
+            [a, c, S],
         ),
-        T = l.useMemo(() => Object.keys(_), [_]),
+        _ = l.useMemo(() => Object.keys(C), [C]),
         [y, R] = l.useState(""),
         [O, w] = l.useState(!1),
         [F, H] = l.useState(!1),
         [V, z] = l.useState(!1),
         Y = l.useRef(null),
-        { refs: W, floatingStyles: K } = (0, x.u)({ placement: "bottom-start", offset: 0, matchReferenceWidth: !0 }),
+        { refs: W, floatingStyles: K } = (0, h.u)({ placement: "bottom-start", offset: 0, matchReferenceWidth: !0 }),
         { sections: X, sectionCounts: q } = l.useMemo(() => {
             let e = "" !== y ? s.filter((e) => o()(y, e.display.toLocaleLowerCase())) : s,
                 t = "" !== y ? n.filter((e) => o()(y, e.display.toLocaleLowerCase())) : n,
@@ -163,7 +163,7 @@ function H(e) {
     }, [O, F]);
     let $ = l.useCallback(
             (e) => {
-                let t = { ..._ };
+                let t = { ...C };
                 (k(e) ? (t[e.id] = P(e.record)) : M(e) && (t[e.id] = U(e.record)),
                     J(t),
                     R(""),
@@ -174,14 +174,14 @@ function H(e) {
                         null != t && t.scrollTo({ top: t.scrollHeight, behavior: "smooth" });
                     }, 16));
             },
-            [J, _],
+            [J, C],
         ),
         ee = l.useCallback(
             (e) => {
                 let { section: n, row: l } = e,
                     s = X[n][l];
                 return (0, i.jsx)(
-                    h.D,
+                    x.D,
                     {
                         className: r()(G.Xs, G.iw),
                         onClick: (e) => {
@@ -196,11 +196,11 @@ function H(e) {
         ),
         et = l.useMemo(
             () =>
-                T.map((e) => {
+                _.map((e) => {
                     var n;
-                    return ((n = _[e]), { ...n.tag, label: B(n.row, t, G.yS) });
+                    return ((n = C[e]), { ...n.tag, label: B(n.row, t, G.yS) });
                 }),
-            [_, T, t],
+            [C, _, t],
         );
     return (0, i.jsxs)("div", {
         className: r()(G.MT, A),
@@ -216,18 +216,18 @@ function H(e) {
                         query: y,
                         ref: Y,
                         onRemoveTag: (e) => {
-                            let t = T[e],
-                                { [t]: n, ...i } = _;
+                            let t = _[e],
+                                { [t]: n, ...i } = C;
                             (J(i), R(""), Z());
                         },
                         onQueryChange: function (e) {
                             R(e.trim().toLocaleLowerCase());
                         },
                         placeholder: m ?? L.intl.string(L.t.uqHLzW),
-                        sections: [T.length],
+                        sections: [_.length],
                         inputProps: {
                             "aria-controls": D,
-                            "aria-describedby": null != p ? S : void 0,
+                            "aria-describedby": null != p ? b : void 0,
                             "aria-expanded": V,
                             onFocus: (e) => Q(!0, 2, e),
                             onBlur: (e) => Q(!1, 2, e),
@@ -253,7 +253,7 @@ function H(e) {
                                         ? (0, i.jsx)(
                                               j.D,
                                               {
-                                                  variant: "heading-sm/semibold",
+                                                  variant: "heading-xs/semibold",
                                                   className: r()(G.Gf, G.r6),
                                                   children: L.intl.string(L.t.OGiMXJ),
                                               },
@@ -263,7 +263,7 @@ function H(e) {
                                           ? (0, i.jsx)(
                                                 j.D,
                                                 {
-                                                    variant: "heading-sm/semibold",
+                                                    variant: "heading-xs/semibold",
                                                     className: r()(G.Gf, G.r6),
                                                     children: L.intl.string(L.t["LPJmL/"]),
                                                 },
@@ -291,8 +291,8 @@ function H(e) {
             }),
             null != p &&
                 (0, i.jsx)(g.E, {
-                    id: S,
-                    variant: "text-xs/normal",
+                    id: b,
+                    variant: "body-xs/normal",
                     color: "text-muted",
                     className: G.cy,
                     children: p,

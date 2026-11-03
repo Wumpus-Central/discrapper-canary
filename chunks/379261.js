@@ -7,7 +7,7 @@ var i = n(477900),
     o = n(834730),
     d = n(869431);
 function c(e) {
-    let { children: t, className: n, style: a, variant: c = "text-sm/medium" } = e,
+    let { children: t, className: n, style: a, variant: c = "body-sm/medium" } = e,
         u = r.useRef(null),
         _ = r.useRef(null),
         [E, A] = r.useState(null),

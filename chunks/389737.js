@@ -9,7 +9,7 @@ function a(e) {
     return (0, l.jsxs)(s.h, {
         children: [
             (0, l.jsx)(i.B, { gap: 0, children: t }),
-            (0, l.jsx)(r.E, { variant: "text-sm/normal", color: "text-muted", children: n }),
+            (0, l.jsx)(r.E, { variant: "body-sm/normal", color: "text-muted", children: n }),
         ],
     });
 }

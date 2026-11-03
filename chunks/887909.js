@@ -38,8 +38,8 @@ var i = n(477900),
     L = n(830215),
     y = n(803306),
     D = n(736653),
-    v = n(573648),
-    b = n(666860),
+    b = n(573648),
+    v = n(666860),
     P = n(269815),
     M = n(627363),
     U = n(587895),
@@ -177,7 +177,7 @@ function eT(e) {
         className: ep.f_,
         children: [
             (0, i.jsx)(t, { className: ep.u7, color: "currentColor" }),
-            (0, i.jsx)(T.E, { variant: "text-xs/normal", className: ep.z9, children: n }),
+            (0, i.jsx)(T.E, { variant: "body-xs/normal", className: ep.z9, children: n }),
         ],
     });
 }
@@ -238,7 +238,7 @@ function eL(e) {
         : (0, i.jsxs)("div", {
               className: eR.b9,
               children: [
-                  null != t ? (0, i.jsx)(g.D, { variant: "heading-sm/medium", className: eR.a9, children: t }) : null,
+                  null != t ? (0, i.jsx)(g.D, { variant: "heading-xs/medium", className: eR.a9, children: t }) : null,
                   a.map((e, t) => {
                       let { icon: n, text: r } = e;
                       return (0, i.jsx)(ey, { icon: n, text: r }, t);
@@ -252,13 +252,13 @@ function ey(e) {
         className: eR.f_,
         children: [
             (0, i.jsx)(t, { className: eR.u7, color: "currentColor" }),
-            (0, i.jsx)(T.E, { variant: "text-md/normal", className: eR.u0, children: n }),
+            (0, i.jsx)(T.E, { variant: "body-md/normal", className: eR.u0, children: n }),
         ],
     });
 }
 var eD = n(285796),
-    ev = n(628284),
-    eb = n(444927),
+    eb = n(628284),
+    ev = n(444927),
     eP = n(698403);
 function eM(e) {
     let { text: t, error: n, isFake: r } = e,
@@ -276,7 +276,7 @@ function eM(e) {
                       className: s()(eP.Kk, eP.RC),
                       "aria-hidden": !0,
                   })
-                : (0, i.jsx)(ev.y, {
+                : (0, i.jsx)(eb.y, {
                       size: "md",
                       color: "currentColor",
                       className: s()(eP.Kk, eP.sc),
@@ -287,12 +287,12 @@ function eM(e) {
                 "aria-hidden": !0,
                 children: [
                     (0, i.jsx)(T.E, {
-                        variant: "text-md/normal",
+                        variant: "body-md/normal",
                         color: !0 === r ? "text-muted" : void 0,
                         children: t,
                     }),
                     null != n
-                        ? (0, i.jsx)(T.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: n })
+                        ? (0, i.jsx)(T.E, { variant: "body-xs/normal", color: "text-feedback-critical", children: n })
                         : null,
                 ],
             }),
@@ -309,7 +309,7 @@ function eU(e) {
             isTrustedName: o = !1,
             noDivider: d = !1,
         } = e,
-        c = (0, eb.A)(() => es.O_[Math.floor(Math.random() * es.O_.length)]);
+        c = (0, ev.A)(() => es.O_[Math.floor(Math.random() * es.O_.length)]);
     if (0 === n.length) return null;
     let E = c(),
         A = o ? en.t.PZpY9c : en.t["1Hz+Sl"],
@@ -318,7 +318,7 @@ function eU(e) {
         className: s()(eP.Wu, d ? eP.bc : void 0),
         children: [
             (0, i.jsx)(g.D, {
-                variant: "heading-sm/medium",
+                variant: "heading-xs/medium",
                 className: eP.a9,
                 children: en.intl.format(A, { application: t?.name ?? "" }),
             }),
@@ -371,7 +371,7 @@ function ek(e) {
                                 className: ex.nW,
                                 children: (0, i.jsx)(eG.P, { size: "md", color: "currentColor", className: ex.Kk }),
                             }),
-                            (0, i.jsx)(T.E, { variant: "text-md/normal", children: t }),
+                            (0, i.jsx)(T.E, { variant: "body-md/normal", children: t }),
                         ],
                     },
                     String(e),
@@ -384,7 +384,7 @@ function ek(e) {
                 ? (0, i.jsxs)("div", {
                       children: [
                           (0, i.jsx)(T.E, {
-                              variant: "text-sm/medium",
+                              variant: "body-sm/medium",
                               color: "text-default",
                               children: en.intl.format(en.t.sOaT2j, { applicationName: t.name, guildName: l.name }),
                           }),
@@ -396,7 +396,7 @@ function ek(e) {
                 ? (0, i.jsxs)("div", {
                       children: [
                           (0, i.jsx)(T.E, {
-                              variant: "text-sm/medium",
+                              variant: "body-sm/medium",
                               color: "text-default",
                               children: en.intl.format(en.t.fsOkF4, { applicationName: t.name }),
                           }),
@@ -451,7 +451,7 @@ function eQ(e) {
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(T.E, {
-                                  variant: "text-lg/normal",
+                                  variant: "body-lg/normal",
                                   color: "text-default",
                                   children: en.intl.string(en.t.uT1CPa),
                               }),
@@ -465,7 +465,7 @@ function eQ(e) {
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsxs)(T.E, {
-                                  variant: "text-lg/semibold",
+                                  variant: "body-lg/semibold",
                                   color: "text-strong",
                                   children: [
                                       n.name,
@@ -481,12 +481,12 @@ function eQ(e) {
                               }),
                               s.length > 0
                                   ? (0, i.jsx)(T.E, {
-                                        variant: "text-md/normal",
+                                        variant: "body-md/normal",
                                         color: "text-default",
                                         children: en.intl.string(en.t.jFbDnJ),
                                     })
                                   : (0, i.jsx)(T.E, {
-                                        variant: "text-md/normal",
+                                        variant: "body-md/normal",
                                         color: "text-default",
                                         children: en.intl.string(en.t["X+Fdpo"]),
                                     }),
@@ -526,7 +526,7 @@ function eQ(e) {
                 ? (0, i.jsx)("div", {
                       className: eq.Ny,
                       children: (0, i.jsxs)(T.E, {
-                          variant: "text-sm/normal",
+                          variant: "body-sm/normal",
                           color: "text-muted",
                           children: [
                               en.intl.format(en.t.qRvpYU, {
@@ -535,13 +535,13 @@ function eQ(e) {
                                           T.E,
                                           {
                                               className: eq.ZD,
-                                              variant: "text-sm/normal",
+                                              variant: "body-sm/normal",
                                               children: [
                                                   t.username,
                                                   !t.hasUniqueUsername() &&
                                                       (0, i.jsx)(T.E, {
                                                           className: eq.Jb,
-                                                          variant: "text-sm/normal",
+                                                          variant: "body-sm/normal",
                                                           children: `#${t.discriminator}`,
                                                       }),
                                               ],
@@ -883,7 +883,7 @@ function e7(e) {
         s = (0, h.bG)([U.A], () => U.A.getApplication(t), [t]),
         l = (0, h.bG)([$.default, X.default], () => (null != $.default.getId() ? X.default.getCurrentUser() : null)),
         o = (0, D.Ay)(),
-        d = v.A.get(n),
+        d = b.A.get(n),
         c = null != d ? ((0, p.q)(o) ? d.icon.lightSVG : d.icon.darkSVG) : null,
         u = null != s ? q.Ay.getApplicationIconURL({ id: s.id, icon: s.icon }) : null,
         _ = null != l ? q.Ay.getUserAvatarURL(l) : null,
@@ -908,19 +908,19 @@ function e7(e) {
                                 null != _ && (0, i.jsx)("img", { src: _, alt: "", className: e3.eh }),
                             ],
                         }),
-                        (0, i.jsx)(T.E, { variant: "text-lg/normal", children: en.intl.string(en.t.uT1CPa) }),
+                        (0, i.jsx)(T.E, { variant: "body-lg/normal", children: en.intl.string(en.t.uT1CPa) }),
                         (0, i.jsx)(g.D, { variant: "heading-xl/semibold", children: E }),
                     ],
                 }),
                 (0, i.jsx)(T.E, {
-                    variant: "text-sm/normal",
+                    variant: "body-sm/normal",
                     children: en.intl.format(en.t["aJRE/Q"], { applicationName: E, platformName: a }),
                 }),
                 (0, i.jsxs)("div", {
                     className: e3.eD,
                     children: [
                         null != c && (0, i.jsx)("img", { src: c, alt: "", className: e3.sw }),
-                        (0, i.jsx)(T.E, { variant: "text-md/medium", className: e3.PP, children: a }),
+                        (0, i.jsx)(T.E, { variant: "body-md/medium", className: e3.PP, children: a }),
                         (0, i.jsx)(f.$, {
                             variant: "primary",
                             size: "sm",
@@ -936,7 +936,7 @@ function e7(e) {
                     children: [
                         (0, i.jsx)(S.CircleInformationIcon, { size: "sm", color: "currentColor", className: e3.Vi }),
                         (0, i.jsx)(T.E, {
-                            variant: "text-sm/normal",
+                            variant: "body-sm/normal",
                             children: en.intl.format(en.t["8psEFX"], { platformName: a, applicationName: E }),
                         }),
                     ],
@@ -948,13 +948,13 @@ function e7(e) {
 function e8(e) {
     let { platformType: t, platformName: n, connectedAccount: r, applicationName: a } = e,
         s = (0, D.Ay)(),
-        l = v.A.get(t),
+        l = b.A.get(t),
         o = null != l ? ((0, p.q)(s) ? l.icon.lightSVG : l.icon.darkSVG) : null;
     return (0, i.jsxs)("div", {
         className: e3.E4,
         children: [
             (0, i.jsx)(T.E, {
-                variant: "text-sm/normal",
+                variant: "body-sm/normal",
                 children: en.intl.format(en.t["+oaRw3"], { platformName: n }),
             }),
             (0, i.jsxs)("div", {
@@ -964,9 +964,9 @@ function e8(e) {
                     (0, i.jsxs)("div", {
                         className: e3.mG,
                         children: [
-                            (0, i.jsx)(T.E, { variant: "text-md/medium", children: r.name }),
+                            (0, i.jsx)(T.E, { variant: "body-md/medium", children: r.name }),
                             (0, i.jsx)(T.E, {
-                                variant: "text-xs/normal",
+                                variant: "body-xs/normal",
                                 children: en.intl.format(en.t.Dkd7sE, { platformName: n, connectedAccountId: r.id }),
                             }),
                         ],
@@ -975,7 +975,7 @@ function e8(e) {
                 ],
             }),
             (0, i.jsx)(T.E, {
-                variant: "text-sm/normal",
+                variant: "body-sm/normal",
                 children: en.intl.format(en.t.pyRNXJ, { applicationName: a }),
             }),
             (0, i.jsx)("div", { className: e3.zd }),
@@ -1031,7 +1031,7 @@ function te(e) {
         [eC, eO] = r.useState(!1),
         [eR, ey] = r.useState(!1),
         eD = eI?.guilds,
-        [ev, eb] = r.useState(U ?? null),
+        [eb, ev] = r.useState(U ?? null),
         [eP, eM] = r.useState(x ?? null),
         [ew, eG] = r.useState(Z.x3),
         ex = (0, h.bG)([z.A], () => (null == eE ? null : (z.A.getAccounts().find((e) => e.type === eE) ?? null)), [eE]),
@@ -1039,7 +1039,7 @@ function te(e) {
         eB = r.useMemo(() => (eI?.user != null ? new K.A(eI.user) : null), [eI?.user]),
         eH = (0, h.bG)([X.default], () => X.default.getCurrentUser()?.nsfwAllowed),
         ej = (0, G.A)(eI?.application ?? null),
-        eW = r.useMemo(() => eD?.find((e) => e.id === ev), [eD, ev]),
+        eW = r.useMemo(() => eD?.find((e) => e.id === eb), [eD, eb]),
         [eY, eK] = r.useState(null),
         e$ = r.useMemo(() => null == eA && null == k && (D?.length ?? 0) === 0 && null == I, [eA, D?.length, I, k]),
         [ez, eX] = r.useState(null);
@@ -1109,7 +1109,7 @@ function te(e) {
                         integrationType: eY,
                         connectedAccountProvider: eE,
                         permissions: E.TF(e2, ew),
-                        guildId: eY === u.b.GUILD_INSTALL && null != ev ? ev : void 0,
+                        guildId: eY === u.b.GUILD_INSTALL && null != eb ? eb : void 0,
                         channelId: eY === u.b.GUILD_INSTALL && null != eP ? eP : void 0,
                     });
                     if ((e && (await (0, w.Yx)(A, e6)), null != q))
@@ -1130,7 +1130,7 @@ function te(e) {
                         eO(!1));
                 }
             },
-            [ee, q, eI?.application, eW, eo, A, eZ, f, I, p, m, g, S, e2, ew, ev, eY, eE, eP, e6],
+            [ee, q, eI?.application, eW, eo, A, eZ, f, I, p, m, g, S, e2, ew, eb, eY, eE, eP, e6],
         ),
         ta = r.useRef(!1),
         ts = r.useCallback(async () => {
@@ -1162,7 +1162,7 @@ function te(e) {
                             : { ...e, guilds: e.guilds.map((e) => ({ ...e, permissions: E.iu(e.permissions) })) }),
                     ),
                         N !== el.l.NONE || !t.authorized || tt || n || tr(!0),
-                        (0, b.zV)(et.HAw.OAUTH2_AUTHORIZE_VIEWED, { application_id: t.application.id }));
+                        (0, v.zV)(et.HAw.OAUTH2_AUTHORIZE_VIEWED, { application_id: t.application.id }));
                 } catch (n) {
                     let { status: e, body: t } = n;
                     if (401 === e) return void (0, er.Vh)(eh, "oauth2_error_unauthorized");
@@ -1191,7 +1191,7 @@ function te(e) {
     (r.useEffect(() => {
         eT !== to.current &&
             ((to.current = eT),
-            (0, b.zV)(et.HAw.OAUTH2_AUTHORIZE_STEP_VIEWED, {
+            (0, v.zV)(et.HAw.OAUTH2_AUTHORIZE_STEP_VIEWED, {
                 step: eT,
                 application_id: A,
                 integration_type: eY,
@@ -1217,7 +1217,7 @@ function te(e) {
         }, [eT, eF, k]),
         r.useEffect(() => {
             if (null == eY || null != eI || null != eS) return;
-            eY === u.b.USER_INSTALL && (eb(null), eM(null));
+            eY === u.b.USER_INSTALL && (ev(null), eM(null));
             let e = eZ.filter((e) => !es.gX.includes(e));
             0 === eZ.length
                 ? eN(Error("No scopes were provided."))
@@ -1238,11 +1238,11 @@ function te(e) {
               ? {
                     label: en.intl.string(en.t.j2d6Km),
                     header: (0, i.jsx)(T.E, {
-                        variant: "text-lg/semibold",
+                        variant: "body-lg/semibold",
                         color: "text-strong",
                         children: en.intl.string(en.t.j2d6Km),
                     }),
-                    body: (0, i.jsx)(T.E, { variant: "text-md/normal", color: "text-default", children: eS.message }),
+                    body: (0, i.jsx)(T.E, { variant: "body-md/normal", color: "text-default", children: eS.message }),
                     actions: [{ onClick: eo, text: en.intl.string(en.t.cpT0Cq) }],
                     noPadding: !0,
                 }
@@ -1251,7 +1251,7 @@ function te(e) {
                     subtitle: eS.message,
                     actions: [{ onClick: eo, text: en.intl.string(en.t.cpT0Cq) }],
                 };
-    let tu = null != eE ? (v.A.get(eE)?.name ?? "") : "",
+    let tu = null != eE ? (b.A.get(eE)?.name ?? "") : "",
         t_ = !1,
         tE = !1,
         tA = !0,
@@ -1313,17 +1313,17 @@ function te(e) {
                     tg
                         ? (0, i.jsx)(eV, {
                               error: (tp[_.F.BOT] ?? tp[_.F.APPLICATIONS_COMMANDS] ?? [])[0],
-                              selectedGuildId: ev,
-                              onGuildChange: eb,
+                              selectedGuildId: eb,
+                              onGuildChange: ev,
                               guilds: tm ?? [],
-                              disabled: "" !== ev && null != ev && !0 === F,
+                              disabled: "" !== eb && null != eb && !0 === F,
                           })
                         : null,
                     tT
                         ? (0, i.jsx)(e1, {
                               error: (tp[_.F.WEBHOOK_INCOMING] ?? [])[0],
                               selectedChannelId: eP,
-                              selectedGuildId: ev,
+                              selectedGuildId: eb,
                               onChannelChange: eM,
                           })
                         : null,

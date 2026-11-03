@@ -17,7 +17,7 @@ let o = function (e) {
                 height: 20,
                 color: r.A.colors.TEXT_FEEDBACK_WARNING,
             }),
-            (0, l.jsx)(a.E, { variant: "text-sm/normal", color: "text-muted", children: t }),
+            (0, l.jsx)(a.E, { variant: "body-sm/normal", color: "text-muted", children: t }),
         ],
     });
 };

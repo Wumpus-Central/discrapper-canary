@@ -5,8 +5,8 @@ var r,
     s = n(503698),
     i = n.n(s),
     u = n(741918),
-    c = (((r = {}).UPDATE_ITEM_COUNT = "UPDATE_ITEM_COUNT"), (r.SET_FOCUSED_INDEX = "SET_FOCUSED_INDEX"), r),
-    o = n(602034);
+    o = (((r = {}).UPDATE_ITEM_COUNT = "UPDATE_ITEM_COUNT"), (r.SET_FOCUSED_INDEX = "SET_FOCUSED_INDEX"), r),
+    c = n(602034);
 let d = [u.D$.TAB, u.D$.UP, u.D$.DOWN];
 function f(e, t, n) {
     return null != n ? `#${e(t, n)}` : `#${t}`;
@@ -18,9 +18,9 @@ function m(e) {
     document.getElementById(e)?.focus();
 }
 var g = n(312138),
-    x = n(939249),
-    E = n(834730),
-    p = n(276293),
+    E = n(939249),
+    p = n(834730),
+    x = n(276293),
     C = n(866665),
     T = n(148494),
     A = n(738768),
@@ -63,9 +63,9 @@ function q(e) {
             (0, l.jsxs)("div", {
                 className: H.ur,
                 children: [
-                    (0, l.jsx)(E.E, { variant: "text-sm/semibold", color: "text-default", children: r }),
-                    (0, l.jsx)(E.E, {
-                        variant: "text-sm/normal",
+                    (0, l.jsx)(p.E, { variant: "body-sm/semibold", color: "text-default", children: r }),
+                    (0, l.jsx)(p.E, {
+                        variant: "body-sm/normal",
                         color: "text-muted",
                         className: H.SR,
                         children: J.intl.string(J.t["5uaI/7"]),
@@ -141,7 +141,7 @@ class Q extends a.PureComponent {
                 "aria-setsize": a,
                 "aria-labelledby": u,
                 children: [
-                    (0, l.jsx)(x.D, {
+                    (0, l.jsx)(E.D, {
                         tabIndex: -1,
                         onClick: this.handleMessageClick,
                         ignoreKeyPress: !0,
@@ -171,7 +171,7 @@ class Q extends a.PureComponent {
                     (0, l.jsx)("div", {
                         className: H.NC,
                         "aria-hidden": !0,
-                        children: (0, l.jsx)(x.D, {
+                        children: (0, l.jsx)(E.D, {
                             className: H.x6,
                             onClick: this.jumpTo,
                             children: J.intl.string(J.t.k5WiPf),
@@ -193,9 +193,9 @@ function ee(e) {
     let s = (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(a, { className: Z.gQ, size: "xxs", color: "currentColor" }),
-            (0, l.jsx)(E.E, {
+            (0, l.jsx)(p.E, {
                 className: Z.yK,
-                variant: "text-xs/medium",
+                variant: "body-xs/medium",
                 color: "text-default",
                 lineClamp: 1,
                 children: r,
@@ -203,7 +203,7 @@ function ee(e) {
         ],
     });
     return null != t && (0, U.Z_)(t.type)
-        ? (0, l.jsx)(x.D, {
+        ? (0, l.jsx)(E.D, {
               className: i()(Z.rg, Z.fj),
               onClick: (e) => {
                   (e.stopPropagation(), n(t.id));
@@ -220,8 +220,8 @@ function et(e) {
             startIndex: s,
             resultRefs: i,
             totalResults: u,
-            scrollTo: c,
-            renderEmbeds: o,
+            scrollTo: o,
+            renderEmbeds: c,
             offset: d,
             jumpToMessage: f,
             listNavigator: h,
@@ -236,7 +236,7 @@ function et(e) {
         A = null != t ? (0, v.m1)(t, w.default, O.A, !1) : "???",
         N = t?.parent_id != null ? X.A.getChannel(t.parent_id) : null,
         _ = null != N ? (0, v.m1)(N, w.default, O.A) : null,
-        P = (0, I.gU)(t) ?? p.N,
+        P = (0, I.gU)(t) ?? x.N,
         j = L.A.can(Y.xBc.MANAGE_MESSAGES, t),
         { content: y } = (0, S.Ay)({ content: A, embeds: [] }, { postProcessor: r }),
         U = a.useRef(null),
@@ -254,7 +254,7 @@ function et(e) {
             className: Z.JT,
             "aria-label": $,
             children: [
-                (0, l.jsx)(x.D, {
+                (0, l.jsx)(E.D, {
                     onClick: () => T(t.id),
                     children: (0, l.jsxs)("div", {
                         className: Z.aT,
@@ -266,8 +266,8 @@ function et(e) {
                                     asContainer: !0,
                                     text: A,
                                     shouldShow: F,
-                                    children: (0, l.jsx)(E.E, {
-                                        variant: "text-md/medium",
+                                    children: (0, l.jsx)(p.E, {
+                                        variant: "body-md/medium",
                                         color: "text-strong",
                                         tag: "span",
                                         ref: U,
@@ -289,8 +289,8 @@ function et(e) {
                                 i.current[r] = e;
                             },
                             totalResults: u,
-                            scrollTo: c,
-                            renderEmbeds: o,
+                            scrollTo: o,
+                            renderEmbeds: c,
                             searchOffset: d,
                             pageResultsLength: n.length,
                             message: e,
@@ -313,8 +313,8 @@ let en = a.memo(function (e) {
             scrollTo: r,
             messages: s,
             blockCount: i,
-            ignoreCount: E,
-            onPageChange: p,
+            ignoreCount: p,
+            onPageChange: x,
             onClick: C,
             paginationTotalCount: v,
             renderPageWrapper: I,
@@ -362,9 +362,9 @@ let en = a.memo(function (e) {
                     setFocus: s,
                     getNewFocusIndex: i,
                     maintainFocusPosition: g = !0,
-                    includeSetSizes: x = !0,
-                    focusOnMount: E = !0,
-                    enabled: p = !0,
+                    includeSetSizes: E = !0,
+                    focusOnMount: p = !0,
+                    enabled: x = !0,
                     onDispatch: C,
                 } = e,
                 T = a.useCallback(
@@ -402,10 +402,10 @@ let en = a.memo(function (e) {
                 ),
                 [A, N] = a.useReducer(T, { focusedIndex: r, itemCount: n }),
                 { itemCount: _, focusedIndex: v } = A,
-                [I] = a.useState(() => (0, o.nF)(N, 16));
+                [I] = a.useState(() => (0, c.nF)(N, 16));
             return (
                 a.useEffect(() => {
-                    N({ type: c.UPDATE_ITEM_COUNT, itemCount: n });
+                    N({ type: o.UPDATE_ITEM_COUNT, itemCount: n });
                 }, [n]),
                 (function (e) {
                     let {
@@ -416,11 +416,11 @@ let en = a.memo(function (e) {
                             setFocus: s = m,
                             getNewFocusIndex: i,
                             dispatch: g,
-                            maintainFocusPosition: x,
-                            includeSetSizes: E,
-                            focusOnMount: p,
+                            maintainFocusPosition: E,
+                            includeSetSizes: p,
+                            focusOnMount: x,
                             enabled: C,
-                            makeId: T = o.M4,
+                            makeId: T = c.M4,
                             getIndexFromId: A,
                         } = e,
                         N = a.useRef(n),
@@ -433,9 +433,9 @@ let en = a.memo(function (e) {
                     let [I, P] = a.useState(!1),
                         [D] = a.useState(
                             () =>
-                                new o.Lp((e) => () => {
+                                new c.Lp((e) => () => {
                                     let t = null != _.current && "string" == typeof e ? _.current(e) : e;
-                                    "number" != typeof t || t < 0 || g({ type: c.SET_FOCUSED_INDEX, index: t });
+                                    "number" != typeof t || t < 0 || g({ type: o.SET_FOCUSED_INDEX, index: t });
                                 }),
                         );
                     a.useEffect(() => () => D.clean(), [D]);
@@ -447,13 +447,13 @@ let en = a.memo(function (e) {
                         ),
                         [j, y] = a.useState(!0);
                     a.useEffect(() => {
-                        j && !p ? y(!1) : S(T(t, r), r);
+                        j && !x ? y(!1) : S(T(t, r), r);
                     }, [r]);
                     let b = a.useCallback(
                             function () {
                                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                                     n = null != i ? i(r) : r;
-                                (n !== r && g({ type: c.SET_FOCUSED_INDEX, index: n }), e && S(T(t, n), n));
+                                (n !== r && g({ type: o.SET_FOCUSED_INDEX, index: n }), e && S(T(t, n), n));
                             },
                             [T, r, i, g, t, S],
                         ),
@@ -504,8 +504,8 @@ let en = a.memo(function (e) {
                             I || P(!0);
                         }, [I]),
                         M = a.useCallback(() => {
-                            I || (x ? S(T(t, r), r) : b(!0));
-                        }, [T, t, S, x, I, r, b]),
+                            I || (E ? S(T(t, r), r) : b(!0));
+                        }, [T, t, S, E, I, r, b]),
                         U = a.useCallback(
                             (e) => {
                                 e.currentTarget.contains(e.relatedTarget) ||
@@ -531,22 +531,22 @@ let en = a.memo(function (e) {
                             );
                     }, [M, R, U]);
                     let L = a.useCallback(
-                            () => ({ role: "list", tabIndex: I && x ? -1 : 0, id: t, onKeyDown: k, ref: X }),
-                            [t, I, k, x],
+                            () => ({ role: "list", tabIndex: I && E ? -1 : 0, id: t, onKeyDown: k, ref: X }),
+                            [t, I, k, E],
                         ),
                         O = a.useCallback(
                             (e) => {
                                 let { index: n } = e;
                                 return {
                                     role: "listitem",
-                                    "aria-setsize": E ? N.current : void 0,
-                                    "aria-posinset": E ? n + 1 : void 0,
+                                    "aria-setsize": p ? N.current : void 0,
+                                    "aria-posinset": p ? n + 1 : void 0,
                                     id: T(t, n),
-                                    tabIndex: x && n === r ? 0 : -1,
+                                    tabIndex: E && n === r ? 0 : -1,
                                     onFocus: D.get(null != _.current ? T(t, n) : n),
                                 };
                             },
-                            [T, t, r, x, D, E],
+                            [T, t, r, E, D, p],
                         );
                     return a.useMemo(() => ({ dispatch: g, getContainerProps: L, getItemProps: O }), [g, L, O]);
                 })({
@@ -558,9 +558,9 @@ let en = a.memo(function (e) {
                     setFocus: s,
                     getNewFocusIndex: i,
                     maintainFocusPosition: g,
-                    includeSetSizes: x,
-                    focusOnMount: E,
-                    enabled: p,
+                    includeSetSizes: E,
+                    focusOnMount: p,
+                    enabled: x,
                 })
             );
         })({
@@ -623,8 +623,8 @@ let en = a.memo(function (e) {
                 "aria-busy": M,
                 children: (0, l.jsx)(P.G.Provider, { value: K, children: z }),
             }),
-            i > 0 || E > 0
-                ? (0, l.jsxs)(x.D, {
+            i > 0 || p > 0
+                ? (0, l.jsxs)(E.D, {
                       tag: "div",
                       className: Z.P,
                       onClick: function () {
@@ -635,25 +635,25 @@ let en = a.memo(function (e) {
                           (0, l.jsx)("div", {
                               className: Z.__invalid_resultsBlockedText,
                               children: U
-                                  ? i > 0 && E > 0
-                                      ? J.intl.formatToPlainString(J.t.OvJs9w, { count: i + E })
+                                  ? i > 0 && p > 0
+                                      ? J.intl.formatToPlainString(J.t.OvJs9w, { count: i + p })
                                       : i > 0
                                         ? J.intl.formatToPlainString(J.t["n/1QFS"], { count: i })
-                                        : J.intl.formatToPlainString(J.t.ypezTA, { count: E })
-                                  : i > 0 && E > 0
-                                    ? J.intl.formatToPlainString(J.t.EJHRcV, { count: i + E })
+                                        : J.intl.formatToPlainString(J.t.ypezTA, { count: p })
+                                  : i > 0 && p > 0
+                                    ? J.intl.formatToPlainString(J.t.EJHRcV, { count: i + p })
                                     : i > 0
                                       ? J.intl.formatToPlainString(J.t.HTE8JP, { count: i })
-                                      : J.intl.formatToPlainString(J.t.e7f8r9, { count: E }),
+                                      : J.intl.formatToPlainString(J.t.e7f8r9, { count: p }),
                           }),
                       ],
                   })
                 : null,
-            null != p &&
+            null != x &&
                 !M &&
                 (0, l.jsx)(V.A, {
                     renderPageWrapper: I,
-                    onPageChange: p,
+                    onPageChange: x,
                     offset: k,
                     totalCount: v ?? R,
                     pageSize: Y.T_y,

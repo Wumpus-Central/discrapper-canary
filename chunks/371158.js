@@ -1,50 +1,50 @@
-e.d(n, { default: () => C });
-var i = e(477900),
-    a = e(582128),
-    l = e(189213),
-    r = e(28863),
-    c = e(834730),
-    s = e(181658),
-    o = e(976860),
-    u = e(253932),
-    d = e(780964),
-    p = e(830543),
-    f = e(766075),
-    h = e(652215),
-    k = e(83152),
-    x = e(105292);
-function C(t) {
-    let { transitionState: n, onClose: e } = t,
-        [C, g] = a.useState(!1),
+i.d(n, { default: () => g });
+var e = i(477900),
+    a = i(582128),
+    l = i(189213),
+    r = i(28863),
+    c = i(834730),
+    s = i(181658),
+    o = i(976860),
+    d = i(253932),
+    u = i(780964),
+    p = i(830543),
+    f = i(766075),
+    h = i(652215),
+    k = i(83152),
+    C = i(105292);
+function g(t) {
+    let { transitionState: n, onClose: i } = t,
+        [g, x] = a.useState(!1),
         [E, S] = a.useState(null);
     async function y() {
-        (S(null), g(!0));
+        (S(null), x(!0));
         try {
-            (await u.dm.updateSetting(!1), (0, o.pX)(h.BVt.FRIENDS), (0, p.default)(), e());
+            (await d.dm.updateSetting(!1), (0, o.pX)(h.BVt.FRIENDS), (0, p.default)(), i());
         } catch (t) {
             S(new s.A(t).getAnyErrorMessage());
         } finally {
-            g(!1);
+            x(!1);
         }
     }
     function b() {
-        ((0, f.openUserSettings)(d.X.FAMILY_CENTER_PANEL), e());
+        ((0, f.openUserSettings)(u.X.FAMILY_CENTER_PANEL), i());
     }
-    return (0, i.jsx)(l.a, {
+    return (0, e.jsx)(l.a, {
         transitionState: n,
-        onClose: e,
-        title: x.intl.string(k.default.VGB30H),
-        subtitle: x.intl.format(k.default["CrZZ+p"], {
-            openSettingsHook: (t, n) => (0, i.jsx)(r.Anchor, { onClick: b, children: t }, n),
+        onClose: i,
+        title: C.intl.string(k.default.VGB30H),
+        subtitle: C.intl.format(k.default["CrZZ+p"], {
+            openSettingsHook: (t, n) => (0, e.jsx)(r.Anchor, { onClick: b, children: t }, n),
         }),
         actions: [
-            { variant: "secondary", text: x.intl.string(x.t["ETE/oC"]), onClick: e },
-            { text: x.intl.string(k.default.cSb7U0), onClick: y, loading: C, variant: "critical-primary" },
+            { variant: "secondary", text: C.intl.string(C.t["ETE/oC"]), onClick: i },
+            { text: C.intl.string(k.default.cSb7U0), onClick: y, loading: g, variant: "critical-primary" },
         ],
-        children: (0, i.jsx)("div", {
+        children: (0, e.jsx)("div", {
             children:
                 null != E &&
-                (0, i.jsx)(c.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: E }),
+                (0, e.jsx)(c.E, { variant: "body-xs/normal", color: "text-feedback-critical", children: E }),
         }),
     });
 }

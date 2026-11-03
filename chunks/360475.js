@@ -23,9 +23,9 @@ let o = {
     CREATORS: "/assets/d8fed3f03866afe2.svg",
 };
 var E = e(878314),
-    C = e(570465),
-    T = e(105292),
-    b = e(497292);
+    b = e(570465),
+    C = e(105292),
+    T = e(497292);
 function G(t) {
     let { guildTemplate: n, onClick: e, autoFocus: r, isSlideReady: l } = t,
         s = a.useCallback(() => {
@@ -35,66 +35,66 @@ function G(t) {
 }
 function I(t) {
     let { className: n, isNewUser: e, onClose: a, onChooseTemplate: r, onJoin: _, isSlideReady: g } = t,
-        o = (0, C.p)();
+        o = (0, b.p)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(s.rQ, {
                 "data-migration-pending": !0,
                 direction: m.A.Direction.VERTICAL,
-                className: b.wx,
+                className: T.wx,
                 separator: !1,
                 children: [
                     (0, i.jsx)(d.D, {
-                        className: b.DD,
+                        className: T.DD,
                         variant: "heading-xl/semibold",
-                        children: e ? T.intl.string(T.t["9U0b1k"]) : T.intl.string(T.t["5HZu07"]),
+                        children: e ? C.intl.string(C.t["9U0b1k"]) : C.intl.string(C.t["5HZu07"]),
                     }),
                     (0, i.jsx)(c.E, {
-                        className: b.VA,
+                        className: T.VA,
                         color: "text-default",
-                        variant: "text-md/normal",
-                        children: T.intl.string(T.t["wti/H4"]),
+                        variant: "body-md/normal",
+                        children: C.intl.string(C.t["wti/H4"]),
                     }),
-                    null != a && (0, i.jsx)(s.s_, { "data-migration-pending": !0, className: b.b, onClick: a }),
+                    null != a && (0, i.jsx)(s.s_, { "data-migration-pending": !0, className: T.b, onClick: a }),
                 ],
             }),
             (0, i.jsxs)(s.$m, {
                 "data-migration-pending": !0,
-                className: l()(b.KA, n),
+                className: l()(T.KA, n),
                 scrollbarGutter: !1,
                 children: [
-                    (0, i.jsx)(G, { guildTemplate: o[C.v.CREATE], onClick: r, autoFocus: !0, isSlideReady: g }),
+                    (0, i.jsx)(G, { guildTemplate: o[b.v.CREATE], onClick: r, autoFocus: !0, isSlideReady: g }),
                     (0, i.jsx)(c.E, {
-                        className: b.l8,
+                        className: T.l8,
                         color: "text-default",
-                        variant: "text-xs/semibold",
-                        children: T.intl.string(T.t.JGDkfg),
+                        variant: "body-xs/semibold",
+                        children: C.intl.string(C.t.JGDkfg),
                     }),
-                    (0, i.jsx)(G, { guildTemplate: o[C.v.GAMING], onClick: r }),
-                    (0, i.jsx)(G, { guildTemplate: o[C.v.FRIENDS], onClick: r }),
-                    (0, i.jsx)(G, { guildTemplate: o[C.v.STUDY], onClick: r }),
-                    (0, i.jsx)(G, { guildTemplate: o[C.v.SCHOOL_CLUB], onClick: r }),
-                    (0, i.jsx)(G, { guildTemplate: o[C.v.LOCAL_COMMUNITY], onClick: r }),
-                    (0, i.jsx)(G, { guildTemplate: o[C.v.CREATORS], onClick: r }),
+                    (0, i.jsx)(G, { guildTemplate: o[b.v.GAMING], onClick: r }),
+                    (0, i.jsx)(G, { guildTemplate: o[b.v.FRIENDS], onClick: r }),
+                    (0, i.jsx)(G, { guildTemplate: o[b.v.STUDY], onClick: r }),
+                    (0, i.jsx)(G, { guildTemplate: o[b.v.SCHOOL_CLUB], onClick: r }),
+                    (0, i.jsx)(G, { guildTemplate: o[b.v.LOCAL_COMMUNITY], onClick: r }),
+                    (0, i.jsx)(G, { guildTemplate: o[b.v.CREATORS], onClick: r }),
                 ],
             }),
             null != _ &&
                 (0, i.jsxs)(s.jl, {
                     "data-migration-pending": !0,
-                    className: b.qr,
+                    className: T.qr,
                     children: [
                         (0, i.jsx)(d.D, {
                             variant: "heading-lg/semibold",
-                            className: b.K8,
-                            children: T.intl.string(T.t["N+Mi/U"]),
+                            className: T.K8,
+                            children: C.intl.string(C.t["N+Mi/U"]),
                         }),
                         (0, i.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
-                            className: b.wC,
+                            className: T.wC,
                             children: (0, i.jsx)(p.$, {
                                 variant: "secondary",
                                 fullWidth: !0,
-                                text: T.intl.string(T.t.riOUtB),
+                                text: C.intl.string(C.t.riOUtB),
                                 onClick: _,
                             }),
                         }),

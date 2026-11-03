@@ -32,8 +32,8 @@ var I = n(136722),
     G = n(34457),
     L = n(696451),
     B = n(317525),
-    _ = n(71393),
-    y = n(287809),
+    y = n(71393),
+    _ = n(287809),
     P = n(488926),
     X = n(935208),
     M = n(209700),
@@ -42,8 +42,8 @@ var I = n(136722),
     V = n(588397);
 function z(e) {
     let { guildId: l } = e,
-        n = (0, o.bG)([y.default], () => y.default.getCurrentUser()),
-        s = (0, o.bG)([_.A], () => _.A.getGuild(l)),
+        n = (0, o.bG)([_.default], () => _.default.getCurrentUser()),
+        s = (0, o.bG)([y.A], () => y.A.getGuild(l)),
         r = (0, o.bG)([B.A], () => B.A.getRolesSnapshot(l)),
         u = (0, o.bG)([B.A], () => B.A.getSortedRoles(l)),
         { impersonateType: a, viewingRoles: c } = (0, o.cf)([w.A], () => ({
@@ -117,7 +117,7 @@ function z(e) {
                   ],
               }),
           })
-        : (0, i.jsx)(O.E, { variant: "text-md/medium", children: D.intl.string(D.t.MNSTbY) });
+        : (0, i.jsx)(O.E, { variant: "body-md/medium", children: D.intl.string(D.t.MNSTbY) });
 }
 function F(e) {
     return () =>

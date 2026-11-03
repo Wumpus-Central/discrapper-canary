@@ -1,4 +1,4 @@
-n.d(e, { default: () => m });
+n.d(t, { default: () => m });
 var l = n(477900),
     a = n(582128),
     i = n(935462),
@@ -13,14 +13,14 @@ let u = [
     { preBold: "On Point will make sure to", bold: " tick ", postBold: "a look at it!" },
     { preBold: "You're...un", bold: "bee ", postBold: "lievable!" },
 ];
-function h(t) {
-    let { punConfig: e } = t;
+function h(e) {
+    let { punConfig: t } = e;
     return (0, l.jsxs)(l.Fragment, {
-        children: [e.preBold, (0, l.jsx)("b", { children: (0, l.jsx)("i", { children: e.bold }) }), e.postBold],
+        children: [t.preBold, (0, l.jsx)("b", { children: (0, l.jsx)("i", { children: t.bold }) }), t.postBold],
     });
 }
-function m(t) {
-    let { transitionState: e, onClose: n, asanaTask: m } = t;
+function m(e) {
+    let { transitionState: t, onClose: n, asanaTask: m } = e;
     a.useEffect(() => {
         (0, d.Ak)("success", 0.1);
     }, []);
@@ -28,7 +28,7 @@ function m(t) {
     return (0, l.jsx)(i.EO, {
         "data-migration-pending": !0,
         className: p.Nk,
-        transitionState: e,
+        transitionState: t,
         "aria-label": c.intl.string(c.t.mCCdwi),
         parentComponent: "BugReporterSubmitModal",
         children: (0, l.jsxs)(i.$m, {
@@ -46,7 +46,7 @@ function m(t) {
                 }),
                 (0, l.jsxs)(r.E, {
                     className: p.KP,
-                    variant: "text-sm/normal",
+                    variant: "body-sm/normal",
                     children: [
                         "Thanks for submitting a ",
                         (0, l.jsx)(o.A, { onClick: () => (0, s.A)(m.permalink_url), children: "bug" }),

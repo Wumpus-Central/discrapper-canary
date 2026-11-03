@@ -7,5 +7,5 @@ var i = n(503698),
     a = n(769306);
 function c(t) {
     let { hasMentions: e, truncatedCount: n, className: i } = t;
-    return (0, r.jsx)(l.E, { className: s()(a.T, i, { [a.l]: e }), variant: "text-xs/normal", children: n });
+    return (0, r.jsx)(l.E, { className: s()(a.T, i, { [a.l]: e }), variant: "body-xs/normal", children: n });
 }

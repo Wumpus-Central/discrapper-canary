@@ -14,8 +14,8 @@ var i,
     x = n(503698),
     p = n.n(x),
     A = n(785007),
-    f = n(789645),
-    b = n(933832),
+    b = n(789645),
+    f = n(933832),
     j = n(88187),
     N = n(939249),
     E = n(105292),
@@ -32,7 +32,7 @@ function I(e) {
         ...c,
         children: T.map((e) =>
             (0, l.jsx)(
-                S,
+                y,
                 {
                     type: e,
                     isSelected: t === e,
@@ -46,17 +46,17 @@ function I(e) {
         ),
     });
 }
-function S(e) {
+function y(e) {
     let t,
         n,
         i,
         { type: s, onSelect: a, isSelected: r, permissionName: o } = e;
     switch (s) {
         case "DENY":
-            ((i = E.intl.string(E.t["6639O5"])), (t = f.P), (n = C.Xg));
+            ((i = E.intl.string(E.t["6639O5"])), (t = b.P), (n = C.Xg));
             break;
         case "ALLOW":
-            ((i = E.intl.string(E.t.RzDfSk)), (t = b.CheckmarkLargeIcon), (n = C.cw));
+            ((i = E.intl.string(E.t.RzDfSk)), (t = f.CheckmarkLargeIcon), (n = C.cw));
             break;
         default:
             ((i = E.intl.string(E.t.ujC3ZS)), (t = j.F), (n = C.le));
@@ -71,10 +71,10 @@ function S(e) {
     });
 }
 I.Types = v;
-var y = n(452027);
+var S = n(452027);
 function k(e) {
     let { value: t, onChange: n, disabled: i, permissionName: s, ...a } = e;
-    return (0, l.jsx)(y.D, {
+    return (0, l.jsx)(S.D, {
         ...a,
         disabled: i,
         layout: "horizontal",
@@ -119,7 +119,7 @@ class L extends s.PureComponent {
             x = g?.(s),
             p = !!(r || x),
             A = "string" == typeof x && "" !== x ? o.K : void 0,
-            f =
+            b =
                 null == a
                     ? (0, l.jsx)(
                           k,
@@ -152,11 +152,11 @@ class L extends s.PureComponent {
                 (0, l.jsxs)(u.B, {
                     gap: 8,
                     children: [
-                        f,
+                        b,
                         "string" == typeof x &&
                             "" !== x &&
                             (0, l.jsx)(m.E, {
-                                variant: "text-xs/medium",
+                                variant: "body-xs/medium",
                                 color: "text-feedback-critical",
                                 children: x,
                             }),

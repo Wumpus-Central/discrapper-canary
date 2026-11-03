@@ -24,8 +24,8 @@ var n = i(477900),
     T = i(55730),
     v = i(429913),
     O = i(878014),
-    L = i(402216),
-    b = i(506326),
+    b = i(402216),
+    L = i(506326),
     x = i(428249),
     D = i(205184),
     R = i(427358),
@@ -243,17 +243,17 @@ function tu(t) {
                               children: [
                                   (0, n.jsx)(I.E, {
                                       className: tr.Xh,
-                                      variant: "text-md/medium",
+                                      variant: "body-md/medium",
                                       color: "text-strong",
                                       children: Z.Ay.getName(void 0, void 0, r),
                                   }),
-                                  null != s && (0, n.jsx)(L.Ay, { className: tr.Ok }),
+                                  null != s && (0, n.jsx)(b.Ay, { className: tr.Ok }),
                               ],
                           }),
-                          (0, n.jsx)(b.mG, {
-                              location: b.N5.OVERLAY,
+                          (0, n.jsx)(L.mG, {
+                              location: L.N5.OVERLAY,
                               className: tr.cV,
-                              children: [b.iq, b.tR, b.K7, b.sp, b.MK].map((t, i) =>
+                              children: [L.iq, L.tR, L.K7, L.sp, L.MK].map((t, i) =>
                                   (0, n.jsx)(t, { entry: e }, `entry-${i}`),
                               ),
                           }),
@@ -313,7 +313,7 @@ function td(t) {
                       (0, n.jsx)("div", {
                           className: tr.v4,
                           children: (0, n.jsx)(I.E, {
-                              variant: "text-xs/medium",
+                              variant: "body-xs/medium",
                               color: "subtle" === s ? "text-subtle" : "text-default",
                               tag: "div",
                               children: ta.intl.string(ta.t.y9eo7a),

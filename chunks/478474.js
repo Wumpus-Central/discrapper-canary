@@ -30,7 +30,7 @@ function N(a) {
                 "data-migration-pending": !0,
                 className: u.rf,
                 scrollbarGutter: !1,
-                children: (0, n.jsx)(i.E, { tag: "p", variant: "text-md/normal", color: "text-default", children: h }),
+                children: (0, n.jsx)(i.E, { tag: "p", variant: "body-md/normal", color: "text-default", children: h }),
             }),
             (0, n.jsx)(r.jl, {
                 "data-migration-pending": !0,

@@ -20,7 +20,7 @@ function u(t) {
             "aria-label": c.intl.string(c.t.D98gRz),
             actions: [{ variant: "primary", text: c.intl.string(c.t.wdo1oB), onClick: n }],
             children: (0, a.jsx)(l.E, {
-                variant: "text-md/normal",
+                variant: "body-md/normal",
                 color: "text-muted",
                 className: d.h,
                 children: u.description,

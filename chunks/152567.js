@@ -179,7 +179,7 @@ class U extends r.PureComponent {
                   "aria-atomic": "true",
                   className: L.b_,
                   children: (0, l.jsx)(f.E, {
-                      variant: "text-xs/normal",
+                      variant: "body-xs/normal",
                       color: "text-subtle",
                       className: L.Qe,
                       children: n ? (i ? e : t) : void 0,
@@ -258,7 +258,7 @@ class U extends r.PureComponent {
                 }),
                 null != E &&
                     (0, l.jsx)(f.E, {
-                        variant: "text-sm/normal",
+                        variant: "body-sm/normal",
                         color: "text-subtle",
                         style: { visibility: S && !_ ? "hidden" : "visible" },
                         children: E,

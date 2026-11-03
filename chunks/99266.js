@@ -1,4 +1,4 @@
-i.d(e, { default: () => w });
+i.d(e, { default: () => j });
 var a = i(477900),
     l = i(582128),
     s = i(834730),
@@ -9,32 +9,32 @@ var a = i(477900),
     o = i(148494),
     u = i(228427),
     m = i(451909),
-    x = i(223863),
-    h = i(734057),
+    h = i(223863),
+    x = i(734057),
     p = i(957565),
     k = i(403362),
     v = i(148166),
     f = i(381941),
     C = i(105292),
-    g = i(555414);
-function j(t) {
+    b = i(555414);
+function g(t) {
     let { target: e } = t,
         i = "artist" === e.kind;
     return (0, a.jsxs)("div", {
-        className: g.sq,
+        className: b.sq,
         children: [
             (0, a.jsxs)("div", {
-                className: g.kx,
+                className: b.kx,
                 children: [
                     (0, a.jsx)(s.E, {
-                        variant: "text-md/medium",
+                        variant: "body-md/medium",
                         color: "text-default",
                         lineClamp: 1,
                         children: e.title,
                     }),
                     null != e.subtitle &&
                         (0, a.jsx)(s.E, {
-                            variant: "text-sm/medium",
+                            variant: "body-sm/medium",
                             color: "text-muted",
                             lineClamp: 1,
                             children: e.subtitle,
@@ -42,27 +42,27 @@ function j(t) {
                 ],
             }),
             (0, a.jsx)("div", {
-                className: g.SZ,
+                className: b.SZ,
                 children: (0, a.jsx)(v.R, { src: e.imageUrl, isCircular: i, FallbackIcon: i ? r.I : n.u }),
             }),
         ],
     });
 }
-function w(t) {
+function j(t) {
     let { target: e, onClose: i, ...s } = t,
         r = l.useCallback(
             async (t, a, l) => {
                 let { withMessage: s, closeAfterSend: r } = a;
                 l(!0);
                 try {
-                    let a = (await Promise.all(t.map(x.pk))).filter(k.Vq);
+                    let a = (await Promise.all(t.map(h.pk))).filter(k.Vq);
                     if (0 === a.length) return void l(!1);
                     r && i();
                     let n = `${e.shareUrl}
 
 `;
                     for (let t of a) {
-                        let e = h.A.getChannel(t);
+                        let e = x.A.getChannel(t);
                         null != e &&
                             (await o.A.sendMessage(e.id, m.Ay.parse(e, n + (s ?? "")), !1, {
                                 location: f.Hx.GUILD_SPACE,
@@ -95,7 +95,7 @@ function w(t) {
         ...s,
         onClose: i,
         source: "guild-space-popular-music",
-        customPreview: (0, a.jsx)(j, { target: e }),
+        customPreview: (0, a.jsx)(g, { target: e }),
         customSendHandler: r,
         additionalActions: n,
     });

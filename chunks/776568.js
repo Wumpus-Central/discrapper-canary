@@ -1,4 +1,4 @@
-t.d(n, { A: () => C });
+t.d(n, { A: () => y });
 var i = t(477900),
     l = t(582128),
     o = t(17928),
@@ -19,15 +19,15 @@ var i = t(477900),
     E = t(307731),
     g = t(105292),
     v = t(411559);
-function C(e) {
+function y(e) {
     let {
             className: n,
             guildId: t,
             error: f,
-            emojiId: C,
-            emojiName: y,
-            isRequiredField: I = !0,
-            shouldUpdateBothEmojiFields: b = !1,
+            emojiId: y,
+            emojiName: C,
+            isRequiredField: b = !0,
+            shouldUpdateBothEmojiFields: I = !1,
             setEmojiId: D,
             setEmojiName: k,
         } = e,
@@ -41,7 +41,7 @@ function C(e) {
                         x.Ay.convertSurrogateToName(t, !1)
                     );
                 else return i?.name;
-        })({ emojiId: C, emojiName: y }),
+        })({ emojiId: y, emojiName: C }),
         S = (0, o.bG)([h.Ay], () => (null != t ? h.Ay.getDefaultChannel(t) : null)),
         w = l.useRef(null),
         { isHoveringOrFocusing: M } = (0, c.A)(w);
@@ -52,17 +52,17 @@ function C(e) {
         (e.stopPropagation(), O());
     }
     let R = l.useMemo(() => {
-            let e = null != C && "" !== C,
-                n = null != y && "" !== y,
+            let e = null != y && "" !== y,
+                n = null != C && "" !== C,
                 t = null != B && "" !== B,
-                i = n && !Number.isNaN(parseInt(y)) && !t && !e;
+                i = n && !Number.isNaN(parseInt(C)) && !t && !e;
             return { hasEmojiId: e, hasEmojiName: n, hasEmojiDisplayName: t, isDeletedCustomEmoji: i };
-        }, [C, y, B]),
+        }, [y, C, B]),
         T = !R.isDeletedCustomEmoji && R.hasEmojiDisplayName;
     return (0, i.jsx)("div", {
         className: n,
         children: (0, i.jsx)(s.D, {
-            required: I,
+            required: b,
             label: g.intl.string(g.t["3BQmiC"]),
             errorMessage: f ?? void 0,
             children: (0, i.jsx)(a.Y, {
@@ -78,7 +78,7 @@ function C(e) {
                         onSelectEmoji: (e) => {
                             let { emoji: t, willClose: i } = e,
                                 l = t?.id == null;
-                            (O(), l ? k(t?.optionallyDiverseSequence) : (b && k(t?.name), D(t?.id)), i && n());
+                            (O(), l ? k(t?.optionallyDiverseSequence) : (I && k(t?.name), D(t?.id)), i && n());
                         },
                         guildId: t,
                         channel: S,
@@ -96,11 +96,11 @@ function C(e) {
                                 tabIndex: 0,
                                 renderButtonContents:
                                     !R.isDeletedCustomEmoji && (R.hasEmojiId || R.hasEmojiName)
-                                        ? () => (0, i.jsx)(d.A, { emojiName: y, emojiId: C })
+                                        ? () => (0, i.jsx)(d.A, { emojiName: C, emojiId: y })
                                         : null,
                             }),
                             (0, i.jsx)(u.E, {
-                                variant: "text-md/normal",
+                                variant: "body-md/normal",
                                 lineClamp: 1,
                                 color: T ? "text-default" : "text-muted",
                                 children: T ? `:${B}:` : g.intl.string(g.t.QTK0TJ),

@@ -14,8 +14,8 @@ var a = n(477900),
     p = n.n(g),
     E = n(612324),
     h = n(70283),
-    x = n(834730),
-    b = n(559106),
+    b = n(834730),
+    x = n(559106),
     A = n(307301),
     _ = n(192308),
     N = n(28863),
@@ -23,8 +23,8 @@ var a = n(477900),
     v = n(140735),
     j = n(22231),
     I = n(265872),
-    T = n(983555),
-    y = n(507395),
+    y = n(983555),
+    T = n(507395),
     C = n(144779),
     S = n(793574),
     D = n(688810),
@@ -60,8 +60,8 @@ function J(e) {
         color: "nitro-pink",
         className: Q.U,
         children: [
-            (0, a.jsx)(x.E, {
-                variant: "text-xs/medium",
+            (0, a.jsx)(b.E, {
+                variant: "body-xs/medium",
                 color: "text-default",
                 className: Q.t,
                 children: Z.intl.string(Z.t.cKIIzk),
@@ -152,7 +152,7 @@ function es(e) {
                     "aria-hidden": !0,
                     children: (0, a.jsx)(w.EyeSlashIcon, { size: "refresh_sm", color: "currentColor" }),
                 }),
-            (0, a.jsx)(b.vN, {
+            (0, a.jsx)(x.vN, {
                 children: (0, a.jsx)("button", {
                     ref: o,
                     type: "button",
@@ -212,7 +212,7 @@ function eo(e) {
         m({ action: "VIEW_BADGE_CUSTOMIZATION", analyticsLocations: u });
     }, []);
     let { fixedBadges: g, reorderableBadges: E, hiddenBadges: h } = (0, et.A)(),
-        b = (0, K.A)(),
+        x = (0, K.A)(),
         A = (0, G.VU)(),
         _ =
             (0, B.V)((e) => {
@@ -230,14 +230,14 @@ function eo(e) {
         requestAnimationFrame(() => R.current.get(e)?.focus());
     }
     let I = g.length + E.length + h.length,
-        T = (0, s.bG)([i.Ay, f.default], () => {
+        y = (0, s.bG)([i.Ay, f.default], () => {
             let e = f.default.getCurrentUser()?.id;
             return null != e && i.Ay.hasCatalogFor(e);
         });
-    function y(e, t) {
+    function T(e, t) {
         (0, c.hB)((0, c.i1)(N, e, t));
     }
-    let C = (0, X.w9)({ listType: ea, itemType: el, onFallbackDrop: (e) => y(e.index, N.length - 1) }),
+    let C = (0, X.w9)({ listType: ea, itemType: el, onFallbackDrop: (e) => T(e.index, N.length - 1) }),
         M = (0, X.w9)({ listType: ea, itemType: el });
     l.useLayoutEffect(() => {
         if (_)
@@ -249,9 +249,9 @@ function eo(e) {
             );
     }, [M, _]);
     let O = I > 0,
-        P = T && !O,
-        U = !b && !P,
-        w = b ? Z.t.VHaYM7 : Z.t["7Qs/YX"];
+        P = y && !O,
+        U = !x && !P,
+        w = x ? Z.t.VHaYM7 : Z.t["7Qs/YX"];
     function k() {
         (null != r && (r.current = !0), t());
     }
@@ -271,18 +271,18 @@ function eo(e) {
                             (0, a.jsxs)("div", {
                                 className: en.$,
                                 children: [
-                                    b && (0, a.jsx)(F.A, { size: "xs", className: en.oU }),
+                                    x && (0, a.jsx)(F.A, { size: "xs", className: en.oU }),
                                     (0, a.jsx)(H.D, {
                                         id: d,
-                                        variant: "heading-md/semibold",
+                                        variant: "heading-sm/semibold",
                                         color: "text-strong",
                                         children: Z.intl.string(Z.t.PXIyjF),
                                     }),
                                 ],
                             }),
                             !P &&
-                                (0, a.jsx)(x.E, {
-                                    variant: "text-xs/normal",
+                                (0, a.jsx)(b.E, {
+                                    variant: "body-xs/normal",
                                     color: "text-subtle",
                                     children: Z.intl.string(w),
                                 }),
@@ -290,9 +290,9 @@ function eo(e) {
                     }),
                     U && (0, a.jsx)(J, { onClose: t }),
                     P &&
-                        (0, a.jsx)(x.E, {
+                        (0, a.jsx)(b.E, {
                             className: en.p$,
-                            variant: "text-xs/normal",
+                            variant: "body-xs/normal",
                             color: "text-subtle",
                             children: Z.intl.string(Z.t.VT02mI),
                         }),
@@ -302,7 +302,7 @@ function eo(e) {
                             role: "group",
                             "aria-label": Z.intl.string(Z.t.VWV0y5),
                             children: [
-                                b &&
+                                x &&
                                     (0, a.jsx)("div", {
                                         ref: (e) => {
                                             C(e);
@@ -318,7 +318,7 @@ function eo(e) {
                                     ),
                                 ),
                                 E.map((e, t) =>
-                                    b
+                                    x
                                         ? (0, a.jsx)(
                                               er,
                                               {
@@ -328,7 +328,7 @@ function eo(e) {
                                                   onAction: j,
                                                   controlRef: v(e.badge_id),
                                                   reorderableIndex: t,
-                                                  onReorder: y,
+                                                  onReorder: T,
                                               },
                                               e.badge_id,
                                           )
@@ -389,7 +389,7 @@ function em(e) {
         {
             badgeData: p,
             currentTier: E,
-            obtainedAt: x,
+            obtainedAt: b,
         } = (0, s.cf)(
             [i.Ay],
             () =>
@@ -402,7 +402,7 @@ function em(e) {
                       },
             [g, c],
         ),
-        b = (0, s.bG)([ed.Ay], () => ed.Ay.useReducedMotion),
+        x = (0, s.bG)([ed.Ay], () => ed.Ay.useReducedMotion),
         A = l.useCallback(() => {
             null != c && i.Ay.isCatalogStaleFor(c) && (0, M.RS)(c);
         }, [c]),
@@ -411,19 +411,19 @@ function em(e) {
         R = E?.name,
         v = _ ? Z.intl.string(Z.t.Ipxkog) : (p?.name ?? u);
     _ ? (r = n = null != R ? `${v} ${R}` : v) : null != R ? ((t = v), (n = R), (r = `${v} ${R}`)) : ((n = v), (r = v));
-    let j = b ? void 0 : p?.complex_icon_animated_url,
+    let j = x ? void 0 : p?.complex_icon_animated_url,
         I = j ?? p?.complex_icon_static_url ?? p?.simple_icon_url ?? f,
-        T = null != j && I === j;
+        y = null != j && I === j;
     if (N) return (0, a.jsx)(eg, { userId: c, title: n, badgeImage: I, shouldShow: m, children: o });
-    let y = p?.info_label ?? (null != x ? Z.intl.formatToPlainString(Z.t["0aEh2a"], { date: new Date(x) }) : void 0);
+    let T = p?.info_label ?? (null != b ? Z.intl.formatToPlainString(Z.t["0aEh2a"], { date: new Date(b) }) : void 0);
     return (0, a.jsx)(ec.A, {
         title: n,
         eyebrow: t,
-        body: y,
+        body: T,
         badgeImage: I,
         badgeName: r,
         variant: _ ? "nitro" : "default",
-        isAnimated: T,
+        isAnimated: y,
         shouldShow: m,
         onShow: A,
         children: o,
@@ -460,8 +460,8 @@ function eh(e) {
         children: s,
     });
 }
-var ex = n(116833),
-    eb = n(704640),
+var eb = n(116833),
+    ex = n(704640),
     eA = n(425713),
     e_ = n(642481),
     eN = n(720879),
@@ -482,10 +482,10 @@ let eI = function (e) {
         u = eR.VD[t].nameUnformattedNitro,
         f = Z.intl.string(u).toLocaleUpperCase(),
         m = eR.VD[t].rarity,
-        g = (0, eb.A)(t),
+        g = (0, ex.A)(t),
         p = (0, eA.I)(t).standard;
     (0, l.useEffect)(() => {
-        (ex.m[ex.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE](), (new Image().src = p));
+        (eb.m[eb.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE](), (new Image().src = p));
     }, [p]);
     let E = (0, l.useCallback)(() => {
         n?.(ev.i.USER_DISMISS);
@@ -512,7 +512,7 @@ let eI = function (e) {
         size: "lg",
         graphic: {
             type: "dynamic",
-            component: ex.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE,
+            component: eb.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE,
             aspectRatio: "6/4",
             props: { src: p, alt: f, progressCircleText: i, progressCirclePercent: o, progressCircleUrgency: d },
         },
@@ -544,12 +544,12 @@ let eI = function (e) {
               ],
           });
 };
-var eT = n(592265);
-let ey = function (e) {
+var ey = n(592265);
+let eT = function (e) {
     let { assetComponent: t, tooltipWordmarkComponent: n, children: l } = e;
     return (0, a.jsxs)("div", {
-        className: eT.R,
-        children: [t, (0, a.jsx)("div", { className: eT.A, children: n }), l],
+        className: ey.R,
+        children: [t, (0, a.jsx)("div", { className: ey.A, children: n }), l],
     });
 };
 var eC = n(224016),
@@ -557,13 +557,13 @@ var eC = n(224016),
 let eD = function (e) {
     let { profileBadge: t, tenureBadge: n } = e,
         l = (0, eA.I)(n.id).standard;
-    return (0, a.jsxs)(ey, {
+    return (0, a.jsxs)(eT, {
         assetComponent: (0, a.jsx)("img", { src: l, alt: "" }),
         tooltipWordmarkComponent: (0, a.jsx)(eC.A, { width: 56, className: eS.R }),
         children: [
             (0, a.jsx)(H.D, { variant: "heading-xl/semibold", children: Z.intl.string(n.nameUnformatted) }),
-            (0, a.jsx)(x.E, {
-                variant: "text-xs/normal",
+            (0, a.jsx)(b.E, {
+                variant: "body-xs/normal",
                 color: "text-muted",
                 className: eS.K,
                 children: t.description,
@@ -621,10 +621,10 @@ function eV(e) {
 }
 function e$(e) {
     let { showSubtext: t = !1 } = e;
-    return (0, a.jsxs)(ey, {
+    return (0, a.jsxs)(eT, {
         assetComponent: (0, a.jsx)(eL.A, { className: eH.jc }),
         tooltipWordmarkComponent: (0, a.jsx)(H.D, {
-            variant: "heading-md/semibold",
+            variant: "heading-sm/semibold",
             className: eH.RK,
             children: Z.intl.string(Z.t.ElYQFS),
         }),
@@ -635,7 +635,7 @@ function e$(e) {
                 children: Z.intl.string(Z.t.lTHkqd),
             }),
             t
-                ? (0, a.jsx)(x.E, { variant: "text-xs/normal", className: eH.lV, children: Z.intl.string(Z.t.MEV0GI) })
+                ? (0, a.jsx)(b.E, { variant: "body-xs/normal", className: eH.lV, children: Z.intl.string(Z.t.MEV0GI) })
                 : void 0,
         ],
     });
@@ -712,7 +712,7 @@ function e0(e) {
             [ef],
         ),
         eE = ed && H;
-    function ex(e) {
+    function eb(e) {
         if ((U.A.setState({ isOpen: e }), !e)) {
             if (W.current) {
                 W.current = !1;
@@ -721,14 +721,14 @@ function e0(e) {
             requestAnimationFrame(() => Y.current?.focus());
         }
     }
-    let eb = (0, eY.AP)(et?.id ?? null),
-        eA = (0, m.A)(eb).some((e) => e.id === eG.A.ORB_PROFILE_BADGE),
+    let ex = (0, eY.AP)(et?.id ?? null),
+        eA = (0, m.A)(ex).some((e) => e.id === eG.A.ORB_PROFILE_BADGE),
         e_ = ed && !eu && 0 === r,
         eN = null;
     r > 0 &&
-        ((eN = (0, a.jsx)(x.E, {
+        ((eN = (0, a.jsx)(b.E, {
             tag: "span",
-            variant: "text-sm/normal",
+            variant: "body-sm/normal",
             color: "text-default",
             className: eJ.AX,
             "aria-hidden": !0,
@@ -739,10 +739,10 @@ function e0(e) {
         ref: $,
         className: p()(eJ.kL, ea && !0 !== L && eJ.Yq, ed && eJ.Tx, e_ && eJ.gK, d),
         ...(eu ? null : { "aria-label": Z.intl.string(Z.t.VWV0y5), role: "group" }),
-        ...(ed && !eu ? { onClick: () => ex(!eE) } : null),
+        ...(ed && !eu ? { onClick: () => eb(!eE) } : null),
         children: [
             eu &&
-                (0, a.jsx)(b.vN, {
+                (0, a.jsx)(x.vN, {
                     children: (0, a.jsxs)("button", {
                         ref: Y,
                         type: "button",
@@ -750,13 +750,13 @@ function e0(e) {
                         "aria-haspopup": "dialog",
                         "aria-expanded": eE,
                         onClick: (e) => {
-                            (e.stopPropagation(), ex(!eE));
+                            (e.stopPropagation(), eb(!eE));
                         },
                         children: [
                             (0, a.jsx)(A.j, { size: "xs", color: "currentColor", "aria-hidden": !0 }),
-                            (0, a.jsx)(x.E, {
+                            (0, a.jsx)(b.E, {
                                 tag: "span",
-                                variant: "text-sm/normal",
+                                variant: "body-sm/normal",
                                 color: "text-default",
                                 children: Z.intl.string(Z.t.l6w3Vj),
                             }),
@@ -777,7 +777,7 @@ function e0(e) {
                         className: p()(eJ.qS, null != o && eJ.Do, c),
                     }),
                     E = null != B && B(e.id),
-                    x = {
+                    b = {
                         onClick: (a) => {
                             if (
                                 (J({ action: "PRESS_BADGE" }),
@@ -834,18 +834,18 @@ function e0(e) {
                                     return;
                                 }
                                 if (ei) {
-                                    let t = null != e.link ? (0, T.default)(e.link, { analyticsLocations: q }) : null;
+                                    let t = null != e.link ? (0, y.default)(e.link, { analyticsLocations: q }) : null;
                                     if (null == t) return;
                                     return (g?.(), (0, _.closeAllModals)(), t(a));
                                 }
                                 return ((0, eM.D)({ analyticsLocations: q, displayProfile: u }), void g?.());
                             }
-                            let s = null != e.link ? (0, T.default)(e.link, { analyticsLocations: q }) : null;
+                            let s = null != e.link ? (0, y.default)(e.link, { analyticsLocations: q }) : null;
                             if (null != s) return (g?.(), (0, _.closeAllModals)(), s(a));
                         },
                         onMouseEnter: () => {
                             (e.id === m.h &&
-                                (0, y.r)({
+                                (0, T.r)({
                                     type: C.F.VIEW_INTERNAL_SURFACE_IMPRESSION,
                                     surfaceId: eO.uF.QUEST_BADGE,
                                     isTargeted: !1,
@@ -873,12 +873,12 @@ function e0(e) {
                             userId: u?.userId,
                             fallbackTitle: e.description,
                             fallbackIconSrc: e.iconSrc ?? e.simple_icon_url ?? (0, ej.L7)(e.icon),
-                            children: (0, a.jsx)(N.Anchor, { ...x, children: d }),
+                            children: (0, a.jsx)(N.Anchor, { ...b, children: d }),
                         },
                         `${e.id}-${t}`,
                     );
                 if (i) {
-                    let n = (0, a.jsx)(N.Anchor, { ...x, ref: F, children: d });
+                    let n = (0, a.jsx)(N.Anchor, { ...b, ref: F, children: d });
                     return (0, a.jsx)(
                         "div",
                         {
@@ -900,7 +900,7 @@ function e0(e) {
                     );
                 }
                 if (n) {
-                    let n = (0, a.jsx)(N.Anchor, { ...x, ref: X, children: d });
+                    let n = (0, a.jsx)(N.Anchor, { ...b, ref: X, children: d });
                     return (0, a.jsx)(
                         eV,
                         {
@@ -914,7 +914,7 @@ function e0(e) {
                     );
                 }
                 if (s) {
-                    let n = (0, a.jsx)(N.Anchor, { ...x, ref: K, children: d });
+                    let n = (0, a.jsx)(N.Anchor, { ...b, ref: K, children: d });
                     return (0, a.jsx)(
                         eh,
                         {
@@ -927,7 +927,7 @@ function e0(e) {
                         `${e.id}-${t}`,
                     );
                 }
-                let b = (0, a.jsx)(N.Anchor, { ...x, children: d }),
+                let x = (0, a.jsx)(N.Anchor, { ...b, children: d }),
                     A = (function (e) {
                         let { badge: t, tieredTenureBadge: n } = e;
                         return void 0 !== n && t.id !== eQ.K
@@ -936,13 +936,13 @@ function e0(e) {
                     })({ badge: e, tieredTenureBadge: r && e.id !== eQ.K ? l : void 0 });
                 return (0, a.jsx)(
                     R.m,
-                    { __unsupportedReactNodeAsText: A, forceOpen: E, delay: ej.In, ariaHidden: !0, children: b },
+                    { __unsupportedReactNodeAsText: A, forceOpen: E, delay: ej.In, ariaHidden: !0, children: x },
                     `${e.id}-${t}`,
                 );
             }),
             r > 0 &&
                 (ec
-                    ? (0, a.jsx)(b.vN, {
+                    ? (0, a.jsx)(x.vN, {
                           children: (0, a.jsx)("button", {
                               type: "button",
                               className: p()(eJ.$O, eJ.lv),
@@ -965,7 +965,7 @@ function e0(e) {
                     asContainer: !0,
                     ariaHidden: !0,
                     anchorRef: Y,
-                    children: (0, a.jsx)(b.vN, {
+                    children: (0, a.jsx)(x.vN, {
                         children: (0, a.jsx)("button", {
                             ref: Y,
                             type: "button",
@@ -974,7 +974,7 @@ function e0(e) {
                             "aria-haspopup": "dialog",
                             "aria-expanded": eE,
                             onClick: (e) => {
-                                (e.stopPropagation(), ex(!eE));
+                                (e.stopPropagation(), eb(!eE));
                             },
                             children: (0, a.jsx)(j.PencilIcon, {
                                 size: "xs",
@@ -998,7 +998,7 @@ function e0(e) {
               shouldShow: eE,
               onRequestClose: (e) => {
                   let t = e?.target;
-                  V.current?.contains(t) === !0 || (t?.closest(`[${eW.m}]`) == null && ex(!1));
+                  V.current?.contains(t) === !0 || (t?.closest(`[${eW.m}]`) == null && eb(!1));
               },
               renderPopout: (e) => {
                   let { closePopout: t } = e;
@@ -1024,8 +1024,8 @@ function e8(e) {
             isRedesignEnabled: p,
             pendingLegacyUsernameDisabled: E,
             pendingBadges: h,
-            showPendingBadgeEdits: x = !1,
-            onClose: b,
+            showPendingBadgeEdits: b = !1,
+            onClose: x,
             shouldOpenBadgeTooltip: A,
             shouldGlowTenureBadge: _,
             popoutAnchorRef: N,
@@ -1034,18 +1034,18 @@ function e8(e) {
         v = (0, o.d)({ location: "UserProfileBadgeListRows" }),
         j = n?.userId,
         I = (0, s.bG)([f.default], () => null != j && f.default.getUser(j)?.bot === !0, [j]),
-        T = (0, m.A)(n, E),
-        { pendingBadgeDisplayOrder: y, pendingBadgeHiddenBadges: C } = (0, u.A)(),
-        S = (0, s.yK)([i.Ay], () => (x && null != j && i.Ay.hasCatalogFor(j) ? i.Ay.getBadges(j) : []), [x, j]),
+        y = (0, m.A)(n, E),
+        { pendingBadgeDisplayOrder: T, pendingBadgeHiddenBadges: C } = (0, u.A)(),
+        S = (0, s.yK)([i.Ay], () => (b && null != j && i.Ay.hasCatalogFor(j) ? i.Ay.getBadges(j) : []), [b, j]),
         D = l.useMemo(() => {
-            let e = T;
+            let e = y;
             if (null != h) {
-                let t = new Set(T.map((e) => e.id));
-                e = [...T, ...h.filter((e) => !t.has(e.id))];
+                let t = new Set(y.map((e) => e.id));
+                e = [...y, ...h.filter((e) => !t.has(e.id))];
             }
-            return x ? (0, c.Rr)(e, S, { pendingBadgeDisplayOrder: y, pendingBadgeHiddenBadges: C }) : e;
-        }, [T, h, x, S, y, C]);
-    if (0 === D.length && !x) return null;
+            return b ? (0, c.Rr)(e, S, { pendingBadgeDisplayOrder: T, pendingBadgeHiddenBadges: C }) : e;
+        }, [y, h, b, S, T, C]);
+    if (0 === D.length && !b) return null;
     let M = v && !I,
         O = M ? Math.max(D.length - d.k9, 0) : 0;
     return (
@@ -1062,7 +1062,7 @@ function e8(e) {
                         badges: e,
                         overflowCount: O,
                         displayProfile: n,
-                        onClose: b,
+                        onClose: x,
                         shouldOpenBadgeTooltip: A,
                         shouldGlowTenureBadge: _,
                         isTargetUserBot: I,

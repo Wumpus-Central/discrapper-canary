@@ -51,7 +51,7 @@ let i = new (l(626584).A)("MFAPlayground"),
                                         children: [
                                             d &&
                                                 (0, t.jsx)(n.E, {
-                                                    variant: "text-sm/normal",
+                                                    variant: "body-sm/normal",
                                                     color: "text-muted",
                                                     children: "Note: WebAuthn UI will appear but will always error",
                                                 }),

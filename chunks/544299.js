@@ -13,18 +13,18 @@ var i = n(477900),
     m = n(652215),
     A = n(618922),
     f = n(105292),
-    x = n(107465);
-function g(e) {
+    g = n(107465);
+function x(e) {
     return Math.min(100, Math.max(0, e));
 }
 function C() {
     let e = (2 * Math.random() - 1) * 5;
     return 0.5 > Math.random() ? { x: 5, y: e } : { x: e, y: -5 };
 }
-function j(e, t) {
-    return { x: g(e.x + t.x), y: g(e.y + t.y) };
+function y(e, t) {
+    return { x: x(e.x + t.x), y: x(e.y + t.y) };
 }
-let y = l.createContext(null);
+let j = l.createContext(null);
 function I(e) {
     return (0, a.bG)([h.A], () => {
         let t = h.A.getPendingNote(e);
@@ -38,7 +38,7 @@ function N(e) {
 }
 function v(e) {
     let { position: t, targetLabel: n } = e,
-        i = l.useContext(y),
+        i = l.useContext(j),
         { x: a, y: s } = t;
     return l.useMemo(
         () =>
@@ -55,14 +55,14 @@ function v(e) {
 }
 function E(e) {
     let { channelId: t, containerRef: n, roomWidth: a, children: c } = e,
-        g = I(t),
+        x = I(t),
         v = N(t),
         E = l.useId(),
         [b, S] = l.useState(null),
         T = l.useRef(null);
     (v || null == b || S(null),
         l.useEffect(() => {
-            if (g)
+            if (x)
                 return (
                     d._.subscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, e),
                     () => {
@@ -72,7 +72,7 @@ function E(e) {
             function e() {
                 ((0, u.HW)(t), s.O.announce(f.intl.string(A.default.bUGP71), "assertive"));
             }
-        }, [g, t]),
+        }, [x, t]),
         l.useEffect(() => {
             if (v)
                 return () => {
@@ -89,19 +89,19 @@ function E(e) {
                       descriptionId: E,
                       setPreviewTarget: (e) => {
                           let t = T.current ?? C();
-                          ((T.current = t), S(j(e, t)));
+                          ((T.current = t), S(y(e, t)));
                       },
                       placeNextTo: (e) => {
                           let n = h.A.getPendingNote(t);
                           if (null == n || null != n.position) return;
                           let i = T.current ?? C();
-                          ((T.current = i), (0, u.Dr)(t, j(e, i)));
+                          ((T.current = i), (0, u.Dr)(t, y(e, i)));
                       },
                   }
                 : null,
         [v, E, t],
     );
-    return (0, i.jsxs)(y.Provider, {
+    return (0, i.jsxs)(j.Provider, {
         value: _,
         children: [
             v &&
@@ -109,12 +109,12 @@ function E(e) {
                     containerRef: n,
                     disableReturn: !0,
                     children: (0, i.jsx)("div", {
-                        className: x.a,
+                        className: g.a,
                         children: (0, i.jsx)("div", {
-                            className: x.G,
+                            className: g.G,
                             id: E,
                             children: (0, i.jsx)(o.E, {
-                                variant: "text-sm/medium",
+                                variant: "body-sm/medium",
                                 children: f.intl.string(A.default.xyO7AD),
                             }),
                         }),

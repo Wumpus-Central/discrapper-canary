@@ -5,8 +5,8 @@ var a = l(477900),
     s = l(866665),
     i = l(290136),
     o = l(239882),
-    c = l(980807),
-    d = l(51340),
+    d = l(980807),
+    c = l(51340),
     u = l(559106),
     m = l(847374),
     x = l(556995);
@@ -16,9 +16,9 @@ function f(e) {
 }
 function p(e) {
     let { children: t, ...l } = e,
-        { isDisabled: n } = (0, c.CC)(d.k, "trigger");
+        { isDisabled: n } = (0, d.CC)(c.k, "trigger");
     return (0, a.jsx)(u.vN, {
-        children: (0, a.jsx)(d.$, {
+        children: (0, a.jsx)(c.$, {
             slot: "trigger",
             className: x.hZ,
             children: (0, a.jsxs)(r.E, {
@@ -37,9 +37,9 @@ function v(e) {
             onExpandedChange: r,
             isDisabled: s = !1,
             collapsedContent: i,
-            children: c,
+            children: d,
         } = e,
-        [d, u] = n.useState(l),
+        [c, u] = n.useState(l),
         m = n.useCallback(
             (e) => {
                 (u(e), null != r && r(e));
@@ -54,11 +54,11 @@ function v(e) {
             (0, a.jsxs)("div", {
                 className: h.wx,
                 children: [
-                    (0, a.jsx)(p, { variant: "text-md/medium", color: d ? "text-strong" : "text-muted", children: t }),
-                    (!d || s) && i,
+                    (0, a.jsx)(p, { variant: "body-md/medium", color: c ? "text-strong" : "text-muted", children: t }),
+                    (!c || s) && i,
                 ],
             }),
-            (0, a.jsx)(f, { children: (0, a.jsx)("div", { className: h.CS, children: c }) }),
+            (0, a.jsx)(f, { children: (0, a.jsx)("div", { className: h.CS, children: d }) }),
         ],
     });
 }
@@ -67,8 +67,8 @@ function j(e) {
             label: t,
             labelSubText: l,
             value: o,
-            color: c = "text-muted",
-            valueColor: d = "text-muted",
+            color: d = "text-muted",
+            valueColor: c = "text-muted",
             valueIcon: u,
             icon: m,
             tooltip: x,
@@ -77,10 +77,10 @@ function j(e) {
             subTextColor: v = "text-muted",
             subTextHasStrikethrough: j,
         } = e,
-        E = n.useMemo(() => {
+        b = n.useMemo(() => {
             let e = (0, a.jsxs)(r.E, {
-                variant: "text-md/normal",
-                color: d,
+                variant: "body-md/normal",
+                color: c,
                 className: h.U4,
                 children: [null != u && (0, a.jsx)(u, { size: "xs" }), o],
             });
@@ -91,35 +91,35 @@ function j(e) {
                       children: [
                           e,
                           (0, a.jsx)(r.E, {
-                              variant: "text-xs/medium",
+                              variant: "body-xs/medium",
                               color: v,
                               className: j ? h.tP : void 0,
                               children: p,
                           }),
                       ],
                   });
-        }, [o, u, p, j, d, v]),
-        N = n.useId(),
-        g = n.useMemo(() => {
-            let e = (0, a.jsx)("span", { id: N, children: t });
+        }, [o, u, p, j, c, v]),
+        E = n.useId(),
+        N = n.useMemo(() => {
+            let e = (0, a.jsx)("span", { id: E, children: t });
             return null == l
                 ? e
                 : (0, a.jsxs)("div", {
-                      children: [e, (0, a.jsx)(r.E, { variant: "text-xs/normal", color: "text-subtle", children: l })],
+                      children: [e, (0, a.jsx)(r.E, { variant: "body-xs/normal", color: "text-subtle", children: l })],
                   });
-        }, [t, l, N]);
+        }, [t, l, E]);
     return (0, a.jsxs)("div", {
         className: h.Yn,
         role: "group",
-        "aria-labelledby": N,
+        "aria-labelledby": E,
         children: [
             (0, a.jsxs)(r.E, {
-                variant: "text-md/normal",
-                color: c,
+                variant: "body-md/normal",
+                color: d,
                 className: h.yB,
                 children: [
                     m,
-                    g,
+                    N,
                     null != x &&
                         (0, a.jsx)(s.m, {
                             text: x,
@@ -127,7 +127,7 @@ function j(e) {
                         }),
                 ],
             }),
-            E,
+            b,
         ],
     });
 }

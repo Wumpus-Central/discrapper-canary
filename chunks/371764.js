@@ -1,8 +1,8 @@
 n.d(e, { x: () => A });
 var i = n(477900);
 n(582128);
-var l = n(131937),
-    o = n(877624),
+var o = n(131937),
+    l = n(877624),
     s = n(308588),
     a = n(670474),
     r = n(821609),
@@ -20,9 +20,9 @@ function A(t) {
         { analyticsLocations: j } = (0, m.Ay)(),
         N = (0, u.p)();
     (0, x.A)({
-        type: l.ImpressionTypes.VIEW,
-        name: l.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
-        properties: { component_type: o.C.MARKETING_PAGE_BANNER, component_id: e, promotion_id: n },
+        type: o.ImpressionTypes.VIEW,
+        name: o.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
+        properties: { component_type: l.C.MARKETING_PAGE_BANNER, component_id: e, promotion_id: n },
     });
     let v = (0, h.h)({
             buttonAction: A.button?.buttonAction ?? s.d.OPEN_TIER_2_PAYMENT_MODAL,
@@ -44,9 +44,9 @@ function A(t) {
             (0, i.jsxs)("div", {
                 className: g.IH,
                 children: [
-                    (0, i.jsx)(c.D, { variant: "heading-md/semibold", color: "text-strong", children: A.header }),
+                    (0, i.jsx)(c.D, { variant: "heading-sm/semibold", color: "text-strong", children: A.header }),
                     (0, i.jsxs)(d.E, {
-                        variant: "text-md/medium",
+                        variant: "body-md/medium",
                         color: "text-subtle",
                         className: g.tb,
                         children: [

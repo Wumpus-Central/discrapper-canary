@@ -41,7 +41,7 @@ let c = {
                                                     children: "Extremely Mature Game",
                                                 }),
                                                 (0, r.jsx)(n.E, {
-                                                    variant: "text-sm/normal",
+                                                    variant: "body-sm/normal",
                                                     color: "text-default",
                                                     children:
                                                         "A description of an age-restricted game that should be unreadable while the surface is obscured. The content below is also made inert, so the button cannot be focused or clicked.",

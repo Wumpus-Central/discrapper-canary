@@ -1,17 +1,17 @@
-l.d(a, { X: () => i });
-var e = l(477900);
+l.d(a, { X: () => n });
+var r = l(477900);
 l(582128);
-var r = l(834730),
-    c = l(122203);
-function i(s) {
-    let { title: a, subtitle: l, icon: i } = s;
-    return (0, e.jsxs)("div", {
-        className: c.iE,
+var c = l(834730),
+    i = l(122203);
+function n(s) {
+    let { title: a, subtitle: l, icon: n } = s;
+    return (0, r.jsxs)("div", {
+        className: i.iE,
         children: [
-            null != i && (0, e.jsx)(i, { size: "xs", color: "currentColor", className: c.Kk }),
-            (0, e.jsx)(r.E, { variant: "text-md/normal", className: c.DD, children: a }),
+            null != n && (0, r.jsx)(n, { size: "xs", color: "currentColor", className: i.Kk }),
+            (0, r.jsx)(c.E, { variant: "body-md/normal", className: i.DD, children: a }),
             null != l && "" !== l
-                ? (0, e.jsx)(r.E, { variant: "text-xs/semibold", className: c.VA, children: l })
+                ? (0, r.jsx)(c.E, { variant: "body-xs/semibold", className: i.VA, children: l })
                 : null,
         ],
     });

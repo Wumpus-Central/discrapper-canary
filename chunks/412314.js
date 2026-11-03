@@ -1,68 +1,68 @@
-n.d(e, { M: () => v });
-var i = n(477900),
-    r = n(582128),
-    l = n(289873),
-    a = n(403581),
-    s = n(772707),
-    o = n(834730),
-    u = n(683071),
-    c = n(975571),
-    d = n(24482),
-    m = n(816252),
-    f = n(473702),
-    p = n(916974),
-    C = n(202541),
-    g = n(652215),
-    x = n(105292),
-    h = n(871710),
-    y = n(303930),
-    P = n(398932);
+e.d(n, { M: () => v });
+var i = e(477900),
+    r = e(582128),
+    l = e(289873),
+    a = e(403581),
+    s = e(772707),
+    o = e(834730),
+    u = e(683071),
+    c = e(975571),
+    d = e(24482),
+    m = e(816252),
+    f = e(473702),
+    p = e(916974),
+    C = e(202541),
+    g = e(652215),
+    y = e(105292),
+    h = e(871710),
+    P = e(303930),
+    x = e(398932);
 let v = () => {
     let {
             transitionState: t,
-            onClose: e,
-            premiumType: n,
+            onClose: n,
+            premiumType: e,
             premiumSubscription: v,
             setStep: E,
             applyOffer: D,
             churnUserDiscountOffer: j,
-            discountedPrice: S,
-            fullPrice: T,
+            discountedPrice: b,
+            fullPrice: S,
         } = (0, p.X)(),
-        [A, N] = (0, r.useState)(!1),
-        [b, M] = (0, r.useState)(!1);
+        [T, A] = (0, r.useState)(!1),
+        [N, M] = (0, r.useState)(!1);
     async function I() {
         if (null === j) return void M(!0);
-        (N(!0), M(!1));
+        (A(!0), M(!1));
         try {
             (await D(), E(f.g.DISCOUNT_APPLIED));
         } catch (t) {
-            (M(!0), N(!1));
+            (M(!0), A(!1));
         }
     }
-    if (null === j || null === S) return (0, i.jsx)("div", { className: h.dc, children: (0, i.jsx)(l.y, {}) });
-    let R = n === C.PremiumTypes.TIER_2,
+    if (null === j || null === b) return (0, i.jsx)("div", { className: h.dc, children: (0, i.jsx)(l.y, {}) });
+    let R = e === C.PremiumTypes.TIER_2,
         L = [
-            { text: x.intl.string(x.t.zl7LZp), onClick: () => e(), variant: "secondary", disabled: A },
+            { text: y.intl.string(y.t.zl7LZp), onClick: () => n(), variant: "secondary", disabled: T },
             {
-                text: x.intl.string(x.t.CKSuZJ),
+                text: y.intl.string(y.t.CKSuZJ),
                 onClick: () => I(),
                 variant: "primary",
                 icon: a.t,
-                loading: A,
-                disabled: A,
+                loading: T,
+                disabled: T,
             },
         ];
     return (0, i.jsxs)(s.k, {
-        graphic: { type: "image", src: R ? P.A : y },
+        graphic: { type: "image", src: R ? x.A : P },
         gradientColor: R ? "nitro-pink" : "nitro-green",
         transitionState: t,
         title:
             v.status === g.Dmq.CANCELED
-                ? x.intl.string(x.t["2Otzti"])
-                : `${x.intl.format(x.t.q9Vxu4, { percent: j.discount.amount })}`,
+                ? y.intl.string(y.t["2Otzti"])
+                : `${y.intl.format(y.t.q9Vxu4, { percent: j.discount.amount })}`,
         actions: L,
-        onClose: async () => e(),
+        onClose: async () => n(),
         children: [
             (0, i.jsx)("div", {
                 className: h.TA,
@@ -71,27 +71,27 @@ let v = () => {
             (0, i.jsx)("div", {
                 className: h.V6,
                 children: (0, i.jsx)(o.E, {
-                    variant: "text-xs/medium",
+                    variant: "body-xs/medium",
                     color: "text-subtle",
                     children:
                         v.status === g.Dmq.CANCELED
-                            ? x.intl.format(x.t.mY3ysK, {
-                                  discountedPrice: S,
+                            ? y.intl.format(y.t.mY3ysK, {
+                                  discountedPrice: b,
                                   billingPeriod: (0, d.Ke)(j.discount.intervalType),
                                   numMonths: j.discount.intervalCount,
-                                  fullPrice: T,
+                                  fullPrice: S,
                                   paidURL: c.A.getArticleURL(g.MVz.PAID_TERMS),
                               })
-                            : x.intl.format(x.t.hrGTjG, {
-                                  discountedPrice: S,
+                            : y.intl.format(y.t.hrGTjG, {
+                                  discountedPrice: b,
                                   billingPeriod: (0, d.Ke)(j.discount.intervalType),
                                   numMonths: j.discount.intervalCount,
-                                  fullPrice: T,
+                                  fullPrice: S,
                                   helpdeskArticle: c.A.getArticleURL(g.MVz.PAID_TERMS),
                               }),
                 }),
             }),
-            b ? (0, i.jsx)(u.w, { type: "critical", message: x.intl.string(x.t["5mlOCW"]), role: "alert" }) : null,
+            N ? (0, i.jsx)(u.w, { type: "critical", message: y.intl.string(y.t["5mlOCW"]), role: "alert" }) : null,
         ],
     });
 };

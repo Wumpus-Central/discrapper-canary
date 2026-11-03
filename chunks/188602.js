@@ -12,8 +12,8 @@ var s = a(477900),
     m = a(530557),
     v = a(772707),
     g = a(331322),
-    x = a(289873),
-    E = a(683071),
+    E = a(289873),
+    x = a(683071),
     f = a(109112),
     p = a(939249),
     A = a(834730),
@@ -27,14 +27,14 @@ var s = a(477900),
     I = a(945810),
     N = a(207913),
     V = a(393033);
-let T = (0, I.mj)({
+let b = (0, I.mj)({
     kind: "user",
     name: "2026-08-show-expressive-modal-subtitle-alt",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var b = a(73153),
-    y = a(482876),
+var y = a(73153),
+    T = a(482876),
     B = a(787301),
     k = a(750481);
 let L = function (e) {
@@ -80,8 +80,8 @@ let H = function (e) {
                     }
                     (c(!0), d(!1));
                     try {
-                        let e = (0, V.qn)() ? await (0, y.j)() : await (0, y.J)();
-                        (b.h.dispatch({
+                        let e = (0, V.qn)() ? await (0, T.j)() : await (0, T.J)();
+                        (y.h.dispatch({
                             type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS",
                             methods: e.methods,
                             footerMessage: e.footerMessage,
@@ -130,7 +130,7 @@ let H = function (e) {
         en =
             ((t = (0, V.W$)()),
             (a = (0, R.bG)([N.A], () => N.A.getShowExpressiveModalSubtitleAlt())),
-            (r = T.useConfig({ location: "age_verification_expressive_v2_modal" }).enabled),
+            (r = b.useConfig({ location: "age_verification_expressive_v2_modal" }).enabled),
             t ? a : r);
     l.useEffect(() => {
         (0, S.Bs)(ei, S.WU.EXPRESSIVE_V2, H);
@@ -175,17 +175,17 @@ let H = function (e) {
         ),
         children: [
             (0, s.jsx)("div", { "data-expressive-v2-graphic": !0, hidden: !0 }),
-            z && (0, s.jsx)(g.B, { direction: "vertical", align: "center", children: (0, s.jsx)(x.y, {}) }),
+            z && (0, s.jsx)(g.B, { direction: "vertical", align: "center", children: (0, s.jsx)(E.y, {}) }),
             !z &&
                 Q &&
                 null != Y &&
                 (0, s.jsx)("div", {
                     className: U.Ih,
-                    children: (0, s.jsx)(E.w, { type: "warning", message: Y, role: "status" }),
+                    children: (0, s.jsx)(x.w, { type: "warning", message: Y, role: "status" }),
                 }),
             !z &&
                 !Q &&
-                (0, s.jsx)(E.w, {
+                (0, s.jsx)(x.w, {
                     type: "critical",
                     message: D.intl.string(J ? G.default.Bkmk4Y : G.default.cR6336),
                     role: "alert",
@@ -234,14 +234,14 @@ let H = function (e) {
                                         className: U.Qq,
                                         children: [
                                             (0, s.jsx)(A.E, {
-                                                variant: "text-md/normal",
+                                                variant: "body-md/normal",
                                                 color: "text-strong",
                                                 children: e.title,
                                             }),
                                             (0, s.jsx)("div", {
                                                 className: U.h_,
                                                 children: (0, s.jsx)(A.E, {
-                                                    variant: "text-sm/normal",
+                                                    variant: "body-sm/normal",
                                                     color: "text-muted",
                                                     children: e.description,
                                                 }),
@@ -250,7 +250,7 @@ let H = function (e) {
                                                 (0, s.jsx)("div", {
                                                     className: U.Vp,
                                                     children: (0, s.jsx)(A.E, {
-                                                        variant: "text-sm/normal",
+                                                        variant: "body-sm/normal",
                                                         color: "text-muted",
                                                         children: e.providedBy,
                                                     }),
@@ -258,7 +258,7 @@ let H = function (e) {
                                         ],
                                     }),
                                     r
-                                        ? (0, s.jsx)(x.y, { type: x.t.SPINNING_CIRCLE_SIMPLE, className: U.wt })
+                                        ? (0, s.jsx)(E.y, { type: E.t.SPINNING_CIRCLE_SIMPLE, className: U.wt })
                                         : (0, s.jsx)(_._, { size: "refresh_sm", className: U.ai }),
                                 ],
                             },
@@ -271,7 +271,7 @@ let H = function (e) {
                 null != q &&
                 (0, s.jsx)("div", {
                     className: U.qr,
-                    children: (0, s.jsx)(A.E, { variant: "text-sm/normal", color: "text-muted", children: q }),
+                    children: (0, s.jsx)(A.E, { variant: "body-sm/normal", color: "text-muted", children: q }),
                 }),
         ],
     });

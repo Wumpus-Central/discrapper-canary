@@ -22,8 +22,8 @@ var n = i(477900),
     f = i(232198),
     H = i(652215),
     M = i(105292),
-    C = i(214634),
-    b = i(93712),
+    b = i(214634),
+    C = i(93712),
     j = i(954457);
 function I(t) {
     let { transitionState: e, onClose: i, recipient: l, onSendComplete: r, analyticsLocations: x, modalVariant: h } = t,
@@ -31,16 +31,16 @@ function I(t) {
         [I, T] = a.useState(!1),
         [k, L] = a.useState(!1),
         D = a.useRef(!1),
-        G = S.Ay.getName(l),
-        w =
+        y = S.Ay.getName(l),
+        G =
             h === f.H.HD_STREAMING
-                ? M.intl.formatToPlainString(M.t.rdh1ou, { recipientName: G })
-                : M.intl.formatToPlainString(M.t.LVlgM4, { recipientName: G }),
-        v =
+                ? M.intl.formatToPlainString(M.t.rdh1ou, { recipientName: y })
+                : M.intl.formatToPlainString(M.t.LVlgM4, { recipientName: y }),
+        w =
             h === f.H.HD_STREAMING
                 ? M.intl.string(M.t.NkgMIP)
                 : M.intl.format(M.t["2nw1yD"], { helpdeskArticle: E.A.getArticleURL(H.MVz.REFERRAL_PROGRAM) });
-    async function y() {
+    async function v() {
         if (D.current || null == _ || _ <= 0) return;
         ((D.current = !0),
             T(!0),
@@ -55,40 +55,40 @@ function I(t) {
               onClose: i,
               paddingSize: "lg",
               "aria-label": M.intl.string(M.t.c1wxcb),
-              children: (0, n.jsx)("div", { className: C.dc, children: (0, n.jsx)(c.y, {}) }),
+              children: (0, n.jsx)("div", { className: b.dc, children: (0, n.jsx)(c.y, {}) }),
           })
         : (0, n.jsxs)(o.d, {
               transitionState: e,
               onClose: i,
               paddingSize: "lg",
-              "aria-label": w,
+              "aria-label": G,
               children: [
                   (0, n.jsxs)(d.h, {
                       color: "nitro-pink",
-                      className: C.wx,
+                      className: b.wx,
                       children: [
-                          (0, n.jsx)("div", { className: C.b2, children: (0, n.jsx)(u.s_, { shouldColorMix: !0 }) }),
-                          (0, n.jsx)("img", { className: C.c8, src: h === f.H.HD_STREAMING ? b.A : j.A, alt: "" }),
+                          (0, n.jsx)("div", { className: b.b2, children: (0, n.jsx)(u.s_, { shouldColorMix: !0 }) }),
+                          (0, n.jsx)("img", { className: b.c8, src: h === f.H.HD_STREAMING ? C.A : j.A, alt: "" }),
                           (0, n.jsx)(A.D, {
                               variant: "heading-xl/semibold",
                               color: "text-strong",
-                              className: C.DD,
-                              children: w,
+                              className: b.DD,
+                              children: G,
                           }),
                           (0, n.jsx)(R.E, {
-                              variant: "text-md/normal",
+                              variant: "body-md/normal",
                               color: "text-subtle",
-                              className: C.VA,
-                              children: v,
+                              className: b.VA,
+                              children: w,
                           }),
                       ],
                   }),
                   k
                       ? (0, n.jsx)(R.E, {
-                            variant: "text-sm/normal",
+                            variant: "body-sm/normal",
                             color: "text-feedback-critical",
                             role: "alert",
-                            children: M.intl.format(M.t.RO3T4B, { userName: G }),
+                            children: M.intl.format(M.t.RO3T4B, { userName: y }),
                         })
                       : null,
                   (0, n.jsx)(m.H, {
@@ -97,7 +97,7 @@ function I(t) {
                           {
                               variant: "primary",
                               text: h === f.H.HD_STREAMING ? M.intl.string(M.t.dzQxHq) : M.intl.string(M.t.ItpQxk),
-                              onClick: y,
+                              onClick: v,
                               loading: I,
                               disabled: I || 0 === _,
                           },

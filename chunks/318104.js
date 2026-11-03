@@ -18,15 +18,15 @@ var a = n(477900),
     p = n(71393),
     j = n(573163),
     v = n(174459),
-    N = n(403362);
+    b = n(403362);
 n(422653);
-var C = n(935208),
-    b = n(285059),
+var N = n(935208),
+    C = n(285059),
     k = n(770666),
     G = n(508654),
-    D = n(29414),
-    _ = n(834730),
-    y = n(468689),
+    y = n(29414),
+    D = n(834730),
+    _ = n(468689),
     I = n(576705),
     M = n(652215),
     L = n(105292),
@@ -50,20 +50,20 @@ function w(e) {
                 className: P.DD,
                 children: L.intl.string(L.t["WgZ+3D"]),
             }),
-            (0, a.jsx)(_.E, {
+            (0, a.jsx)(D.E, {
                 color: "text-default",
-                variant: "text-sm/normal",
+                variant: "body-sm/normal",
                 className: P.VA,
                 children: L.intl.string(L.t["v/S/PG"]),
             }),
             i &&
-                (0, a.jsx)(_.E, {
+                (0, a.jsx)(D.E, {
                     color: "text-default",
-                    variant: "text-sm/normal",
+                    variant: "body-sm/normal",
                     className: P.Ec,
                     children: L.intl.format(L.t["K+DH2o"], {
                         onClick: () => {
-                            (y.A.open(t, M.BEX.ROLES), n());
+                            (_.A.open(t, M.BEX.ROLES), n());
                         },
                     }),
                 }),
@@ -75,36 +75,36 @@ var S = n(823508),
     V = n(790782),
     q = n(968588);
 function z(e) {
-    let { transitionState: t, onClose: l, guildId: _ } = e,
-        y = (0, A.GV)(),
-        I = (0, s.bG)([p.A], () => p.A.getGuild(_)),
+    let { transitionState: t, onClose: l, guildId: D } = e,
+        _ = (0, A.GV)(),
+        I = (0, s.bG)([p.A], () => p.A.getGuild(D)),
         P = (0, k.A)(I?.id),
-        z = (0, G.Ay)(_),
-        O = i.useRef(j.Ay.ackMessageId(_, V.P.GUILD_EVENT)),
+        z = (0, G.Ay)(D),
+        O = i.useRef(j.Ay.ackMessageId(D, V.P.GUILD_EVENT)),
         U = (0, S.A)();
     return (
         i.useEffect(() => {
-            (z.forEach((e) => b.A.getGuildEventUserCounts(_, e.id, [])), b.A.getGuildEventsForCurrentUser(_));
-        }, [z, _]),
+            (z.forEach((e) => C.A.getGuildEventUserCounts(D, e.id, [])), C.A.getGuildEventsForCurrentUser(D));
+        }, [z, D]),
         (0, E.Ay)(() => {
-            v.default.track(M.HAw.OPEN_MODAL, { type: T.BV, guild_id: _, guild_events_count: z.length });
+            v.default.track(M.HAw.OPEN_MODAL, { type: T.BV, guild_id: D, guild_events_count: z.length });
         }),
         i.useEffect(() => {
             r()(z)
                 .map((e) => e.creator_id)
-                .filter(N.Vq)
+                .filter(b.Vq)
                 .uniq()
                 .forEach((e) => {
-                    f.A.requestMember(_, e);
+                    f.A.requestMember(D, e);
                 });
-        }, [_, z]),
+        }, [D, z]),
         i.useEffect(() => {
-            null != _ && (0, x.hK)(_, V.P.GUILD_EVENT);
-        }, [_]),
+            null != D && (0, x.hK)(D, V.P.GUILD_EVENT);
+        }, [D]),
         (0, a.jsxs)(d.EO, {
             size: d.rI.MEDIUM,
             transitionState: t,
-            "aria-labelledby": y,
+            "aria-labelledby": _,
             parentComponent: "GuildEventsModal",
             "data-migration-pending": !0,
             children: [
@@ -114,8 +114,8 @@ function z(e) {
                     children: [
                         (0, a.jsx)(o.CalendarIcon, { size: "md", color: "currentColor", className: q.Kk }),
                         (0, a.jsx)(u.D, {
-                            id: y,
-                            variant: "heading-md/semibold",
+                            id: _,
+                            variant: "heading-sm/semibold",
                             children:
                                 z.length > 0
                                     ? L.intl.formatToPlainString(L.t.IBdqSu, { number: z.length })
@@ -172,7 +172,7 @@ function z(e) {
                                                     n.e("222689"),
                                                     n.e("426226"),
                                                 ]).then(n.bind(n, 303224));
-                                                return (t) => (0, a.jsx)(e, { ...t, guildId: _ });
+                                                return (t) => (0, a.jsx)(e, { ...t, guildId: D });
                                             }, U);
                                         },
                                         text: L.intl.string(L.t["60lJ0C"]),
@@ -194,16 +194,16 @@ function z(e) {
                         z.length > 0
                             ? z.map((e) =>
                                   (0, a.jsx)(
-                                      D.A,
+                                      y.A,
                                       {
                                           guildEvent: e,
                                           onActionTaken: l,
-                                          isNew: null != O.current && C.default.compare(e.id, O.current) > 0,
+                                          isNew: null != O.current && N.default.compare(e.id, O.current) > 0,
                                       },
                                       e.id,
                                   ),
                               )
-                            : (0, a.jsx)(w, { guildId: _, onClose: l }),
+                            : (0, a.jsx)(w, { guildId: D, onClose: l }),
                 }),
             ],
         })

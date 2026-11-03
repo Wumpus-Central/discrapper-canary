@@ -13,12 +13,12 @@ var a,
     p = n(775602),
     A = n(793574),
     g = n(688810),
-    x = n(922301),
-    v = n(660184),
+    v = n(922301),
+    x = n(660184),
     N = n(73392),
     S = n(386467),
-    j = n(534400),
-    y = n(176201),
+    y = n(534400),
+    j = n(176201),
     G = n(676608),
     I = n(342296),
     f = n(317525),
@@ -38,7 +38,7 @@ let w = i.memo(function (e) {
         className: M.kL,
         children: (0, s.jsxs)(b.E, {
             tag: "span",
-            variant: "text-xs/semibold",
+            variant: "body-xs/semibold",
             color: "text-default",
             lineClamp: 1,
             className: M.Qq,
@@ -93,7 +93,7 @@ function F(e) {
         et = (0, _.A)(n),
         eu = i.useContext(d.C),
         eo = eu?.animate || E,
-        ed = er && (0, y.kz)(l),
+        ed = er && (0, j.kz)(l),
         ec = ea && ed,
         em = a?.isPrivate() && null != el;
     (0, k.A)({ shouldSubscribe: em || ec, subscribeToGroupId: W, authorId: n.author.id });
@@ -117,10 +117,10 @@ function F(e) {
             onClick: q,
             onContextMenu: L,
             children: em
-                ? (0, s.jsx)(v.A, {
+                ? (0, s.jsx)(x.A, {
                       userName: eA,
                       displayNameStyles: el,
-                      effectDisplayType: eo ? x.G.ANIMATED : x.G.PLAIN,
+                      effectDisplayType: eo ? v.G.ANIMATED : v.G.PLAIN,
                       loop: !0,
                       shouldUnderlineOnHover: null != q,
                       textClassName: D.Mu,
@@ -129,11 +129,11 @@ function F(e) {
             "data-text": J + K,
             "data-username-has-gradient": !!ed || void 0,
         },
-        ex = i.useMemo(
+        ev = i.useMemo(
             () =>
                 M
                     ? null
-                    : (0, s.jsx)(j.Cw, {
+                    : (0, s.jsx)(y.Cw, {
                           primaryGuild: l.primaryGuild,
                           userId: n.author.id,
                           contextGuildId: Q,
@@ -143,12 +143,12 @@ function F(e) {
                       }),
             [b, l.primaryGuild, Q, n.author.id, M, z],
         ),
-        ev = r ?? n.author,
+        ex = r ?? n.author,
         eN =
             null != O && null != E
                 ? (0, s.jsx)(I.A, {
                       targetElementRef: Z,
-                      user: ev,
+                      user: ex,
                       guildId: Q,
                       channelId: n.channel_id,
                       renderPopout: O,
@@ -157,7 +157,7 @@ function F(e) {
                       position: u.Fr ? "window_center" : "right",
                       avatarUrl:
                           null != l.guildMemberAvatar && null != Q
-                              ? (0, C.s7)({ guildId: Q, userId: ev.id, avatar: l.guildMemberAvatar, size: 80 })
+                              ? (0, C.s7)({ guildId: Q, userId: ex.id, avatar: l.guildMemberAvatar, size: 80 })
                               : void 0,
                       onRequestClose: U,
                       clickTrap: E,
@@ -172,16 +172,16 @@ function F(e) {
                                       ...eg,
                                       className: t()(eg.className, D.vk, P),
                                   }),
-                                  ex,
+                                  ev,
                               ],
                           });
                       },
                   })
                 : (0, s.jsxs)(s.Fragment, {
-                      children: [(0, s.jsx)(m.D, { ...eg, className: t()(eg.className, P) }), ex],
+                      children: [(0, s.jsx)(m.D, { ...eg, className: t()(eg.className, P) }), ev],
                   }),
         eS = null != Y ? Y[0] : null,
-        ej = null != Y ? Y[1] : null;
+        ey = null != Y ? Y[1] : null;
     return (0, s.jsxs)(g.f5, {
         value: V,
         children: [
@@ -191,7 +191,7 @@ function F(e) {
                 : null,
             eN,
             (0, s.jsx)(w, { message: n, channel: a }),
-            null != ej ? ej : null,
+            null != ey ? ey : null,
             null == eS || F || b ? null : eS,
         ],
     });

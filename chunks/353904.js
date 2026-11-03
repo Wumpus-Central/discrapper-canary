@@ -33,13 +33,13 @@ var m = s(92077),
     C = s.n(P),
     f = s(150934),
     v = s(192308),
-    x = s(834730),
-    E = s(293066),
-    S = s(975571),
-    b = s(24482),
+    E = s(834730),
+    S = s(293066),
+    b = s(975571),
+    x = s(24482),
     T = s(105292),
     L = s(468251);
-class j extends a.Component {
+class y extends a.Component {
     state = {
         hasAcceptedEULA: !this.props.forceShow && this.props.hasPreviouslyAcceptedEULA,
         hasAcceptedWithdrawalWaiver: !1,
@@ -71,7 +71,7 @@ class j extends a.Component {
                 subscriptionPlan: m,
                 finePrintClassname: I,
             } = this.props,
-            { hasAcceptedEULA: P, hasAcceptedWithdrawalWaiver: x } = this.state;
+            { hasAcceptedEULA: P, hasAcceptedWithdrawalWaiver: E } = this.state;
         return (C()(!u || null != m, "subscriptionPlan cannot be null if shouldShowTrialOrDiscountLayout is true"),
         i || (null != t && !a) || d)
             ? (0, l.jsxs)("div", {
@@ -79,7 +79,7 @@ class j extends a.Component {
                   children: [
                       d &&
                           (0, l.jsx)(h.D, {
-                              variant: "heading-md/semibold",
+                              variant: "heading-sm/semibold",
                               className: L.Hc,
                               children: T.intl.string(T.t.Ogvn5o),
                           }),
@@ -122,7 +122,7 @@ class j extends a.Component {
                                 className: r,
                                 children: [
                                     (0, l.jsx)(f.S, {
-                                        checked: x,
+                                        checked: E,
                                         onChange: (t) => this.setState({ hasAcceptedWithdrawalWaiver: t }),
                                         disabled: n,
                                         label: T.intl.string(T.t["DFCVN+"]),
@@ -137,51 +137,51 @@ class j extends a.Component {
                               children: [
                                   "*",
                                   T.intl.format(T.t["5zmY3F"], {
-                                      documentationLink: S.A.getArticleURL(p.MVz.LOCALIZED_PRICING),
+                                      documentationLink: b.A.getArticleURL(p.MVz.LOCALIZED_PRICING),
                                   }),
                               ],
                           }),
-                      (0, l.jsx)(y, { isTrial: u, subscriptionPlan: m, isDiscount: A }),
+                      (0, l.jsx)(j, { isTrial: u, subscriptionPlan: m, isDiscount: A }),
                   ],
               })
             : null;
     }
 }
-function y(t) {
+function j(t) {
     let { isTrial: e, subscriptionPlan: s, isDiscount: a } = t;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             e &&
                 null != s &&
-                (0, l.jsx)(x.E, {
-                    variant: "text-xs/medium",
+                (0, l.jsx)(E.E, {
+                    variant: "body-xs/medium",
                     color: "interactive-text-default",
                     children: T.intl.format(T.t["Hvo/Z5"], {
-                        buttonText: (0, b.ff)(null, s),
-                        interval: b.Ay.formatInterval(s?.interval),
-                        cancelSubscriptionArticle: S.A.getArticleURL(p.MVz.PREMIUM_DETAILS_CANCEL_SUB),
-                        paidServiceTermsArticle: S.A.getArticleURL(p.MVz.PAID_TERMS),
+                        buttonText: (0, x.ff)(null, s),
+                        interval: x.Ay.formatInterval(s?.interval),
+                        cancelSubscriptionArticle: b.A.getArticleURL(p.MVz.PREMIUM_DETAILS_CANCEL_SUB),
+                        paidServiceTermsArticle: b.A.getArticleURL(p.MVz.PAID_TERMS),
                     }),
                 }),
             a &&
                 null != s &&
-                (0, l.jsx)(x.E, {
-                    variant: "text-xs/medium",
+                (0, l.jsx)(E.E, {
+                    variant: "body-xs/medium",
                     color: "interactive-text-default",
                     children: T.intl.format(T.t["Z2c+aV"], {
-                        buttonText: (0, b.ff)(null, s),
-                        interval: b.Ay.formatInterval(s?.interval),
-                        cancelSubscriptionArticle: S.A.getArticleURL(p.MVz.PREMIUM_DETAILS_CANCEL_SUB),
-                        paidServiceTermsArticle: S.A.getArticleURL(p.MVz.PAID_TERMS),
+                        buttonText: (0, x.ff)(null, s),
+                        interval: x.Ay.formatInterval(s?.interval),
+                        cancelSubscriptionArticle: b.A.getArticleURL(p.MVz.PREMIUM_DETAILS_CANCEL_SUB),
+                        paidServiceTermsArticle: b.A.getArticleURL(p.MVz.PAID_TERMS),
                     }),
                 }),
         ],
     });
 }
-let _ = i.Ay.connectStores([E.A], (t) => {
+let _ = i.Ay.connectStores([S.A], (t) => {
     let { eulaId: e } = t;
-    return { hasPreviouslyAcceptedEULA: null != e && E.A.hasAcceptedEULA(e) };
-})(j);
+    return { hasPreviouslyAcceptedEULA: null != e && S.A.hasAcceptedEULA(e) };
+})(y);
 var N = s(587895),
     D = s(235986),
     M = s(769015),
@@ -265,16 +265,16 @@ class W extends a.PureComponent {
     renderError() {
         let { value: t, installationPathsMetadata: e } = this.props;
         return null != e[t] && !1 === e[t].hasPermission
-            ? (0, l.jsx)(x.E, {
-                  variant: "text-sm/medium",
+            ? (0, l.jsx)(E.E, {
+                  variant: "body-sm/medium",
                   color: "text-feedback-critical",
                   className: w.z,
                   children: T.intl.string(T.t.cEUT8B),
               })
             : this.hasEnoughDiskSpace(t)
               ? null
-              : (0, l.jsx)(x.E, {
-                    variant: "text-sm/medium",
+              : (0, l.jsx)(E.E, {
+                    variant: "body-sm/medium",
                     color: "text-feedback-critical",
                     className: w.z,
                     children: T.intl.string(T.t["duXbE/"]),
@@ -441,7 +441,7 @@ class Z extends a.Component {
         });
     }
 }
-let q = i.Ay.connectStores([u.A, B.A, E.A, N.A], (t) => {
+let q = i.Ay.connectStores([u.A, B.A, S.A, N.A], (t) => {
     let { applicationId: e, branchId: s } = t,
         l = u.A.getTargetBuildId(e, s);
     return {
@@ -450,6 +450,6 @@ let q = i.Ay.connectStores([u.A, B.A, E.A, N.A], (t) => {
         buildId: l,
         manifestIds: u.A.getTargetManifests(e, s),
         buildSizeKB: null != l ? u.A.getBuildSize(l) : null,
-        hasPreviouslyAcceptedStoreTerms: E.A.hasAcceptedStoreTerms,
+        hasPreviouslyAcceptedStoreTerms: S.A.hasAcceptedStoreTerms,
     };
 })(Z);

@@ -24,17 +24,17 @@ var a = n(323889),
     P = n(108811),
     h = n(123292),
     I = n(52093),
-    x = n(114046),
-    U = n(661531),
-    p = n(834730),
+    U = n(114046),
+    p = n(661531),
+    x = n(834730),
     W = n(653766),
     D = n(695366),
     j = n(30370),
-    M = n(814793),
-    X = n(105292),
-    v = n(43330);
-function y(t) {
-    return (0, i.jsx)(p.E, { className: v.rf, color: "text-muted", variant: "text-xxs/normal", children: t.children });
+    y = n(814793),
+    M = n(105292),
+    X = n(43330);
+function v(t) {
+    return (0, i.jsx)(x.E, { className: X.rf, color: "text-muted", variant: "footnote/normal", children: t.children });
 }
 function Y(t) {
     let { quest: e, questContent: n, sourceQuestContent: r, errorHints: l } = t,
@@ -44,22 +44,22 @@ function Y(t) {
                 s = e.config.messages.gameTitle;
             return {
                 header: t
-                    ? X.intl.string(X.t["20NLWC"])
-                    : (0, M.ui)(e)
-                      ? X.intl.string(X.t.YstzGO)
-                      : X.intl.formatToPlainString(X.t.gX0Qcx, { gameTitle: s }),
+                    ? M.intl.string(M.t["20NLWC"])
+                    : (0, y.ui)(e)
+                      ? M.intl.string(M.t.YstzGO)
+                      : M.intl.formatToPlainString(M.t.gX0Qcx, { gameTitle: s }),
                 renderBody: t
                     ? function () {
                           return (0, i.jsx)(i.Fragment, {
                               children: l.map((t, s) => {
-                                  if (t.type === x._.EXPIRED_CREDENTIAL) {
+                                  if (t.type === U._.EXPIRED_CREDENTIAL) {
                                       let l = j.A.getAccount(t.connected_account_id, t.connected_account_type),
                                           a = (0, f.IG)(t),
                                           c = (0, f.$J)(t);
                                       return (0, i.jsx)(
-                                          y,
+                                          v,
                                           {
-                                              children: X.intl.format(a, {
+                                              children: M.intl.format(a, {
                                                   account_name: l?.name,
                                                   onClick: () => {
                                                       (0, f.v0)(
@@ -77,31 +77,31 @@ function Y(t) {
                                           s,
                                       );
                                   }
-                                  return (0, i.jsx)(y, { children: t.message }, s);
+                                  return (0, i.jsx)(v, { children: t.message }, s);
                               }),
                           });
                       }
                     : () =>
-                          (0, i.jsx)(p.E, {
-                              className: v.rf,
+                          (0, i.jsx)(x.E, {
+                              className: X.rf,
                               color: "text-muted",
-                              variant: "text-xxs/normal",
-                              children: (0, M.ui)(e)
-                                  ? X.intl.string(X.t.bUyEZZ)
-                                  : X.intl.format(X.t.GXqvC1, { gameTitle: s }),
+                              variant: "footnote/normal",
+                              children: (0, y.ui)(e)
+                                  ? M.intl.string(M.t.bUyEZZ)
+                                  : M.intl.format(M.t.GXqvC1, { gameTitle: s }),
                           }),
             };
         }, [l, e, o, n, r]);
     return (0, i.jsxs)("div", {
-        className: v.kL,
+        className: X.kL,
         children: [
             (0, i.jsxs)("div", {
-                className: v.wx,
+                className: X.wx,
                 children: [
                     l.length > 0
-                        ? (0, i.jsx)(W.e, { size: "sm", color: U.A.colors.ICON_FEEDBACK_CRITICAL.css })
-                        : (0, i.jsx)(D.E, { size: "sm", color: U.A.colors.ICON_FEEDBACK_WARNING.css }),
-                    (0, i.jsx)(p.E, { variant: "text-xs/semibold", children: a }),
+                        ? (0, i.jsx)(W.e, { size: "sm", color: p.A.colors.ICON_FEEDBACK_CRITICAL.css })
+                        : (0, i.jsx)(D.E, { size: "sm", color: p.A.colors.ICON_FEEDBACK_WARNING.css }),
+                    (0, i.jsx)(x.E, { variant: "body-xs/semibold", children: a }),
                 ],
             }),
             c(),
@@ -127,7 +127,7 @@ function K(t) {
             () => ({
                 renderContent: () =>
                     (0, i.jsx)(I.L5, {
-                        children: X.intl.formatToPlainString(X.t.NIimTt, {
+                        children: M.intl.formatToPlainString(M.t.NIimTt, {
                             gameTitle: e.config.messages.gameTitle,
                             targetMinutes: O.targetMinutes,
                             rewardNameWithArticle: (0, N.mH)(e.config, C),
@@ -143,7 +143,7 @@ function K(t) {
                     ? [A]
                     : [
                           {
-                              renderContent: () => (0, i.jsx)(I.L5, { children: X.intl.string(X.t["sI+PPN"]) }),
+                              renderContent: () => (0, i.jsx)(I.L5, { children: M.intl.string(M.t["sI+PPN"]) }),
                               isComplete: !0,
                           },
                           A,
@@ -161,18 +161,18 @@ function K(t) {
                 },
             );
         }, [e, T, n]),
-        x = s.useMemo(
+        U = s.useMemo(
             () => [
                 {
                     renderContent: (t) =>
                         (0, i.jsxs)("div", {
                             children: [
-                                (0, i.jsx)(I.L5, { children: X.intl.string(t ? X.t["rmw++9"] : X.t.yqSr9m) }),
+                                (0, i.jsx)(I.L5, { children: M.intl.string(t ? M.t["rmw++9"] : M.t.yqSr9m) }),
                                 t &&
                                     (0, i.jsx)(h.Q, {
-                                        textVariant: "text-xs/medium",
+                                        textVariant: "body-xs/medium",
                                         onClick: P,
-                                        text: X.intl.string(X.t["qiS+xj"]),
+                                        text: M.intl.string(M.t["qiS+xj"]),
                                     }),
                             ],
                         }),
@@ -182,14 +182,14 @@ function K(t) {
             ],
             [A, E, c, P],
         ),
-        U = o === f.WU.DESKTOP ? _ : x,
-        p = c && (u || g.length > 0) && !E;
+        p = o === f.WU.DESKTOP ? _ : U,
+        x = c && (u || g.length > 0) && !E;
     return (0, i.jsx)(I.Ay, {
-        heading: X.intl.string(X.t.dc9w4N),
-        steps: U,
+        heading: M.intl.string(M.t.dc9w4N),
+        steps: p,
         className: b._,
         children:
-            p && (0, i.jsx)(Y, { quest: e, questContent: r.uF.PLAY_QUEST_MODAL, sourceQuestContent: n, errorHints: g }),
+            x && (0, i.jsx)(Y, { quest: e, questContent: r.uF.PLAY_QUEST_MODAL, sourceQuestContent: n, errorHints: g }),
     });
 }
 var Q = n(190107),
@@ -218,29 +218,29 @@ function F(t) {
             });
         }, [e, o, n]),
         I = (0, l.fc)(e),
-        x = s.useMemo(() => (0, f.UR)(e), [e]),
-        U = s.useMemo(() => (0, f.bg)(e), [e]),
-        p = I.percentComplete > 0,
+        U = s.useMemo(() => (0, f.UR)(e), [e]),
+        p = s.useMemo(() => (0, f.bg)(e), [e]),
+        x = I.percentComplete > 0,
         W = null;
-    1 === x.length ? (W = f.WU.DESKTOP) : p && (W = B(I.taskType));
+    1 === U.length ? (W = f.WU.DESKTOP) : x && (W = B(I.taskType));
     let [D, j] = s.useState(W),
-        M = D === f.WU.XBOX || D === f.WU.PLAYSTATION,
-        { xboxAccounts: v, playstationAccounts: y } = (0, l.Du)(),
+        y = D === f.WU.XBOX || D === f.WU.PLAYSTATION,
+        { xboxAccounts: X, playstationAccounts: v } = (0, l.Du)(),
         Y = !1;
-    M && (Y = (D === f.WU.XBOX ? v : y).length > 0);
+    y && (Y = (D === f.WU.XBOX ? X : v).length > 0);
     let b = [
-            ...[{ id: Q.fO.DESKTOP, value: f.WU.DESKTOP, label: X.intl.string(X.t.g6Dr44), leading: u.I }].filter((t) =>
-                x.includes(t.id),
+            ...[{ id: Q.fO.DESKTOP, value: f.WU.DESKTOP, label: M.intl.string(M.t.g6Dr44), leading: u.I }].filter((t) =>
+                U.includes(t.id),
             ),
             ...[
-                { id: R.fg2.XBOX, value: f.WU.XBOX, label: X.intl.string(X.t.Nfvo72), leading: g.Y },
-                { id: R.fg2.PLAYSTATION, value: f.WU.PLAYSTATION, label: X.intl.string(X.t.fFl4jo), leading: T.X },
-            ].filter((t) => x.includes(Q.fO.CONSOLE) && U.includes(t.id)),
+                { id: R.fg2.XBOX, value: f.WU.XBOX, label: M.intl.string(M.t.Nfvo72), leading: g.Y },
+                { id: R.fg2.PLAYSTATION, value: f.WU.PLAYSTATION, label: M.intl.string(M.t.fFl4jo), leading: T.X },
+            ].filter((t) => U.includes(Q.fO.CONSOLE) && p.includes(t.id)),
         ],
         F = [
             {
-                label: X.intl.string(X.t["TWSB/5"]),
-                placeholder: X.intl.string(X.t["TWSB/5"]),
+                label: M.intl.string(M.t["TWSB/5"]),
+                placeholder: M.intl.string(M.t["TWSB/5"]),
                 options: b,
                 value: D,
                 onSelectionChange: (t) => {
@@ -279,12 +279,12 @@ function F(t) {
                 });
             },
         }),
-        G = X.intl.string(X.t.qQmNEy);
-    if (1 === x.length && D === f.WU.DESKTOP) G = X.intl.format(X.t.Fo68kU, { gameTitle: e.config.messages.gameTitle });
+        G = M.intl.string(M.t.qQmNEy);
+    if (1 === U.length && D === f.WU.DESKTOP) G = M.intl.format(M.t.Fo68kU, { gameTitle: e.config.messages.gameTitle });
     else if (
-        M &&
+        y &&
         (Y &&
-            (G = X.intl.format(X.t["0vGRCS"], {
+            (G = M.intl.format(M.t["0vGRCS"], {
                 gameTitle: e.config.messages.gameTitle,
                 targetMinutes: I.targetMinutes,
                 rewardNameWithArticle: (0, N.mH)(e.config, c),
@@ -294,23 +294,23 @@ function F(t) {
     ) {
         let t = A.A.getArticleURL(R.MVz.QUEST_HOW_TO_PLAYSTATION),
             e = A.A.getArticleURL(R.MVz.QUEST_HOW_TO_XBOX);
-        G = X.intl.format(X.t.HVS7nh, { helpdeskArticle: D === f.WU.PLAYSTATION ? t : e });
+        G = M.intl.format(M.t.HVS7nh, { helpdeskArticle: D === f.WU.PLAYSTATION ? t : e });
     }
-    let z = X.intl.string(X.t["Gcmjy/"]);
+    let z = M.intl.string(M.t["Gcmjy/"]);
     return (
-        M ? (z = X.intl.string(X.t["5ZilMg"])) : D === f.WU.DESKTOP && (z = X.intl.string(X.t["93tEDn"])),
+        y ? (z = M.intl.string(M.t["5ZilMg"])) : D === f.WU.DESKTOP && (z = M.intl.string(M.t["93tEDn"])),
         (0, i.jsx)(P.A, {
             heading: z,
             subtitle: G,
             methodSelect: F,
             ctaButton:
                 D === f.WU.DESKTOP
-                    ? { text: X.intl.string(X.t.E4kW5O), onClick: h }
-                    : M
+                    ? { text: M.intl.string(M.t.E4kW5O), onClick: h }
+                    : y
                       ? Y
-                          ? { text: X.intl.string(X.t.nPThNb), onClick: w, loading: H, icon: C.RefreshIcon }
+                          ? { text: M.intl.string(M.t.nPThNb), onClick: w, loading: H, icon: C.RefreshIcon }
                           : {
-                                text: X.intl.string(X.t.S0W8Z5),
+                                text: M.intl.string(M.t.S0W8Z5),
                                 onClick: () => {
                                     (0, f.Ps)(
                                         { quest: e },
@@ -331,8 +331,8 @@ function F(t) {
                     quest: e,
                     sourceQuestContent: n,
                     selectedPlatform: D,
-                    noConsoleProgress: M && D !== B(I.taskType),
-                    supportedPlatforms: x,
+                    noConsoleProgress: y && D !== B(I.taskType),
+                    supportedPlatforms: U,
                     isConnected: Y,
                     errorHints: q[D],
                 }),
@@ -346,7 +346,7 @@ let k = function (t) {
         quest: c,
         questContent: r.uF.PLAY_QUEST_MODAL,
         sourceQuestContent: n,
-        ariaLabel: X.intl.string(X.t.SHZo2x),
+        ariaLabel: M.intl.string(M.t.SHZo2x),
         transitionState: s,
         onClose: a,
         isContentLoading: !1,

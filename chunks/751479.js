@@ -16,7 +16,7 @@ var s = n(477900),
     f = n(707539),
     T = n(475825),
     v = n(62617);
-function p(e) {
+function b(e) {
     let { alt: t, ariaLabel: n, ariaHidden: a, role: r, width: i, height: c, className: o, style: d } = e,
         h = l.useMemo(
             () => (0, v.H)({ width: i, height: c, intrinsicWidth: 288, intrinsicHeight: 162, style: d }),
@@ -32,7 +32,7 @@ function p(e) {
         role: r ?? "img",
     });
 }
-var b = n(834730),
+var p = n(834730),
     N = n(105292),
     w = n(116379);
 function S(e) {
@@ -44,10 +44,10 @@ function S(e) {
         children: [
             (0, s.jsx)("div", {
                 className: w.bm,
-                children: (0, s.jsx)(p, { alt: "", ariaHidden: !0, width: 256, height: 144 }),
+                children: (0, s.jsx)(b, { alt: "", ariaHidden: !0, width: 256, height: 144 }),
             }),
             (0, s.jsx)(u.D, { className: w.wx, variant: "heading-xl/semibold", children: n }),
-            (0, s.jsx)(b.E, { color: "text-default", variant: "text-md/normal", children: N.intl.string(N.t.jmq9GC) }),
+            (0, s.jsx)(p.E, { color: "text-default", variant: "body-md/normal", children: N.intl.string(N.t.jmq9GC) }),
             a || r
                 ? (0, s.jsx)("div", {
                       "data-button-hoisted-classname-wrapper": !0,
@@ -60,7 +60,7 @@ function S(e) {
 }
 var k = n(707335),
     C = n(798393);
-function H(e) {
+function y(e) {
     let { channel: t, threadIds: n, startThread: a, goToThread: i } = e,
         c = l.useCallback(
             (e) => (0, s.jsx)(k.A, { threadId: n[e.row], goToThread: i }, `${e.section}-${e.row}`),
@@ -79,7 +79,7 @@ function H(e) {
               chunkSize: 20,
           });
 }
-var y = n(392421),
+var H = n(392421),
     E = n(602137),
     A = n(289873),
     _ = n(424798);
@@ -92,7 +92,7 @@ function R(e) {
             canLoadMore: o,
             loading: d,
             loadMore: h,
-        } = (0, _.Fr)(t, E.T.LATEST_ACTIVITY, I, y.n.MATCH_SOME),
+        } = (0, _.Fr)(t, E.T.LATEST_ACTIVITY, I, H.n.MATCH_SOME),
         u = l.useRef(null);
     (0, _.Kk)();
     let g = l.useCallback(
@@ -143,7 +143,7 @@ function R(e) {
 }
 function z(e) {
     let { text: t } = e;
-    return (0, s.jsx)(b.E, { color: "text-default", variant: "text-xs/semibold", className: C.bV, children: t });
+    return (0, s.jsx)(p.E, { color: "text-default", variant: "body-xs/semibold", className: C.bV, children: t });
 }
 var D = n(747926),
     O = n(37411),
@@ -153,10 +153,10 @@ function $(e) {
     let { channel: t, className: n, onClose: a, context: g } = e,
         T = (0, i.bG)([x.A], () => x.A.can(B.xBc.READ_MESSAGE_HISTORY, t)),
         v = (0, j.AI)(t);
-    function p() {
+    function b() {
         (a(), (0, D.Tv)(t, void 0, "Thread Browser Empty State"));
     }
-    let b = l.useCallback(
+    let p = l.useCallback(
             (e, t) => {
                 (a(), (0, D.JA)(e, !t, O.H9.BROWSER));
             },
@@ -201,7 +201,7 @@ function $(e) {
                     children: [
                         (0, s.jsx)(h.y, { size: "md", color: "currentColor", className: Q.aM }),
                         (0, s.jsx)(u.D, {
-                            variant: "heading-md/semibold",
+                            variant: "heading-sm/semibold",
                             className: Q.DD,
                             children: N.intl.string(N.t.E3H5lE),
                         }),
@@ -232,8 +232,8 @@ function $(e) {
                     ],
                 }),
                 children: w.hasResults
-                    ? (0, s.jsx)(H, { channel: t, startThread: p, goToThread: b, threadIds: w.results })
-                    : (0, s.jsx)(R, { channel: t, startThread: p, goToThread: b }),
+                    ? (0, s.jsx)(y, { channel: t, startThread: b, goToThread: p, threadIds: w.results })
+                    : (0, s.jsx)(R, { channel: t, startThread: b, goToThread: p }),
             }),
         })
     );

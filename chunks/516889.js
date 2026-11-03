@@ -1,15 +1,15 @@
-i.d(e, { default: () => P });
+i.d(t, { default: () => P });
 var s = i(477900),
     n = i(582128),
     l = i(284009),
     a = i.n(l),
     r = i(131937),
-    c = i(17928),
-    d = i(189213),
+    d = i(17928),
+    c = i(189213),
     o = i(834730),
     m = i(696986),
-    x = i(534514),
-    u = i(793574),
+    u = i(534514),
+    x = i(793574),
     h = i(139286),
     g = i(839656),
     j = i(303612),
@@ -17,58 +17,58 @@ var s = i(477900),
     p = i(871109),
     _ = i(571654),
     N = i(939249),
-    D = i(317525),
-    b = i(147925),
+    b = i(317525),
+    D = i(147925),
     O = i(59375),
     v = i(391442),
     I = i(411342),
-    L = i(652215),
-    f = i(105292),
-    k = i(673608);
-let G = "expanded-area";
-function z(t) {
-    let { attachments: e, role: i, roleLocked: l } = t,
+    y = i(652215),
+    L = i(105292),
+    f = i(673608);
+let k = "expanded-area";
+function G(e) {
+    let { attachments: t, role: i, roleLocked: l } = e,
         [a, r] = n.useState(!1);
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsxs)(N.D, {
-                className: k.YA,
+                className: f.YA,
                 onClick: function () {
-                    r((t) => !t);
+                    r((e) => !e);
                 },
                 "aria-expanded": a,
-                "aria-controls": G,
+                "aria-controls": k,
                 children: [
                     (0, s.jsx)(o.E, {
-                        variant: "text-sm/medium",
+                        variant: "body-sm/medium",
                         color: "text-default",
-                        children: a ? f.intl.string(f.t.DKNxgB) : f.intl.string(f.t.ESEKua),
+                        children: a ? L.intl.string(L.t.DKNxgB) : L.intl.string(L.t.ESEKua),
                     }),
-                    (0, s.jsx)(b.A, { className: k.Rq, direction: a ? b.A.Directions.UP : b.A.Directions.DOWN }),
+                    (0, s.jsx)(D.A, { className: f.Rq, direction: a ? D.A.Directions.UP : D.A.Directions.DOWN }),
                 ],
             }),
             (0, s.jsx)(m.h, { size: 12 }),
             a &&
                 (0, s.jsxs)("ul", {
-                    className: k.cu,
-                    id: G,
+                    className: f.cu,
+                    id: k,
                     children: [
                         (0, s.jsx)(v.A, {
-                            label: f.intl.string(f.t.DWYJua),
+                            label: L.intl.string(L.t.DWYJua),
                             children: (0, s.jsx)("ul", {
-                                className: k.yO,
-                                children: e.map((t) => (0, s.jsx)(O.A, { attachment: t }, t.id)),
+                                className: f.yO,
+                                children: t.map((e) => (0, s.jsx)(O.A, { attachment: e }, e.id)),
                             }),
                         }),
                         null != i &&
                             (0, s.jsxs)(s.Fragment, {
                                 children: [
-                                    (0, s.jsx)("div", { className: k.me }),
+                                    (0, s.jsx)("div", { className: f.me }),
                                     (0, s.jsx)(v.A, {
-                                        label: f.intl.string(f.t.o9xphc),
+                                        label: L.intl.string(L.t.o9xphc),
                                         children: (0, s.jsx)(I.A, {
                                             role: i,
-                                            textVariant: "text-md/medium",
+                                            textVariant: "body-md/medium",
                                             locked: l,
                                         }),
                                     }),
@@ -79,39 +79,39 @@ function z(t) {
         ],
     });
 }
-function C(t) {
-    let { listing: e } = t,
-        i = e.attachments ?? [],
-        n = (0, c.bG)([D.A], () => D.A.getRole(e.guild_id, e.role_id ?? L.dJq)),
-        l = !e.has_entitlement;
+function z(e) {
+    let { listing: t } = e,
+        i = t.attachments ?? [],
+        n = (0, d.bG)([b.A], () => b.A.getRole(t.guild_id, t.role_id ?? y.dJq)),
+        l = !t.has_entitlement;
     return 0 === i.length && null == n
         ? null
         : 0 === i.length && null != n
-          ? (0, s.jsx)(I.A, { role: n, textVariant: "text-md/medium", locked: l })
-          : (0, s.jsx)(z, { attachments: i, role: n, roleLocked: l });
+          ? (0, s.jsx)(I.A, { role: n, textVariant: "body-md/medium", locked: l })
+          : (0, s.jsx)(G, { attachments: i, role: n, roleLocked: l });
 }
-var y = i(703543),
+var C = i(703543),
     F = i(979822);
-function P(t) {
-    let { transitionState: e, guildProductListingId: i, analyticsLocation: n, guildId: l, onClose: N } = t,
-        D = (0, c.bG)([p.A], () => p.A.getGuildProduct(i));
-    (a()(null != D, "guildProductListing cannot be null"),
+function P(e) {
+    let { transitionState: t, guildProductListingId: i, analyticsLocation: n, guildId: l, onClose: N } = e,
+        b = (0, d.bG)([p.A], () => p.A.getGuildProduct(i));
+    (a()(null != b, "guildProductListing cannot be null"),
         (0, h.A)({
             type: r.ImpressionTypes.MODAL,
             name: r.ImpressionNames.GUILD_PRODUCT_LISTING_INFO_MODAL,
-            properties: { guild_product_listing_id: i, has_entitlement: !0 === D.has_entitlement, location: n },
+            properties: { guild_product_listing_id: i, has_entitlement: !0 === b.has_entitlement, location: n },
         }));
-    let b = (0, _.z)(D) ?? "",
-        O = (0, _.X)(D),
-        v = (0, c.bG)([A.A], () => A.A.getGuild(l)),
-        I = (0, y.A)({ guildId: l, guildProductListingId: i, sourceAnalyticsLocations: u.A.GUILD_PRODUCT_INFO_MODAL });
-    return (0, s.jsxs)(d.a, {
-        title: D.name,
-        subtitle: f.intl.format(f.t.xImSei, { productType: b, personName: v?.name ?? "" }),
+    let D = (0, _.z)(b) ?? "",
+        O = (0, _.X)(b),
+        v = (0, d.bG)([A.A], () => A.A.getGuild(l)),
+        I = (0, C.A)({ guildId: l, guildProductListingId: i, sourceAnalyticsLocations: x.A.GUILD_PRODUCT_INFO_MODAL });
+    return (0, s.jsxs)(c.a, {
+        title: b.name,
+        subtitle: L.intl.format(L.t.xImSei, { productType: D, personName: v?.name ?? "" }),
         size: "md",
-        transitionState: e,
+        transitionState: t,
         onClose: N,
-        "aria-label": D.name,
+        "aria-label": b.name,
         actions: [I],
         actionBarInput: (0, s.jsx)(o.E, {
             tag: "div",
@@ -120,25 +120,25 @@ function P(t) {
             children: O,
         }),
         children: [
-            (0, s.jsx)(j.y, { height: 267, listing: D, className: F.F0, alt: "" }),
+            (0, s.jsx)(j.y, { height: 267, listing: b, className: F.F0, alt: "" }),
             (0, s.jsxs)("div", {
                 className: F.rf,
                 children: [
-                    (0, s.jsx)(C, { listing: D }),
+                    (0, s.jsx)(z, { listing: b }),
                     (0, s.jsx)(m.h, { size: 16 }),
                     (0, s.jsx)("div", { className: F.OO }),
                     (0, s.jsx)(m.h, { size: 16 }),
-                    (0, s.jsx)(x.D, {
+                    (0, s.jsx)(u.D, {
                         variant: "heading-lg/medium",
                         color: "text-strong",
-                        children: f.intl.string(f.t.TNnDJs),
+                        children: L.intl.string(L.t.TNnDJs),
                     }),
                     (0, s.jsx)(m.h, { size: 12 }),
                     (0, s.jsx)(g.A, {
                         className: F.h_,
-                        variant: "text-md/normal",
+                        variant: "body-md/normal",
                         color: "text-muted",
-                        text: D.description,
+                        text: b.description,
                     }),
                 ],
             }),

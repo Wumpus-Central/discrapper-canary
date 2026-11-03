@@ -14,8 +14,8 @@ var n = s(477900),
     T = s(363195),
     N = s(427495),
     A = s(859703),
-    x = s(738822),
-    E = s(759366),
+    E = s(738822),
+    x = s(759366),
     p = s(3738),
     h = s(77870),
     j = s(590202),
@@ -39,8 +39,8 @@ function v(e) {
         title: R.intl.string(R.t.y0cRrO),
     });
 }
-var g = s(323889),
-    y = s(305866),
+var y = s(323889),
+    g = s(305866),
     b = s(939249),
     q = s(789645),
     S = s(507395),
@@ -59,18 +59,18 @@ function z(e) {
         m = i.useCallback(() => {
             ((0, S.r)({
                 type: U.F.CLICK_INTERNAL,
-                adCreativeType: g.p.QUEST,
+                adCreativeType: y.p.QUEST,
                 adCreativeId: t.id,
                 questContentCTA: j.Cy.LEARN_MORE,
-                surfaceId: x.uF.RUNNING_ACTIVITY,
-                sourceQuestContent: x.uF.RUNNING_ACTIVITY,
+                surfaceId: E.uF.RUNNING_ACTIVITY,
+                sourceQuestContent: E.uF.RUNNING_ACTIVITY,
                 impressionId: d(),
             }),
-                (0, k.mA)({ fromContent: x.uF.RUNNING_ACTIVITY, questId: t.id }),
+                (0, k.mA)({ fromContent: E.uF.RUNNING_ACTIVITY, questId: t.id }),
                 l(),
                 r());
         }, [t.id, d, l, r]);
-    return (0, n.jsxs)(y.l, {
+    return (0, n.jsxs)(g.l, {
         className: D.kL,
         "aria-labelledby": o,
         children: [
@@ -79,7 +79,7 @@ function z(e) {
                 children: [
                     (0, n.jsx)(c.E, {
                         id: o,
-                        variant: "text-md/semibold",
+                        variant: "body-md/semibold",
                         color: "text-strong",
                         children: R.intl.formatToPlainString(R.t.EAYZAr, { questName: t.config.messages.questName }),
                     }),
@@ -102,13 +102,13 @@ function z(e) {
                                 fullWidth: !0,
                                 quest: t,
                                 location: G.rE.QUEST_ACTIVITY_HEADER,
-                                questContent: x.uF.RUNNING_ACTIVITY,
-                                sourceQuestContent: x.uF.RUNNING_ACTIVITY,
+                                questContent: E.uF.RUNNING_ACTIVITY,
+                                sourceQuestContent: E.uF.RUNNING_ACTIVITY,
                                 autoplay: !1,
                             }),
                         }),
                     }),
-                    (0, n.jsx)(c.E, { variant: "text-sm/normal", color: "text-muted", children: s }),
+                    (0, n.jsx)(c.E, { variant: "body-sm/normal", color: "text-muted", children: s }),
                 ],
             }),
             (0, n.jsx)(u.$, {
@@ -134,22 +134,22 @@ function O(e) {
             quest: t,
             taskDetails: a,
             location: G.rE.QUEST_ACTIVITY_HEADER,
-            sourceQuestContent: x.uF.RUNNING_ACTIVITY,
+            sourceQuestContent: E.uF.RUNNING_ACTIVITY,
         }),
         [m, T] = i.useState(!1),
         A = i.useRef(null),
-        E = i.useRef(null),
+        x = i.useRef(null),
         [f, _] = (0, C.kn)([l.M.QUEST_ACTIVITY_HEADER_INTRO], { bypassAutoDismiss: !0 }),
-        { completedRatio: g, completedRatioDisplay: y, percentComplete: b } = (0, h.O9)(t, !0),
+        { completedRatio: y, completedRatioDisplay: g, percentComplete: b } = (0, h.O9)(t, !0),
         q = i.useCallback(() => {
             "frame" === s.type && I.A.updateFrameLayoutMode({ frameId: s.frameId, layoutMode: H.y0.PIP });
         }, [s]),
         S = t.userStatus?.enrolledAt != null,
         U = i.useCallback(() => {
             (0, N.Oy)(t.id, {
-                questContent: x.uF.QUEST_ACTIVITY_HEADER,
+                questContent: E.uF.QUEST_ACTIVITY_HEADER,
                 questContentCTA: j.Cy.ACCEPT_QUEST,
-                sourceQuestContent: x.uF.RUNNING_ACTIVITY,
+                sourceQuestContent: E.uF.RUNNING_ACTIVITY,
             });
         }, [t.id]);
     return (0, n.jsxs)(n.Fragment, {
@@ -171,20 +171,20 @@ function O(e) {
                                 children: (0, n.jsx)(Q.A, {
                                     quest: t,
                                     location: G.rE.QUEST_ACTIVITY_HEADER,
-                                    questContent: x.uF.QUEST_ACTIVITY_HEADER,
-                                    sourceQuestContent: x.uF.RUNNING_ACTIVITY,
+                                    questContent: E.uF.QUEST_ACTIVITY_HEADER,
+                                    sourceQuestContent: E.uF.RUNNING_ACTIVITY,
                                     className: L.Qf,
                                     autoplay: m,
                                 }),
                             }),
                             (0, n.jsx)(o.Y, {
-                                targetElementRef: E,
+                                targetElementRef: x,
                                 renderPopout: (e) => {
                                     let { closePopout: s } = e;
                                     return (0, n.jsx)(z, {
                                         quest: t,
                                         questDescription: d,
-                                        completedRatio: g,
+                                        completedRatio: y,
                                         minimizeFrame: q,
                                         onClose: s,
                                     });
@@ -199,7 +199,7 @@ function O(e) {
                                         }),
                                         variant: "secondary",
                                         size: "sm",
-                                        buttonRef: E,
+                                        buttonRef: x,
                                         ...e,
                                     }),
                             }),
@@ -214,7 +214,7 @@ function O(e) {
                             (0, n.jsxs)("div", {
                                 className: L.L$,
                                 children: [
-                                    (0, n.jsx)(c.E, { variant: "text-sm/semibold", color: "text-strong", children: y }),
+                                    (0, n.jsx)(c.E, { variant: "body-sm/semibold", color: "text-strong", children: g }),
                                     (0, n.jsxs)("div", {
                                         className: L.hr,
                                         children: [
@@ -235,8 +235,8 @@ function O(e) {
                             S
                                 ? (0, n.jsx)(M.A, {
                                       quest: t,
-                                      questContent: x.uF.QUEST_ACTIVITY_HEADER,
-                                      sourceQuestContent: x.uF.RUNNING_ACTIVITY,
+                                      questContent: E.uF.QUEST_ACTIVITY_HEADER,
+                                      sourceQuestContent: E.uF.RUNNING_ACTIVITY,
                                       size: "sm",
                                   })
                                 : (0, n.jsx)(u.$, {
@@ -267,9 +267,9 @@ function $(e) {
     let t = (0, a.bG)([A.A], () => A.A.quests),
         l = (0, a.bG)([T.A], () => T.A.theme),
         r = i.useMemo(() => (0, f.jm)(t, e.applicationId, !0)[0], [t, e.applicationId]),
-        o = (0, a.bG)([E.A], () => E.A.getState().autoEnroll),
+        o = (0, a.bG)([x.A], () => x.A.getState().autoEnroll),
         u = r?.id,
-        c = (0, a.bG)([E.A], () => E.A.isDismissed(u), [u]);
+        c = (0, a.bG)([x.A], () => x.A.isDismissed(u), [u]);
     return (i.useEffect(() => {
         null == r ||
             r.userStatus?.enrolledAt != null ||
@@ -292,8 +292,8 @@ function $(e) {
                       className: t,
                       children: (0, n.jsx)(w.R, {
                           questOrQuests: r,
-                          questContent: x.uF.QUEST_ACTIVITY_HEADER,
-                          sourceQuestContent: x.uF.RUNNING_ACTIVITY,
+                          questContent: E.uF.QUEST_ACTIVITY_HEADER,
+                          sourceQuestContent: E.uF.RUNNING_ACTIVITY,
                           overrideVisibility: !0,
                           children: () => (0, n.jsx)(O, { ...e, quest: r }),
                       }),

@@ -1,4 +1,4 @@
-(s.r(e), s.d(e, { default: () => M }));
+(s.r(e), s.d(e, { default: () => D }));
 var n = s(477900),
     l = s(582128),
     i = s(17928),
@@ -11,8 +11,8 @@ var n = s(477900),
     d = s(280450),
     E = s(67521),
     h = s(207913),
-    x = s(73153),
-    N = s(462714),
+    N = s(73153),
+    x = s(462714),
     p = s(482876),
     A = s(855267),
     j = s(239093),
@@ -29,14 +29,14 @@ function _() {
                   (0, n.jsx)(a.E, {
                       tag: "span",
                       color: "text-overlay-light",
-                      variant: "text-md/normal",
+                      variant: "body-md/normal",
                       children: f.intl.string(f.t["MG+Bzb"]),
                   }),
                   (0, n.jsx)(r.eC, {
                       noticeType: m.kqX.SAFETY_SUSPENDED_USER_WARNING,
                       href: j.d$.WARNING_SYSTEM_HELPCENTER_LINK,
                       children: (0, n.jsx)(a.E, {
-                          variant: "text-md/normal",
+                          variant: "body-md/normal",
                           color: "text-overlay-light",
                           children: f.intl.string(f.t["9JceHN"]),
                       }),
@@ -50,10 +50,10 @@ function R() {
 function S() {
     E.A.openV2("");
 }
-function C() {
+function y() {
     (0, u.Vq)();
 }
-function y() {
+function C() {
     return (0, n.jsx)(o.w, {
         type: "critical",
         message: f.intl.string(f.t.dqbMbn),
@@ -61,11 +61,11 @@ function y() {
         action: { text: f.intl.string(f.t.IcA9iD), onClick: S },
     });
 }
-function k() {
+function b() {
     let t = (0, i.bG)([h.A], () => h.A.getIsExpressiveModalV2Enabled());
     return (0, n.jsx)(o.w, { type: "info", message: f.intl.string(t ? f.t.PU8nMu : f.t["nhhy/R"]), role: "status" });
 }
-function G() {
+function k() {
     let { methods: t, loading: e } = (function () {
         let [t, e] = l.useState({ methods: null, loading: !0 });
         return (
@@ -75,13 +75,13 @@ function G() {
                     (0, p.j)()
                         .then(
                             (t) => (
-                                x.h.dispatch({
+                                N.h.dispatch({
                                     type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS",
                                     methods: t.methods,
                                     footerMessage: t.footerMessage,
                                     outageBannerMessage: t.outageBannerMessage,
                                 }),
-                                (0, N.Y)(t.methods)
+                                (0, x.Y)(t.methods)
                             ),
                         )
                         .then((s) => {
@@ -99,17 +99,17 @@ function G() {
         );
     })();
     return e
-        ? (0, n.jsx)(k, {})
+        ? (0, n.jsx)(b, {})
         : null == t || 0 === t.length
           ? (0, n.jsx)(o.w, {
                 type: "critical",
                 message: f.intl.string(f.t.VTgFYh),
                 role: "alert",
-                action: { text: f.intl.string(f.t.NkTGsC), onClick: C },
+                action: { text: f.intl.string(f.t.NkTGsC), onClick: y },
             })
-          : (0, n.jsx)(y, {});
+          : (0, n.jsx)(C, {});
 }
-function q(t) {
+function G(t) {
     let {} = t,
         e = (0, i.bG)([h.A], () => h.A.getAgeCheckStatus());
     return e === j.qN.NONE
@@ -134,18 +134,18 @@ function q(t) {
                 : e === j.qN.FAILURE
                   ? (0, n.jsx)(o.w, { type: "critical", message: f.intl.string(f.t["40R63o"]), role: "alert" })
                   : e === j.qN.UNDERAGE
-                    ? (0, n.jsx)(y, {})
+                    ? (0, n.jsx)(C, {})
                     : e === j.qN.UNDERAGE_MANUAL_REVIEW
-                      ? (0, n.jsx)(G, {})
-                      : (0, n.jsx)(k, {});
+                      ? (0, n.jsx)(k, {})
+                      : (0, n.jsx)(b, {});
+}
+function q() {
+    return (0, n.jsxs)("div", { className: I.$$, children: [(0, n.jsx)(G, {}), (0, n.jsx)(A.A, {})] });
 }
 function D() {
-    return (0, n.jsxs)("div", { className: I.$$, children: [(0, n.jsx)(q, {}), (0, n.jsx)(A.A, {})] });
-}
-function M() {
     return (
         null == (0, i.bG)([d.default], () => d.default.getSuspendedUserToken()) &&
             (0, g.pX)(m.BVt.LOGIN, { source: "suspended_user_safety_hub_page" }),
-        (0, n.jsxs)("div", { className: I.kL, children: [(0, n.jsx)(_, {}), (0, n.jsx)(D, {})] })
+        (0, n.jsxs)("div", { className: I.kL, children: [(0, n.jsx)(_, {}), (0, n.jsx)(q, {})] })
     );
 }

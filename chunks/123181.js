@@ -4,9 +4,9 @@ var i = n(477900),
     a = n(265872),
     s = n(939249),
     r = n(307301),
-    d = n(834730);
+    o = n(834730);
 n(321073);
-var o = n(477782),
+var d = n(477782),
     c = n(980707),
     u = n(753437),
     m = n(105292),
@@ -23,12 +23,12 @@ let x = l.memo(function (e) {
         children: Object.entries(u.Pb).map((e) => {
             let a,
                 [s, r] = e,
-                d =
+                o =
                     ((a = []),
                     r.type === u.me.RADIO &&
                         a.push(
                             (0, i.jsx)(
-                                o.iD,
+                                d.iD,
                                 {
                                     id: `${s}-none`,
                                     group: s,
@@ -45,7 +45,7 @@ let x = l.memo(function (e) {
                             (r.type === u.me.RADIO
                                 ? a.push(
                                       (0, i.jsx)(
-                                          o.iD,
+                                          d.iD,
                                           {
                                               id: e,
                                               group: s,
@@ -58,19 +58,19 @@ let x = l.memo(function (e) {
                                   )
                                 : a.push(
                                       (0, i.jsx)(
-                                          o.sL,
+                                          d.sL,
                                           { id: e, label: l.getText(), checked: t.includes(e), action: () => n(e, !1) },
                                           e,
                                       ),
                                   ));
                     }),
                     a);
-            return (0, i.jsx)(o.rX, { label: r.getLabel(), children: d }, s);
+            return (0, i.jsx)(d.rX, { label: r.getLabel(), children: o }, s);
         }),
     });
 });
 function f(e) {
-    let { tags: t, onTagsChange: n, onOpen: o, onClose: c, variant: f = "default", ref: h } = e,
+    let { tags: t, onTagsChange: n, onOpen: d, onClose: c, variant: f = "default", ref: h } = e,
         p = "filled" === f,
         j = (0, l.useRef)(null),
         I = (0, l.useMemo)(() => (null != t ? t : []), [t]),
@@ -105,7 +105,7 @@ function f(e) {
         targetElementRef: j,
         position: "right",
         align: "top",
-        onRequestOpen: o,
+        onRequestOpen: d,
         onRequestClose: c,
         renderPopout: (e) => {
             let { closePopout: t } = e;
@@ -125,8 +125,8 @@ function f(e) {
                     "aria-label": m.intl.string(m.t.r6EJOu),
                     children: [
                         p && (0, i.jsx)(r.j, { size: "xxs", color: "currentColor" }),
-                        (0, i.jsx)(d.E, {
-                            variant: "text-xxs/medium",
+                        (0, i.jsx)(o.E, {
+                            variant: "footnote/medium",
                             color: "none",
                             children: p ? m.intl.string(m.t.DccrfU) : m.intl.string(m.t.fZSejy),
                         }),

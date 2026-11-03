@@ -206,7 +206,7 @@ function I(e) {
                             "aria-labelledby": H,
                             children: [
                                 eu.length > 0
-                                    ? (0, a.jsx)(x.E, { className: E.Uq, variant: "text-md/medium", children: L(eu) })
+                                    ? (0, a.jsx)(x.E, { className: E.Uq, variant: "body-md/medium", children: L(eu) })
                                     : (0, a.jsx)("span", { className: E.qf, children: t }),
                                 (0, a.jsx)("div", {
                                     className: E.Pt,

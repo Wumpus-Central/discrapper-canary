@@ -20,11 +20,11 @@ var r = s(477900),
     R = s(139286),
     S = s(15552),
     P = s(854378),
-    x = s(952116),
-    k = s(572469),
-    y = s(557722),
-    _ = s(148864),
-    b = s(354948),
+    k = s(952116),
+    y = s(572469),
+    b = s(557722),
+    x = s(148864),
+    _ = s(354948),
     T = s(976860),
     M = s(363195),
     j = s(933924),
@@ -141,7 +141,7 @@ class G extends n.PureComponent {
                           title: U.intl.string(U.t["6Ecyts"]),
                           actions: t,
                           ...e,
-                          children: (0, r.jsx)(c.E, { variant: "text-md/normal", children: U.intl.string(U.t.iAcrqV) }),
+                          children: (0, r.jsx)(c.E, { variant: "body-md/normal", children: U.intl.string(U.t.iAcrqV) }),
                       });
                   })
                 : (0, l.A)({ title: U.intl.string(U.t.f5Pi7A), subtitle: U.intl.format(U.t["6u5hQ9"], { email: t }) });
@@ -157,7 +157,7 @@ class G extends n.PureComponent {
             className: I.Eh,
             children: (0, r.jsxs)(P.eB, {
                 children: [
-                    (0, r.jsx)(b.A, {
+                    (0, r.jsx)(_.A, {
                         alpha2: e.alpha2,
                         countryCode: e.code.split(" ")[0],
                         className: O.SX,
@@ -239,7 +239,7 @@ class G extends n.PureComponent {
     }
     renderMFA() {
         let e = { ticket: this.props.mfaTicket, methods: this.props.mfaMethods };
-        return (0, r.jsx)(k.t, {
+        return (0, r.jsx)(y.t, {
             mfaFinish: this.handleTokenSubmitMFA,
             mfaChallenge: e,
             onEarlyClose: () => {
@@ -256,7 +256,7 @@ class G extends n.PureComponent {
                 (0, r.jsx)(g.rQ, { title: t, subtitle: s }),
                 (0, r.jsx)(A.H, {
                     leading: (0, r.jsx)(c.E, {
-                        variant: "text-md/normal",
+                        variant: "body-md/normal",
                         color: "text-subtle",
                         children: U.intl.format(U.t.js2rr5, { onClick: this.handleCancelAccountDeletion }),
                     }),
@@ -279,7 +279,7 @@ class G extends n.PureComponent {
     renderPhonePasswordRecovery() {
         let { phoneVerifyError: e } = this.state;
         return (0, r.jsx)(p.c, {
-            children: (0, r.jsx)(x.A, {
+            children: (0, r.jsx)(k.A, {
                 title: U.intl.string(U.t["+xqy3d"]),
                 subtitle: U.intl.format(U.t.ef4uZ7, { onResendClick: this.handleResendCode }),
                 error: e,
@@ -321,7 +321,7 @@ class G extends n.PureComponent {
     handlePasswordReset = async (e) => {
         this.setState({ phoneVerifyError: null, errors: {} });
         try {
-            let { token: t } = await y.A.verifyPhone(this.getFullLogin(), e, !1, !0);
+            let { token: t } = await b.A.verifyPhone(this.getFullLogin(), e, !1, !0);
             this.setState({ resetPasswordPhoneToken: t });
         } catch (e) {
             null != e.body && null != e.body.message && this.setState({ phoneVerifyError: e.body.message });
@@ -332,7 +332,7 @@ class G extends n.PureComponent {
         return m.A.loginMFAv2({ code: s, ticket: r, mfaType: t, isMultiAccount: !0 });
     };
     handleResendCode = () => {
-        y.A.resendCode(this.getFullLogin());
+        b.A.resendCode(this.getFullLogin());
     };
     handleReset = (e) => {
         (e?.preventDefault(),
@@ -354,13 +354,13 @@ class G extends n.PureComponent {
 }
 let B = function (e) {
     let { onClose: t, transitionState: s, onBackPressed: i, ...l } = e,
-        { suspendedUserToken: d, ...h } = (0, a.cf)([L.A, F.default, _.A, M.A], () => ({
+        { suspendedUserToken: d, ...h } = (0, a.cf)([L.A, F.default, x.A, M.A], () => ({
             authenticated: F.default.isAuthenticated(),
             loginStatus: F.default.getLoginStatus(),
             mfaTicket: F.default.getMFATicket(),
             mfaMethods: F.default.getMFAMethods(),
             defaultRoute: L.A.defaultRoute,
-            country: _.A.getCountryCode(),
+            country: x.A.getCountryCode(),
             theme: M.A.theme,
             suspendedUserToken: F.default.getSuspendedUserToken(),
         }));

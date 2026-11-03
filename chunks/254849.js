@@ -1,5 +1,5 @@
 _.exports = {
-    BK: "text-sm/medium__07f91",
+    sk: "body-sm/medium__07f91",
     cs: "outgoing-call-pulse__07f91",
     p_: "list__07f91",
     m3: "listDefault__07f91",
@@ -16,7 +16,7 @@ _.exports = {
     dT: "avatarSmall__07f91",
     Jb: "avatarLarge__07f91",
     oF: "username__07f91",
-    gr: "usernameFont__07f91 text-sm/medium__07f91",
+    gr: "usernameFont__07f91 body-sm/medium__07f91",
     Pt: "icons__07f91",
     RL: "iconGroup__07f91",
     Kk: "icon__07f91",
@@ -34,5 +34,5 @@ _.exports = {
     Gt: "gameIcon__07f91",
     Um: "streamPreviewContainer__07f91",
     Rh: "streamPreview__07f91",
-    yo: "streamPreviewIcon__07f91",
+    OF: "streamPreviewIcon__07f91",
 };

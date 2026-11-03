@@ -1,75 +1,75 @@
-s.d(t, { default: () => j });
-var a = s(477900);
-s(582128);
-var i = s(29477),
-    r = s(661531),
-    l = s(935462),
-    n = s(602853),
-    d = s(805901),
-    c = s(834730),
-    o = s(534514),
-    m = s(915089),
-    x = s(105292),
-    h = s(93632);
-let u = (e) => {
-        let { currentNumber: t, thresholdNumber: s, currentLabel: l, isPercent: o = !1 } = e,
-            m = null != s ? Math.floor((t / s) * 100) : 0,
-            u = x.intl.formatToPlainString(x.t.YMor7k, { count: t }),
-            j = null != s ? x.intl.formatToPlainString(x.t.YMor7k, { count: s }) : "--",
-            v = (0, n.r)(r.A.unsafe_rawColors.RED_400).hex(),
-            b = (0, n.r)(r.A.unsafe_rawColors.YELLOW_300).hex();
-        return (0, a.jsxs)(a.Fragment, {
+a.d(e, { default: () => b });
+var i = a(477900);
+a(582128);
+var r = a(29477),
+    l = a(661531),
+    n = a(935462),
+    t = a(602853),
+    d = a(805901),
+    c = a(834730),
+    o = a(534514),
+    m = a(915089),
+    h = a(105292),
+    x = a(93632);
+let u = (s) => {
+        let { currentNumber: e, thresholdNumber: a, currentLabel: n, isPercent: o = !1 } = s,
+            m = null != a ? Math.floor((e / a) * 100) : 0,
+            u = h.intl.formatToPlainString(h.t.YMor7k, { count: e }),
+            b = null != a ? h.intl.formatToPlainString(h.t.YMor7k, { count: a }) : "--",
+            j = (0, t.r)(l.A.unsafe_rawColors.RED_400).hex(),
+            v = (0, t.r)(l.A.unsafe_rawColors.YELLOW_300).hex();
+        return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, a.jsxs)("div", {
-                    className: h.Tr,
+                (0, i.jsxs)("div", {
+                    className: x.Tr,
                     children: [
-                        (0, a.jsx)("div", { className: h.yZ }),
-                        (0, a.jsx)(d.c, {
+                        (0, i.jsx)("div", { className: x.yZ }),
+                        (0, i.jsx)(d.c, {
                             from: { width: 0 },
                             to: { width: m },
                             config: { tension: 200, friction: 20, mass: 50, clamp: !0 },
                             shouldAnimate: "animate-always",
-                            children: (e) => {
-                                let { width: t } = e;
-                                return (0, a.jsx)(i.animated.div, {
-                                    className: h.hr,
+                            children: (s) => {
+                                let { width: e } = s;
+                                return (0, i.jsx)(r.animated.div, {
+                                    className: x.hr,
                                     style: {
-                                        width: t.interpolate((e) => `${e}%`),
-                                        backgroundColor: t.interpolate((e) => (e < 33 ? v : b)),
+                                        width: e.interpolate((s) => `${s}%`),
+                                        backgroundColor: e.interpolate((s) => (s < 33 ? j : v)),
                                     },
                                 });
                             },
                         }),
                     ],
                 }),
-                (0, a.jsxs)("div", {
-                    className: h.ei,
+                (0, i.jsxs)("div", {
+                    className: x.ei,
                     children: [
-                        (0, a.jsxs)("div", {
-                            className: h.__invalid_current,
+                        (0, i.jsxs)("div", {
+                            className: x.__invalid_current,
                             children: [
-                                (0, a.jsx)(c.E, {
-                                    variant: "text-md/semibold",
+                                (0, i.jsx)(c.E, {
+                                    variant: "body-md/semibold",
                                     color: m < 33 ? "text-feedback-critical" : "text-feedback-warning",
                                     children: o ? `${u}%` : u,
                                 }),
-                                (0, a.jsxs)(c.E, {
+                                (0, i.jsxs)(c.E, {
                                     "aria-describedby": "health-score-details-score-explain",
-                                    variant: "text-xs/normal",
+                                    variant: "body-xs/normal",
                                     color: "text-default",
-                                    children: [l, (0, a.jsx)("sup", { "aria-hidden": !0, children: "1" })],
+                                    children: [n, (0, i.jsx)("sup", { "aria-hidden": !0, children: "1" })],
                                 }),
                             ],
                         }),
-                        (0, a.jsxs)("div", {
-                            className: h.aS,
+                        (0, i.jsxs)("div", {
+                            className: x.aS,
                             children: [
-                                (0, a.jsx)(c.E, { variant: "text-sm/semibold", children: o ? `${j}%` : j }),
-                                (0, a.jsx)(c.E, {
+                                (0, i.jsx)(c.E, { variant: "body-sm/semibold", children: o ? `${b}%` : b }),
+                                (0, i.jsx)(c.E, {
                                     "aria-describedby": "health-score-details-requirement-explain",
-                                    variant: "text-xs/normal",
+                                    variant: "body-xs/normal",
                                     color: "text-default",
-                                    children: x.intl.string(x.t["A+mTPq"]),
+                                    children: h.intl.string(h.t["A+mTPq"]),
                                 }),
                             ],
                         }),
@@ -78,113 +78,113 @@ let u = (e) => {
             ],
         });
     },
-    j = function (e) {
-        let t,
-            s,
-            i,
-            { guildChecklist: r, transitionState: n, onClose: d } = e,
-            j = (0, m.GV)(),
-            { retentionHealthy: v, engagementHealthy: b, healthScore: N } = r,
+    b = function (s) {
+        let e,
+            a,
+            r,
+            { guildChecklist: l, transitionState: t, onClose: d } = s,
+            b = (0, m.GV)(),
+            { retentionHealthy: j, engagementHealthy: v, healthScore: N } = l,
             { avg_nonnew_participators: g, avg_nonnew_communicators: p, perc_ret_w1_intentful: f } = N;
         if (
-            (!b &&
+            (!v &&
                 null != g &&
                 g < 40 &&
-                (s = (0, a.jsxs)("div", {
-                    className: h.cl,
+                (a = (0, i.jsxs)("div", {
+                    className: x.cl,
                     children: [
-                        (0, a.jsx)(o.D, {
-                            className: h.xd,
-                            variant: "heading-md/semibold",
-                            children: x.intl.string(x.t.sEzDIR),
+                        (0, i.jsx)(o.D, {
+                            className: x.xd,
+                            variant: "heading-sm/semibold",
+                            children: h.intl.string(h.t.sEzDIR),
                         }),
-                        (0, a.jsx)(c.E, { variant: "text-sm/normal", children: x.intl.string(x.t.zNp3Kg) }),
-                        (0, a.jsx)(u, {
+                        (0, i.jsx)(c.E, { variant: "body-sm/normal", children: h.intl.string(h.t.zNp3Kg) }),
+                        (0, i.jsx)(u, {
                             currentNumber: g,
                             thresholdNumber: 40,
-                            currentLabel: x.intl.string(x.t.BtTX9L),
+                            currentLabel: h.intl.string(h.t.BtTX9L),
                         }),
                     ],
                 })),
-            !b &&
+            !v &&
                 null != p &&
                 p < 20 &&
-                (i = (0, a.jsxs)("div", {
-                    className: h.cl,
+                (r = (0, i.jsxs)("div", {
+                    className: x.cl,
                     children: [
-                        (0, a.jsx)(o.D, {
-                            className: h.xd,
-                            variant: "heading-md/semibold",
-                            children: x.intl.string(x.t.fWQTbv),
+                        (0, i.jsx)(o.D, {
+                            className: x.xd,
+                            variant: "heading-sm/semibold",
+                            children: h.intl.string(h.t.fWQTbv),
                         }),
-                        (0, a.jsx)(c.E, { variant: "text-sm/normal", children: x.intl.string(x.t.Tl8MR6) }),
-                        (0, a.jsx)(u, {
+                        (0, i.jsx)(c.E, { variant: "body-sm/normal", children: h.intl.string(h.t.Tl8MR6) }),
+                        (0, i.jsx)(u, {
                             currentNumber: p,
                             thresholdNumber: 20,
-                            currentLabel: x.intl.string(x.t.PFQI7l),
+                            currentLabel: h.intl.string(h.t.PFQI7l),
                         }),
                     ],
                 })),
-            !v && null != f)
+            !j && null != f)
         ) {
-            let e = Math.floor(100 * f);
-            t = (0, a.jsxs)("div", {
-                className: h.cl,
+            let s = Math.floor(100 * f);
+            e = (0, i.jsxs)("div", {
+                className: x.cl,
                 children: [
-                    (0, a.jsx)(o.D, {
-                        className: h.xd,
-                        variant: "heading-md/semibold",
-                        children: x.intl.string(x.t.YF6x21),
+                    (0, i.jsx)(o.D, {
+                        className: x.xd,
+                        variant: "heading-sm/semibold",
+                        children: h.intl.string(h.t.YF6x21),
                     }),
-                    (0, a.jsx)(c.E, { variant: "text-sm/normal", children: x.intl.format(x.t.kMBzFj, {}) }),
-                    (0, a.jsx)(u, {
-                        currentNumber: e,
+                    (0, i.jsx)(c.E, { variant: "body-sm/normal", children: h.intl.format(h.t.kMBzFj, {}) }),
+                    (0, i.jsx)(u, {
+                        currentNumber: s,
                         thresholdNumber: 10,
-                        currentLabel: x.intl.string(x.t.WpwyIi),
+                        currentLabel: h.intl.string(h.t.WpwyIi),
                         isPercent: !0,
                     }),
                 ],
             });
         }
-        return (0, a.jsxs)(l.EO, {
-            transitionState: n,
-            size: l.rI.MEDIUM,
-            className: h.__invalid_modal,
-            "aria-labelledby": j,
+        return (0, i.jsxs)(n.EO, {
+            transitionState: t,
+            size: n.rI.MEDIUM,
+            className: x.__invalid_modal,
+            "aria-labelledby": b,
             parentComponent: "HealthScoreDetailsModal",
             children: [
-                (0, a.jsxs)(l.$m, {
-                    className: h.Qs,
+                (0, i.jsxs)(n.$m, {
+                    className: x.Qs,
                     children: [
-                        (0, a.jsx)(o.D, {
+                        (0, i.jsx)(o.D, {
                             variant: "heading-xl/semibold",
-                            className: h.Hc,
-                            id: j,
-                            children: x.intl.string(x.t["+GHxPy"]),
+                            className: x.Hc,
+                            id: b,
+                            children: h.intl.string(h.t["+GHxPy"]),
                         }),
-                        (0, a.jsx)(c.E, {
-                            className: h.xd,
-                            variant: "text-sm/normal",
-                            children: x.intl.string(x.t.QOs3XA),
+                        (0, i.jsx)(c.E, {
+                            className: x.xd,
+                            variant: "body-sm/normal",
+                            children: h.intl.string(h.t.QOs3XA),
                         }),
-                        (0, a.jsx)("div", { className: h.me }),
-                        s,
-                        i,
-                        t,
-                        (0, a.jsx)("div", { className: h.me }),
-                        (0, a.jsxs)(c.E, {
-                            className: h.xd,
+                        (0, i.jsx)("div", { className: x.me }),
+                        a,
+                        r,
+                        e,
+                        (0, i.jsx)("div", { className: x.me }),
+                        (0, i.jsxs)(c.E, {
+                            className: x.xd,
                             color: "text-default",
                             id: "health-score-details-score-explain",
-                            variant: "text-sm/normal",
+                            variant: "body-sm/normal",
                             children: [
-                                (0, a.jsx)("sup", { "aria-hidden": !0, children: "1 " }),
-                                x.intl.string(x.t.tN5kb2),
+                                (0, i.jsx)("sup", { "aria-hidden": !0, children: "1 " }),
+                                h.intl.string(h.t.tN5kb2),
                             ],
                         }),
                     ],
                 }),
-                (0, a.jsx)(l.s_, { onClick: d, className: h.b }),
+                (0, i.jsx)(n.s_, { onClick: d, className: x.b }),
             ],
         });
     };

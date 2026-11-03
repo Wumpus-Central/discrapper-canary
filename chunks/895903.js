@@ -6,8 +6,8 @@ var i = t(477900),
     r = t(17928),
     o = t(661531),
     c = t(831544),
-    u = t(834730),
-    d = t(534514),
+    d = t(834730),
+    u = t(534514),
     A = t(104171),
     h = t(47868),
     m = t(986738),
@@ -41,8 +41,8 @@ function T(e) {
         className: N.P1,
         children: [
             (0, i.jsx)(A.Ay, { className: N.Ip, guildId: n.guild_id, users: l, size: A.DN.SIZE_16 }),
-            (0, i.jsx)(u.E, {
-                variant: "text-sm/normal",
+            (0, i.jsx)(d.E, {
+                variant: "body-sm/normal",
                 color: "text-default",
                 children: (function (e) {
                     if (0 === e.length) return "";
@@ -78,12 +78,12 @@ function b(e) {
                     (0, i.jsxs)("div", {
                         className: N.N1,
                         children: [
-                            (0, i.jsx)(d.D, {
+                            (0, i.jsx)(u.D, {
                                 className: N.__invalid_title,
                                 variant: "heading-xxl/medium",
                                 children: v.intl.string(v.t.QGnDLs),
                             }),
-                            (0, i.jsx)(u.E, {
+                            (0, i.jsx)(d.E, {
                                 tag: "div",
                                 className: N.VA,
                                 variant: "heading-lg/medium",

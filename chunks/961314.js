@@ -23,12 +23,12 @@ function h(e) {
                 status: m ?? t.status,
                 liveText: d.intl.string(d.t.kM6e4G),
                 className: u.aF,
-                textVariant: "text-md/semibold",
+                textVariant: "body-md/semibold",
                 eventType: t.entity_type,
                 guildEventId: t?.id,
                 recurrenceId: n,
             }),
-            (0, i.jsx)(l.E, { color: "text-default", variant: "text-md/normal", className: u.eq, children: t.name }),
+            (0, i.jsx)(l.E, { color: "text-default", variant: "body-md/normal", className: u.eq, children: t.name }),
         ],
     });
 }

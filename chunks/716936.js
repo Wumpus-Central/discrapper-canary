@@ -11,20 +11,20 @@ var s = t(477900),
     m = t(778712),
     h = t(939249),
     g = t(289873),
-    x = t(475825),
-    j = t(224640),
+    j = t(475825),
+    x = t(224640),
     f = t(20742),
     p = t(364522),
-    w = t(297413),
-    I = t(966327),
-    N = t(964486),
-    b = t(736653),
+    b = t(297413),
+    w = t(966327),
+    I = t(964486),
+    N = t(736653),
     v = t(793574),
     A = t(688810),
-    C = t(505527),
-    S = t(649963),
-    _ = t(549831),
-    y = t(402860),
+    y = t(505527),
+    C = t(649963),
+    S = t(549831),
+    _ = t(402860),
     M = t(734057),
     E = t(287809),
     k = t(486020),
@@ -40,9 +40,9 @@ var s = t(477900),
     H = t(105292),
     W = t(784039);
 let z = "/assets/64a47ba893401c1c.svg",
-    B = C.v.VOTE;
+    B = y.v.VOTE;
 function Q() {
-    let e = (0, b.Ay)();
+    let e = (0, N.Ay)();
     return (0, s.jsxs)(d.pp, {
         theme: e,
         children: [
@@ -96,13 +96,13 @@ function Z(e) {
                               })
                             : null,
                         (0, s.jsx)(u.E, {
-                            variant: "text-md/semibold",
+                            variant: "body-md/semibold",
                             color: "text-default",
                             lineClamp: 1,
                             children: (0, s.jsx)(o.A, { position: "left", "aria-hidden": !0, children: d }),
                         }),
                         (0, s.jsxs)(u.E, {
-                            variant: "text-md/semibold",
+                            variant: "body-md/semibold",
                             color: "text-default",
                             className: W.Oo,
                             children: ["(", a.toLocaleString(), ")"],
@@ -120,8 +120,8 @@ function D(e) {
         o = (0, r.bG)([E.default], () => E.default.getUser(l.id), [l]),
         d = U.Ay.useName(t.guild_id, t.id, l);
     async function c() {
-        (await (0, _.A)(l, { guildId: t.guild_id, channelId: t.id }),
-            (0, y.openUserProfileModal)({
+        (await (0, S.A)(l, { guildId: t.guild_id, channelId: t.id }),
+            (0, _.openUserProfileModal)({
                 userId: l.id,
                 guildId: t.guild_id,
                 channelId: t.id,
@@ -133,18 +133,18 @@ function D(e) {
         children: [
             (0, s.jsx)("div", {
                 className: W.x$,
-                children: (0, s.jsx)(I.A, { user: o ?? l, size: m._3.SIZE_32, "aria-hidden": !0, guildId: t.guild_id }),
+                children: (0, s.jsx)(w.A, { user: o ?? l, size: m._3.SIZE_32, "aria-hidden": !0, guildId: t.guild_id }),
             }),
             (0, s.jsxs)("div", {
                 className: W.v3,
                 children: [
                     (0, s.jsx)(u.E, {
-                        variant: "text-md/normal",
+                        variant: "body-md/normal",
                         className: W.UU,
                         "aria-label": d,
                         children: (0, s.jsx)("span", { className: W.Ci, children: d }),
                     }),
-                    (0, s.jsx)(w.A, {
+                    (0, s.jsx)(b.A, {
                         user: l,
                         className: W.rW,
                         usernameClass: i()(W.Xh, W.Ci),
@@ -164,7 +164,7 @@ function F(e) {
                 n = (0, r.bG)(
                     [T.A],
                     () => {
-                        let e = T.A.getReactions(l, t, s.emoji, q.WxW, C.v.VOTE);
+                        let e = T.A.getReactions(l, t, s.emoji, q.WxW, y.v.VOTE);
                         return Array.from(e?.values() ?? []);
                     },
                     [l, t, s.emoji],
@@ -178,13 +178,13 @@ function F(e) {
         h = n.useCallback(async () => {
             let e = c.current;
             m(!0);
-            let s = await S.ao({ channelId: a.id, messageId: l.id, emoji: t.emoji, limit: q.WxW, after: e, type: B });
+            let s = await C.ao({ channelId: a.id, messageId: l.id, emoji: t.emoji, limit: q.WxW, after: e, type: B });
             ((c.current = s[s.length - 1].id), m(!1));
         }, [a.id, l.id, t.emoji]);
-    (0, N.Ay)(() => {
+    (0, I.Ay)(() => {
         h();
     });
-    let j = n.useCallback(() => {
+    let x = n.useCallback(() => {
             let { current: e } = d;
             if (null == e) return;
             let l = e.getScrollerState();
@@ -208,19 +208,19 @@ function F(e) {
             },
             [a, u, i, l.id],
         ),
-        w = n.useMemo(() => {
+        b = n.useMemo(() => {
             let e = [];
             return (0 === i.length && u ? e.push(1) : (e.push(i.length), o && e.push(1)), e);
         }, [o, u, i.length]);
-    return (0, s.jsx)(x.Ei, {
+    return (0, s.jsx)(j.Ei, {
         className: W.Ov,
         fade: !0,
         ref: d,
-        sections: w,
+        sections: b,
         sectionHeight: 0,
         rowHeight: f,
         renderRow: p,
-        onScroll: o ? j : void 0,
+        onScroll: o ? x : void 0,
     });
 }
 function K(e) {
@@ -244,8 +244,8 @@ function K(e) {
                 })(l.reactions),
             [l.reactions],
         ),
-        x = g[d],
-        w = n.useMemo(() => {
+        j = g[d],
+        b = n.useMemo(() => {
             let e = {};
             return (
                 l.poll?.answers.forEach((l) => {
@@ -254,10 +254,10 @@ function K(e) {
                 e
             );
         }, [l.poll?.answers]),
-        I = H.intl.formatToPlainString(H.t.wqBc7A, { numVotes: x, option: w[d] });
+        w = H.intl.formatToPlainString(H.t.wqBc7A, { numVotes: j, option: b[d] });
     if (null == o) throw Error("PollVotesModal.render: Message does not have a channelId");
     if (null == l.poll) throw Error("PollVotesModal.render: Message does not have a poll");
-    return (0, s.jsxs)(j.d, {
+    return (0, s.jsxs)(x.d, {
         transitionState: i,
         onClose: a,
         size: "lg",
@@ -280,10 +280,10 @@ function K(e) {
                     }),
                     (0, s.jsx)(c.V.Panel, {
                         id: d,
-                        "aria-label": I,
+                        "aria-label": w,
                         className: W.nd,
                         children:
-                            null != m && x > 0
+                            null != m && j > 0
                                 ? (0, s.jsx)(F, { message: l, reaction: m, channel: o })
                                 : (0, s.jsx)(Q, {}),
                     }),

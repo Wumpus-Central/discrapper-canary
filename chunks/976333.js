@@ -1,4 +1,4 @@
-n.d(e, { A: () => m });
+n.d(e, { A: () => d });
 var r = n(477900),
     i = n(582128),
     s = n(778712),
@@ -8,19 +8,19 @@ var r = n(477900),
     c = n(286320),
     g = n(105292),
     u = n(896423);
-function m() {
+function d() {
     let t = (0, c.b)().slice(0, 3),
         e = t[0],
-        { avatarSrc: n, eventHandlers: m } = (0, o.A)({ userId: e?.id, size: s._3.SIZE_24, animateOnHover: !0 });
-    function d(t) {
+        { avatarSrc: n, eventHandlers: d } = (0, o.A)({ userId: e?.id, size: s._3.SIZE_24, animateOnHover: !0 });
+    function m(t) {
         return null != t.globalName ? t.globalName : t.username;
     }
     let x = i.useMemo(
         () =>
             t.length >= 2
-                ? g.intl.formatToPlainString(g.t.c7ETJH, { username: d(t[0]) })
+                ? g.intl.formatToPlainString(g.t.c7ETJH, { username: m(t[0]) })
                 : 1 === t.length
-                  ? g.intl.formatToPlainString(g.t.dpjXPL, { username: d(t[0]) })
+                  ? g.intl.formatToPlainString(g.t.dpjXPL, { username: m(t[0]) })
                   : "",
         [t],
     );
@@ -34,11 +34,11 @@ function m() {
                       src: n,
                       "aria-label": e.username,
                       size: s._3.SIZE_24,
-                      ...m,
+                      ...d,
                   }),
                   (0, r.jsx)(l.E, {
                       className: u.Qq,
-                      variant: "text-sm/normal",
+                      variant: "body-sm/normal",
                       color: "text-overlay-light",
                       children: x,
                   }),

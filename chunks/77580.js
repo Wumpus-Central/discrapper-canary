@@ -10,13 +10,13 @@ var n = i(477900),
     u = i(834730),
     m = i(964486),
     p = i(734057),
-    g = i(446243),
-    k = i(920639),
-    b = i(538638),
+    b = i(446243),
+    g = i(920639),
+    k = i(538638),
     h = i(558076),
     y = i(739820),
-    x = i(618922),
-    C = i(105292),
+    C = i(618922),
+    x = i(105292),
     A = i(692772);
 function j(t) {
     let { channelId: e, transitionState: i, onClose: s } = t,
@@ -34,20 +34,20 @@ function j(t) {
         E = j === N;
     return (
         (0, m.Ay)(() => {
-            (0, k.n0)({ guildId: _, channelId: e, interactionType: "room_selector_opened" });
+            (0, g.n0)({ guildId: _, channelId: e, interactionType: "room_selector_opened" });
         }),
         (0, n.jsx)(o.a, {
             transitionState: i,
-            title: C.intl.string(x.default.kmzWUc),
-            subtitle: C.intl.string(x.default["Rqmi9/"]),
+            title: x.intl.string(C.default.kmzWUc),
+            subtitle: x.intl.string(C.default["Rqmi9/"]),
             actions: [
-                { text: C.intl.string(C.t["ETE/oC"]), onClick: s, variant: "secondary" },
+                { text: x.intl.string(x.t["ETE/oC"]), onClick: s, variant: "secondary" },
                 {
-                    text: C.intl.string(C.t["1Qm822"]),
+                    text: x.intl.string(x.t["1Qm822"]),
                     variant: "primary",
                     type: "submit",
                     onClick: function () {
-                        null == _ || E || ((0, g.AQ)(_, e, { background: N }).catch((t) => (0, b.b)()), s());
+                        null == _ || E || ((0, b.AQ)(_, e, { background: N }).catch((t) => (0, k.b)()), s());
                     },
                     disabled: E,
                 },
@@ -70,7 +70,7 @@ function j(t) {
                                     style: { aspectRatio: t.aspectRatio },
                                     className: A.Sl,
                                 }),
-                                (0, n.jsx)(u.E, { variant: "text-sm/semibold", children: t.getName() }),
+                                (0, n.jsx)(u.E, { variant: "body-sm/semibold", children: t.getName() }),
                             ],
                         },
                         t.key,

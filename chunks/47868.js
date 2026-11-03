@@ -6,8 +6,8 @@ var i = t(477900),
     r = t(815021),
     o = t(939249),
     c = t(534514),
-    u = t(834730),
-    d = t(320448),
+    d = t(834730),
+    u = t(320448),
     A = t(105292),
     h = t(906212);
 function m(e) {
@@ -36,19 +36,19 @@ function m(e) {
             (0, i.jsxs)("div", {
                 className: h.FS,
                 children: [
-                    (0, i.jsx)(c.D, { variant: "heading-md/semibold", color: "text-strong", children: m }),
-                    (0, i.jsx)(u.E, { variant: "text-xs/normal", color: "text-strong", className: h.mG, children: g }),
+                    (0, i.jsx)(c.D, { variant: "heading-sm/semibold", color: "text-strong", children: m }),
+                    (0, i.jsx)(d.E, { variant: "body-xs/normal", color: "text-strong", className: h.mG, children: g }),
                     null != x && x > 0
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(u.E, {
-                                      variant: "text-xs/normal",
+                                  (0, i.jsx)(d.E, {
+                                      variant: "body-xs/normal",
                                       color: "text-strong",
                                       className: h.Om,
                                       children: "\u2022",
                                   }),
-                                  (0, i.jsx)(u.E, {
-                                      variant: "text-xs/normal",
+                                  (0, i.jsx)(d.E, {
+                                      variant: "body-xs/normal",
                                       color: "text-strong",
                                       className: h.mG,
                                       children: A.intl.format(A.t.NywdIj, { count: x }),
@@ -60,7 +60,7 @@ function m(e) {
             }),
             null != p
                 ? (0, i.jsx)("div", { className: h.r, children: (0, i.jsx)(r.J, { size: "xs", onClick: E }) })
-                : (0, i.jsx)(d._, { size: "xs", color: "currentColor", className: h.OW }),
+                : (0, i.jsx)(u._, { size: "xs", color: "currentColor", className: h.OW }),
         ],
     });
 }

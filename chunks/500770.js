@@ -34,7 +34,7 @@ function E(e) {
                             "aria-hidden": !0,
                         }),
                         (0, i.jsx)(a.E, {
-                            variant: "text-sm/normal",
+                            variant: "body-sm/normal",
                             color: "text-overlay-light",
                             className: I.__invalid_unlockText,
                             children: f.intl.string(f.t.YmIiSe),
@@ -79,14 +79,14 @@ function C(e) {
             onShowFullDescription: C,
             productType: _,
             onTapCard: j,
-            actionMenu: N,
-            showOpaqueBackground: y = !1,
-            hideRoleTag: T = !1,
-            lineClamp: S = 1,
-            cardWidth: b = 332,
+            actionMenu: y,
+            showOpaqueBackground: N = !1,
+            hideRoleTag: b = !1,
+            lineClamp: T = 1,
+            cardWidth: S = 332,
             cardHeight: k,
             thumbnailHeight: R = 187,
-            descriptionTextVariant: L = "text-sm/normal",
+            descriptionTextVariant: L = "body-sm/normal",
             isDraft: M = !1,
         } = e,
         P = (0, g.Ld)(),
@@ -104,7 +104,7 @@ function C(e) {
                             className: I.Ag,
                             children: [
                                 (0, i.jsx)(c.D, {
-                                    variant: "text-md/medium",
+                                    variant: "body-md/medium",
                                     color: "text-strong",
                                     className: I.tZ,
                                     id: P,
@@ -114,32 +114,32 @@ function C(e) {
                                     children: (0, i.jsx)(p.A, {
                                         variant: L,
                                         color: "text-muted",
-                                        lineClamp: S,
+                                        lineClamp: T,
                                         text: l,
                                     }),
                                 }),
                                 A && (0, i.jsx)(v, { onShowFullDescription: C, variant: L }),
-                                T || null == o || "" === o.name
+                                b || null == o || "" === o.name
                                     ? null
                                     : (0, i.jsxs)(i.Fragment, {
                                           children: [(0, i.jsx)(m.h, { size: 16 }), (0, i.jsx)(x.A, { role: o })],
                                       }),
                             ],
                         }),
-                        N,
+                        y,
                     ],
                 }),
                 (0, i.jsxs)("div", {
                     className: I.kP,
                     children: [
                         (0, i.jsx)(a.E, {
-                            variant: "text-md/medium",
+                            variant: "body-md/medium",
                             color: "interactive-text-active",
                             className: I.__invalid_productPrice,
                             children: r ?? f.intl.string(f.t["4uLhAp"]),
                         }),
                         (0, i.jsx)(a.E, {
-                            variant: "text-xxs/normal",
+                            variant: "footnote/normal",
                             color: "text-default",
                             className: I.__invalid_productType,
                             children: _,
@@ -156,13 +156,13 @@ function C(e) {
             ],
         });
     return null == j
-        ? (0, i.jsx)("article", { className: s()(I.Um, y ? I.sG : I.Wi), "aria-labelledby": P, children: D })
+        ? (0, i.jsx)("article", { className: s()(I.Um, N ? I.sG : I.Wi), "aria-labelledby": P, children: D })
         : (0, i.jsx)("div", {
-              style: { width: b, height: k },
+              style: { width: S, height: k },
               children: (0, i.jsx)(h.s, {
                   tag: "article",
                   "aria-label": f.intl.formatToPlainString(f.t["e+TmJa"], { productName: n }),
-                  className: s()(I.Um, y ? I.sG : I.Wi, I.GA),
+                  className: s()(I.Um, N ? I.sG : I.Wi, I.GA),
                   onClick: j,
                   children: D,
               }),

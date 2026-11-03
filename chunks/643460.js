@@ -1,44 +1,44 @@
-r.d(e, { default: () => j });
-var i = r(477900);
-r(582128);
-var s = r(189213),
-    n = r(214947),
-    l = r(534890),
-    c = r(26137),
-    o = r(625903),
-    a = r(834730),
-    d = r(230837),
-    m = r(975571),
-    x = r(652215),
-    h = r(99206),
-    u = r(105292),
-    C = r(463292);
+e.d(r, { default: () => j });
+var i = e(477900);
+e(582128);
+var s = e(189213),
+    n = e(214947),
+    o = e(534890),
+    l = e(26137),
+    c = e(625903),
+    a = e(834730),
+    d = e(230837),
+    m = e(975571),
+    h = e(652215),
+    u = e(99206),
+    x = e(105292),
+    C = e(463292);
 function j(t) {
-    let { transitionState: e, onClose: r } = t;
+    let { transitionState: r, onClose: e } = t;
     return (0, i.jsx)(s.a, {
-        transitionState: e,
-        title: u.intl.string(u.t.pWLGnF),
-        subtitle: u.intl.string(u.t.WKxo8n),
+        transitionState: r,
+        title: x.intl.string(x.t.pWLGnF),
+        subtitle: x.intl.string(x.t.WKxo8n),
         actions: [],
-        onClose: r,
-        children: (0, i.jsx)(v, { onClose: r }),
+        onClose: e,
+        children: (0, i.jsx)(v, { onClose: e }),
     });
 }
 function v(t) {
-    let { onClose: e } = t,
-        r = [
-            { icon: (0, i.jsx)(n.$, { size: "refresh_sm", color: "currentColor" }), text: u.intl.string(u.t.vXBrdg) },
+    let { onClose: r } = t,
+        e = [
+            { icon: (0, i.jsx)(n.$, { size: "refresh_sm", color: "currentColor" }), text: x.intl.string(x.t.vXBrdg) },
             {
-                icon: (0, i.jsx)(l.ChatIcon, { size: "refresh_sm", color: "currentColor" }),
-                text: u.intl.string(u.t["i7/QHN"]),
+                icon: (0, i.jsx)(o.ChatIcon, { size: "refresh_sm", color: "currentColor" }),
+                text: x.intl.string(x.t["i7/QHN"]),
             },
-            { icon: (0, i.jsx)(c.r, { size: "refresh_sm", color: "currentColor" }), text: u.intl.string(u.t.ZmBfKJ) },
+            { icon: (0, i.jsx)(l.r, { size: "refresh_sm", color: "currentColor" }), text: x.intl.string(x.t.ZmBfKJ) },
             {
-                icon: (0, i.jsx)(o.SettingsIcon, { size: "refresh_sm", color: "currentColor" }),
-                text: u.intl.format(u.t.wBlJCr, {
-                    recentActivityURL: m.A.getArticleURL(x.MVz.MEMBER_LIST_ACTIVITY_FEED),
+                icon: (0, i.jsx)(c.SettingsIcon, { size: "refresh_sm", color: "currentColor" }),
+                text: x.intl.format(x.t.wBlJCr, {
+                    recentActivityURL: m.A.getArticleURL(h.MVz.MEMBER_LIST_ACTIVITY_FEED),
                     handleActivityPrivacyClick: () => {
-                        (e(), (0, d.A)(h.J.ACTIVITY_PRIVACY));
+                        (r(), (0, d.A)(u.J.ACTIVITY_PRIVACY));
                     },
                 }),
             },
@@ -46,19 +46,19 @@ function v(t) {
     return (0, i.jsxs)("div", {
         className: C.Q2,
         children: [
-            (0, i.jsx)(a.E, { variant: "text-sm/semibold", children: u.intl.string(u.t.YjqBbg) }),
-            r.map((t, e) => {
-                let { icon: r, text: s } = t;
+            (0, i.jsx)(a.E, { variant: "body-sm/semibold", children: x.intl.string(x.t.YjqBbg) }),
+            e.map((t, r) => {
+                let { icon: e, text: s } = t;
                 return (0, i.jsxs)(
                     "div",
                     {
                         className: C.Gc,
                         children: [
-                            (0, i.jsx)("div", { className: C.qS, children: r }),
-                            (0, i.jsx)(a.E, { variant: "text-sm/medium", color: "text-muted", children: s }),
+                            (0, i.jsx)("div", { className: C.qS, children: e }),
+                            (0, i.jsx)(a.E, { variant: "body-sm/medium", color: "text-muted", children: s }),
                         ],
                     },
-                    `memberlist-learn-more-note-${e}`,
+                    `memberlist-learn-more-note-${r}`,
                 );
             }),
         ],

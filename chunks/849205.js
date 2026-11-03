@@ -8,16 +8,16 @@ var t = l(477900),
     o = l(778712),
     d = l(140735),
     u = l(939249),
-    x = l(834730),
-    h = l(866665),
+    h = l(834730),
+    x = l(866665),
     m = l(254138),
     A = l(661531),
     j = l(926418),
     g = l(73392),
-    p = l(665691),
-    E = l(696451),
-    f = l(290863),
-    b = l(994500),
+    b = l(665691),
+    p = l(696451),
+    E = l(290863),
+    f = l(994500),
     N = l(287809),
     I = l(427262),
     C = l(742589),
@@ -27,14 +27,14 @@ function D(e) {
     let n = e.channel.getRecipientId(),
         l = e.channel.isSystemDM(),
         D = (0, s.bG)([N.default], () => N.default.getUser(n)),
-        v = (0, s.bG)([f.A], () => f.A.getStatus(n)),
-        U = (0, s.bG)([f.A], () => f.A.isMobileOnline(n)),
-        M = (0, s.bG)([f.A], () => f.A.isVROnline(n)),
-        L = (0, s.bG)([b.A], () => b.A.getNickname(n)),
+        v = (0, s.bG)([E.A], () => E.A.getStatus(n)),
+        U = (0, s.bG)([E.A], () => E.A.isMobileOnline(n)),
+        M = (0, s.bG)([E.A], () => E.A.isVROnline(n)),
+        L = (0, s.bG)([f.A], () => f.A.getNickname(n)),
         R = I.Ay.useUserTag(D),
         S = (0, g.a)({ displayNameStyles: D?.displayNameStyles }),
-        G = (0, p.bG)({ channelId: e.channel.id }),
-        y = i.useRef(null),
+        y = (0, b.bG)({ channelId: e.channel.id }),
+        G = i.useRef(null),
         [O, k] = i.useState(!1),
         P = i.useRef(void 0),
         F = i.useCallback(() => {
@@ -46,7 +46,7 @@ function D(e) {
             }, 250);
         }, []);
     i.useEffect(() => () => clearTimeout(P.current), []);
-    let V = (0, s.cf)([E.Ay], () => E.Ay.getNicknameGuildsMapping(n), [n]),
+    let V = (0, s.cf)([p.Ay], () => p.Ay.getNicknameGuildsMapping(n), [n]),
         z = i.useMemo(
             () =>
                 Object.entries(V)
@@ -82,7 +82,7 @@ function D(e) {
                     className: _.my,
                     children: [
                         (0, t.jsx)("div", {
-                            ref: y,
+                            ref: G,
                             children:
                                 null != e.handleClick
                                     ? (0, t.jsx)(u.D, {
@@ -100,7 +100,7 @@ function D(e) {
                         }),
                         w &&
                             (0, t.jsxs)(r.x, {
-                                targetElementRef: y,
+                                targetElementRef: G,
                                 shouldShow: O,
                                 onRequestClose: () => k(!1),
                                 position: "bottom",
@@ -114,14 +114,14 @@ function D(e) {
                                             (0, t.jsxs)("div", {
                                                 className: _.qc,
                                                 children: [
-                                                    (0, t.jsx)(x.E, {
-                                                        variant: "text-md/semibold",
+                                                    (0, t.jsx)(h.E, {
+                                                        variant: "body-md/semibold",
                                                         color: "text-strong",
                                                         className: _.rX,
                                                         children: R,
                                                     }),
-                                                    (0, t.jsx)(x.E, {
-                                                        variant: "text-xs/semibold",
+                                                    (0, t.jsx)(h.E, {
+                                                        variant: "body-xs/semibold",
                                                         color: "text-muted",
                                                         className: _.FQ,
                                                         children: T.intl.string(T.t.l1QVfj),
@@ -138,8 +138,8 @@ function D(e) {
                                                         {
                                                             className: _.BZ,
                                                             children: [
-                                                                (0, t.jsx)(x.E, {
-                                                                    variant: "text-sm/medium",
+                                                                (0, t.jsx)(h.E, {
+                                                                    variant: "body-sm/medium",
                                                                     className: _.Vk,
                                                                     children: n,
                                                                 }),
@@ -173,13 +173,13 @@ function D(e) {
                     children: [
                         B
                             ? (0, t.jsx)("span", { className: S, children: X })
-                            : (0, t.jsx)(h.m, {
+                            : (0, t.jsx)(x.m, {
                                   text: R,
                                   position: "bottom",
                                   children: (0, t.jsx)("span", { className: S, children: X }),
                               }),
-                        G &&
-                            (0, t.jsx)(h.m, {
+                        y &&
+                            (0, t.jsx)(x.m, {
                                 text: T.intl.string(T.t.QyZ4Td),
                                 children: (0, t.jsx)(m.m, {
                                     size: "xs",

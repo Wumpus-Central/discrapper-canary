@@ -13,25 +13,25 @@ var l = n(477900),
     h = n(890497),
     x = n(103557),
     v = n(374084),
-    f = n(696451),
-    C = n(71393),
-    b = n(287809),
+    b = n(696451),
+    f = n(71393),
+    C = n(287809),
     k = n(569944),
     j = n(721228),
     I = n(105292),
     p = n(559357);
 function L(e) {
     let { transitionState: t, onClose: n, guildId: i, welcomeMessage: L, onSave: S } = e,
-        [E, H] = s.useState({ ...L }),
-        w = (0, r.bG)([C.A], () => C.A.getGuild(i)),
-        A = s.useCallback(
+        [y, E] = s.useState({ ...L }),
+        H = (0, r.bG)([f.A], () => f.A.getGuild(i)),
+        w = s.useCallback(
             (e) => {
                 let t = {};
                 return Promise.resolve(
-                    f.Ay.getMembers(i)
+                    b.Ay.getMembers(i)
                         .filter((n) => {
-                            let l = b.default.getUser(n.userId);
-                            if ((null != l && (t[n.userId] = l), null == w || null == l || !(0, k.c)(w, l))) return !1;
+                            let l = C.default.getUser(n.userId);
+                            if ((null != l && (t[n.userId] = l), null == H || null == l || !(0, k.c)(H, l))) return !1;
                             let s = `${n.nick ?? ""} ${l?.username}`;
                             return a()(e.toLowerCase(), s.toLowerCase());
                         })
@@ -50,67 +50,67 @@ function L(e) {
                         })),
                 );
             },
-            [i, w],
+            [i, H],
+        ),
+        A = s.useCallback(
+            (e) => {
+                E((t) => ({ ...t, authorIds: null != e ? [e] : [] }));
+            },
+            [E],
         ),
         N = s.useCallback(
             (e) => {
-                H((t) => ({ ...t, authorIds: null != e ? [e] : [] }));
+                E((t) => ({ ...t, message: e ?? "" }));
             },
-            [H],
+            [E],
         ),
-        P = s.useCallback(
-            (e) => {
-                H((t) => ({ ...t, message: e ?? "" }));
-            },
-            [H],
-        ),
+        P = s.useCallback(() => {
+            (S(y), n());
+        }, [n, S, y]),
         Q = s.useCallback(() => {
-            (S(E), n());
-        }, [n, S, E]),
-        y = s.useCallback(() => {
             (S(null), n());
         }, [S, n]),
-        F = E.authorIds[0] ?? "",
+        F = y.authorIds[0] ?? "",
         M = (function (e) {
             if (null == e.message || 0 === e.message.length) return null;
             if (null == e.authorIds || 0 === e.authorIds.length)
                 if (e.message.length < v.Fi) return I.intl.formatToPlainString(I.t.Lj831L, { minLength: v.Fi });
                 else return I.intl.string(I.t["4m7gtn"]);
             return e.message.length < v.Fi ? I.intl.formatToPlainString(I.t.TJGHXt, { minLength: v.Fi }) : null;
-        })(E),
+        })(y),
         T = s.useMemo(
             () => [
                 { text: I.intl.string(I.t["ETE/oC"]), onClick: n, variant: "secondary" },
                 {
                     text: I.intl.string(I.t["R3BPH+"]),
-                    onClick: Q,
+                    onClick: P,
                     variant: "primary",
-                    disabled: 0 === E.message.length || null != M,
+                    disabled: 0 === y.message.length || null != M,
                 },
             ],
-            [M, Q, n, E.message.length],
+            [M, P, n, y.message.length],
         );
     return (0, l.jsxs)(o.a, {
         title: I.intl.string(I.t.UnLrit),
         transitionState: t,
         onClose: n,
         actions: T,
-        actionBarInput: (0, l.jsx)(c.Q, { text: I.intl.string(I.t.N86XcP), onClick: y, variant: "critical" }),
+        actionBarInput: (0, l.jsx)(c.Q, { text: I.intl.string(I.t.N86XcP), onClick: Q, variant: "critical" }),
         children: [
             (0, l.jsxs)("div", {
                 className: p.eH,
                 children: [
                     (0, l.jsxs)(g.D, {
-                        variant: "heading-md/semibold",
+                        variant: "heading-sm/semibold",
                         color: "text-strong",
                         children: [I.intl.string(I.t.zNQfQy), (0, l.jsx)(j.A, {})],
                     }),
                     (0, l.jsx)(m.E, {
-                        variant: "text-sm/normal",
+                        variant: "body-sm/normal",
                         color: "text-default",
                         children: I.intl.string(I.t.mQHK2S),
                     }),
-                    (0, l.jsx)(h.Z, { selectionMode: "single", value: F ?? void 0, options: A, onSelectionChange: N }),
+                    (0, l.jsx)(h.Z, { selectionMode: "single", value: F ?? void 0, options: w, onSelectionChange: A }),
                 ],
             }),
             (0, l.jsx)("div", { className: p.me }),
@@ -118,23 +118,23 @@ function L(e) {
                 className: p.eH,
                 children: [
                     (0, l.jsx)(g.D, {
-                        variant: "heading-md/semibold",
+                        variant: "heading-sm/semibold",
                         color: "text-strong",
                         children: I.intl.string(I.t.SHQcv7),
                     }),
                     (0, l.jsx)(m.E, {
-                        variant: "text-sm/normal",
+                        variant: "body-sm/normal",
                         color: "text-default",
                         children: I.intl.format(I.t["6biC4R"], {}),
                     }),
                     (0, l.jsx)(x.f, {
                         placeholder: I.intl.string(I.t["kX/Sbx"]),
-                        value: E.message,
-                        onChange: P,
+                        value: y.message,
+                        onChange: N,
                         maxLength: v.dl,
                     }),
                     null != M
-                        ? (0, l.jsx)(m.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: M })
+                        ? (0, l.jsx)(m.E, { variant: "body-xs/normal", color: "text-feedback-critical", children: M })
                         : null,
                 ],
             }),

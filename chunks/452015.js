@@ -228,12 +228,12 @@ let ep = { mass: 1, tension: 320, friction: 30, clamp: !0 },
                                 className: eA.Qs,
                                 children: [
                                     (0, i.jsx)(p.E, {
-                                        variant: "text-md/medium",
+                                        variant: "body-md/medium",
                                         color: "text-strong",
                                         children: es.intl.string(es.t.KCD0Hp),
                                     }),
                                     (0, i.jsx)(p.E, {
-                                        variant: "text-xs/normal",
+                                        variant: "body-xs/normal",
                                         color: "text-default",
                                         children: es.intl.formatToPlainString(es.t["8o8Zk5"], { number: 25 }),
                                     }),
@@ -283,14 +283,14 @@ function eS(e) {
                               "aria-hidden": !0,
                           }),
                           (0, i.jsx)(p.E, {
-                              variant: "text-md/normal",
+                              variant: "body-md/normal",
                               className: ec()(eE.qz, { [eE.fw]: a }),
                               children: u,
                           }),
                       ],
                   })
                 : (0, i.jsx)(p.E, {
-                      variant: "text-md/normal",
+                      variant: "body-md/normal",
                       color: !s && t >= n ? "text-feedback-critical" : "text-subtle",
                       children: u,
                   }),
@@ -466,7 +466,7 @@ function e2(e) {
                             tag: "strong",
                             className: e1.$R,
                             "aria-hidden": !0,
-                            variant: "text-md/medium",
+                            variant: "body-md/medium",
                             children:
                                 null != r && r === t.tag
                                     ? eT.Ay.getName(t)
@@ -475,7 +475,7 @@ function e2(e) {
                                       : eT.Ay.getName(t),
                         }),
                         (0, i.jsxs)(p.E, {
-                            variant: "text-xs/normal",
+                            variant: "body-xs/normal",
                             color: "text-muted",
                             className: null != s && s.length > 0 ? e1.dj : void 0,
                             children: [
@@ -576,7 +576,7 @@ function ti(e) {
             children: [
                 (0, i.jsx)(g.eu, { src: (0, W.Y)(t), size: A._3.SIZE_24, "aria-label": l }),
                 (0, i.jsx)(p.E, {
-                    variant: "text-sm/medium",
+                    variant: "body-sm/medium",
                     color: "text-strong",
                     tag: "span",
                     className: e3.J2,
@@ -603,7 +603,7 @@ function tl(e) {
                 },
             },
         ],
-        input: (0, i.jsx)(p.E, { variant: "text-md/normal", className: e3.Jv, children: es.intl.string(es.t.cjE7wH) }),
+        input: (0, i.jsx)(p.E, { variant: "body-md/normal", className: e3.Jv, children: es.intl.string(es.t.cjE7wH) }),
         ...l,
         children: r
             .filter(eB.Vq)
@@ -975,12 +975,12 @@ class ts extends l.PureComponent {
                     className: e3.wV,
                     children: [
                         (0, i.jsx)(p.E, {
-                            variant: "text-md/normal",
+                            variant: "body-md/normal",
                             color: "text-default",
                             children: es.intl.string(es.t.z3yXsY),
                         }),
                         (0, i.jsx)(p.E, {
-                            variant: "text-sm/normal",
+                            variant: "body-sm/normal",
                             color: "text-subtle",
                             children: es.intl.string(t ? es.t["l6Rj+t"] : es.t["7w2iq7"]),
                         }),
@@ -1031,7 +1031,7 @@ class ts extends l.PureComponent {
                     "aria-expanded": !s,
                     "aria-label": a,
                     children: [
-                        (0, i.jsx)(N.D, { variant: "heading-sm/semibold", color: "text-muted", children: a }),
+                        (0, i.jsx)(N.D, { variant: "heading-xs/semibold", color: "text-muted", children: a }),
                         (0, i.jsx)(o, { size: "xxs" }),
                     ],
                 });
@@ -1502,7 +1502,7 @@ function ta(e) {
             }),
             (0, i.jsx)(p.E, {
                 className: e3.hL,
-                variant: "text-sm/medium",
+                variant: "body-sm/medium",
                 color: "text-muted",
                 children: es.intl.string(es.t.YynaLK),
             }),

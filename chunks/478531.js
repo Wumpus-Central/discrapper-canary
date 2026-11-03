@@ -1,4 +1,4 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => w });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -14,28 +14,28 @@ var i = n(503698),
     h = n(769015),
     f = n(409626),
     g = n(692969),
-    x = n(202163),
-    y = n(287809),
+    y = n(202163),
+    x = n(287809),
     v = n(58703),
     E = n(403362),
     N = n(331446),
     O = n(829648),
     C = n(185973),
-    j = n(105292),
-    S = n(447177);
-function w(e) {
+    b = n(105292),
+    j = n(447177);
+function S(e) {
     let { applicationId: t, hasTrailingDate: n } = e,
         i = (0, p.h)(t),
-        { gameRecord: r } = (0, x.Ay)(t),
+        { gameRecord: r } = (0, y.Ay)(t),
         s = (0, g.A)({ applicationId: t, location: "ClipEmbed", source: f.GameProfileSources.ClipEmbed }),
         u = r?.name ?? i?.name;
     if (null == u) return null;
     let d = (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(h.A, { game: r ?? i, size: h.M.XXSMALL, className: S.Gt, allowUnknownGameIcon: !1 }),
+                (0, l.jsx)(h.A, { game: r ?? i, size: h.M.XXSMALL, className: j.Gt, allowUnknownGameIcon: !1 }),
                 (0, l.jsx)(c.E, {
-                    className: S.mO,
-                    variant: "text-sm/normal",
+                    className: j.mO,
+                    variant: "body-sm/normal",
                     color: "text-overlay-light",
                     children: u,
                 }),
@@ -43,16 +43,16 @@ function w(e) {
         }),
         m =
             null != s
-                ? (0, l.jsx)(o.D, { className: a()(S.Nn, S.On), onClick: s, children: d })
-                : (0, l.jsx)("span", { className: S.Nn, children: d });
+                ? (0, l.jsx)(o.D, { className: a()(j.Nn, j.On), onClick: s, children: d })
+                : (0, l.jsx)("span", { className: j.Nn, children: d });
     return (0, l.jsxs)(l.Fragment, {
         children: [
             m,
-            !0 === n && (0, l.jsx)(c.E, { variant: "text-sm/normal", color: "text-overlay-light", children: "\xb7" }),
+            !0 === n && (0, l.jsx)(c.E, { variant: "body-sm/normal", color: "text-overlay-light", children: "\xb7" }),
         ],
     });
 }
-let A = function (e) {
+let w = function (e) {
     let {
             createdAt: t,
             participantIds: n,
@@ -61,33 +61,33 @@ let A = function (e) {
             guildId: h,
             className: f,
             activeLayer: g,
-            playerState: x = s.Q6.PAUSED,
-            isControlBarExpanded: A = !0,
-            isFullScreen: b = !1,
+            playerState: y = s.Q6.PAUSED,
+            isControlBarExpanded: w = !0,
+            isFullScreen: A = !1,
             showTextContent: k = !0,
             isGridView: R = !1,
             setIsGridView: I,
         } = e,
-        T = (0, r.yK)([y.default], () => n.map((e) => y.default.getUser(e)).filter(E.Vq) ?? []),
+        T = (0, r.yK)([x.default], () => n.map((e) => x.default.getUser(e)).filter(E.Vq) ?? []),
         V = null != t ? (0, v.Fe)(new Date(t)) : null;
     return (0, l.jsxs)("div", {
-        className: a()(S.oK, { [S.pd]: x === s.Q6.PLAYING && !A, [S.aS]: b }, f),
+        className: a()(j.oK, { [j.pd]: y === s.Q6.PLAYING && !w, [j.aS]: A }, f),
         children: [
-            (0, l.jsx)("div", { className: S.Lu }),
+            (0, l.jsx)("div", { className: j.Lu }),
             (0, l.jsxs)("div", {
-                className: S.s$,
+                className: j.s$,
                 children: [
                     R &&
-                        A &&
+                        w &&
                         (0, l.jsxs)(o.D, {
-                            className: S.i9,
+                            className: j.i9,
                             onClick: function (e) {
                                 (e.stopPropagation(), I?.(!1));
                             },
                             children: [
                                 (0, l.jsx)(u.r, { color: "white", size: "xs" }),
                                 (0, l.jsx)(c.E, {
-                                    variant: "text-md/semibold",
+                                    variant: "body-md/semibold",
                                     color: "text-overlay-light",
                                     children: "Back to single mode",
                                 }),
@@ -95,35 +95,35 @@ let A = function (e) {
                         }),
                     !R &&
                         (0, l.jsxs)("div", {
-                            className: S.yR,
+                            className: j.yR,
                             children: [
                                 (0, l.jsxs)("div", {
-                                    className: S.$,
+                                    className: j.$,
                                     children: [
                                         (0, l.jsx)(d.m, {
                                             asContainer: !0,
-                                            text: j.intl.string(j.t["/fgfWh"]),
-                                            children: (0, l.jsx)(m.x, { className: S.gr, size: "xs", color: "white" }),
+                                            text: b.intl.string(b.t["/fgfWh"]),
+                                            children: (0, l.jsx)(m.x, { className: j.gr, size: "xs", color: "white" }),
                                         }),
                                         k &&
                                             (0, l.jsx)(c.E, {
-                                                className: S.DD,
-                                                variant: "text-md/semibold",
+                                                className: j.DD,
+                                                variant: "body-md/semibold",
                                                 color: "text-overlay-light",
-                                                children: null != p && p.length > 0 ? p : j.intl.string(j.t.Cyxddp),
+                                                children: null != p && p.length > 0 ? p : b.intl.string(b.t.Cyxddp),
                                             }),
                                     ],
                                 }),
                                 k &&
                                     (null != i || null != V) &&
                                     (0, l.jsxs)("div", {
-                                        className: S.yu,
+                                        className: j.yu,
                                         children: [
-                                            (0, l.jsx)(w, { applicationId: i, hasTrailingDate: null != V }),
+                                            (0, l.jsx)(S, { applicationId: i, hasTrailingDate: null != V }),
                                             null != V &&
                                                 (0, l.jsx)(c.E, {
-                                                    className: S.BR,
-                                                    variant: "text-sm/normal",
+                                                    className: j.BR,
+                                                    variant: "body-sm/normal",
                                                     color: "text-overlay-light",
                                                     children: V,
                                                 }),
@@ -134,9 +134,9 @@ let A = function (e) {
                     !R &&
                         T.length > 0 &&
                         (0, l.jsxs)("div", {
-                            className: S.HD,
+                            className: j.HD,
                             role: "group",
-                            "aria-label": j.intl.string(j.t.WTozwe),
+                            "aria-label": b.intl.string(b.t.WTozwe),
                             children: [
                                 T.slice(0, 4).map((e) =>
                                     (0, l.jsx)(O.A, { layerContext: g, user: e, guildId: h }, e.id),
@@ -146,7 +146,7 @@ let A = function (e) {
                                         layerContext: g,
                                         participants: T,
                                         maxVisibleParticipants: 4,
-                                        overflowLabel: j.intl.formatToPlainString(C.default.CJ0I6C, {
+                                        overflowLabel: b.intl.formatToPlainString(C.default.CJ0I6C, {
                                             count: T.length - 4,
                                         }),
                                         guildId: h,

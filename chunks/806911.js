@@ -26,8 +26,8 @@ var i = n(477900),
     L = n(652896),
     y = n(880144),
     D = n(638480),
-    v = n(338771),
-    b = n(72755),
+    b = n(338771),
+    v = n(72755),
     P = n(574172),
     M = n(976860),
     U = n(114129),
@@ -119,7 +119,7 @@ class ec extends r.PureComponent {
         let { participantOnScreen: e } = this.props;
         (s()((0, el.Ay)(e), "cannot stop stream for non streamer"),
             (0, N.XJ)(I.A.VIDEO_PIP, N.OP.STREAM, !1),
-            (0, v.A)(e.stream));
+            (0, b.A)(e.stream));
     };
     handleOpenPopout = () => {
         let { channel: e } = this.props;
@@ -216,7 +216,7 @@ class ec extends r.PureComponent {
         if (t?.type === el.lp.STREAM || t?.type === el.lp.USER) {
             let n = Z.Ay.getNickname(e.getGuildId(), e.id, t.user) ?? Q.Ay.getName(t.user);
             return (0, i.jsx)(u.E, {
-                variant: "text-md/normal",
+                variant: "body-md/normal",
                 color: "text-overlay-light",
                 className: eo.F8,
                 lineClamp: 1,
@@ -242,7 +242,7 @@ class ec extends r.PureComponent {
                           streamId: t,
                           component: Y.Ay.getVideoComponent(),
                           mirror: l,
-                          children: (0, i.jsx)(b.A, {
+                          children: (0, i.jsx)(v.A, {
                               size: _._3.SIZE_80,
                               src: n?.user.getAvatarURL(e.guild_id, 80),
                               "aria-label": n?.user.username,

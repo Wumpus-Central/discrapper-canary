@@ -13,15 +13,15 @@ var l,
     m = n(281044),
     p = n(614662),
     C = n(951305),
-    E = n(419212),
-    y = n(97352),
+    y = n(419212),
+    E = n(97352),
     _ = n(67480),
     g = n(975571),
     I = n(24482),
     S = n(615396),
     A = n(573359),
-    x = n(462887),
-    P = n(659746);
+    P = n(462887),
+    x = n(659746);
 function v(e) {
     let { color: t = "white", className: n } = e;
     return (0, r.jsx)("svg", {
@@ -75,13 +75,13 @@ let L = function (e) {
         children: (0, r.jsx)("div", {
             className: T.v9,
             children: (function (e, t) {
-                let n = (0, x.M)(t) ? "white" : "black";
+                let n = (0, P.M)(t) ? "white" : "black";
                 switch (e) {
-                    case P.Or.PREMIUM_UPDATED:
+                    case x.Or.PREMIUM_UPDATED:
                         return (0, r.jsx)(M, { color: n, className: T.gd });
-                    case P.Or.PREMIUM_ACTIVATED:
+                    case x.Or.PREMIUM_ACTIVATED:
                         return (0, r.jsx)(v, { color: n, className: T.gd });
-                    case P.Or.PREMIUM_PAYMENT_STARTED:
+                    case x.Or.PREMIUM_PAYMENT_STARTED:
                         return (0, r.jsx)(R, { color: n, className: T.gd });
                     default:
                         return null;
@@ -102,7 +102,7 @@ var b = n(700546),
 function D(e) {
     let t,
         { planId: n, startingPremiumSubscriptionPlanId: l, paymentSourceType: i } = e,
-        [a, o] = (0, u.yK)([y.A], () => [y.A.get(l), y.A.get(n)]);
+        [a, o] = (0, u.yK)([E.A], () => [E.A.get(l), E.A.get(n)]);
     if ((s()(null != a && null != o, "Missing startingPlan or newPlan"), j.LE.indexOf(l) < j.LE.indexOf(n)))
         switch (n) {
             case j.gD.PREMIUM_MONTH_TIER_1:
@@ -152,7 +152,7 @@ function D(e) {
                 throw Error(`Unexpected skuId: ${o.skuId}`);
         }
     return (0, r.jsx)(c.E, {
-        variant: "text-md/medium",
+        variant: "body-md/medium",
         color: "interactive-text-default",
         className: F.Qq,
         children: t,
@@ -168,8 +168,8 @@ function G(e) {
             onClose: h,
             followupSKUInfo: p,
             isDowngrade: C,
-            hideClose: E,
-            postSuccessGuild: x,
+            hideClose: y,
+            postSuccessGuild: P,
             paymentSourceType: v,
             startingFractionalPremiumEndsAt: R,
             customCTAType: M,
@@ -212,31 +212,31 @@ function G(e) {
         Z)
     )
         t = (0, r.jsx)(c.E, {
-            variant: "text-md/medium",
+            variant: "body-md/medium",
             color: "interactive-text-default",
             className: F.Qq,
             children: H.intl.string(O.default["t+xzd8"]),
         });
     else if ("deeplink_to_desktop_app" === M || G === U.uH.META_QUEST_WEB_REDIRECT_CHECKOUT)
         t = (0, r.jsx)(c.E, {
-            variant: "text-md/medium",
+            variant: "body-md/medium",
             color: "interactive-text-default",
             className: F.Qq,
             children: (0, r.jsxs)("p", { children: [H.intl.string(H.t.bIVRSQ), " ", H.intl.string(H.t["0UJqOy"])] }),
         });
     else if (null != W)
         t = (0, r.jsx)(c.E, {
-            variant: "text-md/medium",
+            variant: "body-md/medium",
             color: "interactive-text-default",
             className: F.Qq,
             children: H.intl.format(H.t["tsQOs+"], { skuName: W.name }),
         });
     else if (Y && !C) {
-        let e = y.A.get(l);
+        let e = E.A.get(l);
         (s()(null != e, "Missing plan"),
             e.skuId === j.pe.TIER_0
                 ? (t = (0, r.jsxs)(c.E, {
-                      variant: "text-md/medium",
+                      variant: "body-md/medium",
                       color: "interactive-text-default",
                       className: F.Qq,
                       children: [
@@ -250,7 +250,7 @@ function G(e) {
                   }))
                 : (e.skuId === j.pe.TIER_1 || e.skuId === j.pe.TIER_2) &&
                   (t = (0, r.jsxs)(c.E, {
-                      variant: "text-md/medium",
+                      variant: "body-md/medium",
                       color: "interactive-text-default",
                       className: F.Qq,
                       children: [
@@ -263,30 +263,30 @@ function G(e) {
                       ],
                   })));
     } else if (null != a) t = (0, r.jsx)(D, { planId: l, startingPremiumSubscriptionPlanId: a });
-    else if (null != x) {
-        let e = y.A.get(l);
+    else if (null != P) {
+        let e = E.A.get(l);
         (s()(null != e, "Missing plan"),
             (t = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(c.E, {
-                        variant: "text-md/medium",
+                        variant: "body-md/medium",
                         color: "interactive-text-default",
                         className: F.Qq,
                         children: z(e),
                     }),
                     (0, r.jsx)(c.E, {
-                        variant: "text-md/medium",
+                        variant: "body-md/medium",
                         color: "interactive-text-default",
                         className: F.Qq,
-                        children: H.intl.format(H.t["6aZ0NR"], { guildName: x.name }),
+                        children: H.intl.format(H.t["6aZ0NR"], { guildName: P.name }),
                     }),
                 ],
             })));
     } else {
-        let e = y.A.get(l);
+        let e = E.A.get(l);
         (s()(null != e, "Missing plan"),
             (t = (0, r.jsx)(c.E, {
-                variant: "text-md/medium",
+                variant: "body-md/medium",
                 color: "interactive-text-default",
                 className: F.Qq,
                 children: z(e),
@@ -298,10 +298,10 @@ function G(e) {
         }, [h, G]);
     function $() {
         return k.NcF.has(v ?? k.hes.UNKNOWN)
-            ? P.Ay.Types.PREMIUM_PAYMENT_STARTED
+            ? x.Ay.Types.PREMIUM_PAYMENT_STARTED
             : null != a
-              ? P.Ay.Types.PREMIUM_UPDATED
-              : P.Ay.Types.PREMIUM_ACTIVATED;
+              ? x.Ay.Types.PREMIUM_UPDATED
+              : x.Ay.Types.PREMIUM_ACTIVATED;
     }
     if (
         ((n = B
@@ -312,19 +312,19 @@ function G(e) {
                 ? H.intl.formatToPlainString(H.t["1qGgm4"], { skuName: W.name })
                 : C
                   ? H.intl.string(H.t.QJ9EyM)
-                  : null != x
+                  : null != P
                     ? H.intl.string(H.t.ta3cXY)
                     : H.intl.string(H.t.TkTvBz)),
         T)
     )
-        return (0, r.jsx)(b.A, { type: $(), text: t, buttonText: n, hideClose: E || q, onClose: X, buttonLoading: Q });
+        return (0, r.jsx)(b.A, { type: $(), text: t, buttonText: n, hideClose: y || q, onClose: X, buttonLoading: Q });
     let J = (0, I.z4)(l);
     return (0, r.jsxs)("div", {
         className: F.EL,
         children: [
             !J && (0, r.jsx)(L, { type: $(), theme: K }),
             t,
-            E || q
+            y || q
                 ? null
                 : (0, r.jsx)("div", {
                       "data-button-hoisted-classname-wrapper": !0,
@@ -343,14 +343,14 @@ function Z(e) {
             giftMessageError: o,
             isSendingMessage: d,
         } = (0, C.Pv)(),
-        f = (0, u.bG)([y.A], () => y.A.get(t));
+        f = (0, u.bG)([E.A], () => E.A.get(t));
     s()(null != f, "Missing plan");
-    let h = (0, u.bG)([E.A], () => E.A.getGiftCode(f.skuId)),
+    let h = (0, u.bG)([y.A], () => y.A.getGiftCode(f.skuId)),
         { quantity: _, checkoutSessionId: g } = (0, m.t4)((e) => ({
             quantity: e.quantity,
             checkoutSessionId: e.contextMetadata.loadId,
         })),
-        I = (0, u.bG)([E.A], () => E.A.isGiftCodeDeliveryReady(g), [g]);
+        I = (0, u.bG)([y.A], () => y.A.isGiftCodeDeliveryReady(g), [g]);
     return (0, r.jsx)(p.A, {
         giftCode: h,
         giftCount: _,

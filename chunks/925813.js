@@ -20,8 +20,8 @@ let s = {
                 allowFullScreen: c,
                 embed: m,
                 fillContainer: h,
-                showTextContent: x,
-                showParticipants: b,
+                showTextContent: b,
+                showParticipants: x,
             } = e,
             g = i.useMemo(
                 () => ({
@@ -53,8 +53,8 @@ let s = {
                 minWidth: l,
                 maxWidth: 0 === r ? void 0 : r,
                 maxHeight: 0 === s ? void 0 : s,
-                showTextContent: x,
-                showParticipants: b,
+                showTextContent: b,
+                showParticipants: x,
             }),
         });
     },
@@ -107,8 +107,8 @@ let m = {
     clipBDurationSec: { label: "Clip B length (sec)", type: "number", defaultValue: 8 },
 };
 var h = a(29477),
-    x = a(831544),
-    b = a(717421),
+    b = a(831544),
+    x = a(717421),
     g = a(834730),
     f = a(831056);
 let y = "https://cdn.discordapp.com/assets/og_img_discord_home.png";
@@ -145,7 +145,7 @@ function S(e) {
             initialActive: c,
             autoHideVolumeSlider: m,
             numExtraButtons: h,
-            sizing: b,
+            sizing: x,
             persistPlayhead: g,
             hideFullScreenBtn: f,
         } = e,
@@ -160,7 +160,7 @@ function S(e) {
                 Array.from({ length: h }, (e, t) => ({
                     id: `extra-button-${t}`,
                     label: `Extra Button ${t + 1}`,
-                    iconComponent: x.MicrophoneIcon,
+                    iconComponent: b.MicrophoneIcon,
                     onClick: () => {
                         console.log(`Extra Button ${t + 1} clicked`);
                     },
@@ -185,7 +185,7 @@ function S(e) {
             }),
             (0, o.jsx)("div", {
                 style:
-                    "video" === b
+                    "video" === x
                         ? {
                               width: "landscape" === t ? "640px" : "360px",
                               height: "landscape" === t ? "360px" : "640px",
@@ -294,7 +294,7 @@ let V = {
                     let [t, a] = i.useState(null),
                         [l, n] = i.useState(null),
                         r = i.useRef(null),
-                        [{ expansion: s }, d] = (0, b.z)(() => ({
+                        [{ expansion: s }, d] = (0, x.z)(() => ({
                             expansion: 0,
                             config: w,
                             onRest: () => {
@@ -335,7 +335,7 @@ let V = {
                                             zIndex: 1,
                                         },
                                         children: (0, o.jsx)(g.E, {
-                                            variant: "text-xs/semibold",
+                                            variant: "body-xs/semibold",
                                             color: "text-overlay-light",
                                             children: "R",
                                         }),
@@ -567,7 +567,7 @@ function K(e) {
             }
         }, []),
         n && (m.config.features = [W.Li.FULL_EPISODE_VIDEO_QUEST]));
-    let x = l
+    let b = l
         ? {
               ...m,
               userStatus: F({
@@ -582,7 +582,7 @@ function K(e) {
             (0, o.jsx)("div", {
                 style: N(u, p),
                 children: (0, o.jsx)(H, {
-                    quest: x,
+                    quest: b,
                     children: (0, o.jsx)(_.A, {
                         targetTimeSec: c.target,
                         parentTransitionState: d.ip.ENTERED,
@@ -631,8 +631,8 @@ let Y = { label: "Full Episode (shows reward indicator)", type: "boolean", defau
                                     clipAStartSec: s,
                                     clipADurationSec: m,
                                     clipBStartSec: h,
-                                    clipBDurationSec: x,
-                                    suppressSourceSelection: b,
+                                    clipBDurationSec: b,
+                                    suppressSourceSelection: x,
                                 } = e,
                                 g = i.useMemo(
                                     () => ({
@@ -658,12 +658,12 @@ let Y = { label: "Full Episode (shows reward indicator)", type: "boolean", defau
                                             id: "clip-b",
                                             url: r,
                                             startSec: h,
-                                            durationSec: x,
+                                            durationSec: b,
                                             poster: "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.png",
                                             owner: { avatarUrl: p.A.DEFAULT_AVATARS["2"], name: "Nelly" },
                                         },
                                     ],
-                                    [r, s, m, h, x],
+                                    [r, s, m, h, b],
                                 ),
                                 [y, v] = i.useState(!1);
                             return (0, o.jsx)("div", {
@@ -691,7 +691,7 @@ let Y = { label: "Full Episode (shows reward indicator)", type: "boolean", defau
                                                 setIsGridView: v,
                                                 original: g,
                                                 subSources: f,
-                                                suppressSourceSelection: b,
+                                                suppressSourceSelection: x,
                                             }),
                                     },
                                     `${l}-${n}`,

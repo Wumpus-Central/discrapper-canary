@@ -15,8 +15,8 @@ var l = n(477900),
     g = n(678708),
     x = n(88187),
     E = n(775602),
-    S = n(392054),
-    y = n(17928),
+    y = n(392054),
+    S = n(17928),
     C = n(834730),
     A = n(866665),
     b = n(364360);
@@ -37,7 +37,7 @@ function T(e) {
     return (0, l.jsx)(C.E, {
         className: s()(n, b.hf),
         color: "interactive-text-active",
-        variant: "text-md/normal",
+        variant: "body-md/normal",
         children: t,
     });
 }
@@ -46,7 +46,7 @@ function k(e) {
     return (0, l.jsx)(C.E, {
         className: s()(n, b.p3),
         color: "interactive-text-default",
-        variant: "text-xs/normal",
+        variant: "body-xs/normal",
         children: t,
     });
 }
@@ -55,7 +55,7 @@ function j(e) {
     return (0, l.jsx)(C.E, {
         className: s()(n, b.I0),
         color: "interactive-text-default",
-        variant: "text-xs/normal",
+        variant: "body-xs/normal",
         children: t,
     });
 }
@@ -70,7 +70,7 @@ function w(e) {
           ? (o = R.z3)
           : i?.hasValue && !r && (o = R.hZ);
     let u = (0, l.jsx)(C.E, {
-        variant: r ? "text-md/normal" : "text-sm/normal",
+        variant: r ? "body-md/normal" : "body-sm/normal",
         color: "text-strong",
         className: s()(R.uK, { [R.mG]: r }, o, n),
         children: t + (r ? ":" : ""),
@@ -101,7 +101,7 @@ function D(e) {
         }, [t.options, n]),
         u = (0, l.jsx)("div", {
             className: M.$2,
-            children: o.map((e) => (0, l.jsx)(C.E, { variant: "text-sm/normal", children: e.displayName }, e.name)),
+            children: o.map((e) => (0, l.jsx)(C.E, { variant: "body-sm/normal", children: e.displayName }, e.name)),
         }),
         c = s.map((e) => P(e, n?.[e.name], r)),
         h =
@@ -110,7 +110,7 @@ function D(e) {
                       children: [
                           (0, l.jsx)(d.D, {
                               className: M.Ki,
-                              variant: "heading-deprecated-12/semibold",
+                              variant: "body-xs/semibold",
                               children: L.intl.string(L.t["5C107K"]),
                           }),
                           a.map((e) => P(e, n?.[e.name], r)),
@@ -126,7 +126,7 @@ function D(e) {
                       children: (0, l.jsx)(C.E, {
                           className: M.kP,
                           color: "text-muted",
-                          variant: "text-sm/normal",
+                          variant: "body-sm/normal",
                           children:
                               0 === a.length
                                   ? L.intl.formatToPlainString(L.t["0mI72g"], { count: o.length })
@@ -155,7 +155,7 @@ function U(e) {
         p = null != r ? c?.[r] : null;
     t = null != p && p.lastValidationResult?.success === !1 ? (p.lastValidationResult.error ?? "") : null;
     let g = u && null != h ? (0, O.Rg)(h) : null,
-        x = (0, y.bG)([_.Ay], () => {
+        x = (0, S.bG)([_.Ay], () => {
             if (null != a.guild_id && h?.botId != null) return _.Ay.getMember(a.guild_id, h.botId)?.nick;
         });
     return (0, l.jsxs)("div", {
@@ -244,7 +244,7 @@ var J = n(168017),
     er = n(71393);
 function es(e) {
     let { sound: t } = e,
-        n = (0, y.bG)([er.A], () => ("0" === t.guildId ? L.intl.string(L.t.Rtvk9X) : er.A.getGuild(t.guildId)?.name));
+        n = (0, S.bG)([er.A], () => ("0" === t.guildId ? L.intl.string(L.t.Rtvk9X) : er.A.getGuild(t.guildId)?.name));
     return (0, l.jsxs)(I, {
         children: [
             (null != t.emojiId || null != t.emojiName) &&
@@ -346,7 +346,7 @@ function eE(e) {
         }),
     });
 }
-function eS(e) {
+function ey(e) {
     let { title: t, className: n, children: r } = e,
         a = i.useContext(ep);
     return (0, l.jsx)("div", {
@@ -354,12 +354,12 @@ function eS(e) {
         children: (0, l.jsxs)(d.D, {
             id: ef(a.id),
             className: s()(b.eu, n),
-            variant: "heading-deprecated-12/semibold",
+            variant: "body-xs/semibold",
             children: [t, r],
         }),
     });
 }
-class ey extends eg {
+class eS extends eg {
     layoutClass = b.fF;
     selectable = !1;
     renderContent() {
@@ -471,13 +471,13 @@ class ev extends eg {
 }
 class eN extends eg {
     isSelectable() {
-        return this.props.command.inputType !== S.y$.PLACEHOLDER;
+        return this.props.command.inputType !== y.y$.PLACEHOLDER;
     }
     renderContent() {
         let { command: e, channel: t, showImage: n, section: i, selected: r } = this.props,
             { hovered: s } = this.state,
             a = this.isSelectable();
-        return e.inputType === S.y$.PLACEHOLDER
+        return e.inputType === y.y$.PLACEHOLDER
             ? (0, l.jsx)(V.A, {})
             : (0, l.jsx)(U, {
                   command: e,
@@ -588,8 +588,8 @@ function eL(e) {
 class eM extends i.PureComponent {
     static Generic = ex;
     static Loading = eE;
-    static Title = eS;
-    static Divider = ey;
+    static Title = ey;
+    static Divider = eS;
     static User = eC;
     static Role = eA;
     static Channel = eI;

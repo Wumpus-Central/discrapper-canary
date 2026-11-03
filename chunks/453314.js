@@ -32,8 +32,8 @@ var C = n(12351),
     L = n(442325),
     y = n(734057),
     D = n(458294),
-    v = n(71393),
-    b = n(290863),
+    b = n(71393),
+    v = n(290863),
     P = n(573163),
     M = n(309010),
     U = n(607567),
@@ -153,11 +153,11 @@ function z() {
 class X extends r.Component {
     static defaultProps = { unread: !1 };
     render() {
-        let e = v.A.getGuild(this.props.channel.guild_id);
+        let e = b.A.getGuild(this.props.channel.guild_id);
         return (0, i.jsx)(k.c3, {
             ...this.props,
             children: (0, i.jsx)(A.E, {
-                variant: "text-sm/medium",
+                variant: "body-sm/medium",
                 color: "none",
                 className: $.MD,
                 children: null != e ? e.name : null,
@@ -184,22 +184,22 @@ let q = _.Ay.connectStores([P.Ay, y.A], (e) => {
         let { guild: t } = e;
         return { unread: D.default.hasUnread(t.id) };
     })(k.OS),
-    J = _.Ay.connectStores([P.Ay, b.A], (e) => {
+    J = _.Ay.connectStores([P.Ay, v.A], (e) => {
         let { channel: t } = e,
             n = null,
-            i = b.A.getState().statuses;
+            i = v.A.getState().statuses;
         return (
             t.recipients?.some((e) => i[e] === H.clD.ONLINE) && (n = H.clD.ONLINE),
             { mentions: P.Ay.getMentionCount(t.id), status: n }
         );
     })(k.nG),
-    ee = _.Ay.connectStores([y.A, P.Ay, b.A], (e) => {
+    ee = _.Ay.connectStores([y.A, P.Ay, v.A], (e) => {
         let { user: t } = e,
             n = y.A.getDMFromUserId(t.id);
         return {
             mentions: null != n ? P.Ay.getMentionCount(n) : 0,
-            status: b.A.getStatus(t.id),
-            isMobile: b.A.isMobileOnline(t.id),
+            status: v.A.getStatus(t.id),
+            isMobile: v.A.isMobileOnline(t.id),
         };
     })(k.KJ);
 function et(e, t, n) {
@@ -900,7 +900,7 @@ class en extends r.PureComponent {
             case S.rD.TEXT_CHANNEL:
             case S.rD.VOICE_CHANNEL:
                 let r = t.record,
-                    a = v.A.getGuild(r.getGuildId());
+                    a = b.A.getGuild(r.getGuildId());
                 if (null == a) return;
                 switch (r.type) {
                     case H.rbe.GUILD_TEXT:

@@ -21,16 +21,16 @@ function h(e) {
             className: b,
             disabled: h = !1,
             tooltip: v,
-            tooltipAriaLabel: x,
+            tooltipAriaLabel: k,
         } = e,
-        k = (0, n.rm)(String(i.value)),
+        x = (0, n.rm)(String(i.value)),
         f = a.useCallback((e) => o(i, e), [o, i]);
     function N() {
         return (0, t.jsx)("div", {
             role: "listitem" === l ? "listitem" : void 0,
             className: r()(m.xp, { [m.iK]: "pill" === c }),
             children: (0, t.jsx)(u.D, {
-                ...k,
+                ...x,
                 role: "listitem" === l ? "button" : l,
                 className: r()(
                     (function (e) {
@@ -57,14 +57,14 @@ function h(e) {
                     },
                 ),
                 "aria-disabled": h,
-                "aria-label": null != v ? x : void 0,
+                "aria-label": null != v ? k : void 0,
                 "aria-selected": "tab" === l ? s : void 0,
                 "aria-pressed": "listitem" === l ? s : void 0,
                 "aria-controls": i["aria-controls"] ?? void 0,
                 onClick: h ? void 0 : f,
                 children: (0, t.jsxs)(d.E, {
                     className: r()(m.JU, "pill" === c ? m.up : void 0),
-                    variant: "text-sm/medium",
+                    variant: "body-sm/medium",
                     color: "none",
                     children: [null != i.icon ? (0, t.jsx)(i.icon, { className: m.Kk }) : null, i.name],
                 }),
@@ -82,10 +82,10 @@ function v(e) {
             look: d = "tab",
             className: p,
             optionClassName: v,
-            disabled: x = !1,
+            disabled: k = !1,
         } = e,
-        k = a.useId(),
-        f = (0, o.Ay)({ id: k, isEnabled: !x, orientation: c.Gl.HORIZONTAL, scrollToStart: b, scrollToEnd: b }),
+        x = a.useId(),
+        f = (0, o.Ay)({ id: x, isEnabled: !k, orientation: c.Gl.HORIZONTAL, scrollToStart: b, scrollToEnd: b }),
         N = a.useCallback(
             (e) => {
                 let l = i === e.value;
@@ -97,7 +97,7 @@ function v(e) {
                         option: e,
                         look: d,
                         onClick: s,
-                        disabled: x,
+                        disabled: k,
                         className: r()(v, e.className),
                         tooltip: e.tooltip,
                         tooltipAriaLabel: e.tooltipAriaLabel,
@@ -105,7 +105,7 @@ function v(e) {
                     e.key ?? String(e.value),
                 );
             },
-            [i, u, d, s, v, x],
+            [i, u, d, s, v, k],
         );
     return (0, t.jsx)(n.hD, {
         navigator: f,
@@ -127,7 +127,7 @@ function v(e) {
                             }
                         })(d),
                         p,
-                        { [m.ii]: x },
+                        { [m.ii]: k },
                     ),
                     children: l.map(N),
                 });

@@ -40,7 +40,7 @@ function p(t) {
         I = (0, o.NP)();
     return g
         ? (0, n.jsx)(a.E, {
-              variant: "text-xxs/semibold",
+              variant: "footnote/semibold",
               color: y ? "text-feedback-warning" : "text-muted",
               children: I
                   ? A.intl.format(A.t.MVS9pV, {

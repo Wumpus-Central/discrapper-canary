@@ -1864,7 +1864,7 @@ function n6(e) {
                     ),
                 }),
             }),
-            (0, l.jsx)(n0.E, { variant: "text-sm/normal", className: H.Ot, children: s }),
+            (0, l.jsx)(n0.E, { variant: "body-sm/normal", className: H.Ot, children: s }),
         ],
     });
 }
@@ -1932,7 +1932,7 @@ class it extends a.PureComponent {
                 (0, l.jsxs)(eq.A, {
                     children: [
                         (0, l.jsx)(nU.D, {
-                            variant: "heading-md/semibold",
+                            variant: "heading-sm/semibold",
                             className: n7.qd,
                             children: U.intl.string(U.t["35G2Mq"]),
                         }),
@@ -3341,7 +3341,7 @@ class s0 extends a.PureComponent {
                             className: v()(sq.Kk, sq.zj, sq.Xk),
                         }),
                         (0, l.jsx)(n0.E, {
-                            variant: "text-md/normal",
+                            variant: "body-md/normal",
                             style: { color: sh.A.unsafe_rawColors.PRIMARY_200.css },
                             className: sq.DD,
                             children: t,
@@ -3402,7 +3402,7 @@ class s0 extends a.PureComponent {
                                 children: [
                                     (0, l.jsx)(n0.E, {
                                         className: sq.$A,
-                                        variant: "text-sm/normal",
+                                        variant: "body-sm/normal",
                                         children: U.intl.string(U.t.XKYej5),
                                     }),
                                     (0, l.jsx)(sI.A, { children: o?.name ?? c }),

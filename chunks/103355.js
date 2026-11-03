@@ -1,4 +1,4 @@
-n.d(e, { L: () => D, o: () => I });
+n.d(e, { L: () => y, o: () => I });
 var l = n(477900),
     r = n(582128),
     i = n(503698),
@@ -53,38 +53,38 @@ function L(t) {
         }),
     });
 }
+function y(t) {
+    return null != t.timeData ? (0, l.jsx)(_, { ...t, timeData: t.timeData }) : (0, l.jsx)(D, { ...t });
+}
 function D(t) {
-    return null != t.timeData ? (0, l.jsx)(p, { ...t, timeData: t.timeData }) : (0, l.jsx)(_, { ...t });
+    let e = (0, E.A)(t.startTime, t.endTime);
+    return (0, l.jsx)(_, { ...t, timeData: e });
 }
 function _(t) {
-    let e = (0, E.A)(t.startTime, t.endTime);
-    return (0, l.jsx)(p, { ...t, timeData: e });
-}
-function p(t) {
     let {
             startTime: e,
             status: n,
             eventType: i,
             className: s,
             liveText: x,
-            textVariant: g = "text-sm/semibold",
+            textVariant: g = "body-sm/semibold",
             isNew: E,
             recurrenceRule: I,
-            guildEventId: D,
-            recurrenceId: _,
-            timeData: p,
+            guildEventId: y,
+            recurrenceId: D,
+            timeData: _,
         } = t,
-        w = (0, h.r)(u.A.colors.TEXT_BRAND).hex(),
-        S = (0, h.r)(u.A.colors.TEXT_FEEDBACK_POSITIVE).hex(),
-        y = (0, h.r)(u.A.colors.TEXT_FEEDBACK_CRITICAL).hex();
+        p = (0, h.r)(u.A.colors.TEXT_BRAND).hex(),
+        b = (0, h.r)(u.A.colors.TEXT_FEEDBACK_POSITIVE).hex(),
+        w = (0, h.r)(u.A.colors.TEXT_FEEDBACK_CRITICAL).hex();
     null == x && (x = i === A.Ps.EXTERNAL ? j.intl.string(j.t.IyZxjH) : j.intl.string(j.t["X2K3/4"]));
-    let P = (0, f.A)(_, D),
-        { startDateTimeString: b, endDateTimeString: k, currentOrPastEvent: X, upcomingEvent: G, diffMinutes: V } = p,
-        K = b;
-    null != k && "" !== k && (K = j.intl.formatToPlainString(j.t.tXbu7I, { start: b, end: k }));
+    let S = (0, f.A)(D, y),
+        { startDateTimeString: P, endDateTimeString: k, currentOrPastEvent: X, upcomingEvent: G, diffMinutes: V } = _,
+        K = P;
+    null != k && "" !== k && (K = j.intl.formatToPlainString(j.t.tXbu7I, { start: P, end: k }));
     let z = r.useMemo(
-            () => (n === A.XG.CANCELED || P?.is_canceled ? 5 : n === A.XG.ACTIVE ? 3 : A.lV.has(n) ? 4 : X ? 2 : +!!G),
-            [n, P?.is_canceled, X, G],
+            () => (n === A.XG.CANCELED || S?.is_canceled ? 5 : n === A.XG.ACTIVE ? 3 : A.lV.has(n) ? 4 : X ? 2 : +!!G),
+            [n, S?.is_canceled, X, G],
         ),
         R = (function (t, e, n, r, i) {
             switch (t) {
@@ -99,7 +99,7 @@ function p(t) {
                               startHook: (t) =>
                                   (0, l.jsx)(o.E, {
                                       color: "text-feedback-positive",
-                                      variant: "text-sm/semibold",
+                                      variant: "body-sm/semibold",
                                       className: T.Py,
                                       children: t,
                                   }),
@@ -147,13 +147,13 @@ function p(t) {
                     return { Icon: c, iconColor: u, textColor: o, tooltipText: e };
                 })({
                     timeStatus: z,
-                    textBrand: w,
-                    textPositive: S,
-                    textDanger: y,
+                    textBrand: p,
+                    textPositive: b,
+                    textDanger: w,
                     endDateTimeString: k,
-                    startDateTimeString: b,
+                    startDateTimeString: P,
                 }),
-            [z, w, S, y, k, b],
+            [z, p, b, w, k, P],
         ),
         B = null;
     if (null != I) {
@@ -197,7 +197,7 @@ function p(t) {
                 className: T.Zy,
                 children: [
                     (0, l.jsx)(o.E, { color: Y, variant: g, children: R }),
-                    null != B && (0, l.jsx)(o.E, { color: "text-default", variant: "text-xs/normal", children: B }),
+                    null != B && (0, l.jsx)(o.E, { color: "text-default", variant: "body-xs/normal", children: B }),
                 ],
             }),
         ],

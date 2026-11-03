@@ -1,5 +1,5 @@
 e.exports = {
-    BK: "text-sm/medium_f5f9ed",
+    sk: "body-sm/medium_f5f9ed",
     N1: "headerContainer_f5f9ed",
     DE: "promotions_f5f9ed",
     Yj: "gradientContainer_f5f9ed",

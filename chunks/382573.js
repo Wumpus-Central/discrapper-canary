@@ -54,7 +54,7 @@ function C(t) {
     return (0, i.jsx)(I, { ingress: e, guildId: n ?? l });
 }
 var G = n(450216);
-function x(t) {
+function p(t) {
     let { ingress: e, guildId: n } = t,
         r = c.JG.useSetting().includes(n),
         s = l.useCallback(
@@ -81,10 +81,10 @@ function x(t) {
               }),
           });
 }
-function p(t) {
+function x(t) {
     let { ingress: e = E.bf.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = t,
         l = (0, g.Tx)();
-    return (0, i.jsx)(x, { ingress: e, guildId: n ?? l });
+    return (0, i.jsx)(p, { ingress: e, guildId: n ?? l });
 }
 var h = n(862482),
     U = n(171316),
@@ -93,7 +93,7 @@ var h = n(862482),
     m = n(428031),
     k = n(972737),
     Y = n(83152);
-function L(t) {
+function b(t) {
     let { ingress: e, guildId: n } = t,
         r = (0, g.q9)(),
         s = c.$s.useSetting().includes(n),
@@ -155,12 +155,12 @@ function L(t) {
                   }),
     });
 }
-function N(t) {
+function L(t) {
     let { ingress: e = E.bf.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = t,
         l = (0, g.Tx)();
-    return (0, i.jsx)(L, { ingress: e, guildId: n ?? l });
+    return (0, i.jsx)(b, { ingress: e, guildId: n ?? l });
 }
-var b = n(379257),
+var N = n(379257),
     v = n(306537),
     D = n(116774),
     M = n(953298);
@@ -174,8 +174,8 @@ function y(t) {
         I = c.YX.useSetting(),
         C = c.Zr.useSetting().includes(n),
         G = !!E || (u ? !I : !s && !I),
-        x = !!E || (!d && !C),
-        p = l.useCallback(
+        p = !!E || (!d && !C),
+        x = l.useCallback(
             (t) => {
                 let i = (0, S.xo)();
                 (t ? i.delete(n) : i.add(n),
@@ -194,12 +194,12 @@ function y(t) {
             applied_to_existing_guilds: e,
         });
     }
-    function L(t, e) {
+    function b(t, e) {
         var n;
         !t && (0, M.w)()
-            ? b.A.showAgeVerificationGetStartedModal({ entryPoint: v.q1.MESSAGE_REQUESTS_SETTINGS })
+            ? N.A.showAgeVerificationGetStartedModal({ entryPoint: v.q1.MESSAGE_REQUESTS_SETTINGS })
             : e
-              ? p(t)
+              ? x(t)
               : ((n = !t),
                 (0, k.O)({
                     header: R.intl.string(R.t.yAfu1p),
@@ -221,15 +221,15 @@ function y(t) {
                 ? (0, i.jsx)(A.Ay, {
                       title: R.intl.string(R.t["3o2ojh"]),
                       value: G,
-                      onChange: (t) => L(t, !1),
+                      onChange: (t) => b(t, !1),
                       disabled: s || u || E,
                       tooltipText: u ? R.intl.string(Y.default["6Af/cw"]) : void 0,
                       note: R.intl.format(R.t.wkm9a3, { helpdeskArticle: o.A.getArticleURL(f.MVz.MESSAGE_REQUESTS) }),
                   })
                 : (0, i.jsx)(A.Ay, {
                       title: R.intl.string(R.t["3o2ojh"]),
-                      value: x,
-                      onChange: (t) => L(t, !0),
+                      value: p,
+                      onChange: (t) => b(t, !0),
                       disabled: d || E,
                       note: r
                           ? R.intl.format(R.t.WpnWLc, { helpdeskArticle: o.A.getArticleURL(f.MVz.MESSAGE_REQUESTS) })
@@ -246,13 +246,13 @@ function w(t) {
     let { guildId: e } = t;
     return (0, i.jsxs)(u, {
         children: [
-            (0, i.jsx)(N, { ingress: E.bf.SERVER_PRIVACY_MODAL, guildId: e }),
+            (0, i.jsx)(L, { ingress: E.bf.SERVER_PRIVACY_MODAL, guildId: e }),
             (0, i.jsx)(P, { ingress: E.bf.SERVER_PRIVACY_MODAL, guildId: e }),
-            (0, i.jsx)(p, { ingress: E.bf.SERVER_PRIVACY_MODAL, guildId: e }),
+            (0, i.jsx)(x, { ingress: E.bf.SERVER_PRIVACY_MODAL, guildId: e }),
             (0, i.jsx)(C, { ingress: E.bf.SERVER_PRIVACY_MODAL, guildId: e }),
             (0, i.jsx)(s.E, {
                 color: "text-default",
-                variant: "text-sm/normal",
+                variant: "body-sm/normal",
                 children: R.intl.format(R.t.LNsV04, {
                     policyLink: "https://discord.com/safety/360043709612-our-policies",
                 }),

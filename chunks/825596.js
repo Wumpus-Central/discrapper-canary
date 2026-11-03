@@ -21,9 +21,9 @@ var i = n(477900),
     C = n(571654),
     _ = n(661531),
     j = n(175841),
-    N = n(105292),
-    y = n(230533);
-function T(e) {
+    y = n(105292),
+    N = n(230533);
+function b(e) {
     let {
         label: t,
         backgroundColor: n = _.A.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT.css,
@@ -31,25 +31,25 @@ function T(e) {
         iconColor: s,
     } = e;
     return (0, i.jsxs)("div", {
-        className: y.q,
+        className: N.q,
         style: { backgroundColor: n },
         children: [
             (0, i.jsx)(f.E, {
-                variant: "text-sm/normal",
+                variant: "body-sm/normal",
                 color: "text-overlay-light",
-                className: y.__invalid_badgeText,
+                className: N.__invalid_badgeText,
                 children: t,
             }),
-            (0, i.jsx)(l, { className: y.r, color: s ?? "currentColor", "aria-hidden": !0 }),
+            (0, i.jsx)(l, { className: N.r, color: s ?? "currentColor", "aria-hidden": !0 }),
         ],
     });
 }
-function S() {
-    return (0, i.jsx)(T, { label: N.intl.string(N.t["I+02Gs"]), backgroundColor: "#207B8D", icon: j.SparklesIcon });
+function T() {
+    return (0, i.jsx)(b, { label: y.intl.string(y.t["I+02Gs"]), backgroundColor: "#207B8D", icon: j.SparklesIcon });
 }
-function b() {
-    return (0, i.jsx)(T, {
-        label: N.intl.string(N.t.TgsPaP),
+function S() {
+    return (0, i.jsx)(b, {
+        label: y.intl.string(y.t.TgsPaP),
         icon: d.PencilIcon,
         iconColor: _.A.unsafe_rawColors.PRIMARY_330.css,
     });
@@ -79,7 +79,7 @@ function L(e) {
             "data-menu-migrated": !0,
             navId: "guild-product-context",
             onClose: I,
-            "aria-label": N.intl.string(N.t.Z146dM),
+            "aria-label": y.intl.string(y.t.Z146dM),
             onSelect: E,
             children: [
                 (0, i.jsxs)(o.rX, {
@@ -87,7 +87,7 @@ function L(e) {
                         t &&
                             (0, i.jsx)(o.Dr, {
                                 id: "guild-product-edit",
-                                label: N.intl.string(N.t.EEfce4),
+                                label: y.intl.string(y.t.EEfce4),
                                 icon: d.PencilIcon,
                                 leadingAccessory: { type: "icon", icon: d.PencilIcon },
                                 action: h,
@@ -95,7 +95,7 @@ function L(e) {
                         l &&
                             (0, i.jsx)(o.Dr, {
                                 id: "guild-product-copy-link",
-                                label: N.intl.string(N.t.XR26uj),
+                                label: y.intl.string(y.t.XR26uj),
                                 icon: c.LinkIcon,
                                 leadingAccessory: { type: "icon", icon: c.LinkIcon },
                                 action: A,
@@ -103,7 +103,7 @@ function L(e) {
                         s &&
                             (0, i.jsx)(o.Dr, {
                                 id: "guild-product-test-download",
-                                label: N.intl.string(N.t.aXoI6U),
+                                label: y.intl.string(y.t.aXoI6U),
                                 icon: u.DownloadIcon,
                                 leadingAccessory: { type: "icon", icon: u.DownloadIcon },
                                 action: x,
@@ -115,13 +115,13 @@ function L(e) {
                         n &&
                             (0, i.jsx)(o.Dr, {
                                 id: "guild-product-unpublish",
-                                label: N.intl.string(N.t.QrkMlN),
+                                label: y.intl.string(y.t.QrkMlN),
                                 action: g,
                             }),
                         r &&
                             (0, i.jsx)(o.Dr, {
                                 id: "guild-product-delete",
-                                label: N.intl.string(N.t.zWjqvB),
+                                label: y.intl.string(y.t.zWjqvB),
                                 color: "danger",
                                 action: p,
                             }),
@@ -132,7 +132,7 @@ function L(e) {
                         m &&
                         (0, i.jsx)(o.Dr, {
                             id: "guild-product-report",
-                            label: N.intl.string(N.t["6yUzvG"]),
+                            label: y.intl.string(y.t["6yUzvG"]),
                             color: "danger",
                             action: f,
                         }),
@@ -192,7 +192,7 @@ function M(e) {
                 return (0, i.jsx)(h.D, {
                     ...e,
                     innerRef: E,
-                    "aria-label": N.intl.formatToPlainString(N.t.RtqjeB, { productName: t.name }),
+                    "aria-label": y.intl.formatToPlainString(y.t.RtqjeB, { productName: t.name }),
                     "aria-haspopup": "listbox",
                     "aria-expanded": l,
                     className: R.hC,
@@ -249,7 +249,7 @@ function P(e) {
                 ),
             );
         },
-        "aria-label": N.intl.formatToPlainString(N.t["X/yAKs"], { productName: t.name }),
+        "aria-label": y.intl.formatToPlainString(y.t["X/yAKs"], { productName: t.name }),
         children: [
             (0, i.jsx)("img", { alt: "", src: u, className: R.K_ }),
             (0, i.jsxs)("div", {
@@ -259,7 +259,7 @@ function P(e) {
                         className: R.jb,
                         children: [
                             (0, i.jsx)(A.D, {
-                                variant: "text-md/semibold",
+                                variant: "body-md/semibold",
                                 color: "text-strong",
                                 className: R.tZ,
                                 children: t.name,
@@ -268,13 +268,13 @@ function P(e) {
                             (0, i.jsxs)("div", {
                                 className: R.MS,
                                 children: [
-                                    (0, i.jsx)(f.E, { variant: "text-md/normal", color: "text-default", children: m }),
+                                    (0, i.jsx)(f.E, { variant: "body-md/normal", color: "text-default", children: m }),
                                     null != h
                                         ? (0, i.jsxs)(i.Fragment, {
                                               children: [
                                                   (0, i.jsx)("div", { className: R.zk }),
                                                   (0, i.jsx)(f.E, {
-                                                      variant: "text-md/normal",
+                                                      variant: "body-md/normal",
                                                       color: "text-default",
                                                       children: h,
                                                   }),
@@ -284,7 +284,7 @@ function P(e) {
                                 ],
                             }),
                             (0, i.jsx)(x.h, { size: 16 }),
-                            t.published ? (0, i.jsx)(S, {}) : (0, i.jsx)(b, {}),
+                            t.published ? (0, i.jsx)(T, {}) : (0, i.jsx)(S, {}),
                         ],
                     }),
                     !c &&

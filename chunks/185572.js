@@ -1,17 +1,17 @@
-(n.r(l), n.d(l, { default: () => L }));
-var t = n(477900),
-    u = n(582128),
+(n.r(e), n.d(e, { default: () => L }));
+var u = n(477900),
+    t = n(582128),
     s = n(806163),
     r = n(834730),
     c = n(289873),
     d = n(976860),
     a = n(200789),
     i = n(847056),
-    j = n(404373),
-    o = n(97005),
+    o = n(404373),
+    j = n(97005),
     f = n(944996),
-    x = n(371169),
-    h = n(434279),
+    h = n(371169),
+    x = n(434279),
     p = n(260498),
     m = n(16619),
     E = n(313537),
@@ -20,69 +20,69 @@ var t = n(477900),
     A = n(227007),
     w = n(398773),
     P = n(751841),
-    g = n(374523),
-    I = n(809526),
-    b = n(105292),
-    y = n(159308);
+    b = n(374523),
+    g = n(809526),
+    y = n(105292),
+    I = n(159308);
 let B = "ConjurePage";
 function C() {
-    return (0, t.jsx)("div", {
-        className: y.l,
-        children: (0, t.jsx)(r.E, {
-            variant: "text-md/normal",
+    return (0, u.jsx)("div", {
+        className: I.l,
+        children: (0, u.jsx)(r.E, {
+            variant: "body-md/normal",
             color: "text-muted",
-            children: b.intl.string(I.default.BGh3xB),
+            children: y.intl.string(g.default.BGh3xB),
         }),
     });
 }
 function G() {
     (0, d.bG)((0, P.hU)(null));
 }
-function N(e) {
-    let { projectId: l, workspaceGuildId: n } = e,
-        { project: r, settled: o } = (0, g.A)(l);
-    (0, j.wB)(l);
-    let f = (null != r ? (0, h.wu)(r) : null) ?? n,
-        x = (0, s.zy)().state,
+function N(l) {
+    let { projectId: e, workspaceGuildId: n } = l,
+        { project: r, settled: j } = (0, b.A)(e);
+    (0, o.wB)(e);
+    let f = (null != r ? (0, x.wu)(r) : null) ?? n,
+        h = (0, s.zy)().state,
         p = (0, E.fL)(r),
         m = (0, k.A)(p, B),
-        I = (0, a.r)(null == p ? l : null, x?.conjureEntryPoint),
-        b = null != p || (null == r && !o);
-    return (u.useEffect(() => {
-        (0, w.jQ)(l, { inServer: b });
-    }, [l, b]),
-    u.useEffect(() => {
-        null != p && m && (0, d.bG)({ pathname: (0, P.Oj)(p, l), state: { ...x, conjureOpenTracked: I(l) } });
-    }, [p, m, l, x, I]),
+        g = (0, a.r)(null == p ? e : null, h?.conjureEntryPoint),
+        y = null != p || (null == r && !j);
+    return (t.useEffect(() => {
+        (0, w.jQ)(e, { inServer: y });
+    }, [e, y]),
+    t.useEffect(() => {
+        null != p && m && (0, d.bG)({ pathname: (0, P.Oj)(p, e), state: { ...h, conjureOpenTracked: g(e) } });
+    }, [p, m, e, h, g]),
     null == p || m)
-        ? null == p && (null != r || o)
+        ? null == p && (null != r || j)
             ? null == f
-                ? (0, t.jsx)(C, {})
-                : (0, t.jsx)(A.A.Provider, {
-                      value: l,
-                      children: (0, t.jsx)(i.A, { project: r, projectsLoaded: o, onBack: G, guildId: f }),
+                ? (0, u.jsx)(C, {})
+                : (0, u.jsx)(A.A.Provider, {
+                      value: e,
+                      children: (0, u.jsx)(i.A, { project: r, projectsLoaded: j, onBack: G, guildId: f }),
                   })
-            : (0, t.jsx)("div", { className: y.l, children: (0, t.jsx)(c.y, {}) })
-        : (0, t.jsx)(v.A, {});
+            : (0, u.jsx)("div", { className: I.l, children: (0, u.jsx)(c.y, {}) })
+        : (0, u.jsx)(v.A, {});
 }
-function O(e) {
-    let { projectId: l } = e,
+function O(l) {
+    let { projectId: e } = l,
         n = (0, m.rX)(B);
-    return (u.useEffect(() => {
-        p.Ay.hasFetchedOwnedProjects() || (0, x.listProjects)();
+    return (t.useEffect(() => {
+        p.Ay.hasFetchedOwnedProjects() || (0, h.listProjects)();
     }, []),
-    u.useEffect(() => {
-        null == l && (0, w.jQ)(null);
-    }, [l]),
-    u.useEffect(() => w.mE, []),
-    null == l)
-        ? (0, t.jsx)("div", {
-              className: y.i,
-              children: null == n ? (0, t.jsx)(C, {}) : (0, t.jsx)(f.A, { guildId: n, onConjurePage: !0 }),
+    t.useEffect(() => {
+        null == e && (0, w.jQ)(null);
+    }, [e]),
+    t.useEffect(() => w.mE, []),
+    null == e)
+        ? (0, u.jsx)("div", {
+              className: I.i,
+              children: null == n ? (0, u.jsx)(C, {}) : (0, u.jsx)(f.A, { guildId: n, onConjurePage: !0 }),
           })
-        : (0, t.jsx)(N, { projectId: l, workspaceGuildId: n }, l);
+        : (0, u.jsx)(N, { projectId: e, workspaceGuildId: n }, e);
 }
-function L(e) {
-    let { projectId: l } = e;
-    return (0, o.TW)(B) ? (0, t.jsx)(O, { projectId: l }) : null;
+function L(l) {
+    let { projectId: e } = l;
+    return (0, j.TW)(B) ? (0, u.jsx)(O, { projectId: e }) : null;
 }

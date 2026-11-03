@@ -38,7 +38,7 @@ function c(e) {
                     },
                     children: (0, n.jsxs)(d.E, {
                         className: o.s,
-                        variant: "text-xs/medium",
+                        variant: "body-xs/medium",
                         color: "interactive-text-default",
                         children: ["+", g],
                     }),

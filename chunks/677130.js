@@ -51,7 +51,7 @@ function N(e) {
               children: [
                   (0, i.jsx)(f.D, { size: "md", color: x.A.colors.ICON_SUBTLE }),
                   (0, i.jsx)(d.E, {
-                      variant: "text-md/medium",
+                      variant: "body-md/medium",
                       color: "text-strong",
                       children: y.intl.string(A.default["5WHmVU"]),
                   }),
@@ -177,7 +177,7 @@ function L(e) {
                 : (0, i.jsx)("div", {
                       className: H.wV,
                       children: (0, i.jsx)(d.E, {
-                          variant: "text-md/medium",
+                          variant: "body-md/medium",
                           color: "text-subtle",
                           children: y.intl.string(y.t["+p0UgM"]),
                       }),
@@ -191,7 +191,7 @@ function B(e) {
     let { children: t } = e;
     return (0, i.jsx)("div", {
         className: q.HY,
-        children: (0, i.jsx)(d.E, { variant: "text-md/medium", color: "text-subtle", children: t }),
+        children: (0, i.jsx)(d.E, { variant: "body-md/medium", color: "text-subtle", children: t }),
     });
 }
 function M(e) {

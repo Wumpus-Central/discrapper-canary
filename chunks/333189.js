@@ -8,35 +8,35 @@ var n = s(477900),
     d = s(821609),
     u = s(939249),
     o = s(683438),
-    x = s(298990),
-    h = s(966327),
-    m = s(775602),
+    h = s(298990),
+    m = s(966327),
+    x = s(775602),
     j = s(115718),
-    A = s(47167),
-    E = s(598104),
-    f = s(255266),
-    g = s(72563),
-    p = s(921955),
-    b = s(71393),
-    _ = s(994500),
-    v = s(625494),
-    N = s(427262),
-    D = s(652215),
-    y = s(105292),
+    b = s(47167),
+    A = s(598104),
+    E = s(255266),
+    f = s(72563),
+    g = s(921955),
+    y = s(71393),
+    p = s(994500),
+    _ = s(625494),
+    v = s(427262),
+    N = s(652215),
+    D = s(105292),
     C = s(915822);
 function R(e) {
     let { channel: t, guildName: s } = e,
-        r = (0, i.bG)([b.A], () => b.A.getGuild(t.guild_id)),
-        a = (0, A.Ay)(t);
+        r = (0, i.bG)([y.A], () => y.A.getGuild(t.guild_id)),
+        a = (0, b.Ay)(t);
     return (0, n.jsxs)("div", {
         className: C.Ke,
         children: [
-            (0, n.jsx)(f.A, { size: f.q.SMALL_32, guild: r, channel: t }),
+            (0, n.jsx)(E.A, { size: E.q.SMALL_32, guild: r, channel: t }),
             (0, n.jsxs)("div", {
                 className: C.D6,
                 children: [
-                    (0, n.jsx)(l.E, { variant: "text-md/medium", children: a }),
-                    (0, n.jsx)(l.E, { variant: "text-xs/normal", children: s }),
+                    (0, n.jsx)(l.E, { variant: "body-md/medium", children: a }),
+                    (0, n.jsx)(l.E, { variant: "body-xs/normal", children: s }),
                 ],
             }),
         ],
@@ -44,17 +44,17 @@ function R(e) {
 }
 function S(e) {
     let { channel: t } = e,
-        s = (0, A.Ay)(t),
-        r = (0, g.i)(t);
+        s = (0, b.Ay)(t),
+        r = (0, f.i)(t);
     return (0, n.jsxs)("div", {
         className: C.Ke,
         children: [
-            (0, n.jsx)(E.A, { "aria-hidden": !0, size: c._3.SIZE_32, channel: t }),
+            (0, n.jsx)(A.A, { "aria-hidden": !0, size: c._3.SIZE_32, channel: t }),
             (0, n.jsxs)("div", {
                 className: C.D6,
                 children: [
-                    (0, n.jsx)(l.E, { variant: "text-md/medium", children: s }),
-                    (0, n.jsx)(l.E, { variant: "text-xs/normal", children: r }),
+                    (0, n.jsx)(l.E, { variant: "body-md/medium", children: s }),
+                    (0, n.jsx)(l.E, { variant: "body-xs/normal", children: r }),
                 ],
             }),
         ],
@@ -62,18 +62,18 @@ function S(e) {
 }
 function k(e) {
     let { user: t, status: s } = e,
-        r = (0, i.bG)([_.A], () => _.A.getNickname(t.id)),
-        a = N.Ay.useName(t),
-        d = N.Ay.useUserTag(t);
+        r = (0, i.bG)([p.A], () => p.A.getNickname(t.id)),
+        a = v.Ay.useName(t),
+        d = v.Ay.useUserTag(t);
     return (0, n.jsxs)("div", {
         className: C.Ke,
         children: [
-            (0, n.jsx)(h.A, { "aria-hidden": !0, size: c._3.SIZE_32, user: t, status: s }),
+            (0, n.jsx)(m.A, { "aria-hidden": !0, size: c._3.SIZE_32, user: t, status: s }),
             (0, n.jsxs)("div", {
                 className: C.D6,
                 children: [
-                    (0, n.jsx)(l.E, { variant: "text-md/medium", children: r ?? a }),
-                    (0, n.jsx)(l.E, { variant: "text-xs/normal", children: d }),
+                    (0, n.jsx)(l.E, { variant: "body-md/medium", children: r ?? a }),
+                    (0, n.jsx)(l.E, { variant: "body-xs/normal", children: d }),
                 ],
             }),
         ],
@@ -83,7 +83,7 @@ function P(e) {
     let { text: t } = e;
     return (0, n.jsx)("div", {
         className: C.bV,
-        children: (0, n.jsx)(l.E, { variant: "text-xs/semibold", color: "text-muted", children: t }),
+        children: (0, n.jsx)(l.E, { variant: "body-xs/semibold", color: "text-muted", children: t }),
     });
 }
 class L extends r.Component {
@@ -114,10 +114,10 @@ class L extends r.Component {
         }
         return (
             (t = s.sent
-                ? (0, n.jsx)(d.$, { variant: "secondary", text: y.intl.string(y.t.i6A1Xw), size: "sm", disabled: !0 })
+                ? (0, n.jsx)(d.$, { variant: "secondary", text: D.intl.string(D.t.i6A1Xw), size: "sm", disabled: !0 })
                 : (0, n.jsx)(d.$, {
                       variant: "secondary",
-                      text: y.intl.string(y.t["6F9ivu"]),
+                      text: D.intl.string(D.t["6F9ivu"]),
                       size: "sm",
                       loading: r,
                   })),
@@ -132,44 +132,44 @@ function T(e) {
             query: c,
             activity: d,
         } = (0, i.cf)(
-            [p.A],
-            () => ({ results: p.A.getResults(), query: p.A.getQuery(), activity: p.A.getActivity() }),
+            [g.A],
+            () => ({ results: g.A.getResults(), query: g.A.getQuery(), activity: g.A.getActivity() }),
             [],
         ),
-        [u, h] = r.useState(c),
-        [A, E] = r.useState([]),
-        [f, g] = r.useState(!1),
-        b = r.useRef(null),
-        _ = r.useCallback(() => {
-            b.current?.scrollPageUp({ animate: !m.Ay.useReducedMotion });
-        }, [b]),
-        N = r.useCallback(() => {
-            b.current?.scrollPageDown({ animate: !m.Ay.useReducedMotion });
-        }, [b]);
+        [u, m] = r.useState(c),
+        [b, A] = r.useState([]),
+        [E, f] = r.useState(!1),
+        y = r.useRef(null),
+        p = r.useCallback(() => {
+            y.current?.scrollPageUp({ animate: !x.Ay.useReducedMotion });
+        }, [y]),
+        v = r.useCallback(() => {
+            y.current?.scrollPageDown({ animate: !x.Ay.useReducedMotion });
+        }, [y]);
     (r.useEffect(
         () => (
-            v._.subscribe(D.jej.SCROLL_PAGE_UP, _),
+            _._.subscribe(N.jej.SCROLL_PAGE_UP, p),
             () => {
-                v._.unsubscribe(D.jej.SCROLL_PAGE_UP, _);
+                _._.unsubscribe(N.jej.SCROLL_PAGE_UP, p);
             }
         ),
-        [_],
+        [p],
     ),
         r.useEffect(
             () => (
-                v._.subscribe(D.jej.SCROLL_PAGE_DOWN, N),
+                _._.subscribe(N.jej.SCROLL_PAGE_DOWN, v),
                 () => {
-                    v._.unsubscribe(D.jej.SCROLL_PAGE_DOWN, N);
+                    _._.unsubscribe(N.jej.SCROLL_PAGE_DOWN, v);
                 }
             ),
-            [N],
+            [v],
         ),
         r.useEffect(() => {
             null == d && s();
         }, [s, d]),
         r.useEffect(() => {
-            b.current?.scrollToTop();
-        }, [b, c]));
+            y.current?.scrollToTop();
+        }, [y, c]));
     let R = r.useCallback(
         (e) => {
             let t = l[e];
@@ -180,47 +180,47 @@ function T(e) {
                     record: { id: n },
                 },
             } = t;
-            if (!(null == n || A.includes(n)))
-                switch ((E([...A, n]), s.type)) {
+            if (!(null == n || b.includes(n)))
+                switch ((A([...b, n]), s.type)) {
                     case j.rD.GROUP_DM:
                     case j.rD.TEXT_CHANNEL:
-                        (0, x.b4)(s.record.id);
+                        (0, h.b4)(s.record.id);
                         break;
                     case j.rD.USER:
-                        (0, x.Jb)(s.record.id);
+                        (0, h.Jb)(s.record.id);
                 }
         },
-        [l, A],
+        [l, b],
     );
     function S(e) {
-        (h(e), (0, x.oR)(e));
+        (m(e), (0, h.oR)(e));
     }
     return null == d
         ? null
         : (0, n.jsx)(a.a, {
               transitionState: t,
-              title: y.intl.formatToPlainString(y.t["2tN7ih"], { name: d.name }),
+              title: D.intl.formatToPlainString(D.t["2tN7ih"], { name: d.name }),
               onClose: s,
               actions: [],
               input: (0, n.jsx)(o.I, {
                   query: u,
                   onChange: S,
-                  placeholder: y.intl.string(y.t["5h0QOP"]),
+                  placeholder: D.intl.string(D.t["5h0QOP"]),
                   autoFocus: !0,
                   onClear: function () {
                       S("");
                   },
               }),
               size: "md",
-              "aria-label": y.intl.formatToPlainString(y.t["2tN7ih"], { name: d.name }),
+              "aria-label": D.intl.formatToPlainString(D.t["2tN7ih"], { name: d.name }),
               listProps:
                   l.length > 0
                       ? {
-                            ref: b,
+                            ref: y,
                             paddingBottom: 12,
                             sections: [l.length],
                             sectionHeight: 0,
-                            renderSection: D.FXj,
+                            renderSection: N.FXj,
                             rowHeight: function (e, t) {
                                 if (e > 0) return 0;
                                 let s = l[t];
@@ -239,7 +239,7 @@ function T(e) {
                                             {
                                                 row: s,
                                                 result: r,
-                                                sending: null != r.data.record.id && A.includes(r.data.record.id),
+                                                sending: null != r.data.record.id && b.includes(r.data.record.id),
                                                 onInvite: R,
                                             },
                                             r.data.record.id,
@@ -247,7 +247,7 @@ function T(e) {
                             },
                             onScroll: function (e) {
                                 let t = e.currentTarget.scrollTop > 0;
-                                f !== t && g(t);
+                                E !== t && f(t);
                             },
                         }
                       : void 0,

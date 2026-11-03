@@ -1,47 +1,51 @@
-e.d(l, { A: () => x });
-var n = e(477900);
-e(582128);
-var r = e(503698),
-    a = e.n(r),
-    i = e(104510),
-    t = e(661531),
-    c = e(534514),
-    h = e(866665),
-    o = e(939249),
-    d = e(473145),
-    u = e(105292),
-    j = e(795874);
-let x = function (s) {
+n.d(l, { A: () => j });
+var e = n(477900);
+n(582128);
+var a = n(503698),
+    i = n.n(a),
+    r = n(104510),
+    t = n(661531),
+    c = n(534514),
+    d = n(866665),
+    h = n(939249),
+    u = n(473145),
+    m = n(105292),
+    o = n(795874);
+let j = function (s) {
     let l,
-        e,
-        r,
-        { guildFeature: x, guild: m, className: N, hideTooltip: _ = !1, tooltipPosition: p = "left", onClick: k } = s,
-        v = m.features.has(x),
-        g = (0, d.Ys)(x);
+        n,
+        a,
+        { guildFeature: j, guild: x, className: N, hideTooltip: _ = !1, tooltipPosition: p = "left", onClick: k } = s,
+        v = x.features.has(j),
+        g = (0, u.Ys)(j);
     return (v
-        ? (null != g && (r = u.intl.string(u.t.hUgjyP)),
-          (l = (0, n.jsxs)(n.Fragment, {
+        ? (null != g && (a = m.intl.string(m.t.hUgjyP)),
+          (l = (0, e.jsxs)(e.Fragment, {
               children: [
-                  (0, n.jsx)(i._, { color: t.A.unsafe_rawColors.GUILD_BOOSTING_PINK, className: j.RQ }),
-                  (0, n.jsx)(c.D, { variant: "eyebrow", className: j.h_, children: u.intl.string(u.t["0O+87i"]) }),
+                  (0, e.jsx)(r._, { color: t.A.unsafe_rawColors.GUILD_BOOSTING_PINK, className: o.RQ }),
+                  (0, e.jsx)(c.D, {
+                      variant: "body-sm/medium",
+                      className: o.h_,
+                      children: m.intl.string(m.t["0O+87i"]),
+                  }),
               ],
           })))
-        : (null != g && (r = u.intl.string(u.t.L2wYYj)),
-          (l = (0, n.jsxs)(n.Fragment, {
+        : (null != g && (a = m.intl.string(m.t.L2wYYj)),
+          (l = (0, e.jsxs)(e.Fragment, {
               children: [
-                  (0, n.jsx)(i._, { color: "currentColor", className: j.Kk }),
-                  (0, n.jsx)(c.D, { variant: "eyebrow", className: j.h_, children: null != g && (0, d.Qu)(g) }),
+                  (0, e.jsx)(r._, { color: "currentColor", className: o.Kk }),
+                  (0, e.jsx)(c.D, { variant: "body-sm/medium", className: o.h_, children: null != g && (0, u.Qu)(g) }),
               ],
           }))),
-    (e =
-        _ || null == r
-            ? (0, n.jsx)("div", { className: a()(j.Jz, N), children: l })
-            : (0, n.jsx)(h.m, {
+    (n =
+        _ || null == a
+            ? (0, e.jsx)("div", { className: i()(o.Jz, N), children: l })
+            : (0, e.jsx)(d.m, {
                   position: p,
-                  text: r,
-                  children: (0, n.jsx)("div", { className: a()(j.Jz, N), children: l }),
+                  text: a,
+                  children: (0, e.jsx)("div", { className: i()(o.Jz, N), children: l }),
               })),
     null == k || v)
-        ? e
-        : (0, n.jsx)(o.D, { onClick: k, className: j.vk, children: e });
+        ? n
+        : (0, e.jsx)(h.D, { onClick: k, className: o.vk, children: n });
 };

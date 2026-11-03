@@ -10,9 +10,9 @@ var n = l(477900),
     u = l.n(c),
     m = l(331322),
     h = l(834730),
-    x = l(404778),
-    v = l(821609),
-    g = l(975807),
+    v = l(404778),
+    g = l(821609),
+    x = l(975807),
     C = l(105292),
     p = l(205624);
 let f = r.memo(function (e) {
@@ -20,7 +20,7 @@ let f = r.memo(function (e) {
         l = r.useMemo(() => (0, s.t)(t), [t]),
         [i] = r.useState(Date.now),
         a = l?.targetBuildOverride.discord_campaign_builder,
-        d = r.useCallback(() => (0, g.A)(t), [t]);
+        d = r.useCallback(() => (0, x.A)(t), [t]);
     return (0, n.jsxs)(m.B, {
         className: p.i,
         gap: 12,
@@ -28,11 +28,11 @@ let f = r.memo(function (e) {
         fullWidth: !1,
         children: [
             (0, n.jsx)(h.E, {
-                variant: "text-xs/semibold",
+                variant: "body-xs/semibold",
                 color: "text-subtle",
                 children: C.intl.string(C.t["7i6b0c"]),
             }),
-            (0, n.jsx)(x.c, {}),
+            (0, n.jsx)(v.c, {}),
             null != a && null != l
                 ? (0, n.jsxs)(m.B, {
                       gap: 12,
@@ -41,12 +41,12 @@ let f = r.memo(function (e) {
                               gap: 4,
                               children: [
                                   (0, n.jsx)(h.E, {
-                                      variant: "text-sm/normal",
+                                      variant: "body-sm/normal",
                                       color: "text-subtle",
                                       children: C.intl.string("branch" === a.type ? C.t.p9TwTG : C.t.RCYGot),
                                   }),
                                   (0, n.jsx)(h.E, {
-                                      variant: "text-md/semibold",
+                                      variant: "body-md/semibold",
                                       color: "text-strong",
                                       lineClamp: 2,
                                       title: a.id,
@@ -56,7 +56,7 @@ let f = r.memo(function (e) {
                           }),
                           "" !== l.expiresAt &&
                               (0, n.jsx)(h.E, {
-                                  variant: "text-xs/normal",
+                                  variant: "body-xs/normal",
                                   color: "text-subtle",
                                   title: l.expiresAt,
                                   children: C.intl.formatToPlainString(
@@ -67,12 +67,12 @@ let f = r.memo(function (e) {
                       ],
                   })
                 : (0, n.jsx)(h.E, {
-                      variant: "text-sm/normal",
+                      variant: "body-sm/normal",
                       color: "text-subtle",
                       children: C.intl.string(C.t.l9qBG8),
                   }),
-            (0, n.jsx)(x.c, {}),
-            (0, n.jsx)(v.$, { text: C.intl.string(C.t.q5jLJB), onClick: d, fullWidth: !0 }),
+            (0, n.jsx)(v.c, {}),
+            (0, n.jsx)(g.$, { text: C.intl.string(C.t.q5jLJB), onClick: d, fullWidth: !0 }),
         ],
     });
 });
@@ -81,11 +81,11 @@ var j = l(503698),
     b = l.n(j),
     w = l(284009),
     k = l.n(w),
-    N = l(939249),
-    E = l(173936),
-    B = l(28863),
-    A = l(885574),
-    y = l(579872),
+    y = l(939249),
+    N = l(173936),
+    E = l(28863),
+    B = l(885574),
+    A = l(579872),
     L = l(763827),
     O = l(280977);
 let _ = r.memo(function (e) {
@@ -150,11 +150,11 @@ function P(e) {
     return (
         r.useEffect(() => () => clearTimeout(s.current), []),
         M.p5
-            ? (0, n.jsxs)(N.D, {
+            ? (0, n.jsxs)(y.D, {
                   className: b()(G.S, l ? G.pG : null),
                   onClick: a,
                   children: [
-                      (0, n.jsx)(E.LinkIcon, { size: "md", color: "currentColor", className: G.n7 }),
+                      (0, n.jsx)(N.LinkIcon, { size: "md", color: "currentColor", className: G.n7 }),
                       l ? C.intl.string(C.t.GmrIJY) : C.intl.string(C.t.iVzBOh),
                   ],
               })
@@ -176,11 +176,11 @@ function V(e) {
             (0, n.jsxs)("div", {
                 className: G.NT,
                 children: [
-                    (0, n.jsx)(h.E, { variant: "text-sm/medium", className: G.V$, children: t }),
+                    (0, n.jsx)(h.E, { variant: "body-sm/medium", className: G.V$, children: t }),
                     (0, n.jsx)("div", { className: G.Jb, children: l }),
                 ],
             }),
-            (0, n.jsx)(v.$, { text: a, loading: o, variant: i, onClick: s, fullWidth: !0, disabled: d }),
+            (0, n.jsx)(g.$, { text: a, loading: o, variant: i, onClick: s, fullWidth: !0, disabled: d }),
         ],
     });
 }
@@ -197,7 +197,7 @@ let $ = function (e) {
         className: G.iE,
         children: [
             (0, n.jsxs)(h.E, {
-                variant: "text-xs/normal",
+                variant: "body-xs/normal",
                 className: G.lS,
                 children: [
                     (0, n.jsx)("strong", {
@@ -207,11 +207,11 @@ let $ = function (e) {
                                 ? C.intl.formatToPlainString(C.t.bFj63b, { releaseChannel: i.releaseChannel })
                                 : C.intl.string(C.t.Wj3LW4),
                     }),
-                    (0, n.jsx)(B.Anchor, {
+                    (0, n.jsx)(E.Anchor, {
                         className: G.Pl,
                         href: T.A.getArticleURL(Z.MVz.BUILD_OVERRIDE_EMBED),
                         target: "_blank",
-                        children: (0, n.jsx)(A.CircleInformationIcon, {
+                        children: (0, n.jsx)(B.CircleInformationIcon, {
                             size: "xs",
                             color: "currentColor",
                             className: G.G,
@@ -312,23 +312,23 @@ let $ = function (e) {
                                   "BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved",
                               );
                               let { discord_web: m, discord_developers: h } = i.targetBuildOverride,
-                                  x = m ?? h;
+                                  v = m ?? h;
                               return (
                                   (k()(
-                                      null != x,
+                                      null != v,
                                       "BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved",
                                   ),
                                   null == r || null == r.discord_web
                                       ? 1
-                                      : x.id !== r.discord_web.id || x.type !== r.discord_web.type)
+                                      : v.id !== r.discord_web.id || v.type !== r.discord_web.type)
                                       ? ((l = C.intl.string(C.t.nOunHC)), (t = s), (n = "primary"))
                                       : ((l = C.intl.string(C.t.tX4xrt)), (t = a), (n = "critical-primary")),
                                   V({
-                                      subHead: C.intl.string("branch" === x.type ? C.t.p9TwTG : C.t.RCYGot),
-                                      buildDetails: x.id,
+                                      subHead: C.intl.string("branch" === v.type ? C.t.p9TwTG : C.t.RCYGot),
+                                      buildDetails: v.id,
                                       buttonClick: function () {
                                           L.A.isConnected()
-                                              ? y.A.show({
+                                              ? A.A.show({
                                                     title: C.intl.string(C.t.tiu1ly),
                                                     body: C.intl.string(C.t["zK+lqW"]),
                                                     onConfirm: t,

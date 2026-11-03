@@ -10,8 +10,8 @@ var i = n(477900),
     u = n(983851),
     p = n(451394),
     g = n(56059),
-    h = n(191023),
-    b = n(834730),
+    b = n(191023),
+    h = n(834730),
     x = n(123292),
     v = n(331322),
     m = n(691885),
@@ -22,8 +22,8 @@ var i = n(477900),
     f = n(568185),
     C = n(219444),
     j = n(284738),
-    k = n(95701),
-    y = n(769765),
+    y = n(95701),
+    k = n(769765),
     D = n(71393),
     G = n(994500),
     L = n(287809),
@@ -77,7 +77,7 @@ function T(t) {
                         }),
                         n &&
                             l.push({
-                                icon: h.ImageIcon,
+                                icon: b.ImageIcon,
                                 label: R.intl.string(R.t["6x6fVg"]),
                                 value: w.rbe.GUILD_MEDIA,
                                 description: R.intl.string(R.t.JyCrwS),
@@ -92,13 +92,13 @@ function T(t) {
                                         (0, i.jsx)(e, { className: V.Kk }),
                                         (0, i.jsxs)("div", {
                                             children: [
-                                                (0, i.jsxs)(b.E, {
-                                                    variant: "text-md/normal",
+                                                (0, i.jsxs)(h.E, {
+                                                    variant: "body-md/normal",
                                                     color: "text-strong",
                                                     children: [n, (0, i.jsx)(I.p, { isBeta: s })],
                                                 }),
-                                                (0, i.jsx)(b.E, {
-                                                    variant: "text-xs/normal",
+                                                (0, i.jsx)(h.E, {
+                                                    variant: "body-xs/normal",
                                                     color: "text-default",
                                                     children: r,
                                                 }),
@@ -114,7 +114,7 @@ function T(t) {
                 })({ canCreateStageChannel: K, canCreateMediaChannel: Q }),
             [K, Q],
         ),
-        $ = (0, s.bG)([y.A], () => y.A.getCategories(e)._categories, [e]),
+        $ = (0, s.bG)([k.A], () => k.A.getCategories(e)._categories, [e]),
         z = l.useMemo(
             () =>
                 $.map((t) => {
@@ -189,7 +189,7 @@ function T(t) {
                         label: R.intl.string(R.t.PVbHDl),
                         value: W,
                         onChange: function (t) {
-                            ((0, k.ke)(F) && (t = (0, N.an)(t)), P(t));
+                            ((0, y.ke)(F) && (t = (0, N.an)(t)), P(t));
                         },
                         maxLength: w.Ign,
                         placeholder: R.intl.string(R.t["bw/b8E"]),

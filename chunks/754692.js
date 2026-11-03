@@ -94,9 +94,9 @@ function E(e) {
             (0, i.jsxs)("div", {
                 className: A.__invalid_nameContainer,
                 children: [
-                    (0, i.jsx)(u.E, { variant: "text-md/semibold", color: "text-strong", children: r() }),
+                    (0, i.jsx)(u.E, { variant: "body-md/semibold", color: "text-strong", children: r() }),
                     (0, i.jsx)(u.E, {
-                        variant: "text-xs/medium",
+                        variant: "body-xs/medium",
                         color: "text-default",
                         children: E && !n ? "?????" : l(),
                     }),

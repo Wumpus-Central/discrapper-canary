@@ -1,4 +1,4 @@
-(n.d(t, { A: () => S }), n(321073));
+(n.d(t, { A: () => T }), n(321073));
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -34,27 +34,27 @@ let _ = l.memo(function (e) {
                 readOnly: g,
                 isLurking: _,
                 isPendingMember: j,
-                type: N,
-                emojiSize: y,
+                type: y,
+                emojiSize: N,
             } = e,
-            T = N === u.v.BURST,
-            S = (0, I.IN)(d, c, N),
-            b = (0, f.g)(T && null != h ? h : []),
+            b = y === u.v.BURST,
+            T = (0, I.IN)(d, c, y),
+            S = (0, f.g)(b && null != h ? h : []),
             k = l ? C : v,
-            R = T ? m : o,
+            R = b ? m : o,
             L = (0, x.x)(R, E.$),
             M = {};
-        if (T && null != b) {
-            let { accentColor: e, backgroundColor: i, opacity: l } = b,
+        if (b && null != S) {
+            let { accentColor: e, backgroundColor: i, opacity: l } = S,
                 s = (0, p.xp)(i ?? "", l) ?? "";
-            (S && (M.borderColor = i), (M.background = s), (t = e), (n = e));
+            (T && (M.borderColor = i), (M.background = s), (t = e), (n = e));
         }
         let P = { minWidth: L, color: t, borderColor: n };
         return (0, i.jsxs)("div", {
-            className: r()(k.reaction, k.reactionInner, a, { [k.reactionMe]: S, [k.reactionReadOnly]: g && !_ && !j }),
+            className: r()(k.reaction, k.reactionInner, a, { [k.reactionMe]: T, [k.reactionReadOnly]: g && !_ && !j }),
             style: M,
             children: [
-                (0, i.jsx)(A.A, { emojiId: s.id, emojiName: s.name, size: y, animated: T && s.animated }),
+                (0, i.jsx)(A.A, { emojiId: s.id, emojiName: s.name, size: N, animated: b && s.animated }),
                 (0, i.jsx)("div", { className: k.reactionCount, style: P, children: R }),
             ],
         });
@@ -89,11 +89,11 @@ let _ = l.memo(function (e) {
             ],
         });
     });
-var N = n(105292);
-function y(e, t) {
+var y = n(105292);
+function N(e, t) {
     return (null == e && null == t) || e === t;
 }
-class T extends l.PureComponent {
+class b extends l.PureComponent {
     state = { disableTransitionAppear: !0, reactionsCount: this.props.message.reactions.length };
     static getDerivedStateFromProps(e, t) {
         let n = e.message.reactions.length;
@@ -119,15 +119,15 @@ class T extends l.PureComponent {
                 remainingReactions: I,
                 combinedReactions: E,
                 visibleReactionsCount: _,
-                showTooltipWhenReadOnly: y,
+                showTooltipWhenReadOnly: N,
             } = this.props,
-            { disableTransitionAppear: T } = this.state,
-            S = x ? C : v;
+            { disableTransitionAppear: b } = this.state,
+            T = x ? C : v;
         return _ > 0
             ? (0, i.jsxs)(a.F, {
                   component: "div",
-                  className: r()(S.reactions, p),
-                  transitionAppear: !T,
+                  className: r()(T.reactions, p),
+                  transitionAppear: !b,
                   role: "group",
                   transitionLeave: !1,
                   id: (0, h.JH)(e),
@@ -141,30 +141,30 @@ class T extends l.PureComponent {
                           isForumToolbar: u,
                           useChatFontScaling: x,
                           className: A,
-                          showTooltipWhenReadOnly: y,
+                          showTooltipWhenReadOnly: N,
                       }),
                       I > 0 &&
                           (0, i.jsx)(o.D, {
                               onClick: (t) => {
                                   (t.stopPropagation(), (0, c.$)(e));
                               },
-                              className: r()(S.reaction, A, S.remainingReactions),
-                              "aria-label": N.intl.string(N.t.lfIHs4),
+                              className: r()(T.reaction, A, T.remainingReactions),
+                              "aria-label": y.intl.string(y.t.lfIHs4),
                               children: (0, i.jsxs)(d.E, {
-                                  className: S.reactionInner,
-                                  variant: "text-sm/normal",
+                                  className: T.reactionInner,
+                                  variant: "body-sm/normal",
                                   children: ["+", I],
                               }),
                           }),
                       !t &&
                           !f &&
-                          (0, i.jsx)(m.t, { message: e, channel: g, useChatFontScaling: x, className: S.forceShow }),
+                          (0, i.jsx)(m.t, { message: e, channel: g, useChatFontScaling: x, className: T.forceShow }),
                   ],
               })
             : null;
     }
 }
-let S = function (e) {
+let T = function (e) {
     let { message: t, maxReactions: n, hoistReaction: s } = e,
         {
             combinedReactions: r,
@@ -174,7 +174,7 @@ let S = function (e) {
             let e = [],
                 i = (function (e, t) {
                     if (null == t) return e;
-                    let n = e.findIndex((e) => y(e.emoji.id, t?.id) && y(e.emoji.name, t?.name));
+                    let n = e.findIndex((e) => N(e.emoji.id, t?.id) && N(e.emoji.name, t?.name));
                     return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
                 })(t.reactions, s),
                 l = null != n && n < i.length ? i.slice(0, n) : i,
@@ -189,5 +189,5 @@ let S = function (e) {
                 { combinedReactions: e, visibleReactionsCount: a, remainingReactions: r }
             );
         }, [s, n, t.reactions]);
-    return (0, i.jsx)(T, { ...e, visibleReactionsCount: o, combinedReactions: r, remainingReactions: a });
+    return (0, i.jsx)(b, { ...e, visibleReactionsCount: o, combinedReactions: r, remainingReactions: a });
 };

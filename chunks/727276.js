@@ -1,5 +1,5 @@
 _.exports = {
-    oU: "text-md/medium__1add6",
+    Lb: "body-md/medium__1add6",
     U6: "pulse__1add6",
     M0: "bar__1add6",
     Nr: "card__1add6",
@@ -10,7 +10,7 @@ _.exports = {
     zz: "storePage__1add6 page__1add6",
     wx: "header__1add6",
     P0: "iconWrapper__1add6",
-    DD: "title__1add6 text-md/medium__1add6",
+    DD: "title__1add6 body-md/medium__1add6",
     W2: "scroll__1add6",
     p_: "list__1add6",
     f0: "listRow__1add6",

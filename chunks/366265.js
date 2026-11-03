@@ -6,8 +6,8 @@ var i = t(477900),
     r = t(821609),
     o = t(367513),
     c = t(464120),
-    u = t(71393),
-    d = t(576705),
+    d = t(71393),
+    u = t(576705),
     A = t(174459),
     h = t(113783),
     m = t(518769),
@@ -21,15 +21,15 @@ function j(e) {
     let { channel: n } = e,
         t = (0, h.uy)(n.id),
         j = (0, h.zy)(n.id, m.ip.AUDIENCE),
-        v = (0, s.bG)([u.A], () => u.A.getGuild(n.guild_id), [n.guild_id]),
+        v = (0, s.bG)([d.A], () => d.A.getGuild(n.guild_id), [n.guild_id]),
         N = v?.maxStageVideoChannelUsers ?? 0,
         _ =
             null != v && v.features.has(C.GuildFeatures.COMMUNITY)
                 ? N < C.p2C
                 : v?.premiumTier !== C.TVA.TIER_3 && N <= C.nyz,
         T = (0, x.A)(n),
-        b = (0, s.bG)([d.A], () => d.A.can(g.QY, n));
-    function S() {
+        b = (0, s.bG)([u.A], () => u.A.can(g.QY, n));
+    function y() {
         (o.A.updateStageVideoLimitBoostUpsellDismissed(n.id, !0),
             A.default.track(C.HAw.BOOSTING_UPSELL_CLICKED, {
                 guild_id: n.guild_id,
@@ -38,10 +38,10 @@ function j(e) {
                 action: f.pd.DISMISS,
             }));
     }
-    let y = { canModerate: b, audienceCount: j, channel: n, speakerCount: t },
-        O = l.useRef(y);
+    let S = { canModerate: b, audienceCount: j, channel: n, speakerCount: t },
+        O = l.useRef(S);
     return (l.useEffect(() => {
-        O.current = y;
+        O.current = S;
     }),
     l.useEffect(() => {
         let { canModerate: e, audienceCount: n, channel: t, speakerCount: i } = O.current;
@@ -62,12 +62,12 @@ function j(e) {
                       className: E.Qq,
                       children: [
                           (0, i.jsx)(a.E, {
-                              variant: "text-md/medium",
+                              variant: "body-md/medium",
                               color: "text-strong",
                               children: _ ? p.intl.string(p.t["T+zF9M"]) : p.intl.string(p.t["IZ+SVv"]),
                           }),
                           (0, i.jsx)(a.E, {
-                              variant: "text-xs/medium",
+                              variant: "body-xs/medium",
                               color: "text-default",
                               children: _ ? p.intl.string(p.t.Izgpmv) : p.intl.string(p.t["7FHbPG"]),
                           }),
@@ -79,7 +79,7 @@ function j(e) {
                           ? (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)(r.$, {
-                                        onClick: S,
+                                        onClick: y,
                                         size: "sm",
                                         variant: "secondary",
                                         text: p.intl.string(p.t.L5eIZ2),
@@ -105,7 +105,7 @@ function j(e) {
                             })
                           : (0, i.jsx)(r.$, {
                                 variant: "primary",
-                                onClick: S,
+                                onClick: y,
                                 size: "sm",
                                 text: p.intl.string(p.t.WAI6xu),
                             }),

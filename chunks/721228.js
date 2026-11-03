@@ -1,21 +1,21 @@
-a.d(s, { A: () => d });
-var i = a(477900);
-a(582128);
-var r = a(834730),
-    c = a(140735),
-    e = a(105292),
-    n = a(718716);
+i.d(a, { A: () => d });
+var r = i(477900);
+i(582128);
+var t = i(834730),
+    c = i(140735),
+    e = i(105292),
+    n = i(718716);
 function d() {
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(r.E, {
+            (0, r.jsx)(t.E, {
                 className: n.x,
                 tag: "span",
-                variant: "text-md/semibold",
+                variant: "body-md/semibold",
                 color: "text-feedback-critical",
                 children: "*",
             }),
-            (0, i.jsx)(c.A, { children: e.intl.string(e.t.EkokLy) }),
+            (0, r.jsx)(c.A, { children: e.intl.string(e.t.EkokLy) }),
         ],
     });
 }

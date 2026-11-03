@@ -12,7 +12,7 @@ function o() {
         children: [
             (0, l.jsx)(r.D, { variant: "heading-lg/semibold", children: s.intl.string(i.default.Bp6rtc) }),
             (0, l.jsx)(a.E, {
-                variant: "text-md/normal",
+                variant: "body-md/normal",
                 color: "text-muted",
                 children: s.intl.string(i.default["c/2uZ9"]),
             }),

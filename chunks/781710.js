@@ -17,18 +17,18 @@ var n = a(477900),
     o = a(430993),
     c = a(696208),
     u = a(629584),
-    f = a(834730),
-    d = a(192308);
+    d = a(834730),
+    f = a(192308);
 if (588245 != a.j) var h = a(821609);
 var p = a(77729),
     b = a(231545),
-    x = a(808994);
-let m = [
+    m = a(808994);
+let x = [
         { name: "View", value: "view" },
         { name: "Edit", value: "edit" },
     ],
-    v = [117, 117, 105, 100];
-async function y(e) {
+    y = [117, 117, 105, 100];
+async function v(e) {
     let { default: t } = await a.e("25777").then(a.t.bind(a, 293384, 19)),
         n = t.createFile(!1),
         r = new Promise((e, t) => {
@@ -54,10 +54,10 @@ function A(e) {
             filename: t,
             initialJson: a,
             fileBuffer: i,
-            boxStart: d,
+            boxStart: f,
             boxSize: h,
             hdrSize: p,
-            transitionState: y,
+            transitionState: v,
             onClose: A,
         } = e,
         E = r.useRef(null),
@@ -66,7 +66,7 @@ function A(e) {
         [N, T] = r.useState(!1),
         [j, O] = r.useState(null);
     return (0, n.jsxs)(l.d, {
-        transitionState: y,
+        transitionState: v,
         onClose: A,
         size: "xl",
         "aria-label": "Clip metadata",
@@ -74,8 +74,8 @@ function A(e) {
             (0, n.jsx)(s.rQ, { title: "Clip metadata", subtitle: t }),
             (0, n.jsxs)(o.c, {
                 controls: (0, n.jsx)(u.I, {
-                    className: x.Ei,
-                    options: m,
+                    className: m.Ei,
+                    options: x,
                     value: w,
                     onChange: (e) =>
                         (function (e) {
@@ -104,11 +104,11 @@ function A(e) {
                         rows: 20,
                         "aria-label": "Clip metadata JSON",
                         "aria-hidden": "edit" !== w,
-                        className: "edit" === w ? x.jX : x.R,
+                        className: "edit" === w ? m.jX : m.R,
                     }),
                     "view" === w && (0, n.jsx)(b.A, { data: g }),
                     null != j &&
-                        (0, n.jsx)(f.E, { variant: "text-sm/medium", color: "text-feedback-critical", children: j }),
+                        (0, n.jsx)(d.E, { variant: "body-sm/medium", color: "text-feedback-critical", children: j }),
                 ],
             }),
             (0, n.jsx)(c.H, {
@@ -143,7 +143,7 @@ function A(e) {
                                                       );
                                                   let l = new Uint8Array(i);
                                                   (new DataView(l.buffer).setUint32(0, i, !1),
-                                                      l.set(v, 4),
+                                                      l.set(y, 4),
                                                       l.set(new Uint8Array(e, t + 8, n - 8), 8),
                                                       l.set(r, n));
                                                   let s = new Uint8Array(e, 0, t),
@@ -155,7 +155,7 @@ function A(e) {
                                                       c.set(o, s.length + l.length),
                                                       c.buffer
                                                   );
-                                              })(i, d, h, p, s);
+                                              })(i, f, h, p, s);
                                           ((n = new Blob([o], { type: "video/mp4" })),
                                               (a = URL.createObjectURL(n)),
                                               ((r = document.createElement("a")).href = a),
@@ -177,11 +177,11 @@ function A(e) {
 }
 async function E(e, t) {
     try {
-        let a = await y(e);
+        let a = await v(e);
         if (null == a)
             return void (0, i.A)({ title: "No metadata found", subtitle: `No clip metadata UUID box found in ${t}` });
         let r = JSON.stringify(a.metadata, null, 2);
-        (0, d.openModal)((i) =>
+        (0, f.openModal)((i) =>
             (0, n.jsx)(A, {
                 ...i,
                 filename: t,
@@ -221,7 +221,7 @@ function g() {
                     let t = e.target.files?.[0];
                     ((e.target.value = ""), null != t && w(t));
                 },
-                className: x.Z_,
+                className: m.Z_,
             }),
             (0, n.jsx)(h.$, { text: "Open File", onClick: () => e.current?.click() }),
         ],

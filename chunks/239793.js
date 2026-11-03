@@ -3,21 +3,21 @@ var r,
     n = l(477900),
     s = l(582128),
     a = l(64015),
-    i = l.n(a),
-    o = l(17928),
+    o = l.n(a),
+    i = l(17928),
     c = l(192308),
     u = l(775602),
-    h = l(138298),
-    d = l(358047),
+    d = l(138298),
+    h = l(358047),
     f = l(734057),
-    x = l(71393),
-    m = l(309010),
-    g = l(256796),
+    m = l(71393),
+    g = l(309010),
+    x = l(256796),
     p = l(517381),
     S = l(822382),
-    A = l(902008),
-    E = l(443390),
-    y = l(616252),
+    y = l(902008),
+    A = l(443390),
+    E = l(616252),
     b = l(753806),
     I = l(775427),
     R = l(145331);
@@ -58,134 +58,134 @@ var C = l(503698),
     en = l(562153),
     es = l(315059),
     ea = l(121806),
-    ei = l(988665),
-    eo = l(652215),
+    eo = l(988665),
+    ei = l(652215),
     ec = l(105292);
 function eu(e, t) {
     return { type: e, data: t };
 }
-function eh(e) {
+function ed(e) {
     switch (e) {
-        case eo.x2k.HISTORY:
+        case ei.x2k.HISTORY:
             return ec.intl.string(ec.t.tSZd5c);
-        case eo.LWr.FILTER_FROM:
+        case ei.LWr.FILTER_FROM:
             return ec.intl.string(ec.t.catERA);
-        case eo.LWr.FILTER_MENTIONS:
+        case ei.LWr.FILTER_MENTIONS:
             return ec.intl.string(ec.t["l3K4B/"]);
-        case eo.LWr.FILTER_IN:
+        case ei.LWr.FILTER_IN:
             return ec.intl.string(ec.t.vHyCgl);
-        case eo.LWr.FILTER_HAS:
+        case ei.LWr.FILTER_HAS:
             return ec.intl.string(ec.t.IC7gHM);
         default:
             return "";
     }
 }
-function ed(e) {
+function eh(e) {
     let { modeType: t, result: l, group: r } = e,
         { text: n, channel: s, group: a } = l,
-        i = n;
-    if ((null != s && (i = (0, S.TZ)(i)), t === eo.o$q.FILTER_ALL)) {
+        o = n;
+    if ((null != s && (o = (0, S.TZ)(o)), t === ei.o$q.FILTER_ALL)) {
         let e = P.Ay[a ?? r];
-        e?.key != null && e?.key !== "" && (i = `${e.key} ${i}`);
+        e?.key != null && e?.key !== "" && (o = `${e.key} ${o}`);
     }
-    return i;
+    return o;
 }
 var ef = l(768570),
-    ex = l(676068);
-function em(e) {
-    let { icon: t, label: l, sublabel: r, onSelect: s, navId: a, index: i, selected: o } = e;
+    em = l(676068);
+function eg(e) {
+    let { icon: t, label: l, sublabel: r, onSelect: s, navId: a, index: o, selected: i } = e;
     return (0, n.jsx)(K.D, {
-        className: ex.DB,
+        className: em.DB,
         onClick: function () {
-            s({ searchAutocompleteSelectAction: ef.oi.CLICK, selectedIndex: i });
+            s({ searchAutocompleteSelectAction: ef.oi.CLICK, selectedIndex: o });
         },
         ...(function (e) {
             let { navId: t, index: l, selected: r } = e;
             return { id: `${t}-${l}`, role: "option", tabIndex: -1, "aria-selected": r };
-        })({ navId: a, index: i, selected: o }),
+        })({ navId: a, index: o, selected: i }),
         children: (0, n.jsxs)("div", {
-            className: ex.AS,
+            className: em.AS,
             children: [t, null == r ? l : (0, n.jsxs)("div", { children: [l, r] })],
         }),
     });
 }
-function eg(e) {
+function ex(e) {
     let { label: t, className: l } = e;
-    return (0, n.jsx)(G.E, { variant: "text-sm/medium", color: "text-strong", className: l, children: t });
+    return (0, n.jsx)(G.E, { variant: "body-sm/medium", color: "text-strong", className: l, children: t });
 }
 function ep(e) {
     let { searchTokenType: t, answer: l } = e,
         r = P.Ay[t]?.key ?? "",
         s = l ?? (0, S.sh)(t);
     return (0, n.jsxs)("div", {
-        className: ex.Xq,
+        className: em.Xq,
         children: [
-            (0, n.jsx)(G.E, { variant: "text-sm/semibold", color: "text-subtle", children: r }),
-            (0, n.jsx)(G.E, { variant: "text-sm/medium", color: "text-muted", children: s }),
+            (0, n.jsx)(G.E, { variant: "body-sm/semibold", color: "text-subtle", children: r }),
+            (0, n.jsx)(G.E, { variant: "body-sm/medium", color: "text-muted", children: s }),
         ],
     });
 }
 function eS(e) {
     let t = (0, S.E3)(e);
     return (0, n.jsxs)("div", {
-        className: ex.aT,
+        className: em.aT,
         children: [
-            (0, n.jsx)(es.A, { channel: e, avatarSize: U._3.SIZE_16, iconClassName: ex.er, iconSize: "xs" }),
-            (0, n.jsx)(G.E, { variant: "text-sm/semibold", color: "text-strong", className: ex.HA, children: t }),
+            (0, n.jsx)(es.A, { channel: e, avatarSize: U._3.SIZE_16, iconClassName: em.er, iconSize: "xs" }),
+            (0, n.jsx)(G.E, { variant: "body-sm/semibold", color: "text-strong", className: em.HA, children: t }),
         ],
     });
 }
-function eA(e) {
+function ey(e) {
     let { searchContext: t } = e;
     return (0, n.jsx)(Z.m, {
         asContainer: !0,
         text: ec.intl.string(ec.t.dwAvX1),
         position: "left",
         children: (0, n.jsx)(K.D, {
-            onClick: () => y.A.clearSearchHistory(t),
-            className: ex.Wf,
+            onClick: () => E.A.clearSearchHistory(t),
+            className: em.Wf,
             title: ec.intl.string(ec.t.dwAvX1),
             "aria-label": ec.intl.string(ec.t.dwAvX1),
-            children: (0, n.jsx)(V.TrashIcon, { size: "sm", color: "currentColor", className: ex.f }),
+            children: (0, n.jsx)(V.TrashIcon, { size: "sm", color: "currentColor", className: em.f }),
         }),
     });
 }
-function eE(e) {
+function eA(e) {
     let { title: t, showDivider: l, children: r } = e;
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            l && (0, n.jsx)("div", { className: ex.yF }),
-            (0, n.jsx)("ul", { role: "group", "aria-labelledby": `${t}-header`, className: ex.jw, children: r }, t),
+            l && (0, n.jsx)("div", { className: em.yF }),
+            (0, n.jsx)("ul", { role: "group", "aria-labelledby": `${t}-header`, className: em.jw, children: r }, t),
         ],
     });
 }
-function ey(e) {
+function eE(e) {
     let { headerId: t, titleText: l, trailingIcon: r } = e;
     return (0, n.jsxs)("div", {
         id: t,
-        className: ex.x_,
-        children: [(0, n.jsx)(G.E, { variant: "text-xs/semibold", color: "text-subtle", children: l }), r],
+        className: em.x_,
+        children: [(0, n.jsx)(G.E, { variant: "body-xs/semibold", color: "text-subtle", children: l }), r],
     });
 }
 function eb(e) {
     let { navId: t, item: l, startingIndex: r, selectedIndex: s } = e,
         a = r,
-        { rows: i, title: o, trailingIcon: c } = l.data;
-    return (0, n.jsxs)(eE, {
-        title: o,
+        { rows: o, title: i, trailingIcon: c } = l.data;
+    return (0, n.jsxs)(eA, {
+        title: i,
         showDivider: r > 0,
         children: [
-            (0, n.jsx)(ey, { headerId: o, titleText: o, trailingIcon: c }),
-            i.map((e) => {
-                let { icon: r, label: i, sublabel: c, onSelect: u } = e.data,
-                    h = s === a,
-                    d = a;
+            (0, n.jsx)(eE, { headerId: i, titleText: i, trailingIcon: c }),
+            o.map((e) => {
+                let { icon: r, label: o, sublabel: c, onSelect: u } = e.data,
+                    d = s === a,
+                    h = a;
                 return (
                     (a += 1),
                     (0, n.jsx)(
-                        em,
-                        { icon: r, label: i, sublabel: c, onSelect: u, navId: t, index: d, selected: h },
-                        `${l.type}-${o}-${d}`,
+                        eg,
+                        { icon: r, label: o, sublabel: c, onSelect: u, navId: t, index: h, selected: d },
+                        `${l.type}-${i}-${h}`,
                     )
                 );
             }),
@@ -194,62 +194,62 @@ function eb(e) {
 }
 function eI(e) {
     let { size: t, user: l, className: r } = e,
-        s = (0, o.bG)([el.A], () => el.A.getGuildId()),
+        s = (0, i.bG)([el.A], () => el.A.getGuildId()),
         a = (0, U.FT)(t);
     return (0, n.jsx)(X.eu, { size: t, src: l.getAvatarURL(s, a), "aria-label": l.username, className: r });
 }
 function eR(e) {
     let { user: t } = e,
-        { selectedGuildId: l, selectedChannelId: r } = (0, o.cf)([el.A, m.Ay], () => {
+        { selectedGuildId: l, selectedChannelId: r } = (0, i.cf)([el.A, g.Ay], () => {
             let e = el.A.getGuildId(),
-                t = m.Ay.getChannelId(e);
+                t = g.Ay.getChannelId(e);
             return { selectedGuildId: e, selectedChannelId: t };
         }),
         s = en.Ay.useName(l, r, t);
-    return (0, n.jsx)(G.E, { variant: "text-sm/semibold", color: "text-default", children: s });
+    return (0, n.jsx)(G.E, { variant: "body-sm/semibold", color: "text-default", children: s });
 }
 function eC(e) {
     let { value: t, avatarSize: l, iconSize: r } = e,
         s = "",
         a = (0, S._o)(t)
-            .map((e, t, l) => (eo.l90.test(e.type) || (0, S.Zh)(e, l[t + 1]) ? e : new ei.ou(e.getFullMatch(), ei.dL)))
+            .map((e, t, l) => (ei.l90.test(e.type) || (0, S.Zh)(e, l[t + 1]) ? e : new eo.ou(e.getFullMatch(), eo.dL)))
             .map((e, t) => {
                 let a = e.getFullMatch();
                 if (0 === a.trim().length) return null;
                 s += a;
-                let i = eo.l90.test(e.type),
-                    o = eo.T2E.test(e.type),
+                let o = ei.l90.test(e.type),
+                    i = ei.T2E.test(e.type),
                     c = `${e.type}-${a}-${t}`;
-                if (o)
+                if (i)
                     switch (e.type) {
-                        case eo.LWr.ANSWER_USERNAME_FROM:
-                        case eo.LWr.ANSWER_USERNAME_MENTIONS:
+                        case ei.LWr.ANSWER_USERNAME_FROM:
+                        case ei.LWr.ANSWER_USERNAME_MENTIONS:
                             return (0, n.jsx)(ej, { token: e, avatarSize: l }, c);
-                        case eo.LWr.ANSWER_IN:
+                        case ei.LWr.ANSWER_IN:
                             return (0, n.jsx)(eL, { token: e, avatarSize: l, iconSize: r }, c);
                         default:
-                            return (0, n.jsx)(eT, { text: a, className: ex.Mj }, c);
+                            return (0, n.jsx)(eT, { text: a, className: em.Mj }, c);
                     }
-                return (0, n.jsx)(eT, { text: a, className: i ? ex._y : ex.Lc }, c);
+                return (0, n.jsx)(eT, { text: a, className: o ? em._y : em.Lc }, c);
             });
-    return { label: (0, n.jsx)("div", { className: ex.fH, children: a }), ariaLabel: s };
+    return { label: (0, n.jsx)("div", { className: em.fH, children: a }), ariaLabel: s };
 }
 function eT(e) {
     let { text: t, className: l } = e;
-    return (0, n.jsx)(G.E, { variant: "text-sm/semibold", color: "text-strong", className: l, children: t });
+    return (0, n.jsx)(G.E, { variant: "body-sm/semibold", color: "text-strong", className: l, children: t });
 }
 function ej(e) {
     let { token: t, avatarSize: l } = e,
         r = t.getFullMatch(),
         s = t.getData("userId"),
-        a = (0, o.bG)([er.default], () => er.default.getUser(s));
+        a = (0, i.bG)([er.default], () => er.default.getUser(s));
     return null == a
-        ? (0, n.jsx)(eT, { text: r, className: ex.Mj })
+        ? (0, n.jsx)(eT, { text: r, className: em.Mj })
         : (0, n.jsxs)("div", {
-              className: ex.Mj,
+              className: em.Mj,
               children: [
                   (0, n.jsx)(eI, { size: l, user: a }),
-                  (0, n.jsx)(G.E, { variant: "text-sm/semibold", color: "text-strong", children: a.username }),
+                  (0, n.jsx)(G.E, { variant: "body-sm/semibold", color: "text-strong", children: a.username }),
               ],
           });
 }
@@ -257,14 +257,14 @@ function eL(e) {
     let { token: t, avatarSize: l, iconSize: r } = e,
         s = t.getFullMatch(),
         a = t.getData("channelIds") ?? [],
-        i = (0, o.bG)([f.A], () => f.A.getChannel(a[0]));
-    if (null == i) return (0, n.jsx)(eT, { text: s, className: ex.Mj });
-    let c = (0, S.E3)(i);
+        o = (0, i.bG)([f.A], () => f.A.getChannel(a[0]));
+    if (null == o) return (0, n.jsx)(eT, { text: s, className: em.Mj });
+    let c = (0, S.E3)(o);
     return (0, n.jsxs)("div", {
-        className: T()(ex.Mj, ex.JG),
+        className: T()(em.Mj, em.JG),
         children: [
-            (0, n.jsx)(es.A, { channel: i, avatarSize: l, iconClassName: ex.Wh, iconSize: r }),
-            (0, n.jsx)(G.E, { variant: "text-sm/semibold", color: "text-strong", children: c }),
+            (0, n.jsx)(es.A, { channel: o, avatarSize: l, iconClassName: em.Wh, iconSize: r }),
+            (0, n.jsx)(G.E, { variant: "body-sm/semibold", color: "text-strong", children: c }),
         ],
     });
 }
@@ -285,7 +285,7 @@ var eF = l(506774),
 let ek = ef.nC,
     eM = !1,
     eP = {};
-class eW extends o.Ay.Store {
+class eW extends i.Ay.Store {
     static displayName = ef.yQ;
     initialize() {
         var e;
@@ -343,25 +343,25 @@ function eG(e) {
         children: t.map((e) => {
             switch (e.type) {
                 case eN.ROW:
-                    let { icon: t, label: a, onSelect: i } = e.data,
-                        o = s;
+                    let { icon: t, label: a, onSelect: o } = e.data,
+                        i = s;
                     return (
                         (s += 1),
                         (0, n.jsx)(
-                            em,
-                            { icon: t, label: a, onSelect: i, navId: l, index: o, selected: r === o },
-                            `${e.type}-${o}`,
+                            eg,
+                            { icon: t, label: a, onSelect: o, navId: l, index: i, selected: r === i },
+                            `${e.type}-${i}`,
                         )
                     );
                 case eN.GROUP:
                     let { rows: c, title: u } = e.data,
-                        h = s;
+                        d = s;
                     return (
                         (s += c.length),
                         (0, n.jsx)(
                             eb,
-                            { navId: l, item: e, startingIndex: h, selectedIndex: r },
-                            `${e.type}--${u}-${h}`,
+                            { navId: l, item: e, startingIndex: d, selectedIndex: r },
+                            `${e.type}--${u}-${d}`,
                         )
                     );
                 default:
@@ -371,11 +371,11 @@ function eG(e) {
     });
 }
 function eq(e) {
-    let { searchContext: t, navId: l, resultsState: r, onSelectedIndexChanged: a, selectedChannel: i, ref: c } = e,
-        [u, h] = s.useState(-1),
-        d = s.useCallback(
+    let { searchContext: t, navId: l, resultsState: r, onSelectedIndexChanged: a, selectedChannel: o, ref: c } = e,
+        [u, d] = s.useState(-1),
+        h = s.useCallback(
             (e) => {
-                (h(e), a(e));
+                (d(e), a(e));
                 let t = document.getElementById(`${l}-${e}`);
                 null != t && t.scrollIntoView({ block: "nearest", inline: "nearest" });
             },
@@ -391,13 +391,13 @@ function eq(e) {
                     resultsState: r,
                     searchQuerySource: ef.Q_.SEARCH_POPOUT,
                 }),
-                    d(-1));
+                    h(-1));
             },
-            [r, d],
+            [r, h],
         ),
-        { items: x, itemsData: g } = (function (e) {
+        { items: m, itemsData: x } = (function (e) {
             let { resultsState: t, searchContext: l, selectedChannel: r, setSearchQuery: a } = e,
-                { autocompletes: i, mode: c } = t,
+                { autocompletes: o, mode: c } = t,
                 u = (function (e) {
                     let { autocompletes: t, mode: l } = e;
                     return s.useCallback(
@@ -405,51 +405,51 @@ function eq(e) {
                             let { getAutocompleteRowItem: r, getAutocompleteGroupItem: n } = e,
                                 s = 0,
                                 a = [],
-                                i = [];
+                                o = [];
                             for (let e of t) {
                                 let t = [],
-                                    { group: o, results: c } = e;
+                                    { group: i, results: c } = e;
                                 if (e.results.length > 0) {
                                     for (let e of c) {
-                                        let n = r({ result: e, modeType: l.type, group: o });
+                                        let n = r({ result: e, modeType: l.type, group: i });
                                         t.push(n);
                                     }
                                     s += c.length;
-                                    let e = n({ group: o, rows: t });
-                                    (a.push(e), i.push(...t));
+                                    let e = n({ group: i, rows: t });
+                                    (a.push(e), o.push(...t));
                                 }
                             }
-                            return { autocompleteCount: s, autocompleteGroups: a, allAutocompleteRows: i };
+                            return { autocompleteCount: s, autocompleteGroups: a, allAutocompleteRows: o };
                         },
                         [t, l.type],
                     );
-                })({ autocompletes: i, mode: c }),
-                h = (function (e) {
+                })({ autocompletes: o, mode: c }),
+                d = (function (e) {
                     let { setSearchQuery: t, searchContext: l, mode: r } = e,
                         a = (0, eD.o)(l);
                     return s.useMemo(() => {
                         let e = [
                             {
-                                type: eo.LWr.FILTER_FROM,
-                                isEligible: a.has(eo.LWr.FILTER_FROM),
+                                type: ei.LWr.FILTER_FROM,
+                                isEligible: a.has(ei.LWr.FILTER_FROM),
                                 icon: ee.UserIcon,
                                 label: ec.intl.string(ec.t.ktr6z5),
                             },
                             {
-                                type: eo.LWr.FILTER_IN,
-                                isEligible: a.has(eo.LWr.FILTER_IN),
+                                type: ei.LWr.FILTER_IN,
+                                isEligible: a.has(ei.LWr.FILTER_IN),
                                 icon: J.N,
                                 label: ec.intl.string(ec.t.VMjDvS),
                             },
                             {
-                                type: eo.LWr.FILTER_HAS,
-                                isEligible: a.has(eo.LWr.FILTER_HAS),
+                                type: ei.LWr.FILTER_HAS,
+                                isEligible: a.has(ei.LWr.FILTER_HAS),
                                 icon: eH.P,
                                 label: ec.intl.string(ec.t.IhIpc7),
                             },
                             {
-                                type: eo.LWr.FILTER_MENTIONS,
-                                isEligible: a.has(eo.LWr.FILTER_MENTIONS),
+                                type: ei.LWr.FILTER_MENTIONS,
+                                isEligible: a.has(ei.LWr.FILTER_MENTIONS),
                                 icon: et.X,
                                 label: ec.intl.string(ec.t.fpKv9Y),
                             },
@@ -457,21 +457,21 @@ function eq(e) {
                         return e
                             .filter((e) => e.isEligible)
                             .map((s) => {
-                                let { icon: a, label: i, type: o } = s;
+                                let { icon: a, label: o, type: i } = s;
                                 return eu(eN.ROW, {
-                                    icon: (0, n.jsx)(a, { size: "sm", color: "currentColor", className: ex.Fx }),
-                                    label: (0, n.jsx)(eg, { label: i }),
-                                    sublabel: (0, n.jsx)(ep, { searchTokenType: o }),
+                                    icon: (0, n.jsx)(a, { size: "sm", color: "currentColor", className: em.Fx }),
+                                    label: (0, n.jsx)(ex, { label: o }),
+                                    sublabel: (0, n.jsx)(ep, { searchTokenType: i }),
                                     onSelect: function (n) {
                                         let { selectedIndex: s, searchAutocompleteSelectAction: a } = n,
-                                            i = P.Ay[o]?.key ?? "",
+                                            o = P.Ay[i]?.key ?? "",
                                             c = (0, S.bS)(l);
                                         ((0, R.kc)({
                                             searchContext: l,
                                             searchQuery: W.A.getSearchResultsQuery(c),
                                             searchQueryString: b.A.getSearchInputText(l),
-                                            searchTokenType: o,
-                                            searchAutocompleteGroup: o,
+                                            searchTokenType: i,
+                                            searchAutocompleteGroup: i,
                                             searchAutocompleteMode: r,
                                             searchAutocompleteResultIndex: s - 1,
                                             searchAutocompleteTotalResults: e.length,
@@ -481,15 +481,15 @@ function eq(e) {
                                             isInFilterForSelectedChannel: !1,
                                             searchAutocompleteSelectAction: a,
                                         }),
-                                            t({ query: `${i} `, performSearch: !1, replace: !1 }));
+                                            t({ query: `${o} `, performSearch: !1, replace: !1 }));
                                     },
                                 });
                             });
                     }, [a, l, r, t]);
                 })({ setSearchQuery: a, searchContext: l, mode: c }),
-                d = (0, o.yK)([B.A, m.Ay, ew], () => {
+                h = (0, i.yK)([B.A, g.Ay, ew], () => {
                     if (B.A.hidePersonalInformation) return eQ;
-                    let e = (0, S.Jl)(l, m.Ay);
+                    let e = (0, S.Jl)(l, g.Ay);
                     if (null == e) return eQ;
                     let t = ew.getHistory(e);
                     if (null == t) return eQ;
@@ -497,7 +497,7 @@ function eq(e) {
                         n = [];
                     return (
                         t.forEach((e) => {
-                            let t = l.type === eo.I4_.CHANNEL ? (0, S.EH)(e) : e;
+                            let t = l.type === ei.I4_.CHANNEL ? (0, S.EH)(e) : e;
                             "" === t || r.has(t) || (r.add(t), n.push(t));
                         }),
                         n
@@ -511,13 +511,13 @@ function eq(e) {
                         selectedAutocomplete: s,
                         selectedAutocompleteGroup: a,
                     } = e,
-                    i = c.type,
-                    o = c.filter,
-                    { token: u, group: h } = s,
-                    d = null != h && (0, P.If)(h) ? h : null,
-                    f = u ?? o ?? d,
-                    x = s.channel,
-                    g = f === eo.LWr.FILTER_IN && null != x && x.id === m.Ay.getChannelId(),
+                    o = c.type,
+                    i = c.filter,
+                    { token: u, group: d } = s,
+                    h = null != d && (0, P.If)(d) ? d : null,
+                    f = u ?? i ?? h,
+                    m = s.channel,
+                    x = f === ei.LWr.FILTER_IN && null != m && m.id === g.Ay.getChannelId(),
                     p = (0, S.bS)(l);
                 (0, R.kc)({
                     searchContext: l,
@@ -528,14 +528,14 @@ function eq(e) {
                     searchAutocompleteMode: c,
                     searchAutocompleteResultIndex: r,
                     searchAutocompleteTotalResults: t,
-                    isSearchFilterPrefix: i === eo.o$q.EMPTY,
-                    isSearchFilterAnswer: i === eo.o$q.FILTER,
-                    isSearchFilterComplete: i === eo.o$q.FILTER_ALL,
-                    isInFilterForSelectedChannel: g,
+                    isSearchFilterPrefix: o === ei.o$q.EMPTY,
+                    isSearchFilterAnswer: o === ei.o$q.FILTER,
+                    isSearchFilterComplete: o === ei.o$q.FILTER_ALL,
+                    isInFilterForSelectedChannel: x,
                     searchAutocompleteSelectAction: n,
                 });
             }
-            let x = s.useCallback(
+            let m = s.useCallback(
                     (e) => {
                         let { hasOtherSearchFiltersVisible: t } = e,
                             r = t ? ec.intl.string(ec.t.diOL4i) : ec.intl.string(ec.t["M1tf+7"]);
@@ -545,12 +545,12 @@ function eq(e) {
                                 color: "currentColor",
                                 width: 20,
                                 height: 20,
-                                className: ex.Fx,
+                                className: em.Fx,
                             }),
-                            label: (0, n.jsx)(eg, { label: r }),
+                            label: (0, n.jsx)(ex, { label: r }),
                             sublabel: t
                                 ? (0, n.jsx)(G.E, {
-                                      variant: "text-sm/medium",
+                                      variant: "body-sm/medium",
                                       color: "text-muted",
                                       children: ec.intl.string(ec.t["1axf1T"]),
                                   })
@@ -560,32 +560,32 @@ function eq(e) {
                     },
                     [l],
                 ),
-                g = (0,
+                x = (0,
                 {
-                    [eo.o$q.EMPTY]: () => {
+                    [ei.o$q.EMPTY]: () => {
                         let e = [];
-                        if (null != r && (0, Y.HM)(l) && l.type === eo.I4_.DMS) {
+                        if (null != r && (0, Y.HM)(l) && l.type === ei.I4_.DMS) {
                             let t = eS(r),
                                 s = eu(eN.ROW, {
                                     icon: (0, n.jsx)(q.MagnifyingGlassIcon, {
                                         size: "sm",
                                         color: "currentColor",
-                                        className: ex.Fx,
+                                        className: em.Fx,
                                     }),
-                                    label: (0, n.jsx)(eg, {
+                                    label: (0, n.jsx)(ex, {
                                         label: ec.intl.format(ec.t["VGEH/0"], { channelName: t }),
-                                        className: ex.YL,
+                                        className: em.YL,
                                     }),
                                     onSelect: (e) => {
                                         let { searchAutocompleteSelectAction: t } = e;
                                         return (function (e) {
                                             let { selectedChannel: t, searchAutocompleteSelectAction: r } = e;
                                             (0, R.rE)({ searchContext: l, searchAutocompleteSelectAction: r });
-                                            let n = eo.LWr.FILTER_IN,
+                                            let n = ei.LWr.FILTER_IN,
                                                 s = P.Ay[n],
-                                                i = (0, S.Rt)(t);
+                                                o = (0, S.Rt)(t);
                                             a({
-                                                query: `${s?.key ?? n.toString()} ${i}`,
+                                                query: `${s?.key ?? n.toString()} ${o}`,
                                                 performSearch: !0,
                                                 replace: !1,
                                             });
@@ -594,9 +594,9 @@ function eq(e) {
                                 });
                             e.push(s);
                         }
-                        let t = [...h, x({ hasOtherSearchFiltersVisible: !0 })];
-                        if ((e.push(eu(eN.GROUP, { rows: t, title: ec.intl.string(ec.t.UdhTtk) })), d.length > 0)) {
-                            let t = d.map((e, t) => {
+                        let t = [...d, m({ hasOtherSearchFiltersVisible: !0 })];
+                        if ((e.push(eu(eN.GROUP, { rows: t, title: ec.intl.string(ec.t.UdhTtk) })), h.length > 0)) {
+                            let t = h.map((e, t) => {
                                     let { label: r, ariaLabel: s } = eC({
                                         value: e,
                                         avatarSize: U._3.SIZE_16,
@@ -606,7 +606,7 @@ function eq(e) {
                                         icon: (0, n.jsx)(q.MagnifyingGlassIcon, {
                                             size: "sm",
                                             color: "currentColor",
-                                            className: ex.Fx,
+                                            className: em.Fx,
                                         }),
                                         label: r,
                                         ariaLabel: ec.intl.formatToPlainString(ec.t.WoiGrV, { suggestion: s }),
@@ -615,7 +615,7 @@ function eq(e) {
                                             ((0, R.oR)({
                                                 searchContext: l,
                                                 searchHistoryIndex: t,
-                                                searchHistoryTotalResults: d.length,
+                                                searchHistoryTotalResults: h.length,
                                             }),
                                                 a({ query: e, performSearch: !0, replace: !1 }));
                                         },
@@ -623,14 +623,14 @@ function eq(e) {
                                 }),
                                 r = eu(eN.GROUP, {
                                     rows: t,
-                                    trailingIcon: (0, n.jsx)(eA, { searchContext: l }),
-                                    title: eh(eo.x2k.HISTORY),
+                                    trailingIcon: (0, n.jsx)(ey, { searchContext: l }),
+                                    title: ed(ei.x2k.HISTORY),
                                 });
                             e.push(r);
                         }
                         return e;
                     },
-                    [eo.o$q.FILTER_ALL]: () => {
+                    [ei.o$q.FILTER_ALL]: () => {
                         let e = [];
                         if ("" !== t.query.trim()) {
                             let { label: l } = eC({ value: t.query, avatarSize: U._3.SIZE_16, iconSize: "xs" }),
@@ -638,17 +638,17 @@ function eq(e) {
                                     icon: (0, n.jsx)(q.MagnifyingGlassIcon, {
                                         size: "sm",
                                         color: "currentColor",
-                                        className: ex.Fx,
+                                        className: em.Fx,
                                     }),
-                                    label: (0, n.jsx)(eg, {
+                                    label: (0, n.jsx)(ex, {
                                         label: ec.intl.format(ec.t.rCnaoo, { value: l }),
-                                        className: ex.YL,
+                                        className: em.YL,
                                     }),
                                     ariaLabel: ec.intl.formatToPlainString(ec.t.rCnaoo, { value: t.query }),
                                     onSelect: () =>
                                         (function (e) {
                                             let { searchEverywhere: t } = e;
-                                            M._.dispatch(eo.jej.PERFORM_SEARCH, {
+                                            M._.dispatch(ei.jej.PERFORM_SEARCH, {
                                                 searchEverywhere: t,
                                                 searchQuerySource: ef.Q_.SEARCH_POPOUT,
                                             });
@@ -659,36 +659,36 @@ function eq(e) {
                         let { autocompleteCount: l, autocompleteGroups: r } = u({
                             getAutocompleteRowItem: (e) => {
                                 let { result: t, modeType: r, group: s } = e,
-                                    i = ed({ modeType: r, result: t, group: s }),
-                                    o = (function (e) {
+                                    o = eh({ modeType: r, result: t, group: s }),
+                                    i = (function (e) {
                                         let { result: t, group: l } = e;
                                         switch (l) {
-                                            case eo.x2k.HISTORY:
+                                            case ei.x2k.HISTORY:
                                                 return (0, n.jsx)(q.MagnifyingGlassIcon, {
                                                     size: "sm",
                                                     color: "currentColor",
-                                                    className: ex.Fx,
+                                                    className: em.Fx,
                                                 });
-                                            case eo.LWr.FILTER_IN:
+                                            case ei.LWr.FILTER_IN:
                                                 return (0, n.jsx)(J.N, {
                                                     size: "sm",
                                                     color: "currentColor",
-                                                    className: ex.Fx,
+                                                    className: em.Fx,
                                                 });
-                                            case eo.LWr.FILTER_FROM:
+                                            case ei.LWr.FILTER_FROM:
                                                 return (0, n.jsx)(ee.UserIcon, {
                                                     size: "sm",
                                                     color: "currentColor",
-                                                    className: ex.Fx,
+                                                    className: em.Fx,
                                                 });
-                                            case eo.LWr.FILTER_MENTIONS:
+                                            case ei.LWr.FILTER_MENTIONS:
                                                 return (0, n.jsx)(et.X, {
                                                     size: "sm",
                                                     color: "currentColor",
-                                                    className: ex.Fx,
+                                                    className: em.Fx,
                                                 });
-                                            case eo.LWr.FILTER_HAS:
-                                                return (0, n.jsx)(ev, { text: t.text, size: "sm", className: ex.Fx });
+                                            case ei.LWr.FILTER_HAS:
+                                                return (0, n.jsx)(ev, { text: t.text, size: "sm", className: em.Fx });
                                             default:
                                                 return null;
                                         }
@@ -698,12 +698,12 @@ function eq(e) {
                                         return null != t
                                             ? {
                                                   label: (0, n.jsxs)("div", {
-                                                      className: ex.YL,
+                                                      className: em.YL,
                                                       children: [
                                                           (0, n.jsx)(G.E, {
-                                                              variant: "text-sm/medium",
+                                                              variant: "body-sm/medium",
                                                               color: "text-strong",
-                                                              children: P.Ay[eo.LWr.FILTER_IN].key ?? "",
+                                                              children: P.Ay[ei.LWr.FILTER_IN].key ?? "",
                                                           }),
                                                           eS(t),
                                                       ],
@@ -713,7 +713,7 @@ function eq(e) {
                                             : null != l
                                               ? {
                                                     label: (0, n.jsxs)("div", {
-                                                        className: ex.YL,
+                                                        className: em.YL,
                                                         children: [
                                                             (0, n.jsx)(eI, { size: U._3.SIZE_16, user: l }),
                                                             (0, n.jsx)(eR, { user: l }),
@@ -721,18 +721,18 @@ function eq(e) {
                                                     }),
                                                     ariaLabel: l.username,
                                                 }
-                                              : { label: (0, n.jsx)(eg, { label: r }), ariaLabel: r };
+                                              : { label: (0, n.jsx)(ex, { label: r }), ariaLabel: r };
                                     })(t),
-                                    h =
-                                        s === eo.LWr.FILTER_FROM || s === eo.LWr.FILTER_MENTIONS
+                                    d =
+                                        s === ei.LWr.FILTER_FROM || s === ei.LWr.FILTER_MENTIONS
                                             ? (0, n.jsx)(ep, { searchTokenType: s, answer: t.user?.username })
                                             : void 0;
                                 return eu(eN.ROW, {
-                                    icon: o,
+                                    icon: i,
                                     label: c,
-                                    sublabel: h,
+                                    sublabel: d,
                                     ariaLabel: u,
-                                    resultText: i,
+                                    resultText: o,
                                     onSelect: function (e) {
                                         let { selectedIndex: r, searchAutocompleteSelectAction: n } = e;
                                         (f({
@@ -742,46 +742,46 @@ function eq(e) {
                                             selectedAutocompleteGroup: s,
                                             autocompleteCount: l,
                                         }),
-                                            a({ query: i, performSearch: !1, replace: !1 }));
+                                            a({ query: o, performSearch: !1, replace: !1 }));
                                     },
                                 });
                             },
                             getAutocompleteGroupItem: (e) => {
                                 let { group: t, rows: l } = e,
-                                    r = eh(t);
+                                    r = ed(t);
                                 return eu(eN.GROUP, { rows: l, title: r });
                             },
                         });
                         if (0 === l) {
-                            let t = [...h, x({ hasOtherSearchFiltersVisible: !0 })];
+                            let t = [...d, m({ hasOtherSearchFiltersVisible: !0 })];
                             e.push(eu(eN.GROUP, { rows: t, title: ec.intl.string(ec.t.UdhTtk) }));
                         } else {
-                            let t = x({ hasOtherSearchFiltersVisible: !1 });
+                            let t = m({ hasOtherSearchFiltersVisible: !1 });
                             e.push(t);
                         }
                         return (l > 0 && e.push(...r), e);
                     },
-                    [eo.o$q.FILTER]: () => {
+                    [ei.o$q.FILTER]: () => {
                         let { autocompleteCount: e, autocompleteGroups: t } = u({
                             getAutocompleteRowItem: (t) => {
                                 let { result: l, modeType: r, group: s } = t,
-                                    i = ed({ modeType: r, result: l, group: s }),
-                                    o = (function (e) {
+                                    o = eh({ modeType: r, result: l, group: s }),
+                                    i = (function (e) {
                                         let { result: t, group: l } = e,
                                             { channel: r, user: s } = t;
                                         return null != r
                                             ? (0, n.jsx)(es.A, {
                                                   channel: r,
                                                   avatarSize: U._3.SIZE_20,
-                                                  iconClassName: ex.Fx,
+                                                  iconClassName: em.Fx,
                                                   iconSize: "refresh_sm",
                                               })
                                             : null != s
-                                              ? (0, n.jsx)(eI, { size: U._3.SIZE_20, user: s, className: ex.Fx })
-                                              : l === eo.LWr.FILTER_HAS
-                                                ? (0, n.jsx)(ev, { size: "sm", text: t.text, className: ex.Fx })
-                                                : l === eo.LWr.FILTER_AUTHOR_TYPE
-                                                  ? (0, n.jsx)(e_, { size: "sm", text: t.text, className: ex.Fx })
+                                              ? (0, n.jsx)(eI, { size: U._3.SIZE_20, user: s, className: em.Fx })
+                                              : l === ei.LWr.FILTER_HAS
+                                                ? (0, n.jsx)(ev, { size: "sm", text: t.text, className: em.Fx })
+                                                : l === ei.LWr.FILTER_AUTHOR_TYPE
+                                                  ? (0, n.jsx)(e_, { size: "sm", text: t.text, className: em.Fx })
                                                   : null;
                                     })({ result: l, group: s }),
                                     { label: c, ariaLabel: u } = (function (e) {
@@ -790,7 +790,7 @@ function eq(e) {
                                             let e = (0, S.E3)(t);
                                             return {
                                                 label: (0, n.jsx)(G.E, {
-                                                    variant: "text-sm/semibold",
+                                                    variant: "body-sm/semibold",
                                                     color: "text-strong",
                                                     children: e,
                                                 }),
@@ -800,11 +800,11 @@ function eq(e) {
                                         return null != l
                                             ? {
                                                   label: (0, n.jsxs)("div", {
-                                                      className: ex.YL,
+                                                      className: em.YL,
                                                       children: [
                                                           (0, n.jsx)(eR, { user: l }),
                                                           (0, n.jsx)(G.E, {
-                                                              variant: "text-sm/medium",
+                                                              variant: "body-sm/medium",
                                                               color: "text-subtle",
                                                               children: l.username,
                                                           }),
@@ -812,13 +812,13 @@ function eq(e) {
                                                   }),
                                                   ariaLabel: l.username,
                                               }
-                                            : { label: (0, n.jsx)(eg, { label: r }), ariaLabel: r };
+                                            : { label: (0, n.jsx)(ex, { label: r }), ariaLabel: r };
                                     })(l);
                                 return eu(eN.ROW, {
-                                    icon: o,
+                                    icon: i,
                                     label: c,
                                     ariaLabel: u,
-                                    resultText: i,
+                                    resultText: o,
                                     onSelect: function (t) {
                                         let { selectedIndex: r, searchAutocompleteSelectAction: n } = t;
                                         (f({
@@ -828,13 +828,13 @@ function eq(e) {
                                             selectedAutocompleteGroup: s,
                                             autocompleteCount: e,
                                         }),
-                                            a({ query: i, performSearch: !0, replace: !1 }));
+                                            a({ query: o, performSearch: !0, replace: !1 }));
                                     },
                                 });
                             },
                             getAutocompleteGroupItem: (e) => {
                                 let { group: t, rows: l } = e,
-                                    r = eh(t);
+                                    r = ed(t);
                                 return eu(eN.GROUP, { rows: l, title: r });
                             },
                         });
@@ -844,7 +844,7 @@ function eq(e) {
                 p = s.useMemo(() => {
                     let e = [];
                     return (
-                        g.forEach((t) => {
+                        x.forEach((t) => {
                             switch (t.type) {
                                 case eN.ROW:
                                     e.push(t);
@@ -855,60 +855,60 @@ function eq(e) {
                         }),
                         e
                     );
-                }, [g]);
-            return { items: g, itemsData: p };
-        })({ resultsState: r, searchContext: t, selectedChannel: i, setSearchQuery: f });
+                }, [x]);
+            return { items: x, itemsData: p };
+        })({ resultsState: r, searchContext: t, selectedChannel: o, setSearchQuery: f });
     function p(e) {
         let { newSelectedIndex: t, searchAutocompleteSelectAction: l } = e,
             r = t;
         return (
             null == r && (r = u),
             !(r < 0) &&
-                !(r > g.length - 1) &&
-                (g[r].data.onSelect({ searchAutocompleteSelectAction: l, selectedIndex: r }), !0)
+                !(r > x.length - 1) &&
+                (x[r].data.onSelect({ searchAutocompleteSelectAction: l, selectedIndex: r }), !0)
         );
     }
-    function A(e) {
+    function y(e) {
         let t;
-        ((t = u + e) > g.length - 1 ? (t = 0) : t < 0 && (t = g.length - 1), d(t));
+        ((t = u + e) > x.length - 1 ? (t = 0) : t < 0 && (t = x.length - 1), h(t));
     }
-    let E = s.useRef({ itemsData: [], selectedIndex: -1, modeType: r.mode.type, query: r.query });
+    let A = s.useRef({ itemsData: [], selectedIndex: -1, modeType: r.mode.type, query: r.query });
     s.useEffect(() => {
-        let { itemsData: e, selectedIndex: t, modeType: l, query: n } = E.current,
+        let { itemsData: e, selectedIndex: t, modeType: l, query: n } = A.current,
             s = r.mode.type,
             a = r.query;
-        if (s !== l) s === eo.o$q.FILTER ? d(0) : d(-1);
-        else if (s === eo.o$q.FILTER && r.query !== n && g.length > 0) d(0);
-        else if (s === eo.o$q.FILTER && 0 === e.length && g.length > 0) d(0);
-        else if (t >= 0 && (t === u || e.length !== g.length)) {
+        if (s !== l) s === ei.o$q.FILTER ? h(0) : h(-1);
+        else if (s === ei.o$q.FILTER && r.query !== n && x.length > 0) h(0);
+        else if (s === ei.o$q.FILTER && 0 === e.length && x.length > 0) h(0);
+        else if (t >= 0 && (t === u || e.length !== x.length)) {
             let l = e[t],
                 r = l?.data.resultText;
             if (null != r) {
-                let e = g.findIndex((e) => e.data.resultText === r);
-                -1 !== e ? d(e) : t >= g.length && d(Math.max(0, g.length - 1));
-            } else t >= g.length && d(Math.max(0, g.length - 1));
+                let e = x.findIndex((e) => e.data.resultText === r);
+                -1 !== e ? h(e) : t >= x.length && h(Math.max(0, x.length - 1));
+            } else t >= x.length && h(Math.max(0, x.length - 1));
         }
-        E.current = { itemsData: g, selectedIndex: u, modeType: s, query: a };
-    }, [g, u, r.mode.type, r.query, d]);
-    let y = s.useRef(null),
+        A.current = { itemsData: x, selectedIndex: u, modeType: s, query: a };
+    }, [x, u, r.mode.type, r.query, h]);
+    let E = s.useRef(null),
         I = r.query;
     return (
         s.useEffect(() => {
             if ("" === I) {
-                y.current = null;
+                E.current = null;
                 return;
             }
-            let e = g.length;
-            y.current !== e &&
-                ((y.current = e), v.O.announce(ec.intl.formatToPlainString(ec.t.ZGVL3g, { count: e }), "polite"));
-        }, [g.length, I]),
+            let e = x.length;
+            E.current !== e &&
+                ((E.current = e), v.O.announce(ec.intl.formatToPlainString(ec.t.ZGVL3g, { count: e }), "polite"));
+        }, [x.length, I]),
         s.useImperativeHandle(c, () => ({
             selectedIndex: u,
             focusNextOption: () => {
-                A(1);
+                y(1);
             },
             focusPreviousOption: () => {
-                A(-1);
+                y(-1);
             },
             selectOption: p,
         })),
@@ -920,8 +920,8 @@ function eq(e) {
             id: l,
             tabIndex: -1,
             "aria-activedescendant": `${l}-${u}`,
-            className: x.length > 0 ? ez.kL : void 0,
-            children: (0, n.jsx)(eG, { items: x, navId: l, selectedIndex: u }),
+            className: m.length > 0 ? ez.kL : void 0,
+            children: (0, n.jsx)(eG, { items: m, navId: l, selectedIndex: u }),
         })
     );
 }
@@ -951,7 +951,7 @@ function eU(e) {
                         searchQuery: W.A.getSearchResultsQuery(t),
                         searchQueryString: b.A.getSearchInputText(r),
                         searchTokenType: l.mode.filter,
-                        searchAutocompleteGroup: eo.x2k.DATES,
+                        searchAutocompleteGroup: ei.x2k.DATES,
                         searchAutocompleteMode: l.mode,
                         isSearchFilterPrefix: !1,
                         isSearchFilterAnswer: !0,
@@ -959,7 +959,7 @@ function eU(e) {
                         searchAutocompleteSelectAction: ef.oi.CLICK,
                     }),
                         b.A.setSearchQuery({
-                            query: e.format(eo.ump) + " ",
+                            query: e.format(ei.ump) + " ",
                             performSearch: !0,
                             replace: !1,
                             resultsState: l,
@@ -975,9 +975,9 @@ function eU(e) {
 }
 let eB = function (e) {
     let { searchContext: t, navId: l, onSelectedIndexChanged: r, ref: s } = e,
-        [a, i] = (0, o.yK)([z.A, m.Ay, f.A], () => {
+        [a, o] = (0, i.yK)([z.A, g.Ay, f.A], () => {
             let e = z.A.getState(t),
-                l = m.Ay.getChannelId();
+                l = g.Ay.getChannelId();
             return [e, f.A.getChannel(l)];
         });
     return (0, S.av)(a.mode.filter)
@@ -988,7 +988,7 @@ let eB = function (e) {
               navId: l,
               onSelectedIndexChanged: r,
               resultsState: a,
-              selectedChannel: i,
+              selectedChannel: o,
           });
 };
 var eY = l(798549);
@@ -1049,15 +1049,15 @@ let e9 = s.memo(function (e) {
         placeholder: r,
         navId: s,
         isShown: a,
-        onChange: i,
-        onKeyDown: o,
+        onChange: o,
+        onKeyDown: i,
         onFocus: c,
         onBlur: u,
     } = e;
     return (0, n.jsx)(L.A, {
         editor: t,
         value: l,
-        onChange: i,
+        onChange: o,
         children: (0, n.jsx)(L.Fo, {
             className: eX.E,
             style: e2,
@@ -1065,7 +1065,7 @@ let e9 = s.memo(function (e) {
             decorate: e3,
             renderLeaf: e6,
             renderPlaceholder: e7,
-            onKeyDown: o,
+            onKeyDown: i,
             onFocus: c,
             onBlur: u,
             onPasteCapture: function (e) {
@@ -1087,13 +1087,13 @@ function e8(e) {
             searchContext: l,
             isSearching: r,
             hasResults: a,
-            keyboardModeEnabled: i,
+            keyboardModeEnabled: o,
             onSearch: c,
             placeholder: u,
         } = e,
-        h = (0, S.bS)(l),
-        d = e1(h),
-        [x] = s.useState(() => {
+        d = (0, S.bS)(l),
+        h = e1(d),
+        [m] = s.useState(() => {
             let e = (function (e) {
                 let { insertText: t, deleteBackward: l, deleteForward: r } = e;
                 return (
@@ -1119,11 +1119,11 @@ function e8(e) {
                     e
                 );
             })((0, L.o$)((0, j.ie)()));
-            return ((e.children = [{ type: "line", children: [{ text: d }] }]), (e.selection = null), e);
+            return ((e.children = [{ type: "line", children: [{ text: h }] }]), (e.selection = null), e);
         }),
-        [p] = s.useState(() => [...x.children]),
-        [A, I] = s.useState(!1),
-        [C, k] = s.useState(() => d.length > 0),
+        [p] = s.useState(() => [...m.children]),
+        [y, I] = s.useState(!1),
+        [C, k] = s.useState(() => h.length > 0),
         w = s.useRef(null),
         H = s.useRef(null),
         D = s.useRef(null),
@@ -1135,15 +1135,15 @@ function e8(e) {
         [],
     );
     let z = s.useRef(!1),
-        $ = s.useCallback(() => j.bP.string(x), [x]),
+        $ = s.useCallback(() => j.bP.string(m), [m]),
         G = s.useCallback(() => {
             Promise.resolve().then(() => {
-                (null == x.selection && j.gB.select(x, j.KE.end(x, [])), L.rL.focus(x));
+                (null == m.selection && j.gB.select(m, j.KE.end(m, [])), L.rL.focus(m));
             });
-        }, [x]),
+        }, [m]),
         q = s.useCallback(() => {
-            Promise.resolve().then(() => L.rL.blur(x));
-        }, [x]),
+            Promise.resolve().then(() => L.rL.blur(m));
+        }, [m]),
         U = s.useCallback(() => {
             b.A.cleanUpSearchState(l);
         }, [l]),
@@ -1153,20 +1153,20 @@ function e8(e) {
                 let t = e?.relatedTarget,
                     r = document.getElementById(eJ);
                 (null != t && null != r && r.contains(t)) ||
-                    (E.A.setFocused(l, !1), I(!1), 0 === $().length && 0 === e1(h).length && U());
+                    (A.A.setFocused(l, !1), I(!1), 0 === $().length && 0 === e1(d).length && U());
             },
-            [U, h, $, l],
+            [U, d, $, l],
         ),
         Y = s.useCallback(
             (e) => {
-                (j.KE.withoutNormalizing(x, () => {
-                    (j.gB.select(x, { anchor: j.KE.start(x, []), focus: j.KE.end(x, []) }),
-                        j.gB.delete(x),
-                        j.gB.insertText(x, e.replace(/\n/g, "").slice(0, 512)));
+                (j.KE.withoutNormalizing(m, () => {
+                    (j.gB.select(m, { anchor: j.KE.start(m, []), focus: j.KE.end(m, []) }),
+                        j.gB.delete(m),
+                        j.gB.insertText(m, e.replace(/\n/g, "").slice(0, 512)));
                 }),
-                    j.gB.select(x, j.KE.end(x, [])));
+                    j.gB.select(m, j.KE.end(m, [])));
             },
-            [x],
+            [m],
         ),
         K = s.useCallback(
             (e) => {
@@ -1195,15 +1195,15 @@ function e8(e) {
         ),
         Z = s.useCallback(() => {
             if (!Q.current) return;
-            !z.current && L.rL.isFocused(x) && I(!0);
+            !z.current && L.rL.isFocused(m) && I(!0);
             let e = $();
-            (k(e.length > 0), y.A.updateSearchQueryText(l, e));
+            (k(e.length > 0), E.A.updateSearchQueryText(l, e));
             let t = (0, S._o)(e),
-                { selection: r } = x,
+                { selection: r } = m,
                 n = null != r ? j.Q6.end(r).offset : e.length,
                 s = null != r ? j.Q6.start(r).offset : e.length,
                 a = (0, S.zZ)(t, n, s);
-            (g.A.updateAutocompleteQuery({ searchContext: l, tokens: t, cursorScope: a, queryString: e }),
+            (x.A.updateAutocompleteQuery({ searchContext: l, tokens: t, cursorScope: a, queryString: e }),
                 (function (e) {
                     let t;
                     try {
@@ -1224,8 +1224,8 @@ function e8(e) {
                             ? (t.scrollLeft = s - 10)
                             : s > t.scrollLeft + t.offsetWidth && (t.scrollLeft = s - t.offsetWidth + 3);
                     });
-                })(x));
-        }, [x, $, l]),
+                })(m));
+        }, [m, $, l]),
         V = s.useCallback(() => {
             !0 !== D.current?.selectOption({ searchAutocompleteSelectAction: ef.oi.KEY_PRESS }) &&
                 K({ searchQuerySource: ef.Q_.SEARCH_TEXT_INPUT });
@@ -1246,29 +1246,29 @@ function e8(e) {
                         (e.preventDefault(), e.stopPropagation(), D.current?.focusNextOption());
                         return;
                     case "Tab":
-                        if (i) return;
+                        if (o) return;
                         (e.stopPropagation(), (0, O.uS)());
                         return;
                 }
             },
-            [q, $, V, i, Y],
+            [q, $, V, o, Y],
         ),
         J = s.useCallback(
             (e) => {
                 let { query: t, anchor: l, focus: r, performSearch: n, replace: s, searchQuerySource: a } = e,
-                    i = $();
+                    o = $();
                 (" " !== t.charAt(t.length - 1) && (t += " "),
-                    null != l && 0 !== l && " " !== i.charAt(l - 1) && " " !== t.charAt(0) && (t = " " + t),
+                    null != l && 0 !== l && " " !== o.charAt(l - 1) && " " !== t.charAt(0) && (t = " " + t),
                     (t = t.replace(/\n/g, "")),
                     (z.current = !0));
                 try {
-                    (!0 !== n && L.rL.focus(x),
+                    (!0 !== n && L.rL.focus(m),
                         !0 === s
                             ? Y(t)
                             : null != l
-                              ? (j.gB.select(x, { anchor: e0(x, l), focus: e0(x, r ?? l) }),
-                                j.gB.insertText(x, t.slice(0, 512)))
-                              : j.gB.insertText(x, t),
+                              ? (j.gB.select(m, { anchor: e0(m, l), focus: e0(m, r ?? l) }),
+                                j.gB.insertText(m, t.slice(0, 512)))
+                              : j.gB.insertText(m, t),
                         !0 !== n && I(!0),
                         !0 === n && K({ queryString: $(), searchQuerySource: a }));
                 } finally {
@@ -1277,54 +1277,54 @@ function e8(e) {
                     });
                 }
             },
-            [x, $, Y, K],
+            [m, $, Y, K],
         ),
         ee = s.useCallback(
             (e) => {
                 let { prefillCurrentChannel: t } = e;
                 if (!0 !== t) return void G();
-                let r = f.A.getChannel(m.Ay.getChannelId()),
+                let r = f.A.getChannel(g.Ay.getChannelId()),
                     n = null != r ? (0, S.Rt)(r) : null;
-                null == r || (r.isPrivate() && l.type !== eo.I4_.DMS) || r.isObfuscated() || null == n
+                null == r || (r.isPrivate() && l.type !== ei.I4_.DMS) || r.isObfuscated() || null == n
                     ? G()
                     : ((0, R.Tf)({ searchContext: l }),
                       Promise.resolve().then(() => {
-                          (L.rL.focus(x),
+                          (L.rL.focus(m),
                               J({
-                                  query: P.Ay[eo.LWr.FILTER_IN].key + `${n} `,
+                                  query: P.Ay[ei.LWr.FILTER_IN].key + `${n} `,
                                   replace: !0,
                                   searchQuerySource: ef.Q_.SEARCH_TEXT_INPUT,
                               }));
                       }));
             },
-            [x, G, J, l],
+            [m, G, J, l],
         );
     s.useEffect(() => {
         (0, S.Pe)();
     }, [l]);
-    let et = (0, o.bG)([W.A], () => W.A.getQueryText(h) ?? "");
+    let et = (0, i.bG)([W.A], () => W.A.getQueryText(d) ?? "");
     (s.useEffect(() => {
-        j.bP.string(x) !== et && Y(et);
-    }, [et, x, Y]),
+        j.bP.string(m) !== et && Y(et);
+    }, [et, m, Y]),
         s.useEffect(() => {
-            let { selection: e } = x;
+            let { selection: e } = m;
             if (null == e) return;
-            let t = j.bP.string(x).length;
-            (j.Q6.start(e).offset > t || j.Q6.end(e).offset > t) && j.gB.deselect(x);
-        }, [h, x]));
-    let el = (0, o.bG)([W.A], () => W.A.getIsSearchTokensInitialized());
+            let t = j.bP.string(m).length;
+            (j.Q6.start(e).offset > t || j.Q6.end(e).offset > t) && j.gB.deselect(m);
+        }, [d, m]));
+    let el = (0, i.bG)([W.A], () => W.A.getIsSearchTokensInitialized());
     (s.useEffect(() => {
-        el && x.onChange();
-    }, [x, el]),
+        el && m.onChange();
+    }, [m, el]),
         s.useEffect(
             () => (
-                M._.subscribe(eo.jej.PERFORM_SEARCH, K),
-                M._.subscribe(eo.jej.SET_SEARCH_QUERY, J),
-                M._.subscribe(eo.jej.FOCUS_SEARCH, ee),
+                M._.subscribe(ei.jej.PERFORM_SEARCH, K),
+                M._.subscribe(ei.jej.SET_SEARCH_QUERY, J),
+                M._.subscribe(ei.jej.FOCUS_SEARCH, ee),
                 () => {
-                    (M._.unsubscribe(eo.jej.PERFORM_SEARCH, K),
-                        M._.unsubscribe(eo.jej.SET_SEARCH_QUERY, J),
-                        M._.unsubscribe(eo.jej.FOCUS_SEARCH, ee));
+                    (M._.unsubscribe(ei.jej.PERFORM_SEARCH, K),
+                        M._.unsubscribe(ei.jej.SET_SEARCH_QUERY, J),
+                        M._.unsubscribe(ei.jej.FOCUS_SEARCH, ee));
                 }
             ),
             [ee, J, K],
@@ -1333,18 +1333,18 @@ function e8(e) {
             (e) => {
                 (e.preventDefault(), e.stopPropagation(), 0 === $().length)
                     ? G()
-                    : (Y(""), (0, R.iK)({ searchContext: l }), U(), A || q());
+                    : (Y(""), (0, R.iK)({ searchContext: l }), U(), y || q());
             },
-            [q, U, A, G, $, Y, l],
+            [q, U, y, G, $, Y, l],
         ),
         en = s.useCallback(
             (e) => {
-                let t = L.rL.toDOMNode(x, x);
+                let t = L.rL.toDOMNode(m, m);
                 null != e
                     ? t.setAttribute("aria-activedescendant", `${eJ}-${e}`)
                     : t.removeAttribute("aria-activedescendant");
             },
-            [x],
+            [m],
         ),
         es = s.useCallback(
             (e) => {
@@ -1365,8 +1365,8 @@ function e8(e) {
                 }),
             [es, en, l],
         ),
-        ei = s.useCallback(() => {
-            (L.rL.toDOMNode(x, x).removeAttribute("aria-activedescendant"),
+        eo = s.useCallback(() => {
+            (L.rL.toDOMNode(m, m).removeAttribute("aria-activedescendant"),
                 (function (e) {
                     if (null != e.selection) return;
                     let t = L.rL.findDocumentOrShadowRoot(e),
@@ -1381,18 +1381,18 @@ function e8(e) {
                             (r = L.rL.toSlateRange(e, l, { exactMatch: !1, suppressThrow: !0 }));
                     }
                     j.gB.select(e, r ?? j.KE.end(e, []));
-                })(x),
+                })(m),
                 I(!0),
-                E.A.setFocused(l, !0),
+                A.A.setFocused(l, !0),
                 v.O.announce(ec.intl.string(ec.t["5h0QOP"])));
-        }, [x, l]),
+        }, [m, l]),
         eu = u ?? ec.intl.string(ec.t["5h0QOP"]);
     return (0, n.jsx)(_.Y, {
         targetElementRef: w,
         renderPopout: ea,
         position: "bottom",
         animation: _.Y.Animation.NONE,
-        shouldShow: A,
+        shouldShow: y,
         autoInvert: !1,
         children: (e, r) => {
             let { isShown: s } = r;
@@ -1400,7 +1400,7 @@ function e8(e) {
                 className: t,
                 ref: w,
                 children: (0, n.jsx)("div", {
-                    className: T()(eV.$P, { [eV.ho]: C || A, [eV.in]: A }),
+                    className: T()(eV.$P, { [eV.ho]: C || y, [eV.in]: y }),
                     children: (0, n.jsx)(N.vN, {
                         ringTarget: H,
                         children: (0, n.jsxs)(
@@ -1410,14 +1410,14 @@ function e8(e) {
                                 ref: H,
                                 children: [
                                     (0, n.jsx)(e9, {
-                                        editor: x,
+                                        editor: m,
                                         initialValue: p,
                                         placeholder: eu,
                                         navId: eJ,
                                         isShown: s,
                                         onChange: Z,
                                         onKeyDown: X,
-                                        onFocus: ei,
+                                        onFocus: eo,
                                         onBlur: B,
                                     }),
                                     (0, n.jsx)(F.B, {
@@ -1437,53 +1437,53 @@ function e8(e) {
     });
 }
 var e4 = l(921242);
-let te = i()(b.A.fetchMessages, 500);
+let te = o()(b.A.fetchMessages, 500);
 function tt(e) {
     let { searchContext: t, className: l } = e,
         r = (0, S.bS)(t),
-        a = (0, o.bG)([u.Ay], () => u.Ay.keyboardModeEnabled);
+        a = (0, i.bG)([u.Ay], () => u.Ay.keyboardModeEnabled);
     (s.useEffect(() => {
-        g.A.initializeAutocomplete(t);
+        x.A.initializeAutocomplete(t);
     }, [t]),
         s.useEffect(
             () => (
-                h.A.setSelectedSearchContext(r),
+                d.A.setSelectedSearchContext(r),
                 () => {
-                    h.A.setSelectedSearchContext(null);
+                    d.A.setSelectedSearchContext(null);
                 }
             ),
             [r],
         ));
-    let { isSearching: i, hasResults: b } = (0, o.cf)([p.A], () => {
+    let { isSearching: o, hasResults: b } = (0, i.cf)([p.A], () => {
             let e = p.A.getTotalCount(r);
             return { hasResults: null != e && e > 0, isSearching: p.A.getIsFetching(r) };
         }),
-        I = (0, o.bG)([d.Ay, m.Ay, f.A], () => {
-            let e = m.Ay.getCurrentlySelectedChannelId(),
+        I = (0, i.bG)([h.Ay, g.Ay, f.A], () => {
+            let e = g.Ay.getCurrentlySelectedChannelId(),
                 t = f.A.getChannel(e);
-            return d.Ay.getSection(e, t?.isDM()) === eo.YvQ.SEARCH;
+            return h.Ay.getSection(e, t?.isDM()) === ei.YvQ.SEARCH;
         });
     s.useEffect(() => {
-        E.A.setSidebarOpen(t, I);
+        A.A.setSidebarOpen(t, I);
     }, [t, I]);
     let C = (0, c.useHasModalOpen)(e4.b);
     s.useEffect(() => {
-        E.A.setFiltersModalOpen(t, C);
+        A.A.setFiltersModalOpen(t, C);
     }, [t, C]);
     let T = s.useCallback(
             (e) => {
                 let { queryString: l, query: r, searchEverywhere: n, searchQuerySource: s } = e;
-                (E.A.refreshQueryId(t),
+                (A.A.refreshQueryId(t),
                     (0, R.fd)({ searchContext: t, query: r, queryString: l, searchQuerySource: s }),
-                    y.A.updateSearchMode(t, eo.BBH.NEWEST),
+                    E.A.updateSearchMode(t, ei.BBH.NEWEST),
                     te({ searchContext: t, searchQueryString: l, searchEverywhere: n, offset: 0 }));
             },
             [t],
         ),
-        j = (0, o.bG)([x.A, f.A], () => {
-            let e = (0, A._)(t) ? t.guildId : null;
+        j = (0, i.bG)([m.A, f.A], () => {
+            let e = (0, y._)(t) ? t.guildId : null;
             if (null != e) {
-                let t = x.A.getGuild(e);
+                let t = m.A.getGuild(e);
                 return null == t ? null : t.name;
             }
             let l = (0, S._b)(t);
@@ -1495,7 +1495,7 @@ function tt(e) {
         }),
         L = s.useMemo(
             () =>
-                t.type === eo.I4_.DMS
+                t.type === ei.I4_.DMS
                     ? ec.intl.string(ec.t.m7OrlR)
                     : null != j
                       ? ec.intl.formatToPlainString(ec.t.LDZtFO, { name: j })
@@ -1505,7 +1505,7 @@ function tt(e) {
     return (0, n.jsx)(e8, {
         className: l,
         searchContext: t,
-        isSearching: i,
+        isSearching: o,
         hasResults: b,
         keyboardModeEnabled: a,
         onSearch: T,

@@ -10,7 +10,7 @@ let l = function (e) {
         u = (0, s.fw)(l);
     return (0, r.jsx)(i.E, {
         tag: "span",
-        variant: "heading-md/medium",
+        variant: "heading-sm/medium",
         color: "text-strong",
         className: n,
         lineClamp: 1,

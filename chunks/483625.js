@@ -38,7 +38,7 @@ function n(A) {
                                 ? (0, l.jsx)(V.E, {
                                       "data-text": A.username,
                                       className: A.usernameClassName,
-                                      variant: "text-md/semibold",
+                                      variant: "body-md/semibold",
                                       style: A.usernameStyle,
                                       children: A.username,
                                   })
@@ -46,7 +46,7 @@ function n(A) {
                             void 0 !== A.decorations && (0, l.jsx)("div", { className: e.bw, children: A.decorations }),
                         ],
                     }),
-                    null != A.message && (0, l.jsx)(V.E, { variant: "text-md/medium", children: A.message }),
+                    null != A.message && (0, l.jsx)(V.E, { variant: "body-md/medium", children: A.message }),
                     A.asset,
                 ],
             }),

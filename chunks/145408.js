@@ -18,6 +18,6 @@ function a(n) {
     let { muteConfig: t, className: e } = n,
         l = u(t);
     return null != l
-        ? (0, i.jsx)(r.E, { variant: "text-xs/normal", color: "text-muted", className: e, children: l })
+        ? (0, i.jsx)(r.E, { variant: "body-xs/normal", color: "text-muted", className: e, children: l })
         : null;
 }

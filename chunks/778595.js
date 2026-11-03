@@ -183,7 +183,7 @@ function ei(e) {
                                               ],
                                           }),
                                           (0, s.jsx)(D.E, {
-                                              variant: "text-md/normal",
+                                              variant: "body-md/normal",
                                               children: z.intl.format(z.t.gsBb3F, {
                                                   usernameHook: (e, i) =>
                                                       (0, s.jsx)(

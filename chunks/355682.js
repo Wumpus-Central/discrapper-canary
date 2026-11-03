@@ -18,8 +18,8 @@ var i,
     E = t(337358),
     _ = t(180662);
 t(321073);
-var x = t(17928),
-    b = t(280450),
+var b = t(17928),
+    x = t(280450),
     I = (((i = {})[(i.END_EARLY = 0)] = "END_EARLY"), i);
 let S = [];
 var j = t(105292);
@@ -99,8 +99,8 @@ var ed = t(290136),
     eh = t(885574),
     eE = t(473935),
     e_ = t(173936),
-    ex = t(93688),
-    eb = t(509434),
+    eb = t(93688),
+    ex = t(509434),
     eI = t(975807),
     eS = t(22231),
     ej = t(148494),
@@ -196,8 +196,8 @@ var nf = t(534890),
     nh = t(485845),
     nE = t(778712),
     n_ = t(803306),
-    nx = t(966327),
-    nb = t(597929),
+    nb = t(966327),
+    nx = t(597929),
     nI = t(548118),
     nS = t(402860),
     nj = t(260509),
@@ -230,7 +230,7 @@ function nU(e) {
         h = d,
         E = d.getAttribute("data-type"),
         _ = d.getAttribute("data-id"),
-        x = d.getAttribute("data-name");
+        b = d.getAttribute("data-name");
     if (null != A) t = n = i = A.url;
     else
         for (; (0, s.vq)(h);)
@@ -246,17 +246,17 @@ function nU(e) {
                             "" !== h.getAttribute("data-safe-src") &&
                             (i = h.getAttribute("data-safe-src")))),
                 (h = h.parentElement));
-    let b = document.getSelection()?.toString() ?? "";
+    let x = document.getSelection()?.toString() ?? "";
     return (0, l.jsx)(g.f5, {
         value: y,
         children: nP({
             message: o,
             channel: r,
             mediaItem: A,
-            textSelection: b,
+            textSelection: x,
             favoriteableType: E,
             favoriteableId: _,
-            favoriteableName: x,
+            favoriteableName: b,
             itemHref: n,
             itemSrc: t,
             itemSafeSrc: i,
@@ -357,7 +357,7 @@ function nP(e) {
             )).length > 4 && (i.length = 4),
             (s = ei.jW.useSetting()),
             (u = (0, et.Id)(nY)),
-            (0, x.bG)([Q.A, ee.A], () => s && u && en(nY), [nY, u, s]) &&
+            (0, b.bG)([Q.A, ee.A], () => s && u && en(nY), [nY, u, s]) &&
             i.length > 0 &&
             n$.type !== B.lAJ.MEDIA_MENTION_MESSAGE
                 ? (0, l.jsx)(r.rX, {
@@ -386,7 +386,7 @@ function nP(e) {
         tu = (function (e, n) {
             let { reducedMotion: t } = a.useContext(J.C),
                 i = (0, et.Id)(n),
-                s = (0, x.bG)([Q.A, ee.A], () => en(n) && i && !n.isMediaThread(), [n, i]),
+                s = (0, b.bG)([Q.A, ee.A], () => en(n) && i && !n.isMediaThread(), [n, i]),
                 o = (0, Z.D6)(n.getGuildId());
             if (!ei.jW.getSetting() || !s) return null;
             let c = o
@@ -444,7 +444,7 @@ function nP(e) {
             });
         })(n$, nY),
         tg =
-            ((E = (0, x.bG)([b.default], () => b.default.getId())),
+            ((E = (0, b.bG)([x.default], () => x.default.getId())),
             (_ = (0, et.Id)(nY)),
             (I = (0, et.s5)(nY)),
             (0, eM.A)(n$, E) && _ && !I
@@ -517,7 +517,7 @@ function nP(e) {
                     isTranslated: c,
                 } = (function (e) {
                     let [n, t] = a.useState(!1),
-                        i = (0, x.bG)([ng.default], () => ng.default.locale);
+                        i = (0, b.bG)([ng.default], () => ng.default.locale);
                     return {
                         handleTranslate: a.useCallback(
                             async (l, a) => {
@@ -632,7 +632,7 @@ function nP(e) {
                   })
             : null,
         t_ = (0, z.A)(n$, nY),
-        tx = (0, D.A)({
+        tb = (0, D.A)({
             commandType: d.kc.MESSAGE,
             commandTargetId: n$.id,
             channel: nY,
@@ -640,7 +640,7 @@ function nP(e) {
             onHeightUpdate: n3,
             showIcon: !0,
         }),
-        tb =
+        tx =
             n$.state !== B.cmJ.SEND_FAILED
                 ? null
                 : (0, l.jsx)(r.Dr, {
@@ -665,7 +665,7 @@ function nP(e) {
         tj = (0, eg.A)(n$, nY),
         tM =
             ((eo = (0, ny.WU)(nY.getGuildId(), "message_context_menu")),
-            (ew = (0, x.bG)([np.A], () => np.A.getConversationForMessage(nY.id, n$.id) ?? null, [nY.id, n$.id])),
+            (ew = (0, b.bG)([np.A], () => np.A.getConversationForMessage(nY.id, n$.id) ?? null, [nY.id, n$.id])),
             (nU = a.useCallback(() => {
                 null != ew &&
                     (console.log("[ConversationHighlighting]", np.A.getConversation(nY.id, ew)),
@@ -681,7 +681,7 @@ function nP(e) {
                   })
                 : null),
         tD =
-            ((nP = (0, x.bG)([na.A], () => na.A.isSpeakingMessage(nY.id, n$.id), [nY, n$])),
+            ((nP = (0, b.bG)([na.A], () => na.A.isSpeakingMessage(nY.id, n$.id), [nY, n$])),
             "" === n$.content
                 ? null
                 : (0, l.jsx)(r.Dr, {
@@ -710,7 +710,7 @@ function nP(e) {
         tT =
             0 ===
             (nk = (function (e) {
-                let n = (0, x.bG)([b.default], () => b.default.getId()),
+                let n = (0, b.bG)([x.default], () => x.default.getId()),
                     { poll: t } = e;
                 if (!e.isPoll() || null == t) return S;
                 let i = [];
@@ -723,16 +723,16 @@ function nP(e) {
                 t = e.interactionMetadata?.authorizing_integration_owners[nh.b.USER_INSTALL],
                 i = e.interactionMetadata?.authorizing_integration_owners[nh.b.GUILD_INSTALL],
                 s = e.interactionMetadata?.user.id,
-                o = (0, x.bG)([e5.default], () => e5.default.getUser(t)),
-                c = (0, x.bG)([nv.A], () => nv.A.getGuild(i)),
+                o = (0, b.bG)([e5.default], () => e5.default.getUser(t)),
+                c = (0, b.bG)([nv.A], () => nv.A.getGuild(i)),
                 d = nD.A.getChannel(e.channel_id),
                 u = d?.getGuildId(),
-                A = (0, x.bG)([e5.default], () => e5.default.getUser(s));
+                A = (0, b.bG)([e5.default], () => e5.default.getUser(s));
             if (
                 (a.useEffect(() => {
                     null == o && null != t && (0, n_.wz)(t);
                 }, [o, t]),
-                !(0, nb._)(e))
+                !(0, nx._)(e))
             )
                 return null;
             null == A && (A = new nM.A(e.interactionMetadata?.user));
@@ -760,7 +760,7 @@ function nP(e) {
                         leadingAccessory: { type: "avatar", src: o.getAvatarURL(u, 18) },
                         id: "integration-owner",
                         label: o.username,
-                        iconLeft: () => (0, l.jsx)(nx.A, { user: o, size: nE._3.SIZE_20 }),
+                        iconLeft: () => (0, l.jsx)(nb.A, { user: o, size: nE._3.SIZE_20 }),
                         subtext: j.intl.formatToPlainString(j.t.ShLXXB, { application: e.author.username }),
                     }));
             return (0, l.jsxs)(r.Dr, {
@@ -779,7 +779,7 @@ function nP(e) {
                                       sourceAnalyticsLocations: n,
                                   }),
                               leadingAccessory: { type: "avatar", src: A.getAvatarURL(u, 18) },
-                              iconLeft: () => (0, l.jsx)(nx.A, { user: A, size: nE._3.SIZE_20 }),
+                              iconLeft: () => (0, l.jsx)(nb.A, { user: A, size: nE._3.SIZE_20 }),
                               id: "interaction-user",
                               label: A.username,
                               subtext: j.intl.string(j.t["04gxNg"]),
@@ -791,7 +791,7 @@ function nP(e) {
         tC = (function (e, n) {
             let { reducedMotion: t } = a.useContext(J.C),
                 i = (0, et.Id)(n),
-                s = (0, x.bG)([ee.A], () => ee.A.can(B.xBc.MANAGE_MESSAGES, n) && i, [n, i]),
+                s = (0, b.bG)([ee.A], () => ee.A.can(B.xBc.MANAGE_MESSAGES, n) && i, [n, i]),
                 o = e.reactions.reduce(
                     (e, n) =>
                         n.count_details?.vote != null ||
@@ -843,7 +843,7 @@ function nP(e) {
         })(n$, nY),
         tL =
             ((nB = (0, et.Id)(nY)),
-            !(0, x.bG)([ee.A], () => ee.A.can(B.xBc.MANAGE_MESSAGES, nY) && nB, [nY, nB]) ||
+            !(0, b.bG)([ee.A], () => ee.A.can(B.xBc.MANAGE_MESSAGES, nY) && nB, [nY, nB]) ||
             null == n$.reactions ||
             0 === n$.reactions.length ||
             (n$.isPoll() && !(0, eF.Gh)(n$))
@@ -870,7 +870,7 @@ function nP(e) {
                   })),
         tO = (0, ey.A)(n$, nY),
         tN =
-            ((nF = (0, x.bG)([e4.A], () => e4.A.getGuildId())),
+            ((nF = (0, b.bG)([e4.A], () => e4.A.getGuildId())),
             (nX = (0, e7.Qo)(nF)),
             (0, e9.ul)(n$)
                 ? (0, l.jsx)(r.Dr, {
@@ -883,8 +883,8 @@ function nP(e) {
                   })
                 : null),
         tR =
-            ((nH = (0, x.bG)([eQ.Ay], () => eQ.Ay.get("iar_testing"))),
-            (nz = (0, x.bG)([e5.default], () => e5.default.getCurrentUser())),
+            ((nH = (0, b.bG)([eQ.Ay], () => eQ.Ay.get("iar_testing"))),
+            (nz = (0, b.bG)([e5.default], () => e5.default.getCurrentUser())),
             (0, e9.ul)(n$) && null != nz && nz.isStaff() && nH
                 ? (0, l.jsx)(r.Dr, {
                       id: "staff-test-message-report",
@@ -896,7 +896,7 @@ function nP(e) {
                   })
                 : null),
         tw = (function (e) {
-            let n = (0, x.bG)([e1.A], () => e1.A.hasReportedMessage(e.channel_id, e.id)),
+            let n = (0, b.bG)([e1.A], () => e1.A.hasReportedMessage(e.channel_id, e.id)),
                 t = (0, e2.KB)(e),
                 i = t ? [eW.M.REPORT_TO_MOD_NEW_TAG] : [],
                 [a, s] = (0, e0.kn)(i);
@@ -931,13 +931,13 @@ function nP(e) {
                 E = t > y.length && !h;
             if (!a.useMemo(() => (0, w.i_)(n), [n]) || null == e || 0 === e.length || null == n) return null;
             let _ = e.split(" "),
-                x = _.length;
+                b = _.length;
             try {
                 (0, L.wk)(_, F.bV);
             } catch (e) {
                 return null;
             }
-            function b() {
+            function x() {
                 null == e ||
                     (null != n &&
                         ((0, c.Z_)(),
@@ -970,7 +970,7 @@ function nP(e) {
                                 (0, l.jsx)(r.Dr, {
                                     id: "add-first-rule",
                                     label: j.intl.string(j.t.f72Zqb),
-                                    action: b,
+                                    action: x,
                                     disabled: i,
                                 }),
                             y.map((e) => {
@@ -991,7 +991,7 @@ function nP(e) {
                                         subtext: (0, l.jsx)(G.E, {
                                             color: "text-muted",
                                             className: X.XX,
-                                            variant: "text-xs/normal",
+                                            variant: "body-xs/normal",
                                             children: n.slice(2),
                                         }),
                                         group: "automod-rule-selection",
@@ -1009,7 +1009,7 @@ function nP(e) {
                                         (0, l.jsx)(r.Dr, {
                                             id: "add-another-rule",
                                             label: j.intl.string(j.t["0K5jDE"]),
-                                            action: b,
+                                            action: x,
                                             disabled: i,
                                         }),
                                     ],
@@ -1018,7 +1018,7 @@ function nP(e) {
                     })),
                 (0, l.jsx)(r.Dr, {
                     id: "guild-automod-add-selection",
-                    label: j.intl.formatToPlainString(j.t.Kkjv1m, { keywordCount: x }),
+                    label: j.intl.formatToPlainString(j.t.Kkjv1m, { keywordCount: b }),
                     leadingAccessory: { type: "icon", icon: C.ShieldIcon },
                     onFocus: function () {
                         u || (g(!0), m());
@@ -1077,7 +1077,7 @@ function nP(e) {
         tX =
             ((n = { shouldHideMediaOptions: tl }),
             (nV = nQ?.url ?? ""),
-            (nW = (0, x.bG)([nR.Ay], () => nR.Ay.isVideoStatsEnabled(nV))),
+            (nW = (0, b.bG)([nR.Ay], () => nR.Ay.isVideoStatsEnabled(nV))),
             (nZ = a.useCallback(() => {
                 "" !== nV && (0, nR.FM)(nV);
             }, [nV])),
@@ -1146,8 +1146,8 @@ function nP(e) {
                                     id: "open-image-link",
                                     label: h,
                                     action: A,
-                                    leadingAccessory: { type: "icon", icon: ex.W },
-                                    trailingIndicator: { type: "icon", icon: eb.I },
+                                    leadingAccessory: { type: "icon", icon: eb.W },
+                                    trailingIndicator: { type: "icon", icon: ex.I },
                                 }),
                             ],
                         }),
@@ -1167,7 +1167,7 @@ function nP(e) {
             (0, l.jsx)(r.rX, { children: td }),
             (0, l.jsxs)(r.rX, { children: ["" === n0 ? to : null, tu, tv] }),
             (0, l.jsxs)(r.rX, { children: [tg, tA, tm, tf] }),
-            (0, l.jsxs)(r.rX, { children: [tp, ty, th, tE, t_, tx, tb, tI, tS, tj, tM, tD, tT, tG] }),
+            (0, l.jsxs)(r.rX, { children: [tp, ty, th, tE, t_, tb, tx, tI, tS, tj, tM, tD, tT, tG] }),
             (0, l.jsxs)(r.rX, { children: [tC, tL, tO, n6 && tN, n6 && tR, tw] }),
             tr
                 ? (0, l.jsxs)(l.Fragment, { children: [tq, tJ, null == tK && (0, l.jsx)(r.rX, { children: tH })] })

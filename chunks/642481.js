@@ -19,7 +19,7 @@ function p(e) {
             (0, a.jsx)(u.D, { variant: "nitro-sm", className: g.titleRefresh, children: t }),
             (0, a.jsx)("div", {
                 className: g.headerBody,
-                children: (0, a.jsx)(f.E, { variant: "text-sm/normal", color: "none", children: n }),
+                children: (0, a.jsx)(f.E, { variant: "body-sm/normal", color: "none", children: n }),
             }),
         ],
     });
@@ -33,8 +33,8 @@ function E(e) {
             actions: f,
             gradientColor: E,
             onRequestClose: h,
-            position: x,
-            caretConfig: b,
+            position: b,
+            caretConfig: x,
             scrollBehavior: A,
             showCloseButton: _ = !0,
             isCaretHoverable: N = !1,
@@ -43,11 +43,11 @@ function E(e) {
             onNudgeChange: j,
             ...I
         } = e,
-        [T, y] = l.useState(x ?? "top");
+        [y, T] = l.useState(b ?? "top");
     l.useEffect(() => {
-        null != x && y(x);
-    }, [x]);
-    let C = l.useMemo(() => ({ align: b?.align ?? "center", customOffset: b?.customOffset }), [b]),
+        null != b && T(b);
+    }, [b]);
+    let C = l.useMemo(() => ({ align: x?.align ?? "center", customOffset: x?.customOffset }), [x]),
         S = l.useCallback(() => {
             h?.();
         }, [h]),
@@ -58,14 +58,14 @@ function E(e) {
             [h],
         ),
         M = l.useCallback((e) => {
-            y(e);
+            T(e);
         }, []),
         O = N ? g.caretHoverable : void 0,
         P = {
             targetElementRef: I.targetElementRef,
             shouldShow: I.shouldShow,
             hasVideo: I.hasVideo,
-            position: T,
+            position: y,
             caretConfig: C,
             onRequestClose: S,
             gradientColor: E,

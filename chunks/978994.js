@@ -1,67 +1,67 @@
-n.d(l, { default: () => C });
-var i = n(477900),
-    e = n(582128),
-    s = n(702841),
-    a = n(732159),
-    r = n(834730),
-    o = n(289873),
-    u = n(148494),
-    c = n(468689),
-    d = n(734057),
-    h = n(17928),
-    g = n(857182),
-    m = n(560010);
-let f = +n(927813).A.Millis.HOUR;
-var p = n(652215),
-    x = n(105292),
-    A = n(19478);
-function C(t) {
-    let { channelId: l, messageId: n, transitionState: C, onClose: F } = t,
-        w = (0, s.bG)([d.A], () => d.A.getChannel(l)),
-        [j, v] = (function (t) {
-            let [l, n] = e.useState(!1),
-                i = (0, h.bG)([m.A], () => m.A.getFollowerStatsForChannel(t), [t]);
+t.d(n, { default: () => F });
+var i = t(477900),
+    s = t(582128),
+    e = t(702841),
+    o = t(732159),
+    a = t(834730),
+    r = t(289873),
+    u = t(148494),
+    c = t(468689),
+    d = t(734057),
+    h = t(17928),
+    g = t(857182),
+    m = t(560010);
+let f = +t(927813).A.Millis.HOUR;
+var p = t(652215),
+    A = t(105292),
+    C = t(19478);
+function F(l) {
+    let { channelId: n, messageId: t, transitionState: F, onClose: w } = l,
+        b = (0, e.bG)([d.A], () => d.A.getChannel(n)),
+        [x, j] = (function (l) {
+            let [n, t] = s.useState(!1),
+                i = (0, h.bG)([m.A], () => m.A.getFollowerStatsForChannel(l), [l]);
             return (
-                e.useEffect(() => {
-                    (null == i || Date.now() - i.lastFetched > f) && !l
-                        ? (n(!0), g.A.fetchChannelFollowerStats(t))
-                        : null != i && l && n(!1);
-                }, [t, i, l]),
-                [i, l]
+                s.useEffect(() => {
+                    (null == i || Date.now() - i.lastFetched > f) && !n
+                        ? (t(!0), g.A.fetchChannelFollowerStats(l))
+                        : null != i && n && t(!1);
+                }, [l, i, n]),
+                [i, n]
             );
-        })(l),
-        G = w?.guild_id;
-    return (0, i.jsx)(a.u, {
-        title: x.intl.string(x.t.aIz1oV),
-        confirmText: x.intl.string(x.t["cY+Oob"]),
-        onConfirm: () => u.A.crosspostMessage(l, n),
-        transitionState: C,
-        onClose: F,
+        })(n),
+        v = b?.guild_id;
+    return (0, i.jsx)(o.u, {
+        title: A.intl.string(A.t.aIz1oV),
+        confirmText: A.intl.string(A.t["cY+Oob"]),
+        onConfirm: () => u.A.crosspostMessage(n, t),
+        transitionState: F,
+        onClose: w,
         variant: "primary",
-        children: (0, i.jsx)(r.E, {
-            variant: "text-md/normal",
-            className: A.YK,
-            children: v
-                ? (0, i.jsx)(o.y, {})
-                : null != j && null != j.guildsFollowing && j.guildsFollowing > 0
+        children: (0, i.jsx)(a.E, {
+            variant: "body-md/normal",
+            className: C.YK,
+            children: j
+                ? (0, i.jsx)(r.y, {})
+                : null != x && null != x.guildsFollowing && x.guildsFollowing > 0
                   ? (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)(r.E, {
-                                className: A.YK,
-                                variant: "text-sm/normal",
-                                children: x.intl.format(x.t.GCGrNP, { numGuildsFollowing: j.guildsFollowing }),
+                            (0, i.jsx)(a.E, {
+                                className: C.YK,
+                                variant: "body-sm/normal",
+                                children: A.intl.format(A.t.GCGrNP, { numGuildsFollowing: x.guildsFollowing }),
                             }),
-                            (0, i.jsx)(r.E, {
-                                variant: "text-sm/normal",
-                                children: x.intl.format(x.t.IMhGZz, {
+                            (0, i.jsx)(a.E, {
+                                variant: "body-sm/normal",
+                                children: A.intl.format(A.t.IMhGZz, {
                                     onClick: function () {
-                                        null != G && null != F && (F(), c.A.open(G, p.BEX.ANALYTICS));
+                                        null != v && null != w && (w(), c.A.open(v, p.BEX.ANALYTICS));
                                     },
                                 }),
                             }),
                         ],
                     })
-                  : x.intl.string(x.t["8FpqOs"]),
+                  : A.intl.string(A.t["8FpqOs"]),
         }),
     });
 }

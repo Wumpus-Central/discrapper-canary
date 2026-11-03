@@ -29,7 +29,7 @@ function g(t) {
               children: [
                   g &&
                       (0, n.jsx)(a.E, {
-                          variant: "text-sm/semibold",
+                          variant: "body-sm/semibold",
                           color: "text-default",
                           children: m.intl.string(m.t["oC/fU6"]),
                       }),
@@ -37,19 +37,19 @@ function g(t) {
                       (0, n.jsxs)(n.Fragment, {
                           children: [
                               (0, n.jsx)(a.E, {
-                                  variant: "text-sm/semibold",
+                                  variant: "body-sm/semibold",
                                   color: "text-default",
                                   children: m.intl.string(m.t.HXz5An),
                               }),
                               (0, n.jsxs)(n.Fragment, {
                                   children: [
                                       (0, n.jsx)(a.E, {
-                                          variant: "text-sm/semibold",
+                                          variant: "body-sm/semibold",
                                           color: "text-default",
                                           children: "\u2022",
                                       }),
                                       (0, n.jsx)(a.E, {
-                                          variant: "text-sm/semibold",
+                                          variant: "body-sm/semibold",
                                           color: "text-default",
                                           children: m.intl.format(m.t.PrtAqy, {
                                               unignoreHook: (t, i) =>

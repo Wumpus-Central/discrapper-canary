@@ -1,4 +1,4 @@
-n.d(t, { CS: () => D, GQ: () => k, O0: () => P, Pl: () => b, RE: () => N, X1: () => w, hM: () => z, we: () => M });
+n.d(t, { CS: () => D, GQ: () => k, O0: () => P, Pl: () => _, RE: () => N, X1: () => w, hM: () => z, we: () => M });
 var i = n(477900),
     r = n(582128),
     l = n(503698),
@@ -20,15 +20,15 @@ var i = n(477900),
     I = n(302614),
     v = n(233741),
     j = n(119191),
-    C = n(581730),
-    T = n(481484),
-    y = n(105292),
-    _ = n(408454);
-function b(e) {
+    y = n(581730),
+    C = n(481484),
+    T = n(105292),
+    b = n(408454);
+function _(e) {
     let { children: t } = e;
     return (0, i.jsx)("div", {
-        className: _.oB,
-        children: (0, i.jsx)(d.E, { variant: "text-xs/semibold", color: "text-strong", children: t }),
+        className: b.oB,
+        children: (0, i.jsx)(d.E, { variant: "body-xs/semibold", color: "text-strong", children: t }),
     });
 }
 let w = 7e3;
@@ -41,7 +41,7 @@ function N(e, t) {
 function R(e, t) {
     let n = r.useRef(e?.showExtrasHintTimestamp),
         [i, l] = r.useState(!1),
-        s = (0, T.A)(),
+        s = (0, C.A)(),
         a = r.useRef(void 0);
     return (
         r.useEffect(() => {
@@ -78,42 +78,42 @@ function M(e) {
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(I.A, {
-                      className: _.Z,
+                      className: b.Z,
                       children: (0, i.jsx)(u.D, {
-                          className: _.SM,
+                          className: b.SM,
                           onClick: () => {
                               null != r &&
                                   (x.A.setInputLocked(!1, v.A.getTargetPID()),
                                   (0, S.YX)(r.type, { type: S.Z5.KEYBIND_HINT, value: S.IP.OVERLAY_UNLOCKED }));
                           },
                           children: (0, i.jsx)(d.E, {
-                              variant: "text-xs/semibold",
+                              variant: "body-xs/semibold",
                               color: "text-strong",
-                              children: (0, j.sI)((0, C.Jn)(), y.t["1XA04X"], {
+                              children: (0, j.sI)((0, y.Jn)(), T.t["1XA04X"], {
                                   useFlexboxLayout: !0,
                                   highlightAdminWarningIfElevated: !1,
-                                  keybindClassName: _.P,
+                                  keybindClassName: b.P,
                               }),
                           }),
                       }),
                   }),
-                  (0, i.jsx)("div", { className: _.Xk }),
+                  (0, i.jsx)("div", { className: b.Xk }),
               ],
           })
         : (0, i.jsx)("div", {
-              className: _.oB,
-              children: (0, i.jsx)(d.E, { variant: "text-xs/semibold", color: "text-strong", children: t }),
+              className: b.oB,
+              children: (0, i.jsx)(d.E, { variant: "body-xs/semibold", color: "text-strong", children: t }),
           });
 }
 function D(e) {
     let { onClick: t } = e;
-    if ((0, T.A)()) return null;
-    let n = y.intl.string(y.t["3D5yo/"]);
+    if ((0, C.A)()) return null;
+    let n = T.intl.string(T.t["3D5yo/"]);
     return (0, i.jsx)(c.m, {
         text: n,
         "aria-label": n,
         children: (0, i.jsx)(u.D, {
-            className: _.x6,
+            className: b.x6,
             onClick: t,
             children: (0, i.jsx)(h.SettingsIcon, { size: "xxs", color: o.A.colors.INTERACTIVE_TEXT_ACTIVE }),
         }),
@@ -121,13 +121,13 @@ function D(e) {
 }
 function z(e) {
     let { label: t, onClick: n } = e;
-    return (0, T.A)()
+    return (0, C.A)()
         ? null
         : (0, i.jsx)(c.m, {
               text: t,
               "aria-label": t,
               children: (0, i.jsx)(u.D, {
-                  className: _.x6,
+                  className: b.x6,
                   onClick: n,
                   children: (0, i.jsx)(m.EyeSlashIcon, { size: "xxs", color: o.A.colors.INTERACTIVE_TEXT_ACTIVE }),
               }),
@@ -135,14 +135,14 @@ function z(e) {
 }
 function k(e) {
     let { widgetId: t, showAllStreams: n } = e,
-        r = n ? y.intl.string(y.t.q2B3rh) : y.intl.string(y.t.JKGi6o);
-    return (0, T.A)()
+        r = n ? T.intl.string(T.t.q2B3rh) : T.intl.string(T.t.JKGi6o);
+    return (0, C.A)()
         ? null
         : (0, i.jsx)(c.m, {
               text: r,
               "aria-label": r,
               children: (0, i.jsx)(u.D, {
-                  className: s()(_.x6, n && _.vu),
+                  className: s()(b.x6, n && b.vu),
                   onClick: function () {
                       (0, f.cC)(t, { showAllStreams: !n });
                   },
@@ -155,14 +155,14 @@ function k(e) {
 }
 function P(e) {
     let { id: t, pinned: n } = e,
-        r = n ? y.intl.string(y.t.cSu80j) : y.intl.string(y.t.cM8Vnm),
-        l = (0, T.A)();
+        r = n ? T.intl.string(T.t.cSu80j) : T.intl.string(T.t.cM8Vnm),
+        l = (0, C.A)();
     return (0, i.jsx)(c.m, {
         text: r,
         "aria-label": r,
         asContainer: !0,
         children: (0, i.jsx)(u.D, {
-            className: s()(_.x6, n && _.vu),
+            className: s()(b.x6, n && b.vu),
             onClick: () => {
                 l || (0, f.v0)(t);
             },

@@ -1,7 +1,7 @@
 s.d(a, { default: () => L });
 var i = s(477900),
-    t = s(582128),
-    n = s(319060),
+    n = s(582128),
+    t = s(319060),
     r = s(935462),
     l = s(862482),
     c = s(97808),
@@ -15,11 +15,11 @@ var i = s(477900),
     x = s.n(m),
     u = s(178985);
 let _ = function (e) {
-    let { aspectRatio: a, style: s, className: t, children: n } = e;
+    let { aspectRatio: a, style: s, className: n, children: t } = e;
     return (0, i.jsx)("div", {
-        className: x()(u.A, t),
+        className: x()(u.A, n),
         style: { paddingTop: `${(1 / a) * 100}%`, ...s },
-        children: (0, i.jsx)("div", { className: u.v, children: n }),
+        children: (0, i.jsx)("div", { className: u.v, children: t }),
     });
 };
 var p = s(477754),
@@ -29,15 +29,15 @@ var p = s(477754),
     j = s(705751),
     T = s(105292),
     v = s(589478);
-let D = (0, O.xI)(n.A.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
-    R = (0, O.xI)(n.A.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
-    C = (0, O.xI)(n.A.INTERACTION_IFRAME_MODAL_MODAL_MARGIN),
-    g = (0, O.xI)(n.A.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
+let D = (0, O.xI)(t.A.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
+    R = (0, O.xI)(t.A.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
+    C = (0, O.xI)(t.A.INTERACTION_IFRAME_MODAL_MODAL_MARGIN),
+    g = (0, O.xI)(t.A.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
 function L(e) {
-    let { title: a, onClose: s, id: n } = e,
+    let { title: a, onClose: s, id: t } = e,
         { applicationIconURL: m, applicationName: x, queryParams: u, iframeUrl: O } = (0, E.aV)(e),
         { width: L, height: f } = (0, M.A)(),
-        b = t.useMemo(() => {
+        b = n.useMemo(() => {
             let e = Math.min(((f - g - 2 * C) * 16) / 9, R);
             return Math.max(D, Math.min(L - 2 * C, e));
         }, [L, f]);
@@ -61,9 +61,9 @@ function L(e) {
                             children: [
                                 (0, i.jsxs)("div", {
                                     children: [
-                                        (0, i.jsx)(o.D, { variant: "heading-sm/semibold", children: x }),
+                                        (0, i.jsx)(o.D, { variant: "heading-xs/semibold", children: x }),
                                         (0, i.jsx)(I.E, {
-                                            variant: "text-xs/medium",
+                                            variant: "body-xs/medium",
                                             color: "interactive-text-default",
                                             children: a,
                                         }),
@@ -94,7 +94,7 @@ function L(e) {
                         url: O,
                         shouldRefocus: !0,
                         className: v.pU,
-                        contextSource: { type: p.f.INTERACTION, interactionId: n },
+                        contextSource: { type: p.f.INTERACTION, interactionId: t },
                         queryParams: u,
                     }),
                 }),

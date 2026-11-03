@@ -5,16 +5,16 @@ var t = l(477900),
     a = l(702841),
     r = l(189213),
     d = l(224640),
-    c = l(289873),
-    o = l(331322),
+    o = l(289873),
+    c = l(331322),
     u = l(821609),
     m = l(778712),
     _ = l(825484),
     A = l(123292),
     I = l(504394),
     E = l(966327),
-    x = l(964486),
-    g = l(793574),
+    g = l(964486),
+    x = l(793574),
     p = l(688810),
     N = l(915089),
     f = l(960736),
@@ -23,10 +23,10 @@ var t = l(477900),
     j = l(398884),
     L = l(395671),
     P = l(71393),
-    C = l(287809),
-    y = l(174459),
-    M = l(486020),
-    b = l(723702),
+    y = l(287809),
+    C = l(174459),
+    b = l(486020),
+    M = l(723702),
     D = l(19575),
     R = l(972387),
     T = l(539895),
@@ -44,10 +44,10 @@ var t = l(477900),
     F = l(396554);
 function Z(e) {
     let { className: i } = e,
-        { analyticsLocations: l, sourceAnalyticsLocations: s } = (0, p.Ay)(g.A.PREMIUM_UPSELL_TOOLTIP);
+        { analyticsLocations: l, sourceAnalyticsLocations: s } = (0, p.Ay)(x.A.PREMIUM_UPSELL_TOOLTIP);
     return (
         n.useEffect(() => {
-            (y.default.track(w.HAw.PREMIUM_UPSELL_VIEWED, {
+            (C.default.track(w.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: W.e.GUILD_CAP_INLINE_INVITE_MODAL,
                 location: { page: w.liQ.NATIVE_INVITE_MODAL },
                 location_stack: s,
@@ -75,7 +75,7 @@ function Z(e) {
 }
 function H(e) {
     let { transitionState: i, inviteCode: l } = e,
-        { analyticsLocations: n } = (0, p.Ay)(g.A.INVITE_MODAL);
+        { analyticsLocations: n } = (0, p.Ay)(x.A.INVITE_MODAL);
     return (0, t.jsx)(p.f5, {
         value: n,
         children: (0, t.jsx)(r.a, {
@@ -94,8 +94,8 @@ function K(e) {
         l,
         r,
         { transitionState: k } = e;
-    (0, a.bG)([C.default], () => C.default.getCurrentUser()?.premiumType);
-    let U = (0, a.bG)([C.default], () => C.default.getCurrentUser()),
+    (0, a.bG)([y.default], () => y.default.getCurrentUser()?.premiumType);
+    let U = (0, a.bG)([y.default], () => y.default.getCurrentUser()),
         { invite: O, error: S, submitting: V, invite_instance_id: q } = (0, a.cf)([T.A], () => T.A.getProps());
     n.useEffect(() => {
         null != O && null != O.guild && (0, f.dR)(O.approximate_member_count ?? 0, O.code, O.guild.id);
@@ -103,26 +103,26 @@ function K(e) {
     let z = (0, f.uE)();
     (n.useEffect(() => {
         !__OVERLAY__ &&
-            b.isPlatformEmbedded &&
-            (document.hasFocus() || ((0, b.isWindows)() ? D.Ay.minimize() : D.Ay.restore(), D.Ay.focus()));
+            M.isPlatformEmbedded &&
+            (document.hasFocus() || ((0, M.isWindows)() ? D.Ay.minimize() : D.Ay.restore(), D.Ay.focus()));
     }, []),
-        (0, x.Ay)(() => {
+        (0, g.Ay)(() => {
             let e = O?.state === w.elq.EXPIRED || O?.state === w.elq.BANNED || O?.state === w.elq.ERROR;
-            y.default.track(w.HAw.OPEN_MODAL, {
+            C.default.track(w.HAw.OPEN_MODAL, {
                 type: e ? "Invalid Invite" : "Accept Invite",
                 invite_code: O?.code,
                 guild_id: O?.guild?.id,
             });
         }));
     let G = (0, N.GV)(),
-        { analyticsLocations: W } = (0, p.Ay)(g.A.INVITE_MODAL);
+        { analyticsLocations: W } = (0, p.Ay)(x.A.INVITE_MODAL);
     if (null == O || null == U)
         return (0, t.jsx)(d.d, {
             size: "md",
             "aria-labelledby": G,
             transitionState: k,
             onClose: () => (R.A.close(O?.code), Promise.resolve()),
-            children: (0, t.jsx)("div", { className: F.g4, children: (0, t.jsx)(c.y, {}) }),
+            children: (0, t.jsx)("div", { className: F.g4, children: (0, t.jsx)(o.y, {}) }),
         });
     if (O.state === w.elq.EXPIRED || O.state === w.elq.BANNED || O.state === w.elq.ERROR)
         return (0, t.jsx)(H, { transitionState: k, inviteCode: O.code });
@@ -132,7 +132,7 @@ function K(e) {
             "aria-labelledby": G,
             transitionState: k,
             onClose: () => (R.A.close(O.code), Promise.resolve()),
-            children: (0, t.jsx)("div", { className: F.g4, children: (0, t.jsx)(c.y, {}) }),
+            children: (0, t.jsx)("div", { className: F.g4, children: (0, t.jsx)(o.y, {}) }),
         });
     function K() {
         if (null == O) return;
@@ -144,14 +144,14 @@ function K(e) {
         }) || R.A.acceptInvite(O, q);
     }
     function Y() {
-        (y.default.track(w.HAw.INVITE_ACCEPT_DISMISSED, { invite_code: O?.code, guild_id: O?.guild?.id }),
+        (C.default.track(w.HAw.INVITE_ACCEPT_DISMISSED, { invite_code: O?.code, guild_id: O?.guild?.id }),
             R.A.close(O?.code));
     }
     let { guild: $, channel: B, inviter: Q, target_application: J } = O,
         ee = null == O.guild && null == O.channel && null != Q,
         ei = null != $;
     if (null != J) ((i = $?.name), (l = L.Ay.createFromServer(J).getCoverImageURL(1024)));
-    else if (null != $) ((i = $.name), (l = M.Ay.getGuildSplashURL({ id: $.id, splash: $.splash })));
+    else if (null != $) ((i = $.name), (l = b.Ay.getGuildSplashURL({ id: $.id, splash: $.splash })));
     else if (((null == (i = B.name) || "" === i) && null != Q && (i = Q.username), null == i))
         throw Error("no name for group DM invite");
     let el = null != $ && (0, j.Sn)();
@@ -190,7 +190,7 @@ function K(e) {
                                     (0, t.jsxs)("div", {
                                         children: [
                                             el ? (0, t.jsx)(Z, {}) : null,
-                                            (0, t.jsxs)(o.B, {
+                                            (0, t.jsxs)(c.B, {
                                                 gap: 8,
                                                 align: "center",
                                                 children: [
@@ -235,7 +235,7 @@ function K(e) {
                                                         onClick: Y,
                                                         variant: "secondary",
                                                         text: X.intl.string(X.t.ndsK4Z),
-                                                        textVariant: "text-sm/medium",
+                                                        textVariant: "body-sm/medium",
                                                     }),
                                                 ],
                                             }),

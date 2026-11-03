@@ -7,5 +7,5 @@ var i = n(503698),
     s = n(158821);
 function o(e) {
     let { children: t, className: n } = e;
-    return (0, l.jsx)(r.E, { color: "none", className: a()(s.D, n), variant: "text-md/medium", children: t });
+    return (0, l.jsx)(r.E, { color: "none", className: a()(s.D, n), variant: "body-md/medium", children: t });
 }

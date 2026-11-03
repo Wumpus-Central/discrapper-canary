@@ -11,13 +11,13 @@ var n = l(477900),
 function m(e) {
     let { onPublish: t } = e,
         [l, m] = i.useState(!1),
-        [x, f] = i.useState(!1),
-        g = i.useCallback(async () => {
-            (m(!0), f(!1));
+        [f, g] = i.useState(!1),
+        h = i.useCallback(async () => {
+            (m(!0), g(!1));
             try {
                 (await t(), s.O.announce(o.intl.string(c.default.pDzipI)));
             } catch {
-                f(!0);
+                g(!0);
             } finally {
                 m(!1);
             }
@@ -26,16 +26,16 @@ function m(e) {
         className: u.lm,
         children: [
             (0, n.jsx)(a.CircleInformationIcon, { size: "sm", color: "currentColor", className: u.Kk }),
-            x
+            f
                 ? (0, n.jsx)(r.E, {
-                      variant: "text-sm/medium",
+                      variant: "body-sm/medium",
                       color: "text-feedback-critical",
                       className: u.iU,
                       role: "alert",
                       children: o.intl.string(o.t.F8FvUy),
                   })
                 : (0, n.jsx)(r.E, {
-                      variant: "text-sm/medium",
+                      variant: "body-sm/medium",
                       color: "text-muted",
                       className: u.iU,
                       children: o.intl.string(c.default.Z2z85q),
@@ -45,7 +45,7 @@ function m(e) {
                 size: "sm",
                 text: o.intl.string(c.default["yul+0g"]),
                 loading: l,
-                onClick: g,
+                onClick: h,
             }),
         ],
     });

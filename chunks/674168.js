@@ -49,10 +49,10 @@ function N(e) {
                 className: v.ex,
                 children: [
                     (0, i.jsx)(o.t, { size: "sm", color: "currentColor", className: v.ax }),
-                    (0, i.jsx)(c.D, { variant: "heading-sm/semibold", children: T.intl.string(T.t.dTbAxx) }),
+                    (0, i.jsx)(c.D, { variant: "heading-xs/semibold", children: T.intl.string(T.t.dTbAxx) }),
                 ],
             }),
-            (0, i.jsx)(d.E, { variant: "text-sm/normal", children: I }),
+            (0, i.jsx)(d.E, { variant: "body-sm/normal", children: I }),
             O
                 ? (0, i.jsx)(u.$, {
                       onClick: function () {

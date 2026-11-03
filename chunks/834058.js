@@ -18,9 +18,9 @@ if (588245 != n.j) var p = n(866665);
 if (588245 != n.j) var h = n(821609);
 if (588245 != n.j) var j = n(366605);
 if (588245 != n.j) var x = n(952270);
-if (588245 != n.j) var C = n(428678);
-var _ = n(661531),
-    y = n(549254);
+if (588245 != n.j) var y = n(428678);
+var C = n(661531),
+    _ = n(549254);
 if (588245 != n.j) var I = n(445529);
 if (588245 != n.j) var T = n(778712);
 if (588245 != n.j) var S = n(192308);
@@ -93,9 +93,9 @@ function ex(e) {
           })
         : null;
 }
-var eC = n(114129),
-    e_ = n(442325),
-    ey = n(897898),
+var ey = n(114129),
+    eC = n(442325),
+    e_ = n(897898),
     eI = n(854627),
     eT = n(616356),
     eS = n(470710),
@@ -151,7 +151,7 @@ function ez() {
     return (0, i.jsx)(x.EyeSlashIcon, { size: "xs", color: "currentColor", className: ek.wB });
 }
 function eF() {
-    return (0, i.jsx)(C.K, { size: "xs", color: "currentColor", className: ek.wB });
+    return (0, i.jsx)(y.K, { size: "xs", color: "currentColor", className: ek.wB });
 }
 function eH(e) {
     let {
@@ -167,26 +167,26 @@ function eH(e) {
                 null != a && null != r && null != o
                     ? {
                           Color_GradientCenter: a,
-                          Color_InnerRing: r ?? _.A.colors.NITRO_TAB_GRADIENT_INNER_RING ?? r,
+                          Color_InnerRing: r ?? C.A.colors.NITRO_TAB_GRADIENT_INNER_RING ?? r,
                           Color_OuterRing: o,
                           NitroVFX: !1,
                       }
                     : n
                       ? {
-                            Color_GradientCenter: _.A.colors.NITRO_TAB_GRADIENT_CENTER,
-                            Color_InnerRing: _.A.colors.NITRO_TAB_GRADIENT_INNER_RING,
-                            Color_OuterRing: _.A.colors.NITRO_TAB_GRADIENT_OUTER_RING,
+                            Color_GradientCenter: C.A.colors.NITRO_TAB_GRADIENT_CENTER,
+                            Color_InnerRing: C.A.colors.NITRO_TAB_GRADIENT_INNER_RING,
+                            Color_OuterRing: C.A.colors.NITRO_TAB_GRADIENT_OUTER_RING,
                             NitroVFX: !0,
                         }
                       : {
-                            Color_GradientCenter: _.A.colors.STANDARD_TAB_GRADIENT_CENTER,
-                            Color_InnerRing: _.A.colors.STANDARD_TAB_GRADIENT_INNER_RING,
-                            Color_OuterRing: _.A.colors.STANDARD_TAB_GRADIENT_OUTER_RING,
+                            Color_GradientCenter: C.A.colors.STANDARD_TAB_GRADIENT_CENTER,
+                            Color_InnerRing: C.A.colors.STANDARD_TAB_GRADIENT_INNER_RING,
+                            Color_OuterRing: C.A.colors.STANDARD_TAB_GRADIENT_OUTER_RING,
                             NitroVFX: !1,
                         },
             [n, a, r, o],
         );
-    return (0, i.jsx)(y.U, { eventTargetRef: t, className: ek.a1, dataBinding: { ...u, DimmerWidth: (s ?? 0) + 32 } });
+    return (0, i.jsx)(_.U, { eventTargetRef: t, className: ek.a1, dataBinding: { ...u, DimmerWidth: (s ?? 0) + 32 } });
 }
 function eV(e) {
     let {
@@ -205,9 +205,9 @@ function eV(e) {
             "aria-setsize": h,
             listItemRef: j,
             showHoverGradient: x = !1,
-            nitroHoverGradient: C = !1,
-            hoverGradientStart: _,
-            hoverGradientMiddle: y,
+            nitroHoverGradient: y = !1,
+            hoverGradientStart: C,
+            hoverGradientMiddle: _,
             hoverGradientEnd: T,
             ...S
         } = e,
@@ -231,10 +231,10 @@ function eV(e) {
                 x &&
                     (0, i.jsx)(eH, {
                         eventTargetRef: M,
-                        isNitro: C,
+                        isNitro: y,
                         contentWidth: E,
-                        hoverGradientStart: _,
-                        hoverGradientMiddle: y,
+                        hoverGradientStart: C,
+                        hoverGradientMiddle: _,
                         hoverGradientEnd: T,
                     }),
                 (0, i.jsxs)(u.N_, {
@@ -274,16 +274,16 @@ function eW(e) {
             isMobile: h,
             isVR: j,
             nameplate: x,
-            ref: C,
-            "aria-posinset": _,
-            "aria-setsize": y,
+            ref: y,
+            "aria-posinset": C,
+            "aria-setsize": _,
         } = e,
         [b, P] = l.useState(!1),
         [O, X] = l.useState(!1),
         [er, eo] = l.useState(!1),
         ed = l.useRef(null),
         eA = l.useRef(null),
-        eh = C ?? eA,
+        eh = y ?? eA,
         {
             avatarSrc: ej,
             avatarDecorationSrc: eT,
@@ -338,9 +338,9 @@ function eW(e) {
         e.target === e.currentTarget && ed.current?.click();
     }
     function tt(e) {
-        if (!e_.A.isEnabled()) return;
-        let n = e_.A.getTabForChannel(t.id);
-        null != n && (e.preventDefault(), (0, eC.ZD)(n.id));
+        if (!eC.A.isEnabled()) return;
+        let n = eC.A.getTabForChannel(t.id);
+        null != n && (e.preventDefault(), (0, ey.ZD)(n.id));
     }
     function tn(e) {
         let l =
@@ -594,8 +594,8 @@ function eW(e) {
                 onFocus: e9,
                 onBlur: e3,
                 onContextMenu: tn,
-                "aria-setsize": y,
-                "aria-posinset": _,
+                "aria-setsize": _,
+                "aria-posinset": C,
                 children: [
                     eZ ? (0, i.jsx)("div", { className: a()(ek.dM, { [ek.SU]: eX }) }) : null,
                     (0, i.jsxs)(I.H, {
@@ -618,7 +618,7 @@ function eW(e) {
                                 className: a()(ek.nf, ek.Zi),
                                 "aria-label": tc,
                                 onClick: tt,
-                                onAuxClick: (e) => (0, ey.A)(e, t),
+                                onAuxClick: (e) => (0, e_.A)(e, t),
                                 ...l,
                                 children: (0, i.jsx)(L.A, {
                                     ref: ta,
@@ -667,7 +667,7 @@ function eW(e) {
                                     muted: eX,
                                     subText: t.isSystemDM()
                                         ? (0, i.jsx)(E.E, {
-                                              variant: "text-xs/medium",
+                                              variant: "body-xs/medium",
                                               color: "none",
                                               className: ek.W$,
                                               children: (0, F.A)(t.id)
@@ -676,7 +676,7 @@ function eW(e) {
                                           })
                                         : t.isMultiUserDM()
                                           ? (0, i.jsx)(E.E, {
-                                                variant: "text-xs/medium",
+                                                variant: "body-xs/medium",
                                                 color: "none",
                                                 className: ek.W$,
                                                 children: ea.intl.format(ea.t.CxSA5N, {

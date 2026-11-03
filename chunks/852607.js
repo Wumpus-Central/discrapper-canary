@@ -28,12 +28,12 @@ function S(e) {
                 (0, l.jsx)(m.D, { variant: "heading-xl/semibold", children: f.intl.string(f.t.Q03WWV) }),
                 (0, l.jsxs)("p", {
                     children: [
-                        (0, l.jsx)(p.E, { variant: "text-md/normal", children: f.intl.string(f.t.BxPxhI) }),
+                        (0, l.jsx)(p.E, { variant: "body-md/normal", children: f.intl.string(f.t.BxPxhI) }),
                         (0, l.jsx)("br", {}),
-                        (0, l.jsx)(p.E, { variant: "text-md/normal", children: f.intl.string(f.t.Y3fdOp) }),
+                        (0, l.jsx)(p.E, { variant: "body-md/normal", children: f.intl.string(f.t.Y3fdOp) }),
                         (0, l.jsx)("br", {}),
                         (0, l.jsxs)(p.E, {
-                            variant: "text-md/normal",
+                            variant: "body-md/normal",
                             children: [
                                 f.intl.string(f.t.Paa4v4),
                                 "\xa0",
@@ -48,12 +48,12 @@ function S(e) {
         }),
     });
 }
-function g() {
+function y() {
     let e = i.useMemo(() => [{ variant: "primary", text: f.intl.string(f.t.g8vPzy), disabled: !0 }], []);
     return (0, l.jsx)(h.H, { actions: e });
 }
-var I = n(636950);
-function A() {
+var g = n(636950);
+function I() {
     let [e, t] = i.useState(!1);
     async function n() {
         (t(!0), await (0, d.lo)());
@@ -61,19 +61,19 @@ function A() {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(s.A, {}),
-            (0, l.jsx)(o.dZ, { children: (0, l.jsx)(S, { className: I.r, isEmailResent: e, resendEmail: n }) }),
-            (0, l.jsx)(o.UX, { children: (0, l.jsx)(g, {}) }),
+            (0, l.jsx)(o.dZ, { children: (0, l.jsx)(S, { className: g.r, isEmailResent: e, resendEmail: n }) }),
+            (0, l.jsx)(o.UX, { children: (0, l.jsx)(y, {}) }),
         ],
     });
 }
-var y = n(702841),
-    x = n(339048),
-    P = n(428644),
-    v = n(86379),
+var A = n(702841),
+    P = n(339048),
+    v = n(428644),
+    x = n(86379),
     _ = n(545075),
     T = n(590180),
-    N = n(951305),
-    b = n(20742),
+    b = n(951305),
+    N = n(20742),
     j = n(430993),
     R = n(579151),
     O = n(599062);
@@ -81,7 +81,7 @@ function M() {
     let { refreshCategories: e } = (0, R.A)();
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(b.rQ, { title: f.intl.string(f.t["p8+qtU"]) }),
+            (0, l.jsx)(N.rQ, { title: f.intl.string(f.t["p8+qtU"]) }),
             (0, l.jsx)(j.c, { children: (0, l.jsx)(O.h, { onRetry: e, errorOrigin: O.A.GIFT_MODAL }) }),
         ],
     });
@@ -106,12 +106,12 @@ function K(e) {
         })),
         { paymentSources: s, hasFetchedPaymentSources: o } = (0, G.j)(),
         { application: u } = (0, F.V)(),
-        c = (0, v.Hp)(),
+        c = (0, x.Hp)(),
         d = (0, H.gU)(),
         m = (0, H.Hu)(),
-        { isGift: p } = (0, N.Pv)(),
+        { isGift: p } = (0, b.Pv)(),
         [C, h] = i.useState(!0),
-        [f, E] = (0, y.yK)([T.A], () => [T.A.isFetchingCategories, T.A.error]);
+        [f, E] = (0, A.yK)([T.A], () => [T.A.isFetchingCategories, T.A.error]);
     return (i.useEffect(() => {
         let e = null != u;
         m && o && e && h(f);
@@ -158,28 +158,28 @@ function Z(e) {
             availableDefaultPlanId: e.getAvailableDefaultPlanId(),
             isExpressCheckoutEnabled: e.getIsExpressCheckoutEnabled("CheckoutSubscriptionPredicateStep"),
         })),
-        f = (0, v.Hp)(),
+        f = (0, x.Hp)(),
         E = (0, k.A)(),
-        { hasFetchedRelatedSubscriptionPlans: S, subscriptionPriceOptionsLoading: g } = (0, B.Jn)(),
-        { isGift: I } = (0, N.Pv)(),
-        A = (0, D.A)({ isGift: I, skuId: d }),
-        T = !E || !S || g || !c,
-        b = (0, y.bG)([U.A], () => U.A.applicationIdsFetched.has(Y.tv));
-    (0, P.A)(
+        { hasFetchedRelatedSubscriptionPlans: S, subscriptionPriceOptionsLoading: y } = (0, B.Jn)(),
+        { isGift: g } = (0, b.Pv)(),
+        I = (0, D.A)({ isGift: g, skuId: d }),
+        T = !E || !S || y || !c,
+        N = (0, A.bG)([U.A], () => U.A.applicationIdsFetched.has(Y.tv));
+    (0, v.A)(
         "Payment Modal",
         T,
         5,
         {
             hasFetchedSubscriptions: E,
             hasFetchedSubscriptionPlans: S,
-            subscriptionPriceOptionsLoading: g,
+            subscriptionPriceOptionsLoading: y,
             hasFetchedPaymentSources: c,
         },
         { tags: { app_context: "billing" } },
     );
-    let j = (0, W.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: A }));
+    let j = (0, W.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: I }));
     return (i.useEffect(() => {
-        (b || (0, x.LM)(Y.tv),
+        (N || (0, P.LM)(Y.tv),
             T ||
                 f ||
                 (null == s || h
@@ -195,7 +195,7 @@ function Z(e) {
                               ? a(r.pn.PLAN_SELECT)
                               : a(r.pn.SKU_SELECT)
                     : a(r.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: s })));
-    }, [h, s, o, p, f, b, n, T, a, t, d, m, A, C, I, j, u]),
+    }, [h, s, o, p, f, N, n, T, a, t, d, m, I, C, g, j, u]),
     T)
         ? (0, l.jsx)(L.A, {})
         : f
@@ -205,6 +205,6 @@ function Z(e) {
 let q = { key: null, renderStep: (e) => (0, l.jsx)(K, { ...e }), options: { modalSizeGetter: () => "md" } },
     z = { key: null, renderStep: (e) => (0, l.jsx)(Z, { ...e }) },
     $ = [
-        { key: r.pn.AWAITING_PURCHASE_TOKEN_AUTH, renderStep: () => (0, l.jsx)(A, {}) },
+        { key: r.pn.AWAITING_PURCHASE_TOKEN_AUTH, renderStep: () => (0, l.jsx)(I, {}) },
         { key: r.pn.AWAITING_AUTHENTICATION, renderStep: () => (0, l.jsx)(c, {}), options: { renderHeader: !0 } },
     ];

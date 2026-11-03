@@ -40,8 +40,8 @@ function C(e) {
             defaultSelectedItems: L,
             selectedItems: y,
             onSelectionChange: D,
-            activeDescendantIndex: v,
-            shouldFocusWrap: b = !1,
+            activeDescendantIndex: b,
+            shouldFocusWrap: v = !1,
             renderListItem: P,
             renderEmptyState: M,
             maxVisibleItems: U = 5,
@@ -59,11 +59,11 @@ function C(e) {
         K = Y ? y : j,
         $ = (0, l.Ay)({
             id: B,
-            defaultFocused: null != v ? I(B, v) : void 0,
+            defaultFocused: null != b ? I(B, b) : void 0,
             async scrollToEnd() {},
             async scrollToStart() {},
             isEnabled: !u,
-            wrap: b,
+            wrap: v,
             preserveFocusPosition: !1,
             useVirtualFocus: -1 === a,
         }),
@@ -73,7 +73,7 @@ function C(e) {
     }, [C]),
         r.useEffect(() => {
             requestAnimationFrame(() => {
-                if (null != v) {
+                if (null != b) {
                     let [e, t] = (function (e, t) {
                         let n = 0;
                         for (let i = 0; i < e.length; i++) {
@@ -82,11 +82,11 @@ function C(e) {
                             n += r;
                         }
                         return [0, t];
-                    })(z.current, v);
+                    })(z.current, b);
                     V.current?.scrollToIndex({ section: e, row: t });
                 }
             });
-        }, [B, v]));
+        }, [B, b]));
     let { activeIndex: X, handleKeyDown: q } = R(k, H);
     r.useEffect(() => {
         if (null != X && k && -1 !== a) {
@@ -133,11 +133,11 @@ function C(e) {
                 className: m.uN,
                 "data-has-description": a || void 0,
                 children: [
-                    (0, i.jsx)(h.E, { variant: "text-md/medium", color: "currentColor", className: m.vF, children: n }),
+                    (0, i.jsx)(h.E, { variant: "body-md/medium", color: "currentColor", className: m.vF, children: n }),
                     a &&
                         (0, i.jsx)(h.E, {
                             id: t,
-                            variant: "text-sm/normal",
+                            variant: "body-sm/normal",
                             color: "text-subtle",
                             lineClamp: 1,
                             className: m.vL,
@@ -183,7 +183,7 @@ function C(e) {
                           h.E,
                           {
                               "aria-hidden": !0,
-                              variant: "text-sm/semibold",
+                              variant: "body-sm/semibold",
                               color: "text-muted",
                               className: m.SG,
                               children: C[t].label,
@@ -212,7 +212,7 @@ function C(e) {
                         selectionMode: _,
                         selected: l,
                         disabled: u || n.disabled,
-                        focused: t === v,
+                        focused: t === b,
                         onClick: () => {
                             u || n.disabled || Q(n);
                         },

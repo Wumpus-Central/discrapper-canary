@@ -788,7 +788,7 @@ function eZ(e) {
                 children: [
                     (0, u.jsx)(t, { size: "md", color: "currentColor" }),
                     (0, u.jsx)(eL.E, {
-                        variant: "text-md/medium",
+                        variant: "body-md/medium",
                         color: "text-strong",
                         className: e$.We,
                         children: n,
@@ -1054,7 +1054,7 @@ let tr = {
                             align: "start",
                             children: [
                                 (0, u.jsx)(eL.E, {
-                                    variant: "text-sm/normal",
+                                    variant: "body-sm/normal",
                                     color: "text-muted",
                                     children:
                                         "The post-purchase \u201COrbs delivered\u201D confirmation modal for the Nitro orbs bonus. Set the orb amount in the controls, then open it.",
@@ -1078,7 +1078,7 @@ let tr = {
                             align: "start",
                             children: [
                                 (0, u.jsx)(eL.E, {
-                                    variant: "text-sm/normal",
+                                    variant: "body-sm/normal",
                                     color: "text-muted",
                                     children:
                                         "The \u201CYour free Shop item is ready for you\u201D reward modal. Open it to preview.",

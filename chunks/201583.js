@@ -1,4 +1,4 @@
-s.d(e, { default: () => T });
+s.d(e, { default: () => C });
 var i = s(477900),
     n = s(582128),
     a = s(503698),
@@ -21,16 +21,16 @@ var i = s(477900),
     f = s(968459),
     v = s(135570),
     I = s(105292),
-    C = s(364861);
-function T(t) {
-    let { guildId: e, instance: s, onClose: a, transitionState: T } = t,
-        _ = (0, d.bG)([S.A], () => S.A.getStateForGuild(e)?.instructions[s.planId]);
+    b = s(364861);
+function C(t) {
+    let { guildId: e, instance: s, onClose: a, transitionState: C } = t,
+        y = (0, d.bG)([S.A], () => S.A.getStateForGuild(e)?.instructions[s.planId]);
     n.useEffect(() => {
-        null == _ && (0, N.tT)(e, s.planId);
-    }, [e, s.planId, _]);
-    let b = (0, f.A)(s),
-        { handleCopyServerIp: M, animateCopyIcon: k } = (0, E.A)(e, s.id, A.A.GAME_SERVER_INSTRUCTIONS_MODAL, b ?? ""),
-        G = n.useMemo(() => {
+        null == y && (0, N.tT)(e, s.planId);
+    }, [e, s.planId, y]);
+    let T = (0, f.A)(s),
+        { handleCopyServerIp: _, animateCopyIcon: M } = (0, E.A)(e, s.id, A.A.GAME_SERVER_INSTRUCTIONS_MODAL, T ?? ""),
+        k = n.useMemo(() => {
             switch (s.status) {
                 case r.M.STARTING:
                     return I.intl.string(v.default.ud4hxY);
@@ -43,7 +43,7 @@ function T(t) {
     return (0, i.jsxs)(o.d, {
         size: "md",
         paddingSize: "lg",
-        transitionState: T,
+        transitionState: C,
         onClose: a,
         "aria-label": s.name,
         children: [
@@ -58,24 +58,24 @@ function T(t) {
                 title: s.name,
                 subtitle: I.intl.string(v.default["4HqfaU"]),
             }),
-            null == _
+            null == y
                 ? (0, i.jsx)(m.y, {})
                 : (0, i.jsxs)("div", {
-                      className: C.Qs,
+                      className: b.Qs,
                       children: [
-                          null != G && (0, i.jsx)(j.A, { className: C.et, children: G }),
+                          null != k && (0, i.jsx)(j.A, { className: b.et, children: k }),
                           (0, i.jsx)("div", {
-                              className: C.$6,
-                              children: _.map((t, e) =>
+                              className: b.$6,
+                              children: y.map((t, e) =>
                                   (0, i.jsxs)(
                                       "div",
                                       {
-                                          className: C.PM,
+                                          className: b.PM,
                                           children: [
                                               (0, i.jsx)("div", {
-                                                  className: C.CD,
+                                                  className: b.CD,
                                                   children: (0, i.jsx)(p.E, {
-                                                      variant: "text-xs/semibold",
+                                                      variant: "body-xs/semibold",
                                                       color: "text-subtle",
                                                       children: I.intl.formatToPlainString(v.default.oSU1fF, {
                                                           step: e + 1,
@@ -83,7 +83,7 @@ function T(t) {
                                                   }),
                                               }),
                                               (0, i.jsx)(p.E, {
-                                                  variant: "text-sm/normal",
+                                                  variant: "body-sm/normal",
                                                   color: "text-subtle",
                                                   children: g.A.parse(t, !1, { allowLinks: !0 }),
                                               }),
@@ -93,22 +93,22 @@ function T(t) {
                                   ),
                               ),
                           }),
-                          null != b &&
+                          null != T &&
                               (0, i.jsxs)("div", {
-                                  className: C.i7,
+                                  className: b.i7,
                                   children: [
                                       (0, i.jsx)("div", {
-                                          className: l()(C.Nk, k && C.i0),
+                                          className: l()(b.Nk, M && b.i0),
                                           children: (0, i.jsx)(p.E, {
-                                              variant: "text-md/medium",
+                                              variant: "body-md/medium",
                                               color: "text-strong",
-                                              children: b,
+                                              children: T,
                                           }),
                                       }),
                                       (0, i.jsx)(x.$, {
-                                          variant: k ? "active" : "primary",
-                                          text: k ? I.intl.string(I.t.t5VZ88) : I.intl.string(I.t.OpuAlK),
-                                          onClick: M,
+                                          variant: M ? "active" : "primary",
+                                          text: M ? I.intl.string(I.t.t5VZ88) : I.intl.string(I.t.OpuAlK),
+                                          onClick: _,
                                           icon: h.CopyIcon,
                                       }),
                                   ],

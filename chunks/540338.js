@@ -18,20 +18,20 @@ function c(e) {
         "aria-label": d.intl.string(o.default.W4DsVo),
         children: [
             (0, n.jsx)(r.E, {
-                variant: "text-xs/semibold",
+                variant: "body-xs/semibold",
                 color: "text-brand",
                 tag: "span",
                 children: d.intl.string(o.default.W4DsVo),
             }),
             (0, n.jsx)(r.E, {
-                variant: "text-sm/normal",
+                variant: "body-sm/normal",
                 color: "text-default",
                 selectable: !0,
                 children: d.intl.format(o.default.E4Gc7e, { host: f }),
             }),
             "" !== m
                 ? (0, n.jsx)(r.E, {
-                      variant: "text-sm/normal",
+                      variant: "body-sm/normal",
                       color: "text-muted",
                       selectable: !0,
                       children: d.intl.format(o.default["5poqiN"], { reason: m }),
@@ -72,18 +72,18 @@ function f(e) {
               "aria-label": d.intl.string(o.default.Ufr2wk),
               children: [
                   (0, n.jsx)(r.E, {
-                      variant: "text-md/medium",
+                      variant: "body-md/medium",
                       color: "text-strong",
                       children: d.intl.string(o.default.Ufr2wk),
                   }),
                   (0, n.jsx)(r.E, {
-                      variant: "text-sm/normal",
+                      variant: "body-sm/normal",
                       color: "text-muted",
                       children: d.intl.string(o.default.wremls),
                   }),
                   0 === l.length
                       ? (0, n.jsx)(r.E, {
-                            variant: "text-sm/normal",
+                            variant: "body-sm/normal",
                             color: "text-muted",
                             children: d.intl.string(o.default.AweHIi),
                         })
@@ -98,7 +98,7 @@ function f(e) {
                                     "aria-label": e,
                                     children: [
                                         (0, n.jsx)(r.E, {
-                                            variant: "text-sm/normal",
+                                            variant: "body-sm/normal",
                                             color: "text-default",
                                             selectable: !0,
                                             children: e,

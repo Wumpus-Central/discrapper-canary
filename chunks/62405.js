@@ -23,8 +23,8 @@ var s = r(477900),
     N = r(801365),
     h = r(557637),
     v = r(415441),
-    j = r(734736),
-    y = r(617986),
+    y = r(734736),
+    j = r(617986),
     L = r(139384),
     S = r(105292),
     w = r(632036);
@@ -34,8 +34,8 @@ let M = function (e) {
             className: r,
             quest: i,
             autoplay: M = !0,
-            learnMoreStyle: Q = null,
-            learnMoreFontSize: b,
+            learnMoreStyle: b = null,
+            learnMoreFontSize: Q,
             sourceQuestContent: V,
             lazyLoad: D = !1,
             fullWidth: W = !1,
@@ -83,7 +83,7 @@ let M = function (e) {
                         impressionId: U(),
                         questContentPosition: e.questContentPosition,
                     }),
-                    (0, y.mA)({ fromContent: e.questContent, questId: i.id }),
+                    (0, j.mA)({ fromContent: e.questContent, questId: i.id }),
                     e.onClick?.(t));
             },
             [i.id, e, V, U],
@@ -109,7 +109,7 @@ let M = function (e) {
     )
         t = (0, s.jsx)(h._M, {
             id: "QuestRewardTile_rewardTileNitro",
-            children: (e) => (0, s.jsx)(j.A, { ref: e, className: w.eB }),
+            children: (e) => (0, s.jsx)(y.A, { ref: e, className: w.eB }),
         });
     else if (D)
         t = (0, s.jsx)(v.N, {
@@ -156,7 +156,7 @@ let M = function (e) {
             children: (t) =>
                 (0, s.jsx)("img", { ref: t, alt: B, className: l()(w.eB, w.Qz), src: G.url, onLoad: e.onLoadComplete }),
         });
-    return null == Q
+    return null == b
         ? (0, s.jsx)("div", { className: l()(w.al, r, { [w.Ij]: W }), style: k, children: t })
         : (0, s.jsxs)(c.D, {
               className: l()(w.a$, w.al, w.Yi, r, { [w.Ij]: W }),
@@ -164,15 +164,15 @@ let M = function (e) {
               style: k,
               children: [
                   t,
-                  "text" === Q &&
+                  "text" === b &&
                       (0, s.jsx)(d.E, {
                           color: "text-overlay-light",
-                          variant: "text-xs/normal",
+                          variant: "body-xs/normal",
                           className: w.n_,
-                          style: { fontSize: b },
+                          style: { fontSize: Q },
                           children: S.intl.format(S.t.DYAleT, {}),
                       }),
-                  "icon" === Q &&
+                  "icon" === b &&
                       (0, s.jsx)("div", {
                           className: w.n_,
                           children: (0, s.jsx)(m.CircleInformationIcon, { size: "xxs", color: f.A.colors.WHITE.css }),

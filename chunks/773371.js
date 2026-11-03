@@ -44,8 +44,8 @@ var m = n(777334),
     L = n(950869),
     y = n(761821),
     D = n(280450),
-    v = n(760751),
-    b = n(32584),
+    b = n(760751),
+    v = n(32584),
     P = n(174459),
     M = n(19575),
     U = n(9302),
@@ -323,7 +323,7 @@ function ea(e, t) {
                         if (Array.isArray(e) && 0 !== e.length)
                             for (let t of (Q.log("transitionOverlayPIDStatus: Uploaded minidumps", e), e)) {
                                 if (null == t) continue;
-                                let e = null != t.processName ? v.A.getGameByExecutable(t.processName) : null;
+                                let e = null != t.processName ? b.A.getGameByExecutable(t.processName) : null;
                                 P.default.track(G.HAw.OVERLAY_HOOK_CRASHED, {
                                     process_name: t?.processName,
                                     game_name: e?.name ?? null,
@@ -521,11 +521,11 @@ function eA(e) {
 }
 function eh(e, t, n) {
     let i = h.Ay.getGameForPID(e),
-        r = null != i ? v.A.findGame(i) : null;
+        r = null != i ? b.A.findGame(i) : null;
     (et(e, {
         ...{ game_name: i?.name, game_id: null == r ? null : r.id, success: t, overlay_method: g.Ue[g.Ue.Hook], ...n },
     }),
-        (0, o.Vz)(U.OVERLAY_LAYOUT_ID, b.A.getDefaultLayout(U.OVERLAY_LAYOUT_ID), 0, {
+        (0, o.Vz)(U.OVERLAY_LAYOUT_ID, v.A.getDefaultLayout(U.OVERLAY_LAYOUT_ID), 0, {
             width: n.graphics_width,
             height: n.graphics_height,
         }));
@@ -564,7 +564,7 @@ function ep(e) {
         case G.kGV.CONNECT:
             let t = D.default.getToken();
             if (null == t) break;
-            ((0, o.Vz)(U.OVERLAY_LAYOUT_ID, b.A.getDefaultLayout(U.OVERLAY_LAYOUT_ID), 0),
+            ((0, o.Vz)(U.OVERLAY_LAYOUT_ID, v.A.getDefaultLayout(U.OVERLAY_LAYOUT_ID), 0),
                 Promise.all([
                     (function (e, t) {
                         let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new S.A();
@@ -631,7 +631,7 @@ class eN extends a.Ay.Store {
     initialize() {
         !(0, U.supportsLegacy)() ||
             __OVERLAY__ ||
-            (this.waitFor(D.default, A.A, v.A, b.A, N.default, R.A, L.A, O.A, h.Ay),
+            (this.waitFor(D.default, A.A, b.A, v.A, N.default, R.A, L.A, O.A, h.Ay),
             this.syncWith([A.A], eS),
             _.Le(ep, eI),
             D.default.addChangeListener(ef),
@@ -748,7 +748,7 @@ let eC = new eN(
                       let { port: t } = e;
                       K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                       let n = new URLSearchParams();
-                      (n.append("build_id", "2299bc9f31eeb8f21c33d6e35e2df2ad3be18f92"),
+                      (n.append("build_id", "1460b13e4a54d97b738e7d6b1efd4bd8fae8eb99"),
                           n.append("rpc", String(t)),
                           n.append("rpc_auth_token", K),
                           (i = `${location.protocol}//${location.host}/overlay?${n.toString()}`));

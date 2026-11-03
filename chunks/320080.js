@@ -18,13 +18,13 @@ var s = t(477900),
     N = t(793574),
     f = t(688810),
     j = t(420344),
-    E = t(85109),
-    O = t(756377),
-    S = t(741097),
-    y = t(734057),
-    T = t(71393),
-    M = t(232835),
-    b = t(573163),
+    y = t(85109),
+    E = t(756377),
+    O = t(741097),
+    S = t(734057),
+    b = t(71393),
+    T = t(232835),
+    M = t(573163),
     U = t(935208),
     v = t(851109),
     C = t(706341),
@@ -130,13 +130,13 @@ let ef = (0, w.v)((e, n) => ({
     },
 }));
 var ej = t(265872),
-    eE = t(305866),
-    eO = t(933832),
-    eS = t(606096),
-    ey = t(997146),
-    eT = t(980707),
-    eM = t(477782),
-    eb = t(782603),
+    ey = t(305866),
+    eE = t(933832),
+    eO = t(606096),
+    eS = t(997146),
+    eb = t(980707),
+    eT = t(477782),
+    eM = t(782603),
     eU = t(461678),
     ev = t(880457),
     eC = t(568467),
@@ -189,7 +189,7 @@ function eG(e) {
             (h(!1), p(t.id, c));
         },
         renderPopout: (e) =>
-            (0, s.jsx)(eE.l, {
+            (0, s.jsx)(ey.l, {
                 onClick: (e) => e.stopPropagation(),
                 returnRef: x,
                 children: (0, s.jsx)(r, { "data-menu-migrated": !0, renderPopoutProps: e, channel: n, message: t }),
@@ -226,7 +226,7 @@ function eG(e) {
 let ez = {
     [eL.kR.ACK]: {
         type: "standard",
-        Icon: eO.CheckmarkLargeIcon,
+        Icon: eE.CheckmarkLargeIcon,
         label: eD.intl.string(eD.t.e6RscS),
         onClick: (e) => {
             (A.h.dispatch({ type: "NOTIFICATIONS_INBOX_ITEM_ACK", messageId: e.id, channelId: e.channel_id }),
@@ -244,19 +244,19 @@ let ez = {
         type: "menu",
         label: eD.intl.string(eD.t["9p3D9p"]),
         Icon: (e) =>
-            E.A.isMessageBookmarked(e.message.channel_id, e.message.id)
-                ? (0, s.jsx)(eS.BookmarkIcon, { ...e })
-                : (0, s.jsx)(ey.c, { ...e }),
+            y.A.isMessageBookmarked(e.message.channel_id, e.message.id)
+                ? (0, s.jsx)(eO.BookmarkIcon, { ...e })
+                : (0, s.jsx)(eS.c, { ...e }),
         interactionType: R.X8.BOOKMARK,
         Menu: (e) => {
             let { message: n, renderPopoutProps: t } = e,
-                { savedMessage: a, isBookmark: i } = (0, o.cf)([E.A], () => ({
-                    savedMessage: E.A.getSavedMessage(n.channel_id, n.id),
-                    isBookmark: E.A.isMessageBookmarked(n.channel_id, n.id),
+                { savedMessage: a, isBookmark: i } = (0, o.cf)([y.A], () => ({
+                    savedMessage: y.A.getSavedMessage(n.channel_id, n.id),
+                    isBookmark: y.A.isMessageBookmarked(n.channel_id, n.id),
                 })),
                 l = (0, ev.P)({ message: n, savedMessage: a, source: eR.r.NOTIFICATIONS_INBOX }),
                 r = null != a && null != a.saveData.dueAt;
-            return (0, s.jsxs)(eT.W, {
+            return (0, s.jsxs)(eb.W, {
                 "data-menu-migrated-auto": !0,
                 ...t,
                 navId: "message-reminder-create",
@@ -269,11 +269,11 @@ let ez = {
                         : (0, s.jsxs)(s.Fragment, {
                               children: [
                                   i
-                                      ? (0, s.jsx)(eM.Dr, {
+                                      ? (0, s.jsx)(eT.Dr, {
                                             id: "remove-from-for-later",
                                             label: eD.intl.string(eD.t.SvXS1Z),
-                                            icon: eS.BookmarkIcon,
-                                            leadingAccessory: { type: "icon", icon: eS.BookmarkIcon },
+                                            icon: eO.BookmarkIcon,
+                                            leadingAccessory: { type: "icon", icon: eO.BookmarkIcon },
                                             action: () =>
                                                 (0, eC.x)({
                                                     channelId: n.channel_id,
@@ -281,11 +281,11 @@ let ez = {
                                                     displayToast: !0,
                                                 }),
                                         })
-                                      : (0, s.jsx)(eM.Dr, {
+                                      : (0, s.jsx)(eT.Dr, {
                                             id: "create-bookmark",
                                             label: eD.intl.string(eD.t["9p3D9p"]),
-                                            icon: ey.c,
-                                            leadingAccessory: { type: "icon", icon: ey.c },
+                                            icon: eS.c,
+                                            leadingAccessory: { type: "icon", icon: eS.c },
                                             action: () =>
                                                 (0, eC.Y)({
                                                     channelId: n.channel_id,
@@ -294,7 +294,7 @@ let ez = {
                                                     source: eR.r.NOTIFICATIONS_INBOX,
                                                 }),
                                         }),
-                                  (0, s.jsx)(eM.bX, {}),
+                                  (0, s.jsx)(eT.bX, {}),
                               ],
                           }),
                     l,
@@ -304,7 +304,7 @@ let ez = {
     },
     [eL.kR.SETTINGS]: {
         type: "menu",
-        Icon: eb.BellIcon,
+        Icon: eM.BellIcon,
         label: eD.intl.string(eD.t.h850Ss),
         interactionType: R.X8.SETTINGS,
         Menu: (e) => {
@@ -369,21 +369,21 @@ function eF(e) {
             ariaLabel: f,
         } = e,
         j = { width: (0, V.FT)(t), height: (0, V.FT)(t) },
-        E = (0, a.useId)(),
-        O = A.size * eH.Xq,
-        S =
+        y = (0, a.useId)(),
+        E = A.size * eH.Xq,
+        O =
             null != x &&
             (0, s.jsxs)("svg", {
-                width: O,
-                height: O,
-                viewBox: `0 0 ${O} ${O}`,
+                width: E,
+                height: E,
+                viewBox: `0 0 ${E} ${E}`,
                 className: e$.DX,
                 "aria-hidden": !0,
                 children: [
                     (0, s.jsxs)("mask", {
-                        id: E,
+                        id: y,
                         children: [
-                            (0, s.jsx)("rect", { x: 0, y: 0, width: O, height: O, fill: "white" }),
+                            (0, s.jsx)("rect", { x: 0, y: 0, width: E, height: E, fill: "white" }),
                             null != p &&
                                 (function (e, n) {
                                     let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
@@ -407,15 +407,15 @@ function eF(e) {
                                         rx: e.stroke,
                                         fill: "black",
                                     });
-                                })(A, O, I, N),
+                                })(A, E, I, N),
                         ],
                     }),
                     (0, s.jsx)("foreignObject", {
                         x: 0,
                         y: 0,
-                        width: O,
-                        height: O,
-                        mask: `url(#${E})`,
+                        width: E,
+                        height: E,
+                        mask: `url(#${y})`,
                         children: (0, s.jsx)("img", { className: e$.M, src: x, alt: " ", "aria-hidden": !0 }),
                     }),
                 ],
@@ -432,7 +432,7 @@ function eF(e) {
               onMouseLeave: u ?? void 0,
               "aria-label": f ?? void 0,
               "aria-hidden": g,
-              children: [n, S],
+              children: [n, O],
           })
         : (0, s.jsxs)("div", {
               className: l()(e$.iE, h),
@@ -443,7 +443,7 @@ function eF(e) {
               role: "img",
               "aria-label": f ?? void 0,
               "aria-hidden": g,
-              children: [n, S],
+              children: [n, O],
           });
 }
 function eW(e) {
@@ -608,7 +608,7 @@ function eq(e) {
     let { message: n, channel: t, focusProps: i, isSelected: r, isUnread: c, messageCount: d } = e,
         h = t.type === e_.rbe.UNKNOWN ? W.N : (0, el.gU)(t, null),
         g = (0, ei.Ay)(t, !1),
-        m = (0, o.bG)([T.A], () => T.A.getGuild(t.getGuildId())),
+        m = (0, o.bG)([b.A], () => b.A.getGuild(t.getGuildId())),
         { nick: x, colorString: A } = (0, ec.Ay)(n),
         { avatarSrc: p, eventHandlers: I } = (0, eA.A)({
             userId: n.author.id,
@@ -619,8 +619,8 @@ function eq(e) {
         N = t.type !== e_.rbe.GUILD_ANNOUNCEMENT || null == m,
         f = t.isPrivate() ? d : +!!n.mentioned,
         j = c && f > 0,
-        E = (0, eh.y)({ channel: t, message: n, user: n.author, compact: !0, isRepliedMessage: !0 }),
-        O = (0, s.jsx)("div", {
+        y = (0, eh.y)({ channel: t, message: n, user: n.author, compact: !0, isRepliedMessage: !0 }),
+        E = (0, s.jsx)("div", {
             className: ew.Ys,
             inert: !0,
             children: (0, s.jsx)(eg.A, {
@@ -680,14 +680,14 @@ function eq(e) {
                                                   (0, s.jsx)("div", {
                                                       className: ew.Xh,
                                                       style: { color: A ?? void 0 },
-                                                      children: (0, s.jsx)($.A, { children: O }),
+                                                      children: (0, s.jsx)($.A, { children: E }),
                                                   }),
-                                                  E,
+                                                  y,
                                               ],
                                           })
                                         : (0, s.jsx)($.A, {
                                               children: (0, s.jsx)(J.D, {
-                                                  variant: "text-md/semibold",
+                                                  variant: "body-md/semibold",
                                                   style: { color: A ?? void 0 },
                                                   className: ew.Xh,
                                                   children: m.name,
@@ -716,7 +716,7 @@ function eq(e) {
                                 children: [
                                     null !== h && (0, s.jsx)(h, { size: "xxs", className: ew.p4 }),
                                     (0, s.jsxs)(u.E, {
-                                        variant: "text-sm/medium",
+                                        variant: "body-sm/medium",
                                         lineClamp: 1,
                                         className: l()(ew.HA, { [ew.gy]: c, [ew.wH]: r }),
                                         children: [g, !N && ` \xb7 ${x}`],
@@ -824,7 +824,7 @@ function e0(e) {
         inert: !0,
         children: [
             null != c && (0, s.jsx)(c, { size: "xxs", className: ew.p4 }),
-            (0, s.jsx)(u.E, { variant: "text-sm/normal", lineClamp: 1, className: ew.iU, children: o }),
+            (0, s.jsx)(u.E, { variant: "body-sm/normal", lineClamp: 1, className: ew.iU, children: o }),
         ],
     });
 }
@@ -834,9 +834,9 @@ let e1 = (0, a.memo)(
             c = n.message,
             d = (0, R.op)(),
             { params: u } = (0, H.W5)(),
-            h = (0, o.bG)([y.A], () => {
+            h = (0, o.bG)([S.A], () => {
                 if (null == c) return null;
-                let e = y.A.getChannel(n.channelId);
+                let e = S.A.getChannel(n.channelId);
                 return null != e
                     ? e
                     : new ep.jb({
@@ -937,7 +937,7 @@ function nr(e) {
             align: "center",
             children: [
                 (0, s.jsx)(J.D, {
-                    variant: "text-sm/medium",
+                    variant: "body-sm/medium",
                     color: "text-subtle",
                     className: ni.P7,
                     children: (0, e3.capitalize)(eD.intl.string(eL.v7[n]).toLowerCase()),
@@ -967,7 +967,7 @@ function nc() {
                             color: c.A.colors.BACKGROUND_MOD_STRONG,
                         }),
                         (0, s.jsx)(u.E, {
-                            variant: "text-sm/medium",
+                            variant: "body-sm/medium",
                             color: "text-muted",
                             style: { textAlign: "center" },
                             children: eD.intl.string(na.default["O+racd"]),
@@ -1003,24 +1003,24 @@ function nd(e) {
         N = (0, e5.A)(m, p),
         { entrypoint: f, notificationCenterVariant: j } = (0, v.X8)({ location: "NotificationsInboxSidebarList" }),
         {
-            isLoading: E,
-            isLoadingComplete: O,
-            hasLoadedEver: S,
+            isLoading: y,
+            isLoadingComplete: E,
+            hasLoadedEver: O,
         } = (0, o.cf)([L.A], () => ({
             isLoading: L.A.isLoading,
             isLoadingComplete: L.A.isLoadingComplete,
             hasLoadedEver: L.A.hasLoadedEver,
         })),
-        { messageCategoryOpenStates: y, toggleOpenState: T } = ns(),
-        M =
+        { messageCategoryOpenStates: S, toggleOpenState: b } = ns(),
+        T =
             ((n = (0, o.yK)([L.A], () => L.A.getNotifyingChannelIds() ?? [])),
             (0, o.bG)(
-                [L.A, b.Ay],
+                [L.A, M.Ay],
                 () => {
                     let e = L.A.getChannelInfoMap();
                     for (let t of n) {
                         let n = e[t];
-                        if ((null == n || n.loadState === eL.Ve.UNLOADED) && b.Ay.hasUnread(t)) return !0;
+                        if ((null == n || n.loadState === eL.Ve.UNLOADED) && M.Ay.hasUnread(t)) return !0;
                     }
                     return !1;
                 },
@@ -1077,8 +1077,8 @@ function nd(e) {
             );
         }, [t, i]),
         w = 0 === t.length && 0 === i.length,
-        K = w && O,
-        z = !S || (r && w),
+        K = w && E,
+        z = !O || (r && w),
         X = a.useMemo(() => no.filter((e) => D[e].length > 0), [D]),
         P = a.useMemo(() => {
             if (x)
@@ -1088,10 +1088,10 @@ function nd(e) {
                 ];
             let e = [];
             for (let n of X)
-                if ((e.push({ type: "section-header", category: n }), y[n]))
+                if ((e.push({ type: "section-header", category: n }), S[n]))
                     for (let t of D[n]) e.push({ type: "message", messageGroup: t, isUnread: n === eL.Ur.UNREAD });
             return e;
-        }, [x, i, t, X, y, D]),
+        }, [x, i, t, X, S, D]),
         Y = a.useMemo(() => [P.length], [P.length]),
         H = a.useCallback((e, n) => (P[n]?.type === "section-header" ? 32 : 64), [P]),
         $ = a.useCallback(
@@ -1103,17 +1103,17 @@ function nd(e) {
                           nr,
                           {
                               group: t.category,
-                              isOpen: y[t.category],
+                              isOpen: S[t.category],
                               toggleOpenedState: () => {
-                                  let e = y[t.category];
-                                  (T(t.category), (0, R.Ut)({ section: t.category, enabled: !e, viewId: A }));
+                                  let e = S[t.category];
+                                  (b(t.category), (0, R.Ut)({ section: t.category, enabled: !e, viewId: A }));
                               },
                           },
                           t.category,
                       )
                     : u(t.messageGroup, t.isUnread);
             },
-            [P, y, T, A, u],
+            [P, S, b, A, u],
         ),
         F = P[P.length - 1],
         W = F?.type === "section-header",
@@ -1136,14 +1136,14 @@ function nd(e) {
             I.current = 0;
         }, [Z]));
     let J = a.useCallback(() => {
-        let e = no.filter((e) => y[e]).reduce((e, n) => e + D[n].length, 0),
+        let e = no.filter((e) => S[e]).reduce((e, n) => e + D[n].length, 0),
             n = p.current?.getScrollerState();
         return null == n ? 0 : Math.max(0, Math.ceil(n.offsetHeight / 64) - e);
-    }, [y, D]);
+    }, [S, D]);
     return (
         a.useEffect(() => {
-            z || E || I.current >= 2 || 0 >= J() || ((!W || M) && (I.current++, c?.(eL.VA.FILL_SCROLLER)));
-        }, [J, c, z, E, W, M]),
+            z || y || I.current >= 2 || 0 >= J() || ((!W || T) && (I.current++, c?.(eL.VA.FILL_SCROLLER)));
+        }, [J, c, z, y, W, T]),
         (0, R.Hi)({
             notificationCenterVariant: j,
             entrypoint: f,
@@ -1201,7 +1201,7 @@ function nm(e) {
     let { includePanelSpacing: n } = e,
         t = (0, R.op)(),
         { selectedFilter: i } = (0, k.A)(),
-        { readMessages: r, unreadMessages: c } = (0, o.cf)([L.A, b.Ay, T.A], () => {
+        { readMessages: r, unreadMessages: c } = (0, o.cf)([L.A, M.Ay, b.A], () => {
             let e = L.A.getInboxMessages(),
                 n = L.A.oldestDisplayedMessageId,
                 t = [],
@@ -1211,18 +1211,18 @@ function nm(e) {
                     messageId: a.id,
                     channelId: a.channelId,
                     guildId: a.guildId,
-                    ReadStateStore_: b.Ay,
-                    GuildStore_: T.A,
+                    ReadStateStore_: M.Ay,
+                    GuildStore_: b.A,
                 }) || (0, D.z)(a, L.A.selectedItemInfo)
                     ? s.push(a)
                     : (U.default.compare(a.id, n) >= 0 || a.kind === eL.yL.MENTION) && t.push(a);
             return { readMessages: t, unreadMessages: s };
         }),
-        { fetchState: u, loadMore: h } = (0, S.A)(i === eL.Io.BOOKMARKS),
+        { fetchState: u, loadMore: h } = (0, O.A)(i === eL.Io.BOOKMARKS),
         g = a.useCallback(
             (e) => {
                 if (i === eL.Io.BOOKMARKS) {
-                    e !== eL.VA.ON_OPEN && E.A.getBookmarksFetchState() === O.Z7.LOADED_HAS_MORE && h();
+                    e !== eL.VA.ON_OPEN && y.A.getBookmarksFetchState() === E.Z7.LOADED_HAS_MORE && h();
                     return;
                 }
                 i !== eL.Io.MENTIONS && C.A.loadMoreInbox({ viewId: t, loadingTrigger: e });
@@ -1241,9 +1241,9 @@ function nm(e) {
             a.useEffect(() => {
                 null != e &&
                     n.forEach((e) => {
-                        let n = M.A.getMessages(e),
+                        let n = T.A.getMessages(e),
                             t = n.last()?.id,
-                            s = b.Ay.ackMessageId(e),
+                            s = M.Ay.ackMessageId(e),
                             a = n.hasPresent() && n.ready && !n.cached;
                         null != t &&
                             null != s &&
@@ -1261,7 +1261,7 @@ function nm(e) {
                     });
             }, [e, n]);
         })(m ? c : null));
-    let N = (0, o.yK)([E.A], () => E.A.getSavedMessages()),
+    let N = (0, o.yK)([y.A], () => y.A.getSavedMessages()),
         f = a.useMemo(
             () =>
                 N.flatMap((e) => {
@@ -1272,7 +1272,7 @@ function nm(e) {
                               {
                                   id: n.id,
                                   channelId: n.channel_id,
-                                  guildId: y.A.getBasicChannel(n.channel_id)?.guild_id,
+                                  guildId: S.A.getBasicChannel(n.channel_id)?.guild_id,
                                   kind: eL.yL.BOOKMARK,
                                   message: n,
                               },
@@ -1295,10 +1295,10 @@ function nm(e) {
             let i = L.A.getNotifyingChannelIds();
             if (null == i || 0 === i.length) return { message: null, isUnread: !1 };
             let l = i[0],
-                r = b.Ay.getTrackedAckMessageId(l);
+                r = M.Ay.getTrackedAckMessageId(l);
             return null == r
                 ? { message: null, isUnread: !1 }
-                : { message: { id: U.default.atNextMillisecond(r), channel_id: l }, isUnread: b.Ay.hasUnread(l) ?? !1 };
+                : { message: { id: U.default.atNextMillisecond(r), channel_id: l }, isUnread: M.Ay.hasUnread(l) ?? !1 };
         })(w, B);
         null != s &&
             C.A.inboxItemClick({
@@ -1327,7 +1327,7 @@ function nm(e) {
                     renderMessageGroup: nI,
                     messages: i === eL.Io.BOOKMARKS ? f : w,
                     unreadMessages: i === eL.Io.BOOKMARKS ? [] : B,
-                    isLoadingMessages: i === eL.Io.BOOKMARKS && (u === O.Z7.LOADING || u === O.Z7.LOADED_HAS_MORE),
+                    isLoadingMessages: i === eL.Io.BOOKMARKS && (u === E.Z7.LOADING || u === E.Z7.LOADED_HAS_MORE),
                     listName: "notifications-inbox",
                     renderLoadingState: np,
                     ignoreGrouping: i === eL.Io.BOOKMARKS,
@@ -1377,7 +1377,7 @@ function nN(e) {
                   className: nu.XD,
                   children: [
                       (0, s.jsx)(u.E, {
-                          variant: "text-sm/medium",
+                          variant: "body-sm/medium",
                           color: "text-feedback-positive",
                           className: nu.vi,
                           children: eD.intl.string(eD.t["6XMM+D"]),

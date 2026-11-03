@@ -15,14 +15,14 @@ var l = n(477900),
     p = n(285059),
     f = n(698441),
     C = n(974930),
-    E = n(890856),
-    y = n(834730),
+    y = n(890856),
+    E = n(834730),
     A = n(408278),
     _ = n(365199),
     x = n(442433),
     k = n(734057),
-    I = n(71393),
-    b = n(722260),
+    b = n(71393),
+    I = n(722260),
     D = n(492260),
     S = n(103355),
     j = n(988794),
@@ -31,8 +31,8 @@ var l = n(477900),
 function T(t) {
     let { recurrenceId: e, originalScheduledStartTime: i, guildEventId: r, onClick: a, isActive: u } = t,
         c = (0, g.bG)([f.Ay], () => f.Ay.getGuildScheduledEvent(r)),
-        d = (0, b.A)(e, c?.id),
-        o = (0, g.bG)([I.A], () => I.A.getGuild(c?.guild_id)),
+        d = (0, I.A)(e, c?.id),
+        o = (0, g.bG)([b.A], () => b.A.getGuild(c?.guild_id)),
         m = (0, g.bG)([k.A], () => k.A.getChannel(c?.channel_id)),
         { is_canceled: h = !1 } = d ?? {},
         v = d?.scheduled_start_time != null ? new Date(d?.scheduled_start_time) : i,
@@ -73,7 +73,7 @@ function T(t) {
                         });
                 }));
     }
-    return (0, l.jsxs)(E.s, {
+    return (0, l.jsxs)(y.s, {
         className: s()(G.kL, { [G.aD]: h, [G.vk]: null != a, [G.vu]: u }),
         onClick: function (t) {
             (t.stopPropagation(), h || a?.(e));
@@ -91,8 +91,8 @@ function T(t) {
                 className: G.q$,
             }),
             h &&
-                (0, l.jsx)(y.E, {
-                    variant: "text-sm/semibold",
+                (0, l.jsx)(E.E, {
+                    variant: "body-sm/semibold",
                     color: "text-feedback-critical",
                     className: G.a6,
                     children: N.intl.string(N.t.fyBVRm),
@@ -114,8 +114,8 @@ function L(t) {
             recurrenceRule: n,
             guildEventId: r,
             onRecurrenceClick: o,
-            hideScroller: E = !1,
-            activeRecurrenceId: y,
+            hideScroller: y = !1,
+            activeRecurrenceId: E,
         } = t,
         {
             recurrenceStartTimes: A,
@@ -158,13 +158,13 @@ function L(t) {
                 },
             };
         })(r, e, n),
-        k = E ? "div" : a.Ip;
+        k = y ? "div" : a.Ip;
     return (0, l.jsxs)("div", {
         className: w.w5,
         children: [
-            (0, l.jsx)(u.D, { variant: "heading-sm/medium", className: w.R_, children: N.intl.string(N.t["D/jjoa"]) }),
+            (0, l.jsx)(u.D, { variant: "heading-xs/medium", className: w.R_, children: N.intl.string(N.t["D/jjoa"]) }),
             (0, l.jsxs)(k, {
-                className: s()(w.XG, { [w.cq]: !E }),
+                className: s()(w.XG, { [w.cq]: !y }),
                 children: [
                     A.map((t) => {
                         let e = d.default.fromTimestamp(t.getTime());
@@ -175,7 +175,7 @@ function L(t) {
                                 originalScheduledStartTime: t,
                                 guildEventId: r,
                                 onClick: o,
-                                isActive: e === y,
+                                isActive: e === E,
                             },
                             e,
                         );

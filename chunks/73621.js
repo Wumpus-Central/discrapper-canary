@@ -90,8 +90,8 @@ let p = function (e) {
             (0, s.jsxs)("div", {
                 className: g.XE,
                 children: [
-                    (0, s.jsx)(u.E, { variant: "text-md/normal", className: g.Md, children: i }),
-                    (0, s.jsx)(u.E, { variant: "text-sm/normal", color: "text-subtle", children: h }),
+                    (0, s.jsx)(u.E, { variant: "body-md/normal", className: g.Md, children: i }),
+                    (0, s.jsx)(u.E, { variant: "body-sm/normal", color: "text-subtle", children: h }),
                 ],
             }),
             (0, s.jsx)(d.m, {

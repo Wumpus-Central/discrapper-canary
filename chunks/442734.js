@@ -2,8 +2,8 @@ n.d(e, { e: () => f });
 var s = n(477900),
     i = n(661531),
     r = n(602853),
-    a = n(939249),
-    o = n(834730),
+    o = n(939249),
+    a = n(834730),
     l = n(403581),
     u = n(998304),
     c = n(77870),
@@ -17,42 +17,42 @@ function f(t) {
         I = (0, c.ZP)(n),
         T = (0, r.r)(i.A.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START, E.NJ8.DARK).hex(),
         O = (0, r.r)(i.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_DIAMOND_END, E.NJ8.DARK).hex(),
-        L = (0, r.r)(i.A.colors.BACKGROUND_BASE_LOWEST, E.NJ8.DARK).hex(),
-        g = (0, r.r)(i.A.colors.BACKGROUND_BRAND).hex(),
-        y = (0, u.cb)(T, 0.5),
+        y = (0, r.r)(i.A.colors.BACKGROUND_BASE_LOWEST, E.NJ8.DARK).hex(),
+        L = (0, r.r)(i.A.colors.BACKGROUND_BRAND).hex(),
+        g = (0, u.cb)(T, 0.5),
         N = (0, u.cb)(O, 0.5),
         _ = f === C.MA.XBOX_GAME_PASS,
-        S = (0, C.B9)(f);
+        m = (0, C.B9)(f);
     if (null == I) return null;
-    let m = S
+    let S = m
         ? x.intl.formatToPlainString(x.t.l2UfLG, { bonusOrbMultiplier: I })
         : x.intl.formatToPlainString(x.t["G+mKoo"], { bonusOrbMultiplier: I });
     function Q() {
         null != I && ((0, d.gC)(I, f), e?.());
     }
     return _
-        ? (0, s.jsx)(a.D, {
+        ? (0, s.jsx)(o.D, {
               onClick: Q,
-              "aria-label": m,
+              "aria-label": S,
               children: (0, s.jsx)("div", {
                   className: A._,
-                  style: { "--custom-pill-crepe-bg": g },
-                  children: (0, s.jsx)(o.E, { variant: "text-xs/semibold", color: "text-overlay-light", children: m }),
+                  style: { "--custom-pill-crepe-bg": L },
+                  children: (0, s.jsx)(a.E, { variant: "body-xs/semibold", color: "text-overlay-light", children: S }),
               }),
           })
-        : (0, s.jsx)(a.D, {
+        : (0, s.jsx)(o.D, {
               onClick: Q,
-              "aria-label": m,
+              "aria-label": S,
               children: (0, s.jsxs)("div", {
                   className: A.I,
                   style: {
-                      "--custom-pill-gradient-start": y,
+                      "--custom-pill-gradient-start": g,
                       "--custom-pill-gradient-end": N,
-                      "--custom-pill-base-color": L,
+                      "--custom-pill-base-color": y,
                   },
                   children: [
                       (0, s.jsx)(l.t, { size: "xs", color: "white" }),
-                      (0, s.jsx)(o.E, { variant: "text-xs/semibold", color: "text-overlay-light", children: m }),
+                      (0, s.jsx)(a.E, { variant: "body-xs/semibold", color: "text-overlay-light", children: S }),
                   ],
               }),
           });

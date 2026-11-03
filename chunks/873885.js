@@ -14,9 +14,9 @@ var n = t(477900),
     h = t(738104),
     p = t(235986),
     j = t(626584),
-    g = t(936525),
-    C = t(105292),
-    b = t(844768);
+    b = t(936525),
+    g = t(105292),
+    C = t(844768);
 let v = new j.A("TwoWayLink");
 function E(a) {
     let {
@@ -29,10 +29,10 @@ function E(a) {
             onClose: A,
             img: f,
             title: w,
-            body: D,
-            redirectDestination: L,
+            body: y,
+            redirectDestination: D,
         } = a,
-        R = r.useCallback(async () => {
+        L = r.useCallback(async () => {
             let a;
             try {
                 if (((a = await (0, h.d)(e, { twoWayLinkType: l.I.DESKTOP })), null == a))
@@ -44,7 +44,7 @@ function E(a) {
             let { state: t } = (0, N.vA)(a);
             (i()(null != t, "Authorize URL state query parameter must be present"), s?.(t));
         }, [e, k, s]),
-        _ = r.useCallback(
+        R = r.useCallback(
             (a) => {
                 let { callbackCode: t, callbackState: n } = a;
                 n !== j
@@ -56,59 +56,59 @@ function E(a) {
     return (
         r.useEffect(
             () => (
-                x.h.subscribe("USER_CONNECTIONS_LINK_CALLBACK", _),
+                x.h.subscribe("USER_CONNECTIONS_LINK_CALLBACK", R),
                 () => {
-                    x.h.unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", _);
+                    x.h.unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", R);
                 }
             ),
-            [_],
+            [R],
         ),
-        (0, n.jsxs)(g.A, {
+        (0, n.jsxs)(b.A, {
             children: [
                 (0, n.jsxs)(c.rQ, {
                     "data-migration-pending": !0,
                     direction: p.A.Direction.VERTICAL,
-                    className: b.wx,
+                    className: C.wx,
                     separator: !1,
                     children: [
                         (0, n.jsx)(o.E, {
-                            className: b.u1,
-                            variant: "text-xs/semibold",
+                            className: C.u1,
+                            variant: "body-xs/semibold",
                             color: "text-default",
-                            children: C.intl.format(C.t.fHz6eR, { number: 1, total: 2 }),
+                            children: g.intl.format(g.t.fHz6eR, { number: 1, total: 2 }),
                         }),
-                        (0, n.jsxs)("div", { className: b.bm, children: [f, " "] }),
-                        (0, n.jsx)(d.D, { className: b.DD, variant: "heading-xl/semibold", children: w }),
-                        null != A && (0, n.jsx)(c.s_, { "data-migration-pending": !0, className: b.b, onClick: A }),
+                        (0, n.jsxs)("div", { className: C.bm, children: [f, " "] }),
+                        (0, n.jsx)(d.D, { className: C.DD, variant: "heading-xl/semibold", children: w }),
+                        null != A && (0, n.jsx)(c.s_, { "data-migration-pending": !0, className: C.b, onClick: A }),
                     ],
                 }),
                 (0, n.jsxs)(c.$m, {
                     "data-migration-pending": !0,
-                    className: b.rf,
+                    className: C.rf,
                     scrollbarGutter: !1,
                     children: [
-                        (0, n.jsx)(o.E, { tag: "p", variant: "text-md/normal", color: "text-default", children: D }),
+                        (0, n.jsx)(o.E, { tag: "p", variant: "body-md/normal", color: "text-default", children: y }),
                         !t &&
-                            null != L &&
+                            null != D &&
                             (0, n.jsx)(o.E, {
                                 tag: "p",
-                                variant: "text-sm/normal",
+                                variant: "body-sm/normal",
                                 color: "text-default",
-                                children: C.intl.format(C.t.XhlYYn, { redirectUrl: L }),
+                                children: g.intl.format(g.t.XhlYYn, { redirectUrl: D }),
                             }),
                     ],
                 }),
                 (0, n.jsx)(c.jl, {
                     "data-migration-pending": !0,
-                    className: b.qr,
+                    className: C.qr,
                     children: (0, n.jsx)(m.$, {
                         variant: t ? "secondary" : "primary",
-                        text: C.intl.format(t ? C.t["8Laby+"] : C.t["6623tt"], {
+                        text: g.intl.format(t ? g.t["8Laby+"] : g.t["6623tt"], {
                             popoutWindowIcon: {},
                             popoutWindowIconHook: () =>
-                                (0, n.jsx)(u.t, { color: "currentColor", className: b.LE, size: "xs" }),
+                                (0, n.jsx)(u.t, { color: "currentColor", className: C.LE, size: "xs" }),
                         }),
-                        onClick: R,
+                        onClick: L,
                         fullWidth: !0,
                     }),
                 }),

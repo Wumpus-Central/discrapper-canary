@@ -7,10 +7,10 @@ var n = i(834730),
 function l(t) {
     let { rewardName: e } = t;
     return (0, s.jsx)(n.E, {
-        variant: "text-xs/medium",
+        variant: "body-xs/medium",
         className: r.tI,
         children: a.intl.format(a.t.loyTil, {
-            rewardName: (t, i) => (0, s.jsx)(n.E, { variant: "text-xs/medium", className: r.Ht, children: e }, i),
+            rewardName: (t, i) => (0, s.jsx)(n.E, { variant: "body-xs/medium", className: r.Ht, children: e }, i),
             verticalDivider: (t, e) => (0, s.jsx)("div", { className: r.yF }, e),
         }),
     });

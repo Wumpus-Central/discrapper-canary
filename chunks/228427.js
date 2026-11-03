@@ -16,11 +16,11 @@ var l = t(477900),
     C = t(559647),
     A = t(465532),
     p = t(928039),
-    w = t(408018),
-    v = t(915089),
-    b = t(547),
-    j = t(135621),
-    y = t(378570),
+    b = t(408018),
+    w = t(915089),
+    v = t(547),
+    y = t(135621),
+    j = t(378570),
     S = t(223863),
     k = t(151054),
     R = t(734057),
@@ -104,30 +104,30 @@ function $(e) {
             inputValue: o,
             setInputValue: u,
         } = e,
-        c = (0, j.A)(),
+        c = (0, y.A)(),
         d = (0, G.QK)(i),
         h = (0, W.VF)(),
         { textValue: m, richValue: g } = o,
         [f, x] = a.useState(!1),
         C = a.useCallback(() => x(!0), []),
         p = a.useCallback(() => x(!1), []),
-        w = a.useCallback(
+        b = a.useCallback(
             (e, t, l) => {
                 (u({ textValue: t, richValue: l }),
                     null != n && (A.A.saveDraft(n.channel_id, t, _.C.ForwardContextMessage), h(n.channel_id, n.id)));
             },
             [h, n, u],
         ),
-        v = a.useCallback(() => {
+        w = a.useCallback(() => {
             (null != n && A.A.clearDraft(n.channel_id, _.C.ForwardContextMessage), r(m));
         }, [n, r, m]),
-        b = a.useCallback(
-            () => (s || !t || m.length > c || v(), Promise.resolve({ shouldClear: !1, shouldRefocus: !0 })),
-            [v, m, c, t, s],
+        v = a.useCallback(
+            () => (s || !t || m.length > c || w(), Promise.resolve({ shouldClear: !1, shouldRefocus: !0 })),
+            [w, m, c, t, s],
         );
     return (0, l.jsx)(z.Ay, {
         innerClassName: Z.OG,
-        onChange: w,
+        onChange: b,
         placeholder: q.intl.string(q.t.ZroO3G),
         channel: d,
         textValue: m,
@@ -136,7 +136,7 @@ function $(e) {
         onBlur: p,
         onFocus: C,
         focused: f,
-        onSubmit: b,
+        onSubmit: v,
         parentModalKey: J.aU,
         autoCompletePosition: "bottom",
         emojiPickerCloseOnModalOuterClick: !0,
@@ -193,17 +193,17 @@ function eA(e) {
     }
 }
 var ep = t(573435),
-    ew = t(619517),
-    ev = t(127038),
-    eb = t(438729),
-    ej = t(941308),
-    ey = t(253932),
+    eb = t(619517),
+    ew = t(127038),
+    ev = t(438729),
+    ey = t(941308),
+    ej = t(253932),
     eS = t(659674),
     ek = t(739126);
 let eR = { formatInline: !0, allowLinks: !0, allowHeading: !0, allowList: !0, hideSimpleEmbedContent: !1 };
 function e_(e) {
     let { message: n, forwardOptions: t, channel: s } = e,
-        o = ey.hH.useSetting(),
+        o = ej.hH.useSetting(),
         {
             attachments: u,
             embeds: d,
@@ -231,56 +231,56 @@ function e_(e) {
         })({ message: n, channel: s, forwardOptions: t }),
         f = (0, es._S)(g),
         x = a.useMemo(() => n.merge({ content: g.content, embeds: g.embeds, customRenderedContent: null }), [g, n]),
-        { content: C } = (0, ej.A)(h ? x : null, eR),
+        { content: C } = (0, ey.A)(h ? x : null, eR),
         A = u.length,
         p = null,
-        w = null,
-        v = null;
+        b = null,
+        w = null;
     if (A > 0 || d.length > 0) {
-        let e = (0, i.countBy)(u, (e) => (0, ev.NI)(e, !0)),
+        let e = (0, i.countBy)(u, (e) => (0, ew.NI)(e, !0)),
             n = e.IMAGE ?? 0,
             t = e.VIDEO ?? 0;
         (n > 0 && t > 0
-            ? ((p = q.intl.formatToPlainString(q.t.Lr0Top, { image_count: n, video_count: t })), (w = et.s))
+            ? ((p = q.intl.formatToPlainString(q.t.Lr0Top, { image_count: n, video_count: t })), (b = et.s))
             : t > 0
-              ? ((p = q.intl.formatToPlainString(q.t.SJ6pPX, { count: t })), (w = el.S))
+              ? ((p = q.intl.formatToPlainString(q.t.SJ6pPX, { count: t })), (b = el.S))
               : n > 0
-                ? ((p = q.intl.formatToPlainString(q.t.h4pFfU, { count: n })), (w = 1 === n ? ea.ImageIcon : et.s))
-                : ((p = q.intl.formatToPlainString(q.t["89ihS8"], { count: A })), (w = ei.P)),
+                ? ((p = q.intl.formatToPlainString(q.t.h4pFfU, { count: n })), (b = 1 === n ? ea.ImageIcon : et.s))
+                : ((p = q.intl.formatToPlainString(q.t["89ihS8"], { count: A })), (b = ei.P)),
             t > 0 && A === t
-                ? (v = (0, l.jsxs)("div", {
+                ? (w = (0, l.jsxs)("div", {
                       className: en()(ek.cR, ek.JZ),
                       children: [
-                          (0, l.jsx)(ew.Ay, { className: ek.xn, src: u[0].proxy_url, width: 56, height: 56 }),
+                          (0, l.jsx)(eb.Ay, { className: ek.xn, src: u[0].proxy_url, width: 56, height: 56 }),
                           (0, l.jsx)(el.S, { className: ek.uZ, size: "md", color: "white" }),
                       ],
                   }))
                 : A > 0
-                  ? (v = (0, l.jsx)("div", {
+                  ? (w = (0, l.jsx)("div", {
                         className: ek.cR,
-                        children: (0, l.jsx)(ew.Ay, { src: u[0].proxy_url, width: 56, height: 56 }),
+                        children: (0, l.jsx)(eb.Ay, { src: u[0].proxy_url, width: 56, height: 56 }),
                     }))
                   : d[0]?.thumbnail?.proxyURL != null &&
-                    (v = (0, l.jsx)("div", {
+                    (w = (0, l.jsx)("div", {
                         className: ek.cR,
-                        children: (0, l.jsx)(ew.Ay, { src: d[0].thumbnail.proxyURL, width: 56, height: 56 }),
+                        children: (0, l.jsx)(eb.Ay, { src: d[0].thumbnail.proxyURL, width: 56, height: 56 }),
                     })));
     }
     return (
         A > 1 &&
-            null != v &&
-            (v = (0, l.jsxs)("div", {
+            null != w &&
+            (w = (0, l.jsxs)("div", {
                 className: ek.EW,
                 children: [
                     (0, l.jsx)(ep.Ay, {
                         mask: ep.Ay.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
                         width: 56,
                         height: 56,
-                        children: v,
+                        children: w,
                     }),
                     (0, l.jsxs)(c.E, {
                         className: ek.mB,
-                        variant: "text-xs/semibold",
+                        variant: "body-xs/semibold",
                         color: "text-default",
                         children: ["+", A - 1],
                     }),
@@ -292,9 +292,9 @@ function e_(e) {
                 (0, l.jsxs)("div", {
                     className: ek.FG,
                     children: [
-                        null != f && (0, l.jsx)(c.E, { variant: "text-md/medium", children: (0, es.b5)(f) }),
+                        null != f && (0, l.jsx)(c.E, { variant: "body-md/medium", children: (0, es.b5)(f) }),
                         h &&
-                            (0, l.jsx)(eb.Ay, {
+                            (0, l.jsx)(ev.Ay, {
                                 className: en()(ek.vp, A > 0 && ek.NL),
                                 message: n,
                                 content: C,
@@ -304,15 +304,15 @@ function e_(e) {
                             (0, l.jsxs)("div", {
                                 className: ek.kp,
                                 children: [
-                                    null != w &&
-                                        (0, l.jsx)(w, {
+                                    null != b &&
+                                        (0, l.jsx)(b, {
                                             size: "custom",
                                             width: h ? 18 : 20,
                                             color: m.A.colors.TEXT_MUTED,
                                         }),
                                     null != p &&
                                         (0, l.jsx)(c.E, {
-                                            variant: h ? "text-sm/medium" : "text-md/medium",
+                                            variant: h ? "body-sm/medium" : "body-md/medium",
                                             color: "text-muted",
                                             children: p,
                                         }),
@@ -320,19 +320,19 @@ function e_(e) {
                             }),
                     ],
                 }),
-                v,
+                w,
                 null != f && (0, l.jsx)("div", { className: ek.cR, children: (0, l.jsx)(eA, { checkpointData: f }) }),
             ],
         })
     );
 }
 var eI = t(61916);
-let eP = (0, v.Ld)();
+let eP = (0, w.Ld)();
 function eE() {
     return (0, l.jsx)("div", {
         className: Z.wV,
         children: (0, l.jsx)(c.E, {
-            variant: "text-md/normal",
+            variant: "body-md/normal",
             color: "text-muted",
             children: q.intl.string(q.t.V6nAfF),
         }),
@@ -341,7 +341,7 @@ function eE() {
 function eN(e) {
     let {
             message: n,
-            initialSelectedDestinations: v = [],
+            initialSelectedDestinations: w = [],
             forwardOptions: E,
             onClose: N,
             onRequestSent: M,
@@ -369,37 +369,37 @@ function eN(e) {
         es = (0, W.nL)(),
         er = a.useRef(0),
         eo = a.useRef(0),
-        [eu, ec] = a.useState(v),
+        [eu, ec] = a.useState(w),
         ed = eu.length,
         eh = ed >= 5,
         em = (0, G.QK)(eu),
         eg = (0, G.l2)(eu),
         ef = (0, r.bG)([_.A], () => (null != el ? _.A.getDraft(el.channel_id, _.C.ForwardContextMessage) : "")),
-        [ex, eC] = a.useState(() => (0, w.ur)(ef)),
+        [ex, eC] = a.useState(() => (0, b.ur)(ef)),
         eA = (0, G.M6)(eu),
-        ep = (0, j.A)(),
-        [ew, ev] = a.useState(""),
-        { results: eb, updateSearchText: ej } = (0, k.R)({
+        ep = (0, y.A)(),
+        [eb, ew] = a.useState(""),
+        { results: ev, updateSearchText: ey } = (0, k.R)({
             selectedDestinations: eu,
             originDestination: ee,
             includeMissingDMs: !0,
             channelFilter: U,
         }),
-        ey = a.useCallback(
+        ej = a.useCallback(
             (e) => {
-                (ev(e), ej(e));
+                (ew(e), ey(e));
             },
-            [ej],
+            [ey],
         ),
         eS = a.useCallback(
             (e) => {
-                (ey(e), (eo.current += 1), "" !== e && null != Y && null != z && es(Y, z));
+                (ej(e), (eo.current += 1), "" !== e && null != Y && null != z && es(Y, z));
             },
-            [Y, z, es, ey],
+            [Y, z, es, ej],
         ),
         ek = a.useCallback(() => {
-            ey("");
-        }, [ey]),
+            ej("");
+        }, [ej]),
         eR = a.useCallback(async () => {
             (null != Y &&
                 null != z &&
@@ -413,8 +413,8 @@ function eN(e) {
         }, [Y, z, N]),
         eN = a.useRef(null);
     a.useEffect(() => {
-        "" === ew && eN.current?.focus();
-    }, [ew]);
+        "" === eb && eN.current?.focus();
+    }, [eb]);
     let eM = a.useMemo(
             () =>
                 (0, i.throttle)(
@@ -432,7 +432,7 @@ function eN(e) {
         ),
         eF = a.useCallback(
             (e, n) => {
-                null != Y && null != z && ei(Y, z, "" !== ew);
+                null != Y && null != z && ei(Y, z, "" !== eb);
                 let t = !eu.some((n) => {
                     let { type: t, id: l } = n;
                     return t === e.type && l === e.id;
@@ -443,7 +443,7 @@ function eN(e) {
                         u.O.announce(q.intl.formatToPlainString(e, { name: n, count: t ? ed + 1 : ed - 1 }), "polite");
                     }
                     ((er.current += 1),
-                        t && ey(""),
+                        t && ej(""),
                         ec((n) => {
                             let t = n.findIndex((n) => {
                                 let { type: t, id: l } = n;
@@ -455,7 +455,7 @@ function eN(e) {
                         }));
                 }
             },
-            [Y, ed, eh, z, ew, eu, ey, ei],
+            [Y, ed, eh, z, eb, eu, ej, ei],
         ),
         eD = a.useCallback(
             async function (e) {
@@ -496,8 +496,8 @@ function eN(e) {
                 (s && (0, J.Be)(),
                     M?.(),
                     i &&
-                        (await b.A.fetchMessages({ channelId: o[0] }),
-                        (0, y.iN)(o[0], { openTextInVoiceIfVoiceChannel: !0 })));
+                        (await v.A.fetchMessages({ channelId: o[0] }),
+                        (0, j.iN)(o[0], { openTextInVoiceIfVoiceChannel: !0 })));
                 let u = await B.sendForwards(r, o, { ...E, withMessage: a }),
                     c = o.some((e) => {
                         let n = R.A.getChannel(e);
@@ -547,7 +547,7 @@ function eN(e) {
             (null != el && A.A.clearDraft(el.channel_id, _.C.ForwardContextMessage), eO(ex.textValue));
         }, [el, ex.textValue, eO]),
         eV = (0, eI.s)({
-            rowData: eb,
+            rowData: ev,
             message: el,
             originChannel: ea,
             selectedDestinations: eu,
@@ -559,10 +559,10 @@ function eN(e) {
         eG = (0, p.A)("forward-modal", eL),
         eU = a.useMemo(
             () =>
-                eb.length > 0
+                ev.length > 0
                     ? eV
                     : { sections: [1], sectionHeight: 0, renderRow: () => (0, l.jsx)(eE, {}), rowHeight: 72 },
-            [eb, eV],
+            [ev, eV],
         ),
         eH = ed <= 1 ? q.intl.string(q.t.TXNS7S) : q.intl.formatToPlainString(q.t.jWtYUm, { count: ed });
     return (0, l.jsx)(s.hD, {
@@ -581,7 +581,7 @@ function eN(e) {
                         children: [
                             (0, l.jsx)(f.I, {
                                 ref: eN,
-                                query: ew,
+                                query: eb,
                                 onChange: eS,
                                 onClear: ek,
                                 placeholder: q.intl.string(q.t["5h0QOP"]),
@@ -605,7 +605,7 @@ function eN(e) {
                                         ex.textValue.length > 0 &&
                                         (0, l.jsx)(c.E, {
                                             className: Z.Lt,
-                                            variant: "text-sm/normal",
+                                            variant: "body-sm/normal",
                                             color: "text-feedback-warning",
                                             children: q.intl.format(q.t.xJFpij, {
                                                 count: eA.length,

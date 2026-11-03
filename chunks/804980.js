@@ -88,7 +88,7 @@ function z(e) {
             (0, i.jsx)(Y, { avatarSize: I, guildId: v, channelId: r.id, users: E }),
             (0, i.jsx)(d.E, {
                 className: s()(B.m_, { [B.EX]: 0 === p, [B.Y]: 1 === p }),
-                variant: "text-sm/normal",
+                variant: "body-sm/normal",
                 children:
                     E.length > 1
                         ? H.intl.formatToPlainString(H.t.cpe6CK, { username: N, count: E.length - 1 })
@@ -96,7 +96,7 @@ function z(e) {
             }),
             (0, i.jsx)(d.E, {
                 className: s()(B.wx, { [B.EX]: 0 === p, [B.Y]: 1 === p }),
-                variant: "text-sm/normal",
+                variant: "body-sm/normal",
                 children: n.name,
             }),
             (0, i.jsx)("div", {

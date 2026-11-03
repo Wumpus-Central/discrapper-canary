@@ -53,13 +53,13 @@ let f = function (e) {
             },
             [k, v],
         ),
-        P = i.useCallback(
+        y = i.useCallback(
             (e) => {
                 (j(e), v(p, e));
             },
             [p, v],
         ),
-        y = d.get(p);
+        P = d.get(p);
     return (0, s.jsx)("fieldset", {
         children: (0, s.jsxs)("div", {
             className: u()(x.B, t),
@@ -91,9 +91,9 @@ let f = function (e) {
                 (0, s.jsx)(C.k, {
                     label: b.intl.string(b.t["64bX0M"]),
                     error: l,
-                    leading: y?.code,
+                    leading: P?.code,
                     type: "tel",
-                    onChange: P,
+                    onChange: y,
                     autoFocus: !0,
                     inputRef: r,
                     disabled: n,
@@ -123,7 +123,7 @@ class j extends i.PureComponent {
             g
                 ? (e = b.intl.string(b.t["4qMI6A"]))
                 : ((e = b.intl.string(b.t.Vp9je2)),
-                  (t = (0, s.jsx)(r.E, { variant: "text-sm/normal", children: b.intl.format(b.t["3BTmqX"], {}) }))),
+                  (t = (0, s.jsx)(r.E, { variant: "body-sm/normal", children: b.intl.format(b.t["3BTmqX"], {}) }))),
             g
                 ? ((n = (0, s.jsx)(o.D, {
                       label: b.intl.string(b.t.Xclkxp),

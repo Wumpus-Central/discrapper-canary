@@ -46,7 +46,7 @@ function C(e) {
             className: a()(E.ie, E.LA, { [E.wH]: i, [E.C3]: null != n.badge }),
             children: [
                 null != m && (0, l.jsx)(m, { size: "sm", color: "currentColor" }),
-                (0, l.jsx)(u.E, { variant: "text-md/medium", color: "none", children: n.text }),
+                (0, l.jsx)(u.E, { variant: "body-md/medium", color: "none", children: n.text }),
                 null == (t = n.badge)
                     ? null
                     : "object" == typeof t && "type" in t
@@ -65,26 +65,26 @@ function y(e) {
         })(n, s),
         C = r.useRef(null),
         y = r.useRef(null),
-        S = r.useRef(!1),
-        { isHovered: I, setIsHovered: b, onMouseEnter: A, onMouseLeave: j, cancelTimers: L } = (0, f.A)(100, 100),
+        b = r.useRef(!1),
+        { isHovered: S, setIsHovered: I, onMouseEnter: A, onMouseLeave: j, cancelTimers: L } = (0, f.A)(100, 100),
         k = r.useCallback(() => {
-            ((S.current = x.Ay.keyboardModeEnabled), A());
+            ((b.current = x.Ay.keyboardModeEnabled), A());
         }, [A]),
         N = r.useCallback(() => {
-            (L(), b(!0), (S.current = x.Ay.keyboardModeEnabled));
-        }, [L, b]),
+            (L(), I(!0), (b.current = x.Ay.keyboardModeEnabled));
+        }, [L, I]),
         O = r.useCallback(
             (e) => {
                 (L(),
-                    S.current && !x.Ay.keyboardModeEnabled && (0, p.uS)(),
-                    b(!1),
+                    b.current && !x.Ay.keyboardModeEnabled && (0, p.uS)(),
+                    I(!1),
                     e && requestAnimationFrame(() => (null != y.current ? y.current.focus() : C.current?.focus())));
             },
-            [L, b],
+            [L, I],
         ),
         T = r.useCallback(() => {
-            I ? O(!1) : N();
-        }, [I, N, O]),
+            S ? O(!1) : N();
+        }, [S, N, O]),
         R = r.useCallback(
             (e) => {
                 (O(!1), null != n.route && v(e) && (e.preventDefault(), n.onClick(e)));
@@ -94,17 +94,17 @@ function y(e) {
         M = r.useCallback(
             (e) => {
                 "ArrowDown" === e.key &&
-                    (e.preventDefault(), e.stopPropagation(), I ? (O(!1), requestAnimationFrame(N)) : N());
+                    (e.preventDefault(), e.stopPropagation(), S ? (O(!1), requestAnimationFrame(N)) : N());
             },
-            [I, N, O],
+            [S, N, O],
         ),
-        D = (0, l.jsx)(u.E, { variant: "text-md/medium", color: "none", children: n.text }),
-        B = (0, l.jsx)(m.a, { size: "sm", color: "currentColor", className: a()(E.OW, { [E.g3]: I }) });
+        D = (0, l.jsx)(u.E, { variant: "body-md/medium", color: "none", children: n.text }),
+        B = (0, l.jsx)(m.a, { size: "sm", color: "currentColor", className: a()(E.OW, { [E.g3]: S }) });
     return (0, l.jsx)("li", {
         className: E.I,
         children: (0, l.jsx)(g.Y, {
             targetElementRef: C,
-            shouldShow: I,
+            shouldShow: S,
             position: "bottom",
             align: "left",
             spacing: 4,
@@ -194,27 +194,27 @@ function y(e) {
         }),
     });
 }
-var S = n(765671);
-let I = 'a[href], [role="button"]';
-function b(e, t) {
-    let n = Array.from(e.querySelectorAll(I)),
+var b = n(765671);
+let S = 'a[href], [role="button"]';
+function I(e, t) {
+    let n = Array.from(e.querySelectorAll(S)),
         l = n.indexOf(document.activeElement);
     -1 !== l && n[l + t]?.focus();
 }
 function A(e) {
     switch (e.key) {
         case "ArrowRight":
-            (e.preventDefault(), b(e.currentTarget, 1));
+            (e.preventDefault(), I(e.currentTarget, 1));
             return;
         case "ArrowLeft":
-            (e.preventDefault(), b(e.currentTarget, -1));
+            (e.preventDefault(), I(e.currentTarget, -1));
             return;
         case "Home":
-            (e.preventDefault(), e.currentTarget.querySelector(I)?.focus());
+            (e.preventDefault(), e.currentTarget.querySelector(S)?.focus());
             return;
         case "End": {
             e.preventDefault();
-            let t = e.currentTarget.querySelectorAll(I);
+            let t = e.currentTarget.querySelectorAll(S);
             t[t.length - 1]?.focus();
         }
     }
@@ -230,7 +230,7 @@ function j(e) {
             onItemLayout: x,
             overflowItemsRef: f,
         } = (function (e, t, n, l) {
-            let { ref: s, width: a } = (0, S.Ay)(),
+            let { ref: s, width: a } = (0, b.Ay)(),
                 {
                     lastVisibleIndex: o,
                     onItemLayout: c,

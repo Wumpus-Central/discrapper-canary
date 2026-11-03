@@ -139,8 +139,8 @@ function F(e) {
             query: { cache: e },
             rejectWithError: !0,
         }).then((e) => {
-            if (null != e.body && "2299bc9f31eeb8f21c33d6e35e2df2ad3be18f92" !== e.body.hash) {
-                let e = new Date("1793686546646"),
+            if (null != e.body && "1460b13e4a54d97b738e7d6b1efd4bd8fae8eb99" !== e.body.hash) {
+                let e = new Date("1793689186097"),
                     t = new Date(),
                     n = (0, P.Tf)(t, e);
                 n.hours > 6 && eL(n.hours);
@@ -320,7 +320,7 @@ function F(e) {
                                                         }),
                                                         (0, i.jsx)(d.E, {
                                                             color: "text-strong",
-                                                            variant: "text-sm/semibold",
+                                                            variant: "body-sm/semibold",
                                                             className: G.n8,
                                                             children: t.title,
                                                         }),
@@ -328,7 +328,7 @@ function F(e) {
                                                 }),
                                                 (0, i.jsx)(d.E, {
                                                     color: "text-default",
-                                                    variant: "text-xs/normal",
+                                                    variant: "body-xs/normal",
                                                     className: G.dP,
                                                     children: t.description,
                                                 }),
@@ -530,7 +530,7 @@ function F(e) {
                                                                   ],
                                                               }),
                                                               (0, i.jsx)(d.E, {
-                                                                  variant: "text-xxs/medium",
+                                                                  variant: "footnote/medium",
                                                                   color: "text-subtle",
                                                                   children: e.filename,
                                                               }),
@@ -545,7 +545,7 @@ function F(e) {
                             eE
                                 ? (0, i.jsx)(d.E, {
                                       color: "text-feedback-critical",
-                                      variant: "text-sm/normal",
+                                      variant: "body-sm/normal",
                                       children: "Something went wrong, try again!",
                                   })
                                 : null,

@@ -21,8 +21,8 @@ var m = t(359549),
     v = t(263577),
     N = t(506326),
     C = t(868065),
-    w = t(424994),
-    y = t(518477),
+    y = t(424994),
+    w = t(518477),
     G = t(105292),
     f = t(273783),
     P = t(804779);
@@ -43,9 +43,9 @@ let R = [N.iq, N.Zc, N.Xy, N.$X, N.tR, N.K7, N.fg, N.sp, N.MK],
                           showCoverImage: !1,
                           trackingSource: "memberlist_gaming_content_row",
                       }),
-                      { data: S } = (0, u.YY)(i.extra.application_id),
-                      b = (0, m.JC)(S) && W,
-                      O = b ? [s.M.CLOUD_PLAY_NEW_BADGE] : [],
+                      { data: b } = (0, u.YY)(i.extra.application_id),
+                      S = (0, m.JC)(b) && W,
+                      O = S ? [s.M.CLOUD_PLAY_NEW_BADGE] : [],
                       [U] = (0, j.kn)(O),
                       Z = (0, h.A)(
                           {
@@ -55,7 +55,7 @@ let R = [N.iq, N.Zc, N.Xy, N.$X, N.tR, N.K7, N.fg, N.sp, N.MK],
                               trackEntryPointImpression: !0,
                               sourceUserId: i.author_id,
                           },
-                          { onOpened: () => k(w.PA.OPENED_GAME_PROFILE) },
+                          { onOpened: () => k(y.PA.OPENED_GAME_PROFILE) },
                       ),
                       B = G.intl.formatToPlainString(G.t["9sZWVp"], { gameName: i.extra.game_name }),
                       T = (0, n.jsx)(v.V, {
@@ -102,7 +102,7 @@ let R = [N.iq, N.Zc, N.Xy, N.$X, N.tR, N.K7, N.fg, N.sp, N.MK],
                                       ],
                                   }),
                           }),
-                          b &&
+                          S &&
                               (0, n.jsxs)(n.Fragment, {
                                   children: [
                                       (0, n.jsx)(C.ik, {}),
@@ -114,7 +114,7 @@ let R = [N.iq, N.Zc, N.Xy, N.$X, N.tR, N.K7, N.fg, N.sp, N.MK],
                                                   children: [
                                                       (0, n.jsx)(c.h, { color: d.A.colors.ICON_SUBTLE, size: "xxs" }),
                                                       (0, n.jsx)(o.E, {
-                                                          variant: "text-xs/normal",
+                                                          variant: "body-xs/normal",
                                                           color: "text-subtle",
                                                           children: G.intl.string(G.t["5HiF2i"]),
                                                       }),
@@ -135,10 +135,10 @@ let R = [N.iq, N.Zc, N.Xy, N.$X, N.tR, N.K7, N.fg, N.sp, N.MK],
                                   className: f.AB,
                                   compactViewMore: !0,
                                   onClickViewMore: () => {
-                                      (k(w.PA.APPLICATION_WIDGET_PREVIEW_VIEW_MORE),
+                                      (k(y.PA.APPLICATION_WIDGET_PREVIEW_VIEW_MORE),
                                           (0, A.openUserProfileModal)({
                                               userId: i.author_id,
-                                              tabSection: y.RP.WIDGETS,
+                                              tabSection: w.RP.WIDGETS,
                                           }));
                                   },
                               }),

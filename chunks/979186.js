@@ -5,8 +5,8 @@ var r = n(477900),
     s = n.n(l),
     o = n(284009),
     a = n.n(o),
-    u = n(561028),
-    d = n(121894),
+    d = n(561028),
+    u = n(121894),
     c = n(337836),
     h = n(17928),
     f = n(462887),
@@ -16,11 +16,11 @@ var r = n(477900),
     A = n(559106),
     y = n(43990),
     v = n(638495),
-    x = n(557361),
-    w = n(965830),
+    w = n(557361),
+    x = n(965830),
     E = n(318009),
-    C = n(92960),
-    b = n(14214),
+    b = n(92960),
+    C = n(14214),
     N = n(775602),
     O = n(697138),
     _ = n(933958),
@@ -59,8 +59,8 @@ var r = n(477900),
     es = n(28528),
     eo = n(672396),
     ea = n(652215),
-    eu = n(105292),
-    ed = n(261289);
+    ed = n(105292),
+    eu = n(261289);
 let ec = B().throttle(
         () => {
             X.A.increment(
@@ -75,22 +75,22 @@ let ec = B().throttle(
 function ef(e) {
     let { error: t, onLock: n, onReload: l, onDisable: s, onCrashDisabled: o } = e,
         a = i.useMemo(() => new F.SpringValue(1), []),
-        u = i.useRef(null),
-        [d, c] = i.useState(!1),
+        d = i.useRef(null),
+        [u, c] = i.useState(!1),
         [f, g] = i.useState(!1),
         m = (0, h.bG)([Q.default], () => Q.default.getCurrentUser());
     (0, $.Ay)(
         () => (
-            (u.current = setTimeout(A, eh)),
+            (d.current = setTimeout(A, eh)),
             (0, er.g)(ea.HAw.NOTIFICATION_VIEWED, { notif_type: eo.KS.OverlayCrashed }),
             () => {
-                null != u.current && clearTimeout(u.current);
+                null != d.current && clearTimeout(d.current);
             }
         ),
     );
     let p = (m?.isStaff() ?? !1) || (m?.isStaffPersonal() ?? !1),
         A = i.useCallback(() => {
-            (a.set(0), null != u.current && clearTimeout(u.current), (u.current = null), n?.(), o?.());
+            (a.set(0), null != d.current && clearTimeout(d.current), (d.current = null), n?.(), o?.());
         }, [a, n, o]),
         y = i.useCallback(
             (e) => {
@@ -109,34 +109,34 @@ function ef(e) {
         ),
         v = i.useCallback(
             (e) => {
-                (e.stopPropagation(), e.shiftKey ? (c(!0), null != u.current && clearTimeout(u.current)) : c(!1));
+                (e.stopPropagation(), e.shiftKey ? (c(!0), null != d.current && clearTimeout(d.current)) : c(!1));
             },
             [c],
         ),
-        x = i.useCallback(
+        w = i.useCallback(
             (e) => {
                 (e.stopPropagation(), n?.(), s?.());
             },
             [s, n],
         ),
-        w = (0, h.bG)([el.A], () => el.A.getFocusedRunningGame()),
-        E = d
+        x = (0, h.bG)([el.A], () => el.A.getFocusedRunningGame()),
+        E = u
             ? (0, r.jsxs)("div", {
                   children: [
                       (0, r.jsx)(Y.E, {
-                          variant: "text-md/semibold",
+                          variant: "body-md/semibold",
                           color: "text-strong",
-                          children: eu.intl.string(eu.t.mn4eXC),
+                          children: ed.intl.string(ed.t.mn4eXC),
                       }),
                       (0, r.jsxs)("div", {
-                          className: ed.Xh,
+                          className: eu.Xh,
                           children: [
-                              (0, r.jsx)(Y.E, { variant: "text-sm/normal", color: "text-subtle", children: t.message }),
+                              (0, r.jsx)(Y.E, { variant: "body-sm/normal", color: "text-subtle", children: t.message }),
                               (0, r.jsx)(Y.E, {
-                                  variant: "text-xxs/normal",
+                                  variant: "footnote/normal",
                                   color: "text-subtle",
                                   children: (0, r.jsx)("code", {
-                                      className: ed.aY,
+                                      className: eu.aY,
                                       children: (0, r.jsx)("pre", { children: t.stack }),
                                   }),
                               }),
@@ -145,17 +145,17 @@ function ef(e) {
                   ],
               })
             : null,
-        C = d ? null : eu.intl.string(eu.t.oEJEFq);
+        b = u ? null : ed.intl.string(ed.t.oEJEFq);
     return (0, r.jsx)(es.$, {
-        title: eu.intl.string(eu.t.U38qZj),
+        title: ed.intl.string(ed.t.U38qZj),
         body: E,
-        hint: p ? C : void 0,
-        confirmText: eu.intl.string(eu.t.a3HlgJ),
-        cancelText: null != w ? eu.intl.string(eu.t.qIYnPo) : void 0,
-        icon: (0, r.jsx)(q.A, { width: 40, height: 40, className: ed.Lo }),
+        hint: p ? b : void 0,
+        confirmText: ed.intl.string(ed.t.a3HlgJ),
+        cancelText: null != x ? ed.intl.string(ed.t.qIYnPo) : void 0,
+        icon: (0, r.jsx)(q.A, { width: 40, height: 40, className: eu.Lo }),
         onNotificationClick: v,
         onConfirmClick: y,
-        onCancelClick: null != w ? x : void 0,
+        onCancelClick: null != x ? w : void 0,
         onDismissClick: n,
         expand: !0,
         locked: !0,
@@ -164,8 +164,8 @@ function ef(e) {
         status: ea.yFH.ACTIVE,
         containerRef: null,
         contentOpacity: a,
-        className: ed.Pl,
-        wrapperClassName: ed.fl,
+        className: eu.Pl,
+        wrapperClassName: eu.fl,
     });
 }
 class eg extends i.PureComponent {
@@ -194,7 +194,7 @@ class eg extends i.PureComponent {
         return null != n
             ? i
                 ? (0, r.jsx)(ei.A, {
-                      className: ed.wz,
+                      className: eu.wz,
                       children: (0, r.jsx)(ef, {
                           error: n,
                           onLock: () => {
@@ -220,15 +220,15 @@ class eg extends i.PureComponent {
     }
 }
 var em = n(97469),
-    ep = n(996900),
+    ep = n(539900),
     eA = n(611635),
     ey = n(892019),
     ev = n(723702),
-    ex = n(677134),
-    ew = n(19575),
+    ew = n(677134),
+    ex = n(19575),
     eE = n(346142),
-    eC = n(869146),
-    eb = n(392164),
+    eb = n(869146),
+    eC = n(392164),
     eN = n(577063);
 function eO(e) {
     let { withTitleBar: t, isFullScreen: n } = e;
@@ -240,7 +240,7 @@ function e_(e) {
         l = n ?? r;
     return (
         i.useLayoutEffect(() => {
-            ew.Ay.setTrafficLightAppearance((0, f.M)(l) ? "dark" : "light", t);
+            ex.Ay.setTrafficLightAppearance((0, f.M)(l) ? "dark" : "light", t);
         }, [l, t]),
         null
     );
@@ -259,15 +259,15 @@ class eD extends i.Component {
             (0, eE.M)(e),
             e.addEventListener("blur", this.handleBlur),
             ev.isPlatformEmbedded
-                ? t.addEventListener("contextmenu", ex.contextMenuCallbackNative, !1)
-                : t.addEventListener("contextmenu", ex.contextMenuCallbackWeb, !1),
+                ? t.addEventListener("contextmenu", ew.contextMenuCallbackNative, !1)
+                : t.addEventListener("contextmenu", ew.contextMenuCallbackWeb, !1),
             e.addEventListener("beforeunload", this.beforeUnload),
             this.registerPopoutGlobalKeybinds());
     }
     beforeUnload = (e) => {
         let { onBeforeUnload: t } = this.props,
             n = () => {
-                (eC.A.unmountWindow(this.props.windowKey), ev.isPlatformEmbedded && ew.Ay.close(this.props.windowKey));
+                (eb.A.unmountWindow(this.props.windowKey), ev.isPlatformEmbedded && ex.Ay.close(this.props.windowKey));
             };
         null != t ? t({ e, unmountWindow: n }) : n();
     };
@@ -281,9 +281,9 @@ class eD extends i.Component {
         (this.unregisterPopoutGlobalKeybinds(),
             e.removeEventListener("blur", this.handleBlur),
             ev.isPlatformEmbedded
-                ? t.removeEventListener("contextmenu", ex.contextMenuCallbackNative)
-                : t.removeEventListener("contextmenu", ex.contextMenuCallbackWeb),
-            (0, d.r)(() => m.useModalsStore.setState((e) => ({ ...e, [p.KX]: [] }))),
+                ? t.removeEventListener("contextmenu", ew.contextMenuCallbackNative)
+                : t.removeEventListener("contextmenu", ew.contextMenuCallbackWeb),
+            (0, u.r)(() => m.useModalsStore.setState((e) => ({ ...e, [p.KX]: [] }))),
             e.removeEventListener("beforeunload", this.beforeUnload));
     }
     updateTitle() {
@@ -311,7 +311,7 @@ class eD extends i.Component {
         let { guestWindow: e, channelId: t } = this.props,
             n = e.document;
         for (let e of ((this._combokeys = (0, R.I)(n.documentElement)),
-        [b.VT, b.rR, (0, C.LB)(t), ...(this.props.keybinds ?? [])]))
+        [C.VT, C.rR, (0, b.LB)(t), ...(this.props.keybinds ?? [])]))
             if (e.comboKeysBindGlobal)
                 for (let t of e.binds)
                     this._combokeys.bindGlobal(t, (t, n) => ("function" == typeof e.action && e.action(t, n), !1));
@@ -328,16 +328,16 @@ class eD extends i.Component {
                 withTitleBar: l,
                 guestWindow: o,
                 clientThemesClassName: a,
-                contentClassName: d,
+                contentClassName: u,
                 themeOverride: h,
                 titleBarTheme: f,
                 hideModals: g = !1,
                 appContext: m,
             } = this.props,
             p = eO({ withTitleBar: l, isFullScreen: i }),
-            w = n === eb.f,
-            C = w ? eg : L.A;
-        return (0, r.jsx)(u.Kd, {
+            x = n === eC.f,
+            b = x ? eg : L.A;
+        return (0, r.jsx)(d.Kd, {
             children: (0, r.jsxs)(
                 ep.e,
                 {
@@ -351,8 +351,8 @@ class eD extends i.Component {
                                 children: [
                                     (0, r.jsx)(eI, {
                                         guestWindow: o,
-                                        className: s()(a, { overlay: w }),
-                                        children: (0, r.jsxs)(C, {
+                                        className: s()(a, { overlay: x }),
+                                        children: (0, r.jsxs)(b, {
                                             children: [
                                                 (0, r.jsx)(T.Al, {}),
                                                 (0, r.jsx)(U.Wr, {
@@ -375,7 +375,7 @@ class eD extends i.Component {
                                                                                         }),
                                                                                 }),
                                                                             (0, r.jsx)("div", {
-                                                                                className: s()(eN.Qs, d),
+                                                                                className: s()(eN.Qs, u),
                                                                                 children: t,
                                                                             }),
                                                                         ],
@@ -393,7 +393,7 @@ class eD extends i.Component {
                                             ],
                                         }),
                                     }),
-                                    (0, r.jsx)(x.Ut, {}),
+                                    (0, r.jsx)(w.Ut, {}),
                                 ],
                             }),
                         }),
@@ -406,15 +406,15 @@ class eD extends i.Component {
 }
 function eI(e) {
     let { guestWindow: t, className: n, children: l, ref: o } = e,
-        { lang: u, style: d, className: c } = (0, eA.x)();
+        { lang: d, style: u, className: c } = (0, eA.x)();
     (i.useEffect(() => {
         let e = t.document.documentElement;
-        (a()(null != e, "Window document element was null"), e.setAttribute("style", d));
-    }, [t, d]),
+        (a()(null != e, "Window document element was null"), e.setAttribute("style", u));
+    }, [t, u]),
         i.useEffect(() => {
             let e = t.document.documentElement;
-            (a()(null != e, "Window document element was null"), e.setAttribute("lang", u));
-        }, [t, u]),
+            (a()(null != e, "Window document element was null"), e.setAttribute("lang", d));
+        }, [t, d]),
         (0, ey.A)(t.document.documentElement));
     let h = s()(c, n, "in-popout");
     return (
@@ -427,9 +427,9 @@ function eI(e) {
 }
 let eS = function (e) {
     let { ref: t, ...n } = e,
-        { guestWindow: i, isFullScreen: l } = (0, h.cf)([eC.A], () => ({
-            guestWindow: eC.A.getWindow(n.windowKey),
-            isFullScreen: eC.A.isWindowFullScreen(n.windowKey),
+        { guestWindow: i, isFullScreen: l } = (0, h.cf)([eb.A], () => ({
+            guestWindow: eb.A.getWindow(n.windowKey),
+            isFullScreen: eb.A.isWindowFullScreen(n.windowKey),
         }));
     a()(null != i, "Missing guestWindow reference");
     let { forcedColors: s, connectedEmbeddedActivity: o } = (0, h.cf)([N.Ay, _.Ay], () => ({
@@ -437,15 +437,15 @@ let eS = function (e) {
         connectedEmbeddedActivity: _.Ay.getCurrentEmbeddedActivity(),
     }));
     (0, P.A)(i, !1);
-    let { analyticsLocations: u } = (0, I.Ay)(D.A.POPOUT_WINDOW),
-        { clientThemesClassName: d, clientThemesCSS: c } = (0, S.Ay)(),
+    let { analyticsLocations: d } = (0, I.Ay)(D.A.POPOUT_WINDOW),
+        { clientThemesClassName: u, clientThemesCSS: c } = (0, S.Ay)(),
         f = (0, em.NC)(),
         g = n.themeOverride ?? f;
     return null == i
         ? null
-        : (0, r.jsx)(w.W, {
+        : (0, r.jsx)(x.W, {
               children: (0, r.jsx)(I.f5, {
-                  value: u,
+                  value: d,
                   children: (0, r.jsx)(eD, {
                       ref: t,
                       ...n,
@@ -454,7 +454,7 @@ let eS = function (e) {
                       isFullScreen: l,
                       forcedColors: s,
                       connectedEmbeddedActivity: o,
-                      clientThemesClassName: d,
+                      clientThemesClassName: u,
                       clientThemesCSS: c,
                   }),
               }),

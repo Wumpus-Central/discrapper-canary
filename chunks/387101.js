@@ -9,13 +9,13 @@ var n = a(477900),
     c = a(144228),
     u = a(103557),
     m = a(964486),
-    _ = a(77729),
-    h = a(952818),
-    y = a(760751),
+    y = a(77729),
+    _ = a(952818),
+    h = a(760751),
     g = a(174459),
     p = a(41984),
-    x = a(296027),
-    b = a(652215),
+    b = a(296027),
+    x = a(652215),
     v = a(105292),
     k = a(75823);
 function f(t) {
@@ -26,12 +26,12 @@ function f(t) {
         [R, z] = i.useState(!1),
         [D, F] = i.useState(!1),
         [L, N] = i.useState(!1),
-        O = (0, r.bG)([y.A, h.Ay], () => {
-            let t = w ?? h.Ay.getCurrentGameForAnalytics()?.id;
-            return null == t ? null : y.A.getDetectableGame(t);
+        O = (0, r.bG)([h.A, _.Ay], () => {
+            let t = w ?? _.Ay.getCurrentGameForAnalytics()?.id;
+            return null == t ? null : h.A.getDetectableGame(t);
         }),
-        P = (0, r.bG)([x.default], () => {
-            let t = x.default?.getMostRecentOverlayRenderMethod() ?? void 0;
+        P = (0, r.bG)([b.default], () => {
+            let t = b.default?.getMostRecentOverlayRenderMethod() ?? void 0;
             return null != t ? p.Ue[t] : void 0;
         }),
         U = i.useMemo(() => {
@@ -53,14 +53,14 @@ function f(t) {
                 return;
             }
             (M(!0),
-                await g.default.track(b.HAw.OVERLAY_DISABLED_SURVEY, {
+                await g.default.track(x.HAw.OVERLAY_DISABLED_SURVEY, {
                     reason: C,
                     comment: S,
                     client_setting_type: f,
                     application_id: O?.id,
                     application_name: O?.name,
                     most_recent_overlay_render_method: P,
-                    hardware_display_count: (await _.A?.hardware?.getDisplayCount?.()) ?? null,
+                    hardware_display_count: (await y.A?.hardware?.getDisplayCount?.()) ?? null,
                 }),
                 await (0, s.yy)(1e3),
                 M(!1),
@@ -69,7 +69,7 @@ function f(t) {
                 e());
         }, [C, S, f, O?.id, O?.name, P, e]);
     (0, m.Ay)(() => {
-        g.default.track(b.HAw.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
+        g.default.track(x.HAw.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
     });
     let G = i.useMemo(
         () => [
@@ -99,7 +99,7 @@ function f(t) {
                         intensity: 1,
                         className: k.lm,
                         children: (0, n.jsx)(d.E, {
-                            variant: "text-sm/semibold",
+                            variant: "body-sm/semibold",
                             color: L ? "text-feedback-critical" : "text-muted",
                             children: v.intl.string(v.t.yhUvdd),
                         }),
@@ -117,7 +117,7 @@ function f(t) {
                 className: k.xi,
                 children: [
                     (0, n.jsx)(d.E, {
-                        variant: "text-sm/semibold",
+                        variant: "body-sm/semibold",
                         color: "text-muted",
                         className: k.NP,
                         children: v.intl.string(v.t.LYnrhc),

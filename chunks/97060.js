@@ -1,33 +1,33 @@
-n.d(e, { default: () => U });
-var a = n(477900),
-    r = n(582128),
-    i = n(17928),
-    s = n(631670),
-    l = n(287809),
-    o = n(174459),
-    c = n(772707),
-    E = n(144228),
-    u = n(87404),
-    _ = n(105292);
+e.d(n, { default: () => G });
+var a = e(477900),
+    r = e(582128),
+    i = e(17928),
+    s = e(631670),
+    l = e(287809),
+    o = e(174459),
+    c = e(772707),
+    E = e(144228),
+    u = e(87404),
+    _ = e(105292);
 let A = {
     [u.Q9.DISCORD_EMPLOYEE_ASKED_ME_TO]: () => _.intl.string(_.t.naBTFO),
     [u.Q9.SOMEONE_ASKED_ME_TO]: () => _.intl.string(_.t.LQ0RUP),
     [u.Q9.NEW_EMAIL]: () => _.intl.string(_.t.oOqQjw),
     [u.Q9.SOMETHING_ELSE]: () => _.intl.string(_.t.p38n1b),
 };
-var C = n(652215),
-    g = n(661965);
+var C = e(652215),
+    g = e(661965);
 function N(t) {
-    let { onNext: e, onClose: n, reason: r, onReasonChange: i, transitionState: s } = t,
+    let { onNext: n, onClose: e, reason: r, onReasonChange: i, transitionState: s } = t,
         l = u.FL.map((t) => ({ value: t, name: A[t]() }));
     return (0, a.jsx)(c.k, {
         graphic: { type: "image", src: g },
         title: _.intl.string(_.t["41NIIh"]),
-        onClose: n,
+        onClose: e,
         transitionState: s,
         actions: [
-            { variant: "secondary", text: _.intl.string(_.t["ETE/oC"]), onClick: n },
-            { variant: "primary", text: _.intl.string(_.t["3PatSz"]), disabled: null == r, onClick: e },
+            { variant: "secondary", text: _.intl.string(_.t["ETE/oC"]), onClick: e },
+            { variant: "primary", text: _.intl.string(_.t["3PatSz"]), disabled: null == r, onClick: n },
         ],
         children: (0, a.jsx)(E.z, {
             value: r,
@@ -39,42 +39,42 @@ function N(t) {
         }),
     });
 }
-var S = n(834730),
-    k = n(720960);
-function m(t) {
-    let { email: e, onClose: n, transitionState: r } = t;
+var S = e(834730),
+    d = e(720960);
+function k(t) {
+    let { email: n, onClose: e, transitionState: r } = t;
     return (0, a.jsx)(c.k, {
         graphic: { type: "image", src: g },
         title: _.intl.string(_.t["8O+nF7"]),
-        onClose: n,
+        onClose: e,
         transitionState: r,
-        actions: [{ variant: "primary", text: _.intl.string(_.t.BddRzS), onClick: n }],
+        actions: [{ variant: "primary", text: _.intl.string(_.t.BddRzS), onClick: e }],
         children: (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsx)(S.E, {
-                    className: k.h_,
-                    variant: "text-md/normal",
-                    children: _.intl.format(_.t.Zvx0O3, { email: e }),
+                    className: d.h_,
+                    variant: "body-md/normal",
+                    children: _.intl.format(_.t.Zvx0O3, { email: n }),
                 }),
-                (0, a.jsx)(S.E, { className: k.YL, variant: "text-sm/normal", children: _.intl.string(_.t.yb7itQ) }),
+                (0, a.jsx)(S.E, { className: d.YL, variant: "body-sm/normal", children: _.intl.string(_.t.yb7itQ) }),
             ],
         }),
     });
 }
-var d = n(858899),
-    x = n(331322),
-    h = n(95477),
-    f = n(123292),
-    p = n(181658),
-    R = n(836602),
-    y = n(131937),
-    O = n(499785);
+var m = e(858899),
+    h = e(331322),
+    f = e(95477),
+    x = e(123292),
+    y = e(181658),
+    p = e(836602),
+    R = e(131937),
+    O = e(499785);
 function v() {
     let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return O.A.put({
         url: C.Rsh.USER_EMAIL,
         trackedActionData: {
-            event: y.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,
+            event: R.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,
             properties: { is_resend: t },
         },
         rejectWithError: !1,
@@ -85,45 +85,45 @@ async function M(t) {
         await O.A.post({
             url: C.Rsh.USER_EMAIL_VERIFY_CODE,
             body: { code: t },
-            trackedActionData: { event: y.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_VERIFY_CODE },
+            trackedActionData: { event: R.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_VERIFY_CODE },
             rejectWithError: !1,
         })
     ).body;
 }
 function I(t) {
-    let { error: e, setEmailToken: n, setError: s, onNext: l, onClose: o, transitionState: E } = t,
+    let { error: n, setEmailToken: e, setError: s, onNext: l, onClose: o, transitionState: E } = t,
         [u, A] = r.useState(!1),
         [C, N] = r.useState(""),
-        [S, k] = r.useState(!1),
-        m = (0, i.bG)([R.A], () => R.A.getErrors()),
-        y = r.useRef(null);
+        [S, d] = r.useState(!1),
+        k = (0, i.bG)([p.A], () => p.A.getErrors()),
+        R = r.useRef(null);
     async function O(t) {
         (t.preventDefault(), s(null), A(!0));
         try {
             let { token: t } = await M(C);
-            (n(t), l());
+            (e(t), l());
         } catch (t) {
-            s(new p.A(t).getAnyErrorMessage());
+            s(new y.A(t).getAnyErrorMessage());
         } finally {
             A(!1);
         }
     }
     async function I() {
         if (!S) {
-            k(!0);
+            d(!0);
             try {
-                (await v(!0), (0, d.P0)({ text: _.intl.string(_.t["84yeoz"]), variant: "success" }));
-            } catch (e) {
-                let t = new p.A(e).getAnyErrorMessage();
-                null != t && (0, d.P0)({ text: t, variant: "critical" });
+                (await v(!0), (0, m.P0)({ text: _.intl.string(_.t["84yeoz"]), variant: "success" }));
+            } catch (n) {
+                let t = new y.A(n).getAnyErrorMessage();
+                null != t && (0, m.P0)({ text: t, variant: "critical" });
             } finally {
-                k(!1);
+                d(!1);
             }
         }
     }
     return (
         r.useEffect(() => {
-            y.current?.focus();
+            R.current?.focus();
         }, []),
         (0, a.jsx)(c.k, {
             title: _.intl.string(_.t.jMGc4J),
@@ -132,33 +132,33 @@ function I(t) {
             transitionState: E,
             onClose: o,
             actions: [{ variant: "primary", text: _.intl.string(_.t.PDTjLN), loading: u, onClick: O }],
-            children: (0, a.jsxs)(x.B, {
+            children: (0, a.jsxs)(h.B, {
                 gap: 8,
                 children: [
-                    (0, a.jsx)(h.k, {
+                    (0, a.jsx)(f.k, {
                         label: _.intl.string(_.t["8mZX6M"]),
-                        error: e ?? m?.email_token?.[0],
+                        error: n ?? k?.email_token?.[0],
                         value: C,
                         onChange: N,
-                        inputRef: y,
+                        inputRef: R,
                     }),
-                    (0, a.jsx)(f.Q, { textVariant: "text-sm/normal", text: _.intl.string(_.t.K0NPQ6), onClick: I }),
+                    (0, a.jsx)(x.Q, { textVariant: "body-sm/normal", text: _.intl.string(_.t.K0NPQ6), onClick: I }),
                 ],
             }),
         })
     );
 }
 function L(t) {
-    let { onNext: e, onClose: n, transitionState: s } = t,
+    let { onNext: n, onClose: e, transitionState: s } = t,
         [o, E] = r.useState(!1),
         u = (0, i.bG)([l.default], () => l.default.getCurrentUser());
     async function A(t) {
         (t.preventDefault(), E(!0));
         try {
-            (await v(), e());
-        } catch (e) {
-            let t = new p.A(e).getAnyErrorMessage();
-            null != t && (0, d.P0)({ text: t, variant: "critical" });
+            (await v(), n());
+        } catch (n) {
+            let t = new y.A(n).getAnyErrorMessage();
+            null != t && (0, m.P0)({ text: t, variant: "critical" });
         } finally {
             E(!1);
         }
@@ -166,62 +166,62 @@ function L(t) {
     return (0, a.jsx)(c.k, {
         graphic: { type: "image", src: g },
         title: _.intl.string(_.t.uFxYq0),
-        onClose: n,
+        onClose: e,
         transitionState: s,
         actions: [
-            { variant: "secondary", text: _.intl.string(_.t["ETE/oC"]), onClick: n },
+            { variant: "secondary", text: _.intl.string(_.t["ETE/oC"]), onClick: e },
             { variant: "primary", text: _.intl.string(_.t.rXV81H), loading: o, onClick: A },
         ],
         children: (0, a.jsx)(S.E, {
-            className: k.h_,
-            variant: "text-md/normal",
+            className: d.h_,
+            variant: "body-md/normal",
             children: _.intl.format(_.t.oMFSgi, { oldEmail: u?.email }),
         }),
     });
 }
-var T = n(774914);
+var T = e(774914);
 function j(t) {
-    let { emailToken: e, onClose: n, onBack: l, onNext: o, transitionState: E } = t,
+    let { emailToken: n, onClose: e, onBack: l, onNext: o, transitionState: E } = t,
         [u, A] = r.useState(""),
         [C, N] = r.useState(""),
-        [S, k] = r.useState(!1),
-        m = (0, i.bG)([R.A], () => R.A.getErrors()),
-        d = r.useRef(null);
-    async function f(t) {
-        (t.preventDefault(), k(!0));
-        let n = await (0, s._L)({ email: u, emailToken: e, password: C });
-        (k(!1), n?.ok ? o(u) : n?.body?.username != null ? (0, T.E)() : n?.body?.email_token != null && l?.());
+        [S, d] = r.useState(!1),
+        k = (0, i.bG)([p.A], () => p.A.getErrors()),
+        m = r.useRef(null);
+    async function x(t) {
+        (t.preventDefault(), d(!0));
+        let e = await (0, s._L)({ email: u, emailToken: n, password: C });
+        (d(!1), e?.ok ? o(u) : e?.body?.username != null ? (0, T.E)() : e?.body?.email_token != null && l?.());
     }
     return (
         r.useEffect(() => {
-            d.current?.focus();
+            m.current?.focus();
         }, []),
         (0, a.jsx)(c.k, {
             graphic: { type: "image", src: g },
             title: _.intl.string(_.t.p3280r),
             subtitle: _.intl.string(_.t["1k44EL"]),
-            onClose: n,
+            onClose: e,
             transitionState: E,
             actions: [
                 null != l
                     ? { variant: "secondary", text: _.intl.string(_.t["13/7kX"]), onClick: l }
-                    : { variant: "secondary", text: _.intl.string(_.t["ETE/oC"]), onClick: n },
-                { variant: "primary", text: _.intl.string(_.t.i4jeWR), loading: S, onClick: f },
+                    : { variant: "secondary", text: _.intl.string(_.t["ETE/oC"]), onClick: e },
+                { variant: "primary", text: _.intl.string(_.t.i4jeWR), loading: S, onClick: x },
             ],
-            children: (0, a.jsxs)(x.B, {
+            children: (0, a.jsxs)(h.B, {
                 gap: 20,
                 children: [
-                    (0, a.jsx)(h.k, {
+                    (0, a.jsx)(f.k, {
                         label: _.intl.string(_.t["w/qqKK"]),
-                        error: m?.email?.[0],
+                        error: k?.email?.[0],
                         type: "email",
                         value: u,
                         onChange: A,
-                        inputRef: d,
+                        inputRef: m,
                     }),
-                    (0, a.jsx)(h.k, {
+                    (0, a.jsx)(f.k, {
                         label: _.intl.string(_.t.TmdnJ3),
-                        error: m?.password?.[0],
+                        error: k?.password?.[0],
                         type: "password",
                         value: C,
                         onChange: N,
@@ -231,88 +231,88 @@ function j(t) {
         })
     );
 }
-var D = n(117816);
-function w(t) {
-    let { onNext: e, onClose: n, transitionState: r } = t;
+var D = e(117816);
+function b(t) {
+    let { onNext: n, onClose: e, transitionState: r } = t;
     return (0, a.jsxs)(c.k, {
         graphic: { type: "image", src: D.A },
         title: _.intl.string(_.t.hhR7gX),
-        onClose: n,
+        onClose: e,
         transitionState: r,
         actions: [
-            { variant: "secondary", text: _.intl.string(_.t.rwTBFs), onClick: e },
-            { variant: "primary", text: _.intl.string(_.t["ETE/oC"]), onClick: n },
+            { variant: "secondary", text: _.intl.string(_.t.rwTBFs), onClick: n },
+            { variant: "primary", text: _.intl.string(_.t["ETE/oC"]), onClick: e },
         ],
         children: [
             (0, a.jsx)(S.E, {
-                className: k.h_,
-                variant: "text-md/normal",
+                className: d.h_,
+                variant: "body-md/normal",
                 children: _.intl.format(_.t.rqWXUf, { hcArticle: u.kP }),
             }),
-            (0, a.jsx)(S.E, { className: k.h_, variant: "text-md/normal", children: _.intl.string(_.t["3LW10C"]) }),
+            (0, a.jsx)(S.E, { className: d.h_, variant: "body-md/normal", children: _.intl.string(_.t["3LW10C"]) }),
         ],
     });
 }
-var G = n(355097);
-function U(t) {
-    let { transitionState: e, onClose: n } = t,
+var w = e(355097);
+function G(t) {
+    let { transitionState: n, onClose: e } = t,
         c = (0, i.bG)([l.default], () => l.default.getCurrentUser());
     r.useEffect(() => (o.default.track(C.HAw.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED), () => (0, s.Uo)()), []);
     let E = c?.verified,
-        _ = E ? G.ko.CONFIRM_START : G.ko.EMAIL_AND_PASSWORD,
+        _ = E ? w.ko.CONFIRM_START : w.ko.EMAIL_AND_PASSWORD,
         [A, g] = r.useState(_),
-        [S, k] = r.useState(null),
-        [d, x] = r.useState(null),
-        [h, f] = r.useState(""),
-        [p, R] = r.useState();
+        [S, d] = r.useState(null),
+        [m, h] = r.useState(null),
+        [f, x] = r.useState(""),
+        [y, p] = r.useState();
     switch (A) {
-        case G.ko.CONFIRM_START:
-            return (0, a.jsx)(L, { onNext: () => g(G.ko.CONFIRM_CODE), onClose: n, transitionState: e });
-        case G.ko.CONFIRM_CODE:
+        case w.ko.CONFIRM_START:
+            return (0, a.jsx)(L, { onNext: () => g(w.ko.CONFIRM_CODE), onClose: e, transitionState: n });
+        case w.ko.CONFIRM_CODE:
             return (0, a.jsx)(I, {
-                error: d,
-                setError: x,
-                setEmailToken: k,
-                onNext: () => g(G.ko.CHANGE_EMAIL_REASONS),
-                transitionState: e,
-                onClose: n,
+                error: m,
+                setError: h,
+                setEmailToken: d,
+                onNext: () => g(w.ko.CHANGE_EMAIL_REASONS),
+                transitionState: n,
+                onClose: e,
             });
-        case G.ko.CHANGE_EMAIL_REASONS:
+        case w.ko.CHANGE_EMAIL_REASONS:
             return (0, a.jsx)(N, {
                 onNext: () => (
-                    o.default.track(C.HAw.USER_ACCOUNT_EMAIL_CHANGE_REASON_CONTINUE, { change_email_reason_enum: p }),
-                    null != p && u.qr.has(p) ? g(G.ko.CHANGE_EMAIL_WARNING) : g(G.ko.EMAIL_AND_PASSWORD)
+                    o.default.track(C.HAw.USER_ACCOUNT_EMAIL_CHANGE_REASON_CONTINUE, { change_email_reason_enum: y }),
+                    null != y && u.qr.has(y) ? g(w.ko.CHANGE_EMAIL_WARNING) : g(w.ko.EMAIL_AND_PASSWORD)
                 ),
-                transitionState: e,
-                onClose: n,
-                reason: p,
-                onReasonChange: R,
+                transitionState: n,
+                onClose: e,
+                reason: y,
+                onReasonChange: p,
             });
-        case G.ko.CHANGE_EMAIL_WARNING:
-            return (0, a.jsx)(w, {
+        case w.ko.CHANGE_EMAIL_WARNING:
+            return (0, a.jsx)(b, {
                 onNext: () => {
-                    (o.default.track(C.HAw.USER_ACCOUNT_EMAIL_CHANGE_WARNING_CONTINUE, { change_email_reason_enum: p }),
-                        g(G.ko.EMAIL_AND_PASSWORD));
+                    (o.default.track(C.HAw.USER_ACCOUNT_EMAIL_CHANGE_WARNING_CONTINUE, { change_email_reason_enum: y }),
+                        g(w.ko.EMAIL_AND_PASSWORD));
                 },
-                onClose: n,
-                transitionState: e,
+                onClose: e,
+                transitionState: n,
             });
-        case G.ko.EMAIL_AND_PASSWORD:
+        case w.ko.EMAIL_AND_PASSWORD:
             return (0, a.jsx)(j, {
                 emailToken: S,
                 onBack: E
-                    ? () => g(null != p && u.qr.has(p) ? G.ko.CHANGE_EMAIL_WARNING : G.ko.CHANGE_EMAIL_REASONS)
+                    ? () => g(null != y && u.qr.has(y) ? w.ko.CHANGE_EMAIL_WARNING : w.ko.CHANGE_EMAIL_REASONS)
                     : null,
                 onNext: (t) => {
-                    (o.default.track(C.HAw.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, { change_email_reason_enum: p }),
-                        f(t),
-                        g(G.ko.COMPLETE));
+                    (o.default.track(C.HAw.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, { change_email_reason_enum: y }),
+                        x(t),
+                        g(w.ko.COMPLETE));
                 },
-                onClose: n,
-                transitionState: e,
+                onClose: e,
+                transitionState: n,
             });
-        case G.ko.COMPLETE:
-            return (0, a.jsx)(m, { email: h, onClose: n, transitionState: e });
+        case w.ko.COMPLETE:
+            return (0, a.jsx)(k, { email: f, onClose: e, transitionState: n });
         default:
             return null;
     }

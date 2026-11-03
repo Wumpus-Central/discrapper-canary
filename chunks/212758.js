@@ -16,21 +16,21 @@ function d(e) {
         onDismissAndStay: d,
         onDismissAndLeave: h,
         leaveButtonText: k,
-        stayButtonText: x,
-        transitionState: f,
-        impression: p,
+        stayButtonText: f,
+        transitionState: p,
+        impression: x,
     } = e;
     return (0, r.jsx)(o.k, {
-        transitionState: f,
+        transitionState: p,
         onClose: function () {
             return (d(), Promise.resolve());
         },
-        trackingProps: { impression: p },
+        trackingProps: { impression: x },
         graphic: { type: "image", src: m.A },
         title: t,
         subtitle: n ?? void 0,
         actions: [
-            { text: x, onClick: d, variant: "secondary" },
+            { text: f, onClick: d, variant: "secondary" },
             { text: k, onClick: h },
         ],
         children: (0, r.jsx)("div", {
@@ -42,7 +42,7 @@ function d(e) {
                         children: [
                             (0, r.jsxs)("div", {
                                 className: i()(u.lj, e.className),
-                                children: [e.icon, (0, r.jsx)(l.E, { variant: "text-md/medium", children: e.text })],
+                                children: [e.icon, (0, r.jsx)(l.E, { variant: "body-md/medium", children: e.text })],
                             }),
                             t < a.length - 1 && (0, r.jsx)(c.A, {}),
                         ],

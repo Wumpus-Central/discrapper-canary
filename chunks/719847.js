@@ -1,7 +1,7 @@
 i.d(s, { default: () => E });
 var l = i(477900),
-    e = i(582128),
-    a = i(991660),
+    a = i(582128),
+    e = i(991660),
     n = i(17928),
     r = i(408278),
     c = i(173936),
@@ -17,17 +17,17 @@ var l = i(477900),
     A = i(997997),
     S = i(123791),
     f = i(925435),
-    g = i(816709),
-    y = i(652215),
+    y = i(816709),
+    g = i(652215),
     O = i(435220),
-    C = i(105292),
-    P = i(718245),
-    b = i(592551);
+    b = i(105292),
+    C = i(718245),
+    P = i(592551);
 function E(t) {
     let { onClose: s, transitionState: i, appId: E, guildId: _ } = t,
         k = (0, n.bG)([j.A], () => j.A.getApplication(E), [E]),
-        [I, L] = e.useState(() => (j.A.isFetchingApplication(E) ? { status: 1 } : { status: 0 }));
-    e.useEffect(() => {
+        [I, L] = a.useState(() => (j.A.isFetchingApplication(E) ? { status: 1 } : { status: 0 }));
+    a.useEffect(() => {
         0 === I.status &&
             (L({ status: 1 }),
             x.Ay.fetchApplication(E)
@@ -40,15 +40,15 @@ function E(t) {
     }, [E, I.status]);
     let { subscriptions: U, otps: D } = (0, S.C)(E);
     if (null == k) return null;
-    let R = C.intl.formatToPlainString(C.t.XDRjs5, { appName: k.name }),
-        N = (0, l.jsx)("div", { className: P.K, children: (0, l.jsx)(m.h, {}) }),
+    let R = b.intl.formatToPlainString(b.t.XDRjs5, { appName: k.name }),
+        N = (0, l.jsx)("div", { className: C.K, children: (0, l.jsx)(m.h, {}) }),
         T = v.p5
             ? (0, l.jsx)(r.K, {
-                  "aria-label": C.intl.string(C.t.WqhZss),
+                  "aria-label": b.intl.string(b.t.WqhZss),
                   icon: () => (0, l.jsx)(c.LinkIcon, { size: "sm" }),
                   onClick: () => {
-                      let t = `${location.protocol}//${location.host}${y.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(E, O.GlobalDiscoveryAppsSections.STORE)}`;
-                      ((0, v.C)(t, () => (0, o.P0)({ text: C.intl.string(C.t["L/PwZf"]), variant: "success" })),
+                      let t = `${location.protocol}//${location.host}${g.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(E, O.GlobalDiscoveryAppsSections.STORE)}`;
+                      ((0, v.C)(t, () => (0, o.P0)({ text: b.intl.string(b.t["L/PwZf"]), variant: "success" })),
                           (0, A.K)(E, A.C.STORE_MODAL));
                   },
                   variant: "icon-only",
@@ -61,22 +61,22 @@ function E(t) {
         size: "xxl",
         children: [
             (0, l.jsx)(u.rQ, { leading: N, title: R, trailing: T }),
-            (0, l.jsx)(a.A, {
+            (0, l.jsx)(e.A, {
                 children: (0, l.jsx)("main", {
-                    className: b.bodyInner,
+                    className: P.bodyInner,
                     children: (0, l.jsx)(f.Mp, { app: k, guildId: _, subscriptions: U, otps: D }),
                 }),
             }),
             (0, l.jsx)(d.j, {
                 children: (0, l.jsx)(h.E, {
-                    variant: "text-md/normal",
+                    variant: "body-md/normal",
                     children:
                         null != k.termsOfServiceUrl || null != k.privacyPolicyUrl
-                            ? (0, l.jsx)(g.A, {
+                            ? (0, l.jsx)(y.A, {
                                   termsOfServiceUrl: k.termsOfServiceUrl,
                                   privacyPolicyUrl: k.privacyPolicyUrl,
                               })
-                            : C.intl.string(C.t["3ZY+0D"]),
+                            : b.intl.string(b.t["3ZY+0D"]),
                 }),
             }),
         ],

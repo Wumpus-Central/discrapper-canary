@@ -20,31 +20,31 @@ let g = "legacyGameInviteChannelChatBannerDismissed",
         "1433122142479847514",
         "1433122166102163598",
     ]),
-    x = "1526555294518349946",
-    v = (0, s.v)(() => ({
+    v = "1526555294518349946",
+    x = (0, s.v)(() => ({
         dismissedChannelIds: a.w.get(g) ?? [],
         dismissChannel: (e) => {
-            v.setState((t) => {
+            x.setState((t) => {
                 let i = [...t.dismissedChannelIds, e];
                 return (a.w.set(g, i), { dismissedChannelIds: i });
             });
         },
     }));
 function f(e) {
-    let { dismissedChannelIds: t } = v(),
-        i = t?.includes(x);
-    return null != (0, l.bG)([c.A], () => c.A.getChannel(x)) && I.has(e) && !i;
+    let { dismissedChannelIds: t } = x(),
+        i = t?.includes(v);
+    return null != (0, l.bG)([c.A], () => c.A.getChannel(v)) && I.has(e) && !i;
 }
 function C() {
-    let e = (0, l.bG)([c.A], () => c.A.getChannel(x)),
+    let e = (0, l.bG)([c.A], () => c.A.getChannel(v)),
         t = (0, o.Ay)(e);
     function i() {
-        v.getState().dismissChannel(x);
+        x.getState().dismissChannel(v);
     }
     return null == e || null == t
         ? null
         : (0, n.jsx)(r.E, {
-              variant: "text-sm/medium",
+              variant: "body-sm/medium",
               color: "text-muted",
               className: A.v,
               children: p.intl.format(h.default["5jIPgz"], {

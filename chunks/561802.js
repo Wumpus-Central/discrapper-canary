@@ -7,7 +7,7 @@ var i = {
     innerDotRadio: "innerDotRadio__64e61",
     outerRadioBase: "outerRadioBase__64e61",
     outerRadioFill: "outerRadioFill__64e61",
-    radioGroupOption: "radioGroupOption__64e61 " + o(736541)["text-md/normal"],
+    radioGroupOption: "radioGroupOption__64e61 " + o(736541)["body-md/normal"],
     withLeadingIcon: "withLeadingIcon__64e61",
     standaloneRadioIndicator: "standaloneRadioIndicator__64e61",
     animateIn: "animateIn__64e61",

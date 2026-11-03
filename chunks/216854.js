@@ -13,9 +13,9 @@ var i = n(477900),
 function h(e) {
     let { guildEvent: t, recurrenceId: n, transitionState: h, onClose: p } = e,
         E = (0, o.A)(n, t.id),
-        x = (0, c.CI)(n, t),
-        D = (0, c.Ri)(x, E),
-        [S, f] = l.useState(D),
+        D = (0, c.CI)(n, t),
+        S = (0, c.Ri)(D, E),
+        [f, x] = l.useState(S),
         [m, { loading: v, error: C }] = (0, a.A)(() => {
             let e = (function (e, t, n, i) {
                 let l = (0, c.CI)(t, e),
@@ -48,7 +48,7 @@ function h(e) {
                         e.id,
                     );
                 }
-            })(t, n, S, E);
+            })(t, n, f, E);
             return (null == C && p(), e);
         });
     return (0, i.jsxs)(d.a, {
@@ -56,7 +56,7 @@ function h(e) {
         title: g.intl.string(g.t.wmVmXN),
         actions: [
             { variant: "secondary", text: g.intl.string(g.t["ETE/oC"]), onClick: p },
-            { variant: "primary", text: g.intl.string(g.t.e5VEcE), onClick: m, loading: v, disabled: (0, c.sv)(S, D) },
+            { variant: "primary", text: g.intl.string(g.t.e5VEcE), onClick: m, loading: v, disabled: (0, c.sv)(f, S) },
         ],
         onClose: p,
         children: [
@@ -64,18 +64,18 @@ function h(e) {
                 onScheduleChange: function (e) {
                     let { startDate: t, endDate: n } = e;
                     (null != t && null != n && n.isBefore(t) && (n = t.clone().add(1, "hour")),
-                        f({ startDate: t, endDate: n }));
+                        x({ startDate: t, endDate: n }));
                 },
-                schedule: S,
-                showEndDate: null != S.endDate,
-                requireEndDate: null != S.endDate,
+                schedule: f,
+                showEndDate: null != f.endDate,
+                requireEndDate: null != f.endDate,
                 guildId: t.guild_id,
                 recurrenceRule: t.recurrence_rule,
             }),
             null != C
                 ? (0, i.jsx)(r.E, {
                       color: "text-feedback-critical",
-                      variant: "text-xs/normal",
+                      variant: "body-xs/normal",
                       children: C.getAnyErrorMessage(),
                   })
                 : null,

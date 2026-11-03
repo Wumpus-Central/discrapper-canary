@@ -1,7 +1,7 @@
-n.d(e, { l: () => o });
+n.d(e, { l: () => i });
 var r = n(477900),
-    i = n(834730);
-function o(t) {
+    o = n(834730);
+function i(t) {
     let { label: e } = t;
-    return (0, r.jsx)(i.E, { variant: "text-md/semibold", color: "text-muted", children: e });
+    return (0, r.jsx)(o.E, { variant: "body-md/semibold", color: "text-muted", children: e });
 }

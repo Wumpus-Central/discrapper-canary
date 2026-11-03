@@ -13,7 +13,7 @@ let a = function (t) {
         children: (0, n.jsx)("div", {
             style: { userSelect: "text", padding: "16px" },
             children: (0, n.jsx)(s.E, {
-                variant: "text-sm/normal",
+                variant: "body-sm/normal",
                 children: (0, n.jsx)("pre", { children: JSON.stringify({ entry: e, requestId: a }, null, 2) }),
             }),
         }),

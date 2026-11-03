@@ -14,7 +14,7 @@ function u(e) {
         className: a()(d.zr, d.Yd, t),
         children: [
             (0, i.jsx)(s.n, { size: "md", color: "currentColor", className: d.Kk }),
-            null != n && (0, i.jsx)(r.E, { color: "none", className: d.U9, variant: "text-md/normal", children: n }),
+            null != n && (0, i.jsx)(r.E, { color: "none", className: d.U9, variant: "body-md/normal", children: n }),
         ],
     });
 }

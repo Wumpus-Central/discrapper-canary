@@ -1,8 +1,8 @@
 l.d(n, { default: () => M });
 var t = l(477900),
     i = l(582128),
-    a = l(91871),
-    s = l.n(a),
+    s = l(91871),
+    a = l.n(s),
     c = l(702841),
     r = l(189213),
     o = l(123292),
@@ -10,14 +10,14 @@ var t = l(477900),
     u = l(890497),
     h = l(834730),
     m = l(95477),
-    x = l(103557),
-    g = l(95635),
+    g = l(103557),
+    x = l(95635),
     C = l(47167),
     v = l(713654),
     j = l(374084),
-    k = l(342298),
-    p = l(734057),
-    b = l(808728),
+    b = l(342298),
+    k = l(734057),
+    p = l(808728),
     N = l(71393),
     A = l(994500),
     I = l(287809),
@@ -30,17 +30,17 @@ function H(e, n, l, t) {
     return { channelId: e, title: n, description: l, emoji: null, icon: t ?? null };
 }
 function M(e) {
-    let { transitionState: n, onClose: l, resourceChannel: a, guildId: M, onSave: R, onDelete: U, onIconUpload: w } = e,
-        [K, L] = i.useState(a?.title ?? ""),
-        [P, z] = i.useState(a?.description ?? ""),
+    let { transitionState: n, onClose: l, resourceChannel: s, guildId: M, onSave: R, onDelete: U, onIconUpload: w } = e,
+        [K, L] = i.useState(s?.title ?? ""),
+        [P, z] = i.useState(s?.description ?? ""),
         [B, X] = i.useState(
             (function (e) {
                 if (null == e) return null;
-                let n = p.A.getChannel(e.channelId);
+                let n = k.A.getChannel(e.channelId);
                 return null == n ? null : n.id;
-            })(a),
+            })(s),
         ),
-        G = (0, c.bG)([f.A], () => f.A.getResourceChannel(a?.channelId)?.icon),
+        G = (0, c.bG)([f.A], () => f.A.getResourceChannel(s?.channelId)?.icon),
         J = (0, c.yK)([f.A], () => (f.A.getSettings()?.resourceChannels ?? []).map((e) => e.channelId)),
         V = K.length < j.SM || null == B,
         W = i.useCallback(() => {
@@ -57,7 +57,7 @@ function M(e) {
         ),
         F = i.useCallback(
             (e) => {
-                let n = b.Ay.getSelectableChannels(M),
+                let n = p.Ay.getSelectableChannels(M),
                     l = N.A.getGuild(M);
                 return Promise.resolve(
                     n
@@ -65,7 +65,7 @@ function M(e) {
                             (n) =>
                                 (0, j.Yt)(n.channel) &&
                                 !J.includes(n.channel.id) &&
-                                s()(e, (0, C.m1)(n.channel, I.default, A.A)),
+                                a()(e, (0, C.m1)(n.channel, I.default, A.A)),
                         )
                         .map((e) => {
                             let n = (0, v.gU)(e.channel, l);
@@ -106,19 +106,19 @@ function M(e) {
         onClose: l,
         actions: T,
         actionBarInput:
-            null != a ? (0, t.jsx)(o.Q, { text: D.intl.string(D.t.N86XcP), onClick: Y, variant: "critical" }) : void 0,
+            null != s ? (0, t.jsx)(o.Q, { text: D.intl.string(D.t.N86XcP), onClick: Y, variant: "critical" }) : void 0,
         children: [
             (0, t.jsxs)("div", {
                 className: E.eH,
                 children: [
                     (0, t.jsxs)(d.D, {
-                        variant: "heading-md/semibold",
+                        variant: "heading-sm/semibold",
                         color: "text-strong",
                         children: [D.intl.string(D.t.nPa4Ju), (0, t.jsx)(y.A, {})],
                     }),
                     (0, t.jsx)(u.Z, { selectionMode: "single", value: B ?? void 0, options: F, onSelectionChange: _ }),
                     (0, t.jsx)(h.E, {
-                        variant: "text-xs/medium",
+                        variant: "body-xs/medium",
                         color: "text-muted",
                         children: D.intl.string(D.t.eNDtJK),
                     }),
@@ -129,7 +129,7 @@ function M(e) {
                 className: E.eH,
                 children: [
                     (0, t.jsxs)(d.D, {
-                        variant: "heading-md/semibold",
+                        variant: "heading-sm/semibold",
                         color: "text-strong",
                         children: [D.intl.string(D.t["lFy+aW"]), (0, t.jsx)(y.A, {})],
                     }),
@@ -141,11 +141,11 @@ function M(e) {
                 className: E.eH,
                 children: [
                     (0, t.jsx)(d.D, {
-                        variant: "heading-md/semibold",
+                        variant: "heading-sm/semibold",
                         color: "text-strong",
                         children: D.intl.string(D.t.CnkilH),
                     }),
-                    (0, t.jsx)(x.f, { value: P, onChange: z, placeholder: D.intl.string(D.t.na0V4E), maxLength: j.Mu }),
+                    (0, t.jsx)(g.f, { value: P, onChange: z, placeholder: D.intl.string(D.t.na0V4E), maxLength: j.Mu }),
                 ],
             }),
             (0, t.jsx)("div", { className: E.me }),
@@ -155,24 +155,24 @@ function M(e) {
                     (0, t.jsxs)("div", {
                         children: [
                             (0, t.jsx)(d.D, {
-                                variant: "heading-md/semibold",
+                                variant: "heading-sm/semibold",
                                 color: "text-strong",
                                 children: D.intl.string(D.t.CB6dyu),
                             }),
                             (0, t.jsx)(h.E, {
-                                variant: "text-xs/medium",
+                                variant: "body-xs/medium",
                                 color: "text-muted",
                                 children: D.intl.string(D.t.Kcdk7D),
                             }),
                         ],
                     }),
                     (0, t.jsx)("div", {
-                        children: (0, t.jsx)(k.A, {
+                        children: (0, t.jsx)(b.A, {
                             className: E.xp,
                             imageClassName: E.V6,
                             image: G,
                             makeURL: Q,
-                            icon: (0, t.jsx)(g.UploadIcon, { size: "md", color: "currentColor" }),
+                            icon: (0, t.jsx)(x.UploadIcon, { size: "md", color: "currentColor" }),
                             hideSize: !0,
                             onChange: O,
                             iconClassName: E.Ow,

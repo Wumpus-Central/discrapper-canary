@@ -5,8 +5,8 @@ var r = n(477900),
     l = n(661531),
     s = n(289873),
     u = n(150934),
-    c = n(834730),
-    o = n(885574),
+    o = n(834730),
+    c = n(885574),
     d = n(939249),
     m = n(866665),
     f = n(277984),
@@ -24,9 +24,9 @@ function T(e) {
             giftCardWallet: t,
             checked: n,
             onChange: T,
-            disabled: P = !1,
-            loading: E = !1,
-            disabledTooltip: y,
+            disabled: y = !1,
+            loading: P = !1,
+            disabledTooltip: E,
             locked: A = !1,
             showDisabledInfoIcon: j = !0,
         } = e,
@@ -46,15 +46,15 @@ function T(e) {
     i.useEffect(() => {
         !A && w && n && T(!1);
     }, [A, w, n, T]);
-    let _ = P || E || S || (!A && w),
+    let _ = y || P || S || (!A && w),
         M = _ || A,
         D = i.useCallback(() => {
             M || T(!n);
         }, [T, n, M]);
     if (w && !A) return null;
-    let k = _ && null != y && j,
-        U = M && null != y,
-        O = E
+    let k = _ && null != E && j,
+        U = M && null != E,
+        O = P
             ? (0, r.jsx)("div", {
                   className: I.tv,
                   children: (0, r.jsx)(s.y, { type: s.y.Type.SPINNING_CIRCLE_SIMPLE, className: I.u1 }),
@@ -62,15 +62,15 @@ function T(e) {
             : (0, r.jsx)(u.S, { checked: n && (A || !w), onChange: D, disabled: M, label: "" }),
         W = (0, r.jsxs)("div", {
             children: [
-                (0, r.jsx)(c.E, {
-                    variant: "text-md/normal",
+                (0, r.jsx)(o.E, {
+                    variant: "body-md/normal",
                     color: "text-strong",
                     children: b.intl.string(x.default["febr+T"]),
                 }),
                 !S &&
                     null != R &&
-                    (0, r.jsx)(c.E, {
-                        variant: "text-sm/normal",
+                    (0, r.jsx)(o.E, {
+                        variant: "body-sm/normal",
                         color: "text-subtle",
                         style: { marginTop: 4 },
                         children: R,
@@ -81,14 +81,14 @@ function T(e) {
             ? (0, r.jsxs)("div", {
                   className: I.kL,
                   role: "checkbox",
-                  "aria-checked": !E && n,
-                  "aria-busy": E || void 0,
+                  "aria-checked": !P && n,
+                  "aria-busy": P || void 0,
                   "aria-disabled": _ || void 0,
                   children: [
                       (0, r.jsx)("div", { children: O }),
                       W,
                       k &&
-                          (0, r.jsx)(o.CircleInformationIcon, {
+                          (0, r.jsx)(c.CircleInformationIcon, {
                               className: I.G,
                               size: "xs",
                               color: l.A.colors.TEXT_MUTED,
@@ -106,7 +106,7 @@ function T(e) {
               });
     return U
         ? (0, r.jsx)(m.m, {
-              text: y,
+              text: E,
               asContainer: !0,
               tag: "div",
               position: "top",

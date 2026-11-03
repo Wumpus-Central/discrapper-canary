@@ -70,8 +70,8 @@ function E(t) {
             (0, o.jsxs)("div", {
                 className: w.u4,
                 children: [
-                    (0, o.jsx)(u.E, { variant: "text-sm/semibold", children: i }),
-                    (0, o.jsx)(u.E, { variant: "text-xs/medium", children: e }),
+                    (0, o.jsx)(u.E, { variant: "body-sm/semibold", children: i }),
+                    (0, o.jsx)(u.E, { variant: "body-xs/medium", children: e }),
                 ],
             }),
         ],

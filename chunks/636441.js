@@ -24,6 +24,6 @@ function o(e) {
         graphic: b,
         title: f,
         actions: m,
-        children: (0, c.jsx)(i.E, { variant: "text-md/normal", className: d.x, children: t }),
+        children: (0, c.jsx)(i.E, { variant: "body-md/normal", className: d.x, children: t }),
     });
 }

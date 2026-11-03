@@ -4,21 +4,21 @@ var i = n(477900),
     r = n(17928);
 if (588245 != n.j) var l = n(785007);
 if (588245 != n.j) var a = n(534514);
-if (588245 != n.j) var c = n(331322);
-var o = n(73153),
+if (588245 != n.j) var o = n(331322);
+var c = n(73153),
     u = n(915089),
     d = n(450232),
     m = n(526162),
     h = n(503698),
     g = n.n(h),
-    x = n(435558),
-    f = n.n(x),
+    f = n(435558),
+    x = n.n(f),
     p = n(866665),
     A = n(939249),
-    v = n(194261),
-    y = n(653523),
-    S = n(350972),
-    b = n(677056),
+    y = n(194261),
+    b = n(653523),
+    v = n(350972),
+    S = n(677056),
     j = n(174197),
     I = n(652215),
     N = n(105292),
@@ -30,19 +30,19 @@ function C(e) {
             style: r,
             onSelect: l,
             isSelected: a = !1,
-            tabIndex: c,
-            children: o,
+            tabIndex: o,
+            children: c,
             locked: u = !1,
             disabled: d = !1,
         } = e,
         [m, h] = s.useState((0, j.gG)(t).name),
-        x = t === S.Ic.PIRATE;
+        f = t === v.Ic.PIRATE;
     return (0, i.jsx)(p.m, {
         text: m,
         onTooltipShow: () =>
-            x &&
+            f &&
             h(
-                f().sample([
+                x().sample([
                     N.intl.string(N.t["EgWTY+"]),
                     N.intl.string(N.t.umBn5f),
                     N.intl.string(N.t.dG1wD1),
@@ -59,34 +59,34 @@ function C(e) {
                     "aria-label": m,
                     "aria-checked": a,
                     "aria-disabled": d,
-                    tabIndex: c ?? (a ? 0 : -1),
+                    tabIndex: o ?? (a ? 0 : -1),
                     className: g()(E.Ni, { [E.wH]: a }, n),
                     onClick: a ? I.tEg : () => l?.(t),
-                    children: o,
+                    children: c,
                 }),
-                a && (0, i.jsx)(y.H$, {}),
+                a && (0, i.jsx)(b.H$, {}),
                 u &&
                     (0, i.jsx)("div", {
                         className: E.RK,
-                        children: (0, i.jsx)(v.LockIcon, { className: E.AA, color: "currentColor" }),
+                        children: (0, i.jsx)(y.LockIcon, { className: E.AA, color: "currentColor" }),
                     }),
             ],
         }),
     });
 }
 function T(e) {
-    let { size: t = j.N8.SIZE_60, icon: n, isSelected: r, disabled: l, tabIndex: a, onSelect: c, locked: o } = e,
+    let { size: t = j.N8.SIZE_60, icon: n, isSelected: r, disabled: l, tabIndex: a, onSelect: o, locked: c } = e,
         u = s.useMemo(() => ({ "--custom-in-app-icon-selection-size": `${t}px` }), [t]);
     return (0, i.jsx)(C, {
         style: u,
-        onSelect: l ? void 0 : c,
+        onSelect: l ? void 0 : o,
         isSelected: r,
         id: n.id,
         className: l ? E.r9 : void 0,
         tabIndex: a,
-        locked: o,
+        locked: c,
         disabled: l,
-        children: (0, i.jsx)(b.A, { id: n.id, size: t }),
+        children: (0, i.jsx)(S.A, { id: n.id, size: t }),
     });
 }
 var P = n(40025);
@@ -106,7 +106,7 @@ function R(e) {
                         icon: e,
                         isSelected: s === e.id,
                         onSelect: (e) => {
-                            o.h.dispatch({ type: "APP_ICON_UPDATED", id: e });
+                            c.h.dispatch({ type: "APP_ICON_UPDATED", id: e });
                         },
                         disabled: t,
                         tabIndex: 0 !== r || t ? void 0 : 0,
@@ -119,7 +119,7 @@ function R(e) {
     });
 }
 function w(e) {
-    let { className: t, disabled: n, isEditor: s, renderCTAButtons: r, iconSize: o } = e,
+    let { className: t, disabled: n, isEditor: s, renderCTAButtons: r, iconSize: c } = e,
         m = (0, u.GV)(),
         { ref: h, ...g } = (0, l._u)({ orientation: "horizontal", labelledBy: m });
     return (0, i.jsx)("div", {
@@ -148,7 +148,7 @@ function w(e) {
                                         ],
                                     }),
                                 (0, i.jsx)(a.D, {
-                                    variant: "text-sm/normal",
+                                    variant: "body-sm/normal",
                                     className: P.W$,
                                     children: N.intl.string(N.t.IgENJo),
                                 }),
@@ -157,12 +157,12 @@ function w(e) {
                         r?.(),
                     ],
                 }),
-                (0, i.jsx)(c.B, {
+                (0, i.jsx)(o.B, {
                     direction: "horizontal",
                     wrap: !0,
                     gap: 8,
                     style: { marginTop: 16 },
-                    children: (0, i.jsx)(R, { disabled: n, size: o }),
+                    children: (0, i.jsx)(R, { disabled: n, size: c }),
                 }),
             ],
         }),

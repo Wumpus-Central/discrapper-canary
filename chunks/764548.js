@@ -7,8 +7,8 @@ var l = t(477900),
     u = t(834730),
     d = t(900002),
     E = t(736653),
-    c = t(573435),
-    o = t(714991),
+    o = t(573435),
+    c = t(714991),
     I = t(776231),
     _ = t(486020),
     f = t(240248),
@@ -39,18 +39,18 @@ let g = [16, 16, 14, 14, 12, 10, 8],
             P = (0, a.M)(R) ? h : T,
             O = _.Ay.getGuildIconURL({ id: i.id, icon: i.icon, size: 40 }) ?? void 0,
             V = null != i.description ? i.description : C,
-            x = null != N ? N : i?.memberCount,
-            F = null != D ? D : i?.presenceCount,
-            j = null;
-        if (null != O) j = (0, l.jsx)("img", { src: O, alt: "", className: S.my });
+            F = null != N ? N : i?.memberCount,
+            j = null != D ? D : i?.presenceCount,
+            M = null;
+        if (null != O) M = (0, l.jsx)("img", { src: O, alt: "", className: S.my });
         else {
             let e = (0, f.oN)(i.name);
-            j = (0, l.jsx)("div", {
+            M = (0, l.jsx)("div", {
                 className: S.DE,
                 children: (0, l.jsx)(u.E, {
                     className: S.q9,
                     style: { fontSize: g[e.length] ?? g[g.length - 1] },
-                    variant: "text-sm/normal",
+                    variant: "body-sm/normal",
                     children: e,
                 }),
             });
@@ -72,17 +72,17 @@ let g = [16, 16, 14, 14, 12, 10, 8],
                         }),
                         (0, l.jsx)("div", {
                             className: S.$f,
-                            children: (0, l.jsx)(c.Ay, {
-                                mask: c.Ay.Masks.SQUIRCLE,
+                            children: (0, l.jsx)(o.Ay, {
+                                mask: o.Ay.Masks.SQUIRCLE,
                                 width: 48,
                                 height: 48,
                                 children: (0, l.jsx)("div", {
                                     className: S.SA,
-                                    children: (0, l.jsx)(c.Ay, {
-                                        mask: c.Ay.Masks.SQUIRCLE,
+                                    children: (0, l.jsx)(o.Ay, {
+                                        mask: o.Ay.Masks.SQUIRCLE,
                                         width: 40,
                                         height: 40,
-                                        children: null != j ? j : null,
+                                        children: null != M ? M : null,
                                     }),
                                 }),
                             }),
@@ -95,10 +95,10 @@ let g = [16, 16, 14, 14, 12, 10, 8],
                         (0, l.jsxs)("div", {
                             className: S.DD,
                             children: [
-                                (0, l.jsx)(o.A, { className: S.w$, guild: i, tooltipColor: d.ST.Colors.PRIMARY }),
+                                (0, l.jsx)(c.A, { className: S.w$, guild: i, tooltipColor: d.ST.Colors.PRIMARY }),
                                 (0, l.jsx)(u.E, {
                                     className: S.J5,
-                                    variant: "text-md/normal",
+                                    variant: "body-md/normal",
                                     children: (0, l.jsx)("span", { children: G }),
                                 }),
                             ],
@@ -108,7 +108,7 @@ let g = [16, 16, 14, 14, 12, 10, 8],
                             children: (0, l.jsx)(u.E, {
                                 lineClamp: 3,
                                 className: S.h_,
-                                variant: "text-sm/normal",
+                                variant: "body-sm/normal",
                                 tag: "span",
                                 children: V,
                             }),
@@ -116,33 +116,33 @@ let g = [16, 16, 14, 14, 12, 10, 8],
                         (0, l.jsxs)("div", {
                             className: S.Fj,
                             children: [
-                                null != F &&
+                                null != j &&
                                     (0, l.jsxs)(u.E, {
-                                        variant: "text-xs/semibold",
+                                        variant: "body-xs/semibold",
                                         color: "none",
                                         className: S.Kl,
                                         children: [
                                             (0, l.jsx)("div", { className: S.JX }),
                                             (0, l.jsx)(u.E, {
-                                                variant: "text-xs/normal",
+                                                variant: "body-xs/normal",
                                                 children: r
-                                                    ? A.intl.formatToPlainString(A.t.YMor7k, { count: F })
-                                                    : A.intl.formatToPlainString(A.t["LC+S+m"], { membersOnline: F }),
+                                                    ? A.intl.formatToPlainString(A.t.YMor7k, { count: j })
+                                                    : A.intl.formatToPlainString(A.t["LC+S+m"], { membersOnline: j }),
                                             }),
                                         ],
                                     }),
-                                null != x &&
+                                null != F &&
                                     (0, l.jsxs)(u.E, {
-                                        variant: "text-xs/semibold",
+                                        variant: "body-xs/semibold",
                                         color: "none",
                                         className: S.Kl,
                                         children: [
                                             (0, l.jsx)("div", { className: S.Li }),
                                             (0, l.jsx)(u.E, {
-                                                variant: "text-xs/normal",
+                                                variant: "body-xs/normal",
                                                 children: r
-                                                    ? A.intl.formatToPlainString(A.t.YMor7k, { count: x })
-                                                    : A.intl.formatToPlainString(A.t.zRl6XR, { count: x }),
+                                                    ? A.intl.formatToPlainString(A.t.YMor7k, { count: F })
+                                                    : A.intl.formatToPlainString(A.t.zRl6XR, { count: F }),
                                             }),
                                         ],
                                     }),

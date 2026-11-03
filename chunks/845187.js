@@ -48,7 +48,7 @@ function h(e) {
                 { variant: "primary", text: E.intl.string(E.t["/wlDqi"]), onClick: g },
             ],
             children: (0, i.jsx)(l.E, {
-                variant: "text-md/normal",
+                variant: "body-md/normal",
                 children: E.intl.format(E.t.B9eiaK, { applicationName: m }),
             }),
         })

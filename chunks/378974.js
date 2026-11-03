@@ -95,7 +95,7 @@ function S(e) {
                     }),
                     (0, i.jsx)(o.E, {
                         id: u,
-                        variant: "text-md/normal",
+                        variant: "body-md/normal",
                         color: "text-subtle",
                         children: (0, i.jsx)("div", { dangerouslySetInnerHTML: { __html: n.Display } }),
                     }),
@@ -141,7 +141,7 @@ function O(e) {
         ? (0, i.jsx)("div", {
               className: C.kL,
               children: (0, i.jsx)(o.E, {
-                  variant: "text-sm/medium",
+                  variant: "body-sm/medium",
                   className: C.WN,
                   children: "No choices available for this question",
               }),
@@ -205,7 +205,7 @@ function R(e) {
         ? (0, i.jsx)("div", {
               className: C.kL,
               children: (0, i.jsx)(o.E, {
-                  variant: "text-sm/medium",
+                  variant: "body-sm/medium",
                   className: C.WN,
                   children: "No choices available for this question",
               }),
@@ -241,7 +241,7 @@ function L(e) {
 }
 var y = n(103557),
     D = n(424349);
-function v(e) {
+function b(e) {
     let { question: t, questionId: n, value: r, onValueChange: a } = e,
         s = t.Selector !== N.BO.SINGLE_LINE;
     return (0, i.jsx)("div", {
@@ -251,14 +251,14 @@ function v(e) {
             : (0, i.jsx)(T.k, { value: r, onChange: (e) => a(n, e), placeholder: "Enter your response..." }),
     });
 }
-var b = n(134035),
+var v = n(134035),
     P = n(165648);
 function M(e) {
     let { question: t, questionId: n, responses: r, onResponseChange: a } = e,
         s = (function () {
             switch (t.QuestionType) {
                 case N.SQ.TEXT_ENTRY:
-                    return (0, i.jsx)(v, { question: t, questionId: n, value: r[n] ?? "", onValueChange: a });
+                    return (0, i.jsx)(b, { question: t, questionId: n, value: r[n] ?? "", onValueChange: a });
                 case N.SQ.MULTIPLE_CHOICE:
                     return (0, i.jsx)(L, { question: t, questionId: n, value: r[n] ?? "", onValueChange: a });
                 case N.SQ.DESCRIPTIVE_BLOCK:
@@ -270,10 +270,10 @@ function M(e) {
     return null == s
         ? null
         : (0, i.jsxs)("div", {
-              className: f()(P.PT, b.k),
+              className: f()(P.PT, v.k),
               children: [
                   (0, i.jsx)(o.E, {
-                      variant: "text-lg/normal",
+                      variant: "body-lg/normal",
                       color: "text-strong",
                       children: (0, i.jsx)("div", { dangerouslySetInnerHTML: { __html: t.QuestionText_Unsafe ?? "" } }),
                   }),
@@ -320,7 +320,7 @@ function G(e) {
                               ],
                               ...e,
                               children: (0, i.jsx)(o.E, {
-                                  variant: "text-md/normal",
+                                  variant: "body-md/normal",
                                   children: U.intl.string(U.t.iCK6G0),
                               }),
                           }),
@@ -480,7 +480,7 @@ function G(e) {
     r.useEffect(() => {
         0 === y.length && D();
     }, [y, D]);
-    let v = r.useMemo(() => {
+    let b = r.useMemo(() => {
         if (C) return !1;
         for (let e of y) {
             let t = n.Questions[e];
@@ -499,8 +499,8 @@ function G(e) {
               title: U.intl.string(U.t.OSqLUF),
               actions: [{ variant: "primary", text: U.intl.string(U.t.i4jeWR), onClick: a }],
               children: [
-                  (0, i.jsx)(o.E, { variant: "text-md/normal", children: U.intl.string(U.t["2scvdw"]) }),
-                  (0, i.jsx)(o.E, { variant: "text-md/normal", children: U.intl.string(U.t.chZxOD) }),
+                  (0, i.jsx)(o.E, { variant: "body-md/normal", children: U.intl.string(U.t["2scvdw"]) }),
+                  (0, i.jsx)(o.E, { variant: "body-md/normal", children: U.intl.string(U.t.chZxOD) }),
               ],
           })
         : (0, i.jsx)(s.a, {
@@ -508,7 +508,7 @@ function G(e) {
               onClose: L,
               title: U.intl.string(U.t.OSqLUF),
               size: "md",
-              actions: [{ variant: "primary", text: U.intl.string(U.t.PDTjLN), onClick: D, disabled: !v }],
+              actions: [{ variant: "primary", text: U.intl.string(U.t.PDTjLN), onClick: D, disabled: !b }],
               children: (0, i.jsx)("div", {
                   style: { width: "100%" },
                   children:
@@ -545,6 +545,6 @@ function k(e) {
     let { surveyId: t, onClose: n, transitionState: r } = e,
         s = (0, a.bG)([u.A], () => u.A.getSurvey(t));
     return null == s
-        ? (0, i.jsx)(o.E, { variant: "text-md/medium", className: w.Lq, children: U.intl.string(U.t.MKDeyL) })
+        ? (0, i.jsx)(o.E, { variant: "body-md/medium", className: w.Lq, children: U.intl.string(U.t.MKDeyL) })
         : (0, i.jsx)(G, { surveyId: t, survey: s, onClose: n, transitionState: r });
 }

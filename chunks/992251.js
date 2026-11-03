@@ -10,6 +10,6 @@ function o(e) {
     return (0, i.jsx)("div", {
         className: l.p,
         role: "status",
-        children: (0, i.jsx)(s.E, { variant: "text-md/medium", className: l.q, children: t ?? n.LISTBOX_EMPTY_STATE }),
+        children: (0, i.jsx)(s.E, { variant: "body-md/medium", className: l.q, children: t ?? n.LISTBOX_EMPTY_STATE }),
     });
 }

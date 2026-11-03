@@ -34,7 +34,7 @@ function L(t) {
                             children: _.intl.string(_.t["kw8/Ec"]),
                         }),
                         (0, n.jsx)(A.E, {
-                            variant: "text-xs/normal",
+                            variant: "body-xs/normal",
                             color: "text-default",
                             children: _.intl.string(_.t.GZoV1O),
                         }),

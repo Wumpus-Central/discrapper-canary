@@ -48,7 +48,7 @@ function g(t) {
                     children: [
                         (0, r.jsx)(a.CircleInformationIcon, { size: "xs", color: "currentColor", className: E.q }),
                         (0, r.jsx)(o.E, {
-                            variant: "text-sm/normal",
+                            variant: "body-sm/normal",
                             color: "text-default",
                             children: C.intl.string(C.t.yb7itQ),
                         }),

@@ -125,7 +125,7 @@ function X(t) {
                                             children: y.intl.string(P.default.ukvxpp),
                                         }),
                                         (0, i.jsx)(x.E, {
-                                            variant: "text-sm/medium",
+                                            variant: "body-sm/medium",
                                             color: "text-subtle",
                                             children: y.intl.format(P.default.FO4faL, { termsLink: (0, O.xA)() }),
                                         }),
@@ -157,7 +157,7 @@ function X(t) {
                                                               color: "var(--text-subtle)",
                                                           }),
                                                           (0, i.jsx)(x.E, {
-                                                              variant: "text-xs/medium",
+                                                              variant: "body-xs/medium",
                                                               color: "text-subtle",
                                                               children: C.disclaimer,
                                                           }),
@@ -199,7 +199,7 @@ function X(t) {
                                         children: [
                                             (0, i.jsx)(s, { size: "sm", color: "var(--icon-strong)" }),
                                             (0, i.jsx)(x.E, {
-                                                variant: "text-md/medium",
+                                                variant: "body-md/medium",
                                                 color: "text-default",
                                                 children: y.intl.string(a),
                                             }),

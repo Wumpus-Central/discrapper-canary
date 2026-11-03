@@ -16,8 +16,8 @@ var n = i(477900),
     A = i(404778),
     f = i(144228),
     S = i(611677),
-    x = i(452027),
-    b = i(28863),
+    b = i(452027),
+    x = i(28863),
     j = i(834730),
     v = i(602853),
     _ = i(534514),
@@ -26,11 +26,11 @@ var n = i(477900),
     C = i(544743),
     O = i(999903),
     G = i(47167),
-    M = i(713654),
-    y = i(585510),
-    w = i(610136),
-    T = i(594061),
-    I = i(95701),
+    y = i(713654),
+    M = i(585510),
+    T = i(610136),
+    I = i(594061),
+    w = i(95701),
     D = i(734057),
     R = i(769765),
     U = i(498642),
@@ -150,7 +150,7 @@ class el extends l.PureComponent {
             t,
             { channel: i } = this.props;
         null != i.parent_id && (e = D.A.getChannel(i.parent_id));
-        let l = (0, M.gU)(i);
+        let l = (0, y.gU)(i);
         if (i.type === q.rbe.GUILD_CATEGORY && null != i.guild_id && "" !== i.guild_id) {
             let e = R.A.getCategories(i.guild_id);
             t = et.intl.formatToPlainString(et.t["2KzH89"], { num: null != e[i.id] ? e[i.id].length : 0 });
@@ -169,11 +169,11 @@ class el extends l.PureComponent {
                     className: ei.aT,
                     children: [
                         (0, n.jsx)(j.E, {
-                            variant: "text-md/semibold",
+                            variant: "body-md/semibold",
                             className: ei.HA,
                             children: (0, G.m1)(i, H.default, P.A),
                         }),
-                        (0, n.jsx)(j.E, { variant: "text-xs/normal", className: ei.uM, children: t }),
+                        (0, n.jsx)(j.E, { variant: "body-xs/normal", className: ei.uM, children: t }),
                     ],
                 }),
             ],
@@ -280,7 +280,7 @@ function ea(e) {
             let e = D.A.getChannel(i);
             return [e, e?.parent_id != null ? D.A.getChannel(e.parent_id) : null];
         });
-    return null == l ? t : (0, n.jsx)(c.X, { icon: (0, M.gU)(l), title: t, subtitle: s?.name });
+    return null == l ? t : (0, n.jsx)(c.X, { icon: (0, y.gU)(l), title: t, subtitle: s?.name });
 }
 function eo(e) {
     let { muteConfig: t, muted: i, guild: l, handleCheckboxChange: s } = e,
@@ -361,15 +361,15 @@ function ed(e) {
 }
 function eh(e) {
     let { guildId: t } = e,
-        i = (0, y._g)(t),
-        l = (0, d.bG)([w.A], () => w.A.getGuildAlertSettings()[t]);
+        i = (0, M._g)(t),
+        l = (0, d.bG)([T.A], () => T.A.getGuildAlertSettings()[t]);
     if (i)
         return (0, n.jsxs)("div", {
             className: ei.YK,
             children: [
                 (0, n.jsx)(S.l, {
                     className: ei.bj,
-                    children: (0, n.jsxs)(x.D, {
+                    children: (0, n.jsxs)(b.D, {
                         label: et.intl.string(et.t.D9yVAH),
                         description: et.intl.string(et.t["0PhAOH"]),
                         children: [
@@ -378,12 +378,12 @@ function eh(e) {
                                 description: et.intl.string(et.t.z8Td48),
                                 checked: !l?.disableRaidAlertNag,
                                 onChange: (e) =>
-                                    (0, T.TG)(
+                                    (0, I.TG)(
                                         t,
                                         (t) => {
                                             t.disableRaidAlertNag = !e;
                                         },
-                                        T.Sb.INFREQUENT_USER_ACTION,
+                                        I.Sb.INFREQUENT_USER_ACTION,
                                     ),
                             }),
                             (0, n.jsx)(N.d, {
@@ -391,12 +391,12 @@ function eh(e) {
                                 description: et.intl.string(et.t.PyxXs8),
                                 checked: !l?.disableRaidAlertPush,
                                 onChange: (e) =>
-                                    (0, T.TG)(
+                                    (0, I.TG)(
                                         t,
                                         (t) => {
                                             t.disableRaidAlertPush = !e;
                                         },
-                                        T.Sb.INFREQUENT_USER_ACTION,
+                                        I.Sb.INFREQUENT_USER_ACTION,
                                     ),
                             }),
                         ],
@@ -449,10 +449,10 @@ function ec(e) {
                         disabled: o,
                         description: et.intl.string(et.t["Vw/Xn8"]),
                     }),
-                    (0, n.jsx)(b.Anchor, {
+                    (0, n.jsx)(x.Anchor, {
                         href: F.A.getArticleURL(q.MVz.HIGHLIGHTS),
                         children: (0, n.jsx)(j.E, {
-                            variant: "text-sm/normal",
+                            variant: "body-sm/normal",
                             color: "text-link",
                             children: et.intl.string(et.t.PRBn9K),
                         }),
@@ -548,7 +548,7 @@ function eg(e) {
                     messageNotifications: null != l ? l.message_notifications : null,
                     guildMessageNotifications: u,
                     useNewNotifications: g,
-                    showHybridOption: g && I.B4.has(t.type),
+                    showHybridOption: g && w.B4.has(t.type),
                     unreadSetting: N[t.id] ?? X.e.UNSET,
                     onDelete: A,
                     checkboxColor: p,
@@ -570,7 +570,7 @@ function eg(e) {
                             role: "cell",
                             children: (0, n.jsx)(j.E, {
                                 className: ei.sr,
-                                variant: "text-sm/semibold",
+                                variant: "body-sm/semibold",
                                 children: et.intl.string(et.t["2Y9ZfA"]),
                             }),
                         }),
@@ -590,7 +590,7 @@ function eg(e) {
                             className: ei.$m,
                             role: "columnheader",
                             children: (0, n.jsx)(_.D, {
-                                variant: "eyebrow",
+                                variant: "body-sm/medium",
                                 className: ei.Bv,
                                 children: et.intl.string(et.t.uShwWv),
                             }),
@@ -599,7 +599,7 @@ function eg(e) {
                             className: ei.Lv,
                             role: "columnheader",
                             children: (0, n.jsx)(_.D, {
-                                variant: "eyebrow",
+                                variant: "body-sm/medium",
                                 className: ei.BO,
                                 children: et.intl.string(et.t.e29Z12),
                             }),
@@ -609,7 +609,7 @@ function eg(e) {
                                   className: ei.Lv,
                                   role: "columnheader",
                                   children: (0, n.jsx)(_.D, {
-                                      variant: "eyebrow",
+                                      variant: "body-sm/medium",
                                       className: ei.BO,
                                       children: et.intl.string(et.t.SCAPTL),
                                   }),
@@ -619,7 +619,7 @@ function eg(e) {
                             className: ei.Lv,
                             role: "columnheader",
                             children: (0, n.jsx)(_.D, {
-                                variant: "eyebrow",
+                                variant: "body-sm/medium",
                                 className: ei.BO,
                                 children: et.intl.string(et.t.DD6gNd),
                             }),
@@ -630,7 +630,7 @@ function eg(e) {
                                   className: ei.Lv,
                                   role: "columnheader",
                                   children: (0, n.jsx)(_.D, {
-                                      variant: "eyebrow",
+                                      variant: "body-sm/medium",
                                       className: ei.BO,
                                       children: et.intl.string(et.t.CtVGyQ),
                                   }),
@@ -639,7 +639,7 @@ function eg(e) {
                             className: ei.Lv,
                             role: "columnheader",
                             children: (0, n.jsx)(_.D, {
-                                variant: "eyebrow",
+                                variant: "body-sm/medium",
                                 className: ei.BO,
                                 children: (0, n.jsx)(E.m, {
                                     text: et.intl.string(et.t["8wbTQ6"]),
@@ -670,8 +670,8 @@ function em(e) {
             muteConfig: A,
             messageNotifications: f,
             unreadSetting: S,
-            channelOverrides: x,
-            notifyHighlights: b,
+            channelOverrides: b,
+            notifyHighlights: x,
         } = (0, d.cf)([Y.Ay], () => ({
             suppressEveryone: Y.Ay.isSuppressEveryoneEnabled(t),
             suppressRoles: Y.Ay.isSuppressRolesEnabled(t),
@@ -692,7 +692,7 @@ function em(e) {
                     let {
                         channel: { type: t },
                     } = e;
-                    return (0, I.tr)(t) || t === q.rbe.GUILD_CATEGORY;
+                    return (0, w.tr)(t) || t === q.rbe.GUILD_CATEGORY;
                 }),
             [r],
         );
@@ -730,7 +730,7 @@ function em(e) {
                 suppressEveryone: c,
                 suppressRoles: u,
                 handleCheckboxChange: G,
-                notifyHighlights: b,
+                notifyHighlights: x,
                 muteEvents: m,
                 mobilePush: N,
                 muted: p,
@@ -745,7 +745,7 @@ function em(e) {
             }),
             (0, n.jsx)(eg, {
                 newChannelOverrides: j,
-                channelOverrides: x,
+                channelOverrides: b,
                 channels: C,
                 categories: r,
                 muted: p,

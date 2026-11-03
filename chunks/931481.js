@@ -1,4 +1,4 @@
-i.d(e, { A: () => y });
+i.d(e, { A: () => C });
 var n = i(477900),
     l = i(582128),
     s = i(503698),
@@ -13,8 +13,8 @@ var n = i(477900),
     f = i(420825),
     g = i(22212),
     h = i(105292),
-    x = i(266600);
-function I(t) {
+    I = i(266600);
+function x(t) {
     let { userId: e, analyticsLocation: i } = t,
         s = (0, f.z)(e),
         [r, o] = l.useState(!1),
@@ -24,12 +24,12 @@ function I(t) {
     return null == s
         ? null
         : (0, n.jsxs)("div", {
-              className: x.kL,
+              className: I.kL,
               children: [
                   r
                       ? null
                       : (0, n.jsx)("div", {
-                            className: x.p6,
+                            className: I.p6,
                             children: (0, n.jsx)(d.$, {
                                 icon: m.EyeIcon,
                                 variant: "secondary",
@@ -39,9 +39,10 @@ function I(t) {
                             }),
                         }),
                   (0, n.jsx)(a.E, {
-                      className: r ? void 0 : x.R,
+                      tag: "div",
+                      className: r ? void 0 : I.R,
                       "aria-label": r ? s : "",
-                      variant: "redesign/message-preview/medium",
+                      variant: "heading-sm/medium",
                       children: s,
                   }),
               ],
@@ -49,15 +50,15 @@ function I(t) {
 }
 var v = i(562153),
     E = i(183555),
-    j = i(939496),
-    p = i(996988),
-    C = i(216057);
-function y(t) {
+    y = i(939496),
+    b = i(996988),
+    j = i(216057);
+function C(t) {
     let { user: e, guildId: i, channelId: s, applicationId: m, isGameRelationship: f = !1, className: g } = t,
-        { themeType: x } = (0, j.E)(),
-        y = x === p.d.MODAL_V2,
-        N = v.Ay.getName(i, s, e),
-        { trackUserProfileAction: b } = (0, E.NJ)(),
+        { themeType: I } = (0, y.E)(),
+        C = I === b.d.MODAL_V2,
+        p = v.Ay.getName(i, s, e),
+        { trackUserProfileAction: N } = (0, E.NJ)(),
         { newestAnalyticsLocation: k } = (0, o.Ay)(),
         { acceptFriendRequest: R, cancelFriendRequest: L } = (0, A.I)({
             userId: e.id,
@@ -66,38 +67,38 @@ function y(t) {
             location: k,
         }),
         P = l.useCallback(() => {
-            (R(), b({ action: f ? "ACCEPT_GAME_FRIEND_REQUEST" : "ACCEPT_FRIEND_REQUEST" }));
-        }, [R, f, b]),
+            (R(), N({ action: f ? "ACCEPT_GAME_FRIEND_REQUEST" : "ACCEPT_FRIEND_REQUEST" }));
+        }, [R, f, N]),
         S = l.useCallback(() => {
-            (L(), b({ action: f ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST" }));
-        }, [L, f, b]),
+            (L(), N({ action: f ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST" }));
+        }, [L, f, N]),
         U = null != m,
         _ = (0, u.h)(m);
     return U && null == _
         ? null
         : (0, n.jsxs)("div", {
-              className: r()(C.kL, g),
+              className: r()(j.kL, g),
               children: [
                   U
                       ? (0, n.jsx)(a.E, {
-                            variant: "text-sm/normal",
+                            variant: "body-sm/normal",
                             children: h.intl.format(f ? h.t.syHjLL : h.t.V15uUI, {
-                                username: N,
+                                username: p,
                                 applicationIcon: () =>
-                                    (0, n.jsx)(c.A, { className: C.Gt, game: _, size: c.M.XXSMALL }, _?.id),
+                                    (0, n.jsx)(c.A, { className: j.Gt, game: _, size: c.M.XXSMALL }, _?.id),
                                 applicationName: _?.name,
                             }),
                         })
                       : (0, n.jsx)(a.E, {
-                            variant: "text-sm/normal",
-                            children: h.intl.format(h.t.uIomXw, { username: N }),
+                            variant: "body-sm/normal",
+                            children: h.intl.format(h.t.uIomXw, { username: p }),
                         }),
-                  (0, n.jsx)(I, { userId: e.id, analyticsLocation: "User Profile" }),
+                  (0, n.jsx)(x, { userId: e.id, analyticsLocation: "User Profile" }),
                   (0, n.jsxs)("div", {
-                      className: C.UD,
+                      className: j.UD,
                       children: [
                           (0, n.jsx)(d.$, {
-                              variant: y ? "secondary" : "primary",
+                              variant: C ? "secondary" : "primary",
                               size: "sm",
                               onClick: P,
                               text: h.intl.string(h.t.Zcibdf),

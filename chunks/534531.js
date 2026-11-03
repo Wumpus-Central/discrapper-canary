@@ -19,9 +19,9 @@ let h = (0, r(945810).mj)({
     variations: { 0: { showNitroUploadBadge: !1 }, 1: { showNitroUploadBadge: !0 } },
 });
 var b = r(925056),
-    x = r(192308),
+    y = r(192308),
     C = r(212524),
-    y = r(105292),
+    x = r(105292),
     v = r(600502);
 let E = "nitro-upload-badge";
 function S(e) {
@@ -31,14 +31,14 @@ function S(e) {
             return (0, g.TW)(e) ? (e?.premiumType ?? null) : null;
         }),
         S = (0, g.CC)(b, h),
-        _ = y.intl.string(C.default.BokMhV),
-        k = y.intl.string(C.default.lCx19K),
+        _ = x.intl.string(C.default.BokMhV),
+        k = x.intl.string(C.default.lCx19K),
         j = i()(v.qS, { [v.EX]: a === s.oA.SM, [v.bG]: !S }),
         P = (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsx)(d.t, { size: "xs", color: "currentColor" }),
                 (0, n.jsx)(c.E, {
-                    variant: a === s.oA.SM ? "text-xxs/semibold" : "text-xs/semibold",
+                    variant: a === s.oA.SM ? "footnote/semibold" : "body-xs/semibold",
                     color: "none",
                     children: _,
                 }),
@@ -64,7 +64,7 @@ function S(e) {
                           (e.stopPropagation(),
                               (function (e) {
                                   let { viewerPremiumType: t } = e;
-                                  (0, x.openModalLazy)(async () => {
+                                  (0, y.openModalLazy)(async () => {
                                       let { default: e } = await r.e("320699").then(r.bind(r, 232118));
                                       return (r) => (0, n.jsx)(e, { ...r, viewerPremiumType: t });
                                   });

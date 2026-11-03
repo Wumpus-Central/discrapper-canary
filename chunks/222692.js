@@ -51,7 +51,7 @@ function c(e) {
                       body: u.intl.string(u.t.UoW002),
                       confirmText: u.intl.string(u.t.BddRzS),
                       children: (0, i.jsx)(l.E, {
-                          variant: "text-sm/normal",
+                          variant: "body-sm/normal",
                           color: "text-subtle",
                           children: u.intl.format(u.t.BPDKoA, { helpdeskArticle: s.M }),
                       }),

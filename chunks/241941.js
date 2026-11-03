@@ -1,4 +1,4 @@
-(t.r(n), t.d(n, { default: () => eI }));
+(t.r(n), t.d(n, { default: () => ex }));
 var i = t(477900),
     l = t(17928),
     a = t(627363),
@@ -11,18 +11,18 @@ var i = t(477900),
     p = t(574172),
     m = t(850891),
     A = t(933958),
-    x = t(969151),
-    I = t(824613),
+    I = t(969151),
+    x = t(824613),
     h = t(833147),
     f = t(503698),
-    j = t.n(f),
-    y = t(3026),
+    y = t.n(f),
+    j = t(3026),
     v = t(862482),
     C = t(866665),
     T = t(43990),
-    g = t(834730),
-    P = t(265872),
-    b = t(666860),
+    b = t(834730),
+    g = t(265872),
+    P = t(666860),
     N = t(717048),
     O = t(567249),
     k = t(253932),
@@ -78,24 +78,24 @@ function ei(e) {
         } = e,
         m = (0, l.bG)([D.A], () => D.A.getChannel(s)),
         A = k.Q_.useSetting(),
-        x = (0, l.yK)(
+        I = (0, l.yK)(
             [z.Ay],
             () => (null == m || null == c ? [] : Array.from(c ?? []).map((e) => z.Ay.getMember(m.guild_id, e))),
             [m, c],
         ),
-        I = o.useMemo(() => {
+        x = o.useMemo(() => {
             let e = new Map();
             return (
-                x.forEach((n) => {
+                I.forEach((n) => {
                     null != n && void 0 !== n && e.set(n.userId, n);
                 }),
                 e
             );
-        }, [x]),
+        }, [I]),
         h = o.useCallback(
             (e, n) => {
                 if (null == e || e === q.mt) return null;
-                let t = I.get(e.id),
+                let t = x.get(e.id),
                     l = t?.nick ?? K.Ay.getName(e);
                 return (0, i.jsx)(
                     C.m,
@@ -112,7 +112,7 @@ function ei(e) {
                     e.id,
                 );
             },
-            [I],
+            [x],
         ),
         f = (0, l.yK)(
             [F.default],
@@ -183,25 +183,25 @@ function ei(e) {
             theme: Q.NJ8.DARK,
             children: (e) =>
                 (0, i.jsxs)("div", {
-                    className: j()(en.kL, e),
+                    className: y()(en.kL, e),
                     children: [
                         (0, i.jsxs)("div", {
-                            className: j()(en.ND, en.c8),
+                            className: y()(en.ND, en.c8),
                             children: [
                                 ea,
-                                (0, i.jsx)(g.E, {
-                                    variant: "text-md/normal",
+                                (0, i.jsx)(b.E, {
+                                    variant: "body-md/normal",
                                     color: "text-strong",
                                     className: en.SX,
-                                    children: (0, i.jsx)(y.A, { children: a.name }),
+                                    children: (0, i.jsx)(j.A, { children: a.name }),
                                 }),
                                 f.length > 0
                                     ? (0, i.jsxs)(i.Fragment, {
                                           children: [
                                               (0, i.jsx)("div", {
                                                   className: en.SC,
-                                                  children: (0, i.jsx)(g.E, {
-                                                      variant: "text-md/normal",
+                                                  children: (0, i.jsx)(b.E, {
+                                                      variant: "body-md/normal",
                                                       color: "text-muted",
                                                       children: ".",
                                                   }),
@@ -219,7 +219,7 @@ function ei(e) {
                             ],
                         }),
                         (0, i.jsxs)("div", {
-                            className: j()(en.ND, en.fU),
+                            className: y()(en.ND, en.fU),
                             children: [
                                 (0, i.jsx)("div", { className: en.Rv }),
                                 (0, i.jsxs)("div", {
@@ -245,14 +245,14 @@ function ei(e) {
                                                   popoutOpen: !0,
                                                   onOpenPopout: () => {},
                                                   onClosePopout: () => {
-                                                      ((0, b.zV)(Q.HAw.ACTIVITY_POPOUT_POP_IN_BUTTON_CLICKED),
+                                                      ((0, P.zV)(Q.HAw.ACTIVITY_POPOUT_POP_IN_BUTTON_CLICKED),
                                                           (0, J.A)({ onConfirm: u }));
                                                   },
                                               })
                                             : null,
                                         (0, i.jsx)(S.A, { node: $, guestWindow: X, onClick: ei }),
                                         (0, i.jsx)(
-                                            P.Y,
+                                            g.Y,
                                             {
                                                 targetElementRef: el,
                                                 position: "bottom",
@@ -316,23 +316,23 @@ function es(e) {
                   (0, p.close)(Q.MLl.ACTIVITY_POPOUT);
               }, 5e3));
     }, [A, n]);
-    let x = (0, l.bG)([d.A], () => {
+    let I = (0, l.bG)([d.A], () => {
         let e = n?.applicationId;
         return null == e ? void 0 : d.A.getApplication(e);
     });
     return (0, i.jsx)("div", {
         className: ea.kL,
         children:
-            null == n || null == x || s
+            null == n || null == I || s
                 ? (0, i.jsx)(r.y, { className: ea.pU })
                 : (0, i.jsx)("div", {
                       className: ea.U$,
                       children: (0, i.jsxs)("div", {
                           className: ea.kq,
                           children: [
-                              (0, i.jsx)("div", { className: ea.N1, children: t({ activity: n, application: x }) }),
-                              (0, i.jsx)(m.A, { type: "embedded-activity", applicationId: x.id }),
-                              (0, i.jsx)("div", { className: ea.Wc, children: a({ activity: n, application: x }) }),
+                              (0, i.jsx)("div", { className: ea.N1, children: t({ activity: n, application: I }) }),
+                              (0, i.jsx)(m.A, { type: "embedded-activity", applicationId: I.id }),
+                              (0, i.jsx)("div", { className: ea.Wc, children: a({ activity: n, application: I }) }),
                           ],
                       }),
                   }),
@@ -345,8 +345,8 @@ function eo() {
             guildId: t,
         } = (0, l.cf)([A.Ay], () => {
             let e = A.Ay.getCurrentEmbeddedActivity(),
-                n = (0, x.H)(e?.location),
-                t = (0, x.D)(e?.location);
+                n = (0, I.H)(e?.location),
+                t = (0, I.D)(e?.location);
             return { embeddedActivity: e, channelId: n, guildId: t };
         }),
         a = (0, l.bG)([A.Ay], () => e?.applicationId != null && A.Ay.isProxyTicketRefreshing(e.applicationId), [e]),
@@ -374,8 +374,8 @@ function eo() {
                     application: a,
                     queryParams: s,
                     url: o,
-                    onIframeMount: (e) => (0, I.hN)(a.id, e),
-                    onIframeUnmount: (e) => (0, I.WO)(a.id, e),
+                    onIframeMount: (e) => (0, x.hN)(a.id, e),
+                    onIframeUnmount: (e) => (0, x.WO)(a.id, e),
                     contextSource: { type: u.f.ACTIVITY, applicationId: a.id },
                 });
             },
@@ -411,10 +411,10 @@ function em() {
     });
 }
 var eA = t(979186),
-    ex = t(620148);
-function eI(e) {
+    eI = t(620148);
+function ex(e) {
     let { windowKey: n } = e,
-        t = (0, ex.A)(),
+        t = (0, eI.A)(),
         o = (0, l.bG)([s.A], () => s.A.getMainFrame()),
         { data: r } = (0, a.YY)(o?.applicationId),
         c = t?.name ?? r?.name ?? R.intl.string(R.t.IC5Ann);

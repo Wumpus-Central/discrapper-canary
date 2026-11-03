@@ -6,21 +6,21 @@ var a = t(477900),
     r = t(512750),
     u = t(943255),
     d = t(575181),
-    c = t(17928),
-    o = t(451988),
+    o = t(17928),
+    c = t(451988),
     m = t(314116),
     f = t(629584),
     g = t(821609),
     h = t(364522),
-    x = t(534514),
-    b = t(834730),
+    b = t(534514),
+    x = t(834730),
     v = t(893007),
     p = t(926321),
     A = t(908803),
     E = t(661531),
     N = t(793574),
-    G = t(688810),
-    y = t(793943),
+    y = t(688810),
+    G = t(793943),
     C = t(468689),
     I = t(378292),
     j = t(868652),
@@ -82,16 +82,16 @@ function ee(e) {
             max: r,
             defaultValue: u,
             ariaLabel: d,
-            onValuePreview: c,
-            onValueCommit: o,
+            onValuePreview: o,
+            onValueCommit: c,
         } = e,
         m = n.useRef(u);
     n.useEffect(() => {
         m.current = u;
     }, [u]);
     let f = n.useCallback(() => {
-        o(m.current);
-    }, [o]);
+        c(m.current);
+    }, [c]);
     return (0, a.jsxs)("div", {
         className: z.TH,
         children: [
@@ -109,7 +109,7 @@ function ee(e) {
                     onBlur: f,
                     onChange: (e) => {
                         let l = Number(e.currentTarget.value);
-                        ((m.current = l), c(l));
+                        ((m.current = l), o(l));
                     },
                     onKeyUp: f,
                     onPointerUp: f,
@@ -135,7 +135,7 @@ function el(e) {
     });
 }
 function et() {
-    let e = (0, c.bG)([w.A], () => w.A.theme) === J.NJ.LIGHT ? J.NJ.LIGHT : J.NJ.ASH,
+    let e = (0, o.bG)([w.A], () => w.A.theme) === J.NJ.LIGHT ? J.NJ.LIGHT : J.NJ.ASH,
         l = [
             {
                 name: "",
@@ -173,7 +173,7 @@ function ea(e) {
         u = n.useId(),
         [d, f] = n.useState(!1),
         [I, D] = n.useState(null),
-        J = (0, c.bG)([w.A], () => w.A.theme),
+        J = (0, o.bG)([w.A], () => w.A.theme),
         {
             draft: ea,
             isSaving: en,
@@ -181,7 +181,7 @@ function ea(e) {
             saveError: es,
             previewGuildId: er,
             origin: eu,
-        } = (0, c.cf)([W.Ay], () => ({
+        } = (0, o.cf)([W.Ay], () => ({
             draft: W.Ay.draft,
             isSaving: W.Ay.isSaving,
             hasChanges: W.Ay.hasChanges(),
@@ -190,10 +190,10 @@ function ea(e) {
             origin: W.Ay.origin,
         })),
         ed = eu === W.v5.PERK_MODAL ? N.A.GUILD_POWERUPS_OVERVIEW : N.A.GUILD_POWERUPS_GUILD_SETTINGS_GUILD_THEME,
-        { analyticsLocations: ec } = (0, G.Ay)(ed),
-        eo = (0, c.bG)([k.A], () => (null == er ? void 0 : k.A.getStateForGuild(er)?.allPowerups[r.d0]), [er]),
+        { analyticsLocations: eo } = (0, y.Ay)(ed),
+        ec = (0, o.bG)([k.A], () => (null == er ? void 0 : k.A.getStateForGuild(er)?.allPowerups[r.d0]), [er]),
         em = (0, S.A)(er),
-        ef = (0, c.bG)([k.A], () => null == er || k.A.hasFetchedPowerupCatalog(er), [er]),
+        ef = (0, o.bG)([k.A], () => null == er || k.A.hasFetchedPowerupCatalog(er), [er]),
         eg = (function (e) {
             let l = e?.customUserThemeSettings?.colors?.[0];
             if (null != l) return l;
@@ -207,8 +207,8 @@ function ea(e) {
             let t = (0, M.Yt)(e?.presetId);
             return null != t ? (0, M.oE)(t).baseMix : M.BC;
         })(ea),
-        ex = Y(eg),
-        eb = Z(eg),
+        eb = Y(eg),
+        ex = Z(eg),
         ev = n.useMemo(() => (0, M.z3)(eg, J), [eg, J]),
         ep = n.useMemo(
             () =>
@@ -221,19 +221,19 @@ function ea(e) {
                         d = s()
                             .hsl(i, u, t / 100)
                             .hex(),
-                        c = s()
+                        o = s()
                             .hsl(i, u, (t + a) / 200)
                             .hex(),
-                        o = s()
+                        c = s()
                             .hsl(i, u, a / 100)
                             .hex();
-                    return `linear-gradient(90deg, ${o} 0%, ${c} 50%, ${d} 100%)`;
+                    return `linear-gradient(90deg, ${c} 0%, ${o} 50%, ${d} 100%)`;
                 })(eg, J),
             [eg, J],
         ),
-        { key: eA, handleInternalChange: eE } = Q(ex),
-        { key: eN, handleInternalChange: eG } = Q(eb),
-        { key: ey, handleInternalChange: eC } = Q(eh),
+        { key: eA, handleInternalChange: eE } = Q(eb),
+        { key: eN, handleInternalChange: ey } = Q(ex),
+        { key: eG, handleInternalChange: eC } = Q(eh),
         eI = n.useCallback((e, l) => {
             (0, R.t$)({ colors: [e], gradientAngle: 0, baseMix: l });
         }, []),
@@ -255,14 +255,14 @@ function ea(e) {
             ((i.current = !0),
                 (0, R.WV)(),
                 (0, _.XG)(),
-                (0, y.Jp)(),
+                (0, G.Jp)(),
                 null != e &&
                     (l === W.v5.GUILD_SETTINGS
                         ? C.A.open(e, H.BEX.GUILD_THEME, N.A.GUILD_POWERUPS_GUILD_SETTINGS_GUILD_THEME)
                         : l === W.v5.PERK_MODAL && (0, L.A)(e, N.A.GUILD_POWERUPS_OVERVIEW, r.d0)));
         }, []),
         eT = n.useCallback(async () => {
-            (await (0, R.HN)(), (i.current = !0), (0, _.XG)(), (0, y.Jp)());
+            (await (0, R.HN)(), (i.current = !0), (0, _.XG)(), (0, G.Jp)());
         }, []),
         e_ = n.useCallback(() => {
             (0, m.A)({
@@ -290,7 +290,7 @@ function ea(e) {
                         (await (F(er)
                             ? Promise.resolve()
                             : new Promise((e, l) => {
-                                  let t = new o.Ep();
+                                  let t = new c.Ep();
                                   function a() {
                                       (t.stop(), P.A.removeChangeListener(n));
                                   }
@@ -317,14 +317,14 @@ function ea(e) {
         eP = n.useCallback((e) => {
             D(e ?? null);
         }, []),
-        eU = (0, c.bG)([U.A], () => U.A.getGuildId()),
+        eU = (0, o.bG)([U.A], () => U.A.getGuildId()),
         eM = null != er && eU !== er;
     (n.useEffect(() => {
         null != er &&
             (k.A.shouldFetchCatalogForGuild(er) && (0, j.AK)(er), k.A.shouldFetchPowerupsForGuild(er) && (0, j.Xd)(er));
     }, [er]),
         n.useEffect(() => {
-            eM && ((i.current = !0), (0, R.WV)(), (0, _.XG)(), (0, y.Jp)());
+            eM && ((i.current = !0), (0, R.WV)(), (0, _.XG)(), (0, G.Jp)());
         }, [eM]),
         n.useEffect(() => {
             if (null == er) return;
@@ -332,7 +332,7 @@ function ea(e) {
             (l && (0, V.Om)(e)) || (0, R.GC)(M.Zq["0"].id);
         }, [er]),
         n.useEffect(() => {
-            null == er && ((0, _.XG)(), (0, y.Jp)());
+            null == er && ((0, _.XG)(), (0, G.Jp)());
         }, [er]),
         n.useEffect(
             () => () => {
@@ -341,7 +341,7 @@ function ea(e) {
             [],
         ));
     let eR = en || d,
-        eW = !em && null == eo,
+        eW = !em && null == ec,
         eV = eR || (!em && !ef),
         eD = null != er && ef && eW,
         eH = eR || !ei || null == ea || null == er || eW,
@@ -363,7 +363,7 @@ function ea(e) {
                 children: (0, a.jsxs)("div", {
                     className: z.rf,
                     children: [
-                        (0, a.jsx)(x.D, {
+                        (0, a.jsx)(b.D, {
                             variant: "heading-lg/semibold",
                             color: "text-strong",
                             children: O.intl.string($.default["/6NbRv"]),
@@ -371,14 +371,14 @@ function ea(e) {
                         (0, a.jsxs)("div", {
                             className: z.uW,
                             children: [
-                                (0, a.jsx)(b.E, {
-                                    variant: "text-sm/semibold",
+                                (0, a.jsx)(x.E, {
+                                    variant: "body-sm/semibold",
                                     color: "text-default",
                                     className: z.a9,
                                     children: O.intl.string($.default.zry4l5),
                                 }),
-                                (0, a.jsx)(b.E, {
-                                    variant: "text-xs/medium",
+                                (0, a.jsx)(x.E, {
+                                    variant: "body-xs/medium",
                                     color: "text-muted",
                                     className: z.yV,
                                     children: O.intl.string($.default.HkvkHP),
@@ -389,8 +389,8 @@ function ea(e) {
                         (0, a.jsxs)("div", {
                             className: z.uW,
                             children: [
-                                (0, a.jsx)(b.E, {
-                                    variant: "text-sm/semibold",
+                                (0, a.jsx)(x.E, {
+                                    variant: "body-sm/semibold",
                                     color: "text-default",
                                     className: z.a9,
                                     children: O.intl.string(X.default.uSL2Gy),
@@ -402,7 +402,7 @@ function ea(e) {
                                     controlKey: eA,
                                     min: 0,
                                     max: 359,
-                                    defaultValue: ex,
+                                    defaultValue: eb,
                                     ariaLabel: O.intl.string(X.default.uSL2Gy),
                                     onValuePreview: eE,
                                     onValueCommit: (e) => {
@@ -416,12 +416,12 @@ function ea(e) {
                                     controlKey: eN,
                                     min: M.wS,
                                     max: M.iq,
-                                    defaultValue: eb,
+                                    defaultValue: ex,
                                     ariaLabel: O.intl.string(X.default.uSL2Gy),
-                                    onValuePreview: eG,
+                                    onValuePreview: ey,
                                     onValueCommit: (e) => {
                                         let l = (0, M.w3)((0, M._k)(eg, M.wS + M.iq - e));
-                                        (eG(Z(l)), eI(l, eh));
+                                        (ey(Z(l)), eI(l, eh));
                                     },
                                 }),
                             ],
@@ -434,15 +434,15 @@ function ea(e) {
                                     (0, a.jsxs)("div", {
                                         className: z.Gl,
                                         children: [
-                                            (0, a.jsx)(b.E, {
+                                            (0, a.jsx)(x.E, {
                                                 id: u,
-                                                variant: "text-sm/medium",
+                                                variant: "body-sm/medium",
                                                 color: "text-default",
                                                 className: z.KF,
                                                 children: O.intl.string(X.default.xlXkaL),
                                             }),
-                                            (0, a.jsx)(b.E, {
-                                                variant: "text-sm/medium",
+                                            (0, a.jsx)(x.E, {
+                                                variant: "body-sm/medium",
                                                 color: "text-default",
                                                 className: z.rv,
                                                 children: `${Math.round(eh)}%`,
@@ -462,7 +462,7 @@ function ea(e) {
                                                 (l !== eh || ea?.customUserThemeSettings != null) && (eC(l), eI(eg, l));
                                             },
                                         },
-                                        ey,
+                                        eG,
                                     ),
                                 ],
                             }),
@@ -470,8 +470,8 @@ function ea(e) {
                         (0, a.jsxs)("div", {
                             className: z.uW,
                             children: [
-                                (0, a.jsx)(b.E, {
-                                    variant: "text-sm/semibold",
+                                (0, a.jsx)(x.E, {
+                                    variant: "body-sm/semibold",
                                     color: "text-default",
                                     className: z.a9,
                                     children: O.intl.string($.default.jSrqR2),
@@ -529,8 +529,8 @@ function ea(e) {
                         null != eJ &&
                             (0, a.jsx)("div", {
                                 role: "alert",
-                                children: (0, a.jsx)(b.E, {
-                                    variant: "text-xs/semibold",
+                                children: (0, a.jsx)(x.E, {
+                                    variant: "body-xs/semibold",
                                     color: "text-feedback-critical",
                                     className: z.z3,
                                     children: eJ,
@@ -542,7 +542,7 @@ function ea(e) {
             (0, a.jsx)("div", {
                 className: z.qr,
                 children:
-                    em || null == eo || null == er
+                    em || null == ec || null == er
                         ? (0, a.jsxs)("div", {
                               className: z.zt,
                               children: [
@@ -564,11 +564,11 @@ function ea(e) {
                         : (0, a.jsxs)("div", {
                               className: z.Wz,
                               children: [
-                                  (0, a.jsx)(G.f5, {
-                                      value: ec,
+                                  (0, a.jsx)(y.f5, {
+                                      value: eo,
                                       children: (0, a.jsx)(T.A, {
                                           guildId: er,
-                                          powerup: eo,
+                                          powerup: ec,
                                           compact: !1,
                                           grow: !0,
                                           size: "md",

@@ -25,16 +25,16 @@ function _(e) {
             h,
             A
                 ? (0, i.jsx)(d.E, {
-                      variant: "text-md/normal",
+                      variant: "body-md/normal",
                       color: "currentColor",
                       lineClamp: 1,
                       style: p,
                       children: t,
                   })
-                : (0, i.jsx)(o.r, { variant: "text-md/normal", style: p, children: t }),
+                : (0, i.jsx)(o.r, { variant: "body-md/normal", style: p, children: t }),
             I &&
                 (0, i.jsx)(d.E, {
-                    variant: "text-sm/normal",
+                    variant: "body-sm/normal",
                     color: "text-subtle",
                     lineClamp: 1,
                     style: { gridColumnStart: null != h ? "2" : "1", gridColumnEnd: null != f ? "2" : "3" },
@@ -48,7 +48,7 @@ function E(e) {
     let { accessory: t, leading: n } = e;
     if (null == t) return null;
     if (r.isValidElement(t)) return (0, i.jsx)("div", { className: s()({ [u.MG]: n }), children: t });
-    if ("string" == typeof t) return (0, i.jsx)(d.E, { variant: "text-sm/normal", color: "text-subtle", children: t });
+    if ("string" == typeof t) return (0, i.jsx)(d.E, { variant: "body-sm/normal", color: "text-subtle", children: t });
     if ("object" == typeof t && "type" in t)
         switch (t.type) {
             case "image":

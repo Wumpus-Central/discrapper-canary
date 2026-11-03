@@ -225,7 +225,7 @@ function Y(e) {
                           className: O.EP,
                       }),
                       (0, l.jsx)(x.E, {
-                          variant: "text-sm/normal",
+                          variant: "body-sm/normal",
                           children: L.intl.format(L.t["5zPJEZ"], { permissions: (0, I.P)(t, i).join(", ") }),
                       }),
                   ],

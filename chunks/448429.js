@@ -1,41 +1,41 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => R });
 var l = n(477900);
 n(582128);
 var r = n(503698),
     i = n.n(r),
-    s = n(435558),
-    a = n(575593),
-    o = n(17928),
+    o = n(435558),
+    s = n(575593),
+    a = n(17928),
     c = n(315629),
     u = n(534514),
     d = n(403581),
     m = n(834730),
-    x = n(773669),
-    A = n(58703),
+    A = n(773669),
+    f = n(58703),
     E = n(24482),
-    f = n(993408),
-    h = n(519707),
+    h = n(993408),
+    x = n(519707),
     p = n(821701),
     L = n(536572),
     _ = n(105292),
     g = n(955527);
 function j(e) {
     let { render: t } = e;
-    return t((0, h.J)("collectibles_edit_modal_preview_details"));
+    return t((0, x.J)("collectibles_edit_modal_preview_details"));
 }
-function C(e) {
+function y(e) {
     let { purchase: t, isPremiumPurchase: n, locale: r } = e,
-        i = null != t.expiresAt ? (0, A.Tf)(new Date(), t.expiresAt) : null;
+        i = null != t.expiresAt ? (0, f.Tf)(new Date(), t.expiresAt) : null;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             null != i &&
                 (0, l.jsx)(m.E, {
-                    variant: "text-xxs/normal",
+                    variant: "footnote/normal",
                     color: "text-muted",
                     children: _.intl.format(_.t.Io7ozn, { days: i.days.toString() }),
                 }),
             (0, l.jsxs)(m.E, {
-                variant: "text-xxs/normal",
+                variant: "footnote/normal",
                 color: "text-muted",
                 children: [
                     _.intl.format(_.t.gW9R4B, {
@@ -60,39 +60,39 @@ function C(e) {
             }),
             n &&
                 (0, l.jsx)(m.E, {
-                    variant: "text-xxs/normal",
+                    variant: "footnote/normal",
                     color: "text-muted",
                     children: _.intl.string(_.t.nKdAlO),
                 }),
         ],
     });
 }
-function R(e) {
+function b(e) {
     let { canUsePremiumCollectibles: t, hasLostAccess: n, nitroChurnCTA: r, nitroJoinCTA: i } = e;
     return t
-        ? (0, l.jsx)(m.E, { variant: "text-sm/medium", color: "text-default", children: _.intl.string(_.t.hmyYK8) })
+        ? (0, l.jsx)(m.E, { variant: "body-sm/medium", color: "text-default", children: _.intl.string(_.t.hmyYK8) })
         : n
-          ? (0, l.jsx)(m.E, { variant: "text-sm/medium", color: "text-default", children: r })
-          : (0, l.jsx)(m.E, { variant: "text-sm/medium", color: "text-default", children: i });
+          ? (0, l.jsx)(m.E, { variant: "body-sm/medium", color: "text-default", children: r })
+          : (0, l.jsx)(m.E, { variant: "body-sm/medium", color: "text-default", children: i });
 }
-function T() {
-    return (0, l.jsx)(m.E, { variant: "text-sm/medium", color: "text-default", children: _.intl.string(_.t.fEGjVQ) });
+function C() {
+    return (0, l.jsx)(m.E, { variant: "body-sm/medium", color: "text-default", children: _.intl.string(_.t.fEGjVQ) });
 }
-let v = function (e) {
+let R = function (e) {
     let { user: t, previewSkuId: n, nitroChurnCTA: r, nitroJoinCTA: m } = e,
-        A = (0, o.bG)([x.default], () => x.default.locale),
-        { product: h, purchase: _ } = (0, p.A)(n),
-        v = E.Ay.canUseCollectibles(t),
-        y = (0, f.G0)(h),
-        O = (0, f.gA)(_),
-        b = !v && O,
-        k = null != _ && !b,
+        f = (0, a.bG)([A.default], () => A.default.locale),
+        { product: x, purchase: _ } = (0, p.A)(n),
+        R = E.Ay.canUseCollectibles(t),
+        T = (0, h.G0)(x),
+        v = (0, h.gA)(_),
+        O = !R && v,
+        k = null != _ && !O,
         P = (0, L.Sw)(_),
-        N = (0, L.VG)(h),
-        D = y || O,
-        I = h?.type ?? _?.type,
-        F = !k && (!D || I === a.R.AVATAR_DECORATION || I === a.R.PROFILE_EFFECT);
-    if (null == h && null == _) return null;
+        N = (0, L.VG)(x),
+        D = T || v,
+        I = x?.type ?? _?.type,
+        F = !k && (!D || I === s.R.AVATAR_DECORATION || I === s.R.PROFILE_EFFECT);
+    if (null == x && null == _) return null;
     function M(e) {
         let t = e && D ? c.h : "div";
         return (0, l.jsx)("div", {
@@ -103,23 +103,23 @@ let v = function (e) {
                 children: [
                     (0, l.jsxs)(u.D, {
                         color: "text-strong",
-                        variant: e ? "text-md/semibold" : "text-sm/semibold",
+                        variant: e ? "body-md/semibold" : "body-sm/semibold",
                         className: e ? g.DD : void 0,
                         children: [
                             e && D && (0, l.jsx)(d.t, { size: "xs", color: "currentColor" }),
-                            (0, s.isEmpty)(P) ? N : P,
+                            (0, o.isEmpty)(P) ? N : P,
                         ],
                     }),
                     k
-                        ? (0, l.jsx)(C, { purchase: _, isPremiumPurchase: O, locale: A })
-                        : y || O
-                          ? (0, l.jsx)(R, {
-                                canUsePremiumCollectibles: v,
-                                hasLostAccess: b,
+                        ? (0, l.jsx)(y, { purchase: _, isPremiumPurchase: v, locale: f })
+                        : T || v
+                          ? (0, l.jsx)(b, {
+                                canUsePremiumCollectibles: R,
+                                hasLostAccess: O,
                                 nitroChurnCTA: r,
                                 nitroJoinCTA: m,
                             })
-                          : (0, l.jsx)(T, {}),
+                          : (0, l.jsx)(C, {}),
                 ],
             }),
         });

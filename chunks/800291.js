@@ -33,8 +33,8 @@ var S = n(186111),
     v = n(652215),
     w = n(650583),
     L = n(105292),
-    E = n(969465);
-class b extends s.Component {
+    b = n(969465);
+class E extends s.Component {
     searchBarRef = s.createRef();
     state = { focused: !1 };
     componentDidMount() {
@@ -98,7 +98,7 @@ class b extends s.Component {
         let { filterQuery: t } = this.props,
             { focused: e } = this.state;
         return (0, l.jsx)("div", {
-            className: u()({ [E.sw]: !0, [E.in]: e }),
+            className: u()({ [b.sw]: !0, [b.in]: e }),
             children: (0, l.jsx)(I.I, {
                 ref: this.searchBarRef,
                 onChange: C,
@@ -116,7 +116,7 @@ class b extends s.Component {
 function D() {
     let t = (0, y.bG)([S.A], () => S.A.hasLayers()),
         e = (0, N.useModalsStore)(N.hasAnyModalOpenSelector);
-    return (0, l.jsx)(b, {
+    return (0, l.jsx)(E, {
         activeRowKey: (0, y.bG)([j.A], () => j.A.activeRowKey),
         hasModalOpen: e || t,
         filterQuery: (0, y.bG)([P.A], () => P.A.applicationFilterQuery),
@@ -700,9 +700,9 @@ var tP = n(435558),
     tv = n(462887),
     tw = n(408278),
     tL = n(5373),
-    tE = n(834730),
-    tb = n(797424),
-    tD = n.n(tb),
+    tb = n(834730),
+    tE = n(797424),
+    tD = n.n(tE),
     tM = n(228118),
     tB = (((i = tB || {}).XSMALL = "xsmall"), (i.SMALL = "small"), (i.LARGE = "large"), i);
 function tO(t) {
@@ -992,8 +992,8 @@ class en extends s.PureComponent {
                     foregroundGradientColor: null != i ? [i[0], i[1]] : void 0,
                     animate: this.isFocused,
                 }),
-                (0, l.jsx)(tE.E, {
-                    variant: "text-xs/medium",
+                (0, l.jsx)(tb.E, {
+                    variant: "body-xs/medium",
                     color: "text-muted",
                     className: t2.NO,
                     children: null != s ? s : "",
@@ -1007,8 +1007,8 @@ class en extends s.PureComponent {
             direction: $.A.Direction.VERTICAL,
             children: [
                 (0, l.jsx)(tO, { percents: e, size: tO.Sizes.SMALL, foregroundColors: t6, animate: this.isFocused }),
-                (0, l.jsx)(tE.E, {
-                    variant: "text-xs/medium",
+                (0, l.jsx)(tb.E, {
+                    variant: "body-xs/medium",
                     color: "text-muted",
                     className: t2.NO,
                     children: null != n ? n : "",
@@ -1399,8 +1399,8 @@ var eA = n(665260),
     ev = n(452027),
     ew = n(466472),
     eL = n(29160),
-    eE = n(970176);
-let eb = Math.ceil(2 * Math.PI * 20),
+    eb = n(970176);
+let eE = Math.ceil(2 * Math.PI * 20),
     eD = function (t) {
         let e,
             n,
@@ -1412,18 +1412,18 @@ let eb = Math.ceil(2 * Math.PI * 20),
         return (0, l.jsx)(z.m, {
             text: L.intl.formatToPlainString(L.t["2eoRMh"], { used: c }),
             children: (0, l.jsxs)("div", {
-                className: eE.iE,
+                className: eb.iE,
                 role: "progressbar",
                 "aria-label": L.intl.formatToPlainString(L.t["2eoRMh"], { used: c }),
                 children: [
                     (0, l.jsxs)("svg", {
                         viewBox: "25 25 50 50",
-                        className: eE.JW,
+                        className: eb.JW,
                         "aria-hidden": !0,
                         children: [
-                            (0, l.jsx)("circle", { className: eE.Tp, cx: "50", cy: "50", r: 20 }),
+                            (0, l.jsx)("circle", { className: eb.Tp, cx: "50", cy: "50", r: 20 }),
                             (0, l.jsx)("circle", {
-                                className: eE.CU,
+                                className: eb.CU,
                                 cx: "50",
                                 cy: "50",
                                 r: 20,
@@ -1432,11 +1432,11 @@ let eb = Math.ceil(2 * Math.PI * 20),
                                     (n = Math.round(-71 * o + 208)),
                                     (i = Math.round(-22 * o + 240)),
                                     `rgb(${e}, ${n}, ${i})`),
-                                strokeDasharray: ((s = Math.floor(eb * o)), `${s}, ${eb}`),
+                                strokeDasharray: ((s = Math.floor(eE * o)), `${s}, ${eE}`),
                             }),
                         ],
                     }),
-                    (0, l.jsx)("aside", { className: eE.Y3, "aria-hidden": !0, children: c }),
+                    (0, l.jsx)("aside", { className: eb.Y3, "aria-hidden": !0, children: c }),
                 ],
             }),
         });
@@ -1507,7 +1507,7 @@ class eV extends s.PureComponent {
                                 children: [
                                     (0, l.jsx)(eg.D, {
                                         className: ek.nM,
-                                        variant: "heading-md/semibold",
+                                        variant: "heading-sm/semibold",
                                         children: null != i ? i : eM.A.getLabelFromPath(n),
                                     }),
                                     r
@@ -1521,7 +1521,7 @@ class eV extends s.PureComponent {
                                       hoverText: L.intl.formatToPlainString(L.t["Fxo9e+"], { available: t, total: e }),
                                       children: n,
                                   })
-                                : (0, l.jsx)(tE.E, { className: ek.fw, variant: "text-xs/normal", children: n }),
+                                : (0, l.jsx)(tb.E, { className: ek.fw, variant: "body-xs/normal", children: n }),
                         ],
                     }),
                     (0, l.jsx)(eR.$, {
@@ -1712,7 +1712,7 @@ function eF(t) {
         className: eK.z0,
         children: [
             (0, l.jsx)(eg.D, {
-                variant: "heading-md/semibold",
+                variant: "heading-sm/semibold",
                 className: eK.Z9,
                 children: L.intl.string(L.t["5PJtrH"]),
             }),

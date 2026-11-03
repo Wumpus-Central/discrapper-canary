@@ -1,49 +1,49 @@
-(n.d(e, { default: () => S }), n(321073));
+(n.d(t, { default: () => G }), n(321073));
 var i = n(477900),
     s = n(582128),
     l = n(91871),
     a = n.n(l),
     r = n(17928),
-    c = n(189213),
-    d = n(683438),
+    d = n(189213),
+    c = n(683438),
     o = n(834730),
     u = n(939249),
     m = n(398590),
     h = n(548118),
-    x = n(976860),
-    g = n(71393),
+    g = n(976860),
+    x = n(71393),
     j = n(711014),
-    p = n(473145),
-    y = n(652215),
+    y = n(473145),
+    p = n(652215),
     f = n(105292),
     v = n(150319);
-function C(t) {
-    let { setQuery: e, query: n } = t;
-    return (0, i.jsx)(d.I, {
+function C(e) {
+    let { setQuery: t, query: n } = e;
+    return (0, i.jsx)(c.I, {
         placeholder: f.intl.string(f.t.vf3ZTa),
         "aria-label": f.intl.string(f.t.vf3ZTa),
         query: n,
-        onChange: e,
-        onClear: () => e(""),
+        onChange: t,
+        onClear: () => t(""),
     });
 }
-function G(t) {
-    let { isTransfer: e = !1, selectedSlotGuilds: n, onClose: s, onSelectGuild: l, query: c } = t,
-        d = (0, r.bG)([j.Ay], () => j.Ay.getFlattenedGuildIds()),
-        C = (0, r.yK)([g.A], () =>
-            d.reduce((t, e) => {
-                let i = g.A.getGuild(e);
+function b(e) {
+    let { isTransfer: t = !1, selectedSlotGuilds: n, onClose: s, onSelectGuild: l, query: d } = e,
+        c = (0, r.bG)([j.Ay], () => j.Ay.getFlattenedGuildIds()),
+        C = (0, r.yK)([x.A], () =>
+            c.reduce((e, t) => {
+                let i = x.A.getGuild(t);
                 return (
                     null == i ||
-                        i.features.has(y.GuildFeatures.HUB) ||
-                        (null != n && n.some((t) => t.id === e)) ||
-                        ((c.length <= 0 || a()(c.toLowerCase(), i?.name.toLowerCase())) && t.push(i)),
-                    t
+                        i.features.has(p.GuildFeatures.HUB) ||
+                        (null != n && n.some((e) => e.id === t)) ||
+                        ((d.length <= 0 || a()(d.toLowerCase(), i?.name.toLowerCase())) && e.push(i)),
+                    e
                 );
             }, []),
         );
-    function G() {
-        (s(), (0, m.jH)(), (0, x.pX)(y.BVt.GUILD_DISCOVERY));
+    function b() {
+        (s(), (0, m.jH)(), (0, g.pX)(p.BVt.GUILD_DISCOVERY));
     }
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -51,66 +51,66 @@ function G(t) {
                 (0, i.jsx)("div", {
                     className: v.Kl,
                     children: (0, i.jsx)(o.E, {
-                        variant: "text-md/normal",
+                        variant: "body-md/normal",
                         children:
-                            0 === d.length
+                            0 === c.length
                                 ? f.intl.format(f.t["E3tB6+"], {
-                                      publicGuildDirectoryHook: (t, e) =>
-                                          (0, i.jsx)(u.D, { onClick: G, tag: "a", children: t }, e),
+                                      publicGuildDirectoryHook: (e, t) =>
+                                          (0, i.jsx)(u.D, { onClick: b, tag: "a", children: e }, t),
                                   })
                                 : f.intl.string(f.t.w3GLl9),
                     }),
                 }),
-            C.map((t) =>
+            C.map((e) =>
                 (0, i.jsxs)(
                     u.D,
                     {
                         className: v.Ss,
                         onClick: () => {
-                            l(t);
+                            l(e);
                         },
                         children: [
-                            (0, i.jsx)(h.Ay, { className: v.Bq, guild: t, size: h.Ay.Sizes.SMALL, active: !0 }),
+                            (0, i.jsx)(h.Ay, { className: v.Bq, guild: e, size: h.Ay.Sizes.SMALL, active: !0 }),
                             (0, i.jsxs)("div", {
                                 className: v.Vi,
                                 children: [
-                                    (0, i.jsx)(o.E, { className: v.tD, variant: "text-md/normal", children: t.name }),
+                                    (0, i.jsx)(o.E, { className: v.tD, variant: "body-md/normal", children: e.name }),
                                     (0, i.jsx)(o.E, {
                                         className: v.w2,
                                         color: "text-muted",
-                                        variant: "text-xs/normal",
-                                        children: (0, p.gb)(t.premiumTier),
+                                        variant: "body-xs/normal",
+                                        children: (0, y.gb)(e.premiumTier),
                                     }),
                                 ],
                             }),
                             (0, i.jsx)(o.E, {
                                 className: v.qW,
                                 color: "text-overlay-light",
-                                variant: "text-sm/medium",
-                                children: e ? f.intl.string(f.t.dUgaF8) : f.intl.string(f.t.Uj0md3),
+                                variant: "body-sm/medium",
+                                children: t ? f.intl.string(f.t.dUgaF8) : f.intl.string(f.t.Uj0md3),
                             }),
                         ],
                     },
-                    t.id,
+                    e.id,
                 ),
             ),
         ],
     });
 }
-function S(t) {
-    let { onClose: e, onSelectGuild: n, transitionState: l, isTransfer: a = !1, selectedSlotGuilds: r } = t,
-        [d, o] = s.useState("");
+function G(e) {
+    let { onClose: t, onSelectGuild: n, transitionState: l, isTransfer: a = !1, selectedSlotGuilds: r } = e,
+        [c, o] = s.useState("");
     async function u() {
-        await e();
+        await t();
     }
     let m = a ? f.intl.string(f.t.IB13DV) : f.intl.string(f.t.cQYceV);
-    return (0, i.jsx)(c.a, {
+    return (0, i.jsx)(d.a, {
         transitionState: l,
         onClose: u,
         size: "md",
         title: m,
-        input: (0, i.jsx)(C, { query: d, setQuery: o }),
+        input: (0, i.jsx)(C, { query: c, setQuery: o }),
         actions: [],
-        children: (0, i.jsx)(G, { onClose: e, onSelectGuild: n, query: d, isTransfer: a, selectedSlotGuilds: r }),
+        children: (0, i.jsx)(b, { onClose: t, onSelectGuild: n, query: c, isTransfer: a, selectedSlotGuilds: r }),
     });
 }

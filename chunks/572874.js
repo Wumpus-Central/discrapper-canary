@@ -13,15 +13,15 @@ var n = i(477900),
     m = i(894328),
     p = i(499211),
     C = i(317525),
-    E = i(260509),
-    b = i(34457),
+    b = i(260509),
+    E = i(34457),
     g = i(98318),
     G = i(855918),
     T = i(652215),
     k = i(386784),
-    x = i(508654),
+    y = i(508654),
     h = i(468689),
-    y = i(456874),
+    x = i(456874),
     O = i(280450),
     w = i(71393),
     B = i(576705),
@@ -35,7 +35,7 @@ let I = function (t) {
         _ = I.isForumPost(),
         L = (0, a.bG)([w.A], () => w.A.getGuild(I.getGuildId())),
         j = (0, d.iD)(I.getGuildId(), (0, c.us)(I)),
-        M = (0, x.ob)(R),
+        M = (0, y.ob)(R),
         { isSubscriptionGated: z } = (0, p.A)(I.id),
         F =
             ((e = (0, a.bG)([C.A], () => (null != L ? C.A.getRolesSnapshot(L.id) : void 0))),
@@ -50,8 +50,8 @@ let I = function (t) {
                                           a = i.permissionOverwrites[t];
                                       (0, g.U)(l) && (0, G.Uj)(i, a) && n.add(l);
                                   }
-                                  let l = e[(0, E.af)(t)],
-                                      a = !(0, b._m)(l, T.xBc.VIEW_CHANNEL),
+                                  let l = e[(0, b.af)(t)],
+                                      a = !(0, E._m)(l, T.xBc.VIEW_CHANNEL),
                                       r = (0, G.AN)(i, i.permissionOverwrites[t.id]);
                                   if (a && !r) for (let t of Object.values(e)) (0, g.U)(t) && (0, G.iR)(t) && n.add(t);
                                   return [...n];
@@ -70,7 +70,7 @@ let I = function (t) {
         [H, K] = l.useState(),
         P = (0, a.bG)([O.default], () => I.isOwner(O.default.getId()), [I]),
         Y = (0, a.bG)([B.A], () => B.A.can(I.isThread() ? T.xBc.MANAGE_THREADS : T.xBc.MANAGE_CHANNELS, I), [I]),
-        V = (0, a.bG)([y.A], () => y.A.getCount(I.id) ?? 0, [I.id]),
+        V = (0, a.bG)([x.A], () => x.A.getCount(I.id) ?? 0, [I.id]),
         J = _ && (Y || (P && V < 1)),
         X = M.length > 0 && (I.type === T.rbe.GUILD_VOICE || I.type === T.rbe.GUILD_STAGE_VOICE);
     if (
@@ -155,7 +155,7 @@ let I = function (t) {
               ],
               children: X
                   ? (0, n.jsx)(s.E, {
-                        variant: "text-md/normal",
+                        variant: "body-md/normal",
                         color: "text-default",
                         children: D.intl.format(D.t.Ze005A, { count: M.length }),
                     })

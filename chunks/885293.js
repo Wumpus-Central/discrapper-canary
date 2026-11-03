@@ -1,55 +1,55 @@
-a.d(e, { default: () => _ });
+a.d(e, { default: () => x });
 var n = a(477900);
 a(582128);
 var i = a(131937),
     s = a(189213),
     l = a(364522),
     r = a(834730),
-    c = a(150934),
-    o = a(139286),
-    d = a(174459),
+    o = a(150934),
+    d = a(139286),
+    c = a(174459),
     m = a(60888),
     u = a(652215),
     p = a(105292),
-    x = a(860311);
-function _(t) {
-    let { url: e, trustUrl: a, isProtocol: _, onConfirm: h, onCancel: f, onClose: C, transitionState: g } = t,
+    _ = a(860311);
+function x(t) {
+    let { url: e, trustUrl: a, isProtocol: x, onConfirm: h, onCancel: f, onClose: y, transitionState: C } = t,
         {
-            protocol: k,
-            authorityPrefix: A,
-            hostname: D,
-            theRestOfTheUrl: L,
-            shouldTrustUrl: v,
-            setShouldTrustUrl: I,
-            handleConfirm: y,
-            handleCancel: E,
-        } = (0, m.u)({ url: e, trustUrl: a, onConfirm: h, onCancel: f, onClose: C });
+            protocol: b,
+            authorityPrefix: g,
+            hostname: k,
+            theRestOfTheUrl: A,
+            shouldTrustUrl: D,
+            setShouldTrustUrl: L,
+            handleConfirm: v,
+            handleCancel: I,
+        } = (0, m.u)({ url: e, trustUrl: a, onConfirm: h, onCancel: f, onClose: y });
     return (
-        (0, o.A)({ type: i.ImpressionTypes.MODAL, name: i.ImpressionNames.MASKED_LINK_MODAL }),
+        (0, d.A)({ type: i.ImpressionTypes.MODAL, name: i.ImpressionNames.MASKED_LINK_MODAL }),
         (0, n.jsxs)(s.a, {
             size: "md",
-            transitionState: g,
-            onClose: C,
+            transitionState: C,
+            onClose: y,
             title: p.intl.string(p.t["3w1QGl"]),
-            subtitle: _ ? p.intl.format(p.t.aCYv1z, {}) : p.intl.string(p.t.soRxRe),
+            subtitle: x ? p.intl.format(p.t.aCYv1z, {}) : p.intl.string(p.t.soRxRe),
             actions: [
                 {
                     text: p.intl.string(p.t["/g10LC"]),
                     onClick: function () {
-                        (E(),
-                            d.default.track(u.HAw.MASKED_LINK_MODAL_CLICKED, {
-                                is_trust_url_selected: v,
+                        (I(),
+                            c.default.track(u.HAw.MASKED_LINK_MODAL_CLICKED, {
+                                is_trust_url_selected: D,
                                 action_type: "cancel",
                             }));
                     },
                     variant: "secondary",
                 },
                 {
-                    text: _ ? p.intl.string(p.t.COq6kk) : p.intl.string(p.t.NcJfJG),
+                    text: x ? p.intl.string(p.t.COq6kk) : p.intl.string(p.t.NcJfJG),
                     onClick: function () {
-                        (y(),
-                            d.default.track(u.HAw.MASKED_LINK_MODAL_CLICKED, {
-                                is_trust_url_selected: v,
+                        (v(),
+                            c.default.track(u.HAw.MASKED_LINK_MODAL_CLICKED, {
+                                is_trust_url_selected: D,
                                 action_type: "confirm",
                             }));
                     },
@@ -58,31 +58,31 @@ function _(t) {
             ],
             children: [
                 (0, n.jsxs)(l.Ip, {
-                    className: x.ul,
+                    className: _.ul,
                     children: [
                         (0, n.jsxs)(r.E, {
                             tag: "span",
-                            variant: _ ? "text-md/semibold" : "text-md/normal",
-                            color: _ ? "text-default" : "text-muted",
-                            children: [k, A],
+                            variant: x ? "body-md/semibold" : "body-md/normal",
+                            color: x ? "text-default" : "text-muted",
+                            children: [b, g],
                         }),
                         (0, n.jsx)(r.E, {
                             tag: "span",
-                            variant: _ ? "text-md/normal" : "text-md/semibold",
-                            color: _ ? "text-muted" : "text-default",
-                            children: D,
+                            variant: x ? "body-md/normal" : "body-md/semibold",
+                            color: x ? "text-muted" : "text-default",
+                            children: k,
                         }),
-                        (0, n.jsx)(r.E, { tag: "span", variant: "text-md/normal", color: "text-muted", children: L }),
+                        (0, n.jsx)(r.E, { tag: "span", variant: "body-md/normal", color: "text-muted", children: A }),
                     ],
                 }),
                 (0, n.jsx)("div", {
-                    className: x.F5,
-                    children: (0, n.jsx)(c.S, {
-                        checked: v,
-                        onChange: (t) => I(t),
-                        label: _
-                            ? p.intl.format(p.t["haA+Xw"], { protocol: k.replace(":", "") })
-                            : p.intl.format(p.t.ZgXDsI, { domain: D }),
+                    className: _.F5,
+                    children: (0, n.jsx)(o.S, {
+                        checked: D,
+                        onChange: (t) => L(t),
+                        label: x
+                            ? p.intl.format(p.t["haA+Xw"], { protocol: b.replace(":", "") })
+                            : p.intl.format(p.t.ZgXDsI, { domain: k }),
                         labelType: "secondary",
                     }),
                 }),

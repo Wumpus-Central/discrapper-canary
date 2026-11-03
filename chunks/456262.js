@@ -6,8 +6,8 @@ var r = n(477900),
     i = n(965744),
     c = n(920184),
     h = n(834730),
-    u = n(9578),
-    d = n(721779),
+    d = n(9578),
+    u = n(721779),
     o = n(694403),
     g = n(417964),
     p = n(123917),
@@ -61,17 +61,17 @@ function y(e, t) {
                 if (null == n) return N(e, t);
                 let l = n.displayTarget;
                 return (0, r.jsx)(
-                    u.A,
+                    d.A,
                     { href: n.target, title: l, trusted: () => (0, p.m)(n.target, l), children: l },
                     t,
                 );
             }
             let l = (0, g.Fd)(e.text).trim(),
                 s = (0, g.Fd)(a.title ?? "").trim();
-            if (null == n || (i.length > 0 && "" === l) || _(l) || _(s) || (0, d.F9)(l) || (0, d.F9)(s)) return N(e, t);
+            if (null == n || (i.length > 0 && "" === l) || _(l) || _(s) || (0, u.F9)(l) || (0, u.F9)(s)) return N(e, t);
             let c = "" !== s ? s : "" !== l ? l : n.displayTarget;
             return (0, r.jsx)(
-                u.A,
+                d.A,
                 {
                     href: n.target,
                     title: c,
@@ -228,7 +228,7 @@ function v(e) {
         children: [
             (0, r.jsx)("div", { className: s()(f.PT, x.l_), children: a }),
             "" !== n
-                ? (0, r.jsx)(h.E, { variant: "text-sm/normal", color: "text-subtle", className: x.VX, children: n })
+                ? (0, r.jsx)(h.E, { variant: "body-sm/normal", color: "text-subtle", className: x.VX, children: n })
                 : null,
         ],
     });

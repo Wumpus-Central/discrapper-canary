@@ -21,7 +21,7 @@ function t(a) {
                         (0, c.jsx)(r.E, {
                             className: m.Qq,
                             color: "none",
-                            variant: "text-md/normal",
+                            variant: "body-md/normal",
                             children: a.label,
                         }),
                         !t?.(a) && (0, c.jsx)(d.A, { className: m.OW, direction: d.A.Directions.RIGHT }),

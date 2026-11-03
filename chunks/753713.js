@@ -1,16 +1,16 @@
-n.d(e, { A: () => o });
-var l = n(477900);
-n(582128);
-var i = n(834730),
-    a = n(853390),
-    r = n(105292),
-    s = n(767395);
+e.d(n, { A: () => o });
+var l = e(477900);
+e(582128);
+var i = e(834730),
+    a = e(853390),
+    r = e(105292),
+    s = e(767395);
 function o(t) {
-    let { start: e, end: n } = t,
-        { elapsed: o, duration: c, percentage: u } = (0, a.Ay)({ start: e, end: n }),
+    let { start: n, end: e } = t,
+        { elapsed: o, duration: c, percentage: u } = (0, a.Ay)({ start: n, end: e }),
         d = (function (t) {
-            let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
-            return Math.floor(t / e) * e;
+            let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+            return Math.floor(t / n) * n;
         })(o),
         A = c > 0 ? Math.round((d / c) * 100) : 0,
         f = (0, a.Ar)(d),
@@ -20,7 +20,7 @@ function o(t) {
         className: s.kL,
         children: [
             (0, l.jsx)(i.E, {
-                variant: "text-xs/normal",
+                variant: "body-xs/normal",
                 color: "text-default",
                 className: s.Qq,
                 "aria-hidden": !0,
@@ -37,7 +37,7 @@ function o(t) {
                 children: (0, l.jsx)("div", { className: s.qB, style: { width: `${100 * u}%` } }),
             }),
             (0, l.jsx)(i.E, {
-                variant: "text-xs/normal",
+                variant: "body-xs/normal",
                 color: "text-default",
                 className: s.Qq,
                 "aria-hidden": !0,

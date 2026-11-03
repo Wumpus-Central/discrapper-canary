@@ -25,7 +25,7 @@ function E(e) {
         children: (0, i.jsx)(s.D, {
             onClick: h,
             focusProps: { ringTarget: A },
-            children: (0, i.jsx)(l.D, { variant: "heading-sm/semibold", children: I }),
+            children: (0, i.jsx)(l.D, { variant: "heading-xs/semibold", children: I }),
         }),
     });
 }

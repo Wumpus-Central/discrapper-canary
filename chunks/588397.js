@@ -1,1 +1,1 @@
-e.exports = { BK: "text-sm/medium__09ccc", kL: "container__09ccc" };
+e.exports = { sk: "body-sm/medium__09ccc", kL: "container__09ccc" };

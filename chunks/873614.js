@@ -1,11 +1,11 @@
-t.d(n, { A: () => _ });
+t.d(n, { A: () => y });
 var l = t(477900),
     i = t(582128),
     a = t(503698),
     s = t.n(a),
     r = t(17928),
-    c = t(331322),
-    o = t(661531),
+    o = t(331322),
+    c = t(661531),
     u = t(192308),
     d = t(834730),
     h = t(939249),
@@ -17,8 +17,8 @@ var l = t(477900),
     f = t(46054),
     x = t(506164),
     N = t(734057),
-    C = t(105292),
-    b = t(596490),
+    b = t(105292),
+    C = t(596490),
     E = t(814316);
 function I(e) {
     let { guild: n, channelId: a } = e,
@@ -27,28 +27,28 @@ function I(e) {
         I = i.useCallback(() => {
             A.A.nsfwReturnToSafety(n?.id);
         }, [n]),
-        _ = i.useCallback(() => {
+        y = i.useCallback(() => {
             A.A.spoilerAgree(a);
         }, [a]),
-        T = (0, p.Ay)(s),
-        y = null != s ? (0, j.gU)(s) : null,
+        _ = (0, p.Ay)(s),
+        T = null != s ? (0, j.gU)(s) : null,
         S =
             null != s
-                ? (0, l.jsxs)(c.B, {
+                ? (0, l.jsxs)(o.B, {
                       direction: "horizontal",
                       align: "center",
                       gap: 4,
-                      className: b.$,
+                      className: C.$,
                       children: [
-                          null != y &&
+                          null != T &&
                               (0, l.jsx)("span", {
-                                  className: b.P0,
-                                  children: (0, l.jsx)(y, { size: "md", color: o.A.colors.TEXT_DEFAULT }),
+                                  className: C.P0,
+                                  children: (0, l.jsx)(T, { size: "md", color: c.A.colors.TEXT_DEFAULT }),
                               }),
-                          (0, l.jsx)("span", { className: b.HA, children: T }),
+                          (0, l.jsx)("span", { className: C.HA, children: _ }),
                       ],
                   })
-                : C.intl.string(C.t["q38/ae"]),
+                : b.intl.string(b.t["q38/ae"]),
         v = i.useCallback((e) => {
             null != e && E(e.scrollHeight - e.clientHeight > 1);
         }, []),
@@ -66,41 +66,41 @@ function I(e) {
                       children: [
                           (0, l.jsx)(d.E, {
                               ref: v,
-                              variant: "text-md/medium",
+                              variant: "body-md/medium",
                               color: "text-muted",
-                              className: b.VA,
+                              className: C.VA,
                               lineClamp: 3,
                               children: f.A.parseTruncatedTopic(s.topic, !0, { channelId: a }),
                           }),
                           g &&
                               (0, l.jsx)(h.D, {
-                                  className: b.zT,
+                                  className: C.zT,
                                   onClick: k,
                                   children: (0, l.jsx)(d.E, {
-                                      variant: "text-md/medium",
+                                      variant: "body-md/medium",
                                       color: "text-brand",
-                                      className: b.ql,
-                                      children: C.intl.string(C.t["/QvRak"]),
+                                      className: C.ql,
+                                      children: b.intl.string(b.t["/QvRak"]),
                                   }),
                               }),
-                          (0, l.jsx)("div", { className: b.yF }),
+                          (0, l.jsx)("div", { className: C.yF }),
                       ],
                   })
                 : null;
     return (0, l.jsx)(x.A, {
-        onAgree: _,
+        onAgree: y,
         onDisagree: I,
         modalType: m.A5.SPOILER_CHANNEL,
         title: S,
         subtitle: R,
-        description: C.intl.string(C.t["08bm2Z"]),
-        agreement: C.intl.string(C.t.KmRwcW),
-        disagreement: C.intl.string(C.t["/g10LC"]),
+        description: b.intl.string(b.t["08bm2Z"]),
+        agreement: b.intl.string(b.t.KmRwcW),
+        disagreement: b.intl.string(b.t["/g10LC"]),
         guildId: n?.id,
         channelId: a,
     });
 }
-let _ = function (e) {
+let y = function (e) {
     let { guild: n, channelId: t, className: a } = e,
         r = i.useRef(null);
     return (

@@ -25,14 +25,14 @@ function d(e) {
                 className: c.op,
                 children: [
                     (0, l.jsx)(i.E, {
-                        variant: "text-md/medium",
+                        variant: "body-md/medium",
                         color: "text-strong",
                         className: c.UU,
                         children: (0, s.A)(t),
                     }),
                     (0, l.jsx)(i.E, {
                         color: "interactive-text-default",
-                        variant: "text-sm/normal",
+                        variant: "body-sm/normal",
                         children: t.description,
                     }),
                 ],

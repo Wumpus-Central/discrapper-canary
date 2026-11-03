@@ -3,14 +3,14 @@ var l = s(477900),
     r = s(582128),
     n = s(503698),
     i = s.n(n),
-    t = s(349892),
-    c = s(325558),
+    c = s(349892),
+    t = s(325558),
     o = s(408278),
     d = s(921853),
     m = s(320448),
     u = s(432816),
-    x = s(834730),
-    h = s(376887),
+    h = s(834730),
+    x = s(376887),
     j = s(859962);
 function N(e) {
     let {
@@ -23,16 +23,16 @@ function N(e) {
             className: E,
             "aria-label": f,
         } = e,
-        { i18n: p } = (0, u.G9)(),
-        [_, g] = r.useState(a);
+        { i18n: y } = (0, u.G9)(),
+        [p, _] = r.useState(a);
     return (
         r.useEffect(() => {
-            g(a);
+            _(a);
         }, [a]),
-        (0, l.jsx)(t.Vv, {
+        (0, l.jsx)(c.Vv, {
             value: a,
-            focusedValue: _,
-            onFocusChange: g,
+            focusedValue: p,
+            onFocusChange: _,
             onChange: s,
             minValue: n,
             maxValue: N,
@@ -51,16 +51,16 @@ function N(e) {
                                     variant: "icon-only",
                                     size: "sm",
                                     icon: d.n,
-                                    "aria-label": p.CALENDAR_PREVIOUS_MONTH_LABEL,
+                                    "aria-label": y.CALENDAR_PREVIOUS_MONTH_LABEL,
                                     onClick: () => e.state.focusPreviousPage(),
                                     slot: "previous",
                                 }),
                                 (0, l.jsx)("div", {
                                     className: j.Wb,
-                                    children: (0, l.jsx)(x.E, {
-                                        variant: "text-md/semibold",
+                                    children: (0, l.jsx)(h.E, {
+                                        variant: "body-md/semibold",
                                         color: "text-strong",
-                                        children: (0, l.jsx)(c.D, {}),
+                                        children: (0, l.jsx)(t.D, {}),
                                     }),
                                 }),
                                 (0, l.jsx)(o.K, {
@@ -68,12 +68,12 @@ function N(e) {
                                     size: "sm",
                                     icon: m._,
                                     onClick: () => e.state.focusNextPage(),
-                                    "aria-label": p.CALENDAR_NEXT_MONTH_LABEL,
+                                    "aria-label": y.CALENDAR_NEXT_MONTH_LABEL,
                                     slot: "next",
                                 }),
                             ],
                         }),
-                        (0, l.jsx)("div", { className: j.US, children: (0, l.jsx)(h.N, {}) }),
+                        (0, l.jsx)("div", { className: j.US, children: (0, l.jsx)(x.N, {}) }),
                     ],
                 }),
         })

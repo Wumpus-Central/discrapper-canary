@@ -23,43 +23,43 @@ var g = n(503698),
     E = n(821609),
     h = n(534514),
     S = n(834730),
-    x = n(688810),
-    T = n(139286),
-    p = n(793943),
-    f = n(996254),
+    T = n(688810),
+    p = n(139286),
+    f = n(793943),
+    x = n(996254),
     _ = n(830543),
     I = n(738419),
     N = n(492292),
-    C = n(325600),
-    b = n(114149);
+    b = n(325600),
+    C = n(114149);
 function y(e) {
     let { className: t } = e,
-        { analyticsLocations: n } = (0, x.Ay)();
-    (0, T.A)({
+        { analyticsLocations: n } = (0, T.Ay)();
+    (0, p.A)({
         name: A.ImpressionNames.CUSTOM_THEMES_APPEARANCE_SETTINGS_BANNER,
         type: A.ImpressionTypes.VIEW,
         properties: { location_stack: n },
     });
-    let i = (0, f.X)({ "en-US": N.default["f/cLEi"], "en-GB": N.default["f/cLEi"] }, N.default.CARxAC);
+    let i = (0, x.X)({ "en-US": N.default["f/cLEi"], "en-GB": N.default["f/cLEi"] }, N.default.CARxAC);
     return (0, c.jsxs)("div", {
-        className: m()(C.kL, t),
+        className: m()(b.kL, t),
         children: [
-            (0, c.jsx)("div", { className: C.zc, children: (0, c.jsx)("img", { src: b.A, className: C._e, alt: "" }) }),
+            (0, c.jsx)("div", { className: b.zc, children: (0, c.jsx)("img", { src: C.A, className: b._e, alt: "" }) }),
             (0, c.jsxs)("div", {
-                className: C.P_,
+                className: b.P_,
                 children: [
                     (0, c.jsx)(h.D, { variant: "heading-lg/semibold", color: "text-strong", children: i }),
-                    (0, c.jsx)(S.E, { variant: "text-sm/normal", children: u.intl.string(N.default.nla4RG) }),
+                    (0, c.jsx)(S.E, { variant: "body-sm/normal", children: u.intl.string(N.default.nla4RG) }),
                 ],
             }),
             (0, c.jsx)("div", {
-                className: C.UD,
+                className: b.UD,
                 children: (0, c.jsx)(E.$, {
                     variant: "primary",
                     text: u.intl.string(u.t.uw9zI7),
                     onClick: function () {
                         ((0, I.b0)(I.G8.APPEARANCE_SETTINGS),
-                            (0, p.nf)(p.HP.CUSTOM_THEME, { from: p.xv.SETTING }),
+                            (0, f.nf)(f.HP.CUSTOM_THEME, { from: f.xv.SETTING }),
                             (0, _.default)());
                     },
                 }),
@@ -70,7 +70,7 @@ function y(e) {
 let v = (0, i.E2)(l.X.APPEARANCE_CUSTOM_THEMES_UPSELL, {
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik)],
     Component: function () {
-        return (0, c.jsx)(y, { className: C.YH });
+        return (0, c.jsx)(y, { className: b.YH });
     },
     usePredicate: () => {
         let e = (0, a.V)(),
@@ -125,7 +125,7 @@ let w = (0, i.E2)(l.X.APPEARANCE_DEFAULT_THEMES, {
             type: V.v0.SETTINGS,
             children: [
                 (0, c.jsx)(h.D, {
-                    variant: "heading-md/semibold",
+                    variant: "heading-sm/semibold",
                     color: "text-default",
                     children: u.intl.string(u.t["0EzVst"]),
                 }),
@@ -153,7 +153,7 @@ let Z = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik), u.intl.string(u.t.NoFvjZ), u.intl.string(u.t["EgvHH/"])],
     Component: function () {
         var e;
-        let { analyticsLocations: t } = (0, x.Ay)(B.A.CLIENT_THEMES_THEME_SELECTOR),
+        let { analyticsLocations: t } = (0, T.Ay)(B.A.CLIENT_THEMES_THEME_SELECTOR),
             [n, i, l, a, o] = (0, s.yK)([D.A, r.A], () => [
                 D.A.themePreferenceForSystemTheme(H.Fc.LIGHT),
                 D.A.themePreferenceForSystemTheme(H.Fc.DARK),
@@ -175,7 +175,7 @@ let Z = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
                     type: V.v0.SETTINGS,
                     children: [
                         (0, c.jsx)(h.D, {
-                            variant: "heading-md/semibold",
+                            variant: "heading-sm/semibold",
                             color: "text-default",
                             children: u.intl.string(u.t.NoFvjZ),
                         }),
@@ -212,7 +212,7 @@ let Z = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
                     type: V.v0.SETTINGS,
                     children: [
                         (0, c.jsx)(h.D, {
-                            variant: "heading-md/semibold",
+                            variant: "heading-sm/semibold",
                             color: "text-default",
                             children: u.intl.string(u.t["EgvHH/"]),
                         }),

@@ -5,8 +5,8 @@ var r = n(477900),
     l = n.n(a),
     s = n(338209),
     u = n.n(s),
-    c = n(834730),
-    o = n(580630),
+    o = n(834730),
+    c = n(580630),
     d = n(725836),
     m = n(777485),
     f = n(758476),
@@ -73,7 +73,7 @@ function b(e) {
     if (0 === a.length) return null;
     if (1 === a.length) {
         let { amount: e, ...t } = a[0],
-            n = (0, o.$g)(e, l);
+            n = (0, c.$g)(e, l);
         return (0, r.jsx)(m.i, { value: n, valueColor: e < 0 ? "text-feedback-positive" : "text-muted", ...t });
     }
     return (0, r.jsx)(m.h, {
@@ -82,7 +82,7 @@ function b(e) {
         isDisabled: !d,
         collapsedContent:
             null != s
-                ? (0, r.jsx)(c.E, { variant: "text-md/medium", color: "text-feedback-positive", children: s })
+                ? (0, r.jsx)(o.E, { variant: "body-md/medium", color: "text-feedback-positive", children: s })
                 : (0, r.jsx)(I, {
                       amount: p < 0 ? Math.abs(p) : null,
                       currency: l,
@@ -90,7 +90,7 @@ function b(e) {
                   }),
         children: a.map((e) => {
             let { id: t, label: n, amount: i, ...a } = e,
-                s = (0, o.$g)(i, l);
+                s = (0, c.$g)(i, l);
             return (0, r.jsx)(
                 m.i,
                 { label: n, value: s, valueColor: i < 0 ? "text-feedback-positive" : "text-muted", ...a },
@@ -102,9 +102,9 @@ function b(e) {
 function I(e) {
     let { amount: t, currency: n, labelType: i } = e;
     if (0 === t || null == t) return null;
-    let a = (0, o.$g)(t, n);
-    return (0, r.jsx)(c.E, {
-        variant: "text-md/medium",
+    let a = (0, c.$g)(t, n);
+    return (0, r.jsx)(o.E, {
+        variant: "body-md/medium",
         color: "text-feedback-positive",
         children: p.intl.format("adjustments" === i ? f.default["i3Q/6S"] : f.default.pDVleg, { amount: a }),
     });
@@ -112,8 +112,8 @@ function I(e) {
 function h(e) {
     let { label: t, value: n, className: a } = e,
         s = i.useId();
-    return (0, r.jsxs)(c.E, {
-        variant: "text-lg/semibold",
+    return (0, r.jsxs)(o.E, {
+        variant: "body-lg/semibold",
         color: "text-strong",
         className: l()(v.p8, a),
         role: "group",

@@ -1,4 +1,4 @@
-(a.r(e), a.d(e, { default: () => A }));
+(a.r(t), a.d(t, { default: () => A }));
 var s = a(477900),
     n = a(582128),
     l = a(435558),
@@ -14,74 +14,74 @@ var s = a(477900),
     j = a(788026),
     g = a(148719),
     v = a(47167),
-    N = a(713654),
-    C = a(495273),
-    k = a(7584),
-    p = a(808728),
-    y = a(105292),
-    b = a(499542);
-function f(t) {
-    let { onClose: e, handleReviewPermissions: a, transitionState: l } = t;
-    function i(t) {
-        return (0, s.jsx)(o.E, { tag: "span", variant: "text-md/medium", color: "text-strong", children: t });
+    y = a(713654),
+    N = a(495273),
+    b = a(7584),
+    C = a(808728),
+    k = a(105292),
+    p = a(499542);
+function f(e) {
+    let { onClose: t, handleReviewPermissions: a, transitionState: l } = e;
+    function i(e) {
+        return (0, s.jsx)(o.E, { tag: "span", variant: "body-md/medium", color: "text-strong", children: e });
     }
     let r = n.useMemo(
         () => [
-            { variant: "secondary", text: y.intl.string(y.t["ETE/oC"]), onClick: e },
-            { variant: "primary", text: y.intl.string(y.t.bEnleq), onClick: a },
+            { variant: "secondary", text: k.intl.string(k.t["ETE/oC"]), onClick: t },
+            { variant: "primary", text: k.intl.string(k.t.bEnleq), onClick: a },
         ],
-        [a, e],
+        [a, t],
     );
     return (0, s.jsx)(c.a, {
-        title: y.intl.string(y.t.PJOCL6),
+        title: k.intl.string(k.t.PJOCL6),
         actions: r,
-        onClose: e,
+        onClose: t,
         transitionState: l,
         children: (0, s.jsxs)("ul", {
-            className: b.Dj,
+            className: p.Dj,
             children: [
                 (0, s.jsxs)("li", {
-                    className: b.KN,
+                    className: p.KN,
                     children: [
                         (0, s.jsx)("div", {
-                            className: b.P0,
-                            children: (0, s.jsx)(j.A, { emojiName: k.Ay.getByName("eyes")?.surrogates, alt: "" }),
+                            className: p.P0,
+                            children: (0, s.jsx)(j.A, { emojiName: b.Ay.getByName("eyes")?.surrogates, alt: "" }),
                         }),
                         (0, s.jsx)(o.E, {
-                            variant: "text-md/normal",
+                            variant: "body-md/normal",
                             color: "text-muted",
-                            children: y.intl.format(y.t["8JzOBn"], { emphasisHook: i }),
+                            children: k.intl.format(k.t["8JzOBn"], { emphasisHook: i }),
                         }),
                     ],
                 }),
                 (0, s.jsxs)("li", {
-                    className: b.KN,
+                    className: p.KN,
                     children: [
                         (0, s.jsx)("div", {
-                            className: b.P0,
+                            className: p.P0,
                             children: (0, s.jsx)(j.A, {
-                                emojiName: k.Ay.getByName("star_struck")?.surrogates,
+                                emojiName: b.Ay.getByName("star_struck")?.surrogates,
                                 alt: "",
                             }),
                         }),
                         (0, s.jsx)(o.E, {
-                            variant: "text-md/normal",
+                            variant: "body-md/normal",
                             color: "text-muted",
-                            children: y.intl.format(y.t.UcGDkt, { emphasisHook: i }),
+                            children: k.intl.format(k.t.UcGDkt, { emphasisHook: i }),
                         }),
                     ],
                 }),
                 (0, s.jsxs)("li", {
-                    className: b.KN,
+                    className: p.KN,
                     children: [
                         (0, s.jsx)("div", {
-                            className: b.P0,
-                            children: (0, s.jsx)(j.A, { emojiName: k.Ay.getByName("books")?.surrogates, alt: "" }),
+                            className: p.P0,
+                            children: (0, s.jsx)(j.A, { emojiName: b.Ay.getByName("books")?.surrogates, alt: "" }),
                         }),
                         (0, s.jsx)(o.E, {
-                            variant: "text-md/normal",
+                            variant: "body-md/normal",
                             color: "text-muted",
-                            children: y.intl.format(y.t.kALJ5q, { emphasisHook: i }),
+                            children: k.intl.format(k.t.kALJ5q, { emphasisHook: i }),
                         }),
                     ],
                 }),
@@ -89,97 +89,97 @@ function f(t) {
         }),
     });
 }
-function E(t) {
-    let { channel: e, selected: a, onChange: l } = t,
-        i = (0, v.Ay)(e),
-        r = (0, N.gU)(e) ?? d.N,
+function E(e) {
+    let { channel: t, selected: a, onChange: l } = e,
+        i = (0, v.Ay)(t),
+        r = (0, y.gU)(t) ?? d.N,
         c = n.useCallback(() => {
-            l(e);
-        }, [e, l]);
+            l(t);
+        }, [t, l]);
     return (0, s.jsxs)(m.D, {
         "aria-label": i ?? void 0,
         "aria-checked": a,
-        className: b.qC,
+        className: p.qC,
         onClick: c,
         children: [
             (0, s.jsxs)("div", {
-                className: b.yB,
+                className: p.yB,
                 children: [
-                    (0, s.jsx)(r, { className: b.p, size: "xs", color: "currentColor" }),
+                    (0, s.jsx)(r, { className: p.p, size: "xs", color: "currentColor" }),
                     (0, s.jsx)(o.E, {
-                        className: b.HA,
-                        variant: "text-md/medium",
+                        className: p.HA,
+                        variant: "body-md/medium",
                         color: "text-default",
                         lineClamp: 1,
                         children: i,
                     }),
                 ],
             }),
-            (0, s.jsx)("div", { className: b.Mv, children: (0, s.jsx)(x.P, { checked: a }) }),
+            (0, s.jsx)("div", { className: p.Mv, children: (0, s.jsx)(x.P, { checked: a }) }),
         ],
     });
 }
-function A(t) {
-    let { transitionState: e, onClose: a, guildId: l, startingChannelId: d } = t,
-        m = (0, r.yK)([p.Ay], () => {
-            let t = p.Ay.getChannels(l);
-            return (t[p.I6] ?? [])
-                .concat(t[p.vM] ?? [])
-                .filter((t) => (0, g.A)(t.channel))
-                .map((t) => t.channel);
+function A(e) {
+    let { transitionState: t, onClose: a, guildId: l, startingChannelId: d } = e,
+        m = (0, r.yK)([C.Ay], () => {
+            let e = C.Ay.getChannels(l);
+            return (e[C.I6] ?? [])
+                .concat(e[C.vM] ?? [])
+                .filter((e) => (0, g.A)(e.channel))
+                .map((e) => e.channel);
         }),
         [x, j] = n.useState(0),
-        v = m.find((t) => t.id === d),
-        [N, k] = n.useState(null != v ? [v] : []),
-        A = N.length === m.length,
+        v = m.find((e) => e.id === d),
+        [y, b] = n.useState(null != v ? [v] : []),
+        A = y.length === m.length,
         P = n.useCallback(() => {
             j(1);
         }, [j]),
         S = n.useCallback(
-            (t) => {
-                k((e) => (e.includes(t) ? [...i().pull(e, t)] : [...e, t]));
+            (e) => {
+                b((t) => (t.includes(e) ? [...i().pull(t, e)] : [...t, e]));
             },
-            [k],
+            [b],
         ),
         B = n.useCallback(() => {
-            A ? k([]) : k(m);
-        }, [A, m, k]),
+            A ? b([]) : b(m);
+        }, [A, m, b]),
         K = n.useCallback(() => {
-            N.forEach((t) => {
-                let e = (0, C.es)(t, t.accessPermissions, !0);
-                ((0, h.R$)(t.id, [e]), a());
+            y.forEach((e) => {
+                let t = (0, N.es)(e, e.accessPermissions, !0);
+                ((0, h.R$)(e.id, [t]), a());
             });
-        }, [N, a]),
+        }, [y, a]),
         q = n.useMemo(
             () => [
-                { variant: "secondary", text: y.intl.string(y.t["ETE/oC"]), onClick: a },
-                { variant: "primary", text: y.intl.string(y.t.PggHmu), onClick: K, disabled: 0 === N.length },
+                { variant: "secondary", text: k.intl.string(k.t["ETE/oC"]), onClick: a },
+                { variant: "primary", text: k.intl.string(k.t.PggHmu), onClick: K, disabled: 0 === y.length },
             ],
-            [K, a, N.length],
+            [K, a, y.length],
         );
     return 0 === x
-        ? (0, s.jsx)(f, { handleReviewPermissions: P, onClose: a, transitionState: e })
+        ? (0, s.jsx)(f, { handleReviewPermissions: P, onClose: a, transitionState: t })
         : (0, s.jsxs)(c.a, {
-              title: y.intl.string(y.t.y77PiT),
-              subtitle: y.intl.string(y.t.ZSzBe5),
+              title: k.intl.string(k.t.y77PiT),
+              subtitle: k.intl.string(k.t.ZSzBe5),
               actions: q,
               onClose: a,
-              transitionState: e,
+              transitionState: t,
               input: (0, s.jsxs)("div", {
-                  className: b.TY,
+                  className: p.TY,
                   children: [
                       (0, s.jsx)(o.E, {
-                          className: b.ko,
-                          variant: "text-xs/semibold",
+                          className: p.ko,
+                          variant: "body-xs/semibold",
                           color: "text-muted",
-                          children: y.intl.format(y.t.rrYCq2, { count: m.length }),
+                          children: k.intl.format(k.t.rrYCq2, { count: m.length }),
                       }),
                       (0, s.jsx)("div", {
-                          className: b.L7,
+                          className: p.L7,
                           children: (0, s.jsx)(u.S, {
                               onChange: B,
                               checked: A,
-                              label: y.intl.string(y.t.l4rqaz),
+                              label: k.intl.string(k.t.l4rqaz),
                               labelType: "secondary",
                           }),
                       }),
@@ -187,29 +187,29 @@ function A(t) {
               }),
               children: [
                   (0, s.jsx)("div", {
-                      className: b.XK,
-                      children: m.map((t) => (0, s.jsx)(E, { channel: t, selected: N.includes(t), onChange: S }, t.id)),
+                      className: p.XK,
+                      children: m.map((e) => (0, s.jsx)(E, { channel: e, selected: y.includes(e), onChange: S }, e.id)),
                   }),
                   (0, s.jsx)("div", {
-                      className: b.PE,
+                      className: p.PE,
                       children: (0, s.jsx)(o.E, {
-                          variant: "text-xs/normal",
+                          variant: "body-xs/normal",
                           color: "text-muted",
-                          children: y.intl.format(y.t["OP/pKr"], {
-                              emphasisHook: function (t) {
+                          children: k.intl.format(k.t["OP/pKr"], {
+                              emphasisHook: function (e) {
                                   return (0, s.jsx)(o.E, {
                                       tag: "span",
-                                      variant: "text-xs/medium",
+                                      variant: "body-xs/medium",
                                       color: "interactive-text-active",
-                                      children: t,
+                                      children: e,
                                   });
                               },
-                              brandHook: function (t) {
+                              brandHook: function (e) {
                                   return (0, s.jsx)(o.E, {
                                       tag: "span",
-                                      variant: "text-xs/normal",
+                                      variant: "body-xs/normal",
                                       color: "text-brand",
-                                      children: t,
+                                      children: e,
                                   });
                               },
                           }),

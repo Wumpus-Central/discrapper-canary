@@ -77,7 +77,7 @@ function C(e) {
               ? null
               : (0, i.jsxs)("div", {
                     children: [
-                        (0, i.jsx)(a.E, { variant: "text-sm/normal", className: d.OK, children: m }),
+                        (0, i.jsx)(a.E, { variant: "body-sm/normal", className: d.OK, children: m }),
                         (0, i.jsx)("hr", { className: d.oz }),
                     ],
                 })
@@ -89,7 +89,7 @@ function C(e) {
                     style: o,
                     children: [
                         (0, i.jsx)("img", { src: "/assets/3a86a8f56102a71f.svg", alt: "Nitro Icon", className: d.Zb }),
-                        (0, i.jsx)(a.E, { variant: "text-sm/medium", children: m }),
+                        (0, i.jsx)(a.E, { variant: "body-sm/medium", children: m }),
                     ],
                 })
               : (0, i.jsxs)("div", {
@@ -103,7 +103,7 @@ function C(e) {
                                 (0, i.jsx)(s.t, { size: "md", color: "currentColor", className: d.XI }),
                             ],
                         }),
-                        (0, i.jsx)(a.E, { variant: "text-sm/normal", children: m }),
+                        (0, i.jsx)(a.E, { variant: "body-sm/normal", children: m }),
                         (0, i.jsx)("div", { className: d.WW }),
                     ],
                 });

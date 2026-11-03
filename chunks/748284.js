@@ -1,5 +1,5 @@
 e.exports = {
-    oU: "text-md/medium__5a2df",
+    Lb: "body-md/medium__5a2df",
     kL: "container__5a2df",
     AA: "mobileContainer__5a2df",
     sV: "editorBody__5a2df",
@@ -20,7 +20,7 @@ e.exports = {
     VA: "subtitle__5a2df",
     M0: "coachmarkFooterContainer__5a2df",
     Vt: "controlLabelContainer__5a2df",
-    A9: "controlLabelInput__5a2df text-md/medium__5a2df",
+    A9: "controlLabelInput__5a2df body-md/medium__5a2df",
     rV: "footerUpsellRow__5a2df",
     Tf: "footerWishlistButton__5a2df",
 };

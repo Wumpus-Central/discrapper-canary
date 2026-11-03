@@ -1,4 +1,4 @@
-n.d(t, { Mx: () => g, kj: () => E, iH: () => I, KF: () => f, ri: () => S, $K: () => A });
+n.d(t, { Mx: () => y, kj: () => E, iH: () => g, KF: () => f, ri: () => S, $K: () => I });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -25,7 +25,7 @@ function p(e) {
         className: n,
         emojiContainerClassName: i,
         showsDescription: a = !0,
-        nameTextVariant: s = "text-md/medium",
+        nameTextVariant: s = "body-md/medium",
         nameTextColor: c = "text-strong",
     } = e;
     return (0, l.jsxs)("div", {
@@ -47,7 +47,7 @@ function p(e) {
                     a &&
                         (0, l.jsx)(o.E, {
                             color: "interactive-text-default",
-                            variant: "text-sm/normal",
+                            variant: "body-sm/normal",
                             children: t.description,
                         }),
                 ],
@@ -62,7 +62,7 @@ function C(e) {
         className: i,
         emojiContainerClassName: a,
         showsDescription: s = !0,
-        nameTextVariant: u = "text-md/medium",
+        nameTextVariant: u = "body-md/medium",
         nameTextColor: m = "text-strong",
     } = e;
     return (0, l.jsxs)("div", {
@@ -76,7 +76,7 @@ function C(e) {
                     s &&
                         (0, l.jsx)(o.E, {
                             color: "interactive-text-default",
-                            variant: "text-sm/normal",
+                            variant: "body-sm/normal",
                             children: n.description,
                         }),
                 ],
@@ -96,18 +96,18 @@ function E(e) {
 function S() {
     return (0, l.jsx)("hr", { className: h.yF });
 }
-function g(e) {
+function y(e) {
     let { className: t, title: n, description: i, ...r } = e;
     return (0, l.jsxs)("div", {
         className: t,
         ...r,
         children: [
-            (0, l.jsx)(a.D, { variant: "heading-md/semibold", color: "text-strong", children: n }),
-            (0, l.jsx)(a.D, { variant: "heading-sm/medium", color: "text-default", children: i }),
+            (0, l.jsx)(a.D, { variant: "heading-sm/semibold", color: "text-strong", children: n }),
+            (0, l.jsx)(a.D, { variant: "heading-xs/medium", color: "text-default", children: i }),
         ],
     });
 }
-function I(e) {
+function g(e) {
     let { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: a, ...s } = e;
     return (0, l.jsx)("div", {
         className: r()(h.iq, a),
@@ -115,7 +115,7 @@ function I(e) {
         children: (0, l.jsx)(m, { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: h.gX }),
     });
 }
-function A(e) {
+function I(e) {
     let { children: t, className: n, ...i } = e;
     return (0, l.jsx)("div", { className: r()(h.kL, n), ...i, children: t });
 }

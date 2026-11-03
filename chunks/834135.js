@@ -20,7 +20,7 @@ var s = n(477900),
     j = n(821609),
     M = n(590202),
     O = n(651892);
-function E(t) {
+function y(t) {
     let { handlePrimaryCtaClick: e } = t,
         { quest: n } = o.useContext(g.a);
     return (0, s.jsx)(j.$, {
@@ -30,23 +30,23 @@ function E(t) {
         text: (0, O.wr)(n),
     });
 }
-var _ = n(262254);
-function y() {
+var E = n(262254);
+function _() {
     let { quest: t, sourceQuestContent: e, onClose: n } = o.useContext(g.a);
-    return (0, s.jsx)(_.A, { quest: t, questContent: d.uF.QUEST_HOME_DESKTOP, sourceQuestContent: e, onClose: n });
+    return (0, s.jsx)(E.A, { quest: t, questContent: d.uF.QUEST_HOME_DESKTOP, sourceQuestContent: e, onClose: n });
 }
-var v = n(628284),
-    D = n(637691),
-    T = n(105292);
-function b() {
+var b = n(628284),
+    v = n(637691),
+    D = n(105292);
+function T() {
     let { quest: t, sourceQuestContent: e, onClose: n } = o.useContext(g.a),
         u = (0, m.LS)(t),
         a = (0, h.H)({ quest: t, onClose: n, sourceQuestContent: e });
-    return (0, s.jsx)(D.A, {
-        title: T.intl.format(T.t.EQa7os, { questName: t.config.messages.questName }),
+    return (0, s.jsx)(v.A, {
+        title: D.intl.format(D.t.EQa7os, { questName: t.config.messages.questName }),
         subtitle: t.config.messages.gamePublisher,
         subtitleCta: t.config.ctaConfig.subtitle,
-        subtitlePrefixIcon: v.y,
+        subtitlePrefixIcon: b.y,
         isFlush: u,
         onClick: () => a(d.uF.VIDEO_MODAL, M.Cy.OPEN_GAME_LINK),
     });
@@ -81,11 +81,11 @@ function U() {
         j = x ? 1 : h,
         M = (0, P.l9)(m, j, { roundingMode: "floor" }),
         O = t.userStatus?.claimedAt != null,
-        E = T.intl.formatToPlainString(x && !O ? T.t.NRp4K4 : T.t["12IWP2"], { rewardName: S });
+        y = D.intl.formatToPlainString(x && !O ? D.t.NRp4K4 : D.t["12IWP2"], { rewardName: S });
     o.useEffect(() => {
         (null == f.current && t.userStatus?.completedAt != null && C(!0), (f.current = t.userStatus?.completedAt));
     }, [t.userStatus?.completedAt]);
-    let _ = (0, w.D)({
+    let E = (0, w.D)({
         quest: t,
         questContent: d.uF.QUEST_HOME_DESKTOP,
         sourceQuestContent: e,
@@ -98,7 +98,7 @@ function U() {
             x && (0, s.jsx)(k.a, { importData: K, className: H.t_, loop: !1, autoplay: !1, shouldAnimate: A && !c }),
             (0, s.jsx)(q.m, {
                 position: "top",
-                text: E,
+                text: y,
                 onTooltipShow: function () {
                     i(!0);
                 },
@@ -109,13 +109,13 @@ function U() {
                     className: H.md,
                     style: x ? { cursor: "pointer" } : void 0,
                     onClick: () => {
-                        x && _();
+                        x && E();
                     },
                     children: (0, s.jsx)(L.A, {
                         size: 48,
                         percentComplete: j,
                         overlayText: l ? M : void 0,
-                        overlayTextVariant: "text-sm/medium",
+                        overlayTextVariant: "body-sm/medium",
                         children: (0, s.jsx)(R.A, {
                             fullWidth: !0,
                             quest: t,
@@ -143,7 +143,7 @@ function W(t) {
         } = t,
         j = (0, p.Yh)(u),
         M = (0, m.LS)(u),
-        { maxProgressSec: O, trackProgress: _ } = (function (t) {
+        { maxProgressSec: O, trackProgress: E } = (function (t) {
             let { initialProgressSec: e, targetSec: n, completedAt: s } = t,
                 [u, a] = (0, o.useState)(e);
             return {
@@ -157,10 +157,10 @@ function W(t) {
             targetSec: j.targetSeconds,
             completedAt: u.userStatus?.completedAt,
         }),
-        [v, D] = o.useState(!1),
-        T = u.config.taskConfigV2?.tasks?.[l.n.WATCH_VIDEO];
-    a()(null != T, "VideoQuestModal: videoTask must not be null");
-    let P = (0, f.eG)(T),
+        [b, v] = o.useState(!1),
+        D = u.config.taskConfigV2?.tasks?.[l.n.WATCH_VIDEO];
+    a()(null != D, "VideoQuestModal: videoTask must not be null");
+    let P = (0, f.eG)(D),
         k = (0, h.H)({ quest: u, onClose: n, sourceQuestContent: S }),
         q = o.useMemo(
             () => ({
@@ -168,12 +168,12 @@ function W(t) {
                 sourceQuestContent: S,
                 videoSessionId: i,
                 onClose: n,
-                isFullscreenEnabled: v,
-                setIsFullscreenEnabled: D,
+                isFullscreenEnabled: b,
+                setIsFullscreenEnabled: v,
                 maxProgressSec: O,
                 targetSec: j.targetSeconds,
             }),
-            [u, S, i, n, v, D, O, j.targetSeconds],
+            [u, S, i, n, b, v, O, j.targetSeconds],
         );
     return (0, s.jsx)(g.a.Provider, {
         value: q,
@@ -184,18 +184,18 @@ function W(t) {
                 c.current = t;
             },
             video: (0, s.jsx)(x.A, {
-                targetTimeSec: T.target,
+                targetTimeSec: D.target,
                 parentTransitionState: e,
-                onOptimisticProgressUpdate: _,
+                onOptimisticProgressUpdate: E,
                 autoplay: r,
                 openedAtMs: d,
                 orientation: P,
             }),
             footer: (0, s.jsx)(A.A, {
                 prefix: M ? null : (0, s.jsx)(U, {}),
-                advertiserDetails: (0, s.jsx)(b, {}),
-                secondaryAction: (0, s.jsx)(y, {}),
-                primaryAction: (0, s.jsx)(E, { handlePrimaryCtaClick: k }),
+                advertiserDetails: (0, s.jsx)(T, {}),
+                secondaryAction: (0, s.jsx)(_, {}),
+                primaryAction: (0, s.jsx)(y, { handlePrimaryCtaClick: k }),
             }),
         }),
     });

@@ -20,11 +20,11 @@ var s,
     p = l(576705),
     A = l(435328),
     E = l(530209),
-    I = l(974930),
-    M = l(428978),
-    b = l(850183),
-    f = l(557582),
-    y = l(620018),
+    b = l(974930),
+    y = l(428978),
+    I = l(850183),
+    M = l(557582),
+    f = l(620018),
     w = l(97808),
     B = l(778712),
     R = l(831544),
@@ -49,7 +49,7 @@ function G(e) {
                             className: U.CU,
                             children: (0, i.jsx)(u.E, {
                                 color: "text-default",
-                                variant: "text-sm/normal",
+                                variant: "body-sm/normal",
                                 className: U.br,
                                 children: e?.userNick,
                             }),
@@ -78,7 +78,7 @@ function G(e) {
                         }),
                         (0, i.jsx)(u.E, {
                             color: "text-default",
-                            variant: "text-sm/normal",
+                            variant: "body-sm/normal",
                             className: U.br,
                             children: T.intl.format(T.t["185ggO"], { count: o }),
                         }),
@@ -123,7 +123,7 @@ function S(e) {
             onClick: l,
             children: [
                 (0, i.jsx)(o.m, { text: T.intl.string(T.t["48WXaW"]), shouldShow: g, ariaHidden: !g, children: x }),
-                (0, i.jsx)(u.E, { variant: "text-sm/normal", color: "none", className: J.h7, children: s }),
+                (0, i.jsx)(u.E, { variant: "body-sm/normal", color: "none", className: J.h7, children: s }),
             ],
         }),
     });
@@ -144,7 +144,7 @@ function q(e) {
                       width: 20,
                       className: r()(J.nU, J.Kk),
                   }),
-                  (0, i.jsx)(u.E, { className: a ? J.dC : J.h7, variant: "text-sm/normal", children: (0, A.y)(c, !0) }),
+                  (0, i.jsx)(u.E, { className: a ? J.dC : J.h7, variant: "body-sm/normal", children: (0, A.y)(c, !0) }),
               ],
           });
 }
@@ -166,7 +166,7 @@ function z(e) {
             onJoinGuildClick: C,
         } = e,
         k = (0, E.D)(n, l),
-        v = (0, M.Zq)({
+        v = (0, y.Zq)({
             entityType: l,
             isJoined: s,
             isActive: c,
@@ -185,7 +185,7 @@ function z(e) {
     return (0, i.jsxs)(m.e, {
         fullWidth: !1,
         size: "sm",
-        children: [null != o ? (0, i.jsx)(M.jD, { onClick: o }) : null, v?.map((e, n) => (0, i.jsx)(x.$, { ...e }, n))],
+        children: [null != o ? (0, i.jsx)(y.jD, { onClick: o }) : null, v?.map((e, n) => (0, i.jsx)(x.$, { ...e }, n))],
     });
 }
 function H(e) {
@@ -209,7 +209,7 @@ function H(e) {
             canInvite: p,
             location: A,
             truncate: E,
-            onContextMenu: M,
+            onContextMenu: y,
             onJoinClick: w,
             onJoinGuildClick: B,
             onRsvpClick: R,
@@ -228,21 +228,21 @@ function H(e) {
         X = W ? (e) => e.stopPropagation() : void 0,
         F = [];
     if (null != P && null != event) {
-        let e = (0, I.X7)(P);
-        F = (0, I.er)(4, e, new Date(H.scheduled_start_time));
+        let e = (0, b.X7)(P);
+        F = (0, b.er)(4, e, new Date(H.scheduled_start_time));
     }
     let Y = F.length > 0;
     return (0, i.jsxs)(N.s, {
         "aria-label": a,
         onClick: () => L?.(O),
-        onContextMenu: M,
+        onContextMenu: y,
         className: r()(J.Nr, { [J.oR]: x, [J.hT]: m }, n),
         children: [
             (0, i.jsxs)("div", {
                 className: r()(J.Ms, { [J.AD]: Y }),
                 children: [
-                    0 === d && (0, i.jsx)(b.A, { source: u }),
-                    (0, i.jsx)(f.Ay, {
+                    0 === d && (0, i.jsx)(I.A, { source: u }),
+                    (0, i.jsx)(M.Ay, {
                         creator: c,
                         name: a,
                         description: o,
@@ -284,7 +284,7 @@ function H(e) {
                                     isMember: j,
                                     rsvped: v,
                                     canInvite: p,
-                                    onContextMenu: M,
+                                    onContextMenu: y,
                                     onRsvpClick: R,
                                     onJoinGuildClick: B,
                                     onInviteClick: U,
@@ -298,7 +298,7 @@ function H(e) {
                     Y && (0, i.jsx)("hr", { className: J.yF }),
                 ],
             }),
-            Y && (0, i.jsx)(y.A, { guildId: l?.id, recurrenceRule: P, guildEventId: H.id, onRecurrenceClick: L }),
+            Y && (0, i.jsx)(f.A, { guildId: l?.id, recurrenceRule: P, guildEventId: H.id, onRecurrenceClick: L }),
         ],
     });
 }

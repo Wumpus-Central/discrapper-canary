@@ -17,13 +17,13 @@ var n = t(477900),
     I = t(47167),
     v = t(643501),
     S = t(916641),
-    x = t(652896),
-    _ = t(279250),
-    E = t(346846),
-    N = t(342296),
-    y = t(936520),
-    C = t(280450),
-    b = t(71393),
+    _ = t(652896),
+    x = t(279250),
+    y = t(346846),
+    E = t(342296),
+    N = t(936520),
+    b = t(280450),
+    C = t(71393),
     j = t(576705),
     T = t(287809),
     O = t(977997),
@@ -37,7 +37,7 @@ function R(e) {
     let { numUsers: i } = e;
     return (0, n.jsx)("div", {
         className: k.BN,
-        children: (0, n.jsxs)(r.E, { color: "text-muted", variant: "text-sm/medium", children: ["+", i] }),
+        children: (0, n.jsxs)(r.E, { color: "text-muted", variant: "body-sm/medium", children: ["+", i] }),
     });
 }
 function U(e) {
@@ -50,7 +50,7 @@ function U(e) {
                 className: k.$L,
                 children: (0, n.jsx)(d.L, { size: "md", color: "currentColor", className: k.wG }),
             }),
-            (0, n.jsx)(r.E, { color: "text-muted", variant: "text-sm/medium", children: l }),
+            (0, n.jsx)(r.E, { color: "text-muted", variant: "body-sm/medium", children: l }),
         ],
     });
 }
@@ -113,13 +113,13 @@ let M = (0, h.J)(function (e) {
               },
           };
     function eS() {
-        if (!Z || !(0, _.eo)(r, O.A, b.A, j.A, v.default)[0]) return;
+        if (!Z || !(0, x.eo)(r, O.A, C.A, j.A, v.default)[0]) return;
         let e = { streamType: P.U4.GUILD, ownerId: s.id, channelId: r.id, guildId: r.guild_id };
-        (C.default.getId() !== s.id && m.default.selectVoiceChannel(r.id),
-            J ? ((0, E.A)(e), c.A.selectParticipant(e.channelId, (0, x._z)(e))) : (0, g.Nl)(e),
+        (b.default.getId() !== s.id && m.default.selectVoiceChannel(r.id),
+            J ? ((0, y.A)(e), c.A.selectParticipant(e.channelId, (0, _._z)(e))) : (0, g.Nl)(e),
             ei?.(s.id));
     }
-    function ex(e) {
+    function e_(e) {
         (0, A.L3)(e, async () => {
             let { default: e } = await Promise.all([
                 t.e("339715"),
@@ -189,7 +189,7 @@ let M = (0, h.J)(function (e) {
         },
         [],
     );
-    let e_ = (0, n.jsx)("div", {
+    let ex = (0, n.jsx)("div", {
         className: k.kZ,
         "data-dnd-name": ec,
         ...ev,
@@ -199,7 +199,7 @@ let M = (0, h.J)(function (e) {
                   em || (eh.current = setTimeout(() => ee?.(s.id), 100));
               },
         onMouseLeave: es ? void 0 : eI,
-        children: (0, n.jsx)(N.A, {
+        children: (0, n.jsx)(E.A, {
             clickTrap: s?.id === T.default.getCurrentUser()?.id && em,
             targetElementRef: eA,
             user: s,
@@ -241,7 +241,7 @@ let M = (0, h.J)(function (e) {
                         selected: em,
                         onClick: t ? void 0 : ef,
                         onDoubleClick: eS,
-                        onContextMenu: ex,
+                        onContextMenu: e_,
                         guildId: r.guild_id,
                         isSelf: er,
                         application: ed,
@@ -252,7 +252,7 @@ let M = (0, h.J)(function (e) {
                     es
                         ? (0, n.jsx)(o.m, {
                               text: (0, S.A)(en) ?? w.intl.string(w.t.IyYqqY),
-                              children: (0, n.jsx)(y.Ay, { ref: eA, ...l }),
+                              children: (0, n.jsx)(N.Ay, { ref: eA, ...l }),
                           })
                         : (0, n.jsx)(u.Y, {
                               targetElementRef: eA,
@@ -271,7 +271,7 @@ let M = (0, h.J)(function (e) {
                               onRequestClose: ep,
                               spacing: 17,
                               children: () =>
-                                  (0, n.jsx)(y.Ay, {
+                                  (0, n.jsx)(N.Ay, {
                                       ...l,
                                       ref: eA,
                                       onMouseDown: e.onMouseDown,
@@ -282,5 +282,5 @@ let M = (0, h.J)(function (e) {
             },
         }),
     });
-    return W ? H(e_) : e_;
+    return W ? H(ex) : ex;
 });

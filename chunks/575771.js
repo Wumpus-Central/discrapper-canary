@@ -67,7 +67,7 @@ function es(e) {
             (0, n.jsx)(C.R9, { newValue: { tilePosition: t }, children: (0, n.jsx)(q.A, { skuId: s }) }),
             (0, n.jsx)(ee.E, {
                 className: el.vg,
-                variant: "heading-md/medium",
+                variant: "heading-sm/medium",
                 color: "none",
                 tag: "span",
                 children: l,
@@ -271,7 +271,7 @@ function eE() {
     return (0, n.jsxs)("div", {
         className: ei.nb,
         children: [
-            (0, n.jsx)(B.D, { variant: "heading-md/semibold", children: er.intl.string(er.t.Yr70c4) }),
+            (0, n.jsx)(B.D, { variant: "heading-sm/semibold", children: er.intl.string(er.t.Yr70c4) }),
             (0, n.jsx)("div", {
                 className: ei.J2,
                 children: eC.map((l) => {
