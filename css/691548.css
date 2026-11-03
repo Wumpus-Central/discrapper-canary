@@ -132,7 +132,15 @@
     text-wrap: balance
 }
 
+.container__4fffc {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    white-space: nowrap
+}
+
 .count__4fffc {
+    color: var(--custom-checkpoint-primary);
     font-size: 16px;
     line-height: 20px
 }
@@ -452,4 +460,4 @@
     gap: var(--space-32)
 }
 
-/*# sourceMappingURL=691548.d678c1ae9230d2f0.css.map*/
+/*# sourceMappingURL=691548.f4b92d533b967cf9.css.map*/
