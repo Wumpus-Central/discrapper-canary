@@ -1,4 +1,4 @@
-a.d(t, { D: () => iI });
+a.d(t, { D: () => ij });
 var s,
     i = a(477900),
     r = a(858899),
@@ -2914,7 +2914,7 @@ function sK(e) {
           });
 }
 var sB = a(125688),
-    sV = a(981355),
+    sV = a(531685),
     sz = a(399667),
     sW = a(468311),
     sY = a(706121),
@@ -4259,8 +4259,10 @@ let s3 = /^tex_(aura|base_\d+|outfit)_/,
         tex_wearable_10_sword_spritesheet: { columns: 5, rows: 4 },
         tex_wearable_11_deviantTail_smoke_active_spritesheet: ia,
         tex_wearable_11_deviantTail_smoke_idle_spritesheet: ia,
-    };
-function ii(e, t) {
+    },
+    ii = [1, 1.25, 1.5, 1.75, 2, 3],
+    ir = Math.max(...ii);
+function ic(e, t) {
     let { url: a, width: s, height: i, widthAt1x: r } = sq[e];
     if (null == r) return a;
     let n = (t * r) / s;
@@ -4270,8 +4272,8 @@ function ii(e, t) {
         o = d * Math.round((i / d) * n);
     return `${a}?width=${l}&height=${o}`;
 }
-let ir = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14"],
-    ic = {
+let id = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14"],
+    il = {
         [v.s9.IDLE]: 0,
         [v.s9.INTRODUCTION]: 1,
         [v.s9.FACE]: 2,
@@ -4284,7 +4286,7 @@ let ir = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"
         [v.s9.FINALIZE]: 8,
         [v.s9.SUMMARY]: 8,
     },
-    id = {
+    io = {
         Desktop: {
             gradientTopOpacity: 0,
             gradientTopPosition: 0,
@@ -4316,10 +4318,10 @@ let ir = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"
             gradientRightPosition: 100,
         },
     },
-    il = { ...id.MobilePortrait, gradientTopPosition: 55, gradientBottomPosition: 90 };
-var io = a(574381);
-let iu = new Set([1]),
-    ih = Object.keys(sq).map((e) => ({
+    iu = { ...io.MobilePortrait, gradientTopPosition: 55, gradientBottomPosition: 90 };
+var ih = a(574381);
+let i_ = new Set([1]),
+    ib = Object.keys(sq).map((e) => ({
         name: e,
         role: (function (e) {
             if (s3.test(e)) return { type: "slot" };
@@ -4331,9 +4333,9 @@ let iu = new Set([1]),
                 i = null != s ? s7[s[1].toLowerCase()] : void 0;
             return null != i ? { type: "trait", path: "faceID", riveId: i } : { type: "always" };
         })(e),
-        swapKey: (0, io.un)() ? `${e}-${sq[e].riveId}` : e,
+        swapKey: (0, ih.un)() ? `${e}-${sq[e].riveId}` : e,
     }));
-function i_(e) {
+function ip(e) {
     let { faceID: t, headwearID: a, shoesID: s, wearableID: i, chapterID: r, device: n } = e;
     return h.useMemo(() => {
         var e;
@@ -4341,7 +4343,7 @@ function i_(e) {
         return (
             (e = { faceID: t, headwearID: a, shoesID: s, wearableID: i }),
             (c = new Set()),
-            ih.forEach((t) => {
+            ib.forEach((t) => {
                 let { name: a, role: s } = t;
                 switch (s.type) {
                     case s2.SLOT:
@@ -4353,14 +4355,14 @@ function i_(e) {
                         s.layouts.includes(n) && c.add(a);
                         break;
                     case s2.ALWAYS:
-                        ("tex_wireframe_spritesheet" !== a || iu.has(r)) && c.add(a);
+                        ("tex_wireframe_spritesheet" !== a || i_.has(r)) && c.add(a);
                 }
             }),
             c
         );
     }, [t, a, s, i, r, n]);
 }
-async function ib(e) {
+async function ix(e) {
     let { textureManager: t, shownUrls: a, referencedAssets: s, isStale: i } = e,
         r = new Map();
     if (
@@ -4390,74 +4392,63 @@ async function ib(e) {
     }
     t.release(Array.from(n.values()));
 }
-var ip = a(971940);
-async function ix(e) {
+var im = a(971940);
+async function ig(e) {
     try {
         let t = await fetch(e);
         if (!t.ok) return null;
-        return await (0, ip.decodeImage)(new Uint8Array(await t.arrayBuffer()));
+        return await (0, im.decodeImage)(new Uint8Array(await t.arrayBuffer()));
     } catch {
         return null;
     }
 }
-var im = a(168862);
-function ig(e) {
+var iA = a(168862);
+function iv(e) {
     let { stage: t } = e,
-        { width: a, height: s } = (0, eU.A)(sV.Y),
-        r = (0, eU.A)(() => {
-            let e;
-            return ((e = 0.25 * Math.ceil((Math.max(a / 945, s / 532) * (0, eA.A)()) / 0.25)), (0, tt.clamp)(e, 1, 2));
+        a = (0, p.bG)([sV.A], () => {
+            var e, t;
+            let a,
+                s = sV.A.windowSize();
+            return (
+                (e = s.width),
+                (t = s.height),
+                (a = Math.max(e / 960, t / 540) * (0, eA.A)()),
+                ii.find((e) => e >= a) ?? ir
+            );
         }),
-        n = (0, p.bG)([l.A], () => l.A.selectedCharacterTraits),
+        [s, r] = h.useState(a);
+    a > s && r(a);
+    let n = (0, p.bG)([l.A], () => l.A.selectedCharacterTraits),
         c = (0, p.bG)([P.Ay], () => P.Ay.useReducedMotion),
         d = h.useMemo(
             () =>
                 (function (e) {
-                    let {
-                            stage: t,
-                            traits: a,
-                            layout: s,
-                            characterBottomInset: i,
-                            stageHeight: r,
-                            textureScale: n,
-                        } = e,
-                        { base: c, shoes: d, outfit: l, face: o, hat: u, wearable: h, aura: f } = (0, O.XI)(a),
-                        _ = s6[l],
-                        b = {};
+                    let { stage: t, traits: a, layout: s, mobileLift: i = 0, textureScale: r } = e,
+                        { base: n, shoes: c, outfit: d, face: l, hat: o, wearable: u, aura: h } = (0, O.XI)(a),
+                        f = s6[d],
+                        _ = {};
                     return (
-                        ir.forEach((e) => {
-                            let t = Number(e) === _?.riveId ? _.texture : sQ;
-                            b[`outfit${e}Image`] = ii(t.name, n);
+                        id.forEach((e) => {
+                            let t = Number(e) === f?.riveId ? f.texture : sQ;
+                            _[`outfit${e}Image`] = ic(t.name, r);
                         }),
                         {
                             device: s,
-                            mobileLift:
-                                "MobilePortrait" !== s
-                                    ? 0
-                                    : null == i
-                                      ? 30
-                                      : Math.round(((0.75 * r - (r - i)) / r) * 1080),
-                            chapterID: ic[t],
-                            faceID: o,
-                            shoesID: d,
-                            headwearID: s$[u],
-                            wearableID: s0[h],
-                            outfitID: _?.riveId ?? 0,
-                            auraImage: ii(s1[f].name, n),
-                            baseColorImage: ii(s5[c].name, n),
-                            ...("MobilePortrait" === s && t === v.s9.INTRODUCTION ? il : id[s]),
-                            ...b,
+                            mobileLift: i,
+                            chapterID: il[t],
+                            faceID: l,
+                            shoesID: c,
+                            headwearID: s$[o],
+                            wearableID: s0[u],
+                            outfitID: f?.riveId ?? 0,
+                            auraImage: ic(s1[h].name, r),
+                            baseColorImage: ic(s5[n].name, r),
+                            ...("MobilePortrait" === s && t === v.s9.INTRODUCTION ? iu : io[s]),
+                            ..._,
                         }
                     );
-                })({
-                    stage: t,
-                    traits: n,
-                    layout: "Desktop",
-                    characterBottomInset: null,
-                    stageHeight: s,
-                    textureScale: r,
-                }),
-            [t, n, s, r],
+                })({ stage: t, traits: n, layout: "Desktop", textureScale: s }),
+            [t, n, s],
         ),
         [o, u] = h.useState(null),
         f = o ?? d,
@@ -4479,20 +4470,20 @@ function ig(e) {
                         }, [t]),
                         h.useMemo(() => new Set([...s, ...a]), [s, a])
                     );
-                })({ visibleTextureNames: i_(t), requestedTextureNames: i_(a) });
+                })({ visibleTextureNames: ip(t), requestedTextureNames: ip(a) });
             return h.useMemo(() => {
                 let e;
                 return (
                     (e = {}),
-                    ih.forEach((t) => {
+                    ib.forEach((t) => {
                         let { name: a, swapKey: r } = t,
-                            n = i.has(a) ? ii(a, s) : sQ.url;
+                            n = i.has(a) ? ic(a, s) : sQ.url;
                         e[r] = { source: { uri: n } };
                     }),
                     e
                 );
             }, [i, s]);
-        })({ visibleDataBinding: f, requestedDataBinding: d, textureScale: r }),
+        })({ visibleDataBinding: f, requestedDataBinding: d, textureScale: s }),
         {
             assetLoader: x,
             onLoad: m,
@@ -4511,7 +4502,7 @@ function ig(e) {
                         null == t
                             ? null
                             : {
-                                  load: ix,
+                                  load: ig,
                                   swap: (e) => e.forEach((e, a) => t.get(a)?.setRenderImage(e)),
                                   release: (e) => e.forEach((e) => e.unref()),
                               },
@@ -4537,7 +4528,7 @@ function ig(e) {
                 let e = !1;
                 return (
                     (async () => {
-                        (await ib({ textureManager: t, shownUrls: i.current, referencedAssets: a, isStale: () => e }),
+                        (await ix({ textureManager: t, shownUrls: i.current, referencedAssets: a, isStale: () => e }),
                             e || n(a));
                     })(),
                     () => {
@@ -4554,7 +4545,7 @@ function ig(e) {
     return (0, i.jsx)("div", {
         role: "img",
         "aria-label": (0, sz.O)(n),
-        className: _()(im.dw, { [im.RK]: null != o }),
+        className: _()(iA.dw, { [iA.RK]: null != o }),
         children: (0, i.jsx)(sB.W, {
             artboard: "AB_Master",
             stateMachine: "SM_Master",
@@ -4565,12 +4556,12 @@ function ig(e) {
             listenOnDocumentBody: !c,
             withReducedMotion: "play",
             dataBinding: A,
-            className: im.lW,
+            className: iA.lW,
         }),
     });
 }
-var iA = a(517782);
-function iv(e) {
+var iw = a(517782);
+function iI(e) {
     let t,
         a,
         { didPlayerShareDataWithDiscord: s, onClose: r } = e;
@@ -4671,21 +4662,21 @@ function iv(e) {
         theme: G.NJ.DARK,
         children: (e) =>
             (0, i.jsxs)("div", {
-                className: _()(e, iA.kL),
+                className: _()(e, iw.kL),
                 style: T,
                 "aria-label": es.intl.string(e1.default["CdU/PF"]),
                 children: [
                     (0, i.jsx)(H, { isVisible: E }),
-                    (0, i.jsx)("div", { className: _()(iA.qd, { [iA.R]: E }), children: (0, i.jsx)(ig, { stage: w }) }),
-                    (0, v.Rq)(c) && (0, i.jsx)("div", { className: iA.qd, children: (0, i.jsx)(e8, { route: c }) }),
+                    (0, i.jsx)("div", { className: _()(iw.qd, { [iw.R]: E }), children: (0, i.jsx)(iv, { stage: w }) }),
+                    (0, v.Rq)(c) && (0, i.jsx)("div", { className: iw.qd, children: (0, i.jsx)(e8, { route: c }) }),
                     j &&
                         (0, i.jsx)("div", {
-                            className: iA.qd,
+                            className: iw.qd,
                             children: (0, i.jsx)(sk, { route: c, onNextStep: F, onPreviousStep: U }),
                         }),
                     (0, i.jsx)(J, { activeRoute: c }),
                     (0, i.jsxs)("div", {
-                        className: iA.$s,
+                        className: iw.$s,
                         children: [
                             (0, i.jsx)(te, {}),
                             (0, i.jsx)(K, {
@@ -4702,10 +4693,10 @@ function iv(e) {
             }),
     });
 }
-function iw() {
+function iE() {
     return !!c._.hasSubscribers(tq.jej.MODAL_CLOSE) && (c._.dispatch(tq.jej.MODAL_CLOSE), !0);
 }
-async function iI(e) {
+async function ij(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         a = arguments.length > 2 ? arguments[2] : void 0,
         s = await (0, d.nX)(a);
@@ -4717,8 +4708,8 @@ async function iI(e) {
           (0, n.B8)(
               (e) => {
                   let { closeLayer: a } = e;
-                  return (0, i.jsx)(iv, { didPlayerShareDataWithDiscord: t, onClose: a });
+                  return (0, i.jsx)(iI, { didPlayerShareDataWithDiscord: t, onClose: a });
               },
-              { onEscape: iw },
+              { onEscape: iE },
           ));
 }

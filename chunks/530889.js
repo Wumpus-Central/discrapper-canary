@@ -1155,7 +1155,7 @@ async function eY() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "661942";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "661964";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
     let s = eH?.processUtils?.getLastCrash;
@@ -1501,7 +1501,7 @@ if (null == e8 || "0.0.0" !== e8.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e9 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new e$.A().log(
-    `[BUILD INFO] Release Channel: ${e9}, Build Number: 661942, Version Hash: 928e1bbe23001af5fa5710a6dbfebffa106d78bd`,
+    `[BUILD INFO] Release Channel: ${e9}, Build Number: 661964, Version Hash: 77e21b3c47702fef23d81113b3f200d04550fdaa`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -25948,7 +25948,7 @@ let yA = "isHideDevBanner",
                     className: t_()(yE.Wz, yE.mr),
                     children: [
                         (0, v.jsx)(y_, { className: yE.Kk }),
-                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "661942" }),
+                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "661964" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -38912,6 +38912,7 @@ let wf = (0, ri.Fe)({
                 n.e("821883"),
                 n.e("654624"),
                 n.e("215980"),
+                n.e("429624"),
                 n.e("836133"),
             ]).then(n.bind(n, 418838)),
         webpackId: 418838,
@@ -54884,7 +54885,7 @@ let YL = (0, t$.Fe)({
             n.e("749736"),
             n.e("285350"),
             n.e("995813"),
-            n.e("575571"),
+            n.e("829961"),
             n.e("689393"),
             n.e("769369"),
             n.e("893917"),
@@ -56354,6 +56355,7 @@ let Kj = (0, ri.Fe)({
                 n.e("336335"),
                 n.e("964610"),
                 n.e("444861"),
+                n.e("429624"),
                 n.e("994483"),
             ]).then(n.bind(n, 627318)),
         webpackId: 627318,

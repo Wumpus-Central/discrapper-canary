@@ -1,21 +1,22 @@
-t.d(e, { A: () => u, Y: () => i });
-var l = t(582128);
-function i() {
-    return (
-        arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        { width: window.innerWidth ?? 1080, height: window.innerHeight ?? 1080 }
-    );
-}
-function u() {
+n.d(i, { A: () => d });
+var t = n(582128);
+function d() {
     arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    let [n, e] = l.useState(i());
+    let [e, i] = t.useState(
+        (function () {
+            return (
+                arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+                { width: window.innerWidth ?? 1080, height: window.innerHeight ?? 1080 }
+            );
+        })(),
+    );
     return (
-        l.useLayoutEffect(() => {
-            function n() {
-                e({ width: window.innerWidth, height: window.innerHeight });
+        t.useLayoutEffect(() => {
+            function e() {
+                i({ width: window.innerWidth, height: window.innerHeight });
             }
-            return (n(), window.addEventListener("resize", n), () => window.removeEventListener("resize", n));
+            return (e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e));
         }, []),
-        n
+        e
     );
 }
