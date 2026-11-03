@@ -498,15 +498,17 @@ let e5 = function () {
 var e7 = n(700582),
     e4 = n(238304);
 function e6() {
-    let e = i.useCallback(() => {
-        (0, Z.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("166894"), n.e("160106")]).then(n.bind(n, 853809));
-            return (t) => (0, l.jsx)(e, { ...t });
-        });
-    }, []);
+    let e = (0, ei.y)(et.intl.string(ee.default.q3IRal), et.intl.string(ee.default.JNLpDZ)),
+        t = i.useCallback(() => {
+            (0, Z.openModalLazy)(async () => {
+                let { default: e } = await Promise.all([n.e("166894"), n.e("160106")]).then(n.bind(n, 853809));
+                return (t) => (0, l.jsx)(e, { ...t });
+            });
+        }, []);
     return (0, l.jsx)(V.D, {
         className: e7.YL,
-        onClick: e,
+        onClick: t,
+        "aria-label": e,
         children: (0, l.jsx)(K.CircleInformationIcon, {
             size: "custom",
             color: "currentColor",
@@ -1606,6 +1608,7 @@ function n_(e) {
                   (0, l.jsxs)(V.D, {
                       className: ny.dV,
                       onClick: () => o((e) => !e),
+                      "aria-expanded": c,
                       children: [
                           (0, l.jsx)("div", {
                               className: ny.WB,
@@ -2306,7 +2309,7 @@ let lj = function () {
                                               children: et.intl.string(ee.default.xAVm7K),
                                           }),
                                       }),
-                                      (0, l.jsx)(V.D, {
+                                      (0, l.jsx)(n3.vN, {
                                           children: (0, l.jsx)(la.N_, {
                                               onClick: nl.default,
                                               to: { pathname: P.BVt.FAMILY_CENTER, state: { scrollRestoration: !1 } },
