@@ -1,35 +1,35 @@
 (n.d(t, {
-    BL: () => p,
-    Bx: () => o,
-    CZ: () => s,
-    Ch: () => i,
-    Hm: () => r,
-    N: () => a,
+    BL: () => m,
+    Bx: () => c,
+    CZ: () => o,
+    Ch: () => a,
+    Hm: () => l,
+    N: () => i,
     Q9: () => h,
-    QU: () => l,
+    QU: () => r,
     Sk: () => u,
-    W1: () => m,
+    W1: () => p,
 }),
     n(321073));
-let l = Object.freeze({ x: 0.5, y: 0.5 });
-function r(e, t, n) {
-    let { x: r, y: a, width: i, height: s } = e.rect;
-    return i < 1 || s < 1 ? l : { x: Math.min(1, Math.max(0, (t - r) / i)), y: Math.min(1, Math.max(0, (n - a) / s)) };
+let r = Object.freeze({ x: 0.5, y: 0.5 });
+function l(e, t, n) {
+    let { x: l, y: i, width: a, height: o } = e.rect;
+    return a < 1 || o < 1 ? r : { x: Math.min(1, Math.max(0, (t - l) / a)), y: Math.min(1, Math.max(0, (n - i) / o)) };
 }
-let a = 1e3;
-function i(e) {
+let i = 1e3;
+function a(e) {
     return "" !== e.trim();
 }
-function s(e, t, n) {
-    let l = null,
-        r = 1 / 0;
-    for (let a of e) {
-        let { x: e, y: i, width: s, height: u } = a.rect;
-        if (s < 1 || u < 1 || t < e || n < i || t > e + s || n > i + u) continue;
-        let o = s * u;
-        o < r && ((l = a), (r = o));
+function o(e, t, n) {
+    let r = null,
+        l = 1 / 0;
+    for (let i of e) {
+        let { x: e, y: a, width: o, height: u } = i.rect;
+        if (o < 1 || u < 1 || t < e || n < a || t > e + o || n > a + u) continue;
+        let c = o * u;
+        c < l && ((r = i), (l = c));
     }
-    return l;
+    return r;
 }
 function u(e) {
     let t = e.name.trim(),
@@ -121,11 +121,11 @@ function u(e) {
             : { kind: "", name: t }
         : { kind: n, name: t };
 }
-function o(e) {
+function c(e) {
     let { kind: t, name: n } = u(e);
     return [t, n].filter((e) => "" !== e).join(" ");
 }
-function c(e) {
+function s(e) {
     let t = [`<${e.tag}>`];
     "" !== e.role && t.push(`role=${e.role}`);
     let n = e.name.trim();
@@ -143,41 +143,41 @@ function c(e) {
 let d = "[conjure:selected] ",
     f = " \u2014 ";
 function h(e, t) {
-    let { kind: n, name: l } = u(e),
-        r = [n, l].filter((e) => "" !== e).join(": ");
-    return `${d}${r}${f}${c(e)}
+    let { kind: n, name: r } = u(e),
+        l = [n, r].filter((e) => "" !== e).join(": ");
+    return `${d}${l}${f}${s(e)}
 ${t.trim()}`;
 }
-function m(e) {
+function p(e) {
     if (!e.startsWith(d)) return null;
     let t = e.indexOf("\n"),
         n = -1 === t ? e : e.slice(0, t),
-        l = -1 === t ? "" : e.slice(t + 1),
-        r = n.slice(d.length),
-        a = r.indexOf(f),
-        i = (-1 === a ? r : r.slice(0, a)).trim();
-    return "" === i ? null : { label: i, body: l };
+        r = -1 === t ? "" : e.slice(t + 1),
+        l = n.slice(d.length),
+        i = l.indexOf(f),
+        a = (-1 === i ? l : l.slice(0, i)).trim();
+    return "" === a ? null : { label: a, body: r };
 }
-function p(e) {
-    let { annotations: t, metaComment: n, context: l } = e,
-        r = t.filter((e) => i(e.comment)),
-        s = [];
+function m(e) {
+    let { annotations: t, metaComment: n, context: r } = e,
+        l = t.filter((e) => a(e.comment)),
+        o = [];
     if (
-        (s.push(`My design feedback: ${1 === r.length ? "1 comment" : `${r.length} comments`} on the app.`), null != l)
+        (o.push(`My design feedback: ${1 === l.length ? "1 comment" : `${l.length} comments`} on the app.`), null != r)
     ) {
-        let e = l.title.trim(),
-            t = "" !== e ? `${e} (${l.url})` : l.url;
-        (s.push(`Page: ${t}, viewport ${l.viewport.width}x${l.viewport.height}.`),
-            s.push(
+        let e = r.title.trim(),
+            t = "" !== e ? `${e} (${r.url})` : r.url;
+        (o.push(`Page: ${t}, viewport ${r.viewport.width}x${r.viewport.height}.`),
+            o.push(
                 "Element coordinates below are viewport coordinates in that frame. The refs come from one snapshot taken when this feedback was collected, so re-snapshot before acting on them.",
             ));
     }
-    r.forEach((e, t) => {
+    l.forEach((e, t) => {
         let n;
-        (s.push(""),
-            s.push(`${t + 1}. ${c(e.target)}`),
-            s.push(`   Feedback: ${(n = e.comment.trim()).length <= a ? n : `${n.slice(0, a)}\u{2026}`}`));
+        (o.push(""),
+            o.push(`${t + 1}. ${s(e.target)}`),
+            o.push(`   Feedback: ${(n = e.comment.trim()).length <= i ? n : `${n.slice(0, i)}\u{2026}`}`));
     });
     let u = n.trim();
-    return ("" !== u && (s.push(""), s.push(`Note for the whole batch: ${u}`)), s.join("\n"));
+    return ("" !== u && (o.push(""), o.push(`Note for the whole batch: ${u}`)), o.join("\n"));
 }

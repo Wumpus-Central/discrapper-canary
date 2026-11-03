@@ -1,37 +1,37 @@
-n.d(t, { JI: () => s, ho: () => a, y_: () => i });
-var l = n(688954),
-    r = n(785389);
-function a(e) {
+n.d(t, { JI: () => o, ho: () => i, y_: () => a });
+var r = n(688954),
+    l = n(785389);
+function i(e) {
     return new Date(e.expiresAtMs).toLocaleTimeString(void 0, { hour: "numeric", minute: "2-digit" });
 }
-async function i(e) {
+async function a(e) {
     let { regenerate: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        n = await (0, l.h)(e, "/agent/mcp-token", { method: "POST", query: t ? { regenerate: "1" } : void 0 });
+        n = await (0, r.h)(e, "/agent/mcp-token", { method: "POST", query: t ? { regenerate: "1" } : void 0 });
     if (!n.ok) throw Error(`mcp token failed (${n.status})`);
-    let r = await n.json(),
-        a = "number" == typeof r.expires_in ? Date.now() + 1e3 * r.expires_in : Date.parse(r.expires_at);
-    return { url: r.url, expiresAtMs: a };
+    let l = await n.json(),
+        i = "number" == typeof l.expires_in ? Date.now() + 1e3 * l.expires_in : Date.parse(l.expires_at);
+    return { url: l.url, expiresAtMs: i };
 }
-async function s(e, t) {
-    let n, a;
+async function o(e, t) {
+    let n, i;
     try {
-        n = await (0, l.h)(e, "/agent/external-auth/authorize-url", { method: "POST", json: { connection_type: t } });
+        n = await (0, r.h)(e, "/agent/external-auth/authorize-url", { method: "POST", json: { connection_type: t } });
     } catch {
         return { type: "error", error: "unavailable" };
     }
     if (!n.ok) {
         let e = null;
         try {
-            e = (0, r.rG)((await n.json())?.error);
+            e = (0, l.rG)((await n.json())?.error);
         } catch {}
-        return { type: "error", error: (0, r.ls)(n.status, e) };
+        return { type: "error", error: (0, l.ls)(n.status, e) };
     }
     try {
-        a = (await n.json())?.url;
+        i = (await n.json())?.url;
     } catch {
         return { type: "error", error: "unavailable" };
     }
-    return "string" == typeof a && a.startsWith("https://")
-        ? { type: "url", url: a }
+    return "string" == typeof i && i.startsWith("https://")
+        ? { type: "url", url: i }
         : { type: "error", error: "unavailable" };
 }

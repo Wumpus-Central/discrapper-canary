@@ -59,12 +59,12 @@ var R = n(406704),
     V = n(177953),
     z = n(950305),
     W = n(980707),
-    $ = n(308368),
-    q = n(688810),
+    q = n(308368),
+    $ = n(688810),
     J = n(211401),
     Z = n(500049),
-    X = n(551640),
-    Y = n(970244),
+    Y = n(551640),
+    X = n(970244),
     Q = n(472456),
     ee = n(780057),
     et = n(747926),
@@ -123,8 +123,8 @@ function eN(e) {
             openClips: g,
             chatInputType: p,
         } = e,
-        { analyticsLocations: A } = (0, q.Ay)(),
-        f = (0, Y.s)({ channel: t }),
+        { analyticsLocations: A } = (0, $.Ay)(),
+        f = (0, X.s)({ channel: t }),
         C = (0, o.bG)([ee.A], () => ee.A.isInProgress()),
         x = (0, en.wX)();
     function E() {
@@ -232,7 +232,7 @@ function eN(e) {
                                     var n;
                                     return (
                                         (n = e.activity),
-                                        void $.A.sendActivityInvite({
+                                        void q.A.sendActivityInvite({
                                             channelId: t.id,
                                             type: e_.xL.JOIN,
                                             activity: n,
@@ -255,7 +255,7 @@ function eN(e) {
                                     var n;
                                     return (
                                         (n = e.activity),
-                                        void $.A.sendActivityInvite({
+                                        void q.A.sendActivityInvite({
                                             channelId: t.id,
                                             type: e_.xL.LISTEN,
                                             activity: n,
@@ -278,7 +278,7 @@ function eN(e) {
                                     var n;
                                     return (
                                         (n = e.activity),
-                                        void $.A.sendActivityInvite({
+                                        void q.A.sendActivityInvite({
                                             channelId: t.id,
                                             type: e_.xL.WATCH,
                                             activity: n,
@@ -333,7 +333,7 @@ function eN(e) {
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: () => (0, Y.e0)({ channel: t, entryPoint: X.t.ATTACH_MENU }),
+                                action: () => (0, X.e0)({ channel: t, entryPoint: Y.t.ATTACH_MENU }),
                                 children: f,
                             },
                             "scheduled_message",
@@ -417,12 +417,12 @@ let eR = s.memo(function (e) {
         V = (0, k.n)("ChannelAttachButton"),
         z = (0, o.bG)([m.Ay], () => m.Ay.isAppsButtonEnabled),
         W = (0, E.Us)(),
-        $ = s.useRef(null),
         q = s.useRef(null),
+        $ = s.useRef(null),
         J = (0, o.bG)([U.A], () => U.A.getActivities()),
         Z = (0, f.E)(),
-        X = (0, o.yK)([A.Ay], () => A.Ay.getNewClipIds()),
-        Y = (0, o.yK)(
+        Y = (0, o.yK)([A.Ay], () => A.Ay.getNewClipIds()),
+        X = (0, o.yK)(
             [O.A],
             () => (l.type === e_.rbe.DM ? J.filter((e) => !O.A.getParty(e.party?.id)?.has(l.getRecipientId())) : J),
             [J, l],
@@ -491,7 +491,7 @@ let eR = s.memo(function (e) {
     s.useEffect(() => {
         let e = (e) => {
             let { channelId: t } = e;
-            t === l.id && $.current?.activateUploadDialogue();
+            t === l.id && q.current?.activateUploadDialogue();
         };
         return (
             w._.subscribe(e_.jej.UPLOAD_FILE, e),
@@ -603,8 +603,8 @@ let eR = s.memo(function (e) {
             hasClips: el,
             canUseApplicationCommands: !T,
             channel: l,
-            activities: Y,
-            newClipsCount: X?.length ?? 0,
+            activities: X,
+            newClipsCount: Y?.length ?? 0,
             canPostPolls: eR,
             appContext: W,
             canSendScheduledMessages: eD,
@@ -620,7 +620,7 @@ let eR = s.memo(function (e) {
     if (0 === eO.length) return null;
     let ew = (0, i.jsx)(d.PlusLargeIcon, { size: "refresh_sm", color: "currentColor", colorClass: eM.dW }),
         eF = (0, i.jsx)(u.Y, {
-            targetElementRef: q,
+            targetElementRef: $,
             shouldShow: null != et,
             animation: u.Y.Animation.NONE,
             align: "left",
@@ -639,7 +639,7 @@ let eR = s.memo(function (e) {
                         onClose: () => en(null),
                         options: eO,
                         channel: l,
-                        onFileUpload: () => $.current?.activateUploadDialogue(),
+                        onFileUpload: () => q.current?.activateUploadDialogue(),
                         draftType: a,
                         editorTextContent: I,
                         setValue: v,
@@ -650,12 +650,12 @@ let eR = s.memo(function (e) {
             },
             children: (e) =>
                 (0, i.jsx)(B.A, {
-                    ref: q,
+                    ref: $,
                     className: r()(eM.g$, t),
                     childClassName: eM.wh,
                     isActive: !1,
                     "aria-label": N.intl.string(N.t.d56gCa),
-                    onDoubleClick: es ? () => $.current?.activateUploadDialogue() : void 0,
+                    onDoubleClick: es ? () => q.current?.activateUploadDialogue() : void 0,
                     "aria-haspopup": "menu",
                     ...e,
                     children: ew,
@@ -666,7 +666,7 @@ let eR = s.memo(function (e) {
             (0, i.jsx)("div", {
                 className: eM.EJ,
                 children: (0, i.jsx)(h.A, {
-                    ref: $,
+                    ref: q,
                     onChange: function (e) {
                         var t, n;
                         ((t = e.currentTarget.files),
@@ -682,7 +682,7 @@ let eR = s.memo(function (e) {
                 }),
             }),
             (0, i.jsx)("div", { className: eM.Jd, children: eF }),
-            eG && (0, i.jsx)(M, { targetElementRef: q, onDismiss: eU }),
+            eG && (0, i.jsx)(M, { targetElementRef: $, onDismiss: eU }),
         ],
     });
 });

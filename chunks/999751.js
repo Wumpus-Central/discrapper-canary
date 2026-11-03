@@ -14,8 +14,8 @@ var i = n(477900),
     A = n(793574),
     p = n(384059),
     m = n(917592),
-    E = n(978171),
-    I = n(834730),
+    I = n(978171),
+    E = n(834730),
     S = n(29160),
     C = n(105292),
     _ = n(177129);
@@ -24,8 +24,8 @@ let N = function (e) {
         o = n ? C.intl.string(C.t.IlHdW8) : C.intl.string(C.t.WsOisp);
     return (0, i.jsx)(S.A, {
         className: s()(t, _.H),
-        hoverText: r ? (0, i.jsx)(I.E, { variant: a, color: "currentColor", className: _.Q, children: o }) : null,
-        children: (0, i.jsx)(I.E, { variant: a, color: "currentColor", className: _.Q, children: l }),
+        hoverText: r ? (0, i.jsx)(E.E, { variant: a, color: "currentColor", className: _.Q, children: o }) : null,
+        children: (0, i.jsx)(E.E, { variant: a, color: "currentColor", className: _.Q, children: l }),
     });
 };
 var T = n(652215),
@@ -51,14 +51,14 @@ function x(e) {
             children: o,
             channelId: u,
             childrenAsSubtitle: d,
-            connectionStatusTextVariant: I,
+            connectionStatusTextVariant: E,
             hasVideo: S,
             statusAccessory: C,
         } = e,
         _ = l.useRef(null),
         D = r === T.S7L.RTC_CONNECTED,
-        x = l.useCallback((e) => (0, i.jsx)(E.A, { ...e, channelId: u }), [u]),
-        { connectionStatus: L, connectionStatusText: w } = m.A.getStatus(r, S),
+        x = l.useCallback((e) => (0, i.jsx)(I.A, { ...e, channelId: u }), [u]),
+        { connectionStatus: w, connectionStatusText: L } = m.A.getStatus(r, S),
         U = (0, g.KN)("RTCConnectionStatus");
     return (0, i.jsxs)("div", {
         className: v.pe,
@@ -97,10 +97,10 @@ function x(e) {
                                                           ((0, p.XJ)(A.A.RTC_PANEL, p.OP.CONNECTION_STATUS), l(e));
                                                       },
                                                       children: (0, i.jsx)(N, {
-                                                          text: w,
-                                                          textVariant: I,
+                                                          text: L,
+                                                          textVariant: E,
                                                           hasVideo: S,
-                                                          className: y[L],
+                                                          className: y[w],
                                                           hasConnectedChannel: null != u,
                                                       }),
                                                   }),

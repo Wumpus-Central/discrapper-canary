@@ -1,4 +1,4 @@
-e.exports = {
+d.exports = {
     Gt: "frame_d9c451",
     wx: "header_d9c451",
     pz: "sidebar_d9c451",

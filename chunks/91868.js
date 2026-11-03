@@ -1,4 +1,4 @@
-(n.d(t, { A: () => O, Y: () => I }), n(321073));
+(n.d(t, { A: () => O, Y: () => E }), n(321073));
 var i,
     l = n(17928),
     r = n(713402),
@@ -14,8 +14,8 @@ var i,
     A = n(956753),
     p = n(648427),
     m = n(315240),
-    E = n(652215),
-    I = (((i = {}).ACTIVE_NOW = "ACTIVE_NOW"), (i.DMS = "DMS"), (i.RECENT_TEXT = "RECENT_TEXT"), i);
+    I = n(652215),
+    E = (((i = {}).ACTIVE_NOW = "ACTIVE_NOW"), (i.DMS = "DMS"), (i.RECENT_TEXT = "RECENT_TEXT"), i);
 let S = new r.J(
         function (e) {
             let t = [];
@@ -46,7 +46,7 @@ function T(e) {
             let e = t.getRecipientId?.();
             if (
                 null != e &&
-                c.A.getRelationshipType(e) === E.eA$.PENDING_INCOMING &&
+                c.A.getRelationshipType(e) === I.eA$.PENDING_INCOMING &&
                 (c.A.isIgnored(e) || c.A.isSpam(e))
             )
                 return null;

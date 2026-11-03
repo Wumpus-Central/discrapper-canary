@@ -1,45 +1,45 @@
-n.d(t, { B: () => a, C: () => r });
-var l = n(46676);
-function r(e) {
-    return (0, l.jG)(e.history.present) && e.sketchDismissedFor !== e.history.present;
+n.d(t, { B: () => i, C: () => l });
+var r = n(46676);
+function l(e) {
+    return (0, r.jG)(e.history.present) && e.sketchDismissedFor !== e.history.present;
 }
-function a(e) {
+function i(e) {
     let t = 0,
         n = null,
-        l = null,
         r = null,
-        a = !1,
+        l = null,
         i = !1,
-        s = !1;
+        a = !1,
+        o = !1;
     async function u() {
-        if (!(a || i || s)) {
-            ((a = !0), e.update("uploading", l));
+        if (!(i || a || o)) {
+            ((i = !0), e.update("uploading", r));
             try {
                 if (((n ??= await e.capture(t++)), null == n)) throw Error("capture failed");
-                if (((l ??= await e.composite(n)), null == l)) throw Error("composite failed");
+                if (((r ??= await e.composite(n)), null == r)) throw Error("composite failed");
                 if (
-                    (null == r || (await e.isStaged(r)) || (r = null),
-                    s || (e.update("uploading", l), (r ??= await e.upload(l)), s))
+                    (null == l || (await e.isStaged(l)) || (l = null),
+                    o || (e.update("uploading", r), (l ??= await e.upload(r)), o))
                 )
                     return;
-                if (!e.send(r)) throw Error("send failed");
-                ((i = !0), e.update("sent", l));
+                if (!e.send(l)) throw Error("send failed");
+                ((a = !0), e.update("sent", r));
             } catch {
-                s || e.update("failed", l);
+                o || e.update("failed", r);
             } finally {
-                a = !1;
+                i = !1;
             }
         }
     }
-    function o() {
+    function c() {
         u().catch(() => {});
     }
     return (
-        o(),
+        c(),
         {
-            retry: o,
+            retry: c,
             cancel: () => {
-                s = !0;
+                o = !0;
             },
         }
     );

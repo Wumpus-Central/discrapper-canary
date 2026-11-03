@@ -19,8 +19,8 @@ function o(e) {
             "aria-label": h,
             onStateChange: g,
         } = e,
-        p = r.useRef(null),
         x = r.useRef(null),
+        p = r.useRef(null),
         v = r.useRef(null),
         [j, b] = r.useState(!1),
         y = (0, a.A)(),
@@ -28,12 +28,12 @@ function o(e) {
             async (e) => {
                 let l = await createImageBitmap(new Blob([e.jpeg], { type: "image/jpeg" }));
                 try {
-                    let r = p.current,
+                    let r = x.current,
                         a = r?.getContext("2d");
                     if (null == r || null == a || !(0, i.j_)(t, n, e)) return;
                     ((r.width !== l.width || r.height !== l.height) && ((r.width = l.width), (r.height = l.height)),
                         a.drawImage(l, 0, 0),
-                        (x.current = e),
+                        (p.current = e),
                         b(!0));
                 } finally {
                     l.close();
@@ -43,20 +43,20 @@ function o(e) {
         ),
         w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
         A = null == f ? 0 : Math.round(f * Math.min(w, 2)),
-        C = (0, i.KK)(t, n, { fps: o, onFrame: k, enabled: !d && y, width: A }),
-        N = (0, i.AV)(t, n),
-        S = r.useRef(N);
+        N = (0, i.KK)(t, n, { fps: o, onFrame: k, enabled: !d && y, width: A }),
+        S = (0, i.AV)(t, n),
+        C = r.useRef(S);
     (r.useEffect(() => {
-        if (S.current === N) return;
-        ((S.current = N), (x.current = null), b(!1));
-        let e = p.current;
+        if (C.current === S) return;
+        ((C.current = S), (p.current = null), b(!1));
+        let e = x.current;
         e?.getContext("2d")?.clearRect(0, 0, e.width, e.height);
-    }, [N]),
+    }, [S]),
         r.useEffect(() => {
-            g?.(C, j);
-        }, [C, j, g]),
+            g?.(N, j);
+        }, [N, j, g]),
         r.useEffect(() => {
-            c && p.current?.focus();
+            c && x.current?.focus();
         }, [c]));
     let I = r.useRef(new Map());
     function E(e) {
@@ -65,8 +65,8 @@ function o(e) {
             l = Math.min(n.width / t.width, n.height / t.height),
             r = n.left + (n.width - t.width * l) / 2,
             a = n.top + (n.height - t.height * l) / 2,
-            i = x.current?.deviceWidth ?? t.width,
-            s = x.current?.deviceHeight ?? t.height;
+            i = p.current?.deviceWidth ?? t.width,
+            s = p.current?.deviceHeight ?? t.height;
         return {
             x: Math.round(((e.clientX - r) / (t.width * l)) * i),
             y: Math.round(((e.clientY - a) / (t.height * l)) * s),
@@ -116,7 +116,7 @@ function o(e) {
         };
     }
     return (0, l.jsx)("canvas", {
-        ref: p,
+        ref: x,
         className: m,
         role: c ? "application" : "img",
         "aria-label": h,

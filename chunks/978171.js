@@ -14,8 +14,8 @@ var i = n(477900),
     A = n(92446),
     p = n(628284),
     m = n(95635),
-    E = n(993077),
-    I = n(194261),
+    I = n(993077),
+    E = n(194261),
     S = n(661531),
     C = n(233545),
     _ = n(108088),
@@ -28,8 +28,8 @@ var i = n(477900),
     R = n(652215),
     O = n(731854),
     x = n(105292),
-    L = n(300303),
-    w = n(479137);
+    w = n(300303),
+    L = n(479137);
 let U = function (e) {
     let [t, n] = (0, l.useState)("idle");
     (0, l.useEffect)(() => {
@@ -65,33 +65,33 @@ let U = function (e) {
                         (0, i.jsxs)("div", {
                             children: [
                                 (0, i.jsx)("div", {
-                                    className: L.o0,
+                                    className: w.o0,
                                     children: (0, i.jsx)(N.A, { dataPoints: e.pings, width: 258, height: 80 }),
                                 }),
                                 (0, i.jsx)(f.E, {
                                     variant: "text-sm/semibold",
                                     color: "text-default",
-                                    className: L.VU,
+                                    className: w.VU,
                                     children: D.A.getShortHostname(t),
                                 }),
                             ],
                         }),
                     (0, i.jsx)("div", {
-                        className: L.ew,
+                        className: w.ew,
                         children: (0, i.jsxs)("div", {
-                            className: L.zS,
+                            className: w.zS,
                             children: [
                                 (0, i.jsx)(f.E, {
                                     variant: "text-xs/normal",
                                     color: "text-default",
-                                    className: L.VU,
+                                    className: w.VU,
                                     children: x.intl.format(x.t["X58/lN"], { averagePing: n.toFixed(0) }),
                                 }),
                                 null != r
                                     ? (0, i.jsx)(f.E, {
                                           variant: "text-xs/normal",
                                           color: "text-default",
-                                          className: L.VU,
+                                          className: w.VU,
                                           children: x.intl.format(x.t["6iv2TF"], { lastPing: r.toFixed(0) }),
                                       })
                                     : null,
@@ -99,7 +99,7 @@ let U = function (e) {
                                     ? (0, i.jsx)(f.E, {
                                           variant: "text-xs/normal",
                                           color: "text-default",
-                                          className: L.VU,
+                                          className: w.VU,
                                           children: x.intl.format(x.t["VIBJM+"], { outboundLossRate: s.toFixed(1) }),
                                       })
                                     : null,
@@ -127,7 +127,7 @@ let U = function (e) {
             [R.S7L.RTC_DISCONNECTED]: x.intl.string(x.t.fOX25I),
         }[c];
     return (0, i.jsxs)("div", {
-        className: L.kL,
+        className: w.kL,
         children: [
             "function" == typeof P
                 ? P()
@@ -135,9 +135,9 @@ let U = function (e) {
             !__OVERLAY__ &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)("hr", { className: w.me }),
+                        (0, i.jsx)("hr", { className: L.me }),
                         (0, i.jsxs)("div", {
-                            className: L.Uo,
+                            className: w.Uo,
                             children: [
                                 U &&
                                     v.Ay.supports(O.O5.DIAGNOSTICS) &&
@@ -163,11 +163,11 @@ let U = function (e) {
                         }),
                     ],
                 }),
-            (0, i.jsxs)(E.Z, {
-                type: E.Z.Types.SUCCESS,
-                className: w.g4,
+            (0, i.jsxs)(I.Z, {
+                type: I.Z.Types.SUCCESS,
+                className: L.g4,
                 children: [
-                    (0, i.jsx)(I.LockIcon, { size: "xxs", color: S.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
+                    (0, i.jsx)(E.LockIcon, { size: "xxs", color: S.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
                     (0, i.jsx)(f.E, { variant: "text-xs/medium", color: "text-feedback-positive", children: h }),
                 ],
             }),
@@ -210,11 +210,11 @@ function W(e) {
             }),
             null != s &&
                 (0, i.jsxs)(b.D, {
-                    className: w.n2,
+                    className: L.n2,
                     onClick: h,
                     children: [
                         (0, i.jsx)("div", {
-                            className: a ? w.Dx : w.t6,
+                            className: a ? L.Dx : L.t6,
                             children: (0, i.jsx)(g.$, {
                                 icon: G.CopyIcon,
                                 text: x.intl.string(x.t.OpuAlK),
@@ -224,7 +224,7 @@ function W(e) {
                             }),
                         }),
                         (0, i.jsx)("div", {
-                            className: a ? w.t6 : w.Dx,
+                            className: a ? L.t6 : L.Dx,
                             children: (0, i.jsx)(g.$, {
                                 icon: p.y,
                                 text: x.intl.string(x.t.t5VZ88),
@@ -235,13 +235,13 @@ function W(e) {
                         }),
                     ],
                 }),
-            (0, i.jsx)("hr", { className: w.me }),
+            (0, i.jsx)("hr", { className: L.me }),
             (0, i.jsx)(f.E, { variant: "text-xs/normal", color: "text-subtle", children: x.intl.string(x.t.B9JNsl) }),
-            (0, i.jsxs)(E.Z, {
-                type: E.Z.Types.SUCCESS,
-                className: w.g4,
+            (0, i.jsxs)(I.Z, {
+                type: I.Z.Types.SUCCESS,
+                className: L.g4,
                 children: [
-                    (0, i.jsx)(I.LockIcon, { size: "xxs", color: S.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
+                    (0, i.jsx)(E.LockIcon, { size: "xxs", color: S.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
                     (0, i.jsx)(f.E, {
                         variant: "text-xs/medium",
                         color: "text-feedback-positive",
@@ -277,14 +277,14 @@ function J(e) {
         }));
     return (0, i.jsx)(U, { ...l, closePopout: t, connectionTypeText: n });
 }
-function K(e) {
+function $(e) {
     let { channelId: t, isOverlay: n, lobbyId: l, closePopout: r } = e,
         s = (0, h.k)({ channelId: t }) ? x.intl.string(x.t["3BogKe"]) : x.intl.string(x.t.ETIVvg);
     return n
         ? (0, i.jsx)(z, { lobbyId: l, closePopout: r, connectionTypeText: s })
         : (0, i.jsx)(J, { closePopout: r, connectionTypeText: s });
 }
-function $(e) {
+function K(e) {
     let [t, n] = l.useState(H.Rj.RTC_DEBUG_PANEL),
         r = (0, a.GV)();
     l.useEffect(() => {
@@ -326,7 +326,7 @@ function $(e) {
                             id: H.Rj.RTC_DEBUG_PANEL,
                             "aria-labelledby": r,
                             className: t !== H.Rj.RTC_DEBUG_PANEL ? Y._t : void 0,
-                            children: (0, i.jsx)(K, { ...e }),
+                            children: (0, i.jsx)($, { ...e }),
                         }),
                         (0, i.jsx)(s.V.Panel, {
                             id: H.Rj.RTC_SECURE_FRAMES,
@@ -342,6 +342,6 @@ function $(e) {
 }
 function Z(e) {
     return (0, h.k)({ channelId: e.channelId })
-        ? (0, i.jsx)($, { ...e })
-        : (0, i.jsx)("div", { className: Y.L3, children: (0, i.jsx)(K, { ...e }) });
+        ? (0, i.jsx)(K, { ...e })
+        : (0, i.jsx)("div", { className: Y.L3, children: (0, i.jsx)($, { ...e }) });
 }

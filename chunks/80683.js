@@ -69,7 +69,7 @@ var K = n(534514),
     V = n(834730),
     z = n(821609),
     W = n(521790);
-let $ = function (e) {
+let q = function (e) {
     let { guild: t, onClose: i } = e;
     return (0, l.jsxs)("div", {
         className: W.kL,
@@ -96,11 +96,11 @@ let $ = function (e) {
         ],
     });
 };
-var q = n(698405),
+var $ = n(698405),
     J = n(557722),
     Z = n(976860),
-    X = n(363195),
-    Y = n(560010),
+    Y = n(363195),
+    X = n(560010),
     Q = n(696451),
     ee = n(71393),
     et = n(834942),
@@ -139,7 +139,7 @@ class eu extends i.PureComponent {
     renderSuccessPopout = (e) => {
         let { closePopout: t } = e,
             { guild: n } = this.props;
-        return (a()(null != n, "This guildID cannot be null"), (0, l.jsx)($, { onClose: t, guild: n }));
+        return (a()(null != n, "This guildID cannot be null"), (0, l.jsx)(q, { onClose: t, guild: n }));
     };
     handleCancelApplication = () => {
         let { guild: e } = this.props;
@@ -220,7 +220,7 @@ class eu extends i.PureComponent {
         let { guild: e } = this.props;
         return (
             a()(null != e, "GuildVerification.renderLurkerModeUpsellPopout - guild cannot be undefined"),
-            (0, l.jsx)(q.A, { type: q.w.CHAT, guild: e, closePopout: this.closeLurkerModeUpsellPopout })
+            (0, l.jsx)($.A, { type: $.w.CHAT, guild: e, closePopout: this.closeLurkerModeUpsellPopout })
         );
     };
     renderMemberVerificationSuccessModal = () => {
@@ -371,7 +371,7 @@ function eh(e) {
         a = (0, r.bG)([ee.A], () => ee.A.getGuild(s)),
         o = (0, r.bG)([et.A], () => et.A.getCheck(s)),
         c = t.type === j.rbe.GUILD_ANNOUNCEMENT && null != a && a.features.has(j.GuildFeatures.NEWS),
-        d = (0, r.bG)([Y.A], () => (c ? Y.A.getFollowerStatsForChannel(t.id) : null)),
+        d = (0, r.bG)([X.A], () => (c ? X.A.getFollowerStatsForChannel(t.id) : null)),
         u = (0, r.bG)([G.A], () => G.A.isLurking(s)),
         h = (0, r.bG)([el.default], () => el.default.getCurrentUser()),
         m = h?.isStaff() ?? !1,
@@ -420,7 +420,7 @@ function eh(e) {
             isFollowable: c,
             shouldShowLurkerModeSuccessPopout: A,
             showLurkerModeUpsellPopout: u && null != a && ei.MJ(j.xBc.SEND_MESSAGES, t),
-            theme: X.A.theme,
+            theme: Y.A.theme,
             canSendMessages: f,
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,
             hasVerificationGate: p,

@@ -14,14 +14,14 @@ var i = n(665260),
     A = n(393432),
     p = n(790782),
     m = n(355097),
-    E = n(652215);
-let I = [
+    I = n(652215);
+let E = [
         { timeSinceJoin: +c.A.Millis.HOUR, sends: 1, viewTime: +c.A.Millis.MINUTE },
         { timeSinceJoin: +c.A.Millis.DAY, sends: 2, viewTime: 2 * c.A.Millis.MINUTE },
         { timeSinceJoin: +c.A.Millis.WEEK, sends: 5, viewTime: 5 * c.A.Millis.MINUTE },
         { timeSinceJoin: +c.A.Millis.DAYS_30, sends: 10, viewTime: 30 * c.A.Millis.MINUTE },
     ],
-    S = 5 * I[I.length - 1].viewTime,
+    S = 5 * E[E.length - 1].viewTime,
     C = c.A.Millis.WEEK,
     _ = { channels: {} },
     N = new Set(),
@@ -40,7 +40,7 @@ function D() {
         0 !== y && (clearInterval(y), (y = 0)),
         d.Ay.useNewNotifications &&
             (y = setInterval(() => {
-                M() && w.emitChange();
+                M() && L.emitChange();
             }, 15 * c.A.Millis.SECOND)),
         !1
     );
@@ -68,12 +68,12 @@ function x(e, t) {
     return (
         null != n &&
         !!(
-            (null != n.message_notifications && n.message_notifications !== E.orn.NULL) ||
+            (null != n.message_notifications && n.message_notifications !== I.orn.NULL) ||
             (null != n.flags && (0, i.br)(n.flags, m.vv.UNREADS_ALL_MESSAGES | m.vv.UNREADS_ONLY_MENTIONS))
         )
     );
 }
-class L extends l.Ay.PersistedStore {
+class w extends l.Ay.PersistedStore {
     static displayName = "UnreadSettingNoticeStore2";
     static persistKey = "UnreadSettingNoticeStore2";
     initialize(e) {
@@ -101,7 +101,7 @@ class L extends l.Ay.PersistedStore {
                     i = Math.min(h.default.age(e.id), Date.now() - n.getTime()),
                     l = _.channels[e.id];
                 if (null == l || l.lastActionTime < Date.now() - C) return !1;
-                for (let e of I)
+                for (let e of E)
                     if (i < e.timeSinceJoin && (l.numSends >= e.sends || l.viewDuration >= e.viewTime)) return !0;
                 return !1;
             })(r) &&
@@ -126,7 +126,7 @@ class L extends l.Ay.PersistedStore {
         );
     }
 }
-let w = new L(r.h, {
+let L = new w(r.h, {
         CHANNEL_SELECT: function () {
             let e = M();
             return ((T = u.Ay.getChannelId()), (v = Date.now()), e);
@@ -146,4 +146,4 @@ let w = new L(r.h, {
             ((t.lastActionTime = Date.now()), t.numSends++);
         },
     }),
-    U = w;
+    U = L;

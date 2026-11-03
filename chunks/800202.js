@@ -1,67 +1,67 @@
-n.d(t, { A: () => f, z: () => d });
-var l = n(582128),
-    r = n(314116),
-    a = n(858899),
-    i = n(381991),
-    s = n(716594),
-    u = n(949757),
-    o = n(809526),
-    c = n(105292);
-function d(e) {
-    let t = e?.id,
-        n = e?.name,
-        r = l.useRef(!1);
+e.d(n, { A: () => o, z: () => s });
+var l = e(582128),
+    i = e(314116),
+    r = e(858899),
+    a = e(381991),
+    u = e(716594),
+    f = e(949757),
+    c = e(809526),
+    d = e(105292);
+function s(t) {
+    let n = t?.id,
+        e = t?.name,
+        i = l.useRef(!1);
     return l.useCallback(() => {
-        null == t ||
-            null == n ||
-            r.current ||
-            ((r.current = !0),
-            (0, a.P0)({ text: c.intl.formatToPlainString(o.default.aN2JdD, { name: n }) }),
-            (0, u.iG)(t, n)
-                .catch((e) => {
-                    let n;
-                    (console.error("[conjure] project export failed", t, e),
-                        (0, a.P0)({
+        null == n ||
+            null == e ||
+            i.current ||
+            ((i.current = !0),
+            (0, r.P0)({ text: d.intl.formatToPlainString(c.default.aN2JdD, { name: e }) }),
+            (0, f.iG)(n, e)
+                .catch((t) => {
+                    let e;
+                    (console.error("[conjure] project export failed", n, t),
+                        (0, r.P0)({
                             text:
-                                409 === (n = e instanceof s.x ? e.status : null)
-                                    ? c.intl.string(o.default["9oqbEw"])
-                                    : 404 === n
-                                      ? c.intl.string(o.default["0W8uLq"])
-                                      : c.intl.string(o.default.N8753A),
+                                409 === (e = t instanceof u.x ? t.status : null)
+                                    ? d.intl.string(c.default["9oqbEw"])
+                                    : 404 === e
+                                      ? d.intl.string(c.default["0W8uLq"])
+                                      : d.intl.string(c.default.N8753A),
                             variant: "critical",
                         }));
                 })
                 .finally(() => {
-                    r.current = !1;
+                    i.current = !1;
                 }));
-    }, [t, n]);
+    }, [n, e]);
 }
-function f(e) {
-    let t = e.id,
-        n = e.name,
-        s = d(e),
-        f = l.useCallback(
-            (e) => {
-                let l = (0, u.vt)(e);
+function o(t) {
+    let n = t.id,
+        e = t.name,
+        u = s(t),
+        o = l.useCallback(
+            (t) => {
+                let l = (0, f.vt)(t);
                 null != l
-                    ? (0, a.P0)({ text: l, variant: "critical" })
-                    : (0, r.A)({
-                          title: c.intl.formatToPlainString(o.default["Gm+u1+"], { name: n }),
-                          subtitle: c.intl.string(o.default.M7H3sJ),
-                          confirmText: c.intl.string(o.default.gFHykw),
+                    ? (0, r.P0)({ text: l, variant: "critical" })
+                    : (0, i.A)({
+                          title: d.intl.formatToPlainString(c.default["Gm+u1+"], { name: e }),
+                          subtitle: d.intl.string(c.default.M7H3sJ),
+                          confirmText: d.intl.string(c.default.gFHykw),
                           variant: "critical",
                           onConfirm: async () => {
-                              (0, i.A)(t);
+                              (0, a.A)(n);
                               try {
-                                  await (0, u.Hj)(t, e, c.intl.string(o.default.Owerd3));
+                                  await (0, f.Hj)(n, t, d.intl.string(c.default.Owerd3));
                               } catch {
-                                  (0, a.P0)({ text: c.intl.string(o.default["Q+l4Hv"]), variant: "critical" });
+                                  (0, r.P0)({ text: d.intl.string(c.default["Q+l4Hv"]), variant: "critical" });
                               }
                           },
                       });
             },
-            [t, n],
+            [n, e],
         ),
-        h = (0, u.yN)(f);
-    return { onExport: s, onImport: h.open, importInput: h.input };
+        g = (0, f.yN)(o);
+    return { onExport: u, onImport: g.open, importInput: g.input };
 }

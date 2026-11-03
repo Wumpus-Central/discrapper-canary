@@ -1,4 +1,4 @@
-n.d(t, { m: () => w, default: () => x });
+n.d(t, { m: () => w, default: () => L });
 var i = n(477900),
     a = n(582128),
     o = n(503698),
@@ -14,56 +14,56 @@ var i = n(477900),
     y = n(320448),
     E = n(192308),
     C = n(964486),
-    A = n(235986),
-    g = n(174459),
+    g = n(235986),
+    A = n(174459),
     h = n(859703),
     _ = n(77870),
     I = n(590202),
     S = n(652215),
-    T = n(105292),
-    v = n(299592);
-let L = "/assets/1929535a8397f7f0.png";
-function x(e) {
+    v = n(105292),
+    T = n(299592);
+let x = "/assets/1929535a8397f7f0.png";
+function L(e) {
     let { questId: t, survey: n, transitionState: o, onClose: s, onSubmit: f } = e,
         y = (0, _.C5)(t),
         [E, h] = a.useState(0),
-        [I, x] = (0, u.z)(() => ({ from: { width: "0%" }, config: { duration: 2500 } }));
+        [I, L] = (0, u.z)(() => ({ from: { width: "0%" }, config: { duration: 2500 } }));
     function w(e) {
         (f(),
             h(1),
             null != y &&
-                g.default.track(S.HAw.QUEST_SURVEY_SUBMITTED, { ...b(y, n), choice: e.text, choice_id: e.key }));
+                A.default.track(S.HAw.QUEST_SURVEY_SUBMITTED, { ...b(y, n), choice: e.text, choice_id: e.key }));
     }
-    async function P(e) {
-        1 === e && (await x({ width: "100%" }), s());
+    async function q(e) {
+        1 === e && (await L({ width: "100%" }), s());
     }
     return (
         (0, C.Ay)(() => {
-            null != y && g.default.track(S.HAw.QUEST_SURVEY_DISPLAYED, b(y, n));
+            null != y && A.default.track(S.HAw.QUEST_SURVEY_DISPLAYED, b(y, n));
         }),
         null == y && s(),
         (0, i.jsx)(l.EO, {
             "data-migration-pending": !0,
             transitionState: o,
             size: l.rI.DYNAMIC,
-            className: v.modalRoot,
+            className: T.modalRoot,
             parentComponent: "QuestSurveyModal",
             children: (0, i.jsxs)(c.t, {
                 activeSlide: E,
                 width: 467,
-                onSlideReady: P,
+                onSlideReady: q,
                 children: [
                     (0, i.jsxs)(c.q, {
                         id: 0,
                         children: [
                             (0, i.jsxs)(l.rQ, {
                                 "data-migration-pending": !0,
-                                direction: A.A.Direction.VERTICAL,
+                                direction: g.A.Direction.VERTICAL,
                                 separator: !1,
-                                className: v.Hc,
+                                className: T.Hc,
                                 children: [
-                                    (0, i.jsx)(l.s_, { "data-migration-pending": !0, className: v.PV, onClick: s }),
-                                    (0, i.jsx)("img", { src: L, alt: "", className: v.LY }),
+                                    (0, i.jsx)(l.s_, { "data-migration-pending": !0, className: T.PV, onClick: s }),
+                                    (0, i.jsx)("img", { src: x, alt: "", className: T.LY }),
                                     (0, i.jsx)(d.D, { variant: "heading-lg/semibold", children: n.title }),
                                     (0, i.jsx)(m.E, {
                                         variant: "text-md/normal",
@@ -75,7 +75,7 @@ function x(e) {
                             (0, i.jsx)(l.$m, {
                                 "data-migration-pending": !0,
                                 scrollbarGutter: !1,
-                                className: v.jE,
+                                className: T.jE,
                                 children: n.choices.map((e) => (0, i.jsx)(N, { choice: e, onClick: w }, e.key)),
                             }),
                         ],
@@ -85,31 +85,31 @@ function x(e) {
                         children: [
                             (0, i.jsxs)(l.$m, {
                                 "data-migration-pending": !0,
-                                className: v.wD,
+                                className: T.wD,
                                 children: [
-                                    (0, i.jsx)("img", { src: L, alt: "", className: v.LY }),
+                                    (0, i.jsx)("img", { src: x, alt: "", className: T.LY }),
                                     (0, i.jsx)(d.D, {
                                         variant: "heading-lg/semibold",
-                                        children: T.intl.string(T.t.KTjjrG),
+                                        children: v.intl.string(v.t.KTjjrG),
                                     }),
                                     (0, i.jsx)(m.E, {
                                         variant: "text-md/normal",
                                         color: "text-muted",
-                                        children: T.intl.string(T.t.AvbrEM),
+                                        children: v.intl.string(v.t.AvbrEM),
                                     }),
                                 ],
                             }),
                             (0, i.jsx)(l.jl, {
                                 "data-migration-pending": !0,
                                 children: (0, i.jsxs)("div", {
-                                    className: v.cG,
+                                    className: T.cG,
                                     children: [
                                         (0, i.jsx)(p.$, {
                                             variant: "primary",
-                                            text: T.intl.string(T.t.cpT0Cq),
+                                            text: v.intl.string(v.t.cpT0Cq),
                                             onClick: s,
                                         }),
-                                        (0, i.jsx)(r.animated.div, { className: v.ce, style: I }),
+                                        (0, i.jsx)(r.animated.div, { className: T.ce, style: I }),
                                     ],
                                 }),
                             }),
@@ -123,7 +123,7 @@ function x(e) {
 function N(e) {
     let { className: t, choice: n, onClick: a } = e;
     return (0, i.jsxs)(f.D, {
-        className: s()(v.z5, t),
+        className: s()(T.z5, t),
         onClick: () => a(n),
         children: [(0, i.jsx)(m.E, { variant: "text-sm/semibold", children: n.text }), (0, i.jsx)(y._, {})],
     });
@@ -145,7 +145,7 @@ function w(e) {
         {
             onCloseCallback: () => {
                 let n = h.A.getQuest(e.questId);
-                null != n && g.default.track(S.HAw.QUEST_SURVEY_DISMISSED, { ...b(n, e.survey), submitted: t });
+                null != n && A.default.track(S.HAw.QUEST_SURVEY_DISMISSED, { ...b(n, e.survey), submitted: t });
             },
         },
     );

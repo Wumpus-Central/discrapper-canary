@@ -14,8 +14,8 @@ var i,
     A = n(821609),
     p = n(866665),
     m = n(827343),
-    E = n(765671),
-    I = n(661531),
+    I = n(765671),
+    E = n(661531),
     S = n(953727);
 function C(e) {
     let { width: t = 80, height: n = 28, color: i = "currentColor", foreground: s, ...a } = e,
@@ -55,14 +55,14 @@ function M(e) {
             notchBackground: t,
             progress: n,
             size: i = "md",
-            gradientStart: s = I.A.unsafe_rawColors.YELLOW_260.css,
-            gradientEnd: o = I.A.unsafe_rawColors.GREEN_360.css,
+            gradientStart: s = E.A.unsafe_rawColors.YELLOW_260.css,
+            gradientEnd: o = E.A.unsafe_rawColors.GREEN_360.css,
             className: u,
             notchClassName: d,
             children: c,
         } = e,
         h = v[i],
-        { ref: f, width: g } = (0, E.Ay)(),
+        { ref: f, width: g } = (0, I.Ay)(),
         A = r.useMemo(() => (null != g ? y(g) : 0), [g]),
         p = r.useMemo(() => {
             let e = Math.abs(y((A * (100 - Math.max(0, Math.min(100, n)))) / 100) - A);
@@ -93,8 +93,8 @@ var D = n(999926),
     R = n(763827),
     O = n(174459),
     x = n(652215),
-    L = n(105292),
-    w = n(193221);
+    w = n(105292),
+    L = n(193221);
 class U extends r.PureComponent {
     _initTimeout = new h.Ep();
     _silenceTimeout = new h.Ep();
@@ -177,11 +177,11 @@ class U extends r.PureComponent {
             : (0, l.jsx)("span", {
                   "aria-live": "polite",
                   "aria-atomic": "true",
-                  className: w.b_,
+                  className: L.b_,
                   children: (0, l.jsx)(f.E, {
                       variant: "text-xs/normal",
                       color: "text-subtle",
-                      className: w.Qe,
+                      className: L.Qe,
                       children: n ? (i ? e : t) : void 0,
                   }),
               });
@@ -200,28 +200,28 @@ class U extends r.PureComponent {
                 buttonMinWidth: c,
                 measureButtonRef: h,
                 meterOnly: m = !1,
-                containerClassName: E,
-                helpText: I,
+                containerClassName: I,
+                helpText: E,
             } = this.props,
             { isMicTesting: S, volume: C, isDetectingInput: _ } = this.state,
-            N = e && !S ? L.intl.string(L.t["9viE2A"]) : null;
+            N = e && !S ? w.intl.string(w.t["9viE2A"]) : null;
         S && e && !d && this._micTestStop();
         let T = s.length >= r.length ? s : r;
         return (0, l.jsxs)("div", {
-            className: a()(w.kL, E),
+            className: a()(L.kL, I),
             children: [
                 (0, l.jsx)(g.D, {
                     label: t ?? void 0,
                     hideLabel: m,
                     description: m ? null : n,
                     children: (0, l.jsxs)("div", {
-                        className: a()(w.ak, { [w.mi]: m, [w.EX]: "sm" === u }),
+                        className: a()(L.ak, { [L.mi]: m, [L.EX]: "sm" === u }),
                         children: [
                             !m &&
                                 (0, l.jsxs)(l.Fragment, {
                                     children: [
                                         (0, l.jsx)("div", {
-                                            className: w.km,
+                                            className: L.km,
                                             "aria-hidden": !0,
                                             children: (0, l.jsx)(A.$, {
                                                 buttonRef: h,
@@ -256,12 +256,12 @@ class U extends r.PureComponent {
                         ],
                     }),
                 }),
-                null != I &&
+                null != E &&
                     (0, l.jsx)(f.E, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
                         style: { visibility: S && !_ ? "hidden" : "visible" },
-                        children: I,
+                        children: E,
                     }),
             ],
         });
@@ -305,7 +305,7 @@ function P(e) {
             };
         }),
         h = (0, d.bG)([R.A], () => R.A.isConnected()),
-        { ref: f, width: g } = (0, E.Ay)();
+        { ref: f, width: g } = (0, I.Ay)();
     return (0, l.jsx)(U, {
         isVoiceConnected: h,
         inputVolume: s,

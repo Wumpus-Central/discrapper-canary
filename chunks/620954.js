@@ -1,12 +1,12 @@
 (n.d(t, {
     v0: () => M,
     bg: () => P,
-    WU: () => R,
+    WU: () => b,
     IG: () => w,
     _Q: () => G,
     Ps: () => H,
     UR: () => L,
-    W1: () => b,
+    W1: () => R,
     $J: () => y,
     b6: () => q,
     pu: () => Q,
@@ -82,12 +82,12 @@ function P(e) {
         }
     return n;
 }
-function b(e) {
+function R(e) {
     let t = (0, g.vv)(e),
         n = (0, g.vl)(e);
     return t || n;
 }
-var R = (((r = {}).DESKTOP = "desktop"), (r.XBOX = "xbox"), (r.PLAYSTATION = "playstation"), r);
+var b = (((r = {}).DESKTOP = "desktop"), (r.XBOX = "xbox"), (r.PLAYSTATION = "playstation"), r);
 function y(e) {
     return "xbox" === e.connected_account_type ? v.fg2.XBOX : v.fg2.PLAYSTATION;
 }
@@ -116,7 +116,7 @@ function U(e) {
         ? `https://play.google.com/store/apps/details?id=${e.android.androidAppId}`
         : null;
 }
-function k(e) {
+function D(e) {
     if ((0, _.isAndroid)() && e.android?.androidAppId != null)
         return {
             url: `https://play.google.com/d?id=${e.android.androidAppId}`,
@@ -130,7 +130,7 @@ function k(e) {
     }
     return null;
 }
-function D(e) {
+function k(e) {
     let {
         link: t,
         directLink: n,
@@ -168,13 +168,13 @@ function Q(e, t) {
     let { impressionId: A } = t,
         E = null != A ? (0, d.vV)(e.config.ctaConfig?.ios?.iosAppId != null, t.sourceQuestContent, e.id) : null;
     (T._.dispatch(v.jej.QUEST_GAME_LINK_OPENED),
-        D({
+        k({
             link: o,
             directLink: s,
             inlineStoreParams:
                 null == (r = e.config.ctaConfig)
                     ? null
-                    : k({ url: (0, m.Jx)(e.config), android: r.android, ios: r.ios }),
+                    : D({ url: (0, m.Jx)(e.config), android: r.android, ios: r.ios }),
             trackOverlayEvent: (n, r, u, l, i) =>
                 (0, C.eA)({
                     quest: e,
@@ -237,7 +237,7 @@ function G(e, t) {
         (null != A && (o = A), T._.dispatch(v.jej.QUEST_GAME_LINK_OPENED));
         let { impressionId: E } = t,
             _ = null != E ? (0, d.vV)(l.ios?.iosAppId != null, t.sourceQuestContent, r) : null,
-            I = k(l),
+            I = D(l),
             m = null != _ && null != E ? () => (0, f.FW)({ impressionId: E }) : void 0;
         function g(e) {
             "custom" === e
@@ -266,7 +266,7 @@ function G(e, t) {
             ((0, s.A)(o), g(!1));
             return;
         }
-        D({
+        k({
             link: o,
             directLink: A,
             inlineStoreParams: I,

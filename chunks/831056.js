@@ -1,4 +1,4 @@
-n.d(t, { KP: () => f, Kb: () => x, OH: () => M, lx: () => j, nY: () => S, pK: () => h, zj: () => g });
+n.d(t, { KP: () => f, Kb: () => x, OH: () => M, lx: () => v, nY: () => S, pK: () => h, zj: () => g });
 var s = n(477900),
     l = n(582128),
     r = n(503698),
@@ -37,14 +37,14 @@ function h(e) {
         ? null
         : (0, s.jsx)("img", { ref: n, src: t, alt: d.intl.string(m.default.E527vj), className: o.xc });
 }
-function j(e) {
+function v(e) {
     let { title: t, subtitle: n, ctaBtnLabel: l, onCTAClick: r, orientation: c, ctaIcon: u } = e;
     return (0, s.jsxs)("div", {
         className: a()(o.pP, { [o.iC]: "portrait" === c }),
-        children: [(0, s.jsx)(v, { title: t, subtitle: n }), (0, s.jsx)(b, { label: l, icon: u, onClick: r })],
+        children: [(0, s.jsx)(j, { title: t, subtitle: n }), (0, s.jsx)(b, { label: l, icon: u, onClick: r })],
     });
 }
-function v(e) {
+function j(e) {
     let { title: t, subtitle: n } = e;
     return (0, s.jsxs)("div", {
         className: o.PH,

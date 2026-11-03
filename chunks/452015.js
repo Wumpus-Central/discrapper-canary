@@ -14,8 +14,8 @@ var i = n(477900),
     A = n(778712),
     p = n(834730),
     m = n(821609),
-    E = n(95477),
-    I = n(559106),
+    I = n(95477),
+    E = n(559106),
     S = n(289873),
     C = n(320448),
     _ = n(847374),
@@ -28,8 +28,8 @@ var i = n(477900),
 if (221552 == n.j) var R = n(888366);
 if (221552 == n.j) var O = n(241541);
 var x = n(387755),
-    L = n(308528),
-    w = n(711950),
+    w = n(308528),
+    L = n(711950),
     U = n(376728),
     P = n(73153);
 let b = {
@@ -64,8 +64,8 @@ var G = n(49229),
     Y = n(47167),
     z = n(915089),
     J = n(131607),
-    K = n(727245),
-    $ = n(247676),
+    $ = n(727245),
+    K = n(247676),
     Z = n(66442);
 if (221552 == n.j) var q = n(43105);
 if (221552 == n.j) var X = n(403581);
@@ -84,14 +84,14 @@ function ea(e) {
         d = "staff" === a,
         c = "entitled" === a,
         h = (0, o.bG)([ee.Ay], () => ee.Ay.getSection(n)),
-        { enabled: f } = K.A.useConfig({ location: r }),
+        { enabled: f } = $.A.useConfig({ location: r }),
         [g, A] = (0, J.kn)(f && !d ? [u.M.NITRO_GDM_CAP_COACHMARK] : []),
         p = g === u.M.NITRO_GDM_CAP_COACHMARK,
         m = l.useCallback(() => {
             (et.default.track(ei.HAw.PREMIUM_PROMOTION_OPENED, { location: r, location_object: ei.ZSU.BUTTON_CTA }),
                 A(el.i.TAKE_ACTION));
         }, [r, A]),
-        E = l.useCallback(() => {
+        I = l.useCallback(() => {
             (s(), A(el.i.TAKE_ACTION));
         }, [s, A]);
     return p
@@ -112,7 +112,7 @@ function ea(e) {
                           body: es.intl.formatToPlainString(es.t.SXkUiv, { number: 25 }),
                           actions: [
                               c
-                                  ? { text: es.intl.string(es.t.yZOtoD), variant: "primary", icon: O.D, onClick: E }
+                                  ? { text: es.intl.string(es.t.yZOtoD), variant: "primary", icon: O.D, onClick: I }
                                   : {
                                         text: es.intl.string((0, en.o9)(a)),
                                         variant: "expressive",
@@ -172,18 +172,18 @@ let ep = { mass: 1, tension: 320, friction: 30, clamp: !0 },
     em = function (e) {
         let { location: t, memberCount: n, recipientLimit: r, ref: s } = e,
             a = (0, en.qH)(),
-            { enabled: u } = K.A.useConfig({ location: t }),
+            { enabled: u } = $.A.useConfig({ location: t }),
             d = (0, o.bG)([k.Ay], () => k.Ay.useReducedMotion),
             [c, h] = l.useState(!1),
             [f, g] = l.useState(!1),
-            [A, E] = l.useState(1.4),
-            I = l.useRef(1.4),
+            [A, I] = l.useState(1.4),
+            E = l.useRef(1.4),
             S = l.useRef(null),
             C = l.useRef(null),
             _ = (0, en.yh)(a) && n >= r && u,
             N = l.useCallback(() => {
-                (E(I.current),
-                    (I.current = Math.min(I.current + 2, 15)),
+                (I(E.current),
+                    (E.current = Math.min(E.current + 2, 15)),
                     h(!0),
                     g(!0),
                     null != S.current && clearTimeout(S.current),
@@ -197,7 +197,7 @@ let ep = { mass: 1, tension: 320, friction: 30, clamp: !0 },
             }, []);
         (l.useImperativeHandle(s, () => ({ shake: N }), [N]),
             l.useEffect(() => {
-                _ || (I.current = 1.4);
+                _ || (E.current = 1.4);
             }, [_]),
             l.useEffect(
                 () => () => {
@@ -262,8 +262,8 @@ let ep = { mass: 1, tension: 320, friction: 30, clamp: !0 },
                 }),
         );
     };
-var eE = n(683063),
-    eI = n(84327);
+var eI = n(683063),
+    eE = n(84327);
 function eS(e) {
     let { memberCount: t, recipientLimit: n } = e,
         l = (0, en.qH)(),
@@ -272,19 +272,19 @@ function eS(e) {
         a = t > ei.wLU,
         u = es.intl.formatToPlainString(es.t["9EQix0"], { numMembers: t, maxMemberLimit: n }),
         d = (0, i.jsx)("span", {
-            className: ec()(eI.hJ, { [eI.VN]: r }),
+            className: ec()(eE.hJ, { [eE.VN]: r }),
             children: s
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(X.t, {
                               size: "xxs",
                               color: "currentColor",
-                              className: ec()(eI.cn, { [eI.fw]: a }),
+                              className: ec()(eE.cn, { [eE.fw]: a }),
                               "aria-hidden": !0,
                           }),
                           (0, i.jsx)(p.E, {
                               variant: "text-md/normal",
-                              className: ec()(eI.qz, { [eI.fw]: a }),
+                              className: ec()(eE.qz, { [eE.fw]: a }),
                               children: u,
                           }),
                       ],
@@ -296,9 +296,9 @@ function eS(e) {
                   }),
         });
     return (0, i.jsx)("div", {
-        className: eI.VA,
+        className: eE.VA,
         children: s
-            ? (0, i.jsx)(eE.u, {
+            ? (0, i.jsx)(eI.u, {
                   title: es.intl.string(es.t.u1ilug),
                   body: es.intl.format(es.t["mr27w/"], { number: 25 }),
                   position: "bottom",
@@ -398,8 +398,8 @@ var ey = n(279208),
     eR = n(175452),
     eO = n(427358),
     ex = n(95701),
-    eL = n(734057),
-    ew = n(71393),
+    ew = n(734057),
+    eL = n(71393),
     eU = n(958590),
     eP = n(584777),
     eb = n(763827),
@@ -414,8 +414,8 @@ var ey = n(279208),
     eY = n(58736),
     ez = n(837381),
     eJ = n(692617),
-    eK = n(658675),
-    e$ = n(297413),
+    e$ = n(658675),
+    eK = n(297413),
     eZ = n(966327),
     eq = n(235986),
     eX = n(548118),
@@ -438,7 +438,7 @@ function e2(e) {
             "aria-posinset": A,
         } = e,
         m = (0, o.bG)([e0.A], () => e0.A.getStatus(t.id)),
-        E = (0, ez.rm)(String(t.id));
+        I = (0, ez.rm)(String(t.id));
     return (0, i.jsx)(f.D, {
         id: `user-row-${n}`,
         className: ec()(e1.Se, { [e1.r9]: d }),
@@ -448,7 +448,7 @@ function e2(e) {
         onMouseEnter: function () {
             h?.(n);
         },
-        ...E,
+        ...I,
         role: "checkbox",
         "aria-checked": u,
         "aria-disabled": d,
@@ -479,7 +479,7 @@ function e2(e) {
                             color: "text-muted",
                             className: null != s && s.length > 0 ? e1.dj : void 0,
                             children: [
-                                (0, i.jsx)(e$.A, {
+                                (0, i.jsx)(eK.A, {
                                     user: t,
                                     hideDiscriminator: l,
                                     className: e1.xK,
@@ -514,7 +514,7 @@ function e2(e) {
                         }),
                     ],
                 }),
-                (0, i.jsx)(eK.P, { checked: u, disabled: d }),
+                (0, i.jsx)(e$.P, { checked: u, disabled: d }),
             ],
         }),
     });
@@ -557,8 +557,8 @@ function te(e) {
 function tt(e) {
     let { recipientIds: t, location: n, useGroupDmShell: i = !1 } = e;
     return i && 1 === t.length
-        ? L.A.createGroupDmShell({ recipientId: t[0], location: n })
-        : L.A.openPrivateChannel({ recipientIds: t, location: n });
+        ? w.A.createGroupDmShell({ recipientId: t[0], location: n })
+        : w.A.openPrivateChannel({ recipientIds: t, location: n });
 }
 function tn() {
     (0, h.P0)({ text: es.intl.string(es.t.fEptJP), variant: "critical" });
@@ -589,7 +589,7 @@ function ti(e) {
 }
 function tl(e) {
     let { onConfirm: t, channelIds: n, ...l } = e,
-        r = (0, o.yK)([eL.A], () => Array.from(n).map(eL.A.getChannel), [n]);
+        r = (0, o.yK)([ew.A], () => Array.from(n).map(ew.A.getChannel), [n]);
     return (0, i.jsx)(d.a, {
         title: es.intl.string(es.t.uFHxNd),
         subtitle: es.intl.string(es.t.rIsSqE),
@@ -728,12 +728,12 @@ class ts extends l.PureComponent {
     }
     isPartyFull() {
         let { channel: e } = this.props;
-        return null != e && e.recipients.length + 1 >= (0, $.A)({ useNitroCapExperiment: !0 });
+        return null != e && e.recipients.length + 1 >= (0, K.A)({ useNitroCapExperiment: !0 });
     }
     getRemaining() {
         let { channel: e, selectedUsers: t } = this.props,
             n = (null == e ? 0 : e.recipients.length) + 1;
-        return (0, $.A)({ useNitroCapExperiment: !0 }) - t.size - n;
+        return (0, K.A)({ useNitroCapExperiment: !0 }) - t.size - n;
     }
     getTotalSelectedMemberCount() {
         let { channel: e, selectedUsers: t } = this.props;
@@ -744,7 +744,7 @@ class ts extends l.PureComponent {
     }
     getListBottomPadding() {
         return this.shouldShowNitroCapRoadblock() &&
-            this.getTotalSelectedMemberCount() >= (0, $.A)({ useNitroCapExperiment: !0 })
+            this.getTotalSelectedMemberCount() >= (0, K.A)({ useNitroCapExperiment: !0 })
             ? 104
             : 14;
     }
@@ -805,10 +805,10 @@ class ts extends l.PureComponent {
                 i = null != n ? n.username : "";
             return es.intl.format(es.t["eg+R9x"], { username: i });
         }
-        if (null == e) return es.intl.format(es.t.t9mhPt, { number: (0, $.A)({ useNitroCapExperiment: !0 }) });
+        if (null == e) return es.intl.format(es.t.t9mhPt, { number: (0, K.A)({ useNitroCapExperiment: !0 }) });
         let n = this.getRemaining();
         return n <= 0
-            ? es.intl.formatToPlainString(es.t.xYr004, { number: (0, $.A)({ useNitroCapExperiment: !0 }) })
+            ? es.intl.formatToPlainString(es.t.xYr004, { number: (0, K.A)({ useNitroCapExperiment: !0 }) })
             : es.intl.formatToPlainString(es.t.barkEr, { number: n });
     }
     handleKeyDown(e) {
@@ -856,7 +856,7 @@ class ts extends l.PureComponent {
         return (0, i.jsxs)("div", {
             className: e3.ON,
             children: [
-                (0, i.jsx)(E.k, {
+                (0, i.jsx)(I.k, {
                     inputRef: this.searchBarRef,
                     autoFocus: !0,
                     fullWidth: !0,
@@ -893,7 +893,7 @@ class ts extends l.PureComponent {
                       ref: this.nitroUpsellBannerRef,
                       location: e8,
                       memberCount: this.getTotalSelectedMemberCount(),
-                      recipientLimit: (0, $.A)({ useNitroCapExperiment: !0 }),
+                      recipientLimit: (0, K.A)({ useNitroCapExperiment: !0 }),
                   }),
               })
             : null;
@@ -907,7 +907,7 @@ class ts extends l.PureComponent {
                     e &&
                         (0, i.jsx)(eS, {
                             memberCount: this.getTotalSelectedMemberCount(),
-                            recipientLimit: (0, $.A)({ useNitroCapExperiment: !0 }),
+                            recipientLimit: (0, K.A)({ useNitroCapExperiment: !0 }),
                         }),
                     t,
                 ],
@@ -917,7 +917,7 @@ class ts extends l.PureComponent {
         (0, i.jsx)("div", {
             className: e3.Lh,
             ref: this._mobileCloseRef,
-            children: (0, i.jsx)(I.xp, {
+            children: (0, i.jsx)(E.xp, {
                 containerRef: this._mobileCloseRef,
                 children: (0, i.jsx)("div", {
                     children: (0, i.jsx)(F.A, { className: e3.RR, closeAction: this.props.onClose, keybind: "ESC" }),
@@ -930,7 +930,7 @@ class ts extends l.PureComponent {
             ? null
             : this.isPartyFull()
               ? (0, i.jsx)("div", {
-                    children: es.intl.format(es.t.xYr004, { number: (0, $.A)({ useNitroCapExperiment: !0 }) }),
+                    children: es.intl.format(es.t.xYr004, { number: (0, K.A)({ useNitroCapExperiment: !0 }) }),
                 })
               : null;
     }
@@ -1178,7 +1178,7 @@ class ts extends l.PureComponent {
     renderNitroCapFullState() {
         let { transitionState: e, onClose: t, nitroAudience: n } = this.props;
         if ((0, en.yh)(n)) return (0, i.jsx)(eu, { transitionState: e, onClose: t, location: e8, nitroAudience: n });
-        let l = (0, $.A)({ useNitroCapExperiment: !0 });
+        let l = (0, K.A)({ useNitroCapExperiment: !0 });
         return (0, i.jsx)(d.a, {
             transitionState: e ?? y.ip.ENTERED,
             onClose: async () => await t(),
@@ -1327,7 +1327,7 @@ class ts extends l.PureComponent {
         };
     })();
     handleAddFriendNavigation = () => {
-        (w.A.transitionToSection(ei.m3P.ADD_FRIEND, { explicit: !0 }), this.props.onClose());
+        (L.A.transitionToSection(ei.m3P.ADD_FRIEND, { explicit: !0 }), this.props.onClose());
     };
     handleScroll = () => {
         let e = this.scrollerRef.current;
@@ -1355,7 +1355,7 @@ class ts extends l.PureComponent {
         let n = {};
         ("" !== this.state.newChannelName && (n.name = this.state.newChannelName),
             null != this.state.previewIcon && (n.icon = this.state.previewIcon),
-            (null != n.name || null != n.icon) && L.A.updateChannel(e, n, t),
+            (null != n.name || null != n.icon) && w.A.updateChannel(e, n, t),
             et.default.track(ei.HAw.GDM_EDIT_INTERACTED, {
                 channel_id: e,
                 channel_type: ei.rbe.GROUP_DM,
@@ -1369,7 +1369,7 @@ class ts extends l.PureComponent {
             { channel: n } = this.props,
             i = (0, H.dI)(n),
             l = !0;
-        1 === e.length && (l = null == L.A._openCachedDMChannel(e[0]));
+        1 === e.length && (l = null == w.A._openCachedDMChannel(e[0]));
         let r = (0, H.g4)(e);
         et.default.track(ei.HAw.CREATE_DM_USER_LIST_CLICKED, {
             ...i,
@@ -1413,7 +1413,7 @@ class ts extends l.PureComponent {
     };
     _addRecipientsToExistingGroupDM = (e, t, n) => {
         let i = eb.A.getChannelId() === e;
-        (t.length > 0 ? L.A.addRecipients(e, t, ei.ThZ.ADD_FRIENDS_TO_DM) : Promise.resolve(e))
+        (t.length > 0 ? w.A.addRecipients(e, t, ei.ThZ.ADD_FRIENDS_TO_DM) : Promise.resolve(e))
             .then((e) => {
                 (this.props.onComplete?.(e), ev(e, n), i && t.length > 0 && x.A.ring(e, t, "dm_invite"));
             })
@@ -1425,7 +1425,7 @@ class ts extends l.PureComponent {
             s = r ? [...n, t] : n,
             a = r ? i : [...i, t];
         (r && n.length > 0
-            ? L.A.addRecipients(e, n, ei.ThZ.ADD_FRIENDS_TO_DM)
+            ? w.A.addRecipients(e, n, ei.ThZ.ADD_FRIENDS_TO_DM)
             : s.length > 0 || a.length > 0
               ? tt({ recipientIds: s, location: "New Group DM", useGroupDmShell: a.length > 0 })
               : Promise.resolve(e)
@@ -1506,7 +1506,7 @@ function ta(e) {
                 color: "text-muted",
                 children: es.intl.string(es.t.YynaLK),
             }),
-            (0, i.jsx)(E.k, {
+            (0, i.jsx)(I.k, {
                 "aria-label": es.intl.string(es.t.YynaLK),
                 name: "create-gdm-channel-name",
                 placeholder: u,
@@ -1518,7 +1518,7 @@ function ta(e) {
 }
 function to(e) {
     let { channel: t, onComplete: n, entryPointType: l, ...r } = e,
-        s = (0, o.cf)([ej.A, eP.A, eU.A, ew.A, eF.A], () => {
+        s = (0, o.cf)([ej.A, eP.A, eU.A, eL.A, eF.A], () => {
             let e;
             return (
                 null != t && null != (e = eU.A.getInvite(t.id)) && e.isExpired() && (e = null),
@@ -1528,7 +1528,7 @@ function to(e) {
                     invite: e,
                     hideDiscriminator: ej.A.hidePersonalInformation,
                     hideInstantInvites: ej.A.hideInstantInvites,
-                    hasGuilds: ew.A.getGuildCount() > 0,
+                    hasGuilds: eL.A.getGuildCount() > 0,
                 }
             );
         }),
@@ -1542,7 +1542,7 @@ function to(e) {
             [t],
         ),
         u = (0, en.qH)(),
-        { enabled: d } = K.A.useConfig({ location: e8 }),
+        { enabled: d } = $.A.useConfig({ location: e8 }),
         c = (function (e) {
             let { location: t } = e,
                 { inviteMaxAgeSeconds: n } = e_.useConfig({ location: t });
@@ -1644,7 +1644,7 @@ function th(e) {
         { showModal: f } = tu({ channel: t, subscribeToGlobalHotkey: a, entryPointType: d }),
         g = l.useMemo(() => (o ? [u.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK] : []), [o]),
         [A, p] = (0, J.kn)(g),
-        E = l.useCallback(() => {
+        I = l.useCallback(() => {
             (A === u.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK && p(el.i.TAKE_ACTION), f());
         }, [f, A, p]);
     return (0, i.jsxs)(i.Fragment, {
@@ -1652,7 +1652,7 @@ function th(e) {
             (0, i.jsx)(m.$, {
                 variant: "primary",
                 ...c,
-                onClick: E,
+                onClick: I,
                 buttonRef: h,
                 text: r,
                 "aria-label": r,
@@ -1666,7 +1666,7 @@ function th(e) {
 function tf(e) {
     let t = tg(e);
     return new Set(
-        (0, r.chain)(eL.A.getMutablePrivateChannels())
+        (0, r.chain)(ew.A.getMutablePrivateChannels())
             .values()
             .filter((e) => (0, ex.MK)(e.type))
             .filter((e) => tg(e.recipients) === t)

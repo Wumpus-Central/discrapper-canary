@@ -21,8 +21,8 @@ var r = n(477900),
     S = n(980707),
     y = n(477782),
     C = n(365199),
-    A = n(268791),
-    w = n(834730),
+    w = n(268791),
+    A = n(834730),
     R = n(315710),
     N = n(534514),
     T = n(893007),
@@ -78,18 +78,18 @@ function z(e) {
         "data-testid": "discord-web-video-player-duration",
         onClick: () => c((e) => !e),
         children: [
-            (0, r.jsx)(w.E, { variant: p, className: U.Ue, tabularNumbers: !0, children: x }),
+            (0, r.jsx)(A.E, { variant: p, className: U.Ue, tabularNumbers: !0, children: x }),
             !t &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(w.E, { variant: p, className: U.zO, children: "/" }),
-                        (0, r.jsx)(w.E, { variant: p, className: U.Ue, tabularNumbers: !0, children: v }),
+                        (0, r.jsx)(A.E, { variant: p, className: U.zO, children: "/" }),
+                        (0, r.jsx)(A.E, { variant: p, className: U.Ue, tabularNumbers: !0, children: v }),
                     ],
                 }),
         ],
     });
 }
-function X(e) {
+function V(e) {
     let {
             iconComponent: t,
             animationTime: n,
@@ -111,10 +111,10 @@ function X(e) {
         { controlBarConfig: S } = (0, j.X$)(),
         y = S ?? D.X4[g],
         C = y.iconSize,
-        A = "" !== (x ?? "").trim();
+        w = "" !== (x ?? "").trim();
     return (0, r.jsx)(H.m, {
         text: l ? f : void 0,
-        keyboardShortcut: A ? x : void 0,
+        keyboardShortcut: w ? x : void 0,
         ariaHidden: !0,
         shouldShow: !h,
         delay: p,
@@ -122,7 +122,7 @@ function X(e) {
             onClick: !0 === s ? void 0 : v,
             className: a()(U.K5, { [U.Iy]: s }),
             "aria-label": i,
-            "aria-keyshortcuts": A ? x : void 0,
+            "aria-keyshortcuts": w ? x : void 0,
             "aria-disabled": s,
             "data-testid": E,
             innerRef: P,
@@ -155,7 +155,7 @@ function X(e) {
         }),
     });
 }
-var V = n(91034),
+var X = n(91034),
     Y = n(710434),
     W = n(634156),
     q = n(652215),
@@ -171,8 +171,8 @@ function en(e) {
             seekForwardEnabled: S,
             hideCaptionBtn: y = !1,
             hideTranscriptBtn: C = !1,
-            hideSkipButtons: A = !1,
-            hideFullScreenBtn: w = !1,
+            hideSkipButtons: w = !1,
+            hideFullScreenBtn: A = !1,
             hidePlaybackSpeedBtn: R = !1,
             size: N,
             downloadUrl: T,
@@ -204,15 +204,15 @@ function en(e) {
         eP = eb ?? D.X4[N],
         eS = es && !ev,
         [ey, eC] = l.useState(H ? 0 : G),
-        [eA, ew] = l.useState(!1),
+        [ew, eA] = l.useState(!1),
         [eR, eN] = l.useState(!1),
         [eT, ek] = l.useState(!1),
         eL = l.useRef(null),
         eM = l.useId(),
         ej = l.useRef(void 0),
         [eD, eI] = l.useState(eS);
-    eS !== eD && (eI(eS), ew(!1), ek(!1), eN(!1));
-    let eB = eS && (eA || eT || eR),
+    eS !== eD && (eI(eS), eA(!1), ek(!1), eN(!1));
+    let eB = eS && (ew || eT || eR),
         [{ volumeAnimSpring: eF }, e$] = (0, m.z)(() => ({
             from: { volumeAnimSpring: 0 },
             config: { tension: 100, friction: 3, clamp: !0 },
@@ -228,7 +228,7 @@ function en(e) {
             },
             [eg],
         ),
-        eX = l.useCallback(() => {
+        eV = l.useCallback(() => {
             if (null == T) return;
             let e = I?.split("/");
             (M.default.track(q.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
@@ -237,33 +237,33 @@ function en(e) {
             }),
                 window.open(T, "_blank"));
         }, [T, I]),
-        eV = l.useCallback(
+        eX = l.useCallback(
             (e) => {
                 null != eg.current && (e !== eg.current.volume && (eg.current.volume = e), e !== ey && eC(e));
             },
             [eg, ey],
         );
     function eY(e) {
-        (eV(e), em(e), eR && (eN(!1), eS || ed(!1)), H && e > 0 ? ef(!1) : H || 0 !== e || ef(!0));
+        (eX(e), em(e), eR && (eN(!1), eS || ed(!1)), H && e > 0 ? ef(!1) : H || 0 !== e || ef(!0));
     }
     let eW = l.useCallback(() => {
         if (null != eg.current)
             if (0 === ey) {
                 let e = 0 === G ? 0.3 : G;
-                (eV(e), ef(!1), em(e));
-            } else (em(ey), eV(0), ef(!0));
-    }, [eg, ey, eV, G, ef, em]);
+                (eX(e), ef(!1), em(e));
+            } else (em(ey), eX(0), ef(!0));
+    }, [eg, ey, eX, G, ef, em]);
     function eq() {
-        (ew(!0), ep(!0));
+        (eA(!0), ep(!0));
     }
     function eZ() {
-        (ew(!1), ep(!1));
+        (eA(!1), ep(!1));
     }
     function eJ() {
-        (window.clearTimeout(ej.current), ew(!0));
+        (window.clearTimeout(ej.current), eA(!0));
     }
     function e0() {
-        (window.clearTimeout(ej.current), (ej.current = window.setTimeout(() => ew(!1), 150)));
+        (window.clearTimeout(ej.current), (ej.current = window.setTimeout(() => eA(!1), 150)));
     }
     function e1(e) {
         if ("ArrowUp" !== e.key && "ArrowDown" !== e.key) return;
@@ -306,13 +306,13 @@ function en(e) {
                         (e.stopPropagation(), y || en());
                         break;
                     case d.TJ.FULLSCREEN:
-                        (e.stopPropagation(), w || el());
+                        (e.stopPropagation(), A || el());
                         break;
                     case d.TJ.MUTE:
                         (e.stopPropagation(), eW());
                 }
         },
-        [en, el, ee, ea, eu, eW, y, w, ex],
+        [en, el, ee, ea, eu, eW, y, A, ex],
     );
     (l.useEffect(() => {
         F && null != eG.current && eG.current.focus();
@@ -328,17 +328,17 @@ function en(e) {
         ),
         l.useEffect(
             () => (
-                e$({ volumeAnimSpring: !eo || eR || eA ? 1 : 0, immediate: eh }),
+                e$({ volumeAnimSpring: !eo || eR || ew ? 1 : 0, immediate: eh }),
                 () => {
                     eF.stop();
                 }
             ),
-            [eo, eR, eA, e$, eh, eF],
+            [eo, eR, ew, e$, eh, eF],
         ));
     let e4 = 0 === ey ? f._ : ey < 0.5 ? p.S : h.H,
         e8 = _.intl.string(0 === ey ? _.t.YqAjXy : _.t.w4m945),
         { icon: e9, label: e7 } = K[t],
-        e3 = (0, r.jsx)(X, {
+        e3 = (0, r.jsx)(V, {
             iconComponent: e4,
             animationTime: n,
             visible: i,
@@ -365,7 +365,7 @@ function en(e) {
             maxValue: 1,
             onValueChange: eY,
             asValueChanges: function (e) {
-                (eV(e), !eR && (eN(!0), eS || ed(!0)));
+                (eX(e), !eR && (eN(!0), eS || ed(!0)));
             },
             fillStyles: eS ? void 0 : { backgroundColor: c.A.colors.WHITE.css },
             orientation: "horizontal",
@@ -377,7 +377,7 @@ function en(e) {
             (0, r.jsxs)("div", {
                 className: U.X3,
                 children: [
-                    (0, r.jsx)(X, {
+                    (0, r.jsx)(V, {
                         iconComponent: e9,
                         animationTime: n,
                         visible: i,
@@ -389,10 +389,10 @@ function en(e) {
                         buttonSize: Q[N],
                         "data-testid": "discord-web-video-player-play-pause-btn",
                     }),
-                    !A &&
+                    !w &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(X, {
+                                (0, r.jsx)(V, {
                                     iconComponent: Y.q,
                                     animationTime: n,
                                     visible: i,
@@ -403,7 +403,7 @@ function en(e) {
                                     buttonSize: Q[N],
                                     "data-testid": "discord-web-video-player-seek-backward-btn",
                                 }),
-                                (0, r.jsx)(X, {
+                                (0, r.jsx)(V, {
                                     iconComponent: W.i,
                                     animationTime: n,
                                     visible: i,
@@ -432,7 +432,7 @@ function en(e) {
                               shouldShow: eB,
                               scrollBehavior: "close",
                               onRequestClose: () => {
-                                  (window.clearTimeout(ej.current), ew(!1), ek(!1), eN(!1));
+                                  (window.clearTimeout(ej.current), eA(!1), ek(!1), eN(!1));
                               },
                               layerContext: eE,
                               position: "top",
@@ -524,7 +524,7 @@ function en(e) {
                                 n ||
                                     m.push({
                                         id: "caption",
-                                        iconComponent: V.I,
+                                        iconComponent: X.I,
                                         label: _.intl.string(Z.default["0DbPcL"]),
                                         onClick: u,
                                         active: l,
@@ -551,7 +551,7 @@ function en(e) {
                             handleTranscriptBtnClick: et,
                             handleCaptionBtnClick: en,
                             downloadUrl: T,
-                            handleDownloadButtonClick: eX,
+                            handleDownloadButtonClick: eV,
                             extraButtons: B,
                         }),
                         animSpring: n,
@@ -567,8 +567,8 @@ function en(e) {
                             size: N,
                             handleControlBarPendingInteraction: ed,
                         }),
-                    !w &&
-                        (0, r.jsx)(X, {
+                    !A &&
+                        (0, r.jsx)(V, {
                             iconComponent: ev ? g.z : E.T,
                             animationTime: n,
                             visible: i,
@@ -592,7 +592,7 @@ function er(e) {
           ? (0, r.jsx)(r.Fragment, {
                 children: t.map((e) =>
                     (0, r.jsx)(
-                        X,
+                        V,
                         {
                             iconComponent: e.iconComponent,
                             animationTime: l,
@@ -662,7 +662,7 @@ function el(e) {
             });
         },
         children: (e) =>
-            (0, r.jsx)(X, {
+            (0, r.jsx)(V, {
                 ref: u,
                 iconComponent: C.MoreHorizontalIcon,
                 animationTime: n,
@@ -700,14 +700,14 @@ function ei(e) {
         renderPopout: () => (0, r.jsx)(ea, { playbackRate: t, onPlaybackRateChange: n, label: c }),
         children: (e) => {
             let n = 1 !== t;
-            return (0, r.jsx)(X, {
+            return (0, r.jsx)(V, {
                 ref: s,
-                iconComponent: A.$,
+                iconComponent: w.$,
                 animationTime: i,
                 visible: a,
                 active: n,
                 overlay: n
-                    ? (0, r.jsx)(w.E, {
+                    ? (0, r.jsx)(A.E, {
                           "aria-hidden": !0,
                           variant: "text-xxs/semibold",
                           color: "none",

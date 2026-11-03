@@ -14,8 +14,8 @@ var i,
     A = n(287809),
     p = n(977997),
     m = n(927813),
-    E = n(935208),
-    I = n(914853),
+    I = n(935208),
+    E = n(914853),
     S = n(41984),
     C = n(956753),
     _ = n(296027),
@@ -233,10 +233,10 @@ function x(e, t) {
         i
     );
 }
-function L(e, t) {
+function w(e, t) {
     return 0.8 * (null != e.guildId ? D(t.getNormalizedGuildAffinity(e.guildId)) : 0);
 }
-class w {
+class L {
     candidate;
     signals;
     _activeNowScoreSource;
@@ -372,7 +372,7 @@ function J(e) {
         ) || !!(null != i && l.getNormalizedUserAffinity(i) > P.u.MINIMUM_USER_AFFINITY)
     );
 }
-function K(e) {
+function $(e) {
     let t = d.A.affinities,
         n = 0;
     for (let e = 0; e < t.length; e += 1) {
@@ -396,18 +396,18 @@ function K(e) {
         }
     );
 }
-function $(e, t) {
+function K(e, t) {
     let n = x(e.candidate, { voiceGuildId: z(), mostRecentGuildId: k });
     return (
         e.score *
         (1 + n) *
-        (e.candidate.kind === N.DirectMessage || e.candidate.kind === N.GroupDM ? 1 : 1 + L(e.candidate, t))
+        (e.candidate.kind === N.DirectMessage || e.candidate.kind === N.GroupDM ? 1 : 1 + w(e.candidate, t))
     );
 }
 function Z() {
-    let e = K({ includeVcProbability: !1 }),
-        t = K({ includeVcProbability: !0 });
-    (H.rebuildSortedIndexIfDirty((t) => $(t, e)), B.rebuildSortedIndexIfDirty((e) => $(e, t)));
+    let e = $({ includeVcProbability: !1 }),
+        t = $({ includeVcProbability: !0 });
+    (H.rebuildSortedIndexIfDirty((t) => K(t, e)), B.rebuildSortedIndexIfDirty((e) => K(e, t)));
 }
 function q() {
     return {
@@ -439,7 +439,7 @@ function X() {
 function Q(e, t) {
     let n = u.A.getChannel(e);
     if (null == n) return !1;
-    let [i] = U.A.isFavorite(I.x.MESSAGES, e);
+    let [i] = U.A.isFavorite(E.x.MESSAGES, e);
     if (i || n.isPrivate?.()) return !1;
     let l = n.getGuildId?.() ?? null;
     return (
@@ -464,7 +464,7 @@ function ee(e, t, n) {
     if (null == l || l.kind !== N.GuildText) return null;
     let r = H.getChannel(e);
     if (null != r) return r;
-    let s = new w(l, t, n);
+    let s = new L(l, t, n);
     return (H.upsert(s), s);
 }
 function et(e, t, n) {
@@ -483,7 +483,7 @@ function et(e, t, n) {
     if (null == l || l.kind !== N.GuildVoice) return null;
     let r = B.getChannel(e);
     if (null != r) return r;
-    let s = new w(l, t, n);
+    let s = new L(l, t, n);
     return (B.upsert(s), s);
 }
 let en = 30 * m.A.Millis.MINUTE;
@@ -496,8 +496,8 @@ function ei() {
             .map((e) => e.guildId),
         i = z();
     null == i || n.includes(i) || n.push(i);
-    let l = K({ includeVcProbability: !1 }),
-        r = K({ includeVcProbability: !0 });
+    let l = $({ includeVcProbability: !1 }),
+        r = $({ includeVcProbability: !0 });
     for (let i of n) {
         let n = u.A.getMutableGuildChannelsForGuild(i);
         for (let i in n) {
@@ -506,7 +506,7 @@ function ei() {
                 if ((0, o.ke)(s.type)) {
                     let e = s.lastMessageId;
                     if (null == e) continue;
-                    let n = E.default.extractTimestamp(e);
+                    let n = I.default.extractTimestamp(e);
                     if (n < t || null != H.getChannel(i)) continue;
                     let r = q();
                     ((r.lastMessageAtMs = n),
@@ -561,17 +561,17 @@ class er extends r.Ay.Store {
     getScoreForChannelId(e) {
         let t = H.getChannel(e) ?? B.getChannel(e);
         if (null == t) return null;
-        let n = K({ includeVcProbability: t.candidate.kind === N.GuildVoice });
-        return $(t, n);
+        let n = $({ includeVcProbability: t.candidate.kind === N.GuildVoice });
+        return K(t, n);
     }
     getScoreBreakdownForChannelId(e) {
         let t = H.getChannel(e) ?? B.getChannel(e) ?? null;
         if (null == t) return null;
         let n = t.candidate.kind === N.GuildVoice ? "VOICE" : "TEXT",
-            i = K({ includeVcProbability: t.candidate.kind === N.GuildVoice }),
+            i = $({ includeVcProbability: t.candidate.kind === N.GuildVoice }),
             l = x(t.candidate, { voiceGuildId: z(), mostRecentGuildId: k }),
             r = t.candidate.kind === N.DirectMessage || t.candidate.kind === N.GroupDM,
-            s = r ? 0 : L(t.candidate, i),
+            s = r ? 0 : w(t.candidate, i),
             a = t.score;
         return {
             channelId: e,
@@ -593,7 +593,7 @@ let ea = new er(
         ? {}
         : {
               OVERLAY_FRIENDS_WIDGET_SET_FAVORITE: es(function (e) {
-                  if (e.tab !== I.x.MESSAGES) return !1;
+                  if (e.tab !== E.x.MESSAGES) return !1;
                   let t = e.targetId;
                   if (e.isFavorite) {
                       let e = null != H.getChannel(t),
@@ -633,7 +633,7 @@ let ea = new er(
                           let n = new Date(t).getTime();
                           return Number.isFinite(n) ? n : Date.now();
                       })(e.message),
-                      r = K({ includeVcProbability: !1 }),
+                      r = $({ includeVcProbability: !1 }),
                       s = i.getGuildId?.() ?? null;
                   if (
                       !J({
@@ -697,7 +697,7 @@ let ea = new er(
                   let n = u.A.getChannel(e.channelId);
                   if (null == n || n.isPrivate() || !(0, o.ke)(n.type)) return !1;
                   let i = Date.now(),
-                      l = K({ includeVcProbability: !1 }),
+                      l = $({ includeVcProbability: !1 }),
                       r = n.getGuildId?.() ?? null;
                   if (
                       !J({
@@ -726,7 +726,7 @@ let ea = new er(
               VOICE_STATE_UPDATES: es(function (e) {
                   if (!j) return !1;
                   let t = Date.now(),
-                      n = K({ includeVcProbability: !0 }),
+                      n = $({ includeVcProbability: !0 }),
                       i = !1;
                   return (
                       B.applyBatch(() => {

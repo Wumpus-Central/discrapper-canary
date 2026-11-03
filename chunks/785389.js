@@ -1,29 +1,29 @@
-function l(e) {
+function r(e) {
     let t = [],
         n = new Set();
-    for (let l of e) {
+    for (let r of e) {
         let e =
-            "string" != typeof l.type || "" === l.type || "string" != typeof l.label || "" === l.label.trim()
+            "string" != typeof r.type || "" === r.type || "string" != typeof r.label || "" === r.label.trim()
                 ? null
-                : l.configured
+                : r.configured
                   ? "authorize"
                   : "finish-setup";
-        null == e || n.has(l.type) || (n.add(l.type), t.push({ connection: l, offer: e }));
+        null == e || n.has(r.type) || (n.add(r.type), t.push({ connection: r, offer: e }));
     }
     return t;
 }
-function r(e, t) {
+function l(e, t) {
     if (e.has(t)) return null;
     let n = new Set(e);
     return (n.add(t), n);
 }
-function a(e, t) {
+function i(e, t) {
     if (!e.has(t)) return e;
     let n = new Set(e);
     return (n.delete(t), n);
 }
-(n.d(t, { K9: () => r, Q6: () => a, Xl: () => l, ls: () => u, rG: () => s, rq: () => o }), n(321073));
-let i = new Set([
+(n.d(t, { K9: () => l, Q6: () => i, Xl: () => r, ls: () => u, rG: () => o, rq: () => c }), n(321073));
+let a = new Set([
     "bad_request",
     "bad_connection_type",
     "unknown_project",
@@ -34,8 +34,8 @@ let i = new Set([
     "child_malformed",
     "child_unavailable",
 ]);
-function s(e) {
-    return "string" == typeof e && i.has(e) ? e : null;
+function o(e) {
+    return "string" == typeof e && a.has(e) ? e : null;
 }
 function u(e, t) {
     switch (t) {
@@ -56,6 +56,6 @@ function u(e, t) {
     }
     return 404 === e ? "not_declared" : e >= 500 ? "unavailable" : "unknown";
 }
-function o(e) {
+function c(e) {
     return "not_configured" === e ? "setup" : "generic";
 }

@@ -1,21 +1,21 @@
-a.d(e, { RO: () => c, fZ: () => o, g7: () => p, jQ: () => n, mE: () => r, wd: () => l });
-var i = a(73153);
-function n(t) {
-    let { inServer: e = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    i.h.dispatch({ type: "CONJURE_PAGES_VISIT", projectId: t, inServer: e });
+_.d(E, { RO: () => c, fZ: () => n, g7: () => s, jQ: () => h, mE: () => i, wd: () => d });
+var p = _(73153);
+function h(t) {
+    let { inServer: E = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    p.h.dispatch({ type: "CONJURE_PAGES_VISIT", projectId: t, inServer: E });
 }
-function r() {
-    i.h.dispatch({ type: "CONJURE_PAGES_LEAVE" });
+function i() {
+    p.h.dispatch({ type: "CONJURE_PAGES_LEAVE" });
 }
 function c(t) {
-    i.h.dispatch({ type: "CONJURE_PAGES_PIN_SET", pinned: t });
+    p.h.dispatch({ type: "CONJURE_PAGES_PIN_SET", pinned: t });
 }
-function o(t) {
-    i.h.dispatch({ type: "CONJURE_PAGES_HOME_PROMPT_SAVE", prompt: t });
+function n(t) {
+    p.h.dispatch({ type: "CONJURE_PAGES_HOME_PROMPT_SAVE", prompt: t });
 }
-function l(t, e) {
-    i.h.dispatch({ type: "CONJURE_PAGES_SCROLL_SAVE", key: t, scrollTop: e });
+function d(t, E) {
+    p.h.dispatch({ type: "CONJURE_PAGES_SCROLL_SAVE", key: t, scrollTop: E });
 }
-function p(t, e) {
-    i.h.dispatch({ type: "CONJURE_PAGES_PROJECT_VIEW_SAVE", projectId: t, view: e });
+function s(t, E) {
+    p.h.dispatch({ type: "CONJURE_PAGES_PROJECT_VIEW_SAVE", projectId: t, view: E });
 }

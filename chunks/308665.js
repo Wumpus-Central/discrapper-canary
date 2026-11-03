@@ -1,10 +1,10 @@
 n.d(t, { A: () => u });
 var l = n(477900);
 n(582128);
-var r = n(503698),
-    a = n.n(r),
-    i = n(895253),
-    s = n(59678);
+var a = n(503698),
+    s = n.n(a),
+    r = n(895253),
+    i = n(59678);
 function u(e) {
     let { className: t, size: n = 20 } = e;
     return (0, l.jsxs)("svg", {
@@ -17,9 +17,9 @@ function u(e) {
         focusable: !1,
         xmlns: "http://www.w3.org/2000/svg",
         children: [
-            (0, l.jsx)("path", { fill: "currentColor", d: i.fy }),
-            (0, l.jsx)("path", { fill: "currentColor", d: i.tE, className: a()(s.Z$, s.KH) }),
-            (0, l.jsx)("path", { fill: "currentColor", d: i.tW, className: a()(s.Z$, s.Q_) }),
+            (0, l.jsx)("path", { fill: "currentColor", d: r.fy }),
+            (0, l.jsx)("path", { fill: "currentColor", d: r.tE, className: s()(i.Z$, i.KH) }),
+            (0, l.jsx)("path", { fill: "currentColor", d: r.tW, className: s()(i.Z$, i.Q_) }),
         ],
     });
 }

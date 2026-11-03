@@ -1,48 +1,48 @@
 n.d(t, {
     AW: () => h,
     F5: () => f,
-    It: () => m,
-    _c: () => s,
+    It: () => p,
+    _c: () => o,
     aC: () => g,
     mB: () => d,
-    pV: () => p,
-    qX: () => c,
-    rt: () => y,
-    w4: () => o,
+    pV: () => m,
+    qX: () => s,
+    rt: () => x,
+    w4: () => c,
 });
-var l = n(582128);
+var r = n(582128);
 n(71637);
-let r = Object.freeze({ active: !1, annotations: Object.freeze([]), context: null }),
-    a = new Map(),
-    i = new Set();
-function s(e) {
-    return a.get(e) ?? r;
+let l = Object.freeze({ active: !1, annotations: Object.freeze([]), context: null }),
+    i = new Map(),
+    a = new Set();
+function o(e) {
+    return i.get(e) ?? l;
 }
 function u(e, t) {
-    for (let n of (t.active || 0 !== t.annotations.length ? a.set(e, t) : a.delete(e), [...i]))
+    for (let n of (t.active || 0 !== t.annotations.length ? i.set(e, t) : i.delete(e), [...a]))
         try {
             n();
         } catch (e) {
             console.error("[conjure] design feedback subscriber threw", e);
         }
 }
-function o(e) {
-    let t = s(e);
+function c(e) {
+    let t = o(e);
     t.active || u(e, { ...t, active: !0 });
 }
-function c(e) {
-    let t = s(e);
+function s(e) {
+    let t = o(e);
     t.active && u(e, { ...t, active: !1 });
 }
 function d(e) {
-    a.has(e) && u(e, r);
+    i.has(e) && u(e, l);
 }
 function f(e, t) {
-    let n = s(e);
+    let n = o(e);
     n.active && u(e, { ...n, context: t });
 }
 function h(e, t) {
-    let n = s(e);
+    let n = o(e);
     n.active &&
         0 !== t.size &&
         u(e, {
@@ -53,30 +53,30 @@ function h(e, t) {
             }),
         });
 }
-function m(e, t) {
+function p(e, t) {
     return null != t && e.authorId === t;
 }
-function p(e, t, n, l) {
-    let r = s(e),
-        a = r.annotations.find((e) => e.id === n);
-    null != a &&
-        m(a, t) &&
-        u(e, { ...r, annotations: r.annotations.map((e) => (e.id === n ? { ...e, comment: l } : e)) });
+function m(e, t, n, r) {
+    let l = o(e),
+        i = l.annotations.find((e) => e.id === n);
+    null != i &&
+        p(i, t) &&
+        u(e, { ...l, annotations: l.annotations.map((e) => (e.id === n ? { ...e, comment: r } : e)) });
 }
 function g(e, t, n) {
-    let l = s(e),
-        r = l.annotations.find((e) => e.id === n);
-    null != r && m(r, t) && u(e, { ...l, annotations: l.annotations.filter((e) => e.id !== n) });
+    let r = o(e),
+        l = r.annotations.find((e) => e.id === n);
+    null != l && p(l, t) && u(e, { ...r, annotations: r.annotations.filter((e) => e.id !== n) });
 }
-function x(e) {
+function y(e) {
     return (
-        i.add(e),
+        a.add(e),
         () => {
-            i.delete(e);
+            a.delete(e);
         }
     );
 }
-function y(e) {
-    let t = l.useCallback(() => (null == e ? r : s(e)), [e]);
-    return l.useSyncExternalStore(x, t, t);
+function x(e) {
+    let t = r.useCallback(() => (null == e ? l : o(e)), [e]);
+    return r.useSyncExternalStore(y, t, t);
 }

@@ -1,4 +1,4 @@
-n.d(t, { Az: () => S, DD: () => g, aG: () => m, ik: () => C, it: () => I, y8: () => E });
+n.d(t, { Az: () => S, DD: () => g, aG: () => m, ik: () => C, it: () => E, y8: () => I });
 var i = n(73153),
     l = n(999926),
     r = n(37595),
@@ -36,16 +36,16 @@ function p() {
 function m() {
     return null != h();
 }
-function E() {
+function I() {
     return l.Ay.getMediaEngine().supports(s.O5.CONJURE_SNAPSHOT);
 }
-function I(e, t, n) {
+function E(e, t, n) {
     for (let t of ["appId", "appName"]) {
         let n = e?.[t];
         if ("string" != typeof n || "" === n.trim())
             throw Error(`startConjureSnapshots: app.${t} must be a non-empty string`);
     }
-    if (!E()) return !1;
+    if (!I()) return !1;
     if (
         (l.Ay.getMediaEngine().startSnapshotCapture(
             (function (e) {

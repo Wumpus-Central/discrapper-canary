@@ -35,8 +35,8 @@ var i = n(477900),
     I = n(990208),
     b = n(864310),
     j = n(363487),
-    G = n(828162),
-    v = n(72377),
+    v = n(828162),
+    G = n(72377),
     R = n(565553),
     y = n(168900),
     M = n(285828);
@@ -70,14 +70,14 @@ let z =
 function K(e) {
     let { guildId: t, powerup: n, channelRowRef: l, markAsDismissed: s } = e;
     return (0, i.jsx)(en, {
-        asset: (0, i.jsx)(v.b, { className: r()(F.Sl, F.SV) }),
+        asset: (0, i.jsx)(G.b, { className: r()(F.Sl, F.SV) }),
         title: k.intl.formatToPlainString(H.default["Zg/m9K"], { perkName: n.title }),
         body: k.intl.formatToPlainString(H.default["1EGXSK"], { perkName: n.title }),
         actions: [
             {
                 text: k.intl.string(k.t.RzWDqY),
                 variant: "primary",
-                onClick: () => (0, G.A)(t, g.A.GUILD_POWERUPS_COACHMARK_LEVEL_UP, n.skuId),
+                onClick: () => (0, v.A)(t, g.A.GUILD_POWERUPS_COACHMARK_LEVEL_UP, n.skuId),
             },
         ],
         targetElementRef: l,
@@ -102,7 +102,7 @@ function W(e) {
             text: k.intl.string(k.t.RzWDqY),
             variant: "primary",
             onClick: () => {
-                (0, G.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERKS);
+                (0, v.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERKS);
             },
         },
         onRequestClose: () => n?.(w.i.USER_DISMISS),
@@ -129,7 +129,7 @@ function Y(e) {
         size: 1 === n.length ? "video" : "lg",
         asset:
             n.length > 1
-                ? (0, i.jsx)(v.b, { className: r()(F.Sl, F.SV) })
+                ? (0, i.jsx)(G.b, { className: r()(F.Sl, F.SV) })
                 : (0, i.jsx)("img", { alt: "", src: h, className: F.Sl }),
         title: k.intl.formatToPlainString(H.default.LmpChE, { guildName: a }),
         body: m,
@@ -138,7 +138,7 @@ function Y(e) {
                 text: A ? k.intl.string(H.default.gSxlHf) : k.intl.string(k.t.RzWDqY),
                 variant: "primary",
                 onClick: (e) => {
-                    (e.stopPropagation(), A ? d() : (0, G.A)(t, g.A.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS));
+                    (e.stopPropagation(), A ? d() : (0, v.A)(t, g.A.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS));
                 },
                 loading: c,
             },
@@ -164,7 +164,7 @@ function X(e) {
                     text: k.intl.string(k.t.RzWDqY),
                     variant: "primary",
                     onClick: () => {
-                        (0, G.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, r.skuId);
+                        (0, v.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, r.skuId);
                     },
                 },
             ],
@@ -182,7 +182,7 @@ function X(e) {
                     text: k.intl.string(k.t.RzWDqY),
                     variant: "primary",
                     onClick: () => {
-                        (0, G.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, d.skuId);
+                        (0, v.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, d.skuId);
                     },
                 },
             ],
@@ -204,7 +204,7 @@ function X(e) {
                     text: k.intl.string(k.t.RzWDqY),
                     variant: "primary",
                     onClick: () => {
-                        (0, G.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, c.skuId);
+                        (0, v.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, c.skuId);
                     },
                 },
             ],
@@ -226,7 +226,7 @@ function X(e) {
                     text: k.intl.string(k.t.RzWDqY),
                     variant: "primary",
                     onClick: () => {
-                        (0, G.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, u.skuId);
+                        (0, v.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, u.skuId);
                     },
                 },
             ],
@@ -249,7 +249,7 @@ function X(e) {
                       text: k.intl.string(k.t.RzWDqY),
                       variant: "primary",
                       onClick: () => {
-                          (0, G.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, h.skuId);
+                          (0, v.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, h.skuId);
                       },
                   },
               ],
@@ -280,7 +280,7 @@ function J(e) {
             {
                 text: k.intl.string(k.t.RzWDqY),
                 variant: "primary",
-                onClick: () => (0, G.A)(t, g.A.GUILD_POWERUPS_COACHMARK_GAME_SERVER_HOSTING_AVAILABLE),
+                onClick: () => (0, v.A)(t, g.A.GUILD_POWERUPS_COACHMARK_GAME_SERVER_HOSTING_AVAILABLE),
             },
         ],
         markAsDismissed: l,
@@ -408,7 +408,7 @@ function Q(e) {
                 onClick: () => {
                     (n(w.i.TAKE_ACTION),
                         r
-                            ? (0, G.A)(t, g.A.GUILD_POWERUPS_COACHMARK_GAME_SERVER_NEW_GAMES, V.W5)
+                            ? (0, v.A)(t, g.A.GUILD_POWERUPS_COACHMARK_GAME_SERVER_NEW_GAMES, V.W5)
                             : (0, C.K4)({
                                   guildId: t,
                                   location: { section: P.JJy.GUILD_HEADER, object: P.ZSU.BUTTON_CTA },

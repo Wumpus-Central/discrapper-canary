@@ -14,8 +14,8 @@ var l = n(31728),
     A = n(933958),
     p = n(969151),
     m = n(594007),
-    E = n(227042),
-    I = n(652215);
+    I = n(227042),
+    E = n(652215);
 function S(e) {
     let t = e ?? i;
     null != t && u.A.isOpen(t) && l.jD(t);
@@ -37,12 +37,12 @@ function _() {
         let e = (0, m.A)(t.location.id, t.applicationId);
         return (
             !((0, g.f)() || u.A.isOpen(e)) &&
-            (null != i && l.VN(i), l.ho(e, I.o1q.ACTIVITY, { channel: r }), void (i = e))
+            (null != i && l.VN(i), l.ho(e, E.o1q.ACTIVITY, { channel: r }), void (i = e))
         );
     }
 }
 function N() {
-    return (0, E.A)({ LayerStore: o.A, PopoutWindowStore: s.A }) ? S() : C();
+    return (0, I.A)({ LayerStore: o.A, PopoutWindowStore: s.A }) ? S() : C();
 }
 class T extends r.A {
     _initialize() {

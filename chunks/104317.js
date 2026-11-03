@@ -1,59 +1,59 @@
-n.d(t, { Ay: () => g, b9: () => p, w: () => m });
+n.d(t, { Ay: () => p, b9: () => x, w: () => h });
 var l = n(477900);
 n(582128);
-var r = n(683063),
-    a = n(56681),
-    i = n(615839),
-    s = n(115982),
+var a = n(683063),
+    s = n(56681),
+    r = n(615839),
+    i = n(115982),
     u = n(566424),
-    o = n(16634),
-    c = n(308665),
-    d = n(809526),
-    f = n(105292),
-    h = n(59678);
-function m(e) {
-    let t = (0, s.Jf)(e, !0),
-        n = (0, s.SY)(t.steps);
-    return null != n ? (0, s.WQ)(n) : (t.tasks.find((e) => null != e.task.groupLabel)?.task.groupLabel ?? null);
+    d = n(16634),
+    o = n(308665),
+    c = n(809526),
+    m = n(105292),
+    f = n(59678);
+function h(e) {
+    let t = (0, i.Jf)(e, !0),
+        n = (0, i.SY)(t.steps);
+    return null != n ? (0, i.WQ)(n) : (t.tasks.find((e) => null != e.task.groupLabel)?.task.groupLabel ?? null);
+}
+function x(e) {
+    return h(e) ?? m.intl.string(c.default.t8skVB);
 }
 function p(e) {
-    return m(e) ?? f.intl.string(d.default.t8skVB);
-}
-function g(e) {
     let {
             projectId: t,
             steps: n,
-            fallbackLabel: m,
-            live: p,
-            durationMs: g,
-            connectsDown: x = !1,
-            closed: y = !1,
-            tier: k,
+            fallbackLabel: h,
+            live: x,
+            durationMs: p,
+            connectsDown: k = !1,
+            closed: g = !1,
+            tier: _,
         } = e,
-        b = (0, s.SY)(n),
-        v = (0, a.Q7)(f.intl.string(d.default.uk6jhJ), k),
-        j = p ? void 0 : g,
-        w = null != j ? (0, i.nY)(j) : null != b ? (0, s.WQ)(b) : (m ?? f.intl.string(d.default.t8skVB)),
-        _ = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
+        j = (0, i.SY)(n),
+        v = (0, s.Q7)(m.intl.string(c.default.uk6jhJ), _),
+        b = x ? void 0 : p,
+        y = null != b ? (0, r.nY)(b) : null != j ? (0, i.WQ)(j) : (h ?? m.intl.string(c.default.t8skVB)),
+        w = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
     return (0, l.jsx)(u.A, {
-        glyph: (0, l.jsx)(r.u, {
-            asset: (0, l.jsx)(c.A, { size: 32 }),
+        glyph: (0, l.jsx)(a.u, {
+            asset: (0, l.jsx)(o.A, { size: 32 }),
             assetSize: 32,
             title: v.title,
             body: v.body,
             position: "left",
-            children: (0, l.jsx)("span", { className: h.nC, children: (0, l.jsx)(c.A, {}) }),
+            children: (0, l.jsx)("span", { className: f.nC, children: (0, l.jsx)(o.A, {}) }),
         }),
-        line: w,
+        line: y,
         anchor: !0,
-        live: p,
-        settled: null != j || (!p && y),
-        connectsDown: x,
-        detail: _
+        live: x,
+        settled: null != b || (!x && g),
+        connectsDown: k,
+        detail: w
             ? (0, l.jsx)("ol", {
-                  className: h.dO,
+                  className: f.dO,
                   children: n.map((e) =>
-                      (0, l.jsx)(o.A, { projectId: t, node: e, presentation: "detail", active: p && e === b }, e.id),
+                      (0, l.jsx)(d.A, { projectId: t, node: e, presentation: "detail", active: x && e === j }, e.id),
                   ),
               })
             : void 0,
