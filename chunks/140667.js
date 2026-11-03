@@ -1,5 +1,4 @@
 !(function (t) {
-    "use strict";
     var r,
         n = Object.prototype,
         i = n.hasOwnProperty,
