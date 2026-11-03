@@ -1,4 +1,4 @@
-(n.d(t, { RL: () => eu, oO: () => ee, dL: () => J }), n(321073));
+(n.d(t, { RL: () => ec, oO: () => et, dL: () => X }), n(321073));
 var l = n(477900),
     i = n(582128),
     r = n(575593),
@@ -35,11 +35,12 @@ var l = n(477900),
     w = n(812095),
     D = n(240248),
     U = n(808598),
-    G = n(287809),
-    F = n(24482),
-    B = n(758476),
-    H = n(833159);
-function W(e) {
+    G = n(22007),
+    F = n(287809),
+    B = n(24482),
+    H = n(758476),
+    W = n(833159);
+function V(e) {
     let { requiredCheckoutFlow: t, invoicePreview: n, product: l } = e;
     return (
         !(function (e) {
@@ -86,41 +87,41 @@ function W(e) {
         null
     );
 }
-var V = n(951305),
-    Y = n(284009),
-    K = n.n(Y),
-    Z = n(31823),
-    q = n(427675),
-    z = n(566980),
-    $ = n(319820),
-    Q = n(52635);
-function J(e) {
+var Y = n(951305),
+    K = n(284009),
+    Z = n.n(K),
+    q = n(31823),
+    z = n(427675),
+    $ = n(566980),
+    Q = n(319820),
+    J = n(52635);
+function X(e) {
     return e.name;
 }
-let X = {
-    [r.R.BUNDLE]: () => k.intl.string(B.default["jM8/71"]),
-    [r.R.AVATAR_DECORATION]: () => k.intl.string(B.default.r29Oel),
-    [r.R.PROFILE_EFFECT]: () => k.intl.string(B.default.eTYAvF),
-    [r.R.NAMEPLATE]: () => k.intl.string(B.default.of9bom),
-    [r.R.PROFILE_FRAME]: () => k.intl.string(B.default.HzDn6w),
+let ee = {
+    [r.R.BUNDLE]: () => k.intl.string(H.default["jM8/71"]),
+    [r.R.AVATAR_DECORATION]: () => k.intl.string(H.default.r29Oel),
+    [r.R.PROFILE_EFFECT]: () => k.intl.string(H.default.eTYAvF),
+    [r.R.NAMEPLATE]: () => k.intl.string(H.default.of9bom),
+    [r.R.PROFILE_FRAME]: () => k.intl.string(H.default.HzDn6w),
 };
-function ee(e) {
-    let t = k.intl.string(B.default.iZe9Wy);
+function et(e) {
+    let t = k.intl.string(H.default.iZe9Wy);
     if (null == e);
-    else if (e.type in X) return (0, X[e.type])();
+    else if (e.type in ee) return (0, ee[e.type])();
     return t;
 }
-function et(e) {
+function en(e) {
     let {
             sku: t,
             collectiblesProduct: n,
             priceText: i,
-            description: r = k.intl.string(B.default.iZe9Wy),
+            description: r = k.intl.string(H.default.iZe9Wy),
             giftRecipient: a,
             ...s
         } = e,
         o = (0, l.jsx)(f.WH, { sku: t, product: n }),
-        u = J(t);
+        u = X(t);
     return (0, l.jsx)(f.f7, {
         description: r,
         price: i,
@@ -130,42 +131,42 @@ function et(e) {
         ...s,
     });
 }
-function en(e) {
+function el(e) {
     let { application: t, sku: n } = e,
-        { isSocialLayerGameItem: i } = (0, $.AO)({ sku: n }),
-        r = i ? k.intl.string(B.default.qwSlCO) : k.intl.string(B.default.iZe9Wy),
+        { isSocialLayerGameItem: i } = (0, Q.AO)({ sku: n }),
+        r = i ? k.intl.string(H.default.qwSlCO) : k.intl.string(H.default.iZe9Wy),
         a = i
             ? { header: t.name, headerIconSrc: A.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, size: 16 }) }
             : {};
-    return (0, l.jsx)(et, { ...e, description: r, ...a });
-}
-function el(e) {
-    let t = k.intl.string(B.default.hewwdA);
-    return (0, l.jsx)(et, { ...e, description: t });
+    return (0, l.jsx)(en, { ...e, description: r, ...a });
 }
 function ei(e) {
+    let t = k.intl.string(H.default.hewwdA);
+    return (0, l.jsx)(en, { ...e, description: t });
+}
+function er(e) {
     let { sku: t } = e,
-        { product: n } = (0, $.AO)({ sku: t }),
-        i = ee(n),
+        { product: n } = (0, Q.AO)({ sku: t }),
+        i = et(n),
         r =
             null != n
                 ? (function (e) {
-                      let t = G.default.getCurrentUser(),
-                          n = F.Ay.canUseShopDiscounts(t),
+                      let t = F.default.getCurrentUser(),
+                          n = B.Ay.canUseShopDiscounts(t),
                           l = (0, v.xM)(t),
                           i = (0, v.WD)(e, { hasShopDiscount: n, discount: (0, v.fT)(e, n) });
                       if (null != i && !i.showDefaultPriceOnly && i.showDiscountPrice) {
                           if (l === v.D0.NITRO)
-                              return { PriceIcon: x.t, priceTooltip: k.intl.string(B.default.YUNJJa) };
+                              return { PriceIcon: x.t, priceTooltip: k.intl.string(H.default.YUNJJa) };
                           if (l === v.D0.THIRDPARTY)
-                              return { PriceIcon: P.TagIcon, priceTooltip: k.intl.string(H.default.DePOcS) };
+                              return { PriceIcon: P.TagIcon, priceTooltip: k.intl.string(W.default.DePOcS) };
                       }
                       return {};
                   })(n)
                 : {};
-    return (0, l.jsx)(et, { ...e, description: i, collectiblesProduct: n, ...r });
+    return (0, l.jsx)(en, { ...e, description: i, collectiblesProduct: n, ...r });
 }
-function er(e) {
+function ea(e) {
     let { productLine: t, application: n, isGift: r } = e,
         a = (0, I.o)({ application: n, productLine: t, isGift: r }),
         s = i.useMemo(() => {
@@ -174,13 +175,13 @@ function er(e) {
         }, [a]);
     return (0, l.jsx)(C.Wl, { footerInlineNoticeProps: s });
 }
-function ea(e) {
+function es(e) {
     let { productLine: t, application: n, isGift: i } = e;
     return (0, E.t4)((e) => e.unifiedCheckoutFlow) === d.C.SLAYER_STOREFRONT_CHECKOUT
-        ? (0, l.jsx)(er, { productLine: t, application: n, isGift: i })
+        ? (0, l.jsx)(ea, { productLine: t, application: n, isGift: i })
         : null;
 }
-function es(e) {
+function eo(e) {
     let { application: t } = e,
         n = (0, s.bG)([c.A], () => c.A.getFetchState()),
         r = (0, g.uS)(t.id),
@@ -207,14 +208,14 @@ function es(e) {
         }, [r, o]);
     return (0, l.jsx)(C.zJ, { upperInlineNoticeProps: u, shouldShowGlobalNotices: !0 });
 }
-function eo(e) {
+function eu(e) {
     let { application: t } = e,
         n = (0, E.t4)((e) => e.unifiedCheckoutFlow);
     return n === d.C.SLAYER_STOREFRONT_CHECKOUT || n === d.C.PREMIUM_APPS_OTP_CHECKOUT
-        ? (0, l.jsx)(es, { application: t })
+        ? (0, l.jsx)(eo, { application: t })
         : (0, l.jsx)(C.zJ, { upperInlineNoticeProps: null, shouldShowGlobalNotices: !0 });
 }
-function eu(e) {
+function ec(e) {
     let { handlePaymentSourceAdd: t } = e,
         {
             unifiedCheckoutFlow: n,
@@ -228,7 +229,7 @@ function eu(e) {
                 paymentSourceType: null != t ? t.type : null,
             };
         }),
-        { isGift: s, giftRecipient: c } = (0, V.Pv)(),
+        { isGift: s, giftRecipient: c } = (0, Y.Pv)(),
         {
             sku: f,
             application: g,
@@ -239,19 +240,19 @@ function eu(e) {
                     selectedSkuId: e.selectedSkuId,
                     purchaseState: e.purchaseState,
                 })),
-                { application: n } = (0, Z.V)(),
-                l = (0, q.gU)();
-            K()(null != e, "Expected selectedSkuId");
+                { application: n } = (0, q.V)(),
+                l = (0, z.gU)();
+            Z()(null != e, "Expected selectedSkuId");
             let i = l[e],
                 r = i?.eligiblePaymentGateways;
             return (
-                K()(null != i, "SKU must exist and be fetched."),
-                K()(null != n, "Application must exist."),
+                Z()(null != i, "SKU must exist and be fetched."),
+                Z()(null != n, "Application must exist."),
                 {
                     sku: i,
                     application: n,
                     eligiblePaymentGateways: r,
-                    disabled: t === z.h.PURCHASING || t === z.h.COMPLETED,
+                    disabled: t === $.h.PURCHASING || t === $.h.COMPLETED,
                 }
             );
         })(),
@@ -260,8 +261,8 @@ function eu(e) {
                 (function (e, t) {
                     let { skuId: n, paymentSourceType: i, isGift: r } = t;
                     return e === d.C.SLAYER_STOREFRONT_CHECKOUT
-                        ? (0, l.jsx)(Q.EB, { paymentSourceType: i, skuId: n, isGift: r })
-                        : (0, l.jsx)(Q.T3, { paymentSourceType: i });
+                        ? (0, l.jsx)(J.EB, { paymentSourceType: i, skuId: n, isGift: r })
+                        : (0, l.jsx)(J.T3, { paymentSourceType: i });
                 })(n, { skuId: f.id, paymentSourceType: a, isGift: s }),
             [n, f.id, a, s],
         ),
@@ -273,15 +274,15 @@ function eu(e) {
             additionalPaymentSourceDropdownProps: v,
             disabled: A,
         }),
-        { product: b } = (0, $.AO)({ sku: f }),
-        { unifiedInvoiceSummaryProps: j, priceText: M } = i.useMemo(
+        { product: b } = (0, Q.AO)({ sku: f }),
+        { unifiedInvoiceSummaryProps: j, priceText: R } = i.useMemo(
             () =>
                 (function (e) {
                     let { sku: t, invoicePreview: n } = e,
                         l = [];
                     if (null != n) {
-                        let { discount: e, basePrice: i, showTaxes: r } = (0, $.yh)({ invoicePreview: n });
-                        (l.push({ id: "sku", label: J(t), amount: i }),
+                        let { discount: e, basePrice: i, showTaxes: r } = (0, Q.yh)({ invoicePreview: n });
+                        (l.push({ id: "sku", label: X(t), amount: i }),
                             null != e &&
                                 l.push({
                                     id: "discount",
@@ -295,7 +296,7 @@ function eu(e) {
                             {
                                 unifiedInvoiceSummaryProps: {
                                     lineItems: l,
-                                    label: k.intl.string(B.default.eoXh7B),
+                                    label: k.intl.string(H.default.eoXh7B),
                                     currency: n.currency,
                                     defaultExpanded: null != e || null != a,
                                 },
@@ -308,24 +309,24 @@ function eu(e) {
                 })({ sku: f, invoicePreview: r }),
             [f, r],
         ),
-        G = i.useMemo(() => (null != j ? (0, l.jsx)(h.Vm, { ...j }) : null), [j]),
+        M = i.useMemo(() => (null != j ? (0, l.jsx)(h.Vm, { ...j }) : null), [j]),
         F = i.useMemo(() => {
             var e, t;
             return (
                 (e = n),
-                (t = { priceText: M, sku: f, application: g, giftRecipient: c }),
+                (t = { priceText: R, sku: f, application: g, giftRecipient: c }),
                 e === d.C.SLAYER_STOREFRONT_CHECKOUT
-                    ? (0, l.jsx)(en, { ...t })
+                    ? (0, l.jsx)(el, { ...t })
                     : e === d.C.GUILD_PRODUCT_CHECKOUT
-                      ? (0, l.jsx)(el, { ...t })
+                      ? (0, l.jsx)(ei, { ...t })
                       : e === d.C.COLLECTIBLES_CHECKOUT
-                        ? (0, l.jsx)(ei, { ...t })
-                        : (0, l.jsx)(et, { ...t })
+                        ? (0, l.jsx)(er, { ...t })
+                        : (0, l.jsx)(en, { ...t })
             );
-        }, [n, f, g, c, M]),
-        H = i.useMemo(() => (null != r ? (0, y.$g)(r.getAmountDue(), r.currency) : void 0), [r]),
-        Y = (0, S.g)(b ?? null),
-        X = i.useMemo(
+        }, [n, f, g, c, R]),
+        B = i.useMemo(() => (null != r ? (0, y.$g)(r.getAmountDue(), r.currency) : void 0), [r]),
+        W = (0, S.g)(b ?? null),
+        K = i.useMemo(
             () =>
                 (function (e, t) {
                     let { invoicePreview: n, isGift: i, promotion: r, productLine: a } = t;
@@ -364,7 +365,7 @@ function eu(e) {
                                             l = t?.text;
                                         if ((0, D.uJ)(l)) return null;
                                         return {
-                                            Icon: (0, R.s)(t?.icon),
+                                            Icon: (0, G.s)(t?.icon),
                                             text: (0, w.U)(l),
                                             gradientColor: (0, O.aJ)(e?.flavor),
                                         };
@@ -387,25 +388,25 @@ function eu(e) {
                         });
                     }
                     return null;
-                })(n, { invoicePreview: r, isGift: s, promotion: Y, productLine: f.productLine }),
-            [n, r, s, Y, f.productLine],
+                })(n, { invoicePreview: r, isGift: s, promotion: W, productLine: f.productLine }),
+            [n, r, s, W, f.productLine],
         ),
-        ee = i.useMemo(() => (null != X ? { headerBadgeText: k.intl.string(B.default.Fjpyfj) } : {}), [X]);
+        ee = i.useMemo(() => (null != K ? { headerBadgeText: k.intl.string(H.default.Fjpyfj) } : {}), [K]);
     return (0, l.jsxs)(l.Fragment, {
         children: [
             n === d.C.COLLECTIBLES_CHECKOUT &&
-                (0, l.jsx)(W, { requiredCheckoutFlow: d.C.COLLECTIBLES_CHECKOUT, invoicePreview: r, product: b }),
+                (0, l.jsx)(V, { requiredCheckoutFlow: d.C.COLLECTIBLES_CHECKOUT, invoicePreview: r, product: b }),
             (0, l.jsx)(C.T_, {
                 headerBadgeConfig: ee,
                 purchaseItemContent: F,
-                invoiceSummaryContent: G,
+                invoiceSummaryContent: M,
                 paymentMethodContent: _,
                 legalContent: x,
-                promotionalNoticeContent: X,
-                upperInlineNoticeContent: (0, l.jsx)(eo, { application: g }),
-                footerInlineNoticeContent: (0, l.jsx)(ea, { productLine: f.productLine, application: g, isGift: s }),
-                invoiceTotalDueLabel: k.intl.string(B.default.Zxav97),
-                invoiceTotalDueValue: H,
+                promotionalNoticeContent: K,
+                upperInlineNoticeContent: (0, l.jsx)(eu, { application: g }),
+                footerInlineNoticeContent: (0, l.jsx)(es, { productLine: f.productLine, application: g, isGift: s }),
+                invoiceTotalDueLabel: k.intl.string(H.default.Zxav97),
+                invoiceTotalDueValue: B,
             }),
         ],
     });

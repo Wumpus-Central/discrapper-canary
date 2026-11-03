@@ -277,15 +277,15 @@ var V = n(278416),
     Z = n(223311),
     q = n(65238),
     X = n(758461),
-    J = n(151115),
-    Q = n(812729),
-    ee = n.n(Q),
-    et = n(627363),
-    en = n(587895),
-    el = n(733391),
-    ea = n(832163),
-    es = n(44724),
-    ei = n(486020),
+    J = n(812729),
+    Q = n.n(J),
+    ee = n(627363),
+    et = n(587895),
+    en = n(733391),
+    el = n(832163),
+    ea = n(44724),
+    es = n(486020),
+    ei = n(22007),
     er = n(135570);
 let ec = [
     { tab: R.G2.OFFER_ELIGIBLE, labelKey: G.t.hY8Ft1 },
@@ -344,16 +344,16 @@ function em(e) {
                 { gameShops: A, hasGameShops: _ } =
                     ((t = (0, O.uM)()),
                     (n = (0, c.yK)(
-                        [ea.A],
-                        () => (ea.A.getConfig()?.storefronts ?? []).filter((e) => e.collectiblesShopNavigationEnabled),
+                        [el.A],
+                        () => (el.A.getConfig()?.storefronts ?? []).filter((e) => e.collectiblesShopNavigationEnabled),
                         [],
                     )),
                     a.useEffect(() => {
-                        (0, el.Xw)();
+                        (0, en.Xw)();
                     }, []),
                     a.useEffect(() => {
                         n.length > 0 &&
-                            et.Ay.fetchApplications(
+                            ee.Ay.fetchApplications(
                                 n.map((e) => e.applicationId),
                                 !1,
                             );
@@ -368,15 +368,15 @@ function em(e) {
                                 tile_type: "SOCIAL_LAYER_STOREFRONT_SHOP_TAB",
                                 cta_name: "go_to_game_shop",
                             }),
-                                (0, es.default)({ applicationId: e }).catch(() => {}));
+                                (0, ea.default)({ applicationId: e }).catch(() => {}));
                         },
                         [t],
                     )),
                     (s = (0, c.bG)(
-                        [en.A],
+                        [et.A],
                         () =>
                             n.flatMap((e) => {
-                                let t = en.A.getApplication(e.applicationId),
+                                let t = et.A.getApplication(e.applicationId),
                                     n = t?.name;
                                 return null == n
                                     ? []
@@ -386,7 +386,7 @@ function em(e) {
                                               label: n,
                                               iconSrc:
                                                   t?.icon != null
-                                                      ? ei.Ay.getApplicationIconURL({
+                                                      ? es.Ay.getApplicationIconURL({
                                                             id: t.id,
                                                             icon: t.icon,
                                                             size: 32,
@@ -396,7 +396,7 @@ function em(e) {
                                       ];
                             }),
                         [n],
-                        ee(),
+                        Q(),
                     )),
                     {
                         gameShops: a.useMemo(
@@ -499,7 +499,7 @@ function em(e) {
                     null != I)
                 ) {
                     let e = y.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(I.collectionId),
-                        t = (0, J.s)(I.icon);
+                        t = (0, ei.s)(I.icon);
                     n.push({
                         type: "page",
                         key: R.G2.PROMOTION,
