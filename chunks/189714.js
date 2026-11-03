@@ -13,10 +13,11 @@ function d(e, t) {
     a.wc.updateAsync(
         "conjure",
         (n) => {
-            if (t) n.projects[e] = r.Zy.create({ muted: !0 });
+            let i = n.projects[e];
+            if (t) n.projects[e] = r.Zy.create({ ...i, muted: !0 });
             else {
-                if (null == n.projects[e]) return !1;
-                delete n.projects[e];
+                if (null == i) return !1;
+                Number(i.sidebarDismissedAt) > 0 ? (i.muted = !1) : delete n.projects[e];
             }
         },
         a.Sb.INFREQUENT_USER_ACTION,
