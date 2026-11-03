@@ -20,8 +20,8 @@ var l = i(477900),
     _ = i(652215),
     R = i(105292),
     b = i(636767),
-    y = i(318626),
-    N = i(165648);
+    N = i(318626),
+    y = i(165648);
 let C = n.memo(function (e) {
         let { message: s, notice: i, compact: n = !1, onDismiss: a } = e;
         return (0, l.jsxs)(l.Fragment, {
@@ -79,9 +79,9 @@ let C = n.memo(function (e) {
             }, [u, a.content, o, E, d]),
             (0, l.jsxs)("div", {
                 id: (0, M.CJ)(a),
-                className: t()(s, N.PT, {
-                    [y.BK]: !0,
-                    [y.nB]: "rtl" === r()(a.content),
+                className: t()(s, y.PT, {
+                    [N.BK]: !0,
+                    [N.nB]: "rtl" === r()(a.content),
                     [b.Dy]: _?.isBlockedEdit,
                     [b.bv]: !_?.isBlockedEdit,
                 }),
@@ -97,7 +97,7 @@ let C = n.memo(function (e) {
                                     isEdited: !0,
                                     isInline: !1,
                                     children: (0, l.jsxs)("span", {
-                                        className: y.oh,
+                                        className: N.oh,
                                         children: ["(", R.intl.string(R.t.Z7eEx9), ")"],
                                     }),
                                 }),

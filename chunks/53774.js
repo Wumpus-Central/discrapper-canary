@@ -18,7 +18,7 @@ var r = n(477900),
 function S(e, t) {
     return t >= e.startSec && t < e.startSec + e.durationSec;
 }
-function y(e, t, n) {
+function E(e, t, n) {
     return (
         !S(t, n) ||
         (null != e &&
@@ -27,7 +27,7 @@ function y(e, t, n) {
             0.35 >= Math.abs(e.currentTime - (n - t.startSec)))
     );
 }
-function E(e, t) {
+function y(e, t) {
     if (t < e.startSec) return e.startSec - t;
     let n = e.startSec + e.durationSec;
     return t >= n ? n - t : 0;
@@ -37,13 +37,13 @@ var b = n(185973),
     C = n(243189);
 let j = l.memo(function (e) {
     let t,
-        { source: n, masterSec: i, isPlaying: u, playbackRate: s, isGridView: o, onMediaElement: d, children: y } = e,
+        { source: n, masterSec: i, isPlaying: u, playbackRate: s, isGridView: o, onMediaElement: d, children: E } = e,
         j = l.useRef(null),
         [I, _] = l.useState(!1),
         T = S(n, i),
         M = i - n.startSec,
         N = i < n.startSec,
-        w = Math.ceil(E(n, i)),
+        w = Math.ceil(y(n, i)),
         L = (0, h.rB)(w),
         R = n.owner?.name ?? n.label ?? A.intl.string(b.default["6XuC8e"]),
         { ref: k, width: P, height: O } = (0, c.Ay)();
@@ -74,7 +74,7 @@ let j = l.memo(function (e) {
                     ref: k,
                     className: a()(C.iH, { [C.om]: o }),
                     children: [
-                        y ??
+                        E ??
                             (0, r.jsx)(m.A, {
                                 ref: j,
                                 className: a()(C.cr, { [C.qb]: G }),
@@ -120,9 +120,9 @@ let T = l.memo(function (e) {
     let { source: t, label: n, isActive: l, isOriginal: i, currentMasterTimeSec: u, onSelect: s } = e,
         d = t.owner?.name ?? n ?? A.intl.string(b.default["6XuC8e"]),
         m = S(t, u),
-        { ref: x, width: y, height: C } = (0, c.Ay)(m, l, i);
+        { ref: x, width: E, height: C } = (0, c.Ay)(m, l, i);
     if (!m && !l && !i) {
-        let e = (0, h.rB)(E(t, u));
+        let e = (0, h.rB)(y(t, u));
         return (0, r.jsx)(I.u, {
             asset: (0, r.jsx)(v.Q, { size: "xs" }),
             assetSize: 16,
@@ -155,7 +155,7 @@ let T = l.memo(function (e) {
                     (0, r.jsx)("img", {
                         ref: x,
                         className: _.a1,
-                        src: (0, f.s)(t.poster, t, y, C),
+                        src: (0, f.s)(t.poster, t, E, C),
                         alt: "",
                         "aria-hidden": !0,
                     }),
@@ -180,7 +180,7 @@ function N(e) {
             onTimeUpdate: p,
             onEnded: v,
             onLoadedMetadata: x,
-            onError: E,
+            onError: y,
             onPlay: C,
             onPause: I,
             children: _,
@@ -297,7 +297,7 @@ function N(e) {
                             r = t.current;
                         if (null == r || r.paused || !n) return;
                         let { sources: l, getSourceElement: i } = f.current;
-                        l.every((t) => y(i(t), t, e)) ||
+                        l.every((t) => E(i(t), t, e)) ||
                             ((o.current = !0), (s.current = e), r.pause(), r.dispatchEvent(new Event("waiting")), u(e));
                     },
                     [t],
@@ -338,7 +338,7 @@ function N(e) {
                     if (null == a) return;
                     let e = n.map(m).filter((e) => null != e);
                     function t() {
-                        n.every((e) => y(m(e), e, a)) && p(!0);
+                        n.every((e) => E(m(e), e, a)) && p(!0);
                     }
                     let r = setTimeout(() => p(!0), 2500);
                     return (
@@ -395,13 +395,13 @@ function N(e) {
                     (e.preload = "metadata"),
                     e.load(),
                     (eg.current = setTimeout(() => {
-                        ((ef.current = !0), ey.current.applyDeferredSwitch());
+                        ((ef.current = !0), eE.current.applyDeferredSwitch());
                     }, 5e3))));
             return;
         }
-        let r = s()(t, 0, ey.current.masterDurationSec),
+        let r = s()(t, 0, eE.current.masterDurationSec),
             l = O.current;
-        if (n.id === ey.current.activeSource.id) {
+        if (n.id === eE.current.activeSource.id) {
             ((ed.current = null), null != l && (l.currentTime = r - n.startSec));
             return;
         }
@@ -412,14 +412,14 @@ function N(e) {
                 playbackRate: l?.playbackRate ?? 1,
             }),
             (ed.current = r),
-            (ey.current = { ...ey.current, activeSource: n }),
+            (eE.current = { ...eE.current, activeSource: n }),
             F(n.id),
             B(r));
     }
     function eS(e) {
         ex(N.id, e);
     }
-    let ey = l.useRef({
+    let eE = l.useRef({
         activeSource: er,
         masterDurationSec: H,
         isScrubbing: g,
@@ -427,8 +427,8 @@ function N(e) {
         applyDeferredSwitch: ev,
     });
     l.useLayoutEffect(() => {
-        ey.current = {
-            ...ey.current,
+        eE.current = {
+            ...eE.current,
             activeSource: er,
             masterDurationSec: H,
             isScrubbing: g,
@@ -436,10 +436,10 @@ function N(e) {
             applyDeferredSwitch: ev,
         };
     });
-    let eE = l.useRef(null);
+    let ey = l.useRef(null);
     (l.useLayoutEffect(
         () => (
-            (eE.current ??= (function (e) {
+            (ey.current ??= (function (e) {
                 let t = null;
                 function n() {
                     let n = e.getElement();
@@ -486,27 +486,27 @@ function N(e) {
                 );
             })({
                 getElement: () => O.current,
-                getDurationSec: () => ey.current.masterDurationSec,
-                getActiveStartSec: () => ey.current.activeSource.startSec,
+                getDurationSec: () => eE.current.masterDurationSec,
+                getActiveStartSec: () => eE.current.activeSource.startSec,
                 getCurrentTimeSec: () => {
                     let e = ed.current;
                     return null != e
                         ? e
-                        : Math.max(0, ey.current.activeSource.startSec + (O.current?.currentTime ?? 0));
+                        : Math.max(0, eE.current.activeSource.startSec + (O.current?.currentTime ?? 0));
                 },
                 seekTo: (e) => {
-                    let t = s()(e, 0, ey.current.masterDurationSec);
-                    if ((B(t), S(ey.current.activeSource, t))) {
+                    let t = s()(e, 0, eE.current.masterDurationSec);
+                    if ((B(t), S(eE.current.activeSource, t))) {
                         ed.current = null;
                         let e = O.current;
-                        (null != e && (e.currentTime = t - ey.current.activeSource.startSec),
-                            ey.current.isScrubbing || ea(t));
+                        (null != e && (e.currentTime = t - eE.current.activeSource.startSec),
+                            eE.current.isScrubbing || ea(t));
                         return;
                     }
-                    ((ed.current = t), ey.current.isScrubbing || ey.current.revertToOriginal(t));
+                    ((ed.current = t), eE.current.isScrubbing || eE.current.revertToOriginal(t));
                 },
             })),
-            t(eE.current),
+            t(ey.current),
             () => {
                 t(null);
             }
@@ -532,7 +532,7 @@ function N(e) {
         l.useEffect(() => {
             if (g) return;
             let e = ed.current;
-            null == e || null != eo.current || S(ey.current.activeSource, e) || ey.current.revertToOriginal(e);
+            null == e || null != eo.current || S(eE.current.activeSource, e) || eE.current.revertToOriginal(e);
         }, [g]));
     let ej = !S(er, Z);
     return (0, r.jsxs)(r.Fragment, {
@@ -576,7 +576,7 @@ function N(e) {
                                             ((ef.current = !0),
                                             Number.isFinite(t.duration) &&
                                                 (z(t.duration),
-                                                (ey.current = { ...ey.current, masterDurationSec: t.duration }))),
+                                                (eE.current = { ...eE.current, masterDurationSec: t.duration }))),
                                         null == n)
                                     ) {
                                         (x?.(e), ev());
@@ -592,7 +592,7 @@ function N(e) {
                                     ((ed.current = null), et());
                                 },
                                 onError: function (e) {
-                                    er.id !== N.id ? eS(er.startSec + (O.current?.currentTime ?? 0)) : E?.(e);
+                                    er.id !== N.id ? eS(er.startSec + (O.current?.currentTime ?? 0)) : y?.(e);
                                 },
                                 onPlay: function (e) {
                                     (K(!0), es(Z), C?.(e));

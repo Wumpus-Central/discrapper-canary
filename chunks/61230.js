@@ -24,9 +24,9 @@ var i = n(477900),
     y = n(47167),
     E = n(475889),
     _ = n(262763),
-    S = n(402216),
-    M = n(105292),
-    R = n(971718);
+    M = n(402216),
+    R = n(105292),
+    S = n(971718);
 let T = function (e) {
     let { channel: l } = e,
         n = (0, s.bG)([C.A], () => C.A.isInChannel(l.id)),
@@ -35,13 +35,13 @@ let T = function (e) {
         r = (0, E.H)(l),
         o = (0, s.bG)([b.A], () => b.A.getAllApplicationStreamsForChannel(l.id)[0]);
     return (0, i.jsxs)(N.Uq, {
-        className: R.jC,
+        className: S.jC,
         children: [
             (0, i.jsxs)("div", {
-                className: R.hY,
+                className: S.hY,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: R.HA,
+                        className: S.HA,
                         children: [
                             (0, i.jsx)(u.A, {
                                 size: "custom",
@@ -52,11 +52,11 @@ let T = function (e) {
                                 style: { flexShrink: 0 },
                             }),
                             (0, i.jsx)("div", {
-                                className: R.Mw,
+                                className: S.Mw,
                                 children: (0, i.jsx)(x.E, {
                                     variant: "body-sm/medium",
                                     color: "text-default",
-                                    className: R.Kw,
+                                    className: S.Kw,
                                     children: a,
                                 }),
                             }),
@@ -64,20 +64,20 @@ let T = function (e) {
                     }),
                     null != r &&
                         (0, i.jsx)("span", {
-                            className: R.j2,
+                            className: S.j2,
                             children: (0, i.jsx)(p.z, { entry: { start: r }, textColor: "text-feedback-positive" }),
                         }),
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: R.Bm,
+                className: S.Bm,
                 children: [
                     null != o &&
                         (0, i.jsxs)("div", {
-                            className: R.yt,
+                            className: S.yt,
                             children: [
-                                (0, i.jsx)(v.A, { stream: o, className: R.Rh, noText: !0 }),
-                                (0, i.jsx)(S.Ay, { size: S.Ay.Sizes.SMALL, className: R.wI }),
+                                (0, i.jsx)(v.A, { stream: o, className: S.Rh, noText: !0 }),
+                                (0, i.jsx)(M.Ay, { size: M.Ay.Sizes.SMALL, className: S.wI }),
                             ],
                         }),
                     (0, i.jsx)(g.A, {
@@ -86,12 +86,12 @@ let T = function (e) {
                         channelId: l.id,
                         size: A._3.SIZE_24,
                         maxUsers: 8,
-                        "aria-label": M.intl.string(M.t["jNqDh/"]),
+                        "aria-label": R.intl.string(R.t["jNqDh/"]),
                     }),
                     (0, i.jsx)(j.$, {
                         variant: n ? "secondary" : "active",
                         size: "sm",
-                        text: n ? M.intl.string(M.t["3xjX0U"]) : M.intl.string(M.t.VJlc0S),
+                        text: n ? R.intl.string(R.t["3xjX0U"]) : R.intl.string(R.t.VJlc0S),
                         fullWidth: !0,
                         onClick: function () {
                             l.isGuildStageVoice()

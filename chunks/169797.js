@@ -1,4 +1,4 @@
-n.d(t, { DJ: () => M, Jg: () => T, KT: () => L, lo: () => R, oH: () => b, s3: () => x });
+n.d(t, { DJ: () => M, Jg: () => T, KT: () => b, lo: () => R, oH: () => L, s3: () => x });
 var l = n(477900),
     r = n(582128),
     i = n(503698),
@@ -122,10 +122,10 @@ function T(e) {
         }),
     });
 }
-function L() {
+function b() {
     return (0, l.jsx)(T, { transitionState: d.ip.ENTERED, onClose: A.tEg, size: "md", isModalContentLoading: !0 });
 }
-function b(e) {
+function L(e) {
     let {
         title: t,
         gradientColor: n = "purple",

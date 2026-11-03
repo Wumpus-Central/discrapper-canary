@@ -1,11 +1,11 @@
 i.d(t, {
     Wp: () => R,
-    pj: () => C,
+    pj: () => G,
     cq: () => x,
     Jr: () => y,
     hU: () => P,
     as: () => L,
-    e_: () => G,
+    e_: () => C,
     hE: () => V,
     jL: () => j,
     K: () => I,
@@ -310,7 +310,7 @@ function j(e, t, i, s) {
         oldFormErrors: !0,
     });
 }
-function C(e, t, i, s) {
+function G(e, t, i, s) {
     return n.Bo.patch({
         url: A.Rsh.GUILD_POWERUP_UPDATE(e, t),
         body: { game_server_name: s, sku_id: i },
@@ -318,7 +318,7 @@ function C(e, t, i, s) {
         oldFormErrors: !0,
     });
 }
-function G(e, t, i) {
+function C(e, t, i) {
     return n.Bo.del({
         url: A.Rsh.GUILD_POWERUP_TOGGLE(e, t),
         query: { entitlement_id: i },

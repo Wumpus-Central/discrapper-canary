@@ -23,13 +23,13 @@ let s = {
     };
 function d(e) {
     let { artboard: t = "box-wumpus", stateMachine: r, ...d } = e,
-        { status: l, buffer: u } = (0, i.CE)(o),
-        b = (0, i.m2)(o);
+        { status: l, buffer: b } = (0, i.CE)(o),
+        u = (0, i.m2)(o);
     return l === i.BW.Loading
         ? null
         : (0, a.jsx)(n.w, {
-              ...(b ? { key: "override" } : {}),
-              buffer: u,
+              ...(u ? { key: "override" } : {}),
+              buffer: b,
               artboard: t,
               stateMachine: r,
               artboardProperties: s,

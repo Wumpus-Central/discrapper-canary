@@ -69,7 +69,7 @@ function S(e) {
                 [x, v] = (0, r.useState)(null),
                 [R, M] = (0, r.useState)(I),
                 T = (0, r.useRef)(!1),
-                L = (0, r.useCallback)(
+                b = (0, r.useCallback)(
                     async (e) => {
                         let { skuId: t } = e;
                         M(!0);
@@ -93,8 +93,8 @@ function S(e) {
                 );
             return (
                 (0, r.useEffect)(() => {
-                    t && null != S && (null != A || null != x || T.current || ((T.current = !0), L({ skuId: S })));
-                }, [S, t, A, L, x]),
+                    t && null != S && (null != A || null != x || T.current || ((T.current = !0), b({ skuId: S })));
+                }, [S, t, A, b, x]),
                 {
                     order: A,
                     isCreateOrderLoading: R,

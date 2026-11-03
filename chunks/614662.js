@@ -26,8 +26,8 @@ var l = n(477900),
     R = n(175452),
     M = n(427358),
     T = n(7133),
-    L = n(994500),
-    b = n(351906),
+    b = n(994500),
+    L = n(351906),
     j = n(287809),
     N = n(957565),
     k = n(45938),
@@ -76,7 +76,7 @@ function el(e) {
                     isLoading: M.A.isFetching(),
                 })),
                 n = r.useMemo(() => Array.from(e.keys()).sort((e, t) => M.A.compare(e, t)), [e]),
-                l = (0, c.bG)([L.A], () => L.A.getFriendIDs()),
+                l = (0, c.bG)([b.A], () => b.A.getFriendIDs()),
                 i = r.useMemo(() => [...n, ...u().difference(l, n)], [l, n]);
             return {
                 isLoading: t,
@@ -92,13 +92,13 @@ function el(e) {
             };
         })(),
         { analyticsLocations: T } = (0, W.Ay)(K.A.PREMIUM_GIFT_SUCCESS_MODAL),
-        b = (0, c.yK)([j.default], () => C.map(j.default.getUser).filter($.Vq), [C]),
+        L = (0, c.yK)([j.default], () => C.map(j.default.getUser).filter($.Vq), [C]),
         N = i > 1,
         k = N ? !s : null == t,
         U = 1 === C.length,
         H = U ? null == t : !s,
         el = C.length > 1 && null == a,
-        ei = S || 0 === C.length || C.length > i || b.length !== C.length || H || el,
+        ei = S || 0 === C.length || C.length > i || L.length !== C.length || H || el,
         ea = v.map((e) => ({
             id: e.id,
             value: e.id,
@@ -114,17 +114,17 @@ function el(e) {
         A(!0);
         try {
             if (U) {
-                let e = b[0];
+                let e = L[0];
                 (await (0, P.UN)(e, t), (r = { recipients: [e], failedRecipients: [] }));
             } else {
                 if (null == a) throw Error("Checkout session ID must be defined");
                 let e = await (0, Z.kW)(C, a),
                     t = new Set(e.successful_recipient_ids),
                     n = new Set(e.failed_recipient_ids);
-                r = { recipients: b.filter((e) => t.has(e.id)), failedRecipients: b.filter((e) => n.has(e.id)) };
+                r = { recipients: L.filter((e) => t.has(e.id)), failedRecipients: L.filter((e) => n.has(e.id)) };
             }
         } catch {
-            r = { recipients: [], failedRecipients: b };
+            r = { recipients: [], failedRecipients: L };
         } finally {
             A(!1);
         }
@@ -283,11 +283,11 @@ function eu(e) {
             onClose: v,
             hasSentMessage: R,
             giftRecipient: M,
-            giftMessageError: L,
+            giftMessageError: b,
             isSendingMessage: j,
         } = e,
         [F, D] = r.useState(h.e.Modes.DEFAULT),
-        B = (0, c.bG)([b.A], () => b.A.enabled),
+        B = (0, c.bG)([L.A], () => L.A.enabled),
         G = R || (null != P && null != M),
         Z = g?.productLine === ei.EZt.COLLECTIBLES,
         {
@@ -302,7 +302,7 @@ function eu(e) {
     }
     function V() {
         let e;
-        return null != L
+        return null != b
             ? ee.intl.string(ee.t.qB8aya)
             : null == S
               ? null
@@ -387,13 +387,13 @@ function eu(e) {
                                 variant: "heading-lg/semibold",
                                 className: a()({ [es.wx]: null == P && !Z, [es.$A]: null != P && !Z }),
                                 children:
-                                    null != M || (R && null == L)
+                                    null != M || (R && null == b)
                                         ? ee.intl.string(ee.t.zOmK9N)
-                                        : null != L
+                                        : null != b
                                           ? ee.intl.string(ee.t.d1lrmU)
                                           : ee.intl.string(ee.t["/s1xR7"]),
                             }),
-                            (R && null != M && null == L) || G
+                            (R && null != M && null == b) || G
                                 ? (0, l.jsxs)(l.Fragment, {
                                       children: [
                                           (0, l.jsxs)("div", {
@@ -412,7 +412,7 @@ function eu(e) {
                                 : (0, l.jsxs)(l.Fragment, {
                                       children: [
                                           (0, l.jsx)("div", { className: es.I0, children: V() }),
-                                          null == L &&
+                                          null == b &&
                                               (0, l.jsx)(eo, {
                                                   giftCode: t,
                                                   onClose: () => {
@@ -486,7 +486,7 @@ function eo(e) {
             isLoading: M.A.isFetching(),
         })),
         y = Array.from(m.keys()).sort((e, t) => M.A.compare(e, t)),
-        _ = (0, c.bG)([L.A], () => L.A.getFriendIDs()),
+        _ = (0, c.bG)([b.A], () => b.A.getFriendIDs()),
         S = u().difference(_, y),
         A = [...y, ...S],
         x = (0, c.bG)([j.default], () => j.default.filter((e) => A.includes(e.id) && !e.bot), [A]);

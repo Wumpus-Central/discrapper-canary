@@ -1,4 +1,4 @@
-n.d(t, { S: () => A });
+n.d(t, { S: () => E });
 var s = n(478676),
     i = n.n(s),
     a = n(715943),
@@ -59,19 +59,19 @@ let g = /\\([*?+/])/g,
         },
         spoiler: { action: (e) => ({ content: (0, p.ZGg)(e).trim() }) },
     };
-function E(e, t, n, s) {
+function A(e, t, n, s) {
     return (o.Ay.trackWithMetadata(p.HAw.SLASH_COMMAND_USED, { command: e }), t.action(n, s));
 }
-function A(e, t) {
+function E(e, t) {
     for (let n in m) {
         let s = m[n];
         if (null != s.match) {
-            if (s.match.regex?.test(e)) return E(n, s, e, t);
+            if (s.match.regex?.test(e)) return A(n, s, e, t);
             continue;
         }
         if (d.D_.getSetting() && "/" === e[0]) {
             let i = e.split(" ");
-            if (n === i[0].slice(1) && null != s.action) return E(n, s, i.slice(1).join(" "), t);
+            if (n === i[0].slice(1) && null != s.action) return A(n, s, i.slice(1).join(" "), t);
         }
     }
 }

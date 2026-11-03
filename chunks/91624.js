@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => v, Nr: () => T, R3: () => y }), n(938796));
+(n.d(t, { Ay: () => C, Nr: () => v, R3: () => T }), n(938796));
 var s = n(477900),
     i = n(582128),
     a = n(665260),
@@ -12,16 +12,16 @@ var s = n(477900),
     p = n(71393),
     g = n(576705),
     m = n(625494),
-    E = n(806150),
-    A = n(145530),
+    A = n(806150),
+    E = n(145530),
     f = n(438729),
     S = n(205120),
     b = n(652215);
 n(294920);
-var _ = n(13673);
-function y(e) {
+var y = n(13673);
+function T(e) {
     let { value: t, channel: n, message: s } = e;
-    return (0, E.i)({
+    return (0, A.i)({
         type: c.oU.EDIT,
         content: t,
         channel: n,
@@ -32,15 +32,15 @@ function y(e) {
         respectCooldown: !1,
     });
 }
-function C(e) {
+function _(e) {
     let { channel: t, message: n } = e,
         { id: c } = t,
         { id: u } = n,
         m = t.getGuildId(),
-        E = (0, l.bG)([p.A], () => p.A.getGuild(m), [m]),
+        A = (0, l.bG)([p.A], () => p.A.getGuild(m), [m]),
         f = t.type === b.rbe.GUILD_ANNOUNCEMENT,
-        C = null != E && E.features.has(b.GuildFeatures.NEWS),
-        v = f && C,
+        _ = null != A && A.features.has(b.GuildFeatures.NEWS),
+        C = f && _,
         {
             editingMessage: I,
             editingTextValue: M,
@@ -60,7 +60,7 @@ function C(e) {
                 let { content: l } = i,
                     c = g.A.can(b.xBc.MANAGE_MESSAGES, t),
                     u = null != I && null != I.author ? I.author.id : null,
-                    d = v && (u === R || c),
+                    d = C && (u === R || c),
                     h = { content: l, components: void 0 };
                 if (n.hasFlag(b.pr7.IS_COMPONENTS_V2)) {
                     let e = n.components[0]?.type === r.I5.MEDIA_GALLERY,
@@ -71,14 +71,14 @@ function C(e) {
                 }
                 return (
                     d && null != I && (0, a.Lt)(I.flags, b.pr7.CROSSPOSTED)
-                        ? A.A.confirmEdit(e, s, h)
+                        ? E.A.confirmEdit(e, s, h)
                         : o.A.editMessage(e, s, h),
                     Promise.resolve()
                 );
             },
-            [I, v, R, t, n],
+            [I, C, R, t, n],
         ),
-        D = i.useCallback((e) => (0, i.createElement)(T, { ...e, className: _.gM, key: u }), [u]);
+        k = i.useCallback((e) => (0, i.createElement)(v, { ...e, className: y.gM, key: u }), [u]);
     return null != M && null != N
         ? (0, s.jsx)(S.A, {
               ref: void 0,
@@ -88,14 +88,14 @@ function C(e) {
               richValue: N,
               onCancel: o.A.endEditMessage,
               onChange: o.A.updateEditMessage,
-              onConfirmDelete: A.A.confirmDelete,
+              onConfirmDelete: E.A.confirmDelete,
               saveMessage: P,
-              validateEdit: y,
-              children: D,
+              validateEdit: T,
+              children: k,
           })
         : null;
 }
-function T(e) {
+function v(e) {
     let {
             textValue: t,
             richValue: n,
@@ -107,23 +107,23 @@ function T(e) {
             renderLeftAccessories: h,
         } = e,
         [p, g] = i.useState(!0),
-        E = i.useCallback(() => g(!0), []),
-        A = i.useCallback(() => g(!1), []);
+        A = i.useCallback(() => g(!0), []),
+        E = i.useCallback(() => g(!1), []);
     return (
         i.useEffect(
             () => (
-                m._.subscribe(b.jej.TEXTAREA_FOCUS, E),
-                m._.subscribe(b.jej.TEXTAREA_BLUR, A),
+                m._.subscribe(b.jej.TEXTAREA_FOCUS, A),
+                m._.subscribe(b.jej.TEXTAREA_BLUR, E),
                 () => {
-                    (m._.unsubscribe(b.jej.TEXTAREA_FOCUS, E), m._.unsubscribe(b.jej.TEXTAREA_BLUR, A));
+                    (m._.unsubscribe(b.jej.TEXTAREA_FOCUS, A), m._.unsubscribe(b.jej.TEXTAREA_BLUR, E));
                 }
             ),
-            [E, A],
+            [A, E],
         ),
         (0, s.jsx)(
             u.Ay,
             {
-                className: _.gM,
+                className: y.gM,
                 textValue: t,
                 richValue: n,
                 channel: l,
@@ -135,17 +135,17 @@ function T(e) {
                 },
                 onKeyDown: d,
                 focused: p,
-                onFocus: E,
-                onBlur: A,
+                onFocus: A,
+                onBlur: E,
                 renderLeftAccessories: h,
             },
             a.id,
         )
     );
 }
-function v(e, t, n) {
+function C(e, t, n) {
     let { message: i, channel: a, compact: l } = e;
     return n
-        ? (0, s.jsx)(C, { channel: a, message: i })
+        ? (0, s.jsx)(_, { channel: a, message: i })
         : (0, s.jsx)(f.Ay, { message: i, content: t, compact: l ?? !1 });
 }

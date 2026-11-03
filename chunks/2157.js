@@ -27,8 +27,8 @@ function C(e) {
             }
             return null;
         }, [h, f, E]),
-        y = (0, d.n)({ surface: t, skuId: C }),
-        g = (0, o.j)(S, "pdp.label"),
+        g = (0, d.n)({ surface: t, skuId: C }),
+        y = (0, o.j)(S, "pdp.label"),
         I = (0, o.j)(S, "pdp.tooltip"),
         A = (0, o.j)(S, "checkout.label"),
         P = (0, o.j)(S, "checkout.tooltip");
@@ -39,13 +39,13 @@ function C(e) {
             let e = (0, s.RD)(S.endsAt);
             switch (t) {
                 case "gift_customization": {
-                    if (null == y) return null;
-                    let t = (0, s.Ew)(A, y.amount);
+                    if (null == g) return null;
+                    let t = (0, s.Ew)(A, g.amount);
                     if ((0, a.uJ)(t)) return null;
                     return {
                         Icon: (0, s.LZ)(S.checkout?.icon ?? null),
                         text: t,
-                        tooltip: (0, s.Ew)(P, y.amount),
+                        tooltip: (0, s.Ew)(P, g.amount),
                         endsAt: e,
                         flavor: S.flavor,
                         rewardRequirements: S.rewardRequirements,
@@ -54,12 +54,12 @@ function C(e) {
                 case "pdp":
                 case "card": {
                     let t = S.pdp,
-                        n = (0, s.Ew)(g, y?.amount ?? null);
+                        n = (0, s.Ew)(y, g?.amount ?? null);
                     if ((0, a.uJ)(n)) return null;
                     return {
                         Icon: (0, s.LZ)(t?.icon ?? null),
                         text: n,
-                        tooltip: (0, s.Ew)(I, y?.amount ?? null),
+                        tooltip: (0, s.Ew)(I, g?.amount ?? null),
                         endsAt: e,
                         flavor: S.flavor,
                         rewardRequirements: S.rewardRequirements,
@@ -68,22 +68,22 @@ function C(e) {
                 }
                 case "sku_purchase_badge":
                 case "sku_gift_badge": {
-                    if (null == y) return null;
-                    let n = "sku_gift_badge" === t ? A : g,
+                    if (null == g) return null;
+                    let n = "sku_gift_badge" === t ? A : y,
                         l = "sku_gift_badge" === t ? P : I,
-                        i = (0, s.Ew)(n, y.amount);
+                        i = (0, s.Ew)(n, g.amount);
                     if ((0, a.uJ)(i)) return null;
                     return {
                         Icon: (0, s.LZ)("TAG"),
                         text: p.intl.string(m.default.hriMCc),
-                        tooltip: (0, s.Ew)(l, y.amount),
+                        tooltip: (0, s.Ew)(l, g.amount),
                         endsAt: e,
                         flavor: S.flavor,
                         rewardRequirements: S.rewardRequirements,
                     };
                 }
             }
-        }, [t, S, y, g, I, A, P])
+        }, [t, S, g, y, I, A, P])
     );
 }
 function h(e) {

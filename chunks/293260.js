@@ -1,44 +1,44 @@
-e.d(a, { Ay: () => g, CB: () => u, c0: () => v });
-var t = e(477900);
-e(582128);
-var n = e(17928),
-    s = e(231723),
-    i = e(192308);
-if (221552 == e.j) var c = e(477782);
-if (221552 == e.j) var r = e(173936);
-var d = e(317525),
-    o = e(370480),
-    h = e(105292);
-let u = "guild-connection-roles";
-function v(l) {
-    (0, i.openModalLazy)(
+a.d(e, { Ay: () => v, CB: () => h, c0: () => g });
+var n = a(477900);
+a(582128);
+var t = a(17928),
+    i = a(231723),
+    s = a(192308);
+if (221552 == a.j) var c = a(477782);
+if (221552 == a.j) var r = a(173936);
+var o = a(317525),
+    d = a(370480),
+    u = a(105292);
+let h = "guild-connection-roles";
+function g(l) {
+    (0, s.openModalLazy)(
         async () => {
-            let { default: a } = await Promise.all([
-                e.e("587882"),
-                e.e("727797"),
-                e.e("24922"),
-                e.e("150200"),
-                e.e("292837"),
-            ]).then(e.bind(e, 480900));
-            return (e) => (0, t.jsx)(a, { ...e, guildId: l });
+            let { default: e } = await Promise.all([
+                a.e("587882"),
+                a.e("727797"),
+                a.e("24922"),
+                a.e("150200"),
+                a.e("292837"),
+            ]).then(a.bind(a, 480900));
+            return (a) => (0, n.jsx)(e, { ...a, guildId: l });
         },
         {
-            modalKey: u,
-            contextKey: s.SY,
+            modalKey: h,
+            contextKey: i.SY,
             onCloseRequest: () => {
-                (0, i.closeModal)(u, s.SY);
+                (0, s.closeModal)(h, i.SY);
             },
         },
     );
 }
-function g(l) {
-    return (0, n.bG)([d.A], () => (0, o.N8)(d.A.getSortedRoles(l.id)), [l])
-        ? (0, t.jsx)(c.Dr, {
+function v(l) {
+    return (0, t.bG)([o.A], () => (0, d.N8)(o.A.getSortedRoles(l.id)), [l])
+        ? (0, n.jsx)(c.Dr, {
               id: "guild-connection-roles",
-              label: h.intl.string(h.t.ghtnss),
+              label: u.intl.string(u.t.ghtnss),
               icon: r.LinkIcon,
               leadingAccessory: { type: "icon", icon: r.LinkIcon },
-              action: () => v(l.id),
+              action: () => g(l.id),
           })
         : null;
 }

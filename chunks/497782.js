@@ -4,8 +4,8 @@ var n = r(582128),
     a = r(739508),
     i = r(158317),
     d = r(710525),
-    c = r(26279),
-    s = r(105292);
+    s = r(26279),
+    c = r(105292);
 function o(e) {
     let { order: t, errorSource: r, onSignFailure: o, onError: u } = e,
         [h, _] = (0, n.useState)(null),
@@ -36,19 +36,19 @@ function o(e) {
                 _(null);
                 try {
                     let o = await (0, i.Ub)({ orderId: t.id, loadId: e, purchaseToken: r, gatewayCheckoutContext: n });
-                    if (o.status === c.Re.SIGNED) return { type: "signed", order: o };
-                    if (o.status === c.Re.SIGNING_IN_PROGRESS) {
+                    if (o.status === s.Re.SIGNED) return { type: "signed", order: o };
+                    if (o.status === s.Re.SIGNING_IN_PROGRESS) {
                         let e = o.billing_facet;
                         try {
                             await (0, d.yu)(null != e ? e.order_signing_deferral_context : null);
                         } catch (e) {
-                            return (R(e, { ...a, orderId: t.id }, s.intl.string(s.t.khEaRI)), { type: "failed" });
+                            return (R(e, { ...a, orderId: t.id }, c.intl.string(c.t.khEaRI)), { type: "failed" });
                         }
                         return { type: "pending", order: o };
                     }
                     let u = (function (e) {
                         let { error: t } = e;
-                        return null == t || t.code === c.lD.UNKNOWN_ERROR_CODE
+                        return null == t || t.code === s.lD.UNKNOWN_ERROR_CODE
                             ? null
                             : new l.Ay(t.message, t.billing_error_code);
                     })(o);

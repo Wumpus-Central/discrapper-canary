@@ -108,7 +108,7 @@ function C(e) {
                       },
             [v, M, r, A, C],
         ),
-        L = {
+        b = {
             setupError: s,
             customPaymentMethods: A,
             customPaymentMethodIdsToSourceTypes: P,
@@ -116,6 +116,6 @@ function C(e) {
             elementsAppearanceOptions: R,
         };
     return null == r || null == T || C
-        ? { ...L, isLoading: !0, elementsOptions: T, setupIntentSecret: r }
-        : { ...L, isLoading: !1, elementsOptions: T, setupIntentSecret: r };
+        ? { ...b, isLoading: !0, elementsOptions: T, setupIntentSecret: r }
+        : { ...b, isLoading: !1, elementsOptions: T, setupIntentSecret: r };
 }

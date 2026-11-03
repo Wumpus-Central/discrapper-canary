@@ -1,47 +1,47 @@
-e.d(a, { A: () => g });
-var t = e(478437),
-    n = e(17928),
-    s = e(73153),
-    i = e(403010),
-    c = e(927813);
+a.d(e, { A: () => v });
+var n = a(478437),
+    t = a(17928),
+    i = a(73153),
+    s = a(403010),
+    c = a(927813);
 let r = new Set(),
-    d = {};
-function o(l) {
+    o = {};
+function d(l) {
     return new Date(l * c.A.Millis.SECOND).getTime();
 }
-function h() {
+function u() {
     r.clear();
 }
-function u(l) {
+function h(l) {
     r.delete(l.guild.id);
 }
-class v extends n.Ay.Store {
+class g extends t.Ay.Store {
     initialize() {
-        this.waitFor(i.A);
+        this.waitFor(s.A);
     }
     static displayName = "VoiceChannelStartTimeStore";
     getStartTime(l) {
-        if (null != l && null != l.guild_id && l.type === t.r.GUILD_VOICE) return d[l.guild_id]?.[l.id];
+        if (null != l && null != l.guild_id && l.type === n.r.GUILD_VOICE) return o[l.guild_id]?.[l.id];
     }
     hasRequestedStartTimes(l) {
         return r.has(l);
     }
 }
-let g = new v(s.h, {
-    GUILD_CREATE: u,
-    GUILD_DELETE: u,
-    CONNECTION_RESUMED: h,
-    CONNECTION_OPEN: h,
+let v = new g(i.h, {
+    GUILD_CREATE: h,
+    GUILD_DELETE: h,
+    CONNECTION_RESUMED: u,
+    CONNECTION_OPEN: u,
     VOICE_CHANNEL_START_TIME_UPDATE: function (l) {
-        let { guildId: a, id: e, voiceStartTime: t } = l;
-        (null == d[a] && (d[a] = {}), (d[a][e] = null != t ? o(t) : void 0));
+        let { guildId: e, id: a, voiceStartTime: n } = l;
+        (null == o[e] && (o[e] = {}), (o[e][a] = null != n ? d(n) : void 0));
     },
     CHANNEL_INFO: function (l) {
-        let { guildId: a, channels: e } = l;
-        for (let { id: l, voiceStartTime: t } of ((d[a] = {}), e)) d[a][l] = null != t ? o(t) : void 0;
+        let { guildId: e, channels: a } = l;
+        for (let { id: l, voiceStartTime: n } of ((o[e] = {}), a)) o[e][l] = null != n ? d(n) : void 0;
     },
     FETCH_CHANNEL_INFO: function (l) {
-        let { guildId: a } = l;
-        r.add(a);
+        let { guildId: e } = l;
+        r.add(e);
     },
 });

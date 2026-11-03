@@ -1,4 +1,4 @@
-t.d(n, { Ay: () => j, BA: () => A });
+t.d(n, { Ay: () => A, BA: () => j });
 var s = t(477900),
     l = t(503698),
     i = t.n(l),
@@ -13,7 +13,7 @@ var s = t(477900),
     g = t(746080),
     x = t(105292),
     f = t(240103);
-function A(e) {
+function j(e) {
     let { channel: n, isNew: t } = e,
         s = (0, h.kt)(n),
         l = s.slice(void 0, 3),
@@ -30,17 +30,17 @@ function A(e) {
         forumPostContainsTags: s.length > 0,
     };
 }
-function j(e) {
+function A(e) {
     let { channel: n, isNew: t, tagsClassName: l, className: h } = e,
         {
             shownTags: g,
-            remainingTags: j,
+            remainingTags: A,
             moreTagsCount: v,
             isPinned: p,
             shouldRenderTagsRow: N,
-        } = A({ channel: n, isNew: t }),
-        { enabled: y } = o.A.useConfig({ location: "forum-post-tags" }),
-        { tagFilter: b } = (0, u.R)(n.id),
+        } = j({ channel: n, isNew: t }),
+        { enabled: b } = o.A.useConfig({ location: "forum-post-tags" }),
+        { tagFilter: y } = (0, u.R)(n.id),
         C = (0, m.cq)(g);
     return N
         ? (0, s.jsxs)("div", {
@@ -60,7 +60,7 @@ function j(e) {
                               children: (0, s.jsx)(c.t, { size: "custom", width: 16, height: 16, color: "white" }),
                           }),
                       }),
-                  y
+                  b
                       ? (0, s.jsx)(d.C, {
                             variant: "filter",
                             label: x.intl.string(x.t["P/y+sj"]),
@@ -70,11 +70,11 @@ function j(e) {
                       : g.map((e) =>
                             (0, s.jsx)(
                                 m.Ay,
-                                { tag: e, size: m.Ay.Sizes.SMALL, className: i()(l, { [f.At]: b.has(e.id) }) },
+                                { tag: e, size: m.Ay.Sizes.SMALL, className: i()(l, { [f.At]: y.has(e.id) }) },
                                 e.id,
                             ),
                         ),
-                  v > 0 ? (0, s.jsx)(m.q6, { tags: j, count: v, size: m.Ay.Sizes.SMALL, useManaTagGroup: y }) : null,
+                  v > 0 ? (0, s.jsx)(m.q6, { tags: A, count: v, size: m.Ay.Sizes.SMALL, useManaTagGroup: b }) : null,
               ],
           })
         : null;

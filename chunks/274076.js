@@ -22,11 +22,11 @@ function C(e) {
             setSoundEffect: E,
         } = (0, s.Pv)(),
         S = (0, u.lo)(n, t),
-        y = S === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        g = S !== u.tB.DEFAULT;
+        g = S === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        y = S !== u.tB.DEFAULT;
     return (0, l.jsxs)("div", {
         children: [
-            g &&
+            y &&
                 (0, l.jsxs)("div", {
                     className: p.Os,
                     children: [
@@ -44,7 +44,7 @@ function C(e) {
                                       })
                                     : (0, l.jsx)(a.y, { className: p.u1 }),
                         }),
-                        y &&
+                        g &&
                             (0, l.jsxs)("div", {
                                 className: r()(p.b7, p.Ow),
                                 children: [

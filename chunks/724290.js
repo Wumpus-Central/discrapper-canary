@@ -11,28 +11,28 @@ async function c() {
     return ((e = await a()), (0, o.Ay)({ module_or_path: e }));
 }
 t(849324);
-let u = !1,
-    f = null;
+let f = !1,
+    u = null;
 function b() {
-    return u
+    return f
         ? Promise.resolve()
-        : (f ??= c().then(
+        : (u ??= c().then(
               () => {
-                  u = !0;
+                  f = !0;
               },
               (e) => {
-                  throw ((f = null), e);
+                  throw ((u = null), e);
               },
           ));
 }
 function s() {
-    if (u) return;
+    if (f) return;
     let e = (r || (r = (0, i.J)()), r);
     if (!e)
         throw Error(
             "@discord/markdown-wasm is not initialised. Await init() once before parsing, or hand already-compiled wasm to initSync().",
         );
-    ((0, o.QR)({ module: e }), (u = !0));
+    ((0, o.QR)({ module: e }), (f = !0));
 }
 function l(e, n) {
     return (s(), (0, o.qg)(e, n));

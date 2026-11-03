@@ -16,22 +16,22 @@ function c(e) {
     let m = n && f.searchResultsPaginationKey === d,
         g = t;
     n && (g = m ? f.totalResults : 0);
-    let E = g > 9975 + s.T_y,
+    let x = g > 9975 + s.T_y,
         p = o + 1,
-        x = Math.floor(c / s.T_y),
-        C = E && x >= o,
+        E = Math.floor(c / s.T_y),
+        C = x && E >= o,
         T = l.useCallback(
             (e, t) => {
-                if (E && e.targetPage === p) {
+                if (x && e.targetPage === p) {
                     let e = i.intl.formatToPlainString(i.t["E+2azY"], { maxPages: p });
                     return (0, r.jsx)(a.m, { asContainer: !0, text: e, children: t });
                 }
                 return t;
             },
-            [E, p],
+            [x, p],
         );
     return {
-        isPaginationTotalCountLimited: E,
+        isPaginationTotalCountLimited: x,
         paginationTotalCount: Math.min(g, u),
         paginationMaxIndex: o,
         paginationMaxVisiblePage: p,

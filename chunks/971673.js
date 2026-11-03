@@ -5,9 +5,9 @@ function _(e, n, t) {
             a = w(e, r.__wbindgen_export, r.__wbindgen_export2),
             c = m;
         r.parse(o, a, c, g(n) ? Number.MAX_SAFE_INTEGER : n >>> 0, g(t) ? Number.MAX_SAFE_INTEGER : t >>> 0);
-        var _ = u().getInt32(o + 0, !0),
-            i = u().getInt32(o + 4, !0);
-        if (u().getInt32(o + 8, !0)) throw y(i);
+        var _ = f().getInt32(o + 0, !0),
+            i = f().getInt32(o + 4, !0);
+        if (f().getInt32(o + 8, !0)) throw y(i);
         return y(_);
     } finally {
         r.__wbindgen_add_to_stack_pointer(16);
@@ -19,9 +19,9 @@ function i(e, n, t) {
             a = w(e, r.__wbindgen_export, r.__wbindgen_export2),
             c = m;
         r.parseLossless(o, a, c, g(n) ? Number.MAX_SAFE_INTEGER : n >>> 0, g(t) ? Number.MAX_SAFE_INTEGER : t >>> 0);
-        var _ = u().getInt32(o + 0, !0),
-            i = u().getInt32(o + 4, !0);
-        if (u().getInt32(o + 8, !0)) throw y(i);
+        var _ = f().getInt32(o + 0, !0),
+            i = f().getInt32(o + 4, !0);
+        if (f().getInt32(o + 8, !0)) throw y(i);
         return y(_);
     } finally {
         r.__wbindgen_add_to_stack_pointer(16);
@@ -33,7 +33,7 @@ function o() {
         "./discord_markdown_wasm_bg.js": {
             __proto__: null,
             __wbg_Error_30c8987f7c2ed4e2: function (e, n) {
-                return a(Error(I(e >>> 0, n)));
+                return a(Error(E(e >>> 0, n)));
             },
             __wbg_Number_14af1003b8dd5ead: function (e) {
                 return Number(l[e]);
@@ -41,12 +41,12 @@ function o() {
             __wbg_String_8564e559799eccda: function (e, n) {
                 let t = w(String(l[n]), r.__wbindgen_export, r.__wbindgen_export2),
                     _ = m;
-                (u().setInt32(e + 4, _, !0), u().setInt32(e + 0, t, !0));
+                (f().setInt32(e + 4, _, !0), f().setInt32(e + 0, t, !0));
             },
             __wbg___wbindgen_bigint_get_as_i64_a2383202b9353e4c: function (e, n) {
                 let t = l[n],
                     r = "bigint" == typeof t ? t : void 0;
-                (u().setBigInt64(e + 8, g(r) ? BigInt(0) : r, !0), u().setInt32(e + 0, !g(r), !0));
+                (f().setBigInt64(e + 8, g(r) ? BigInt(0) : r, !0), f().setInt32(e + 0, !g(r), !0));
             },
             __wbg___wbindgen_boolean_get_5b446f51afd21013: function (e) {
                 let n = l[e],
@@ -92,7 +92,7 @@ ${n.stack}`
                         r.__wbindgen_export2,
                     ),
                     _ = m;
-                (u().setInt32(e + 4, _, !0), u().setInt32(e + 0, t, !0));
+                (f().setInt32(e + 4, _, !0), f().setInt32(e + 0, t, !0));
             },
             __wbg___wbindgen_in_92f62ee1427d9e49: function (e, n) {
                 return l[e] in l[n];
@@ -122,17 +122,17 @@ ${n.stack}`
             __wbg___wbindgen_number_get_2e0e7dee9f701a71: function (e, n) {
                 let t = l[n],
                     r = "number" == typeof t ? t : void 0;
-                (u().setFloat64(e + 8, g(r) ? 0 : r, !0), u().setInt32(e + 0, !g(r), !0));
+                (f().setFloat64(e + 8, g(r) ? 0 : r, !0), f().setInt32(e + 0, !g(r), !0));
             },
             __wbg___wbindgen_string_get_0380ccaa2f57f0d9: function (e, n) {
                 let t = l[n],
                     _ = "string" == typeof t ? t : void 0;
                 var i = g(_) ? 0 : w(_, r.__wbindgen_export, r.__wbindgen_export2),
                     o = m;
-                (u().setInt32(e + 4, o, !0), u().setInt32(e + 0, i, !0));
+                (f().setInt32(e + 4, o, !0), f().setInt32(e + 0, i, !0));
             },
             __wbg___wbindgen_throw_41e9ee4f547fc59a: function (e, n) {
-                throw Error(I(e >>> 0, n));
+                throw Error(E(e >>> 0, n));
             },
             __wbg_call_6137034ef55c9d0f: function () {
                 return s(function (e, n) {
@@ -244,7 +244,7 @@ ${n.stack}`
                 return a(e);
             },
             __wbindgen_generic_0000000000000003: function (e, n) {
-                return a(I(e >>> 0, n));
+                return a(E(e >>> 0, n));
             },
             __wbindgen_generic_0000000000000004: function (e) {
                 return a(BigInt.asUintN(64, e));
@@ -265,16 +265,16 @@ function a(e) {
 }
 t.d(n, { Ay: () => S, IS: () => i, QR: () => O, qg: () => _ });
 let c = null;
-function u() {
+function f() {
     return (
         (null === c || !0 === c.buffer.detached || (void 0 === c.buffer.detached && c.buffer !== r.memory.buffer)) &&
             (c = new DataView(r.memory.buffer)),
         c
     );
 }
-let f = null;
+let u = null;
 function b() {
-    return ((null === f || 0 === f.byteLength) && (f = new Uint8Array(r.memory.buffer)), f);
+    return ((null === u || 0 === u.byteLength) && (u = new Uint8Array(r.memory.buffer)), u);
 }
 function s(e, n) {
     try {
@@ -323,10 +323,10 @@ function y(e) {
 }
 let p = new TextDecoder("utf-8", { ignoreBOM: !0, fatal: !0 });
 p.decode();
-let E = 0;
-function I(e, n) {
+let I = 0;
+function E(e, n) {
     return (
-        (E += n) >= 0x7ff00000 && ((p = new TextDecoder("utf-8", { ignoreBOM: !0, fatal: !0 })).decode(), (E = n)),
+        (I += n) >= 0x7ff00000 && ((p = new TextDecoder("utf-8", { ignoreBOM: !0, fatal: !0 })).decode(), (I = n)),
         p.decode(b().subarray(e, e + n))
     );
 }
@@ -338,7 +338,7 @@ let h = new TextEncoder();
     });
 let m = 0;
 function A(e, n) {
-    return ((r = e.exports), (c = null), (f = null), r);
+    return ((r = e.exports), (c = null), (u = null), r);
 }
 async function N(e, n) {
     if ("function" == typeof Response && e instanceof Response) {

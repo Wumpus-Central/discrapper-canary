@@ -1,39 +1,39 @@
-t.d(n, { YK: () => c, bf: () => f, initNativeMarkdown: () => s, n9: () => b });
-var a = t(582128),
-    i = t(465632),
-    r = t(38405);
-let l = !1,
-    u = null,
+a.d(n, { YK: () => c, bf: () => m, initNativeMarkdown: () => s, n9: () => f });
+var t = a(582128),
+    l = a(465632),
+    i = a(38405);
+let r = !1,
     d = null,
-    o = new Set();
+    o = null,
+    u = new Set();
 function s() {
-    return (u ??= (async () => {
-        (await (0, i.Ts)(), (l = !0), o.forEach((e) => e()));
+    return (d ??= (async () => {
+        (await (0, l.Ts)(), (r = !0), u.forEach((e) => e()));
     })());
 }
 function c() {
-    return l;
+    return r;
+}
+function m(e) {
+    e && !r && t.use(s());
 }
 function f(e) {
-    e && !l && a.use(s());
-}
-function b(e) {
-    let n = a.useCallback(
+    let n = t.useCallback(
         (n) => (
-            o.add(n),
+            u.add(n),
             e &&
-                (d ??= (async () => {
+                (o ??= (async () => {
                     try {
                         await s();
                     } catch (e) {
-                        r.A.captureException(e);
+                        i.A.captureException(e);
                     }
                 })()),
             () => {
-                o.delete(n);
+                u.delete(n);
             }
         ),
         [e],
     );
-    return a.useSyncExternalStore(n, c);
+    return t.useSyncExternalStore(n, c);
 }

@@ -29,9 +29,9 @@ let A = function (e) {
             childrenAccessories: y,
             messageRef: E,
             focusProps: _ = { offset: { left: 4, right: 4 } },
-            hasThread: S,
-            isSystemMessage: M,
-            hasReply: R,
+            hasThread: M,
+            isSystemMessage: R,
+            hasReply: S,
             author: T,
             onMouseEnter: w,
             onMouseLeave: O,
@@ -42,43 +42,43 @@ let A = function (e) {
         ),
         P = (0, m.jV)(T?.guildId, G) && (0, h.kz)(T),
         [D, L] = t.useState(!1),
-        U = t.useCallback(
+        V = t.useCallback(
             (e) => {
                 (L(!0), w?.(e));
             },
             [w],
         ),
-        V = t.useCallback(
+        U = t.useCallback(
             (e) => {
                 (L(!1), O?.(e));
             },
             [O],
         ),
-        H = (0, u.W)({ location: "BaseMessage" }),
-        $ = t.useMemo(() => ({ animate: D, setAnimate: L }), [D]),
+        $ = (0, u.W)({ location: "BaseMessage" }),
+        H = t.useMemo(() => ({ animate: D, setAnimate: L }), [D]),
         z = (0, i.jsx)(o.C.Provider, {
-            value: $,
+            value: H,
             children: (0, i.jsx)(c.vN, {
                 ..._,
                 children: (0, i.jsxs)("div", {
                     className: a()(l, {
                         [x.D7]: P,
-                        [x.e8]: H && T?.displayNameStyles != null && T?.guildId == null,
+                        [x.e8]: $ && T?.displayNameStyles != null && T?.guildId == null,
                         [x.iE]: !0,
                         [x.kl]: s,
                         [x.oE]: n,
                         [x.VH]: j,
                         [x.E]: !n,
                         [x.GZ]: A,
-                        [x.pR]: S,
-                        [x.X4]: M,
-                        [x.h8]: R,
+                        [x.pR]: M,
+                        [x.X4]: R,
+                        [x.h8]: S,
                     }),
                     ref: E,
                     ...k,
                     role: "article",
-                    onMouseEnter: U,
-                    onMouseLeave: V,
+                    onMouseEnter: V,
+                    onMouseLeave: U,
                     children: [
                         v,
                         N,

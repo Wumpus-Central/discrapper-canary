@@ -1,12 +1,12 @@
-t.d(n, { KE: () => v, L1: () => h, dC: () => f });
+t.d(n, { KE: () => m, L1: () => h, dC: () => p });
 var l = t(477900),
     r = t(582128),
-    a = t(465632),
-    u = t(196765),
-    i = t(976245),
+    i = t(465632),
+    a = t(196765),
+    u = t(976245),
     s = t(302031);
-function c() {
-    return (0, i.y)()((e) => ({
+function o() {
+    return (0, u.y)()((e) => ({
         revealedIds: new Set(),
         hoveredId: null,
         reveal(n) {
@@ -17,35 +17,35 @@ function c() {
         },
     }));
 }
-let o = (0, i.y)()(() => ({ revealedIds: new Set(), hoveredId: null, reveal() {}, setHovered() {} })),
-    d = r.createContext(o);
+let c = (0, u.y)()(() => ({ revealedIds: new Set(), hoveredId: null, reveal() {}, setHovered() {} })),
+    d = r.createContext(c);
 function h(e) {
     let { children: n } = e,
-        [t] = r.useState(c);
+        [t] = r.useState(o);
     return (0, l.jsx)(d.Provider, { value: t, children: n });
 }
-function v(e) {
-    for (let n of (0, a.tJ)(e)) if ("spoiler" === n.type && Array.from((0, a.tJ)(n.value.content)).some(m)) return !0;
+function m(e) {
+    for (let n of (0, i.tJ)(e)) if ("spoiler" === n.type && Array.from((0, i.tJ)(n.value.content)).some(f)) return !0;
     return !1;
 }
-function m(e) {
+function f(e) {
     return "link" === e.type;
 }
-function f(e) {
+function p(e) {
     let { children: n, id: t } = e,
-        a = r.useContext(d),
-        i = (0, u.P)(a, (e) => e.revealedIds.has(t)),
-        c = (0, u.P)(a, (e) => e.hoveredId === t),
-        o = r.useCallback(() => a.getState().reveal(t), [a, t]),
-        h = r.useCallback(() => a.getState().setHovered(t, !0), [a, t]),
-        v = r.useCallback(() => a.getState().setHovered(t, !1), [a, t]);
+        i = r.useContext(d),
+        u = (0, a.P)(i, (e) => e.revealedIds.has(t)),
+        o = (0, a.P)(i, (e) => e.hoveredId === t),
+        c = r.useCallback(() => i.getState().reveal(t), [i, t]),
+        h = r.useCallback(() => i.getState().setHovered(t, !0), [i, t]),
+        m = r.useCallback(() => i.getState().setHovered(t, !1), [i, t]);
     return (0, l.jsx)(s.Ay, {
         type: s.Ay.Types.TEXT,
-        obscured: !i,
-        hovered: c,
-        onReveal: o,
+        obscured: !u,
+        hovered: o,
+        onReveal: c,
         onMouseEnter: h,
-        onMouseLeave: v,
+        onMouseLeave: m,
         children: () => n,
     });
 }

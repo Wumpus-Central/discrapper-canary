@@ -45,7 +45,7 @@ function E(e) {
         R = x?.options?.hideDefaultModalBody ?? !1,
         M = x?.options?.sliderBodyClassName,
         T = s === C.pn.REVIEW,
-        L = r.useCallback(
+        b = r.useCallback(
             (e, t) => {
                 t === s && _(e);
             },
@@ -77,7 +77,7 @@ function E(e) {
                                                     id: e.key,
                                                     children: (0, l.jsx)("form", {
                                                         className: a()(y.OO, { [y.Wq]: T }, M),
-                                                        ref: (t) => L(t, e.key),
+                                                        ref: (t) => b(t, e.key),
                                                         onSubmit: (e) => e.preventDefault(),
                                                     }),
                                                 },

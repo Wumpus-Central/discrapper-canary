@@ -1,30 +1,30 @@
-l.d(a, { Ay: () => o, iE: () => u });
-var n = l(582128),
-    t = l(17928),
-    i = l(429913),
-    r = l(403362),
-    s = l(311043),
-    d = l(454908);
-function o(e) {
-    let a = (0, i.h)(e),
-        l = null != e && null == a,
-        n = a?.getCanonicalGameId() ?? null,
-        { data: t, isLoading: r } = (0, d.I)(n);
-    return { gameId: n, gameRecord: t ?? null, isLoading: l || r };
-}
+a.d(n, { Ay: () => u, iE: () => s });
+var t = a(582128),
+    l = a(17928),
+    i = a(429913),
+    r = a(403362),
+    d = a(311043),
+    o = a(454908);
 function u(e) {
-    let a = (0, i.A)(e),
-        l = n.useMemo(() => a.map((e) => e?.getCanonicalGameId() ?? null), [a]),
-        o = n.useMemo(() => l.filter(r.Vq), [l]);
-    (0, d.x)(o);
-    let u = (0, t.yK)([s.A], () => l.map((e) => s.A.getGame(e) ?? null), [l]),
-        c = (0, t.yK)(
-            [s.A],
-            () => l.map((e) => null != e && null == s.A.getGame(e) && !s.A.hasNoData(e) && !s.A.didFetchingFail(e)),
-            [l],
+    let n = (0, i.h)(e),
+        a = null != e && null == n,
+        t = n?.getCanonicalGameId() ?? null,
+        { data: l, isLoading: r } = (0, o.I)(t);
+    return { gameId: t, gameRecord: l ?? null, isLoading: a || r };
+}
+function s(e) {
+    let n = (0, i.A)(e),
+        a = t.useMemo(() => n.map((e) => e?.getCanonicalGameId() ?? null), [n]),
+        u = t.useMemo(() => a.filter(r.Vq), [a]);
+    (0, o.x)(u);
+    let s = (0, l.yK)([d.A], () => a.map((e) => d.A.getGame(e) ?? null), [a]),
+        c = (0, l.yK)(
+            [d.A],
+            () => a.map((e) => null != e && null == d.A.getGame(e) && !d.A.hasNoData(e) && !d.A.didFetchingFail(e)),
+            [a],
         );
-    return n.useMemo(
-        () => a.map((e, a) => ({ gameId: l[a], gameRecord: u[a], isLoading: null == e || c[a] })),
-        [a, l, u, c],
+    return t.useMemo(
+        () => n.map((e, n) => ({ gameId: a[n], gameRecord: s[n], isLoading: null == e || c[n] })),
+        [n, a, s, c],
     );
 }
