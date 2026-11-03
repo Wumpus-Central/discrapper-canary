@@ -11,9 +11,11 @@ function s(e) {
     (0, i.openModalLazy)(
         async () => {
             let { default: n } = await Promise.all([
+                t.e("445150"),
                 t.e("880475"),
                 t.e("460773"),
                 t.e("208018"),
+                t.e("850140"),
                 t.e("801342"),
                 t.e("924150"),
             ]).then(t.bind(t, 372501));
