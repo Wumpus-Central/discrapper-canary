@@ -5,6 +5,7 @@ let i = {
         discord_ios: "Discord iOS",
         discord_android: "Discord Android",
         discord_developers: "Discord Developers",
+        discord_campaign_builder: "Ads Manager",
     },
     r = [
         { id: "1hr", value: 3600, label: "1 Hour" },

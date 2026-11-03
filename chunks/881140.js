@@ -2,9 +2,9 @@ l.d(t, { A: () => u });
 var n = l(477900),
     r = l(582128),
     i = l(807081),
-    a = l(9578),
-    s = l(380610),
-    d = l(435954),
+    s = l(9578),
+    a = l(380610),
+    d = l(325213),
     o = l(123917);
 function c(e) {
     return null != e.target && (0, o.m)(e.target, null != e.title && "" !== e.title ? e.title : (0, i.$)(e.content));
@@ -12,11 +12,11 @@ function c(e) {
 function u(e) {
     return {
         react(t, l, u) {
-            if (e.enableBuildOverrides && (0, s.vS)(t.target))
+            if (e.enableBuildOverrides && (0, a.vS)(t.target))
                 return (0, n.jsx)(r.Fragment, { children: (0, n.jsx)(d.default, { url: t.target }, t.target) }, u.key);
-            let v = l(t.content, u),
+            let m = l(t.content, u),
                 h = "string" == typeof t.title && 0 !== t.title.length ? t.title : (0, i.$)(t.content),
-                C = e?.mustConfirmExternalLink
+                x = e?.mustConfirmExternalLink
                     ? (e) => (
                           e?.stopPropagation(),
                           e?.preventDefault(),
@@ -37,19 +37,19 @@ function u(e) {
                     (h += e));
             }
             return u.noStyleAndInteraction
-                ? (0, n.jsx)("span", { title: h, children: v }, u.key)
+                ? (0, n.jsx)("span", { title: h, children: m }, u.key)
                 : (0, n.jsx)(
-                      a.A,
+                      s.A,
                       {
                           title: h,
                           href: t.target,
                           trusted: function () {
                               return c(t);
                           },
-                          onClick: C,
+                          onClick: x,
                           messageId: u.messageId,
                           channelId: u.channelId,
-                          children: v,
+                          children: m,
                       },
                       u.key,
                   );

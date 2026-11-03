@@ -105,7 +105,7 @@ var X = t(333421),
     Z = t(100392),
     Y = t(836156);
 let V = /^dev:\/\//i,
-    ee = r.lazy(() => Promise.resolve().then(t.bind(t, 435954))),
+    ee = r.lazy(() => Promise.resolve().then(t.bind(t, 325213))),
     en = r.lazy(async () => {
         let { ExperimentEmbed: e } = await Promise.resolve().then(t.bind(t, 950980));
         return { default: e };
@@ -628,7 +628,7 @@ let e3 = [],
             return null == r ? null : (0, l.jsx)(eO.A, { node: r });
         },
     };
-function e4(e) {
+function e7(e) {
     let {
         content: n,
         parsed: t,
@@ -639,9 +639,9 @@ function e4(e) {
     return (0, l.jsx)(u.tH, {
         fallbackRender: (e) => {
             let { error: t } = e;
-            return (0, l.jsx)(e2, { content: n, error: t });
+            return (0, l.jsx)(e4, { content: n, error: t });
         },
-        children: (0, l.jsx)(e7, {
+        children: (0, l.jsx)(e2, {
             content: n,
             parsed: t,
             allowJumboEmoji: r,
@@ -650,7 +650,7 @@ function e4(e) {
         }),
     });
 }
-function e7(e) {
+function e2(e) {
     let { content: n, parsed: t, allowJumboEmoji: u, hideSingleLinkContent: s, redactRestrictedContent: o } = e;
     if (((0, eK.bf)(null == t), null != t && "error" in t)) throw t.error;
     let c = t?.ast ?? e3,
@@ -715,7 +715,7 @@ function e7(e) {
         children: (0, l.jsx)(eq, { children: (0, l.jsx)(i.$, { nodes: h, renderers: e9 }) }, n),
     });
 }
-function e2(e) {
+function e4(e) {
     let { content: n, error: t } = e;
     return (
         r.useEffect(() => {
@@ -824,7 +824,7 @@ function ns(e) {
               ? (0, l.jsx)(r.Suspense, {
                     children: (0, l.jsx)(h.Provider, {
                         value: g,
-                        children: (0, l.jsx)(e4, {
+                        children: (0, l.jsx)(e7, {
                             content: n.content,
                             parsed: i,
                             allowJumboEmoji: !f && n.type !== nt.lAJ.MEDIA_MENTION_MESSAGE,

@@ -1,5 +1,12 @@
-.icon_a9c2d1 {
-    margin-inline-end: .1rem
+.wrapper__16886 {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    max-width: 100%;
+    min-width: 0;
+    text-indent: 0;
+    width: 432px
 }
 
 .svgContentRight__7b484 {
@@ -960,4 +967,4 @@
     color: var(--icon-strong)
 }
 
-/*# sourceMappingURL=7452.9e21b9face389c83.css.map*/
+/*# sourceMappingURL=630290.93af7af2807151f7.css.map*/
