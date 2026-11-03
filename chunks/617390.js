@@ -1,4 +1,14 @@
-a.d(t, { $D: () => u, Jt: () => c, Pe: () => _, dw: () => h, i: () => o, if: () => l, lw: () => d, nr: () => f });
+a.d(t, {
+    $D: () => u,
+    Jt: () => c,
+    Pe: () => b,
+    S5: () => _,
+    dw: () => h,
+    i: () => o,
+    if: () => l,
+    lw: () => d,
+    nr: () => f,
+});
 var s = a(666860),
     i = a(174459),
     r = a(527926),
@@ -38,6 +48,9 @@ function f(e) {
     });
 }
 function _(e) {
+    i.default.track(n.HAw.CHECKPOINT_2026_SIDEKICK_MESSAGE_SENT, { other_user_id: e, ...r.A.getAnalyticsProperties() });
+}
+function b(e) {
     i.default.track(n.HAw.CHECKPOINT_2026_CARD_SHARED, {
         checkpoint_card_type: e,
         step_name: r.A.getStepName(),

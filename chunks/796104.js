@@ -1,4 +1,4 @@
-a.d(t, { IB: () => m, K8: () => x, fr: () => I, jA: () => E, l4: () => g, nX: () => A, sm: () => w, yE: () => v });
+a.d(t, { IB: () => x, K8: () => p, fr: () => w, jA: () => I, l4: () => m, nX: () => g, sm: () => v, yE: () => A });
 var s = a(636537),
     i = a(73153),
     r = a(308528),
@@ -6,68 +6,67 @@ var s = a(636537),
     c = a(451909),
     d = a(223863),
     l = a(734057),
-    o = a(174459),
-    u = a(403362),
-    h = a(148295),
-    f = a(407905),
-    _ = a(719718),
-    b = a(617390),
-    p = a(652215);
-function x() {
+    o = a(403362),
+    u = a(148295),
+    h = a(407905),
+    f = a(719718),
+    _ = a(617390),
+    b = a(652215);
+function p() {
     return i.h.dispatch({ type: "CHECKPOINT_TOGGLE_MUTE" });
 }
-function m(e, t) {
+function x(e, t) {
     return i.h.dispatch({ type: "CHECKPOINT_SELECT_CHARACTER_TRAIT", trait: e, optionId: t });
 }
-function g(e) {
+function m(e) {
     return i.h.dispatch({ type: "CHECKPOINT_SAVE_PROGRESS", stage: e });
 }
-async function A(e) {
-    if ((_.A.initializeIfNeeded(), _.A.isFetching)) return _.T.FETCHING;
+async function g(e) {
+    if ((f.A.initializeIfNeeded(), f.A.isFetching)) return f.T.FETCHING;
     i.h.dispatch({ type: "CHECKPOINT_FETCH_START" });
     try {
-        let { body: t } = await s.Bo.get({ url: p.Rsh.CHECKPOINT, rejectWithError: !0 });
+        let { body: t } = await s.Bo.get({ url: b.Rsh.CHECKPOINT, rejectWithError: !0 });
         if (null != e)
             return (
                 i.h.dispatch({
                     type: "CHECKPOINT_FETCH_SUCCESS",
-                    stats: (0, h.g)(e),
-                    globalStats: (0, f._R)(t.global_stats),
+                    stats: (0, u.g)(e),
+                    globalStats: (0, h._R)(t.global_stats),
                     character: null,
                 }),
-                _.T.SUCCESS
+                f.T.SUCCESS
             );
         return (
             i.h.dispatch({
                 type: "CHECKPOINT_FETCH_SUCCESS",
-                stats: null != t.stats ? (0, f.BF)(t.stats) : null,
-                globalStats: (0, f._R)(t.global_stats),
+                stats: null != t.stats ? (0, h.BF)(t.stats) : null,
+                globalStats: (0, h._R)(t.global_stats),
                 character: t.character,
             }),
-            _.T.SUCCESS
+            f.T.SUCCESS
         );
     } catch {
-        return (i.h.dispatch({ type: "CHECKPOINT_FETCH_FAILED" }), _.T.ERROR);
+        return (i.h.dispatch({ type: "CHECKPOINT_FETCH_FAILED" }), f.T.ERROR);
     }
 }
-async function v(e) {
+async function A(e) {
     i.h.dispatch({ type: "CHECKPOINT_COMPLETE_START" });
     try {
         return (
-            await s.Bo.post({ url: p.Rsh.CHECKPOINT_COMPLETE, body: e, rejectWithError: !0 }),
+            await s.Bo.post({ url: b.Rsh.CHECKPOINT_COMPLETE, body: e, rejectWithError: !0 }),
             i.h.dispatch({ type: "CHECKPOINT_COMPLETE_SUCCESS", character: e }),
-            (0, b.$D)(),
+            (0, _.$D)(),
             !0
         );
     } catch {
         return (i.h.dispatch({ type: "CHECKPOINT_COMPLETE_FAILED" }), !1);
     }
 }
-async function w() {
+async function v() {
     i.h.dispatch({ type: "CHECKPOINT_RESET_START" });
     try {
         return (
-            await s.Bo.del({ url: p.Rsh.CHECKPOINT_RESET, rejectWithError: !0 }),
+            await s.Bo.del({ url: b.Rsh.CHECKPOINT_RESET, rejectWithError: !0 }),
             i.h.dispatch({ type: "CHECKPOINT_RESET_SUCCESS" }),
             !0
         );
@@ -75,16 +74,16 @@ async function w() {
         return (i.h.dispatch({ type: "CHECKPOINT_RESET_FAILED" }), !1);
     }
 }
-async function I(e, t) {
+async function w(e, t) {
     let a = await r.A.getOrEnsurePrivateChannel(t),
         s = l.A.getChannel(a);
     if (null == s) throw Error("Failed to open private channel");
-    o.default.track(p.HAw.CHECKPOINT_SIDEKICK_MESSAGE_SENT, { other_user_id: t });
-    let i = c.Ay.parse(s, e);
-    return n.A.sendMessage(s.id, i, !1, { location: "checkpoint-sidekick" });
+    let i = c.Ay.parse(s, e),
+        d = await n.A.sendMessage(s.id, i, !1, { location: "checkpoint-sidekick" });
+    return ((0, _.S5)(t), d);
 }
-async function E(e, t, a) {
-    let s = (await Promise.all(e.map(d.pk))).filter(u.Vq);
+async function I(e, t, a) {
+    let s = (await Promise.all(e.map(d.pk))).filter(o.Vq);
     for (let e of await Promise.allSettled(
         s.map((e) => {
             let s = l.A.getChannel(e);
