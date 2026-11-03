@@ -4,12 +4,12 @@ var i = n(477900),
     a = n(866665),
     s = n(939249),
     r = n(789645),
-    o = n(753437),
+    o = n(394245),
     d = n(105292),
     c = n(382701);
 function u(e) {
     let { tag: t, variant: n = "default", onRemove: u, className: m, ref: g } = e,
-        x = (0, o.W3)(t);
+        x = (0, o.W)(t);
     if (null == x) return null;
     let { getText: f, icon: h } = x,
         p = "filled" === n;

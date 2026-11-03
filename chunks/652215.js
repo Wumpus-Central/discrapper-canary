@@ -3396,6 +3396,7 @@ var iZ =
         (eu.ACTIVITY_PANEL_GAME_COMMUNITY_UPSELL = "Activity Panel Game Community Upsell"),
         (eu.GAME_PROFILE_ANNOUNCEMENTS = "Game Profile Announcements"),
         (eu.GAME_PROFILE_COMMUNITIES = "Game Profile Communities"),
+        (eu.WATERWHEELS_INTEREST_SERVERS = "Waterwheels Interest Servers"),
         (eu.DISCOVERABLE_GUILD_INVITE_LURKER = "Discoverable Guild Invite - Lurker Mode"),
         (eu.LEAVE_PROMPT_LURKER = "Leave Prompt - Lurker Mode"),
         eu),

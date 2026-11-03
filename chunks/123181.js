@@ -1,38 +1,39 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var i = n(477900),
     l = n(582128),
     a = n(265872),
     s = n(939249),
     r = n(307301),
-    o = n(834730);
+    o = n(834730),
+    d = n(126601);
 n(321073);
-var d = n(477782),
-    c = n(980707),
-    u = n(753437),
-    m = n(105292),
-    g = n(382701);
-let x = l.memo(function (e) {
+var c = n(477782),
+    u = n(980707),
+    m = n(394245),
+    g = n(105292),
+    x = n(382701);
+let f = l.memo(function (e) {
     let { currentTags: t, onTagSelect: n, onNoneSelect: l, onClose: a } = e;
-    return (0, i.jsx)(c.W, {
+    return (0, i.jsx)(u.W, {
         "data-menu-migrated-auto": !0,
         navId: "widget-game-tags",
-        "aria-label": m.intl.string(m.t.r6EJOu),
+        "aria-label": g.intl.string(g.t.r6EJOu),
         onClose: a,
         onSelect: () => {},
-        className: g.X2,
-        children: Object.entries(u.Pb).map((e) => {
+        className: x.X2,
+        children: Object.entries(d.Pb).map((e) => {
             let a,
                 [s, r] = e,
                 o =
                     ((a = []),
-                    r.type === u.me.RADIO &&
+                    r.type === d.me.RADIO &&
                         a.push(
                             (0, i.jsx)(
-                                d.iD,
+                                c.iD,
                                 {
                                     id: `${s}-none`,
                                     group: s,
-                                    label: m.intl.string(m.t.PoWNfe),
+                                    label: g.intl.string(g.t.PoWNfe),
                                     checked: !r.tags.some((e) => t.includes(e)),
                                     action: () => l(r.tags),
                                 },
@@ -40,12 +41,12 @@ let x = l.memo(function (e) {
                             ),
                         ),
                     r.tags.forEach((e) => {
-                        let l = u.PT[e];
+                        let l = m.P[e];
                         null != l &&
-                            (r.type === u.me.RADIO
+                            (r.type === d.me.RADIO
                                 ? a.push(
                                       (0, i.jsx)(
-                                          d.iD,
+                                          c.iD,
                                           {
                                               id: e,
                                               group: s,
@@ -58,46 +59,33 @@ let x = l.memo(function (e) {
                                   )
                                 : a.push(
                                       (0, i.jsx)(
-                                          d.sL,
+                                          c.sL,
                                           { id: e, label: l.getText(), checked: t.includes(e), action: () => n(e, !1) },
                                           e,
                                       ),
                                   ));
                     }),
                     a);
-            return (0, i.jsx)(d.rX, { label: r.getLabel(), children: o }, s);
+            return (0, i.jsx)(c.rX, { label: r.getLabel(), children: o }, s);
         }),
     });
 });
-function f(e) {
-    let { tags: t, onTagsChange: n, onOpen: d, onClose: c, variant: f = "default", ref: h } = e,
-        p = "filled" === f,
+function h(e) {
+    let { tags: t, onTagsChange: n, onOpen: c, onClose: u, variant: m = "default", ref: h } = e,
+        p = "filled" === m,
         j = (0, l.useRef)(null),
         I = (0, l.useMemo)(() => (null != t ? t : []), [t]),
         E = (0, l.useCallback)(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    i = new Set(I),
-                    l = "added";
-                if (t) {
-                    let t = Object.values(u.Pb).find((t) => t.tags.includes(e));
-                    if (null == t) return;
-                    (t.tags.forEach((e) => {
-                        i.delete(e);
-                    }),
-                        i.add(e));
-                } else i.has(e) ? (i.delete(e), (l = "removed")) : i.add(e);
-                n(Array.from(i), l);
+                    i = !t && I.includes(e) ? "removed" : "added";
+                n((0, d.pK)(I, e), i);
             },
             [I, n],
         ),
         v = (0, l.useCallback)(
             (e) => {
-                let t = new Set(I);
-                (e.forEach((e) => {
-                    t.delete(e);
-                }),
-                    n(Array.from(t), "removed"));
+                n((0, d.LQ)(I, e), "removed");
             },
             [I, n],
         );
@@ -105,11 +93,11 @@ function f(e) {
         targetElementRef: j,
         position: "right",
         align: "top",
-        onRequestOpen: d,
-        onRequestClose: c,
+        onRequestOpen: c,
+        onRequestClose: u,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(x, { currentTags: I, onTagSelect: E, onNoneSelect: v, onClose: t });
+            return (0, i.jsx)(f, { currentTags: I, onTagSelect: E, onNoneSelect: v, onClose: t });
         },
         children: (e) =>
             (0, i.jsx)("div", {
@@ -121,14 +109,14 @@ function f(e) {
                 ),
                 children: (0, i.jsxs)(s.D, {
                     ...e,
-                    className: p ? g._m : g.c9,
-                    "aria-label": m.intl.string(m.t.r6EJOu),
+                    className: p ? x._m : x.c9,
+                    "aria-label": g.intl.string(g.t.r6EJOu),
                     children: [
                         p && (0, i.jsx)(r.j, { size: "xxs", color: "currentColor" }),
                         (0, i.jsx)(o.E, {
                             variant: "footnote/medium",
                             color: "none",
-                            children: p ? m.intl.string(m.t.DccrfU) : m.intl.string(m.t.fZSejy),
+                            children: p ? g.intl.string(g.t.DccrfU) : g.intl.string(g.t.fZSejy),
                         }),
                     ],
                 }),
