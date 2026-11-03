@@ -142,5 +142,6 @@ function y(e, t) {
         ),
         renderSelectedTab: a.find((e) => e.id === r)?.render ?? (() => null),
         selectedTabId: r,
+        setSelectedTabId: o,
     };
 }
