@@ -22177,7 +22177,6 @@ let vY = vX.px.map((e) =>
     ),
     vH = (0, h.Tf)(S.X.UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS, {
         useTitle: () => V.intl.string(V.t.Ra9Pwk),
-        useSubtitle: () => V.intl.string(V.t.iYjQ8X),
         useLabel: () => V.intl.string(V.t.KT1pBA),
         useDisabled: function () {
             let { categories: e } = (0, _.cf)([vB.A], () => vB.A.getEmailSettings());

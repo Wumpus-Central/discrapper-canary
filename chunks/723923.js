@@ -1,31 +1,34 @@
-e.d(n, { HO: () => i, Zk: () => l, px: () => r });
-var s,
-    a = e(105292),
-    i =
-        (((s = {}).COMMUNICATION = "communication"),
-        (s.SOCIAL = "social"),
-        (s.TIPS = "tips"),
-        (s.RECOMMENDATIONS_AND_EVENTS = "recommendations_and_events"),
-        (s.UPDATES_AND_ANNOUNCEMENTS = "updates_and_announcements"),
-        (s.FAMILY_CENTER_DIGEST = "family_center_digest"),
-        s);
-let l = ["tips", "recommendations_and_events", "updates_and_announcements"],
-    r = [
+e.d(n, { HO: () => s, Zk: () => r, px: () => l });
+var a,
+    i = e(105292),
+    s =
+        (((a = {}).COMMUNICATION = "communication"),
+        (a.SOCIAL = "social"),
+        (a.TIPS = "tips"),
+        (a.RECOMMENDATIONS_AND_EVENTS = "recommendations_and_events"),
+        (a.UPDATES_AND_ANNOUNCEMENTS = "updates_and_announcements"),
+        (a.FAMILY_CENTER_DIGEST = "family_center_digest"),
+        a);
+let l = [
         {
             category: "communication",
-            label: () => a.intl.string(a.t["B75+xe"]),
-            subLabel: () => a.intl.string(a.t.ZHg9Tc),
+            label: () => i.intl.string(i.t["B75+xe"]),
+            subLabel: () => i.intl.string(i.t.ZHg9Tc),
         },
-        { category: "social", label: () => a.intl.string(a.t.sxn7lR), subLabel: () => a.intl.string(a.t.l7sdzF) },
+        { category: "social", label: () => i.intl.string(i.t.sxn7lR), subLabel: () => i.intl.string(i.t.l7sdzF) },
         {
             category: "updates_and_announcements",
-            label: () => a.intl.string(a.t.EkxXhe),
-            subLabel: () => a.intl.string(a.t["8ba9Q7"]),
+            label: () => i.intl.string(i.t.EkxXhe),
+            subLabel: () => i.intl.string(i.t["8ba9Q7"]),
         },
-        { category: "tips", label: () => a.intl.string(a.t.jNrkrM), subLabel: () => a.intl.string(a.t["FF6/+B"]) },
+        { category: "tips", label: () => i.intl.string(i.t.jNrkrM), subLabel: () => i.intl.string(i.t["FF6/+B"]) },
         {
             category: "recommendations_and_events",
-            label: () => a.intl.string(a.t.E8g1l8),
-            subLabel: () => a.intl.string(a.t.X4JMt1),
+            label: () => i.intl.string(i.t.E8g1l8),
+            subLabel: () => i.intl.string(i.t.X4JMt1),
         },
-    ];
+    ],
+    r = l.map((t) => {
+        let { category: n } = t;
+        return n;
+    });
