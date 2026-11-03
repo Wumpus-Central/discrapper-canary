@@ -2837,7 +2837,7 @@ let sH = {
     [v.s9.HEADWEAR]: { icon: e6.R, label: es.t["7hB4kg"] },
     [v.s9.SHOES]: { icon: q.o, label: es.t.sMOuuS },
     [v.s9.WEARABLE]: { icon: eQ.GameControllerIcon, label: es.t.URyqtP },
-    [v.s9.AURA]: { icon: eq.CalendarIcon, label: ea.default["4N5p4D"] },
+    [v.s9.AURA]: { icon: eq.CalendarIcon, label: ea.default.y2Y1DD },
     [v.s9.ASSEMBLED]: { icon: aw.$, label: es.t.TdEu5X },
     [v.s9.FINALIZE]: { icon: sP.PaintPaletteIcon, label: ea.default.gmMD2I },
     [v.s9.SUMMARY]: { icon: tT.M, label: e1.default.y4M1na },
