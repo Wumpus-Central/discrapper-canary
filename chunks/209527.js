@@ -1571,7 +1571,7 @@ function au(e) {
             ((e.fillStyle = "black"),
             e.fillRect(0, 0, c.width, c.height),
             e.drawImage(d.current, 0, 0, c.width, c.height),
-            (e.fillStyle = el.qn),
+            (e.fillStyle = el.Kr),
             e.fillRect(0, 0, c.width, 1),
             e.fillRect(0, 0, 1, c.height),
             e.fillRect(0, c.height - 1, c.width, 1),
