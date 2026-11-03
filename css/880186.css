@@ -737,32 +737,4 @@ span.clanTag__07f91.isOverlay__07f91 {
     color: CanvasText
 }
 
-.streamPreviewContainer__07f91 {
-    align-items: center;
-    display: flex;
-    justify-content: center
-}
-
-.streamPreview__07f91 {
-    border: 1px solid var(--border-normal);
-    border-inline-end: none;
-    border-radius: var(--radius-xs) 0 0 var(--radius-xs);
-    box-sizing: border-box;
-    height: 18px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: 24px
-}
-
-.streamPreviewIcon__07f91 {
-    align-items: center;
-    align-self: stretch;
-    background-color: var(--badge-notification-background);
-    border: 1px solid var(--badge-notification-background);
-    border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
-    display: flex;
-    justify-content: center;
-    padding: 2px
-}
-
-/*# sourceMappingURL=880186.219ffbdfe7c9b9cd.css.map*/
+/*# sourceMappingURL=880186.b6a2d84352d3738a.css.map*/
