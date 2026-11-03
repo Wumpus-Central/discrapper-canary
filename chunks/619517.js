@@ -1,4 +1,4 @@
-i.d(t, { Ay: () => I, P8: () => L, bp: () => b, p4: () => f });
+i.d(t, { Ay: () => S, P8: () => f, bp: () => L, p4: () => R });
 var s = i(477900),
     a = i(582128),
     r = i(435558),
@@ -7,20 +7,21 @@ var s = i(477900),
     l = i(144165),
     d = i(945810),
     h = i(693875),
-    c = i(776231),
-    u = i(807393),
+    u = i(776231),
+    c = i(807393),
     g = i(964404),
     p = i(544180),
     m = i(174459),
     y = i(486020),
     v = i(515718),
-    A = i(652215),
-    _ = i(838541);
-let b = /\.gif($|\?|#)/i,
-    L = /\.webp($|\?|#)/i,
-    f = /\.avif($|\?|#)/i,
-    R = /\.png($|\?|#)/i;
-class I extends a.Component {
+    A = i(835517),
+    _ = i(652215),
+    b = i(838541);
+let L = /\.gif($|\?|#)/i,
+    f = /\.webp($|\?|#)/i,
+    R = /\.avif($|\?|#)/i,
+    I = /\.png($|\?|#)/i;
+class S extends a.Component {
     static visibilityObserver = new o.j({ threshold: 0.6 });
     static _lazyLoadTargets = new WeakMap();
     static _lazyLoadIO =
@@ -29,10 +30,10 @@ class I extends a.Component {
                   (e) => {
                       for (let t of e)
                           if (t.isIntersecting) {
-                              let e = I._lazyLoadTargets.get(t.target);
+                              let e = S._lazyLoadTargets.get(t.target);
                               null != e &&
-                                  (I._lazyLoadIO?.unobserve(t.target),
-                                  I._lazyLoadTargets.delete(t.target),
+                                  (S._lazyLoadIO?.unobserve(t.target),
+                                  S._lazyLoadTargets.delete(t.target),
                                   e._triggerLazyLoad());
                           }
                   },
@@ -52,25 +53,25 @@ class I extends a.Component {
         let { src: t, original: i, animated: s, srcIsAnimated: a } = e;
         return (
             s ||
-            b.test(null != i && "" !== i ? i : t) ||
-            (null != a && a && (L.test(null != i && "" !== i ? i : t) || f.test(null != i && "" !== i ? i : t)))
+            L.test(null != i && "" !== i ? i : t) ||
+            (null != a && a && (f.test(null != i && "" !== i ? i : t) || R.test(null != i && "" !== i ? i : t)))
         );
     }
     static isSrcPNG(e) {
         let { src: t } = e;
-        return R.test(t);
+        return I.test(t);
     }
     static isSrcAVIF(e) {
         let { src: t } = e;
-        return f.test(t);
+        return R.test(t);
     }
     static getFormatQuality(e) {
         let { src: t, original: i, animated: s, srcIsAnimated: a, freeze: r = !1 } = e,
             n = null,
             o = null;
         return (
-            y.QB && (r || !I.isAnimated({ src: t, original: i, animated: s, srcIsAnimated: a }))
-                ? ((n = "webp"), (I.isSrcPNG({ src: t }) || I.isSrcAVIF({ src: t })) && (o = "lossless"))
+            y.QB && (r || !S.isAnimated({ src: t, original: i, animated: s, srcIsAnimated: a }))
+                ? ((n = "webp"), (S.isSrcPNG({ src: t }) || S.isSrcAVIF({ src: t })) && (o = "lossless"))
                 : r && (n = "png"),
             { format: n, quality: o }
         );
@@ -80,17 +81,17 @@ class I extends a.Component {
             src: t,
             dimensions: { maxWidth: i, maxHeight: s, imageWidth: a, imageHeight: r },
             options: { srcIsAnimated: n, original: o, animated: l, sourceMetadata: d, freeze: h },
-            callback: u,
+            callback: c,
         } = e;
         if (1 === a && 1 === r) return;
-        let { format: g, quality: p } = I.getFormatQuality({
+        let { format: g, quality: p } = S.getFormatQuality({
                 src: t,
                 original: o,
                 animated: l,
                 srcIsAnimated: n,
                 freeze: h,
             }),
-            m = (0, c.AE)({
+            m = (0, u.AE)({
                 src: t,
                 width: a,
                 height: r,
@@ -101,18 +102,18 @@ class I extends a.Component {
                 quality: p,
             }),
             y = performance.now();
-        return (0, c.yt)(m, (e, i) => {
-            (I.trackLoadingCompleted({
+        return (0, u.yt)(m, (e, i) => {
+            (S.trackLoadingCompleted({
                 error: e,
                 imageData: i,
                 trigger: "PRELOAD",
                 startLoadingTime: y,
-                readyState: A.Rv1.READY,
+                readyState: _.Rv1.READY,
                 format: g,
                 quality: p,
                 imageProps: { src: t, width: a, height: r, sourceMetadata: d, original: o },
             }),
-                u?.(e, i));
+                c?.(e, i));
         });
     }
     static async trackLoadingCompleted(e) {
@@ -124,86 +125,91 @@ class I extends a.Component {
             readyState: r,
             format: o,
             quality: l,
-            imageProps: { src: d, height: h, width: c, original: y, sourceMetadata: v },
+            displayWidth: d = null,
+            displayHeight: h = null,
+            imageProps: { src: u, height: y, width: v, original: b, sourceMetadata: L },
         } = e;
-        if ((t && u.A.increment({ name: n.K.IMAGE_LOAD_ERROR }), !S.getConfig({ location: "lazy_image" }).enabled))
+        if ((t && c.A.increment({ name: n.K.IMAGE_LOAD_ERROR }), !O.getConfig({ location: "lazy_image" }).enabled))
             return;
-        let _ = await fetch(i.url).catch(() => void 0),
-            b = _?.headers?.get("content-length"),
-            L = null != b ? Number(b) : null,
-            f = Math.round(performance.now() - a);
-        m.default.track(A.HAw.IMAGE_LOADING_COMPLETED, {
-            duration_ms: f,
+        let f = await fetch(i.url).catch(() => void 0),
+            R = f?.headers?.get("content-length"),
+            I = null != R ? Number(R) : null,
+            S = Math.round(performance.now() - a);
+        m.default.track(_.HAw.IMAGE_LOADING_COMPLETED, {
+            duration_ms: S,
             requested_height: i.height,
             requested_width: i.width,
-            height: h,
-            width: c,
-            original_url: y,
-            url: d,
+            height: y,
+            width: v,
+            original_url: b,
+            url: u,
             requested_url: i.url,
             format: o,
             quality: l,
-            state: t ? A.Rv1.ERROR : r,
+            state: t ? _.Rv1.ERROR : r,
             data_saving_mode: g.Ay.dataSavingMode,
             low_quality_image_mode: g.Ay.dataSavingMode,
             trigger: s,
-            size: L,
-            message_id: v?.message?.id,
-            message_sent_timestamp: v?.message?.timestamp.getTime(),
+            size: I,
+            message_id: L?.message?.id,
+            message_sent_timestamp: L?.message?.timestamp.getTime(),
+            device_pixel_ratio: (0, A.A)(),
+            display_width: d,
+            display_height: h,
             connection_type: p.A.getType(),
             effective_connection_speed: p.A.getEffectiveConnectionSpeed(),
             service_provider: p.A.getServiceProvider(),
         });
     }
-    state = { readyState: A.Rv1.LOADING, hasMouseOver: !1, hasFocus: !1 };
+    state = { readyState: _.Rv1.LOADING, hasMouseOver: !1, hasFocus: !1 };
     startLoadingTime = performance.now();
     _cancellers = new Set();
     _unmounted = !1;
     _imageRef = a.createRef();
     constructor(e) {
         (super(e),
-            (0, c.LE)(this.getSrc(this.getRatio(), I.isAnimated(this.props))) && (this.state.readyState = A.Rv1.READY));
+            (0, u.LE)(this.getSrc(this.getRatio(), S.isAnimated(this.props))) && (this.state.readyState = _.Rv1.READY));
     }
     componentDidMount() {
         let { readyState: e } = this.state;
-        if (e === A.Rv1.LOADING)
-            if (O.getConfig({ location: "LazyImage_componentDidMount" }).enabled) {
+        if (e === _.Rv1.LOADING)
+            if (M.getConfig({ location: "LazyImage_componentDidMount" }).enabled) {
                 let e = this._imageRef.current;
-                null != e && null != I._lazyLoadIO
-                    ? (I._lazyLoadTargets.set(e, this), I._lazyLoadIO.observe(e))
-                    : this.loadImage(this.getSrc(this.getRatio(), I.isAnimated(this.props)), this.handleImageLoad);
-            } else this.loadImage(this.getSrc(this.getRatio(), I.isAnimated(this.props)), this.handleImageLoad);
-        I.isAnimated(this.props) && this.observeVisibility();
+                null != e && null != S._lazyLoadIO
+                    ? (S._lazyLoadTargets.set(e, this), S._lazyLoadIO.observe(e))
+                    : this.loadImage(this.getSrc(this.getRatio(), S.isAnimated(this.props)), this.handleImageLoad);
+            } else this.loadImage(this.getSrc(this.getRatio(), S.isAnimated(this.props)), this.handleImageLoad);
+        S.isAnimated(this.props) && this.observeVisibility();
     }
     componentDidUpdate(e) {
-        let t = I.isAnimated(this.props);
-        I.isAnimated(e) !== t && (t ? this.observeVisibility() : this.unobserveVisibility());
+        let t = S.isAnimated(this.props);
+        S.isAnimated(e) !== t && (t ? this.observeVisibility() : this.unobserveVisibility());
     }
     componentWillUnmount() {
         this._unmounted = !0;
         let e = this._imageRef.current;
-        (null != e && (I._lazyLoadIO?.unobserve(e), I._lazyLoadTargets.delete(e)),
-            I.isAnimated(this.props) && this.unobserveVisibility(),
+        (null != e && (S._lazyLoadIO?.unobserve(e), S._lazyLoadTargets.delete(e)),
+            S.isAnimated(this.props) && this.unobserveVisibility(),
             this._cancellers.forEach((e) => e()),
             this._cancellers.clear());
     }
     observeVisibility = () => {
-        I.visibilityObserver.observe(this, this._imageRef);
+        S.visibilityObserver.observe(this, this._imageRef);
     };
     unobserveVisibility = () => {
-        I.visibilityObserver.unobserve(this);
+        S.visibilityObserver.unobserve(this);
     };
     getSrc(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             { src: i, width: s, height: a, maxWidth: r, maxHeight: n, mediaLayoutType: o } = this.props,
-            { format: l, quality: d } = I.getFormatQuality({ ...this.props, freeze: t });
-        return (0, c.AE)({
+            { format: l, quality: d } = S.getFormatQuality({ ...this.props, freeze: t });
+        return (0, u.AE)({
             src: i,
             width: s,
             height: a,
             ratio: e,
-            maxWidth: o === _.dG.MOSAIC ? r : void 0,
-            maxHeight: o === _.dG.MOSAIC ? n : void 0,
+            maxWidth: o === b.dG.MOSAIC ? r : void 0,
+            maxHeight: o === b.dG.MOSAIC ? n : void 0,
             format: l,
             quality: d,
             animated: !t,
@@ -219,32 +225,40 @@ class I extends a.Component {
             mediaLayoutType: a,
             useFullWidth: r,
         } = this.props;
-        return a === _.dG.MOSAIC && r
+        return a === b.dG.MOSAIC && r
             ? (0, v.V)({ width: e, height: t, maxWidth: i, maxHeight: s })
             : (0, v.U8)({ width: e, height: t, maxWidth: i, maxHeight: s });
     }
     getType() {
         let { mediaLayoutType: e, responsive: t } = this.props;
-        return e ?? (t ? _.dG.RESPONSIVE : _.dG.STATIC);
+        return e ?? (t ? b.dG.RESPONSIVE : b.dG.STATIC);
+    }
+    getDisplayDimensions(e) {
+        let { width: t, height: i, minWidth: s, minHeight: a, maxWidth: n, maxHeight: o } = this.props;
+        return {
+            width: (0, r.clamp)(Math.round(t * e), s ?? 0, n ?? 1 / 0),
+            height: (0, r.clamp)(Math.round(i * e), a ?? 0, o ?? 1 / 0),
+        };
     }
     _triggerLazyLoad() {
         this._unmounted ||
-            this.state.readyState !== A.Rv1.LOADING ||
-            this.loadImage(this.getSrc(this.getRatio(), I.isAnimated(this.props)), this.handleImageLoad);
+            this.state.readyState !== _.Rv1.LOADING ||
+            this.loadImage(this.getSrc(this.getRatio(), S.isAnimated(this.props)), this.handleImageLoad);
     }
     loadImage(e, t) {
         let { width: i, height: s } = this.props;
         if (((this.startLoadingTime = performance.now()), 1 === i && 1 === s)) return;
-        let a = (0, c.yt)(e, (e, i) => {
+        let a = (0, u.yt)(e, (e, i) => {
             (null != a && this._cancellers.delete(a), t?.(e, i));
         });
         null != a && this._cancellers.add(a);
     }
     handleImageLoad = (e, t) => {
         this._unmounted ||
-            this.setState({ readyState: e ? A.Rv1.ERROR : A.Rv1.READY }, () => {
-                let { format: i, quality: s } = I.getFormatQuality(this.props);
-                I.trackLoadingCompleted({
+            this.setState({ readyState: e ? _.Rv1.ERROR : _.Rv1.READY }, () => {
+                let { format: i, quality: s } = S.getFormatQuality(this.props),
+                    a = this.getDisplayDimensions(this.getRatio());
+                S.trackLoadingCompleted({
                     error: e,
                     imageData: t,
                     trigger: this.props.trigger ?? "LOAD",
@@ -252,22 +266,24 @@ class I extends a.Component {
                     readyState: this.state.readyState,
                     format: i,
                     quality: s,
+                    displayWidth: a.width,
+                    displayHeight: a.height,
                     imageProps: this.props,
                 });
             });
     };
     onMouseEnter = (e) => {
-        I.isAnimated(this.props) && this.setState({ hasMouseOver: !0 });
+        S.isAnimated(this.props) && this.setState({ hasMouseOver: !0 });
         let { onMouseEnter: t } = this.props;
         t?.(e);
     };
     onMouseLeave = (e) => {
-        I.isAnimated(this.props) && this.setState({ hasMouseOver: !1 });
+        S.isAnimated(this.props) && this.setState({ hasMouseOver: !1 });
         let { onMouseLeave: t } = this.props;
         t?.(e);
     };
     onFocus = (e) => {
-        I.isAnimated(this.props) && this.setState({ hasFocus: !0 });
+        S.isAnimated(this.props) && this.setState({ hasFocus: !0 });
     };
     onBlur = (e) => {
         let { currentTarget: t, relatedTarget: i } = e;
@@ -291,57 +307,52 @@ class I extends a.Component {
                 zoomThumbnailPlaceholder: t,
                 onZoom: i,
                 shouldLink: a,
-                onContextMenu: n,
-                autoPlay: o,
-                original: d,
-                className: h,
-                imageClassName: c,
+                onContextMenu: r,
+                autoPlay: n,
+                original: o,
+                className: d,
+                imageClassName: h,
                 children: u,
-                animated: g,
-                shouldAnimate: p,
-                freeze: m,
-                width: y,
-                height: v,
-                minWidth: _,
-                minHeight: b,
-                maxWidth: L,
-                maxHeight: f,
-                onClick: R,
-                renderAccessory: S,
-                tabIndex: M,
-                limitResponsiveWidth: w,
-                useFullWidth: C,
-                placeholder: E,
-                placeholderVersion: z,
-                dataSafeSrc: T,
-                srcIsAnimated: D,
+                animated: c,
+                shouldAnimate: g,
+                freeze: p,
+                minWidth: m,
+                minHeight: y,
+                onClick: v,
+                renderAccessory: A,
+                tabIndex: b,
+                limitResponsiveWidth: L,
+                useFullWidth: f,
+                placeholder: R,
+                placeholderVersion: I,
+                dataSafeSrc: O,
+                srcIsAnimated: w,
             } = this.props,
-            { readyState: k, hasMouseOver: G, hasFocus: P } = this.state,
-            F = null != i,
-            V = this.getRatio(),
-            N = (0, r.clamp)(Math.round(y * V), _ ?? 0, L ?? 1 / 0),
-            x = (0, r.clamp)(Math.round(v * V), b ?? 0, f ?? 1 / 0),
-            q = O.getConfig({ location: "LazyImage_render" }).enabled,
-            j = {
+            { readyState: C, hasMouseOver: D, hasFocus: E } = this.state,
+            z = null != i,
+            T = this.getRatio(),
+            { width: k, height: G } = this.getDisplayDimensions(T),
+            P = M.getConfig({ location: "LazyImage_render" }).enabled,
+            F = {
                 alt: e,
-                readyState: k,
-                onContextMenu: n ?? void 0,
-                zoomable: F,
-                className: h,
-                imageClassName: c,
-                minWidth: _,
-                minHeight: b,
+                readyState: C,
+                onContextMenu: r ?? void 0,
+                zoomable: z,
+                className: d,
+                imageClassName: h,
+                minWidth: m,
+                minHeight: y,
                 mediaLayoutType: this.getType(),
-                limitResponsiveWidth: w,
-                useFullWidth: C,
-                tabIndex: M,
-                width: N,
-                height: x,
+                limitResponsiveWidth: L,
+                useFullWidth: f,
+                tabIndex: b,
+                width: k,
+                height: G,
                 src: "",
-                placeholder: E,
-                placeholderVersion: z,
-                dataSafeSrc: T,
-                srcIsAnimated: D,
+                placeholder: R,
+                placeholderVersion: I,
+                dataSafeSrc: O,
+                srcIsAnimated: w,
                 children:
                     null != u
                         ? (e) => {
@@ -354,37 +365,37 @@ class I extends a.Component {
                 onFocus: this.onFocus,
                 onBlur: this.onBlur,
             };
-        if (1 === j.width && 1 === j.height) return null;
+        if (1 === F.width && 1 === F.height) return null;
         switch (
-            ((F || null != R) && (j.onClick = this.onClick), a && (j.original = null != d && "" !== d ? d : j.src), k)
+            ((z || null != v) && (F.onClick = this.onClick), a && (F.original = null != o && "" !== o ? o : F.src), C)
         ) {
-            case A.Rv1.LOADING:
-                null != t && (j.src = t);
+            case _.Rv1.LOADING:
+                null != t && (F.src = t);
                 break;
-            case A.Rv1.READY:
-                if (I.isAnimated(this.props)) {
-                    j.onMouseLeave = this.onMouseLeave;
-                    let e = (o || G || P) && (null == p || p) && I.visibilityObserver.isVisible(this);
+            case _.Rv1.READY:
+                if (S.isAnimated(this.props)) {
+                    F.onMouseLeave = this.onMouseLeave;
+                    let e = (n || D || E) && (null == g || g) && S.visibilityObserver.isVisible(this);
                     (e
-                        ? ((j.src = this.getSrc(V, m)), (j.renderAccessory = S))
-                        : ((j.src = this.getSrc(V, m || !g || !o)), (j.renderAccessory = this.renderAccessory)),
+                        ? ((F.src = this.getSrc(T, p)), (F.renderAccessory = A))
+                        : ((F.src = this.getSrc(T, p || !c || !n)), (F.renderAccessory = this.renderAccessory)),
                         null != u &&
-                            (j.children = (t) => {
+                            (F.children = (t) => {
                                 let { src: i, size: s, alt: a, mediaLayoutType: r } = t;
                                 return u({ src: i, size: s, animating: e, alt: a, mediaLayoutType: r });
                             }));
-                } else j.src = this.getSrc(V);
+                } else F.src = this.getSrc(T);
         }
-        return (0, s.jsx)(l._, { disableLoadingSpinner: q, ref: this._imageRef, ...j });
+        return (0, s.jsx)(l._, { disableLoadingSpinner: P, ref: this._imageRef, ...F });
     }
 }
-let S = (0, d.mj)({
+let O = (0, d.mj)({
         name: "2026-03-image-load-metrics",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !1 }, 2: { enabled: !0 } },
     }),
-    O = (0, d.mj)({
+    M = (0, d.mj)({
         name: "2026-02-lazy-load-all-images",
         kind: "user",
         defaultConfig: { enabled: !1 },
