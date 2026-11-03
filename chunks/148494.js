@@ -476,6 +476,7 @@ let ez = {
                 jumpType: c,
                 avoidInitialScroll: u,
                 onJumpComplete: _,
+                nitroPrefetchKey: E,
             } = e;
             return (
                 "string" == typeof a && eX.trackJump(t, n, a, s),
@@ -486,6 +487,7 @@ let ez = {
                     isPreload: l,
                     skipLocalFetch: d,
                     avoidInitialScroll: u,
+                    nitroPrefetchKey: E,
                 })
             );
         },
@@ -505,51 +507,56 @@ let ez = {
             if (i.body.length > 0) return (0, V.rh)(i.body[0]);
         },
         fetchMessages(e) {
-            let {
-                    channelId: t,
-                    before: n,
-                    after: i,
-                    limit: r,
-                    jump: a,
-                    focus: l,
-                    isPreload: d,
-                    skipLocalFetch: u,
-                    truncate: _,
-                    forICYMI: E,
-                    avoidInitialScroll: A,
-                    feature: h,
-                    fetchKey: f,
+            let t,
+                {
+                    channelId: n,
+                    before: i,
+                    after: r,
+                    limit: a,
+                    jump: l,
+                    focus: d,
+                    isPreload: u,
+                    skipLocalFetch: _,
+                    truncate: E,
+                    forICYMI: A,
+                    avoidInitialScroll: h,
+                    feature: f,
+                    fetchKey: p,
+                    nitroPrefetchKey: m,
                 } = e,
-                p = $.A.getChannel(t),
-                m = C.A.isConnectedOrOverlay(),
-                T = Date.now();
-            if (null != p && p.type === D.rbe.GUILD_STORE) return !1;
+                T = $.A.getChannel(n),
+                g = C.A.isConnectedOrOverlay(),
+                S = Date.now();
+            if (null != T && T.type === D.rbe.GUILD_STORE) return !1;
             if (
-                t === I.E ||
-                (ej.log(`Fetching messages for ${t} between ${i} and ${n}. jump=${JSON.stringify(a)}`),
+                n === I.E ||
+                (ej.log(`Fetching messages for ${n} between ${r} and ${i}. jump=${JSON.stringify(l)}`),
                 eX._tryFetchMessagesCached({
-                    channelId: t,
-                    before: n,
-                    after: i,
-                    limit: r,
-                    jump: a,
-                    focus: l,
-                    truncate: _,
+                    channelId: n,
+                    before: i,
+                    after: r,
+                    limit: a,
+                    jump: l,
+                    focus: d,
+                    truncate: E,
                 }))
             )
                 return;
-            (eg.A.fetchMessages.recordStart(), F.A.recordChannelFetchStart(t, f ?? T, n, i, r));
-            let g = a ?? void 0;
-            null == g && null != l && (g = { ...l });
-            let S = c.A.getOrCreate(t).loadStart(g);
-            (c.A.commit(S), o.h.dispatch({ type: "LOAD_MESSAGES" }));
-            let N = g?.messageId,
-                O = new eK();
+            (eg.A.fetchMessages.recordStart(), F.A.recordChannelFetchStart(n, p ?? S, i, r, a));
+            let N = l ?? void 0;
+            null == N && null != d && (N = { ...d });
+            let O = c.A.getOrCreate(n).loadStart(N);
+            (c.A.commit(O), o.h.dispatch({ type: "LOAD_MESSAGES" }));
+            let R = N?.messageId;
+            null != m && (R = void 0);
+            let L = new eK();
             return (
-                u || this.fetchLocalMessages(t, f ?? T, n, i, r, O),
+                _ || this.fetchLocalMessages(n, p ?? S, i, r, a, L),
+                null != m && (t = { prefetchKey: m }),
                 s.Bo.get({
-                    url: D.Rsh.MESSAGES(t),
-                    query: { before: n, after: i, limit: r, around: N, preload: d, feature: h },
+                    url: D.Rsh.MESSAGES(n),
+                    query: { before: i, after: r, limit: a, around: R, preload: u, feature: f },
+                    headers: t,
                     retries: 2,
                     oldFormErrors: !0,
                     rejectWithError: (0, s.fT)(),
@@ -557,57 +564,57 @@ let ez = {
                     (e) => (
                         eg.A.fetchMessages.recordEnd(),
                         eg.A.dispatchMessages.measure(() => {
-                            let s = e.body,
-                                l = null != n,
-                                d = null != i,
-                                c = null == n && null == i,
-                                u = null != N || (s.length === r && (l || c)),
-                                h = null != N || (d && s.length === r);
-                            if (null != N) {
-                                let e = Math.floor(r / 2),
-                                    n = e + (r % 2),
-                                    i = [
-                                        N,
-                                        ...s.map((e) => {
+                            let t = e.body,
+                                s = null != i,
+                                d = null != r,
+                                c = null == i && null == r,
+                                u = null != R || (t.length === a && (s || c)),
+                                _ = null != R || (d && t.length === a);
+                            if (null != R) {
+                                let e = Math.floor(a / 2),
+                                    i = e + (a % 2),
+                                    r = [
+                                        R,
+                                        ...t.map((e) => {
                                             let { id: t } = e;
                                             return t;
                                         }),
                                     ]
                                         .filter((e, t, n) => n.indexOf(e) === t)
                                         .sort(eG.default.compare)
-                                        .indexOf(N);
-                                if ((i < n - 1 && (u = !1), s.length - i < e && (h = !1), h && s.length > 0)) {
-                                    let e = eD.Ay.lastMessageId(t);
-                                    s[0].id === e && (h = !1);
+                                        .indexOf(R);
+                                if ((r < i - 1 && (u = !1), t.length - r < e && (_ = !1), _ && t.length > 0)) {
+                                    let e = eD.Ay.lastMessageId(n);
+                                    t[0].id === e && (_ = !1);
                                 }
                             }
-                            (ej.log(`Fetched ${s.length} messages for ${t} isBefore:${l} isAfter:${d}`),
-                                O.markComplete(),
+                            (ej.log(`Fetched ${t.length} messages for ${n} isBefore:${s} isAfter:${d}`),
+                                L.markComplete(),
                                 o.h.dispatch({
                                     type: "LOAD_MESSAGES_SUCCESS",
-                                    channelId: t,
-                                    messages: s,
-                                    isBefore: l,
+                                    channelId: n,
+                                    messages: t,
+                                    isBefore: s,
                                     isAfter: d,
-                                    before: n,
-                                    after: i,
+                                    before: i,
+                                    after: r,
                                     hasMoreBefore: u,
-                                    hasMoreAfter: h,
-                                    limit: r,
-                                    jump: a,
-                                    forICYMI: E,
-                                    isStale: !m || C.A.lastTimeConnectedChanged() >= T,
-                                    truncate: _,
-                                    avoidInitialScroll: A,
-                                    requestStartTime: T,
+                                    hasMoreAfter: _,
+                                    limit: a,
+                                    jump: l,
+                                    forICYMI: A,
+                                    isStale: !g || C.A.lastTimeConnectedChanged() >= S,
+                                    truncate: E,
+                                    avoidInitialScroll: h,
+                                    requestStartTime: S,
                                 }),
-                                F.A.recordChannelFetchedNetwork(t, f ?? T, n, i, r, s));
+                                F.A.recordChannelFetchedNetwork(n, p ?? S, i, r, a, t));
                         }),
                         !0
                     ),
                     () => (
-                        ej.log(`Failed to fetch messages for ${t}`),
-                        o.h.dispatch({ type: "LOAD_MESSAGES_FAILURE", channelId: t }),
+                        ej.log(`Failed to fetch messages for ${n}`),
+                        o.h.dispatch({ type: "LOAD_MESSAGES_FAILURE", channelId: n }),
                         !1
                     ),
                 )

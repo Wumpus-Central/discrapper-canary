@@ -40,28 +40,30 @@ function P(e) {
         skipLocalFetch: A,
         avoidInitialScroll: h,
         fetchKey: f,
+        useNativeMessagePrefetch: I,
     } = e;
     if (null == n || (0, y.jq)(n)) return;
-    let I = m.A.getChannel(n);
-    if (I?.type === L.rbe.GUILD_STORE || (I?.type != null && L.kvI.GUILD_THREADS_ONLY.has(I.type))) return;
-    let p = c.A.getOrCreate(n);
-    (p.some(O.$r) &&
-        (v.log("Found expired attachment link, clearing messages"), c.A.clear(n), (p = c.A.getOrCreate(n))),
-        null != p.jumpTargetId &&
+    let p,
+        S = m.A.getChannel(n);
+    if (S?.type === L.rbe.GUILD_STORE || (S?.type != null && L.kvI.GUILD_THREADS_ONLY.has(S.type))) return;
+    let N = c.A.getOrCreate(n);
+    (N.some(O.$r) &&
+        (v.log("Found expired attachment link, clearing messages"), c.A.clear(n), (N = c.A.getOrCreate(n))),
+        null != N.jumpTargetId &&
             null == a &&
-            ((p = p.mutate({ jumpTargetId: null, jumped: !1, jumpType: o.vx.ANIMATED })), c.A.commit(p)),
-        null != p.focusTargetId && null == a && ((p = p.mutate({ focusTargetId: null })), c.A.commit(p)));
-    let S = s;
+            ((N = N.mutate({ jumpTargetId: null, jumped: !1, jumpType: o.vx.ANIMATED })), c.A.commit(N)),
+        null != N.focusTargetId && null == a && ((N = N.mutate({ focusTargetId: null })), c.A.commit(N)));
+    let C = s;
     if (
-        (!d || E.A.isConnected() || p.loadingMore
-            ? p.loadingMore || (p.ready && !p.cached)
-                ? null != a && (S = !0)
-                : (null == t || null != T.A.getGuild(t)) && (S = !0)
-            : (S = !0),
-        (0, u.A)(n) && g.Ay.hasUnread(n) && (S = !0),
-        S)
+        (!d || E.A.isConnected() || N.loadingMore
+            ? N.loadingMore || (N.ready && !N.cached)
+                ? null != a && (C = !0)
+                : (null == t || null != T.A.getGuild(t)) && (C = !0)
+            : (C = !0),
+        (0, u.A)(n) && g.Ay.hasUnread(n) && (C = !0),
+        C)
     )
-        if ((c.A.commit(p.mutate({ loadingMore: !0 })), null != a))
+        if ((c.A.commit(N.mutate({ loadingMore: !0 })), null != a))
             l.A.jumpToMessage({
                 channelId: n,
                 messageId: a,
@@ -70,43 +72,34 @@ function P(e) {
                 skipLocalFetch: A,
                 jumpType: _,
                 avoidInitialScroll: h,
+                nitroPrefetchKey: p,
             });
-        else {
-            if (
-                I?.isThread() &&
-                (function (e) {
-                    if (g.Ay.hasOpenedThread(e) || (null == i && (i = r.w.get(U, {}) ?? {}), e in i)) return !1;
-                    i[e] = Date.now();
-                    let t = Date.now() - M;
-                    for (let e in i) i[e] < t && delete i[e];
-                    return (r.w.set(U, i), !0);
-                })(n)
-            )
-                return (
-                    v.log(`Jumping to start of thread ${I.id}`),
-                    l.A.fetchMessages({
-                        channelId: n,
-                        limit: (0, R.h)("MessageManager.threadStart"),
-                        jump: { messageId: n, flash: !1 },
-                        isPreload: d,
-                        skipLocalFetch: A,
-                        avoidInitialScroll: h,
-                        fetchKey: f,
-                    })
-                );
-            if (!(I?.isThread() && g.Ay.hasTrackedUnread(I.id)) || p.ready)
-                return l.A.fetchMessages({
+        else if (
+            S?.isThread() &&
+            (function (e) {
+                if (g.Ay.hasOpenedThread(e) || (null == i && (i = r.w.get(U, {}) ?? {}), e in i)) return !1;
+                i[e] = Date.now();
+                let t = Date.now() - M;
+                for (let e in i) i[e] < t && delete i[e];
+                return (r.w.set(U, i), !0);
+            })(n)
+        )
+            return (
+                v.log(`Jumping to start of thread ${S.id}`),
+                l.A.fetchMessages({
                     channelId: n,
-                    limit: (0, R.h)("MessageManager.initialFetch"),
+                    limit: (0, R.h)("MessageManager.threadStart"),
+                    jump: { messageId: n, flash: !1 },
                     isPreload: d,
                     skipLocalFetch: A,
-                    jump: { jumpType: o.vx.ANIMATED },
                     avoidInitialScroll: h,
                     fetchKey: f,
-                });
-            let e = g.Ay.getTrackedAckMessageId(I.id);
+                })
+            );
+        else if (S?.isThread() && g.Ay.hasTrackedUnread(S.id) && !N.ready) {
+            let e = g.Ay.getTrackedAckMessageId(S.id);
             return (
-                v.log(`Jumping to most recent message in thread ${I.id} - ${e}`),
+                v.log(`Jumping to most recent message in thread ${S.id} - ${e}`),
                 l.A.fetchMessages({
                     channelId: n,
                     limit: (0, R.h)("MessageManager.threadUnread"),
@@ -117,6 +110,18 @@ function P(e) {
                     fetchKey: f,
                 })
             );
+        } else {
+            let e = null != p ? L.d7Q : (0, R.h)("MessageManager.initialFetch");
+            return l.A.fetchMessages({
+                channelId: n,
+                limit: e,
+                isPreload: d,
+                skipLocalFetch: A,
+                jump: { jumpType: o.vx.ANIMATED },
+                avoidInitialScroll: h,
+                fetchKey: f,
+                nitroPrefetchKey: p,
+            });
         }
 }
 let M = 90 * C.A.Millis.DAY,

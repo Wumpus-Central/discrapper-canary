@@ -276,7 +276,7 @@ let r = {
             "THREAD_DELETE",
             "CHANNEL_RTC_JUMP_TO_VOICE_CHANNEL_MESSAGE",
         ],
-        inlineRequire: () => n(547).A,
+        inlineRequire: () => n(221047).A,
         neverLoadBeforeConnectionOpen: !0,
         hasStoreChangeListeners: !0,
         loadRightBeforeConnectionOpen: !0,
