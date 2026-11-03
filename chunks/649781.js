@@ -2703,6 +2703,7 @@ let ig = r.memo(function (e) {
                   "data-drop-hovering": $,
                   children: (0, i.jsx)(H.Q, {
                       selected: _,
+                      maskShape: $ || W,
                       upperBadge: P,
                       lowerBadge: M,
                       lowerBadgeSize: w,
