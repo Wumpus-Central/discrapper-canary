@@ -381,13 +381,19 @@
     inset-inline-end: var(--space-32)
 }
 
-.save__4064a {
+.labeled__4064a {
     gap: var(--space-8);
     height: 48px;
     padding-inline: var(--space-16)
 }
 
-.saveText__4064a {
+.filled__4064a {
+    background-color: var(--custom-checkpoint-primary);
+    border-color: var(--black);
+    color: var(--black)
+}
+
+.label__4064a {
     font-size: 18px;
     line-height: 24px;
     text-transform: uppercase
@@ -446,4 +452,4 @@
     gap: var(--space-32)
 }
 
-/*# sourceMappingURL=691548.36d935e35e107581.css.map*/
+/*# sourceMappingURL=691548.6a925a3bae604b0b.css.map*/
