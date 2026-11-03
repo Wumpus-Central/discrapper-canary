@@ -1,43 +1,42 @@
-n.d(t, { w: () => O });
+n.d(t, { w: () => C });
 var i,
     r = n(477900),
     a = n(582128),
-    s = n(223145),
-    l = n.n(s),
-    o = n(971940),
-    d = n(941861),
-    c = n(844222),
-    u = n(432816),
-    _ = n(282802),
-    E = n.n(_);
-function A(e) {
+    s = n(556360),
+    l = n(971940),
+    o = n(941861),
+    d = n(844222),
+    c = n(432816),
+    u = n(282802),
+    _ = n.n(u);
+function E(e) {
     let t = {};
-    for (let n of Object.keys(e)) t[E()(n)] = e[n];
+    for (let n of Object.keys(e)) t[_()(n)] = e[n];
     return t;
 }
-let h = A(o.Fit),
-    f = A(o.Alignment);
+let A = E(l.Fit),
+    h = E(l.Alignment);
 (n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(321073));
-var I = n(51906),
-    p = (((i = {}).Disabled = "disabled"), (i.Loading = "loading"), (i.Loaded = "loaded"), (i.Error = "error"), i);
-let m = new Map();
-function T(e) {
+var f = n(51906),
+    I = (((i = {}).Disabled = "disabled"), (i.Loading = "loading"), (i.Loaded = "loaded"), (i.Error = "error"), i);
+let p = new Map();
+function m(e) {
     e.listeners.forEach((e) => e());
 }
-function g(e, t) {
+function T(e, t) {
     (null != t.removalTimer && clearTimeout(t.removalTimer),
         (t.removalTimer = setTimeout(() => {
             var n, i;
             return (
                 (n = e),
                 void (((i = t).removalTimer = null),
-                i.consumers > 0 || m.get(n) !== i || (m.delete(n), i.riveFile.cleanup()))
+                i.consumers > 0 || p.get(n) !== i || (p.delete(n), i.riveFile.cleanup()))
             );
         }, 3e4)));
 }
-let S = { status: "disabled", riveFile: null },
-    N = { status: "loading", riveFile: null };
-function C(e) {
+let g = { status: "disabled", riveFile: null },
+    S = { status: "loading", riveFile: null };
+function N(e) {
     let { className: t, style: n } = e;
     return (0, r.jsx)("div", {
         className: t,
@@ -45,9 +44,9 @@ function C(e) {
         "aria-hidden": !0,
     });
 }
-function O(e) {
+function C(e) {
     let t = (function () {
-            let e = (0, u.G9)().experiments?.enabledExperiments,
+            let e = (0, c.G9)().experiments?.enabledExperiments,
                 [t] = a.useState(() => e?.includes("rive-web-perf") ?? !1);
             return t;
         })(),
@@ -56,19 +55,19 @@ function O(e) {
             return (a.useLayoutEffect(() => {
                 if (null == e) return;
                 let t = (function (e) {
-                    let t = m.get(e);
+                    let t = p.get(e);
                     if (null != t) return t;
-                    let n = new o.RiveFile({ buffer: e }),
+                    let n = new l.RiveFile({ buffer: e }),
                         i = { riveFile: n, status: "loading", consumers: 0, removalTimer: null, listeners: new Set() };
                     return (
-                        n.on(o.EventType.Load, () => {
-                            (n.getInstance(), (i.status = "loaded"), 0 === i.consumers && g(e, i), T(i));
+                        n.on(l.EventType.Load, () => {
+                            (n.getInstance(), (i.status = "loaded"), 0 === i.consumers && T(e, i), m(i));
                         }),
-                        n.on(o.EventType.LoadError, () => {
-                            ((i.status = "error"), m.get(e) === i && m.delete(e), T(i));
+                        n.on(l.EventType.LoadError, () => {
+                            ((i.status = "error"), p.get(e) === i && p.delete(e), m(i));
                         }),
-                        m.set(e, i),
-                        (0, I.yO)(n.init()),
+                        p.set(e, i),
+                        (0, f.yO)(n.init()),
                         i
                     );
                 })(e);
@@ -89,30 +88,30 @@ function O(e) {
                     () => {
                         (t.listeners.delete(i),
                             (t.consumers -= 1),
-                            0 === t.consumers && "loaded" === t.status && g(e, t));
+                            0 === t.consumers && "loaded" === t.status && T(e, t));
                     }
                 );
             }, [e]),
             null == e)
-                ? S
+                ? g
                 : null == t || t.buffer !== e
-                  ? N
+                  ? S
                   : t.value;
         })(t && null == e.assetLoader ? e.buffer : null);
-    return n.status === p.Loading
-        ? (0, r.jsx)(C, { className: e.className, style: e.style })
-        : (0, r.jsx)(R, { ...e, isRiveWebPerfEnabled: t, sharedRiveFile: n.riveFile ?? void 0 });
+    return n.status === I.Loading
+        ? (0, r.jsx)(N, { className: e.className, style: e.style })
+        : (0, r.jsx)(O, { ...e, isRiveWebPerfEnabled: t, sharedRiveFile: n.riveFile ?? void 0 });
 }
-function R(e) {
+function O(e) {
     let {
             isRiveWebPerfEnabled: t,
             sharedRiveFile: n,
             buffer: i,
             autoplay: s = !0,
-            className: l,
+            className: u,
             fit: _,
             alignment: E,
-            style: A,
+            style: f,
             eventTargetRef: I,
             artboard: p,
             withReducedMotion: m = "halt",
@@ -129,10 +128,10 @@ function R(e) {
             stateMachine: v,
             artboardStateMachines: b,
         } = e,
-        P = a.useContext(c.C),
-        M = (0, d.Rs)(),
-        U = (0, u.G9)().isWindowFocused?.() ?? M,
-        [w, G] = (0, d.Xb)(3e4),
+        P = a.useContext(d.C),
+        M = (0, o.Rs)(),
+        U = (0, c.G9)().isWindowFocused?.() ?? M,
+        [w, G] = (0, o.Xb)(3e4),
         [x, k] = a.useState(void 0),
         F = a.useMemo(() => {
             if (t && null != b) return b[p ?? ""];
@@ -140,7 +139,7 @@ function R(e) {
         B = null != F,
         V = null != S || null != O,
         H = a.useRef(null),
-        { rive: j, RiveComponent: W } = (0, o.useRive)(
+        { rive: j, RiveComponent: W } = (0, l.useRive)(
             {
                 eventTarget: I?.current,
                 ...(null != n ? { riveFile: n } : { buffer: i }),
@@ -150,9 +149,9 @@ function R(e) {
                 autoBind: !!B || !!V || void 0,
                 enableAutoSleep: t,
                 useOffscreenRenderer: !0,
-                layout: new o.Layout({
-                    fit: null != _ ? h[_] : o.Fit.Cover,
-                    alignment: null != E ? f[E] : o.Alignment.Center,
+                layout: new l.Layout({
+                    fit: null != _ ? A[_] : l.Fit.Cover,
+                    alignment: null != E ? h[E] : l.Alignment.Center,
                 }),
                 isTouchScrollEnabled: C,
                 listenOnDocumentBody: R,
@@ -223,14 +222,14 @@ function R(e) {
                     artboard: i,
                     artboardProperties: r,
                     dataBinding: s,
-                    dynamicDataBinding: l,
-                    onDataBindingChange: d,
+                    dynamicDataBinding: o,
+                    onDataBindingChange: u,
                 } = e,
-                _ = l ?? s,
-                E = (0, o.useViewModel)(n);
-            (0, o.useViewModelInstance)(E);
-            let { theme: A, saturation: h } = (0, u.G9)(),
-                { highContrastModeEnabled: f } = a.useContext(c.C),
+                _ = o ?? s,
+                E = (0, l.useViewModel)(n);
+            (0, l.useViewModelInstance)(E);
+            let { theme: A, saturation: h } = (0, c.G9)(),
+                { highContrastModeEnabled: f } = a.useContext(d.C),
                 I = a.useRef({}),
                 p =
                     ((t = a.useRef({})),
@@ -247,7 +246,7 @@ function R(e) {
                             }
                             if (n?.aborted) return Promise.resolve(null);
                             let r = await i.arrayBuffer(),
-                                a = await (0, o.decodeImage)(new Uint8Array(r));
+                                a = await (0, l.decodeImage)(new Uint8Array(r));
                             return ((t.current[e] = a), a);
                         }
                     }, [])),
@@ -282,9 +281,9 @@ function R(e) {
                 rive: n,
                 artboard: i,
                 artboardProperties: r,
-                dynamicDataBinding: l,
+                dynamicDataBinding: o,
                 dataBinding: s,
-                onDataBindingChange: d,
+                onDataBindingChange: u,
             }),
                 a.useEffect(() => {
                     let e = new AbortController();
@@ -385,11 +384,11 @@ function R(e) {
                     clearTimeout(H.current);
                 }
                 return (
-                    j.on(o.EventType.Play, e),
-                    j.on(o.EventType.Pause, t),
-                    j.on(o.EventType.Stop, t),
+                    j.on(l.EventType.Play, e),
+                    j.on(l.EventType.Pause, t),
+                    j.on(l.EventType.Stop, t),
                     () => {
-                        (j.off(o.EventType.Play, e), j.off(o.EventType.Pause, t), j.off(o.EventType.Stop, t));
+                        (j.off(l.EventType.Play, e), j.off(l.EventType.Pause, t), j.off(l.EventType.Stop, t));
                     }
                 );
             }
@@ -434,13 +433,13 @@ function R(e) {
                     ((Y.current = t.data),
                     t.data > 0 &&
                         ("halt" === m && P.reducedMotion.enabled && j.isPlaying && j.pause(),
-                        j.off(o.EventType.Advance, e)));
+                        j.off(l.EventType.Advance, e)));
             };
             return (
-                j.on(o.EventType.Advance, e),
+                j.on(l.EventType.Advance, e),
                 s && j.play(),
                 () => {
-                    j.off(o.EventType.Advance, e);
+                    j.off(l.EventType.Advance, e);
                 }
             );
         }, [j, P.reducedMotion.enabled, m, s]),
@@ -448,9 +447,9 @@ function R(e) {
             G();
         }, [G, p, _, E, S, O, g]),
         !(function (e) {
-            let { rive: t, autoplay: n, isRiveWebPerfEnabled: i, isFocused: r, isUserIdle: s, lastFrameRef: l } = e,
+            let { rive: t, autoplay: n, isRiveWebPerfEnabled: i, isFocused: r, isUserIdle: s, lastFrameRef: d } = e,
                 c = i ? t?.canvas : null,
-                u = (0, d.Cz)(c),
+                u = (0, o.Cz)(c),
                 _ = r && !s && (!i || u),
                 E = a.useRef(!1),
                 A = a.useRef(null);
@@ -460,23 +459,23 @@ function R(e) {
                 let e = null;
                 return (
                     !_ && E.current && t.isPlaying
-                        ? l.current > 0
+                        ? d.current > 0
                             ? t.pause()
                             : ((e = (n) => {
                                   "number" == typeof n.data &&
                                       !(n.data <= 0) &&
-                                      (null != e && t.off(o.EventType.Advance, e), t.isPlaying && t.pause());
+                                      (null != e && t.off(l.EventType.Advance, e), t.isPlaying && t.pause());
                               }),
-                              t.on(o.EventType.Advance, e))
+                              t.on(l.EventType.Advance, e))
                         : _ && !t.isPlaying && E.current && t.play(),
                     () => {
-                        (null != e && t.off(o.EventType.Advance, e),
+                        (null != e && t.off(l.EventType.Advance, e),
                             null != t && _ && (E.current = null != t.frameRequestId || !0 === t.isAutoSleeping));
                     }
                 );
-            }, [t, _, l, n, i]);
+            }, [t, _, d, n, i]);
         })({ rive: j, autoplay: s, isRiveWebPerfEnabled: t, isFocused: U, isUserIdle: w, lastFrameRef: Y }),
-        (0, r.jsx)(W, { className: l, style: A, "aria-hidden": !0 })
+        (0, r.jsx)(W, { className: u, style: f, "aria-hidden": !0 })
     );
 }
-o.RuntimeLoader.setWasmUrl(l());
+l.RuntimeLoader.setWasmUrl(s);

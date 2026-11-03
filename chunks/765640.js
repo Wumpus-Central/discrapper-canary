@@ -307,7 +307,7 @@ async function Module(moduleArg = {}) {
     function findWasmBinary() {
         return Module.locateFile
             ? locateFile("web-tree-sitter.wasm")
-            : new URL(__webpack_require__(217541), __webpack_require__.b).href;
+            : new URL(__webpack_require__(103810), __webpack_require__.b).href;
     }
     function getBinarySync(e) {
         if (e == wasmBinaryFile && wasmBinary) return new Uint8Array(wasmBinary);

@@ -490,10 +490,29 @@
     padding-inline: calc(var(--space-48) + var(--space-8))
 }
 
-.attribution__94b2c {
+.footer__94b2c {
+    align-items: end;
+    inset-inline: var(--space-32);
     bottom: var(--space-32);
-    inset-inline-end: var(--space-32);
+    display: grid;
+    gap: var(--space-16);
+    grid-template-columns: 1fr auto 1fr;
     position: absolute
+}
+
+.disclaimer__94b2c {
+    grid-column: 2
+}
+
+.link__94b2c {
+    color: inherit;
+    text-decoration: underline
+}
+
+.attribution__94b2c {
+    grid-column: 3;
+    justify-self: end;
+    white-space: nowrap
 }
 
 .startText__94b2c {
@@ -1374,4 +1393,4 @@
     top: var(--space-32)
 }
 
-/*# sourceMappingURL=937139.ea81b11e3f36fe38.css.map*/
+/*# sourceMappingURL=937139.beba737c403d93c8.css.map*/

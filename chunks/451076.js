@@ -1,4 +1,4 @@
+t.d(n, { J: () => r });
 function r() {
     return null;
 }
-n.d(t, { J: () => r });

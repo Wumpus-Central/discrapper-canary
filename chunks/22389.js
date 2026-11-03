@@ -56,7 +56,7 @@ let n = async function () {
     var A = console.log.bind(console),
         M = console.error.bind(console),
         x = !1;
-    function O() {
+    function N() {
         if (!l?.buffer?.resizable) {
             var e = P.buffer;
             ((l = new Int8Array(e)),
@@ -71,7 +71,7 @@ let n = async function () {
                 (m = new BigUint64Array(e)));
         }
     }
-    function R(e) {
+    function O(e) {
         throw (
             n.onAbort?.(e),
             (e = `Aborted(${e})`),
@@ -81,7 +81,7 @@ let n = async function () {
             new WebAssembly.RuntimeError(e)
         );
     }
-    async function N(e) {
+    async function j(e) {
         if (!s)
             try {
                 var r = await o(e);
@@ -90,15 +90,15 @@ let n = async function () {
         if (a) return a(e);
         throw "both async and sync fetching of the wasm failed";
     }
-    async function W(e, r) {
+    async function R(e, r) {
         try {
-            var t = await N(e);
+            var t = await j(e);
             return await WebAssembly.instantiate(t, r);
         } catch (e) {
-            (M(`failed to asynchronously prepare wasm: ${e}`), R(e));
+            (M(`failed to asynchronously prepare wasm: ${e}`), O(e));
         }
     }
-    async function j(e, r, t) {
+    async function W(e, r, t) {
         if (!e)
             try {
                 var n = fetch(r, { credentials: "same-origin" });
@@ -106,7 +106,7 @@ let n = async function () {
             } catch (e) {
                 (M(`wasm streaming compile failed: ${e}`), M("falling back to ArrayBuffer instantiation"));
             }
-        return W(r, t);
+        return R(r, t);
     }
     async function z() {
         function e(e) {
@@ -121,7 +121,7 @@ let n = async function () {
                 (T = r.ma),
                 (P = r.da),
                 (C = r.ga),
-                O(),
+                N(),
                 S
             );
         }
@@ -136,9 +136,9 @@ let n = async function () {
                       var e;
                       return ((e = "libdave.wasm"), n.locateFile ? n.locateFile(e, F) : F + e);
                   }
-                  return new URL(t(508678), t.b).href;
+                  return new URL(t(264219), t.b).href;
               })()),
-              e((await j(s, i, r)).instance));
+              e((await W(s, i, r)).instance));
     }
     var B = (e) => {
             for (; e.length > 0;) e.shift()(n);
@@ -1340,7 +1340,7 @@ let n = async function () {
                 let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                 ((r.flags ??= 0),
                     (r.encoding ??= "binary"),
-                    "utf8" !== r.encoding && "binary" !== r.encoding && R(`Invalid encoding type "${r.encoding}"`));
+                    "utf8" !== r.encoding && "binary" !== r.encoding && O(`Invalid encoding type "${r.encoding}"`));
                 var t = ey.open(e, r.flags),
                     n = ey.stat(e).size,
                     o = new Uint8Array(n);
@@ -1559,7 +1559,7 @@ let n = async function () {
             forceLoadFile(e) {
                 if (e.isDevice || e.isFolder || e.link || e.contents) return !0;
                 if (globalThis.XMLHttpRequest)
-                    R(
+                    O(
                         "Lazy loading should have been performed (contents set) in createLazyFile, but it was not. Lazy loading only works in web workers. Use --embed-file or --preload-file in emcc on the main thread.",
                     );
                 else
@@ -1571,7 +1571,7 @@ let n = async function () {
             },
             createLazyFile(e, r, t, n, o) {
                 if (globalThis.XMLHttpRequest) {
-                    R(
+                    O(
                         "Cannot do synchronous binary XHRs outside webworkers in modern browsers. Use --embed-file or --preload-file in emcc",
                     );
                     var a = {
@@ -1596,7 +1596,7 @@ let n = async function () {
                                     r.send(null),
                                     (r.status >= 200 && r.status < 300) ||
                                         304 === r.status ||
-                                        R(`Couldn't load ${t}. Status: ${r.status}`));
+                                        O(`Couldn't load ${t}. Status: ${r.status}`));
                                 var n = Number(r.getResponseHeader("Content-length")),
                                     o = (e = r.getResponseHeader("Accept-Ranges")) && "bytes" === e,
                                     a = (e = r.getResponseHeader("Content-Encoding")) && "gzip" === e,
@@ -1612,8 +1612,8 @@ let n = async function () {
                                         (l = Math.min(l, n - 1)),
                                         void 0 === i.chunks[e] &&
                                             (i.chunks[e] =
-                                                (a > (r = l) && R(`invalid range (${a}, ${r}) or no bytes requested!`),
-                                                r > n - 1 && R(`only ${n} bytes available! programmer error!`),
+                                                (a > (r = l) && O(`invalid range (${a}, ${r}) or no bytes requested!`),
+                                                r > n - 1 && O(`only ${n} bytes available! programmer error!`),
                                                 ((o = new XMLHttpRequest()).open("GET", t, !1),
                                                 n !== s && o.setRequestHeader("Range", `bytes=${a}-${r}`),
                                                 (o.responseType = "arraybuffer"),
@@ -1622,11 +1622,11 @@ let n = async function () {
                                                 o.send(null),
                                                 (o.status >= 200 && o.status < 300) ||
                                                     304 === o.status ||
-                                                    R(`Couldn't load ${t}. Status: ${o.status}`),
+                                                    O(`Couldn't load ${t}. Status: ${o.status}`),
                                                 void 0 !== o.response)
                                                     ? new Uint8Array(o.response || [])
                                                     : en(o.responseText ?? "", !0))),
-                                        void 0 === i.chunks[e] && R("doXHR failed!"),
+                                        void 0 === i.chunks[e] && O("doXHR failed!"),
                                         i.chunks[e]
                                     );
                                 }),
@@ -1800,33 +1800,33 @@ let n = async function () {
         },
         eM = !1,
         ex = (e) => {},
-        eO = (e) => {
+        eN = (e) => {
             ((e.count.value -= 1),
                 0 === e.count.value &&
                     (e.smartPtr
                         ? e.smartPtrType.rawDestructor(e.smartPtr)
                         : e.ptrType.registeredClass.rawDestructor(e.ptr)));
         },
-        eR = (e) =>
+        eO = (e) =>
             globalThis.FinalizationRegistry
                 ? ((eM = new FinalizationRegistry((e) => {
-                      eO(e.$$);
+                      eN(e.$$);
                   })),
-                  (eR = (e) => {
+                  (eO = (e) => {
                       var r = e.$$;
                       return (r.smartPtr && eM.register(e, { $$: r }, e), e);
                   }),
                   (ex = (e) => eM.unregister(e)),
-                  eR(e))
-                : ((eR = (e) => e), e),
-        eN = [],
-        eW = () => {
-            for (; eN.length;) {
-                var e = eN.pop();
+                  eO(e))
+                : ((eO = (e) => e), e),
+        ej = [],
+        eR = () => {
+            for (; ej.length;) {
+                var e = ej.pop();
                 ((e.$$.deleteScheduled = !1), e.delete());
             }
         };
-    function ej() {}
+    function eW() {}
     var ez = (e, r) => Object.defineProperty(r, "name", { value: e }),
         eB = {},
         eU = (e, r, t) => {
@@ -1961,7 +1961,7 @@ let n = async function () {
             (r.ptrType && r.ptr) || eQ("makeClassHandle requires ptr and ptrType"),
             !!r.smartPtrType != !!r.smartPtr && eQ("Both smartPtrType and smartPtr must be specified"),
             (r.count = { value: 1 }),
-            eR(Object.create(e, { $$: { value: r, writable: !0 } }))
+            eO(Object.create(e, { $$: { value: r, writable: !0 } }))
         );
     function e1(e, r, t, n, o, a, s, i, l, u, d) {
         ((this.name = e),
@@ -1986,13 +1986,13 @@ let n = async function () {
                     : ((n[e] = r), (n[e].argCount = t)));
         },
         e4 = [],
-        e3 = function (e, r) {
+        e6 = function (e, r) {
             (arguments.length > 2 && void 0 !== arguments[2] && arguments[2], (e = e$(e)));
             var t,
                 n = ((t = e4[r]) || (e4[r] = t = C.get(r)), t);
             return ("function" != typeof n && eS(`unknown function pointer with signature ${e}: ${r}`), n);
         };
-    class e6 extends Error {}
+    class e3 extends Error {}
     var e5 = (e) => {
             var r = y(e),
                 t = e$(r);
@@ -2008,7 +2008,7 @@ let n = async function () {
                         (t.push(r), (n[r] = !0));
                     }
                 }),
-                new e6(`${e}: ` + t.map(e5).join([", "]))
+                new e3(`${e}: ` + t.map(e5).join([", "]))
             );
         },
         e9 = (e, r, t) => {
@@ -2258,7 +2258,7 @@ let n = async function () {
         rT = (e) => {
             var r = P.buffer.byteLength;
             try {
-                return (P.grow(((e - r + 65535) / 65536) | 0), O(), 1);
+                return (P.grow(((e - r + 65535) / 65536) | 0), N(), 1);
             } catch (e) {}
         },
         rP = {},
@@ -2285,9 +2285,9 @@ let n = async function () {
     }),
         (ey.preloadFile = ew),
         ey.staticInit(),
-        Object.assign((e = ej.prototype), {
+        Object.assign((e = eW.prototype), {
             isAliasOf(e) {
-                if (!(this instanceof ej) || !(e instanceof ej)) return !1;
+                if (!(this instanceof eW) || !(e instanceof eW)) return !1;
                 var r = this.$$.ptrType.registeredClass,
                     t = this.$$.ptr;
                 e.$$ = e.$$;
@@ -2301,7 +2301,7 @@ let n = async function () {
                     return ((this.$$.count.value += 1), this);
                 {
                     let r;
-                    var e = eR(
+                    var e = eO(
                         Object.create(Object.getPrototypeOf(this), {
                             $$: {
                                 value: {
@@ -2325,7 +2325,7 @@ let n = async function () {
                         !this.$$.preservePointerOnDelete &&
                         eS("Object already scheduled for deletion"),
                     ex(this),
-                    eO(this.$$),
+                    eN(this.$$),
                     this.$$.preservePointerOnDelete || ((this.$$.smartPtr = void 0), (this.$$.ptr = void 0)));
             },
             isDeleted() {
@@ -2337,8 +2337,8 @@ let n = async function () {
                     this.$$.deleteScheduled &&
                         !this.$$.preservePointerOnDelete &&
                         eS("Object already scheduled for deletion"),
-                    eN.push(this),
-                    1 === eN.length && v && v(eW),
+                    ej.push(this),
+                    1 === ej.length && v && v(eR),
                     (this.$$.deleteScheduled = !0),
                     this
                 );
@@ -2428,7 +2428,7 @@ let n = async function () {
     };
     var rD = {
         a: (e, r, t) => {
-            (new H(e).init(r, t), q++, R());
+            (new H(e).init(r, t), q++, O());
         },
         y: function (e, r, t) {
             eb.varargs = t;
@@ -2629,7 +2629,7 @@ let n = async function () {
                 return -e.errno;
             }
         },
-        U: () => R(""),
+        U: () => O(""),
         C: (e, r, t, n, o) => {
             r = e$(r);
             let a = 0n === n,
@@ -2662,7 +2662,7 @@ let n = async function () {
             });
         },
         n: (e, r, t, n, o, a, s, i, l, u, d, c, h) => {
-            ((d = e$(d)), (a = e3(o, a)), (i &&= e3(s, i)), (u &&= e3(l, u)), (h = e3(c, h)));
+            ((d = e$(d)), (a = e6(o, a)), (i &&= e6(s, i)), (u &&= e6(l, u)), (h = e6(c, h)));
             var f,
                 p,
                 m = (p = (f = (f = d).replace(/[^a-zA-Z0-9_]/g, "$")).charCodeAt(0)) >= 48 && p <= 57 ? `_${f}` : f;
@@ -2672,7 +2672,7 @@ let n = async function () {
                 e9([e, r, t], n ? [n] : [], (r) => {
                     r = r[0];
                     var t,
-                        o = n ? (t = r.registeredClass).instancePrototype : ej.prototype,
+                        o = n ? (t = r.registeredClass).instancePrototype : eW.prototype,
                         s = ez(d, function () {
                             for (var e = arguments.length, r = Array(e), t = 0; t < e; t++) r[t] = arguments[t];
                             if (Object.getPrototypeOf(this) !== l) throw new eC(`Use 'new' to construct ${d}`);
@@ -2696,7 +2696,7 @@ let n = async function () {
         },
         q: (e, r, t, n, o, a) => {
             var s = e7(r, t);
-            ((o = e3(n, o)),
+            ((o = e6(n, o)),
                 e9([], [e], (e) => {
                     e = e[0];
                     var t = `constructor ${e.name}`;
@@ -2727,7 +2727,7 @@ let n = async function () {
         c: (e, r, t, n, o, a, s, i, l, u) => {
             var d = e7(t, n);
             ((r = ro((r = e$(r)))),
-                (a = e3(o, a, l)),
+                (a = e6(o, a, l)),
                 e9([], [e], (e) => {
                     e = e[0];
                     var n = `${e.name}.${r}`;
@@ -2857,7 +2857,7 @@ let n = async function () {
         u: (e, r, t, n, o, a, s, i) => {
             var l = e7(r, t);
             ((e = ro((e = e$(e)))),
-                (o = e3(n, o, s)),
+                (o = e6(n, o, s)),
                 eI(
                     e,
                     function () {
@@ -2911,10 +2911,10 @@ let n = async function () {
         },
         ba: (e, r, t, n, o, a, s, i, l, u, d, c) => {
             ((t = e$(t)),
-                (a = e3(o, a)),
-                (i = e3(s, i)),
-                (u = e3(l, u)),
-                (c = e3(d, c)),
+                (a = e6(o, a)),
+                (i = e6(s, i)),
+                (u = e6(l, u)),
+                (c = e6(d, c)),
                 e9([e], [r], (e) => ((e = e[0]), [new e1(t, e.registeredClass, !1, !1, !0, e, n, a, i, u, c)])));
         },
         X: (e, r) => {

@@ -1,13 +1,13 @@
-s.d(t, { A: () => a });
-var r = s(210038);
-async function a() {
-    let e = await c(),
-        [t, a] = await Promise.all([(0, r.LM)(new URL(s(217541), s.b)), (0, r.LM)(new URL(s(909223), s.b))]),
-        o = await e({ wasmBinary: t }),
-        n = await o.loadWebAssemblyModule(a, { loadAsync: !0 });
-    return new i(o, n);
+a.d(t, { A: () => r });
+var s = a(210038);
+async function r() {
+    let e = await p(),
+        [t, r] = await Promise.all([(0, s.LM)(new URL(a(103810), a.b)), (0, s.LM)(new URL(a(201490), a.b))]),
+        i = await e({ wasmBinary: t }),
+        g = await i.loadWebAssemblyModule(r, { loadAsync: !0 });
+    return new n(i, g);
 }
-class i {
+class n {
     host;
     abi;
     constructor(e, t) {
@@ -15,92 +15,92 @@ class i {
     }
     async loadGrammar(e) {
         if (!e.languageId)
-            throw new r.gT(
+            throw new s.gT(
                 "grammar-registration-failed",
                 "loadGrammar: languageId is required (must match the name referenced by injection queries)",
             );
-        let [t, s, a, i] = await Promise.all([
-                (0, r.LM)(e.wasm),
-                (0, r.WY)(e.highlights),
-                void 0 === e.injections ? "" : (0, r.WY)(e.injections),
-                void 0 === e.locals ? "" : (0, r.WY)(e.locals),
+        let [t, a, r, n] = await Promise.all([
+                (0, s.LM)(e.wasm),
+                (0, s.WY)(e.highlights),
+                void 0 === e.injections ? "" : (0, s.WY)(e.injections),
+                void 0 === e.locals ? "" : (0, s.WY)(e.locals),
             ]),
-            n = (function (e, t) {
+            g = (function (e, t) {
                 if (void 0 !== t) {
-                    let s = e[t];
-                    if ("function" != typeof s)
-                        throw new r.gT(
+                    let a = e[t];
+                    if ("function" != typeof a)
+                        throw new s.gT(
                             "grammar-language-export-missing",
                             `grammar module has no function export named ${JSON.stringify(t)}`,
                         );
-                    return s;
+                    return a;
                 }
-                let s = Object.keys(e).filter((t) => t.startsWith("tree_sitter_") && "function" == typeof e[t]);
-                if (0 === s.length)
-                    throw new r.gT(
+                let a = Object.keys(e).filter((t) => t.startsWith("tree_sitter_") && "function" == typeof e[t]);
+                if (0 === a.length)
+                    throw new s.gT(
                         "grammar-language-export-missing",
                         "grammar module has no function export starting with tree_sitter_",
                     );
-                if (s.length > 1)
-                    throw new r.gT(
+                if (a.length > 1)
+                    throw new s.gT(
                         "grammar-language-export-missing",
-                        `grammar module has multiple tree_sitter_* exports: ${s.join(", ")}. Pass options.languageExport to disambiguate.`,
+                        `grammar module has multiple tree_sitter_* exports: ${a.join(", ")}. Pass options.languageExport to disambiguate.`,
                     );
-                return e[s[0]];
+                return e[a[0]];
             })(await this.host.loadWebAssemblyModule(t, { loadAsync: !0 }), e.languageExport)();
-        if (!n) throw new r.gT("grammar-registration-failed", "grammar tree_sitter_* export returned null");
-        let [c, p] = (0, r.BW)(this.host, e.languageId),
-            [_, l] = (0, r.BW)(this.host, s),
-            [g, u] = (0, r.BW)(this.host, a),
-            [b, f] = (0, r.BW)(this.host, i),
-            h = 0;
+        if (!g) throw new s.gT("grammar-registration-failed", "grammar tree_sitter_* export returned null");
+        let [p, o] = (0, s.BW)(this.host, e.languageId),
+            [l, c] = (0, s.BW)(this.host, a),
+            [b, m] = (0, s.BW)(this.host, r),
+            [d, h] = (0, s.BW)(this.host, n),
+            w = 0;
         try {
-            h = this.abi.arborium_rt_register_grammar(n, c, p, _, l, g, u, b, f);
+            w = this.abi.arborium_rt_register_grammar(g, p, o, l, c, b, m, d, h);
         } finally {
-            (c && this.host._free(c), _ && this.host._free(_), g && this.host._free(g), b && this.host._free(b));
+            (p && this.host._free(p), l && this.host._free(l), b && this.host._free(b), d && this.host._free(d));
         }
-        if (0 === h)
-            throw new r.gT(
+        if (0 === w)
+            throw new s.gT(
                 "grammar-registration-failed",
                 "arborium_rt_register_grammar returned 0 (query compile failure, bad language ptr, or empty name?)",
             );
-        return new o(this, h, n, e.languageId);
+        return new i(this, w, g, e.languageId);
     }
 }
-class o {
+class i {
     runtime;
     id;
     languagePtr;
     languageId;
     #e = !1;
-    constructor(e, t, s, r) {
-        ((this.runtime = e), (this.id = t), (this.languagePtr = s), (this.languageId = r));
+    constructor(e, t, a, s) {
+        ((this.runtime = e), (this.id = t), (this.languagePtr = a), (this.languageId = s));
     }
     createSession() {
         this.#t();
         let e = this.runtime.abi.arborium_rt_create_session(this.id);
-        if (0 === e) throw new r.gT("session-creation-failed", `arborium_rt_create_session(${this.id}) returned 0`);
-        return new n(this, e);
+        if (0 === e) throw new s.gT("session-creation-failed", `arborium_rt_create_session(${this.id}) returned 0`);
+        return new g(this, e);
     }
     unregister() {
         this.#e || (this.runtime.abi.arborium_rt_unregister_grammar(this.id), (this.#e = !0));
     }
     #t() {
-        if (this.#e) throw new r.gT("grammar-registration-failed", `grammar ${this.id} has been unregistered`);
+        if (this.#e) throw new s.gT("grammar-registration-failed", `grammar ${this.id} has been unregistered`);
     }
 }
-class n {
+class g {
     grammar;
     id;
-    #s = !1;
+    #a = !1;
     constructor(e, t) {
         ((this.grammar = e), (this.id = t));
     }
     setText(e) {
         this.#t();
-        let [t, s] = (0, r.BW)(this.grammar.runtime.host, e);
+        let [t, a] = (0, s.BW)(this.grammar.runtime.host, e);
         try {
-            this.grammar.runtime.abi.arborium_rt_set_text(this.id, t, s);
+            this.grammar.runtime.abi.arborium_rt_set_text(this.id, t, a);
         } finally {
             t && this.grammar.runtime.host._free(t);
         }
@@ -108,7 +108,7 @@ class n {
     parse() {
         return (
             this.#t(),
-            this.#r(
+            this.#s(
                 "parse-failed",
                 (e, t) => this.grammar.runtime.abi.arborium_rt_parse_utf16(this.id, e, t),
                 (e) => (0 === e.length ? { spans: [], injections: [], fuel_used: 0, out_of_fuel: !1 } : JSON.parse(e)),
@@ -118,27 +118,27 @@ class n {
     highlightToSpans(e = {}) {
         this.#t();
         let t = e.maxInjectionDepth ?? 3,
-            s = this.#r(
+            a = this.#s(
                 "highlight-failed",
-                (e, s) => this.grammar.runtime.abi.arborium_rt_highlight_to_spans_utf16(this.id, t, e, s),
+                (e, a) => this.grammar.runtime.abi.arborium_rt_highlight_to_spans_utf16(this.id, t, e, a),
                 (e) =>
                     0 === e.length
                         ? { spans: [], missing_injections: [], out_of_fuel_languages: [], fuel_used: 0 }
                         : JSON.parse(e),
             );
         return {
-            spans: s.spans,
-            missingInjections: s.missing_injections,
-            outOfFuelLanguages: s.out_of_fuel_languages,
-            fuelUsed: s.fuel_used,
+            spans: a.spans,
+            missingInjections: a.missing_injections,
+            outOfFuelLanguages: a.out_of_fuel_languages,
+            fuelUsed: a.fuel_used,
         };
     }
     highlightToHtml(e = {}) {
         this.#t();
         let t = e.maxInjectionDepth ?? 3,
-            s = e.format ?? { kind: "custom-elements" },
-            { host: a } = this.grammar.runtime,
-            { code: i, prefix: o } = (function (e) {
+            a = e.format ?? { kind: "custom-elements" },
+            { host: r } = this.grammar.runtime,
+            { code: n, prefix: i } = (function (e) {
                 switch (e.kind) {
                     case "custom-elements":
                         return { code: 0, prefix: "" };
@@ -149,12 +149,12 @@ class n {
                     case "class-names-with-prefix":
                         return { code: 3, prefix: e.prefix };
                 }
-            })(s),
-            [n, c] = (0, r.BW)(a, o);
+            })(a),
+            [g, p] = (0, s.BW)(r, i);
         try {
-            let e = this.#r(
+            let e = this.#s(
                 "highlight-failed",
-                (e, s) => this.grammar.runtime.abi.arborium_rt_highlight_to_html(this.id, t, i, n, c, e, s),
+                (e, a) => this.grammar.runtime.abi.arborium_rt_highlight_to_html(this.id, t, n, g, p, e, a),
                 (e) =>
                     0 === e.length
                         ? { html: "", missing_injections: [], out_of_fuel_languages: [], fuel_used: 0 }
@@ -167,38 +167,38 @@ class n {
                 fuelUsed: e.fuel_used,
             };
         } finally {
-            n && a._free(n);
+            g && r._free(g);
         }
     }
     cancel() {
         (this.#t(), this.grammar.runtime.abi.arborium_rt_cancel(this.id));
     }
     free() {
-        this.#s || (this.grammar.runtime.abi.arborium_rt_free_session(this.id), (this.#s = !0));
+        this.#a || (this.grammar.runtime.abi.arborium_rt_free_session(this.id), (this.#a = !0));
     }
     #t() {
-        if (this.#s) throw new r.gT("session-creation-failed", `session ${this.id} has been freed`);
+        if (this.#a) throw new s.gT("session-creation-failed", `session ${this.id} has been freed`);
     }
-    #r(e, t, s) {
-        let { host: a, abi: i } = this.grammar.runtime,
-            o = a._malloc(4),
-            n = a._malloc(4);
+    #s(e, t, a) {
+        let { host: r, abi: n } = this.grammar.runtime,
+            i = r._malloc(4),
+            g = r._malloc(4);
         try {
-            let c = t(o, n);
-            if (0 !== c) throw new r.gT(e, `arborium_rt call returned status ${c}`);
-            let p = a.getValue(o, "i32"),
-                _ = a.getValue(n, "i32");
-            if (0 === _) return s("");
+            let p = t(i, g);
+            if (0 !== p) throw new s.gT(e, `arborium_rt call returned status ${p}`);
+            let o = r.getValue(i, "i32"),
+                l = r.getValue(g, "i32");
+            if (0 === l) return a("");
             try {
-                return s((0, r.Sx)(a, p, _));
+                return a((0, s.Sx)(r, o, l));
             } finally {
-                i.arborium_rt_free(p, _);
+                n.arborium_rt_free(o, l);
             }
         } finally {
-            (a._free(o), a._free(n));
+            (r._free(i), r._free(g));
         }
     }
 }
-async function c() {
-    return (await s.e("819825").then(s.bind(s, 765640))).default;
+async function p() {
+    return (await a.e("819825").then(a.bind(a, 765640))).default;
 }
