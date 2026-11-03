@@ -2,7 +2,7 @@ t.d(a, { W: () => u });
 var i = t(477900);
 t(582128);
 let r =
-    "https://cdn.discordapp.com/assets/content/87dc6aed15d21ffd79ca52622a3c250da7755fa46f6145f3077b89df9d8b45cf.riv";
+    "https://cdn.discordapp.com/assets/content/9f35cbe36b6a6525f60b658caea151c9bd2715b44714129b7ab783a23b9c2e3c.riv";
 var m = t(509482),
     o = t(799226);
 let g = {
@@ -780,7 +780,7 @@ let g = {
         AB_Face_11_Spellbound: ["SM_Face_Spellbound"],
         AB_Face_10_Sus: ["SM_Face_Sus"],
         AB_Face_09_Rage: ["SM_Face_Rage"],
-        AB_Face_07_Anxious: ["SM_Face_Scared"],
+        AB_Face_07_Anxious: ["SM_Face_Anxious"],
         AB_Face_06_Confused: ["SM_Face_Scared"],
         AB_Face_05_Smitten: ["SM_Face_Scared"],
         AB_Face_04_LockedIn: ["SM_Face_LockedIn"],
