@@ -58,6 +58,10 @@
     color: var(--text-feedback-critical)
 }
 
+.badge_edb79d {
+    text-shadow: 0 1px 2px var(--opacity-black-40)
+}
+
 .folderGroup__48112 {
     --custom-folder-padding: calc((var(--guildbar-folder-size) - var(--guildbar-avatar-size))/2);
     --custom-folder-preview-padding: var(--space-4);
@@ -363,4 +367,4 @@
     outline: 2px solid Highlight
 }
 
-/*# sourceMappingURL=818860.f95fc570d91bd2f3.css.map*/
+/*# sourceMappingURL=504129.d63455fabc0ff145.css.map*/
