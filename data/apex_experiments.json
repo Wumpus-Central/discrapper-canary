@@ -2585,9 +2585,7 @@
         "enabled": false,
         "variant": 0
       },
-      "1": {
-        "enabled": true
-      }
+      "1": null
     }
   },
   {

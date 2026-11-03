@@ -147,6 +147,7 @@ function N(e) {
                     sourceWidth: i,
                     sourceHeight: a,
                     maxUpscale: (0, E.iE)(e, (0, _.A)()),
+                    ladder: e.ladder,
                 })),
                 (t.width !== i || t.height !== a) && ((g.width = 0 | t.width), (g.height = 0 | t.height)));
         }

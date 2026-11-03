@@ -1,25 +1,25 @@
-n.d(t, { iE: () => r, v7: () => a });
+n.d(t, { iE: () => r, t0: () => i, v7: () => a });
 let i = [128, 192, 256, 320, 384, 512, 640, 768, 1024, 1280, 1536, 2048, 3072, 4096];
 function r(e, t) {
     return t >= e.minSnapDownDpr ? e.maxUpscale : null;
 }
 function a(e) {
-    let { targetWidth: t, targetHeight: n, sourceWidth: r, sourceHeight: a, maxUpscale: s } = e,
-        l = Math.max(t, n);
-    if (l <= 0) return { width: t, height: n };
-    let o = i.find((e) => l <= e) ?? i[i.length - 1],
-        d = null != r && null != a && Math.max(r, a) <= o,
-        c = o;
-    if (null != s && s > 1 && !d) {
+    let { targetWidth: t, targetHeight: n, sourceWidth: r, sourceHeight: a, maxUpscale: s, ladder: l = i } = e,
+        o = Math.max(t, n);
+    if (o <= 0 || 0 === l.length) return { width: t, height: n };
+    let d = l.find((e) => o <= e) ?? l[l.length - 1],
+        c = null != r && null != a && Math.max(r, a) <= d,
+        u = d;
+    if (null != s && s > 1 && !c) {
         let e;
-        for (let t of i)
-            if (t <= l) e = t;
+        for (let t of l)
+            if (t <= o) e = t;
             else break;
-        null != e && l <= e * s && (c = e);
+        null != e && o <= e * s && (u = e);
     }
-    if (null != r && null != a && Math.max(r, a) <= c) return { width: r, height: a };
-    let u = c / l,
-        _ = Math.max(1, Math.round(t * u)),
-        E = Math.max(1, Math.round(n * u));
-    return { width: null != r ? Math.min(_, r) : _, height: null != a ? Math.min(E, a) : E };
+    if (null != r && null != a && Math.max(r, a) <= u) return { width: r, height: a };
+    let _ = u / o,
+        E = Math.max(1, Math.round(t * _)),
+        A = Math.max(1, Math.round(n * _));
+    return { width: null != r ? Math.min(E, r) : E, height: null != a ? Math.min(A, a) : A };
 }
