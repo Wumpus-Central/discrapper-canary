@@ -1,4 +1,4 @@
-n.d(e, { default: () => tf });
+n.d(e, { default: () => tx });
 var l = n(477900),
     r = n(582128),
     i = n(503698),
@@ -130,8 +130,8 @@ class w extends r.Component {
                 rows: p,
                 flex: S,
                 autosize: w,
-                required: N,
-                onInvalid: D,
+                required: D,
+                onInvalid: N,
                 inputRef: O,
             } = this.props,
             C = w ? f.y : "textarea",
@@ -160,12 +160,12 @@ class w extends r.Component {
                                 minLength: i,
                                 maxLength: o ? void 0 : s,
                                 spellCheck: u,
-                                required: N,
+                                required: D,
                                 onChange: this.onChange,
                                 onBlur: this.onBlur,
                                 onFocus: this.onFocus,
                                 onKeyDown: this.onKeyDown,
-                                onInvalid: D,
+                                onInvalid: N,
                                 rows: p,
                                 ref: O,
                             }),
@@ -199,8 +199,8 @@ class w extends r.Component {
         e?.(t);
     };
 }
-var N = n(265872),
-    D = n(939249),
+var D = n(265872),
+    N = n(939249),
     O = n(285796),
     C = n(788026),
     b = n(765671),
@@ -214,61 +214,69 @@ var N = n(265872),
     L = n(536637),
     k = n.n(L),
     H = n(253932),
-    Y = n(284009),
-    F = n.n(Y),
-    $ = n(927813),
-    z = n(403918),
-    B = n(652215);
-let K = [z.yt.MINUTES_30, z.yt.HOURS_1, z.yt.HOURS_4];
+    F = n(284009),
+    Y = n.n(F),
+    $ = n(403918);
+function z(t) {
+    if (t !== $.yt.TODAY) return (Y()("number" == typeof t, "Invalid custom status clear timeout"), t);
+    {
+        let t = new Date(),
+            e = new Date(t);
+        return (e.setDate(t.getDate() + 1), e.getTime() - t.getTime());
+    }
+}
+var B = n(652215);
+let K = [$.yt.MINUTES_30, $.yt.HOURS_1, $.yt.HOURS_4];
 var q = n(58703),
-    G = n(403362);
-function J(t) {
+    G = n(927813),
+    J = n(403362);
+function V(t) {
     let e = Date.now() + t;
     return (0, q.ro)(new Date(), new Date(e))
         ? x.intl.formatToPlainString(x.t["+3jw2j"], { time: x.intl.data.formatTime(e, { format: "short" }) })
         : x.intl.formatToPlainString(x.t["/Avy4C"], { time: x.intl.data.formatTime(e, { format: "short" }) });
 }
-function V(t) {
+function X(t) {
     switch (t) {
-        case z.yt.TODAY:
-            return J($.A.Millis.DAY);
-        case z.yt.HOURS_4:
-            return J(4 * $.A.Millis.HOUR);
-        case z.yt.HOURS_1:
-            return J(+$.A.Millis.HOUR);
-        case z.yt.MINUTES_30:
-            return J(30 * $.A.Millis.MINUTE);
-        case z.yt.DONT_CLEAR:
+        case $.yt.TODAY:
+            return V(z($.yt.TODAY));
+        case $.yt.HOURS_4:
+            return V(4 * G.A.Millis.HOUR);
+        case $.yt.HOURS_1:
+            return V(+G.A.Millis.HOUR);
+        case $.yt.MINUTES_30:
+            return V(30 * G.A.Millis.MINUTE);
+        case $.yt.DONT_CLEAR:
             return x.intl.string(x.t.bRn8cq);
         default:
-            (0, G.xb)(t);
+            (0, J.xb)(t);
     }
 }
-function X(t) {
+function Z(t) {
     let e = Date.now() + t;
     return (0, q.ro)(new Date(), new Date(e))
         ? x.intl.data.formatTime(e, { format: "short" })
         : x.intl.formatToPlainString(x.t.DN91Jz, { time: x.intl.data.formatTime(e, { format: "short" }) });
 }
-var Z = n(685396),
-    Q = n(231723),
-    W = n(480335),
-    tt = n(208971),
-    te = n(999291),
-    tn = n(718019),
-    tl = n(977059),
-    tr = n(915614),
-    ti = n(946356),
-    ta = n(465829),
-    ts = n(394816),
-    to = n(562153),
-    tu = n(996988),
-    td = n(207634),
-    th = n(356365);
-function tc(t) {
+var Q = n(685396),
+    W = n(231723),
+    tt = n(480335),
+    te = n(208971),
+    tn = n(999291),
+    tl = n(718019),
+    tr = n(977059),
+    ti = n(915614),
+    ta = n(946356),
+    ts = n(465829),
+    to = n(394816),
+    tu = n(562153),
+    td = n(996988),
+    th = n(207634),
+    tc = n(356365);
+function tg(t) {
     let { user: e, previewText: n, previewEmoji: r, previewStatus: i, placeHolderText: a, transitionState: s } = t,
-        o = (0, te.Ay)(e.id),
-        u = (0, tt.G)(n),
+        o = (0, tn.Ay)(e.id),
+        u = (0, te.G)(n),
         d =
             (null != n && "" !== n) || null != r
                 ? x.intl.formatToPlainString(x.t.SMkS7x, { emoji: r?.name ?? "", text: u })
@@ -276,84 +284,84 @@ function tc(t) {
     return (0, l.jsx)("div", {
         role: "img",
         "aria-label": d,
-        children: (0, l.jsxs)(ti.A, {
+        children: (0, l.jsxs)(ta.A, {
             user: e,
             displayProfile: o,
-            themeType: tu.d.POPOUT,
-            className: th.ti,
+            themeType: td.d.POPOUT,
+            className: tc.ti,
             "aria-hidden": "true",
             children: [
                 (0, l.jsxs)("header", {
                     children: [
-                        (0, l.jsx)(tr.A, { user: e, displayProfile: o, themeType: tu.d.POPOUT }),
+                        (0, l.jsx)(ti.A, { user: e, displayProfile: o, themeType: td.d.POPOUT }),
                         (0, l.jsx)("div", {
                             inert: !0,
-                            children: (0, l.jsx)(tn.A, {
+                            children: (0, l.jsx)(tl.A, {
                                 user: e,
                                 displayProfile: o,
-                                avatarSize: td.T[tu.d.POPOUT].avatarSize,
+                                avatarSize: th.T[td.d.POPOUT].avatarSize,
                                 previewStatus: i,
-                                className: th.my,
+                                className: tc.my,
                             }),
                         }),
-                        (0, l.jsx)(ts.A, {
+                        (0, l.jsx)(to.A, {
                             user: e,
-                            themeType: tu.d.POPOUT,
+                            themeType: td.d.POPOUT,
                             previewText: n,
                             previewEmoji: r,
                             placeholderText: a,
-                            hasEntered: s === Q.ip.ENTERED,
+                            hasEntered: s === W.ip.ENTERED,
                         }),
                     ],
                 }),
-                o?.profileEffect != null && (0, l.jsx)(W.A, { skuId: o.profileEffect.skuId }),
+                o?.profileEffect != null && (0, l.jsx)(tt.A, { skuId: o.profileEffect.skuId }),
                 (0, l.jsx)("div", {
-                    className: th.QV,
+                    className: tc.QV,
                     inert: !0,
-                    children: (0, l.jsx)(ta.Ay, {
+                    children: (0, l.jsx)(ts.Ay, {
                         user: e,
-                        displayName: to.Ay.getName(null, null, e),
+                        displayName: tu.Ay.getName(null, null, e),
                         pronouns: o?.pronouns,
-                        trailing: (0, l.jsx)(tl.A, { displayProfile: o, themeType: tu.d.POPOUT }),
+                        trailing: (0, l.jsx)(tr.A, { displayProfile: o, themeType: td.d.POPOUT }),
                     }),
                 }),
             ],
         }),
     });
 }
-var tg = n(307731),
-    tm = n(68450);
-let tp = "CLEAR_AFTER";
-function tf(t) {
+var tm = n(307731),
+    tp = n(68450);
+let tf = "CLEAR_AFTER";
+function tx(t) {
     let { transitionState: e, onClose: n, returnRef: i, sourceAnalyticsLocations: h = [], prompt: c = null } = t,
         { analyticsLocations: g } = (0, R.Ay)(h, P.A.CUSTOM_STATUS_MODAL),
         m = (0, o.bG)([_.default], () => _.default.getCurrentUser() ?? null),
-        f = (0, Z.K)(),
+        f = (0, Q.K)(),
         [T, y] = r.useState(f?.state ?? ""),
         [A, S] = r.useState(f?.emoji ?? null),
         [v, j] = r.useState(
             (function () {
                 let t = H.G2.getSetting();
-                if (null == t || "" === t.expiresAtMs) return z.yt.TODAY;
+                if (null == t || "" === t.expiresAtMs) return $.yt.TODAY;
                 let e = Number(t.expiresAtMs);
-                if (isNaN(e)) return z.yt.TODAY;
-                if (0 === e) return z.yt.DONT_CLEAR;
+                if (isNaN(e)) return $.yt.TODAY;
+                if (0 === e) return $.yt.DONT_CLEAR;
                 let n = new Date(),
                     l = new Date(e);
                 if (n.getFullYear() !== l.getFullYear() || n.getMonth() !== l.getMonth() || n.getDate() !== l.getDate())
-                    return z.yt.TODAY;
+                    return $.yt.TODAY;
                 let r = Number(e) - Date.now();
-                return K.find((t) => r <= t) ?? z.yt.TODAY;
+                return K.find((t) => r <= t) ?? $.yt.TODAY;
             })(),
         ),
         L = r.useRef(null),
+        F = r.useRef(null),
         Y = r.useRef(null),
-        q = r.useRef(null),
-        J = null != c ? c.label() : x.intl.string(x.t.xod367),
-        [Q, W] = r.useState(J),
-        { ref: tt, width: te } = (0, b.Ay)(J);
+        q = null != c ? c.label() : x.intl.string(x.t.xod367),
+        [V, W] = r.useState(q),
+        { ref: tt, width: te } = (0, b.Ay)(q);
     function tn() {
-        v !== tp &&
+        v !== tf &&
             (!(function (t) {
                 let {
                         text: e,
@@ -369,19 +377,7 @@ function tf(t) {
                 (H.G2.updateSetting({
                     text: o.length > 0 ? o : "",
                     expiresAtMs:
-                        null != l && l !== z.yt.DONT_CLEAR
-                            ? String(
-                                  k()()
-                                      .add(
-                                          l === z.yt.TODAY
-                                              ? $.A.Millis.DAY
-                                              : (F()("number" == typeof l, "Invalid custom status clear timeout"), l),
-                                          "ms",
-                                      )
-                                      .toDate()
-                                      .getTime(),
-                              )
-                            : "0",
+                        null != l && l !== $.yt.DONT_CLEAR ? String(k()().add(z(l), "ms").toDate().getTime()) : "0",
                     emojiId: null != n && null != n.id ? n.id : "0",
                     emojiName: null != n ? n.name : "",
                     createdAtMs: String(i ?? k()().toDate().getTime()),
@@ -398,65 +394,65 @@ function tf(t) {
             n());
     }
     (r.useEffect(() => {
-        let t = q.current;
+        let t = Y.current;
         if (null == te || null == t) return;
         let e = te - 78;
-        t.textContent = J;
+        t.textContent = q;
         let n = t.getBoundingClientRect().width;
-        if (n <= e) W(J);
+        if (n <= e) W(q);
         else {
-            let t = n / J.length,
+            let t = n / q.length,
                 l = Math.floor((e - 3 * t) / t);
-            W(`${J.substring(0, l)}...`);
+            W(`${q.substring(0, l)}...`);
         }
-    }, [te, J]),
+    }, [te, q]),
         r.useEffect(() => {
             I.default.track(B.HAw.OPEN_MODAL, { type: P.A.CUSTOM_STATUS_MODAL, location_stack: g });
         }, [g]),
         (0, E.Ay)(() => {
             (L.current?.focus(), L.current?.setSelection(T.length, T.length));
         }),
-        (0, s.$)({ currentLength: T.length, maxLength: z.hp, message: x.intl.string(x.t.c2Jqed) }));
+        (0, s.$)({ currentLength: T.length, maxLength: $.hp, message: x.intl.string(x.t.c2Jqed) }));
     let tl = x.intl.string(x.t.rp0ahn),
         tr = "custom-status-input";
     return (0, l.jsxs)(d.a, {
         title: x.intl.string(x.t.Zx4jzN),
         returnRef: i,
         actionBarInput: (0, l.jsx)("div", {
-            className: tm.l3,
+            className: tp.l3,
             children: (0, l.jsx)(u.Te, {
                 "aria-label": x.intl.formatToPlainString(x.t.NFJUPa, {
-                    value: v === tp ? x.intl.string(x.t.E45wvP) : V(v),
+                    value: v === tf ? x.intl.string(x.t.E45wvP) : X(v),
                 }),
-                maxVisibleItems: z.SX.length + 1,
+                maxVisibleItems: $.SX.length + 1,
                 value: v,
                 options: [
-                    { value: tp, key: tp, label: x.intl.string(x.t.E45wvP), disabled: !0 },
-                    ...z.SX.map((t) => ({ value: t, key: t, label: V(t) })),
+                    { value: tf, key: tf, label: x.intl.string(x.t.E45wvP), disabled: !0 },
+                    ...$.SX.map((t) => ({ value: t, key: t, label: X(t) })),
                 ],
                 onChange: (t) => j(t),
-                optionClassName: tm.Pl,
+                optionClassName: tp.Pl,
                 renderOptionLabel: (t) => {
                     let { value: e, label: n, disabled: r } = t;
                     return (0, l.jsx)("span", {
-                        className: a()(tm.j3, r ? tm.r9 : void 0),
+                        className: a()(tp.j3, r ? tp.r9 : void 0),
                         children:
-                            e === tp
+                            e === tf
                                 ? n
                                 : (function (t) {
                                       switch (t) {
-                                          case z.yt.TODAY:
-                                              return `${x.intl.formatToPlainString(x.t.Rea2gR, { hours: 24 })} (${X($.A.Millis.DAY)})`;
-                                          case z.yt.HOURS_4:
-                                              return `${x.intl.formatToPlainString(x.t.Rea2gR, { hours: 4 })} (${X(4 * $.A.Millis.HOUR)})`;
-                                          case z.yt.HOURS_1:
-                                              return `${x.intl.formatToPlainString(x.t.Rea2gR, { hours: 1 })} (${X($.A.Millis.HOUR)})`;
-                                          case z.yt.MINUTES_30:
-                                              return `${x.intl.formatToPlainString(x.t.TS3eJb, { minutes: 30 })} (${X(30 * $.A.Millis.MINUTE)})`;
-                                          case z.yt.DONT_CLEAR:
+                                          case $.yt.TODAY:
+                                              return `${x.intl.formatToPlainString(x.t.Rea2gR, { hours: 24 })} (${Z(z($.yt.TODAY))})`;
+                                          case $.yt.HOURS_4:
+                                              return `${x.intl.formatToPlainString(x.t.Rea2gR, { hours: 4 })} (${Z(4 * G.A.Millis.HOUR)})`;
+                                          case $.yt.HOURS_1:
+                                              return `${x.intl.formatToPlainString(x.t.Rea2gR, { hours: 1 })} (${Z(G.A.Millis.HOUR)})`;
+                                          case $.yt.MINUTES_30:
+                                              return `${x.intl.formatToPlainString(x.t.TS3eJb, { minutes: 30 })} (${Z(30 * G.A.Millis.MINUTE)})`;
+                                          case $.yt.DONT_CLEAR:
                                               return x.intl.string(x.t.bRn8cq);
                                           default:
-                                              (0, G.xb)(t);
+                                              (0, J.xb)(t);
                                       }
                                   })(e),
                     });
@@ -475,34 +471,34 @@ function tf(t) {
         children: [
             null != m &&
                 (0, l.jsx)("div", {
-                    className: tm.q5,
-                    children: (0, l.jsx)(tc, {
+                    className: tp.q5,
+                    children: (0, l.jsx)(tg, {
                         user: m,
                         previewText: T,
                         previewEmoji: A,
-                        placeHolderText: J,
+                        placeHolderText: q,
                         transitionState: e,
                     }),
                 }),
             (0, l.jsxs)("div", {
-                className: tm.eH,
+                className: tp.eH,
                 children: [
                     (0, l.jsx)(p.E, {
                         tag: "label",
                         htmlFor: tr,
                         variant: "heading-sm/semibold",
-                        className: tm.wW,
+                        className: tp.wW,
                         children: tl,
                     }),
                     (0, l.jsxs)("div", {
-                        className: tm.Kf,
+                        className: tp.Kf,
                         ref: tt,
                         children: [
-                            (0, l.jsx)("span", { ref: q, className: tm._D, "aria-hidden": "true" }),
+                            (0, l.jsx)("span", { ref: Y, className: tp._D, "aria-hidden": "true" }),
                             (0, l.jsx)("div", {
-                                className: tm.S0,
-                                children: (0, l.jsx)(N.Y, {
-                                    targetElementRef: Y,
+                                className: tp.S0,
+                                children: (0, l.jsx)(D.Y, {
+                                    targetElementRef: F,
                                     renderPopout: function (t) {
                                         let { closePopout: e } = t;
                                         return (0, l.jsx)(M.A, {
@@ -521,18 +517,18 @@ function tf(t) {
                                                     ),
                                                     l && e());
                                             },
-                                            pickerIntention: tg.EmojiIntention.STATUS,
+                                            pickerIntention: tm.EmojiIntention.STATUS,
                                             onNavigateAway: n,
                                         });
                                     },
                                     position: "left",
-                                    animation: N.Y.Animation.NONE,
+                                    animation: D.Y.Animation.NONE,
                                     align: "top",
                                     children: (t, e) => {
                                         let { isShown: n } = e;
                                         return (0, l.jsx)(U.A, {
                                             ...t,
-                                            ref: Y,
+                                            ref: F,
                                             active: n,
                                             "aria-label":
                                                 null != A
@@ -540,7 +536,7 @@ function tf(t) {
                                                           currentValue: A.name,
                                                       })
                                                     : x.intl.string(x.t.psHnw8),
-                                            className: tm.Z8,
+                                            className: tp.Z8,
                                             spriteSize: 24,
                                             tabIndex: 0,
                                             renderButtonContents:
@@ -548,7 +544,7 @@ function tf(t) {
                                                     ? null
                                                     : () =>
                                                           (0, l.jsx)(C.A, {
-                                                              className: tm.Zg,
+                                                              className: tp.Zg,
                                                               emojiId: A.id,
                                                               emojiName: A.name,
                                                               animated: !!A.animated,
@@ -560,28 +556,28 @@ function tf(t) {
                             (0, l.jsx)(w, {
                                 autosize: !0,
                                 value: T,
-                                maxLength: z.hp,
+                                maxLength: $.hp,
                                 rows: 1,
                                 showRemainingCharacterCount: !1,
-                                placeholder: Q,
+                                placeholder: V,
                                 onChange: function (t) {
                                     y(t);
                                 },
                                 onKeyDown: function (t) {
                                     "Enter" === t.key && (t.preventDefault(), t.shiftKey || tn());
                                 },
-                                className: tm.hF,
+                                className: tp.hF,
                                 inputRef: L,
                                 id: tr,
                             }),
                             (T.length > 0 || null != A) &&
-                                (0, l.jsx)(D.D, {
+                                (0, l.jsx)(N.D, {
                                     "aria-label": x.intl.string(x.t.wfYTHe),
-                                    className: tm.mt,
+                                    className: tp.mt,
                                     onClick: function () {
                                         (y(""), S(null));
                                     },
-                                    children: (0, l.jsx)(O.a, { size: "md", color: "currentColor", className: tm.hj }),
+                                    children: (0, l.jsx)(O.a, { size: "md", color: "currentColor", className: tp.hj }),
                                 }),
                         ],
                     }),
