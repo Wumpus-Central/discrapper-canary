@@ -69,6 +69,16 @@
     opacity: .5
 }
 
+.cell__9ffb0[data-unavailable] {
+    color: var(--text-muted);
+    cursor: not-allowed;
+    text-decoration: line-through
+}
+
+.cell__9ffb0[data-selected][data-unavailable] {
+    color: var(--control-primary-text-default)
+}
+
 .cell__9ffb0[data-outside-month] {
     color: var(--text-muted);
     opacity: .5
@@ -84,7 +94,7 @@
     outline-offset: 2px
 }
 
-.cell__9ffb0[data-hovered]:not([data-disabled]):not([data-selected]) {
+.cell__9ffb0[data-hovered]:not([data-disabled]):not([data-unavailable]):not([data-selected]) {
     background-color: var(--background-mod-subtle)
 }
 
@@ -172,12 +182,17 @@
     color: GrayText
 }
 
+.enable-forced-colors .cell__9ffb0[data-unavailable] {
+    color: GrayText;
+    text-decoration: line-through
+}
+
 .enable-forced-colors .cell__9ffb0[data-outside-month] {
     color: GrayText;
     opacity: .4
 }
 
-.enable-forced-colors .cell__9ffb0:hover:not([data-disabled]):not([data-selected]) .cellContent__9ffb0 {
+.enable-forced-colors .cell__9ffb0:hover:not([data-disabled]):not([data-unavailable]):not([data-selected]) .cellContent__9ffb0 {
     background-color: ButtonFace
 }
 
@@ -194,4 +209,4 @@
     outline: 2px solid Highlight
 }
 
-/*# sourceMappingURL=aecbcd5a843925c9.css.map*/
+/*# sourceMappingURL=283a4d23cf7661b5.css.map*/

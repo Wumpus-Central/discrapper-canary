@@ -1,14 +1,14 @@
 (n.d(t, {
-    dv: () => O,
-    i2: () => m,
-    tW: () => S,
-    Zf: () => C,
-    vm: () => R,
-    fY: () => I,
-    WV: () => v,
-    Yt: () => y,
-    UX: () => D,
-    lR: () => b,
+    dv: () => R,
+    i2: () => T,
+    tW: () => N,
+    Zf: () => O,
+    vm: () => L,
+    fY: () => p,
+    WV: () => P,
+    Yt: () => D,
+    UX: () => b,
+    lR: () => v,
 }),
     n(134528),
     n(947204));
@@ -22,13 +22,14 @@ var i,
     c = n(190107),
     u = n(652215),
     _ = n(427483),
-    E = n(371822);
-function A(e) {
+    E = n(371822),
+    A = n(970908);
+function h(e) {
     if (null != e) return e === u.NJ8.LIGHT || "light" === e ? "light" : "dark";
 }
-let h = /\.([a-zA-Z0-9]+)$/,
-    f = ["video/mp4", "video/webm"];
-var I =
+let f = /\.([a-zA-Z0-9]+)$/,
+    I = ["video/mp4", "video/webm"];
+var p =
     (((i = {}).HERO = "hero"),
     (i.HERO_IMAGE = "hero_image"),
     (i.HERO_VIDEO = "hero_video"),
@@ -47,16 +48,16 @@ var I =
     (i.VIDEO_PLAYER_CAPTION = "video_player_caption"),
     (i.VIDEO_PLAYER_TRANSCRIPT = "video_player_transcript"),
     i);
-function p(e, t) {
+function m(e, t) {
     return null != e ? e : t;
 }
-var m =
+var T =
     (((r = {})[(r.TIER_1 = 1)] = "TIER_1"),
     (r[(r.TIER_2 = 2)] = "TIER_2"),
     (r[(r.TIER_3 = 3)] = "TIER_3"),
     (r[(r.TIER_4 = 4)] = "TIER_4"),
     r);
-let T = {
+let g = {
         video_player_video: { variant: "video", property: "url" },
         video_player_video_low_res: { variant: "videoLowRes", property: "url" },
         video_player_video_hls: { variant: "videoHls", property: "url" },
@@ -64,89 +65,89 @@ let T = {
         video_player_caption: { variant: "video", property: "caption" },
         video_player_transcript: { variant: "video", property: "transcript" },
     },
-    g = {
-        1: "https://cdn.discordapp.com/assets/content/5bb6b03e0f5fce0d4a3ff2e8b0cb68a360d1acab6a9b1dc5b1f9c081b5d6d4e7.webm",
+    S = {
+        1: A.A,
         2: "https://cdn.discordapp.com/assets/content/d4fc1c99b3e3044530f08ede0156d1d43a13bf78f0f539e240b63f2d4dad3554.webm",
         3: "https://cdn.discordapp.com/assets/content/864e5841fd9af8da3c50ad6d6220bee54e8c2da2d36d3c85d0a5ae95cdbf095e.webm",
         4: "https://cdn.discordapp.com/assets/content/926d445a2ed98a4feaf27f2eda8553aeca4d16f70bd6c2adc90f891c1805eade.webm",
     };
-function S(e, t, n, i, r) {
+function N(e, t, n, i, r) {
     var l, o, u;
-    let h,
-        I,
-        m,
-        S,
+    let A,
+        f,
+        p,
+        T,
         N = !1,
         C = !1;
     switch (t) {
         case "hero":
-            S = p(e.config.assets.heroVideo, e.config.assets.hero);
+            T = m(e.config.assets.heroVideo, e.config.assets.hero);
             break;
         case "hero_image":
-            S = e.config.assets.hero;
+            T = e.config.assets.hero;
             break;
         case "hero_video": {
             let t = e.config.assets.heroVideo;
             if (null == t) return null;
-            S = t;
+            T = t;
             break;
         }
         case "quest_bar_hero":
-            S = p(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
+            T = m(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
             break;
         case "quest_bar_hero_video": {
             let t = e.config.assets.questBarHeroVideo;
             if (null == t) return null;
-            S = t;
+            T = t;
             break;
         }
         case "quest_bar_hero_image":
-            S = e.config.assets.questBarHero;
+            T = e.config.assets.questBarHero;
             break;
         case "reward": {
             let t = (0, d.sn)(e);
             if (t.type === s.l.VIRTUAL_CURRENCY) {
-                let e = null != r ? g[r] : void 0;
+                let e = null != r ? S[r] : void 0;
                 if (null != e) return { url: e, mimetype: "video/webm", isAnimated: !0 };
                 return i
                     ? { url: E.A, mimetype: "video/mp4", isAnimated: !0 }
                     : { url: _.A, mimetype: "video/webm", isAnimated: !0 };
             }
-            S = p(t.assetVideo, t.asset);
+            T = m(t.assetVideo, t.asset);
             break;
         }
         case "reward_image": {
             let t = (0, d.sn)(e);
             if (t.type === s.l.VIRTUAL_CURRENCY) return null;
-            S = t.asset;
+            T = t.asset;
             break;
         }
         case "game_tile": {
-            let t = A(n);
+            let t = h(n);
             "dark" === t && null != e.config.assets.gameTileDark
-                ? (S = e.config.assets.gameTileDark)
+                ? (T = e.config.assets.gameTileDark)
                 : "light" === t && null != e.config.assets.gameTileLight
-                  ? (S = e.config.assets.gameTileLight)
-                  : ((S = e.config.assets.gameTile), (N = !0));
+                  ? (T = e.config.assets.gameTileLight)
+                  : ((T = e.config.assets.gameTile), (N = !0));
             break;
         }
         case "logo_type": {
-            let t = A(n);
+            let t = h(n);
             "dark" === t && null != e.config.assets.logotypeDark
-                ? (S = e.config.assets.logotypeDark)
+                ? (T = e.config.assets.logotypeDark)
                 : "light" === t && null != e.config.assets.logotypeLight
-                  ? (S = e.config.assets.logotypeLight)
-                  : ((S = e.config.assets.logotype), (N = !0));
+                  ? (T = e.config.assets.logotypeLight)
+                  : ((T = e.config.assets.logotype), (N = !0));
             break;
         }
         case "cosponsor_logo_type": {
             if (null == e.config.cosponsorMetadata) return null;
-            let t = A(n);
+            let t = h(n);
             "dark" === t && null != e.config.cosponsorMetadata.logotypeDark
-                ? (S = e.config.cosponsorMetadata.logotypeDark)
+                ? (T = e.config.cosponsorMetadata.logotypeDark)
                 : "light" === t && null != e.config.cosponsorMetadata.logotypeLight
-                  ? (S = e.config.cosponsorMetadata.logotypeLight)
-                  : ((S = e.config.cosponsorMetadata.logotype), (N = !0));
+                  ? (T = e.config.cosponsorMetadata.logotypeLight)
+                  : ((T = e.config.cosponsorMetadata.logotype), (N = !0));
             break;
         }
         case "video_player_video":
@@ -157,42 +158,42 @@ function S(e, t, n, i, r) {
         case "video_player_transcript": {
             if (!("taskConfigV2" in e.config)) return null;
             let n = e.config.taskConfigV2.tasks[i ? a.n.WATCH_VIDEO_ON_MOBILE : a.n.WATCH_VIDEO],
-                r = T[t],
+                r = g[t],
                 s = n?.assets[r.variant]?.[r.property];
             if (null == s) return null;
-            ((S = s), (C = !0));
+            ((T = s), (C = !0));
         }
     }
     let O =
         ((l = e.id),
-        (o = S),
-        (u = { theme: N ? A(n) : void 0 }),
-        (h = (function (e, t, n) {
+        (o = T),
+        (u = { theme: N ? h(n) : void 0 }),
+        (A = (function (e, t, n) {
             if (t.startsWith("blob:")) return t.split("?", 1).at(0) ?? t;
             let i = c.CI;
             return t.includes("/") ? ((i = c.GD), `${i}${t}`) : `${i}${e}${n?.theme != null ? `/${n.theme}` : ""}/${t}`;
-        })(l, o, { theme: A(u?.theme) })),
-        (m = null != (I = R(o)) && f.includes(I)),
-        { url: h, mimetype: I, isAnimated: m });
+        })(l, o, { theme: h(u?.theme) })),
+        (p = null != (f = L(o)) && I.includes(f)),
+        { url: A, mimetype: f, isAnimated: p });
     return C && null == O.mimetype ? null : O;
 }
-function N(e) {
+function C(e) {
     return e.startsWith("http://") || e.startsWith("https://") || e.startsWith("blob:") ? e : `${c.GD}${e}`;
 }
-function C(e) {
-    if (null != e) return N(e);
-}
 function O(e) {
-    return N(e);
+    if (null != e) return C(e);
 }
 function R(e) {
+    return C(e);
+}
+function L(e) {
     if (null == e) return null;
     if (e.startsWith("blob:")) {
         let t = l.A.toURLSafe(e)?.searchParams.get("mimetype") ?? void 0;
         return null != t ? decodeURIComponent(t) : null;
     }
     let t = l.A.toURLSafe(e);
-    switch (t?.searchParams.get("format")?.toLowerCase() ?? h.exec(e)?.[1]?.toLowerCase()) {
+    switch (t?.searchParams.get("format")?.toLowerCase() ?? f.exec(e)?.[1]?.toLowerCase()) {
         case "webm":
             return "video/webm";
         case "mp4":
@@ -220,35 +221,35 @@ function R(e) {
             return null;
     }
 }
-function L(e) {
+function y(e) {
     return Math.min(Math.ceil(e), u.uJv);
 }
-function y(e, t) {
+function D(e, t) {
     let n = (0, o.A)();
     return n < 3 ? { width: e, height: t } : { width: e * n, height: t * n };
 }
-function D(e) {
+function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     if (e.startsWith("blob:")) return e;
     let n = l.A.toURLSafe(e);
     return null == n
         ? e
         : (null != t.format && n.searchParams.set("format", t.format),
-          null != t.width && n.searchParams.set("width", `${L(t.width)}`),
-          null != t.height && n.searchParams.set("height", `${L(t.height)}`),
+          null != t.width && n.searchParams.set("width", `${y(t.width)}`),
+          null != t.height && n.searchParams.set("height", `${y(t.height)}`),
           n.toString());
 }
-function b(e) {
+function v(e) {
     let { assetUrl: t, width: n, height: i } = e,
         r = (0, o.A)();
-    return D(t, { width: n * r, height: i * r, format: "webp" });
+    return b(t, { width: n * r, height: i * r, format: "webp" });
 }
-function v(e, t) {
+function P(e, t) {
     if (e.startsWith("blob:")) return e;
     let n = l.A.toURLSafe(e);
     return null == n
         ? null
         : (n.searchParams.set("format", "webp"),
-          null != t && (n.searchParams.set("width", `${L(t.width)}`), n.searchParams.set("height", `${L(t.height)}`)),
+          null != t && (n.searchParams.set("width", `${y(t.width)}`), n.searchParams.set("height", `${y(t.height)}`)),
           n.toString());
 }

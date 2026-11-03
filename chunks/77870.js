@@ -24,7 +24,7 @@
     Ns: () => e4,
     Iq: () => em,
     Qh: () => eO,
-    t9: () => e6,
+    t9: () => e8,
     RR: () => eK,
     XD: () => e7,
     ZP: () => eN,
@@ -100,7 +100,7 @@ let H = (0, K.mj)({
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
     F = 221552 == n.j ? H : null;
-var B = n(291749),
+var B = n(31046),
     V = n(971276),
     W = n(561844);
 n(590202);
@@ -165,8 +165,8 @@ function ea(e, t, n, r) {
         c = e.userStatus?.enrolledAt != null,
         d = t.userStatus?.enrolledAt != null,
         f = 20 * b.A.Millis.MINUTE,
-        A = e8(e, f),
-        E = e8(t, f);
+        A = e6(e, f),
+        E = e6(t, f);
     if (o) {
         var T, _, I;
         let u,
@@ -352,7 +352,7 @@ function eO(e) {
         _ =
             ((t = (function () {
                 let e = (0, I.bG)([S.A], () => S.A.getQuestHomeHero()),
-                    { isShelfEnabled: t } = e6(e),
+                    { isShelfEnabled: t } = e8(e),
                     n = (0, I.bG)([P.default], () => P.default.getCurrentUser()?.id ?? null),
                     { enabled: r } = F.useConfig({ location: er.rE.QUEST_HOME_MOBILE }),
                     { enabled: u } = q.NN.useConfig({ location: er.rE.QUEST_HOME_MOBILE });
@@ -846,11 +846,11 @@ function e9(e) {
 function e4(e) {
     return i.useMemo(() => P.default.getCurrentUser()?.isStaff() === !0, []) || e.preview;
 }
-function e8(e, t) {
+function e6(e, t) {
     let n = e.userStatus?.completedAt != null;
     return e.userStatus?.enrolledAt != null && !n && Date.now() - new Date(e.userStatus?.enrolledAt).getTime() > t;
 }
-function e6(e) {
+function e8(e) {
     let t = (0, I.bG)([Q.A], () => Q.A.quests),
         n = e?.questIds;
     return i.useMemo(() => {

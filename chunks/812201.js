@@ -1001,11 +1001,11 @@ var e$ = n(889137),
     eJ = n(405670),
     e0 = n(112142),
     e1 = n(646917),
-    e2 = n(291749),
-    e7 = n(576761),
-    e3 = n(117634),
-    e8 = n(976019),
-    e6 = n(442734),
+    e2 = n(31046),
+    e3 = n(576761),
+    e7 = n(117634),
+    e6 = n(976019),
+    e8 = n(442734),
     e9 = n(114046),
     e5 = n(695366),
     e4 = n(507395),
@@ -1362,7 +1362,7 @@ function tR(e) {
         y = (0, el.Pd)(a),
         v = (0, e1.z)(),
         N = (0, x.SD)(a, v),
-        B = v === e7.MA.NITRO && N;
+        B = v === e3.MA.NITRO && N;
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)("div", {
@@ -1385,7 +1385,7 @@ function tR(e) {
                                     className: tj.zf,
                                     children: [
                                         (0, s.jsx)(eA.E, { className: tj.h_, variant: "body-xs/normal", children: R }),
-                                        N && (0, s.jsx)(e6.e, { questId: a.id, orbMultiplierEligibility: v }),
+                                        N && (0, s.jsx)(e8.e, { questId: a.id, orbMultiplierEligibility: v }),
                                     ],
                                 }),
                             ],
@@ -1420,7 +1420,7 @@ function tR(e) {
                     ],
                 }),
             }),
-            (0, s.jsx)(e3.A, { visible: B, glow: !0, className: tj.Ph }),
+            (0, s.jsx)(e7.A, { visible: B, glow: !0, className: tj.Ph }),
             null != _ &&
                 (0, s.jsx)(T.animated.div, {
                     className: tj.AK,
@@ -1452,7 +1452,7 @@ function tR(e) {
 function ty(e) {
     let { quest: t } = e,
         { hasAlreadyLinked: n, onClickGameTitle: i } = r.useContext(H.SH);
-    return !0 !== n ? null : (0, s.jsx)(e8.A, { quest: t, hasAlreadyLinked: n, onClickGameTitle: i });
+    return !0 !== n ? null : (0, s.jsx)(e6.A, { quest: t, hasAlreadyLinked: n, onClickGameTitle: i });
 }
 function tQ(e) {
     let { activeScreen: t, selectPlatform: n } = e,

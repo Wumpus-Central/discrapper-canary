@@ -1,8 +1,8 @@
 s.d(a, { V: () => N });
 var l = s(477900),
-    r = s(582128),
-    n = s(503698),
-    i = s.n(n),
+    n = s(582128),
+    r = s(503698),
+    i = s.n(r),
     c = s(349892),
     t = s(325558),
     o = s(408278),
@@ -16,31 +16,33 @@ function N(e) {
     let {
             value: a,
             onChange: s,
-            minValue: n,
+            minValue: r,
             maxValue: N,
-            disabled: b = !1,
-            readOnly: v = !1,
-            className: E,
-            "aria-label": f,
+            isDateUnavailable: b,
+            disabled: v = !1,
+            readOnly: E = !1,
+            className: f,
+            "aria-label": y,
         } = e,
-        { i18n: y } = (0, u.G9)(),
-        [p, _] = r.useState(a);
+        { i18n: p } = (0, u.G9)(),
+        [_, g] = n.useState(a);
     return (
-        r.useEffect(() => {
-            _(a);
+        n.useEffect(() => {
+            g(a);
         }, [a]),
         (0, l.jsx)(c.Vv, {
             value: a,
-            focusedValue: p,
-            onFocusChange: _,
+            focusedValue: _,
+            onFocusChange: g,
             onChange: s,
-            minValue: n,
+            minValue: r,
             maxValue: N,
-            isDisabled: b,
-            isReadOnly: v,
-            "aria-label": f,
+            isDateUnavailable: b,
+            isDisabled: v,
+            isReadOnly: E,
+            "aria-label": y,
             "data-mana-component": "calendar",
-            className: i()(j.BJ, E),
+            className: i()(j.BJ, f),
             children: (e) =>
                 (0, l.jsxs)(l.Fragment, {
                     children: [
@@ -51,7 +53,7 @@ function N(e) {
                                     variant: "icon-only",
                                     size: "sm",
                                     icon: d.n,
-                                    "aria-label": y.CALENDAR_PREVIOUS_MONTH_LABEL,
+                                    "aria-label": p.CALENDAR_PREVIOUS_MONTH_LABEL,
                                     onClick: () => e.state.focusPreviousPage(),
                                     slot: "previous",
                                 }),
@@ -68,7 +70,7 @@ function N(e) {
                                     size: "sm",
                                     icon: m._,
                                     onClick: () => e.state.focusNextPage(),
-                                    "aria-label": y.CALENDAR_NEXT_MONTH_LABEL,
+                                    "aria-label": p.CALENDAR_NEXT_MONTH_LABEL,
                                     slot: "next",
                                 }),
                             ],

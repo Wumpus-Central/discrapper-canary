@@ -1,7 +1,8 @@
 s.d(a, { l: () => f });
-var l = s(477900),
-    r = s(503698),
-    n = s.n(r),
+var l = s(477900);
+s(582128);
+var n = s(503698),
+    r = s.n(n),
     i = s(610138),
     c = s(416494),
     t = s(755357),
@@ -17,21 +18,31 @@ var l = s(477900),
     v = s(432816),
     E = s(341450);
 function f(e) {
-    let { value: a, onChange: s, minValue: r, maxValue: f, placeholderValue: y, granularity: p = "day", ..._ } = e,
-        { i18n: g } = (0, v.G9)(),
-        { fieldProps: C } = (0, j.n)(_),
-        { disabled: A, errorMessage: L, required: V = !1 } = C,
-        D = { hasError: null != L && "" !== L },
+    let {
+            value: a,
+            onChange: s,
+            minValue: n,
+            maxValue: f,
+            isDateUnavailable: y,
+            placeholderValue: p,
+            granularity: _ = "day",
+            ...g
+        } = e,
+        { i18n: C } = (0, v.G9)(),
+        { fieldProps: A } = (0, j.n)(g),
+        { disabled: D, errorMessage: L, required: V = !1 } = A,
+        I = null != a && y?.(a) === !0,
+        P = { hasError: null != L && "" !== L },
         {
-            refs: I,
-            floatingStyles: P,
-            isOpen: k,
-            setIsOpen: O,
-            context: R,
-            getFloatingProps: F,
-            getReferenceProps: B,
+            refs: k,
+            floatingStyles: O,
+            isOpen: R,
+            setIsOpen: F,
+            context: B,
+            getFloatingProps: T,
+            getReferenceProps: U,
         } = (0, u.u)({ matchReferenceWidth: !1, placement: "bottom-start" }),
-        { isMounted: T, styles: w } = (0, h.DL)(R, {
+        { isMounted: w, styles: z } = (0, h.DL)(B, {
             common: (e) => {
                 let { side: a } = e;
                 return { transformOrigin: `${"top" === a ? "bottom" : "top"} center` };
@@ -39,17 +50,17 @@ function f(e) {
             initial: { opacity: 0.5, transform: "scaleY(0.96)" },
             duration: 100,
         });
-    function z(e) {
-        (s?.(e), O(!1));
+    function K(e) {
+        (s?.(e), F(!1));
     }
     return (0, l.jsx)(j.D, {
-        ...C,
+        ...A,
         children: (e) =>
             (0, l.jsx)(b.F, {
-                className: "minute" === p ? E.XF : E.LF,
-                validation: D,
-                ref: I.setReference,
-                ...B(),
+                className: "minute" === _ ? E.XF : E.LF,
+                validation: P,
+                ref: k.setReference,
+                ...U(),
                 children: (0, l.jsxs)(c.lr, {
                     id: e.controlId,
                     "aria-labelledby": e.labelId,
@@ -57,13 +68,15 @@ function f(e) {
                     "aria-invalid": null != e.errorMessageId,
                     "aria-errormessage": e.errorMessageId,
                     value: a,
-                    onChange: z,
-                    isDisabled: A,
+                    onChange: K,
+                    isDisabled: D,
                     isRequired: V,
-                    minValue: r,
+                    minValue: n,
                     maxValue: f,
-                    placeholderValue: y,
-                    granularity: p,
+                    isDateUnavailable: y,
+                    isInvalid: I || void 0,
+                    placeholderValue: p,
+                    granularity: _,
                     "data-mana-component": "date-picker",
                     className: E.Nz,
                     children: [
@@ -72,36 +85,37 @@ function f(e) {
                             children: [
                                 (0, l.jsx)(o.J3, {
                                     children: (e) =>
-                                        (0, l.jsx)(o.Eu, { segment: e, className: n()(E.mX, e.isPlaceholder && E.qf) }),
+                                        (0, l.jsx)(o.Eu, { segment: e, className: r()(E.mX, e.isPlaceholder && E.qf) }),
                                 }),
                                 (0, l.jsx)(d.$, {
                                     className: E.B7,
-                                    onClick: () => O(!k),
-                                    "aria-label": g.DATE_INPUT_OPEN_CALENDAR_LABEL,
+                                    onClick: () => F(!R),
+                                    "aria-label": C.DATE_INPUT_OPEN_CALENDAR_LABEL,
                                     children: (0, l.jsx)(N.CalendarIcon, { size: "sm", color: "currentColor" }),
                                 }),
                             ],
                         }),
-                        k &&
-                            T &&
+                        R &&
+                            w &&
                             (0, l.jsx)("div", {
-                                ...F(),
-                                ref: I.setFloating,
-                                style: P,
+                                ...T(),
+                                ref: k.setFloating,
+                                style: O,
                                 className: E.oO,
                                 children: (0, l.jsx)(i.n1, {
                                     contain: !0,
                                     restoreFocus: !0,
                                     children: (0, l.jsx)(m.lG, {
-                                        "aria-label": g.DATE_INPUT_OPEN_CALENDAR_LABEL,
-                                        style: w,
+                                        "aria-label": C.DATE_INPUT_OPEN_CALENDAR_LABEL,
+                                        style: z,
                                         className: E.r3,
                                         children: (0, l.jsx)(x.V, {
                                             value: a,
-                                            onChange: z,
-                                            minValue: r,
+                                            onChange: K,
+                                            minValue: n,
                                             maxValue: f,
-                                            disabled: A,
+                                            isDateUnavailable: y,
+                                            disabled: D,
                                         }),
                                     }),
                                 }),

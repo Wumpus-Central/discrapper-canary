@@ -10,7 +10,7 @@ var s = n(477900),
     c = n(427495),
     _ = n(738822),
     E = n(405670),
-    v = n(291749),
+    v = n(31046),
     C = n(792620),
     p = n(753386),
     S = n(491812),
@@ -723,14 +723,14 @@ function eE(e) {
             },
             [eZ, eN],
         ),
-        e9 = r.useCallback(
+        e5 = r.useCallback(
             (e) => {
                 let t = e - h;
                 (eJ(t), eQ(t));
             },
             [eJ, eQ, h],
         ),
-        e5 = r.useCallback(
+        e9 = r.useCallback(
             (e) => {
                 (w(e), eH(e));
             },
@@ -805,11 +805,11 @@ function eE(e) {
         onPlayerStateChange: e2,
         onLoadStart: e7,
         onLoadEnd: e8,
-        onFirstFrame: e9,
+        onFirstFrame: e5,
         onBufferingStart: eF,
         onBufferingEnd: ey,
         onFocusChange: eP,
-        onFullscreenChange: e5,
+        onFullscreenChange: e9,
         initialVolume: ep,
         initialMuted: eS,
         onVolumeChange: e4,

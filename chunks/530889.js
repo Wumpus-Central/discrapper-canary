@@ -1155,7 +1155,7 @@ async function eY() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "662986";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "663033";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
     let s = eH?.processUtils?.getLastCrash;
@@ -1501,7 +1501,7 @@ if (null == e8 || "0.0.0" !== e8.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e9 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new e$.A().log(
-    `[BUILD INFO] Release Channel: ${e9}, Build Number: 662986, Version Hash: 1064a24ee83ff1f0cb11896a285cabe3aea24b13`,
+    `[BUILD INFO] Release Channel: ${e9}, Build Number: 663033, Version Hash: e8204fa877f15e962087b1fa2b745c469b192d83`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -4802,7 +4802,8 @@ let sa = (0, ri.Fe)({
                 n.e("601695"),
                 n.e("808781"),
                 n.e("107955"),
-                n.e("450014"),
+                n.e("288536"),
+                n.e("480992"),
                 n.e("350028"),
                 n.e("745054"),
                 n.e("97785"),
@@ -10246,7 +10247,7 @@ function _H(e) {
     );
 }
 var _j = n(61330),
-    _W = n(291749),
+    _W = n(31046),
     _Y = n(792620);
 function _K(e) {
     let { party: t, onUserContextMenu: i, quest: r } = e,
@@ -25917,7 +25918,7 @@ let yA = "isHideDevBanner",
                     className: t_()(yE.Wz, yE.mr),
                     children: [
                         (0, v.jsx)(y_, { className: yE.Kk }),
-                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "662986" }),
+                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "663033" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -28397,14 +28398,15 @@ let vm = (0, ri.Fe)({
         Promise.all([
             n.e("107955"),
             n.e("505928"),
-            n.e("450014"),
+            n.e("288536"),
+            n.e("747973"),
+            n.e("480992"),
             n.e("546547"),
             n.e("102075"),
             n.e("828178"),
             n.e("572388"),
             n.e("350028"),
             n.e("752657"),
-            n.e("747973"),
             n.e("974119"),
             n.e("745054"),
             n.e("857871"),
@@ -31959,7 +31961,8 @@ let vO = (0, t$.Fe)({
                 n.e("828178"),
                 n.e("203654"),
                 n.e("107955"),
-                n.e("450014"),
+                n.e("288536"),
+                n.e("480992"),
                 n.e("572388"),
                 n.e("350028"),
                 n.e("745054"),
@@ -32181,7 +32184,8 @@ let vO = (0, t$.Fe)({
                 n.e("828178"),
                 n.e("203654"),
                 n.e("107955"),
-                n.e("450014"),
+                n.e("288536"),
+                n.e("480992"),
                 n.e("572388"),
                 n.e("350028"),
                 n.e("745054"),
@@ -53877,7 +53881,8 @@ let YL = (0, t$.Fe)({
             n.e("932696"),
             n.e("808781"),
             n.e("107955"),
-            n.e("450014"),
+            n.e("288536"),
+            n.e("480992"),
             n.e("350028"),
             n.e("745054"),
             n.e("97785"),
