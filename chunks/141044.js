@@ -1,9 +1,9 @@
-(a.r(t), a.d(t, { collectiblesCollection: () => I, playgroundConfig: () => j }));
-var r = a(34188),
-    n = a(477900),
-    l = a(582128),
-    o = a(834730),
-    s = a(262056);
+(a.r(t), a.d(t, { collectiblesCollection: () => j, playgroundConfig: () => I }));
+var o = a(34188),
+    s = a(477900),
+    r = a(582128),
+    l = a(834730),
+    n = a(262056);
 let i = {
     title: "Promotions",
     stories: [
@@ -11,13 +11,13 @@ let i = {
             name: "Promotion Progress Ring",
             id: "promotion-progress-ring",
             component: function (e) {
-                let { current: t, target: a, progressColor: r, segmentGap: l } = e;
-                return (0, n.jsx)(s.A, {
+                let { current: t, target: a, progressColor: o, segmentGap: r } = e;
+                return (0, s.jsx)(n.A, {
                     current: t,
                     target: a,
-                    progressColor: r,
-                    segmentGap: l,
-                    children: (0, n.jsxs)(o.E, { variant: "text-md/semibold", children: [t, "/", a] }),
+                    progressColor: o,
+                    segmentGap: r,
+                    children: (0, s.jsxs)(l.E, { variant: "text-md/semibold", children: [t, "/", a] }),
                 });
             },
             controls: {
@@ -31,21 +31,21 @@ let i = {
 };
 var c = a(331322),
     d = a(440938),
-    u = a(161918),
-    m = a(682301),
-    p = a(905276),
-    g = a(484469),
-    h = a(721720),
+    m = a(161918),
+    u = a(682301),
+    g = a(905276),
+    h = a(484469),
+    p = a(272242),
     v = a(758836),
     x = a(107481);
-function f(e) {
+function b(e) {
     return e.split(/[\s,]+/).filter((e) => "" !== e);
 }
-var b = a(278416),
+var f = a(278416),
     y = a(534514),
-    S = a(173127),
-    C = a(703086);
-let E = {
+    C = a(173127),
+    S = a(703086);
+let k = {
     home: "Home",
     catalog: "Catalog",
     browse: "Browse",
@@ -57,10 +57,10 @@ let E = {
     "games-b": "Game B",
     "game servers": "Game Servers",
 };
-var w = a(821609),
-    A = a(793574),
-    k = a(722258);
-let I = {
+var E = a(821609),
+    w = a(793574),
+    A = a(722258);
+let j = {
         id: "collectibles",
         name: "Collectibles Shop",
         groups: [
@@ -73,27 +73,27 @@ let I = {
                         component: function (e) {
                             let { skuId: t } = e,
                                 a = t.trim(),
-                                { state: r } = (0, m.IK)(a, { needsCategory: !0 });
-                            return (0, n.jsxs)(c.B, {
+                                { state: o } = (0, u.IK)(a, { needsCategory: !0 });
+                            return (0, s.jsxs)(c.B, {
                                 direction: "vertical",
                                 gap: 16,
                                 align: "start",
                                 children: [
-                                    (0, n.jsx)(o.E, {
+                                    (0, s.jsx)(l.E, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
                                         children:
                                             "Enter a shop SKU ID in the controls, then open the product details modal. The loader resolves the product + category from the storefront APIs (store-first, single item).",
                                     }),
-                                    (0, n.jsxs)(o.E, {
+                                    (0, s.jsxs)(l.E, {
                                         variant: "text-sm/semibold",
-                                        children: ["Resolver state: ", "" === a ? "idle (no skuId)" : r],
+                                        children: ["Resolver state: ", "" === a ? "idle (no skuId)" : o],
                                     }),
-                                    (0, n.jsx)(w.$, {
+                                    (0, s.jsx)(E.$, {
                                         text: "Open product details",
                                         disabled: "" === a,
                                         onClick: () =>
-                                            (0, k.B)({ skuId: a, analyticsLocations: [A.A.COLLECTIBLES_SHOP] }),
+                                            (0, A.B)({ skuId: a, analyticsLocations: [w.A.COLLECTIBLES_SHOP] }),
                                     }),
                                 ],
                             });
@@ -110,36 +110,36 @@ let I = {
                         id: "shop-batched-sku-loader",
                         component: function (e) {
                             let { skuIds: t } = e,
-                                a = l.useMemo(() => f(t), [t]),
-                                r = (0, m.hv)(a, { needsCategory: !1 });
-                            return (0, n.jsxs)(c.B, {
+                                a = r.useMemo(() => b(t), [t]),
+                                o = (0, u.hv)(a, { needsCategory: !1 });
+                            return (0, s.jsxs)(c.B, {
                                 direction: "vertical",
                                 gap: 16,
                                 align: "start",
                                 children: [
-                                    (0, n.jsx)(o.E, {
+                                    (0, s.jsx)(l.E, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
                                         children:
                                             "Comma- or space-separate shop SKU IDs in the controls. Each tile resolves via the storefront APIs through CollectiblesShopManager \u2014 all IDs entered here coalesce into one batched request. Tiles show the skeleton until the SKU resolves.",
                                     }),
-                                    (0, n.jsx)("div", {
+                                    (0, s.jsx)("div", {
                                         className: x.Vg,
                                         children: a.map((e) => {
-                                            let { state: t, product: a } = r[e] ?? { state: "loading", product: null };
-                                            return (0, n.jsx)(
+                                            let { state: t, product: a } = o[e] ?? { state: "loading", product: null };
+                                            return (0, s.jsx)(
                                                 "div",
                                                 {
                                                     className: x.Vs,
                                                     children:
                                                         "ready" === t && null != a
-                                                            ? (0, n.jsxs)(n.Fragment, {
+                                                            ? (0, s.jsxs)(s.Fragment, {
                                                                   children: [
-                                                                      (0, n.jsx)(o.E, {
+                                                                      (0, s.jsx)(l.E, {
                                                                           variant: "text-sm/semibold",
                                                                           children: a.name,
                                                                       }),
-                                                                      (0, n.jsx)(o.E, {
+                                                                      (0, s.jsx)(l.E, {
                                                                           variant: "text-xs/normal",
                                                                           color: "text-muted",
                                                                           children: e,
@@ -147,12 +147,12 @@ let I = {
                                                                   ],
                                                               })
                                                             : "error" === t
-                                                              ? (0, n.jsxs)(o.E, {
+                                                              ? (0, s.jsxs)(l.E, {
                                                                     variant: "text-sm/semibold",
                                                                     color: "text-feedback-critical",
                                                                     children: ["error: ", e],
                                                                 })
-                                                              : (0, n.jsx)(g.A, {}),
+                                                              : (0, s.jsx)(h.A, {}),
                                                 },
                                                 e,
                                             );
@@ -168,25 +168,25 @@ let I = {
                         id: "shop-product-card",
                         component: function (e) {
                             let { skuIds: t } = e,
-                                a = l.useMemo(() => f(t), [t]);
-                            return (0, n.jsx)(u.iM, {
+                                a = r.useMemo(() => b(t), [t]);
+                            return (0, s.jsx)(m.iM, {
                                 tab: v.G2.HOME,
-                                children: (0, n.jsx)(d.R9, {
+                                children: (0, s.jsx)(d.R9, {
                                     newValue: { sessionId: "playground" },
-                                    children: (0, n.jsxs)(c.B, {
+                                    children: (0, s.jsxs)(c.B, {
                                         direction: "vertical",
                                         gap: 16,
                                         align: "start",
                                         children: [
-                                            (0, n.jsx)(o.E, {
+                                            (0, s.jsx)(l.E, {
                                                 variant: "text-sm/normal",
                                                 color: "text-muted",
                                                 children:
                                                     "Renders real ProductCards. Each card resolves through CollectiblesShopManager and shows a skeleton until ready.",
                                             }),
-                                            (0, n.jsx)("div", {
+                                            (0, s.jsx)("div", {
                                                 className: x.Vg,
-                                                children: a.map((e) => (0, n.jsx)(p.A, { skuId: e }, e)),
+                                                children: a.map((e) => (0, s.jsx)(g.A, { skuId: e }, e)),
                                             }),
                                         ],
                                     }),
@@ -199,13 +199,13 @@ let I = {
                         name: "Shop Home Feed",
                         id: "shop-home-feed",
                         component: function () {
-                            return (0, n.jsx)(u.iM, {
+                            return (0, s.jsx)(m.iM, {
                                 tab: v.G2.HOME,
-                                children: (0, n.jsx)(d.R9, {
+                                children: (0, s.jsx)(d.R9, {
                                     newValue: { sessionId: "playground" },
-                                    children: (0, n.jsx)("div", {
+                                    children: (0, s.jsx)("div", {
                                         className: x.rO,
-                                        children: (0, n.jsx)(h.A, {
+                                        children: (0, s.jsx)(p.A, {
                                             handleTransition: () => {},
                                             tab: v.G2.HOME,
                                             transitionState: v.Pf.VISIBLE,
@@ -224,14 +224,14 @@ let I = {
                         name: "Navigation Menu",
                         id: "navigation-menu",
                         component: function () {
-                            let [e, t] = l.useState("home"),
-                                a = l.useCallback(
+                            let [e, t] = r.useState("home"),
+                                a = r.useCallback(
                                     (e, a) => () => {
                                         (window.history.pushState(null, "", a), t(e));
                                     },
                                     [],
                                 ),
-                                r = l.useMemo(
+                                o = r.useMemo(
                                     () => [
                                         {
                                             type: "page",
@@ -259,7 +259,7 @@ let I = {
                                                     type: "page",
                                                     key: "offer eligible",
                                                     text: "Offer Eligible",
-                                                    trailingIndicator: { type: "icon", icon: b.TagIcon },
+                                                    trailingIndicator: { type: "icon", icon: f.TagIcon },
                                                     onClick: a("offer eligible", "#offereligible"),
                                                 },
                                                 {
@@ -312,25 +312,25 @@ let I = {
                                     ],
                                     [a],
                                 );
-                            return (0, n.jsxs)("div", {
-                                className: C.MY,
+                            return (0, s.jsxs)("div", {
+                                className: S.MY,
                                 children: [
-                                    (0, n.jsx)("div", {
-                                        className: C.jr,
-                                        children: (0, n.jsx)(S.A, {
+                                    (0, s.jsx)("div", {
+                                        className: S.jr,
+                                        children: (0, s.jsx)(C.A, {
                                             "aria-label": "Playground Navigation",
-                                            className: C.C$,
-                                            options: r,
+                                            className: S.C$,
+                                            options: o,
                                             selectedKey: e,
                                             overflowLabel: "More",
                                             overflowExpandLabel: "More navigation options",
                                         }),
                                     }),
-                                    (0, n.jsx)("div", {
-                                        className: C.Qs,
-                                        children: (0, n.jsx)(y.D, {
+                                    (0, s.jsx)("div", {
+                                        className: S.Qs,
+                                        children: (0, s.jsx)(y.D, {
                                             variant: "heading-lg/semibold",
-                                            children: E[e] ?? e,
+                                            children: k[e] ?? e,
                                         }),
                                     }),
                                 ],
@@ -342,6 +342,6 @@ let I = {
             i,
         ],
         tags: ["Collectibles", "Shop", "Storefront"],
-        IconComponent: r.U,
+        IconComponent: o.U,
     },
-    j = { playgroundBaseUrl: "collectibles", collections: [I] };
+    I = { playgroundBaseUrl: "collectibles", collections: [j] };

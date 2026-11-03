@@ -330,6 +330,19 @@
     height: 440px
 }
 
+.heroHeaderContainer__08415.collectionSaleHeroHeader__08415 {
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 223px;
+    padding-block: 19px 16px;
+    row-gap: 16px
+}
+
+.heroHeaderContainer__08415.collectionSaleHeroHeader__08415.responsive__08415 {
+    height: auto;
+    min-height: calc(max(18vw, 130px) - 32px)
+}
+
 .heroHeaderBadgeLogoSummaryContainer__08415 {
     display: flex;
     flex: 1;
@@ -827,4 +840,4 @@
     max-width: 393px
 }
 
-/*# sourceMappingURL=a98409e4ea25cddb.css.map*/
+/*# sourceMappingURL=fcaae2f9b3f8f562.css.map*/
