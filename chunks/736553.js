@@ -74,6 +74,10 @@ class r {
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
         this.socket.send(JSON.stringify({ type: `${e}_queued_message`, id: t }));
     }
+    sendSafetyRecheck() {
+        if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("Not connected");
+        this.socket.send(JSON.stringify({ type: "request_safety_recheck" }));
+    }
     sendPublishOptions(e) {
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("Not connected");
         this.socket.send(JSON.stringify({ type: "publish_options", nonce: e }));

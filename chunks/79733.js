@@ -1,4 +1,4 @@
-n.d(l, { bI: () => R, Ay: () => W, vL: () => O, KL: () => k, qF: () => D, FZ: () => J });
+n.d(l, { bI: () => R, Ay: () => W, vL: () => H, KL: () => k, qF: () => D, FZ: () => J });
 var e = n(582128),
     i = n(17928),
     a = n(73153),
@@ -129,7 +129,7 @@ function F(t, l) {
         },
     };
 }
-async function O(t, l) {
+async function H(t, l) {
     var n;
     let e = A.Ay.getProject(t),
         i = e?.preview_application_id;
@@ -148,7 +148,7 @@ async function O(t, l) {
         await S(e, a).catch(() => {}),
         await (0, h.U1)(t).catch(() => {}));
 }
-async function H(t, l, n, e) {
+async function O(t, l, n, e) {
     let i,
         { project: u } = t,
         { platform: r, guildId: s } = n,
@@ -221,6 +221,7 @@ async function J(t, l, e) {
     let r = F(t, a),
         s = r?.input.status?.publishState;
     if (null == r || null == s || !(0, y.Uh)(s)) return;
+    if (r.input.status?.safetyHold === !0) return void u.showSafetyHold(t);
     let o = x(t) ? C.A.getPublishApprovalUrl(t) : null;
     if (null != o && (0, A.PV)(r.project)) {
         let { promptPublishApproval: t } = await Promise.all([n.e("241989"), n.e("574246")]).then(n.bind(n, 200389));
@@ -251,7 +252,7 @@ async function Q(t, l, n, e) {
         if ("consent_then_publish" === l.intent) {
             Z.add(t);
             try {
-                await (a.requestConsent ?? ((t) => O(t, i)))(t);
+                await (a.requestConsent ?? ((t) => H(t, i)))(t);
             } finally {
                 Z.delete(t);
             }
@@ -268,10 +269,10 @@ async function Q(t, l, n, e) {
                 })
             )
                 return;
-            await H(u, l, n, e);
+            await O(u, l, n, e);
             return;
         }
-        await H(u, l, n, e);
+        await O(u, l, n, e);
     }
 }
 function W(t, l) {
@@ -293,8 +294,8 @@ function W(t, l) {
             guildName: j,
             appChannelName: k,
             appChannelPending: D,
-            canManageGuild: O,
-            canManageChannels: H,
+            canManageGuild: H,
+            canManageChannels: O,
             usesAppChannels: L,
             botInGuild: q,
             liveNameOutdated: Z,
@@ -340,13 +341,13 @@ function W(t, l) {
                           guildName: j,
                           appChannelName: k,
                           appChannelPending: D,
-                          canManageGuild: O,
-                          canManageChannels: H,
+                          canManageGuild: H,
+                          canManageChannels: O,
                           usesAppChannels: L,
                           botInGuild: q,
                           liveNameOutdated: Z,
                       },
-            [m, w, E, G, j, k, D, O, H, L, q, Z],
+            [m, w, E, G, j, k, D, H, O, L, q, Z],
         ),
         W = Q?.status?.publishState ?? null,
         X = Q?.installScope === "guild" && Q.status?.surface === "bot";

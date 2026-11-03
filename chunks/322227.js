@@ -37,8 +37,8 @@ var r = n(158390),
     O = n(371169),
     T = n(962998),
     b = n(416473),
-    C = n(525530),
-    k = n(743082),
+    k = n(525530),
+    C = n(743082),
     N = n(385081),
     w = n(545503);
 class A {
@@ -129,6 +129,7 @@ let U = {
     restart_sandbox_result: !0,
     reaction: !0,
     restore_proposal: !0,
+    safety_recheck: !0,
     saving: !0,
     segment_settled: !0,
     spend_limit: !0,
@@ -144,7 +145,7 @@ var P = n(649121),
     J = n(77729),
     M = n(209489),
     D = n(723702);
-let L = !1;
+let H = !1;
 (n(643210),
     n(285411),
     n(933294),
@@ -156,7 +157,7 @@ let L = !1;
     n(442331),
     n(427123),
     n(677683));
-let H = new Map(),
+let L = new Map(),
     x = new Map(),
     G = new Set();
 function j(e, t) {
@@ -184,7 +185,7 @@ function $(e, t, n) {
     let r = t.pendingSends;
     for (let s of ((t.pendingSends = []), r)) (q(e, s), (0, d.Gu)(e, n));
 }
-let F = { ...a.m, ...d.NW, ..._.eI, ...f.x9, ...g.U, ...E.p, ...m.VY, ...T.qy, ...b.Rd, ...C.ow, ...k.WO, ...p.V5 },
+let F = { ...a.m, ...d.NW, ..._.eI, ...f.x9, ...g.U, ...E.p, ...m.VY, ...T.qy, ...b.Rd, ...k.ow, ...C.WO, ...p.V5 },
     K = {
         app_build_request(e, t) {
             let { projectId: n } = t;
@@ -238,6 +239,7 @@ function Y(e, t) {
     (0, T.Mz)(e, "Connection closed before the publish result arrived"),
     (0, b.Fc)(e),
     (0, T.BC)(e, "Connection closed before the draft arrived"),
+    (0, T.Nc)(e),
     (0, S.RP)(e),
     t.disposed)
         ? j(e, "closed")
@@ -348,7 +350,7 @@ async function z(e, t) {
                             case "step":
                                 !(function (e, t) {
                                     let { projectId: n } = t;
-                                    if ("turn_result" === e.kind) {
+                                    if (("error" === e.kind && (0, T.Nc)(n), "turn_result" === e.kind)) {
                                         ((0, N.hV)(n, e),
                                             "deployed" === e.result &&
                                                 i.h.dispatch({
@@ -392,6 +394,7 @@ async function z(e, t) {
             (0, T.Mz)(e, "Connection failed before the publish result arrived"),
             (0, b.Fc)(e),
             (0, T.BC)(e, "Connection failed before the draft arrived"),
+            (0, T.Nc)(e),
             (0, N.Hy)(e, {
                 location: "connection",
                 code: N.xf.WS_OPEN_FAILED,
@@ -401,7 +404,7 @@ async function z(e, t) {
 }
 function Q(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-        n = H.get(e);
+        n = L.get(e);
     if (null == n) {
         var s;
         let t = new R.u();
@@ -411,7 +414,7 @@ function Q(e) {
             heartbeat: new A(
                 () => t.sendPing(),
                 () => {
-                    let t = H.get(e);
+                    let t = L.get(e);
                     null != t && (t.ws.close(), Y(e, t));
                 },
             ),
@@ -425,11 +428,11 @@ function Q(e) {
             warmTemplateId: null,
             debugOnDemand: !1,
         }),
-            H.set(e, n),
+            L.set(e, n),
             (0, I.Sm)(e, n.ws),
             (s = X),
-            !L &&
-                ((L = !0),
+            !H &&
+                ((H = !0),
                 (0, D.isDesktop)() && J.A.powerMonitor.on("resume", s),
                 M.A.addOnlineCallback(s),
                 "u" > typeof document &&
@@ -449,7 +452,7 @@ function Q(e) {
         z(e, i));
 }
 function X() {
-    for (let [e, t] of Array.from(H.entries()))
+    for (let [e, t] of Array.from(L.entries()))
         t.reconnectPending ? (t.backoff.succeed(), Q(e)) : t.heartbeat.expedite();
 }
 let Z = new Map();
@@ -459,7 +462,7 @@ function ee(e, t) {
 function et(e) {
     let t = Z.get(e) ?? 0;
     Z.set(e, t + 1);
-    let n = H.get(e);
+    let n = L.get(e);
     return (
         0 === t && null != n && "open" === x.get(e) && ee(e, n),
         () => {
@@ -469,7 +472,7 @@ function et(e) {
     );
 }
 function en(e) {
-    let t = H.get(e);
+    let t = L.get(e);
     return (
         null != t &&
         ((t.disposed = !0),
@@ -478,8 +481,9 @@ function en(e) {
         (0, T.Mz)(e, "Connection closed before the publish result arrived"),
         (0, b.Fc)(e),
         (0, T.BC)(e, "Connection closed before the draft arrived"),
+        (0, T.Nc)(e),
         t.ws.close(),
-        H.delete(e),
+        L.delete(e),
         (0, I.ng)(e),
         eh(e),
         w.A.releasePreviewControl(e),
@@ -490,7 +494,7 @@ function en(e) {
 }
 function er(e) {
     let { templateId: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        n = H.get(e);
+        n = L.get(e);
     if (null == n) return void Q(e, t ?? null);
     let r = x.get(e);
     ("closed" !== r && "failed" !== r) || n.reconnectPending || Q(e);
@@ -515,7 +519,7 @@ function es(e, t, n) {
             ...(null != i ? { clarificationAnswers: i } : {}),
             ...(null != p ? { linkEmbeds: p } : {}),
         },
-        _ = H.get(e);
+        _ = L.get(e);
     if (null != _ && ("connecting" === x.get(e) || _.reconnectPending)) return (_.pendingSends.push(h), !0);
     q(e, h);
     try {
@@ -551,7 +555,7 @@ function eo(e, t) {
     (W.delete(t), i.h.dispatch({ type: "CONJURE_CHAT_MESSAGE_CANCELLED", projectId: e, id: B(t), withdrawn: !0 }));
 }
 function el(e) {
-    let t = H.get(e);
+    let t = L.get(e);
     try {
         if (null == t) throw Error("Not connected");
         (t.ws.sendInterrupt(),
@@ -561,13 +565,13 @@ function el(e) {
     }
 }
 function ea(e, t) {
-    let n = H.get(e);
+    let n = L.get(e);
     null == n
         ? console.error("[conjure] stageModelSettings with no connection \u2014 call ensureConnection first")
         : (n.pendingModelSettings = t);
 }
 function ec(e, t) {
-    let n = H.get(e);
+    let n = L.get(e);
     null == n
         ? console.error("[conjure] prepareTemplate with no connection \u2014 call ensureConnection first")
         : "open" === x.get(e)
@@ -586,7 +590,7 @@ function ep(e) {
     let t = (0, c.b)(e);
     if (null == t) return !1;
     if (eu.get(e) === t) return !0;
-    let n = H.get(e);
+    let n = L.get(e);
     return null != n && "open" === x.get(e) && (eu.set(e, t), n.ws.sendLoadHistory(t), !0);
 }
 function eh(e) {
@@ -596,7 +600,7 @@ function e_(e) {
     en(e);
 }
 function ef() {
-    for (let e of Array.from(H.keys())) en(e);
+    for (let e of Array.from(L.keys())) en(e);
     (W.clear(), (0, P.j_)());
 }
 class eg extends s.Ay.Store {
@@ -623,11 +627,11 @@ let eE = new eg(i.h, {
     },
     CONJURE_PROJECTS_FETCH_SUCCESS: function (e) {
         let t = !1;
-        for (let e of Array.from(H.keys())) null == y.Ay.getProject(e) && en(e) && (t = !0);
+        for (let e of Array.from(L.keys())) null == y.Ay.getProject(e) && en(e) && (t = !0);
         if (!t) return !1;
     },
     LOGOUT: function () {
-        if (((0, P.j_)(), 0 === H.size)) return !1;
+        if (((0, P.j_)(), 0 === L.size)) return !1;
         ef();
     },
 });
