@@ -14,25 +14,26 @@ let h = { duration: 250 },
     p = function (n) {
         let {
                 currentPx: e,
-                indicator: t,
-                isAnimated: r,
-                isCompleted: p,
-                icon: v,
-                expansionSpring: m,
-                onClick: f,
-                onMouseEnter: g,
-                onMouseLeave: P,
+                trackBackground: t,
+                indicator: r,
+                isAnimated: p,
+                isCompleted: v,
+                icon: m,
+                expansionSpring: f,
+                onClick: g,
+                onMouseEnter: P,
+                onMouseLeave: C,
             } = n,
-            { label: C, targetSec: E, leftPx: M, rightPx: k, index: _ } = t,
+            { label: k, targetSec: E, leftPx: M, rightPx: _, index: b } = r,
             [j, w] = l.useState(!1),
             S = M - 4,
-            b = e >= S ? Math.min(1, (e - S) / (k - S)) : 0,
-            K = 0 === _ && !p,
+            B = e >= S ? Math.min(1, (e - S) / (_ - S)) : 0,
+            K = 0 === b && !v,
             { fill: y } = (0, o.z)({
-                fill: 100 * b,
+                fill: 100 * B,
                 config: h,
                 onRest: () => {
-                    b <= 0 && w(!1);
+                    B <= 0 && w(!1);
                 },
                 onStart: () => {
                     w(!0);
@@ -41,48 +42,49 @@ let h = { duration: 250 },
         function A(n) {
             return n.stopPropagation();
         }
-        let B =
-            null != f
+        let R =
+            null != g
                 ? (n) => {
-                      (n.stopPropagation(), f());
+                      (n.stopPropagation(), g());
                   }
                 : void 0;
         return (0, i.jsxs)(s.animated.div, {
             className: a()(x.ck, { [x.a]: K && j, [x.C9]: !K && j }),
             style: {
-                left: r ? m.to((n) => M - n) : M,
-                "--custom-indicator-size": r ? m.to((n) => `${26 + 2 * n}px`) : "26px",
+                left: p ? f.to((n) => M - n) : M,
+                "--custom-indicator-size": p ? f.to((n) => `${26 + 2 * n}px`) : "26px",
                 "--custom-indicator-fill": y.to((n) => n),
+                backgroundColor: t,
             },
             onMouseDown: A,
             children: [
                 (0, i.jsx)(u.D, {
                     className: x.E6,
                     "data-testid": "ad-video-reward-indicator",
-                    onClick: B,
+                    onClick: R,
                     onMouseDown: A,
-                    onMouseEnter: g,
-                    onMouseLeave: P,
-                    children: v,
+                    onMouseEnter: P,
+                    onMouseLeave: C,
+                    children: m,
                 }),
                 (0, i.jsxs)("div", {
                     className: x.Ru,
                     role: "tooltip",
-                    "aria-label": null != C ? `${(0, c.rB)(E)} - ${C}` : (0, c.rB)(E),
+                    "aria-label": null != k ? `${(0, c.rB)(E)} - ${k}` : (0, c.rB)(E),
                     children: [
                         (0, i.jsx)(d.E, {
                             variant: "text-xs/normal",
                             color: "text-overlay-light",
                             children: (0, c.rB)(E),
                         }),
-                        null != C &&
+                        null != k &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)("span", { className: x.AE, "aria-hidden": "true" }),
                                     (0, i.jsx)(d.E, {
                                         variant: "text-xs/normal",
                                         color: "text-overlay-light",
-                                        children: C,
+                                        children: k,
                                     }),
                                 ],
                             }),
@@ -111,13 +113,14 @@ function m(n) {
         ),
         f = l.useMemo(() => [{ index: 0, timeSec: e, widthPx: 32, gapPx: 4, align: "end", clickable: s }], [e, s]),
         g = l.useCallback(
-            (n, l, o) => {
-                let s = { leftPx: n.leftPx, rightPx: n.rightPx, targetSec: e, index: n.index, label: t };
+            (n, l, o, s) => {
+                let d = { leftPx: n.leftPx, rightPx: n.rightPx, targetSec: e, index: n.index, label: t };
                 return (0, i.jsx)(
                     p,
                     {
                         currentPx: l,
-                        indicator: s,
+                        trackBackground: s,
+                        indicator: d,
                         isAnimated: u === n.index,
                         isCompleted: r,
                         icon: a,

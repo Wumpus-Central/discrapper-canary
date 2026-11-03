@@ -43,6 +43,12 @@
     will-change: transform
 }
 
+.cont__68788 {
+    --custom-timeline-track-background: var(--progressbar-track-background);
+    --custom-timeline-buffered-background: var(--neutral-51);
+    --custom-timeline-seekable-background: var(--neutral-22)
+}
+
 .cont__68788,
 .hitboxArea__68788 {
     position: relative;
@@ -90,7 +96,7 @@
 }
 
 .bufferedBar__68788 {
-    background-color: var(--neutral-51);
+    background-color: var(--custom-timeline-buffered-background);
     width: 100%
 }
 
@@ -101,7 +107,7 @@
 }
 
 .seekableBar__68788 {
-    background-color: var(--neutral-22);
+    background-color: var(--custom-timeline-seekable-background);
     inset-inline-start: 0;
     opacity: 0
 }
@@ -133,7 +139,7 @@
 }
 
 .segmentContainer__68788 {
-    background-color: var(--custom-segment-bg, var(--progressbar-track-background));
+    background-color: var(--custom-timeline-track-background);
     overflow: visible
 }
 
@@ -168,4 +174,4 @@
     top: 0
 }
 
-/*# sourceMappingURL=216870.6002f1820d4425f4.css.map*/
+/*# sourceMappingURL=216870.edbd6f6174082778.css.map*/
