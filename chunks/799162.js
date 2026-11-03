@@ -127,7 +127,7 @@ function F(e) {
                   })
                 : eA,
             "data-text": J + K,
-            "data-username-has-gradient": !!ed || void 0,
+            "data-username-has-gradient": !!ec || void 0,
         },
         ev = i.useMemo(
             () =>
