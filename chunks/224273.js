@@ -29,7 +29,6 @@ e.exports = (function e(t, n, r) {
     {
         1: [
             function (e, t, n) {
-                "use strict";
                 var r = {};
                 function i(e) {
                     var t,
@@ -78,7 +77,6 @@ e.exports = (function e(t, n, r) {
         ],
         3: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     return ((e = e || window.navigator.userAgent), /Android/i.test(e));
                 };
@@ -87,7 +85,6 @@ e.exports = (function e(t, n, r) {
         ],
         4: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     return ((e = e || window.navigator.userAgent), /CrOS/i.test(e));
                 };
@@ -96,7 +93,6 @@ e.exports = (function e(t, n, r) {
         ],
         5: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./is-edge"),
                     i = e("./is-samsung"),
                     o = e("./is-duckduckgo"),
@@ -117,7 +113,6 @@ e.exports = (function e(t, n, r) {
         ],
         6: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     return -1 !== (e = e || window.navigator.userAgent).indexOf("DuckDuckGo/");
                 };
@@ -126,7 +121,6 @@ e.exports = (function e(t, n, r) {
         ],
         7: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     return -1 !== (e = e || window.navigator.userAgent).indexOf("Edge/") || -1 !== e.indexOf("Edg/");
                 };
@@ -135,7 +129,6 @@ e.exports = (function e(t, n, r) {
         ],
         8: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     return ((e = e || window.navigator.userAgent), /Firefox/i.test(e));
                 };
@@ -144,7 +137,6 @@ e.exports = (function e(t, n, r) {
         ],
         9: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     return ((e = e || window.navigator.userAgent), /FxiOS/i.test(e));
                 };
@@ -153,7 +145,6 @@ e.exports = (function e(t, n, r) {
         ],
         10: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./is-ios");
                 t.exports = function (e) {
                     var t;
@@ -164,7 +155,6 @@ e.exports = (function e(t, n, r) {
         ],
         11: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./is-ios"),
                     i = e("./is-ios-firefox"),
                     o = /webkit/i;
@@ -183,7 +173,6 @@ e.exports = (function e(t, n, r) {
         ],
         12: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./is-ios"),
                     i = e("./is-ios-google-search-app");
                 t.exports = function (e) {
@@ -196,7 +185,6 @@ e.exports = (function e(t, n, r) {
         ],
         13: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./is-ios-webview");
                 t.exports = function (e, t) {
                     return ((t = void 0 !== t ? t : window.statusbar.visible), r(e) && t);
@@ -206,7 +194,6 @@ e.exports = (function e(t, n, r) {
         ],
         14: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./is-ipados");
                 t.exports = function (e, t, n) {
                     (void 0 === t && (t = !0), (e = e || window.navigator.userAgent));
@@ -218,7 +205,6 @@ e.exports = (function e(t, n, r) {
         ],
         15: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e, t) {
                     return (
                         (e = e || window.navigator.userAgent),
@@ -231,7 +217,6 @@ e.exports = (function e(t, n, r) {
         ],
         16: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     return (
                         -1 !== (e = e || window.navigator.userAgent).indexOf("OPR/") ||
@@ -244,7 +229,6 @@ e.exports = (function e(t, n, r) {
         ],
         17: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     return ((e = e || window.navigator.userAgent), /SamsungBrowser/i.test(e));
                 };
@@ -253,7 +237,6 @@ e.exports = (function e(t, n, r) {
         ],
         18: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     return -1 !== (e = e || window.navigator.userAgent).indexOf("Silk/");
                 };
@@ -262,7 +245,6 @@ e.exports = (function e(t, n, r) {
         ],
         19: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./is-android"),
                     i = e("./is-ios-firefox"),
                     o = e("./is-ios-webview"),
@@ -358,7 +340,6 @@ e.exports = (function e(t, n, r) {
         ],
         30: [
             function (e, t, n) {
-                "use strict";
                 t.exports = (function () {
                     function e() {
                         this._events = {};
@@ -397,7 +378,6 @@ e.exports = (function e(t, n, r) {
         ],
         31: [
             function (e, t, n) {
-                "use strict";
                 var r = "u" > typeof Promise ? Promise : null;
                 t.exports = (function () {
                     function e(t) {
@@ -507,7 +487,6 @@ e.exports = (function e(t, n, r) {
         ],
         32: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./lib/set-attributes"),
                     i = e("./lib/default-attributes"),
                     o = e("./lib/assign");
@@ -527,7 +506,6 @@ e.exports = (function e(t, n, r) {
         ],
         33: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.assign = void 0),
                     (n.assign = function (e) {
@@ -547,7 +525,6 @@ e.exports = (function e(t, n, r) {
         ],
         34: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.defaultAttributes = void 0),
                     (n.defaultAttributes = {
@@ -561,7 +538,6 @@ e.exports = (function e(t, n, r) {
         ],
         35: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.setAttributes = void 0),
                     (n.setAttributes = function (e, t) {
@@ -576,7 +552,6 @@ e.exports = (function e(t, n, r) {
         ],
         36: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function () {
                     return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (e) {
                         var t = (16 * Math.random()) | 0;
@@ -588,7 +563,6 @@ e.exports = (function e(t, n, r) {
         ],
         37: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.deferred = function (e) {
                         return function () {
@@ -607,7 +581,6 @@ e.exports = (function e(t, n, r) {
         ],
         38: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.once = function (e) {
                         var t = !1;
@@ -621,7 +594,6 @@ e.exports = (function e(t, n, r) {
         ],
         39: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.promiseOrCallback = function (e, t) {
                         if (!t) return e;
@@ -636,7 +608,6 @@ e.exports = (function e(t, n, r) {
         ],
         40: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./lib/deferred"),
                     i = e("./lib/once"),
                     o = e("./lib/promise-or-callback");
@@ -677,7 +648,6 @@ e.exports = (function e(t, n, r) {
                 var i, o;
                 ((i = this),
                     (o = function (e) {
-                        "use strict";
                         function t(e, t, n, r) {
                             return new (n || (n = Promise))(function (i, o) {
                                 function a(e) {
@@ -1026,7 +996,6 @@ e.exports = (function e(t, n, r) {
         ],
         42: [
             function (e, t, n) {
-                "use strict";
                 var r =
                         (this && this.__assign) ||
                         function () {
@@ -1135,7 +1104,6 @@ e.exports = (function e(t, n, r) {
         ],
         43: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }), (n.addMatchingCardsToResults = void 0));
                 var r = e("./clone"),
                     i = e("./matches");
@@ -1157,7 +1125,6 @@ e.exports = (function e(t, n, r) {
         ],
         44: [
             function (e, t, n) {
-                "use strict";
                 t.exports = {
                     visa: {
                         niceType: "Visa",
@@ -1310,7 +1277,6 @@ e.exports = (function e(t, n, r) {
         ],
         45: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.clone = void 0),
                     (n.clone = function (e) {
@@ -1321,7 +1287,6 @@ e.exports = (function e(t, n, r) {
         ],
         46: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.findBestMatch = void 0),
                     (n.findBestMatch = function (e) {
@@ -1339,7 +1304,6 @@ e.exports = (function e(t, n, r) {
         ],
         47: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.isValidInputType = void 0),
                     (n.isValidInputType = function (e) {
@@ -1350,7 +1314,6 @@ e.exports = (function e(t, n, r) {
         ],
         48: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.matches = void 0),
                     (n.matches = function (e, t) {
@@ -1370,7 +1333,6 @@ e.exports = (function e(t, n, r) {
         ],
         49: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }), (n.Framebus = void 0));
                 var r = e("./lib"),
                     i = "u" > typeof window && window.Promise;
@@ -1528,7 +1490,6 @@ e.exports = (function e(t, n, r) {
         ],
         50: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./lib"),
                     i = e("./framebus");
                 ((0, r.attach)(), (t.exports = i.Framebus));
@@ -1537,7 +1498,6 @@ e.exports = (function e(t, n, r) {
         ],
         51: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }), (n.detach = n.attach = void 0));
                 var r = e("./"),
                     i = !1;
@@ -1552,7 +1512,6 @@ e.exports = (function e(t, n, r) {
         ],
         52: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }), (n.broadcastToChildWindows = void 0));
                 var r = e("./");
                 n.broadcastToChildWindows = function (e, t, n) {
@@ -1568,7 +1527,6 @@ e.exports = (function e(t, n, r) {
         ],
         53: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }), (n.broadcast = void 0));
                 var r = e("./");
                 n.broadcast = function e(t, n) {
@@ -1592,7 +1550,6 @@ e.exports = (function e(t, n, r) {
         ],
         54: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.subscribers = n.childWindows = n.prefix = void 0),
                     (n.prefix = "/*framebus*/"),
@@ -1603,7 +1560,6 @@ e.exports = (function e(t, n, r) {
         ],
         55: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }), (n.dispatch = void 0));
                 var r = e("./");
                 n.dispatch = function (e, t, n, i, o) {
@@ -1618,7 +1574,6 @@ e.exports = (function e(t, n, r) {
         ],
         56: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.hasOpener = void 0),
                     (n.hasOpener = function (e) {
@@ -1629,7 +1584,6 @@ e.exports = (function e(t, n, r) {
         ],
         57: [
             function (e, t, n) {
-                "use strict";
                 var r =
                         (this && this.__createBinding) ||
                         (Object.create
@@ -1689,7 +1643,6 @@ e.exports = (function e(t, n, r) {
         ],
         58: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.isntString = void 0),
                     (n.isntString = function (e) {
@@ -1700,7 +1653,6 @@ e.exports = (function e(t, n, r) {
         ],
         59: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }), (n.onMessage = void 0));
                 var r = e("./");
                 n.onMessage = function (e) {
@@ -1720,7 +1672,6 @@ e.exports = (function e(t, n, r) {
         ],
         60: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }), (n.packagePayload = void 0));
                 var r = e("./");
                 n.packagePayload = function (e, t, n, i) {
@@ -1739,7 +1690,6 @@ e.exports = (function e(t, n, r) {
         ],
         61: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.sendMessage = void 0),
                     (n.sendMessage = function (e, t, n) {
@@ -1752,7 +1702,6 @@ e.exports = (function e(t, n, r) {
         ],
         62: [
             function (e, t, n) {
-                "use strict";
                 var r =
                     (this && this.__importDefault) ||
                     function (e) {
@@ -1775,7 +1724,6 @@ e.exports = (function e(t, n, r) {
         ],
         63: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }), (n.subscriptionArgsInvalid = void 0));
                 var r = e("./");
                 n.subscriptionArgsInvalid = function (e, t, n) {
@@ -1786,14 +1734,12 @@ e.exports = (function e(t, n, r) {
         ],
         64: [
             function (e, t, n) {
-                "use strict";
                 Object.defineProperty(n, "__esModule", { value: !0 });
             },
             {},
         ],
         65: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }), (n.unpackPayload = void 0));
                 var r = e("./");
                 n.unpackPayload = function (e) {
@@ -1822,7 +1768,6 @@ e.exports = (function e(t, n, r) {
         ],
         66: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function () {
                     return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (e) {
                         var t = (16 * Math.random()) | 0;
@@ -1834,7 +1779,6 @@ e.exports = (function e(t, n, r) {
         ],
         67: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.isIos = n.isIE9 = n.isSamsungBrowser = n.isAndroidChrome = n.isKitKatWebview = void 0));
                 var r = "u" > typeof window && window.navigator && window.navigator.userAgent,
@@ -1868,7 +1812,6 @@ e.exports = (function e(t, n, r) {
         ],
         68: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./lib/device");
                 t.exports = function () {
                     return !(0, r.isSamsungBrowser)();
@@ -1908,7 +1851,6 @@ e.exports = (function e(t, n, r) {
         ],
         74: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     return -1 !== (e = e || window.navigator.userAgent).indexOf("MSIE 9");
                 };
@@ -1983,7 +1925,6 @@ e.exports = (function e(t, n, r) {
         ],
         86: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("./errors"),
                     o = e("../lib/assign").assign,
@@ -2063,7 +2004,6 @@ e.exports = (function e(t, n, r) {
         ],
         87: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     AMEX_NONCE_REQUIRED: { type: r.types.MERCHANT, code: "AMEX_NONCE_REQUIRED" },
@@ -2074,7 +2014,6 @@ e.exports = (function e(t, n, r) {
         ],
         88: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./american-express"),
                     i = e("../lib/basic-component-verification"),
                     o = e("../lib/create-deferred-client"),
@@ -2110,7 +2049,6 @@ e.exports = (function e(t, n, r) {
         ],
         89: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("../lib/analytics"),
                     o = e("./errors"),
@@ -2265,7 +2203,6 @@ e.exports = (function e(t, n, r) {
         ],
         90: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     APPLE_PAY_NOT_ENABLED: {
@@ -2304,7 +2241,6 @@ e.exports = (function e(t, n, r) {
         ],
         91: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./apple-pay"),
                     i = e("../lib/analytics"),
                     o = e("../lib/braintree-error"),
@@ -2355,7 +2291,6 @@ e.exports = (function e(t, n, r) {
         ],
         92: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./constants").BRAINTREE_VERSION,
                     i = e("./request/graphql"),
                     o = e("./request"),
@@ -2619,14 +2554,12 @@ e.exports = (function e(t, n, r) {
         ],
         93: [
             function (e, t, n) {
-                "use strict";
                 t.exports = { BRAINTREE_VERSION: "2018-05-10" };
             },
             {},
         ],
         94: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN: {
@@ -2687,7 +2620,6 @@ e.exports = (function e(t, n, r) {
         ],
         95: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("@braintree/wrap-promise"),
                     o = e("./request"),
@@ -2774,7 +2706,6 @@ e.exports = (function e(t, n, r) {
         ],
         96: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("./client"),
                     o = e("@braintree/wrap-promise"),
@@ -2798,7 +2729,6 @@ e.exports = (function e(t, n, r) {
         ],
         97: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/querystring"),
                     i = e("../../lib/assign").assign,
                     o = e("./prep-body"),
@@ -2902,7 +2832,6 @@ e.exports = (function e(t, n, r) {
         ],
         98: [
             function (e, t, n) {
-                "use strict";
                 function r(e) {
                     ((this._url = e.url),
                         (this._data = e.data),
@@ -2933,7 +2862,6 @@ e.exports = (function e(t, n, r) {
         ],
         99: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./error"),
                     i = e("../../../../lib/assign").assign,
                     o = {
@@ -3073,7 +3001,6 @@ e.exports = (function e(t, n, r) {
         ],
         100: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./error"),
                     i = {
                         AMERICAN_EXPRESS: "American Express",
@@ -3140,7 +3067,6 @@ e.exports = (function e(t, n, r) {
         ],
         101: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./error"),
                     i = {
                         AMERICAN_EXPRESS: "American Express",
@@ -3205,7 +3131,6 @@ e.exports = (function e(t, n, r) {
         ],
         102: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     var t,
                         n,
@@ -3248,7 +3173,6 @@ e.exports = (function e(t, n, r) {
         ],
         103: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function () {
                     return {
                         query: "query ClientConfiguration {   clientConfiguration {     analyticsUrl     environment     merchantId     assetsUrl     clientApiUrl     creditCard {       supportedCardBrands       challenges       threeDSecureEnabled       threeDSecure {         cardinalAuthenticationJWT       }     }     applePayWeb {       countryCode       currencyCode       merchantIdentifier       supportedCardBrands     }     fastlane {       enabled     }     googlePay {       displayName       supportedCardBrands       environment       googleAuthorization       paypalClientId     }     ideal {       routeId       assetsUrl     }     kount {       merchantId     }     masterpass {       merchantCheckoutId       supportedCardBrands     }     paypal {       displayName       clientId       assetsUrl       environment       environmentNoNetwork       unvettedMerchant       braintreeClientId       billingAgreementsEnabled       merchantAccountId       currencyCode       payeeEmail     }     unionPay {       merchantAccountId     }     usBankAccount {       routeId       plaidPublicKey     }     venmo {       merchantId       accessToken       environment       enrichedCustomerDataEnabled    }     visaCheckout {       apiKey       externalClientId       supportedCardBrands     }     braintreeApi {       accessToken       url     }     supportedFeatures   } }",
@@ -3260,7 +3184,6 @@ e.exports = (function e(t, n, r) {
         ],
         104: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../../../lib/assign").assign;
                 t.exports = function (e) {
                     var t,
@@ -3353,7 +3276,6 @@ e.exports = (function e(t, n, r) {
         ],
         105: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../../../lib/assign").assign;
                 t.exports = function (e) {
                     var t,
@@ -3417,7 +3339,6 @@ e.exports = (function e(t, n, r) {
         ],
         106: [
             function (e, t, n) {
-                "use strict";
                 var r = { tokenize_credit_cards: "payment_methods/credit_cards", configuration: "configuration" },
                     i = ["creditCard.options.unionPayEnrollment"];
                 function o(e) {
@@ -3461,7 +3382,6 @@ e.exports = (function e(t, n, r) {
         ],
         107: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../constants").BRAINTREE_VERSION,
                     i = e("../../../lib/assign").assign,
                     o = e("../../../lib/snake-case-to-camel-case"),
@@ -3583,7 +3503,6 @@ e.exports = (function e(t, n, r) {
         ],
         108: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/once"),
                     i = e("./ajax-driver");
                 t.exports = function (e, t) {
@@ -3598,7 +3517,6 @@ e.exports = (function e(t, n, r) {
         ],
         109: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     try {
                         e = JSON.parse(e);
@@ -3610,7 +3528,6 @@ e.exports = (function e(t, n, r) {
         ],
         110: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e, t) {
                     if ("string" != typeof e) throw Error("Method must be a string");
                     return (
@@ -3622,7 +3539,6 @@ e.exports = (function e(t, n, r) {
         ],
         111: [
             function (e, t, n) {
-                "use strict";
                 var r =
                     "u" > typeof window && window.XMLHttpRequest && "withCredentials" in new window.XMLHttpRequest();
                 t.exports = {
@@ -3636,7 +3552,6 @@ e.exports = (function e(t, n, r) {
         ],
         112: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     DATA_COLLECTOR_KOUNT_NOT_ENABLED: {
@@ -3656,7 +3571,6 @@ e.exports = (function e(t, n, r) {
         ],
         113: [
             function (e, t, n) {
-                "use strict";
                 var r,
                     i = e("../lib/constants").FRAUDNET_FNCLS,
                     o = e("../lib/constants").FRAUDNET_SOURCE,
@@ -3726,7 +3640,6 @@ e.exports = (function e(t, n, r) {
         ],
         114: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./kount"),
                     i = e("./fraudnet"),
                     o = e("../lib/braintree-error"),
@@ -3837,7 +3750,6 @@ e.exports = (function e(t, n, r) {
         ],
         115: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./vendor/sjcl"),
                     i = e("../lib/camel-case-to-snake-case"),
                     o = "https://assets.qa.braintreepayments.com/data",
@@ -3925,7 +3837,6 @@ e.exports = (function e(t, n, r) {
         ],
         116: [
             function (e, n, r) {
-                "use strict";
                 var i,
                     o,
                     a,
@@ -4574,7 +4485,6 @@ e.exports = (function e(t, n, r) {
         ],
         117: [
             function (e, t, n) {
-                "use strict";
                 t.exports = {
                     FASTLANE_SDK_LOAD_ERROR: {
                         type: e("../lib/braintree-error").types.MERCHANT,
@@ -4586,7 +4496,6 @@ e.exports = (function e(t, n, r) {
         ],
         118: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("./errors"),
                     o = e("../lib/assets").loadFastlane,
@@ -4638,7 +4547,6 @@ e.exports = (function e(t, n, r) {
         ],
         119: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/basic-component-verification"),
                     i = e("./fastlane"),
                     o = e("../lib/create-assets-url"),
@@ -4676,7 +4584,6 @@ e.exports = (function e(t, n, r) {
         ],
         120: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     GOOGLE_PAYMENT_NOT_ENABLED: {
@@ -4699,7 +4606,6 @@ e.exports = (function e(t, n, r) {
         ],
         121: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("../lib/assign").assign,
                     o = e("../lib/convert-methods-to-error"),
@@ -4867,7 +4773,6 @@ e.exports = (function e(t, n, r) {
         ],
         122: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./google-payment"),
                     i = e("../lib/braintree-error"),
                     o = e("../lib/create-assets-url"),
@@ -4920,7 +4825,6 @@ e.exports = (function e(t, n, r) {
         ],
         123: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/braintree-error"),
                     i = e("../shared/errors"),
                     o = e("../shared/constants").allowedAttributes;
@@ -4952,7 +4856,6 @@ e.exports = (function e(t, n, r) {
         ],
         124: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../shared/constants"),
                     i = e("../../lib/use-min");
                 t.exports = function (e, t, n) {
@@ -4963,7 +4866,6 @@ e.exports = (function e(t, n, r) {
         ],
         125: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../shared/constants").navigationDirections,
                     i = e("../shared/browser-detection"),
                     o = e("../shared/focus-intercept"),
@@ -5038,7 +4940,6 @@ e.exports = (function e(t, n, r) {
         ],
         126: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../shared/constants").allowedStyles;
                 t.exports = function (e) {
                     var t,
@@ -5066,7 +4967,6 @@ e.exports = (function e(t, n, r) {
         ],
         127: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/assign").assign,
                     i = e("../../lib/create-assets-url"),
                     o = e("../../lib/is-verified-domain"),
@@ -5650,7 +5550,6 @@ e.exports = (function e(t, n, r) {
         ],
         128: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../shared/focus-intercept"),
                     i = e("../shared/constants").navigationDirections;
                 t.exports = function (e, t, n, o) {
@@ -5674,7 +5573,6 @@ e.exports = (function e(t, n, r) {
         ],
         129: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./external/hosted-fields"),
                     i = e("../lib/basic-component-verification"),
                     o = e("./shared/errors"),
@@ -5712,7 +5610,6 @@ e.exports = (function e(t, n, r) {
         ],
         130: [
             function (e, t, n) {
-                "use strict";
                 var r = e("@braintree/browser-detection/is-android"),
                     i = e("@braintree/browser-detection/is-chrome-os"),
                     o = e("@braintree/browser-detection/is-ios"),
@@ -5742,7 +5639,6 @@ e.exports = (function e(t, n, r) {
         ],
         131: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/enumerate"),
                     i = e("./errors"),
                     o = {
@@ -5904,7 +5800,6 @@ e.exports = (function e(t, n, r) {
         ],
         132: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     HOSTED_FIELDS_TIMEOUT: {
@@ -5979,7 +5874,6 @@ e.exports = (function e(t, n, r) {
         ],
         133: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e, t) {
                     for (var n = e.parentNode, r = []; null != n;)
                         (null != n.tagName && n.tagName.toLowerCase() === t && r.push(n), (n = n.parentNode));
@@ -5990,7 +5884,6 @@ e.exports = (function e(t, n, r) {
         ],
         134: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./browser-detection"),
                     i = e("./constants"),
                     o = Object.keys(i.allowedFields),
@@ -6057,7 +5950,6 @@ e.exports = (function e(t, n, r) {
         ],
         135: [
             function (e, t, n) {
-                "use strict";
                 var r = e("credit-card-type");
                 t.exports = function (e) {
                     var t = r(e);
@@ -6073,7 +5965,6 @@ e.exports = (function e(t, n, r) {
         ],
         136: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./american-express"),
                     i = e("./apple-pay"),
                     o = e("./client"),
@@ -6136,7 +6027,6 @@ e.exports = (function e(t, n, r) {
         ],
         137: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./create-authorization-data"),
                     i = e("./json-clone"),
                     o = e("./constants");
@@ -6187,7 +6077,6 @@ e.exports = (function e(t, n, r) {
         ],
         138: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./constants"),
                     i = e("./add-metadata");
                 t.exports = {
@@ -6225,7 +6114,6 @@ e.exports = (function e(t, n, r) {
         ],
         139: [
             function (e, t, n) {
-                "use strict";
                 t.exports = {
                     loadScript: e("@braintree/asset-loader/load-script"),
                     loadFastlane: e("@paypal/accelerated-checkout-loader").loadAxo,
@@ -6235,7 +6123,6 @@ e.exports = (function e(t, n, r) {
         ],
         140: [
             function (e, t, n) {
-                "use strict";
                 function r(e) {
                     var t, n, r;
                     for (t = 1; t < arguments.length; t++)
@@ -6248,7 +6135,6 @@ e.exports = (function e(t, n, r) {
         ],
         141: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./braintree-error"),
                     i = e("./errors"),
                     o = "3.112.1";
@@ -6294,7 +6180,6 @@ e.exports = (function e(t, n, r) {
         ],
         142: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./once");
                 t.exports = function (e, t) {
                     var n,
@@ -6313,7 +6198,6 @@ e.exports = (function e(t, n, r) {
         ],
         143: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./enumerate");
                 function i(e) {
                     if (!i.types.hasOwnProperty(e.type)) throw Error(e.type + " is not a valid type.");
@@ -6339,7 +6223,6 @@ e.exports = (function e(t, n, r) {
         ],
         144: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function e(t) {
                     var n;
                     return (
@@ -6368,7 +6251,6 @@ e.exports = (function e(t, n, r) {
         ],
         145: [
             function (e, t, n) {
-                "use strict";
                 var r = "3.112.1";
                 t.exports = {
                     ANALYTICS_PREFIX: "web.",
@@ -6402,7 +6284,6 @@ e.exports = (function e(t, n, r) {
         ],
         146: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./braintree-error"),
                     i = e("./errors");
                 t.exports = function (e, t) {
@@ -6421,7 +6302,6 @@ e.exports = (function e(t, n, r) {
         ],
         147: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./braintree-error");
                 t.exports = function (e, t) {
                     return e instanceof r
@@ -6433,7 +6313,6 @@ e.exports = (function e(t, n, r) {
         ],
         148: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./constants").ASSETS_URLS;
                 t.exports = {
                     create: function (e) {
@@ -6445,7 +6324,6 @@ e.exports = (function e(t, n, r) {
         ],
         149: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/vendor/polyfill").atob,
                     i = e("../lib/constants").CLIENT_API_URLS;
                 t.exports = function (e) {
@@ -6473,7 +6351,6 @@ e.exports = (function e(t, n, r) {
         ],
         150: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./braintree-error"),
                     i = e("./assets"),
                     o = e("./errors"),
@@ -6524,7 +6401,6 @@ e.exports = (function e(t, n, r) {
         ],
         151: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     return function () {
                         var t = arguments;
@@ -6538,7 +6414,6 @@ e.exports = (function e(t, n, r) {
         ],
         152: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./batch-execute-functions");
                 function i() {
                     ((this._teardownRegistry = []), (this._isTearingDown = !1));
@@ -6565,7 +6440,6 @@ e.exports = (function e(t, n, r) {
         ],
         153: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e, t) {
                     return (
                         (t = null == t ? "" : t),
@@ -6579,7 +6453,6 @@ e.exports = (function e(t, n, r) {
         ],
         154: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./braintree-error");
                 t.exports = {
                     INVALID_USE_OF_INTERNAL_FUNCTION: {
@@ -6600,7 +6473,6 @@ e.exports = (function e(t, n, r) {
         ],
         155: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     for (; e.parentNode;) e = e.parentNode;
                     return e;
@@ -6610,7 +6482,6 @@ e.exports = (function e(t, n, r) {
         ],
         156: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e, t, n) {
                     var r;
                     for (r = 0; r < e.length; r++) if (e[r].hasOwnProperty(t) && e[r][t] === n) return e[r];
@@ -6621,7 +6492,6 @@ e.exports = (function e(t, n, r) {
         ],
         157: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./strategies/popup"),
                     i = e("./strategies/popup-bridge"),
                     o = e("./strategies/modal"),
@@ -6794,7 +6664,6 @@ e.exports = (function e(t, n, r) {
         ],
         158: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./frame-service");
                 t.exports = {
                     create: function (e, t) {
@@ -6809,7 +6678,6 @@ e.exports = (function e(t, n, r) {
         ],
         159: [
             function (e, t, n) {
-                "use strict";
                 var r = e("@braintree/iframer"),
                     i = e("../../../assign").assign,
                     o = e("../../shared/browser-detection"),
@@ -6895,7 +6763,6 @@ e.exports = (function e(t, n, r) {
         ],
         160: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../../braintree-error"),
                     i = e("../../shared/errors");
                 function o() {}
@@ -6929,7 +6796,6 @@ e.exports = (function e(t, n, r) {
         ],
         161: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../../shared/constants"),
                     i = e("./position");
                 function o(e, t, n) {
@@ -6947,7 +6813,6 @@ e.exports = (function e(t, n, r) {
         ],
         162: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./compose-options");
                 function i(e) {
                     ((this._frame = null), (this._options = e || {}));
@@ -6974,7 +6839,6 @@ e.exports = (function e(t, n, r) {
         ],
         163: [
             function (e, t, n) {
-                "use strict";
                 t.exports = {
                     top: function (e) {
                         var t;
@@ -6999,7 +6863,6 @@ e.exports = (function e(t, n, r) {
         ],
         164: [
             function (e, t, n) {
-                "use strict";
                 t.exports = {
                     isIos: e("@braintree/browser-detection/is-ios"),
                     isIosWKWebview: e("@braintree/browser-detection/is-ios-wkwebview"),
@@ -7014,7 +6877,6 @@ e.exports = (function e(t, n, r) {
         ],
         165: [
             function (e, t, n) {
-                "use strict";
                 t.exports = {
                     DISPATCH_FRAME_NAME: "dispatch",
                     DISPATCH_FRAME_CLASS: "braintree-dispatch-frame",
@@ -7029,7 +6891,6 @@ e.exports = (function e(t, n, r) {
         ],
         166: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../braintree-error");
                 t.exports = {
                     FRAME_SERVICE_FRAME_CLOSED: {
@@ -7048,14 +6909,12 @@ e.exports = (function e(t, n, r) {
         ],
         167: [
             function (e, t, n) {
-                "use strict";
                 t.exports = e("../../enumerate")(["DISPATCH_FRAME_READY", "DISPATCH_FRAME_REPORT"], "frameService:");
             },
             { "../../enumerate": 153 },
         ],
         168: [
             function (e, t, n) {
-                "use strict";
                 var r = "3.112.1",
                     i = e("./assign").assign;
                 function o(e, t) {
@@ -7153,7 +7012,6 @@ e.exports = (function e(t, n, r) {
         ],
         169: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     e = e || window;
                     try {
@@ -7167,7 +7025,6 @@ e.exports = (function e(t, n, r) {
         ],
         170: [
             function (e, t, n) {
-                "use strict";
                 function r(e) {
                     var t = e.split("-");
                     return new Date(t[0], t[1], t[2]);
@@ -7180,7 +7037,6 @@ e.exports = (function e(t, n, r) {
         ],
         171: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     return e && e.hasOwnProperty("fastlane") && e.fastlane;
                 };
@@ -7189,7 +7045,6 @@ e.exports = (function e(t, n, r) {
         ],
         172: [
             function (e, t, n) {
-                "use strict";
                 t.exports = {
                     isHTTPS: function (e) {
                         return "https:" === (e = e || window.location.protocol);
@@ -7200,7 +7055,6 @@ e.exports = (function e(t, n, r) {
         ],
         173: [
             function (e, t, n) {
-                "use strict";
                 var r,
                     i = {
                         "paypal.com": 1,
@@ -7223,7 +7077,6 @@ e.exports = (function e(t, n, r) {
         ],
         174: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     return JSON.parse(JSON.stringify(e));
                 };
@@ -7232,7 +7085,6 @@ e.exports = (function e(t, n, r) {
         ],
         175: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     return Object.keys(e).filter(function (t) {
                         return "function" == typeof e[t];
@@ -7243,7 +7095,6 @@ e.exports = (function e(t, n, r) {
         ],
         176: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     var t = !1;
                     return function () {
@@ -7255,7 +7106,6 @@ e.exports = (function e(t, n, r) {
         ],
         177: [
             function (e, t, n) {
-                "use strict";
                 function r(e) {
                     return ((e = e || window.location.href), /\?/.test(e));
                 }
@@ -7318,7 +7168,6 @@ e.exports = (function e(t, n, r) {
         ],
         178: [
             function (e, t, n) {
-                "use strict";
                 var r = e("@braintree/uuid"),
                     i = e("./find-root-node");
                 function o(e) {
@@ -7353,7 +7202,6 @@ e.exports = (function e(t, n, r) {
         ],
         179: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     return -1 === e.indexOf("_")
                         ? e
@@ -7366,7 +7214,6 @@ e.exports = (function e(t, n, r) {
         ],
         180: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./querystring");
                 t.exports = {
                     getUrlParams: function () {
@@ -7378,7 +7225,6 @@ e.exports = (function e(t, n, r) {
         ],
         181: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e) {
                     return e ? "" : ".min";
                 };
@@ -7387,7 +7233,6 @@ e.exports = (function e(t, n, r) {
         ],
         182: [
             function (e, t, n) {
-                "use strict";
                 var r = "function" == typeof atob ? atob : i;
                 function i(e) {
                     var t,
@@ -7431,7 +7276,6 @@ e.exports = (function e(t, n, r) {
         ],
         183: [
             function (e, t, n) {
-                "use strict";
                 t.exports = {
                     REQUIRED_OPTIONS_FOR_START_PAYMENT: [
                         "givenName",
@@ -7477,7 +7321,6 @@ e.exports = (function e(t, n, r) {
         ],
         184: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/frame-service/external"),
                     i = e("../../lib/braintree-error"),
                     o = e("../../lib/use-min"),
@@ -7968,7 +7811,6 @@ e.exports = (function e(t, n, r) {
         ],
         185: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("../lib/basic-component-verification"),
                     o = e("../lib/create-deferred-client"),
@@ -8029,7 +7871,6 @@ e.exports = (function e(t, n, r) {
         ],
         186: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     LOCAL_PAYMENT_NOT_ENABLED: {
@@ -8089,7 +7930,6 @@ e.exports = (function e(t, n, r) {
         ],
         187: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/frame-service/external"),
                     i = e("../../lib/braintree-error"),
                     o = e("../shared/errors"),
@@ -8324,7 +8164,6 @@ e.exports = (function e(t, n, r) {
         ],
         188: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("../lib/basic-component-verification"),
                     o = e("./shared/browser-detection"),
@@ -8377,14 +8216,12 @@ e.exports = (function e(t, n, r) {
         ],
         189: [
             function (e, t, n) {
-                "use strict";
                 t.exports = { supportsPopups: e("@braintree/browser-detection/supports-popups") };
             },
             { "@braintree/browser-detection/supports-popups": 29 },
         ],
         190: [
             function (e, t, n) {
-                "use strict";
                 t.exports = {
                     LANDING_FRAME_NAME: "braintreemasterpasslanding",
                     POPUP_WIDTH: 450,
@@ -8397,7 +8234,6 @@ e.exports = (function e(t, n, r) {
         ],
         191: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     MASTERPASS_BROWSER_NOT_SUPPORTED: {
@@ -8458,7 +8294,6 @@ e.exports = (function e(t, n, r) {
         ],
         192: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/analytics"),
                     i = e("../../lib/assign").assign,
                     o = e("framebus"),
@@ -8771,7 +8606,6 @@ e.exports = (function e(t, n, r) {
         ],
         193: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./external/payment-request"),
                     i = e("../lib/basic-component-verification"),
                     o = e("../lib/create-deferred-client"),
@@ -8807,7 +8641,6 @@ e.exports = (function e(t, n, r) {
         ],
         194: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/enumerate"),
                     i = e("./errors"),
                     o = {};
@@ -8832,7 +8665,6 @@ e.exports = (function e(t, n, r) {
         ],
         195: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     PAYMENT_REQUEST_NO_VALID_SUPPORTED_PAYMENT_METHODS: {
@@ -8895,7 +8727,6 @@ e.exports = (function e(t, n, r) {
         ],
         196: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     PAYPAL_NOT_ENABLED: {
@@ -8965,7 +8796,6 @@ e.exports = (function e(t, n, r) {
         ],
         197: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/basic-component-verification"),
                     i = e("@braintree/wrap-promise"),
                     o = e("./paypal-checkout");
@@ -8987,7 +8817,6 @@ e.exports = (function e(t, n, r) {
         ],
         198: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("../lib/assign").assign,
                     o = e("../lib/create-deferred-client"),
@@ -9644,7 +9473,6 @@ e.exports = (function e(t, n, r) {
         ],
         199: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/frame-service/external"),
                     i = e("../../lib/braintree-error"),
                     o = e("../../lib/convert-to-braintree-error"),
@@ -9945,7 +9773,6 @@ e.exports = (function e(t, n, r) {
         ],
         200: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("../lib/basic-component-verification"),
                     o = e("../lib/create-deferred-client"),
@@ -9993,7 +9820,6 @@ e.exports = (function e(t, n, r) {
         ],
         201: [
             function (e, t, n) {
-                "use strict";
                 t.exports = {
                     LANDING_FRAME_NAME: "braintreepaypallanding",
                     FLOW_ENDPOINTS: { checkout: "create_payment_resource", vault: "setup_billing_agreement" },
@@ -10004,7 +9830,6 @@ e.exports = (function e(t, n, r) {
         ],
         202: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     PAYPAL_NOT_ENABLED: {
@@ -10053,7 +9878,6 @@ e.exports = (function e(t, n, r) {
         ],
         203: [
             function (e, t, n) {
-                "use strict";
                 var r = e("@braintree/wrap-promise"),
                     i = e("../lib/basic-component-verification"),
                     o = e("./preferred-payment-methods");
@@ -10080,7 +9904,6 @@ e.exports = (function e(t, n, r) {
         ],
         204: [
             function (e, t, n) {
-                "use strict";
                 var r = e("@braintree/wrap-promise"),
                     i = e("../lib/analytics"),
                     o = e("../lib/create-assets-url"),
@@ -10143,7 +9966,6 @@ e.exports = (function e(t, n, r) {
         ],
         205: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/braintree-error"),
                     i = e("../shared/errors"),
                     o = e("../../lib/frame-service/external"),
@@ -10301,7 +10123,6 @@ e.exports = (function e(t, n, r) {
         ],
         206: [
             function (e, t, n) {
-                "use strict";
                 var r = e("@braintree/wrap-promise"),
                     i = e("../../lib/braintree-error"),
                     o = e("../shared/errors"),
@@ -10382,7 +10203,6 @@ e.exports = (function e(t, n, r) {
         ],
         207: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("./external/sepa"),
                     o = e("../lib/create-assets-url"),
@@ -10441,7 +10261,6 @@ e.exports = (function e(t, n, r) {
         ],
         208: [
             function (e, t, n) {
-                "use strict";
                 t.exports = {
                     REQUIRED_OPTIONS: [
                         "iban",
@@ -10465,7 +10284,6 @@ e.exports = (function e(t, n, r) {
         ],
         209: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     SEPA_CREATE_MANDATE_FAILED: {
@@ -10508,7 +10326,6 @@ e.exports = (function e(t, n, r) {
         ],
         210: [
             function (e, t, n) {
-                "use strict";
                 t.exports = function (e, t) {
                     var n, r;
                     for (n = 0, t = t || []; n < t.length; n++) if (((r = t[n]), !e.hasOwnProperty(r))) return !0;
@@ -10519,7 +10336,6 @@ e.exports = (function e(t, n, r) {
         ],
         211: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../../lib/assign").assign,
                     i = e("../../../lib/analytics"),
                     o = e("../../../lib/braintree-error"),
@@ -10859,7 +10675,6 @@ e.exports = (function e(t, n, r) {
         ],
         212: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./songbird");
                 function i(e) {
                     r.call(this, e);
@@ -10884,7 +10699,6 @@ e.exports = (function e(t, n, r) {
         ],
         213: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./songbird");
                 function i(e) {
                     r.call(this, e);
@@ -10912,7 +10726,6 @@ e.exports = (function e(t, n, r) {
         ],
         214: [
             function (e, t, n) {
-                "use strict";
                 t.exports = {
                     legacy: e("./legacy"),
                     "cardinal-modal": e("./cardinal-modal"),
@@ -10924,7 +10737,6 @@ e.exports = (function e(t, n, r) {
         ],
         215: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./songbird"),
                     i = e("../../../lib/braintree-error"),
                     o = e("../../shared/errors"),
@@ -10982,7 +10794,6 @@ e.exports = (function e(t, n, r) {
         ],
         216: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./base"),
                     i = e("../../../lib/deferred");
                 function o(e) {
@@ -11074,7 +10885,6 @@ e.exports = (function e(t, n, r) {
         ],
         217: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./base"),
                     i = e("../../../lib/assign").assign,
                     o = e("../../../lib/deferred"),
@@ -11609,7 +11419,6 @@ e.exports = (function e(t, n, r) {
         ],
         218: [
             function (e, t, n) {
-                "use strict";
                 var r = e("@braintree/wrap-promise"),
                     i = e("../../lib/methods"),
                     o = e("../../lib/convert-methods-to-error"),
@@ -11661,7 +11470,6 @@ e.exports = (function e(t, n, r) {
         ],
         219: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./external/three-d-secure"),
                     i = e("../lib/is-https").isHTTPS,
                     o = e("../lib/basic-component-verification"),
@@ -11764,7 +11572,6 @@ e.exports = (function e(t, n, r) {
         ],
         220: [
             function (e, t, n) {
-                "use strict";
                 t.exports = {
                     LANDING_FRAME_NAME: "braintreethreedsecurelanding",
                     CARDINAL_SCRIPT_SOURCE: {
@@ -11777,7 +11584,6 @@ e.exports = (function e(t, n, r) {
         ],
         221: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     THREEDS_NOT_ENABLED: {
@@ -11915,14 +11721,12 @@ e.exports = (function e(t, n, r) {
         ],
         222: [
             function (e, t, n) {
-                "use strict";
                 t.exports = e("../../lib/enumerate")(["AUTHENTICATION_COMPLETE"], "threedsecure:");
             },
             { "../../lib/enumerate": 153 },
         ],
         223: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./shared/unionpay"),
                     i = e("../lib/basic-component-verification"),
                     o = e("../lib/braintree-error"),
@@ -11968,7 +11772,6 @@ e.exports = (function e(t, n, r) {
         ],
         224: [
             function (e, t, n) {
-                "use strict";
                 t.exports = {
                     events: e("../../lib/enumerate")(
                         ["HOSTED_FIELDS_FETCH_CAPABILITIES", "HOSTED_FIELDS_ENROLL", "HOSTED_FIELDS_TOKENIZE"],
@@ -11981,7 +11784,6 @@ e.exports = (function e(t, n, r) {
         ],
         225: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     UNIONPAY_NOT_ENABLED: {
@@ -12051,7 +11853,6 @@ e.exports = (function e(t, n, r) {
         ],
         226: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/analytics"),
                     i = e("../../lib/braintree-error"),
                     o = e("framebus"),
@@ -12304,14 +12105,12 @@ e.exports = (function e(t, n, r) {
         ],
         227: [
             function (e, t, n) {
-                "use strict";
                 t.exports = { PLAID_LINK_JS: "https://cdn.plaid.com/link/v2/stable/link-initialize.js" };
             },
             {},
         ],
         228: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     US_BANK_ACCOUNT_OPTION_REQUIRED: {
@@ -12363,7 +12162,6 @@ e.exports = (function e(t, n, r) {
         ],
         229: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/basic-component-verification"),
                     i = e("../lib/braintree-error"),
                     o = e("../lib/create-deferred-client"),
@@ -12405,7 +12203,6 @@ e.exports = (function e(t, n, r) {
         ],
         230: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("./constants"),
                     o = e("./errors"),
@@ -12669,7 +12466,6 @@ e.exports = (function e(t, n, r) {
         ],
         231: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     VAULT_MANAGER_DELETE_PAYMENT_METHOD_NONCE_REQUIRES_CLIENT_TOKEN: {
@@ -12691,7 +12487,6 @@ e.exports = (function e(t, n, r) {
         ],
         232: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/basic-component-verification"),
                     i = e("../lib/create-deferred-client"),
                     o = e("../lib/create-assets-url"),
@@ -12726,7 +12521,6 @@ e.exports = (function e(t, n, r) {
         ],
         233: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("../lib/braintree-error"),
                     o = e("./errors"),
@@ -12836,7 +12630,6 @@ e.exports = (function e(t, n, r) {
         ],
         234: [
             function (e, t, n) {
-                "use strict";
                 var r = (
                     (this && this.__importDefault) ||
                     function (e) {
@@ -12851,7 +12644,6 @@ e.exports = (function e(t, n, r) {
         ],
         235: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.VENMO_PAYMENT_CONTEXT_STATUS_QUERY =
                         n.LEGACY_VENMO_PAYMENT_CONTEXT_STATUS_QUERY =
@@ -12877,7 +12669,6 @@ e.exports = (function e(t, n, r) {
         ],
         236: [
             function (e, t, n) {
-                "use strict";
                 var r =
                         (this && this.__assign) ||
                         function () {
@@ -13193,7 +12984,6 @@ e.exports = (function e(t, n, r) {
         ],
         237: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("../lib/basic-component-verification"),
                     o = e("../lib/create-deferred-client"),
@@ -13256,7 +13046,6 @@ e.exports = (function e(t, n, r) {
         ],
         238: [
             function (e, t, n) {
-                "use strict";
                 var r = e("@braintree/browser-detection/is-android"),
                     i = e("@braintree/browser-detection/is-chrome"),
                     o = e("@braintree/browser-detection/is-ios"),
@@ -13298,7 +13087,6 @@ e.exports = (function e(t, n, r) {
         ],
         239: [
             function (e, t, n) {
-                "use strict";
                 t.exports = {
                     DOCUMENT_VISIBILITY_CHANGE_EVENT_DELAY: 500,
                     DEFAULT_PROCESS_RESULTS_DELAY: 1e3,
@@ -13311,7 +13099,6 @@ e.exports = (function e(t, n, r) {
         ],
         240: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     VENMO_NOT_ENABLED: {
@@ -13426,7 +13213,6 @@ e.exports = (function e(t, n, r) {
         ],
         241: [
             function (e, t, n) {
-                "use strict";
                 (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.VENMO_DESKTOP_UNKNOWN_ERROR =
                         n.VENMO_DESKTOP_REQUEST_NEW_QR_CODE =
@@ -13454,7 +13240,6 @@ e.exports = (function e(t, n, r) {
         ],
         242: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./constants");
                 t.exports = function (e) {
                     return e.useAllowDesktopWebLogin
@@ -13468,7 +13253,6 @@ e.exports = (function e(t, n, r) {
         ],
         243: [
             function (e, t, n) {
-                "use strict";
                 var r = e("./browser-detection"),
                     i = e("../../lib/in-iframe");
                 t.exports = {
@@ -13498,7 +13282,6 @@ e.exports = (function e(t, n, r) {
         ],
         244: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../../lib/frame-service/external"),
                     i = e("../../lib/use-min"),
                     o = e("@braintree/extended-promise"),
@@ -13719,7 +13502,6 @@ e.exports = (function e(t, n, r) {
         ],
         245: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("./shared/supports-venmo"),
                     o = e("./shared/browser-detection"),
@@ -14498,7 +14280,6 @@ e.exports = (function e(t, n, r) {
         ],
         246: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     VISA_CHECKOUT_NOT_ENABLED: {
@@ -14527,7 +14308,6 @@ e.exports = (function e(t, n, r) {
         ],
         247: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/basic-component-verification"),
                     i = e("../lib/braintree-error"),
                     o = e("../lib/create-deferred-client"),
@@ -14571,7 +14351,6 @@ e.exports = (function e(t, n, r) {
         ],
         248: [
             function (e, t, n) {
-                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("../lib/analytics"),
                     o = e("./errors"),
