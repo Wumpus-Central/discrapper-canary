@@ -1,21 +1,21 @@
-n.d(t, { L5: () => u, VJ: () => h, cl: () => d, iu: () => g });
-var s,
-    l,
-    a = n(582128),
+n.d(t, { L5: () => u, VJ: () => E, cl: () => d, iu: () => g });
+var l,
+    a,
+    s = n(582128),
     i = n(440938),
     r = n(174459),
     c = n(652215),
     o = n(758836),
     d =
-        (((s = {}).SHOP_CARD = "GAME_SERVER_SHOP_CARD"),
-        (s.ACTIVITY_PANEL_DEEP_LINK = "GAME_SERVER_ACTIVITY_PANEL_DEEP_LINK"),
-        s),
-    u = (((l = {}).OPEN_PLAN_MODAL = "open_game_server_plan_modal"), l);
+        (((l = {}).SHOP_CARD = "GAME_SERVER_SHOP_CARD"),
+        (l.ACTIVITY_PANEL_DEEP_LINK = "GAME_SERVER_ACTIVITY_PANEL_DEEP_LINK"),
+        l),
+    u = (((a = {}).OPEN_PLAN_MODAL = "open_game_server_plan_modal"), a);
 function m(e) {
     return e.isGroupDM() ? "group_dm" : e.isDM() ? "dm" : "guild_channel";
 }
 function g(e) {
-    let { server: t, channels: n, hasContextMessage: s, source: l } = e;
+    let { server: t, channels: n, hasContextMessage: l, source: a } = e;
     r.default.track(c.HAw.GAME_SERVER_SHARE_FORWARDED, {
         destination_type: (function (e) {
             if (0 === e.length) return null;
@@ -28,13 +28,13 @@ function g(e) {
         game_id: t.gameId,
         sku_id: t.instance.planId,
         plan_name: t.planName,
-        has_context_message: s,
-        source: l,
+        has_context_message: l,
+        source: a,
     });
 }
-function h() {
+function E() {
     let e = (0, i.uM)();
-    return a.useCallback(
+    return s.useCallback(
         (t, n) => {
             r.default.track(c.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: e?.sessionId,

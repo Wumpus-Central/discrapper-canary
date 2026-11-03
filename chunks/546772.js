@@ -1,4 +1,4 @@
-n.d(t, { gG: () => b, j_: () => w, EG: () => j, HJ: () => k, AV: () => S, KK: () => A, ZL: () => y });
+n.d(t, { gG: () => b, j_: () => w, EG: () => j, HJ: () => k, AV: () => A, KK: () => C, ZL: () => y });
 var l = n(582128),
     r = n(158390),
     a = n(73153),
@@ -201,7 +201,7 @@ function k(e, t) {
 function w(e, t, n) {
     return d.get(`${e}:${t}`)?.lastFrame === n;
 }
-function S(e, t) {
+function A(e, t) {
     let [n, r] = l.useState(() => d.get(`${e}:${t}`)?.restarts ?? 0);
     return (
         l.useEffect(() => {
@@ -216,7 +216,7 @@ function S(e, t) {
         n
     );
 }
-function A(e, t, n) {
+function C(e, t, n) {
     let { fps: r, onFrame: a, enabled: i = !0, width: s = 0 } = n,
         u = l.useCallback(
             (n) => {

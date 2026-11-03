@@ -66,7 +66,7 @@ function S(e) {
 }
 var C = n(98332);
 let _ = "role_subscriptions_eligibility_modal";
-function v(e) {
+function T(e) {
     let { guild: t, eligibility: l, eligibilityLoading: s, eligibilityError: r, refreshEligibility: c } = e;
     return (0, i.jsx)(o.$, {
         variant: "primary",
@@ -94,7 +94,7 @@ function v(e) {
         icon: d.E,
     });
 }
-function T(e) {
+function v(e) {
     let { guild: t, checkboxText: n } = e,
         {
             canSubmitAcceptance: s,
@@ -173,8 +173,8 @@ function b(e) {
     return o
         ? c
             ? (0, i.jsx)(S, { ...n })
-            : (0, i.jsx)(T, { guild: t, checkboxText: d })
-        : (0, i.jsx)(v, {
+            : (0, i.jsx)(v, { guild: t, checkboxText: d })
+        : (0, i.jsx)(T, {
               guild: t,
               eligibility: a,
               eligibilityLoading: l,

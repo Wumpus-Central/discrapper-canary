@@ -1,5 +1,5 @@
 let i, l, s;
-(n.d(t, { A: () => ee, y: () => v }), n(321073));
+(n.d(t, { A: () => ee, y: () => T }), n(321073));
 var r,
     a = n(435558),
     o = n.n(a),
@@ -20,8 +20,8 @@ var r,
     S = n(927573),
     C = n(652215),
     _ = n(178758),
-    v = (((r = {}).SOLID = "solid"), (r.GRADIENT = "gradient"), (r.HOLOGRAPHIC = "holographic"), r);
-let T = {
+    T = (((r = {}).SOLID = "solid"), (r.GRADIENT = "gradient"), (r.HOLOGRAPHIC = "holographic"), r);
+let v = {
         [S.T$.DISPLAY]: [
             "name",
             "hoist",
@@ -120,7 +120,7 @@ function z(e, t) {
     });
 }
 function Y(e, t) {
-    let n = T[t];
+    let n = v[t];
     if (null == n || 0 === n.length) return null;
     let i = q(e),
         l = J(e);

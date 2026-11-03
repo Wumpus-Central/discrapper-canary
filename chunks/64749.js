@@ -22,8 +22,8 @@ var i = n(477900),
     S = n(967144),
     C = n(69282),
     _ = n(657048),
-    v = n(963307),
-    T = n(734057),
+    T = n(963307),
+    v = n(734057),
     b = n(317525),
     y = n(994500),
     R = n(287809),
@@ -38,7 +38,7 @@ function k(e) {
     return 0 === e.type;
 }
 function U(e) {
-    let t = `${!e.name.includes(v.QP) ? "@" : ""}${e.name}`;
+    let t = `${!e.name.includes(T.QP) ? "@" : ""}${e.name}`;
     return { tag: { type: N._.ROLE, label: t }, row: { id: e.id, display: t, type: 1, record: e } };
 }
 function P(e) {
@@ -50,7 +50,7 @@ let w = l.memo(function (e) {
         { id: s, name: a } = t.record,
         o = (0, C.Xx)({ guildId: n, roleId: s, size: 16 }),
         x = (0, d.bG)([b.A], () => b.A.getRole(n, s)),
-        h = a.includes(v.QP) ? "" : "@",
+        h = a.includes(T.QP) ? "" : "@",
         E = (0, c.r)(u.A.unsafe_rawColors.PRIMARY_300).hsl(),
         j = x?.colorString ?? E,
         f = (0, S.X_)(n, x, x?.colorStrings);
@@ -103,7 +103,7 @@ function H(e) {
                     let i = {};
                     return (
                         e.forEach((e) => {
-                            let t = T.A.getChannel(e);
+                            let t = v.A.getChannel(e);
                             null != t && (i[e] = P(t));
                         }),
                         t.forEach((e) => {
@@ -114,7 +114,7 @@ function H(e) {
                 })(a, c, C),
             [a, c, C],
         ),
-        v = l.useMemo(() => Object.keys(_), [_]),
+        T = l.useMemo(() => Object.keys(_), [_]),
         [y, R] = l.useState(""),
         [O, w] = l.useState(!1),
         [F, H] = l.useState(!1),
@@ -196,11 +196,11 @@ function H(e) {
         ),
         et = l.useMemo(
             () =>
-                v.map((e) => {
+                T.map((e) => {
                     var n;
                     return ((n = _[e]), { ...n.tag, label: B(n.row, t, G.yS) });
                 }),
-            [_, v, t],
+            [_, T, t],
         );
     return (0, i.jsxs)("div", {
         className: r()(G.MT, A),
@@ -216,7 +216,7 @@ function H(e) {
                         query: y,
                         ref: Y,
                         onRemoveTag: (e) => {
-                            let t = v[e],
+                            let t = T[e],
                                 { [t]: n, ...i } = _;
                             (J(i), R(""), Z());
                         },
@@ -224,7 +224,7 @@ function H(e) {
                             R(e.trim().toLocaleLowerCase());
                         },
                         placeholder: m ?? L.intl.string(L.t.uqHLzW),
-                        sections: [v.length],
+                        sections: [T.length],
                         inputProps: {
                             "aria-controls": D,
                             "aria-describedby": null != p ? S : void 0,

@@ -27,7 +27,7 @@ async function f(e) {
         if ("image/gif" === n.type || "image/webp" === n.type || "image/avif" === n.type)
             return j(n.name, n.size, f, N);
         else if (null != A) {
-            var v, T;
+            var T, v;
             let e;
             t = (0, i.h_)(A, 128, 128);
             try {
@@ -36,14 +36,14 @@ async function f(e) {
                 return j(n.name, n.size, f, N);
             }
             if (
-                ((v = t),
-                (T = e),
+                ((T = t),
+                (v = e),
                 c.default.track(x.HAw.EMOJI_FILE_RESIZED, {
                     is_animated: !1,
                     file_type: n.type.split("/").pop(),
                     original_file_size_bytes: n.size,
-                    resized_file_size_bytes: (0, m.EW)(v),
-                    resized_file_too_big: T,
+                    resized_file_size_bytes: (0, m.EW)(T),
+                    resized_file_too_big: v,
                 }),
                 e)
             )

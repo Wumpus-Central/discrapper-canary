@@ -1,4 +1,4 @@
-a.exports = {
+e.exports = {
     kL: "container_ab64fd",
     dt: "widgetPreview_ab64fd",
     xB: "gameDetailsCardPreview_ab64fd",

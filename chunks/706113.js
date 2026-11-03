@@ -1,38 +1,38 @@
-l.d(t, { A: () => u });
-var n = l(582128),
-    a = l(17928),
-    i = l(350172),
-    s = l(730202),
-    o = l(295586),
-    r = l(510801),
-    c = l(682301);
-function u(e) {
-    let { includeUnpublished: t = !1, includePricing: l = !1 } =
+n.d(t, { A: () => d });
+var l = n(582128),
+    a = n(17928),
+    s = n(350172),
+    i = n(730202),
+    r = n(295586),
+    c = n(510801),
+    o = n(682301);
+function d(e) {
+    let { includeUnpublished: t = !1, includePricing: n = !1 } =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        u = e ?? "";
-    n.useEffect(() => {
-        "" !== u && o.p.requestCollections([u], { includeUnpublished: t, includePricing: l });
-    }, [u, t, l]);
-    let { collection: d, fetchState: E } = (0, a.cf)(
-            [s.A],
-            () => ({ collection: s.A.getCollection(u), fetchState: s.A.getFetchState(u) }),
-            [u],
+        d = e ?? "";
+    l.useEffect(() => {
+        "" !== d && r.p.requestCollections([d], { includeUnpublished: t, includePricing: n });
+    }, [d, t, n]);
+    let { collection: u, fetchState: m } = (0, a.cf)(
+            [i.A],
+            () => ({ collection: i.A.getCollection(d), fetchState: i.A.getFetchState(d) }),
+            [d],
         ),
-        A = (0, c.Hd)(u, E),
-        p = n.useMemo(() => (null != d ? r.A.fromStorefrontCollectionRecord(d) : null), [d]),
-        C = n.useMemo(() => ("error" === E || A ? "error" : null != p ? "ready" : "loading"), [E, A, p]);
+        g = (0, o.Hd)(d, m),
+        E = l.useMemo(() => (null != u ? c.A.fromStorefrontCollectionRecord(u) : null), [u]),
+        h = l.useMemo(() => ("error" === m || g ? "error" : null != E ? "ready" : "loading"), [m, g, E]);
     return {
-        category: p,
-        state: C,
-        retry: n.useCallback(() => {
-            "" !== u &&
-                (0, i._v)({
-                    collectionIds: [u],
+        category: E,
+        state: h,
+        retry: l.useCallback(() => {
+            "" !== d &&
+                (0, s._v)({
+                    collectionIds: [d],
                     includeUnpublishedCollections: t,
                     includeUnpublishedProducts: t,
-                    includePricing: l,
+                    includePricing: n,
                     ignoreCache: !0,
                 });
-        }, [u, t, l]),
+        }, [d, t, n]),
     };
 }

@@ -1,7 +1,7 @@
-r.d(t, { J: () => o });
-var n,
+t.d(r, { J: () => o });
+var l,
     o =
-        (((n = {}).PROFILE_EFFECT = "profile_effect"),
-        (n.AVATAR_DECORATION = "avatar_decoration"),
-        (n.PROFILE_FRAME = "profile_frame"),
-        n);
+        (((l = {}).PROFILE_EFFECT = "profile_effect"),
+        (l.AVATAR_DECORATION = "avatar_decoration"),
+        (l.PROFILE_FRAME = "profile_frame"),
+        l);

@@ -1,80 +1,80 @@
-(r.d(t, { ZK: () => h, pF: () => m, wu: () => d }), r(323874), r(14289), r(35956), r(321073));
-var n = r(582128);
-if (588245 != r.j) var o = r(462180);
-var l = r(882035),
-    a = r(121894),
-    i = r(506774),
-    f = r(858899),
-    u = r(87558);
-let s = "__DEBUG_PROFILE_EFFECTS_STORE",
-    c = { profileEffects: i.w.get(s) ?? {} },
+(t.d(r, { ZK: () => A, pF: () => m, wu: () => v }), t(323874), t(14289), t(35956), t(321073));
+var l = t(582128);
+if (588245 != t.j) var o = t(462180);
+var n = t(882035),
+    a = t(121894),
+    s = t(506774),
+    i = t(858899),
+    c = t(87558);
+let u = "__DEBUG_PROFILE_EFFECTS_STORE",
+    f = { profileEffects: s.w.get(u) ?? {} },
     p = (e) => {
         try {
-            i.w.set(s, e.profileEffects);
+            s.w.set(u, e.profileEffects);
         } catch (e) {
             (console.error(e),
-                (0, f.P0)({
+                (0, i.P0)({
                     text: "This file is too large to save into localstorage. You will be able to view but not persist these changes.",
                     variant: "critical",
                 }));
         }
     },
-    d = (0, l.h)((e) => ({
-        ...c,
-        upsertProfileEffect: (t) =>
+    v = (0, n.h)((e) => ({
+        ...f,
+        upsertProfileEffect: (r) =>
             (0, a.r)(() => {
                 e((e) => {
-                    let r = { ...e };
-                    return ((r.profileEffects[t.skuId] = t), p(r), r);
+                    let t = { ...e };
+                    return ((t.profileEffects[r.skuId] = r), p(t), t);
                 });
             }),
-        deleteProfileEffect: (t) =>
+        deleteProfileEffect: (r) =>
             (0, a.r)(() => {
                 e((e) => {
-                    let r = { ...e };
-                    return (delete r.profileEffects[t], p(r), r);
+                    let t = { ...e };
+                    return (delete t.profileEffects[r], p(t), t);
                 });
             }),
         clearAll: () =>
             (0, a.r)(() => {
-                e(() => (i.w.remove(s), { profileEffects: {} }));
+                e(() => (s.w.remove(u), { profileEffects: {} }));
             }),
     }));
 function m() {
-    return d((e) => {
-        let { profileEffects: t } = e;
-        return Object.values(t);
+    return v((e) => {
+        let { profileEffects: r } = e;
+        return Object.values(r);
     }, o.x);
 }
-let h = (e) => {
-    let t = d((t) => (null != e ? t.profileEffects[e] : null)),
-        r = n.useRef([]);
+let A = (e) => {
+    let r = v((r) => (null != e ? r.profileEffects[e] : null)),
+        t = l.useRef([]);
     return (
-        n.useEffect(
+        l.useEffect(
             () => () => {
-                (r.current.forEach((e) => {
+                (t.current.forEach((e) => {
                     URL.revokeObjectURL(e);
                 }),
-                    (r.current = []));
+                    (t.current = []));
             },
             [],
         ),
-        n.useMemo(() => {
-            if (null == t) return null;
-            let e = t.stillFrames,
-                n = null != e ? { ...e } : {};
-            for (let e in n) {
-                let t = n[e];
-                null != t &&
-                    (n[e] = {
-                        ...t,
+        l.useMemo(() => {
+            if (null == r) return null;
+            let e = r.stillFrames,
+                l = null != e ? { ...e } : {};
+            for (let e in l) {
+                let r = l[e];
+                null != r &&
+                    (l[e] = {
+                        ...r,
                         src: (function (e) {
-                            let t = (0, u.fB)(e);
-                            return (r.current.push(t), t);
-                        })(t.base64),
+                            let r = (0, c.fB)(e);
+                            return (t.current.push(r), r);
+                        })(r.base64),
                     });
             }
-            return { ...t, stillFrames: n };
-        }, [t])
+            return { ...r, stillFrames: l };
+        }, [r])
     );
 };

@@ -1,15 +1,15 @@
-(n.d(t, { h: () => o, l: () => i }), n(582128));
-var r = n(65238),
-    l = n(174459),
+(n.d(t, { h: () => i, l: () => o }), n(582128));
+var l = n(65238),
+    r = n(174459),
     s = n(602051),
     a = n(652215);
-function o(e, t, n) {
-    null != (0, r.XF)(t) && null != e.target.closest("a") && i(t, n, s.Z.INLINE_HELP_TEXT_CLICKED);
-}
 function i(e, t, n) {
-    let s = (0, r.XF)(e);
+    null != (0, l.XF)(t) && null != e.target.closest("a") && o(t, n, s.Z.INLINE_HELP_TEXT_CLICKED);
+}
+function o(e, t, n) {
+    let s = (0, l.XF)(e);
     null != s &&
-        l.default.track(a.HAw.SHOP_COLLECT_AND_CLAIM_TAKEOVER_PROMOTION_ACTION, {
+        r.default.track(a.HAw.SHOP_COLLECT_AND_CLAIM_TAKEOVER_PROMOTION_ACTION, {
             promotion_id: e.id,
             promotion_type: s.type,
             promotion_subtype: s.subtype,

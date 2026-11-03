@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     BX: "immersiveBannerBlock__43ce9",
     HQ: "immersiveBannerContent__43ce9",
     Yn: "immersiveBannerTextContainer__43ce9",

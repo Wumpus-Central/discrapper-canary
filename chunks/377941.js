@@ -1,6 +1,6 @@
-var t = p(762479),
-    n = /[\\^$.*+?()[\]{}|]/g,
-    s = RegExp(n.source);
-r.exports = function (r) {
-    return (r = t(r)) && s.test(r) ? r.replace(n, "\\$&") : r;
+var s = r(762479),
+    c = /[\\^$.*+?()[\]{}|]/g,
+    t = RegExp(c.source);
+p.exports = function (p) {
+    return (p = s(p)) && t.test(p) ? p.replace(c, "\\$&") : p;
 };

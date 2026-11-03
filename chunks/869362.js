@@ -721,11 +721,11 @@ var e$ = l(619517),
     e1 = l(133296),
     e8 = l(689175),
     e7 = l(532197),
-    e3 = l(837344);
-let e2 = { CENTER: e3.Hu, LEFT: e3.Vl };
+    e2 = l(837344);
+let e3 = { CENTER: e2.Hu, LEFT: e2.Vl };
 class e9 extends s.PureComponent {
-    static Align = e2;
-    static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: e2.CENTER };
+    static Align = e3;
+    static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: e3.CENTER };
     _scrollerRef = null;
     _paginationItemRefs = [];
     componentDidUpdate(e) {
@@ -747,7 +747,7 @@ class e9 extends s.PureComponent {
     };
     render() {
         let { renderItem: e, items: t, vertical: l, paginationContainerClass: n, align: r } = this.props,
-            o = l ? e3.XA : e3.BU;
+            o = l ? e2.XA : e2.BU;
         return (0, i.jsx)(e8.Gt, {
             orientation: l ? "vertical" : "horizontal",
             className: a()(o, n, r),
@@ -773,9 +773,9 @@ class e5 extends s.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, i.jsx)(eO.D, {
-            className: a()(e3.t1, e),
+            className: a()(e2.t1, e),
             onClick: this.handlePrevClick,
-            children: (0, i.jsx)(e7.A, { className: e3.UE, direction: e7.A.Directions.LEFT }),
+            children: (0, i.jsx)(e7.A, { className: e2.UE, direction: e7.A.Directions.LEFT }),
         });
     }
 }
@@ -788,9 +788,9 @@ class e4 extends s.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, i.jsx)(eO.D, {
-            className: a()(e3.XS, e),
+            className: a()(e2.XS, e),
             onClick: this.handleNextClick,
-            children: (0, i.jsx)(e7.A, { className: e3.UE, direction: e7.A.Directions.RIGHT }),
+            children: (0, i.jsx)(e7.A, { className: e2.UE, direction: e7.A.Directions.RIGHT }),
         });
     }
 }
@@ -1602,8 +1602,8 @@ function t8(e) {
     });
 }
 var t7 = l(449054),
-    t3 = l(900002),
-    t2 = l(950305),
+    t2 = l(900002),
+    t3 = l(950305),
     t9 = l(573435),
     t5 = l(714991),
     t4 = l(776231),
@@ -1662,7 +1662,7 @@ function li(e) {
                     (0, i.jsxs)("div", {
                         className: le.Y_,
                         children: [
-                            (0, i.jsx)(t5.A, { className: le.n2, guild: t, tooltipColor: t3.ST.Colors.PRIMARY }),
+                            (0, i.jsx)(t5.A, { className: le.n2, guild: t, tooltipColor: t2.ST.Colors.PRIMARY }),
                             (0, i.jsx)(h.D, { variant: "heading-md/semibold", className: le.J5, children: t.name }),
                         ],
                     }),
@@ -1678,7 +1678,7 @@ function li(e) {
                         children: (0, i.jsxs)("div", {
                             className: le.FG,
                             children: [
-                                (0, i.jsx)(t2.UserIcon, { color: "currentColor", className: le.NP, size: "xs" }),
+                                (0, i.jsx)(t3.UserIcon, { color: "currentColor", className: le.NP, size: "xs" }),
                                 (0, i.jsx)(g.E, {
                                     variant: "text-xs/normal",
                                     color: "text-default",
@@ -2048,8 +2048,8 @@ var lM = l(607399),
     l1 = l(957565),
     l8 = l(692848),
     l7 = l(108861);
-let l3 = "start_application_install",
-    l2 = "launch_activity";
+let l2 = "start_application_install",
+    l3 = "launch_activity";
 function l9(e) {
     let { renderDropdown: t, size: l } = e,
         n = s.useRef(null);
@@ -2094,8 +2094,8 @@ function l5(e) {
             }, [t])),
             s.useEffect(() => {
                 let e = new URL(location.href);
-                if (l && "true" === e.searchParams.get(l3)) {
-                    e.searchParams.delete(l3);
+                if (l && "true" === e.searchParams.get(l2)) {
+                    e.searchParams.delete(l2);
                     let t = e.pathname + e.search;
                     ((0, _.bG)(t), n());
                 }
@@ -2124,7 +2124,7 @@ function l5(e) {
                             source: "product_page",
                             device_platform: lM.Fr ? "mobile_web" : "desktop_web",
                         }),
-                            G({ [l3]: "true" }));
+                            G({ [l2]: "true" }));
                     }
                 }, [t, n, l]),
                 canInstall: s.useMemo(
@@ -2238,9 +2238,9 @@ let l6 = function (e) {
                 });
             s.useEffect(() => {
                 let e = new URL(location.href),
-                    t = "true" === e.searchParams.get(l2);
+                    t = "true" === e.searchParams.get(l3);
                 if (u && r && t && null != i && null != h) {
-                    e.searchParams.delete(l2);
+                    e.searchParams.delete(l3);
                     let t = e.pathname + e.search;
                     ((0, _.bG)(t), m());
                 }
@@ -2248,7 +2248,7 @@ let l6 = function (e) {
             let p = s.useCallback(async () => {
                 if (null != i) {
                     if ((O(D.HAw.APP_DIRECTORY_LAUNCH_CLICKED, { application_id: l }), !u))
-                        return void G({ [l2]: "true" });
+                        return void G({ [l3]: "true" });
                     await m();
                 }
             }, [l, i, u, m]);

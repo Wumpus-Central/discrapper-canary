@@ -42,19 +42,19 @@ function o(e) {
             [t, n],
         ),
         w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
-        S = null == f ? 0 : Math.round(f * Math.min(w, 2)),
-        A = (0, i.KK)(t, n, { fps: o, onFrame: k, enabled: !d && y, width: S }),
+        A = null == f ? 0 : Math.round(f * Math.min(w, 2)),
+        C = (0, i.KK)(t, n, { fps: o, onFrame: k, enabled: !d && y, width: A }),
         N = (0, i.AV)(t, n),
-        C = r.useRef(N);
+        S = r.useRef(N);
     (r.useEffect(() => {
-        if (C.current === N) return;
-        ((C.current = N), (x.current = null), b(!1));
+        if (S.current === N) return;
+        ((S.current = N), (x.current = null), b(!1));
         let e = p.current;
         e?.getContext("2d")?.clearRect(0, 0, e.width, e.height);
     }, [N]),
         r.useEffect(() => {
-            g?.(A, j);
-        }, [A, j, g]),
+            g?.(C, j);
+        }, [C, j, g]),
         r.useEffect(() => {
             c && p.current?.focus();
         }, [c]));
@@ -72,7 +72,7 @@ function o(e) {
             y: Math.round(((e.clientY - a) / (t.height * l)) * s),
         };
     }
-    function M(e) {
+    function _(e) {
         return (l) => {
             if (!c) return;
             if ("mouseMoved" === e) {
@@ -101,7 +101,7 @@ function o(e) {
                 }));
         };
     }
-    function _(e) {
+    function M(e) {
         return (l) => {
             if (!c || "Escape" === l.key) return;
             l.preventDefault();
@@ -127,9 +127,9 @@ function o(e) {
         onContextMenu: function (e) {
             c && e.preventDefault();
         },
-        onMouseDown: M("mousePressed"),
-        onMouseUp: M("mouseReleased"),
-        onMouseMove: M("mouseMoved"),
+        onMouseDown: _("mousePressed"),
+        onMouseUp: _("mouseReleased"),
+        onMouseMove: _("mouseMoved"),
         onWheel: function (e) {
             c &&
                 (0, i.ZL)(t, n, {
@@ -141,8 +141,8 @@ function o(e) {
                     modifiers: u(e),
                 });
         },
-        onKeyDown: _("keyDown"),
-        onKeyUp: _("keyUp"),
+        onKeyDown: M("keyDown"),
+        onKeyUp: M("keyUp"),
         onBlur: function () {
             for (let [e, l] of I.current)
                 (0, i.ZL)(t, n, { type: "input_keyboard", eventType: "keyUp", key: l, code: e, modifiers: 0 });

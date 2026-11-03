@@ -1,1 +1,1 @@
-e.exports = { B: "smallCardItem__02912" };
+_.exports = { B: "smallCardItem__02912" };

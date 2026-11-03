@@ -1,85 +1,85 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => p });
 var l = n(477900),
-    a = n(582128),
-    r = n(503698),
-    i = n.n(r),
+    r = n(582128),
+    a = n(503698),
+    i = n.n(a),
     s = n(847374),
-    o = n(320448),
-    u = n(834730),
-    d = n(939249),
-    c = n(344587),
+    u = n(320448),
+    o = n(834730),
+    c = n(939249),
+    d = n(344587),
     f = n(809526),
-    m = n(105292),
-    p = n(59678);
-function g(e) {
+    h = n(105292),
+    m = n(59678);
+function p(e) {
     let {
             glyph: t,
             line: n,
-            live: r,
-            settled: g,
-            tint: h,
+            live: a,
+            settled: p,
+            tint: g,
             detail: x,
-            connected: k = !1,
-            connectsDown: b = !1,
-            anchor: j = !1,
+            connected: y = !1,
+            connectsDown: k = !1,
+            anchor: b = !1,
         } = e,
-        [v, y] = a.useState(!1),
-        _ = a.useRef(null);
-    a.useLayoutEffect(() => {
-        r && _.current?.style.setProperty("--custom-conjure-shine-delay", `${-(performance.now() % 2e3)}ms`);
-    }, [r]);
-    let w = a.useId(),
-        S = a.useCallback(() => y((e) => !e), []),
-        { text: C, phase: A } = (0, c.Q)(n),
-        N = v ? s.a : o._,
-        I = null != x,
-        P = (0, l.jsxs)(l.Fragment, {
+        [v, j] = r.useState(!1),
+        w = r.useRef(null);
+    r.useLayoutEffect(() => {
+        a && w.current?.style.setProperty("--custom-conjure-shine-delay", `${-(performance.now() % 2e3)}ms`);
+    }, [a]);
+    let _ = r.useId(),
+        S = r.useCallback(() => j((e) => !e), []),
+        { text: C, phase: A } = (0, d.Q)(n),
+        P = v ? s.a : u._,
+        M = null != x,
+        I = (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)("span", { className: p.hd, children: t }),
-                (0, l.jsx)(u.E, {
+                (0, l.jsx)("span", { className: m.hd, children: t }),
+                (0, l.jsx)(o.E, {
                     tag: "span",
                     variant: "text-md/normal",
                     color: "currentColor",
-                    className: i()(p.qo, { [p._q]: "exit" === A, [p.GD]: "enter" === A }),
+                    className: i()(m.qo, { [m._q]: "exit" === A, [m.GD]: "enter" === A }),
                     children: C,
                 }),
-                I ? (0, l.jsx)(N, { size: "xs", color: "currentColor", className: p.nD }) : null,
+                M ? (0, l.jsx)(P, { size: "xs", color: "currentColor", className: m.nD }) : null,
             ],
         }),
-        E = (0, l.jsxs)(l.Fragment, {
+        N = (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)("span", { className: p.$m, children: P }),
-                r
+                (0, l.jsx)("span", { className: m.$m, children: I }),
+                a
                     ? (0, l.jsx)("span", {
-                          className: p.pw,
+                          className: m.pw,
                           "aria-hidden": !0,
-                          children: (0, l.jsx)("span", { className: i()(p.$m, p.Yj), children: P }),
+                          children: (0, l.jsx)("span", { className: i()(m.$m, m.Yj), children: I }),
                       })
                     : null,
             ],
         });
     return (0, l.jsxs)("li", {
-        ref: _,
-        className: p.K1,
-        "data-live": r,
-        "data-settled": g,
-        "data-connected": k,
-        "data-connects-down": b,
-        "data-conjure-turn-status": j ? "true" : void 0,
-        style: null != h ? { "--custom-conjure-shimmer-tint": h } : void 0,
+        ref: w,
+        className: m.K1,
+        "data-live": a,
+        "data-settled": p,
+        "data-connected": y,
+        "data-connects-down": k,
+        "data-conjure-turn-status": b ? "true" : void 0,
+        style: null != g ? { "--custom-conjure-shimmer-tint": g } : void 0,
         children: [
-            I
-                ? (0, l.jsx)(d.D, {
+            M
+                ? (0, l.jsx)(c.D, {
                       tag: "div",
-                      className: i()(p.ep, p.EK),
+                      className: i()(m.ep, m.EK),
                       "aria-expanded": v,
-                      "aria-controls": w,
-                      "aria-label": m.intl.formatToPlainString(f.default.yByAPh, { activity: C }),
+                      "aria-controls": _,
+                      "aria-label": h.intl.formatToPlainString(f.default.yByAPh, { activity: C }),
                       onClick: S,
-                      children: E,
+                      children: N,
                   })
-                : (0, l.jsx)("div", { className: p.ep, children: E }),
-            (0, l.jsx)("div", { id: w, hidden: !v, "data-conjure-entrance": !0, className: p.BA, children: x }),
+                : (0, l.jsx)("div", { className: m.ep, children: N }),
+            (0, l.jsx)("div", { id: _, hidden: !v, "data-conjure-entrance": !0, className: m.BA, children: x }),
         ],
     });
 }

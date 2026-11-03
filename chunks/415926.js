@@ -1,95 +1,95 @@
-n.d(t, { r: () => p });
-var r = n(582128),
-    l = n(59520),
+n.d(t, { r: () => m });
+var l = n(582128),
+    r = n(59520),
     s = n(174459),
     a = n(440938),
-    o = n(12678),
-    i = n(652215),
-    u = n(650583);
-let c = new Set([u.N$.ArrowUp, u.N$.ArrowDown, u.N$.PageUp, u.N$.PageDown, u.N$.Home, u.N$.End, u.N$.Tab]);
-function d(e, t, n, r) {
-    let { scrollTop: l = 0, scrollOffset: a = 0, scrollHeight: o = 0, scrollWidth: i = 0 } = r;
-    if (o > 0) {
-        let r = (l + a) / o;
-        r > 0 &&
+    i = n(12678),
+    o = n(652215),
+    c = n(650583);
+let u = new Set([c.N$.ArrowUp, c.N$.ArrowDown, c.N$.PageUp, c.N$.PageDown, c.N$.Home, c.N$.End, c.N$.Tab]);
+function d(e, t, n, l) {
+    let { scrollTop: r = 0, scrollOffset: a = 0, scrollHeight: i = 0, scrollWidth: o = 0 } = l;
+    if (i > 0) {
+        let l = (r + a) / i;
+        l > 0 &&
             s.default.track(e, {
-                scroll_visible_percent: r,
+                scroll_visible_percent: l,
                 source: n,
-                page_height: Math.round(o),
-                page_width: Math.round(i),
+                page_height: Math.round(i),
+                page_width: Math.round(o),
                 page_session_id: t,
             });
     }
 }
-function p(e, t) {
+function m(e, t) {
     let n,
         s,
-        u,
-        p,
-        { analyticsSource: m } = (0, o.lC)(t),
-        g = (0, l.I)(d, 5e3, [], { trailing: !0 }),
-        h = (0, a.uM)(),
-        E = h?.sessionId,
+        c,
+        m,
+        { analyticsSource: g } = (0, i.lC)(t),
+        h = (0, r.I)(d, 5e3, [], { trailing: !0 }),
+        p = (0, a.uM)(),
+        x = p?.sessionId,
         f =
-            ((n = r.useRef(0)),
-            (s = r.useRef(!1)),
-            (u = r.useRef(!1)),
-            (p = r.useRef(0)),
-            r.useEffect(() => {
+            ((n = l.useRef(0)),
+            (s = l.useRef(!1)),
+            (c = l.useRef(!1)),
+            (m = l.useRef(0)),
+            l.useEffect(() => {
                 let t = e.current?.getScrollerNode();
                 if (null != t)
                     return (
-                        t.addEventListener("wheel", r, { passive: !0 }),
-                        t.addEventListener("touchmove", r, { passive: !0 }),
+                        t.addEventListener("wheel", l, { passive: !0 }),
+                        t.addEventListener("touchmove", l, { passive: !0 }),
                         t.addEventListener("keydown", a),
-                        t.addEventListener("pointerdown", o),
-                        t.addEventListener("scrollend", l),
-                        window.addEventListener("pointerup", i),
-                        window.addEventListener("pointercancel", i),
+                        t.addEventListener("pointerdown", i),
+                        t.addEventListener("scrollend", r),
+                        window.addEventListener("pointerup", o),
+                        window.addEventListener("pointercancel", o),
                         () => {
-                            (t.removeEventListener("wheel", r),
-                                t.removeEventListener("touchmove", r),
+                            (t.removeEventListener("wheel", l),
+                                t.removeEventListener("touchmove", l),
                                 t.removeEventListener("keydown", a),
-                                t.removeEventListener("pointerdown", o),
-                                t.removeEventListener("scrollend", l),
-                                window.removeEventListener("pointerup", i),
-                                window.removeEventListener("pointercancel", i),
+                                t.removeEventListener("pointerdown", i),
+                                t.removeEventListener("scrollend", r),
+                                window.removeEventListener("pointerup", o),
+                                window.removeEventListener("pointercancel", o),
                                 (s.current = !1),
-                                (u.current = !1));
+                                (c.current = !1));
                         }
                     );
-                function r() {
+                function l() {
                     ((n.current = Date.now()), (s.current = !0));
                 }
-                function l() {
+                function r() {
                     s.current = !1;
                 }
                 function a(e) {
-                    c.has(e.key) && r();
+                    u.has(e.key) && l();
                 }
-                function o(e) {
-                    e.target === t && ((u.current = !0), (p.current = Date.now()), r());
+                function i(e) {
+                    e.target === t && ((c.current = !0), (m.current = Date.now()), l());
                 }
-                function i() {
-                    u.current && ((u.current = !1), r());
+                function o() {
+                    c.current && ((c.current = !1), l());
                 }
             }, [e]),
-            r.useCallback(
-                () => (u.current && Date.now() - p.current < 3e4) || (s.current && Date.now() - n.current < 1e3),
+            l.useCallback(
+                () => (c.current && Date.now() - m.current < 3e4) || (s.current && Date.now() - n.current < 1e3),
                 [],
             ));
     return {
-        handleScroll: r.useCallback(() => {
+        handleScroll: l.useCallback(() => {
             if (f() && null != e.current) {
                 let t = e.current.getScrollerNode();
                 null != t &&
-                    g(i.HAw.COLLECTIBLES_SHOP_SCROLLED, null != E ? E : "", m, {
+                    h(o.HAw.COLLECTIBLES_SHOP_SCROLLED, null != x ? x : "", g, {
                         scrollTop: t.scrollTop,
                         scrollOffset: t.offsetHeight,
                         scrollHeight: t.scrollHeight,
                         scrollWidth: t.scrollWidth,
                     });
             }
-        }, [g, m, E, e, f]),
+        }, [h, g, x, e, f]),
     };
 }

@@ -1,49 +1,49 @@
-n.d(t, { A: () => h, W: () => d });
-var r = n(477900);
+n.d(t, { A: () => p, W: () => d });
+var l = n(477900);
 n(582128);
-var l = n(503698),
-    s = n.n(l),
+var r = n(503698),
+    s = n.n(r),
     a = n(435558),
-    o = n(17928),
-    i = n(775602),
-    u = n(577568);
-let c = 2 * Math.PI * 57,
+    i = n(17928),
+    o = n(775602),
+    c = n(577568);
+let u = 2 * Math.PI * 57,
     d = "var(--status-positive)",
-    p = "var(--background-mod-strong)",
-    m = -Math.PI / 2;
-function g(e) {
+    m = "var(--background-mod-strong)",
+    g = -Math.PI / 2;
+function h(e) {
     return `${60 + 57 * Math.cos(e)} ${60 + 57 * Math.sin(e)}`;
 }
-let h = function (e) {
-    let { current: t, target: n, progressColor: l = d, segmentGap: h = 4, children: E } = e,
-        f = (0, o.bG)([i.Ay], () => i.Ay.useReducedMotion),
-        C = Math.round(n);
-    if (C > 1 && C <= 12) {
-        let e, n, o;
-        return (0, r.jsxs)("div", {
-            className: u.iE,
+let p = function (e) {
+    let { current: t, target: n, progressColor: r = d, segmentGap: p = 4, children: x } = e,
+        f = (0, i.bG)([o.Ay], () => o.Ay.useReducedMotion),
+        E = Math.round(n);
+    if (E > 1 && E <= 12) {
+        let e, n, i;
+        return (0, l.jsxs)("div", {
+            className: c.iE,
             children: [
-                E,
-                (0, r.jsx)("svg", {
-                    className: u.hN,
+                x,
+                (0, l.jsx)("svg", {
+                    className: c.hN,
                     viewBox: "0 0 120 120",
-                    children: ((e = h / 60),
-                    (n = (0, a.clamp)(Math.floor(t), 0, C)),
-                    (o = (2 * Math.PI) / C),
-                    Array.from({ length: C }, (t, r) => {
-                        let l = m + r * o + e / 2;
-                        return { key: `${C}-${r}`, d: `M ${g(l)} A 57 57 0 0 1 ${g(l + o - e)}`, isFilled: r < n };
+                    children: ((e = p / 60),
+                    (n = (0, a.clamp)(Math.floor(t), 0, E)),
+                    (i = (2 * Math.PI) / E),
+                    Array.from({ length: E }, (t, l) => {
+                        let r = g + l * i + e / 2;
+                        return { key: `${E}-${l}`, d: `M ${h(r)} A 57 57 0 0 1 ${h(r + i - e)}`, isFilled: l < n };
                     })).map((e) =>
-                        (0, r.jsxs)(
+                        (0, l.jsxs)(
                             "g",
                             {
                                 children: [
-                                    (0, r.jsx)("path", { className: u.u4, d: e.d, strokeWidth: 6, stroke: p }),
-                                    (0, r.jsx)("path", {
-                                        className: s()(u.mX, { [u.Vr]: !f }),
+                                    (0, l.jsx)("path", { className: c.u4, d: e.d, strokeWidth: 6, stroke: m }),
+                                    (0, l.jsx)("path", {
+                                        className: s()(c.mX, { [c.Vr]: !f }),
                                         d: e.d,
                                         strokeWidth: 6,
-                                        stroke: l,
+                                        stroke: r,
                                         pathLength: 1,
                                         strokeDasharray: "1 2",
                                         strokeDashoffset: +!e.isFilled,
@@ -57,24 +57,24 @@ let h = function (e) {
             ],
         });
     }
-    let v = c * (1 - (n <= 0 ? 0.025 : (0, a.clamp)(t / n, 0.025, 1)));
-    return (0, r.jsxs)("div", {
-        className: u.iE,
+    let v = u * (1 - (n <= 0 ? 0.025 : (0, a.clamp)(t / n, 0.025, 1)));
+    return (0, l.jsxs)("div", {
+        className: c.iE,
         children: [
-            E,
-            (0, r.jsxs)("svg", {
-                className: u.hN,
+            x,
+            (0, l.jsxs)("svg", {
+                className: c.hN,
                 viewBox: "0 0 120 120",
                 children: [
-                    (0, r.jsx)("circle", { className: u.u4, cx: 60, cy: 60, r: 57, strokeWidth: 6, stroke: p }),
-                    (0, r.jsx)("circle", {
-                        className: s()(u.M0, { [u.Vr]: !f }),
+                    (0, l.jsx)("circle", { className: c.u4, cx: 60, cy: 60, r: 57, strokeWidth: 6, stroke: m }),
+                    (0, l.jsx)("circle", {
+                        className: s()(c.M0, { [c.Vr]: !f }),
                         cx: 60,
                         cy: 60,
                         r: 57,
                         strokeWidth: 6,
-                        stroke: l,
-                        strokeDasharray: c,
+                        stroke: r,
+                        strokeDasharray: u,
                         strokeDashoffset: v,
                     }),
                 ],

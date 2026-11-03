@@ -1,1 +1,1 @@
-e.exports = { N: "card__956bc", _: "textColumn__956bc" };
+_.exports = { N: "card__956bc", _: "textColumn__956bc" };

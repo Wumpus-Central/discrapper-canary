@@ -12,17 +12,17 @@ function l(e) {
     }
     return t;
 }
-function a(e, t) {
+function r(e, t) {
     if (e.has(t)) return null;
     let n = new Set(e);
     return (n.add(t), n);
 }
-function r(e, t) {
+function a(e, t) {
     if (!e.has(t)) return e;
     let n = new Set(e);
     return (n.delete(t), n);
 }
-(n.d(t, { K9: () => a, Q6: () => r, Xl: () => l, ls: () => o, rG: () => s, rq: () => u }), n(321073));
+(n.d(t, { K9: () => r, Q6: () => a, Xl: () => l, ls: () => u, rG: () => s, rq: () => o }), n(321073));
 let i = new Set([
     "bad_request",
     "bad_connection_type",
@@ -37,7 +37,7 @@ let i = new Set([
 function s(e) {
     return "string" == typeof e && i.has(e) ? e : null;
 }
-function o(e, t) {
+function u(e, t) {
     switch (t) {
         case "not_configured":
             return "not_configured";
@@ -56,6 +56,6 @@ function o(e, t) {
     }
     return 404 === e ? "not_declared" : e >= 500 ? "unavailable" : "unknown";
 }
-function u(e) {
+function o(e) {
     return "not_configured" === e ? "setup" : "generic";
 }

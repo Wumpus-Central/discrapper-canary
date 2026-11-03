@@ -1,5 +1,5 @@
-(r.d(t, { i: () => n }), r(582128));
-function n(e) {
+(t.d(r, { i: () => l }), t(582128));
+function l(e) {
     return {
         profileFrameStyle: {
             "--custom-profile-frame-container-width": e.innerWidth,

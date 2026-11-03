@@ -1,19 +1,19 @@
-n.d(t, { JI: () => s, ho: () => r, y_: () => i });
+n.d(t, { JI: () => s, ho: () => a, y_: () => i });
 var l = n(688954),
-    a = n(785389);
-function r(e) {
+    r = n(785389);
+function a(e) {
     return new Date(e.expiresAtMs).toLocaleTimeString(void 0, { hour: "numeric", minute: "2-digit" });
 }
 async function i(e) {
     let { regenerate: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = await (0, l.h)(e, "/agent/mcp-token", { method: "POST", query: t ? { regenerate: "1" } : void 0 });
     if (!n.ok) throw Error(`mcp token failed (${n.status})`);
-    let a = await n.json(),
-        r = "number" == typeof a.expires_in ? Date.now() + 1e3 * a.expires_in : Date.parse(a.expires_at);
-    return { url: a.url, expiresAtMs: r };
+    let r = await n.json(),
+        a = "number" == typeof r.expires_in ? Date.now() + 1e3 * r.expires_in : Date.parse(r.expires_at);
+    return { url: r.url, expiresAtMs: a };
 }
 async function s(e, t) {
-    let n, r;
+    let n, a;
     try {
         n = await (0, l.h)(e, "/agent/external-auth/authorize-url", { method: "POST", json: { connection_type: t } });
     } catch {
@@ -22,16 +22,16 @@ async function s(e, t) {
     if (!n.ok) {
         let e = null;
         try {
-            e = (0, a.rG)((await n.json())?.error);
+            e = (0, r.rG)((await n.json())?.error);
         } catch {}
-        return { type: "error", error: (0, a.ls)(n.status, e) };
+        return { type: "error", error: (0, r.ls)(n.status, e) };
     }
     try {
-        r = (await n.json())?.url;
+        a = (await n.json())?.url;
     } catch {
         return { type: "error", error: "unavailable" };
     }
-    return "string" == typeof r && r.startsWith("https://")
-        ? { type: "url", url: r }
+    return "string" == typeof a && a.startsWith("https://")
+        ? { type: "url", url: a }
         : { type: "error", error: "unavailable" };
 }

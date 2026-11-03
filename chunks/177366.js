@@ -1,91 +1,91 @@
-t.d(u, { XU: () => k, Yr: () => S, k0: () => m });
-var l = t(582128),
-    n = t(806163),
-    r = t(17928),
-    c = t(775602),
-    a = t(793574),
-    s = t(688810),
-    i = t(870216),
-    o = t(238184),
-    d = t(722258),
-    f = t(652215);
-let h = "#itemSkuId=",
-    p = RegExp(`^${h}(\\d+)$`),
-    E = [f.BVt.COLLECTIBLES_SHOP];
-function S(e) {
-    let u = (0, n.zy)();
+r.d(t, { XU: () => E, Yr: () => d, k0: () => b });
+var l = r(582128),
+    s = r(806163),
+    i = r(17928),
+    o = r(775602),
+    n = r(793574),
+    u = r(688810),
+    a = r(870216),
+    c = r(238184),
+    f = r(722258),
+    S = r(652215);
+let y = "#itemSkuId=",
+    g = RegExp(`^${y}(\\d+)$`),
+    h = [S.BVt.COLLECTIBLES_SHOP];
+function d(e) {
+    let t = (0, s.zy)();
     l.useEffect(() => {
-        if (null != e && E.includes(u.pathname))
+        if (null != e && h.includes(t.pathname))
             return () => {
-                window.location.hash.startsWith(h) && window.location.replace("#");
+                window.location.hash.startsWith(y) && window.location.replace("#");
             };
-    }, [e, u.pathname]);
+    }, [e, t.pathname]);
 }
-function k(e) {
-    let u = l.useRef(null),
-        t = (0, n.zy)(),
-        c = t.pathname === f.BVt.COLLECTIBLES_SHOP ? a.A.HOME_PAGE_SHOP_TAB : a.A.COLLECTIBLES_SHOP,
-        { analyticsLocations: h } = (0, s.Ay)(c),
-        E = (0, o.A)();
+function E(e) {
+    let t = l.useRef(null),
+        r = (0, s.zy)(),
+        o = r.pathname === S.BVt.COLLECTIBLES_SHOP ? n.A.HOME_PAGE_SHOP_TAB : n.A.COLLECTIBLES_SHOP,
+        { analyticsLocations: y } = (0, u.Ay)(o),
+        h = (0, c.A)();
     l.useEffect(() => {
-        let e = p.exec(t.hash);
-        null != e ? (u.current = e[1]) : (u.current = null);
-    }, [E, t.hash]);
-    let S = (0, r.bG)([i.A], () => i.A.initialProductSkuId);
+        let e = g.exec(r.hash);
+        null != e ? (t.current = e[1]) : (t.current = null);
+    }, [h, r.hash]);
+    let d = (0, i.bG)([a.A], () => a.A.initialProductSkuId);
     l.useEffect(() => {
-        let t = null;
-        if ((null != S ? (t = S) : null != u.current && (t = u.current), null != t)) {
-            let u = setTimeout(() => {
-                (0, d.B)({ skuId: t, analyticsLocations: h, analyticsSource: c, tab: E, sessionId: e });
+        let r = null;
+        if ((null != d ? (r = d) : null != t.current && (r = t.current), null != r)) {
+            let t = setTimeout(() => {
+                (0, f.B)({ skuId: r, analyticsLocations: y, analyticsSource: o, tab: h, sessionId: e });
             }, 250);
-            return () => clearTimeout(u);
+            return () => clearTimeout(t);
         }
-    }, [h, c, S, E, e]);
+    }, [y, o, d, h, e]);
 }
-function m(e) {
-    let u = l.useRef({}),
-        t = (0, r.bG)([c.Ay], () => c.Ay.useReducedMotion),
+function b(e) {
+    let t = l.useRef({}),
+        r = (0, i.bG)([o.Ay], () => o.Ay.useReducedMotion),
+        s = l.useRef(null),
         n = l.useRef(null),
-        a = l.useRef(null),
-        s = l.useCallback(
+        u = l.useCallback(
             (l) => {
                 setTimeout(() => {
-                    let r = u.current[l],
-                        c = e.current;
-                    null != r &&
-                        null != c &&
-                        n.current === l &&
-                        ((n.current = null),
-                        c.scrollIntoViewNode({ node: r, padding: 40, animate: !t, shouldScrollToStart: !0 }),
-                        r.focus({ preventScroll: !0 }));
+                    let i = t.current[l],
+                        o = e.current;
+                    null != i &&
+                        null != o &&
+                        s.current === l &&
+                        ((s.current = null),
+                        o.scrollIntoViewNode({ node: i, padding: 40, animate: !r, shouldScrollToStart: !0 }),
+                        i.focus({ preventScroll: !0 }));
                 }, 100);
             },
-            [e, t],
+            [e, r],
         ),
-        i = l.useCallback(
-            (e, t) => {
-                ((u.current[e] = t), null != t && n.current === e && s(e));
+        a = l.useCallback(
+            (e, r) => {
+                ((t.current[e] = r), null != r && s.current === e && u(e));
             },
-            [s],
+            [u],
         ),
-        o = l.useCallback(
+        c = l.useCallback(
             (e) => {
-                ((n.current = e),
-                    null != a.current && clearTimeout(a.current),
-                    (a.current = setTimeout(() => {
-                        n.current === e && (n.current = null);
+                ((s.current = e),
+                    null != n.current && clearTimeout(n.current),
+                    (n.current = setTimeout(() => {
+                        s.current === e && (s.current = null);
                     }, 1e4)),
-                    s(e));
+                    u(e));
             },
-            [s],
+            [u],
         );
     return (
         l.useEffect(
             () => () => {
-                null != a.current && clearTimeout(a.current);
+                null != n.current && clearTimeout(n.current);
             },
             [],
         ),
-        { setCategoryRef: i, handleScrollToCategory: o }
+        { setCategoryRef: a, handleScrollToCategory: c }
     );
 }

@@ -1,123 +1,123 @@
-n.d(t, { S: () => S });
-var r = n(477900),
-    l = n(582128),
+n.d(t, { S: () => A });
+var l = n(477900),
+    r = n(582128),
     s = n(503698),
     a = n.n(s),
-    o = n(269115),
-    i = n(62010),
-    u = n(939249),
-    c = n(534514),
+    i = n(269115),
+    o = n(62010),
+    c = n(939249),
+    u = n(534514),
     d = n(821609),
-    p = n(174459),
-    m = n(440938),
-    g = n(590180),
-    h = n(993408),
-    E = n(304210),
+    m = n(174459),
+    g = n(440938),
+    h = n(590180),
+    p = n(993408),
+    x = n(304210),
     f = n(597783),
-    C = n(347478),
+    E = n(347478),
     v = n(325802),
     _ = n(212407),
-    x = n(758836),
+    C = n(758836),
     y = n(652215),
-    A = n(105292),
+    S = n(105292),
     I = n(105499);
-function L(e) {
+function b(e) {
     let { skuId: t, unpublishedAt: n } = e,
-        l = (0, E.ty)(t),
-        s = (0, C.$)(l) ? l : null,
+        r = (0, x.ty)(t),
+        s = (0, E.$)(r) ? r : null,
         a = null;
     return (
         null != s
-            ? (a = (0, r.jsx)(v.b, { promotion: s }))
-            : (0, h.HF)(n) &&
-              (a = (0, r.jsx)(i.E, { type: { text: A.intl.string(A.t["h/uBCR"]) }, variant: "inverted" })),
-        null != a ? (0, r.jsx)("div", { className: I.pv, children: a }) : null
+            ? (a = (0, l.jsx)(v.b, { promotion: s }))
+            : (0, p.HF)(n) &&
+              (a = (0, l.jsx)(o.E, { type: { text: S.intl.string(S.t["h/uBCR"]) }, variant: "inverted" })),
+        null != a ? (0, l.jsx)("div", { className: I.pv, children: a }) : null
     );
 }
-function S(e) {
+function A(e) {
     let {
             category: t,
             subblock: n,
             enablePreview: s,
-            pageType: i = x.G2.HOME,
-            className: h,
-            handleTransition: E,
-            listItemProps: C,
+            pageType: o = C.G2.HOME,
+            className: p,
+            handleTransition: x,
+            listItemProps: E,
         } = e,
         v = n?.categorySkuId;
-    null == v && null != n && (v = g.A.getCategoryByStoreListingId(n?.categoryStoreListingId)?.skuId);
-    let S = v ?? t?.skuId ?? "",
-        { handleCardVisibilityChange: k } = (0, f.Z)(S, i, "marketing featured block"),
-        b = (0, _.s4)(t, n, s),
-        O = l.useRef(null),
-        j = n?.bodyText,
-        N = n?.name ?? t?.name,
-        w = null != N ? A.intl.formatToPlainString(A.t.frSHlf, { destination: N }) : void 0,
-        T = (0, m.uM)();
-    return (0, r.jsx)(o.L, {
-        innerRef: O,
-        onChange: k,
+    null == v && null != n && (v = h.A.getCategoryByStoreListingId(n?.categoryStoreListingId)?.skuId);
+    let A = v ?? t?.skuId ?? "",
+        { handleCardVisibilityChange: j } = (0, f.Z)(A, o, "marketing featured block"),
+        L = (0, _.s4)(t, n, s),
+        k = r.useRef(null),
+        N = n?.bodyText,
+        O = n?.name ?? t?.name,
+        T = null != O ? S.intl.formatToPlainString(S.t.frSHlf, { destination: O }) : void 0,
+        R = (0, g.uM)();
+    return (0, l.jsx)(i.L, {
+        innerRef: k,
+        onChange: j,
         threshold: 0,
-        children: (0, r.jsxs)(u.D, {
-            className: a()(I.oT, h),
-            innerRef: O,
-            style: { ...(null != b && { backgroundImage: `url(${b})` }) },
-            ...C,
+        children: (0, l.jsxs)(c.D, {
+            className: a()(I.oT, p),
+            innerRef: k,
+            style: { ...(null != L && { backgroundImage: `url(${L})` }) },
+            ...E,
             onClick: () => {
-                (E({
+                (x({
                     sourceButton: "shop marketing tile",
-                    categorySkuId: S,
+                    categorySkuId: A,
                     isInternalShopDeeplink: !0,
                     isOrbsExclusive: t?.isOrbsExclusive,
                 }),
-                    p.default.track(y.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: T?.sessionId,
-                        sku_id: S,
-                        page_type: i,
-                        page_section: T?.pageSection,
-                        page_category: T?.pageCategory,
+                    m.default.track(y.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                        collectibles_shop_session_id: R?.sessionId,
+                        sku_id: A,
+                        page_type: o,
+                        page_section: R?.pageSection,
+                        page_category: R?.pageCategory,
                         tile_type: "FEATURED_BLOCK",
-                        tile_position: String(T?.tilePosition),
+                        tile_position: String(R?.tilePosition),
                         cta_name: null,
                     }));
             },
             children: [
-                (0, r.jsx)(L, { skuId: S, unpublishedAt: n?.unpublishedAt ?? t?.unpublishedAt }),
-                (0, r.jsx)("div", {
+                (0, l.jsx)(b, { skuId: A, unpublishedAt: n?.unpublishedAt ?? t?.unpublishedAt }),
+                (0, l.jsx)("div", {
                     className: I.Gh,
                     children:
-                        null != j &&
-                        (0, r.jsx)(c.D, {
+                        null != N &&
+                        (0, l.jsx)(u.D, {
                             lineClamp: 4,
                             className: I.BN,
                             style: { color: n?.bannerTextColor ?? "white" },
                             variant: "heading-md/medium",
-                            children: j,
+                            children: N,
                         }),
                 }),
-                (0, r.jsx)("div", {
+                (0, l.jsx)("div", {
                     className: I.b2,
-                    children: (0, r.jsx)(d.$, {
+                    children: (0, l.jsx)(d.$, {
                         variant: "overlay-primary",
-                        text: A.intl.string(A.t.jVcuVY),
-                        "aria-label": w,
-                        tabIndex: C?.tabIndex,
+                        text: S.intl.string(S.t.jVcuVY),
+                        "aria-label": T,
+                        tabIndex: E?.tabIndex,
                         onClick: (e) => {
-                            (E({
+                            (x({
                                 sourceButton: "shop marketing take me there button",
-                                categorySkuId: S,
+                                categorySkuId: A,
                                 isInternalShopDeeplink: !0,
                                 isOrbsExclusive: t?.isOrbsExclusive,
                             }),
                                 e.stopPropagation(),
-                                p.default.track(y.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                    collectibles_shop_session_id: T?.sessionId,
-                                    sku_id: S,
-                                    page_type: i,
-                                    page_section: T?.pageSection,
-                                    page_category: T?.pageCategory,
+                                m.default.track(y.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                    collectibles_shop_session_id: R?.sessionId,
+                                    sku_id: A,
+                                    page_type: o,
+                                    page_section: R?.pageSection,
+                                    page_category: R?.pageCategory,
                                     tile_type: "FEATURED_BLOCK",
-                                    tile_position: String(T?.tilePosition),
+                                    tile_position: String(R?.tilePosition),
                                     cta_name: "Take me there button",
                                 }));
                         },

@@ -1,9 +1,9 @@
-n.d(t, { S: () => a });
-var s = n(477900);
+n.d(t, { S: () => s });
+var l = n(477900);
 n(582128);
-var l = n(192308);
-function a(e) {
-    (0, l.openModalLazy)(async () => {
+var a = n(192308);
+function s(e) {
+    (0, a.openModalLazy)(async () => {
         let { default: t } = await Promise.all([
             n.e("248625"),
             n.e("515638"),
@@ -11,6 +11,6 @@ function a(e) {
             n.e("141447"),
             n.e("123333"),
         ]).then(n.bind(n, 886180));
-        return (n) => (0, s.jsx)(t, { ...n, ...e });
+        return (n) => (0, l.jsx)(t, { ...n, ...e });
     });
 }

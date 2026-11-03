@@ -22,11 +22,11 @@ function c(e, t) {
         r.useEffect(() => {
             E.current = m;
         }, [m]));
-    let [y, P] = r.useState(!1),
-        S = !y && i.u.isHlsUrl(n) && (0, a.Ap)();
+    let [P, S] = r.useState(!1),
+        y = !P && i.u.isHlsUrl(n) && (0, a.Ap)();
     return (
         r.useEffect(() => {
-            if (!S || null == n || null == e.current) return;
+            if (!y || null == n || null == e.current) return;
             let t = e.current,
                 r = !1,
                 i = null,
@@ -34,7 +34,7 @@ function c(e, t) {
             return (
                 (0, a.E)().then((e) => {
                     if (r) return;
-                    if (!e.isSupported()) return void P(!0);
+                    if (!e.isSupported()) return void S(!0);
                     let a = (i = new e({
                         backBufferLength: o,
                         maxBufferLength: s,
@@ -120,7 +120,7 @@ function c(e, t) {
                             t.load()));
                 }
             );
-        }, [S, n, e]),
-        { isHlsActive: S, hlsRef: p, hls: h }
+        }, [y, n, e]),
+        { isHlsActive: y, hlsRef: p, hls: h }
     );
 }

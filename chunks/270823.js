@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     kL: "container__33561",
     qW: "countdown__33561",
     t8: "digitGroup__33561",

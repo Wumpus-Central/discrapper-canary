@@ -1,61 +1,61 @@
-n.d(t, { A: () => Y });
-var r = n(477900),
-    l = n(582128),
+n.d(t, { A: () => Z });
+var l = n(477900),
+    r = n(582128),
     s = n(503698),
     a = n.n(s),
-    o = n(17928),
-    i = n(331322),
-    u = n(834730),
-    c = n(406810),
+    i = n(17928),
+    o = n(331322),
+    c = n(834730),
+    u = n(406810),
     d = n(534514),
-    p = n(866665),
-    m = n(408278),
-    g = n(885574),
-    h = n(975807),
-    E = n(688810),
+    m = n(866665),
+    g = n(408278),
+    h = n(885574),
+    p = n(975807),
+    x = n(688810),
     f = n(812095),
-    C = n(288106),
+    E = n(288106),
     v = n(604913),
     _ = n(65238),
-    x = n(773669),
+    C = n(773669),
     y = n(975571),
-    A = n(304210),
+    S = n(304210),
     I = n(324157),
-    L = n(480750),
-    S = n(727142);
-let k = function (e) {
-    let { text: t, icon: n, indicatorColor: l } = e;
-    return (0, r.jsxs)("span", {
-        className: S.I,
+    b = n(480750),
+    A = n(727142);
+let j = function (e) {
+    let { text: t, icon: n, indicatorColor: r } = e;
+    return (0, l.jsxs)("span", {
+        className: A.I,
         children: [
-            null != l &&
-                (0, r.jsx)("svg", {
-                    className: S.q,
+            null != r &&
+                (0, l.jsx)("svg", {
+                    className: A.q,
                     viewBox: "0 0 8 8",
                     "aria-hidden": !0,
-                    children: (0, r.jsx)("circle", { cx: "4", cy: "4", r: "3.5", fill: l }),
+                    children: (0, l.jsx)("circle", { cx: "4", cy: "4", r: "3.5", fill: r }),
                 }),
-            null != n && (0, r.jsx)(n, { size: "xxs", color: "currentColor" }),
-            (0, r.jsx)(u.E, { variant: "text-xs/medium", color: "none", children: t }),
+            null != n && (0, l.jsx)(n, { size: "xxs", color: "currentColor" }),
+            (0, l.jsx)(c.E, { variant: "text-xs/medium", color: "none", children: t }),
         ],
     });
 };
-var b = n(262056),
-    O = n(775602),
-    j = n(295986);
-function N(e) {
+var L = n(262056),
+    k = n(775602),
+    N = n(295986);
+function O(e) {
     let { assetPath: t } = e,
-        n = l.useRef(null);
+        n = r.useRef(null);
     return (
-        l.useEffect(() => {
+        r.useEffect(() => {
             let e = new Image();
             return (
                 (e.onload = () => {
                     let t = n.current,
-                        r = t?.getContext("2d");
+                        l = t?.getContext("2d");
                     null != t &&
-                        null != r &&
-                        ((t.width = e.naturalWidth), (t.height = e.naturalHeight), r.drawImage(e, 0, 0));
+                        null != l &&
+                        ((t.width = e.naturalWidth), (t.height = e.naturalHeight), l.drawImage(e, 0, 0));
                 }),
                 (e.src = t),
                 () => {
@@ -63,37 +63,37 @@ function N(e) {
                 }
             );
         }, [t]),
-        (0, r.jsx)("canvas", { ref: n, className: j.C, width: 120, height: 120, "aria-hidden": "true" })
+        (0, l.jsx)("canvas", { ref: n, className: N.C, width: 120, height: 120, "aria-hidden": "true" })
     );
 }
-let w = function (e) {
-    let { assetPath: t, progress: n, progressText: l, progressColor: s } = e,
-        a = (0, o.bG)([O.Ay], () => O.Ay.useReducedMotion)
-            ? (0, r.jsx)(N, { assetPath: t })
-            : (0, r.jsx)("img", { src: t, alt: "", className: j.C, width: 120, height: 120 });
+let T = function (e) {
+    let { assetPath: t, progress: n, progressText: r, progressColor: s } = e,
+        a = (0, i.bG)([k.Ay], () => k.Ay.useReducedMotion)
+            ? (0, l.jsx)(O, { assetPath: t })
+            : (0, l.jsx)("img", { src: t, alt: "", className: N.C, width: 120, height: 120 });
     return null == n
         ? a
-        : (0, r.jsx)("div", {
-              className: j.U,
+        : (0, l.jsx)("div", {
+              className: N.U,
               role: "progressbar",
               "aria-valuenow": n.current,
               "aria-valuemin": 0,
               "aria-valuemax": n.target,
-              "aria-valuetext": l ?? void 0,
-              children: (0, r.jsx)(b.A, { current: n.current, target: n.target, progressColor: s, children: a }),
+              "aria-valuetext": r ?? void 0,
+              children: (0, l.jsx)(L.A, { current: n.current, target: n.target, progressColor: s, children: a }),
           });
 };
-var T = n(821609),
-    R = n(450481),
-    B = n(105292),
-    P = n(634293);
-function D(e) {
-    let { product: t, onUseNowClick: n, useNowButtonVariant: l = "overlay-secondary" } = e,
-        { handleUseNow: s, isApplying: a } = (0, R.p)({ product: t });
-    return (0, r.jsx)("div", {
-        className: P.l,
-        children: (0, r.jsx)(T.$, {
-            variant: l,
+var R = n(821609),
+    M = n(450481),
+    D = n(105292),
+    B = n(634293);
+function P(e) {
+    let { product: t, onUseNowClick: n, useNowButtonVariant: r = "overlay-secondary" } = e,
+        { handleUseNow: s, isApplying: a } = (0, M.p)({ product: t });
+    return (0, l.jsx)("div", {
+        className: B.l,
+        children: (0, l.jsx)(R.$, {
+            variant: r,
             onClick: () => {
                 (n?.(), s());
             },
@@ -101,98 +101,98 @@ function D(e) {
             fullWidth: !0,
             minWidth: 96,
             loading: a,
-            text: B.intl.string(B.t.MAS7uK),
+            text: D.intl.string(D.t.MAS7uK),
         }),
     });
 }
-let M = function (e) {
+let w = function (e) {
     let {
         promotionRewardStatus: t,
         rewardProduct: n,
-        claimRewardButtonVariant: l,
+        claimRewardButtonVariant: r,
         useNowButtonVariant: s,
         isClaiming: a,
-        onClaim: o,
-        onUseNowClick: i,
+        onClaim: i,
+        onUseNowClick: o,
     } = e;
-    return t === C.GM.CONSUMED && null != n
-        ? (0, r.jsx)(D, { product: n, onUseNowClick: i, useNowButtonVariant: s })
-        : t === C.GM.EARNED
-          ? (0, r.jsx)("div", {
-                className: P.l,
-                children: (0, r.jsx)(T.$, {
-                    text: B.intl.string(B.t.pVBlCH),
-                    variant: l,
+    return t === E.GM.CONSUMED && null != n
+        ? (0, l.jsx)(P, { product: n, onUseNowClick: o, useNowButtonVariant: s })
+        : t === E.GM.EARNED
+          ? (0, l.jsx)("div", {
+                className: B.l,
+                children: (0, l.jsx)(R.$, {
+                    text: D.intl.string(D.t.pVBlCH),
+                    variant: r,
                     fullWidth: !0,
                     minWidth: 96,
                     loading: a,
-                    onClick: o,
+                    onClick: i,
                 }),
             })
           : null;
 };
 var H = n(436733),
-    $ = n(497901),
+    U = n(497901),
     G = n(61750),
-    U = n(602051),
-    K = n(119739);
-let F = { [v.RB.LIGHT]: "theme-light", [v.RB.DARK]: "theme-dark" },
-    W = { [v.RB.LIGHT]: "overlay-secondary", [v.RB.DARK]: "overlay-primary" },
-    V = v.RB.DARK;
-function X(e, t, n) {
-    let r = l.useCallback((n) => (0, L.h)(n, e, t), [e, t]);
+    $ = n(602051),
+    F = n(119739);
+let V = { [v.RB.LIGHT]: "theme-light", [v.RB.DARK]: "theme-dark" },
+    K = { [v.RB.LIGHT]: "overlay-secondary", [v.RB.DARK]: "overlay-primary" },
+    W = v.RB.DARK;
+function z(e, t, n) {
+    let l = r.useCallback((n) => (0, b.h)(n, e, t), [e, t]);
     return {
-        handleInlineHelpTextClick: r,
-        handleClaim: l.useCallback(() => {
-            ((0, L.l)(e, t, U.Z.CLAIM_BUTTON_CLICKED), n());
+        handleInlineHelpTextClick: l,
+        handleClaim: r.useCallback(() => {
+            ((0, b.l)(e, t, $.Z.CLAIM_BUTTON_CLICKED), n());
         }, [e, t, n]),
-        handleUseNowClick: l.useCallback(() => {
-            (0, L.l)(e, t, U.Z.USE_NOW_BUTTON_CLICKED);
+        handleUseNowClick: r.useCallback(() => {
+            (0, b.l)(e, t, $.Z.USE_NOW_BUTTON_CLICKED);
         }, [e, t]),
     };
 }
-function z(e) {
+function Y(e) {
     let {
             promotion: t,
             surface: n,
-            assetPath: l,
+            assetPath: r,
             progress: s,
             progressColor: a,
-            title: o,
+            title: i,
             progressText: d,
-            timeLeftText: p,
-            contentThemeClassName: m,
-            rewardProduct: g,
-            claimRewardButtonVariant: h,
-            isClaiming: E,
-            onClaim: C,
+            timeLeftText: m,
+            contentThemeClassName: g,
+            rewardProduct: h,
+            claimRewardButtonVariant: p,
+            isClaiming: x,
+            onClaim: E,
         } = e,
-        v = null != s ? d : o,
-        { handleInlineHelpTextClick: _, handleClaim: x, handleUseNowClick: y } = X(t, n, C);
-    return (0, r.jsxs)(i.B, {
+        v = null != s ? d : i,
+        { handleInlineHelpTextClick: _, handleClaim: C, handleUseNowClick: y } = z(t, n, E);
+    return (0, l.jsxs)(o.B, {
         direction: "horizontal",
         gap: 16,
         align: "center",
-        className: m,
+        className: g,
         children: [
-            (0, r.jsx)(w, { assetPath: l, progress: s, progressText: d, progressColor: a }),
-            (0, r.jsxs)(i.B, {
+            (0, l.jsx)(T, { assetPath: r, progress: s, progressText: d, progressColor: a }),
+            (0, l.jsxs)(o.B, {
                 direction: "vertical",
                 gap: 8,
                 align: "start",
-                className: K._,
+                className: F._,
                 onClick: _,
                 children: [
                     null != v &&
-                        (0, r.jsx)(u.E, { variant: "text-md/semibold", color: "text-strong", children: (0, f.U)(v) }),
-                    null != p && (0, r.jsx)(k, { icon: c.ClockIcon, text: p }),
-                    (0, r.jsx)(M, {
+                        (0, l.jsx)(c.E, { variant: "text-md/semibold", color: "text-strong", children: (0, f.U)(v) }),
+                    null != m && (0, l.jsx)(j, { icon: u.ClockIcon, text: m }),
+                    (0, l.jsx)(w, {
                         promotionRewardStatus: t.rewardStatus,
-                        rewardProduct: g,
-                        claimRewardButtonVariant: h,
-                        useNowButtonVariant: h,
-                        isClaiming: E,
-                        onClaim: x,
+                        rewardProduct: h,
+                        claimRewardButtonVariant: p,
+                        useNowButtonVariant: p,
+                        isClaiming: x,
+                        onClaim: C,
                         onUseNowClick: y,
                     }),
                 ],
@@ -200,99 +200,99 @@ function z(e) {
         ],
     });
 }
-function Z(e) {
+function X(e) {
     let {
             promotion: t,
             surface: n,
             assetPath: s,
-            progress: o,
-            progressColor: E,
+            progress: i,
+            progressColor: x,
             backgroundUrl: v,
             title: _,
-            description: x,
-            progressText: A,
+            description: C,
+            progressText: S,
             timeLeftText: I,
-            contentThemeClassName: S,
-            rewardProduct: O,
-            claimRewardButtonVariant: j,
-            helpCenterId: N,
-            isClaiming: T,
-            onClaim: R,
+            contentThemeClassName: A,
+            rewardProduct: k,
+            claimRewardButtonVariant: N,
+            helpCenterId: O,
+            isClaiming: R,
+            onClaim: M,
         } = e,
-        P = null != N && "" !== N ? y.A.getArticleURL(N) : null,
-        { handleInlineHelpTextClick: D, handleClaim: H, handleUseNowClick: $ } = X(t, n, R),
-        G = l.useCallback(() => {
-            null != P && ((0, L.l)(t, n, U.Z.INFO_BUTTON_CLICKED), (0, h.A)(P));
-        }, [t, n, P]);
-    return (0, r.jsxs)(i.B, {
+        B = null != O && "" !== O ? y.A.getArticleURL(O) : null,
+        { handleInlineHelpTextClick: P, handleClaim: H, handleUseNowClick: U } = z(t, n, M),
+        G = r.useCallback(() => {
+            null != B && ((0, b.l)(t, n, $.Z.INFO_BUTTON_CLICKED), (0, p.A)(B));
+        }, [t, n, B]);
+    return (0, l.jsxs)(o.B, {
         direction: "horizontal",
         gap: 16,
         padding: { top: 16, bottom: 16, left: 24, right: 24 },
         align: "center",
         justify: "space-between",
-        className: a()(K.N, S),
+        className: a()(F.N, A),
         style: { backgroundImage: `url(${v})` },
         children: [
-            (0, r.jsx)(w, { assetPath: s, progress: o, progressText: A, progressColor: E }),
-            (0, r.jsxs)(i.B, {
+            (0, l.jsx)(T, { assetPath: s, progress: i, progressText: S, progressColor: x }),
+            (0, l.jsxs)(o.B, {
                 direction: "vertical",
                 gap: 10,
                 align: "start",
-                className: K._,
-                onClick: D,
+                className: F._,
+                onClick: P,
                 children: [
-                    (0, r.jsxs)(i.B, {
+                    (0, l.jsxs)(o.B, {
                         direction: "vertical",
                         gap: 4,
                         align: "start",
                         children: [
-                            (0, r.jsx)(d.D, {
+                            (0, l.jsx)(d.D, {
                                 variant: "heading-lg/semibold",
                                 color: "text-strong",
                                 children: (0, f.U)(_),
                             }),
-                            null != x &&
-                                (0, r.jsx)(u.E, {
+                            null != C &&
+                                (0, l.jsx)(c.E, {
                                     variant: "text-sm/medium",
                                     color: "text-subtle",
-                                    children: (0, f.U)(x),
+                                    children: (0, f.U)(C),
                                 }),
                         ],
                     }),
-                    (0, r.jsxs)(i.B, {
+                    (0, l.jsxs)(o.B, {
                         direction: "horizontal",
                         gap: 8,
                         align: "center",
                         wrap: !0,
                         children: [
-                            null != A && (0, r.jsx)(k, { text: A, indicatorColor: E ?? b.W }),
-                            null != I && (0, r.jsx)(k, { icon: c.ClockIcon, text: I }),
+                            null != S && (0, l.jsx)(j, { text: S, indicatorColor: x ?? L.W }),
+                            null != I && (0, l.jsx)(j, { icon: u.ClockIcon, text: I }),
                         ],
                     }),
                 ],
             }),
-            (0, r.jsxs)(i.B, {
+            (0, l.jsxs)(o.B, {
                 direction: "horizontal",
                 gap: 8,
                 align: "center",
                 fullWidth: !1,
                 children: [
-                    (0, r.jsx)(M, {
+                    (0, l.jsx)(w, {
                         promotionRewardStatus: t.rewardStatus,
-                        rewardProduct: O,
-                        claimRewardButtonVariant: j,
-                        isClaiming: T,
+                        rewardProduct: k,
+                        claimRewardButtonVariant: N,
+                        isClaiming: R,
                         onClaim: H,
-                        onUseNowClick: $,
+                        onUseNowClick: U,
                     }),
-                    t.rewardStatus !== C.GM.EARNED &&
-                        null != P &&
-                        (0, r.jsx)(p.m, {
-                            text: B.intl.string(B.t.FdGl5A),
+                    t.rewardStatus !== E.GM.EARNED &&
+                        null != B &&
+                        (0, l.jsx)(m.m, {
+                            text: D.intl.string(D.t.FdGl5A),
                             ariaHidden: !0,
-                            children: (0, r.jsx)(m.K, {
-                                "aria-label": B.intl.string(B.t.FdGl5A),
-                                icon: g.CircleInformationIcon,
+                            children: (0, l.jsx)(g.K, {
+                                "aria-label": D.intl.string(D.t.FdGl5A),
+                                icon: h.CircleInformationIcon,
                                 variant: "overlay-secondary",
                                 size: "md",
                                 onClick: G,
@@ -304,93 +304,93 @@ function Z(e) {
     });
 }
 function q(e) {
-    let { variant: t, surface: n, promotion: s, collectAndClaim: a, rewardProduct: i, isClaiming: u, onClaim: c } = e,
-        d = (0, o.bG)([x.default], () => x.default.locale);
-    l.useEffect(() => {
-        (0, L.l)(s, n, U.Z.PROMO_VIEWED);
+    let { variant: t, surface: n, promotion: s, collectAndClaim: a, rewardProduct: o, isClaiming: c, onClaim: u } = e,
+        d = (0, i.bG)([C.default], () => C.default.locale);
+    r.useEffect(() => {
+        (0, b.l)(s, n, $.Z.PROMO_VIEWED);
     }, [s.id, n]);
-    let { shared: p } = a,
-        { assets: m, style: g } = p.progressIndicator,
-        h = p.helpCenter?.id,
-        E = g?.contentTheme ?? V,
+    let { shared: m } = a,
+        { assets: g, style: h } = m.progressIndicator,
+        p = m.helpCenter?.id,
+        x = h?.contentTheme ?? W,
         f = (function (e, t) {
-            let { hiddenUrl: n, revealedUrl: r } = t;
+            let { hiddenUrl: n, revealedUrl: l } = t;
             switch (e.rewardStatus) {
-                case C.GM.IN_PROGRESS:
-                    return { assetPath: n ?? r, showProgressRing: !0, timeLeftDate: e.endsAt };
-                case C.GM.EARNED:
-                    return { assetPath: n ?? r, showProgressRing: !0, timeLeftDate: e.redemptionEndsAt ?? e.endsAt };
-                case C.GM.CONSUMED:
-                    return { assetPath: r, showProgressRing: !1, timeLeftDate: null };
+                case E.GM.IN_PROGRESS:
+                    return { assetPath: n ?? l, showProgressRing: !0, timeLeftDate: e.endsAt };
+                case E.GM.EARNED:
+                    return { assetPath: n ?? l, showProgressRing: !0, timeLeftDate: e.redemptionEndsAt ?? e.endsAt };
+                case E.GM.CONSUMED:
+                    return { assetPath: l, showProgressRing: !1, timeLeftDate: null };
                 default:
                     return null;
             }
-        })(s, m.rewardPreview),
-        v = (0, $.A)(f?.timeLeftDate);
+        })(s, g.rewardPreview),
+        v = (0, U.A)(f?.timeLeftDate);
     if (null == f) return null;
     let { progress: _ } = s;
     if (
         (null == _ &&
-            (s.rewardStatus === C.GM.EARNED || s.rewardStatus === C.GM.CONSUMED) &&
+            (s.rewardStatus === E.GM.EARNED || s.rewardStatus === E.GM.CONSUMED) &&
             (_ = { current: 4, target: 4, label: "collected" }),
         f.showProgressRing && null == _)
     )
         return null;
     let y = f.showProgressRing && null != _,
         {
-            title: A,
-            description: S,
-            progressText: k,
-            timeLeftText: b,
+            title: S,
+            description: A,
+            progressText: j,
+            timeLeftText: L,
         } = (0, I.MZ)({
             promotion: s,
             promotionProgress: _,
-            progressIndicator: p.progressIndicator,
-            helpCenterId: h,
+            progressIndicator: m.progressIndicator,
+            helpCenterId: p,
             daysRemaining: v,
             locale: d,
         }),
-        O = {
+        k = {
             promotion: s,
             surface: n,
             assetPath: f.assetPath,
             progress: y ? _ : null,
-            progressColor: g?.progressColor,
-            backgroundUrl: m.backgroundUrl,
-            title: A,
-            description: S,
-            progressText: k,
-            timeLeftText: b,
-            contentThemeClassName: F[E],
-            rewardProduct: i,
-            claimRewardButtonVariant: W[E],
-            helpCenterId: h,
-            isClaiming: u,
-            onClaim: c,
+            progressColor: h?.progressColor,
+            backgroundUrl: g.backgroundUrl,
+            title: S,
+            description: A,
+            progressText: j,
+            timeLeftText: L,
+            contentThemeClassName: V[x],
+            rewardProduct: o,
+            claimRewardButtonVariant: K[x],
+            helpCenterId: p,
+            isClaiming: c,
+            onClaim: u,
         };
-    return "condensed" === t ? (0, r.jsx)(z, { ...O }) : (0, r.jsx)(Z, { ...O });
+    return "condensed" === t ? (0, l.jsx)(Y, { ...k }) : (0, l.jsx)(X, { ...k });
 }
-let Y = function (e) {
+let Z = function (e) {
     let { variant: t, surface: n, collectionId: s } = e,
-        a = (0, A.ST)(),
-        { analyticsLocations: o } = (0, E.Ay)(),
-        i = l.useCallback(
+        a = (0, S.ST)(),
+        { analyticsLocations: i } = (0, x.Ay)(),
+        o = r.useCallback(
             (e) => {
-                (0, G.A)({ product: e, analyticsLocations: o });
+                (0, G.A)({ product: e, analyticsLocations: i });
             },
-            [o],
+            [i],
         ),
-        { onClaim: u, isClaiming: c, rewardProduct: d } = (0, H.G)(a, i),
-        p = (0, _.XF)(a);
-    return null == a || null == p || null == s || p.collectionId !== s
+        { onClaim: c, isClaiming: u, rewardProduct: d } = (0, H.G)(a, o),
+        m = (0, _.XF)(a);
+    return null == a || null == m || null == s || m.collectionId !== s
         ? null
-        : (0, r.jsx)(q, {
+        : (0, l.jsx)(q, {
               variant: t,
               surface: n,
               promotion: a,
-              collectAndClaim: p,
+              collectAndClaim: m,
               rewardProduct: d,
-              isClaiming: c,
-              onClaim: u,
+              isClaiming: u,
+              onClaim: c,
           });
 };
