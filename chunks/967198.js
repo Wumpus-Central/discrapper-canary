@@ -13,8 +13,8 @@ let E = null,
     A = null,
     h = {};
 function f() {
-    (null != E && null == u.A.getGuild(E) && null == a.A.getRequest(E) && (E = null),
-        null != A && null == u.A.getGuild(A) && null == a.A.getRequest(A) && (A = null),
+    (null != E && E !== _.qxG && null == u.A.getGuild(E) && null == a.A.getRequest(E) && (E = null),
+        null != A && A !== _.qxG && null == u.A.getGuild(A) && null == a.A.getRequest(A) && (A = null),
         I(E));
 }
 function I(e) {

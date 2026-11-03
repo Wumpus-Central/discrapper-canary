@@ -1,4 +1,4 @@
-n.d(t, { BV: () => _, Cr: () => c, ME: () => s, YY: () => l, c$: () => d, gN: () => o });
+n.d(t, { BV: () => E, Cr: () => u, ME: () => s, YY: () => l, c$: () => d, gN: () => o, qx: () => c });
 var i = n(323125),
     r = n(758836);
 n(436317);
@@ -7,8 +7,9 @@ let s = "@me",
     l = "@favorites",
     o = "@inbox",
     d = "@guilds-empty-nux",
-    c = [s, l, d, o, "@guild-upsell-list"],
-    u = Object.freeze({
+    c = "@guild-upsell-list",
+    u = [s, l, d, o, c],
+    _ = Object.freeze({
         INDEX: "/",
         APP: "/app",
         APP_WITH_INVITE_AND_GUILD_ONBOARDING: (e) => `/app/invite-with-guild-onboarding/${e}`,
@@ -197,4 +198,4 @@ let s = "@me",
         QUEST_PREVIEW_TOOL_2: (e) => `/quest-home?tab=preview_tool&quest_id=${e}`,
         ICYMI: "/icymi",
     }),
-    _ = (0, i.dN)(u, [":", "?", "@"]);
+    E = (0, i.dN)(_, [":", "?", "@"]);
