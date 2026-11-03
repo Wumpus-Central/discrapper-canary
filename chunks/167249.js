@@ -1,13 +1,13 @@
 n.d(t, { f: () => o, i: () => l });
-var i = n(521169),
-    r = n(666113),
-    a = n(83154),
+var i = n(549059),
+    r = n(732519),
+    a = n(834244),
     s = n(105292);
 function l() {
     return { adult: s.intl.string(s.t.fp3xf5), teen: s.intl.string(s.t.dqC1w2), unverified: s.intl.string(s.t.qiLic6) };
 }
 function o(e, t) {
-    let n = e ? r.Nf : r.nS;
+    let n = e ? r.Vg : r.nb;
     return (0, i.n)(n)
         ? e
             ? l()
