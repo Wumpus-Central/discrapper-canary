@@ -13,7 +13,7 @@ var s = a(636537),
     _ = a(617390),
     b = a(652215);
 function p() {
-    return i.h.dispatch({ type: "CHECKPOINT_TOGGLE_MUTE" });
+    (i.h.dispatch({ type: "CHECKPOINT_TOGGLE_MUTE" }), (0, _.d3)(f.A.isMuted));
 }
 function x(e, t) {
     return i.h.dispatch({ type: "CHECKPOINT_SELECT_CHARACTER_TRAIT", trait: e, optionId: t });

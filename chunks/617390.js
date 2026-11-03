@@ -3,6 +3,7 @@ a.d(t, {
     Jt: () => c,
     Pe: () => b,
     S5: () => _,
+    d3: () => p,
     dw: () => h,
     i: () => o,
     if: () => l,
@@ -54,6 +55,13 @@ function b(e) {
     i.default.track(n.HAw.CHECKPOINT_2026_CARD_SHARED, {
         checkpoint_card_type: e,
         step_name: r.A.getStepName(),
+        ...r.A.getAnalyticsProperties(),
+    });
+}
+function p(e) {
+    i.default.track(n.HAw.CHECKPOINT_2026_MUTE_TOGGLED, {
+        step_name: r.A.getStepName(),
+        is_muted: e,
         ...r.A.getAnalyticsProperties(),
     });
 }

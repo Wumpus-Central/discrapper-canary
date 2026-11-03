@@ -5525,6 +5525,7 @@ var rN =
         (eP.CHECKPOINT_2026_GIFT_CTA_CLICKED = "checkpoint_2026_gift_cta_clicked"),
         (eP.CHECKPOINT_2026_CARD_SHARED = "checkpoint_2026_card_shared"),
         (eP.CHECKPOINT_2026_SIDEKICK_MESSAGE_SENT = "checkpoint_2026_sidekick_message_sent"),
+        (eP.CHECKPOINT_2026_MUTE_TOGGLED = "checkpoint_2026_mute_toggled"),
         (eP.GAME_SERVER_HOSTING_THIRD_PARTY_CONSENT_ACCEPTED = "game_server_hosting_third_party_consent_accepted"),
         (eP.GAME_SERVER_GAME_SELECT_OPENED = "game_server_game_select_opened"),
         (eP.GAME_SERVER_GAME_CLICKED = "game_server_game_clicked"),
