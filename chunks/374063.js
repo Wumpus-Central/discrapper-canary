@@ -7,8 +7,8 @@ var i = n(477900),
     o = n(379257),
     c = n(306537),
     u = n(36149),
-    d = n(112417),
-    E = n(506775),
+    d = n(506775),
+    E = n(167249),
     m = n(42376),
     f = n(652215),
     A = n(105292);
@@ -16,24 +16,24 @@ function g(t) {
     let e,
         n,
         { transitionState: l, onClose: m, onConfirm: f, ageGroup: g } = t,
-        M = ((e = (0, u.yM)()), (n = (0, u.uE)()), e ? E.M$.TEEN : n ? E.M$.ADULT : E.M$.UNVERIFIED),
+        M = ((e = (0, u.yM)()), (n = (0, u.uE)()), e ? d.M$.TEEN : n ? d.M$.ADULT : d.M$.UNVERIFIED),
         {
             description: p,
             confirm: I,
             goBackIsPrimary: h,
         } = (function (t) {
-            let e = (0, d.i)()[t],
+            let e = (0, E.i)()[t],
                 n = { text: A.intl.string(A.t.FDSSia), joins: !1 };
             switch (t) {
-                case E.M$.ADULT:
+                case d.M$.ADULT:
                     return {
                         description: e,
                         confirm: { text: A.intl.string(A.t.wVq7uo), joins: !0 },
                         goBackIsPrimary: !1,
                     };
-                case E.M$.TEEN:
+                case d.M$.TEEN:
                     return { description: e, confirm: n, goBackIsPrimary: !0 };
-                case E.M$.UNVERIFIED:
+                case d.M$.UNVERIFIED:
                     return { description: e, confirm: n, goBackIsPrimary: !1 };
             }
         })(g ?? M),
@@ -67,10 +67,10 @@ function p(t) {
         let e;
         switch (t) {
             case f.t02.UNDER_MINIMUM_AGE:
-                e = E.M$.TEEN;
+                e = d.M$.TEEN;
                 break;
             case f.t02.AGE_GROUP_UNVERIFIED:
-                e = E.M$.UNVERIFIED;
+                e = d.M$.UNVERIFIED;
                 break;
             default:
                 return null;
