@@ -14,7 +14,7 @@ var i = n(477900),
     S = n(655857),
     f = n(883645),
     A = n(166532),
-    T = n(281044),
+    T = n(298208),
     m = n(442467),
     I = n(558620),
     h = n(427675),
@@ -190,13 +190,13 @@ function ee(e) {
         { isGift: eQ, giftRecipient: eX, customGiftMessage: e$, emojiConfetti: e0, soundEffect: e1 } = (0, F.Pv)(),
         e2 = (0, f.Z8)(),
         e5 = (0, f.s2)(),
-        e4 = l.useMemo(() => {
+        e8 = l.useMemo(() => {
             if (null != e2) return e2.options;
         }, [e2]),
-        e8 = (0, f.qv)(),
-        e6 = "sm";
-    ef ? (e6 = "xl") : (eA || e5 === A.pn.ADD_PAYMENT_STEPS) && (e6 = "md");
-    let e9 = null != e4 ? e4.modalSizeGetter : void 0,
+        e4 = (0, f.qv)(),
+        e9 = "sm";
+    ef ? (e9 = "xl") : (eA || e5 === A.pn.ADD_PAYMENT_STEPS) && (e9 = "md");
+    let e6 = null != e8 ? e8.modalSizeGetter : void 0,
         e3 = (0, g.O)(),
         e7 = null != X && !eQ && (0, w.U9)(e3, X),
         [te, tt] = l.useState({
@@ -293,7 +293,7 @@ function ee(e) {
                     { trackedFromStep: n, analyticsDataOverride: i, fulfillment: l, emitPaymentFlowLoadedEvent: a } = t,
                     s = Date.now();
                 if (e === A.pn.CONFIRM && (tu(), z?.(l), tr(), eh)) return void to();
-                (e8(e), eE?.(e), eW(null), e === A.pn.ADD_PAYMENT_STEPS && ((0, u.ET)(), (0, r.T3)()));
+                (e4(e), eE?.(e), eW(null), e === A.pn.ADD_PAYMENT_STEPS && ((0, u.ET)(), (0, r.T3)()));
                 let o = null != n ? n : e5;
                 null === o || a
                     ? k.default.track(D.HAw.PAYMENT_FLOW_LOADED, {
@@ -313,7 +313,7 @@ function ee(e) {
                           gift_card_currency: tl,
                       });
             },
-            [e8, eE, eW, e5, eP, te, tc, ew.startTime, tu, z, tr, eh, to, eM, ti, tl],
+            [e4, eE, eW, e5, eP, te, tc, ew.startTime, tu, z, tr, eh, to, eM, ti, tl],
         );
     ((0, R.b)(e5, eK, td, eO, !1, void 0, ev),
         (function (e) {
@@ -346,9 +346,9 @@ function ee(e) {
             isGift: eQ,
             giftRecipient: eX,
             returnRef: eI,
-            manaModalSize: e6,
+            manaModalSize: e9,
             modalSizeOverride: eT,
-            modalSizeGetter: e9,
+            modalSizeGetter: e6,
             handleClose: to,
             children: (0, i.jsx)(K.Ay, {
                 disableDefaultSlideTransformStyling: em,

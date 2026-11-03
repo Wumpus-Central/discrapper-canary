@@ -144,21 +144,27 @@ function h(e, t) {
     );
 }
 function T(e, t) {
-    let { isPrepaidPaymentSource: n = !1, invoiceSummaryType: r, subscriptionPlan: i, subscriptionTrial: a } = t,
-        { newPlanInvoiceItem: u, basePlanFullAmount: o, invoiceAdjustmentDisplayItems: c } = (0, s.SA)(e, i),
+    let {
+            isPrepaidPaymentSource: n = !1,
+            invoiceSummaryType: r,
+            subscriptionPlan: i,
+            subscriptionTrial: a,
+            invoicePlanId: u,
+        } = t,
+        { newPlanInvoiceItem: o, basePlanFullAmount: c, invoiceAdjustmentDisplayItems: d } = (0, s.SA)(e, i, u),
         {
-            lineItems: d,
-            primaryLineItem: m,
-            entitlementDiscount: f,
-        } = I(u, {
-            overrideAmount: l.ME.has(r) ? o : void 0,
+            lineItems: m,
+            primaryLineItem: f,
+            entitlementDiscount: p,
+        } = I(o, {
+            overrideAmount: l.ME.has(r) ? c : void 0,
             subscriptionPlan: i,
             subscriptionTrial: a,
             isPrepaidPaymentSource: n,
             currency: e.currency,
-            invoiceAdjustmentDisplayItems: c,
+            invoiceAdjustmentDisplayItems: d,
         });
-    return { lineItems: d, primaryLineItem: m, entitlementDiscount: f, hasAdjustmentLineItem: c.length > 0 };
+    return { lineItems: m, primaryLineItem: f, entitlementDiscount: p, hasAdjustmentLineItem: d.length > 0 };
 }
 function y(e, t) {
     let { isCustomGift: n = !1, isPrepaidPaymentSource: r = !1, subscriptionPlan: i } = t;

@@ -6,7 +6,7 @@ var l = n(477900),
     s = n(75304),
     o = n(981036),
     u = n(202475),
-    c = n(281044),
+    c = n(298208),
     d = n(105292),
     m = n(338039);
 function p(e) {
@@ -20,11 +20,11 @@ function p(e) {
             primaryCTAButtonProps: E,
             onBackClick: S,
         } = e,
-        { hasPaymentSources: y } = (0, u.j)(),
-        { isExpressCheckoutEnabled: g } = (0, c.t4)((e) => ({
+        { hasPaymentSources: g } = (0, u.j)(),
+        { isExpressCheckoutEnabled: y } = (0, c.t4)((e) => ({
             isExpressCheckoutEnabled: e.getIsExpressCheckoutEnabled(),
         })),
-        I = y || g ? r.pn.REVIEW : r.pn.ADD_PAYMENT_STEPS,
+        I = g || y ? r.pn.REVIEW : r.pn.ADD_PAYMENT_STEPS,
         A = i.useCallback(() => t(I), [t, I]),
         P = i.useMemo(
             () =>

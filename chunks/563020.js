@@ -76,6 +76,10 @@ function I(e, t, n, i) {
         case u.gD.PREMIUM_3_MONTH_TIER_2:
         case u.gD.PREMIUM_6_MONTH_TIER_2:
             return (0, o.Mn)(e.subscriptionPlanId, r, n, i);
+        case u.MM.PREMIUM_GIFT_MONTH_TIER_2:
+            return (0, o.Mn)(u.gD.PREMIUM_MONTH_TIER_2, r, n, i);
+        case u.MM.PREMIUM_GIFT_YEAR_TIER_2:
+            return (0, o.Mn)(u.gD.PREMIUM_YEAR_TIER_2, r, n, i);
         case u.gD.PREMIUM_3_MONTH_GUILD:
         case u.gD.PREMIUM_6_MONTH_GUILD:
             return A.intl.format(A.t.YAIIWp, { num: e.quantity, intervalCount: t.intervalCount });
@@ -130,8 +134,9 @@ function T(e, t) {
     };
 }
 function g(e, t) {
-    let n = (0, c.Z)(e.invoiceItems);
-    return { subscriptionPlanInvoiceItem: n.find((e) => e.subscriptionPlanId === t.id), coalescedInvoiceItems: n };
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : t.id,
+        i = (0, c.Z)(e.invoiceItems);
+    return { subscriptionPlanInvoiceItem: i.find((e) => e.subscriptionPlanId === n), coalescedInvoiceItems: i };
 }
 function S(e, t) {
     let n,
@@ -165,63 +170,64 @@ function S(e, t) {
 }
 function N(e, t) {
     var n;
-    let { subscriptionPlanInvoiceItem: i, coalescedInvoiceItems: r } = g(e, t);
-    if (null == i)
+    let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : t.id,
+        { subscriptionPlanInvoiceItem: r, coalescedInvoiceItems: l } = g(e, t, i);
+    if (null == r)
         throw new s.v({
             message: "Expected newPlanInvoiceItem",
             extraSentryInformation: { invoice: e, subscriptionPlan: t },
         });
-    let l = r.find((e) => !(0, o.z4)(e.subscriptionPlanId) && e.amount < 0),
-        c = r.find(
+    let c = l.find((e) => !(0, o.z4)(e.subscriptionPlanId) && e.amount < 0),
+        _ = l.find(
             (e) =>
                 null == e.subscriptionPlanId &&
                 null != e.discounts &&
                 null != e.discounts.find((e) => e.type === a.iS.PREMIUM_LEGACY_UPGRADE_PROMOTION),
         ),
-        _ = f(i, a.iS.PREMIUM_TRIAL),
-        E =
+        E = f(r, a.iS.PREMIUM_TRIAL),
+        h =
             ((n = a.iS.SUBSCRIPTION_PLAN),
-            i.subscriptionPlanPrice - (i.discounts?.find((e) => e.type === n)?.amount ?? 0)),
-        h = i.quantity * E,
-        I = i.amount + (null != l ? l.amount : 0) - h + (null != c ? c.amount : 0),
-        p = r.filter(
+            r.subscriptionPlanPrice - (r.discounts?.find((e) => e.type === n)?.amount ?? 0)),
+        I = r.quantity * h,
+        p = r.amount + (null != c ? c.amount : 0) - I + (null != _ ? _.amount : 0),
+        m = l.filter(
             (e) =>
                 e.subscriptionPlanId === u.gD.PREMIUM_MONTH_GUILD || e.subscriptionPlanId === u.gD.PREMIUM_YEAR_GUILD,
         ),
-        m = p.reduce((e, t) => e + t.amount, 0),
-        T = [];
+        T = m.reduce((e, t) => e + t.amount, 0),
+        S = [];
     return (
-        0 === I ||
-            _ ||
-            T.push({
+        0 === p ||
+            E ||
+            S.push({
                 id: "base-plan-adjustment",
                 label: A.intl.formatToPlainString(A.t.ZSVged, { planName: (0, o.ys)(t.id) ? (0, o.RH)(t.id) : t.name }),
                 tooltipText: A.intl.string(A.t.JmwQJM),
                 tooltipAriaLabel: "",
-                value: (0, d.$g)(I, e.currency),
-                amount: I,
+                value: (0, d.$g)(p, e.currency),
+                amount: p,
                 lineItemType: "adjustment",
             }),
-        0 !== m &&
-            T.push({
+        0 !== T &&
+            S.push({
                 id: "guild-subscription-adjustment",
                 label: A.intl.string(A.t["+as5ZZ"]),
                 tooltipText: A.intl.format(A.t.UDop9c, {}),
                 tooltipAriaLabel: A.intl.string(A.t.P68ePO),
-                value: (0, d.$g)(m, e.currency),
-                amount: m,
+                value: (0, d.$g)(T, e.currency),
+                amount: T,
                 lineItemType: "adjustment",
             }),
         {
-            newPlanInvoiceItem: i,
-            basePlanFullAmount: h,
-            basePlanAdjustment: I,
-            guildSubscriptionAdjustment: m,
-            isTrialItem: _,
-            invoiceAdjustmentDisplayItems: T,
-            guildSubscriptionInvoiceItems: p,
-            promotionItem: c,
-            basePlanCreditItem: l,
+            newPlanInvoiceItem: r,
+            basePlanFullAmount: I,
+            basePlanAdjustment: p,
+            guildSubscriptionAdjustment: T,
+            isTrialItem: E,
+            invoiceAdjustmentDisplayItems: S,
+            guildSubscriptionInvoiceItems: m,
+            promotionItem: _,
+            basePlanCreditItem: c,
         }
     );
 }

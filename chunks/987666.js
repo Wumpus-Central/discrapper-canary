@@ -6,7 +6,7 @@ var i = n(888751),
     a = n(400612),
     s = n(818824),
     o = n(25149),
-    u = n(281044);
+    u = n(298208);
 function c(e) {
     let {
             plan: t,
@@ -21,7 +21,7 @@ function c(e) {
             subscriptionTrial: E,
         } = e,
         { immediateDelivery: S } = (0, s.U)(),
-        { checkoutReviewButtonLabel: y, isExpressCheckoutVisibleInFooter: g } = (0, u.t4)((e) => ({
+        { checkoutReviewButtonLabel: g, isExpressCheckoutVisibleInFooter: y } = (0, u.t4)((e) => ({
             checkoutReviewButtonLabel: e.checkoutReviewButtonLabel,
             isExpressCheckoutVisibleInFooter: e.getExpressCheckoutVisibilityState().isExpressCheckoutVisibleInFooter,
         }));
@@ -40,7 +40,7 @@ function c(e) {
             subscriptionTrial: E,
         }),
         _ = {
-            purchaseButtonText: y,
+            purchaseButtonText: g,
             totalDue: C ? I.total : 0,
             renewalPrice: v,
             multiPeriodDiscountAttributes: x,
@@ -53,6 +53,6 @@ function c(e) {
         variant: { type: h, ..._ },
         paymentSourceType: n,
         immediateDelivery: S,
-        isExpressCheckout: g,
+        isExpressCheckout: y,
     });
 }

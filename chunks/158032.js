@@ -16,8 +16,9 @@ async function c(e) {
         metadata: o,
         referralCode: d,
         loadId: c,
-        expectedInvoicePrice: u,
-        expectedRenewalPrice: _,
+        giftInfoOptions: u,
+        expectedInvoicePrice: _,
+        expectedRenewalPrice: E,
     } = e;
     a.h.dispatch({ type: "PREMIUM_PAYMENT_SUBSCRIBE_START" });
     try {
@@ -30,8 +31,9 @@ async function c(e) {
             metadata: o,
             referralCode: d,
             loadId: c,
-            expectedInvoicePrice: u,
-            expectedRenewalPrice: _,
+            giftInfoOptions: u,
+            expectedInvoicePrice: _,
+            expectedRenewalPrice: E,
         });
         return (
             null != e.subscription &&

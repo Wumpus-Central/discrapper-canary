@@ -48,11 +48,11 @@ function S(e) {
         }),
     });
 }
-function y() {
+function g() {
     let e = i.useMemo(() => [{ variant: "primary", text: f.intl.string(f.t.g8vPzy), disabled: !0 }], []);
     return (0, l.jsx)(h.H, { actions: e });
 }
-var g = n(636950);
+var y = n(636950);
 function I() {
     let [e, t] = i.useState(!1);
     async function n() {
@@ -61,8 +61,8 @@ function I() {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(s.A, {}),
-            (0, l.jsx)(o.dZ, { children: (0, l.jsx)(S, { className: g.r, isEmailResent: e, resendEmail: n }) }),
-            (0, l.jsx)(o.UX, { children: (0, l.jsx)(y, {}) }),
+            (0, l.jsx)(o.dZ, { children: (0, l.jsx)(S, { className: y.r, isEmailResent: e, resendEmail: n }) }),
+            (0, l.jsx)(o.UX, { children: (0, l.jsx)(g, {}) }),
         ],
     });
 }
@@ -95,7 +95,7 @@ var L = n(534479),
     F = n(31823),
     B = n(655857),
     H = n(427675),
-    W = n(281044),
+    W = n(298208),
     V = n(652215),
     Y = n(202541);
 function K(e) {
@@ -160,10 +160,10 @@ function Z(e) {
         })),
         f = (0, x.Hp)(),
         E = (0, k.A)(),
-        { hasFetchedRelatedSubscriptionPlans: S, subscriptionPriceOptionsLoading: y } = (0, B.Jn)(),
-        { isGift: g } = (0, b.Pv)(),
-        I = (0, D.A)({ isGift: g, skuId: d }),
-        T = !E || !S || y || !c,
+        { hasFetchedRelatedSubscriptionPlans: S, subscriptionPriceOptionsLoading: g } = (0, B.Jn)(),
+        { isGift: y } = (0, b.Pv)(),
+        I = (0, D.A)({ isGift: y, skuId: d }),
+        T = !E || !S || g || !c,
         N = (0, A.bG)([U.A], () => U.A.applicationIdsFetched.has(Y.tv));
     (0, v.A)(
         "Payment Modal",
@@ -172,7 +172,7 @@ function Z(e) {
         {
             hasFetchedSubscriptions: E,
             hasFetchedSubscriptionPlans: S,
-            subscriptionPriceOptionsLoading: y,
+            subscriptionPriceOptionsLoading: g,
             hasFetchedPaymentSources: c,
         },
         { tags: { app_context: "billing" } },
@@ -195,7 +195,7 @@ function Z(e) {
                               ? a(r.pn.PLAN_SELECT)
                               : a(r.pn.SKU_SELECT)
                     : a(r.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: s })));
-    }, [h, s, o, p, f, N, n, T, a, t, d, m, I, C, g, j, u]),
+    }, [h, s, o, p, f, N, n, T, a, t, d, m, I, C, y, j, u]),
     T)
         ? (0, l.jsx)(L.A, {})
         : f

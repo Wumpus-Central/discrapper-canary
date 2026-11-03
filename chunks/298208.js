@@ -1,4 +1,4 @@
-n.d(t, { y0: () => er, Ni: () => ea, t4: () => el, Q9: () => es, y$: () => eo });
+n.d(t, { y0: () => ea, Ni: () => es, t4: () => eo, Q9: () => el, y$: () => ed });
 var i = n(882035),
     r = n(428865),
     a = n(315069),
@@ -313,16 +313,17 @@ var q = n(811315),
     Q = n(529412),
     J = n(75304),
     ee = n(442467),
-    et = n(120700),
-    en = n(758476),
-    ei = n(705822);
-let er = 1,
-    [ea, es] = (0, T.A)();
-function el(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
-    return es()(e, t);
-}
+    et = n(371710),
+    en = n(120700),
+    ei = n(758476),
+    er = n(705822);
+let ea = 1,
+    [es, el] = (0, T.A)();
 function eo(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
+    return el()(e, t);
+}
+function ed(e) {
     let {
         checkoutInitParameters: t,
         startingValues: n,
@@ -508,7 +509,7 @@ function eo(e) {
                 },
                 resetPaymentAuthentication: () => e({ ...Y }),
             },
-            ...(0, ei.e)(e, i),
+            ...(0, er.e)(e, i),
             ...((_ = []),
             {
                 getPaymentSourceNotices: () => {
@@ -596,8 +597,9 @@ function eo(e) {
                 }
                 return {
                     getIsPlanSwitchLoading: () => {
-                        let { checkoutInvoicePreview: t, selectedPlanId: n } = e();
-                        return null != t && null != n && null == t.findInvoiceItemByPlanId(n);
+                        let { checkoutInvoicePreview: t, selectedPlanId: n, getGiftSubscriptionPlanId: i } = e(),
+                            r = i() ?? n;
+                        return null != t && null != r && null == t.findInvoiceItemByPlanId(r);
                     },
                     getShouldDisallowPlanSelection: () => {
                         let t = e().getTenantParams(J.C.PREMIUM_CHECKOUT);
@@ -673,6 +675,20 @@ function eo(e) {
                 getOrbBalanceOnCheckout: () => i().orbBalanceOnCheckout,
             },
             ...{
+                isRecurringGift: !1,
+                hasAppliedRecurringGiftDefaults: !1,
+                setIsRecurringGift: (t) => e({ isRecurringGift: t }),
+                setHasAppliedRecurringGiftDefaults: (t) => e({ hasAppliedRecurringGiftDefaults: t }),
+                getIsRecurringGiftCheckout: () => {
+                    let { isRecurringGift: e, selectedPlanId: t } = i();
+                    return e && null != t && (0, et.dI)(t);
+                },
+                getGiftSubscriptionPlanId: () => {
+                    let { selectedPlanId: e, getIsRecurringGiftCheckout: t } = i();
+                    return null != e && t() ? (0, et.o_)(e) : null;
+                },
+            },
+            ...{
                 getIsSelectedPaymentSourceDisabled: () => {
                     let { paymentSourceId: e, get: t } = i(),
                         n = t("hasCheckoutContextLoaded"),
@@ -694,20 +710,35 @@ function eo(e) {
                     let { paymentSource: t, isWalletPurchaseDisabled: n, isTrial: r } = e,
                         {
                             unifiedCheckoutFlow: a,
-                            purchasePreviewError: s,
-                            purchaseType: l,
-                            isGift: o,
-                            getIsPurchaseDisabled: d,
-                            getIsSelectedPaymentSourceDisabled: c,
+                            checkoutInvoicePreview: s,
+                            renewalInvoicePreview: l,
+                            purchasePreviewError: o,
+                            purchaseType: d,
+                            isGift: c,
+                            getIsPurchaseDisabled: u,
+                            getIsSelectedPaymentSourceDisabled: _,
+                            getGiftSubscriptionPlanId: E,
+                            getIsRecurringGiftCheckout: A,
                         } = i();
-                    if (d({ isWalletPurchaseDisabled: n })) return !0;
-                    if (l === L.VVm.ONE_TIME) {
-                        if (c() || null != s) return !0;
-                    } else if (
-                        ((r && !o) || a === et.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT) &&
-                        (null == t || !t.canRedeemTrial())
-                    )
-                        return !0;
+                    if (u({ isWalletPurchaseDisabled: n })) return !0;
+                    if (d === L.VVm.ONE_TIME) {
+                        if (_() || null != o) return !0;
+                    } else {
+                        if (A()) {
+                            let e = E();
+                            if (
+                                null == e ||
+                                s?.findInvoiceItemByPlanId(e) == null ||
+                                l?.findInvoiceItemByPlanId(e) == null
+                            )
+                                return !0;
+                        }
+                        if (
+                            ((r && !c) || a === en.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT) &&
+                            (null == t || !t.canRedeemTrial())
+                        )
+                            return !0;
+                    }
                     return !1;
                 },
                 getCheckoutReviewButtonText: (e) => {
@@ -718,10 +749,10 @@ function eo(e) {
                     return null === r && t
                         ? H.intl.string(H.t.CpOiEO)
                         : l
-                          ? H.intl.string(en.default["7r4HPu"])
+                          ? H.intl.string(ei.default["7r4HPu"])
                           : null != n
                             ? n
-                            : H.intl.string(en.default.BPzQj4);
+                            : H.intl.string(ei.default.BPzQj4);
                 },
                 getCheckoutReviewButtonProps: (e) => {
                     let {
@@ -738,7 +769,7 @@ function eo(e) {
                         A = !_ && !E("isCheckoutDataLoading"),
                         h = l?.text;
                     null == h &&
-                        (h = u === L.VVm.SUBSCRIPTION ? H.intl.string(H.t.YScQSF) : H.intl.string(en.default.BPzQj4));
+                        (h = u === L.VVm.SUBSCRIPTION ? H.intl.string(H.t.YScQSF) : H.intl.string(ei.default.BPzQj4));
                     let f = l?.variant,
                         I = c({ hasPaymentSources: a, tenantProvidedButtonText: h }),
                         p = {
@@ -831,14 +862,14 @@ function eo(e) {
             setSelectedSkuId: (t) =>
                 e((e) => {
                     let n = t ?? void 0;
-                    return n === e.selectedSkuId ? e : { selectedSkuId: n, quantity: er };
+                    return n === e.selectedSkuId ? e : { selectedSkuId: n, quantity: ea };
                 }),
             setSelectedPlanId: function (t) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { shouldUpdateQuantity: !0 },
                     i = t ?? void 0;
-                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: er }) : e({ selectedPlanId: i });
+                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: ea }) : e({ selectedPlanId: i });
             },
-            quantity: er,
+            quantity: ea,
             setQuantity: (t) => e({ quantity: t }),
             fetchCheckoutInvoicePreviewRequest: null,
             setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: P(t, i) }),

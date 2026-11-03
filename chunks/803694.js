@@ -1,7 +1,7 @@
-n.d(t, { A: () => y, iB: () => E, Y0: () => S });
+n.d(t, { A: () => g, iB: () => E, Y0: () => S });
 var l = n(582128),
     i = n(702841),
-    r = n(281044),
+    r = n(298208),
     a = n(166403),
     s = n(459357),
     o = n(813873),
@@ -166,9 +166,9 @@ function S(e) {
         n,
         { paymentSourceId: i, setPaymentSourceId: a, location: u, isReady: d = !0, subscriptionPaymentSourceId: E } = e,
         { enabled: S } = (0, s.c)({ location: u }),
-        { enabled: y } = (0, o.U)({ location: u }),
+        { enabled: g } = (0, o.U)({ location: u }),
         {
-            pendingPaymentSourceId: g,
+            pendingPaymentSourceId: y,
             hasInitialPaymentSourceSeed: I,
             hasAddedPaymentSourceThisSession: A,
             applyWalletBalance: P,
@@ -190,7 +190,7 @@ function S(e) {
             checkoutPaymentSources: e.get("checkoutPaymentSources"),
             dropdownPaymentSources: e.getDropdownPaymentSources(),
             storeGiftCardWallet: e.getGiftCardWallet(),
-            isSplitPaymentMode: e.getIsSplitPaymentMode({ splitPaymentsEnabled: y, giftCardsEnabled: S }),
+            isSplitPaymentMode: e.getIsSplitPaymentMode({ splitPaymentsEnabled: g, giftCardsEnabled: S }),
         })),
         R = S ? N : null,
         O = j ? null : R,
@@ -209,13 +209,13 @@ function S(e) {
                 subscriptionPaymentSourceId: E,
                 giftCardWallet: O,
                 isReady: d,
-                pendingPaymentSourceId: g,
+                pendingPaymentSourceId: y,
                 paymentSourceId: i,
                 giftCardsEnabled: S,
                 hasInitialPaymentSourceSeed: I,
                 hasAddedPaymentSourceThisSession: A,
             }),
-            [T, b, E, O, d, g, i, S, I, A],
+            [T, b, E, O, d, y, i, S, I, A],
         );
     ((t = l.useRef(!1)),
         (n = l.useMemo(() => new p(U), [U])),
@@ -321,7 +321,7 @@ function S(e) {
         isSplitPaymentMode: j,
     };
 }
-function y(e) {
+function g(e) {
     let { location: t, message: n } = e,
         o = (0, i.bG)([a.A], () => {
             let e = a.A.getPremiumTypeSubscription();

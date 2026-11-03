@@ -3,7 +3,7 @@ var l = n(582128),
     i = n(543767),
     r = n(424776),
     a = n(511484),
-    s = n(281044),
+    s = n(298208),
     o = n(463376);
 function u(e) {
     let t,
@@ -21,9 +21,9 @@ function u(e) {
             currency: n.currency,
             metadata: c,
         }),
-        y = f ? d : E,
-        g = l.useMemo(() => {
-            let e = m ? (y ?? null) : null;
+        g = f ? d : E,
+        y = l.useMemo(() => {
+            let e = m ? (g ?? null) : null;
             return {
                 discountOffer: p,
                 applicablePlan: C,
@@ -31,7 +31,7 @@ function u(e) {
                 discountAmountOff: null != C ? (0, a.pg)(e, C) : null,
                 discountInvoiceError: S,
             };
-        }, [p, C, y, S, m]);
+        }, [p, C, g, S, m]);
     return (
         (t = (0, s.t4)((e) => {
             let { setPremiumDiscountInfo: t } = e;
@@ -39,13 +39,13 @@ function u(e) {
         })),
         l.useEffect(
             () => (
-                t(g),
+                t(y),
                 () => {
                     t(r.T);
                 }
             ),
-            [g, t],
+            [y, t],
         ),
-        g
+        y
     );
 }

@@ -10,13 +10,13 @@ var l = n(477900),
     d = n(834730),
     m = n(150934),
     p = n(939249),
-    C = n(281044),
+    C = n(298208),
     h = n(951305),
     f = n(773669),
     E = n(97352),
     S = n(45938),
-    y = n(24482),
-    g = n(580630),
+    g = n(24482),
+    y = n(580630),
     I = n(371710),
     A = n(529412),
     P = n(127981),
@@ -36,21 +36,29 @@ function N(e) {
             onSelect: c,
             children: m,
         } = e,
-        f = (0, C.t4)((e) => e.setSelectedPlanId),
-        { isRecurringGift: E, setIsRecurringGift: S } = (0, h.Pv)(),
+        {
+            setSelectedPlanId: f,
+            isRecurringGift: E,
+            setIsRecurringGift: S,
+        } = (0, C.t4)((e) => ({
+            setSelectedPlanId: e.setSelectedPlanId,
+            isRecurringGift: e.isRecurringGift,
+            setIsRecurringGift: e.setIsRecurringGift,
+        })),
+        { setSelectedGiftingPromotionRewards: g } = (0, h.Pv)(),
         y = n.interval === v.WT.YEAR ? x.default.rstMwN : x.default.Vb8FaC,
-        g = i.useMemo(
+        I = i.useMemo(
             () => [
                 { isRecurring: !0, label: y },
                 { isRecurring: !1, label: x.default["hs/Nr+"] },
             ],
             [y],
         ),
-        I = i.useCallback(
+        A = i.useCallback(
             (e) => {
-                (f(t), S(e));
+                (f(t), S(e), e && g([]));
             },
-            [t, f, S],
+            [t, f, S, g],
         );
     return o
         ? (0, l.jsxs)("div", {
@@ -59,7 +67,7 @@ function N(e) {
                   m,
                   (0, l.jsx)("div", {
                       className: b.Hg,
-                      children: g.map((e) => {
+                      children: I.map((e) => {
                           let { isRecurring: t, label: n } = e,
                               i = E === t;
                           return (0, l.jsxs)(
@@ -73,7 +81,7 @@ function N(e) {
                                   }),
                                   tabIndex: i ? 0 : -1,
                                   className: b.Mg,
-                                  onClick: () => I(t),
+                                  onClick: () => A(t),
                                   children: [
                                       (0, l.jsx)(T.T, { disabled: u, checked: i }),
                                       (0, l.jsx)(d.E, { variant: "body-sm/medium", children: _.intl.string(n) }),
@@ -101,7 +109,7 @@ var j = n(35587),
     O = n(268431);
 function M(e, t) {
     let n = e.interval === v.WT.YEAR ? _.t.ECT4A5 : _.t.v9QeON;
-    return _.intl.format(n, { price: (0, g.$g)(t.amount, t.currency) });
+    return _.intl.format(n, { price: (0, y.$g)(t.amount, t.currency) });
 }
 function L(e) {
     return { type: "badge", textBadgeVariant: "body-sm/medium", text: e };
@@ -135,52 +143,57 @@ function k(e, t, n) {
           : null;
 }
 function w(e) {
-    let {
-            premiumSubscription: t,
-            planId: n,
-            selected: r,
-            priceOptions: s,
-            isPrepaid: u,
-            shouldShowTrialOrDiscountLayout: T,
-            isEligibleForDiscount: b,
-            isEligibleForTrial: R,
-            isCurrentPlan: L,
-            disabled: w,
-            isRecurringGiftEnabled: D,
-        } = e,
-        U = (0, c.bG)([f.default], () => f.default.locale),
+    let t,
+        n,
+        r,
         {
-            discountInfo: G,
-            setSelectedPlanId: F,
-            isGift: B,
+            premiumSubscription: s,
+            planId: u,
+            selected: T,
+            priceOptions: b,
+            isPrepaid: R,
+            shouldShowTrialOrDiscountLayout: L,
+            isEligibleForDiscount: w,
+            isEligibleForTrial: D,
+            isCurrentPlan: U,
+            disabled: G,
+            isRecurringGiftEnabled: F,
+        } = e,
+        B = (0, c.bG)([f.default], () => f.default.locale),
+        {
+            discountInfo: H,
+            setSelectedPlanId: W,
+            setIsRecurringGift: V,
+            isGift: Y,
         } = (0, C.t4)((e) => ({
             discountInfo: e.premiumDiscountInfo,
             setSelectedPlanId: e.setSelectedPlanId,
+            setIsRecurringGift: e.setIsRecurringGift,
             isGift: e.isGift,
         })),
-        { giftRecipient: H, setIsRecurringGift: W } = (0, h.Pv)(),
-        V = B && (0, S.Ik)(H),
-        { discountOffer: Y, discountAmountOff: K, applicablePlan: Z } = G,
-        q = (0, c.bG)([E.A], () => E.A.get(n));
-    o()(null != q, "Missing subscriptionPlan");
-    let z = (0, y.m6)(q.id),
-        $ = V && z === v.PremiumTypes.TIER_2,
-        Q = (0, A.qi)({ location: `PremiumSwitchPlanSelectOption${$ ? "" : "-DISABLED"}` }),
-        J = V && (!$ || !Q || r),
-        X = (0, j.Sq)(),
-        ee = (0, y.L_)({ planId: n, isGift: B, priceOptions: s, subscriptionPlan: q }),
-        et = (0, y.y8)(n, !1, B, s),
-        en = null != ee && !T,
-        el = i.useCallback(() => {
-            let e = k(t, q, {
-                userLocale: U,
-                isEligibleForBOGOPromotion: X,
-                shouldShowSavingsPercent: en,
-                isGift: B,
-                planId: n,
-                savingsPercent: ee,
-                priceOptions: s,
-                isEligibleForTrial: R,
+        { giftRecipient: K } = (0, h.Pv)(),
+        Z = Y && (0, S.Ik)(K),
+        { discountOffer: q, discountAmountOff: z, applicablePlan: $ } = H,
+        Q = (0, c.bG)([E.A], () => E.A.get(u));
+    o()(null != Q, "Missing subscriptionPlan");
+    let J = (0, g.m6)(Q.id),
+        X = Z && J === v.PremiumTypes.TIER_2,
+        ee = (0, A.qi)({ location: `PremiumSwitchPlanSelectOption${X ? "" : "-DISABLED"}` }),
+        et = Z && (!X || !ee || T),
+        en = (0, j.Sq)(),
+        el = (0, g.L_)({ planId: u, isGift: Y, priceOptions: b, subscriptionPlan: Q }),
+        ei = (0, g.y8)(u, !1, Y, b),
+        er = null != el && !L,
+        ea = i.useCallback(() => {
+            let e = k(s, Q, {
+                userLocale: B,
+                isEligibleForBOGOPromotion: en,
+                shouldShowSavingsPercent: er,
+                isGift: Y,
+                planId: u,
+                savingsPercent: el,
+                priceOptions: b,
+                isEligibleForTrial: D,
             });
             return "string" == typeof e
                 ? (0, l.jsxs)("span", { className: O.IS, children: ["(", e, ")"] })
@@ -194,89 +207,88 @@ function w(e) {
                         children: e.text,
                     }))
                   : null;
-        }, [U, X, q, t, en, B, n, ee, s, R]),
-        ei = i.useMemo(
-            () => (0, y.D8)(q.interval, B, u, q.intervalCount, V, z),
-            [q.interval, q.intervalCount, B, u, V, z],
+        }, [B, en, Q, s, er, Y, u, el, b, D]),
+        es = i.useMemo(
+            () => (0, g.D8)(Q.interval, Y, R, Q.intervalCount, Z, J),
+            [Q.interval, Q.intervalCount, Y, R, Z, J],
         ),
-        er = D && V && (0, I.dI)(n),
-        ea = (function (e, t, n) {
-            let { isRecurringGift: l } = (0, h.Pv)(),
-                i = n && l,
-                r = e.interval === v.WT.YEAR;
-            return {
-                priceSubtext: i
+        eo = F && Z && (0, I.dI)(u),
+        eu =
+            ((t = (0, C.t4)((e) => e.isRecurringGift)),
+            (n = T && t),
+            (r = Q.interval === v.WT.YEAR),
+            {
+                priceSubtext: n
                     ? _.intl.string(x.default["0llBr2"])
-                    : _.intl.formatToPlainString(_.t.ori2Jm, { currencyAmount: (0, g.$g)(t.amount, t.currency) }),
-                priceInterval: i ? _.intl.string(r ? x.default.mqaMxh : x.default.JUUvJw) : null,
-            };
-        })(q, et, r),
-        es = null != Z && n === Z;
-    function eo() {
-        (w || r || F(n, { shouldUpdateQuantity: !(0, P.bM)(n) }), er || W(!1));
+                    : _.intl.formatToPlainString(_.t.ori2Jm, { currencyAmount: (0, y.$g)(ei.amount, ei.currency) }),
+                priceInterval: n ? _.intl.string(r ? x.default.mqaMxh : x.default.JUUvJw) : null,
+            }),
+        ec = null != $ && u === $;
+    function ed() {
+        (G || T || W(u, { shouldUpdateQuantity: !(0, P.bM)(u) }), eo || V(!1));
     }
-    let eu = T
+    let em = L
             ? _.intl.format(_.t.hXcaLT, {
                   price:
-                      b && null != K && es
-                          ? (0, g.$g)(et.amount - K, et.currency)
-                          : R
-                            ? (0, g.$g)(0, et.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
-                            : (0, g.$g)(et.amount, et.currency),
+                      w && null != z && ec
+                          ? (0, y.$g)(ei.amount - z, ei.currency)
+                          : D
+                            ? (0, y.$g)(0, ei.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+                            : (0, y.$g)(ei.amount, ei.currency),
               })
-            : (0, g.$g)(et.amount, et.currency),
-        ec = (0, l.jsxs)(l.Fragment, {
+            : (0, y.$g)(ei.amount, ei.currency),
+        ep = (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsxs)("div", {
-                    className: a()(O.XM, { [O.PA]: w }),
+                    className: a()(O.XM, { [O.PA]: G }),
                     children: [
                         (0, l.jsxs)("div", {
                             className: O.l,
                             children: [
-                                !V &&
+                                !Z &&
                                     (0, l.jsx)("div", {
                                         className: O.E2,
                                         children: (0, l.jsx)(m.S, {
-                                            checked: r,
-                                            value: r,
+                                            checked: T,
+                                            value: T,
                                             label: "",
                                             description: "",
-                                            onChange: eo,
+                                            onChange: ed,
                                         }),
                                     }),
                                 (0, l.jsxs)("div", {
                                     children: [
                                         (0, l.jsxs)("div", {
-                                            className: a()(O.Gl, { [O.h4]: r || V, [O.ox]: T && (r || V) }),
-                                            children: [ei, V && el()],
+                                            className: a()(O.Gl, { [O.h4]: T || Z, [O.ox]: L && (T || Z) }),
+                                            children: [es, Z && ea()],
                                         }),
-                                        J &&
+                                        et &&
                                             (0, l.jsx)("div", {
                                                 className: O._R,
-                                                children: er
-                                                    ? ea.priceSubtext
+                                                children: eo
+                                                    ? eu.priceSubtext
                                                     : _.intl.format(_.t.ori2Jm, {
-                                                          currencyAmount: (0, g.$g)(et.amount, et.currency),
+                                                          currencyAmount: (0, y.$g)(ei.amount, ei.currency),
                                                       }),
                                             }),
                                     ],
                                 }),
-                                L &&
+                                U &&
                                     (0, l.jsxs)("span", {
                                         className: O.bq,
                                         children: ["(", _.intl.string(_.t.ymSxhy), ")"],
                                     }),
-                                !V && el(),
+                                !Z && ea(),
                             ],
                         }),
-                        T
-                            ? (0, l.jsx)("div", { className: a()({ [O.kb]: r }), children: eu })
+                        L
+                            ? (0, l.jsx)("div", { className: a()({ [O.kb]: T }), children: em })
                             : (0, l.jsxs)("div", {
-                                  className: a()({ [O.h4]: r || V }),
+                                  className: a()({ [O.h4]: T || Z }),
                                   children: [
-                                      eu,
-                                      er &&
-                                          null != ea.priceInterval &&
+                                      em,
+                                      eo &&
+                                          null != eu.priceInterval &&
                                           (0, l.jsxs)(l.Fragment, {
                                               children: [
                                                   " ",
@@ -284,7 +296,7 @@ function w(e) {
                                                       tag: "span",
                                                       variant: "body-md/medium",
                                                       color: "text-muted",
-                                                      children: ea.priceInterval,
+                                                      children: eu.priceInterval,
                                                   }),
                                               ],
                                           }),
@@ -292,13 +304,13 @@ function w(e) {
                               }),
                     ],
                 }),
-                T &&
+                L &&
                     (0, l.jsx)("div", {
                         className: O.hB,
                         children: (0, l.jsx)(d.E, {
                             variant: "body-md/normal",
-                            color: r ? "text-default" : "interactive-text-default",
-                            className: a()(O.Ub, { [O.sw]: b || R }),
+                            color: T ? "text-default" : "interactive-text-default",
+                            className: a()(O.Ub, { [O.sw]: w || D }),
                             children: (function (e, t) {
                                 let {
                                     price: n,
@@ -313,49 +325,49 @@ function w(e) {
                                     ? e.interval === v.WT.YEAR
                                         ? _.intl.format(_.t["EQmTl+"], {
                                               numYears: a?.discount.intervalCount ?? v.OJ,
-                                              regularPrice: (0, g.$g)(n.amount, n.currency),
+                                              regularPrice: (0, y.$g)(n.amount, n.currency),
                                           })
                                         : _.intl.format(_.t["VeE/4E"], {
                                               numMonths: a?.discount.intervalCount ?? v.OJ,
-                                              discountedPrice: (0, g.$g)(n.amount - r, n.currency),
-                                              regularPrice: (0, g.$g)(n.amount, n.currency),
+                                              discountedPrice: (0, y.$g)(n.amount - r, n.currency),
+                                              regularPrice: (0, y.$g)(n.amount, n.currency),
                                           })
                                     : i
                                       ? M(e, n)
                                       : e.interval === v.WT.YEAR
                                         ? _.intl.formatToPlainString(_.t.rtLTJP, { percent: o ?? "" })
                                         : null;
-                            })(q, {
-                                price: et,
-                                isEligibleForDiscount: b,
-                                isEligibleForTrial: R,
-                                discountAmountOff: K,
-                                discountOffer: Y,
-                                isDiscountApplicableToPlan: es,
-                                savingsPercent: ee,
+                            })(Q, {
+                                price: ei,
+                                isEligibleForDiscount: w,
+                                isEligibleForTrial: D,
+                                discountAmountOff: z,
+                                discountOffer: q,
+                                isDiscountApplicableToPlan: ec,
+                                savingsPercent: el,
                             }),
                         }),
                     }),
             ],
         });
-    return er
+    return eo
         ? (0, l.jsx)(N, {
-              planId: n,
-              subscriptionPlan: q,
-              planLabel: ei,
-              priceSubtext: ea.priceSubtext,
-              selected: r,
-              disabled: w,
-              onSelect: eo,
-              children: (0, l.jsx)("div", { className: a()(O.G_, O.S4), children: ec }),
+              planId: u,
+              subscriptionPlan: Q,
+              planLabel: es,
+              priceSubtext: eu.priceSubtext,
+              selected: T,
+              disabled: G,
+              onSelect: ed,
+              children: (0, l.jsx)("div", { className: a()(O.G_, O.S4), children: ep }),
           })
         : (0, l.jsx)(p.D, {
               role: "radio",
-              "aria-checked": r,
-              tabIndex: r ? 0 : -1,
+              "aria-checked": T,
+              tabIndex: T ? 0 : -1,
               focusProps: { offset: { left: -4, right: -4, top: 0, bottom: 0 } },
-              onClick: eo,
-              className: a()(O.G_, { [O.vW]: V && r, [O.Gb]: V }),
-              children: ec,
+              onClick: ed,
+              className: a()(O.G_, { [O.vW]: Z && T, [O.Gb]: Z }),
+              children: ep,
           });
 }

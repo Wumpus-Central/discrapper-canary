@@ -768,14 +768,15 @@ async function eu(e) {
         metadata: c,
         referralCode: u,
         loadId: _,
-        expectedInvoicePrice: f,
-        expectedRenewalPrice: I,
+        giftInfoOptions: f,
+        expectedInvoicePrice: I,
+        expectedRenewalPrice: p,
     } = e;
     (s.h.dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_START" }), (t = (0, A.qn)(t)));
-    let p = null;
+    let m = null;
     if (null != n && b.Kc.has(n.type)) {
         let e = await L(n.type);
-        p = (0, a.TP)() + N.Rsh.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(n.type, e ?? "", "success");
+        m = (0, a.TP)() + N.Rsh.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(n.type, e ?? "", "success");
     }
     try {
         let e = await a.Bo.post({
@@ -788,7 +789,7 @@ async function eu(e) {
                 payment_source_id: null != n ? n.id : null,
                 payment_source_token: null != n ? await q(n) : null,
                 trial_id: i,
-                return_url: p,
+                return_url: m,
                 code: r,
                 currency: null != n ? d : b.Yr.USD,
                 metadata: c,
@@ -796,8 +797,9 @@ async function eu(e) {
                 purchase_token: (0, h.r)(),
                 referral_code: u,
                 load_id: _,
-                expected_invoice_price: f,
-                expected_renewal_price: I,
+                gift_info_options: f,
+                expected_invoice_price: I,
+                expected_renewal_price: p,
             },
             oldFormErrors: !0,
             rejectWithError: !1,
