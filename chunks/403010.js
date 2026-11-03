@@ -17,7 +17,7 @@ var i = n(435558),
     p = n(763827),
     m = n(873985),
     T = n(309010),
-    g = n(461213),
+    g = n(842018),
     S = n(728557),
     N = n(723702),
     C = n(175306),
@@ -2019,7 +2019,7 @@ let eJ = new c.A("ConnectionStore"),
     e2 = !0,
     e3 = null,
     e5 = null;
-async function e4(e) {
+async function e6(e) {
     ((e0 = Date.now()), (e1 = e.sessionId), V.handleConnectionOpen());
     let t = {},
         n = s.w.get("discord_update_restart_timestamp"),
@@ -2043,7 +2043,7 @@ async function e4(e) {
     }
     (H.update(t, !0), (e2 = !1), (e5 = null));
 }
-function e6() {
+function e4() {
     H.update();
 }
 function e7() {
@@ -2104,7 +2104,7 @@ let tt = new te(l.h, {
         );
     },
     CONNECTION_OPEN: (e) => {
-        e4(e);
+        e6(e);
     },
     CONNECTION_RESUMED: function () {
         e5 = null;
@@ -2206,7 +2206,7 @@ let tt = new te(l.h, {
             !1
         );
     },
-    STREAM_CREATE: e6,
+    STREAM_CREATE: e4,
     STREAM_START: function (e) {
         let { streamType: t, guildId: n, channelId: i } = e;
         if (B.isSessionEstablished()) {
@@ -2232,7 +2232,7 @@ let tt = new te(l.h, {
     },
     STREAM_STOP: function (e) {
         let { streamKey: t } = e;
-        return (e9(t), e6(), !1);
+        return (e9(t), e4(), !1);
     },
     STREAM_SET_PAUSED: function (e) {
         let { streamKey: t, paused: n } = e;
@@ -2256,11 +2256,11 @@ let tt = new te(l.h, {
     RESET_SOCKET: function (e) {
         B.connectionState !== C.A.WILL_RECONNECT && B.resetSocketAndClearCacheOnError(e.args);
     },
-    CLIPS_SETTINGS_UPDATE: e6,
-    RUNNING_GAMES_CHANGE: e6,
+    CLIPS_SETTINGS_UPDATE: e4,
+    RUNNING_GAMES_CHANGE: e4,
     USER_SETTINGS_PROTO_UPDATE: function (e) {
         e.settings.type === eZ.oD.PRELOADED_USER_SETTINGS &&
             e.settings.proto.clips?.allowVoiceRecording != null &&
-            e6();
+            e4();
     },
 });

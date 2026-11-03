@@ -188,7 +188,7 @@ var eg = s(652215),
     eN = s(28863),
     ev = s(517164),
     eE = s(290863),
-    ey = s(461213),
+    ey = s(842018),
     eO = s(975571),
     eS = s(146655),
     eC = s(489379),
@@ -457,8 +457,8 @@ function e0(e) {
                     }),
     });
 }
-var e3 = s(717877);
-function e5(e) {
+var e5 = s(717877);
+function e3(e) {
     let { section: i, user: s, currentUser: n, displayProfile: t, guildId: d, channelId: r, onClose: a } = e;
     return i === eh.RP.ACTIVITY
         ? (0, l.jsx)(eU, { user: s, currentUser: n, guildId: d, onClose: a })
@@ -502,7 +502,7 @@ function e7(e) {
     );
     return u
         ? (0, l.jsx)("div", {
-              className: e3.kL,
+              className: e5.kL,
               children: (0, l.jsxs)("div", {
                   className: eD.Ie,
                   children: [
@@ -512,10 +512,10 @@ function e7(e) {
               }),
           })
         : (0, l.jsxs)("div", {
-              className: e3.kL,
+              className: e5.kL,
               children: [
                   (0, l.jsx)(B.V, {
-                      className: e3.$H,
+                      className: e5.$H,
                       type: "top",
                       selectedItem: A,
                       onItemSelect: h,
@@ -524,7 +524,7 @@ function e7(e) {
                           return (0, l.jsx)(
                               B.V.Item,
                               {
-                                  className: e3.YU,
+                                  className: e5.YU,
                                   id: i,
                                   "aria-label": s,
                                   children: (0, l.jsx)(V.E, { variant: "body-sm/normal", children: s }),
@@ -533,7 +533,7 @@ function e7(e) {
                           );
                       }),
                   }),
-                  (0, l.jsx)(e5, {
+                  (0, l.jsx)(e3, {
                       items: r,
                       section: A,
                       user: i,
@@ -807,17 +807,17 @@ function is(e) {
                                             }),
                                         }),
                                         (0, l.jsxs)("div", {
-                                            className: e3.kL,
+                                            className: e5.kL,
                                             children: [
                                                 (0, l.jsx)(B.V, {
-                                                    className: e3.$H,
+                                                    className: e5.$H,
                                                     type: "top",
                                                     selectedItem: eh.RP.BOT_INFO,
                                                     onItemSelect: eg.tEg,
                                                     children: (0, l.jsx)(
                                                         B.V.Item,
                                                         {
-                                                            className: e3.YU,
+                                                            className: e5.YU,
                                                             id: eh.RP.BOT_INFO,
                                                             "aria-label": Q.intl.string(Q.t.ZzAR2Y),
                                                             children: (0, l.jsx)(V.E, {
