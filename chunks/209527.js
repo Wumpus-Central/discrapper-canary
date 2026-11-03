@@ -845,7 +845,7 @@ function e9() {
                 loop: !0,
                 muted: e,
                 children: (0, s.jsx)("source", {
-                    src: "https://cdn.discordapp.com/assets/content/c341757eb38a259a9413a30e414959cad8ce8ad272ece41f4d9e45a953c02c21.mp3",
+                    src: "https://cdn.discordapp.com/assets/content/d271231f4934992caed169c11586a1da060d37b5fd8804b56666b547f03836bd.mp3",
                 }),
             }),
         ],
