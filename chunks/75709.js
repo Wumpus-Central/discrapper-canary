@@ -292,8 +292,8 @@ var eX = n(176781),
     e2 = n(734066),
     e3 = n(738935),
     e5 = n(409067),
-    e7 = n(271597),
-    e6 = n(534514),
+    e6 = n(271597),
+    e7 = n(534514),
     e8 = n(475358),
     e9 = n(866665),
     e4 = n(408278),
@@ -317,7 +317,7 @@ function tp(e) {
         a = (0, th.Y_)(),
         r = i.useCallback(
             (e) => {
-                (e.stopPropagation(), e.preventDefault(), t?.(), (0, e7.p)({ initialEditingClipId: a.id }));
+                (e.stopPropagation(), e.preventDefault(), t?.(), (0, e6.p)({ initialEditingClipId: a.id }));
             },
             [a, t],
         );
@@ -340,7 +340,7 @@ let tC = i.memo(function (e) {
         o = i.useRef(null),
         { isHoveringOrFocusing: u } = (0, tm.A)(o),
         d = i.useCallback(() => {
-            (a?.(), (0, e7.p)({ initialEditingClipId: t.id }));
+            (a?.(), (0, e6.p)({ initialEditingClipId: t.id }));
         }, [t.id, a]);
     return (0, l.jsx)(th.Cl, {
         clip: t,
@@ -426,7 +426,7 @@ function tI(e) {
                         (0, l.jsxs)("div", {
                             className: tj.$,
                             children: [
-                                (0, l.jsx)(e6.D, {
+                                (0, l.jsx)(e7.D, {
                                     variant: "heading-md/semibold",
                                     color: "text-strong",
                                     children: eP.intl.string(eP.t.z2jK6X),
@@ -573,7 +573,7 @@ function tb(e) {
         ),
         o = i.useCallback(
             (e) => {
-                (t(), (0, e7.p)({ initialEditingClipId: e }));
+                (t(), (0, e6.p)({ initialEditingClipId: e }));
             },
             [t],
         ),
@@ -729,8 +729,8 @@ var t1 = n(397562),
     t2 = n(206835),
     t3 = n(183555),
     t5 = n(465318),
-    t7 = n(999291),
-    t6 = n(402860),
+    t6 = n(999291),
+    t7 = n(402860),
     t8 = n(718019),
     t9 = n(977059),
     t4 = n(915614),
@@ -1085,8 +1085,7 @@ function n2(e) {
                 n.e("586662"),
                 n.e("831377"),
                 n.e("709976"),
-                n.e("750955"),
-                n.e("953343"),
+                n.e("860596"),
                 n.e("279774"),
                 n.e("763945"),
                 n.e("261204"),
@@ -1158,7 +1157,8 @@ function n2(e) {
                 n.e("888499"),
                 n.e("839182"),
                 n.e("52727"),
-                n.e("493118"),
+                n.e("423117"),
+                n.e("465650"),
                 n.e("166171"),
                 n.e("595990"),
                 n.e("218781"),
@@ -1227,12 +1227,12 @@ function n2(e) {
                 n.e("776273"),
                 n.e("492762"),
                 n.e("28102"),
-                n.e("393766"),
                 n.e("497516"),
+                n.e("393766"),
                 n.e("572963"),
                 n.e("229787"),
-                n.e("307575"),
                 n.e("521930"),
+                n.e("307575"),
                 n.e("554241"),
                 n.e("724303"),
                 n.e("53102"),
@@ -1346,7 +1346,7 @@ function n2(e) {
                       loading: r,
                       onClick: function () {
                           (s(!0),
-                              (0, t6.openUserProfileModal)({ userId: o, tabSection: n1.RP.WIDGETS })
+                              (0, t7.openUserProfileModal)({ userId: o, tabSection: n1.RP.WIDGETS })
                                   .then(() => {
                                       let e = u.map((e) => e.id);
                                       ((0, x.openModalLazy)(
@@ -1391,13 +1391,13 @@ function n2(e) {
 }
 var n3 = n(461213),
     n5 = n(818348),
-    n7 = n(709516);
-function n6() {
+    n6 = n(709516);
+function n7() {
     let e = (0, d.bG)([n3.A], () => n3.A.getStatus()),
         t = (0, nu.MU)(e) ?? "",
         n = e === n5.cl.INVISIBLE || e === n5.cl.OFFLINE;
     return (0, l.jsxs)("div", {
-        className: n7.k,
+        className: n6.k,
         children: [
             (0, l.jsxs)(A.A, { tag: "div", children: [eP.intl.string(eP.t.AHoLf4), ":"] }),
             t,
@@ -1471,7 +1471,7 @@ var ll = n(996988),
 function lr(e) {
     let { currentUser: t, onClose: n, setPopoutRef: a, highlightBadge: s, openedAt: o, className: u } = e,
         m = __OVERLAY__,
-        p = (0, t7.Ay)(t.id, void 0),
+        p = (0, t6.Ay)(t.id, void 0),
         { analyticsLocations: g } = (0, w.Ay)(O.A.USER_PROFILE_ACCOUNT_POPOUT),
         v = (0, t3.pb)({ layout: "ACCOUNT_POPOUT", userId: t.id, guildId: void 0 });
     (0, t1.A)(g, p, n1.R7.ACCOUNT_POPOUT);
@@ -1694,7 +1694,7 @@ function lr(e) {
         H = i.useMemo(() => (0, tL.A)(), []),
         [B, W] = i.useState(() => tV.A.getState().shouldRenderTenureLevelUp);
     function z(e) {
-        (n?.(), (0, t6.openUserProfileModal)({ customStatusPrompt: H, sourceAnalyticsLocations: g, ...v, ...e }));
+        (n?.(), (0, t7.openUserProfileModal)({ customStatusPrompt: H, sourceAnalyticsLocations: g, ...v, ...e }));
     }
     i.useEffect(() => {
         let e = setTimeout(() => {
@@ -1845,7 +1845,7 @@ function lr(e) {
                                                                 }),
                                                                 (0, l.jsx)(eD, {
                                                                     action: "PRESS_SET_STATUS",
-                                                                    label: (0, l.jsx)(n6, {}),
+                                                                    label: (0, l.jsx)(n7, {}),
                                                                     sublabel: null != y && y,
                                                                     icon: () =>
                                                                         (0, l.jsx)(ev.nW, { status: T, size: 12 }),
@@ -2111,7 +2111,7 @@ function lW(e) {
             t(n0.i.TAKE_ACTION);
             let e = nk.default.getCurrentUser();
             c && null != e
-                ? (0, t6.openUserProfileModal)({
+                ? (0, t7.openUserProfileModal)({
                       userId: e.id,
                       sourceAnalyticsLocations: r,
                       onModalOpen: () => {
@@ -2253,8 +2253,8 @@ function l3(e) {
     });
 }
 var l5 = n(843010),
-    l7 = n(764231),
-    l6 = n(425713);
+    l6 = n(764231),
+    l7 = n(425713);
 function l8(e) {
     let { groupName: t, targetElementRef: n } = e,
         i = tq(),
@@ -2281,7 +2281,7 @@ function l8(e) {
 function l9(e) {
     let { recentlyLeveledTenureBadge: t, markAsDismissed: n, targetElementRef: a, shouldShow: r } = e,
         s = tK.sp.indexOf(t),
-        o = (0, l6.I)(tK.sp[s > 0 ? s - 1 : s]).ambient,
+        o = (0, l7.I)(tK.sp[s > 0 ? s - 1 : s]).ambient,
         u = (0, i.useCallback)(() => {
             (n(n0.i.TAKE_ACTION),
                 tV.A.setState({ shouldRenderTenureLevelUp: !0 }),
@@ -2292,7 +2292,7 @@ function l9(e) {
         }, [n]),
         c = tK.VD[t],
         m = eP.intl.formatToPlainString(eP.t.ewkaVR, {
-            timeMilestone: (0, l7.T)(c.id, c.tenureReqNumMonths)?.toLocaleLowerCase(),
+            timeMilestone: (0, l6.T)(c.id, c.tenureReqNumMonths)?.toLocaleLowerCase(),
         }),
         h = [{ text: eP.intl.string(eP.t.RzWDqY), variant: "primary", onClick: u }];
     return (0, l.jsx)(nW.A, {
@@ -2414,7 +2414,7 @@ function it(e) {
                                             markAsDismissed: i,
                                             position: "top",
                                             targetElementRef: e.targetElementRef,
-                                            onCheckItOut: e7.p,
+                                            onCheckItOut: e6.p,
                                             children: e.children,
                                         });
                                     case c.M.BADGE_DIRECTORY_NUX_POPOVER:
@@ -2889,7 +2889,7 @@ function iB(e) {
         }, [r]),
         g = eu.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, iH.A)("1793664067234", !0);
+        let e = (0, iH.A)("1793664322245", !0);
         t =
             null != e
                 ? eP.intl.formatToPlainString(eP.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
@@ -3128,8 +3128,7 @@ class iQ extends i.PureComponent {
                     n.e("586662"),
                     n.e("831377"),
                     n.e("709976"),
-                    n.e("750955"),
-                    n.e("953343"),
+                    n.e("860596"),
                     n.e("279774"),
                     n.e("763945"),
                     n.e("261204"),
@@ -3185,7 +3184,7 @@ class iQ extends i.PureComponent {
                     n.e("528311"),
                     n.e("411938"),
                     n.e("653383"),
-                    n.e("122026"),
+                    n.e("217991"),
                     n.e("31159"),
                     n.e("952068"),
                     n.e("768289"),
@@ -3386,7 +3385,7 @@ class iQ extends i.PureComponent {
                     n.e("859516"),
                     n.e("30482"),
                     n.e("257182"),
-                    n.e("493118"),
+                    n.e("465650"),
                     n.e("49571"),
                     n.e("434352"),
                     n.e("599135"),
@@ -3506,46 +3505,46 @@ class iQ extends i.PureComponent {
                     n.e("481647"),
                     n.e("776273"),
                     n.e("776602"),
-                    n.e("492762"),
                     n.e("704434"),
+                    n.e("492762"),
                     n.e("140402"),
                     n.e("391763"),
                     n.e("362422"),
                     n.e("28102"),
+                    n.e("497516"),
                     n.e("617249"),
                     n.e("393766"),
                     n.e("21921"),
                     n.e("233197"),
-                    n.e("497516"),
                     n.e("844780"),
                     n.e("811310"),
                     n.e("571210"),
-                    n.e("676418"),
                     n.e("572963"),
+                    n.e("676418"),
                     n.e("70833"),
                     n.e("897073"),
                     n.e("770291"),
                     n.e("166495"),
+                    n.e("521930"),
                     n.e("307575"),
                     n.e("88342"),
                     n.e("323624"),
                     n.e("187110"),
+                    n.e("153251"),
                     n.e("854461"),
                     n.e("942724"),
                     n.e("139970"),
+                    n.e("173764"),
                     n.e("940258"),
                     n.e("858164"),
-                    n.e("521930"),
+                    n.e("25949"),
                     n.e("308555"),
                     n.e("292583"),
-                    n.e("153251"),
                     n.e("427032"),
-                    n.e("173764"),
                     n.e("554241"),
                     n.e("311802"),
                     n.e("724303"),
                     n.e("698965"),
-                    n.e("25949"),
                     n.e("53102"),
                     n.e("586127"),
                     n.e("470068"),
@@ -3685,11 +3684,11 @@ class iQ extends i.PureComponent {
                     n.e("242682"),
                     n.e("414591"),
                     n.e("652111"),
+                    n.e("93461"),
                     n.e("258709"),
                     n.e("819193"),
                     n.e("896804"),
                     n.e("708536"),
-                    n.e("93461"),
                     n.e("411353"),
                     n.e("508829"),
                     n.e("203930"),
@@ -3784,6 +3783,7 @@ class iQ extends i.PureComponent {
                     n.e("138733"),
                     n.e("228011"),
                     n.e("759174"),
+                    n.e("175284"),
                     n.e("102657"),
                     n.e("576415"),
                     n.e("983947"),
@@ -3795,7 +3795,6 @@ class iQ extends i.PureComponent {
                     n.e("960816"),
                     n.e("168031"),
                     n.e("271203"),
-                    n.e("175284"),
                     n.e("932011"),
                     n.e("384820"),
                     n.e("154168"),
@@ -3803,7 +3802,6 @@ class iQ extends i.PureComponent {
                     n.e("443256"),
                     n.e("340346"),
                     n.e("888205"),
-                    n.e("775951"),
                     n.e("373566"),
                     n.e("858531"),
                     n.e("815057"),
@@ -3813,6 +3811,7 @@ class iQ extends i.PureComponent {
                     n.e("523638"),
                     n.e("819305"),
                     n.e("864926"),
+                    n.e("775951"),
                     n.e("450541"),
                     n.e("647999"),
                     n.e("337886"),
@@ -3827,6 +3826,7 @@ class iQ extends i.PureComponent {
                     n.e("904018"),
                     n.e("846327"),
                     n.e("531997"),
+                    n.e("649351"),
                     n.e("809940"),
                     n.e("798384"),
                     n.e("787462"),
@@ -3850,7 +3850,6 @@ class iQ extends i.PureComponent {
                     n.e("688669"),
                     n.e("85216"),
                     n.e("883922"),
-                    n.e("649351"),
                     n.e("483102"),
                     n.e("580890"),
                     n.e("902552"),

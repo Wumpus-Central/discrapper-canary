@@ -1,3 +1,158 @@
+.reward_e6c363 {
+    height: 100px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100px
+}
+
+.reward_e6c363,
+.ringWrapper_e6c363 {
+    flex-shrink: 0
+}
+
+.ringWrapper_e6c363 .reward_e6c363 {
+    height: 104px;
+    width: 104px
+}
+
+.ctaButton__05d6f {
+    min-width: 96px;
+    width: 150px
+}
+
+.card__956bc {
+    background: var(--background-base-lowest);
+    background-origin: border-box;
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid var(--border-normal);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-high);
+    box-sizing: border-box;
+    min-height: 120px;
+    overflow: hidden
+}
+
+.textColumn__956bc {
+    flex: 1;
+    min-width: 0
+}
+
+.bannerVideoBackground_aff7d9 {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top center;
+    object-position: top center;
+    width: 100%
+}
+
+.bannerImage_aff7d9 {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%
+}
+
+.responsive_aff7d9.bannerAsset_aff7d9 {
+    inset-inline-start: 50%;
+    position: absolute;
+    transform: translate(-50%)
+}
+
+.responsive_aff7d9.bannerImage_aff7d9 {
+    background-position: top;
+    background-size: contain
+}
+
+.responsive_aff7d9.bannerVideoBackground_aff7d9 {
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center top;
+    object-position: center top
+}
+
+@media (max-width:1160px) {
+    .responsive_aff7d9.bannerImage_aff7d9 {
+        background-size: cover
+    }
+
+    .responsive_aff7d9.bannerVideoBackground_aff7d9 {
+        -o-object-fit: cover;
+        object-fit: cover
+    }
+}
+
+.container__3b57a {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    --custom-edge-fade-width: 0;
+    margin: calc(var(--space-4)*-1);
+    padding: var(--space-4)
+}
+
+.children__3b57a {
+    align-items: stretch;
+    flex-shrink: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    transition: -webkit-mask-image .3s linear;
+    transition: mask-image .3s linear;
+    transition: mask-image .3s linear, -webkit-mask-image .3s linear
+}
+
+.children__3b57a.scrollRight__3b57a {
+    -webkit-mask-image: linear-gradient(90deg, #000, #000 calc(100% - var(--custom-edge-fade-width)), transparent);
+    mask-image: linear-gradient(90deg, #000, #000 calc(100% - var(--custom-edge-fade-width)), transparent)
+}
+
+.children__3b57a.scrollLeft__3b57a {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 var(--custom-edge-fade-width));
+    mask-image: linear-gradient(90deg, transparent, #000 var(--custom-edge-fade-width))
+}
+
+.children__3b57a.scrollBoth__3b57a {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 var(--custom-edge-fade-width), #000 calc(100% - var(--custom-edge-fade-width)), transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 var(--custom-edge-fade-width), #000 calc(100% - var(--custom-edge-fade-width)), transparent)
+}
+
+.children__3b57a.noScroll__3b57a {
+    -webkit-mask-image: none;
+    mask-image: none
+}
+
+.children__3b57a .listItem__3b57a {
+    display: grid
+}
+
+.actions__3b57a {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    inset: 0;
+    justify-content: space-between;
+    padding: var(--space-12);
+    pointer-events: none;
+    position: absolute;
+    z-index: 1
+}
+
+.button__3b57a {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity .1s linear
+}
+
+.disabled__3b57a {
+    opacity: 0;
+    pointer-events: none
+}
+
 .immersiveBannerBlock__43ce9 {
     align-items: center;
     display: flex;
@@ -288,4 +443,11 @@
     width: fit-content
 }
 
-/*# sourceMappingURL=397de404306bc0f5.css.map*/
+.smallCardItem__02912 {
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    overflow: hidden;
+    width: 246px
+}
+
+/*# sourceMappingURL=de4abfc515935248.css.map*/

@@ -63,4 +63,14 @@
     flex-shrink: 0
 }
 
-/*# sourceMappingURL=6aa5f9593dda17bd.css.map*/
+.productCardBadge_b8a6bd {
+    display: flex;
+    flex: 1;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    min-width: 0
+}
+
+/*# sourceMappingURL=217991.031222a4d0830426.css.map*/
