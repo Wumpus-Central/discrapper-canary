@@ -26,7 +26,7 @@ var j = l(304210),
     C = l(599062),
     S = l(998694),
     y = l(415926),
-    N = l(941143),
+    N = l(29477),
     I = l(607399),
     A = l(946015),
     k = l(717421),
@@ -944,8 +944,8 @@ var eX = l(918467),
     e1 = l(39196),
     e2 = l(288106),
     e5 = l(58703),
-    e3 = l(808598),
-    e6 = l(62010),
+    e6 = l(808598),
+    e3 = l(62010),
     e8 = l(993408),
     e9 = l(598047),
     e4 = l(396583),
@@ -1092,7 +1092,7 @@ let tn = (e) => {
                                               (0, e8.HF)(t.unpublishedAt) &&
                                                   (0, i.jsx)("div", {
                                                       className: V.v0,
-                                                      children: (0, i.jsx)(e6.E, {
+                                                      children: (0, i.jsx)(e3.E, {
                                                           type: { text: O.intl.string(O.t["h/uBCR"]) },
                                                           variant: "inverted",
                                                       }),
@@ -1327,7 +1327,7 @@ let tm = function (e) {
                         null != (0, e0.XF)(e) &&
                         null != e.rewardStatus &&
                         (0, e1.HF)(e, l)?.subtype === eZ.h5.TAKEOVER &&
-                        (null == e.endsAt || null != (0, e3.X)(e.endsAt))
+                        (null == e.endsAt || null != (0, e6.X)(e.endsAt))
                       ? { type: "COLLECT_AND_CLAIM_TAKEOVER", promotion: e }
                       : null;
             })(d, f !== h ? x : null, o),

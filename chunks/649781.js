@@ -30,7 +30,7 @@ var i = n(477900),
     b = n(313537),
     P = n(352571);
 let M = [];
-var U = n(941143),
+var U = n(29477),
     w = n(717421);
 let G = { friction: 28, tension: 600 };
 function x(e) {

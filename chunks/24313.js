@@ -391,7 +391,7 @@ function e2(e) {
 }
 var e3 = i(702841),
     e7 = i(676279),
-    e8 = i(941143),
+    e8 = i(29477),
     e6 = i(717421),
     e5 = i(396583),
     e9 = (((s = {}).SINE = "sine"), (s.COSINE = "cosine"), s),

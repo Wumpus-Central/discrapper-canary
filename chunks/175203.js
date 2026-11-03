@@ -3,7 +3,7 @@ var t = s(477900),
     i = s(582128),
     n = s(503698),
     a = s.n(n),
-    o = s(941143),
+    o = s(29477),
     d = s(738678),
     c = s(12470),
     r = s(17928),
@@ -196,7 +196,7 @@ let ew = [eP.lp.ACTIVITY],
         let e1 = i.useCallback(() => {
                 null != ej && _.default.toggleLocalMute(ej, eL.x.STREAM);
             }, [ej]),
-            e8 = i.useCallback(
+            e7 = i.useCallback(
                 (e) => {
                     j?.(x, e);
                 },
@@ -208,7 +208,7 @@ let ew = [eP.lp.ACTIVITY],
                 },
                 [T, x],
             ),
-            e7 = i.useCallback(
+            e8 = i.useCallback(
                 (e, l, s) => {
                     y?.(x, e, l, s);
                 },
@@ -316,8 +316,8 @@ let ew = [eP.lp.ACTIVITY],
                                     "aria-label": e9,
                                     className: eG.lG,
                                     onDoubleClick: e2,
-                                    onContextMenu: (e) => e7(e, x.type === eP.lp.STREAM),
-                                    onClick: e8,
+                                    onContextMenu: (e) => e8(e, x.type === eP.lp.STREAM),
+                                    onClick: e7,
                                     onMouseDown: N,
                                     onKeyDown: f,
                                     focusProps: { offset: 1 },
@@ -370,7 +370,7 @@ let ew = [eP.lp.ACTIVITY],
                                                   localVideoDisabled: eV,
                                                   videoToggleState: ez,
                                                   hideAudioIcon: eF,
-                                                  onContextMenu: e7,
+                                                  onContextMenu: e8,
                                                   onToggleMute: e1,
                                                   participantUserId: ej,
                                                   channel: S,
