@@ -313,7 +313,7 @@ function q(e) {
               ],
           });
 }
-var G = t(11120);
+var G = t(702374);
 async function X(e) {
     let { appInvalid: l, submitApp: t, submitProject: n } = e;
     if (l) return { saved: !1, failedTab: "app" };

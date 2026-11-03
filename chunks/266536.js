@@ -200,7 +200,7 @@ var ex = s(289873),
 (s(667532), s(393431), s(532706), s(42231), s(232424), s(949626), s(767709), s(65162), s(508300));
 var eg = s(344390),
     ev = s(742459),
-    eS = s(452295);
+    eS = s(691426);
 async function ey() {
     let e = w.Ay.getRunningGames();
     return (
@@ -1423,8 +1423,8 @@ var eK = s(843402),
     e$ = s(859703),
     eJ = s(975571),
     e1 = s(290805),
-    e2 = s(971276),
-    e0 = s(639214),
+    e0 = s(971276),
+    e2 = s(639214),
     e5 = s(205434);
 function e3(e, t, s, l) {
     let i = (0, T.isWindows)() ? (0, G.A)(w.Ay, M.A) : null,
@@ -1511,13 +1511,13 @@ function e8(e) {
         }),
         S =
             ((t = (0, u.bG)([e$.A], () => e$.A.quests)),
-            (s = (0, e2.s)()),
+            (s = (0, e0.s)()),
             i.useMemo(() => {
                 if (null == n || !s) return null;
                 for (let e of n) {
                     let s = j.find((t) => (0, em.A)(e.id, t.windowHandle));
                     if (s?.id == null) continue;
-                    let l = (0, e0.L7)(t, s.id);
+                    let l = (0, e2.L7)(t, s.id);
                     if (null != l && l.userStatus?.enrolledAt != null && l.userStatus?.completedAt == null)
                         return { source: e, quest: l };
                 }

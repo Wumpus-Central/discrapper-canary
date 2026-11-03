@@ -15,8 +15,8 @@ var n = l(477900),
     p = l(904363),
     b = l(1665),
     x = l(442331),
-    v = l(661095),
-    y = l(743082);
+    y = l(661095),
+    v = l(743082);
 function j(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return e?.required === !0 && ("secret" !== e.type || !t);
@@ -30,68 +30,69 @@ var k = l(805942),
     w = l(782973);
 l(321073);
 var M = l(896170),
-    P = l(452295),
+    P = l(691426),
     N = l(952818),
     _ = l(760751);
-let U = ["label", "description"];
-function I(e) {
-    let { value: t, onChange: l, maxOptionsVisible: i = 6, ...s } = e;
-    a.useEffect(() => {
-        P.A.getDetectableGames();
-    }, []);
-    let u = (0, r.bG)([_.A], () => _.A.games),
-        o = (0, r.bG)([N.Ay], () =>
-            N.Ay.getRunningGames()
-                .flatMap((e) => (null != e.id ? [e.id] : []))
-                .join(","),
-        ),
-        [d, c] = a.useState(""),
-        f = a.useMemo(() => {
-            let e = new Set(),
-                t = [];
-            for (let l of u)
-                e.has(l.id) ||
-                    (e.add(l.id),
-                    t.push({
-                        id: l.id,
-                        value: l.id,
-                        label: l.name,
-                        description: l.aliases.length > 0 ? l.aliases.join(", ") : void 0,
-                    }));
-            return t;
-        }, [u]),
-        g = a.useMemo(() => {
-            var e, l, n, a;
-            let r, i, s, u;
+let I = ["label", "description"];
+function U(e) {
+    let t,
+        l,
+        i,
+        { value: s, onChange: u, maxOptionsVisible: o = 6, ...d } = e,
+        { allOptions: c, runningIds: f } =
+            (a.useEffect(() => {
+                P.A.getDetectableGames();
+            }, []),
+            (t = (0, r.bG)([_.A], () => _.A.games)),
+            (l = (0, r.bG)([N.Ay], () =>
+                N.Ay.getRunningGames()
+                    .flatMap((e) => (null != e.id ? [e.id] : []))
+                    .join(","),
+            )),
+            (i = a.useMemo(() => {
+                let e = new Set(),
+                    l = [];
+                for (let n of t)
+                    e.has(n.id) ||
+                        (e.add(n.id),
+                        l.push({
+                            id: n.id,
+                            value: n.id,
+                            label: n.name,
+                            description: n.aliases.length > 0 ? n.aliases.join(", ") : void 0,
+                        }));
+                return l;
+            }, [t])),
+            a.useMemo(() => ({ allOptions: i, runningIds: l.split(",") }), [i, l])),
+        [g, h] = a.useState(""),
+        p = a.useMemo(() => {
+            let e, t, l, n;
             return (
-                (e = f),
-                (l = d),
-                (n = o.split(",")),
-                (r = new Set((a = t))),
-                (s = new Set(
-                    (i =
-                        "" === l.trim()
-                            ? e.filter((e) => r.has(e.value) || n.includes(e.value))
-                            : (0, M.Ht)([...e], l, { keys: U }).slice(0, 50)).map((e) => e.value),
+                (e = new Set(s)),
+                (l = new Set(
+                    (t =
+                        "" === g.trim()
+                            ? c.filter((t) => e.has(t.value) || f.includes(t.value))
+                            : (0, M.Ht)([...c], g, { keys: I }).slice(0, 50)).map((e) => e.value),
                 )),
-                (u = a
-                    .filter((e) => !s.has(e))
-                    .map((t) => e.find((e) => e.value === t) ?? { id: t, value: t, label: t })),
-                (0, E.U5)([...i, ...u], a)
+                (n = s
+                    .filter((e) => !l.has(e))
+                    .map((e) => c.find((t) => t.value === e) ?? { id: e, value: e, label: e })),
+                (0, E.U5)([...t, ...n], s)
             );
-        }, [f, d, o, t]);
+        }, [c, g, f, s]);
     return (0, n.jsx)(m.Z, {
-        ...s,
+        ...d,
         selectionMode: "multiple",
         wrapTags: !0,
         fullWidth: !0,
-        value: [...t],
-        options: g,
-        maxOptionsVisible: i,
+        value: [...s],
+        options: p,
+        maxOptionsVisible: o,
         customMatchSorter: q,
-        onQueryChange: (e) => c(e.target.value),
+        onQueryChange: (e) => h(e.target.value),
         onSelectionChange: (e) => {
-            (c(""), l(e));
+            (h(""), u(e));
         },
     });
 }
@@ -109,7 +110,7 @@ function R(e) {
         "data-conjure-game-setting": t.key,
         children: [
             (0, n.jsx)(d.E, { variant: "body-sm/normal", color: "text-default", children: h }),
-            (0, n.jsx)(I, {
+            (0, n.jsx)(U, {
                 label: t.label,
                 hideLabel: !0,
                 placeholder: S.intl.string(C.default["74Afoq"]),
@@ -148,8 +149,8 @@ function G(e) {
         T = (0, r.bG)([x.A], () => x.A.getSettings(t)),
         [w, M] = a.useState(D),
         [P, N] = a.useState({}),
-        [_, U] = a.useState(!1),
-        [I, q] = a.useState(!1),
+        [_, I] = a.useState(!1),
+        [U, q] = a.useState(!1),
         [G, O] = a.useState({}),
         L = a.useCallback((e, t) => {
             O((l) => (l[e] === t ? l : { ...l, [e]: t }));
@@ -177,27 +178,27 @@ function G(e) {
             for (let [t, l] of Object.entries(w.values)) {
                 let n = B.find((e) => e.key === t);
                 if (null == n) continue;
-                let a = (0, v.Ui)(n, l);
-                void 0 === a || (0, v.Nc)(a, (0, v.KZ)(n, H[t])) || (e[t] = a);
+                let a = (0, y.Ui)(n, l);
+                void 0 === a || (0, y.Nc)(a, (0, y.KZ)(n, H[t])) || (e[t] = a);
             }
             let t = {};
             for (let [e, l] of Object.entries(w.secrets)) "" !== l.trim() && (t[e] = l.trim());
-            return { ...(Object.keys(e).length > 0 ? { values: e } : {}), ...(0, v.mU)(B, t) };
+            return { ...(Object.keys(e).length > 0 ? { values: e } : {}), ...(0, y.mU)(B, t) };
         }, [w, B, H]),
         ee = B.some((e) => "game" === e.type && !0 === G[e.key]),
         et = (null != X.values || null != X.secrets) && !ee,
         el = a.useCallback(async () => {
             if (ee) return !1;
             if (!et || _) return !0;
-            (U(!0), q(!1));
+            (I(!0), q(!1));
             try {
-                let { rebuildRequired: e } = await (0, y.nU)(t, X);
+                let { rebuildRequired: e } = await (0, v.nU)(t, X);
                 return (
                     !(function (e, t) {
                         let { rebuildRequired: l, notifyAgent: n } = t;
                         n || k.A.hasPendingSettingsRequest(e)
                             ? (0, A.sendUserMessage)(e, S.intl.string(C.default["08bsJL"]))
-                            : l && (0, y.ss)(e);
+                            : l && (0, v.ss)(e);
                     })(t, { rebuildRequired: e, notifyAgent: g }),
                     M(D),
                     N({}),
@@ -207,7 +208,7 @@ function G(e) {
             } catch {
                 return (q(!0), !1);
             } finally {
-                U(!1);
+                I(!1);
             }
         }, [et, ee, g, p, t, _, X]);
     function en(e) {
@@ -411,7 +412,7 @@ function G(e) {
                   e.name,
               );
     }
-    let es = I
+    let es = U
             ? (0, n.jsx)(d.E, {
                   variant: "body-xs/normal",
                   color: "text-feedback-critical",
