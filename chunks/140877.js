@@ -1,90 +1,101 @@
-n.d(t, { A: () => _ });
-var r = n(477900),
-    i = n(582128),
+n.d(t, { A: () => C, e: () => _ });
+var r,
+    i = n(477900),
+    l = n(582128),
     s = n(702841),
     a = n(834730),
-    l = n(287809),
-    u = n(24482),
-    o = n(298072),
-    d = n(993408),
-    c = n(740076),
+    u = n(287809),
+    o = n(24482),
+    d = n(298072),
+    c = n(993408),
+    f = n(740076),
     I = n(466459),
-    f = n(623373),
-    v = n(219103),
-    p = n(561769),
+    v = n(623373),
+    p = n(506742),
+    m = n(219103),
+    A = n(561769),
     g = n(57020),
-    m = n(105292),
-    A = n(178287);
+    E = n(105292),
+    h = n(178287),
+    _ = (((r = {}).INLINE = "INLINE"), (r.STACKED = "STACKED"), r);
 function x(e) {
-    let { product: t, prioritizedCurrency: n } = e,
-        o = (0, s.bG)([l.default], () => l.default.getCurrentUser()),
-        f = u.Ay.canUseCollectibles(o),
-        p = (0, d.xM)(o),
-        x = null != p,
-        { isDisabled: _ } = (0, c.I)(t.skuId),
-        { isPurchased: h, isPartiallyOwnedBundle: E } = (0, I.h)(t),
-        C = (0, d.G0)(t),
-        b = (0, d.tt)(t),
+    let { product: t, prioritizedCurrency: n, promoPriceLayout: r } = e,
+        d = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
+        v = o.Ay.canUseCollectibles(d),
+        A = (0, c.xM)(d),
+        _ = null != A,
+        { isDisabled: x } = (0, f.I)(t.skuId),
+        { isPurchased: C, isPartiallyOwnedBundle: b } = (0, I.h)(t),
+        R = (0, c.G0)(t),
+        k = (0, c.tt)(t),
         {
-            checkoutEligiblePrices: k,
-            hasSufficientOrbs: R,
-            shouldCheckoutWithOrbs: y,
-        } = (0, g.F)({ product: t, hasShopDiscount: x, prioritizedCurrency: n }),
-        j = k[0]?.currency,
-        T = i.useMemo(() => (0, d.fT)(t, x, j), [t, x, j]);
-    return _
-        ? (0, r.jsx)(a.E, {
-              variant: "body-md/medium",
-              color: "text-muted",
-              lineClamp: 1,
-              children: m.intl.string(m.t.wu4gyV),
+            checkoutEligiblePrices: y,
+            checkoutEligibleFormerPrices: S,
+            hasSufficientOrbs: T,
+            shouldCheckoutWithOrbs: j,
+        } = (0, g.F)({ product: t, hasShopDiscount: _, prioritizedCurrency: n }),
+        O = y[0]?.currency,
+        P = l.useMemo(() => (0, c.fT)(t, _, O), [t, _, O]);
+    if (x)
+        return (0, i.jsx)(a.E, {
+            variant: "body-md/medium",
+            color: "text-muted",
+            lineClamp: 1,
+            children: E.intl.string(E.t.wu4gyV),
+        });
+    if (b)
+        return (0, i.jsx)(a.E, {
+            variant: "body-md/medium",
+            color: "text-muted",
+            lineClamp: 1,
+            children: E.intl.string(E.t.BEjTij),
+        });
+    if (C && !(R && !v))
+        return (0, i.jsx)(a.E, {
+            variant: "body-md/medium",
+            color: "text-muted",
+            lineClamp: 1,
+            children: E.intl.string(E.t["6cfuDj"]),
+        });
+    if (k)
+        return (0, i.jsx)(a.E, {
+            variant: "body-md/semibold",
+            color: "text-strong",
+            lineClamp: 1,
+            children: E.intl.string(E.t.nBtvYB),
+        });
+    if (R)
+        return (0, i.jsx)(a.E, {
+            variant: "body-md/semibold",
+            color: "text-strong",
+            lineClamp: 1,
+            children: E.intl.string(E.t.rt69oo),
+        });
+    if (0 === y.length) return null;
+    let L = S[0],
+        N = null != L,
+        V = N && "STACKED" === r,
+        D = j && !T ? h.cR : void 0,
+        M = (0, i.jsx)(m.x, {
+            priceAmount: y[0].amount,
+            priceCurrency: y[0].currency,
+            discount: N ? c.rr : P,
+            discountIconConfig: _ ? { displayMode: "default", source: A ?? c.D0.NITRO, size: "sm" } : void 0,
+            className: V ? h.wC : D,
+            variant: "body-md/semibold",
+        });
+    return N
+        ? (0, i.jsxs)("div", {
+              className: V ? h.rV : h.KQ,
+              children: [(0, i.jsx)(p.a, { price: L, variant: "body-md/medium", className: V ? h.ug : void 0 }), M],
           })
-        : E
-          ? (0, r.jsx)(a.E, {
-                variant: "body-md/medium",
-                color: "text-muted",
-                lineClamp: 1,
-                children: m.intl.string(m.t.BEjTij),
-            })
-          : h && !(C && !f)
-            ? (0, r.jsx)(a.E, {
-                  variant: "body-md/medium",
-                  color: "text-muted",
-                  lineClamp: 1,
-                  children: m.intl.string(m.t["6cfuDj"]),
-              })
-            : b
-              ? (0, r.jsx)(a.E, {
-                    variant: "body-md/semibold",
-                    color: "text-strong",
-                    lineClamp: 1,
-                    children: m.intl.string(m.t.nBtvYB),
-                })
-              : C
-                ? (0, r.jsx)(a.E, {
-                      variant: "body-md/semibold",
-                      color: "text-strong",
-                      lineClamp: 1,
-                      children: m.intl.string(m.t.rt69oo),
-                  })
-                : 0 === k.length
-                  ? null
-                  : (0, r.jsx)(v.x, {
-                        priceAmount: k[0].amount,
-                        priceCurrency: k[0].currency,
-                        discount: T,
-                        discountIconConfig: x
-                            ? { displayMode: "default", source: p ?? d.D0.NITRO, size: "sm" }
-                            : void 0,
-                        className: y && !R ? A.c : void 0,
-                        variant: "body-md/semibold",
-                    });
+        : M;
 }
-let _ = function (e) {
-    let { skuId: t, prioritizedCurrency: n } = e,
-        i = (0, p.Vm)(t),
-        s = (0, o.Q)(i);
-    if (null == i) return null;
-    let a = (0, f.rb)(i, s);
-    return (0, r.jsx)(x, { product: a, prioritizedCurrency: n });
+let C = function (e) {
+    let { skuId: t, prioritizedCurrency: n, promoPriceLayout: r = "INLINE" } = e,
+        l = (0, A.Vm)(t),
+        s = (0, d.Q)(l);
+    if (null == l) return null;
+    let a = (0, v.rb)(l, s);
+    return (0, i.jsx)(x, { product: a, prioritizedCurrency: n, promoPriceLayout: r });
 };

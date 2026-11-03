@@ -2,9 +2,9 @@ n.d(t, { M: () => d, t: () => o });
 var r = n(477900);
 n(582128);
 var i = n(192308),
-    s = n(440938),
-    a = n(4227),
-    l = n(466459);
+    l = n(440938),
+    s = n(4227),
+    a = n(466459);
 let u = "collectibles shop product details modal",
     o = (e) => {
         let {
@@ -12,17 +12,17 @@ let u = "collectibles shop product details modal",
             category: o,
             shouldCheckoutWithOrbs: d,
             analyticsSource: c,
-            analyticsLocations: I,
-            returnRef: f,
+            analyticsLocations: f,
+            returnRef: I,
             tab: v,
             giftRecipient: p,
-            giftingOrigin: g,
-            cardId: m,
-            sessionId: A,
-            tilePosition: x,
+            giftingOrigin: m,
+            cardId: A,
+            sessionId: g,
+            tilePosition: E,
         } = e;
         if (t.isCategoryReward) {
-            let { isPurchased: e } = (0, l.o)(a.A, t);
+            let { isPurchased: e } = (0, a.o)(s.A, t);
             if (!e) return;
         }
         (0, i.openModalLazy)(
@@ -158,7 +158,7 @@ let u = "collectibles shop product details modal",
                     n.e("58353"),
                     n.e("17256"),
                     n.e("377016"),
-                    n.e("907253"),
+                    n.e("161560"),
                     n.e("131859"),
                     n.e("60955"),
                     n.e("273350"),
@@ -267,6 +267,7 @@ let u = "collectibles shop product details modal",
                     n.e("102698"),
                     n.e("204744"),
                     n.e("737021"),
+                    n.e("775951"),
                     n.e("818465"),
                     n.e("971430"),
                     n.e("722460"),
@@ -436,22 +437,22 @@ let u = "collectibles shop product details modal",
                     n.e("986305"),
                     n.e("535874"),
                     n.e("864316"),
-                    n.e("649430"),
-                ]).then(n.bind(n, 610421));
+                    n.e("849750"),
+                ]).then(n.bind(n, 31029));
                 return (n) =>
-                    (0, r.jsx)(s.R9, {
-                        newValue: { cardId: m, sessionId: A, tilePosition: x },
+                    (0, r.jsx)(l.R9, {
+                        newValue: { cardId: A, sessionId: g, tilePosition: E },
                         children: (0, r.jsx)(e, {
                             ...n,
                             product: t,
                             category: o,
                             shouldCheckoutWithOrbs: d,
                             analyticsSource: c,
-                            analyticsLocations: I,
-                            returnRef: f,
+                            analyticsLocations: f,
+                            returnRef: I,
                             tab: v,
                             giftRecipient: p,
-                            giftingOrigin: g,
+                            giftingOrigin: m,
                         }),
                     });
             },

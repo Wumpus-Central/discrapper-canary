@@ -41,7 +41,7 @@ let r = {
     },
     CollectiblesPricingManager: {
         actions: ["POST_CONNECTION_OPEN"],
-        inlineRequire: () => n(85623).A,
+        inlineRequire: () => n(845864).A,
         neverLoadBeforeConnectionOpen: !0,
     },
     CommonTriggerPointManager: {
