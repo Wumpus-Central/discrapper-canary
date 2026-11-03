@@ -1541,7 +1541,7 @@ let n6 = { transform: "rotateX(180deg) translateY(-9px)" },
                     ringTarget: A,
                     offset: { top: 2, bottom: 2, right: 4 },
                     children: (0, r.jsx)("div", {
-                        className: eY()(ef.Ki, nZ.iE, nZ.ZS, { [nZ.J1]: i, [nZ.V2]: u }),
+                        className: eY()(nZ.iE, nZ.ZS, { [nZ.J1]: i, [nZ.V2]: u }),
                         children: (0, r.jsx)(el.D, {
                             ...g,
                             innerRef: A,

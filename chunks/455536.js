@@ -18815,19 +18815,19 @@ let Il = function () {
 };
 var Is = n(940856),
     Ir = n(506775),
-    Ia = n(379257),
-    Io = n(121780),
-    Iu = n(732519);
+    Ia = n(121780),
+    Io = n(379257),
+    Iu = n(961943);
 function Id() {
-    let e = Io.A.getCountryCode(),
+    let e = Ia.A.getCountryCode(),
         t = null != e ? Iu.q5[e.alpha2] : void 0;
-    Ia.A.openUrl(eb.A.getArticleURL(t ?? Iu.GF));
+    Io.A.openUrl(eb.A.getArticleURL(t ?? Iu.GF));
 }
-var Ic = n(549059);
+var Ic = n(484051);
 function Ig() {
     return (0, Ic.w)(Iu.LI);
 }
-var Im = n(834244);
+var Im = n(223708);
 function IA() {
     let e = Ig(),
         t = (0, Ir.ZP)();
@@ -18861,7 +18861,7 @@ function Ix() {
 function IT() {
     return Ig() ? V.intl.string(V.t.piqs0o) : null;
 }
-var Ip = n(604293);
+var Ip = n(543161);
 let If = [{ badgeType: T.Xi.NEW, dismissibleContent: eE.M.TINY_BRONCO_SETTINGS }],
     I_ = [];
 function II() {
@@ -19853,7 +19853,7 @@ let NK = (0, h.zZ)(S.X.SECURITY_KEYS_CATEGORY, {
     N0 = [eE.M.TINY_BRONCO_NOTICE],
     N1 = [];
 function N2() {
-    Ia.A.openUrl(Iu.M1);
+    Io.A.openUrl(Iu.M1);
 }
 var N3 = n(308645),
     N4 = n(555725),
@@ -21108,7 +21108,7 @@ function yT(e, t) {
             (t(), (0, bi.N)(e, bl.YX.LEARN_MORE));
         }, [e, t]),
         handleConfirmAge: f.useCallback(() => {
-            (Ia.A.showAgeVerificationGetStartedModal({ entryPoint: yS.q1.CONTENT_AND_SOCIAL_NOTICE }),
+            (Io.A.showAgeVerificationGetStartedModal({ entryPoint: yS.q1.CONTENT_AND_SOCIAL_NOTICE }),
                 (0, bi.N)(e, bl.YX.CONFIRM_AGE));
         }, [e]),
     };
@@ -21134,7 +21134,7 @@ function yI() {
             (window.open(eb.A.getArticleURL(e), "_blank"), (0, bi.N)(bl.YA.AGE_CONFIRMATION_NOTICE, bl.YX.LEARN_MORE));
         }, [e]),
         n = f.useCallback(() => {
-            (Ia.A.showAgeVerificationGetStartedModal({ entryPoint: yS.q1.CONTENT_AND_SOCIAL_NOTICE }),
+            (Io.A.showAgeVerificationGetStartedModal({ entryPoint: yS.q1.CONTENT_AND_SOCIAL_NOTICE }),
                 (0, bi.N)(bl.YA.AGE_CONFIRMATION_NOTICE, bl.YX.CONFIRM_AGE));
         }, []);
     return (0, p.jsx)(iK.w, {
@@ -21166,7 +21166,7 @@ let yv = (0, h.zD)(S.X.AGE_RESTRICTED_DM_SETTING, {
         },
         setValue: function (e) {
             (0, yC.p5)() && e
-                ? Ia.A.showAgeVerificationGetStartedModal({ entryPoint: yS.q1.AGE_RESTRICTED_DM_COMMANDS_SETTINGS })
+                ? Io.A.showAgeVerificationGetStartedModal({ entryPoint: yS.q1.AGE_RESTRICTED_DM_COMMANDS_SETTINGS })
                 : U.Qe.updateSetting(e);
         },
     }),
@@ -21182,7 +21182,7 @@ let yv = (0, h.zD)(S.X.AGE_RESTRICTED_DM_SETTING, {
         },
         setValue: function (e) {
             (0, yC.p5)() && e
-                ? Ia.A.showAgeVerificationGetStartedModal({ entryPoint: yS.q1.AGE_RESTRICTED_SERVERS_ACCESS_SETTINGS })
+                ? Io.A.showAgeVerificationGetStartedModal({ entryPoint: yS.q1.AGE_RESTRICTED_SERVERS_ACCESS_SETTINGS })
                 : U.Kg.updateSetting(e);
         },
     }),
@@ -21215,7 +21215,7 @@ function yU() {
     function a(e) {
         let t = Object.values(e);
         (0, yR.hK)() && t.includes(eJ.TO.SHOW)
-            ? Ia.A.showAgeVerificationGetStartedModal({ entryPoint: yS.q1.SENSITIVE_MEDIA_FILTER_SETTINGS })
+            ? Io.A.showAgeVerificationGetStartedModal({ entryPoint: yS.q1.SENSITIVE_MEDIA_FILTER_SETTINGS })
             : (0, yD.Jz)(e);
     }
     let o = [
@@ -21272,7 +21272,7 @@ function yV() {
     function a(e) {
         let t = Object.values(e);
         (0, yR.hK)() && t.includes(eJ.TO.SHOW)
-            ? Ia.A.showAgeVerificationGetStartedModal({ entryPoint: yS.q1.SENSITIVE_MEDIA_FILTER_SETTINGS })
+            ? Io.A.showAgeVerificationGetStartedModal({ entryPoint: yS.q1.SENSITIVE_MEDIA_FILTER_SETTINGS })
             : (0, y_.qY)(e);
     }
     let o = [
@@ -21464,7 +21464,7 @@ let yW = (0, h.zD)(S.X.DM_SAFETY_ALERTS_SETTING, {
                     (m = (0, IN.b8)()),
                     (A = g && !m),
                     (E = f.useCallback(() => {
-                        (Ia.A.showAgeVerificationGetStartedModal({ entryPoint: yS.q1.CONTENT_AND_SOCIAL_NOTICE }),
+                        (Io.A.showAgeVerificationGetStartedModal({ entryPoint: yS.q1.CONTENT_AND_SOCIAL_NOTICE }),
                             (0, bi.N)(bl.YA.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE, bl.YX.LEARN_MORE));
                     }, [])),
                     (h = f.useCallback(() => {
@@ -21837,7 +21837,7 @@ let v_ = (0, h.zD)(S.X.PERMISSIONS_MESSAGE_REQUESTS_SETTING, {
         setValue: function (e) {
             let t = vr.xk.getState().selectedGuildId;
             if (!e && (0, vT.w)())
-                return void Ia.A.showAgeVerificationGetStartedModal({ entryPoint: yS.q1.MESSAGE_REQUESTS_SETTINGS });
+                return void Io.A.showAgeVerificationGetStartedModal({ entryPoint: yS.q1.MESSAGE_REQUESTS_SETTINGS });
             if (t === vr.YG) {
                 var n;
                 ((n = !e),
