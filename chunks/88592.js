@@ -5,11 +5,11 @@ var l = n(811315),
     a = n(73153),
     s = n(754674);
 let u = {};
-function c(e) {
+function d(e) {
     let t = u[e];
     return t?.saveStatus === "saving" ? void 0 : t;
 }
-class d extends i.Ay.Store {
+class c extends i.Ay.Store {
     static displayName = "GuildSpaceEditorStore";
     getDraft(e) {
         return u[e]?.draft;
@@ -28,7 +28,7 @@ class d extends i.Ay.Store {
         return u[e]?.saveErrorMessage;
     }
 }
-let o = new d(a.h, {
+let o = new c(a.h, {
     GUILD_SPACE_EDIT_START: function (e) {
         let { guildId: t, space: n, seedWidgets: l = [] } = e,
             r = { header: n.header, widgets: (0, s.W$)(n.widgets) };
@@ -40,13 +40,13 @@ let o = new d(a.h, {
     },
     GUILD_SPACE_EDIT_ADD_WIDGET: function (e) {
         let { guildId: t, widget: n, insertionTarget: l } = e,
-            r = c(t);
+            r = d(t);
         if (null == r) return !1;
         r.draft = { ...r.draft, widgets: (0, s.QD)(r.draft.widgets, n, l) };
     },
     GUILD_SPACE_EDIT_MOVE_WIDGET: function (e) {
         let { guildId: t, widgetId: n, targetColumn: l, targetIndex: r } = e,
-            i = c(t);
+            i = d(t);
         if (null == i) return !1;
         let a = (0, s.Gm)(i.draft.widgets, n, l, r);
         if (null == a) return !1;
@@ -54,7 +54,7 @@ let o = new d(a.h, {
     },
     GUILD_SPACE_EDIT_REMOVE_WIDGET: function (e) {
         let { guildId: t, widgetId: n } = e,
-            l = c(t);
+            l = d(t);
         if (null == l) return !1;
         let r = l.draft.widgets.filter((e) => {
             let { id: t } = e;
@@ -65,14 +65,14 @@ let o = new d(a.h, {
     },
     GUILD_SPACE_EDIT_UPDATE_WIDGET_CONFIG: function (e) {
         let { guildId: t, widgetId: n, config: l } = e,
-            r = c(t);
+            r = d(t);
         if (null == r) return !1;
         let i = r.draft.widgets.map((e) => (e.id === n ? { ...e, config: l } : e));
         r.draft = { ...r.draft, widgets: i };
     },
     GUILD_SPACE_EDIT_UPDATE_HEADER: function (e) {
         let { guildId: t, customBanner: n } = e,
-            l = c(t);
+            l = d(t);
         if (null == l) return !1;
         l.draft = { ...l.draft, header: { ...l.draft.header, custom_banner: n } };
     },

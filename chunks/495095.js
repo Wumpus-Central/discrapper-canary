@@ -1,4 +1,4 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => g });
 var i = n(477900),
     l = n(582128),
     a = n(17928),
@@ -13,13 +13,13 @@ var i = n(477900),
     m = n(618922),
     A = n(105292),
     f = n(203221);
-function x(e) {
-    let { channel: t, position: n, setEditorRef: x } = e,
-        g = (0, a.bG)([r.Ay], () => r.Ay.keyboardModeEnabled),
-        [C, j] = (0, l.useState)(""),
-        [y, I] = (0, l.useState)(""),
+function g(e) {
+    let { channel: t, position: n, setEditorRef: g } = e,
+        x = (0, a.bG)([r.Ay], () => r.Ay.keyboardModeEnabled),
+        [C, y] = (0, l.useState)(""),
+        [j, I] = (0, l.useState)(""),
         [N, v] = (0, l.useState)((0, c.x7)("")),
-        [E, b] = (0, l.useState)(g),
+        [E, b] = (0, l.useState)(x),
         S = (0, l.useRef)(!1);
     return (0, i.jsx)(s.l, {
         className: f.kL,
@@ -29,11 +29,11 @@ function x(e) {
             maxCharacterCount: 512,
             showRemainingCharsAfterCount: 10,
             onChange: function (e, t, n) {
-                (I(t), v(n), j(u.Ay.translateInlineEmojiToSurrogates(t)));
+                (I(t), v(n), y(u.Ay.translateInlineEmojiToSurrogates(t)));
             },
             placeholder: A.intl.string(m.default.IAcEEn),
             channel: t,
-            textValue: y,
+            textValue: j,
             richValue: N,
             type: o.oU.GUILD_ROOM,
             onFocus: () => {
@@ -53,7 +53,7 @@ function x(e) {
                         (0, h.zK)(e, t.id, C, n).catch((e) => (0, p.b)()),
                         Promise.resolve({ shouldClear: !0, shouldRefocus: !1 }));
             },
-            setEditorRef: x,
+            setEditorRef: g,
             disableThemedBackground: !0,
             showValueWhenDisabled: !0,
         }),

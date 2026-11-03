@@ -13,11 +13,11 @@ var i = n(477900),
     m = n(858899),
     A = n(38021),
     f = n(367513),
-    x = n(442433),
-    g = n(148494),
+    g = n(442433),
+    x = n(148494),
     C = n(730852),
-    j = n(401843),
-    y = n(817281),
+    y = n(401843),
+    j = n(817281),
     I = n(820284),
     N = n(765671),
     v = n(475743),
@@ -67,11 +67,11 @@ var i = n(477900),
     em = n(821747),
     eA = n(418241),
     ef = n(708416),
-    ex = n(488947),
-    eg = n(12830),
+    eg = n(488947),
+    ex = n(12830),
     eC = n(125248),
-    ej = n(616356),
-    ey = n(280450),
+    ey = n(616356),
+    ej = n(280450),
     eI = n(249288),
     eN = n(696451),
     ev = n(71393),
@@ -300,7 +300,7 @@ class eJ extends l.PureComponent {
             case eW.lp.HIDDEN_STREAM:
             case eW.lp.STREAM:
                 (this.trackCallTileContextMenuImpression(e, eW.qs.STREAM),
-                    (0, x.L3)(
+                    (0, g.L3)(
                         t,
                         async () => {
                             let { default: t } = await Promise.all([
@@ -345,7 +345,7 @@ class eJ extends l.PureComponent {
                         );
                     switch (s.type) {
                         case eY.rbe.DM:
-                            return (0, x.L3)(
+                            return (0, g.L3)(
                                 t,
                                 async () => {
                                     let { default: t } = await Promise.all([
@@ -397,7 +397,7 @@ class eJ extends l.PureComponent {
                                 d,
                             );
                         case eY.rbe.GROUP_DM:
-                            return (0, x.L3)(
+                            return (0, g.L3)(
                                 t,
                                 async () => {
                                     let { default: t } = await Promise.all([
@@ -445,7 +445,7 @@ class eJ extends l.PureComponent {
                             let a = s.getGuildId();
                             return (
                                 o()(null != a, "GuildID null for guild voice channel"),
-                                (0, x.L3)(
+                                (0, g.L3)(
                                     t,
                                     async () => {
                                         let { default: t } = await Promise.all([
@@ -508,7 +508,7 @@ class eJ extends l.PureComponent {
             (0, k.eo)(n, eT.A, ev.A, eE.A, D.default)[0] &&
             (C.default.selectVoiceChannel(n.id),
             0 === l.filter((t) => (0, G._z)(t) === e.id && t.state !== eY.XYD.ENDED).length &&
-                (0, j.A9)((0, G.Iy)(e.id), { forceMultiple: t.shiftKey })),
+                (0, y.A9)((0, G.Iy)(e.id), { forceMultiple: t.shiftKey })),
             a &&
                 s === eY._Of.VIDEO &&
                 (i?.id === e.id ? f.A.selectParticipant(n.id, null) : f.A.selectParticipant(n.id, e.id)));
@@ -630,7 +630,7 @@ class eJ extends l.PureComponent {
     };
     handleToastClick = (e) => {
         (f.A.updateChatOpen(e.channel_id, !0),
-            g.A.jumpToMessage({ channelId: e.channel_id, messageId: e.id, flash: !0 }));
+            x.A.jumpToMessage({ channelId: e.channel_id, messageId: e.id, flash: !0 }));
     };
     renderChatToasts = () => {
         let { showChatToasts: e, chatOpen: t, channel: n, inCall: l } = this.props;
@@ -697,18 +697,18 @@ class eJ extends l.PureComponent {
                 forceShowControls: m,
                 awaitingRemoteSessionInfo: A,
                 currentChannelActivities: f,
-                callContainerDimensions: x,
-                guildRoomVisible: g,
+                callContainerDimensions: g,
+                guildRoomVisible: x,
                 isPlacingNote: C,
             } = this.props,
-            j = u.isGuildStageVoice(),
-            y = p === eY.DUB.MINIMUM,
-            I = y || p === eY.DUB.NORMAL,
+            y = u.isGuildStageVoice(),
+            j = p === eY.DUB.MINIMUM,
+            I = j || p === eY.DUB.NORMAL,
             N = l && s === eY._Of.VIDEO,
             v = (f?.length ?? 0) > 0 && u.isPrivate();
         this._lastIdleProps = e;
         let E = !l || !(this.popoutOpen && !this.inPopout),
-            b = !m && l && !y && e.idle,
+            b = !m && l && !j && e.idle,
             S = (0, i.jsx)(ei.A, {
                 ref: this._contentRef,
                 inCall: l,
@@ -727,13 +727,13 @@ class eJ extends l.PureComponent {
                 showParticipants: r && (!I || v),
                 popoutType: t,
                 awaitingRemoteSessionInfo: A,
-                callContainerDimensions: x,
+                callContainerDimensions: g,
             }),
             T = S;
         return (
-            g
+            x
                 ? (T = (0, i.jsx)(H.A, { channelId: u.id, popoutType: t, idle: e.idle }))
-                : j &&
+                : y &&
                   (T = (0, i.jsx)(Z.nM, {
                       channel: u,
                       inCall: l,
@@ -746,11 +746,11 @@ class eJ extends l.PureComponent {
                 renderBottomLeft: this.renderBottomLeft,
                 renderBottomCenter: this.renderBottomCenter,
                 renderBottomRight: this.renderBottomRight,
-                renderChatToasts: u.isGuildVoiceOrThread() || j ? this.renderChatToasts : void 0,
+                renderChatToasts: u.isGuildVoiceOrThread() || y ? this.renderChatToasts : void 0,
                 renderVoiceChannelEffects: this.renderVoiceChannelEffects,
                 ...e,
                 screenMessage: this.screenMessage,
-                disableGradients: !l || y,
+                disableGradients: !l || j,
                 hideControls: C,
                 idle: b,
                 children: E && (this.renderVoiceChannelAppSurface() ?? T),
@@ -761,7 +761,7 @@ class eJ extends l.PureComponent {
         let { channel: e, currentVoiceChannelApplicationId: t } = this.props;
         return null == t
             ? null
-            : (0, i.jsx)(eg.A, {
+            : (0, i.jsx)(ex.A, {
                   applicationId: t,
                   channelId: e.id,
                   guildId: e.guild_id ?? void 0,
@@ -795,9 +795,9 @@ class eJ extends l.PureComponent {
             m = l === eY._Of.VIDEO,
             A = e !== eY.DUB.NO_CHAT && e !== eY.DUB.FULL_SCREEN && null != c,
             f = eY.NJ8.ONYX,
-            x = !d || !this.popoutOpen || this.inPopout,
-            g = t.getGuildId(),
-            C = u && x && null != g;
+            g = !d || !this.popoutOpen || this.inPopout,
+            x = t.getGuildId(),
+            C = u && g && null != x;
         return (0, i.jsxs)("div", {
             className: s()(eK.iE, eq[e], eZ[r], {
                 [eK.XW]: this.popoutOpen && !this.inPopout && e !== eY.DUB.NO_CHAT && t.isPrivate(),
@@ -835,8 +835,8 @@ class eJ extends l.PureComponent {
                         ((this._channelChatRef.current = e), (this.props.channelChatRef.current = e));
                     },
                     children: [
-                        C && (0, i.jsx)(q.A, { channel: t, guildId: g, maxWidth: o }),
-                        x && a && (0, i.jsx)(eG.A, { channel: t, guild: n, maxWidth: o }),
+                        C && (0, i.jsx)(q.A, { channel: t, guildId: x, maxWidth: o }),
+                        g && a && (0, i.jsx)(eG.A, { channel: t, guild: n, maxWidth: o }),
                     ],
                 }),
             ],
@@ -847,10 +847,10 @@ let e0 = function (e) {
     let { channel: t, renderExternalHeader: n, maxHeight: a, canPopout: s = !0, popoutType: r } = e,
         { width: o = 0, ref: c } = (0, N.Ay)(),
         { width: h = 0, height: p = 0, ref: f } = (0, N.Ay)(),
-        { ref: x } = (0, N.Ay)(),
-        g = (0, W.Us)(),
+        { ref: g } = (0, N.Ay)(),
+        x = (0, W.Us)(),
         C = (0, V.A)(),
-        j = (0, d.bG)([eb.Ay], () => (C?.channelId ?? eb.Ay.getVoiceChannelId()) === t.id),
+        y = (0, d.bG)([eb.Ay], () => (C?.channelId ?? eb.Ay.getVoiceChannelId()) === t.id),
         E = t.isGuildStageVoice();
     (0, Q.A)(E);
     let {
@@ -866,9 +866,9 @@ let e0 = function (e) {
         } = (0, d.cf)(
             [eU.A],
             () => {
-                let e = g === eY.BRT.POPOUT,
+                let e = x === eY.BRT.POPOUT,
                     n = eU.A.getMode(t.id),
-                    i = eU.A.getLayout(t.id, g);
+                    i = eU.A.getLayout(t.id, x);
                 e && (n = eY._Of.VIDEO);
                 let l = n === eY._Of.VIDEO ? i : eY.DUB.MINIMUM;
                 e && l !== eY.DUB.FULL_SCREEN && (l = eY.DUB.NO_CHAT);
@@ -889,16 +889,16 @@ let e0 = function (e) {
                     }
                 );
             },
-            [g, t.id, E],
+            [x, t.id, E],
         ),
-        H = (0, d.yK)([ej.A], () => ej.A.getAllActiveStreams()),
+        H = (0, d.yK)([ey.A], () => ey.A.getAllActiveStreams()),
         { selectedStream: Y } = (0, d.cf)(
-            [ej.A],
-            () => ({ selectedStream: null != B ? ej.A.getActiveStreamForStreamKey(B.id) : null }),
+            [ey.A],
+            () => ({ selectedStream: null != B ? ey.A.getActiveStreamForStreamKey(B.id) : null }),
             [B],
         ),
         K = (0, d.bG)([ev.A], () => ev.A.getGuild(t.getGuildId())),
-        X = (0, d.bG)([ey.default], () => ey.default.getId()),
+        X = (0, d.bG)([ej.default], () => ej.default.getId()),
         { popoutWindow: q, popoutWindowAlwaysOnTop: Z } = (0, d.cf)([$.A], () => ({
             popoutWindow: $.A.getWindow(eY.MLl.CHANNEL_CALL_POPOUT),
             popoutWindowAlwaysOnTop: $.A.getIsAlwaysOnTop(eY.MLl.CHANNEL_CALL_POPOUT),
@@ -908,7 +908,7 @@ let e0 = function (e) {
         en = (0, d.bG)([D.default], () => D.default.getAwaitingRemoteSessionInfo()),
         ei = (0, d.bG)([ee.Ay], () => ee.Ay.callHeaderHeight),
         el = l.useCallback((e) => {
-            y.Ay.updatedUnsyncedSettings({ callHeaderHeight: e });
+            j.Ay.updatedUnsyncedSettings({ callHeaderHeight: e });
         }, []),
         ea = (0, d.bG)([b.A], () => b.A.getFetchState(), []),
         es = (0, v.Ay)(ea);
@@ -928,9 +928,9 @@ let e0 = function (e) {
             return null != e && null == e.position;
         }),
         em = (0, ew.j)(),
-        eA = (0, ef.d7)(t, j),
-        eg = (0, ef.kM)(t),
-        eC = (0, ex.F)(g) && eg ? eA : null,
+        eA = (0, ef.d7)(t, y),
+        ex = (0, ef.kM)(t),
+        eC = (0, eg.F)(x) && ex ? eA : null,
         { theme: eN } = (0, A.wR)();
     return (0, i.jsx)(P.f5, {
         value: ec,
@@ -945,12 +945,12 @@ let e0 = function (e) {
                             hasConnectPermission: J,
                             participantsOpen: w,
                             renderExternalHeader: n,
-                            appContext: g,
+                            appContext: x,
                             popoutWindow: q,
                             popoutWindowAlwaysOnTop: Z,
                             selectedStream: Y,
                             mode: L,
-                            inCall: j,
+                            inCall: y,
                             participants: S,
                             filteredParticipants: _,
                             participantsVersion: O,
@@ -967,7 +967,7 @@ let e0 = function (e) {
                             wrapperRef: c,
                             callContainerDimensions: { width: h, height: p },
                             callContainerRef: f,
-                            channelChatRef: x,
+                            channelChatRef: g,
                             width: o,
                             maxHeight: a,
                             forceShowControls: eo,

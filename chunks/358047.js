@@ -26,8 +26,8 @@ let R = "message_requests",
     L = !1,
     y = !1,
     D = !0,
-    v = !0,
-    b = !1,
+    b = !0,
+    v = !1,
     P = !1,
     M = {},
     U = {},
@@ -51,11 +51,11 @@ function B() {
     return E.A.getConfig({ location: "ChannelSectionStore" }).appBarToggleEnabled;
 }
 function V() {
-    return B() ? b : v;
+    return B() ? v : b;
 }
 function H(e, t) {
     (t?.trackClose === !0 && V() && !e && F() && (0, A.RQ)({ open: !1, source: A.TY.EXTERNAL, analyticsLocations: [] }),
-        B() ? (b = e) : (v = e));
+        B() ? (v = e) : (b = e));
 }
 function j(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -100,8 +100,8 @@ class K extends r.Ay.PersistedStore {
             ((L = e.isMembersOpen ?? !1),
             (y = e.isSummariesOpen ?? !1),
             (D = e.isProfileOpen ?? !0),
-            (v = e.isFriendsOpen ?? !0),
-            (b = e.isAppBarToggleOpen ?? !1),
+            (b = e.isFriendsOpen ?? !0),
+            (v = e.isAppBarToggleOpen ?? !1),
             (M = e.sidebars ?? {}),
             (U = e.guildSidebars ?? {})),
             this.syncWith([T.A], W),
@@ -112,8 +112,8 @@ class K extends r.Ay.PersistedStore {
             isMembersOpen: L,
             isSummariesOpen: y,
             isProfileOpen: D,
-            isFriendsOpen: v,
-            isAppBarToggleOpen: b,
+            isFriendsOpen: b,
+            isAppBarToggleOpen: v,
             sidebars: M,
             guildSidebars: U,
         };

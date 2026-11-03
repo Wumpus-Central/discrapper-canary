@@ -36,8 +36,8 @@ var T = n(284009),
     L = n.n(R),
     y = n(17928),
     D = n(205693),
-    v = n(506774),
-    b = n(451988),
+    b = n(506774),
+    v = n(451988),
     P = n(73153),
     M = n(77729),
     U = n(719129),
@@ -137,7 +137,7 @@ let es = new er.Vy("InputWatcher");
 class el {
     mediaEngine;
     mediaEngineStore;
-    stateChangeTimeout = new b.Ep();
+    stateChangeTimeout = new v.Ep();
     inputDetected = void 0;
     lastUpdateTime = performance.now();
     constructor(e, t) {
@@ -270,7 +270,7 @@ var eN = n(75076),
     eL = n(174459),
     ey = n(652215);
 let eD = new er.Vy("AudioEffects");
-async function ev(e, t, n) {
+async function eb(e, t, n) {
     if (!(0, ei.uF)()) return Promise.reject(Error("Audio effects querying not supported on non-Windows platforms"));
     if (!L().satisfies(M.A.os.release, ">=10.0.22000"))
         return Promise.reject(Error("Audio effects querying likely not supported on this Windows version."));
@@ -290,7 +290,7 @@ async function ev(e, t, n) {
             eL.default.track(ey.HAw.AUDIO_EFFECTS_PROBE_COMPLETED, { succeeded: !1 }));
     }
 }
-var eb = n(967347),
+var ev = n(967347),
     eP = n(617617),
     eM = n(125325),
     eU = n(353835),
@@ -428,7 +428,7 @@ let tt = {},
     tc = { [ez.dx]: nf("No Input Devices", ez.oh.AUDIO_INPUT) },
     tu = { [ez.dx]: nf("No Output Devices", ez.oh.AUDIO_OUTPUT) },
     t_ = { [ez.dx]: nf("No Video Devices", ez.oh.VIDEO_INPUT) },
-    tE = new b.Ep(),
+    tE = new v.Ep(),
     tA = !1,
     th = !1,
     tf = !1,
@@ -438,15 +438,15 @@ let tt = {},
     tT = ez.qe,
     tg = !1,
     tS = !1,
-    tN = new b.Ep(),
+    tN = new v.Ep(),
     tC = !1,
     tO = !1,
     tR = !1,
     tL = !1,
     ty = !1,
     tD = !1,
-    tv = !1,
     tb = !1,
+    tv = !1,
     tP = [],
     tM = !1,
     tU = null,
@@ -695,7 +695,7 @@ function nn(e, t) {
         eL.default.track(ey.HAw.VOICE_PROCESSING, { noise_canceller_error: e }),
         nt.has(e))
     ) {
-        tb = !0;
+        tv = !0;
         return;
     }
     e === ez.CO.KRISP_VAD_CPU_OVERUSE
@@ -798,7 +798,7 @@ function nE(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ez.x.DEFAULT,
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         i = t5(t);
-    return (Object.assign(i, e), !__OVERLAY__ && n && v.w.set(eZ, tt), i);
+    return (Object.assign(i, e), !__OVERLAY__ && n && b.w.set(eZ, tt), i);
 }
 function nA() {
     let e = t4();
@@ -897,7 +897,7 @@ async function nS(e) {
     let t = tc[e];
     if (t?.guid != null)
         try {
-            await ev(t.guid, e, e9);
+            await eb(t.guid, e, e9);
         } catch (e) {
             eq.warn("Unable to query audio effects", e);
         }
@@ -1001,7 +1001,7 @@ function nD(e) {
         effective_noise_cancellation: l,
     });
 }
-function nv() {
+function nb() {
     let e = t4(),
         t = tW.size > 0,
         n = e.inputDeviceId,
@@ -1018,20 +1018,20 @@ function nv() {
     }),
         nl());
 }
-async function nb() {
+async function nv() {
     if (!e9.supports(ez.O5.VAAPI) || window.DiscordNative?.processUtils?.getSystemInfo == null) return;
     let e = await window.DiscordNative.processUtils.getSystemInfo();
     (e.electronGPUInfo?.gpuDevice ?? []).some((e) => 4098 === e.vendorId) &&
         ((tJ = !0), (tQ = e9.supports(ez.O5.GAMESCOPE_CAPTURE)));
 }
 function nP() {
-    return (tv || !1) && !tb;
+    return (tb || !1) && !tv;
 }
 async function nM() {
     try {
         await m.Ay.ensureModule("discord_krisp");
         let e = m.Ay.requireModule("discord_krisp");
-        ((tv = !0),
+        ((tb = !0),
             (u = e.getSdkVersion?.()),
             (_ = e.getSuppressionLevel?.() ?? 100),
             e.getNcModels?.().then((e) => {
@@ -1114,7 +1114,7 @@ class nk extends y.Ay.Store {
             }),
             e9.on(D.bg.Connection, (e) => {
                 let t;
-                (nv(), t6(e), t8(e), no(e));
+                (nb(), t6(e), t8(e), no(e));
                 let n = t4();
                 (e.setAttenuation(n.attenuation, n.attenuateWhileSpeakingSelf, n.attenuateWhileSpeakingOthers),
                     e.setQoS(n.qos),
@@ -1291,7 +1291,7 @@ class nk extends y.Ay.Store {
                 t &&
                     (eq.info("Relaunching app due to voice watchdog timeout"),
                     await M.A.processUtils.setCrashReason("voice-watchdog-timeout"),
-                    v.w.set("discord_watchdog_restart_timestamp", Date.now().toString()),
+                    b.w.set("discord_watchdog_restart_timestamp", Date.now().toString()),
                     M.A.app.relaunch());
             }),
             e9.on(D.bg.VideoInputInitialized, (e) => {
@@ -1383,9 +1383,9 @@ class nk extends y.Ay.Store {
             e9.setOnVideoContainerResized((e, t, n) => {
                 P.h.dispatch({ type: "VIDEO_SIZE_UPDATE", streamId: e, dimensions: { width: t, height: n } });
             }),
-            nb(),
+            nv(),
             l.reset(),
-            (0, eb.w)().then((e) => {
+            (0, ev.w)().then((e) => {
                 if (null != e) {
                     ((tK = e.gpu_brand), (t$ = e.has_intel_hybrid_igpu), (tz = e.gpu_count));
                     let t = e.gpus ?? [];
@@ -1398,8 +1398,8 @@ class nk extends y.Ay.Store {
             e9.on(D.bg.SystemMicrophoneModeChange, (e) => {
                 ((A = e), e9.eachConnection(no), i.emitChange());
             }),
-            null != (e = v.w.get("audio")) && (v.w.set(eZ, { [ez.x.DEFAULT]: e }), v.w.remove("audio")),
-            (tt = v.w.get(eZ) ?? {}),
+            null != (e = b.w.get("audio")) && (b.w.set(eZ, { [ez.x.DEFAULT]: e }), b.w.remove("audio")),
+            (tt = b.w.get(eZ) ?? {}),
             N().each(tt, (e) => {
                 (N().defaultsDeep(e, e6()),
                     null != e.modeOptions &&
@@ -1422,10 +1422,10 @@ class nk extends y.Ay.Store {
                           ((e.ncUseKrispSettingVersion = 1), (e.noiseSuppression = !1), (e.noiseCancellation = !0)));
             }),
             nA(),
-            ((0, p.isWindows)() || (0, p.isLinux)() || (0, p.isMac)()) && !__OVERLAY__ && !tD && !tv
+            ((0, p.isWindows)() || (0, p.isLinux)() || (0, p.isMac)()) && !__OVERLAY__ && !tD && !tb
                 ? ((tD = !0), nM())
                 : (0, p.isWeb)() && e9.supports(ez.O5.NOISE_CANCELLATION)
-                  ? ((tv = !0), i.emitChange())
+                  ? ((tb = !0), i.emitChange())
                   : (0, p.isWeb)() && nE({ noiseCancellation: !1 }),
             (0, p.isLinux)() && nU(),
             ny(),
@@ -1771,8 +1771,8 @@ class nk extends y.Ay.Store {
             inputDevices: tc,
             outputDevices: tu,
             appSupported: tY,
-            krispModuleLoaded: tv,
-            krispFatalError: tb,
+            krispModuleLoaded: tb,
+            krispFatalError: tv,
             krispVersion: u,
             krispSuppressionLevel: _,
             goLiveSource: a,
@@ -2142,12 +2142,12 @@ let nB = (i = new nk(P.h, {
             (t6(e), no(e));
         }),
             e9.setAudioInputBypassSystemProcessing(n.bypassSystemInputProcessing),
-            nv());
+            nb());
     },
     AUDIO_SET_ECHO_CANCELLATION: function (e) {
         let t = nE({ echoCancellation: e.enabled }),
             n = eB.A.hasEchoCancellation(t.inputDeviceId) || t.echoCancellation;
-        (e9.eachConnection((e) => e.setEchoCancellation(n)), nv(), nD(e.location));
+        (e9.eachConnection((e) => e.setEchoCancellation(n)), nb(), nD(e.location));
     },
     AUDIO_SET_SIDECHAIN_COMPRESSION: function (e) {
         let t;
@@ -2159,23 +2159,23 @@ let nB = (i = new nk(P.h, {
     },
     AUDIO_SET_LOOPBACK: function (e) {
         let { enabled: t, loopbackReason: n } = e;
-        return (t ? tW.add(n) : tW.delete(n), nv());
+        return (t ? tW.add(n) : tW.delete(n), nb());
     },
     AUDIO_SET_NOISE_SUPPRESSION: function (e) {
         let t = nE({ noiseSuppression: e.enabled }),
             n = eB.A.hasNoiseSuppression(t.inputDeviceId) || t.noiseSuppression;
-        (e9.eachConnection((e) => e.setNoiseSuppression(n)), nv(), nD(e.location));
+        (e9.eachConnection((e) => e.setNoiseSuppression(n)), nb(), nD(e.location));
     },
     AUDIO_SET_AUTOMATIC_GAIN_CONTROL: function (e) {
         let t = nE({ automaticGainControl: e.enabled });
-        (e9.eachConnection((e) => na(e, t.automaticGainControl)), nv(), nD(e.location));
+        (e9.eachConnection((e) => na(e, t.automaticGainControl)), nb(), nD(e.location));
     },
     AUDIO_SET_NOISE_CANCELLATION: function (e) {
         let t = nE({ noiseCancellation: e.enabled });
-        (e9.eachConnection((e) => ns(e, t.noiseCancellation)), nv(), nD(e.location));
+        (e9.eachConnection((e) => ns(e, t.noiseCancellation)), nb(), nD(e.location));
     },
     AUDIO_SET_KRISP_MODEL_OVERRIDE: function (e) {
-        (eO.A.setKrispModelOverride(e.model), (E = e.model), nv());
+        (eO.A.setKrispModelOverride(e.model), (E = e.model), nb());
     },
     AUDIO_SET_DISPLAY_SILENCE_WARNING: function (e) {
         nE({ silenceWarning: e.enabled });
@@ -2254,7 +2254,7 @@ let nB = (i = new nk(P.h, {
         nE({ inputVolume: t7(t), outputVolume: n });
     },
     AUDIO_RESET: function () {
-        (v.w.remove(eZ), location.reload());
+        (b.w.remove(eZ), location.reload());
     },
     AUDIO_INPUT_DETECTED: function (e) {
         let { inputDetected: t } = e;
@@ -2350,8 +2350,8 @@ let nB = (i = new nk(P.h, {
             (tc = t.inputDevices),
             (tu = t.outputDevices),
             (tY = t.appSupported),
-            (tv = t.krispModuleLoaded),
-            (tb = t.krispFatalError),
+            (tb = t.krispModuleLoaded),
+            (tv = t.krispFatalError),
             (u = t.krispVersion),
             (ta = t.goLiveContext));
     },
@@ -2407,7 +2407,7 @@ let nB = (i = new nk(P.h, {
             let i = e6();
             return ((e[n] = N().merge(i, t[n])), e);
         }, {})),
-            v.w.set(eZ, tt),
+            b.w.set(eZ, tt),
             nA());
     },
     CHANNEL_DELETE: function () {
@@ -2418,7 +2418,7 @@ let nB = (i = new nk(P.h, {
         if (e.code === ez.CO.KRISP_CPU_OVERUSE) {
             ((t1.noiseCancellation = !1), (t1.noiseSuppression = !0));
             let e = t4();
-            return (e9.eachConnection((t) => ns(t, e.noiseCancellation)), nv(), nD(), !0);
+            return (e9.eachConnection((t) => ns(t, e.noiseCancellation)), nb(), nD(), !0);
         }
         return !1;
     },

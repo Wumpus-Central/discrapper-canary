@@ -1,4 +1,4 @@
-n.d(t, { E: () => g });
+n.d(t, { E: () => y });
 var l = n(477900),
     i = n(582128),
     r = n(403581),
@@ -15,15 +15,15 @@ var l = n(477900),
     f = n(281044),
     E = n(758476),
     S = n(105292);
-function g(e) {
-    let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: g } = (0, C.i)(),
+function y(e) {
+    let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: y } = (0, C.i)(),
         {
-            activeSubscription: I,
-            isPremium: A,
-            isGift: y,
-            checkoutPriceOptions: x,
-            isInOneStepSubscriptionCheckout: P,
-            shouldDisallowPlanSelection: v,
+            activeSubscription: g,
+            isPremium: I,
+            isGift: A,
+            checkoutPriceOptions: P,
+            isInOneStepSubscriptionCheckout: v,
+            shouldDisallowPlanSelection: x,
             verifiedTrialId: _,
             effectivePlanGroup: T,
         } = (0, f.t4)((n) => ({
@@ -36,34 +36,34 @@ function g(e) {
             verifiedTrialId: n.getVerifiedTrialId({ trialId: e.trialId }),
             effectivePlanGroup: n.getEffectivePlanGroup({ planGroup: e.planGroup }),
         })),
-        N = (0, h.A)(),
-        b = e.handlePaymentSourceAdd,
+        b = (0, h.A)(),
+        N = e.handlePaymentSourceAdd,
         j = null != e.openInvoiceId,
         R = null == e.initialPlanId && null == e.subscriptionTier,
-        O = i.useMemo(() => !v && (P ? R && A : A), [P, R, A, v]),
+        O = i.useMemo(() => !x && (v ? R && I : I), [v, R, I, x]),
         M = e.handleStepChange,
-        L = (0, d.J$)(x.paymentSourceId),
+        L = (0, d.J$)(P.paymentSourceId),
         k = (0, C.R)({ hasOpenInvoice: j ?? !1 }),
-        w = null != I && !y,
+        w = null != g && !A,
         D = i.useCallback(
             () =>
                 w
                     ? (0, l.jsx)(c.A, {
-                          handlePaymentSourceAdd: b,
+                          handlePaymentSourceAdd: N,
                           planGroup: T,
                           hasOpenInvoice: j,
                           isInPastDueCheckout: k,
                       })
                     : (0, l.jsx)(o._, {
-                          handlePaymentSourceAdd: b,
+                          handlePaymentSourceAdd: N,
                           handleStepChange: M,
                           planGroup: T,
                           verifiedTrialId: _,
                           reviewWarningMessage: e.reviewWarningMessage,
                       }),
-            [b, w, T, _, e.reviewWarningMessage, j, k, M],
+            [N, w, T, _, e.reviewWarningMessage, j, k, M],
         ),
-        U = null != g ? g.id : void 0,
+        U = null != y ? y.id : void 0,
         G = i.useMemo(() => ({ user_trial_offer_id: U }), [U]),
         F = i.useMemo(
             () =>
@@ -91,14 +91,14 @@ function g(e) {
                                 : (0, d.ff)(null, n);
                     return S.intl.string(S.t.YScQSF);
                 })({
-                    isGift: y,
-                    selectedPlan: N,
-                    premiumSubscription: I,
+                    isGift: A,
+                    selectedPlan: b,
+                    premiumSubscription: g,
                     planGroup: T,
                     isPrepaidPaymentSource: L,
                     isInPastDueCheckout: k,
                 }),
-            [y, N, I, L, k, T],
+            [A, b, g, L, k, T],
         ),
         B = i.useMemo(
             () =>
@@ -116,17 +116,17 @@ function g(e) {
             [t, F],
         ),
         { claimableRewards: H } = (0, a.Pv)(),
-        W = (0, u.px)(N, y, H),
+        W = (0, u.px)(b, A, H),
         V = i.useCallback(
             () =>
-                P
+                v
                     ? void M(s.pn.SKU_SELECT)
                     : n
                       ? void M(s.pn.ADD_PAYMENT_STEPS)
                       : W
                         ? void M(s.pn.SELECT_FREE_SKU)
                         : M(s.pn.PLAN_SELECT),
-            [M, P, W, n],
+            [M, v, W, n],
         ),
         Y = i.useMemo(
             () => ({

@@ -1,4 +1,4 @@
-e.exports = {
+d.exports = {
     Ie: "empty__99e7c",
     TK: "headerText__99e7c",
     _e: "privateChannelsHeaderContainer__99e7c",

@@ -26,8 +26,8 @@ var i = n(121197),
     L = n(353202),
     y = n(317525),
     D = n(71393),
-    v = n(403362),
-    b = n(891897),
+    b = n(403362),
+    v = n(891897),
     P = n(652215),
     M = n(746080);
 async function U(e) {
@@ -87,7 +87,7 @@ async function U(e) {
             case M.VV.GUILD_SPACE:
                 return (0, N.tT)(i, "isAccessibleChannelOrThreadPath");
             default:
-                (0, v.xb)(n);
+                (0, b.xb)(n);
         }
     let s = o.A.getChannel(n);
     return (
@@ -95,7 +95,7 @@ async function U(e) {
             (await L.A.loadThread(n),
             null == (s = o.A.getChannel(n)) && t === P.ME && (s = await c.A.openChannel(n)),
             null != s)) &&
-        (0, b.A)(s)
+        (0, v.A)(s)
     );
 }
 var w = n(9588);

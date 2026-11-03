@@ -44,9 +44,9 @@ function C(e) {
             onInteraction: y,
         } = e,
         T = r.find((e) => e.ownerId === n?.id) ?? null,
-        x = b(t, n, r),
-        _ = (0, d.A)(T, C),
-        I = (0, m.E)({
+        _ = b(t, n, r),
+        I = (0, d.A)(T, C),
+        R = (0, m.E)({
             disableChangeWindows: v,
             stream: T,
             showReportOption: c,
@@ -65,7 +65,7 @@ function C(e) {
             "aria-label": null != T ? E.intl.string(E.t.S5anIc) : E.intl.string(E.t.fjBNo1),
             children: [
                 (0, i.jsx)(a.rX, {
-                    children: x.map((e) => {
+                    children: _.map((e) => {
                         let { stream: t, username: n } = e;
                         return (0, i.jsx)(
                             a.Dr,
@@ -80,8 +80,8 @@ function C(e) {
                         );
                     }),
                 }),
-                l ? null : I,
-                l ? null : (0, i.jsx)(a.rX, { children: _ }),
+                l ? null : R,
+                l ? null : (0, i.jsx)(a.rX, { children: I }),
             ],
         }),
     });

@@ -26,8 +26,8 @@ let C = new A.A("ChannelStore"),
     L = {},
     y = {},
     D = null,
-    v = {},
     b = {},
+    v = {},
     P = {},
     M = 0,
     U = {},
@@ -105,7 +105,7 @@ function j(e, t, n) {
     C.verbose(`hydration complete (guild: ${e}, channels: ${s.length}, guilds_loaded: ${V})`);
 }
 function W(e, t, n) {
-    if (!Object.hasOwn(R, e) && !Object.hasOwn(y, e) && !Object.hasOwn(v, e) && !Object.hasOwn(w, e) && 1 === t) {
+    if (!Object.hasOwn(R, e) && !Object.hasOwn(y, e) && !Object.hasOwn(b, e) && !Object.hasOwn(w, e) && 1 === t) {
         let i = u.A.getBasicChannel(e);
         i?.guild_id != null && j(i.guild_id, t, n);
     }
@@ -115,13 +115,13 @@ function Y(e) {
         for (let t of p.default.keys(L[e])) delete R[t];
         delete L[e];
     }
-    null != b[e] && delete b[e];
+    null != v[e] && delete v[e];
 }
 function K(e) {
-    return (W(e, 0, "getBasicChannel"), R[e] ?? y[e] ?? v[e] ?? w[e] ?? u.A.getBasicChannel(e));
+    return (W(e, 0, "getBasicChannel"), R[e] ?? y[e] ?? b[e] ?? w[e] ?? u.A.getBasicChannel(e));
 }
 function $(e) {
-    return (W(e, 1, "getChannel"), R[e] ?? y[e] ?? v[e] ?? w[e] ?? F[e]);
+    return (W(e, 1, "getChannel"), R[e] ?? y[e] ?? b[e] ?? w[e] ?? F[e]);
 }
 function z(e) {
     if (e.isPrivate()) {
@@ -138,7 +138,7 @@ function X(e) {
 }
 function q(e) {
     let t = R[e.parent_id];
-    ((v[e.id] = e.merge({ nsfw: t?.nsfw === !0, parentChannelThreadType: t?.type })),
+    ((b[e.id] = e.merge({ nsfw: t?.nsfw === !0, parentChannelThreadType: t?.type })),
         e.isScheduledForDeletion() && l.h.dispatch({ type: "THREAD_DELETE", channel: e }));
 }
 function Z(e) {
@@ -147,7 +147,7 @@ function Z(e) {
         (L[n] = L[n] ?? {}),
         (L[n][t] = e),
         (U[n] = (U[n] ?? 0) + 1),
-        null != e.linkedLobby ? ((b[n] = b[n] ?? {}), (b[n][t] = e)) : delete b[n]?.[t]);
+        null != e.linkedLobby ? ((v[n] = v[n] ?? {}), (v[n][t] = e)) : delete v[n]?.[t]);
 }
 function Q(e) {
     let { id: t, channels: n, threads: i } = e;
@@ -182,16 +182,16 @@ function et(e) {
     let t = e.guild_id;
     (e.id in y && delete y[e.id],
         e.id in R && delete R[e.id],
-        e.id in v && delete v[e.id],
+        e.id in b && delete b[e.id],
         null != t &&
-            (null != L[t] && e.id in L[t] && delete L[t][e.id], null != b[t] && e.id in b[t] && delete b[t][e.id]),
+            (null != L[t] && e.id in L[t] && delete L[t][e.id], null != v[t] && e.id in v[t] && delete v[t][e.id]),
         null == e.guild_id || f.Le.has(e.type)
             ? (0, f.Gw)(e.type) && (M += 1)
             : (U[e.guild_id] = (U[e.guild_id] ?? 0) + 1));
 }
 function en(e) {
     let { channel: t } = e,
-        n = R[t.id] ?? y[t.id] ?? v[t.id];
+        n = R[t.id] ?? y[t.id] ?? b[t.id];
     if (null == n) return !1;
     (et(n),
         (function (e) {
@@ -202,7 +202,7 @@ function en(e) {
 }
 function ei(e) {
     let { messages: t } = e;
-    for (let e of t) null != e.thread && !(e.thread.id in v) && f.A_.has(e.thread.type) && q((0, f.UE)(e.thread));
+    for (let e of t) null != e.thread && !(e.thread.id in b) && f.A_.has(e.thread.type) && q((0, f.UE)(e.thread));
 }
 function er(e) {
     let { data: t } = e;
@@ -223,7 +223,7 @@ function er(e) {
     });
 }
 function ea(e) {
-    null != e && !(e.id in v) && f.A_.has(e.type) && q((0, f.UE)(e));
+    null != e && !(e.id in b) && f.A_.has(e.type) && q((0, f.UE)(e));
 }
 function es() {
     for (let e in ((w = {}), h.A.getFavoriteChannels())) {
@@ -265,7 +265,7 @@ class el extends s.Ay.Store {
     }
     getSortedLinkedChannelsForGuild(e) {
         return r()
-            .values(b[e] ?? O)
+            .values(v[e] ?? O)
             .sort((e, t) => p.default.compare(e.id, t.id));
     }
     getSortedPrivateChannels() {
@@ -295,16 +295,16 @@ class el extends s.Ay.Store {
     }
     getAllThreadsForParent(e) {
         return r()
-            .values(v)
+            .values(b)
             .filter((t) => t.parent_id === e);
     }
     getAllThreadsForGuild(e) {
         return r()
-            .values(v)
+            .values(b)
             .filter((t) => t.guild_id === e);
     }
     getInitialOverlayState() {
-        return { ...R, ...y, ...v };
+        return { ...R, ...y, ...b };
     }
     getDebugInfo() {
         return {
@@ -326,7 +326,7 @@ let ed = new el(l.h, {
         ((R = {}),
             (L = {}),
             (U = {}),
-            (b = {}),
+            (v = {}),
             t.forEach((e) => {
                 if ("unavailable" === e.data_mode)
                     (C.fileOnly(`Restoring guild channels b/c unavailable in bg sync, for ${e.id} #:${eo(e.id)}`),
@@ -376,7 +376,7 @@ let ed = new el(l.h, {
             return e.nsfw !== t?.nsfw || e.type !== t?.type;
         });
         for (let t of e.channels) z(t);
-        t && Object.values(v).forEach((e) => z(e));
+        t && Object.values(b).forEach((e) => z(e));
     },
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { lazyPrivateChannels: t } = e;
@@ -387,8 +387,8 @@ let ed = new el(l.h, {
         for (let n of ((P = {}),
         (R = {}),
         (L = {}),
-        (b = {}),
         (v = {}),
+        (b = {}),
         (U = {}),
         (F = {}),
         (x = {}),
@@ -440,10 +440,10 @@ let ed = new el(l.h, {
             (R = {}),
             (L = {}),
             (U = {}),
-            (b = {}),
+            (v = {}),
             (y = {}),
             (F = {}),
-            (v = {}),
+            (b = {}),
             (G = new Set()),
             (x = {}),
             (k = Date.now()));

@@ -8,8 +8,8 @@ var r = n(214947),
     c = n(460905),
     g = n(183623),
     u = n(861004),
-    m = n(24482),
-    d = n(202541),
+    d = n(24482),
+    m = n(202541),
     x = n(88001),
     h = n(899082),
     T = n(105292);
@@ -25,13 +25,13 @@ let p = [
             Icon: l.UploadIcon,
             getText: () =>
                 T.intl.formatToPlainString(T.t.p8QVLT, {
-                    maxUploadPremium: (0, m.EJ)(d.PremiumTypes.TIER_2, { useSpace: !1 }),
+                    maxUploadPremium: (0, d.EJ)(m.PremiumTypes.TIER_2, { useSpace: !1 }),
                 }),
         },
         { Icon: o.i, getText: () => T.intl.string(T.t["taMwg/"]) },
         { Icon: c.n, getText: () => T.intl.string(T.t.KjrZ8Z) },
         { Icon: g.F, getText: () => T.intl.string(T.t.W180bY) },
-        { Icon: s._, getText: () => T.intl.formatToPlainString(h.default.HVCRVf, { numBoosts: d.M4 }) },
+        { Icon: s._, getText: () => T.intl.formatToPlainString(h.default.HVCRVf, { numBoosts: m.M4 }) },
         { Icon: u.c, getText: () => T.intl.string(T.t.CNIZfy) },
     ],
     f = [
@@ -39,7 +39,7 @@ let p = [
             Icon: l.UploadIcon,
             getText: () =>
                 T.intl.formatToPlainString(T.t.p8QVLT, {
-                    maxUploadPremium: (0, m.EJ)(d.PremiumTypes.TIER_2, { useSpace: !1 }),
+                    maxUploadPremium: (0, d.EJ)(m.PremiumTypes.TIER_2, { useSpace: !1 }),
                 }),
         },
         { Icon: o.i, getText: () => T.intl.string(T.t["taMwg/"]) },

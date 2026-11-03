@@ -8,7 +8,7 @@
     Nu: () => j,
     O7: () => z,
     QZ: () => K,
-    V$: () => v,
+    V$: () => b,
     Wf: () => x,
     Wi: () => G,
     XI: () => $,
@@ -59,13 +59,13 @@ function D(e) {
             return N.I4_.EMOJI;
     }
 }
-function v(e) {
+function b(e) {
     let { intention: t, location: n } = e,
         i = (0, a.A)().replace(y, "");
     (u.Om.setAnalyticsId(i),
         l.Ay.trackWithMetadata(N.HAw.SEARCH_OPENED, { search_type: D(t), load_id: i, location: n }));
 }
-function b(e) {
+function v(e) {
     return null != e && "" !== e ? { load_id: e } : {};
 }
 function P(e, t) {
@@ -85,7 +85,7 @@ function P(e, t) {
         R = (0, s.bG)([E.A], () => E.A.getGuild(n)?.name),
         y = (0, s.bG)([h.default], () => h.default.getCurrentUser()),
         D = (0, m.ki)(y),
-        v = i.useMemo(() => {
+        b = i.useMemo(() => {
             let i = O.getGroupedCustomEmoji(),
                 a = A.Ay.getFlattenedGuildIds(),
                 s = [];
@@ -171,7 +171,7 @@ function P(e, t) {
                 }, [])
             );
         }, [O, t, n, e, D, N, R, u, d, _, l, r]),
-        b = i.useMemo(() => {
+        v = i.useMemo(() => {
             if (e !== C.EmojiIntention.CHAT || null == a) return null;
             let { unlocked: t, locked: n } = a;
             if (0 === t.length && 0 === n.length) return null;
@@ -186,7 +186,7 @@ function P(e, t) {
                 emojisDisabled: i,
             };
         }, [e, a]);
-    return null != b ? [b, ...v] : v;
+    return null != v ? [v, ...b] : b;
 }
 function M() {
     return d.Ay.getCategories().map((e) => ({ type: S.s.UNICODE, id: e, name: e, isNitroLocked: !1 }));
@@ -199,7 +199,7 @@ function U(e) {
     });
 }
 function w(e, t) {
-    l.Ay.trackWithMetadata(N.HAw.SEARCH_STARTED, { search_type: D(t), location: e, ...b(u.Om.getAnalyticsId()) });
+    l.Ay.trackWithMetadata(N.HAw.SEARCH_STARTED, { search_type: D(t), location: e, ...v(u.Om.getAnalyticsId()) });
 }
 function G(e) {
     let { totalResults: t, numEmojiLocked: n, location: i, searchQuery: r, intention: a, loadId: s } = e;
@@ -209,7 +209,7 @@ function G(e) {
         num_results_locked: n,
         query: r,
         location: i,
-        ...b(s),
+        ...v(s),
     });
 }
 function x(e) {
@@ -236,7 +236,7 @@ function x(e) {
         is_locked: r,
         query: i,
         index_num: o,
-        ...b(n?.loadId ?? u.Om.getAnalyticsId()),
+        ...v(n?.loadId ?? u.Om.getAnalyticsId()),
         total_results: n?.results?.length,
         emoji_suggestion_ids: n?.results
             ?.map((e) => {
@@ -249,7 +249,7 @@ function x(e) {
 }
 function k(e) {
     let { location: t, searchQuery: n, intention: i, loadId: r } = e;
-    l.Ay.trackWithMetadata(N.HAw.SEARCH_RESULT_EMPTY, { search_type: D(i), query: n, location: t, ...b(r) });
+    l.Ay.trackWithMetadata(N.HAw.SEARCH_RESULT_EMPTY, { search_type: D(i), query: n, location: t, ...v(r) });
 }
 function F(e) {
     let { emoji: t, subCategory: n, position: i, newlyAddedHighlight: r } = e;

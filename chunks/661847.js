@@ -13,9 +13,9 @@ var r = n(477900),
     v = n(260762),
     p = n(298072),
     g = n(317097),
-    x = n(466459),
-    m = n(623373),
-    A = n(561769),
+    m = n(466459),
+    A = n(623373),
+    x = n(561769),
     _ = n(758836),
     h = n(105292),
     E = n(699704);
@@ -32,12 +32,12 @@ function C(e) {
         } = e,
         g = (0, p.Q)(t),
         {
-            shownVariants: x,
-            totalVariants: A,
+            shownVariants: m,
+            totalVariants: x,
             hasOverflow: _,
         } = i.useMemo(() => {
             let e = c?.maxVariantsToShow;
-            return (0, m.B1)(t)
+            return (0, A.B1)(t)
                 ? null == e || e >= t.variants.length
                     ? { shownVariants: t.variants, totalVariants: t.variants.length, hasOverflow: !1 }
                     : { shownVariants: t.variants.slice(0, e - 1), totalVariants: t.variants.length, hasOverflow: !0 }
@@ -51,7 +51,7 @@ function C(e) {
         ),
         C = i.useId(),
         k = (0, v.A)(`shop-variants-group-${t.storeListingId}-${C}`, u.Gl.HORIZONTAL);
-    return 0 === x.length
+    return 0 === m.length
         ? null
         : (0, r.jsx)(l.hD, {
               navigator: k,
@@ -64,7 +64,7 @@ function C(e) {
                           ...l,
                           tabIndex: -1 === f ? -1 : l.tabIndex,
                           children: [
-                              x.map((e, t) =>
+                              m.map((e, t) =>
                                   (0, r.jsx)(
                                       b,
                                       {
@@ -73,7 +73,7 @@ function C(e) {
                                           isSelected: t === g,
                                           onVariantEnter: () => n(t),
                                           onVariantExit: s,
-                                          zIndex: A - Math.abs(g - t),
+                                          zIndex: x - Math.abs(g - t),
                                           onVariantClick: h,
                                           onTrackClick: I,
                                           parentTabIndex: f,
@@ -84,7 +84,7 @@ function C(e) {
                               null != c &&
                                   _ &&
                                   (0, r.jsx)(R, {
-                                      zIndex: g >= c.maxVariantsToShow - 1 ? A + 1 : 0,
+                                      zIndex: g >= c.maxVariantsToShow - 1 ? x + 1 : 0,
                                       isSelected: g >= c.maxVariantsToShow - 1,
                                       onOverflowClick: c.onClick,
                                       onTrackClick: I,
@@ -109,18 +109,18 @@ function b(e) {
             onTrackClick: v,
             parentTabIndex: p,
         } = e,
-        { onFocus: g, ...m } = (0, l.rm)(`shop-variants-group-${t.storeListingId}-${t.variantLabel}`),
-        { isPurchased: A } = (0, x.h)(t),
+        { onFocus: g, ...A } = (0, l.rm)(`shop-variants-group-${t.storeListingId}-${t.variantLabel}`),
+        { isPurchased: x } = (0, m.h)(t),
         C = i.useCallback(
             (e) => {
                 (v?.(_.sH.VARIANT_CLICK, n), u(e, n), g());
             },
             [u, g, n, v],
         ),
-        b = A ? `${t.variantLabel}, ${h.intl.string(h.t["6cfuDj"])}` : t.variantLabel;
+        b = x ? `${t.variantLabel}, ${h.intl.string(h.t["6cfuDj"])}` : t.variantLabel;
     return (0, r.jsx)(d.m, {
         text: h.intl.string(h.t["6cfuDj"]),
-        shouldShow: A,
+        shouldShow: x,
         ariaHidden: !0,
         children: (0, r.jsx)(c.D, {
             "aria-label": b,
@@ -129,9 +129,9 @@ function b(e) {
             onMouseLeave: I,
             className: a()(E.bP, { [E.wH]: s }),
             style: { backgroundColor: t.variantValue, zIndex: f },
-            ...m,
-            tabIndex: -1 === p ? -1 : m.tabIndex,
-            children: A && (0, r.jsx)(k, { variant: t }),
+            ...A,
+            tabIndex: -1 === p ? -1 : A.tabIndex,
+            children: x && (0, r.jsx)(k, { variant: t }),
         }),
     });
 }
@@ -170,8 +170,8 @@ let y = function (e) {
             onTrackClick: u,
             parentTabIndex: o,
         } = e,
-        d = (0, A.Vm)(t);
-    return null != d && (0, m.B1)(d)
+        d = (0, x.Vm)(t);
+    return null != d && (0, A.B1)(d)
         ? (0, r.jsx)(C, {
               product: d,
               onVariantEnter: s,

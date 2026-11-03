@@ -42,13 +42,13 @@ function D(e) {
                 P(e) && O.set(e.id, e);
             }));
 }
-function v(e) {
+function b(e) {
     let t = L[e];
     if (null != t) return t;
     let n = E.A.getChannel(e);
-    return null != n && n.isGuildStageVoice() && (D(n.guild_id), P(n)) ? b(e) : null;
+    return null != n && n.isGuildStageVoice() && (D(n.guild_id), P(n)) ? v(e) : null;
 }
-function b(e) {
+function v(e) {
     let t = L[e];
     return (null == t && ((t = new g.Ay(e)), (L[e] = t), t.rebuild()), t);
 }
@@ -59,7 +59,7 @@ function M(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : y();
     return t.reduce((t, n) => {
         let i,
-            r = b(n);
+            r = v(n);
         return e(r)
             ? (null != (i = E.A.getChannel(n)) && i.isGuildStageVoice()
                   ? 0 === r.size()
@@ -111,19 +111,19 @@ class j extends l.Ay.Store {
         this.waitFor(_.default, p.default, E.A, I.A, m.A, h.A, T.Ay, A.A, S.Ay, f.A, N.A, u.A);
     }
     getParticipantsVersion(e) {
-        return null == e ? -1 : (v(e)?.version ?? -1);
+        return null == e ? -1 : (b(e)?.version ?? -1);
     }
     getMutableParticipants(e, t) {
-        return null == e ? H : (v(e)?.toArray(t) ?? H);
+        return null == e ? H : (b(e)?.toArray(t) ?? H);
     }
     getMutableRequestToSpeakParticipants(e) {
-        return v(e)?.getRequestToSpeakParticipants() ?? H;
+        return b(e)?.getRequestToSpeakParticipants() ?? H;
     }
     getRequestToSpeakParticipantsVersion(e) {
-        return v(e)?.requestToSpeakVersion ?? -1;
+        return b(e)?.requestToSpeakVersion ?? -1;
     }
     getParticipantCount(e, t) {
-        return v(e)?.size(t) ?? 0;
+        return b(e)?.size(t) ?? 0;
     }
     getChannels(e) {
         return (D(e ?? C), O.values(e ?? C));
@@ -132,7 +132,7 @@ class j extends l.Ay.Store {
         return O.version;
     }
     getParticipant(e, t) {
-        return v(e)?.getParticipant(t) ?? null;
+        return b(e)?.getParticipant(t) ?? null;
     }
 }
 let W = new j(d.h, {
@@ -199,7 +199,7 @@ let W = new j(d.h, {
     GUILD_DELETE: B,
     PASSIVE_UPDATE_V2: function (e) {
         let t = !1;
-        for (let n of y(e.guildId)) t = b(n).rebuild() || t;
+        for (let n of y(e.guildId)) t = v(n).rebuild() || t;
         return t;
     },
 });

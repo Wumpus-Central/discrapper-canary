@@ -26,8 +26,8 @@ var i = n(477900),
     L = n(688151);
 let y = new R.E([], L.$G.DM_GDM_LIST_RENDER, { location: "dm/gdm list rendered" });
 var D = n(611924),
-    v = n(452015),
-    b = n(380335),
+    b = n(452015),
+    v = n(380335),
     P = n(309199),
     M = n(157550),
     U = n(265872),
@@ -243,7 +243,7 @@ class Q extends r.Component {
                               className: q.$s,
                               children: [
                                   (0, i.jsx)(j, { className: s()(q.U2, q.Mj), iconClassName: q.Br }),
-                                  (0, i.jsx)(v.Ay, {
+                                  (0, i.jsx)(b.Ay, {
                                       tooltip: V.intl.string(V.t.bA875g),
                                       tooltipPosition: "top",
                                       className: q.U2,
@@ -310,9 +310,9 @@ let J = function (e) {
         o = r.Children.count(s),
         _ = Y.A.getMutablePrivateChannels(),
         E = (0, P.uX)(_),
-        A = (0, u.yK)([$.A, b.A, M.A], () => {
+        A = (0, u.yK)([$.A, v.A, M.A], () => {
             let e = $.A.getPrivateChannelIds();
-            return (0, P.eh)(e, [b.A, M.A]);
+            return (0, P.eh)(e, [v.A, M.A]);
         });
     (0, D.P)(y);
     let { analyticsLocations: h } = (0, g.Ay)(m.A.CONTACTS_LIST),
@@ -347,7 +347,7 @@ let J = function (e) {
                 }),
             [C],
         ),
-        v = r.useCallback(
+        b = r.useCallback(
             () =>
                 new Promise((e) => {
                     let t = C.current;
@@ -365,7 +365,7 @@ let J = function (e) {
             id: `private-channels-${U}`,
             isEnabled: T,
             scrollToStart: L,
-            scrollToEnd: v,
+            scrollToEnd: b,
             defaultFocused: (o + 1).toString(),
             setFocus: R,
         });

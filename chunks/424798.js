@@ -1,37 +1,37 @@
-a.d(t, { Fr: () => p, Kk: () => j, Mu: () => S, jO: () => w });
-var s = a(582128),
-    l = a(435558),
-    n = a.n(l),
-    r = a(17928),
-    i = a(919577),
-    d = a(212007),
-    o = a(734057),
-    u = a(576705),
-    c = a(573163),
-    g = a(403362),
-    h = a(935208),
-    m = a(970278),
-    A = a(45494),
-    f = a(152007),
-    x = a(472456),
-    v = a(707539),
-    I = a(818348);
-function j() {
+t.d(a, { Fr: () => S, Kk: () => y, Mu: () => w, jO: () => j });
+var s = t(582128),
+    l = t(435558),
+    n = t.n(l),
+    r = t(17928),
+    i = t(919577),
+    d = t(212007),
+    o = t(734057),
+    u = t(576705),
+    c = t(573163),
+    g = t(403362),
+    h = t(935208),
+    m = t(970278),
+    A = t(45494),
+    f = t(152007),
+    x = t(472456),
+    v = t(707539),
+    I = t(818348);
+function y() {
     s.useEffect(() => {
         (0, v.ju)();
     }, []);
 }
-function w(e) {
-    let t,
-        a =
-            ((t = (0, r.yK)(
+function j(e) {
+    let a,
+        t =
+            ((a = (0, r.yK)(
                 [u.A, m.A, o.A],
                 () =>
                     n()(m.A.getThreadsForParent(e.guild_id, e.id))
                         .values()
                         .map((e) => {
-                            let { id: t } = e;
-                            return o.A.getChannel(t);
+                            let { id: a } = e;
+                            return o.A.getChannel(a);
                         })
                         .filter(g.Vq)
                         .filter((e) => u.A.can(I.xB.VIEW_CHANNEL, e))
@@ -41,17 +41,17 @@ function w(e) {
             )),
             s.useMemo(
                 () =>
-                    n()(t)
-                        .sort((e, t) => h.default.compare(c.Ay.lastMessageId(e), c.Ay.lastMessageId(t)))
+                    n()(a)
+                        .sort((e, a) => h.default.compare(c.Ay.lastMessageId(e), c.Ay.lastMessageId(a)))
                         .reverse()
                         .value(),
-                [t],
+                [a],
             )),
-        [l, i] = (0, r.bG)([f.A], () => n().partition(a, (e) => f.A.hasJoined(e)), [a], r.My);
+        [l, i] = (0, r.bG)([f.A], () => n().partition(t, (e) => f.A.hasJoined(e)), [t], r.My);
     return { joinedThreadIds: l, unjoinedThreadIds: i };
 }
-function S(e) {
-    let t = (0, r.yK)(
+function w(e) {
+    let a = (0, r.yK)(
         [u.A, m.A, o.A],
         () =>
             n()(m.A.getThreadsForGuild(e))
@@ -59,8 +59,8 @@ function S(e) {
                 .map((e) => n().values(e))
                 .flatten()
                 .map((e) => {
-                    let { id: t } = e;
-                    return o.A.getChannel(t);
+                    let { id: a } = e;
+                    return o.A.getChannel(a);
                 })
                 .filter(g.Vq)
                 .filter((e) => u.A.can(I.xB.VIEW_CHANNEL, e))
@@ -70,14 +70,14 @@ function S(e) {
     );
     return s.useMemo(
         () =>
-            n()(t)
-                .sort((e, t) => h.default.compare(c.Ay.lastMessageId(e), c.Ay.lastMessageId(t)))
+            n()(a)
+                .sort((e, a) => h.default.compare(c.Ay.lastMessageId(e), c.Ay.lastMessageId(a)))
                 .reverse()
                 .value(),
-        [t],
+        [a],
     );
 }
-function p(e, t, a, l) {
+function S(e, a, t, l) {
     let c = e.isModeratorReportChannel(),
         { showResolvedFlags: g } = (0, d.T)(e.id),
         {
@@ -86,47 +86,47 @@ function p(e, t, a, l) {
             nextOffset: f,
             isInitialLoad: v,
         } = (0, r.cf)([A.A], () => ({
-            loading: A.A.isLoading(e.id, t, a, l),
-            isInitialLoad: A.A.getIsInitialLoad(e.id, t, a, l),
-            canLoadMore: A.A.getCanLoadMore(e.id, t, a, l),
-            nextOffset: A.A.getNextOffset(e.id, t, a, l),
+            loading: A.A.isLoading(e.id, a, t, l),
+            isInitialLoad: A.A.getIsInitialLoad(e.id, a, t, l),
+            canLoadMore: A.A.getCanLoadMore(e.id, a, t, l),
+            nextOffset: A.A.getNextOffset(e.id, a, t, l),
         })),
-        j = s.useCallback(() => {
+        y = s.useCallback(() => {
             u.A.can(I.xB.READ_MESSAGE_HISTORY, e) &&
                 (!c || g) &&
                 x.A.loadArchivedThreads({
                     guildId: e.guild_id,
                     channelId: e.id,
-                    sortOrder: t,
-                    tagFilter: a,
+                    sortOrder: a,
+                    tagFilter: t,
                     tagSetting: l,
                     offset: f,
                 });
-        }, [e, t, a, l, f, g, c]),
-        w = s.useRef(j);
+        }, [e, a, t, l, f, g, c]),
+        j = s.useRef(y);
     return (
         s.useEffect(() => {
-            w.current = j;
+            j.current = y;
         }),
         s.useEffect(() => {
-            v && w.current();
-        }, [e.id, t, a, v, g]),
+            v && j.current();
+        }, [e.id, a, t, v, g]),
         s.useEffect(() => {
             i.A.resort(e.id);
         }, [e.id, g]),
         {
             threadIds: (0, r.yK)([A.A, o.A, u.A], () =>
-                n()(A.A.getThreads(e.id, t, a, l))
+                n()(A.A.getThreads(e.id, a, t, l))
                     .filter((e) => {
                         if (c && !g) return !1;
-                        let t = o.A.getChannel(e);
-                        return null != t && u.A.can(I.xB.VIEW_CHANNEL, t) && !t.isMediaThread();
+                        let a = o.A.getChannel(e);
+                        return null != a && u.A.can(I.xB.VIEW_CHANNEL, a) && !a.isMediaThread();
                     })
                     .value(),
             ),
             canLoadMore: h,
             loading: (m || v) && g && u.A.can(I.xB.READ_MESSAGE_HISTORY, e),
-            loadMore: j,
+            loadMore: y,
         }
     );
 }

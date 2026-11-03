@@ -8,13 +8,13 @@ var i = t(582128),
 function c(e) {
     let n = (0, l.bG)([s.A], () => s.A.getChannel(e), [e]),
         t = a.MJ(o.xBc.REQUEST_TO_SPEAK, n),
-        [c, u] = i.useState(t);
+        [c, d] = i.useState(t);
     return (
-        t !== c && u(t),
+        t !== c && d(t),
         [
             c,
             function (e) {
-                null != n && (u(e), (0, r.b6)(n, o.xBc.REQUEST_TO_SPEAK, e));
+                null != n && (d(e), (0, r.b6)(n, o.xBc.REQUEST_TO_SPEAK, e));
             },
         ]
     );

@@ -6,8 +6,8 @@ var i = t(477900),
     r = t(688810),
     o = t(980923),
     c = t(384059),
-    u = t(204651),
-    d = t(105292);
+    d = t(204651),
+    u = t(105292);
 function A(e) {
     let {
             selfMute: n,
@@ -22,7 +22,7 @@ function A(e) {
         } = e,
         { parentAnalyticsLocation: p } = (0, r.Ay)(),
         E = n || t || A,
-        j = h ? u.l : u.A,
+        j = h ? d.l : d.A,
         I = (0, o.A)(n, t, A, m),
         { events: v, play: N, Component: _ } = (0, s.L)(E ? "unmute" : "mute"),
         T = t || A ? a.O : _;
@@ -33,7 +33,7 @@ function A(e) {
             iconComponent: T,
             isTrayButton: !0,
             caretColor: E ? "red" : "primaryDark",
-            caretAriaLabel: d.intl.string(d.t["+ybWO4"]),
+            caretAriaLabel: u.intl.string(u.t["+ybWO4"]),
             color: E ? "red" : void 0,
             label: I,
             onMouseEnter: (e) => {

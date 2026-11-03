@@ -1,4 +1,4 @@
-(n.d(t, { Cp: () => O, Gf: () => j, Sw: () => v, V4: () => R, ak: () => T, dK: () => x, dZ: () => y }), n(321073));
+(n.d(t, { Cp: () => O, Gf: () => j, Sw: () => v, V4: () => R, ak: () => T, dK: () => y, dZ: () => x }), n(321073));
 var i = n(435558),
     s = n.n(i),
     l = n(636537),
@@ -19,7 +19,7 @@ var i = n(435558),
     _ = n(652215),
     N = n(355097),
     C = n(105292);
-function x(e) {
+function y(e) {
     g.wc.updateAsync(
         "textAndImages",
         (t) => {
@@ -28,7 +28,7 @@ function x(e) {
         N.Sb.FREQUENT_USER_ACTION,
     );
 }
-function y(e) {
+function x(e) {
     (o.h.dispatch({ type: "EMOJI_FETCH", guildId: e }),
         l.Bo.get({ url: _.Rsh.GUILD_EMOJIS(e), oldFormErrors: !0, rejectWithError: !0 }).then(
             (t) => o.h.dispatch({ type: "EMOJI_FETCH_SUCCESS", guildId: e, emojis: t.body }),

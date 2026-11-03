@@ -1,5 +1,5 @@
 let i;
-n.d(t, { JA: () => g, Ay: () => w, XA: () => v, jd: () => D });
+n.d(t, { JA: () => g, Ay: () => w, XA: () => b, jd: () => D });
 var r,
     a = n(582128),
     s = n(17928),
@@ -47,7 +47,7 @@ function D() {
         [],
     );
 }
-function v() {
+function b() {
     return (0, a.useEffect)(
         () => (
             C++,
@@ -59,7 +59,7 @@ function v() {
         [],
     );
 }
-function b() {
+function v() {
     let e = c.A.getChannel(A.Ay.getVoiceChannelId());
     return ((S = null != e && (0, f.A)(_.Ay) && (0, h.vz)(e, u.A, E.A, !1)), y(), !1);
 }
@@ -78,7 +78,7 @@ function M() {
 class U extends s.Ay.Store {
     static displayName = "NativeScreenSharePickerStore";
     initialize() {
-        (this.syncWith([_.Ay, A.Ay, c.A, u.A, E.A], b), b());
+        (this.syncWith([_.Ay, A.Ay, c.A, u.A, E.A], v), v());
     }
     supported() {
         return _.Ay.supports(m.O5.NATIVE_SCREENSHARE_PICKER);

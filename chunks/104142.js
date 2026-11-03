@@ -70,8 +70,8 @@ var i = n(435558),
     L = n(7584),
     y = n(776231),
     D = n(287809),
-    v = n(486020),
-    b = n(690521),
+    b = n(486020),
+    v = n(690521),
     P = n(194486),
     M = n(105292);
 let U = { start: 10, end: 15 },
@@ -105,10 +105,10 @@ function x(e, t) {
 }
 function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 32;
-    if (null != e.id) return v.Ay.getEmojiURL({ id: e.id, animated: e.animated ?? !1, size: t });
+    if (null != e.id) return b.Ay.getEmojiURL({ id: e.id, animated: e.animated ?? !1, size: t });
     let n = L.Ay.convertSurrogateToName(e.name, !1),
         i = L.Ay.getByName(n);
-    return null != i ? b.Ay.getURL(i.surrogates) : "";
+    return null != i ? v.Ay.getURL(i.surrogates) : "";
 }
 function F(e, t) {
     return r()(e)

@@ -15,8 +15,8 @@ var l = n(477900),
     g = n(915089),
     x = n(750506),
     E = n(513609),
-    S = n(71393),
-    y = n(597184),
+    y = n(71393),
+    S = n(597184),
     C = n(105330),
     A = n(265431),
     b = n(459016),
@@ -40,7 +40,7 @@ function W(e) {
     let { ref: t, ...n } = e,
         { channel: r, type: W, editorHeight: F, onVisibilityChange: B, editorScrollerRef: G, barsHeight: K } = n,
         H = (0, g.GV)(),
-        z = (0, o.bG)([S.A], () => S.A.getGuild(r.guild_id) ?? null, [r.guild_id]),
+        z = (0, o.bG)([y.A], () => y.A.getGuild(r.guild_id) ?? null, [r.guild_id]),
         q = i.useRef(null),
         [$, Q, Z] = (function (e, t, n) {
             let { channel: l, type: r } = e,
@@ -77,8 +77,8 @@ function W(e) {
                         if ((n.current?.scrollToTop(), e && null != l.query)) {
                             let e = l.query.typeInfo.focusMode,
                                 n =
-                                    e !== y.e.MANUAL &&
-                                    (e !== y.e.AUTO_WHEN_FILTERED || 0 !== l.query.queryText.length);
+                                    e !== S.e.MANUAL &&
+                                    (e !== S.e.AUTO_WHEN_FILTERED || 0 !== l.query.queryText.length);
                             l.isVisible && (!0 !== t || !1 !== n) && !0 !== i
                                 ? (u.setFocus("0"), r?.(0))
                                 : (u.setFocus(null), r?.(null));
@@ -117,14 +117,14 @@ function W(e) {
                 })({ navId: "channel-autocomplete", scrollerRef: n, state: s, onFocus: (e) => U.setSelectedIndex(e) }),
                 x = e.editorRef.current?.getCurrentWord(),
                 E = e.editorRef.current?.getSlateEditor(),
-                S = null;
-            null != E && (S = N.VW.getSelectedParentOfType(E, R.mk)?.[0] ?? null);
+                y = null;
+            null != E && (y = N.VW.getSelectedParentOfType(E, R.mk)?.[0] ?? null);
             let C = {
                     ...e,
                     navigator: g,
                     activeCommand: m,
                     activeCommandOption: f,
-                    activeInlineAutocompleteInput: S,
+                    activeInlineAutocompleteInput: y,
                     canMentionUsers: r.users?.allowMentioning ?? !1,
                     canMentionEveryone: d,
                     hidePersonalInformation: h,
@@ -218,7 +218,7 @@ function W(e) {
     if (null == en) return null;
     let el = { [V.pK]: null == J, [V.YB]: null != J, [V.sQ]: null == J && "bottom" === n.position, [V.mO]: ee },
         ei = 490;
-    null != J && (ei = W.autocomplete?.small ? 200 : $.query?.type === y.DB.EMOJIS_AND_STICKERS ? 490 : 245);
+    null != J && (ei = W.autocomplete?.small ? 200 : $.query?.type === S.DB.EMOJIS_AND_STICKERS ? 490 : 245);
     let er = Math.max(F, G?.current?.clientHeight ?? 0),
         es = Math.min(0.5 * window.innerHeight, er);
     ei = Math.min(window.innerHeight - 120 - es - (K ?? 0), ei);

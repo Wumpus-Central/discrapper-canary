@@ -1,4 +1,4 @@
-l.d(t, { A: () => x });
+l.d(t, { A: () => b });
 var n = l(477900),
     a = l(582128),
     r = l(503698),
@@ -13,15 +13,15 @@ var n = l(477900),
     g = l(809526),
     h = l(105292),
     p = l(587041);
-function x(e) {
+function b(e) {
     let { attachmentId: t } = e,
         l = a.useContext(c.Fu),
         r = (0, f.Od)(l, t),
-        x = r?.name ?? h.intl.string(g.default.ff9Q4C),
-        v = (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)(m.A, { projectId: l, file: r, className: p.xn }), x] });
+        b = r?.name ?? h.intl.string(g.default.ff9Q4C),
+        x = (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)(m.A, { projectId: l, file: r, className: p.xn }), b] });
     if (null == l || null == r || !o.XB.has(r.content_type))
-        return (0, n.jsx)("span", { className: p.Pq, children: v });
-    let b = async () => {
+        return (0, n.jsx)("span", { className: p.Pq, children: x });
+    let v = async () => {
         let e;
         try {
             e = await (0, d.PK)(l, r.id);
@@ -38,8 +38,8 @@ function x(e) {
     return (0, n.jsx)(s.D, {
         tag: "span",
         className: i()(p.Pq, p.Td),
-        onClick: b,
+        onClick: v,
         "aria-label": h.intl.formatToPlainString(g.default.GtNukg, { name: r.name }),
-        children: v,
+        children: x,
     });
 }

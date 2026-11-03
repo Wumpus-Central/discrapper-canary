@@ -1,47 +1,47 @@
-(l.d(t, { A: () => A }), l(321073));
-var n = l(477900),
-    i = l(582128),
-    s = l(17928),
-    r = l(477782),
-    a = l(282956),
-    o = l(704824),
-    c = l(264322),
-    d = l(468689),
-    u = l(780964),
-    m = l(370997),
-    p = l(766075),
-    x = l(71393),
-    h = l(576705),
-    j = l(652215),
-    N = l(105292);
+(t.d(l, { A: () => A }), t(321073));
+var n = t(477900),
+    i = t(582128),
+    s = t(17928),
+    r = t(477782),
+    a = t(282956),
+    o = t(704824),
+    c = t(264322),
+    d = t(468689),
+    u = t(780964),
+    m = t(370997),
+    p = t(766075),
+    h = t(71393),
+    x = t(576705),
+    j = t(652215),
+    N = t(105292);
 function A(e) {
-    let { user: t, application: A, guildId: g, context: f, onItemClick: I } = e,
-        v = x.A.getGuild(g),
-        C = (0, s.bG)([h.A], () => (null != v ? h.A.can(j.xBc.MANAGE_GUILD, v) : null)),
+    let { user: l, application: A, guildId: g, context: f, onItemClick: I } = e,
+        v = h.A.getGuild(g),
+        C = (0, s.bG)([x.A], () => (null != v ? x.A.can(j.xBc.MANAGE_GUILD, v) : null)),
         T = (0, c.ON)(g, !0),
         _ = (0, c.A4)(!0, !0),
         E = i.useMemo(
             () =>
                 null != A
                     ? A.id
-                    : t?.id != null
-                      ? (T.result?.sectionIdsByBotId[t.id] ?? _.result?.sectionIdsByBotId[t.id] ?? t.id)
+                    : l?.id != null
+                      ? (T.result?.sectionIdsByBotId[l.id] ?? _.result?.sectionIdsByBotId[l.id] ?? l.id)
                       : void 0,
-            [A, t?.id, T.result, _.result],
+            [A, l?.id, T.result, _.result],
         ),
-        b = t?.bot === !0 || null != A,
-        { token: S } = (0, o.U)(b ? E : null),
-        { isUserApp: y, isGuildApp: P } = i.useMemo(() => {
+        b = l?.bot === !0 || null != A,
+        { token: y } = (0, o.U)(b ? E : null),
+        { isUserApp: S, isGuildApp: P } = i.useMemo(() => {
             if (null == E) return { isGuildApp: !1, isUserApp: !1 };
             let e = Object.values(T.result?.sections ?? {}),
-                t = Object.values(_.result?.sections ?? {});
+                l = Object.values(_.result?.sections ?? {});
             return {
                 isGuildApp: e.some((e) => e.descriptor.application?.id === E),
-                isUserApp: t.some((e) => e.descriptor.application?.id === E),
+                isUserApp: l.some((e) => e.descriptor.application?.id === E),
             };
         }, [T, _, E]);
     i.useEffect(() => {
-        l(53656);
+        t(53656);
     }, []);
     let R = i.useCallback(() => {
             v?.id != null && (d.A.open(v.id, j.BEX.INTEGRATIONS), a.A.setSection(j.wLn.APPLICATION, E), I?.());
@@ -49,10 +49,10 @@ function A(e) {
         D = i.useCallback(() => {
             (0, p.openUserSettings)(u.X.AUTHORIZED_APPS_CATEGORY);
             let e = "";
-            (null != A ? (e = A.name) : null != t && (e = t.username),
+            (null != A ? (e = A.name) : null != l && (e = l.username),
                 "" !== e && m.iU.setState({ searchQuery: e }),
                 I?.());
-        }, [A, I, t]);
+        }, [A, I, l]);
     if (f === j.BRT.POPOUT) return null;
     let G = [];
     return (
@@ -65,8 +65,8 @@ function A(e) {
                     "manage-server-integration",
                 ),
             ),
-        y &&
-            null != S &&
+        S &&
+            null != y &&
             G.push(
                 (0, n.jsx)(
                     r.Dr,

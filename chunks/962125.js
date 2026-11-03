@@ -35,7 +35,7 @@ let u = r.memo((e) => {
             role: y = "list",
             ref: D,
         } = e,
-        [v, b] = r.useState(-1),
+        [b, v] = r.useState(-1),
         [P, M] = r.useState(-1),
         U = r.useRef(null),
         w = r.useRef(0),
@@ -105,7 +105,7 @@ let u = r.memo((e) => {
         let e = U.current?.getScrollerNode();
         if (null == e) return;
         let { offsetWidth: t, offsetHeight: i, scrollTop: r } = e;
-        (M(i), b(r), n?.({ width: t, height: i }));
+        (M(i), v(r), n?.({ width: t, height: i }));
     }, [n]);
     (r.useLayoutEffect(() => {
         -1 === P && $();
@@ -125,7 +125,7 @@ let u = r.memo((e) => {
             (n.cancelAnimationFrame(G.current),
             (G.current = n.requestAnimationFrame(() => {
                 let { scrollTop: n } = e;
-                ((w.current = n), t?.(n), b(n));
+                ((w.current = n), t?.(n), v(n));
             })));
     }, [t]);
     r.useImperativeHandle(
@@ -181,13 +181,13 @@ let u = r.memo((e) => {
         [F, N, W, P],
     );
     let { visibleItems: X, listOffset: q } = r.useMemo(() => {
-            if (-1 === P || -1 === v) return { visibleItems: null, listOffset: 0 };
-            let e = v + P,
+            if (-1 === P || -1 === b) return { visibleItems: null, listOffset: 0 };
+            let e = b + P,
                 t = 0,
                 n = a[0],
                 i = [],
                 r = x();
-            null != h && v < r ? i.push(h()) : (n += r);
+            null != h && b < r ? i.push(h()) : (n += r);
             for (let r = 0; r < K.length; r++) {
                 let {
                         firstRowIndex: a,
@@ -198,29 +198,29 @@ let u = r.memo((e) => {
                 let d = F(r),
                     c = B(r),
                     h = V(r);
-                if (l <= v) n = l;
-                else if (l > v && s < e) {
+                if (l <= b) n = l;
+                else if (l > b && s < e) {
                     t = a;
                     let l = [],
                         f = 0,
                         I = 0,
-                        p = s + d >= v && s <= e;
+                        p = s + d >= b && s <= e;
                     for (null != E && (N || p) && l.push(E(r)), p || N || (n += d); f + d + c < o - h;) {
                         let i = k(r, I, t),
                             a = s + f + d,
                             o = a + i;
-                        if (o <= v) n = o - (N ? d : 0);
-                        else if (o > v && a < e) l.push(u(t, { sectionIndex: r, sectionRowIndex: I }));
+                        if (o <= b) n = o - (N ? d : 0);
+                        else if (o > b && a < e) l.push(u(t, { sectionIndex: r, sectionRowIndex: I }));
                         else break;
                         ((f += i), I++, t++);
                     }
                     let m = s + d + f,
-                        T = m + c >= v && m <= e;
+                        T = m + c >= b && m <= e;
                     (null != A && T && l.push(A(r)), null != _ ? i.push(_(r, l)) : (i = [...i, ...l]));
                 } else break;
             }
             return { visibleItems: i, listOffset: n };
-        }, [k, B, F, V, a, u, _, A, E, v, K, N, h, x, P]),
+        }, [k, B, F, V, a, u, _, A, E, b, K, N, h, x, P]),
         Z = r.useMemo(() => ({ top: q, right: a?.[1] ?? 0, bottom: a?.[2] ?? 0, left: a?.[3] ?? 0 }), [q, a]),
         Q = r.useMemo(() => ({ height: W }), [W]),
         J = O ? l.zC : l.Ch;

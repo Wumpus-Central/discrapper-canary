@@ -467,8 +467,8 @@ let N = r.memo(function (e) {
             },
             [u],
         ),
-        v = r.useMemo(() => n.some((e) => e.component === _.o1q.ACTIVITY), [n]),
-        b = r.useMemo(() => n.some((e) => e.component === _.o1q.FRAME), [n]);
+        b = r.useMemo(() => n.some((e) => e.component === _.o1q.ACTIVITY), [n]),
+        v = r.useMemo(() => n.some((e) => e.component === _.o1q.FRAME), [n]);
     return null == t
         ? (0, i.jsx)(A.Ay, { children: (0, i.jsx)("div", { className: f._I }) })
         : (0, i.jsx)(A.Ay, {
@@ -494,7 +494,7 @@ let N = r.memo(function (e) {
                       edgeOffsetLeft: I.left,
                       edgeOffsetRight: I.right,
                       roundCorners: m,
-                      resizeConfig: v || b ? void 0 : T,
+                      resizeConfig: b || v ? void 0 : T,
                       children: R,
                   }),
               }),

@@ -1,4 +1,4 @@
-s.d(t, { l: () => u, o: () => c });
+s.d(t, { l: () => d, o: () => c });
 var n,
     i = s(477900);
 s(582128);
@@ -7,7 +7,7 @@ var a = s(738822),
     r = s(190107),
     o = s(105292),
     c = (((n = {}).NOT_FOUND = "not_found"), (n.MOBILE_ONLY = "mobile_only"), n);
-function u(e) {
+function d(e) {
     let { questId: t, reason: s = "not_found" } = e;
     return (0, i.jsx)(l.i, {
         questId: t,

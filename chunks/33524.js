@@ -55,8 +55,8 @@ function L(e) {
 }
 function y() {}
 function D() {}
-function v() {}
 function b() {}
+function v() {}
 function P() {
     return [];
 }
@@ -73,7 +73,7 @@ function w(e) {}
         coerceModalRoute: () => O,
         coerceSidebarRoute: () => g,
         coerceTabsRoute: () => S,
-        getCurrentNavigationRouteName: () => v,
+        getCurrentNavigationRouteName: () => b,
         getCurrentRouteParents: () => P,
         getICYMIRouteIfActive: () => U,
         getOpenModalKey: () => y,
@@ -95,7 +95,7 @@ function w(e) {}
         resetToAuthRoute: () => a,
         routesBelowFirstRemoved: () => o,
         setHomeDrawerState: () => w,
-        useCurrentNavigationRouteName: () => b,
+        useCurrentNavigationRouteName: () => v,
         useIsModalOpen: () => L,
         useOpenModalKey: () => D,
     }));

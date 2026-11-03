@@ -235,8 +235,8 @@ class D {
         );
     }
 }
-var v = n(986630),
-    b = n(384726),
+var b = n(986630),
+    v = n(384726),
     P = n(696444),
     M = n(474012),
     U = n(758836),
@@ -312,10 +312,10 @@ class G {
                 let { rewardSkuId: t } = e;
                 return t === n;
             }),
-            prices: (0, b.A)(s),
+            prices: (0, v.A)(s),
             items: (0, M.Kh)(f.items),
             bundledProducts: l?.map(P.A.fromServer),
-            variants: o?.map(v.x.fromServer),
+            variants: o?.map(b.x.fromServer),
             googleSkuIds: f.google_sku_ids,
             eligibleOffers: f.eligible_offers,
             baseVariantName: d,
@@ -699,7 +699,7 @@ async function er(e, t) {
         o.h.dispatch({
             type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS",
             skuId: e,
-            product: v.A.fromServer(i.body),
+            product: b.A.fromServer(i.body),
             endedAt: Date.now(),
         });
     } catch (n) {

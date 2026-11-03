@@ -93,7 +93,7 @@ function D(e) {
     if (null == i) {
         if (void 0 !== (t = (i = new f.A(L(e))).premiumType) && r) {
             let e = (0, h.I9)(i);
-            ((i.premiumType = v(e, i.premiumType)), (i.perks = b(e, i.perks)));
+            ((i.premiumType = b(e, i.premiumType)), (i.perks = v(e, i.perks)));
         }
     } else if (n) {
         var a;
@@ -104,9 +104,9 @@ function D(e) {
             r &&
             (0, h._D)(l) &&
             ((a = l),
-            (s = v((n = (0, h._D)(a)), a.premium_type ?? a.premiumType)),
+            (s = b((n = (0, h._D)(a)), a.premium_type ?? a.premiumType)),
             void 0 !== a.premiumType ? (a.premiumType = s) : void 0 !== a.premium_type && (a.premium_type = s),
-            (a.perks = b(n, a.perks)),
+            (a.perks = v(n, a.perks)),
             (l = a)),
             (l = (function (e, t) {
                 switch (!0) {
@@ -127,13 +127,13 @@ function D(e) {
     let s = S[e.id] !== i;
     return ((S[e.id] = i), s && N++, s);
 }
-function v(e, t) {
+function b(e, t) {
     if (!e) return t;
     let n = E.A.getPremiumTypeOverride(),
         i = E.A.getPremiumTypeActual();
     return n === g.$I ? i : n;
 }
-function b(e, t) {
+function v(e, t) {
     return e ? (null === E.A.getPremiumTypeOverride() ? null : E.A.getPerksActual()) : t;
 }
 function P(e, t) {
@@ -228,7 +228,7 @@ function V(e) {
 }
 function H(e) {
     let { user: t } = e;
-    return D({ id: t.id, premiumType: v((0, h.I9)(t), t.premiumType) }, !0);
+    return D({ id: t.id, premiumType: b((0, h.I9)(t), t.premiumType) }, !0);
 }
 function j(e) {
     let { messages: t } = e;
@@ -487,11 +487,11 @@ function eD(e) {
         { users: i } = n;
     return [...t, ...i].reduce((e, t) => D(t) || e, !1);
 }
-function ev(e) {
+function eb(e) {
     let { users: t } = e;
     return t.reduce((e, t) => D(t) || e, !1);
 }
-function eb(e) {
+function ev(e) {
     let { users: t } = e;
     return t.reduce((e, t) => D(t) || e, !1);
 }
@@ -610,10 +610,10 @@ class eV extends m.A {
             PASSIVE_UPDATE_V2: eh,
             LOCAL_MESSAGES_LOADED: ef,
             FAMILY_CENTER_INITIAL_LOAD: eD,
-            FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: ev,
+            FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eb,
             FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eP,
             FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eM,
-            FAMILY_CENTER_REQUEST_LINK_SUCCESS: eb,
+            FAMILY_CENTER_REQUEST_LINK_SUCCESS: ev,
             MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eU,
             LOAD_ICYMI_HYDRATED: ew,
             EMBEDDED_ACTIVITY_UPDATE_V2: eG,

@@ -27,8 +27,8 @@ var r = n(503698),
     L = n(970636),
     y = n(999926),
     D = n(646865),
-    v = n(795816),
-    b = n(104171),
+    b = n(795816),
+    v = n(104171),
     P = n(47294),
     M = n(735168),
     U = n(652215),
@@ -57,7 +57,7 @@ function B(e) {
             selectedParticipant: N,
             embeddedActivity: R,
         } = e,
-        b = (0, I.Us)() === U.BRT.POPOUT,
+        v = (0, I.Us)() === U.BRT.POPOUT,
         G = (0, s.bG)([y.Ay], () => y.Ay.isVideoEnabled()),
         F = (0, s.bG)([y.Ay], () => Object.values(y.Ay.getVideoDevices())[0]),
         B = !1 === (F?.disabled ?? !0),
@@ -121,7 +121,7 @@ function B(e) {
                         basis: "50%",
                         align: f.A.Align.CENTER,
                         children: [
-                            b || (0, D.f)()
+                            v || (0, D.f)()
                                 ? null
                                 : (0, i.jsx)(O.A, {
                                       className: x.BD,
@@ -134,7 +134,7 @@ function B(e) {
                                                           (0, M.A)({
                                                               windowKey: U.MLl.CHANNEL_CALL_POPOUT,
                                                               openWindow: () => p.openChannelCallPopout(t),
-                                                              refreshProxyTicket: () => (0, v.od)(n, t.id),
+                                                              refreshProxyTicket: () => (0, b.od)(n, t.id),
                                                           }),
                                                   }));
                                       },
@@ -181,7 +181,7 @@ function V(e) {
             (0, i.jsxs)("div", {
                 className: k.q6,
                 children: [
-                    (0, i.jsx)(b.Ay, {
+                    (0, i.jsx)(v.Ay, {
                         renderIcon: !1,
                         users: u,
                         size: 24,

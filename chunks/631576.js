@@ -6,8 +6,8 @@
     oI: () => N,
     p9: () => O,
     sl: () => C,
-    uK: () => v,
-    vr: () => b,
+    uK: () => b,
+    vr: () => v,
     x5: () => y,
     zk: () => T,
 }),
@@ -100,7 +100,7 @@ function y(e, t) {
 function D(e) {
     return _.A.totalUnavailableGuilds > 0 || !d.A.isConnected() ? e : e.filter((e) => null != h.A.getStickerById(e));
 }
-function v(e) {
+function b(e) {
     u.bW.updateAsync(
         "favoriteStickers",
         (t) =>
@@ -114,7 +114,7 @@ function v(e) {
         p.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function b(e) {
+function v(e) {
     u.bW.updateAsync(
         "favoriteStickers",
         (t) => {

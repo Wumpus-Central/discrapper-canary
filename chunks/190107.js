@@ -26,8 +26,8 @@ n.d(t, {
     uz: () => j,
     Tz: () => S,
     aA: () => R,
-    EM: () => b,
-    i$: () => v,
+    EM: () => v,
+    i$: () => b,
     WQ: () => ee,
     aJ: () => F,
     CI: () => M,
@@ -130,8 +130,8 @@ let S = new Set([h.L.NITRO_2_POINT_0_CTA, h.L.ORBS_MULTIPLIER_QUEST, h.L.XBOX_GA
     L = 2;
 var y = (((a = {}).CONSOLE = "CONSOLE"), (a.DESKTOP = "DESKTOP"), a),
     D = (((s = {}).IN_GAME = "in_game"), (s.WEB = "web"), s);
-let v = 454,
-    b = 2640 / 740,
+let b = 454,
+    v = 2640 / 740,
     P = (function (e) {
         let { apiBaseUrl: t, pageHost: n, isDevelopmentBuild: i } = e,
             r = -1 !== t.indexOf("localhost") || -1 !== t.indexOf("127.0.0.1"),

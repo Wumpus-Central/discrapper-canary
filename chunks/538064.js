@@ -1,15 +1,15 @@
-l.d(t, { Ft: () => r, Jt: () => s, eY: () => o, pf: () => a });
-var n = l(73153),
-    i = l(265059);
+n.d(l, { Ft: () => r, Jt: () => s, eY: () => o, pf: () => a });
+var t = n(73153),
+    i = n(265059);
 function s(e) {
-    n.h.dispatch({ type: "DEV_TOOLS_SETTINGS_UPDATE", settings: e });
+    t.h.dispatch({ type: "DEV_TOOLS_SETTINGS_UPDATE", settings: e });
 }
 function a() {
     s({ displayTools: !i.A.displayTools });
 }
-function r(e, t) {
-    s({ displayTools: !0, lastOpenTabId: e, lastOpenSubTabId: t });
+function r(e, l) {
+    s({ displayTools: !0, lastOpenTabId: e, lastOpenSubTabId: l });
 }
 function o() {
-    n.h.dispatch({ type: "ANALYTICS_LOG_CLEAR" });
+    t.h.dispatch({ type: "ANALYTICS_LOG_CLEAR" });
 }

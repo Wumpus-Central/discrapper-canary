@@ -27,8 +27,8 @@ let R = (0, o.debounce)(u.a8, 1e3),
     L = {},
     y = {},
     D = 3 * S.A.Millis.MINUTE,
-    v = 5 * S.A.Millis.SECOND,
-    b = 12 * S.A.Millis.SECOND,
+    b = 5 * S.A.Millis.SECOND,
+    v = 12 * S.A.Millis.SECOND,
     P = null,
     M = new Set();
 function U() {
@@ -60,7 +60,7 @@ function F(e, t) {
     if (T.A.getAllActiveStreamKeys().includes(e)) return;
     let n = y[e] ?? new d.Ep();
     ((y[e] = n),
-        n.start(t ? b : v, () => {
+        n.start(t ? v : b, () => {
             c.h.dispatch({ type: "STREAM_TIMED_OUT", streamKey: e });
         }));
 }

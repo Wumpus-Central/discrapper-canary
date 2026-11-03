@@ -37,17 +37,17 @@ async function m(e) {
         D = s.default.getCurrentUser();
     if (null == D) return !1;
     if (null == R || (y && !R.isPrivate()) || null == o) return Promise.resolve(!1);
-    let v = c.Ay.getCurrentEmbeddedActivity();
+    let b = c.Ay.getCurrentEmbeddedActivity();
     if (
-        (v?.applicationId != null && (t = i.A.getApplication(v?.applicationId)),
+        (b?.applicationId != null && (t = i.A.getApplication(b?.applicationId)),
         a.Ay.getVoiceChannelId() === o &&
-            null != v &&
-            v.applicationId === n &&
-            (0, _.H)(v.location) === a.Ay.getVoiceChannelId())
+            null != b &&
+            b.applicationId === n &&
+            (0, _.H)(b.location) === a.Ay.getVoiceChannelId())
     )
-        return ((0, f.A)(L, v.location), Promise.resolve(!0));
-    let b = await (0, E.A)(n, o);
-    if (!(await (0, u.O)({ applicationId: n, application: b, channel: R, currentEmbeddedApplication: t, user: D })))
+        return ((0, f.A)(L, b.location), Promise.resolve(!0));
+    let v = await (0, E.A)(n, o);
+    if (!(await (0, u.O)({ applicationId: n, application: v, channel: R, currentEmbeddedApplication: t, user: D })))
         return !1;
     if (null != R) {
         let e = (0, A.A)(R.id),
@@ -57,7 +57,7 @@ async function m(e) {
         } else if (!(0, l.pE)(R) || !n) return !1;
     } else if (null == R) return !1;
     return (
-        null != v && (0, d.rW)(v.location),
+        null != b && (0, d.rW)(b.location),
         await (0, d.su)({
             channelId: o,
             applicationId: n,

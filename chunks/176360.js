@@ -1,5 +1,5 @@
 let i, r;
-n.d(t, { A: () => v });
+n.d(t, { A: () => b });
 var a = n(435558),
     s = n.n(a),
     l = n(17928),
@@ -81,7 +81,7 @@ class D extends l.Ay.Store {
         return R;
     }
 }
-let v = new D(d.h, {
+let b = new D(d.h, {
     CHANNEL_SETTINGS_SET_SECTION: function (e) {
         let { section: t } = e;
         if (null != S || t !== h.p_A.PERMISSIONS) return !1;

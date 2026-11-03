@@ -226,14 +226,14 @@ var S = n(736056),
     L = n(358047),
     y = n(734057),
     D = n(919638),
-    v = n(696451),
-    b = n(71393),
+    b = n(696451),
+    v = n(71393),
     P = n(763827),
     M = n(994500),
     U = n(309010),
     w = n(967198);
 let G = new g((e) => {
-    for (let t in e) null != b.A.getGuild(t) || D.A.isUnavailable(t) || delete e[t];
+    for (let t in e) null != v.A.getGuild(t) || D.A.isUnavailable(t) || delete e[t];
     l.h.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: e });
 });
 function x(e, t) {
@@ -272,7 +272,7 @@ function B(e) {
         r = new Set(N.A.lurkingGuildIds()),
         s = N.A.mostRecentLurkedGuildId();
     (G.forEach((e) => {
-        null == b.A.getGuild(e) ? G.clearWithoutFlushing(e, !0) : (r.has(e) && e !== s) || (i[e] = G.get(e));
+        null == v.A.getGuild(e) ? G.clearWithoutFlushing(e, !0) : (r.has(e) && e !== s) || (i[e] = G.get(e));
     }),
         a().isEmpty(i) || l.h.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: i }));
 }
@@ -289,7 +289,7 @@ function j() {
     else {
         let { userId: t } = e;
         if ((null != i && i.userId === t) || M.A.isFriend(t)) return !1;
-        let n = v.Ay.memberOf(t);
+        let n = b.Ay.memberOf(t);
         if (0 === n.length) return !1;
         let [r] = n;
         ((i = { guildId: r, userId: t }), G.subscribeUser(r, t));
@@ -299,7 +299,7 @@ function j() {
 class W extends s.Ay.Store {
     static displayName = "GuildSubscriptionsStore";
     initialize() {
-        (this.waitFor(O.default, L.Ay, y.A, S.A, D.A, v.Ay, b.A, N.A, P.A, M.A, U.Ay, w.A, C.A),
+        (this.waitFor(O.default, L.Ay, y.A, S.A, D.A, b.Ay, v.A, N.A, P.A, M.A, U.Ay, w.A, C.A),
             this.syncWith([C.A], j),
             this.syncWith([L.Ay], H));
     }

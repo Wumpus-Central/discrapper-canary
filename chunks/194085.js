@@ -21,8 +21,8 @@ function c(e) {
         separator: A,
         buttonClassName: f,
         children: C,
-        ref: x,
-        ...E
+        ref: E,
+        ...x
     } = e;
     return (0, l.jsx)(a.m, {
         asContainer: !0,
@@ -33,7 +33,7 @@ function c(e) {
         children: (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsxs)(r.$n, {
-                    ref: x,
+                    ref: E,
                     className: s()(o.W1, f),
                     onClick: (e) => {
                         u(e);
@@ -41,7 +41,7 @@ function c(e) {
                     "aria-label": n ?? t,
                     disabled: g,
                     dangerous: p,
-                    ...E,
+                    ...x,
                     children: [
                         null != c ? (0, l.jsx)(c, { className: o.Kk, color: "currentColor", ...d }) : null,
                         null != C ? (0, l.jsx)("div", { className: s()(o.Kk, o.IO), children: C }) : null,

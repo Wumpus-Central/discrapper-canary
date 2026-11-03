@@ -25,7 +25,7 @@
     K7: () => eC,
     HU: () => es,
     Mt: () => er,
-    oH: () => eb,
+    oH: () => ev,
     Yy: () => eh,
     XK: () => ef,
     mN: () => ew,
@@ -66,8 +66,8 @@ function y(e) {
 function D(e, t) {
     return a.A.fileManager.dirname(e) === y(t);
 }
-var v = n(458977),
-    b = n(439818),
+var b = n(458977),
+    v = n(439818),
     P = n(572164);
 let M = ["filepath", "sizeBytes"];
 function U(e) {
@@ -453,7 +453,7 @@ function eo(e) {
 }
 async function ed(e) {
     if (
-        !v.A.getConfig({ location: "maybeSendRemoteClipTrigger" }).enableDistributedClips ||
+        !b.A.getConfig({ location: "maybeSendRemoteClipTrigger" }).enableDistributedClips ||
         e.isCandidate ||
         null == e.applicationId ||
         e.decision?.signal.type !== O.Gy.MANUAL
@@ -527,9 +527,9 @@ async function eu(e) {
         g = null != T.syncTimestamp ? T.syncTimestamp - T.createdAt : void 0,
         C = (0, H.p)(g);
     T.isCandidate = o ?? !1;
-    let R = `${(0, b.A)(T.applicationName.substring(0, 20))}_${T.id}.mp4`,
+    let R = `${(0, v.A)(T.applicationName.substring(0, 20))}_${T.id}.mp4`,
         D = a.A.fileManager.join(p, R),
-        v = I.Ay.getMediaEngine(),
+        b = I.Ay.getMediaEngine(),
         P = JSON.stringify(T),
         M = S.TX(T),
         U =
@@ -552,7 +552,7 @@ async function eu(e) {
             clipStats: i,
             thumbnail: s,
             metadata: l,
-        } = await v.saveClipEx({
+        } = await b.saveClipEx({
             filepath: D,
             metadata: P,
             thumbnailMs: x,
@@ -607,7 +607,7 @@ async function eu(e) {
                 } catch (e) {
                     O.nx.warn("Failed to generate clip thumbnail:", e);
                 }
-                ((T.thumbnail = e), await v.updateClipMetadata(D, JSON.stringify(T)));
+                ((T.thumbnail = e), await b.updateClipMetadata(D, JSON.stringify(T)));
             }
             t = T;
         }
@@ -643,7 +643,7 @@ async function e_(e) {
         e,
     ))
         try {
-            await eb(n, !1);
+            await ev(n, !1);
         } catch (e) {
             O.nx.error("Failed to evict transient clip", e);
         }
@@ -699,7 +699,7 @@ async function eE(e) {
             decisionSignals: o,
         });
         if (s && null != l && !l.isActive) {
-            (r.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR", clipMethod: t }), eb(e));
+            (r.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR", clipMethod: t }), ev(e));
             return;
         }
         (r.h.dispatch({ type: "CLIPS_SAVE_CLIP", clip: e, session: l }), L(t) && (await e_(e.id)), ed(e));
@@ -732,7 +732,7 @@ async function eA(e) {
         s = I.Ay.getMediaEngine(),
         l = (0, Q.A)(e, O.nQ.SCREENSHOT),
         o = N.Ay.getSettings().storageLocation,
-        d = `${(0, b.A)(l.applicationName.substring(0, 20))}_${l.id}.jpeg`,
+        d = `${(0, v.A)(l.applicationName.substring(0, 20))}_${l.id}.jpeg`,
         u = a.A.fileManager.join(o, d);
     if (
         (null != l.applicationId &&
@@ -818,7 +818,7 @@ async function eS(e) {
             t = (await eT(n)).filter((e) => e.isCandidate);
         }
         t.forEach((e) =>
-            ev(e).catch((t) => {
+            eb(e).catch((t) => {
                 O.nx.error(`Failed to cleanup old clip candidate ${e.id}`, t);
             }),
         );
@@ -884,7 +884,7 @@ async function eD(e, t) {
     }
     r.h.dispatch({ type: "CLIPS_MONTAGE_RENDER_DONE", clip: n, session: t });
 }
-async function ev(e) {
+async function eb(e) {
     if (!(0, T.isDesktop)() || a.A.clips?.deleteClip == null) return !1;
     let { filepath: t, id: n } = e,
         i = (await a.A.clips.deleteClip(t)) ?? { ok: !0 };
@@ -896,11 +896,11 @@ async function ev(e) {
     }
     return !0;
 }
-async function eb(e) {
+async function ev(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     if (!(0, T.isDesktop)() || a.A.clips?.deleteClip == null) return;
     let { filepath: n, id: i } = e;
-    (await ev(e))
+    (await eb(e))
         ? (r.h.dispatch({ type: "CLIPS_DELETE_CLIP", id: i, filepath: n }),
           t &&
               m.default.track(ee.HAw.CLIP_DELETED, {

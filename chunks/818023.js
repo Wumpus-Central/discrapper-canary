@@ -20,8 +20,8 @@ n.d(t, {
     NW: () => c,
     i6: () => P,
     mO: () => C,
-    lk: () => v,
-    H5: () => b,
+    lk: () => b,
+    H5: () => v,
     _J: () => R,
 });
 var i,
@@ -86,8 +86,8 @@ let y = { label_type: o.Hr.NONE, release_phase: "", label_from: null, label_unti
         blocked_locales: [],
         supported_locales: [],
     },
-    v = [d.rbe.GUILD_TEXT, d.rbe.DM, d.rbe.GROUP_DM, d.rbe.GUILD_SPACE],
-    b = [...v, d.rbe.GUILD_VOICE],
+    b = [d.rbe.GUILD_TEXT, d.rbe.DM, d.rbe.GROUP_DM, d.rbe.GUILD_SPACE],
+    v = [...b, d.rbe.GUILD_VOICE],
     P = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
 var M = (((a = {}).NORMAL = "normal"), (a.FULL_SCREEN = "full-screen"), a);
 let U = 216e5;

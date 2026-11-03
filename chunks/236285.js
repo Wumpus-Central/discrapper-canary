@@ -133,8 +133,8 @@ var R = n(71393),
     y = n(652215);
 y.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE;
 var D = n(773669),
-    v = n(617617),
-    b = n(696451),
+    b = n(617617),
+    v = n(696451),
     P = n(184989),
     M = n(317525),
     U = n(711014),
@@ -182,7 +182,7 @@ class J {
     }
     isUsable(e) {
         if (0 === e.roles.length) return !0;
-        let t = b.Ay.getMember(this.id, this._userId);
+        let t = v.Ay.getMember(this.id, this._userId);
         return null != t && !!(t.roles.some((t) => e.roles.includes(t)) || (0, C.kT)(e));
     }
     emojiIds() {
@@ -419,7 +419,7 @@ class eE {
     rebuildFavoriteEmojisWithoutFetchingLatest() {
         if (null != this.favorites && null != this.favoriteNamesAndIds)
             return { favorites: this.favorites, favoriteNamesAndIds: this.favoriteNamesAndIds };
-        let e = (v.A.frecencyWithoutFetchingLatest.favoriteEmojis?.emojis ?? [])
+        let e = (b.A.frecencyWithoutFetchingLatest.favoriteEmojis?.emojis ?? [])
                 .map((e) => this.getById(e) ?? j.Ay.getByName(e))
                 .filter(k.Vq),
             t = (0, K.A)(e);
@@ -511,10 +511,10 @@ function eT(e) {
     es[e] = new J(e, n.id, t, i);
 }
 function eg() {
-    let e = v.A.settings,
+    let e = b.A.settings,
         t = e.textAndImages?.diversitySurrogate?.value;
     (null != t && j.Ay.setDefaultDiversitySurrogate(t), eE.reset());
-    let n = v.A.frecencyWithoutFetchingLatest,
+    let n = b.A.frecencyWithoutFetchingLatest,
         i = n.emojiFrecency?.emojis ?? {},
         r = n.emojiReactionFrecency?.emojis ?? {};
     (eh.overwriteHistory(
@@ -525,7 +525,7 @@ function eg() {
             o().mapValues(r, (e) => ({ ...e, recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
             Z.emojiReactionPendingUsages,
         ));
-    if (o().isEmpty(i) && o().isEmpty(Z.pendingUsages) && v.A.hasLoaded(X.oD.FRECENCY_AND_FAVORITES_SETTINGS))
+    if (o().isEmpty(i) && o().isEmpty(Z.pendingUsages) && b.A.hasLoaded(X.oD.FRECENCY_AND_FAVORITES_SETTINGS))
         for (let e of [
             "thumbsup",
             "eyes",
@@ -542,7 +542,7 @@ function eg() {
     if (
         o().isEmpty(r) &&
         o().isEmpty(Z.emojiReactionPendingUsages) &&
-        v.A.hasLoaded(X.oD.FRECENCY_AND_FAVORITES_SETTINGS)
+        b.A.hasLoaded(X.oD.FRECENCY_AND_FAVORITES_SETTINGS)
     )
         for (let e of [
             "100",
@@ -583,14 +583,14 @@ class eC extends _.Ay.PersistedStore {
     static displayName = "EmojiStore";
     static persistKey = "EmojiStoreV2";
     initialize(e) {
-        (this.waitFor(W.A, S.A, b.Ay, P.A, M.A, R.A, D.default, H.A, U.Ay, O.A, Y.A, v.A, w.default),
+        (this.waitFor(W.A, S.A, v.Ay, P.A, M.A, R.A, D.default, H.A, U.Ay, O.A, Y.A, b.A, w.default),
             null != e &&
                 (null != e.pendingUsages && (Z.pendingUsages = e.pendingUsages),
                 null != e.emojiReactionPendingUsages && (Z.emojiReactionPendingUsages = e.emojiReactionPendingUsages),
                 null != e.expandedSectionsByGuildIds &&
                     (Z.expandedSectionsByGuildIds = new Set(e.expandedSectionsByGuildIds))),
             (Q = W.A.getIndexablePackEmojis()),
-            this.syncWith([v.A], eg),
+            this.syncWith([b.A], eg),
             this.syncWith([W.A], eA));
     }
     getState() {

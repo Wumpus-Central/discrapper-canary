@@ -13,11 +13,11 @@ var i = n(477900),
     m = n(408278),
     A = n(881636),
     f = n(402216),
-    x = n(652896),
-    g = n(616356),
+    g = n(652896),
+    x = n(616356),
     C = n(287809),
-    j = n(927813),
-    y = n(562153),
+    y = n(927813),
+    j = n(562153),
     I = n(218394),
     N = n(920639),
     v = n(393371),
@@ -27,22 +27,22 @@ var i = n(477900),
     T = n(618922),
     _ = n(105292),
     R = n(814402);
-let O = 10 * j.A.Millis.SECOND,
+let O = 10 * y.A.Millis.SECOND,
     P = { tension: 220, friction: 30, clamp: !0 },
     L = { x: "100%" },
     M = { x: "0%" },
     w = { x: "-100%" };
 function U(e) {
-    let { streams: t, fit: n, tooltipSpacing: a, containerWidthPx: j } = e,
+    let { streams: t, fit: n, tooltipSpacing: a, containerWidthPx: y } = e,
         U = (0, o.yK)(
-            [g.A],
+            [x.A],
             () =>
                 t
                     .filter((e) => {
-                        let t = g.A.getActiveStreamForApplicationStream(e);
+                        let t = x.A.getActiveStreamForApplicationStream(e);
                         return null != t && t.state !== S.XYD.ENDED;
                     })
-                    .map((e) => (0, x._z)(e)),
+                    .map((e) => (0, g._z)(e)),
             [t],
         ),
         [D, V] = l.useState({ streamKey: U[0] ?? null, sequence: 0 }),
@@ -50,21 +50,21 @@ function U(e) {
         [B, F] = l.useState(!1),
         z = Math.max(
             0,
-            t.findIndex((e) => (0, x._z)(e) === D.streamKey),
+            t.findIndex((e) => (0, g._z)(e) === D.streamKey),
         ),
         H = t[z],
         W = t[(z + 1) % t.length],
         Y = t.length > 1,
-        $ = U.includes((0, x._z)(H)),
+        $ = U.includes((0, g._z)(H)),
         K = B ? W : H,
         X = (0, o.bG)([C.default], () => C.default.getUser(K.ownerId), [K]),
-        q = y.Ay.useName(K.guildId, K.channelId, X),
+        q = j.Ay.useName(K.guildId, K.channelId, X),
         Z = (0, I.j)(),
-        Q = j / 225,
+        Q = y / 225,
         J = $ ? _.intl.string(T.default.zW6Hyu) : _.intl.string(_.t["7Xq/nV"]),
         ee = _.intl.string(T.default["t+GPi4"]),
         et = l.useCallback(() => {
-            let e = (0, x._z)(W);
+            let e = (0, g._z)(W);
             V((t) => ({ streamKey: e, sequence: t.sequence + 1 }));
         }, [W]);
     l.useEffect(() => {
@@ -77,7 +77,7 @@ function U(e) {
         }, [H]),
         ei = { left: `${n.originX}%`, top: `${n.originY}%`, transform: n.matrix },
         el = (0, c.p)(H, {
-            keys: () => `${D.sequence}:${(0, x._z)(H)}`,
+            keys: () => `${D.sequence}:${(0, g._z)(H)}`,
             initial: M,
             from: L,
             enter: M,

@@ -1,11 +1,11 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => b });
 var l = n(477900),
     a = n(582128),
     s = n(503698),
     i = n.n(s),
     r = n(77692),
-    c = n(702841),
-    o = n(534514),
+    o = n(702841),
+    c = n(534514),
     d = n(653887),
     u = n(866665),
     m = n(881636),
@@ -29,13 +29,13 @@ let A = function (e) {
 };
 var _ = n(212407),
     v = n(761977);
-function I(e) {
+function b(e) {
     let { category: t, onSelect: n } = e,
-        s = (0, c.bG)([E.Ay], () => E.Ay.useReducedMotion),
-        x = (0, c.bG)([f.A], () => f.A.isFocused()),
-        { catalogBannerStatic: C, catalogBannerAnimated: S, catalogBannerRive: I } = (0, _.MV)(t),
-        b = a.useRef(null),
-        L = null != I,
+        s = (0, o.bG)([E.Ay], () => E.Ay.useReducedMotion),
+        x = (0, o.bG)([f.A], () => f.A.isFocused()),
+        { catalogBannerStatic: C, catalogBannerAnimated: S, catalogBannerRive: b } = (0, _.MV)(t),
+        I = a.useRef(null),
+        L = null != b,
         j =
             null != n
                 ? {
@@ -49,20 +49,20 @@ function I(e) {
                   }
                 : {};
     return (0, l.jsxs)("div", {
-        ref: b,
+        ref: I,
         className: i()(v.sW, { [v.by]: L, [v.vk]: null != n }),
         ...j,
         children: [
-            (0, l.jsx)(r.s, { children: (0, l.jsx)(o.D, { variant: "heading-lg/semibold", children: t.name }) }),
+            (0, l.jsx)(r.s, { children: (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t.name }) }),
             (0, l.jsx)("div", {
                 className: v.Db,
                 children: L
                     ? (0, l.jsx)(d._, {
-                          src: I,
+                          src: b,
                           fit: "cover",
                           alignment: "center-left",
                           style: { width: "100%", height: "100%" },
-                          eventTargetRef: b,
+                          eventTargetRef: I,
                           autoplay: !0,
                       })
                     : (0, l.jsxs)(l.Fragment, {

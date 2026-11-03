@@ -11,14 +11,14 @@
     Pp: () => Y,
     V1: () => K,
     X2: () => k,
-    Z$: () => b,
+    Z$: () => v,
     b7: () => P,
     fl: () => U,
     hX: () => j,
     kF: () => H,
     lq: () => D,
     sw: () => V,
-    u8: () => v,
+    u8: () => b,
     vW: () => y,
 }),
     n(321073));
@@ -55,10 +55,10 @@ function y(e, t) {
 function D(e) {
     return L(e) ? e.name : O.intl.string(O.t.UB2gG2);
 }
-function v(e) {
+function b(e) {
     return L(e) ? e.description : O.intl.string(O.t.X9fusn);
 }
-function b(e) {
+function v(e) {
     return L(e) && (0, h.W)(e, r.U.MAIN);
 }
 function P(e) {
@@ -89,7 +89,7 @@ function w(e) {
     }
 }
 function G(e) {
-    return L(e) && b(e) ? (e instanceof I.Ay ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+    return L(e) && v(e) ? (e instanceof I.Ay ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
 function x(e) {
     let {
@@ -160,7 +160,7 @@ function H(e) {
 function j(e) {
     let t = [];
     for (let n of e) {
-        let e = n.application_directory_collection_items.filter((e) => e.type === i.L.APPLICATION && b(e.application));
+        let e = n.application_directory_collection_items.filter((e) => e.type === i.L.APPLICATION && v(e.application));
         0 !== e.length && t.push({ ...n, application_directory_collection_items: e });
     }
     return t;

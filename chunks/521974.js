@@ -1,6 +1,6 @@
 l.d(t, { A: () => m });
-var i = l(477900),
-    s = l(582128),
+var s = l(477900),
+    i = l(582128),
     n = l(503698),
     a = l.n(n),
     r = l(939249),
@@ -20,25 +20,25 @@ function m(e) {
             onBlur: x,
             onSubmit: v,
         } = e,
-        j = s.useRef(null),
-        A = s.useCallback(
+        j = i.useRef(null),
+        A = i.useCallback(
             (e) => {
                 "Enter" === e.key && v();
             },
             [v],
         ),
-        C = s.useCallback(() => {
+        C = i.useCallback(() => {
             (p(), setTimeout(() => j.current?.focus()));
         }, [p]);
     return t === u.GlobalDiscoverySearchBarState.COLLAPSED
-        ? (0, i.jsx)(r.D, {
+        ? (0, s.jsx)(r.D, {
               className: h.qc,
               onClick: C,
-              children: (0, i.jsx)(o.MagnifyingGlassIcon, { size: "sm", color: c.A.colors.ICON_STRONG }),
+              children: (0, s.jsx)(o.MagnifyingGlassIcon, { size: "sm", color: c.A.colors.ICON_STRONG }),
           })
-        : (0, i.jsx)("div", {
+        : (0, s.jsx)("div", {
               className: a()(h.ON, { [h.Nz]: t === u.GlobalDiscoverySearchBarState.FLOATING }),
-              children: (0, i.jsx)(d.I, {
+              children: (0, s.jsx)(d.I, {
                   size: "sm",
                   ref: j,
                   query: l,

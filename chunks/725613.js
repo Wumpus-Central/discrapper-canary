@@ -1,9 +1,9 @@
-a.d(e, { A: () => g });
-var t = a(478437),
-    n = a(17928),
-    s = a(73153),
-    i = a(403010),
-    c = a(927813);
+e.d(a, { A: () => g });
+var t = e(478437),
+    n = e(17928),
+    s = e(73153),
+    i = e(403010),
+    c = e(927813);
 let r = new Set(),
     d = {};
 function o(l) {
@@ -33,15 +33,15 @@ let g = new v(s.h, {
     CONNECTION_RESUMED: h,
     CONNECTION_OPEN: h,
     VOICE_CHANNEL_START_TIME_UPDATE: function (l) {
-        let { guildId: e, id: a, voiceStartTime: t } = l;
-        (null == d[e] && (d[e] = {}), (d[e][a] = null != t ? o(t) : void 0));
+        let { guildId: a, id: e, voiceStartTime: t } = l;
+        (null == d[a] && (d[a] = {}), (d[a][e] = null != t ? o(t) : void 0));
     },
     CHANNEL_INFO: function (l) {
-        let { guildId: e, channels: a } = l;
-        for (let { id: l, voiceStartTime: t } of ((d[e] = {}), a)) d[e][l] = null != t ? o(t) : void 0;
+        let { guildId: a, channels: e } = l;
+        for (let { id: l, voiceStartTime: t } of ((d[a] = {}), e)) d[a][l] = null != t ? o(t) : void 0;
     },
     FETCH_CHANNEL_INFO: function (l) {
-        let { guildId: e } = l;
-        r.add(e);
+        let { guildId: a } = l;
+        r.add(a);
     },
 });

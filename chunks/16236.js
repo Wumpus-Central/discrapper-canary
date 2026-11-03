@@ -41,8 +41,8 @@ var i = n(435558),
     L = n(27232),
     y = n(105292),
     D = n(349828),
-    v = n(652215),
-    b = n(818348);
+    b = n(652215),
+    v = n(818348);
 function P(e) {
     let t = 0;
     for (let n in e) {
@@ -58,7 +58,7 @@ function M(e) {
         null != n &&
         e.has(n) &&
         (0, u.pX)(
-            v.BVt.CHANNEL(
+            b.BVt.CHANNEL(
                 t,
                 (function (e, t) {
                     let n = (0, g.g)(),
@@ -94,7 +94,7 @@ function U(e) {
         }
         if (
             (null == n.channelType && (n.channelType = l.ZQ.create({ value: i.type })),
-            !i.isPrivate() && !h.A.can(b.xB.VIEW_CHANNEL, i))
+            !i.isPrivate() && !h.A.can(v.xB.VIEW_CHANNEL, i))
         ) {
             delete e[t];
             continue;
@@ -123,7 +123,7 @@ function k(e) {
 }
 function F(e) {
     e?.status === 403 &&
-        (_.wc.loadIfNecessary(!0).catch(v.tEg),
+        (_.wc.loadIfNecessary(!0).catch(b.tEg),
         o.A.show({ title: y.intl.string(y.t.iufib1), body: y.intl.string(y.t.eAn6z2) }));
 }
 function B(e) {
@@ -248,7 +248,7 @@ async function Z(e) {
     let t = A.A.getChannel(e);
     null == t ||
         !t.isThread() ||
-        ((t.isPrivate() || h.A.can(b.xB.VIEW_CHANNEL, t)) &&
+        ((t.isPrivate() || h.A.can(v.xB.VIEW_CHANNEL, t)) &&
             (await j([e], { categoryName: D.A }, "auto_thread_join", { silent: !0 })));
 }
 function Q(e) {
@@ -318,5 +318,5 @@ function en(e) {
     });
 }
 function ei(e) {
-    (en(e, "settings_page"), !e && (0, N.ai)(I.A.getGuildId()) && (0, u.pX)(v.BVt.ME));
+    (en(e, "settings_page"), !e && (0, N.ai)(I.A.getGuildId()) && (0, u.pX)(b.BVt.ME));
 }

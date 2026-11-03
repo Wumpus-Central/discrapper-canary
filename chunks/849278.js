@@ -13,16 +13,16 @@ var i = n(477900),
 let m = { tension: 350, friction: 24 },
     A = { duration: 120 },
     f = l.createContext(null);
-function x() {
+function g() {
     let e = l.useContext(f);
     if (null == e) throw Error("GuildRoomMenu compound components must be rendered within <GuildRoomMenu>");
     return e;
 }
-function g(e) {
+function x(e) {
     let { children: t, menuId: n, ariaLabel: a, side: o, visible: u, onExited: h } = e,
         f = l.Children.toArray(t).filter(l.isValidElement),
-        x = "left" === o,
-        g = x ? 16 : -16,
+        g = "left" === o,
+        x = g ? 16 : -16,
         C = (0, c.p)(f, {
             keys: f.map((e, t) => t),
             from: { progress: 0 },
@@ -30,7 +30,7 @@ function g(e) {
             trail: 35,
             config: m,
         }),
-        j = (0, d.z)({
+        y = (0, d.z)({
             opacity: +!!u,
             config: A,
             onRest: (e) => {
@@ -42,15 +42,15 @@ function g(e) {
         role: "menu",
         "aria-label": a,
         tabIndex: -1,
-        className: s()(p.MK, { [p.Up]: x, [p.mL]: !u }),
+        className: s()(p.MK, { [p.Up]: g, [p.mL]: !u }),
         children: C((e, t, n, l) => {
             let a = 20 * l;
             return (0, i.jsx)(r.animated.div, {
                 style: {
-                    marginLeft: x ? void 0 : a,
-                    marginRight: x ? a : void 0,
-                    "--custom-menu-item-opacity": (0, r.to)([e.progress, j.opacity], (e, t) => e * t),
-                    transform: e.progress.to((e) => `translateX(${(1 - e) * g}px)`),
+                    marginLeft: g ? void 0 : a,
+                    marginRight: g ? a : void 0,
+                    "--custom-menu-item-opacity": (0, r.to)([e.progress, y.opacity], (e, t) => e * t),
+                    transform: e.progress.to((e) => `translateX(${(1 - e) * x}px)`),
                 },
                 children: t,
             });
@@ -71,16 +71,16 @@ let C = Object.assign(
                 },
                 [p, n],
             ),
-            x = l.useMemo(
+            g = l.useMemo(
                 () => ({ isOpen: m, setOpen: A, triggerElement: o, setTriggerElement: c, menuId: d, placement: s }),
                 [m, A, o, d, s],
             );
-        return (0, i.jsx)(f.Provider, { value: x, children: r });
+        return (0, i.jsx)(f.Provider, { value: g, children: r });
     },
     {
         Trigger: function (e) {
             let { children: t } = e,
-                { isOpen: n, setOpen: i, setTriggerElement: l, menuId: a } = x();
+                { isOpen: n, setOpen: i, setTriggerElement: l, menuId: a } = g();
             return t({
                 ref: l,
                 onClick: () => i(!n),
@@ -91,7 +91,7 @@ let C = Object.assign(
         },
         Popup: function (e) {
             let { children: t, "aria-label": n } = e,
-                { isOpen: a, setOpen: s, triggerElement: r, menuId: c, placement: d } = x(),
+                { isOpen: a, setOpen: s, triggerElement: r, menuId: c, placement: d } = g(),
                 [u, h] = l.useState(a);
             a && !u && h(!0);
             let p = l.useCallback(() => h(!1), []);
@@ -107,7 +107,7 @@ let C = Object.assign(
                 autoUpdate: !0,
                 renderLayer: (e) => {
                     let { placement: l } = e;
-                    return (0, i.jsx)(g, {
+                    return (0, i.jsx)(x, {
                         menuId: c,
                         ariaLabel: n,
                         side: l.startsWith("left") ? "left" : "right",
@@ -121,11 +121,11 @@ let C = Object.assign(
         },
         Item: function (e) {
             let { className: t, closeOnClick: n = !0, selected: a, onClick: r, clearButtonAriaLabel: o, ...c } = e,
-                { isOpen: d, setOpen: m } = x(),
+                { isOpen: d, setOpen: m } = g(),
                 [A, f] = l.useState(a),
-                [g, C] = l.useState(d);
-            d !== g && (C(d), d && f(a));
-            let j = (e) => {
+                [x, C] = l.useState(d);
+            d !== x && (C(d), d && f(a));
+            let y = (e) => {
                 (r?.(e), n && m(!1));
             };
             return (0, i.jsxs)("div", {
@@ -136,7 +136,7 @@ let C = Object.assign(
                         children: (0, i.jsx)(u.$, {
                             variant: A ? "overlay-primary" : "overlay-secondary",
                             size: "md",
-                            onClick: j,
+                            onClick: y,
                             ...c,
                         }),
                     }),
@@ -148,7 +148,7 @@ let C = Object.assign(
                                 size: "md",
                                 icon: h.P,
                                 text: void 0,
-                                onClick: j,
+                                onClick: y,
                                 "aria-label": o,
                             }),
                         }),

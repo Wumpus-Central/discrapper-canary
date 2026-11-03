@@ -3,7 +3,7 @@
     Am: () => P,
     Ap: () => N,
     Cq: () => C,
-    Ez: () => v,
+    Ez: () => b,
     Lz: () => m,
     Oe: () => p,
     PV: () => g,
@@ -12,7 +12,7 @@
     bq: () => D,
     gI: () => M,
     hT: () => T,
-    my: () => b,
+    my: () => v,
     zl: () => O,
 }),
     n(321073));
@@ -277,7 +277,7 @@ function D(e, t, n) {
         isUserApp: t ?? !1,
     };
 }
-function v(e) {
+function b(e) {
     let t = e.id,
         n = e.options,
         i = n?.find((e) => e.type === c.n4.SUB_COMMAND_GROUP);
@@ -285,7 +285,7 @@ function v(e) {
     let r = n?.find((e) => e.type === c.n4.SUB_COMMAND);
     return (null != r && ((t += `${h.v4}${r.name}`), (n = r.options)), { commandKey: t, interactionOptions: n });
 }
-function b(e) {
+function v(e) {
     let {
         command: t,
         location: n,

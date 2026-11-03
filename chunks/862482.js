@@ -53,8 +53,8 @@ function I(e) {
             onDoubleClick: L,
             onMouseDown: y,
             onMouseUp: D,
-            onMouseEnter: v,
-            onMouseLeave: b,
+            onMouseEnter: b,
+            onMouseLeave: v,
             onKeyDown: P,
             children: M,
             rel: U,
@@ -66,7 +66,7 @@ function I(e) {
             ...B
         } = e,
         V = m || T,
-        H = V && (null != v || null != b),
+        H = V && (null != b || null != v),
         j =
             ((t = G?.offset),
             n === E.LINK || n === E.BLANK
@@ -98,8 +98,8 @@ function I(e) {
             onDoubleClick: V ? (e) => e.preventDefault() : L,
             onMouseUp: m ? void 0 : D,
             onMouseDown: m ? void 0 : y,
-            onMouseEnter: v,
-            onMouseLeave: b,
+            onMouseEnter: b,
+            onMouseLeave: v,
             onKeyDown: m ? void 0 : P,
             type: g,
             disabled: m,
@@ -121,7 +121,7 @@ function I(e) {
     return H
         ? (0, i.jsxs)("span", {
               className: s()(_.Yr, N, l, { [_.wS]: p, [_.Ij]: I }),
-              children: [Y, (0, i.jsx)("span", { onMouseEnter: v, onMouseLeave: b, className: _.p5 })],
+              children: [Y, (0, i.jsx)("span", { onMouseEnter: b, onMouseLeave: v, className: _.p5 })],
           })
         : Y;
 }

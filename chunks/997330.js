@@ -1,4 +1,4 @@
-s.d(t, { yh: () => N, rF: () => T, V1: () => M, yC: () => j });
+s.d(t, { yh: () => N, rF: () => T, V1: () => M, yC: () => y });
 var n,
     a,
     r,
@@ -175,20 +175,20 @@ let g = Object.freeze({
     BOOST_START: { toValue: 0, duration: 2e3, delay: 500 },
     ERROR: { toValue: 1, duration: 1500, delay: 1e3 },
 });
-class j extends o.PureComponent {
+class y extends o.PureComponent {
     static Scenes = C;
     static getNextScene(e) {
         switch (e) {
-            case j.Scenes.IDLE_ENTRY:
-                return j.Scenes.IDLE_LOOP;
-            case j.Scenes.BOOST_START:
-                return j.Scenes.BOOST_LOOP;
-            case j.Scenes.BOOST_END:
-                return j.Scenes.VICTORY;
-            case j.Scenes.VICTORY:
-                return j.Scenes.IDLE_ENTRY;
-            case j.Scenes.ERROR:
-                return j.Scenes.IDLE_LOOP;
+            case y.Scenes.IDLE_ENTRY:
+                return y.Scenes.IDLE_LOOP;
+            case y.Scenes.BOOST_START:
+                return y.Scenes.BOOST_LOOP;
+            case y.Scenes.BOOST_END:
+                return y.Scenes.VICTORY;
+            case y.Scenes.VICTORY:
+                return y.Scenes.IDLE_ENTRY;
+            case y.Scenes.ERROR:
+                return y.Scenes.IDLE_LOOP;
             default:
                 return e;
         }
@@ -303,8 +303,8 @@ class j extends o.PureComponent {
         });
     }
 }
-var y =
-    (((i = y || {}).ENTRY = "entry"),
+var j =
+    (((i = j || {}).ENTRY = "entry"),
     (i.IDLE = "idle"),
     (i.STARS = "stars"),
     (i.ERROR = "error"),
@@ -412,7 +412,7 @@ function v(e) {
     });
 }
 class M extends o.PureComponent {
-    static Scenes = y;
+    static Scenes = j;
     static getNextScene(e) {
         switch (e) {
             case "entry":

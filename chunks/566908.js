@@ -1,7 +1,7 @@
 (n.d(t, {
     FF: () => M,
     Lg: () => V,
-    Sc: () => v,
+    Sc: () => b,
     UF: () => L,
     US: () => U,
     Vf: () => w,
@@ -11,7 +11,7 @@
     dx: () => C,
     kJ: () => P,
     q8: () => D,
-    vK: () => b,
+    vK: () => v,
     yp: () => x,
     yz: () => F,
     zs: () => y,
@@ -65,11 +65,11 @@ function D(e) {
     let { entryPoint: t, isEditing: n, channelId: i } = e;
     h.default.track(T.HAw.SCHEDULED_MESSAGE_TIME_PICKER_OPENED, { entry_point: t, is_editing: n, channel_id: i });
 }
-function v() {
+function b() {
     return R.useConfig({ location: "useCanUseScheduledMessages" }).enabled;
 }
-function b(e) {
-    let t = v(),
+function v(e) {
+    let t = b(),
         n = (0, o.bG)([E.A], () => null != e && (!!e.isPrivate() || E.A.can(T.xBc.SEND_MESSAGES, e)));
     return t && n;
 }

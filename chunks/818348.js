@@ -4,7 +4,7 @@ n.d(t, {
     DY: () => er,
     FX: () => w.FX,
     Gg: () => Z,
-    Jo: () => ev,
+    Jo: () => eb,
     KI: () => W,
     Kc: () => ee,
     L_: () => eW,
@@ -48,7 +48,7 @@ n.d(t, {
     me: () => eS,
     nf: () => eI,
     ps: () => X,
-    qF: () => eb,
+    qF: () => ev,
     qm: () => q,
     rI: () => el,
     rz: () => ed,
@@ -92,8 +92,8 @@ var i,
     L,
     y,
     D,
-    v,
     b,
+    v,
     P = n(812743),
     M = n(136722),
     U = n(323125),
@@ -568,8 +568,8 @@ var eN =
 let eL = 250,
     ey = "token",
     eD = "tokens",
-    ev = "https://status.discord.com",
-    eb = {
+    eb = "https://status.discord.com",
+    ev = {
         PRESSKIT: "https://app.box.com/s/5puqm5ijahrrdao7yldi7fr3zah5i1am",
         REBRAND_PRESSKIT:
             "https://www.dropbox.com/scl/fo/2vittfakjukwa3zl4gnxh/AOS0AZlx-zA4TjDyv-M-dgk?rlkey=kn0v1lcqfq1lurj3lk3x1ujhf&dl=0",
@@ -975,5 +975,5 @@ var ej =
         (D.PERMISSION_DISMISSED = "PERMISSION_DISMISSED"),
         (D.NO_DEVICES_FOUND = "NO_DEVICES_FOUND"),
         D),
-    eK = (((v = {}).SWIPE = "SWIPE"), (v.BROWSER = "BROWSER"), (v.KEYBIND = "KEYBIND"), v),
-    e$ = (((b = {})[(b.IN_PROMPT = 1)] = "IN_PROMPT"), b);
+    eK = (((b = {}).SWIPE = "SWIPE"), (b.BROWSER = "BROWSER"), (b.KEYBIND = "KEYBIND"), b),
+    e$ = (((v = {})[(v.IN_PROMPT = 1)] = "IN_PROMPT"), v);

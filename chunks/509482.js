@@ -125,8 +125,8 @@ function O(e) {
             eventCapture: L,
             assetLoader: y,
             onLoad: D,
-            stateMachine: v,
-            artboardStateMachines: b,
+            stateMachine: b,
+            artboardStateMachines: v,
         } = e,
         P = a.useContext(d.C),
         M = (0, o.Rs)(),
@@ -134,8 +134,8 @@ function O(e) {
         [w, G] = (0, o.Xb)(3e4),
         [x, k] = a.useState(void 0),
         F = a.useMemo(() => {
-            if (t && null != b) return b[p ?? ""];
-        }, [t, b, p]),
+            if (t && null != v) return v[p ?? ""];
+        }, [t, v, p]),
         B = null != F,
         V = null != S || null != O,
         H = a.useRef(null),
@@ -144,7 +144,7 @@ function O(e) {
                 eventTarget: I?.current,
                 ...(null != n ? { riveFile: n } : { buffer: i }),
                 autoplay: s,
-                stateMachines: null != v ? [v] : B ? F : x,
+                stateMachines: null != b ? [b] : B ? F : x,
                 artboard: p,
                 autoBind: !!B || !!V || void 0,
                 enableAutoSleep: t,
@@ -418,11 +418,11 @@ function O(e) {
             B ||
                 (null != j &&
                     null == x &&
-                    null == v &&
+                    null == b &&
                     (k(j.stateMachineNames),
                     j.reset({ stateMachines: j.stateMachineNames, autoplay: s, artboard: p, autoBind: !0 }),
                     j.setupRiveListeners()));
-        }, [j, s, x, p, v, B]));
+        }, [j, s, x, p, b, B]));
     let Y = a.useRef(0);
     return (
         a.useEffect(() => {

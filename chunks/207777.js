@@ -26,8 +26,8 @@ let m = [],
     L = !1,
     y = [],
     D = a().chain(m),
-    v = a().chain(m),
-    b = new Set(),
+    b = a().chain(m),
+    v = new Set(),
     P = new Set();
 function M(e) {
     return h.Ay.lastMessageId(e) ?? e;
@@ -53,9 +53,9 @@ function w() {
         (O = 0),
         (y = []),
         (D = a().chain(m)),
-        (v = a().chain(m)),
+        (b = a().chain(m)),
         P.clear(),
-        b.clear());
+        v.clear());
 }
 function G() {
     let e = f.Ay.getChannelId();
@@ -84,11 +84,11 @@ function k(e) {
         })),
         (O = 0),
         (L = !0)),
-        0 !== b.size && ((y = y.filter((e) => !b.has(e))), b.clear()),
+        0 !== v.size && ((y = y.filter((e) => !v.has(e))), v.clear()),
         0 !== P.size && ((y = Array.from(new Set([...y, ...P]))), P.clear()),
         (e?.refreshThreadIds || e?.sortThreadIds) &&
-            ((v = a().chain(y).sort(U(l.T.LATEST_ACTIVITY))), (D = a().chain(y).sort(U(l.T.CREATION_DATE)))));
-    let o = (N === l.T.LATEST_ACTIVITY ? v : D).value(),
+            ((b = a().chain(y).sort(U(l.T.LATEST_ACTIVITY))), (D = a().chain(y).sort(U(l.T.CREATION_DATE)))));
+    let o = (N === l.T.LATEST_ACTIVITY ? b : D).value(),
         d = (R =
             0 === S.size
                 ? o
@@ -178,7 +178,7 @@ let B = new F(c.h, {
     THREAD_DELETE: function (e) {
         let { channel: t } = e;
         if (null == t.parent_id || t.parent_id !== g) return !1;
-        (b.add(t.id), k({ sortThreadIds: !0 }));
+        (v.add(t.id), k({ sortThreadIds: !0 }));
     },
     RESORT_THREADS: function (e) {
         let { channelId: t } = e;

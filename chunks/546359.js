@@ -26,8 +26,8 @@ let g = { key: "active_now", type: m.ik.ACTIVE_NOW },
     L = !1,
     y = new Map(),
     D = new Map(),
-    v = [],
-    b = null;
+    b = [],
+    v = null;
 function P(e) {
     if (!_.A.isFriend(e)) return null;
     let t = E.default.getUser(e);
@@ -93,7 +93,7 @@ function x(e) {
     return e.type === m.ik.ONLINE ? G : w;
 }
 function k(e) {
-    ((e.snapshot = null), (b = null));
+    ((e.snapshot = null), (v = null));
 }
 function F(e) {
     let t = {
@@ -107,7 +107,7 @@ function F(e) {
         rows: [],
         snapshot: null,
     };
-    return (D.set(t.key, t), I.Yr(v, t, T.Ut), (b = null), t);
+    return (D.set(t.key, t), I.Yr(b, t, T.Ut), (v = null), t);
 }
 function B(e, t) {
     let n = e.groupsByChannelId.get(t);
@@ -121,20 +121,20 @@ function B(e, t) {
 }
 function V(e) {
     let t = !1;
-    for (let n of v) {
+    for (let n of b) {
         let i = n.groupsByChannelId.get(e);
         null != i && ((i.snapshot = null), k(n), (t = !0));
     }
     return t;
 }
 function H() {
-    for (let e of (D.clear(), (v = []), (b = null), y.values())) {
+    for (let e of (D.clear(), (b = []), (v = null), y.values())) {
         let t = M(e, O),
             n = D.get(t.key) ?? F(t),
             i = U(e);
         null != i ? B(n, i).rows.push(e) : n.rows.push(e);
     }
-    for (let e of v) {
+    for (let e of b) {
         let t = x(e);
         for (let n of (e.rows.sort(t), e.groups)) n.rows.sort(t);
     }
@@ -188,7 +188,7 @@ function Y() {
 }
 function K() {
     let e = L;
-    return ((L = !1), y.clear(), D.clear(), (v = []), (b = null), e);
+    return ((L = !1), y.clear(), D.clear(), (b = []), (v = null), e);
 }
 function $(e) {
     let t = y.get(e),
@@ -214,7 +214,7 @@ function $(e) {
                 (k(i),
                     0 === i.rows.length &&
                         0 === i.groups.length &&
-                        (D.delete(i.key), -1 !== (t = v.indexOf(i)) && v.splice(t, 1), (b = null)));
+                        (D.delete(i.key), -1 !== (t = b.indexOf(i)) && b.splice(t, 1), (v = null)));
             })(t),
         null != n
             ? (y.set(e, n),
@@ -292,7 +292,7 @@ class ee extends r.Ay.PersistedStore {
         return R;
     }
     getSections() {
-        return (Y(), null == b && (b = 0 === v.length ? C : v.map(j)), b);
+        return (Y(), null == v && (v = 0 === b.length ? C : b.map(j)), v);
     }
     getRow(e) {
         return (Y(), y.get(e));
@@ -351,7 +351,7 @@ let et = new ee(s.h, {
                     (e =
                         (function (e) {
                             let t = !1;
-                            for (let n of v) {
+                            for (let n of b) {
                                 let i = !1;
                                 for (let t of n.groups)
                                     d.A.getChannel(t.channelId)?.getGuildId() === e && ((t.snapshot = null), (i = !0));

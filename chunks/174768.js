@@ -26,8 +26,8 @@ var r = n(435558),
     L = n(543465),
     y = n(768038),
     D = n(403362),
-    v = n(652215),
-    b = n(105292);
+    b = n(652215),
+    v = n(105292);
 let P = "seenQSTutorial";
 function M(e) {
     return e === d.rD.USER || e === d.rD.USER_GLOBAL;
@@ -146,7 +146,7 @@ function q(e, t) {
                               let t = $(j[e]);
                               null != t &&
                                   ((t.type !== d.rD.TEXT_CHANNEL && t.type !== d.rD.VOICE_CHANNEL) ||
-                                      N.A.can(v.xBc.VIEW_CHANNEL, t.record)) &&
+                                      N.A.can(b.xBc.VIEW_CHANNEL, t.record)) &&
                                   (s.push(t), a.size < 3 && a.add(j[e]));
                           }
                           let c =
@@ -159,7 +159,7 @@ function q(e, t) {
                                   if (null != r) {
                                       if (
                                           (r.type === d.rD.TEXT_CHANNEL || r.type === d.rD.VOICE_CHANNEL) &&
-                                          !N.A.can(v.xBc.SEND_MESSAGES, r.record)
+                                          !N.A.can(b.xBc.SEND_MESSAGES, r.record)
                                       )
                                           return;
                                       t.push({ record: r, channelId: i });
@@ -167,7 +167,7 @@ function q(e, t) {
                               }),
                               t);
                           if (c.length > 0)
-                              for (let e of (r.push((0, d.jF)(b.intl.string(b.t["4B63jZ"]))), c))
+                              for (let e of (r.push((0, d.jF)(v.intl.string(v.t["4B63jZ"]))), c))
                                   (a.add(e.channelId), r.push(e.record));
                           let u = C.Ay.getMentionChannelIds().filter((e) => e !== i && !a.has(e)),
                               E = [];
@@ -178,7 +178,7 @@ function q(e, t) {
                               null != n && E.push({ channelId: t, result: n });
                           }
                           if (E.length > 0)
-                              for (let { channelId: e, result: t } of (r.push((0, d.jF)(b.intl.string(b.t["61Df13"]))),
+                              for (let { channelId: e, result: t } of (r.push((0, d.jF)(v.intl.string(v.t["61Df13"]))),
                               E))
                                   (a.add(t.record.id), a.add(e), r.push(t));
                           if (null != n) {
@@ -203,12 +203,12 @@ function q(e, t) {
                                       null == t || a.has(t.record.id) || e.push(t);
                                   }
                               }),
-                                  e.length > 0 && (r.push((0, d.jF)(b.intl.string(b.t.ieCAhD))), (r = r.concat(e))));
+                                  e.length > 0 && (r.push((0, d.jF)(v.intl.string(v.t.ieCAhD))), (r = r.concat(e))));
                           }
                           let h = r.length > 0 ? 3 : 7;
                           return (
                               s.length > h && s.splice(h),
-                              s.length > 0 && (r = [(0, d.jF)(b.intl.string(b.t["80lOZ1"])), ...s, ...r]),
+                              s.length > 0 && (r = [(0, d.jF)(v.intl.string(v.t["80lOZ1"])), ...s, ...r]),
                               r
                           );
                       })()
@@ -226,27 +226,27 @@ function q(e, t) {
                 (n.unshift(
                     (0, d.jF)(
                         null != e
-                            ? b.intl.formatToPlainString(b.t.FREzQs, { name: e.name })
-                            : b.intl.string(b.t.XFYW1o),
+                            ? v.intl.formatToPlainString(v.t.FREzQs, { name: e.name })
+                            : v.intl.string(v.t.XFYW1o),
                     ),
                 ),
                     (F = n));
                 break;
             }
             case d.rD.TEXT_CHANNEL:
-                (n.unshift((0, d.jF)(b.intl.string(b.t.W26k4V))), (F = n));
+                (n.unshift((0, d.jF)(v.intl.string(v.t.W26k4V))), (F = n));
                 break;
             case d.rD.VOICE_CHANNEL:
-                (n.unshift((0, d.jF)(b.intl.string(b.t.zUoI5C))), (F = n));
+                (n.unshift((0, d.jF)(v.intl.string(v.t.zUoI5C))), (F = n));
                 break;
             case d.rD.GUILD:
-                (n.unshift((0, d.jF)(b.intl.string(b.t.olADPs))), (F = n));
+                (n.unshift((0, d.jF)(v.intl.string(v.t.olADPs))), (F = n));
                 break;
             case d.rD.APPLICATION:
-                (n.unshift((0, d.jF)(b.intl.string(b.t.VwK1ld))), (F = n));
+                (n.unshift((0, d.jF)(v.intl.string(v.t.VwK1ld))), (F = n));
                 break;
             case d.rD.GAME_PROFILE:
-                (n.unshift((0, d.jF)(b.intl.string(b.t.gEp2SG))), (F = n));
+                (n.unshift((0, d.jF)(v.intl.string(v.t.gEp2SG))), (F = n));
                 break;
             default: {
                 let e = n.filter((e) => e.type === d.rD.GAME_PROFILE).slice(0, 3);
@@ -291,7 +291,7 @@ class J extends s.Ay.PersistedStore {
               : i.results.reduce((t, n) => (n.type === e ? t + 1 : t), 0);
     }
     channelNoticePredicate(e, t) {
-        let n = Date.now() - t >= v.D2K;
+        let n = Date.now() - t >= b.D2K;
         return x && n;
     }
     getFrequentGuilds() {

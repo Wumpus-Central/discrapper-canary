@@ -10,16 +10,16 @@ var o = i(116011),
     d = i(582128),
     u = i(181658),
     m = i(828596),
-    x = i(288106),
-    g = i(993046),
+    g = i(288106),
+    x = i(993046),
     p = i(38405),
     f = i(962644),
     h = i(17928),
     N = i(264779),
     A = i(412260),
-    j = i(202541),
-    E = i(652215),
-    b = i(280761),
+    b = i(202541),
+    j = i(652215),
+    E = i(280761),
     T = i(278870),
     C = i(839071),
     R = i(105292);
@@ -28,9 +28,9 @@ function I(e) {
         i,
         l,
         { transitionState: I, onClose: _, analyticsLocations: v } = e,
-        P = (0, b.U)(),
+        y = (0, E.U)(),
         {
-            code: y,
+            code: P,
             redemptionUrl: S,
             isClaimed: D,
             isClaimedCodesLoaded: M,
@@ -39,7 +39,7 @@ function I(e) {
             handleClaim: U,
             handleClaimError: k,
         } = (function (e) {
-            let t = null != e && e.rewardStatus === x.GM.CONSUMED,
+            let t = null != e && e.rewardStatus === g.GM.CONSUMED,
                 [i, s] = d.useState(!1),
                 {
                     code: n,
@@ -61,7 +61,7 @@ function I(e) {
                         : { isClaimedCodesLoaded: s, code: i.code, redemptionUrl: (0, N.kc)(i.code, i.promotion) };
                 })({ shouldFetch: t && !i }),
                 [c, o] = d.useState(!1),
-                b = null != e ? e.id : null;
+                E = null != e ? e.id : null;
             return {
                 code: n,
                 redemptionUrl: a,
@@ -70,14 +70,14 @@ function I(e) {
                 isClaiming: i,
                 isOutOfCodes: c,
                 handleClaim: d.useCallback(async () => {
-                    if (null == b) throw Error("Riot credit storefront promotion is not available");
+                    if (null == E) throw Error("Riot credit storefront promotion is not available");
                     s(!0);
                     try {
-                        let e = await (0, m.cF)(b, j.tv),
-                            t = (0, g.OF)(e);
+                        let e = await (0, m.cF)(E, b.tv),
+                            t = (0, x.OF)(e);
                         if (null == t) throw Error("Riot credit storefront claim response contained no promo code");
                         if (
-                            (r.default.track(E.HAw.OUTBOUND_PROMOTION_CLAIMED, { name: "riot", partner: "riot" }),
+                            (r.default.track(j.HAw.OUTBOUND_PROMOTION_CLAIMED, { name: "riot", partner: "riot" }),
                             !(await f.Ay.fetchClaimedOutboundPromotionCodes()))
                         )
                             return (
@@ -90,36 +90,36 @@ function I(e) {
                     } finally {
                         s(!1);
                     }
-                }, [b]),
+                }, [E]),
                 handleClaimError: d.useCallback(
                     (e) =>
                         e instanceof u.A &&
-                        e.code === E.t02.BILLING_STOREFRONT_PROMOTION_REWARD_UNAVAILABLE &&
+                        e.code === j.t02.BILLING_STOREFRONT_PROMOTION_REWARD_UNAVAILABLE &&
                         (o(!0), !0),
                     [],
                 ),
             };
-        })(P);
-    if (null == P) return null;
+        })(y);
+    if (null == y) return null;
     let G =
-        ((l = L ? 3 : null != y ? 2 : D && !M ? 0 : 1),
-        null == P.startsAt || null == P.endsAt
+        ((l = L ? 3 : null != P ? 2 : D && !M ? 0 : 1),
+        null == y.startsAt || null == y.endsAt
             ? null
             : (3 === l
                   ? ((t = R.intl.string(C.default.jKrPE9)), (i = R.intl.string(C.default.u113tL)))
                   : ((t = R.intl.string(C.default["/2ypah"])),
                     (i = R.intl.formatToPlainString(C.default["4g4Fpz"], {
-                        date: null != P.redemptionEndsAt ? P.redemptionEndsAt : P.endsAt,
+                        date: null != y.redemptionEndsAt ? y.redemptionEndsAt : y.endsAt,
                     }))),
               {
-                  id: P.id,
+                  id: y.id,
                   partnerId: "riot",
                   title: t,
                   outboundTitle: t,
                   body: i,
-                  startDate: P.startsAt,
-                  endDate: P.endsAt,
-                  code: y,
+                  startDate: y.startsAt,
+                  endDate: y.endsAt,
+                  code: P,
                   redemptionURL: null != S ? S : "",
                   asset: "https://cdn.discordapp.com/assets/content/f9a03629577352ebb83c4b1a24f8f7a2a7a6163c92db8028806fa121b24c2b65.webp",
                   redeemCtaText: R.intl.string(C.default.YRjiSW),
@@ -129,7 +129,7 @@ function I(e) {
         ? null
         : (0, s.jsx)(n.a, {
               title: R.intl.string(C.default.r97mLn),
-              subtitle: R.intl.format(T.default.ieA3V0, { termsUrl: c.A.getArticleURL(E.MVz.RIOT_CREDIT_CAMPAIGN) }),
+              subtitle: R.intl.format(T.default.ieA3V0, { termsUrl: c.A.getArticleURL(j.MVz.RIOT_CREDIT_CAMPAIGN) }),
               actions: [],
               transitionState: I,
               onClose: _,
@@ -154,7 +154,7 @@ function I(e) {
 }
 function _(e) {
     let { analyticsLocations: t } = e;
-    (r.default.track(E.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { partner_id: "riot", location_stack: t }),
+    (r.default.track(j.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { partner_id: "riot", location_stack: t }),
         (0, l.openModalLazy)(async () => {
             let { RiotCreditRewardModal: e } = await Promise.resolve().then(i.bind(i, 881296));
             return (i) => (0, s.jsx)(e, { ...i, analyticsLocations: t });

@@ -14,27 +14,27 @@ var r = n(636537),
     h = n(652215),
     g = n(809526),
     x = n(105292);
-let j = "ConjureHeldPrompts",
-    b = new Map(),
+let b = "ConjureHeldPrompts",
+    j = new Map(),
     v = new Map();
 function y(e, t) {
     let n =
-        b.get(e) ??
+        j.get(e) ??
         (async () => {
             try {
                 await t();
             } catch (t) {
-                throw (b.delete(e), t);
+                throw (j.delete(e), t);
             }
         })();
-    return (b.set(e, n), n);
+    return (j.set(e, n), n);
 }
 function w() {
-    return l.w.get(j) ?? {};
+    return l.w.get(b) ?? {};
 }
 function C(e) {
     let { [e]: t, ...n } = w();
-    l.w.set(j, n);
+    l.w.set(b, n);
 }
 function N(e) {
     return w()[e]?.guildId;
@@ -43,7 +43,7 @@ function U(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         r = arguments.length > 3 ? arguments[3] : void 0;
     if (p.Ay.getProject(e)?.install_scope_setup != null)
-        l.w.set(j, { ...w(), [e]: { message: t, attachments: n, nonce: (0, i.m)(), guildId: r } });
+        l.w.set(b, { ...w(), [e]: { message: t, attachments: n, nonce: (0, i.m)(), guildId: r } });
     else (0, d.sendUserMessage)(e, t, n);
 }
 function R(e, t, n) {
@@ -79,7 +79,7 @@ function E(e, t) {
         return;
     }
     "open" === d.default.getConnState(e) &&
-        (l.w.set(j, { ...w(), [e]: { ...n, sent: !0 } }),
+        (l.w.set(b, { ...w(), [e]: { ...n, sent: !0 } }),
         v.set(e, o.A.getHistoryLoads(e)),
         (0, d.sendUserMessage)(e, n.message, n.attachments, { nonce: n.nonce }) || R(e, n, t));
 }

@@ -33,7 +33,7 @@ function u(e) {
             [h],
         ),
         [N, C] = i.useReducer(_, { focusedX: u, focusedY: d, columnCounts: n }),
-        { columnCounts: x, focusedX: y, focusedY: j } = N,
+        { columnCounts: y, focusedX: x, focusedY: j } = N,
         [T] = i.useState(() => (0, r.nF)(C, 16));
     return (
         i.useEffect(() => {
@@ -56,15 +56,15 @@ function u(e) {
                 } = e,
                 _ = i.useRef(h),
                 N = c(o(t, u, d)),
-                [C, x] = i.useState(!1),
-                [y, j] = i.useState(!1),
+                [C, y] = i.useState(!1),
+                [x, j] = i.useState(!1),
                 [T, O] = i.useState(!1),
                 [S] = i.useState(
                     () =>
                         new r.Lp((e) => {
                             let [t, n] = e.split(",").map(Number);
                             return () => {
-                                (x(!0), I({ type: s.n.SET_FOCUSED_POSITION, x: t, y: n }));
+                                (y(!0), I({ type: s.n.SET_FOCUSED_POSITION, x: t, y: n }));
                             };
                         }),
                 );
@@ -103,7 +103,7 @@ function u(e) {
                 P(!1);
                 let e = c(o(t, u, d));
                 if (null != e) return void b(e);
-                x(!1);
+                y(!1);
                 let n = c(o(t));
                 null != n && b(n);
             }, [t, L, C, b, u, d]);
@@ -111,8 +111,8 @@ function u(e) {
                 _.current && null == e && P(!0);
             }, []);
             (i.useEffect(() => {
-                C && y && null != N && (b(N), j(!1));
-            }, [y, N]),
+                C && x && null != N && (b(N), j(!1));
+            }, [x, N]),
                 i.useEffect(() => {
                     C && (T || R(u, d), O(!1));
                 }, [u, d]));
@@ -175,7 +175,7 @@ function u(e) {
                 w = i.useCallback(
                     (e) =>
                         e.currentTarget !== e.target
-                            ? (C || (x(!0), O(!0)), !1)
+                            ? (C || (y(!0), O(!0)), !1)
                             : C
                               ? (v(!1), !1)
                               : void (g && null != N ? R(u, d) : v(!0)),
@@ -184,7 +184,7 @@ function u(e) {
                 k = i.useCallback((e) => {
                     if (e.target !== e.currentTarget) {
                         if (e.currentTarget.contains(e.relatedTarget)) return !1;
-                        x(!1);
+                        y(!1);
                     }
                 }, []),
                 U = i.useMemo(() => Math.max(...n), [n]),
@@ -222,8 +222,8 @@ function u(e) {
             );
         })({
             navId: t,
-            columnCounts: x,
-            focusedX: y,
+            columnCounts: y,
+            focusedX: x,
             focusedY: j,
             dispatch: T,
             onSelect: m,

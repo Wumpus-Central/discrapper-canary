@@ -51,7 +51,7 @@ function D(e, t, i) {
         r()(null != a.head, "Document head was null"),
         a.head.appendChild(d));
 }
-function v(e) {
+function b(e) {
     let t = g[e];
     if (null != t) {
         let n, i;
@@ -75,7 +75,7 @@ function v(e) {
             w.emitChange());
     }
 }
-function b(e) {
+function v(e) {
     let { data: t } = e;
     if (!(t instanceof Object && t.discordPopoutEvent instanceof Object)) return;
     let n = t.discordPopoutEvent;
@@ -106,7 +106,7 @@ function b(e) {
                     )
                 );
             case I.hK1.UNLOADED:
-                return v(n.key);
+                return b(n.key);
         }
 }
 function P(e) {
@@ -128,7 +128,7 @@ class U extends o.Ay.PersistedStore {
     static persistKey = "PopoutWindowStore";
     initialize(e) {
         (this.waitFor(E.default),
-            window.addEventListener("message", b),
+            window.addEventListener("message", v),
             window.addEventListener("beforeunload", M),
             (m = e ?? {}));
     }
@@ -168,7 +168,7 @@ class U extends o.Ay.PersistedStore {
     }
     unmountWindow(e) {
         return (
-            this.isWindowFullyInitialized(e) || p.warn(`Attempted to unmount partially initialized window ${e}`), v(e)
+            this.isWindowFullyInitialized(e) || p.warn(`Attempted to unmount partially initialized window ${e}`), b(e)
         );
     }
 }

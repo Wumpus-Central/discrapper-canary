@@ -1,22 +1,22 @@
-l.d(e, { A: () => a });
+l.d(e, { A: () => r });
 var s = l(582128),
     i = l(398773),
-    t = l(735769);
-function a(n) {
+    a = l(735769);
+function r(n) {
     let e = s.useRef(null);
     return (
         s.useLayoutEffect(() => {
             let l = e.current;
             if (null == l || null == n) return;
-            let s = t.A.getScrollTop(n);
-            function a() {
+            let s = a.A.getScrollTop(n);
+            function r() {
                 s = l?.scrollTop ?? s;
             }
             return (
                 s > 0 && ((l.scrollTop = s), (s = l.scrollTop)),
-                l.addEventListener("scroll", a, { passive: !0 }),
+                l.addEventListener("scroll", r, { passive: !0 }),
                 () => {
-                    (l.removeEventListener("scroll", a), (0, i.wd)(n, s));
+                    (l.removeEventListener("scroll", r), (0, i.wd)(n, s));
                 }
             );
         }, [n]),

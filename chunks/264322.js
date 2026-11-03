@@ -38,8 +38,8 @@ var i = n(582128),
     L = n(577700),
     y = n(210978),
     D = n(392054),
-    v = n(168186),
-    b = n(240591),
+    b = n(168186),
+    v = n(240591),
     P = n(46477),
     M = n(73510),
     U = n(652215);
@@ -133,7 +133,7 @@ function Z(e) {
         } else null != e.bot && (s[e.bot.id] = e.id);
         let t = {
             descriptor: {
-                ...(0, v.bq)(
+                ...(0, b.bq)(
                     {
                         description: (o = e).description,
                         icon: o.icon,
@@ -153,7 +153,7 @@ function Z(e) {
         a[e.id] = t;
     }
     for (let e of ("guild" === n.type && l.size > 0 && u.A.requestMembersById(n.guildId, [...l]),
-    (0, v.Lz)(
+    (0, b.Lz)(
         i.application_commands.map((e) => {
             var t, n;
             let i;
@@ -244,7 +244,7 @@ class J extends d.Ay.Store {
             a = this.getUserState(),
             s = this.getApplicationState(n.applicationId),
             l = this.getApplicationStates(),
-            o = (0, b.Bh)(i, t.commandTypes),
+            o = (0, v.Bh)(i, t.commandTypes),
             d = null == i || o?.hasBaseAccessPermissions === !0,
             c = !1 !== t.applicationCommands,
             u = !1;
@@ -366,7 +366,7 @@ let ee = new J(c.h, {
                                         null != s.descriptor.application,
                                         "Bot's index section has no application info",
                                     ));
-                                let o = (0, v.bq)({ ...s.descriptor.application, bot: t }, !1, n);
+                                let o = (0, b.bq)({ ...s.descriptor.application, bot: t }, !1, n);
                                 ((s.descriptor = { ...s.descriptor, ...o }), (r = !0));
                             }),
                             r
@@ -461,7 +461,7 @@ let es = Object.freeze({
 });
 function el(e, t, n) {
     let r = "channel" === e.type ? e.channel : void 0,
-        a = (0, b.MW)(r, t.commandTypes),
+        a = (0, v.MW)(r, t.commandTypes),
         s = !1 !== t.applicationCommands,
         l = en(e, s, n.allowFetch),
         o = er(s, n.allowFetch),
@@ -555,18 +555,18 @@ function eo(e) {
             (null == d || t.descriptor.id === d) && D.add(e);
         }
     }
-    let v = new Map();
+    let b = new Map();
     for (let [e, t] of r)
         if (null == d || e === d) {
             let e = t.result?.sections;
-            if (null != e) for (let t of Object.keys(e)) (D.add(t), v.set(t, e[t]));
+            if (null != e) for (let t of Object.keys(e)) (D.add(t), b.set(t, e[t]));
         }
     for (let e of Array.from(D)) {
         let t,
             n,
             i = O[e],
             r = L[e],
-            a = v.get(e),
+            a = b.get(e),
             s = null != i,
             o = null != r;
         if (null != i && null != r) {
@@ -610,14 +610,14 @@ function eo(e) {
         let e = ed(C.gZ[M.Ik.BUILT_IN], T, !0, !0, N);
         null != e && S.push(e);
     }
-    let b = S.flatMap((e) => e.data.map((t) => ({ ...t, section: e.section })));
+    let v = S.flatMap((e) => e.data.map((t) => ({ ...t, section: e.section })));
     if (u === y.M.COMMAND_ONLY || u === y.M.COMMAND_OR_APPLICATION) {
         let e = t.context,
             n = g.A.getGuild(t?.context?.guild_id),
             i = S.some((e) => e.section.id !== M.Ik.BUILT_IN && e.data.length > 0);
         _.commands.useFrecency && i && I.bW.loadIfNecessary();
         let r = null != e ? { channel: e, guild: n } : void 0;
-        b.sort((e, t) => {
+        v.sort((e, t) => {
             if (_.commands.useScore) {
                 let n = e.score ?? 0,
                     i = t.score ?? 0;
@@ -632,7 +632,7 @@ function eo(e) {
         });
     }
     return {
-        commands: b,
+        commands: v,
         descriptors: S.map((e) => e.section),
         sectionedCommands: S,
         loading:

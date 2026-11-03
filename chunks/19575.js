@@ -243,7 +243,7 @@ null != g &&
         .map((e) => parseInt(e))),
     (L = g.app.getModuleVersions()),
     (R = g.app.getBuildNumber()));
-let v = new Set([
+let b = new Set([
         "discord_erlpack",
         "discord_game_utils",
         "discord_rpc",
@@ -251,7 +251,7 @@ let v = new Set([
         "discord_utils",
         "discord_voice",
     ]),
-    b = !1,
+    v = !1,
     P = null,
     M = "lastImageSaveDirectory",
     U = /[<>:"/\\|?*@]/g,
@@ -337,7 +337,7 @@ let K = {
         },
         ensureModule: (e) =>
             I.isPlatformEmbedded
-                ? __OVERLAY__ && v.has(e)
+                ? __OVERLAY__ && b.has(e)
                     ? Promise.resolve()
                     : g.nativeModules.ensureModule(e)
                 : Promise.reject(Error("not embedded")),
@@ -466,16 +466,16 @@ let K = {
             if (__OVERLAY__) throw Error("cannot require discord_voice in overlay");
             let e = this.requireModule("discord_voice");
             return (
-                b ||
+                v ||
                     (0, _.si)((t, n, i) => {
                         e.consoleLog(n, `[${t}] ${i}`);
                     }),
-                (b = !0),
+                (v = !0),
                 e
             );
         },
         getDiscordUtils() {
-            if (!b)
+            if (!v)
                 try {
                     this.getVoiceEngine();
                 } catch (e) {}

@@ -35,14 +35,14 @@ var f = n(964404),
     L = n(452661),
     y = n(652215);
 let D = new c.A("CloudUpload.tsx"),
-    v = new Set([429]);
-class b extends Error {
+    b = new Set([429]);
+class v extends Error {
     kind;
     phase;
     messageShort;
     constructor(e, t = {}) {
         const { cause: n, response: i } = t,
-            r = b.getErrorKind(n ?? Error(`${i?.text ?? "Unknown error"}`), i),
+            r = v.getErrorKind(n ?? Error(`${i?.text ?? "Unknown error"}`), i),
             a = "server_error" === r || "client_error" === r ? `${e}:${r}:status_${i?.status ?? 0}` : `${e}:${r}`;
         (super(a, { cause: n }),
             (this.name = "ResumableUploadError"),
@@ -53,7 +53,7 @@ class b extends Error {
     static getErrorKind(e, t) {
         let n = t?.status ?? 0,
             i = n >= 500 && n < 600,
-            r = v.has(n),
+            r = b.has(n),
             a =
                 e.message.toLowerCase().includes("network") ||
                 e.message.toLowerCase().includes("terminated") ||
@@ -63,9 +63,9 @@ class b extends Error {
     }
     static rejectionHandler(e) {
         return (t) => {
-            if (t instanceof o.oh) throw new b(e, { response: t });
-            if (t instanceof Error) throw new b(e, { cause: t });
-            throw new b(e, { cause: Error(String(t)) });
+            if (t instanceof o.oh) throw new v(e, { response: t });
+            if (t instanceof Error) throw new v(e, { cause: t });
+            throw new v(e, { cause: Error(String(t)) });
         };
     }
     canRetry() {
@@ -241,14 +241,14 @@ class U extends C.Ay {
         return await this._uploadHttpClient
             .doUpload(t)
             .then((e) =>
-                200 === e.status || 201 === e.status ? this.currentSize : b.rejectionHandler("status_check")(e),
+                200 === e.status || 201 === e.status ? this.currentSize : v.rejectionHandler("status_check")(e),
             )
             .catch((e) => {
                 if (e instanceof o.oh && 308 === e.status) {
                     let t = this.parseRangeHeader(e.headers.range ?? "");
                     return null != t ? t[1] + 1 : 0;
                 }
-                return b.rejectionHandler("status_check")(e);
+                return v.rejectionHandler("status_check")(e);
             });
     }
     async startOrResumeUpload(e) {
@@ -268,8 +268,8 @@ class U extends C.Ay {
         e.onRequestProgress = s().throttle(this.createResumeAwareProgressFn(t), 50);
         let n = await this._uploadHttpClient
             .doUpload(e, { fileByteRange: { start: t } })
-            .catch(b.rejectionHandler("upload"));
-        if (200 !== n.status && 201 !== n.status) throw new b("upload", { response: n });
+            .catch(v.rejectionHandler("upload"));
+        if (200 !== n.status && 201 !== n.status) throw new v("upload", { response: n });
         return n;
     }
     async uploadFileWithResumption(e, t, n) {
@@ -302,7 +302,7 @@ class U extends C.Ay {
                 }
                 return await this.startOrResumeUpload(l, o);
             } catch (e) {
-                if (e instanceof b && e.canRetry()) {
+                if (e instanceof v && e.canRetry()) {
                     (D.warn(`Error uploading ${this.id}: ${e.message}, attempting resumption`),
                         (this.uploadAnalytics.uploadResumptionReason = e.messageShort),
                         await g.A.awaitOnline());
@@ -671,10 +671,10 @@ class U extends C.Ay {
                 rejectWithError: !0,
             });
         } catch (e) {
-            if (e instanceof o.oh) throw new b("upload", { response: e });
+            if (e instanceof o.oh) throw new v("upload", { response: e });
             throw e;
         }
-        if (e.body?.attachments?.[0] == null) throw new b("upload", { response: e });
+        if (e.body?.attachments?.[0] == null) throw new v("upload", { response: e });
         (this.setResponseUrl(e.body.attachments[0].upload_url),
             this.setUploadedFilename(e.body.attachments[0].upload_filename));
     }

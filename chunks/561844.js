@@ -2,12 +2,12 @@ n.d(t, {
     DX: () => k,
     DZ: () => B,
     Dq: () => R,
-    LW: () => v,
+    LW: () => b,
     OQ: () => M,
     Qg: () => D,
     Wc: () => x,
     XH: () => U,
-    Y5: () => b,
+    Y5: () => v,
     YE: () => y,
     Zu: () => G,
     av: () => O,
@@ -236,7 +236,7 @@ function D(e) {
         };
     C(a, c, l, !1);
 }
-async function v(e) {
+async function b(e) {
     let {
             questContent: t,
             questContentPosition: n,
@@ -258,7 +258,7 @@ async function v(e) {
         click_id: o ?? (0, i.A)(),
     };
 }
-async function b(e) {
+async function v(e) {
     let {
             questId: t,
             questContent: n,
@@ -275,7 +275,7 @@ async function b(e) {
         questId: t,
         event: T.HAw.QUEST_CONTENT_CLICKED,
         properties: {
-            ...(await v({
+            ...(await b({
                 questContent: n,
                 questContentPosition: r,
                 questContentRowIndex: a,

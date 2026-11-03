@@ -1,4 +1,4 @@
-(n.d(t, { IU: () => R, SP: () => O, ec: () => P, rh: () => C, ei: () => b }), n(938796));
+(n.d(t, { IU: () => R, SP: () => O, ec: () => P, rh: () => C, ei: () => v }), n(938796));
 var i = n(536637),
     r = n.n(i),
     a = n(721779),
@@ -66,12 +66,12 @@ function C(e) {
         O = e.gifting_prompt,
         R = null != e.interaction ? u.createFromServer(e.interaction) : null,
         y = e.type === T.lAJ.THREAD_STARTER_MESSAGE ? e.referenced_message?.author?.id : void 0,
-        b = e.content;
+        v = e.content;
     return (
         e.type === T.lAJ.PREMIUM_REFERRAL &&
-            ((t = p.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (b = "")),
+            ((t = p.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (v = "")),
         e.type === T.lAJ.PREMIUM_GROUP_INVITE &&
-            ((n = p.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (b = "")),
+            ((n = p.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (v = "")),
         new _.Ay({
             ...e,
             ...null,
@@ -94,11 +94,11 @@ function C(e) {
                 mentionRoles: o,
             }),
             giftCodes: (0, I.pF)(e) ? (0, I.e7)(e?.embeds[0].url) : (0, I.e7)(e.content),
-            content: b,
+            content: v,
             referralTrialOfferId: t,
             premiumGroupInviteId: n,
             call: L(e.call, a.timestamp),
-            messageSnapshots: v(e),
+            messageSnapshots: b(e),
             reactions: D(i ?? e.reactions, e.poll),
             interaction: R,
             interactionData: r ?? e.interaction_data,
@@ -129,7 +129,7 @@ function R(e, t) {
         null != t.activity && (n = n.set("activity", t.activity)),
         null != t.content && "" !== t.content && (n = n.set("content", t.content)),
         null != t.embeds && (n = n.set("embeds", y(t))),
-        null != t.message_snapshots && (n = n.set("messageSnapshots", v(t))),
+        null != t.message_snapshots && (n = n.set("messageSnapshots", b(t))),
         t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)),
         null != n.webhookId && null != t.author && (n = n.set("author", new c.A(t.author))),
         null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)),
@@ -187,7 +187,7 @@ function D(e, t) {
               );
           });
 }
-function v(e) {
+function b(e) {
     return null == e.message_snapshots
         ? []
         : e.message_snapshots.map((e) => {
@@ -195,7 +195,7 @@ function v(e) {
               return new _.vF({ message: N(t), moderator_report: n });
           });
 }
-function b(e) {
+function v(e) {
     return 0 === (0, o.o6)(e).length || "" !== e.content;
 }
 function P(e) {

@@ -1,4 +1,4 @@
-(n.d(t, { AT: () => L, DV: () => P, Pd: () => b, al: () => y, iG: () => U, ms: () => M, vJ: () => R }), n(321073));
+(n.d(t, { AT: () => L, DV: () => P, Pd: () => v, al: () => y, iG: () => U, ms: () => M, vJ: () => R }), n(321073));
 var i = n(132500),
     r = n(344351),
     a = n(731738),
@@ -39,7 +39,7 @@ function D(e, t) {
         interactionId: i.interactionId ?? r?.interactionId,
     };
 }
-function v(e, t) {
+function b(e, t) {
     let n = l.A.getApplication(e);
     if (!(0, o.n)(n, O.gfo.QUEST)) return;
     let i = (0, E.jm)(_.A.quests, e, !0);
@@ -49,7 +49,7 @@ function v(e, t) {
         (null != r && n.push(`quest_id:${r}`), u.A.increment({ name: t, tags: n }));
     }
 }
-function b(e, t) {
+function v(e, t) {
     let n = D(e, t);
     if (null == n) return;
     let {
@@ -65,9 +65,9 @@ function b(e, t) {
         } = n,
         L = f.default.getCurrentUser();
     if (null == L) return;
-    let b = null != u ? A.A.getChannel(u) : null,
-        P = n.guildId ?? b?.getGuildId() ?? null,
-        M = n.locationKind ?? (null == b ? void 0 : null != P ? r.T.GUILD_CHANNEL : r.T.PRIVATE_CHANNEL),
+    let v = null != u ? A.A.getChannel(u) : null,
+        P = n.guildId ?? v?.getGuildId() ?? null,
+        M = n.locationKind ?? (null == v ? void 0 : null != P ? r.T.GUILD_CHANNEL : r.T.PRIVATE_CHANNEL),
         U = h.A.getMediaSessionId(),
         w = null != U ? [U] : [],
         G = (0, i.A)();
@@ -97,24 +97,24 @@ function b(e, t) {
         location_stack: S,
         user_premium_tier: L.premiumType,
         raw_thermal_state: H,
-        n_participants: null != b ? d.A.getUserParticipantCount(b.id) : null,
+        n_participants: null != v ? d.A.getUserParticipantCount(v.id) : null,
         is_activity_start: l,
         release_phase: V,
         shelf_rank: F?.activity?.shelf_rank,
         shelf_sorted_rank: B > 0 ? B : null,
         activity_user_session_id: G,
-        channel_type: b?.type,
+        channel_type: v?.type,
         source: N,
-        command_context_type: null != b ? (0, s.ud)(b, e) : null,
+        command_context_type: null != v ? (0, s.ud)(v, e) : null,
         invite_inviter_id: o,
         interaction_id: C,
         embedded_activity_location_kind: M,
     }),
-        v(e, a.K.FRAME_SESSION_JOIN),
+        b(e, a.K.FRAME_SESSION_JOIN),
         I.default.track(O.HAw.ACTIVITY_IFRAME_MOUNT, {
             location_stack: S,
             channel_id: u,
-            channel_type: b?.type,
+            channel_type: v?.type,
             guild_id: P,
             application_id: e,
             instance_id: _,
@@ -151,7 +151,7 @@ async function M(e, t, n) {
         source: u,
         embedded_activity_location_kind: o,
     }),
-        v(e, a.K.FRAME_SESSION_JOIN_FAILED));
+        b(e, a.K.FRAME_SESSION_JOIN_FAILED));
 }
 function U(e) {
     let t = R[e],

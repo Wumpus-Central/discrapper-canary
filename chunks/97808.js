@@ -1,4 +1,4 @@
-n.d(t, { Js: () => P, Rb: () => O, d9: () => D, eu: () => v });
+n.d(t, { Js: () => P, Rb: () => O, d9: () => D, eu: () => b });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -97,9 +97,9 @@ function y(e) {
             isTyping: L = !1,
             avatarDecoration: y,
             typingOffset: D,
-            specs: v,
+            specs: b,
         } = e,
-        b = { width: (0, m.FT)(n), height: (0, m.FT)(n) },
+        v = { width: (0, m.FT)(n), height: (0, m.FT)(n) },
         P =
             null == S || N
                 ? void 0
@@ -113,7 +113,7 @@ function y(e) {
                             })
                           : e;
                   })(S, C, O, R),
-        M = v.size * p.Xq,
+        M = b.size * p.Xq,
         U = (function (e, t, n, i) {
             let r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
             if (null == e) return null;
@@ -247,7 +247,7 @@ function y(e) {
     return null != r || null != a
         ? (0, i.jsxs)(o.D, {
               className: s()(g.iE, g.Wn, _),
-              style: b,
+              style: v,
               onClick: r,
               tabIndex: E,
               onContextMenu: d,
@@ -261,7 +261,7 @@ function y(e) {
           })
         : (0, i.jsxs)("div", {
               className: s()(g.iE, _),
-              style: b,
+              style: v,
               onContextMenu: d ?? void 0,
               onMouseEnter: c ?? void 0,
               onMouseLeave: u ?? void 0,
@@ -287,7 +287,7 @@ function D(e) {
         t,
     );
 }
-function v(e) {
+function b(e) {
     let {
             src: t,
             status: n,
@@ -303,8 +303,8 @@ function v(e) {
             speakingStylesConfig: N,
             statusTooltip: C = !1,
             statusTooltipDelay: L,
-            statusBackdropColor: v,
-            "aria-hidden": b = !1,
+            statusBackdropColor: b,
+            "aria-hidden": v = !1,
             "aria-label": P,
             imageClassName: M,
             ref: U,
@@ -433,7 +433,7 @@ function v(e) {
         (0, i.jsx)(y, {
             ...e,
             ariaLabel: P,
-            ariaHidden: b,
+            ariaHidden: v,
             status: w,
             specs: G,
             typingOffset: x,
@@ -460,7 +460,7 @@ function v(e) {
                             className: M,
                         }),
                     }),
-                    null != w && null != v ? R(v, G, w, { isMobile: l, isTyping: c, isVR: o }) : null,
+                    null != w && null != b ? R(b, G, w, { isMobile: l, isTyping: c, isVR: o }) : null,
                     null != w
                         ? (0, i.jsx)(d.m, {
                               text: C ? (0, f.MU)(w) : null,
@@ -494,7 +494,7 @@ function v(e) {
         })
     );
 }
-function b(e) {
+function v(e) {
     let {
             fromIsMobile: t = !0,
             fromStatus: n,
@@ -507,8 +507,8 @@ function b(e) {
             speakingStylesConfig: p,
             size: T,
             src: O,
-            status: v,
-            statusColor: b,
+            status: b,
+            statusColor: v,
             statusTooltip: P = !1,
             statusTooltipDelay: M,
             statusBackdropColor: U,
@@ -517,11 +517,11 @@ function b(e) {
             imageClassName: x,
             pulseStatusIcon: k,
         } = e,
-        F = (0, _.S3)(v, b),
+        F = (0, _.S3)(b, v),
         B = r.useId(),
         V = r.useId(),
         [H] = r.useState(() => ({ fill: a, ...L({ size: T, status: n, isMobile: t, isTyping: !1 }) })),
-        j = r.useMemo(() => ({ fill: F, ...L({ size: T, status: v, isMobile: o, isTyping: E }) }), [F, T, v, o, E]),
+        j = r.useMemo(() => ({ fill: F, ...L({ size: T, status: b, isMobile: o, isTyping: E }) }), [F, T, b, o, E]),
         {
             avatarCutoutX: W,
             avatarCutoutY: Y,
@@ -535,7 +535,7 @@ function b(e) {
         Q = (0, m.Kj)(T),
         J = 2.5 * Q.status,
         ee = 1.5 * Q.status,
-        et = null != v ? (2.5 * Q.status - Q.status) / 2 : 0,
+        et = null != b ? (2.5 * Q.status - Q.status) / 2 : 0,
         en = Q.size + Math.ceil(et),
         [ei, er, ea] = (0, c.z)(
             {
@@ -544,7 +544,7 @@ function b(e) {
                 to: k ? [{ scale: 0.8 }, { scale: 1.1 }, { scale: 1 }] : [],
             },
             N() ? "animate-always" : "animate-never",
-            [k, v],
+            [k, b],
         );
     return (0, i.jsx)(y, {
         ...e,
@@ -583,9 +583,9 @@ function b(e) {
                         speakingStylesConfig: p,
                     }),
                 }),
-                null != U && R(U, Q, v, { isMobile: o, isTyping: E, isVR: !1 }),
+                null != U && R(U, Q, b, { isMobile: o, isTyping: E, isVR: !1 }),
                 (0, i.jsx)(d.m, {
-                    text: P ? (0, f.MU)(v) : null,
+                    text: P ? (0, f.MU)(b) : null,
                     ariaHidden: !0,
                     position: "top",
                     spacing: (function (e, t, n) {
@@ -596,7 +596,7 @@ function b(e) {
                     children: (0, i.jsxs)(l.animated.g, {
                         transform: ei.scale.to((e) => {
                             let t, n, i, r, a, s;
-                            return `scale(${e}) ${((t = Q.status * e), (n = (Q.status - t) / 2), (i = Q.size - t - (null != v ? (2.5 * t - t) / 2 : 0) - Q.offset - n), (r = Q.size - 1.5 * t - Q.offset - n), (a = Math.round((i / e) * 100) / 100), (s = Math.round((r / e) * 100) / 100), `translate(${a}, ${s})`)}`;
+                            return `scale(${e}) ${((t = Q.status * e), (n = (Q.status - t) / 2), (i = Q.size - t - (null != b ? (2.5 * t - t) / 2 : 0) - Q.offset - n), (r = Q.size - 1.5 * t - Q.offset - n), (a = Math.round((i / e) * 100) / 100), (s = Math.round((r / e) * 100) / 100), `translate(${a}, ${s})`)}`;
                         }),
                         children: [
                             (0, i.jsxs)("svg", {
@@ -645,7 +645,7 @@ let P = r.memo(function (e) {
             ((f.current = p), (u.current = s), (E.current = o), (h.current = A));
         }, [s, o, A, p]),
         !c && null != s && null != u.current && p
-            ? (0, i.jsx)(b, {
+            ? (0, i.jsx)(v, {
                   ...l,
                   status: s,
                   statusColor: A,
@@ -653,6 +653,6 @@ let P = r.memo(function (e) {
                   fromIsMobile: E.current,
                   fromColor: h.current,
               })
-            : (0, i.jsx)(v, { ...l, status: s, statusColor: A })
+            : (0, i.jsx)(b, { ...l, status: s, statusColor: A })
     );
 });

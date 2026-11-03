@@ -4,8 +4,8 @@ var n = l(477900),
     a = l(821609),
     s = l(382028),
     r = l(756977),
-    c = l(51685),
-    o = l(105292);
+    o = l(51685),
+    c = l(105292);
 function u(e) {
     let { userId: t, channel: l, onAction: u, variant: d = "primary" } = e,
         m = (0, s.u)(t, l),
@@ -18,7 +18,7 @@ function u(e) {
               shouldShow: A,
               asContainer: !0,
               children: (0, n.jsx)(a.$, {
-                  text: o.intl.string(c.default.DKHhec),
+                  text: c.intl.string(o.default.DKHhec),
                   variant: d,
                   size: "sm",
                   onClick: () => {

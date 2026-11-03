@@ -1,41 +1,41 @@
-n.d(e, { A: () => I, F: () => E });
-var l = n(477900),
-    i = n(582128),
-    a = n(503698),
-    r = n.n(a),
-    s = n(589812),
-    o = n(598748),
-    c = n(17928),
-    u = n(939249),
-    d = n(554830),
-    A = n(975460),
-    f = n(531913),
-    g = n(633075),
-    m = n(321191),
-    x = n(903209),
-    p = n(105292),
-    _ = n(374129);
+e.d(n, { A: () => I, F: () => E });
+var l = e(477900),
+    i = e(582128),
+    a = e(503698),
+    r = e.n(a),
+    s = e(589812),
+    o = e(598748),
+    c = e(17928),
+    u = e(939249),
+    d = e(554830),
+    A = e(975460),
+    f = e(531913),
+    g = e(633075),
+    m = e(321191),
+    p = e(903209),
+    x = e(105292),
+    _ = e(374129);
 function I(t) {
-    let e = (0, A.g)(t.activityApplication);
-    return null == e ? null : (0, l.jsx)(N, { ...t, widgetApplication: e });
+    let n = (0, A.g)(t.activityApplication);
+    return null == n ? null : (0, l.jsx)(N, { ...t, widgetApplication: n });
 }
 function N(t) {
-    var e, n;
+    var n, e;
     let a,
         { hasWidget: r, isLoadingProfile: s } =
-            ((e = t.userId),
-            (n = t.widgetApplication),
-            (a = (0, c.bG)([m.A], () => m.A.getUserProfile(e))),
+            ((n = t.userId),
+            (e = t.widgetApplication),
+            (a = (0, c.bG)([m.A], () => m.A.getUserProfile(n))),
             i.useEffect(() => {
                 let t = new AbortController();
-                return ((0, x.A)(e, void 0, { abortSignal: t.signal }), () => t.abort());
-            }, [e]),
+                return ((0, p.A)(n, void 0, { abortSignal: t.signal }), () => t.abort());
+            }, [n]),
             i.useMemo(
                 () => ({
-                    hasWidget: null != a && null != a.widgets && a.widgets.some((t) => (0, g.E)(t, n?.id)),
+                    hasWidget: null != a && null != a.widgets && a.widgets.some((t) => (0, g.E)(t, e?.id)),
                     isLoadingProfile: null == a,
                 }),
-                [a, n],
+                [a, e],
             ));
     return s
         ? null
@@ -49,18 +49,18 @@ function N(t) {
 }
 function E(t) {
     let {
-            className: e,
-            userId: n,
+            className: n,
+            userId: e,
             widgetApplicationId: i,
             hasWidget: a,
             compactViewMore: c = !1,
             onClickViewMore: A,
         } = t,
-        g = (0, f.A)(n, i),
+        g = (0, f.A)(e, i),
         m = g.surfaceConfigs[o.m.ACTIVITY_ACCESSORY];
     return null != m && g.hasIdentity
         ? (0, l.jsxs)("div", {
-              className: r()(_.kL, e),
+              className: r()(_.kL, n),
               children: [
                   (0, l.jsx)("div", {
                       className: _.Qs,
@@ -68,7 +68,7 @@ function E(t) {
                   }),
                   a &&
                       (0, l.jsx)(u.D, {
-                          "aria-label": p.intl.string(p.t["OBCR+p"]),
+                          "aria-label": x.intl.string(x.t["OBCR+p"]),
                           className: r()(_.NO, { [_.O7]: c }),
                           onClick: A,
                           children: (0, l.jsx)(d.K, { size: "xxs" }),

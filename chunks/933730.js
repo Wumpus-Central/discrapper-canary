@@ -3,8 +3,8 @@ var i,
     a = n(477900),
     r = n(582128),
     l = n(492462),
-    s = n(17928),
-    o = n(273875),
+    o = n(17928),
+    s = n(273875),
     d = n(208756),
     c = n(798618),
     u = n(627330),
@@ -40,7 +40,7 @@ function h(e) {
             children: L,
         } = e,
         { analyticsLocations: M } = (0, b.Ay)(y),
-        j = (0, s.bG)([g.Ay], () => g.Ay.useReducedMotion),
+        j = (0, o.bG)([g.Ay], () => g.Ay.useReducedMotion),
         U = r.useCallback(() => {
             (0, A.A)(T.BVt.NITRO_HOME, { search: (0, l.stringify)({ perk: I }) });
         }, [I]),
@@ -66,7 +66,7 @@ function h(e) {
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)("div", { children: L }),
-            (0, a.jsx)(o.x, {
+            (0, a.jsx)(s.x, {
                 targetElementRef: t,
                 onRequestClose: () => n(_.i.USER_DISMISS),
                 alignmentStrategy: "edge",

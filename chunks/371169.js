@@ -14,7 +14,7 @@
     gA: () => Z,
     iR: () => Q,
     l5: () => es,
-    listProjects: () => v,
+    listProjects: () => b,
     su: () => V,
     tF: () => H,
     tf: () => z,
@@ -65,7 +65,7 @@ function R(e, t) {
 let L = null,
     y = null,
     D = !1;
-async function v(e) {
+async function b(e) {
     let t = e ?? null;
     if (T.Ay.getProjectsFetchState()?.type === "loading")
         return void (null != t && t !== L ? (y = t) : null == t && null != L && (D = !0));
@@ -81,12 +81,12 @@ async function v(e) {
         l.h.dispatch({ type: "CONJURE_PROJECTS_FETCH_FAIL", guildId: t });
     }
     let n = y;
-    ((y = null), null != n && n !== t ? v(n) : D && ((D = !1), v()));
+    ((y = null), null != n && n !== t ? b(n) : D && ((D = !1), b()));
 }
-let b = !1;
+let v = !1;
 async function P() {
-    if (!b) {
-        for (let e of ((b = !0), u.Ay.getResourceIds(C.P.CONJURING_PROJECT)))
+    if (!v) {
+        for (let e of ((v = !0), u.Ay.getResourceIds(C.P.CONJURING_PROJECT)))
             if (null == T.Ay.getProject(e)) {
                 if (!(0, E.tz)(e)) {
                     M(e);

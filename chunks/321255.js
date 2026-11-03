@@ -4,8 +4,8 @@ var l = t(477900),
     a = t(17928),
     s = t(789645),
     r = t(442433),
-    c = t(738876),
-    o = t(323073),
+    o = t(738876),
+    c = t(323073),
     u = t(666860),
     d = t(565645),
     h = t(973854),
@@ -17,12 +17,12 @@ var l = t(477900),
     f = t(287074),
     x = t(976860),
     N = t(494208),
-    C = t(964167),
-    b = t(105292);
+    b = t(964167),
+    C = t(105292);
 function E() {
     let [e, n] = i.useState(!1),
         t = i.useRef(null),
-        a = b.intl.string(b.t["UKOtz+"]);
+        a = C.intl.string(C.t["UKOtz+"]);
     return (0, l.jsx)(g.Y, {
         targetElementRef: t,
         shouldShow: e,
@@ -38,12 +38,12 @@ function E() {
                 navId: "app-channel-chat-panel-overflow",
                 onClose: n,
                 onSelect: n,
-                "aria-label": b.intl.string(b.t.Xm41aV),
+                "aria-label": C.intl.string(C.t.Xm41aV),
                 children: (0, l.jsx)(m.rX, {
                     children: (0, l.jsx)(m.Dr, {
                         id: "app-channel-open-in-full-view",
-                        label: b.intl.string(b.t.IxVmZi),
-                        action: () => (0, x.pX)((0, C.gu)((0, x.JK)().location.pathname)),
+                        label: C.intl.string(C.t.IxVmZi),
+                        action: () => (0, x.pX)((0, b.gu)((0, x.JK)().location.pathname)),
                     }),
                 }),
             });
@@ -68,9 +68,9 @@ function I(e) {
         children: [(0, l.jsx)(N.A, { channel: n }), (0, l.jsx)(f.A, { channel: n }), (0, l.jsx)(E, {})],
     });
 }
-var _ = t(355622),
-    T = t(225142),
-    y = t(701785),
+var y = t(355622),
+    _ = t(225142),
+    T = t(701785),
     S = t(429933),
     v = t(187360),
     k = t(353428),
@@ -93,10 +93,10 @@ function q(e) {
         p = (0, a.bG)([w.A], () => w.A.getChannel(n)),
         f = (0, a.bG)([B.A], () => B.A.getGuild(p?.getGuildId())),
         N = (0, U.Ay)(p),
-        C = (0, a.bG)([R.A], () => f?.id != null && R.A.isLurking(f.id), [f]),
+        b = (0, a.bG)([R.A], () => f?.id != null && R.A.isLurking(f.id), [f]),
         E = (0, S.A)(n),
-        q = (0, a.bG)([y.h], () => y.h.getResourceForChannel(f?.id, n)?.title),
-        z = (0, o.vL)(p),
+        q = (0, a.bG)([T.h], () => T.h.getResourceForChannel(f?.id, n)?.title),
+        z = (0, c.vL)(p),
         X = (0, L.Uf)(p),
         K = i.useRef(!1);
     if (
@@ -112,7 +112,7 @@ function q(e) {
         return null;
     let W = n === g,
         $ = [];
-    C || W || $.push((0, l.jsx)(v.A, { channel: p }, "notifications"));
+    b || W || $.push((0, l.jsx)(v.A, { channel: p }, "notifications"));
     let J = W && p.type === Y.rbe.GUILD_APP;
     return (J && $.push((0, l.jsx)(I, { channel: p }, "app-channel")),
     $.push(
@@ -120,7 +120,7 @@ function q(e) {
             j.Ay.Icon,
             {
                 icon: s.P,
-                tooltip: b.intl.string(b.t.cpT0Cq),
+                tooltip: C.intl.string(C.t.cpT0Cq),
                 onClick: () => {
                     (G.A.closeChannelSidebar(g), J && F._.dispatch(Y.jej.FOCUS_CHAT_BUTTON));
                 },
@@ -134,10 +134,10 @@ function q(e) {
           ? (0, l.jsx)(P.A, { guild: f, channelId: X })
           : (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(c.A, { channel: p, draftType: D.C.ChannelMessage }),
+                    (0, l.jsx)(o.A, { channel: p, draftType: D.C.ChannelMessage }),
                     (0, l.jsx)(j.Ay, {
                         toolbar: $,
-                        "aria-label": b.intl.string(b.t.BIYAqa),
+                        "aria-label": C.intl.string(C.t.BIYAqa),
                         children: (0, k.zF)({
                             channel: p,
                             channelName: E ? q : N,
@@ -173,7 +173,7 @@ function q(e) {
                                       if (null == p) return;
                                       let e = H.A.getMessages(p.id);
                                       if (m) {
-                                          ((0, x.pX)(Y.BVt.CHANNEL(p.guild_id, p.id)), (0, T.bN)(p.guild_id, null));
+                                          ((0, x.pX)(Y.BVt.CHANNEL(p.guild_id, p.id)), (0, _.bN)(p.guild_id, null));
                                           return;
                                       }
                                       (0, x.uh)(p.guild_id, p.id, e.jumpTargetId);
@@ -182,7 +182,7 @@ function q(e) {
                     }),
                     (0, l.jsx)("div", {
                         className: M.T,
-                        children: (0, l.jsx)(V.A, { channel: p, guild: f, chatInputType: _.oU.SIDEBAR }, n),
+                        children: (0, l.jsx)(V.A, { channel: p, guild: f, chatInputType: y.oU.SIDEBAR }, n),
                     }),
                 ],
             });

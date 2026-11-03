@@ -81,7 +81,7 @@ function D(e, t, n) {
               isVROnline: a,
           };
 }
-function v(e) {
+function b(e) {
     var t;
     let n = h.A.getChannel(e);
     return null == n
@@ -108,7 +108,7 @@ function v(e) {
                       .toString())
           : n.memberListId;
 }
-class b {
+class v {
     guildId;
     listId;
     ownerId;
@@ -196,7 +196,7 @@ let P = new (class {
         let n = this._guildLists[e];
         null == n && (n = this._guildLists[e] = {});
         let i = n[t];
-        return (null == i && ((i = new b(e, t)).setGroups([{ id: N.clD.UNKNOWN, count: 0 }]), (n[t] = i)), i);
+        return (null == i && ((i = new v(e, t)).setGroups([{ id: N.clD.UNKNOWN, count: 0 }]), (n[t] = i)), i);
     }
     forEach(e, t) {
         if (null == e)
@@ -239,11 +239,11 @@ class x extends d.Ay.Store {
             this.syncWith([E.A], w));
     }
     getProps(e, t) {
-        let n = P.get(e, v(t));
+        let n = P.get(e, b(t));
         return { listId: `${n.guildId}:${n.listId}`, groups: n.groups, rows: n.rows, version: n.version };
     }
     getRows(e, t) {
-        return P.get(e, v(t)).rows;
+        return P.get(e, b(t)).rows;
     }
 }
 let k = new x(c.h, {

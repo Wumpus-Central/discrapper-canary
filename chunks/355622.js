@@ -164,7 +164,7 @@ let c = {
         showCharacterCount: !0,
         layout: 1,
     },
-    S = {
+    y = {
         analyticsName: "create_forum_post",
         attachments: !0,
         drafts: { type: s.C.FirstThreadMessage },
@@ -180,7 +180,7 @@ let c = {
         showSlowmodeIndicator: !0,
         layout: 2,
     },
-    y = {
+    S = {
         analyticsName: "create_poll",
         attachments: !0,
         drafts: { type: s.C.ChannelMessage },
@@ -264,10 +264,10 @@ let c = {
             disableAutoFocus: !0,
             hideAccessoryBar: !0,
         },
-        CREATE_FORUM_POST: S,
+        CREATE_FORUM_POST: y,
         CREATE_GAME_INVITE_POST_DESCRIPTION: E,
         CREATE_ANNOUNCEMENT_POST: x,
-        CREATE_POLL: y,
+        CREATE_POLL: S,
         FORUM_CHANNEL_GUIDELINES: {
             analyticsName: "forum_channel_guidelines",
             drafts: { type: s.C.ChannelMessage },

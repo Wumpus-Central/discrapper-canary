@@ -27,8 +27,8 @@ var u = n(343328),
     L = n(652215),
     y = n(746080),
     D = n(105292);
-let v = 10 * C.A.Millis.SECOND,
-    b = new _.A("MessageManager");
+let b = 10 * C.A.Millis.SECOND,
+    v = new _.A("MessageManager");
 function P(e) {
     let {
         guildId: t,
@@ -46,7 +46,7 @@ function P(e) {
     if (I?.type === L.rbe.GUILD_STORE || (I?.type != null && L.kvI.GUILD_THREADS_ONLY.has(I.type))) return;
     let p = c.A.getOrCreate(n);
     (p.some(O.$r) &&
-        (b.log("Found expired attachment link, clearing messages"), c.A.clear(n), (p = c.A.getOrCreate(n))),
+        (v.log("Found expired attachment link, clearing messages"), c.A.clear(n), (p = c.A.getOrCreate(n))),
         null != p.jumpTargetId &&
             null == a &&
             ((p = p.mutate({ jumpTargetId: null, jumped: !1, jumpType: o.vx.ANIMATED })), c.A.commit(p)),
@@ -83,7 +83,7 @@ function P(e) {
                 })(n)
             )
                 return (
-                    b.log(`Jumping to start of thread ${I.id}`),
+                    v.log(`Jumping to start of thread ${I.id}`),
                     l.A.fetchMessages({
                         channelId: n,
                         limit: (0, R.h)("MessageManager.threadStart"),
@@ -106,7 +106,7 @@ function P(e) {
                 });
             let e = g.Ay.getTrackedAckMessageId(I.id);
             return (
-                b.log(`Jumping to most recent message in thread ${I.id} - ${e}`),
+                v.log(`Jumping to most recent message in thread ${I.id} - ${e}`),
                 l.A.fetchMessages({
                     channelId: n,
                     limit: (0, R.h)("MessageManager.threadUnread"),
@@ -197,7 +197,7 @@ function $(e) {
     let { channelId: t, jump: n, isStale: i, isPreview: r = !1 } = e;
     if (r) return;
     let a = K[t] ?? 0;
-    if (Date.now() - a < v) return;
+    if (Date.now() - a < b) return;
     K[t] = Date.now();
     let s = S.Ay.getChannelId(),
         o = p.Ay.getCurrentSidebarChannelId(s),

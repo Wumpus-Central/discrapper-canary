@@ -1,14 +1,14 @@
-n.d(t, { A: () => e });
-var i = n(477900);
-n(582128);
-var r = n(953727);
+t.d(n, { A: () => e });
+var i = t(477900);
+t(582128);
+var r = t(953727);
 function e(s) {
-    let { width: t = 24, height: n = 24, color: e = "currentColor", ...l } = s;
+    let { width: n = 24, height: t = 24, color: e = "currentColor", ...l } = s;
     return (0, i.jsx)("svg", {
         ...(0, r.A)(l),
         xmlns: "http://www.w3.org/2000/svg",
-        width: t,
-        height: n,
+        width: n,
+        height: t,
         viewBox: "0 0 21 20",
         fill: "none",
         children: (0, i.jsx)("path", {

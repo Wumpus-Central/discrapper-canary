@@ -26,8 +26,8 @@ var i = n(435558),
     L = n(47407),
     y = n(616356),
     D = n(734057),
-    v = n(153488),
-    b = n(629016),
+    b = n(153488),
+    v = n(629016),
     P = n(71393),
     M = n(576705),
     U = n(290863),
@@ -48,7 +48,7 @@ let V = !1,
 function X() {
     let e = w.A.getFriendIDs();
     return new Set(
-        v.A.hasConsented(F.YAq.PERSONALIZATION)
+        b.A.hasConsented(F.YAq.PERSONALIZATION)
             ? [
                   ...S.A.getUserAffinities()
                       .filter((e) => e.communicationRank <= 15)
@@ -99,7 +99,7 @@ function ei(e, t, n) {
         A = _.filter((t) => e.has(t.id)),
         f = !1,
         m = [],
-        v = new Set(),
+        b = new Set(),
         w = !1,
         B = [];
     for (let e of _) {
@@ -146,13 +146,13 @@ function ei(e, t, n) {
             )
                 continue;
         }
-        if (!g.IS(i) || null == l || v.has(l.id)) continue;
+        if (!g.IS(i) || null == l || b.has(l.id)) continue;
         let E = null != i ? ee(i) : null;
         (null == E || E.id !== l.id) && (i = null);
         let A = [];
         ((A =
             null != i && null != i.party && null != i.party.id
-                ? Array.from(b.A.getParty(i.party.id) ?? []).reduce((e, t) => {
+                ? Array.from(v.A.getParty(i.party.id) ?? []).reduce((e, t) => {
                       let n = G.default.getUser(t);
                       return (null != n && e.push(n), e);
                   }, [])
@@ -162,7 +162,7 @@ function ei(e, t, n) {
                       return null != n && n.id === l.id;
                   })),
             (A = r().orderBy(A, [en], ["desc"])).length !== _.length && (f = !0),
-            v.add(l.id),
+            b.add(l.id),
             m.push({
                 application: l,
                 activity: i,
@@ -318,8 +318,8 @@ function el() {
 class eo extends s.Ay.Store {
     static displayName = "NowPlayingViewStore";
     initialize() {
-        (this.syncWith([G.default, I.A, U.A, b.A, x.A, y.A, w.A, v.A, S.A], el),
-            this.waitFor(I.A, y.A, D.A, v.A, b.A, m.A, P.A, M.A, U.A, w.A, S.A, G.default, x.A));
+        (this.syncWith([G.default, I.A, U.A, v.A, x.A, y.A, w.A, b.A, S.A], el),
+            this.waitFor(I.A, y.A, D.A, b.A, v.A, m.A, P.A, M.A, U.A, w.A, S.A, G.default, x.A));
     }
     get currentActivityParties() {
         return j;

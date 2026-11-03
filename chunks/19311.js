@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => g, CY: () => f, ti: () => h });
+n.d(t, { Ay: () => y, CY: () => f, ti: () => h });
 var l,
     i = n(477900);
 n(582128);
@@ -50,14 +50,14 @@ function S(e) {
             primaryText: h,
             primaryTooltip: f,
             primaryDisabled: S,
-            primarySubmitting: g,
-            onPrimary: I,
+            primarySubmitting: y,
+            onPrimary: g,
         } = e,
-        A =
+        I =
             null == t
                 ? null
                 : (0, i.jsx)(o.Q, { text: n ?? p.intl.string(p.t["13/7kX"]), onClick: t, variant: "secondary" }),
-        y = (0, i.jsxs)(d.B, {
+        A = (0, i.jsxs)(d.B, {
             direction: "horizontal",
             align: "center",
             gap: 0,
@@ -73,18 +73,18 @@ function S(e) {
                         primaryType: s,
                         primaryText: h,
                         primaryDisabled: S,
-                        primarySubmitting: g,
-                        onPrimary: I,
+                        primarySubmitting: y,
+                        onPrimary: g,
                     };
                     return null != f
                         ? (0, i.jsx)(c.m, { text: f, asContainer: !0, children: (0, i.jsx)(E, { ...e }) })
-                        : (0, i.jsx)(E, { ...e, onPrimary: I });
+                        : (0, i.jsx)(E, { ...e, onPrimary: g });
                 })(),
             ],
         });
     return (0, i.jsx)(u.j, {
-        children: (0, i.jsxs)("div", { className: a()(C.eT, { [C.T$]: null == A }), children: [A, y] }),
+        children: (0, i.jsxs)("div", { className: a()(C.eT, { [C.T$]: null == I }), children: [I, A] }),
     });
 }
 S.CTAType = h;
-let g = S;
+let y = S;

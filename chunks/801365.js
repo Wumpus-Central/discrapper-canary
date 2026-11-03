@@ -7,11 +7,11 @@ n.d(t, {
     sn: () => P,
     mH: () => x,
     cg: () => k,
-    Y7: () => b,
+    Y7: () => v,
     kr: () => F,
     HG: () => R,
     KK: () => C,
-    JX: () => v,
+    JX: () => b,
     tU: () => O,
     k5: () => g,
     nj: () => m,
@@ -98,12 +98,12 @@ function D(e) {
     let t = e.rewardsConfig.rewards.find((e) => e.type === o.l.VIRTUAL_CURRENCY);
     return t?.orbQuantity;
 }
-function v(e) {
+function b(e) {
     let t = m(e)?.expirationMode;
     return null != t && p.has(t);
 }
-function b(e) {
-    return v(e) && m(e)?.expirationMode === l.PREMIUM_PERMANENT;
+function v(e) {
+    return b(e) && m(e)?.expirationMode === l.PREMIUM_PERMANENT;
 }
 function P(e) {
     let t = e.userStatus?.claimedTier ?? 0;

@@ -1,4 +1,4 @@
-n.d(t, { J: () => S });
+n.d(t, { J: () => y });
 var l = n(459016),
     i = n(392054),
     r = n(284009),
@@ -156,7 +156,7 @@ function x(e) {
     return e.toLocaleString(m.intl.currentLocale, { useGrouping: !1 });
 }
 var E = n(73510);
-function S(e) {
+function y(e) {
     let { option: t, content: n, guildId: r, channelId: s, allowEmptyValues: a, commandOrigin: o = i.iw.CHAT } = e,
         u = null != n ? (0, l.getString)({ content: n }, "content").trim() : "",
         c = t.required;

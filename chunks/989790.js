@@ -1,4 +1,4 @@
-n.d(e, { PA: () => p, O9: () => A, o1: () => E, bV: () => x, FY: () => h, bf: () => T });
+n.d(e, { PA: () => x, O9: () => b, o1: () => h, bV: () => E, FY: () => p, bf: () => A });
 var l = n(17928),
     r = n(780964),
     a = n(766075),
@@ -13,7 +13,7 @@ var l = n(17928),
     P = n(105292),
     g = n(97352),
     I = n(580630);
-function x(t, e) {
+function E(t, e) {
     let { withIntervals: n } = e ?? {};
     if (null == t || !t.hasAnyPremiumGroup) return null;
     let l = t.planIdFromItems;
@@ -28,7 +28,7 @@ function x(t, e) {
         return (0, I.CE)(i, t, e);
     }
 }
-function E(t) {
+function h(t) {
     let e,
         n,
         { sender: l, channel: u, isSender: s, inviteState: f } = t,
@@ -87,11 +87,11 @@ function E(t) {
         return { message: r, header: e, body: n };
     }
 }
-function h(t) {
+function p(t) {
     let { isGift: e } = t;
-    return p() && !e;
+    return x() && !e;
 }
-function p() {
+function x() {
     let t = (0, f.A)({ location: "PremiumGroupPurchase" }),
         e = (0, l.bG)([u.A], () => u.A.getPremiumSubscription()),
         n = (0, l.bG)([i.default], () => i.default.getCurrentUser());
@@ -101,14 +101,14 @@ function p() {
         (null == e || (c.BL.has(e.premiumPlanIdFromItems ?? "") && !e.isPurchasedExternally))
     );
 }
-function A() {
+function b() {
     let t = (0, f.A)({ location: "PremiumGroupPurchase" }),
-        e = p(),
+        e = x(),
         n = (0, l.bG)([i.default], () => i.default.getCurrentUser());
     return !!t && !!e && (null == n || !n.isPremiumWithPremiumGroup());
 }
-function T() {
-    let t = A(),
+function A() {
+    let t = b(),
         e = (0, l.bG)([i.default], () => i.default.getCurrentUser());
     return t && ((0, s.TW)(e) || !(0, s.mv)(e));
 }

@@ -87,8 +87,8 @@ async function D() {
             candidate_clips_promoted: e.candidateClipsPromoted,
         }));
 }
-var v = n(214859),
-    b = n(598213),
+var b = n(214859),
+    v = n(598213),
     P = n(799),
     M = n(696016);
 function U(e, t) {
@@ -437,10 +437,10 @@ class w extends l.A {
                 decisionSignals: i.decisionSignals,
                 localUserId: i.localUserId,
                 gameId: i.gameId,
-                fps: i.fps ?? b.yC.fps,
+                fps: i.fps ?? v.yC.fps,
             },
             a = performance.now(),
-            s = (0, v.$Q)(r),
+            s = (0, b.$Q)(r),
             l = performance.now() - a;
         if (null == s) return void M.nx.info(`debugRunAutoMontage: no montage could be built (took ${l.toFixed(1)}ms)`);
         M.nx.info(

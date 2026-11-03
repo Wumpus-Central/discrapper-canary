@@ -127,7 +127,7 @@ let g = 1e3,
         }, [A]);
         let { mediaUrls: L, isSuccess: y } = m(!h && a && O),
             D = (0, r.useRef)(null),
-            [v, b] = (0, r.useState)(!1),
+            [b, v] = (0, r.useState)(!1),
             [P, M] = (0, r.useState)(!1),
             [U, w] = (0, r.useState)("none"),
             [G, x] = (0, r.useState)(!1);
@@ -155,7 +155,7 @@ let g = 1e3,
         }, [h, a, n, y, G, U]),
         (0, r.useEffect)(() => {
             function e() {
-                (b(!0), C());
+                (v(!0), C());
             }
             return (
                 E._.subscribe(p.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
@@ -213,7 +213,7 @@ let g = 1e3,
                           children: (0, i.jsx)(o.e, {
                               fit: "layout",
                               ref: D,
-                              dataBinding: { ExitTrigger: v, EntryTrigger: P },
+                              dataBinding: { ExitTrigger: b, EntryTrigger: P },
                               listenOnDocumentBody: !0,
                           }),
                       }),
@@ -223,7 +223,7 @@ let g = 1e3,
             : "static" === U
               ? (0, i.jsxs)(i.Fragment, {
                     children: [
-                        !v &&
+                        !b &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)("img", {

@@ -26,8 +26,8 @@ var i = n(477900),
     L = n(140735),
     y = n(862328),
     D = n(812993),
-    v = n(947832),
-    b = n(548118),
+    b = n(947832),
+    v = n(548118),
     P = n(71393),
     M = n(771640),
     U = n(105292),
@@ -38,10 +38,10 @@ function G(e) {
         a = (0, u.r)(_.A.modules.guildbar.AVATAR_SIZE);
     return null == r
         ? (0, i.jsx)("div", { className: s()(w.VL, w.zU), children: (0, i.jsx)(N.E, { color: "currentColor" }) })
-        : (0, i.jsx)(b.Ay, {
+        : (0, i.jsx)(v.Ay, {
               guild: r,
               animate: n,
-              size: b.Ay.Sizes.MINI,
+              size: v.Ay.Sizes.MINI,
               iconSize: a,
               lossless: !0,
               className: w.VL,
@@ -92,7 +92,7 @@ function k(e) {
         C = r.useCallback(() => {
             (a || N(!0), f?.(!0));
         }, [a, f]),
-        b = r.useCallback(() => {
+        v = r.useCallback(() => {
             (a || N(!1), f?.(!1));
         }, [a, f]),
         P = n || null == s ? null : (0, M.oi)(s),
@@ -101,7 +101,7 @@ function k(e) {
         !n &&
             l > 0 &&
             (G = d
-                ? (0, i.jsx)(v.A, { count: l })
+                ? (0, i.jsx)(b.A, { count: l })
                 : (0, M.wN)(
                       l,
                       o ? _.A.colors.BACKGROUND_MOD_STRONG.css : _.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
@@ -112,7 +112,7 @@ function k(e) {
                 onClick: A,
                 onContextMenu: h,
                 onMouseEnter: C,
-                onMouseLeave: b,
+                onMouseLeave: v,
                 onKeyDown: I,
                 onFocus: p,
                 focusProps: { enabled: !1 },
@@ -170,8 +170,8 @@ let Y = (0, m.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
                 unread: L = !1,
                 defaultFolderName: y,
                 draggable: D = !1,
-                sorting: v = !1,
-                onDragStart: b,
+                sorting: b = !1,
+                onDragStart: v,
                 onDragEnd: P,
                 onExpandCollapse: M,
                 onHeaderClick: G,
@@ -188,11 +188,11 @@ let Y = (0, m.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
             ea = et || ei,
             es = (0, I.qK)("FolderItem");
         r.useEffect(() => {
-            v && en(!1);
-        }, [v]);
+            b && en(!1);
+        }, [b]);
         let [{ dragging: el }, eo] = (0, l.i)({
                 type: T.PJ.FOLDER,
-                item: () => (b?.(), { type: T.PJ.FOLDER, nodeId: E.id }),
+                item: () => (v?.(), { type: T.PJ.FOLDER, nodeId: E.id }),
                 end() {
                     (P?.(), (0, h.um)(p.Ay.getCompatibleGuildFolders()));
                 },
@@ -233,7 +233,7 @@ let Y = (0, m.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
                     }),
                     (0, i.jsx)(H.A, {
                         text: eu,
-                        disabled: v,
+                        disabled: b,
                         selected: m,
                         disableWrapper: !0,
                         children: (0, i.jsx)("div", {
@@ -249,7 +249,7 @@ let Y = (0, m.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
                                 : (0, i.jsx)(k, {
                                       folderNode: E,
                                       expanded: S,
-                                      sorting: v,
+                                      sorting: b,
                                       mediaState: N,
                                       mentionCount: C,
                                       isMentionLowImportance: O,

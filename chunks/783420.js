@@ -31,9 +31,9 @@ function I(e) {
         } = e,
         y = (0, r.bG)([_.default], () => _.default.getCurrentUser()),
         D = (0, r.bG)([E.A], () => E.A.getPremiumTypeSubscription()),
-        { analyticsLocations: v } = (0, s.Ay)(),
-        b = (0, A.V)(),
-        P = !C && null != b && null != I && h.kb[b.trialId].skus.includes(I);
+        { analyticsLocations: b } = (0, s.Ay)(),
+        v = (0, A.V)(),
+        P = !C && null != v && null != I && h.kb[v.trialId].skus.includes(I);
     return L({
         onClick: function (e) {
             if ((e.preventDefault(), null == y))
@@ -68,14 +68,14 @@ function I(e) {
                         return (0, i.jsx)(e, { ...r, onClose: n });
                     };
                 });
-            let r = P ? b.subscriptionTrial?.id : null,
+            let r = P ? v.subscriptionTrial?.id : null,
                 s = f.AnalyticsObjectTypes.BUY;
             null != r ? (s = f.AnalyticsObjectTypes.TRIAL) : C && (s = f.AnalyticsObjectTypes.GIFT);
             let _ = {
                 isGift: C,
                 initialPlanId: O,
                 subscriptionTier: I,
-                analyticsLocations: v,
+                analyticsLocations: b,
                 analyticsObject: { object: f.ZSU.BUTTON_CTA, objectType: s, ...T },
                 trialId: r,
                 postSuccessGuild: p,

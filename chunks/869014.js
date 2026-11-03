@@ -51,12 +51,12 @@ function D(e, t, n) {
         (t.overlayFrameId = n.requestAnimationFrame((t) => R(e, t + i))),
         (t.mainFrameId = null));
 }
-function v(e, t) {
+function b(e, t) {
     let n = C--,
         i = { callback: e, overlayWindow: null, overlayFrameId: null, mainFrameId: null };
     return (D(n, i, t), O.set(n, i), n);
 }
-function b(e) {
+function v(e) {
     if (!N) return h(e);
     let t = C--;
     return (O.set(t, { callback: e, overlayWindow: null, overlayFrameId: null, mainFrameId: h((e) => R(t, e)) }), t);
@@ -68,19 +68,19 @@ function P() {
 function M(e) {
     try {
         let t = P();
-        if (null == t) return ((T = "OverlayNotAvailable"), b(e));
-        if (N && !l.A.isVisible()) return ((T = "MainWindowHidden"), v(e, t));
-        if (!S) return ((T = "MainWindowFocused"), b(e));
-        if (!m(!0)) return ((T = "NoOverlayRendering"), b(e));
+        if (null == t) return ((T = "OverlayNotAvailable"), v(e));
+        if (N && !l.A.isVisible()) return ((T = "MainWindowHidden"), b(e, t));
+        if (!S) return ((T = "MainWindowFocused"), v(e));
+        if (!m(!0)) return ((T = "NoOverlayRendering"), v(e));
         let n = null !== _.A.getFocusedRunningGame(),
             i = l.A.isFocused((0, o.Q2)(t));
         if ((l.A.isFocused() && A.error("Main window is reported as focused when it should not be!"), n || i))
-            return ((T = n ? "OverlayGameFocused" : "OverlayWindowFocused"), v(e, t));
+            return ((T = n ? "OverlayGameFocused" : "OverlayWindowFocused"), b(e, t));
     } catch (e) {
         (A.error("RAF redirect failed, falling back to original. Cause:", e),
             (0, d.pj)(e, u.default.getOverlayMethod(_.A.getTargetPID())));
     }
-    return ((T = "None"), b(e));
+    return ((T = "None"), v(e));
 }
 function U() {
     ((N = (0, a.ZT)("overlay_window_raf_manager")),

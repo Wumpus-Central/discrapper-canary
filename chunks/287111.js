@@ -49,16 +49,16 @@ function x(e, t) {
         console.error("[conjure] attachment cleanup failed", e);
     });
 }
-function j(e, t) {
+function b(e, t) {
     (null != t.previewUrl && URL.revokeObjectURL(t.previewUrl), null != t.ref && x(e, t.ref.id));
 }
-function b(e, t) {
+function j(e, t) {
     let { deleteFromWorker: n } = t,
         { draftsByProject: r } = f.getState(),
         l = r[e];
     if (null == l) return;
     for (let t of Object.values(l))
-        for (let r of t ?? u) n ? j(e, r) : null != r.previewUrl && URL.revokeObjectURL(r.previewUrl);
+        for (let r of t ?? u) n ? b(e, r) : null != r.previewUrl && URL.revokeObjectURL(r.previewUrl);
     let { [e]: a, ...i } = r;
     f.setState({ draftsByProject: i });
 }
@@ -106,7 +106,7 @@ function N(e, t, n) {
     let r = p(e, t),
         l = r.find((e) => e.localId === n);
     null != l &&
-        (j(e, l),
+        (b(e, l),
         h(
             e,
             t,
@@ -116,7 +116,7 @@ function N(e, t, n) {
 function U(e, t) {
     let n = p(e, t);
     if (0 !== n.length) {
-        for (let t of n) j(e, t);
+        for (let t of n) b(e, t);
         h(e, t, u);
     }
 }
@@ -134,9 +134,9 @@ function E(e, t) {
     (0, a.sendUserMessage)(e, t, [...r, ...i], { clarificationAnswers: n });
 }
 (r.h.subscribe("LOGOUT", () => {
-    for (let e of Object.keys(f.getState().draftsByProject)) b(e, { deleteFromWorker: !0 });
+    for (let e of Object.keys(f.getState().draftsByProject)) j(e, { deleteFromWorker: !0 });
 }),
     r.h.subscribe("CONJURE_PROJECT_DELETE_SUCCESS", (e) => {
         let { projectId: t } = e;
-        b(t, { deleteFromWorker: !1 });
+        j(t, { deleteFromWorker: !1 });
     }));

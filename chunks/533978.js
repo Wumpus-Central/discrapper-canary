@@ -6,8 +6,8 @@ var i = t(477900),
     r = t(621956),
     o = t(265872),
     c = t(442433),
-    u = t(688810),
-    d = t(384059),
+    d = t(688810),
+    u = t(384059),
     A = t(480890),
     h = t(160761),
     m = t(421773),
@@ -24,14 +24,14 @@ var i = t(477900),
     _ = t(665252),
     T = t(999926),
     b = t(607567),
-    S = t(246356),
-    y = t(204651);
+    y = t(246356),
+    S = t(204651);
 t(980504);
 var O = t(376086),
     P = t(105292);
 function R(e) {
     let { channel: n, themeable: R, whichPopoutIsOpen: L, setWhichPopoutIsOpen: D, idle: M } = e,
-        { parentAnalyticsLocation: G } = (0, u.Ay)(),
+        { parentAnalyticsLocation: G } = (0, d.Ay)(),
         {
             Component: k,
             play: U,
@@ -43,7 +43,7 @@ function R(e) {
         K = H || Y || z,
         F = (0, C.VE)({ isSoundboardButtonDisabled: K }),
         [X, q] = (0, h.DP)(F),
-        { analyticsLocations: J } = (0, u.Ay)(),
+        { analyticsLocations: J } = (0, d.Ay)(),
         Q = (0, g.N)(w, "ActionBarSoundboardButton") && !K,
         W = l.useCallback((e) => (0, i.jsx)(j.A, { showDot: Q, children: (0, i.jsx)(k, { ...e }) }), [k, Q]),
         { showQuickAccess: $ } = (0, x.j)("ActionBarSoundboardButton"),
@@ -67,7 +67,7 @@ function R(e) {
                 ? P.intl.string(P.t.X1lQli)
                 : P.intl.string(P.t["6EJvHt"]);
     }
-    function eu(e) {
+    function ed(e) {
         (0, c.L3)(e, async () => {
             let { default: e } = await t.e("811562").then(t.bind(t, 666801));
             return (n) =>
@@ -79,11 +79,11 @@ function R(e) {
                 });
         });
     }
-    function ed() {
+    function eu() {
         (U(), null != L && ea(), Z && et(), D?.(O.P.SOUNDBOARD));
     }
     function eA() {
-        ((0, d.XJ)(G, d.OP.SOUNDBOARD), L === O.P.SOUNDBOARD ? (D?.(void 0), er()) : ed());
+        ((0, u.XJ)(G, u.OP.SOUNDBOARD), L === O.P.SOUNDBOARD ? (D?.(void 0), er()) : eu());
     }
     l.useEffect(() => {
         eo || Z || en(!0);
@@ -120,7 +120,7 @@ function R(e) {
                         let { closePopout: t } = e;
                         return K
                             ? null
-                            : (0, i.jsx)(S.A, {
+                            : (0, i.jsx)(y.A, {
                                   children: (0, i.jsx)("div", {
                                       onMouseEnter: ea,
                                       onMouseLeave: er,
@@ -148,7 +148,7 @@ function R(e) {
                               });
                     },
                     children: () =>
-                        (0, i.jsx)(y.l, {
+                        (0, i.jsx)(S.l, {
                             ref: em,
                             isTrayButton: !0,
                             themeable: R,
@@ -156,7 +156,7 @@ function R(e) {
                             "aria-label": Q ? P.intl.string(P.t.D923q4) : ec(),
                             iconComponent: W,
                             disabled: K,
-                            onContextMenu: eu,
+                            onContextMenu: ed,
                             onClick: eA,
                             onMouseEnter: (e) => {
                                 (V(), "focus" !== e.type && ea());
@@ -170,7 +170,7 @@ function R(e) {
                 }),
                 !eo && null != w && ei ? (0, i.jsx)(_.A, { guildId: w, channelId: n.id }) : null,
                 ex &&
-                    (0, i.jsx)(p.A, { targetElementRef: em, openSoundboardPicker: ed, shouldShowSoundboardPicker: eo }),
+                    (0, i.jsx)(p.A, { targetElementRef: em, openSoundboardPicker: eu, shouldShowSoundboardPicker: eo }),
             ],
         })
     );

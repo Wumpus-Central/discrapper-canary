@@ -3,12 +3,12 @@
     DJ: () => x,
     IP: () => y,
     Jg: () => P,
-    Jz: () => v,
+    Jz: () => b,
     Pd: () => D,
     QG: () => M,
     af: () => G,
     an: () => a.A,
-    fK: () => b,
+    fK: () => v,
     n: () => w,
     n3: () => R,
     vJ: () => U,
@@ -90,7 +90,7 @@ function D(e, t, n) {
     let E = e.userLimit > 0 && o >= e.userLimit;
     return u || (E && !c);
 }
-function v(e, t) {
+function b(e, t) {
     return t.isGuildStageVoice()
         ? I.gp3
         : null == e
@@ -100,7 +100,7 @@ function v(e, t) {
                 p.TG[e.premiumTier].limits.bitrate,
             );
 }
-function b(e) {
+function v(e) {
     let { channels: t, selectedChannelId: n, selectedVoiceChannelId: i, voiceStates: r } = e;
     return (function (e) {
         let { channels: t, selectedChannelId: n, selectedVoiceChannelId: i, voiceStates: r } = e,

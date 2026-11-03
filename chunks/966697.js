@@ -22,8 +22,8 @@ function o(e) {
         f = t === h.Rv1.LOADING,
         [p] = s.useState(f),
         [v, b] = s.useState(!1),
-        [N] = s.useState(() => Date.now()),
-        R = (function (e, t, i) {
+        [y] = s.useState(() => Date.now()),
+        N = (function (e, t, i) {
             let a = i && 1 === t && null != e,
                 [l, n] = s.useState(void 0);
             return (
@@ -51,7 +51,7 @@ function o(e) {
                 l
             );
         })(l, o, p),
-        y = t === h.Rv1.READY && Date.now() - N < 200;
+        R = t === h.Rv1.READY && Date.now() - y < 200;
     return (
         s.useEffect(() => {
             if (g) return;
@@ -67,11 +67,11 @@ function o(e) {
             style: { aspectRatio: i },
             children: [
                 x,
-                null != R &&
+                null != N &&
                     (0, a.jsx)("img", {
                         style: m,
-                        className: n()(u.bc, { [u.t5]: f, [u.Jh]: !f, [u.zg]: y }),
-                        src: R,
+                        className: n()(u.bc, { [u.t5]: f, [u.Jh]: !f, [u.zg]: R }),
+                        src: N,
                         alt: "",
                     }),
                 g || !f

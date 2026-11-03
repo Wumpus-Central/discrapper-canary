@@ -4,9 +4,9 @@ var a = i(477900),
     r = i(857707),
     n = i(268593);
 function t(s) {
-    let { prefix: e, advertiserDetails: i, secondaryAction: t, primaryAction: d } = s,
-        { isPortrait: c, portraitFooterRef: o } = l.useContext(r.D);
-    return c && null != t
+    let { prefix: e, advertiserDetails: i, secondaryAction: t, primaryAction: c } = s,
+        { isPortrait: d, portraitFooterRef: o } = l.useContext(r.D);
+    return d && null != t
         ? (0, a.jsxs)("div", {
               ref: o,
               className: n.bx,
@@ -19,17 +19,17 @@ function t(s) {
                               className: n.ad,
                               children: (0, a.jsx)("div", { className: n.Ik, children: t }),
                           }),
-                          d,
+                          c,
                       ],
                   }),
               ],
           })
         : (0, a.jsxs)("div", {
-              ref: c ? o : void 0,
+              ref: d ? o : void 0,
               className: n.qr,
               children: [
                   (0, a.jsxs)("div", { className: n.zH, children: [e, i] }),
-                  (0, a.jsxs)("div", { className: n.o1, children: [t, d] }),
+                  (0, a.jsxs)("div", { className: n.o1, children: [t, c] }),
               ],
           });
 }

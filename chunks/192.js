@@ -1,8 +1,8 @@
-n.d(t, { D: () => d, r: () => c });
-var i = n(477900),
-    l = n(582128),
-    r = n(775602),
-    a = n(818348);
+t.d(n, { D: () => c, r: () => d });
+var i = t(477900),
+    l = t(582128),
+    r = t(775602),
+    a = t(818348);
 let s = l.createContext(null),
     o = {
         registerManageWidgetButtonRef: () => a.tE,
@@ -10,41 +10,41 @@ let s = l.createContext(null),
         getManageButtonForWidget: () => null,
         focusAddedWidget: a.tE,
     };
-function c() {
+function d() {
     return l.useContext(s) ?? o;
 }
-function d(e) {
-    let { children: t } = e,
-        n = l.useRef(new Map()),
+function c(e) {
+    let { children: n } = e,
+        t = l.useRef(new Map()),
         a = l.useRef(new Map()),
         o = l.useCallback(
-            (e, t) => (i) => {
-                null != i ? (n.current.set(e, i), a.current.set(t, i)) : (n.current.delete(e), a.current.delete(t));
+            (e, n) => (i) => {
+                null != i ? (t.current.set(e, i), a.current.set(n, i)) : (t.current.delete(e), a.current.delete(n));
             },
             [],
         ),
-        c = l.useCallback((e) => {
+        d = l.useCallback((e) => {
             requestAnimationFrame(() => {
-                let t = n.current.get(e);
-                t?.focus();
+                let n = t.current.get(e);
+                n?.focus();
             });
         }, []),
-        d = l.useCallback((e) => n.current.get(e) ?? null, []),
+        c = l.useCallback((e) => t.current.get(e) ?? null, []),
         u = l.useCallback((e) => {
             r.Ay.keyboardModeEnabled &&
                 requestAnimationFrame(() => {
-                    let t = a.current.get(e);
-                    null != t && document.activeElement?.contains(t) && t.focus();
+                    let n = a.current.get(e);
+                    null != n && document.activeElement?.contains(n) && n.focus();
                 });
         }, []),
         g = l.useMemo(
             () => ({
                 registerManageWidgetButtonRef: o,
-                manageFocusOnReorder: c,
-                getManageButtonForWidget: d,
+                manageFocusOnReorder: d,
+                getManageButtonForWidget: c,
                 focusAddedWidget: u,
             }),
-            [o, c, d, u],
+            [o, d, c, u],
         );
-    return (0, i.jsx)(s.Provider, { value: g, children: t });
+    return (0, i.jsx)(s.Provider, { value: g, children: n });
 }

@@ -1,36 +1,36 @@
-n.d(e, { QA: () => N, Rq: () => T, cy: () => E });
-var l = n(477900);
-n(582128);
-var i = n(350835),
-    a = n(339350),
-    r = n(687966),
-    s = n(323384),
-    o = n(432017),
-    c = n(748562),
-    u = n(661531),
-    d = n(177953),
-    A = n(306788),
-    f = n(765379),
-    g = n(189117),
-    m = n(471107),
-    x = n(506326),
-    p = n(693879),
-    _ = n(583846),
-    I = n(53257);
+e.d(n, { QA: () => N, Rq: () => T, cy: () => E });
+var l = e(477900);
+e(582128);
+var i = e(350835),
+    a = e(339350),
+    r = e(687966),
+    s = e(323384),
+    o = e(432017),
+    c = e(748562),
+    u = e(661531),
+    d = e(177953),
+    A = e(306788),
+    f = e(765379),
+    g = e(189117),
+    m = e(471107),
+    p = e(506326),
+    x = e(693879),
+    _ = e(583846),
+    I = e(53257);
 function N(t) {
-    let { activity: e } = t,
-        n = e.timestamps?.start ?? e.created_at,
+    let { activity: n } = t,
+        e = n.timestamps?.start ?? n.created_at,
         { now: d } = (0, m.G)();
-    if (null == n || (0, I.A)(e)) return null;
-    let A = e.timestamps?.end,
-        _ = e.timestamps?.isCountDown ?? !1,
+    if (null == e || (0, I.A)(n)) return null;
+    let A = n.timestamps?.end,
+        _ = n.timestamps?.isCountDown ?? !1,
         N = (function (t) {
-            let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-            return e
+            let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                e = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+            return n
                 ? a.Q
                 : (0, f.A)(t) || (0, g.$_)(t)
-                  ? n
+                  ? e
                       ? r.GameControllerIcon
                       : s.k
                   : t.type === i.$.LISTENING
@@ -38,22 +38,22 @@ function N(t) {
                     : t.type === i.$.WATCHING
                       ? c.U
                       : r.GameControllerIcon;
-        })(e, _ && null != A && A > d);
-    return (0, l.jsxs)(x.er, {
+        })(n, _ && null != A && A > d);
+    return (0, l.jsxs)(p.er, {
         children: [
             (0, l.jsx)(N, { size: "xxs", color: u.A.colors.TEXT_FEEDBACK_POSITIVE }),
-            (0, l.jsx)(p.z, { entry: { start: n, end: A, isCountDown: _ }, textColor: "text-feedback-positive" }),
+            (0, l.jsx)(x.z, { entry: { start: e, end: A, isCountDown: _ }, textColor: "text-feedback-positive" }),
         ],
     });
 }
 function E(t) {
-    let { activity: e } = t;
-    if ((0, f.A)(e) || null == e.party) return null;
-    let n = (0, _.gF)(e.state, e.party);
-    return null == n ? null : (0, l.jsx)(x.fM, { Icon: d.n, text: n });
+    let { activity: n } = t;
+    if ((0, f.A)(n) || null == n.party) return null;
+    let e = (0, _.gF)(n.state, n.party);
+    return null == e ? null : (0, l.jsx)(p.fM, { Icon: d.n, text: e });
 }
 function T(t) {
-    let { activity: e } = t,
-        n = (0, _.kR)(e.assets?.large_text);
-    return null == n ? null : (0, l.jsx)(x.fM, { Icon: A.K, text: n });
+    let { activity: n } = t,
+        e = (0, _.kR)(n.assets?.large_text);
+    return null == e ? null : (0, l.jsx)(p.fM, { Icon: A.K, text: e });
 }

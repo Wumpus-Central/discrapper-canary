@@ -40,7 +40,7 @@ function c(e) {
                 targetElementRef: c,
             }),
         D = i.useId(),
-        { isVisible: v, triggerProps: b } = (function (e) {
+        { isVisible: b, triggerProps: v } = (function (e) {
             let {
                     targetElementRef: t,
                     shouldShow: n = !0,
@@ -178,12 +178,12 @@ function c(e) {
                 [m, A],
             )),
             (g = {
-                onMouseEnter: (0, a.cy)(f.onMouseEnter, b.onMouseEnter),
-                onMouseLeave: (0, a.cy)(f.onMouseLeave, b.onMouseLeave),
-                onFocus: (0, a.cy)(f.onFocus, b.onFocus),
-                onBlur: (0, a.cy)(f.onBlur, b.onBlur),
-                onContextMenu: (0, a.cy)(f.onContextMenu, b.onContextMenu),
-                onClick: (0, a.cy)(f.onClick, b.onClick),
+                onMouseEnter: (0, a.cy)(f.onMouseEnter, v.onMouseEnter),
+                onMouseLeave: (0, a.cy)(f.onMouseLeave, v.onMouseLeave),
+                onFocus: (0, a.cy)(f.onFocus, v.onFocus),
+                onBlur: (0, a.cy)(f.onBlur, v.onBlur),
+                onContextMenu: (0, a.cy)(f.onContextMenu, v.onContextMenu),
+                onClick: (0, a.cy)(f.onClick, v.onClick),
             }),
             null != P && "" !== P && (g["aria-describedby"] = (0, a.iO)(f["aria-describedby"], P)),
             "string" == typeof t.type
@@ -222,6 +222,6 @@ function c(e) {
                       }),
                   };
             return (0, a.EE)({ tag: l, children: t, triggerHandlers: o, triggerRef: i });
-        })(C, S, b, y.triggerRef, D, R, O);
-    return { tooltipId: D, isVisible: v, targetElementRef: y.targetElementRef, trigger: U ?? M, describedById: P };
+        })(C, S, v, y.triggerRef, D, R, O);
+    return { tooltipId: D, isVisible: b, targetElementRef: y.targetElementRef, trigger: U ?? M, describedById: P };
 }

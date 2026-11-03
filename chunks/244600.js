@@ -31,8 +31,8 @@ let D = (0, n(240921).Ay)({
     defaultConfig: { mode: "off" },
     variations: { 1: { mode: "standard" }, 2: { mode: "low_latency" } },
 });
-var v = n(626584),
-    b = n(444431),
+var b = n(626584),
+    v = n(444431),
     P = n(655087),
     M = n(680725),
     U = n(487329),
@@ -54,7 +54,7 @@ class x extends S.A {
     delayedCall;
     constructor() {
         (super(),
-            (this.logger = new v.A("GoLiveQualityManager")),
+            (this.logger = new b.A("GoLiveQualityManager")),
             this.logger.enableNativeLogger(!0),
             (this.delayedCall = new w.J_(500, () => {
                 this.update();
@@ -395,8 +395,8 @@ var eA = n(53857),
     eL = n(38405),
     ey = n(998218),
     eD = n(77729),
-    ev = n(435558),
-    eb = n.n(ev);
+    eb = n(435558),
+    ev = n.n(eb);
 let eP = [];
 class eM {
     bytes = {};
@@ -418,7 +418,7 @@ class eM {
         }
     };
     getTotalBytes() {
-        return eb().sum(Object.values(this.bytes));
+        return ev().sum(Object.values(this.bytes));
     }
 }
 var eU = n(507821),
@@ -440,7 +440,7 @@ class eG {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, C.tB)(),
             t = this.getStateDurations(e);
         function n(e) {
-            return eb().sumBy(t, (t) => (t.state === e ? t.durationMs : 0));
+            return ev().sumBy(t, (t) => (t.state === e ? t.durationMs : 0));
         }
         return {
             state_awaiting_endpoint_ms: n(ew.S7L.AWAITING_ENDPOINT),
@@ -466,7 +466,7 @@ class eG {
                 return n;
             })(this.history, (e, t) => ({ state: e.state, durationMs: t.startTime - e.startTime })),
             n = () => {
-                let t = eb().last(this.history);
+                let t = ev().last(this.history);
                 return { state: t.state, durationMs: e - t.startTime };
             };
         return (t.push(n()), t);
@@ -618,7 +618,7 @@ class eZ extends S.A {
     constructor(e, t = z.x.DEFAULT) {
         (super(),
             (this.url = e),
-            (this.logger = new v.A(`RTCControlSocket(${t})`)),
+            (this.logger = new b.A(`RTCControlSocket(${t})`)),
             this.logger.enableNativeLogger(!0),
             (this.webSocket = null),
             (this.connectionState = 0),
@@ -1243,7 +1243,7 @@ class te extends S.A {
                 for (let i of n) e[i.ssrc] = t;
                 continue;
             }
-            let i = eb().minBy(n, (e) => e.quality);
+            let i = ev().minBy(n, (e) => e.quality);
             for (let t of n) e[t.ssrc] = 100 * (t.ssrc === i?.ssrc);
         }
         for (let t of Object.values(this.audioSsrcs)) e[t] = 100;
@@ -1292,7 +1292,7 @@ class te extends S.A {
             let s = e7 ? r : i;
             for (let [t, n] of Object.entries(e.audioSsrcs)) e.connection?.getLocalMute(t) && (s[n] = 0);
             return (
-                null == e.connection || eb().isEqual(e.latestWants, s) || ((e.latestWants = s), e.emit("update", s)), s
+                null == e.connection || ev().isEqual(e.latestWants, s) || ((e.latestWants = s), e.emit("update", s)), s
             );
         };
     })();
@@ -1432,7 +1432,7 @@ class ti {
     }
     sampleStats = (e) => {
         null != e &&
-            eb().forEach(e.rtp.outbound, (e) => {
+            ev().forEach(e.rtp.outbound, (e) => {
                 if ("audio" === e.type)
                     for (let t of e.pttQueueLatencyMicrosSamples ?? []) {
                         let e = t / 1e3;
@@ -1631,10 +1631,10 @@ class tE extends S.A {
     }
     pause() {
         (!this.paused.value && this.pausedCount++,
-            eb().forEach(this.outboundStats, (e) => {
+            ev().forEach(this.outboundStats, (e) => {
                 e.statsWindow = [];
             }),
-            eb().forEach(this.inboundStats, (e) => {
+            ev().forEach(this.inboundStats, (e) => {
                 e.statsWindow = [];
             }),
             this.updateSendState({ paused: !0 }));
@@ -1729,7 +1729,7 @@ class tE extends S.A {
     getOutboundStats() {
         let e = [];
         return (
-            eb().forEach(this.outboundStats, (t, n) => {
+            ev().forEach(this.outboundStats, (t, n) => {
                 let i,
                     r = this.connection?.getStreamParameters();
                 r.length > 1 &&
@@ -1844,7 +1844,7 @@ class tE extends S.A {
             null != e.receivers && (this.zeroReceivers.value = 0 === e.receivers));
         let t = this.paused.value || this.zeroReceivers.value,
             n = this.videoStopped.value;
-        ((this.videoStopped.value = t), t !== n && eb().forEach(this.outboundStats, (e) => (e.statsWindow = [])));
+        ((this.videoStopped.value = t), t !== n && ev().forEach(this.outboundStats, (e) => (e.statsWindow = [])));
     }
     getStats(e) {
         if (null == e) return null;
@@ -1977,8 +1977,8 @@ class tE extends S.A {
                 pliCount: L,
                 qpSum: y,
                 pauseCount: D,
-                freezeCount: v,
-                totalPausesDuration: b,
+                freezeCount: b,
+                totalPausesDuration: v,
                 totalFreezesDuration: P,
                 totalFramesDuration: M,
                 totalDecodeTime: U,
@@ -1999,15 +1999,15 @@ class tE extends S.A {
             z = (k ?? 0) - (e.cryptorFailureBeforeSuccessCount ?? 0);
         return (
             e instanceof tc.ET
-                ? ((u.sender_freeze_count = v),
+                ? ((u.sender_freeze_count = b),
                   (u.sender_total_freezes_duration = P),
                   (u.sender_total_frames_duration = M),
                   (u.consecutive_static_color_frames_max = e.consecutiveStaticColorFramesMax))
-                : ((u.receiver_freeze_count = v),
+                : ((u.receiver_freeze_count = b),
                   (u.receiver_total_freezes_duration = P),
                   (u.receiver_total_frames_duration = M),
                   (u.receiver_pause_count = D),
-                  (u.receiver_total_pauses_duration = b),
+                  (u.receiver_total_pauses_duration = v),
                   (u.total_decode_time_ms = U),
                   (u.frames_dropped_network = A),
                   (0, eO.isWeb)() || (u.frames_dropped_render = E)),
@@ -2070,7 +2070,7 @@ class tE extends S.A {
             this.cameraDuration.value && !l && this.cameraToggles++,
             (this.videoBackgroundEnabledDuration.value =
                 this.connection.context === N.x.DEFAULT && null != t.camera && ts.A.liveBackgroundEnabled));
-        let o = eb().max(n.map((e) => e.quality)),
+        let o = ev().max(n.map((e) => e.quality)),
             d = t.rtp.outbound.filter((e) => "video" === e.type && e?.videoEntropy != null)[0],
             c = d?.videoEntropy;
         (t.rtp.outbound
@@ -2158,7 +2158,7 @@ class tE extends S.A {
                 }
             }),
             this.paused.value ||
-                eb().forEach(t.rtp.inbound, (t, n) => {
+                ev().forEach(t.rtp.inbound, (t, n) => {
                     let r = t.find((e) => "video" === e.type);
                     if (null != r) {
                         let t = this.inboundStats[n];
@@ -2497,10 +2497,10 @@ function ty(e) {
 function tD(e) {
     return Object.fromEntries(e.map((e) => [e, { baseline: 0, lastRaw: 0 }]));
 }
-function tv(e) {
+function tb(e) {
     return { baseline: e.lastRaw, lastRaw: e.lastRaw };
 }
-function tb(e, t, n, i) {
+function tv(e, t, n, i) {
     (t.some((e) => i[e] < n.lastRaw[e]) && (n.baseline = tL(e)), (n.lastRaw = i));
     let r = {};
     for (let t of e) r[t] = i[t] - n.baseline[t];
@@ -2578,12 +2578,12 @@ class tx extends S.A {
             (this.inboundLatencyBaselines = {}));
     }
     seedFrom(e) {
-        ((this.outboundBaseline = tv(e.outboundBaseline)),
-            (this.outboundLatencyBaseline = eb().mapValues(e.outboundLatencyBaseline, (e) => tv(e))),
-            (this.transportBaseline = eb().mapValues(e.transportBaseline, (e) => tv(e))),
-            (this.inboundBaselines = eb().mapValues(e.inboundBaselines, (e) => tv(e))),
-            (this.inboundLatencyBaselines = eb().mapValues(e.inboundLatencyBaselines, (e) =>
-                eb().mapValues(e, (e) => tv(e)),
+        ((this.outboundBaseline = tb(e.outboundBaseline)),
+            (this.outboundLatencyBaseline = ev().mapValues(e.outboundLatencyBaseline, (e) => tb(e))),
+            (this.transportBaseline = ev().mapValues(e.transportBaseline, (e) => tb(e))),
+            (this.inboundBaselines = ev().mapValues(e.inboundBaselines, (e) => tb(e))),
+            (this.inboundLatencyBaselines = ev().mapValues(e.inboundLatencyBaselines, (e) =>
+                ev().mapValues(e, (e) => tb(e)),
             )),
             (this.inputDeviceStats = tw(e.inputDeviceStats)),
             (this.outputDeviceStats = tw(e.outputDeviceStats)));
@@ -2595,7 +2595,7 @@ class tx extends S.A {
         this.connection.off(N.yq.Stats, this.sampleStats);
     }
     getPacketStats() {
-        let e = eb().reduce(
+        let e = ev().reduce(
             this.inboundStats,
             (e, t) => (
                 (e.packetsReceived += t.packetsReceived),
@@ -2625,7 +2625,7 @@ class tx extends S.A {
         return { num_packets: this.outboundStats.packetsSent, num_packets_lost: this.outboundStats.packetsLost };
     }
     getBytesStats() {
-        let e = eb().reduce(this.inboundStats, (e, t) => e + t.bytesReceived, 0),
+        let e = ev().reduce(this.inboundStats, (e, t) => e + t.bytesReceived, 0),
             t = this.outboundStats.aggregationDurationMs / 1e3;
         return {
             bytes_sent: this.outboundStats.bytesSent,
@@ -2695,7 +2695,7 @@ class tx extends S.A {
         return this.systemResources.getStats();
     }
     getBufferStats() {
-        let e = eb().reduce(
+        let e = ev().reduce(
                 this.inboundStats,
                 (e, t) => {
                     let n = null;
@@ -2743,7 +2743,7 @@ class tx extends S.A {
         );
     }
     getFrameOpStats() {
-        let e = eb().reduce(
+        let e = ev().reduce(
             this.inboundStats,
             (e, t) => (
                 null != t.frameOpStats.silent && (e.silent += t.frameOpStats.silent),
@@ -2777,7 +2777,7 @@ class tx extends S.A {
         };
     }
     getE2EEStats() {
-        let e = eb().reduce(
+        let e = ev().reduce(
             this.inboundStats,
             (e, t) => (
                 (e.passthroughCount += t.passthroughCount ?? 0),
@@ -2929,7 +2929,7 @@ class tx extends S.A {
         if (null == e) return;
         (this.networkQuality.incrementNetworkStats((0, C.tB)()), this.systemResources.takeSample());
         let t = 0;
-        (eb().forEach(e.rtp.outbound, (e) => {
+        (ev().forEach(e.rtp.outbound, (e) => {
             if ("audio" === e.type) {
                 t = e.bitrateTarget ?? 0;
                 let n = {
@@ -2945,7 +2945,7 @@ class tx extends S.A {
                 };
                 ((this.outboundStats = {
                     ...this.outboundStats,
-                    ...tb(tm, tT, this.outboundBaseline, n),
+                    ...tv(tm, tT, this.outboundBaseline, n),
                     ...tU(tN, this.outboundLatencyBaseline, e, this.outboundStats),
                     encryptMaxAttempts: e.encryptMaxAttempts ?? 0,
                 }),
@@ -2960,8 +2960,8 @@ class tx extends S.A {
                 ...tU(tO, this.transportBaseline, e.transport, this.transportStats),
             }),
             this.appendTargetRates(this.outboundStats, e.transport.availableOutgoingBitrate, t),
-            eb().forEach(e.rtp.inbound, (e, t) => {
-                eb().forEach(e, (e) => {
+            ev().forEach(e.rtp.inbound, (e, t) => {
+                ev().forEach(e, (e) => {
                     if ("audio" === e.type) {
                         let n = this.inboundStats[t],
                             i = (this.inboundBaselines[t] ??= ty(tg)),
@@ -2989,7 +2989,7 @@ class tx extends S.A {
                                 decryptMissingKeyCount: e.decryptMissingKeyCount ?? 0,
                                 decryptInvalidNonceCount: e.decryptInvalidNonceCount ?? 0,
                             },
-                            l = tb(tg, tS, i, s),
+                            l = tv(tg, tS, i, s),
                             o = {
                                 silent: null == e.opSilence ? void 0 : l.opSilence,
                                 normal: null == e.opNormal ? void 0 : l.opNormal,
@@ -3015,7 +3015,7 @@ class tx extends S.A {
                             c.audioJitterTargetHistogram.addSamples(e.audioJitterTargetSamples ?? []));
                         let u = null != n && s.packetsReceived < a.packetsReceived;
                         this.inboundStats[t] = {
-                            ...eb().omit(l, tR),
+                            ...ev().omit(l, tR),
                             ...d,
                             connectedAtMs: null == n || u ? performance.now() : n.connectedAtMs,
                             disconnectedAtMs: u ? void 0 : n?.disconnectedAtMs,
@@ -3208,7 +3208,7 @@ class tq extends S.A {
             (this.parentMediaSessionId = l),
             (this.joinVoiceId = o),
             (this._connectionSerial = t$++),
-            (this.logger = new v.A(`RTCConnection(${this.trueServerId}, ${this.context})`)),
+            (this.logger = new b.A(`RTCConnection(${this.trueServerId}, ${this.context})`)),
             this.logger.enableNativeLogger(!0),
             (this._endpoint = null),
             (this.hostname = null),
@@ -3673,7 +3673,7 @@ class tq extends S.A {
     _chooseExperiments(e) {
         let t = [];
         if ((0, eO.isDesktop)() && this.context === z.x.DEFAULT) {
-            let { skipSilentDelayEstimatorFfts: e } = (0, b.L)("capture_processing_delay_estimator");
+            let { skipSilentDelayEstimatorFfts: e } = (0, v.L)("capture_processing_delay_estimator");
             e && t.push("skip_silent_delay_estimator_ffts");
         }
         (this._recordingEnabled && t.push("connection_log"),

@@ -52,14 +52,14 @@ function p(e, t, n, i) {
     function D(e) {
         return C?.eventScoreMultiplier?.(e) ?? 1;
     }
-    function v(e) {
+    function b(e) {
         return C?.canAnchorReaction(e) ?? !1;
     }
     for (let i of e) {
         let e;
         r()(null != i.decision, "candidate clip missing .decision");
         let s = i.decision.timestamp - i.length;
-        function b(e, n) {
+        function v(e, n) {
             let a = d?.[i.filepath],
                 l = {};
             if (null != a) {
@@ -129,10 +129,10 @@ function p(e, t, n, i) {
             };
         }
         let { startMs: l, endMs: o } = I(i),
-            { userIds: c, pLaughter: h, pShouting: N, rms: C, gridStartMs: R, chunkCount: L } = b(l, o),
+            { userIds: c, pLaughter: h, pShouting: N, rms: C, gridStartMs: R, chunkCount: L } = v(l, o),
             P = c.indexOf(n),
             M = (0, a.p)(O, l, o),
-            U = M.filter(v);
+            U = M.filter(b);
         null != R &&
             L > 0 &&
             U.length > 0 &&
@@ -181,11 +181,11 @@ function p(e, t, n, i) {
                     let e = Math.max(1, o - 1);
                     n = (R - t.sCoMedianPerPair * e) / (t.sCoIqrPerPair * e);
                 } else n = Math.log1p(R);
-                let v = o <= 1,
-                    b = v ? t.soloReactionWeight : t.reactionWeight,
-                    P = v ? t.soloCoOccurrenceWeight : t.coOccurrenceWeight;
+                let b = o <= 1,
+                    v = b ? t.soloReactionWeight : t.reactionWeight,
+                    P = b ? t.soloCoOccurrenceWeight : t.coOccurrenceWeight;
                 return {
-                    audioScore: t.mainWeight * y + b * D + P * n,
+                    audioScore: t.mainWeight * y + v * D + P * n,
                     components: t.normalizeComponents
                         ? { mainEventScore: y, reactionScore: D, coOccurrenceScore: n }
                         : { mainEventScore: p, reactionScore: N, coOccurrenceScore: R },
@@ -211,7 +211,7 @@ function p(e, t, n, i) {
                 return i;
             })(M, y, D),
             x = (0.5 + (0, _.ry)(w.audioScore)) * (1 + Math.tanh(G / f.gameSquashScale)) - 0.5,
-            k = b(s, i.decision.timestamp),
+            k = v(s, i.decision.timestamp),
             F = k.gridStartMs,
             B =
                 null != F

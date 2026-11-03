@@ -22,15 +22,15 @@ function p(t) {
             entityType: p,
             onJoinClick: f,
             onRsvpClick: C,
-            onStartClick: E,
-            onInviteClick: y,
+            onStartClick: y,
+            onInviteClick: E,
             onEndClick: A,
             onJoinGuildClick: _,
             isJoined: x = !1,
             channel: k,
         } = t,
-        I = void 0 !== f,
-        b = (function (t) {
+        b = void 0 !== f,
+        I = (function (t) {
             let { onInviteClick: e, canInvite: n, isChannelPublic: l, channel: c } = t,
                 d = new r.Ep(),
                 [o, g] = i.useState(!1);
@@ -59,10 +59,10 @@ function p(t) {
                         text: o ? v.intl.string(v.t.t5VZ88) : v.intl.string(v.t.WqhZss),
                         "aria-label": o ? v.intl.string(v.t.t5VZ88) : v.intl.string(v.t.WqhZss),
                     };
-        })({ onInviteClick: y, canInvite: d, isChannelPublic: o, channel: k }),
+        })({ onInviteClick: E, canInvite: d, isChannelPublic: o, channel: k }),
         D = [];
     if (
-        (null != b && D.push(b),
+        (null != I && D.push(I),
         e &&
             p !== g.Ps.EXTERNAL &&
             D.push({
@@ -78,8 +78,8 @@ function p(t) {
                               ? v.intl.string(v.t.nxUtoQ)
                               : v.intl.string(v.t.ZYO5OK)
                         : v.intl.string(v.t.TVBCKZ);
-                })({ isJoined: x, canJoin: I, isVoiceChannel: p === g.Ps.VOICE }),
-                disabled: !I,
+                })({ isJoined: x, canJoin: b, isVoiceChannel: p === g.Ps.VOICE }),
+                disabled: !b,
             }),
         n && null != _ && D.push({ variant: "active", size: "sm", text: v.intl.string(v.t["2BP08E"]), onClick: _ }),
         !n && !e && null != C)
@@ -96,7 +96,7 @@ function p(t) {
         });
     }
     return (
-        e || null == E || D.push({ variant: "primary", size: "sm", onClick: E, text: v.intl.string(v.t.I0v0Qv) }),
+        e || null == y || D.push({ variant: "primary", size: "sm", onClick: y, text: v.intl.string(v.t.I0v0Qv) }),
         e && null != A && D.push({ variant: "secondary", size: "sm", onClick: A, text: v.intl.string(v.t.qaYzPA) }),
         D
     );

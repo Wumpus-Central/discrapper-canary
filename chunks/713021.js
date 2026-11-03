@@ -1,11 +1,11 @@
-n.d(t, { Ay: () => h, dx: () => o, k0: () => c });
+n.d(t, { Ay: () => h, dx: () => c, k0: () => o });
 var l,
     s = n(635377),
     a = n.n(s),
     i = n(17928),
     r = n(73153),
-    c = (((l = {}).VOICE_MESSAGE = "voice_message"), l);
-function o(e, t) {
+    o = (((l = {}).VOICE_MESSAGE = "voice_message"), l);
+function c(e, t) {
     return `${e}-${t}`;
 }
 let u = { rates: { voice_message: 1 }, positions: new (a())({ max: 25 }) },

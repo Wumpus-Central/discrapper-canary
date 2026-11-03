@@ -24,7 +24,7 @@ let A = 10 * u.A.Millis.SECOND,
     L = !1,
     y = {},
     D = 0;
-function v(e) {
+function b(e) {
     R = new Map([...(O = e).values()].map((e) => [e.storeListingId, e]));
     let t = new Map((0, _.P_)(O, !0).map((e) => [e.skuId, e]));
     (T.forEach((e) => {
@@ -33,7 +33,7 @@ function v(e) {
         (T = t),
         (S = [...(g = new Map((0, _.P_)(O, !1).map((e) => [e.storeListingId, e]))).values()]));
 }
-function b() {
+function v() {
     ((O = f),
         (T = I),
         (r = void 0),
@@ -49,7 +49,7 @@ function b() {
 class P extends o.Ay.Store {
     static displayName = "CollectiblesCategoryStore";
     initialize() {
-        this.syncWith([c.default], b);
+        this.syncWith([c.default], v);
     }
     get isFetchingCategories() {
         return L;
@@ -123,7 +123,7 @@ let M = new P(d.h, {
             (O.forEach((t, i) => {
                 !e.has(i) && (null == t.unpublishedAt || t.unpublishedAt > n) && e.set(i, t);
             }),
-                v(e));
+                b(e));
         }
         ((r = Date.now()), (L = !1), (i = void 0), (a = void 0));
     },
@@ -165,10 +165,10 @@ let M = new P(d.h, {
     COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: function (e) {
         if (0 === e.shopHome.categories.length) return;
         let t = new Map(e.shopHome.categories.map((e) => [e.skuId, e]));
-        v(new Map([...O, ...t]));
+        b(new Map([...O, ...t]));
     },
     COLLECTIBLES_SKIP_NUM_CATEGORIES: function (e) {
         D = e.skipNumCategories;
     },
-    LOGOUT: b,
+    LOGOUT: v,
 });

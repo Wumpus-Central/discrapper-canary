@@ -46,8 +46,8 @@ let A = function (e) {
             renderListHeader: _,
             listHeaderHeight: N,
             className: C,
-            listPadding: x,
-            rowCount: y,
+            listPadding: y,
+            rowCount: x,
             getScrollOffsetForIndex: j,
             getScrollOffsetForCategory: T,
             categoryHeight: O,
@@ -121,7 +121,7 @@ let A = function (e) {
                         }),
                     [n],
                 ),
-                x = s.useCallback(
+                y = s.useCallback(
                     () =>
                         new Promise((e) => {
                             let t = n.current?.getListDimensions().totalHeight ?? Number.MAX_SAFE_INTEGER;
@@ -132,7 +132,7 @@ let A = function (e) {
                         }),
                     [n],
                 ),
-                y = s.useCallback(() => {
+                x = s.useCallback(() => {
                     let e = E(l) ?? g.current;
                     null == e || e >= r - 1 || N(e + 1, !0);
                 }, [N, l, r]),
@@ -145,8 +145,8 @@ let A = function (e) {
                     isEnabled: p,
                     setFocus: _,
                     scrollToStart: C,
-                    scrollToEnd: x,
-                    onNavigateNextAtEnd: y,
+                    scrollToEnd: y,
+                    onNavigateNextAtEnd: x,
                     onNavigatePreviousAtStart: j,
                 }),
                 O = T.setFocus;
@@ -172,7 +172,7 @@ let A = function (e) {
             categoryListRef: t,
             itemIdForIndex: w,
             parseIndex: k,
-            rowCount: y,
+            rowCount: x,
             activeIndex: M,
             getScrollOffsetForIndex: j,
             enabled: D,
@@ -204,13 +204,13 @@ let A = function (e) {
         F = s.useCallback((e) => b(l[e], e, () => G(e), M === e), [M, l, G, b]),
         J = s.useMemo(() => ("function" == typeof O ? (e) => O(l[e], e) : O), [l, O]),
         V = (0, i.jsx)(o.A, {
-            listPadding: x,
+            listPadding: y,
             onScroll: S,
             ref: t,
             renderListHeader: _,
             listHeaderHeight: N,
             renderRow: F,
-            rowCount: y,
+            rowCount: x,
             rowHeight: J,
             hideScrollbar: !0,
             rowCountBySection: R,

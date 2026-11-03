@@ -26,8 +26,8 @@ var i = n(858899),
     L = n(287809),
     y = n(174459),
     D = n(723702),
-    v = n(312809);
-let b = (0, n(945810).mj)({
+    b = n(312809);
+let v = (0, n(945810).mj)({
     kind: "user",
     name: "2026-10-clips-default-on-geo",
     defaultConfig: { allowDefaultOn: !1 },
@@ -171,10 +171,10 @@ class F extends T.A {
     getClipsDefaultSettingsDecision(e) {
         if (P.Ay.getClipsDefaultSettingsState().version >= U.l6) return null;
         let t = L.default.getCurrentUser();
-        if (!(0, p.qj)(t) || !v.A.getConfig({ location: "getClipsDefaultSettingsDecision" }).enabled) return null;
+        if (!(0, p.qj)(t) || !b.A.getConfig({ location: "getClipsDefaultSettingsDecision" }).enabled) return null;
         let n = t?.nsfwAllowed ?? null,
             i = !0 === n && e === U.k9.MEETS_AUTO_ENABLE,
-            r = !0 === n ? b.getConfig({ location: "getClipsDefaultSettingsDecision" }).allowDefaultOn : null;
+            r = !0 === n ? v.getConfig({ location: "getClipsDefaultSettingsDecision" }).allowDefaultOn : null;
         return {
             clipsEnabled: i,
             enableAutoclipping: i && !0 === r,

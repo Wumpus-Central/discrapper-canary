@@ -1,12 +1,12 @@
-n.d(t, { A: () => x, Q: () => m });
+n.d(t, { A: () => T, Q: () => m });
 var l,
     i = n(477900);
 n(582128);
 var r = n(503698),
     s = n.n(r),
     a = n(935154),
-    u = n(863610),
-    o = n(47167),
+    o = n(863610),
+    u = n(47167),
     d = n(573435),
     c = n(260509),
     h = n(652215),
@@ -27,17 +27,17 @@ function N(e, t) {
             ? e[e.length - 1]
             : (e[t.length - 1] ?? e[e.length - 1]);
 }
-let x = function (e) {
+let T = function (e) {
     var t;
     let n,
-        { className: l, iconClassName: r, size: m, channel: x, guild: T, isTyping: _ = !1, typingFillColor: y } = e,
-        C = (0, o.Ay)(x),
+        { className: l, iconClassName: r, size: m, channel: T, guild: y, isTyping: x = !1, typingFillColor: _ } = e,
+        C = (0, u.Ay)(T),
         v = (0, a.S3)(h.clD.ONLINE, null);
-    if (null == T) return null;
+    if (null == y) return null;
     let R = A[m],
         D = E[m],
         b = I[m],
-        j = (0, c.Iv)(T, 48),
+        j = (0, c.Iv)(y, 48),
         M = p[m],
         k =
             0 ===
@@ -51,7 +51,7 @@ let x = function (e) {
                     : "").length
                 ? "?"
                 : n.slice(0, 3),
-        O = (0, c.Rb)(T);
+        O = (0, c.Rb)(y);
     return (0, i.jsxs)("div", {
         className: s()(g.zr, l),
         role: "img",
@@ -64,7 +64,7 @@ let x = function (e) {
                 children:
                     null != j
                         ? (0, i.jsx)("img", {
-                              alt: T.name,
+                              alt: y.name,
                               src: j,
                               className: g.es,
                               draggable: !1,
@@ -83,11 +83,11 @@ let x = function (e) {
                     mask: d.hW.SQUIRCLE,
                     width: M,
                     height: M,
-                    children: _
+                    children: x
                         ? (0, i.jsx)("div", {
                               className: s()(S[m], g.WQ),
-                              style: { backgroundColor: y ?? v },
-                              children: (0, i.jsx)(u.n, { dotRadius: M / 10 }),
+                              style: { backgroundColor: _ ?? v },
+                              children: (0, i.jsx)(o.n, { dotRadius: M / 10 }),
                           })
                         : (0, i.jsx)("div", {
                               className: s()(S[m], g.q9),

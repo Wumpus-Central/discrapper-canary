@@ -16,13 +16,13 @@ var a = n(17928),
     x = n(34457),
     p = n(576705),
     A = n(292024),
-    f = n(105292);
-function b(e, t, l) {
+    b = n(105292);
+function f(e, t, l) {
     let s = (0, a.bG)([p.A], () => {
             let n = p.A.getHighestRole(e);
             return !p.A.isRoleHigher(e, n, t);
         }),
-        b = [],
+        f = [],
         j = t.tags?.guild_connections === null,
         N = e.verificationRoleId === t.id,
         E = t.managed && !j,
@@ -31,13 +31,13 @@ function b(e, t, l) {
         E ||
         C ||
         null == l ||
-        b.push(
+        f.push(
             (0, i.jsx)(
                 o.rX,
                 {
                     children: (0, i.jsx)(o.Dr, {
                         id: "duplicate-role",
-                        label: f.intl.string(f.t["7gEVxQ"]),
+                        label: b.intl.string(b.t["7gEVxQ"]),
                         icon: c.CopyIcon,
                         leadingAccessory: { type: "icon", icon: c.CopyIcon },
                         action: () => l(t),
@@ -47,9 +47,9 @@ function b(e, t, l) {
             ),
         );
     let v = (0, A.A)(e, t);
-    null != v && b.push(v);
-    let T = (0, h.A)({ id: t.id, label: f.intl.string(f.t.sMsaLg) });
-    if ((null != T && b.push(T), !s && !E && !C)) {
+    null != v && f.push(v);
+    let T = (0, h.A)({ id: t.id, label: b.intl.string(b.t.sMsaLg) });
+    if ((null != T && f.push(T), !s && !E && !C)) {
         async function I() {
             (j && (await (0, g.qK)(e.id, t.id, [])), m.A.deleteRole(e.id, t.id));
         }
@@ -62,20 +62,20 @@ function b(e, t, l) {
               }
             : () => {
                   (0, r.A)({
-                      title: f.intl.string(f.t.YWISbQ),
-                      subtitle: f.intl.format(f.t["9+nrUS"], { name: t.name }),
-                      confirmText: f.intl.string(f.t.oyYWHE),
-                      cancelText: f.intl.string(f.t["ETE/oC"]),
+                      title: b.intl.string(b.t.YWISbQ),
+                      subtitle: b.intl.format(b.t["9+nrUS"], { name: t.name }),
+                      confirmText: b.intl.string(b.t.oyYWHE),
+                      cancelText: b.intl.string(b.t["ETE/oC"]),
                       onConfirm: I,
                   });
               };
-        b.push(
+        f.push(
             (0, i.jsx)(
                 o.rX,
                 {
                     children: (0, i.jsx)(o.Dr, {
                         id: "delete-role",
-                        label: f.intl.string(f.t.oyYWHE),
+                        label: b.intl.string(b.t.oyYWHE),
                         color: "danger",
                         icon: u.TrashIcon,
                         leadingAccessory: { type: "icon", icon: u.TrashIcon },
@@ -86,20 +86,20 @@ function b(e, t, l) {
             ),
         );
     }
-    return b;
+    return f;
 }
 function j(e, t, n) {
-    return b(e, t, n).length > 0;
+    return f(e, t, n).length > 0;
 }
 function N(e) {
     let { role: t, guild: n, onDuplicateRole: a, onSelect: r } = e,
-        o = b(n, t, a);
+        o = f(n, t, a);
     return 0 === o.length
         ? null
         : (0, i.jsx)(l.W, {
               "data-menu-migrated-auto": !0,
               navId: "guild-settings-role-context",
-              "aria-label": f.intl.string(f.t["337Ja9"]),
+              "aria-label": b.intl.string(b.t["337Ja9"]),
               onClose: s.Z_,
               onSelect: r,
               children: o,

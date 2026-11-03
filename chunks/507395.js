@@ -1,4 +1,4 @@
-n.d(t, { r: () => b });
+n.d(t, { r: () => v });
 var i = n(132500),
     r = n(323889),
     a = n(69114),
@@ -216,10 +216,10 @@ async function D(e) {
     }
     y(e);
 }
-function v(e) {
+function b(e) {
     (0, m.L)().error("captureAdUserAction failed to report an ad user action", e);
 }
-function b(e) {
+function v(e) {
     try {
         switch (e.type) {
             case N.F.END_CONTENT_LOAD:
@@ -264,18 +264,18 @@ function b(e) {
                     });
                 break;
             case N.F.CLICK_INTERNAL:
-                R(e).catch(v);
+                R(e).catch(b);
                 break;
             case N.F.CLICK_EXTERNAL_ADVERTISER_CTA:
-                L(e).catch(v);
+                L(e).catch(b);
                 break;
             case N.F.VIEW_INTERNAL_SURFACE_IMPRESSION:
-                D(e).catch(v);
+                D(e).catch(b);
                 break;
             case N.F.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION:
                 y(e);
         }
     } catch (e) {
-        v(e);
+        b(e);
     }
 }

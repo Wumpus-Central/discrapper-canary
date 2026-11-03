@@ -5,8 +5,8 @@ var r = n(477900),
     s = n.n(l),
     o = n(258873),
     a = n(622242),
-    u = n(731738),
-    d = n(70298),
+    d = n(731738),
+    u = n(70298),
     c = n(17928),
     h = n(397613),
     f = n(821609),
@@ -16,11 +16,11 @@ var r = n(477900),
     A = n(380610),
     y = n(807393),
     v = n(976860),
-    x = n(174459),
-    w = n(38405),
+    w = n(174459),
+    x = n(38405),
     E = n(19575),
-    C = n(721668),
-    b = n(652215),
+    b = n(721668),
+    C = n(652215),
     N = n(105292),
     O = n(684637);
 function _() {
@@ -46,7 +46,7 @@ let D = s().throttle(
     (e) => {
         y.A.increment(
             {
-                name: u.K.APP_CRASHED,
+                name: d.K.APP_CRASHED,
                 tags: [`reason:${o.J.UNHANDLED_JS_ERROR}`, `level:${a.k.FATAL}`, `modded_client:${e}`],
             },
             !0,
@@ -64,9 +64,9 @@ class I extends i.PureComponent {
     triggerSoftCrash(e, t) {
         let n = (0, v.JK)().location;
         this.setState({ error: e, info: t });
-        let r = (0, d.b)(),
-            i = w.A.captureCrash(e, { extra: t });
-        (x.default.track(b.HAw.APP_CRASHED, {
+        let r = (0, u.b)(),
+            i = x.A.captureCrash(e, { extra: t });
+        (w.default.track(C.HAw.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -113,7 +113,7 @@ class I extends i.PureComponent {
                         (0, r.jsx)(_, {}),
                     ],
                 });
-            return (0, r.jsx)(C.A, {
+            return (0, r.jsx)(b.A, {
                 title: N.intl.string(N.t["3h+n+8"]),
                 note: null != t ? t() : e,
                 action: n,

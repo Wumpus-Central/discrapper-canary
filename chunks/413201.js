@@ -1,29 +1,29 @@
-i.d(e, { default: () => f });
-var n = i(477900),
-    s = i(582128),
-    r = i(858899),
-    l = i(732159),
-    a = i(253932),
-    c = i(365258),
-    d = i(929120),
-    u = i(481045),
-    o = i(105292);
+e.d(i, { default: () => f });
+var n = e(477900),
+    s = e(582128),
+    r = e(858899),
+    l = e(732159),
+    a = e(253932),
+    c = e(365258),
+    d = e(929120),
+    u = e(481045),
+    o = e(105292);
 function f(t) {
     let {
-            direction: e,
-            affectedGuildIds: i,
+            direction: i,
+            affectedGuildIds: e,
             settingName: f,
             mappedActivityValue: h,
             onClose: j,
-            transitionState: x,
+            transitionState: v,
         } = t,
-        v = e === c.AI.RESTRICTING,
-        { title: p, subtitle: C, confirmText: g, toastContent: k } = (0, c.vz)(v, f),
+        x = i === c.AI.RESTRICTING,
+        { title: p, subtitle: C, confirmText: g, toastContent: k } = (0, c.vz)(x, f),
         m = (0, s.useMemo)(
             () => () => {
-                (a._Z.updateSetting(h), (0, c.gF)(e, i), (0, r.P0)({ text: k, variant: "success" }));
+                (a._Z.updateSetting(h), (0, c.gF)(i, e), (0, r.P0)({ text: k, variant: "success" }));
             },
-            [h, e, i, k],
+            [h, i, e, k],
         ),
         A = (0, s.useCallback)(() => {
             (j(), (0, u.L7)());
@@ -36,7 +36,7 @@ function f(t) {
         variant: "primary",
         onConfirm: m,
         onClose: j,
-        transitionState: x,
-        children: (0, n.jsx)(d.n, { guildIds: i, direction: e, onClick: A }),
+        transitionState: v,
+        children: (0, n.jsx)(d.n, { guildIds: e, direction: i, onClick: A }),
     });
 }

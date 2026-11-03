@@ -28,8 +28,8 @@ let R = new A.A("AuthenticationStore"),
     L = "fingerprint",
     y = "installation_id_v3",
     D = "user_id_cache",
-    v = null,
     b = null,
+    v = null,
     P = null,
     M = null,
     U = null,
@@ -110,7 +110,7 @@ function et() {
     ((w = U), (U = null), o.w.remove(L));
 }
 function en(e, t) {
-    (Z("setAuthToken called."), (null == t || t !== v) && a.removeAnalyticsToken(), a.setToken(e, t));
+    (Z("setAuthToken called."), (null == t || t !== b) && a.removeAnalyticsToken(), a.setToken(e, t));
 }
 function ei(e) {
     ((x = e), a.setAnalyticsToken(e));
@@ -165,8 +165,8 @@ function eo(e) {
         E.IU(),
         S.A.clearUser(),
         o.w.remove(D),
-        (v = null),
         (b = null),
+        (v = null),
         (k = e?.isSwitchingAccount ? f.aUe.LOGGING_IN : f.aUe.NONE),
         (V = ""),
         (j = null),
@@ -178,7 +178,7 @@ function eo(e) {
 class ed extends l.Ay.Store {
     static displayName = "AuthenticationStore";
     initialize() {
-        if (((v = o.w.get(D)), (G = Q()), null == a.getToken())) {
+        if (((b = o.w.get(D)), (G = Q()), null == a.getToken())) {
             let t = null == G || 0 === G.length,
                 i = J();
             if (t) {
@@ -199,10 +199,10 @@ class ed extends l.Ay.Store {
         return k;
     }
     getId() {
-        return v;
+        return b;
     }
     getSessionId() {
-        return b;
+        return v;
     }
     getAuthSessionIdHash() {
         return P;
@@ -269,11 +269,11 @@ let ec = new ed(
             } = e;
             (Z("handleConnectionOpen called"),
                 S.A.setUser(t.id, t.username, t.email ?? void 0, (0, m.A)(t)),
-                (b = n),
+                (v = n),
                 (P = i),
                 (M = s),
                 ei(r),
-                (v = t.id),
+                (b = t.id),
                 void 0 !== a && (B = a.authenticator_types),
                 o.w.set(D, t.id),
                 l?.installation != null && es({ type: "INSTALLATION_ID", installation: l.installation }));
@@ -281,12 +281,12 @@ let ec = new ed(
         OVERLAY_INITIALIZE: function (e) {
             let { user: t, sessionId: n, analyticsToken: i, token: r } = e;
             (S.A.setUser(t.id, t.username, t.email ?? void 0, (0, m.A)(t)),
-                (b = n),
+                (v = n),
                 (x = i),
                 en(r, t.id),
                 null != i && ei(i),
                 et(),
-                (v = t.id),
+                (b = t.id),
                 o.w.set(D, t.id));
         },
         CONNECTION_CLOSED: function (e) {
@@ -391,7 +391,7 @@ let ec = new ed(
         },
         CURRENT_USER_UPDATE: function (e) {
             let { user: t } = e;
-            ((v = t.id), void 0 !== t.authenticator_types && (B = t.authenticator_types), o.w.set(D, t.id));
+            ((b = t.id), void 0 !== t.authenticator_types && (B = t.authenticator_types), o.w.set(D, t.id));
         },
         AGE_GATE_LOGOUT_UNDERAGE_NEW_USER: el,
         CLOSE_SUSPENDED_USER: function () {

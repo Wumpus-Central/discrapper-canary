@@ -2,8 +2,8 @@ let i, r, a, s, l, o, d, c, u, _, E, A, h, f, I, p, m, T, g, S, N, C, O, R, L;
 n.d(t, { A: () => ei });
 var y = n(435558),
     D = n(412703),
-    v = n(440703),
-    b = n(17928),
+    b = n(440703),
+    v = n(17928),
     P = n(73153),
     M = n(107195),
     U = n(38405),
@@ -97,7 +97,7 @@ function ee() {
     null != W && (clearTimeout(W), (W = null));
 }
 K();
-class et extends b.Ay.Store {
+class et extends v.Ay.Store {
     static displayName = "QuestStore";
     get quests() {
         return l;
@@ -370,7 +370,7 @@ let en = new et(P.h, {
                 let e = (function (e) {
                     let { entitlements: t } = e,
                         n = t.items[0].tenantMetadata?.questRewards.reward;
-                    return n?.tag !== v.l.REWARD_CODE ? null : n.rewardCode;
+                    return n?.tag !== b.l.REWARD_CODE ? null : n.rewardCode;
                 })({ entitlements: n });
                 (null != e && z(t, e),
                     $(t, { userStatus: { ...s, claimedAt: n.claimedAt, claimedTier: e?.tier ?? null } }));

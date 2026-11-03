@@ -1,13 +1,13 @@
-l.d(t, { A: () => s });
-var e = l(477900);
-l(582128);
-var n = l(953727);
+t.d(l, { A: () => s });
+var e = t(477900);
+t(582128);
+var n = t(953727);
 function s(i) {
-    let { width: t = 16, height: l = 16, color: s = "currentColor", foreground: a, ...d } = i;
+    let { width: l = 16, height: t = 16, color: s = "currentColor", foreground: a, ...d } = i;
     return (0, e.jsx)("svg", {
         ...(0, n.A)(d),
-        width: t,
-        height: l,
+        width: l,
+        height: t,
         viewBox: "0 0 16 16",
         children: (0, e.jsxs)("g", {
             fill: "none",

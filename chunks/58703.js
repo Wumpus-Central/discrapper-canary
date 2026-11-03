@@ -4,11 +4,11 @@ n.d(t, {
     m_: () => m,
     N5: () => M,
     mk: () => C,
-    uN: () => b,
+    uN: () => v,
     ro: () => g,
     Fe: () => O,
     c_: () => T,
-    Tf: () => v,
+    Tf: () => b,
     K7: () => y,
     i$: () => N,
     P6: () => U,
@@ -552,7 +552,7 @@ let D = [
     { key: "minutes", millisecondsInUnit: 6e4 },
     { key: "seconds", millisecondsInUnit: 1e3 },
 ];
-function v(e, t) {
+function b(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = { days: 0, hours: 0, minutes: 0, seconds: +!!n };
     if (e > t || (n && Number(e) + 1200 > Number(t))) return i;
@@ -565,7 +565,7 @@ function v(e, t) {
         i
     );
 }
-function b(e, t) {
+function v(e, t) {
     return e.days > 0
         ? u.intl.formatToPlainString(t.days, { days: e.days, hours: e.hours })
         : e.hours > 0

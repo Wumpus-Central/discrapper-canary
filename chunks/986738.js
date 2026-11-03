@@ -1,4 +1,4 @@
-t.d(n, { A: () => u });
+t.d(n, { A: () => d });
 var i = t(477900);
 t(582128);
 var l = t(661531),
@@ -7,9 +7,9 @@ var l = t(661531),
     r = t(823508),
     o = t(47868),
     c = t(105292);
-function u(e) {
-    let { className: n, guildId: u } = e,
-        d = (0, r.A)();
+function d(e) {
+    let { className: n, guildId: d } = e,
+        u = (0, r.A)();
     return (0, i.jsx)(o.A, {
         className: n,
         icon: (0, i.jsx)(a.CalendarIcon, { size: "custom", color: "currentColor", height: 20, width: 20 }),
@@ -47,8 +47,8 @@ function u(e) {
                     t.e("454450"),
                     t.e("222689"),
                 ]).then(t.bind(t, 303224));
-                return (n) => (0, i.jsx)(e, { ...n, guildId: u });
-            }, d);
+                return (n) => (0, i.jsx)(e, { ...n, guildId: d });
+            }, u);
         },
     });
 }

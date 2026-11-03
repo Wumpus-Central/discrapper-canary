@@ -1,4 +1,4 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => E });
 var l = n(477900);
 n(582128);
 var i = n(17928),
@@ -16,16 +16,16 @@ var i = n(17928),
     A = n(652215),
     f = n(105292),
     C = n(243226);
-function x(e) {
-    let { channelId: t, showProfile: n = !1, showTrailingDivider: x = !1 } = e,
-        E = h.default.cast(t),
+function E(e) {
+    let { channelId: t, showProfile: n = !1, showTrailingDivider: E = !1 } = e,
+        x = h.default.cast(t),
         {
             joinRequest: S,
-            isModmin: I,
-            guildId: y,
-            maxMembers: _,
+            isModmin: y,
+            guildId: I,
+            maxMembers: b,
         } = (0, i.cf)([m.A, d.A, u.A], () => {
-            let e = m.A.getRequest(E),
+            let e = m.A.getRequest(x),
                 t = d.A.getGuild(e?.guildId);
             return {
                 joinRequest: e,
@@ -34,23 +34,23 @@ function x(e) {
                 maxMembers: t?.maxMembers,
             };
         }),
-        j = (0, i.bG)([c.A], () => (null != y ? c.A.getMemberCount(y) : 0)),
-        v = null != _ && (j ?? 0) >= _,
-        { approveRequest: b, rejectRequest: N, submitting: T } = (0, p.W)(S?.guildId, S?.userId, S?.joinRequestId);
-    return null != S && S.applicationStatus === g.B5.SUBMITTED && I
+        _ = (0, i.bG)([c.A], () => (null != I ? c.A.getMemberCount(I) : 0)),
+        j = null != b && (_ ?? 0) >= b,
+        { approveRequest: v, rejectRequest: N, submitting: T } = (0, p.W)(S?.guildId, S?.userId, S?.joinRequestId);
+    return null != S && S.applicationStatus === g.B5.SUBMITTED && y
         ? (0, l.jsxs)("div", {
               className: C.U,
               children: [
                   (0, l.jsx)(s.m, {
                       text: f.intl.string(f.t.cdPGbE),
-                      shouldShow: v,
+                      shouldShow: j,
                       children: (0, l.jsx)(a.$, {
                           variant: "active",
                           size: "sm",
                           text: f.intl.string(f.t.BzjDQJ),
                           loading: T,
-                          onClick: b,
-                          disabled: v,
+                          onClick: v,
+                          disabled: j,
                       }),
                   }),
                   (0, l.jsx)(a.$, {
@@ -69,7 +69,7 @@ function x(e) {
                           size: "sm",
                           text: f.intl.string(f.t.iXAna6),
                       }),
-                  x && (0, l.jsx)(r.Ay.Divider, {}),
+                  E && (0, l.jsx)(r.Ay.Divider, {}),
               ],
           })
         : null;

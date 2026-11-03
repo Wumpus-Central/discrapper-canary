@@ -1,10 +1,10 @@
-t.d(l, { E9: () => d, Ye: () => o, jM: () => u });
+t.d(l, { E9: () => d, Ye: () => s, jM: () => u });
 var n,
     r = t(477900),
     a = t(582128),
     i = t(812729),
-    s = t.n(i),
-    o =
+    o = t.n(i),
+    s =
         (((n = {}).COLLECTIBLES_SHOP = "collectibles_shop"),
         (n.COLLECTIBLES_SHOP_BANNER = "collectibles_shop_banner"),
         (n.SLAYER_SERVER_SHOP = "slayer_server_shop"),
@@ -22,7 +22,7 @@ function d(e) {
         n = u(),
         i = a.useMemo(() => {
             let e = { ...n, ...l };
-            return s()(n, e) ? (n ?? e) : e;
+            return o()(n, e) ? (n ?? e) : e;
         }, [n, l]);
     return (0, r.jsx)(c.Provider, { value: i, children: t });
 }

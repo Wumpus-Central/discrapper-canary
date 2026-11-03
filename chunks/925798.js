@@ -492,8 +492,8 @@ class D extends o.G {
         return (!1 !== i && (!0 == i ? a.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let v = new D();
-class b extends o.G {
+let b = new D();
+class v extends o.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.GuildBoostCheckoutBanner", [
             { no: 1, name: "asset", kind: "message", T: () => d.i },
@@ -559,7 +559,7 @@ class b extends o.G {
         return (!1 !== i && (!0 == i ? a.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let P = new b();
+let P = new v();
 class M extends o.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.GuildHeaderCoachmark", [
@@ -1574,7 +1574,7 @@ class ef extends o.G {
             { no: 22, name: "admin_editor_test_component", kind: "message", oneof: "properties", T: () => k },
             { no: 23, name: "guild_header_coachmark", kind: "message", oneof: "properties", T: () => U },
             { no: 24, name: "guild_boost_checkout_banner", kind: "message", oneof: "properties", T: () => P },
-            { no: 25, name: "guild_boost_marketing_page_banner", kind: "message", oneof: "properties", T: () => v },
+            { no: 25, name: "guild_boost_marketing_page_banner", kind: "message", oneof: "properties", T: () => b },
             { no: 26, name: "guild_boost_tab_banner", kind: "message", oneof: "properties", T: () => y },
             { no: 27, name: "shop_tab_tooltip", kind: "message", oneof: "properties", T: () => O },
             { no: 28, name: "premium_home_rewards_perk_card", kind: "message", oneof: "properties", T: () => N },
@@ -1778,7 +1778,7 @@ class ef extends o.G {
                 case 25:
                     r.properties = {
                         oneofKind: "guildBoostMarketingPageBanner",
-                        guildBoostMarketingPageBanner: v.internalBinaryRead(
+                        guildBoostMarketingPageBanner: b.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -1971,7 +1971,7 @@ class ef extends o.G {
                     n,
                 ).join(),
             "guildBoostMarketingPageBanner" === e.properties.oneofKind &&
-                v
+                b
                     .internalBinaryWrite(
                         e.properties.guildBoostMarketingPageBanner,
                         t.tag(25, a.O0.LengthDelimited).fork(),

@@ -29,7 +29,7 @@ function m(e) {
             plated: C,
             ref: _,
         } = e,
-        T =
+        y =
             "function" == typeof u
                 ? (0, l.jsx)(u, { width: 20, height: 20, size: "custom", colorClass: m ?? "", color: "currentColor" })
                 : u;
@@ -54,7 +54,7 @@ function m(e) {
         "aria-checked": x,
         focusProps: { offset: { left: -1, top: -1, right: 1, bottom: 1 } },
         children: [
-            null != t ? (0, l.jsx)(d.Ay, { width: 20, height: 20, mask: d.Ay.Masks.PANEL_BUTTON, children: T }) : T,
+            null != t ? (0, l.jsx)(d.Ay, { width: 20, height: 20, mask: d.Ay.Masks.PANEL_BUTTON, children: y }) : y,
             t,
         ],
     });

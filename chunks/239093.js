@@ -1,7 +1,7 @@
 n.d(t, {
     A8: () => O,
     AT: () => A,
-    Eb: () => v,
+    Eb: () => b,
     Iv: () => m,
     M8: () => S,
     Qv: () => T,
@@ -13,7 +13,7 @@ n.d(t, {
     g0: () => f,
     nY: () => N,
     qN: () => y,
-    ti: () => b,
+    ti: () => v,
     w$: () => R,
     wQ: () => D,
     xw: () => h,
@@ -127,5 +127,5 @@ var R =
         (c.UNDERAGE_MANUAL_REVIEW = "underage_manual_review"),
         c);
 let D = 2e3,
-    v = 15e3,
-    b = 5;
+    b = 15e3,
+    v = 5;

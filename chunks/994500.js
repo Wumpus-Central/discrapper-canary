@@ -41,20 +41,20 @@ function y(e) {
 function D(e) {
     A.delete(e) && O();
 }
-let v = new Map();
-function b(e, t) {
+let b = new Map();
+function v(e, t) {
     let n = d.get(e);
     if (n === t) return;
-    (null != n && v.get(n)?.delete(e), d.set(e, t));
-    let i = v.get(t);
-    (null != i ? i.add(e) : v.set(t, new Set([e])), C(n), C(t));
+    (null != n && b.get(n)?.delete(e), d.set(e, t));
+    let i = b.get(t);
+    (null != i ? i.add(e) : b.set(t, new Set([e])), C(n), C(t));
 }
 function P(e) {
     let t = d.get(e);
-    null != t && (d.delete(e), v.get(t)?.delete(e), C(t));
+    null != t && (d.delete(e), b.get(t)?.delete(e), C(t));
 }
 function M() {
-    ((T = E.size), (g = h.size), (m = Math.max((v.get(o.eA$.PENDING_INCOMING)?.size ?? 0) - T - g, 0)), I++);
+    ((T = E.size), (g = h.size), (m = Math.max((b.get(o.eA$.PENDING_INCOMING)?.size ?? 0) - T - g, 0)), I++);
 }
 class U extends i.Ay.Store {
     static displayName = "RelationshipStore";
@@ -105,10 +105,10 @@ class U extends i.Ay.Store {
         return g;
     }
     getOutgoingCount() {
-        return v.get(o.eA$.PENDING_OUTGOING)?.size ?? 0;
+        return b.get(o.eA$.PENDING_OUTGOING)?.size ?? 0;
     }
     getFriendCount() {
-        return v.get(o.eA$.FRIEND)?.size ?? 0;
+        return b.get(o.eA$.FRIEND)?.size ?? 0;
     }
     getRelationshipCount() {
         return d.size;
@@ -139,10 +139,10 @@ class U extends i.Ay.Store {
         return _[e];
     }
     getFriendIDs() {
-        return (null == S.friends && (S.friends = Array.from(v.get(o.eA$.FRIEND) ?? [])), S.friends);
+        return (null == S.friends && (S.friends = Array.from(b.get(o.eA$.FRIEND) ?? [])), S.friends);
     }
     getBlockedIDs() {
-        return (null == S.blocked && (S.blocked = Array.from(v.get(o.eA$.BLOCKED) ?? [])), S.blocked);
+        return (null == S.blocked && (S.blocked = Array.from(b.get(o.eA$.BLOCKED) ?? [])), S.blocked);
     }
     getIgnoredIDs() {
         return (null == S.ignored && (S.ignored = Array.from(A.values()).filter((e) => this.isIgnored(e))), S.ignored);
@@ -150,7 +150,7 @@ class U extends i.Ay.Store {
     getBlockedOrIgnoredIDs() {
         if (null == S.blockedOrIgnored) {
             let e = new Set(A),
-                t = v.get(o.eA$.BLOCKED);
+                t = b.get(o.eA$.BLOCKED);
             if (null != t) for (let n of t) e.add(n);
             S.blockedOrIgnored = e;
         }
@@ -166,7 +166,7 @@ class U extends i.Ay.Store {
 let w = new U(r.h, {
     CONNECTION_OPEN: function (e) {
         (d.clear(),
-            v.clear(),
+            b.clear(),
             (c = {}),
             (u = {}),
             (_ = {}),
@@ -177,7 +177,7 @@ let w = new U(r.h, {
             (f = {}),
             (p = {}),
             e.relationships.forEach((e) => {
-                (b(e.id, e.type),
+                (v(e.id, e.type),
                     null != e.nickname && (c[e.id] = e.nickname),
                     null != e.since && (u[e.id] = e.since),
                     null != e.note && (_[e.id] = e.note),
@@ -189,12 +189,12 @@ let w = new U(r.h, {
             M());
     },
     OVERLAY_INITIALIZE: function (e) {
-        for (let [t, n] of (d.clear(), v.clear(), R(), e.relationships)) b(t, n);
+        for (let [t, n] of (d.clear(), b.clear(), R(), e.relationships)) v(t, n);
         (L(), M());
     },
     RELATIONSHIP_ADD: function (e) {
         let t = d.get(e.relationship.id);
-        (b(e.relationship.id, e.relationship.type),
+        (v(e.relationship.id, e.relationship.type),
             null != e.relationship.nickname && (c = { ...c, [e.relationship.id]: e.relationship.nickname }),
             null != e.relationship.since && (u = { ...u, [e.relationship.id]: e.relationship.since }),
             null != e.relationship.note && (_ = { ..._, [e.relationship.id]: e.relationship.note }),
@@ -227,7 +227,7 @@ let w = new U(r.h, {
     },
     RELATIONSHIP_UPDATE: function (e) {
         let { relationship: t } = e;
-        (b(t.id, t.type),
+        (v(t.id, t.type),
             null == t.since ? delete u[t.id] : (u[t.id] = t.since),
             null == t.nickname ? delete c[t.id] : (c[t.id] = t.nickname),
             null == t.note ? delete _[t.id] : (_[t.id] = t.note),

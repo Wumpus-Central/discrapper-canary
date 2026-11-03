@@ -1,4 +1,4 @@
-i.d(t, { RB: () => g, aB: () => m, x6: () => x });
+i.d(t, { RB: () => x, aB: () => m, x6: () => g });
 var s = i(636537),
     n = i(858899),
     a = i(73153),
@@ -23,7 +23,7 @@ async function m(e) {
         }
     }
 }
-async function x(e) {
+async function g(e) {
     if (!u()) {
         a.h.dispatch({ type: "PARTNER_ACTIVATION_FETCH_START" });
         try {
@@ -36,7 +36,7 @@ async function x(e) {
         }
     }
 }
-async function g(e) {
+async function x(e) {
     if (!u()) {
         a.h.dispatch({ type: "PARTNER_CANCELLATION_START" });
         try {

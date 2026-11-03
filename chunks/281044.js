@@ -261,12 +261,12 @@ function D(e, t) {
           ? t.checkoutContext
           : null;
 }
-function v(e) {
+function b(e) {
     return null == e
         ? { isPremiumPurchase: !0, isPremiumGroupPurchase: !1 }
         : { isPremiumPurchase: (0, R.ys)(e), isPremiumGroupPurchase: e === y.gD.PREMIUM_GROUP_MONTH };
 }
-function b(e) {
+function v(e) {
     return e.type !== L.hes.TDS_WALLET;
 }
 function P(e, t) {
@@ -338,9 +338,9 @@ function eo(e) {
             E =
                 ((u = { checkoutContext: null, checkoutPaymentSources: [] }),
                 {
-                    isPremiumPurchase: () => v(i().selectedPlanId).isPremiumPurchase,
-                    isPremiumGroupPurchase: () => v(i().selectedPlanId).isPremiumGroupPurchase,
-                    selectedPlanAttributes: () => v(i().selectedPlanId),
+                    isPremiumPurchase: () => b(i().selectedPlanId).isPremiumPurchase,
+                    isPremiumGroupPurchase: () => b(i().selectedPlanId).isPremiumGroupPurchase,
+                    selectedPlanAttributes: () => b(i().selectedPlanId),
                     premiumDiscountOffer: () => i().premiumDiscountInfo.discountOffer ?? null,
                     premiumDiscountPercent: () => {
                         let e = i().premiumDiscountInfo.discountOffer;
@@ -380,7 +380,7 @@ function eo(e) {
                         let { get: e, paymentSourceId: t } = i();
                         return e("checkoutPaymentSources").find((e) => e.id === t) ?? null;
                     },
-                    hasFiatCheckoutPaymentSources: () => i().get("checkoutPaymentSources").some(b),
+                    hasFiatCheckoutPaymentSources: () => i().get("checkoutPaymentSources").some(v),
                     isCheckoutDataLoading: () => {
                         let {
                             order: e,
@@ -515,7 +515,7 @@ function eo(e) {
                     let e = i().get("checkoutContext")?.payment_notices;
                     return null == e ? _ : e.filter((e) => e.subject_type === K.SV.PAYMENT_SOURCE);
                 },
-                getDropdownPaymentSources: () => i().get("checkoutPaymentSources").filter(b),
+                getDropdownPaymentSources: () => i().get("checkoutPaymentSources").filter(v),
                 getGiftCardWallet: () =>
                     i()
                         .get("checkoutPaymentSources")

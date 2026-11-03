@@ -1,4 +1,4 @@
-t.d(n, { A: () => u });
+t.d(n, { A: () => d });
 var i = t(477900);
 t(582128);
 var l = t(503698),
@@ -7,7 +7,7 @@ var l = t(503698),
     r = t(656171),
     o = t(346554),
     c = t(856682);
-function u(e) {
+function d(e) {
     let { className: n, children: t } = e;
     return (0, i.jsxs)("div", {
         className: s()(r.kL, n),

@@ -13,8 +13,8 @@ function g(e, t, a) {
     let g = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         h = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
         p = (0, r.bG)([l.A], () => l.A.hasLoadedExperiments),
-        v = (0, r.bG)([i.A], () => i.A.skipNumCategories),
-        [x, b, f, y, C, S, k, E] = (0, r.yK)([c.A], () => [
+        b = (0, r.bG)([i.A], () => i.A.skipNumCategories),
+        [v, x, y, f, C, S, k, E] = (0, r.yK)([c.A], () => [
             c.A.getShopBlocks(e),
             c.A.getLastSuccessfulFetch(e) ?? 0,
             c.A.getLastErrorTimestamp(e) ?? 0,
@@ -31,11 +31,11 @@ function g(e, t, a) {
                 includeBundles: !0,
                 includeDynamicBlocks: !0,
                 shopHomeConfig: E,
-                skipNumCategories: v,
+                skipNumCategories: b,
             }),
-            [t, E, v],
+            [t, E, b],
         ),
-        A = (0, o.useMemo)(() => !(0, n.gn)(y, w), [y, w]),
+        A = (0, o.useMemo)(() => !(0, n.gn)(f, w), [f, w]),
         j = ((e, t, a) => {
             let [s, r] = (0, o.useState)(!1);
             return (
@@ -65,18 +65,18 @@ function g(e, t, a) {
                 }, [t, a, e]),
                 s
             );
-        })(x, S ?? !1, g),
-        I = (0, o.useMemo)(() => !j && Date.now() - b < u.i0, [b, j]);
+        })(v, S ?? !1, g),
+        I = (0, o.useMemo)(() => !j && Date.now() - x < u.i0, [x, j]);
     return (
         (0, o.useEffect)(() => {
             if (h || !p || S) return;
-            let t = Date.now() - f < u.Zq;
+            let t = Date.now() - y < u.Zq;
             (null != C && t) || ((A || !I || k) && (0, n.h$)(e, w, a));
-        }, [h, p, S, C, f, I, k, A, w, e, a]),
+        }, [h, p, S, C, y, I, k, A, w, e, a]),
         {
             isFetchingShopHome: S,
             fetchShopHomeError: C,
-            shopBlocks: x,
+            shopBlocks: v,
             refreshShopHome: (0, o.useCallback)(() => {
                 (0, n.h$)(e, w, a);
             }, [e, w, a]),

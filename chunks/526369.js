@@ -13,11 +13,11 @@ var i = n(477900),
     m = n(855687),
     A = n(267102),
     f = n(511205),
-    x = n(530804),
-    g = n(71393),
+    g = n(530804),
+    x = n(71393),
     C = n(576705),
-    j = n(686502),
-    y = n(175203),
+    y = n(686502),
+    j = n(175203),
     I = n(263854),
     N = n(652215),
     v = n(886179);
@@ -34,10 +34,10 @@ function E(e) {
             popoutType: O,
         } = e,
         P = (0, A.Us)() === N.BRT.POPOUT,
-        L = (0, r.bG)([g.A], () => g.A.getGuild(S.guild_id), [S.guild_id]),
+        L = (0, r.bG)([x.A], () => x.A.getGuild(S.guild_id), [S.guild_id]),
         { dismissedActivityEntryPointTileChannel: M } = (0, I.P)(),
         w = (0, r.bG)([h.A], () => h.A.getUserParticipantCount(S.id), [S]),
-        U = (0, x.vp)(S.id, t),
+        U = (0, g.vp)(S.id, t),
         D = l.useCallback(() => {
             (0, s.r)(() => {
                 I.P.setState({ dismissedActivityEntryPointTileChannel: S.id });
@@ -60,7 +60,7 @@ function E(e) {
         W = U.map(
             (e) => (t) =>
                 (0, i.jsx)(
-                    y.Ay,
+                    j.Ay,
                     {
                         participant: e,
                         channel: S,
@@ -90,7 +90,7 @@ function E(e) {
         !S.isGuildStageVoice() &&
         (w >= 2 && Y && !F && !H
             ? W.push((e) =>
-                  (0, i.jsx)(j.y, {
+                  (0, i.jsx)(y.y, {
                       channel: S,
                       guild: L,
                       width: e,
@@ -103,7 +103,7 @@ function E(e) {
               1 === w &&
               V &&
               W.push((e) =>
-                  (0, i.jsx)(j.y, {
+                  (0, i.jsx)(y.y, {
                       channel: S,
                       guild: L,
                       width: e,

@@ -15,74 +15,74 @@ var l = n(477900),
     A = n(994500),
     f = n(975571),
     C = n(786051),
-    x = n(559868),
-    E = n(105292);
+    E = n(559868),
+    x = n(105292);
 function S(e) {
     var t, S;
-    let I,
-        y,
+    let y,
+        I,
+        b,
         _,
         j,
         v,
-        b,
         N,
         T,
         { channel: M, children: R } = e,
         D = (0, s.bG)([A.A], () => A.A.isBlocked(M.getRecipientId()));
     ((S = t = M.id),
-        (I = (0, s.bG)([m.A], () => m.A.getLastMessage(S))),
-        (y = I?.changelogId),
-        (_ = (0, s.bG)([c.default], () => c.default.locale)),
-        (j = (0, s.bG)([h.A], () => h.A.getChangelog(y ?? "", _), [y, _])),
-        (v = (0, g.A)(t)),
-        (b = i.useRef(v ? Date.now() : null)),
+        (y = (0, s.bG)([m.A], () => m.A.getLastMessage(S))),
+        (I = y?.changelogId),
+        (b = (0, s.bG)([c.default], () => c.default.locale)),
+        (_ = (0, s.bG)([h.A], () => h.A.getChangelog(I ?? "", b), [I, b])),
+        (j = (0, g.A)(t)),
+        (v = i.useRef(j ? Date.now() : null)),
         (N = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
         (T = i.useRef(N)),
         i.useEffect(() => {
             T.current = N;
         }),
         i.useEffect(() => {
-            b.current = Date.now();
-        }, [v]),
+            v.current = Date.now();
+        }, [j]),
         i.useEffect(() => {
-            v && null != y && o.A.fetchChangelog(y, _, !0);
-        }, [y, _, v]),
+            j && null != I && o.A.fetchChangelog(I, b, !0);
+        }, [I, b, j]),
         i.useEffect(() => {
-            v &&
-                null != j &&
+            j &&
+                null != _ &&
                 u.default.track(p.HAw.CHANGE_LOG_OPENED, {
-                    change_log_id: `${j.date}:${j.revision}`,
+                    change_log_id: `${_.date}:${_.revision}`,
                     unread_count: T.current,
                 });
-        }, [v, j]),
+        }, [j, _]),
         i.useEffect(() => {
-            let e = b.current;
+            let e = v.current;
             return () => {
-                v &&
-                    null != j &&
+                j &&
+                    null != _ &&
                     null != e &&
                     (u.default.track(p.HAw.CHANGE_LOG_CLOSED, {
                         seconds_open: Math.round((Date.now() - e) / 1e3),
-                        change_log_id: `${j.date}:${j.revision}`,
+                        change_log_id: `${_.date}:${_.revision}`,
                         unread_count: T.current,
                     }),
-                    (b.current = 0));
+                    (v.current = 0));
             };
-        }, [v, j]));
+        }, [j, _]));
     let k = (0, g.A)(M.id),
         L = M.isSystemDM(),
         P = D && !L && !M.isMultiUserDM(),
         O = {};
     if (L) {
-        let e = k ? E.intl.string(E.t["+KSnWX"]) : E.intl.string(E.t.hvVgAZ);
-        ((O.message = E.intl.string(E.t.Bt2N7D)),
-            (O.subtitle = E.intl.string(E.t["n/Vzkw"])),
+        let e = k ? x.intl.string(x.t["+KSnWX"]) : x.intl.string(x.t.hvVgAZ);
+        ((O.message = x.intl.string(x.t.Bt2N7D)),
+            (O.subtitle = x.intl.string(x.t["n/Vzkw"])),
             (O.buttonText = e),
             (O.buttonIcon = k ? a.t : void 0),
             (O.onButtonClick = function () {
                 if (k) {
-                    (open(x.Do),
-                        u.default.track(p.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "chat_blocker", target: x.Do }));
+                    (open(E.Do),
+                        u.default.track(p.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "chat_blocker", target: E.Do }));
                     return;
                 }
                 open(f.A.getArticleURL(p.MVz.SYSTEM_DMS));
@@ -90,8 +90,8 @@ function S(e) {
             (O.imageSrc = n(388668)));
     } else
         P &&
-            ((O.message = E.intl.string(E.t["9T6N5/"])),
-            (O.buttonText = E.intl.string(E.t.XyHpKH)),
+            ((O.message = x.intl.string(x.t["9T6N5/"])),
+            (O.buttonText = x.intl.string(x.t.XyHpKH)),
             (O.onButtonClick = function () {
                 r.A.unblockUser(M.getRecipientId());
             }));

@@ -24,8 +24,8 @@ var s = n(435558),
     L = n(403362),
     y = n(107750),
     D = n(272984),
-    v = n(652215);
-let b = A.A.get(v.fg2.SPOTIFY),
+    b = n(652215);
+let v = A.A.get(b.fg2.SPOTIFY),
     P = "hm://pusher/v1/connections/",
     M = 30 * R.A.Millis.SECOND,
     U = 30 * R.A.Millis.SECOND,
@@ -189,11 +189,11 @@ function ea(e, t, n) {
     ((0, y.ZH)(a.accountId, a.accessToken, l, A, { position: +u, deviceId: s.id, repeat: _ }),
         (r = { userId: e, partyId: o.id, trackId: l, startTime: c }));
     let h = "presence change";
-    (n && ((h = "started"), C.default.track(v.HAw.SPOTIFY_LISTEN_ALONG_STARTED, { party_id: o.id, other_user_id: e })),
+    (n && ((h = "started"), C.default.track(b.HAw.SPOTIFY_LISTEN_ALONG_STARTED, { party_id: o.id, other_user_id: e })),
         B.info(`Listen along ${h}: ${a.accountId} to ${e} playing ${l} on ${s.name}`));
 }
 function es() {
-    C.default.track(v.HAw.SPOTIFY_LISTEN_ALONG_ENDED, {
+    C.default.track(b.HAw.SPOTIFY_LISTEN_ALONG_ENDED, {
         party_id: null != r ? r.partyId : null,
         other_user_id: null != r ? r.userId : null,
     });
@@ -209,7 +209,7 @@ function el() {
     let e = Object.keys(K),
         t = m.A.getAccounts().filter((e) => {
             let { type: t } = e;
-            return t === v.fg2.SPOTIFY;
+            return t === b.fg2.SPOTIFY;
         });
     if (null == t) return !1;
     let n = t.map((e) => {
@@ -235,7 +235,7 @@ function eo() {
     let { socket: t } = e;
     ((X = !0),
         (0, y.v7)(t.accountId, t.accessToken),
-        C.default.track(v.HAw.SPOTIFY_AUTO_PAUSED),
+        C.default.track(b.HAw.SPOTIFY_AUTO_PAUSED),
         B.info("Playback auto paused"));
 }
 function ed(e) {
@@ -411,7 +411,7 @@ class e_ extends d.Ay.Store {
                 return t.replace(/;/g, "");
             }).join("; "));
         let h = {},
-            f = null != s.image ? (0, O.Di)(v.fg2.SPOTIFY, s.image.url) : null;
+            f = null != s.image ? (0, O.Di)(b.fg2.SPOTIFY, s.image.url) : null;
         (null != s.image && null != f && (h.large_image = f),
             "single" !== s.type && (h.large_text = s.name),
             null != E && (t = E.uri),
@@ -428,14 +428,14 @@ class e_ extends d.Ay.Store {
                 button_urls: [],
             },
             T = {
-                name: b.name,
+                name: v.name,
                 assets: h,
                 details: I,
                 state: e,
                 timestamps: { start: _, end: _ + d },
                 party: { id: n },
             };
-        return (c || ((T.sync_id = o), (T.flags = v.jUm.PLAY | v.jUm.SYNC), (T.metadata = m)), T);
+        return (c || ((T.sync_id = o), (T.flags = b.jUm.PLAY | b.jUm.SYNC), (T.metadata = m)), T);
     }
 }
 let eE = new e_(_.h, {
@@ -471,7 +471,7 @@ let eE = new e_(_.h, {
                         er(s, A.id));
                 } else (($[s] = [A]), (I = !0));
             o ? q?.start(U, eo) : ((u = null), q?.stop());
-            let T = m.A.getAccount(s, v.fg2.SPOTIFY);
+            let T = m.A.getAccount(s, b.fg2.SPOTIFY);
             if (null == T) return I;
             let g = z[s],
                 S =
@@ -511,8 +511,8 @@ let eE = new e_(_.h, {
                 return I;
             null != u &&
                 (_.h.dispatch({ type: "SPOTIFY_NEW_TRACK", track: u, connectionId: s }),
-                C.default.track(v.HAw.ACTIVITY_UPDATED, {
-                    party_platform: v.fg2.SPOTIFY,
+                C.default.track(b.HAw.ACTIVITY_UPDATED, {
+                    party_platform: b.fg2.SPOTIFY,
                     track_id: u.id,
                     has_images: !0,
                     details: u.album.name,
@@ -577,7 +577,7 @@ let eE = new e_(_.h, {
             if (t?.desktopSettings != null) {
                 q?.stop();
                 let { sourceId: e, sound: n } = t?.desktopSettings;
-                null != e && I.Ay.getObservedAppNameForWindow(e) === b.name && n
+                null != e && I.Ay.getObservedAppNameForWindow(e) === v.name && n
                     ? (q = new u.IX()).start(U, eo)
                     : (q?.stop(), (q = null));
             } else null == t && (q?.stop(), (q = null));

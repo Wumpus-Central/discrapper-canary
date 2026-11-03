@@ -3,7 +3,7 @@ n.d(t, {
     Bc: () => R,
     F2: () => M,
     Gc: () => m.Gc,
-    Gn: () => v,
+    Gn: () => b,
     Jm: () => k,
     Tv: () => U,
     UK: () => P,
@@ -97,7 +97,7 @@ function D(e) {
                 modalType: a.A5.NSFW_CHANNEL_VERIFIED,
             };
 }
-function v(e) {
+function b(e) {
     let t = (0, s.b8)(),
         n = (0, T.a)(),
         a = e === g.w_.NSFW_SERVER || e === g.w_.NSFW_SERVER_INVITE || e === g.w_.NSFW_SERVER_INVITE_EMBED,
@@ -143,14 +143,14 @@ function v(e) {
                   verifyDisagreementButtonText: N.intl.string(null != c ? N.t["/g10LC"] : N.t.f3Pet9),
               };
 }
-function b() {
+function v() {
     let e = h.default.getCurrentUser();
     if (null == e) return !1;
     let t = (0, T.r)();
     return !0 !== e.nsfwAllowed || t;
 }
 function P(e) {
-    return !!b() && null != e && F(u.A.getChannel(e));
+    return !!v() && null != e && F(u.A.getChannel(e));
 }
 function M(e) {
     return (0, T.r)() && P(e);
@@ -162,7 +162,7 @@ function w(e, t, n) {
     let i;
     if (
         (function (e) {
-            if (!b() || null == e) return !1;
+            if (!v() || null == e) return !1;
             let t = E.A.getGuild(e);
             return null != t && (0, c.wh)(t);
         })(e)

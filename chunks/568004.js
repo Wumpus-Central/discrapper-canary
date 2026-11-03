@@ -26,10 +26,10 @@ let T = new Set(),
     L = 6 * I.A.Millis.HOUR,
     y = 10 * I.A.Millis.MINUTE,
     D = new s.Ep();
-function v(e) {
+function b(e) {
     D.start(e + Math.random() * R, o.r);
 }
-function b() {
+function v() {
     if (!(0, m.S)() || _.l_.getSetting()) return !1;
     let e = A.A.entitledBranchIds,
         t = [];
@@ -57,7 +57,7 @@ function M() {
 class U extends a.Ay.Store {
     static displayName = "ApplicationBuildStore";
     initialize() {
-        (this.syncWith([A.A], b), this.waitFor(u.A, h.A, f.A, A.A, E.A));
+        (this.syncWith([A.A], v), this.waitFor(u.A, h.A, f.A, A.A, E.A));
     }
     getTargetBuildId(e, t) {
         return null == g[t] ? null : g[t].id;
@@ -80,7 +80,7 @@ class U extends a.Ay.Store {
 }
 let w = new U(l.h, {
     CONNECTION_OPEN: function () {
-        return !_.l_.getSetting() && (v(L), b());
+        return !_.l_.getSetting() && (b(L), v());
     },
     GAMES_DATABASE_UPDATE: function () {
         if (!(0, m.S)()) return !1;
@@ -134,10 +134,10 @@ let w = new U(l.h, {
             }
             O[t] = i;
         }
-        v(L);
+        b(L);
     },
     APPLICATION_BRANCHES_FETCH_FAIL: function () {
-        v(y);
+        b(y);
     },
     CONNECTION_CLOSED: M,
     LOGOUT: M,

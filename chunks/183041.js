@@ -36,23 +36,23 @@ var S = n(135598),
     L = n(282108),
     y = n(961440),
     D = n(652215),
-    v = n(355097);
-let b = {};
+    b = n(355097);
+let v = {};
 function P(e) {
     return `${e.channel_id}:${e.id}`;
 }
 function M() {
-    (Object.values(b).forEach((e) => {
+    (Object.values(v).forEach((e) => {
         let { timeout: t } = e;
         clearTimeout(t);
     }),
-        (b = {}));
+        (v = {}));
 }
 function U(e, t) {
     if (null == e.id || null == e.channel_id) return !1;
     let n = P(e);
-    if (null != b[n]) {
-        let { timeout: i, setAt: r } = b[n];
+    if (null != v[n]) {
+        let { timeout: i, setAt: r } = v[n];
         return (
             (function (e, t, n) {
                 if (t === C.VL.UPDATE) {
@@ -72,7 +72,7 @@ function U(e, t) {
                 (0, C.rA)(n, t);
             })(e, t, r),
             clearTimeout(i),
-            delete b[n],
+            delete v[n],
             !0
         );
     }
@@ -88,7 +88,7 @@ function w(e, t) {
     }
 }
 function G(e) {
-    return null == b[P(e)];
+    return null == v[P(e)];
 }
 function x(e, t) {
     let { forceBatchScan: n = !1, jitter: i = !1 } = t ?? {},
@@ -97,9 +97,9 @@ function x(e, t) {
             : e.filter((e) => (0, L.s9)(e)).filter(G);
     r.forEach((e) => {
         let t = P(e);
-        null == b[t] &&
+        null == v[t] &&
             (u.A.increment({ name: l.K.EXPLICIT_MEDIA_SCAN_CLIENT_TIMEOUT_CREATE }),
-            (b[t] = {
+            (v[t] = {
                 setAt: Date.now(),
                 timeout: setTimeout(() => {
                     !(function (e) {
@@ -123,7 +123,7 @@ function x(e, t) {
     i
         ? setTimeout(() => {
               w(
-                  r.filter((e) => null != b[P(e)]),
+                  r.filter((e) => null != v[P(e)]),
                   a,
               );
           }, 800 * Math.random())
@@ -327,7 +327,7 @@ function z(e) {
 }
 function X(e) {
     let { settings: t, local: n } = e;
-    if (!n || t.type !== v.oD.PRELOADED_USER_SETTINGS) return !1;
+    if (!n || t.type !== b.oD.PRELOADED_USER_SETTINGS) return !1;
     let i = I.Ay.getChannelId();
     return null != i && Z(i);
 }

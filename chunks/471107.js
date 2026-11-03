@@ -10,9 +10,9 @@ function o(t) {
 function c() {
     let { hovered: t, isAppFocused: e = !0 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         [r, c] = n.useState(() => o(Date.now())),
-        u = (0, a.bG)([i.Ay], () => i.Ay.useReducedMotion),
-        d = !e || (u && !t),
-        h = d ? 15 * l.A.Millis.SECOND : l.A.Millis.SECOND;
+        d = (0, a.bG)([i.Ay], () => i.Ay.useReducedMotion),
+        u = !e || (d && !t),
+        h = u ? 15 * l.A.Millis.SECOND : l.A.Millis.SECOND;
     return (
         n.useEffect(() => {
             let t = new s.IX();
@@ -23,6 +23,6 @@ function c() {
                 () => t.stop()
             );
         }, [h]),
-        { now: r, slowTickMode: d }
+        { now: r, slowTickMode: u }
     );
 }

@@ -3,8 +3,8 @@ var i = n(477900),
     a = n(582128),
     r = n(877624),
     l = n(793574),
-    s = n(688810),
-    o = n(975571),
+    o = n(688810),
+    s = n(975571),
     d = n(713271),
     c = n(852218),
     u = n(164832),
@@ -21,7 +21,7 @@ function T(e) {
     let { enabled: t } = f.A.useConfig({ location: e }),
         { enabled: n } = m.A.useConfig({ location: e }),
         { assetUrl: T } = (0, g.A)(r.C.MARKETING_PAGE_REWARDS_BENTO_BOX),
-        { analyticsLocations: _ } = (0, s.Ay)(l.A.PREMIUM_MARKETING_BENTO_BOX);
+        { analyticsLocations: _ } = (0, o.Ay)(l.A.PREMIUM_MARKETING_BENTO_BOX);
     return (0, a.useMemo)(
         () =>
             t && n && null != T
@@ -41,7 +41,7 @@ function T(e) {
                                       partnerIds: [c.Bt],
                                       title: E.intl.string(P.default.PFtZV6),
                                       subtitle: E.intl.format(p.default.ieA3V0, {
-                                          termsUrl: o.A.getArticleURL(b.MVz.CODE_BLURPLE_PROMOTION),
+                                          termsUrl: s.A.getArticleURL(b.MVz.CODE_BLURPLE_PROMOTION),
                                       }),
                                       analyticsLocations: _,
                                       isLocked: !0,

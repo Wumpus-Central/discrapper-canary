@@ -13,6 +13,6 @@ function u(e, t) {
         m = l.type !== a.b_.INACTIVE || (c && u),
         p = l.type === a.b_.TIER_OVERRIDE_ACTIVATED,
         g = (0, r.Ay)(e, t, "GuildPowerupCardFooterAdmin"),
-        x = a.HO;
-    return { showToggleButton: (m || !g) && !p, showConfigureButton: m && x.has(t.skuId), isPowerupActive: m };
+        f = a.HO;
+    return { showToggleButton: (m || !g) && !p, showConfigureButton: m && f.has(t.skuId), isPowerupActive: m };
 }

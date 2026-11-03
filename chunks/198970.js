@@ -92,7 +92,7 @@ var m = n(95477),
     f = n(832208),
     E = n(105292),
     S = n(782328);
-let g = [
+let y = [
         "AE",
         "AG",
         "AN",
@@ -163,19 +163,19 @@ let g = [
         "ZA",
         "ZW",
     ],
-    I = u.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })).filter(
+    g = u.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })).filter(
         (e) => "KP" !== e.value && "SY" !== e.value,
     ),
-    A = Object.freeze(I.reduce((e, t) => ({ ...e, [t.label.toLowerCase()]: t.value }), {})),
-    y = (0, C.Ld)(),
-    x = (0, C.Ld)(),
+    I = Object.freeze(g.reduce((e, t) => ({ ...e, [t.label.toLowerCase()]: t.value }), {})),
+    A = (0, C.Ld)(),
     P = (0, C.Ld)(),
     v = (0, C.Ld)(),
+    x = (0, C.Ld)(),
     _ = (0, C.Ld)(),
     T = (0, C.Ld)(),
-    N = (0, C.Ld)();
-var b =
-        (((l = b || {}).MODAL_US = "modalUS"),
+    b = (0, C.Ld)();
+var N =
+        (((l = N || {}).MODAL_US = "modalUS"),
         (l.MODAL_INTL = "modalInternational"),
         (l.MODAL_US_WITH_NAME = "modalUSWithName"),
         (l.MODAL_INTL_WITH_NAME = "modalInternationalWithName"),
@@ -191,7 +191,7 @@ let R = { US: c, CA: s },
     O = { US: d, CA: o },
     M = (e, t) => ({
         name: "name",
-        id: y,
+        id: A,
         title: () => E.intl.string(E.t.vyuULb),
         autoComplete: "name",
         getClassNameForLayout: (e) =>
@@ -210,11 +210,11 @@ let R = { US: c, CA: s },
     }),
     L = (e, t) => {
         let n = t?.allowedBillingAddressCountries,
-            l = null != n && n.length > 0 ? I.filter((e) => n.includes(e.value)) : I,
+            l = null != n && n.length > 0 ? g.filter((e) => n.includes(e.value)) : g,
             i = t?.countryHelperText;
         return {
             name: "country",
-            id: x,
+            id: P,
             title: () => E.intl.string(E.t.eDdrAD),
             helperText: null != i && "" !== i ? () => i : void 0,
             autoComplete: "country",
@@ -242,7 +242,7 @@ let R = { US: c, CA: s },
                         let l = t.target.value;
                         if (null == n) return;
                         let i = l.toLowerCase();
-                        i in A && n(A[i], e.name);
+                        i in I && n(I[i], e.name);
                     },
                     onSelectionChange: (t) => {
                         null != n && n(t, e.name);
@@ -253,7 +253,7 @@ let R = { US: c, CA: s },
     },
     k = (e, t) => ({
         name: "line1",
-        id: P,
+        id: v,
         title: () => E.intl.string(E.t.x0beVT),
         autoComplete: "address-line1",
         placeholder: () => E.intl.string(E.t["ynII/6"]),
@@ -273,7 +273,7 @@ let R = { US: c, CA: s },
     }),
     w = (e, t) => ({
         name: "line2",
-        id: v,
+        id: x,
         title: () => E.intl.string(E.t.i2Z0gI),
         placeholder: () => E.intl.string(E.t.fKLoNo),
         autoComplete: "address-line2",
@@ -367,7 +367,7 @@ let R = { US: c, CA: s },
         }
         return {
             name: "state",
-            id: N,
+            id: b,
             title: () => n,
             autoComplete: "address-level1",
             getClassNameForLayout: (e) => {
@@ -434,7 +434,7 @@ let R = { US: c, CA: s },
         settingsInternationalWithoutNameMobile: [[k], [w], [D], [G], [U], [L]],
     };
 class B extends a.PureComponent {
-    static Layouts = b;
+    static Layouts = N;
     static Modes = j;
     static defaultProps = {
         name: "",
@@ -498,7 +498,7 @@ class B extends a.PureComponent {
             default:
                 (e && !n.postalCode) ||
                     this.hasValue(t.postalCode) ||
-                    g.includes(i ?? "") ||
+                    y.includes(i ?? "") ||
                     (l.postalCode = E.intl.string(E.t.LRlhb1));
         }
         return l;

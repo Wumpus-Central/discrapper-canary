@@ -15,8 +15,8 @@
     WC: () => D,
     XK: () => E,
     aJ: () => I,
-    gF: () => v,
-    iy: () => b,
+    gF: () => b,
+    iy: () => v,
     kR: () => y,
     sg: () => f,
     ty: () => N,
@@ -151,7 +151,7 @@ function D(e) {
     let t = /\w+ (\d+), \w+ (\d+)/.exec(e);
     if (null != t) return d.intl.formatToPlainString(d.t.zmi5IM, { seasonNum: t[1], episodeNum: t[2] });
 }
-function v(e, t) {
+function b(e, t) {
     let n,
         i = t?.size?.[0] ?? void 0,
         r = t?.size?.[1] ?? void 0;
@@ -162,11 +162,11 @@ function v(e, t) {
         null != n && null != e ? `${e} (${n})` : (e ?? n)
     );
 }
-function b(e) {
+function v(e) {
     return p(e, s.K.STREAK_DAYS)?.streak_count_days;
 }
 function P(e) {
-    let t = b(e);
+    let t = v(e);
     if (null == t || t < 3) return !1;
     let n = o.default.extractTimestamp(e.id);
     return !(Date.now() - n > 48 * l.A.Millis.HOUR);

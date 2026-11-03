@@ -1,4 +1,4 @@
-t.d(n, { x: () => d });
+t.d(n, { x: () => u });
 var i = t(477900),
     l = t(582128),
     s = t(17928),
@@ -6,12 +6,12 @@ var i = t(477900),
     r = t(43189),
     o = t(964404),
     c = t(461782),
-    u = t(447404);
-function d(e) {
+    d = t(447404);
+function u(e) {
     let {
             buttonRef: n,
             dismissed: t,
-            onDismiss: d,
+            onDismiss: u,
             renderComponent: A,
             nudgeAlignIntoViewport: h = !1,
             skipForceHide: m = !1,
@@ -24,12 +24,12 @@ function d(e) {
         I = l.useRef(0);
     (l.useEffect(() => {
         let e = n.current;
-        if (null != e) return (e.addEventListener("click", d), () => e.removeEventListener("click", d));
+        if (null != e) return (e.addEventListener("click", u), () => e.removeEventListener("click", u));
     }),
         l.useEffect(() => {
             m || (C(String(I.current)), p(void 0 !== E && E < (j.current?.clientHeight ?? 300) + 24), (I.current += 1));
         }, [E, j, m]));
-    let { preventIdle: v, allowIdle: N } = (0, u.o)("popup");
+    let { preventIdle: v, allowIdle: N } = (0, d.o)("popup");
     return n?.current == null
         ? null
         : (0, i.jsx)(r.Ay, {
@@ -47,7 +47,7 @@ function d(e) {
                           onFocus: v,
                           onBlur: N,
                           onMouseLeave: N,
-                          children: A({ hidden: f || g || t, onDismiss: d }),
+                          children: A({ hidden: f || g || t, onDismiss: u }),
                       }),
               }),
           });

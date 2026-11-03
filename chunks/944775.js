@@ -1,4 +1,4 @@
-n.d(t, { Ax: () => x, Lk: () => C, cu: () => w, hK: () => E });
+n.d(t, { Ax: () => w, Lk: () => b, cu: () => x, hK: () => E });
 var r = n(477900);
 n(582128);
 var i = n(73153),
@@ -6,8 +6,8 @@ var i = n(73153),
     s = n(979186),
     o = n(574172),
     a = n(734057),
-    u = n(763827),
-    d = n(532294),
+    d = n(763827),
+    u = n(532294),
     c = n(19575),
     h = n(317084),
     f = n(980504),
@@ -30,12 +30,12 @@ let p = {
     A = f.ed.padding,
     y = p.width - A,
     v = p.height - A;
-async function x(e) {
-    let t = u.A.getGuildId(),
-        n = u.A.getChannelId(),
+async function w(e) {
+    let t = d.A.getGuildId(),
+        n = d.A.getChannelId(),
         i = a.A.getChannel(n);
     if (null == t || null == i) return;
-    let { x: l, y: d } = await c.Ay.invoke("GET_MOUSE_COORDINATES");
+    let { x: l, y: u } = await c.Ay.invoke("GET_MOUSE_COORDINATES");
     (0, o.open)(
         g.MLl.SOUNDBOARD,
         (n) =>
@@ -43,32 +43,32 @@ async function x(e) {
                 windowKey: n,
                 withTitleBar: !1,
                 title: m.intl.string(m.t["IiA///"]),
-                onBlur: w,
+                onBlur: x,
                 children: (0, r.jsx)(h.A, {
                     guildId: t,
                     channel: i,
                     width: y,
                     height: v,
                     keepOpen: e,
-                    onClose: w,
+                    onClose: x,
                     analyticsSource: "global",
                 }),
             }),
-        { ...p, left: l - p.width / 2, top: d - p.height / 2 },
+        { ...p, left: l - p.width / 2, top: u - p.height / 2 },
     );
 }
-function w() {
+function x() {
     (0, o.close)(g.MLl.SOUNDBOARD);
 }
 function E(e, t) {
     let n = l.A.isOverlayV3EnabledForPID(t),
-        r = d.default.disableClickableRegions;
+        r = u.default.disableClickableRegions;
     (n || r || i.h.dispatch({ type: "OVERLAY_SET_INPUT_LOCKED", locked: !1, pid: t }),
         i.h.dispatch({ type: "SOUNDBOARD_SET_OVERLAY_ENABLED", pid: t, enabled: !0, keepOpen: e }));
 }
-function C(e) {
+function b(e) {
     i.h.dispatch({ type: "SOUNDBOARD_SET_OVERLAY_ENABLED", pid: e, enabled: !1 });
     let t = l.A.isOverlayV3EnabledForPID(e),
-        n = d.default.disableClickableRegions;
-    d.default.isLocked(e) || t || n || i.h.dispatch({ type: "OVERLAY_SET_INPUT_LOCKED", locked: !0, pid: e });
+        n = u.default.disableClickableRegions;
+    u.default.isLocked(e) || t || n || i.h.dispatch({ type: "OVERLAY_SET_INPUT_LOCKED", locked: !0, pid: e });
 }

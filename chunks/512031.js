@@ -1,4 +1,4 @@
-n.d(t, { $S: () => u, p4: () => c, wE: () => h });
+n.d(t, { $S: () => u, p4: () => c, wE: () => x });
 var i = n(136722),
     l = n(374994),
     s = n(488926),
@@ -23,7 +23,7 @@ let g = i.kg(
         a.xBc.PRIORITY_SPEAKER,
         a.xBc.MODERATE_MEMBERS,
     ),
-    x = i.kg(
+    h = i.kg(
         g,
         a.xBc.MANAGE_CHANNELS,
         a.xBc.MANAGE_THREADS,
@@ -33,13 +33,13 @@ let g = i.kg(
         a.xBc.MANAGE_WEBHOOKS,
         a.xBc.SEND_TTS_MESSAGES,
     );
-(i.WQ(x, a.xBc.VIEW_GUILD_ANALYTICS),
+(i.WQ(h, a.xBc.VIEW_GUILD_ANALYTICS),
     (0, l.dE)("BRAND_500"),
     s.x3,
     (0, l.dE)("GREEN_360"),
     (0, l.dE)("YELLOW_300"),
     (0, l.dE)("RED_400"));
-let h = [
+let x = [
     {
         id: r.y.SOLID,
         colors: { primary_color: a.TGz, secondary_color: null, tertiary_color: null },

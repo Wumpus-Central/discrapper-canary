@@ -5,8 +5,8 @@ n.d(t, {
     I6: () => T,
     IO: () => R,
     JC: () => H,
-    K$: () => b,
-    Ki: () => v,
+    K$: () => v,
+    Ki: () => b,
     Ov: () => m,
     TP: () => h,
     X3: () => $,
@@ -111,8 +111,8 @@ let O = N([r.n.PLAY_ON_XBOX, r.n.PLAY_ON_PLAYSTATION]),
         r.n.PLAY_ON_XBOX,
         r.n.ACHIEVEMENT_IN_GAME,
     ]),
-    v = N([r.n.ACHIEVEMENT_IN_ACTIVITY, r.n.PLAY_ACTIVITY]);
-function b(e) {
+    b = N([r.n.ACHIEVEMENT_IN_ACTIVITY, r.n.PLAY_ACTIVITY]);
+function v(e) {
     return L(e) && !R(e);
 }
 function P(e) {

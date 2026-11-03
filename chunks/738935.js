@@ -31,8 +31,8 @@ let I = "default",
     L = null,
     y = new Set(),
     D = !1,
-    v = new Set(),
-    b = new Map(),
+    b = new Set(),
+    v = new Map(),
     P = new Map(),
     M = new Map(),
     U = [],
@@ -84,7 +84,7 @@ function B(e, t) {
     let n = !1;
     for (let i of e)
         for (let e of t)
-            null != (0, A.hL)(i, e) && (b.set(i.attachmentId, [...(b.get(i.attachmentId) ?? []), e]), (n = !0));
+            null != (0, A.hL)(i, e) && (v.set(i.attachmentId, [...(v.get(i.attachmentId) ?? []), e]), (n = !0));
     return n;
 }
 function V(e) {
@@ -104,7 +104,7 @@ function V(e) {
             let { message_reference: t } = e;
             if (t?.message_id != null && (null == t.type || t.type === h.SH7.DEFAULT)) return t.message_id;
         })(e),
-        a = !(null == r || e.author?.id !== o.default.getId() || v.has(r)) && (v.add(r), !0),
+        a = !(null == r || e.author?.id !== o.default.getId() || b.has(r)) && (b.add(r), !0),
         s = !1;
     return (
         null != r && ((s = B(P.get(r) ?? [], n)), M.set(r, [...(M.get(r) ?? []), ...n])),
@@ -300,10 +300,10 @@ class H extends r.Ay.DeviceSettingsStore {
         return D;
     }
     hasRepliedWithClip(e) {
-        return v.has(e);
+        return b.has(e);
     }
     getMatchingPOVReferences(e) {
-        return b.get(e) ?? U;
+        return v.get(e) ?? U;
     }
 }
 let j = new H(a.h, {
@@ -505,7 +505,7 @@ let j = new H(a.h, {
             return t;
         },
         LOGOUT: function () {
-            (v.clear(), b.clear(), P.clear(), M.clear(), (C = null), (O = null), (N = null), (R = {}));
+            (b.clear(), v.clear(), P.clear(), M.clear(), (C = null), (O = null), (N = null), (R = {}));
         },
     }),
     W = j;

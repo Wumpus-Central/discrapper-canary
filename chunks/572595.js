@@ -17,9 +17,9 @@ let u = "collectibles shop product details modal",
             tab: v,
             giftRecipient: p,
             giftingOrigin: g,
-            cardId: x,
-            sessionId: m,
-            tilePosition: A,
+            cardId: m,
+            sessionId: A,
+            tilePosition: x,
         } = e;
         if (t.isCategoryReward) {
             let { isPurchased: e } = (0, l.o)(a.A, t);
@@ -443,7 +443,7 @@ let u = "collectibles shop product details modal",
                 ]).then(n.bind(n, 610421));
                 return (n) =>
                     (0, r.jsx)(s.R9, {
-                        newValue: { cardId: x, sessionId: m, tilePosition: A },
+                        newValue: { cardId: m, sessionId: A, tilePosition: x },
                         children: (0, r.jsx)(e, {
                             ...n,
                             product: t,

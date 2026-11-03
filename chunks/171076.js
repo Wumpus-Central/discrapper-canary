@@ -455,12 +455,12 @@ function D(e) {
     }, 1e3);
     O.set(t, s);
 }
-async function v(e) {
+async function b(e) {
     let t = await y();
     if (!(null == t || T.A.isInputLocked(m.A.getTargetPID())))
         for (let n of t.getNotificationsForChannel(e, g.zb.TEXT)) i.A.updateNotificationStatus(n.id, N.yFH.DISMISSED);
 }
-function b() {
+function v() {
     !(function () {
         if (!p.default.isAnyOverlayRendering()) return;
         let e = A.A.getSelectedChannelId();
@@ -477,7 +477,7 @@ function P(e) {
     let i = o.A.getChannel(t);
     if (null == i) return;
     let r = _.default.getCurrentUser()?.id;
-    if ((null != r && n.author?.id === r && v(t), A.A.isChannelTracked(t))) return;
+    if ((null != r && n.author?.id === r && b(t), A.A.isChannelTracked(t))) return;
     if (i.isPrivate()) {
         if (u.Ay.isChannelMuted(null, t)) return;
     } else if (u.Ay.isChannelMuted(i.getGuildId(), t) || !(0, s.lx)(n, t, !0)) return;
@@ -496,7 +496,7 @@ function M(e) {
 }
 function U(e) {
     let { channelId: t, guildId: n, messageId: i, source: r } = e;
-    (r !== h.B9.AUTOMATIC_CHANNEL_SELECT && ((L = !0), v(t)), D({ channelId: t, guildId: n, messageId: i }));
+    (r !== h.B9.AUTOMATIC_CHANNEL_SELECT && ((L = !0), b(t)), D({ channelId: t, guildId: n, messageId: i }));
 }
 function w(e) {
     let { channelId: t } = e,
@@ -548,15 +548,15 @@ async function B(e) {
     if (null != n && t.hasNotificationForChannel(n)) return;
     let r = null,
         a = t.getMostRecentNotificationChannelId();
-    (null != a ? (r = a) : L || (r = c.Ay.getChannelId() ?? null), null != r && (k(r), v(r)));
+    (null != a ? (r = a) : L || (r = c.Ay.getChannelId() ?? null), null != r && (k(r), b(r)));
 }
 class V extends r.A {
     actions = {
         CHANNEL_SELECT: C(F),
         SIDEBAR_VIEW_CHANNEL: C(F),
         MESSAGE_CREATE: C(P),
-        VOICE_STATE_UPDATES: C(b),
-        VOICE_CHANNEL_SELECT: C(b),
+        VOICE_STATE_UPDATES: C(v),
+        VOICE_CHANNEL_SELECT: C(v),
         OVERLAY_SET_INPUT_LOCKED: C(B),
         OVERLAY_TEXT_CHAT_ADD_OR_UPDATE_CHANNEL: C(M),
         OVERLAY_TEXT_CHAT_SELECT_CHANNEL: C(U),

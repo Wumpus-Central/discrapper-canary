@@ -1,4 +1,4 @@
-a.d(l, { Ay: () => u, XP: () => p, aL: () => b, dR: () => h, nh: () => c, s2: () => v });
+a.d(l, { Ay: () => u, XP: () => p, aL: () => b, dR: () => h, nh: () => c, s2: () => x });
 var t = a(582128),
     o = a(17928),
     n = a(506774),
@@ -20,14 +20,14 @@ function c(e) {
     d.setConfig(e);
 }
 function b() {
-    (d.setConfig(null), v(!1));
+    (d.setConfig(null), x(!1));
 }
 function p() {
     return (0, o.bG)([d], () => d.getConfig());
 }
 let m = new Set(),
-    x = !1;
-function y(e) {
+    y = !1;
+function v(e) {
     return (
         m.add(e),
         () => {
@@ -35,9 +35,9 @@ function y(e) {
         }
     );
 }
-function v(e) {
-    if (e !== x) for (let l of ((x = e), m)) l();
+function x(e) {
+    if (e !== y) for (let l of ((y = e), m)) l();
 }
 function h() {
-    return t.useSyncExternalStore(y, () => x);
+    return t.useSyncExternalStore(v, () => y);
 }

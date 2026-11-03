@@ -14,8 +14,8 @@ var a = n(477900),
     p = n(531685),
     E = n(486020),
     h = n(837529),
-    x = n(686189),
-    b = n(714719),
+    b = n(686189),
+    x = n(714719),
     A = n(859161),
     _ = n(207634),
     N = n(565890);
@@ -29,8 +29,8 @@ function R(e) {
             className: v,
             avatarSize: j,
             avatarOffsetX: I,
-            avatarOffsetY: T,
-            bannerWidth: y,
+            avatarOffsetY: y,
+            bannerWidth: T,
             bannerHeight: C,
             themePadding: S,
             pendingAccentColor: D,
@@ -40,10 +40,10 @@ function R(e) {
         U = (0, o.bG)([p.A], () => p.A.isFocused()),
         B = g.kt.getSetting(),
         G = (0, h.Nx)(),
-        { bannerSrc: w, status: k } = (0, x.A)({
+        { bannerSrc: w, status: k } = (0, b.A)({
             displayProfile: n,
             pendingBanner: _,
-            size: y,
+            size: T,
             canAnimate: M || !B ? O : U,
         }),
         L = G ? null : (w ?? null),
@@ -51,8 +51,8 @@ function R(e) {
         V = t.getAvatarURL(r, (0, u.FT)(j)),
         $ = (0, i.LX)((0, f.Ay)(V, H, !1)),
         F = (0, m.A)(D ?? n?.primaryColor ?? $).hex,
-        z = { align: "start", insetStart: I - S, insetBottom: T + S, radius: (0, A.A)(j) };
-    return (0, a.jsx)(b.A, {
+        z = { align: "start", insetStart: I - S, insetBottom: y + S, radius: (0, A.A)(j) };
+    return (0, a.jsx)(x.A, {
         fillClassName: s()(N.v, v),
         bannerSrc: L,
         backgroundColor: "COMPLETE" === k || G ? F : d.A.unsafe_rawColors.PRIMARY_800.css,

@@ -75,8 +75,8 @@ function S(e) {
             look: L,
             size: y,
             buttonText: D,
-            color: v,
-            ...b
+            color: b,
+            ...v
         } = e,
         P = (0, A.Us)(),
         { parentAnalyticsLocation: M } = (0, _.Ay)(),
@@ -98,7 +98,7 @@ function S(e) {
               look: L,
               size: y,
               buttonText: D,
-              color: v ?? void 0,
+              color: b ?? void 0,
           })
         : null != w && null != r && I.A.can(m.xBc.CREATE_INSTANT_INVITE, r)
           ? (0, i.jsx)(p.A, {
@@ -123,9 +123,9 @@ function S(e) {
                 iconClassName: R,
                 look: L,
                 size: y,
-                color: v,
+                color: b,
                 buttonText: D,
-                ...b,
+                ...v,
             })
           : null;
 }

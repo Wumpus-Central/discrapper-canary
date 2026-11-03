@@ -24,8 +24,8 @@ let o = function (e) {
         v = x ?? C,
         N = null != p ? j : void 0,
         [A, I] = r.useState(void 0),
-        [E, y] = r.useState(void 0),
-        S = void 0 !== E;
+        [y, E] = r.useState(void 0),
+        S = void 0 !== y;
     return (0, l.jsx)("div", {
         ref: f,
         className: o ?? void 0,
@@ -37,8 +37,8 @@ let o = function (e) {
             error: p ?? void 0,
             isFocused: A,
             setIsFocused: I,
-            hasValue: E,
-            setHasValue: y,
+            hasValue: y,
+            setHasValue: E,
             children: (0, l.jsxs)("div", {
                 className: S ? s.G : void 0,
                 children: [

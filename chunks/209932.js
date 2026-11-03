@@ -26,7 +26,7 @@ let g = new Map(),
     L = new Set(),
     y = new Map(),
     D = Date.UTC(2026, 5, 29),
-    v = new d.A({
+    b = new d.A({
         computeBonus: () => 100,
         computeWeight: (e) => {
             if (e > s()().diff(D, "days")) return 0;
@@ -39,7 +39,7 @@ let g = new Map(),
         lookupKey: (e) => e,
         afterCompute: () => {},
     }),
-    b = [],
+    v = [],
     P = !1,
     M = !1;
 function U(e) {
@@ -123,7 +123,7 @@ class F extends l.Ay.Store {
         return L;
     }
     getFrequentlyUsedSoundIds() {
-        return v.frequently;
+        return b.frequently;
     }
     getTopSoundboardSoundsMetadata(e) {
         return S.get(e);
@@ -135,10 +135,10 @@ class F extends l.Ay.Store {
         return t?.soundIds ?? n ?? p.xL;
     }
     hasPendingUsage() {
-        return b.length > 0;
+        return v.length > 0;
     }
     get playedSoundFrecencyWithoutFetchingLatest() {
-        return v;
+        return b;
     }
     isLocalSoundboardMuted(e) {
         return C.has(e);
@@ -166,8 +166,8 @@ let B = new F(o.h, {
             (R = 0),
             (O = 0),
             (M = !1),
-            (b = []),
-            v.overwriteHistory({}));
+            (v = []),
+            b.overwriteHistory({}));
     },
     GUILD_SOUNDBOARD_FETCH: function () {
         R = 1;
@@ -203,7 +203,7 @@ let B = new F(o.h, {
     },
     SOUNDBOARD_TRACK_USAGE: function (e) {
         let { soundId: t } = e;
-        (v.track(t), b.push({ key: t, timestamp: Date.now() }), v.compute());
+        (b.track(t), v.push({ key: t, timestamp: Date.now() }), b.compute());
     },
     VOICE_CHANNEL_SELECT: function () {
         (N.clear(), y.clear());
@@ -214,14 +214,14 @@ let B = new F(o.h, {
         switch (i) {
             case T.oD.FRECENCY_AND_FAVORITES_SETTINGS:
                 ((L = new Set(a?.favoriteSoundboardSounds?.soundIds ?? [])),
-                    n && (b = []),
+                    n && (v = []),
                     a?.playedSoundFrecency != null &&
-                        v.overwriteHistory(
+                        b.overwriteHistory(
                             r().mapValues(a.playedSoundFrecency.playedSounds ?? {}, (e) => ({
                                 ...e,
                                 recentUses: e.recentUses.map(Number).filter((e) => e > 0),
                             })),
-                            b,
+                            v,
                         ));
                 break;
             case T.oD.PRELOADED_USER_SETTINGS:

@@ -2,7 +2,7 @@
     Do: () => m,
     F1: () => F,
     Q8: () => O,
-    Qn: () => b,
+    Qn: () => v,
     TL: () => d,
     Zc: () => L,
     aw: () => u,
@@ -32,7 +32,7 @@ class c extends l.G {
             { no: 5, name: "favorite_emojis", kind: "message", T: () => g },
             { no: 6, name: "emoji_frecency", kind: "message", T: () => O },
             { no: 7, name: "application_command_frecency", kind: "message", T: () => L },
-            { no: 8, name: "favorite_soundboard_sounds", kind: "message", T: () => b },
+            { no: 8, name: "favorite_soundboard_sounds", kind: "message", T: () => v },
             { no: 9, name: "application_frecency", kind: "message", T: () => x },
             { no: 10, name: "heard_sound_frecency", kind: "message", T: () => M },
             { no: 11, name: "played_sound_frecency", kind: "message", T: () => w },
@@ -77,7 +77,7 @@ class c extends l.G {
                     a.applicationCommandFrecency = L.internalBinaryRead(e, e.uint32(), n, a.applicationCommandFrecency);
                     break;
                 case 8:
-                    a.favoriteSoundboardSounds = b.internalBinaryRead(e, e.uint32(), n, a.favoriteSoundboardSounds);
+                    a.favoriteSoundboardSounds = v.internalBinaryRead(e, e.uint32(), n, a.favoriteSoundboardSounds);
                     break;
                 case 9:
                     a.applicationFrecency = x.internalBinaryRead(e, e.uint32(), n, a.applicationFrecency);
@@ -120,7 +120,7 @@ class c extends l.G {
             e.applicationCommandFrecency &&
                 L.internalBinaryWrite(e.applicationCommandFrecency, t.tag(7, r.O0.LengthDelimited).fork(), n).join(),
             e.favoriteSoundboardSounds &&
-                b.internalBinaryWrite(e.favoriteSoundboardSounds, t.tag(8, r.O0.LengthDelimited).fork(), n).join(),
+                v.internalBinaryWrite(e.favoriteSoundboardSounds, t.tag(8, r.O0.LengthDelimited).fork(), n).join(),
             e.applicationFrecency &&
                 x.internalBinaryWrite(e.applicationFrecency, t.tag(9, r.O0.LengthDelimited).fork(), n).join(),
             e.heardSoundFrecency &&
@@ -643,7 +643,7 @@ class y extends l.G {
     }
 }
 let D = new y();
-class v extends l.G {
+class b extends l.G {
     constructor() {
         super("discord_protos.discord_users.v1.FavoriteSoundboardSounds", [
             { no: 1, name: "sound_ids", kind: "scalar", repeat: 1, T: 6 },
@@ -699,7 +699,7 @@ class v extends l.G {
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let b = new v();
+let v = new b();
 class P extends l.G {
     constructor() {
         super("discord_protos.discord_users.v1.HeardSoundFrecency", [

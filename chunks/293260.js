@@ -1,26 +1,26 @@
-a.d(e, { Ay: () => g, CB: () => u, c0: () => v });
-var t = a(477900);
-a(582128);
-var n = a(17928),
-    s = a(231723),
-    i = a(192308);
-if (221552 == a.j) var c = a(477782);
-if (221552 == a.j) var r = a(173936);
-var d = a(317525),
-    o = a(370480),
-    h = a(105292);
+e.d(a, { Ay: () => g, CB: () => u, c0: () => v });
+var t = e(477900);
+e(582128);
+var n = e(17928),
+    s = e(231723),
+    i = e(192308);
+if (221552 == e.j) var c = e(477782);
+if (221552 == e.j) var r = e(173936);
+var d = e(317525),
+    o = e(370480),
+    h = e(105292);
 let u = "guild-connection-roles";
 function v(l) {
     (0, i.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([
-                a.e("587882"),
-                a.e("727797"),
-                a.e("24922"),
-                a.e("150200"),
-                a.e("292837"),
-            ]).then(a.bind(a, 480900));
-            return (a) => (0, t.jsx)(e, { ...a, guildId: l });
+            let { default: a } = await Promise.all([
+                e.e("587882"),
+                e.e("727797"),
+                e.e("24922"),
+                e.e("150200"),
+                e.e("292837"),
+            ]).then(e.bind(e, 480900));
+            return (e) => (0, t.jsx)(a, { ...e, guildId: l });
         },
         {
             modalKey: u,

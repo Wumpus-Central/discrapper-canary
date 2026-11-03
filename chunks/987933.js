@@ -6,8 +6,8 @@ var i = t(477900),
     r = t(7807),
     o = t(131607),
     c = t(246356),
-    u = t(49999),
-    d = t(105292),
+    d = t(49999),
+    u = t(105292),
     A = t(401191);
 function h(e) {
     let { targetElementRef: n, openSoundboardPicker: t, shouldShowSoundboardPicker: h } = e,
@@ -16,16 +16,16 @@ function h(e) {
             () => [
                 {
                     icon: r.J,
-                    text: d.intl.string(d.t["6EJvHt"]),
+                    text: u.intl.string(u.t["6EJvHt"]),
                     onClick: () => {
-                        (t(), g(u.i.TAKE_ACTION));
+                        (t(), g(d.i.TAKE_ACTION));
                     },
                 },
             ],
             [g, t],
         );
     return (l.useEffect(() => {
-        h && m === s.M.SOUNDBOARD_DESKTOP_NUX && g(u.i.INDIRECT_ACTION);
+        h && m === s.M.SOUNDBOARD_DESKTOP_NUX && g(d.i.INDIRECT_ACTION);
     }, [g, h, m]),
     m !== s.M.SOUNDBOARD_DESKTOP_NUX)
         ? null
@@ -33,12 +33,12 @@ function h(e) {
               children: (0, i.jsx)(a.A, {
                   targetElementRef: n,
                   graphic: { type: "image", src: A.A },
-                  title: d.intl.string(d.t.UaGc2V),
-                  body: d.intl.string(d.t.lyhz2x),
+                  title: u.intl.string(u.t.UaGc2V),
+                  body: u.intl.string(u.t.lyhz2x),
                   position: "top",
                   gradientColor: "pink",
                   actions: x,
-                  onRequestClose: () => g(u.i.DISMISS),
+                  onRequestClose: () => g(d.i.DISMISS),
               }),
           });
 }

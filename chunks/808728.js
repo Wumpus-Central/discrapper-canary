@@ -26,8 +26,8 @@ let N = "SELECTABLE",
     L = {},
     y = {},
     D = null,
-    v = {},
-    b = {
+    b = {},
+    v = {
         comparator: -1,
         channel: (0, E.createChannelRecord)({ id: S._Ee, type: S.rbe.GUILD_CATEGORY, name: "Uncategorized" }),
     },
@@ -35,7 +35,7 @@ let N = "SELECTABLE",
     M = [],
     U = {};
 function w(e) {
-    return { id: e, [N]: [], [C]: [], [S.rbe.GUILD_CATEGORY]: [b], count: 0 };
+    return { id: e, [N]: [], [C]: [], [S.rbe.GUILD_CATEGORY]: [v], count: 0 };
 }
 function G(e, t) {
     let { comparator: n } = e,
@@ -43,7 +43,7 @@ function G(e, t) {
     return n - i;
 }
 function x() {
-    ((R = {}), (v = {}), (L = {}), (y = {}), null != O && k(O));
+    ((R = {}), (b = {}), (L = {}), (y = {}), null != O && k(O));
 }
 function k(e) {
     var t, n;
@@ -52,7 +52,7 @@ function k(e) {
         s = w(e);
     return (
         (R[e] = s),
-        (v[e] = []),
+        (b[e] = []),
         !(function (e) {
             let { id: t } = e,
                 n = (function (e) {
@@ -86,7 +86,7 @@ function k(e) {
                 )
                     return;
                 let a = ((i = r.type), (0, E.tr)(i) ? N : (0, E.ay)(i) ? C : i);
-                (r.type === S.rbe.GUILD_DIRECTORY && (null == v[t] && (v[t] = []), v[t].push(n)),
+                (r.type === S.rbe.GUILD_DIRECTORY && (null == b[t] && (b[t] = []), b[t].push(n)),
                     null != e[a] && e[a].push(n));
             });
         })(s),
@@ -193,7 +193,7 @@ class Y extends s.Ay.Store {
     }
     getDirectoryChannelIds(e) {
         return (
-            v[e]?.map((e) => {
+            b[e]?.map((e) => {
                 let { channel: t } = e;
                 return t.id;
             }) ?? M
@@ -231,7 +231,7 @@ let K = new Y(l.h, {
         let {
             guild: { id: t },
         } = e;
-        return (delete R[t], delete L[t], delete y[t], delete v[t], !0);
+        return (delete R[t], delete L[t], delete y[t], delete b[t], !0);
     },
     GUILD_MEMBER_UPDATE: function (e) {
         let { guildId: t, user: n } = e;

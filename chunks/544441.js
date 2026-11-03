@@ -1,12 +1,12 @@
-n.d(e, { A: () => g });
-var l = n(582128),
-    i = n(202163),
-    a = n(989441),
-    r = n(802516),
-    s = n(49381),
-    o = n(778591),
-    c = n(853022),
-    u = n(105292);
+e.d(n, { A: () => g });
+var l = e(582128),
+    i = e(202163),
+    a = e(989441),
+    r = e(802516),
+    s = e(49381),
+    o = e(778591),
+    c = e(853022),
+    u = e(105292);
 let d = {
         [a.D.XBOX_GAME_PASS]: {
             distributor: a.D.XBOX_GAME_PASS,
@@ -28,19 +28,19 @@ let d = {
     A = [a.D.XBOX_GAME_PASS, a.D.STEAM],
     f = [];
 function g(t) {
-    let { gameRecord: e } = (0, i.Ay)(t);
+    let { gameRecord: n } = (0, i.Ay)(t);
     return (0, l.useMemo)(() => {
-        if (null == e) return f;
+        if (null == n) return f;
         let t = new Set(A),
-            n = new Map();
-        for (let l of e.thirdPartySkus) {
-            let e = l.distributor;
-            null != l.id && t.has(e) && !n.has(e) && n.set(e, l.id);
+            e = new Map();
+        for (let l of n.thirdPartySkus) {
+            let n = l.distributor;
+            null != l.id && t.has(n) && !e.has(n) && e.set(n, l.id);
         }
         return A.flatMap((t) => {
-            let e = n.get(t),
+            let n = e.get(t),
                 l = d[t];
-            return null == e || null == l ? [] : [{ ctaConfig: l, skuId: e }];
+            return null == n || null == l ? [] : [{ ctaConfig: l, skuId: n }];
         });
-    }, [e]);
+    }, [n]);
 }

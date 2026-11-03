@@ -4,7 +4,7 @@
     DQ: () => V,
     E: () => eY,
     F1: () => eX,
-    GY: () => eb,
+    GY: () => ev,
     Ip: () => en,
     Ju: () => em,
     KJ: () => eu,
@@ -73,8 +73,8 @@ var i,
     L,
     y = n(852015),
     D = n(144367),
-    v = n(428420),
-    b = n(535384),
+    b = n(428420),
+    v = n(535384),
     P = n(406935),
     M = n(335871),
     U = n(813827),
@@ -241,14 +241,14 @@ var i,
         (L[(L.SEARCH_RESULTS = 8)] = "SEARCH_RESULTS"),
         (L[(L.CONJURE = 10)] = "CONJURE"),
         L);
-class es extends b.G {
+class es extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.PreloadedUserSettings", [
             { no: 1, name: "versions", kind: "message", T: () => U.u },
             { no: 2, name: "inbox", kind: "message", T: () => ed },
             { no: 3, name: "guilds", kind: "message", T: () => eu },
             { no: 4, name: "user_content", kind: "message", T: () => eO },
-            { no: 5, name: "voice_and_video", kind: "message", T: () => eb },
+            { no: 5, name: "voice_and_video", kind: "message", T: () => ev },
             { no: 6, name: "text_and_images", kind: "message", T: () => eV },
             { no: 7, name: "notifications", kind: "message", T: () => ej },
             { no: 8, name: "privacy", kind: "message", T: () => eY },
@@ -265,7 +265,7 @@ class es extends b.G {
             { no: 19, name: "clips", kind: "message", T: () => tg },
             { no: 20, name: "for_later", kind: "message", T: () => tD },
             { no: 21, name: "safety_settings", kind: "message", T: () => tL },
-            { no: 22, name: "icymi_settings", kind: "message", T: () => tb },
+            { no: 22, name: "icymi_settings", kind: "message", T: () => tv },
             { no: 23, name: "applications", kind: "message", T: () => tM },
             { no: 24, name: "ads", kind: "message", T: () => tV },
             { no: 25, name: "in_app_feedback_settings", kind: "message", T: () => t$ },
@@ -276,7 +276,7 @@ class es extends b.G {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -300,7 +300,7 @@ class es extends b.G {
                     r.userContent = eO.internalBinaryRead(e, e.uint32(), n, r.userContent);
                     break;
                 case 5:
-                    r.voiceAndVideo = eb.internalBinaryRead(e, e.uint32(), n, r.voiceAndVideo);
+                    r.voiceAndVideo = ev.internalBinaryRead(e, e.uint32(), n, r.voiceAndVideo);
                     break;
                 case 6:
                     r.textAndImages = eV.internalBinaryRead(e, e.uint32(), n, r.textAndImages);
@@ -351,7 +351,7 @@ class es extends b.G {
                     r.safetySettings = tL.internalBinaryRead(e, e.uint32(), n, r.safetySettings);
                     break;
                 case 22:
-                    r.icymiSettings = tb.internalBinaryRead(e, e.uint32(), n, r.icymiSettings);
+                    r.icymiSettings = tv.internalBinaryRead(e, e.uint32(), n, r.icymiSettings);
                     break;
                 case 23:
                     r.applications = tM.internalBinaryRead(e, e.uint32(), n, r.applications);
@@ -383,7 +383,7 @@ class es extends b.G {
             e.inbox && ed.internalBinaryWrite(e.inbox, t.tag(2, y.O0.LengthDelimited).fork(), n).join(),
             e.guilds && eu.internalBinaryWrite(e.guilds, t.tag(3, y.O0.LengthDelimited).fork(), n).join(),
             e.userContent && eO.internalBinaryWrite(e.userContent, t.tag(4, y.O0.LengthDelimited).fork(), n).join(),
-            e.voiceAndVideo && eb.internalBinaryWrite(e.voiceAndVideo, t.tag(5, y.O0.LengthDelimited).fork(), n).join(),
+            e.voiceAndVideo && ev.internalBinaryWrite(e.voiceAndVideo, t.tag(5, y.O0.LengthDelimited).fork(), n).join(),
             e.textAndImages && eV.internalBinaryWrite(e.textAndImages, t.tag(6, y.O0.LengthDelimited).fork(), n).join(),
             e.notifications && ej.internalBinaryWrite(e.notifications, t.tag(7, y.O0.LengthDelimited).fork(), n).join(),
             e.privacy && eY.internalBinaryWrite(e.privacy, t.tag(8, y.O0.LengthDelimited).fork(), n).join(),
@@ -403,7 +403,7 @@ class es extends b.G {
             e.safetySettings &&
                 tL.internalBinaryWrite(e.safetySettings, t.tag(21, y.O0.LengthDelimited).fork(), n).join(),
             e.icymiSettings &&
-                tb.internalBinaryWrite(e.icymiSettings, t.tag(22, y.O0.LengthDelimited).fork(), n).join(),
+                tv.internalBinaryWrite(e.icymiSettings, t.tag(22, y.O0.LengthDelimited).fork(), n).join(),
             e.applications && tM.internalBinaryWrite(e.applications, t.tag(23, y.O0.LengthDelimited).fork(), n).join(),
             e.ads && tV.internalBinaryWrite(e.ads, t.tag(24, y.O0.LengthDelimited).fork(), n).join(),
             e.inAppFeedbackSettings &&
@@ -416,7 +416,7 @@ class es extends b.G {
     }
 }
 let el = new es();
-class eo extends b.G {
+class eo extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.InboxSettings", [
             {
@@ -431,7 +431,7 @@ class eo extends b.G {
     create(e) {
         let t = { currentTab: 0, viewedTutorial: !1 };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -466,7 +466,7 @@ class eo extends b.G {
     }
 }
 let ed = new eo();
-class ec extends b.G {
+class ec extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.AllGuildSettings", [
             { no: 1, name: "guilds", kind: "map", K: 6, V: { kind: "message", T: () => eh } },
@@ -475,7 +475,7 @@ class ec extends b.G {
     create(e) {
         let t = { guilds: {} };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -529,7 +529,7 @@ class ec extends b.G {
     }
 }
 let eu = new ec();
-class e_ extends b.G {
+class e_ extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.GuildDismissibleContentState", [
             { no: 1, name: "dismissed", kind: "scalar", T: 8 },
@@ -548,7 +548,7 @@ class e_ extends b.G {
             numTimesDismissed: 0,
         };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -595,7 +595,7 @@ class e_ extends b.G {
     }
 }
 let eE = new e_();
-class eA extends b.G {
+class eA extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.GuildSettings", [
             { no: 1, name: "channels", kind: "map", K: 6, V: { kind: "message", T: () => em } },
@@ -641,7 +641,7 @@ class eA extends b.G {
             guildThemeSourcePreference: 0,
         };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -787,7 +787,7 @@ class eA extends b.G {
     }
 }
 let eh = new eA();
-class ef extends b.G {
+class ef extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ChannelIconEmoji", [
             { no: 1, name: "id", kind: "message", T: () => P.ol },
@@ -798,7 +798,7 @@ class ef extends b.G {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -837,7 +837,7 @@ class ef extends b.G {
     }
 }
 let eI = new ef();
-class ep extends b.G {
+class ep extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ChannelSettings", [
             { no: 1, name: "collapsed_in_inbox", kind: "scalar", T: 8 },
@@ -848,7 +848,7 @@ class ep extends b.G {
     create(e) {
         let t = { collapsedInInbox: !1 };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -895,7 +895,7 @@ class ep extends b.G {
     }
 }
 let em = new ep();
-class eT extends b.G {
+class eT extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.CustomNotificationSoundConfig", [
             { no: 1, name: "notification_sound_pack_id", kind: "message", T: () => P.hU },
@@ -904,7 +904,7 @@ class eT extends b.G {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -934,7 +934,7 @@ class eT extends b.G {
     }
 }
 let eg = new eT();
-class eS extends b.G {
+class eS extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.RecurringDismissibleContentState", [
             { no: 1, name: "last_dismissed_version", kind: "scalar", T: 13 },
@@ -946,7 +946,7 @@ class eS extends b.G {
     create(e) {
         let t = { lastDismissedVersion: 0, lastDismissedAtMs: "0", lastDismissedObjectId: "0", numTimesDismissed: 0 };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -989,7 +989,7 @@ class eS extends b.G {
     }
 }
 let eN = new eS();
-class eC extends b.G {
+class eC extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.UserContentSettings", [
             { no: 1, name: "dismissed_contents", kind: "scalar", T: 12 },
@@ -1018,7 +1018,7 @@ class eC extends b.G {
             contextualReferralUpsellDismissalsVersion: "0",
         };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -1146,7 +1146,7 @@ class eC extends b.G {
     }
 }
 let eO = new eC();
-class eR extends b.G {
+class eR extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.VideoFilterAsset", [
             { no: 1, name: "id", kind: "scalar", T: 6 },
@@ -1156,7 +1156,7 @@ class eR extends b.G {
     create(e) {
         let t = { id: "0", assetHash: "" };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -1191,7 +1191,7 @@ class eR extends b.G {
     }
 }
 let eL = new eR();
-class ey extends b.G {
+class ey extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.VideoFilterBackgroundBlur", [
             { no: 1, name: "use_blur", kind: "scalar", T: 8 },
@@ -1200,7 +1200,7 @@ class ey extends b.G {
     create(e) {
         let t = { useBlur: !1 };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -1228,7 +1228,7 @@ class ey extends b.G {
     }
 }
 let eD = new ey();
-class ev extends b.G {
+class eb extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.VoiceAndVideoSettings", [
             { no: 1, name: "blur", kind: "message", oneof: "videoBackgroundFilterDesktop", T: () => eD },
@@ -1246,7 +1246,7 @@ class ev extends b.G {
     create(e) {
         let t = { videoBackgroundFilterDesktop: { oneofKind: void 0 } };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -1352,8 +1352,8 @@ class ev extends b.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eb = new ev();
-class eP extends b.G {
+let ev = new eb();
+class eP extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ExplicitContentSettings", [
             {
@@ -1379,7 +1379,7 @@ class eP extends b.G {
     create(e) {
         let t = { explicitContentGuilds: 0, explicitContentFriendDm: 0, explicitContentNonFriendDm: 0 };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -1418,7 +1418,7 @@ class eP extends b.G {
     }
 }
 let eM = new eP();
-class eU extends b.G {
+class eU extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.GoreContentSettings", [
             {
@@ -1444,7 +1444,7 @@ class eU extends b.G {
     create(e) {
         let t = { goreContentGuilds: 0, goreContentFriendDm: 0, goreContentNonFriendDm: 0 };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -1483,7 +1483,7 @@ class eU extends b.G {
     }
 }
 let ew = new eU();
-class eG extends b.G {
+class eG extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.SelfHarmContentSettings", [
             {
@@ -1509,7 +1509,7 @@ class eG extends b.G {
     create(e) {
         let t = { selfHarmContentGuilds: 0, selfHarmContentFriendDm: 0, selfHarmContentNonFriendDm: 0 };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -1548,7 +1548,7 @@ class eG extends b.G {
     }
 }
 let ex = new eG();
-class ek extends b.G {
+class ek extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.KeywordFilterSettings", [
             { no: 1, name: "profanity", kind: "message", T: () => P._t },
@@ -1559,7 +1559,7 @@ class ek extends b.G {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -1599,7 +1599,7 @@ class ek extends b.G {
     }
 }
 let eF = new ek();
-class eB extends b.G {
+class eB extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.TextAndImagesSettings", [
             { no: 1, name: "diversity_surrogate", kind: "message", T: () => P.hU },
@@ -1663,7 +1663,7 @@ class eB extends b.G {
             searchProvider: 0,
         };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -1921,7 +1921,7 @@ class eB extends b.G {
     }
 }
 let eV = new eB();
-class eH extends b.G {
+class eH extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.NotificationSettings", [
             { no: 1, name: "show_in_app_notifications", kind: "message", T: () => P._t },
@@ -1976,7 +1976,7 @@ class eH extends b.G {
             customStatusPushNotifications: 0,
         };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -2280,7 +2280,7 @@ class eH extends b.G {
     }
 }
 let ej = new eH();
-class eW extends b.G {
+class eW extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.PrivacySettings", [
             { no: 1, name: "allow_activity_party_privacy_friends", kind: "message", T: () => P._t },
@@ -2372,7 +2372,7 @@ class eW extends b.G {
             adTopicOptOuts: [],
         };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -2649,7 +2649,7 @@ class eW extends b.G {
     }
 }
 let eY = new eW();
-class eK extends b.G {
+class eK extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.DebugSettings", [
             { no: 1, name: "rtc_panel_show_voice_states", kind: "message", T: () => P._t },
@@ -2658,7 +2658,7 @@ class eK extends b.G {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -2688,7 +2688,7 @@ class eK extends b.G {
     }
 }
 let e$ = new eK();
-class ez extends b.G {
+class ez extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.GameLibrarySettings", [
             { no: 1, name: "install_shortcut_desktop", kind: "message", T: () => P._t },
@@ -2699,7 +2699,7 @@ class ez extends b.G {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -2741,7 +2741,7 @@ class ez extends b.G {
     }
 }
 let eX = new ez();
-class eq extends b.G {
+class eq extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.StatusSettings", [
             { no: 1, name: "status", kind: "message", T: () => P.hU },
@@ -2754,7 +2754,7 @@ class eq extends b.G {
     create(e) {
         let t = { statusExpiresAtMs: "0" };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -2803,7 +2803,7 @@ class eq extends b.G {
     }
 }
 let eZ = new eq();
-class eQ extends b.G {
+class eQ extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.CustomStatus", [
             { no: 1, name: "text", kind: "scalar", T: 9 },
@@ -2817,7 +2817,7 @@ class eQ extends b.G {
     create(e) {
         let t = { text: "", emojiId: "0", emojiName: "", expiresAtMs: "0", createdAtMs: "0" };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -2868,7 +2868,7 @@ class eQ extends b.G {
     }
 }
 let eJ = new eQ();
-class e0 extends b.G {
+class e0 extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.LocalizationSettings", [
             { no: 1, name: "locale", kind: "message", T: () => P.hU },
@@ -2879,7 +2879,7 @@ class e0 extends b.G {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -2920,7 +2920,7 @@ class e0 extends b.G {
     }
 }
 let e1 = new e0();
-class e2 extends b.G {
+class e2 extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ChannelListSettings", [
             { no: 1, name: "layout", kind: "message", T: () => P.hU },
@@ -2930,7 +2930,7 @@ class e2 extends b.G {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -2966,7 +2966,7 @@ class e2 extends b.G {
     }
 }
 let e3 = new e2();
-class e5 extends b.G {
+class e5 extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.AppearanceSettings", [
             { no: 1, name: "theme", kind: "enum", T: () => ["discord_protos.discord_users.v1.Theme", Z] },
@@ -3022,7 +3022,7 @@ class e5 extends b.G {
             darkSidebar: !1,
         };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -3122,7 +3122,7 @@ class e5 extends b.G {
     }
 }
 let e4 = new e5();
-class e6 extends b.G {
+class e6 extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.CustomUserThemeSettings", [
             { no: 1, name: "colors", kind: "scalar", repeat: 2, T: 9 },
@@ -3134,7 +3134,7 @@ class e6 extends b.G {
     create(e) {
         let t = { colors: [], gradientColorStops: [], gradientAngle: 0, baseMix: 0 };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -3183,7 +3183,7 @@ class e6 extends b.G {
     }
 }
 let e7 = new e6();
-class e8 extends b.G {
+class e8 extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ClientThemeSettings", [
             { no: 2, name: "background_gradient_preset_id", kind: "message", T: () => P.ZQ },
@@ -3193,7 +3193,7 @@ class e8 extends b.G {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -3235,7 +3235,7 @@ class e8 extends b.G {
     }
 }
 let e9 = new e8();
-class te extends b.G {
+class te extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.GuildFolders", [
             { no: 1, name: "folders", kind: "message", repeat: 1, T: () => ti },
@@ -3245,7 +3245,7 @@ class te extends b.G {
     create(e) {
         let t = { folders: [], guildPositions: [] };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -3287,7 +3287,7 @@ class te extends b.G {
     }
 }
 let tt = new te();
-class tn extends b.G {
+class tn extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.GuildFolder", [
             { no: 1, name: "guild_ids", kind: "scalar", repeat: 1, T: 6 },
@@ -3299,7 +3299,7 @@ class tn extends b.G {
     create(e) {
         let t = { guildIds: [] };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -3348,7 +3348,7 @@ class tn extends b.G {
     }
 }
 let ti = new tn();
-class tr extends b.G {
+class tr extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.Favorites", [
             { no: 1, name: "favorite_channels", kind: "map", K: 6, V: { kind: "message", T: () => tl } },
@@ -3360,7 +3360,7 @@ class tr extends b.G {
     create(e) {
         let t = { favoriteChannels: {}, muted: !1, autoAddJoinedThreads: !1 };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -3429,7 +3429,7 @@ class tr extends b.G {
     }
 }
 let ta = new tr();
-class ts extends b.G {
+class ts extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.FavoriteChannel", [
             { no: 1, name: "nickname", kind: "scalar", T: 9 },
@@ -3443,7 +3443,7 @@ class ts extends b.G {
     create(e) {
         let t = { nickname: "", type: 0, position: 0, parentId: "0", collapsed: !1 };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -3494,7 +3494,7 @@ class ts extends b.G {
     }
 }
 let tl = new ts();
-class to extends b.G {
+class to extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.AudioContextSetting", [
             { no: 1, name: "muted", kind: "scalar", T: 8 },
@@ -3506,7 +3506,7 @@ class to extends b.G {
     create(e) {
         let t = { muted: !1, volume: 0, modifiedAt: "0", soundboardMuted: !1 };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -3549,7 +3549,7 @@ class to extends b.G {
     }
 }
 let td = new to();
-class tc extends b.G {
+class tc extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.AudioSettings", [
             { no: 1, name: "user", kind: "map", K: 6, V: { kind: "message", T: () => td } },
@@ -3559,7 +3559,7 @@ class tc extends b.G {
     create(e) {
         let t = { user: {}, stream: {} };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -3646,7 +3646,7 @@ class tc extends b.G {
     }
 }
 let tu = new tc();
-class t_ extends b.G {
+class t_ extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.CommunitiesSettings", [
             { no: 1, name: "disable_home_auto_nav", kind: "message", T: () => P._t },
@@ -3655,7 +3655,7 @@ class t_ extends b.G {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -3684,14 +3684,14 @@ class t_ extends b.G {
     }
 }
 let tE = new t_();
-class tA extends b.G {
+class tA extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.SoundboardSettings", [{ no: 1, name: "volume", kind: "scalar", T: 2 }]);
     }
     create(e) {
         let t = { volume: 0 };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -3719,7 +3719,7 @@ class tA extends b.G {
     }
 }
 let th = new tA();
-class tf extends b.G {
+class tf extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.CustomCallSound", [
             { no: 1, name: "sound_id", kind: "scalar", T: 6 },
@@ -3729,7 +3729,7 @@ class tf extends b.G {
     create(e) {
         let t = { soundId: "0", guildId: "0" };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -3764,7 +3764,7 @@ class tf extends b.G {
     }
 }
 let tI = new tf();
-class tp extends b.G {
+class tp extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.BroadcastSettings", [
             { no: 1, name: "allow_friends", kind: "message", T: () => P._t },
@@ -3776,7 +3776,7 @@ class tp extends b.G {
     create(e) {
         let t = { allowedGuildIds: [], allowedUserIds: [] };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -3834,7 +3834,7 @@ class tp extends b.G {
     }
 }
 let tm = new tp();
-class tT extends b.G {
+class tT extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ClipsSettings", [
             { no: 1, name: "allow_voice_recording", kind: "message", T: () => P._t },
@@ -3843,7 +3843,7 @@ class tT extends b.G {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -3872,7 +3872,7 @@ class tT extends b.G {
     }
 }
 let tg = new tT();
-class tS extends b.G {
+class tS extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.SpendingLimit", [
             { no: 1, name: "amount", kind: "scalar", T: 4 },
@@ -3882,7 +3882,7 @@ class tS extends b.G {
     create(e) {
         let t = { amount: "0", currency: "" };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -3917,7 +3917,7 @@ class tS extends b.G {
     }
 }
 let tN = new tS();
-class tC extends b.G {
+class tC extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.SpendingLimitSettings", [
             { no: 1, name: "one_time_purchase_limit", kind: "message", T: () => tN },
@@ -3926,7 +3926,7 @@ class tC extends b.G {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -3955,7 +3955,7 @@ class tC extends b.G {
     }
 }
 let tO = new tC();
-class tR extends b.G {
+class tR extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.SafetySettings", [
             {
@@ -3971,7 +3971,7 @@ class tR extends b.G {
     create(e) {
         let t = { safetySettingsPreset: 0, ignoreProfileSpeedbumpDisabled: !1 };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -4011,7 +4011,7 @@ class tR extends b.G {
     }
 }
 let tL = new tR();
-class ty extends b.G {
+class ty extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ForLaterSettings", [
             {
@@ -4025,7 +4025,7 @@ class ty extends b.G {
     create(e) {
         let t = { currentTab: 0 };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -4053,7 +4053,7 @@ class ty extends b.G {
     }
 }
 let tD = new ty();
-class tv extends b.G {
+class tb extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ICYMISettings", [
             { no: 1, name: "feed_generated_at", kind: "scalar", T: 6 },
@@ -4062,7 +4062,7 @@ class tv extends b.G {
     create(e) {
         let t = { feedGeneratedAt: "0" };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -4089,8 +4089,8 @@ class tv extends b.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let tb = new tv();
-class tP extends b.G {
+let tv = new tb();
+class tP extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.AllApplicationSettings", [
             { no: 1, name: "app_settings", kind: "map", K: 6, V: { kind: "message", T: () => tw } },
@@ -4099,7 +4099,7 @@ class tP extends b.G {
     create(e) {
         let t = { appSettings: {} };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -4153,7 +4153,7 @@ class tP extends b.G {
     }
 }
 let tM = new tP();
-class tU extends b.G {
+class tU extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ApplicationSettings", [
             { no: 1, name: "app_dm_settings", kind: "message", T: () => tx },
@@ -4163,7 +4163,7 @@ class tU extends b.G {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -4199,7 +4199,7 @@ class tU extends b.G {
     }
 }
 let tw = new tU();
-class tG extends b.G {
+class tG extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ApplicationDMSettings", [
             { no: 2, name: "allow_mobile_push", kind: "scalar", T: 8 },
@@ -4208,7 +4208,7 @@ class tG extends b.G {
     create(e) {
         let t = { allowMobilePush: !1 };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -4236,7 +4236,7 @@ class tG extends b.G {
     }
 }
 let tx = new tG();
-class tk extends b.G {
+class tk extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ApplicationSharingSettings", [
             { no: 1, name: "disable_application_activity_sharing", kind: "scalar", T: 8 },
@@ -4245,7 +4245,7 @@ class tk extends b.G {
     create(e) {
         let t = { disableApplicationActivitySharing: !1 };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -4273,14 +4273,14 @@ class tk extends b.G {
     }
 }
 let tF = new tk();
-class tB extends b.G {
+class tB extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.AdsSettings", [{ no: 1, name: "always_deliver", kind: "scalar", T: 8 }]);
     }
     create(e) {
         let t = { alwaysDeliver: !1 };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -4308,7 +4308,7 @@ class tB extends b.G {
     }
 }
 let tV = new tB();
-class tH extends b.G {
+class tH extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.InAppFeedbackState", [
             { no: 1, name: "last_impression_time", kind: "message", T: () => P.ol },
@@ -4318,7 +4318,7 @@ class tH extends b.G {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -4355,7 +4355,7 @@ class tH extends b.G {
     }
 }
 let tj = new tH();
-class tW extends b.G {
+class tW extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.DefaultReactionEmoji", [
             { no: 1, name: "emoji_id", kind: "message", T: () => P.ol },
@@ -4367,7 +4367,7 @@ class tW extends b.G {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -4411,7 +4411,7 @@ class tW extends b.G {
     }
 }
 let tY = new tW();
-class tK extends b.G {
+class tK extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.InAppFeedbackSettings", [
             { no: 1, name: "in_app_feedback_states", kind: "map", K: 5, V: { kind: "message", T: () => tj } },
@@ -4420,7 +4420,7 @@ class tK extends b.G {
     create(e) {
         let t = { inAppFeedbackStates: {} };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -4474,7 +4474,7 @@ class tK extends b.G {
     }
 }
 let t$ = new tK();
-class tz extends b.G {
+class tz extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.AppVersionSettings", [
             { no: 1, name: "is_using_outdated_mobile_version", kind: "scalar", T: 8 },
@@ -4483,7 +4483,7 @@ class tz extends b.G {
     create(e) {
         let t = { isUsingOutdatedMobileVersion: !1 };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -4511,7 +4511,7 @@ class tz extends b.G {
     }
 }
 let tX = new tz();
-class tq extends b.G {
+class tq extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ConjureSettings", [
             { no: 1, name: "projects", kind: "map", K: 6, V: { kind: "message", T: () => tJ } },
@@ -4520,7 +4520,7 @@ class tq extends b.G {
     create(e) {
         let t = { projects: {} };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );
@@ -4574,7 +4574,7 @@ class tq extends b.G {
     }
 }
 let tZ = new tq();
-class tQ extends b.G {
+class tQ extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ConjureProjectSettings", [
             { no: 1, name: "muted", kind: "scalar", T: 8 },
@@ -4584,7 +4584,7 @@ class tQ extends b.G {
     create(e) {
         let t = { muted: !1, sidebarDismissedAt: "0" };
         return (
-            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
             t
         );

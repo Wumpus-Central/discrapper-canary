@@ -1,4 +1,4 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => b });
 var i = n(181370),
     r = n.n(i),
     a = n(17928),
@@ -354,7 +354,7 @@ var O = n(73153),
     L = n(280450),
     y = n(174459),
     D = n(652215);
-let v = new (class extends C {
+let b = new (class extends C {
     lastEmittedDebugVariantId;
     constructor() {
         (super(

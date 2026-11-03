@@ -21,11 +21,11 @@ var t,
     I = n(714114),
     S = n(394871),
     T = n(296948),
-    C = n(709066),
-    b = n(235986),
-    y = n(141504),
+    b = n(709066),
+    y = n(235986),
+    C = n(141504),
     E = (((t = E || {}).SINGLE_AVATAR = "1"), (t.MULTIPLE_AVATAR = "2"), t);
-let M = { [p._3.SIZE_32]: y.dT, [p._3.SIZE_40]: y.Jb };
+let M = { [p._3.SIZE_32]: C.dT, [p._3.SIZE_40]: C.Jb };
 class R extends i.Component {
     placeholderMaxWidth = `${Math.floor(40 * Math.random()) + 40}%`;
     static defaultProps = { type: "1" };
@@ -34,25 +34,25 @@ class R extends i.Component {
         let { type: e, avatarSize: l, className: n, childrenClassName: t, doNotAnimate: i } = this.props;
         return "2" === e
             ? (0, s.jsxs)("div", {
-                  className: r()(y.ce, y.jO, n),
+                  className: r()(C.ce, C.jO, n),
                   children: [
-                      (0, s.jsxs)(b.A, {
+                      (0, s.jsxs)(y.A, {
                           children: [
-                              (0, s.jsx)("div", { className: r()(y.RH, M[l], y.hC) }),
-                              (0, s.jsx)("div", { className: r()(y.RH, M[l], y.hC) }),
-                              (0, s.jsx)("div", { className: r()(y.RH, M[l]) }),
+                              (0, s.jsx)("div", { className: r()(C.RH, M[l], C.hC) }),
+                              (0, s.jsx)("div", { className: r()(C.RH, M[l], C.hC) }),
+                              (0, s.jsx)("div", { className: r()(C.RH, M[l]) }),
                           ],
                       }),
-                      (0, s.jsx)(b.A, { grow: 1, className: y.eC, style: { maxWidth: this.placeholderMaxWidth } }),
+                      (0, s.jsx)(y.A, { grow: 1, className: C.eC, style: { maxWidth: this.placeholderMaxWidth } }),
                   ],
               })
-            : (0, s.jsxs)(b.A, {
-                  className: r()(y.qf, !i && y.lN, n),
+            : (0, s.jsxs)(y.A, {
+                  className: r()(C.qf, !i && C.lN, n),
                   children: [
-                      (0, s.jsx)("div", { className: r()(y.RH, M[l], t) }),
-                      (0, s.jsx)(b.A, {
+                      (0, s.jsx)("div", { className: r()(C.RH, M[l], t) }),
+                      (0, s.jsx)(y.A, {
                           grow: 1,
-                          className: r()(y.gM, t),
+                          className: r()(C.gM, t),
                           style: { maxWidth: this.placeholderMaxWidth },
                       }),
                   ],
@@ -179,7 +179,7 @@ let es = i.memo(function (e) {
         let { user: l } = e;
         if (null == l) return null;
         let n = (0, T.r)(l);
-        return null == n ? null : (0, s.jsx)(C.A, { className: en.AO, type: n, verified: l.isVerifiedBot() });
+        return null == n ? null : (0, s.jsx)(b.A, { className: en.AO, type: n, verified: l.isVerifiedBot() });
     }),
     er = i.memo(function (e) {
         let {
@@ -347,9 +347,9 @@ let es = i.memo(function (e) {
                 status: v,
                 shouldAnimateStatus: S = !1,
                 isMobile: T,
-                isVR: C,
-                premiumSince: b,
-                channel: y,
+                isVR: b,
+                premiumSince: y,
+                channel: C,
                 guildId: E,
                 className: M,
                 nameplate: G,
@@ -385,16 +385,16 @@ let es = i.memo(function (e) {
             } = (0, X.A)({ userId: es, size: p._3.SIZE_32, animateOnHover: !(l || em), guildId: E }),
             { onFocus: eI, ...eS } = ee ?? {},
             eT = (0, Y.gn)(E, es, t ?? null),
-            [eC, eb] = i.useState(!1);
+            [eb, ey] = i.useState(!1);
         i.useEffect(() => {
-            l && eb(!1);
+            l && ey(!1);
         }, [l]);
-        let ey = (0, q.YW)(A),
+        let eC = (0, q.YW)(A),
             eE = (0, o.bG)([W.A], () => W.A.getQuestPreviewOverride(Z.uF.MEMBERS_LIST), []),
             eM = null != eE,
-            eR = eM ? eE : ey,
-            eG = (0, q.Yl)(ey, N, es),
-            e_ = (eM || eG) && l && !eC,
+            eR = eM ? eE : eC,
+            eG = (0, q.Yl)(eC, N, es),
+            e_ = (eM || eG) && l && !eb,
             eU = i.useCallback(() => {
                 ex(!0);
             }, []),
@@ -420,7 +420,7 @@ let es = i.memo(function (e) {
                               memberListItemRef: ed,
                               applicationStream: N,
                               ...e,
-                              closePopout: () => eb(!0),
+                              closePopout: () => ey(!0),
                           }),
                 [eR, ed, N, h, ei],
             );
@@ -488,7 +488,7 @@ let es = i.memo(function (e) {
                               eventHandlers: ev,
                               avatarSrc: eN,
                               isMobile: T,
-                              isVR: C,
+                              isVR: b,
                               isTyping: x,
                               avatarDecorationSrc: eg,
                               handleSetTypingRef: eP,
@@ -503,9 +503,9 @@ let es = i.memo(function (e) {
                               applicationStream: N,
                               voiceStatusChannel: ep,
                               user: f,
-                              channel: y,
+                              channel: C,
                               isHoveringOrFocusing: em || eh,
-                              quest: ey,
+                              quest: eC,
                               hideTooltip: w,
                           }),
                           decorators: (0, s.jsx)(er, {
@@ -513,7 +513,7 @@ let es = i.memo(function (e) {
                               isOwner: u,
                               lostPermissionTooltipText: m,
                               ownerTooltipText: c,
-                              premiumSince: b,
+                              premiumSince: y,
                               onClickPremiumGuildIcon: L,
                           }),
                           "aria-controls": V,

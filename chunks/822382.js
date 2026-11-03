@@ -4,7 +4,7 @@
     Gk: () => w,
     IY: () => W,
     Jl: () => S,
-    L5: () => v,
+    L5: () => b,
     Pe: () => V,
     Pp: () => M,
     Rt: () => Y,
@@ -12,7 +12,7 @@
     VI: () => z,
     XC: () => L,
     Y7: () => N,
-    Zf: () => b,
+    Zf: () => v,
     Zh: () => j,
     _b: () => O,
     _o: () => B,
@@ -144,13 +144,13 @@ function y(e) {
     }
 }
 let D = { [m.LWr.FILTER_BEFORE]: !0, [m.LWr.FILTER_AFTER]: !0, [m.LWr.FILTER_ON]: !0 };
-function v(e, t) {
+function b(e, t) {
     if (c.A.didAgree(t)) {
         let t = A.default.getCurrentUser();
         null != t && (e.include_nsfw = null == t.nsfwAllowed || t.nsfwAllowed);
     }
 }
-function b(e) {
+function v(e) {
     let t = {};
     for (let [n, i] of (e.forEach((e) => {
         let n,

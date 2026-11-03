@@ -168,13 +168,13 @@ class g extends a.A {
     static LATEST_SNAPSHOT_VERSION = 1;
     constructor() {
         super({
-            CACHE_LOADED_LAZY_NO_CACHE: b,
+            CACHE_LOADED_LAZY_NO_CACHE: v,
             CACHE_LOADED_LAZY: () => this.loadCache(),
             CHANNEL_DELETE: R,
             CHANNEL_UPDATES: O,
             CONNECTION_OPEN_SUPPLEMENTAL: N,
             GUILD_DELETE: D,
-            LOGIN_SUCCESS: v,
+            LOGIN_SUCCESS: b,
             THREAD_DELETE: y,
             THREAD_UPDATE: L,
         });
@@ -311,10 +311,10 @@ function y(e) {
 function D(e) {
     return !e.guild.unavailable && (g.deleteGuild(e.guild.id), !0);
 }
-function v(e) {
+function b(e) {
     (p.clear(), m.clear(), (T = !1));
 }
-function b(e) {
+function v(e) {
     T = !0;
 }
 let P = new g();

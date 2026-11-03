@@ -26,8 +26,8 @@ let S = !1,
     L = [],
     y = !1,
     D = !0,
-    v = Object.freeze([]),
     b = Object.freeze([]),
+    v = Object.freeze([]),
     P = [],
     M = [];
 function U(e) {
@@ -70,12 +70,12 @@ function x() {
         t = D || N === g.clD.INVISIBLE ? [] : p.A.getActivities().filter(G);
     r()(R, t) || ((R = t), (L = U(t)), (e = !0));
     let n = T.A.getRemoteActivities();
-    v !== n && ((v = n), (e = !0));
+    b !== n && ((b = n), (e = !0));
     let i = T.A.getHiddenActivities();
-    (b !== i && (b = i),
+    (v !== i && (v = i),
         e &&
             (M = U(
-                (P = s()([...R, ...v.filter((e) => e.type !== l.$.CUSTOM_STATUS)].sort(m.m))
+                (P = s()([...R, ...b.filter((e) => e.type !== l.$.CUSTOM_STATUS)].sort(m.m))
                     .uniqBy((e) => `${e.type}:${e.application_id}:${e.name}`)
                     .value()),
             )));
@@ -103,7 +103,7 @@ class F extends o.Ay.Store {
         return e ? P : R;
     }
     getHiddenActivities() {
-        return b;
+        return v;
     }
     getPrimaryActivity() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];

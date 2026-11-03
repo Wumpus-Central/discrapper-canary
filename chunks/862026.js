@@ -14,8 +14,8 @@ function f(e, t) {
         m = (0, a.bG)([r.A], () => !r.A.isThinking(e) && !r.A.isCompacting(e), [e]),
         [g, h] = n.useState(null),
         p = n.useCallback(() => h({ frame: t, ok: (0, o.yR)(e, l) }), [t, e, l]),
-        x = g?.frame === t ? g : null,
-        v = x?.ok === !0 && f;
+        b = g?.frame === t ? g : null,
+        x = b?.ok === !0 && f;
     if ("undone" === s) return null;
     if ("reverted" === s)
         return {
@@ -24,18 +24,18 @@ function f(e, t) {
             note: null,
             action: null,
         };
-    let b = "failed" === u || x?.ok === !1;
+    let v = "failed" === u || b?.ok === !1;
     return {
         label: c.intl.string(d.default.iBrh0c),
         body: c.intl.string(d.default.sRY8wn),
-        note: "busy" === u ? c.intl.string(d.default.QoixaY) : b ? c.intl.string(d.default["9fvHNe"]) : null,
+        note: "busy" === u ? c.intl.string(d.default.QoixaY) : v ? c.intl.string(d.default["9fvHNe"]) : null,
         action:
             "expired" === s
                 ? null
                 : {
                       text: c.intl.string("active" === s ? d.default["7q2YyD"] : d.default.FzX9h8),
                       confirm: "committed" === s,
-                      disabled: !f || v || ("committed" === s && !m),
+                      disabled: !f || x || ("committed" === s && !m),
                       onPress: p,
                   },
     };

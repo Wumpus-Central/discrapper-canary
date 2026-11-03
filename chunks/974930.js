@@ -1,6 +1,6 @@
 (n.d(t, {
     CC: () => y,
-    CI: () => b,
+    CI: () => v,
     DS: () => W,
     G3: () => k,
     IS: () => A,
@@ -111,13 +111,13 @@ function y(e, t, n) {
 function D(e) {
     return new s.Bw(N[e]);
 }
-function v(e, t) {
+function b(e, t) {
     let n;
     return (null != e && ((n = { startDate: a()(e), endDate: void 0 }), null != t && (n.endDate = a()(t))), n);
 }
-function b(e, t) {
+function v(e, t) {
     var n;
-    let i = v((n = t).scheduled_start_time, n.scheduled_end_time),
+    let i = b((n = t).scheduled_start_time, n.scheduled_end_time),
         r = a()(c.default.extractTimestamp(e)),
         s = i?.endDate != null ? r.clone().add(i.endDate.diff(i.startDate)) : void 0;
     return { startDate: r, endDate: s };
@@ -131,7 +131,7 @@ function P(e, t) {
     };
 }
 function M(e) {
-    return v(e.scheduledStartTime, e.scheduledEndTime);
+    return b(e.scheduledStartTime, e.scheduledEndTime);
 }
 function U(e, t) {
     return null == e || null == t ? null == e && null == t : e.isSame(t);

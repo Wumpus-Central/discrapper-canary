@@ -31,8 +31,8 @@ function A(e) {
             autoShift: L = !0,
             strategy: y = "fixed",
             portal: D = !0,
-            blockPointerEvents: v = !1,
-            children: b,
+            blockPointerEvents: b = !1,
+            children: v,
             renderLayer: P,
             viewportPadding: M = 8,
             shiftPadding: U,
@@ -101,7 +101,7 @@ function A(e) {
         ee = r.useMemo(() => ({ focus: n }), [n]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            b({ ref: H.setReference, props: q() }),
+            v({ ref: H.setReference, props: q() }),
             (0, i.jsx)(s.$c, {
                 id: V,
                 children:
@@ -109,7 +109,7 @@ function A(e) {
                     (0, i.jsxs)(J, {
                         ownerDocument: h,
                         children: [
-                            v ? (0, i.jsx)(s.zR, { lockScroll: !0 }) : null,
+                            b ? (0, i.jsx)(s.zR, { lockScroll: !0 }) : null,
                             ((t = (0, i.jsx)("div", {
                                 id: p,
                                 className: d()(m, u.q),

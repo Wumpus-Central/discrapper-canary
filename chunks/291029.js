@@ -8,8 +8,8 @@ var r = n(118751),
     c = n(861004),
     g = n(343032),
     u = n(403581),
-    m = n(24482),
-    d = n(202541),
+    d = n(24482),
+    m = n(202541),
     x = n(105292);
 let h = [
         { Icon: i.CheckmarkLargeIcon, getText: () => x.intl.string(x.t.kpMomJ) },
@@ -17,7 +17,7 @@ let h = [
             Icon: i.CheckmarkLargeIcon,
             getText: () =>
                 x.intl.formatToPlainString(x.t.p8QVLT, {
-                    maxUploadPremium: (0, m.EJ)(d.PremiumTypes.TIER_2, { useSpace: !1 }),
+                    maxUploadPremium: (0, d.EJ)(m.PremiumTypes.TIER_2, { useSpace: !1 }),
                 }),
         },
         { Icon: i.CheckmarkLargeIcon, getText: () => x.intl.string(x.t.W180bY) },
@@ -29,8 +29,8 @@ let h = [
             getText: function () {
                 let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "en-US";
                 return x.intl.formatToPlainString(x.t["T9RTr/"], {
-                    numBoosts: d.M4,
-                    percentageOff: (0, r.l9)(t, d.oX / 100),
+                    numBoosts: m.M4,
+                    percentageOff: (0, r.l9)(t, m.oX / 100),
                 });
             },
         },
@@ -38,7 +38,7 @@ let h = [
             Icon: a.UploadIcon,
             getText: () =>
                 x.intl.formatToPlainString(x.t.p8QVLT, {
-                    maxUploadPremium: (0, m.EJ)(d.PremiumTypes.TIER_2, { useSpace: !1 }),
+                    maxUploadPremium: (0, d.EJ)(m.PremiumTypes.TIER_2, { useSpace: !1 }),
                 }),
         },
         { Icon: l.n, getText: () => x.intl.string(x.t.KjrZ8Z) },
@@ -50,7 +50,7 @@ let h = [
             Icon: a.UploadIcon,
             getText: () =>
                 x.intl.formatToPlainString(x.t.p8QVLT, {
-                    maxUploadPremium: (0, m.EJ)(d.PremiumTypes.TIER_2, { useSpace: !1 }),
+                    maxUploadPremium: (0, d.EJ)(m.PremiumTypes.TIER_2, { useSpace: !1 }),
                 }),
         },
         { Icon: l.n, getText: () => x.intl.string(x.t.KjrZ8Z) },
@@ -63,7 +63,7 @@ let h = [
             Icon: a.UploadIcon,
             getText: () =>
                 x.intl.formatToPlainString(x.t.p8QVLT, {
-                    maxUploadPremium: (0, m.EJ)(d.PremiumTypes.TIER_2, { useSpace: !1 }),
+                    maxUploadPremium: (0, d.EJ)(m.PremiumTypes.TIER_2, { useSpace: !1 }),
                 }),
         },
         { Icon: l.n, getText: () => x.intl.string(x.t.KjrZ8Z) },
@@ -78,7 +78,7 @@ let h = [
             Icon: i.CheckmarkLargeIcon,
             getText: () =>
                 x.intl.formatToPlainString(x.t.p8QVLT, {
-                    maxUploadPremium: (0, m.EJ)(d.PremiumTypes.TIER_0, { useSpace: !1 }),
+                    maxUploadPremium: (0, d.EJ)(m.PremiumTypes.TIER_0, { useSpace: !1 }),
                 }),
         },
         { Icon: i.CheckmarkLargeIcon, getText: () => x.intl.string(x.t.Uukj4o) },
@@ -88,7 +88,7 @@ let h = [
             Icon: a.UploadIcon,
             getText: () =>
                 x.intl.formatToPlainString(x.t.p8QVLT, {
-                    maxUploadPremium: (0, m.EJ)(d.PremiumTypes.TIER_0, { useSpace: !1 }),
+                    maxUploadPremium: (0, d.EJ)(m.PremiumTypes.TIER_0, { useSpace: !1 }),
                 }),
         },
         { Icon: l.n, getText: () => x.intl.string(x.t.KjrZ8Z) },

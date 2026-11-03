@@ -1,4 +1,4 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var i = n(477900);
 n(582128);
 var s = n(503698),
@@ -13,8 +13,8 @@ function c(e) {
         timestamp: s,
         timestampFormat: a,
         className: c,
-        children: u,
-        contentClassName: d,
+        children: d,
+        contentClassName: u,
         iconClassName: m,
         iconContainerClassName: x,
         timestampClassName: h,
@@ -35,10 +35,10 @@ function c(e) {
                     }),
                 }),
             (0, i.jsxs)("div", {
-                className: l()(d, o.Qs),
+                className: l()(u, o.Qs),
                 children: [
                     (0, i.jsxs)("div", {
-                        children: [u, null != s && (0, i.jsx)(r.A, { timestamp: s, timestampFormat: a, className: h })],
+                        children: [d, null != s && (0, i.jsx)(r.A, { timestamp: s, timestampFormat: a, className: h })],
                     }),
                     f,
                 ],
@@ -53,4 +53,4 @@ c.Action = function (e) {
         children: ["\u2014", (0, i.jsx)(a.Anchor, { onClick: t, className: o.si, children: n })],
     });
 };
-let u = c;
+let d = c;

@@ -1,8 +1,8 @@
 n.d(t, {
     Xh: () => R,
     Ys: () => S,
-    HW: () => v,
-    zK: () => b,
+    HW: () => b,
+    zK: () => v,
     c6: () => w,
     tB: () => x,
     WQ: () => T,
@@ -165,12 +165,12 @@ function y(e) {
 function D(e, t) {
     s.h.dispatch({ type: "GUILD_ROOM_PENDING_NOTE_PLACE", roomId: e, position: t });
 }
-function v(e) {
+function b(e) {
     s.h.dispatch({ type: "GUILD_ROOM_PENDING_NOTE_DELETE", roomId: e });
 }
-async function b(e, t, n, i) {
+async function v(e, t, n, i) {
     let r = d.default.fromTimestamp(Date.now());
-    (s.h.dispatch({ type: "GUILD_ROOM_NOTE_CREATE_START", roomId: t, localId: r, position: i }), v(t));
+    (s.h.dispatch({ type: "GUILD_ROOM_NOTE_CREATE_START", roomId: t, localId: r, position: i }), b(t));
     try {
         (await O(e, t, { object_type: E.N.NOTE, content: n, position: i }),
             t !== e && (0, c.Ql)({ interactionType: "note_created", guildId: e, channelId: t }));

@@ -35,13 +35,13 @@ function x(e) {
             iconClassName: i,
             onAddFiles: s,
             onImport: x,
-            onSendToOtherProjects: j,
+            onSendToOtherProjects: b,
         } = e,
-        b = l.useRef(null),
+        j = l.useRef(null),
         v = l.useRef(null),
         y = h.intl.string(h.t.d56gCa),
         w = l.useCallback((e) => {
-            let t = b.current;
+            let t = j.current;
             null != t && ((t.accept = e), t.click());
         }, []),
         C = l.useCallback(
@@ -53,7 +53,7 @@ function x(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("input", {
-                ref: b,
+                ref: j,
                 type: "file",
                 multiple: !0,
                 hidden: !0,
@@ -98,13 +98,13 @@ function x(e) {
                                           action: x,
                                       })
                                     : null,
-                                null != j
+                                null != b
                                     ? (0, r.jsx)(u.Dr, {
                                           id: "send-to-other-projects",
                                           label: h.intl.string(p.default["5HmLrK"]),
                                           iconLeft: f.t,
                                           leadingAccessory: { type: "icon", icon: f.t },
-                                          action: j,
+                                          action: b,
                                       })
                                     : null,
                             ],

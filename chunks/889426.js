@@ -26,13 +26,13 @@ function A(e) {
             entrypoint: d,
             channelId: A,
             appContext: f,
-            location: x,
+            location: g,
         } = e,
-        g = u.A.getChannel(A);
-    if (null != g && t.type !== p.lp.ACTIVITY && t.type !== p.lp.HIDDEN_STREAM)
+        x = u.A.getChannel(A);
+    if (null != x && t.type !== p.lp.ACTIVITY && t.type !== p.lp.HIDDEN_STREAM)
         switch (t.type) {
             case p.lp.STREAM:
-                (m(t, p.qs.STREAM, x),
+                (m(t, p.qs.STREAM, g),
                     (0, a.L3)(
                         l,
                         async () => {
@@ -64,8 +64,8 @@ function A(e) {
             case p.lp.USER:
                 let C = h.default.getUser(t.id);
                 if (null == C) return;
-                if ((m(t, p.qs.USER, x), r))
-                    return (0, c.r)(l, t.user, g, { context: f }, (e, n) =>
+                if ((m(t, p.qs.USER, g), r))
+                    return (0, c.r)(l, t.user, x, { context: f }, (e, n) =>
                         (0, o.Y)({
                             menuItemProps: n,
                             menuName: e,
@@ -111,8 +111,8 @@ function A(e) {
                                 showChannelCallItems: !0,
                                 showChatItems: !1,
                                 user: C,
-                                channel: g,
-                                guildId: g.guild_id,
+                                channel: x,
+                                guildId: x.guild_id,
                                 showModalItems: !0,
                                 onInteraction: () =>
                                     (0, o.s)("GuildChannelUserContextMenu", s.A.GUILD_ROOM, {

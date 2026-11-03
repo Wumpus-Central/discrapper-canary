@@ -42,8 +42,8 @@ let g = +h.A.Millis.MINUTE,
     L = 0,
     y = [],
     D = [],
-    v = [],
-    b = !1;
+    b = [],
+    v = !1;
 function P(e) {
     return e.type === T.WTw.INSTALLING || e.type === T.WTw.UPDATING || e.type === T.WTw.REPAIRING
         ? e.networkProgress
@@ -71,7 +71,7 @@ let w = r().throttle(function (e) {
         });
     }, 200),
     x = r().throttle(function (e) {
-        v = (v = [{ bytes: e, timestamp: Date.now() }, ...v]).slice(0, 200);
+        b = (b = [{ bytes: e, timestamp: Date.now() }, ...b]).slice(0, 200);
     }, 200);
 function k(e, t, n) {
     let i = n(S[t]),
@@ -125,7 +125,7 @@ class F extends a.Ay.Store {
         return D;
     }
     getHistoricalTotalBytesWritten() {
-        return v;
+        return b;
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
@@ -298,7 +298,7 @@ let B = new F(s.h, {
                             }
                     }
                 }
-                if (!b) {
+                if (!v) {
                     let i = l.A.fileManager.dirname(n[c].installPath);
                     (m.A.getInstallationPath(e, t) !== i &&
                         s.h.dispatch({
@@ -321,6 +321,6 @@ let B = new F(s.h, {
             }
         (o || "dispatch_application_progress" !== u.taskID || u.clearProgress("dispatch_application_progress"),
             (S = n),
-            (b = !0));
+            (v = !0));
     },
 });

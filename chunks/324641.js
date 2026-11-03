@@ -197,11 +197,11 @@ function y(e, t, n) {
 function D(e, t) {
     (0, d.W)(e, "capture-release", { prepareId: t }, { timeoutMs: 1e3 }).catch(() => {});
 }
-function v(e) {
+function b(e) {
     let { bounds: t, scale: n } = e;
     return { width: Math.max(1, Math.round(t.width * n)), height: Math.max(1, Math.round(t.height * n)) };
 }
-function b(e, t, n) {
+function v(e, t, n) {
     let i = g();
     return null == i
         ? Promise.reject(Error("activityCapture unavailable"))
@@ -209,7 +209,7 @@ function b(e, t, n) {
               frameId: e,
               rect: t.bounds,
               viewportSize: t.viewport,
-              outputSize: v(t),
+              outputSize: b(t),
               format: n?.format ?? "webp",
               quality: n?.quality ?? 92,
               timeoutMs: 1500,
@@ -218,7 +218,7 @@ function b(e, t, n) {
 async function P(e, t, n) {
     let i = n?.format ?? "webp",
         r = n?.quality ?? 92,
-        s = (0, a.oe)(e, { rect: t.bounds, outputSize: v(t), format: "jpeg" === i ? "jpeg" : "png", quality: r });
+        s = (0, a.oe)(e, { rect: t.bounds, outputSize: b(t), format: "jpeg" === i ? "jpeg" : "png", quality: r });
     if (null == s) throw Error("frame is not hosted in a view");
     let l = await new Promise((e, t) => {
         let n = setTimeout(() => t(Error("timed out after 1500ms")), 1500);
@@ -317,7 +317,7 @@ async function w(e) {
     try {
         let i = await y(e, n, void 0);
         if ("ready" !== i.phase) return T("frame refused", { code: i.code, error: i.error });
-        let r = await b(t, i, void 0);
+        let r = await v(t, i, void 0);
         return new Blob([r.data], { type: r.mimeType });
     } catch (e) {
         return T("frame surface capture failed", { err: e });
@@ -420,7 +420,7 @@ async function F(e, t) {
 async function B(e, t) {
     let n = (0, c.B0)(e);
     if ((null == n && T("frame identity unknown"), null != g() && null != n)) {
-        let i = await M(e, t, (e) => b(n, e, t.spec));
+        let i = await M(e, t, (e) => v(n, e, t.spec));
         if (null != i) return i;
     }
     if ((0, a.t8)(e)) {

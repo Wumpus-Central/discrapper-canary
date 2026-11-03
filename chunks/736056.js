@@ -114,8 +114,8 @@ let L = {
 };
 var y = n(688151),
     D = n(652215);
-let v = "scientist:triggered",
-    b = "exerimentOverrides",
+let b = "scientist:triggered",
+    v = "exerimentOverrides",
     P = "userExperimentOverrides",
     M = "guildExperimentOverrides",
     U = new c.A("ExperimentStore"),
@@ -412,15 +412,15 @@ function el() {
 }
 function eo(e) {
     let { isSwitchingAccount: t } = e;
-    (l.w.remove(v),
-        t || (l.w.remove(b), l.w.remove(P), l.w.remove(M), (j = {}), (W = {})),
+    (l.w.remove(b),
+        t || (l.w.remove(v), l.w.remove(P), l.w.remove(M), (j = {}), (W = {})),
         (B = {}),
         (F = { ...F, rawUserExperiments: [] }),
         (G = {}),
         (w = !1));
 }
 function ed() {
-    ((w = !1), (G = {}), (V = {}), l.w.remove(v));
+    ((w = !1), (G = {}), (V = {}), l.w.remove(b));
 }
 function ec() {
     let e = !1,
@@ -468,7 +468,7 @@ function eu() {
 }
 function e_(e) {
     try {
-        l.w.set(v, { v: 1, e: e });
+        l.w.set(b, { v: 1, e: e });
     } catch (e) {
         (U.error("Error saving tracked exposure experiments, unsaved data will be lost", e),
             E.default.track(D.HAw.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
@@ -526,7 +526,7 @@ class ef extends _.A {
     trackExposure = J;
     initialize() {
         G = (function () {
-            let e = l.w.get(v);
+            let e = l.w.get(b);
             if (null == e || 1 !== e.v) return {};
             let t = e.e,
                 n = Date.now(),
@@ -534,7 +534,7 @@ class ef extends _.A {
             for (let e in t) n - t[e].time > 6048e5 && (delete t[e], (i = !0));
             return (i && e_(t), t);
         })();
-        let e = [l.w.get(b) ?? {}, l.w.get(P) ?? {}, l.w.get(M) ?? {}];
+        let e = [l.w.get(v) ?? {}, l.w.get(P) ?? {}, l.w.get(M) ?? {}];
         ((j = {}), (W = {}));
         let t = !r().isEmpty(e[0]);
         for (let n of e)

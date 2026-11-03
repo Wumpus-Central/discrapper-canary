@@ -1,12 +1,12 @@
-n.d(t, { Fj: () => x, GP: () => h, Vk: () => E, Wd: () => o, iX: () => f, j0: () => m, lr: () => g, pC: () => p });
+n.d(t, { Fj: () => A, GP: () => h, Vk: () => E, Wd: () => o, iX: () => f, j0: () => m, lr: () => g, pC: () => p });
 var l = n(636537),
     r = n(73153),
     i = n(960960),
     a = n(88592),
     s = n(716357),
     u = n(855823),
-    c = n(652215);
-let d = 0;
+    d = n(652215);
+let c = 0;
 function o(e) {
     let t,
         n = s.A.getSpace(e);
@@ -38,7 +38,7 @@ function E(e, t, n) {
 function p(e, t) {
     r.h.dispatch({ type: "GUILD_SPACE_EDIT_UPDATE_HEADER", guildId: e, customBanner: t });
 }
-async function x(e) {
+async function A(e) {
     let t = a.A.getDraft(e);
     if (null == t || "saving" === a.A.getSaveStatus(e)) return !1;
     let n = {};
@@ -51,10 +51,10 @@ async function x(e) {
                 return ((0, u.Ny)(t) || (i.id = t), i);
             }),
         },
-        o = d++;
+        o = c++;
     r.h.dispatch({ type: "GUILD_SPACE_EDIT_SAVE_START", guildId: e, requestId: o });
     try {
-        let { body: t } = await l.Bo.put({ url: c.Rsh.GUILD_SPACE(e), body: s, rejectWithError: !0 });
+        let { body: t } = await l.Bo.put({ url: d.Rsh.GUILD_SPACE(e), body: s, rejectWithError: !0 });
         return (r.h.dispatch({ type: "GUILD_SPACE_UPDATE_SUCCESS", guildId: e, space: t }), !0);
     } catch (a) {
         let n = (0, u.GE)(a, t.widgets),

@@ -1,4 +1,4 @@
-n.d(t, { Df: () => b, LB: () => y });
+n.d(t, { Df: () => v, LB: () => y });
 var i = n(367513),
     r = n(465532),
     a = n(148494),
@@ -53,8 +53,8 @@ function y(e) {
             if (R._.hasSubscribers(L.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE))
                 return (R._.dispatch(L.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE), !1);
             if (null != a && d?.type === _.PE.CREATE_THREAD) return (u.A.closeChannelSidebar(a), !1);
-            let E = v(a),
-                A = v(c);
+            let E = b(a),
+                A = b(c);
             return (
                 null == a || E || A || null == d
                     ? null != a && !E && !1 !== I.A.isAtBottom(a) && l.A.getChatOpen(a)
@@ -74,7 +74,7 @@ function D(e) {
         if (null != E.A.getStickerPreview(e, p.C.ChannelMessage)) return ((0, A.x5)(e, p.C.ChannelMessage), !1);
     }
 }
-function v(e) {
+function b(e) {
     if (null == e) return !1;
     let t = !1;
     return (
@@ -89,4 +89,4 @@ function v(e) {
         t
     );
 }
-let b = y();
+let v = y();

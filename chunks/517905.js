@@ -1,8 +1,8 @@
 a.d(n, { A: () => i });
 var l = a(477900);
 a(582128);
-var t = a(292036),
-    s = a(265872);
+var s = a(292036),
+    t = a(265872);
 let r = (0, a(268218).Fe)({
     createPromise: () =>
         Promise.all([
@@ -79,22 +79,22 @@ let r = (0, a(268218).Fe)({
             a.e("70008"),
         ]).then(a.bind(a, 571705)),
     webpackId: 571705,
-    renderLoader: () => (0, l.jsx)(t.s, {}),
+    renderLoader: () => (0, l.jsx)(s.s, {}),
 });
 function i(e) {
     let {
         guildId: n,
         name: a,
-        position: t = "right",
+        position: s = "right",
         onClose: i,
         onCreateTag: o,
         returnRef: d,
         targetElementRef: u,
         ...c
     } = e;
-    return (0, l.jsx)(s.Y, {
+    return (0, l.jsx)(t.Y, {
         targetElementRef: u,
-        position: t,
+        position: s,
         clickTrap: !0,
         renderPopout: (e) =>
             (0, l.jsx)(r, {

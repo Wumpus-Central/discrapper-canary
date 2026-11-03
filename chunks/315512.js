@@ -3,8 +3,8 @@ var i = n(477900),
     a = n(582128),
     r = n(877624),
     l = n(793574),
-    s = n(688810),
-    o = n(975571),
+    o = n(688810),
+    s = n(975571),
     d = n(920050),
     c = n(721157),
     u = n(807098),
@@ -21,7 +21,7 @@ var i = n(477900),
 function _() {
     let { enabled: e } = g.A.useConfig({ location: "useThirdPartyPartnerPerkCards" }),
         { component: t } = (0, b.A)(r.C.PREMIUM_HOME_REWARDS_PERK_CARD),
-        { analyticsLocations: n } = (0, s.Ay)(l.A.PREMIUM_MARKETING_PERK_CARD),
+        { analyticsLocations: n } = (0, o.Ay)(l.A.PREMIUM_MARKETING_PERK_CARD),
         _ = (0, u.T)(null != t ? (0, c.Co)(t) : null);
     return (0, a.useMemo)(
         () =>
@@ -40,7 +40,7 @@ function _() {
                               partnerIds: [m.Bt],
                               title: C.intl.string(E.default.PFtZV6),
                               subtitle: C.intl.format(A.default.ieA3V0, {
-                                  termsUrl: o.A.getArticleURL(p.MVz.CODE_BLURPLE_PROMOTION),
+                                  termsUrl: s.A.getArticleURL(p.MVz.CODE_BLURPLE_PROMOTION),
                               }),
                               analyticsLocations: n,
                           }),

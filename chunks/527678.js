@@ -1,4 +1,4 @@
-n.d(e, { Ay: () => O, CP: () => G, X$: () => L, _k: () => p, e_: () => f, kP: () => x });
+n.d(e, { Ay: () => O, CP: () => G, X$: () => C, _k: () => p, e_: () => f, kP: () => L });
 var i = n(73153),
     l = n(157559),
     s = n(181658),
@@ -43,11 +43,11 @@ function p(t, e) {
     let n = _.kd.findIndex((t) => t === e);
     -1 !== n && n !== _.kd.length - 1 && f(_.kd[n + 1]);
 }
-function x(t, e) {
+function L(t, e) {
     let n = _.kd.findIndex((t) => t === e);
     -1 !== n && 0 !== n && f(_.kd[n - 1]);
 }
-async function L(t) {
+async function C(t) {
     let e = N.A.getGuild(t);
     null != e &&
         (m.A.close(),

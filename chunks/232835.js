@@ -29,8 +29,8 @@ var I = n(164956),
     L = n(72314),
     y = n(808728),
     D = n(696451),
-    v = n(71393),
-    b = n(576705),
+    b = n(71393),
+    v = n(576705),
     P = n(994500),
     M = n(309010),
     U = n(967198),
@@ -106,7 +106,7 @@ function K(e) {
             if (n.cached) return;
             let i = R.A.getBasicChannel(n.channelId);
             i?.guild_id === e &&
-                (b.A.canBasicChannel(G.hVb.VIEW_CHANNEL, i) || (c.A.commit(n.mutate({ cached: !0 })), (t = !0)));
+                (v.A.canBasicChannel(G.hVb.VIEW_CHANNEL, i) || (c.A.commit(n.mutate({ cached: !0 })), (t = !0)));
         }),
         t
     );
@@ -174,14 +174,14 @@ function Z(e) {
 class Q extends l.Ay.Store {
     static displayName = "MessageStore";
     initialize() {
-        (this.waitFor(O.default, R.A, L.A, p.A, y.Ay, D.Ay, v.A, I.A, N.default, b.A, P.A, M.Ay, U.A, w.default),
+        (this.waitFor(O.default, R.A, L.A, p.A, y.Ay, D.Ay, b.A, I.A, N.default, v.A, P.A, M.Ay, U.A, w.default),
             this.syncWith([I.A], () => {}));
     }
     getMessages(e) {
         if (I.A.hasViewingRoles()) {
             let t = R.A.getChannel(e),
                 n = t?.getGuildId();
-            if (I.A.isViewingRoles(n) && !b.A.can(G.xBc.VIEW_CHANNEL, t)) return new c.A(e);
+            if (I.A.isViewingRoles(n) && !v.A.can(G.xBc.VIEW_CHANNEL, t)) return new c.A(e);
         }
         return c.A.getOrCreate(e);
     }

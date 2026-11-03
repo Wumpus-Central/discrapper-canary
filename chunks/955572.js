@@ -3,7 +3,7 @@ n.d(t, {
     Bm: () => A,
     D3: () => T,
     Dm: () => L,
-    E7: () => v,
+    E7: () => b,
     Er: () => f,
     FU: () => U,
     Gm: () => P,
@@ -22,7 +22,7 @@ n.d(t, {
     qz: () => m,
     ts: () => C,
     uS: () => E,
-    uh: () => b,
+    uh: () => v,
     w_: () => R,
 });
 var i = n(73153),
@@ -106,10 +106,10 @@ function y() {
 function D() {
     i.h.dispatch({ type: "ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE" });
 }
-function v(e) {
+function b(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_MIN_TOAST_DURATION", minToastDurationMs: e });
 }
-function b(e) {
+function v(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_CONTRAST_MODE", contrastMode: e });
 }
 function P(e) {

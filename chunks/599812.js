@@ -157,8 +157,8 @@ class y {
     }
 }
 let D = new y();
-var v = n(863160),
-    b = n(652215);
+var b = n(863160),
+    v = n(652215);
 let P = new l.A("RunningGameHeartbeatManager"),
     M = 5 * f.A.Millis.MINUTE;
 function U() {
@@ -266,7 +266,7 @@ class w extends s.A {
                 game_name: f,
                 game_distributor: s.distributor,
                 game_distributor_game_id: s.sku,
-                game_metadata: (0, I.EQ)(s, null != s.processGame, (0, I.wH)((0, v.Un)(s)).gameId),
+                game_metadata: (0, I.EQ)(s, null != s.processGame, (0, I.wH)((0, b.Un)(s)).gameId),
                 game_executable: (0, I.Ic)(s.exePath),
                 game_detection_enabled: (0, g.Xr)(s),
                 initial_heartbeat: t,
@@ -288,7 +288,7 @@ class w extends s.A {
             S = { discord_window_state: U() };
         return T.getSnapshot(s.pid)
             .then((e) => {
-                h.default.track(b.HAw.RUNNING_GAME_HEARTBEAT, {
+                h.default.track(v.HAw.RUNNING_GAME_HEARTBEAT, {
                     ...p,
                     ...S,
                     ...(a ?? {}),
@@ -299,7 +299,7 @@ class w extends s.A {
             })
             .catch((e) => {
                 (t || e instanceof r.Fh || P.warn(`Failed to get performance snapshot for game ${s.id}`, e.message),
-                    h.default.track(b.HAw.RUNNING_GAME_HEARTBEAT, {
+                    h.default.track(v.HAw.RUNNING_GAME_HEARTBEAT, {
                         ...p,
                         ...S,
                         ...(a ?? {}),
@@ -319,7 +319,7 @@ class w extends s.A {
                 if (null != e.processGame) return `social_sdk:${e.id}`;
                 let t = null != e.name ? e.name : "",
                     n = `${e.id ?? e.exePath}:${t}`,
-                    i = e.distributor === b.d3x.ROBLOX ? (0, _.hD)(e) : null;
+                    i = e.distributor === v.d3x.ROBLOX ? (0, _.hD)(e) : null;
                 return (null != i && (n += `:${i}`), n);
             })(a);
             if ((n.add(e), this.gameSessions.has(e))) {

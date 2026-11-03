@@ -5,8 +5,8 @@ var l = t(582128),
     a = t(287809),
     u = t(503275),
     s = t(97005),
-    i = t(371169),
-    d = t(260498);
+    d = t(371169),
+    i = t(260498);
 function c(e, n, t) {
     let {
             project: c,
@@ -15,20 +15,20 @@ function c(e, n, t) {
         } = (function (e, n, t) {
             let o = (0, s.m0)({ guildId: n ?? void 0, location: "ConjureAppHoverCard" }) && null != n;
             l.useEffect(() => {
-                t && null != e && (0, i.tF)([e]);
+                t && null != e && (0, d.tF)([e]);
             }, [t, e]);
             let { project: a, isUnavailable: u } = (0, r.cf)(
-                [d.Ay],
+                [i.Ay],
                 () => ({
-                    project: null != e ? (d.Ay.getProject(e) ?? null) : null,
-                    isUnavailable: null != e && (0, i.su)(e),
+                    project: null != e ? (i.Ay.getProject(e) ?? null) : null,
+                    isUnavailable: null != e && (0, d.su)(e),
                 }),
                 [e],
             );
             return l.useMemo(
                 () => ({
                     project: a,
-                    remixProject: o && null != a && (0, d.H_)(a) ? a : null,
+                    remixProject: o && null != a && (0, i.H_)(a) ? a : null,
                     isSettled: null == e || null != a || u,
                 }),
                 [a, o, e, u],
@@ -48,15 +48,15 @@ function c(e, n, t) {
             }
         );
     }, [t, f]);
-    let x = (0, r.bG)([a.default], () => (null != f ? (a.default.getUser(f) ?? null) : null), [f]),
-        j = x?.getAvatarURL(n, 32);
+    let j = (0, r.bG)([a.default], () => (null != f ? (a.default.getUser(f) ?? null) : null), [f]),
+        x = j?.getAvatarURL(n, 32);
     return (
         l.useEffect(() => {
-            t && null != j && (0, o.N)(j);
-        }, [t, j]),
+            t && null != x && (0, o.N)(x);
+        }, [t, x]),
         l.useMemo(
-            () => ({ creator: x, remixProject: v, isSettled: null != e && m && (null == f || null != x || g === f) }),
-            [x, v, e, m, f, g],
+            () => ({ creator: j, remixProject: v, isSettled: null != e && m && (null == f || null != j || g === f) }),
+            [j, v, e, m, f, g],
         )
     );
 }

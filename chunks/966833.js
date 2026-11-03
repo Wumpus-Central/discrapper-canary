@@ -10,8 +10,8 @@ var i,
     u = s(734057),
     A = s(696451),
     c = s(71393),
-    I = s(232835),
-    o = s(994500),
+    o = s(232835),
+    I = s(994500),
     f = s(287809),
     D =
         (((i = {}).LOADING = "LOADING"),
@@ -28,7 +28,7 @@ function h() {
     l().forEach(N, (e) => {
         (e.items.forEach((e) => {
             let { message: t } = e;
-            (t.set("blocked", o.A.isBlockedForMessage(t)), t.set("ignored", o.A.isIgnoredForMessage(t)));
+            (t.set("blocked", I.A.isBlockedForMessage(t)), t.set("ignored", I.A.isIgnoredForMessage(t)));
         }),
             (e.items = e.items.slice()));
     });
@@ -36,7 +36,7 @@ function h() {
 class L extends r.Ay.Store {
     static displayName = "ChannelPinsStore";
     initialize() {
-        this.waitFor(u.A, A.Ay, c.A, m.default, I.A, o.A, f.default);
+        this.waitFor(u.A, A.Ay, c.A, m.default, o.A, I.A, f.default);
     }
     getPins(e) {
         return N[e];

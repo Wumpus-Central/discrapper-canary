@@ -1,4 +1,4 @@
-i.d(t, { A: () => g });
+i.d(t, { A: () => x });
 var s = i(17928),
     n = i(73153),
     a = i(297966),
@@ -15,7 +15,7 @@ function m(e) {
     let t = (0, l.MM)(e.entitlement);
     ((c = null == t ? null : { perk: a.n9.XGPP, state: t, entitlement_id: e.entitlement.id, redirect: null }), u());
 }
-class x extends s.Ay.Store {
+class g extends s.Ay.Store {
     static displayName = "PartnerActivationStore";
     getActivationStatus() {
         return c;
@@ -27,7 +27,7 @@ class x extends s.Ay.Store {
         return d;
     }
 }
-let g = new x(n.h, {
+let x = new g(n.h, {
     PARTNER_ACTIVATION_FETCH_START: function () {
         o = a.db.FETCHING;
     },

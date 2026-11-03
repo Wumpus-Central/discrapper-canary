@@ -4,8 +4,8 @@ var l = n(582128),
     s = n(641150),
     i = n(17928),
     r = n(775602),
-    c = n(365491),
-    o = n(856686),
+    o = n(365491),
+    c = n(856686),
     d = n(758836),
     u = n(652215);
 let m = {
@@ -23,7 +23,7 @@ let m = {
                 setOfferEligibleFilter: g,
                 reset: E,
                 setCurrentTab: h,
-            } = (0, c.v)(),
+            } = (0, o.v)(),
             f = l.useMemo(() => {
                 var t;
                 return (0, d.dF)(e) || (t = e) === d.G2.COLLABS || t === d.G2.OFFER_ELIGIBLE ? d.G2.CATALOG : e;
@@ -42,7 +42,7 @@ let m = {
                     null != t ? n(t) : E();
                 }
             }, [f, e, n, s, g, E]));
-        let { clearError: A } = (0, o.S)(),
+        let { clearError: A } = (0, c.S)(),
             _ = (0, a.W6)(),
             v = l.useCallback(
                 async (e, l) => {

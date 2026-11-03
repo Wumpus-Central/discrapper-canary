@@ -1,6 +1,6 @@
 n.d(t, {
     Ls: () => p,
-    iW: () => v,
+    iW: () => b,
     Be: () => P,
     AR: () => U,
     Wm: () => R,
@@ -686,7 +686,7 @@ class D {
         this.transaction.deleteAllExcept([], e);
     }
 }
-class v {
+class b {
     originalPrefix;
     table;
     get prefix() {
@@ -696,7 +696,7 @@ class v {
         ((this.originalPrefix = e), (this.table = new f([e], t, n, i)));
     }
     withoutLogging() {
-        return new v(this.originalPrefix, this.table.tableId, this.table.database, !1);
+        return new b(this.originalPrefix, this.table.tableId, this.table.database, !1);
     }
     get(e, t) {
         return this.table.get([e, t]);
@@ -744,10 +744,10 @@ class v {
         return this.table.deleteGeneration([], e, t);
     }
     transaction(e, t) {
-        return this.table.transaction((t) => e(new b(t)), t);
+        return this.table.transaction((t) => e(new v(t)), t);
     }
     upgradeTransaction(e) {
-        return new b(this.table.upgradeTransaction(e));
+        return new v(this.table.upgradeTransaction(e));
     }
     getManySyncUnsafe(e, t) {
         return this.table.getManySyncUnsafe([e], t);
@@ -756,10 +756,10 @@ class v {
         return this.table.getMapEntriesSyncUnsafe();
     }
 }
-class b {
+class v {
     state;
     static fromDatabaseTransaction(e, t, n) {
-        return new b(new I(e, t, n));
+        return new v(new I(e, t, n));
     }
     constructor(e) {
         this.state = e;

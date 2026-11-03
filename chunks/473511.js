@@ -1,4 +1,4 @@
-s.d(t, { lP: () => v, M6: () => G, pE: () => j, l2: () => y, QK: () => I });
+s.d(t, { lP: () => j, M6: () => G, pE: () => P, l2: () => v, QK: () => I });
 var n = s(582128),
     a = s(687123),
     i = s(478437),
@@ -8,8 +8,8 @@ var n = s(582128),
     o = s(323073),
     d = s(47167),
     c = s(960850),
-    m = s(207560),
-    b = s(223863),
+    b = s(207560),
+    m = s(223863),
     g = s(750385),
     A = s(378058),
     f = s(95701),
@@ -17,9 +17,9 @@ var n = s(582128),
     h = s(576705),
     E = s(994500),
     C = s(287809),
-    x = s(659674),
-    L = s(403362),
-    S = s(427262);
+    L = s(659674),
+    S = s(403362),
+    x = s(427262);
 let _ = (0, s(240921).Ay)({
     kind: "user",
     name: "2026-08-forward-age-restricted-destinations",
@@ -29,29 +29,29 @@ let _ = (0, s(240921).Ay)({
 var D = s(652215),
     N = s(105292);
 function I(e) {
-    let t = e.map(b._g).find(L.Vq),
+    let t = e.map(m._g).find(S.Vq),
         s = (0, l.bG)([p.A], () => p.A.getChannel(t), [t]);
     return n.useMemo(() => s ?? (0, f.createChannelRecord)({ id: "1", type: i.r.DM }), [s]);
 }
-function P(e) {
+function y(e) {
     return e.components.length > 0 && e.components[0].type === r.I5.CHECKPOINT_CARD;
 }
-function j(e, t, s, n) {
+function P(e, t, s, n) {
     let i = s instanceof f.YB;
     if (null != n) {
         let e = n(s);
         if (null != e) return e;
     }
     if (null == e) return;
-    let l = P(e),
-        r = e.messageSnapshots.length > 0 && P(e.messageSnapshots[0].message);
+    let l = y(e),
+        r = e.messageSnapshots.length > 0 && y(e.messageSnapshots[0].message);
     if (null != t || l) {
         if ((0, o.Gc)(t) && !(i && (0, o.Gc)(s))) return { label: N.intl.string(N.t.KgPx1D), lineClamp: 2 };
         if (
             (function (e) {
                 if (!(e instanceof f.YB) || !(0, o.Gc)(e)) return !1;
                 let t = C.default.getCurrentUser()?.nsfwAllowed === !1,
-                    s = (0, u.p9)() && (0, m.d6)(a.t.AGE_GATED_SPACES);
+                    s = (0, u.p9)() && (0, b.d6)(a.t.AGE_GATED_SPACES);
                 return (
                     (!!t || !!s) &&
                     _.getConfig({ location: "getDestinationIsUnavailable" }).disableAgeRestrictedDestinations
@@ -67,9 +67,9 @@ function j(e, t, s, n) {
                 return { label: N.intl.string(N.t.P7yvbm) };
             if (
                 ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) &&
-                    !(0, x.fS)(s, h.A) &&
-                    !(0, x.ax)(e)) ||
-                ((l || r) && !(0, x.fS)(s, h.A))
+                    !(0, L.fS)(s, h.A) &&
+                    !(0, L.ax)(e)) ||
+                ((l || r) && !(0, L.fS)(s, h.A))
             )
                 return { label: N.intl.string(N.t.Wr4RIX) };
             let t = [
@@ -101,10 +101,10 @@ function j(e, t, s, n) {
         }
     }
 }
-function v(e, t) {
+function j(e, t) {
     return !!(null != e.rateLimitPerUser && e.rateLimitPerUser > 0) && !(0, c.js)(e, t);
 }
-function y(e) {
+function v(e) {
     return (0, l.yK)(
         [C.default, p.A, E.A],
         () =>
@@ -113,12 +113,12 @@ function y(e) {
                     let { type: t, id: s } = e;
                     if ("user" === t) {
                         let e = C.default.getUser(s);
-                        return null != e ? (E.A.getNickname(e.id) ?? S.Ay.getName(e)) : null;
+                        return null != e ? (E.A.getNickname(e.id) ?? x.Ay.getName(e)) : null;
                     }
                     let n = p.A.getChannel(s);
                     return null != n ? (0, d.m1)(n, C.default, E.A, !0) : null;
                 })
-                .filter(L.Vq),
+                .filter(S.Vq),
         [e],
     );
 }
@@ -131,8 +131,8 @@ function G(e) {
                     let { type: t, id: s } = e;
                     return "channel" === t ? p.A.getChannel(s) : null;
                 })
-                .filter(L.Vq)
-                .filter((e) => v(e, h.A)),
+                .filter(S.Vq)
+                .filter((e) => j(e, h.A)),
         [e],
     );
     return (0, l.yK)([C.default, E.A], () => t.map((e) => (0, d.m1)(e, C.default, E.A, !0)), [t]);

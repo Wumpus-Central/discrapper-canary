@@ -1,12 +1,12 @@
 let i, r;
 (n.r(t),
     n.d(t, {
-        encryptAndStoreTokens: () => b,
+        encryptAndStoreTokens: () => v,
         getAnalyticsToken: () => S,
         getToken: () => N,
         hideToken: () => L,
         init: () => T,
-        removeAnalyticsToken: () => v,
+        removeAnalyticsToken: () => b,
         removeToken: () => D,
         setAnalyticsToken: () => C,
         setToken: () => O,
@@ -83,7 +83,7 @@ function O(e, t) {
     null == e ? D(t) : (g(), (i = e), R(e, t));
 }
 function R(e, t) {
-    (null != t && (E[t] = e), _ ? b() : ((r = i), (A = E), I()));
+    (null != t && (E[t] = e), _ ? v() : ((r = i), (A = E), I()));
 }
 function L() {
     h || (g(), (h = !0), I());
@@ -101,10 +101,10 @@ function D(e) {
         null != t
     );
 }
-function v() {
+function b() {
     return D(o);
 }
-function b() {
+function v() {
     (g(),
         c?.isEncryptionAvailable()
             ? (null != i && (r = m(i)),

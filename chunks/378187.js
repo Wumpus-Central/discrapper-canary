@@ -26,8 +26,8 @@ var i = n(412703),
     L = n(814793),
     y = n(190107),
     D = n(165610);
-let v = +f.A.Millis.MINUTE,
-    b = +f.A.Millis.SECOND,
+let b = +f.A.Millis.MINUTE,
+    v = +f.A.Millis.SECOND,
     P = (0, N.L)({ location: y.rE.QUESTS_MANAGER });
 function M(e) {
     return !(0, C.Ic)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
@@ -54,10 +54,10 @@ class G extends a.A {
     };
     calculateHeartbeatDurationMs = (e) => {
         let t = m.A.quests.get(e);
-        if (null == t || null == t.config || null == t.userStatus) return v;
+        if (null == t || null == t.config || null == t.userStatus) return b;
         let { progressSeconds: n, targetSeconds: r } = (0, R.Yh)(t, i.o.DESKTOP),
             a = Math.max(0, (r - n) * f.A.Millis.SECOND);
-        return a <= v ? a + b : v;
+        return a <= b ? a + v : b;
     };
     initiateHeartbeat = (e, t, n) => {
         let r = this.heartbeats[t];

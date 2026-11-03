@@ -1,10 +1,10 @@
 n.d(e, { d: () => s });
 var r = n(477900),
-    i = n(192308),
-    o = n(294454);
+    o = n(192308),
+    i = n(294454);
 let s = (t) => {
     let { sku: e, guildId: s, source: a, analyticsLocations: l, analyticsContext: u } = t;
-    (0, i.openModalLazy)(
+    (0, o.openModalLazy)(
         async () => {
             let { default: t } = await Promise.all([
                 n.e("937139"),
@@ -46,6 +46,6 @@ let s = (t) => {
             return (n) =>
                 (0, r.jsx)(t, { ...n, sku: e, guildId: s, source: a, analyticsLocations: l, analyticsContext: u });
         },
-        { stackingBehavior: "stack", modalKey: o.aU },
+        { stackingBehavior: "stack", modalKey: i.aU },
     );
 };

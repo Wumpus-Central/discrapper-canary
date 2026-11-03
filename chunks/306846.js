@@ -7,8 +7,8 @@ var n = t(435558),
     u = t(60175),
     d = t(513461),
     E = t(837011),
-    c = t(555337),
-    o = t(834720),
+    o = t(555337),
+    c = t(834720),
     I = t(894222),
     _ = t(716610),
     f = t(652215),
@@ -16,13 +16,13 @@ var n = t(435558),
 let S = { verificationDirty: !1, guildDirty: !1, profileDirty: !1, isAgeRestrictedDirty: !1 },
     h = S;
 function T() {
-    let e = c.A.getGuild();
+    let e = o.A.getGuild();
     if (null == e) return;
-    let i = o.Ay.getDiscoveryChecklist(e.id);
+    let i = c.Ay.getDiscoveryChecklist(e.id);
     if (null != i) return (0, _.l)(e, i);
 }
 function g() {
-    let e = c.A.getGuildId();
+    let e = o.A.getGuildId();
     return null == e ? null : u.A.get(e)?.formFields;
 }
 function m() {
@@ -83,7 +83,7 @@ function L(e, i) {
     return !r().isEqual(s, a);
 }
 function R() {
-    let e = c.A.getGuild();
+    let e = o.A.getGuild();
     if (null == e || null == l) {
         h = S;
         return;
@@ -105,27 +105,27 @@ function R() {
                 (h = {
                     verificationDirty: u || n,
                     guildDirty: i,
-                    profileDirty: E.A.getProfile(e.id)?.visibility !== c.A.getGuildProfile()?.visibility,
+                    profileDirty: E.A.getProfile(e.id)?.visibility !== o.A.getGuildProfile()?.visibility,
                     isAgeRestrictedDirty: t,
                 }));
             break;
         case I.J.DISCOVERABLE:
             h = {
                 verificationDirty: L(e, l),
-                guildDirty: i || c.A.hasChanges(),
+                guildDirty: i || o.A.hasChanges(),
                 profileDirty: !1,
                 isAgeRestrictedDirty: t,
             };
     }
 }
 function y() {
-    if (null == c.A.getGuildId() || null == l) return !1;
+    if (null == o.A.getGuildId() || null == l) return !1;
     ((l = l.joinType === I.J.APPLY ? { ...l, pendingVerificationFields: C() } : { ...l, termRules: m() }), R());
 }
 function p(e) {
     let { section: i, subsection: t } = e;
     if (i !== f.BEX.ACCESS) return G();
-    let n = c.A.getGuild();
+    let n = o.A.getGuild();
     if (null == n) return !1;
     let r = t === f.nd0.ACCESS_DISCOVERABLE && n.features.has(f.GuildFeatures.COMMUNITY) ? I.J.DISCOVERABLE : N(n);
     ((l = D(n, r)), R());
@@ -140,8 +140,8 @@ function v() {
 class P extends s.Ay.Store {
     static displayName = "GuildSettingsJoinRulesStore";
     initialize() {
-        (this.waitFor(o.Ay, E.A, c.A, u.A),
-            this.syncWith([c.A, u.A], () => {
+        (this.waitFor(c.Ay, E.A, o.A, u.A),
+            this.syncWith([o.A, u.A], () => {
                 R();
             }));
     }
@@ -158,23 +158,23 @@ class P extends s.Ay.Store {
 let O = new P(a.h, {
     GUILD_SETTINGS_JOIN_RULES_INVITE_SET_PENDING_RULES: function (e) {
         let { guildId: i, requireTerms: t, termRules: n } = e;
-        if (i !== c.A.getGuildId() || (l?.joinType !== I.J.INVITE && l?.joinType !== I.J.DISCOVERABLE)) return !1;
+        if (i !== o.A.getGuildId() || (l?.joinType !== I.J.INVITE && l?.joinType !== I.J.DISCOVERABLE)) return !1;
         ((l = { ...l, requireTerms: t, termRules: n }), R());
     },
     GUILD_SETTINGS_JOIN_RULES_APPLY_SET_PENDING_FORM_FIELDS: function (e) {
         let { guildId: i, formFields: t } = e;
-        if (i !== c.A.getGuildId() || l?.joinType !== I.J.APPLY) return !1;
+        if (i !== o.A.getGuildId() || l?.joinType !== I.J.APPLY) return !1;
         ((l = { ...l, pendingVerificationFields: t }), R());
     },
     GUILD_SETTINGS_JOIN_RULES_SET_SELECTED_TYPE: function (e) {
         let { guildId: i, joinType: t } = e,
-            n = c.A.getGuild();
+            n = o.A.getGuild();
         if (i !== n?.id) return !1;
         ((l = D(n, t)), R());
     },
     GUILD_SETTINGS_JOIN_RULES_SET_CONTENT_LEVEL: function (e) {
         let { guildId: i, isAgeRestricted: t } = e,
-            n = c.A.getGuild();
+            n = o.A.getGuild();
         if (i !== n?.id) return !1;
         ((l = { ...(l ?? D(n, N(n))), isAgeRestricted: t }), R());
     },

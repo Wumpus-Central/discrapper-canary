@@ -13,14 +13,14 @@ var i = n(477900),
     m = n(170865),
     A = n(948822),
     f = n(321486),
-    x = n(989952);
-let g = 16 / 9;
+    g = n(989952);
+let x = 16 / 9;
 function C(e) {
     let { channelId: t, corners: n, roomWidth: a } = e,
         {
             screenBounds: C,
-            screenClipPath: j,
-            center: y,
+            screenClipPath: y,
+            center: j,
             boundingBoxCorners: I,
         } = l.useMemo(() => {
             let e = (function (e) {
@@ -62,7 +62,7 @@ function C(e) {
             };
         }, [n]),
         { ref: N, width: v, height: E } = (0, r.Ay)(),
-        b = l.useMemo(() => (null == v || null == E ? null : (0, p.t)(I, v, E, g)), [I, v, E]),
+        b = l.useMemo(() => (null == v || null == E ? null : (0, p.t)(I, v, E, x)), [I, v, E]),
         S = Math.min(48, Math.max(20, 0.025 * a)),
         T = (0, o.yK)([d.A, u.default], () => {
             if ((0, c.F2)(t)) return [];
@@ -75,14 +75,14 @@ function C(e) {
         R = l.useMemo(() => (null == E ? 0 : -(((I.topLeft.y + I.topRight.y) / 2 / 100) * E)), [I, E]);
     return (0, i.jsxs)("div", {
         ref: N,
-        className: x.nj,
+        className: g.nj,
         inert: _,
-        style: { left: `${C.left}%`, top: `${C.top}%`, width: `${C.width}%`, height: `${C.height}%`, clipPath: j },
+        style: { left: `${C.left}%`, top: `${C.top}%`, width: `${C.width}%`, height: `${C.height}%`, clipPath: y },
         children: [
             T.length > 0 && null != b && null != v
                 ? (0, i.jsx)(f.A, { streams: T, fit: b, tooltipSpacing: R, containerWidthPx: v })
-                : (0, i.jsx)(A.A, { channelId: t, center: y, iconSize: S }),
-            (0, i.jsx)(m.A, { className: s()(x.MQ, x.zq) }),
+                : (0, i.jsx)(A.A, { channelId: t, center: j, iconSize: S }),
+            (0, i.jsx)(m.A, { className: s()(g.MQ, g.zq) }),
         ],
     });
 }

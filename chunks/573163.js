@@ -39,8 +39,8 @@ async function y(e) {
     throw Error("Unreachable code in networkAwareRetry");
 }
 var D = n(252431),
-    v = n(491001),
-    b = n(395504),
+    b = n(491001),
+    v = n(395504),
     P = n(206885),
     M = n(622794);
 let U = new Map();
@@ -150,14 +150,14 @@ function eD(e, t) {
                 userId: t.id,
                 suppressEveryone: et.Ay.isSuppressEveryoneEnabled(n.guild_id),
                 suppressRoles: et.Ay.isSuppressRolesEnabled(n.guild_id),
-            }) || ev(n)
+            }) || eb(n)
         )
     );
 }
-function ev(e) {
+function eb(e) {
     return null != e && e.isPrivate() && !et.Ay.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id);
 }
-async function eb(e) {
+async function ev(e) {
     if (0 === ep.length) {
         ((em = !1), e?.());
         return;
@@ -172,7 +172,7 @@ async function eb(e) {
         ((ep.length = 0), (em = !1));
         return;
     }
-    (await (0, c.BK)(1e3), eb(e));
+    (await (0, c.BK)(1e3), ev(e));
 }
 function eP(e, t) {
     return null != i && i.isInstanceFocused() && i.isPinned(er.uss.TEXT)
@@ -570,7 +570,7 @@ class ew {
                 (this._isThread && !this._isJoinedThread) ||
                 (0, N.k_)(this.channelId, [S.A, C.A]) ||
                 (!this._isThread &&
-                    (0, b.WW)(this._guildId) &&
+                    (0, v.WW)(this._guildId) &&
                     (this._lastMessageTimestamp < eC ||
                         (!et.Ay.isChannelOrParentOptedIn(this._guildId, this.channelId) &&
                             !this.hasRecentlyVisitedAndRead() &&
@@ -584,7 +584,7 @@ class ew {
                 0 === this.mentionCount ||
                 (this._isThread && !this._isJoinedThread) ||
                 (0, N.k_)(this.channelId, [S.A, C.A]) ||
-                ((0, b.WW)(this._guildId) && this._lastMessageTimestamp < eC)
+                ((0, v.WW)(this._guildId) && this._lastMessageTimestamp < eC)
             ) && this.canTrackUnreads()
         );
     }
@@ -1461,7 +1461,7 @@ let e8 = new e7(_.h, {
         },
         LOCAL_MESSAGES_LOADED: function (e) {
             let { channelId: t, messages: n } = e;
-            if (!(0, v.K)() || 0 === n.length) return !1;
+            if (!(0, b.K)() || 0 === n.length) return !1;
             let i = ew.get(t),
                 r = n[0].id;
             (null == i.lastMessageId || W.default.compare(r, i.lastMessageId) > 0) &&
@@ -1543,7 +1543,7 @@ let e8 = new e7(_.h, {
                                 suppressEveryone: et.Ay.isSuppressEveryoneEnabled(n.guildId),
                                 suppressRoles: et.Ay.isSuppressRolesEnabled(n.guildId),
                             })) ||
-                        ev(i)
+                        eb(i)
                     )
                         return { shouldMention: !0, isMentionLowImportance: !1 };
                     if (et.Ay.mentionOnAllMessages && null != i) {
@@ -1792,7 +1792,7 @@ let e8 = new e7(_.h, {
                             read_state_type: e.readStateType,
                         })),
                     ),
-                    em || eb(r)));
+                    em || ev(r)));
         },
         ENABLE_AUTOMATIC_ACK: function (e) {
             let { channelId: t, windowId: n } = e;

@@ -2,7 +2,7 @@
     G8: () => U,
     NV: () => D,
     QY: () => y,
-    V: () => b,
+    V: () => v,
     Xk: () => P,
     ax: () => x,
     ds: () => w,
@@ -10,7 +10,7 @@
     fS: () => G,
     nL: () => M,
     nh: () => L,
-    p6: () => v,
+    p6: () => b,
 }),
     n(938796),
     n(323874),
@@ -189,10 +189,10 @@ function D(e) {
     let { image: t, video: n, type: i, author: r, rawTitle: a } = e;
     return (null != t || null != n) && (i === c.Auw.GIFV || (i !== c.Auw.RICH && null == r && null == a));
 }
-function v(e) {
+function b(e) {
     return e.type === c.Auw.ARTICLE && null != e.url && (f.test(e.url) || h.test(e.url));
 }
-function b(e) {
+function v(e) {
     return e.type === c.Auw.ARTICLE && null != e.url && I.test(e.url);
 }
 function P(e) {

@@ -1,8 +1,8 @@
 n.d(e, { A: () => p });
 var i = n(477900);
 n(582128);
-var l = n(821609),
-    o = n(597770),
+var o = n(821609),
+    l = n(597770),
     s = n(688810),
     a = n(948518),
     r = n(194509),
@@ -28,12 +28,12 @@ let p = function (t) {
         }),
         g = (0, c.Y)(),
         A = m ?? (0, r.U)(e);
-    return (0, i.jsx)(l.$, {
+    return (0, i.jsx)(o.$, {
         onClick: (t) =>
             g(() => {
                 (b(), u?.(t));
             }),
-        icon: o.GiftIcon,
+        icon: l.GiftIcon,
         ...x,
         text: A,
     });

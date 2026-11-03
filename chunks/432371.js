@@ -1,11 +1,11 @@
-n.d(t, { Kc: () => o, cI: () => m, pk: () => u, vC: () => h });
+n.d(t, { Kc: () => c, cI: () => m, pk: () => u, vC: () => h });
 var l = n(702841),
     s = n(5180),
     a = n(260509),
     i = n(71393),
     r = n(652215),
-    c = n(746080);
-function o(e) {
+    o = n(746080);
+function c(e) {
     return u(e, !0, !1);
 }
 function u(e) {
@@ -21,7 +21,7 @@ function u(e) {
                     l = (0, a.wh)(t);
                 return r.kvI.SUMMARIZEABLE.has(e.type) && !e.isNSFW() && !n && !l;
             })(e) ||
-            (!1 === t && e.hasFlag(c.lx.SUMMARIES_DISABLED))
+            (!1 === t && e.hasFlag(o.lx.SUMMARIES_DISABLED))
         ) && d(i.A.getGuild(e.guild_id), n)
     );
 }

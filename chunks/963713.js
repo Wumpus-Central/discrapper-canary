@@ -1,4 +1,4 @@
-n.d(t, { $0: () => d, Q8: () => N, SH: () => m, aV: () => f, fF: () => v, l: () => h, o5: () => C });
+n.d(t, { $0: () => d, Q8: () => y, SH: () => m, aV: () => f, fF: () => v, l: () => h, o5: () => C });
 var l = n(477900),
     s = n(582128),
     a = n(323889),
@@ -39,6 +39,6 @@ function v(e) {
     let { bounty: t, children: n } = e;
     return (0, l.jsx)(p.Provider, { value: t, children: n });
 }
-function N(e) {
+function y(e) {
     return s.useMemo(() => ({ type: a.p.BOUNTY, bounty: e }), [e]);
 }

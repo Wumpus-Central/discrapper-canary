@@ -1,40 +1,40 @@
-e.d(n, { Q7: () => s, av: () => o, oO: () => c });
-var r = e(730202),
-    u = e(65238),
-    a = e(590180),
-    l = e(993408),
-    i = e(758836);
-function o(t, n) {
-    let e = (0, u.XF)(n);
-    return null == n.rewardStatus || null == e || 0 === c(t, e.collectionId) ? null : n;
+n.d(t, { Q7: () => c, av: () => o, oO: () => u });
+var l = n(730202),
+    i = n(65238),
+    r = n(590180),
+    a = n(993408),
+    s = n(758836);
+function o(e, t) {
+    let n = (0, i.XF)(t);
+    return null == t.rewardStatus || null == n || 0 === u(e, n.collectionId) ? null : t;
 }
-function c(t, n) {
-    if (!(0, l.aw)(t)) return +(t.categorySkuId === n);
-    let e = new Set(
-        r.A.getCollection(n)?.products.flatMap((t) => {
-            let { skuIds: n } = t;
-            return n;
+function u(e, t) {
+    if (!(0, a.aw)(e)) return +(e.categorySkuId === t);
+    let n = new Set(
+        l.A.getCollection(t)?.products.flatMap((e) => {
+            let { skuIds: t } = e;
+            return t;
         }) ?? [],
     );
     return (
-        !(0, l.aw)(t)
+        !(0, a.aw)(e)
             ? []
             : [
                   ...new Set(
-                      (t.bundledProducts ?? t.items).map((t) => {
-                          let { skuId: n } = t;
-                          return n;
+                      (e.bundledProducts ?? e.items).map((e) => {
+                          let { skuId: t } = e;
+                          return t;
                       }),
                   ),
               ]
-    ).filter((t) => a.A.getProduct(t)?.categorySkuId === n || e.has(t)).length;
+    ).filter((e) => r.A.getProduct(e)?.categorySkuId === t || n.has(e)).length;
 }
-function s(t, n) {
-    switch (n) {
-        case i.G2.HOME:
-            return t.shopHome;
-        case i.G2.COLLECTION_INDEX:
-            return t.indexPage;
+function c(e, t) {
+    switch (t) {
+        case s.G2.HOME:
+            return e.shopHome;
+        case s.G2.COLLECTION_INDEX:
+            return e.indexPage;
         default:
             return;
     }

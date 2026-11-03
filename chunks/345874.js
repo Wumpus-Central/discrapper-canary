@@ -1,15 +1,15 @@
-n.d(t, { N: () => w });
+n.d(t, { N: () => x });
 var r = n(477900),
     i = n(582128),
     l = n(503698),
     s = n.n(l),
     o = n(661531),
     a = n(252392),
-    u = n(888633),
-    d = n(765178),
+    d = n(888633),
+    u = n(765178),
     c = n(844222),
     h = n(435462);
-let f = (0, u.v)(() => ({ containerIdsBySurface: new Map() })),
+let f = (0, d.v)(() => ({ containerIdsBySurface: new Map() })),
     g = 0;
 var m = n(435871);
 function p(e) {
@@ -17,7 +17,7 @@ function p(e) {
 }
 function A(e) {
     let { surface: t = "app", offset: n } = e,
-        { entry: l, position: u } = (function (e) {
+        { entry: l, position: d } = (function (e) {
             let t = i.useId(),
                 n =
                     (i.useEffect(
@@ -45,8 +45,8 @@ function A(e) {
                 [s, o] = i.useState("top"),
                 a = null != l ? (l.toast.position ?? "top") : s;
             a !== s && o(a);
-            let { minToastDurationMs: u } = i.useContext(c.C),
-                m = Math.max(l?.toast.duration ?? 3e3, u);
+            let { minToastDurationMs: d } = i.useContext(c.C),
+                m = Math.max(l?.toast.duration ?? 3e3, d);
             return (
                 i.useEffect(() => {
                     if (null == l) return;
@@ -59,7 +59,7 @@ function A(e) {
                         l.key !== g &&
                         null != e &&
                         "" !== e &&
-                        ((g = l.key), d.O.announce(e, "critical" === l.toast.variant ? "assertive" : "polite"));
+                        ((g = l.key), u.O.announce(e, "critical" === l.toast.variant ? "assertive" : "polite"));
                 }, [l]),
                 { entry: l, position: s }
             );
@@ -69,7 +69,7 @@ function A(e) {
     let v = i.useCallback(() => y((e) => ({ ...e, leaving: null })), []);
     return (0, r.jsxs)("div", {
         "aria-hidden": !0,
-        className: s()(m.container, m[u]),
+        className: s()(m.container, m[d]),
         style: {
             "--custom-toast-animation-duration": `${o.A.modules.toast.ANIMATION_DURATION_MS.resolve()}ms`,
             "--custom-toast-queue-enter-delay": `${o.A.modules.toast.QUEUE_ENTER_DELAY_MS.resolve()}ms`,
@@ -101,14 +101,14 @@ function A(e) {
 }
 var y = n(335144),
     v = n(8062),
-    x = n(652215);
-function w(e) {
+    w = n(652215);
+function x(e) {
     let { appContext: t } = e,
         n = v.a[t],
         l = (0, y.A)(n),
         s = i.useMemo(
             () =>
-                t === x.BRT.APP
+                t === w.BRT.APP
                     ? { top: l ?? "var(--custom-app-top-bar-height)", bottom: 132 }
                     : null != l
                       ? { top: l }

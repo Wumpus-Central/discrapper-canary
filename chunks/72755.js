@@ -37,27 +37,27 @@ let C = function (e) {
             speaking: y = !1,
             ...T
         } = e,
-        x = l ?? n,
-        _ = (0, u.Ay)(x, a.A.unsafe_rawColors.PRIMARY_800.css),
-        I = p.useConfig({ location: "VideoBackground" }).enabled,
-        R = (0, h.Ay)(c ?? A.dJq, C),
-        S = (0, m.tM)(R?.themeColors?.[0]) ?? A.NJ8.DARK,
+        _ = l ?? n,
+        I = (0, u.Ay)(_, a.A.unsafe_rawColors.PRIMARY_800.css),
+        R = p.useConfig({ location: "VideoBackground" }).enabled,
+        x = (0, h.Ay)(c ?? A.dJq, C),
+        S = (0, m.tM)(x?.themeColors?.[0]) ?? A.NJ8.DARK,
         { profileThemeStyle: O, profileThemeClassName: k } = (0, g.A)({
             theme: S,
             themeType: E.d.VIDEO_TILE_BACKGROUND,
-            primaryColor: R?.themeColors?.[0] ?? null,
-            secondaryColor: R?.themeColors?.[1] ?? null,
+            primaryColor: x?.themeColors?.[0] ?? null,
+            secondaryColor: x?.themeColors?.[1] ?? null,
         }),
-        N = R?.themeColors?.[0] != null && R?.themeColors?.[1] != null;
+        N = x?.themeColors?.[0] != null && x?.themeColors?.[1] != null;
     if (
         (r.useEffect(() => {
-            null != c && I && (0, f.A)(c, void 0, { guildId: C });
-        }, [I, c, C]),
+            null != c && R && (0, f.A)(c, void 0, { guildId: C });
+        }, [R, c, C]),
         null == n)
     )
         return null;
     let M = (0, i.jsx)(o.eu, { className: b.R, src: n, ...T }),
-        P = { ...t, backgroundColor: _ };
+        P = { ...t, backgroundColor: I };
     return (0, i.jsx)("div", {
         style: N ? { ...t, ...O } : { ...P },
         className: s()(b.T, { [k]: N }),

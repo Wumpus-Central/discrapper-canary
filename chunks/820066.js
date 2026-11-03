@@ -28,7 +28,7 @@ var a = n(635377),
     g = n(927813);
 let x = /^[a-z0-9_+\-.#]+$/i,
     E = new d.A("MarkdownToSlate"),
-    S = {
+    y = {
         link: { type: "skip" },
         highlight: { type: "skip" },
         blockQuote: { type: "skip" },
@@ -72,23 +72,23 @@ let x = /^[a-z0-9_+\-.#]+$/i,
         inlineCode: { type: "inlineStyle", before: "`", after: "`" },
         subtext: { type: "inlineStyle", before: "-# ", after: "" },
     },
-    y = new Set(["start", "end"]),
+    S = new Set(["start", "end"]),
     C = new Map([
-        ["inlineCode", y],
-        ["spoiler", y],
-        ["s", y],
+        ["inlineCode", S],
+        ["spoiler", S],
+        ["s", S],
         ["subtext", new Set(["start"])],
-        ["u", y],
+        ["u", S],
     ]),
     A = new Set(["*", "_", "~", "|", "\\"]),
     b = {},
     I = {};
 for (let e in m.Ay.RULES) {
-    if (!(e in S))
+    if (!(e in y))
         throw Error(
             `Slate: Unknown markdown rule: ${e}.  If you have just added a new markdown rule then you probably need to add it to this file so that the rich chat box understands it.`,
         );
-    let t = S[e];
+    let t = y[e];
     ("skip" !== t.type && (b[e] = v(m.Ay.RULES[e])),
         "skip" !== t.type && "inlineObject" !== t.type && (I[e] = v("text" === e ? f.Ay : m.Ay.RULES[e])));
 }
@@ -227,7 +227,7 @@ function P(e, t, n, l, r) {
                     if ("inlineCode" === e) return { before: t[1], after: t[1] };
                     if ("em" === e && t[0].startsWith("_")) return { before: "_", after: "_" };
                     if ("subtext" === e) return { before: k.exec(t.input)[1], after: "" };
-                    let n = S["link" === e ? "url" : e];
+                    let n = y["link" === e ? "url" : e];
                     if ("inlineStyle" === n.type) return n;
                     throw Error("Slate: rule must be an inlineStyle");
                 })(a, u),
@@ -372,10 +372,10 @@ if ((n(827669), n(654821), !r.KE._addedDiscordOverrides)) {
                     p = f.length,
                     g = X.isAncestor(f, c.path),
                     x = X.isAncestor(f, d.path),
-                    S = g ? c.path[p] : 0,
-                    y = x ? d.path[p] : h.children.length - 1,
-                    C = o ? y : S,
-                    A = o ? S : y;
+                    y = g ? c.path[p] : 0,
+                    S = x ? d.path[p] : h.children.length - 1,
+                    C = o ? S : y,
+                    A = o ? y : S;
                 for (let s = C; !E && (!o ? s <= A : s >= A); s += m) {
                     let m = h.children[s],
                         p = X.child(f, s);

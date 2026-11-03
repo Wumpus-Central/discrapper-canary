@@ -1,4 +1,4 @@
-n.d(t, { A: () => C, t: () => y });
+n.d(t, { A: () => C, t: () => S });
 var l = n(582128),
     i = n(17928),
     r = n(554146),
@@ -25,15 +25,15 @@ function x(e) {
 function E() {
     return new Map(o.A.getGuildIds().map((e) => [e, x(e)]));
 }
-function S(e, t, n) {
+function y(e, t, n) {
     return null != t && !!e.available && e.userId !== n && 1 === c.default.compare(e.soundId, t);
 }
-function y(e) {
+function S(e) {
     return (0, i.bG)([u.default, d.A], () => {
         if (null == e) return !1;
         let t = u.default.getCurrentUser()?.id,
             n = x(e);
-        return (d.A.getSoundsForGuild(e) ?? []).some((e) => S(e, n, t));
+        return (d.A.getSoundsForGuild(e) ?? []).some((e) => y(e, n, t));
     });
 }
 function C() {
@@ -41,7 +41,7 @@ function C() {
         [t] = l.useState(E),
         n = l.useRef(new Set());
     return {
-        isNewSound: l.useCallback((n) => S(n, t.get(n.guildId) ?? null, e), [e, t]),
+        isNewSound: l.useCallback((n) => y(n, t.get(n.guildId) ?? null, e), [e, t]),
         markGuildSeen: l.useCallback((e) => {
             if (n.current.has(e)) return;
             let t = (function (e) {

@@ -83,7 +83,7 @@ function D(e) {
         ? e
         : [...new Map([...e].reverse().map((e) => [`${e.application_id}:${e.party?.id}`, e])).values()];
 }
-function v(e) {
+function b(e) {
     let t = f[e];
     if (null == t) return;
     let n = s().maxBy(Object.values(t), (e) => e.processedAtTimestamp);
@@ -93,7 +93,7 @@ function v(e) {
         (T[e] = n.hiddenActivities ?? []),
         null != n.clientStatus && (g[e] = n.clientStatus));
 }
-function b(e) {
+function v(e) {
     let {
         guildId: t,
         userId: n,
@@ -299,7 +299,7 @@ let G = new w(d.h, {
                     r.add(t.id));
             }),
             r.delete(i),
-            r.forEach(v));
+            r.forEach(b));
     },
     OVERLAY_INITIALIZE: function (e) {
         let { presences: t } = e;
@@ -320,7 +320,7 @@ let G = new w(d.h, {
                 hiddenActivities: s,
                 processedAtTimestamp: l,
             } = e;
-            b({
+            v({
                 guildId: t.id,
                 userId: n.id,
                 status: i,
@@ -352,7 +352,7 @@ let G = new w(d.h, {
                     hiddenActivities: s,
                     processedAtTimestamp: l,
                 } = e;
-                return b({
+                return v({
                     guildId: t ?? A.ME,
                     userId: n.id,
                     status: i,
@@ -377,7 +377,7 @@ let G = new w(d.h, {
                     processedAtTimestamp: s,
                 } = e;
                 null != t &&
-                    b({
+                    v({
                         guildId: A.ME,
                         userId: t.id,
                         status: n,
@@ -396,7 +396,7 @@ let G = new w(d.h, {
         let { guildId: t, members: n } = e;
         n.forEach((e) => {
             null != e.presence &&
-                b({
+                v({
                     guildId: t,
                     userId: e.user_id,
                     status: e.presence.status,
@@ -411,7 +411,7 @@ let G = new w(d.h, {
         let { guildId: t, addedMembers: n } = e;
         n?.forEach((e) => {
             null != e.presence &&
-                b({
+                v({
                     guildId: t,
                     userId: e.userId,
                     status: e.presence.status,

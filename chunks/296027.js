@@ -27,8 +27,8 @@ var N = n(515183),
 n(672396);
 var y = n(392164);
 let D = new d.A("OverlayRenderStore"),
-    v = T.V6.UNSET,
-    b = !1,
+    b = T.V6.UNSET,
+    v = !1,
     P = !1,
     M = (0, f.isWindows)() && f.isPlatformEmbedded && !__OVERLAY__,
     U = null,
@@ -115,7 +115,7 @@ async function Z(e) {
     );
 }
 function Q(e, t) {
-    switch (v) {
+    switch (b) {
         case T.V6.UNSET:
             break;
         case T.V6.IN_PROCESS_V2:
@@ -143,7 +143,7 @@ function Q(e, t) {
                 reason: "Forced out-of-process limited interaction overlay rendering",
             };
     }
-    if (!(W() || b))
+    if (!(W() || v))
         return {
             source: T.yp.DEFAULT,
             enabledOOP: !1,
@@ -171,7 +171,7 @@ function Q(e, t) {
             overlayMethod: T.Ue.Disabled,
             reason: "Overlay disabled for specific game",
         };
-    if (!W() && b) {
+    if (!W() && v) {
         let e = (0, N.O4)(n);
         return {
             ...e,
@@ -182,7 +182,7 @@ function Q(e, t) {
     if (!(0, I.supportsOutOfProcess)())
         return { ...(0, N.O4)(n), source: T.yp.NO_OUT_OF_PROCESS_SUPPORT, reason: "supportsOutOfProcess failed" };
     if (!i.enabledOOP && i.enabledLegacy)
-        return b
+        return v
             ? { ...(0, N.O4)(n), source: T.yp.LEGACY_ENABLED, reason: "Legacy overlay enabled only" }
             : { ...i, overlayMethod: T.Ue.Disabled, source: T.yp.LEGACY_ENABLED, reason: "Legacy overlay disabled" };
     let r = h.A.findGame(n)?.id,
@@ -193,7 +193,7 @@ function Q(e, t) {
         case l.aI.MAXIMIZED:
         case l.aI.BORDERLESS_FULLSCREEN: {
             let e = i.enabledOOP && W(),
-                r = i.enabledLegacy && b,
+                r = i.enabledLegacy && v,
                 s = a ? T.Ue.OutOfProcessLimitedInteraction : T.Ue.OutOfProcess;
             return {
                 ...i,
@@ -203,7 +203,7 @@ function Q(e, t) {
         }
         case l.aI.FULLSCREEN: {
             let e = (0, N.O4)(n),
-                t = e.enabledLegacy && b,
+                t = e.enabledLegacy && v,
                 i = t ? e.overlayMethod : T.Ue.Disabled;
             return { ...e, overlayMethod: i, reason: `Fullscreen - legacyEnabled: ${t}, newOverlayMethod: ${i}` };
         }
@@ -231,7 +231,7 @@ async function J(e) {
             await eo(new Set([e])));
         return;
     }
-    if (!(W() || b)) return void D.verbose(`Skipping track for pid ${e} - overlay is disabled`);
+    if (!(W() || v)) return void D.verbose(`Skipping track for pid ${e} - overlay is disabled`);
     if (!A.default.isAuthenticated()) return void D.verbose(`Skipping track for pid ${e} - not authenticated`);
     let t = await Z(e);
     if (null == t) return void D.error(`Failed to track game ${e}`);
@@ -381,8 +381,8 @@ async function el(e) {
         ((-1 === U || null === U) && s.state === T.AR.OVERLAY_RENDERING)
     )
         return a;
-    let d = v === T.V6.OUT_OF_PROCESS_V3 || v === T.V6.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
-        c = v === T.V6.IN_PROCESS_V2,
+    let d = b === T.V6.OUT_OF_PROCESS_V3 || b === T.V6.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
+        c = b === T.V6.IN_PROCESS_V2,
         u = (0, N.e3)(l, W()),
         _ = (0, N.Zj)(s, l, W());
     function E() {
@@ -407,7 +407,7 @@ async function el(e) {
             shouldSwitchToOutOfProcess: u,
             isForcedInProcess: c,
             isForcedOutOfProcess: d,
-            legacyEnabled: b,
+            legacyEnabled: v,
             overlayEnabled: W(),
         }),
         o.overlayMethod)
@@ -427,7 +427,7 @@ async function el(e) {
                     : (D.verbose(`OOP requested for untracked pid ${t}`), Promise.resolve())));
             break;
         case T.Ue.Hook:
-            ((_ && !d) || c || b) &&
+            ((_ && !d) || c || v) &&
                 (E(),
                 await ((i = e),
                 (r = o),
@@ -456,7 +456,7 @@ async function ed(e, t) {
     if (!m.O) return void D.verbose("setOverlayEnabled: not supported");
     if (
         (D.info("setOverlayEnabled: supported", { newLegacyEnabled: e, newOopEnabled: t }),
-        (b = e),
+        (v = e),
         p.x.update({ legacyEnabled: e, oopEnabled: t }),
         D.info("setOverlayEnabled", { newOopEnabled: t, newLegacyEnabled: e }),
         e || t)
@@ -500,7 +500,7 @@ class eA extends i.Ay.Store {
         return P;
     }
     getForcedRenderMode() {
-        return v;
+        return b;
     }
     isAnyOverlayRendering() {
         return (0, L.LK)() ? E.A.getWindowOpen(y.f) : this.getOverlayRenderingTrackedGames().length > 0;
@@ -529,10 +529,10 @@ class eA extends i.Ay.Store {
         return null == t ? null : { enabledOOP: t.oopEnabled, enabledLegacy: t.legacyEnabled, ...t };
     }
     getGlobalEnabledStatus() {
-        return { oopEnabled: W(), legacyEnabled: b };
+        return { oopEnabled: W(), legacyEnabled: v };
     }
     getAnyGlobalEnabledOverlay() {
-        return W() || b;
+        return W() || v;
     }
     getPerGameEnabledStatus(e) {
         if (null == e) return { oopEnabled: !1, legacyEnabled: !1 };
@@ -582,7 +582,7 @@ let eh = new eA(
                       if (
                           (__OVERLAY__ && D.error("Running handleGameToggleOverlay While in Overlay Context!"),
                           D.verbose("handleGameToggleOverlay", { action: e }),
-                          !(W() || b))
+                          !(W() || v))
                       ) {
                           if ((D.verbose("handleGameToggleOverlay: overlay not enabled"), "pid" in e.game)) {
                               let t = e.game.pid,
@@ -603,7 +603,7 @@ let eh = new eA(
                           (e?.legacyEnabled !== n && X(t, "legacyEnabled", n, "handleGameToggleOverlay"),
                               e?.oopEnabled !== i && X(t, "oopEnabled", i ?? !1, "handleGameToggleOverlay"));
                       }
-                      let r = n && b,
+                      let r = n && v,
                           a = (i ?? !1) && W();
                       return (
                           r || a
@@ -618,7 +618,7 @@ let eh = new eA(
                       );
                   },
                   OVERLAY_FORCE_RENDER_MODE: function (e) {
-                      return ((v = e.mode), eu(), !0);
+                      return ((b = e.mode), eu(), !0);
                   },
                   OVERLAY_UPDATE_OVERLAY_STATE: function (e) {
                       if (null != Y(e.pid))

@@ -8,8 +8,8 @@
     nb: () => C,
     ps: () => O,
     qM: () => g,
-    tS: () => v,
-    wD: () => b,
+    tS: () => b,
+    wD: () => v,
 }),
     n(321073));
 var i = n(468311),
@@ -198,13 +198,13 @@ function D(e, t) {
     let n = m[e][t];
     return null != n && I(n) ? n : void 0;
 }
-function v(e, t, n) {
+function b(e, t, n) {
     let { stats: i, hasNitro: r, savedCharacter: a } = n;
     if (a?.[e] === t) return !1;
     let s = D(e, t);
     return null == s ? !C(e, t) : s === _.K.NITRO ? !r : !A(e, i).has(s);
 }
-function b(e) {
+function v(e) {
     let t = R[e];
     return null != t ? (L[t] ?? []) : [];
 }

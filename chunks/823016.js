@@ -1,25 +1,25 @@
-n.d(t, { B: () => c, r: () => o });
+n.d(t, { B: () => c, r: () => d });
 var i = n(477900),
     l = n(582128),
     a = n(775602),
     s = n(818348);
 let r = l.createContext(null),
-    d = {
+    o = {
         registerItemRef: () => s.tE,
         registerDragHandleRef: () => s.tE,
         manageFocusOnReorder: s.tE,
         manageFocusOnDelete: s.tE,
     };
-function o() {
-    return l.useContext(r) ?? d;
+function d() {
+    return l.useContext(r) ?? o;
 }
 function c(e) {
     let { children: t, emptyListFallbackRef: n } = e,
         s = l.useRef(new Map()),
-        d = l.useRef(new Map()),
-        o = l.useRef([]),
+        o = l.useRef(new Map()),
+        d = l.useRef([]),
         c = l.useCallback(() => {
-            o.current = Array.from(s.current.keys()).sort((e, t) => {
+            d.current = Array.from(s.current.keys()).sort((e, t) => {
                 let n = s.current.get(e),
                     i = s.current.get(t);
                 if (null == n || null == i) return 0;
@@ -31,7 +31,7 @@ function c(e) {
         }, []),
         u = l.useCallback(
             (e) => (t) => {
-                null != t ? d.current.set(e, t) : d.current.delete(e);
+                null != t ? o.current.set(e, t) : o.current.delete(e);
             },
             [],
         ),
@@ -44,7 +44,7 @@ function c(e) {
         g = l.useCallback((e) => {
             a.Ay.keyboardModeEnabled &&
                 requestAnimationFrame(() => {
-                    let t = d.current.get(e);
+                    let t = o.current.get(e);
                     t?.focus();
                 });
         }, []),
@@ -52,7 +52,7 @@ function c(e) {
             (e) => {
                 if (!a.Ay.keyboardModeEnabled) return;
                 c();
-                let t = o.current,
+                let t = d.current,
                     i = t.indexOf(e);
                 if (-1 === i) return;
                 let l = i + 1 < t.length ? i + 1 : i - 1;

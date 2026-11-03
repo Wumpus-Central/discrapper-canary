@@ -11,7 +11,7 @@
     SA: () => D,
     SD: () => C,
     Sq: () => w,
-    Uh: () => b,
+    Uh: () => v,
     a5: () => y,
     fs: () => f,
     hv: () => P,
@@ -97,7 +97,7 @@ function D(e) {
         type: e.type,
     };
 }
-function v(e) {
+function b(e) {
     return {
         id: e.id,
         options: e.options.map((e) => ({
@@ -116,9 +116,9 @@ function v(e) {
         type: e.type,
     };
 }
-function b(e) {
+function v(e) {
     return {
-        prompts: e.prompts.map(v),
+        prompts: e.prompts.map(b),
         defaultChannelIds: e.default_channel_ids,
         responses: e.responses ?? [],
         mode: e.mode,

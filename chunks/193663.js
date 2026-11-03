@@ -26,14 +26,14 @@ let x = function (e) {
         avatarClassName: I,
         selectedClassName: S,
         innerClassName: T,
-        wrapContent: C,
-        highlighted: b,
-        focusProps: y,
+        wrapContent: b,
+        highlighted: y,
+        focusProps: C,
         ...E
     } = e;
     ((E.className = a()(E.className, m.kL, {
         [m.wH]: g,
-        [m.mr]: b,
+        [m.mr]: y,
         [S ?? ""]: g,
         [m.vk]: !g && (null != v || null != A),
     })),
@@ -45,7 +45,7 @@ let x = function (e) {
                 (0, t.jsx)(d.A, { nameplate: x, hovered: p, selected: g, content: M, placement: c.u.MEMBER_LIST }),
                 (0, t.jsxs)("div", {
                     ref: M,
-                    className: a()(T, m.Zp, { [m.SU]: !g && N, [m.Ib]: C }),
+                    className: a()(T, m.Zp, { [m.SU]: !g && N, [m.Ib]: b }),
                     children: [
                         (0, t.jsx)("div", { className: a()(m.my, I), children: n }),
                         (0, t.jsxs)("div", {
@@ -54,7 +54,7 @@ let x = function (e) {
                                 (0, t.jsxs)("div", {
                                     className: m.BG,
                                     children: [
-                                        (0, t.jsx)("div", { className: a()(m.UU, { [m.to]: C }), children: i }),
+                                        (0, t.jsx)("div", { className: a()(m.UU, { [m.to]: b }), children: i }),
                                         j,
                                     ],
                                 }),
@@ -68,10 +68,10 @@ let x = function (e) {
         });
     return null != v
         ? (0, t.jsx)(u.vN, {
-              ...y,
+              ...C,
               children: (0, t.jsx)(r.N_, { to: v, onClick: A, ...E, role: "listitem", ref: l, children: R }),
           })
         : null != A
-          ? (0, t.jsx)(o.D, { onClick: A, focusProps: y, ...E, role: "listitem", innerRef: l, children: R })
-          : (0, t.jsx)(u.vN, { ...y, children: (0, t.jsx)("div", { ...E, role: "listitem", ref: l, children: R }) });
+          ? (0, t.jsx)(o.D, { onClick: A, focusProps: C, ...E, role: "listitem", innerRef: l, children: R })
+          : (0, t.jsx)(u.vN, { ...C, children: (0, t.jsx)("div", { ...E, role: "listitem", ref: l, children: R }) });
 };

@@ -55,7 +55,7 @@ function E(e, t) {
     null != y && (0, a.RE)(y.skuId);
     let D = null != h ? T?.profileFrame : m?.profileFrame;
     (null != D && (0, a.RE)(D.skuId), null != t && (0, r.l0)(t));
-    let v = {
+    let b = {
             type: n,
             withMutualGuilds: c,
             withMutualFriends: E,
@@ -66,6 +66,6 @@ function E(e, t) {
             connectionsRoleId:
                 null == h ? void 0 : (0, s._g)({ guildMember: o.Ay.getMember(h, e), channel: l.A.getChannel(f) })?.id,
         },
-        b = (0, i.eO)(e, v, _);
-    return L && !A ? Promise.resolve() : b;
+        v = (0, i.eO)(e, b, _);
+    return L && !A ? Promise.resolve() : v;
 }

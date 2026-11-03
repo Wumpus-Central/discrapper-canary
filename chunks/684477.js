@@ -20,13 +20,13 @@ function p(e) {
             primaryCTAButtonProps: E,
             onBackClick: S,
         } = e,
-        { hasPaymentSources: g } = (0, u.j)(),
-        { isExpressCheckoutEnabled: I } = (0, c.t4)((e) => ({
+        { hasPaymentSources: y } = (0, u.j)(),
+        { isExpressCheckoutEnabled: g } = (0, c.t4)((e) => ({
             isExpressCheckoutEnabled: e.getIsExpressCheckoutEnabled(),
         })),
-        A = g || I ? r.pn.REVIEW : r.pn.ADD_PAYMENT_STEPS,
-        y = i.useCallback(() => t(A), [t, A]),
-        x = i.useMemo(
+        I = y || g ? r.pn.REVIEW : r.pn.ADD_PAYMENT_STEPS,
+        A = i.useCallback(() => t(I), [t, I]),
+        P = i.useMemo(
             () =>
                 n === s.X.CUSTOM_STEP_BODY
                     ? p()
@@ -35,11 +35,11 @@ function p(e) {
                       }),
             [n, p, C, h, f],
         ),
-        P = i.useMemo(() => ({ ...E, onClick: y, text: d.intl.string(d.t.XiOHRX) }), [E, y]);
+        v = i.useMemo(() => ({ ...E, onClick: A, text: d.intl.string(d.t.XiOHRX) }), [E, A]);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(a.dZ, { children: x }),
-            (0, l.jsx)(a.UX, { children: (0, l.jsx)(o.cy, { onBackClick: S, primaryCTAButtonProps: P }) }),
+            (0, l.jsx)(a.dZ, { children: P }),
+            (0, l.jsx)(a.UX, { children: (0, l.jsx)(o.cy, { onBackClick: S, primaryCTAButtonProps: v }) }),
         ],
     });
 }

@@ -26,8 +26,8 @@ let N = "recentMentionFilterSettings",
     L = !1,
     y = !0,
     D = s.w.get(N, { guildFilter: E.KE7.ALL_SERVERS, everyoneFilter: !0, roleFilter: !0 }),
-    v = !1,
-    b = 0,
+    b = !1,
+    v = 0,
     P = !1;
 function M(e) {
     let { addedMessages: t, deletedMessages: n } = e;
@@ -138,10 +138,10 @@ function F(e) {
         (C = a).forEach((e) => {
             (null == O[e.getChannelId()] && (O[e.getChannelId()] = 0), O[e.getChannelId()]++);
         }),
-        0 === C.length && (v = !1));
+        0 === C.length && (b = !1));
 }
 function B() {
-    ((C = []), (R = {}), (v = !1), (P = !1), (O = {}));
+    ((C = []), (R = {}), (b = !1), (P = !1), (O = {}));
 }
 function V() {
     (M({ deletedMessages: r().filter(C, (e) => m.A.isBlockedOrIgnoredForMessage(e)) }),
@@ -158,16 +158,16 @@ class j extends a.Ay.Store {
         this.waitFor(h.default, f.A, I.A, p.Ay, m.A, T.A, g.Ay, S.default);
     }
     get hasLoadedEver() {
-        return v;
-    }
-    get lastLoaded() {
         return b;
     }
+    get lastLoaded() {
+        return v;
+    }
     getMentions() {
-        return v || C.length > 0 ? C : null;
+        return b || C.length > 0 ? C : null;
     }
     getSettingsFilteredMentions() {
-        return v || C.length > 0 ? C.filter(w) : null;
+        return b || C.length > 0 ? C.filter(w) : null;
     }
     hasMention(e) {
         return R[e];
@@ -212,8 +212,8 @@ let W = new j(o.h, {
             }),
             (L = !1),
             (y = t),
-            (b = (0, l.tB)()),
-            (v = !0));
+            (v = (0, l.tB)()),
+            (b = !0));
     },
     LOAD_RECENT_MENTIONS_FAILURE: function () {
         L = !1;
@@ -230,7 +230,7 @@ let W = new j(o.h, {
     },
     CHANNEL_SELECT: function () {
         if (D.guildFilter !== E.KE7.THIS_SERVER) return !1;
-        v = !1;
+        b = !1;
     },
     CONNECTION_OPEN: B,
     GUILD_DELETE: function (e) {

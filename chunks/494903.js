@@ -1,4 +1,4 @@
-n.d(t, { B: () => c });
+n.d(t, { B: () => o });
 var r = n(477900);
 n(582128);
 var i = n(683071),
@@ -6,7 +6,7 @@ var i = n(683071),
     l = n(740053);
 let s = { info: "info", warning: "warning", critical: "critical" },
     u = ["info", "warning", "critical"];
-function c() {
+function o() {
     let { notices: e, isExpressCheckoutVisible: t } = (0, a.t4)((e) => ({
         notices: e.getPaymentSourceNotices(),
         isExpressCheckoutVisible: e.getExpressCheckoutVisibilityState().shouldExpressCheckoutBeVisible,

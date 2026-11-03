@@ -103,10 +103,10 @@ let O = null,
     L = new Map(),
     y = null,
     D = 0;
-function v() {
+function b() {
     return window.DiscordNative?.frameDebugger ?? null;
 }
-async function b(e) {
+async function v(e) {
     let t = await Promise.race([
         (0, C.J)(e, `native-cdp-${Date.now()}-${++D}`, {
             steps: [{ action: "cdp", calls: [{ method: "Runtime.releaseObjectGroup", params: {} }] }],
@@ -119,7 +119,7 @@ async function b(e) {
     return Array.isArray(n) ? n.slice(-200) : [];
 }
 async function P(e, t) {
-    let n = v(),
+    let n = b(),
         i = (function (e) {
             try {
                 return new URL(e.src, window.location.href).origin;
@@ -158,7 +158,7 @@ async function P(e, t) {
         )
             return (n.detach().catch(() => {}), "cancelled");
         let s = { id: r, projectId: e, origin: i, earlierEvents: [] };
-        return ((O = s), (s.earlierEvents = await b(t).catch(() => [])), a() ? "cancelled" : s);
+        return ((O = s), (s.earlierEvents = await v(t).catch(() => [])), a() ? "cancelled" : s);
     })()),
         (R = r));
     try {
@@ -172,7 +172,7 @@ function M(e, t) {
 }
 async function U(e, t, n) {
     let i,
-        r = v(),
+        r = b(),
         a = (function (e) {
             if (!0 === e.passive || !0 === e.snapshot || 1 !== e.steps.length) return null;
             let t = e.steps[0],
@@ -209,7 +209,7 @@ async function U(e, t, n) {
     }
 }
 function w(e) {
-    let t = v(),
+    let t = b(),
         n = L.get(e);
     (null != n && ((n.cancelled = !0), L.delete(e)),
         R?.projectId === e && (R.cancelled = !0),
@@ -563,7 +563,7 @@ let J = {
     beginPreviewOperation: function (e) {
         (Q.begin(e),
             (function (e) {
-                if (null == v() || L.has(e)) return;
+                if (null == b() || L.has(e)) return;
                 let t = { cancelled: !1 };
                 (L.set(e, t),
                     (0, S.o$)(e, 6e3)

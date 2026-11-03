@@ -30,13 +30,13 @@ function D() {
         t = T.Ay.getVoiceChannelId();
     return ((R = e), (L = t), y.clear());
 }
-function v(e) {
+function b(e) {
     let {
         guild: { id: t },
     } = e;
     return y.clearGuildId(t);
 }
-function b(e) {
+function v(e) {
     let {
         channel: { guild_id: t },
     } = e;
@@ -142,8 +142,8 @@ let H = new V(s.h, {
         let { channelId: t } = e;
         return y.clearGuildId(f.A.getChannel(t)?.guild_id);
     },
-    CHANNEL_CREATE: b,
-    CHANNEL_DELETE: b,
+    CHANNEL_CREATE: v,
+    CHANNEL_DELETE: v,
     CHANNEL_LOCAL_ACK: M,
     CHANNEL_MUTE_EXPIRED: P,
     CHANNEL_RTC_UPDATE_CHAT_OPEN: M,
@@ -192,8 +192,8 @@ let H = new V(s.h, {
     GAMES_DATABASE_FETCH: F,
     GAMES_DATABASE_UPDATE: F,
     GUILD_APPLICATIONS_FETCH_SUCCESS: F,
-    GUILD_CREATE: v,
-    GUILD_DELETE: v,
+    GUILD_CREATE: b,
+    GUILD_DELETE: b,
     GUILD_MEMBER_UPDATE: function (e) {
         let { guildId: t, user: n } = e;
         return A.default.getId() === n.id && y.clearGuildId(t);
@@ -208,7 +208,7 @@ let H = new V(s.h, {
     GUILD_SCHEDULED_EVENT_DELETE: B,
     GUILD_SCHEDULED_EVENT_UPDATE: B,
     GUILD_TOGGLE_COLLAPSE_MUTED: P,
-    GUILD_UPDATE: v,
+    GUILD_UPDATE: b,
     IMPERSONATE_STOP: P,
     IMPERSONATE_UPDATE: P,
     LOAD_CHANNELS: function (e) {

@@ -26,8 +26,8 @@ let I = u.A.Millis.DAY,
     L = [],
     y = [],
     D = new Map(),
-    v = u.A.Millis.HOUR,
-    b = new Set(),
+    b = u.A.Millis.HOUR,
+    v = new Set(),
     P = new Set(),
     M = (0, E.isWindows)() ? "win32" : (0, E.isMac)() ? "darwin" : (0, E.isLinux)() ? "linux" : null,
     U = Object.freeze([]);
@@ -223,8 +223,8 @@ class V extends r.Ay.PersistedStore {
     }
     maybeTrackApplicationLookupFallthrough(e, t, n) {
         let i = e.id;
-        b.has(i) ||
-            (b.add(i),
+        v.has(i) ||
+            (v.add(i),
             c.default.track(h.HAw.GAME_APPLICATION_LOOKUP_FALLTHROUGH, {
                 application_id: i,
                 application_name: e.name ?? null,
@@ -249,7 +249,7 @@ class V extends r.Ay.PersistedStore {
         let i = x(e.exePath) ?? "unknown",
             r = D.get(i),
             a = Date.now();
-        (null == r || a - r >= v) &&
+        (null == r || a - r >= b) &&
             (D.set(i, a),
             c.default.track(h.HAw.GAME_BLOCKLIST_TRIGGERED, {
                 block_type: t,

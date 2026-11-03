@@ -16,7 +16,7 @@ function u(e) {
             checkoutInvoicePreview: l,
             renewalInvoicePreview: s,
             setPurchasePreviewError: u,
-            isPlanSwitchLoading: c,
+            isPlanSwitchLoading: o,
         } = (0, a.t4)((e) => ({
             checkoutInvoicePreview: e.checkoutInvoicePreview,
             renewalInvoicePreview: e.renewalInvoicePreview,
@@ -51,9 +51,9 @@ function u(e) {
                         error: n,
                         proratedInvoicePreview: l,
                         renewalInvoicePreview: s,
-                        planSwitchLoading: c,
+                        planSwitchLoading: o,
                     }),
-                [t, n, l, s, c],
+                [t, n, l, s, o],
             ),
         }
     );

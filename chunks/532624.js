@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => ei, DV: () => y, aS: () => v }), n(321073));
+(n.d(t, { Ay: () => ei, DV: () => y, aS: () => b }), n(321073));
 var i = n(812729),
     r = n.n(i),
     a = n(435558),
@@ -57,7 +57,7 @@ function D(e, t, n, i) {
         },
     });
 }
-function v() {
+function b() {
     var e;
     let t,
         n,
@@ -88,7 +88,7 @@ function v() {
         L(a, !1)
     );
 }
-let b = {},
+let v = {},
     P = {},
     M = 0,
     U = !0,
@@ -97,7 +97,7 @@ let b = {},
     x = [g.hCu.PUSH_TO_TALK, g.hCu.TOGGLE_OVERLAY_INPUT_LOCK, g.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET],
     k = [];
 function F(e) {
-    return e === v().id ? v() : P[e];
+    return e === b().id ? b() : P[e];
 }
 function B(e, t, n) {
     (h.default.track(g.HAw.KEYBOARD_SHORTCUT_USED, {
@@ -112,7 +112,7 @@ function V() {
 }
 function H() {
     if (V()) return;
-    let e = v();
+    let e = b();
     null == s().find(P, (t) => e.action === t.action && t.enabled && t.shortcut.length > 0) &&
         U &&
         !G &&
@@ -120,7 +120,7 @@ function H() {
 }
 function j() {
     if (V()) return;
-    let e = v();
+    let e = b();
     G && (W(e.id), (G = !1));
 }
 function W(e) {
@@ -129,14 +129,14 @@ function W(e) {
             n = null != t ? w[t.action] : null;
         (null != t && n?.isPressed === !0 && C.nextTick(() => B(!1, n, t)), I.Ay.inputEventUnregister(parseInt(e, 10)));
     } else {
-        let t = b[e];
+        let t = v[e];
         if (null != t) {
             let n = P[e];
             if (null != n) {
                 let e = w[n.action];
                 e?.isPressed === !0 && C.nextTick(() => B(!1, e, n));
             }
-            (t.reset(), (b[e] = null));
+            (t.reset(), (v[e] = null));
         }
     }
 }
@@ -173,7 +173,7 @@ function K(e) {
             let r = (0, E.I)(document);
             (i.keyup && r.bindGlobal((0, m.dI)(t), () => n(!1), "keyup"),
                 i.keydown && r.bindGlobal((0, m.dI)(t), () => n(!0), "keydown"),
-                (b[e] = r));
+                (v[e] = r));
         }
     })(
         r,
@@ -433,7 +433,7 @@ class et extends l.Ay.DeviceSettingsStore {
     }
     getOverlayKeybind() {
         let e = this.getKeybindForAction(g.hCu.TOGGLE_OVERLAY_INPUT_LOCK, !0);
-        return null != e ? e : v();
+        return null != e ? e : b();
     }
     getOverlayChatKeybind() {
         return this.getKeybindForAction(g.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, !0);
@@ -488,7 +488,7 @@ let en = new et(o.h, {
     KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS: function (e) {
         let { keybinds: t } = e;
         ((w = t),
-            (b = {}),
+            (v = {}),
             (M = 0),
             Object.values(P).filter((e) => x.includes(e.action) && e.managed).length !== x.length && ee(),
             s().forEach(P, (e) => {

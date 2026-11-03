@@ -15,7 +15,7 @@ function c(e, t) {
         v = (0, i.A)(n),
         p = (0, i.A)(t),
         g = (0, i.A)(I),
-        x = (0, i.A)(c);
+        m = (0, i.A)(c);
     r.useEffect(() => {
         if (!e) {
             f.current = !1;
@@ -32,10 +32,10 @@ function c(e, t) {
                 position_in_section: e?.tilePosition,
                 card_id: e?.cardId,
                 product_sku_ids: (0, o.v8)(t),
-                location_stack: x.current,
+                location_stack: m.current,
             }),
                 (f.current = !0));
         }, 250);
         return () => clearTimeout(t);
-    }, [e, v, p, g, x]);
+    }, [e, v, p, g, m]);
 }

@@ -17,7 +17,7 @@ let g = (t) => {
         { interactionTypeSent: i, showInteractionToast: l } = (0, c.Pq)(),
         g = i === A.AQ.REPLY ? m.intl.string(m.t.BPaiaa) : m.intl.string(m.t.Ry2EtG),
         h = (0, a.bG)([u.Ay], () => u.Ay.useReducedMotion),
-        x = (0, d.p)(
+        I = (0, d.p)(
             l,
             {
                 from: { transform: h ? "translateY(0)" : "translateY(16px)", opacity: 0 },
@@ -29,7 +29,7 @@ let g = (t) => {
             "animate-always",
         );
     return (0, n.jsx)(n.Fragment, {
-        children: x(
+        children: I(
             (t, l) =>
                 l &&
                 (0, n.jsx)(r.animated.div, {

@@ -1,4 +1,4 @@
-(n.d(t, { AZ: () => v, Ay: () => P, Fd: () => L, W$: () => D, d6: () => y, ej: () => _ }), n(321073));
+(n.d(t, { AZ: () => b, Ay: () => P, Fd: () => L, W$: () => D, d6: () => y, ej: () => _ }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -127,10 +127,10 @@ function y(e) {
 function D(e, t) {
     return new Date(e.scheduled_start_time).getTime() < Date.now() + 1e3 * t;
 }
-function v(e) {
+function b(e) {
     return null != e && u.lV.has(e.status);
 }
-class b extends a.Ay.Store {
+class v extends a.Ay.Store {
     initialize() {
         this.waitFor(o.default, d.Ay);
     }
@@ -180,7 +180,7 @@ class b extends a.Ay.Store {
         return null == e ? {} : (I[e]?.[t ?? f] ?? {});
     }
 }
-let P = new b(l.h, {
+let P = new v(l.h, {
     CONNECTION_OPEN: function (e) {
         let { guilds: t } = e;
         return (

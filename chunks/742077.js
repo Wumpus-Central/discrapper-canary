@@ -26,8 +26,8 @@ var i = n(91871),
     L = n(723702),
     y = n(19575),
     D = n(144914),
-    v = n(227841),
-    b = n(652215);
+    b = n(227841),
+    v = n(652215);
 let P = o()().subtract(1, "week"),
     M = [],
     U = "",
@@ -36,19 +36,19 @@ function G(e, t) {
     return e.application.name.localeCompare(t.application.name, A.default.locale, { sensitivity: "base" });
 }
 let x = {
-        [b.DpB.NAME]: G,
-        [b.DpB.PLATFORM]: (e, t, n) => {
+        [v.DpB.NAME]: G,
+        [v.DpB.PLATFORM]: (e, t, n) => {
             let i = e.libraryApplication.getDistributor(),
                 r = t.libraryApplication.getDistributor();
             return i === r
-                ? (n === b.tSW.DESCENDING ? -1 : 1) * G(e, t)
+                ? (n === v.tSW.DESCENDING ? -1 : 1) * G(e, t)
                 : null == i
                   ? 1
                   : null == r
                     ? -1
                     : i.localeCompare(r);
         },
-        [b.DpB.LAST_PLAYED]: (e, t) =>
+        [v.DpB.LAST_PLAYED]: (e, t) =>
             e.isNew && !t.isNew
                 ? -1
                 : !e.isNew && t.isNew
@@ -58,7 +58,7 @@ let x = {
                     : e.lastPlayed > t.lastPlayed
                       ? -1
                       : 1,
-        [b.DpB.ACTIONS]: null,
+        [v.DpB.ACTIONS]: null,
     },
     k = (0, C.L_)((e) => e.filter((e) => null != e.libraryApplication && e.shouldShowInLibrary)),
     F = (0, C.L_)((e) =>
@@ -73,7 +73,7 @@ let x = {
         let r = x[t];
         if (null == r) return e;
         let a = [...e].sort(r);
-        return n === b.tSW.DESCENDING ? a.reverse() : a;
+        return n === v.tSW.DESCENDING ? a.reverse() : a;
     }),
     H = (0, C.L_)((e) => e.filter((e) => null != e.libraryApplication && e.libraryApplication.isHidden()));
 function j(e, t) {
@@ -117,7 +117,7 @@ function W() {
                               }),
                               isUpdatingFlags: I.A.isUpdatingFlags(e.id, e.branchId),
                               shouldShowInLibrary: (0, R.Tr)(a, e, p.A),
-                              defaultAction: (0, v.F)(e, g.A, S.A),
+                              defaultAction: (0, b.F)(e, g.A, S.A),
                           }
                         : null;
                 })(i, n, t, e, !0),

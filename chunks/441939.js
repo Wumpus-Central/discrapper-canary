@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => b });
 var i = n(477900),
     l = n(17928),
     s = n(419477),
@@ -63,22 +63,22 @@ function v(e) {
 var C = n(395671),
     _ = n(666176),
     j = n(280450),
-    N = n(652215),
-    y = n(272984);
-let T = function (e) {
+    y = n(652215),
+    N = n(272984);
+let b = function (e) {
     let { channel: t, message: n, hideParty: u, hideInviteEmbedBanner: m } = e,
         { analyticsLocations: h } = (0, a.Ay)(r.A.INVITE_EMBED),
         g =
             null != n.application
                 ? C.Ay.createFromServer(n.application)
-                : null != n.activity && null != n.activity.party_id && (0, y.pH)(n.activity.party_id)
+                : null != n.activity && null != n.activity.party_id && (0, N.pH)(n.activity.party_id)
                   ? _.HT
                   : void 0,
         { data: p } = (0, o.YY)(n.application?.id),
         A = p ?? g,
         x = (0, l.bG)([j.default], () => j.default.getId()),
         { enabled: f } = c.A.useConfig({ guildId: t.guild_id, location: "MessageActivityInvite" });
-    return n.activity?.type === N.xL.STREAM_REQUEST && null == A && f
+    return n.activity?.type === y.xL.STREAM_REQUEST && null == A && f
         ? (0, i.jsx)(v, { channel: t, message: n, analyticsLocations: h, currentUserId: x })
         : null == A
           ? null

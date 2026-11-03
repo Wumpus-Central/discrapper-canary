@@ -1,19 +1,19 @@
-n.d(t, { A: () => o });
+n.d(t, { A: () => c });
 var l = n(477900),
     s = n(582128),
     a = n(453771),
     i = n(619517),
     r = n(380629);
 n(516653);
-var c = n(105292);
-class o extends s.Component {
+var o = n(105292);
+class c extends s.Component {
     render() {
         let {
             src: e,
             fileSize: t,
             className: n,
             mediaPlayerClassName: s,
-            poster: o,
+            poster: c,
             fileName: u,
             naturalWidth: d,
             naturalHeight: m,
@@ -22,16 +22,16 @@ class o extends s.Component {
             volume: p,
             autoPlay: g,
             autoMute: A,
-            responsive: x,
-            mediaLayoutType: C,
+            responsive: C,
+            mediaLayoutType: x,
             mimeType: E,
             renderOverlayContent: _,
             renderLinkComponent: N,
             onClick: j,
-            onPlay: v,
-            onPause: S,
-            onEnded: I,
-            onControlsShow: y,
+            onPlay: y,
+            onPause: v,
+            onEnded: S,
+            onControlsShow: I,
             onControlsHide: M,
             onVolumeChange: b,
             onMute: L,
@@ -43,24 +43,24 @@ class o extends s.Component {
             videoRef: O,
             mediaPlayerRef: P,
             initialTimeSec: U,
-            alt: F = c.intl.string(c.t.FlNoSV),
+            alt: F = o.intl.string(o.t.FlNoSV),
             ...B
         } = this.props;
         return (0, l.jsx)(i.Ay, {
             alt: F,
             className: n,
-            src: o,
+            src: c,
             ...B,
             minWidth: r.Ay.minWidth,
             minHeight: r.Ay.minHeight,
             shouldLink: !1,
             shouldAnimate: !1,
-            mediaLayoutType: C,
-            responsive: x,
+            mediaLayoutType: x,
+            responsive: C,
             children: (n) => {
                 let {
                     src: i,
-                    size: { width: c, height: o },
+                    size: { width: o, height: c },
                 } = n;
                 return (0, l.jsx)(r.Ay, {
                     ref: P,
@@ -69,14 +69,14 @@ class o extends s.Component {
                     forceExternal: !((d <= 6016 && m <= 3384) || (d <= 3384 && m <= 6016)),
                     src: e,
                     poster: i,
-                    width: c,
-                    height: o,
-                    responsive: x,
+                    width: o,
+                    height: c,
+                    responsive: C,
                     volume: p,
                     autoPlay: g ?? !1,
                     autoMute: A ?? !1,
                     type: r.Ay.Types.VIDEO,
-                    mediaLayoutType: C,
+                    mediaLayoutType: x,
                     fileName: u,
                     fileSize: null == t ? void 0 : (0, a.Hb)(t),
                     fileSizeBytes: null == t ? void 0 : t,
@@ -84,12 +84,12 @@ class o extends s.Component {
                     renderLinkComponent: N,
                     renderOverlayContent: _,
                     onClick: j,
-                    onPlay: v,
-                    onPause: S,
-                    onEnded: I,
+                    onPlay: y,
+                    onPause: v,
+                    onEnded: S,
                     onVolumeChange: b,
                     onMute: L,
-                    onControlsShow: y,
+                    onControlsShow: I,
                     onControlsHide: M,
                     mimeType: E,
                     downloadable: f,

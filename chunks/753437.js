@@ -4,8 +4,8 @@ var i,
     a = n(761915),
     s = n(877784),
     r = n(53788),
-    d = n(148795),
-    o = n(214947),
+    o = n(148795),
+    d = n(214947),
     c = n(105292),
     u =
         (((i = {}).RIBBON = "ribbon"),
@@ -36,7 +36,7 @@ let m = {
             null != i && (t[n] = { getText: i.getText, icon: e[i.iconRole] });
         }
         return t;
-    })({ [u.RIBBON]: s.q, [u.THUMBS_UP]: r.G, [u.THUMBS_DOWN]: d.d, [u.FRIENDS]: o.$ });
+    })({ [u.RIBBON]: s.q, [u.THUMBS_UP]: r.G, [u.THUMBS_DOWN]: o.d, [u.FRIENDS]: d.$ });
 function x(e) {
     let t = g[e];
     return null != t ? t : null;

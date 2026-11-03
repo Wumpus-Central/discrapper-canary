@@ -26,9 +26,9 @@ var i = n(607399),
     L = n(832163),
     y = n(227327),
     D = n(788995),
-    v = n(432e3);
+    b = n(432e3);
 n(809733);
-var b = n(280450),
+var v = n(280450),
     P = n(696451),
     M = n(71393),
     U = n(299091),
@@ -59,7 +59,7 @@ async function W(e, t) {
         l = null != s && a.includes(s),
         d = !1;
     if (l && null != r.roles && r.roles.length > 0) {
-        let e = b.default.getId(),
+        let e = v.default.getId(),
             t = P.Ay.getMember(s, e),
             n = new Set(t?.roles ?? []);
         d = r.roles.some((e) => !n.has(e.id));
@@ -280,11 +280,11 @@ function $(e) {
                 !0
             );
         };
-    let { host: m, hostname: g, pathname: b, search: P, hash: M } = B.A.toURLSafe(e) ?? {},
+    let { host: m, hostname: g, pathname: v, search: P, hash: M } = B.A.toURLSafe(e) ?? {},
         U = B.A.isDiscordHostname(g ?? null) || B.A.isDiscordLocalhost(m ?? null, g ?? null);
-    if (U && (b?.startsWith("/application-directory") || b?.startsWith("/discovery/applications"))) {
-        let e = b.split("/"),
-            t = b?.startsWith("/discovery/applications"),
+    if (U && (v?.startsWith("/application-directory") || v?.startsWith("/discovery/applications"))) {
+        let e = v.split("/"),
+            t = v?.startsWith("/discovery/applications"),
             i = e[t ? 3 : 2],
             r = "search" === i,
             a = t && "categories" === i && "featured" !== e[4];
@@ -311,14 +311,14 @@ function $(e) {
             );
         };
     }
-    if (null != b && U && B.A.isAppRoute(b)) {
+    if (null != v && U && B.A.isAppRoute(v)) {
         let e = { navigationReplace: !1, openChannel: !0 };
         return (
-            null != P && (e.search = P), null != M && (e.hash = M), (t) => (t?.preventDefault(), (0, N.A)(b, e), !0)
+            null != P && (e.search = P), null != M && (e.hash = M), (t) => (t?.preventDefault(), (0, N.A)(v, e), !0)
         );
     }
-    if (U && b?.startsWith("/users/")) {
-        let e = b.match(/^\/users\/(\d+)/);
+    if (U && v?.startsWith("/users/")) {
+        let e = v.match(/^\/users\/(\d+)/);
         if (null != e) {
             let t = e[1];
             return (e) => (
@@ -333,7 +333,7 @@ function $(e) {
             );
         }
     }
-    if (null != b && U) {
+    if (null != v && U) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: i } = n(887909),
             r = t(e);
         if (null != r)
@@ -346,25 +346,25 @@ function $(e) {
                 !0
             );
     }
-    let k = (0, S.SK)(b);
-    if (null != b && U && null != k)
+    let k = (0, S.SK)(v);
+    if (null != v && U && null != k)
         return (e) => {
             e?.preventDefault();
             let { guildId: t, guildEventId: n } = k;
             return (Y(t, n), !0);
         };
-    if (U && b?.startsWith("/settings/")) {
+    if (U && v?.startsWith("/settings/")) {
         let { openUserSettings: e } = n(766075),
             { parseSettingsUrl: t, trackParseSettingsUrl: i } = n(718446);
         return (n) => {
             n?.preventDefault();
-            let r = t({ path: b, search: P });
+            let r = t({ path: v, search: P });
             return (
                 i(r, "link_click"), e(r.target, { analyticsLocations: a, path: r.path, searchParams: r.params }), !0
             );
         };
     }
-    if (U && b === H.BVt.FEATURE("badges"))
+    if (U && v === H.BVt.FEATURE("badges"))
         return (e) => (
             e?.preventDefault(),
             n
@@ -376,9 +376,9 @@ function $(e) {
                 }),
             !0
         );
-    if (U && b?.startsWith("/playground")) {
+    if (U && v?.startsWith("/playground")) {
         let { parsePlaygroundUrl: e } = n(682492),
-            { collection: t, story: i, controlOverrides: r } = e(b, P);
+            { collection: t, story: i, controlOverrides: r } = e(v, P);
         return (e) => (
             e?.preventDefault(),
             Promise.all([n.e("60800"), n.e("129263")])
@@ -390,11 +390,11 @@ function $(e) {
             !0
         );
     }
-    if (U && b?.startsWith("/discovery/quests"))
+    if (U && v?.startsWith("/discovery/quests"))
         return (e) => (e?.preventDefault(), (0, O.m)({ fromContent: r.u.QUEST_BADGE }), !0);
-    if (U && b?.startsWith("/quest-home"))
+    if (U && v?.startsWith("/quest-home"))
         return (e) => (e?.preventDefault(), (0, R.pX)(H.BVt.QUEST_HOME, { search: P, hash: M }), !0);
-    if (U && b?.startsWith("/quest-bar-preview")) {
+    if (U && v?.startsWith("/quest-bar-preview")) {
         let e = new URLSearchParams(P ?? "").get("ad_creative_ids");
         if (null != e)
             return (t) => (
@@ -408,13 +408,13 @@ function $(e) {
                 !0
             );
     }
-    return U && b?.startsWith("/quest-preview")
+    return U && v?.startsWith("/quest-preview")
         ? (e) => (
               e?.preventDefault(),
-              (0, R.pX)(H.BVt.QUEST_HOME + `?tab=preview_tool&quest_id=${b.split("/").at(-1)}`),
+              (0, R.pX)(H.BVt.QUEST_HOME + `?tab=preview_tool&quest_id=${v.split("/").at(-1)}`),
               !0
           )
-        : U && b?.startsWith("/discovery/servers")
+        : U && v?.startsWith("/discovery/servers")
           ? (e) => (
                 e?.preventDefault(),
                 Promise.resolve()
@@ -426,7 +426,7 @@ function $(e) {
                     }),
                 !0
             )
-          : t || null == (0, v.m)(e)
+          : t || null == (0, b.m)(e)
             ? void 0
             : (t) => (t?.preventDefault(), D.A.show(e), !0);
 }

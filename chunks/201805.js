@@ -36,8 +36,8 @@ var T = n(87719),
     S = n(427495),
     I = n(859703),
     Q = n(738822),
-    x = n(77870),
-    b = n(291749),
+    b = n(77870),
+    x = n(291749),
     h = n(971276),
     O = n(590202),
     L = n(971649),
@@ -111,7 +111,7 @@ function W(t) {
     };
 }
 let Y = (t, e, n) => {
-    let { message: i, xboxURL: s } = (0, x.UX)(),
+    let { message: i, xboxURL: s } = (0, b.UX)(),
         u = (0, L.wW)();
     return (0, r.jsx)("span", {
         onClick: function (r) {
@@ -153,14 +153,14 @@ function K(t) {
             sourceQuestContent: c,
         } = t,
         d = G({ quest: e, questContent: r, questContentPosition: s, questContentRowIndex: l, sourceQuestContent: c }),
-        f = (0, x.RR)({ quest: e }),
-        A = (0, x.fc)(e),
+        f = (0, b.RR)({ quest: e }),
+        A = (0, b.fc)(e),
         C = (0, L.vU)()?.getId(),
-        { launchInGameActivity: E } = (0, x.zW)(e),
+        { launchInGameActivity: E } = (0, b.zW)(e),
         T = (0, D.vA)(e);
     return i.useMemo(() => {
         switch (n) {
-            case x.F3.UNACCEPTED:
+            case b.F3.UNACCEPTED:
                 let t = V.intl.string(V.t.kUQLMJ),
                     i = O.Cy.ACCEPT_QUEST;
                 return (
@@ -211,8 +211,8 @@ function K(t) {
                         },
                     }
                 );
-            case x.F3.ACCEPTED:
-            case x.F3.IN_PROGRESS:
+            case b.F3.ACCEPTED:
+            case b.F3.IN_PROGRESS:
                 if (f && u)
                     return {
                         text: V.intl.string(V.t.Cfye4v),
@@ -261,9 +261,9 @@ function K(t) {
                     };
                 }
                 return { text: V.intl.string(V.t.cfY4PE), tooltipText: V.intl.string(V.t.hsbwjv), onClick: null };
-            case x.F3.COMPLETED:
+            case b.F3.COMPLETED:
                 return { text: V.intl.string(V.t.cfY4PE), tooltipText: null, onClick: d };
-            case x.F3.CLAIMED:
+            case b.F3.CLAIMED:
                 return {
                     tooltipText: null,
                     onClick: d,
@@ -278,7 +278,7 @@ function z() {
 function X(t) {
     let { quest: e } = t,
         n = (0, h.s)(),
-        r = (0, x.LS)(e),
+        r = (0, b.LS)(e),
         { premiumSubscription: i } = (0, u.cf)([_.A], () => ({ premiumSubscription: _.A.getPremiumSubscription() })),
         s = (0, u.bG)([I.A], () => null != I.A.getQuestPreviewOverride(Q.uF.QUEST_BAR_V2), []);
     if (null == e) return { isQuestBarVisible: !1, reason: "quest_is_null" };
@@ -391,7 +391,7 @@ function tn(t) {
                             s(!0));
                         return;
                     }
-                    let t = [null != d.heroVideo ? (0, b.WV)(d.heroVideo) : null, d.heroImage, d.sponsorImage].filter(
+                    let t = [null != d.heroVideo ? (0, x.WV)(d.heroVideo) : null, d.heroImage, d.sponsorImage].filter(
                         (t) => null != t,
                     );
                     await Promise.all(t.map(m.NN));
@@ -403,6 +403,6 @@ function tn(t) {
 }
 function tr(t) {
     let e = te(),
-        { isShelfEnabled: n } = (0, x.t9)(e);
+        { isShelfEnabled: n } = (0, b.t9)(e);
     return !n && null != e && (0, D.I0)(e, t);
 }

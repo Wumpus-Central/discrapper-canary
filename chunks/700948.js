@@ -13,11 +13,11 @@ var i = n(477900),
     m = n(446243),
     A = n(920639),
     f = n(558076),
-    x = n(856660),
-    g = n(544299),
+    g = n(856660),
+    x = n(544299),
     C = n(913481),
-    j = n(711478),
-    y = n(487048),
+    y = n(711478),
+    j = n(487048),
     I = n(232571),
     N = n(519342),
     v = n(241215),
@@ -57,7 +57,7 @@ function P(e) {
         [en, ei] = l.useState(!1),
         el = l.useMemo(() => ({ isMenuOpen: en, setMenuOpen: ei }), [en, ei]);
     (0, S.A)(t, Z, Q);
-    let ea = (0, g.Y1)(t),
+    let ea = (0, x.Y1)(t),
         es = R.intl.string(ea ? _.default.F9DcvR : _.default["sV/+Cu"]);
     return (
         l.useEffect(() => {
@@ -100,16 +100,16 @@ function P(e) {
                                   className: s()(O.hk, { [O.Nb]: W }),
                                   style: { aspectRatio: U },
                                   ref: X,
-                                  children: (0, i.jsx)(x.t.Provider, {
+                                  children: (0, i.jsx)(g.t.Provider, {
                                       value: el,
-                                      children: (0, i.jsx)(g.bE, {
+                                      children: (0, i.jsx)(x.bE, {
                                           channelId: t,
                                           containerRef: q,
                                           roomWidth: Y,
                                           children: (0, i.jsxs)(h.xp, {
                                               containerRef: X,
                                               children: [
-                                                  (0, i.jsx)(y.A, { channelId: t, corners: k, roomWidth: Y }),
+                                                  (0, i.jsx)(j.A, { channelId: t, corners: k, roomWidth: Y }),
                                                   (0, i.jsxs)("div", {
                                                       ref: q,
                                                       children: [
@@ -137,7 +137,7 @@ function P(e) {
                                                               role: "list",
                                                               "aria-label": R.intl.string(_.default.JYlbK5),
                                                               children: [
-                                                                  (0, i.jsx)(j.A, {
+                                                                  (0, i.jsx)(y.A, {
                                                                       channelId: t,
                                                                       plantConfig: D,
                                                                       roomWidth: Y,

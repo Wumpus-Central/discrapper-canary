@@ -1,4 +1,4 @@
-e.exports = {
+d.exports = {
     fT: "defaultColor__4bd52",
     DN: "lineClamp1__4bd52",
     ED: "lineClamp2Plus__4bd52",

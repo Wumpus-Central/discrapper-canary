@@ -1,4 +1,4 @@
-n.d(t, { A: () => N });
+n.d(t, { A: () => y });
 var i = n(477900),
     l = n(582128),
     s = n(17928),
@@ -21,20 +21,20 @@ var i = n(477900),
     C = n(427080),
     _ = n(652215);
 let j = /^\d+$/;
-function N(e) {
+function y(e) {
     let { code: t } = e,
-        [n, N, y] = t.split("-"),
-        T = j.test(n) && j.test(N) && (null == y || j.test(y)),
-        { analyticsLocations: S } = (0, a.Ay)(),
+        [n, y, N] = t.split("-"),
+        b = j.test(n) && j.test(y) && (null == N || j.test(N)),
+        { analyticsLocations: T } = (0, a.Ay)(),
         {
-            guildScheduledEvent: b,
+            guildScheduledEvent: S,
             guild: k,
             channel: R,
             isMember: L,
         } = (0, s.cf)(
             [f.Ay, p.A, h.A, g.Ay, A.default],
             () => {
-                let e = f.Ay.getGuildScheduledEvent(N) ?? void 0,
+                let e = f.Ay.getGuildScheduledEvent(y) ?? void 0,
                     t = p.A.getGuild(n),
                     i = h.A.getChannel(e?.channel_id);
                 return {
@@ -44,17 +44,17 @@ function N(e) {
                     isMember: g.Ay.isMember(n, A.default.getCurrentUser()?.id),
                 };
             },
-            [n, N],
+            [n, y],
         );
     return (l.useEffect(() => {
-        if (T) {
-            if (b?.id == null) {
+        if (b) {
+            if (S?.id == null) {
                 let e,
                     t = !1;
                 return (
                     !(function i() {
-                        I.default.fetchGuildEvent(n, N, { priority: "background" }).catch((l) => {
-                            t || (0, v.aI)(l) || (e = l instanceof E.wH ? (0, E.VB)(i) : (0, v.lX)(n, N, i));
+                        I.default.fetchGuildEvent(n, y, { priority: "background" }).catch((l) => {
+                            t || (0, v.aI)(l) || (e = l instanceof E.wH ? (0, E.VB)(i) : (0, v.lX)(n, y, i));
                         });
                     })(),
                     () => {
@@ -62,14 +62,14 @@ function N(e) {
                     }
                 );
             }
-            (x.A.getGuildEventUserCountsForEmbed(n, N, null != y ? [y] : []), x.A.getGuildEventsForCurrentUser(n));
+            (x.A.getGuildEventUserCountsForEmbed(n, y, null != N ? [N] : []), x.A.getGuildEventsForCurrentUser(n));
         }
-    }, [N, n, b?.id, T, y]),
-    T)
+    }, [y, n, S?.id, b, N]),
+    b)
         ? (0, i.jsx)(C.Ay, {
               guild: k,
               channel: R,
-              guildScheduledEvent: b,
+              guildScheduledEvent: S,
               isMember: L,
               onAcceptInstantInvite: function () {
                   function e() {
@@ -80,7 +80,7 @@ function N(e) {
                                     (0, u.showInaccessibleLinkModal)({ kind: "channel" });
                             });
                   }
-                  (0, c.g0)({ guildId: n, guild: k, isMember: L, analyticsLocations: S, onGateConfirm: e }) ===
+                  (0, c.g0)({ guildId: n, guild: k, isMember: L, analyticsLocations: T, onGateConfirm: e }) ===
                       c.Wx.PROCEED && e();
               },
               onTransitionToInviteChannel: function () {
@@ -90,7 +90,7 @@ function N(e) {
                         ? (0, m.av)(R)
                         : R?.isGuildVoice() && I.default.joinVoiceEvent(R.guild_id, R.id);
               },
-              recurrenceId: y,
+              recurrenceId: N,
           })
         : null;
 }

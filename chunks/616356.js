@@ -20,8 +20,8 @@ var c = n(17928),
     L = n(977997),
     y = n(652215),
     D = n(325278);
-let v = null,
-    b = {},
+let b = null,
+    v = {},
     P = null,
     M = 10 * m.A.Millis.SECOND;
 function U() {
@@ -61,13 +61,13 @@ class B extends c.Ay.PersistedStore {
     initialize(e) {
         (this.syncWith([C.A], () => !0),
             this.waitFor(T.default, g.A, C.A, O.A, E.Ay, R.Ay),
-            e?.selfStreamParticipantsHidden !== void 0 && Object.assign(b, e?.selfStreamParticipantsHidden));
+            e?.selfStreamParticipantsHidden !== void 0 && Object.assign(v, e?.selfStreamParticipantsHidden));
     }
     getState() {
-        return { selfStreamParticipantsHidden: b };
+        return { selfStreamParticipantsHidden: v };
     }
     isSelfStreamHidden(e) {
-        return b[e] ?? !1;
+        return v[e] ?? !1;
     }
     getLastActiveStream() {
         return (0, f.A)(N.Ay) ? (Array.from(i.values()).pop() ?? null) : null;
@@ -245,7 +245,7 @@ let V = new B(u.h, {
             n = (0, A.Iy)(t);
         (i.delete(t),
             i.set(t, { ...n, state: y.XYD.CONNECTING }),
-            n.ownerId === T.default.getId() && (b[n.channelId] = !1));
+            n.ownerId === T.default.getId() && (v[n.channelId] = !1));
     },
     STREAM_START: function (e) {
         let {
@@ -306,7 +306,7 @@ let V = new B(u.h, {
                 }),
                 (u = y.XYD.ENDED));
         } else c.state === y.XYD.FAILED && o === y.H2B.USER_REQUESTED && (u = y.XYD.FAILED);
-        (i.set(r, { ...c, state: u }), u === y.XYD.ENDED && v !== r && w(r));
+        (i.set(r, { ...c, state: u }), u === y.XYD.ENDED && b !== r && w(r));
     },
     STREAM_CLOSE: function (e) {
         let { streamKey: t } = e;
@@ -314,7 +314,7 @@ let V = new B(u.h, {
     },
     STREAM_UPDATE_SELF_HIDDEN: function (e) {
         let { channelId: t, selfStreamHidden: n } = e;
-        ((0, A.wL)(v) && v?.includes(T.default.getId()) && !1 === b[t] && !0 === n && (v = null), (b[t] = n));
+        ((0, A.wL)(b) && b?.includes(T.default.getId()) && !1 === v[t] && !0 === n && (b = null), (v[t] = n));
     },
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
@@ -350,11 +350,11 @@ let V = new B(u.h, {
     },
     CHANNEL_RTC_SELECT_PARTICIPANT: function (e) {
         let { id: t, channelId: n } = e;
-        ((v = t),
+        ((b = t),
             Array.from(i.values()).forEach((e) => {
-                (0, A._z)(e) !== v && e.state === y.XYD.ENDED && w((0, A._z)(e));
+                (0, A._z)(e) !== b && e.state === y.XYD.ENDED && w((0, A._z)(e));
             }),
-            null == t || ((0, A.wL)(t) && t.includes(T.default.getId()) && (b[n] = !1)));
+            null == t || ((0, A.wL)(t) && t.includes(T.default.getId()) && (v[n] = !1)));
     },
     CONNECTION_OPEN: U,
     CONNECTION_CLOSED: U,

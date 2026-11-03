@@ -1,4 +1,4 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => g });
 var i = n(477900),
     l = n(582128);
 n(580321);
@@ -14,11 +14,11 @@ var a = n(17928),
     m = n(652215),
     A = n(618922),
     f = n(105292);
-function x(e) {
-    let { channelId: t, asset: n, position: x, width: g } = e,
+function g(e) {
+    let { channelId: t, asset: n, position: g, width: x } = e,
         C = (0, a.bG)([s.A], () => s.A.getChannel(t)?.guild_id),
-        { interactionsEnabled: j } = (0, u.mf)({ guildId: C, location: "GuildRoom" }, { autoTrackExposure: !1 }),
-        y = (0, a.bG)([d.A], () => null != d.A.getPendingNote(t)),
+        { interactionsEnabled: y } = (0, u.mf)({ guildId: C, location: "GuildRoom" }, { autoTrackExposure: !1 }),
+        j = (0, a.bG)([d.A], () => null != d.A.getPendingNote(t)),
         I = (0, a.bG)([d.A], () => d.A.getNotes(t).length >= 20),
         N = (0, a.bG)([r.Ay], () => r.Ay.getVoiceChannelId() === t),
         v = l.useRef(null),
@@ -38,15 +38,15 @@ function x(e) {
     let S = l.useCallback(() => {
         (0, c.WT)(t);
     }, [t]);
-    return j
+    return y
         ? (0, i.jsx)(p.A, {
               asset: n,
               label: f.intl.string(I ? A.default.k4cbsb : A.default["lL1Y+d"]),
-              position: x,
-              width: g,
-              disabled: !N || y || I,
+              position: g,
+              width: x,
+              disabled: !N || j || I,
               onClick: S,
               innerRef: v,
           })
-        : (0, i.jsx)(p.c, { asset: n, label: f.intl.string(A.default["lL1Y+d"]), position: x, width: g });
+        : (0, i.jsx)(p.c, { asset: n, label: f.intl.string(A.default["lL1Y+d"]), position: g, width: x });
 }

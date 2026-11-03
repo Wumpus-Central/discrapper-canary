@@ -21,9 +21,9 @@ var t = n(477900),
     I = n(545868),
     S = n(332173),
     T = n(176201),
-    C = n(676608),
-    b = n(342296),
-    y = n(260509),
+    b = n(676608),
+    y = n(342296),
+    C = n(260509),
     E = n(734057),
     M = n(696451),
     R = n(317525),
@@ -42,7 +42,7 @@ function P(e) {
     return null == d || null == m
         ? null
         : (0, t.jsx)(
-              b.A,
+              y.A,
               {
                   targetElementRef: o,
                   userId: l.userId,
@@ -193,7 +193,7 @@ function O(e) {
             [G.A],
             () => {
                 let e = G.A.getGuild(i);
-                return null == e ? null : (0, y.af)(e);
+                return null == e ? null : (0, C.af)(e);
             },
             [i],
         ),
@@ -254,25 +254,25 @@ function F(e) {
         { analyticsLocations: x } = (0, p.Ay)(A.A.ROLE_MENTION),
         h = (0, u.bG)([j.Ay], () => j.Ay.roleStyle),
         f = (0, u.bG)([R.A], () => (null == a || null == l ? null : R.A.getRole(a, l))),
-        g = (0, C.jV)(a, f),
+        g = (0, b.jV)(a, f),
         N = !c && null != f && !(0, T.Qv)(f),
         v = N && "dot" === h,
-        b = N && "username" === h,
-        y = g && null != f ? f.colorStrings : null,
+        y = N && "username" === h,
+        C = g && null != f ? f.colorStrings : null,
         E = s.useRef(null);
     function M(e) {
         return (0, t.jsxs)(S.A, {
             ref: E,
             className: w.Dz,
-            color: b ? f.color : null,
-            roleColors: b ? y : null,
+            color: y ? f.color : null,
+            roleColors: y ? C : null,
             ...e,
             children: [
                 v &&
                     null != f.color &&
                     (0, t.jsx)(d.W, {
                         color: (0, r.Hl)(f.color),
-                        colors: y,
+                        colors: C,
                         className: D.m,
                         background: !1,
                         tooltip: !1,

@@ -60,8 +60,8 @@ function _(e) {
         L = `${O}-lower_badge_masks`,
         y = `${O}-blob_mask`,
         D = `${O}-stroke_mask`,
-        v = `${O}-highlight_mask`,
-        b = _?.width != null ? _.width : 16,
+        b = `${O}-highlight_mask`,
+        v = _?.width != null ? _.width : 16,
         P = _?.height != null ? _.height : 16,
         M = { width: u ? n : n + 8, height: u ? n : n + 8, x: u ? 0 : -4, y: u ? 0 : -4 },
         U = u ? 20 : h,
@@ -117,7 +117,7 @@ function _(e) {
                         children: [
                             (0, i.jsxs)("defs", {
                                 children: [
-                                    E && (0, i.jsx)("path", { d: w, id: v }),
+                                    E && (0, i.jsx)("path", { d: w, id: b }),
                                     (0, i.jsx)("path", { d: w, id: y }),
                                     null != f
                                         ? (0, i.jsx)("rect", {
@@ -133,9 +133,9 @@ function _(e) {
                                     null != I
                                         ? (0, i.jsx)("rect", {
                                               id: L,
-                                              x: n - (b + 2 * A) + A,
+                                              x: n - (v + 2 * A) + A,
                                               y: n - (P + 2 * A) + A,
-                                              width: b + 2 * A,
+                                              width: v + 2 * A,
                                               height: P + 2 * A,
                                               rx: h / 2,
                                               ry: h / 2,
@@ -151,7 +151,7 @@ function _(e) {
                                 width: n,
                                 height: n,
                                 children: [
-                                    E && (0, i.jsx)("use", { href: `#${v}`, fill: "black" }),
+                                    E && (0, i.jsx)("use", { href: `#${b}`, fill: "black" }),
                                     T
                                         ? (0, i.jsx)("use", {
                                               href: `#${y}`,

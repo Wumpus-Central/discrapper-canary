@@ -15,68 +15,68 @@ var l = n(582128),
     A = n(652215),
     f = n(166643);
 function C(e) {
-    let { user: t, onAcceptSuccess: i, onRejectSuccess: C, onError: x } = e,
-        E = (0, f.A)(),
-        [S, I] = l.useState(!1),
-        [y, _] = l.useState(!1),
-        [j, v] = l.useState(!1),
-        [b, N] = l.useState(!1),
+    let { user: t, onAcceptSuccess: i, onRejectSuccess: C, onError: E } = e,
+        x = (0, f.A)(),
+        [S, y] = l.useState(!1),
+        [I, b] = l.useState(!1),
+        [_, j] = l.useState(!1),
+        [v, N] = l.useState(!1),
         [T, M] = l.useState(!1),
-        R = S || y || j,
+        R = S || I || _,
         D = l.useCallback(
             async (e) => {
                 if (!R) {
-                    I(!0);
+                    y(!0);
                     try {
                         (await (0, h.RK)(e), N(!0), i?.());
                     } catch (t) {
                         let e = new a.LG(t);
-                        x?.(e);
+                        E?.(e);
                     } finally {
-                        I(!1);
+                        y(!1);
                     }
                 }
             },
-            [R, i, x],
+            [R, i, E],
         ),
         k = l.useCallback(
             async (e) => {
                 if (!R) {
-                    _(!0);
+                    b(!0);
                     try {
                         (await (0, h.UK)(e), M(!0), C?.());
                     } catch (t) {
                         let e = new a.LG(t);
-                        x?.(e);
+                        E?.(e);
                     } finally {
-                        _(!1);
+                        b(!1);
                     }
                 }
             },
-            [R, C, x],
+            [R, C, E],
         ),
         L = l.useCallback(
             async (e) => {
                 if (R) return;
-                _(!0);
+                b(!0);
                 let t = s()(e, 50);
                 try {
                     for (let e of t) await (0, h.ST)(e);
                     (M(!0), C?.());
                 } catch (t) {
                     let e = new a.LG(t);
-                    x?.(e);
+                    E?.(e);
                 } finally {
-                    _(!1);
+                    b(!1);
                 }
             },
-            [R, C, x],
+            [R, C, E],
         ),
         P = l.useCallback(
             async (e) => {
                 if (!R) {
                     if (null != t && null == o.A.getMutualGuilds(t.id)) {
-                        v(!0);
+                        j(!0);
                         try {
                             await (0, c.A)(t.id, t.getAvatarURL(void 0, 80), {
                                 withMutualGuilds: !0,
@@ -84,7 +84,7 @@ function C(e) {
                             });
                         } catch (e) {
                         } finally {
-                            v(!1);
+                            j(!1);
                         }
                     }
                     !(function (e) {
@@ -158,14 +158,14 @@ function C(e) {
             [D],
         );
     return {
-        acceptMessageRequest: E ? P : D,
+        acceptMessageRequest: x ? P : D,
         rejectMessageRequest: k,
         rejectAll: L,
         markAsNotSpam: O,
         isAcceptLoading: S,
-        isRejectLoading: y,
-        isUserProfileLoading: j,
-        isOptimisticAccepted: b,
+        isRejectLoading: I,
+        isUserProfileLoading: _,
+        isOptimisticAccepted: v,
         isOptimisticRejected: T,
     };
 }

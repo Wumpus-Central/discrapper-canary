@@ -26,8 +26,8 @@ var i = n(435558),
     L = n(465365),
     y = n(704726),
     D = n(652215),
-    v = n(105292);
-function b(e) {
+    b = n(105292);
+function v(e) {
     let t = u.A.getChannel(e);
     return t?.getGuildId();
 }
@@ -105,7 +105,7 @@ function k(e, t, n, i, r) {
         originalLink: r,
         inContent: null == a || s ? null : [P(a)],
         content: [
-            M({ name: v.intl.string(v.t.zLZPmk).toLowerCase(), type: D.rbe.UNKNOWN, iconType: "text" }, "italics"),
+            M({ name: b.intl.string(b.t.zLZPmk).toLowerCase(), type: D.rbe.UNKNOWN, iconType: "text" }, "italics"),
         ],
     };
 }
@@ -115,7 +115,7 @@ function F(e, t, n, i) {
         return (
             (n = {
                 type: "channel",
-                content: [x(e.roleSubscriptionGated ? e.name : v.intl.string(v.t["/YzI63"]))],
+                content: [x(e.roleSubscriptionGated ? e.name : b.intl.string(b.t["/YzI63"]))],
                 channelType: e.roleSubscriptionGated ? e.type : D.rbe.UNKNOWN,
                 iconType: "locked",
             }),
@@ -127,7 +127,7 @@ function F(e, t, n, i) {
         a = E.A.getGuild(e.guildId);
     if (null == a)
         if (e.isDm) return { ...r, guildId: D.ME, inContent: [M(e)], content: [U(!1)] };
-        else return null != i ? G(i) : x(`#${v.intl.string(v.t.J90oLW)}`);
+        else return null != i ? G(i) : x(`#${b.intl.string(b.t.J90oLW)}`);
     let s = e.guildId === n;
     return {
         ...r,
@@ -170,7 +170,7 @@ let B = {
             let i = e[1];
             if (n.returnMentionIds) return { type: "channelMention", id: i };
             let r = w(i, n.mentionChannels);
-            return null == r ? k(null, i, null, b(n.channelId)) : F(r, null, b(n.channelId));
+            return null == r ? k(null, i, null, v(n.channelId)) : F(r, null, v(n.channelId));
         },
     },
     V = {
@@ -189,7 +189,7 @@ let B = {
                 o = (0, g.te)(l);
             if (null == a) return G(i);
             let d = w(a, null),
-                c = null == d ? k(r, a, s, b(n.channelId), i) : F(d, s, b(n.channelId), i);
+                c = null == d ? k(r, a, s, v(n.channelId), i) : F(d, s, v(n.channelId), i);
             return "channelMention" === c.type ? { ...c, conversationId: o } : c;
         },
     },
@@ -205,9 +205,9 @@ let B = {
                 l = e[4];
             if (null == a || null == s) return G(i);
             let o = w(s, null);
-            if (null != o) return F(o, l, b(n.channelId), i);
+            if (null != o) return F(o, l, v(n.channelId), i);
             let d = w(a, null);
-            return null != d ? F(d, l, b(n.channelId), i) : k(r, a, l, b(n.channelId), i);
+            return null != d ? F(d, l, v(n.channelId), i) : k(r, a, l, v(n.channelId), i);
         },
     };
 var j = n(223637),
@@ -427,7 +427,7 @@ let ed = {
                               ? E.A.getGuild(eo(n.channelId))
                               : null,
                     s = null != a ? _.A.getRole(a.id, r) : null;
-                if (null == s) return { type: "text", content: `@${v.intl.string(v.t["YV4F/n"])}` };
+                if (null == s) return { type: "text", content: `@${b.intl.string(b.t["YV4F/n"])}` };
                 let l = (0, d.aF)(a?.id, s) && !(0, o.Qv)(s);
                 return {
                     type: "mention",
@@ -472,7 +472,7 @@ let ed = {
                               (n = l.toString()),
                               null != o && (n = h.Ay.getNickname(o.getGuildId(), t.channelId, l) ?? f.Ay.getName(l)));
                           let d = null != a && D.Ut1.test(a.trim()),
-                              c = d && t.unknownUserMentionPlaceholder ? `@${v.intl.string(v.t.sKdZ6U)}` : r;
+                              c = d && t.unknownUserMentionPlaceholder ? `@${b.intl.string(b.t.sKdZ6U)}` : r;
                           return {
                               type: "mention",
                               userId: i,

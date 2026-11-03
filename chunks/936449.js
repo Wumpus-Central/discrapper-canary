@@ -1,4 +1,4 @@
-(n.d(t, { A: () => b }), n(321073));
+(n.d(t, { A: () => v }), n(321073));
 var i = n(439372),
     r = n(571694),
     a = n(47167),
@@ -220,7 +220,7 @@ function D(e) {
         } else n.push(r.id);
     (t.length > 0 && p.indexDomains(t), n.length > 0 && p.deleteSearchItems(n));
 }
-class v extends i.A {
+class b extends i.A {
     actions = {
         POST_CONNECTION_OPEN: this.handleInit,
         LOGOUT: this.handleLogout,
@@ -302,4 +302,4 @@ class v extends i.A {
         y(t.id);
     }
 }
-let b = new v();
+let v = new b();

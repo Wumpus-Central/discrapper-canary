@@ -6,8 +6,8 @@ var i = t(477900),
     r = t(980707),
     o = t(477782),
     c = t(285796),
-    u = t(267102),
-    d = t(931991),
+    d = t(267102),
+    u = t(931991),
     A = t(246356),
     h = t(404355),
     m = t(734057),
@@ -18,10 +18,10 @@ var i = t(477900),
     p = t(105292);
 function E(e) {
     let { channelId: n, onClick: t } = e,
-        E = (0, u.Us)(),
+        E = (0, d.Us)(),
         j = (0, f.Qs)(n),
         I = (0, s.bG)([m.A], () => m.A.getChannel(n), [n]),
-        { canManageGuildEvent: v } = (0, d.nr)(I),
+        { canManageGuildEvent: v } = (0, u.nr)(I),
         N = v(j),
         _ = l.useRef(null);
     if (null == j) return null;

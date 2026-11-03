@@ -1,5 +1,5 @@
 (l.d(n, {
-    Bs: () => y,
+    Bs: () => N,
     CU: () => G,
     J: () => B,
     Kd: () => P,
@@ -25,27 +25,27 @@ var t = l(582128),
     h = l(287809),
     A = l(722701),
     j = l(811587),
-    x = l(260498),
-    g = l(426035),
+    g = l(260498),
+    b = l(426035),
     v = l(652215),
-    b = l(809526),
+    x = l(809526),
     k = l(105292);
-function N(e) {
+function y(e) {
     return (0, c.m1)(e, h.default, f.A);
 }
-function y(e) {
+function N(e) {
     return (
         (function (e) {
             let { guildId: n, botUserIds: l } = (0, i.bG)(
-                [x.Ay, u.A, d.Ay],
+                [g.Ay, u.A, d.Ay],
                 () => {
-                    let n = null == e ? null : x.Ay.getProject(e),
+                    let n = null == e ? null : g.Ay.getProject(e),
                         l = n?.guild_id;
                     return null == n || null == l
                         ? { guildId: null, botUserIds: [] }
                         : {
                               guildId: l,
-                              botUserIds: [(0, g.Du)(n), (0, g.ug)(n)].filter(
+                              botUserIds: [(0, b.Du)(n), (0, b.ug)(n)].filter(
                                   (e) => null != e && null == d.Ay.getMember(l, e),
                               ),
                           };
@@ -58,15 +58,15 @@ function y(e) {
             }, [n, l]);
         })(e),
         (0, i.bG)(
-            [x.Ay, p.A, o.Ay, d.Ay, s.A, u.A, m.A, h.default, f.A],
+            [g.Ay, p.A, o.Ay, d.Ay, s.A, u.A, m.A, h.default, f.A],
             () => {
-                let n = null == e ? null : x.Ay.getProject(e);
+                let n = null == e ? null : g.Ay.getProject(e);
                 return null == n
                     ? null
                     : (function (e) {
                           let n = null == e.guild_id ? null : p.A.getGuild(e.guild_id);
-                          if (null == n || "in_server" !== (0, g.kF)(e)) return null;
-                          let l = (0, g.xI)(n.id, e.application_id),
+                          if (null == n || "in_server" !== (0, b.kF)(e)) return null;
+                          let l = (0, b.xI)(n.id, e.application_id),
                               t = l.filter((e) => m.A.can(v.xBc.MANAGE_CHANNELS, e));
                           return {
                               projectName: e.name,
@@ -76,10 +76,10 @@ function y(e) {
                                       ? null
                                       : (u.A.getApplication(e.preview_application_id)?.name ?? `${e.name} (Preview)`),
                               guildName: n.name,
-                              channelNames: t.map(N),
-                              keptChannelNames: l.filter((e) => !t.includes(e)).map(N),
-                              canRemoveBot: (0, g.wv)(n, (0, g.Du)(e)),
-                              canRemovePreviewBot: null == e.preview_application_id || (0, g.wv)(n, (0, g.ug)(e)),
+                              channelNames: t.map(y),
+                              keptChannelNames: l.filter((e) => !t.includes(e)).map(y),
+                              canRemoveBot: (0, b.wv)(n, (0, b.Du)(e)),
+                              canRemovePreviewBot: null == e.preview_application_id || (0, b.wv)(n, (0, b.ug)(e)),
                           };
                       })(n);
             },
@@ -108,25 +108,25 @@ function E(e) {
     let { keptChannelNames: n } = e;
     if (0 === n.length) return null;
     let l = new Intl.ListFormat(k.intl.currentLocale, { type: "conjunction" }).format(n.map((e) => `#${e}`));
-    return k.intl.formatToPlainString(b.default.pE4Cec, { channels: l });
+    return k.intl.formatToPlainString(x.default.pE4Cec, { channels: l });
 }
 function I(e) {
     return e;
 }
 function S(e) {
     let { appName: n, guildName: l } = e;
-    return k.intl.formatToPlainString(b.default.SNFGxP, { app: n, server: l });
+    return k.intl.formatToPlainString(x.default.SNFGxP, { app: n, server: l });
 }
 function B(e) {
     let { appName: n, guildName: l } = e;
-    return k.intl.formatToPlainString(b.default["9CvVB9"], { app: n, server: l });
+    return k.intl.formatToPlainString(x.default["9CvVB9"], { app: n, server: l });
 }
 function G(e) {
     return (0, i.bG)(
-        [x.Ay, A.A],
+        [g.Ay, A.A],
         () => {
             var n;
-            let l = null == e ? null : x.Ay.getProject(e);
+            let l = null == e ? null : g.Ay.getProject(e);
             return (
                 null != l &&
                 ((n = A.A.getPublishStatus(l.id)), "user" === l.install_scope && null != n && (0, j.lE)(n.publishState))

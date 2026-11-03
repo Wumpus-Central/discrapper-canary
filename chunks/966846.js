@@ -29,7 +29,7 @@ function D() {
     let e = { queue: T, paused: S, userActions: Array.from(R) };
     s.w.set(m, e);
 }
-function v() {
+function b() {
     let e = T[0];
     if (null != e) {
         let { comboId: t, action: n } = e,
@@ -46,7 +46,7 @@ function v() {
         }
     }
 }
-function b(e, t) {
+function v(e, t) {
     let n = (0, _.gW)(e, t);
     return T.findIndex((e) => e.comboId === n);
 }
@@ -55,8 +55,8 @@ function P(e, t, n, i) {
         a = { comboId: r, action: i },
         s = g.indexOf(r);
     -1 !== s && g.splice(s, 1);
-    let l = b(e, t);
-    (0 !== l && (n ? -1 === l && (T.push(a), v()) : (l > 0 && T.splice(l, 1), T.unshift(a), v())),
+    let l = v(e, t);
+    (0 !== l && (n ? -1 === l && (T.push(a), b()) : (l > 0 && T.splice(l, 1), T.unshift(a), b())),
         !n && S && E.A.resume(),
         D());
 }
@@ -64,8 +64,8 @@ function M(e, t) {
     let n = (0, _.gW)(e, t),
         i = g.indexOf(n);
     -1 !== i && g.splice(i, 1);
-    let r = b(e, t);
-    (-1 !== r && (T.splice(r, 1), D()), v());
+    let r = v(e, t);
+    (-1 !== r && (T.splice(r, 1), D()), b());
 }
 function U(e, t) {
     let n = (0, _.gW)(e, t),
@@ -106,7 +106,7 @@ class x extends a.Ay.Store {
         return S;
     }
     getQueuePosition(e, t) {
-        return b(e, t);
+        return v(e, t);
     }
     isCorruptInstallation() {
         return L;
@@ -135,9 +135,9 @@ let k = new x(l.h, {
     },
     DISPATCH_APPLICATION_MOVE_UP: function (e) {
         let { applicationId: t, branchId: n } = e,
-            i = b(t, n);
+            i = v(t, n);
         if (i < 1) return !1;
-        (T.splice(0, 0, T.splice(i, 1)[0]), v(), S && E.A.resume(), D());
+        (T.splice(0, 0, T.splice(i, 1)[0]), b(), S && E.A.resume(), D());
     },
     DISPATCH_APPLICATION_REMOVE_FINISHED: function (e) {
         let { applicationId: t, branchId: n } = e;
@@ -145,7 +145,7 @@ let k = new x(l.h, {
     },
     DISPATCH_APPLICATION_STATE_UPDATE: function (e) {
         let { state: t } = e;
-        !O && ((O = !0), v(), S || E.A.resume());
+        !O && ((O = !0), b(), S || E.A.resume());
         let n = S;
         ((S = t.paused), (N = t.currentTask), (C = t.nextTask));
         let i = !1;
@@ -177,7 +177,7 @@ let k = new x(l.h, {
             }
             return !0;
         })),
-            v(),
+            b(),
             (i || n !== S) && D());
     },
     DISPATCH_APPLICATION_ERROR: function (e) {

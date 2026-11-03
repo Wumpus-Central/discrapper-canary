@@ -6,8 +6,8 @@ var i = t(477900),
     r = t(435558),
     o = t(17928),
     c = t(367513),
-    u = t(688810),
-    d = t(198052),
+    d = t(688810),
+    u = t(198052),
     A = t(384059),
     h = t(573163),
     m = t(309010),
@@ -45,12 +45,12 @@ function N(e) {
             toggleRequestToSpeakSidebar: f,
             ...N
         } = e,
-        { parentAnalyticsLocation: _ } = (0, u.Ay)(),
+        { parentAnalyticsLocation: _ } = (0, d.Ay)(),
         { disabled: T } = N,
         b = l.useRef(null),
-        S = (0, o.bG)([d.A], () => d.A.getChatOpen(t), [t]),
+        y = (0, o.bG)([u.A], () => u.A.getChatOpen(t), [t]),
         {
-            isShowing: y,
+            isShowing: S,
             unreadCount: O,
             mentionCount: P,
         } = (function (e) {
@@ -70,8 +70,8 @@ function N(e) {
             );
         })(t),
         R = l.useCallback(() => {
-            ((0, A.XJ)(_, A.OP.CHAT, !S), h?.(), !S && g && f?.(), c.A.updateChatOpen(t, !S));
-        }, [t, S, h, g, f, _]),
+            ((0, A.XJ)(_, A.OP.CHAT, !y), h?.(), !y && g && f?.(), c.A.updateChatOpen(t, !y));
+        }, [t, y, h, g, f, _]),
         L = l.useCallback(
             (e) => {
                 let { className: n } = e;
@@ -100,7 +100,7 @@ function N(e) {
                 }
             );
         }, [M]));
-    let U = [(n = m && T ? j.intl.string(j.t.DPgc5h) : S ? j.intl.string(j.t.nthdxB) : j.intl.string(j.t["5KxXrK"]))];
+    let U = [(n = m && T ? j.intl.string(j.t.DPgc5h) : y ? j.intl.string(j.t.nthdxB) : j.intl.string(j.t["5KxXrK"]))];
     return (
         P > 0 && U.push(j.intl.formatToPlainString(j.t["3l1GOx"], { mentionCount: P })),
         O > 0 && U.push(j.intl.string(j.t.x5zAGZ)),
@@ -111,7 +111,7 @@ function N(e) {
             "aria-label": U.join(", "),
             iconComponent: L,
             tooltipPosition: "bottom",
-            wrapperClassName: a()(s, null != r && { [r]: y }),
+            wrapperClassName: a()(s, null != r && { [r]: S }),
             forceTooltipOpen: M,
             ...N,
         })

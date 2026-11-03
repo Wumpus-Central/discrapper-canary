@@ -26,8 +26,8 @@ var i = n(435558),
     L = n(287809),
     y = n(768038),
     D = n(690521),
-    v = n(403362),
-    b = n(562153),
+    b = n(403362),
+    v = n(562153),
     P = n(427262),
     M = n(652215);
 n(827669);
@@ -210,7 +210,7 @@ let F = E.Ay.RULES,
                 if (null == l) return { content: e[0] };
                 let o = P.Ay.getUserTag(l, { identifiable: i && R.A.enabled ? "never" : "always" });
                 if (i) {
-                    let e = b.Ay.getNickname(a?.id, s, l) ?? P.Ay.getGlobalName(l);
+                    let e = v.Ay.getNickname(a?.id, s, l) ?? P.Ay.getGlobalName(l);
                     return { content: null != e ? `@${e}` : `@${o}` };
                 }
                 {
@@ -383,7 +383,7 @@ function Q(e, t) {
                                   : { id: e.channel.id, text: (0, o.m1)(e.channel, L.default, O.A) },
                           ),
                       )
-                      .filter(v.Vq)
+                      .filter(b.Vq)
                       .value()
                 : [],
         E = I.A.computeAllActiveJoinedThreads(i).map((e) => ({ id: e.id, text: (0, o.m1)(e, L.default, O.A) })),

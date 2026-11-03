@@ -118,16 +118,16 @@ let y = {
             m = [...s, ...l],
             y = m.map((e) => A.A.getChannel(e)).filter(p.Vq),
             D = (0, N.w)(e, new Set(m), y, !0).length,
-            v = null == n ? [] : n.options.map((e) => e.id),
-            b = g.A.getConnections(e),
-            P = (0, S.H_)(b),
-            M = (0, S.OG)(b);
+            b = null == n ? [] : n.options.map((e) => e.id),
+            v = g.A.getConnections(e),
+            P = (0, S.H_)(v),
+            M = (0, S.OG)(v);
         if (
             (I.default.track(C.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
                 ...(0, d.H$)(e),
                 step: t.length - 1,
-                options_selected: null == n ? 0 : i.filter((e) => v.includes(e.id)).length,
-                skipped: v.length > 0,
+                options_selected: null == n ? 0 : i.filter((e) => b.includes(e.id)).length,
+                skipped: b.length > 0,
                 back: !1,
                 in_onboarding: !0,
                 is_final_step: !0,

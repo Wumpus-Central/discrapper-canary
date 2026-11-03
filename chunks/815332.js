@@ -13,8 +13,8 @@ function h(n) {
     let { groupListingId: t, subscription: e, className: a } = n,
         { analyticsLocations: h } = (0, c.Ay)(l.A.PENDING_PLAN_CHANGE_NOTICE),
         {
-            resetRenewalMutation: x,
-            submitting: p,
+            resetRenewalMutation: p,
+            submitting: x,
             error: f,
         } = (function (n) {
             let [t, e] = s.useState(!1),
@@ -50,9 +50,9 @@ function h(n) {
         message: m.intl.format(m.t.chw89X, { currentListing: j.name, nextListing: v.name, changeDate: N }),
         error: f?.message,
         onClick: function () {
-            if (null != e) return x(e);
+            if (null != e) return p(e);
         },
-        submitting: p,
+        submitting: x,
         ctaMessage: m.intl.string(m.t.De4wI8),
         className: a,
     });

@@ -31,7 +31,7 @@ function R() {
         D());
 }
 function L(e) {
-    for (let t in (delete p[e], delete S[e], delete m[e], delete T[e], delete g[e], y(e), T[e])) b(e, t);
+    for (let t in (delete p[e], delete S[e], delete m[e], delete T[e], delete g[e], y(e), T[e])) v(e, t);
 }
 function y(e) {
     let t = A.A.getThreadsForGuild(e);
@@ -53,13 +53,13 @@ function y(e) {
         }
 }
 function D() {
-    for (let e in ((N = {}), T)) for (let t in T[e]) b(e, t);
+    for (let e in ((N = {}), T)) for (let t in T[e]) v(e, t);
 }
-function v(e) {
+function b(e) {
     let t = d.A.getBasicChannel(e);
-    null != t && o.wE.has(t.type) && b(t.guild_id, t.id);
+    null != t && o.wE.has(t.type) && v(t.guild_id, t.id);
 }
-function b(e, t) {
+function v(e, t) {
     let n = d.A.getChannel(t);
     if (
         null == n ||
@@ -106,8 +106,8 @@ function P(e, t, n) {
                 V(g, i, e ? i : null, !0),
                 B(i.id));
         }
-        b(e, t);
-    } else (H(p, e, t, n), H(S, e, t, n), H(m, e, t, n), H(T, e, t, n), H(g, e, t, n), B(n), b(e, t));
+        v(e, t);
+    } else (H(p, e, t, n), H(S, e, t, n), H(m, e, t, n), H(T, e, t, n), H(g, e, t, n), B(n), v(e, t));
 }
 function M(e) {
     return P(e.channel.guild_id, e.channel.parent_id, e.channel.id);
@@ -122,7 +122,7 @@ function w(e) {
     else {
         let { guild_id: e, parent_id: n } = t;
         if (!o.Le.has(t.type))
-            if (Number(N[e]?.[t.id]) > 0) return (b(e, t.id), !0);
+            if (Number(N[e]?.[t.id]) > 0) return (v(e, t.id), !0);
             else return !1;
         if (null == n) return !1;
         if (j(p, t)) {
@@ -134,7 +134,7 @@ function w(e) {
             let o = p[e][n][t.id],
                 d = i ? o : null,
                 c = r ? o : null;
-            (V(m, t, d, !0), V(S, t, c, !0), b(e, n));
+            (V(m, t, d, !0), V(S, t, c, !0), v(e, n));
         } else {
             let e = j(g, t),
                 n = u.Ay.isForumPostUnread(t.id);
@@ -162,7 +162,7 @@ function G() {
 function x() {
     let e = C;
     if ((C = _.Ay.getChannelId()) === e) return !1;
-    (v(e), v(C));
+    (b(e), b(C));
 }
 function k(e) {
     let t = u.Ay.getMentionCount(e.id) > 0,
@@ -337,7 +337,7 @@ let Z = new q(s.h, {
                     (n = !0)),
                 t.guild_id in T && t.parent_id in T[t.guild_id] && (delete T[t.guild_id][t.parent_id], (n = !0)),
                 t.guild_id in g && t.parent_id in g[t.guild_id] && (delete g[t.guild_id][t.parent_id], (n = !0)),
-                n && b(t.guild_id, t.parent_id)),
+                n && v(t.guild_id, t.parent_id)),
             n
         );
     },

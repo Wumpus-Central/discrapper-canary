@@ -38,8 +38,8 @@ var i = n(131937),
     L = n(501419),
     y = n(982844),
     D = n(744230),
-    v = n(113267),
-    b = n(625180),
+    b = n(113267),
+    v = n(625180),
     P = n(25451),
     M = n(451909),
     U = n(195880),
@@ -104,7 +104,7 @@ async function ed(e) {
             e(er.MLl.ACTIVITY_POPOUT);
         }
         if (
-            (!0 !== m && b.A.clearMainFrameSlot(),
+            (!0 !== m && v.A.clearMainFrameSlot(),
             L && (0, R.A)(t),
             (0, en.y)({ applicationId: i, launch: { customId: I, referrerId: f } }))
         ) {
@@ -210,7 +210,7 @@ async function ed(e) {
                 channelId: t ?? null,
                 guildId: C ?? null,
                 isStart: s,
-                error: n instanceof D.A || n instanceof h.A || n instanceof v.A ? n : new h.A(n),
+                error: n instanceof D.A || n instanceof h.A || n instanceof b.A ? n : new h.A(n),
                 locationKind: e,
             }),
             !1
@@ -300,9 +300,9 @@ async function ec(e) {
                             }),
                             null != e && null != n && null != a
                                 ? d(new h.A({ status: a, body: { message: n, code: e } }))
-                                : null != s && s in v.A.ReasonCodes
-                                  ? d(new v.A(s))
-                                  : d(new v.A(v.A.ReasonCodes.UNKNOWN)));
+                                : null != s && s in b.A.ReasonCodes
+                                  ? d(new b.A(s))
+                                  : d(new b.A(b.A.ReasonCodes.UNKNOWN)));
                     },
                 }),
             });
@@ -481,7 +481,7 @@ async function eT(e, t) {
                 channelId: t,
                 guildId: i,
                 locationKind: a,
-                error: s instanceof D.A || s instanceof h.A || s instanceof v.A ? s : new h.A(s),
+                error: s instanceof D.A || s instanceof h.A || s instanceof b.A ? s : new h.A(s),
             }),
             !1
         );

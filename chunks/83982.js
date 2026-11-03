@@ -12,8 +12,8 @@ var i = n(477900),
     p = n(367513),
     g = n(684339),
     f = n(198052),
-    x = n(520698),
-    h = n(164617),
+    h = n(520698),
+    x = n(164617),
     A = n(958713),
     v = n(525505),
     E = n(550946),
@@ -22,8 +22,8 @@ var i = n(477900),
     I = n(869146),
     S = n(718734),
     _ = n(854627),
-    N = n(912630),
-    b = n(530804),
+    b = n(912630),
+    N = n(530804),
     y = n(280450),
     T = n(999926),
     L = n(531685),
@@ -39,10 +39,10 @@ let P = o._3.SIZE_80,
     H = o._3.SIZE_40;
 function F(e) {
     let { channelId: t, participant: n } = e,
-        l = (0, b.uy)(t, n.id),
-        s = (0, b.b0)(n.id),
+        l = (0, N.uy)(t, n.id),
+        s = (0, N.b0)(n.id),
         o = (0, a.bG)([y.default], () => y.default.getId()),
-        p = (0, a.bG)([N.A], () => N.A.videoBackgroundUnavailable);
+        p = (0, a.bG)([b.A], () => b.A.videoBackgroundUnavailable);
     return s
         ? (0, i.jsx)(u.m, {
               text: G.intl.string(G.t["6mh541"]),
@@ -82,8 +82,8 @@ function U(e) {
             popoutType: c,
             fit: d,
             onVideoResize: m,
-            blocked: N,
-            ignored: b,
+            blocked: b,
+            ignored: N,
             noVideoRender: w = !1,
             pulseSpeakingIndicator: F = !1,
             paused: U = !1,
@@ -95,7 +95,7 @@ function U(e) {
         Q = (0, R.Ay)(t),
         K = (0, a.bG)([L.A], () => L.A.isFocused()),
         X = (0, a.bG)([I.A], () => I.A.getWindowFocused(M.MLl.CHANNEL_CALL_POPOUT)),
-        q = (0, a.bG)([T.Ay], () => null != $.id && T.Ay.isLocalVideoDisabled($.id, (0, x.A)(t.type)), [$.id, t.type]),
+        q = (0, a.bG)([T.Ay], () => null != $.id && T.Ay.isLocalVideoDisabled($.id, (0, h.A)(t.type)), [$.id, t.type]),
         J = (0, E.A)(n.guild_id, $.id),
         ee = D.Ay.getName(n.getGuildId(), n.id, $) + (J ? ` ${G.intl.string(G.t["pFO/Ph"])}` : ""),
         et = Z && (X || K),
@@ -126,7 +126,7 @@ function U(e) {
                   j.A,
                   {
                       onResize: m,
-                      wrapperClassName: c !== h.N.CALL_TILE ? V.tN : void 0,
+                      wrapperClassName: c !== x.N.CALL_TILE ? V.tN : void 0,
                       className: V.Qs,
                       mirror: Y,
                       streamId: B,
@@ -139,7 +139,7 @@ function U(e) {
                   B,
               )
         : (0, i.jsx)("div", {
-              className: r()(V.Qs, { [V.Kx]: N || b }),
+              className: r()(V.Qs, { [V.Kx]: b || N }),
               children: (0, i.jsx)(C.A, {
                   "aria-label": ee,
                   avatarDecoration: el,

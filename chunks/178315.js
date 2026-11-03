@@ -1,4 +1,4 @@
-(n.d(t, { A: () => h }), n(321073));
+(n.d(t, { A: () => x }), n(321073));
 var i = n(582128),
     l = n(975807),
     s = n(105292),
@@ -14,17 +14,17 @@ function g() {
         t = (0, d.bG)([c.A], () => c.A.getProps().mfaLevel);
     return { isUserMFAEnabled: e?.mfaEnabled === !0, isModerationMFAEnabled: t === m.EkJ.ELEVATED };
 }
-function x(e) {
+function h(e) {
     return e;
 }
-function h(e) {
+function x(e) {
     let {
             onEligibilityBecameStale: t,
             actions: n,
             sortedByIneligible: d,
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { isUserMFAEnabled: c, isModerationMFAEnabled: u } = g(),
-        h = i.useCallback(async () => {
+        x = i.useCallback(async () => {
             (c ? u || (await n?.onRequireModeratorMFAClick?.()) : await n?.onEnableMFAClick?.(), t?.());
         }, [c, u, t, n]),
         E = (function (e) {
@@ -34,8 +34,8 @@ function h(e) {
                     (await t(), n?.());
                 }, [t, n]),
                 d = i.useCallback((e) => (0, a.jsx)(o.A, { onClick: r, children: e }), [r]);
-            return l && s ? x : d;
-        })({ onEnableMFAClick: h });
+            return l && s ? h : d;
+        })({ onEnableMFAClick: x });
     return i.useMemo(() => {
         var t;
         if (null == e) return null;
@@ -126,9 +126,9 @@ function h(e) {
                 description: s.intl.format(s.t["7NzkfV"], { enableMFAHook: E }),
                 checked: e.hasEnabled2FA,
                 actionLabel: l ? s.intl.string(s.t.BU4Diu) : void 0,
-                actionHandler: l ? h : void 0,
+                actionHandler: l ? x : void 0,
             });
         }
         return (!0 === d && g.sort((e) => (e.checked ? 0 : -1)), g);
-    }, [e, d, c, n, u, E, h]);
+    }, [e, d, c, n, u, E, x]);
 }

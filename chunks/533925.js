@@ -1,4 +1,4 @@
-s.d(t, { $A: () => r, XZ: () => a, Zp: () => l, pu: () => i, s0: () => c });
+s.d(t, { $A: () => r, XZ: () => a, Zp: () => l, pu: () => i, s0: () => d });
 var n = s(636537);
 let l = 8,
     i = 11,
@@ -21,7 +21,7 @@ async function o(e) {
         throw e;
     }
 }
-async function c(e, t) {
+async function d(e, t) {
     let { token: s } = await o(e);
     return new Promise((e, n) => {
         t({ "X-Discord-MFA-Authorization": s }, (t) =>

@@ -37,18 +37,18 @@ function d(e) {
             [p],
         ),
         [b] = l.useState(() => new u.A({ src: c.src ?? "", mimeType: d, fileSize: c.fileSizeBytes })),
-        x = l.useRef(null),
+        y = l.useRef(null),
         C = l.useRef(!1),
-        y = l.useCallback(
+        x = l.useCallback(
             (e) => {
-                ((C.current = e), e ? b.onDragStart(x.current?.currentTime ?? null) : b.onDragEnd());
+                ((C.current = e), e ? b.onDragStart(y.current?.currentTime ?? null) : b.onDragEnd());
             },
             [b],
         ),
         v = l.useRef(null),
         E = l.useCallback(
             (e) => {
-                if ((v.current?.(), (v.current = null), (x.current = e), null == e)) return;
+                if ((v.current?.(), (v.current = null), (y.current = e), null == e)) return;
                 let t = { currentTarget: e },
                     r = {
                         waiting: () => b.onWaiting(t),
@@ -84,7 +84,7 @@ function d(e) {
                   autoplay: r,
                   onPlayerStateChange: g,
                   onProgressUpdate: h,
-                  onTimelineDragStateChange: y,
+                  onTimelineDragStateChange: x,
                   ref: E,
               }),
           })

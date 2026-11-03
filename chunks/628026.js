@@ -1,32 +1,32 @@
-n.d(t, { AI: () => f, N4: () => p, cp: () => C });
-var i = n(477900);
-n(582128);
-var a = n(503698),
-    s = n.n(a),
-    l = n(284009),
-    r = n.n(l),
-    d = n(333007),
-    o = n(821609),
-    c = n(935286),
-    m = n(104510),
-    u = n(477155),
-    x = n(608266),
-    v = n(135570),
-    g = n(105292),
-    j = n(629846);
+t.d(n, { AI: () => f, N4: () => p, cp: () => C });
+var i = t(477900);
+t(582128);
+var a = t(503698),
+    s = t.n(a),
+    l = t(284009),
+    r = t.n(l),
+    d = t(333007),
+    o = t(821609),
+    c = t(935286),
+    m = t(104510),
+    u = t(477155),
+    x = t(608266),
+    v = t(135570),
+    g = t(105292),
+    j = t(629846);
 function b(e) {
-    let { onNext: t } = (0, x.bv)();
+    let { onNext: n } = (0, x.bv)();
     return (0, i.jsx)(o.$, {
         variant: "primary",
         text: g.intl.string(g.t["3PatSz"]),
-        onClick: t,
+        onClick: n,
         icon: c.E,
         iconPosition: "end",
         ...e,
     });
 }
 function h(e) {
-    let { onNext: t, stepLoading: n, gameServerInstance: a, availableBoostCount: s, planCost: l } = (0, x.bv)(),
+    let { onNext: n, stepLoading: t, gameServerInstance: a, availableBoostCount: s, planCost: l } = (0, x.bv)(),
         r = l > 0 && s < l,
         d =
             l > 0
@@ -37,52 +37,52 @@ function h(e) {
     return (0, i.jsx)(o.$, {
         variant: r || l > 0 ? "expressive" : "primary",
         text: d,
-        onClick: t,
+        onClick: n,
         icon: r || l > 0 ? m._ : void 0,
         iconPosition: "start",
-        loading: n,
+        loading: t,
         ...e,
     });
 }
 function C(e) {
-    let { stepAction: t } = (0, x.bv)(),
-        n = t?.onNext?.type;
-    switch (n) {
+    let { stepAction: n } = (0, x.bv)(),
+        t = n?.onNext?.type;
+    switch (t) {
         case "go-to-step":
             return (0, i.jsx)(b, { ...e });
         case "save":
             return (0, i.jsx)(h, { ...e });
         default:
-            r()(null != n, `Invalid stepType ${n}`);
+            r()(null != t, `Invalid stepType ${t}`);
     }
 }
 function f(e) {
-    let t,
-        { onBack: n, stepAction: a } = (0, x.bv)(),
+    let n,
+        { onBack: t, stepAction: a } = (0, x.bv)(),
         s = a?.onBack?.type;
     switch (s) {
         case "go-to-step":
-            t = g.intl.string(g.t["13/7kX"]);
+            n = g.intl.string(g.t["13/7kX"]);
             break;
         case "close":
-            t = g.intl.string(g.t.cpT0Cq);
+            n = g.intl.string(g.t.cpT0Cq);
     }
     return (
-        r()(null != t, `Invalid stepType ${s}`),
+        r()(null != n, `Invalid stepType ${s}`),
         (0, i.jsx)(o.$, {
             ...e,
             variant: "secondary",
-            text: t,
-            onClick: n,
+            text: n,
+            onClick: t,
             icon: "go-to-step" === s ? u.r : void 0,
             iconPosition: "start",
         })
     );
 }
 function p(e) {
-    let { step: t, className: n, children: a } = e,
+    let { step: n, className: t, children: a } = e,
         { footerNode: l, step: r } = (0, x.bv)();
-    return null == l || r !== t
+    return null == l || r !== n
         ? null
-        : d.createPortal((0, i.jsx)("div", { className: s()(j.q, n), children: a }), l, t);
+        : d.createPortal((0, i.jsx)("div", { className: s()(j.q, t), children: a }), l, n);
 }

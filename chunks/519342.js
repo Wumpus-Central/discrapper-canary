@@ -13,11 +13,11 @@ var i = n(477900),
     m = n(778712),
     A = n(748562),
     f = n(26430),
-    x = n(939249),
-    g = n(367513),
+    g = n(939249),
+    x = n(367513),
     C = n(717558),
-    j = n(793574),
-    y = n(198052),
+    y = n(793574),
+    j = n(198052),
     I = n(85448),
     N = n(614881),
     v = n(480890),
@@ -122,14 +122,14 @@ function es(e) {
         em = (0, C.A)({ userId: t }),
         eA = (0, d.bG)([_.A], () => _.A.isUserPlayingSounds(t)),
         ef = (0, d.bG)([V.A], () => V.A.isFocused()),
-        ex = (0, G.tx)(eu, n, es),
-        eg = (0, d.bG)([z.A], () => z.A.getRoom(n)?.background ?? o.I.DEFAULT),
-        { seats: eC } = Q.iX[eg],
-        ej =
+        eg = (0, G.tx)(eu, n, es),
+        ex = (0, d.bG)([z.A], () => z.A.getRoom(n)?.background ?? o.I.DEFAULT),
+        { seats: eC } = Q.iX[ex],
+        ey =
             null != q && q !== c.x.UNSET
                 ? eC[q]
                 : Object.values(eC).find((e) => e.position.x === a && e.position.y === u),
-        [ey, eI] = l.useState(!1),
+        [ej, eI] = l.useState(!1),
         eN = (0, p.z)({
             x: a,
             y: u,
@@ -138,8 +138,8 @@ function es(e) {
             onStart: () => eI(!0),
         }),
         ev = (0, d.bG)([w.Ay], () => w.Ay.getVoiceChannelId() === n),
-        eE = (0, d.bG)([y.A], () => {
-            let e = y.A.getParticipant(n, t);
+        eE = (0, d.bG)([j.A], () => {
+            let e = j.A.getParticipant(n, t);
             return (0, J.Xw)(e) ? e : null;
         }),
         eb = (0, O.y9)(eE ?? void 0),
@@ -147,14 +147,14 @@ function es(e) {
         eT = l.useCallback(() => {
             null != eu &&
                 ((0, B.EB)({ guildId: eu, channelId: n, interactionType: "clicked" }),
-                eS && (ed || !er || !$) && (g.A.selectParticipant(n, null), (0, k.UV)(!0, n)));
+                eS && (ed || !er || !$) && (x.A.selectParticipant(n, null), (0, k.UV)(!0, n)));
         }, [eu, n, ed, eS, er, $]),
         e_ = l.useCallback(
             (e) => {
                 let t = M.A.getChannel(n);
                 if (null != eu && null != es && null != t)
                     return (0, R.r)(e, es, t, { context: el }, (e, t) =>
-                        (0, v.s)(e, j.A.GUILD_ROOM, { tileType: J.qs.USER, targetUserId: es.id })(t),
+                        (0, v.s)(e, y.A.GUILD_ROOM, { tileType: J.qs.USER, targetUserId: es.id })(t),
                     );
             },
             [eu, es, n, el],
@@ -165,12 +165,12 @@ function es(e) {
         eO = (er && $) || eS,
         eP = $ ? K.x.find((e) => e.id === E) : null,
         eL =
-            null != ej
+            null != ey
                 ? en.intl.formatToPlainString(eP?.userLabel ?? et.default["4bL+KW"], {
-                      username: ex,
-                      seatLabel: ej.getLabel(),
+                      username: eg,
+                      seatLabel: ey.getLabel(),
                   })
-                : ex,
+                : eg,
         eM = eh?.isVoiceDeafened()
             ? en.intl.formatToPlainString(en.t["9hDjai"], { username: eL })
             : eh?.isVoiceMuted()
@@ -194,7 +194,7 @@ function es(e) {
                   deafen: eh?.isVoiceDeafened() ?? !1,
                   voiceStatus: eF,
                   ringing: !1,
-                  className: ej?.dim ? ei.r3 : void 0,
+                  className: ey?.dim ? ei.r3 : void 0,
                   avatarDecoration: eB,
                   avatarClassName: s()(ei.Cy, eP?.avatarClassName),
                   renderIcon:
@@ -223,7 +223,7 @@ function es(e) {
                   deafen: eh?.isVoiceDeafened() ?? !1,
                   voiceStatus: eF,
                   ringing: !1,
-                  className: ej?.dim ? ei.r3 : void 0,
+                  className: ey?.dim ? ei.r3 : void 0,
                   avatarDecoration: eB,
                   avatarClassName: eP?.avatarClassName,
                   renderIcon:
@@ -245,7 +245,7 @@ function es(e) {
             zIndex: ed ? 1e6 : 1e3 * Math.round(u) + Math.round(a),
         };
     if (!$) {
-        let e = (0, i.jsx)(x.D, {
+        let e = (0, i.jsx)(g.D, {
             "aria-label": eM,
             className: ei.KI,
             onMouseEnter: eR,
@@ -258,11 +258,11 @@ function es(e) {
             role: "listitem",
             className: s()(ei.f1, { [ei.hY]: eO }),
             style: eH,
-            children: null != ep ? (0, i.jsx)(ea, { title: ex, stream: ep, shouldShow: !eU, children: e }) : e,
+            children: null != ep ? (0, i.jsx)(ea, { title: eg, stream: ep, shouldShow: !eU, children: e }) : e,
         });
     }
     let eW = (0, i.jsx)("div", { className: ei.R3, children: ez }),
-        eY = (0, i.jsx)(x.D, {
+        eY = (0, i.jsx)(g.D, {
             "aria-label": eM,
             className: ei.KI,
             onMouseEnter: eR,
@@ -271,7 +271,7 @@ function es(e) {
             ...ew,
             children: eW,
         }),
-        e$ = ey && er ? 500 : 100;
+        e$ = ej && er ? 500 : 100;
     return (0, i.jsx)(r.animated.div, {
         role: "listitem",
         className: s()(ei.f1, { [ei.hY]: eO }),
@@ -285,7 +285,7 @@ function es(e) {
                       (0, i.jsx)(Z.O.Trigger, {
                           children: (e) => {
                               let { ref: t, onClick: n, ...l } = e,
-                                  a = (0, i.jsx)(x.D, {
+                                  a = (0, i.jsx)(g.D, {
                                       ...l,
                                       "aria-label": eM,
                                       className: s()(ei.KI, ei.hZ, { [ei.qS]: ed }),
@@ -299,8 +299,8 @@ function es(e) {
                                       children: ez,
                                   });
                               return null != ep
-                                  ? (0, i.jsx)(ea, { title: ex, stream: ep, shouldShow: !ed && !eU, children: a })
-                                  : (0, i.jsx)(X.A, { name: ex, shouldShow: !ed && !eU, delay: e$, children: a });
+                                  ? (0, i.jsx)(ea, { title: eg, stream: ep, shouldShow: !ed && !eU, children: a })
+                                  : (0, i.jsx)(X.A, { name: eg, shouldShow: !ed && !eU, delay: e$, children: a });
                           },
                       }),
                       (0, i.jsx)(Z.O.Popup, {
@@ -329,8 +329,8 @@ function es(e) {
                   ],
               })
             : null != ep
-              ? (0, i.jsx)(ea, { title: ex, stream: ep, shouldShow: !eU, children: eY })
-              : (0, i.jsx)(X.A, { name: ex, shouldShow: !eU, delay: e$, children: eY }),
+              ? (0, i.jsx)(ea, { title: eg, stream: ep, shouldShow: !eU, children: eY })
+              : (0, i.jsx)(X.A, { name: eg, shouldShow: !eU, delay: e$, children: eY }),
     });
 }
 function er(e) {

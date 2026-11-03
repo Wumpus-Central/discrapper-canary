@@ -39,7 +39,7 @@ function y() {
 function D() {
     !S && (y() || null != m.surveyOverride) && ((S = !0), (0, c.B)(m.surveyOverride, !0));
 }
-function v(e) {
+function b(e) {
     return (function (e) {
         let { guild_requirements: t = [], guild_size: n = [null, null], guild_permissions: i = [] } = e;
         if (0 === t.length) return !0;
@@ -84,7 +84,7 @@ function v(e) {
         return !!r && !!a;
     })(e);
 }
-function b(e) {
+function v(e) {
     let t,
         { survey: n, isActionTriggered: i } = e;
     ((S = !1),
@@ -93,14 +93,14 @@ function b(e) {
         null == m.hiddenSurveys && (m.hiddenSurveys = {}));
     let r = null != n,
         s = r && null == m.hiddenSurveys[n.key],
-        l = r && v(n);
+        l = r && b(n);
     (null == (t = o.w.get(I.gT8)) || a()().diff(t, "day"), (g = s && l && 1 ? n : null));
 }
 function P() {
     let e;
-    if (null != g && (v(g) || ((g = null), 0))) return !1;
-    null != (e = Object.values((T = T ?? {}))[0]) && v(e)
-        ? b({ type: "SURVEY_FETCHED", survey: e })
+    if (null != g && (b(g) || ((g = null), 0))) return !1;
+    null != (e = Object.values((T = T ?? {}))[0]) && b(e)
+        ? v({ type: "SURVEY_FETCHED", survey: e })
         : null == g || (g = null);
 }
 class M extends l.Ay.PersistedStore {
@@ -146,7 +146,7 @@ class M extends l.Ay.PersistedStore {
 let U = new M(d.h, {
     CONNECTION_OPEN: D,
     CONNECTION_RESUMED: D,
-    SURVEY_FETCHED: b,
+    SURVEY_FETCHED: v,
     SURVEY_HIDE: function (e) {
         let { key: t } = e;
         ((m.hiddenSurveys[t] = !0), (g = null), (T = T ?? {}), delete T[t]);

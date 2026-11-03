@@ -1,16 +1,16 @@
-n.d(t, { A: () => i });
-var s = n(941308),
-    l = n(256265);
+t.d(n, { A: () => i });
+var s = t(941308),
+    l = t(256265);
 function i(e) {
-    let { firstMessage: t, formatInline: n = !0, noStyleAndInteraction: i = !0 } = e,
-        a = t?.content != null && "" !== t.content,
-        { hasSpoilerEmbeds: r, content: c } = (0, s.A)(a ? t : null, {
-            formatInline: n,
+    let { firstMessage: n, formatInline: t = !0, noStyleAndInteraction: i = !0 } = e,
+        a = n?.content != null && "" !== n.content,
+        { hasSpoilerEmbeds: r, content: c } = (0, s.A)(a ? n : null, {
+            formatInline: t,
             noStyleAndInteraction: i,
             allowHeading: !0,
             allowList: !0,
         }),
-        d = (0, l.Ky)(t, r),
-        o = (0, l.L_)(t, r);
+        d = (0, l.Ky)(n, r),
+        o = (0, l.L_)(n, r);
     return { hasSpoilerEmbeds: r, content: c, firstMedia: d, firstMediaIsEmbed: o };
 }

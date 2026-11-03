@@ -1,6 +1,6 @@
 n.d(t, {
-    A9: () => v,
-    Ho: () => b,
+    A9: () => b,
+    Ho: () => v,
     Nl: () => P,
     TZ: () => y,
     Tp: () => w,
@@ -56,7 +56,7 @@ function D(e, t) {
     let n = f.A.getChannel(t);
     return (r()(null != n, "Cannot join a null voice channel"), !m.A.isInChannel(t) && (0, T.Pd)(n, m.A, I.A));
 }
-function v(e, t) {
+function b(e, t) {
     if (null != o.default.getRemoteSessionId()) return;
     let { guildId: n, channelId: i } = e;
     if (null != n && D(n, i)) return;
@@ -71,13 +71,13 @@ function v(e, t) {
         null != n && (0, u.c6)(!0, n, i),
         (t?.forceFocus !== !0 && (a || t?.noFocus)) || C.A.selectParticipant(e.channelId, r));
 }
-function b(e, t) {
+function v(e, t) {
     l.h.dispatch({ type: "STREAM_UPDATE_SELF_HIDDEN", channelId: e, selfStreamHidden: t });
 }
 function P(e, t) {
     let { guildId: n, channelId: i } = e;
     if (null != n && D(n, i)) return;
-    v(e, t);
+    b(e, t);
     let r = _.A.getWindowOpen(O.MLl.CHANNEL_CALL_POPOUT),
         a = p.Ay.getVoiceChannelId();
     (r && a === i) || (0, c.A)(e);

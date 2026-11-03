@@ -25,13 +25,13 @@ function N(e) {
         L = (0, o.h)(t.applicationId),
         y = (0, p.A)(t),
         D = (0, u.Us)() === T.BRT.POPOUT,
-        { parentAnalyticsLocation: v } = (0, l.Ay)();
-    function b() {
+        { parentAnalyticsLocation: b } = (0, l.Ay)();
+    function v() {
         (y.isShownInCall && null != y.channelId && null != y.participantId && (0, a.A)(y.channelId, y.participantId),
             h.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: m.y0.FOCUSED }));
     }
     async function P() {
-        if (t.intent !== m.sV.INLINE) return void b();
+        if (t.intent !== m.sV.INLINE) return void v();
         let { returnToConjureFrameSurface: e } = await Promise.all([
             n.e("644013"),
             n.e("896691"),
@@ -132,7 +132,7 @@ function N(e) {
             n.e("584605"),
             n.e("28047"),
         ]).then(n.bind(n, 228946));
-        e(t) || b();
+        e(t) || v();
     }
     return (0, i.jsxs)("div", {
         className: S._v,
@@ -163,7 +163,7 @@ function N(e) {
                                   className: g.BD,
                                   popoutOpen: !1,
                                   onOpenPopout: function () {
-                                      ((0, d.XJ)(v, d.OP.POPOUT, !0), (0, s.A)({ onConfirm: () => (0, I.A)(t.id) }));
+                                      ((0, d.XJ)(b, d.OP.POPOUT, !0), (0, s.A)({ onConfirm: () => (0, I.A)(t.id) }));
                                   },
                                   onClosePopout: T.FXj,
                               }),

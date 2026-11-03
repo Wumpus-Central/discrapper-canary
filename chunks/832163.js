@@ -33,14 +33,14 @@ function y(e) {
 function D(e, t, n) {
     (null != e && (d[e] = { ...d[e], ...n }), null != t && (c[t] = { ...c[t], ...n }), (d = { ...d }), (c = { ...c }));
 }
-function v() {
+function b() {
     if (i === s.default.locale) return !1;
     ((i = s.default.locale), (o = {}), (d = {}), (c = {}), (u = {}), (_ = {}), (E = {}), (A = {}), (h = {}));
 }
-class b extends r.Ay.Store {
+class v extends r.Ay.Store {
     static displayName = "SocialLayerStorefrontStore";
     initialize() {
-        (this.waitFor(l.default, s.default), this.syncWith([s.default], v), (i = s.default.locale));
+        (this.waitFor(l.default, s.default), this.syncWith([s.default], b), (i = s.default.locale));
     }
     getStorefrontData(e) {
         return d[e];
@@ -119,7 +119,7 @@ class b extends r.Ay.Store {
         return L;
     }
 }
-let P = new b(a.h, {
+let P = new v(a.h, {
     LOGOUT: function () {
         ((A = {}),
             (h = {}),

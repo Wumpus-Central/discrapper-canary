@@ -7,8 +7,8 @@ var i = n(503698),
     s = n.n(l),
     u = n(575593);
 n(118751);
-var c = n(17928),
-    o = n(590180),
+var o = n(17928),
+    c = n(590180),
     d = n(14702);
 (n(735164), n(980094));
 var m = n(366523);
@@ -18,7 +18,7 @@ n(105292);
 var p = n(799591);
 function v(e) {
     let { sku: t, slayerProductPreviewClassName: n } = e,
-        i = (0, c.bG)([o.A], () => o.A.getProduct(t.id));
+        i = (0, o.bG)([c.A], () => c.A.getProduct(t.id));
     return null != i && t.productLine === f.EZt.COLLECTIBLES && i.type !== u.R.BUNDLE
         ? (0, r.jsx)(d.O, { sku: t })
         : t.productLine === f.EZt.SOCIAL_LAYER_GAME_ITEM
@@ -29,7 +29,7 @@ function g(e) {
     let t,
         n,
         { sku: r } = e,
-        i = (0, c.bG)([o.A], () => o.A.getProduct(r.id));
+        i = (0, o.bG)([c.A], () => c.A.getProduct(r.id));
     return {
         tableLayout:
             ((t = null != i && r.productLine === f.EZt.COLLECTIBLES && i.type !== u.R.BUNDLE),

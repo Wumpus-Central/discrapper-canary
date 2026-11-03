@@ -126,7 +126,7 @@ let L = new o.OC(
                 h.fails >= 3
                     ? h.cancel()
                     : h.fail(() => {
-                          v([...m.getState().candidates.keys()], "retry", e.context.epoch);
+                          b([...m.getState().candidates.keys()], "retry", e.context.epoch);
                       });
             }
         })(n);
@@ -154,7 +154,7 @@ let L = new o.OC(
                 return h.pending && null == r ? t : ((i = null != r), O(t, r));
             });
         }),
-            i && b());
+            i && v());
     },
     { delay: 250, maxConcurrentInvocations: 1 },
 );
@@ -186,16 +186,16 @@ function y(e, t) {
 }
 function D(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    ("settled" === e.arbitration.type || ("request" === e.arbitration.type && t) ? b() : t && h.succeed(),
+    ("settled" === e.arbitration.type || ("request" === e.arbitration.type && t) ? v() : t && h.succeed(),
         "request" === e.arbitration.type &&
             (L.isPending() || L.isInvoking() || !(h.fails >= 3) || h.succeed(),
-            v(e.arbitration.candidates, "candidate")));
+            b(e.arbitration.candidates, "candidate")));
 }
-function v(e, t) {
+function b(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : f;
     n === f && (L.isPending() || (I = { epoch: n, source: t }), L.queue(e).catch(A.tEg));
 }
-function b() {
+function v() {
     ((f = {}), (I = null), h.succeed(), L.reset());
 }
 function P() {
@@ -231,7 +231,7 @@ function w(e, t) {
             }
         });
     }),
-        null != n ? D(n, i) : r && b());
+        null != n ? D(n, i) : r && v());
 }
 function G(e) {
     return m.getState().currentlyShown.has(e);
@@ -253,7 +253,7 @@ function B() {
             return ((e.postConnectionOpen = !0), e);
         });
     }),
-        b());
+        v());
 }
 function V() {
     (0, a.r)(() => {

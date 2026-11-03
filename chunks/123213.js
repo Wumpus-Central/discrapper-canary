@@ -1,21 +1,21 @@
-t.d(l, { A: () => j, Y: () => v });
-var i = t(477900),
-    n = t(582128),
-    s = t(821609),
-    a = t(376728),
-    r = t(415951),
-    c = t(849841),
-    o = t(976860),
-    d = t(345942),
-    u = t(449054),
-    m = t(348943),
-    x = t(461888),
-    I = t(652215),
-    h = t(105292);
+i.d(l, { A: () => j, Y: () => v });
+var t = i(477900),
+    n = i(582128),
+    s = i(821609),
+    a = i(376728),
+    r = i(415951),
+    o = i(849841),
+    c = i(976860),
+    d = i(345942),
+    u = i(449054),
+    m = i(348943),
+    x = i(461888),
+    I = i(652215),
+    h = i(105292);
 function v(e) {
     let {
             guildId: l,
-            ctaType: t,
+            ctaType: i,
             submitting: a,
             onGoToGuild: r,
             onAcceptInvite: d,
@@ -23,15 +23,15 @@ function v(e) {
             onComplete: v,
         } = e,
         [j, g] = n.useState(!1),
-        A = (0, c.A)(l),
+        A = (0, o.A)(l),
         N = n.useCallback(() => {
-            (0, o.pX)(I.BVt.GUILD_MEMBER_VERIFICATION(l));
+            (0, c.pX)(I.BVt.GUILD_MEMBER_VERIFICATION(l));
         }, [l]),
         f = n.useCallback(async () => {
             await (0, u.Z2)(l, { object: I.ZSU.GUILD_PROFILE });
         }, [l]),
-        { text: C, onClick: p } = n.useMemo(() => {
-            switch (t) {
+        { text: b, onClick: y } = n.useMemo(() => {
+            switch (i) {
                 case x.SP.IS_MEMBER:
                     return { text: h.intl.string(h.t.IRoQXr), onClick: r };
                 case x.SP.ADOPT_TAG:
@@ -49,43 +49,43 @@ function v(e) {
                 default:
                     return { text: null, onClick: null };
             }
-        }, [t, N, f, d, r, m, A]),
-        b = n.useCallback(
+        }, [i, N, f, d, r, m, A]),
+        C = n.useCallback(
             async (e) => {
                 (e.stopPropagation(), g(!0));
                 try {
-                    await p?.();
+                    await y?.();
                 } catch {
                 } finally {
                     (v?.(), g(!1));
                 }
             },
-            [p, v],
+            [y, v],
         );
-    return null == C
+    return null == b
         ? null
-        : (0, i.jsx)(s.$, { variant: "active", size: "sm", text: C, fullWidth: !0, loading: j || a, onClick: b });
+        : (0, t.jsx)(s.$, { variant: "active", size: "sm", text: b, fullWidth: !0, loading: j || a, onClick: C });
 }
 function j(e) {
-    let { profile: l, onComplete: t } = e,
-        { guildId: s, validInviteKey: c, ctaType: o } = (0, x.Ay)(l),
+    let { profile: l, onComplete: i } = e,
+        { guildId: s, validInviteKey: o, ctaType: c } = (0, x.Ay)(l),
         u = n.useCallback(() => (0, d.u)(s), [s]),
         I = n.useCallback(() => {
-            null != c && a.Ay.acceptInvite({ inviteKey: c, context: { location: "guild_profile" } });
-        }, [c]),
+            null != o && a.Ay.acceptInvite({ inviteKey: o, context: { location: "guild_profile" } });
+        }, [o]),
         h = n.useCallback(() => {
-            l.visibility !== m.n.PUBLIC_WITH_RECRUITMENT && null != c
+            l.visibility !== m.n.PUBLIC_WITH_RECRUITMENT && null != o
                 ? I()
-                : r.A.openMemberVerificationModal(s, void 0, c);
-        }, [I, s, l.visibility, c]);
-    return null == o
+                : r.A.openMemberVerificationModal(s, void 0, o);
+        }, [I, s, l.visibility, o]);
+    return null == c
         ? null
-        : (0, i.jsx)(v, {
+        : (0, t.jsx)(v, {
               guildId: s,
-              ctaType: o,
+              ctaType: c,
               onGoToGuild: u,
               onAcceptInvite: I,
               onStartApplication: h,
-              onComplete: t,
+              onComplete: i,
           });
 }

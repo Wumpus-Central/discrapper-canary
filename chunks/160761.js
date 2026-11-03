@@ -100,7 +100,7 @@ function C(e, t, n) {
         l = (0, r.bG)([o.A], () => o.A.getGuildId()),
         d = null;
     return (
-        null != e && (d = v(!(0, f.P3)(e), a, s, t) ? e : null),
+        null != e && (d = b(!(0, f.P3)(e), a, s, t) ? e : null),
         [
             m(d, l, n),
             i.useCallback(
@@ -194,7 +194,7 @@ function D(e, t, n, a) {
         d = o?.numTimesDismissed,
         c = null;
     return (
-        null != e && (c = v(!(0, f.P3)(e), o?.lastDismissedAtMs, d, n) ? e : null),
+        null != e && (c = b(!(0, f.P3)(e), o?.lastDismissedAtMs, d, n) ? e : null),
         [
             m(c, t, a),
             i.useCallback(
@@ -206,7 +206,7 @@ function D(e, t, n, a) {
         ]
     );
 }
-function v(e, t, n, i) {
+function b(e, t, n, i) {
     let r = null != t ? (Number.isNaN(Number(t)) ? void 0 : Number(t)) : void 0,
         a = void 0 === r ? 0 : r + i.cooldownDurationMs,
         s = Date.now(),

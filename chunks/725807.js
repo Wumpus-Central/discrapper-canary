@@ -31,8 +31,8 @@ let I = function (e) {
             showGradient: L = !1,
             confirmationFooter: y,
             color: D,
-            iconColor: v = "currentColor",
-            ...b
+            iconColor: b = "currentColor",
+            ...v
         } = e,
         P = (0, l.bG)([_.A], () => _.A.isFocused()),
         M = (0, A.A)({
@@ -50,11 +50,11 @@ let I = function (e) {
             className: R,
             wrapperClassName: s()({ [f.PJ]: L && t === h.pe.TIER_2, [f.Up]: L && t === h.pe.TIER_1 }, I),
             buttonShineClassName:
-                "buttonShineClassName" in b ? b.buttonShineClassName : U === o.XD.BRAND_INVERTED ? f.nz : void 0,
+                "buttonShineClassName" in v ? v.buttonShineClassName : U === o.XD.BRAND_INVERTED ? f.nz : void 0,
             pauseAnimation: !P || C,
-            ...b,
+            ...v,
             children: [
-                N && (0, i.jsx)(c.t, { size: "md", color: v, className: s()(f.PC, m) }),
+                N && (0, i.jsx)(c.t, { size: "md", color: b, className: s()(f.PC, m) }),
                 (0, i.jsx)("span", { className: s()(f._d, p?.textClassName), children: M.buttonText }),
             ],
         });

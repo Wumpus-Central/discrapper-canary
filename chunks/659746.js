@@ -6,8 +6,8 @@ var l,
     i = t.n(s),
     h = t(615300),
     u = t(661531),
-    c = t(462887),
-    o = t(930861),
+    o = t(462887),
+    c = t(930861),
     d = t(602853),
     m = t(404374),
     A = t(998304),
@@ -278,7 +278,7 @@ class M extends r.PureComponent {
                     className: E.Mp,
                     style: this.getContainerStyle(),
                     children: [
-                        (0, n.jsx)(o.kF, {
+                        (0, n.jsx)(c.kF, {
                             "data-migration-pending": !0,
                             className: E.q2,
                             style: this.getShineStyle(),
@@ -294,7 +294,7 @@ function y(e) {
     let { theme: a, ...t } = e,
         l = (0, d.r)(u.A.unsafe_rawColors.WHITE).hex(),
         r = (0, d.r)(u.A.unsafe_rawColors.BRAND_500).hex(),
-        s = (0, c.M)(a) ? l : r;
+        s = (0, o.M)(a) ? l : r;
     return (0, n.jsx)(M, { ...t, theme: a, flashColor: s });
 }
 y.Types = C;

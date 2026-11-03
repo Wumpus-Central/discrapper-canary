@@ -5,8 +5,8 @@ var r,
     l = n(503698),
     s = n.n(l),
     u = n(355522),
-    c = n(37766),
-    o = n(637956),
+    o = n(37766),
+    c = n(637956),
     d = n(352224),
     m = n(509115),
     f =
@@ -113,9 +113,9 @@ class g extends a.PureComponent {
         return "bank" === t
             ? (0, i.jsx)(u.M, { className: n })
             : "gift_card" === t
-              ? (0, i.jsx)(c._, { className: n, size: "lg" })
+              ? (0, i.jsx)(o._, { className: n, size: "lg" })
               : "pix" === t
-                ? (0, i.jsx)(o.W, { className: n, size: "lg" })
+                ? (0, i.jsx)(c.W, { className: n, size: "lg" })
                 : "ideal" === t
                   ? (0, i.jsx)(d.E, { className: n, size: "lg" })
                   : (0, i.jsx)("div", {

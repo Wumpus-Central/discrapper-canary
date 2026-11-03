@@ -1,6 +1,6 @@
-n.d(e, { A: () => l });
+n.d(e, { A: () => o });
 var i = n(477900);
-function l(t) {
+function o(t) {
     let { color: e = "white", className: n } = t;
     return (0, i.jsx)("svg", {
         width: "90",

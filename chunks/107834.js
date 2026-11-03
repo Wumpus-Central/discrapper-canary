@@ -10,15 +10,15 @@ var n = i(17928),
     d = i(742589),
     u = i(65470),
     m = i(285373),
-    x = i(280450),
-    g = i(652215),
+    g = i(280450),
+    x = i(652215),
     p = i(105292),
     f = i(906367);
 let h = function () {
-    let e = (0, n.bG)([x.default], () => x.default.isAuthenticated()),
+    let e = (0, n.bG)([g.default], () => g.default.isAuthenticated()),
         t = (0, c.Ay)();
     return (0, s.jsx)(r.A, {
-        section: g.JJy.NAVIGATION,
+        section: x.JJy.NAVIGATION,
         children: (0, s.jsx)(a.N, {
             theme: t,
             children: (t) =>

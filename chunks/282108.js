@@ -2,7 +2,7 @@
     $V: () => y,
     Fg: () => m,
     KM: () => g,
-    LE: () => v,
+    LE: () => b,
     M: () => O,
     O8: () => T,
     b: () => R,
@@ -71,7 +71,7 @@ function T(e) {
     let t = p();
     return null == e
         ? h.LO.NONE
-        : v(t.map((t) => (U(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(_.Vq));
+        : b(t.map((t) => (U(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(_.Vq));
 }
 function g(e) {
     let t = m(e);
@@ -114,18 +114,18 @@ function O(e) {
 }
 function R(e, t) {
     if (t === h.LO.NONE) return [];
-    let n = b(t);
+    let n = v(t);
     return 0 === n.length ? [] : n.filter((t) => D(t, e)).map((e) => h.Jn[e].obscureReason);
 }
 function L(e, t) {
     if (t === h.LO.NONE) return !1;
-    let n = b(t);
+    let n = v(t);
     return 0 !== n.length && n.filter((t) => D(t, e)).length > 0;
 }
 function y(e, t) {
     var n, i, r, a, l, o, d;
     if (t === h.LO.NONE || s.Ay.get("explicit_media_redaction_ignore_pending_scan")) return !1;
-    let c = b(t);
+    let c = v(t);
     if (0 === c.length) return !1;
     switch (e.type) {
         case E.D.Embed:
@@ -185,7 +185,7 @@ function D(e, t) {
             return !1;
     }
 }
-function v(e) {
+function b(e) {
     let t = h.LO.NONE;
     for (let n of e)
         switch (n) {
@@ -200,7 +200,7 @@ function v(e) {
         }
     return t;
 }
-function b(e) {
+function v(e) {
     if (e === h.LO.NONE) return [];
     let t = [];
     for (let n of p()) (e & n.bitmask) > 0 && t.push(n.harmType);

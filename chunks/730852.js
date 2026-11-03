@@ -26,8 +26,8 @@ var i = n(73153),
     L = n(71393),
     y = n(834942),
     D = n(576705),
-    v = n(977997),
-    b = n(147036);
+    b = n(977997),
+    v = n(147036);
 let P = { fromGuildId: void 0, fromChannelId: void 0 };
 var M = n(652215);
 let U = {
@@ -76,11 +76,11 @@ let U = {
                       { lockVoiceStateForResume: s = !1, bypassIdleUpdate: l = !1 } =
                           arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
                       o = c.A.getChannel(e),
-                      d = v.A.getCurrentClientVoiceChannelId(t ?? null) === e,
+                      d = b.A.getCurrentClientVoiceChannelId(t ?? null) === e,
                       P = null != o ? y.A.getCheck(o.guild_id) : null;
                   if (!(null != t && (0, h.V)(t)) && (null == P || P.canChat || (0, f.pC)(o))) {
                       if (null != o && !d) {
-                          let e = (0, b.Pd)(o, v.A, L.A);
+                          let e = (0, v.Pd)(o, b.A, L.A);
                           if (e && o.isGuildStageVoice() && (0, I.xn)(o.id))
                               return (0, E.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([

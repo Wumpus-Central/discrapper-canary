@@ -1,27 +1,27 @@
-n.d(e, { A: () => f, Q: () => A });
-var l = n(477900);
-n(582128);
-var i = n(3026),
-    a = n(939249),
-    r = n(534514),
-    s = n(834730),
-    o = n(939496),
-    c = n(996988),
-    u = n(260155);
+e.d(n, { A: () => f, Q: () => A });
+var l = e(477900);
+e(582128);
+var i = e(3026),
+    a = e(939249),
+    r = e(534514),
+    s = e(834730),
+    o = e(939496),
+    c = e(996988),
+    u = e(260155);
 function d(t) {
-    let { text: e, onClick: n, component: r, ...s } = t,
+    let { text: n, onClick: e, component: r, ...s } = t,
         { themeType: d } = (0, o.E)(),
-        A = "string" == typeof e ? e.trim() : e;
+        A = "string" == typeof n ? n.trim() : n;
     if (null == A || "" === A) return null;
     function f() {
         return d === c.d.MODAL || d === c.d.MODAL_V2
             ? (0, l.jsx)(r, { color: "text-default", ...s, children: A })
             : (0, l.jsx)(r, { color: "text-default", ...s, children: (0, l.jsx)(i.A, { children: A }) });
     }
-    return null != n
+    return null != e
         ? (0, l.jsx)(a.D, {
               onClick: (t) => {
-                  (t.stopPropagation(), n(t));
+                  (t.stopPropagation(), e(t));
               },
               className: u.sd,
               children: f(),

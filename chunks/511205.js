@@ -21,12 +21,12 @@ function u(e, t, n) {
 function h(e) {
     let { className: t, children: n, keyExtractor: a, paddingTop: h = 0, paddingBottom: p = 0 } = e,
         [m, A] = l.useState({ width: 0, height: 0 }),
-        { width: f, height: x } = m,
-        g = n?.length ?? 0,
+        { width: f, height: g } = m,
+        x = n?.length ?? 0,
         C = f - 16,
-        j = x - (h + p),
+        y = g - (h + p),
         {
-            tileStyle: y,
+            tileStyle: j,
             tileWidth: I,
             rows: N,
             columns: v,
@@ -59,13 +59,13 @@ function h(e) {
                         (h = Math.ceil(i / (o = d(s, l)))),
                         { tileWidth: s, columns: Math.max(1, o), rows: h });
                     return { tileStyle: { width: A }, tileWidth: A, rows: p, columns: m };
-                })(g, C, j),
-            [g, C, j],
+                })(x, C, y),
+            [x, C, y],
         ),
         E = v + 1,
         b = E * I + (E - 1) * 8 <= f,
         S = Math.floor(I / c) + 8,
-        T = Math.max(0, j - S * N) / 2;
+        T = Math.max(0, y - S * N) / 2;
     return (0, i.jsx)(r.A, {
         fade: !0,
         className: t,
@@ -81,11 +81,11 @@ function h(e) {
                         return (0, i.jsx)(
                             "div",
                             {
-                                style: y,
+                                style: j,
                                 className: s()(o.Vs, {
                                     [o.E3]: b,
                                     [o.k4]: l >= (N - 1) * v,
-                                    [o.Kk]: (l + 1) % v == 0 || l === g - 1,
+                                    [o.Kk]: (l + 1) % v == 0 || l === x - 1,
                                 }),
                                 children: (0, i.jsx)("div", { className: o.eP, children: e(I) }),
                             },

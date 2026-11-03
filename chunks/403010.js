@@ -26,8 +26,8 @@ var i = n(435558),
     L = n(174459),
     y = n(209489),
     D = n(267041),
-    v = n(812729),
-    b = n.n(v);
+    b = n(812729),
+    v = n.n(b);
 class P {
     alwaysUpdateState;
     dirty = !1;
@@ -51,8 +51,8 @@ class P {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = this.getNextState({ ...this.state, ...e });
-        if (t) this.dirty = !b()(n, this.getInitialState());
-        else for (let e of Object.keys(n)) this.dirty = this.dirty || !b()(this.state[e], n[e]);
+        if (t) this.dirty = !v()(n, this.getInitialState());
+        else for (let e of Object.keys(n)) this.dirty = this.dirty || !v()(this.state[e], n[e]);
         let i = this.dirty && this.shouldCommit();
         return (
             (i || this.alwaysUpdateState) && (this.state = n),
@@ -291,7 +291,7 @@ function eD(e, t) {
         n
     );
 }
-function ev(e) {
+function eb(e) {
     return "partial" !== e.data_mode
         ? {
               id: e.id,
@@ -354,7 +354,7 @@ function ev(e) {
               hasThreadsSubscription: e.has_threads_subscription,
           };
 }
-function eb(e) {
+function ev(e) {
     return "partial" !== e.data_mode
         ? {
               id: e.id,
@@ -621,7 +621,7 @@ function eq(e) {
             a.Ay.Emitter.batched(() => {
                 var t;
                 let n,
-                    i = ((t = B.identifyStartTime), (n = eb(e)), (eR = { guild: e, identifyTime: t }), n);
+                    i = ((t = B.identifyStartTime), (n = ev(e)), (eR = { guild: e, identifyTime: t }), n);
                 null != eE.default.getCurrentUser() &&
                     (eW({ type: "GUILD_CREATE", guild: i }),
                     eW({
@@ -767,9 +767,9 @@ function eq(e) {
                                           }));
                                       let d =
                                               l?.map((e, t) =>
-                                                  !0 === e.unavailable ? e : ((e.members = eD(eL, s?.[t])), ev(e)),
+                                                  !0 === e.unavailable ? e : ((e.members = eD(eL, s?.[t])), eb(e)),
                                               ) ?? [],
-                                          c = ey(t, l, (e) => ev(e));
+                                          c = ey(t, l, (e) => eb(e));
                                       return (
                                           null != c && d.push(c),
                                           { ...o, users: i, presences: [], guilds: d, private_channels: a ?? [] }
@@ -1080,7 +1080,7 @@ function eq(e) {
         (e) => {
             if (e.unavailable) eW({ type: "GUILD_UNAVAILABLE", guildId: e.id });
             else {
-                let t = eb(e);
+                let t = ev(e);
                 (eW({ type: "GUILD_CREATE", guild: t }),
                     eW({
                         type: "VOICE_STATE_UPDATES",

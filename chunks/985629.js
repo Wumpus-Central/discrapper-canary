@@ -1,24 +1,24 @@
-n.d(e, { A: () => f });
-var l = n(477900),
-    i = n(131937),
-    a = n(866665),
-    r = n(414499),
-    s = n(359549),
-    o = n(139286),
-    c = n(939496),
-    u = n(993401),
-    d = n(996988),
-    A = n(105292);
+e.d(n, { A: () => f });
+var l = e(477900),
+    i = e(131937),
+    a = e(866665),
+    r = e(414499),
+    s = e(359549),
+    o = e(139286),
+    c = e(939496),
+    u = e(993401),
+    d = e(996988),
+    A = e(105292);
 function f(t) {
-    let { application: e, analyticsLocations: n, onAction: f, onClose: g } = t,
+    let { application: n, analyticsLocations: e, onAction: f, onClose: g } = t,
         { themeType: m } = (0, c.E)(),
-        x = (0, s.Ay)({ application: e, analyticsLocations: n });
+        p = (0, s.Ay)({ application: n, analyticsLocations: e });
     return ((0, o.A)(
-        { name: i.ImpressionNames.CLOUD_PLAY_CTA, type: i.ImpressionTypes.VIEW, properties: { location_stack: n } },
-        { disableTrack: null == x },
-        [x],
+        { name: i.ImpressionNames.CLOUD_PLAY_CTA, type: i.ImpressionTypes.VIEW, properties: { location_stack: e } },
+        { disableTrack: null == p },
+        [p],
     ),
-    null == x)
+    null == p)
         ? null
         : (0, l.jsx)(a.m, {
               text: A.intl.string(A.t.JVwWva),
@@ -28,7 +28,7 @@ function f(t) {
                   text: A.intl.string(A.t["jaYS/h"]),
                   size: "sm",
                   onClick: (t) => {
-                      (t.stopPropagation(), f?.({ action: "PRESS_CLOUD_PLAY_BUTTON" }), x(), g?.());
+                      (t.stopPropagation(), f?.({ action: "PRESS_CLOUD_PLAY_BUTTON" }), p(), g?.());
                   },
                   fullWidth: m !== d.d.MODAL_V2,
               }),

@@ -1,6 +1,6 @@
-e.d(n, { A: () => r });
-var i = e(702841),
-    l = e(280450);
+i.d(n, { A: () => r });
+var e = i(702841),
+    l = i(280450);
 function r() {
-    return (0, i.bG)([l.default], () => l.default.isAuthenticated());
+    return (0, e.bG)([l.default], () => l.default.isAuthenticated());
 }

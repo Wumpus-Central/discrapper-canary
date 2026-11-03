@@ -37,8 +37,8 @@ let N = "body-sm/semibold",
 function O(e) {
     let { type: t, title: n, message: a, messageList: p, onDismiss: O, action: R, role: L, hidden: y } = e,
         { i18n: D } = (0, I.G9)(),
-        v = r.useId(),
         b = r.useId(),
+        v = r.useId(),
         P = (function (e) {
             let t = { size: "xs", "aria-hidden": !0 };
             switch (e) {
@@ -90,17 +90,17 @@ function O(e) {
                                     (0, i.jsxs)("div", {
                                         className: T.copyContainer,
                                         children: [
-                                            (0, i.jsxs)(_.A, { id: v, children: [M, ":"] }),
+                                            (0, i.jsxs)(_.A, { id: b, children: [M, ":"] }),
                                             null == n
                                                 ? null
                                                 : (0, i.jsx)(m.E, {
-                                                      id: b,
+                                                      id: v,
                                                       variant: N,
                                                       color: "text-strong",
                                                       children: n,
                                                   }),
                                             (0, i.jsx)(m.E, {
-                                                id: null == n ? b : void 0,
+                                                id: null == n ? v : void 0,
                                                 variant: C,
                                                 color: "text-strong",
                                                 children: null != p ? (0, i.jsx)(g, { intro: a, items: p }) : a,
@@ -127,7 +127,7 @@ function O(e) {
                               className: T.iconContainer,
                               children: (0, i.jsx)(u.J, {
                                   "aria-label": D.DISMISS_BUTTON_LABEL,
-                                  "aria-describedby": `${v} ${b}`,
+                                  "aria-describedby": `${b} ${v}`,
                                   size: "sm",
                                   onClick: O,
                               }),

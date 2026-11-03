@@ -1,13 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => o });
 var r = n(477900),
     l = n(582128),
     a = n(503698),
     s = n.n(a),
     i = n(932793),
     u = n(763075);
-function c(e) {
-    let { onPageChange: t, offset: n, totalCount: a, pageSize: c, renderPageWrapper: o, className: d } = e,
-        f = Math.floor(n / c) + 1,
+function o(e) {
+    let { onPageChange: t, offset: n, totalCount: a, pageSize: o, renderPageWrapper: c, className: d } = e,
+        f = Math.floor(n / o) + 1,
         h = l.useCallback(
             (e) => {
                 t(e - 1);
@@ -19,10 +19,10 @@ function c(e) {
         children: (0, r.jsx)(i.m, {
             currentPage: f,
             totalCount: a,
-            pageSize: c,
+            pageSize: o,
             onPageChange: h,
             maxVisiblePages: 5,
-            renderPageWrapper: o,
+            renderPageWrapper: c,
         }),
     });
 }

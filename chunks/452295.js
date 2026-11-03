@@ -26,8 +26,8 @@ var i = n(488428),
     L = n(144914),
     y = n(308368),
     D = n(991690),
-    v = n(933958),
-    b = n(734057),
+    b = n(933958),
+    v = n(734057),
     P = n(287809),
     M = n(646865),
     U = n(909206),
@@ -63,7 +63,7 @@ async function k(e) {
         A = P.default.getCurrentUser();
     return (
         null != i &&
-        null != b.A.getChannel(i) &&
+        null != v.A.getChannel(i) &&
         null != A &&
         null != t &&
         (U.MJ(t.id),
@@ -111,7 +111,7 @@ async function et(e) {
     let { userId: t, sessionId: n, applicationId: i, channelId: r, messageId: a, intent: s } = e,
         l = e.activity ?? Z.A.getApplicationActivity(t, i);
     if (!(e.embedded ?? (0, V.A)(l, J.jUm.EMBEDDED)) || !(0, q.VS)(await j(i))) return null;
-    let o = v.Ay.getEmbeddedActivityForUserId(t, i, !0);
+    let o = b.Ay.getEmbeddedActivityForUserId(t, i, !0);
     return null != o
         ? (0, c.A)({
               applicationId: i,
@@ -146,7 +146,7 @@ async function ei(e, t) {
             inviterUserId: d,
             analyticsLocations: c = [],
         } = e,
-        u = b.A.getChannel(i),
+        u = v.A.getChannel(i),
         _ = u?.getGuildId(),
         E = { isStart: !0, analyticsLocations: c, source: o, inviterUserId: d, channelId: i, guildId: _ },
         A = { customId: s, referrerId: l };
@@ -190,7 +190,7 @@ async function er(e, t) {
             inviterUserId: e.inviterUserId,
         };
     if (null != r)
-        return v.Ay.getEmbeddedActivitiesForChannel(r).some((e) => e.applicationId === i)
+        return b.Ay.getEmbeddedActivitiesForChannel(r).some((e) => e.applicationId === i)
             ? (0, c.A)({ applicationId: i, activityChannelId: r, ...l })
             : x({
                   targetApplicationId: i,

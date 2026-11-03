@@ -30,12 +30,12 @@ function N(e) {
     null != r && O(t, r.guild_id ?? r.preview_guild_id ?? null, r.name, n, i);
 }
 function C() {
-    v.clear();
+    b.clear();
 }
 function O(e, t, n, i, T) {
     if (null != T) {
-        if (T <= (v.get(e) ?? 0)) return;
-        v.set(e, T);
+        if (T <= (b.get(e) ?? 0)) return;
+        b.set(e, T);
     }
     if (
         h.A.areTurnNotificationsDisabled() ||
@@ -71,4 +71,4 @@ let R = "bit_message1",
     L = "message1",
     y = "ConjureChatStore",
     D = 0.4,
-    v = new Map();
+    b = new Map();

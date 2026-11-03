@@ -40,13 +40,13 @@ function R(e) {
         L = (0, a.bG)([h.default], () => I.Ay.isPremium(h.default.getCurrentUser(), g.PremiumTypes.TIER_1)),
         y = (0, a.bG)([A.A], () => A.A.getChannel(n?.channelId)),
         D = r.useMemo(() => (null != n ? [n] : []), [n]),
-        v = r.useCallback(() => {
+        b = r.useCallback(() => {
             null != y && (0, E.A)(y.getGuildId(), y.id, N);
         }, [y, N]);
     if (null == n || null == y) return null;
-    let b = C;
+    let v = C;
     return (
-        t || L || (b = O),
+        t || L || (v = O),
         (0, i.jsx)(l.Y, {
             targetElementRef: f,
             position: "top",
@@ -59,7 +59,7 @@ function R(e) {
                         activeStreams: D,
                         onClose: t,
                         showReportOption: !0,
-                        handleGoLive: v,
+                        handleGoLive: b,
                         onInteraction: (0, c.s)("ManageStreamsButton", R ?? s, { entrypoint: T.GK.OTHER_BUTTON }),
                     }),
                 });
@@ -70,7 +70,7 @@ function R(e) {
                     ...e,
                     buttonRef: f,
                     label: S.intl.string(S.t.tmiYpF),
-                    iconComponent: b,
+                    iconComponent: v,
                     onClick: (t) => {
                         ((null != R || null != s) && (0, d.XJ)(R ?? s, d.OP.STREAM_SETTINGS), e?.onClick(t));
                     },

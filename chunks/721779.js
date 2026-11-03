@@ -44,9 +44,9 @@ let S = /^\/([a-zA-Z0-9-]+)$/,
     L = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
     y = /^\/activities\/([0-9-]+)\/?$/,
     D = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-    v =
+    b =
         /^(?:\/game-shop\/([0-9]+)(?:\/([0-9]+)(?:\/[^/]+)?)?|\/channels\/([0-9]+)\/game-shop(?:\/([0-9]+)(?:\/([0-9]+)(?:\/[^/]+)?)?)?)\/?$/,
-    b = /^\/channels\/([0-9]+)\/shop$/,
+    v = /^\/channels\/([0-9]+)\/shop$/,
     P = /^\/quests\/([0-9-]+)\/?$/,
     M = /^\/game-servers\/share\/([A-Za-z0-9_-]+)$/,
     U = /^\/game-organizations\/invite\/([A-Za-z0-9_-]+)\/?$/,
@@ -199,12 +199,12 @@ function et(e) {
             }
             let F = h?.match(D);
             null != F && r(E.I.GUILD_PRODUCT, `${F[1]}-${F[2]}`);
-            let B = h?.match(b);
+            let B = h?.match(v);
             null != B && r(E.I.SERVER_SHOP, B[1]);
             let V = (function (e) {
                 let { allowUnpagedChannelPath: t = !1 } =
                         arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                    n = e?.match(v);
+                    n = e?.match(b);
                 return null != n && (t || null == n[3] || null != n[4])
                     ? { guildId: n[1] ?? n[3], skuId: n[2] ?? n[5] }
                     : null;

@@ -1,11 +1,11 @@
 n.d(l, { c: () => i });
 var s = n(260509),
-    t = n(488926),
-    a = n(652215);
+    a = n(488926),
+    t = n(652215);
 function i(e, l) {
     return (
-        !!((0, s.bM)(e, l) || t.$3({ permission: a.xBc.ADMINISTRATOR, context: e, user: l })) ||
-        (t.$3({ permission: a.xBc.MANAGE_GUILD, context: e, user: l }) &&
-            t.$3({ permission: a.xBc.MANAGE_ROLES, context: e, user: l }))
+        !!((0, s.bM)(e, l) || a.$3({ permission: t.xBc.ADMINISTRATOR, context: e, user: l })) ||
+        (a.$3({ permission: t.xBc.MANAGE_GUILD, context: e, user: l }) &&
+            a.$3({ permission: t.xBc.MANAGE_ROLES, context: e, user: l }))
     );
 }

@@ -26,8 +26,8 @@ var i,
     L = n(90575),
     y = n(806931),
     D = n(652215),
-    v = n(165610),
-    b = n(731854);
+    b = n(165610),
+    v = n(731854);
 let P = "__EMBEDDED_ACTIVITIES__";
 function M(e) {
     let { applicationId: t, instanceId: n } = e;
@@ -209,11 +209,11 @@ class x {
                 guildId: T.A.getChannel(this.channelId)?.getGuildId() ?? null,
                 sortKey: t.toString(),
             })),
-            n = (0, v.ny)(E.A.getMainFrame());
+            n = (0, b.ny)(E.A.getMainFrame());
         return (
             null != n &&
                 (0, u.A)(n.applicationId) &&
-                (0, v.VZ)(n) === this.channelId &&
+                (0, b.VZ)(n) === this.channelId &&
                 !e.some((e) => e.applicationId === n.applicationId) &&
                 t.push({
                     type: y.lp.ACTIVITY,
@@ -260,7 +260,7 @@ class x {
             }),
             i.push(t));
         let _ = I.A.getStreamForUser(e, d) ?? I.A.getActiveStreamForUser(e, d);
-        if (g.Ay.supports(b.O5.VIDEO) && null != _ && _.channelId === this.channelId) {
+        if (g.Ay.supports(v.O5.VIDEO) && null != _ && _.channelId === this.channelId) {
             let t = (0, A._z)(_),
                 s = this.getParticipant(t),
                 l = _.ownerId === p.default.getId() && I.A.isSelfStreamHidden(this.channelId),
@@ -272,7 +272,7 @@ class x {
                           }
                         : null;
             ((n = {
-                ...C.A.getUserStreamData(e, d, b.x.STREAM),
+                ...C.A.getUserStreamData(e, d, v.x.STREAM),
                 ...o,
                 type: l ? y.lp.HIDDEN_STREAM : y.lp.STREAM,
                 id: t,

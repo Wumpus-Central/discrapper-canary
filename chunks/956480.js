@@ -16,7 +16,7 @@ function m(e, t, n) {
             { guildId: m, location: "GuildRoomAnnouncer" },
             { autoTrackExposure: !1 },
         ),
-        x = i.useRef(null);
+        g = i.useRef(null);
     i.useEffect(() => {
         let i = (function (e, t, n) {
                 let i = new Map(),
@@ -26,13 +26,13 @@ function m(e, t, n) {
                 for (let e of n) a.set(e.objectId, e.createdBy);
                 return { channelId: e, positions: i, statusIds: l, noteAuthors: a };
             })(e, t, n),
-            l = x.current;
-        if (((x.current = i), null == l || l.channelId !== e)) return;
+            l = g.current;
+        if (((g.current = i), null == l || l.channelId !== e)) return;
         function s(t) {
             return (0, o.mG)(m, e, null != t ? r.default.getUser(t) : null);
         }
         let d = [],
-            g = [],
+            x = [],
             C = [];
         for (let [n, i] of t) {
             let t = l.positions.get(n);
@@ -42,7 +42,7 @@ function m(e, t, n) {
             ) {
                 let t = (0, c.r)(i.seat, i.position, e);
                 null != t &&
-                    g.push(p.intl.formatToPlainString(h.default.nPRAZX, { userName: s(n), seatLabel: t.getLabel() }));
+                    x.push(p.intl.formatToPlainString(h.default.nPRAZX, { userName: s(n), seatLabel: t.getLabel() }));
             }
             if (null != t && A && l.statusIds.get(n) !== i.statusId) {
                 let e = u.x.find((e) => e.id === i.statusId);
@@ -56,18 +56,18 @@ function m(e, t, n) {
                 );
             }
         }
-        let j = [];
-        for (let [e] of l.positions)
-            i.positions.has(e) || j.push(p.intl.formatToPlainString(h.default.u7LUkR, { userName: s(e) }));
         let y = [];
+        for (let [e] of l.positions)
+            i.positions.has(e) || y.push(p.intl.formatToPlainString(h.default.u7LUkR, { userName: s(e) }));
+        let j = [];
         if (f) {
             for (let e of n)
                 l.noteAuthors.has(e.objectId) ||
-                    y.push(p.intl.formatToPlainString(h.default.zTbxKr, { userName: s(e.createdBy) }));
+                    j.push(p.intl.formatToPlainString(h.default.zTbxKr, { userName: s(e.createdBy) }));
             for (let [e, t] of l.noteAuthors)
-                i.noteAuthors.has(e) || y.push(p.intl.formatToPlainString(h.default.DO8iXB, { userName: s(t) }));
+                i.noteAuthors.has(e) || j.push(p.intl.formatToPlainString(h.default.DO8iXB, { userName: s(t) }));
         }
-        let I = [...d, ...j, ...g, ...C, ...y];
+        let I = [...d, ...y, ...x, ...C, ...j];
         0 !== I.length && a.O.announce(I.join(". "), "polite");
     }, [t, n, e, m, A, f]);
 }

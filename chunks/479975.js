@@ -36,10 +36,10 @@ var f = n(400492),
     L = n(723702),
     y = n(19575),
     D = n(652215);
-let v = L.isPlatformEmbedded && (0, L.isWindows)(),
-    b = v && 10 > parseFloat(o.A.os.release),
+let b = L.isPlatformEmbedded && (0, L.isWindows)(),
+    v = b && 10 > parseFloat(o.A.os.release),
     P = !0;
-if (v && !b) {
+if (b && !v) {
     let [e, , t] = o.A.os.release.split(".");
     P = parseInt(e) > 10 || parseInt(t) >= 15063;
 }
@@ -50,7 +50,7 @@ function w(e, t, n) {
     (null != n && i.push(`delivery:${n}`), _.A.increment({ name: l.K.DESKTOP_NOTIFICATION_DISPLAY, tags: i }));
 }
 let G =
-    b ||
+    v ||
     ("Chrome" === s().name && 47 > parseFloat(s().version ?? "")) ||
     ("Firefox" === s().name && 52 > parseFloat(s().version ?? ""));
 async function x() {
@@ -88,9 +88,9 @@ let H = r().throttle(V, 1e3, { leading: !0 });
 function j() {
     y.Ay.flashFrame(!1);
 }
-v && (window.addEventListener("focus", j), y.Ay.on("MAIN_WINDOW_FOCUS", j));
+b && (window.addEventListener("focus", j), y.Ay.on("MAIN_WINDOW_FOCUS", j));
 let W = window.Notification;
-if (b) {
+if (v) {
     let e = {};
     (y.Ay.on("NOTIFICATION_CLICK", (t, n) => {
         let i = e[n];
@@ -215,7 +215,7 @@ async function q(e, t, n, i, r) {
     }
     (t.includes("\0") && (M.warn("Notification title contains null character, setting to empty string"), (t = "")),
         n.includes("\0") && (M.warn("Notification body contains null character, setting to empty string"), (n = "")));
-    let b = r?.tag ?? null,
+    let v = r?.tag ?? null,
         k = u && c?.sound === !0 && c?.authorizationStatus === "authorized";
     function F(e, t) {
         (r.onShown?.(),
@@ -256,7 +256,7 @@ async function q(e, t, n, i, r) {
                         e(o.src);
                     }));
             }))),
-        v && T.A.taskbarFlash && y.Ay.flashFrame(!0));
+        b && T.A.taskbarFlash && y.Ay.flashFrame(!0));
     let V = null;
     if (u) {
         let a = { title: t, body: n };
@@ -313,7 +313,7 @@ async function q(e, t, n, i, r) {
                   : "native_module_unavailable";
     }
     null != r.sound && u && (X(r.sound, r.volume ?? 1, r.soundpack), (i.ping = !0));
-    let H = { icon: e, body: n, tag: b, silent: !0 },
+    let H = { icon: e, body: n, tag: v, silent: !0 },
         j = L.isPlatformEmbedded && (0, L.isMac)();
     if (j) {
         let { result: e, reason: t } = h({ embeddedMac: j, constructed: !1, nativeFailureReason: V });

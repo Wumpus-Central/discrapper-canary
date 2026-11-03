@@ -17,10 +17,10 @@ function A(e, t) {
 function f(e) {
     let { channelId: t, position: n, roomWidth: o } = e,
         f = (0, l.useRef)(null),
-        x = (0, a.bG)([d.A], () => d.A.getChannel(t)),
-        g = (0, c.RQ)((e) => A(e, t)),
+        g = (0, a.bG)([d.A], () => d.A.getChannel(t)),
+        x = (0, c.RQ)((e) => A(e, t)),
         C = (0, l.useRef)(null),
-        j = (0, l.useRef)(!1);
+        y = (0, l.useRef)(!1);
     return ((0, l.useEffect)(() => {
         let e = f.current?.ownerDocument;
         if (null != e)
@@ -31,10 +31,10 @@ function f(e) {
                 }
             );
         function n() {
-            j.current = A(c.RQ.getState(), t);
+            y.current = A(c.RQ.getState(), t);
         }
     }, [t]),
-    null == x)
+    null == g)
         ? null
         : (0, i.jsx)(r.Y, {
               targetElementRef: f,
@@ -43,12 +43,12 @@ function f(e) {
               spacing: 16,
               shouldShow: !0,
               onRequestClose: function (e, n) {
-                  if ("system:click_outside" === n ? j.current : g) return (C.current?.focus(), s.oU);
+                  if ("system:click_outside" === n ? y.current : x) return (C.current?.focus(), s.oU);
                   (0, u.HW)(t);
               },
               renderPopout: () =>
                   (0, i.jsx)(p.A, {
-                      channel: x,
+                      channel: g,
                       position: n,
                       setEditorRef: (e) => {
                           C.current = e;

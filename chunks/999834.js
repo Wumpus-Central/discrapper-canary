@@ -1,7 +1,7 @@
-n.d(e, { Pi: () => r, b_: () => s });
-var l = n(17928),
-    i = n(950869),
-    a = n(723702);
+e.d(n, { Pi: () => r, b_: () => s });
+var l = e(17928),
+    i = e(950869),
+    a = e(723702);
 function r() {
     return a.isPlatformEmbedded;
 }

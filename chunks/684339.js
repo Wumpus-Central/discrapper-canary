@@ -38,8 +38,8 @@ class f {
         this.logger.info(`spinner visible for ${p} ms
       [${e}, count for stream: ${s}]`);
         let f = u.A.getGuildId(),
-            x = c.A.getUserVoiceChannelId(f, r.default.getId()),
-            h = (function (e) {
+            h = c.A.getUserVoiceChannelId(f, r.default.getId()),
+            x = (function (e) {
                 if (null != e) {
                     if (e.isGuildVoice()) return "guild_voice";
                     if (e.isGuildStageVoice()) return "is_stage_channel";
@@ -47,7 +47,7 @@ class f {
                     if (e.isGroupDM()) return "group_dm";
                 }
                 return null;
-            })(a.A.getChannel(x));
+            })(a.A.getChannel(h));
         d.default.track(m.HAw.VIDEO_SPINNER_SHOWN_V2, {
             video_spinner_context: e,
             duration_video_spinner_visible_ms: p,
@@ -55,8 +55,8 @@ class f {
             media_session_id: u.A.getMediaSessionId(),
             event_count_for_stream: s,
             guild_id: f,
-            channel_id: x,
-            channel_type: h,
+            channel_id: h,
+            channel_type: x,
             spinning_user_id: t,
             connection_type: o.A.getType(),
             effective_connection_speed: o.A.getEffectiveConnectionSpeed(),

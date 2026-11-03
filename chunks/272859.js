@@ -1,8 +1,8 @@
-l.d(t, { d: () => a });
-var e = l(17928),
-    i = l(800342),
-    n = l(328968),
-    r = l(652215);
+t.d(l, { d: () => a });
+var e = t(17928),
+    i = t(800342),
+    n = t(328968),
+    r = t(652215);
 let a = (0, e.UT)(n.A, {
     getQueryId: r.fic.STORE_LISTING,
     get: (s) => (null != s ? (n.A.getForSKU(s) ?? null) : null),

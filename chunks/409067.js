@@ -150,7 +150,7 @@ function h(e) {
                         i = m.get(t.key) ?? 0;
                     return n !== i ? i - n : e.key.localeCompare(t.key);
                 }),
-            v = !O && !R;
+            b = !O && !R;
         return {
             allClips: s,
             filteredClips: N,
@@ -158,9 +158,9 @@ function h(e) {
             participantsFacet: y,
             distributedClipInitiatorsFacet: D,
             mainLinkCounts: {
-                allClips: v && h.activeMainLink === d.oH.ALL_CLIPS ? C : T.allClips,
-                autoClips: v && h.activeMainLink === d.oH.AUTO_CLIPS ? C : T.autoClips,
-                favorites: v && h.activeMainLink === d.oH.FAVORITES ? C : T.favorites,
+                allClips: b && h.activeMainLink === d.oH.ALL_CLIPS ? C : T.allClips,
+                autoClips: b && h.activeMainLink === d.oH.AUTO_CLIPS ? C : T.autoClips,
+                favorites: b && h.activeMainLink === d.oH.FAVORITES ? C : T.favorites,
             },
             mainLinkNewCounts: S,
         };

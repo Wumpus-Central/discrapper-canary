@@ -101,8 +101,8 @@ let T = new h.A("RTCConnectionStore"),
     L = !1,
     y = null,
     D = !1,
-    v = null,
-    b = !1,
+    b = null,
+    v = !1,
     P = null,
     M = null;
 function U(e, t, i) {
@@ -200,7 +200,7 @@ function w() {
         i.destroy(),
         (i = null),
         (O = null),
-        (b = !1),
+        (v = !1),
         e && (y = null));
 }
 function G() {
@@ -314,10 +314,10 @@ class B extends a.Ay.Store {
         return t?.get(e);
     }
     getLastNonZeroRemoteVideoSinkWantsTime() {
-        return v;
+        return b;
     }
     getWasMoved() {
-        return b;
+        return v;
     }
 }
 let V = new B(
@@ -357,7 +357,7 @@ let V = new B(
                       })
                   )
                       return !1;
-                  v = performance.now();
+                  b = performance.now();
               },
               VIDEO_SIZE_UPDATE: function (e) {
                   let { streamId: t, dimensions: n, zoom: r } = e;
@@ -382,7 +382,7 @@ let V = new B(
                                       ? null == t.channelId
                                           ? w()
                                           : (i.setNextChannelId(t.channelId),
-                                            (b = !0),
+                                            (v = !0),
                                             (P = null),
                                             i.clearJoinVoiceId())
                                       : ((t.guildId !== i.guildId && null == t.channelId) || w(),

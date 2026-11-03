@@ -1,10 +1,10 @@
-t.d(r, { U: () => s });
+t.d(r, { U: () => a });
 var n = t(17928),
     l = t(918467),
     i = t(288106),
-    a = t(202541);
-function s() {
-    let e = (0, n.bG)([l.A], () => l.A.getPromotionsForApplication(a.tv));
+    s = t(202541);
+function a() {
+    let e = (0, n.bG)([l.A], () => l.A.getPromotionsForApplication(s.tv));
     return e?.find((e) => {
         var r;
         return (

@@ -40,8 +40,8 @@ let y = new s.J(
         },
     ),
     D = null,
-    v = null,
-    b = !1,
+    b = null,
+    v = !1,
     P = null,
     M = 30 * I.A.Millis.MINUTE;
 function U(e) {
@@ -63,12 +63,12 @@ function w(e, t, n, i, r) {
     };
 }
 function G() {
-    (y.clear(), (D = null), (v = null), (b = !1), (P = null));
+    (y.clear(), (D = null), (b = null), (v = !1), (P = null));
 }
 function x() {
     let e = Date.now();
     (G(),
-        (v = e),
+        (b = e),
         (P = _.A.getChannelId() ?? null),
         (function (e) {
             let t = A.Ay.getChannelId();
@@ -109,7 +109,7 @@ function F(e) {
 }
 function B() {
     let e = k();
-    return null != e && !b && null == D && ((D = e), !0);
+    return null != e && !v && null == D && ((D = e), !0);
 }
 function V() {
     let e,
@@ -118,7 +118,7 @@ function V() {
             let e = k();
             return e !== D && P === D && e !== D && ((D = F(P)), !0);
         })(),
-        n = null == (e = k()) ? ((P = null), !!b && ((b = !1), !0)) : P !== e && ((P = e), !!b && ((b = !1), !0)),
+        n = null == (e = k()) ? ((P = null), !!v && ((v = !1), !0)) : P !== e && ((P = e), !!v && ((v = !1), !0)),
         i = B();
     return t || n || i;
 }
@@ -148,7 +148,7 @@ class W extends a.Ay.Store {
         return D;
     }
     getVoiceChatMinimized() {
-        return b;
+        return v;
     }
 }
 function Y(e) {
@@ -160,7 +160,7 @@ let K = new W(
         ? {}
         : {
               OVERLAY_MOUNTED: Y(function (e) {
-                  return null == v && (x(), !0);
+                  return null == b && (x(), !0);
               }),
               OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: Y(function () {
                   return (G(), !0);
@@ -183,9 +183,9 @@ let K = new W(
                   let { channelId: t, source: n } = e;
                   return (function (e, t) {
                       if (null == e) return !1;
-                      (null == v && (v = Date.now()), D !== e && (D = e));
+                      (null == b && (b = Date.now()), D !== e && (D = e));
                       let n = k();
-                      if ((null != n && e === n && b && (b = !1), null != D && !y.has(D))) {
+                      if ((null != n && e === n && v && (v = !1), null != D && !y.has(D))) {
                           let e = Date.now(),
                               n = U(D),
                               i = c.A.getChannel(D)?.lastMessageId ?? void 0,
@@ -217,7 +217,7 @@ let K = new W(
                       n = !1;
                   if (D === e.channelId) {
                       let e = k();
-                      ((D = F(e) ?? (b || null == e ? null : e)), (n = !0));
+                      ((D = F(e) ?? (v || null == e ? null : e)), (n = !0));
                   }
                   return t || n;
               }),
@@ -225,12 +225,12 @@ let K = new W(
                   let e = y.size() > 0;
                   y.clear();
                   let t = k();
-                  return ((D = b || null == t ? null : t), e);
+                  return ((D = v || null == t ? null : t), e);
               }),
               OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED: Y(function (e) {
                   let { minimized: t } = e;
-                  if (b === t) return !1;
-                  if (((b = t), !t)) return (B(), !0);
+                  if (v === t) return !1;
+                  if (((v = t), !t)) return (B(), !0);
                   let n = k();
                   return (null != n && D === n && (D = F(n)), !0);
               }),

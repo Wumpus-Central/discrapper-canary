@@ -201,12 +201,12 @@ async function R(e, t, n) {
 var L = n(568004),
     y = n(227841),
     D = n(340829),
-    v = n(966846),
-    b = n(293066),
+    b = n(966846),
+    v = n(293066),
     P = n(775228);
 function M(e, t, a, s, l) {
     let o = P.A.getInstallationPath(e.id, t),
-        d = null != e.eulaId && !b.A.hasAcceptedEULA(e.eulaId);
+        d = null != e.eulaId && !v.A.hasAcceptedEULA(e.eulaId);
     null == o || d
         ? (0, E.openModalLazy)(async () => {
               let { default: i } = await Promise.all([
@@ -244,7 +244,7 @@ function G(e, t, n) {
     if (null != r) return i.qv(r, t, n);
 }
 function x(e, t) {
-    let n = (0, y.F)(e, D.A, v.A),
+    let n = (0, y.F)(e, D.A, b.A),
         { analyticsParams: i } = t;
     switch (n) {
         case T.Hf6.PLAY:

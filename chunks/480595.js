@@ -41,8 +41,8 @@ var O = n(155718),
     L = n(655116),
     y = n(253932),
     D = n(617617),
-    v = n(616356),
-    b = n(734057),
+    b = n(616356),
+    v = n(734057),
     P = n(760751),
     M = n(794383),
     U = n(309010),
@@ -66,10 +66,10 @@ function B() {
         let [, n] = t;
         null != n.application_id && (a.add(n.name), e.push(n));
     });
-    let l = null != v.A.getCurrentUserActiveStream(),
+    let l = null != b.A.getCurrentUserActiveStream(),
         d = f.Ay.getVisibleGame();
     if (l) {
-        let e = v.A.getStreamerActiveStreamMetadata(),
+        let e = b.A.getStreamerActiveStreamMetadata(),
             t = f.Ay.getVisibleRunningGames(),
             n = null;
         (e?.pid != null && (n = t.find((t) => t.pid === e.pid) ?? null),
@@ -125,7 +125,7 @@ function B() {
 class V extends c.Ay.Store {
     static displayName = "LocalActivityStore";
     initialize() {
-        (this.waitFor(A.A, v.A, b.A, _.Ay, M.A, C, P.A, f.Ay, U.Ay, w.A, I.A, L.A, D.A), this.syncWith([C], () => B()));
+        (this.waitFor(A.A, b.A, v.A, _.Ay, M.A, C, P.A, f.Ay, U.Ay, w.A, I.A, L.A, D.A), this.syncWith([C], () => B()));
     }
     getActivities() {
         return x;

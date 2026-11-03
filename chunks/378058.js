@@ -5,10 +5,10 @@ n.d(t, {
     Qn: () => L,
     T5: () => R,
     Xw: () => y,
-    Y4: () => b,
+    Y4: () => v,
     l3: () => S,
     o1: () => M,
-    o6: () => v,
+    o6: () => b,
     sL: () => N,
     zg: () => C,
 });
@@ -103,10 +103,10 @@ function y(e) {
 function D(e) {
     return e.type === o.NL.STANDARD;
 }
-function v(e) {
+function b(e) {
     return e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : [];
 }
-function b(e) {
+function v(e) {
     if (null === e) return !1;
     let t = e.guild_id;
     return void 0 !== a.A.getGuild(t);

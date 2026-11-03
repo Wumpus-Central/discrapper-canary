@@ -1,9 +1,9 @@
 n.d(t, {
-    dI: () => v,
+    dI: () => b,
     JK: () => U,
     g4: () => M,
     Ay: () => G,
-    QS: () => b,
+    QS: () => v,
     H$: () => y,
     zV: () => P,
     Ou: () => D,
@@ -66,9 +66,9 @@ function y(e) {
 function D(e) {
     if (null == e) return null;
     let t = d.A.getChannel(e);
-    return null == t ? null : v(t);
+    return null == t ? null : b(t);
 }
-function v(e) {
+function b(e) {
     if (null == e) return null;
     let t = !1,
         n = e.getGuildId();
@@ -88,7 +88,7 @@ function v(e) {
         channel_hidden: t,
     };
 }
-function b(e) {
+function v(e) {
     let t;
     if (null == e) return null;
     let n = d.A.getChannel(e);
@@ -119,7 +119,7 @@ function P(e) {
         o = {
             ...t,
             ...y(l),
-            ...(null != r && null != a && (0, L.jq)(a) ? { channel_static_route: a, channel_hidden: !1 } : v(s)),
+            ...(null != r && null != a && (0, L.jq)(a) ? { channel_static_route: a, channel_hidden: !1 } : b(s)),
         };
     N.default.track(e, o, { flush: n });
 }

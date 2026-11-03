@@ -29,12 +29,12 @@ function h(e, t, n) {
                 ref: L,
                 ...y
             } = a,
-            { scrollerRef: D, getScrollerState: v } = (0, d.A)(),
-            b = (0, c.A)(D, p);
+            { scrollerRef: D, getScrollerState: b } = (0, d.A)(),
+            v = (0, c.A)(D, p);
         r.useImperativeHandle(
             L,
-            () => ({ getScrollerNode: () => D.current, getScrollerState: v, ...(0, u.A)(D, v, b, p) }),
-            [D, v, p, b],
+            () => ({ getScrollerNode: () => D.current, getScrollerState: b, ...(0, u.A)(D, b, v, p) }),
+            [D, b, p, v],
         );
         let P = (0, _.A)({ scrollbarGutter: S, orientation: p, className: f, scrollerRef: D }),
             M = !1 === S || "vertical" !== p ? void 0 : "stable" === S ? A.x2 : A.GV;

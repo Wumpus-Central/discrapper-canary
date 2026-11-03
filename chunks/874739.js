@@ -1,4 +1,4 @@
-n.d(t, { A: () => j });
+n.d(t, { A: () => y });
 var i = n(477900),
     l = n(582128),
     a = n(17928),
@@ -13,16 +13,16 @@ var i = n(477900),
     m = n(526369),
     A = n(699707),
     f = n(713397),
-    x = n(652215),
-    g = n(806931),
+    g = n(652215),
+    x = n(806931),
     C = n(804273);
-let j = (0, s.A)((e) => {
+let y = (0, s.A)((e) => {
     let {
         participants: t,
         filteredParticipants: n,
         selectedParticipant: s,
-        participantsVersion: j,
-        layout: y,
+        participantsVersion: y,
+        layout: j,
         onSelectParticipant: I,
         onContextMenuParticipant: N,
         onFullscreenParticipant: v,
@@ -40,17 +40,17 @@ let j = (0, s.A)((e) => {
         callContainerDimensions: U,
     } = e;
     l.useEffect(() => {
-        u._.dispatch(x.jej.REMEASURE_TARGET);
+        u._.dispatch(g.jej.REMEASURE_TARGET);
     }, [R, O, U.width, U.height]);
     let D = l.useMemo(
-            () => n.filter((e) => e.type !== g.lp.ACTIVITY || !e.participants.some((e) => (0, r.S)(e))),
-            [n, j],
+            () => n.filter((e) => e.type !== x.lp.ACTIVITY || !e.participants.some((e) => (0, r.S)(e))),
+            [n, y],
         ),
         V = (0, a.bG)([o.A], () => o.A.getVoiceParticipantsHidden(E.id), [E.id]);
     if (w?.channelId === E.id) return (0, i.jsx)(p.A, { height: O });
     if (E?.isGuildVocalOrThread() && !T)
         return (0, i.jsx)(h.A, { channel: E, participants: t, hasConnectPermission: b });
-    if (((n = T ? n : t), L === x._Of.VOICE))
+    if (((n = T ? n : t), L === g._Of.VOICE))
         return (0, i.jsx)(c.A, { guildId: E.guild_id, width: R, className: C.Er, participants: t, onContextMenu: N });
     if (null == s) {
         if (0 === n.length) {
@@ -86,7 +86,7 @@ let j = (0, s.A)((e) => {
         idle: P,
         height: O,
         width: R,
-        layout: y,
+        layout: j,
         inCall: T,
         channel: E,
         showParticipants: _,

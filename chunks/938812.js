@@ -29,8 +29,8 @@ var R = n(265422),
     L = n(625494),
     y = n(652215),
     D = n(630685),
-    v = n(272613),
-    b = n(398884),
+    b = n(272613),
+    v = n(398884),
     P = n(819638),
     M = n(723702),
     U = n(763827),
@@ -263,10 +263,10 @@ let eS = {
         comboKeysBindGlobal: !0,
         action() {
             if ((0, r.hasModalOpen)(P.fc))
-                v.A.updateCreateGuildModal({ slide: P.oS.JOIN_GUILD, location: "Keyboard Shortcut" });
+                b.A.updateCreateGuildModal({ slide: P.oS.JOIN_GUILD, location: "Keyboard Shortcut" });
             else {
-                let e = !(0, b.Sn)() && (0, D.i)("guild_list_add_server");
-                v.A.openCreateGuildModal({ location: "Keyboard Shortcut", joinFirst: e });
+                let e = !(0, v.Sn)() && (0, D.i)("guild_list_add_server");
+                b.A.openCreateGuildModal({ location: "Keyboard Shortcut", joinFirst: e });
             }
         },
     },

@@ -13,11 +13,11 @@ var i = n(477900),
     m = n(267102),
     A = n(874739),
     f = n(616356),
-    x = n(734057),
-    g = n(71393),
+    g = n(734057),
+    x = n(71393),
     C = n(576705),
-    j = n(309010),
-    y = n(977997),
+    y = n(309010),
+    j = n(977997),
     I = n(625494),
     N = n(446243),
     v = n(889426),
@@ -28,9 +28,9 @@ let T = function (e) {
     let { channelId: t, popoutType: n, width: T, height: _, idle: R, onClose: O } = e,
         P = (0, m.Us)(),
         L = (0, s.bG)([d.A], () => d.A.getSelectedParticipant(t)),
-        M = (0, s.bG)([x.A], () => x.A.getChannel(t)),
-        w = (0, s.bG)([g.A], () => g.A.getGuild(M?.getGuildId())),
-        U = (0, s.bG)([j.Ay], () => null != M && j.Ay.getVoiceChannelId() === M.id),
+        M = (0, s.bG)([g.A], () => g.A.getChannel(t)),
+        w = (0, s.bG)([x.A], () => x.A.getGuild(M?.getGuildId())),
+        U = (0, s.bG)([y.Ay], () => null != M && y.Ay.getVoiceChannelId() === M.id),
         {
             participants: D,
             filteredParticipants: V,
@@ -88,7 +88,7 @@ let T = function (e) {
                       if (null != M) {
                           if (
                               (0, b.Ay)(e) &&
-                              (0, p.eo)(M, y.A, g.A, C.A, u.default)[0] &&
+                              (0, p.eo)(M, j.A, x.A, C.A, u.default)[0] &&
                               0 ===
                                   f.A.getAllActiveStreams().filter(
                                       (t) => (0, h._z)(t) === e.id && t.state !== E.XYD.ENDED,

@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => S, eF: () => y, lE: () => b }), n(321073));
+(n.d(t, { Ay: () => y, eF: () => S, lE: () => b }), n(321073));
 var l = n(284009),
     i = n.n(l),
     r = n(155718),
@@ -28,7 +28,7 @@ let m =
     g = new Set(["gameMentionInput", "timestampMentionInput"]),
     x = new Set(["line", "blockQuote"]),
     E = new Set(["applicationCommandOption"]);
-function S(e, t, n) {
+function y(e, t, n) {
     let { isInline: l, isVoid: i, onChange: r } = e;
     ((e.isVoid = (e) => !!f.has(e.type) || i(e)), (e.isInline = (e) => !!(f.has(e.type) || g.has(e.type)) || l(e)));
     let s = null,
@@ -38,7 +38,7 @@ function S(e, t, n) {
             let l = h.VW.richValue(e);
             ((l !== s || e.previewMarkdown !== a) &&
                 (o.o.withMergedEntry(e, () => {
-                    h.VW.withoutNormalizing(e, () => y(e, t, n));
+                    h.VW.withoutNormalizing(e, () => S(e, t, n));
                 }),
                 (s = l),
                 (a = e.previewMarkdown)),
@@ -47,7 +47,7 @@ function S(e, t, n) {
         e
     );
 }
-function y(e, t, n) {
+function S(e, t, n) {
     let l = h.VW.areStylesDisabled(e);
     for (let i of h.VW.blocks(e))
         if (x.has(i[0].type)) l ? A(e, i, !0, null) : C(e, i, t, n);

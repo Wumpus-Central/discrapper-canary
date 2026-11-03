@@ -10,7 +10,7 @@ function l(e) {
 let s = function (e) {
     let { label: t, currencies: n, onChange: l, selectedCurrency: s, disabled: u = !1 } = e;
     if (n.length < 2 || null == s) return null;
-    let c = n.map((e, t) => ({
+    let o = n.map((e, t) => ({
         id: t.toString(),
         value: e,
         label: `${e.toUpperCase()} - ${(function (e) {
@@ -80,7 +80,7 @@ let s = function (e) {
         selectionMode: "single",
         label: t,
         value: s,
-        options: c,
+        options: o,
         onSelectionChange: function (e) {
             null != e && l(e);
         },

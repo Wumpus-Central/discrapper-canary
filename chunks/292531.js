@@ -163,15 +163,15 @@ var g = n(292572),
     L = n(733391),
     y = n(637893),
     D = n(227327);
-let v = new Set();
-function b(e, t) {
-    v.has(e) ||
-        (v.add(e),
+let b = new Set();
+function v(e, t) {
+    b.has(e) ||
+        (b.add(e),
         (0, O.f)(async () => {
             try {
                 await t();
             } finally {
-                v.delete(e);
+                b.delete(e);
             }
         }));
 }
@@ -236,7 +236,7 @@ function G(e, t) {
                                 : { type: "guild", guildId: n.scopeId };
                         if (n.skuIds.length > 1) {
                             if (!(0, y.x)("resolveStorefrontCodedLink")) return;
-                            b(`${e}:${n.scopeId}`, async () => {
+                            v(`${e}:${n.scopeId}`, async () => {
                                 "application" === i.type
                                     ? await (0, L.ap)(i.applicationId, { eager: !1 })
                                     : await (0, L.Rw)(i.guildId, { eager: !1 });
@@ -248,7 +248,7 @@ function G(e, t) {
                             R.A.isFetching(r) ||
                             R.A.didFetchingSkuFail(r) ||
                             (o.h.dispatch({ type: "STORE_LISTINGS_FETCH_START", skuId: r }),
-                            b((0, D.m5)([r], n.scopeId), async () => {
+                            v((0, D.m5)([r], n.scopeId), async () => {
                                 let e = {};
                                 "application" === i.type
                                     ? await (0, L.Pp)(i.applicationId, r, e)

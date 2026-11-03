@@ -26,8 +26,8 @@ var i = n(131937),
     L = n(967198),
     y = n(287809),
     D = n(174459),
-    v = n(488926),
-    b = n(499785),
+    b = n(488926),
+    v = n(499785),
     P = n(157559),
     M = n(652215),
     U = n(204925),
@@ -171,7 +171,7 @@ let F = {
             location: o,
             moderatorReportId: d,
         } = e;
-        return b.A.patch({
+        return v.A.patch({
             url: M.Rsh.GUILD_MEMBER(t, n),
             reason: l,
             body: { communication_disabled_until: r, moderator_report_id: d },
@@ -222,7 +222,7 @@ let F = {
                 name: null != t && "" !== t ? t : w.intl.string(w.t.QBMHvB),
                 color: n ?? 0,
                 colors: i ?? { primary_color: n ?? 0, secondary_color: null, tertiary_color: null },
-                permissions: v.x3,
+                permissions: b.x3,
             };
         try {
             let t = await a.Bo.post({

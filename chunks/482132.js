@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => y, UX: () => g, dZ: () => _ });
+n.d(t, { Ay: () => E, UX: () => g, dZ: () => _ });
 var l = n(477900),
     r = n(582128),
     i = n(503698),
@@ -13,8 +13,8 @@ var l = n(477900),
     m = n(281044),
     p = n(573359),
     C = n(166532),
-    E = n(819252);
-function y(e) {
+    y = n(819252);
+function E(e) {
     let {
             header: t,
             disableDefaultSlideTransformStyling: n,
@@ -23,27 +23,27 @@ function y(e) {
             let { header: t, disableDefaultSlideTransformStyling: n, ...l } = e;
             return { header: t, disableDefaultSlideTransformStyling: n, stepProps: l };
         })(e),
-        { step: s, stepConfigs: y } = (0, f.Ay)(),
+        { step: s, stepConfigs: E } = (0, f.Ay)(),
         { setBodyNode: _, setFooterNode: g, setModalOverlayNode: I } = (0, h.Gm)(),
         S = (0, u.bG)([p.A], () => p.A.isDisplayingWowMomentConfirmation),
-        { setReadySlideId: A, unifiedCheckoutFlow: x } = (0, m.t4)((e) => ({
+        { setReadySlideId: A, unifiedCheckoutFlow: P } = (0, m.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
         })),
-        P = y.find((e) => e.key === s);
+        x = E.find((e) => e.key === s);
     if (
         (r.useEffect(() => {
             I(null);
         }, [s, I]),
-        null == P)
+        null == x)
     )
         throw new d.v({
             message: "Unknown step for current payment flow (PaymentModalStep)",
-            extraSentryInformation: { stepConfig: P, step: s, unifiedCheckoutFlow: x, stepConfigs: y },
+            extraSentryInformation: { stepConfig: x, step: s, unifiedCheckoutFlow: P, stepConfigs: E },
         });
-    let v = P?.options?.hideSlider ?? !1,
-        R = P?.options?.hideDefaultModalBody ?? !1,
-        M = P?.options?.sliderBodyClassName,
+    let v = x?.options?.hideSlider ?? !1,
+        R = x?.options?.hideDefaultModalBody ?? !1,
+        M = x?.options?.sliderBodyClassName,
         T = s === C.pn.REVIEW,
         L = r.useCallback(
             (e, t) => {
@@ -53,8 +53,8 @@ function y(e) {
         );
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (P?.options?.renderHeader ?? !0) ? t : null,
-            P.renderStep(i),
+            (x?.options?.renderHeader ?? !0) ? t : null,
+            x.renderStep(i),
             null == s || v
                 ? null
                 : (0, l.jsxs)(l.Fragment, {
@@ -70,22 +70,20 @@ function y(e) {
                                         width: "100%",
                                         disableDefaultTransformStyling: T || n,
                                         overflow: S ? "visible" : void 0,
-                                        children: y
-                                            .filter((e) => null != e.key)
-                                            .map((e) =>
-                                                (0, l.jsx)(
-                                                    o.q,
-                                                    {
-                                                        id: e.key,
-                                                        children: (0, l.jsx)("form", {
-                                                            className: a()(E.OO, { [E.Wq]: T }, M),
-                                                            ref: (t) => L(t, e.key),
-                                                            onSubmit: (e) => e.preventDefault(),
-                                                        }),
-                                                    },
-                                                    e.key,
-                                                ),
+                                        children: E.filter((e) => null != e.key).map((e) =>
+                                            (0, l.jsx)(
+                                                o.q,
+                                                {
+                                                    id: e.key,
+                                                    children: (0, l.jsx)("form", {
+                                                        className: a()(y.OO, { [y.Wq]: T }, M),
+                                                        ref: (t) => L(t, e.key),
+                                                        onSubmit: (e) => e.preventDefault(),
+                                                    }),
+                                                },
+                                                e.key,
                                             ),
+                                        ),
                                     }),
                                 }),
                           (0, l.jsx)("div", { ref: (e) => g(e) }),

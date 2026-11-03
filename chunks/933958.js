@@ -60,8 +60,8 @@ class y {
     }
 }
 let D = new Map(),
-    v = new Map(),
     b = new Map(),
+    v = new Map(),
     P = new Map();
 function M(e, t) {
     return `${t}:${e}`;
@@ -109,7 +109,7 @@ function X(e) {
         T = (0, I.Ay)(r);
     if (null == T) return;
     let S = (0, m.H)(o),
-        O = 0 === (null != S ? (b.get(S)?.getItems("all") ?? R) : R).length,
+        O = 0 === (null != S ? (v.get(S)?.getItems("all") ?? R) : R).length,
         L = (P.get(o.id)?.getItems("all") ?? R).find((e) => e.applicationId === r),
         y = A.map((e) => e.userId),
         w = d.default.getId(),
@@ -160,9 +160,9 @@ function X(e) {
                           L = d.default.getSessionId();
                       if (null == R || null == L || D.get(t)?.location.id === s.id) return;
                       let y = (0, m.H)(s),
-                          v = c.A.getChannel(y),
-                          b = v?.getGuildId();
-                      if (null == _.default.getCurrentUser() || (null == b && !v?.isPrivate())) return;
+                          b = c.A.getChannel(y),
+                          v = b?.getGuildId();
+                      if (null == _.default.getCurrentUser() || (null == v && !b?.isPrivate())) return;
                       i = s;
                       let P = {
                           applicationId: t,
@@ -217,7 +217,7 @@ function X(e) {
               Q({ channelId: S ?? null, applicationId: r })),
         (t = y.length > 0 ? W : null),
         $(P, o.id).upsert(r, o.id, t),
-        null != (n = (0, m.H)(o)) && ($(b, n).upsert(r, o.id, t), $(v, K((0, m.D)(o))).upsert(r, o.id, t)));
+        null != (n = (0, m.H)(o)) && ($(v, n).upsert(r, o.id, t), $(b, K((0, m.D)(o))).upsert(r, o.id, t)));
 }
 function q(e) {
     e.activity_instances?.forEach((e) => {
@@ -278,19 +278,19 @@ class J extends r.Ay.PersistedStore {
         return D;
     }
     getEmbeddedActivitiesForGuild(e) {
-        return v.get(e)?.getItems("visible") ?? R;
+        return b.get(e)?.getItems("visible") ?? R;
     }
     getEmbeddedActivitiesForChannel(e) {
-        return b.get(e)?.getItems("visible") ?? R;
+        return v.get(e)?.getItems("visible") ?? R;
     }
     getEmbeddedActivitiesForLocation(e) {
         return P.get(e.id)?.getItems("visible") ?? R;
     }
     getEmbeddedActivitiesForGuildIncludingHidden(e) {
-        return v.get(e)?.getItems("all") ?? R;
+        return b.get(e)?.getItems("all") ?? R;
     }
     getEmbeddedActivitiesForChannelIncludingHidden(e) {
-        return b.get(e)?.getItems("all") ?? R;
+        return v.get(e)?.getItems("all") ?? R;
     }
     getEmbeddedActivitiesForLocationIncludingHidden(e) {
         return P.get(e.id)?.getItems("all") ?? R;
@@ -298,7 +298,7 @@ class J extends r.Ay.PersistedStore {
     getEmbeddedActivitiesByChannel() {
         let e = new Map();
         return (
-            b.forEach((t, n) => {
+            v.forEach((t, n) => {
                 let i = t.getItems("visible");
                 i.length > 0 && e.set(n, i);
             }),
@@ -390,7 +390,7 @@ let ee = new J(a.h, {
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { guilds: t } = e;
-            (b.clear(), v.clear(), P.clear(), t.forEach((e) => q(e)));
+            (v.clear(), b.clear(), P.clear(), t.forEach((e) => q(e)));
             let n = d.default.getId();
             for (let e of Array.from(D.values()))
                 ee
@@ -405,11 +405,11 @@ let ee = new J(a.h, {
         },
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e,
-                n = b.get(t.id),
+                n = v.get(t.id),
                 i = n?.getItems("all") ?? R;
-            b.delete(t.id);
+            v.delete(t.id);
             let r = K(t.guild_id),
-                a = v.get(r);
+                a = b.get(r);
             (a?.removeWhere((e) => (0, m.H)(e.location) === t.id),
                 i.forEach((e) => {
                     P.delete(e.location.id);

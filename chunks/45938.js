@@ -6,7 +6,7 @@
     UJ: () => F,
     Vd: () => j,
     Vt: () => W,
-    X6: () => v,
+    X6: () => b,
     YI: () => H,
     Zq: () => U,
     e7: () => M,
@@ -67,7 +67,7 @@ function D(e) {
         n = arguments.length > 2 ? arguments[2] : void 0;
     return `${e}:${t ?? ""}:${n ?? ""}`;
 }
-function v(e) {
+function b(e) {
     let [t, n, i] = e.split(":");
     return {
         skuId: t,
@@ -75,7 +75,7 @@ function v(e) {
         giftStyle: "" !== i && null != i ? Number.parseInt(i) : void 0,
     };
 }
-function b(e) {
+function v(e) {
     return e.replace(/[^A-Za-z0-9]/g, "");
 }
 function P(e) {
@@ -85,8 +85,8 @@ function M(e) {
     let t;
     if (null == e) return [];
     let n = new Set();
-    for (; null != (t = T.exec(e)) && n.size < 3;) n.add(b(t[1]));
-    for (; null != (t = S.exec(e)) && n.size < 3;) n.add(b(t[t.length - 1]));
+    for (; null != (t = T.exec(e)) && n.size < 3;) n.add(v(t[1]));
+    for (; null != (t = S.exec(e)) && n.size < 3;) n.add(v(t[t.length - 1]));
     return Array.from(n);
 }
 function U() {

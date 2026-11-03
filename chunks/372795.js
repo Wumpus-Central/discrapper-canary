@@ -19,8 +19,8 @@ function o(e) {
             "aria-label": h,
             onStateChange: g,
         } = e,
-        x = r.useRef(null),
         p = r.useRef(null),
+        x = r.useRef(null),
         v = r.useRef(null),
         [j, b] = r.useState(!1),
         y = (0, a.A)(),
@@ -28,12 +28,12 @@ function o(e) {
             async (e) => {
                 let l = await createImageBitmap(new Blob([e.jpeg], { type: "image/jpeg" }));
                 try {
-                    let r = x.current,
+                    let r = p.current,
                         a = r?.getContext("2d");
                     if (null == r || null == a || !(0, i.j_)(t, n, e)) return;
                     ((r.width !== l.width || r.height !== l.height) && ((r.width = l.width), (r.height = l.height)),
                         a.drawImage(l, 0, 0),
-                        (p.current = e),
+                        (x.current = e),
                         b(!0));
                 } finally {
                     l.close();
@@ -48,15 +48,15 @@ function o(e) {
         C = r.useRef(S);
     (r.useEffect(() => {
         if (C.current === S) return;
-        ((C.current = S), (p.current = null), b(!1));
-        let e = x.current;
+        ((C.current = S), (x.current = null), b(!1));
+        let e = p.current;
         e?.getContext("2d")?.clearRect(0, 0, e.width, e.height);
     }, [S]),
         r.useEffect(() => {
             g?.(N, j);
         }, [N, j, g]),
         r.useEffect(() => {
-            c && x.current?.focus();
+            c && p.current?.focus();
         }, [c]));
     let I = r.useRef(new Map());
     function E(e) {
@@ -65,8 +65,8 @@ function o(e) {
             l = Math.min(n.width / t.width, n.height / t.height),
             r = n.left + (n.width - t.width * l) / 2,
             a = n.top + (n.height - t.height * l) / 2,
-            i = p.current?.deviceWidth ?? t.width,
-            s = p.current?.deviceHeight ?? t.height;
+            i = x.current?.deviceWidth ?? t.width,
+            s = x.current?.deviceHeight ?? t.height;
         return {
             x: Math.round(((e.clientX - r) / (t.width * l)) * i),
             y: Math.round(((e.clientY - a) / (t.height * l)) * s),
@@ -116,7 +116,7 @@ function o(e) {
         };
     }
     return (0, l.jsx)("canvas", {
-        ref: x,
+        ref: p,
         className: m,
         role: c ? "application" : "img",
         "aria-label": h,

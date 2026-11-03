@@ -513,7 +513,7 @@ function m(e) {
                 );
             }, []),
         ],
-        { showTutorial: v, setSeenTutorial: b } =
+        { showTutorial: b, setSeenTutorial: v } =
             ((t = (0, a.bG)([h.A], () => h.A.settings.inbox?.viewedTutorial ?? !1)),
             (n = r.useCallback(() => {
                 A.wc.updateAsync(
@@ -572,8 +572,8 @@ function m(e) {
                     setTab: D,
                     closePopout: P,
                     handleMentionsJump: w,
-                    showTutorial: v,
-                    setSeenTutorial: b,
+                    showTutorial: b,
+                    setSeenTutorial: v,
                 });
             },
             ignoreModalClicks: !0,

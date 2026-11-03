@@ -26,13 +26,13 @@ var i = n(284009),
     L = n(803301),
     y = n(977997),
     D = n(568598);
-let v = (0, n(240921).Ay)({
+let b = (0, n(240921).Ay)({
     kind: "user",
     name: "2026-08-dont-close-chat",
     defaultConfig: { closeChatOnLeave: !0 },
     variations: { 1: { closeChatOnLeave: !1 } },
 });
-var b = n(806931),
+var v = n(806931),
     P = n(652215);
 let M = new E.A("ChannelRTCStore");
 M.enableNativeLogger(!0);
@@ -69,26 +69,26 @@ function X(e) {
                       let t = T.default.getId(),
                           n = z(e);
                       if (0 === n.size() || C.Ay.getVoiceChannelId() !== e) return ee(e, null);
-                      let i = b.jd.NONE,
+                      let i = v.jd.NONE,
                           a = n
                               .toArray(D.r4.STREAM)
-                              .find((e) => e.type === b.lp.STREAM && null != m.A.getActiveStreamForStreamKey(e.id));
-                      if (null != a) (r()(a.type === b.lp.STREAM, "Impossible condition"), (i = a.id));
+                              .find((e) => e.type === v.lp.STREAM && null != m.A.getActiveStreamForStreamKey(e.id));
+                      if (null != a) (r()(a.type === v.lp.STREAM, "Impossible condition"), (i = a.id));
                       else if (1 === n.size()) i = t;
                       else if (1 === n.size(D.r4.VIDEO)) {
                           let [e] = n.toArray(D.r4.VIDEO);
                           i = e.id;
                       } else {
-                          let e = n.toArray().find((e) => e.type === b.lp.USER && e.id !== t && !e.ringing);
+                          let e = n.toArray().find((e) => e.type === v.lp.USER && e.id !== t && !e.ringing);
                           i = e?.id ?? t;
                       }
                       let [s] = Z(e);
-                      if (s !== b.jd.AUTO && s !== b.jd.NONE) {
+                      if (s !== v.jd.AUTO && s !== v.jd.NONE) {
                           let e = n.getParticipant(s);
-                          (null == e || (e.type === b.lp.STREAM && null == m.A.getActiveStreamForStreamKey(e.id))) &&
-                              (s = b.jd.NONE);
+                          (null == e || (e.type === v.lp.STREAM && null == m.A.getActiveStreamForStreamKey(e.id))) &&
+                              (s = v.jd.NONE);
                       }
-                      (s === b.jd.NONE && null != a && !0 === Y[e] && (s = a.id), ee(e, [s, i]));
+                      (s === v.jd.NONE && null != a && !0 === Y[e] && (s = a.id), ee(e, [s, i]));
                   })(n),
                   !0)
                 : t,
@@ -101,13 +101,13 @@ function q(e) {
 }
 function Z(e) {
     let t = S.A.getChannel(e),
-        n = t?.isDM() && 1 ? b.jd.AUTO : b.jd.NONE;
-    return k[e] ?? [n, b.jd.NONE];
+        n = t?.isDM() && 1 ? v.jd.AUTO : v.jd.NONE;
+    return k[e] ?? [n, v.jd.NONE];
 }
 function Q(e) {
     if (null == k[e]) return !1;
     let [t] = k[e];
-    return t !== b.jd.NONE;
+    return t !== v.jd.NONE;
 }
 function J(e) {
     null == F[e] && (F[e] = { gridDurationMs: 0, focusDurationMs: 0, toggleCount: 0, lastUpdate: 0 });
@@ -159,7 +159,7 @@ function es() {
         (!!w.some((e) =>
             z(e)
                 .toArray(D.r4.ACTIVITY)
-                .some((e) => e.type === b.lp.ACTIVITY && null != e.frameId),
+                .some((e) => e.type === v.lp.ACTIVITY && null != e.frameId),
         ) ||
             (null != e && !!(0, _.A)(e.applicationId))) &&
         ea()
@@ -261,7 +261,7 @@ class eE extends l.Ay.PersistedStore {
     }
     getSelectedParticipantId(e) {
         let [t, n] = Z(e);
-        return t === b.jd.NONE ? null : t !== b.jd.AUTO ? t : n === b.jd.NONE || n === b.jd.AUTO ? null : n;
+        return t === v.jd.NONE ? null : t !== v.jd.AUTO ? t : n === v.jd.NONE || n === v.jd.AUTO ? null : n;
     }
     getSelectedParticipant(e) {
         let t = this.getSelectedParticipantId(e);
@@ -325,7 +325,7 @@ let eA = new eE(o.h, {
         if (null != t) delete F[t];
         else
             null != n &&
-                ((!G.has(n) || v.getConfig({ location: "handleVoiceChannelSelect" }).closeChatOnLeave) && G.delete(n),
+                ((!G.has(n) || b.getConfig({ location: "handleVoiceChannelSelect" }).closeChatOnLeave) && G.delete(n),
                 delete W[n],
                 J(n));
         t !== n && null != n && (i = X((e) => e.rebuild(), [n]));
@@ -371,10 +371,10 @@ let eA = new eE(o.h, {
             S.A.getChannel(t)?.isGuildStageVoice() && (Y[n] = (0, f.wL)(i)),
             null == i &&
                 r.toArray(D.r4.STREAM).forEach((e) => {
-                    (0, b.Ay)(e) && r.updateParticipant(e.user.id);
+                    (0, v.Ay)(e) && r.updateParticipant(e.user.id);
                 }));
         let [, a] = Z(n);
-        if ((ee(n, [i ?? b.jd.NONE, a]), (0, f.wL)(i))) {
+        if ((ee(n, [i ?? v.jd.NONE, a]), (0, f.wL)(i))) {
             try {
                 let { ownerId: e } = (0, f.Iy)(i);
                 e === T.default.getId() && q(e, [n]);
@@ -397,14 +397,14 @@ let eA = new eE(o.h, {
         i === n && ee(t, null);
         let r = z(t),
             a = r.getParticipant(n);
-        null == a || (a.type !== b.lp.ACTIVITY && (r.updateParticipantPoppedOut(n, !0), q(a.user.id, [t])));
+        null == a || (a.type !== v.lp.ACTIVITY && (r.updateParticipantPoppedOut(n, !0), q(a.user.id, [t])));
     },
     CHANNEL_RTC_RETURN_PARTICIPANT: function (e) {
         let { channelId: t, participantId: n } = e,
             i = z(t);
         i.updateParticipantPoppedOut(n, !1);
         let r = i.getParticipant(n);
-        null == r || (r.type !== b.lp.ACTIVITY && q(r.user.id, [t]));
+        null == r || (r.type !== v.lp.ACTIVITY && q(r.user.id, [t]));
     },
     CHANNEL_RTC_UPDATE_LAYOUT: function (e) {
         let { channelId: t, layout: n, appContext: i } = e;

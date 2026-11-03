@@ -1,27 +1,27 @@
-n.d(t, { A: () => h, W: () => p });
-var l = n(17928),
-    i = n(47167),
-    a = n(734057),
-    r = n(317525),
-    o = n(576705),
-    s = n(994500),
-    c = n(287809),
-    d = n(652215),
-    u = n(105292);
-function m(e, t, n) {
+t.d(n, { A: () => h, W: () => p });
+var l = t(17928),
+    i = t(47167),
+    a = t(734057),
+    r = t(317525),
+    o = t(576705),
+    s = t(994500),
+    c = t(287809),
+    d = t(652215),
+    u = t(105292);
+function m(e, n, t) {
     return 0 === e.length
         ? ""
-        : u.intl.format(n ? u.t.cJZxWf : u.t.Kj5GIT, {
+        : u.intl.format(t ? u.t.cJZxWf : u.t.Kj5GIT, {
               count: e.length,
               extraCount: Math.max(e.length - 2, 0),
               role1: e[0],
               role2: e[1],
-              itemHook: t,
+              itemHook: n,
           });
 }
 function h(e) {
-    let { guild: t, prompt: n, selectedRoleIds: h, selectedChannelIds: p, itemHook: g } = e,
-        x = t?.id,
+    let { guild: n, prompt: t, selectedRoleIds: h, selectedChannelIds: p, itemHook: g } = e,
+        x = n?.id,
         f = (0, l.yK)([r.A], () => (null != x ? r.A.getManyRoles(x, h) : []), [x, h]),
         A = (0, l.yK)([a.A, c.default, s.A, o.A], () =>
             Array.from(p)
@@ -30,7 +30,7 @@ function h(e) {
                 .map((e) => (0, i.m1)(e, c.default, s.A, !0)),
         ),
         j = f.map((e) => `@${e.name}`),
-        C = n?.singleSelect ? "" : u.intl.string(u.t.JshhEl),
+        C = t?.singleSelect ? "" : u.intl.string(u.t.JshhEl),
         v = "";
     if (0 === A.length && j.length > 0) C = m(j, g);
     else
@@ -49,8 +49,8 @@ function h(e) {
     return { helpText: C, helpTextAdditional: v };
 }
 function p(e) {
-    let { guild: t, prompt: n, selectedRoleIds: m, selectedChannelIds: h, itemHook: p } = e,
-        g = t?.id,
+    let { guild: n, prompt: t, selectedRoleIds: m, selectedChannelIds: h, itemHook: p } = e,
+        g = n?.id,
         x = (0, l.yK)([r.A], () => (null != g ? r.A.getManyRoles(g, m) : []), [g, m]),
         f = (0, l.yK)([a.A, c.default, s.A, o.A], () =>
             Array.from(h)
@@ -59,7 +59,7 @@ function p(e) {
                 .map((e) => (0, i.m1)(e, c.default, s.A, !0)),
         ),
         A = x.map((e) => `@${e.name}`),
-        j = n?.singleSelect ? "" : u.intl.string(u.t.JshhEl);
+        j = t?.singleSelect ? "" : u.intl.string(u.t.JshhEl);
     return (
         0 === f.length && A.length > 0
             ? (j = u.intl.format(u.t.vdtNYa, {

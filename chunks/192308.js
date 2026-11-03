@@ -9,7 +9,7 @@
         getOpenModalKeys: () => S,
         hasAnyModalOpen: () => g,
         hasAnyModalOpenSelector: () => T,
-        hasModalOpen: () => v,
+        hasModalOpen: () => b,
         hasModalOpenSelector: () => D,
         hasModalOpenedSince: () => N,
         modalContextFromAppContext: () => E,
@@ -18,7 +18,7 @@
         subscribeToModalChanges: () => C,
         updateModal: () => m,
         useHasAnyModalOpen: () => O,
-        useHasModalOpen: () => b,
+        useHasModalOpen: () => v,
         useIsModalAtTop: () => R,
         useModalsStore: () => A,
     }),
@@ -60,7 +60,7 @@ async function h(e) {
         o = await e();
     return (
         clearTimeout(l),
-        s ? v(a, n) && m(a, o, i.onCloseRequest, i.onCloseCallback, n) : f(o, { ...i, modalKey: a }, n),
+        s ? b(a, n) && m(a, o, i.onCloseRequest, i.onCloseCallback, n) : f(o, { ...i, modalKey: a }, n),
         a
     );
 }
@@ -240,10 +240,10 @@ function D(e, t) {
         i = e[n];
     return null != i && i.some((e) => e.key === t);
 }
-function v(e, t) {
+function b(e, t) {
     return D(A.getState(), e, t);
 }
-function b(e, t) {
+function v(e, t) {
     return D(A(), e, t);
 }
 function P() {

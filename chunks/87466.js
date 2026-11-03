@@ -69,8 +69,8 @@ function b(e) {
             fluid: r = !1,
             neutralPlaybackColors: c = !1,
             animateOnMount: b = !1,
-            waveform: x,
-            currentTime: M,
+            waveform: M,
+            currentTime: x,
             duration: w,
             played: A,
             playing: _,
@@ -103,8 +103,8 @@ function b(e) {
                         let s = [];
                         for (let e = 0; e < t.length; e++) s[e] = t.charCodeAt(e) / 255;
                         return s;
-                    })(x),
-                [x],
+                    })(M),
+                [M],
             )),
             (s = i.useMemo(
                 () =>
@@ -171,7 +171,7 @@ function b(e) {
                 inactiveFillColor: g,
             };
         })(A, j),
-        $ = { currentTime: M, duration: w, played: A },
+        $ = { currentTime: x, duration: w, played: A },
         X = i.useRef($);
     (i.useEffect(() => {
         X.current = $;
@@ -187,7 +187,7 @@ function b(e) {
         i.useEffect(() => {
             let e = N.current;
             if (null == e) return;
-            let t = v({ showAll: !A, currentTime: M, duration: w, numSegments: I.length });
+            let t = v({ showAll: !A, currentTime: x, duration: w, numSegments: I.length });
             for (let s = 0; s < e.length; s++) {
                 let a = e[s];
                 if (s < t) {
@@ -196,7 +196,7 @@ function b(e) {
                 }
                 a.reset();
             }
-        }, [I, M, w, A]),
+        }, [I, x, w, A]),
         i.useEffect(() => {
             let e = null;
             return (
@@ -257,7 +257,7 @@ function b(e) {
                     null != e && cancelAnimationFrame(e);
                 }
             );
-        }, [E, F, I, P, b, M, w, A, j, H, z, K, q, G, Y]));
+        }, [E, F, I, P, b, x, w, A, j, H, z, K, q, G, Y]));
     let [, Z] = (function (e) {
         let { ref: t, onDrag: s, onDragStart: a, onDragEnd: n } = e,
             [l, r] = i.useState(!1);

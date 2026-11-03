@@ -15,17 +15,17 @@ var l = n(477900),
     f = n(127981),
     E = n(892349),
     S = n(35587),
-    g = n(180522),
-    I = n(637969),
-    A = n(45938),
-    y = n(24482),
-    x = n(951305),
-    P = n(166532),
-    v = n(652215),
+    y = n(180522),
+    g = n(637969),
+    I = n(45938),
+    A = n(24482),
+    P = n(951305),
+    v = n(166532),
+    x = n(652215),
     _ = n(202541),
     T = n(105292),
-    N = n(843170),
-    b = n(116956),
+    b = n(843170),
+    N = n(116956),
     j = n(711729);
 function R(e) {
     let { onClose: t } = e,
@@ -44,14 +44,14 @@ function R(e) {
         { isPremium: M, isPremiumGroupPurchase: L, isEligibleForTrial: k, isEligibleForDiscount: w } = (0, o.i)(),
         D = (0, c.S3)(),
         U = (0, u.s2)(),
-        { isGift: G, selectedGiftStyle: F, giftRecipient: B } = (0, x.Pv)(),
+        { isGift: G, selectedGiftStyle: F, giftRecipient: B } = (0, P.Pv)(),
         H = (0, E.p)("PremiumUnifiedCheckoutCustomHeader"),
         { enabled: W } = h.A.useConfig({ location: "PremiumUnifiedCheckoutCustomHeader" }),
-        V = D?.productLine === v.EZt.COLLECTIBLES,
-        Y = D?.productLine === v.EZt.SOCIAL_LAYER_GAME_ITEM,
-        K = U === P.pn.CONFIRM && W && (0, f.MW)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
-        Z = G && (0, A.Ik)(B) && U === P.pn.CONFIRM && null != F && !V && !Y,
-        q = [P.pn.SKU_SELECT, P.pn.SELECT_FREE_SKU],
+        V = D?.productLine === x.EZt.COLLECTIBLES,
+        Y = D?.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM,
+        K = U === v.pn.CONFIRM && W && (0, f.MW)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
+        Z = G && (0, I.Ik)(B) && U === v.pn.CONFIRM && null != F && !V && !Y,
+        q = [v.pn.SKU_SELECT, v.pn.SELECT_FREE_SKU],
         z = null != U && !q.includes(U) && null != n,
         $ = i.useCallback(() => t(!1), [t]);
     return i.useMemo(() => {
@@ -63,27 +63,27 @@ function R(e) {
                       alignCenter: !0,
                       gradientColor: "nitro-pink",
                       graphic: { type: "image", src: j.A, aspectRatio: "16/9" },
-                      title: T.intl.formatToPlainString(N.default["7Zw7AB"], { giftCount: R }),
+                      title: T.intl.formatToPlainString(b.default["7Zw7AB"], { giftCount: R }),
                       titleTextVariant: "heading-xl/semibold",
-                      subtitle: T.intl.format(N.default.geFoof, {
+                      subtitle: T.intl.format(b.default.geFoof, {
                           giftCount: R,
-                          skuName: null != d ? (0, y.RH)(d) : "",
+                          skuName: null != d ? (0, A.RH)(d) : "",
                       }),
                   }))
                 : Z
                   ? (e = (0, l.jsxs)("div", {
-                        className: b.kL,
+                        className: N.kL,
                         children: [
                             (0, l.jsx)("div", {
                                 "aria-hidden": !0,
                                 style: { display: "contents" },
-                                children: (0, l.jsx)(g.A, {
+                                children: (0, l.jsx)(y.A, {
                                     defaultAnimationState: p.oA.LOOP,
                                     giftStyle: F,
-                                    className: b.qq,
+                                    className: N.qq,
                                 }),
                             }),
-                            (0, l.jsx)(a.s_, { onClick: $, className: b.b, "data-migration-pending": !0 }),
+                            (0, l.jsx)(a.s_, { onClick: $, className: N.b, "data-migration-pending": !0 }),
                         ],
                     }))
                   : H
@@ -91,7 +91,7 @@ function R(e) {
                     : z &&
                       (e =
                           n in _.WN
-                              ? (0, l.jsx)(I.A, {
+                              ? (0, l.jsx)(g.A, {
                                     currentStep: U ?? void 0,
                                     purchaseState: S,
                                     premiumType: _.WN[n],
@@ -138,6 +138,6 @@ function M() {
     return (0, l.jsx)(d.f, { headerBadgeConfig: e });
 }
 function L(e) {
-    let { isGift: t } = (0, x.Pv)();
-    return e.step !== P.pn.PLAN_SELECT || t ? (0, l.jsx)(R, { ...e }) : (0, l.jsx)(M, {});
+    let { isGift: t } = (0, P.Pv)();
+    return e.step !== v.pn.PLAN_SELECT || t ? (0, l.jsx)(R, { ...e }) : (0, l.jsx)(M, {});
 }

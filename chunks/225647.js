@@ -1,4 +1,4 @@
-l.d(t, { A: () => n });
+t.d(l, { A: () => n });
 let a = new Map(
     ["DLC", "XP", "VIP", "V-Bucks"].flatMap((e) => [
         [e.toLowerCase(), e],
@@ -7,17 +7,17 @@ let a = new Map(
 );
 function n(e) {
     if (null == e) return e;
-    let t = e === e.toUpperCase();
+    let l = e === e.toUpperCase();
     return e.replace(/[\p{L}\p{M}\p{N}_]+(?:['\u2019-][\p{L}\p{M}\p{N}_]+)*/gu, (e) => {
-        let l = a.get(e.toLowerCase());
-        return null != l
-            ? l
+        let t = a.get(e.toLowerCase());
+        return null != t
+            ? t
             : e
                   .split("-")
                   .map(
                       (e) =>
                           a.get(e.toLowerCase()) ??
-                          (t
+                          (l
                               ? e.toLowerCase().replace(/(?:^|[^\p{L}\p{M}'\u2019])\p{L}/gu, (e) => e.toUpperCase())
                               : e),
                   )

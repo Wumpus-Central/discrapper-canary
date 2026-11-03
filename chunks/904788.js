@@ -1,4 +1,4 @@
-n.d(e, { A: () => d, p: () => m });
+n.d(e, { A: () => m, p: () => d });
 var r = n(477900);
 n(582128);
 var i = n(62010),
@@ -26,7 +26,7 @@ function g(t) {
     });
 }
 var u = n(975117);
-function m(t) {
+function d(t) {
     return (0, r.jsx)("svg", {
         ...(0, s.A)({ ...t }),
         width: "25",
@@ -40,7 +40,7 @@ function m(t) {
         }),
     });
 }
-function d(t) {
+function m(t) {
     let { className: e, forceUseColorForSparkles: n = !1, variant: s = "premium" } = t;
     return (0, r.jsx)(g, {
         className: e,

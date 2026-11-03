@@ -35,9 +35,9 @@ let m = {
         let L = s.default.getRemoteSessionId(),
             y = A.A.getVoiceStateForSession(_.default.getId(), L),
             D = y?.channelId === t.id || E.Ay.getChannelId() === A.A.getCurrentClientVoiceChannelId(t.guild_id),
-            v = d.A.getBlockedUsersForVoiceChannel(t.id),
-            b = d.A.getIgnoredUsersForVoiceChannel(t.id);
-        return ((0, o.oE)(new Set([...v, ...b])) && (C = !0), C || g || m || (!(v.size > 0) && !(b.size > 0)))
+            b = d.A.getBlockedUsersForVoiceChannel(t.id),
+            v = d.A.getIgnoredUsersForVoiceChannel(t.id);
+        return ((0, o.oE)(new Set([...b, ...v])) && (C = !0), C || g || m || (!(b.size > 0) && !(v.size > 0)))
             ? !N && !g && (0, f.H)(t)
                 ? new Promise((e) => {
                       (0, r.openModalLazy)(async () => {
@@ -95,8 +95,8 @@ let m = {
                               let { onClose: a, transitionState: s } = n;
                               return (0, i.jsx)(r, {
                                   channelId: t.id,
-                                  blockedUserIds: v,
-                                  ignoredUserIds: b,
+                                  blockedUserIds: b,
+                                  ignoredUserIds: v,
                                   transitionState: s,
                                   onClose: a,
                                   onJoin: () =>
@@ -119,8 +119,8 @@ let m = {
                               h.default.track(I.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
                                   action: p.Qi.DISMISS,
                                   channel_id: t.id,
-                                  blocked_user_ids: Array.from(v),
-                                  ignored_user_ids: Array.from(b),
+                                  blocked_user_ids: Array.from(b),
+                                  ignored_user_ids: Array.from(v),
                                   warning_surface: p.gD.PRE_JOIN_MODAL,
                               });
                           },

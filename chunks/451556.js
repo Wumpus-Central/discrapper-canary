@@ -1,4 +1,4 @@
-t.d(n, { A: () => u });
+t.d(n, { A: () => d });
 var i = t(477900);
 t(582128);
 var l = t(17928),
@@ -7,9 +7,9 @@ var l = t(17928),
     r = t(928658),
     o = t(734057),
     c = t(105292);
-function u(e, n) {
+function d(e, n) {
     let t = (0, l.bG)([o.A], () => o.A.getChannel(n)),
-        u = t?.getGuildId();
+        d = t?.getGuildId();
     return null == e
         ? null
         : (0, i.jsx)(s.rX, {
@@ -21,7 +21,7 @@ function u(e, n) {
                       (0, r.r3)({
                           application: e,
                           entrypoint: "activity_ui_channel_call",
-                          contextualGuildId: u ?? void 0,
+                          contextualGuildId: d ?? void 0,
                           contextualChannelId: t?.id,
                       }),
                   icon: a.FlagIcon,

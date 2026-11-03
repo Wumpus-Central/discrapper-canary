@@ -1098,7 +1098,7 @@ var i,
         (r[(r.GENERIC_MANUAL_SAFETY_ACTION = 13)] = "GENERIC_MANUAL_SAFETY_ACTION"),
         (r[(r.BANNED_USER_BACKFILL = 14)] = "BANNED_USER_BACKFILL"),
         r),
-    v =
+    b =
         (((a = {})[(a.ANNOTATION_UNSPECIFIED = 0)] = "ANNOTATION_UNSPECIFIED"),
         (a[(a.SPAMMER = 1)] = "SPAMMER"),
         (a[(a.SELF_DELETED = 2)] = "SELF_DELETED"),
@@ -1108,7 +1108,7 @@ var i,
         (a[(a.INACTIVITY_DELETED = 6)] = "INACTIVITY_DELETED"),
         (a[(a.GENERIC_DELETED = 7)] = "GENERIC_DELETED"),
         a);
-class b extends O.G {
+class v extends O.G {
     constructor() {
         super("discord_protos.safety_common.v1.NormalState", []);
     }
@@ -1128,7 +1128,7 @@ class b extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let P = new b();
+let P = new v();
 class M extends O.G {
     constructor() {
         super("discord_protos.safety_common.v1.RestrictedState", [
@@ -1340,7 +1340,7 @@ class V extends O.G {
                 name: "annotations",
                 kind: "enum",
                 repeat: 1,
-                T: () => ["discord_protos.safety_common.v1.SafetyAnnotations", v],
+                T: () => ["discord_protos.safety_common.v1.SafetyAnnotations", b],
             },
             { no: 3, name: "last_mutation_id", kind: "message", T: () => R.ol },
         ]);
@@ -2419,11 +2419,11 @@ class eD extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let ev = new eD();
-class eb extends O.G {
+let eb = new eD();
+class ev extends O.G {
     constructor() {
         super("discord_protos.users.v1.AprilFools2026Badge", [
-            { no: 1, name: "common", kind: "message", T: () => ev },
+            { no: 1, name: "common", kind: "message", T: () => eb },
             { no: 2, name: "level", kind: "scalar", T: 5 },
             { no: 3, name: "combat_class", kind: "scalar", T: 9 },
         ]);
@@ -2443,7 +2443,7 @@ class eb extends O.G {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    r.common = ev.internalBinaryRead(e, e.uint32(), n, r.common);
+                    r.common = eb.internalBinaryRead(e, e.uint32(), n, r.common);
                     break;
                 case 2:
                     r.level = e.int32();
@@ -2462,14 +2462,14 @@ class eb extends O.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (e.common && ev.internalBinaryWrite(e.common, t.tag(1, S.O0.LengthDelimited).fork(), n).join(),
+        (e.common && eb.internalBinaryWrite(e.common, t.tag(1, S.O0.LengthDelimited).fork(), n).join(),
             0 !== e.level && t.tag(2, S.O0.Varint).int32(e.level),
             "" !== e.combatClass && t.tag(3, S.O0.LengthDelimited).string(e.combatClass));
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eP = new eb();
+let eP = new ev();
 class eM extends O.G {
     constructor() {
         super("discord_protos.users.v1.Badge", [

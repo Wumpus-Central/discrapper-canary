@@ -4,8 +4,8 @@ var l = n(477900),
     r = n(812993),
     s = n(661531),
     a = n(778712),
-    u = n(97808),
-    o = n(571694),
+    o = n(97808),
+    u = n(571694),
     d = n(954376),
     c = n(503698),
     h = n.n(c),
@@ -17,8 +17,8 @@ function m(e) {
             lowerBadgeSize: r = { width: 16, height: 16 },
             children: s,
             className: a,
-            innerClassName: u,
-            rounded: o = !0,
+            innerClassName: o,
+            rounded: u = !0,
             "aria-hidden": d,
         } = e,
         c = null != n,
@@ -29,7 +29,7 @@ function m(e) {
         f = r?.width != null ? r.width : 16,
         S = r?.height != null ? r.height : 16,
         p = { width: t + 8, height: t + 8, x: -4, y: -4 },
-        N = o
+        N = u
             ? (0, l.jsx)("circle", { id: E, cx: t / 2, cy: t / 2, r: t / 2 })
             : (0, l.jsx)("rect", { id: E, x: 0, y: 0, width: t, height: t, rx: 8, ry: 8 });
     return (0, l.jsxs)(
@@ -94,7 +94,7 @@ function m(e) {
                             mask: `url(#${m})`,
                             x: 0,
                             y: 0,
-                            className: u,
+                            className: o,
                             width: t,
                             height: t,
                             children: s,
@@ -122,10 +122,10 @@ let A = i.memo(function (e) {
             "aria-hidden": p = !1,
         } = e,
         N = (0, a.FT)(g),
-        x = i.useMemo(
+        T = i.useMemo(
             () =>
                 t?.isDM() && null != n
-                    ? (0, l.jsx)(u.eu, {
+                    ? (0, l.jsx)(o.eu, {
                           src: n.getAvatarURL(t?.getGuildId(), (0, a.FT)(g), !1),
                           size: g,
                           "aria-hidden": p,
@@ -161,18 +161,18 @@ let A = i.memo(function (e) {
                                 isTyping: S,
                                 status: S ? I.clD.ONLINE : null,
                             })
-                          : (0, l.jsx)(u.eu, {
-                                src: (0, o.Y)(t) ?? void 0,
+                          : (0, l.jsx)(o.eu, {
+                                src: (0, u.Y)(t) ?? void 0,
                                 "aria-hidden": p,
                                 size: g,
                                 status: S ? I.clD.ONLINE : null,
                                 isTyping: S,
                             })
-                      : (0, l.jsx)(u.eu, { src: void 0, "aria-hidden": p, size: g }),
+                      : (0, l.jsx)(o.eu, { src: void 0, "aria-hidden": p, size: g }),
             [p, t, f, S, c, g, A, n],
         );
     return c <= 0
-        ? x
+        ? T
         : (0, l.jsx)(m, {
               size: N,
               rounded: !t?.isMultiUserDM(),
@@ -182,6 +182,6 @@ let A = i.memo(function (e) {
                   "aria-hidden": !0,
               }),
               lowerBadgeSize: { width: (0, r.o6)(c) },
-              children: (0, l.jsx)("div", { className: E.R, children: x }),
+              children: (0, l.jsx)("div", { className: E.R, children: T }),
           });
 });

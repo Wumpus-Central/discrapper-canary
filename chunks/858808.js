@@ -5,12 +5,12 @@ var l = n(765178),
     a = n(866665),
     s = n(408278),
     r = n(241326),
-    d = n(183555),
-    o = n(735321),
+    o = n(183555),
+    d = n(735321),
     c = n(105292);
 function u(e) {
     let { game: t, widgetType: n, className: u, onRemove: m } = e,
-        { trackUserProfileEditAction: g } = (0, d.NJ)(),
+        { trackUserProfileEditAction: g } = (0, o.NJ)(),
         x = c.intl.string(c.t.HUvyDc);
     return (0, i.jsx)("div", {
         className: u,
@@ -23,7 +23,7 @@ function u(e) {
                 size: "sm",
                 variant: "overlay-secondary",
                 onClick: function () {
-                    ((0, o.ef)(n, t.gameId),
+                    ((0, d.ef)(n, t.gameId),
                         l.O.announce(c.intl.string(c.t["08HmMj"])),
                         g({ action: "GAME_REMOVED", gameId: t.gameId, widgetEdited: n }),
                         m?.());

@@ -26,8 +26,8 @@ var i = n(192308),
     L = n(309010),
     y = n(967198),
     D = n(174459),
-    v = n(988102),
-    b = n(174768),
+    b = n(988102),
+    v = n(174768),
     P = n(652215),
     M = n(746080),
     U = n(758836);
@@ -51,13 +51,13 @@ function k(e) {
     return { query: t, queryMode: n };
 }
 function F(e, t) {
-    let { results: n, queryMode: i, query: r, maxQueryLength: a } = b.A.getProps(),
+    let { results: n, queryMode: i, query: r, maxQueryLength: a } = v.A.getProps(),
         s = y.A.getGuildId(),
         l = L.Ay.getChannelId(s),
         o = n[(0, _.Vv)(_.vB.DOWN, -1, n)],
-        d = v.A.isEmail(r),
-        c = v.A.isPhoneNumber(r),
-        u = v.A.isUserTagLike(r),
+        d = b.A.isEmail(r),
+        c = b.A.isPhoneNumber(r),
+        u = b.A.isUserTagLike(r),
         E = null != l && (0, M.jq)(l);
     function A(e) {
         return null == e ? null : e.type === _.rD.IN_APP_NAVIGATION ? e.type + "_" + e.record.type : e.type;
@@ -75,12 +75,12 @@ function F(e, t) {
         query: d || c || u ? null : r,
         top_result_type: A(o),
         top_result_score: null != o ? o.score : null,
-        num_results_total: b.A.getResultTotals(),
-        num_results_users: b.A.getResultTotals(_.rD.USER),
-        num_results_text_channels: b.A.getResultTotals(_.rD.TEXT_CHANNEL),
-        num_results_voice_channels: b.A.getResultTotals(_.rD.VOICE_CHANNEL),
-        num_results_guilds: b.A.getResultTotals(_.rD.GUILD),
-        num_results_group_dms: b.A.getResultTotals(_.rD.GROUP_DM),
+        num_results_total: v.A.getResultTotals(),
+        num_results_users: v.A.getResultTotals(_.rD.USER),
+        num_results_text_channels: v.A.getResultTotals(_.rD.TEXT_CHANNEL),
+        num_results_voice_channels: v.A.getResultTotals(_.rD.VOICE_CHANNEL),
+        num_results_guilds: v.A.getResultTotals(_.rD.GUILD),
+        num_results_group_dms: v.A.getResultTotals(_.rD.GROUP_DM),
     };
     if (null != l) {
         let e = O.A.getChannel(l);
@@ -115,7 +115,7 @@ function H() {
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
     (!(function (e) {
         let t;
-        if (b.A.isOpen()) return;
+        if (v.A.isOpen()) return;
         let n = y.A.getGuildId(),
             i = L.Ay.getChannelId(n);
         if (null != i) {

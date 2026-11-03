@@ -28,8 +28,8 @@ function c(e) {
             mountPoints: C,
         } = s.useContext(u),
         v = s.useRef(null),
-        N = s.useRef(null),
-        y = s.useRef(void 0);
+        y = s.useRef(null),
+        N = s.useRef(void 0);
     (s.useEffect(() => {
         m();
     }, [m]),
@@ -45,7 +45,7 @@ function c(e) {
     let g = s.useCallback(
         (e) => {
             let { height: t } = e;
-            y.current !== t && (m(), (y.current = t));
+            N.current !== t && (m(), (N.current = t));
         },
         [m],
     );
@@ -65,7 +65,7 @@ function c(e) {
                                         position: "absolute",
                                         opacity: (0, o.a)(h.to({ range: [0, 1], output: [1, 0] })),
                                     },
-                                    children: t(N),
+                                    children: t(y),
                                 }),
                                 j,
                             ),
@@ -76,13 +76,13 @@ function c(e) {
                                         position: "absolute",
                                         opacity: (0, o.a)(h.to({ range: [0, 1], output: [0, 1] })),
                                     },
-                                    children: t(N),
+                                    children: t(y),
                                 }),
                                 j,
                             ),
                     ],
                 }))
-              : "collapsed" === c && (A = (0, a.createPortal)(t(N), j)),
+              : "collapsed" === c && (A = (0, a.createPortal)(t(y), j)),
         (0, l.jsxs)("div", {
             style: { opacity: +((null == A && "collapsed" === c) || null == j) },
             ref: p,

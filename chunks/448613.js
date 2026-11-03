@@ -17,9 +17,9 @@ async function S(e) {
     let R = h ? await l.A.openPrivateChannel({ recipientIds: t, location: S }) : await l.A.getOrEnsurePrivateChannel(t),
         p = d.A.getChannel(R);
     if (null == p) throw Error("Failed to open private channel");
-    let C = c.Ay.getSidebarState(c.fe);
+    let y = c.Ay.getSidebarState(c.fe);
     if (
-        (h && C?.type === u.PE.VIEW_MESSAGE_REQUEST && C.channelId === p.id && o.A.closeChannelSidebar(c.fe), null != m)
+        (h && y?.type === u.PE.VIEW_MESSAGE_REQUEST && y.channelId === p.id && o.A.closeChannelSidebar(c.fe), null != m)
     )
         (0, a.d)({
             channel: p,

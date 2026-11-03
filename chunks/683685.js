@@ -4,23 +4,23 @@ n(582128);
 var a = n(877624),
     r = n(793574),
     l = n(920050),
-    s = n(757036),
-    o = n(933730),
+    o = n(757036),
+    s = n(933730),
     d = n(60163),
     c = n(617824),
     u = n(320152),
     m = n(105292);
 function f(e) {
     let { targetElementRef: t, dismissPopover: n, children: f } = e,
-        g = (0, s.L)(),
+        g = (0, o.L)(),
         { assetUrl: b } = (0, d.A)(a.C.OUTBOUND_PROMOTION_POPOVER);
-    return (0, i.jsx)(o.A, {
+    return (0, i.jsx)(s.A, {
         targetElementRef: t,
         dismissPopover: n,
         title: m.intl.string(u.default.E1sPHw),
         body: [m.intl.string(u.default.yTYUJw)],
         assetUrl: null != b ? b : void 0,
-        ctaType: g ? o.g.NAVIGATE_TO_PERK : o.g.OPEN_PAYMENT_MODAL,
+        ctaType: g ? s.g.NAVIGATE_TO_PERK : s.g.OPEN_PAYMENT_MODAL,
         ctaTextOverride: g ? m.intl.string(c.default.vlafDc) : void 0,
         perkCardId: l.CODE_BLURPLE_CARD_ID,
         analyticsLocation: r.A.CODE_BLURPLE_PREMIUM_TAB_POPOVER,

@@ -52,8 +52,8 @@ var x = l(635793),
     v = l(696016),
     g = l(185973),
     b = l(105292);
-let j = (e, t, l, a) => (a([]), () => {}),
-    y = n.createContext(null);
+let y = (e, t, l, a) => (a([]), () => {}),
+    j = n.createContext(null);
 function C(e) {
     var t;
     let f,
@@ -116,22 +116,22 @@ function C(e) {
         [es, eo] = n.useState(null),
         [ec, eu] = n.useState([]),
         [ed, em] = n.useState(!1),
-        [ef, eh] = n.useState(() => j),
+        [ef, eh] = n.useState(() => y),
         [ep, ex] = n.useState(null),
         [ev, eg] = n.useState(() => A.tracks ?? []),
         eb = n.useRef(ev);
     eb.current = ev;
-    let ej = n.useCallback(() => {
+    let ey = n.useCallback(() => {
             let e = V.current?.videoElement?.currentTime ?? G,
                 t = (0, i.clamp)(e, G, B - v.Cx);
             return { startSec: t, endSec: Math.min(t + v.tS, B) };
         }, [G, B, V]),
-        ey = n.useCallback(() => {
+        ej = n.useCallback(() => {
             let e = crypto.randomUUID(),
                 t = {
                     id: e,
                     type: v.Me.TEXT,
-                    ...ej(),
+                    ...ey(),
                     data: {
                         text: b.intl.string(g.default.v2jEIc),
                         style: { ...v.QK },
@@ -140,7 +140,7 @@ function C(e) {
                     },
                 };
             return (eg((e) => [...e, t]), $(x.Y.NONE), e);
-        }, [ej, $]),
+        }, [ey, $]),
         eC = (0, v.QY)(W) ?? (null != ep ? ep.width / ep.height : null),
         eN = n.useCallback(
             (e) => {
@@ -148,7 +148,7 @@ function C(e) {
                     l = {
                         id: t,
                         type: v.Me.IMAGE,
-                        ...ej(),
+                        ...ey(),
                         data: {
                             ...e,
                             position: { ...v._S },
@@ -160,7 +160,7 @@ function C(e) {
                     };
                 return (eg((e) => [...e, l]), $(x.Y.NONE), t);
             },
-            [ej, $, eC],
+            [ey, $, eC],
         ),
         ew = n.useCallback((e) => {
             eg((t) => t.filter((t) => t.id !== e));
@@ -532,7 +532,7 @@ function C(e) {
                 setSoundboardAudioEnabled: eX,
                 getEditedClip: eL,
                 tracks: ev,
-                addTextTrack: ey,
+                addTextTrack: ej,
                 addImageTrack: eN,
                 removeTrack: ew,
                 updateTrackRange: eE,
@@ -579,7 +579,7 @@ function C(e) {
                 eX,
                 eL,
                 ev,
-                ey,
+                ej,
                 eN,
                 ew,
                 eE,
@@ -592,10 +592,10 @@ function C(e) {
                 ep,
             ],
         );
-    return (0, a.jsx)(y.Provider, { value: eW, children: k });
+    return (0, a.jsx)(j.Provider, { value: eW, children: k });
 }
 function N() {
-    let e = n.useContext(y);
+    let e = n.useContext(j);
     if (null == e) throw Error("useClipContext must be used within a ClipContextProvider");
     return e;
 }

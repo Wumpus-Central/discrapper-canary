@@ -1,4 +1,4 @@
-a.d(t, { IB: () => p, K8: () => x, fr: () => w, jA: () => I, l4: () => m, nX: () => g, sm: () => v, yE: () => A });
+a.d(t, { IB: () => x, K8: () => p, fr: () => w, jA: () => I, l4: () => m, nX: () => g, sm: () => v, yE: () => A });
 var r = a(636537),
     s = a(73153),
     i = a(308528),
@@ -12,10 +12,10 @@ var r = a(636537),
     f = a(407905),
     b = a(719718),
     _ = a(652215);
-function x() {
+function p() {
     return s.h.dispatch({ type: "CHECKPOINT_TOGGLE_MUTE" });
 }
-function p(e, t) {
+function x(e, t) {
     return s.h.dispatch({ type: "CHECKPOINT_SELECT_CHARACTER_TRAIT", trait: e, optionId: t });
 }
 function m(e) {

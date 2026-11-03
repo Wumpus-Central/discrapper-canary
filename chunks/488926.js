@@ -149,8 +149,8 @@ let O = a.iu(0),
         C.xBc.ATTACH_FILES,
         C.xBc.ADD_REACTIONS,
     ),
-    v = a.kg(C.xBc.VIEW_CHANNEL, C.xBc.READ_MESSAGE_HISTORY),
-    b = a.kg(C.xBc.VIEW_CHANNEL, C.xBc.READ_MESSAGE_HISTORY, C.xBc.CHANGE_NICKNAME),
+    b = a.kg(C.xBc.VIEW_CHANNEL, C.xBc.READ_MESSAGE_HISTORY),
+    v = a.kg(C.xBc.VIEW_CHANNEL, C.xBc.READ_MESSAGE_HISTORY, C.xBc.CHANGE_NICKNAME),
     P = a.kg(
         C.xBc.MANAGE_GUILD,
         C.xBc.MANAGE_ROLES,
@@ -187,7 +187,7 @@ function U(e, t, n, i) {
         let s = i[t.userId];
         null != s && ((n = a.TF(n, s.deny)), (n = a.WQ(n, s.allow)));
         let l = a.zy(n, C.xBc.ADMINISTRATOR);
-        ((0, o.TR)(t) && !l && (n = a.pb(n, b)), (0, d.Z)(t) && !l && (n = a.pb(n, v)));
+        ((0, o.TR)(t) && !l && (n = a.pb(n, v)), (0, d.Z)(t) && !l && (n = a.pb(n, b)));
     }
     return n;
 }

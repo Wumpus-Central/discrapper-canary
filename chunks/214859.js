@@ -87,15 +87,15 @@ function y(e, t, n) {
     return i;
 }
 var D = n(435558);
-function v(e) {
+function b(e) {
     return 1e3 * Math.floor(e / 1e3);
 }
-function b(e) {
+function v(e) {
     let t = (0, g.lQ)(e.clip);
     return { startMs: t + e.videoStartMs, endMs: t + e.videoEndMs };
 }
 function P(e) {
-    let { startMs: t, endMs: n } = b(e);
+    let { startMs: t, endMs: n } = v(e);
     return { srcStartMs: t, srcEndMs: n, label: e.label };
 }
 function M(e, t) {
@@ -690,7 +690,7 @@ function K(e) {
                                       let r = [...e],
                                           a = e
                                               .map((e, t) => {
-                                                  let { startMs: n, endMs: r } = b(e);
+                                                  let { startMs: n, endMs: r } = v(e);
                                                   return { id: t, score: i(n, r) };
                                               })
                                               .sort((e, t) => t.score - e.score),
@@ -732,12 +732,12 @@ function K(e) {
                                       if (0 === e.length) return () => 0;
                                       let n = () => 1;
                                       if (t?.calculateModifiers != null) {
-                                          let i = v(e[0].timestamp_ms),
-                                              r = v(e[e.length - 1].timestamp_ms),
+                                          let i = b(e[0].timestamp_ms),
+                                              r = b(e[e.length - 1].timestamp_ms),
                                               a = new Map(
                                                   t.calculateModifiers(i, r).map((e) => [e.timestamp_ms, e.modifier]),
                                               );
-                                          n = (e) => a.get(v(e)) ?? 1;
+                                          n = (e) => a.get(b(e)) ?? 1;
                                       }
                                       let i = new Float64Array(e.length + 1),
                                           r = 0;

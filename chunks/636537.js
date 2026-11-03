@@ -6,7 +6,7 @@
     TP: () => y,
     oh: () => h,
     ni: () => d,
-    IA: () => v,
+    IA: () => b,
     fT: () => w,
     bG: () => 50035,
     Wl: () => c,
@@ -163,7 +163,7 @@ function I(e, t, n, i, s, l) {
     let c = () => {
             ((t.backoff = null != t.backoff ? t.backoff : new a.A()),
                 (t.retried = (null != t.retried ? t.retried : 0) + 1),
-                t.backoff.fail(() => b(t.url).then(() => I(e, t, n, i, s, l))));
+                t.backoff.fail(() => v(t.url).then(() => I(e, t, n, i, s, l))));
         },
         _ = D?.prepareRequest?.(o);
     (o.ok((e) => null != e.status),
@@ -296,12 +296,12 @@ function y() {
     return "https:" + window.GLOBAL_ENV.API_ENDPOINT + (e ? `/v${window.GLOBAL_ENV.API_VERSION}` : "");
 }
 let D = null;
-function v(e) {
+function b(e) {
     D = e;
 }
-let b = () => Promise.resolve();
+let v = () => Promise.resolve();
 function P(e) {
-    b = e;
+    v = e;
 }
 let M = () => !0;
 function U(e) {

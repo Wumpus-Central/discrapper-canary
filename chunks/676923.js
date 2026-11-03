@@ -1,25 +1,25 @@
-n.d(t, { S: () => o });
+n.d(t, { S: () => u });
 var l = n(477900);
 n(582128);
 var i = n(503698),
     r = n.n(i),
     s = n(939249),
     a = n(866665),
-    u = n(563633);
-function o(e) {
+    o = n(563633);
+function u(e) {
     let {
             tooltipText: t,
             showTooltip: n = !0,
             className: i,
-            ariaLabel: o,
+            ariaLabel: u,
             onClick: d,
             onMouseEnter: c,
             onMouseLeave: h,
             children: g,
         } = e,
-        m = o ?? t,
+        m = u ?? t,
         I = (0, l.jsx)(s.D, {
-            className: r()(u.k, i),
+            className: r()(o.k, i),
             "aria-label": m,
             onClick: d,
             onMouseEnter: c,

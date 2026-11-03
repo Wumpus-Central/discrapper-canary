@@ -26,17 +26,17 @@ async function O(e) {
         y = t.id;
     null != l && r.h.dispatch({ type: "ACTIVITY_JOIN_LOADING", applicationId: y });
     let D = s ?? (null != l ? { application_id: y, session_id: l } : null),
-        v = null != D && (0, p.m)(y) ? await L(D, n) : void 0,
-        b = (0, T.It)(_.A.getApplication(y)),
-        P = !b.has(i.U.MAIN) && b.has(i.U.APP_CHANNEL),
-        M = null != v ? await (0, m.A)(y, { preferredChannelId: v, fallback: P }) : null,
+        b = null != D && (0, p.m)(y) ? await L(D, n) : void 0,
+        v = (0, T.It)(_.A.getApplication(y)),
+        P = !v.has(i.U.MAIN) && v.has(i.U.APP_CHANNEL),
+        M = null != b ? await (0, m.A)(y, { preferredChannelId: b, fallback: P }) : null,
         U = null == M ? await R(y, n, D?.session_id ?? l) : null;
     function w() {
         return (r.h.dispatch({ type: "ACTIVITY_JOIN_FAILED", applicationId: y }), !1);
     }
-    if (null == M && null == U && !b.has(i.U.MAIN)) {
+    if (null == M && null == U && !v.has(i.U.MAIN)) {
         if (!P) return ((0, u.A)(C.intl.string(C.t["7XR9+7"])), w());
-        null == v && (M = await (0, m.A)(y));
+        null == b && (M = await (0, m.A)(y));
     }
     if (null != U) {
         if (!(await (0, c.A)({ channelId: U }))) return w();

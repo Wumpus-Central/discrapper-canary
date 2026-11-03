@@ -120,7 +120,7 @@ let y = new L(h.h, {
         },
     }),
     D = new Set();
-class v extends A.Ay.PersistedStore {
+class b extends A.Ay.PersistedStore {
     static displayName = "RecentlyActiveCollapseStore";
     static persistKey = "RecentlyActiveCollapseStore";
     initialize(e) {
@@ -133,13 +133,13 @@ class v extends A.Ay.PersistedStore {
         return { guilds: D };
     }
 }
-new v(h.h, {
+new b(h.h, {
     SET_RECENTLY_ACTIVE_COLLAPSED: function (e) {
         let { guildId: t, collapsed: n } = e;
         n ? D.add(t) : D.delete(t);
     },
 });
-var b = n(395504),
+var v = n(395504),
     P = n(454058),
     M = n(272720),
     U = n(56595),
@@ -283,7 +283,7 @@ class ed {
             (this.mutedChannelIds = S.Ay.getMutedChannels(this.id)),
             (this.optedInChannels =
                 S.Ay.getOptedInChannelsWithPendingUpdates(this.id) ?? S.Ay.getOptedInChannels(this.id)),
-            (this.optInEnabled = (0, b.WW)(this.id)),
+            (this.optInEnabled = (0, v.WW)(this.id)),
             (this.hideResourceChannels = (0, u.K)(this.id)),
             (this.favoriteChannelIds = new Set(S.Ay.getGuildFavorites(this.id) ?? [])),
             (this.suggestedFavoriteChannelId = y.getSuggestedChannelId(this.id)),

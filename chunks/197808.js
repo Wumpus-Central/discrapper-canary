@@ -26,8 +26,8 @@ var i = n(477900),
     L = n(309010),
     y = n(531685),
     D = n(403362),
-    v = n(652215),
-    b = n(5867),
+    b = n(652215),
+    v = n(5867),
     P = n(806931),
     M = n(165610),
     U = n(155819);
@@ -146,7 +146,7 @@ let w = (0, a.Fe)({
         webpackId: 690933,
         name: "ConjureAppPictureInPictures",
     }),
-    G = { [v.o1q.VIDEO]: C.A, [v.o1q.ACTIVITY]: E.A, [v.o1q.FRAME]: p.A },
+    G = { [b.o1q.VIDEO]: C.A, [b.o1q.ACTIVITY]: E.A, [b.o1q.FRAME]: p.A },
     x = { minWidth: P.mn[P.R8.VIDEO], maxWidth: P.cF[P.R8.VIDEO] },
     k = [];
 class F extends r.PureComponent {
@@ -171,7 +171,7 @@ class F extends r.PureComponent {
             } = this.props,
             { selectedPIPWindowHeight: f } = this.state,
             I = document.body.style.getPropertyValue("--custom-guild-sidebar-width"),
-            p = "" !== I ? parseInt(I, 10) : v.MdR,
+            p = "" !== I ? parseInt(I, 10) : b.MdR,
             g = c.width - p - (E ? A : 0);
         return (0, i.jsxs)(T.ic, {
             children: [
@@ -217,13 +217,13 @@ class F extends r.PureComponent {
 let B = l.Ay.connectStores([S.A, d.Ay, y.A, O.A, L.Ay, R.A, A.A, N.Ay, f.A], (e) => {
     let t,
         { popoutWindowKey: n, popoutWindowHasTitleBar: i = !1, showConjureAppPictureInPictures: r = !1 } = e,
-        a = S.A.getWindowOpen(v.MLl.CHANNEL_CALL_POPOUT),
-        l = S.A.getWindowOpen(v.MLl.ACTIVITY_POPOUT),
+        a = S.A.getWindowOpen(b.MLl.CHANNEL_CALL_POPOUT),
+        l = S.A.getWindowOpen(b.MLl.ACTIVITY_POPOUT),
         o = d.Ay.getCurrentEmbeddedActivity(),
         E = (0, u.H)(o?.location),
         p = null != o && !(0, _.A)(E, O.A, L.Ay),
         m = d.Ay.getActivityPanelMode(),
-        T = p && m === b.Gd.PANEL,
+        T = p && m === v.Gd.PANEL,
         C = null != o && null != E && A.A.getSelectedParticipant(E)?.type === P.lp.ACTIVITY,
         U = (0, M.ny)(f.A.getMainFrame()),
         w = U?.data.layoutMode === M.y0.FOCUSED,
@@ -232,7 +232,7 @@ let B = l.Ay.connectStores([S.A, d.Ay, y.A, O.A, L.Ay, R.A, A.A, N.Ay, f.A], (e)
         F = !!G && S.A.isWindowFullScreen(n),
         B = y.A.windowSize();
     G && (B = null == x ? B : { width: x.innerWidth, height: x.innerHeight });
-    let V = G ? v.BRT.POPOUT : v.BRT.APP;
+    let V = G ? b.BRT.POPOUT : b.BRT.APP;
     t =
         (null != o && l) || (G && p) || (G && null != U)
             ? null
@@ -245,9 +245,9 @@ let B = l.Ay.connectStores([S.A, d.Ay, y.A, O.A, L.Ay, R.A, A.A, N.Ay, f.A], (e)
               : null;
     let H = Array.from(R.A.pipWindows.values()),
         j = R.A.pipWidth(P.R8.VIDEO),
-        W = H.find((e) => e.component === v.o1q.VIDEO),
-        Y = H.find((e) => e.component === v.o1q.ACTIVITY),
-        K = [W, Y, H.find((e) => e.component === v.o1q.FRAME)].filter(D.Vq),
+        W = H.find((e) => e.component === b.o1q.VIDEO),
+        Y = H.find((e) => e.component === b.o1q.ACTIVITY),
+        K = [W, Y, H.find((e) => e.component === b.o1q.FRAME)].filter(D.Vq),
         $ = N.Ay.callChatSidebarWidth,
         z = L.Ay.getVoiceChannelId(),
         X = L.Ay.getChannelId() === z,

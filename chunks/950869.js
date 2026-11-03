@@ -65,7 +65,7 @@ function D(e) {
     }),
         (0, c.i0)(e));
 }
-class v {
+class b {
     static instance = null;
     module = null;
     modulePromise = null;
@@ -73,7 +73,7 @@ class v {
     lastAssociatedPID = null;
     trackedGamePids = new Set();
     static getInstance() {
-        return (null == this.instance && (this.instance = new v()), this.instance);
+        return (null == this.instance && (this.instance = new b()), this.instance);
     }
     async initialize() {
         return await this.prepareOverlayModule();
@@ -299,7 +299,7 @@ class v {
     }
 }
 n(672396);
-let b = new r.Vy("OverlayV3NativeModuleStore"),
+let v = new r.Vy("OverlayV3NativeModuleStore"),
     P = !1,
     M = !1,
     U = null,
@@ -308,7 +308,7 @@ let b = new r.Vy("OverlayV3NativeModuleStore"),
     x = null,
     k = (() => {
         async function e() {
-            (B(), (U = v.getInstance()));
+            (B(), (U = b.getInstance()));
             try {
                 (await U.initialize(), (P = !0));
             } catch (e) {
@@ -325,7 +325,7 @@ function F(e) {
     __OVERLAY__ || !d.O || (M !== e && ((M = e), e && (0, l.setOutOfProcessSupport)(!0)));
 }
 function B() {
-    !__OVERLAY__ && d.O && ((G = null), (w = !1), b.verbose("Maybe Enable Overlay"), F(o.x.oopEnabled));
+    !__OVERLAY__ && d.O && ((G = null), (w = !1), v.verbose("Maybe Enable Overlay"), F(o.x.oopEnabled));
 }
 class V extends i.Ay.Store {
     static displayName = "Overlay-v3-Native-Module-Store";

@@ -1,5 +1,5 @@
 n.d(t, {
-    Bd: () => b,
+    Bd: () => v,
     Cd: () => L,
     El: () => U,
     Lj: () => N,
@@ -12,7 +12,7 @@ n.d(t, {
     _4: () => g,
     _Z: () => O,
     ad: () => y,
-    bh: () => v,
+    bh: () => b,
     hT: () => I,
     jC: () => D,
     jh: () => P,
@@ -188,11 +188,11 @@ function D(e) {
     let { postId: t, location: n } = e;
     i.Ay.trackWithMetadata(A.HAw.FORUM_POST_LINK_COPIED, { forum_post_id: t, location: n });
 }
-function v(e) {
+function b(e) {
     let { onboardingCTA: t } = e;
     i.Ay.trackWithMetadata(A.HAw.FORUM_CHANNEL_ONBOARDING_CLICKED, { onboarding_cta_type: t });
 }
-function b(e) {
+function v(e) {
     let { forumDemoId: t } = e;
     i.Ay.trackWithMetadata(A.HAw.FORUM_UPSELL_MODAL_CLICKED, { forum_demo_id: t });
 }

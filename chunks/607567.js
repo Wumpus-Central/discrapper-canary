@@ -133,11 +133,11 @@ class y {
 function D() {
     return r().reduce(g, (e, t) => t.updateUsers() || e, !1);
 }
-function v() {
+function b() {
     let e = null != S;
     return ((S = null), e);
 }
-function b() {
+function v() {
     let e = S;
     return null != e && !!e.unknownChannels.some((e) => null != E.A.getChannel(e)) && ((S = null), !0);
 }
@@ -156,8 +156,8 @@ class M extends a.Ay.Store {
         (P(),
             this.waitFor(_.default, E.A, d.A, A.Ay, h.default, f.A),
             this.syncWith([h.default], D),
-            this.syncWith([d.A], v),
-            this.syncWith([E.A], b));
+            this.syncWith([d.A], b),
+            this.syncWith([E.A], v));
     }
     getVoiceStates(e) {
         return (0, c.ai)(e)

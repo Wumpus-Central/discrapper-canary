@@ -3,8 +3,8 @@ var i = n(477900),
     a = n(582128),
     r = n(793574),
     l = n(688810),
-    s = n(975571),
-    o = n(713271),
+    o = n(975571),
+    s = n(713271),
     d = n(555393),
     c = n(852218),
     u = n(164832),
@@ -19,14 +19,14 @@ var i = n(477900),
 let C = new Date(2026, 10, 18);
 function T(e) {
     let { location: t } = e,
-        { enabled: n, phase: o } = m.A.useConfig({ location: t }),
+        { enabled: n, phase: s } = m.A.useConfig({ location: t }),
         { analyticsLocations: E } = (0, l.Ay)(r.A.PREMIUM_MARKETING_PERK_CARD),
         T = null === (0, d.N)(),
         _ = null;
     return (
-        o === m.H.PHASE_ONE
+        s === m.H.PHASE_ONE
             ? (_ = P.intl.formatToPlainString(p.default.XuYNQR, { date: C, rewardPercentage: 10 }))
-            : o === m.H.PHASE_TWO &&
+            : s === m.H.PHASE_TWO &&
               (_ = P.intl.formatToPlainString(A.default["H6cz/6"], { date: C, rewardPercentage: 10 })),
         (0, a.useMemo)(
             () =>
@@ -38,7 +38,7 @@ function T(e) {
                           subscriptionRequired: !0,
                           isThirdPartyPerk: !0,
                           backgroundAssetUrl:
-                              o === m.H.PHASE_ONE
+                              s === m.H.PHASE_ONE
                                   ? "https://cdn.discordapp.com/assets/content/0554c6feeb235cbea5142d41756c5d612802f6effb87d3dc7bad5b67f5a403b3.png"
                                   : "https://cdn.discordapp.com/assets/content/c7ddb9ec959be5a1d1f4ed600cdaae2e0bdddebd93724483bbbe4584b2e75583.png",
                           blurTint: "#001E73",
@@ -53,7 +53,7 @@ function T(e) {
                                   title: P.intl.string(A.default["0RERAa"]),
                                   subtitle: P.intl.format(b.default.uytDvV, {
                                       expirationDate: C,
-                                      termsUrl: s.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
+                                      termsUrl: o.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
                                   }),
                                   analyticsLocations: E,
                               }),
@@ -62,7 +62,7 @@ function T(e) {
                           pillText: P.intl.string(P.t.y2b7CA),
                       }
                     : null,
-            [E, n, T, _, o],
+            [E, n, T, _, s],
         )
     );
 }
@@ -76,19 +76,19 @@ function _(e) {
             ? (T = P.intl.format(p.default.MJep2r, {
                   date: C,
                   rewardPercentage: 10,
-                  termsUrl: s.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
+                  termsUrl: o.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
               }))
             : d === m.H.PHASE_TWO &&
               (T = P.intl.format(A.default["K/UZHJ"], {
                   date: C,
                   rewardPercentage: 10,
-                  termsUrl: s.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
+                  termsUrl: o.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
               })),
         (0, a.useMemo)(
             () =>
                 n && null != T
                     ? {
-                          name: o.N.MACARON,
+                          name: s.N.MACARON,
                           caption: (0, i.jsx)("img", {
                               src: "https://cdn.discordapp.com/assets/content/1f431ddb5bf6a9d72a9b80820551561bfce12d601c7fe17275ec2c0cc1ecd048.svg",
                               alt: "My Best Buy Plus",
@@ -107,7 +107,7 @@ function _(e) {
                                   title: P.intl.string(A.default["0RERAa"]),
                                   subtitle: P.intl.format(b.default.uytDvV, {
                                       expirationDate: C,
-                                      termsUrl: s.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
+                                      termsUrl: o.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
                                   }),
                                   analyticsLocations: f,
                                   isLocked: !0,

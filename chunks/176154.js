@@ -126,8 +126,8 @@ var S = n(152007),
 var L = n(95701),
     y = n(734057),
     D = n(71393),
-    v = n(763827),
-    b = n(994500),
+    b = n(763827),
+    v = n(994500),
     P = n(461213),
     M = n(543465);
 n(870570);
@@ -168,7 +168,7 @@ function K(e, t, n) {
     return !(
         (null != r && f.A.isLurking(r)) ||
         (!i.ignoreSameUser && t.id === e.id) ||
-        b.A.isBlockedOrIgnored(t.id) ||
+        v.A.isBlockedOrIgnored(t.id) ||
         (!i.ignoreStatus && P.A.getStatus() === j.clD.DND) ||
         C.NO.getSetting() ||
         (!i.ignoreNoMessagesSetting && M.Ay.allowNoMessages(n))
@@ -192,7 +192,7 @@ function $(e, t) {
         !K(o, d, l, { ignoreStatus: a, ignoreSameUser: j.MRS.SELF_MENTIONABLE_SYSTEM.has(e.type) }) ||
         I.A.isMessageRequest(t) ||
         (!r && _(l.id)) ||
-        b.A.isBlockedOrIgnoredForMessage(e) ||
+        v.A.isBlockedOrIgnoredForMessage(e) ||
         (void 0 !== e.activity_instance && null != e.interaction && e.interaction.user.id === o.id)
     )
         return !1;
@@ -210,7 +210,7 @@ function $(e, t) {
         );
     }
     {
-        let t = !L.OU.has(l.type) || v.A.getChannelId() === l.id;
+        let t = !L.OU.has(l.type) || b.A.getChannelId() === l.id;
         if (M.Ay.allowAllMessages(l) && t) return !0;
         let n = M.Ay.isSuppressEveryoneEnabled(l.getGuildId()),
             i = M.Ay.isSuppressRolesEnabled(l.getGuildId());
@@ -229,7 +229,7 @@ function z(e, t) {
         null == r ||
         n.isManaged() ||
         r.hasFlag(j.nhx.SPAMMER) ||
-        b.A.isBlockedOrIgnoredForMessage(e) ||
+        v.A.isBlockedOrIgnoredForMessage(e) ||
         r.id === i.id ||
         P.A.getStatus() === j.clD.DND ||
         C.NO.getSetting() ||
@@ -260,12 +260,12 @@ function q(e) {
         null == a ||
         null == s ||
         !K(a, s, n, { ignoreSameUser: !0 }) ||
-        (null != i && b.A.isBlockedOrIgnored(i.id)) ||
+        (null != i && v.A.isBlockedOrIgnored(i.id)) ||
         (!r && _(n.id))
     );
 }
 function Z(e, t, n) {
-    return `${(0, o.az)(e)} (${(0, o.az)((0, E.m1)(t, U.default, b.A, !0))}${null != n ? `, ${(0, o.az)((0, E.m1)(n, U.default, b.A))}` : ""})`;
+    return `${(0, o.az)(e)} (${(0, o.az)((0, E.m1)(t, U.default, v.A, !0))}${null != n ? `, ${(0, o.az)((0, E.m1)(n, U.default, v.A))}` : ""})`;
 }
 function Q(e, t, n, i) {
     switch (e.type) {
@@ -313,7 +313,7 @@ function J(e, t, n) {
                   : (l = Z(l, e, o));
             break;
         case j.rbe.GROUP_DM:
-            (e.isManaged() && n.bot && l === (0, E.m1)(e, U.default, b.A)) || (l = Z(l, e));
+            (e.isManaged() && n.bot && l === (0, E.m1)(e, U.default, v.A)) || (l = Z(l, e));
     }
     let d = t.content;
     if ((0, g.A)(t) && null == (d = G.A.stringify(t, e)))

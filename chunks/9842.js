@@ -1,4 +1,4 @@
-(n.d(t, { A: () => v, a: () => h }), n(321073));
+(n.d(t, { A: () => b, a: () => h }), n(321073));
 var i,
     r = n(635377),
     a = n.n(r),
@@ -142,7 +142,7 @@ class D extends s.Ay.Store {
         return (null != e && (t = T.getCachedMessageIdsForChannel(e)), t ?? I);
     }
 }
-let v = new D(l.h, {
+let b = new D(l.h, {
     CACHE_LOADED: function (e) {
         let { messages: t } = e;
         return S(Object.values(t), (e) => S(Object.values(e), (e) => g(e)));

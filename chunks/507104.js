@@ -42,10 +42,10 @@ let C = N(),
     L = new Set(),
     y = {},
     D = null,
-    v = null,
-    b = null;
+    b = null,
+    v = null;
 function P() {
-    return b ?? Date.now();
+    return v ?? Date.now();
 }
 function M() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -105,8 +105,8 @@ function x(e) {
     D = e;
     let n = E.A.getFriendIDs().filter((e) => !E.A.isIgnored(e)),
         i = new Set(n),
-        a = null != v && v.length === e && v.every((e) => i.has(e)) ? v : r().sampleSize(n, e);
-    ((v = a),
+        a = null != b && b.length === e && b.every((e) => i.has(e)) ? b : r().sampleSize(n, e);
+    ((b = a),
         a.forEach((e) => {
             let t = E.A.getSince(e);
             if (null != t) {
@@ -187,7 +187,7 @@ class k extends a.Ay.PersistedStore {
         return D;
     }
     getDevToolCurrentDate() {
-        return b;
+        return v;
     }
     getHighestAffinityFriendAnniversaries() {
         return Array.from(R);
@@ -238,19 +238,19 @@ let F = new k(s.h, {
     DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT: function (e) {
         let { total: t } = e;
         if (null == t) {
-            ((D = null), (v = null), U());
+            ((D = null), (b = null), U());
             return;
         }
         x(t);
     },
     DEV_TOOLS_RESAMPLE_FRIEND_ANNIVERSARIES: function () {
-        return null != D && ((v = null), x(D), !0);
+        return null != D && ((b = null), x(D), !0);
     },
     DEV_TOOLS_SET_CURRENT_DATE: function (e) {
         let { date: t } = e;
-        b = t;
+        v = t;
     },
     DEV_TOOLS_RESET_CURRENT_DATE: function () {
-        b = null;
+        v = null;
     },
 });

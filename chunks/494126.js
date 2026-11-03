@@ -3,7 +3,7 @@
         setFramePictureInPictureInteractive: () => N,
         refreshProxyTicket: () => P,
         updateFrameLayoutMode: () => g,
-        detachFrameHostWindow: () => b,
+        detachFrameHostWindow: () => v,
         setFrameUserMuted: () => O,
         resetFrameGuestClaims: () => C,
         detachFrameIframe: () => D,
@@ -14,7 +14,7 @@
         resetFrameLayoutModes: () => L,
         demoteMainFrame: () => m,
         attachFrameIframe: () => y,
-        attachFrameHostWindow: () => v,
+        attachFrameHostWindow: () => b,
         promoteFrame: () => T,
     }));
 var i = n(73153),
@@ -136,10 +136,10 @@ function y(e, t) {
 function D(e, t) {
     i.h.dispatch({ type: "FRAME_IFRAME_UNMOUNT", frameId: e, iframeId: t });
 }
-function v(e, t) {
+function b(e, t) {
     i.h.dispatch({ type: "FRAME_HOST_WINDOW_MOUNT", frameId: e, windowKey: t });
 }
-function b(e, t) {
+function v(e, t) {
     i.h.dispatch({ type: "FRAME_HOST_WINDOW_UNMOUNT", frameId: e, windowKey: t });
 }
 async function P(e) {

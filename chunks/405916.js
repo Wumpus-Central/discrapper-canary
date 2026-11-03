@@ -20,10 +20,10 @@ var i = n(477900),
     v = n(248174),
     y = n(375742),
     T = n(734057),
-    x = n(71393),
-    _ = n(309010),
-    I = n(287809),
-    R = n(652215),
+    _ = n(71393),
+    I = n(309010),
+    R = n(287809),
+    x = n(652215),
     S = n(753070),
     O = n(731854),
     k = n(105292),
@@ -35,7 +35,7 @@ function M(e) {
             showReportOption: P = !1,
             disableChangeWindows: j = !1,
             minimal: D = !1,
-            appContext: w = R.BRT.APP,
+            appContext: w = x.BRT.APP,
         } = e,
         { desktopSourceId: U, lastPickedContent: z } = (0, l.cf)([d.Ay, g.Ay], () => {
             let { desktopSource: e } = g.Ay.getGoLiveSource() ?? {},
@@ -49,10 +49,10 @@ function M(e) {
         W = (function (e, t) {
             let { preset: a, resolution: o, fps: c, soundshareEnabled: d } = (0, l.cf)([h.A], () => h.A.getState()),
                 m = (0, l.bG)([g.Ay], () => g.Ay.getGoLiveSource()),
-                f = (0, l.bG)([I.default], () => I.default.getCurrentUser()),
-                p = (0, l.bG)([x.A], () => x.A.getGuild(e?.guildId)?.premiumTier),
+                f = (0, l.bG)([R.default], () => R.default.getCurrentUser()),
+                p = (0, l.bG)([_.A], () => _.A.getGuild(e?.guildId)?.premiumTier),
                 { location: N } = (0, b.p)(),
-                M = (0, l.bG)([_.Ay, T.A], () => T.A.getChannel(_.Ay.getVoiceChannelId())),
+                M = (0, l.bG)([I.Ay, T.A], () => T.A.getChannel(I.Ay.getVoiceChannelId())),
                 P = r.useCallback(
                     (e, r, l, s) => {
                         if (e) {
@@ -73,7 +73,7 @@ function M(e) {
                             }
                         } else {
                             var a;
-                            ((a = { ...N, object: R.ZSU.RADIO_ITEM, objectType: s }),
+                            ((a = { ...N, object: x.ZSU.RADIO_ITEM, objectType: s }),
                                 (0, A.openModalLazy)(
                                     async () => {
                                         let { default: e } = await Promise.all([
@@ -96,7 +96,7 @@ function M(e) {
                                         ]).then(n.bind(n, 826789));
                                         return (t) => (0, i.jsx)(e, { ...t, analyticsSource: a });
                                     },
-                                    { contextKey: t === R.BRT.POPOUT ? E.KX : E.SY },
+                                    { contextKey: t === x.BRT.POPOUT ? E.KX : E.SY },
                                 ));
                         }
                     },
@@ -123,7 +123,7 @@ function M(e) {
                             subtext: r,
                             checked: t === c,
                             action: () => {
-                                (w && t === c) || P(a, l, t, R.AnalyticsObjectTypes.RESOLUTION);
+                                (w && t === c) || P(a, l, t, x.AnalyticsObjectTypes.RESOLUTION);
                             },
                         },
                         `stream-settings-fps-${t}`,
@@ -141,7 +141,7 @@ function M(e) {
                             subtext: r,
                             checked: t === z,
                             action: () => {
-                                (w && t === z) || P(l, t, j, R.AnalyticsObjectTypes.RESOLUTION);
+                                (w && t === z) || P(l, t, j, x.AnalyticsObjectTypes.RESOLUTION);
                             },
                         },
                         `stream-settings-resolution-${t}`,

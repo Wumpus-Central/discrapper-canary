@@ -30,8 +30,8 @@ function L(e) {
             disabled: L,
             displayOnly: y,
             id: D,
-            onChange: v,
-            focusProps: b,
+            onChange: b,
+            focusProps: v,
             hasIcon: P = !1,
             describedBy: M,
             labelledBy: U,
@@ -41,7 +41,7 @@ function L(e) {
         x = r.useRef(null),
         k = r.useRef(null),
         F = w ?? k,
-        B = (0, o.H)({ isSelected: n, onChange: v ?? R, isDisabled: L }),
+        B = (0, o.H)({ isSelected: n, onChange: b ?? R, isDisabled: L }),
         {
             inputProps: V,
             labelProps: H,
@@ -134,7 +134,7 @@ function L(e) {
     return y
         ? (0, i.jsx)("div", { className: h.kL, "data-disabled": L || void 0, children: ed })
         : (0, i.jsx)(E.vN, {
-              ...b,
+              ...v,
               ringTarget: x,
               focusTarget: F,
               within: !0,

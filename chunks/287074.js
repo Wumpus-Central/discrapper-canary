@@ -4,8 +4,8 @@ var l = t(477900),
     a = t(17928),
     s = t(265872),
     r = t(366605),
-    c = t(945830),
-    o = t(323073),
+    o = t(945830),
+    c = t(323073),
     u = t(267102),
     d = t(573163),
     h = t(625494),
@@ -14,15 +14,15 @@ var l = t(477900),
     m = t(105292);
 let p = function (e) {
     let { channel: n } = e,
-        t = (0, o.ni)(n),
+        t = (0, c.ni)(n),
         [p, j] = i.useState(!1),
         f = (0, u.aL)(),
         x = i.useRef(null),
         N = i.useCallback(() => {
             t || j((e) => !e);
         }, [t]),
-        C = (0, a.bG)([d.Ay], () => d.Ay.hasUnreadPins(n.id), [n]),
-        b = i.useMemo(() => (C ? { type: "unread", position: "bottom" } : void 0), [C]);
+        b = (0, a.bG)([d.Ay], () => d.Ay.hasUnreadPins(n.id), [n]),
+        C = i.useMemo(() => (b ? { type: "unread", position: "bottom" } : void 0), [b]);
     function E(e) {
         e?.shiftKey || f.dispatch(A.jej.POPOUT_CLOSE);
     }
@@ -46,7 +46,7 @@ let p = function (e) {
             ignoreModalClicks: !0,
             onRequestClose: () => j(!1),
             renderPopout: function (e) {
-                return (0, l.jsx)(c.A, { ...e, onJump: E, channel: n });
+                return (0, l.jsx)(o.A, { ...e, onJump: E, channel: n });
             },
             clickTrap: !0,
             children: (e, n) => {
@@ -60,7 +60,7 @@ let p = function (e) {
                     iconSize: 20,
                     "aria-label": m.intl.string(m.t["mp1N/2"]),
                     disabled: t,
-                    badge: b,
+                    badge: C,
                     selected: i,
                 });
             },

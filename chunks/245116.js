@@ -1,4 +1,4 @@
-l.d(t, { fn: () => b, As: () => j, JQ: () => v });
+l.d(t, { fn: () => b, As: () => y, JQ: () => v });
 var a = l(477900),
     n = l(582128),
     i = l(858899);
@@ -99,21 +99,21 @@ function v(e) {
             updateImageTrackData: f,
         } = (0, p.T)(),
         { enabled: v } = r.useConfig({ location: "ClipsEditorContextProvider" }),
-        [b, j] = n.useState(null),
-        [y, C] = n.useState(null),
+        [b, y] = n.useState(null),
+        [j, C] = n.useState(null),
         N = n.useCallback(
             (e) => {
-                (i(h.Y.NONE), j(e), C(null));
+                (i(h.Y.NONE), y(e), C(null));
             },
             [i],
         ),
         w = n.useCallback(() => {
             let e = o();
-            (j(e), C(e));
+            (y(e), C(e));
         }, [o]),
         E = n.useCallback(async () => {
             let e = await g();
-            null != e && j(c(e));
+            null != e && y(c(e));
         }, [c]),
         k = n.useCallback(
             async (e) => {
@@ -124,7 +124,7 @@ function v(e) {
         ),
         A = n.useCallback(
             (e) => {
-                (u(e), j((t) => (t === e ? null : t)));
+                (u(e), y((t) => (t === e ? null : t)));
             },
             [u],
         ),
@@ -133,7 +133,7 @@ function v(e) {
             () => ({
                 tracks: s,
                 selectedTrackId: b,
-                textTrackIdToFocus: y,
+                textTrackIdToFocus: j,
                 setSelectedTrackId: N,
                 addTextTrack: w,
                 pickAndAddImageTrack: E,
@@ -144,7 +144,7 @@ function v(e) {
                 updateImageTrackData: f,
                 editorFeatures: L,
             }),
-            [s, b, y, N, w, E, k, A, d, m, f, L],
+            [s, b, j, N, w, E, k, A, d, m, f, L],
         );
     return (0, a.jsx)(x.Provider, { value: R, children: t });
 }
@@ -168,6 +168,6 @@ function b() {
     if (null == e) throw Error("useClipsEditorContext must be used within a ClipsEditorContextProvider");
     return e;
 }
-function j() {
+function y() {
     return b().editorFeatures;
 }

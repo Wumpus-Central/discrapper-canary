@@ -80,10 +80,10 @@ class m extends i.PureComponent {
                 onVolumeShow: S,
                 onVolumeHide: C,
             } = this.props,
-            { hovered: T, focused: b, dragging: x } = this.state,
-            M = r.H;
+            { hovered: T, focused: b, dragging: M } = this.state,
+            x = r.H;
         return (
-            g || y === f ? (M = o._) : y < v / 2 && (M = u.S),
+            g || y === f ? (x = o._) : y < v / 2 && (x = u.S),
             (0, a.jsxs)("div", {
                 className: l()(s, p.kL),
                 onMouseEnter: () => {
@@ -99,7 +99,7 @@ class m extends i.PureComponent {
                 onKeyDown: this.handleKeyDown,
                 children: [
                     (0, a.jsx)("div", {
-                        className: l()(p.QS, i, { [p.OZ]: T || b || x }),
+                        className: l()(p.QS, i, { [p.OZ]: T || b || M }),
                         onMouseEnter: () => {
                             (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }));
                         },
@@ -123,7 +123,7 @@ class m extends i.PureComponent {
                         className: p.bk,
                         "aria-label": c.intl.string(c.t["19lt24"]),
                         onClick: this.handleToggleMute,
-                        children: (0, a.jsx)(M, { color: t, className: e }),
+                        children: (0, a.jsx)(x, { color: t, className: e }),
                     }),
                 ],
             })

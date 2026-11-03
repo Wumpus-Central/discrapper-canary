@@ -5,8 +5,8 @@ var r = n(477900),
     s = n(508382),
     o = n(17928),
     a = n(980707),
-    u = n(442433),
-    d = n(139286),
+    d = n(442433),
+    u = n(139286),
     c = n(267102),
     h = n(363195),
     f = n(712687),
@@ -21,7 +21,7 @@ function A(e) {
             close: n,
             onUnmount: o,
             target: a,
-            rect: u,
+            rect: d,
             position: h,
             align: f,
             impressionName: g,
@@ -29,21 +29,21 @@ function A(e) {
             disableClickTrap: y = !1,
             repositionOnContentChange: v = !1,
         } = e,
-        x = i.useRef(n);
+        w = i.useRef(n);
     i.useEffect(() => {
-        x.current = n;
+        w.current = n;
     });
-    let w = i.useRef(o);
+    let x = i.useRef(o);
     (i.useEffect(() => {
-        w.current = o;
+        x.current = o;
     }),
-        i.useEffect(() => () => w.current?.(), []),
-        (0, d.A)({ type: l.ImpressionTypes.MENU, name: g, properties: A }));
+        i.useEffect(() => () => x.current?.(), []),
+        (0, u.A)({ type: l.ImpressionTypes.MENU, name: g, properties: A }));
     let E = (0, c.aL)(),
-        C = i.useCallback(() => {
+        b = i.useCallback(() => {
             E.dispatch(m.jej.POPOUT_SHOW);
         }, [E]),
-        b = i.useCallback(() => {
+        C = i.useCallback(() => {
             E.dispatch(m.jej.POPOUT_HIDE);
         }, [E]),
         N = a.ownerDocument;
@@ -54,9 +54,9 @@ function A(e) {
         open: !0,
         ownerDocument: N,
         onOpenChange: (e, t, n) => {
-            e ? C() : (b(), "outside-press" === n && setTimeout(p, 0), x.current());
+            e ? b() : (C(), "outside-press" === n && setTimeout(p, 0), w.current());
         },
-        overrideTargetRect: u,
+        overrideTargetRect: d,
         placement: (0, s.Pv)(h ?? "right", f ?? "top"),
         blockPointerEvents: !y,
         crossAccessFlip: !1,
@@ -113,12 +113,12 @@ class y extends i.PureComponent {
                 renderWindow: o,
                 renderLazy: a,
             } = this.props,
-            u = this.state.render ?? this.props.render;
+            d = this.state.render ?? this.props.render;
         return n &&
             null != s &&
             null != l &&
             null != t &&
-            null != u &&
+            null != d &&
             l.context === e &&
             t.ownerDocument?.defaultView === o
             ? (0, r.jsx)(A, {
@@ -134,7 +134,7 @@ class y extends i.PureComponent {
                   repositionOnContentChange: null != a || !0 === l.repositionOnContentChange,
                   children: (n, r) => {
                       let { position: s } = n;
-                      return u({ position: s, theme: i, onHeightUpdate: r, config: l, target: t, context: e });
+                      return d({ position: s, theme: i, onHeightUpdate: r, config: l, target: t, context: e });
                   },
               })
             : null;
@@ -148,5 +148,5 @@ function v() {
         } = (0, o.cf)([f.A], () => ({ contextMenu: f.A.getContextMenu(), version: f.A.version, isOpen: f.A.isOpen() })),
         l = (0, o.bG)([h.A], () => h.A.theme),
         { appContext: s, renderWindow: a } = i.useContext(c.Ay);
-    return (0, r.jsx)(y, { appContext: s, renderWindow: a, ...e, isOpen: n, theme: l, closeContextMenu: u.Z_ }, t);
+    return (0, r.jsx)(y, { appContext: s, renderWindow: a, ...e, isOpen: n, theme: l, closeContextMenu: d.Z_ }, t);
 }

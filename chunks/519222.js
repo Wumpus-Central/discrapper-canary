@@ -11,7 +11,7 @@
     mF: () => O,
     rS: () => v,
     u_: () => M,
-    vc: () => b,
+    vc: () => x,
 }),
     t(582128));
 var i = t(687709),
@@ -33,21 +33,21 @@ var o = t(118517),
     h = t(439147),
     E = t(249700),
     _ = t(145530),
-    x = t(652215);
-function b(e) {
+    b = t(652215);
+function x(e) {
     let n = e.getGuildId();
-    null != n && r.A.open(n, x.BEX.ENGAGEMENT);
+    null != n && r.A.open(n, b.BEX.ENGAGEMENT);
 }
 function I(e, n, t) {
     (0, m.C)(t.shiftKey ? `${n.channel_id}-${n.id}` : n.id);
 }
 function S(e, n) {
-    (g.default.track(x.HAw.MESSAGE_LINK_COPIED, { message_id: n.id, channel: n.channel_id }),
+    (g.default.track(b.HAw.MESSAGE_LINK_COPIED, { message_id: n.id, channel: n.channel_id }),
         (0, m.C)((0, A.n)(e.guild_id, e.id, n.id)));
 }
 function j(e, n, t) {
-    n.state === x.cmJ.SEND_FAILED || t.shiftKey
-        ? l.A.deleteMessage(e.id, n.id, n.state === x.cmJ.SEND_FAILED)
+    n.state === b.cmJ.SEND_FAILED || t.shiftKey
+        ? l.A.deleteMessage(e.id, n.id, n.state === b.cmJ.SEND_FAILED)
         : _.A.confirmDelete(e, n);
 }
 function M(e, n) {
@@ -75,7 +75,7 @@ function C(e, n, t) {
     let i = e.isPrivate(),
         l = n.author.id === d.default.getId();
     ((0, o.Yf)({ channel: e, message: n, shouldMention: !t.shiftKey && !l, showMentionToggle: !i && !l }),
-        f._.dispatch(x.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id }));
+        f._.dispatch(b.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id }));
 }
 function L(e, n) {
     (0, c.Tv)(e, n, "Message");

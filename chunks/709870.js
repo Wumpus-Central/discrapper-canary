@@ -1,16 +1,16 @@
-e.d(n, { $: () => a });
-var r = e(477900);
-e(582128);
-var u = e(192308);
-function a(t) {
-    let { orbsAmount: n, openGiftingBadgePostPurchaseModal: a } = t;
+r.d(t, { $: () => i });
+var e = r(477900);
+r(582128);
+var u = r(192308);
+function i(n) {
+    let { orbsAmount: t, openGiftingBadgePostPurchaseModal: i } = n;
     (0, u.openModalLazy)(async () => {
-        let { NitroOrbsBonusDefaultModal: t, NitroOrbsBonusGiftingModal: u } = await Promise.all([
-            e.e("393137"),
-            e.e("720094"),
-        ]).then(e.bind(e, 743597));
-        return null != a
-            ? (t) => (0, r.jsx)(u, { orbsAmount: n, openGiftingBadgePostPurchaseModal: a, ...t })
-            : (e) => (0, r.jsx)(t, { orbsAmount: n, ...e });
+        let { NitroOrbsBonusDefaultModal: n, NitroOrbsBonusGiftingModal: u } = await Promise.all([
+            r.e("393137"),
+            r.e("720094"),
+        ]).then(r.bind(r, 743597));
+        return null != i
+            ? (n) => (0, e.jsx)(u, { orbsAmount: t, openGiftingBadgePostPurchaseModal: i, ...n })
+            : (r) => (0, e.jsx)(n, { orbsAmount: t, ...r });
     });
 }

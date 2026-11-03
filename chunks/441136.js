@@ -28,7 +28,7 @@ function m(e) {
         o = (0, d.OY)(l, t);
     return null == o
         ? (0, n.jsx)(u, { code: t, className: r, ...s })
-        : (0, n.jsx)(x, { html: o, className: a()(r, `language-${l}`, i), ...s });
+        : (0, n.jsx)(v, { html: o, className: a()(r, `language-${l}`, i), ...s });
 }
 function h(e) {
     let { code: t, className: l, highlightedClassName: s, ...c } = e,
@@ -39,7 +39,7 @@ function h(e) {
         children: u.map((e, t) => (0, n.jsx)("span", { style: (0, d.OT)(e), children: e.value }, t)),
     });
 }
-function x(e) {
+function v(e) {
     let { html: t, ...l } = e;
     return (0, n.jsx)("code", { ...l, dangerouslySetInnerHTML: { __html: t } });
 }

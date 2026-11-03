@@ -110,7 +110,7 @@ let D = function (e) {
         }
         return (I.Ay.addChangeListener(t), () => I.Ay.removeChangeListener(t));
     },
-    v = function (e, t) {
+    b = function (e, t) {
         let n = (0, f.fl)(e),
             i = L.get(e),
             r = !1;
@@ -134,7 +134,7 @@ let D = function (e) {
             return;
         y(n, { ...t, type: "keydown" === t.type ? "keydown" : "keyup" }, r);
     },
-    b = function (e) {
+    v = function (e) {
         let t = L.get(e);
         if ((L.delete(e), null == t)) return;
         let n = (0, f.fl)(e);
@@ -182,8 +182,8 @@ function k(e) {
                 e.type === i._i.STATE_UPDATED
                     ? (0, l.WR)(t, e.state)
                     : e.type === i._i.DISCONNECTED
-                      ? (b(t), (0, l.QQ)(t))
-                      : e.type === i._i.KEYBIND_CAPTURED && v(t, e.keybind);
+                      ? (v(t), (0, l.QQ)(t))
+                      : e.type === i._i.KEYBIND_CAPTURED && b(t, e.keybind);
             },
         })),
         M.set(t, r),

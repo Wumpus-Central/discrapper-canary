@@ -161,8 +161,8 @@ class D {
             .filter((e) => null != e);
     }
 }
-class v {
-    types = { 0: v.makeEmptyAnalytics(), 1: v.makeEmptyAnalytics() };
+class b {
+    types = { 0: b.makeEmptyAnalytics(), 1: b.makeEmptyAnalytics() };
     static makeEmptyAnalytics() {
         return { initialized: !1, pinnedToggledCount: 0, visibleDuration: new r.W0(), pinned: !1 };
     }
@@ -192,7 +192,7 @@ class v {
         };
     }
 }
-class b {
+class v {
     game;
     counters = {
         [s.aI.UNKNOWN]: new r.W0(),
@@ -293,7 +293,7 @@ class P {
     overlayStateReason = null;
     overlayStateRawReason = null;
     notificationAnalytics = new D();
-    widgetAnalytics = new v();
+    widgetAnalytics = new b();
     screenAnalytics;
     uiUnlockedCount = 0;
     uiLockedCount = 0;
@@ -319,7 +319,7 @@ class P {
     }
     constructor(e) {
         ((this.game = e),
-            (this.screenAnalytics = new b(e)),
+            (this.screenAnalytics = new v(e)),
             (this.overlayStatus = (0, u.hw)(e)),
             (this.overlayMethod = this.overlayStatus?.overlayMethod ?? null),
             (this.overlayMethodStats = this.buildOverlayMethodStats(this.overlayMethod, e)),

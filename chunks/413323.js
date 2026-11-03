@@ -129,7 +129,7 @@ function y(e, t) {
     delete n.g.IntlMessageFormat,
     "u" < typeof Intl && n(426586));
 let D = "en-US";
-class v {
+class b {
     _context = { messages: {}, defaultMessages: {}, locale: D };
     _parsedMessages = {};
     _getParsedMessages;
@@ -140,7 +140,7 @@ class v {
         return this._parsedMessages;
     }
 }
-class b extends v {
+class v extends b {
     refresh(e) {
         ((this._context = e), this._refresh(e, this._parsedMessages));
     }
@@ -160,7 +160,7 @@ class b extends v {
         };
     })();
 }
-class P extends v {
+class P extends b {
     constructor(e) {
         (super(e), (this._parsedMessages = this._createProxy(this._context)));
     }
@@ -195,7 +195,7 @@ class M extends a.EventEmitter {
             })),
             Intl.__addLocaleData && Intl.__addLocaleData(n(217671)),
             (this._languages = i()),
-            (this._provider = null != window.Proxy ? new P(this._getParsedMessages) : new b(this._getParsedMessages)),
+            (this._provider = null != window.Proxy ? new P(this._getParsedMessages) : new v(this._getParsedMessages)),
             (this.Messages = this._provider.getMessages()),
             (this._getMessages = t));
         try {

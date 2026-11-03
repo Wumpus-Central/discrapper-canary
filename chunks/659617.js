@@ -26,8 +26,8 @@ var i,
     L = n(927813),
     y = n(935208),
     D = n(292348),
-    v = n(268761),
-    b = n(406704),
+    b = n(268761),
+    v = n(406704),
     P = n(474078),
     M = n(37411),
     U = n(652215),
@@ -39,8 +39,8 @@ var i,
         (i[(i.PrivateOnly = 3)] = "PrivateOnly"),
         i);
 function k(e) {
-    let t = (0, b.n)(e);
-    return (0, b.Tb)(e) ? (t ? 2 : 3) : 1;
+    let t = (0, v.n)(e);
+    return (0, v.Tb)(e) ? (t ? 2 : 3) : 1;
 }
 function F(e, t) {
     return 3 === t || (e.isPrivate ?? !1);
@@ -98,7 +98,7 @@ function H(e) {
                 let e = V(t, n);
                 O = "" !== e ? e : G.intl.string(G.t["7Xm5QI"]);
             }
-            let R = (0, v.Gl)(t),
+            let R = (0, b.Gl)(t),
                 L = N.A.getChannel(y.default.castMessageIdAsChannelId(n)),
                 D = await Y(t, [], void 0, () => {
                     let e = null != n ? U.Rsh.CHANNEL_MESSAGE_THREADS(t.id, n) : U.Rsh.CHANNEL_THREADS(t.id);
@@ -165,9 +165,9 @@ function W(e) {
                 O,
                 R,
                 L = 0,
-                [y, b] = (0, g.Ay)(e);
-            y && ((e = b), (L = (0, a.UI)(L, U.pr7.SUPPRESS_NOTIFICATIONS)));
-            let P = (0, v.Gl)(t, null),
+                [y, v] = (0, g.Ay)(e);
+            y && ((e = v), (L = (0, a.UI)(L, U.pr7.SUPPRESS_NOTIFICATIONS)));
+            let P = (0, b.Gl)(t, null),
                 M = U.Rsh.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
                 G = {
                     name: n,

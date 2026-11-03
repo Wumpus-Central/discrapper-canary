@@ -10,7 +10,7 @@
         launchSignature: () => N,
         default: () => W,
         startRecordingAnalyticsEvents: () => G,
-        setUTMContext: () => b,
+        setUTMContext: () => v,
         getAnalyticsEventsRecording: () => k,
         expandLocation: () => L,
         AnalyticEventConfigs: () => R,
@@ -182,8 +182,8 @@ let y = () => I.O.NONE;
 function D(e) {
     _.includes(e) || h.A.addBreadcrumb({ category: "analytics", message: e });
 }
-let v = (0, s.trackMaker)({ addBreadcrumb: D, analyticEventConfigs: R, dispatcher: d.h, TRACK_ACTION_NAME: "TRACK" });
-function b(e) {
+let b = (0, s.trackMaker)({ addBreadcrumb: D, analyticEventConfigs: R, dispatcher: d.h, TRACK_ACTION_NAME: "TRACK" });
+function v(e) {
     return (g = e);
 }
 function P(e) {
@@ -274,6 +274,6 @@ let W = {
         )
             return Promise.resolve();
         let r = P(t);
-        return (M(i, r, n.logEventProperties), v(e, r, { flush: n.flush, fingerprint: n.fingerprint }));
+        return (M(i, r, n.logEventProperties), b(e, r, { flush: n.flush, fingerprint: n.fingerprint }));
     },
 };

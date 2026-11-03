@@ -4,7 +4,7 @@
     Et: () => U,
     H_: () => k,
     Id: () => w,
-    NI: () => v,
+    NI: () => b,
     NR: () => D,
     R: () => y,
     Tb: () => N,
@@ -111,13 +111,13 @@ function D(e) {
         return { hasActiveThreads: a || s || l, hasMoreActiveThreads: l || s };
     });
 }
-function v(e) {
+function b(e) {
     let t = (0, s.bG)([h.A], () => h.A.getChannel(e?.parent_id)),
         n = (0, s.bG)([f.A], () => null != t && f.A.can(m.xBc.MANAGE_THREADS, t), [t]),
         i = (0, s.bG)([A.default], () => A.default.getId());
     return null != e && null != t && !!e.isThread() && (!!n || (!e.isLockedThread() && e.ownerId === i));
 }
-function b(e, t) {
+function v(e, t) {
     return null != e && t.can(m.xBc.SEND_MESSAGES_IN_THREADS, e);
 }
 function P(e, t, n) {
@@ -140,8 +140,8 @@ function M(e) {
     return P(e, t && n, i);
 }
 function U(e) {
-    let t = b(e, f.A),
-        n = b(null != e ? h.A.getChannel(e.parent_id) : null, f.A),
+    let t = v(e, f.A),
+        n = v(null != e ? h.A.getChannel(e.parent_id) : null, f.A),
         i = F(e);
     return P(e, t && n, i);
 }

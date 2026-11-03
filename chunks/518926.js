@@ -20,8 +20,8 @@ let d = s.memo(function (t) {
             offsetYPercentageMax: m,
             offsetYPercentageMin: g,
             customConfettiCanvas: A,
-            speedValues: x = o,
-            dragCoefficientValue: y = 1.66,
+            speedValues: y = o,
+            dragCoefficientValue: x = 1.66,
             onAnimationEnd: R,
         } = t,
         [S, C] = s.useState(null),
@@ -65,7 +65,7 @@ let d = s.memo(function (t) {
                                     size: { type: "static-random", minValue: r.wn, maxValue: r.wn },
                                     dragCoefficient: { type: "static", value: a },
                                 };
-                            })(e.getBoundingClientRect(), h, p, m, g, x, y),
+                            })(e.getBoundingClientRect(), h, p, m, g, y, x),
                             f ?? 50,
                         ),
                             n === t.length - 1 && null != R && E(!0));
@@ -75,7 +75,7 @@ let d = s.memo(function (t) {
                     for (let e of t) clearTimeout(e);
                 }
             );
-        }, [T, e, c, f, h, p, m, g, x, y, R]),
+        }, [T, e, c, f, h, p, m, g, y, x, R]),
         (0, n.jsx)(l.K_, { ref: C, sprites: v ?? r.uI, colors: i ?? r._t, spriteWidth: r.wn, spriteHeight: r.wn })
     );
 });

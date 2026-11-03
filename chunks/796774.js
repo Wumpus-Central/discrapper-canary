@@ -1,9 +1,9 @@
 (n.d(t, {
     E7: () => S,
     Rp: () => R,
-    dZ: () => v,
+    dZ: () => b,
     eS: () => L,
-    g0: () => b,
+    g0: () => v,
     iy: () => P,
     lT: () => N,
     nh: () => y,
@@ -133,10 +133,10 @@ async function y(e, t) {
 function D(e, t) {
     s.h.dispatch({ type: "GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", sound: t, channelId: e });
 }
-function v(e, t) {
+function b(e, t) {
     s.h.dispatch({ type: "GUILD_SOUNDBOARD_SOUND_PLAY_START", soundId: e, userId: t });
 }
-function b(e, t) {
+function v(e, t) {
     s.h.dispatch({ type: "GUILD_SOUNDBOARD_SOUND_PLAY_END", soundId: e, userId: t });
 }
 function P(e, t) {

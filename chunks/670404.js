@@ -25,10 +25,10 @@ function c(a, e) {
         j = n.useCallback((a) => {
             (m(null), h(a), c(i.N.ERROR));
         }, []),
-        g = n.useCallback((a) => {
+        b = n.useCallback((a) => {
             (m(a), c(i.N.PRE_CONNECT_WAITING));
         }, []),
-        C = n.useCallback((a) => {
+        g = n.useCallback((a) => {
             (m(null), x(a), c(i.N.DISCORD_CONSENT));
         }, []);
     return (
@@ -45,8 +45,8 @@ function c(a, e) {
             slide: t,
             gotoNext: p,
             gotoError: j,
-            handleWaitingForConnection: g,
-            handleAuthToken: C,
+            handleWaitingForConnection: b,
+            handleAuthToken: g,
             expectedCallbackState: d,
             callbackData: u,
             errorCode: N,

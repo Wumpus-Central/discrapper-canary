@@ -4,8 +4,8 @@ var l = t(477900),
     a = t(305866),
     s = t(265872),
     r = t(163328),
-    c = t(323073),
-    o = t(58736),
+    o = t(323073),
+    c = t(58736),
     u = t(707539),
     d = t(751479),
     h = t(105292),
@@ -14,7 +14,7 @@ function A(e) {
     let { channel: n } = e,
         [t, A] = i.useState(!1),
         m = i.useRef(null),
-        p = (0, c.ni)(n),
+        p = (0, o.ni)(n),
         j = i.useCallback(() => {
             A(!1);
         }, []),
@@ -37,7 +37,7 @@ function A(e) {
         clickTrap: !0,
         children: (e, n) => {
             let { isShown: t } = n;
-            return (0, l.jsx)(o.In, {
+            return (0, l.jsx)(c.In, {
                 ...e,
                 ref: m,
                 className: g.Kk,

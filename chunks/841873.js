@@ -34,16 +34,16 @@ function r(e) {
     O$: () => ed,
     Oy: () => K,
     PJ: () => te,
-    PR: () => tv,
+    PR: () => tb,
     Ph: () => N,
     Py: () => tG,
     QH: () => eu,
-    QR: () => tb,
+    QR: () => tv,
     Qg: () => tT,
     Qn: () => tV,
     RG: () => ex,
     RK: () => ef,
-    RR: () => ev,
+    RR: () => eb,
     RX: () => eE,
     Rj: () => tL,
     Ry: () => ey,
@@ -66,7 +66,7 @@ function r(e) {
     _m: () => eq,
     aI: () => eM,
     bL: () => tD,
-    c6: () => eb,
+    c6: () => ev,
     cV: () => Y,
     ce: () => tm,
     cy: () => et,
@@ -276,8 +276,8 @@ function y(e, t, n) {
     i.closure712_externref_shim(e, t, n);
 }
 let D = ["bytes"],
-    v = ["omit", "same-origin", "include"],
-    b = ["same-origin", "no-cors", "cors", "navigate"],
+    b = ["omit", "same-origin", "include"],
+    v = ["same-origin", "no-cors", "cors", "navigate"],
     P =
         "u" < typeof FinalizationRegistry
             ? { register: () => {}, unregister: () => {} }
@@ -647,12 +647,12 @@ function ey(e) {
 function eD(e, t) {
     return e.match(t);
 }
-function ev() {
+function eb() {
     return f(function () {
         return new Headers();
     }, arguments);
 }
-function eb(e, t) {
+function ev(e, t) {
     try {
         var n = { a: e, b: t };
         return new Promise((e, t) => {
@@ -782,7 +782,7 @@ function e8(e, t) {
     e.body = t;
 }
 function e9(e, t) {
-    e.credentials = v[t];
+    e.credentials = b[t];
 }
 function te(e, t) {
     e.headers = t;
@@ -794,7 +794,7 @@ function tn(e, t, n) {
     e.method = A(t, n);
 }
 function ti(e, t) {
-    e.mode = b[t];
+    e.mode = v[t];
 }
 function tr(e, t) {
     e.signal = t;
@@ -924,10 +924,10 @@ function tD() {
         t = e.grow(4);
     (e.set(0, void 0), e.set(t + 0, void 0), e.set(t + 1, null), e.set(t + 2, !0), e.set(t + 3, !1));
 }
-function tv(e) {
+function tb(e) {
     return "function" == typeof e;
 }
-function tb(e) {
+function tv(e) {
     return null === e;
 }
 function tP(e) {

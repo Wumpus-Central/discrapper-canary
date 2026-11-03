@@ -249,10 +249,10 @@ let y = (e, t) => {
     },
     D = (e, t) =>
         t === I.P.GUILD_EVENT ? !L.Ay.isMuteScheduledEventsEnabled(e) && O.Ay.hasUnread(e, t) : O.Ay.hasUnread(e, t);
-function v(e) {
+function b(e) {
     return (0, g.ai)(e) ? T.A.favoriteGuildMuted : L.Ay.isMuted(e);
 }
-let b = (e, t) => {
+let v = (e, t) => {
         let n = C.A.getChannel(t);
         return (
             null != n &&
@@ -268,9 +268,9 @@ let b = (e, t) => {
             return (
                 m(1, {
                     channelPredicate: y,
-                    guildPredicate: (t) => t === e || !v(t),
+                    guildPredicate: (t) => t === e || !b(t),
                     guildFeaturePredicate: D,
-                    ensureChatIsVisible: b,
+                    ensureChatIsVisible: v,
                     withVoiceChannels: !0,
                 }),
                 !1
@@ -285,9 +285,9 @@ let b = (e, t) => {
             return (
                 m(-1, {
                     channelPredicate: y,
-                    guildPredicate: (t) => t === e || !v(t),
+                    guildPredicate: (t) => t === e || !b(t),
                     guildFeaturePredicate: D,
-                    ensureChatIsVisible: b,
+                    ensureChatIsVisible: v,
                     withVoiceChannels: !0,
                 }),
                 !1
@@ -298,10 +298,10 @@ let b = (e, t) => {
     w = {
         binds: ["mod+shift+alt+down"],
         comboKeysBindGlobal: !0,
-        action: () => (m(1, { channelPredicate: U, ensureChatIsVisible: b, withVoiceChannels: !0 }), !1),
+        action: () => (m(1, { channelPredicate: U, ensureChatIsVisible: v, withVoiceChannels: !0 }), !1),
     },
     G = {
         binds: ["mod+shift+alt+up"],
         comboKeysBindGlobal: !0,
-        action: () => (m(-1, { channelPredicate: U, ensureChatIsVisible: b, withVoiceChannels: !0 }), !1),
+        action: () => (m(-1, { channelPredicate: U, ensureChatIsVisible: v, withVoiceChannels: !0 }), !1),
     };

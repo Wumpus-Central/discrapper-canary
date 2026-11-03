@@ -13,11 +13,11 @@ var i = n(477900),
     m = n(793574),
     A = n(688810),
     f = n(402216),
-    x = n(689874),
-    g = n(872363),
+    g = n(689874),
+    x = n(872363),
     C = n(446243),
-    j = n(920639),
-    y = n(360729),
+    y = n(920639),
+    j = n(360729),
     I = n(410828),
     N = n(51082),
     v = n(275731),
@@ -96,7 +96,7 @@ function W(e) {
             }),
             [X],
         ),
-        { enabled: J, multipleRoomsEnabled: ee } = (0, y.mf)({
+        { enabled: J, multipleRoomsEnabled: ee } = (0, j.mf)({
             guildId: t.guild_id,
             location: "ChannelCallHeaderToolbar",
         }),
@@ -138,12 +138,12 @@ function W(e) {
                   null != R &&
                   eo.push((0, i.jsx)(V.A, { channel: t, focusedParticipant: Z }, "activity-participants"))),
         q && eo.push((0, i.jsx)(H, { channelId: X, guildId: t.guild_id }, "current-speaker")),
-        eo.push((0, i.jsx)(x.A, { className: z.x6, channelId: X }, "clips-enabled-indicator")),
+        eo.push((0, i.jsx)(g.A, { className: z.x6, channelId: X }, "clips-enabled-indicator")),
         Z?.type === k.lp.STREAM &&
             (eo.push((0, i.jsx)(v.A, { className: z.x6, participant: Z }, "warning")),
             eo.push(
                 (0, i.jsx)(
-                    g.A,
+                    x.A,
                     { size: f.Ay.Sizes.LARGE, className: z.x6, participant: Z, showQuality: !0, premiumIndicator: !1 },
                     "live-indicator",
                 ),
@@ -184,7 +184,7 @@ function W(e) {
                     onClick: () => {
                         if (!W) {
                             ((0, C.zD)(t.id),
-                                (0, j.yt)({
+                                (0, y.yt)({
                                     channelId: t.id,
                                     guildId: t.guild_id,
                                     location: m.A.CHANNEL_CALL,

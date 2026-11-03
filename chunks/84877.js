@@ -1,9 +1,9 @@
-t.d(n, { Z: () => r });
-var l = t(17928),
-    i = t(576705),
-    a = t(652215);
+l.d(n, { Z: () => r });
+var t = l(17928),
+    i = l(576705),
+    a = l(652215);
 function r(e) {
-    return (0, l.bG)(
+    return (0, t.bG)(
         [i.A],
         () =>
             null != e &&

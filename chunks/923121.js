@@ -1,4 +1,4 @@
-(n.d(t, { Bq: () => x, fH: () => f, p2: () => h, q3: () => E, sF: () => u, yM: () => g, zN: () => m }), n(321073));
+(n.d(t, { Bq: () => h, fH: () => f, p2: () => x, q3: () => E, sF: () => u, yM: () => g, zN: () => m }), n(321073));
 var i = n(73153),
     l = n(157559),
     s = n(913122),
@@ -16,10 +16,10 @@ function m(e) {
 function g(e, t) {
     i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_UPDATE", index: e, updates: t });
 }
-function x(e) {
+function h(e) {
     i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_REORDER", connections: e });
 }
-function h() {
+function x() {
     i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_RESET" });
 }
 async function E(e) {

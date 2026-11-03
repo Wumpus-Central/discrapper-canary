@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => h, e9: () => g, qd: () => p });
+n.d(t, { Ay: () => x, e9: () => g, qd: () => p });
 var i = n(477900),
     l = n(582128),
     s = n(435558),
@@ -47,26 +47,26 @@ let p = { x: 0, y: 0 },
             share_application_id: l,
         });
     }, 2e3),
-    x = l.memo(function (e) {
+    h = l.memo(function (e) {
         let { streamKey: t, minZoom: n = 1, maxZoom: o = 5, children: u } = e,
             [c, d] = l.useState(n),
-            [m, x] = l.useState(!1),
-            [h, A] = l.useState(!1),
+            [m, h] = l.useState(!1),
+            [x, A] = l.useState(!1),
             [v, E] = l.useState(!1),
             [C, j] = l.useState(!1),
             [I, S] = l.useState(16 / 9),
-            [_, N] = l.useState({ x: 0, y: 0 }),
-            b = l.useRef(null),
+            [_, b] = l.useState({ x: 0, y: 0 }),
+            N = l.useRef(null),
             y = l.useRef(null);
         (0, a.l0)(() => {
             y.current?.stop();
         });
         let T = l.useCallback(
                 (e, t) => {
-                    if (null == b.current) return p;
+                    if (null == N.current) return p;
                     let n = t ?? c,
-                        i = b.current.clientWidth,
-                        l = b.current.clientHeight,
+                        i = N.current.clientWidth,
+                        l = N.current.clientHeight,
                         r = (i * (n - 1)) / 2,
                         a = (l * (n - 1)) / 2;
                     return { x: (0, s.clamp)(e.x, -r, r), y: (0, s.clamp)(e.y, -a, a) };
@@ -77,14 +77,14 @@ let p = { x: 0, y: 0 },
                 (e, i, l) => {
                     let a = (0, s.clamp)(e, n, o);
                     if (null == i || a === c) return;
-                    x(!0);
+                    h(!0);
                     let u = a / c;
-                    (N((e) => T({ x: (e.x - i.x) * u + i.x, y: (e.y - i.y) * u + i.y }, a)),
+                    (b((e) => T({ x: (e.x - i.x) * u + i.x, y: (e.y - i.y) * u + i.y }, a)),
                         d(a),
                         f(a, l, t),
                         null == y.current && (y.current = new r.Ep()),
                         y.current.start(2e3, () => {
-                            x(!1);
+                            h(!1);
                         }));
                 },
                 [T, o, n, t, c],
@@ -97,8 +97,8 @@ let p = { x: 0, y: 0 },
                     maxZoom: o,
                     setZoomLevel: d,
                     isZooming: m,
-                    setIsZooming: x,
-                    isDragging: h,
+                    setIsZooming: h,
+                    isDragging: x,
                     setIsDragging: A,
                     isWheeling: v,
                     setIsWheeling: E,
@@ -108,14 +108,14 @@ let p = { x: 0, y: 0 },
                     setVideoAspectRatio: S,
                     doZoom: L,
                     panOffset: _,
-                    setPanOffset: N,
-                    wrapperRef: b,
+                    setPanOffset: b,
+                    wrapperRef: N,
                     clampPanOffset: T,
                 }),
-                [T, L, h, C, v, m, o, n, _, I, c],
+                [T, L, x, C, v, m, o, n, _, I, c],
             );
         return (0, i.jsx)(g.Provider, { value: D, children: u });
     });
-function h(e) {
-    return e.enableZoom ? (0, i.jsx)(x, { ...e }) : e.children;
+function x(e) {
+    return e.enableZoom ? (0, i.jsx)(h, { ...e }) : e.children;
 }

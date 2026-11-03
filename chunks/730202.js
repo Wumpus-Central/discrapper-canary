@@ -1,159 +1,159 @@
-l.d(e, { A: () => T });
-var n = l(17928),
-    c = l(73153);
-let o = {},
-    r = {},
+l.d(t, { A: () => O });
+var c = l(17928),
+    n = l(73153);
+let r = {},
+    o = {},
     i = {},
-    s = {},
     u = {},
-    a = {};
-class C extends n.Ay.Store {
+    _ = {},
+    s = {};
+class a extends c.Ay.Store {
     static displayName = "StorefrontCollectionStore";
-    getFetchState(t) {
-        return null != t ? o[t]?.state : void 0;
+    getFetchState(e) {
+        return null != e ? r[e]?.state : void 0;
     }
-    getFetchStateForApplication(t) {
-        return null != t ? r[t]?.state : void 0;
+    getFetchStateForApplication(e) {
+        return null != e ? o[e]?.state : void 0;
     }
-    getFetchedAt(t) {
-        return null != t ? o[t]?.fetchedAt : void 0;
+    getFetchedAt(e) {
+        return null != e ? r[e]?.fetchedAt : void 0;
     }
-    getFetchedAtForApplication(t) {
-        return null != t ? r[t]?.fetchedAt : void 0;
+    getFetchedAtForApplication(e) {
+        return null != e ? o[e]?.fetchedAt : void 0;
     }
-    getFetchError(t) {
-        return null != t ? o[t]?.fetchError : void 0;
+    getFetchError(e) {
+        return null != e ? r[e]?.fetchError : void 0;
     }
-    getFetchErrorForApplication(t) {
-        return null != t ? r[t]?.fetchError : void 0;
+    getFetchErrorForApplication(e) {
+        return null != e ? o[e]?.fetchError : void 0;
     }
-    getCollection(t) {
-        let e = null != t ? o[t] : null;
-        return null == e || e?.state === "error" || null == e.collection ? null : e.collection;
+    getCollection(e) {
+        let t = null != e ? r[e] : null;
+        return null == t || t?.state === "error" || null == t.collection ? null : t.collection;
     }
-    hasPricingCoverage(t) {
-        return !0 === (null != t && o[t]?.includePricing);
+    hasPricingCoverage(e) {
+        return !0 === (null != e && r[e]?.includePricing);
     }
-    getFetchParamsForApplication(t) {
-        let e = null != t ? r[t] : null;
-        return e?.state === "success" ? { includePricing: e.includePricing, skuTypes: e.skuTypes } : void 0;
+    getFetchParamsForApplication(e) {
+        let t = null != e ? o[e] : null;
+        return t?.state === "success" ? { includePricing: t.includePricing, skuTypes: t.skuTypes } : void 0;
     }
-    getCollectionsForApplication(t) {
-        let e = null != t ? r[t] : null;
-        return null == e || "error" === e.state || null == e.collections ? null : e.collections;
+    getCollectionsForApplication(e) {
+        let t = null != e ? o[e] : null;
+        return null == t || "error" === t.state || null == t.collections ? null : t.collections;
     }
-    getCollectionPageFetchState(t) {
-        return i[t]?.state;
+    getCollectionPageFetchState(e) {
+        return i[e]?.state;
     }
-    getCollectionPageFetchedAt(t) {
-        return i[t]?.fetchedAt;
+    getCollectionPageFetchedAt(e) {
+        return i[e]?.fetchedAt;
     }
-    getCollectionPageIds(t) {
-        let e = i[t];
-        return null == e || "error" === e.state || null == e.collectionIds ? null : e.collectionIds;
+    getCollectionPageIds(e) {
+        let t = i[e];
+        return null == t || "error" === t.state || null == t.collectionIds ? null : t.collectionIds;
     }
-    getCollectionListTotal(t) {
-        return s[t];
+    getCollectionListTotal(e) {
+        return u[e];
     }
-    getCollectionsAfterFetchState(t) {
-        return u[t]?.state;
+    getCollectionsAfterFetchState(e) {
+        return _[e]?.state;
     }
-    getCollectionsAfterFetchedAt(t) {
-        return u[t]?.fetchedAt;
+    getCollectionsAfterFetchedAt(e) {
+        return _[e]?.fetchedAt;
     }
-    getCollectionsAfterIds(t) {
-        let e = u[t];
-        return null == e || "error" === e.state || null == e.collectionIds ? null : e.collectionIds;
+    getCollectionsAfterIds(e) {
+        let t = _[e];
+        return null == t || "error" === t.state || null == t.collectionIds ? null : t.collectionIds;
     }
-    getCollectionOrSummary(t) {
-        return null == t ? null : (this.getCollection(t) ?? a[t] ?? null);
+    getCollectionOrSummary(e) {
+        return null == e ? null : (this.getCollection(e) ?? s[e] ?? null);
     }
 }
-let T = new C(c.h, {
-    STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH: function (t) {
-        let { collectionIds: e, includePricing: l } = t;
-        e.forEach((t) => {
-            let e = o[t];
-            o[t] = {
+let O = new a(n.h, {
+    STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH: function (e) {
+        let { collectionIds: t, includePricing: l } = e;
+        t.forEach((e) => {
+            let t = r[e];
+            r[e] = {
                 state: "loading",
-                collection: e?.collection,
-                includePricing: l || (e?.collection != null && !0 === e.includePricing),
+                collection: t?.collection,
+                includePricing: l || (t?.collection != null && !0 === t.includePricing),
             };
         });
     },
-    STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_SUCCESS: function (t) {
-        let { collectionIds: e, collections: l, includePricing: n } = t,
-            c = Date.now(),
-            r = new Set();
-        (l.forEach((t) => {
-            r.add(t.id);
-            let e = o[t.id];
-            if (!n && e?.state === "success" && e.includePricing) {
-                o[t.id] = { ...e, fetchedAt: c };
+    STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_SUCCESS: function (e) {
+        let { collectionIds: t, collections: l, includePricing: c } = e,
+            n = Date.now(),
+            o = new Set();
+        (l.forEach((e) => {
+            o.add(e.id);
+            let t = r[e.id];
+            if (!c && t?.state === "success" && t.includePricing) {
+                r[e.id] = { ...t, fetchedAt: n };
                 return;
             }
-            o[t.id] = { state: "success", collection: t, fetchedAt: c, includePricing: n };
+            r[e.id] = { state: "success", collection: e, fetchedAt: n, includePricing: c };
         }),
-            e.forEach((t) => {
-                r.has(t) || delete o[t];
+            t.forEach((e) => {
+                o.has(e) || delete r[e];
             }));
     },
-    STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_FAILURE: function (t) {
-        let { collectionIds: e, apiError: l } = t,
-            n = Date.now();
-        e.forEach((t) => {
-            o[t] = { state: "error", fetchedAt: n, fetchError: l };
+    STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_FAILURE: function (e) {
+        let { collectionIds: t, apiError: l } = e,
+            c = Date.now();
+        t.forEach((e) => {
+            r[e] = { state: "error", fetchedAt: c, fetchError: l };
         });
     },
-    STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH: function (t) {
-        let { applicationId: e } = t;
-        r[e] = { state: "loading", collections: r[e]?.collections };
+    STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH: function (e) {
+        let { applicationId: t } = e;
+        o[t] = { state: "loading", collections: o[t]?.collections };
     },
-    STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_SUCCESS: function (t) {
-        let { applicationId: e, collections: l, includePricing: n, skuTypes: c } = t,
+    STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_SUCCESS: function (e) {
+        let { applicationId: t, collections: l, includePricing: c, skuTypes: n } = e,
             i = Date.now();
-        ((r[e] = { state: "success", collections: l, fetchedAt: i, includePricing: n, skuTypes: c }),
-            l.forEach((t) => {
-                o[t.id] = { state: "success", collection: t, fetchedAt: i, includePricing: n };
+        ((o[t] = { state: "success", collections: l, fetchedAt: i, includePricing: c, skuTypes: n }),
+            l.forEach((e) => {
+                r[e.id] = { state: "success", collection: e, fetchedAt: i, includePricing: c };
             }));
     },
-    STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_FAILURE: function (t) {
-        let { applicationId: e, apiError: l } = t;
-        r[e] = { state: "error", fetchedAt: Date.now(), fetchError: l };
+    STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_FAILURE: function (e) {
+        let { applicationId: t, apiError: l } = e;
+        o[t] = { state: "error", fetchedAt: Date.now(), fetchError: l };
     },
-    STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH: function (t) {
-        let { pageKey: e } = t;
-        i[e] = { state: "loading", collectionIds: i[e]?.collectionIds };
+    STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH: function (e) {
+        let { pageKey: t } = e;
+        i[t] = { state: "loading", collectionIds: i[t]?.collectionIds };
     },
-    STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_SUCCESS: function (t) {
-        let { pageKey: e, listKey: l, collections: n, total: c } = t,
-            r = Date.now();
-        ((i[e] = { state: "success", collectionIds: n.map((t) => t.id), fetchedAt: r }),
-            (s[l] = c),
-            n.forEach((t) => {
-                o[t.id] = { state: "success", collection: t, fetchedAt: r, includePricing: !0 };
+    STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_SUCCESS: function (e) {
+        let { pageKey: t, listKey: l, collections: c, total: n } = e,
+            o = Date.now();
+        ((i[t] = { state: "success", collectionIds: c.map((e) => e.id), fetchedAt: o }),
+            (u[l] = n),
+            c.forEach((e) => {
+                r[e.id] = { state: "success", collection: e, fetchedAt: o, includePricing: !0 };
             }));
     },
-    STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_FAILURE: function (t) {
-        let { pageKey: e, apiError: l } = t;
-        i[e] = { state: "error", fetchedAt: Date.now(), fetchError: l };
+    STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_FAILURE: function (e) {
+        let { pageKey: t, apiError: l } = e;
+        i[t] = { state: "error", fetchedAt: Date.now(), fetchError: l };
     },
-    STOREFRONT_COLLECTIONS_AFTER_FETCH: function (t) {
-        let { requestKey: e } = t;
-        u[e] = { state: "loading", collectionIds: u[e]?.collectionIds };
+    STOREFRONT_COLLECTIONS_AFTER_FETCH: function (e) {
+        let { requestKey: t } = e;
+        _[t] = { state: "loading", collectionIds: _[t]?.collectionIds };
     },
-    STOREFRONT_COLLECTIONS_AFTER_FETCH_SUCCESS: function (t) {
-        let { requestKey: e, collections: l } = t;
-        ((u[e] = { state: "success", collectionIds: l.map((t) => t.id), fetchedAt: Date.now() }),
-            l.forEach((t) => {
-                a[t.id] = t;
+    STOREFRONT_COLLECTIONS_AFTER_FETCH_SUCCESS: function (e) {
+        let { requestKey: t, collections: l } = e;
+        ((_[t] = { state: "success", collectionIds: l.map((e) => e.id), fetchedAt: Date.now() }),
+            l.forEach((e) => {
+                s[e.id] = e;
             }));
     },
-    STOREFRONT_COLLECTIONS_AFTER_FETCH_FAILURE: function (t) {
-        let { requestKey: e, apiError: l } = t;
-        u[e] = { state: "error", fetchedAt: Date.now(), fetchError: l };
+    STOREFRONT_COLLECTIONS_AFTER_FETCH_FAILURE: function (e) {
+        let { requestKey: t, apiError: l } = e;
+        _[t] = { state: "error", fetchedAt: Date.now(), fetchError: l };
     },
-    LOGOUT: function (t) {
-        ((o = {}), (r = {}), (i = {}), (s = {}), (u = {}), (a = {}));
+    LOGOUT: function (e) {
+        ((r = {}), (o = {}), (i = {}), (u = {}), (_ = {}), (s = {}));
     },
 });

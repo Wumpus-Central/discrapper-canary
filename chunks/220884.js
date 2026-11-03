@@ -4,8 +4,8 @@ var l = n(477900),
     r = n(17928),
     s = n(27232),
     a = n(505930),
-    u = n(602853),
-    o = n(661531),
+    o = n(602853),
+    u = n(661531),
     d = n(996439),
     c = n(914853),
     h = n(676923),
@@ -22,10 +22,10 @@ function S(e) {
             widgetType: S = E.uss.FRIENDS,
             showTooltip: p = !0,
             shouldStopPropagation: N = !0,
-            className: x,
+            className: T,
         } = e,
-        [T] = (0, r.bG)([g.A], () => g.A.isFavorite(t, n), [t, n], d.D),
-        _ = (function (e) {
+        [y] = (0, r.bG)([g.A], () => g.A.isFavorite(t, n), [t, n], d.D),
+        x = (function (e) {
             let { tab: t, targetId: n, shouldStopPropagation: l, widgetType: r } = e;
             return i.useCallback(
                 (e) => {
@@ -42,22 +42,22 @@ function S(e) {
                 [l, t, n, r],
             );
         })({ tab: t, targetId: n, shouldStopPropagation: N, widgetType: S }),
-        y = T ? s.StarIcon : a.y,
-        C = (0, u.r)(o.A.colors.ICON_FEEDBACK_WARNING),
-        v = (0, u.r)(o.A.colors.ICON_DEFAULT),
+        _ = y ? s.StarIcon : a.y,
+        C = (0, o.r)(u.A.colors.ICON_FEEDBACK_WARNING),
+        v = (0, o.r)(u.A.colors.ICON_DEFAULT),
         R =
             t === c.x.FRIENDS
-                ? T
+                ? y
                     ? f.intl.string(A.default.Xr8XHk)
                     : f.intl.string(A.default.w1MU8Y)
-                : T
+                : y
                   ? f.intl.string(A.default.dvUElD)
                   : f.intl.string(A.default.iK1QsY);
     return (0, l.jsx)(h.S, {
         tooltipText: R,
         showTooltip: p,
-        className: x,
-        onClick: _,
-        children: (0, l.jsx)(y, { size: "sm", color: T ? C.hex() : v.hex() }),
+        className: T,
+        onClick: x,
+        children: (0, l.jsx)(_, { size: "sm", color: y ? C.hex() : v.hex() }),
     });
 }

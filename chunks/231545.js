@@ -16,13 +16,13 @@ let u = {
     base0B: i.A.colors.TEXT_FEEDBACK_WARNING.css,
     base0D: i.A.colors.TEXT_BRAND.css,
 };
-function f(e) {
+function d(e) {
     let t = {};
     for (let [a, n] of Object.entries(e)) t[a] = n;
     return t;
 }
-let d = f(u),
-    h = f(u);
+let f = d(u),
+    h = d(u);
 function p(e) {
     return o.AKn.test(e) ? (0, n.jsx)(s.Ay, { type: s.Ay.Types.TEXT, children: () => e }) : e;
 }
@@ -33,7 +33,7 @@ function b(e) {
         className: c.H$,
         children: (0, n.jsx)(r.d, {
             data: t,
-            theme: "light" === a ? h : d,
+            theme: "light" === a ? h : f,
             invertTheme: !1,
             valueRenderer: p,
             shouldExpandNode: () => !0,

@@ -16,12 +16,12 @@ function A(e) {
     let { stream: t, previewClassName: n } = e,
         A = u.Ay.getVideoComponent(),
         f = (0, l.bG)([d.A], () => d.A.getActiveStreamForApplicationStream(t), [t]),
-        x = (0, l.bG)([h.A], () => h.A.getStreamId(t.ownerId, t.guildId, m.x.STREAM), [t]),
-        { previewUrl: g } = (0, s.A)(t.guildId, t.channelId, t.ownerId),
+        g = (0, l.bG)([h.A], () => h.A.getStreamId(t.ownerId, t.guildId, m.x.STREAM), [t]),
+        { previewUrl: x } = (0, s.A)(t.guildId, t.channelId, t.ownerId),
         C = (0, i.jsx)(o.A, { stream: t, className: n, noText: !0 });
     return null != A &&
         u.Ay.supports(m.O5.VIDEO) &&
-        null != x &&
+        null != g &&
         null != f &&
         f.state !== p.XYD.ENDED &&
         f.state !== p.XYD.FAILED
@@ -29,15 +29,15 @@ function A(e) {
               c.A,
               {
                   videoComponent: A,
-                  streamId: x,
+                  streamId: g,
                   fit: c.$.COVER,
                   paused: f.state === p.XYD.PAUSED,
-                  streamPreviewURL: g,
+                  streamPreviewURL: x,
                   videoSpinnerContext: a.u.REMOTE_STREAM,
                   userId: t.ownerId,
                   streamKey: (0, r._z)(t),
               },
-              x,
+              g,
           )
         : C;
 }

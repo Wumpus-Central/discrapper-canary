@@ -22,7 +22,7 @@ function m(e) {
                 ? (0, l.jsx)(h, { name: e.name }, n)
                 : f(e)
                   ? (0, l.jsx)(
-                        p,
+                        k,
                         {
                             projectId: t,
                             viewableImages: s,
@@ -32,7 +32,7 @@ function m(e) {
                         },
                         n,
                     )
-                  : (0, l.jsx)(x, { projectId: t, id: e.id, name: e.name }, n),
+                  : (0, l.jsx)(p, { projectId: t, id: e.id, name: e.name }, n),
         ),
     });
 }
@@ -44,7 +44,7 @@ function h(e) {
         a = n ? o.intl.formatToPlainString(d.default.nd81jR, { name: t }) : t;
     return (0, l.jsx)(u.p, { name: a, compact: !0 });
 }
-function x(e) {
+function p(e) {
     let { projectId: t, id: n, name: s } = e,
         [r, c] = a.useState(!1),
         m = a.useCallback(() => {
@@ -68,10 +68,10 @@ function x(e) {
               onClick: m,
           });
 }
-function p(e) {
+function k(e) {
     let { projectId: t, viewableImages: n, viewerIndex: r, unavailableIds: c, markUnavailable: m } = e,
-        { id: f, name: x } = n[r],
-        [p, k] = a.useState(null),
+        { id: f, name: p } = n[r],
+        [k, x] = a.useState(null),
         g = c.has(f),
         [_, j] = a.useState(0);
     a.useEffect(() => {
@@ -79,7 +79,7 @@ function p(e) {
         return (
             (0, i.PK)(t, f).then(
                 (t) => {
-                    e || k(t);
+                    e || x(t);
                 },
                 () => {},
             ),
@@ -88,7 +88,7 @@ function p(e) {
             }
         );
     }, [t, f, _]);
-    let v = a.useCallback(() => {
+    let b = a.useCallback(() => {
         Promise.all(
             n.map(async (e) => (c.has(e.id) ? null : { type: "IMAGE", url: await (0, i.PK)(t, e.id), alt: e.name })),
         ).then(
@@ -105,14 +105,14 @@ function p(e) {
         );
     }, [t, n, r, c]);
     return g
-        ? (0, l.jsx)(h, { name: x, unavailable: !0 })
+        ? (0, l.jsx)(h, { name: p, unavailable: !0 })
         : (0, l.jsx)(u.n, {
-              name: x,
-              thumbSrc: p,
-              ariaLabel: o.intl.formatToPlainString(d.default.GtNukg, { name: x }),
-              onClick: v,
+              name: p,
+              thumbSrc: k,
+              ariaLabel: o.intl.formatToPlainString(d.default.GtNukg, { name: p }),
+              onClick: b,
               onThumbError: () => {
-                  (k(null),
+                  (x(null),
                       (0, i.n6)(t, f).then(
                           (e) => {
                               e ? 0 === _ && j(1) : m(f);

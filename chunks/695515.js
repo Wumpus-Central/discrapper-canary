@@ -26,8 +26,8 @@ let c = null,
     L = null,
     y = null,
     D = null,
-    v = {},
     b = {},
+    v = {},
     P = null,
     M = {};
 function U() {
@@ -99,7 +99,7 @@ function B(e) {
     );
 }
 function V(e) {
-    v = e.reduce((e, t) => {
+    b = e.reduce((e, t) => {
         if (null != t.invoice_items && t.invoice_items.length > 0) {
             let n = t.invoice_items[0],
                 i = n.sku_id,
@@ -111,7 +111,7 @@ function V(e) {
     }, {});
 }
 function H(e) {
-    b = e.reduce((e, t) => ((e[t.entitlement_id] = t), e), {});
+    v = e.reduce((e, t) => ((e[t.entitlement_id] = t), e), {});
 }
 function j() {
     ((T = !0), (g = !1));
@@ -263,8 +263,8 @@ function er() {
         (L = null),
         (y = null),
         (D = null),
-        (v = {}),
         (b = {}),
+        (v = {}),
         (P = null),
         (m = !1));
 }
@@ -395,7 +395,7 @@ class ea extends r.A {
         let e = null,
             t = 0,
             n = !1;
-        for (let i of Object.values(b))
+        for (let i of Object.values(v))
             if (null != i.price) {
                 if (null != e && i.price.currency !== e) return null;
                 ((e = i.price.currency), (t += i.price.amount), (n = !0));
@@ -409,10 +409,10 @@ class ea extends r.A {
         return D;
     }
     getPurchaseInfo(e) {
-        return v[e];
+        return b[e];
     }
     getGiftInfo(e) {
-        return b[e];
+        return v[e];
     }
     getAgeGroup() {
         return P;

@@ -1,8 +1,8 @@
-t.d(n, { N: () => u, p: () => s });
-var l = t(17928),
-    i = t(406935),
-    a = t(646769),
-    r = t(405018);
+l.d(n, { N: () => u, p: () => s });
+var t = l(17928),
+    i = l(406935),
+    a = l(646769),
+    r = l(405018);
 let u = (0, a.c$)(
     "privacy",
     "swpMessagePromotionOptedOut",
@@ -11,9 +11,9 @@ let u = (0, a.c$)(
 );
 function s() {
     let e = u.useSetting(),
-        { locked: n, defaultOptedOut: t } = (0, l.cf)([r.A], () => ({
+        { locked: n, defaultOptedOut: l } = (0, t.cf)([r.A], () => ({
             locked: r.A.isLocked(),
             defaultOptedOut: r.A.defaultsToOptedOut(),
         }));
-    return { locked: n, optedOut: n || (e ?? t) };
+    return { locked: n, optedOut: n || (e ?? l) };
 }

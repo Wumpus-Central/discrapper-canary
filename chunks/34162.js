@@ -33,24 +33,24 @@ let D = Object.freeze({
         activity: !1,
         isCurrentUserConnected: !1,
     }),
-    v = new Map(),
-    b = 0,
+    b = new Map(),
+    v = 0,
     P = 0,
     M = null,
     U = -1,
     w = null,
     G = -1;
 function x() {
-    return 0 !== v.size && (b++, P++, !0);
+    return 0 !== b.size && (v++, P++, !0);
 }
 function k(e) {
     if (null == e || e === y.ME) return !1;
     M?.selectedVoiceGuildId === e && P++;
-    let t = v.get(e);
-    return !(null == t || (t.version === b && t.value === D && O.Ay.isMuted(e))) && ((t.version = -1), !0);
+    let t = b.get(e);
+    return !(null == t || (t.version === v && t.value === D && O.Ay.isMuted(e))) && ((t.version = -1), !0);
 }
 function F() {
-    return 0 !== v.size && (v.clear(), b++, P++, !0);
+    return 0 !== b.size && (b.clear(), v++, P++, !0);
 }
 function B(e, t, n) {
     if (null == t) return !1;
@@ -82,8 +82,8 @@ class j extends s.Ay.Store {
             this.syncWith([C.Ay], H));
     }
     getGuildMediaState(e) {
-        let t = v.get(e);
-        if (null != t && t.version === b) return t.value;
+        let t = b.get(e);
+        if (null != t && t.version === v) return t.value;
         let n = (function (e) {
                 let t = (function () {
                         if (null != M && U === P) return M;
@@ -99,14 +99,14 @@ class j extends s.Ay.Store {
                                 isSelectedVoiceChannelStage: t?.isGuildStageVoice() ?? !1,
                                 blockedOrIgnoredUserIds: n,
                                 streamChannelIdsByGuild: (function (e) {
-                                    if (null != w && G === b) return w;
+                                    if (null != w && G === v) return w;
                                     let t = new Map();
                                     for (let n of p.A.getAllApplicationStreams()) {
                                         if (null == n.guildId || e.has(n.ownerId)) continue;
                                         let i = t.get(n.guildId);
                                         null != i ? i.push(n.channelId) : t.set(n.guildId, [n.channelId]);
                                     }
-                                    return ((w = t), (G = b), t);
+                                    return ((w = t), (G = v), t);
                                 })(n),
                             }),
                             (U = P),
@@ -150,7 +150,7 @@ class j extends s.Ay.Store {
                         break;
                     }
                 let y = t.streamChannelIdsByGuild.get(e),
-                    v = null != y && y.some((t) => !O.Ay.isChannelMuted(e, t)),
+                    b = null != y && y.some((t) => !O.Ay.isChannelMuted(e, t)),
                     x = L.default.keys(f.A.getStageInstancesByGuild(e)).some((e) => {
                         let t = T.A.getBasicChannel(e);
                         return null != t && (0, E.A)(t, S.A);
@@ -165,7 +165,7 @@ class j extends s.Ay.Store {
                 return {
                     audio: o,
                     video: A,
-                    screenshare: v,
+                    screenshare: b,
                     liveStage: x,
                     activeEvent: null != (0, h.wX)(e),
                     activity: F,
@@ -173,13 +173,13 @@ class j extends s.Ay.Store {
                 };
             })(e),
             i = null != t && (0, l.A)(t.value, n) ? t.value : n;
-        return (v.set(e, { value: i, version: b }), i);
+        return (b.set(e, { value: i, version: v }), i);
     }
 }
 let W = new j(o.h, {
     CONNECTION_OPEN: function () {
         let e = x();
-        for (let e of v.keys()) null == g.A.getGuild(e) && v.delete(e);
+        for (let e of b.keys()) null == g.A.getGuild(e) && b.delete(e);
         return e;
     },
     CONNECTION_OPEN_SUPPLEMENTAL: x,
@@ -190,7 +190,7 @@ let W = new j(o.h, {
     GUILD_DELETE: function (e) {
         let { guild: t } = e,
             n = x();
-        return (v.delete(t.id), n);
+        return (b.delete(t.id), n);
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e,

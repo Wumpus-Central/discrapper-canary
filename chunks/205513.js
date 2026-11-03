@@ -111,8 +111,8 @@ class m extends r.PureComponent {
                 onValueRender: L,
                 renderMarker: y,
                 getAriaValueText: D,
-                barClassName: v,
-                grabberClassName: b,
+                barClassName: b,
+                grabberClassName: v,
                 grabberStyles: P = {},
                 markerPosition: M = 0,
                 tabIndex: U,
@@ -206,7 +206,7 @@ class m extends r.PureComponent {
                                 children: [
                                     (0, i.jsx)("div", { className: f.track, children: H }),
                                     (0, i.jsx)("div", {
-                                        className: s()(f.bar, v),
+                                        className: s()(f.bar, b),
                                         style: g,
                                         children: (0, i.jsx)("div", {
                                             className: f.barFill,
@@ -221,7 +221,7 @@ class m extends r.PureComponent {
                                             forceOpen: t || (n && this.context.keyboardModeEnabled),
                                             positionKey: V,
                                             children: (0, i.jsx)("div", {
-                                                className: s()(f.grabber, b),
+                                                className: s()(f.grabber, v),
                                                 style: { ...P, left: V },
                                                 onMouseDown: this.handleMouseDown,
                                                 ref: this.grabberRef,

@@ -4,8 +4,8 @@ var l = t(477900),
     a = t(503698),
     s = t.n(a),
     r = t(689175),
-    c = t(66834),
-    o = t(379257),
+    o = t(66834),
+    c = t(379257),
     u = t(306537),
     d = t(323073),
     h = t(506164),
@@ -15,13 +15,13 @@ function m(e) {
     let { guild: n, channelId: t } = e,
         { modalType: a, emphasiseDisagree: s, ...r } = (0, d.k$)(n),
         A = i.useCallback(() => {
-            null != n && c.A.nsfwReturnToSafety(n.id);
+            null != n && o.A.nsfwReturnToSafety(n.id);
         }, [n]),
         m = i.useCallback(() => {
-            null != n && c.A.nsfwAgree(n.id);
+            null != n && o.A.nsfwAgree(n.id);
         }, [n]),
         p = i.useCallback(() => {
-            o.A.showAgeVerificationGetStartedModal({ entryPoint: u.q1.NSFW_GUILD });
+            c.A.showAgeVerificationGetStartedModal({ entryPoint: u.q1.NSFW_GUILD });
         }, []),
         j = {
             ...r,
@@ -47,14 +47,14 @@ function m(e) {
 }
 let p = function (e) {
     let { guild: n, channelId: t, className: a } = e,
-        c = i.useRef(null);
+        o = i.useRef(null);
     return (
         i.useEffect(() => {
-            let { current: e } = c;
+            let { current: e } = o;
             e?.scrollToBottom();
         }, []),
         (0, l.jsx)(r.Ch, {
-            ref: c,
+            ref: o,
             className: A.X,
             children: (0, l.jsx)("div", {
                 className: s()(a, A.i),

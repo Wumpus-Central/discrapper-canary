@@ -1,1 +1,1 @@
-t.exports = { Kk: "icon_dbd216" };
+_.exports = { Kk: "icon_dbd216" };

@@ -53,21 +53,21 @@ function C(e) {
     let { onSetupError: t, elementsAppearanceOptions: n = {} } = e,
         [r, i] = l.useState(void 0),
         [s, m] = l.useState(null),
-        [C, E] = l.useState(!0),
-        [y, _] = l.useState([]),
+        [C, y] = l.useState(!0),
+        [E, _] = l.useState([]),
         { createSetupIntentDeduped: g } = (0, d.x)(),
         [I, S] = l.useState([]),
-        { customPaymentMethods: A, customPaymentMethodIdsToSourceTypes: x } = l.useMemo(
+        { customPaymentMethods: A, customPaymentMethodIdsToSourceTypes: P } = l.useMemo(
             () => ({
-                customPaymentMethods: (0, o.Dd)(y),
-                customPaymentMethodIdsToSourceTypes: y.reduce(
+                customPaymentMethods: (0, o.Dd)(E),
+                customPaymentMethodIdsToSourceTypes: E.reduce(
                     (e, t) => ((e[t.custom_payment_method_id] = t.payment_source_type), e),
                     {},
                 ),
             }),
-            [y],
+            [E],
         ),
-        P = l.useCallback(async () => {
+        x = l.useCallback(async () => {
             try {
                 let e,
                     t,
@@ -88,10 +88,10 @@ function C(e) {
                     h.error("there was an error on setup for Payment Elements: ", e),
                     (0, u.pM)(e, { tags: { source: "payment_elements" } }));
             }
-            E(!1);
+            y(!1);
         }, [t, g]);
     (0, a.Ay)(() => {
-        P();
+        x();
     });
     let { elementsAppearance: v, elementsAppearanceOptions: R } = p(n),
         M = (0, c.PU)(),
@@ -111,7 +111,7 @@ function C(e) {
         L = {
             setupError: s,
             customPaymentMethods: A,
-            customPaymentMethodIdsToSourceTypes: x,
+            customPaymentMethodIdsToSourceTypes: P,
             paymentMethodOrder: I,
             elementsAppearanceOptions: R,
         };

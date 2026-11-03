@@ -37,8 +37,8 @@ var g = n(612200),
     L = n(202384),
     y = n(51758),
     D = n(473529),
-    v = n(707592),
-    b = n(698441),
+    b = n(707592),
+    v = n(698441),
     P = n(610101),
     M = n(224536),
     U = n(21599),
@@ -117,7 +117,7 @@ function e_(e, t) {
                           null != t &&
                               (0, R.B)(() => {
                                   let e = { guildScheduledEventId: t.id };
-                                  (null != n && (e.welcomeModalChannelId = n), (0, v.Ul)(t, e));
+                                  (null != n && (e.welcomeModalChannelId = n), (0, b.Ul)(t, e));
                               });
                       })(t)
                     : !(function (e) {
@@ -229,7 +229,7 @@ function e_(e, t) {
 }
 async function eE(e) {
     let { guild_id: t, channel_id: n } = e;
-    (0, b.Fd)(e) && null != n ? e_(n) : await en.A.transitionToGuildSync(t);
+    (0, v.Fd)(e) && null != n ? e_(n) : await en.A.transitionToGuildSync(t);
 }
 function eA(e, t) {
     let {
@@ -411,7 +411,7 @@ let ef = {
                   async (e) => {
                       (null != I && this.clearReceivedInstallationIdForInviteCode(A),
                           f.h.dispatch({ type: "INVITE_ACCEPT_SUCCESS", invite: e.body, code: o }));
-                      let t = i ?? b.Ay.getGuildScheduledEvent(s),
+                      let t = i ?? v.Ay.getGuildScheduledEvent(s),
                           c = {
                               ...e.body,
                               guild_scheduled_event: t,

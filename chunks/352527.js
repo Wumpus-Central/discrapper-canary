@@ -9,7 +9,7 @@ let o = function (e) {
     return {
         onShareClick: a.useCallback(
             async (s) => {
-                let { clips: a, onShareComplete: n, messageReference: o, povTargetInformation: u, onShared: d } = s;
+                let { clips: a, onShareComplete: n, messageReference: o, povTargetInformation: d, onShared: u } = s;
                 if (0 === a.length) return;
                 let c = (0, i.t)(e);
                 (0, r.H1)(a.map((e) => e.id));
@@ -18,8 +18,8 @@ let o = function (e) {
                         channelId: c ? e : void 0,
                         analyticsLocations: t,
                         messageReference: o,
-                        povTargetInformation: u,
-                        onShared: d,
+                        povTargetInformation: d,
+                        onShared: u,
                     });
                 } catch (e) {
                 } finally {

@@ -13,16 +13,16 @@ var i = n(477900),
     m = n(999926),
     A = n(625494),
     f = n(220144),
-    x = n(175203),
-    g = n(306852),
+    g = n(175203),
+    x = n(306852),
     C = n(947580),
-    j = n(163432),
-    y = n(652215),
+    y = n(163432),
+    j = n(652215),
     I = n(806931),
     N = n(804273),
     v = n(517689);
 let E = 16 / 9,
-    b = 8 + j.Vp;
+    b = 8 + y.Vp;
 function S(e) {
     let t,
         {
@@ -54,7 +54,7 @@ function S(e) {
         Q = D <= 2 * b + 144,
         J = M && !Q,
         ee = (0, d.Ay)(J),
-        et = V === y.DUB.MINIMUM || V === y.DUB.NORMAL,
+        et = V === j.DUB.MINIMUM || V === j.DUB.NORMAL,
         en = !Q && (!et || X),
         ei = (0, f.A)(en, 100),
         el = ((0, d.Ay)(L.id) ?? L.id) !== L.id,
@@ -86,9 +86,9 @@ function S(e) {
                 delay: ed || !J ? 0 : 100,
                 config: { ...r.config.stiff, clamp: !0 },
                 onStart: () => K(!0),
-                onChange: () => A._.dispatch(y.jej.REMEASURE_TARGET),
+                onChange: () => A._.dispatch(j.jej.REMEASURE_TARGET),
                 onRest: () => {
-                    (K(!1), A._.dispatch(y.jej.REMEASURE_TARGET));
+                    (K(!1), A._.dispatch(j.jej.REMEASURE_TARGET));
                 },
             },
             ep,
@@ -98,8 +98,8 @@ function S(e) {
             { value: eo, config: { ...r.config.stiff, clamp: !0 } },
             (ee === J && eA.value.idle && !ei) || el || eh ? "animate-never" : "animate-always",
         ),
-        ex = (0, o.z)({ value: t, config: { ...r.config.stiff, clamp: !0 } }, ep),
-        eg = (0, c.p)(
+        eg = (0, o.z)({ value: t, config: { ...r.config.stiff, clamp: !0 } }, ep),
+        ex = (0, c.p)(
             L,
             {
                 keys: (e) => e?.id,
@@ -114,8 +114,8 @@ function S(e) {
         eC = l.useCallback((e) => {
             (z(e), Y(!1));
         }, []),
-        ej = J ? [] : (0, C.Cf)(T, L, B),
-        { visibleParticipants: ey, participantTileWidth: eI } = (0, j.i4)(U, _);
+        ey = J ? [] : (0, C.Cf)(T, L, B),
+        { visibleParticipants: ej, participantTileWidth: eI } = (0, y.i4)(U, _);
     return (0, i.jsxs)("div", {
         className: s()(v.zr, N.tR, w),
         children: [
@@ -133,7 +133,7 @@ function S(e) {
                                 children: (0, i.jsx)("div", {
                                     className: N.xS,
                                     style: { aspectRatio: es },
-                                    children: eg((e, t, l) => {
+                                    children: ex((e, t, l) => {
                                         let { key: s } = l;
                                         return null != t
                                             ? (0, i.jsx)(
@@ -141,7 +141,7 @@ function S(e) {
                                                   {
                                                       className: N.qX,
                                                       style: e,
-                                                      children: (0, i.jsx)(x.Ay, {
+                                                      children: (0, i.jsx)(g.Ay, {
                                                           focused: !0,
                                                           noBorder: eo >= U || er >= D,
                                                           channel: P,
@@ -167,7 +167,7 @@ function S(e) {
                             en
                                 ? (0, i.jsx)(r.animated.div, {
                                       className: s()(v.$l, { [v.N7]: G }),
-                                      style: { bottom: ex.value },
+                                      style: { bottom: eg.value },
                                       children: (0, i.jsx)(h.A, {
                                           channelId: P.id,
                                           isParticipantsOpen: M,
@@ -184,12 +184,12 @@ function S(e) {
                             opacity: em.value,
                             visibility: em.value.to((e) => (0 === e ? "hidden" : "visible")),
                         },
-                        children: (0, i.jsx)(j.Ay, {
+                        children: (0, i.jsx)(y.Ay, {
                             channel: P,
                             onClick: n,
                             onContextMenu: a,
                             onDoubleClick: S,
-                            participants: ey,
+                            participants: ej,
                             participantTileWidth: eI,
                             selectedParticipantId: L.id,
                             inCall: O,
@@ -199,13 +199,13 @@ function S(e) {
                     }),
                 ],
             }),
-            ej.length > 0
-                ? (0, i.jsx)(g.A, {
+            ey.length > 0
+                ? (0, i.jsx)(x.A, {
                       onContextMenuParticipant: a,
                       width: U,
                       height: D,
                       channel: P,
-                      participants: ej,
+                      participants: ey,
                       onSelectParticipant: n,
                   })
                 : null,

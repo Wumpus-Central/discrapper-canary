@@ -42,8 +42,8 @@ let T = {},
         [f.orn.ONLY_MENTIONS]: { ...L, message_notifications: f.orn.ONLY_MENTIONS },
     },
     D = {},
-    v = {},
-    b = new Set(),
+    b = {},
+    v = new Set(),
     P = new Set(),
     M = {},
     U = {};
@@ -60,10 +60,10 @@ function w(e, t) {
         (T[e] = l),
         (D[e] = K(T[e])));
     let o = r().filter(l.channel_overrides, (e) => a.Lt(e.flags ?? 0, m.vv.OPT_IN_ENABLED));
-    ((v[e] = new Set(o.map((e) => e.channel_id))),
+    ((b[e] = new Set(o.map((e) => e.channel_id))),
         (function (e) {
             if (null == e) return;
-            let t = new Set(v[e]),
+            let t = new Set(b[e]),
                 n = M[e] ?? {};
             for (let e in n) {
                 let i = n[e];
@@ -151,7 +151,7 @@ class z extends s.Ay.PersistedStore {
                 ((S = e.useNewNotifications ?? !1),
                 "userGuildSettings" in e &&
                     ((T = e.userGuildSettings),
-                    (v = r().mapValues(e.optedInChannelsByGuild ?? {}, (e) => new Set(e))),
+                    (b = r().mapValues(e.optedInChannelsByGuild ?? {}, (e) => new Set(e))),
                     r().forEach(T, (e, t) => {
                         D[t] = K(e);
                     }))));
@@ -206,7 +206,7 @@ class z extends s.Ay.PersistedStore {
         return null != n ? n.mute_config : null;
     }
     getMutedChannels(e) {
-        return D[e] ?? b;
+        return D[e] ?? v;
     }
     isChannelMuted(e, t) {
         let n = E.A.getChannel(t);
@@ -263,7 +263,7 @@ class z extends s.Ay.PersistedStore {
         return T[e]?.hide_muted_channels === !0;
     }
     getAllSettings() {
-        return { userGuildSettings: T, mutedChannels: D, optedInChannelsByGuild: v };
+        return { userGuildSettings: T, mutedChannels: D, optedInChannelsByGuild: b };
     }
     getChannelIdFlags(e, t) {
         let n = this.getChannelOverrides(e)[t];
@@ -306,7 +306,7 @@ class z extends s.Ay.PersistedStore {
         return a.Lt(i, m.vv.OPT_IN_ENABLED);
     }
     getOptedInChannels(e) {
-        return d.A.isFullServerPreview(e) ? (d.A.getViewingChannels(e) ?? P) : (v[e] ?? P);
+        return d.A.isFullServerPreview(e) ? (d.A.getViewingChannels(e) ?? P) : (b[e] ?? P);
     }
     getOptedInChannelsWithPendingUpdates(e) {
         return U[e];
@@ -396,7 +396,7 @@ let X = new z(l.h, {
         (Y(e.notificationSettings),
             O.reset(),
             R.reset(),
-            e.userGuildSettings.partial || ((T = {}), (D = {}), (v = {})));
+            e.userGuildSettings.partial || ((T = {}), (D = {}), (b = {})));
         let t = new Set();
         for (let n in (e.userGuildSettings.entries.forEach((e) => {
             ("channel_overrides" in e || (e.channel_overrides = {}),
@@ -411,7 +411,7 @@ let X = new z(l.h, {
             0 !== e.userGuildSettings.length &&
             ((T = {}),
             (D = {}),
-            (v = {}),
+            (b = {}),
             e.userGuildSettings.forEach((e) => {
                 let t = e.guild_id;
                 T[t] = e;
@@ -421,7 +421,7 @@ let X = new z(l.h, {
                     let r = e.channel_overrides[t];
                     ((0, o.tG)(r) && n.add(t), a.Lt(r.flags ?? 0, m.vv.OPT_IN_ENABLED) && i.add(t));
                 }
-                ((D[t] = n), (v[t] = i));
+                ((D[t] = n), (b[t] = i));
             }));
     },
     OVERLAY_INITIALIZE: function (e) {
@@ -429,12 +429,12 @@ let X = new z(l.h, {
             { userGuildSettings: n, mutedChannels: i, optedInChannelsByGuild: r } = t;
         ((T = { ...n }),
             (D = {}),
-            (v = {}),
+            (b = {}),
             _.default.keys(i).forEach((e) => {
                 D[e] = new Set(i[e]);
             }),
             _.default.keys(r).forEach((e) => {
-                v[e] = new Set(r[e]);
+                b[e] = new Set(r[e]);
             }));
     },
     GUILD_CREATE: $,

@@ -1,4 +1,4 @@
-l.d(t, { mf: () => N, bv: () => y });
+l.d(t, { mf: () => N, bv: () => A });
 var n = l(477900),
     a = l(582128),
     s = l(17928),
@@ -24,7 +24,7 @@ var S = l(628049),
     I = l(568065),
     h = l(135570),
     C = l(105292);
-let [A, y] = (0, m.A)();
+let [y, A] = (0, m.A)();
 function j(e) {
     return e?.plans[Math.ceil((e?.plans.length - 1) / 2)]?.id;
 }
@@ -34,7 +34,7 @@ function N(e) {
         {
             guildId: m,
             initialGameServerInstance: v,
-            initialGameServerGame: y,
+            initialGameServerGame: A,
             stepConfig: N = S.ZN,
             children: P,
             onClose: G,
@@ -43,24 +43,24 @@ function N(e) {
     a.useEffect(() => {
         ((0, b.z9)(m), (0, d.Xd)(m, !0), null == v && (0, b.cq)(m));
     }, [m, v]);
-    let x = (0, s.bG)([g.A], () => g.A.getStateForGuild(m)),
-        w = (0, s.bG)([c.A], () => c.A.getGuild(m)),
+    let w = (0, s.bG)([g.A], () => g.A.getStateForGuild(m)),
+        x = (0, s.bG)([c.A], () => c.A.getGuild(m)),
         { analyticsLocations: O } = (0, u.Ay)(M),
         [E, q] = a.useState(N.initialStep ?? Object.keys(N.steps)[0]),
         { available: J } = (0, o.A)(m),
         L = N.steps[E],
-        [R, T] = a.useState(y?.id);
+        [R, T] = a.useState(A?.id);
     a.useEffect(() => {
         if (null != R || v?.entitlementId == null) return;
-        let e = x?.entitlements?.[v.entitlementId]?.sku?.product_id;
+        let e = w?.entitlements?.[v.entitlementId]?.sku?.product_id;
         null != e && T(e);
-    }, [x?.entitlements, v?.entitlementId, R]);
+    }, [w?.entitlements, v?.entitlementId, R]);
     let [_, z] = a.useState(void 0),
         B = a.useMemo(() => {
-            if (null != R) return Object.values(x?.catalog ?? {}).find((e) => e.id === R);
-        }, [x?.catalog, R]),
+            if (null != R) return Object.values(w?.catalog ?? {}).find((e) => e.id === R);
+        }, [w?.catalog, R]),
         [H, X] = a.useState(v),
-        [F, K] = a.useState(j(y) ?? v?.planId),
+        [F, K] = a.useState(j(A) ?? v?.planId),
         W =
             ((t = (0, s.bG)([g.A], () => g.A.getStateForGuild(m)?.entitlements)),
             (l = B?.plans.find((e) => e.id === F)?.cost ?? 0),
@@ -68,10 +68,10 @@ function N(e) {
         Y = a.useCallback(
             (e) => {
                 X(e);
-                let t = x?.entitlements?.[e?.entitlementId ?? ""]?.sku?.product_id;
+                let t = w?.entitlements?.[e?.entitlementId ?? ""]?.sku?.product_id;
                 (null != t && T(t), K(e?.planId), U(e?.name ?? ""), ee(e?.regionId ?? ""));
             },
-            [x?.entitlements],
+            [w?.entitlements],
         ),
         Q = a.useCallback(
             (e, t) => {
@@ -104,13 +104,13 @@ function N(e) {
                             el(!1);
                         });
                 }
-                null != w &&
+                null != x &&
                     (J < W
                         ? (0, i.g)({
                               analyticsLocation: M,
                               numberOfBoostsToAdd: W - J,
                               analyticsLocations: O,
-                              guild: w,
+                              guild: x,
                               intent: I.Pn.PERK,
                               onLoading: (e) => {
                                   el(e);
@@ -124,13 +124,13 @@ function N(e) {
                           })
                         : n());
             },
-            [M, O, J, w, G, W],
+            [M, O, J, x, G, W],
         ),
         es = a.useCallback(() => {
-            if ((z(void 0), null == w || null == B || "" === D || null == F || "" === $)) return;
+            if ((z(void 0), null == x || null == B || "" === D || null == F || "" === $)) return;
             let e = B.plans.find((e) => e.id === F);
             ((0, f.Jh)({
-                guildId: w.id,
+                guildId: x.id,
                 productId: B.id,
                 productName: B.name,
                 skuId: F,
@@ -140,14 +140,14 @@ function N(e) {
                 region: $,
                 type: "create",
             }),
-                ea({ doRequest: () => (0, b.jL)(w.id, F, D, $), onSuccess: () => k(w.id, B, "created") }));
-        }, [w, B, D, $, F, ea]),
+                ea({ doRequest: () => (0, b.jL)(x.id, F, D, $), onSuccess: () => k(x.id, B, "created") }));
+        }, [x, B, D, $, F, ea]),
         eu = a.useCallback(
             (e) => {
-                if ((z(void 0), null == w || null == B || "" === D || null == F)) return;
+                if ((z(void 0), null == x || null == B || "" === D || null == F)) return;
                 let t = B.plans.find((e) => e.id === F);
                 ((0, f.Jh)({
-                    guildId: w.id,
+                    guildId: x.id,
                     productId: B.id,
                     productName: B.name,
                     skuId: F,
@@ -158,13 +158,13 @@ function N(e) {
                     type: "edit",
                 }),
                     ea({
-                        doRequest: () => (0, b.pj)(w.id, e.entitlementId, F, D),
+                        doRequest: () => (0, b.pj)(x.id, e.entitlementId, F, D),
                         onSuccess: () => {
-                            e.planId !== F && k(w.id, B, "updated");
+                            e.planId !== F && k(x.id, B, "updated");
                         },
                     }));
             },
-            [w, B, D, F, W, ea],
+            [x, B, D, F, W, ea],
         ),
         ei = a.useCallback(
             (e) => {
@@ -190,15 +190,15 @@ function N(e) {
         er = a.useMemo(
             () =>
                 new Set(
-                    Object.values(x?.catalog ?? {})
+                    Object.values(w?.catalog ?? {})
                         .map((e) => e.provider)
                         .filter(p.Vq),
                 ),
-            [x?.catalog],
+            [w?.catalog],
         ),
-        ec = x?.catalog,
+        ec = w?.catalog,
         em = a.useMemo(() => ec ?? {}, [ec]),
-        ep = a.useMemo(() => Object.values(x?.instances ?? {}), [x]),
+        ep = a.useMemo(() => Object.values(w?.instances ?? {}), [w]),
         eb = er.size > 0 ? Array.from(er)[0] : null,
         ef = a.useMemo(
             () => ({
@@ -229,5 +229,5 @@ function N(e) {
             }),
             [m, E, L, et, ed, eo, em, ep, B, Q, H, Y, D, $, W, F, V, J, _, eb],
         );
-    return (0, n.jsx)(A.Provider, { value: ef, children: P });
+    return (0, n.jsx)(y.Provider, { value: ef, children: P });
 }

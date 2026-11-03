@@ -5,8 +5,8 @@ var a = n(877624),
     s = n(554146),
     i = n(131607),
     r = n(549996),
-    c = n(613556),
-    o = n(814124),
+    o = n(613556),
+    c = n(814124),
     d = n(49999);
 function u(e) {
     let { tab: t, handleTransition: n } = e,
@@ -15,6 +15,6 @@ function u(e) {
         g = u?.promotionId,
         [E, h] = (0, i.Cc)(null != m && null != g ? s.M.PREMIUM_SHOP_NAGBAR_NOTICE : null, g ?? "", d.m.NOTICE_BAR, !0);
     return null != u && null != m && null != E
-        ? (0, l.jsx)(c.A, { shopNagbar: m, componentId: u.id, promotionId: u.promotionId, tab: t, onDismiss: h })
-        : (0, l.jsx)(o.A, { tab: t, handleTransition: n });
+        ? (0, l.jsx)(o.A, { shopNagbar: m, componentId: u.id, promotionId: u.promotionId, tab: t, onDismiss: h })
+        : (0, l.jsx)(c.A, { tab: t, handleTransition: n });
 }

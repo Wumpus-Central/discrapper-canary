@@ -30,8 +30,8 @@ var R = n(604594),
     L = n(4043),
     y = n(287809),
     D = n(652215);
-let v = 15 * f.A.Millis.MINUTE,
-    b = f.A.Millis.SECOND,
+let b = 15 * f.A.Millis.MINUTE,
+    v = f.A.Millis.SECOND,
     P = "LAST_CLIENT_HEARTBEAT_SESSION",
     M = "user",
     U = new d.A("SessionHeartbeatScheduler"),
@@ -136,7 +136,7 @@ function z() {
     ($()
         ? (function () {
               if (null != w) return;
-              let e = 0 === k ? 0 : v - (u() - k);
+              let e = 0 === k ? 0 : b - (u() - k);
               (I.A.addBreadcrumb({
                   message: `Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ${e / 1e3} seconds. Scheduling Heartbeat`,
               }),
@@ -148,7 +148,7 @@ function z() {
                                   type: "interval",
                                   id: setInterval(() => {
                                       Y();
-                                  }, v),
+                                  }, b),
                               }));
                       }, e),
                   }));
@@ -205,9 +205,9 @@ function ei() {
                 id: setInterval(() => {
                     let e;
                     !(null != j && null != (e = y.default.getCurrentUser()) && (e.isStaff() || (0, L.r)(e.id, 0.02))) ||
-                        u() - k <= v ||
+                        u() - k <= b ||
                         h.default.track(D.HAw.CLIENT_HEARTBEAT_SKIPPED, { client_heartbeat_version: 31 });
-                }, v),
+                }, b),
                 type: "interval",
             }),
         a.Ay.initialized.then(en));
@@ -228,7 +228,7 @@ async function er() {
             (t.lastUsedTimestamp = a));
         var l = t;
         let e = u();
-        if (!(e - x < b))
+        if (!(e - x < v))
             try {
                 (s.w.set(P, l), (x = e));
             } catch (e) {

@@ -78,8 +78,8 @@ let D = new y(s.h, {
         i = i === L.B.BASIC ? L.B.PREMIUM : L.B.BASIC;
     },
 });
-var v = n(104142);
-function b(e) {
+var b = n(104142);
+function v(e) {
     let t = new AbortController(),
         n = (0, E.throttle)((n) => {
             g.Ay.getVoiceChannelId() !== e && t.abort();
@@ -121,7 +121,7 @@ function K(e, t, n, i) {
     ((0, x.qP)(t, e),
         (function (e, t, n, i, r) {
             let a = null != t.emojiId ? f.Ay.getCustomEmojiById(t.emojiId) : null,
-                { abortController: s, onRequestProgress: l } = b(e),
+                { abortController: s, onRequestProgress: l } = v(e),
                 o = { sound_id: t.soundId, emoji_id: t.emojiId, emoji_name: t.emojiName ?? a?.name };
             ("0" !== t.guildId && (o.source_guild_id = t.guildId),
                 A.Bo.post({
@@ -140,7 +140,7 @@ function K(e, t, n, i) {
 function $(e, t, n) {
     ((0, x.qP)(t, e),
         (function (e, t, n, i) {
-            let { abortController: r, onRequestProgress: a } = b(e),
+            let { abortController: r, onRequestProgress: a } = v(e),
                 s = { sound_id: t.soundId, source_guild_id: t.guildId };
             (A.Bo.post({
                 url: N.Rsh.SEND_SOUNDBOARD_ECHO(e),
@@ -169,9 +169,9 @@ async function z(e) {
         ((s = n.id),
             (0, x.qP)(s, a),
             (function (e, t, n) {
-                let { abortController: i, onRequestProgress: r } = b(e),
+                let { abortController: i, onRequestProgress: r } = v(e),
                     a = D.getState().animationType ?? L.B.BASIC,
-                    s = { animation_type: a, animation_id: (0, v.oS)(a, v.m4) };
+                    s = { animation_type: a, animation_id: (0, b.oS)(a, b.m4) };
                 (A.Bo.post({
                     url: N.Rsh.CUSTOM_CALL_SOUNDS(e),
                     body: s,

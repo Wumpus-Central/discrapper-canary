@@ -80,7 +80,7 @@ function y(e) {
     };
 }
 let D = (0, l.v)((e) => ({}));
-function v(e, t) {
+function b(e, t) {
     let n = D.getState()[e];
     return (
         null == n && (n = y(1)),
@@ -91,15 +91,15 @@ function v(e, t) {
         n
     );
 }
-function b(e) {
+function v(e) {
     return D.getState()[e];
 }
 function P(e) {
-    let t = b(e);
-    return (null == t && v(e, (t = y(1))), t);
+    let t = v(e);
+    return (null == t && b(e, (t = y(1))), t);
 }
 async function M(e) {
-    (await (0, d.yy)(200), null != b(e) && v(e, { requestState: 3, abortController: null, lastUpdated: Date.now() }));
+    (await (0, d.yy)(200), null != v(e) && b(e, { requestState: 3, abortController: null, lastUpdated: Date.now() }));
 }
 function U(e) {
     var t;
@@ -224,9 +224,9 @@ async function G(e) {
         p = r.selectedSort ?? f.mF.ORDER_BY_GUILD_JOINED_AT_DESC;
     if (((n = P(o)), a()(n.query, I) && (0, s.isEqual)(c, d.cursor))) return;
     let m =
-        ((i = b(o)),
+        ((i = v(o)),
         i?.requestState === 2 && i.abortController?.abort(),
-        v(o, {
+        b(o, {
             requestState: 2,
             abortController: new AbortController(),
             lastUpdated: Date.now(),
@@ -241,7 +241,7 @@ async function G(e) {
         await C(e, m.query, { signal: m.abortController?.signal ?? void 0 });
     } catch (e) {
         if (-1 === e.code) return;
-        null != b(o) && v(o, { requestState: 0, abortController: null, lastUpdated: Date.now() });
+        null != v(o) && b(o, { requestState: 0, abortController: null, lastUpdated: Date.now() });
         return;
     }
     await M(o);
@@ -290,7 +290,7 @@ class F extends c.A {
     }
     handleGuildMemberSearchStillIndexing(e) {
         let { guildId: t } = e;
-        v(L(t), { requestState: 4, abortController: null, lastUpdated: Date.now() });
+        b(L(t), { requestState: 4, abortController: null, lastUpdated: Date.now() });
     }
     handleNewMemberTimestampRefresh(e) {
         let { guildId: t } = e;

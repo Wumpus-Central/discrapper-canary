@@ -1,4 +1,4 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => _ });
 var i = n(477900),
     r = n(582128),
     l = n(503698),
@@ -102,7 +102,7 @@ class y {
     }
 }
 let T = r.createContext(new y((0, E.b)()));
-function x(e) {
+function _(e) {
     let { observe: t = !0, className: n, style: l, children: a } = e,
         o = r.useContext(T),
         u = (0, c.bG)([A.A], () => A.A.hasRenderDebugMode(p.x7.ClickZones)),

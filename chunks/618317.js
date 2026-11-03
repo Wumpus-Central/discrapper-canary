@@ -13,9 +13,9 @@ var r = n(477900),
     v = n(139136),
     p = n(395744),
     g = n(623373),
-    x = n(561769),
-    m = n(846957),
-    A = n(929283),
+    m = n(561769),
+    A = n(846957),
+    x = n(929283),
     _ = n(448391),
     h = n(761365),
     E = n(844266);
@@ -54,13 +54,13 @@ function k(e) {
         case a.R.PROFILE_FRAME:
             return (0, r.jsx)("div", { className: E.pI, children: (0, r.jsx)(p.A, { frame: d, filterLayer: C }) });
         case a.R.AVATAR_DECORATION:
-            return (0, r.jsx)(A.i, { item: d, user: s, isHighlighted: i, avatarSize: u._3.SIZE_120 });
+            return (0, r.jsx)(x.i, { item: d, user: s, isHighlighted: i, avatarSize: u._3.SIZE_120 });
         case a.R.NAMEPLATE:
             return (0, r.jsx)(h.A, { nameplate: d, user: s, isHighlighted: i });
         case a.R.BUNDLE:
             return (0, r.jsx)(_.X, { product: n, user: s, isHighlighted: i });
         case a.R.EXTERNAL_SKU:
-            return (0, r.jsx)(m.B, { product: n, animationState: i ? "on" : "off" });
+            return (0, r.jsx)(A.B, { product: n, animationState: i ? "on" : "off" });
         default:
             return null;
     }
@@ -77,7 +77,7 @@ function R(e) {
 }
 let y = function (e) {
     let { skuId: t, isCardHovered: n, overrideVariantIndex: i } = e,
-        s = (0, x.Vm)(t),
+        s = (0, m.Vm)(t),
         a = (0, I.Q)(s);
     if (null == s) return null;
     let l = (0, g.rb)(s, i ?? a);

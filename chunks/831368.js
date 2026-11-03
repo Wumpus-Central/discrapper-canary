@@ -1,12 +1,12 @@
-n.d(e, { I: () => l });
+n.d(t, { I: () => l });
 var s = n(582128),
     i = n(203879);
-function l(t, e) {
-    let [n, l] = s.useState(e),
-        a = s.useCallback((t) => {
-            t.isIntersecting && l(!0);
+function l(e, t) {
+    let [n, l] = s.useState(t),
+        a = s.useCallback((e) => {
+            e.isIntersecting && l(!0);
         }, []),
-        r = s.useMemo(() => ({ root: t ?? null, threshold: 0, rootMargin: "900px 900px 900px 900px" }), [t]),
-        o = s.useMemo(() => !n && null != t, [n, t]);
+        r = s.useMemo(() => ({ root: e ?? null, threshold: 0, rootMargin: "900px 900px 900px 900px" }), [e]),
+        o = s.useMemo(() => !n && null != e, [n, e]);
     return { visibilityElementRef: (0, i.B)(a, r, o), almostVisibleInViewport: n };
 }

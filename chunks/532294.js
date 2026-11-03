@@ -100,8 +100,8 @@ var S = n(761821),
     L = n(32584),
     y = n(967198),
     D = n(531685),
-    v = n(672396);
-let b = Object.freeze({
+    b = n(672396);
+let v = Object.freeze({
         selectedGuildId: null,
         selectedChannelId: null,
         displayUserMode: _.f5z.ALWAYS,
@@ -112,7 +112,7 @@ let b = Object.freeze({
         disableExternalLinkAlert: !1,
         disablePinTutorial: !1,
         disableClickableRegions: !1,
-        textWidgetOpacity: v.Li.LOWER,
+        textWidgetOpacity: b.Li.LOWER,
         showGameInviteNotification: !0,
         customInviteMessage: void 0,
     }),
@@ -127,7 +127,7 @@ let b = Object.freeze({
     B = !1;
 function V(e) {
     let t = M[e];
-    return (null == t && (t = M[e] = { ...b }), t);
+    return (null == t && (t = M[e] = { ...v }), t);
 }
 __OVERLAY__ &&
     (function (e) {
@@ -268,7 +268,7 @@ __OVERLAY__ &&
                 I.log("Overlay error handlers and console interception set up"));
         }
     })((0, u.getRPCAuthToken)());
-let H = { ...b },
+let H = { ...v },
     j = new Set([
         "AUDIO_SET_INPUT_DEVICE",
         "AUDIO_SET_INPUT_VOLUME",
@@ -458,7 +458,7 @@ class X extends i.Ay.PersistedStore {
     static migrations = [
         () => {
             let { pinnedWidgets: e, positions: t, sizes: n, v: i, ...a } = { ...r.w.get("OverlayStore") };
-            return { ...b, ...(5 === i ? a : null) };
+            return { ...v, ...(5 === i ? a : null) };
         },
         (e) => {
             let t = C.default.getId();
@@ -470,7 +470,7 @@ class X extends i.Ay.PersistedStore {
             (this.waitFor(C.default, O.A, R.Ay, L.A, y.A, D.A),
             this.syncWith([C.default], () => {
                 let e = C.default.getId();
-                H = null != e ? V(e) : { ...b };
+                H = null != e ? V(e) : { ...v };
             }),
             __OVERLAY__ && w.delete((0, u.getPID)()),
             null != e)
@@ -478,9 +478,9 @@ class X extends i.Ay.PersistedStore {
             M = e;
             let t = C.default.getId();
             null != t &&
-                (null == (H = V(t)).textChatNotifications && (H.textChatNotifications = b.textChatNotifications),
-                null == H.textWidgetOpacity && (H.textWidgetOpacity = b.textWidgetOpacity),
-                null == H.disableClickableRegions && (H.disableClickableRegions = b.disableClickableRegions));
+                (null == (H = V(t)).textChatNotifications && (H.textChatNotifications = v.textChatNotifications),
+                null == H.textWidgetOpacity && (H.textWidgetOpacity = v.textWidgetOpacity),
+                null == H.disableClickableRegions && (H.disableClickableRegions = v.disableClickableRegions));
         }
     }
     getState() {

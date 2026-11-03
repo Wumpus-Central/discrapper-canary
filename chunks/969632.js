@@ -1,5 +1,5 @@
 n.d(t, {
-    $m: () => b,
+    $m: () => v,
     G8: () => y,
     Gh: () => N,
     I7: () => C,
@@ -9,7 +9,7 @@ n.d(t, {
     VD: () => L,
     Wn: () => O,
     YP: () => g,
-    aw: () => v,
+    aw: () => b,
 });
 var i = n(435558),
     r = n.n(i),
@@ -81,10 +81,10 @@ function D(e) {
             null != t ? (0, s.EJ)(n, t) : n);
     return T.intl.format(T.t.Vn97Ka, { username: i.nick, title: r });
 }
-function v(e) {
+function b(e) {
     return e.reduce((e, t) => e + (t.count_details?.vote ?? 0), 0);
 }
-function b(e, t, n) {
+function v(e, t, n) {
     let i,
         a,
         s,

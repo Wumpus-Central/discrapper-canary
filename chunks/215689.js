@@ -6,14 +6,14 @@ var i = n(582128),
     a = n(486020),
     o = n(338932),
     c = n(940622),
-    u = n(601255),
-    d = n(476324);
+    d = n(601255),
+    u = n(476324);
 let h = function (e) {
     let { user: t, guildId: n, size: h, avatarDecorationOverride: m, onlyAnimateOnHoverOrFocus: g = !1 } = e,
         [f, p] = i.useState(!1),
         { canAnimate: x } = (0, o.T)(f, g),
         E = (0, l.bG)([r.Ay], () => (null != n && null != t ? r.Ay.getMember(n, t.id) : null)),
-        A = (0, u.A)((0, s.lw)({ userValue: t?.avatarDecoration, guildValue: E?.avatarDecoration, guildId: n })),
+        A = (0, d.A)((0, s.lw)({ userValue: t?.avatarDecoration, guildValue: E?.avatarDecoration, guildId: n })),
         _ = (0, c.VU)(),
         j = i.useMemo(
             () =>
@@ -23,7 +23,7 @@ let h = function (e) {
             [_, m, A, x, h],
         );
     return {
-        avatarPlaceholderSrc: d,
+        avatarPlaceholderSrc: u,
         avatarDecorationSrc: j,
         isAvatarDecorationAnimating: x,
         eventHandlers: { onMouseEnter: i.useCallback(() => p(!0), []), onMouseLeave: i.useCallback(() => p(!1), []) },

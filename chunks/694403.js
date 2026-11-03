@@ -130,11 +130,11 @@ let R = {
             y = f.fullySanitized,
             D = L.trim();
         if (0 === R.trim().length || 0 === D.length) return u();
-        let v = O(o().unescapeUrl(s));
-        if (null == v || (0, d.F9)(l)) return u();
-        let b = { ...n, allowEscape: !1, parseInlineCodeChildContent: !0 },
+        let b = O(o().unescapeUrl(s));
+        if (null == b || (0, d.F9)(l)) return u();
+        let v = { ...n, allowEscape: !1, parseInlineCodeChildContent: !0 },
             P = { foundNestedMaskedLink: !1 },
-            M = { ...b, maskedLinkValidation: P },
+            M = { ...v, maskedLinkValidation: P },
             U = n.allowEmojiLinks ? p : I,
             w = [...U, ...m],
             G = [...T, ...g],
@@ -190,9 +190,9 @@ let R = {
             if (S(P) || null == N(e, [...w, _.D.EMOJI])) return u();
         }
         let H = r().pick(t.rules, U),
-            j = o().parserFor(H)(A.whitespaceSanitized, b),
+            j = o().parserFor(H)(A.whitespaceSanitized, v),
             W = f.whitespaceSanitized,
-            { target: Y } = v;
+            { target: Y } = b;
         return { content: j, target: Y, title: W };
     },
 };

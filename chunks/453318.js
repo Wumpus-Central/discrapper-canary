@@ -1,4 +1,4 @@
-(n.d(t, { iS: () => v, a3: () => b, X2: () => M }), n(321073));
+(n.d(t, { iS: () => b, a3: () => v, X2: () => M }), n(321073));
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -46,7 +46,7 @@ var C = n(601973),
     L = n(358983),
     y = n(470791);
 let D = { keys: ["label"] };
-function v(e) {
+function b(e) {
     let {
             children: t,
             isCollapsible: n = !1,
@@ -72,7 +72,7 @@ function v(e) {
         S = r.useRef(null),
         [C, R] = r.useState(null),
         [L, y] = r.useState(!1),
-        [v, b] = r.useState(""),
+        [b, v] = r.useState(""),
         [P, M] = r.useState(""),
         {
             options: U,
@@ -81,14 +81,14 @@ function v(e) {
             onQueryChange: x,
         } = (0, O.K)({ active: s ?? !0, options: d, renderOption: h }),
         k = r.useCallback((e, t) => {
-            (M(e), b(t ?? e));
+            (M(e), v(t ?? e));
         }, []);
     r.useEffect(() => {
-        x(v);
-    }, [x, v]);
-    let F = r.useCallback((e) => (null != p ? p(e, v) : (0, l.Ht)(e, v, m ?? D)), [v, p, m]),
+        x(b);
+    }, [x, b]);
+    let F = r.useCallback((e) => (null != p ? p(e, b) : (0, l.Ht)(e, b, m ?? D)), [b, p, m]),
         { flatOptions: B, groups: V } = r.useMemo(() => {
-            if ("" === v) return { flatOptions: U, groups: w };
+            if ("" === b) return { flatOptions: U, groups: w };
             if (0 === w.length) return { flatOptions: F(U), groups: [] };
             let e = [],
                 t = [],
@@ -98,7 +98,7 @@ function v(e) {
                 ((n += i.count), 0 !== r.length && (e.push(...r), t.push({ label: i.label, count: r.length })));
             }
             return { flatOptions: e, groups: t };
-        }, [U, w, v, F]),
+        }, [U, w, b, F]),
         H = r.useRef(void 0),
         j = r.useMemo(
             () =>
@@ -165,7 +165,7 @@ function v(e) {
         children: t,
     });
 }
-function b(e) {
+function v(e) {
     let { ref: t, ...n } = e,
         { fieldProps: a, props: s } = (0, _.n)(n),
         l = (0, c.r)(d.A.modules.select.MAX_WIDTH),
@@ -193,8 +193,8 @@ function P(e) {
             wrapTags: O,
             ref: D,
         } = e,
-        v = r.useRef(null),
         b = r.useRef(null),
+        v = r.useRef(null),
         P = r.useRef(null),
         M = r.useContext(E._),
         { i18n: U } = r.useContext(f.VO),
@@ -229,14 +229,14 @@ function P(e) {
         el = es && !0 !== l,
         eo = null != w ? (0, R.ZN)(j, w) : void 0,
         ed = r.useCallback(() => {
-            K || Q?.((e) => (e || b.current?.focus(), !e));
+            K || Q?.((e) => (e || v.current?.focus(), !e));
         }, [K, Q]),
         ec = r.useCallback(() => {
-            !0 === V && ("multiple" === x ? q([]) : q(null), ei(""), b.current?.focus());
+            !0 === V && ("multiple" === x ? q([]) : q(null), ei(""), v.current?.focus());
         }, [q, x, V, ei]),
         eu = r.useCallback(
             (e) => {
-                (ea(!0), h?.(e), b.current?.setSelectionRange(en?.length ?? 0, en?.length ?? 0));
+                (ea(!0), h?.(e), v.current?.setSelectionRange(en?.length ?? 0, en?.length ?? 0));
             },
             [h, ea, en],
         ),
@@ -253,14 +253,14 @@ function P(e) {
         es &&
             !O &&
             (P.current = setTimeout(() => {
-                b.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+                v.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
             }, 10));
     }, [ee, es, O]);
     let eA = r.useCallback(() => {
-            K || (Q?.(!0), b.current?.focus());
+            K || (Q?.(!0), v.current?.focus());
         }, [Q, K]),
         eh = r.useCallback(() => {
-            b.current?.select();
+            v.current?.select();
         }, []),
         ef = r.useCallback(
             (e) => {
@@ -315,8 +315,8 @@ function P(e) {
                         "multiple" === x &&
                             "" === en &&
                             ee.length > 0 &&
-                            null != v.current &&
-                            (e.preventDefault(), e.stopPropagation(), v.current.lastChild?.focus());
+                            null != b.current &&
+                            (e.preventDefault(), e.stopPropagation(), b.current.lastChild?.focus());
                         break;
                     case "Escape":
                         z && V && (e.preventDefault(), e.stopPropagation(), ec());
@@ -363,7 +363,7 @@ function P(e) {
                 );
             });
             return (0, i.jsx)(I.C, {
-                listRef: v,
+                listRef: b,
                 label: U.SELECTED_TAGS_HEADING,
                 items: e,
                 layout: "inline",
@@ -397,7 +397,7 @@ function P(e) {
                             (0, i.jsx)(u.vN, {
                                 ringTarget: W,
                                 children: (0, i.jsx)(p.p, {
-                                    ref: b,
+                                    ref: v,
                                     id: t,
                                     className: s()(L.input, y.kk, { [y.kK]: "single" === x && z && !er }),
                                     autoFocus: n,

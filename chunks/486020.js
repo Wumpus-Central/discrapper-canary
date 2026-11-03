@@ -3,14 +3,14 @@ let i;
     AE: () => C,
     Ay: () => K,
     Bo: () => B,
-    F_: () => v,
+    F_: () => b,
     QB: () => T,
     V0: () => $,
     VI: () => H,
     _O: () => N,
     aq: () => h,
     ku: () => R,
-    ns: () => b,
+    ns: () => v,
     o4: () => W,
     q6: () => j,
     s7: () => L,
@@ -160,7 +160,7 @@ function D(e) {
     let c = { size: (0, d.kr)(a * (0, d.mZ)()) };
     return ("webp" === o && r && H(i) && (c.animated = !0), (t += `?${s.stringify(c)}`));
 }
-function v(e) {
+function b(e) {
     let { avatarDecoration: t, size: i = E.DX, canAnimate: r = !1 } = e;
     if (null == t || (0, o.bS)(t)) return null;
     try {
@@ -182,7 +182,7 @@ function v(e) {
         u.toString()
     );
 }
-function b(e) {
+function v(e) {
     let t,
         { id: n, guildId: i, banner: r, canAnimate: a, size: l } = e;
     if (null == r || null == i) return;
@@ -382,9 +382,9 @@ let K = {
             i = y(e, n);
         return null != i ? Y(i) : t.getAvatarSource(e.guildId, n);
     },
-    getGuildMemberBannerURL: b,
+    getGuildMemberBannerURL: v,
     getUserBannerURL: D,
-    getAvatarDecorationURL: v,
+    getAvatarDecorationURL: b,
     hasAnimatedGuildIcon: function (e) {
         return H(e?.icon);
     },

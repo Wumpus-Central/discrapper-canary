@@ -26,13 +26,13 @@ let d = {},
     L = "",
     y = "",
     D = 0,
-    v = null,
-    b = !1,
+    b = null,
+    v = !1,
     P = o.qN.NONE,
     M = null;
 function U(e) {
     let {} = e;
-    ((y = ""), (v = null), (b = !1));
+    ((y = ""), (b = null), (v = !1));
 }
 let w = {
     [o.aC.PENDING]: o.qN.LOADING,
@@ -121,10 +121,10 @@ class x extends a.Ay.Store {
         return y;
     }
     getAgeVerificationError() {
-        return v;
+        return b;
     }
     getIsLoadingAgeVerification() {
-        return b;
+        return v;
     }
     getAgeCheckStatus() {
         return P;
@@ -211,15 +211,15 @@ let k = new x(s.h, {
     },
     SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_START: function (e) {
         let {} = e;
-        ((y = ""), (v = null), (b = !0));
+        ((y = ""), (b = null), (v = !0));
     },
     SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_SUCCESS: function (e) {
         let { verificationWebviewUrl: t } = e;
-        ((y = t), (v = null), (b = !1));
+        ((y = t), (b = null), (v = !1));
     },
     SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_FAILURE: function (e) {
         let { error: t } = e;
-        ((y = ""), (v = t), (b = !1));
+        ((y = ""), (b = t), (v = !1));
     },
     SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN: U,
     SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE: U,

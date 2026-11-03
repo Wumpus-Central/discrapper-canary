@@ -1,4 +1,4 @@
-n.d(t, { BB: () => R, Go: () => y, Jf: () => D, ao: () => O, et: () => v, on: () => L, qN: () => g });
+n.d(t, { BB: () => R, Go: () => y, Jf: () => D, ao: () => O, et: () => b, on: () => L, qN: () => g });
 var i,
     r = n(636537),
     a = n(765178),
@@ -114,7 +114,7 @@ async function R(e, t, n) {
             body: T.intl.string(T.t.psMorl),
             confirmText: T.intl.string(T.t["NX+WJN"]),
         });
-    let y = await b(n, O);
+    let y = await v(n, O);
     return (
         N("MESSAGE_REACTION_ADD", e, t, n, { burst: O, colors: y }),
         await c.A.unarchiveThreadIfNecessary(e),
@@ -172,7 +172,7 @@ async function D(e, t, n, i) {
         },
     );
 }
-async function v(e) {
+async function b(e) {
     let { channelId: t, messageId: n, emoji: i, location: s = "Message", userId: l, options: o } = e,
         u = null != o && !!o.burst,
         _ = null != o && !!o.isRetry;
@@ -201,7 +201,7 @@ async function v(e) {
                     S(
                         e,
                         () =>
-                            v({
+                            b({
                                 channelId: t,
                                 messageId: n,
                                 emoji: i,
@@ -212,7 +212,7 @@ async function v(e) {
                         { isRetry: _ },
                     )
                 ) {
-                    let e = await b(i, u);
+                    let e = await v(i, u);
                     (N("MESSAGE_REACTION_ADD", t, n, i, { userId: l, burst: u, colors: e }),
                         o?.burst
                             ? a.O.announce(T.intl.formatToPlainString(T.t.OamVbV, { name: i.name }))
@@ -220,7 +220,7 @@ async function v(e) {
                 }
             }));
 }
-async function b(e, t) {
+async function v(e, t) {
     let n = [];
     if (t)
         try {

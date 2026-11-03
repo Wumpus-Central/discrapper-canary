@@ -33,14 +33,14 @@ function y(e) {
 }
 function D(e) {
     let { messages: t } = e;
-    t.forEach((e) => v(e));
+    t.forEach((e) => b(e));
 }
-function v(e) {
+function b(e) {
     let t = e.type === i.l.PREMIUM_REFERRAL ? e.content : null;
     if (null == t) return !1;
     !A.has(t) && !E.has(t) && (E.add(t), (0, l.kZ)(t).catch(o.FXj));
 }
-class b extends r.Ay.Store {
+class v extends r.Ay.Store {
     static displayName = "ReferralTrialStore";
     initialize() {
         (this.waitFor(s.default), this.syncWith([s.default], R));
@@ -95,7 +95,7 @@ class b extends r.Ay.Store {
         return O;
     }
 }
-let P = new b(a.h, {
+let P = new v(a.h, {
     BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function (e) {
         let { userTrialOfferId: t } = e;
         (_ || (0, l.xM)(), !E.has(t)) && (E.add(t), (0, l.kZ)(t).catch(o.FXj));
@@ -178,7 +178,7 @@ let P = new b(a.h, {
     LOAD_MESSAGES_SUCCESS: D,
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
-        v(t);
+        b(t);
     },
     LOAD_MESSAGES_AROUND_SUCCESS: D,
     LOGOUT: function () {

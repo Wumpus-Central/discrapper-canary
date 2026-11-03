@@ -49,7 +49,7 @@ function D(e) {
     let t = g.get(e);
     void 0 !== t && (clearTimeout(t), g.delete(e));
 }
-function v() {
+function b() {
     let e = N.get(m) ?? 0;
     if ((e > 0 && e <= 4) || (D(m), !y(m))) return;
     let t = h.A.getFeed(m);
@@ -59,10 +59,10 @@ function v() {
     (L(m, { loading: !1, nextFetchDate: new Date(Date.now() + i) }),
         g.set(
             m,
-            setTimeout(() => b({ feedId: m, feature: r.M.INBOX }), i),
+            setTimeout(() => v({ feedId: m, feature: r.M.INBOX }), i),
         ));
 }
-async function b(e) {
+async function v(e) {
     let { feedId: t, feature: n, force: i = !1 } = e;
     if (y(t) || i)
         try {
@@ -73,7 +73,7 @@ async function b(e) {
                 N.set(t, 0),
                 S.delete(t),
                 L(t, { loading: !1 }),
-                t === m && ((C = null), v()));
+                t === m && ((C = null), b()));
         } catch (r) {
             let e = N.get(t) ?? 0;
             if (e < 4) {
@@ -81,7 +81,7 @@ async function b(e) {
                     a = R(e);
                 (g.set(
                     t,
-                    setTimeout(() => b({ feedId: t, feature: n, force: i }), r + a),
+                    setTimeout(() => v({ feedId: t, feature: n, force: i }), r + a),
                 ),
                     N.set(t, e + 1));
             } else a.h.dispatch({ type: "CONTENT_INVENTORY_CLEAR_FEED", feedId: t });
@@ -89,7 +89,7 @@ async function b(e) {
         }
 }
 function P() {
-    v();
+    b();
 }
 function M() {
     P();
@@ -99,13 +99,13 @@ function U() {
 }
 function w(e) {
     let { feedId: t, feature: n } = e;
-    (D(t), b({ feedId: t, feature: n, force: !0 }));
+    (D(t), v({ feedId: t, feature: n, force: !0 }));
 }
 function G(e) {
     let { refreshAfterMs: t } = e,
         n = h.A.getFeed(m);
     n?.refresh_stale_inbox_after_ms == null ||
-        ((C = new Date(Date.now() + (t ?? n.refresh_stale_inbox_after_ms)).toUTCString()), v());
+        ((C = new Date(Date.now() + (t ?? n.refresh_stale_inbox_after_ms)).toUTCString()), b());
 }
 function x(e) {
     let { connectionId: t, track: n } = e;
@@ -113,7 +113,7 @@ function x(e) {
 }
 function k() {
     let e = h.A.getFeed(m);
-    (null != e && new Date(e.expired_at).getTime() > Date.now()) || b({ feedId: m, feature: r.M.GAME_PROFILE });
+    (null != e && new Date(e.expired_at).getTime() > Date.now()) || v({ feedId: m, feature: r.M.GAME_PROFILE });
 }
 class F extends s.A {
     actions = {

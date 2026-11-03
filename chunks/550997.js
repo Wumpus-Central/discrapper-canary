@@ -3,8 +3,8 @@ let l;
 var s = n(478676),
     a = n.n(s),
     r = n(873879),
-    u = n(683412),
-    o = n(704726),
+    o = n(683412),
+    u = n(704726),
     i = n(46054);
 let c = a().defaultRules.lheading,
     d = a().defaultRules.heading,
@@ -14,8 +14,8 @@ let c = a().defaultRules.lheading,
     h = a().defaultRules.blockQuote,
     f = a().defaultRules.paragraph,
     R = /\{(.+?)}/,
-    k = /^\$(\w+?)\$/;
-function b(e) {
+    b = /^\$(\w+?)\$/;
+function k(e) {
     let { transformUpperCase: t = !1 } = e;
     return (e, n, l) => {
         let s = R.exec(e[1]),
@@ -41,8 +41,8 @@ function y(e) {
         link: { ...p, ...("function" == typeof l.customRules.link ? l.customRules.link(e) : l.customRules.link) },
         list: { ...g, ...("function" == typeof l.customRules.list ? l.customRules.list(e) : l.customRules.list) },
         interpolation: {
-            order: o.Ay.order,
-            match: (e) => k.exec(e),
+            order: u.Ay.order,
+            match: (e) => b.exec(e),
             parse(e, t, n) {
                 let l = n.interpolations[e[1]];
                 return null == l ? { type: "text", content: e[0] } : { type: "interpolation", renderer: l };
@@ -51,7 +51,7 @@ function y(e) {
         },
         lheading: {
             ...c,
-            parse: b({ transformUpperCase: !0 }),
+            parse: k({ transformUpperCase: !0 }),
             ...("function" == typeof l.customRules.lheading ? l.customRules.lheading(e) : l.customRules.lheading),
         },
         heading: {
@@ -79,13 +79,13 @@ let v = {
         ...{
             lheading: {
                 ...c,
-                parse: b({ transformUpperCase: !1 }),
+                parse: k({ transformUpperCase: !1 }),
                 ...("function" == typeof l.customRules.lheading ? l.customRules.lheading(e) : l.customRules.lheading),
             },
         },
     }),
     getMessageRules: (e) => ({
-        ...{ ...y(e), newline: { ...a().defaultRules.newline }, text: o.Ay, list: r.A, subtext: u.A },
+        ...{ ...y(e), newline: { ...a().defaultRules.newline }, text: u.Ay, list: r.A, subtext: o.A },
     }),
 };
 function N(e, t, n) {

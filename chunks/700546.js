@@ -6,16 +6,16 @@ var l = t(477900),
     i = t(344346),
     h = t(303136),
     u = t(287809),
-    c = t(676279),
-    o = t(573359),
+    o = t(676279),
+    c = t(573359),
     d = t(659746),
     m = t(105292),
     A = t(902062);
 let p = function (e) {
     let { type: a, text: t, buttonText: p, buttonLoading: E, hideClose: P, onClose: C } = e,
         M = (0, n.bG)([u.default], () => u.default.getCurrentUser()),
-        y = (0, n.bG)([o.A], () => o.A.nameplatePreviewOverrides),
-        g = (0, c.TM)()
+        y = (0, n.bG)([c.A], () => c.A.nameplatePreviewOverrides),
+        g = (0, o.TM)()
             ? "https://cdn.discordapp.com/assets/content/239903eff27463f888314f6f702385c58dc4f6ef0e8e1a999e0c1051d86f2f11.mov"
             : "https://cdn.discordapp.com/assets/content/2688d55b4d0db6d6e603fdc61131d6e8d8c691bd159952078f166ea177fc970b.webm",
         T = (function (e) {

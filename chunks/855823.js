@@ -1,4 +1,4 @@
-n.d(t, { Ac: () => u, GE: () => g, Ny: () => d, aU: () => h, ox: () => o, y0: () => m });
+n.d(t, { Ac: () => d, GE: () => g, Ny: () => u, aU: () => h, ox: () => o, y0: () => m });
 var i = n(636537),
     l = n(913122),
     s = n(593673);
@@ -24,13 +24,13 @@ function o(e, t, n) {
     }
 }
 let c = [s.a.POPULAR_MUSIC, s.a.LEADERBOARD, s.a.POPULAR_GAMES];
-function u(e) {
+function d(e) {
     return c.flatMap((t, n) => {
         let i = e.find((e) => e.type === t);
         return null == i ? [] : [{ ...o(t, i.name, i.locked), position: { column: 0, order: n } }];
     });
 }
-function d(e) {
+function u(e) {
     return e.startsWith(r);
 }
 function h(e, t) {

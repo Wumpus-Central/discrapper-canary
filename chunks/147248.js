@@ -27,26 +27,26 @@ var T = n(95701),
     L = n(652329);
 let y = !0,
     D = !1,
-    v = !1;
-function b(e) {
+    b = !1;
+function v(e) {
     return !(0, c.oB)(e.id) || null == S.default.getCurrentUser() || !(0, d.$X)(L.vB.CLIENT_THEME);
 }
 function P(e) {
     if (null == e) return;
     let t = R.ag[e];
-    return null != t && b(t) ? t : void 0;
+    return null != t && v(t) ? t : void 0;
 }
 function M() {
     let e = f.eh.getSetting().backgroundGradientPresetId;
     return (0, c.oB)(e) ? P(e) : void 0;
 }
 function U() {
-    (y && (i = M()), (v = !1), (D = !1));
+    (y && (i = M()), (b = !1), (D = !1));
 }
 function w() {
     var e;
     let t = !1;
-    if (null == i || b(i)) {
+    if (null == i || v(i)) {
         if (null == i) {
             let e = M();
             null != e && ((i = e), (t = !0));
@@ -56,7 +56,7 @@ function w() {
         ((e = S.default.getCurrentUser()),
         (0, c.j5)(e, L.vB.CLIENT_THEME) ? !u.zL.getFeatureValue(e) : !N.Ay.canUseClientThemes(e));
     if (n === y) return t;
-    ((y = n), (v = !1));
+    ((y = n), (b = !1));
 }
 function G() {
     let e = f.eh.getSetting().backgroundGradientPresetId;
@@ -83,7 +83,7 @@ function F() {
     }
     let t = R.ag[e];
     if (null != t) {
-        if (!b(t)) {
+        if (!v(t)) {
             i = void 0;
             return;
         }
@@ -95,7 +95,7 @@ class B extends a.Ay.PersistedStore {
     static persistKey = "ClientThemesBackgroundStore";
     migrations = [(e) => ({ gradientPresetId: e?.gradientPreset?.id })];
     initialize(e) {
-        ((v = !1),
+        ((b = !1),
             null != e && ((i = P(e.gradientPresetId)), (y = !0 !== e.canUseClientThemes)),
             this.waitFor(g.A, _.A, A.A, h.Ay, I.A, S.default),
             this.syncWith([S.default], w),
@@ -103,7 +103,7 @@ class B extends a.Ay.PersistedStore {
     }
     getState() {
         return y
-            ? !v && null != i && (0, c.oB)(i.id)
+            ? !b && null != i && (0, c.oB)(i.id)
                 ? { gradientPresetId: i.id }
                 : {}
             : { gradientPresetId: i?.id, canUseClientThemes: !0 };
@@ -111,9 +111,9 @@ class B extends a.Ay.PersistedStore {
     get gradientPreset() {
         if (m()) {
             let e = P(A.A.getSyncedClientTheme(A.A.systemTheme)?.backgroundGradientPresetId);
-            return y ? (v ? i : null != e && (0, c.oB)(e.id) ? e : void 0) : e;
+            return y ? (b ? i : null != e && (0, c.oB)(e.id) ? e : void 0) : e;
         }
-        return null != i && b(i) ? i : void 0;
+        return null != i && v(i) ? i : void 0;
     }
     getLinearGradient() {
         return null == this.gradientPreset ? null : (0, O.FK)(this.gradientPreset);
@@ -135,7 +135,7 @@ class B extends a.Ay.PersistedStore {
 let V = new B(l.h, {
     UPDATE_BACKGROUND_GRADIENT_PRESET: function (e) {
         let { presetId: t } = e;
-        if (((v = y && null != t && !(0, c.oB)(t)), null == t)) {
+        if (((b = y && null != t && !(0, c.oB)(t)), null == t)) {
             i = void 0;
             return;
         }
@@ -150,7 +150,7 @@ let V = new B(l.h, {
         r = t;
     },
     RESET_PREVIEW_CLIENT_THEME: function (e) {
-        ((i = y ? M() : void 0), (v = !1));
+        ((i = y ? M() : void 0), (b = !1));
     },
     CLIENT_THEMES_EDITOR_CLOSE: U,
     CHANNEL_SELECT: function (e) {

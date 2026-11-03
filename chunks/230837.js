@@ -1,9 +1,9 @@
-n.d(e, { A: () => r });
-var l = n(780964),
-    i = n(766075),
-    a = n(99206);
+e.d(n, { A: () => r });
+var l = e(780964),
+    i = e(766075),
+    a = e(99206);
 function r(t) {
-    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     (0, i.openUserSettings)(
         (function (t) {
             switch (t) {
@@ -15,6 +15,6 @@ function r(t) {
                     return l.X.ACTIVITY_PRIVACY_PANEL;
             }
         })(t),
-        e,
+        n,
     );
 }

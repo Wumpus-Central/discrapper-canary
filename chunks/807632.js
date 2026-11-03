@@ -3,7 +3,7 @@
     IO: () => N,
     Ij: () => L,
     Qq: () => D,
-    WP: () => v,
+    WP: () => b,
     YG: () => S,
     YS: () => T,
     Zu: () => g,
@@ -97,7 +97,7 @@ function D(e, t) {
         a = null == n || (y(t) && !t.has(n.id));
     return { noMicTag: n, voiceChatEnabled: r, voiceToggleDisabled: a };
 }
-function v(e, t, n) {
+function b(e, t, n) {
     let r = e.isGameInvitesChannel();
     return (0, i.useMemo)(() => {
         if (!r) return { activeThreadIds: t, archivedThreadIds: n };

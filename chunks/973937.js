@@ -6,13 +6,13 @@ var i = t(477900),
     r = t(367513),
     o = t(446243),
     c = t(558076),
-    u = t(360729),
-    d = t(198052),
+    d = t(360729),
+    u = t(198052),
     A = t(806931),
     h = t(105292);
 function m(e, n) {
-    let t = (0, s.bG)([d.A], () => d.A.getSelectedParticipant(e), [e]),
-        { enabled: m } = (0, u.mf)({ guildId: n, location: "useGridViewItem" }),
+    let t = (0, s.bG)([u.A], () => u.A.getSelectedParticipant(e), [e]),
+        { enabled: m } = (0, d.mf)({ guildId: n, location: "useGridViewItem" }),
         { isGuildRoomVisible: g, isVideoOverlayVisible: x } = (0, s.cf)(
             [c.A],
             () => ({ isGuildRoomVisible: c.A.isVisible(e), isVideoOverlayVisible: c.A.getVideoOverlayVisibility() }),

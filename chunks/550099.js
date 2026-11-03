@@ -6,10 +6,10 @@ function l(e, t) {
     let [n] = a.A.getPromotionsByPartner(e).oneTime;
     if (null == n) return null;
     let l = i.default.getCurrentUser(),
-        s = new Date();
+        o = new Date();
     return (0, r.A)(
         n.marketingComponents.filter((e) => e.componentType === t),
-        s,
-        (e) => null != l && e.isIncludedInRollout(l.id, s),
+        o,
+        (e) => null != l && e.isIncludedInRollout(l.id, o),
     );
 }

@@ -8,8 +8,8 @@ var l = t(284009),
 (t(198052), t(666328), t(422229), t(74329), t(956747));
 var o = t(288104),
     c = t(267102),
-    u = t(734057),
-    d = t(576705),
+    d = t(734057),
+    u = t(576705),
     A = t(993838),
     h = t(233993),
     m = t(446600),
@@ -17,8 +17,8 @@ var o = t(288104),
 t(806931);
 var x = t(105292);
 function C(e) {
-    let n = (0, a.bG)([u.A], () => u.A.getChannel(e), [e]),
-        t = (0, a.bG)([d.A], () => d.A.can(h.QY, n)),
+    let n = (0, a.bG)([d.A], () => d.A.getChannel(e), [e]),
+        t = (0, a.bG)([u.A], () => u.A.can(h.QY, n)),
         l = (0, g.zU)(),
         s = (0, a.bG)([m.A], () => m.A.getStageInstanceByChannel(e), [e]),
         o = (0, c.Us)();
@@ -41,6 +41,6 @@ function C(e) {
         : null;
 }
 function f(e) {
-    let n = (0, a.bG)([u.A], () => u.A.getChannel(e), [e]);
+    let n = (0, a.bG)([d.A], () => d.A.getChannel(e), [e]);
     return (s()(null != n, "useNotificationSettingsItem: channel cannot be undefined"), (0, o.A)(n));
 }

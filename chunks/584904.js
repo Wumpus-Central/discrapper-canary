@@ -1,25 +1,25 @@
-n.d(e, { A: () => x });
-var l = n(477900);
-n(582128);
-var i = n(503698),
-    a = n.n(i),
-    r = n(890856),
-    s = n(688810),
-    o = n(183555),
-    c = n(402860),
-    u = n(946356),
-    d = n(939496),
-    A = n(518477),
-    f = n(996988),
-    g = n(105292),
-    m = n(260155);
-function x(t) {
+e.d(n, { A: () => p });
+var l = e(477900);
+e(582128);
+var i = e(503698),
+    a = e.n(i),
+    r = e(890856),
+    s = e(688810),
+    o = e(183555),
+    c = e(402860),
+    u = e(946356),
+    d = e(939496),
+    A = e(518477),
+    f = e(996988),
+    g = e(105292),
+    m = e(260155);
+function p(t) {
     let {
-            children: e,
-            className: n,
+            children: n,
+            className: e,
             profileModalScrollTarget: i,
-            onAction: x,
-            onClose: p,
+            onAction: p,
+            onClose: x,
             "aria-labelledby": _,
             ref: I,
             ...N
@@ -30,7 +30,7 @@ function x(t) {
     return E === f.d.MODAL || E === f.d.MODAL_V2 || h?.userId == null
         ? (0, l.jsx)("article", {
               "aria-labelledby": _,
-              children: (0, l.jsx)(u.A.Overlay, { ref: I, className: a()(m.Nr, n), ...N, children: e }),
+              children: (0, l.jsx)(u.A.Overlay, { ref: I, className: a()(m.Nr, e), ...N, children: n }),
           })
         : (0, l.jsx)("article", {
               "aria-labelledby": _,
@@ -39,16 +39,16 @@ function x(t) {
                   "aria-label": g.intl.string(g.t.pD1L1u),
                   focusProps: { ringTarget: I },
                   onClick: () => {
-                      (x?.({ action: "PRESS_CARD" }),
+                      (p?.({ action: "PRESS_CARD" }),
                           (0, c.openUserProfileModal)({
                               tabSection: A.RP.ACTIVITY,
                               sourceAnalyticsLocations: T,
                               scrollTarget: i,
                               ...h,
                           }),
-                          p?.());
+                          x?.());
                   },
-                  children: (0, l.jsx)(u.A.Overlay, { ref: I, className: a()(m.Nr, n), ...N, children: e }),
+                  children: (0, l.jsx)(u.A.Overlay, { ref: I, className: a()(m.Nr, e), ...N, children: n }),
               }),
           });
 }

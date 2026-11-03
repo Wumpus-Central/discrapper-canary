@@ -1,4 +1,4 @@
-n.d(t, { A: () => m, H: () => x });
+n.d(t, { A: () => x, H: () => m });
 var l = n(477900);
 n(582128);
 var i = n(97808),
@@ -9,7 +9,7 @@ var i = n(97808),
     c = n(105292),
     u = n(756308);
 let o = a.Ay.getEnableHardwareAcceleration() ? i.Js : i.eu;
-function x(e) {
+function m(e) {
     let { user: t, avatarSize: n = r._3.SIZE_48 } = e,
         { avatarSrc: i, avatarDecorationSrc: a, eventHandlers: u } = (0, s.A)({ userId: t?.id, size: n });
     return (0, l.jsx)("div", {
@@ -22,13 +22,13 @@ function x(e) {
         }),
     });
 }
-let m = function (e) {
+let x = function (e) {
     let { currentUser: t, otherUser: n, children: i } = e;
     return (0, l.jsx)("div", {
         className: u.b,
         children: (0, l.jsxs)("div", {
             className: u.M,
-            children: [(0, l.jsx)(x, { user: t }), i, (0, l.jsx)(x, { user: n })],
+            children: [(0, l.jsx)(m, { user: t }), i, (0, l.jsx)(m, { user: n })],
         }),
     });
 };

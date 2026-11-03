@@ -28,21 +28,21 @@ function i(e, t, n, i) {
                 m = u - c,
                 A = -r + c - u,
                 f = o - d,
-                x = h - d,
-                g = -o + d - h,
+                g = h - d,
+                x = -o + d - h,
                 C = 0,
-                j = 0;
-            if (0 !== A || 0 !== g) {
-                let e = p * x - f * m;
-                ((C = (A * x - m * g) / e), (j = (p * g - f * A) / e));
+                y = 0;
+            if (0 !== A || 0 !== x) {
+                let e = p * g - f * m;
+                ((C = (A * g - m * x) / e), (y = (p * x - f * A) / e));
             }
-            let y = r + C * r,
-                I = u + j * u,
+            let j = r + C * r,
+                I = u + y * u,
                 N = o + C * o,
-                v = h + j * h,
+                v = h + y * h,
                 E = C / t,
-                b = j / n;
-            return `matrix3d(${[y / t, N / t, 0, E, I / n, v / n, 0, b, 0, 0, 1, 0, 0, 0, 0, 1].join(", ")})`;
+                b = y / n;
+            return `matrix3d(${[j / t, N / t, 0, E, I / n, v / n, 0, b, 0, 0, 1, 0, 0, 0, 0, 1].join(", ")})`;
         })(l, t, a),
     };
 }

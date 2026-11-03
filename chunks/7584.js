@@ -131,8 +131,8 @@ function y(e) {
     return null != t ? { type: "emoji", surrogate: e, emojiName: `:${t}:` } : { type: "text", text: e };
 }
 let D = String.fromCodePoint(917631),
-    v = String.fromCodePoint(127988),
-    b = /^[\u{E0061}-\u{E007A}]$/u;
+    b = String.fromCodePoint(127988),
+    v = /^[\u{E0061}-\u{E007A}]$/u;
 function P(e, t) {
     if (!0 !== t && !L(e)) return [{ type: "text", text: e }];
     let n = "",
@@ -142,11 +142,11 @@ function P(e, t) {
         let t = r[e];
         if (null != n && "" !== n)
             if (t === D) ((t = n + t), (n = ""));
-            else if (b.test(t)) {
+            else if (v.test(t)) {
                 n += t;
                 continue;
             } else (i.push(y(n)), (n = ""));
-        else if (t === v) {
+        else if (t === b) {
             n = t;
             continue;
         }

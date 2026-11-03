@@ -2,7 +2,7 @@
     At: () => W,
     Fq: () => L,
     G0: () => V,
-    HO: () => v,
+    HO: () => b,
     On: () => R,
     Pn: () => j,
     Q0: () => B,
@@ -19,7 +19,7 @@
     o9: () => m,
     oN: () => y,
     sy: () => M,
-    w$: () => b,
+    w$: () => v,
     wc: () => S,
     wr: () => w,
     y7: () => O,
@@ -67,9 +67,9 @@ let T = "1340102344645283891",
     L = "guild_powerup_modal",
     y = [[c.SL], [c.aN], [c.FB], [c.OJ, c.jF], [c.Ht, c.tv], [c.zY], [c.d0]],
     D = { [I.W5]: "beta", [c.zY]: "beta", [c.d0]: "beta" },
-    v = new Set([c.SL, c.aN, c.FB, c.OJ, c.jF, c.Ht, c.tv, c.d0]);
+    b = new Set([c.SL, c.aN, c.FB, c.OJ, c.jF, c.Ht, c.tv, c.d0]);
 (c.aN, c.SL);
-let b = () => ({
+let v = () => ({
         [f.GuildFeatures.VIDEO_QUALITY_1080_60FPS]: { perkIcon: h.TP.STREAM, description: p.intl.string(p.t.y4ft4D) },
         [f.GuildFeatures.AUDIO_BITRATE_128_KBPS]: {
             perkIcon: h.TP.AUDIO,

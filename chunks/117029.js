@@ -12,8 +12,8 @@ var i = n(477900),
     p = n(893007),
     g = n(218429),
     f = n(964486),
-    x = n(461782),
-    h = n(999926),
+    h = n(461782),
+    x = n(999926),
     A = n(40056),
     v = n(105292),
     E = n(950183),
@@ -26,9 +26,9 @@ function I(e) {
 }
 let S = l.memo(function (e) {
     let { mirror: t = !1, streamId: n, paused: s } = e,
-        { onActive: S, onPreventIdle: _, onAllowIdle: N } = l.useContext(x.k3),
+        { onActive: S, onPreventIdle: _, onAllowIdle: b } = l.useContext(h.k3),
         {
-            enabled: b,
+            enabled: N,
             zoomLevel: y,
             minZoom: T,
             maxZoom: L,
@@ -51,8 +51,8 @@ let S = l.memo(function (e) {
             _("interact");
         }, [_]),
         Z = l.useCallback(() => {
-            (z(!1), N("interact"));
-        }, [N]),
+            (z(!1), b("interact"));
+        }, [b]),
         Y = l.useMemo(() => {
             let e = 120 * Math.min(G, 32 / 9);
             return { "--custom-zoom-minimap-width": `${e}px`, "--custom-zoom-minimap-height": "120px" };
@@ -87,7 +87,7 @@ let S = l.memo(function (e) {
             },
             [U],
         ),
-        J = h.Ay.getVideoComponent(),
+        J = x.Ay.getVideoComponent(),
         ee = l.useMemo(() => {
             let e = null != V.current ? V.current.clientWidth : 1,
                 t = null != V.current ? V.current.clientHeight : 1,
@@ -134,7 +134,7 @@ let S = l.memo(function (e) {
     return ((0, f.l0)(() => {
         ei.current?.stop();
     }),
-    b && null != n)
+    N && null != n)
         ? (0, i.jsxs)("div", {
               className: r()(C.ne, { [C.Ge]: O || $ }),
               onMouseEnter: B,

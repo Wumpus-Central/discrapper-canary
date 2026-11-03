@@ -85,13 +85,13 @@ function y(e, t) {
 function D(e) {
     return m.delete(e);
 }
-function v(e) {
+function b(e) {
     let t = p.has(e);
     p.del(e);
     let n = D(e);
     return t || n;
 }
-class b extends a.Ay.Store {
+class v extends a.Ay.Store {
     static displayName = "ChannelConversationsStore";
     initialize() {
         this.waitFor(o.default, d.A, c.A, u.Ay, _.default);
@@ -148,7 +148,7 @@ class b extends a.Ay.Store {
         return p.peek(e)?.recentFeedbackRatingsByConversationId.get(t) ?? null;
     }
 }
-let P = new b(s.h, {
+let P = new v(s.h, {
     CONVERSATION_MESSAGES_FETCH_START: function (e) {
         var t;
         let n,
@@ -259,13 +259,13 @@ let P = new b(s.h, {
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        return v(t.id);
+        return b(t.id);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
         if ("unavailable" in t && !0 === t.unavailable) return !1;
         let n = !1;
-        for (let e of p.keys()) p.peek(e)?.guildId === t.id && v(e) && (n = !0);
+        for (let e of p.keys()) p.peek(e)?.guildId === t.id && b(e) && (n = !0);
         return n;
     },
     LOAD_MESSAGES_SUCCESS: function (e) {

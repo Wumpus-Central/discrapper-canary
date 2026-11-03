@@ -26,7 +26,7 @@ var i = n(889137),
     L = n(967198),
     y = n(174459),
     D = n(652215);
-function v(e, t) {
+function b(e, t) {
     y.default.track(D.HAw.APP_DIRECTORY_PROFILE_EMBED_SENT, {
         application_id: e,
         device_platform: O.Fr ? "mobile_web" : "desktop_web",
@@ -35,7 +35,7 @@ function v(e, t) {
         section: t,
     });
 }
-var b = n(834757),
+var v = n(834757),
     P = n(753738),
     M = n(51271),
     U = n(844944),
@@ -175,8 +175,8 @@ var eC = n(71393),
     eL = n(576705),
     ey = n(290863),
     eD = n(573163),
-    ev = n(101392),
-    eb = n(287809),
+    eb = n(101392),
+    ev = n(287809),
     eP = n(927813),
     eM = n(45938),
     eU = n(975571),
@@ -227,7 +227,7 @@ function e$(e) {
             let i = eS.A.getLastActiveStream();
             if (null != i && i.channelId === n.id) {
                 ((e = D.G2g.STREAM), (t.destination_user_id = i.ownerId));
-                let n = (0, b.Ee)(i, ey.A);
+                let n = (0, v.Ee)(i, ey.A);
                 t.application_id = null != n ? n.id : null;
             }
         }
@@ -875,7 +875,7 @@ ${a}`),
                     allowedMentions: O,
                     poll: R,
                     sharedCustomTheme: L,
-                    contentInventoryEntry: b,
+                    contentInventoryEntry: v,
                     attachments: G,
                     attachmentsToUpload: x,
                     onAttachmentUploadError: k,
@@ -898,7 +898,7 @@ ${a}`),
                 null == S &&
                 null == R &&
                 null == L &&
-                null == b &&
+                null == v &&
                 !Q &&
                 (null == G || 0 === G.length) &&
                 null == B &&
@@ -930,7 +930,7 @@ ${a}`),
                 !eY && null != d && d.length > 0)
             ) {
                 eY = !0;
-                let t = eb.default.getCurrentUser(),
+                let t = ev.default.getCurrentUser(),
                     { errorMessage: n, errorMessageName: i } = eX.validateMessage(d, t, e);
                 eX.sendBotMessage(e, n, i);
             }
@@ -983,7 +983,7 @@ ${a}`),
                 null != S && (ec.message.sticker_ids = S),
                 el.A.isEnabled() && (ec.message.has_poggermode_enabled = !0),
                 null != B && (ec.message.checkpoint_card_type = B),
-                null != b && (ec.message.content_inventory_entry = b),
+                null != v && (ec.message.content_inventory_entry = v),
                 null != V && (ec.message.media_mention = V),
                 null != G && G.length > 0 && (ec.message.attachments = G),
                 null != x && x.length > 0)
@@ -1060,14 +1060,14 @@ ${a}`),
                                 (ee.recordMessageSendApiResponse(ea),
                                     o.h.dispatch({
                                         type: "SLOWMODE_RESET_COOLDOWN",
-                                        slowmodeType: ev.R.SendMessage,
+                                        slowmodeType: eb.R.SendMessage,
                                         channelId: e,
                                     }),
                                     o.h.dispatch({ type: "EMOJI_TRACK_USAGE", emojiUsed: c }),
                                     o.h.dispatch({ type: "STICKER_TRACK_USAGE", stickerIds: S }),
                                     o.h.dispatch({
                                         type: "LOCAL_MESSAGE_CREATE",
-                                        message: { channel_id: e, author: eb.default.getCurrentUser() },
+                                        message: { channel_id: e, author: ev.default.getCurrentUser() },
                                     }),
                                     (function (e) {
                                         let {
@@ -1087,13 +1087,13 @@ ${a}`),
                                                 let { applicationId: n } = e;
                                                 switch (e.type) {
                                                     case T.I.APP_DIRECTORY_PROFILE:
-                                                        (v(n), (0, f.KL)(d, eF.J.APP_DISCOVERY, o));
+                                                        (b(n), (0, f.KL)(d, eF.J.APP_DISCOVERY, o));
                                                         break;
                                                     case T.I.APP_DIRECTORY_STOREFRONT:
-                                                        v(n, "storefront");
+                                                        b(n, "storefront");
                                                         break;
                                                     case T.I.APP_DIRECTORY_STOREFRONT_SKU:
-                                                        v(n, "storefront_sku");
+                                                        b(n, "storefront_sku");
                                                         break;
                                                     case T.I.ACTIVITY_BOOKMARK: {
                                                         let { params: t } = e;
@@ -1286,7 +1286,7 @@ ${a}`),
                                             o.h.dispatch({
                                                 type: "SLOWMODE_SET_COOLDOWN",
                                                 channelId: e,
-                                                slowmodeType: ev.R.SendMessage,
+                                                slowmodeType: eb.R.SendMessage,
                                                 cooldownMs: t * eP.A.Millis.SECOND,
                                             });
                                     } else
@@ -1300,7 +1300,7 @@ ${a}`),
                                               ? o.h.dispatch({ type: "POGGERMODE_TEMPORARILY_DISABLED" })
                                               : E.body.code === D.t02.EXPLICIT_CONTENT
                                                 ? (t = eV.ty.EXPLICIT_CONTENT)
-                                                : null != R || Q || null != b || eX.sendClydeError(e, E.body.code);
+                                                : null != R || Q || null != v || eX.sendClydeError(e, E.body.code);
                                 (r
                                     ? null != eR.A.getMessage(e, ea) && eX.deleteMessage(e, ea, !0)
                                     : (null != i &&

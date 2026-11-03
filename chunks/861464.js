@@ -148,8 +148,8 @@ let L = {
                 );
             case l.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION:
                 if (e instanceof h.Ay) return null;
-                let v = (0, _.p_)((0, u.rh)(e));
-                return (0, a.$)((0, E.P)({ application: e.application, username: v.nick }));
+                let b = (0, _.p_)((0, u.rh)(e));
+                return (0, a.$)((0, E.P)({ application: e.application, username: b.nick }));
             case l.lAJ.PRIVATE_CHANNEL_INTEGRATION_ADDED:
                 if (e instanceof h.Ay) return null;
                 return (0, a.$)((0, A.g6)({ application: e.application, username: (0, _.p_)((0, u.rh)(e)).nick }));
@@ -184,7 +184,7 @@ let L = {
                 }
                 return e.content;
             case l.lAJ.GUILD_INCIDENT_ALERT_MODE_ENABLED:
-                var b = e.content;
+                var v = e.content;
                 let P = I.A.getChannel(S);
                 if (null == P) return null;
                 let M = p.A.getGuild(P.getGuildId());
@@ -195,8 +195,8 @@ let L = {
                               username: N,
                               guildName: M.name,
                               time:
-                                  "" !== b
-                                      ? new Date(b).toLocaleString(o.intl.currentLocale, {
+                                  "" !== v
+                                      ? new Date(v).toLocaleString(o.intl.currentLocale, {
                                             hour: "numeric",
                                             minute: "2-digit",
                                         })

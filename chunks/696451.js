@@ -26,8 +26,8 @@ let R = new _.A("GuildMemberStore"),
     L = {},
     y = {},
     D = {},
-    v = {},
     b = {},
+    v = {},
     P = !1,
     M = 0,
     U = 0,
@@ -37,19 +37,19 @@ let R = new _.A("GuildMemberStore"),
 function k(e, t) {
     if (null == t.communicationDisabledUntil || !(0, A.Z)(t)) return F(e, t.userId);
     let n = H(e, t.userId);
-    b[n] !== t.communicationDisabledUntil && (0, A.Z)(t) && ((b[n] = t.communicationDisabledUntil), B(n));
+    v[n] !== t.communicationDisabledUntil && (0, A.Z)(t) && ((v[n] = t.communicationDisabledUntil), B(n));
 }
 function F(e, t) {
     if (null != t) {
         let n = H(e, t);
-        (null != b[n] && B(n), V(H(e, t)));
-    } else for (let t in b) W(t) === e && (B(t), V(t));
+        (null != v[n] && B(n), V(H(e, t)));
+    } else for (let t in v) W(t) === e && (B(t), V(t));
 }
 function B(e) {
     ((M += 1), (w[e] = M));
 }
 function V(e) {
-    (j(e) === g.default.getId() && (0, h.G)(W(e)), delete b[e]);
+    (j(e) === g.default.getId() && (0, h.G)(W(e)), delete v[e]);
 }
 function H(e, t) {
     let n = [];
@@ -109,8 +109,8 @@ function K(e) {
             displayNameStyles: p,
             gamingLeaderboardData: m,
         } = e,
-        { colorString: S, colorStrings: N, colorRoleId: C, iconRoleId: R, hoistRoleId: y, highestRoleId: v } = Y(l, o),
-        b = {
+        { colorString: S, colorStrings: N, colorRoleId: C, iconRoleId: R, hoistRoleId: y, highestRoleId: b } = Y(l, o),
+        v = {
             userId: t,
             nick: n,
             guildId: i,
@@ -122,7 +122,7 @@ function K(e) {
             colorRoleId: C,
             iconRoleId: R,
             hoistRoleId: y,
-            highestRoleId: v,
+            highestRoleId: b,
             premiumSince: d,
             isPending: c,
             joinedAt: u,
@@ -135,22 +135,22 @@ function K(e) {
             gamingLeaderboardData: m,
         };
     if (
-        ((0, a.Lt)(b.flags ?? 0, O.D.IS_GUEST) && (b.flags = (0, a.UI)(b.flags ?? 0, O.D.BYPASSES_VERIFICATION)),
+        ((0, a.Lt)(v.flags ?? 0, O.D.IS_GUEST) && (v.flags = (0, a.UI)(v.flags ?? 0, O.D.BYPASSES_VERIFICATION)),
         null == L[i])
     )
-        return b;
+        return v;
     if (t === g.default.getId())
         if (I.A.isViewingRoles(i) || I.A.isFullServerPreview(i)) {
             let e = I.A.getViewingRoles(i);
-            D[i] = { ...b, ...I.A.getMemberOptions(i), roles: null != e ? T.default.keys(e) : [] };
+            D[i] = { ...v, ...I.A.getMemberOptions(i), roles: null != e ? T.default.keys(e) : [] };
         } else null != D[i] && delete D[i];
-    return b;
+    return v;
 }
 function $(e) {
     for (let t of e)
         if (
             null != t.member &&
-            (null == v[t.id] ? (v[t.id] = t.member) : (v[t.id] = { ...t.member, roles: t.member.roles }),
+            (null == b[t.id] ? (b[t.id] = t.member) : (b[t.id] = { ...t.member, roles: t.member.roles }),
             null != L[t.id])
         ) {
             let e = L[t.id];
@@ -466,7 +466,7 @@ class eo extends s.Ay.Store {
         return ((y[e] = i), i);
     }
     getCachedSelfMember(e) {
-        return v[e] ?? null;
+        return b[e] ?? null;
     }
     getNick(e, t) {
         if (null == e || null == t) return null;
@@ -474,7 +474,7 @@ class eo extends s.Ay.Store {
         return null != n ? n.nick : null;
     }
     getCommunicationDisabledUserMap() {
-        return b;
+        return v;
     }
     getCommunicationDisabledVersion() {
         return M;
@@ -494,7 +494,7 @@ class eo extends s.Ay.Store {
 let ed = new eo(l.h, {
     CONNECTION_OPEN: function (e) {
         (P ? (P = !1) : ((L = {}), (y = {})),
-            (b = {}),
+            (v = {}),
             e.guilds.forEach((e) => {
                 J(e);
             }));
@@ -514,7 +514,7 @@ let ed = new eo(l.h, {
     },
     CACHE_LOADED: function (e) {
         let { guildMembers: t, guilds: n } = e;
-        ((P = !0), (L = { ...t }), (y = {}), (v = {}), $(n));
+        ((P = !0), (L = { ...t }), (y = {}), (b = {}), $(n));
     },
     CACHE_LOADED_LAZY: function (e) {
         let { guilds: t } = e;

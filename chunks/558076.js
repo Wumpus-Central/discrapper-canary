@@ -1,4 +1,4 @@
-n.d(t, { A: () => v, i: () => c });
+n.d(t, { A: () => b, i: () => c });
 var i = n(17928),
     r = n(73153),
     a = n(280450),
@@ -88,7 +88,7 @@ class D extends i.Ay.PersistedStore {
         return g;
     }
 }
-let v = new D(r.h, {
+let b = new D(r.h, {
     GUILD_ROOM_CONNECT: function (e) {
         let { room: t, guildId: n } = e,
             { users: i, objects: r, ...a } = t;

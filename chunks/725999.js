@@ -55,8 +55,8 @@ var h = n(582128),
     L = n(737005),
     y = n.n(L),
     D = n(731854);
-let v = null != navigator.mediaDevices && null != navigator.mediaDevices.enumerateDevices,
-    b = v && "setSinkId" in HTMLAudioElement.prototype;
+let b = null != navigator.mediaDevices && null != navigator.mediaDevices.enumerateDevices,
+    v = b && "setSinkId" in HTMLAudioElement.prototype;
 function P(e) {
     return { id: D.dx, type: e, index: 0, name: "Default" };
 }
@@ -76,12 +76,12 @@ function U(e, t) {
     };
 }
 async function w() {
-    if (!v) return M();
+    if (!b) return M();
     try {
         let e = await navigator.mediaDevices.enumerateDevices(),
             { [D.oh.AUDIO_INPUT]: t = [], [D.oh.AUDIO_OUTPUT]: n = [], [D.oh.VIDEO_INPUT]: i = [] } = y()(e, "kind"),
             [r, a, s] = [t, n, i].map((e) => e.map(U));
-        return { [D.oh.AUDIO_INPUT]: r, [D.oh.AUDIO_OUTPUT]: b ? a : [P(D.oh.AUDIO_OUTPUT)], [D.oh.VIDEO_INPUT]: s };
+        return { [D.oh.AUDIO_INPUT]: r, [D.oh.AUDIO_OUTPUT]: v ? a : [P(D.oh.AUDIO_OUTPUT)], [D.oh.VIDEO_INPUT]: s };
     } catch {
         return M();
     }
@@ -665,7 +665,7 @@ class er extends p.A {
         if (null != e) {
             ((e.muted = this._mute), (e.volume = this._volume / 100));
             let t = this.sinkId;
-            null != t && b && e.setSinkId(t);
+            null != t && v && e.setSinkId(t);
         }
     }
 }
@@ -1476,7 +1476,7 @@ function eD(e, t) {
         r = RegExp(`^a=ice|a=extmap|a=fingerprint|opus|VP8|${i?.rtxPayloadType ?? 0} rtx`, "i");
     return { sdp: [...new Set(e.split(/\r\n/).filter((e) => r.test(e)))].join("\n"), codecs: n };
 }
-function ev(e) {
+function eb(e) {
     if (!e.includes("a=fingerprint")) return (eT.error("Remote SDP does not include fingerprint!"), !1);
     if (!e.includes("a=ice-ufrag")) return (eT.error("Remote SDP does not include ICE user name!"), !1);
     if (!e.includes("a=ice-pwd")) return (eT.error("Remote SDP does not include ICE password!"), !1);
@@ -1489,7 +1489,7 @@ function ev(e) {
         .trim();
     return !(t.split(" ").length < 3) || (eT.error(`Incorrect c-line: ${t}`), !1);
 }
-function eb(e) {
+function ev(e) {
     return [...new Set(e.split(/\r\n/).filter((e) => e.startsWith("a=extmap:")))].map((e) => {
         let t = e.split(" ");
         return { value: parseInt(t[0].split("/")[0].substr(9), 10), uri: t[1] };
@@ -1541,7 +1541,7 @@ class eP extends R.EventEmitter {
         return this._sdp;
     }
     set sdp(e) {
-        if (!ev(e)) throw Error(`Incorrect SDP received from rtc-worker: ${e}`);
+        if (!eb(e)) throw Error(`Incorrect SDP received from rtc-worker: ${e}`);
         ((this._sdp = e),
             this.createAnswer(),
             (this.connected = !0),
@@ -2279,7 +2279,7 @@ class e1 extends eA {
         this.enableAudioNack = e > 0;
     }
     setSDP(e) {
-        if (!ev(e)) throw Error(`Incorrect SDP received from rtc-worker: ${e}`);
+        if (!eb(e)) throw Error(`Incorrect SDP received from rtc-worker: ${e}`);
         if ("have-local-offer" !== this.signalingState) throw Error(`Invalid signaling state ${this.signalingState}`);
         let { outboundStreams: t } = this.parseLocalDescription();
         ((this.sdp = e), this.setRemoteAnswer(t, [], [], new Map()));
@@ -2557,7 +2557,7 @@ class e1 extends eA {
                 videoSSRC: a,
                 rtxSSRC: s,
             } = ey(t, this.experimentFlags.has(D.fd.BROWSER_HEVC)),
-            l = eb(t);
+            l = ev(t);
         return { sdp: t, outboundStreams: n, codecs: i, audioSSRC: r, videoSSRC: a, rtxSSRC: s, extensions: l };
     }
     addTransceivers(e, t, n, i) {
@@ -2879,7 +2879,7 @@ class e3 extends eA {
                 let { sdp: n } = e,
                     { outboundStreams: i, codecs: r, audioSSRC: a, videoSSRC: s, rtxSSRC: l } = ey(n, !1);
                 this.codecs = r;
-                let o = eb(n);
+                let o = ev(n);
                 ((t.outboundStreams = i),
                     (this.audioSSRC = a),
                     (t.extensions = o),
@@ -3253,9 +3253,9 @@ class ts extends p.A {
     supports(e) {
         switch (e) {
             case D.O5.AUDIO_INPUT_DEVICE:
-                return v;
-            case D.O5.AUDIO_OUTPUT_DEVICE:
                 return b;
+            case D.O5.AUDIO_OUTPUT_DEVICE:
+                return v;
             case D.O5.VIDEO:
                 return e_.g7;
             case D.O5.DESKTOP_CAPTURE:

@@ -3,18 +3,18 @@ var i = n(477900),
     a = n(582128),
     r = n(325652),
     l = n(829617),
-    s = n(565088),
-    o = n(712620),
+    o = n(565088),
+    s = n(712620),
     d = n(617824),
     c = n(869712),
     u = n(105292),
     m = n(635088);
 function f() {
-    let e = (0, s.A)("useThirdPartyPartnerPerkCards");
+    let e = (0, o.A)("useThirdPartyPartnerPerkCards");
     return (0, a.useMemo)(() => {
         if (e === l.b.NONE) return null;
         let t = {
-            id: o.nj,
+            id: s.nj,
             title: u.intl.string(c.default.ugfqKp),
             caption: (0, i.jsx)("img", { src: m.A, alt: "Call of Duty: MW4" }),
             backgroundAssetUrl:
@@ -23,15 +23,15 @@ function f() {
         return e === l.b.ALMOST_HERE
             ? {
                   ...t,
-                  description: u.intl.formatToPlainString(c.default["Y/4agX"], { date: o.kX }),
+                  description: u.intl.formatToPlainString(c.default["Y/4agX"], { date: s.kX }),
                   pillText: u.intl.string(c.default.UvhjEc),
               }
             : {
                   ...t,
-                  description: u.intl.formatToPlainString(c.default.D3CWUF, { date: o.kX }),
+                  description: u.intl.formatToPlainString(c.default.D3CWUF, { date: s.kX }),
                   pillText: u.intl.string(d.default.OejyCi),
                   phase: r.L.TEASER,
-                  teaserEndsAt: o.kX,
+                  teaserEndsAt: s.kX,
               };
     }, [e]);
 }

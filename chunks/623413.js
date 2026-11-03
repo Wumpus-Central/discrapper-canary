@@ -6,8 +6,8 @@ var i = t(477900),
     r = t(834730),
     o = t(821609),
     c = t(730852),
-    u = t(198052),
-    d = t(164617),
+    d = t(198052),
+    u = t(164617),
     A = t(47167),
     h = t(202384),
     m = t(51758),
@@ -27,32 +27,30 @@ let v = function (e) {
         }, [t.id, t.guild_id, N]),
         T = n.filter((e) => e.type === f.wY.VOICE),
         b = (0, A.Ay)(t),
-        S = 4 === T.length ? 2 : 3,
-        y = (0, s.yK)([u.A], () => T.map((e) => u.A.getParticipant(t.id, e.id)).filter(C.Vq), [t.id, T]);
+        y = 4 === T.length ? 2 : 3,
+        S = (0, s.yK)([d.A], () => T.map((e) => d.A.getParticipant(t.id, e.id)).filter(C.Vq), [t.id, T]);
     return (0, i.jsxs)("div", {
         className: I.kL,
         children: [
             (0, i.jsx)(x.A, {}),
             (0, i.jsx)("div", {
                 className: I.os,
-                style: { maxWidth: 168 * S },
-                children: y
-                    .slice(0, 5)
-                    .map((e) =>
-                        (0, i.jsx)(
-                            g.Ay,
-                            {
-                                participant: e,
-                                channel: t,
-                                className: I.Vs,
-                                inCall: !0,
-                                noVideoRender: !0,
-                                popoutType: d.N.NO_POPOUT,
-                                width: 48,
-                            },
-                            e.id,
-                        ),
+                style: { maxWidth: 168 * y },
+                children: S.slice(0, 5).map((e) =>
+                    (0, i.jsx)(
+                        g.Ay,
+                        {
+                            participant: e,
+                            channel: t,
+                            className: I.Vs,
+                            inCall: !0,
+                            noVideoRender: !0,
+                            popoutType: u.N.NO_POPOUT,
+                            width: 48,
+                        },
+                        e.id,
                     ),
+                ),
             }),
             (0, i.jsx)(a.D, { className: I.HA, variant: "heading-xxl/medium", children: b }),
             (0, i.jsx)("div", {

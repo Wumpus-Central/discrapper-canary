@@ -1,4 +1,4 @@
-n.d(t, { Av: () => b, uz: () => D, d1: () => y, kv: () => L, nL: () => P, rK: () => v, TT: () => C });
+n.d(t, { Av: () => v, uz: () => D, d1: () => y, kv: () => L, nL: () => P, rK: () => b, TT: () => C });
 var i = n(77729);
 n(321073);
 var r = n(87955),
@@ -385,11 +385,11 @@ async function D() {
     let { misspelledWord: n, corrections: i } = t.getCachedMisspelling();
     return { misspelledWord: n, corrections: i.slice(0, e) };
 }
-async function v(e) {
+async function b(e) {
     let t = await O;
     null != t && t.replaceMisspelling(e);
 }
-function b(e) {
+function v(e) {
     null != R && R.setAppLocale(e);
 }
 function P(e) {

@@ -78,11 +78,11 @@ function p() {
     let L = N && t === f.nQ.CLIP ? f.nQ.VOICE_CLIP : t,
         y = Date.now(),
         D = a.A.ntpClock?.getSyncInfo(),
-        v = D?.synced === !0 ? y + D.offsetMs : void 0;
+        b = D?.synced === !0 ? y + D.offsetMs : void 0;
     return {
         id: (0, i.A)(),
         createdAt: y,
-        syncTimestamp: v,
+        syncTimestamp: b,
         version: f.kd,
         applicationName: T ?? I.intl.string(I.t.qtSJxb),
         applicationId: g,

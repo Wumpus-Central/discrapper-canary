@@ -13,13 +13,13 @@ n.d(t, {
     b8: () => T,
     dD: () => g,
     lV: () => p,
-    nN: () => v,
+    nN: () => b,
     o_: () => C,
     om: () => N,
     t_: () => _,
     tq: () => f,
     vj: () => A,
-    w0: () => b,
+    w0: () => v,
 });
 var i,
     r,
@@ -59,6 +59,6 @@ var R = (((l = {})[(l.EVENT_INFO = 0)] = "EVENT_INFO"), (l[(l.RSVP_LIST = 1)] = 
 let L = 100,
     y = 2 * c.A.Millis.DAY,
     D = 12 * c.A.Millis.HOUR,
-    v = 4;
-var b = (((o = {}).NEW_EVENT = "Upcoming Event Notice"), (o.EVENT_STARTING_SOON = "Event Starting Soon Notice"), o),
+    b = 4;
+var v = (((o = {}).NEW_EVENT = "Upcoming Event Notice"), (o.EVENT_STARTING_SOON = "Event Starting Soon Notice"), o),
     P = (((d = {})[(d.UNINTERESTED = 0)] = "UNINTERESTED"), (d[(d.INTERESTED = 1)] = "INTERESTED"), d);

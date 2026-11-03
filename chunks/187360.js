@@ -4,8 +4,8 @@ var l = t(477900),
     a = t(17928),
     s = t(265872),
     r = t(780338),
-    c = t(782603),
-    o = t(832712),
+    o = t(782603),
+    c = t(832712),
     u = t(543465),
     d = t(625494),
     h = t(477427),
@@ -22,9 +22,9 @@ function j(e) {
             [n],
         ),
         [x, N] = i.useState(!1);
-    function C(e) {
+    function b(e) {
         e.shiftKey
-            ? o.A.updateChannelOverrideSettings({
+            ? c.A.updateChannelOverrideSettings({
                   guildId: n.guild_id,
                   channelId: n.id,
                   settings: { muted: !j },
@@ -43,7 +43,7 @@ function j(e) {
             }
         );
     }, []);
-    let b = p.intl.string(p.t.h850Ss);
+    let C = p.intl.string(p.t.h850Ss);
     return (0, l.jsx)(s.Y, {
         targetElementRef: t,
         shouldShow: x,
@@ -60,10 +60,10 @@ function j(e) {
             return (0, l.jsx)(g.Ay.Icon, {
                 ...e,
                 ref: t,
-                onClick: C,
-                tooltip: i ? null : b,
-                icon: j || f !== m.orn.ALL_MESSAGES ? r.BellSlashIcon : c.BellIcon,
-                "aria-label": b,
+                onClick: b,
+                tooltip: i ? null : C,
+                icon: j || f !== m.orn.ALL_MESSAGES ? r.BellSlashIcon : o.BellIcon,
+                "aria-label": C,
                 selected: i,
             });
         },

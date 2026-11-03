@@ -41,7 +41,7 @@ function C(e) {
     return g.get(e);
 }
 function O(e) {
-    ((v[e.joinRequestId] = e),
+    ((b[e.joinRequestId] = e),
         g.set(e.joinRequestId, e),
         (0, c.ar)(e.applicationStatus) && (N.delete(e.joinRequestId), S.set(e.joinRequestId, e)),
         (0, c.mf)(e.applicationStatus) && (S.delete(e.joinRequestId), N.set(e.joinRequestId, e)));
@@ -57,15 +57,15 @@ function R(e) {
 let L = {},
     y = {},
     D = {},
-    v = {},
-    b = 10 * d.A.Seconds.MINUTE;
+    b = {},
+    v = 10 * d.A.Seconds.MINUTE;
 class P extends a.Ay.Store {
     initialize() {
         this.waitFor(o.default);
     }
     static displayName = "GuildJoinRequestStoreV2";
     getRequest(e) {
-        return v[e];
+        return b[e];
     }
     getRequests(e, t) {
         let n = m(e, t);
@@ -80,7 +80,7 @@ class P extends a.Ay.Store {
     hasFetched(e) {
         if (!E.has(e)) return !1;
         let t = E.get(e);
-        return null != t && r()().diff(t, "seconds") < b;
+        return null != t && r()().diff(t, "seconds") < v;
     }
     getSelectedApplicationTab(e) {
         let t = u.B5.SUBMITTED;
@@ -126,7 +126,7 @@ let M = new P(l.h, {
     GUILD_JOIN_REQUEST_DELETE: function (e) {
         let { id: t, guildId: n } = e,
             i = C(t);
-        null != i && (f(n, "DELETED", i.applicationStatus), delete v[t], g.delete(t), S.delete(t), N.delete(t));
+        null != i && (f(n, "DELETED", i.applicationStatus), delete b[t], g.delete(t), S.delete(t), N.delete(t));
     },
     GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: function (e) {
         let { guildId: t, applicationTab: n } = e;

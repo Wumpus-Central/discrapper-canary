@@ -34,7 +34,7 @@ function D(e) {
     let r = g.A.getGuild(e);
     return null == r ? p.x3 : (O[e] = p.cc({ user: i, context: r, checkElevated: t }));
 }
-function v(e) {
+function b(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = S.default.getCurrentUser();
     if (null == n) return p.x3;
@@ -46,10 +46,10 @@ function v(e) {
         ? D(a)
         : p.cc({ user: n, context: i, checkElevated: t });
 }
-function b(e) {
+function v(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = R[e];
-    return null != n ? n : (R[e] = v(e, t));
+    return null != n ? n : (R[e] = b(e, t));
 }
 function P(e) {
     null != e && (L[e] = (L[e] ?? 0) + 1);
@@ -115,7 +115,7 @@ function H(e, t, n, i) {
             let r = m.A.getChannel(e.parent_id);
             return null == r ? p.x3 : p.TJ(e, H(r, t, n, i), u.A.hasJoined(e.id), T.Ay.isCurrentUserGuest(e.guild_id));
         }
-        r = b(e.id);
+        r = v(e.id);
     } else (0, I.fh)(e) && (r = D(e.id));
     return void 0 !== t || void 0 !== n || void 0 !== i
         ? p.cc({
@@ -134,7 +134,7 @@ class j extends s.Ay.Store {
         this.waitFor(m.A, T.Ay, g.A, o.A, u.A, d.A, c.A, S.default);
     }
     getChannelPermissions(e) {
-        return E.Le.has(e.type) ? v(e.id) : b(e.id);
+        return E.Le.has(e.type) ? b(e.id) : v(e.id);
     }
     getGuildPermissions(e) {
         return D(e.id);

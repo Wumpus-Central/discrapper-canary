@@ -4,10 +4,10 @@ n.d(t, {
     Oj: () => F,
     o2: () => U,
     fu: () => M,
-    ER: () => v,
+    ER: () => b,
     Ay: () => x,
     ZD: () => B,
-    de: () => b,
+    de: () => v,
     Bk: () => w,
     ZA: () => i,
 });
@@ -77,10 +77,10 @@ var r,
     L = n(615550),
     y = n(652215),
     D = n(105292);
-function v(e) {
+function b(e) {
     return e.type === y.lAJ.AUTO_MODERATION_ACTION;
 }
-function b(e) {
+function v(e) {
     return e.embeds?.some((e) => {
         let { type: t } = e;
         return t === y.Auw.AUTO_MODERATION_NOTIFICATION;

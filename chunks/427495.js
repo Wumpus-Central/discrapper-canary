@@ -5,7 +5,7 @@
     N1: () => ei,
     xB: () => eL,
     Yb: () => eA,
-    IV: () => eb,
+    IV: () => ev,
     Oq: () => eo,
     r8: () => eS,
     lk: () => eE,
@@ -25,7 +25,7 @@
     vD: () => ee,
     qV: () => eU,
     HA: () => em,
-    Yf: () => ev,
+    Yf: () => eb,
     Ov: () => en,
     QG: () => eg,
     Zb: () => eP,
@@ -62,13 +62,13 @@ var i,
     L = n(927813),
     y = n(38405),
     D = n(499785),
-    v = n(789999),
-    b = n(322683),
+    b = n(789999),
+    v = n(322683),
     P = n(652215);
 function M(e) {
     if (Math.random() > 0.1) return;
     let t = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
-        n = (0, b.O)();
+        n = (0, v.O)();
     R.default.track(P.HAw.EARNED_DECISION_ROUNDTRIP, {
         ...(0, p.A)(),
         endpoint: e.endpoint,
@@ -79,7 +79,7 @@ function M(e) {
         caller_source: e.callerSource,
         request_id: e.requestId,
         fetched_at: e.fetchedAt,
-        is_foregrounded: (0, v.R)(),
+        is_foregrounded: (0, b.R)(),
     });
 }
 class U {
@@ -115,7 +115,7 @@ var G = n(260364);
 function x(e, t, n) {
     if (Math.random() > 0.1) return;
     let i = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
-        r = (0, b.O)();
+        r = (0, v.O)();
     R.default.track(P.HAw.QUEST_DECISION_ROUNDTRIP, {
         ...(0, p.A)(),
         endpoint: e.endpoint,
@@ -129,7 +129,7 @@ function x(e, t, n) {
         previous_ad_request_id: e.previousAdDecision?.adDecisionData?.decision_id ?? null,
         previous_fetched_at: e.previousAdDecision?.fetchedAt ?? null,
         transition_case: t,
-        is_foregrounded: (0, v.R)(),
+        is_foregrounded: (0, b.R)(),
     });
 }
 class k {
@@ -570,13 +570,13 @@ async function eS(e, t) {
                 return t?.parentId == null || N.A.isFolderExpanded(t.parentId);
             }).slice(0, 50),
             D = A.enabled ? y : void 0,
-            v = new URLSearchParams({ placement: String(e) });
-        (c?.uuid != null && v.append("client_heartbeat_session_id", c.uuid),
-            null != E.uuid && v.append("client_ad_session_id", E.uuid),
-            null != D && D.forEach((e) => v.append("visible_guild_ids", e)));
-        let b = (
+            b = new URLSearchParams({ placement: String(e) });
+        (c?.uuid != null && b.append("client_heartbeat_session_id", c.uuid),
+            null != E.uuid && b.append("client_ad_session_id", E.uuid),
+            null != D && D.forEach((e) => b.append("visible_guild_ids", e)));
+        let v = (
                 await l.Bo.get({
-                    url: `${P.Rsh.QUEST_FETCH_QUEST_TO_DELIVER}?${v.toString()}`,
+                    url: `${P.Rsh.QUEST_FETCH_QUEST_TO_DELIVER}?${b.toString()}`,
                     rejectWithError: !1,
                     context: { connection_type: C.A.getType() },
                 })
@@ -586,7 +586,7 @@ async function eS(e, t) {
             ? (M = $.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" }).enabled)
             : e === H.p9.DESKTOP_ACCOUNT_PANEL_AREA &&
               (M = W.w.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" }).enabled);
-        let U = b.creative?.creative_type !== a.p.BOUNTY || M ? b.creative : null,
+        let U = v.creative?.creative_type !== a.p.BOUNTY || M ? v.creative : null,
             w = null,
             x = null;
         if (null != U)
@@ -622,7 +622,7 @@ async function eS(e, t) {
                     x = U.creative_content?.ad_content_id ?? null;
             }
         else {
-            let e = b.quest;
+            let e = v.quest;
             null != e && ((d = (0, q.Yn)(e)), (w = { type: a.p.QUEST, questId: d.id }));
         }
         (o.h.dispatch({
@@ -632,26 +632,26 @@ async function eS(e, t) {
             isNoFill: U?.creative_type === a.p.NO_FILL,
             noFillAdContentId: x,
             adDecisionData: {
-                ad_id: b.ad_identifiers?.ad_id,
-                adset_id: b.ad_identifiers?.adset_id,
-                ad_set_id: b.ad_identifiers?.ad_set_id,
-                campaign_id: b.ad_identifiers?.campaign_id,
-                creative_id: b.ad_identifiers?.creative_id,
-                creative_type: b.ad_identifiers?.creative_type,
-                decision_id: b.request_id,
-                is_targeted: null != b.ad_identifiers,
+                ad_id: v.ad_identifiers?.ad_id,
+                adset_id: v.ad_identifiers?.adset_id,
+                ad_set_id: v.ad_identifiers?.ad_set_id,
+                campaign_id: v.ad_identifiers?.campaign_id,
+                creative_id: v.ad_identifiers?.creative_id,
+                creative_type: v.ad_identifiers?.creative_type,
+                decision_id: v.request_id,
+                is_targeted: null != v.ad_identifiers,
             },
-            metadataSealed: b.metadata_sealed,
-            trafficMetadataSealed: b.traffic_metadata_sealed,
-            provenanceMetadataSealed: b.provenance_metadata_sealed,
-            adContext: b.ad_context,
-            responseTtlSeconds: b.response_ttl_seconds,
+            metadataSealed: v.metadata_sealed,
+            trafficMetadataSealed: v.traffic_metadata_sealed,
+            provenanceMetadataSealed: v.provenance_metadata_sealed,
+            adContext: v.ad_context,
+            responseTtlSeconds: v.response_ttl_seconds,
             placement: e,
             fetchedAt: n,
         }),
             F.recordQuestRequestApiResponse(i, {
                 wasSuccessful: !0,
-                adRequestId: String(b.request_id),
+                adRequestId: String(v.request_id),
                 currentCreative: w,
                 currentFetchedAt: n,
             }));
@@ -664,7 +664,7 @@ async function eS(e, t) {
                 ad_content_id: V,
                 creative_type: w.type,
                 caller_source: t,
-                ad_request_id: String(b.request_id),
+                ad_request_id: String(v.request_id),
             }));
     } catch (r) {
         (F.recordQuestRequestApiResponse(i, { wasSuccessful: !1, currentFetchedAt: n }),
@@ -764,7 +764,7 @@ async function ey(e) {
     }
 }
 let eD = 5 * L.A.Millis.MINUTE;
-async function ev() {
+async function eb() {
     let e = H.p9.QUEST_HOME_BANNER_DESKTOP;
     if (c.A.isFetchingAdToDeliverByPlacement(e) || !c.A.canRefreshAd(e)) return;
     let t = c.A.getLastFetchedQuestHomeHero();
@@ -812,7 +812,7 @@ async function ev() {
         throw (o.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_FAILURE", error: new d.A(t), placement: e }), t);
     }
 }
-async function eb(e) {
+async function ev(e) {
     let t = H.p9.QUEST_HOME_BANNER_DESKTOP,
         n = Date.now();
     o.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN", placement: t });

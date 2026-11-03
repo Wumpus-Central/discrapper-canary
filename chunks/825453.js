@@ -14,11 +14,11 @@ var i = n(582128),
     x = n(576705),
     p = n(287809),
     A = n(403362),
-    f = n(803378),
-    b = n(200662),
+    b = n(803378),
+    f = n(200662),
     j = n(652215);
 function N(e, t, n) {
-    let l = (0, o.bG)([f.A], () => f.A.getApplicationPermissions()),
+    let l = (0, o.bG)([b.A], () => b.A.getApplicationPermissions()),
         a = i.useMemo(() => {
             var t;
             let n, i, s, a;
@@ -26,31 +26,31 @@ function N(e, t, n) {
                 (t = e),
                 (n = { ...(l ?? {}) }),
                 (i = (0, u.Ap)(t)),
-                (s = (0, b.Eu)(i, d.RA.CHANNEL)),
-                (a = (0, b.Eu)(t, d.RA.ROLE)) in n || (n[a] = { id: t, permission: !0, type: d.RA.ROLE }),
+                (s = (0, f.Eu)(i, d.RA.CHANNEL)),
+                (a = (0, f.Eu)(t, d.RA.ROLE)) in n || (n[a] = { id: t, permission: !0, type: d.RA.ROLE }),
                 s in n || (n[s] = { id: i, permission: !0, type: d.RA.CHANNEL }),
                 n
             );
         }, [l, e]),
         N = (0, o.bG)(
-            [f.A],
+            [b.A],
             () => {
                 if (null == n) return;
-                let e = f.A.getCommand(n);
+                let e = b.A.getCommand(n);
                 return e?.permissions ?? {};
             },
             [n],
         ),
-        E = (0, o.bG)([f.A], () => (null == n ? f.A.getEditedApplication() : f.A.getEditedCommand()?.permissions), [n]),
+        E = (0, o.bG)([b.A], () => (null == n ? b.A.getEditedApplication() : b.A.getEditedCommand()?.permissions), [n]),
         C = n ?? t,
         v = null != n ? N : a,
         T = i.useMemo(() => E ?? { ...(v ?? {}) }, [E, v]),
         I = i.useMemo(() => Object.keys(T).length, [T]),
-        S = i.useMemo(() => (null == v || null == T ? null : !r().isEqual(v, T)), [v, T]);
+        y = i.useMemo(() => (null == v || null == T ? null : !r().isEqual(v, T)), [v, T]);
     return (
         i.useEffect(() => {
-            C === t && (S ? c.A.startEditingCommandPermissions(C) : c.A.stopEditingCommandPermissions(C));
-        }, [t, S, C]),
+            C === t && (y ? c.A.startEditingCommandPermissions(C) : c.A.stopEditingCommandPermissions(C));
+        }, [t, y, C]),
         {
             originalApplicationPermissions: a,
             originalCommandPermissions: N,
@@ -63,8 +63,8 @@ function N(e, t, n) {
                 let r = a === n.ownerId,
                     {
                         channelIds: c,
-                        roleIds: f,
-                        userIds: b,
+                        roleIds: b,
+                        userIds: f,
                     } = i.useMemo(() => {
                         let e = [],
                             n = [],
@@ -100,23 +100,23 @@ function N(e, t, n) {
                         [g.A],
                         () =>
                             Object.fromEntries(
-                                f
+                                b
                                     .map((t) => g.A.getRole(e, t))
                                     .filter(A.Vq)
                                     .map((e) => [e.id, e]),
                             ),
-                        [f, e],
+                        [b, e],
                     ),
                     C = (0, o.cf)(
                         [p.default],
                         () =>
                             Object.fromEntries(
-                                b
+                                f
                                     .map(p.default.getUser)
                                     .filter(A.Vq)
                                     .map((e) => [e.id, e]),
                             ),
-                        [b],
+                        [f],
                     );
                 return i.useMemo(() => {
                     let e = n.id,
@@ -152,7 +152,7 @@ function N(e, t, n) {
                     return s;
                 }, [N, n, l, r, t, E, C]);
             })(e, T),
-            hasChanges: S,
+            hasChanges: y,
             selectedPermissionCount: I,
         }
     );

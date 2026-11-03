@@ -37,17 +37,17 @@ var i = n(477900),
     j = n(363487),
     v = n(828162),
     G = n(72377),
-    R = n(565553),
-    y = n(168900),
+    y = n(565553),
+    R = n(168900),
     M = n(285828);
 function T(e) {
     let { powerup: t, eventTargetRef: n, className: l } = e,
         s = { eventTargetRef: n, fit: "contain", className: l };
     switch (t.skuId) {
         case a.ec:
-            return (0, i.jsx)(R.t, { ...s });
+            return (0, i.jsx)(y.t, { ...s });
         case a.RV:
-            return (0, i.jsx)(y.J, { ...s });
+            return (0, i.jsx)(R.J, { ...s });
         case a.YG:
             return (0, i.jsx)(M.z, { ...s });
         default:

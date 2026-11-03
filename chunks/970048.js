@@ -29,15 +29,15 @@ function D(e) {
     let t = f.A.getConnectionStats(e);
     return null == t ? null : (t.stats.rtp.outbound.find((e) => "video" === e.type) ?? null);
 }
-function v(e, t) {
+function b(e, t) {
     if (null == t) return null;
     let n = f.A.getConnectionStats(e);
     if (null == n) return null;
     let i = n.stats.rtp.inbound[t];
     return null == i ? null : (i.find((e) => "video" === e.type) ?? null);
 }
-function b(e, t, n) {
-    return e ? D(t) : v(t, n);
+function v(e, t, n) {
+    return e ? D(t) : b(t, n);
 }
 var P = n(161518),
     M = n(927813),
@@ -456,10 +456,10 @@ class J extends r.A {
                             num_frames: n?.num_frames ?? 0,
                             num_packets: n?.num_packets ?? 0,
                             num_bytes: n?.num_bytes ?? 0,
-                            num_packets_lost: b(et, ea, ei)?.packetsLost ?? 0,
-                            video_codec: G ?? (0, _.aV)(b(et, ea, ei)?.codec.name) ?? null,
+                            num_packets_lost: v(et, ea, ei)?.packetsLost ?? 0,
+                            video_codec: G ?? (0, _.aV)(v(et, ea, ei)?.codec.name) ?? null,
                             video_encoder: x ?? (0, _.kZ)(D(ea)?.encoderImplementationName) ?? null,
-                            video_decoder: k ?? (0, _.s7)(v(ea, ei)?.decoderImplementationName) ?? null,
+                            video_decoder: k ?? (0, _.s7)(b(ea, ei)?.decoderImplementationName) ?? null,
                             audio_capture_sample_rate_mismatch_percent: F ?? null,
                             audio_capture_processing_sample_rate:
                                 f.A.getConnectionStats(ea)?.stats.rtp.outbound.find((e) => "audio" === e.type)
@@ -469,9 +469,9 @@ class J extends r.A {
                             voice_processing_sample_rate: W?.sampleRate ?? null,
                             voice_processing_setup_count: W?.setupCount ?? null,
                             incoming_video_stopped_for_occlusion: !E.X.isIncomingVideoEnabled(),
-                            bitrate: b(et, ea, ei)?.bitrate ?? null,
+                            bitrate: v(et, ea, ei)?.bitrate ?? null,
                             target_bitrate: et ? (D(ea)?.bitrateTarget ?? null) : null,
-                            fps: (et ? (D(en)?.frameRateEncode ?? null) : (v(en, ei)?.frameRateDecode ?? null)) ?? null,
+                            fps: (et ? (D(en)?.frameRateEncode ?? null) : (b(en, ei)?.frameRateDecode ?? null)) ?? null,
                             target_fps: en === y.x.STREAM && et ? q : null,
                             sender_user_id: Y?.ownerId ?? null,
                             stream_region: K?.getRegion() ?? null,

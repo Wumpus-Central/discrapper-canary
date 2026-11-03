@@ -26,8 +26,8 @@ var i = n(477900),
     L = n(287809),
     y = n(795816),
     D = n(933958),
-    v = n(851907),
-    b = n(838274),
+    b = n(851907),
+    v = n(838274),
     P = n(536246),
     M = n(108959),
     U = n(156954),
@@ -45,17 +45,17 @@ function Y(e) {
     let { channel: t, isLoading: n } = e,
         [a, E] = r.useState(!1),
         A = (0, l.bG)([D.Ay], () => D.Ay.getCurrentEmbeddedActivity()),
-        b = A?.applicationId,
-        Y = (0, l.bG)([D.Ay], () => null != b && D.Ay.isProxyTicketRefreshing(b), [b]),
+        v = A?.applicationId,
+        Y = (0, l.bG)([D.Ay], () => null != v && D.Ay.isProxyTicketRefreshing(v), [v]),
         K = (0, l.bG)([D.Ay], () => D.Ay.getActivityPanelMode()),
-        $ = (0, h.h)(b),
+        $ = (0, h.h)(v),
         z = A?.launchId,
         X = (0, l.bG)([R.Ay], () => R.Ay.getChannelId() === t?.id),
         { dockedRect: q, isHidden: Z } = (0, l.cf)([O.A], () => {
             let e = O.A.pipWindow;
             return { dockedRect: null != e ? O.A.getDockedRect(e.id) : null, isHidden: O.A.isEmbeddedActivityHidden() };
         }),
-        Q = (0, v.xi)({ channelId: t?.id }),
+        Q = (0, b.xi)({ channelId: t?.id }),
         {
             activityParticipant: J,
             selectedParticipant: ee,
@@ -100,11 +100,11 @@ function Y(e) {
     }
     if (
         (r.useEffect(() => {
-            if (null != b) {
+            if (null != v) {
                 let e = eu ? V.b.PIP : V.b.FOCUSED;
-                d.h.dispatch({ type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: e, applicationId: b });
+                d.h.dispatch({ type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: e, applicationId: v });
             }
-        }, [b, eu]),
+        }, [v, eu]),
         null == A || null == z || ((0, M.A)(t?.id) && null == J) || null == $ || !0 === A.renderInFramePool)
     )
         return null;
@@ -216,7 +216,7 @@ function Y(e) {
 let K = (e) => {
     let { channel: t, ...n } = e,
         r = D.Ay.getCurrentEmbeddedActivity();
-    (0, b.A)({ connectedEmbeddedActivity: r });
+    (0, v.A)({ connectedEmbeddedActivity: r });
     let { analyticsLocations: a } = (0, A.Ay)(E.A.ACTIVITY_PIP);
     return (0, i.jsx)(A.f5, { value: a, children: (0, i.jsx)(Y, { channel: t, isLoading: null == r, ...n }) });
 };

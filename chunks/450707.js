@@ -1,19 +1,19 @@
 n.d(t, { O: () => u, u: () => d });
 var i,
-    l = n(624793),
-    s = n(975571),
+    s = n(624793),
+    l = n(975571),
     a = n(652215),
     r = n(105292),
     o = n(765036),
     d = (((i = {}).GET_PREMIUM = "GET_PREMIUM"), (i.JOIN_GUILD = "JOIN_GUILD"), (i.UNAVAILABLE = "UNAVAILABLE"), i);
 function u(e) {
-    if (e.sourceType === l.rV.PACK)
+    if (e.sourceType === s.rV.PACK)
         return {
             type: "UNAVAILABLE",
             text: null,
             description: null,
             emojiDescription: r.intl.format(o.default["/jdd/7"], {
-                helpdeskArticle: s.A.getArticleURL(a.MVz.NITRO_EMOJI_PACKS),
+                helpdeskArticle: l.A.getArticleURL(a.MVz.NITRO_EMOJI_PACKS),
             }),
             analyticsType: "Custom Emoji Popout (Nitro Emoji Pack)",
         };
@@ -22,7 +22,7 @@ function u(e) {
                 sourceType: t,
                 expressionSourceApplication: n,
                 isPremium: i,
-                hasJoinedEmojiSourceGuild: s,
+                hasJoinedEmojiSourceGuild: l,
                 isUnusableRoleSubscriptionEmoji: a,
                 isDiscoverable: o,
                 emojiComesFromCurrentGuild: d,
@@ -31,10 +31,10 @@ function u(e) {
                 shouldHideRoleSubscriptionCTA: m,
                 onOpenPremiumSettings: x,
             } = e;
-            return t === l.rV.APPLICATION && null != n
+            return t === s.rV.APPLICATION && null != n
                 ? r.intl.formatToPlainString(r.t.uERlTd, { appName: n.name })
                 : i
-                  ? s
+                  ? l
                       ? c
                           ? m && a
                               ? r.intl.string(r.t.xFb68j)
@@ -49,7 +49,7 @@ function u(e) {
                       : o
                         ? r.intl.string(r.t.xE9WGt)
                         : r.intl.string(r.t["0LMpW+"])
-                  : s
+                  : l
                     ? m && a
                         ? r.intl.string(r.t.xFb68j)
                         : a
@@ -68,20 +68,20 @@ function u(e) {
                     isPremium: t,
                     hasJoinedEmojiSourceGuild: n,
                     isUnusableRoleSubscriptionEmoji: i,
-                    emojiComesFromCurrentGuild: l,
-                    isDiscoverable: s,
+                    emojiComesFromCurrentGuild: s,
+                    isDiscoverable: l,
                 } = e,
                 a = "Custom Emoji Popout";
             return (
-                t && !n && s
+                t && !n && l
                     ? (a = "Custom Emoji Popout (Cross-Server)")
                     : t || !n || i
                       ? t ||
                         n ||
-                        (a = s
+                        (a = l
                             ? "Custom Emoji Popout (Upsell Not-Joined Cross-Server)"
                             : "Custom Emoji Popout (Soft Upsell)")
-                      : (a = l
+                      : (a = s
                             ? "Custom Emoji Popout (Upsell Joined Current-Server)"
                             : "Custom Emoji Popout (Upsell Joined Cross-Server)"),
                 a
@@ -93,12 +93,12 @@ function u(e) {
                     isPremium: t,
                     hasJoinedEmojiSourceGuild: n,
                     isUnusableRoleSubscriptionEmoji: i,
-                    isDiscoverable: l,
+                    isDiscoverable: s,
                 } = e,
-                s = !n && l;
-            return t && s
+                l = !n && s;
+            return t && l
                 ? { type: "JOIN_GUILD", text: r.intl.string(r.t.riu2R5), description: null }
-                : !t && ((n && !i) || s)
+                : !t && ((n && !i) || l)
                   ? { type: "GET_PREMIUM", text: r.intl.string(r.t["gl/XHJ"]), description: null }
                   : { type: "UNAVAILABLE", text: null, description: null };
         })(e),

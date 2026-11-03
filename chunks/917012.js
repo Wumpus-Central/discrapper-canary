@@ -31,8 +31,8 @@ var h = n(838111),
     L = n(392054),
     y = n(73510),
     D = n(652215),
-    v = n(46013),
-    b = n(200700),
+    b = n(46013),
+    v = n(200700),
     P = n(381941),
     M = n(105292);
 let U = n(743361).A;
@@ -557,7 +557,7 @@ let G = {
                     },
                     required: !0,
                     get choices() {
-                        return (0, b.ny)().map((e) => ({ ...e, name: e.label, displayName: e.label }));
+                        return (0, v.ny)().map((e) => ({ ...e, name: e.label, displayName: e.label }));
                     },
                 },
                 {
@@ -699,7 +699,7 @@ let G = {
                     get displayDescription() {
                         return M.intl.string(M.t.pV214H);
                     },
-                    choices: v.s.map((e) => ({ name: `D${e}`, displayName: `D${e}`, value: e })),
+                    choices: b.s.map((e) => ({ name: `D${e}`, displayName: `D${e}`, value: e })),
                 },
             ],
             execute: (e, t) => {

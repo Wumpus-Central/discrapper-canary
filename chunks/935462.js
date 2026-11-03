@@ -1,4 +1,4 @@
-n.d(t, { $m: () => P, Dc: () => w, EO: () => v, WM: () => D, jl: () => M, rI: () => L, rQ: () => b, s_: () => U });
+n.d(t, { $m: () => P, Dc: () => w, EO: () => b, WM: () => D, jl: () => M, rI: () => L, rQ: () => v, s_: () => U });
 var i,
     r,
     a = n(477900),
@@ -26,7 +26,7 @@ var i,
     L = (((i = {}).SMALL = "small"), (i.MEDIUM = "medium"), (i.LARGE = "large"), (i.DYNAMIC = "dynamic"), i);
 let y = Object.freeze({ small: R.EX, medium: R.Y, large: R.as, dynamic: null });
 var D = (((r = {}).DEFAULT = "default"), (r.SUBTLE = "subtle"), r);
-function v(e) {
+function b(e) {
     let {
             transitionState: t,
             children: n,
@@ -48,7 +48,7 @@ function v(e) {
         properties: { variant: S },
     });
     let { reducedMotion: D } = s.useContext(E.C),
-        v = (0, A.z)(
+        b = (0, A.z)(
             {
                 opacity: +!!L,
                 transform: L || D.enabled || "subtle" === m ? "scale(1)" : "scale(0.7)",
@@ -57,7 +57,7 @@ function v(e) {
             },
             "animate-always",
         ),
-        b = s.useRef(null),
+        v = s.useRef(null),
         P = null != O["aria-label"],
         M = null != O["aria-labelledby"],
         U = s.useId(),
@@ -74,14 +74,14 @@ function v(e) {
             ...O,
             children: (0, a.jsx)(d.animated.div, {
                 className: o()(l, R.zr, y[i], { [R.z]: _, [R.vl]: !f }),
-                ref: b,
-                style: v,
-                children: (0, a.jsx)(h.xp, { containerRef: b, children: n }),
+                ref: v,
+                style: b,
+                children: (0, a.jsx)(h.xp, { containerRef: v, children: n }),
             }),
         }),
     });
 }
-function b(e) {
+function v(e) {
     let { headerId: t, headerIdIsManaged: n } = s.useContext(N.CP);
     return (0, a.jsx)(S.A, {
         grow: 0,

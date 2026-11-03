@@ -31,8 +31,8 @@ function m(e) {
         [i, m] = c.useState(!1),
         [d, o] = c.useState(!1),
         [S, f] = c.useState(!1),
-        g = (0, c.useRef)(null),
-        x = (0, c.useRef)(Date.now()),
+        x = (0, c.useRef)(null),
+        g = (0, c.useRef)(Date.now()),
         h = (0, c.useRef)(!1),
         v = (0, c.useCallback)(
             (e) => {
@@ -59,11 +59,11 @@ function m(e) {
             let e = t();
             if (null == e || null == a) return;
             let n = Date.now();
-            n - x.current < s ||
+            n - g.current < s ||
                 e - a.segmentStartSec < l / 1e3 ||
                 (v({ ...a, endTimeMs: n, segmentEndSec: e }),
                 u({ startTimeMs: n, endTimeMs: n, segmentStartSec: e, segmentEndSec: e }),
-                (x.current = n));
+                (g.current = n));
         }, [a, v, s, l, t]);
     ((0, c.useEffect)(() => {
         (d && S) || (u(null), (h.current = !1));
@@ -71,7 +71,7 @@ function m(e) {
         (0, c.useEffect)(() => {
             if (i && d && S)
                 (h.current || j(),
-                    (g.current = window.setInterval(() => {
+                    (x.current = window.setInterval(() => {
                         b();
                     }, 200)));
             else {
@@ -80,10 +80,10 @@ function m(e) {
                     let t = Date.now();
                     e - a.segmentStartSec > 0.2 && v({ ...a, endTimeMs: t, segmentEndSec: e });
                 }
-                (u(null), (h.current = !1), null != g.current && (clearInterval(g.current), (g.current = null)));
+                (u(null), (h.current = !1), null != x.current && (clearInterval(x.current), (x.current = null)));
             }
             return () => {
-                null != g.current && (clearInterval(g.current), (g.current = null));
+                null != x.current && (clearInterval(x.current), (x.current = null));
             };
         }, [i, d, S, a, b, v, j, t]));
     let M = (0, c.useCallback)(() => {

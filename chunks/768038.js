@@ -42,8 +42,8 @@ var f = n(626584),
     L = n(194004),
     y = n(863005),
     D = n(152007),
-    v = n(253932),
-    b = n(594061),
+    b = n(253932),
+    v = n(594061),
     P = n(95701),
     M = n(34457),
     U = n(889227),
@@ -773,7 +773,7 @@ let eL = (0, z.L_)((e, t, n) => {
                     d &&
                     (m < h && a()(T, ec().test) && (S.push(ec()), (m += 1)),
                     r && m < h && a()(T, eu().test) && (S.push(eu()), (m += 1))),
-                v.BQ.getSetting() && N(e_?.()),
+                b.BQ.getSetting() && N(e_?.()),
                 N(eE?.()),
                 { users: p, globals: S, roles: g }
             );
@@ -912,7 +912,7 @@ let eL = (0, z.L_)((e, t, n) => {
         queryEmojiResults(e) {
             let { query: t, channel: n, intention: i, maxCount: r = E.rs7, matchComparator: a } = e;
             return (
-                b.bW.loadIfNecessary(),
+                v.bW.loadIfNecessary(),
                 {
                     emojis: I.Ay.searchWithoutFetchingLatest({
                         channel: n,
@@ -930,7 +930,7 @@ let eL = (0, z.L_)((e, t, n) => {
                 r = K.default.getCurrentUser(),
                 a = new Set(),
                 s = [];
-            for (let l of (b.bW.loadIfNecessary(), e)) {
+            for (let l of (v.bW.loadIfNecessary(), e)) {
                 if ("" === l) continue;
                 let e = l.toLocaleLowerCase(),
                     o = (0, et.sS)(e),
@@ -990,7 +990,7 @@ let eL = (0, z.L_)((e, t, n) => {
         },
         querySoundmoji(e, t) {
             let n = K.default.getCurrentUser();
-            (S.A.isFetching() || S.A.hasFetchedAllSounds() || (0, g.E7)(), b.bW.loadIfNecessary());
+            (S.A.isFetching() || S.A.hasFetchedAllSounds() || (0, g.E7)(), v.bW.loadIfNecessary());
             let i = Array.from(S.A.getSounds().values()).reduce(
                 (e, n) => (
                     n.forEach((n) => {

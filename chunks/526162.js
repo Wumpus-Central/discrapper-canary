@@ -1,36 +1,36 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => y });
 var i = n(17928),
     s = n(73153),
     r = n(793943),
     l = n(287809),
     a = n(174459),
-    c = n(24482),
-    o = n(350972),
+    o = n(24482),
+    c = n(350972),
     u = n(652215),
     d = n(49999),
     m = n(202541);
-let h = { client: { desktop: o.LW.DEFAULT, coachmarkImpressions: 0 } },
+let h = { client: { desktop: c.LW.DEFAULT, coachmarkImpressions: 0 } },
     g = !0;
-function x() {
-    (g = !c.Ay.canUsePremiumAppIcons(l.default.getCurrentUser())) && f(o.LW.DEFAULT);
+function f() {
+    (g = !o.Ay.canUsePremiumAppIcons(l.default.getCurrentUser())) && x(c.LW.DEFAULT);
 }
-function f(e) {
+function x(e) {
     ((h.client.desktop = e),
         g ||
             a.default.track(u.HAw.APP_ICON_UPDATED, {
                 icon_id: e,
                 user_premium_tier: l.default.getCurrentUser()?.premiumType,
-                icon_premium_tier: e !== o.LW.DEFAULT ? m.PremiumTypes.TIER_2 : null,
+                icon_premium_tier: e !== c.LW.DEFAULT ? m.PremiumTypes.TIER_2 : null,
             }));
 }
 function p() {
-    g && (h.client = { desktop: o.LW.DEFAULT, coachmarkImpressions: 2 });
+    g && (h.client = { desktop: c.LW.DEFAULT, coachmarkImpressions: 2 });
 }
 class A extends i.Ay.PersistedStore {
     static displayName = "AppIconPersistedStoreState";
     static persistKey = "AppIconPersistedStoreState";
     initialize(e) {
-        (null != e && (h = e), this.waitFor(l.default), this.syncWith([l.default], x));
+        (null != e && (h = e), this.waitFor(l.default), this.syncWith([l.default], f));
     }
     get isUpsellPreview() {
         return g;
@@ -42,10 +42,10 @@ class A extends i.Ay.PersistedStore {
         return h?.client?.desktop;
     }
 }
-let v = new A(s.h, {
+let y = new A(s.h, {
     APP_ICON_UPDATED: function (e) {
         let { id: t } = e;
-        null != t && f(t);
+        null != t && x(t);
     },
     APP_ICON_EDITOR_RESET: p,
     APP_ICON_TRACK_IMPRESSION: function (e) {
