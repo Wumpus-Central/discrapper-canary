@@ -61,9 +61,8 @@ let X = a.lazy(async () => ({
         ).PlaygroundEmbed,
     })),
     Y = a.lazy(async () => ({
-        default: (
-            await Promise.all([t.e("378100"), t.e("561065"), t.e("886456"), t.e("278078")]).then(t.bind(t, 909261))
-        ).DevToolsLinkEmbed,
+        default: (await Promise.all([t.e("378100"), t.e("886456"), t.e("278078")]).then(t.bind(t, 909261)))
+            .DevToolsLinkEmbed,
     })),
     q = RegExp("^" + z.st.source, z.st.flags);
 var J = t(454908),

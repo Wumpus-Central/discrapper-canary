@@ -1,4 +1,4 @@
-e.d(n, { A: () => H });
+e.d(n, { A: () => k });
 var l = e(477900),
     i = e(582128),
     a = e(866665),
@@ -27,18 +27,15 @@ var l = e(477900),
     O = e(105292),
     j = e(754495),
     P = e(534465),
-    L = e(306471),
-    R = e(620678),
-    b = e(540999),
-    M = e(939075),
-    U = e(20805),
-    G = e(655116),
-    D = e(287809),
-    Y = e(272984),
-    V = e(695311),
-    w = e(518477),
-    k = e(996988);
-function W(t) {
+    L = e(939075),
+    R = e(20805),
+    b = e(655116),
+    M = e(287809),
+    U = e(272984),
+    G = e(695311),
+    D = e(518477),
+    Y = e(996988);
+function V(t) {
     let {
             children: n,
             user: e,
@@ -46,36 +43,36 @@ function W(t) {
             entry: r,
             display: s,
             onSelect: o,
-            onClose: W,
-            appContext: B,
-            targetElementRef: H,
+            onClose: V,
+            appContext: w,
+            targetElementRef: k,
         } = t,
-        [z, X] = i.useState(!1),
-        { analyticsLocations: $ } = (0, f.Ay)(A.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        F = (0, m.A)({ display: s, user: e, activity: a, entry: r, analyticsLocations: $ }),
-        Q = (0, p.NR)(),
-        J = i.useRef(null),
-        q = Q?.interactionPopoutTargetRef ?? J,
-        Z = (function (t) {
+        [W, B] = i.useState(!1),
+        { analyticsLocations: H } = (0, f.Ay)(A.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
+        z = (0, m.A)({ display: s, user: e, activity: a, entry: r, analyticsLocations: H }),
+        X = (0, p.NR)(),
+        $ = i.useRef(null),
+        F = X?.interactionPopoutTargetRef ?? $,
+        Q = (function (t) {
             let { onAction: n } = t,
                 { themeType: e } = (0, _.E)(),
                 i = (0, x.A)({
                     userId: t.user.id,
-                    tabSection: w.RP.ACTIVITY,
+                    tabSection: D.RP.ACTIVITY,
                     label: O.intl.string(O.t.pD1L1u),
                     onAction: () => n?.({ action: "PRESS_VIEW_ALL_ACTIVITY_MENU_ITEM" }),
                 });
             return [
-                e === k.d.POPOUT ? i : null,
+                e === Y.d.POPOUT ? i : null,
                 (function (t) {
                     let { user: n, entry: e, display: i, onAction: a, onClose: r } = t,
-                        s = (0, I.bG)([D.default], () => D.default.getCurrentUser()?.id === n.id),
-                        o = (0, I.bG)([G.A], () => G.A.hasConnectedAccount());
+                        s = (0, I.bG)([M.default], () => M.default.getCurrentUser()?.id === n.id),
+                        o = (0, I.bG)([b.A], () => b.A.hasConnectedAccount());
                     if ("recent" !== i || !(0, h.F3)(e)) return null;
                     if (!o)
                         return (0, l.jsx)(d.Dr, {
                             id: "connect-spotify",
-                            label: O.intl.formatToPlainString(O.t.XWSHTb, { platform: Y.HD }),
+                            label: O.intl.formatToPlainString(O.t.XWSHTb, { platform: U.HD }),
                             action: () => {
                                 (a?.({ action: "PRESS_CONNECT_SPOTIFY_MENU_ITEM" }),
                                     (0, S.openUserSettings)(C.X.CONNECTIONS_CATEGORY),
@@ -83,7 +80,7 @@ function W(t) {
                             },
                         });
                     if (s) return null;
-                    let c = (0, U.Tq)(e) ? e.extra.entries[0]?.media : e.extra.media;
+                    let c = (0, R.Tq)(e) ? e.extra.entries[0]?.media : e.extra.media;
                     return null == c
                         ? null
                         : (0, l.jsx)(d.Dr, {
@@ -91,7 +88,7 @@ function W(t) {
                               label: O.intl.string(O.t.rRffNz),
                               action: () => {
                                   (a?.({ action: "PRESS_PLAY_ON_SPOTIFY_MENU_ITEM" }),
-                                      (0, T.n)(Y.M0.TRACK, c.external_id));
+                                      (0, T.n)(U.M0.TRACK, c.external_id));
                               },
                           });
                 })(t),
@@ -99,8 +96,8 @@ function W(t) {
                 (0, P.gA)(t),
                 (function (t) {
                     let { display: n, entry: e, onAction: i, onClose: a } = t,
-                        r = (0, U.yl)(e),
-                        s = (0, V.A)({ applicationId: r ? e.extra.application_id : void 0, onClose: a });
+                        r = (0, R.yl)(e),
+                        s = (0, G.A)({ applicationId: r ? e.extra.application_id : void 0, onClose: a });
                     return "recent" === n && r
                         ? (0, l.jsx)(d.Dr, {
                               id: "view-activity",
@@ -111,7 +108,7 @@ function W(t) {
                           })
                         : null;
                 })(t),
-                (0, M.A)(t),
+                (0, L.A)(t),
                 (function (t) {
                     let { activity: n, entry: e, display: i, onAction: a, onClose: r } = t,
                         s = (0, I.bG)([y.A], () => null != y.A.getAccount(null, v.fg2.CRUNCHYROLL));
@@ -141,29 +138,17 @@ function W(t) {
                           });
                 })(t),
                 (0, j.s)(t),
-                (function (t) {
-                    let { user: n, activity: e } = t,
-                        i = (0, I.bG)([b.A], () => b.A.isDeveloper);
-                    return __OVERLAY__ || !i || null == e
-                        ? null
-                        : (0, l.jsx)(d.Dr, {
-                              id: "inspect-presence",
-                              label: "Inspect Presence",
-                              leadingAccessory: { type: "icon", icon: L.V },
-                              action: () => (0, R.cN)(n.id),
-                          });
-                })(t),
             ].filter((t) => null != t);
-        })({ entry: r, activity: a, user: e, display: s, onClose: W, onAction: F, isMenuOpen: z, appContext: B });
-    return 0 === Z.length || e.bot
+        })({ entry: r, activity: a, user: e, display: s, onClose: V, onAction: z, isMenuOpen: W, appContext: w });
+    return 0 === Q.length || e.bot
         ? null
         : (0, l.jsx)(c.Y, {
-              targetElementRef: H ?? q,
+              targetElementRef: k ?? F,
               align: "top",
               position: "right",
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  (F({ action: "OPEN_MENU" }), X(!0));
+                  (z({ action: "OPEN_MENU" }), B(!0));
               },
               renderPopout: (t) => {
                   let { closePopout: n } = t;
@@ -173,21 +158,21 @@ function W(t) {
                           "data-menu-migrated-auto": !0,
                           navId: g.n,
                           onClose: () => {
-                              (n(), X(!1));
+                              (n(), B(!1));
                           },
                           "aria-label": O.intl.string(O.t.PlAQz1),
                           onSelect: o,
-                          children: (0, l.jsx)(d.rX, { children: Z }),
+                          children: (0, l.jsx)(d.rX, { children: Q }),
                       }),
                   });
               },
               children: n,
           });
 }
-var B = e(260155);
-function H(t) {
+var w = e(260155);
+function k(t) {
     let n = i.useRef(null);
-    return (0, l.jsx)(W, {
+    return (0, l.jsx)(V, {
         ...t,
         targetElementRef: n,
         children: (t) =>
@@ -205,7 +190,7 @@ function H(t) {
                     onContextMenu: (n) => {
                         (n.preventDefault(), t.onClick(n));
                     },
-                    className: B.He,
+                    className: w.He,
                     children: (0, l.jsx)(s.MoreHorizontalIcon, {
                         color: o.A.colors.INTERACTIVE_TEXT_DEFAULT,
                         size: "xs",

@@ -117,12 +117,9 @@ let Q = /^dev:\/\//i,
         return { default: e };
     }),
     en = r.lazy(async () => {
-        let { DevToolsLinkEmbed: e } = await Promise.all([
-            t.e("378100"),
-            t.e("561065"),
-            t.e("886456"),
-            t.e("278078"),
-        ]).then(t.bind(t, 909261));
+        let { DevToolsLinkEmbed: e } = await Promise.all([t.e("378100"), t.e("886456"), t.e("278078")]).then(
+            t.bind(t, 909261),
+        );
         return { default: e };
     });
 function et(e) {
