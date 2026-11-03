@@ -1372,7 +1372,7 @@ function tJ(e) {
     return (0, r.jsxs)("div", {
         className: e2.Mv,
         children: [
-            (0, r.jsx)(ta._, { className: e2.T5, color: te.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
+            (0, r.jsx)(ta._, { className: e2.T5, color: te.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH }),
             (0, r.jsxs)("div", {
                 children: [
                     H.intl.format(H.t.F8xlhr, { slotCount: t.length }),

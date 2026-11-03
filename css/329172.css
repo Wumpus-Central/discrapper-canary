@@ -152,11 +152,11 @@
 }
 
 .progress__823e1.full__823e1 {
-    background: var(--guild-boosting-pink)
+    background: var(--guild-boosting-pink-refresh)
 }
 
 .progress__823e1.half__823e1 {
-    background: linear-gradient(90deg, var(--guild-boosting-pink), var(--background-mod-subtle))
+    background: linear-gradient(90deg, var(--guild-boosting-pink-refresh), var(--background-mod-subtle))
 }
 
 .progress__823e1.none__823e1 {
@@ -178,7 +178,7 @@
 }
 
 .active__823e1 {
-    background-color: var(--guild-boosting-pink)
+    background-color: var(--guild-boosting-pink-refresh)
 }
 
 .boostContainer__823e1 {
@@ -197,7 +197,7 @@
 }
 
 .boostContainer__823e1.boostContainerActive__823e1 {
-    background-color: var(--guild-boosting-pink)
+    background-color: var(--guild-boosting-pink-refresh)
 }
 
 .boostContainer__823e1:before {
@@ -662,4 +662,4 @@
     margin-top: var(--space-16)
 }
 
-/*# sourceMappingURL=329172.dc0ca5b3a608872d.css.map*/
+/*# sourceMappingURL=329172.2bd3ce927ba2ee06.css.map*/

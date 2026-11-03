@@ -1,4 +1,4 @@
-i.d(s, { default: () => f });
+i.d(s, { default: () => S });
 var t = i(477900),
     a = i(189213),
     r = i(834730),
@@ -23,21 +23,21 @@ var t = i(477900),
 function k(e) {
     let { canUseBoosts: s, guildId: i, powerup: a, isNewPerk: n, forceStaticImages: d } = e,
         [k, w] = l.useState(!1),
-        f = (0, v.Ay)(i, a),
-        S = (0, h.e)(a, f, !1),
-        _ = (0, v.dy)(f),
-        { disabled: E } = (0, p.A)(i, a, _),
+        S = (0, v.Ay)(i, a),
+        f = (0, h.e)(a, S, !1),
+        E = (0, v.dy)(S),
+        { disabled: _ } = (0, p.A)(i, a, E),
         { onActivate: C, error: M } = (0, b.A)(i, a);
     (0, I.A)(M);
-    let P = !s || E,
-        T = _ && !P,
-        q = (0, t.jsxs)(t.Fragment, {
+    let P = !s || _,
+        R = E && !P,
+        T = (0, t.jsxs)(t.Fragment, {
             children: [
                 (0, t.jsxs)("div", {
                     className: y.R9,
                     children: [
                         (0, t.jsx)("div", {
-                            className: o()(y._W, { [y.vu]: _ }),
+                            className: o()(y._W, { [y.vu]: E }),
                             children: (0, t.jsx)(g.l, { powerup: a, isHovering: !P && k, forceStaticImage: d }),
                         }),
                         n &&
@@ -56,22 +56,22 @@ function k(e) {
                                 (0, t.jsx)("div", {
                                     children: (0, t.jsx)(r.E, {
                                         variant: "body-sm/medium",
-                                        color: (_ || k) && !P ? "text-strong" : "text-subtle",
+                                        color: (E || k) && !P ? "text-strong" : "text-subtle",
                                         children: a.description,
                                     }),
                                 }),
                                 (0, t.jsxs)("div", {
                                     children: [
-                                        S?.type === "expiring" && (0, t.jsx)(j.P5, { dateString: S.expiringAt }),
-                                        S?.type === "removing" && (0, t.jsx)(j.Yq, { removingAt: S.removingAt }),
-                                        S?.type === "active" && (0, t.jsx)(j.TG, { text: S.statusText }),
-                                        null == S &&
+                                        f?.type === "expiring" && (0, t.jsx)(j.P5, { dateString: f.expiringAt }),
+                                        f?.type === "removing" && (0, t.jsx)(j.Yq, { removingAt: f.removingAt }),
+                                        f?.type === "active" && (0, t.jsx)(j.TG, { text: f.statusText }),
+                                        null == f &&
                                             (0, t.jsxs)("div", {
                                                 className: y.II,
                                                 children: [
                                                     (0, t.jsx)(u._, {
                                                         size: "sm",
-                                                        color: x.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                                                        color: x.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH,
                                                     }),
                                                     (0, t.jsx)(r.E, {
                                                         variant: "body-sm/medium",
@@ -87,17 +87,17 @@ function k(e) {
                                 }),
                             ],
                         }),
-                        T && (0, t.jsx)(N.A, { compact: !0, iconSize: "md", guildId: i, powerup: a, className: y.Rm }),
+                        R && (0, t.jsx)(N.A, { compact: !0, iconSize: "md", guildId: i, powerup: a, className: y.Rm }),
                     ],
                 }),
             ],
         });
-    return _
+    return E
         ? (0, t.jsx)("div", {
               className: o()(y.nK, y.RO, { [y.r9]: P }),
               onMouseEnter: () => w(!0),
               onMouseLeave: () => w(!1),
-              children: q,
+              children: T,
           })
         : (0, t.jsx)(m.D, {
               className: o()(y.nK, { [y.r9]: P }),
@@ -107,11 +107,11 @@ function k(e) {
               onClick: (e) => {
                   (e.stopPropagation(), P || C?.({ shouldCloseAllModals: !1 }));
               },
-              children: q,
+              children: T,
           });
 }
 var w = i(620968);
-function f(e) {
+function S(e) {
     let {
             guildId: s,
             title: i,

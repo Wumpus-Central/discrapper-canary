@@ -25,8 +25,8 @@ var s = i(477900),
     N = i(28863),
     b = i(549996),
     j = i(807098),
-    C = i(637706),
-    G = i(788883),
+    G = i(637706),
+    C = i(788883),
     y = i(7667),
     M = i(990854);
 function P() {
@@ -38,12 +38,12 @@ function P() {
         i = (0, j.T)(t?.asset),
         { countdownText: n, terms: r } = (0, y.A)(e?.promotionId ?? "");
     if (null == e || null == t) return null;
-    let a = (0, C.C)(t.helpArticle, ""),
+    let a = (0, G.C)(t.helpArticle, ""),
         l = [t.body, r].filter((e) => "" !== e).join(" ");
     return (0, s.jsxs)("div", {
         className: M.kL,
         children: [
-            (0, s.jsx)(G.A, {
+            (0, s.jsx)(C.A, {
                 componentType: x.C.GUILD_BOOST_MARKETING_PAGE_BANNER,
                 componentId: e.id,
                 promotionId: e.promotionId,
@@ -411,12 +411,12 @@ i(321073);
 var eN = i(512750),
     eb = i(948134),
     ej = i(628049),
-    eC = i(568065),
-    eG = i(135570);
+    eG = i(568065),
+    eC = i(135570);
 let ey =
     "https://cdn.discordapp.com/assets/content/2b844e74bd90a5e0ccb408b039a4915f295d8b9c192c823a4afc69c1fc3604a2.png";
 var eM = i(383272);
-let eP = new Set([...Array.from(eC.aH), ...Array.from(eC.m_), eN.FB]);
+let eP = new Set([...Array.from(eG.aH), ...Array.from(eG.m_), eN.FB]);
 var eV = i(998418),
     eU = i(828162);
 i(667532);
@@ -437,14 +437,14 @@ function eD(e) {
             onClose: p,
         } = e,
         { analyticsLocations: h } = (0, o.Ay)(),
-        f = i !== eC.b_.INACTIVE,
+        f = i !== eG.b_.INACTIVE,
         A = (0, eR.A)(t),
         S = (0, r.bG)([ex.Ay], () => ex.Ay.useReducedMotion),
         I = n.useRef(null),
         [x, v] = n.useState(!1),
         [N, b] = n.useState(!1),
-        [j, C] = n.useState(!1),
-        G = N || j,
+        [j, G] = n.useState(!1),
+        C = N || j,
         y = n.useCallback(() => {
             let e = d.A.getGuild(t);
             null != e &&
@@ -462,19 +462,19 @@ function eD(e) {
             (p(), (0, eU.A)(t, l.A.GUILD_POWERUPS_MARKETING, E.skuId));
         }, [t, E.skuId, p]),
         P = { tension: 400, friction: 30 },
-        V = (0, ef.z)({ scale: G ? 0.85 : 1, y: G ? -32 : 0, config: P }),
-        U = (0, ef.z)({ scale: G ? 0.7 : 1, y: G ? -35 : 0, config: P }),
-        B = (0, ef.z)({ y: G ? -32 : 0, config: P }),
-        z = (0, ef.z)({ opacity: +!!G, transform: G ? "translateY(0)" : "translateY(16px)", config: P }),
+        V = (0, ef.z)({ scale: C ? 0.85 : 1, y: C ? -32 : 0, config: P }),
+        U = (0, ef.z)({ scale: C ? 0.7 : 1, y: C ? -35 : 0, config: P }),
+        B = (0, ef.z)({ y: C ? -32 : 0, config: P }),
+        z = (0, ef.z)({ opacity: +!!C, transform: C ? "translateY(0)" : "translateY(16px)", config: P }),
         F = n.useCallback((e) => {
             e && v(!0);
         }, []),
         H = n.useCallback(() => {
-            C(!0);
+            G(!0);
         }, []),
         Q = n.useCallback((e) => {
             let t = e.relatedTarget;
-            (null != t && e.currentTarget.contains(t)) || C(!1);
+            (null != t && e.currentTarget.contains(t)) || G(!1);
         }, []),
         W = (0, eh.K)(F),
         K = E.skuId === ej.W5;
@@ -502,7 +502,7 @@ function eD(e) {
                       })
                     : (0, s.jsx)(ep.animated.img, {
                           className: eL.bm,
-                          src: G && null != T && "" !== T && !S ? T : g,
+                          src: C && null != T && "" !== T && !S ? T : g,
                           alt: "",
                           style: { transform: (0, ep.to)([V.scale, V.y], (e, t) => `scale(${e}) translateY(${t}px)`) },
                       }),
@@ -524,12 +524,15 @@ function eD(e) {
                             (0, s.jsxs)("div", {
                                 className: eL.qS,
                                 children: [
-                                    (0, s.jsx)(D._, { size: "xs", color: k.A.unsafe_rawColors.ILLO_PINK_40 }),
+                                    (0, s.jsx)(D._, {
+                                        size: "xs",
+                                        color: k.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH,
+                                    }),
                                     (0, s.jsx)(R.E, {
                                         className: eL.Vv,
                                         variant: "body-sm/semibold",
                                         children: Z.intl.formatToPlainString(
-                                            null != m ? eG.default["G/aTXi"] : eG.default.r9pa9K,
+                                            null != m ? eC.default["G/aTXi"] : eC.default.r9pa9K,
                                             { boostCount: u },
                                         ),
                                     }),
@@ -633,7 +636,7 @@ function eB(e) {
         return t;
     })(
         ((t = c.id),
-        (i = (0, r.bG)([I.A], () => I.A.getStateForGuild(t)?.powerupCatalog?.[eC.o9.PERK])),
+        (i = (0, r.bG)([I.A], () => I.A.getStateForGuild(t)?.powerupCatalog?.[eG.o9.PERK])),
         (a = (function (e) {
             let t = (0, A.C$)(e, "useGameServerPerk"),
                 i = (0, r.bG)([S.A], () => S.A.getLowestGameCostForGuild(e)),
@@ -643,11 +646,11 @@ function eB(e) {
                     t && null != i
                         ? {
                               skuId: ej.W5,
-                              title: Z.intl.string(eG.default["B3OfL/"]),
-                              description: Z.intl.format(eG.default["+UqyGU"], { gameName: s, gameName2: a }),
+                              title: Z.intl.string(eC.default["B3OfL/"]),
+                              description: Z.intl.format(eC.default["+UqyGU"], { gameName: s, gameName2: a }),
                               cost: i,
                               dependencies: [],
-                              type: eC.o9.PERK,
+                              type: eG.o9.PERK,
                               animatedImageUrl: ey,
                               staticImageUrl: ey,
                           }
@@ -697,7 +700,7 @@ function eB(e) {
                                   guildId: c.id,
                                   powerup: e,
                                   costDecorator: ew.get(e.skuId),
-                                  badge: eC.ys[e.skuId],
+                                  badge: eG.ys[e.skuId],
                                   onClose: d,
                               },
                               `perk-card-${e.skuId}`,
@@ -826,7 +829,7 @@ function e$(e) {
                 null != v.current &&
                 v.current.scrollIntoViewNode({ node: R.current, animate: !0, shouldScrollToStart: !0 });
         }, []),
-        C = n.useCallback(
+        G = n.useCallback(
             (e) => {
                 e &&
                     !u.current &&
@@ -850,11 +853,11 @@ function e$(e) {
             guild_id: i.id,
         });
     }, [i.id, t, g]);
-    let G = (0, A.C$)(i.id, "GuildBoostingMarketingRefresh"),
+    let C = (0, A.C$)(i.id, "GuildBoostingMarketingRefresh"),
         y = (0, r.bG)([S.A], () => S.A.shouldFetchCatalogForGuild(i.id));
     n.useEffect(() => {
-        G && y && (0, f.z9)(i.id);
-    }, [i.id, G, y]);
+        C && y && (0, f.z9)(i.id);
+    }, [i.id, C, y]);
     let M = (0, r.bG)([I.A], () => I.A.hasFetchedPowerupCatalog(i.id));
     return (
         n.useEffect(() => {
@@ -927,7 +930,7 @@ function e$(e) {
                         }),
                         (0, s.jsx)(T.L, {
                             innerRef: x,
-                            onChange: C,
+                            onChange: G,
                             children: (0, s.jsx)("div", { ref: x, className: er.mR }),
                         }),
                     ],

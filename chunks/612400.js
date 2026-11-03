@@ -66,7 +66,7 @@ function S(e) {
                 (0, r.jsxs)("div", {
                     className: N.mG,
                     children: [
-                        (0, r.jsx)(c._, { size: "sm", color: l.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
+                        (0, r.jsx)(c._, { size: "sm", color: l.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH }),
                         (0, r.jsx)(o.E, {
                             className: N.q9,
                             tag: "div",

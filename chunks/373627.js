@@ -23,9 +23,9 @@ var l = a(477900),
     I = a(741561),
     A = a(483625),
     k = a(203656),
-    w = a(525104),
-    E = a(176201),
-    _ = a(178758),
+    E = a(525104),
+    _ = a(176201),
+    w = a(178758),
     G = a(652215),
     z = a(743981),
     P = a(105292),
@@ -33,11 +33,11 @@ var l = a(477900),
     T = a(420667);
 function D() {
     let [s, e] = i.useState(() => {
-            let s = Math.floor(Math.random() * _.Oz.length);
-            return { primary_color: _.Oz[s].colors[0], secondary_color: _.Oz[s].colors[1], tertiary_color: null };
+            let s = Math.floor(Math.random() * w.Oz.length);
+            return { primary_color: w.Oz[s].colors[0], secondary_color: w.Oz[s].colors[1], tertiary_color: null };
         }),
         { gradientStyle: a, gradientClassname: r } = (0, y.v5)({
-            colorStrings: (0, E.K3)(s),
+            colorStrings: (0, _.K3)(s),
             roleStyle: "username",
             includeConvenienceGlow: !0,
             animateGradient: !0,
@@ -57,7 +57,7 @@ function D() {
             }),
             (0, l.jsx)(f.default, {
                 defaultColor: G.TGz,
-                colors: _.Oz,
+                colors: w.Oz,
                 value: s.primary_color,
                 gradientColors: null != s.secondary_color ? [s.primary_color, s.secondary_color] : void 0,
                 onChange: (a) => e({ ...s, primary_color: a }),
@@ -70,7 +70,7 @@ function D() {
 function L(s) {
     let { guildId: e } = s,
         [a, r] = i.useState(z.bl.HEART),
-        n = (0, w.A)(),
+        n = (0, E.A)(),
         o = i.useMemo(() => ({ unlockedBadges: n.unlockedBadges.slice(0, 10), lockedBadges: [] }), [n]);
     return (0, l.jsxs)("div", {
         className: S.kL,
@@ -89,23 +89,23 @@ function L(s) {
         ],
     });
 }
-var M = a(975571),
-    O = a(959456),
-    V = a(427629);
-function B(s) {
+var R = a(975571),
+    M = a(959456),
+    O = a(427629);
+function V(s) {
     let { powerup: e } = s;
     return e.skuId === o.FB
         ? (0, l.jsx)(h.E, {
-              className: V.C,
+              className: O.C,
               variant: "body-sm/medium",
-              children: P.intl.format(O.default.fXE30d, { helpDeskArticle: M.A.getArticleURL(G.MVz.GUILD_VANITY_URL) }),
+              children: P.intl.format(M.default.fXE30d, { helpDeskArticle: R.A.getArticleURL(G.MVz.GUILD_VANITY_URL) }),
           })
         : null;
 }
-var R = a(438874),
+var B = a(438874),
     F = a(722523),
-    U = a(821609),
-    H = a(104510),
+    H = a(821609),
+    U = a(104510),
     $ = a(683063),
     q = a(470934),
     J = a(898190),
@@ -123,9 +123,9 @@ function Z(s) {
     let j = d || c;
     return r
         ? (0, l.jsx)($.u, {
-              body: P.intl.formatToPlainString(O.default["5HQUzD"], { boostCount: a.cost }),
+              body: P.intl.formatToPlainString(M.default["5HQUzD"], { boostCount: a.cost }),
               shouldShow: null == h,
-              children: (0, l.jsx)(U.$, {
+              children: (0, l.jsx)(H.$, {
                   variant: "secondary",
                   size: "md",
                   fullWidth: !0,
@@ -136,14 +136,14 @@ function Z(s) {
                   "aria-label": h ?? P.intl.string(P.t.R9GHya),
               }),
           })
-        : (0, l.jsx)(U.$, {
+        : (0, l.jsx)(H.$, {
               variant: "primary",
               size: "md",
               fullWidth: !0,
               disabled: x,
               loading: j,
               onClick: () => o(),
-              icon: H._,
+              icon: U._,
               iconPosition: "start",
               text: P.intl.string(P.t.JFfins),
               "aria-label": h ?? P.intl.string(P.t.JFfins),
@@ -156,7 +156,7 @@ function X(s) {
         r = i.useCallback(() => {
             (0, K.m)(e, a);
         }, [e, a]);
-    return (0, l.jsx)(U.$, {
+    return (0, l.jsx)(H.$, {
         variant: "secondary",
         size: "md",
         fullWidth: !0,
@@ -170,7 +170,7 @@ var ss = a(439156),
     se = a(189540);
 function sa(s) {
     let { className: e, guildId: a, powerup: i, onClose: r, onError: d } = s,
-        { showToggleButton: t, showConfigureButton: c, isPowerupActive: u } = (0, R.A)(a, i);
+        { showToggleButton: t, showConfigureButton: c, isPowerupActive: u } = (0, B.A)(a, i);
     if (i.skuId === o.d0)
         return (0, l.jsx)("div", {
             className: n()(se.kL, e),
@@ -278,7 +278,7 @@ function so() {
                 variant: "body-xs/normal",
                 color: "text-muted",
                 className: sn.ed,
-                children: P.intl.string(O.default.u5iNbz),
+                children: P.intl.string(M.default.u5iNbz),
             }),
         ],
     });
@@ -305,7 +305,7 @@ function sc(s) {
         I = sd.wr[a.skuId],
         A = null != I ? sd.a8[I] : null,
         k = (0, d.bG)([v.A], () => v.A.getStateForGuild(e)),
-        w = null != A ? k?.allPowerups[A] : null;
+        E = null != A ? k?.allPowerups[A] : null;
     return a.skuId === o.d0
         ? (0, l.jsx)(t.EO, {
               "data-migration-pending": !0,
@@ -343,7 +343,7 @@ function sc(s) {
                                                       size: "custom",
                                                       width: 20,
                                                       height: 20,
-                                                      color: x.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                                                      color: x.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH,
                                                   }),
                                                   (0, l.jsx)(h.E, {
                                                       tag: "div",
@@ -416,21 +416,21 @@ function sc(s) {
                                                       (0, l.jsx)(h.E, {
                                                           variant: "body-sm/medium",
                                                           color: "text-muted",
-                                                          children: P.intl.formatToPlainString(O.default.GMhQcE, {
+                                                          children: P.intl.formatToPlainString(M.default.GMhQcE, {
                                                               cooldownDays: a.deactivationCooldownPeriodDays,
                                                           }),
                                                       }),
                                                   ],
                                               }),
-                                          null != w &&
+                                          null != E &&
                                               (0, l.jsx)(h.E, {
                                                   className: st.h_,
                                                   variant: "body-sm/normal",
-                                                  children: P.intl.formatToPlainString(O.default.NAFGkH, {
-                                                      level: w.title,
+                                                  children: P.intl.formatToPlainString(M.default.NAFGkH, {
+                                                      level: E.title,
                                                   }),
                                               }),
-                                          (0, l.jsx)(B, { powerup: a }),
+                                          (0, l.jsx)(V, { powerup: a }),
                                           null != y &&
                                               (0, l.jsx)(h.E, {
                                                   className: st.z3,

@@ -249,7 +249,7 @@
 }
 
 .container__0d0f9:hover .progress__0d0f9 {
-    background: linear-gradient(270deg, rgba(255, 115, 250, .7), rgba(255, 115, 250, .25))
+    background: linear-gradient(270deg, color-mix(in srgb, var(--guild-boosting-pink-refresh) 70%, transparent) 0, color-mix(in srgb, var(--guild-boosting-pink-refresh) 25%, transparent) 100%)
 }
 
 .container__0d0f9:hover .boostCountText__0d0f9 {
@@ -319,9 +319,9 @@
 }
 
 .progress__0d0f9 {
-    background: linear-gradient(270deg, rgba(255, 115, 250, .4), rgba(255, 115, 250, .1));
+    background: linear-gradient(270deg, color-mix(in srgb, var(--guild-boosting-pink-refresh) 40%, transparent) 0, color-mix(in srgb, var(--guild-boosting-pink-refresh) 10%, transparent) 100%);
     border-radius: var(--radius-round);
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14), inset 0 0 4.6px 0 rgba(255, 115, 250, .2);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14), inset 0 0 4.6px 0 color-mix(in srgb, var(--guild-boosting-pink-refresh) 20%, transparent);
     inset: 2px;
     position: absolute
 }
@@ -710,4 +710,4 @@
     background-color: var(--app-frame-border)
 }
 
-/*# sourceMappingURL=b8870b2972b18e26.css.map*/
+/*# sourceMappingURL=1705db34316ac5f8.css.map*/
