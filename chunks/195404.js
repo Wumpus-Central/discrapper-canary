@@ -1,31 +1,19 @@
-(n.d(e, { MessageReminderEditMenu: () => _, S: () => A }), n(321073));
-var i = n(477900),
-    a = n(582128),
-    r = n(192308),
+(n.d(e, { MessageReminderEditMenu: () => A, S: () => b }), n(321073));
+var a = n(477900),
+    r = n(582128),
+    i = n(192308),
     l = n(477782);
 if (221552 == n.j) var s = n(980707);
-var c = n(442433),
-    d = n(568467),
-    o = n(738125),
-    u = n(536637),
-    g = n.n(u),
+var d = n(442433),
+    o = n(568467),
+    u = n(738125),
+    c = n(536637),
+    g = n.n(c),
     m = n(105292);
-let b = [
-    {
-        getDueAt: () => g()().add(30, "minutes").toDate(),
-        getLabel: () => m.intl.string(m.t["OV8l/H"]),
-        getAccessibilityLabel: () => m.intl.string(m.t.cYg9Kf),
-    },
-    {
-        getDueAt: () => g()().add(1, "hour").toDate(),
-        getLabel: () => m.intl.string(m.t["zf0R+0"]),
-        getAccessibilityLabel: () => m.intl.string(m.t.MEaSRh),
-    },
-    {
-        getDueAt: () => g()().add(4, "hour").toDate(),
-        getLabel: () => m.intl.string(m.t["5gztZN"]),
-        getAccessibilityLabel: () => m.intl.string(m.t.uxZblT),
-    },
+let _ = [
+    { getDueAt: () => g()().add(30, "minutes").toDate(), getLabel: () => m.intl.string(m.t["OV8l/H"]) },
+    { getDueAt: () => g()().add(1, "hour").toDate(), getLabel: () => m.intl.string(m.t["zf0R+0"]) },
+    { getDueAt: () => g()().add(4, "hour").toDate(), getLabel: () => m.intl.string(m.t["5gztZN"]) },
     {
         getDueAt: () => {
             let t = g()().startOf("day").add(9, "hours");
@@ -45,26 +33,26 @@ let b = [
         getLabel: () => m.intl.string(m.t["q+Ls05"]),
     },
 ];
-function A(t) {
+function b(t) {
     let { createReminder: e } = t,
-        s = a.useCallback(() => {
-            (0, r.openModalLazy)(async () => {
+        s = r.useCallback(() => {
+            (0, i.openModalLazy)(async () => {
                 let { default: t } = await Promise.all([n.e("406242"), n.e("549208")]).then(n.bind(n, 148216));
-                return (n) => (0, i.jsx)(t, { ...n, createReminder: e });
+                return (n) => (0, a.jsx)(t, { ...n, createReminder: e });
             });
         }, [e]);
-    return a.useMemo(() => {
-        let t = b.map((t) => {
-            let { getDueAt: n, getLabel: a } = t;
-            return (0, i.jsx)(
+    return r.useMemo(() => {
+        let t = _.map((t) => {
+            let { getDueAt: n, getLabel: r } = t;
+            return (0, a.jsx)(
                 l.Dr,
-                { id: `create-reminder-${a()}`, label: a(), action: () => e(n()) },
-                `create-reminder-${a()}`,
+                { id: `create-reminder-${r()}`, label: r(), action: () => e(n()) },
+                `create-reminder-${r()}`,
             );
         });
         return (
             t.push(
-                (0, i.jsx)(
+                (0, a.jsx)(
                     l.Dr,
                     { id: "create-reminder-custom", label: m.intl.string(m.t.OLA8Zi), action: s },
                     "custom",
@@ -74,19 +62,19 @@ function A(t) {
         );
     }, [e, s]);
 }
-function _(t) {
+function A(t) {
     let { message: e, label: n } = t,
-        a = A({
+        r = b({
             createReminder: function (t) {
-                return (0, d.Y)({ channelId: e.channel_id, messageId: e.id, dueAt: t, source: o.r.FOR_LATER_LIST });
+                return (0, o.Y)({ channelId: e.channel_id, messageId: e.id, dueAt: t, source: u.r.FOR_LATER_LIST });
             },
         });
-    return (0, i.jsx)(s.W, {
+    return (0, a.jsx)(s.W, {
         "data-menu-migrated-auto": !0,
         navId: "message-reminder-create",
-        onClose: c.Z_,
+        onClose: d.Z_,
         "aria-label": m.intl.string(m.t.mJ3P0N),
         onSelect: () => null,
-        children: (0, i.jsx)(l.rX, { label: n, children: a }),
+        children: (0, a.jsx)(l.rX, { label: n, children: r }),
     });
 }
