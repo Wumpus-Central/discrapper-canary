@@ -12,7 +12,7 @@ function d() {
     return (0, l.yM)() ? "teen" : t ? "adult" : "unverified";
 }
 function E() {
-    s.A.openUrl(r.A.getArticleURL(o.MVz.TIGGER_PAWTECT_LEARN_MORE));
+    s.A.openUrl(r.A.getArticleURL(o.MVz.AGE_VERIFICATION_LEARN_MORE));
 }
 function m() {
     s.A.showAgeVerificationGetStartedModal({ entryPoint: a.q1.ACCOUNT_AGE_GROUP });

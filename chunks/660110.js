@@ -1,4 +1,4 @@
-r.d(n, { A: () => k, V: () => _ });
+r.d(n, { A: () => _, V: () => O });
 var t,
     i = r(477900);
 r(582128);
@@ -25,7 +25,7 @@ function v(e) {
                       onClick: (e) => {
                           (e.preventDefault(),
                               e.stopPropagation(),
-                              (0, h.A)(p.A.getArticleURL(g.MVz.TIGGER_PAWTECT_LEARN_MORE)));
+                              (0, h.A)(p.A.getArticleURL(g.MVz.AGE_VERIFICATION_LEARN_MORE)));
                       },
                       useDefaultUnderlineStyles: !1,
                       children: e.join(""),
@@ -72,8 +72,8 @@ function y(e) {
         }),
     });
 }
-var _ = (((t = {})[(t.TOP = 0)] = "TOP"), (t[(t.BOTTOM = 1)] = "BOTTOM"), t);
-function k(e) {
+var O = (((t = {})[(t.TOP = 0)] = "TOP"), (t[(t.BOTTOM = 1)] = "BOTTOM"), t);
+function _(e) {
     let { className: n, noBackground: r, divider: t, channelId: s } = e;
     if (!(0, A.Vv)(s ?? void 0)) return null;
     let o = Array.isArray(t) ? t : null != t ? [t] : [];

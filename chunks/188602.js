@@ -22,12 +22,12 @@ var s = a(477900),
     j = a(379257),
     S = a(306537),
     C = a(462714),
-    M = a(36149),
-    R = a(17928),
-    I = a(945810),
+    I = a(36149),
+    M = a(17928),
+    R = a(945810),
     N = a(207913),
     V = a(393033);
-let b = (0, I.mj)({
+let b = (0, R.mj)({
     kind: "user",
     name: "2026-08-show-expressive-modal-subtitle-alt",
     defaultConfig: { enabled: !1 },
@@ -36,8 +36,8 @@ let b = (0, I.mj)({
 var y = a(73153),
     T = a(482876),
     B = a(787301),
-    k = a(750481);
-let L = function (e) {
+    O = a(750481);
+let k = function (e) {
     let { icon: t, size: a = 24 } = e;
     return (0, s.jsx)("svg", {
         width: a,
@@ -48,18 +48,18 @@ let L = function (e) {
         children: t.paths.map((e) => (0, s.jsx)("path", { d: e.d, fillRule: e.fillRule, clipRule: e.fillRule }, e.d)),
     });
 };
-var O = a(40449),
+var L = a(40449),
     Z = a(652215),
-    G = a(418528),
-    D = a(105292),
+    D = a(418528),
+    G = a(105292),
     U = a(126106);
 let H = function (e) {
     let t,
         a,
         r,
-        { transitionState: I, entryPoint: H, onComplete: P, onClose: F, dismissable: W } = e,
+        { transitionState: R, entryPoint: H, onComplete: F, onClose: P, dismissable: z } = e,
         {
-            loading: z,
+            loading: W,
             error: J,
             methods: X,
             footerMessage: q,
@@ -120,16 +120,16 @@ let H = function (e) {
         K = (0, C.Z)(X),
         Q = K.length > 0,
         ee = l.useCallback(() => {
-            (P?.(), F());
-        }, [P, F]),
-        { initiateAgeVerificationV2: et } = (0, k.N)({ onComplete: ee, entryPoint: H, onMethodUnavailable: $ }),
+            (F?.(), P());
+        }, [F, P]),
+        { initiateAgeVerificationV2: et } = (0, O.N)({ onComplete: ee, entryPoint: H, onMethodUnavailable: $ }),
         ea = l.useRef(!1),
         [es, el] = l.useState(null),
         er = null != es,
         ei = l.useMemo(() => (0, n.A)(), []),
         en =
             ((t = (0, V.W$)()),
-            (a = (0, R.bG)([N.A], () => N.A.getShowExpressiveModalSubtitleAlt())),
+            (a = (0, M.bG)([N.A], () => N.A.getShowExpressiveModalSubtitleAlt())),
             (r = b.useConfig({ location: "age_verification_expressive_v2_modal" }).enabled),
             t ? a : r);
     l.useEffect(() => {
@@ -149,47 +149,47 @@ let H = function (e) {
         [et, ei],
     );
     return (0, s.jsxs)(v.k, {
-        transitionState: I,
-        onClose: F,
+        transitionState: R,
+        onClose: P,
         gradientColor: "blue",
-        dismissable: W,
+        dismissable: z,
         graphic: {
             type: "image",
             src: "https://cdn.discordapp.com/assets/content/78be134dd5dcecb7d0b26e1aead0c61f79a95c93893a4acc82c9828c87d2165a.svg",
             aspectRatio: "21/9",
         },
-        title: (0, M.ST)(H, !0),
-        subtitle: (0, M.mK)(
+        title: (0, I.ST)(H, !0),
+        subtitle: (0, I.mK)(
             H,
             () => {
-                (j.A.openUrl(w.A.getArticleURL(Z.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                (j.A.openUrl(w.A.getArticleURL(Z.MVz.AGE_VERIFICATION_LEARN_MORE)),
                     (0, S.St)(ei, S.WU.EXPRESSIVE_V2, S._7.LEARN_MORE));
             },
             void 0,
             en
                 ? () => {
-                      (j.A.openUrl(O.zS), (0, S.St)(ei, S.WU.EXPRESSIVE_V2, S._7.TRUSTED_PROVIDERS));
+                      (j.A.openUrl(L.zS), (0, S.St)(ei, S.WU.EXPRESSIVE_V2, S._7.TRUSTED_PROVIDERS));
                   }
                 : void 0,
             !0,
         ),
         children: [
             (0, s.jsx)("div", { "data-expressive-v2-graphic": !0, hidden: !0 }),
-            z && (0, s.jsx)(g.B, { direction: "vertical", align: "center", children: (0, s.jsx)(E.y, {}) }),
-            !z &&
+            W && (0, s.jsx)(g.B, { direction: "vertical", align: "center", children: (0, s.jsx)(E.y, {}) }),
+            !W &&
                 Q &&
                 null != Y &&
                 (0, s.jsx)("div", {
                     className: U.Ih,
                     children: (0, s.jsx)(x.w, { type: "warning", message: Y, role: "status" }),
                 }),
-            !z &&
+            !W &&
                 !Q &&
                 (0, s.jsx)(x.w, {
                     type: "critical",
-                    message: D.intl.string(J ? G.default.Bkmk4Y : G.default.cR6336),
+                    message: G.intl.string(J ? D.default.Bkmk4Y : D.default.cR6336),
                     role: "alert",
-                    action: { text: D.intl.string(G.default.hDvmYP), onClick: $ },
+                    action: { text: G.intl.string(D.default.hDvmYP), onClick: $ },
                 }),
             Q &&
                 (0, s.jsx)(g.B, {
@@ -217,7 +217,7 @@ let H = function (e) {
                             null != a
                                 ? (0, s.jsx)(a, { size: "md", color: "var(--text-strong)" })
                                 : null != e.icon
-                                  ? (0, s.jsx)(L, { icon: e.icon })
+                                  ? (0, s.jsx)(k, { icon: e.icon })
                                   : (0, s.jsx)(f._, { size: "md", color: "var(--text-strong)" });
                         let l = `${e.method}-${e.vendor}`,
                             r = es === l;
@@ -266,7 +266,7 @@ let H = function (e) {
                         );
                     }),
                 }),
-            !z &&
+            !W &&
                 Q &&
                 null != q &&
                 (0, s.jsx)("div", {

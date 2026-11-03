@@ -13,38 +13,38 @@ var n = i(477900),
     E = i(750481),
     g = i(652215),
     m = i(105292),
-    T = i(227746),
+    A = i(227746),
     b = i(700129);
 let h = function (t) {
     let { transitionState: e, entryPoint: i, onClose: h } = t,
-        { loading: A, initiateAgeVerification: _ } = (0, E.n)({ onComplete: h, entryPoint: R.q1.RETRY_MODAL }),
-        k = s.useMemo(() => (0, l.A)(), []),
-        x = m.intl.string(m.t.JSdbBe),
+        { loading: _, initiateAgeVerification: k } = (0, E.n)({ onComplete: h, entryPoint: R.q1.RETRY_MODAL }),
+        x = s.useMemo(() => (0, l.A)(), []),
+        T = m.intl.string(m.t.JSdbBe),
         M = m.intl.string(m.t.JNK1ue),
         f = m.intl.string(m.t.mFvt9M);
     s.useEffect(() => {
-        (0, R.Bs)(k, R.WU.RETRY, i);
-    }, [k, i]);
+        (0, R.Bs)(x, R.WU.RETRY, i);
+    }, [x, i]);
     let C = s.useMemo(
         () => [
             {
                 title: m.intl.string(m.t.FYkioq),
                 description: m.intl.string(m.t.xMfbRz),
                 buttonText: f,
-                buttonLoading: A,
+                buttonLoading: _,
                 onButtonPress: () => {
-                    (_(), (0, R.St)(k, R.WU.RETRY, R._7.GET_STARTED));
+                    (k(), (0, R.St)(x, R.WU.RETRY, R._7.GET_STARTED));
                 },
             },
         ],
-        [_, k, A, f],
+        [k, x, _, f],
     );
     return (0, n.jsx)(r.k, {
         transitionState: e,
         onClose: h,
         gradientColor: "blue",
         graphic: { src: b.A, type: "image" },
-        title: x,
+        title: T,
         subtitle: M,
         children: (0, n.jsxs)(o.B, {
             direction: "vertical",
@@ -55,11 +55,11 @@ let h = function (t) {
                 (0, n.jsx)(c.E, {
                     variant: "body-xs/medium",
                     color: "text-muted",
-                    className: T.Z,
+                    className: A.Z,
                     children: m.intl.format(m.t["L+FgkZ"], {
                         handleOnHelpUrlHook: () => {
-                            (p.A.openUrl(u.A.getArticleURL(g.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                                (0, R.St)(k, R.WU.RETRY, R._7.LEARN_MORE));
+                            (p.A.openUrl(u.A.getArticleURL(g.MVz.AGE_VERIFICATION_LEARN_MORE)),
+                                (0, R.St)(x, R.WU.RETRY, R._7.LEARN_MORE));
                         },
                     }),
                 }),

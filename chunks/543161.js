@@ -22,7 +22,7 @@ function m(e) {
             (t(E.i.TAKE_ACTION), u.A.showAgeVerificationGetStartedModal({ entryPoint: h.q1.TINY_BRONCO_POPOVER }));
         }, [t]),
         m = l.useCallback(() => {
-            (t(E.i.TAKE_ACTION), u.A.openUrl(d.A.getArticleURL(g.MVz.TIGGER_PAWTECT_LEARN_MORE)));
+            (t(E.i.TAKE_ACTION), u.A.openUrl(d.A.getArticleURL(g.MVz.AGE_VERIFICATION_LEARN_MORE)));
         }, [t]),
         f = l.useCallback(() => {
             (t(E.i.TAKE_ACTION), (0, c.openUserSettings)(o.X.ACCOUNT_STANDING_CATEGORY));

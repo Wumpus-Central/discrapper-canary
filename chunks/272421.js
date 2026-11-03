@@ -1,4 +1,4 @@
-n.d(i, { default: () => S });
+n.d(i, { default: () => I });
 var e = n(477900),
     s = n(582128),
     l = n(132500),
@@ -6,17 +6,17 @@ var e = n(477900),
     o = n(509434),
     c = n(95035),
     a = n(632738),
-    p = n(975571),
-    A = n(379257),
+    A = n(975571),
+    p = n(379257),
     R = n(306537),
     d = n(36149),
     E = n(652215),
     _ = n(105292),
     M = n(750481),
     u = n(381944);
-let S = function (t) {
-    let { transitionState: i, entryPoint: n, onClose: S } = t,
-        { loading: T, initiateAgeVerification: C } = (0, M.n)({ onComplete: S, entryPoint: n }),
+let I = function (t) {
+    let { transitionState: i, entryPoint: n, onClose: I } = t,
+        { loading: S, initiateAgeVerification: C } = (0, M.n)({ onComplete: I, entryPoint: n }),
         g = s.useMemo(() => (0, l.A)(), []);
     return (
         s.useEffect(() => {
@@ -24,13 +24,13 @@ let S = function (t) {
         }, [g, n]),
         (0, e.jsx)(r.a, {
             transitionState: i,
-            onClose: S,
+            onClose: I,
             title: (0, d.ST)(n),
             subtitle: (0, d.mK)(n),
             actions: [
                 {
                     text: _.intl.string(_.t.SJMnkX),
-                    loading: T,
+                    loading: S,
                     icon: o.I,
                     iconPosition: "end",
                     onClick: async () => {
@@ -40,7 +40,7 @@ let S = function (t) {
             ],
             actionBarInput: (0, e.jsxs)(c.A, {
                 onClick: () => {
-                    (A.A.openUrl(p.A.getArticleURL(E.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                    (p.A.openUrl(A.A.getArticleURL(E.MVz.AGE_VERIFICATION_LEARN_MORE)),
                         (0, R.St)(g, R.WU.PRIMARY, R._7.LEARN_MORE));
                 },
                 className: u.A,
@@ -53,7 +53,7 @@ let S = function (t) {
                     title: _.intl.string(_.t.aVwLfn),
                     description: _.intl.format(_.t.n5vd1E, {
                         handleOnHelpUrlHook: () => {
-                            (A.A.openUrl(p.A.getArticleURL(E.MVz.TIGGER_PAWTECT_SYSTEM_DMS)),
+                            (p.A.openUrl(A.A.getArticleURL(E.MVz.AGE_VERIFICATION_SYSTEM_DMS)),
                                 (0, R.St)(g, R.WU.PRIMARY, R._7.SYSTEM_DMS_LEARN_MORE));
                         },
                     }),

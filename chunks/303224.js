@@ -116,7 +116,7 @@ function ec(e) {
                       onClick: (e) => {
                           (e.preventDefault(),
                               e.stopPropagation(),
-                              (0, el.A)(ea.A.getArticleURL(eo.MVz.TIGGER_PAWTECT_LEARN_MORE)));
+                              (0, el.A)(ea.A.getArticleURL(eo.MVz.AGE_VERIFICATION_LEARN_MORE)));
                       },
                       useDefaultUnderlineStyles: !1,
                       children: e.join(""),

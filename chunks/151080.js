@@ -25,7 +25,7 @@ function _(t) {
                 }));
         }, [_]),
         C = a.useCallback(() => {
-            u.A.openUrl(d.A.getArticleURL(A.MVz.TIGGER_PAWTECT_LEARN_MORE));
+            u.A.openUrl(d.A.getArticleURL(A.MVz.AGE_VERIFICATION_LEARN_MORE));
         }, []);
     return (0, n.jsx)(s.a, {
         transitionState: e,

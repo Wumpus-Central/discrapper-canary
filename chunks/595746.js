@@ -1,4 +1,4 @@
-i.d(e, { default: () => k });
+i.d(e, { default: () => j });
 var n = i(477900),
     l = i(582128),
     r = i(132500),
@@ -19,20 +19,20 @@ var n = i(477900),
     S = i(731738),
     h = i(17928),
     p = i(807393),
-    O = i(787301);
-let v = (0, i(945810).mj)({
+    I = i(787301);
+let O = (0, i(945810).mj)({
     kind: "user",
     name: "2026-03-age-verification-google-wallet",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var x = i(750481),
-    I = i(40449),
+var v = i(750481),
+    x = i(40449),
     P = i(105292);
-let T = function (t) {
+let C = function (t) {
     let { onClose: e, classificationId: i, onGoogleWalletSelect: n } = t,
-        { methods: r, loading: a } = (0, h.cf)([O.A], () => ({ methods: O.A.methods, loading: O.A.loading })),
-        { initiateAgeVerification: o } = (0, x.n)({
+        { methods: r, loading: a } = (0, h.cf)([I.A], () => ({ methods: I.A.methods, loading: I.A.loading })),
+        { initiateAgeVerification: o } = (0, v.n)({
             onComplete: e,
             entryPoint: f.q1.EXPRESSIVE_GET_STARTED,
             shouldShowExpressiveModal: !0,
@@ -46,7 +46,7 @@ let T = function (t) {
                 Promise.resolve(!1).then((e) => {
                     !t &&
                         (p.A.increment({ name: S.K.GOOGLE_WALLET_AVAILABILITY_CHECK, tags: [`available:${e}`] }),
-                        E(e && v.getConfig({ location: "age_verification_methods" }).enabled));
+                        E(e && O.getConfig({ location: "age_verification_methods" }).enabled));
                 }),
                 () => {
                     t = !0;
@@ -60,9 +60,9 @@ let T = function (t) {
             ageVerificationMethods: l.useMemo(() => {
                 let t =
                     r
-                        ?.filter((t) => t !== I.VF.GOOGLE_WALLET)
+                        ?.filter((t) => t !== x.VF.GOOGLE_WALLET)
                         .map((t) => {
-                            let e = I.uv[t];
+                            let e = x.uv[t];
                             if (null == e) return null;
                             let { title: i, description: n } = e;
                             return {
@@ -76,17 +76,17 @@ let T = function (t) {
                         })
                         .filter((t) => null != t) ?? [];
                 if (s && null != n) {
-                    let e = I.uv[I.VF.GOOGLE_WALLET];
+                    let e = x.uv[x.VF.GOOGLE_WALLET];
                     if (null != e)
                         return [
                             ...t,
                             {
-                                id: I.VF.GOOGLE_WALLET,
+                                id: x.VF.GOOGLE_WALLET,
                                 title: P.intl.string(e.title),
                                 description: P.intl.string(e.description),
                                 onClick: (t) => {
                                     (p.A.increment({ name: S.K.GOOGLE_WALLET_METHOD_SELECTED }),
-                                        (0, f.St)(t, f.WU.EXPRESSIVE_PRIMARY, f._7.METHOD_SELECT, I.VF.GOOGLE_WALLET),
+                                        (0, f.St)(t, f.WU.EXPRESSIVE_PRIMARY, f._7.METHOD_SELECT, x.VF.GOOGLE_WALLET),
                                         n());
                                 },
                             },
@@ -98,12 +98,12 @@ let T = function (t) {
         }
     );
 };
-var C = i(652215),
+var T = i(652215),
     b = i(239093),
     M = i(418528),
     W = i(897345),
     G = i(700129);
-function j(t) {
+function V(t) {
     let { modalSessionId: e, entryPoint: i } = t;
     return (0, m.W$)()
         ? (0, n.jsx)(a.E, {
@@ -127,11 +127,11 @@ function j(t) {
             })
           : null;
 }
-let k = function (t) {
+let j = function (t) {
     let { transitionState: e, entryPoint: i, onClose: o, onComplete: _, dismissable: S, classificationId: h } = t,
         p = l.useMemo(() => (0, r.A)(), []),
-        O = (0, m.W$)(),
-        { loading: v, ageVerificationMethods: x } = T({
+        I = (0, m.W$)(),
+        { loading: O, ageVerificationMethods: v } = C({
             onClose: () => {
                 (_?.(), o());
             },
@@ -151,12 +151,12 @@ let k = function (t) {
             subtitle: (0, R.mK)(
                 i,
                 () => {
-                    (g.A.openUrl(A.A.getArticleURL(C.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                    (g.A.openUrl(A.A.getArticleURL(T.MVz.AGE_VERIFICATION_LEARN_MORE)),
                         (0, f.St)(p, f.WU.EXPRESSIVE_PRIMARY, f._7.LEARN_MORE));
                 },
-                O,
+                I,
             ),
-            actionBarInput: (0, n.jsx)(j, { modalSessionId: p, entryPoint: i }),
+            actionBarInput: (0, n.jsx)(V, { modalSessionId: p, entryPoint: i }),
             children: (0, n.jsxs)(E.B, {
                 direction: "vertical",
                 gap: 16,
@@ -177,7 +177,7 @@ let k = function (t) {
                             }),
                         ],
                     }),
-                    null == x || 0 === x.length
+                    null == v || 0 === v.length
                         ? (0, n.jsxs)(E.B, {
                               direction: "vertical",
                               align: "center",
@@ -201,7 +201,7 @@ let k = function (t) {
                         : (0, n.jsx)(E.B, {
                               direction: "vertical",
                               gap: 8,
-                              children: x.map((t) => {
+                              children: v.map((t) => {
                                   let { title: e, description: i, onClick: l } = t;
                                   return (0, n.jsx)(
                                       u.PQ,
@@ -209,7 +209,7 @@ let k = function (t) {
                                           variant: "clickable",
                                           title: e,
                                           description: i,
-                                          buttonDisabled: v,
+                                          buttonDisabled: O,
                                           onButtonPress: () => l(p),
                                       },
                                       e,
