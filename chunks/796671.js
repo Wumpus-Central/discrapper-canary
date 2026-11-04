@@ -19,8 +19,8 @@ var n =
     (t.parseDate = function (e, r, n) {
         return t.casual.parseDate(e, r, n);
     }),
-    (t.createCasualConfiguration = T),
-    (t.createConfiguration = _));
+    (t.createCasualConfiguration = P),
+    (t.createConfiguration = T));
 let a = n(r(882202)),
     i = n(r(720130)),
     s = n(r(542030)),
@@ -71,11 +71,11 @@ let g = n(r(169728)),
     h = n(r(787833)),
     p = r(550550),
     y = n(r(6310));
-function T() {
-    let e = _(!1);
+function P() {
+    let e = T(!1);
     return (e.parsers.unshift(new s.default()), e);
 }
-function _(e = !0) {
+function T(e = !0) {
     let t = (0, p.includeCommonConfiguration)(
         {
             parsers: [new a.default(), new o.default(), new h.default(), new u.default(), new l.default()],
@@ -85,4 +85,4 @@ function _(e = !0) {
     );
     return ((t.refiners = t.refiners.filter((e) => !(e instanceof y.default))), t);
 }
-((t.casual = new c.Chrono(T())), (t.strict = new c.Chrono(_(!0))));
+((t.casual = new c.Chrono(P())), (t.strict = new c.Chrono(T(!0))));

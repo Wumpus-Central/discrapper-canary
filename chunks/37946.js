@@ -18,38 +18,38 @@ function i() {
                         l = 0,
                         c = i || [],
                         f = !1,
-                        d = {
+                        p = {
                             p: 0,
                             n: 0,
                             v: t,
-                            a: p,
-                            f: p.bind(t, 4),
+                            a: d,
+                            f: d.bind(t, 4),
                             d: function (e, r) {
-                                return ((o = e), (a = 0), (s = t), (d.n = r), u);
+                                return ((o = e), (a = 0), (s = t), (p.n = r), u);
                             },
                         };
-                    function p(e, n) {
+                    function d(e, n) {
                         for (a = e, s = n, r = 0; !f && l && !i && r < c.length; r++) {
                             var i,
                                 o = c[r],
-                                p = d.p,
+                                d = p.p,
                                 h = o[2];
                             e > 3
                                 ? (i = h === n) && ((s = o[(a = o[4]) ? 5 : ((a = 3), 3)]), (o[4] = o[5] = t))
-                                : o[0] <= p &&
-                                  ((i = e < 2 && p < o[1])
-                                      ? ((a = 0), (d.v = n), (d.n = o[1]))
-                                      : p < h &&
+                                : o[0] <= d &&
+                                  ((i = e < 2 && d < o[1])
+                                      ? ((a = 0), (p.v = n), (p.n = o[1]))
+                                      : d < h &&
                                         (i = e < 3 || o[0] > n || n > h) &&
-                                        ((o[4] = e), (o[5] = n), (d.n = h), (a = 0)));
+                                        ((o[4] = e), (o[5] = n), (p.n = h), (a = 0)));
                         }
                         if (i || e > 1) return u;
                         throw ((f = !0), n);
                     }
                     return function (i, c, h) {
                         if (l > 1) throw TypeError("Generator is already running");
-                        for (f && 1 === c && p(c, h), a = c, s = h; (r = a < 2 ? t : s) || !f;) {
-                            o || (a ? (a < 3 ? (a > 1 && (d.n = -1), p(a, s)) : (d.n = s)) : (d.v = s));
+                        for (f && 1 === c && d(c, h), a = c, s = h; (r = a < 2 ? t : s) || !f;) {
+                            o || (a ? (a < 3 ? (a > 1 && (p.n = -1), d(a, s)) : (p.n = s)) : (p.v = s));
                             try {
                                 if (((l = 2), o)) {
                                     if ((a || (i = "next"), (r = o[i]))) {
@@ -62,7 +62,7 @@ function i() {
                                                 ((s = TypeError("The iterator does not provide a '" + i + "' method")),
                                                 (a = 1)));
                                     o = t;
-                                } else if ((r = (f = d.n < 0) ? s : e.call(n, d)) !== u) break;
+                                } else if ((r = (f = p.n < 0) ? s : e.call(n, p)) !== u) break;
                             } catch (e) {
                                 ((o = t), (a = 1), (s = e));
                             } finally {
@@ -80,10 +80,10 @@ function i() {
     var u = {};
     function c() {}
     function f() {}
-    function d() {}
+    function p() {}
     r = Object.getPrototypeOf;
-    var p =
-        (d.prototype =
+    var d =
+        (p.prototype =
         c.prototype =
             Object.create(
                 [][a]
@@ -95,23 +95,23 @@ function i() {
             ));
     function h(e) {
         return (
-            Object.setPrototypeOf ? Object.setPrototypeOf(e, d) : ((e.__proto__ = d), n(e, s, "GeneratorFunction")),
-            (e.prototype = Object.create(p)),
+            Object.setPrototypeOf ? Object.setPrototypeOf(e, p) : ((e.__proto__ = p), n(e, s, "GeneratorFunction")),
+            (e.prototype = Object.create(d)),
             e
         );
     }
     return (
-        (f.prototype = d),
-        n(p, "constructor", d),
-        n(d, "constructor", f),
+        (f.prototype = p),
+        n(d, "constructor", p),
+        n(p, "constructor", f),
         (f.displayName = "GeneratorFunction"),
-        n(d, s, "GeneratorFunction"),
-        n(p),
-        n(p, s, "Generator"),
-        n(p, a, function () {
+        n(p, s, "GeneratorFunction"),
+        n(d),
+        n(d, s, "Generator"),
+        n(d, a, function () {
             return this;
         }),
-        n(p, "toString", function () {
+        n(d, "toString", function () {
             return "[object Generator]";
         }),
         ((e.exports = i =

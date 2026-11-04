@@ -21,7 +21,7 @@ var n =
         return t.casual.parseDate(e, r, n);
     }),
     (t.createCasualConfiguration = y),
-    (t.createConfiguration = T));
+    (t.createConfiguration = P));
 let a = n(r(888234)),
     i = r(550550),
     s = r(329454);
@@ -72,14 +72,14 @@ let l = n(r(195858)),
     h = n(r(192672)),
     p = n(r(451698));
 function y() {
-    let e = T();
+    let e = P();
     return (e.parsers.unshift(new l.default()), e);
 }
-function T() {
+function P() {
     let e = (0, i.includeCommonConfiguration)({
         parsers: [new d.default(), new m.default(), new g.default(), new f.default(), new c.default()],
         refiners: [new h.default(), new p.default()],
     });
     return ((e.refiners = e.refiners.filter((e) => !(e instanceof a.default))), e);
 }
-((t.hant = new s.Chrono(y())), (t.casual = new s.Chrono(y())), (t.strict = new s.Chrono(T())));
+((t.hant = new s.Chrono(y())), (t.casual = new s.Chrono(y())), (t.strict = new s.Chrono(P())));

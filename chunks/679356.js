@@ -40,23 +40,23 @@
                     }
                     return r;
                 })(e),
-                n = (function (e, r) {
+                a = (function (e, r) {
                     let t = Math.floor(r / 2),
                         o = Math.floor(e.length / t),
-                        n = [];
+                        a = [];
                     for (let r = 0; r < t; r++) {
                         let t = o * r,
-                            a = 0;
+                            n = 0;
                         for (let r = 0; r < o; r++) {
                             let o = t + r;
-                            o < e.length && (a += Math.abs(e[o]));
+                            o < e.length && (n += Math.abs(e[o]));
                         }
-                        n.push(a / o);
+                        a.push(n / o);
                     }
-                    let a = Math.max(...n, 0.001);
-                    return n.map((e) => e / a);
+                    let n = Math.max(...a, 0.001);
+                    return a.map((e) => e / n);
                 })(o, t);
-            self.postMessage({ waveform: n });
+            self.postMessage({ waveform: a });
         } catch (r) {
             let e = { waveform: [], error: r instanceof Error ? r.message : "Unknown error" };
             self.postMessage(e);

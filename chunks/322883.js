@@ -19,7 +19,7 @@ var n =
     (t.parseDate = function (e, r, n) {
         return t.casual.parseDate(e, r, n);
     }),
-    (t.createCasualConfiguration = R),
+    (t.createCasualConfiguration = M),
     (t.createConfiguration = D));
 let a = n(r(536295)),
     i = n(r(56390)),
@@ -59,29 +59,29 @@ let y = r(115835);
             return y.ReferenceWithTimezone;
         },
     }));
-let T = r(115004);
+let P = r(115004);
 (Object.defineProperty(t, "Meridiem", {
     enumerable: !0,
     get: function () {
-        return T.Meridiem;
+        return P.Meridiem;
     },
 }),
     Object.defineProperty(t, "Weekday", {
         enumerable: !0,
         get: function () {
-            return T.Weekday;
+            return P.Weekday;
         },
     }));
-let _ = n(r(629929)),
-    P = n(r(885909));
-function R() {
+let T = n(r(629929)),
+    _ = n(r(885909));
+function M() {
     let e = D(!1);
     return (
         e.parsers.unshift(new m.default()),
         e.parsers.unshift(new f.default()),
         e.parsers.unshift(new s.default()),
         e.parsers.unshift(new h.default()),
-        e.parsers.unshift(new P.default()),
+        e.parsers.unshift(new _.default()),
         e
     );
 }
@@ -89,7 +89,7 @@ function D(e = !0) {
     return (0, c.includeCommonConfiguration)(
         {
             parsers: [
-                new _.default(!0),
+                new T.default(!0),
                 new a.default(),
                 new i.default(),
                 new g.default(),
@@ -101,4 +101,4 @@ function D(e = !0) {
         e,
     );
 }
-((t.casual = new p.Chrono(R())), (t.strict = new p.Chrono(D(!0))));
+((t.casual = new p.Chrono(M())), (t.strict = new p.Chrono(D(!0))));

@@ -14,11 +14,11 @@ var n = e(53635),
     },
     i = { name: !0, length: !0, prototype: !0, caller: !0, callee: !0, arguments: !0, arity: !0 },
     f = { $$typeof: !0, compare: !0, defaultProps: !0, displayName: !0, propTypes: !0, type: !0 },
-    u = {};
-function s(t) {
-    return n.isMemo(t) ? f : u[t.$$typeof] || o;
+    s = {};
+function u(t) {
+    return n.isMemo(t) ? f : s[t.$$typeof] || o;
 }
-((u[n.ForwardRef] = { $$typeof: !0, render: !0, defaultProps: !0, displayName: !0, propTypes: !0 }), (u[n.Memo] = f));
+((s[n.ForwardRef] = { $$typeof: !0, render: !0, defaultProps: !0, displayName: !0, propTypes: !0 }), (s[n.Memo] = f));
 var a = Object.defineProperty,
     h = Object.getOwnPropertyNames,
     p = Object.getOwnPropertySymbols,
@@ -33,9 +33,9 @@ t.exports = function t(r, e, n) {
         }
         var f = h(e);
         p && (f = f.concat(p(e)));
-        for (var u = s(r), g = s(e), d = 0; d < f.length; ++d) {
+        for (var s = u(r), g = u(e), d = 0; d < f.length; ++d) {
             var v = f[d];
-            if (!i[v] && !(n && n[v]) && !(g && g[v]) && !(u && u[v])) {
+            if (!i[v] && !(n && n[v]) && !(g && g[v]) && !(s && s[v])) {
                 var b = c(e, v);
                 try {
                     a(r, v, b);

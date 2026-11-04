@@ -7,7 +7,7 @@ var n = r(439619),
     u = i("WeakMap.prototype.get", !0),
     c = i("WeakMap.prototype.set", !0),
     f = i("WeakMap.prototype.has", !0),
-    d = i("WeakMap.prototype.delete", !0);
+    p = i("WeakMap.prototype.delete", !0);
 e.exports = l
     ? function () {
           var e,
@@ -18,7 +18,7 @@ e.exports = l
                   },
                   delete: function (r) {
                       if (l && r && ("object" == typeof r || "function" == typeof r)) {
-                          if (e) return d(e, r);
+                          if (e) return p(e, r);
                       } else if (a && t) return t.delete(r);
                       return !1;
                   },

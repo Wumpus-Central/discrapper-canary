@@ -3,11 +3,11 @@ var n = r(271434);
     if ((n(r) || ((o = r || o), (r = [])), (o = o || {}), t instanceof RegExp)) {
         var i,
             s,
-            c = r,
+            l = r,
             h = t.source.match(/\((?!\?)/g);
         if (h)
             for (var f = 0; f < h.length; f++)
-                c.push({
+                l.push({
                     name: f,
                     prefix: null,
                     delimiter: null,
@@ -17,11 +17,11 @@ var n = r(271434);
                     asterisk: !1,
                     pattern: null,
                 });
-        return ((t.keys = c), t);
+        return ((t.keys = l), t);
     }
     if (n(t)) {
         for (var d, p = r, g = o, m = [], b = 0; b < t.length; b++) m.push(e(t[b], p, g).source);
-        return (((d = RegExp("(?:" + m.join("|") + ")", l(g))).keys = p), d);
+        return (((d = RegExp("(?:" + m.join("|") + ")", c(g))).keys = p), d);
     }
     return ((i = r), u(a(t, (s = o)), i, s));
 }),
@@ -36,7 +36,7 @@ var o = RegExp(
     "g",
 );
 function a(e, t) {
-    for (var r, n = [], a = 0, i = 0, s = "", l = (t && t.delimiter) || "/"; null != (r = o.exec(e));) {
+    for (var r, n = [], a = 0, i = 0, s = "", c = (t && t.delimiter) || "/"; null != (r = o.exec(e));) {
         var u = r[0],
             h = r[1],
             f = r.index;
@@ -55,7 +55,7 @@ function a(e, t) {
         var w = null != p && null != d && d !== p,
             v = "+" === _ || "*" === _,
             M = "?" === _ || "*" === _,
-            x = r[2] || l,
+            x = r[2] || c,
             C = m || b;
         n.push({
             name: g || a++,
@@ -65,7 +65,7 @@ function a(e, t) {
             repeat: v,
             partial: w,
             asterisk: !!y,
-            pattern: C ? C.replace(/([=!:$\/()])/g, "\\$1") : y ? ".*" : "[^" + c(x) + "]+?",
+            pattern: C ? C.replace(/([=!:$\/()])/g, "\\$1") : y ? ".*" : "[^" + l(x) + "]+?",
         });
     }
     return (i < e.length && (s += e.substr(i)), s && n.push(s), n);
@@ -79,9 +79,9 @@ function s(e) {
     for (var t = Array(e.length), r = 0; r < e.length; r++)
         "object" == typeof e[r] && (t[r] = RegExp("^(?:" + e[r].pattern + ")$"));
     return function (r, o) {
-        for (var a = "", s = r || {}, c = (o || {}).pretty ? i : encodeURIComponent, l = 0; l < e.length; l++) {
+        for (var a = "", s = r || {}, l = (o || {}).pretty ? i : encodeURIComponent, c = 0; c < e.length; c++) {
             var u,
-                h = e[l];
+                h = e[c];
             if ("string" == typeof h) {
                 a += h;
                 continue;
@@ -101,7 +101,7 @@ function s(e) {
                     if (h.optional) continue;
                     else throw TypeError('Expected "' + h.name + '" to not be empty');
                 for (var d = 0; d < f.length; d++) {
-                    if (((u = c(f[d])), !t[l].test(u)))
+                    if (((u = l(f[d])), !t[c].test(u)))
                         throw TypeError(
                             'Expected all "' +
                                 h.name +
@@ -120,8 +120,8 @@ function s(e) {
                     ? encodeURI(f).replace(/[?#]/g, function (e) {
                           return "%" + e.charCodeAt(0).toString(16).toUpperCase();
                       })
-                    : c(f)),
-                !t[l].test(u))
+                    : l(f)),
+                !t[c].test(u))
             )
                 throw TypeError('Expected "' + h.name + '" to match "' + h.pattern + '", but received "' + u + '"');
             a += h.prefix + u;
@@ -129,19 +129,19 @@ function s(e) {
         return a;
     };
 }
-function c(e) {
+function l(e) {
     return e.replace(/([.+*?=^!:${}()[\]|\/\\])/g, "\\$1");
 }
-function l(e) {
+function c(e) {
     return e.sensitive ? "" : "i";
 }
 function u(e, t, r) {
     n(t) || ((r = t || r), (t = []));
     for (var o, a = (r = r || {}).strict, i = !1 !== r.end, s = "", u = 0; u < e.length; u++) {
         var h = e[u];
-        if ("string" == typeof h) s += c(h);
+        if ("string" == typeof h) s += l(h);
         else {
-            var f = c(h.prefix),
+            var f = l(h.prefix),
                 d = "(?:" + h.pattern + ")";
             (t.push(h),
                 h.repeat && (d += "(?:" + f + d + ")*"),
@@ -149,12 +149,12 @@ function u(e, t, r) {
                     h.optional ? (h.partial ? f + "(" + d + ")?" : "(?:" + f + "(" + d + "))?") : f + "(" + d + ")"));
         }
     }
-    var p = c(r.delimiter || "/"),
+    var p = l(r.delimiter || "/"),
         g = s.slice(-p.length) === p;
     return (
         a || (s = (g ? s.slice(0, -p.length) : s) + "(?:" + p + "(?=$))?"),
         i ? (s += "$") : (s += a && g ? "" : "(?=" + p + "|$)"),
-        ((o = RegExp("^" + s, l(r))).keys = t),
+        ((o = RegExp("^" + s, c(r))).keys = t),
         o
     );
 }

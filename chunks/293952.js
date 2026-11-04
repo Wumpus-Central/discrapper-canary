@@ -66,7 +66,7 @@ var n,
     (t.parseDate = function (e, r, n) {
         return t.casual.parseDate(e, r, n);
     }),
-    (t.createCasualConfiguration = N),
+    (t.createCasualConfiguration = A),
     (t.createConfiguration = E));
 let u = r(550550),
     l = r(329454);
@@ -114,34 +114,34 @@ let m = o(r(888234)),
     h = o(r(954885)),
     p = o(r(88174)),
     y = o(r(102865)),
-    T = o(r(195858)),
-    _ = o(r(232415)),
-    P = o(r(521556)),
-    R = o(r(354887)),
+    P = o(r(195858)),
+    T = o(r(232415)),
+    _ = o(r(521556)),
+    M = o(r(354887)),
     D = o(r(786100)),
-    M = o(r(377127)),
-    O = o(r(192672)),
-    A = o(r(451698));
-function N() {
+    b = o(r(377127)),
+    R = o(r(192672)),
+    C = o(r(451698));
+function A() {
     let e = E();
-    return (e.parsers.unshift(new T.default()), e);
+    return (e.parsers.unshift(new P.default()), e);
 }
 function E() {
     let e = (0, u.includeCommonConfiguration)({
         parsers: [
-            new _.default(),
+            new T.default(),
             new f.default(),
-            new R.default(),
-            new h.default(),
             new M.default(),
+            new h.default(),
+            new b.default(),
             new y.default(),
             new D.default(),
             new p.default(),
-            new P.default(),
+            new _.default(),
             new g.default(),
         ],
-        refiners: [new O.default(), new A.default()],
+        refiners: [new R.default(), new C.default()],
     });
     return ((e.refiners = e.refiners.filter((e) => !(e instanceof m.default))), e);
 }
-((t.hant = s(r(543544))), (t.hans = s(r(735277))), (t.casual = new l.Chrono(N())), (t.strict = new l.Chrono(E())));
+((t.hant = s(r(543544))), (t.hans = s(r(735277))), (t.casual = new l.Chrono(A())), (t.strict = new l.Chrono(E())));

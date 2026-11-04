@@ -3,7 +3,7 @@ var i = n(477900),
     r = n(855986),
     l = n(111162),
     a = n(779016);
-let o = (0, s.v)((e) => ({
+let c = (0, s.v)((e) => ({
     horizontalSpacing: 4,
     verticalSpacing: 4,
     setHorizontalSpacing: (t) => {
@@ -19,7 +19,7 @@ n.d(
     {
         C: function () {
             let e = (0, r.bG)([l.default], () => l.default.layoutDebuggingEnabled),
-                { horizontalSpacing: t, verticalSpacing: n } = o();
+                { horizontalSpacing: t, verticalSpacing: n } = c();
             if (e) {
                 let e = { "--custom-grid-horizontal-spacing": `${t}px`, "--custom-grid-vertical-spacing": `${n}px` };
                 return (0, i.jsx)("div", {
@@ -34,6 +34,6 @@ n.d(
             }
             return null;
         },
-        O: o,
+        O: c,
     },
 );

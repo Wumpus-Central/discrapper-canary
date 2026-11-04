@@ -1,29 +1,29 @@
-(t(321073),
+(r(321073),
     self.addEventListener("message", (e) => {
         let {
-                data: { rawBufferData: r, width: t, options: o, config: a, id: l },
+                data: { rawBufferData: t, width: r, options: o, config: a, id: l },
             } = e,
-            { normalizedData: s, normalizedVolumeMultipler: n } = (function (e, r, t, o) {
+            { normalizedData: s, normalizedVolumeMultipler: n } = (function (e, t, r, o) {
                 let a,
-                    { fineTuning: l, fineTuningResolution: s, duration: n } = t,
-                    i = Math.floor(r / o.waveformBlockWidth);
+                    { fineTuning: l, fineTuningResolution: s, duration: n } = r,
+                    i = Math.floor(t / o.waveformBlockWidth);
                 if (l >= 0) {
-                    let r = Math.floor((e.length * (l - (s * l) / n)) / n),
-                        t = Math.floor((e.length * (l + (s * (n - l)) / n)) / n);
-                    a = e.slice(r, t);
+                    let t = Math.floor((e.length * (l - (s * l) / n)) / n),
+                        r = Math.floor((e.length * (l + (s * (n - l)) / n)) / n);
+                    a = e.slice(t, r);
                 } else a = e;
-                let h = Math.floor(a.length / i),
-                    p = [];
+                let f = Math.floor(a.length / i),
+                    h = [];
                 for (let e = 0; e < i; e++) {
-                    let r = h * e,
-                        t = 0;
-                    for (let e = 0; e < h; e++) t += Math.abs(a[r + e]);
-                    p.push(t / h);
+                    let t = f * e,
+                        r = 0;
+                    for (let e = 0; e < f; e++) r += Math.abs(a[t + e]);
+                    h.push(r / f);
                 }
-                let f = Math.pow(Math.max(...p), -1),
-                    u = p.map((e) => e * f),
-                    c = [...p].sort()[Math.floor(0.95 * p.length)];
+                let p = Math.pow(Math.max(...h), -1),
+                    u = h.map((e) => e * p),
+                    c = [...h].sort()[Math.floor(0.95 * h.length)];
                 return { normalizedData: u, normalizedVolumeMultipler: Math.min((o.loudnessThreshold ?? c) / c, 1) };
-            })(r, t, o, a);
+            })(t, r, o, a);
         self.postMessage({ waveform: s, id: l, normalizedVolumeMultipler: n });
     }));

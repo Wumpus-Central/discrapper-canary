@@ -87,42 +87,42 @@ Object.defineProperty(e, "ICalCategory", {
         return i(l).default;
     },
 });
-var u = a(51561);
+var h = a(51561);
 (Object.defineProperty(e, "ICalEvent", {
     enumerable: !0,
     get: function () {
-        return i(u).default;
+        return i(h).default;
     },
 }),
     Object.defineProperty(e, "ICalEventStatus", {
         enumerable: !0,
         get: function () {
-            return u.ICalEventStatus;
+            return h.ICalEventStatus;
         },
     }),
     Object.defineProperty(e, "ICalEventBusyStatus", {
         enumerable: !0,
         get: function () {
-            return u.ICalEventBusyStatus;
+            return h.ICalEventBusyStatus;
         },
     }),
     Object.defineProperty(e, "ICalEventTransparency", {
         enumerable: !0,
         get: function () {
-            return u.ICalEventTransparency;
+            return h.ICalEventTransparency;
         },
     }));
-var h = a(540016);
+var u = a(540016);
 (Object.defineProperty(e, "ICalEventRepeatingFreq", {
     enumerable: !0,
     get: function () {
-        return h.ICalEventRepeatingFreq;
+        return u.ICalEventRepeatingFreq;
     },
 }),
     Object.defineProperty(e, "ICalWeekday", {
         enumerable: !0,
         get: function () {
-            return h.ICalWeekday;
+            return u.ICalWeekday;
         },
     }));
 var c = a(896230);

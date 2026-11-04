@@ -9,8 +9,8 @@ var l = "u" > typeof BigInt,
     u = "u" > typeof Symbol,
     c = s(Object.prototype.toString),
     f = s(Number.prototype.valueOf),
-    d = s(String.prototype.valueOf),
-    p = s(Boolean.prototype.valueOf);
+    p = s(String.prototype.valueOf),
+    d = s(Boolean.prototype.valueOf);
 if (l) var h = s(BigInt.prototype.valueOf);
 if (u) var m = s(Symbol.prototype.valueOf);
 function v(e, t) {
@@ -110,21 +110,21 @@ function x(e) {
     (t.isArrayBuffer = S),
     (E.working = "u" > typeof ArrayBuffer && "u" > typeof DataView && E(new DataView(new ArrayBuffer(1), 0, 1))),
     (t.isDataView = x));
-var C = "u" > typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
-function k(e) {
+var k = "u" > typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
+function C(e) {
     return "[object SharedArrayBuffer]" === c(e);
 }
 function T(e) {
-    return void 0 !== C && (void 0 === k.working && (k.working = k(new C())), k.working ? k(e) : e instanceof C);
+    return void 0 !== k && (void 0 === C.working && (C.working = C(new k())), C.working ? C(e) : e instanceof k);
 }
 function M(e) {
     return v(e, f);
 }
 function P(e) {
-    return v(e, d);
+    return v(e, p);
 }
 function A(e) {
-    return v(e, p);
+    return v(e, d);
 }
 function I(e) {
     return l && v(e, h);

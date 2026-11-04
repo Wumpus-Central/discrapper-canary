@@ -19,8 +19,8 @@ var n =
     (t.parseDate = function (e, r, n) {
         return t.casual.parseDate(e, r, n);
     }),
-    (t.createCasualConfiguration = P),
-    (t.createConfiguration = R));
+    (t.createCasualConfiguration = _),
+    (t.createConfiguration = M));
 let a = r(550550),
     i = r(329454);
 Object.defineProperty(t, "Chrono", {
@@ -71,15 +71,15 @@ let u = n(r(629929)),
     h = n(r(671021)),
     p = n(r(418759)),
     y = n(r(272930)),
-    T = n(r(546624)),
-    _ = n(r(899587));
-function P(e = !0) {
-    let t = R(!1, e);
+    P = n(r(546624)),
+    T = n(r(899587));
+function _(e = !0) {
+    let t = M(!1, e);
     return (
-        t.parsers.unshift(new p.default()), t.parsers.unshift(new h.default()), t.parsers.unshift(new T.default()), t
+        t.parsers.unshift(new p.default()), t.parsers.unshift(new h.default()), t.parsers.unshift(new P.default()), t
     );
 }
-function R(e = !0, t = !0) {
+function M(e = !0, t = !0) {
     return (0, a.includeCommonConfiguration)(
         {
             parsers: [
@@ -89,11 +89,11 @@ function R(e = !0, t = !0) {
                 new m.default(),
                 new y.default(),
                 new c.default(),
-                new _.default(),
+                new T.default(),
             ],
             refiners: [new f.default(), new g.default()],
         },
         e,
     );
 }
-((t.casual = new i.Chrono(P())), (t.strict = new i.Chrono(R(!0))));
+((t.casual = new i.Chrono(_())), (t.strict = new i.Chrono(M(!0))));

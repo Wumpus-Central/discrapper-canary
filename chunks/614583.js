@@ -18,15 +18,15 @@ let a = n(r(806531)),
     h = r(550550),
     p = n(r(196333)),
     y = n(r(166452)),
-    T = n(r(637730)),
-    _ = n(r(173215)),
-    P = n(r(629929)),
-    R = n(r(296097)),
+    P = n(r(637730)),
+    T = n(r(173215)),
+    _ = n(r(629929)),
+    M = n(r(296097)),
     D = n(r(693242)),
-    M = n(r(483548)),
-    O = n(r(913912)),
-    A = n(r(19903)),
-    N = n(r(637755));
+    b = n(r(483548)),
+    R = n(r(913912)),
+    C = n(r(19903)),
+    A = n(r(637755));
 t.default = class {
     createCasualConfiguration(e = !1) {
         let t = this.createConfiguration(!1, e);
@@ -34,9 +34,9 @@ t.default = class {
             t.parsers.push(new p.default()),
             t.parsers.push(new y.default()),
             t.parsers.push(new o.default()),
-            t.parsers.push(new _.default()),
-            t.parsers.push(new R.default()),
-            t.refiners.push(new N.default()),
+            t.parsers.push(new T.default()),
+            t.parsers.push(new M.default()),
+            t.refiners.push(new A.default()),
             t
         );
     }
@@ -44,11 +44,11 @@ t.default = class {
         let r = (0, h.includeCommonConfiguration)(
             {
                 parsers: [
-                    new P.default(t),
+                    new _.default(t),
                     new a.default(e),
                     new i.default(),
                     new s.default(t),
-                    new T.default(),
+                    new P.default(),
                     new l.default(),
                     new d.default(e),
                     new c.default(e),
@@ -60,11 +60,11 @@ t.default = class {
         );
         return (
             r.parsers.unshift(new u.default(e)),
-            r.refiners.unshift(new M.default()),
+            r.refiners.unshift(new b.default()),
             r.refiners.unshift(new D.default()),
-            r.refiners.unshift(new O.default()),
+            r.refiners.unshift(new R.default()),
             r.refiners.push(new g.default()),
-            r.refiners.push(new A.default()),
+            r.refiners.push(new C.default()),
             r.refiners.push(new f.default()),
             r
         );

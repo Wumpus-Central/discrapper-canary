@@ -19,8 +19,8 @@ var n =
     (t.parseDate = function (e, r, n) {
         return t.casual.parseDate(e, r, n);
     }),
-    (t.createCasualConfiguration = A),
-    (t.createConfiguration = N));
+    (t.createCasualConfiguration = C),
+    (t.createConfiguration = A));
 let a = r(550550),
     i = r(329454);
 Object.defineProperty(t, "Chrono", {
@@ -71,26 +71,26 @@ let u = n(r(463791)),
     h = n(r(48393)),
     p = n(r(537371)),
     y = n(r(309084)),
-    T = n(r(378105)),
-    _ = n(r(754634)),
-    P = n(r(619846)),
-    R = n(r(763423)),
+    P = n(r(378105)),
+    T = n(r(754634)),
+    _ = n(r(619846)),
+    M = n(r(763423)),
     D = n(r(232585)),
-    M = n(r(224137)),
-    O = n(r(318106));
-function A(e = !0) {
-    let t = N(!1, e);
+    b = n(r(224137)),
+    R = n(r(318106));
+function C(e = !0) {
+    let t = A(!1, e);
     return (
         t.parsers.unshift(new d.default()),
         t.parsers.unshift(new c.default()),
-        t.parsers.unshift(new P.default()),
+        t.parsers.unshift(new _.default()),
         t.parsers.unshift(new p.default()),
         t.parsers.unshift(new D.default()),
-        t.parsers.unshift(new R.default()),
+        t.parsers.unshift(new M.default()),
         t
     );
 }
-function N(e = !0, t = !0) {
+function A(e = !0, t = !0) {
     return (0, a.includeCommonConfiguration)(
         {
             parsers: [
@@ -99,15 +99,15 @@ function N(e = !0, t = !0) {
                 new h.default(),
                 new p.default(),
                 new g.default(),
-                new _.default(),
+                new T.default(),
                 new y.default(),
-                new T.default(e),
-                new M.default(e),
-                new O.default(e),
+                new P.default(e),
+                new b.default(e),
+                new R.default(e),
             ],
             refiners: [new l.default(), new u.default()],
         },
         e,
     );
 }
-((t.casual = new i.Chrono(A())), (t.strict = new i.Chrono(N(!0))));
+((t.casual = new i.Chrono(C())), (t.strict = new i.Chrono(A(!0))));

@@ -5,10 +5,10 @@ function i() {}
     (t.exports = function () {
         function t(t, r, e, o, i, f) {
             if (f !== n) {
-                var u = Error(
+                var s = Error(
                     "Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types",
                 );
-                throw ((u.name = "Invariant Violation"), u);
+                throw ((s.name = "Invariant Violation"), s);
             }
         }
         function r() {

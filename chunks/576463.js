@@ -1,4 +1,4 @@
-t.d(a, { FG: () => d, LA: () => l, U_: () => o, f5: () => u, rG: () => i });
+t.d(a, { FG: () => u, LA: () => l, U_: () => o, f5: () => s, rG: () => i });
 var r = t(569737),
     n = t(489138);
 function i(e, a, t, r) {
@@ -20,36 +20,36 @@ function o(e) {
 function l(e, a) {
     return "BC" === e ? 1 - a : a;
 }
-function u(e) {
+function s(e) {
     let a = "AD";
     return (e <= 0 && ((a = "BC"), (e = 1 - e)), [a, e]);
 }
-let s = {
+let d = {
     standard: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
     leapyear: [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
 };
-class d {
+class u {
     fromJulianDay(e) {
         let a = e - 1721426,
             t = Math.floor(a / 146097),
             l = (0, n.z)(a, 146097),
-            s = Math.floor(l / 36524),
-            d = (0, n.z)(l, 36524),
-            c = Math.floor(d / 1461),
-            m = Math.floor((0, n.z)(d, 1461) / 365),
-            [h, y] = u(400 * t + 100 * s + 4 * c + m + +(4 !== s && 4 !== m)),
-            D = e - i(h, y, 1, 1),
-            g = 2;
-        e < i(h, y, 3, 1) ? (g = 0) : o(y) && (g = 1);
-        let p = Math.floor(((D + g) * 12 + 373) / 367),
-            f = e - i(h, y, p, 1) + 1;
-        return new (0, r.ng)(h, y, p, f);
+            d = Math.floor(l / 36524),
+            u = (0, n.z)(l, 36524),
+            c = Math.floor(u / 1461),
+            m = Math.floor((0, n.z)(u, 1461) / 365),
+            [h, y] = s(400 * t + 100 * d + 4 * c + m + +(4 !== d && 4 !== m)),
+            g = e - i(h, y, 1, 1),
+            p = 2;
+        e < i(h, y, 3, 1) ? (p = 0) : o(y) && (p = 1);
+        let f = Math.floor(((g + p) * 12 + 373) / 367),
+            D = e - i(h, y, f, 1) + 1;
+        return new (0, r.ng)(h, y, f, D);
     }
     toJulianDay(e) {
         return i(e.era, e.year, e.month, e.day);
     }
     getDaysInMonth(e) {
-        return s[o(e.year) ? "leapyear" : "standard"][e.month - 1];
+        return d[o(e.year) ? "leapyear" : "standard"][e.month - 1];
     }
     getMonthsInYear(e) {
         return 12;

@@ -20,7 +20,7 @@ var n =
         return t.casual.parseDate(e, r, n);
     }),
     (t.createCasualConfiguration = y),
-    (t.createConfiguration = T));
+    (t.createConfiguration = P));
 let a = r(550550),
     i = r(329454);
 Object.defineProperty(t, "Chrono", {
@@ -71,10 +71,10 @@ let u = n(r(629929)),
     h = n(r(365118)),
     p = n(r(842205));
 function y(e = !0) {
-    let t = T(!1, e);
+    let t = P(!1, e);
     return (t.parsers.push(new g.default()), t.parsers.push(new h.default()), t);
 }
-function T(e = !0, t = !0) {
+function P(e = !0, t = !0) {
     return (0, a.includeCommonConfiguration)(
         {
             parsers: [new u.default(t), new l.default(), new d.default(), new f.default(), new p.default()],
@@ -83,4 +83,4 @@ function T(e = !0, t = !0) {
         e,
     );
 }
-((t.casual = new i.Chrono(y())), (t.strict = new i.Chrono(T(!0))));
+((t.casual = new i.Chrono(y())), (t.strict = new i.Chrono(P(!0))));
