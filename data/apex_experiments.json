@@ -5976,6 +5976,18 @@
     }
   },
   {
+    "name": "2026-11-soundboard-upsells-brand-refresh",
+    "kind": "user",
+    "defaultConfig": false,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": true
+    }
+  },
+  {
     "name": "2026-11-waterwheels-discover",
     "kind": "user",
     "defaultConfig": {

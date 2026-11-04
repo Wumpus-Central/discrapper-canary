@@ -15,8 +15,8 @@ var i = n(477900),
     I = n(793574),
     p = n(688810),
     m = n(139286),
-    T = n(915089),
-    g = n(465794),
+    g = n(915089),
+    T = n(465794),
     S = n(594061),
     N = n(120246),
     C = n(495867),
@@ -26,59 +26,62 @@ var i = n(477900),
     y = n(879610),
     D = n(796774),
     b = n(209932),
-    v = n(453997),
-    P = n(368309),
-    M = n(782618),
-    U = n(980504),
-    w = n(652215),
-    G = n(682901),
-    x = n(792996),
-    k = n(454992);
-function F(e) {
+    v = n(24181),
+    P = n(453997),
+    M = n(37336),
+    U = n(368309),
+    w = n(782618),
+    G = n(980504),
+    x = n(652215),
+    k = n(682901),
+    F = n(792996),
+    B = n(454992);
+function V(e) {
     let { analyticsLocations: t, voiceGuildId: n } = e,
-        { analyticsLocations: a } = (0, p.Ay)(I.A.PREMIUM_UPSELL),
-        s = r.useCallback(() => {
-            (0, P.p)(t);
+        a = v.H.useConfig({ location: "suggested_sounds_upsell" }),
+        { analyticsLocations: s } = (0, p.Ay)(I.A.PREMIUM_UPSELL),
+        l = r.useCallback(() => {
+            (0, U.p)(t);
         }, [t]),
-        l = r.useMemo(() => {
-            let e = (0, y.Dd)(G.PremiumTypes.TIER_2);
-            return x.intl.format(x.t["tw/SSq"], { nitroTierName: e, onClick: s });
-        }, [s]);
-    return (
-        (0, d.Ay)(() => {
-            L.default.track(w.HAw.PREMIUM_UPSELL_VIEWED, {
-                type: G.e.SOUNDBOARD_QUICK_ACCESS_PICKER_UPSELL,
-                location_stack: a,
-                sku_id: y.Ay.getSkuIdForPremiumType(G.PremiumTypes.TIER_2),
-                voice_guild_id: n,
-            });
-        }),
-        (0, i.jsxs)("div", {
-            className: k.Sp,
-            children: [
-                (0, i.jsx)(_.E, { variant: "body-sm/medium", color: "text-default", children: l }),
-                (0, i.jsx)(g.A, {
-                    size: "sm",
-                    subscriptionTier: G.pe.TIER_2,
-                    buttonTextOverride: x.intl.string(x.t.pj0XBN),
-                    premiumModalAnalyticsLocation: {
-                        section: w.JJy.SOUNDBOARD_SOUND_PICKER_UPSELL,
-                        object: w.ZSU.BUTTON_CTA,
-                    },
-                }),
-            ],
-        })
-    );
+        o = r.useMemo(() => {
+            let e = (0, y.Dd)(k.PremiumTypes.TIER_2);
+            return F.intl.format(F.t["tw/SSq"], { nitroTierName: e, onClick: l });
+        }, [l]);
+    return ((0, d.Ay)(() => {
+        L.default.track(x.HAw.PREMIUM_UPSELL_VIEWED, {
+            type: k.e.SOUNDBOARD_QUICK_ACCESS_PICKER_UPSELL,
+            location_stack: s,
+            sku_id: y.Ay.getSkuIdForPremiumType(k.PremiumTypes.TIER_2),
+            voice_guild_id: n,
+        });
+    }),
+    a)
+        ? (0, i.jsx)(M.A, { onNitroClick: l })
+        : (0, i.jsxs)("div", {
+              className: B.Sp,
+              children: [
+                  (0, i.jsx)(_.E, { variant: "body-sm/medium", color: "text-default", children: o }),
+                  (0, i.jsx)(T.A, {
+                      size: "sm",
+                      subscriptionTier: k.pe.TIER_2,
+                      buttonTextOverride: F.intl.string(F.t.pj0XBN),
+                      premiumModalAnalyticsLocation: {
+                          section: x.JJy.SOUNDBOARD_SOUND_PICKER_UPSELL,
+                          object: x.ZSU.BUTTON_CTA,
+                      },
+                  }),
+              ],
+          });
 }
-function B() {
+function H() {
     return (0, i.jsx)("ul", {
-        className: k.G2,
-        children: Array.from({ length: 6 }).map((e, t) => (0, i.jsx)("li", { className: k.bP }, t)),
+        className: B.G2,
+        children: Array.from({ length: 6 }).map((e, t) => (0, i.jsx)("li", { className: B.bP }, t)),
     });
 }
-function V(e) {
+function j(e) {
     let { channel: t, guildId: n, analyticsLocations: r, sounds: a } = e,
-        s = (0, T.GV)(),
+        s = (0, g.GV)(),
         l = (0, f.A)(s),
         d = (0, c.bG)([O.default], () => O.default.getCurrentUser()),
         u = (0, c.bG)([R.A], () => R.A.getVoiceState(n, d?.id ?? "")),
@@ -91,16 +94,16 @@ function V(e) {
                 return (0, i.jsx)("ul", {
                     ...s,
                     ref: n,
-                    className: k.G2,
+                    className: B.G2,
                     children: a.map((e) =>
                         (0, i.jsx)(
-                            M.A,
+                            w.A,
                             {
                                 channel: t,
                                 interactive: !_,
                                 analyticsLocations: [...r, e.analyticsLocationSection],
                                 sound: e,
-                                openUpsellForSound: () => (0, P.p)(r),
+                                openUpsellForSound: () => (0, U.p)(r),
                             },
                             e.soundId,
                         ),
@@ -117,7 +120,7 @@ n.d(
         A: function (e) {
             let { channel: t, guildId: n, analyticsSource: a, openFullPicker: o, showEchoes: d = !1 } = e,
                 { analyticsLocations: f } = (0, p.Ay)(I.A.SOUNDBOARD_QUICK_ACCESS_POPOUT),
-                { sounds: T, hasLockedSound: g, isFetching: O } = (0, v.A)({ channel: t, currentGuildId: n }),
+                { sounds: g, hasLockedSound: T, isFetching: O } = (0, P.A)({ channel: t, currentGuildId: n }),
                 R = (0, c.bG)([C.A], () => C.A.getMediaSessionId()),
                 L = (0, c.bG)([b.A], () => b.A.getFavorites().size);
             return (
@@ -129,7 +132,7 @@ n.d(
                         guild_id: n,
                         media_session_id: R,
                         favorite_sounds_count: L,
-                        type: U.c4.QUICK_ACCESS,
+                        type: G.c4.QUICK_ACCESS,
                     },
                 }),
                 r.useEffect(() => {
@@ -140,25 +143,25 @@ n.d(
                     children: (0, i.jsxs)(u.lG, {
                         children: [
                             (0, i.jsxs)("div", {
-                                className: s()(k.kL, g && k.Dx),
+                                className: s()(B.kL, T && B.Dx),
                                 children: [
                                     d && null != n ? (0, i.jsx)(N.A, { guildId: n, channelId: t.id }) : null,
                                     (0, i.jsxs)("div", {
-                                        className: k.N1,
+                                        className: B.N1,
                                         children: [
                                             (0, i.jsxs)("div", {
-                                                className: k.TK,
+                                                className: B.TK,
                                                 children: [
                                                     (0, i.jsx)(E.J, { size: "xs", color: A.A.colors.ICON_DEFAULT }),
                                                     (0, i.jsx)(_.E, {
                                                         variant: "body-sm/medium",
                                                         color: "text-default",
-                                                        children: x.intl.string(x.t["1a/hIV"]),
+                                                        children: F.intl.string(F.t["1a/hIV"]),
                                                     }),
                                                 ],
                                             }),
                                             (0, i.jsx)(h.Q, {
-                                                text: x.intl.string(x.t.hmBVph),
+                                                text: F.intl.string(F.t.hmBVph),
                                                 onClick: o,
                                                 size: "sm",
                                                 variant: "primary",
@@ -167,11 +170,11 @@ n.d(
                                         ],
                                     }),
                                     O
-                                        ? (0, i.jsx)(B, {})
-                                        : (0, i.jsx)(V, { sounds: T, channel: t, guildId: n, analyticsLocations: f }),
+                                        ? (0, i.jsx)(H, {})
+                                        : (0, i.jsx)(j, { sounds: g, channel: t, guildId: n, analyticsLocations: f }),
                                 ],
                             }),
-                            g && (0, i.jsx)(F, { analyticsLocations: f, voiceGuildId: n }),
+                            T && (0, i.jsx)(V, { analyticsLocations: f, voiceGuildId: n }),
                         ],
                     }),
                 })
