@@ -641,11 +641,15 @@
     --background-code: hsl(var(--opacity-blurple-8-hsl)/0.0784313725490196);
     --background-code-addition: hsl(var(--opacity-green-12-hsl)/0.12156862745098039);
     --background-code-deletion: hsl(var(--opacity-red-12-hsl)/0.12156862745098039);
+    --background-feedback-critical: var(--red-new-80);
+    --background-feedback-info: var(--blue-new-80);
     --background-feedback-mod-critical: hsl(var(--opacity-red-8-hsl)/0.0784313725490196);
     --background-feedback-mod-info: hsl(var(--opacity-blue-8-hsl)/0.0784313725490196);
     --background-feedback-mod-positive: hsl(var(--opacity-green-8-hsl)/0.0784313725490196);
     --background-feedback-mod-warning: hsl(var(--opacity-yellow-8-hsl)/0.0784313725490196);
     --background-feedback-notification: var(--red-new-50);
+    --background-feedback-positive: var(--green-new-80);
+    --background-feedback-warning: var(--yellow-new-80);
     --background-mod-muted: hsl(var(--opacity-8-hsl)/0.0784313725490196);
     --background-mod-normal: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --background-mod-strong: hsl(var(--opacity-20-hsl)/0.2);
@@ -1619,11 +1623,15 @@
     --background-code: hsl(var(--opacity-blurple-4-hsl)/0.0392156862745098);
     --background-code-addition: hsl(var(--opacity-green-12-hsl)/0.12156862745098039);
     --background-code-deletion: hsl(var(--opacity-red-12-hsl)/0.12156862745098039);
+    --background-feedback-critical: var(--red-new-80);
+    --background-feedback-info: var(--blue-new-80);
     --background-feedback-mod-critical: hsl(var(--opacity-red-8-hsl)/0.0784313725490196);
     --background-feedback-mod-info: hsl(var(--opacity-blue-8-hsl)/0.0784313725490196);
     --background-feedback-mod-positive: hsl(var(--opacity-green-8-hsl)/0.0784313725490196);
     --background-feedback-mod-warning: hsl(var(--opacity-yellow-8-hsl)/0.0784313725490196);
     --background-feedback-notification: var(--red-new-50);
+    --background-feedback-positive: var(--green-new-80);
+    --background-feedback-warning: var(--yellow-new-80);
     --background-mod-muted: hsl(var(--opacity-8-hsl)/0.0784313725490196);
     --background-mod-normal: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --background-mod-strong: hsl(var(--opacity-24-hsl)/0.23921568627450981);
@@ -2597,11 +2605,15 @@
     --background-code: hsl(var(--opacity-blurple-8-hsl)/0.0784313725490196);
     --background-code-addition: hsl(var(--opacity-green-12-hsl)/0.12156862745098039);
     --background-code-deletion: hsl(var(--opacity-red-12-hsl)/0.12156862745098039);
+    --background-feedback-critical: var(--red-new-80);
+    --background-feedback-info: var(--blue-new-80);
     --background-feedback-mod-critical: hsl(var(--opacity-red-8-hsl)/0.0784313725490196);
     --background-feedback-mod-info: hsl(var(--opacity-blue-8-hsl)/0.0784313725490196);
     --background-feedback-mod-positive: hsl(var(--opacity-green-8-hsl)/0.0784313725490196);
     --background-feedback-mod-warning: hsl(var(--opacity-yellow-8-hsl)/0.0784313725490196);
     --background-feedback-notification: var(--red-new-50);
+    --background-feedback-positive: var(--green-new-80);
+    --background-feedback-warning: var(--yellow-new-80);
     --background-mod-muted: hsl(var(--opacity-8-hsl)/0.0784313725490196);
     --background-mod-normal: hsl(var(--opacity-20-hsl)/0.2);
     --background-mod-strong: hsl(var(--opacity-24-hsl)/0.23921568627450981);
@@ -3575,11 +3587,15 @@
     --background-code: hsl(var(--opacity-blurple-8-hsl)/0.0784313725490196);
     --background-code-addition: hsl(var(--opacity-green-12-hsl)/0.12156862745098039);
     --background-code-deletion: hsl(var(--opacity-red-12-hsl)/0.12156862745098039);
+    --background-feedback-critical: var(--red-new-80);
+    --background-feedback-info: var(--blue-new-80);
     --background-feedback-mod-critical: hsl(var(--opacity-red-8-hsl)/0.0784313725490196);
     --background-feedback-mod-info: hsl(var(--opacity-blue-8-hsl)/0.0784313725490196);
     --background-feedback-mod-positive: hsl(var(--opacity-green-8-hsl)/0.0784313725490196);
     --background-feedback-mod-warning: hsl(var(--opacity-yellow-8-hsl)/0.0784313725490196);
     --background-feedback-notification: var(--red-new-50);
+    --background-feedback-positive: var(--green-new-80);
+    --background-feedback-warning: var(--yellow-new-80);
     --background-mod-muted: hsl(var(--opacity-8-hsl)/0.0784313725490196);
     --background-mod-normal: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --background-mod-strong: hsl(var(--opacity-20-hsl)/0.2);
@@ -10396,4 +10412,4 @@
     --motion-spring-subtle-duration: 598ms
 }
 
-/*# sourceMappingURL=952007.266814ee0ebe003f.css.map*/
+/*# sourceMappingURL=952007.929dbf6094392451.css.map*/

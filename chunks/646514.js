@@ -239,6 +239,20 @@ let { Themes: c } = d.zv,
             [_.ONYX]: { raw: "OPACITY_RED_12", opacity: 0.12156862745098039 },
             [_.DARK]: { raw: "OPACITY_RED_12", opacity: 0.12156862745098039 },
         },
+        BACKGROUND_FEEDBACK_CRITICAL: {
+            category: "background",
+            [_.ASH]: { raw: "RED_NEW_80", opacity: 1 },
+            [_.LIGHT]: { raw: "RED_NEW_80", opacity: 1 },
+            [_.ONYX]: { raw: "RED_NEW_80", opacity: 1 },
+            [_.DARK]: { raw: "RED_NEW_80", opacity: 1 },
+        },
+        BACKGROUND_FEEDBACK_INFO: {
+            category: "background",
+            [_.ASH]: { raw: "BLUE_NEW_80", opacity: 1 },
+            [_.LIGHT]: { raw: "BLUE_NEW_80", opacity: 1 },
+            [_.ONYX]: { raw: "BLUE_NEW_80", opacity: 1 },
+            [_.DARK]: { raw: "BLUE_NEW_80", opacity: 1 },
+        },
         BACKGROUND_FEEDBACK_MOD_CRITICAL: {
             category: "background",
             [_.ASH]: { raw: "OPACITY_RED_8", opacity: 0.0784313725490196 },
@@ -273,6 +287,20 @@ let { Themes: c } = d.zv,
             [_.LIGHT]: { raw: "RED_NEW_50", opacity: 1 },
             [_.ONYX]: { raw: "RED_NEW_50", opacity: 1 },
             [_.DARK]: { raw: "RED_NEW_50", opacity: 1 },
+        },
+        BACKGROUND_FEEDBACK_POSITIVE: {
+            category: "background",
+            [_.ASH]: { raw: "GREEN_NEW_80", opacity: 1 },
+            [_.LIGHT]: { raw: "GREEN_NEW_80", opacity: 1 },
+            [_.ONYX]: { raw: "GREEN_NEW_80", opacity: 1 },
+            [_.DARK]: { raw: "GREEN_NEW_80", opacity: 1 },
+        },
+        BACKGROUND_FEEDBACK_WARNING: {
+            category: "background",
+            [_.ASH]: { raw: "YELLOW_NEW_80", opacity: 1 },
+            [_.LIGHT]: { raw: "YELLOW_NEW_80", opacity: 1 },
+            [_.ONYX]: { raw: "YELLOW_NEW_80", opacity: 1 },
+            [_.DARK]: { raw: "YELLOW_NEW_80", opacity: 1 },
         },
         BACKGROUND_MOD_MUTED: {
             category: "background",
@@ -6462,7 +6490,7 @@ let { Themes: c } = d.zv,
     },
     { Themes: p } = d.zv,
     { SemanticColors: m } = { SemanticColors: E },
-    { RawColors: T } = {
+    { RawColors: g } = {
         RawColors: {
             APPLICATION_SUBSCRIPTION_END: "#0177a4",
             APPLICATION_SUBSCRIPTION_START: "#3442d9",
@@ -8186,7 +8214,7 @@ let { Themes: c } = d.zv,
             YELLOW_NEW_99: "#240000",
         },
     },
-    { SemanticColorExperiments: g } = { SemanticColorExperiments: u },
+    { SemanticColorExperiments: T } = { SemanticColorExperiments: u },
     { SemanticColorHighContrast: S } = { SemanticColorHighContrast: h },
     { Shadows: N } = { Shadows: I },
     { Spacing: C } = {
@@ -9750,7 +9778,7 @@ let { Themes: c } = d.zv,
             PX_192: 192,
         },
     },
-    D = o()(T, (e) => r()(e)),
+    D = o()(g, (e) => r()(e)),
     b = {
         themes: d.NJ,
         modules: O,
@@ -9761,9 +9789,9 @@ let { Themes: c } = d.zv,
                     r = e[i],
                     a = r.raw,
                     s = r.opacity;
-                if (t in g && null != n.enabledExperiments && n.enabledExperiments.length > 0)
+                if (t in T && null != n.enabledExperiments && n.enabledExperiments.length > 0)
                     for (let e of n.enabledExperiments) {
-                        let n = g[t]?.[e]?.[i];
+                        let n = T[t]?.[e]?.[i];
                         null != n && ((a = n.raw ?? a), (s = n.opacity ?? s));
                     }
                 if (!0 === n.highContrastModeEnabled) {
@@ -9777,7 +9805,7 @@ let { Themes: c } = d.zv,
                 }
             },
         })),
-        unsafe_rawColors: o()(T, (e, t) => {
+        unsafe_rawColors: o()(g, (e, t) => {
             let n = D[t];
             return { css: U(t), resolve: (e) => v(n, e?.saturation ?? 1) };
         }),
