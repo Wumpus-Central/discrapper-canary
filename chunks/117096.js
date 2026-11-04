@@ -3918,9 +3918,8 @@ let li = Object.freeze({
                                     n.e(421060),
                                     n.e(697367),
                                     n.e(699011),
-                                    n.e(536478),
                                     n.e(703869),
-                                    n.e(426760),
+                                    n.e(51212),
                                     n.e(420105),
                                 ]).then(n.bind(n, 949488));
                                 return (t) => (0, l.jsx)(e, { ...t, channel: i });
