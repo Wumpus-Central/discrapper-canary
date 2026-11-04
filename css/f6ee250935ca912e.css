@@ -98,53 +98,47 @@
     border-radius: var(--radius-md)
 }
 
-.collaborators_QFIYWR {
-    align-items: center;
-    justify-content: flex-end;
-    margin-inline-start: auto
+.dynamicGraphicContainer_UMQi0z {
+    border-radius: var(--radius-sm);
+    height: 100%
 }
 
-.collaborators_QFIYWR,
-.slot_QFIYWR {
-    display: flex;
-    flex: 0 0 auto
+.dynamicGraphicForegroundImage_UMQi0z {
+    height: 100%
 }
 
-.slot_QFIYWR {
-    justify-content: center;
-    margin-inline-start: calc(var(--space-4)*var(--custom-collaborator-slot));
-    opacity: var(--custom-collaborator-slot);
-    transform: scale(var(--custom-collaborator-slot));
-    width: calc(16px*var(--custom-collaborator-slot))
+.wrapper_xGgKlk {
+    isolation: isolate;
+    overflow: hidden;
+    position: relative
 }
 
-.avatar_QFIYWR {
-    display: flex;
-    position: relative;
-    transform-origin: center bottom
-}
-
-.ring_QFIYWR {
-    border: 1px solid var(--status-positive);
-    border-radius: var(--radius-round);
-    inset: -1px;
-    opacity: .6;
+.shine_xGgKlk {
+    background-image: linear-gradient(90deg, hsla(0, 0%, 100%, 0) 25%, hsla(0, 0%, 100%, .7) 50%, hsla(0, 0%, 100%, 0) 75%);
+    height: var(--custom-shine-dimensions);
+    inset-inline-end: calc(100% + var(--custom-shine-rotated-dimensions-delta));
+    opacity: .2;
     pointer-events: none;
-    position: absolute
+    position: absolute;
+    top: 50%;
+    transform-origin: 50%;
+    width: var(--custom-shine-dimensions);
+    z-index: 3
 }
 
-.full-motion .ring_QFIYWR {
-    animation: working-ring_QFIYWR 2.4s ease-in-out infinite alternate
+.overflowHidden_aWH1op {
+    overflow: hidden
 }
 
-@keyframes working-ring_QFIYWR {
-    0% {
-        opacity: .4
-    }
-
-    to {
-        opacity: .8
-    }
+.gradient_aWH1op {
+    background-image: linear-gradient(90deg, #394aff, #e901d9);
+    border-radius: var(--radius-sm);
+    bottom: 1px;
+    inset-inline: 0;
+    opacity: .16;
+    pointer-events: none;
+    position: absolute;
+    top: 1px
 }
 
-/*# sourceMappingURL=95133efbb9ffa313.css.map*/
+/*# sourceMappingURL=f6ee250935ca912e.css.map*/
