@@ -95,6 +95,7 @@ var i,
         (r.VoiceChannelGames = "voice_channel_games"),
         (r.Frame = "frame"),
         (r.GuildSpacePopularGames = "guild_space_popular_games"),
+        (r.GuildSpaceLeaderboard = "guild_space_leaderboard"),
         (r.GlobalDiscoveryGamesBecauseYouPlayed = "global_discovery_games_because_you_played"),
         r),
     E = (((a = {}).FullProfile = "full_profile"), (a.MiniProfile = "mini_profile"), a);
