@@ -1027,7 +1027,7 @@ let nS = (0, h.zD)(S.X.STREAMING_AUTO_STREAMER_MODE, {
     });
 var np = n(77729),
     nf = n(589051),
-    nx = n(81684),
+    nx = n(839814),
     n_ = n(999834);
 let nI = [],
     nN = (0, h.Hn)(S.X.STREAMER_MODE_HIDE_OVERLAY_WIDGETS, {

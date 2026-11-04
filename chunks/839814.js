@@ -1,4 +1,4 @@
-n.d(t, { A: () => rg });
+n.d(t, { A: () => rI });
 var i,
     r,
     l = n(477900),
@@ -3133,70 +3133,111 @@ function iS(e) {
 }
 var iI = n(450740),
     iv = n(968898),
-    ij = n(39623),
-    iy = n(952270),
-    iC = n(955639),
-    iT = n(679737),
-    ib = n(932183),
-    i_ = n(37595),
-    iw = n(442331),
-    iN = n(952818),
-    iR = n(481484);
-let iO = [...i_.g, f.A, iC.A, iw.A];
-function iM(e, t) {
-    let n = (0, i_.V)(),
-        i = (0, ib.s)(e),
-        r = iC.A.getOverride(e, n);
+    ij = n(663417),
+    iy = n(498032),
+    iC = n(828936),
+    iT = n(625180),
+    ib = n(91242),
+    i_ = n(481484),
+    iw = n(165610),
+    iN = n(809526),
+    iR = n(408454),
+    iO = n(697252);
+function iM(e) {
+    let { applicationId: t } = e,
+        n = (0, i_.A)(),
+        i = (0, iw.VA)(t, iw.ZN),
+        { launched: r, refreshing: s } = (0, P.cf)(
+            [ib.A],
+            () => {
+                let e = ib.A.getFrame(i),
+                    t = (0, iw.x1)(e) && (0, iw.zB)(e) === e0.f;
+                return { launched: t, refreshing: t && e.data.proxyTicketRefreshing };
+            },
+            [i],
+        ),
+        a = (0, iC.l)(i);
+    if (n || !r) return null;
+    let o = ey.intl.string(a ? iN.default.Hvyhm9 : iN.default.GDbtb6);
+    return (0, l.jsx)(en.m, {
+        text: o,
+        "aria-label": o,
+        asContainer: !0,
+        children: (0, l.jsxs)(w.D, {
+            "aria-label": o,
+            "aria-disabled": s,
+            className: y()(iR.x6, iO.x),
+            onClick: () => {
+                s || iT.A.refreshProxyTicket(i);
+            },
+            children: [
+                (0, l.jsx)(ij.RefreshIcon, { size: "xxs", color: nx.A.colors.INTERACTIVE_TEXT_ACTIVE }),
+                a && (0, l.jsx)(iy.N, { className: iO.f, size: "sm", variant: "notification" }),
+            ],
+        }),
+    });
+}
+var iD = n(39623),
+    iz = n(952270),
+    ik = n(955639),
+    iP = n(679737),
+    iL = n(932183),
+    iV = n(37595),
+    iG = n(442331),
+    iU = n(952818);
+let iF = [...iV.g, f.A, ik.A, iG.A];
+function iY(e, t) {
+    let n = (0, iV.V)(),
+        i = (0, iL.s)(e),
+        r = ik.A.getOverride(e, n);
     return {
         game: n,
-        shownInGame: (0, iT.b8)({ pinned: t, targeting: i, game: n, override: r }),
-        shownByDefault: (0, iT.b8)({ pinned: t, targeting: i, game: n, override: null }),
+        shownInGame: (0, iP.b8)({ pinned: t, targeting: i, game: n, override: r }),
+        shownByDefault: (0, iP.b8)({ pinned: t, targeting: i, game: n, override: null }),
         hasOverride: null != r,
     };
 }
-var iD = n(809526),
-    iz = n(408454);
-function ik(e, t) {
+function iH(e, t) {
     return e.hasGame === t.hasGame && e.shownInGame === t.shownInGame && e.hasOverride === t.hasOverride;
 }
-function iP(e) {
+function iZ(e) {
     let { applicationId: t, pinned: n } = e,
-        i = (0, iR.A)(),
+        i = (0, i_.A)(),
         r = (0, P.bG)(
-            [iN.Ay, tQ.A, iC.A, f.A, iw.A],
+            [iU.Ay, tQ.A, ik.A, f.A, iG.A],
             () => {
-                let e = (0, i_.V)(iN.Ay, tQ.A),
-                    i = (0, ib.s)(t, f.A, iw.A),
-                    r = iC.A.getOverride(t, e);
+                let e = (0, iV.V)(iU.Ay, tQ.A),
+                    i = (0, iL.s)(t, f.A, iG.A),
+                    r = ik.A.getOverride(t, e);
                 return {
                     hasGame: null != e,
-                    shownInGame: (0, iT.b8)({ pinned: n, targeting: i, game: e, override: r }),
+                    shownInGame: (0, iP.b8)({ pinned: n, targeting: i, game: e, override: r }),
                     hasOverride: null != r,
                 };
             },
             [t, n],
-            ik,
+            iH,
         );
     if (i || !r.hasGame) return null;
     let s = ey.intl.string(
-            r.hasOverride ? iD.default.IigTLE : r.shownInGame ? iD.default["+E+hQR"] : iD.default.CEYbWc,
+            r.hasOverride ? iN.default.IigTLE : r.shownInGame ? iN.default["+E+hQR"] : iN.default.CEYbWc,
         ),
-        a = r.shownInGame ? ij.EyeIcon : iy.EyeSlashIcon;
+        a = r.shownInGame ? iD.EyeIcon : iz.EyeSlashIcon;
     return (0, l.jsx)(en.m, {
         text: s,
         "aria-label": s,
         asContainer: !0,
         children: (0, l.jsx)(w.D, {
             "aria-label": s,
-            className: y()(iz.x6, r.hasOverride && iz.vu),
+            className: y()(iR.x6, r.hasOverride && iR.vu),
             onClick: () =>
                 (function (e, t) {
-                    let { game: n, shownByDefault: i, hasOverride: r } = iM(e, t);
+                    let { game: n, shownByDefault: i, hasOverride: r } = iY(e, t);
                     null != n &&
                         n1.h.dispatch({
                             type: "CONJURE_OVERLAY_SESSION_OVERRIDE_SET",
                             applicationId: e,
-                            sessionKey: (0, iC.m)(n),
+                            sessionKey: (0, ik.m)(n),
                             pid: n.pid,
                             override: r ? null : i ? "hide" : "show",
                         });
@@ -3208,80 +3249,80 @@ function iP(e) {
         }),
     });
 }
-var iL = n(378859),
-    iV = n(269094),
-    iG = n(35367),
-    iU = n(885574),
-    iF = n(738188),
-    iY = n(192308),
-    iH = n(998979),
-    iZ = n(276983),
-    iW = n(423976);
-let iX = {};
-class iB extends P.Ay.Store {
+var iW = n(378859),
+    iX = n(269094),
+    iB = n(35367),
+    iK = n(885574),
+    iq = n(738188),
+    iJ = n(192308),
+    iQ = n(998979),
+    i$ = n(276983),
+    i0 = n(423976);
+let i1 = {};
+class i2 extends P.Ay.Store {
     static displayName = "ConjureOverlayFrameStateStore";
     getState(e) {
-        return iX[e] ?? "loading";
+        return i1[e] ?? "loading";
     }
 }
-let iK = new iB(n1.h, {
+let i5 = new i2(n1.h, {
     CONJURE_OVERLAY_FRAME_STATE_SET: function (e) {
         let { applicationId: t, state: n } = e;
-        if ((iX[t] ?? null) === n) return !1;
+        if ((i1[t] ?? null) === n) return !1;
         if (null == n) {
-            let { [t]: e, ...n } = iX;
-            iX = n;
+            let { [t]: e, ...n } = i1;
+            i1 = n;
             return;
         }
-        iX = { ...iX, [t]: n };
+        i1 = { ...i1, [t]: n };
     },
 });
-var iq = n(743082),
-    iJ = n(395771),
-    iQ = n(207228),
-    i$ = n(760751),
-    i0 = n(365010);
-let i1 = {
-        loading: [iD.default.Byq40w, iD.default["1G9dze"]],
-        widget_error: [iD.default["r/q2ZV"], iD.default["+zyAZG"]],
-        settings_failed: [iD.default["r/q2ZV"], iD.default.sruCpA],
-        capture_unsupported: [iD.default.VbHWcJ, iD.default.lEHEE0],
-        capture_permission_denied: [iD.default.C50P6S, iD.default.gtSpnM],
-        capture_permission_needed: [iD.default.QEWLxM, iD.default.V4JE4O],
-        game_not_detected: [iD.default["nE+IU9"], iD.default.gasAgy],
-        game_unrecognized: [iD.default.ugCzav, iD.default.yNdjCb],
-        game_not_targeted: [iD.default.HeyO5h, iD.default.SeFhTU],
-        capture_failed: [iD.default.q1uPES, iD.default.lAZ5NF],
+var i3 = n(743082),
+    i4 = n(395771),
+    i6 = n(207228),
+    i8 = n(760751),
+    i9 = n(365010);
+let i7 = {
+        loading: [iN.default.Byq40w, iN.default["1G9dze"]],
+        widget_error: [iN.default["r/q2ZV"], iN.default["+zyAZG"]],
+        settings_failed: [iN.default["r/q2ZV"], iN.default.sruCpA],
+        capture_unsupported: [iN.default.VbHWcJ, iN.default.lEHEE0],
+        capture_permission_denied: [iN.default.C50P6S, iN.default.gtSpnM],
+        capture_permission_needed: [iN.default.QEWLxM, iN.default.V4JE4O],
+        game_not_detected: [iN.default["nE+IU9"], iN.default.gasAgy],
+        game_unrecognized: [iN.default.ugCzav, iN.default.yNdjCb],
+        game_not_targeted: [iN.default.HeyO5h, iN.default.SeFhTU],
+        capture_failed: [iN.default.q1uPES, iN.default.lAZ5NF],
     },
-    i2 = {
-        loading: iU.CircleInformationIcon,
-        widget_error: iF.WarningIcon,
-        settings_failed: iF.WarningIcon,
-        capture_unsupported: iF.WarningIcon,
-        capture_permission_denied: iF.WarningIcon,
-        capture_permission_needed: iF.WarningIcon,
-        game_not_detected: iF.WarningIcon,
-        game_unrecognized: iF.WarningIcon,
-        game_not_targeted: iU.CircleInformationIcon,
-        capture_failed: iF.WarningIcon,
+    re = {
+        loading: iK.CircleInformationIcon,
+        widget_error: iq.WarningIcon,
+        settings_failed: iq.WarningIcon,
+        capture_unsupported: iq.WarningIcon,
+        capture_permission_denied: iq.WarningIcon,
+        capture_permission_needed: iq.WarningIcon,
+        game_not_detected: iq.WarningIcon,
+        game_unrecognized: iq.WarningIcon,
+        game_not_targeted: iK.CircleInformationIcon,
+        capture_failed: iq.WarningIcon,
     };
-function i5(e, t) {
+function rt(e, t) {
     return e.status === t.status && e.gameName === t.gameName && e.targetedGames === t.targetedGames;
 }
-function i3(e) {
+function rn(e) {
     let { applicationId: t } = e,
-        n = (0, iR.A)(),
+        n = (0, i_.A)(),
         {
             status: i,
             gameName: r,
             targetedGames: s,
         } = (0, P.bG)(
-            [iN.Ay, tQ.A, iK, f.A, iC.A, iH.A, iJ.A, iw.A, i$.A],
+            [iU.Ay, tQ.A, i5, f.A, ik.A, iQ.A, i4.A, iG.A, i8.A],
             () => {
-                let e = (0, i_.V)(iN.Ay, tQ.A),
-                    n = iH.A.getDecision(t, "screen_capture"),
-                    i = iJ.A.getFailure(t),
-                    r = (0, ib.s)(t, f.A, iw.A),
+                let e = (0, iV.V)(iU.Ay, tQ.A),
+                    n = iQ.A.getDecision(t, "screen_capture"),
+                    i = i4.A.getFailure(t),
+                    r = (0, iL.s)(t, f.A, iG.A),
                     l = (function (e) {
                         let {
                             frameState: t,
@@ -3306,19 +3347,19 @@ function i3(e) {
                         }
                         if (null == s) return "game_not_detected";
                         if ("show" !== a) {
-                            let e = (0, iT.u8)(l, s);
+                            let e = (0, iP.u8)(l, s);
                             if ("unrecognized" === e) return "game_unrecognized";
                             if ("no_match" === e) return "game_not_targeted";
                         }
                         return n && "hide" !== a && null != o ? "capture_failed" : null;
                     })({
-                        frameState: iK.getState(t),
-                        usesCapture: null != n || null != i || iJ.A.hasRequested(t),
-                        captureSupported: (0, iZ.yG)("screen_capture") && (0, iQ.y8)(),
+                        frameState: i5.getState(t),
+                        usesCapture: null != n || null != i || i4.A.hasRequested(t),
+                        captureSupported: (0, i$.yG)("screen_capture") && (0, i6.y8)(),
                         permission: n,
                         targeting: r,
                         game: e,
-                        override: iC.A.getOverride(t, e),
+                        override: ik.A.getOverride(t, e),
                         captureFailure: i,
                     }),
                     s =
@@ -3329,70 +3370,70 @@ function i3(e) {
                                   let r = i.length > 3 ? [...i.slice(0, 3), t(i.length - 3)] : i;
                                   return new Intl.ListFormat(n, { type: "conjunction" }).format(r);
                               })(
-                                  r.application_ids.map((e) => i$.A.getDetectableGame(e)?.name),
-                                  (e) => ey.intl.formatToPlainString(iD.default["VFY/kC"], { count: e }),
+                                  r.application_ids.map((e) => i8.A.getDetectableGame(e)?.name),
+                                  (e) => ey.intl.formatToPlainString(iN.default["VFY/kC"], { count: e }),
                                   ey.intl.currentLocale,
                               )
                             : null;
                 return { status: l, gameName: e?.name ?? null, targetedGames: s };
             },
             [t],
-            i5,
+            rt,
         ),
         a = (0, P.bG)([f.A], () => f.A.getProject(t)?.name, [t]),
         o = (0, P.bG)([f.A], () => f.A.getProject(t)?.id, [t]);
     if (n || null == i) return null;
-    let [d, u] = i1[i],
+    let [d, u] = i7[i],
         c = {
-            appName: null != a && "" !== a ? a : ey.intl.string(iD.default.nXsF71),
-            gameName: r ?? ey.intl.string(iD.default.RkGT9E),
+            appName: null != a && "" !== a ? a : ey.intl.string(iN.default.nXsF71),
+            gameName: r ?? ey.intl.string(iN.default.RkGT9E),
         },
         h = ey.intl.formatToPlainString(d, c),
         m =
             "game_not_targeted" === i
                 ? null != s
-                    ? ey.intl.formatToPlainString(iD.default.SeFhTU, { games: s })
-                    : ey.intl.string(iD.default["8vxkbb"])
+                    ? ey.intl.formatToPlainString(iN.default.SeFhTU, { games: s })
+                    : ey.intl.string(iN.default["8vxkbb"])
                 : ey.intl.formatToPlainString(u, c),
-        g = i2[i],
+        g = re[i],
         p =
             "capture_permission_needed" === i || "capture_permission_denied" === i
                 ? {
-                      text: ey.intl.string(iD.default.bGDxnW),
+                      text: ey.intl.string(iN.default.bGDxnW),
                       variant: "primary",
                       onClick: () => {
                           var e;
                           return (
                               (e = c.appName),
-                              void ("denied" === iH.A.getDecision(t, "screen_capture") &&
+                              void ("denied" === iQ.A.getDecision(t, "screen_capture") &&
                                   n1.h.dispatch({
                                       type: "CONJURE_DEVICE_PERMISSIONS_RESET",
                                       applicationId: t,
                                       permissions: ["screen_capture"],
                                   }),
-                              (0, iW.Ay)({
+                              (0, i0.Ay)({
                                   applicationId: t,
                                   appName: e,
                                   iframeId: null,
                                   permissions: ["screen_capture"],
-                                  modalContextKey: (0, iY.modalContextFromAppContext)(ej.BRT.OVERLAY),
+                                  modalContextKey: (0, iJ.modalContextFromAppContext)(ej.BRT.OVERLAY),
                               }))
                           );
                       },
                   }
                 : "settings_failed" === i && null != o
-                  ? { text: ey.intl.string(iD.default.o9LC3H), variant: "secondary", onClick: () => (0, iq.fD)(o) }
+                  ? { text: ey.intl.string(iN.default.o9LC3H), variant: "secondary", onClick: () => (0, i3.fD)(o) }
                   : "game_unrecognized" === i || "game_not_targeted" === i
                     ? {
-                          text: ey.intl.string(iD.default.P9lk1I),
+                          text: ey.intl.string(iN.default.P9lk1I),
                           variant: "secondary",
                           onClick: () => {
                               let e;
-                              null != (e = (0, i_.V)()) &&
+                              null != (e = (0, iV.V)()) &&
                                   n1.h.dispatch({
                                       type: "CONJURE_OVERLAY_SESSION_OVERRIDE_SET",
                                       applicationId: t,
-                                      sessionKey: (0, iC.m)(e),
+                                      sessionKey: (0, ik.m)(e),
                                       pid: e.pid,
                                       override: "show",
                                   });
@@ -3400,7 +3441,7 @@ function i3(e) {
                       }
                     : null;
     return (0, l.jsxs)("div", {
-        className: y()(i0.M0, "game_not_targeted" === i || "loading" === i ? i0.pq : i0.$e),
+        className: y()(i9.M0, "game_not_targeted" === i || "loading" === i ? i9.pq : i9.$e),
         role: "status",
         "data-conjure-overlay-status": i,
         children: [
@@ -3410,7 +3451,7 @@ function i3(e) {
                 "aria-label": m,
                 asContainer: !0,
                 children: (0, l.jsx)("div", {
-                    className: i0.iU,
+                    className: i9.iU,
                     children: (0, l.jsx)(N.E, { variant: "body-xs/medium", color: "none", lineClamp: 1, children: h }),
                 }),
             }),
@@ -3418,24 +3459,23 @@ function i3(e) {
         ],
     });
 }
-var i4 = n(155037),
-    i6 = n(165610),
-    i8 = n(197921);
-function i9(e) {
+var ri = n(155037),
+    rr = n(197921);
+function rl(e) {
     let { applicationId: t } = e,
-        n = (0, iG.A)({ applicationId: t, surface: i6.ZN, hostWindowKey: e0.f });
-    v.useEffect(() => () => (0, i4.G)(t), [t]);
+        n = (0, iB.A)({ applicationId: t, surface: iw.ZN, hostWindowKey: e0.f });
+    v.useEffect(() => () => (0, ri.G)(t), [t]);
     let i =
-        n.state === iG.n.Launched && n.frame.data.proxyTicketRefreshing
+        n.state === iB.n.Launched && n.frame.data.proxyTicketRefreshing
             ? "loading"
             : (function (e) {
                   switch (e) {
-                      case iG.n.Launched:
-                      case iG.n.RenderingElsewhere:
+                      case iB.n.Launched:
+                      case iB.n.RenderingElsewhere:
                           return "ready";
-                      case iG.n.NoApplication:
-                      case iG.n.DoesNotSupportSurface:
-                      case iG.n.Error:
+                      case iB.n.NoApplication:
+                      case iB.n.DoesNotSupportSurface:
+                      case iB.n.Error:
                           return "error";
                       default:
                           return "loading";
@@ -3453,25 +3493,25 @@ function i9(e) {
         ),
         n.state)
     ) {
-        case iG.n.Launched:
-            if (n.frame.data.proxyTicketRefreshing) return (0, l.jsx)(iL.j, {});
-            return (0, l.jsx)(iV.A, { frame: n.frame, application: n.application, className: i8.Gt });
-        case iG.n.RenderingElsewhere:
-            return (0, l.jsx)(iL.A, { description: ey.intl.string(ey.t["2KIDX+"]) });
-        case iG.n.NoApplication:
-            return (0, l.jsx)(iL.A, { description: ey.intl.string(iD.default["/YOSiU"]) });
-        case iG.n.DoesNotSupportSurface:
-            return (0, l.jsx)(iL.A, { description: ey.intl.string(iD.default.Y1JOTm) });
-        case iG.n.Error:
-            return (0, l.jsx)(iL.A, { heading: ey.intl.string(ey.t.VquUff), error: ey.intl.string(ey.t["Sd9D/R"]) });
-        case iG.n.AwaitingLaunch:
-        case iG.n.Loading:
-            return (0, l.jsx)(iL.j, {});
+        case iB.n.Launched:
+            if (n.frame.data.proxyTicketRefreshing) return (0, l.jsx)(iW.j, {});
+            return (0, l.jsx)(iX.A, { frame: n.frame, application: n.application, className: rr.Gt });
+        case iB.n.RenderingElsewhere:
+            return (0, l.jsx)(iW.A, { description: ey.intl.string(ey.t["2KIDX+"]) });
+        case iB.n.NoApplication:
+            return (0, l.jsx)(iW.A, { description: ey.intl.string(iN.default["/YOSiU"]) });
+        case iB.n.DoesNotSupportSurface:
+            return (0, l.jsx)(iW.A, { description: ey.intl.string(iN.default.Y1JOTm) });
+        case iB.n.Error:
+            return (0, l.jsx)(iW.A, { heading: ey.intl.string(ey.t.VquUff), error: ey.intl.string(ey.t["Sd9D/R"]) });
+        case iB.n.AwaitingLaunch:
+        case iB.n.Loading:
+            return (0, l.jsx)(iW.j, {});
         default:
             return null;
     }
 }
-let i7 = v.memo(function (e) {
+let rs = v.memo(function (e) {
     let { applicationId: t, locked: n, dragging: i, dragStart: r } = e,
         s = v.useCallback(
             (e) => {
@@ -3480,58 +3520,58 @@ let i7 = v.memo(function (e) {
             [n, r],
         );
     return (0, l.jsxs)("div", {
-        className: i8.kL,
+        className: rr.kL,
         children: [
             (0, l.jsx)("div", {
                 "aria-hidden": !0,
-                className: y()(i8.p$, { [i8.cB]: i, [i8.xt]: n }),
+                className: y()(rr.p$, { [rr.cB]: i, [rr.xt]: n }),
                 onMouseDown: s,
-                children: (0, l.jsx)("div", { className: i8.Ub }),
+                children: (0, l.jsx)("div", { className: rr.Ub }),
             }),
-            (0, l.jsx)(i3, { applicationId: t }),
+            (0, l.jsx)(rn, { applicationId: t }),
             (0, l.jsx)("div", {
-                className: y()(i8.ru, { [i8.po]: n || i }),
-                children: (0, l.jsx)(i9, { applicationId: t }),
+                className: y()(rr.ru, { [rr.po]: n || i }),
+                children: (0, l.jsx)(rl, { applicationId: t }),
             }),
         ],
     });
 });
-function re(e) {
+function ra(e) {
     let { applicationId: t } = e,
         n = (0, P.bG)([f.A], () => f.A.getProject(t)?.name, [t]);
-    return (0, l.jsx)(iv.Pl, { children: null != n && "" !== n ? n : ey.intl.string(iD.default.nXsF71) });
+    return (0, l.jsx)(iv.Pl, { children: null != n && "" !== n ? n : ey.intl.string(iN.default.nXsF71) });
 }
-function rt(e, t) {
+function ro(e, t) {
     return null != e && Number.isFinite(e) ? e : t;
 }
 n(321073);
-var rn = n(232554),
-    ri = n(592598),
-    rr = n(28528),
-    rl = n(57019),
-    rs = n(191701),
-    ra = n(672396),
-    ro = n(942833);
-let rd = [];
-function ru(e) {
+var rd = n(232554),
+    ru = n(592598),
+    rc = n(28528),
+    rh = n(57019),
+    rm = n(191701),
+    rg = n(672396),
+    rp = n(942833);
+let rf = [];
+function rx(e) {
     return e.notification.id;
 }
-function rc(e, t, n, i) {
+function rA(e, t, n, i) {
     let { index: r, notification: s, locked: a, pinned: o } = t;
-    return (0, l.jsx)(rr.A, { index: r, notification: s, locked: a, pinned: o, transitionState: n, cleanUp: i }, e);
+    return (0, l.jsx)(rc.A, { index: r, notification: s, locked: a, pinned: o, transitionState: n, cleanUp: i }, e);
 }
-function rh(e) {
-    return (0, l.jsx)("div", { className: ro.k, children: e });
+function rE(e) {
+    return (0, l.jsx)("div", { className: rp.k, children: e });
 }
-let rm = v.memo(function (e) {
+let rS = v.memo(function (e) {
         let { locked: t, pinned: n, showEmpty: i = !0 } = e,
             r = (0, P.bG)(
-                [rs.default, ri.A],
+                [rm.default, ru.A],
                 () => {
-                    if (ri.A.isNotificationDisabled(ra.KS.TextChat)) return rd;
+                    if (ru.A.isNotificationDisabled(rg.KS.TextChat)) return rf;
                     let e = [],
                         i = 0;
-                    for (let r of rs.default.getNotifications()) {
+                    for (let r of rm.default.getNotifications()) {
                         if (i > 4) break;
                         (!t || r.status !== ej.yFH.TIMED_OUT) &&
                             (e.push({ index: i, locked: t, pinned: n, notification: r }), i++);
@@ -3541,13 +3581,13 @@ let rm = v.memo(function (e) {
                 [t, n],
                 t$.oQ,
             ),
-            s = v.useState(() => new rl.Fn(t))[0];
+            s = v.useState(() => new rh.Fn(t))[0];
         return (v.useLayoutEffect(() => s.updateState(r, t)),
         v.useLayoutEffect(() => (s.initialize((0, eU.b)()), () => s.cleanUp()), [s]),
         0 !== r.length || t)
-            ? (0, l.jsx)(rl.Gt.Provider, {
+            ? (0, l.jsx)(rh.Gt.Provider, {
                   value: s,
-                  children: (0, l.jsx)(rn.F, { items: r, renderItem: rc, getItemKey: ru, wrapChildren: rh }),
+                  children: (0, l.jsx)(rd.F, { items: r, renderItem: rA, getItemKey: rx, wrapChildren: rE }),
               })
             : i
               ? t
@@ -3555,7 +3595,7 @@ let rm = v.memo(function (e) {
                   : (0, l.jsx)(q.g, { emptyText: ey.intl.string(ey.t.O1Nbjq), icon: u.BellIcon, absolute: !0 })
               : null;
     }),
-    rg = {
+    rI = {
         [ej.uss.VIDEO]: {
             label: () => ey.intl.string(ey.t.UPvOia),
             description: () => ey.intl.string(nF.default.gMKjra),
@@ -3740,7 +3780,7 @@ let rm = v.memo(function (e) {
             icon: u.BellIcon,
             renderWidget(e) {
                 let { locked: t, showEmpty: n, widget: i } = e;
-                return (0, l.jsx)(rm, { pinned: i.pinned, locked: t, showEmpty: n });
+                return (0, l.jsx)(rS, { pinned: i.pinned, locked: t, showEmpty: n });
             },
             renderTitle: () => (0, l.jsx)(iv.Pl, { children: ey.intl.string(ey.t.gnKWdS) }),
             renderButtons: (e) =>
@@ -3810,20 +3850,21 @@ let rm = v.memo(function (e) {
             },
         },
         [ej.uss.CONJURE]: {
-            label: () => ey.intl.string(iD.default.IbNaU4),
+            label: () => ey.intl.string(iN.default.IbNaU4),
             hideableInStreamerMode: !0,
             renderWidget(e) {
                 let { widget: t, locked: n, dragging: i, dragStart: r } = e;
                 return (0, eG.Du)(t)
-                    ? (0, l.jsx)(i7, { applicationId: t.meta.applicationId, locked: n, dragging: i, dragStart: r })
+                    ? (0, l.jsx)(rs, { applicationId: t.meta.applicationId, locked: n, dragging: i, dragStart: r })
                     : null;
             },
-            renderTitle: (e) => ((0, eG.Du)(e) ? (0, l.jsx)(re, { applicationId: e.meta.applicationId }) : null),
+            renderTitle: (e) => ((0, eG.Du)(e) ? (0, l.jsx)(ra, { applicationId: e.meta.applicationId }) : null),
             renderButtons: (e) =>
                 (0, eG.Du)(e)
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)(iP, { applicationId: e.meta.applicationId, pinned: e.pinned }),
+                              (0, l.jsx)(iM, { applicationId: e.meta.applicationId }),
+                              (0, l.jsx)(iZ, { applicationId: e.meta.applicationId, pinned: e.pinned }),
                               (0, l.jsx)(iv.O0, { id: e.id, pinned: e.pinned }),
                           ],
                       })
@@ -3831,15 +3872,15 @@ let rm = v.memo(function (e) {
             resizeValidation: (e) => {
                 let { widget: t, computedSize: n, containerSpecs: i } = e,
                     r = X.A.getWidgetDefaultSettings(ej.uss.CONJURE)?.minSize,
-                    l = rt(t.minSize.width, r?.width ?? 0),
-                    s = rt(t.minSize.height, r?.height ?? 0),
+                    l = ro(t.minSize.width, r?.width ?? 0),
+                    s = ro(t.minSize.height, r?.height ?? 0),
                     a = Math.max(l, i.maxX - i.minX),
                     o = Math.max(s, i.maxY - i.minY);
                 return { width: Math.min(Math.max(n.width, l), a), height: Math.min(Math.max(n.height, s), o) };
             },
             inGameVisibility: {
-                stores: iO,
-                isShownInGame: (e) => ((0, eG.Du)(e) ? iM(e.meta.applicationId, e.pinned).shownInGame : e.pinned),
+                stores: iF,
+                isShownInGame: (e) => ((0, eG.Du)(e) ? iY(e.meta.applicationId, e.pinned).shownInGame : e.pinned),
             },
             predicate: () => (0, p.OC)(Object.values(x.A.getGuilds()), "overlay_conjure_widgets"),
             containerRenderGate: {
