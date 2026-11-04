@@ -41,7 +41,7 @@ class A extends i.Ay.PersistedStore {
         return h?.client?.desktop;
     }
 }
-let b = new A(s.h, {
+let y = new A(s.h, {
     APP_ICON_UPDATED: function (e) {
         let { id: t } = e;
         null != t && x(t);
@@ -54,4 +54,4 @@ let b = new A(s.h, {
     },
     LOGOUT: p,
 });
-n.d(t, {}, { A: b });
+n.d(t, {}, { A: y });

@@ -1,38 +1,38 @@
-var n = l(582128),
-    s = l(508425),
-    a = l(559949),
-    r = l(430571),
-    o = l(842671),
-    u = l(792996);
-let c = {
-        [s.z.SOLID]: o.default.OpWJ3f,
-        [s.z.GRADIENT]: o.default["i9e/u1"],
-        [s.z.NEON]: o.default.x68b1F,
-        [s.z.TOON]: o.default.otpeeM,
-        [s.z.POP]: o.default.cjQOKb,
-        [s.z.GUMMY]: o.default.x9Gtie,
-        [s.z.PRISM]: o.default["/M7psm"],
+var n = s(582128),
+    l = s(508425),
+    a = s(559949),
+    r = s(430571),
+    o = s(842671),
+    c = s(792996);
+let u = {
+        [l.z.SOLID]: o.default.OpWJ3f,
+        [l.z.GRADIENT]: o.default["i9e/u1"],
+        [l.z.NEON]: o.default.x68b1F,
+        [l.z.TOON]: o.default.otpeeM,
+        [l.z.POP]: o.default.cjQOKb,
+        [l.z.GUMMY]: o.default.x9Gtie,
+        [l.z.PRISM]: o.default["/M7psm"],
     },
     i = {
-        [s.z.SOLID]: 3,
-        [s.z.GRADIENT]: 2.5,
-        [s.z.GLOW]: 2.5,
-        [s.z.PRISM]: 2.5,
-        [s.z.NEON]: 3,
-        [s.z.TOON]: 3,
-        [s.z.POP]: 3,
-        [s.z.GUMMY]: 3,
+        [l.z.SOLID]: 3,
+        [l.z.GRADIENT]: 2.5,
+        [l.z.GLOW]: 2.5,
+        [l.z.PRISM]: 2.5,
+        [l.z.NEON]: 3,
+        [l.z.TOON]: 3,
+        [l.z.POP]: 3,
+        [l.z.GUMMY]: 3,
     };
-l.d(
+s.d(
     t,
     {},
     {
-        J: c,
+        J: u,
         _: function (e) {
             let t = (0, r.A)()[e];
             return n.useMemo(
                 () => ({
-                    name: u.intl.string(c[e] ?? o.default.OpWJ3f),
+                    name: c.intl.string(u[e] ?? o.default.OpWJ3f),
                     defaultColors: t,
                     previewStyles: { fontId: a.x.DEFAULT, effectId: e, colors: t },
                     minContrastRatio: i[e] ?? 3,

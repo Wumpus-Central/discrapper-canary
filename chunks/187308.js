@@ -1,7 +1,7 @@
-var l = n(7584);
+var i = n(7584);
 (n(191850), n(792996));
-let i = /^\d{17,20}$/,
-    s = /^\w{2,32}$/;
+let r = /^\d{17,20}$/,
+    a = /^\w{2,32}$/;
 n.d(
     t,
     {},
@@ -14,10 +14,10 @@ n.d(
             return null == t || "" === t
                 ? null
                 : null != n
-                  ? i.test(n) && s.test(t)
+                  ? r.test(n) && a.test(t)
                       ? { emoji: t, emojiId: n, animated: !0 === e.animated }
                       : null
-                  : "" === l.Ay.convertSurrogateToName(t, !1)
+                  : "" === i.Ay.convertSurrogateToName(t, !1)
                     ? null
                     : { emoji: t };
         },

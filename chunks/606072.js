@@ -5,50 +5,50 @@ var n,
     a = l(290595),
     r = l(419954),
     d = l(253932),
-    c = l(533440),
-    o = l(641216),
+    o = l(533440),
+    c = l(641216),
     u = l(153488),
     m = l(71393),
-    f = l(115063),
-    g = l(652215);
-function h(e, t) {
+    h = l(115063),
+    f = l(652215);
+function x(e, t) {
     let { useTitle: l, useDisabled: n } = t;
     return (0, r.zD)("guild_space_sharing_modal_guild_activity_sharing_setting", {
         useTitle: l,
         useSubtitle: () => (0, s.bG)([m.A], () => m.A.getGuild(e)?.name),
         useValue: () => !d.JG.useSetting().includes(e),
         setValue: (t) => {
-            let l = (0, f.Kk)();
+            let l = (0, h.Kk)();
             (t ? l.delete(e) : l.add(e), d.JG.updateSetting([...l]));
         },
         useDisabled: n,
     });
 }
-let x = null;
+let g = null;
 function p() {
-    x = null;
+    g = null;
 }
 function j() {
-    u.A.fetchedConsents || null != x || (x = (0, a.Q)().then(p, p));
+    u.A.fetchedConsents || null != g || (g = (0, a.Q)().then(p, p));
 }
 var v = (((n = {}).ACTIVITY_SHARING = "activity_sharing"), (n.PERSONALIZATION = "personalization"), (n.ALL = "all"), n);
 l.d(
     t,
     {},
     {
-        F6: h,
+        F6: x,
         T4: function (e) {
             i.useEffect(j, []);
             let t = d.tz.useSetting(),
                 l = !d.JG.useSetting().includes(e),
                 { hasFetchedConsents: n, hasPersonalizationConsent: a } = (0, s.cf)([u.A], () => ({
                     hasFetchedConsents: u.A.fetchedConsents,
-                    hasPersonalizationConsent: u.A.hasConsented(g.YAq.PERSONALIZATION),
+                    hasPersonalizationConsent: u.A.hasConsented(f.YAq.PERSONALIZATION),
                 })),
                 r = null,
-                c = !t || !l;
+                o = !t || !l;
             return (
-                n && (c && !a ? (r = "all") : c ? (r = "activity_sharing") : a || (r = "personalization")),
+                n && (o && !a ? (r = "all") : o ? (r = "activity_sharing") : a || (r = "personalization")),
                 {
                     isSharingActivity: t,
                     isSharingActivityInGuild: l,
@@ -63,8 +63,8 @@ l.d(
                 i = [];
             return (
                 ("activity_sharing" === n || "all" === n) &&
-                    (i.push(c._), i.push(h(t, { useTitle: l, useDisabled: () => !d.tz.useSetting() }))),
-                ("personalization" === n || "all" === n) && i.push(o._),
+                    (i.push(o._), i.push(x(t, { useTitle: l, useDisabled: () => !d.tz.useSetting() }))),
+                ("personalization" === n || "all" === n) && i.push(c._),
                 i
             );
         },

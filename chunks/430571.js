@@ -1,9 +1,9 @@
-var n = l(582128),
-    s = l(508425),
-    a = l(602853),
-    r = l(646514),
-    o = l(750656);
-l.d(
+var n = s(582128),
+    l = s(508425),
+    a = s(602853),
+    r = s(646514),
+    o = s(750656);
+s.d(
     t,
     {},
     {
@@ -11,18 +11,18 @@ l.d(
             let e = (0, a.r)(r.A.colors.TEXT_DEFAULT).int();
             return n.useMemo(
                 () => ({
-                    [s.z.SOLID]: [e],
-                    [s.z.GRADIENT]: [...o.Wf["0"].colors],
-                    [s.z.GLOW]: [...o.Wf["0"].colors],
-                    [s.z.GUMMY]: [...o.lU["0"]],
-                    [s.z.PRISM]: [...o.NU["0"]],
-                    [s.z.TOON]: [0xf42098],
-                    [s.z.NEON]: [6888941],
-                    [s.z.POP]: [1036166],
-                    [s.z.TEST_1]: [e],
-                    [s.z.TEST_2]: [e],
-                    [s.z.TEST_3]: [e],
-                    [s.z.TEST_4]: [e],
+                    [l.z.SOLID]: [e],
+                    [l.z.GRADIENT]: [...o.Wf["0"].colors],
+                    [l.z.GLOW]: [...o.Wf["0"].colors],
+                    [l.z.GUMMY]: [...o.lU["0"]],
+                    [l.z.PRISM]: [...o.NU["0"]],
+                    [l.z.TOON]: [0xf42098],
+                    [l.z.NEON]: [6888941],
+                    [l.z.POP]: [1036166],
+                    [l.z.TEST_1]: [e],
+                    [l.z.TEST_2]: [e],
+                    [l.z.TEST_3]: [e],
+                    [l.z.TEST_4]: [e],
                 }),
                 [e],
             );

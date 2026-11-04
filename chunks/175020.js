@@ -1,4 +1,4 @@
-i.d(t, { A: () => x });
+i.d(t, { A: () => g });
 var s = i(477900);
 i(582128);
 var n = i(503698),
@@ -10,10 +10,10 @@ var n = i(503698),
     d = i(65470),
     u = i(792996),
     m = i(719126),
-    g = i(956537);
-let x = function (e) {
-    let { className: t, location: i, analyticsLocation: n, variant: x = "default", onGiftClick: p } = e,
-        f = "settings" === x,
+    x = i(956537);
+let g = function (e) {
+    let { className: t, location: i, analyticsLocation: n, variant: g = "default", onGiftClick: p } = e,
+        f = "settings" === g,
         { analyticsLocations: h } = (0, o.Ay)(i);
     return (0, s.jsx)(o.f5, {
         value: h,
@@ -47,7 +47,7 @@ let x = function (e) {
                 }),
                 (0, s.jsx)("img", {
                     src: f
-                        ? g
+                        ? x
                         : "https://cdn.discordapp.com/assets/content/577cd1f06ad2e0559c8a531a20a840448c66d6a6251f5c0bac311ceba4d37396.png",
                     className: m._e,
                     alt: f ? "" : "gift nitro banner",

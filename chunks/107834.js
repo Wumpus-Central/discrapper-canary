@@ -9,8 +9,8 @@ var n = i(855986),
     d = i(742589),
     u = i(65470),
     m = i(521440),
-    g = i(46653),
-    x = i(652215),
+    x = i(46653),
+    g = i(652215),
     p = i(792996),
     f = i(906367);
 i.d(
@@ -18,10 +18,10 @@ i.d(
     {},
     {
         A: function () {
-            let e = (0, n.bG)([g.default], () => g.default.isAuthenticated()),
+            let e = (0, n.bG)([x.default], () => x.default.isAuthenticated()),
                 t = (0, c.Ay)();
             return (0, s.jsx)(r.A, {
-                section: x.JJy.NAVIGATION,
+                section: g.JJy.NAVIGATION,
                 children: (0, s.jsx)(a.N, {
                     theme: t,
                     children: (t) =>

@@ -113,7 +113,7 @@ n.d(
                               },
                     [v, T, r, A, C],
                 ),
-                b = {
+                L = {
                     setupError: s,
                     customPaymentMethods: A,
                     customPaymentMethodIdsToSourceTypes: P,
@@ -121,8 +121,8 @@ n.d(
                     elementsAppearanceOptions: R,
                 };
             return null == r || null == M || C
-                ? { ...b, isLoading: !0, elementsOptions: M, setupIntentSecret: r }
-                : { ...b, isLoading: !1, elementsOptions: M, setupIntentSecret: r };
+                ? { ...L, isLoading: !0, elementsOptions: M, setupIntentSecret: r }
+                : { ...L, isLoading: !1, elementsOptions: M, setupIntentSecret: r };
         },
     },
 );

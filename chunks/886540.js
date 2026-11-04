@@ -1,6 +1,6 @@
 n(891784);
-var l = n(149987);
-function i(e) {
+var i = n(149987);
+function r(e) {
     return (
         !0 === e.finished ||
         !0 === e.continued ||
@@ -8,24 +8,24 @@ function i(e) {
         null != e.proposal ||
         null != e.clarification ||
         null != e.intake ||
-        (0, l.T3)(e.steps)
+        (0, i.T3)(e.steps)
     );
 }
-function s(e) {
+function a(e) {
     if (null == e) return null;
     let t = !1;
     for (let n = e.length - 1; n >= 0; n--) {
-        let l = e[n];
-        if (!("assistant" !== l.role || o(l)) && ((!t && ((t = !0), !i(l))) || (null != l.turn_id && !i(l)))) return l;
+        let i = e[n];
+        if (!("assistant" !== i.role || o(i)) && ((!t && ((t = !0), !r(i))) || (null != i.turn_id && !r(i)))) return i;
     }
     return null;
 }
-function r(e, t) {
+function s(e, t) {
     return e.turn_id === t || e.id === `turn:${t}`;
 }
-function u(e, t) {
+function l(e, t) {
     if (null == t) return -1;
-    for (let n = e.length - 1; n >= 0; n--) if (r(e[n], t)) return n;
+    for (let n = e.length - 1; n >= 0; n--) if (s(e[n], t)) return n;
     return -1;
 }
 function o(e) {
@@ -42,41 +42,41 @@ n.d(
     {
         B0: function (e, t) {
             let n = e[t],
-                l = n?.turn_id;
-            if (null == n || "assistant" !== n.role || null == l || "" !== n.content || i(n)) return !1;
+                i = n?.turn_id;
+            if (null == n || "assistant" !== n.role || null == i || "" !== n.content || r(n)) return !1;
             for (let n = t - 1; n >= 0; n--) {
                 let t = e[n];
                 if ("user" === t.role) break;
-                if (r(t, l)) return i(t) && !0 !== t.continued;
+                if (s(t, i)) return r(t) && !0 !== t.continued;
             }
             return !1;
         },
         B5: o,
-        BL: i,
-        Ji: s,
+        BL: r,
+        Ji: a,
         Si: function (e, t) {
-            let n = u(e, t);
+            let n = l(e, t);
             if (-1 !== n) return n;
             for (let t = e.length - 1; t >= 0; t--) {
                 let n = e[t];
-                if (!("assistant" !== n.role || i(n)) && null == n.turn_id) return t;
+                if (!("assistant" !== n.role || r(n)) && null == n.turn_id) return t;
             }
             return -1;
         },
         _D: function (e, t, n) {
-            let l = e.slice();
-            return ((l[t] = n), l);
+            let i = e.slice();
+            return ((i[t] = n), i);
         },
-        gi: u,
+        gi: l,
         lb: function (e) {
             return null != e.turn_id ? e.turn_id : e.id.startsWith("turn:") ? e.id.slice(5) : null;
         },
         pZ: function (e) {
-            return "assistant" === e.role && !o(e) && !i(e) && !0 !== e.stopRequested;
+            return "assistant" === e.role && !o(e) && !r(e) && !0 !== e.stopRequested;
         },
         q2: function (e) {
-            return null != s(e);
+            return null != a(e);
         },
-        s3: r,
+        s3: s,
     },
 );

@@ -1,25 +1,25 @@
-var i,
-    l,
+var l,
+    i,
     s =
-        (((i = {}).JOIN_US = "join-us"),
-        (i.SUMMONING_TO_VC = "summoning-to-vc"),
-        (i.LOFI_STUDYING = "lofi-studying"),
-        (i.MINECRAFT_HOP_ON = "minecraft-hop-on"),
-        (i.VALORANT = "valorant"),
-        (i.BORED = "bored"),
-        (i.LIZARD = "lizard"),
-        (i.VIBING = "vibing"),
-        i),
-    r =
-        (((l = {}).JOIN_US = "join us"),
-        (l.SUMMONING_TO_VC = "summoning to vc"),
-        (l.LOFI_STUDYING = "lofi studying"),
-        (l.MINECRAFT_HOP_ON = "minecraft hop on"),
+        (((l = {}).JOIN_US = "join-us"),
+        (l.SUMMONING_TO_VC = "summoning-to-vc"),
+        (l.LOFI_STUDYING = "lofi-studying"),
+        (l.MINECRAFT_HOP_ON = "minecraft-hop-on"),
         (l.VALORANT = "valorant"),
         (l.BORED = "bored"),
         (l.LIZARD = "lizard"),
         (l.VIBING = "vibing"),
-        l);
+        l),
+    r =
+        (((i = {}).JOIN_US = "join us"),
+        (i.SUMMONING_TO_VC = "summoning to vc"),
+        (i.LOFI_STUDYING = "lofi studying"),
+        (i.MINECRAFT_HOP_ON = "minecraft hop on"),
+        (i.VALORANT = "valorant"),
+        (i.BORED = "bored"),
+        (i.LIZARD = "lizard"),
+        (i.VIBING = "vibing"),
+        i);
 let a = new Set(Object.values(s)),
     o = new Set(Object.values(r));
 n.d(

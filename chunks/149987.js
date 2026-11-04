@@ -1,12 +1,12 @@
 n(321073);
-let l = new Set(["reply", "plan_proposed", "terminal_error"]),
-    i = new WeakMap();
-function s(e) {
-    let t = i.get(e);
-    return (null == t && ((t = e.some((e) => l.has(e.kind))), i.set(e, t)), t);
+let i = new Set(["reply", "plan_proposed", "terminal_error"]),
+    r = new WeakMap();
+function a(e) {
+    let t = r.get(e);
+    return (null == t && ((t = e.some((e) => i.has(e.kind))), r.set(e, t)), t);
 }
-let r = new WeakMap();
-function u(e, t, n) {
+let s = new WeakMap();
+function l(e, t, n) {
     if (null != n.turn_seq && t.seenSeq.has(n.turn_seq)) return;
     if ("todos" !== n.kind || null != n.task_id) {
         (e.push(n), null != n.turn_seq && t.seenSeq.add(n.turn_seq));
@@ -17,8 +17,8 @@ function u(e, t, n) {
         return;
     }
     null != n.turn_seq && t.seenSeq.add(n.turn_seq);
-    let l = e[t.todosAt].turn_seq;
-    (null != n.turn_seq && null != l && n.turn_seq < l) || (e[t.todosAt] = n);
+    let i = e[t.todosAt].turn_seq;
+    (null != n.turn_seq && null != i && n.turn_seq < i) || (e[t.todosAt] = n);
 }
 n.d(
     t,
@@ -26,27 +26,27 @@ n.d(
     {
         IC: function (e, t) {
             let n = (function (e) {
-                let t = r.get(e);
+                let t = s.get(e);
                 if (null != t) return t;
                 let n = new Set(),
-                    l = -1;
-                for (let [t, i] of e.entries())
-                    (null != i.turn_seq && n.add(i.turn_seq),
-                        -1 === l && "todos" === i.kind && null == i.task_id && (l = t));
-                let i = { seenSeq: n, todosAt: l };
-                return (r.set(e, i), i);
+                    i = -1;
+                for (let [t, r] of e.entries())
+                    (null != r.turn_seq && n.add(r.turn_seq),
+                        -1 === i && "todos" === r.kind && null == r.task_id && (i = t));
+                let r = { seenSeq: n, todosAt: i };
+                return (s.set(e, r), r);
             })(e);
             if (null != t.turn_seq && n.seenSeq.has(t.turn_seq)) return e;
             let o = e.slice();
-            return (r.delete(e), u(o, n, t), r.set(o, n), i.set(o, s(e) || l.has(t.kind)), o);
+            return (s.delete(e), l(o, n, t), s.set(o, n), r.set(o, a(e) || i.has(t.kind)), o);
         },
-        T3: s,
-        Wq: l,
+        T3: a,
+        Wq: i,
         Zu: function (e) {
             let t = [],
                 n = { seenSeq: new Set(), todosAt: -1 };
-            for (let l of e) u(t, n, l);
-            return (r.set(t, n), t);
+            for (let i of e) l(t, n, i);
+            return (s.set(t, n), t);
         },
     },
 );

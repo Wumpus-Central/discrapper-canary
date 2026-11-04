@@ -1,7 +1,7 @@
 n.d(t, { A: () => E });
-var i = n(477900);
+var l = n(477900);
 n(582128);
-var l = n(855986),
+var i = n(855986),
     s = n(836480),
     r = n(307301),
     a = n(192308),
@@ -19,17 +19,17 @@ var g = n(218461),
 let C = [
         {
             key: "JOIN_SERVERS",
-            renderIcon: (e) => (0, i.jsx)(s.CompassIcon, { size: "md", color: "currentColor", className: e }),
+            renderIcon: (e) => (0, l.jsx)(s.CompassIcon, { size: "md", color: "currentColor", className: e }),
             getName: () => p.intl.string(p.t.K50GHd),
             handler: (e, t) => (0, u.uh)(e.id, t.id),
         },
         {
             key: "ADD_SERVERS",
-            renderIcon: (e) => (0, i.jsx)(r.j, { size: "md", color: "currentColor", className: e }),
+            renderIcon: (e) => (0, l.jsx)(r.j, { size: "md", color: "currentColor", className: e }),
             getName: () => p.intl.string(p.t.emRpdS),
             handler: (e, t) =>
                 (0, a.mM)(async () => {
-                    let { default: l } = await Promise.all([
+                    let { default: i } = await Promise.all([
                         n.e(122326),
                         n.e(533651),
                         n.e(315907),
@@ -42,7 +42,7 @@ let C = [
                         n.e(118822),
                     ]).then(n.bind(n, 668822));
                     return (n) =>
-                        (0, i.jsx)(l, {
+                        (0, l.jsx)(i, {
                             ...n,
                             directoryGuildName: e.name,
                             directoryGuildId: e.id,
@@ -52,11 +52,11 @@ let C = [
         },
         {
             key: "INVITE_MEMBERS",
-            renderIcon: (e) => (0, i.jsx)(o.D, { className: e }),
+            renderIcon: (e) => (0, l.jsx)(o.D, { className: e }),
             getName: () => p.intl.string(p.t.MJQOuJ),
             handler: (e, t) =>
                 (0, a.mM)(async () => {
-                    let { default: l } = await Promise.all([
+                    let { default: i } = await Promise.all([
                         n.e(683621),
                         n.e(711162),
                         n.e(159957),
@@ -64,14 +64,14 @@ let C = [
                         n.e(680029),
                         n.e(966623),
                     ]).then(n.bind(n, 660194));
-                    return (n) => (0, i.jsx)(l, { ...n, guild: e, channel: t, source: f.PE1.HUB_SIDEBAR });
+                    return (n) => (0, l.jsx)(i, { ...n, guild: e, channel: t, source: f.PE1.HUB_SIDEBAR });
                 }),
         },
     ],
     E = function (e) {
         let { guild: t, channel: n } = e,
-            s = (0, l.bG)([h.Ay], () => null != n && h.Ay.getChannelId() === n.id),
-            r = (0, l.bG)(
+            s = (0, i.bG)([h.Ay], () => null != n && h.Ay.getChannelId() === n.id),
+            r = (0, i.bG)(
                 [m.A, g.Ay],
                 () => {
                     if (null == n) return 0;
@@ -87,12 +87,12 @@ let C = [
                 },
                 [n],
             );
-        return (0, i.jsx)(i.Fragment, {
+        return (0, l.jsx)(l.Fragment, {
             children: C.map((e) => {
-                let { key: l, getName: a, handler: o, renderIcon: u } = e,
-                    h = s && "JOIN_SERVERS" === l,
-                    m = `${l}-${t.id}`;
-                return (0, i.jsx)(
+                let { key: i, getName: a, handler: o, renderIcon: u } = e,
+                    h = s && "JOIN_SERVERS" === i,
+                    m = `${i}-${t.id}`;
+                return (0, l.jsx)(
                     d.G,
                     {
                         id: m,
@@ -100,7 +100,7 @@ let C = [
                         text: a(),
                         selected: h,
                         onClick: null != n ? () => o(t, n) : void 0,
-                        trailing: "JOIN_SERVERS" === l && r > 0 ? (0, c.wN)(r) : null,
+                        trailing: "JOIN_SERVERS" === i && r > 0 ? (0, c.wN)(r) : null,
                     },
                     m,
                 );

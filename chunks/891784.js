@@ -1,138 +1,138 @@
 (n(321073), n(134528), n(947204));
-var l = n(811091),
-    i = n(149987);
-function s(e, t) {
+var i = n(811091),
+    r = n(149987);
+function a(e, t) {
     let {
             ts: n,
-            id: l,
-            userId: i,
-            attachments: s,
-            turnId: r,
+            id: i,
+            userId: r,
+            attachments: a,
+            turnId: s,
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        u = l ?? `m${++o}`;
+        l = i ?? `m${++o}`;
     return {
-        id: u,
-        render_id: u,
+        id: l,
+        render_id: l,
         role: e,
         content: t,
-        ...(null != i ? { user_id: i } : {}),
-        ...(null != r ? { turn_id: r } : {}),
+        ...(null != r ? { user_id: r } : {}),
+        ...(null != s ? { turn_id: s } : {}),
         steps: [],
         created_at: null != n ? Date.parse(n) : Date.now(),
-        attachments: s,
+        attachments: a,
     };
 }
-function r(e) {
+function s(e) {
     var t;
     let n,
-        r = s(e.role, e.content, { ts: e.ts, id: e.id, userId: e.user_id, attachments: e.attachments }),
+        s = a(e.role, e.content, { ts: e.ts, id: e.id, userId: e.user_id, attachments: e.attachments }),
         o =
             ((t = e.id),
-            null != (n = t?.startsWith(u) === !0 ? t.slice(u.length) : t) && l.default.isProbablyAValidSnowflake(n)
-                ? l.default.extractTimestamp(n)
+            null != (n = t?.startsWith(l) === !0 ? t.slice(l.length) : t) && i.default.isProbablyAValidSnowflake(n)
+                ? i.default.extractTimestamp(n)
                 : null);
     if (
-        (null != o && ("assistant" === e.role || null == e.ts) && (r.created_at = o),
+        (null != o && ("assistant" === e.role || null == e.ts) && (s.created_at = o),
         "assistant" === e.role && null != e.ts)
     ) {
         let t = Date.parse(e.ts);
-        Number.isFinite(t) && (r.settled_at = t);
+        Number.isFinite(t) && (s.settled_at = t);
     }
-    for (let t of (null != e.kind && (r.kind = e.kind),
-    "interrupted" === e.kind && ((r.interrupted = !0), (r.content = ""), (r.finished = !0)),
-    null != e.proposal && (r.proposal = e.proposal),
-    null != e.ideas && e.ideas.length > 0 && (r.ideas = e.ideas),
-    null != e.publish_cta && (r.publishCta = e.publish_cta),
-    null != e.publish_notice && (r.publishNotice = e.publish_notice),
-    null != e.project_event && (r.projectEvent = e.project_event),
-    "context_boundary" === e.kind && (r.finished = !0),
-    null != e.context_switch && (r.contextSwitch = e.context_switch),
-    null != e.clarification && e.clarification.questions.length > 0 && (r.clarification = e.clarification),
-    null != e.restore_proposal && (r.restoreProposal = e.restore_proposal),
-    null != e.publish_schedule_proposal && (r.publishScheduleProposal = e.publish_schedule_proposal),
-    null != e.app_build_request && (r.appBuildRequest = e.app_build_request),
-    null != e.source_sha && (r.sourceSha = e.source_sha),
-    null == e.steps && null == e.events && null != e.todos && e.todos.length > 0 && (r.todos = e.todos),
+    for (let t of (null != e.kind && (s.kind = e.kind),
+    "interrupted" === e.kind && ((s.interrupted = !0), (s.content = ""), (s.finished = !0)),
+    null != e.proposal && (s.proposal = e.proposal),
+    null != e.ideas && e.ideas.length > 0 && (s.ideas = e.ideas),
+    null != e.publish_cta && (s.publishCta = e.publish_cta),
+    null != e.publish_notice && (s.publishNotice = e.publish_notice),
+    null != e.project_event && (s.projectEvent = e.project_event),
+    "context_boundary" === e.kind && (s.finished = !0),
+    null != e.context_switch && (s.contextSwitch = e.context_switch),
+    null != e.clarification && e.clarification.questions.length > 0 && (s.clarification = e.clarification),
+    null != e.restore_proposal && (s.restoreProposal = e.restore_proposal),
+    null != e.publish_schedule_proposal && (s.publishScheduleProposal = e.publish_schedule_proposal),
+    null != e.app_build_request && (s.appBuildRequest = e.app_build_request),
+    null != e.source_sha && (s.sourceSha = e.source_sha),
+    null == e.steps && null == e.events && null != e.todos && e.todos.length > 0 && (s.todos = e.todos),
     null != e.steps
-        ? (r.steps = (0, i.Zu)(e.steps))
+        ? (s.steps = (0, r.Zu)(e.steps))
         : null != e.events &&
-          (r.steps = e.events.flatMap((e) =>
+          (s.steps = e.events.flatMap((e) =>
               "todos" === e.type ? [{ type: "step", kind: "todos", items: e.items }] : [],
           )),
-    null != e.secret_request && e.secret_request.fields.length > 0 && (r.secretRequest = e.secret_request),
-    null != e.settings_request && (r.settingsRequest = e.settings_request),
-    null != e.intake && e.intake.questions.length > 0 && (r.intake = e.intake),
+    null != e.secret_request && e.secret_request.fields.length > 0 && (s.secretRequest = e.secret_request),
+    null != e.settings_request && (s.settingsRequest = e.settings_request),
+    null != e.intake && e.intake.questions.length > 0 && (s.intake = e.intake),
     e.steps ?? []))
         ("publish_schedule_proposal" === t.kind &&
             null != t.publish_schedule_proposal &&
-            (r.publishScheduleProposal = t.publish_schedule_proposal),
-            "awaiting_user" === t.kind && "secrets" === t.action && (r.awaitingUser = { action: t.action }));
-    return r;
+            (s.publishScheduleProposal = t.publish_schedule_proposal),
+            "awaiting_user" === t.kind && "secrets" === t.action && (s.awaitingUser = { action: t.action }));
+    return s;
 }
-let u = "turn:",
+let l = "turn:",
     o = 0;
 n.d(
     t,
     {},
     {
         Bd: function (e) {
-            let t = e.map(r),
+            let t = e.map(s),
                 n = new Map(),
-                l = [];
-            for (let [r, o] of t.entries()) {
-                var s;
+                i = [];
+            for (let [s, o] of t.entries()) {
+                var a;
                 let d =
-                    ((s = e[r]),
-                    "publish_notice" === s.kind
-                        ? null != s.ts
+                    ((a = e[s]),
+                    "publish_notice" === a.kind
+                        ? null != a.ts
                             ? o.created_at
                             : null
-                        : "user" === s.role
-                          ? (s.steered_at ?? null)
+                        : "user" === a.role
+                          ? (a.steered_at ?? null)
                           : null);
                 if (null != d) {
-                    l.push({ index: r, at: d });
+                    i.push({ index: s, at: d });
                     continue;
                 }
-                if (!o.id.startsWith(u)) continue;
-                let a = o.settled_at ?? -1 / 0,
-                    c = l.filter((e) => o.created_at < e.at && e.at < a);
-                l = [];
-                let f = [...c].sort((e, t) => e.at - t.at),
-                    _ = f.map((e) => e.at),
-                    p =
-                        0 === f.length
+                if (!o.id.startsWith(l)) continue;
+                let c = o.settled_at ?? -1 / 0,
+                    u = i.filter((e) => o.created_at < e.at && e.at < c);
+                i = [];
+                let _ = [...u].sort((e, t) => e.at - t.at),
+                    E = _.map((e) => e.at),
+                    A =
+                        0 === _.length
                             ? null
                             : (function (e, t) {
                                   if (null == e) return null;
                                   let n = [[], ...t.map(() => [])],
-                                      l = 0;
-                                  for (let i of e) {
-                                      if (null == i.ts) return null;
-                                      for (; l < t.length && t[l] <= i.ts;) l++;
-                                      n[l].push(i);
+                                      i = 0;
+                                  for (let r of e) {
+                                      if (null == r.ts) return null;
+                                      for (; i < t.length && t[i] <= r.ts;) i++;
+                                      n[i].push(r);
                                   }
                                   return n;
-                              })(e[r].steps, _);
-                if (null == p || p.slice(0, -1).every((e) => 0 === e.length)) continue;
-                let h = o.id.slice(u.length),
-                    g = o.created_at;
-                for (let [e, l] of f.entries()) {
-                    let s = `${o.id}:${e}`,
-                        r = {
-                            id: s,
-                            render_id: s,
+                              })(e[s].steps, E);
+                if (null == A || A.slice(0, -1).every((e) => 0 === e.length)) continue;
+                let h = o.id.slice(l.length),
+                    f = o.created_at;
+                for (let [e, i] of _.entries()) {
+                    let a = `${o.id}:${e}`,
+                        s = {
+                            id: a,
+                            render_id: a,
                             role: "assistant",
                             content: "",
                             turn_id: h,
-                            steps: (0, i.Zu)(p[e]),
-                            created_at: g,
+                            steps: (0, r.Zu)(A[e]),
+                            created_at: f,
                             continued: !0,
-                            finished_at: l.at,
+                            finished_at: i.at,
                         };
-                    (n.set(c[e].index, p[e].length > 0 ? [r, t[l.index]] : [t[l.index]]), (g = l.at));
+                    (n.set(u[e].index, A[e].length > 0 ? [s, t[i.index]] : [t[i.index]]), (f = i.at));
                 }
-                t[r] = { ...o, turn_id: h, steps: (0, i.Zu)(p[f.length]), created_at: g };
+                t[s] = { ...o, turn_id: h, steps: (0, r.Zu)(A[_.length]), created_at: f };
             }
             return 0 === n.size ? t : t.flatMap((e, t) => n.get(t) ?? [e]);
         },
@@ -142,14 +142,14 @@ n.d(
             if (0 === t.size) return e;
             let n = new Set();
             return e.flatMap((e) => {
-                let l = e.contextSwitch?.id;
-                if (null == l) return [e];
-                if (n.has(l)) return [];
-                n.add(l);
-                let i = t.get(l);
-                return i?.status === "undone" ? [] : [i === e.contextSwitch ? e : { ...e, contextSwitch: i }];
+                let i = e.contextSwitch?.id;
+                if (null == i) return [e];
+                if (n.has(i)) return [];
+                n.add(i);
+                let r = t.get(i);
+                return r?.status === "undone" ? [] : [r === e.contextSwitch ? e : { ...e, contextSwitch: r }];
             });
         },
-        iW: s,
+        iW: a,
     },
 );

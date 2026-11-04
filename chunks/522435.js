@@ -1,5 +1,5 @@
-var i = n(488428),
-    l = n(855986),
+var l = n(488428),
+    i = n(855986),
     s = n(776231),
     r = n(576705),
     a = n(486020),
@@ -19,10 +19,10 @@ n.d(
         },
         Sq: function (e) {
             let t,
-                { guildId: n, bannerHash: l } = e;
-            if (null == l) return;
-            let r = l.startsWith("a_") ? l.slice(2) : l,
-                d = (0, a.VI)(l),
+                { guildId: n, bannerHash: i } = e;
+            if (null == i) return;
+            let r = i.startsWith("a_") ? i.slice(2) : i,
+                d = (0, a.VI)(i),
                 c = window.GLOBAL_ENV.CDN_HOST;
             t =
                 null != c
@@ -30,15 +30,15 @@ n.d(
                     : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + o.Rsh.VOICE_HANGOUT_BANNER(n, r);
             let u = (0, s.kr)(360 * (0, s.mZ)());
             return {
-                imageUrl: `${t}?${i.As({ size: u, format: "webp" })}`,
-                animatedUrl: d ? `${t}?${i.As({ size: u, format: "webp", animated: !0 })}` : void 0,
+                imageUrl: `${t}?${l.As({ size: u, format: "webp" })}`,
+                animatedUrl: d ? `${t}?${l.As({ size: u, format: "webp", animated: !0 })}` : void 0,
             };
         },
         W6: function (e) {
-            return (0, l.bG)([r.A], () => u.every((t) => r.A.can(t, e)), [e]);
+            return (0, i.bG)([r.A], () => u.every((t) => r.A.can(t, e)), [e]);
         },
         je: function (e) {
-            return (0, l.bG)([r.A], () => r.A.can(d.xB.MANAGE_CHANNELS, e), [e]);
+            return (0, i.bG)([r.A], () => r.A.can(d.xB.MANAGE_CHANNELS, e), [e]);
         },
         lr: function (e) {
             return e.voiceHangout?.banner_hash != null;

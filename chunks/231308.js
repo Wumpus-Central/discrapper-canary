@@ -68,7 +68,7 @@ function T(e) {
     });
 }
 var M = n(13792);
-let b = function (e) {
+let L = function (e) {
     let { type: t, theme: n } = e;
     return (0, r.jsx)("div", {
         className: M.Eq,
@@ -90,7 +90,7 @@ let b = function (e) {
         }),
     });
 };
-var L = n(585121),
+var b = n(585121),
     j = n(682901),
     N = n(88001),
     k = n(652215),
@@ -316,12 +316,12 @@ function G(e) {
                     : H.intl.string(H.t.TkTvBz)),
         M)
     )
-        return (0, r.jsx)(L.A, { type: $(), text: t, buttonText: n, hideClose: y || q, onClose: X, buttonLoading: Q });
+        return (0, r.jsx)(b.A, { type: $(), text: t, buttonText: n, hideClose: y || q, onClose: X, buttonLoading: Q });
     let J = (0, I.z4)(l);
     return (0, r.jsxs)("div", {
         className: F.EL,
         children: [
-            !J && (0, r.jsx)(b, { type: $(), theme: K }),
+            !J && (0, r.jsx)(L, { type: $(), theme: K }),
             t,
             y || q
                 ? null

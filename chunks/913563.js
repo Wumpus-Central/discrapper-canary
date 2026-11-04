@@ -1,27 +1,27 @@
-var n = l(559949),
-    s = l(842671),
-    a = l(701256);
-let r = {
-    [n.x.DEFAULT]: s.default.ZEL6mz,
-    [n.x.CHERRY_BOMB]: s.default.rN7cuX,
-    [n.x.CHICLE]: s.default.CbHHnL,
-    [n.x.MUSEO_MODERNO]: s.default.iEcEKO,
-    [n.x.NEO_CASTEL]: s.default.DL7jLZ,
-    [n.x.PIXELIFY]: s.default.jq4aRp,
-    [n.x.SINISTRE]: s.default.jV9DN4,
-    [n.x.ZILLA_SLAB]: s.default.KMR8rT,
-    [n.x.PLAYPEN_SANS]: s.default.RP8HFf,
-    [n.x.ORBITRON]: s.default.pwbAIk,
-    [n.x.NEW_ROCKER]: s.default["Llo/Ia"],
-    [n.x.KALAM]: s.default.t9Les4,
-    [n.x.HEXAGON]: a.default.ALTlzk,
+var E = e(559949),
+    u = e(842671),
+    l = e(701256);
+let x = {
+    [E.x.DEFAULT]: u.default.ZEL6mz,
+    [E.x.CHERRY_BOMB]: u.default.rN7cuX,
+    [E.x.CHICLE]: u.default.CbHHnL,
+    [E.x.MUSEO_MODERNO]: u.default.iEcEKO,
+    [E.x.NEO_CASTEL]: u.default.DL7jLZ,
+    [E.x.PIXELIFY]: u.default.jq4aRp,
+    [E.x.SINISTRE]: u.default.jV9DN4,
+    [E.x.ZILLA_SLAB]: u.default.KMR8rT,
+    [E.x.PLAYPEN_SANS]: u.default.RP8HFf,
+    [E.x.ORBITRON]: u.default.pwbAIk,
+    [E.x.NEW_ROCKER]: u.default["Llo/Ia"],
+    [E.x.KALAM]: u.default.t9Les4,
+    [E.x.HEXAGON]: l.default.ALTlzk,
 };
-l.d(
-    t,
+e.d(
+    a,
     {},
     {
-        A: function (e) {
-            return r[e] ?? s.default.ZEL6mz;
+        A: function (t) {
+            return x[t] ?? u.default.ZEL6mz;
         },
     },
 );

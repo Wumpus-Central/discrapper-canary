@@ -26,8 +26,8 @@ var l = n(477900),
     R = n(531536),
     T = n(404885),
     M = n(812020),
-    b = n(7133),
-    L = n(994500),
+    L = n(7133),
+    b = n(994500),
     j = n(351906),
     N = n(287809),
     k = n(957565),
@@ -77,7 +77,7 @@ function er(e) {
                     isLoading: M.A.isFetching(),
                 })),
                 n = r.useMemo(() => Array.from(e.keys()).sort((e, t) => M.A.compare(e, t)), [e]),
-                l = (0, c.bG)([L.A], () => L.A.getFriendIDs()),
+                l = (0, c.bG)([b.A], () => b.A.getFriendIDs()),
                 i = r.useMemo(() => [...n, ...u().difference(l, n)], [l, n]);
             return {
                 isLoading: t,
@@ -93,12 +93,12 @@ function er(e) {
             };
         })(),
         { analyticsLocations: R } = (0, Y.Ay)(W.A.PREMIUM_GIFT_SUCCESS_MODAL),
-        b = (0, c.yK)([N.default], () => C.map(N.default.getUser).filter(J.Vq), [C]),
+        L = (0, c.yK)([N.default], () => C.map(N.default.getUser).filter(J.Vq), [C]),
         j = i > 1,
         k = j ? !s : null == t,
         U = 1 === C.length,
         w = C.length > 1 && null == a,
-        O = S || 0 === C.length || C.length > i || b.length !== C.length || (U ? null == t : !s) || w,
+        O = S || 0 === C.length || C.length > i || L.length !== C.length || (U ? null == t : !s) || w,
         er = v.map((e) => ({
             id: e.id,
             value: e.id,
@@ -219,7 +219,7 @@ function er(e) {
                                 A(!0);
                                 try {
                                     if (U) {
-                                        let e = b[0];
+                                        let e = L[0];
                                         (await (0, x.UN)(e, t), (r = { recipients: [e], failedRecipients: [] }));
                                     } else {
                                         if (null == a) throw Error("Checkout session ID must be defined");
@@ -227,12 +227,12 @@ function er(e) {
                                             t = new Set(e.successful_recipient_ids),
                                             n = new Set(e.failed_recipient_ids);
                                         r = {
-                                            recipients: b.filter((e) => t.has(e.id)),
-                                            failedRecipients: b.filter((e) => n.has(e.id)),
+                                            recipients: L.filter((e) => t.has(e.id)),
+                                            failedRecipients: L.filter((e) => n.has(e.id)),
                                         };
                                     }
                                 } catch {
-                                    r = { recipients: [], failedRecipients: b };
+                                    r = { recipients: [], failedRecipients: L };
                                 } finally {
                                     A(!1);
                                 }
@@ -287,7 +287,7 @@ function ec(e) {
             onClose: R,
             hasSentMessage: T,
             giftRecipient: M,
-            giftMessageError: L,
+            giftMessageError: b,
             isSendingMessage: N,
         } = e,
         [D, B] = r.useState(h.e.Modes.DEFAULT),
@@ -307,7 +307,7 @@ function ec(e) {
     }
     function $() {
         let e;
-        return null != L
+        return null != b
             ? et.intl.string(et.t.qB8aya)
             : null == A
               ? null
@@ -336,7 +336,7 @@ function ec(e) {
                 mode: D,
                 text: e,
                 onCopy: (e) => {
-                    (null != g && (0, U.AK)(new b.A({ code: t, maxUses: 1 }), g),
+                    (null != g && (0, U.AK)(new L.A({ code: t, maxUses: 1 }), g),
                         (0, k.C)(
                             e,
                             () => B(h.e.Modes.SUCCESS),
@@ -394,13 +394,13 @@ function ec(e) {
                                 children:
                                     G && null != M
                                         ? et.intl.string(en.default.yizhZK)
-                                        : null != M || (T && null == L)
+                                        : null != M || (T && null == b)
                                           ? et.intl.string(et.t.zOmK9N)
-                                          : null != L
+                                          : null != b
                                             ? et.intl.string(et.t.d1lrmU)
                                             : et.intl.string(et.t["/s1xR7"]),
                             }),
-                            (T && null != M && null == L) || K
+                            (T && null != M && null == b) || K
                                 ? (0, l.jsxs)(l.Fragment, {
                                       children: [
                                           (0, l.jsxs)("div", {
@@ -419,7 +419,7 @@ function ec(e) {
                                 : (0, l.jsxs)(l.Fragment, {
                                       children: [
                                           (0, l.jsx)("div", { className: eu.I0, children: $() }),
-                                          null == L &&
+                                          null == b &&
                                               (0, l.jsx)(ed, {
                                                   giftCode: t,
                                                   onClose: () => {
@@ -493,7 +493,7 @@ function ed(e) {
             isLoading: M.A.isFetching(),
         })),
         y = Array.from(m.keys()).sort((e, t) => M.A.compare(e, t)),
-        _ = (0, c.bG)([L.A], () => L.A.getFriendIDs()),
+        _ = (0, c.bG)([b.A], () => b.A.getFriendIDs()),
         S = u().difference(_, y),
         A = [...y, ...S],
         P = (0, c.bG)([N.default], () => N.default.filter((e) => A.includes(e.id) && !e.bot), [A]);

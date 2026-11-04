@@ -1,4 +1,4 @@
-i.d(t, { RiotCreditRewardModal: () => I, W: () => _ });
+i.d(t, { RiotCreditRewardModal: () => R, W: () => _ });
 var s = i(477900),
     n = i(189213),
     a = i(289873),
@@ -10,8 +10,8 @@ var o = i(116011),
     d = i(582128),
     u = i(181658),
     m = i(828596),
-    g = i(288106),
-    x = i(993046),
+    x = i(288106),
+    g = i(993046),
     p = i(856383),
     f = i(158476),
     h = i(855986),
@@ -22,12 +22,12 @@ var o = i(116011),
     E = i(280761),
     T = i(749962),
     C = i(700755),
-    R = i(792996);
-function I(e) {
+    I = i(792996);
+function R(e) {
     let t,
         i,
         l,
-        { transitionState: I, onClose: _, analyticsLocations: v } = e,
+        { transitionState: R, onClose: _, analyticsLocations: v } = e,
         y = (0, E.U)(),
         {
             code: P,
@@ -39,7 +39,7 @@ function I(e) {
             handleClaim: L,
             handleClaimError: k,
         } = (function (e) {
-            let t = null != e && e.rewardStatus === g.GM.CONSUMED,
+            let t = null != e && e.rewardStatus === x.GM.CONSUMED,
                 [i, s] = d.useState(!1),
                 {
                     code: n,
@@ -74,7 +74,7 @@ function I(e) {
                     s(!0);
                     try {
                         let e = await (0, m.cF)(E, b.tv),
-                            t = (0, x.OF)(e);
+                            t = (0, g.OF)(e);
                         if (null == t) throw Error("Riot credit storefront claim response contained no promo code");
                         if (
                             (r.default.track(j.HAw.OUTBOUND_PROMOTION_CLAIMED, { name: "riot", partner: "riot" }),
@@ -106,9 +106,9 @@ function I(e) {
         null == y.startsAt || null == y.endsAt
             ? null
             : (3 === l
-                  ? ((t = R.intl.string(C.default.jKrPE9)), (i = R.intl.string(C.default.u113tL)))
-                  : ((t = R.intl.string(C.default["/2ypah"])),
-                    (i = R.intl.formatToPlainString(C.default["4g4Fpz"], {
+                  ? ((t = I.intl.string(C.default.jKrPE9)), (i = I.intl.string(C.default.u113tL)))
+                  : ((t = I.intl.string(C.default["/2ypah"])),
+                    (i = I.intl.formatToPlainString(C.default["4g4Fpz"], {
                         date: null != y.redemptionEndsAt ? y.redemptionEndsAt : y.endsAt,
                     }))),
               {
@@ -122,16 +122,16 @@ function I(e) {
                   code: P,
                   redemptionURL: null != S ? S : "",
                   asset: "https://cdn.discordapp.com/assets/content/f9a03629577352ebb83c4b1a24f8f7a2a7a6163c92db8028806fa121b24c2b65.webp",
-                  redeemCtaText: R.intl.string(C.default.YRjiSW),
-                  claimCtaText: R.intl.string(C.default.pjdMpI),
+                  redeemCtaText: I.intl.string(C.default.YRjiSW),
+                  claimCtaText: I.intl.string(C.default.pjdMpI),
               }));
     return null == G
         ? null
         : (0, s.jsx)(n.a, {
-              title: R.intl.string(C.default.r97mLn),
-              subtitle: R.intl.format(T.default.ieA3V0, { termsUrl: c.A.getArticleURL(j.MVz.RIOT_CREDIT_CAMPAIGN) }),
+              title: I.intl.string(C.default.r97mLn),
+              subtitle: I.intl.format(T.default.ieA3V0, { termsUrl: c.A.getArticleURL(j.MVz.RIOT_CREDIT_CAMPAIGN) }),
               actions: [],
-              transitionState: I,
+              transitionState: R,
               onClose: _,
               children:
                   0 === l

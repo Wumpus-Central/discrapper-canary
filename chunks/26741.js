@@ -1,5 +1,5 @@
-var i,
-    l = n(582128),
+var l,
+    i = n(582128),
     s = n(613412),
     r = n(172218),
     a = n(139286),
@@ -12,21 +12,21 @@ function m(e) {
     return Object.keys(d.A.getVoiceStatesForChannel(e)).length;
 }
 var g =
-    (((i = {}).GIF_CATEGORY = "gif-category"),
-    (i.GIF_CUSTOM_SEARCH = "gif-custom-search"),
-    (i.RECENT_IMAGE = "recent-image"),
-    (i.PRESET_GIF = "preset-gif"),
-    i);
+    (((l = {}).GIF_CATEGORY = "gif-category"),
+    (l.GIF_CUSTOM_SEARCH = "gif-custom-search"),
+    (l.RECENT_IMAGE = "recent-image"),
+    (l.PRESET_GIF = "preset-gif"),
+    l);
 n.d(
     t,
     {},
     {
         $s: function (e) {
-            let { guildId: t, channelId: n, contentExists: i } = e;
+            let { guildId: t, channelId: n, contentExists: l } = e;
             (0, a.A)({
                 name: s.ImpressionNames.GUILD_HANGOUT_WINDOW_MODAL,
                 type: s.ImpressionTypes.MODAL,
-                properties: { guild_id: t, channel_id: n, num_voice_users: m(n), content_exists: i },
+                properties: { guild_id: t, channel_id: n, num_voice_users: m(n), content_exists: l },
             });
         },
         J_: function (e) {
@@ -34,18 +34,18 @@ n.d(
             c.default.track(h.HAw.HANGOUT_WINDOW_CLICKED, { guild_id: t, channel_id: n });
         },
         P9: function (e) {
-            let { guildId: t, channelId: n, bannerHash: i } = e,
-                [d, c] = l.useState(!1),
-                u = l.useRef(null),
+            let { guildId: t, channelId: n, bannerHash: l } = e,
+                [d, c] = i.useState(!1),
+                u = i.useRef(null),
                 h = (0, r.K)(c, 0.1),
-                g = `${n}:${i}`;
+                g = `${n}:${l}`;
             return (
-                l.useEffect(() => {
+                i.useEffect(() => {
                     d &&
                         u.current !== g &&
                         ((u.current = g),
                         (function (e) {
-                            let { guildId: t, channelId: n, bannerHash: i } = e;
+                            let { guildId: t, channelId: n, bannerHash: l } = e;
                             (0, a.x)({
                                 name: s.ImpressionNames.GUILD_HANGOUT_WINDOW,
                                 type: s.ImpressionTypes.VIEW,
@@ -54,23 +54,23 @@ n.d(
                                     channel_id: n,
                                     num_voice_users: m(n),
                                     media_session_id: o.A.getMediaSessionId(),
-                                    banner_hash: i,
+                                    banner_hash: l,
                                 },
                             });
-                        })({ guildId: t, channelId: n, bannerHash: i }));
-                }, [d, g, t, n, i]),
+                        })({ guildId: t, channelId: n, bannerHash: l }));
+                }, [d, g, t, n, l]),
                 h
             );
         },
         cM: g,
         dX: function (e) {
             let { guildId: t, channelId: n } = e,
-                [i, d] = l.useState(!1),
-                c = l.useRef(null),
+                [l, d] = i.useState(!1),
+                c = i.useRef(null),
                 u = (0, r.K)(d, 0.1);
             return (
-                l.useEffect(() => {
-                    i &&
+                i.useEffect(() => {
+                    l &&
                         c.current !== n &&
                         ((c.current = n),
                         (function (e) {
@@ -86,7 +86,7 @@ n.d(
                                 },
                             });
                         })({ guildId: t, channelId: n }));
-                }, [i, n, t]),
+                }, [l, n, t]),
                 u
             );
         },
@@ -95,22 +95,22 @@ n.d(
             c.default.track(h.HAw.HANGOUT_WINDOW_CONTENT_CLEARED, { guild_id: t, channel_id: n });
         },
         pZ: function (e) {
-            let { guildId: t, channelId: n, categoryType: i } = e,
-                l = (0, u.Er)(i);
-            null != l &&
+            let { guildId: t, channelId: n, categoryType: l } = e,
+                i = (0, u.Er)(l);
+            null != i &&
                 c.default.track(h.HAw.HANGOUT_WINDOW_GIF_CATEGORY_CLICKED, {
                     guild_id: t,
                     channel_id: n,
-                    category_type: l,
+                    category_type: i,
                 });
         },
         z6: function (e) {
-            let { guildId: t, channelId: n, contentType: i, gifCategoryType: l } = e,
-                s = "gif-category" === i ? (0, u.Er)(l) : null;
+            let { guildId: t, channelId: n, contentType: l, gifCategoryType: i } = e,
+                s = "gif-category" === l ? (0, u.Er)(i) : null;
             c.default.track(h.HAw.HANGOUT_WINDOW_CONTENT_SET, {
                 guild_id: t,
                 channel_id: n,
-                content_type: i,
+                content_type: l,
                 num_voice_users: m(n),
                 media_session_id: o.A.getMediaSessionId(),
                 gif_category_type: s,

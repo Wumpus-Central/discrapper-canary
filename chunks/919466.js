@@ -14,7 +14,7 @@ function m(e) {
     let t = (0, l.MM)(e.entitlement);
     ((c = null == t ? null : { perk: a.n9.XGPP, state: t, entitlement_id: e.entitlement.id, redirect: null }), u());
 }
-class g extends s.Ay.Store {
+class x extends s.Ay.Store {
     static displayName = "PartnerActivationStore";
     getActivationStatus() {
         return c;
@@ -26,7 +26,7 @@ class g extends s.Ay.Store {
         return d;
     }
 }
-let x = new g(n.h, {
+let g = new x(n.h, {
     PARTNER_ACTIVATION_FETCH_START: function () {
         o = a.db.FETCHING;
     },
@@ -81,4 +81,4 @@ let x = new g(n.h, {
         ((c = null), (o = a.db.NOT_FETCHED), (d = null));
     },
 });
-i.d(t, {}, { A: x });
+i.d(t, {}, { A: g });

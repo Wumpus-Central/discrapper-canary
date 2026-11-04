@@ -145,8 +145,8 @@ function T() {
     );
 }
 var M = n(459357),
-    b = n(566980),
-    L = n(830382),
+    L = n(566980),
+    b = n(830382),
     j = n(543767),
     N = n(570221);
 function k(e) {
@@ -193,7 +193,7 @@ function F() {
             setPurchasePreviewError: e.setPurchasePreviewError,
             invoicePreviewRefetchKey: e.invoicePreviewRefetchKey,
         })),
-        p = c === b.h.PURCHASING || c === b.h.COMPLETED,
+        p = c === L.h.PURCHASING || c === L.h.COMPLETED,
         {
             applyWalletBalance: C,
             currency: y,
@@ -246,7 +246,7 @@ function F() {
                             if (null != l && l.pricingKey === k(n) && l.paymentSourceId !== n.paymentSourceId)
                                 return t.total;
                         })(l.current, e, s),
-                        c = await (0, L.NY)({ ...s, previousTotal: u }),
+                        c = await (0, b.NY)({ ...s, previousTotal: u }),
                         o = null != c ? N.A.createFromOTPPreview(c) : null;
                     return (
                         (r = l.current),
@@ -723,7 +723,7 @@ function ex(e) {
             eligiblePaymentGateways: v,
             hasFetchedPaymentSources: R,
             paymentSources: M,
-            hasPaymentSources: b,
+            hasPaymentSources: L,
         } = (function (e) {
             let { skuId: t, isGift: n, activeSubscription: l, initialPaymentSourceId: i } = e,
                 a = (0, C.bG)([_.A], () => _.A.get(t), [t]),
@@ -763,13 +763,13 @@ function ex(e) {
             activeSubscription: i.activeSubscription,
             initialPaymentSourceId: i.initialPaymentSourceId,
         }),
-        [L] = r.useState(() => {
+        [b] = r.useState(() => {
             let e = {
                 startedPaymentFlowWithPaymentSources: null,
                 startingPremiumSubscriptionPlanId: null != i.activeSubscription ? i.activeSubscription?.planId : null,
             };
             return (
-                R && (e.startedPaymentFlowWithPaymentSources = b),
+                R && (e.startedPaymentFlowWithPaymentSources = L),
                 (0, d.y$)({
                     checkoutInitParameters: i,
                     startingValues: e,
@@ -787,19 +787,19 @@ function ex(e) {
         }),
         j = r.useRef(null != o);
     (r.useEffect(() => {
-        j.current || null == o || (L.getState().setOrder(o), (j.current = !0));
-    }, [o, L]),
+        j.current || null == o || (b.getState().setOrder(o), (j.current = !0));
+    }, [o, b]),
         r.useEffect(() => {
-            L.getState().setCheckoutInitParameters(i);
-        }, [L, i]));
+            b.getState().setCheckoutInitParameters(i);
+        }, [b, i]));
     let N = ((t = i.purchaseType), null != (n = i.unifiedCheckoutFlow) && t === ep.VVm.SUBSCRIPTION && eP.includes(n)),
         k = i.unifiedCheckoutFlow === p.C.GUILD_ROLE_CHECKOUT,
         U = i.purchaseType === ep.VVm.ONE_TIME && i.unifiedCheckoutFlow !== p.C.ORB_CHECKOUT,
         w = !y && U;
     return (0, l.jsxs)(d.Ni, {
-        value: L,
+        value: b,
         children: [
-            (0, l.jsx)(P, { hasFetchedPaymentSources: R, hasPaymentSources: b }),
+            (0, l.jsx)(P, { hasFetchedPaymentSources: R, hasPaymentSources: L }),
             (0, l.jsx)(eA, {}),
             (0, l.jsx)(ef, {}),
             i.unifiedCheckoutFlow !== p.C.ORB_CHECKOUT && (0, l.jsx)(eg, {}),

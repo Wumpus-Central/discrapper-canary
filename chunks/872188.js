@@ -4,8 +4,8 @@ var n = l(477900),
     a = l(885574),
     r = l(834730),
     d = l(821609),
-    c = l(135294),
-    o = l(792996),
+    o = l(135294),
+    c = l(792996),
     u = l(146108);
 l.d(
     t,
@@ -14,13 +14,13 @@ l.d(
         A: function (e) {
             let { onPublish: t } = e,
                 [l, m] = i.useState(!1),
-                [f, g] = i.useState(!1),
-                h = i.useCallback(async () => {
-                    (m(!0), g(!1));
+                [h, f] = i.useState(!1),
+                x = i.useCallback(async () => {
+                    (m(!0), f(!1));
                     try {
-                        (await t(), s.O.announce(o.intl.string(c.default.pDzipI)));
+                        (await t(), s.O.announce(c.intl.string(o.default.pDzipI)));
                     } catch {
-                        g(!0);
+                        f(!0);
                     } finally {
                         m(!1);
                     }
@@ -29,26 +29,26 @@ l.d(
                 className: u.lm,
                 children: [
                     (0, n.jsx)(a.CircleInformationIcon, { size: "sm", color: "currentColor", className: u.Kk }),
-                    f
+                    h
                         ? (0, n.jsx)(r.E, {
                               variant: "body-sm/medium",
                               color: "text-feedback-critical",
                               className: u.iU,
                               role: "alert",
-                              children: o.intl.string(o.t.F8FvUy),
+                              children: c.intl.string(c.t.F8FvUy),
                           })
                         : (0, n.jsx)(r.E, {
                               variant: "body-sm/medium",
                               color: "text-muted",
                               className: u.iU,
-                              children: o.intl.string(c.default.Z2z85q),
+                              children: c.intl.string(o.default.Z2z85q),
                           }),
                     (0, n.jsx)(d.$, {
                         variant: "secondary",
                         size: "sm",
-                        text: o.intl.string(c.default["yul+0g"]),
+                        text: c.intl.string(o.default["yul+0g"]),
                         loading: l,
-                        onClick: h,
+                        onClick: x,
                     }),
                 ],
             });

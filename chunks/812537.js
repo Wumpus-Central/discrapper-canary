@@ -9,8 +9,8 @@ var s = i(477900),
     d = i(401432),
     u = i(834730),
     m = i(534514),
-    g = i(403581),
-    x = i(793574),
+    x = i(403581),
+    g = i(793574),
     p = i(688810),
     f = i(879610),
     h = i(580630),
@@ -22,8 +22,8 @@ i(321073);
 var E = i(325499),
     T = i(914313),
     C = i(773669),
-    R = i(975571),
-    I = i(398523),
+    I = i(975571),
+    R = i(398523),
     _ = i(881373),
     v = i(682901),
     y = i(652215),
@@ -106,7 +106,7 @@ function H(e) {
             (0, s.jsxs)("div", {
                 className: L.KS,
                 children: [
-                    (0, s.jsx)(g.t, { colorClass: L.oG }),
+                    (0, s.jsx)(x.t, { colorClass: L.oG }),
                     (0, s.jsx)(m.D, { variant: "heading-xs/semibold", children: n }),
                 ],
             }),
@@ -162,9 +162,9 @@ let V = function (e) {
             variant: o = "default",
         } = e,
         d = "settings" === o,
-        { analyticsLocations: u } = (0, p.Ay)(x.A.PREMIUM_MARKETING_PLAN_COMPARISON),
-        g = (0, A.V)(),
-        G = g?.subscriptionTrial?.skuId,
+        { analyticsLocations: u } = (0, p.Ay)(g.A.PREMIUM_MARKETING_PLAN_COMPARISON),
+        x = (0, A.V)(),
+        G = x?.subscriptionTrial?.skuId,
         w = (0, N.O)(),
         H = (0, b.YJ)(w),
         V = null != w && (0, b.U9)(w, v.pe.TIER_2) && H === v.gD.PREMIUM_MONTH_TIER_2,
@@ -203,7 +203,7 @@ let V = function (e) {
                 i = null,
                 s = [],
                 { shouldShowBonusOrbsUX: n, multiplier: a } = (0, T.lk)(P.rE.NITRO_HOME_MARKETING),
-                { enabled: l } = I.A.useConfig({ location: "useGetV2PlanComparisonTableRowsApplicationHome" }),
+                { enabled: l } = R.A.useConfig({ location: "useGetV2PlanComparisonTableRowsApplicationHome" }),
                 { functionalityEnabled: r } = (0, _.YS)({ location: "useGetV2PlanComparisonTableRowsApplicationHome" });
             return (
                 e &&
@@ -211,7 +211,7 @@ let V = function (e) {
                         id: 23,
                         title: M.intl.string(M.t.NG1e6l),
                         subtitle: M.intl.format(U.default.uJcbMv, {
-                            termsLink: R.A.getArticleURL(y.MVz.NITRO_2_POINT_0),
+                            termsLink: I.A.getArticleURL(y.MVz.NITRO_2_POINT_0),
                         }),
                         rows: [
                             {
@@ -369,7 +369,7 @@ let V = function (e) {
         })();
     if (r) t = null;
     else {
-        let e = null != g ? M.intl.string(M.t.IBYG5U) : M.intl.string(M.t.TR2B4T);
+        let e = null != x ? M.intl.string(M.t.IBYG5U) : M.intl.string(M.t.TR2B4T);
         t = (0, s.jsx)(j.R, { className: l()(L.Io, L.SP), text: e });
     }
     let Z = G === v.pe.TIER_0 || c === v.PremiumTypes.TIER_0;

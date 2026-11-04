@@ -66,7 +66,7 @@ function O(e) {
         ? (0, i.jsx)("div", { className: C._$, children: t })
         : t;
 }
-function R() {
+function L() {
     let e = (0, s.bG)([d.A], () => d.A.isPreview),
         t = (0, h.V)()?.subscriptionTrial?.skuId === N.pe.TIER_2;
     return e && t
@@ -112,7 +112,7 @@ n.d(
                             padding: { top: 24 },
                             children: (0, i.jsx)(c.Zg, { disabled: !1, size: I.ni.SIZE_48 }),
                         }),
-                        (0, i.jsx)(R, {}),
+                        (0, i.jsx)(L, {}),
                     ],
                 }),
             });
