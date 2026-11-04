@@ -1,4 +1,4 @@
-n.d(t, { A: () => p, h: () => m });
+n.d(t, { A: () => m, h: () => p });
 var l = n(477900),
     s = n(582128),
     a = n(503698),
@@ -9,17 +9,17 @@ var l = n(477900),
     c = n(241762);
 n(272111);
 var d = n(886030);
-function p(e) {
+function m(e) {
     let { children: t, className: n } = e,
         { expansionSpring: a } = s.useContext(u.PW),
-        { isExpanded: o, isExpansionAnimationComplete: p } = (0, c.H)();
+        { isExpanded: o, isExpansionAnimationComplete: m } = (0, c.H)();
     return (0, l.jsx)(i.animated.div, {
-        className: r()(d.iE, n, { [d.tT]: o && p }),
+        className: r()(d.iE, n, { [d.tT]: o && m }),
         style: { transform: (0, i.to)([a.to({ range: [0, 1], output: [6, 0] })], (e) => `translateY(${e}px)`) },
         children: t,
     });
 }
-function m(e) {
+function p(e) {
     let { children: t, className: n } = e,
         { expansionSpring: a } = s.useContext(u.PW);
     return (0, l.jsx)(i.animated.div, {

@@ -1,4 +1,4 @@
-(n.d(t, { M$: () => C, Mg: () => N, Og: () => k, VY: () => m, Y1: () => T, aF: () => b, uk: () => y }),
+(n.d(t, { M$: () => k, Mg: () => N, Og: () => C, VY: () => m, Y1: () => T, aF: () => b, uk: () => y }),
     n(323874),
     n(14289),
     n(35956));
@@ -113,11 +113,11 @@ async function b(e, t) {
         s = new URLSearchParams({ ticket: n });
     return `${r}/agent/screenshots/${encodeURIComponent(t)}?${s}`;
 }
-async function C(e, t) {
+async function k(e, t) {
     let n = await (0, c.h)(e, "/agent/overlay-background", { method: "PUT", body: t });
     if (!n.ok) throw Error(`overlay background upload failed (${n.status})`);
 }
-async function k(e) {
+async function C(e) {
     let t = await (0, c.h)(e, "/agent/overlay-background", { method: "DELETE" });
     if (!t.ok) throw Error(`overlay background reset failed (${t.status})`);
 }

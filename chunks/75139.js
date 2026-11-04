@@ -5,8 +5,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(91871),
     o = n.n(r),
-    c = n(131937),
-    d = n(17928),
+    d = n(131937),
+    c = n(17928),
     u = n(661531),
     h = n(939249),
     p = n(97808),
@@ -54,12 +54,12 @@ let Z = l.memo(function (e) {
         E = l.useRef(null),
         _ = (0, L.Us)(),
         { newestAnalyticsLocation: O } = (0, S.Ay)(b.A.AUDIENCE_TILE),
-        P = (0, d.bG)([U.Ay], () => U.Ay.getMember(r, C.id)?.premiumSince != null, [r, C.id]),
+        P = (0, c.bG)([U.Ay], () => U.Ay.getMember(r, C.id)?.premiumSince != null, [r, C.id]),
         D = N === z.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
     function V(e) {
         ((0, T.x)({
-            type: c.ImpressionTypes.MENU,
-            name: c.ImpressionNames.CALL_TILE_CONTEXT_MENU,
+            type: d.ImpressionTypes.MENU,
+            name: d.ImpressionNames.CALL_TILE_CONTEXT_MENU,
             properties: {
                 location: "StageAudienceSidebar",
                 is_tile_owner: C.id === w.default.getId(),
@@ -157,13 +157,13 @@ function Q(e) {
     var t;
     let n,
         a,
-        { channel: s, guildId: r, maxWidth: c } = e,
+        { channel: s, guildId: r, maxWidth: d } = e,
         u = (0, F.Ni)(s.id),
-        h = (0, d.bG)([D.A], () => D.A.can($.xB.MANAGE_CHANNELS, s) || D.A.can($.xB.MANAGE_ROLES, s)),
+        h = (0, c.bG)([D.A], () => D.A.can($.xB.MANAGE_CHANNELS, s) || D.A.can($.xB.MANAGE_ROLES, s)),
         p = (0, k.J2)(s.id),
         m =
             ((t = s.id),
-            (n = (0, d.bG)([G.A], () => [t, G.A.getParticipantsVersion(t)], [t], V.D)),
+            (n = (0, c.bG)([G.A], () => [t, G.A.getParticipantsVersion(t)], [t], V.D)),
             (a = l.useMemo(() => [...G.A.getMutableParticipants(n[0], B.ip.AUDIENCE)], [n])),
             (0, E.J)(a, (0, H.Uo)(t))),
         [f, g] = l.useState(""),
@@ -188,7 +188,7 @@ function Q(e) {
         });
     return (0, i.jsx)(O.A, {
         sidebarType: O.X.StageAudienceSidebar,
-        maxWidth: c,
+        maxWidth: d,
         minWidth: 240,
         floatingLayer: _.Ay,
         children: (0, i.jsxs)("div", {

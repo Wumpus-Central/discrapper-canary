@@ -29,11 +29,11 @@ async function d(e) {
 let f = { [u.AD_ATTRIBUTION_KIT]: { viewThroughSpec: { kind: u.AD_ATTRIBUTION_KIT } } },
     A = new l.A("IosAttribution"),
     E = new Map();
-function T(e, t) {
+function _(e, t) {
     return E.get(e) === t;
 }
-function _(e, t) {
-    T(e, t) && E.delete(e);
+function T(e, t) {
+    _(e, t) && E.delete(e);
 }
 function I(e) {
     null != e && (0, o.bg)(e).catch(() => {});
@@ -43,25 +43,25 @@ function C(e) {
         u = { framework: r, token: null, signAbort: new AbortController(), registration: Promise.resolve() };
     (E.set(t, u),
         (u.registration = p({ impressionId: t, metadataSealed: n, framework: r, impression: u }).catch(() => {
-            _(t, u);
+            T(t, u);
         })));
 }
 async function p(e) {
     let { impressionId: t, metadataSealed: n, framework: r, impression: u } = e,
         l = f[r]?.viewThroughSpec;
     if (null == l) {
-        (A.warn(`No strategy for ${r}; impression ${t} is unattributed`), (0, i.$8)(i.vI.NO_FRAMEWORK, r), _(t, u));
+        (A.warn(`No strategy for ${r}; impression ${t} is unattributed`), (0, i.$8)(i.vI.NO_FRAMEWORK, r), T(t, u));
         return;
     }
     let s = await d({ metadataSealed: n, impressionId: t, specs: [l], signal: u.signAbort.signal });
-    if (!T(t, u)) return;
+    if (!_(t, u)) return;
     let a = null != s ? (s.at(0)?.payload ?? null) : null;
     if (null == a) {
         ((0, i.$8)(i.vI.SIGN_FAILED, r, t), E.delete(t));
         return;
     }
     let c = await (0, o.EO)(t, r, JSON.stringify(a));
-    if (!T(t, u)) return void I(c);
+    if (!_(t, u)) return void I(c);
     if (null == c) {
         ((0, i.$8)(i.vI.NO_TOKEN, r, t), E.delete(t));
         return;
@@ -74,7 +74,7 @@ async function S(e) {
         ? (A.warn(`No tracked impression for ${e} at click time; store sheet will be unattributed`),
           (0, i.y9)(i.s5.NO_IMPRESSION, (0, o.BU)(), e),
           null)
-        : (null == t.token && (await t.registration), T(e, t) && null != t.token)
+        : (null == t.token && (await t.registration), _(e, t) && null != t.token)
           ? ((0, i.y9)(i.s5.ATTRIBUTED, t.framework, e), t.token)
           : (A.warn(`Impression ${e} not registered natively in time; store sheet will be unattributed`),
             (0, i.y9)(i.s5.NOT_READY, t.framework, e),

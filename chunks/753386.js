@@ -2,10 +2,10 @@ n.d(t, {
     J$: () => p,
     WM: () => s.WM,
     cZ: () => I,
-    di: () => T,
+    di: () => _,
     eG: () => A,
     vd: () => C,
-    vm: () => _,
+    vm: () => T,
     zh: () => E,
     zv: () => f,
 });
@@ -29,10 +29,10 @@ function A(e) {
 function E(e, t) {
     return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
 }
-function T(e) {
+function _(e) {
     return Number.isFinite(e) && e > 0;
 }
-function _(e) {
+function T(e) {
     let { questId: t, sourceQuestContent: n, videoSessionId: u } = e,
         s = i.Ay.getState().getVideoProgress(t);
     if (null == s) return;

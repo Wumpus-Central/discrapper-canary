@@ -44,7 +44,7 @@
     G6Q: () => nh,
     GaG: () => rk,
     Gg3: () => tF.Gg,
-    GuildFeatures: () => t4,
+    GuildFeatures: () => t5,
     H2B: () => aN,
     HAw: () => rC,
     Hf6: () => as,
@@ -101,7 +101,7 @@
     QCW: () => an,
     RCc: () => ip,
     RWi: () => rw,
-    R_U: () => r4,
+    R_U: () => r5,
     RoK: () => iO,
     Rsh: () => nM,
     Rv1: () => aH,
@@ -118,7 +118,7 @@
     TVA: () => ru,
     TZK: () => ii,
     T_y: () => iw,
-    TbF: () => n4,
+    TbF: () => n5,
     ThZ: () => iH,
     TpD: () => ri,
     U2_: () => tF.U2,
@@ -133,7 +133,7 @@
     VE5: () => n0,
     VFs: () => n9,
     VVm: () => tF.VV,
-    VX0: () => r6,
+    VX0: () => r4,
     W6J: () => tB.W6,
     WA1: () => n3,
     WMy: () => tB.WM,
@@ -146,7 +146,7 @@
     XL8: () => rI,
     XYD: () => aS,
     XYq: () => tB.XY,
-    XgB: () => n6,
+    XgB: () => n4,
     XlF: () => tF.Xl,
     XlH: () => tH,
     Xlh: () => iD,
@@ -198,11 +198,11 @@
     eAD: () => is,
     eGj: () => ny,
     eQT: () => il,
-    elq: () => t5,
+    elq: () => t6,
     ewM: () => re,
     f34: () => rJ,
     f5z: () => nc,
-    fAW: () => t6,
+    fAW: () => t4,
     fHV: () => nX,
     fg2: () => i7,
     fic: () => aj,
@@ -229,7 +229,7 @@
     hE4: () => rY,
     hH7: () => rS,
     hK1: () => ag,
-    hM6: () => r5,
+    hM6: () => r6,
     hVb: () => tF.hV,
     hcd: () => ic,
     hes: () => tF.he,
@@ -240,7 +240,7 @@
     ilC: () => tF.il,
     jUm: () => nU,
     j_2: () => tB.j_,
-    jej: () => i5,
+    jej: () => i6,
     js$: () => tF.js,
     kCE: () => t0,
     kGV: () => nI,
@@ -293,7 +293,7 @@
     rzx: () => tF.rz,
     sFm: () => ah,
     sJq: () => tF.sJ,
-    s_7: () => n5,
+    s_7: () => n6,
     sbO: () => ns,
     sdF: () => n2,
     sl8: () => nr,
@@ -306,7 +306,7 @@
     uJv: () => aW,
     uPF: () => aO,
     uaN: () => iS,
-    ugG: () => i4,
+    ugG: () => i5,
     ugJ: () => tB.ug,
     uje: () => ad,
     ump: () => rd,
@@ -329,7 +329,7 @@
     xfJ: () => tF.xf,
     yFH: () => nA,
     yKI: () => ae,
-    zOV: () => i6,
+    zOV: () => i4,
     zWA: () => tK,
     zgK: () => rM,
     zzC: () => n1,
@@ -444,9 +444,9 @@ var i,
     e1,
     e2,
     e3,
-    e5,
     e6,
     e4,
+    e5,
     e7,
     e8,
     e9,
@@ -818,7 +818,7 @@ var i,
         (m.YOUTUBE_3P_NAGBAR = "YOUTUBE_3P_NAGBAR"),
         (m.COD_RELINK = "COD_RELINK"),
         m),
-    t5 =
+    t6 =
         (((T = {}).RESOLVING = "RESOLVING"),
         (T.RESOLVED = "RESOLVED"),
         (T.EXPIRED = "EXPIRED"),
@@ -830,8 +830,8 @@ var i,
         (T.APP_NOT_OPENED = "APP_NOT_OPENED"),
         (T.ERROR = "ERROR"),
         T),
-    t6 = (((g = {}).OPENING = "OPENING"), (g.OPEN = "OPEN"), (g.OPEN_FAIL = "OPEN_FAIL"), g),
-    t4 =
+    t4 = (((g = {}).OPENING = "OPENING"), (g.OPEN = "OPEN"), (g.OPEN_FAIL = "OPEN_FAIL"), g),
+    t5 =
         (((S = {}).INVITE_SPLASH = "INVITE_SPLASH"),
         (S.VIP_REGIONS = "VIP_REGIONS"),
         (S.VANITY_URL = "VANITY_URL"),
@@ -2121,7 +2121,7 @@ let nG = 100,
     n1 = 32,
     n2 = 6e5,
     n3 = 6 * tG.A.Seconds.HOUR,
-    n5 = [
+    n6 = [
         0,
         5,
         10,
@@ -2137,8 +2137,8 @@ let nG = 100,
         2 * tG.A.Seconds.HOUR,
         n3,
     ],
-    n6 = 10,
-    n4 = 0xa00000,
+    n4 = 10,
+    n5 = 0xa00000,
     n7 = 0x40000000,
     n8 = (e) => `||${e}||`,
     n9 = /^\|\|([\s\S]+?)\|\|/,
@@ -3479,7 +3479,7 @@ var iZ =
         (eI[(eI.SAFE = 2)] = "SAFE"),
         (eI[(eI.AGE_RESTRICTED = 3)] = "AGE_RESTRICTED"),
         eI),
-    i5 =
+    i6 =
         (((ep = {}).IFRAME_MOUNT = "IFRAME_MOUNT"),
         (ep.IFRAME_UNMOUNT = "IFRAME_UNMOUNT"),
         (ep.REMEASURE_TARGET = "REMEASURE_TARGET"),
@@ -3588,13 +3588,13 @@ var iZ =
         (ep.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED = "PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED"),
         (ep.FRIENDS_SIDEBAR_RESIZED = "FRIENDS_SIDEBAR_RESIZED"),
         ep),
-    i6 =
+    i4 =
         (((em = {}).TOGGLE_REACTION_POPOUT = "TOGGLE_REACTION_POPOUT"),
         (em.ANIMATE_CHAT_AVATAR = "ANIMATE_CHAT_AVATAR"),
         (em.VOICE_MESSAGE_SEND = "VOICE_MESSAGE_SEND"),
         (em.CLIP_SEEK_VIDEO = "CLIP_SEEK_VIDEO"),
         em);
-let i4 = 50;
+let i5 = 50;
 var i7 =
     (((eT = {}).TWITCH = "twitch"),
     (eT.YOUTUBE = "youtube"),
@@ -6269,7 +6269,7 @@ let rJ = "cdn.discordapp.com",
     r1 = (e) => `https://img.youtube.com/vi/${e}/maxresdefault.jpg`,
     r2 = "2",
     r3 = "https://discordapp.com/mweb-handoff";
-var r5 =
+var r6 =
         (((e0 = {})[(e0.HIDDEN = 1)] = "HIDDEN"),
         (e0[(e0.PRIVATE = 2)] = "PRIVATE"),
         (e0[(e0.OVERLAY_DISABLED = 4)] = "OVERLAY_DISABLED"),
@@ -6277,7 +6277,7 @@ var r5 =
         (e0[(e0.PREMIUM = 16)] = "PREMIUM"),
         (e0[(e0.OVERLAY_V3_DISABLED = 32)] = "OVERLAY_V3_DISABLED"),
         e0),
-    r6 =
+    r4 =
         (((e1 = {}).DONE = "DONE"),
         (e1.PLANNING = "PLANNING"),
         (e1.PREPARING = "PREPARING"),
@@ -6286,7 +6286,7 @@ var r5 =
         (e1.CONFLICT = "CONFLICT"),
         (e1.ERROR = "ERROR"),
         e1),
-    r4 = (((e2 = {}).PULL = "PULL"), (e2.PUSH = "PUSH"), (e2.CONFLICT = "CONFLICT"), (e2.NONE = "NONE"), e2);
+    r5 = (((e2 = {}).PULL = "PULL"), (e2.PUSH = "PUSH"), (e2.CONFLICT = "CONFLICT"), (e2.NONE = "NONE"), e2);
 let r7 = Object.freeze({
     [tL.D.DISCORD]: "Discord",
     [tL.D.STEAM]: "Steam",
@@ -6315,19 +6315,19 @@ let r7 = Object.freeze({
 });
 var r8 = (((e3 = {}).USAGE_STATISTICS = "usage_statistics"), (e3.PERSONALIZATION = "personalization"), e3),
     r9 =
-        (((e5 = {})[(e5.MUTUAL_FRIENDS = 2)] = "MUTUAL_FRIENDS"),
-        (e5[(e5.MUTUAL_GUILDS = 4)] = "MUTUAL_GUILDS"),
-        (e5[(e5.NO_RELATION = 8)] = "NO_RELATION"),
-        e5);
+        (((e6 = {})[(e6.MUTUAL_FRIENDS = 2)] = "MUTUAL_FRIENDS"),
+        (e6[(e6.MUTUAL_GUILDS = 4)] = "MUTUAL_GUILDS"),
+        (e6[(e6.NO_RELATION = 8)] = "NO_RELATION"),
+        e6);
 let ae = 14;
 var at =
-    (((e6 = {}).OVERLAY = "OVERLAY"),
-    (e6.APP = "APP"),
-    (e6.POPOUT = "POPOUT"),
-    (e6.CALL_TILE_POPOUT = "CALL_TILE_POPOUT"),
-    e6);
+    (((e4 = {}).OVERLAY = "OVERLAY"),
+    (e4.APP = "APP"),
+    (e4.POPOUT = "POPOUT"),
+    (e4.CALL_TILE_POPOUT = "CALL_TILE_POPOUT"),
+    e4);
 let an = __OVERLAY__ ? "OVERLAY" : "APP";
-var ai = (((e4 = {}).COMPLETE = "complete"), (e4.TRANSITION = "transition"), e4),
+var ai = (((e5 = {}).COMPLETE = "complete"), (e5.TRANSITION = "transition"), e5),
     ar =
         (((e7 = {}).QUEUED = "queued"),
         (e7.PLANNING = "planning"),

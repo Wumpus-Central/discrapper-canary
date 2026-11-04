@@ -35,8 +35,8 @@ function b(e) {
         x = (0, o.bG)([f.A], () => f.A.isFocused()),
         { catalogBannerStatic: C, catalogBannerAnimated: S, catalogBannerRive: b } = (0, _.MV)(t),
         I = a.useRef(null),
-        L = null != b,
-        j =
+        j = null != b,
+        L =
             null != n
                 ? {
                       role: "button",
@@ -50,13 +50,13 @@ function b(e) {
                 : {};
     return (0, l.jsxs)("div", {
         ref: I,
-        className: i()(v.sW, { [v.by]: L, [v.vk]: null != n }),
-        ...j,
+        className: i()(v.sW, { [v.by]: j, [v.vk]: null != n }),
+        ...L,
         children: [
             (0, l.jsx)(r.s, { children: (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t.name }) }),
             (0, l.jsx)("div", {
                 className: v.Db,
-                children: L
+                children: j
                     ? (0, l.jsx)(d._, {
                           src: b,
                           fit: "cover",

@@ -5,8 +5,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(29477),
     o = n(821578),
-    c = n(750459),
-    d = n(17928),
+    d = n(750459),
+    c = n(17928),
     u = n(39623),
     h = n(661531),
     p = n(717421),
@@ -58,21 +58,21 @@ let el = 16 / 9;
 function ea(e) {
     let { title: t, stream: n, shouldShow: a, children: s } = e,
         [r, o] = l.useState(el),
-        { previewUrl: c } = (0, E.A)(n.guildId, n.channelId, n.ownerId);
+        { previewUrl: d } = (0, E.A)(n.guildId, n.channelId, n.ownerId);
     return (
         l.useEffect(() => {
-            if (null == c) return;
+            if (null == d) return;
             let e = new Image();
             return (
                 (e.onload = () => {
                     0 !== e.naturalWidth && 0 !== e.naturalHeight && o(e.naturalWidth / e.naturalHeight);
                 }),
-                (e.src = c),
+                (e.src = d),
                 () => {
                     e.onload = null;
                 }
             );
-        }, [c]),
+        }, [d]),
         (0, i.jsx)(q.A, {
             clickable: !0,
             title: t,
@@ -109,24 +109,24 @@ function es(e) {
             seat: q,
         } = e,
         el = (0, T.Us)(),
-        es = (0, d.bG)([U.default], () => U.default.getUser(t)),
-        er = (0, d.bG)([U.default], () => U.default.getCurrentUser()?.id === t),
-        { isMenuOpen: eo, setMenuOpen: ec } = l.useContext(W.t),
-        ed = !!er && eo,
-        eu = (0, d.bG)([M.A], () => M.A.getChannel(n)?.guild_id),
+        es = (0, c.bG)([U.default], () => U.default.getUser(t)),
+        er = (0, c.bG)([U.default], () => U.default.getCurrentUser()?.id === t),
+        { isMenuOpen: eo, setMenuOpen: ed } = l.useContext(W.t),
+        ec = !!er && eo,
+        eu = (0, c.bG)([M.A], () => M.A.getChannel(n)?.guild_id),
         eh = (0, P.Nd)(
-            (0, d.bG)([D.A], () => D.A.getVoiceState(eu, t)),
+            (0, c.bG)([D.A], () => D.A.getVoiceState(eu, t)),
             (0, P.oN)(),
         ),
-        ep = (0, d.bG)([L.A], () => L.A.getStreamForUser(t, eu)),
+        ep = (0, c.bG)([L.A], () => L.A.getStreamForUser(t, eu)),
         em = (0, C.A)({ userId: t }),
-        eA = (0, d.bG)([_.A], () => _.A.isUserPlayingSounds(t)),
-        ef = (0, d.bG)([V.A], () => V.A.isFocused()),
+        eA = (0, c.bG)([_.A], () => _.A.isUserPlayingSounds(t)),
+        ef = (0, c.bG)([V.A], () => V.A.isFocused()),
         eg = (0, G.tx)(eu, n, es),
-        ex = (0, d.bG)([z.A], () => z.A.getRoom(n)?.background ?? o.I.DEFAULT),
+        ex = (0, c.bG)([z.A], () => z.A.getRoom(n)?.background ?? o.I.DEFAULT),
         { seats: eC } = Q.iX[ex],
         ey =
-            null != q && q !== c.x.UNSET
+            null != q && q !== d.x.UNSET
                 ? eC[q]
                 : Object.values(eC).find((e) => e.position.x === a && e.position.y === u),
         [ej, eI] = l.useState(!1),
@@ -137,8 +137,8 @@ function es(e) {
             onRest: () => eI(!1),
             onStart: () => eI(!0),
         }),
-        ev = (0, d.bG)([w.Ay], () => w.Ay.getVoiceChannelId() === n),
-        eE = (0, d.bG)([j.A], () => {
+        ev = (0, c.bG)([w.Ay], () => w.Ay.getVoiceChannelId() === n),
+        eE = (0, c.bG)([j.A], () => {
             let e = j.A.getParticipant(n, t);
             return (0, J.Xw)(e) ? e : null;
         }),
@@ -147,8 +147,8 @@ function es(e) {
         eT = l.useCallback(() => {
             null != eu &&
                 ((0, B.EB)({ guildId: eu, channelId: n, interactionType: "clicked" }),
-                eS && (ed || !er || !$) && (x.A.selectParticipant(n, null), (0, k.UV)(!0, n)));
-        }, [eu, n, ed, eS, er, $]),
+                eS && (ec || !er || !$) && (x.A.selectParticipant(n, null), (0, k.UV)(!0, n)));
+        }, [eu, n, ec, eS, er, $]),
         e_ = l.useCallback(
             (e) => {
                 let t = M.A.getChannel(n);
@@ -210,7 +210,7 @@ function es(e) {
                                 })
                           : void 0,
                   children: (0, i.jsx)("div", {
-                      className: s()(ei.gP, { [ei.Kf]: ed }),
+                      className: s()(ei.gP, { [ei.Kf]: ec }),
                       "aria-hidden": !0,
                       children: (0, i.jsx)(f._, { size: "md", color: "currentColor" }),
                   }),
@@ -242,7 +242,7 @@ function es(e) {
         eH = {
             left: eN.x.to((e) => `calc(${e}% - ${b / 2}px)`),
             top: eN.y.to((e) => `calc(${e}% - ${b / 2}px)`),
-            zIndex: ed ? 1e6 : 1e3 * Math.round(u) + Math.round(a),
+            zIndex: ec ? 1e6 : 1e3 * Math.round(u) + Math.round(a),
         };
     if (!$) {
         let e = (0, i.jsx)(g.D, {
@@ -278,8 +278,8 @@ function es(e) {
         style: eH,
         children: er
             ? (0, i.jsxs)(Z.O, {
-                  isOpen: ed,
-                  onOpenChange: ec,
+                  isOpen: ec,
+                  onOpenChange: ed,
                   placement: a > 50 ? "left" : "right",
                   children: [
                       (0, i.jsx)(Z.O.Trigger, {
@@ -288,7 +288,7 @@ function es(e) {
                                   a = (0, i.jsx)(g.D, {
                                       ...l,
                                       "aria-label": eM,
-                                      className: s()(ei.KI, ei.hZ, { [ei.qS]: ed }),
+                                      className: s()(ei.KI, ei.hZ, { [ei.qS]: ec }),
                                       innerRef: t,
                                       onMouseEnter: eR,
                                       onClick: () => {
@@ -299,8 +299,8 @@ function es(e) {
                                       children: ez,
                                   });
                               return null != ep
-                                  ? (0, i.jsx)(ea, { title: eg, stream: ep, shouldShow: !ed && !eU, children: a })
-                                  : (0, i.jsx)(X.A, { name: eg, shouldShow: !ed && !eU, delay: e$, children: a });
+                                  ? (0, i.jsx)(ea, { title: eg, stream: ep, shouldShow: !ec && !eU, children: a })
+                                  : (0, i.jsx)(X.A, { name: eg, shouldShow: !ec && !eU, delay: e$, children: a });
                           },
                       }),
                       (0, i.jsx)(Z.O.Popup, {
@@ -336,7 +336,7 @@ function es(e) {
 function er(e) {
     let { channelId: t, guildId: n, users: l, numericAvatarSize: a, avatarSize: s } = e,
         { posturesEnabled: r } = (0, H.mf)({ guildId: n, location: "GuildRoomUserList" }),
-        u = (0, d.bG)([z.A], () => z.A.getRoom(t)?.background ?? o.I.DEFAULT),
+        u = (0, c.bG)([z.A], () => z.A.getRoom(t)?.background ?? o.I.DEFAULT),
         { seats: h } = Q.iX[u];
     return (0, i.jsx)("div", {
         role: "list",
@@ -348,8 +348,8 @@ function er(e) {
                 {
                     userId: n,
                     channelId: t,
-                    x: null != l.seat && l.seat !== c.x.UNSET ? h[l.seat].position.x : (l.position?.x ?? 0),
-                    y: null != l.seat && l.seat !== c.x.UNSET ? h[l.seat].position.y : (l.position?.y ?? 0),
+                    x: null != l.seat && l.seat !== d.x.UNSET ? h[l.seat].position.x : (l.position?.x ?? 0),
+                    y: null != l.seat && l.seat !== d.x.UNSET ? h[l.seat].position.y : (l.position?.y ?? 0),
                     statusId: l.statusId,
                     numericAvatarSize: a,
                     avatarSize: s,
@@ -363,8 +363,8 @@ function er(e) {
 }
 function eo(e) {
     let { channelId: t, roomWidth: n } = e,
-        l = (0, d.bG)([M.A], () => M.A.getChannel(t)?.guild_id),
-        a = (0, d.bG)([z.A], () => z.A.getRoomUsers(t)),
+        l = (0, c.bG)([M.A], () => M.A.getChannel(t)?.guild_id),
+        a = (0, c.bG)([z.A], () => z.A.getRoomUsers(t)),
         { numericAvatarSize: s, avatarSize: r } = (0, $.F)(n);
     return 0 === a.size || null == l
         ? null

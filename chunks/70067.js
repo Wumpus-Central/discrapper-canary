@@ -6,8 +6,8 @@ var a = n(17928),
     s = n(734057),
     r = n(309010),
     o = n(625494),
-    c = n(446243),
-    d = n(558076),
+    d = n(446243),
+    c = n(558076),
     u = n(360729),
     h = n(544299),
     p = n(932453),
@@ -18,8 +18,8 @@ function g(e) {
     let { channelId: t, asset: n, position: g, width: x } = e,
         C = (0, a.bG)([s.A], () => s.A.getChannel(t)?.guild_id),
         { interactionsEnabled: y } = (0, u.mf)({ guildId: C, location: "GuildRoom" }, { autoTrackExposure: !1 }),
-        j = (0, a.bG)([d.A], () => null != d.A.getPendingNote(t)),
-        I = (0, a.bG)([d.A], () => d.A.getNotes(t).length >= 20),
+        j = (0, a.bG)([c.A], () => null != c.A.getPendingNote(t)),
+        I = (0, a.bG)([c.A], () => c.A.getNotes(t).length >= 20),
         N = (0, a.bG)([r.Ay], () => r.Ay.getVoiceChannelId() === t),
         v = l.useRef(null),
         E = l.useCallback(() => {
@@ -36,7 +36,7 @@ function g(e) {
             );
     }, [b, E]);
     let S = l.useCallback(() => {
-        (0, c.WT)(t);
+        (0, d.WT)(t);
     }, [t]);
     return y
         ? (0, i.jsx)(p.A, {

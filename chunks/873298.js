@@ -2966,7 +2966,7 @@ class e2 extends v.G {
     }
 }
 let e3 = new e2();
-class e5 extends v.G {
+class e6 extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.AppearanceSettings", [
             { no: 1, name: "theme", kind: "enum", T: () => ["discord_protos.discord_users.v1.Theme", Z] },
@@ -3121,8 +3121,8 @@ class e5 extends v.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e4 = new e5();
-class e6 extends v.G {
+let e4 = new e6();
+class e5 extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.CustomUserThemeSettings", [
             { no: 1, name: "colors", kind: "scalar", repeat: 2, T: 9 },
@@ -3182,7 +3182,7 @@ class e6 extends v.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e7 = new e6();
+let e7 = new e5();
 class e8 extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ClientThemeSettings", [

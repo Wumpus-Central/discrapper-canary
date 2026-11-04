@@ -5,8 +5,8 @@ var i = n(477900),
     s = n(17928),
     r = n(939249),
     o = n(367513),
-    c = n(401843),
-    d = n(198052),
+    d = n(401843),
+    c = n(198052),
     u = n(643501),
     h = n(652896),
     p = n(279250),
@@ -27,7 +27,7 @@ var i = n(477900),
 let T = function (e) {
     let { channelId: t, popoutType: n, width: T, height: _, idle: R, onClose: O } = e,
         P = (0, m.Us)(),
-        L = (0, s.bG)([d.A], () => d.A.getSelectedParticipant(t)),
+        L = (0, s.bG)([c.A], () => c.A.getSelectedParticipant(t)),
         M = (0, s.bG)([g.A], () => g.A.getChannel(t)),
         w = (0, s.bG)([x.A], () => x.A.getGuild(M?.getGuildId())),
         U = (0, s.bG)([y.Ay], () => null != M && y.Ay.getVoiceChannelId() === M.id),
@@ -38,15 +38,15 @@ let T = function (e) {
             mode: k,
             layout: B,
             participantsOpen: F,
-        } = (0, s.cf)([d.A], () => {
-            let e = null != M ? d.A.getLayout(M.id, P) : E.DUB.NORMAL;
+        } = (0, s.cf)([c.A], () => {
+            let e = null != M ? c.A.getLayout(M.id, P) : E.DUB.NORMAL;
             return {
-                participants: d.A.getParticipants(t),
-                filteredParticipants: d.A.getFilteredParticipants(t),
-                participantsVersion: d.A.getParticipantsVersion(t),
-                mode: d.A.getMode(t),
+                participants: c.A.getParticipants(t),
+                filteredParticipants: c.A.getFilteredParticipants(t),
+                participantsVersion: c.A.getParticipantsVersion(t),
+                mode: c.A.getMode(t),
                 layout: P === E.BRT.POPOUT && e !== E.DUB.FULL_SCREEN ? E.DUB.NO_CHAT : e,
-                participantsOpen: d.A.getParticipantsOpen(t),
+                participantsOpen: c.A.getParticipantsOpen(t),
             };
         }),
         z = (0, s.bG)([u.default], () => u.default.getAwaitingRemoteSessionInfo());
@@ -94,7 +94,7 @@ let T = function (e) {
                                       (t) => (0, h._z)(t) === e.id && t.state !== E.XYD.ENDED,
                                   ).length
                           )
-                              return void (0, c.A9)((0, h.Iy)(e.id), { forceMultiple: t.shiftKey });
+                              return void (0, d.A9)((0, h.Iy)(e.id), { forceMultiple: t.shiftKey });
                           L?.id === e.id ? o.A.selectParticipant(M.id, null) : o.A.selectParticipant(M.id, e.id);
                       }
                   },

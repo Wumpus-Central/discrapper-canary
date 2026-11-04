@@ -5,8 +5,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(29477),
     o = n(717421),
-    c = n(866323),
-    d = n(475743),
+    d = n(866323),
+    c = n(475743),
     u = n(216418),
     h = n(80051),
     p = n(280450),
@@ -45,7 +45,7 @@ function S(e) {
         k = m.Ay.getVideoComponent(),
         B = p.default.getId(),
         [F, z] = l.useState(null),
-        H = (0, d.Ay)(F),
+        H = (0, c.Ay)(F),
         [W, Y] = l.useState(!0),
         [$, K] = l.useState(!1),
         X = L.type === I.lp.ACTIVITY,
@@ -53,11 +53,11 @@ function S(e) {
         Z = !X && null != L.streamId,
         Q = D <= 2 * b + 144,
         J = M && !Q,
-        ee = (0, d.Ay)(J),
+        ee = (0, c.Ay)(J),
         et = V === j.DUB.MINIMUM || V === j.DUB.NORMAL,
         en = !Q && (!et || X),
         ei = (0, f.A)(en, 100),
-        el = ((0, d.Ay)(L.id) ?? L.id) !== L.id,
+        el = ((0, c.Ay)(L.id) ?? L.id) !== L.id,
         ea = 0;
     ((X || J) && (ea += 72), X && !J && (en ? (ea += 48) : (ea += 8)), J && (ea += 0.5 * b + 8));
     let es = l.useMemo(
@@ -66,10 +66,10 @@ function S(e) {
         ),
         er = D - 2 * ea,
         eo = X && q ? U : er * es,
-        ec = Math.floor(Math.min(U, eo) / es),
-        ed = D > U / es + 72 + b + 8;
-    t = J || X ? (J ? -16 : -8) : 40 + Math.max(0, 72 - (D - ec) / 2);
-    let eu = Math.max(0, 72 - (D - ec) / 2);
+        ed = Math.floor(Math.min(U, eo) / es),
+        ec = D > U / es + 72 + b + 8;
+    t = J || X ? (J ? -16 : -8) : 40 + Math.max(0, 72 - (D - ed) / 2);
+    let eu = Math.max(0, 72 - (D - ed) / 2);
     l.useEffect(() => {
         let e = setTimeout(() => {
             Y(!1);
@@ -83,7 +83,7 @@ function S(e) {
         em = (0, o.z)(
             {
                 value: +!!J,
-                delay: ed || !J ? 0 : 100,
+                delay: ec || !J ? 0 : 100,
                 config: { ...r.config.stiff, clamp: !0 },
                 onStart: () => K(!0),
                 onChange: () => A._.dispatch(j.jej.REMEASURE_TARGET),
@@ -99,7 +99,7 @@ function S(e) {
             (ee === J && eA.value.idle && !ei) || el || eh ? "animate-never" : "animate-always",
         ),
         eg = (0, o.z)({ value: t, config: { ...r.config.stiff, clamp: !0 } }, ep),
-        ex = (0, c.p)(
+        ex = (0, d.p)(
             L,
             {
                 keys: (e) => e?.id,

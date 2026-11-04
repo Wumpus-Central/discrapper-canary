@@ -5,8 +5,8 @@ var i = n(477900),
     s = n(456412),
     r = n(878549),
     o = n(198052),
-    c = n(493387),
-    d = n(235986),
+    d = n(493387),
+    c = n(235986),
     u = n(625494),
     h = n(484191),
     p = n(665450),
@@ -51,16 +51,16 @@ let y = (0, s.A)((e) => {
     if (E?.isGuildVocalOrThread() && !T)
         return (0, i.jsx)(h.A, { channel: E, participants: t, hasConnectPermission: b });
     if (((n = T ? n : t), L === g._Of.VOICE))
-        return (0, i.jsx)(c.A, { guildId: E.guild_id, width: R, className: C.Er, participants: t, onContextMenu: N });
+        return (0, i.jsx)(d.A, { guildId: E.guild_id, width: R, className: C.Er, participants: t, onContextMenu: N });
     if (null == s) {
         if (0 === n.length) {
             let e = t.length > 0 && !V;
             return (0, i.jsx)(f.A, { channelId: E.id, allPoppedOut: e });
         }
-        return (0, i.jsx)(d.A, {
+        return (0, i.jsx)(c.A, {
             className: C.HA,
-            justify: d.A.Justify.CENTER,
-            align: d.A.Align.CENTER,
+            justify: c.A.Justify.CENTER,
+            align: c.A.Align.CENTER,
             children: (0, i.jsx)(m.A, {
                 channel: E,
                 className: C.g9,

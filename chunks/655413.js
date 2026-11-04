@@ -1,4 +1,4 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => d });
 var i = n(477900);
 n(582128);
 var l = n(194981),
@@ -6,14 +6,14 @@ var l = n(194981),
     s = n(834730),
     r = n(255434),
     o = n(732079);
-function c(e) {
-    let { name: t, shouldShow: n = !0, delay: c, children: d } = e,
+function d(e) {
+    let { name: t, shouldShow: n = !0, delay: d, children: c } = e,
         {
             tooltipId: u,
             isVisible: h,
             targetElementRef: p,
             trigger: m,
-        } = (0, l.D)({ children: d, shouldShow: n, asContainer: !0, containerTag: "div", delay: c }),
+        } = (0, l.D)({ children: c, shouldShow: n, asContainer: !0, containerTag: "div", delay: d }),
         A = (0, a.j)({ shouldShow: h }),
         f = (0, i.jsx)("div", {
             className: o.Qs,

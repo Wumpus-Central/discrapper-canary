@@ -5,8 +5,8 @@ var i = n(477900),
     s = n(17928),
     r = n(796774),
     o = n(209932),
-    c = n(813564),
-    d = n(792348),
+    d = n(813564),
+    c = n(792348),
     u = n(734057),
     h = n(999926),
     p = n(309010),
@@ -22,8 +22,8 @@ var y = n(618922),
     I = n(130390);
 function N(e) {
     let { channelId: t, position: n } = e,
-        c = (0, s.bG)([f.A], () => f.A.getRoom(t)?.background ?? a.I.DEFAULT),
-        { duck: d } = C.iX[c],
+        d = (0, s.bG)([f.A], () => f.A.getRoom(t)?.background ?? a.I.DEFAULT),
+        { duck: c } = C.iX[d],
         h = (0, s.bG)([u.A], () => u.A.getChannel(t)?.guild_id),
         { interactionsEnabled: p } = (0, g.mf)({ guildId: h, location: "GuildRoom" }, { autoTrackExposure: !1 });
     l.useEffect(() => {
@@ -31,12 +31,12 @@ function N(e) {
     }, [p]);
     let m = (0, s.bG)([o.A], () => o.A.getSound("0", "1"));
     return p && null != m
-        ? (0, i.jsx)(v, { channelId: t, asset: d.asset, position: n, width: d.width, sound: m })
+        ? (0, i.jsx)(v, { channelId: t, asset: c.asset, position: n, width: c.width, sound: m })
         : (0, i.jsx)(x.c, {
-              asset: d.asset,
+              asset: c.asset,
               label: j.intl.string(y.default["93KE7U"]),
               position: n,
-              width: d.width,
+              width: c.width,
               className: I.L,
           });
 }
@@ -46,8 +46,8 @@ function v(e) {
         g = (0, s.bG)([u.A], () => u.A.getChannel(t)),
         C = (0, s.bG)([h.Ay], () => h.Ay.isDeaf()),
         N = (0, s.bG)([p.Ay], () => p.Ay.getVoiceChannelId() === t),
-        { playSoundboardSound: v } = (0, d.A)(o, t),
-        E = N && (0, c.Ir)(f, o, g) && (0, c.Au)(g) && !C,
+        { playSoundboardSound: v } = (0, c.A)(o, t),
+        E = N && (0, d.Ir)(f, o, g) && (0, d.Au)(g) && !C,
         b = l.useCallback(() => {
             v();
             let e = g?.id;

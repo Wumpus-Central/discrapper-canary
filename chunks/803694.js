@@ -118,8 +118,8 @@ class p {
             : { shouldSet: !1, correctedPaymentSourceId: null };
     }
 }
-var C = n(105292),
-    h = n(493364);
+var h = n(105292),
+    C = n(493364);
 function f(e) {
     let { giftCardsEnabled: t } = e,
         {
@@ -300,7 +300,7 @@ function S(e) {
                         onChange: H,
                         loading: Z,
                         disabled: !Z && !V,
-                        disabledTooltip: Z || V ? void 0 : C.intl.string(h.default.ccWIdu),
+                        disabledTooltip: Z || V ? void 0 : h.intl.string(C.default.ccWIdu),
                     },
         [R, j, Q, W, k, H, V, Z, $, z],
     );

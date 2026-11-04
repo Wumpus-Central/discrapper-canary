@@ -1,34 +1,34 @@
-n.d(t, { U: () => f });
+n.d(t, { U: () => I });
 var r = n(582128),
     i = n(131937),
-    s = n(172218),
-    a = n(688810),
-    l = n(139286),
+    l = n(172218),
+    s = n(688810),
+    a = n(139286),
     u = n(440938),
     o = n(298072),
     d = n(993408),
     c = n(623373),
-    I = n(331884);
-function f(e) {
+    f = n(331884);
+function I(e) {
     let t = (0, u.uM)(),
-        { analyticsLocations: n } = (0, a.Ay)(),
-        f = (0, o.Q)(e),
-        v = (0, I.o)(),
+        { analyticsLocations: n } = (0, s.Ay)(),
+        I = (0, o.Q)(e),
+        v = (0, f.o)(),
         p = (0, d.xM)(v),
-        g = r.useRef(null),
-        m = r.useRef(!1),
-        A = r.useRef(f);
+        m = r.useRef(null),
+        A = r.useRef(!1),
+        g = r.useRef(I);
     r.useEffect(() => {
-        A.current = f;
-    }, [f]);
-    let x = r.useCallback(() => {
+        g.current = I;
+    }, [I]);
+    let E = r.useCallback(() => {
             let r = (0, c.B1)(e);
-            (0, l.x)(
+            (0, a.x)(
                 {
                     name: i.ImpressionNames.SHOP_CARD,
                     type: i.ImpressionTypes.VIEW,
                     properties: {
-                        sku_id: r ? (e.variants[A.current]?.skuId ?? e.skuId) : e.skuId,
+                        sku_id: r ? (e.variants[g.current]?.skuId ?? e.skuId) : e.skuId,
                         card_id: t?.cardId,
                         shop_session_id: t?.sessionId,
                         position_in_section: t?.tilePosition,
@@ -41,22 +41,22 @@ function f(e) {
                 !0,
             );
         }, [e, t?.cardId, t?.sessionId, t?.tilePosition, n, p]),
-        _ = (0, s.K)((e) => {
+        h = (0, l.K)((e) => {
             e
-                ? m.current ||
-                  (null === g.current &&
-                      (g.current = setTimeout(() => {
-                          (x(), (m.current = !0), (g.current = null));
+                ? A.current ||
+                  (null === m.current &&
+                      (m.current = setTimeout(() => {
+                          (E(), (A.current = !0), (m.current = null));
                       }, 1e3)))
-                : ((m.current = !1), null !== g.current && (clearTimeout(g.current), (g.current = null)));
+                : ((A.current = !1), null !== m.current && (clearTimeout(m.current), (m.current = null)));
         }, 0.5);
     return (
         r.useEffect(
             () => () => {
-                null !== g.current && (clearTimeout(g.current), (g.current = null));
+                null !== m.current && (clearTimeout(m.current), (m.current = null));
             },
             [],
         ),
-        _
+        h
     );
 }

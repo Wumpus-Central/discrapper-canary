@@ -11,15 +11,15 @@ var r = n(582128),
 function f(e) {
     let { applicationId: t, analyticsLocations: n, runBeforeLaunchAttempt: f, runAfterLaunchAttempt: A } = e,
         { data: E } = (0, i.YY)(t),
-        T = (0, u.bG)([a.Ay], () => a.Ay.getCurrentEmbeddedActivity()),
-        _ = (0, u.bG)([s.A], () => s.A.getMainFrame());
+        _ = (0, u.bG)([a.Ay], () => a.Ay.getCurrentEmbeddedActivity()),
+        T = (0, u.bG)([s.A], () => s.A.getMainFrame());
     return r.useCallback(async () => {
         if (null == t || null == E) return;
-        let e = null != T && T.applicationId === t;
-        if (null != _ && _.applicationId === t)
-            return void o.A.updateFrameLayoutMode({ frameId: _.id, layoutMode: d.y0.FOCUSED });
+        let e = null != _ && _.applicationId === t;
+        if (null != T && T.applicationId === t)
+            return void o.A.updateFrameLayoutMode({ frameId: T.id, layoutMode: d.y0.FOCUSED });
         if (e) {
-            let e = T.location;
+            let e = _.location;
             (0, c.A)("guild_id" in e ? e.guild_id : null, e);
             return;
         }
@@ -28,5 +28,5 @@ function f(e) {
             await l.A.launch({ applicationId: t, analyticsLocations: n });
         } catch (e) {}
         A?.();
-    }, [n, E, t, T, _, A, f]);
+    }, [n, E, t, _, T, A, f]);
 }

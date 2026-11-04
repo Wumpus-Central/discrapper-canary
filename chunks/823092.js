@@ -1,23 +1,23 @@
-r.d(t, { L_: () => c, ms: () => u });
-var n = r(477900),
-    i = r(582128),
-    a = r(625494),
-    s = r(115063);
-r(46121);
-var l = r(652215);
+n.d(t, { L_: () => c, ms: () => u });
+var r = n(477900),
+    i = n(582128),
+    a = n(625494),
+    s = n(115063);
+n(46121);
+var l = n(652215);
 let o = i.createContext(void 0);
 function u(e) {
     let { children: t } = e,
-        r = i.useRef(1.4),
+        n = i.useRef(1.4),
         [u, c] = i.useState(!1),
         d = i.useCallback((e) => {
-            (c(e?.some((e) => e.showNotice() && !e.canCloseEarly?.()) ?? !1), (r.current = 1.4));
+            (c(e?.some((e) => e.showNotice() && !e.canCloseEarly?.()) ?? !1), (n.current = 1.4));
         }, []),
         C = i.useCallback(
             (e) => {
                 if (u) {
-                    ((0, s.fO)({ duration: 300, intensity: r.current }),
-                        (r.current = Math.min(r.current + 2, 15)),
+                    ((0, s.fO)({ duration: 300, intensity: n.current }),
+                        (n.current = Math.min(n.current + 2, 15)),
                         a._.dispatch(l.jej.EMPHASIZE_NOTICE));
                     return;
                 }
@@ -26,7 +26,7 @@ function u(e) {
             [u],
         ),
         O = i.useMemo(() => ({ navigateWithValidation: C, showNotice: u, handleStoreUpdate: d }), [C, u, d]);
-    return (0, n.jsx)(o.Provider, { value: O, children: t });
+    return (0, r.jsx)(o.Provider, { value: O, children: t });
 }
 function c() {
     let e = i.useContext(o);

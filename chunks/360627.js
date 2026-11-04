@@ -5,8 +5,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(17928),
     o = n(273875),
-    c = n(798618),
-    d = n(331322),
+    d = n(798618),
+    c = n(331322),
     u = n(834730),
     h = n(748562),
     p = n(661531),
@@ -22,7 +22,7 @@ var i = n(477900),
     N = n(531281);
 function v(e) {
     let { title: t, image: n } = e;
-    return (0, i.jsxs)(d.B, {
+    return (0, i.jsxs)(c.B, {
         direction: "horizontal",
         align: "center",
         gap: 8,
@@ -31,13 +31,13 @@ function v(e) {
         className: N.rv,
         children: [
             n,
-            (0, i.jsxs)(d.B, {
+            (0, i.jsxs)(c.B, {
                 gap: 0,
                 fullWidth: !1,
                 className: N.x8,
                 children: [
                     (0, i.jsx)(u.E, { variant: "body-md/medium", lineClamp: 1, className: N.x9, children: t }),
-                    (0, i.jsxs)(d.B, {
+                    (0, i.jsxs)(c.B, {
                         direction: "horizontal",
                         align: "center",
                         gap: 4,
@@ -62,7 +62,7 @@ function E(e) {
     return (0, i.jsx)(o.e.Provider, { value: s, children: a });
 }
 function b(e) {
-    let { title: t, image: n, shouldShow: a = !0, forceOpen: o = !1, spacing: d, className: h, children: p } = e,
+    let { title: t, image: n, shouldShow: a = !0, forceOpen: o = !1, spacing: c, className: h, children: p } = e,
         b = l.useId(),
         S = l.useRef(null),
         T = (0, r.bG)([C.A], () => C.A.theme),
@@ -74,14 +74,14 @@ function b(e) {
                 shouldShow: a && (_ || o),
                 position: "top",
                 align: "center",
-                spacing: d + 10,
+                spacing: c + 10,
                 animation: m.Y.Animation.FADE,
                 onRequestClose: () => R(!1),
                 renderPopout: (l) => {
-                    let { closePopout: a, setPopoutRef: r, position: o, nudge: d } = l;
+                    let { closePopout: a, setPopoutRef: r, position: o, nudge: c } = l;
                     return (0, i.jsx)(E, {
                         position: o ?? "top",
-                        nudge: d,
+                        nudge: c,
                         children: (0, i.jsx)(A.N, {
                             theme: T,
                             children: (l) =>
@@ -100,13 +100,13 @@ function b(e) {
                                           children: (0, i.jsxs)("div", {
                                               ref: r,
                                               className: s()(N.hB, l),
-                                              children: [(0, i.jsx)(c.F, {}), (0, i.jsx)(v, { title: t, image: n })],
+                                              children: [(0, i.jsx)(d.F, {}), (0, i.jsx)(v, { title: t, image: n })],
                                           }),
                                       })
                                     : (0, i.jsxs)("div", {
                                           ref: r,
                                           className: s()(N.hB, N.Kc, h, l),
-                                          children: [(0, i.jsx)(c.F, {}), (0, i.jsx)(v, { title: t, image: n })],
+                                          children: [(0, i.jsx)(d.F, {}), (0, i.jsx)(v, { title: t, image: n })],
                                       }),
                         }),
                     });

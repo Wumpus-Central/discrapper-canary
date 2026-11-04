@@ -5,8 +5,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(17928),
     o = n(554146),
-    c = n(939249),
-    d = n(834730),
+    d = n(939249),
+    c = n(834730),
     u = n(62010),
     h = n(687966),
     p = n(34188),
@@ -52,14 +52,14 @@ function D(e) {
         className: s()(t, w.kL),
         ref: n,
         children: [
-            (0, i.jsxs)(c.D, {
+            (0, i.jsxs)(d.D, {
                 className: w.BQ,
                 onClick: h,
                 "aria-expanded": p,
                 "aria-haspopup": m,
                 children: [
                     null != l && (0, i.jsx)("div", { className: s()(w.zc, { [w.RT]: a }), children: l }),
-                    (0, i.jsx)(d.E, { variant: "body-sm/normal", color: "text-strong", lineClamp: 1, children: r }),
+                    (0, i.jsx)(c.E, { variant: "body-sm/normal", color: "text-strong", lineClamp: 1, children: r }),
                 ],
             }),
             o && (0, i.jsx)(u.E, { type: "new", variant: "primary" }),
@@ -72,12 +72,12 @@ function V(e) {
         r = (0, v.A)({ gameId: l ?? void 0, source: I.GameProfileSources.VcHeaderActivity });
     if (null == r) return null;
     let o = a?.getIconURL(S.iu.MEDIUM),
-        c = (0, O.uJ)(o)
+        d = (0, O.uJ)(o)
             ? (0, i.jsx)(h.GameControllerIcon, { className: w.Kk })
             : (0, i.jsx)("img", { className: w.Kk, src: o, alt: "", "aria-hidden": !0 });
     return (0, i.jsx)(D, {
         className: s()(t, w.LM),
-        icon: c,
+        icon: d,
         isAppIcon: !(0, O.uJ)(o),
         text: M.intl.string(M.t.f7aVGn),
         onClick: r,
@@ -86,7 +86,7 @@ function V(e) {
 function G(e) {
     let t,
         { user: n, stream: a, channel: s } = e,
-        [c, d] = l.useState(!1),
+        [d, c] = l.useState(!1),
         u = (0, b.AO)(a),
         y = u?.id,
         j = (0, r.bG)([T.A], () => T.A.getDetectableIdsToApplicationIds()),
@@ -108,7 +108,7 @@ function G(e) {
         { hasAlreadyLinked: q, canStartAuthorization: Z, fetched: Q } = (0, g.RD)(H === n.id ? G : null),
         J = H === n.id && Z && !Q,
         ee = l.useCallback(() => {
-            d(!1);
+            c(!1);
         }, []),
         et = l.useCallback(() => {
             X(P.i.USER_DISMISS);
@@ -126,8 +126,8 @@ function G(e) {
             isAppIcon: es,
             icon: er,
             text: eo,
-            renderPopout: ec,
-            positionKey: ed,
+            renderPopout: ed,
+            positionKey: ec,
         } = l.useMemo(() => {
             if (!E && (null == v || null == I)) return { isAppIcon: !1 };
             if (ei && null != O) {
@@ -174,23 +174,23 @@ function G(e) {
                 positionKey: "feature-card-version",
             };
         }, [E, ei, O, G, v, I, H, n.id, s, ee, K, et, el, ea]);
-    return k || J || (null == ec && !E)
+    return k || J || (null == ed && !E)
         ? null
         : (0, i.jsx)(A.N, {
               theme: L.NJ.DARK,
               children: (e) =>
-                  null == ec
+                  null == ed
                       ? (0, i.jsx)(V, { className: e, applicationId: y })
                       : (0, i.jsx)(f.Y, {
                             targetElementRef: W,
-                            shouldShow: c,
+                            shouldShow: d,
                             animation: f.Y.Animation.FADE,
                             position: "bottom",
-                            positionKey: ed,
+                            positionKey: ec,
                             align: "center",
                             spacing: 8,
                             onRequestClose: ee,
-                            renderPopout: () => ec(e),
+                            renderPopout: () => ed(e),
                             children: () =>
                                 (0, i.jsx)(D, {
                                     className: e,
@@ -200,9 +200,9 @@ function G(e) {
                                     text: eo,
                                     showBadge: Y,
                                     onClick: () => {
-                                        ($(P.i.TAKE_ACTION), d((e) => !e));
+                                        ($(P.i.TAKE_ACTION), c((e) => !e));
                                     },
-                                    "aria-expanded": c,
+                                    "aria-expanded": d,
                                     "aria-haspopup": "dialog",
                                 }),
                         }),

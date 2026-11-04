@@ -6,8 +6,8 @@ var l = n(17928),
     s = n(534514),
     r = n(831544),
     o = n(834730),
-    c = n(177953),
-    d = n(367513),
+    d = n(177953),
+    c = n(367513),
     u = n(793574),
     h = n(688810),
     p = n(198052),
@@ -31,7 +31,7 @@ function R(e) {
     let { channel: t, inCall: n, hasConnectPermission: l, hasSpeakers: a, children: r } = e,
         { isOnStartStageScreen: o } = (0, I.Ay)();
     (0, I.vI)(t);
-    let c = (0, x.E5)(t.id, C.ip.SPEAKER);
+    let d = (0, x.E5)(t.id, C.ip.SPEAKER);
     return o
         ? (0, i.jsx)(E.A, {
               channel: t,
@@ -53,7 +53,7 @@ function R(e) {
                         }),
                     ],
                 })
-          : (0, i.jsx)(N.A, { participants: c, channel: t, hasConnectPermission: l });
+          : (0, i.jsx)(N.A, { participants: d, channel: t, hasConnectPermission: l });
 }
 function O(e) {
     let { channel: t } = e,
@@ -77,7 +77,7 @@ function L(e) {
                 color: "text-muted",
                 children: S.intl.format(S.t.chmM9N, { count: n }),
             }),
-            (0, i.jsx)(c.n, { size: "xs", color: a.A.colors.TEXT_MUTED }),
+            (0, i.jsx)(d.n, { size: "xs", color: a.A.colors.TEXT_MUTED }),
             (0, i.jsx)(o.E, {
                 variant: "body-sm/normal",
                 color: "text-muted",
@@ -108,7 +108,7 @@ function M(e) {
                 return (0, i.jsxs)("div", {
                     className: T.Sl,
                     children: [
-                        (0, i.jsx)(c.n, { className: t, color: "currentColor" }),
+                        (0, i.jsx)(d.n, { className: t, color: "currentColor" }),
                         A > 0
                             ? (0, i.jsx)(o.E, {
                                   className: T.gC,
@@ -121,7 +121,7 @@ function M(e) {
                 });
             },
             onClick: () => {
-                ((0, m.XJ)(a, m.OP.OPEN_REQUEST_TO_SPEAK_SIDEBAR, !s), d.A.updateStageAudienceSidebarOpen(t.id, !s));
+                ((0, m.XJ)(a, m.OP.OPEN_REQUEST_TO_SPEAK_SIDEBAR, !s), c.A.updateStageAudienceSidebarOpen(t.id, !s));
             },
         })
     );

@@ -327,7 +327,7 @@ let eq = new I.A("MediaEngineStore"),
     e1 = 2 * ew.A.Millis.SECOND,
     e2 = 30 * ew.A.Millis.SECOND,
     e3 = "https://ciscobinary.openh264.org/libopenh264-2.7.0-linux64.8.so.bz2",
-    e5 = 0;
+    e6 = 0;
 var e4 =
     (((h = {}).WEBCAM = "WEBCAM"),
     (h.INTEGRATED = "INTEGRATED"),
@@ -335,7 +335,7 @@ var e4 =
     (h.AIRPLAY = "AIRPLAY"),
     (h.HEADSET = "HEADSET"),
     h);
-function e6() {
+function e5() {
     return {
         mode: ey.TBI.VOICE_ACTIVITY,
         modeOptions: {
@@ -503,14 +503,14 @@ async function t3() {
         return !1;
     }
 }
-function t5() {
+function t6() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ez.x.DEFAULT,
         t = tt[e];
-    return (null == t && ((t = e6()), (tt[e] = t)), t);
+    return (null == t && ((t = e5()), (tt[e] = t)), t);
 }
 function t4() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ez.x.DEFAULT,
-        t = t5(e);
+        t = t6(e);
     if (e === ez.x.STREAM)
         return {
             ...t,
@@ -530,7 +530,7 @@ function t4() {
         { ...t, ...n, ...i, modeOptions: r }
     );
 }
-function t6(e) {
+function t5(e) {
     let t = t4(e.context),
         n = t.mode;
     (e.context === ez.x.DEFAULT && (0, ec.N)(e9, !1, !1),
@@ -797,7 +797,7 @@ function n_() {
 function nE(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ez.x.DEFAULT,
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        i = t5(t);
+        i = t6(t);
     return (Object.assign(i, e), !__OVERLAY__ && n && b.w.set(eZ, tt), i);
 }
 function nA() {
@@ -1114,7 +1114,7 @@ class nk extends y.Ay.Store {
             }),
             e9.on(D.bg.Connection, (e) => {
                 let t;
-                (nb(), t6(e), t8(e), no(e));
+                (nb(), t5(e), t8(e), no(e));
                 let n = t4();
                 (e.setAttenuation(n.attenuation, n.attenuateWhileSpeakingSelf, n.attenuateWhileSpeakingOthers),
                     e.setQoS(n.qos),
@@ -1368,7 +1368,7 @@ class nk extends y.Ay.Store {
                         return {
                             stats: t,
                             mediaEngineConnectionId: n.mediaEngineConnectionId,
-                            version: e5++,
+                            version: e6++,
                             context: n.context,
                         };
                     }),
@@ -1401,7 +1401,7 @@ class nk extends y.Ay.Store {
             null != (e = b.w.get("audio")) && (b.w.set(eZ, { [ez.x.DEFAULT]: e }), b.w.remove("audio")),
             (tt = b.w.get(eZ) ?? {}),
             N().each(tt, (e) => {
-                (N().defaultsDeep(e, e6()),
+                (N().defaultsDeep(e, e5()),
                     null != e.modeOptions &&
                         "string" == typeof e.modeOptions.shortcut &&
                         (e.modeOptions.shortcut = (0, ex.OH)(e.modeOptions.shortcut)),
@@ -2107,7 +2107,7 @@ let nB = (i = new nk(P.h, {
     },
     AUDIO_SET_MODE: function (e) {
         let { context: t, mode: n, options: i } = e;
-        (nE({ mode: n, modeOptions: { ...i, updatedAt: Date.now() } }, t), e9.eachConnection(t6));
+        (nE({ mode: n, modeOptions: { ...i, updatedAt: Date.now() } }, t), e9.eachConnection(t5));
     },
     AUDIO_SET_INPUT_VOLUME: function (e) {
         let { volume: t } = e;
@@ -2139,7 +2139,7 @@ let nB = (i = new nk(P.h, {
         nE({ activeInputProfile: t });
         let n = t4();
         (e9.eachConnection((e) => {
-            (t6(e), no(e));
+            (t5(e), no(e));
         }),
             e9.setAudioInputBypassSystemProcessing(n.bypassSystemInputProcessing),
             nb());
@@ -2404,7 +2404,7 @@ let nB = (i = new nk(P.h, {
         let { overrides: t } = e;
         if (__OVERLAY__) return !1;
         ((tt = Object.values(ez.x).reduce((e, n) => {
-            let i = e6();
+            let i = e5();
             return ((e[n] = N().merge(i, t[n])), e);
         }, {})),
             b.w.set(eZ, tt),
@@ -2425,7 +2425,7 @@ let nB = (i = new nk(P.h, {
     MEDIA_ENGINE_VOICE_ACTIVITY_DETECTION_ERROR: function (e) {
         return (
             e.code === ez.CO.KRISP_VAD_CPU_OVERUSE &&
-            ((t1.modeOptions = { vadUseKrisp: !1 }), e9.eachConnection((e) => t6(e)), !0)
+            ((t1.modeOptions = { vadUseKrisp: !1 }), e9.eachConnection((e) => t5(e)), !0)
         );
     },
     MEDIA_ENGINE_NOISE_CANCELLATION_ERROR_RESET: function () {

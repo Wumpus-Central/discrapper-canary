@@ -5,8 +5,8 @@ var i = n(477900),
     s = n(866665),
     r = n(939249),
     o = n(90804),
-    c = n(734057),
-    d = n(309010),
+    d = n(734057),
+    c = n(309010),
     u = n(446243),
     h = n(538638),
     p = n(558076),
@@ -55,13 +55,13 @@ function C() {
 }
 function y(e) {
     let { channelId: t, x: n, y, label: j, roomWidth: I, seat: N } = e,
-        v = (0, a.bG)([d.Ay], () => d.Ay.getVoiceChannelId() === t),
+        v = (0, a.bG)([c.Ay], () => c.Ay.getVoiceChannelId() === t),
         E = (0, a.bG)([p.A], () =>
             p.A.getRoomUsers(t)
                 .values()
                 .some((e) => e.seat === N || (e.position?.x === n && e.position?.y === y)),
         ),
-        b = (0, a.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
+        b = (0, a.bG)([d.A], () => d.A.getChannel(t)?.guild_id),
         S = l.useCallback(async () => {
             null != b &&
                 (v

@@ -5,8 +5,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(17928),
     o = n(778712),
-    c = n(834730),
-    d = n(548411),
+    d = n(834730),
+    c = n(548411),
     u = n(866665),
     h = n(939249),
     p = n(192308),
@@ -60,7 +60,7 @@ function en(e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(f.A, { className: ee.my, size: o._3.SIZE_24, user: t, animate: !1 }),
-                  (0, i.jsx)(c.E, { variant: "body-md/medium", color: a, lineClamp: 1, children: s }),
+                  (0, i.jsx)(d.E, { variant: "body-md/medium", color: a, lineClamp: 1, children: s }),
               ],
           });
 }
@@ -88,7 +88,7 @@ function ei(e) {
                                   })
                                 : void 0,
                     }),
-                    (0, i.jsx)(c.E, {
+                    (0, i.jsx)(d.E, {
                         className: ee.W$,
                         variant: "body-md/normal",
                         color: "none",
@@ -130,14 +130,14 @@ function el(e) {
         ea = t.isGuildStageVoice(),
         es = (0, F.nd)(t),
         er = en ? Q.intl.string(J.default.f7g0DK) : b ? `${el} \xb7 ${Q.intl.string(J.default.wRLmM0)}` : (es ?? el),
-        eo = en ? d.Z : (0, I.gU)(t),
-        [ec] = (0, C.A)(P?.type === Z.lp.ACTIVITY ? [P.applicationId] : []),
-        ed = Q.intl.string(Q.t.BVZqJl);
+        eo = en ? c.Z : (0, I.gU)(t),
+        [ed] = (0, C.A)(P?.type === Z.lp.ACTIVITY ? [P.applicationId] : []),
+        ec = Q.intl.string(Q.t.BVZqJl);
     ea
-        ? (ed = Q.intl.string(Q.t.EErMzA))
+        ? (ec = Q.intl.string(Q.t.EErMzA))
         : t.isDM()
-          ? (ed = Q.intl.string(Q.t.jN2DfZ))
-          : t.isGroupDM() && (ed = Q.intl.string(Q.t["e5y+gm"]));
+          ? (ec = Q.intl.string(Q.t.jN2DfZ))
+          : t.isGroupDM() && (ec = Q.intl.string(Q.t["e5y+gm"]));
     let eu = (0, S.G)((0, j.l)(t)),
         eh = t.isGuildVoice() && f && null != eu && eu.length > 0,
         ep = (0, K.Ay)(t),
@@ -162,7 +162,7 @@ function el(e) {
                                     );
                                 }
                               : void 0,
-                          children: (0, i.jsx)(c.E, {
+                          children: (0, i.jsx)(d.E, {
                               variant: "body-xs/normal",
                               className: s()(ee.Gh, et.PT),
                               children: G.A.parseVoiceChannelStatus(eu, !0, { channelId: t.id }),
@@ -201,7 +201,7 @@ function el(e) {
                     isChatOpen: g,
                     isStageAudienceSidebarOpen: N,
                     exitFullScreen: v,
-                    focusedApplication: ec,
+                    focusedApplication: ed,
                     shouldShowHeaderParticipants: !0,
                     guildRoomVisible: b,
                     guildRoomVideoOverlayVisible: D,
@@ -215,7 +215,7 @@ function el(e) {
                                 null != eo
                                     ? (0, i.jsx)(w.Ay.ChannelIcon, {
                                           icon: eo,
-                                          "aria-label": ed,
+                                          "aria-label": ec,
                                           color: en ? "white" : void 0,
                                       })
                                     : null,
@@ -243,7 +243,7 @@ function el(e) {
                           })
                         : null,
                     (0, i.jsx)(V.i$, { channel: t, guild: a }),
-                    (0, i.jsx)(ei, { focusedApplication: ec, focusedParticipant: P, channel: t }),
+                    (0, i.jsx)(ei, { focusedApplication: ed, focusedParticipant: P, channel: t }),
                 ],
             }),
             ea && (0, i.jsx)(z.A, { channel: t }),

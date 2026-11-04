@@ -5,8 +5,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(494012),
     o = n(17928),
-    c = n(323073),
-    d = n(616356),
+    d = n(323073),
+    c = n(616356),
     u = n(280450),
     h = n(544299),
     p = n(861094),
@@ -64,10 +64,10 @@ function C(e) {
         { ref: N, width: v, height: E } = (0, r.Ay)(),
         b = l.useMemo(() => (null == v || null == E ? null : (0, p.t)(I, v, E, x)), [I, v, E]),
         S = Math.min(48, Math.max(20, 0.025 * a)),
-        T = (0, o.yK)([d.A, u.default], () => {
-            if ((0, c.F2)(t)) return [];
+        T = (0, o.yK)([c.A, u.default], () => {
+            if ((0, d.F2)(t)) return [];
             let e = u.default.getId();
-            return d.A.getAllApplicationStreamsForChannel(t).sort(
+            return c.A.getAllApplicationStreamsForChannel(t).sort(
                 (t, n) => Number(t.ownerId === e) - Number(n.ownerId === e),
             );
         }),

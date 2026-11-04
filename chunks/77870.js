@@ -59,8 +59,8 @@ var r,
     A = n(114046);
 n(731355);
 var E = n(517846),
-    T = n(118751),
-    _ = n(462887),
+    _ = n(118751),
+    T = n(462887),
     I = n(17928),
     C = n(736653),
     p = n(787389),
@@ -167,7 +167,7 @@ function ea(e, t, n, r) {
         A = e6(e, f),
         E = e6(t, f);
     if (o) {
-        var T, _, I;
+        var _, T, I;
         let u,
             l,
             { questHomeHero: i, isQuestHomeHeroShelfEnabled: o } = n;
@@ -188,15 +188,15 @@ function ea(e, t, n, r) {
                 ? c
                     ? eo
                     : 1
-                : ((T = e),
-                  (_ = t),
-                  (u = (I = r).get(T.id)),
-                  (l = I.get(_.id)),
+                : ((_ = e),
+                  (T = t),
+                  (u = (I = r).get(_.id)),
+                  (l = I.get(T.id)),
                   null != u && null != l
                       ? u !== l
                           ? u - l
-                          : T.id !== _.id
-                            ? T.id < _.id
+                          : _.id !== T.id
+                            ? _.id < T.id
                                 ? eo
                                 : 1
                             : 0
@@ -204,7 +204,7 @@ function ea(e, t, n, r) {
                         ? eo
                         : null != l
                           ? 1
-                          : eC(T.config.expiresAt, _.config.expiresAt, 1));
+                          : eC(_.config.expiresAt, T.config.expiresAt, 1));
     }
     return s !== a ? (s ? eo : 1) : c !== d ? (c ? eo : 1) : eC(e.config.expiresAt, t.config.expiresAt, 0);
 }
@@ -249,8 +249,8 @@ function eE(e, t) {
             return !1;
     }
 }
-let eT = 221552 == n.j ? {} : null,
-    e_ =
+let e_ = 221552 == n.j ? {} : null,
+    eT =
         221552 == n.j
             ? {
                   questHomeHero: null,
@@ -262,8 +262,8 @@ let eT = 221552 == n.j ? {} : null,
             : null;
 function eI(e) {
     var t;
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : eT,
-        r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e_,
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e_,
+        r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : eT,
         { sortMethod: u, filters: l } = n,
         i =
             null == l || 0 === l.length
@@ -340,15 +340,15 @@ function eO(e) {
         o,
         s,
         a,
-        c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : eT,
+        c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e_,
         {
             quests: d,
             excludedQuests: f,
             isFetchingCurrentQuests: A,
             hasFetched: E,
         } = es({ fetchPolicy: "cache-and-network", callerSource: "use_filtered_quests" }),
-        T = new Map(d.map((e) => [e.id, e])),
-        _ =
+        _ = new Map(d.map((e) => [e.id, e])),
+        T =
             ((t = (function () {
                 let e = (0, I.bG)([S.A], () => S.A.getQuestHomeHero()),
                     { isShelfEnabled: t } = e8(e),
@@ -418,8 +418,8 @@ function eO(e) {
                 return ((a.current = e), e);
             }, [s])),
         p = [];
-    for (let t of "all" === e ? _ : C) {
-        let n = T.get(t),
+    for (let t of "all" === e ? T : C) {
+        let n = _.get(t),
             r = null != n && "all" === e && c.removeExpiredQuests && (0, j.Ic)(n) && !(0, Y.GR)(n.userStatus);
         null == n || r || p.push(n);
     }
@@ -639,7 +639,7 @@ function eV(e) {
         u = eU(e),
         l = null != u ? u.percentComplete : r,
         i = 100 * l,
-        o = null == u || t ? (0, T.l9)(n, l, { roundingMode: "floor" }) : `${u?.progress}/${u?.target}`;
+        o = null == u || t ? (0, _.l9)(n, l, { roundingMode: "floor" }) : `${u?.progress}/${u?.target}`;
     return { completedRatio: l, percentComplete: i, completedRatioDisplay: o };
 }
 function eW(e) {
@@ -762,7 +762,7 @@ function e$(e, t) {
         r = (0, C.Ay)();
     return i.useMemo(() => {
         if (null == n) return null;
-        let e = t ?? ((0, _.M)(r) ? eu.NJ8.DARK : eu.NJ8.LIGHT);
+        let e = t ?? ((0, T.M)(r) ? eu.NJ8.DARK : eu.NJ8.LIGHT);
         return (0, B.tW)(n, B.fY.COSPONSOR_LOGO_TYPE, e);
     }, [r, t, n]);
 }

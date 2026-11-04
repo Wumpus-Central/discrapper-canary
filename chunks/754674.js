@@ -17,23 +17,23 @@ function r(e) {
             .sort(l),
     ];
 }
-function a(e) {
+function i(e) {
     return e.flatMap((e, t) =>
         e.map((e, n) =>
             e.position.column === t && e.position.order === n ? e : { ...e, position: { column: t, order: n } },
         ),
     );
 }
-function i(e) {
-    return a(r(e));
+function a(e) {
+    return i(r(e));
 }
 function s(e, t, n) {
     let l = r(e),
-        i = l[+(n?.column === 1)],
-        s = n?.index ?? i.length;
-    return (i.splice(Math.max(0, Math.min(s, i.length)), 0, t), a(l));
+        a = l[+(n?.column === 1)],
+        s = n?.index ?? a.length;
+    return (a.splice(Math.max(0, Math.min(s, a.length)), 0, t), i(l));
 }
-function u(e, t, n, l) {
+function o(e, t, n, l) {
     let r =
             null == l
                 ? e
@@ -41,7 +41,7 @@ function u(e, t, n, l) {
                       let { id: t } = e;
                       return t !== l;
                   }),
-        a = (
+        i = (
             null == l
                 ? t
                 : t.filter((e) => {
@@ -49,21 +49,21 @@ function u(e, t, n, l) {
                       return t !== l;
                   })
         )[n];
-    if (null == a) return r.length;
-    let i = r.findIndex((e) => {
+    if (null == i) return r.length;
+    let a = r.findIndex((e) => {
         let { id: t } = e;
-        return t === a.id;
+        return t === i.id;
     });
-    return -1 === i ? r.length : i;
+    return -1 === a ? r.length : a;
 }
-function o(e, t, n, l) {
-    let i = e.find((e) => {
+function u(e, t, n, l) {
+    let a = e.find((e) => {
         let { id: n } = e;
         return n === t;
     });
-    if (null == i) return null;
+    if (null == a) return null;
     let s = r(e),
-        u = [
+        o = [
             s[0].filter((e) => {
                 let { id: n } = e;
                 return n !== t;
@@ -73,7 +73,7 @@ function o(e, t, n, l) {
                 return n !== t;
             }),
         ],
-        o = u[+(1 === n)];
-    return (o.splice(Math.max(0, Math.min(l, o.length)), 0, i), a(u));
+        u = o[+(1 === n)];
+    return (u.splice(Math.max(0, Math.min(l, u.length)), 0, a), i(o));
 }
-n.d(t, { Gm: () => o, O6: () => u, QD: () => s, Rl: () => r, W$: () => i });
+n.d(t, { Gm: () => u, O6: () => o, QD: () => s, Rl: () => r, W$: () => a });

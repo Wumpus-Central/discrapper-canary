@@ -5,8 +5,8 @@ var i = n(477900),
     s = n(834730),
     r = n(821609),
     o = n(730852),
-    c = n(164617),
-    d = n(47167),
+    d = n(164617),
+    c = n(47167),
     u = n(202384),
     h = n(51758),
     p = n(478752),
@@ -24,7 +24,7 @@ let y = function (e) {
             I ? (0, u.Ze)(n.guild_id, () => o.default.selectVoiceChannel(n.id)) : o.default.selectVoiceChannel(n.id);
         }, [n.id, n.guild_id, I]),
         v = 4 === j.length ? 2 : 3,
-        E = (0, d.Ay)(n),
+        E = (0, c.Ay)(n),
         b = (0, p.R)("ChannelCallEmpty");
     return (0, i.jsxs)("div", {
         className: C.kL,
@@ -44,7 +44,7 @@ let y = function (e) {
                                 className: C.Vs,
                                 inCall: !0,
                                 noVideoRender: !0,
-                                popoutType: c.N.NO_POPOUT,
+                                popoutType: d.N.NO_POPOUT,
                                 width: 48,
                             },
                             e.id,

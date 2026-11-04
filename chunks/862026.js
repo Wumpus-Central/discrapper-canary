@@ -24,11 +24,11 @@ function f(e, t) {
             note: null,
             action: null,
         };
-    let v = "failed" === u || b?.ok === !1;
+    let y = "failed" === u || b?.ok === !1;
     return {
         label: c.intl.string(d.default.iBrh0c),
         body: c.intl.string(d.default.sRY8wn),
-        note: "busy" === u ? c.intl.string(d.default.QoixaY) : v ? c.intl.string(d.default["9fvHNe"]) : null,
+        note: "busy" === u ? c.intl.string(d.default.QoixaY) : y ? c.intl.string(d.default["9fvHNe"]) : null,
         action:
             "expired" === s
                 ? null

@@ -6,8 +6,8 @@ var l = n(503698),
     s = n(29540),
     r = n(481901),
     o = n(323384),
-    c = n(204651),
-    d = n(418241),
+    d = n(204651),
+    c = n(418241),
     u = n(708416),
     h = n(885031),
     p = n(105292),
@@ -21,9 +21,9 @@ function f(e) {
         C = p.intl.string(g ? x : h.default.ZtYyOx);
     return (0, i.jsx)("div", {
         className: a()(l, A.A),
-        children: (0, i.jsx)(c.A, {
+        children: (0, i.jsx)(d.A, {
             iconComponent: g ? (n ? s.u : r.d) : o.k,
-            onClick: () => (0, d.s)(f),
+            onClick: () => (0, c.s)(f),
             className: A.u,
             label: C,
         }),

@@ -21,9 +21,9 @@ var l = n(477900),
     _ = n(607399),
     y = n(821609),
     T = n(331322),
-    b = n(534514),
-    N = n(834730),
-    j = n(700525),
+    N = n(534514),
+    j = n(834730),
+    b = n(700525),
     I = n(975571),
     S = n(652215),
     R = n(105292),
@@ -36,7 +36,7 @@ class w extends i.PureComponent {
         return (0, l.jsx)(l.Fragment, {
             children: e.map((e) =>
                 e === S.Fz7.CAPTCHA
-                    ? (0, l.jsx)(j.A, { onVerify: i, theme: n }, t)
+                    ? (0, l.jsx)(b.A, { onVerify: i, theme: n }, t)
                     : (0, l.jsx)(y.$, { onClick: () => this.handleClick(e), text: x.A.getButtonTitle(e) }, e),
             ),
         });
@@ -71,11 +71,11 @@ class w extends i.PureComponent {
                                     direction: "vertical",
                                     justify: "center",
                                     children: [
-                                        (0, l.jsx)(b.D, {
+                                        (0, l.jsx)(N.D, {
                                             variant: "heading-xl/medium",
                                             children: R.intl.string(R.t.Iz0kDg),
                                         }),
-                                        (0, l.jsx)(N.E, {
+                                        (0, l.jsx)(j.E, {
                                             variant: "body-md/normal",
                                             children: R.intl.format(R.t["0rqMV5"], { helpCenterURL: O }),
                                         }),
@@ -98,7 +98,7 @@ class w extends i.PureComponent {
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, l.jsx)(N.E, {
+                        (0, l.jsx)(j.E, {
                             variant: "body-sm/normal",
                             className: M.qr,
                             children: R.intl.string(R.t.qqYun3),
@@ -109,13 +109,13 @@ class w extends i.PureComponent {
                             direction: "horizontal",
                             justify: "center",
                             children: [
-                                (0, l.jsx)(N.E, {
+                                (0, l.jsx)(j.E, {
                                     variant: "body-sm/semibold",
                                     className: M.qr,
                                     children: R.intl.format(R.t.WL51ZR, { supportURL: I.A.getSubmitRequestURL() }),
                                 }),
                                 (0, l.jsx)("div", { className: C()(M.qr, M.mf), children: "\u2022" }),
-                                (0, l.jsx)(N.E, {
+                                (0, l.jsx)(j.E, {
                                     variant: "body-sm/semibold",
                                     className: M.qr,
                                     children: R.intl.format(R.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),

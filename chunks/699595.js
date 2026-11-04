@@ -9,13 +9,13 @@ function u(e) {
     let t,
         { priceOptions: n, trialId: u, metadata: c, discountInvoicePreview: d } = e,
         { isEligibleForDiscount: m, discountOffer: p } = (0, o.i)(),
-        C = (0, a.YJ)(p),
-        h = !0 === n.loaded,
+        h = (0, a.YJ)(p),
+        C = !0 === n.loaded,
         f = null != d,
         [E, S] = (0, i.YV)({
-            items: null != C ? [{ planId: C, quantity: 1 }] : [],
+            items: null != h ? [{ planId: h, quantity: 1 }] : [],
             renewal: !1,
-            preventFetch: f || !m || null == C || !h,
+            preventFetch: f || !m || null == h || !C,
             trialId: u,
             paymentSourceId: n.paymentSourceId,
             currency: n.currency,
@@ -26,12 +26,12 @@ function u(e) {
             let e = m ? (g ?? null) : null;
             return {
                 discountOffer: p,
-                applicablePlan: C,
+                applicablePlan: h,
                 discountInvoicePreview: e,
-                discountAmountOff: null != C ? (0, a.pg)(e, C) : null,
+                discountAmountOff: null != h ? (0, a.pg)(e, h) : null,
                 discountInvoiceError: S,
             };
-        }, [p, C, g, S, m]);
+        }, [p, h, g, S, m]);
     return (
         (t = (0, s.t4)((e) => {
             let { setPremiumDiscountInfo: t } = e;

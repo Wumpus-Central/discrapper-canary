@@ -5,8 +5,8 @@ var i = n(477900),
     s = n(453903),
     r = n(265872),
     o = n(355622),
-    c = n(151271),
-    d = n(734057),
+    d = n(151271),
+    c = n(734057),
     u = n(446243),
     h = n(781137),
     p = n(495095),
@@ -17,8 +17,8 @@ function A(e, t) {
 function f(e) {
     let { channelId: t, position: n, roomWidth: o } = e,
         f = (0, l.useRef)(null),
-        g = (0, a.bG)([d.A], () => d.A.getChannel(t)),
-        x = (0, c.RQ)((e) => A(e, t)),
+        g = (0, a.bG)([c.A], () => c.A.getChannel(t)),
+        x = (0, d.RQ)((e) => A(e, t)),
         C = (0, l.useRef)(null),
         y = (0, l.useRef)(!1);
     return ((0, l.useEffect)(() => {
@@ -31,7 +31,7 @@ function f(e) {
                 }
             );
         function n() {
-            y.current = A(c.RQ.getState(), t);
+            y.current = A(d.RQ.getState(), t);
         }
     }, [t]),
     null == g)

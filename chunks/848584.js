@@ -1,4 +1,4 @@
-n.d(t, { Qf: () => h, Vm: () => g });
+n.d(t, { Qf: () => y, Vm: () => g });
 var r = n(477900),
     i = n(582128),
     a = n(503698),
@@ -9,8 +9,8 @@ var r = n(477900),
     c = n(580630),
     d = n(725836),
     m = n(777485),
-    f = n(758476),
-    p = n(105292),
+    p = n(758476),
+    f = n(105292),
     v = n(801067);
 function g(e) {
     let t = (0, d.I6)(),
@@ -53,7 +53,7 @@ function b(e) {
             defaultExpanded: u = !1,
         } = e,
         d = n.length > 0,
-        { hasAdjustments: f, totalAdjustmentsOrSavings: p } = i.useMemo(
+        { hasAdjustments: p, totalAdjustmentsOrSavings: f } = i.useMemo(
             () => ({
                 hasAdjustments: n.some(
                     (e) => "adjustment" === e.lineItemType || ("string" == typeof e.id && e.id.includes("adjustment")),
@@ -83,10 +83,10 @@ function b(e) {
         collapsedContent:
             null != s
                 ? (0, r.jsx)(o.E, { variant: "body-md/medium", color: "text-feedback-positive", children: s })
-                : (0, r.jsx)(I, {
-                      amount: p < 0 ? Math.abs(p) : null,
+                : (0, r.jsx)(h, {
+                      amount: f < 0 ? Math.abs(f) : null,
                       currency: l,
-                      labelType: f ? "adjustments" : "savings",
+                      labelType: p ? "adjustments" : "savings",
                   }),
         children: a.map((e) => {
             let { id: t, label: n, amount: i, ...a } = e,
@@ -99,17 +99,17 @@ function b(e) {
         }),
     });
 }
-function I(e) {
+function h(e) {
     let { amount: t, currency: n, labelType: i } = e;
     if (0 === t || null == t) return null;
     let a = (0, c.$g)(t, n);
     return (0, r.jsx)(o.E, {
         variant: "body-md/medium",
         color: "text-feedback-positive",
-        children: p.intl.format("adjustments" === i ? f.default["i3Q/6S"] : f.default.pDVleg, { amount: a }),
+        children: f.intl.format("adjustments" === i ? p.default["i3Q/6S"] : p.default.pDVleg, { amount: a }),
     });
 }
-function h(e) {
+function y(e) {
     let { label: t, value: n, className: a } = e,
         s = i.useId();
     return (0, r.jsxs)(o.E, {
@@ -119,7 +119,7 @@ function h(e) {
         role: "group",
         "aria-labelledby": s,
         children: [
-            (0, r.jsx)("span", { id: s, children: t ?? p.intl.string(f.default.Zxav97) }),
+            (0, r.jsx)("span", { id: s, children: t ?? f.intl.string(p.default.Zxav97) }),
             (0, r.jsx)("span", { children: n }),
         ],
     });

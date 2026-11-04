@@ -1116,9 +1116,9 @@ function e3(e, t, n, i) {
         r.ack({ messageId: n, local: i ?? !0, trackAnalytics: !1 }))
     );
 }
-let e5 = new Map(),
+let e6 = new Map(),
     e4 = new Map();
-function e6(e) {
+function e5(e) {
     let t = W.default.fromTimestamp(Date.now());
     return e.ack({ messageId: t, isExplicitUserAction: !0, trackAnalytics: !1, immediate: !0 });
 }
@@ -1408,7 +1408,7 @@ let e8 = new e7(_.h, {
             eG(t);
         },
         LOGOUT: function () {
-            (ej(), e5.clear(), e4.clear());
+            (ej(), e6.clear(), e4.clear());
         },
         OVERLAY_INITIALIZE: function (e) {
             let { readStates: t, selectedChannelId: n } = e;
@@ -1961,7 +1961,7 @@ let e8 = new e7(_.h, {
         },
         CONJURE_TURN_NOTIFICATION: function (e) {
             let { projectId: t, nonce: n } = e;
-            return (e5.set(t, Math.max(n, e5.get(t) ?? 0)), !1);
+            return (e6.set(t, Math.max(n, e6.get(t) ?? 0)), !1);
         },
         CONJURE_TURN_SETTLED: function (e) {
             let { projectId: t, entityId: n, badgeCount: i, nonce: r } = e,
@@ -1969,16 +1969,16 @@ let e8 = new e7(_.h, {
             ((a._persisted = !0),
                 (a.ackMessageId = n),
                 (a.mentionCount = i ?? a.mentionCount + 1),
-                null != r && r <= (e4.get(t) ?? 0) && e6(a));
+                null != r && r <= (e4.get(t) ?? 0) && e5(a));
         },
         CONJURE_PROJECT_ACK: function (e) {
             let { projectId: t } = e,
-                n = e5.get(t);
+                n = e6.get(t);
             null != n && e4.set(t, n);
             let i = ew.getIfExists(t, eo.P.CONJURING_PROJECT);
             if (null == i) return !1;
             let r = null == i.ackMessageId ? 0 : W.default.getNonTimestampBits(i.ackMessageId);
-            return (0 !== i.mentionCount || 0 !== r) && e6(i);
+            return (0 !== i.mentionCount || 0 !== r) && e5(i);
         },
         CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
             let { projectId: t } = e;

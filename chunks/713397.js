@@ -1,19 +1,19 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(477900),
     l = n(534514),
     a = n(821609),
     s = n(367513),
     r = n(715989),
     o = n(105292),
-    c = n(853325);
-function d(e) {
+    d = n(853325);
+function c(e) {
     let { channelId: t, allPoppedOut: n = !1 } = e;
     return (0, i.jsxs)("div", {
-        className: c.kL,
+        className: d.kL,
         children: [
             (0, i.jsx)(r.A, {}),
             (0, i.jsxs)("div", {
-                className: c.Qs,
+                className: d.Qs,
                 children: [
                     (0, i.jsx)(l.D, {
                         variant: "heading-lg/medium",

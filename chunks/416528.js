@@ -5,8 +5,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(17928),
     o = n(866665),
-    c = n(650809),
-    d = n(192308),
+    d = n(650809),
+    c = n(192308),
     u = n(265872),
     h = n(481901),
     p = n(29540),
@@ -116,10 +116,10 @@ function W(e) {
                 (0, i.jsx)(
                     T.A,
                     {
-                        iconComponent: c.PaintPaletteIcon,
+                        iconComponent: d.PaintPaletteIcon,
                         label: B.intl.string(B.t["ZrN+DT"]),
                         onClick: () => {
-                            (0, d.openModalLazy)(async () => {
+                            (0, c.openModalLazy)(async () => {
                                 let { default: e } = await Promise.all([n.e("768581"), n.e("244605")]).then(
                                     n.bind(n, 77580),
                                 );

@@ -23,8 +23,8 @@ var _ = n(806163),
     v = n(17928),
     b = n(196736),
     I = n(689175),
-    L = n(277984),
-    j = n(670735),
+    j = n(277984),
+    L = n(670735),
     N = n(790284),
     O = n(780964),
     T = n(766075),
@@ -355,8 +355,8 @@ var eS = n(408278),
     ev = n(281445),
     eb = n(390544),
     eI = n(554146),
-    eL = n(939249),
-    ej = n(509434),
+    ej = n(939249),
+    eL = n(509434),
     eN = n(866665),
     eO = n(103271);
 let eT = { TERTIARY: eO.Xe, SECONDARY: eO.Rm, PRIMARY: eO.zB },
@@ -378,7 +378,7 @@ function ey(e) {
         asContainer: !0,
         text: n,
         shouldShow: !d,
-        children: (0, s.jsx)(eL.D, {
+        children: (0, s.jsx)(ej.D, {
             innerRef: m,
             "aria-label": n,
             "aria-disabled": d,
@@ -552,8 +552,8 @@ let e1 = i.memo(function (e) {
             })({ server: t, source: "game-server-shop" });
         }, [t]),
         I = (0, eH.A)(t.instance.providerType, t.instance.gameServerPanelUrl) ?? e$.qb[f],
-        L = null != t.instance.gameServerPanelUrl,
-        j = null != t.instance.status && eX.includes(t.instance.status),
+        j = null != t.instance.gameServerPanelUrl,
+        L = null != t.instance.status && eX.includes(t.instance.status),
         N = i.useCallback(() => {
             (0, M.h)({ href: I });
         }, [I]),
@@ -579,10 +579,10 @@ let e1 = i.memo(function (e) {
                     return "\u2014";
             }
         }, [t.instance.status]),
-        T = t.isOnline ? "text-feedback-positive" : j ? "text-feedback-critical" : "text-muted",
+        T = t.isOnline ? "text-feedback-positive" : L ? "text-feedback-critical" : "text-muted",
         k = i.useMemo(
             () =>
-                (0, s.jsx)(eL.D, {
+                (0, s.jsx)(ej.D, {
                     className: o()(eq.wC, eq.QV),
                     onClick: A,
                     "aria-label": Y.intl.string(V.default["fQCcM/"]),
@@ -596,10 +596,10 @@ let e1 = i.memo(function (e) {
         ),
         G = i.useMemo(
             () =>
-                (0, s.jsxs)(eL.D, {
-                    className: o()(eq.wC, eq.y2, { [eq.Gz]: !L }),
-                    onClick: L ? _ : void 0,
-                    "aria-disabled": !L,
+                (0, s.jsxs)(ej.D, {
+                    className: o()(eq.wC, eq.y2, { [eq.Gz]: !j }),
+                    onClick: j ? _ : void 0,
+                    "aria-disabled": !j,
                     "aria-label": Y.intl.string(V.default.tkbVdf),
                     children: [
                         (0, s.jsx)(F.E, {
@@ -607,10 +607,10 @@ let e1 = i.memo(function (e) {
                             color: "none",
                             children: Y.intl.string(V.default.tkbVdf),
                         }),
-                        (0, s.jsx)(ej.I, { size: "custom", width: 16, height: 16, color: "currentColor" }),
+                        (0, s.jsx)(eL.I, { size: "custom", width: 16, height: 16, color: "currentColor" }),
                     ],
                 }),
-            [_, L],
+            [_, j],
         ),
         P = i.useMemo(() => {
             switch (t.instance.status) {
@@ -624,9 +624,9 @@ let e1 = i.memo(function (e) {
                             fullWidth: !0,
                             text: Y.intl.string(V.default.gWMqnI),
                             variant: "primary",
-                            icon: ej.I,
+                            icon: eL.I,
                             iconPosition: "end",
-                            disabled: !L,
+                            disabled: !j,
                             onClick: _,
                         }),
                     });
@@ -650,7 +650,7 @@ let e1 = i.memo(function (e) {
                 default:
                     return (0, s.jsxs)(s.Fragment, { children: [k, G] });
             }
-        }, [t.instance.status, t.id, L, k, G, _, N]);
+        }, [t.instance.status, t.id, j, k, G, _, N]);
     return (0, s.jsxs)("div", {
         id: eJ(t.id),
         className: o()(eq.Nr, { [eq.mr]: c }),
@@ -768,7 +768,7 @@ let e1 = i.memo(function (e) {
                                                               children: t.serverIp,
                                                           }),
                                                           "" !== t.serverIp &&
-                                                              (0, s.jsx)(eL.D, {
+                                                              (0, s.jsx)(ej.D, {
                                                                   className: eq.cL,
                                                                   onClick: C,
                                                                   "aria-label": Y.intl.string(Y.t.OpuAlK),
@@ -811,9 +811,9 @@ let e1 = i.memo(function (e) {
                                             (0, s.jsxs)("div", {
                                                 className: eq.Yb,
                                                 children: [
-                                                    (t.isOnline || j) &&
+                                                    (t.isOnline || L) &&
                                                         (0, s.jsx)("span", {
-                                                            className: o()(eq.kg, { [eq.rU]: j }),
+                                                            className: o()(eq.kg, { [eq.rU]: L }),
                                                             "aria-hidden": !0,
                                                         }),
                                                     (0, s.jsx)(F.E, {
@@ -997,7 +997,7 @@ var e8 = n(705285),
     te = n(111108);
 function tt(e) {
     let { isGameServerHostingInShopEnabled: t } = e;
-    return (0, s.jsx)(j.A, { children: (0, s.jsx)(tn, { isGameServerHostingInShopEnabled: t }) });
+    return (0, s.jsx)(L.A, { children: (0, s.jsx)(tn, { isGameServerHostingInShopEnabled: t }) });
 }
 function tn(e) {
     let { isGameServerHostingInShopEnabled: t } = e,
@@ -1008,7 +1008,7 @@ function tn(e) {
         c = (0, v.bG)([E.default], () => k.Ay.canUseShopDiscounts(E.default.getCurrentUser())),
         { games: d, hasError: u, isEmpty: m, isLoading: g, refetch: h } = (0, e4.Y)();
     i.useEffect(() => {
-        o && (0, L.hP)().catch(() => {});
+        o && (0, j.hP)().catch(() => {});
     }, [o]);
     let f = i.useRef(d);
     i.useEffect(() => {
@@ -1035,14 +1035,14 @@ function tn(e) {
             let e = a[0];
             null != e && A({ serverId: e.id });
         }, [a, A]),
-        j = (0, e7.O)((e) => e.highlightFirstCardNonce),
-        D = i.useRef(j);
+        L = (0, e7.O)((e) => e.highlightFirstCardNonce),
+        D = i.useRef(L);
     i.useEffect(() => {
-        if (j === D.current) return;
-        D.current = j;
+        if (L === D.current) return;
+        D.current = L;
         let e = requestAnimationFrame(() => b());
         return () => cancelAnimationFrame(e);
-    }, [j, b]);
+    }, [L, b]);
     let B = i.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e8.cl.SHOP_CARD;
@@ -1101,7 +1101,7 @@ function tn(e) {
                 let a = y.A.getSubscriptionById(t);
                 null != a
                     ? l(a)
-                    : (0, L.hP)()
+                    : (0, j.hP)()
                           .then(() => {
                               let e = y.A.getSubscriptionById(t);
                               null != e && l(e);
@@ -1206,8 +1206,8 @@ let tb = function () {
     });
 };
 var tI = n(905276),
-    tL = n(350172),
-    tj = n(730202),
+    tj = n(350172),
+    tL = n(730202),
     tN = n(510801),
     tO = n(998694);
 let tT = null,
@@ -1284,31 +1284,31 @@ function tk(e) {
                     }),
                     [t, n, l, a],
                 ),
-                r = (0, tL.H)(s),
-                o = (0, tL.q7)(s);
+                r = (0, tj.H)(s),
+                o = (0, tj.q7)(s);
             i.useEffect(() => {
-                (0, tL.cS)(s);
+                (0, tj.cS)(s);
             }, [s]);
             let {
                     collectionIds: c,
                     fetchState: d,
                     total: u,
                 } = (0, v.cf)(
-                    [tj.A],
+                    [tL.A],
                     () => ({
-                        collectionIds: tj.A.getCollectionPageIds(r),
-                        fetchState: tj.A.getCollectionPageFetchState(r),
-                        total: tj.A.getCollectionListTotal(o),
+                        collectionIds: tL.A.getCollectionPageIds(r),
+                        fetchState: tL.A.getCollectionPageFetchState(r),
+                        total: tL.A.getCollectionListTotal(o),
                     }),
                     [r, o],
                 ),
                 m = c ?? [],
                 g = m.join(","),
                 E = (0, v.cf)(
-                    [tj.A],
+                    [tL.A],
                     () => {
                         let e = {};
-                        for (let t of m) e[t] = tj.A.getCollection(t);
+                        for (let t of m) e[t] = tL.A.getCollection(t);
                         return e;
                     },
                     [m],
@@ -1691,7 +1691,7 @@ function na(e) {
             asContainer: !0,
             ariaHidden: !0,
             children: (0, s.jsx)(
-                eL.D,
+                ej.D,
                 {
                     className: o()(t9.n1, { [t9.lx]: a }),
                     style: { backgroundColor: t },
@@ -1796,7 +1796,7 @@ function ni(e) {
                 children: d.map((e) => {
                     let { name: a, icon: i, enum: c } = e;
                     return (0, s.jsxs)(
-                        eL.D,
+                        ej.D,
                         {
                             className: o()(t9.w4, { [t9.C7]: n.has(c) }),
                             "aria-label": a,
@@ -1905,10 +1905,10 @@ function nE(e) {
     }, [a, d, r, n]);
     let _ = i.useRef(null),
         { setQueryPageSize: v, setQueryPageOffset: b, queryPageSize: I } = (0, A.v)(),
-        [L, j] = i.useState(!1),
+        [j, L] = i.useState(!1),
         N = x || null == u;
     i.useEffect(() => {
-        N ? j(!1) : S > 0 && j(!0);
+        N ? L(!1) : S > 0 && L(!0);
     }, [N, S]);
     let O = I > 0 && !N && 0 === S;
     i.useEffect(() => {
@@ -1940,7 +1940,7 @@ function nE(e) {
                 children: [
                     O && (0, s.jsx)(nu, {}),
                     (0, s.jsxs)("div", {
-                        className: o()(nm.ZE, { [nm.Kp]: L }),
+                        className: o()(nm.ZE, { [nm.Kp]: j }),
                         ref: _,
                         children: [
                             N && [...Array(I)].map((e, t) => (0, s.jsx)(tS.A, {}, t)),
@@ -2270,8 +2270,8 @@ function nb(e) {
                 });
 }
 var nI = n(464066),
-    nL = n(235939),
-    nj = n(976860),
+    nj = n(235939),
+    nL = n(976860),
     nN = n(339821),
     nO = n(650583);
 function nT(e) {
@@ -2298,10 +2298,10 @@ let nR = function (e) {
             return {
                 onClose: i.useCallback(() => {
                     if (0 === l) {
-                        ((0, nj.aX)(), (0, T.openUserSettings)());
+                        ((0, nL.aX)(), (0, T.openUserSettings)());
                         return;
                     }
-                    (0, nj.EL)() ? (0, nj.aX)() : (0, nj.pX)(eW.BVt.APP);
+                    (0, nL.EL)() ? (0, nL.aX)() : (0, nL.pX)(eW.BVt.APP);
                 }, [l]),
                 source: l,
                 ...t,
@@ -2310,14 +2310,14 @@ let nR = function (e) {
         { currentTab: d, hasFilters: v } = (0, A.v)(),
         b = i.useMemo(() => (t === e9.G2.HOME && null != d && v() ? d : t), [t, d, v]);
     (0, p.Wg)();
-    let [I, L] = i.useState(),
-        j = (0, g.A)("shop_include_unpublished"),
-        { category: N, state: O } = (0, C.A)(I, { includeUnpublished: j }),
+    let [I, j] = i.useState(),
+        L = (0, g.A)("shop_include_unpublished"),
+        { category: N, state: O } = (0, C.A)(I, { includeUnpublished: L }),
         R = N?.name,
         [y, M] = i.useState();
     (0, tG.XU)(n);
     let k = i.useCallback((e, t) => {
-            (M(e), L(t));
+            (M(e), j(t));
         }, []),
         { selectedTab: G, transitionState: P, transitionToTab: D } = (0, S.o)(b);
     ((0, m.HU)({ location: Y.intl.string(Y.t.pWG4ze) }),
@@ -2342,7 +2342,7 @@ let nR = function (e) {
                     shouldAddEventListener: !1,
                     children: [
                         (0, s.jsx)(nI.G, { handleTransition: D, selectedTab: G }),
-                        (0, s.jsx)(nL.A, { tab: G, handleTransition: D }),
+                        (0, s.jsx)(nj.A, { tab: G, handleTransition: D }),
                         (0, s.jsx)("div", {
                             className: o()(t_.td, {
                                 [t_.RK]: P === e9.Pf.VISIBLE,

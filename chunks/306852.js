@@ -5,8 +5,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(17928),
     o = n(506774),
-    c = n(31728),
-    d = n(164617),
+    d = n(31728),
+    c = n(164617),
     u = n(956790),
     h = n(334463),
     p = n(175203),
@@ -44,7 +44,7 @@ function C(e) {
     let R = l.useCallback(
             (e) => {
                 let t = 0 === S ? e : (e - 8 * (S - 1)) / S;
-                c.EB(t, A.R8.CAMERA_PREVIEW);
+                d.EB(t, A.R8.CAMERA_PREVIEW);
             },
             [S],
         ),
@@ -82,7 +82,7 @@ function C(e) {
                             className: s()(f.Vs, g.a8),
                             fit: p.Yl.COVER,
                             inCall: !0,
-                            popoutType: d.N.NO_POPOUT,
+                            popoutType: c.N.NO_POPOUT,
                             width: 160,
                             onClick: j,
                         },

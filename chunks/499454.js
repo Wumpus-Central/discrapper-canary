@@ -14,7 +14,7 @@ function E(e) {
         f = !1,
         g = null,
         T = s.default.getCurrentUser(),
-        p = (0, o.CC)(T?.premiumType, c.PremiumTypes.TIER_0);
+        h = (0, o.CC)(T?.premiumType, c.PremiumTypes.TIER_0);
     (0, a.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
@@ -54,7 +54,7 @@ function E(e) {
             onCloseCallback: () => {
                 f &&
                     null != g &&
-                    !p &&
+                    !h &&
                     g.isSubscription &&
                     g?.subscriptionPlan?.premiumSubscriptionType === c.PremiumTypes.TIER_2 &&
                     r._.dispatch(d.jej.PREMIUM_SUBSCRIPTION_CREATED);

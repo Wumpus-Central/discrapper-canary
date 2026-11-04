@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(25149),
     m = n(298208),
     p = n(511484),
-    C = n(387278),
-    h = n(307490),
+    h = n(387278),
+    C = n(307490),
     f = n(738869),
     E = n(773669),
     S = n(97352),
@@ -48,16 +48,16 @@ function x(e) {
             premiumSubscriptionPlan: H,
             thePriceOptions: W,
             skuId: V,
-        } = (0, h.RO)({ selectedPlanId: t, priceOptions: n, planOptions: r, subscriptionPeriodEnd: x, showTotal: b }),
+        } = (0, C.RO)({ selectedPlanId: t, priceOptions: n, planOptions: r, subscriptionPeriodEnd: x, showTotal: b }),
         { shouldShowPremiumSwitchPlanSelectText: Y, premiumSwitchPlanSelectText: K } = i.useMemo(() => {
-            let e = (0, h.U_)(H, { isEligibleForBOGOPromotion: B });
+            let e = (0, C.U_)(H, { isEligibleForBOGOPromotion: B });
             return {
                 shouldShowPremiumSwitchPlanSelectText: e,
-                premiumSwitchPlanSelectText: e ? (0, h.yq)(H, V) : null,
+                premiumSwitchPlanSelectText: e ? (0, C.yq)(H, V) : null,
             };
         }, [H, B, V]),
         Z = i.useMemo(
-            () => (b && F ? (0, h.Ct)(U, { subscriptionPeriodEnd: x, trialPeriodCopy: G }) : N),
+            () => (b && F ? (0, C.Ct)(U, { subscriptionPeriodEnd: x, trialPeriodCopy: G }) : N),
             [b, F, U, x, G, N],
         ),
         q = i.useMemo(() => (r.length > 0 ? I.hd[r[0]].premiumType : void 0), [r]),
@@ -96,7 +96,7 @@ function x(e) {
                         let t,
                             i,
                             o,
-                            { isCurrentPlan: m, disabled: E } = (0, h.cD)(T, e),
+                            { isCurrentPlan: m, disabled: E } = (0, C.cD)(T, e),
                             N = S.A.get(e);
                         a()(null != N, "Missing subscriptionPlan");
                         let L = (0, g.L_)({ planId: e, isGift: b, priceOptions: u, subscriptionPlan: N }),
@@ -112,7 +112,7 @@ function x(e) {
                                 priceOptions: u,
                                 isEligibleForTrial: d,
                             }),
-                            U = (0, C.sR)({
+                            U = (0, h.sR)({
                                 targetSubscriptionPlan: N,
                                 isGift: b,
                                 shouldShowSavingsPercent: k,
@@ -163,7 +163,7 @@ function x(e) {
                                       : "string" != typeof D || U || (t = D)),
                             U && !m)
                         ) {
-                            let e = (0, C.Cj)(N, b, u);
+                            let e = (0, h.Cj)(N, b, u);
                             null != e && (t = e);
                         }
                         let H = (function (e) {
@@ -217,7 +217,7 @@ function x(e) {
                       onChange: $,
                   }),
                   b
-                      ? (0, h.LR)({
+                      ? (0, C.LR)({
                             selectedPlan: R,
                             selectedPlanPrice: O,
                             isPrepaid: M,

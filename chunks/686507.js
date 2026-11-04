@@ -1,30 +1,30 @@
-t.d(n, { N: () => a, z: () => i });
-var l = t(582128);
-let u = new Set(),
-    r = null;
-function a(e) {
-    for (let n of ((r = e), [...u])) n(e);
-    return r !== e;
+n.d(e, { N: () => r, z: () => u });
+var l = n(582128);
+let a = new Set(),
+    i = null;
+function r(t) {
+    for (let e of ((i = t), [...a])) e(t);
+    return i !== t;
 }
-function i(e, n) {
-    let t = l.useRef(n);
+function u(t, e) {
+    let n = l.useRef(e);
     (l.useLayoutEffect(() => {
-        t.current = n;
+        n.current = e;
     }),
         l.useEffect(() => {
-            if (null == e) return;
-            function n() {
-                r === e && ((r = null), t.current());
+            if (null == t) return;
+            function e() {
+                i === t && ((i = null), n.current());
             }
-            n();
-            let l = (t) => {
-                t === e && n();
+            e();
+            let l = (n) => {
+                n === t && e();
             };
             return (
-                u.add(l),
+                a.add(l),
                 () => {
-                    u.delete(l);
+                    a.delete(l);
                 }
             );
-        }, [e]));
+        }, [t]));
 }

@@ -15,23 +15,23 @@ var n = s(477900),
     I = s(257110),
     g = s(435558),
     x = s(993077),
-    A = s(778712),
-    _ = s(534514),
+    _ = s(778712),
+    A = s(534514),
     D = s(834730),
     f = s(287809),
     j = s(739010),
     v = s(555725),
     T = s(97808),
-    C = s(825176),
-    O = s(476324);
+    O = s(825176),
+    C = s(476324);
 function S(t) {
     let { user: e, size: s } = t,
-        i = (0, A.Kj)(s),
-        r = null != e ? e.getAvatarURL(null, i.size) : O;
+        i = (0, _.Kj)(s),
+        r = null != e ? e.getAvatarURL(null, i.size) : C;
     return (0, n.jsx)("div", {
-        className: C.oJ,
+        className: O.oJ,
         children: (0, n.jsx)("div", {
-            className: C.my,
+            className: O.my,
             style: { width: i.size, height: i.size },
             children: (0, n.jsx)(T.eu, { src: r, "aria-hidden": !0, size: s }),
         }),
@@ -66,14 +66,14 @@ function L() {
         outline: !1,
         type: x.s.CUSTOM,
         children: [
-            (0, n.jsx)("div", { className: P.ME, children: (0, n.jsx)(S, { user: e, size: A._3.SIZE_80 }) }),
+            (0, n.jsx)("div", { className: P.ME, children: (0, n.jsx)(S, { user: e, size: _._3.SIZE_80 }) }),
             (0, n.jsxs)("div", {
                 className: P.h5,
                 children: [
                     (0, n.jsxs)("div", {
                         className: P.DD,
                         children: [
-                            (0, n.jsx)(_.D, {
+                            (0, n.jsx)(A.D, {
                                 color: "text-strong",
                                 variant: "heading-lg/medium",
                                 children: p.intl.format(c, {
@@ -168,7 +168,7 @@ function X(t) {
             (0, n.jsxs)("div", {
                 className: F.DD,
                 children: [
-                    (0, n.jsx)(_.D, {
+                    (0, n.jsx)(A.D, {
                         variant: "heading-sm/semibold",
                         color: "text-default",
                         children:
@@ -176,7 +176,7 @@ function X(t) {
                                 ? p.intl.formatToPlainString(p.t.IeV2oY, { count: r.toString() })
                                 : p.intl.formatToPlainString(p.t.fZAHBT, { count: r.toString() }),
                     }),
-                    (0, n.jsx)(_.D, {
+                    (0, n.jsx)(A.D, {
                         variant: "body-sm/normal",
                         color: "text-muted",
                         children: "active" === e ? p.intl.string(p.t.XJ2YVR) : p.intl.string(p.t.SzGV0g),
@@ -208,7 +208,7 @@ function $() {
                     (0, n.jsx)(B.A, { className: F.uf }),
                 ],
             }),
-            (0, n.jsx)(_.D, { variant: "heading-sm/semibold", className: F.q6, children: p.intl.string(p.t.reLFaV) }),
+            (0, n.jsx)(A.D, { variant: "heading-sm/semibold", className: F.q6, children: p.intl.string(p.t.reLFaV) }),
             (0, n.jsx)(D.E, { variant: "body-xs/normal", className: F.WO, children: p.intl.string(p.t.ERdH1o) }),
         ],
     });
@@ -295,7 +295,7 @@ function J(t) {
                 className: F.iQ,
                 children: [
                     o ? (0, n.jsx)(q, {}) : (0, n.jsx)(Z, { timestamp: l }),
-                    (0, n.jsx)(_.D, { variant: "heading-lg/medium", children: c }),
+                    (0, n.jsx)(A.D, { variant: "heading-lg/medium", children: c }),
                 ],
             }),
         },

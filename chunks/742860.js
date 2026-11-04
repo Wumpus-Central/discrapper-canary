@@ -9,14 +9,14 @@ var l = n(477900),
     c = n(506500);
 let d = function (e) {
     let { children: t, header: n, layoutVariant: a } = e,
-        { collapsedHeight: d, isExpanded: p } = (0, u.H)(),
-        { expansionSpring: m } = s.useContext(o.PW);
+        { collapsedHeight: d, isExpanded: m } = (0, u.H)(),
+        { expansionSpring: p } = s.useContext(o.PW);
     return (0, l.jsxs)(i.animated.div, {
-        "aria-hidden": !p,
+        "aria-hidden": !m,
         className: r()(c.R, { [c.w]: "inset" === a }),
         style: {
             transform: (0, i.to)(
-                [m.to({ range: [0, 1], output: [0, -100] }), m.to({ range: [0, 1], output: [0, d] })],
+                [p.to({ range: [0, 1], output: [0, -100] }), p.to({ range: [0, 1], output: [0, d] })],
                 (e, t) => `translateY(calc(${e}% + ${t}px))`,
             ),
         },

@@ -3,7 +3,7 @@
     H$: () => S,
     IE: () => m,
     JQ: () => a,
-    N5: () => k,
+    N5: () => C,
     Sj: () => T,
     TK: () => d,
     TN: () => E,
@@ -110,7 +110,7 @@ function d(e) {
                         }),
                     ),
                     outlivedParent: d > l,
-                    ...k(a),
+                    ...C(a),
                     significant: !1,
                     children: [],
                     descendants: 0,
@@ -131,7 +131,7 @@ function d(e) {
         })([r], 0, [], 1 / 0),
         o = 0.1 * (s.end - s.start);
     return (
-        C(s, (e) => {
+        k(s, (e) => {
             e.significant = b(e) >= o;
         }),
         s
@@ -175,7 +175,7 @@ function h(e, t, n) {
 }
 function _(e) {
     let t = new Set();
-    return (C(e, (e) => t.add(e.key)), t);
+    return (k(e, (e) => t.add(e.key)), t);
 }
 function f(e) {
     return { collapsed: new Set(), revealed: N(e, () => !0) };
@@ -195,7 +195,7 @@ function S(e, t) {
     let n = new Set(e.collapsed),
         r = new Set(e.revealed);
     return (
-        C(t, (e) => {
+        k(t, (e) => {
             (n.delete(e.key), r.add(e.key));
         }),
         { collapsed: n, revealed: r }
@@ -204,7 +204,7 @@ function S(e, t) {
 function m(e, t) {
     let n = null;
     return (
-        C(e, (e) => {
+        k(e, (e) => {
             e.key === t && (n = e);
         }),
         n
@@ -240,10 +240,10 @@ function T(e) {
 function b(e) {
     return e.count > 1 ? e.totalMs : e.end - e.start;
 }
-function C(e, t) {
-    for (let n of (t(e), e.children)) C(n, t);
+function k(e, t) {
+    for (let n of (t(e), e.children)) k(n, t);
 }
-function k(e) {
+function C(e) {
     let t = e.name.search(/[.:]/),
         n = -1 === t ? e.name : e.name.slice(0, t),
         r = (-1 === t ? "" : e.name.slice(t + 1))

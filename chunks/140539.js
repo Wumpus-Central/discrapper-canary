@@ -22,8 +22,8 @@ var n = r(477900),
     v = r(309010),
     x = r(164617),
     C = r(540462),
-    R = r(748337);
-let S = [c.L, m.T, p.w, h.z];
+    S = r(748337);
+let R = [c.L, m.T, p.w, h.z];
 function j(e) {
     let { windowKey: t, channelId: r } = e,
         a = (0, o.bG)([b.A], () => b.A.getChannel(r));
@@ -31,7 +31,7 @@ function j(e) {
     let s = (0, g.Ay)(a);
     return (0, n.jsx)(D.A, {
         withTitleBar: !0,
-        keybinds: S,
+        keybinds: R,
         windowKey: t,
         title: s ?? "",
         channelId: a.id,
@@ -52,7 +52,7 @@ function j(e) {
             } else r();
         },
         children: (0, n.jsx)("div", {
-            className: i()("root", R.M),
+            className: i()("root", S.M),
             children: (0, n.jsxs)(A.A.Provider, {
                 value: a.guild_id,
                 children: [

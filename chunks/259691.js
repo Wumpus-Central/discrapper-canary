@@ -21,7 +21,7 @@ function b(e) {
         x = (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)(m.A, { projectId: l, file: r, className: p.xn }), b] });
     if (null == l || null == r || !o.XB.has(r.content_type))
         return (0, n.jsx)("span", { className: p.Pq, children: x });
-    let v = async () => {
+    let y = async () => {
         let e;
         try {
             e = await (0, d.PK)(l, r.id);
@@ -38,7 +38,7 @@ function b(e) {
     return (0, n.jsx)(s.D, {
         tag: "span",
         className: i()(p.Pq, p.Td),
-        onClick: v,
+        onClick: y,
         "aria-label": h.intl.formatToPlainString(g.default.GtNukg, { name: r.name }),
         children: x,
     });

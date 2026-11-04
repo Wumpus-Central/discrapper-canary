@@ -5,8 +5,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(615300),
     o = n(17928),
-    c = n(868285),
-    d = n(462887),
+    d = n(868285),
+    c = n(462887),
     u = n(778712),
     h = n(890856),
     p = n(736653),
@@ -82,7 +82,7 @@ class b extends l.PureComponent {
     }
     render() {
         let { theme: e, children: t, className: n } = this.props,
-            l = (0, d.M)(e),
+            l = (0, c.M)(e),
             a = s()(I._y, { [v.cp]: l, [v.QB]: !l });
         return (0, i.jsxs)(r.A.div, {
             role: "listitem",
@@ -100,9 +100,9 @@ class b extends l.PureComponent {
 }
 function S(e) {
     var t;
-    let { participants: n, onContextMenu: l, className: a, onClick: r, width: d, guildId: N } = e,
+    let { participants: n, onContextMenu: l, className: a, onClick: r, width: c, guildId: N } = e,
         v = (0, p.Ay)(),
-        E = ((t = n.length), ((0, u.FT)(u._3.SIZE_80) + 16) * t > d ? u._3.SIZE_40 : u._3.SIZE_80),
+        E = ((t = n.length), ((0, u.FT)(u._3.SIZE_80) + 16) * t > c ? u._3.SIZE_40 : u._3.SIZE_80),
         S = (0, o.bG)([x.A], () => x.A.isFocused()),
         T = (0, f.oN)(),
         _ = (0, o.bG)([g.Ay], () => new Map(n.filter(y.Xw).map((e) => [e.user.id, g.Ay.isLocalMute(e.user.id)])), [n]),
@@ -116,16 +116,16 @@ function S(e) {
             if (e.type !== y.lp.USER) return null;
             let { user: t, speaking: n, ringing: a, playingSoundboard: s } = e,
                 o = (0, f.Nd)(e.voiceState, T),
-                c = null;
+                d = null;
             !0 === _.get(t.id)
-                ? (c = j.intl.string(j.t.Q8Uzof))
+                ? (d = j.intl.string(j.t.Q8Uzof))
                 : o?.isVoiceDeafened() === !0
-                  ? (c = j.intl.string(j.t.NjmiOL))
+                  ? (d = j.intl.string(j.t.NjmiOL))
                   : o?.isVoiceMuted() === !0
-                    ? (c = j.intl.string(j.t.tjtv3P))
-                    : O && !0 === R.get(t.id) && (c = j.intl.string(j.t["9bJYWN"]));
-            let d =
-                null != c ? j.intl.formatToPlainString(j.t["1+MVBP"], { userName: t.username, status: c }) : t.username;
+                    ? (d = j.intl.string(j.t.tjtv3P))
+                    : O && !0 === R.get(t.id) && (d = j.intl.string(j.t["9bJYWN"]));
+            let c =
+                null != d ? j.intl.formatToPlainString(j.t["1+MVBP"], { userName: t.username, status: d }) : t.username;
             return (0, i.jsx)(
                 b,
                 {
@@ -133,7 +133,7 @@ function S(e) {
                     width: (0, u.FT)(E),
                     theme: v,
                     children: (0, i.jsx)(h.s, {
-                        "aria-label": d,
+                        "aria-label": c,
                         onClick: (t) => r?.(e, t),
                         onContextMenu: (t) => l?.(e, t),
                         children: (0, i.jsx)(
@@ -154,5 +154,5 @@ function S(e) {
                 t.id,
             );
         });
-    return (0, i.jsx)(c.F, { component: "div", role: "list", className: s()(I.zr, a), children: P });
+    return (0, i.jsx)(d.F, { component: "div", role: "list", className: s()(I.zr, a), children: P });
 }

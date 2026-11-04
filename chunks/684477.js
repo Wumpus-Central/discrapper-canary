@@ -14,8 +14,8 @@ function p(e) {
             paymentModalStepProps: { handleStepChange: t },
             layout: n,
             renderStepBody: p,
-            renderLeftColumn: C,
-            renderRightColumn: h,
+            renderLeftColumn: h,
+            renderRightColumn: C,
             renderBottomContent: f,
             primaryCTAButtonProps: E,
             onBackClick: S,
@@ -31,9 +31,9 @@ function p(e) {
                 n === s.X.CUSTOM_STEP_BODY
                     ? p()
                     : (0, l.jsxs)(l.Fragment, {
-                          children: [(0, l.jsxs)("div", { className: m.D, children: [C(), h()] }), null != f && f()],
+                          children: [(0, l.jsxs)("div", { className: m.D, children: [h(), C()] }), null != f && f()],
                       }),
-            [n, p, C, h, f],
+            [n, p, h, C, f],
         ),
         v = i.useMemo(() => ({ ...E, onClick: A, text: d.intl.string(d.t.XiOHRX) }), [E, A]);
     return (0, l.jsxs)(l.Fragment, {

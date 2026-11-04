@@ -1,17 +1,17 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(477900),
     l = n(17928),
     a = n(684339),
     s = n(51092),
     r = n(280450),
     o = n(999926),
-    c = n(85448);
-function d(e) {
-    let { participant: t, avatarClassName: n, children: d, ...u } = e,
+    d = n(85448);
+function c(e) {
+    let { participant: t, avatarClassName: n, children: c, ...u } = e,
         { userId: h } = u,
         p = o.Ay.getVideoComponent(),
         m = h === (0, l.bG)([r.default], () => r.default.getId());
-    return (0, i.jsxs)(c.n6, {
+    return (0, i.jsxs)(d.n6, {
         ...u,
         children: [
             (0, i.jsx)(s.A, {
@@ -25,7 +25,7 @@ function d(e) {
                 mirror: m,
                 emptyPreviewAspectRatio: "1",
             }),
-            d,
+            c,
         ],
     });
 }

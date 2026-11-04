@@ -2,7 +2,7 @@ n.d(t, {
     lk: () => I,
     NN: () => p,
     OO: () => f,
-    Ig: () => T,
+    Ig: () => _,
     aD: () => C,
     Se: () => A,
     uK: () => d,
@@ -53,20 +53,20 @@ var E =
     (u[(u.AUTO_ENABLE_CAPTIONS = 1)] = "AUTO_ENABLE_CAPTIONS"),
     (u[(u.AUTO_UNMUTE = 2)] = "AUTO_UNMUTE"),
     u);
-let T = (0, s.mj)({
+let _ = (0, s.mj)({
         name: "2026-03-muted-video-quest-new-defaults",
         kind: "user",
         defaultConfig: { enabled: !1, variant: 0 },
         variations: { 0: { enabled: !1, variant: 0 }, 1: { enabled: !0, variant: 1 }, 2: { enabled: !0, variant: 2 } },
     }),
-    _ = (0, s.mj)({
+    T = (0, s.mj)({
         name: "2026-04-quests-premium-orb-multiplier-marketing",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
 function I(e) {
-    let { enabled: t } = _.useConfig({ location: e }),
+    let { enabled: t } = T.useConfig({ location: e }),
         n = (0, a.z)();
     return {
         shouldShowBonusOrbsUX: n !== c.MA.INELIGIBLE && n !== c.MA.XBOX_GAME_PASS && t,

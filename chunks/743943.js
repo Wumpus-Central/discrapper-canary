@@ -1,21 +1,21 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => d });
 var i = n(477900),
     l = n(582128),
     a = n(29477),
     s = n(717421),
     r = n(781137),
     o = n(812597);
-function c(e) {
+function d(e) {
     let { position: t, roomWidth: n } = e,
-        [c, d] = (0, s.z)(() => ({ x: t.x, y: t.y, config: { clamp: !0, tension: 1200, friction: 40, mass: 0.4 } }));
+        [d, c] = (0, s.z)(() => ({ x: t.x, y: t.y, config: { clamp: !0, tension: 1200, friction: 40, mass: 0.4 } }));
     return (
         (0, l.useEffect)(() => {
-            d({ x: t.x, y: t.y });
-        }, [t.x, t.y, d]),
+            c({ x: t.x, y: t.y });
+        }, [t.x, t.y, c]),
         (0, i.jsx)(a.animated.div, {
             "aria-hidden": !0,
             className: o.V,
-            style: { left: c.x.to((e) => `${e}%`), top: c.y.to((e) => `${e}%`) },
+            style: { left: d.x.to((e) => `${e}%`), top: d.y.to((e) => `${e}%`) },
             children: (0, i.jsx)(r.A, { roomWidth: n }),
         })
     );

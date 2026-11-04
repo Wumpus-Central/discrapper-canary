@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(834730),
     m = n(150934),
     p = n(939249),
-    C = n(298208),
-    h = n(951305),
+    h = n(298208),
+    C = n(951305),
     f = n(773669),
     E = n(97352),
     S = n(45938),
@@ -40,12 +40,12 @@ function N(e) {
             setSelectedPlanId: f,
             isRecurringGift: E,
             setIsRecurringGift: S,
-        } = (0, C.t4)((e) => ({
+        } = (0, h.t4)((e) => ({
             setSelectedPlanId: e.setSelectedPlanId,
             isRecurringGift: e.isRecurringGift,
             setIsRecurringGift: e.setIsRecurringGift,
         })),
-        { setSelectedGiftingPromotionRewards: g } = (0, h.Pv)(),
+        { setSelectedGiftingPromotionRewards: g } = (0, C.Pv)(),
         y = n.interval === v.WT.YEAR ? x.default.rstMwN : x.default.Vb8FaC,
         I = i.useMemo(
             () => [
@@ -165,13 +165,13 @@ function w(e) {
             setSelectedPlanId: W,
             setIsRecurringGift: V,
             isGift: Y,
-        } = (0, C.t4)((e) => ({
+        } = (0, h.t4)((e) => ({
             discountInfo: e.premiumDiscountInfo,
             setSelectedPlanId: e.setSelectedPlanId,
             setIsRecurringGift: e.setIsRecurringGift,
             isGift: e.isGift,
         })),
-        { giftRecipient: K } = (0, h.Pv)(),
+        { giftRecipient: K } = (0, C.Pv)(),
         Z = Y && (0, S.Ik)(K),
         { discountOffer: q, discountAmountOff: z, applicablePlan: $ } = H,
         Q = (0, c.bG)([E.A], () => E.A.get(u));
@@ -214,7 +214,7 @@ function w(e) {
         ),
         eo = F && Z && (0, I.dI)(u),
         eu =
-            ((t = (0, C.t4)((e) => e.isRecurringGift)),
+            ((t = (0, h.t4)((e) => e.isRecurringGift)),
             (n = T && t),
             (r = Q.interval === v.WT.YEAR),
             {

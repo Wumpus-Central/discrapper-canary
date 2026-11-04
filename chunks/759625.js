@@ -11,7 +11,7 @@ var o = n(939249),
 function d(e) {
     let { benefit: t, guildId: n, onClick: d } = e,
         C = (0, u.A)(n, t.ref_id),
-        p = (0, l.jsx)(a.A, { guildId: n, emojiId: t.emoji_id, emojiName: t.emoji_name });
+        h = (0, l.jsx)(a.A, { guildId: n, emojiId: t.emoji_id, emojiName: t.emoji_name });
     return (0, l.jsxs)(o.D, {
         className: c.kL,
         onClick: function () {
@@ -20,7 +20,7 @@ function d(e) {
         "aria-label": C?.ariaLabel,
         role: "link",
         children: [
-            (0, l.jsx)("div", { className: c.qq, children: p }),
+            (0, l.jsx)("div", { className: c.qq, children: h }),
             (0, l.jsxs)("div", {
                 className: c.op,
                 children: [

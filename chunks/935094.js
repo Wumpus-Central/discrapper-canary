@@ -1,7 +1,7 @@
-n.d(t, { f: () => s });
+n.d(t, { f: () => l });
 var r = n(582128),
     i = n(575593);
-function s(e) {
+function l(e) {
     let [t, n] = (0, r.useState)(null);
     return {
         previewingVariantIndex: t,

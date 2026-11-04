@@ -10,8 +10,8 @@ var l,
     d = n(834730),
     m = n(534514),
     p = n(315629),
-    C = n(736653),
-    h = n(287809),
+    h = n(736653),
+    C = n(287809),
     f = n(166403),
     E = n(24482),
     S = n(580630),
@@ -87,7 +87,7 @@ let Z = new B.A("PremiumGroupPrice.tsx"),
         let t,
             { isGift: n = !1, priceOptions: l } = e,
             r = (0, o.bG)([H.A], () => H.A.get(W.gD.PREMIUM_GROUP_MONTH)),
-            a = (0, c.q)((0, C.Ay)());
+            a = (0, c.q)((0, h.Ay)());
         if (null == r) return q;
         try {
             t = (0, E.sS)(r, l, !1, n, !1);
@@ -169,13 +169,13 @@ function eo(e) {
             useShortTitle: d = !1,
         } = e,
         p = (0, o.bG)([f.A], () => f.A.getPremiumTypeSubscription()),
-        E = (0, o.bG)([h.default], () => h.default.getCurrentUser()),
+        E = (0, o.bG)([C.default], () => C.default.getCurrentUser()),
         S = (0, w.V)(),
         g = S?.subscriptionTrial?.skuId,
         y = p?.hasActiveTrial ? E?.premiumType : null,
         I = (0, G.Lj)(y, g),
         A = null != I,
-        P = (0, c.q)((0, C.Ay)()),
+        P = (0, c.q)((0, h.Ay)()),
         v = ea(r),
         x = d ? R.intl.string(R.t.tUbSDK) : R.intl.string(R.t["t9uG/o"]),
         _ = (0, i.jsxs)(er, {
@@ -265,7 +265,7 @@ function ed(e) {
             narrowLayout: P = !1,
         } = e,
         v = (0, o.bG)([f.A], () => f.A.getPremiumTypeSubscription()),
-        x = (0, o.bG)([h.default], () => h.default.getCurrentUser()),
+        x = (0, o.bG)([C.default], () => C.default.getCurrentUser()),
         _ = (0, w.V)(),
         T = _?.subscriptionTrial?.skuId,
         b = v?.hasActiveTrial ? x?.premiumType : null,
@@ -273,7 +273,7 @@ function ed(e) {
         j = (0, k.O)(),
         O = (0, g.k5)(),
         L = null != T || null != b ? W.Vk.PREMIUM_TRIAL : null != j || O ? W.Vk.PREMIUM_DISCOUNT : null,
-        F = (0, c.q)((0, C.Ay)()),
+        F = (0, c.q)((0, h.Ay)()),
         B = ea(a),
         H = !a && null != j && (0, U.hm)(j),
         V = !a && O && N && L === W.Vk.PREMIUM_DISCOUNT,
@@ -358,7 +358,7 @@ function ed(e) {
 }
 function em(e) {
     let { className: t, ctaButton: n, isApplicationHome: l, priceOptions: r } = e,
-        a = (0, c.q)((0, C.Ay)()),
+        a = (0, c.q)((0, h.Ay)()),
         o = (0, i.jsxs)(er, {
             footer: n,
             children: [

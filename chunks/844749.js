@@ -1,4 +1,4 @@
-_.exports = {
+d.exports = {
     gH: "emojiSection_d5cd2d",
     Gl: "customEmojiLabel_d5cd2d",
     Os: "emojiPopout_d5cd2d",

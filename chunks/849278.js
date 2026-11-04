@@ -5,8 +5,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(29477),
     o = n(508382),
-    c = n(866323),
-    d = n(717421),
+    d = n(866323),
+    c = n(717421),
     u = n(821609),
     h = n(789645),
     p = n(119762);
@@ -23,14 +23,14 @@ function x(e) {
         f = l.Children.toArray(t).filter(l.isValidElement),
         g = "left" === o,
         x = g ? 16 : -16,
-        C = (0, c.p)(f, {
+        C = (0, d.p)(f, {
             keys: f.map((e, t) => t),
             from: { progress: 0 },
             enter: { progress: 1 },
             trail: 35,
             config: m,
         }),
-        y = (0, d.z)({
+        y = (0, c.z)({
             opacity: +!!u,
             config: A,
             onRest: (e) => {
@@ -60,8 +60,8 @@ function x(e) {
 let C = Object.assign(
     function (e) {
         let { isOpen: t, onOpenChange: n, defaultOpen: a = !1, placement: s = "right", children: r } = e,
-            [o, c] = l.useState(null),
-            d = l.useId(),
+            [o, d] = l.useState(null),
+            c = l.useId(),
             [u, h] = l.useState(a),
             p = void 0 !== t,
             m = p ? t : u,
@@ -72,8 +72,8 @@ let C = Object.assign(
                 [p, n],
             ),
             g = l.useMemo(
-                () => ({ isOpen: m, setOpen: A, triggerElement: o, setTriggerElement: c, menuId: d, placement: s }),
-                [m, A, o, d, s],
+                () => ({ isOpen: m, setOpen: A, triggerElement: o, setTriggerElement: d, menuId: c, placement: s }),
+                [m, A, o, c, s],
             );
         return (0, i.jsx)(f.Provider, { value: g, children: r });
     },
@@ -91,7 +91,7 @@ let C = Object.assign(
         },
         Popup: function (e) {
             let { children: t, "aria-label": n } = e,
-                { isOpen: a, setOpen: s, triggerElement: r, menuId: c, placement: d } = g(),
+                { isOpen: a, setOpen: s, triggerElement: r, menuId: d, placement: c } = g(),
                 [u, h] = l.useState(a);
             a && !u && h(!0);
             let p = l.useCallback(() => h(!1), []);
@@ -102,13 +102,13 @@ let C = Object.assign(
                 returnFocusElement: r,
                 ownerDocument: r?.ownerDocument,
                 focus: "non-modal",
-                placement: d,
+                placement: c,
                 spacing: -16,
                 autoUpdate: !0,
                 renderLayer: (e) => {
                     let { placement: l } = e;
                     return (0, i.jsx)(x, {
-                        menuId: c,
+                        menuId: d,
                         ariaLabel: n,
                         side: l.startsWith("left") ? "left" : "right",
                         visible: a,
@@ -120,11 +120,11 @@ let C = Object.assign(
             });
         },
         Item: function (e) {
-            let { className: t, closeOnClick: n = !0, selected: a, onClick: r, clearButtonAriaLabel: o, ...c } = e,
-                { isOpen: d, setOpen: m } = g(),
+            let { className: t, closeOnClick: n = !0, selected: a, onClick: r, clearButtonAriaLabel: o, ...d } = e,
+                { isOpen: c, setOpen: m } = g(),
                 [A, f] = l.useState(a),
-                [x, C] = l.useState(d);
-            d !== x && (C(d), d && f(a));
+                [x, C] = l.useState(c);
+            c !== x && (C(c), c && f(a));
             let y = (e) => {
                 (r?.(e), n && m(!1));
             };
@@ -137,7 +137,7 @@ let C = Object.assign(
                             variant: A ? "overlay-primary" : "overlay-secondary",
                             size: "md",
                             onClick: y,
-                            ...c,
+                            ...d,
                         }),
                     }),
                     A &&

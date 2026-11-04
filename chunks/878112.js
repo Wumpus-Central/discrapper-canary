@@ -1,62 +1,62 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => _ });
 var r = n(477900),
     i = n(582128),
-    s = n(575593),
-    a = n(821609),
-    l = n(597770),
+    l = n(575593),
+    s = n(821609),
+    a = n(597770),
     u = n(866665),
     o = n(408278),
     d = n(688810),
     c = n(44120),
-    I = n(174459),
-    f = n(440938),
+    f = n(174459),
+    I = n(440938),
     v = n(238184),
     p = n(536572),
-    g = n(766172),
-    m = n(758836),
-    A = n(652215),
-    x = n(202541),
-    _ = n(105292);
-let h = function (e) {
+    m = n(766172),
+    A = n(758836),
+    g = n(652215),
+    E = n(202541),
+    h = n(105292);
+let _ = function (e) {
     let {
             product: t,
             primary: n,
-            selectedVariantIndex: h,
-            returnRef: E,
+            selectedVariantIndex: _,
+            returnRef: x,
             onSuccess: C,
             tooltipDelay: b,
-            fullWidth: k = !1,
-            fullWidthLabel: R,
+            fullWidth: R = !1,
+            fullWidthLabel: k,
             giftRecipient: y,
-            giftingOrigin: j = x.vQ.SHOP_PAGE,
+            giftingOrigin: S = E.vQ.SHOP_PAGE,
             onTrackClick: T,
-            tabIndex: S,
+            tabIndex: j,
         } = e,
         { analyticsLocations: O } = (0, d.Ay)(),
-        V = i.useRef(null),
-        L = (0, f.uM)(),
-        P = (0, v.A)();
-    function N(e) {
+        P = i.useRef(null),
+        L = (0, I.uM)(),
+        N = (0, v.A)();
+    function V(e) {
         (e.stopPropagation(),
-            I.default.track(A.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+            f.default.track(g.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: L?.sessionId,
                 sku_id: t.skuId,
                 page_section: L?.pageSection,
                 page_category: L?.pageCategory,
-                tile_type: s.R[t.type],
+                tile_type: l.R[t.type],
                 tile_position: String(L?.tilePosition),
                 cta_name: "gift button",
-                page_type: P ?? "home",
+                page_type: N ?? "home",
             }),
-            T?.(m.sH.SEND_AS_GIFT),
+            T?.(A.sH.SEND_AS_GIFT),
             (0, c.A)({
-                skuId: (0, g.Y)({ product: t, selectedVariantIndex: h }),
+                skuId: (0, m.Y)({ product: t, selectedVariantIndex: _ }),
                 isGift: !0,
                 giftRecipient: y,
-                giftingOrigin: j,
+                giftingOrigin: S,
                 analyticsLocations: O,
                 discoverySessionId: L?.sessionId,
-                returnRef: E,
+                returnRef: x,
                 onClose:
                     null != C
                         ? (e) => {
@@ -65,27 +65,27 @@ let h = function (e) {
                         : void 0,
             }));
     }
-    if (k)
-        return (0, r.jsx)(a.$, {
+    if (R)
+        return (0, r.jsx)(s.$, {
             variant: n ? "primary" : "secondary",
-            icon: l.GiftIcon,
-            onClick: N,
-            text: R ?? _.intl.string(_.t.gmnzqM),
+            icon: a.GiftIcon,
+            onClick: V,
+            text: k ?? h.intl.string(h.t.gmnzqM),
             fullWidth: !0,
-            tabIndex: S,
+            tabIndex: j,
         });
-    let M = _.intl.string(_.t["JCFN/y"]);
+    let D = h.intl.string(h.t["JCFN/y"]);
     return (0, r.jsx)(u.m, {
-        text: M,
+        text: D,
         delay: b,
         children: (0, r.jsx)(o.K, {
-            "aria-label": _.intl.formatToPlainString(_.t["5UYoSr"], { ctaLabel: M, productLabel: (0, p.s7)(t) }),
-            buttonRef: V,
+            "aria-label": h.intl.formatToPlainString(h.t["5UYoSr"], { ctaLabel: D, productLabel: (0, p.s7)(t) }),
+            buttonRef: P,
             variant: n ? "primary" : "secondary",
-            icon: l.GiftIcon,
+            icon: a.GiftIcon,
             size: "md",
-            onClick: N,
-            tabIndex: S,
+            onClick: V,
+            tabIndex: j,
         }),
     });
 };

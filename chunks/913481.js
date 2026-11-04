@@ -5,8 +5,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(17928),
     o = n(775602),
-    c = n(734057),
-    d = n(446243),
+    d = n(734057),
+    c = n(446243),
     u = n(558076),
     h = n(360729),
     p = n(967388),
@@ -22,7 +22,7 @@ function y(e, t) {
 function j(e) {
     let { channelId: t, roomWidth: n, containerRef: a, pointerRef: s } = e,
         [r, o] = (0, l.useState)(null),
-        c = (0, l.useRef)(!1);
+        d = (0, l.useRef)(!1);
     return ((0, l.useEffect)(() => {
         let e = a.current;
         if (null != e) {
@@ -43,9 +43,9 @@ function j(e) {
             null != t && o(y(t, e));
         }
         function i(e) {
-            if ((e.stopPropagation(), c.current)) return;
+            if ((e.stopPropagation(), d.current)) return;
             let n = a.current;
-            null != n && ((c.current = !0), (0, d.Dr)(t, y(n, e)));
+            null != n && ((d.current = !0), (0, c.Dr)(t, y(n, e)));
         }
     }, [a, s, t]),
     null == r)
@@ -55,21 +55,21 @@ function j(e) {
 function I(e) {
     let { channelId: t, roomWidth: n } = e,
         a = (0, l.useRef)(null),
-        d = (0, l.useRef)({ x: 0, y: 0, hasValue: !1 }),
+        c = (0, l.useRef)({ x: 0, y: 0, hasValue: !1 }),
         A = (0, r.bG)([u.A], () => u.A.getPendingNote(t)),
         y = (0, r.bG)([u.A], () => u.A.getCreatingNotes(t)),
         I = (0, r.bG)([u.A], () => u.A.getNotes(t)),
         N = (0, r.bG)([o.Ay], () => o.Ay.keyboardModeEnabled);
     (0, l.useEffect)(() => {
         function e(e) {
-            d.current = { x: e.clientX, y: e.clientY, hasValue: !0 };
+            c.current = { x: e.clientX, y: e.clientY, hasValue: !0 };
         }
         return (
             document.addEventListener("mousemove", e, { passive: !0 }),
             () => document.removeEventListener("mousemove", e)
         );
     }, []);
-    let { interactionsEnabled: v } = (0, h.mf)({ guildId: c.A.getChannel(t)?.guild_id, location: "GuildRoom" });
+    let { interactionsEnabled: v } = (0, h.mf)({ guildId: d.A.getChannel(t)?.guild_id, location: "GuildRoom" });
     if (!v || (0 === I.length && null == A && 0 === y.length)) return null;
     let E = null != A && null == A.position;
     return (0, i.jsxs)(i.Fragment, {
@@ -79,7 +79,7 @@ function I(e) {
                 (0, i.jsx)("div", {
                     ref: a,
                     className: C.kL,
-                    children: (0, i.jsx)(j, { channelId: t, roomWidth: n, containerRef: a, pointerRef: d }),
+                    children: (0, i.jsx)(j, { channelId: t, roomWidth: n, containerRef: a, pointerRef: c }),
                 }),
             A?.position != null && (0, i.jsx)(f.A, { channelId: t, position: A.position, roomWidth: n }),
             y.map((e) =>

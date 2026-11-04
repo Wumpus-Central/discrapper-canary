@@ -10,13 +10,13 @@ var l = n(477900),
     d = n(24482),
     m = n(615396),
     p = n(448910),
-    C = n(463376),
-    h = n(558620),
+    h = n(463376),
+    C = n(558620),
     f = n(298208),
     E = n(758476),
     S = n(105292);
 function g(e) {
-    let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: g } = (0, C.i)(),
+    let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: g } = (0, h.i)(),
         {
             activeSubscription: y,
             isPremium: I,
@@ -38,14 +38,14 @@ function g(e) {
             effectivePlanGroup: n.getEffectivePlanGroup({ planGroup: e.planGroup }),
             isRecurringGiftCheckout: n.getIsRecurringGiftCheckout(),
         })),
-        N = (0, h.A)(),
+        N = (0, C.A)(),
         j = e.handlePaymentSourceAdd,
         R = null != e.openInvoiceId,
         O = null == e.initialPlanId && null == e.subscriptionTier,
         M = i.useMemo(() => !x && (v ? O && I : I), [v, O, I, x]),
         L = e.handleStepChange,
         k = (0, d.J$)(P.paymentSourceId),
-        w = (0, C.R)({ hasOpenInvoice: R ?? !1 }),
+        w = (0, h.R)({ hasOpenInvoice: R ?? !1 }),
         D = null != y && !A,
         U = i.useCallback(
             () =>

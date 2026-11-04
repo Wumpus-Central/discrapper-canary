@@ -6,25 +6,25 @@ var l = n(17928),
     s = n(364522),
     r = n(588224),
     o = n(607567),
-    c = n(105292),
-    d = n(13117);
+    d = n(105292),
+    c = n(13117);
 function u(e) {
     let { channel: t } = e,
         n = (0, l.bG)([o.Ay], () => o.Ay.getVoiceStatesForChannel(t));
     return (0, i.jsxs)("div", {
-        className: d.zr,
+        className: c.zr,
         children: [
             (0, i.jsx)(a.E, {
                 variant: "body-xs/semibold",
-                className: d.wx,
-                children: c.intl.format(c.t.e95u3C, { count: n.length }),
+                className: c.wx,
+                children: d.intl.format(d.t.e95u3C, { count: n.length }),
             }),
             (0, i.jsx)(s.Ip, {
-                className: d.XG,
+                className: c.XG,
                 children: (0, i.jsx)(r.A, {
                     allowDragging: !1,
                     allowPreviews: !1,
-                    className: d.Xk,
+                    className: c.Xk,
                     channel: t,
                     voiceStates: n,
                     collapsed: !1,

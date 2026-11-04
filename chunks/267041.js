@@ -1892,9 +1892,9 @@ var eJ = n(33282),
     e1 = n(751124),
     e2 = n(852015),
     e3 = n(144367),
-    e5 = n(428420),
+    e6 = n(428420),
     e4 = n(535384);
-class e6 extends e4.G {
+class e5 extends e4.G {
     constructor() {
         super("discord_protos.qos_token.v1.QosToken", [
             { no: 1, name: "client_provided", kind: "message", T: () => e9 },
@@ -1904,7 +1904,7 @@ class e6 extends e4.G {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, e5.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, e6.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, e3.x)(this, t, e),
             t
         );
@@ -1938,7 +1938,7 @@ class e6 extends e4.G {
         return (!1 !== i && (!0 == i ? e2.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e7 = new e6();
+let e7 = new e5();
 class e8 extends e4.G {
     constructor() {
         super("discord_protos.qos_token.v1.ClientProvidedQosData", [
@@ -1948,7 +1948,7 @@ class e8 extends e4.G {
     create(e) {
         let t = { isActive: !1 };
         return (
-            globalThis.Object.defineProperty(t, e5.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, e6.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, e3.x)(this, t, e),
             t
         );
@@ -1987,7 +1987,7 @@ class te extends e4.G {
     create(e) {
         let t = { claims: new Uint8Array(0), signature: new Uint8Array(0), keyId: 0 };
         return (
-            globalThis.Object.defineProperty(t, e5.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, e6.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, e3.x)(this, t, e),
             t
         );
@@ -2039,7 +2039,7 @@ class tn extends e4.G {
     create(e) {
         let t = { userId: "0", issuedAt: "0", isStaff: !1, authTokenHash: new Uint8Array(0), expiresAt: "0" };
         return (
-            globalThis.Object.defineProperty(t, e5.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, e6.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, e3.x)(this, t, e),
             t
         );

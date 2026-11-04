@@ -2962,9 +2962,9 @@ class e3 extends eA {
     }
     setVideoEncoderParameters(e) {}
 }
-let e5 = n.p + "worklet.8d84a64a97f8451a.js",
+let e6 = n.p + "worklet.8d84a64a97f8451a.js",
     e4 = { voiceActivityDetection: !0, offerToReceiveAudio: !0, offerToReceiveVideo: !1, iceRestart: !1 };
-class e6 extends R.EventEmitter {
+class e5 extends R.EventEmitter {
     userId;
     sinkId;
     input;
@@ -3351,7 +3351,7 @@ class ts extends p.A {
     }
     async _enable() {
         if (this.enabled) return;
-        await this.getAudioContext().audioWorklet.addModule(e5);
+        await this.getAudioContext().audioWorklet.addModule(e6);
         let e = new Y(this.getAudioContext());
         e.on("permission", this.handleAudioPermission);
         try {
@@ -3497,7 +3497,7 @@ class ts extends p.A {
     setLoopback(e, t) {
         e && null == this.loopback
             ? (this.enable(),
-              (this.loopback = new e6(this.getAudioContext(), this.sourceId, this.sinkId)),
+              (this.loopback = new e5(this.getAudioContext(), this.sourceId, this.sinkId)),
               this.loopback.setNoiseCancellation(t.noiseCancellation))
             : e || null == this.loopback || (this.loopback.stop(), (this.loopback = null));
     }

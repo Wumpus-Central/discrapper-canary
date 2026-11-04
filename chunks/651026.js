@@ -1,12 +1,12 @@
-n.d(t, { Hc: () => s, Xf: () => u });
+n.d(t, { Hc: () => s, Xf: () => o });
 var l = n(927813);
 n(251812);
 var r = n(518782),
-    a = n(880098),
-    i = n(105292);
+    i = n(880098),
+    a = n(105292);
 function s(e) {
     let t = e.winningStreak ?? 0;
-    if (t > 1) return i.intl.formatToPlainString(a.default["ZCFDN+"], { streakCount: t });
+    if (t > 1) return a.intl.formatToPlainString(i.default["ZCFDN+"], { streakCount: t });
     let n = e.winningValue;
     if (null == n || !Number.isFinite(n) || n < 0) return null;
     switch (e.winningStat) {
@@ -14,17 +14,17 @@ function s(e) {
             let e = Math.floor(n / l.A.Millis.MINUTE),
                 t = Math.floor(e / l.A.Minutes.HOUR),
                 r = e % l.A.Minutes.HOUR;
-            if (0 === t) return i.intl.formatToPlainString(a.default["/272et"], { minutes: r });
-            return i.intl.formatToPlainString(a.default.GC7N5H, { hours: t, minutes: r });
+            if (0 === t) return a.intl.formatToPlainString(i.default["/272et"], { minutes: r });
+            return a.intl.formatToPlainString(i.default.GC7N5H, { hours: t, minutes: r });
         }
         case r.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
-            return i.intl.formatToPlainString(a.default.IXdbVJ, { days: n });
+            return a.intl.formatToPlainString(i.default.IXdbVJ, { days: n });
         case r.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
-            return i.intl.formatToPlainString(a.default["/VAMco"], { count: n });
+            return a.intl.formatToPlainString(i.default["/VAMco"], { count: n });
         default:
             return null;
     }
 }
-function u() {
-    return i.intl.string(a.default.jCZgxQ);
+function o() {
+    return a.intl.string(i.default.jCZgxQ);
 }

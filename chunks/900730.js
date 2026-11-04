@@ -10,13 +10,13 @@ var i = n(683071),
 function c(e) {
     let { relocationCountry: t, relocationCurrencyCode: n, willForfeitGiftCardBalance: c = !1, role: d } = e,
         m = (0, a.j7)(t),
-        f = c ? s.default["DE+C4G"] : s.default.vcs3zU,
-        p = u.intl.formatToMarkdownString(f, {
+        p = c ? s.default["DE+C4G"] : s.default.vcs3zU,
+        f = u.intl.formatToMarkdownString(p, {
             country: m,
             currency: n?.toUpperCase() ?? "",
             willForfeitGiftCardBalance: c ? "true" : "false",
         }),
-        v = l.A.parse(p, !1, { allowList: !0 });
+        v = l.A.parse(f, !1, { allowList: !0 });
     return null == v
         ? null
         : (0, r.jsx)("div", { className: o.Q, children: (0, r.jsx)(i.w, { type: "warning", message: v, role: d }) });

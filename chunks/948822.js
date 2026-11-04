@@ -5,8 +5,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(17928),
     o = n(416696),
-    c = n(939249),
-    d = n(793574),
+    d = n(939249),
+    c = n(793574),
     u = n(688810),
     h = n(279250),
     p = n(880144),
@@ -30,7 +30,7 @@ function S(e) {
         _ = (0, r.bG)([y.Ay], () => y.Ay.getVoiceChannelId() === t),
         R = (0, r.bG)([x.Ay], () => (0, p.A)(x.Ay)),
         O = (0, r.bG)([g.A, C.A], () => null != S && (0, h.vz)(S, g.A, C.A, !0)),
-        { analyticsLocations: P } = (0, u.Ay)(d.A.GUILD_ROOM),
+        { analyticsLocations: P } = (0, u.Ay)(c.A.GUILD_ROOM),
         { Component: L } = (0, o.c)("enable"),
         M = (0, r.bG)([x.Ay], () => x.Ay.supports(N.O5.VIDEO)),
         w = l.useRef(null),
@@ -41,7 +41,7 @@ function S(e) {
             }
         }, [T, R, t, P]);
     return null != S && null != T && O && _ && M
-        ? (0, i.jsxs)(c.D, {
+        ? (0, i.jsxs)(d.D, {
               "aria-label": v.intl.string(v.t.fjBNo1),
               className: b.XI,
               onClick: U,

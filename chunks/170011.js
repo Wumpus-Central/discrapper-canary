@@ -6,8 +6,8 @@ var l = n(503698),
     s = n(70688),
     r = n(204651),
     o = n(418241),
-    c = n(885031),
-    d = n(105292),
+    d = n(885031),
+    c = n(105292),
     u = n(878772);
 function h(e) {
     let { channelId: t, className: n } = e;
@@ -17,7 +17,7 @@ function h(e) {
             iconComponent: s.DoorExitIcon,
             onClick: () => (0, o.N)(t),
             className: u.u,
-            label: d.intl.string(c.default["D+wwh8"]),
+            label: c.intl.string(d.default["D+wwh8"]),
         }),
     });
 }

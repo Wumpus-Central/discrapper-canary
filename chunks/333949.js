@@ -7,20 +7,20 @@ var l = n(477900),
     o = n(139384),
     u = n(241762);
 function c(e) {
-    let { isHovered: t, asset: n, poster: c, className: d, autoPlay: p = !1, ref: m } = e,
+    let { isHovered: t, asset: n, poster: c, className: d, autoPlay: m = !1, ref: p } = e,
         { isExpanded: x } = (0, u.H)(),
-        f = (0, a.bG)([r.Ay], () => r.Ay.useReducedMotion),
-        h = s.useRef(null);
+        h = (0, a.bG)([r.Ay], () => r.Ay.useReducedMotion),
+        f = s.useRef(null);
     return (
         s.useEffect(() => {
-            null != h.current && (x && (!f || t) ? ((h.current.currentTime = 0), h.current.play()) : h.current.pause());
-        }, [h, x, t, f]),
-        (0, o.A)(h),
+            null != f.current && (x && (!h || t) ? ((f.current.currentTime = 0), f.current.play()) : f.current.pause());
+        }, [f, x, t, h]),
+        (0, o.A)(f),
         (0, l.jsx)(i.A, {
             ref: (e) => {
-                ((h.current = e), null != m && ("function" == typeof m ? m(e) : (m.current = e)));
+                ((f.current = e), null != p && ("function" == typeof p ? p(e) : (p.current = e)));
             },
-            autoPlay: p,
+            autoPlay: m,
             poster: c,
             loop: !0,
             muted: !0,

@@ -460,12 +460,12 @@ var ej = n(769015),
     e1 = n(616356),
     e2 = n(650338),
     e3 = n(753070),
-    e5 = n(900795);
-function e6(e) {
+    e6 = n(900795);
+function e4(e) {
     let { className: t, color: n, ...i } = e;
-    return (0, r.jsx)(V.E, { className: l()({ [e5.Q]: null == n }, t), color: n, ...i });
+    return (0, r.jsx)(V.E, { className: l()({ [e6.Q]: null == n }, t), color: n, ...i });
 }
-var e4 = n(976860),
+var e5 = n(976860),
     e7 = n(95701),
     e8 = n(280450),
     e9 = n(734057),
@@ -742,7 +742,7 @@ let t3 = a.memo(function (e) {
             let e = _?.id;
             (0, tx.pK)({ gameApplicationId: e, buttonVariant: "shop" });
             let t = B.BVt.COLLECTIBLES_SHOP_WITH_TAB(tJ.G2.GAME_SERVERS);
-            (0, e4.pX)(null != e ? `${t}&${tJ.tD}=${e}` : t);
+            (0, e5.pX)(null != e ? `${t}&${tJ.tD}=${e}` : t);
         }, [_?.id]),
         ei = a.useRef(null),
         [er, ea] = a.useState(!1);
@@ -757,16 +757,16 @@ let t3 = a.memo(function (e) {
         }, [R]));
     let es = null == v || null == m ? null : (0, r.jsx)(t7, { applicationId: v.id }),
         el = V
-            ? (0, r.jsx)(t4, { gameName: J, runningGameId: _?.id, isGameServerHostingInShopEnabled: U, onClick: en })
+            ? (0, r.jsx)(t5, { gameName: J, runningGameId: _?.id, isGameServerHostingInShopEnabled: U, onClick: en })
             : j
-              ? (0, r.jsx)(t6, {
+              ? (0, r.jsx)(t4, {
                     tooltipText: Q.intl.formatToPlainString(tW.default.YhnUVO, { gameName: J }),
                     badgeContent: A.M.GAME_SERVER_GAME_DETECTION_UPSELL_NEW_BADGE,
                     onClick: ee,
                     onViewed: () => (0, tx.ET)({ gameApplicationId: _?.id, buttonVariant: "admin" }),
                 })
               : W
-                ? (0, r.jsx)(t6, {
+                ? (0, r.jsx)(t4, {
                       tooltipText: Q.intl.formatToPlainString(tW.default.lwwiHE, { gameName: J }),
                       badgeContent: A.M.GAME_SERVER_GAME_DETECTION_UPSELL_NEW_BADGE,
                       onClick: et,
@@ -830,7 +830,7 @@ let t3 = a.memo(function (e) {
         eE =
             !O || R
                 ? null
-                : (0, r.jsx)(t5, {
+                : (0, r.jsx)(t6, {
                       runningGame: _,
                       startAuthorization: function () {
                           C({ analyticsLocations: b }) === tQ._.RPC &&
@@ -872,7 +872,7 @@ let t3 = a.memo(function (e) {
         ],
     });
 });
-function t5(e) {
+function t6(e) {
     let { runningGame: t, startAuthorization: n, connectionApp: i, ref: a } = e;
     return (0, r.jsx)(ty.A, {
         ref: a,
@@ -888,7 +888,7 @@ function t5(e) {
         tooltipText: Q.intl.string(Q.t.sbdnpw),
     });
 }
-function t6(e) {
+function t4(e) {
     let {
             tooltipText: t,
             onClick: n,
@@ -925,13 +925,13 @@ function t6(e) {
         ],
     });
 }
-function t4(e) {
+function t5(e) {
     let { gameName: t, runningGameId: n, isGameServerHostingInShopEnabled: i, onClick: a } = e,
         s = (function (e) {
             let { location: t } = e;
             return tB.useConfig({ location: t }).enabled;
         })({ location: "activity-panel" });
-    return (0, r.jsx)(t6, {
+    return (0, r.jsx)(t4, {
         tooltipText: Q.intl.formatToPlainString(tW.default.oZ4ZFn, { gameName: t }),
         coachmarkContent: A.M.GAME_SERVER_HOSTING_IN_SHOP_DETECTION_COACHMARK,
         badgeContent: A.M.GAME_SERVER_HOSTING_IN_SHOP_DETECTION_NEW_BADGE,
@@ -1529,7 +1529,7 @@ function nk(e) {
                                 if (s) return void m.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
                                 if (t.intent !== t0.sV.MAIN) {
                                     let e = (0, ey.A)(t.surface);
-                                    null != e && (0, e4.pX)(B.BVt.CHANNEL((0, eD.A)(t.surface) ?? B.ME, e));
+                                    null != e && (0, e5.pX)(B.BVt.CHANNEL((0, eD.A)(t.surface) ?? B.ME, e));
                                     return;
                                 }
                                 eb.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: t0.y0.FOCUSED });
@@ -1564,7 +1564,7 @@ function nF(e) {
                             className: ny.qi,
                             children: [
                                 (0, r.jsx)(p.t, { size: "xxs", color: eR.k0.PREMIUM_TIER_2 }),
-                                (0, r.jsx)(e6, { className: ny.s, variant: "footnote/semibold", children: i }),
+                                (0, r.jsx)(e4, { className: ny.s, variant: "footnote/semibold", children: i }),
                             ],
                         }),
                 ],

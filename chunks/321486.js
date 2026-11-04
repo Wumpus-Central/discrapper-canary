@@ -5,8 +5,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(29477),
     o = n(17928),
-    c = n(866323),
-    d = n(97808),
+    d = n(866323),
+    c = n(97808),
     u = n(778712),
     h = n(939249),
     p = n(821609),
@@ -76,7 +76,7 @@ function U(e) {
             ((0, N.n0)({ channelId: H.channelId, interactionType: "tv_clicked_stream_preview" }), (0, b.k)(H));
         }, [H]),
         ei = { left: `${n.originX}%`, top: `${n.originY}%`, transform: n.matrix },
-        el = (0, c.p)(H, {
+        el = (0, d.p)(H, {
             keys: () => `${D.sequence}:${(0, g._z)(H)}`,
             initial: M,
             from: L,
@@ -100,7 +100,7 @@ function U(e) {
         children: [
             (0, i.jsx)(E.A, {
                 title: q,
-                image: (0, i.jsx)(d.eu, { src: X?.getAvatarURL(K.guildId, 96), size: u._3.SIZE_48, "aria-hidden": !0 }),
+                image: (0, i.jsx)(c.eu, { src: X?.getAvatarURL(K.guildId, 96), size: u._3.SIZE_48, "aria-hidden": !0 }),
                 forceOpen: B,
                 spacing: a,
                 children: (0, i.jsxs)(h.D, {

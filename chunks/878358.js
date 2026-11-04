@@ -1,4 +1,4 @@
-a.d(t, { A: () => H });
+a.d(t, { A: () => U });
 var s = a(477900),
     i = a(582128),
     r = a(503698),
@@ -138,7 +138,7 @@ function G(e) {
         ],
     });
 }
-function U(e) {
+function H(e) {
     let { isCheckpointEnabled: t, onClick: a } = e;
     return t && null != a
         ? (0, s.jsx)(x.D, {
@@ -153,7 +153,7 @@ function U(e) {
               children: (0, s.jsx)(G, { isCheckpointEnabled: t }),
           });
 }
-function H(e) {
+function U(e) {
     let { checkpointData: t, onFooterClick: a } = e,
         { character: r, stats: c, cardColorPalette: d } = t,
         l = null != r && null != c,
@@ -173,7 +173,7 @@ function H(e) {
                 : null,
             null != r ? (0, s.jsx)(v.A, { character: r }) : null,
             null != h ? (0, s.jsx)(P, { stats: h }) : null,
-            (0, s.jsx)(U, { isCheckpointEnabled: u, onClick: a }),
+            (0, s.jsx)(H, { isCheckpointEnabled: u, onClick: a }),
         ],
     });
 }

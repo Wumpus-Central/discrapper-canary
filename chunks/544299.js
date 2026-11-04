@@ -5,8 +5,8 @@ var i = n(477900),
     s = n(765178),
     r = n(315710),
     o = n(834730),
-    c = n(775602),
-    d = n(625494),
+    d = n(775602),
+    c = n(625494),
     u = n(446243),
     h = n(558076),
     p = n(743943),
@@ -33,7 +33,7 @@ function I(e) {
 }
 function N(e) {
     let t = I(e),
-        n = (0, a.bG)([c.Ay], () => c.Ay.keyboardModeEnabled);
+        n = (0, a.bG)([d.Ay], () => d.Ay.keyboardModeEnabled);
     return t && n;
 }
 function v(e) {
@@ -54,7 +54,7 @@ function v(e) {
     );
 }
 function E(e) {
-    let { channelId: t, containerRef: n, roomWidth: a, children: c } = e,
+    let { channelId: t, containerRef: n, roomWidth: a, children: d } = e,
         x = I(t),
         v = N(t),
         E = l.useId(),
@@ -64,9 +64,9 @@ function E(e) {
         l.useEffect(() => {
             if (x)
                 return (
-                    d._.subscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, e),
+                    c._.subscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, e),
                     () => {
-                        d._.unsubscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, e);
+                        c._.unsubscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, e);
                     }
                 );
             function e() {
@@ -120,7 +120,7 @@ function E(e) {
                         }),
                     }),
                 }),
-            c,
+            d,
             null != b && (0, i.jsx)(p.A, { position: b, roomWidth: a }),
         ],
     });

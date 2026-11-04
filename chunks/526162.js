@@ -4,15 +4,15 @@ var i = n(17928),
     r = n(793943),
     l = n(287809),
     a = n(174459),
-    c = n(24482),
-    o = n(350972),
+    o = n(24482),
+    c = n(350972),
     u = n(652215),
     d = n(49999),
     m = n(202541);
-let h = { client: { desktop: o.LW.DEFAULT, coachmarkImpressions: 0 } },
+let h = { client: { desktop: c.LW.DEFAULT, coachmarkImpressions: 0 } },
     g = !0;
 function f() {
-    (g = !c.Ay.canUsePremiumAppIcons(l.default.getCurrentUser())) && x(o.LW.DEFAULT);
+    (g = !o.Ay.canUsePremiumAppIcons(l.default.getCurrentUser())) && x(c.LW.DEFAULT);
 }
 function x(e) {
     ((h.client.desktop = e),
@@ -20,11 +20,11 @@ function x(e) {
             a.default.track(u.HAw.APP_ICON_UPDATED, {
                 icon_id: e,
                 user_premium_tier: l.default.getCurrentUser()?.premiumType,
-                icon_premium_tier: e !== o.LW.DEFAULT ? m.PremiumTypes.TIER_2 : null,
+                icon_premium_tier: e !== c.LW.DEFAULT ? m.PremiumTypes.TIER_2 : null,
             }));
 }
 function p() {
-    g && (h.client = { desktop: o.LW.DEFAULT, coachmarkImpressions: 2 });
+    g && (h.client = { desktop: c.LW.DEFAULT, coachmarkImpressions: 2 });
 }
 class A extends i.Ay.PersistedStore {
     static displayName = "AppIconPersistedStoreState";

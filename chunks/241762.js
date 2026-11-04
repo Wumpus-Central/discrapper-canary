@@ -17,9 +17,9 @@ function i(e) {
             onCtxMenuOpen: u,
             onCtxMenuSelect: c,
             onGameSheetOpen: d,
-            onGameSheetClose: p,
+            onGameSheetClose: m,
         } = e,
-        m = s.useMemo(
+        p = s.useMemo(
             () => ({
                 isExpanded: n,
                 isExpansionAnimationComplete: r,
@@ -28,9 +28,9 @@ function i(e) {
                 onCtxMenuOpen: u,
                 onCtxMenuSelect: c,
                 onGameSheetOpen: d,
-                onGameSheetClose: p,
+                onGameSheetClose: m,
             }),
-            [n, r, i, o, u, c, d, p],
+            [n, r, i, o, u, c, d, m],
         );
-    return (0, l.jsx)(a.Provider, { value: m, children: t });
+    return (0, l.jsx)(a.Provider, { value: p, children: t });
 }

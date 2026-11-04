@@ -6,8 +6,8 @@ var l = n(834730),
     s = n(722260),
     r = n(563312),
     o = n(974930),
-    c = n(103355),
-    d = n(105292),
+    d = n(103355),
+    c = n(105292),
     u = n(856598);
 function h(e) {
     let { guildEvent: t, recurrenceId: n } = e,
@@ -18,10 +18,10 @@ function h(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(a.Ay.Divider, { className: u.yF }),
-            (0, i.jsx)(c.L, {
+            (0, i.jsx)(d.L, {
                 startTime: h.startTime.toISOString(),
                 status: m ?? t.status,
-                liveText: d.intl.string(d.t.kM6e4G),
+                liveText: c.intl.string(c.t.kM6e4G),
                 className: u.aF,
                 textVariant: "body-md/semibold",
                 eventType: t.entity_type,
