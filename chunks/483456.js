@@ -6,7 +6,7 @@ n.d(
     t,
     {},
     {
-        L: function (e) {
+        h: function (e) {
             let { occluded: t, children: n } = e,
                 r = (0, a.S)(),
                 s = !t && r ? [i.M.TINY_BRONCO] : [];

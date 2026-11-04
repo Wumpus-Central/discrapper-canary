@@ -290,8 +290,8 @@ var eJ = n(176781),
     e1 = n(780964),
     e2 = n(766075),
     e3 = n(734066),
-    e6 = n(419490),
-    e5 = n(409067),
+    e5 = n(419490),
+    e6 = n(409067),
     e8 = n(271597),
     e7 = n(534514),
     e4 = n(475358),
@@ -387,11 +387,11 @@ var ty = n(696016),
 function tI(e) {
     let { onOpenGallery: t, onOpenSettings: n, onClose: a, setPopoutRef: r } = e;
     (0, tc.A)();
-    let s = (0, d.yK)([e6.Ay], () => Object.values(e6.Ay.getClips())),
-        o = (0, d.bG)([e6.Ay], () => e6.Ay.getSettings()),
-        u = (0, d.bG)([e6.Ay], () => e6.Ay.getNewClipIds()),
+    let s = (0, d.yK)([e5.Ay], () => Object.values(e5.Ay.getClips())),
+        o = (0, d.bG)([e5.Ay], () => e5.Ay.getSettings()),
+        u = (0, d.bG)([e5.Ay], () => e5.Ay.getNewClipIds()),
         c = (0, to.H)(),
-        m = (0, d.bG)([e6.Ay], () => e6.Ay.getEnableAutoclipping()),
+        m = (0, d.bG)([e5.Ay], () => e5.Ay.getEnableAutoclipping()),
         h = (0, d.bG)([ta.Ay], () => ta.Ay.getKeybindForAction(tT.hCu.SAVE_CLIP)),
         f = i.useCallback(
             (e) => {
@@ -401,7 +401,7 @@ function tI(e) {
         ),
         p = !o.showPovClipsInGallery,
         g = i.useMemo(() => {
-            let e = s.filter((e) => e.type === ty.nQ.CLIP && "" !== e.thumbnail && (!p || !(0, e5.kD)(e)));
+            let e = s.filter((e) => e.type === ty.nQ.CLIP && "" !== e.thumbnail && (!p || !(0, e6.kD)(e)));
             return (e.sort((e, t) => t.createdAt - e.createdAt), e);
         }, [s, p]),
         A = i.useMemo(() => g.slice(0, 16), [g]),
@@ -557,15 +557,15 @@ function tS(e) {
 function tR(e) {
     let { onClose: t, popoutContainerRef: n } = e,
         a = (0, e3.sw)(),
-        r = !(0, d.bG)([e6.Ay], () => e6.Ay.getSettings().showPovClipsInGallery),
+        r = !(0, d.bG)([e5.Ay], () => e5.Ay.getSettings().showPovClipsInGallery),
         s = (0, d.bG)(
-            [e6.Ay],
+            [e5.Ay],
             () => {
-                let e = e6.Ay.getNewClipIds();
+                let e = e5.Ay.getNewClipIds();
                 return r
                     ? e.filter((e) => {
-                          let t = e6.Ay.getClipById(e);
-                          return null != t && !(0, e5.kD)(t);
+                          let t = e5.Ay.getClipById(e);
+                          return null != t && !(0, e6.kD)(t);
                       }).length
                     : e.length;
             },
@@ -727,8 +727,8 @@ function t1(e) {
 }
 var t2 = n(397562),
     t3 = n(206835),
-    t6 = n(183555),
-    t5 = n(465318),
+    t5 = n(183555),
+    t6 = n(465318),
     t8 = n(527212),
     t7 = n(702476),
     t4 = n(718019),
@@ -747,7 +747,7 @@ var t2 = n(397562),
     nc = n(62119);
 function nm(e) {
     let { user: t, isVisible: n } = e,
-        { trackUserProfileAction: i } = (0, t6.NJ)();
+        { trackUserProfileAction: i } = (0, t5.NJ)();
     return nu.p5
         ? (0, l.jsx)(no.A, {
               text: eL.intl.string(eL.t.y5MwJy),
@@ -1389,13 +1389,13 @@ function n3(e) {
               ],
           });
 }
-var n6 = n(894768),
-    n5 = n(818348),
+var n5 = n(894768),
+    n6 = n(818348),
     n8 = n(709516);
 function n7() {
-    let e = (0, d.bG)([n6.A], () => n6.A.getStatus()),
+    let e = (0, d.bG)([n5.A], () => n5.A.getStatus()),
         t = (0, nd.MU)(e) ?? "",
-        n = e === n5.cl.INVISIBLE || e === n5.cl.OFFLINE;
+        n = e === n6.cl.INVISIBLE || e === n6.cl.OFFLINE;
     return (0, l.jsxs)("div", {
         className: n8.k,
         children: [
@@ -1473,7 +1473,7 @@ function ls(e) {
         m = __OVERLAY__,
         p = (0, t8.Ay)(t.id, void 0),
         { analyticsLocations: g } = (0, P.Ay)(w.A.USER_PROFILE_ACCOUNT_POPOUT),
-        v = (0, t6.pb)({ layout: "ACCOUNT_POPOUT", userId: t.id, guildId: void 0 });
+        v = (0, t5.pb)({ layout: "ACCOUNT_POPOUT", userId: t.id, guildId: void 0 });
     (0, t2.A)(g, p, n2.R7.ACCOUNT_POPOUT);
     let { ref: E } = (0, eb.Ay)(),
         { isHoveringOrFocusing: C, isHovering: _ } = (0, th.A)(E);
@@ -1709,7 +1709,7 @@ function ls(e) {
         q = i.useCallback(() => {
             (R(), K());
         }, [R, K]),
-        Y = t5.A.useConfig({ location: "UserProfileAccountPopout" }).enabled,
+        Y = t6.A.useConfig({ location: "UserProfileAccountPopout" }).enabled,
         Q = (0, ng.Hy)({ location: "UserProfileAccountPopout" }),
         $ = (0, eI.FX)("UserProfileAccountPopout"),
         X = (0, tH.A)((e) => e.shouldScrollToOrbsMenuItem),
@@ -1723,7 +1723,7 @@ function ls(e) {
         et = i.useId();
     return (0, l.jsx)(P.f5, {
         value: g,
-        children: (0, l.jsx)(t6.of, {
+        children: (0, l.jsx)(t5.of, {
             value: v,
             openedAt: o,
             fetchStartedAt: p?.fetchStartedAt,
@@ -2251,15 +2251,15 @@ function l3(e) {
         ],
     });
 }
-var l6 = n(843010),
-    l5 = n(764231),
+var l5 = n(843010),
+    l6 = n(764231),
     l8 = n(208223);
 function l7(e) {
     let { groupName: t, targetElementRef: n } = e,
         i = tY(),
         a = (0, d.bG)([tV.Ay], () => tV.Ay.useReducedMotion),
         r = (0, tH.A)((e) => e.isOpen),
-        s = (0, l6.G)();
+        s = (0, l5.G)();
     return a || null == i || r || s
         ? null
         : (0, l.jsx)(lL.zJ, {
@@ -2291,7 +2291,7 @@ function l4(e) {
         }, [n]),
         c = tq.VD[t],
         m = eL.intl.formatToPlainString(eL.t.ewkaVR, {
-            timeMilestone: (0, l5.T)(c.id, c.tenureReqNumMonths)?.toLocaleLowerCase(),
+            timeMilestone: (0, l6.T)(c.id, c.tenureReqNumMonths)?.toLocaleLowerCase(),
         }),
         h = [{ text: eL.intl.string(eL.t.RzWDqY), variant: "primary", onClick: u }];
     return (0, l.jsx)(nZ.A, {
@@ -2888,7 +2888,7 @@ function iB(e) {
         }, [r]),
         g = ed.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, iH.A)("1793819438919", !0);
+        let e = (0, iH.A)("1793819550911", !0);
         t =
             null != e
                 ? eL.intl.formatToPlainString(eL.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
@@ -2917,10 +2917,10 @@ function iB(e) {
                     groupName: n1.m.ACCOUNT_NAME_ZONE,
                     children: (e) => {
                         let { visibleContent: t, markAsDismissed: n } = e;
-                        return t === c.M.TINY_BRONCO && null != j.PL
+                        return t === c.M.TINY_BRONCO && null != j.hm
                             ? (0, l.jsx)(i.Suspense, {
                                   fallback: null,
-                                  children: (0, l.jsx)(j.PL, { markAsDismissed: n, targetElementRef: m }),
+                                  children: (0, l.jsx)(j.hm, { markAsDismissed: n, targetElementRef: m }),
                               })
                             : t === c.M.PRIVATE_PROFILE_COACHMARK
                               ? (0, l.jsx)(iV, { markAsDismissed: n, targetElementRef: m })
@@ -4163,8 +4163,8 @@ function i$(e) {
                 shouldShowOutputDeviceChangedTooltip: "output" === y,
                 dismissTooltips: T,
             }),
-            null != j.Lf
-                ? (0, l.jsx)(i.Suspense, { fallback: I(), children: (0, l.jsx)(j.Lf, { occluded: E, children: I }) })
+            null != j.hE
+                ? (0, l.jsx)(i.Suspense, { fallback: I(), children: (0, l.jsx)(j.hE, { occluded: E, children: I }) })
                 : I(),
         ],
     });
@@ -4203,8 +4203,8 @@ function iJ() {
             activities: m,
             streaming: h,
             status: f,
-        } = (0, d.cf)([n6.A], () => {
-            let e = n6.A.getActivities();
+        } = (0, d.cf)([n5.A], () => {
+            let e = n5.A.getActivities();
             return {
                 activities: e,
                 streaming:
@@ -4213,7 +4213,7 @@ function iJ() {
                         let { type: t } = e;
                         return t === u.$.STREAMING;
                     }),
-                status: n6.A.getStatus(),
+                status: n5.A.getStatus(),
             };
         }),
         p = (0, d.bG)([lg.A], () => lg.A.getAnyStreamForUser(s)),

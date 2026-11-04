@@ -67,7 +67,7 @@ n.d(
                 n = (0, T.a)(),
                 a = e === g.w_.NSFW_SERVER || e === g.w_.NSFW_SERVER_INVITE || e === g.w_.NSFW_SERVER_INVITE_EMBED,
                 d = (0, r.bG)([h.default], () => h.default.getCurrentUser()?.nsfwAllowed === !1),
-                c = (0, o.aX)(i.t.AGE_GATED_SPACES) && a ? (0, l.f)(!0, "") : null;
+                c = (0, o.aX)(i.t.AGE_GATED_SPACES) && a ? (0, l.Z)(!0, "") : null;
             if (e === g.w_.JOIN_LARGE_GUILD_UNDERAGE || e === g.w_.ACCESS_LARGE_GUILD_UNDERAGE) {
                 let n = e === g.w_.JOIN_LARGE_GUILD_UNDERAGE ? N.t["u/xsK9"] : N.t.MjQbfi,
                     i = {
@@ -129,7 +129,7 @@ n.d(
                     if (!(0, o.aX)(i.t.AGE_GATED_SPACES)) return null;
                     let t = (0, c.wh)(e),
                         n = e?.name ?? "";
-                    return t || "" !== n ? (0, l.f)(t, n) : null;
+                    return t || "" !== n ? (0, l.Z)(t, n) : null;
                 })(e),
                 E = {
                     adult: N.intl.string(n ? N.t.ZtuRts : N.t.E4Cd5I),

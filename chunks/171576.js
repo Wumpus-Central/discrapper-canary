@@ -59,7 +59,7 @@ var i,
         (r.AGE_RESTRICTED_SERVERS_ACCESS_SETTINGS = "age_restricted_servers_access_settings"),
         (r.FAMILY_CENTER_CONNECTION = "family_center_connection"),
         (r.PARENTAL_CONSENT_LOCKOUT = "parental_consent_lockout"),
-        (r.TINY_BRONCO_POPOVER = "tiny_bronco_popover"),
+        (r.AGE_NOTICE_POPOVER = "tiny_bronco_popover"),
         r),
     h =
         (((a = {})[(a.PRIMARY = 1)] = "PRIMARY"),

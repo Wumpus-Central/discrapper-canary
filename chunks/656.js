@@ -22,7 +22,7 @@ function g(t) {
             confirm: N,
             goBackIsPrimary: h,
         } = (function (t) {
-            let e = (0, d.i)()[t],
+            let e = (0, d.K)()[t],
                 n = { text: A.intl.string(A.t.FDSSia), joins: !1 };
             switch (t) {
                 case E.M$.ADULT:

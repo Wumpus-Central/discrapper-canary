@@ -8,12 +8,12 @@ n.d(
     t,
     {},
     {
-        n: function (e) {
-            return i.getConfig({ location: e }).enabled;
-        },
-        w: function (e) {
+        a: function (e) {
             let { enabled: t } = i.useConfig({ location: e });
             return t;
+        },
+        x: function (e) {
+            return i.getConfig({ location: e }).enabled;
         },
     },
 );

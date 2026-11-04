@@ -1,4 +1,4 @@
-n.d(t, { Lf: () => i.L, PL: () => m, Wt: () => s.Wt, LH: () => s.LH });
+n.d(t, { hE: () => i.h, hm: () => m, Wt: () => s.Wt, LH: () => s.LH });
 var i = n(483456),
     s = n(766586),
     r = n(477900),
@@ -19,7 +19,7 @@ function m(e) {
     let { markAsDismissed: t, targetElementRef: n } = e,
         i = (0, C.yM)(),
         s = l.useCallback(() => {
-            (t(E.i.TAKE_ACTION), u.A.showAgeVerificationGetStartedModal({ entryPoint: h.q1.TINY_BRONCO_POPOVER }));
+            (t(E.i.TAKE_ACTION), u.A.showAgeVerificationGetStartedModal({ entryPoint: h.q1.AGE_NOTICE_POPOVER }));
         }, [t]),
         m = l.useCallback(() => {
             (t(E.i.TAKE_ACTION), u.A.openUrl(d.A.getArticleURL(g.MVz.AGE_VERIFICATION_LEARN_MORE)));
