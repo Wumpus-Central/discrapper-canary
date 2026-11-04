@@ -16,8 +16,8 @@
     --custom-dvp-playhead-shadow: 0 0 0 2px var(--background-brand), 0 0 var(--space-4) var(--background-brand);
     --custom-dvp-sheen-content: none;
     --custom-dvp-sheen-play-state: paused;
-    --custom-dvp-row-bg: linear-gradient(135deg, var(--opacity-white-8), transparent 60%), var(--opacity-black-68);
-    --custom-dvp-row-blur: var(--space-8);
+    --custom-dvp-row-bg: none;
+    --custom-dvp-row-blur: 0;
     --custom-dvp-row-radius: var(--radius-md);
     --custom-dvp-button-radius: var(--radius-sm);
     --custom-dvp-hover-bg: radial-gradient(ellipse at center, var(--opacity-blurple-16), transparent 75%);
@@ -137,7 +137,6 @@
     background-color: var(--background-surface-high);
     border-radius: var(--radius-sm);
     box-shadow: inset 0 0 0 1px var(--custom-dvp-preview-border, var(--opacity-blurple-32)), var(--shadow-high);
-    color: var(--text-default);
     font-variant-numeric: tabular-nums;
     padding: var(--space-4) var(--space-8)
 }
@@ -262,7 +261,6 @@
     background-color: var(--background-surface-high);
     border-radius: var(--radius-sm);
     box-shadow: inset 0 0 0 1px var(--custom-dvp-preview-border, var(--opacity-blurple-32)), var(--shadow-high);
-    color: var(--text-default);
     font-family: Roboto, Helvetica Neue, Arial, sans-serif;
     font-variant-numeric: tabular-nums;
     padding: var(--space-4) var(--space-8);
@@ -364,4 +362,4 @@
     }
 }
 
-/*# sourceMappingURL=936090.3653985a5852e8d8.css.map*/
+/*# sourceMappingURL=936090.7878f6081ccb197c.css.map*/
