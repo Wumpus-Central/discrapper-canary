@@ -1,6 +1,6 @@
 (n.r(t),
     n.d(t, {
-        OAuth2AuthorizeModal: () => e5,
+        OAuth2AuthorizeModal: () => e6,
         getOAuth2AuthorizeProps: () => tr,
         OAuth2AuthorizePage: () => e4,
         openOAuth2Modal: () => ti,
@@ -602,7 +602,7 @@ function e1(e) {
 }
 var e2 = n(613057),
     e3 = n(292502);
-let e6 = (0, F.Fe)({
+let e5 = (0, F.Fe)({
     createPromise: () =>
         Promise.all([
             n.e("166171"),
@@ -718,13 +718,13 @@ let e6 = (0, F.Fe)({
             n.e("76705"),
             n.e("401827"),
             n.e("836545"),
-            n.e("621624"),
             n.e("489949"),
             n.e("858514"),
             n.e("344265"),
             n.e("637721"),
             n.e("716092"),
             n.e("784041"),
+            n.e("621624"),
             n.e("371933"),
             n.e("147518"),
             n.e("547646"),
@@ -830,7 +830,7 @@ function e4() {
     }
     return (0, i.jsx)(eJ.$, {
         removeChildWrapper: !0,
-        children: (0, i.jsx)(e5, {
+        children: (0, i.jsx)(e6, {
             transitionState: I.i.ENTERED,
             ...t,
             showLogout: !0,
@@ -839,7 +839,7 @@ function e4() {
         }),
     });
 }
-function e5(e) {
+function e6(e) {
     let {
             label: t,
             title: n,
@@ -1061,7 +1061,7 @@ function te(e) {
         }, [eq?.scopes, D, e$]),
         e2 = r.useMemo(() => (e$ ? E.iu(eq?.permissions ?? 0) : P) ?? Z.x3, [eq?.permissions, P, e$]),
         e4 = r.useRef(!1),
-        [e5, te] = r.useState(ed ?? []),
+        [e6, te] = r.useState(ed ?? []),
         [tt, tn] = r.useState(null != ed && ed.length > 0);
     ((0, d.Ay)(() => {
         let e = $.default.getAnalyticsToken();
@@ -1115,7 +1115,7 @@ function te(e) {
                         guildId: eY === u.b.GUILD_INSTALL && null != eb ? eb : void 0,
                         channelId: eY === u.b.GUILD_INSTALL && null != eP ? eP : void 0,
                     });
-                    if ((e && (await (0, w.Yx)(A, e5)), null != q))
+                    if ((e && (await (0, w.Yx)(A, e6)), null != q))
                         (q({ application: eI?.application, location: n.location, guild: eW, scopes: eZ, canceled: t }),
                             eo?.());
                     else if (null != n.location) {
@@ -1133,7 +1133,7 @@ function te(e) {
                         eO(!1));
                 }
             },
-            [ee, q, eI?.application, eW, eo, A, eZ, f, I, p, m, g, S, e2, ew, eb, eY, eE, eP, e5],
+            [ee, q, eI?.application, eW, eo, A, eZ, f, I, p, m, g, S, e2, ew, eb, eY, eE, eP, e6],
         ),
         ta = r.useRef(!1),
         ts = r.useCallback(async () => {
@@ -1273,7 +1273,7 @@ function te(e) {
             break;
         case "SELECT_INSTALL_TYPE":
             if (null == ez) return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e9, {}) };
-            ((t = (0, i.jsx)(e6, {
+            ((t = (0, i.jsx)(e5, {
                 application: ez,
                 onSelect: function (e) {
                     (eK(e), ep(null), eg("AUTHORIZE_SCOPES"));
@@ -1359,7 +1359,7 @@ function te(e) {
                 (0, i.jsx)(em, {
                     application: eI.application,
                     scopes: eZ,
-                    disclosures: e5,
+                    disclosures: e6,
                     redirectUri: eI.redirect_uri ?? null,
                     approximateGuildCount: void 0 !== e ? e : null,
                     isEmbeddedFlow: W,
@@ -1439,7 +1439,7 @@ function tn(e, t) {
     (0, H._9)() ? B.A.openCreateGuildModal({ onSuccess: (n) => ti({ ...e, guildId: n }, t) }) : ti(e, t);
 }
 function ti(e, t) {
-    (0, O.openModal)((t) => (0, i.jsx)(e5, { ...t, ...e, callback: tt.bind(null, e) }), { onCloseCallback: t });
+    (0, O.openModal)((t) => (0, i.jsx)(e6, { ...t, ...e, callback: tt.bind(null, e) }), { onCloseCallback: t });
 }
 function tr(e) {
     let { hostname: t = "", host: n, pathname: i, search: r } = Q.A.toURLSafe(e) ?? {};

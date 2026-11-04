@@ -32,6 +32,7 @@ var T = n(681154),
     G = n(435558);
 let k = {
         JOIN_GUILD: "join_guild",
+        OPEN_CONNECTION: "open_connection",
         OPEN_GUILD: "open_guild",
         OPEN_GAME: "open_game",
         OPEN_URI: "open_uri",
