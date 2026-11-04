@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => g });
 var i = n(277057),
     r = n.n(i),
     a = n(192308),
@@ -17,12 +17,12 @@ n(327113);
 var I = n(652215),
     p = n(758836),
     m = n(682901);
-function T(e) {
+function g(e) {
     let {
             initialPlanId: t,
             followupSKUInfo: i,
-            onClose: T,
-            onComplete: g,
+            onClose: g,
+            onComplete: T,
             onSubscriptionConfirmation: S,
             analyticsLocations: N,
             analyticsObject: C,
@@ -50,11 +50,11 @@ function T(e) {
         Y = r()("payment-modal"),
         K = (0, f.mH)(P),
         $ = y || K !== (0, f.mH)(m.pe.TIER_2) ? null : A.A.getMarketingMomentPromotion(),
-        z = $?.rewardSkuIds[0] ?? null,
-        X = !1;
+        X = $?.rewardSkuIds[0] ?? null,
+        z = !1;
     function q() {
-        X ||
-            ((X = !0),
+        z ||
+            ((z = !0),
             h._.dispatch(I.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
             E.A.isDisplayingWowMomentConfirmation && E.A.isAnimated
                 ? setTimeout(() => {
@@ -343,7 +343,7 @@ function T(e) {
         n.e(186212),
         n.e(755936),
         n.e(147662),
-        n.e(312820),
+        n.e(316344),
         n.e(396705),
         n.e(274501),
         n.e(544571),
@@ -671,8 +671,8 @@ function T(e) {
                     skipConfirm: !!V,
                     paymentModalOnClose: (e) =>
                         (function (e, t) {
-                            X ||
-                                ((X = !0),
+                            z ||
+                                ((z = !0),
                                 h._.dispatch(I.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
                                 E.A.isDisplayingWowMomentConfirmation && E.A.isAnimated
                                     ? setTimeout(() => {
@@ -683,10 +683,10 @@ function T(e) {
                                 if (
                                     (null != t && t(),
                                     s.h.dispatch({ type: "PREMIUM_PAYMENT_MODAL_CLOSE", didSucceed: e }),
-                                    e && null != z && $.endDate >= new Date())
+                                    e && null != X && $.endDate >= new Date())
                                 ) {
-                                    await (0, c.RE)(z);
-                                    let e = u.A.getProduct(z);
+                                    await (0, c.RE)(X);
+                                    let e = u.A.getProduct(X);
                                     null != e &&
                                         (0, _.A)({
                                             product: e,
@@ -699,7 +699,7 @@ function T(e) {
                         })(e, Q),
                 },
                 unifiedCheckoutProviderProps: { analyticsSourceLocation: R, analyticsLocations: N },
-                checkoutHandlers: { onClose: T, onComplete: g },
+                checkoutHandlers: { onClose: g, onComplete: T },
                 giftContextProps: { isGift: y, giftMessage: D, giftStyle: b, giftingOrigin: v, giftRecipient: k },
                 tenantParams: {
                     confirmationFooter: L,

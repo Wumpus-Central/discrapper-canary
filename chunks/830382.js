@@ -119,25 +119,26 @@ n.d(
                 expectedCurrency: _,
                 analyticsLoadId: f,
                 isGift: m,
-                giftInfoOptions: T,
-                subscriptionPlanId: g,
+                giftInfoOptions: g,
+                subscriptionPlanId: T,
                 loadId: S,
                 countryCode: N,
                 quantity: C,
                 applyWalletBalance: O,
+                expectedPaymentLegs: R,
             } = { ...p, ...n };
             a.h.dispatch({ type: "SKU_PURCHASE_START", applicationId: e, skuId: t, isGift: m, loadId: S });
-            let R = (0, c.Fs)(e);
+            let L = (0, c.Fs)(e);
             try {
                 let e = {
                         gift: m,
-                        sku_subscription_plan_id: g,
+                        sku_subscription_plan_id: T,
                         gateway_checkout_context: await (0, E.ob)(i),
                         load_id: S,
-                        gift_info_options: T,
+                        gift_info_options: g,
                     },
                     n = u.A.getPromotionIdOverride();
-                if ((null != n && (e.promotion_id_override = n), R)) e.test_mode = !0;
+                if ((null != n && (e.promotion_id_override = n), L)) e.test_mode = !0;
                 else {
                     if (
                         null != i &&
@@ -154,7 +155,12 @@ n.d(
                     null != _ && (e.expected_currency = _),
                     (e.purchase_token = (0, h.r)()),
                     null != C && (e.quantity = C),
-                    (e.apply_wallet_balance = O ?? !1));
+                    (e.apply_wallet_balance = O ?? !1),
+                    null != R &&
+                        (e.expected_payment_legs = R.map((e) => {
+                            let { payment_gateway: t, amount: n } = e;
+                            return { payment_gateway: t, amount: n };
+                        })));
                 let s = await r.Bo.post({
                     url: I.Rsh.STORE_SKU_PURCHASE(t),
                     body: e,

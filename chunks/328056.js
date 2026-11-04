@@ -405,6 +405,7 @@ function $(e) {
             try {
                 let e, n, i, w;
                 if ((t(), r)) return;
+                let D = !0 === k ? R?.paymentLegs : null;
                 if (T === g.VVm.ONE_TIME)
                     (a()(null != _, "SKU must exist and be fetched."),
                         a()(null != R, "invoicePreview must exist."),
@@ -417,6 +418,7 @@ function $(e) {
                             giftInfoOptions: j,
                             quantity: L,
                             applyWalletBalance: k,
+                            expectedPaymentLegs: D,
                         })));
                 else {
                     let t;
@@ -456,6 +458,7 @@ function $(e) {
                             giftInfoOptions: j,
                             quantity: L,
                             applyWalletBalance: k,
+                            expectedPaymentLegs: D,
                         });
                     } else if (null != I && null != P && P.status === g.Dmq.PAST_DUE && null != A) {
                         let l = h.currency ?? R.currency;
@@ -481,8 +484,8 @@ function $(e) {
                             expectedRenewalPrice: t,
                         });
                 }
-                let { shouldReturnEarly: D } = l(e);
-                if (D) return;
+                let { shouldReturnEarly: U } = l(e);
+                if (U) return;
                 ("subscription" in e
                     ? (n = null != e.subscription ? E.A.createFromServer(e.subscription) : null)
                     : "entitlements" in e && (i = null != e.entitlements ? e.entitlements : void 0),
