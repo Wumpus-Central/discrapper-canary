@@ -42,7 +42,7 @@
 .guildsError_e8d03f {
     align-items: center;
     background-color: var(--background-base-low);
-    border: 2px solid var(--background-feedback-critical);
+    border: 2px solid var(--background-feedback-mod-critical);
     border-radius: var(--radius-md);
     box-sizing: border-box;
     color: var(--interactive-text-active);
@@ -54,7 +54,7 @@
 }
 
 .guildsError_e8d03f:hover {
-    background-color: var(--background-feedback-critical);
+    background-color: var(--background-feedback-mod-critical);
     color: var(--text-feedback-critical)
 }
 
@@ -208,7 +208,7 @@
 
 .folderPreviewGuildIconError__48112 {
     align-items: center;
-    background: var(--background-feedback-critical);
+    background: var(--background-feedback-mod-critical);
     color: var(--text-feedback-critical);
     display: flex;
     justify-content: center;
@@ -367,4 +367,4 @@
     outline: 2px solid Highlight
 }
 
-/*# sourceMappingURL=504129.d63455fabc0ff145.css.map*/
+/*# sourceMappingURL=504129.9746e804fdb15578.css.map*/

@@ -668,7 +668,7 @@
 
 .blockedNotice__46069 {
     align-items: center;
-    background: var(--background-feedback-critical);
+    background: var(--background-feedback-mod-critical);
     border: 1px solid var(--border-feedback-critical);
     border-radius: var(--radius-sm);
     display: flex;
@@ -688,4 +688,4 @@
     opacity: .6
 }
 
-/*# sourceMappingURL=b00a1e70fd5282c0.css.map*/
+/*# sourceMappingURL=598ec7757e1d3428.css.map*/

@@ -384,6 +384,7 @@ class Q extends F {
     fireClipsInitEvent() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (
+            !(0, p.ri)(f.Ay) ||
             !(0, M.T)() ||
             (!e &&
                 !f.Ay.getMediaEngine().supports(x.O5.UNIFIED_CAPTURE_BROKER) &&

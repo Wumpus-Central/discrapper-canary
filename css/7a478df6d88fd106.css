@@ -54,7 +54,7 @@
 }
 
 .errorCard_cb53a5 {
-    background: var(--background-feedback-critical);
+    background: var(--background-feedback-mod-critical);
     border-radius: var(--radius-sm);
     display: flex;
     flex-direction: column;
@@ -252,4 +252,4 @@
     border-radius: 42px
 }
 
-/*# sourceMappingURL=03f8dc0fd838b608.css.map*/
+/*# sourceMappingURL=7a478df6d88fd106.css.map*/

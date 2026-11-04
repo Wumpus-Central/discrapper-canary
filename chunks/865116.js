@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => c, xW: () => s });
+n.d(t, { Ay: () => c, gO: () => l, xW: () => s });
 var i,
     r = n(17928),
     a = n(73153),
@@ -10,8 +10,10 @@ var i,
         (i[(i.APP_COLLECTIONS = 4)] = "APP_COLLECTIONS"),
         (i[(i.SHOP = 5)] = "SHOP"),
         (i[(i.LIBDISCORE = 6)] = "LIBDISCORE"),
+        (i[(i.CLIPS = 7)] = "CLIPS"),
         i);
 let l = {
+        clips_ignore_platform_requirement: { label: "Ignore Clips platform requirement", category: 7 },
         visual_effect_view_overrides: { label: "Blur view overrides for designers to test with", category: 1 },
         obscure_blur_effect_explicit_content_enabled: {
             label: "Force explicit content obscure blur effect on for message media and embeds",

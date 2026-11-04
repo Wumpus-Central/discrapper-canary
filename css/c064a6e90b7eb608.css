@@ -229,7 +229,7 @@
 }
 
 .statusTagRed_e9cb00 {
-    background-color: var(--background-feedback-critical);
+    background-color: var(--background-feedback-mod-critical);
     color: var(--text-feedback-critical)
 }
 
@@ -397,12 +397,12 @@
 }
 
 .paymentTagPositive__1d3ca {
-    background-color: var(--background-feedback-positive);
+    background-color: var(--background-feedback-mod-positive);
     color: var(--text-feedback-positive)
 }
 
 .paymentTagCritical__1d3ca {
-    background-color: var(--background-feedback-critical);
+    background-color: var(--background-feedback-mod-critical);
     color: var(--text-feedback-critical)
 }
 
@@ -484,4 +484,4 @@
     padding-inline-start: 2px
 }
 
-/*# sourceMappingURL=3501d5f80595cf4e.css.map*/
+/*# sourceMappingURL=c064a6e90b7eb608.css.map*/

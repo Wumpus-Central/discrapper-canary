@@ -92,7 +92,7 @@
     anchor-name: --pinot-member-notice;
     anchor-scope: --pinot-member-notice;
     align-items: center;
-    background-color: var(--background-feedback-info);
+    background-color: var(--background-feedback-mod-info);
     border-bottom: 1px solid var(--border-feedback-info);
     display: flex;
     gap: var(--space-8);
@@ -134,7 +134,7 @@
 
 .arrow__04320:before {
     --custom-arrow-square-side: calc(var(--custom-arrow-height)*1.4142);
-    background: linear-gradient(var(--background-feedback-info), var(--background-feedback-info)), var(--background-base-lower);
+    background: linear-gradient(var(--background-feedback-mod-info), var(--background-feedback-mod-info)), var(--background-base-lower);
     border: 1px solid var(--border-feedback-info);
     box-sizing: border-box;
     content: "";
@@ -157,4 +157,4 @@
     text-decoration: underline
 }
 
-/*# sourceMappingURL=921528.f831c5a719745925.css.map*/
+/*# sourceMappingURL=921528.31cf5247cc9f6e8c.css.map*/

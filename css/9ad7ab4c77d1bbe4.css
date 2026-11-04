@@ -185,13 +185,13 @@
 }
 
 .editable__9c314.hasWarning__9c314 {
-    background-color: var(--background-feedback-warning);
+    background-color: var(--background-feedback-mod-warning);
     border-color: var(--border-feedback-warning)
 }
 
 .editable__9c314.hasWarning__9c314:has(:focus),
 .editable__9c314.hasWarning__9c314:hover {
-    background-color: var(--background-feedback-warning);
+    background-color: var(--background-feedback-mod-warning);
     border-color: var(--border-feedback-warning);
     outline: 2px solid var(--border-feedback-warning);
     outline-offset: -2px
@@ -217,4 +217,4 @@
     padding-block-start: var(--space-4)
 }
 
-/*# sourceMappingURL=736c81eff049e268.css.map*/
+/*# sourceMappingURL=9ad7ab4c77d1bbe4.css.map*/

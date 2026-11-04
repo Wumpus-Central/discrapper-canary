@@ -167,7 +167,7 @@ a:hover>.channel_e131a9 {
 
 .high-contrast-mode .button_e131a9 .buttonColor_e131a9.buttonActive_e131a9,
 .high-contrast-mode .button_e131a9.buttonColor_e131a9.buttonActive_e131a9 {
-    background-color: var(--background-feedback-positive);
+    background-color: var(--background-feedback-mod-positive);
     border-color: var(--text-feedback-positive);
     color: var(--text-feedback-positive)
 }
@@ -284,4 +284,4 @@ a:hover>.channel_e131a9 {
     padding-top: var(--space-4)
 }
 
-/*# sourceMappingURL=593586.5b1cddaf24755a1e.css.map*/
+/*# sourceMappingURL=593586.10fb354cf13a0e8d.css.map*/

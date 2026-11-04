@@ -48,7 +48,7 @@
 }
 
 .disabledCallout__04693 {
-    background: var(--background-feedback-critical);
+    background: var(--background-feedback-mod-critical);
     border: 1px solid var(--border-feedback-critical);
     border-radius: var(--radius-sm);
     padding: var(--space-8)
@@ -62,4 +62,4 @@
     margin-block-end: var(--space-8)
 }
 
-/*# sourceMappingURL=b8112257b6e4863c.css.map*/
+/*# sourceMappingURL=80c0f21c9cfd4175.css.map*/

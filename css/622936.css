@@ -18,7 +18,7 @@
 }
 
 .info_aea291 {
-    background-color: var(--background-feedback-info);
+    background-color: var(--background-feedback-mod-info);
     border: 1px solid var(--icon-feedback-info)
 }
 
@@ -27,7 +27,7 @@
 }
 
 .warning_aea291 {
-    background-color: var(--background-feedback-warning);
+    background-color: var(--background-feedback-mod-warning);
     border: 1px solid var(--icon-feedback-warning)
 }
 
@@ -38,4 +38,4 @@
     width: 20px
 }
 
-/*# sourceMappingURL=622936.fbeaed30a81cf742.css.map*/
+/*# sourceMappingURL=622936.fd482ed7d4593a2e.css.map*/

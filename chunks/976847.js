@@ -17084,7 +17084,7 @@ function hR(e) {
     let g = (0, hp.r)(tK.A.colors.BACKGROUND_SURFACE_HIGH).hex(),
         h = (0, hp.r)(tK.A.unsafe_rawColors.PRIMARY_160).hex(),
         x = (0, dl.M)(d) ? g : h,
-        E = u.to({ range: [0, 1], output: [x, (0, hp.r)(tK.A.colors.BACKGROUND_FEEDBACK_CRITICAL).hex()] });
+        E = u.to({ range: [0, 1], output: [x, (0, hp.r)(tK.A.colors.BACKGROUND_FEEDBACK_MOD_CRITICAL).hex()] });
     if (l) {
         if (i === u2.Hy.DEFAULT_CHANNELS) return (0, p.jsx)(gx, {});
         else if (i === u2.Hy.CUSTOMIZATION_QUESTIONS) return (0, p.jsx)(hh, {});
@@ -21851,8 +21851,8 @@ function fC(e) {
                           n.e("67491"),
                           n.e("808979"),
                           n.e("420643"),
-                          n.e("974049"),
                           n.e("280559"),
+                          n.e("974049"),
                           n.e("669006"),
                           n.e("98913"),
                           n.e("612811"),
@@ -21998,8 +21998,8 @@ function f_(e) {
                                               n.e("67491"),
                                               n.e("808979"),
                                               n.e("420643"),
-                                              n.e("974049"),
                                               n.e("280559"),
+                                              n.e("974049"),
                                               n.e("669006"),
                                               n.e("98913"),
                                               n.e("612811"),
