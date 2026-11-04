@@ -1,58 +1,62 @@
-n.d(t, { Ac: () => d, GE: () => g, Ny: () => u, aU: () => h, ox: () => o, y0: () => m });
-var i = n(636537),
-    l = n(913122),
-    s = n(593673);
+n.d(t, { Ac: () => d, GE: () => E, Ny: () => c, aU: () => f, ox: () => o, y0: () => _ });
+var l = n(636537),
+    r = n(913122),
+    i = n(593673);
 n(754674);
-let r = "draft:",
-    a = 0;
+let a = "draft:",
+    s = 0;
 function o(e, t, n) {
-    let i = {
-        id: `${r}${a++}`,
+    let l = {
+        id: `${a}${s++}`,
         position: { column: 0, order: 0 },
         requires_hydration: !1,
         default_title: t,
         locked: n,
     };
     switch (e) {
-        case s.a.IMAGE_TEXT:
-            return { ...i, type: e, config: { type: e, title: null, image_hash: null, text: null } };
-        case s.a.LEADERBOARD:
-        case s.a.WHITEBOARD:
-        case s.a.POPULAR_MUSIC:
-        case s.a.POPULAR_GAMES:
-            return { ...i, type: e, config: { type: e } };
+        case i.a.IMAGE_TEXT:
+            return { ...l, type: e, config: { type: e, title: null, image_hash: null, text: null } };
+        case i.a.LEADERBOARD:
+        case i.a.WHITEBOARD:
+        case i.a.POPULAR_MUSIC:
+        case i.a.POPULAR_GAMES:
+            return { ...l, type: e, config: { type: e } };
     }
 }
-let c = [s.a.POPULAR_MUSIC, s.a.LEADERBOARD, s.a.POPULAR_GAMES];
+let u = [[i.a.LEADERBOARD, i.a.WHITEBOARD], [i.a.POPULAR_GAMES]];
 function d(e) {
-    return c.flatMap((t, n) => {
-        let i = e.find((e) => e.type === t);
-        return null == i ? [] : [{ ...o(t, i.name, i.locked), position: { column: 0, order: n } }];
-    });
+    return u.flatMap((t, n) =>
+        t
+            .flatMap((t) => {
+                let n = e.find((e) => e.type === t);
+                return null == n ? [] : [n];
+            })
+            .map((e, t) => ({ ...o(e.type, e.name, e.locked), position: { column: n, order: t } })),
+    );
 }
-function u(e) {
-    return e.startsWith(r);
+function c(e) {
+    return e.startsWith(a);
 }
-function h(e, t) {
+function f(e, t) {
     let n = new Map();
     for (let e of t) n.set(e.type, (n.get(e.type) ?? 0) + 1);
     return e.filter((e) => (n.get(e.type) ?? 0) < e.max_instances);
 }
-function m(e) {
-    if (e.type === s.a.IMAGE_TEXT) {
+function _(e) {
+    if (e.type === i.a.IMAGE_TEXT) {
         let t = { type: e.type, text: e.text, title: e.title };
         return (void 0 !== e.image && (t.image = e.image), t);
     }
     return e;
 }
-function g(e, t) {
-    if (e instanceof i.oh)
-        for (let [n, i] of Object.entries(new l.LG({ status: e.status, body: e.body }).getAllFieldErrors())) {
-            let [e, l] = n.split(".");
+function E(e, t) {
+    if (e instanceof l.oh)
+        for (let [n, l] of Object.entries(new r.LG({ status: e.status, body: e.body }).getAllFieldErrors())) {
+            let [e, r] = n.split(".");
             if ("widgets" !== e) continue;
-            let s = Number(l),
-                r = Number.isInteger(s) ? t[s] : void 0,
-                a = i[0]?.message;
-            if (null != r && null != a) return { type: r.type, message: a };
+            let i = Number(r),
+                a = Number.isInteger(i) ? t[i] : void 0,
+                s = l[0]?.message;
+            if (null != a && null != s) return { type: a.type, message: s };
         }
 }
