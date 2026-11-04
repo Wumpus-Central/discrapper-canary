@@ -248,7 +248,14 @@ var Y = n(73825),
 function ei(e) {
     return (0, en.ii)(et.ej, e);
 }
-(n(207989), n(405018));
+((0, n(945810).mj)({
+    name: "2026-09-declarative-notification-settings-redesign",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+}),
+    n(436950),
+    n(405018));
 var er = n(159993),
     ea = n(756377),
     es = n(736130),
@@ -2026,8 +2033,8 @@ let eJ = new c.A("ConnectionStore"),
     e1 = null,
     e2 = !0,
     e3 = null,
-    e4 = null;
-async function e5(e) {
+    e5 = null;
+async function e4(e) {
     ((e0 = Date.now()), (e1 = e.sessionId), V.handleConnectionOpen());
     let t = {},
         n = s.w.get("discord_update_restart_timestamp"),
@@ -2049,7 +2056,7 @@ async function e5(e) {
             null != e && ((t = { guildId: e.getGuildId(), channelId: r }), (0, _.A)(r));
         } else (p.A.setLastSessionVoiceChannelId(null != r ? r : null), o.default.selectVoiceChannel(null));
     }
-    (H.update(t, !0), (e2 = !1), (e4 = null));
+    (H.update(t, !0), (e2 = !1), (e5 = null));
 }
 function e6() {
     H.update();
@@ -2112,10 +2119,10 @@ let tt = new te(l.h, {
         );
     },
     CONNECTION_OPEN: (e) => {
-        e5(e);
+        e4(e);
     },
     CONNECTION_RESUMED: function () {
-        e4 = null;
+        e5 = null;
     },
     CONNECTION_CLOSED: function () {
         (eJ.verbose("connection closed dispatched"), (e0 = Date.now()));
@@ -2127,7 +2134,7 @@ let tt = new te(l.h, {
     VOICE_CHANNEL_SELECT: function (e) {
         return (
             H.update({ guildId: e.guildId, channelId: e.channelId }),
-            (e4 = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
+            (e5 = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
             (0, N.isIOS)() &&
                 e3 === x.g6G.BACKGROUND &&
                 (null == e.channelId ? B.close(!0) : B.isClosed() && (j.V(!1), B.connect())),
@@ -2139,8 +2146,8 @@ let tt = new te(l.h, {
         return t.reduce((e, t) => {
             if (A.default.getId() !== t.userId) return e;
             if (t.sessionId === e1) {
-                if (null != e4)
-                    return (eJ.verbose("Ignoring voice state for own session due to VSU lock on channel:", e4), e);
+                if (null != e5)
+                    return (eJ.verbose("Ignoring voice state for own session due to VSU lock on channel:", e5), e);
                 H.setState({ guildId: t.guildId, channelId: t.channelId });
             } else {
                 if (t.guildId !== H.guildId) return e;
@@ -2159,7 +2166,7 @@ let tt = new te(l.h, {
     CALL_DELETE: function (e) {
         let { channelId: t } = e;
         if (t === H.channelId) {
-            if (e4 === t) return !1;
+            if (e5 === t) return !1;
             H.setState({ guildId: null, channelId: null });
         }
     },

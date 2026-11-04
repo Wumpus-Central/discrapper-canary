@@ -373,8 +373,8 @@ function e6(e) {
           })({ gameProfileEntry: n, gameApplication: u, gameIconSize: l, platformIconSizePx: s });
 }
 let e9 = L._3.SIZE_32,
-    e7 = [en.iq, en.tR, en.K7, en.sp, en.MK];
-function e8(e) {
+    e8 = [en.iq, en.tR, en.K7, en.sp, en.MK];
+function e7(e) {
     let t,
         { channel: n, textVariant: l, activities: o, applicationStream: u } = e,
         d = (0, s.bG)([a.default], () => a.default.getCurrentUser()),
@@ -518,7 +518,7 @@ function te(e) {
                 return (0, i.jsx)(en.mG, {
                     location: en.N5.FRIENDS_POPOUT,
                     className: ex.cV,
-                    children: e7.map((e, n) => (0, i.jsx)(e, { entry: t }, n)),
+                    children: e8.map((e, n) => (0, i.jsx)(e, { entry: t }, n)),
                 });
             }
             if ((0, Z.A)({ activities: n, status: p, applicationStream: N, voiceChannel: S })) {
@@ -533,7 +533,7 @@ function te(e) {
                     let { type: t } = e;
                     return t === G.$.PLAYING;
                 }) == null && null != S
-                    ? (0, i.jsx)(e8, {
+                    ? (0, i.jsx)(e7, {
                           channel: S,
                           textVariant: "body-xs/medium",
                           activities: n ?? [],
@@ -2037,8 +2037,8 @@ function t9(e) {
     });
 }
 t5.displayName = "OverlayVoiceCallElapsedTime";
-var t7 = n(594831),
-    t8 = n(645959),
+var t8 = n(594831),
+    t7 = n(645959),
     ne = n(812993),
     nt = n(602853),
     nn = n(713654),
@@ -2046,7 +2046,7 @@ var t7 = n(594831),
     ni = n(439372),
     nr = n(723176),
     ns = n(626584),
-    na = n(403010);
+    na = n(849335);
 n(95701);
 var no = n(280450),
     nu = n(973153);
@@ -2956,12 +2956,12 @@ function n4() {
         [l, a] = r.useState(""),
         d = l.trim().toLowerCase(),
         c =
-            ((e = (0, t7.Dz)()),
+            ((e = (0, t8.Dz)()),
             (0, s.yK)(
-                [t8.A, eE.A],
+                [t7.A, eE.A],
                 () => {
                     let t = [];
-                    for (let e of t8.A.getPrivateChannelIds()) {
+                    for (let e of t7.A.getPrivateChannelIds()) {
                         let n = eE.A.getChannel(e);
                         null != n && t.push({ channel: n, voiceStates: [] });
                     }
@@ -3251,8 +3251,8 @@ function n4() {
 }
 var n6 = n(776096),
     n9 = n(607567),
-    n7 = n(377802),
-    n8 = n(342952),
+    n8 = n(377802),
+    n7 = n(342952),
     le = n(676923),
     lt = n(342296),
     ln = n(669335),
@@ -3383,7 +3383,7 @@ function la(e) {
         ? null
         : (0, i.jsx)("div", {
               className: ll.X0,
-              children: (0, i.jsx)(n8.A, {
+              children: (0, i.jsx)(n7.A, {
                   users: l,
                   guildId: n ?? void 0,
                   maxUsers: Math.min(l.length, 4),
@@ -3493,7 +3493,7 @@ function lo(e) {
         {
             Component: H,
             events: { onMouseEnter: Y, onMouseLeave: K },
-        } = (0, n7.O)();
+        } = (0, n8.O)();
     function z() {
         let e = f ? eZ.intl.string(eZ.t["6vrfgt"]) : eZ.intl.string(eZ.t.S0W8Z5),
             t = f ? L.hex() : G.hex(),
@@ -3621,7 +3621,7 @@ function lg() {
         a = n.trim().toLowerCase(),
         [d, c] = r.useState(() => new Set()),
         h = (0, s.bG)([tS], () => tS.getCollapsedSectionOverridesForTab(u.x.VOICE), []),
-        g = (0, t7.qZ)(),
+        g = (0, t8.qZ)(),
         m = r.useMemo(() => {
             let e = new Map();
             for (let t of g) e.set(t.channel.id, t.voiceStates);
@@ -3638,12 +3638,12 @@ function lg() {
         }, []),
         S = r.useMemo(() => new Set(g.map((e) => e.channel.id)), [g]),
         [p, x] = r.useState([]);
-    (0, tC.RT)(n, g, x, t7.MV);
+    (0, tC.RT)(n, g, x, t8.MV);
     let C = r.useRef(null),
         v = (0, _.A)("friends-widget-voice", C),
         [R, b] = (0, s.bG)([tN.A], () => tN.A.getFavoriteTargetIdsForTab(u.x.VOICE), [], j.D),
         k = r.useMemo(() => R.filter((e) => S.has(e)), [R, S]),
-        { friendVoiceChannelIds: O, recentVoiceChannelIds: w } = (0, t7.S4)(),
+        { friendVoiceChannelIds: O, recentVoiceChannelIds: w } = (0, t8.S4)(),
         F = r.useMemo(() => O.filter((e) => S.has(e)), [O, S]),
         G = r.useMemo(() => w.filter((e) => S.has(e)), [w, S]),
         L = (0, s.bG)([eS.Ay], () => eS.Ay.getVoiceChannelId(), []),
