@@ -8269,8 +8269,8 @@ let u4 = (0, ts.Fe)({ createPromise: u8, webpackId: 482877, name: "StageChannelC
         name: "GuildMemberModViewSidebar",
     }),
     ht = (0, ts.Fe)({
-        createPromise: () => Promise.all([t.e(386345), t.e(269178), t.e(633442)]).then(t.bind(t, 651001)),
-        webpackId: 651001,
+        createPromise: () => Promise.all([t.e(276604), t.e(269178), t.e(90445)]).then(t.bind(t, 839964)),
+        webpackId: 839964,
         name: "FriendsSidebar",
     });
 function hi(e) {

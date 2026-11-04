@@ -1,7 +1,5 @@
 e.exports = {
     uW: "section_UWowfY",
-    Ge: "rows_UWowfY",
-    UP: "eyebrow_UWowfY",
     nM: "row_UWowfY",
     d: "clickableRow_UWowfY",
     b8: "hoverableRow_UWowfY",
@@ -10,9 +8,6 @@ e.exports = {
     iE: "leadingIcon_UWowfY",
     Qq: "text_UWowfY",
     ZJ: "incomingRow_UWowfY",
-    L6: "ignoreButton_UWowfY",
     N4: "note_UWowfY",
     TG: "noteQuote_UWowfY",
-    YM: "outgoingPopout_UWowfY",
-    S1: "outgoingEyebrow_UWowfY",
 };

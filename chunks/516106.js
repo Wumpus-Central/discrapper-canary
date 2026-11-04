@@ -231,15 +231,15 @@ class I extends a.A {
 }
 var p = n(566980),
     m = n(424776),
-    T = n(786300);
+    g = n(786300);
 n(205816);
-var g = n(462180);
+var T = n(462180);
 function S(e, t) {
-    if ((0, g.x)(e, t)) return !0;
+    if ((0, T.x)(e, t)) return !0;
     if (N(e) && N(t)) {
         let n = Object.keys(e);
         if (n.length !== Object.keys(t).length) return !1;
-        for (let i of n) if (!Object.hasOwn(t, i) || !(0, g.x)(e[i], t[i])) return !1;
+        for (let i of n) if (!Object.hasOwn(t, i) || !(0, T.x)(e[i], t[i])) return !1;
         return !0;
     }
     return !1;
@@ -297,14 +297,14 @@ var Y = n(155718),
 function $(e) {
     return null == e ? null : e.taxInclusive ? e.total : e.total - e.tax;
 }
-function z(e) {
+function X(e) {
     let { checkoutInvoicePreview: t, renewalInvoicePreview: n } = e,
         i = $(t),
         r = $(n);
     return 0 === i && null != r ? { subtotal: r, total: n?.total ?? null } : { subtotal: i, total: t?.total ?? null };
 }
-var X = n(811315),
-    q = n.n(X),
+var z = n(811315),
+    q = n.n(z),
     Z = n(529412),
     Q = n(998312),
     J = n(860841),
@@ -313,7 +313,7 @@ var X = n(811315),
     en = n(120700),
     ei = n(379912),
     er = n(705822);
-let [ea, es] = (0, T.A)();
+let [ea, es] = (0, g.A)();
 function el(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
     return es()(e, t);
@@ -521,8 +521,8 @@ function eo(e) {
                     i()
                         .get("checkoutPaymentSources")
                         .find((e) => e.source instanceof K.LQ) ?? null,
-                getWalletCoverageSubtotal: () => z(i()).subtotal,
-                getWalletCoverageTotal: () => z(i()).total,
+                getWalletCoverageSubtotal: () => X(i()).subtotal,
+                getWalletCoverageTotal: () => X(i()).total,
                 getIsWalletCoverageLoading: () => {
                     let e = i();
                     return (
@@ -726,9 +726,9 @@ function eo(e) {
             },
             ...{
                 isRecurringGift: !1,
-                hasAppliedRecurringGiftDefaults: !1,
+                hasClearedDefaultGiftMessage: !1,
                 setIsRecurringGift: (t) => e({ isRecurringGift: t }),
-                setHasAppliedRecurringGiftDefaults: (t) => e({ hasAppliedRecurringGiftDefaults: t }),
+                setHasClearedDefaultGiftMessage: (t) => e({ hasClearedDefaultGiftMessage: t }),
                 getIsRecurringGiftCheckout: () => {
                     let { isRecurringGift: e, selectedPlanId: t } = i();
                     return e && null != t && (0, et.dI)(t);
