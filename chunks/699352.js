@@ -17,7 +17,8 @@ function r(e) {
         hideInviteEmbedBanner: x,
         hideActivityInvite: f,
         disableComponentInteractivity: I,
-        className: E,
+        allowFullScreen: E,
+        className: v,
     } = e;
     return m
         ? null
@@ -25,7 +26,7 @@ function r(e) {
               message: t,
               children: (0, i.jsx)(s.Ay, {
                   renderAccessories: r,
-                  className: E,
+                  className: v,
                   isInteracting: u,
                   message: t,
                   channel: n,
@@ -36,6 +37,7 @@ function r(e) {
                   onMediaItemContextMenu: c,
                   renderThreadAccessory: g,
                   disableComponentInteractivity: I,
+                  allowFullScreen: E,
                   renderSuppressEmbeds: p,
                   renderReactions: A,
                   hideInviteEmbedBanner: x,

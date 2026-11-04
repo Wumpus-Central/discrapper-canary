@@ -1720,6 +1720,7 @@ function nq(e) {
                     renderSuppressEmbeds: !1,
                     renderReactions: !1,
                     disableComponentInteractivity: !0,
+                    allowFullScreen: !0,
                 }),
                 childrenSystemMessage: (0, nz.A)(e),
                 childrenMessageContent: K,

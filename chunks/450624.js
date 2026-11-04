@@ -1638,31 +1638,32 @@ function ix(e) {
             snapshot: i,
             index: l,
             disableComponentInteractivity: a,
-            onMediaItemContextMenu: o,
+            allowFullScreen: o,
+            onMediaItemContextMenu: d,
         } = e,
-        d = r.useMemo(() => (0, ih.A)(t, i), [t, i]),
-        c = it.hD.useSetting(),
-        m = it.rs.useSetting(),
-        h = (0, u.bG)([ii.A], () => ii.A.isDeveloper),
-        g = (0, n8.U)(),
-        p = (0, n4.S)((d.editedTimestamp ?? d.timestamp).valueOf()),
+        c = r.useMemo(() => (0, ih.A)(t, i), [t, i]),
+        m = it.hD.useSetting(),
+        h = it.rs.useSetting(),
+        g = (0, u.bG)([ii.A], () => ii.A.isDeveloper),
+        p = (0, n8.U)(),
+        A = (0, n4.S)((c.editedTimestamp ?? c.timestamp).valueOf()),
         {
-            content: A,
-            hasSpoilerEmbeds: x,
-            hasBailedAst: f,
-        } = (0, ie.A)(d, {
-            hideSimpleEmbedContent: c && m,
+            content: x,
+            hasSpoilerEmbeds: f,
+            hasBailedAst: I,
+        } = (0, ie.A)(c, {
+            hideSimpleEmbedContent: m && h,
             formatInline: !1,
-            allowList: p,
-            allowHeading: p,
+            allowList: A,
+            allowHeading: A,
             allowLinks: !0,
-            allowDevLinks: h,
+            allowDevLinks: g,
             previewLinkTarget: !0,
-            restrictedPreview: g,
+            restrictedPreview: p,
         }),
-        I = (0, u.bG)([M.A], () => M.A.getChannel(t.channel_id)),
-        E = it.hH.useSetting();
-    return null == I
+        E = (0, u.bG)([M.A], () => M.A.getChannel(t.channel_id)),
+        v = it.hH.useSetting();
+    return null == E
         ? null
         : (0, s.jsxs)(
               "div",
@@ -1674,18 +1675,19 @@ function ix(e) {
                           className: ig.Qs,
                           children: [
                               (0, s.jsx)(ip, {}),
-                              (0, s.jsx)(n7.Ay, { message: d, content: A, compact: E }),
+                              (0, s.jsx)(n7.Ay, { message: c, content: x, compact: v }),
                               n({
-                                  channelMessageProps: { message: d, channel: I, compact: E },
-                                  hasSpoilerEmbeds: x,
-                                  hasBailedAst: f,
-                                  handleContextMenu: o,
+                                  channelMessageProps: { message: c, channel: E, compact: v },
+                                  hasSpoilerEmbeds: f,
+                                  hasBailedAst: I,
+                                  handleContextMenu: d,
                                   isInteracting: !1,
                                   isMessageSnapshot: !0,
                                   renderThreadAccessory: !1,
                                   disableComponentInteractivity: a,
+                                  allowFullScreen: o,
                               }),
-                              !g && (0, s.jsx)(iA, { message: t, snapshot: i, index: l }),
+                              !p && (0, s.jsx)(iA, { message: t, snapshot: i, index: l }),
                           ],
                       }),
                   ],
@@ -1694,20 +1696,27 @@ function ix(e) {
           );
 }
 function iI(e) {
-    let { message: t, renderAccessories: n, disableComponentInteractivity: i, onMediaItemContextMenu: l } = e;
+    let {
+        message: t,
+        renderAccessories: n,
+        disableComponentInteractivity: i,
+        allowFullScreen: l,
+        onMediaItemContextMenu: r,
+    } = e;
     return (0, s.jsx)(s.Fragment, {
-        children: t.messageSnapshots.map((e, r) =>
+        children: t.messageSnapshots.map((e, a) =>
             (0, s.jsx)(
                 ix,
                 {
                     message: t,
                     snapshot: e,
-                    index: r,
+                    index: a,
                     renderAccessories: n,
                     disableComponentInteractivity: i,
-                    onMediaItemContextMenu: l,
+                    allowFullScreen: l,
+                    onMediaItemContextMenu: r,
                 },
-                r,
+                a,
             ),
         ),
     });
@@ -7618,7 +7627,7 @@ class cs extends r.Component {
                         });
                     },
                     gifFavoriteButton: ci(a),
-                    allowFullScreen: !this.props.disableComponentInteractivity,
+                    allowFullScreen: this.props.allowFullScreen ?? !this.props.disableComponentInteractivity,
                 },
                 d = (0, r0.E)({ proxyURL: s.proxy_url, url: s.url });
             return (d in g && x && ((o.onClick = g[d]), (o.handlePreloadImage = p[d]), (o.onSeekRequest = A[d])), o);
@@ -7650,7 +7659,7 @@ class cs extends r.Component {
                     obscureReason: u ?? void 0,
                     autoPlayGif: l,
                     hideMedia: !r,
-                    allowFullScreen: !this.props.disableComponentInteractivity,
+                    allowFullScreen: this.props.allowFullScreen ?? !this.props.disableComponentInteractivity,
                     onSuppressEmbed: a ? this.handleEmbedSuppressed : void 0,
                     renderTitle: this.renderEmbedTitle,
                     renderDescription: this.renderEmbedDescription,
@@ -7976,6 +7985,7 @@ class cs extends r.Component {
                 message: e,
                 renderAccessories: this.props.renderAccessories,
                 disableComponentInteractivity: this.props.disableComponentInteractivity,
+                allowFullScreen: this.props.allowFullScreen,
                 onMediaItemContextMenu: this.props.onMediaItemContextMenu,
             });
     }

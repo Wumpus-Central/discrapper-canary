@@ -519,7 +519,8 @@
     grid-template-rows: auto
 }
 
-.contentWrapperEmojiPacks_58b0l2 {
+.contentWrapper_58b0l2.contentWrapperEmojiPacks_58b0l2 {
+    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: minmax(0, 1fr);
     overflow: hidden;
     padding-top: 0
@@ -677,4 +678,4 @@
     gap: var(--space-4)
 }
 
-/*# sourceMappingURL=678906.8dba23aaacba3d06.css.map*/
+/*# sourceMappingURL=678906.0b9c99b5bec1c76c.css.map*/
