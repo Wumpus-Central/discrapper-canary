@@ -2808,6 +2808,7 @@ class tM extends L.G {
             },
             { no: 23, name: "enable_edit_raw_json_ui", kind: "scalar", T: 8 },
             { no: 46, name: "dynamic_config_size_limit_override", kind: "message", T: () => P.as },
+            { no: 53, name: "experiment_size_limit_override", kind: "message", T: () => P.as },
             { no: 24, name: "winning_variation_id", kind: "scalar", T: 5 },
             { no: 34, name: "extra_outcome_context", kind: "scalar", T: 9 },
             {
@@ -2990,6 +2991,14 @@ class tM extends L.G {
                         r.dynamicConfigSizeLimitOverride,
                     );
                     break;
+                case 53:
+                    r.experimentSizeLimitOverride = P.as.internalBinaryRead(
+                        e,
+                        e.uint32(),
+                        n,
+                        r.experimentSizeLimitOverride,
+                    );
+                    break;
                 case 24:
                     r.winningVariationId = e.int32();
                     break;
@@ -3113,6 +3122,10 @@ class tM extends L.G {
             e.dynamicConfigSizeLimitOverride &&
                 P.as
                     .internalBinaryWrite(e.dynamicConfigSizeLimitOverride, t.tag(46, C.O0.LengthDelimited).fork(), n)
+                    .join(),
+            e.experimentSizeLimitOverride &&
+                P.as
+                    .internalBinaryWrite(e.experimentSizeLimitOverride, t.tag(53, C.O0.LengthDelimited).fork(), n)
                     .join(),
             0 !== e.winningVariationId && t.tag(24, C.O0.Varint).int32(e.winningVariationId),
             "" !== e.extraOutcomeContext && t.tag(34, C.O0.LengthDelimited).string(e.extraOutcomeContext),
