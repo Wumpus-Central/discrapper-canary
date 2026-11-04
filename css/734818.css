@@ -266,7 +266,7 @@
     background: var(--custom-dvp-hover-bg)
 }
 
-.videoControlsBtnCont_hFq1lM.playbackSpeedBtnCustom_hFq1lM {
+.videoControlsBtnCont_hFq1lM[data-testid=discord-web-video-player-playback-speed-btn][data-active=true] {
     background: var(--custom-dvp-speed-bg)
 }
 
@@ -970,4 +970,4 @@
     }
 }
 
-/*# sourceMappingURL=734818.f1073dba36e62b7e.css.map*/
+/*# sourceMappingURL=734818.4bd0a5250f9c6343.css.map*/

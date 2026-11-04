@@ -34,7 +34,8 @@
 .themeBlurple_aCnSGZ {
     --custom-dvp-fill: linear-gradient(90deg, var(--background-brand), var(--brand-400));
     --custom-dvp-track: var(--opacity-blurple-16);
-    --custom-dvp-buffer: var(--opacity-blurple-16)
+    --custom-dvp-buffer: var(--opacity-blurple-16);
+    --custom-dvp-glow: -2px 0 12px 2px color-mix(in srgb, var(--background-brand) 80%, transparent), 0 0 33px 2px color-mix(in srgb, var(--white) 45%, var(--background-brand))
 }
 
 .themeNitro_aCnSGZ {
@@ -361,4 +362,4 @@
     }
 }
 
-/*# sourceMappingURL=936090.6fc4135fe27db69a.css.map*/
+/*# sourceMappingURL=936090.7878f6081ccb197c.css.map*/

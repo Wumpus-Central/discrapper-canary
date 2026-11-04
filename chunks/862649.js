@@ -25,7 +25,6 @@ e.exports = {
     ST: "videoControlsGroupEnd_hFq1lM",
     K5: "videoControlsBtnCont_hFq1lM",
     Wr: "videoControlsBtn_hFq1lM",
-    CX: "playbackSpeedBtnCustom_hFq1lM",
     jk: "controlsBarItem_hFq1lM",
     nA: "controlSlider_hFq1lM",
     KE: "controlFocusRing_hFq1lM",
