@@ -24,15 +24,14 @@ var r = n(477900),
     f = n(157695),
     A = n(507395),
     C = n(144779),
-    E = n(494280);
-n(952818);
-var T = n(87719),
+    E = n(494280),
+    T = n(87719),
     g = n(287809),
     _ = n(166403),
     p = n(174459),
     m = n(515718),
-    v = n(38405),
-    y = n(265704),
+    y = n(38405),
+    v = n(265704),
     S = n(427495),
     I = n(859703),
     Q = n(738822),
@@ -301,7 +300,7 @@ function $(t) {
     let { isQuestBarVisible: e } = X({ quest: (0, E.Ys)(t) }),
         n = (0, E.nN)(t),
         r = (0, u.bG)([I.A], () => null != n && I.A.isAdContentDismissed(n), [n]),
-        i = (0, u.bG)([y.A], () => t.type === l.p.BOUNTY && y.A.isBountyCompleted(t.bounty.id), [t]);
+        i = (0, u.bG)([v.A], () => t.type === l.p.BOUNTY && v.A.isBountyCompleted(t.bounty.id), [t]);
     switch (t.type) {
         case l.p.QUEST:
             return e;
@@ -381,7 +380,7 @@ function tn(t) {
                                 ad_creative_type: l.p.QUEST_HOME_HERO,
                                 asset_id: n,
                             }),
-                                v.A.captureException(
+                                y.A.captureException(
                                     Error(
                                         `Error loading asset: ${null != i ? `${i}, ` : ""}${n}, QuestHomeHeroPreload`,
                                     ),

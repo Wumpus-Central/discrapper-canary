@@ -452,10 +452,10 @@ var e1 = n(531685),
     e2 = n(583613);
 let e3 = "app-download-item",
     e5 = "add-server-item";
-function e6() {
+function e4() {
     return !1;
 }
-function e4(e) {
+function e6(e) {
     let t = eo.default.getMutableGuildStates();
     return (
         (e === eR.sFm.SERVER_DISCOVERY_BADGE && !e0.hasViewed(eR.sFm.SERVER_DISCOVERY_BADGE)) ||
@@ -474,10 +474,10 @@ function e8(e) {
         ...n,
         ref: t,
         items: r,
-        isUnread: e6,
+        isUnread: e4,
         textUnread: eL.intl.string(eL.t.y2b7CA),
         textMention: eL.intl.string(eL.t.y2b7CA),
-        isMentioned: e4,
+        isMentioned: e6,
         animate: a,
         expandedFolders: s,
     });
@@ -1111,30 +1111,30 @@ var tJ = n(696292),
     t2 = n(726845),
     t3 = n(837057),
     t5 = n(310419),
-    t6 = n(488995),
-    t4 = n(324580),
+    t4 = n(488995),
+    t6 = n(324580),
     t7 = n(190107);
 let t8 = function (e) {
     let { selected: t, onClick: n, questId: a, className: s, ref: l } = e,
         o = r.useCallback(() => {
-            (0, t1.WL)({ source: t6.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
-            let e = void 0 !== a ? t6.GlobalDiscoveryTab.QUESTS : t2.A.getField("selectedTab");
+            (0, t1.WL)({ source: t4.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
+            let e = void 0 !== a ? t4.GlobalDiscoveryTab.QUESTS : t2.A.getField("selectedTab");
             switch (e) {
-                case t6.GlobalDiscoveryTab.QUESTS:
+                case t4.GlobalDiscoveryTab.QUESTS:
                     return (0, t3.transitionToGlobalDiscovery)({
-                        tab: t6.GlobalDiscoveryTab.QUESTS,
+                        tab: t4.GlobalDiscoveryTab.QUESTS,
                         location: t7.rE.DISCOVERY_COMPASS,
                         questContent: tJ.u.DISCOVERY_COMPASS,
                         questId: a,
                     });
-                case t6.GlobalDiscoveryTab.SERVERS:
+                case t4.GlobalDiscoveryTab.SERVERS:
                     return (0, t3.transitionToGlobalDiscovery)({
-                        tab: t6.GlobalDiscoveryTab.SERVERS,
-                        entrypoint: t4.J8.GUILDS_BAR,
+                        tab: t4.GlobalDiscoveryTab.SERVERS,
+                        entrypoint: t6.J8.GUILDS_BAR,
                     });
-                case t6.GlobalDiscoveryTab.APPS:
+                case t4.GlobalDiscoveryTab.APPS:
                     return (0, t3.transitionToGlobalDiscovery)({
-                        tab: t6.GlobalDiscoveryTab.APPS,
+                        tab: t4.GlobalDiscoveryTab.APPS,
                         newSessionState: {
                             entrypoint: { name: t5.sW.GLOBAL_DISCOVERY_BUTTON },
                             restorePreviousView: !0,
@@ -1474,8 +1474,8 @@ var nJ = n(739822),
     n2 = n(817281),
     n3 = n(876740),
     n5 = n(345942),
-    n6 = n(676279),
-    n4 = n(866323),
+    n4 = n(676279),
+    n6 = n(866323),
     n7 = n(548118),
     n8 = n(327580);
 function n9(e) {
@@ -1487,7 +1487,7 @@ function n9(e) {
     let c = (0, p.r)(h.A.unsafe_rawColors.BRAND_500).hex(),
         u = (0, p.r)(h.A.unsafe_rawColors.PRIMARY_630).hex();
     r && null == t.icon && ((o.backgroundColor = c), (d.backgroundColor = u));
-    let _ = (0, n4.p)(n, { from: o, enter: d, leave: o, config: { duration: 100 }, onStart: a, onRest: l });
+    let _ = (0, n6.p)(n, { from: o, enter: d, leave: o, config: { duration: 100 }, onStart: a, onRest: l });
     return (0, i.jsx)(i.Fragment, {
         children: _(
             (e, n, r) =>
@@ -2135,6 +2135,7 @@ function iS(e, t) {
             n.e("863232"),
             n.e("708757"),
             n.e("517888"),
+            n.e("332447"),
             n.e("959880"),
             n.e("174016"),
             n.e("907167"),
@@ -2554,7 +2555,7 @@ let iN = r.memo(function (e) {
         [H, Y] = r.useState(!1),
         [$, z] = r.useState(!1),
         [Q] = r.useState(() => new A.J_(70, () => z(!0))),
-        J = (0, n6.nr)() && !n0.Fr;
+        J = (0, n4.nr)() && !n0.Fr;
     r.useEffect(() => () => Q.cancel(), [Q]);
     let ee = r.useCallback(() => {
             null != o ? (0, to.pX)(o, { state: ig }) : (0, n5.u)(b, { state: ig });
