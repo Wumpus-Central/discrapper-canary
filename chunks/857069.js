@@ -27,8 +27,8 @@ function u(e, t, n) {
                       !n.hasFlag(o.pr7.SUPPRESS_NOTIFICATIONS) &&
                       (n.mentions.length > 0 || n.mentionRoles.length > 0 || n.mentionEveryone))
               ) ||
-              n.applicationId !== t.applicationId ||
-              c(n.additionalName) !== c(t.additionalName))
+              ((e?.linkedLobby == null || n.state !== o.cmJ.SENDING) &&
+                  (n.applicationId !== t.applicationId || c(n.additionalName) !== c(t.additionalName))))
     );
 }
 n.d(
