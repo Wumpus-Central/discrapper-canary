@@ -193,6 +193,7 @@ class a extends i.A {
                                                     return {
                                                         type: r.hE.COLLECTION_SALE,
                                                         collectionId: e.collection_id,
+                                                        countdownStyle: e.countdown_style,
                                                         navigation:
                                                             t?.tab != null
                                                                 ? { tab: { title: t.tab.title, icon: t.tab.icon } }

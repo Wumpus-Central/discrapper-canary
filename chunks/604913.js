@@ -3,13 +3,15 @@ var i,
     a,
     s,
     l,
-    o = (((i = {}).TAG = "TAG"), (i.NITRO = "NITRO"), i),
-    d = (((r = {}).DEFAULT = "default"), (r.NITRO = "nitro"), r),
-    c =
+    o,
+    d = (((i = {}).TAG = "TAG"), (i.NITRO = "NITRO"), i),
+    c = (((r = {}).DEFAULT = "default"), (r.NITRO = "nitro"), r),
+    u =
         (((a = {}).TARGETED_OFFER = "TARGETED_OFFER"),
         (a.COLLECT_AND_CLAIM = "COLLECT_AND_CLAIM"),
         (a.COLLECTION_SALE = "COLLECTION_SALE"),
         a),
-    u = (((s = {}).TAKEOVER = "TAKEOVER"), (s.BASIC = "BASIC"), s),
-    _ = (((l = {}).LIGHT = "light"), (l.DARK = "dark"), l);
-n.d(t, {}, { Pz: d, RB: _, cR: o, h5: u, hE: c });
+    _ = (((s = {}).TAKEOVER = "TAKEOVER"), (s.BASIC = "BASIC"), s),
+    E = (((l = {}).LIGHT = "light"), (l.DARK = "dark"), l),
+    A = (((o = {}).LIGHT = "LIGHT"), (o.DARK = "DARK"), (o.GRADIENT_V1 = "GRADIENT_V1"), o);
+n.d(t, {}, { Pz: c, RB: E, cR: d, d2: A, h5: _, hE: u });
