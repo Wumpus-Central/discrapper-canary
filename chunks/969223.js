@@ -51,7 +51,7 @@ function P(e, t, s, n) {
             (function (e) {
                 if (!(e instanceof f.YB) || !(0, o.Gc)(e)) return !1;
                 let t = C.default.getCurrentUser()?.nsfwAllowed === !1,
-                    s = (0, u.p9)() && (0, b.d6)(a.t.AGE_GATED_SPACES);
+                    s = (0, u.u5)() && (0, b.d6)(a.t.AGE_GATED_SPACES);
                 return (
                     (!!t || !!s) &&
                     _.getConfig({ location: "getDestinationIsUnavailable" }).disableAgeRestrictedDestinations

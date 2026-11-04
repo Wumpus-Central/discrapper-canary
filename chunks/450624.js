@@ -369,7 +369,7 @@ var eh = n(424743),
     ex = n(36149);
 function ef(e) {
     let { channelId: t, messageId: n } = e,
-        i = (0, ex.i2)(),
+        i = (0, ex.n2)(),
         l = r.useCallback(() => {
             (ep.A.showAgeVerificationGetStartedModal({ entryPoint: eA.q1.SYSTEM_DM_RETRY_BUTTON }),
                 (0, eA.UT)(eA.Im.RETRY, t));
@@ -395,7 +395,7 @@ var e_ = n(277861),
     ej = n(221858);
 function eN(e) {
     let { channelId: t } = e,
-        n = (0, ex.i2)(),
+        n = (0, ex.n2)(),
         i = r.useCallback(() => {
             ((0, e_.Vq)(), (0, eA.UT)(eA.Im.MANUAL_REVIEW, t));
         }, [t]);

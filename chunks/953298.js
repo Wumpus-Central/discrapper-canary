@@ -7,7 +7,7 @@ s.d(
     {
         w: function () {
             let r = (0, n.d6)(t.t.DM_PRIVACY_SETTINGS);
-            return (0, a.p9)() && r;
+            return (0, a.u5)() && r;
         },
     },
 );
