@@ -849,7 +849,7 @@ function t1() {
     return (0, f.jsx)(tX.A, {
         subscriptionTier: tJ.pe.TIER_2,
         defaultTextOverride: V.intl.string(V.t.mr4K7D),
-        premiumModalAnalyticsLocation: { object: I.ZSU.BUTTON_CTA, objectType: I.AnalyticsObjectTypes.BUY },
+        premiumModalAnalyticsLocation: { object: I.ZSU.BUTTON_CTA, objectType: I.btD.BUY },
         fullWidth: !0,
     });
 }
@@ -6833,7 +6833,7 @@ function d4(e) {
         { openGiftModal: l } = (0, dJ.$)({
             giftRecipient: void 0,
             analyticsLocations: i,
-            analyticsObject: { object: I.ZSU.BUTTON_CTA, objectType: I.AnalyticsObjectTypes.GIFT },
+            analyticsObject: { object: I.ZSU.BUTTON_CTA, objectType: I.btD.GIFT },
             analyticsLocation: t,
             location: n,
         });
@@ -9063,7 +9063,7 @@ function mS(e) {
                                   page: I.liQ.GUILD_BOOSTING_USER_SETTINGS,
                                   section: I.JJy.GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
                                   object: I.ZSU.BUTTON_CTA,
-                                  objectType: I.AnalyticsObjectTypes.BUY,
+                                  objectType: I.btD.BUY,
                               },
                               guild: n,
                           });
@@ -9398,7 +9398,7 @@ function mj(e) {
                                                                       page: I.liQ.GUILD_BOOSTING_USER_SETTINGS,
                                                                       section: I.JJy.SETTINGS_PREMIUM,
                                                                       object: I.ZSU.BUTTON_CTA,
-                                                                      objectType: I.AnalyticsObjectTypes.BUY,
+                                                                      objectType: I.btD.BUY,
                                                                   },
                                                                   guild: e,
                                                               }));
@@ -9830,7 +9830,7 @@ function mQ(e) {
                                                 page: I.liQ.GUILD_BOOSTING_USER_SETTINGS,
                                                 section: I.JJy.SETTINGS_PREMIUM,
                                                 object: I.ZSU.BUTTON_CTA,
-                                                objectType: I.AnalyticsObjectTypes.BUY,
+                                                objectType: I.btD.BUY,
                                             },
                                             guild: e,
                                         }));
@@ -19060,7 +19060,7 @@ function IG() {
                     page: I.liQ.USER_SETTINGS,
                     section: I.JJy.SETTINGS_CUSTOMIZE_PROFILE,
                     object: I.ZSU.BUTTON_CTA,
-                    type: I.AnalyticsObjectTypes.BUY,
+                    type: I.btD.BUY,
                 },
             });
     });

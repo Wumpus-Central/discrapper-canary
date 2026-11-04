@@ -1113,12 +1113,12 @@ let t4 = new t8(
                                                   ei.A.updateNotificationStatus(n));
                                           },
                                           onCancelClick: (t, n) => {
-                                              ((0, tb.ack)(
+                                              ((0, tb.I_)(
                                                   e.id,
                                                   {
                                                       section: ey.JJy.OVERLAY,
                                                       object: ey.ZSU.ACK_DECLINE_REQUEST_TO_JOIN,
-                                                      objectType: ey.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
+                                                      objectType: ey.btD.ACK_SEMI_AUTOMATIC,
                                                   },
                                                   !0,
                                                   !0,

@@ -69,8 +69,8 @@ function I(e) {
                     };
                 });
             let r = P ? v.subscriptionTrial?.id : null,
-                s = f.AnalyticsObjectTypes.BUY;
-            null != r ? (s = f.AnalyticsObjectTypes.TRIAL) : C && (s = f.AnalyticsObjectTypes.GIFT);
+                s = f.btD.BUY;
+            null != r ? (s = f.btD.TRIAL) : C && (s = f.btD.GIFT);
             let _ = {
                 isGift: C,
                 initialPlanId: O,

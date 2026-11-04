@@ -1,4 +1,4 @@
-t.d(n, { A: () => y });
+t.d(n, { A: () => b });
 var i = t(477900);
 t(582128);
 var r = t(17928),
@@ -19,10 +19,10 @@ let h = (0, t(945810).mj)({
 var _ = t(439147),
     f = t(652215),
     g = t(105292);
-function y(e) {
+function b(e) {
     let n,
         t,
-        y =
+        b =
             ((n = (0, s.ed)(e.guild_id, e.id)),
             (t = (0, r.bG)(
                 [c.Ay, A.A, l.A, o.A],
@@ -55,8 +55,8 @@ function y(e) {
                 [e],
             )),
             e.isForumLikeChannel() ? n > 0 : t),
-        b = (0, r.bG)([c.Ay], () => c.Ay.canBeUnread(e.id) && c.Ay.hasLastMessage(e.id) && !e.isCategory());
-    return h.useConfig({ location: "channel_context_menu" }).enabled && !y && b
+        y = (0, r.bG)([c.Ay], () => c.Ay.canBeUnread(e.id) && c.Ay.hasLastMessage(e.id) && !e.isCategory());
+    return h.useConfig({ location: "channel_context_menu" }).enabled && !b && y
         ? (0, i.jsx)(a.Dr, {
               id: "mark-channel-unread",
               label: g.intl.string(g.t.RpE9k7),
@@ -73,9 +73,9 @@ function y(e) {
                   (0, d.hS)(e, {
                       section: f.JJy.CHANNEL_CONTEXT_MENU,
                       object: f.ZSU.MARK_CHANNEL_AS_READ_BUTTON,
-                      objectType: f.AnalyticsObjectTypes.ACK_MANUAL,
+                      objectType: f.btD.ACK_MANUAL,
                   });
               },
-              disabled: !y,
+              disabled: !b,
           });
 }

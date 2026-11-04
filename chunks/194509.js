@@ -25,35 +25,35 @@ let T = function (e) {
             look: b,
             hideIcon: f,
             subscriptionTier: T,
-            premiumModalAnalyticsLocation: y,
-            giftMessage: A,
-            onClick: g,
+            premiumModalAnalyticsLocation: g,
+            giftMessage: h,
+            onClick: x,
         } = e,
-        h = (0, u.Ay)(),
-        j = N(T),
-        { analyticsLocations: x } = (0, c.Ay)(),
-        { openGiftModal: O } = (0, d.$)({
+        y = (0, u.Ay)(),
+        A = N(T),
+        { analyticsLocations: _ } = (0, c.Ay)(),
+        { openGiftModal: j } = (0, d.$)({
             giftRecipient: null,
-            analyticsLocations: x,
-            analyticsObject: { object: m.ZSU.BUTTON_CTA, objectType: m.AnalyticsObjectTypes.GIFT, ...y },
-            giftMessage: A,
+            analyticsLocations: _,
+            analyticsObject: { object: m.ZSU.BUTTON_CTA, objectType: m.btD.GIFT, ...g },
+            giftMessage: h,
             subscriptionTier: T,
             location: "gift-button",
         }),
-        _ = (0, p.Y)();
+        k = (0, p.Y)();
     return (0, r.jsxs)(l.$n, {
         "data-migration-pending": !0,
         innerClassName: C.Nq,
-        color: i ?? ((0, a.M)(h) ? l.XD.WHITE : l.XD.BRAND),
+        color: i ?? ((0, a.M)(y) ? l.XD.WHITE : l.XD.BRAND),
         look: b ?? l.pR.OUTLINED,
         className: s()(t, C.xP),
         onClick: (e) =>
-            _(() => {
-                (O(), g?.(e));
+            k(() => {
+                (j(), x?.(e));
             }),
         children: [
             !f && (0, r.jsx)(o.GiftIcon, { size: "md", color: "currentColor", className: C.ez }),
-            (0, r.jsx)("span", { className: s()(C._d, n?.textClassName), children: n?.textOverride ?? j }),
+            (0, r.jsx)("span", { className: s()(C._d, n?.textClassName), children: n?.textOverride ?? A }),
         ],
     });
 };

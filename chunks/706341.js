@@ -93,13 +93,9 @@ let p = {
         (r.h.dispatch({ type: "NOTIFICATIONS_INBOX_ITEM_CLICK", messageId: t.id, channelId: n.id, isUnread: i }),
             c && (0, _.Ml)({ interactionType: _.X8.CLICK, message: t, viewId: o }),
             i &&
-                l.ack(
+                l.I_(
                     t.channel_id,
-                    {
-                        section: h.JJy.INBOX,
-                        object: h.ZSU.ACK_MESSAGE_VIEWED,
-                        objectType: h.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
-                    },
+                    { section: h.JJy.INBOX, object: h.ZSU.ACK_MESSAGE_VIEWED, objectType: h.btD.ACK_SEMI_AUTOMATIC },
                     !0,
                     void 0,
                     t.id,

@@ -685,7 +685,7 @@ class ew {
                             location: {
                                 section: er.JJy.CHANNEL,
                                 object: er.ZSU.ACK_FORUM_CHANNEL_NO_UNREAD_POSTS,
-                                objectType: er.AnalyticsObjectTypes.ACK_AUTOMATIC,
+                                objectType: er.btD.ACK_AUTOMATIC,
                             },
                         });
                 })(this.channelId),
@@ -1063,7 +1063,7 @@ function eZ() {
                       {
                           section: er.JJy.CHANNEL,
                           object: er.ZSU.ACK_CHANNEL_SECTION_STORE_UPDATE,
-                          objectType: er.AnalyticsObjectTypes.ACK_AUTOMATIC,
+                          objectType: er.btD.ACK_AUTOMATIC,
                       },
                       e,
                   ) || t),
@@ -1081,7 +1081,7 @@ function eQ(e) {
                 location: {
                     section: er.JJy.CHANNEL,
                     object: er.ZSU.ACK_VOICE_CHANNEL_SELECT,
-                    objectType: er.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
+                    objectType: er.btD.ACK_SEMI_AUTOMATIC,
                 },
             })
         );
@@ -1117,8 +1117,8 @@ function e3(e, t, n, i) {
     );
 }
 let e6 = new Map(),
-    e4 = new Map();
-function e5(e) {
+    e5 = new Map();
+function e4(e) {
     let t = W.default.fromTimestamp(Date.now());
     return e.ack({ messageId: t, isExplicitUserAction: !0, trackAnalytics: !1, immediate: !0 });
 }
@@ -1408,7 +1408,7 @@ let e8 = new e7(_.h, {
             eG(t);
         },
         LOGOUT: function () {
-            (ej(), e6.clear(), e4.clear());
+            (ej(), e6.clear(), e5.clear());
         },
         OVERLAY_INITIALIZE: function (e) {
             let { readStates: t, selectedChannelId: n } = e;
@@ -1505,11 +1505,7 @@ let e8 = new e7(_.h, {
                 return l.ack({
                     messageId: a.id,
                     trackAnalytics: !0,
-                    location: {
-                        section: e,
-                        object: er.ZSU.ACK_INCOMING_MESSAGE,
-                        objectType: er.AnalyticsObjectTypes.ACK_AUTOMATIC,
-                    },
+                    location: { section: e, object: er.ZSU.ACK_INCOMING_MESSAGE, objectType: er.btD.ACK_AUTOMATIC },
                 });
             }
             if (eP(E && null != i && i.isInstanceLocked(), r))
@@ -1519,7 +1515,7 @@ let e8 = new e7(_.h, {
                     location: {
                         section: er.JJy.OVERLAY,
                         object: er.ZSU.ACK_INCOMING_MESSAGE,
-                        objectType: er.AnalyticsObjectTypes.ACK_AUTOMATIC,
+                        objectType: er.btD.ACK_AUTOMATIC,
                     },
                 });
             if (
@@ -1620,7 +1616,7 @@ let e8 = new e7(_.h, {
                             {
                                 section: er.JJy.CHANNEL,
                                 object: er.ZSU.ACK_CHANNEL_SELECT_SAME_CHANNEL,
-                                objectType: er.AnalyticsObjectTypes.ACK_AUTOMATIC,
+                                objectType: er.btD.ACK_AUTOMATIC,
                             },
                             t,
                         ) || r));
@@ -1637,7 +1633,7 @@ let e8 = new e7(_.h, {
                             {
                                 section: er.JJy.CHANNEL,
                                 object: er.ZSU.ACK_CHANNEL_SELECT_SAME_CHANNEL_SIDEBAR,
-                                objectType: er.AnalyticsObjectTypes.ACK_AUTOMATIC,
+                                objectType: er.btD.ACK_AUTOMATIC,
                             },
                             n,
                         ) || r),
@@ -1657,7 +1653,7 @@ let e8 = new e7(_.h, {
                     i.ackMessageId ?? W.default.fromTimestamp(i.getAckTimestamp())),
                 i.recordLastViewedTime(),
                 e0(t),
-                eH({ section: er.JJy.OVERLAY, object: n, objectType: er.AnalyticsObjectTypes.ACK_AUTOMATIC }, t),
+                eH({ section: er.JJy.OVERLAY, object: n, objectType: er.btD.ACK_AUTOMATIC }, t),
                 !0)
             );
         },
@@ -1740,7 +1736,7 @@ let e8 = new e7(_.h, {
                                         {
                                             section: er.JJy.CHANNEL,
                                             object: er.ZSU.ACK_WINDOW_FOCUS,
-                                            objectType: er.AnalyticsObjectTypes.ACK_AUTOMATIC,
+                                            objectType: er.btD.ACK_AUTOMATIC,
                                         },
                                         e,
                                     )
@@ -1753,11 +1749,7 @@ let e8 = new e7(_.h, {
         UPDATE_CHANNEL_DIMENSIONS: function (e) {
             let { channelId: t, timestamp: n } = e;
             return eH(
-                {
-                    section: er.JJy.CHANNEL,
-                    object: er.ZSU.ACK_CHANNEL_SCROLL,
-                    objectType: er.AnalyticsObjectTypes.ACK_AUTOMATIC,
-                },
+                { section: er.JJy.CHANNEL, object: er.ZSU.ACK_CHANNEL_SCROLL, objectType: er.btD.ACK_AUTOMATIC },
                 t,
                 n,
             );
@@ -1800,11 +1792,7 @@ let e8 = new e7(_.h, {
                 !eg.hasWindowId(t, n) &&
                 (eg.addWindowId(t, n),
                 eH(
-                    {
-                        section: er.JJy.CHANNEL,
-                        object: er.ZSU.ENABLE_AUTOMATIC_ACK,
-                        objectType: er.AnalyticsObjectTypes.ACK_AUTOMATIC,
-                    },
+                    { section: er.JJy.CHANNEL, object: er.ZSU.ENABLE_AUTOMATIC_ACK, objectType: er.btD.ACK_AUTOMATIC },
                     t,
                 ))
             );
@@ -1819,14 +1807,7 @@ let e8 = new e7(_.h, {
             return (
                 null == (t = U.get(n)) && ((t = new Set()), U.set(n, t)),
                 t.add(i),
-                eH(
-                    {
-                        section: er.JJy.CHANNEL,
-                        object: er.ZSU.ACK_MESSAGE_VIEWED,
-                        objectType: er.AnalyticsObjectTypes.ACK_AUTOMATIC,
-                    },
-                    n,
-                )
+                eH({ section: er.JJy.CHANNEL, object: er.ZSU.ACK_MESSAGE_VIEWED, objectType: er.btD.ACK_AUTOMATIC }, n)
             );
         },
         UNREGISTER_VISIBLE_INLINE_CHANNEL: function (e) {
@@ -1869,11 +1850,7 @@ let e8 = new e7(_.h, {
         RESORT_THREADS: function (e) {
             let { channelId: t } = e;
             return eH(
-                {
-                    section: er.JJy.CHANNEL,
-                    object: er.ZSU.ACK_RESORT_THREADS,
-                    objectType: er.AnalyticsObjectTypes.ACK_AUTOMATIC,
-                },
+                { section: er.JJy.CHANNEL, object: er.ZSU.ACK_RESORT_THREADS, objectType: er.btD.ACK_AUTOMATIC },
                 t,
             );
         },
@@ -1969,16 +1946,16 @@ let e8 = new e7(_.h, {
             ((a._persisted = !0),
                 (a.ackMessageId = n),
                 (a.mentionCount = i ?? a.mentionCount + 1),
-                null != r && r <= (e4.get(t) ?? 0) && e5(a));
+                null != r && r <= (e5.get(t) ?? 0) && e4(a));
         },
         CONJURE_PROJECT_ACK: function (e) {
             let { projectId: t } = e,
                 n = e6.get(t);
-            null != n && e4.set(t, n);
+            null != n && e5.set(t, n);
             let i = ew.getIfExists(t, eo.P.CONJURING_PROJECT);
             if (null == i) return !1;
             let r = null == i.ackMessageId ? 0 : W.default.getNonTimestampBits(i.ackMessageId);
-            return (0 !== i.mentionCount || 0 !== r) && e5(i);
+            return (0 !== i.mentionCount || 0 !== r) && e4(i);
         },
         CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
             let { projectId: t } = e;
@@ -1989,11 +1966,7 @@ let e8 = new e7(_.h, {
             return (
                 t === er.g6G.ACTIVE &&
                 eH(
-                    {
-                        section: er.JJy.CHANNEL,
-                        object: er.ZSU.ACK_APP_FOREGROUND,
-                        objectType: er.AnalyticsObjectTypes.ACK_AUTOMATIC,
-                    },
+                    { section: er.JJy.CHANNEL, object: er.ZSU.ACK_APP_FOREGROUND, objectType: er.btD.ACK_AUTOMATIC },
                     ee.Ay.getChannelId(),
                 )
             );

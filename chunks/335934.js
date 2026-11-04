@@ -1,41 +1,17 @@
-n.d(t, { HF: () => c, Lg: () => u, c: () => d, f8: () => _ });
-var i = n(945810),
-    r = n(731699),
-    a = n(735729),
-    s = n(841643),
-    l = n(308190);
-let o = (0, i.mj)({
-    name: "2026-04-icymi-staff-only",
-    kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 1: { enabled: !0 } },
-});
+n.d(t, { HF: () => c, Lg: () => u, c: () => d });
+var i = n(17928),
+    r = n(710195),
+    a = n(731699);
+n(841643);
+var s = n(280450),
+    l = n(287809),
+    o = n(308190);
 function d(e) {
-    let t = (0, a.A)(l.P),
-        { enabled: n } = o.useConfig({ location: e }),
-        i = E.useConfig({ location: e });
-    return ((0, s.hY)(e), !t && n && i.icymiDesktopEnabled);
+    return (0, i.bG)([r.A, s.default, a.A, l.default], () => c(e), [e]);
 }
 function c(e) {
-    let t = r.A.get(l.P),
-        { enabled: n } = o.getConfig({ location: e });
-    {
-        let { icymiDesktopEnabled: i } = E.getConfig({ location: e });
-        return !t && n && i;
-    }
+    return !a.A.get(o.P) && !1;
 }
 function u(e) {
     return c(e);
 }
-let _ = (0, i.mj)({
-        name: "2026-03-icymi-staff-debugging-utility",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
-    }),
-    E = (0, i.mj)({
-        name: "2026-03-icymi-desktop",
-        kind: "user",
-        defaultConfig: { icymiDesktopEnabled: !1 },
-        variations: { 1: { icymiDesktopEnabled: !0 } },
-    });

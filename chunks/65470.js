@@ -1,4 +1,4 @@
-n.d(e, { A: () => p });
+n.d(e, { A: () => u });
 var i = n(477900);
 n(582128);
 var o = n(821609),
@@ -8,12 +8,12 @@ var o = n(821609),
     r = n(194509),
     c = n(485140),
     d = n(652215);
-let p = function (t) {
+let u = function (t) {
     let {
             subscriptionTier: e,
             premiumModalAnalyticsLocation: n,
-            giftMessage: p,
-            onClick: u,
+            giftMessage: u,
+            onClick: p,
             buttonTextOverride: m,
             ...x
         } = t,
@@ -21,8 +21,8 @@ let p = function (t) {
         { openGiftModal: b } = (0, a.$)({
             giftRecipient: null,
             analyticsLocations: h,
-            analyticsObject: { object: d.ZSU.BUTTON_CTA, objectType: d.AnalyticsObjectTypes.GIFT, ...n },
-            giftMessage: p,
+            analyticsObject: { object: d.ZSU.BUTTON_CTA, objectType: d.btD.GIFT, ...n },
+            giftMessage: u,
             subscriptionTier: e,
             location: "premium-brand-refresh-gift-button",
         }),
@@ -31,7 +31,7 @@ let p = function (t) {
     return (0, i.jsx)(o.$, {
         onClick: (t) =>
             g(() => {
-                (b(), u?.(t));
+                (b(), p?.(t));
             }),
         icon: l.GiftIcon,
         ...x,

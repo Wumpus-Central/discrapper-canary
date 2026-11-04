@@ -35,9 +35,9 @@ function O(e, t) {
         !c.A.getChannel(t)?.isThread() &&
         null == A.Ay.ackMessageId(t) &&
         0 === A.Ay.getMentionCount(t) &&
-        (0, a.ack)(
+        (0, a.I_)(
             t,
-            { object: p.ZSU.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED, objectType: p.AnalyticsObjectTypes.ACK_AUTOMATIC },
+            { object: p.ZSU.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED, objectType: p.btD.ACK_AUTOMATIC },
             !0,
             !0,
             I.default.atPreviousMillisecond(t),

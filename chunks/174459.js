@@ -63,7 +63,7 @@ let R = {
     [f.HAw.APP_OPENED]: { throttlePeriod: 3e5, throttleKeys: () => [] },
     [f.HAw.APP_BACKGROUND]: { throttlePeriod: 12e4, throttleKeys: () => [] },
     [f.HAw.ACK_MESSAGES]: (e) =>
-        e.location_object_type === f.AnalyticsObjectTypes.ACK_MANUAL
+        e.location_object_type === f.btD.ACK_MANUAL
             ? void 0
             : { throttlePeriod: 9e5, throttleKeys: (e) => [e.guild_id, e.channel_id, e.location_section] },
     [f.HAw.GUILD_VIEWED]: { throttlePeriod: 9e5, throttleKeys: (e) => [e.guild_id, e.is_pending] },

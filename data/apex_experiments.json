@@ -1169,38 +1169,6 @@
     }
   },
   {
-    "name": "2026-03-icymi-desktop",
-    "kind": "user",
-    "defaultConfig": {
-      "icymiDesktopEnabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "icymiDesktopEnabled": true
-      }
-    }
-  },
-  {
-    "name": "2026-03-icymi-staff-debugging-utility",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-03-image-load-metrics",
     "kind": "user",
     "defaultConfig": {
@@ -1550,22 +1518,6 @@
       },
       "1": {
         "sampleRate": 0.0001
-      }
-    }
-  },
-  {
-    "name": "2026-04-icymi-staff-only",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
       }
     }
   },

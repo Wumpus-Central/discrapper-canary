@@ -1334,7 +1334,7 @@ function nc(e) {
             giftRecipient: i,
             analyticsLocations: x,
             analyticsLocation: g.chat,
-            analyticsObject: { page: s, section: r, object: H.ZSU.BUTTON_CTA, objectType: H.AnalyticsObjectTypes.GIFT },
+            analyticsObject: { page: s, section: r, object: H.ZSU.BUTTON_CTA, objectType: H.btD.GIFT },
             location: "gift-intent-card",
         });
     function A() {
@@ -3120,7 +3120,7 @@ function sO(e) {
         (c(!0),
             await (0, sS.g)({
                 analyticsLocations: u,
-                analyticsLocation: { object: H.ZSU.BUTTON_CTA, objectType: H.AnalyticsObjectTypes.BUY, ...n },
+                analyticsLocation: { object: H.ZSU.BUTTON_CTA, objectType: H.btD.BUY, ...n },
                 guild: t,
                 closeLayer: s,
                 onClose: () => {

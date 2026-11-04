@@ -80,11 +80,7 @@ function b(e) {
     return (
         T.A.getMessages(e).hasMoreAfter && (a.A.jumpToPresent(e, L.EMb), (t = !0)),
         g.Ay.hasUnread(e) &&
-            ((0, s.ack)(e, {
-                object: L.ZSU.MARK_CHANNEL_AS_READ_KEYBIND,
-                objectType: L.AnalyticsObjectTypes.ACK_MANUAL,
-            }),
-            (t = !0)),
+            ((0, s.I_)(e, { object: L.ZSU.MARK_CHANNEL_AS_READ_KEYBIND, objectType: L.btD.ACK_MANUAL }), (t = !0)),
         (0, s.fb)(e),
         t
     );

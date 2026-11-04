@@ -34,7 +34,7 @@ function v() {
     return (0, i.jsx)(S.A, {
         subscriptionTier: N.pe.TIER_2,
         defaultTextOverride: t,
-        premiumModalAnalyticsLocation: { object: _.ZSU.BUTTON_CTA, objectType: _.AnalyticsObjectTypes.BUY },
+        premiumModalAnalyticsLocation: { object: _.ZSU.BUTTON_CTA, objectType: _.btD.BUY },
         fullWidth: !0,
     });
 }

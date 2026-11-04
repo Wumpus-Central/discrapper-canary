@@ -37,31 +37,31 @@ var c = n(763754),
     _ = n(734057),
     C = n(860071),
     I = n(71393),
-    T = n(576705),
-    y = n(573163),
-    M = n(287809),
-    S = n(403362),
+    M = n(576705),
+    S = n(573163),
+    T = n(287809),
+    y = n(403362),
     R = n(935208),
     b = n(919577),
     U = n(207777);
 n(256265);
 var G = n(969043),
-    p = n(474399),
-    N = n(768953),
+    N = n(474399),
+    p = n(768953),
     w = n(767581),
     F = n(253913),
-    O = n(652215),
-    k = n(746080),
+    k = n(652215),
+    O = n(746080),
     j = n(37411);
 function D(e, t, n, u) {
     let i = (0, a.bG)([g.A], () => g.A.hasLoaded(e.guild_id));
     r.useEffect(() => {
         if (!i) return;
         let r = U.A.getThreadIds(e.id, t, n, u),
-            l = p.A.getThreadIdsMissingCounts(e.guild_id, r)
-                .filter((e) => (0, w.yz)(e, [y.Ay]))
+            l = N.A.getThreadIdsMissingCounts(e.guild_id, r)
+                .filter((e) => (0, w.yz)(e, [S.Ay]))
                 .slice(0, 180)
-                .map((e) => ({ threadId: e, ackMessageId: y.Ay.getTrackedAckMessageId(e) }));
+                .map((e) => ({ threadId: e, ackMessageId: S.Ay.getTrackedAckMessageId(e) }));
         l.length > 0 &&
             d.h.dispatch({ type: "REQUEST_FORUM_UNREADS", guildId: e.guild_id, channelId: e.id, threads: l });
     }, [e.id, e.guild_id, i, n, t, u]);
@@ -70,13 +70,13 @@ function v(e) {
     return (0, a.bG)([g.A, _.A], () => {
         let t = i()(g.A.getThreadsForParent(e.guild_id, e.parent_id))
             .keys()
-            .filter((e) => _.A.getChannel(e)?.hasFlag(k.lx.PINNED) === !0)
+            .filter((e) => _.A.getChannel(e)?.hasFlag(O.lx.PINNED) === !0)
             .head();
         return _.A.getChannel(t);
     });
 }
 function L(e, t) {
-    let n = (0, a.yK)([M.default], () => t.map((e) => M.default.getUser(e)).filter(S.Vq));
+    let n = (0, a.yK)([T.default], () => t.map((e) => T.default.getUser(e)).filter(y.Vq));
     return (
         (0, o.Ay)(() => {
             n.forEach((t) => {
@@ -114,10 +114,10 @@ function K(e) {
 function P(e) {
     let t = (0, a.bG)([m.A], () => m.A.getCount(e.id) ?? 0),
         n = (0, h.Mw)(t, e.id),
-        r = (0, a.bG)([y.Ay], () => (0, w.yz)(e.id, [y.Ay])),
-        u = (0, a.bG)([p.A], () => {
+        r = (0, a.bG)([S.Ay], () => (0, w.yz)(e.id, [S.Ay])),
+        u = (0, a.bG)([N.A], () => {
             if (!r) return null;
-            let n = p.A.getCount(e.id);
+            let n = N.A.getCount(e.id);
             if (null == n || !(n > 0)) return "1+";
             {
                 let e = Math.min(n, t);
@@ -127,7 +127,7 @@ function P(e) {
     return { messageCount: t, isMaxMessageCount: null != t && `${t}` !== n, messageCountText: n, unreadCount: u };
 }
 function B(e) {
-    let t = (0, a.bG)([M.default], () => M.default.getUser(e.ownerId)),
+    let t = (0, a.bG)([T.default], () => T.default.getUser(e.ownerId)),
         n = (0, a.bG)([G.A], () => G.A.getMessage(e.id)?.firstMessage),
         u = (0, c.d8)(n?.author ?? t, e);
     return (
@@ -138,36 +138,36 @@ function B(e) {
     );
 }
 function Q(e) {
-    let t = M.default.getUser(e.ownerId),
+    let t = T.default.getUser(e.ownerId),
         n = G.A.getMessage(e.id)?.firstMessage,
         r = (0, c.FT)(n?.author ?? t, e);
     return { user: t, author: r };
 }
 function q(e) {
-    return (0, a.bG)([T.A], () => T.A.can(O.xBc.MANAGE_CHANNELS, e));
+    return (0, a.bG)([M.A], () => M.A.can(k.xBc.MANAGE_CHANNELS, e));
 }
 let z = { isNew: !1, hasUnreads: !1 };
 function Y(e) {
-    return (0, a.cf)([I.A, y.Ay], () => {
-        let t = I.A.getGuild(e.getGuildId() ?? O.dJq);
-        return null == t ? z : (0, w.U1)(e, t, [y.Ay]);
+    return (0, a.cf)([I.A, S.Ay], () => {
+        let t = I.A.getGuild(e.getGuildId() ?? k.dJq);
+        return null == t ? z : (0, w.U1)(e, t, [S.Ay]);
     });
 }
 function J(e) {
     return r.useMemo(() => (null == e || null == e.template ? "" : e.template.trim()), [e]);
 }
 function V(e) {
-    return (0, a.bG)([T.A], () => T.A.can(O.xBc.READ_MESSAGE_HISTORY, e));
+    return (0, a.bG)([M.A], () => M.A.can(k.xBc.READ_MESSAGE_HISTORY, e));
 }
 function $(e) {
-    return (0, a.bG)([T.A], () => T.A.can(O.xBc.READ_MESSAGE_HISTORY, e));
+    return (0, a.bG)([M.A], () => M.A.can(k.xBc.READ_MESSAGE_HISTORY, e));
 }
 function X(e) {
     let { channelId: t } = e;
-    return (0, a.cf)([N.A], () => ({
-        isSearchLoading: N.A.getSearchLoading(t),
-        searchQuery: N.A.getSearchQuery(t),
-        searchResults: N.A.getSearchResults(t),
+    return (0, a.cf)([p.A], () => ({
+        isSearchLoading: p.A.getSearchLoading(t),
+        searchQuery: p.A.getSearchQuery(t),
+        searchResults: p.A.getSearchResults(t),
     }));
 }
 function Z(e, t, n) {
@@ -194,22 +194,22 @@ function Z(e, t, n) {
     }, [a, e.guild_id, e.id, u, i, l, t, n]);
 }
 function W(e, t) {
-    return (0, a.bG)([f.A, y.Ay, _.A], () => {
+    return (0, a.bG)([f.A, S.Ay, _.A], () => {
         let n = _.A.getChannel(t);
         if (!n?.isForumLikeChannel()) return 0;
         let r = f.A.getActiveJoinedUnreadThreadsForParent(e, t),
             u = f.A.getActiveUnjoinedUnreadThreadsForParent(e, t),
-            i = y.Ay.ackMessageId(t),
+            i = S.Ay.ackMessageId(t),
             l = 0;
         if (null == i) return l;
         for (let e in r) {
             let t = r[e],
-                n = y.Ay.lastMessageId(t.channel.id);
+                n = S.Ay.lastMessageId(t.channel.id);
             null != n && n > i && l++;
         }
         for (let e in u) {
             let t = u[e],
-                n = y.Ay.lastMessageId(t.id);
+                n = S.Ay.lastMessageId(t.id);
             null != n && n > i && l++;
         }
         return l;
@@ -222,11 +222,7 @@ function ee(e) {
         A = (0, a.bG)([U.A], () => l && (o > 0 || U.A.getCanAckThreads()), [l, o]);
     return (
         r.useEffect(() => {
-            A &&
-                (0, s.hS)(t, {
-                    object: O.ZSU.ACK_FORUM_ACTIVE_THREADS,
-                    objectType: O.AnalyticsObjectTypes.ACK_AUTOMATIC,
-                });
+            A && (0, s.hS)(t, { object: k.ZSU.ACK_FORUM_ACTIVE_THREADS, objectType: k.btD.ACK_AUTOMATIC });
         }, [t, A]),
         d
     );

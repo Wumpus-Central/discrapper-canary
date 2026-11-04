@@ -123,7 +123,7 @@ function M(e) {
                             subtext: r,
                             checked: t === c,
                             action: () => {
-                                (w && t === c) || P(a, l, t, x.AnalyticsObjectTypes.RESOLUTION);
+                                (w && t === c) || P(a, l, t, x.btD.RESOLUTION);
                             },
                         },
                         `stream-settings-fps-${t}`,
@@ -141,7 +141,7 @@ function M(e) {
                             subtext: r,
                             checked: t === z,
                             action: () => {
-                                (w && t === z) || P(l, t, j, x.AnalyticsObjectTypes.RESOLUTION);
+                                (w && t === z) || P(l, t, j, x.btD.RESOLUTION);
                             },
                         },
                         `stream-settings-resolution-${t}`,

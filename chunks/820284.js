@@ -9,7 +9,7 @@ class d extends r.Component {
     static Pages = a.liQ;
     static Sections = a.JJy;
     static Objects = a.ZSU;
-    static ObjectTypes = a.AnalyticsObjectTypes;
+    static ObjectTypes = a.btD;
     static defaultProps = { root: !1 };
     _loadId = null;
     _loadDate = this.props.root ? Date.now() : null;

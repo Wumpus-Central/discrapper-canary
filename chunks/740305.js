@@ -22,8 +22,8 @@ var n = t(477900),
     T = t(172218),
     L = t(834730),
     y = t(123292),
-    O = t(140735),
-    C = t(192308),
+    C = t(140735),
+    O = t(192308),
     _ = t(43990),
     b = t(444927),
     v = t(793574),
@@ -35,8 +35,8 @@ var n = t(477900),
     W = t(299679),
     G = t(820847),
     P = t(666810),
-    H = t(561794),
-    D = t(862772),
+    D = t(561794),
+    H = t(862772),
     B = t(310209),
     F = t(719102),
     U = t(734057),
@@ -78,7 +78,7 @@ function q(i) {
     let { wishlistInDmLength: e } = i;
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(O.A, { children: X.intl.string(X.t.pfChQr) }),
+            (0, n.jsx)(C.A, { children: X.intl.string(X.t.pfChQr) }),
             (0, n.jsx)("div", {
                 className: j()(K.Md, K.e6),
                 children: Array.from({ length: e }, (i, e) => (0, n.jsx)(F.O, {}, `placeholder-${e}`)),
@@ -98,7 +98,7 @@ function ii(i) {
         } = i,
         d = (0, m.bG)([Q.Ay, U.A], () => U.A.getChannel(Q.Ay.getChannelId())),
         u = s.useCallback(() => {
-            (r?.(), (0, C.closeAllModals)());
+            (r?.(), (0, O.closeAllModals)());
         }, [r]);
     return (0, n.jsx)("ul", {
         className: j()(K.Md, K.e6),
@@ -114,7 +114,7 @@ function ii(i) {
                               newValue: {
                                   positionInSection: e,
                                   skuId: s.id,
-                                  itemSource: r === H.uS.WISHLIST ? "organic" : "recommendation",
+                                  itemSource: r === D.uS.WISHLIST ? "organic" : "recommendation",
                                   productLine: s.productLine,
                               },
                               children: (0, n.jsx)(F.A, {
@@ -174,7 +174,7 @@ function ie(i) {
                                   : n.length > 0 &&
                                       n.every((i) => {
                                           let { sku: e, source: t } = i;
-                                          return t === H.uS.POPULAR && (0, z.bF)(e);
+                                          return t === D.uS.POPULAR && (0, z.bF)(e);
                                       })
                                     ? "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY"
                                     : "SHOP_ONLY";
@@ -191,12 +191,12 @@ function ie(i) {
                         return { title: X.intl.string(X.t.BCi1gT), showIcons: !1 };
                 }
             }, [a, l]);
-        })({ totalUnownedWishlistItemCount: a, wishlistInDmLength: H.pl, displayItems: r, recipientName: N }),
+        })({ totalUnownedWishlistItemCount: a, wishlistInDmLength: D.pl, displayItems: r, recipientName: N }),
         y = l?.getBannerURL({ canAnimate: !1, size: 713 }),
-        O = a > H.pl,
-        C = s.useMemo(() => (O ? r.slice(0, H.pl) : r), [r, O]),
+        C = a > D.pl,
+        O = s.useMemo(() => (C ? r.slice(0, D.pl) : r), [r, C]),
         [w, G] = s.useState(!1),
-        D = s.useCallback(
+        H = s.useCallback(
             (i) => {
                 if (i && !S && r.length > 0) {
                     let i = r.map((i) => {
@@ -221,7 +221,7 @@ function ie(i) {
             },
             [S, r, e.id, u],
         ),
-        B = (0, T.K)(D, void 0, !S && !w),
+        B = (0, T.K)(H, void 0, !S && !w),
         F = s.useMemo(
             () =>
                 new Set(
@@ -250,14 +250,14 @@ function ie(i) {
                                       (0, n.jsx)(Z, {
                                           title: L.title,
                                           subtitle: L.subtitle,
-                                          showViewAll: a > H.pl,
+                                          showViewAll: a > D.pl,
                                           themeClass: i,
                                           onOpenWishlist: f,
                                       }),
                                       (0, n.jsx)("div", {
                                           className: i,
                                           children: S
-                                              ? (0, n.jsx)(q, { wishlistInDmLength: H.pl })
+                                              ? (0, n.jsx)(q, { wishlistInDmLength: D.pl })
                                               : (0, n.jsx)(W.dB, {
                                                     newValue: {
                                                         impressionSessionId: h,
@@ -270,7 +270,7 @@ function ie(i) {
                                                         isGifting: !0,
                                                         location: "WishlistBanner",
                                                         children: (0, n.jsx)(ii, {
-                                                            items: C,
+                                                            items: O,
                                                             giftRecipient: e,
                                                             defaultWishlistId: o,
                                                             onOpenWishlist: f,
@@ -300,12 +300,12 @@ function it(i) {
             skusToUserAndReason: c,
             status: o,
             defaultWishlistId: d,
-        } = (0, D.rg)({ userId: e.id, numItems: H.pl, source: G.B.USER_PROFILE }),
+        } = (0, H.rg)({ userId: e.id, numItems: D.pl, source: G.B.USER_PROFILE }),
         u = s.useMemo(
             () =>
                 N()(
                     a.map((i) => {
-                        let t = null != c[i.id] && c[i.id][e.id] === B.j.WISHLIST ? H.uS.WISHLIST : H.uS.POPULAR;
+                        let t = null != c[i.id] && c[i.id][e.id] === B.j.WISHLIST ? D.uS.WISHLIST : D.uS.POPULAR;
                         return null != i ? { sku: i, source: t } : null;
                     }),
                 ),
@@ -384,7 +384,7 @@ function ic(i) {
                         page: Y.liQ.DM_CHANNEL,
                         section: Y.JJy.CHANNEL_TEXT_AREA,
                         object: Y.ZSU.BUTTON_ICON,
-                        objectType: Y.AnalyticsObjectTypes.GIFT,
+                        objectType: Y.btD.GIFT,
                     },
                     giftMessage: g,
                 }),

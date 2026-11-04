@@ -18,15 +18,15 @@ var n = e(477900),
     _ = e(775602),
     x = e(793574),
     T = e(688810),
-    j = e(982240),
-    N = e(574532),
+    N = e(982240),
+    j = e(574532),
     L = e(298208),
     C = e(951305),
     E = e(75678),
     A = e(402860),
     k = e(299679),
-    y = e(820847),
-    O = e(666810),
+    O = e(820847),
+    y = e(666810),
     G = e(561794),
     b = e(862772),
     w = e(310209),
@@ -75,9 +75,9 @@ function J(i) {
 function z(i) {
     let { analyticsLocations: t } = i,
         e = (0, H.F5)("GiftSelectionModal"),
-        { nextTier: s, giftsToNextTier: l } = (0, d.cf)([j.Ay], () => ({
-            nextTier: j.Ay.getNextTier(r.$.GIFTING),
-            giftsToNextTier: j.Ay.getRemainingToNextTier(r.$.GIFTING),
+        { nextTier: s, giftsToNextTier: l } = (0, d.cf)([N.Ay], () => ({
+            nextTier: N.Ay.getNextTier(r.$.GIFTING),
+            giftsToNextTier: N.Ay.getRemainingToNextTier(r.$.GIFTING),
         }));
     return e && null != s
         ? (0, n.jsx)(B.A, {
@@ -173,8 +173,8 @@ function ii(i) {
                   : Z.intl.formatToPlainString(Z.t.dIDKgi, { username: f }),
         { analyticsLocations: m } = (0, T.Ay)(...(I ?? []), x.A.GIFT_SELECTION_MODAL_WISHLIST),
         p = (0, S.A)(() => (0, c.A)()),
-        [_, j] = s.useState(!1),
-        N = s.useCallback(
+        [_, N] = s.useState(!1),
+        j = s.useCallback(
             (i) => {
                 i &&
                     !d &&
@@ -195,11 +195,11 @@ function ii(i) {
                         ),
                         location_stack: m,
                     }),
-                    j(!0));
+                    N(!0));
             },
             [d, a, t.id, m],
         ),
-        L = (0, o.K)(N, void 0, !d && !_);
+        L = (0, o.K)(j, void 0, !d && !_);
     return (0, n.jsxs)("div", {
         ref: L,
         className: K.jf,
@@ -256,16 +256,16 @@ function it(i) {
         S = s.useRef(null),
         x = s.useRef(null),
         T = (0, d.bG)([_.Ay], () => _.Ay.useReducedMotion),
-        j = s.useRef(!1),
-        N = s.useCallback(
+        N = s.useRef(!1),
+        j = s.useCallback(
             (i) => {
-                (p(i), (j.current = !0));
+                (p(i), (N.current = !0));
                 let e = S.current;
                 (null != e &&
                     e.addEventListener(
                         "scrollend",
                         () => {
-                            j.current = !1;
+                            N.current = !1;
                         },
                         { once: !0 },
                     ),
@@ -297,7 +297,7 @@ function it(i) {
             let e = new IntersectionObserver(
                 (i) => {
                     let [t] = i;
-                    j.current || p(t.isIntersecting ? "Wishlist" : "Nitro");
+                    N.current || p(t.isIntersecting ? "Wishlist" : "Nitro");
                 },
                 { root: t, threshold: 0.5 },
             );
@@ -312,7 +312,7 @@ function it(i) {
                             type: "top",
                             look: "brand",
                             selectedItem: m,
-                            onItemSelect: N,
+                            onItemSelect: j,
                             children: [
                                 (0, n.jsx)(f.V.Item, {
                                     id: "Nitro",
@@ -334,7 +334,7 @@ function it(i) {
                                 (0, n.jsx)("div", {
                                     ref: x,
                                     className: K.XP,
-                                    children: (0, n.jsx)(O.h, {
+                                    children: (0, n.jsx)(y.h, {
                                         isGifting: !0,
                                         location: "GiftSelectionModal",
                                         children: (0, n.jsx)(ii, {
@@ -365,7 +365,7 @@ function ie(i) {
             skusToUserAndReason: d,
             status: u,
             defaultWishlistId: I,
-        } = (0, b.rg)({ userId: t.id, numItems: 12, source: y.B.USER_PROFILE }),
+        } = (0, b.rg)({ userId: t.id, numItems: 12, source: O.B.USER_PROFILE }),
         h = s.useMemo(
             () =>
                 a()(
@@ -414,7 +414,7 @@ function is(i) {
                         page: null != t ? Q.liQ.DM_CHANNEL : Q.liQ.GUILD_CHANNEL,
                         section: Q.JJy.CHANNEL_TEXT_AREA,
                         object: Q.ZSU.BUTTON_ICON,
-                        objectType: Q.AnalyticsObjectTypes.GIFT,
+                        objectType: Q.btD.GIFT,
                     },
                     giftMessage: r,
                 }),
@@ -465,7 +465,7 @@ function il(i) {
         giftMessage: o,
         giftingOrigin: r = U.vQ.DM_CHANNEL,
     } = i;
-    return (0, n.jsx)(N.M, {
+    return (0, n.jsx)(j.M, {
         activeSubscription: null,
         stepConfigs: [],
         skuIDs: U.T7,

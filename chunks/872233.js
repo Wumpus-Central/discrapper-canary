@@ -1,4 +1,4 @@
-(n.d(t, { default: () => T }), n(323874), n(14289), n(35956));
+(n.d(e, { default: () => D }), n(323874), n(14289), n(35956));
 var i = n(477900),
     a = n(582128),
     c = n(17928),
@@ -14,97 +14,97 @@ var i = n(477900),
     U = n(987144),
     f = n(773669),
     A = n(613373),
-    y = n(71393),
-    L = n(174459),
-    R = n(652215),
-    E = n(105292),
-    M = n(401146),
-    O = n(519636);
-function T(e) {
+    L = n(71393),
+    R = n(174459),
+    E = n(652215),
+    M = n(105292),
+    O = n(401146),
+    y = n(519636);
+function D(t) {
     let {
-            guildId: t,
-            transitionState: T,
+            guildId: e,
+            transitionState: D,
             onClose: I,
-            analyticsLocation: h,
-            sourceAnalyticsLocations: j,
-            videoPlacement: D,
-        } = e,
-        G = (0, c.bG)([y.A], () => (null != t ? y.A.getGuild(t) : null)),
-        S = (function (e) {
-            let [t, n] = a.useState(void 0);
+            analyticsLocation: T,
+            sourceAnalyticsLocations: h,
+            videoPlacement: G,
+        } = t,
+        S = (0, c.bG)([L.A], () => (null != e ? L.A.getGuild(e) : null)),
+        g = (function (t) {
+            let [e, n] = a.useState(void 0);
             return (
                 a.useEffect(() => {
-                    let t;
-                    if (e.startsWith("en")) return;
-                    let i = `https://${window.GLOBAL_ENV.CDN_HOST}/assets/boosting/marketing/captions/boosting_marketing_video_captions_${e}.vtt`,
+                    let e;
+                    if (t.startsWith("en")) return;
+                    let i = `https://${window.GLOBAL_ENV.CDN_HOST}/assets/boosting/marketing/captions/boosting_marketing_video_captions_${t}.vtt`,
                         a = !1;
                     return (
                         fetch(i)
-                            .then((e) => {
-                                if (e.ok) return e.text();
+                            .then((t) => {
+                                if (t.ok) return t.text();
                             })
-                            .then((e) => {
-                                a || null == e || n((t = URL.createObjectURL(new Blob([e], { type: "text/vtt" }))));
+                            .then((t) => {
+                                a || null == t || n((e = URL.createObjectURL(new Blob([t], { type: "text/vtt" }))));
                             })
                             .catch(() => {}),
                         () => {
-                            ((a = !0), null != t && URL.revokeObjectURL(t), n(void 0));
+                            ((a = !0), null != e && URL.revokeObjectURL(e), n(void 0));
                         }
                     );
-                }, [e]),
-                t
+                }, [t]),
+                e
             );
         })((0, c.bG)([f.default], () => f.default.locale)),
-        { analyticsLocations: g } = (0, b.Ay)(j, p.A.GUILD_POWERUPS_MARKETING_VIDEO_MODAL),
-        [k, m] = a.useState(!1),
+        { analyticsLocations: k } = (0, b.Ay)(h, p.A.GUILD_POWERUPS_MARKETING_VIDEO_MODAL),
+        [j, m] = a.useState(!1),
         C = a.useRef(!1),
         x = a.useRef(null),
         v = a.useRef(null),
         N = a.useMemo(
             () => ({
-                ...(null != t ? { guild_id: t } : {}),
-                type: R.liQ.PREMIUM_GUILD_USER_MODAL,
-                location_stack: g,
-                location_section: h.section,
-                location_object: h.object,
-                video_placement: D,
+                ...(null != e ? { guild_id: e } : {}),
+                type: E.liQ.PREMIUM_GUILD_USER_MODAL,
+                location_stack: k,
+                location_section: T.section,
+                location_object: T.object,
+                video_placement: G,
             }),
-            [h.object, h.section, g, t, D],
+            [T.object, T.section, k, e, G],
         ),
         P = a.useCallback(
-            (e) => {
-                if (e !== l.Q6.PLAYING || C.current) return;
+            (t) => {
+                if (t !== l.Q6.PLAYING || C.current) return;
                 C.current = !0;
-                let t = x.current?.duration;
-                L.default.track(R.HAw.BOOSTING_MARKETING_VIDEO_PLAYED, {
+                let e = x.current?.duration;
+                R.default.track(E.HAw.BOOSTING_MARKETING_VIDEO_PLAYED, {
                     ...N,
-                    ...(null != t && Number.isFinite(t) ? { video_duration_sec: t } : {}),
+                    ...(null != e && Number.isFinite(e) ? { video_duration_sec: e } : {}),
                 });
             },
             [N],
         ),
         B = a.useCallback(() => {
-            let e = x.current?.currentTime,
-                t = x.current?.duration;
-            L.default.track(R.HAw.BOOSTING_MARKETING_VIDEO_COMPLETED, {
+            let t = x.current?.currentTime,
+                e = x.current?.duration;
+            R.default.track(E.HAw.BOOSTING_MARKETING_VIDEO_COMPLETED, {
                 ...N,
-                ...(null != e && Number.isFinite(e) ? { seconds_played: e } : {}),
-                ...(null != t && Number.isFinite(t) ? { video_duration_sec: t } : {}),
+                ...(null != t && Number.isFinite(t) ? { seconds_played: t } : {}),
+                ...(null != e && Number.isFinite(e) ? { video_duration_sec: e } : {}),
             });
         }, [N]);
     async function w() {
-        null != G &&
+        null != S &&
             (v.current?.pause(),
             m(!0),
             await (0, U.g)({
-                analyticsLocations: g,
+                analyticsLocations: k,
                 analyticsLocation: {
-                    page: R.liQ.PREMIUM_GUILD_USER_MODAL,
-                    section: R.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                    object: R.ZSU.BUTTON_CTA,
-                    objectType: R.AnalyticsObjectTypes.BUY,
+                    page: E.liQ.PREMIUM_GUILD_USER_MODAL,
+                    section: E.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                    object: E.ZSU.BUTTON_CTA,
+                    objectType: E.btD.BUY,
                 },
-                guild: G,
+                guild: S,
                 onClose: I,
             }),
             m(!1));
@@ -112,46 +112,46 @@ function T(e) {
     async function Q() {
         (v.current?.pause(),
             await (0, s.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("378357"), n.e("418710")]).then(n.bind(n, 770101));
-                return (t) =>
-                    (0, i.jsx)(e, {
-                        ...t,
-                        onSelectGuild: (e) => {
-                            (t.onClose(),
+                let { default: t } = await Promise.all([n.e("378357"), n.e("418710")]).then(n.bind(n, 770101));
+                return (e) =>
+                    (0, i.jsx)(t, {
+                        ...e,
+                        onSelectGuild: (t) => {
+                            (e.onClose(),
                                 I(),
                                 (0, U.g)({
-                                    analyticsLocations: g,
+                                    analyticsLocations: k,
                                     analyticsLocation: {
-                                        page: R.liQ.PREMIUM_GUILD_USER_MODAL,
-                                        section: R.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                                        object: R.ZSU.BUTTON_CTA,
-                                        objectType: R.AnalyticsObjectTypes.BUY,
+                                        page: E.liQ.PREMIUM_GUILD_USER_MODAL,
+                                        section: E.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                        object: E.ZSU.BUTTON_CTA,
+                                        objectType: E.btD.BUY,
                                     },
-                                    guild: e,
+                                    guild: t,
                                 }));
                         },
                     });
             }));
     }
-    let F = E.intl.string(E.t["0f1VCH"]);
+    let F = M.intl.string(M.t["0f1VCH"]);
     return (0, i.jsxs)(o.d, {
         size: "xxl",
-        transitionState: T,
+        transitionState: D,
         onClose: I,
         "aria-label": F,
         children: [
             (0, i.jsx)(r.rQ, { title: F }),
             (0, i.jsx)(u.c, {
                 children: (0, i.jsx)("div", {
-                    className: M.K,
+                    className: O.K,
                     children: (0, i.jsx)(A.Ft, {
                         ref: x,
                         playerRef: v,
-                        parentTransitionState: T,
+                        parentTransitionState: D,
                         orientation: "landscape",
                         src: "https://cdn.discordapp.com/assets/content/f0b9a61f96ee69dc341c22c04fe6458660d9317caae3d381c05cf8348fca5b95.mp4",
-                        poster: O.A,
-                        captionTrackUrl: S,
+                        poster: y.A,
+                        captionTrackUrl: g,
                         autoplay: !0,
                         autoFocus: !0,
                         hidePlaybackSpeedBtn: !0,
@@ -162,16 +162,16 @@ function T(e) {
             }),
             (0, i.jsx)(d.H, {
                 actions: [
-                    null != G
+                    null != S
                         ? {
                               variant: "expressive",
                               size: "md",
                               icon: _._,
-                              text: E.intl.string(E.t.gKmQ1G),
+                              text: M.intl.string(M.t.gKmQ1G),
                               onClick: w,
-                              loading: k,
+                              loading: j,
                           }
-                        : { variant: "primary", size: "md", text: E.intl.string(E.t.BMx1iy), onClick: Q },
+                        : { variant: "primary", size: "md", text: M.intl.string(M.t.BMx1iy), onClick: Q },
                 ],
             }),
         ],

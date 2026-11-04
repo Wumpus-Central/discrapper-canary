@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => na }));
+(n.r(t), n.d(t, { default: () => ni }));
 var i,
     a = n(477900),
     s = n(582128),
@@ -11,8 +11,8 @@ var i,
     m = n(768622),
     _ = n(944791),
     g = n(456412),
-    h = n(964486),
-    p = n(726249),
+    p = n(964486),
+    h = n(726249),
     f = n(742589),
     I = n(210714),
     E = n(363195),
@@ -29,30 +29,30 @@ var T = n(681154),
     w = n(731699),
     N = n(320095),
     b = n(841643),
-    k = n(435558);
-let G = {
+    G = n(435558);
+let k = {
         JOIN_GUILD: "join_guild",
         OPEN_GUILD: "open_guild",
         OPEN_GAME: "open_game",
         OPEN_URI: "open_uri",
         OPEN_NUDGE: "open_nudge",
     },
-    L = ["post", "carousel", "server_row"];
-function O(e) {
-    return (0, k.isPlainObject)(e);
+    O = ["post", "carousel", "server_row"];
+function L(e) {
+    return (0, G.isPlainObject)(e);
 }
-function R(e) {
+function j(e) {
     let { guild_id: t, icon_url: n, online: i, members: a, ...s } = e;
     return { ...s, guildId: t, iconUrl: n, online: Number(i), members: Number(a) };
 }
-function j(e) {
+function R(e) {
     return { ok: !1, reason: e };
 }
 var U = n(280450),
     F = n(734057),
     Y = n(776096),
-    V = n(71393),
-    H = n(232835),
+    H = n(71393),
+    V = n(232835),
     P = n(576705),
     B = n(573163),
     K = n(994500),
@@ -155,7 +155,7 @@ function e_(e) {
 function eg(e) {
     return e < -1.5 ? 4 : e < 0 ? 3 : e > 0 ? 2 : 1;
 }
-async function eh(e, t, n, i) {
+async function ep(e, t, n, i) {
     let a = e.slice(t, n);
     if (0 === a.length) return;
     el.A.loadHydratedAttempt((0, eo.V)(t, n));
@@ -195,7 +195,7 @@ async function eh(e, t, n, i) {
             .map((e) => ({ user_id: e.data.user_id, content_id: e.data.content_id }));
     await el.A.fetchHydrated(t, n, { messageItems: [...r, ...d], activityItems: l });
 }
-function ep(e, t) {
+function eh(e, t) {
     return {
         ...t,
         message: (0, N.rh)(e.message),
@@ -243,7 +243,7 @@ function eI(e) {
     }
     let i = F.A.getChannel(t);
     if (i?.nsfw) return !0;
-    let a = null != (n = i?.guild_id ?? n) ? V.A.getGuild(n) : null;
+    let a = null != (n = i?.guild_id ?? n) ? H.A.getGuild(n) : null;
     return a?.nsfwLevel === ec.ftr.EXPLICIT || a?.nsfwLevel === ec.ftr.AGE_RESTRICTED;
 }
 function eE(e) {
@@ -324,17 +324,17 @@ let eM = +W.A.Millis.DAY,
     ew = [],
     eN = [],
     eb = {},
-    ek = {},
     eG = {},
-    eL = {},
+    ek = {},
     eO = {},
-    eR = {},
-    ej = 0,
+    eL = {},
+    ej = {},
+    eR = 0,
     eU = !1,
     eF = !1,
     eY = !1,
-    eV = null,
     eH = null,
+    eV = null,
     eP = 0,
     eB = [],
     eK = [],
@@ -359,7 +359,7 @@ function e3(e) {
     if (!Z.filterStaffContent()) return !0;
     if (e_(e)) {
         if (e.data.guild_id === q.VL) return !0;
-        let t = V.A.getGuild(e.data.guild_id);
+        let t = H.A.getGuild(e.data.guild_id);
         if (null == t || t.features.has(ec.GuildFeatures.INTERNAL_EMPLOYEE_ONLY)) return !1;
     }
     return !0;
@@ -369,12 +369,12 @@ function e6(e) {
     if (!(0, b.SL)("icymi_store")) return !1;
     let t = (function (e) {
         try {
-            if (!O(e) || null == e.id || null == e.type || !O(e.layout) || !Array.isArray(e.actions))
-                return j("invalid_card");
-            if (!L.includes(e.layout.type)) return j("unknown_layout");
-            if (!e.actions.every((e) => O(e) && Object.values(G).includes(e.type))) return j("unknown_action");
+            if (!L(e) || null == e.id || null == e.type || !L(e.layout) || !Array.isArray(e.actions))
+                return R("invalid_card");
+            if (!O.includes(e.layout.type)) return R("unknown_layout");
+            if (!e.actions.every((e) => L(e) && Object.values(k).includes(e.type))) return R("unknown_action");
             if (void 0 !== e.client_eligibility && "notifications_permission" !== e.client_eligibility)
-                return j("unknown_eligibility");
+                return R("unknown_eligibility");
             return {
                 ok: !0,
                 card: {
@@ -383,7 +383,7 @@ function e6(e) {
                     layout: (function (e) {
                         switch (e.type) {
                             case "server_row":
-                                return R(e);
+                                return j(e);
                             case "post": {
                                 let { image_url: t, action_label: n, ...i } = e;
                                 return { ...i, imageUrl: t, actionLabel: n };
@@ -395,7 +395,7 @@ function e6(e) {
                                     header: { title: t.title, subtitle: t.subtitle, iconUrl: t.icon_url },
                                     items: n.map((e) => {
                                         let { game_id: t, cover_url: n, server: i, ...a } = e;
-                                        return { ...a, gameId: t, coverUrl: n, server: null == i ? null : R(i) };
+                                        return { ...a, gameId: t, coverUrl: n, server: null == i ? null : j(i) };
                                     }),
                                 };
                             }
@@ -406,12 +406,12 @@ function e6(e) {
                 },
             };
         } catch {
-            return j("invalid_card");
+            return R("invalid_card");
         }
     })(e.data.item);
-    return !!t.ok && ((eG[e.id] = { ...e, card: t.card }), !0);
+    return !!t.ok && ((ek[e.id] = { ...e, card: t.card }), !0);
 }
-function e2(e, t, n, i) {
+function e9(e, t, n, i) {
     let a = e.filter((e) => e.type !== n);
     return (
         t.forEach((e, t) => {
@@ -420,7 +420,7 @@ function e2(e, t, n, i) {
         a
     );
 }
-function e9() {
+function e2() {
     if (
         ((eB = eB.filter((e) => e.type !== q.Mm.RECOMMENDED_GUILDS)),
         (eK = eK.filter((e) => e.type !== q.Mm.RECOMMENDED_GUILDS)),
@@ -428,11 +428,11 @@ function e9() {
     )
         return;
     let e = "recommendedGuilds",
-        t = V.A.getGuildsArray().filter((e) => e.features.has(ec.GuildFeatures.COMMUNITY)).length >= 5,
+        t = H.A.getGuildsArray().filter((e) => e.features.has(ec.GuildFeatures.COMMUNITY)).length >= 5,
         n = es.getReadTimestamp(e);
     if (t && null != n && Date.now() - eW > eM && Date.now() - n < ev) return;
     let i = { id: e, type: q.Mm.RECOMMENDED_GUILDS, score: 50 };
-    if (((eG[i.id] = i), (ek[i.id] = i), 0 === eB.length)) eK = [i, ...eK];
+    if (((ek[i.id] = i), (eG[i.id] = i), 0 === eB.length)) eK = [i, ...eK];
     else if ((!t && eB.length < 5) || (t && eB.length < 10)) eB = [...eB, i];
     else if (t) {
         let e = Math.round(2 * Math.random()) + 3 - 1;
@@ -445,32 +445,32 @@ function e4() {
         (ew.forEach((t) => {
             e.add(t.id);
         }),
-        null != eH)
+        null != eV)
     )
-        if (e.has(eH.id)) {
-            let e = eH.id,
-                t = eH.type,
+        if (e.has(eV.id)) {
+            let e = eV.id,
+                t = eV.type,
                 n = ew.findIndex((n) => n.id === e && n.type === t);
-            -1 !== n && ((eH = ew[n]), (ew = ew.filter((t) => t.id !== e)), (ew = [eH, ...ew]));
-        } else ((ew = [eH, ...ew]), e.add(eH.id));
+            -1 !== n && ((eV = ew[n]), (ew = ew.filter((t) => t.id !== e)), (ew = [eV, ...ew]));
+        } else ((ew = [eV, ...ew]), e.add(eV.id));
     ew.forEach((e) => {
-        ((ek[e.id] = e),
+        ((eG[e.id] = e),
             e.type === q.Mm.CUSTOM_STATUS &&
-                (K.A.isBlockedOrIgnored(e.data.user_id) ? (eL[e.id] = !0) : (eG[e.id] = ef(e))));
+                (K.A.isBlockedOrIgnored(e.data.user_id) ? (eO[e.id] = !0) : (ek[e.id] = ef(e))));
     });
 }
-function e8(e) {
+function e7(e) {
     let t, n, i, a, s;
-    if ((ew.length > 0 && ((ex = ew), (ew = []), (eN = [])), ej++, null != e)) ((eB = e.newUnread), (eK = e.newRead));
+    if ((ew.length > 0 && ((ex = ew), (ew = []), (eN = [])), eR++, null != e)) ((eB = e.newUnread), (eK = e.newRead));
     else {
-        let [e, t] = e7(ex);
+        let [e, t] = e8(ex);
         ((eB = e), (eK = t));
     }
     ((function () {
-        let e = V.A.getGuildIds(),
+        let e = H.A.getGuildIds(),
             t = [];
         for (let n of e) {
-            if (null != eO[n] && eO[n] < 0) continue;
+            if (null != eL[n] && eL[n] < 0) continue;
             let e = D.Ay.getGuildScheduledEventsForGuild(n),
                 i = 0;
             for (let n of e)
@@ -481,8 +481,8 @@ function e8(e) {
                     }
                     if (
                         ((0, D.W$)(n, 2 * W.A.Seconds.DAY) || (0, D.Fd)(n)) &&
-                        (null == eG[n.id] &&
-                            (eG[n.id] = { id: n.id, type: q.Mm.GUILD_EVENT, score: 10, event_id: n.id }),
+                        (null == ek[n.id] &&
+                            (ek[n.id] = { id: n.id, type: q.Mm.GUILD_EVENT, score: 10, event_id: n.id }),
                         t.push({
                             id: n.id,
                             type: q.Mm.GUILD_EVENT,
@@ -502,10 +502,10 @@ function e8(e) {
         let n = [],
             i = [];
         (t.forEach((e) => {
-            ((ek[e.id] = e), null != es.getReadTimestamp(e.id) ? i.push(e) : n.push(e));
+            ((eG[e.id] = e), null != es.getReadTimestamp(e.id) ? i.push(e) : n.push(e));
         }),
-            (eB = e2(eB, n, q.Mm.GUILD_EVENT, 7)),
-            (eK = e2(eK, i, q.Mm.GUILD_EVENT, 7)));
+            (eB = e9(eB, n, q.Mm.GUILD_EVENT, 7)),
+            (eK = e9(eK, i, q.Mm.GUILD_EVENT, 7)));
     })(),
         (t = new Set()),
         (n = {}),
@@ -529,19 +529,19 @@ function e8(e) {
                     return;
                 n[e.content.author_id].add(e.content.extra.application_id);
             }
-            null == eG[e.content.id] &&
-                (eG[e.content.id] = { id: e.content.id, type: q.Mm.ACTIVITY, score: 15, activity: e.content });
+            null == ek[e.content.id] &&
+                (ek[e.content.id] = { id: e.content.id, type: q.Mm.ACTIVITY, score: 15, activity: e.content });
             let s = {
                 id: e.content.id,
                 type: q.Mm.ACTIVITY,
                 score: 15,
                 data: { user_id: e.content.author_id, content_id: e.content.id },
             };
-            (t.add(e.content.id), (ek[s.id] = s), null != es.getReadTimestamp(s.id) ? a.push(s) : i.push(s));
+            (t.add(e.content.id), (eG[s.id] = s), null != es.getReadTimestamp(s.id) ? a.push(s) : i.push(s));
         }),
-        (eB = e2(eB, i, q.Mm.ACTIVITY, 5)),
-        (eK = e2(eK, a, q.Mm.ACTIVITY, 5)),
-        e9(),
+        (eB = e9(eB, i, q.Mm.ACTIVITY, 5)),
+        (eK = e9(eK, a, q.Mm.ACTIVITY, 5)),
+        e2(),
         null != eb.load_id &&
             eC !== eb.load_id &&
             (eT({
@@ -555,10 +555,10 @@ function e8(e) {
             (eb = {})),
         (ez = 0),
         eB.length + eK.length === 0 && (eZ = !0),
-        eh([...eB, ...eK], 0, q.w5, eG),
+        ep([...eB, ...eK], 0, q.w5, ek),
         (eq = !1));
 }
-function e7(e) {
+function e8(e) {
     let t = [],
         n = [],
         i = [];
@@ -615,7 +615,7 @@ function ta(e, t) {
 }
 function ts(e) {
     let { type: t, messageId: n, userId: i, emoji: a, reactionType: s } = e,
-        r = eG[n];
+        r = ek[n];
     if (null == r || r.type !== q.Mm.MESSAGE) return !1;
     let d = U.default.getId() === i;
     "MESSAGE_REACTION_ADD" === t
@@ -630,7 +630,7 @@ function tr(e) {
         (a > ez || !eY) && e.type === q.Mm.MESSAGE && e.data.channel_id === t ? n.push(e) : i.push(e);
     });
     let a = eF,
-        [s, r] = e7(ew);
+        [s, r] = e8(ew);
     if (((eN = te(s, t)), (eF = eY ? a && eN.length >= q.$P : a && e5(i, ew)), 0 === n.length && a === eF)) return !1;
     0 !== n.length && ((eB = i), (eK = [...eK, ...n]));
 }
@@ -638,20 +638,20 @@ class td extends o.Ay.PersistedStore {
     static displayName = "ICYMIStore";
     static persistKey = "ICYMIStore";
     initialize(e) {
-        (this.waitFor(C.A, U.default, F.A, S.A, x.A, Y.A, D.Ay, V.A, Z, w.A, es, H.A, P.A, B.Ay, K.A, z.Ay, J.default),
+        (this.waitFor(C.A, U.default, F.A, S.A, x.A, Y.A, D.Ay, H.A, Z, w.A, es, V.A, P.A, B.Ay, K.A, z.Ay, J.default),
             null != e &&
                 ((ex = e.dehydratedItems ?? []).forEach((e) => {
-                    ek[e.id] = e;
+                    eG[e.id] = e;
                 }),
-                (eO = e.customGuildScores ?? {}),
-                (eR = e.customChannelScoresByGuild ?? {}),
+                (eL = e.customGuildScores ?? {}),
+                (ej = e.customChannelScoresByGuild ?? {}),
                 (eP = e.numOpens ?? 0),
                 (eD = e.lastOpened ?? 0),
                 (eW = e.lastJoinedRecommendedGuild ?? 0),
                 (e1 = e.lastTakenICYMISurvey ?? 0)));
     }
     getVersion() {
-        return ej;
+        return eR;
     }
     getDehydratedItems() {
         return ex;
@@ -660,17 +660,17 @@ class td extends o.Ay.PersistedStore {
         return ew;
     }
     getDehydratedItem(e) {
-        return ek[e] ?? null;
-    }
-    getHydratedItem(e) {
         return eG[e] ?? null;
     }
+    getHydratedItem(e) {
+        return ek[e] ?? null;
+    }
     getMessage(e) {
-        let t = eG[e];
+        let t = ek[e];
         return null == t || t.type !== q.Mm.MESSAGE ? null : t.message;
     }
     getHydratedItems() {
-        return eG;
+        return ek;
     }
     getUnreadDisplayItems() {
         return eB;
@@ -685,25 +685,25 @@ class td extends o.Ay.PersistedStore {
         return ez;
     }
     getMissingItems() {
-        return eL;
+        return eO;
     }
     customMuted(e, t) {
         return this.getCustomGuildScore(e) === em.MUTED || this.getCustomChannelScore(e, t) === em.MUTED;
     }
     getCustomChannelScore(e, t) {
-        return null == eR[e] || null == eR[e][t] ? em.UNKNOWN : eg(eR[e][t]);
+        return null == ej[e] || null == ej[e][t] ? em.UNKNOWN : eg(ej[e][t]);
     }
     getCustomGuildScore(e) {
-        return eO[e] ?? 0;
+        return eL[e] ?? 0;
     }
     getCustomGuildScores() {
-        return eO;
+        return eL;
     }
     hasNewContent() {
         return eF;
     }
     getCurrentStatusAttachments(e) {
-        return null == eV || eV[0] !== e ? [] : eV[1];
+        return null == eH || eH[0] !== e ? [] : eH[1];
     }
     getLoadId() {
         return eC;
@@ -727,7 +727,7 @@ class td extends o.Ay.PersistedStore {
         return eQ.size > 0;
     }
     notificationItem() {
-        return eH;
+        return eV;
     }
     getIsTabFocused() {
         return e$;
@@ -744,14 +744,14 @@ class td extends o.Ay.PersistedStore {
     getIndexInHydratedFeed(e) {
         return "recommended_guilds" === e || "recommendedGuilds" === e
             ? [...eB, ...eK].findIndex((e) => e.type === q.Mm.RECOMMENDED_GUILDS)
-            : [...eB, ...eK].filter((e) => null != eG[e.id]).findIndex((t) => t.id === e);
+            : [...eB, ...eK].filter((e) => null != ek[e.id]).findIndex((t) => t.id === e);
     }
     getState() {
         return {
             dehydratedItems: ex,
             numOpens: eP,
-            customGuildScores: eO,
-            customChannelScoresByGuild: eR,
+            customGuildScores: eL,
+            customChannelScoresByGuild: ej,
             lastOpened: eD,
             lastJoinedRecommendedGuild: eW,
             lastTakenICYMISurvey: e1,
@@ -759,304 +759,262 @@ class td extends o.Ay.PersistedStore {
     }
 }
 let tl = new td(A.h, {
-        LOGOUT: function () {
-            ((ex = []),
-                (ew = []),
-                (eN = []),
-                (ek = {}),
-                (eb = {}),
-                (eG = {}),
-                (eL = {}),
-                (eC = null),
-                (eO = {}),
-                (eR = {}),
-                (ej = 0),
-                (eU = !1),
-                (eF = !1),
-                (eY = !1),
-                (eB = []),
-                (eK = []),
-                (ez = 0),
-                (eD = 0),
-                (eW = 0),
-                (eX = !0),
-                (eq = !1),
-                (eQ = new Set()),
-                (eH = null),
-                (e$ = !1),
-                (eZ = !1),
-                (eV = null),
-                (e0 = 0));
-        },
-        LOAD_ICYMI_FROM_NOTIFICATION: function (e) {
-            let { messageItem: t, customStatusItem: n } = e;
-            if (null != n) return ((eH = n), null != eC && ((ew = ew.length > 0 ? ew : [...ex]), e4(), e8()), !0);
-            if (null != t) {
-                let e = {
-                    id: t.message.id,
-                    type: q.Mm.MESSAGE,
-                    score: 50,
-                    data: {
-                        channel_id: t.channel_id,
-                        message_id: t.message.id,
-                        guild_id: t.guild_id,
-                        channel_type: ec.rbe.GUILD_TEXT,
-                    },
-                };
-                if (
-                    ((ek[t.message.id] = e),
-                    (eG[t.message.id] = { ...e, message: (0, N.rh)(t.message) }),
-                    null == eC && null == eb)
-                ) {
-                    let [t, n] = e7((ex = [e, ...ex]));
-                    ((eB = t), (eK = n));
-                } else ((ew = [e, ...ew]), e8());
-                return !0;
-            }
-            return !1;
-        },
-        LOAD_ICYMI_DEHYDRATED: function (e) {
-            let t,
-                { items: n, loadId: i, startTime: a, isInitialLoad: s, isReloading: r } = e;
-            ((t = new Set(q.H8)),
-                (ew = n
-                    .filter((e) => t.has(e.type))
-                    .filter(e6)
-                    .filter(e3)
-                    .map((e) => {
-                        if (e.type === q.Mm.MESSAGE && null != e.data.message_context) {
-                            let t = {};
-                            (null != e.data.message_context.reply_message_id &&
-                                0 !== parseInt(e.data.message_context.reply_message_id) &&
-                                (t.reply_message_id = e.data.message_context.reply_message_id),
-                                null != e.data.message_context.before_message_id &&
-                                    0 !== parseInt(e.data.message_context.before_message_id) &&
-                                    (t.before_message_id = e.data.message_context.before_message_id),
-                                null != e.data.message_context.after_message_id &&
-                                    0 !== parseInt(e.data.message_context.after_message_id) &&
-                                    (t.after_message_id = e.data.message_context.after_message_id),
-                                null != e.data.message_context.external_content_application_id &&
-                                    0 !== parseInt(e.data.message_context.external_content_application_id) &&
-                                    (t.external_content_application_id =
-                                        e.data.message_context.external_content_application_id),
-                                null != e.data.message_context.reference_message_id &&
-                                    0 !== parseInt(e.data.message_context.reference_message_id) &&
-                                    (t.reference_message_id = e.data.message_context.reference_message_id),
-                                (e.data.message_context = t));
-                        }
-                        return e;
-                    })),
-                e4(),
-                (eb = { load_id: i, load_time_millis: Date.now() - a, feed_item_ids: ew.map((e) => e.id) }));
-            let [d, l] = e7(ew);
-            if (((eN = te(d)), !eY || 0 === ej || s))
-                ((ej = 0), !e$ && e5(d, ew) ? ((eF = !0), (eU = !0)) : (eF = !1), e8({ newUnread: d, newRead: l }));
-            else {
-                ej > 0 && (eH = null);
-                let e = eN.length > q.$P;
-                (r || (eF = e), e && (eh([...d, ...l], 0, q.w5, eG), d.length + l.length === 0 && (eZ = !0)));
-            }
-            eT({
-                newTrackingProps: eb,
-                hasNewContent: eF,
-                unreadFeedItems: d,
-                readFeedItems: l,
-                homeSessionId: e$ ? "foreground_load" : "background_load",
-            });
-        },
-        LOAD_ICYMI_HYDRATED: function (e) {
-            let {
-                messageItems: t,
-                activityItems: n,
-                requestMessageItems: i,
-                requestActivityItems: a,
-                startingIndex: s,
-                endingIndex: r,
-            } = e;
-            ((eZ = !0), (eG = { ...eG }));
-            let d = t.reduce((e, t) => ((e[t.message.id] = t), e), {}),
-                l = n.reduce((e, t) => ((e[t.id] = t), e), {});
-            (i.forEach((e) => {
-                let t = d[e.message_id];
-                if (null == t) {
-                    eL[e.message_id] = !0;
-                    return;
-                }
-                let n = ek[e.message_id];
-                null == n &&
-                    (n = {
-                        id: e.message_id,
-                        type: q.Mm.MESSAGE,
-                        score: -1,
-                        data: {
-                            guild_id: t.guild_id,
-                            channel_id: t.channel_id,
-                            message_id: t.message.id,
-                            channel_type: ec.rbe.GUILD_TEXT,
-                            has_mention: !1,
-                        },
-                    });
-                let i = H.A.getMessage(t.channel_id, t.message.id);
-                if (null != i) {
-                    let e = ep(t, n);
-                    eG[t.message.id] = { ...e, message: i };
-                } else eG[t.message.id] = ep(t, n);
-            }),
-                a.forEach((e) => {
-                    let t = l[e.content_id];
-                    if (null == t) {
-                        eL[e.content_id] = !0;
-                        return;
+    LOGOUT: function () {
+        ((ex = []),
+            (ew = []),
+            (eN = []),
+            (eG = {}),
+            (eb = {}),
+            (ek = {}),
+            (eO = {}),
+            (eC = null),
+            (eL = {}),
+            (ej = {}),
+            (eR = 0),
+            (eU = !1),
+            (eF = !1),
+            (eY = !1),
+            (eB = []),
+            (eK = []),
+            (ez = 0),
+            (eD = 0),
+            (eW = 0),
+            (eX = !0),
+            (eq = !1),
+            (eQ = new Set()),
+            (eV = null),
+            (e$ = !1),
+            (eZ = !1),
+            (eH = null),
+            (e0 = 0));
+    },
+    LOAD_ICYMI_FROM_NOTIFICATION: function (e) {
+        let { messageItem: t, customStatusItem: n } = e;
+        if (null != n) return ((eV = n), null != eC && ((ew = ew.length > 0 ? ew : [...ex]), e4(), e7()), !0);
+        if (null != t) {
+            let e = {
+                id: t.message.id,
+                type: q.Mm.MESSAGE,
+                score: 50,
+                data: {
+                    channel_id: t.channel_id,
+                    message_id: t.message.id,
+                    guild_id: t.guild_id,
+                    channel_type: ec.rbe.GUILD_TEXT,
+                },
+            };
+            if (
+                ((eG[t.message.id] = e),
+                (ek[t.message.id] = { ...e, message: (0, N.rh)(t.message) }),
+                null == eC && null == eb)
+            ) {
+                let [t, n] = e8((ex = [e, ...ex]));
+                ((eB = t), (eK = n));
+            } else ((ew = [e, ...ew]), e7());
+            return !0;
+        }
+        return !1;
+    },
+    LOAD_ICYMI_DEHYDRATED: function (e) {
+        let t,
+            { items: n, loadId: i, startTime: a, isInitialLoad: s, isReloading: r } = e;
+        ((t = new Set(q.H8)),
+            (ew = n
+                .filter((e) => t.has(e.type))
+                .filter(e6)
+                .filter(e3)
+                .map((e) => {
+                    if (e.type === q.Mm.MESSAGE && null != e.data.message_context) {
+                        let t = {};
+                        (null != e.data.message_context.reply_message_id &&
+                            0 !== parseInt(e.data.message_context.reply_message_id) &&
+                            (t.reply_message_id = e.data.message_context.reply_message_id),
+                            null != e.data.message_context.before_message_id &&
+                                0 !== parseInt(e.data.message_context.before_message_id) &&
+                                (t.before_message_id = e.data.message_context.before_message_id),
+                            null != e.data.message_context.after_message_id &&
+                                0 !== parseInt(e.data.message_context.after_message_id) &&
+                                (t.after_message_id = e.data.message_context.after_message_id),
+                            null != e.data.message_context.external_content_application_id &&
+                                0 !== parseInt(e.data.message_context.external_content_application_id) &&
+                                (t.external_content_application_id =
+                                    e.data.message_context.external_content_application_id),
+                            null != e.data.message_context.reference_message_id &&
+                                0 !== parseInt(e.data.message_context.reference_message_id) &&
+                                (t.reference_message_id = e.data.message_context.reference_message_id),
+                            (e.data.message_context = t));
                     }
-                    let n = ek[e.content_id];
-                    if (null == n) {
-                        eL[e.content_id] = !0;
-                        return;
-                    }
-                    eG[t.id] = { ...n, activity: t };
-                }),
-                s === ez && (ez = r),
-                eQ.delete((0, eo.V)(s, r)));
-        },
-        LOAD_ICYMI_CUSTOM_SCORES: function (e) {
-            let { scores: t } = e;
-            for (let e of t)
-                for (let t of ((eO[e.guild_id] = e.guild_score),
-                ta(e.guild_id, e.guild_score),
-                Object.keys(e.custom_channel_scores)))
-                    (null == eR[e.guild_id] && (eR[e.guild_id] = {}),
-                        (eR[e.guild_id][t] = e.custom_channel_scores[t]),
-                        tn(t, e.custom_channel_scores[t]));
-            ((eO = { ...eO }), (eR = { ...eR }));
-        },
-        LOAD_ICYMI_RECOMMENDED_GUILDS: function (e) {
-            let { guilds: t } = e;
-            ((eJ = t.map((e) => (0, X.jE)(e.guild))), e9());
-        },
-        ICYMI_CUSTOM_SCORES_UPDATED: function (e) {
-            let { channelScores: t, guildId: n, guildScore: i } = e;
-            (null != i && ((eO[n] = i), ta(n, i), (eO = { ...eO })),
-                t?.forEach((e) => {
-                    let { channelId: t, score: i } = e;
-                    (null == eR[n] && (eR[n] = {}), (eR[n][t] = i), tn(t, i), (eR = { ...eR }));
-                }));
-        },
-        RELOAD_ICYMI: function () {
-            if (0 === ew.length) return !1;
-            (e8(), (eF = !1));
-        },
-        ICYMI_TAB_OPENED: function () {
-            ((eY = !0), (eD = Date.now()), eU && ((eU = !1), (eF = !1)), eP < 5 && eP++);
-        },
-        ICYMI_FEEDBACK_GIVEN: function () {
-            eP = 6;
-        },
-        MESSAGE_REACTION_ADD: ts,
-        MESSAGE_REACTION_ADD_MANY: function (e) {
-            let { messageId: t, reactions: n } = e,
-                i = eG[t];
-            if (null == i || i.type !== q.Mm.MESSAGE) return !1;
-            let a = U.default.getId();
-            i.message = i.message.addReactionBatch(n, a);
-        },
-        MESSAGE_REACTION_REMOVE: ts,
-        MESSAGE_REACTION_REMOVE_ALL: function (e) {
-            let { messageId: t } = e,
-                n = eG[t];
-            if (null == n || n.type !== q.Mm.MESSAGE) return !1;
-            n.message = n.message.set("reactions", []);
-        },
-        MESSAGE_REACTION_REMOVE_EMOJI: function (e) {
-            let { messageId: t, emoji: n } = e,
-                i = eG[t];
-            if (null == i || i.type !== q.Mm.MESSAGE) return !1;
-            i.message = i.message.removeReactionsForEmoji(n);
-        },
-        CHANNEL_ACK: tr,
-        MESSAGE_ACK: tr,
-        ICYMI_JOINED_RECOMMENDED_GUILD: function () {
-            eW = Date.now();
-        },
-        ICYMI_SET_VIDEOS_MUTED: function (e) {
-            let { muted: t } = e;
-            eX = t;
-        },
-        ICYMI_SET_REFRESHING: function (e) {
-            let { refreshing: t } = e;
-            eq = t;
-        },
-        LOAD_ICYMI_HYDRATED_ATTEMPT: function (e) {
-            let { hydrationId: t } = e;
-            eQ.add(t);
-        },
-        LOAD_ICYMI_HYDRATED_FAILED: function (e) {
-            let { hydrationId: t } = e;
-            eQ.delete(t);
-        },
-        ICYMI_SET_FOCUSED_TAB: function (e) {
-            let { focused: t } = e;
-            e$ = t;
-        },
-        LOAD_ICYMI_CURRENT_STATUS_MEDIA: function (e) {
-            let { attachments: t, createdAtMs: n } = e;
-            if (null == t || 0 === t.length) {
-                eV = null;
+                    return e;
+                })),
+            e4(),
+            (eb = { load_id: i, load_time_millis: Date.now() - a, feed_item_ids: ew.map((e) => e.id) }));
+        let [d, l] = e8(ew);
+        if (((eN = te(d)), !eY || 0 === eR || s))
+            ((eR = 0), !e$ && e5(d, ew) ? ((eF = !0), (eU = !0)) : (eF = !1), e7({ newUnread: d, newRead: l }));
+        else {
+            eR > 0 && (eV = null);
+            let e = eN.length > q.$P;
+            (r || (eF = e), e && (ep([...d, ...l], 0, q.w5, ek), d.length + l.length === 0 && (eZ = !0)));
+        }
+        eT({
+            newTrackingProps: eb,
+            hasNewContent: eF,
+            unreadFeedItems: d,
+            readFeedItems: l,
+            homeSessionId: e$ ? "foreground_load" : "background_load",
+        });
+    },
+    LOAD_ICYMI_HYDRATED: function (e) {
+        let {
+            messageItems: t,
+            activityItems: n,
+            requestMessageItems: i,
+            requestActivityItems: a,
+            startingIndex: s,
+            endingIndex: r,
+        } = e;
+        ((eZ = !0), (ek = { ...ek }));
+        let d = t.reduce((e, t) => ((e[t.message.id] = t), e), {}),
+            l = n.reduce((e, t) => ((e[t.id] = t), e), {});
+        (i.forEach((e) => {
+            let t = d[e.message_id];
+            if (null == t) {
+                eO[e.message_id] = !0;
                 return;
             }
-            eV = [n, [...t]];
-        },
-        ICYMI_SCROLL_EVENT: function (e) {
-            let { timestamp: t } = e;
-            e0 = t;
-        },
-        ICYMI_TAKE_SURVEY: function (e) {
-            let { takenAt: t } = e;
-            e1 = t;
-        },
-    }),
-    to = new Set(["end", "loading", "bottomLoading", "icymiHeader", "recommendedGuilds"]);
-function tc(e) {
-    let t = [...tl.getUnreadDisplayItems(), ...tl.getReadDisplayItems()],
-        n = null;
-    for (let t = e.length - 1; t >= 0; t--) {
-        let i = e[t];
-        if (null != i && !to.has(i.item.data.kind)) {
-            n = i.item.id;
-            break;
+            let n = eG[e.message_id];
+            null == n &&
+                (n = {
+                    id: e.message_id,
+                    type: q.Mm.MESSAGE,
+                    score: -1,
+                    data: {
+                        guild_id: t.guild_id,
+                        channel_id: t.channel_id,
+                        message_id: t.message.id,
+                        channel_type: ec.rbe.GUILD_TEXT,
+                        has_mention: !1,
+                    },
+                });
+            let i = V.A.getMessage(t.channel_id, t.message.id);
+            if (null != i) {
+                let e = eh(t, n);
+                ek[t.message.id] = { ...e, message: i };
+            } else ek[t.message.id] = eh(t, n);
+        }),
+            a.forEach((e) => {
+                let t = l[e.content_id];
+                if (null == t) {
+                    eO[e.content_id] = !0;
+                    return;
+                }
+                let n = eG[e.content_id];
+                if (null == n) {
+                    eO[e.content_id] = !0;
+                    return;
+                }
+                ek[t.id] = { ...n, activity: t };
+            }),
+            s === ez && (ez = r),
+            eQ.delete((0, eo.V)(s, r)));
+    },
+    LOAD_ICYMI_CUSTOM_SCORES: function (e) {
+        let { scores: t } = e;
+        for (let e of t)
+            for (let t of ((eL[e.guild_id] = e.guild_score),
+            ta(e.guild_id, e.guild_score),
+            Object.keys(e.custom_channel_scores)))
+                (null == ej[e.guild_id] && (ej[e.guild_id] = {}),
+                    (ej[e.guild_id][t] = e.custom_channel_scores[t]),
+                    tn(t, e.custom_channel_scores[t]));
+        ((eL = { ...eL }), (ej = { ...ej }));
+    },
+    LOAD_ICYMI_RECOMMENDED_GUILDS: function (e) {
+        let { guilds: t } = e;
+        ((eJ = t.map((e) => (0, X.jE)(e.guild))), e2());
+    },
+    ICYMI_CUSTOM_SCORES_UPDATED: function (e) {
+        let { channelScores: t, guildId: n, guildScore: i } = e;
+        (null != i && ((eL[n] = i), ta(n, i), (eL = { ...eL })),
+            t?.forEach((e) => {
+                let { channelId: t, score: i } = e;
+                (null == ej[n] && (ej[n] = {}), (ej[n][t] = i), tn(t, i), (ej = { ...ej }));
+            }));
+    },
+    RELOAD_ICYMI: function () {
+        if (0 === ew.length) return !1;
+        (e7(), (eF = !1));
+    },
+    ICYMI_TAB_OPENED: function () {
+        ((eY = !0), (eD = Date.now()), eU && ((eU = !1), (eF = !1)), eP < 5 && eP++);
+    },
+    ICYMI_FEEDBACK_GIVEN: function () {
+        eP = 6;
+    },
+    MESSAGE_REACTION_ADD: ts,
+    MESSAGE_REACTION_ADD_MANY: function (e) {
+        let { messageId: t, reactions: n } = e,
+            i = ek[t];
+        if (null == i || i.type !== q.Mm.MESSAGE) return !1;
+        let a = U.default.getId();
+        i.message = i.message.addReactionBatch(n, a);
+    },
+    MESSAGE_REACTION_REMOVE: ts,
+    MESSAGE_REACTION_REMOVE_ALL: function (e) {
+        let { messageId: t } = e,
+            n = ek[t];
+        if (null == n || n.type !== q.Mm.MESSAGE) return !1;
+        n.message = n.message.set("reactions", []);
+    },
+    MESSAGE_REACTION_REMOVE_EMOJI: function (e) {
+        let { messageId: t, emoji: n } = e,
+            i = ek[t];
+        if (null == i || i.type !== q.Mm.MESSAGE) return !1;
+        i.message = i.message.removeReactionsForEmoji(n);
+    },
+    CHANNEL_ACK: tr,
+    MESSAGE_ACK: tr,
+    ICYMI_JOINED_RECOMMENDED_GUILD: function () {
+        eW = Date.now();
+    },
+    ICYMI_SET_VIDEOS_MUTED: function (e) {
+        let { muted: t } = e;
+        eX = t;
+    },
+    ICYMI_SET_REFRESHING: function (e) {
+        let { refreshing: t } = e;
+        eq = t;
+    },
+    LOAD_ICYMI_HYDRATED_ATTEMPT: function (e) {
+        let { hydrationId: t } = e;
+        eQ.add(t);
+    },
+    LOAD_ICYMI_HYDRATED_FAILED: function (e) {
+        let { hydrationId: t } = e;
+        eQ.delete(t);
+    },
+    ICYMI_SET_FOCUSED_TAB: function (e) {
+        let { focused: t } = e;
+        e$ = t;
+    },
+    LOAD_ICYMI_CURRENT_STATUS_MEDIA: function (e) {
+        let { attachments: t, createdAtMs: n } = e;
+        if (null == t || 0 === t.length) {
+            eH = null;
+            return;
         }
-    }
-    if (null == n) return [];
-    let i = t.findIndex((e) => e.id === n);
-    return i < 0 ? [] : t.slice(0, i + 1);
-}
-async function tu() {
-    let e = tl.getUnreadDisplayItems(),
-        t = tl.getReadDisplayItems(),
-        n = tl.getNextIndexToHydrate();
-    await eh([...e, ...t], n, n + q.w5, tl.getHydratedItems());
-}
-async function tm(e) {
-    let { ack: t } = await Promise.resolve().then(n.bind(n, 334738)),
-        { AnalyticsObjectTypes: i } = await Promise.resolve().then(n.bind(n, 652215));
-    (tl.getDehydratedItems().forEach((n) => {
-        n.type === q.Mm.MESSAGE &&
-            n.data.channel_type === ec.rbe.GUILD_ANNOUNCEMENT &&
-            ee.default.compare(B.Ay.ackMessageId(n.data.channel_id), n.data.message_id) >= 0 &&
-            t(
-                n.data.channel_id,
-                { object: e, objectType: i.ACK_SEMI_AUTOMATIC },
-                !0,
-                !0,
-                ee.default.atPreviousMillisecond(n.data.message_id),
-            );
-    }),
-        await el.A.clearReadStates(),
-        await el.A.fetchDehydrated({ isReloading: !0, forceRefresh: !0 }),
-        await el.A.reloadICYMITab(),
-        await el.A.getGuildChannelScores(),
-        el.A.getRecommendedGuilds());
-}
-function t_(e) {
+        eH = [n, [...t]];
+    },
+    ICYMI_SCROLL_EVENT: function (e) {
+        let { timestamp: t } = e;
+        e0 = t;
+    },
+    ICYMI_TAKE_SURVEY: function (e) {
+        let { takenAt: t } = e;
+        e1 = t;
+    },
+});
+function to(e) {
     switch (e.data.kind) {
         case "end":
             return "end";
@@ -1083,7 +1041,7 @@ function t_(e) {
             return "unknown";
     }
 }
-let tg = {
+let tc = {
     trackItemInteraction(e) {
         ey.default.track(ec.HAw.FEED_ITEM_INTERACTED, {
             load_id: tl.getLoadId(),
@@ -1103,7 +1061,7 @@ let tg = {
             load_id: tl.getLoadId(),
             home_session_id: "gravity",
             feed_item_ids: e.map((e) => e.item.id),
-            feed_item_types: e.map((e) => t_(e.item)),
+            feed_item_types: e.map((e) => to(e.item)),
             num_items: e.length,
             all_feed_item_ids: t.map((e) => e.id),
             all_feed_item_types: t.map((e) => e.type),
@@ -1118,7 +1076,7 @@ let tg = {
             load_id: tl.getLoadId(),
             home_session_id: "gravity",
             feed_item_ids: e.map((e) => e.item.id),
-            feed_item_types: e.map((e) => t_(e.item)),
+            feed_item_types: e.map((e) => to(e.item)),
             num_items: e.length,
             all_feed_item_ids: t.map((e) => e.id),
             all_feed_item_types: t.map((e) => e.type),
@@ -1299,17 +1257,38 @@ let tg = {
         });
     },
 };
-function th(e) {
+function tu(e) {
     return s.useCallback(async () => {
-        (tg.trackFeedShown({ variant: e ? "DotShown" : "NoDotShown", homeSessionId: "gravity_refresh" }),
+        (tc.trackFeedShown({ variant: e ? "DotShown" : "NoDotShown", homeSessionId: "gravity_refresh" }),
             await el.A.fetchDehydrated({ isReloading: !0 }),
             await el.A.reloadICYMITab(),
             await el.A.getGuildChannelScores(),
             el.A.getRecommendedGuilds());
     }, [e]);
 }
+let tm = new Set(["end", "loading", "bottomLoading", "icymiHeader", "recommendedGuilds"]);
+function t_(e) {
+    let t = [...tl.getUnreadDisplayItems(), ...tl.getReadDisplayItems()],
+        n = null;
+    for (let t = e.length - 1; t >= 0; t--) {
+        let i = e[t];
+        if (null != i && !tm.has(i.item.data.kind)) {
+            n = i.item.id;
+            break;
+        }
+    }
+    if (null == n) return [];
+    let i = t.findIndex((e) => e.id === n);
+    return i < 0 ? [] : t.slice(0, i + 1);
+}
+async function tg() {
+    let e = tl.getUnreadDisplayItems(),
+        t = tl.getReadDisplayItems(),
+        n = tl.getNextIndexToHydrate();
+    await ep([...e, ...t], n, n + q.w5, tl.getHydratedItems());
+}
 var tp = n(819169);
-function tf(e, t, n, i, a) {
+function th(e, t, n, i, a) {
     switch (t.type) {
         case q.Mm.MESSAGE:
             if (t.message.id === t.message.channel_id && null != t.threadChannel)
@@ -1378,20 +1357,20 @@ function tf(e, t, n, i, a) {
             return null;
     }
 }
-let tI = 15 * W.A.Millis.MINUTE;
-var tE = n(939249),
-    ty = n(976860),
-    tT = n(378570),
-    tA = n(402860),
-    tS = n(834730),
-    tM = n(51183),
-    tv = n(208971),
-    tx = n(25101);
-function tC(e) {
+let tf = 15 * W.A.Millis.MINUTE;
+var tI = n(939249),
+    tE = n(976860),
+    ty = n(378570),
+    tT = n(402860),
+    tA = n(834730),
+    tS = n(51183),
+    tM = n(208971),
+    tv = n(25101);
+function tx(e) {
     let { item: t } = e,
         n = "contentInventory" === t.data.kind ? t.data.content.extra : null,
         i = n?.type === "custom_status_extra" ? n : null,
-        s = (0, tv.G)(i?.status);
+        s = (0, tM.G)(i?.status);
     if (null == i) return null;
     let r = {
             id: i.emoji_id?.toString() === "0" ? null : i.emoji_id,
@@ -1401,22 +1380,22 @@ function tC(e) {
         d = null != r.id || r.name.length > 0,
         l = null != s && s.length > 0;
     return (0, a.jsx)("div", {
-        className: tx.kL,
+        className: tv.kL,
         children: (0, a.jsx)("div", {
-            className: tx.Nr,
+            className: tv.Nr,
             children: (0, a.jsxs)("div", {
-                className: tx.Qs,
+                className: tv.Qs,
                 children: [
                     d &&
                         (0, a.jsx)("div", {
-                            className: tx.qq,
-                            children: (0, a.jsx)(tM.A, { emoji: r, animate: !0, hideTooltip: !1 }),
+                            className: tv.qq,
+                            children: (0, a.jsx)(tS.A, { emoji: r, animate: !0, hideTooltip: !1 }),
                         }),
                     l &&
-                        (0, a.jsx)(tS.E, {
+                        (0, a.jsx)(tA.E, {
                             variant: "body-md/normal",
                             color: "text-strong",
-                            className: tx.qS,
+                            className: tv.qS,
                             children: s,
                         }),
                 ],
@@ -1424,35 +1403,35 @@ function tC(e) {
         }),
     });
 }
-var tD = n(429913),
-    tw = n(886072);
-function tN(e) {
+var tC = n(429913),
+    tD = n(886072);
+function tw(e) {
     let { item: t } = e,
         n = "contentInventory" === t.data.kind ? t.data.content : null,
         i = n?.extra,
         s = n?.author_id,
         r = n?.content_type,
         d = i?.type === "played_game_extra" || i?.type === "launched_activity_extra" ? i.application_id : void 0,
-        l = (0, tD.h)(d),
+        l = (0, tC.h)(d),
         c = (0, o.bG)([J.default], () => (null != s ? J.default.getUser(s) : null), [s]),
         u = r === T.ContentInventoryEntryType.TOP_GAME,
         m = l?.getIconURL(240);
     return i?.type !== "played_game_extra" || "contentInventory" !== t.data.kind || null == l || null == c || null == m
         ? null
         : (0, a.jsx)("div", {
-              className: tw.kL,
+              className: tD.kL,
               children: (0, a.jsxs)("div", {
-                  className: tw.Nr,
+                  className: tD.Nr,
                   children: [
-                      (0, a.jsx)("img", { src: m, alt: l.name, className: tw.Gt }),
+                      (0, a.jsx)("img", { src: m, alt: l.name, className: tD.Gt }),
                       (0, a.jsxs)("div", {
-                          className: tw.Vx,
+                          className: tD.Vx,
                           children: [
-                              (0, a.jsx)(tS.E, { variant: "body-md/semibold", color: "text-strong", children: l.name }),
+                              (0, a.jsx)(tA.E, { variant: "body-md/semibold", color: "text-strong", children: l.name }),
                               u &&
                                   (0, a.jsx)("div", {
-                                      className: tw.qS,
-                                      children: (0, a.jsx)(tS.E, {
+                                      className: tD.qS,
+                                      children: (0, a.jsx)(tA.E, {
                                           variant: "body-xs/semibold",
                                           color: "text-brand",
                                           children: eu.intl.string(eu.t["/50eHi"]),
@@ -1464,63 +1443,63 @@ function tN(e) {
               }),
           });
 }
-var tb = n(177953),
-    tk = n(47167),
+var tN = n(177953),
+    tb = n(47167),
     tG = n(713654),
-    tL = n(435328),
+    tk = n(435328),
     tO = n(563312),
-    tR = n(826383),
+    tL = n(826383),
     tj = n(9448),
-    tU = n(974930),
-    tF = n(641786);
-function tY(e) {
+    tR = n(974930),
+    tU = n(641786);
+function tF(e) {
     let { eventId: t } = e,
         n = (0, o.bG)([D.Ay], () => D.Ay.getGuildScheduledEvent(t), [t]),
-        i = (0, o.bG)([V.A], () => V.A.getGuild(n?.guild_id), [n]),
+        i = (0, o.bG)([H.A], () => H.A.getGuild(n?.guild_id), [n]),
         r = (0, o.bG)([F.A], () => F.A.getChannel(n?.channel_id), [n]),
         d = (0, tO.nh)(t, null),
         l = null != n && (0, D.Fd)(n),
-        c = null != n ? (0, tU.G3)(n) : null,
-        u = (0, tR.A)(n?.guild_id, n?.id, c),
+        c = null != n ? (0, tR.G3)(n) : null,
+        u = (0, tL.A)(n?.guild_id, n?.id, c),
         m = d?.startTime.toISOString(),
         { startDateTimeString: _ } = s.useMemo(
             () =>
-                l ? { startDateTimeString: eu.intl.string(eu.t.TxqPQR) } : (0, tU.CC)(m ?? new Date().toISOString()),
+                l ? { startDateTimeString: eu.intl.string(eu.t.TxqPQR) } : (0, tR.CC)(m ?? new Date().toISOString()),
             [m, l],
         ),
-        g = (0, tk.Ay)(r),
-        h = null != n ? (0, tj.oF)(n) : void 0,
-        p = null != r ? (0, tG.gU)(r) : null;
+        g = (0, tb.Ay)(r),
+        p = null != n ? (0, tj.oF)(n) : void 0,
+        h = null != r ? (0, tG.gU)(r) : null;
     if (null == n || null == i) return null;
     let f = null != n.description && n.description.length > 0;
     return (0, a.jsxs)("div", {
-        className: tF.Qo,
+        className: tU.Qo,
         children: [
             (0, a.jsx)("div", {
-                className: tF.At,
-                children: (0, a.jsx)(tS.E, {
+                className: tU.At,
+                children: (0, a.jsx)(tA.E, {
                     variant: "body-sm/semibold",
                     color: l ? "status-positive" : "text-brand",
                     children: _,
                 }),
             }),
-            (0, a.jsx)(tS.E, { variant: "body-lg/semibold", className: f ? tF.X_ : void 0, children: n.name }),
+            (0, a.jsx)(tA.E, { variant: "body-lg/semibold", className: f ? tU.X_ : void 0, children: n.name }),
             f &&
-                (0, a.jsx)(tS.E, {
+                (0, a.jsx)(tA.E, {
                     variant: "body-md/normal",
                     color: "text-subtle",
-                    className: tF.tj,
-                    children: (0, tL.l)(n.description ?? "", !0, { guildId: i.id }),
+                    className: tU.tj,
+                    children: (0, tk.l)(n.description ?? "", !0, { guildId: i.id }),
                 }),
-            (0, a.jsx)("hr", { className: tF.Yl }),
+            (0, a.jsx)("hr", { className: tU.Yl }),
             (0, a.jsxs)("div", {
-                className: tF.oo,
+                className: tU.oo,
                 children: [
                     (0, a.jsxs)("div", {
-                        className: tF.ik,
+                        className: tU.ik,
                         children: [
-                            (0, a.jsx)(tb.n, { size: "xs", color: "currentColor" }),
-                            (0, a.jsx)(tS.E, {
+                            (0, a.jsx)(tN.n, { size: "xs", color: "currentColor" }),
+                            (0, a.jsx)(tA.E, {
                                 variant: "body-xs/normal",
                                 color: "text-muted",
                                 children: eu.intl.format(eu.t["+DLsD8"], { count: u }),
@@ -1528,14 +1507,14 @@ function tY(e) {
                         ],
                     }),
                     (0, a.jsxs)("div", {
-                        className: tF.ik,
+                        className: tU.ik,
                         children: [
-                            null != p ? (0, a.jsx)(p, { size: "xs", color: "currentColor" }) : null,
-                            (0, a.jsx)(tS.E, {
+                            null != h ? (0, a.jsx)(h, { size: "xs", color: "currentColor" }) : null,
+                            (0, a.jsx)(tA.E, {
                                 variant: "body-xs/normal",
                                 color: "text-muted",
-                                className: tF.HA,
-                                children: g ?? (null != h ? (0, tL.y)(h, !0) : null),
+                                className: tU.HA,
+                                children: g ?? (null != p ? (0, tk.y)(p, !0) : null),
                             }),
                         ],
                     }),
@@ -1544,21 +1523,21 @@ function tY(e) {
         ],
     });
 }
-var tV = n(837381),
+var tY = n(837381),
     tH = n(384231),
-    tP = n(763754),
-    tB = n(491182),
-    tK = n(860227),
-    tz = n(538355),
-    tJ = n(699352),
-    tW = n(715628),
-    tX = n(752636),
-    tq = n(64369),
-    tQ = n(268719),
-    t$ = n(69282),
-    tZ = n(862161),
-    t0 = n(13673);
-let t1 = s.memo(function (e) {
+    tV = n(763754),
+    tP = n(491182),
+    tB = n(860227),
+    tK = n(538355),
+    tz = n(699352),
+    tJ = n(715628),
+    tW = n(752636),
+    tX = n(64369),
+    tq = n(268719),
+    tQ = n(69282),
+    t$ = n(862161),
+    tZ = n(13673);
+let t0 = s.memo(function (e) {
     let {
             message: t,
             className: n,
@@ -1572,35 +1551,35 @@ let t1 = s.memo(function (e) {
             renderThreadAccessory: _,
             ...g
         } = e,
-        h = t.type === ec.lAJ.POLL_RESULT || (e.disableInteraction ?? !1),
-        p = t.isFirstMessageInForumPost(l),
+        p = t.type === ec.lAJ.POLL_RESULT || (e.disableInteraction ?? !1),
+        h = t.isFirstMessageInForumPost(l),
         f = (0, tH.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
         {
             content: I,
             hasSpoilerEmbeds: E,
             hasBailedAst: y,
-        } = (0, tz.A)(t, {
+        } = (0, tK.A)(t, {
             hideSimpleEmbedContent: r,
-            allowList: p || f,
-            allowHeading: p || f,
+            allowList: h || f,
+            allowHeading: h || f,
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
-        T = (0, tV.rm)(t.id),
-        A = (0, tP.Ay)(t),
+        T = (0, tY.rm)(t.id),
+        A = (0, tV.Ay)(t),
         S = (0, o.bG)(
             [F.A],
             () => t.hasFlag(ec.pr7.HAS_THREAD) && F.A.getChannel(ee.default.castMessageIdAsChannelId(t.id)),
         ),
-        M = (0, t$.Xx)({ guildId: l.guild_id, roleId: A.iconRoleId }),
-        v = (0, tK.fF)(t),
-        x = (0, tK.ZD)(t);
-    return (0, a.jsx)(tB.A, {
+        M = (0, tQ.Xx)({ guildId: l.guild_id, roleId: A.iconRoleId }),
+        v = (0, tB.fF)(t),
+        x = (0, tB.ZD)(t);
+    return (0, a.jsx)(tP.A, {
         compact: !1,
-        className: d()(n, tZ.i, { [t0.M1]: (0, N.ec)(t), [t0.XN]: h }),
-        disableInteraction: h,
-        childrenExecutedCommand: (0, tQ.A)(t, l, !1),
-        childrenHeader: (0, tX.A)({
+        className: d()(n, t$.i, { [tZ.M1]: (0, N.ec)(t), [tZ.XN]: p }),
+        disableInteraction: p,
+        childrenExecutedCommand: (0, tq.A)(t, l, !1),
+        childrenHeader: (0, tW.A)({
             message: t,
             channel: l,
             author: A,
@@ -1612,9 +1591,9 @@ let t1 = s.memo(function (e) {
             hideTimestamp: !0,
             hideGuildTag: !1,
         }),
-        childrenAccessories: e.hideAccessories ? void 0 : (0, tJ.J)(e, E, y),
-        childrenMessageContent: (0, tW.A)(e, I),
-        childrenSystemMessage: (0, tq.A)({ ...e, disableInteraction: h }),
+        childrenAccessories: e.hideAccessories ? void 0 : (0, tz.J)(e, E, y),
+        childrenMessageContent: (0, tJ.A)(e, I),
+        childrenSystemMessage: (0, tX.A)({ ...e, disableInteraction: p }),
         onContextMenu: i,
         onClick: s,
         hasThread: _ && null != S && t.hasFlag(ec.pr7.HAS_THREAD),
@@ -1626,7 +1605,7 @@ let t1 = s.memo(function (e) {
         ...g,
     });
 });
-function t5(e) {
+function t1(e) {
     let { item: t } = e,
         {
             channelId: n,
@@ -1643,28 +1622,28 @@ function t5(e) {
             }
         }, [t]),
         d = (0, o.bG)([F.A], () => (null != n ? F.A.getChannel(n) : null), [n]),
-        l = (0, o.bG)([V.A], () => (d?.guild_id != null ? V.A.getGuild(d.guild_id) : null), [d]),
+        l = (0, o.bG)([H.A], () => (d?.guild_id != null ? H.A.getGuild(d.guild_id) : null), [d]),
         c = (0, o.yK)(
-            [tl, H.A],
-            () => (null == n ? [] : i.map((e) => tl.getMessage(e) ?? H.A.getMessage(n, e)).filter((e) => null != e)),
+            [tl, V.A],
+            () => (null == n ? [] : i.map((e) => tl.getMessage(e) ?? V.A.getMessage(n, e)).filter((e) => null != e)),
             [n, i],
         );
     return null == d || null == l || 0 === c.length
         ? null
         : (0, a.jsxs)("div", {
-              className: tF.kL,
+              className: tU.kL,
               children: [
                   null != r
                       ? (0, a.jsx)("div", {
-                            className: tF.gn,
-                            children: (0, a.jsx)("div", { className: tF.DD, children: r }),
+                            className: tU.gn,
+                            children: (0, a.jsx)("div", { className: tU.DD, children: r }),
                         })
                       : null,
                   (0, a.jsx)("div", {
-                      className: tF.MJ,
+                      className: tU.MJ,
                       children: c.map((e) =>
                           (0, a.jsx)(
-                              t1,
+                              t0,
                               {
                                   channel: d,
                                   message: e,
@@ -1679,21 +1658,21 @@ function t5(e) {
               ],
           });
 }
-function t3(e) {
+function t5(e) {
     let { item: t } = e;
     switch (t.data.kind) {
         case "guildEvent":
-            return (0, a.jsx)(tY, { eventId: t.data.eventId });
+            return (0, a.jsx)(tF, { eventId: t.data.eventId });
         case "message":
         case "forumThread":
-            return (0, a.jsx)(t5, { item: t });
+            return (0, a.jsx)(t1, { item: t });
         case "contentInventory":
             switch (t.data.content.content_type) {
                 case T.ContentInventoryEntryType.CUSTOM_STATUS:
-                    return (0, a.jsx)(tC, { item: t });
+                    return (0, a.jsx)(tx, { item: t });
                 case T.ContentInventoryEntryType.PLAYED_GAME:
                 case T.ContentInventoryEntryType.TOP_GAME:
-                    return (0, a.jsx)(tN, { item: t });
+                    return (0, a.jsx)(tw, { item: t });
                 default:
                     return (0, a.jsx)("div", { children: "Unsupported content inventory type" });
             }
@@ -1701,10 +1680,10 @@ function t3(e) {
             return (0, a.jsx)("div", { children: "Unknown item type" });
     }
 }
-var t6 = n(548118),
-    t2 = n(995273),
+var t3 = n(548118),
+    t6 = n(995273),
     t9 = n(668499);
-function t4(e) {
+function t2(e) {
     let { item: t } = e,
         n = s.useMemo(() => {
             switch (t.data.kind) {
@@ -1749,9 +1728,9 @@ function t4(e) {
             }
         }, [t]),
         c = (0, o.bG)([F.A], () => F.A.getChannel(i), [i]),
-        u = (0, tk.Ay)(c),
+        u = (0, tb.Ay)(c),
         m = c?.guild_id ?? r,
-        _ = (0, o.bG)([V.A], () => (null != m ? V.A.getGuild(m) : null), [m]),
+        _ = (0, o.bG)([H.A], () => (null != m ? H.A.getGuild(m) : null), [m]),
         g = (0, o.bG)([J.default], () => (null != d ? J.default.getUser(d) : null), [d]);
     return "unknown" === n
         ? null
@@ -1762,7 +1741,7 @@ function t4(e) {
                   children: [
                       (function () {
                           if ("guild" === n && null != _)
-                              return (0, a.jsx)(t6.Ay, {
+                              return (0, a.jsx)(t3.Ay, {
                                   guild: _,
                                   size: "Medium",
                                   active: !1,
@@ -1787,25 +1766,25 @@ function t4(e) {
                                       className: t9.gH,
                                       children: [
                                           "guild" === n && null != _
-                                              ? (0, a.jsx)(tS.E, {
+                                              ? (0, a.jsx)(tA.E, {
                                                     variant: "body-md/semibold",
                                                     color: "text-strong",
                                                     className: t9.DD,
                                                     children: _.name,
                                                 })
                                               : "user" === n && null != g
-                                                ? (0, a.jsx)(tS.E, {
+                                                ? (0, a.jsx)(tA.E, {
                                                       variant: "body-md/semibold",
                                                       color: "text-strong",
                                                       className: t9.DD,
                                                       children: g.username,
                                                   })
                                                 : null,
-                                          (0, a.jsx)(tS.E, {
+                                          (0, a.jsx)(tA.E, {
                                               variant: "body-xs/normal",
                                               color: "text-muted",
                                               className: t9.vE,
-                                              children: (0, t2.jb)(l),
+                                              children: (0, t6.jb)(l),
                                           }),
                                       ],
                                   }),
@@ -1838,7 +1817,7 @@ function t4(e) {
                                   if ("user" === n)
                                       return (0, a.jsx)("div", {
                                           className: t9.VA,
-                                          children: (0, a.jsx)(tS.E, {
+                                          children: (0, a.jsx)(tA.E, {
                                               variant: "body-sm/medium",
                                               color: "text-subtle",
                                               tag: "span",
@@ -1851,21 +1830,21 @@ function t4(e) {
                                       return (0, a.jsxs)("div", {
                                           className: t9.VA,
                                           children: [
-                                              (0, a.jsx)(tS.E, {
+                                              (0, a.jsx)(tA.E, {
                                                   variant: "body-sm/medium",
                                                   color: "text-subtle",
                                                   tag: "span",
                                                   className: t9.o4,
                                                   children: e,
                                               }),
-                                              (0, a.jsx)(tS.E, {
+                                              (0, a.jsx)(tA.E, {
                                                   variant: "body-sm/medium",
                                                   color: "text-subtle",
                                                   tag: "span",
                                                   className: t9.o4,
                                                   children: eu.intl.string(eu.t.CHUAYk),
                                               }),
-                                              (0, a.jsxs)(tS.E, {
+                                              (0, a.jsxs)(tA.E, {
                                                   variant: "body-sm/medium",
                                                   color: "text-subtle",
                                                   tag: "span",
@@ -1887,7 +1866,7 @@ function t4(e) {
                                   return null != e
                                       ? (0, a.jsx)("div", {
                                             className: t9.VA,
-                                            children: (0, a.jsx)(tS.E, {
+                                            children: (0, a.jsx)(tA.E, {
                                                 variant: "body-sm/medium",
                                                 color: "text-subtle",
                                                 tag: "span",
@@ -1903,7 +1882,7 @@ function t4(e) {
               }),
           });
 }
-var t8 = n(301690);
+var t4 = n(301690);
 function t7(e) {
     let { item: t } = e,
         n = s.useCallback(
@@ -1916,33 +1895,33 @@ function t7(e) {
                 )
                     switch (t.data.kind) {
                         case "message":
-                            (0, tT.ci)(t.data.message.channel_id, t.data.message.id);
+                            (0, ty.ci)(t.data.message.channel_id, t.data.message.id);
                             break;
                         case "guildEvent": {
                             let e = D.Ay.getGuildScheduledEvent(t.data.eventId);
-                            null != e && (0, ty.pX)(ec.BVt.GUILD_EVENT_DETAILS(e.guild_id, e.id));
+                            null != e && (0, tE.pX)(ec.BVt.GUILD_EVENT_DETAILS(e.guild_id, e.id));
                             break;
                         }
                         case "forumThread":
-                            (0, tT.ci)(t.data.threadChannel.id, t.data.message.id);
+                            (0, ty.ci)(t.data.threadChannel.id, t.data.message.id);
                             break;
                         case "contentInventory":
-                            (0, tA.openUserProfileModal)({ userId: t.data.content.author_id });
+                            (0, tT.openUserProfileModal)({ userId: t.data.content.author_id });
                     }
             },
             [t],
         );
-    return (0, a.jsxs)(tE.D, {
-        className: t8.k,
+    return (0, a.jsxs)(tI.D, {
+        className: t4.k,
         onClick: n,
         children: [
-            (0, a.jsx)(t4, { item: t }),
-            (0, a.jsx)("div", { className: t8.o, children: (0, a.jsx)(t3, { item: t }) }),
+            (0, a.jsx)(t2, { item: t }),
+            (0, a.jsx)("div", { className: t4.o, children: (0, a.jsx)(t5, { item: t }) }),
         ],
     });
 }
-var ne = n(710028);
-let nt = function (e) {
+var t8 = n(710028);
+let ne = function (e) {
     let t,
         n,
         i,
@@ -1954,8 +1933,8 @@ let nt = function (e) {
         m = s.useRef(null),
         [_, g] = s.useState(!1),
         {
-            data: h,
-            loading: p,
+            data: p,
+            loading: h,
             isRefreshing: f,
             handleOnRefresh: I,
             viewabilityConfigCallbackPairs: E,
@@ -1993,7 +1972,7 @@ let nt = function (e) {
                                 (s = r[a.data.message_id]),
                             null != s)
                         ) {
-                            let n = tf(a, s, !0, t, e);
+                            let n = th(a, s, !0, t, e);
                             null != n && l.push(n);
                         }
                     }
@@ -2008,7 +1987,7 @@ let nt = function (e) {
                                 (s = r[a.data.message_id]),
                             null != s)
                         ) {
-                            let n = tf(a, s, !1, t, e);
+                            let n = th(a, s, !1, t, e);
                             null != n && c.push(n);
                         }
                     }
@@ -2017,19 +1996,19 @@ let nt = function (e) {
                 u = (0, o.bG)([tl], () => tl.getVersion(), []),
                 m = (0, o.bG)([tl], () => !(tl.isFirstPageHydrated() && u > 0));
             s.useEffect(() => {
-                null != tl.getLoadId() && tg.trackFeedShown({ homeSessionId: "gravity" });
+                null != tl.getLoadId() && tc.trackFeedShown({ homeSessionId: "gravity" });
             }, [u]);
             let _ = (0, o.bG)([tl], () => tl.isRefreshing(), []),
                 g = (0, o.bG)([tl], () => tl.isHydrating(), []),
-                [h, p] = s.useState([]),
+                [p, h] = s.useState([]),
                 { loadId: f, lastScrollEventTimestamp: I } = (0, o.cf)([tl], () => ({
                     loadId: tl.getLoadId(),
                     lastScrollEventTimestamp: tl.lastScrollEvent(),
                 })),
-                E = h
+                E = p
                     .filter((e) => {
                         let { item: t } = e;
-                        return !to.has(t.data.kind);
+                        return !tm.has(t.data.kind);
                     })
                     .map((e) => {
                         let { item: t } = e;
@@ -2040,22 +2019,22 @@ let nt = function (e) {
             s.useEffect(() => {
                 if (_ || m || null == y || null == E || E === y) return;
                 let e = Date.now();
-                e - I > tI && (el.A.gravityScrollEvent(e), tg.trackFeedFirstScrollStarted());
+                e - I > tf && (el.A.gravityScrollEvent(e), tc.trackFeedFirstScrollStarted());
             }, [_, I, y, E, f, m]);
             let T = s.useCallback(
                     (e) => {
                         let { viewableItems: t } = e;
                         if ((t.some((e) => "end" === e.item.data.kind) && r(!0), 0 === t.length)) return;
-                        p(t);
+                        h(t);
                         let n = [],
-                            i = tc(t),
+                            i = t_(t),
                             a = Date.now();
                         for (let e = i.length - 1; e >= 0; e--) {
                             let t = i[e];
                             null != t && n.push({ id: t.id, type: (0, q.xG)(t), timestamp: a++ });
                         }
                         (n.length > 0 && el.A.ackGravityItems(n, !0),
-                            tg.trackItemShortImpression(
+                            tc.trackItemShortImpression(
                                 t,
                                 i.map((e) => ({ id: e.id, type: (0, q.xG)(e) })),
                                 u,
@@ -2067,8 +2046,8 @@ let nt = function (e) {
                     (e) => {
                         let { viewableItems: t } = e;
                         if (0 === t.length) return;
-                        let n = tc(t);
-                        (tg.trackItemLongImpression(
+                        let n = t_(t);
+                        (tc.trackItemLongImpression(
                             t,
                             n.map((e) => ({ id: e.id, type: (0, q.xG)(e) })),
                             u,
@@ -2077,7 +2056,7 @@ let nt = function (e) {
                                 t
                                     .filter((e) => {
                                         let { item: t } = e;
-                                        return !to.has(t.data.kind);
+                                        return !tm.has(t.data.kind);
                                     })
                                     .map((e) => {
                                         let { item: t, index: n } = e;
@@ -2101,7 +2080,7 @@ let nt = function (e) {
                         t
                             .filter((e) => {
                                 let { item: t } = e;
-                                return !to.has(t.data.kind);
+                                return !tm.has(t.data.kind);
                             })
                             .map((e) => {
                                 let { item: t, index: n } = e;
@@ -2149,7 +2128,7 @@ let nt = function (e) {
             s.useEffect(() => {
                 el.A.openICYMITab();
             }, []);
-            let v = th(t),
+            let v = tu(t),
                 { data: x, stickyHeaderIndices: C } = s.useMemo(() => {
                     let e = [];
                     return (
@@ -2187,7 +2166,7 @@ let nt = function (e) {
                 data: x,
                 loading: m,
                 version: u,
-                visibleItemIds: h,
+                visibleItemIds: p,
                 endVisible: a,
                 isRefreshing: _,
                 handleOnRefresh: v,
@@ -2195,7 +2174,7 @@ let nt = function (e) {
                 viewabilityConfigCallbackPairs: M,
             };
         })({ showDot: u, notificationItem: c }),
-        y = th();
+        y = tu();
     s.useEffect(
         () => () => {
             y();
@@ -2210,10 +2189,10 @@ let nt = function (e) {
             (n = s.useRef(new Map())),
             (i = s.useRef(new Set())),
             (r = s.useRef(S)),
-            (d = s.useRef(h)),
+            (d = s.useRef(p)),
             s.useEffect(() => {
-                ((r.current = S), (d.current = h));
-            }, [S, h]),
+                ((r.current = S), (d.current = p));
+            }, [S, p]),
             s.useEffect(
                 () => (
                     (t.current = new IntersectionObserver(
@@ -2257,22 +2236,22 @@ let nt = function (e) {
                     }
                 }, []),
             }),
-        v = s.useMemo(() => h.some((e) => "end" === e.data.kind), [h]),
+        v = s.useMemo(() => p.some((e) => "end" === e.data.kind), [p]),
         x = s.useCallback(() => {
             if (v) return;
             let e = l.current;
             null == e ||
                 !(e.scrollHeight - e.scrollTop - e.clientHeight < 300) ||
                 _ ||
-                p ||
+                h ||
                 A ||
                 (g(!0),
-                tu().finally(() => {
+                tg().finally(() => {
                     setTimeout(() => {
                         g(!1);
                     }, 300);
                 }));
-        }, [p, _, A, v, l]);
+        }, [h, _, A, v, l]);
     s.useEffect(() => {
         let e = l.current;
         if (null != e)
@@ -2325,13 +2304,13 @@ let nt = function (e) {
                           ),
             [M],
         );
-    return p && 0 === h.length
+    return h && 0 === p.length
         ? (0, a.jsx)("div", {
               style: { padding: "32px", textAlign: "center" },
               children: (0, a.jsx)("div", { children: "Loading ICYMI feed..." }),
           })
         : (0, a.jsxs)("div", {
-              className: ne.k,
+              className: t8.k,
               children: [
                   T &&
                       !f &&
@@ -2354,9 +2333,9 @@ let nt = function (e) {
                       }),
                   (0, a.jsxs)("div", {
                       ref: m,
-                      className: ne.j,
+                      className: t8.j,
                       children: [
-                          h.map((e) => w(e)),
+                          p.map((e) => w(e)),
                           !v &&
                               (_ || A) &&
                               (0, a.jsx)("div", {
@@ -2371,9 +2350,9 @@ let nt = function (e) {
               ],
           });
 };
-var nn = n(534515),
-    ni = n(999900);
-let na = (0, g.A)(function (e) {
+var nt = n(534515),
+    nn = n(999900);
+let ni = (0, g.A)(function (e) {
     let { width: t } = e,
         n = (0, y.c)("ICYMIPage");
     (s.useEffect(() => {
@@ -2382,47 +2361,18 @@ let na = (0, g.A)(function (e) {
         s.useLayoutEffect(() => {
             n && _.I(ec.BVt.ICYMI);
         }, [n]),
-        (0, h.Ay)(() => {
+        (0, p.Ay)(() => {
             n && (0, I.d0)("icymi");
         }));
     let i = (0, o.bG)([E.A], () => E.A.theme),
         r = (0, o.bG)([tl], () => tl.isRefreshing()),
         g = s.useRef(null);
-    (0, p.HU)({ location: eu.intl.string(eu.t["jnXV/V"]) });
-    let [T, A] = s.useState(!1);
-    s.useEffect(() => {
-        function e(e) {
-            e.metaKey && A(!0);
-        }
-        function t(e) {
-            "Meta" === e.key && A(!1);
-        }
-        function n() {
-            A(!1);
-        }
-        return (
-            window.addEventListener("keydown", e),
-            window.addEventListener("keyup", t),
-            window.addEventListener("blur", n),
-            () => {
-                (window.removeEventListener("keydown", e),
-                    window.removeEventListener("keyup", t),
-                    window.removeEventListener("blur", n));
-            }
-        );
-    }, []);
-    let S = th(),
-        M = y.f8.useConfig({ location: "icymi page" }).enabled,
-        v = s.useCallback(
-            async (e) => {
-                e.metaKey && M ? await tm(ec.ZSU.ACK_GRAVITY_REGENERATE_FEED_AND_CLEAR_READ_STATES_BUTTON) : await S();
-            },
-            [S, M],
-        ),
-        x = T && M ? eu.intl.string(eu.t.YplSn2) : eu.intl.string(eu.t.wzzjk9);
+    (0, h.HU)({ location: eu.intl.string(eu.t["jnXV/V"]) });
+    let T = tu(),
+        A = eu.intl.string(eu.t.wzzjk9);
     return n
         ? (0, a.jsxs)("div", {
-              className: d()(ni.TE, nn.kL),
+              className: d()(nn.TE, nt.kL),
               children: [
                   (0, a.jsx)(c.N, {
                       theme: i,
@@ -2431,17 +2381,17 @@ let na = (0, g.A)(function (e) {
                               className: e,
                               toolbar: (0, a.jsx)(f.A.Icon, {
                                   icon: u.RefreshIcon,
-                                  tooltip: x,
-                                  onClick: v,
+                                  tooltip: A,
+                                  onClick: T,
                                   disabled: r,
-                                  "aria-label": x,
+                                  "aria-label": A,
                               }),
                               children: [
                                   (0, a.jsx)(f.A.Icon, { icon: m.g, "aria-hidden": !0 }),
                                   (0, a.jsx)(f.A.Title, { children: eu.intl.string(eu.t["jnXV/V"]) }),
                                   (0, a.jsx)(f.A.Title, {
                                       children: (0, a.jsx)("p", {
-                                          className: nn.HH,
+                                          className: nt.HH,
                                           children: eu.intl.string(eu.t.Ac2OZA),
                                       }),
                                   }),
@@ -2450,8 +2400,8 @@ let na = (0, g.A)(function (e) {
                   }),
                   (0, a.jsx)("div", {
                       ref: g,
-                      className: d()(ni.Qs, nn.Qs),
-                      children: (0, a.jsx)(nt, { scrollContainerRef: g }),
+                      className: d()(nn.Qs, nt.Qs),
+                      children: (0, a.jsx)(ne, { scrollContainerRef: g }),
                   }),
               ],
           })

@@ -99,13 +99,13 @@ let y = r().memoize((e) =>
 function D(e) {
     switch (e) {
         case E.TVA.NONE:
-            return E.AnalyticsObjectTypes.NONE;
+            return E.btD.NONE;
         case E.TVA.TIER_1:
-            return E.AnalyticsObjectTypes.TIER_1;
+            return E.btD.TIER_1;
         case E.TVA.TIER_2:
-            return E.AnalyticsObjectTypes.TIER_2;
+            return E.btD.TIER_2;
         case E.TVA.TIER_3:
-            return E.AnalyticsObjectTypes.TIER_3;
+            return E.btD.TIER_3;
         default:
             return null;
     }

@@ -12,8 +12,8 @@ var s = i(477900),
     x = i(982240),
     h = i(402860),
     g = i(287809),
-    j = i(139486),
-    f = i(948518),
+    f = i(139486),
+    j = i(948518),
     v = i(503698),
     T = i.n(v),
     N = i(914410),
@@ -25,8 +25,8 @@ function M(e) {
         n = (0, x.rL)(i ?? void 0),
         a = (0, x.rL)(r),
         c = a > 0 ? Math.min(Math.max((t / a) * 100, 0), 100) : 100,
-        o = (0, j.Se)(i ?? void 0),
-        u = (0, j.Se)(r);
+        o = (0, f.Se)(i ?? void 0),
+        u = (0, f.Se)(r);
     return (0, s.jsxs)("div", {
         className: T()(y.kL, l),
         children: [
@@ -63,8 +63,8 @@ var w = i(803691);
 function k(e) {
     let { progress: t, currentTier: i, nextTier: r, iconSize: l = 24, title: n } = e,
         a = (0, x.rL)(r),
-        o = (0, j.Se)(i),
-        u = (0, j.Se)(r),
+        o = (0, f.Se)(i),
+        u = (0, f.Se)(r),
         m = 100;
     return (
         null != r && a > 0 && (m = Math.min(Math.max((t / a) * 100, 0), 100)),
@@ -94,7 +94,7 @@ function k(e) {
         })
     );
 }
-var A = i(315693),
+var D = i(315693),
     E = i(652215),
     I = i(254013);
 function S(e) {
@@ -116,10 +116,10 @@ function S(e) {
         ],
     });
 }
-function B(e) {
+function A(e) {
     let { simulatedProgress: t, currentTier: i, newTier: r, nextTier: l, giftsToNextTier: n } = e,
         a = null != l && null != n && n > 0,
-        o = (0, j.Se)(r);
+        o = (0, f.Se)(r);
     return (0, s.jsxs)("div", {
         className: I.Qs,
         children: [
@@ -144,19 +144,19 @@ function B(e) {
         ],
     });
 }
-function D(e) {
+function B(e) {
     let { currentProgress: t, quantity: i } = e,
         r = (0, n.bG)([x.Ay], () => x.Ay.getBadgeById(l.$.GIFTING)?.tiers);
     if (null == r) return null;
-    let a = (0, A.XX)(r, t),
+    let a = (0, D.XX)(r, t),
         c = t + i,
-        d = (0, A.XX)(r, c),
+        d = (0, D.XX)(r, c),
         o = d?.key !== a?.key,
-        u = (0, A.aZ)(r, c),
-        m = (0, A.cz)(r, c),
+        u = (0, D.aZ)(r, c),
+        m = (0, D.cz)(r, c),
         h = 1 === m;
     return o && null != d
-        ? (0, s.jsx)(B, { simulatedProgress: c, currentTier: a, newTier: d, nextTier: u, giftsToNextTier: m })
+        ? (0, s.jsx)(A, { simulatedProgress: c, currentTier: a, newTier: d, nextTier: u, giftsToNextTier: m })
         : h
           ? (0, s.jsx)(S, {
                 title: b.intl.formatToPlainString(p.default.KjdBPz, { nextTier: u?.name ?? "" }),
@@ -179,10 +179,10 @@ function D(e) {
 function Q(e) {
     let { transitionState: t, onClose: i, currentProgress: l, quantity: n } = e,
         { analyticsLocations: c } = (0, m.Ay)(u.A.GIFTING_BADGE_POST_PURCHASE),
-        { openGiftModal: d } = (0, f.$)({
+        { openGiftModal: d } = (0, j.$)({
             giftRecipient: void 0,
             analyticsLocations: c,
-            analyticsObject: { object: E.ZSU.BUTTON_CTA, objectType: E.AnalyticsObjectTypes.GIFT },
+            analyticsObject: { object: E.ZSU.BUTTON_CTA, objectType: E.btD.GIFT },
             location: "gifting-badge-post-purchase",
         }),
         x = r.useCallback(() => {
@@ -190,7 +190,7 @@ function Q(e) {
             let e = g.default.getCurrentUser();
             null != e && (0, h.openUserProfileModal)({ userId: e.id });
         }, [i]),
-        j = r.useCallback(() => {
+        f = r.useCallback(() => {
             (i(), d());
         }, [i, d]);
     return (0, s.jsx)(a.a, {
@@ -200,8 +200,8 @@ function Q(e) {
         title: void 0,
         actions: [
             { variant: "secondary", text: b.intl.string(p.default["sa/cfM"]), onClick: x },
-            { variant: "primary", text: b.intl.string(p.default.g86YiI), icon: o.GiftIcon, onClick: j },
+            { variant: "primary", text: b.intl.string(p.default.g86YiI), icon: o.GiftIcon, onClick: f },
         ],
-        children: (0, s.jsx)(D, { currentProgress: l, quantity: n }),
+        children: (0, s.jsx)(B, { currentProgress: l, quantity: n }),
     });
 }

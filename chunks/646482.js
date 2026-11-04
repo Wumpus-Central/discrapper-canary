@@ -1629,12 +1629,9 @@ let tK = function (e) {
         () => () => {
             let e = e1.Ay.lastMessageId(n.id);
             null != e &&
-                (0, ta.ack)(
+                (0, ta.I_)(
                     n.id,
-                    {
-                        object: eo.ZSU.ACK_GUILD_DIRECTORY_CHANNEL_VIEWED,
-                        objectType: eo.AnalyticsObjectTypes.ACK_AUTOMATIC,
-                    },
+                    { object: eo.ZSU.ACK_GUILD_DIRECTORY_CHANNEL_VIEWED, objectType: eo.btD.ACK_AUTOMATIC },
                     !0,
                     !0,
                     e,
