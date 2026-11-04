@@ -9664,6 +9664,8 @@ function oB(e) {
                     return R.intl.format(T.default.mHCXtm, { source: t.source_name });
                 case "voice_channel_pin":
                     return R.intl.string(T.default.UGAfl9);
+                case "staff_notice":
+                    return t.message;
             }
         })(t, n, oU),
         r = uf(t, n);

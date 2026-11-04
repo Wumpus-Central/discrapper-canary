@@ -32,7 +32,11 @@ function _(e, t) {
 function f(e, t) {
     let { projectId: n } = t;
     (r.h.dispatch({ type: "CONJURE_CHAT_PROJECT_EVENT", projectId: n, event: e }),
-        "app_channel_deleted" !== e.type && "remixed" !== e.type && "voice_channel_pin" !== e.type && (0, i.GO)(n));
+        "app_channel_deleted" !== e.type &&
+            "remixed" !== e.type &&
+            "voice_channel_pin" !== e.type &&
+            "staff_notice" !== e.type &&
+            (0, i.GO)(n));
 }
 let g = {
         build_error: { location: "build", code: o.xf.BUILD_FAILED },
@@ -69,6 +73,7 @@ n.d(
             app_channel_deleted: f,
             remixed: f,
             voice_channel_pin: f,
+            staff_notice: f,
             side_reply(e, t) {
                 let { projectId: n } = t;
                 r.h.dispatch({
