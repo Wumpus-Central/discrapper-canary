@@ -1040,8 +1040,7 @@ function tn(e) {
                     (0, i.jsxs)("div", {
                         className: tl.SY,
                         children: [
-                            (0, i.jsxs)(D.Ip, {
-                                fade: !0,
+                            (0, i.jsxs)(D.d_, {
                                 className: j()(tl.p_, { [tl.zE]: n, [tl.Ng]: M }),
                                 ref: I,
                                 children: [
