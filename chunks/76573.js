@@ -1490,6 +1490,10 @@ var j =
         (c[(c.BABBLING = 5)] = "BABBLING"),
         (c[(c.DAYDREAMING = 6)] = "DAYDREAMING"),
         (c[(c.MEOWING = 7)] = "MEOWING"),
+        (c[(c.PURRING = 8)] = "PURRING"),
+        (c[(c.CHIRPING = 9)] = "CHIRPING"),
+        (c[(c.KEYSMASHING = 10)] = "KEYSMASHING"),
+        (c[(c.THINKING = 11)] = "THINKING"),
         c),
     z =
         (((u = {})[(u.UNSPECIFIED = 0)] = "UNSPECIFIED"),
