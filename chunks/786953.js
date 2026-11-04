@@ -40,6 +40,9 @@ r.d(
                 l.h.dispatch({ type: "VIRTUAL_CURRENCY_TOTAL_REDEEMED_FETCH_FAIL", error: e });
             }
         },
+        G7: function (e) {
+            return l.h.dispatch({ type: "VIRTUAL_CURRENCY_SET_BALANCE_PILL_OVERLAY", balancePillOverlay: e });
+        },
         J$: async function (e) {
             let {
                 skuId: t,

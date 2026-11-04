@@ -1,4 +1,4 @@
-a.d(s, { default: () => W });
+a.d(s, { default: () => G });
 var t = a(477900),
     n = a(582128),
     l = a(503698),
@@ -13,27 +13,28 @@ var t = a(477900),
     h = a(775602),
     p = a(793574),
     x = a(110676),
-    y = a(607470),
-    f = a(318346),
-    j = a(672619),
-    S = a(106799),
-    C = a(287809),
-    g = a(7891),
-    A = a(506988),
-    R = a(61387),
-    E = a(417404),
-    w = a(280249),
-    O = a(670092),
-    _ = a(221596),
-    v = a(652215),
-    L = a(758836),
-    T = a(792996),
-    k = a(426963),
-    N = a(484252);
-function P(e) {
+    j = a(607470),
+    y = a(318346),
+    f = a(672619),
+    S = a(219980),
+    C = a(106799),
+    g = a(287809),
+    A = a(7891),
+    R = a(506988),
+    E = a(61387),
+    w = a(417404),
+    O = a(280249),
+    _ = a(670092),
+    v = a(221596),
+    L = a(652215),
+    T = a(758836),
+    k = a(792996),
+    N = a(426963),
+    P = a(484252);
+function D(e) {
     let { onVideoLoaded: s } = e;
-    return (0, t.jsx)(y.A, {
-        className: k.d0,
+    return (0, t.jsx)(j.A, {
+        className: N.d0,
         playsInline: !0,
         controls: !1,
         autoPlay: !0,
@@ -45,7 +46,7 @@ function P(e) {
         }),
     });
 }
-function D(e) {
+function B(e) {
     let { onVideoLoaded: s, isLoading: a } = e,
         l = (0, c.bG)([h.Ay], () => h.Ay.useReducedMotion),
         [r, i] = n.useState(!l),
@@ -53,15 +54,15 @@ function D(e) {
         b = (0, d.q)(u),
         p = b
             ? "https://cdn.discordapp.com/assets/content/4c65c8edcb240ab88372cd7e405619919a35d2d6e2255bb24d335e1829ce4089.webm"
-            : N.A,
+            : P.A,
         x = n.useRef(null),
-        f = n.useRef(null),
-        [j, S] = n.useState(!1),
+        y = n.useRef(null),
+        [f, S] = n.useState(!1),
         [C, g] = n.useState(!1),
         [A, R] = n.useState(!1);
     (n.useEffect(() => {
-        j && C && A && s();
-    }, [j, C, A, s]),
+        f && C && A && s();
+    }, [f, C, A, s]),
         n.useEffect(() => {
             a ||
                 l ||
@@ -70,28 +71,28 @@ function D(e) {
                 }, 200);
         }, [a, l]));
     let E = n.useCallback(() => {
-        l || (i(!1), f.current?.play());
+        l || (i(!1), y.current?.play());
     }, [l]);
     return (0, t.jsxs)("div", {
-        className: k.GF,
+        className: N.GF,
         children: [
-            (0, t.jsx)(y.A, {
-                ref: f,
+            (0, t.jsx)(j.A, {
+                ref: y,
                 autoPlay: !1,
                 loop: !0,
                 muted: !0,
                 playsInline: !0,
-                className: o()(k.nH, k.EZ, { [k.R]: r }),
+                className: o()(N.nH, N.EZ, { [N.R]: r }),
                 controls: !1,
                 onCanPlayThrough: n.useCallback(() => g(!0), []),
                 children: (0, t.jsx)("source", { src: p, type: "video/webm" }),
             }),
-            (0, t.jsx)(y.A, {
+            (0, t.jsx)(j.A, {
                 ref: x,
                 autoPlay: !1,
                 muted: !0,
                 playsInline: !0,
-                className: k.nH,
+                className: N.nH,
                 controls: !1,
                 onCanPlayThrough: n.useCallback(() => S(!0), []),
                 onEnded: E,
@@ -103,35 +104,35 @@ function D(e) {
                 }),
             }),
             (0, t.jsxs)("div", {
-                className: k.Se,
+                className: N.Se,
                 children: [
-                    (0, t.jsx)(P, { onVideoLoaded: n.useCallback(() => R(!0), []) }),
-                    (0, t.jsx)(P, {}),
-                    (0, t.jsx)(P, {}),
-                    (0, t.jsx)(P, {}),
+                    (0, t.jsx)(D, { onVideoLoaded: n.useCallback(() => R(!0), []) }),
+                    (0, t.jsx)(D, {}),
+                    (0, t.jsx)(D, {}),
+                    (0, t.jsx)(D, {}),
                 ],
             }),
         ],
     });
 }
-function B(e) {
+function W(e) {
     let { isLoading: s, orbsEarned: a, orbsBalance: n, onVideoLoaded: l } = e;
     return (0, t.jsxs)("div", {
-        className: k.hQ,
+        className: N.hQ,
         children: [
-            (0, t.jsx)(D, { isLoading: s, onVideoLoaded: l }),
+            (0, t.jsx)(B, { isLoading: s, onVideoLoaded: l }),
             (0, t.jsxs)("div", {
-                className: k.dD,
+                className: N.dD,
                 children: [
                     (0, t.jsxs)("div", {
-                        className: k.R_,
+                        className: N.R_,
                         children: [
-                            (0, t.jsx)(S.B, { shouldUseThemeColor: !0, className: k.Uu }),
+                            (0, t.jsx)(C.B, { shouldUseThemeColor: !0, className: N.Uu }),
                             (0, t.jsx)(i.D, {
                                 variant: "heading-xl/semibold",
                                 color: "text-strong",
-                                "aria-label": T.intl.formatToPlainString(T.t.WPNjGe, { count: a }),
-                                children: T.intl.formatToPlainString(T.t.YMor7k, { count: a }),
+                                "aria-label": k.intl.formatToPlainString(k.t.WPNjGe, { count: a }),
+                                children: k.intl.formatToPlainString(k.t.YMor7k, { count: a }),
                             }),
                         ],
                     }),
@@ -139,7 +140,7 @@ function B(e) {
                         ? (0, t.jsx)(u.E, {
                               variant: "body-sm/medium",
                               color: "text-subtle",
-                              children: T.intl.format(T.t.g4t9aw, {
+                              children: k.intl.format(k.t.g4t9aw, {
                                   orbsBalance: n,
                                   orbsBalanceHook: (e, s) =>
                                       (0, t.jsx)(
@@ -155,55 +156,60 @@ function B(e) {
             (0, t.jsx)(b.$, {
                 variant: "secondary",
                 size: "sm",
-                text: T.intl.string(T.t.WYchde),
+                text: k.intl.string(k.t.WYchde),
                 onClick: function () {
-                    ((0, f.Y)({
-                        pageType: v.liQ.GLOBAL_DISCOVERY_QUESTS,
-                        sectionType: v.JJy.ORBS_REWARD_MODAL,
-                        ctaObject: v.ZSU.CTA_TO_ORBS_SHOP,
+                    ((0, y.Y)({
+                        pageType: L.liQ.GLOBAL_DISCOVERY_QUESTS,
+                        sectionType: L.JJy.ORBS_REWARD_MODAL,
+                        ctaObject: L.ZSU.CTA_TO_ORBS_SHOP,
                     }),
                         (0, r.s7)(),
-                        (0, x.Cz)({ tab: L.G2.ORBS, analyticsLocations: [], analyticsSource: p.A.QUEST_REWARD_MODAL }));
+                        (0, x.Cz)({ tab: T.G2.ORBS, analyticsLocations: [], analyticsSource: p.A.QUEST_REWARD_MODAL }));
                 },
                 fullWidth: !0,
             }),
         ],
     });
 }
-function W(e) {
+function G(e) {
     let { initialQuest: s, onClose: a, transitionState: l, sourceQuestContent: o, location: d } = e,
-        r = (0, R.C5)(s.id) ?? s,
+        r = (0, E.C5)(s.id) ?? s,
         i = r.userStatus?.claimedAt != null,
-        { balance: u, error: b } = (0, j.W0)(),
-        m = (0, c.bG)([C.default], () => C.default.getCurrentUser()),
-        h = r.userStatus?.orbQuantityClaimed ?? (0, E.wo)(r.config, m),
+        { balance: u, error: b } = (0, f.W0)(),
+        m = (0, c.bG)([g.default], () => g.default.getCurrentUser()),
+        h = r.userStatus?.orbQuantityClaimed ?? (0, w.wo)(r.config, m),
         [p, x] = n.useState(i ? "success" : "loading"),
-        [y, f] = n.useState(!1),
-        S = n.useCallback(() => {
-            f(!0);
+        [j, y] = n.useState(!1),
+        C = n.useCallback(() => {
+            y(!0);
         }, []);
     n.useEffect(() => {
         i ||
             "loading" !== p ||
-            (0, g.Oq)(r.id, A.pY.CROSS_PLATFORM, d)
+            (0, A.Oq)(r.id, R.pY.CROSS_PLATFORM, d)
                 .then(() => x("success"))
                 .catch(() => x("error"));
     }, [r.id, i, p, d]);
-    let v = !y || "loading" === p || (null == u && null == b),
-        L = "error" === p || null == h || (null == u && null != b);
-    return (0, t.jsx)(O.A, {
-        onClose: a,
-        transitionState: l,
-        quest: r,
-        sourceQuestContent: o,
-        location: _.rE.ORBS_REWARD_MODAL,
-        isRewardContentLoading: v,
-        rewardContentHasError: L,
-        rewardContent: L
-            ? null
-            : (0, t.jsx)(w.A, {
-                  rewardName: T.intl.string(T.t.Lmysvd),
-                  children: (0, t.jsx)(B, { orbsEarned: h, orbsBalance: u, isLoading: v, onVideoLoaded: S }),
-              }),
+    let L = !j || "loading" === p || (null == u && null == b),
+        T = "error" === p || null == h || (null == u && null != b);
+    return (0, t.jsxs)(t.Fragment, {
+        children: [
+            (0, t.jsx)(S.Y, {}),
+            (0, t.jsx)(_.A, {
+                onClose: a,
+                transitionState: l,
+                quest: r,
+                sourceQuestContent: o,
+                location: v.rE.ORBS_REWARD_MODAL,
+                isRewardContentLoading: L,
+                rewardContentHasError: T,
+                rewardContent: T
+                    ? null
+                    : (0, t.jsx)(O.A, {
+                          rewardName: k.intl.string(k.t.Lmysvd),
+                          children: (0, t.jsx)(W, { orbsEarned: h, orbsBalance: u, isLoading: L, onVideoLoaded: C }),
+                      }),
+            }),
+        ],
     });
 }

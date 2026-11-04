@@ -175,6 +175,10 @@ let d = (0, s.v)(
             let { queryPageSize: r, queryPageOffset: l } = t();
             e({ ...g, queryPageSize: r, queryPageOffset: l });
         },
+        resetWithSearchQuery: (r) => {
+            let { queryPageSize: l } = t();
+            e({ ...g, queryPageSize: l, searchQuery: r, sort: "" !== r.trim() ? y : f });
+        },
         setCurrentTab: (t) => {
             e({ currentTab: t });
         },

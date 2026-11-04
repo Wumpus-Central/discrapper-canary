@@ -406,7 +406,8 @@
 
 .list_yz6RlA {
     max-height: calc(var(--space-40)*8);
-    padding: var(--space-8)
+    padding: var(--space-8);
+    padding-inline-end: 0
 }
 
 .list_yz6RlA.inModal_yz6RlA {
@@ -501,4 +502,4 @@
     position: relative
 }
 
-/*# sourceMappingURL=339467.97db018f7a1c0bbe.css.map*/
+/*# sourceMappingURL=339467.3dc44f4bb496fa70.css.map*/

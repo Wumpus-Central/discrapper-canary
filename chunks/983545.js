@@ -26,51 +26,54 @@ n.d(
                     setThirdPartyOnlyFilter: a,
                     setOfferEligibleFilter: g,
                     reset: E,
-                    setCurrentTab: h,
+                    resetWithSearchQuery: h,
+                    setCurrentTab: f,
                 } = (0, c.v)(),
-                f = l.useMemo(() => {
+                x = (0, s.zy)(),
+                C = x.state?.searchQuery,
+                p = l.useMemo(() => {
                     var t;
                     return (0, d.dF)(e) || (t = e) === d.G2.COLLABS || t === d.G2.OFFER_ELIGIBLE ? d.G2.CATALOG : e;
                 }, [e]),
-                [x, C] = l.useState(f),
-                [p, S] = l.useState(d.Pf.VISIBLE);
+                [S, _] = l.useState(p),
+                [A, v] = l.useState(d.Pf.VISIBLE);
             (l.useEffect(() => {
-                x !== d.G2.GAME_SERVERS && h(x);
-            }, [x, h]),
+                S !== d.G2.GAME_SERVERS && f(S);
+            }, [S, f]),
                 l.useEffect(() => {
-                    if ((C(f), e === d.G2.CATALOG)) E();
+                    if ((_(p), e === d.G2.CATALOG)) null != C ? h(C) : E();
                     else if (e === d.G2.COLLABS) a();
                     else if (e === d.G2.OFFER_ELIGIBLE) g();
                     else if ((0, d.dF)(e)) {
                         let t = m[e];
                         null != t ? n(t) : E();
                     }
-                }, [f, e, n, a, g, E]));
-            let { clearError: A } = (0, o.S)(),
-                _ = (0, s.W6)(),
-                v = l.useCallback(
-                    async (e, l) => {
-                        if ((A(), e === d.G2.CATALOG)) E();
+                }, [p, e, n, a, g, E, h, C]));
+            let { clearError: b } = (0, o.S)(),
+                I = (0, s.W6)(),
+                j = l.useCallback(
+                    async (e, l, s) => {
+                        if ((b(), e === d.G2.CATALOG)) s?.searchQuery != null ? h(s.searchQuery) : E();
                         else if (e === d.G2.COLLABS) a();
                         else if (e === d.G2.OFFER_ELIGIBLE) g();
-                        else if ((0, d.dF)(e) && e !== x) {
+                        else if ((0, d.dF)(e) && e !== S) {
                             let t = m[e];
                             null != t ? n(t) : E();
                         }
-                        if (x !== e) {
+                        if (S !== e) {
                             if (l && !t) {
-                                var s;
-                                (S(d.Pf.OUT), await ((s = 800 * 1.1), new Promise((e) => setTimeout(e, s))));
+                                var i;
+                                (v(d.Pf.OUT), await ((i = 800 * 1.1), new Promise((e) => setTimeout(e, i))));
                             }
-                            (C(e === d.G2.HOME || e === d.G2.ORBS || e === d.G2.GAME_SERVERS ? e : d.G2.CATALOG),
-                                l && !t && S(d.Pf.IN),
-                                _.push(u.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { shallow: !0 }),
-                                S(d.Pf.VISIBLE));
+                            (_(e === d.G2.HOME || e === d.G2.ORBS || e === d.G2.GAME_SERVERS ? e : d.G2.CATALOG),
+                                l && !t && v(d.Pf.IN),
+                                I.push(u.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { searchQuery: s?.searchQuery }),
+                                v(d.Pf.VISIBLE));
                         }
                     },
-                    [_, n, a, g, E, x, A, t],
+                    [I, n, a, g, E, h, S, b, t],
                 );
-            return { selectedTab: x, transitionState: p, transitionToTab: v };
+            return { selectedTab: S, transitionState: A, transitionToTab: j };
         },
     },
 );
