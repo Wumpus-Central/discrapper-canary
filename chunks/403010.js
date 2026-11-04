@@ -13,7 +13,7 @@ var i = n(435558),
     A = n(280450),
     h = n(470710),
     f = n(734057),
-    I = n(999926),
+    I = n(477653),
     p = n(763827),
     m = n(873985),
     T = n(309010),
@@ -2026,8 +2026,8 @@ let eJ = new c.A("ConnectionStore"),
     e1 = null,
     e2 = !0,
     e3 = null,
-    e6 = null;
-async function e4(e) {
+    e4 = null;
+async function e5(e) {
     ((e0 = Date.now()), (e1 = e.sessionId), V.handleConnectionOpen());
     let t = {},
         n = s.w.get("discord_update_restart_timestamp"),
@@ -2049,9 +2049,9 @@ async function e4(e) {
             null != e && ((t = { guildId: e.getGuildId(), channelId: r }), (0, _.A)(r));
         } else (p.A.setLastSessionVoiceChannelId(null != r ? r : null), o.default.selectVoiceChannel(null));
     }
-    (H.update(t, !0), (e2 = !1), (e6 = null));
+    (H.update(t, !0), (e2 = !1), (e4 = null));
 }
-function e5() {
+function e6() {
     H.update();
 }
 function e7() {
@@ -2112,10 +2112,10 @@ let tt = new te(l.h, {
         );
     },
     CONNECTION_OPEN: (e) => {
-        e4(e);
+        e5(e);
     },
     CONNECTION_RESUMED: function () {
-        e6 = null;
+        e4 = null;
     },
     CONNECTION_CLOSED: function () {
         (eJ.verbose("connection closed dispatched"), (e0 = Date.now()));
@@ -2127,7 +2127,7 @@ let tt = new te(l.h, {
     VOICE_CHANNEL_SELECT: function (e) {
         return (
             H.update({ guildId: e.guildId, channelId: e.channelId }),
-            (e6 = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
+            (e4 = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
             (0, N.isIOS)() &&
                 e3 === x.g6G.BACKGROUND &&
                 (null == e.channelId ? B.close(!0) : B.isClosed() && (j.V(!1), B.connect())),
@@ -2139,8 +2139,8 @@ let tt = new te(l.h, {
         return t.reduce((e, t) => {
             if (A.default.getId() !== t.userId) return e;
             if (t.sessionId === e1) {
-                if (null != e6)
-                    return (eJ.verbose("Ignoring voice state for own session due to VSU lock on channel:", e6), e);
+                if (null != e4)
+                    return (eJ.verbose("Ignoring voice state for own session due to VSU lock on channel:", e4), e);
                 H.setState({ guildId: t.guildId, channelId: t.channelId });
             } else {
                 if (t.guildId !== H.guildId) return e;
@@ -2159,7 +2159,7 @@ let tt = new te(l.h, {
     CALL_DELETE: function (e) {
         let { channelId: t } = e;
         if (t === H.channelId) {
-            if (e6 === t) return !1;
+            if (e4 === t) return !1;
             H.setState({ guildId: null, channelId: null });
         }
     },
@@ -2214,7 +2214,7 @@ let tt = new te(l.h, {
             !1
         );
     },
-    STREAM_CREATE: e5,
+    STREAM_CREATE: e6,
     STREAM_START: function (e) {
         let { streamType: t, guildId: n, channelId: i } = e;
         if (B.isSessionEstablished()) {
@@ -2240,7 +2240,7 @@ let tt = new te(l.h, {
     },
     STREAM_STOP: function (e) {
         let { streamKey: t } = e;
-        return (e9(t), e5(), !1);
+        return (e9(t), e6(), !1);
     },
     STREAM_SET_PAUSED: function (e) {
         let { streamKey: t, paused: n } = e;
@@ -2264,11 +2264,11 @@ let tt = new te(l.h, {
     RESET_SOCKET: function (e) {
         B.connectionState !== C.A.WILL_RECONNECT && B.resetSocketAndClearCacheOnError(e.args);
     },
-    CLIPS_SETTINGS_UPDATE: e5,
-    RUNNING_GAMES_CHANGE: e5,
+    CLIPS_SETTINGS_UPDATE: e6,
+    RUNNING_GAMES_CHANGE: e6,
     USER_SETTINGS_PROTO_UPDATE: function (e) {
         e.settings.type === eZ.oD.PRELOADED_USER_SETTINGS &&
             e.settings.proto.clips?.allowVoiceRecording != null &&
-            e5();
+            e6();
     },
 });

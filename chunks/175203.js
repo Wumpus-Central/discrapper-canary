@@ -64,7 +64,7 @@ var i = s(477900),
     eu = s(706787),
     ep = s(280450),
     em = s(111162),
-    eA = s(999926),
+    eA = s(477653),
     eh = s(290863),
     ex = s(485296),
     eI = s(977997),
@@ -202,13 +202,13 @@ let ew = [eP.lp.ACTIVITY],
                 },
                 [j, x],
             ),
-            e2 = t.useCallback(
+            e8 = t.useCallback(
                 (e) => {
                     y?.(x, e);
                 },
                 [y, x],
             ),
-            e8 = t.useCallback(
+            e2 = t.useCallback(
                 (e, l, s) => {
                     T?.(x, e, l, s);
                 },
@@ -216,7 +216,7 @@ let ew = [eP.lp.ACTIVITY],
             ),
             e6 = null,
             e5 = null,
-            e9 = "";
+            e4 = "";
         switch (x.type) {
             case eP.lp.STREAM:
                 ((e6 = (0, i.jsx)(eO.A, {
@@ -236,7 +236,7 @@ let ew = [eP.lp.ACTIVITY],
                         idle: Q,
                         premiumIndicator: !1,
                     })),
-                    (e9 = eU.intl.formatToPlainString(eU.t.gHPz3Q, { streamerName: x.user.username })));
+                    (e4 = eU.intl.formatToPlainString(eU.t.gHPz3Q, { streamerName: x.user.username })));
                 break;
             case eP.lp.USER:
                 ((e6 = (0, i.jsx)(eR.A, {
@@ -260,11 +260,11 @@ let ew = [eP.lp.ACTIVITY],
                             C.isGuildStageVoice() && !M ? (0, i.jsx)(eo.A, { channel: C, userId: x.user.id }) : null,
                         ],
                     })),
-                    (e9 = eU.intl.formatToPlainString(eU.t["iC/x/Q"], { username: x.user.username })));
+                    (e4 = eU.intl.formatToPlainString(eU.t["iC/x/Q"], { username: x.user.username })));
                 break;
             case eP.lp.ACTIVITY:
                 ((e6 = (0, i.jsx)(eC.Ay, { interactible: k, participant: x, selected: R, channel: C, width: S })),
-                    (e9 = eU.intl.formatToPlainString(eU.t.YCvOsO, { activityName: eN?.name })));
+                    (e4 = eU.intl.formatToPlainString(eU.t.YCvOsO, { activityName: eN?.name })));
                 break;
             case eP.lp.HIDDEN_STREAM:
                 e6 = (0, i.jsx)(eO.A, {
@@ -277,7 +277,7 @@ let ew = [eP.lp.ACTIVITY],
                     popoutType: I,
                 });
         }
-        let { ref: e4, width: e3, height: le } = (0, L.Ay)(),
+        let { ref: e9, width: e3, height: le } = (0, L.Ay)(),
             ll = (0, r.bG)([ex.A], () => (x.type === eP.lp.USER ? ex.A.getVoiceVolume(x.id) : -1 / 0)),
             ls = (0, H.v)({
                 voiceStatus: eJ ? eD.T2.PLAYING_SOUNDBOARD : eW ? eD.T2.SPEAKING : null,
@@ -307,16 +307,16 @@ let ew = [eP.lp.ACTIVITY],
                         className: eG.Vs,
                         children: [
                             (0, i.jsx)(eS.A, {
-                                ref: e4,
+                                ref: e9,
                                 className: a()(eG.Vs, { [eG.E7]: V, [eG.k_]: null == j, [eG.N7]: Q }),
                                 noBorder: V,
                                 style: E,
                                 participantUserId: ej,
                                 children: (0, i.jsxs)(h.s, {
-                                    "aria-label": e9,
+                                    "aria-label": e4,
                                     className: eG.lG,
-                                    onDoubleClick: e2,
-                                    onContextMenu: (e) => e8(e, x.type === eP.lp.STREAM),
+                                    onDoubleClick: e8,
+                                    onContextMenu: (e) => e2(e, x.type === eP.lp.STREAM),
                                     onClick: e7,
                                     onMouseDown: N,
                                     onKeyDown: f,
@@ -370,7 +370,7 @@ let ew = [eP.lp.ACTIVITY],
                                                   localVideoDisabled: eV,
                                                   videoToggleState: ez,
                                                   hideAudioIcon: eF,
-                                                  onContextMenu: e8,
+                                                  onContextMenu: e2,
                                                   onToggleMute: e1,
                                                   participantUserId: ej,
                                                   channel: C,
@@ -392,7 +392,7 @@ let ew = [eP.lp.ACTIVITY],
                                 }),
                             }),
                             el && es && et && (0, i.jsx)(eb.A, { currentUserId: ey, participant: x }),
-                            (0, i.jsx)(Z.A, { isFiring: q, callTileRef: e4 }),
+                            (0, i.jsx)(Z.A, { isFiring: q, callTileRef: e9 }),
                         ],
                     }),
                 }),

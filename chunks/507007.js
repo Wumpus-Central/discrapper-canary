@@ -378,7 +378,7 @@ var eW = n(844222),
     eZ = n(977997),
     e0 = n(312006),
     e1 = n(175203),
-    e4 = n(999926),
+    e4 = n(477653),
     e2 = n(756872);
 function e6(e) {
     let { aspectRatio: t, className: n, children: s, width: i, ...a } = e,
@@ -395,12 +395,12 @@ function e6(e) {
 }
 var e5 = n(866665),
     e7 = n(786889),
-    e9 = n(90075);
-let e8 = function () {
+    e8 = n(90075);
+let e9 = function () {
     return (0, l.jsx)(e5.m, {
         text: es.intl.string(es.t.GMZqSi),
         children: (0, l.jsx)("div", {
-            className: e9.k,
+            className: e8.k,
             children: (0, l.jsx)(e7.A, { color: F.A.unsafe_rawColors.WHITE.css }),
         }),
     });
@@ -447,7 +447,7 @@ function tt(e) {
                         pulseSpeakingIndicator: !h.enabled,
                         width: o,
                         onContextMenu: d,
-                        children: c && (0, l.jsx)(e8, {}),
+                        children: c && (0, l.jsx)(e9, {}),
                     },
                     x,
                 ),
@@ -504,7 +504,7 @@ function tn(e) {
             onContextMenu: c,
             pulseSpeakingIndicator: !p.enabled,
             width: a,
-            children: r && n.type === ew.lp.USER && (0, l.jsx)(e8, {}),
+            children: r && n.type === ew.lp.USER && (0, l.jsx)(e9, {}),
         },
         h,
     );

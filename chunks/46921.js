@@ -388,7 +388,7 @@ let eE = "2026-03-surface-direct-renderer",
 var eh = n(53857),
     ef = n(734057),
     eI = n(71393),
-    ep = n(999926),
+    ep = n(477653),
     em = n(763827),
     eT = n(412780),
     eg = n(873985),
@@ -1139,14 +1139,14 @@ var eJ = n(4511),
     e1 = n(676279),
     e2 = n(935208),
     e3 = n(276208);
-let e6 = { any: 100 },
-    e4 = { any: 0 },
-    e5 = 30 * eH.A.Millis.SECOND,
+let e4 = { any: 100 },
+    e5 = { any: 0 },
+    e6 = 30 * eH.A.Millis.SECOND,
     e7 = 120 * eH.A.Millis.SECOND,
     e8 = -1 !== (0, e1.EL)();
 var e9 = (((o = {}).UserSSRCUpdate = "user-ssrc-update"), (o.Update = "update"), o);
 function te(e) {
-    return (0, eR.isWeb)() ? { ...e4 } : { any: e };
+    return (0, eR.isWeb)() ? { ...e5 } : { any: e };
 }
 class tt extends S.A {
     userId;
@@ -1403,7 +1403,7 @@ class tt extends S.A {
         return e;
     }
     getOffscreenTimeoutMs() {
-        return this.isStageChannel ? e7 : e5;
+        return this.isStageChannel ? e7 : e6;
     }
     getSimulcastOverrideQuality(e) {
         return this.simulcastDebugOverrides.has(e) ? this.simulcastDebugOverrides.get(e) : z.r8.NO_OVERRIDE;
@@ -3328,7 +3328,7 @@ class tZ extends S.A {
                             this._connection?.setLocalVideoSinkWants(e));
                     }));
         }
-        ((this._remoteVideoSinkWants = e6),
+        ((this._remoteVideoSinkWants = e4),
             e3.X.on(e3.N.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged),
             e3.X.on(e3.N.WindowVisibilityChanged, this.windowVisibilityChanged),
             eT.Ay.shouldRecordNextConnection()

@@ -248,20 +248,20 @@ var t0 = i(119191),
 function t2(t) {
     t && (0, tP.Ak)(k.cH, k.pD, void 0, void 0, { trackNotificationFailure: !0 });
 }
-let t9 = { noStyleAndInteraction: !0, formatInline: !0, hideSimpleEmbedContent: !1 };
-function t3(t) {
+let t3 = { noStyleAndInteraction: !0, formatInline: !0, hideSimpleEmbedContent: !1 };
+function t8(t) {
     let { message: e } = t,
-        i = (0, tV.ld)(t9, "textChatNotification"),
+        i = (0, tV.ld)(t3, "textChatNotification"),
         n = (0, tU.j)({ excluded: tU.Z }),
         l = (0, tM.N)(e.content, { enabled: i, syntax: n });
-    return (0, z.jsx)(tV.Ay, { message: e, options: t9, parsed: l });
+    return (0, z.jsx)(tV.Ay, { message: e, options: t3, parsed: l });
 }
-var t8 = i(554146),
-    t5 = i(298990),
+var t5 = i(554146),
+    t9 = i(298990),
     t7 = i(429913),
     t4 = i(263577),
     t6 = i(826673),
-    et = i(999926),
+    et = i(477653),
     ee = i(308726),
     ei = i(818023),
     en = i(731854),
@@ -672,7 +672,7 @@ let eL = new eb(o.h, {
                                 (l("unlock"),
                                     u.A.updateNotificationStatus(i),
                                     u.A.setInputLocked(!1, w.A.getTargetPID()),
-                                    (0, t5.qf)(e, !1, $.BRT.POPOUT));
+                                    (0, t9.qf)(e, !1, $.BRT.POPOUT));
                             }));
                         break;
                     }
@@ -711,7 +711,7 @@ let eL = new eb(o.h, {
                                     className: ea.kL,
                                 })));
                 }
-            let r = (0, t6.k8)(t8.M.OVERLAY_OOP_WELCOME_NUX),
+            let r = (0, t6.k8)(t5.M.OVERLAY_OOP_WELCOME_NUX),
                 s = J.intl.string(J.t.KWDIrh);
             return {
                 icon:
@@ -724,16 +724,16 @@ let eL = new eb(o.h, {
                 },
                 ...a,
                 onNotificationShow: (t) => {
-                    (n(), r || (0, t6.Dr)(t8.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t));
+                    (n(), r || (0, t6.Dr)(t5.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t));
                 },
                 onNotificationClick: (t, e) => {
                     (l("unlock"),
                         u.A.setInputLocked(!1, w.A.getTargetPID()),
-                        r || (0, t6.Dr)(t8.M.OVERLAY_OOP_WELCOME_NUX),
+                        r || (0, t6.Dr)(t5.M.OVERLAY_OOP_WELCOME_NUX),
                         a.onNotificationClick?.(t, e));
                 },
                 onDismissClick: (t, e) => {
-                    (l("dismiss"), r || (0, t6.Dr)(t8.M.OVERLAY_OOP_WELCOME_NUX), a.onDismissClick?.(t, e));
+                    (l("dismiss"), r || (0, t6.Dr)(t5.M.OVERLAY_OOP_WELCOME_NUX), a.onDismissClick?.(t, e));
                 },
             };
         })((0, G.qv)(), e);
@@ -920,7 +920,7 @@ let eL = new eb(o.h, {
                 return {
                     icon: a,
                     title: r,
-                    body: e.content.length > 0 ? (0, z.jsx)(t3, { message: e }) : s,
+                    body: e.content.length > 0 ? (0, z.jsx)(t8, { message: e }) : s,
                     unreadAccessory: (t) => (l ? (0, z.jsx)(tk.A, { unread: !0, hovered: t }) : null),
                     hint: (t, e) =>
                         t || !e || (!l && (0, tF.$)())
