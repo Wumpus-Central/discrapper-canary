@@ -140,7 +140,7 @@ let z = (e) => {
 function K(e) {
     let { handleTransition: t, selectedTab: n, isNarrow: a, hasText: r } = e,
         d = (0, j.A)(H),
-        { searchQuery: u, onSetSearchQuery: m } = (0, S.v)(),
+        { searchQuery: u, onSetSearchQuery: m } = (0, S.vs)(),
         [g, E] = s.useState(""),
         h = (0, O.uM)(),
         { enabled: f, searchBarWidthPx: x } = y.useConfig({ location: "collectibles_search_bar" }),
@@ -186,7 +186,8 @@ function K(e) {
         ),
         J = s.useCallback(
             (e) => {
-                n === R.G2.CATALOG ? m(e) : t(R.G2.CATALOG, !1, { searchQuery: e });
+                let l = e.trim();
+                (E(l), n === R.G2.CATALOG) ? m(l) : t(R.G2.CATALOG, !1, { searchQuery: l });
             },
             [n, m, t],
         ),
@@ -258,15 +259,18 @@ function K(e) {
                     onClear: ei,
                     onFocus: el,
                     onBlur: er,
-                    inputProps: f
-                        ? {
-                              role: "combobox",
-                              "aria-expanded": Z,
-                              "aria-controls": Z ? B : void 0,
-                              "aria-autocomplete": "list",
-                              "aria-activedescendant": Z && w >= 0 ? `${B}-${w}` : void 0,
-                          }
-                        : void 0,
+                    inputProps: {
+                        maxLength: 256,
+                        ...(f
+                            ? {
+                                  role: "combobox",
+                                  "aria-expanded": Z,
+                                  "aria-controls": Z ? B : void 0,
+                                  "aria-autocomplete": "list",
+                                  "aria-activedescendant": Z && w >= 0 ? `${B}-${w}` : void 0,
+                              }
+                            : void 0),
+                    },
                     placeholder: Q ? "" : eo,
                     "aria-label": eo,
                 }),
@@ -333,7 +337,7 @@ function eg(e) {
     let { selectedTab: t, selectedCollectionId: n, handleTransition: a } = e,
         _ = (0, c.bG)([p.default], () => p.default.getCurrentUser()),
         A = (0, ed.yB)("CollectiblesShopHeaderBar"),
-        { searchQuery: v } = (0, S.v)(),
+        { searchQuery: v } = (0, S.vs)(),
         b = s.useRef(null),
         [I, j] = s.useState(!1);
     (0, g.g)(

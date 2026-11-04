@@ -1355,7 +1355,7 @@ function n5(e) {
         N = v ? a.items.length : 0,
         A = (function () {
             let { sessionId: e } = (0, R.uM)() ?? {},
-                n = (0, nQ.v)((e) => e.reset);
+                n = (0, nQ.vs)((e) => e.reset);
             return r.useCallback(
                 (t, i) => {
                     if (

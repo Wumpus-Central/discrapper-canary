@@ -1152,9 +1152,9 @@ var tl = n(856383),
     tu = n(758461),
     tm = n(641150);
 function tg() {
-    let { itemTypeFilters: e, searchQuery: t, thirdPartyOnly: n, offerEligible: l } = (0, _.v)((e) => e),
+    let { itemTypeFilters: e, searchQuery: t, thirdPartyOnly: n, offerEligible: l } = (0, _.vs)((e) => e),
         { totalCount: s, isFetchingResults: r } = (0, ti.S)(),
-        c = (0, _.v)((e) => e.hasFilters()),
+        c = (0, _.vs)((e) => e.hasFilters()),
         o = i.useCallback(() => {
             if (!c) return "";
             if (r) return Y.intl.string(Y.t["/FaMSE"]);
@@ -1398,7 +1398,7 @@ var tG = n(177366),
     tF = n(460348),
     tH = n(878278);
 let tw = function () {
-    let { sort: e, onSetSort: t, hasRelevanceFilters: n } = (0, _.v)(),
+    let { sort: e, onSetSort: t, hasRelevanceFilters: n } = (0, _.vs)(),
         l = (0, h.uM)(),
         s = (0, tF.yB)("CollectiblesSortSelect"),
         r = n(),
@@ -1510,7 +1510,7 @@ function ne() {
             offerEligible: r,
             reset: c,
             hasFilters: o,
-        } = (0, _.v)(),
+        } = (0, _.vs)(),
         d = o(),
         u = (0, h.uM)(),
         m = i.useRef(null),
@@ -1624,7 +1624,7 @@ function nt(e) {
             [tm.q.PROFILE_FRAME]: Y.intl.string(Y.t.ecTJkR),
             [tm.q.BUNDLE]: Y.intl.string(Y.t.FYFpps),
         },
-        { itemTypeFilters: s, onToggleItemType: i } = (0, _.v)();
+        { itemTypeFilters: s, onToggleItemType: i } = (0, _.vs)();
     return (0, a.jsx)(tK.S, {
         checked: s.has(t),
         onChange: () => {
@@ -1667,7 +1667,7 @@ function nn(e) {
 }
 function nl(e) {
     let { colors: t, trackFilterAction: n } = e,
-        { colorFilters: l, onToggleColor: s } = (0, _.v)();
+        { colorFilters: l, onToggleColor: s } = (0, _.vs)();
     return (0, a.jsx)("div", {
         className: t9.OW,
         children: t.map((e) => {
@@ -1723,7 +1723,7 @@ function na(e) {
 }
 function ni(e) {
     let { trackFilterAction: t } = e,
-        { themeFilters: n, onToggleTheme: l } = (0, _.v)(),
+        { themeFilters: n, onToggleTheme: l } = (0, _.vs)(),
         s = (0, Q.Ay)() === K.NJ.DARK,
         r = i.useCallback(
             (e) => {
@@ -1816,7 +1816,7 @@ function ni(e) {
 }
 function nr(e) {
     let { trackFilterAction: t } = e,
-        { themeFilters: n, onToggleTheme: l } = (0, _.v)(),
+        { themeFilters: n, onToggleTheme: l } = (0, _.vs)(),
         s = i.useMemo(
             () => [
                 { name: Y.intl.string(Y.t.aVBOKh), icon: tq.E, enum: tz.ANIME },
@@ -1904,7 +1904,7 @@ function nE(e) {
         });
     }, [s, d, r, n]);
     let A = i.useRef(null),
-        { setQueryPageSize: v, setQueryPageOffset: b, queryPageSize: I } = (0, _.v)(),
+        { setQueryPageSize: v, setQueryPageOffset: b, queryPageSize: I } = (0, _.vs)(),
         [j, L] = i.useState(!1),
         N = x || null == u;
     i.useEffect(() => {
@@ -1985,12 +1985,12 @@ function nf(e) {
     (!(function () {
         let e = (0, v.bG)([td.A], () => "success" === td.A.getFetchState(eW.FYj)),
             t = null != (0, tu.HH)(),
-            { offerEligible: n, clearFilters: l } = (0, _.v)();
+            { offerEligible: n, clearFilters: l } = (0, _.vs)();
         i.useEffect(() => {
             n && e && !t && l();
         }, [n, e, t, l]);
     })(),
-        (0, _.S)(r));
+        (0, _.Sf)(r));
     let c = i.useRef(null),
         { handleScroll: o } = (0, nc.r)(c, t),
         { setCategoryRef: d, handleScrollToCategory: u } = (0, tG.k0)(c),
@@ -2050,7 +2050,7 @@ function nx(e) {
             initialCategoryId: d,
         } = e,
         u = i.useRef(null),
-        m = (0, _.v)((e) => e.hasDefaultFilters()),
+        m = (0, _.vs)((e) => e.hasDefaultFilters()),
         g = (0, h.uM)(),
         { handlePageChange: E, currentPage: f } = (function (e) {
             let [t, n] = i.useState(1);
@@ -2307,7 +2307,7 @@ let nR = function (e) {
                 ...t,
             };
         })(),
-        { currentTab: d, hasFilters: v } = (0, _.v)(),
+        { currentTab: d, hasFilters: v } = (0, _.vs)(),
         b = i.useMemo(() => (t === e9.G2.HOME && null != d && v() ? d : t), [t, d, v]);
     (0, p.Wg)();
     let [I, j] = i.useState(),

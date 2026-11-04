@@ -9,6 +9,7 @@ function c(e, t) {
     let r = new Set(e);
     return (r.has(t) ? r.delete(t) : r.add(t), r);
 }
+r(758836);
 let f = { sortType: n.$.RECENCY, sortDirection: o.A.DESC },
     S = { sortType: n.$.POPULARITY, sortDirection: o.A.DESC },
     y = { sortType: n.$.RELEVANCE, sortDirection: o.A.DESC },
@@ -188,7 +189,7 @@ r.d(
     t,
     {},
     {
-        S: function (e) {
+        Sf: function (e) {
             let { onSetResponse: t, setSearchError: r, setIsFetchingResults: s } = (0, a.S)();
             l.useEffect(() => {
                 function l(e) {
@@ -246,7 +247,7 @@ r.d(
                             limit: c,
                             sort_type: u.sortType,
                             sort_direction: u.sortDirection,
-                            search: "" !== a ? a : void 0,
+                            search: "" !== a ? a.slice(0, 256) : void 0,
                             include_unpublished: !!t || void 0,
                             published_collections_only: !0,
                         };
@@ -268,6 +269,6 @@ r.d(
                 };
             }, [t, r, s, e]);
         },
-        v: d,
+        vs: d,
     },
 );

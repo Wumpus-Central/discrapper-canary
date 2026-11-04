@@ -28,7 +28,7 @@ n.d(
                     reset: E,
                     resetWithSearchQuery: h,
                     setCurrentTab: f,
-                } = (0, c.v)(),
+                } = (0, c.vs)(),
                 x = (0, s.zy)(),
                 C = x.state?.searchQuery,
                 p = l.useMemo(() => {
