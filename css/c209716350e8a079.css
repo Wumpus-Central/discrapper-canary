@@ -704,6 +704,7 @@
     display: flex;
     flex: 0 0 auto;
     gap: var(--space-xs);
+    height: var(--custom-channel-textarea-text-area-height, 44px);
     padding-inline-start: var(--space-xs)
 }
 
@@ -1092,4 +1093,4 @@
     justify-content: flex-end
 }
 
-/*# sourceMappingURL=b811f71fa936b1df.css.map*/
+/*# sourceMappingURL=c209716350e8a079.css.map*/

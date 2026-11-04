@@ -36,14 +36,15 @@ function Z(e) {
         a = (0, u.A)(r),
         d = (0, X.A)(r),
         o = (0, I.A)(r),
-        h = (0, S.A)(r),
-        x = (0, c.A)({ id: r.id, label: N.intl.string(N.t.DQ797g) }),
-        j = (0, A.z)(r),
-        b = (0, g.A)(r, "Context Menu"),
-        f = (0, v.A)(r, "Context Menu"),
-        p = (0, C.A)(r),
-        m = (0, D.A)(r),
-        _ = (0, A.C)(r);
+        h = (0, x.A)(r),
+        j = (0, S.A)(r),
+        b = (0, c.A)({ id: r.id, label: N.intl.string(N.t.DQ797g) }),
+        f = (0, A.z)(r),
+        p = (0, g.A)(r, "Context Menu"),
+        m = (0, v.A)(r, "Context Menu"),
+        _ = (0, C.A)(r),
+        M = (0, D.A)(r),
+        k = (0, A.C)(r);
     return (0, t.jsxs)(i.W, {
         "data-menu-migrated": !0,
         navId: "thread-context",
@@ -52,12 +53,12 @@ function Z(e) {
         onSelect: n,
         children: [
             (0, t.jsx)(s.rX, { children: d }, "mark-as-read-or-favorite"),
-            (0, t.jsx)(s.rX, { children: j }),
-            (0, t.jsxs)(s.rX, { children: [b, p, a] }, "thread-actions"),
-            (0, t.jsxs)(s.rX, { children: [o, h] }, "notifications"),
-            (0, t.jsx)(s.rX, { children: m }),
-            (0, t.jsxs)(s.rX, { children: [f, _] }),
-            (0, t.jsx)(s.rX, { children: x }, "developer-actions"),
+            (0, t.jsx)(s.rX, { children: f }),
+            (0, t.jsxs)(s.rX, { children: [p, _, h, a] }, "thread-actions"),
+            (0, t.jsxs)(s.rX, { children: [o, j] }, "notifications"),
+            (0, t.jsx)(s.rX, { children: M }),
+            (0, t.jsxs)(s.rX, { children: [m, k] }),
+            (0, t.jsx)(s.rX, { children: b }, "developer-actions"),
         ],
     });
 }

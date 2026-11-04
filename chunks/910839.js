@@ -16,8 +16,8 @@ var i = n(477900),
     I = n(475825),
     p = n(224640),
     m = n(442433),
-    T = n(390435),
-    g = n(775121),
+    g = n(390435),
+    T = n(775121),
     S = n(662090);
 let N = (0, n(600975).C)({
     kind: "user",
@@ -135,7 +135,7 @@ class K extends r.PureComponent {
     }
 }
 var $ = n(678436);
-function z() {
+function X() {
     return (0, i.jsxs)("div", {
         className: $.p$,
         children: [
@@ -150,7 +150,7 @@ function z() {
         ],
     });
 }
-class X extends r.Component {
+class z extends r.Component {
     static defaultProps = { unread: !1 };
     render() {
         let e = b.A.getGuild(this.props.channel.guild_id);
@@ -173,13 +173,13 @@ let q = _.Ay.connectStores([P.Ay, y.A], (e) => {
             isMentionLowImportance: P.Ay.getIsMentionLowImportance(t.id),
             category: y.A.getChannel(t.parent_id),
         };
-    })(X),
+    })(z),
     Z = _.Ay.connectStores([U.Ay], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id)
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
         return { voiceStates: U.Ay.getVoiceStates(t.guild_id)[t.id] };
-    })(X),
+    })(z),
     Q = _.Ay.connectStores([D.default], (e) => {
         let { guild: t } = e;
         return { unread: D.default.hasUnread(t.id) };
@@ -215,10 +215,10 @@ class en extends r.PureComponent {
     _listId = (0, O.Ld)();
     state = { query: this.props.query, mouseFocusDisabled: !0 };
     componentDidMount() {
-        (g.A.disable(), g.A.enableTemp(T.w));
+        (T.A.disable(), T.A.enableTemp(g.w));
     }
     componentWillUnmount() {
-        (g.A.disableTemp(), g.A.enable());
+        (T.A.disableTemp(), T.A.enable());
     }
     componentDidUpdate(e, t) {
         let { mouseFocusDisabled: n, query: i } = this.state,
@@ -943,6 +943,7 @@ class en extends r.PureComponent {
                                 n.e(566378),
                                 n.e(745493),
                                 n.e(256372),
+                                n.e(536478),
                                 n.e(29542),
                                 n.e(363430),
                                 n.e(588251),
@@ -1016,8 +1017,9 @@ class en extends r.PureComponent {
                                 n.e(63340),
                                 n.e(896804),
                                 n.e(697367),
+                                n.e(536478),
                                 n.e(703869),
-                                n.e(51212),
+                                n.e(426760),
                                 n.e(420105),
                             ]).then(n.bind(n, 949488));
                             return (t) => (0, i.jsx)(e, { ...t, channel: r, onSelect: o.jD });
@@ -1188,7 +1190,7 @@ class en extends r.PureComponent {
             let { query: e } = this.state,
                 { results: t } = this.props;
             return 0 === t.length && e.length > 0
-                ? (0, i.jsx)(z, {})
+                ? (0, i.jsx)(X, {})
                 : 0 === t.length
                   ? null
                   : (0, i.jsx)(I.Ei, {
