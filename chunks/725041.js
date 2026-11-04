@@ -75,7 +75,7 @@ n.d(
                       subtitle: v.intl.string(_.default.HXmZlY),
                       actions: [
                           ...(y ? [{ text: v.intl.string(v.t["154/bL"]), variant: "secondary", onClick: w }] : []),
-                          { text: v.intl.string(_.default["/Ld1Ju"]), variant: "primary", onClick: j },
+                          { text: v.intl.string(_.default["/Ld1Ju"]), variant: "secondary", onClick: j },
                       ],
                       children: (0, l.jsxs)(a.B, {
                           gap: 16,
