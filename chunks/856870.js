@@ -868,8 +868,8 @@ n(600253);
 var e5 = n(314531);
 n(926675);
 var e4 = n(305866),
-    e3 = n(123181),
-    e7 = n(229087),
+    e7 = n(123181),
+    e3 = n(229087),
     e9 = n(394245),
     e6 = n(382701),
     te = n(408519);
@@ -949,7 +949,7 @@ function tt(e) {
                       children: [
                           o.map((e) =>
                               (0, i.jsx)(
-                                  e7.A,
+                                  e3.A,
                                   {
                                       tag: e,
                                       variant: "filled",
@@ -979,7 +979,7 @@ function tt(e) {
                           children: o
                               .slice(0, E)
                               .map((e) =>
-                                  (0, i.jsx)(e7.A, { tag: e, variant: "filled", onRemove: r ? () => S(e) : void 0 }, e),
+                                  (0, i.jsx)(e3.A, { tag: e, variant: "filled", onRemove: r ? () => S(e) : void 0 }, e),
                               ),
                       }),
                   P &&
@@ -990,10 +990,10 @@ function tt(e) {
                           onOpenChange: b,
                           disableInteraction: a,
                           children: o.map((e) =>
-                              (0, i.jsx)(e7.A, { tag: e, className: te.Hl, onRemove: r ? () => O(e) : void 0 }, e),
+                              (0, i.jsx)(e3.A, { tag: e, className: te.Hl, onRemove: r ? () => O(e) : void 0 }, e),
                           ),
                       }),
-                  u && (0, i.jsx)(e3.A, { tags: o, onTagsChange: R, onOpen: w, onClose: k, variant: "filled", ref: I }),
+                  u && (0, i.jsx)(e7.A, { tags: o, onTagsChange: R, onOpen: w, onClose: k, variant: "filled", ref: I }),
               ],
           })
         : null;
@@ -1516,18 +1516,17 @@ function tK(e) {
                             n.e("838090"),
                             n.e("501962"),
                             n.e("583518"),
-                            n.e("280559"),
                             n.e("974049"),
+                            n.e("280559"),
                             n.e("237715"),
-                            n.e("895008"),
                             n.e("231782"),
-                            n.e("306270"),
+                            n.e("895008"),
                             n.e("98717"),
-                            n.e("717278"),
                             n.e("689160"),
-                            n.e("538733"),
                             n.e("520342"),
+                            n.e("306270"),
                             n.e("790614"),
+                            n.e("717278"),
                         ]).then(n.bind(n, 972405));
                         return (t) =>
                             (0, i.jsx)(e, {
@@ -1860,14 +1859,14 @@ function t4() {
         throw Error("useGameWidgetExpandCollapse must be used within a GameWidgetExpandCollapseContextProvider");
     return e;
 }
-var t3 = n(67438);
-function t7(e) {
+var t7 = n(67438);
+function t3(e) {
     let { widget: t } = e,
         n = (0, j.cv)(t.type),
         l = 1 === n,
         a = l ? v.intl.string(v.t["3FdPBT"]) : v.intl.format(v.t.W8K2GH, { maxGames: n });
     return (0, i.jsxs)("div", {
-        className: l ? t3.O : t3.k,
+        className: l ? t7.O : t7.k,
         children: [
             l && (0, i.jsx)(t1, { widget: t, widgetType: t.type }),
             (0, i.jsx)(g.E, { variant: "body-xs/normal", color: "text-subtle", children: a }),
@@ -1958,7 +1957,7 @@ function ns(e) {
                       allowEditing: s,
                       disableInteraction: r,
                   })
-                : (0, i.jsx)(t7, { widget: n }),
+                : (0, i.jsx)(t3, { widget: n }),
     });
 }
 function nr(e) {
@@ -1981,7 +1980,7 @@ function nr(e) {
                       allowEditing: s,
                       disableInteraction: r,
                   })
-                : (0, i.jsx)(t7, { widget: n }),
+                : (0, i.jsx)(t3, { widget: n }),
     });
 }
 var no = n(793693);
@@ -2125,7 +2124,7 @@ function nE(e) {
                       allowEditing: s,
                       disableInteraction: r,
                   })
-                : (0, i.jsx)(t7, { widget: n }),
+                : (0, i.jsx)(t3, { widget: n }),
     });
 }
 function nv(e) {
@@ -2147,7 +2146,7 @@ function nv(e) {
                       allowEditing: s,
                       disableInteraction: r,
                   })
-                : (0, i.jsx)(t7, { widget: n }),
+                : (0, i.jsx)(t3, { widget: n }),
     });
 }
 var nC = n(875620);

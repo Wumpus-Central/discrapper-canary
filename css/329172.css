@@ -295,8 +295,8 @@
 
 .container__85a13 {
     align-items: center;
-    background-color: var(--background-feedback-mod-warning);
-    border-color: var(--background-feedback-mod-warning);
+    background-color: var(--background-feedback-warning);
+    border-color: var(--background-feedback-warning);
     border-radius: var(--radius-sm);
     border-style: solid;
     border-width: 1px;
@@ -320,8 +320,8 @@
 
 .container__1656b {
     align-items: center;
-    background-color: var(--background-feedback-mod-warning);
-    border-color: var(--background-feedback-mod-warning);
+    background-color: var(--background-feedback-warning);
+    border-color: var(--background-feedback-warning);
     border-radius: var(--radius-sm);
     border-style: solid;
     border-width: 1px;
@@ -662,4 +662,4 @@
     margin-top: var(--space-16)
 }
 
-/*# sourceMappingURL=329172.1dccb0df2b65c1b9.css.map*/
+/*# sourceMappingURL=329172.2bd3ce927ba2ee06.css.map*/

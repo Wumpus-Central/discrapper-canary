@@ -87,15 +87,15 @@ function x() {
             return u.intl.string(u.t["2liUvt"]);
     }
 }
-let _ = {
+let A = {
         [d.PN.ALL_GOOD]: {
             color: n.A.colors.ICON_FEEDBACK_POSITIVE,
-            backgroundColor: n.A.colors.BACKGROUND_FEEDBACK_MOD_POSITIVE,
+            backgroundColor: n.A.colors.BACKGROUND_FEEDBACK_POSITIVE,
             Icon: i.y,
         },
         [d.PN.LIMITED]: {
             color: n.A.colors.ICON_FEEDBACK_WARNING,
-            backgroundColor: n.A.colors.BACKGROUND_FEEDBACK_MOD_WARNING,
+            backgroundColor: n.A.colors.BACKGROUND_FEEDBACK_WARNING,
             Icon: l.WarningIcon,
         },
         [d.PN.VERY_LIMITED]: {
@@ -105,13 +105,13 @@ let _ = {
         },
         [d.PN.AT_RISK]: {
             color: n.A.colors.ICON_FEEDBACK_CRITICAL,
-            backgroundColor: n.A.colors.BACKGROUND_FEEDBACK_MOD_CRITICAL,
+            backgroundColor: n.A.colors.BACKGROUND_FEEDBACK_CRITICAL,
             Icon: r.E,
         },
         [d.PN.SUSPENDED]: { color: n.A.colors.ICON_MUTED, backgroundColor: n.A.colors.BACKGROUND_MOD_MUTED, Icon: a.a },
     },
-    A = { color: n.A.colors.ICON_MUTED, backgroundColor: n.A.colors.BACKGROUND_MOD_MUTED, Icon: o.CircleQuestionIcon };
+    _ = { color: n.A.colors.ICON_MUTED, backgroundColor: n.A.colors.BACKGROUND_MOD_MUTED, Icon: o.CircleQuestionIcon };
 function D() {
     let t = (0, N.K)();
-    return (0, E.v)() ? _[t.state] : A;
+    return (0, E.v)() ? A[t.state] : _;
 }

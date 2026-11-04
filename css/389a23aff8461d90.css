@@ -10,7 +10,7 @@
 }
 
 .row__0a9b0.error__0a9b0 {
-    background: var(--background-feedback-mod-critical);
+    background: var(--background-feedback-critical);
     border: 1px solid var(--border-feedback-critical)
 }
 
@@ -46,4 +46,4 @@
     gap: var(--space-8)
 }
 
-/*# sourceMappingURL=f9d27aba40ba8cdb.css.map*/
+/*# sourceMappingURL=389a23aff8461d90.css.map*/

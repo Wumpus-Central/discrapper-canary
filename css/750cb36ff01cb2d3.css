@@ -3474,11 +3474,11 @@
     --background-code: rgba(89, 102, 242, .08);
     --background-code-addition: rgba(0, 133, 69, .12);
     --background-code-deletion: rgba(209, 46, 56, .12);
-    --background-feedback-mod-critical: rgba(209, 46, 56, .08);
-    --background-feedback-mod-info: rgba(0, 115, 227, .08);
-    --background-feedback-mod-positive: rgba(0, 133, 69, .08);
-    --background-feedback-mod-warning: rgba(247, 163, 0, .08);
+    --background-feedback-critical: rgba(209, 46, 56, .08);
+    --background-feedback-info: rgba(0, 115, 227, .08);
     --background-feedback-notification: #d12e38;
+    --background-feedback-positive: rgba(0, 133, 69, .08);
+    --background-feedback-warning: rgba(247, 163, 0, .08);
     --background-mod-muted: hsla(240, 4%, 61%, .08);
     --background-mod-normal: hsla(240, 4%, 61%, .16);
     --background-mod-strong: hsla(240, 4%, 61%, .2);
@@ -4216,11 +4216,11 @@
     --background-code: rgba(89, 102, 242, .04);
     --background-code-addition: rgba(0, 133, 69, .12);
     --background-code-deletion: rgba(209, 46, 56, .12);
-    --background-feedback-mod-critical: rgba(209, 46, 56, .08);
-    --background-feedback-mod-info: rgba(0, 115, 227, .08);
-    --background-feedback-mod-positive: rgba(0, 133, 69, .08);
-    --background-feedback-mod-warning: rgba(247, 163, 0, .08);
+    --background-feedback-critical: rgba(209, 46, 56, .08);
+    --background-feedback-info: rgba(0, 115, 227, .08);
     --background-feedback-notification: #d12e38;
+    --background-feedback-positive: rgba(0, 133, 69, .08);
+    --background-feedback-warning: rgba(247, 163, 0, .08);
     --background-mod-muted: hsla(240, 4%, 61%, .08);
     --background-mod-normal: hsla(240, 4%, 61%, .16);
     --background-mod-strong: hsla(240, 4%, 61%, .24);
@@ -4958,11 +4958,11 @@
     --background-code: rgba(89, 102, 242, .08);
     --background-code-addition: rgba(0, 133, 69, .12);
     --background-code-deletion: rgba(209, 46, 56, .12);
-    --background-feedback-mod-critical: rgba(209, 46, 56, .08);
-    --background-feedback-mod-info: rgba(0, 115, 227, .08);
-    --background-feedback-mod-positive: rgba(0, 133, 69, .08);
-    --background-feedback-mod-warning: rgba(247, 163, 0, .08);
+    --background-feedback-critical: rgba(209, 46, 56, .08);
+    --background-feedback-info: rgba(0, 115, 227, .08);
     --background-feedback-notification: #d12e38;
+    --background-feedback-positive: rgba(0, 133, 69, .08);
+    --background-feedback-warning: rgba(247, 163, 0, .08);
     --background-mod-muted: hsla(240, 4%, 61%, .08);
     --background-mod-normal: hsla(240, 4%, 61%, .2);
     --background-mod-strong: hsla(240, 4%, 61%, .24);
@@ -5700,11 +5700,11 @@
     --background-code: rgba(89, 102, 242, .08);
     --background-code-addition: rgba(0, 133, 69, .12);
     --background-code-deletion: rgba(209, 46, 56, .12);
-    --background-feedback-mod-critical: rgba(209, 46, 56, .08);
-    --background-feedback-mod-info: rgba(0, 115, 227, .08);
-    --background-feedback-mod-positive: rgba(0, 133, 69, .08);
-    --background-feedback-mod-warning: rgba(247, 163, 0, .08);
+    --background-feedback-critical: rgba(209, 46, 56, .08);
+    --background-feedback-info: rgba(0, 115, 227, .08);
     --background-feedback-notification: #d12e38;
+    --background-feedback-positive: rgba(0, 133, 69, .08);
+    --background-feedback-warning: rgba(247, 163, 0, .08);
     --background-mod-muted: hsla(240, 4%, 61%, .08);
     --background-mod-normal: hsla(240, 4%, 61%, .16);
     --background-mod-strong: hsla(240, 4%, 61%, .2);
@@ -6409,4 +6409,4 @@
     --white: #fff
 }
 
-/*# sourceMappingURL=565c946d30db4708.css.map*/
+/*# sourceMappingURL=750cb36ff01cb2d3.css.map*/

@@ -57,13 +57,13 @@
 }
 
 .pill_a2c9e8.danger_a2c9e8 {
-    background-color: var(--background-feedback-mod-critical);
+    background-color: var(--background-feedback-critical);
     border-color: var(--border-feedback-critical);
     color: var(--text-feedback-critical)
 }
 
 .pill_a2c9e8.success_a2c9e8 {
-    background-color: var(--background-feedback-mod-positive);
+    background-color: var(--background-feedback-positive);
     color: var(--text-feedback-positive)
 }
 
@@ -73,7 +73,7 @@
 }
 
 .pill_a2c9e8.warning_a2c9e8 {
-    background-color: var(--background-feedback-mod-warning);
+    background-color: var(--background-feedback-warning);
     color: var(--text-feedback-warning)
 }
 
@@ -265,4 +265,4 @@
     position: absolute
 }
 
-/*# sourceMappingURL=726399.372a0317aed09b3f.css.map*/
+/*# sourceMappingURL=726399.659780c39208b55b.css.map*/

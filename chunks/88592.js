@@ -14,12 +14,6 @@ class c extends i.Ay.Store {
     getDraft(e) {
         return u[e]?.draft;
     }
-    getInitialDraft(e) {
-        return u[e]?.initialDraft;
-    }
-    getEditSessionId(e) {
-        return u[e]?.editSessionId;
-    }
     hasChanges(e) {
         let t = u[e];
         return null != t && !r()(t.initialDraft, t.draft);
@@ -36,12 +30,11 @@ class c extends i.Ay.Store {
 }
 let o = new c(a.h, {
     GUILD_SPACE_EDIT_START: function (e) {
-        let { guildId: t, space: n, seedWidgets: l = [], editSessionId: r } = e,
-            i = { header: n.header, widgets: (0, s.W$)(n.widgets) };
+        let { guildId: t, space: n, seedWidgets: l = [] } = e,
+            r = { header: n.header, widgets: (0, s.W$)(n.widgets) };
         u[t] = {
-            editSessionId: r,
-            initialDraft: i,
-            draft: l.length > 0 ? { ...i, widgets: (0, s.W$)([...n.widgets, ...l]) } : i,
+            initialDraft: r,
+            draft: l.length > 0 ? { ...r, widgets: (0, s.W$)([...n.widgets, ...l]) } : r,
             saveStatus: "idle",
         };
     },

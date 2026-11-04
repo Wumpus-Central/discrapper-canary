@@ -1228,7 +1228,7 @@
 }
 
 .tooltipRed_c36707 {
-    background-color: var(--background-feedback-mod-critical);
+    background-color: var(--background-feedback-critical);
     color: var(--white);
     --tooltip-pointer-bg: var(--border-feedback-critical)
 }
@@ -1988,7 +1988,7 @@
 }
 
 .disabledPermissionIcon__41924 {
-    background-color: var(--background-feedback-mod-critical);
+    background-color: var(--background-feedback-critical);
     border-radius: 10%;
     box-sizing: border-box;
     height: 18px;
@@ -2484,7 +2484,7 @@
 
 .connectAccountInfoNotice__3d3b0 {
     align-items: flex-start;
-    background: var(--background-feedback-mod-info);
+    background: var(--background-feedback-info);
     border: 1px solid var(--icon-feedback-info);
     border-radius: var(--radius-sm);
     display: flex;
@@ -3418,7 +3418,7 @@
 }
 
 .colorDanger_c1e9c4.focused_c1e9c4 {
-    background-color: var(--background-feedback-mod-critical)
+    background-color: var(--background-feedback-critical)
 }
 
 .colorDanger_c1e9c4.focused_c1e9c4,
@@ -3432,7 +3432,7 @@
 }
 
 .colorDanger_c1e9c4:active:not(.hideInteraction_c1e9c4) {
-    background-color: var(--background-feedback-mod-critical);
+    background-color: var(--background-feedback-critical);
     color: var(--text-feedback-critical)
 }
 
@@ -6478,19 +6478,19 @@ svg.radioIcon_c1e9c4 {
 
 .side_aa8da2 .destructive_aa8da2.item_aa8da2:hover:not(.disabled_aa8da2),
 .topPill_aa8da2 .destructive_aa8da2.item_aa8da2:hover:not(.disabled_aa8da2) {
-    background-color: var(--background-feedback-mod-critical);
+    background-color: var(--background-feedback-critical);
     color: var(--text-feedback-critical)
 }
 
 .side_aa8da2 .destructive_aa8da2.item_aa8da2:active:not(.disabled_aa8da2),
 .topPill_aa8da2 .destructive_aa8da2.item_aa8da2:active:not(.disabled_aa8da2) {
-    background-color: var(--background-feedback-mod-critical);
+    background-color: var(--background-feedback-critical);
     color: var(--white)
 }
 
 .side_aa8da2 .destructive_aa8da2.selected_aa8da2.item_aa8da2:not(.disabled_aa8da2),
 .topPill_aa8da2 .destructive_aa8da2.selected_aa8da2.item_aa8da2:not(.disabled_aa8da2) {
-    background-color: var(--background-feedback-mod-critical);
+    background-color: var(--background-feedback-critical);
     color: var(--white)
 }
 
@@ -6543,4 +6543,4 @@ svg.radioIcon_c1e9c4 {
     width: 0
 }
 
-/*# sourceMappingURL=230322.03996f40ff6d6aec.css.map*/
+/*# sourceMappingURL=230322.6c5ce58debd76758.css.map*/

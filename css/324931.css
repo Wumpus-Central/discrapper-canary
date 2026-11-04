@@ -85,7 +85,7 @@
 .winButtonClose__421ed {}
 
 .winButtonClose__421ed:hover {
-    background-color: var(--background-feedback-mod-critical);
+    background-color: var(--background-feedback-critical);
     color: var(--white)
 }
 
@@ -151,4 +151,4 @@
     padding-top: 4px
 }
 
-/*# sourceMappingURL=324931.9decf1b3cff50c14.css.map*/
+/*# sourceMappingURL=324931.4e5110ac4c8b35e9.css.map*/

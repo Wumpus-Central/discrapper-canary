@@ -15,7 +15,7 @@
 }
 
 .local__56d75 {
-    background-color: var(--background-feedback-mod-warning)
+    background-color: var(--background-feedback-warning)
 }
 
 .local__56d75,
@@ -24,7 +24,7 @@
 }
 
 .staging__56d75 {
-    background-color: var(--background-feedback-mod-critical)
+    background-color: var(--background-feedback-critical)
 }
 
 .buildOverride__56d75 {
@@ -63,4 +63,4 @@
     width: 14px
 }
 
-/*# sourceMappingURL=1601.d63e86c3dc3d0936.css.map*/
+/*# sourceMappingURL=1601.9180b49ad7820d2c.css.map*/

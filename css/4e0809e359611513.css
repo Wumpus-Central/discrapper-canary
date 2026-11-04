@@ -1,5 +1,5 @@
 .warningInput__7b22b {
-    --input-background-default: var(--background-feedback-mod-warning);
+    --input-background-default: var(--background-feedback-warning);
     --input-border-default: var(--icon-feedback-warning);
     --input-border-active: var(--icon-feedback-warning);
     --input-border-hover: var(--icon-feedback-warning)
@@ -9,4 +9,4 @@
     color: var(--icon-feedback-warning)
 }
 
-/*# sourceMappingURL=27b3ca290fea7175.css.map*/
+/*# sourceMappingURL=4e0809e359611513.css.map*/

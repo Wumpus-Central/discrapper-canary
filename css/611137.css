@@ -51,21 +51,21 @@
 }
 
 .cardDanger_b5dd01 {
-    --__card-background-color: var(--background-feedback-mod-critical);
+    --__card-background-color: var(--background-feedback-critical);
     --__card-color: var(--text-feedback-critical);
     --__card-border-color: var(--border-feedback-critical)
 }
 
 .cardWarning_b5dd01 {
-    --__card-background-color: var(--background-feedback-mod-warning);
+    --__card-background-color: var(--background-feedback-warning);
     --__card-color: var(--text-feedback-warning);
-    --__card-border-color: var(--background-feedback-mod-warning)
+    --__card-border-color: var(--background-feedback-warning)
 }
 
 .cardSuccess_b5dd01 {
-    --__card-background-color: var(--background-feedback-mod-positive);
+    --__card-background-color: var(--background-feedback-positive);
     --__card-color: var(--text-feedback-positive);
-    --__card-border-color: var(--background-feedback-mod-positive)
+    --__card-border-color: var(--background-feedback-positive)
 }
 
 .cardBrand_b5dd01 {
@@ -140,4 +140,4 @@
     inset-inline-end: 0
 }
 
-/*# sourceMappingURL=611137.a62fa809869c68a4.css.map*/
+/*# sourceMappingURL=611137.b63dea47375355b5.css.map*/

@@ -161,7 +161,7 @@
 
 .pendingCancellation__7bc6f {
     align-items: center;
-    background: var(--background-feedback-mod-warning);
+    background: var(--background-feedback-warning);
     border: 1px solid var(--icon-feedback-warning);
     border-radius: 4px;
     display: flex;
@@ -187,4 +187,4 @@
     margin-top: 4px
 }
 
-/*# sourceMappingURL=449356741b208143.css.map*/
+/*# sourceMappingURL=e910c6a0f455a87b.css.map*/

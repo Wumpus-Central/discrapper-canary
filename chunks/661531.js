@@ -239,33 +239,19 @@ let { Themes: c } = d.zv,
             [_.ONYX]: { raw: "OPACITY_RED_12", opacity: 0.12156862745098039 },
             [_.DARK]: { raw: "OPACITY_RED_12", opacity: 0.12156862745098039 },
         },
-        BACKGROUND_FEEDBACK_MOD_CRITICAL: {
+        BACKGROUND_FEEDBACK_CRITICAL: {
             category: "background",
             [_.ASH]: { raw: "OPACITY_RED_8", opacity: 0.0784313725490196 },
             [_.LIGHT]: { raw: "OPACITY_RED_8", opacity: 0.0784313725490196 },
             [_.ONYX]: { raw: "OPACITY_RED_8", opacity: 0.0784313725490196 },
             [_.DARK]: { raw: "OPACITY_RED_8", opacity: 0.0784313725490196 },
         },
-        BACKGROUND_FEEDBACK_MOD_INFO: {
+        BACKGROUND_FEEDBACK_INFO: {
             category: "background",
             [_.ASH]: { raw: "OPACITY_BLUE_8", opacity: 0.0784313725490196 },
             [_.LIGHT]: { raw: "OPACITY_BLUE_8", opacity: 0.0784313725490196 },
             [_.ONYX]: { raw: "OPACITY_BLUE_8", opacity: 0.0784313725490196 },
             [_.DARK]: { raw: "OPACITY_BLUE_8", opacity: 0.0784313725490196 },
-        },
-        BACKGROUND_FEEDBACK_MOD_POSITIVE: {
-            category: "background",
-            [_.ASH]: { raw: "OPACITY_GREEN_8", opacity: 0.0784313725490196 },
-            [_.LIGHT]: { raw: "OPACITY_GREEN_8", opacity: 0.0784313725490196 },
-            [_.ONYX]: { raw: "OPACITY_GREEN_8", opacity: 0.0784313725490196 },
-            [_.DARK]: { raw: "OPACITY_GREEN_8", opacity: 0.0784313725490196 },
-        },
-        BACKGROUND_FEEDBACK_MOD_WARNING: {
-            category: "background",
-            [_.ASH]: { raw: "OPACITY_YELLOW_8", opacity: 0.0784313725490196 },
-            [_.LIGHT]: { raw: "OPACITY_YELLOW_8", opacity: 0.0784313725490196 },
-            [_.ONYX]: { raw: "OPACITY_YELLOW_8", opacity: 0.0784313725490196 },
-            [_.DARK]: { raw: "OPACITY_YELLOW_8", opacity: 0.0784313725490196 },
         },
         BACKGROUND_FEEDBACK_NOTIFICATION: {
             category: "background",
@@ -273,6 +259,20 @@ let { Themes: c } = d.zv,
             [_.LIGHT]: { raw: "RED_NEW_50", opacity: 1 },
             [_.ONYX]: { raw: "RED_NEW_50", opacity: 1 },
             [_.DARK]: { raw: "RED_NEW_50", opacity: 1 },
+        },
+        BACKGROUND_FEEDBACK_POSITIVE: {
+            category: "background",
+            [_.ASH]: { raw: "OPACITY_GREEN_8", opacity: 0.0784313725490196 },
+            [_.LIGHT]: { raw: "OPACITY_GREEN_8", opacity: 0.0784313725490196 },
+            [_.ONYX]: { raw: "OPACITY_GREEN_8", opacity: 0.0784313725490196 },
+            [_.DARK]: { raw: "OPACITY_GREEN_8", opacity: 0.0784313725490196 },
+        },
+        BACKGROUND_FEEDBACK_WARNING: {
+            category: "background",
+            [_.ASH]: { raw: "OPACITY_YELLOW_8", opacity: 0.0784313725490196 },
+            [_.LIGHT]: { raw: "OPACITY_YELLOW_8", opacity: 0.0784313725490196 },
+            [_.ONYX]: { raw: "OPACITY_YELLOW_8", opacity: 0.0784313725490196 },
+            [_.DARK]: { raw: "OPACITY_YELLOW_8", opacity: 0.0784313725490196 },
         },
         BACKGROUND_MOD_MUTED: {
             category: "background",
@@ -4622,25 +4622,25 @@ let { Themes: c } = d.zv,
             [A.ONYX]: { raw: "OPACITY_BLURPLE_12", opacity: 0.12156862745098039 },
             [A.DARK]: { raw: "OPACITY_BLURPLE_12", opacity: 0.12156862745098039 },
         },
-        BACKGROUND_FEEDBACK_MOD_CRITICAL: {
+        BACKGROUND_FEEDBACK_CRITICAL: {
             [A.ASH]: { raw: "OPACITY_RED_12", opacity: 0.12156862745098039 },
             [A.LIGHT]: { raw: "OPACITY_RED_12", opacity: 0.12156862745098039 },
             [A.ONYX]: { raw: "OPACITY_RED_12", opacity: 0.12156862745098039 },
             [A.DARK]: { raw: "OPACITY_RED_12", opacity: 0.12156862745098039 },
         },
-        BACKGROUND_FEEDBACK_MOD_INFO: {
+        BACKGROUND_FEEDBACK_INFO: {
             [A.ASH]: { raw: "OPACITY_BLUE_12", opacity: 0.12156862745098039 },
             [A.LIGHT]: { raw: "OPACITY_BLUE_12", opacity: 0.12156862745098039 },
             [A.ONYX]: { raw: "OPACITY_BLUE_12", opacity: 0.12156862745098039 },
             [A.DARK]: { raw: "OPACITY_BLUE_12", opacity: 0.12156862745098039 },
         },
-        BACKGROUND_FEEDBACK_MOD_POSITIVE: {
+        BACKGROUND_FEEDBACK_POSITIVE: {
             [A.ASH]: { raw: "OPACITY_GREEN_12", opacity: 0.12156862745098039 },
             [A.LIGHT]: { raw: "OPACITY_GREEN_12", opacity: 0.12156862745098039 },
             [A.ONYX]: { raw: "OPACITY_GREEN_12", opacity: 0.12156862745098039 },
             [A.DARK]: { raw: "OPACITY_GREEN_12", opacity: 0.12156862745098039 },
         },
-        BACKGROUND_FEEDBACK_MOD_WARNING: {
+        BACKGROUND_FEEDBACK_WARNING: {
             [A.ASH]: { raw: "OPACITY_YELLOW_12", opacity: 0.12156862745098039 },
             [A.LIGHT]: { raw: "OPACITY_YELLOW_12", opacity: 0.12156862745098039 },
             [A.ONYX]: { raw: "OPACITY_YELLOW_12", opacity: 0.12156862745098039 },

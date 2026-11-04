@@ -126,7 +126,7 @@
 }
 
 .calloutBoxDanger__3a0cf {
-    background: var(--background-feedback-mod-critical);
+    background: var(--background-feedback-critical);
     border: 1px solid var(--border-feedback-critical)
 }
 
@@ -760,7 +760,7 @@
 }
 
 .expired__9b718 {
-    background-color: var(--background-feedback-mod-critical)
+    background-color: var(--background-feedback-critical)
 }
 
 .redeemed__9b718 {
@@ -890,4 +890,4 @@
     margin-bottom: 0
 }
 
-/*# sourceMappingURL=7afe05bcc89e52dc.css.map*/
+/*# sourceMappingURL=2bfc35ff3277d208.css.map*/
