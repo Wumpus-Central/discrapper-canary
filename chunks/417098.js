@@ -8,28 +8,27 @@ var r = t(503698),
     u = t(939249),
     a = t(789645),
     _ = t(129230),
-    A = t(652215),
-    E = t(792996),
-    N = t(934966);
-let C = Object.freeze({
-    DEFAULT: N.Lx,
-    NEUTRAL: N.NT,
-    BRAND: N.x8,
-    WARNING: N.SO,
-    DANGER: N.HW,
-    INFO: N.io,
-    STREAMER_MODE: N.kL,
-    CUSTOM: N.P4,
-    SPOTIFY: N.AU,
-    PLAYSTATION: N._9,
-    PREMIUM_TIER_0: N.zw,
-    PREMIUM_TIER_1: N.G_,
-    PREMIUM_TIER_2: N.NS,
+    E = t(652215),
+    A = t(792996),
+    C = t(934966);
+let N = Object.freeze({
+    DEFAULT: C.Lx,
+    NEUTRAL: C.NT,
+    BRAND: C.x8,
+    WARNING: C.SO,
+    DANGER: C.HW,
+    INFO: C.io,
+    STREAMER_MODE: C.kL,
+    CUSTOM: C.P4,
+    SPOTIFY: C.AU,
+    PREMIUM_TIER_0: C.zw,
+    PREMIUM_TIER_1: C.G_,
+    PREMIUM_TIER_2: C.NS,
 });
-function P(e) {
+function d(e) {
     let { children: n, className: t, minor: r = !1, ...i } = e;
     return (0, l.jsx)(s.vN, {
-        children: (0, l.jsx)("button", { className: c()(N.x6, t, { [N.oy]: r }), ...i, children: n }),
+        children: (0, l.jsx)("button", { className: c()(C.x6, t, { [C.oy]: r }), ...i, children: n }),
     });
 }
 t.d(
@@ -37,34 +36,34 @@ t.d(
     {},
     {
         $T: function (e) {
-            let { color: n = C.DEFAULT, className: t, style: r, ref: s, children: o } = e;
+            let { color: n = N.DEFAULT, className: t, style: r, ref: s, children: o } = e;
             return (0, l.jsx)("div", {
                 ref: s,
-                className: c()(N.lm, { [N.Fr]: i.Fr }, t, n),
+                className: c()(C.lm, { [C.Fr]: i.Fr }, t, n),
                 style: null != r ? r : void 0,
                 children: o,
             });
         },
-        Hv: C,
+        Hv: N,
         PM: function (e) {
             let { onClick: n, noticeType: t, className: r } = e;
             return (0, l.jsx)(u.D, {
                 focusProps: { offset: 6 },
-                className: c()(N.b, r),
+                className: c()(C.b, r),
                 onClick: () => {
-                    (n(), null != t && _.default.track(A.HAw.APP_NOTICE_CLOSED, { notice_type: t }));
+                    (n(), null != t && _.default.track(E.HAw.APP_NOTICE_CLOSED, { notice_type: t }));
                 },
-                "aria-label": E.intl.string(E.t.WAI6xu),
-                children: (0, l.jsx)(a.P, { size: "sm", color: "currentColor", className: N.ut }),
+                "aria-label": A.intl.string(A.t.WAI6xu),
+                children: (0, l.jsx)(a.P, { size: "sm", color: "currentColor", className: C.ut }),
             });
         },
         Z_: function (e) {
             let { children: n, noticeType: t, ...r } = e;
-            return (0, l.jsx)(P, {
+            return (0, l.jsx)(d, {
                 ...r,
                 onClick: (e) => {
                     (null != r.onClick && r.onClick(e),
-                        null != t && _.default.track(A.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: t }));
+                        null != t && _.default.track(E.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: t }));
                 },
                 children: n,
             });
@@ -73,14 +72,14 @@ t.d(
             let { children: n, href: t, noticeType: r, ...c } = e;
             return (0, l.jsx)(o.Anchor, {
                 ...c,
-                className: N.x6,
+                className: C.x6,
                 href: t,
                 onClick: (e) => {
-                    (c.onClick?.(e), _.default.track(A.HAw.APP_NOTICE_ANCHOR_CLICKED, { notice_type: r, href: t }));
+                    (c.onClick?.(e), _.default.track(E.HAw.APP_NOTICE_ANCHOR_CLICKED, { notice_type: r, href: t }));
                 },
                 children: n,
             });
         },
-        zr: P,
+        zr: d,
     },
 );

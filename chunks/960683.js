@@ -6,5 +6,5 @@ t.exports = {
     lI: "ctaButton_RmOtW7",
     vb: "premiumShine_RmOtW7",
     PC: "premiumIcon_RmOtW7",
-    U_: "ctaButtonText_RmOtW7 body-xs/semibold_RmOtW7",
+    U_: "ctaButtonText_RmOtW7 " + m(736541)["body-xs/semibold"],
 };

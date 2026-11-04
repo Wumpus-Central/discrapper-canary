@@ -101,7 +101,7 @@ function T() {
                         e && (0, s.jsx)("div", { className: r()(y.Nr, y.hV) }),
                         (0, s.jsx)(E, { width: 145, height: 32 }),
                         (0, s.jsx)("div", {
-                            className: y.aK,
+                            className: y.Jm,
                             children: Array.from({ length: 6 }).map((e, t) =>
                                 (0, s.jsx)("div", { className: r()(y.Nr, y.Vr) }, t),
                             ),
@@ -294,7 +294,7 @@ function Z() {
         children: [(0, s.jsx)(_, { icon: h.CompassIcon, title: e }), (0, s.jsx)(D, { tileCount: 9 })],
     });
 }
-function K() {
+function $() {
     return (0, s.jsxs)("div", {
         className: y.MY,
         role: "status",
@@ -319,7 +319,7 @@ function K() {
         ],
     });
 }
-function $() {
+function K() {
     return (0, s.jsxs)("div", {
         className: y.MY,
         role: "status",
@@ -616,10 +616,10 @@ i.d(
             return (0, s.jsx)(O, {});
         },
         tV: function () {
-            return (0, s.jsx)(K, {});
+            return (0, s.jsx)($, {});
         },
         uW: function () {
-            return (0, s.jsx)($, {});
+            return (0, s.jsx)(K, {});
         },
     },
 );

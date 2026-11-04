@@ -1,1 +1,5 @@
-e.exports = { Cf: "messageRequestItem_rRxPBT body-md/medium_rRxPBT", CJ: "firstItem_rRxPBT", vu: "active_rRxPBT" };
+e.exports = {
+    Cf: "messageRequestItem_rRxPBT " + s(736541)["body-md/medium"],
+    CJ: "firstItem_rRxPBT",
+    vu: "active_rRxPBT",
+};

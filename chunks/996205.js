@@ -10,7 +10,7 @@ _.exports = {
     Zp: "layout_J1Adu_",
     Ib: "wrappedLayout_J1Adu_",
     Qs: "content_J1Adu_",
-    UU: "name_J1Adu_ body-md/medium_J1Adu_",
+    UU: "name_J1Adu_ " + u(736541)["body-md/medium"],
     to: "wrappedName_J1Adu_",
     BG: "nameAndDecorators_J1Adu_",
     Sv: "subText_J1Adu_",

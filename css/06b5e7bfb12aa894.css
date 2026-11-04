@@ -125,54 +125,6 @@
     margin-top: 16px
 }
 
-:root {
-    --legacy-elevation-low: 0 1px 5px var(--opacity-black-20);
-    --legacy-elevation-high: 0 2px 10px 0 var(--opacity-black-8);
-    --legacy-elevation-border: 0 0 0 1px hsl(var(--primary-300-hsl)/0.3)
-}
-
-.theme-dark {
-    --legacy-elevation-low: 0 1px 5px 0 var(--opacity-black-28);
-    --legacy-elevation-high: 0 2px 10px 0 var(--opacity-black-20);
-    --legacy-elevation-border: 0 0 0 1px hsl(var(--primary-700-hsl)/0.6)
-}
-
-.elevationLow_Mzv_GO {
-    box-shadow: var(--legacy-elevation-low)
-}
-
-.elevationHigh_Mzv_GO {
-    box-shadow: var(--legacy-elevation-high)
-}
-
-.elevationBorderLow_Mzv_GO {
-    box-shadow: var(--legacy-elevation-border), var(--legacy-elevation-low)
-}
-
-.darkElevationBorderHigh_Mzv_GO {
-    box-shadow: var(--legacy-elevation-border), var(--legacy-elevation-high)
-}
-
-.lightElevationLow_Mzv_GO {
-    box-shadow: var(--legacy-elevation-low)
-}
-
-.lightElevationHigh_Mzv_GO {
-    box-shadow: var(--legacy-elevation-high)
-}
-
-.lightElevationBorderLow_Mzv_GO {
-    box-shadow: var(--legacy-elevation-border), var(--legacy-elevation-low)
-}
-
-.elevationBorderHigh_Mzv_GO,
-.elevationBorderLow_Mzv_GO,
-.elevationHigh_Mzv_GO,
-.elevationLow_Mzv_GO,
-.lightElevationBorderHigh_Mzv_GO {
-    box-shadow: var(--legacy-elevation-border), var(--legacy-elevation-high)
-}
-
 .container_Mzv_GO {
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-border), var(--shadow-high);
@@ -555,4 +507,4 @@ input::-webkit-outer-spin-button {
     box-shadow: var(--elevation-low)
 }
 
-/*# sourceMappingURL=79e9268694a990a2.css.map*/
+/*# sourceMappingURL=06b5e7bfb12aa894.css.map*/

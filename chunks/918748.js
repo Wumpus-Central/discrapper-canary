@@ -22957,7 +22957,7 @@ function Ng(e) {
                                                                       className: fJ.uL,
                                                                       children: [
                                                                           (0, p.jsxs)("div", {
-                                                                              className: fJ.Aj,
+                                                                              className: fJ.hY,
                                                                               children: [
                                                                                   e.title,
                                                                                   e.isNew

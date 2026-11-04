@@ -18,7 +18,7 @@ r.exports = {
     xe: "metadataContent_FJ99sr",
     kH: "metadataDownload_FJ99sr",
     XR: "metadataIcon_FJ99sr",
-    fL: "metadataSize_FJ99sr body-xs/medium_FJ99sr",
+    fL: "metadataSize_FJ99sr " + e(736541)["body-xs/medium"],
     s4: "playCenter_FJ99sr",
     kO: "playPausePop_FJ99sr",
     PK: "playPausePopIcon_FJ99sr",

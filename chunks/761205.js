@@ -1,5 +1,5 @@
-e.exports = {
-    Vg: "peopleListItem_y75PxA body-md/medium_y75PxA",
+t.exports = {
+    Vg: "peopleListItem_y75PxA " + e(736541)["body-md/medium"],
     vu: "active_y75PxA",
     yF: "divider_y75PxA",
     J5: "rowButton_y75PxA",

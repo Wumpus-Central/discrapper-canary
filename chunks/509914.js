@@ -30,10 +30,10 @@ function v(e) {
         }, [t, a]),
         d = p.intl.string(r ? p.t["+5kSoW"] : p.t.WqhZss);
     return (0, s.jsxs)("div", {
-        className: g.nM,
+        className: g.G,
         children: [
             (0, s.jsx)("input", {
-                className: g.nf,
+                className: g.n,
                 type: "text",
                 value: t,
                 readOnly: !0,

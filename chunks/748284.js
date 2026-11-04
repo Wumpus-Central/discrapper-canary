@@ -19,7 +19,7 @@ e.exports = {
     VA: "subtitle_K7aN4Z",
     M0: "coachmarkFooterContainer_K7aN4Z",
     Vt: "controlLabelContainer_K7aN4Z",
-    A9: "controlLabelInput_K7aN4Z body-md/medium_K7aN4Z",
+    A9: "controlLabelInput_K7aN4Z " + t(736541)["body-md/medium"],
     rV: "footerUpsellRow_K7aN4Z",
     Tf: "footerWishlistButton_K7aN4Z",
 };

@@ -11,7 +11,7 @@ e.exports = {
     NT: "buildInfo_TF1qYB",
     V$: "subHead_TF1qYB",
     Kk: "icon_TF1qYB",
-    Jb: "buildDetails_TF1qYB body-md/medium_TF1qYB",
+    Jb: "buildDetails_TF1qYB " + o(736541)["body-md/medium"],
     Pz: "barLoader_TF1qYB",
     w9: "barTitle_TF1qYB",
     MM: "buttonLoader_TF1qYB",

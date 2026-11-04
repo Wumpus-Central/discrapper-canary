@@ -1356,7 +1356,7 @@ function tQ(e) {
                     (0, r.jsx)("div", { className: e8()(tK.El, { [e2.S]: t }), children: s }),
                 ],
             }),
-            (0, r.jsxs)("div", { className: tK.IT, children: [h, p] }),
+            (0, r.jsxs)("div", { className: tK.pw, children: [h, p] }),
             (0, r.jsxs)("div", {
                 className: tK.fh,
                 children: [

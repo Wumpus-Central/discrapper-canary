@@ -158,26 +158,6 @@
     top: 0
 }
 
-.colorPlayStation_Q02kKo {
-    --custom-notice-background: var(--platform-playstation);
-    --custom-notice-text: var(--white);
-    --custom-notice-button-hover: var(--platform-playstation);
-    align-items: center;
-    display: flex;
-    justify-content: center
-}
-
-.colorPlayStation_Q02kKo .platformIcon_Q02kKo {
-    height: 24px;
-    margin-top: 0;
-    width: 24px
-}
-
-.colorPlayStation_Q02kKo .button_Q02kKo {
-    margin-inline-start: 20px;
-    top: 0
-}
-
 .colorBrand_Q02kKo {
     --custom-notice-background: var(--brand-500);
     --custom-notice-text: var(--white);
@@ -1590,4 +1570,4 @@
     }
 }
 
-/*# sourceMappingURL=685143.395173d65d8d30ac.css.map*/
+/*# sourceMappingURL=685143.94ab7b876f4cf9ce.css.map*/

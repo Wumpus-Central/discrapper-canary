@@ -35,7 +35,7 @@ function y(e) {
                     (0, l.jsx)(u._, { zoomable: !1, src: g.A, width: 197, height: 107 }),
                     (0, l.jsx)(c.SG, {
                         className: f.Y,
-                        noteClassName: f.A3,
+                        noteClassName: f.A,
                         note: k.intl.string(m.default["+SuGKb"]),
                         children: k.intl.string(m.default["wh+Rz1"]),
                     }),

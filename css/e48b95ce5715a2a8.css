@@ -1,0 +1,48 @@
+.modalRoot_DzIB9D {
+    overflow: hidden
+}
+
+.content_DzIB9D {
+    text-align: center
+}
+
+.notice_DzIB9D {
+    align-items: center;
+    border-radius: 0;
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center
+}
+
+.buttonContainer_DzIB9D {
+    padding-bottom: var(--space-16)
+}
+
+.qrCodeContainer_DzIB9D {
+    border-radius: var(--radius-md);
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    overflow: hidden
+}
+
+.qrCodeObscure_DzIB9D {
+    filter: blur(11px);
+    position: relative;
+    transition: filter .3s ease-in-out
+}
+
+.qrCodeOverlay_DzIB9D {
+    border-radius: var(--radius-md);
+    padding: 0
+}
+
+.qrCodeObscure_DzIB9D.visible_DzIB9D {
+    filter: blur(0)
+}
+
+.reminder_DzIB9D {
+    margin-top: var(--space-16)
+}
+
+/*# sourceMappingURL=e48b95ce5715a2a8.css.map*/

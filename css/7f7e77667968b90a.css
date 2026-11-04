@@ -1,0 +1,23 @@
+.closeIcon_5noEM3 {
+    color: var(--text-feedback-critical)
+}
+
+.header_5noEM3 {
+    gap: var(--space-24);
+    margin-bottom: var(--space-20);
+    text-align: center
+}
+
+.header_5noEM3,
+.heading_5noEM3 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.heading_5noEM3 {
+    gap: var(--space-8)
+}
+
+/*# sourceMappingURL=7f7e77667968b90a.css.map*/

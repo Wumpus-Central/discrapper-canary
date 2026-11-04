@@ -1,1 +1,1 @@
-e.exports = { KG: "rowItem_UHZEi_ body-md/medium_UHZEi_", HV: "last_UHZEi_", vu: "active_UHZEi_" };
+e.exports = { KG: "rowItem_UHZEi_ " + n(736541)["body-md/medium"], HV: "last_UHZEi_", vu: "active_UHZEi_" };

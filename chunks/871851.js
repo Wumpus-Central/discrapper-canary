@@ -4,11 +4,11 @@ var s = t(477900),
     a = t(503698),
     i = t.n(a),
     r = t(855986),
-    c = t(251843),
-    d = t(778712),
-    o = t(890856),
-    u = t(97808),
-    h = t(834730),
+    c = t(834730),
+    d = t(251843),
+    o = t(778712),
+    u = t(890856),
+    h = t(97808),
     m = t(460905),
     x = t(581925),
     g = t(516521),
@@ -24,8 +24,8 @@ var s = t(477900),
     _ = t(731068),
     E = t(708676),
     L = t(704413),
-    C = t(119591),
-    b = t(976860),
+    b = t(119591),
+    C = t(976860),
     F = t(253932),
     M = t(734057),
     G = t(71393),
@@ -79,7 +79,12 @@ function $(e) {
     let { channelId: l, preview: t } = e;
     return (0, s.jsx)("div", {
         className: i()(W.h_, Q.PT),
-        children: S.A.parse(t, !0, { allowHeading: !0, allowList: !0, allowLinks: !0, channelId: l }),
+        children: (0, s.jsx)(c.E, {
+            variant: "body-md/normal",
+            color: "none",
+            tag: "div",
+            children: S.A.parse(t, !0, { allowHeading: !0, allowList: !0, allowLinks: !0, channelId: l }),
+        }),
     });
 }
 function ee(e) {
@@ -98,7 +103,7 @@ function ee(e) {
     let t = (0, _.fj)(l);
     return null == t
         ? null
-        : (0, s.jsx)(c._, {
+        : (0, s.jsx)(d._, {
               src: t,
               width: 96,
               height: 96,
@@ -111,36 +116,36 @@ function ee(e) {
 function el(e) {
     let { message: l } = e,
         t = (0, L.A)(l);
-    return null == t ? null : (0, s.jsx)(C.A, { message: l, poll: t, className: W.Vq });
+    return null == t ? null : (0, s.jsx)(b.A, { message: l, poll: t, className: W.Vq });
 }
 function et(e) {
     let l,
         t,
         a,
-        { message: c, guildId: x, officialMessageColor: g } = e,
-        j = (0, r.bG)([M.A], () => M.A.getChannel(c.channel_id)),
+        { message: d, guildId: x, officialMessageColor: g } = e,
+        j = (0, r.bG)([M.A], () => M.A.getChannel(d.channel_id)),
         v = (0, f.Ay)(j),
         y = (0, P.A)(g),
-        S = (0, R.Ay)(c),
-        L = (0, X.P)({ user: c.author, channelId: c.channel_id, guildId: x, messageId: c.id, stopPropagation: !0 }),
-        C = n.useRef(null),
+        S = (0, R.Ay)(d),
+        L = (0, X.P)({ user: d.author, channelId: d.channel_id, guildId: x, messageId: d.id, stopPropagation: !0 }),
+        b = n.useRef(null),
         [F, G] = n.useState(!1),
-        U = c.poll;
+        U = d.poll;
     if (
         (n.useLayoutEffect(() => {
             if (null != U) return;
-            let e = C.current;
+            let e = b.current;
             null != e && G(e.scrollHeight > e.clientHeight);
-        }, [c, U]),
+        }, [d, U]),
         null == j)
     )
         return null;
-    let T = (0, B.y)({ message: c, channel: j, user: c.author, compact: !1, isRepliedMessage: !1 }),
-        k = c.getContentMessage(),
+    let T = (0, B.y)({ message: d, channel: j, user: d.author, compact: !1, isRepliedMessage: !1 }),
+        k = d.getContentMessage(),
         H = k.attachments.find((e) => (0, O.tT)(e.content_type) || (0, O.XB)(e.content_type)),
         Z = k.attachments.find((e) => !(0, O.tT)(e.content_type) && !(0, O.XB)(e.content_type)),
         J =
-            (null != H ? (0, _.Rr)(H, c) : null) ??
+            (null != H ? (0, _.Rr)(H, d) : null) ??
             (function (e, l) {
                 for (let t = 0; t < l.length; t++) {
                     let s = l[t],
@@ -151,23 +156,23 @@ function et(e) {
                     if (null != a) return (0, _.oU)(a, n, "IMAGE");
                 }
                 return null;
-            })(c, k.embeds) ??
+            })(d, k.embeds) ??
             (0, N.We)(k.components),
         Q = (0, _.fj)(J),
         Y = k.content.length > 0 ? k.content : ((0, N.kC)(k.components) ?? ""),
-        et = (0, D.mk)(c.timestamp, !0),
-        es = c.reactions.reduce((e, l) => e + l.count, 0),
-        en = c.author.getAvatarURL(x, (0, d.FT)(d._3.SIZE_40)),
+        et = (0, D.mk)(d.timestamp, !0),
+        es = d.reactions.reduce((e, l) => e + l.count, 0),
+        en = d.author.getAvatarURL(x, (0, o.FT)(o._3.SIZE_40)),
         ea = w.Ay.getAvatarDecorationURL({
-            avatarDecoration: S.guildMemberAvatarDecoration ?? c.author.avatarDecoration,
+            avatarDecoration: S.guildMemberAvatarDecoration ?? d.author.avatarDecoration,
         });
-    return (0, s.jsxs)(o.s, {
+    return (0, s.jsxs)(u.s, {
         className: i()(W.Nr, { [W.Sg]: null != y }),
         onClick: function () {
             function e() {
-                return (0, b.pX)(z.BVt.CHANNEL(x, c.channel_id, c.id));
+                return (0, C.pX)(z.BVt.CHANNEL(x, d.channel_id, d.id));
             }
-            (0, V.A)(c, e) && e();
+            (0, V.A)(d, e) && e();
         },
         style: y,
         "aria-label": q.intl.string(q.t["+TSRGD"]),
@@ -178,7 +183,7 @@ function et(e) {
                     (0, s.jsxs)("div", {
                         className: W.MY,
                         children: [
-                            (0, s.jsx)(u.eu, { size: d._3.SIZE_40, src: en, avatarDecoration: ea, "aria-hidden": !0 }),
+                            (0, s.jsx)(h.eu, { size: o._3.SIZE_40, src: en, avatarDecoration: ea, "aria-hidden": !0 }),
                             (0, s.jsxs)("div", {
                                 className: W.pB,
                                 children: [
@@ -188,17 +193,17 @@ function et(e) {
                                             (0, s.jsxs)("span", {
                                                 className: W.Cm,
                                                 children: [
-                                                    (0, s.jsx)(h.E, {
+                                                    (0, s.jsx)(c.E, {
                                                         tag: "span",
                                                         variant: "body-md/semibold",
                                                         color: "none",
                                                         className: W.fh,
-                                                        children: L(S)(S.nick, c.id),
+                                                        children: L(S)(S.nick, d.id),
                                                     }),
                                                     null != T && (0, s.jsx)("span", { className: W.Ho, children: T }),
                                                 ],
                                             }),
-                                            (0, s.jsx)(h.E, {
+                                            (0, s.jsx)(c.E, {
                                                 variant: "body-sm/normal",
                                                 color: "text-muted",
                                                 children: et,
@@ -211,7 +216,7 @@ function et(e) {
                                             null == (l = (0, A.gU)(j))
                                                 ? null
                                                 : (0, s.jsx)(l, { size: "xxs", className: W.Jv }),
-                                            (0, s.jsx)(h.E, {
+                                            (0, s.jsx)(c.E, {
                                                 variant: "body-sm/medium",
                                                 color: "text-muted",
                                                 className: W.ZM,
@@ -223,7 +228,7 @@ function et(e) {
                                                     children: [
                                                         (0, s.jsx)(I.A, { height: 2, width: 2, "aria-hidden": "true" }),
                                                         (0, s.jsx)(m.n, { size: "xs", color: "currentColor" }),
-                                                        (0, s.jsx)(h.E, {
+                                                        (0, s.jsx)(c.E, {
                                                             variant: "body-xs/medium",
                                                             color: "text-muted",
                                                             children: K.format(es),
@@ -235,7 +240,7 @@ function et(e) {
                                                     className: W.a5,
                                                     children: [
                                                         (0, s.jsx)(I.A, { height: 2, width: 2, "aria-hidden": "true" }),
-                                                        (0, s.jsx)(h.E, {
+                                                        (0, s.jsx)(c.E, {
                                                             variant: "body-xs/medium",
                                                             color: "text-muted",
                                                             children:
@@ -252,14 +257,14 @@ function et(e) {
                         ],
                     }),
                     (0, s.jsx)("div", {
-                        ref: C,
+                        ref: b,
                         className: i()(W.Ux, { [W.WF]: null != U || F }),
                         children:
                             null != U
-                                ? (0, s.jsx)(el, { message: c })
+                                ? (0, s.jsx)(el, { message: d })
                                 : (0, s.jsxs)(s.Fragment, {
                                       children: [
-                                          Y.length > 0 && (0, s.jsx)($, { channelId: c.channel_id, preview: Y }),
+                                          Y.length > 0 && (0, s.jsx)($, { channelId: d.channel_id, preview: Y }),
                                           null != Z &&
                                               (0, s.jsx)("div", {
                                                   className: W.Xv,
@@ -286,17 +291,17 @@ function es(e) {
     let { guildId: l } = e,
         { data: t, isLoading: a } = H(l, void 0),
         i = (0, r.bG)([U.A], () => U.A.hasMore(l)),
-        c = t ?? Y,
-        d = (0, r.bG)([G.A], () => G.A.getGuild(l)?.officialMessageColor ?? Z.aj),
-        o = n.useMemo(() => [...c].sort((e, l) => l.timestamp.getTime() - e.timestamp.getTime()), [c]),
-        u = n.useRef(null),
+        d = t ?? Y,
+        o = (0, r.bG)([G.A], () => G.A.getGuild(l)?.officialMessageColor ?? Z.aj),
+        u = n.useMemo(() => [...d].sort((e, l) => l.timestamp.getTime() - e.timestamp.getTime()), [d]),
+        h = n.useRef(null),
         m = n.useCallback(() => {
             if (!i || a) return;
-            let e = u.current?.getScrollerState();
+            let e = h.current?.getScrollerState();
             if (null == e || e.scrollHeight - (e.scrollTop + e.offsetHeight) > e.offsetHeight) return;
-            let t = o[o.length - 1];
+            let t = u[u.length - 1];
             null != t && H.refetch(l, t.id);
-        }, [l, i, a, o]);
+        }, [l, i, a, u]);
     return (0, s.jsxs)("div", {
         className: W.tB,
         children: [
@@ -310,16 +315,16 @@ function es(e) {
                 ],
             }),
             (0, s.jsx)(g.Ch, {
-                ref: u,
+                ref: h,
                 className: W.XG,
                 onScroll: m,
                 children:
-                    a && 0 === o.length
+                    a && 0 === u.length
                         ? (0, s.jsx)("div", { className: W.Ie, children: (0, s.jsx)(j.y, {}) })
-                        : 0 === o.length
+                        : 0 === u.length
                           ? (0, s.jsx)("div", {
                                 className: W.Ie,
-                                children: (0, s.jsx)(h.E, {
+                                children: (0, s.jsx)(c.E, {
                                     variant: "body-md/normal",
                                     color: "text-muted",
                                     children: q.intl.string(q.t["ZTQ/80"]),
@@ -328,8 +333,8 @@ function es(e) {
                           : (0, s.jsxs)("div", {
                                 className: W.Vg,
                                 children: [
-                                    o.map((e) =>
-                                        (0, s.jsx)(et, { message: e, guildId: l, officialMessageColor: d }, e.id),
+                                    u.map((e) =>
+                                        (0, s.jsx)(et, { message: e, guildId: l, officialMessageColor: o }, e.id),
                                     ),
                                     a && (0, s.jsx)("div", { className: W.sw, children: (0, s.jsx)(j.y, {}) }),
                                 ],

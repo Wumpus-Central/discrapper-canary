@@ -13,7 +13,6 @@ e.exports = {
     HW: "colorDanger_Q02kKo",
     kL: "colorStreamerMode_Q02kKo",
     AU: "colorSpotify_Q02kKo",
-    _9: "colorPlayStation_Q02kKo",
     x8: "colorBrand_Q02kKo",
     P4: "colorCustom_Q02kKo colorInfo_Q02kKo",
     b: "closeButton_Q02kKo",

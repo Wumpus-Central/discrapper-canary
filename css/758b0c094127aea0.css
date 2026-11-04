@@ -1,0 +1,60 @@
+.root_RmOtW7 {
+    background: linear-gradient(90deg, var(--premium-tier-2-purple-for-gradients), var(--premium-tier-2-purple-for-gradients-2), var(--premium-tier-2-pink-for-gradients));
+    border-radius: var(--radius-sm);
+    justify-content: space-between;
+    padding: 8px 16px
+}
+
+.infoText_RmOtW7,
+.root_RmOtW7 {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.infoText_RmOtW7 {
+    gap: 4px
+}
+
+.infoText_RmOtW7 a {
+    color: currentColor;
+    font-weight: 700;
+    text-decoration: underline
+}
+
+.ctaContainer_RmOtW7 {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.wishlistButton_RmOtW7 {
+    background: var(--control-overlay-secondary-background-hover);
+    border-color: var(--control-overlay-secondary-border-hover);
+    height: 24px;
+    width: 24px
+}
+
+.ctaButton_RmOtW7 {
+    background-color: var(--white);
+    padding: var(--space-4) var(--space-12)
+}
+
+.premiumShine_RmOtW7 {
+    color: hsl(var(--premium-tier-2-pink-for-gradients-hsl)/.15)
+}
+
+.premiumIcon_RmOtW7 {
+    height: 16px;
+    margin-inline-end: 4px;
+    width: 16px
+}
+
+.ctaButtonText_RmOtW7 {
+    background: linear-gradient(90deg, var(--premium-tier-2-purple-for-gradients), var(--premium-tier-2-purple-for-gradients-2), var(--premium-tier-2-pink-for-gradients));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent
+}
+
+/*# sourceMappingURL=758b0c094127aea0.css.map*/

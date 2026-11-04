@@ -10,7 +10,7 @@ e.exports = {
     ov: "metadataRow_-weL8h",
     jt: "skeletonCardMetadata_-weL8h",
     DD: "title_-weL8h",
-    h_: "description_-weL8h body-sm/medium_-weL8h",
+    h_: "description_-weL8h",
     fm: "descriptionFade_-weL8h",
     _d: "embedContentArea_-weL8h",
     Tu: "embedAuthorRow_-weL8h",

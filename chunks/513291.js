@@ -31,8 +31,8 @@ let m = a().throttle(function (e, t) {
         {
             channelPredicate: I = () => !0,
             guildPredicate: m = () => !0,
-            guildFeaturePredicate: T = () => !1,
-            ensureChatIsVisible: g = () => !1,
+            guildFeaturePredicate: g = () => !1,
+            ensureChatIsVisible: T = () => !1,
             withVoiceChannels: S = !1,
         } = t,
         N = d.A.getState().guildId ?? f.ME,
@@ -51,8 +51,8 @@ let m = a().throttle(function (e, t) {
         if (((E = L[y]), m(N)))
             for (; null != E && "" !== E;) {
                 if ("string" == typeof E) {
-                    if (I(N, E)) return (0, h.i)(N, E, !1, g(N, E));
-                } else if ("object" == typeof E && T(E.resourceId, E.type))
+                    if (I(N, E)) return (0, h.i)(N, E, !1, T(N, E));
+                } else if ("object" == typeof E && g(E.resourceId, E.type))
                     return (
                         N !== u.A.getGuildId() && (0, h.i)(N, c.A.getDefaultChannel(N)?.id),
                         (0, s.mM)(async () => {
@@ -86,7 +86,7 @@ let m = a().throttle(function (e, t) {
                                 n.e(415695),
                                 n.e(188259),
                                 n.e(715867),
-                                n.e(691398),
+                                n.e(249938),
                                 n.e(266201),
                                 n.e(752704),
                                 n.e(56606),
@@ -249,8 +249,8 @@ let m = a().throttle(function (e, t) {
     }
     A._.dispatch(f.jej.SHAKE_APP, { duration: 200, intensity: 2 });
 }, 50);
-var T = n(181079),
-    g = n(5180),
+var g = n(181079),
+    T = n(5180),
     S = n(455234),
     N = n(95701),
     C = n(734057),
@@ -269,7 +269,7 @@ let y = (e, t) => {
     D = (e, t) =>
         t === I.P.GUILD_EVENT ? !L.Ay.isMuteScheduledEventsEnabled(e) && O.Ay.hasUnread(e, t) : O.Ay.hasUnread(e, t);
 function b(e) {
-    return (0, g.ai)(e) ? T.A.favoriteGuildMuted : L.Ay.isMuted(e);
+    return (0, T.ai)(e) ? g.A.favoriteGuildMuted : L.Ay.isMuted(e);
 }
 let v = (e, t) => {
         let n = C.A.getChannel(t);

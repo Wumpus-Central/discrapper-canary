@@ -7,5 +7,5 @@ e.exports = {
     ur: "spoilerContent_N3Anbl",
     SR: "spoilerText_N3Anbl",
     NC: "buttonsContainer_N3Anbl",
-    x6: "button_N3Anbl body-xs/medium_N3Anbl",
+    x6: "button_N3Anbl " + a(736541)["body-xs/medium"],
 };

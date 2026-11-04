@@ -283,8 +283,8 @@ let G = {
     ],
 };
 var $ = a(22231),
-    q = a(366605),
-    F = a(624479),
+    F = a(366605),
+    q = a(624479),
     _ = a(625903),
     U = a(509434),
     H = a(241326),
@@ -349,8 +349,8 @@ let Y = {
                                         (0, t.jsx)(Z.Dr, {
                                             id: "pin",
                                             label: "Pin Message",
-                                            icon: d ? q.t : void 0,
-                                            leadingAccessory: d ? { type: "icon", icon: q.t } : void 0,
+                                            icon: d ? F.t : void 0,
+                                            leadingAccessory: d ? { type: "icon", icon: F.t } : void 0,
                                             subtext: b ? "Pin this message to the channel" : void 0,
                                             badge: "beta",
                                             loading: y,
@@ -359,8 +359,8 @@ let Y = {
                                         (0, t.jsx)(Z.Dr, {
                                             id: "copy",
                                             label: "Copy Message Link",
-                                            icon: d ? F.CopyIcon : void 0,
-                                            leadingAccessory: d ? { type: "icon", icon: F.CopyIcon } : void 0,
+                                            icon: d ? q.CopyIcon : void 0,
+                                            leadingAccessory: d ? { type: "icon", icon: q.CopyIcon } : void 0,
                                             badge: "new",
                                             action: () => {},
                                         }),
@@ -610,7 +610,7 @@ function el(e) {
         .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
         .join(" ");
 }
-let ea = J.kqX.PREMIUM_TIER_0,
+let ea = J.kqX.LAUNCH_GAME_FAILURE,
     et = {
         name: "Notice",
         id: "notice",
@@ -1300,11 +1300,11 @@ var eB = a(408278),
     ez = a(831544),
     eG = a(83107),
     e$ = a(123292),
-    eq = a(825484),
-    eF = a(657718);
+    eF = a(825484),
+    eq = a(657718);
 function e_(e) {
     let { pressed: l, ...a } = e;
-    return (0, t.jsx)(eF.S, {
+    return (0, t.jsx)(eq.S, {
         ...a,
         "data-mana-component": "toggle-button",
         role: "button",
@@ -1473,7 +1473,7 @@ let eU = {
             id: "button-group",
             docs: "https://design.discord.tools/components/web/buttons/button-group",
             component: function (e) {
-                return (0, t.jsxs)(eq.e, {
+                return (0, t.jsxs)(eF.e, {
                     ...e,
                     children: [
                         (0, t.jsx)(E.$, { variant: "secondary", text: "Cancel" }),
@@ -2573,14 +2573,14 @@ var lO = a(520923),
     lz = a(349494),
     lG = a(340975),
     l$ = a(792996);
-function lq(e) {
+function lF(e) {
     return "status" === e.variant;
 }
-function lF(e) {
+function lq(e) {
     return "promotion" === e.variant;
 }
 function l_(e) {
-    return lq(e) && "connected" === e.type;
+    return lF(e) && "connected" === e.type;
 }
 function lU(e) {
     return "" !== e.primaryAction;
@@ -2676,7 +2676,7 @@ let lY = [
             type: "select",
             defaultValue: "warning",
             options: [...lY, ...lQ.filter((e) => "brand" !== e.value)],
-            getOptions: (e) => (lF(e) ? lQ : lY),
+            getOptions: (e) => (lq(e) ? lQ : lY),
         },
         role: {
             label: "Screen reader",
@@ -2686,7 +2686,7 @@ let lY = [
                 { label: "Announce right away", value: "alert" },
                 { label: "Announce when idle", value: "status" },
             ],
-            isVisible: lq,
+            isVisible: lF,
         },
         title: { label: "Title", hint: "Optional bold lead-in.", type: "text", defaultValue: "" },
         message: {
@@ -2701,14 +2701,14 @@ let lY = [
             defaultValue: "none",
             options: [...lJ, ...l0],
             getOptions: (e) => (l_(e) ? l0 : lJ),
-            isVisible: (e) => lF(e) || "brand" === e.type || "info" === e.type || l_(e),
+            isVisible: (e) => lq(e) || "brand" === e.type || "info" === e.type || l_(e),
         },
         dismissible: {
             label: "Dismissible",
             hint: "Only critical banners can turn this off.",
             type: "boolean",
             defaultValue: !0,
-            isVisible: (e) => lq(e) && "critical" === e.type,
+            isVisible: (e) => lF(e) && "critical" === e.type,
         },
         primaryAction: {
             label: "Primary button",
@@ -4367,8 +4367,8 @@ let a$ = {
         },
     ],
 };
-var aq = a(911608);
-let aF = {
+var aF = a(911608);
+let aq = {
         title: "ProgressBar",
         stories: [
             {
@@ -4379,8 +4379,8 @@ let aF = {
                         r = "" !== i ? i : void 0,
                         u = "" !== s ? s : "Progress";
                     return a
-                        ? (0, t.jsx)(aq.z, { isIndeterminate: !0, size: o, animate: n, valueLabel: r, "aria-label": u })
-                        : (0, t.jsx)(aq.z, { value: l, size: o, animate: n, valueLabel: r, "aria-label": u });
+                        ? (0, t.jsx)(aF.z, { isIndeterminate: !0, size: o, animate: n, valueLabel: r, "aria-label": u })
+                        : (0, t.jsx)(aF.z, { value: l, size: o, animate: n, valueLabel: r, "aria-label": u });
                 },
                 controls: {
                     value: { label: "Value", type: "slider", defaultValue: 50, minValue: 0, maxValue: 100 },
@@ -5891,7 +5891,7 @@ let tS = {
                 a4,
                 a7,
                 a$,
-                aF,
+                aq,
                 {
                     title: "Toast",
                     stories: [

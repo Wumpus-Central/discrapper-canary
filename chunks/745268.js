@@ -5,7 +5,7 @@ e.exports = {
     Kk: "icon_-9z-XO",
     tP: "filenameWrapper_-9z-XO",
     iW: "filename_-9z-XO",
-    L$: "progressContainer_-9z-XO metadata_-9z-XO body-xs/normal_-9z-XO",
+    L$: "progressContainer_-9z-XO metadata_-9z-XO " + i(736541)["body-xs/normal"],
     x7: "cancelButton_-9z-XO",
     Ej: "size_-9z-XO",
     RT: "filenameLinkWrapper_-9z-XO",

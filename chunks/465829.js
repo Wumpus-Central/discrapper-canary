@@ -81,7 +81,7 @@ function N(e) {
     let { pronouns: t, className: n } = e;
     return (0, a.jsxs)(s.E, {
         className: l()(b.hI, n),
-        variant: "body-sm/medium",
+        variant: "body-sm/normal",
         color: "text-strong",
         children: [
             (0, a.jsx)(o.A, { tag: "span", children: h.intl.formatToPlainString(h.t["DRI+T7"], { pronouns: t }) }),

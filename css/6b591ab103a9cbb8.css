@@ -1,0 +1,348 @@
+.content_no-mtA {
+    display: flex
+}
+
+.progress_no-mtA {
+    position: absolute
+}
+
+.progressWithSubscriptions_no-mtA {
+    margin-top: var(--custom-guild-settings-premium-tier-status-progress-with-subscriptions-margin-top)
+}
+
+.tiers_no-mtA {
+    margin-inline-start: 38px;
+    width: 100%
+}
+
+.subscriberCount_no-mtA {
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    margin-top: 8px
+}
+
+.subscriberCount_no-mtA strong {
+    color: var(--text-default);
+    font-weight: var(--font-weight-medium)
+}
+
+.subscribers_no-mtA .subscriberMask_no-mtA {
+    margin-inline-end: -8px
+}
+
+.moreSubscribers_no-mtA {
+    background-color: var(--primary-700);
+    border-radius: 50%;
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    font-size: 12px;
+    height: 30px;
+    justify-content: center;
+    line-height: 30px;
+    width: 30px
+}
+
+.subscribersPopout_no-mtA {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+    background: var(--background-surface-high);
+    border-radius: 4px;
+    box-shadow: var(--legacy-elevation-high);
+    box-sizing: border-box;
+    max-height: 216px;
+    padding: 16px
+}
+
+.subscribersPopoutUser_no-mtA {
+    align-items: center;
+    color: var(--text-muted);
+    display: flex;
+    font-size: 14px;
+    line-height: 18px
+}
+
+.subscribersPopoutUsername_no-mtA {
+    margin-inline-start: 8px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.tierDefaultUnlocked_no-mtA {
+    margin-bottom: 16px
+}
+
+.tierDefaultUnlockedDescription_no-mtA {
+    margin-top: var(--space-4)
+}
+
+.tier_no-mtA {
+    background-color: var(--background-mod-muted);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-low)
+}
+
+.tierBottomMargin_no-mtA {
+    margin-bottom: 24px
+}
+
+.tierHeader_no-mtA {
+    border-bottom: 1px solid var(--border-subtle);
+    border-radius: 8px 8px 0 0;
+    position: relative
+}
+
+.tierHeaderWithoutCardBody_no-mtA {
+    border-radius: 8px;
+    margin-bottom: 16px
+}
+
+.tierHeaderContent_no-mtA {
+    align-items: center;
+    display: flex;
+    padding: 16px;
+    transform: translateZ(0)
+}
+
+.tierHeaderLocked_no-mtA {
+    background-color: var(--background-mod-subtle)
+}
+
+.tierHeaderUnlocked_no-mtA {
+    background-color: var(--background-mod-muted);
+    overflow: hidden
+}
+
+.tierHeaderUnlockedBackground_no-mtA {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.tierIcon_no-mtA {
+    color: var(--guild-boosting-pink);
+    height: 32px;
+    margin-inline-end: 16px;
+    width: 32px
+}
+
+.tierIconLocked_no-mtA {
+    color: var(--primary-500)
+}
+
+.tierTitle_no-mtA {
+    color: var(--interactive-text-default);
+    flex: 1
+}
+
+.tierTitleActive_no-mtA {
+    color: var(--interactive-text-active)
+}
+
+.tierRequirement_no-mtA {
+    font-size: 16px
+}
+
+.tierLock_no-mtA {
+    color: var(--icon-muted);
+    height: 30px;
+    margin-inline-start: 16px;
+    width: 30px
+}
+
+.tierUnlocked_no-mtA {
+    background-image: linear-gradient(90deg, var(--guild-boosting-blue-for-gradients), var(--guild-boosting-purple-for-gradients));
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 12px;
+    font-weight: var(--font-weight-medium);
+    padding: 4px 8px;
+    text-transform: uppercase
+}
+
+.tierClose_no-mtA {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    width: 100%
+}
+
+.tierCloseMechaWumpus_no-mtA {
+    height: 70px;
+    width: 90px
+}
+
+.tierCloseHint_no-mtA {
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    margin-inline-start: 16px;
+    max-width: 135px;
+    padding: 8px 16px;
+    position: relative
+}
+
+.tierCloseHint_no-mtA:before {
+    border: 8px solid transparent;
+    content: "";
+    inset-inline-start: -16px;
+    position: absolute;
+    top: calc(50% - 8px)
+}
+
+.tierCloseClose_no-mtA {
+    align-self: flex-start;
+    color: var(--text-default);
+    cursor: pointer;
+    margin-top: 4px;
+    margin-inline-start: 4px
+}
+
+.tierCloseCloseIcon_no-mtA {
+    height: 16px;
+    width: 16px
+}
+
+.hidden_no-mtA {
+    opacity: 0;
+    pointer-events: none
+}
+
+.tierBody_no-mtA {
+    background-color: var(--card-background-default);
+    border-radius: 0 0 8px 8px;
+    box-sizing: border-box;
+    color: var(--text-default);
+    font-weight: var(--font-weight-medium);
+    padding: 16px
+}
+
+.previousPerks_no-mtA {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 16px
+}
+
+.perks_no-mtA {
+    display: grid;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+    grid-gap: 16px;
+    gap: var(--space-20);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+}
+
+.perk_no-mtA {
+    display: flex
+}
+
+.perkIcon_no-mtA {
+    flex-shrink: 0;
+    height: 20px;
+    width: 20px
+}
+
+.perkText_no-mtA {
+    font-size: 12px;
+    line-height: 16px;
+    margin-inline-start: 10px
+}
+
+.perkTitle_no-mtA {
+    color: var(--text-strong);
+    font-weight: var(--font-weight-semibold);
+    text-transform: none
+}
+
+.perkDescription_no-mtA {
+    color: var(--text-subtle);
+    margin-top: 4px
+}
+
+.avatar_no-mtA {
+    height: 30px !important;
+    width: 30px !important
+}
+
+.newBadge_no-mtA {
+    display: inline-flex;
+    flex: 0 0 auto;
+    margin-inline-start: 4px;
+    vertical-align: bottom
+}
+
+.enable-forced-colors .tier_no-mtA {
+    border: 1px solid CanvasText
+}
+
+.enable-forced-colors .tierHeaderContent_no-mtA {
+    border-bottom: 1px solid CanvasText
+}
+
+.tierCloseHint_no-mtA {
+    background-color: var(--brand-500);
+    color: var(--white)
+}
+
+.tierCloseHint_no-mtA:before {
+    border-inline-end-color: var(--brand-500)
+}
+
+.tierHeaderUnlocked_no-mtA {
+    background-color: var(--background-surface-high)
+}
+
+.tierHeaderUnlockedBackground_no-mtA {
+    background-image: linear-gradient(to right, var(--guild-boosting-blue-for-gradients), var(--guild-boosting-purple-for-gradients))
+}
+
+.animation_CFqbuk {
+    position: relative
+}
+
+.image_CFqbuk {
+    background-repeat: no-repeat;
+    background-size: 100%
+}
+
+.wumpus_CFqbuk {
+    background-image: url("/assets/29bbcd72b3a00308.svg");
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.fireWrapper_CFqbuk {
+    height: 20%;
+    position: absolute;
+    width: 30%
+}
+
+.fireTopWrapper_CFqbuk {
+    inset-inline-start: 0;
+    top: 70%;
+    transform: rotate(348deg)
+}
+
+.fireBottomWrapper_CFqbuk {
+    inset-inline-start: 8%;
+    top: 92%;
+    transform: rotate(330deg)
+}
+
+.fire_CFqbuk {
+    background-image: url("/assets/b5dad275a07851b7.svg");
+    height: 100%;
+    transform-origin: center right;
+    width: 100%
+}
+
+/*# sourceMappingURL=6b591ab103a9cbb8.css.map*/

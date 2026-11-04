@@ -10041,7 +10041,7 @@ let op = {
     OtherFriendRequestsModal: async () => {
         let { default: e } = await Promise.all([
             a.e(827776),
-            a.e(979862),
+            a.e(249938),
             a.e(791370),
             a.e(548018),
             a.e(773152),

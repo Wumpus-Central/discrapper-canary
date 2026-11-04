@@ -1700,7 +1700,15 @@ function nJ(e) {
                               t.body.length > 0 &&
                                   (0, s.jsxs)("div", {
                                       className: u()(nU.h_, nY.PT),
-                                      children: [nB(t.body, n), (0, s.jsx)("div", { className: nU.fm })],
+                                      children: [
+                                          (0, s.jsx)(Y.E, {
+                                              variant: "body-sm/medium",
+                                              color: "none",
+                                              tag: "div",
+                                              children: nB(t.body, n),
+                                          }),
+                                          (0, s.jsx)("div", { className: nU.fm }),
+                                      ],
                                   }),
                               (0, s.jsxs)("div", {
                                   className: nU.ov,
@@ -1757,7 +1765,15 @@ let n$ = r.memo(function (e) {
             t.body.length > 0 &&
                 (0, s.jsxs)("div", {
                     className: u()(nU.h_, nY.PT),
-                    children: [nB(t.body, n), (0, s.jsx)("div", { className: nU.fm })],
+                    children: [
+                        (0, s.jsx)(Y.E, {
+                            variant: "body-sm/medium",
+                            color: "none",
+                            tag: "div",
+                            children: nB(t.body, n),
+                        }),
+                        (0, s.jsx)("div", { className: nU.fm }),
+                    ],
                 }),
             (0, s.jsxs)("div", {
                 className: nU.ov,

@@ -7,7 +7,7 @@ t.exports = {
     zH: "details_2y0Mhw",
     Ls: "commentIcon_2y0Mhw",
     _A: "tags_2y0Mhw",
-    Im: "comment_2y0Mhw body-sm/normal_2y0Mhw",
+    Im: "comment_2y0Mhw " + a(736541)["body-sm/normal"],
     qC: "editableCommentText_2y0Mhw",
     qf: "placeholder_2y0Mhw",
     vF: "dropTarget_2y0Mhw",

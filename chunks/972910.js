@@ -7,5 +7,5 @@ e.exports = {
     nw: "resultCount_RYejui",
     Ke: "result_RYejui",
     w$: "resultWithGap_RYejui",
-    eF: "userInfo_RYejui body-md/medium_RYejui",
+    eF: "userInfo_RYejui " + t(736541)["body-md/medium"],
 };

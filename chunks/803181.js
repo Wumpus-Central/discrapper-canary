@@ -6,7 +6,7 @@ e.exports = {
     vJ: "previewForm_owUmX8",
     VB: "prefixElement_owUmX8",
     gn: "titleContainer_owUmX8",
-    DD: "title_owUmX8 heading-lg/semibold_owUmX8",
+    DD: "title_owUmX8 " + t(736541)["heading-lg/semibold"],
     yZ: "collapsed_owUmX8",
     IP: "bodyContainer_owUmX8",
     hQ: "contentContainer_owUmX8",

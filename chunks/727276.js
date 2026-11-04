@@ -1,4 +1,4 @@
-r.exports = {
+e.exports = {
     M0: "bar_iar92T",
     Nr: "card_iar92T",
     n1: "circle_iar92T",
@@ -8,7 +8,7 @@ r.exports = {
     zz: "storePage_iar92T page_iar92T",
     wx: "header_iar92T",
     P0: "iconWrapper_iar92T",
-    DD: "title_iar92T body-md/medium_iar92T",
+    DD: "title_iar92T " + a(736541)["body-md/medium"],
     W2: "scroll_iar92T",
     p_: "list_iar92T",
     f0: "listRow_iar92T",
@@ -19,7 +19,7 @@ r.exports = {
     hv: "questHomeScroll_iar92T",
     Jt: "questHomeContent_iar92T",
     hV: "heroBanner_iar92T",
-    aK: "questGrid_iar92T",
+    Jm: "questGrid_iar92T",
     Vr: "questCard_iar92T",
     CC: "fcHeroBanner_iar92T",
     gj: "fcHeroIllustration_iar92T",

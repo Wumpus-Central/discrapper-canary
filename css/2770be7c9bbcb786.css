@@ -1,0 +1,200 @@
+.tagListContainer_tqx5FD {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px
+}
+
+.tagList_tqx5FD {
+    display: contents
+}
+
+.disabled_tqx5FD {}
+
+.collapseButton_tqx5FD,
+.expandButton_tqx5FD {}
+
+.collapseButton_tqx5FD {
+    box-sizing: border-box;
+    padding: 3px 4px
+}
+
+.caret_tqx5FD {
+    color: var(--text-subtle)
+}
+
+.enable-forced-colors .caret_tqx5FD {
+    color: ButtonText
+}
+
+.card_2y0Mhw {
+    align-items: start;
+    position: relative;
+    z-index: 0
+}
+
+.card_2y0Mhw:has(.removeGameButton_2y0Mhw):before {
+    background-color: transparent;
+    border-radius: 12px;
+    content: "";
+    inset: -4px;
+    position: absolute;
+    transition: background-color 50ms ease-in;
+    z-index: -1
+}
+
+.card_2y0Mhw:has(.removeGameButton_2y0Mhw):hover:before,
+.keyboard-mode .card_2y0Mhw:has(.removeGameButton_2y0Mhw):has(.dragHandle_2y0Mhw:focus):before,
+.keyboard-mode .card_2y0Mhw:has(.removeGameButton_2y0Mhw):has(.removeGameButton_2y0Mhw:focus-within):before {
+    background-color: var(--background-mod-normal);
+    transition: background-color .15s ease-out
+}
+
+.custom-user-profile-theme.theme-light .card_2y0Mhw:has(.removeGameButton_2y0Mhw):hover:before,
+.keyboard-mode .custom-user-profile-theme.theme-light .card_2y0Mhw:has(.removeGameButton_2y0Mhw):has(.dragHandle_2y0Mhw:focus):before,
+.keyboard-mode .custom-user-profile-theme.theme-light .card_2y0Mhw:has(.removeGameButton_2y0Mhw):has(.removeGameButton_2y0Mhw:focus-within):before {
+    background-color: var(--opacity-white-16)
+}
+
+.isDragging_2y0Mhw .card_2y0Mhw:has(.removeGameButton_2y0Mhw):before,
+.isDragging_2y0Mhw .card_2y0Mhw:has(.removeGameButton_2y0Mhw):hover:before,
+.keyboard-mode .isDragging_2y0Mhw .card_2y0Mhw:has(.removeGameButton_2y0Mhw):has(.removeGameButton_2y0Mhw:focus-within):before {
+    background-color: transparent
+}
+
+.clickableText_2y0Mhw {
+    cursor: pointer;
+    display: inline-block
+}
+
+.clickableText_2y0Mhw:hover {
+    text-decoration: underline
+}
+
+.details_2y0Mhw {
+    --custom-comment-field-bleed: 7px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    grid-column: 2/-1;
+    justify-content: center;
+    margin-inline-start: calc(var(--custom-comment-field-bleed)*-1);
+    overflow-wrap: break-word;
+    padding-inline-start: var(--custom-comment-field-bleed);
+    word-break: break-word
+}
+
+.commentIcon_2y0Mhw {
+    float: inline-start;
+    margin-block: 3px 0;
+    margin-inline: 0 4px
+}
+
+.tags_2y0Mhw {
+    margin-top: 4px
+}
+
+.removeGameButton_2y0Mhw {
+    inset-inline-end: 8px;
+    opacity: 0;
+    pointer-events: auto;
+    position: absolute;
+    top: 8px;
+    transition: opacity 50ms ease-in;
+    z-index: 10
+}
+
+.card_2y0Mhw:not(:has(.comment_2y0Mhw textarea:focus)):hover .removeGameButton_2y0Mhw,
+.keyboard-mode .card_2y0Mhw:not(:has(.comment_2y0Mhw textarea:focus)):focus-within .removeGameButton_2y0Mhw {
+    opacity: 1;
+    transition: opacity .15s ease-out
+}
+
+.card_2y0Mhw:has(.removeGameButton_2y0Mhw):not(:has(.comment_2y0Mhw textarea:focus)):hover .details_2y0Mhw,
+.keyboard-mode .card_2y0Mhw:has(.removeGameButton_2y0Mhw):not(:has(.comment_2y0Mhw textarea:focus)):focus-within .details_2y0Mhw {
+    -webkit-mask-image: radial-gradient(circle at top right, rgba(0, 0, 0, .05) 40px, rgba(0, 0, 0, .1) 45px, rgba(0, 0, 0, .25) 55px, rgba(0, 0, 0, .5) 65px, #000 75px);
+    mask-image: radial-gradient(circle at top right, rgba(0, 0, 0, .05) 40px, rgba(0, 0, 0, .1) 45px, rgba(0, 0, 0, .25) 55px, rgba(0, 0, 0, .5) 65px, #000 75px)
+}
+
+.isDragging_2y0Mhw .card_2y0Mhw:not(:has(.comment_2y0Mhw textarea:focus)) .removeGameButton_2y0Mhw,
+.isDragging_2y0Mhw .card_2y0Mhw:not(:has(.comment_2y0Mhw textarea:focus)):hover .removeGameButton_2y0Mhw,
+.keyboard-mode .isDragging_2y0Mhw .card_2y0Mhw:not(:has(.comment_2y0Mhw textarea:focus)):focus-within .removeGameButton_2y0Mhw {
+    opacity: 0
+}
+
+.editableCommentText_2y0Mhw {
+    display: inline
+}
+
+.editableCommentText_2y0Mhw.placeholder_2y0Mhw {
+    font-style: italic
+}
+
+.comment_2y0Mhw {}
+
+.details_2y0Mhw .comment_2y0Mhw {
+    margin-inline-end: 0
+}
+
+.dropTarget_2y0Mhw {
+    position: relative
+}
+
+.dropTarget_2y0Mhw.isDragging_2y0Mhw {
+    opacity: .15
+}
+
+.dropTarget_2y0Mhw.dropIndicatorAfter_2y0Mhw:after,
+.dropTarget_2y0Mhw.dropIndicatorBefore_2y0Mhw:before {
+    background-color: var(--icon-strong);
+    border-radius: 4px;
+    content: "";
+    display: block;
+    height: 2px;
+    inset-inline: 0;
+    position: absolute
+}
+
+.dropTarget_2y0Mhw.dropIndicatorBefore_2y0Mhw:before {
+    top: -7px
+}
+
+.dropTarget_2y0Mhw.dropIndicatorAfter_2y0Mhw:after {
+    bottom: -7px
+}
+
+.dragHandleContainer_2y0Mhw {
+    border-radius: 8px;
+    color: var(--white);
+    cursor: grab;
+    position: relative
+}
+
+.dragHandleContainer_2y0Mhw:has(.dragHandle_2y0Mhw:focus-visible):after {
+    background: var(--opacity-black-72);
+    border-radius: inherit;
+    content: "";
+    inset: 0;
+    position: absolute
+}
+
+.dragHandle_2y0Mhw {
+    align-items: center;
+    display: flex;
+    inset: 0;
+    justify-content: flex-start;
+    opacity: 0;
+    padding-inline-start: 2px;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1
+}
+
+.dragHandle_2y0Mhw:focus-visible {
+    opacity: 1;
+    pointer-events: auto
+}
+
+/*# sourceMappingURL=2770be7c9bbcb786.css.map*/

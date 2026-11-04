@@ -1,0 +1,77 @@
+.container_NedsCW {
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
+.loading_NedsCW {
+    align-items: center;
+    display: flex;
+    height: 520px;
+    justify-content: center
+}
+
+.background_NedsCW {
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.content_NedsCW {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative
+}
+
+.subSectionHeader_NedsCW {
+    text-transform: none
+}
+
+.accountCredit_NedsCW {
+    margin-top: 16px
+}
+
+.accountCreditTitle_NedsCW {
+    margin-bottom: 8px
+}
+
+.accountCreditDescription_NedsCW {
+    color: var(--text-default);
+    margin-bottom: 16px;
+    margin-top: 0
+}
+
+.cardText_NedsCW {
+    padding-inline-start: 8px
+}
+
+.noItemsCard_NedsCW {
+    background-color: var(--background-base-lower);
+    border: none;
+    color: var(--interactive-text-active);
+    margin-top: 16px;
+    padding: 16px 19px
+}
+
+.theme-dark .noItemsIcon_NedsCW {
+    background: #4f545c
+}
+
+.hr_NedsCW {
+    border-color: hsl(var(--primary-300-hsl)/.3);
+    border-style: solid;
+    border-width: 1px 0 0;
+    display: block;
+    height: 0;
+    width: 100%
+}
+
+.theme-dark .hr_NedsCW {
+    border-color: hsl(var(--primary-400-hsl)/.3)
+}
+
+/*# sourceMappingURL=7f341ddc3fb7e447.css.map*/

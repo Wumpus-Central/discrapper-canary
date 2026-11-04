@@ -15,8 +15,8 @@ var i = n(477900),
     I = n(326843),
     p = n(210954),
     m = n(457864),
-    T = n(699426),
-    g = n(853757),
+    g = n(699426),
+    T = n(853757),
     S = n(869146),
     N = n(964404),
     C = n(806911),
@@ -59,7 +59,7 @@ let w = (0, a.Fe)({
                 n.e(189423),
                 n.e(415695),
                 n.e(715867),
-                n.e(691398),
+                n.e(249938),
                 n.e(266201),
                 n.e(752704),
                 n.e(56606),
@@ -175,8 +175,8 @@ class F extends r.PureComponent {
             { selectedPIPWindowHeight: f } = this.state,
             I = document.body.style.getPropertyValue("--custom-guild-sidebar-width"),
             p = "" !== I ? parseInt(I, 10) : 240,
-            g = c.width - p - (E ? A : 0);
-        return (0, i.jsxs)(T.ic, {
+            T = c.width - p - (E ? A : 0);
+        return (0, i.jsxs)(g.ic, {
             children: [
                 (0, i.jsx)(m.Ay, {
                     pictureInPictureComponents: G,
@@ -203,7 +203,7 @@ class F extends r.PureComponent {
                               null != e && !0 !== e.hidden && null == s ? { position: e.position, height: f } : null,
                       })
                     : null,
-                (0, i.jsx)(T.Md, { className: !u && null != _ && E && g < 550 ? U.ah : void 0 }),
+                (0, i.jsx)(g.Md, { className: !u && null != _ && E && T < 550 ? U.ah : void 0 }),
             ],
         });
     }
@@ -226,7 +226,7 @@ let B = l.Ay.connectStores([S.A, d.Ay, y.A, O.A, L.Ay, R.A, A.A, N.Ay, f.A], (e)
         E = (0, u.H)(o?.location),
         p = null != o && !(0, _.A)(E, O.A, L.Ay),
         m = d.Ay.getActivityPanelMode(),
-        T = p && m === v.Gd.PANEL,
+        g = p && m === v.Gd.PANEL,
         C = null != o && null != E && A.A.getSelectedParticipant(E)?.type === P.lp.ACTIVITY,
         U = (0, M.ny)(f.A.getMainFrame()),
         w = U?.data.layoutMode === M.y0.FOCUSED,
@@ -240,7 +240,7 @@ let B = l.Ay.connectStores([S.A, d.Ay, y.A, O.A, L.Ay, R.A, A.A, N.Ay, f.A], (e)
         (null != o && l) || (G && p) || (G && null != U)
             ? null
             : G || !a || p || null != U
-              ? null != o && T
+              ? null != o && g
                   ? (R.A.pipActivityWindow ?? R.A.pipVideoWindow)
                   : null != U && w
                     ? (R.A.pipFrameWindow ?? R.A.pipVideoWindow ?? R.A.pipActivityWindow)
@@ -252,12 +252,12 @@ let B = l.Ay.connectStores([S.A, d.Ay, y.A, O.A, L.Ay, R.A, A.A, N.Ay, f.A], (e)
         Y = H.find((e) => e.component === b.o1q.ACTIVITY),
         K = [W, Y, H.find((e) => e.component === b.o1q.FRAME)].filter(D.Vq),
         $ = N.Ay.callChatSidebarWidth,
-        z = L.Ay.getVoiceChannelId(),
-        X = L.Ay.getChannelId() === z,
-        q = null != z && A.A.getChatOpen(z),
-        Z = T || C,
+        X = L.Ay.getVoiceChannelId(),
+        z = L.Ay.getChannelId() === X,
+        q = null != X && A.A.getChatOpen(X),
+        Z = g || C,
         Q = Z && null != o && (0, c.q)(o.applicationId),
-        J = !Z && null != t && X;
+        J = !Z && null != t && z;
     return {
         selectedPIPWindow: t,
         pipWindows: 0 === K.length ? k : K,
@@ -266,7 +266,7 @@ let B = l.Ay.connectStores([S.A, d.Ay, y.A, O.A, L.Ay, R.A, A.A, N.Ay, f.A], (e)
         maxY: B.height,
         dockedRect: R.A.getDockedRect(t?.id ?? ""),
         getDockedRectPositionY: function (e) {
-            return G && (0, g.q)({ withTitleBar: i, isFullScreen: F }) ? e - (0, h.LI)({ isPopoutWindow: G }) : e;
+            return G && (0, T.q)({ withTitleBar: i, isFullScreen: F }) ? e - (0, h.LI)({ isPopoutWindow: G }) : e;
         },
         appContext: V,
         roundCorners: !Q,

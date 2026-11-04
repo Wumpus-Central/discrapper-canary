@@ -1,0 +1,154 @@
+.imageUploader_zIVMHF {
+    font-size: 12px;
+    text-align: center
+}
+
+.imageUploader_zIVMHF .removeButton_zIVMHF {
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    font-weight: var(--font-weight-semibold);
+    margin-top: 10px;
+    text-decoration: none
+}
+
+.imageUploader_zIVMHF .sizeInfo_zIVMHF {
+    color: var(--text-muted);
+    display: block;
+    font-size: 10px;
+    margin-top: 10px
+}
+
+.imageUploader_zIVMHF .sizeInfo_zIVMHF strong {
+    font-weight: var(--font-weight-bold)
+}
+
+.imageUploader_zIVMHF.disabled_zIVMHF .imageUploaderInner_zIVMHF:focus-within,
+.imageUploader_zIVMHF.disabled_zIVMHF .imageUploaderInner_zIVMHF:hover {
+    box-shadow: none
+}
+
+.imageUploaderIconWrapper_zIVMHF {
+    display: inline-block;
+    position: relative;
+    width: 100%
+}
+
+.imageUploaderInner_zIVMHF {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    display: inline-block;
+    flex-shrink: 0;
+    height: 138px;
+    position: relative;
+    transition: box-shadow background-color .1s .1s;
+    width: 138px
+}
+
+.imageUploaderInner_zIVMHF>* {
+    align-items: center;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    pointer-events: none
+}
+
+.imageUploaderInner_zIVMHF .imageUploaderFileInput_zIVMHF,
+.imageUploaderInner_zIVMHF input[type=file] {
+    pointer-events: auto
+}
+
+.imageUploaderInner_zIVMHF:focus-within,
+.imageUploaderInner_zIVMHF:hover {
+    box-shadow: inset 0 0 120px var(--opacity-black-76)
+}
+
+.imageUploaderInner_zIVMHF:focus-within .imageUploaderAcronym_zIVMHF,
+.imageUploaderInner_zIVMHF:hover .imageUploaderAcronym_zIVMHF {
+    visibility: hidden
+}
+
+.imageUploaderInner_zIVMHF:focus-within+.imageUploaderHint_zIVMHF,
+.imageUploaderInner_zIVMHF:hover+.imageUploaderHint_zIVMHF {
+    visibility: visible
+}
+
+.imageUploaderFileInput_zIVMHF {
+    cursor: pointer
+}
+
+.imageUploaderAcronym_zIVMHF {
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.imageUploaderHint_zIVMHF {
+    inset-inline: 0;
+    bottom: 0;
+    color: var(--white);
+    pointer-events: none;
+    text-transform: none;
+    visibility: hidden;
+    white-space: pre
+}
+
+.imageUploaderHint_zIVMHF,
+.imageUploaderIcon_zIVMHF {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0
+}
+
+.imageUploaderIcon_zIVMHF {
+    background-color: var(--background-surface-high);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: var(--shadow-border), var(--shadow-low);
+    height: 28px;
+    inset-inline: auto 0;
+    width: 28px
+}
+
+.imageUploaderIconDisabled_zIVMHF {
+    opacity: 50%
+}
+
+.removeButton_zIVMHF {
+    color: var(--interactive-text-default)
+}
+
+.removeButton_zIVMHF:hover {
+    color: var(--interactive-text-hover)
+}
+
+.enable-forced-colors .imageUploaderInner_zIVMHF {
+    border: 2px solid ButtonText;
+    forced-color-adjust: none;
+    outline: 1px solid Canvas;
+    outline-offset: -3px
+}
+
+.enable-forced-colors .imageUploaderHint_zIVMHF {
+    background-color: ButtonFace;
+    color: ButtonText
+}
+
+.images-light .imageUploaderIcon_zIVMHF {
+    background-image: url("/assets/8f18dfd4baacebf4.svg")
+}
+
+.images-dark .imageUploaderIcon_zIVMHF {
+    background-image: url("/assets/6ca913b246a05ffc.svg")
+}
+
+/*# sourceMappingURL=c2d3c6563c3ddcaf.css.map*/

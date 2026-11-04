@@ -1,6 +1,6 @@
 n.exports = {
     xd: "settingsWrapper_INrZ8n",
-    x6: "button_INrZ8n body-xs/semibold_INrZ8n",
+    x6: "button_INrZ8n " + t(736541)["body-xs/semibold"],
     lm: "notice_INrZ8n",
     Xz: "osx_INrZ8n",
     pS: "linux_INrZ8n",

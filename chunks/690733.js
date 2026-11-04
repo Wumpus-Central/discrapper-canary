@@ -446,7 +446,7 @@ function eu(e) {
               ? (u = G.intl.format(G.t.NkR7BU, { price: o }))
               : i === D.WT.MONTH && a > 1 && (u = G.intl.format(G.t.CNAGg4, { price: o, intervalCount: a })),
         (0, l.jsx)("div", {
-            className: z()(eo.SW, r),
+            className: z()(eo.S, r),
             "data-testid": `PricePerInterval-${n}`,
             children: null == i || s ? (0, l.jsx)("strong", { children: o }) : u,
         })

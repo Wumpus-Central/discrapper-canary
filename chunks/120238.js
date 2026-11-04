@@ -7,7 +7,7 @@ e.exports = {
     U1: "imageUploaderIconWrapper_zIVMHF",
     c4: "imageUploaderFileInput_zIVMHF",
     nX: "imageUploaderAcronym_zIVMHF",
-    $J: "imageUploaderHint_zIVMHF footnote/semibold_zIVMHF",
+    $J: "imageUploaderHint_zIVMHF footnote/semibold",
     XD: "imageUploaderIcon_zIVMHF",
     $N: "imageUploaderIconDisabled_zIVMHF",
 };

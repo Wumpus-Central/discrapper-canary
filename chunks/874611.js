@@ -6048,7 +6048,10 @@ function rQ(e) {
     return (
         (t = o
             ? (0, a.jsxs)(a.Fragment, {
-                  children: [(0, a.jsx)(rW.K, { size: "xs", color: "currentColor", className: rX.cR }), n.content],
+                  children: [
+                      (0, a.jsx)(rW.K, { size: "xs", color: "currentColor", className: rX.cR }),
+                      (0, a.jsx)(ej.E, { variant: "body-sm/medium", color: "none", tag: "span", children: n.content }),
+                  ],
               })
             : (0, a.jsxs)(a.Fragment, {
                   children: [

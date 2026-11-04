@@ -1,0 +1,209 @@
+.page_Vwa3As {
+    background: var(--background-gradient-chat, var(--background-base-lower));
+    border-top: 1px solid var(--app-frame-border);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.page_Vwa3As,
+.scroller_Vwa3As {
+    flex: 1;
+    min-height: 0;
+    width: 100%
+}
+
+.scroller_Vwa3As {
+    overflow-y: auto
+}
+
+.grid_Vwa3As {
+    flex-direction: column;
+    gap: var(--space-16);
+    isolation: isolate;
+    padding: var(--space-16) var(--space-24) var(--space-24)
+}
+
+.card_Vwa3As,
+.grid_Vwa3As {
+    display: flex
+}
+
+.card_Vwa3As {
+    align-items: stretch;
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    cursor: pointer;
+    flex-direction: row;
+    height: 128px;
+    overflow: hidden;
+    padding: var(--space-16);
+    position: relative
+}
+
+.full-motion .card_Vwa3As {
+    transition: background-color .2s, border-color .2s
+}
+
+.card_Vwa3As:hover {
+    background-color: var(--background-surface-higher)
+}
+
+.guildOfficialMessage_Vwa3As {
+    --custom-message-content-color: var(--custom-guild-official-message-text);
+    background-image: linear-gradient(to right, color-mix(in srgb, var(--custom-guild-official-message) calc(var(--custom-guild-official-message-alpha)*100%), transparent), transparent)
+}
+
+.cardBody_Vwa3As {
+    gap: 10px;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.cardBody_Vwa3As,
+.cardContent_Vwa3As {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0
+}
+
+.cardContent_Vwa3As {
+    gap: var(--space-12);
+    overflow: hidden
+}
+
+.filePreview_Vwa3As {
+    min-width: 0
+}
+
+.cardHeader_Vwa3As {
+    align-items: flex-start;
+    display: flex;
+    gap: var(--space-8);
+    pointer-events: auto
+}
+
+.cardHeaderMeta_Vwa3As {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+    overflow: hidden
+}
+
+.authorNameGroup_Vwa3As,
+.cardHeaderTop_Vwa3As {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.authorNameGroup_Vwa3As {
+    overflow: hidden
+}
+
+.systemTagWrapper_Vwa3As {
+    display: flex;
+    position: relative;
+    top: -.1rem
+}
+
+.channelChip_Vwa3As {
+    align-items: center;
+    color: var(--text-muted);
+    display: flex;
+    gap: var(--space-4)
+}
+
+.channelChipIcon_Vwa3As {
+    color: var(--text-muted);
+    flex-shrink: 0
+}
+
+.channelChipName_Vwa3As {
+    position: relative;
+    top: -1px
+}
+
+.reactionInfo_Vwa3As {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--space-4)
+}
+
+.authorName_Vwa3As {
+    color: var(--text-default);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.authorName_Vwa3As a {
+    color: var(--text-strong)
+}
+
+.cardThumbnail_Vwa3As {
+    aspect-ratio: 1/1;
+    background: var(--background-base-lower);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    height: 100%;
+    margin-inline-start: var(--space-16);
+    overflow: hidden
+}
+
+.cardThumbnailImage_Vwa3As {
+    display: block;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.pollEmbed_Vwa3As {
+    margin-top: var(--space-8);
+    min-width: 0
+}
+
+.description_Vwa3As {
+    color: var(--text-default);
+    flex-shrink: 0;
+    overflow: hidden
+}
+
+.guildOfficialMessage_Vwa3As .description_Vwa3As,
+.guildOfficialMessage_Vwa3As .description_Vwa3As :is(h1, h2, h3, h4, h5, h6, small:not(.inlineFormat_Vwa3As)) {
+    color: var(--custom-message-content-color, var(--text-default))
+}
+
+.cardContentFaded_Vwa3As {
+    -webkit-mask-image: linear-gradient(180deg, #000 calc(100% - 24px), transparent);
+    mask-image: linear-gradient(180deg, #000 calc(100% - 24px), transparent)
+}
+
+.empty_Vwa3As {
+    align-items: center;
+    flex: 1;
+    padding: var(--space-40) var(--space-20);
+    text-align: center
+}
+
+.empty_Vwa3As,
+.loadingMore_Vwa3As {
+    display: flex;
+    justify-content: center
+}
+
+.loadingMore_Vwa3As {
+    padding: var(--space-16)
+}
+
+/*# sourceMappingURL=a6de05c9efec1265.css.map*/
