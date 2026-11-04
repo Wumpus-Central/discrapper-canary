@@ -1282,7 +1282,7 @@ function tQ() {
                                       (0, r.jsx)(ea, {
                                           variant: "display-lg",
                                           className: tX.Vy,
-                                          children: en.intl.string(tt.default["T7cl+Y"]),
+                                          children: en.intl.string(en.t.RDE0Sc),
                                       }),
                                   ],
                               }),

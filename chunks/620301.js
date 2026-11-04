@@ -2,8 +2,8 @@ t.d(n, { $: () => g });
 var i = t(582128),
     l = t(778705),
     a = t(634110),
-    o = t(95369),
-    r = t(792384),
+    r = t(95369),
+    o = t(45052),
     s = t(945810);
 let u = (0, s.mj)({
         name: "2026-02-gifting-modal-redesign",
@@ -28,12 +28,12 @@ function g(e) {
             premiumAnalyticsObject: C,
             analyticsLocation: m,
             giftMessage: A,
-            subscriptionTier: b,
-            location: p,
+            subscriptionTier: p,
+            location: b,
         } = e,
-        { enabled: I } = u.useConfig({ location: p }),
-        { enabled: h } = c.useConfig({ location: p }),
-        T = (0, r.F5)(p),
+        { enabled: I } = u.useConfig({ location: b }),
+        { enabled: h } = c.useConfig({ location: b }),
+        T = (0, o.F5)(b),
         N = (0, a.tA)({ isGift: !0, giftRecipient: n }),
         k = I && null != n,
         _ = h && null == n,
@@ -41,11 +41,11 @@ function g(e) {
         x = N && null != n;
     return {
         openGiftModal: i.useCallback(() => {
-            null != b
+            null != p
                 ? (0, l.A)({
                       isGift: !0,
                       giftRecipient: n ?? void 0,
-                      subscriptionTier: b,
+                      subscriptionTier: p,
                       analyticsLocations: t,
                       analyticsLocation: m,
                       analyticsObject: C ?? s,
@@ -53,7 +53,7 @@ function g(e) {
                   })
                 : T
                   ? x
-                      ? (0, o.A)({
+                      ? (0, r.A)({
                             giftRecipient: n,
                             analyticsLocations: t,
                             analyticsLocation: m,
@@ -84,7 +84,7 @@ function g(e) {
                             giftingOrigin: f.vQ.GUILD_CHANNEL,
                         })
                       : x && null != n
-                        ? (0, o.A)({
+                        ? (0, r.A)({
                               giftRecipient: n,
                               analyticsLocations: t,
                               analyticsLocation: m,
@@ -100,7 +100,7 @@ function g(e) {
                               analyticsObject: C ?? s,
                               giftMessage: A,
                           });
-        }, [T, k, _, x, n, t, m, s, g, C, A, b]),
+        }, [T, k, _, x, n, t, m, s, g, C, A, p]),
         shouldShowWishlistModal: x,
         shouldShowGiftSelectionModal: j,
     };
