@@ -1,0 +1,13 @@
+.activationNote_1dslv6 {
+    align-items: flex-start;
+    display: flex;
+    gap: var(--space-4)
+}
+
+.activationNoteIcon_1dslv6 {
+    display: flex;
+    flex-shrink: 0;
+    padding-block: calc(var(--space-4)/2)
+}
+
+/*# sourceMappingURL=07af98a278eda26d.css.map*/
