@@ -2,17 +2,26 @@ var l = n(613412),
     i = n(933681),
     r = n(73153),
     s = n(499785),
-    a = n(723923),
-    d = n(652215);
+    a = n(997187),
+    d = n(161091),
+    c = n(723923),
+    u = n(652215);
+function o(e) {
+    let { categories: t } = a.A.getEmailSettings(),
+        n = {};
+    for (let l of Object.keys(e)) n[l] = t[l];
+    return n;
+}
 n.d(
     t,
     {},
     {
         CA: async function (e, t) {
+            let n = o({ [e]: t });
             r.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE", updates: { [e]: t } });
             try {
                 let n = await s.A.patch({
-                    url: d.Rsh.EMAIL_SETTINGS,
+                    url: u.Rsh.EMAIL_SETTINGS,
                     body: { settings: { categories: { [e]: t } } },
                     trackedActionData: {
                         event: l.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
@@ -22,15 +31,16 @@ n.d(
                 });
                 r.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE_SUCCESS", settings: n.body });
             } catch (e) {
-                r.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE_FAILURE" });
+                (r.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE_FAILURE", previous: n }), (0, d.A)());
             }
         },
         NI: async function () {
-            let e = a.Zk.reduce((e, t) => ({ ...e, [t]: !1 }), {});
+            let e = c.Zk.reduce((e, t) => ({ ...e, [t]: !1 }), {}),
+                t = o(e);
             r.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE", updates: e });
             try {
                 let t = await s.A.patch({
-                    url: d.Rsh.EMAIL_SETTINGS,
+                    url: u.Rsh.EMAIL_SETTINGS,
                     body: { settings: { categories: e } },
                     trackedActionData: {
                         event: l.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
@@ -40,13 +50,13 @@ n.d(
                 });
                 r.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE_SUCCESS", settings: t.body });
             } catch (e) {
-                r.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE_FAILURE" });
+                (r.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE_FAILURE", previous: t }), (0, d.A)());
             }
         },
         cR: async function () {
             try {
                 let e = await s.A.get({
-                    url: d.Rsh.EMAIL_SETTINGS,
+                    url: u.Rsh.EMAIL_SETTINGS,
                     trackedActionData: {
                         event: l.NetworkActionNames.EMAIL_SETTINGS_FETCH,
                         properties: (e) => {

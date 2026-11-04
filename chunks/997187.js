@@ -26,5 +26,9 @@ let c = new o(s.h, {
         let { updates: t } = e;
         r = { ...r, ...t };
     },
+    EMAIL_SETTINGS_UPDATE_FAILURE: function (e) {
+        let { previous: t } = e;
+        r = { ...r, ...t };
+    },
 });
 n.d(t, {}, { A: c });
