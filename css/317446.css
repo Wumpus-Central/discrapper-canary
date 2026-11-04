@@ -181,14 +181,14 @@
 
 .victorStyles_a1443c {
     --custom-poll-style-vote-percentage: var(--polls-victor-fill);
-    --custom-poll-style-image-background: var(--background-feedback-warning);
+    --custom-poll-style-image-background: var(--background-feedback-mod-warning);
     --custom-poll-style-border: var(--status-positive)
 }
 
 .votedStyles_a1443c {
     --custom-poll-style-vote-percentage: var(--polls-voted-fill);
-    --custom-poll-style-image-background: var(--background-feedback-positive);
+    --custom-poll-style-image-background: var(--background-feedback-mod-positive);
     --custom-poll-style-border: var(--control-brand-foreground)
 }
 
-/*# sourceMappingURL=317446.5f5bfb67c608274e.css.map*/
+/*# sourceMappingURL=317446.b1cea4b224df96be.css.map*/

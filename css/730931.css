@@ -96,13 +96,13 @@
 .copyInputError_fffc15 {}
 
 .copyInputError_fffc15 {
-    background-color: var(--background-feedback-critical);
+    background-color: var(--background-feedback-mod-critical);
     border-color: var(--text-feedback-critical);
     color: var(--text-feedback-critical)
 }
 
 .copyInputSuccess_fffc15 {
-    background-color: var(--background-feedback-positive);
+    background-color: var(--background-feedback-mod-positive);
     border-color: var(--text-feedback-positive);
     color: var(--text-feedback-positive)
 }
@@ -179,4 +179,4 @@
     color: var(--input-placeholder-text-default)
 }
 
-/*# sourceMappingURL=730931.34d9312636996125.css.map*/
+/*# sourceMappingURL=730931.7b8ca335cfd35b80.css.map*/

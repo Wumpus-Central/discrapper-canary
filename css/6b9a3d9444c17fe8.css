@@ -266,7 +266,7 @@
 }
 
 .deny_f5fff4.selected_f5fff4 {
-    background-color: var(--background-feedback-critical)
+    background-color: var(--background-feedback-mod-critical)
 }
 
 .group_f5fff4:not(.disabled_f5fff4) .item_f5fff4:not(.selected_f5fff4):hover {
@@ -476,4 +476,4 @@
     margin-bottom: var(--space-16)
 }
 
-/*# sourceMappingURL=06183483c6b5c1f7.css.map*/
+/*# sourceMappingURL=6b9a3d9444c17fe8.css.map*/

@@ -42,7 +42,7 @@ function b() {
     b && null != i && 0 !== i.length)
         ? (0, n.jsxs)("div", {
               style: {
-                  backgroundColor: s.A.colors.BACKGROUND_FEEDBACK_CRITICAL.css,
+                  backgroundColor: s.A.colors.BACKGROUND_FEEDBACK_MOD_CRITICAL.css,
                   color: s.A.colors.TEXT_FEEDBACK_CRITICAL.css,
                   display: "flex",
                   alignItems: "center",

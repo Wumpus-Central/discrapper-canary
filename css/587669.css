@@ -89,15 +89,15 @@
 }
 
 .rtcConnectionQualityFine__06d62 .largePing__06d62 {
-    background: var(--background-feedback-positive)
+    background: var(--background-feedback-mod-positive)
 }
 
 .rtcConnectionQualityAverage__06d62 .largePing__06d62 {
-    background: var(--background-feedback-warning)
+    background: var(--background-feedback-mod-warning)
 }
 
 .rtcConnectionQualityBad__06d62 .largePing__06d62 {
-    background: var(--background-feedback-critical)
+    background: var(--background-feedback-mod-critical)
 }
 
 .rtcConnectionStatusWrapper__06d62 {
@@ -125,4 +125,4 @@
     margin-top: var(--space-8)
 }
 
-/*# sourceMappingURL=587669.23731eb73a0781c7.css.map*/
+/*# sourceMappingURL=587669.f1234ba7d3306f19.css.map*/

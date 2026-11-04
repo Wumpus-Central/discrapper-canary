@@ -175,7 +175,7 @@
 }
 
 .perServerNotice__2447f {
-    background: var(--background-feedback-info);
+    background: var(--background-feedback-mod-info);
     border: 1px solid var(--icon-feedback-info);
     border-radius: var(--radius-sm);
     display: flex;
@@ -318,4 +318,4 @@
     flex: 1
 }
 
-/*# sourceMappingURL=9e360e6f87eeda9e.css.map*/
+/*# sourceMappingURL=d0c92e4d18981721.css.map*/

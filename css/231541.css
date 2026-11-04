@@ -165,7 +165,7 @@
 
 .chipletContainer__3b3ff.isError__3b3ff {
     background-color: var(--background-surface-high);
-    border-color: var(--background-feedback-critical);
+    border-color: var(--background-feedback-mod-critical);
     border-radius: var(--radius-sm)
 }
 
@@ -255,16 +255,16 @@
 }
 
 .errorValue__3b3ff {
-    background-color: var(--background-feedback-critical)
+    background-color: var(--background-feedback-mod-critical)
 }
 
 .errorTooltip__3b3ff {
     background-color: var(--background-surface-high) !important;
-    border: 2px solid var(--background-feedback-critical)
+    border: 2px solid var(--background-feedback-mod-critical)
 }
 
 .errorOverflowValue__3b3ff {
-    background-color: var(--background-feedback-critical);
+    background-color: var(--background-feedback-mod-critical);
     font-family: var(--font-code);
     font-size: 11px;
     padding: 2px
@@ -1136,4 +1136,4 @@
     display: none
 }
 
-/*# sourceMappingURL=231541.19e8e5c6c360166d.css.map*/
+/*# sourceMappingURL=231541.ee6b3a1d7f2275f7.css.map*/

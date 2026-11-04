@@ -19951,7 +19951,7 @@ let bo = (0, h.E2)(S.X.FAMILY_CENTER_SETTING, {
                       type: p.Xy.ICON,
                       icon: bt.WarningIcon,
                       color: n1.A.colors.ICON_FEEDBACK_WARNING,
-                      backgroundColor: n1.A.colors.BACKGROUND_FEEDBACK_WARNING,
+                      backgroundColor: n1.A.colors.BACKGROUND_FEEDBACK_MOD_WARNING,
                   };
         },
         buildLayout: () => [bd],
