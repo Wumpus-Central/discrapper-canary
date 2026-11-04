@@ -5,8 +5,8 @@ var i = t(477900),
     o = t.n(a),
     r = t(29477),
     s = t(866323),
-    c = t(939249),
-    u = t(573435),
+    u = t(939249),
+    c = t(573435),
     d = t(953727);
 function f(e) {
     let { width: n = 12, height: t = 12, color: l = "currentColor", foreground: a, ...o } = e;
@@ -69,34 +69,34 @@ let m = {
                 childClassName: a,
                 iconClassName: d,
                 icon: A,
-                children: p,
-                onClick: b,
+                children: b,
+                onClick: p,
                 onDoubleClick: I,
-                isActive: T,
-                onMouseEnter: h,
+                isActive: h,
+                onMouseEnter: T,
                 onMouseLeave: N,
                 onFocus: k,
-                onBlur: j,
-                pulse: _,
-                sparkle: y,
-                notification: x,
-                "aria-label": G,
-                "aria-expanded": v,
+                onBlur: _,
+                pulse: j,
+                sparkle: x,
+                notification: G,
+                "aria-label": v,
+                "aria-expanded": y,
                 "aria-haspopup": R,
-                "aria-controls": O,
-                "aria-keyshortcuts": M,
+                "aria-controls": M,
+                "aria-keyshortcuts": O,
                 noHover: S,
             } = e,
-            E = (0, s.p)(null != p, { ...m, keys: (e) => (e ? "children" : "icon") });
+            E = (0, s.p)(null != b, { ...m, keys: (e) => (e ? "children" : "icon") });
         function D(e) {
             let { component: n } = e;
-            return null != x
+            return null != G
                 ? (0, i.jsxs)("div", {
                       className: C.IO,
                       children: [
-                          (0, i.jsx)(u.Ay, {
+                          (0, i.jsx)(c.Ay, {
                               className: C.SA,
-                              mask: u.hW.CHAT_INPUT_BUTTON_NOTIFICATION,
+                              mask: c.hW.CHAT_INPUT_BUTTON_NOTIFICATION,
                               width: 20,
                               height: 20,
                               children: n,
@@ -106,22 +106,22 @@ let m = {
                   })
                 : n;
         }
-        return (0, i.jsxs)(c.D, {
+        return (0, i.jsxs)(u.D, {
             innerRef: n,
-            "aria-label": G,
-            "aria-expanded": v,
+            "aria-label": v,
+            "aria-expanded": y,
             "aria-haspopup": R,
-            "aria-controls": O,
-            "aria-keyshortcuts": M,
+            "aria-controls": M,
+            "aria-keyshortcuts": O,
             "aria-disabled": l,
             tabIndex: l ? -1 : 0,
-            className: o()(t, C.x6, { [C.vu]: T, [C.CK]: S, [C.s0]: _, [C.r9]: l }),
-            onClick: l ? void 0 : b,
+            className: o()(t, C.x6, { [C.vu]: h, [C.CK]: S, [C.s0]: j, [C.r9]: l }),
+            onClick: l ? void 0 : p,
             onDoubleClick: l ? void 0 : I,
-            onMouseEnter: h,
+            onMouseEnter: T,
             onMouseLeave: N,
             onFocus: k,
-            onBlur: j,
+            onBlur: _,
             focusProps: { offset: { top: 4, bottom: 4 } },
             children: [
                 E((e, n, t) => {
@@ -129,7 +129,7 @@ let m = {
                     return n
                         ? (0, i.jsx)(
                               r.animated.div,
-                              { style: e, className: o()(C._o, a), children: D({ component: p }) },
+                              { style: e, className: o()(C._o, a), children: D({ component: b }) },
                               l,
                           )
                         : null != A
@@ -140,7 +140,7 @@ let m = {
                                     className: o()(C._o, a),
                                     children: D({
                                         component: (0, i.jsx)(A, {
-                                            className: o()(C.Kk, d, { [C.d1]: _ }),
+                                            className: o()(C.Kk, d, { [C.d1]: j }),
                                             color: "currentColor",
                                         }),
                                     }),
@@ -149,7 +149,7 @@ let m = {
                             )
                           : void 0;
                 }),
-                y &&
+                x &&
                     (0, i.jsxs)("div", {
                         className: C.YX,
                         children: [(0, i.jsx)(g, { className: C.XR }), (0, i.jsx)(f, { className: C.Hv })],

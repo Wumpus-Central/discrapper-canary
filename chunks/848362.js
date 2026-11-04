@@ -10,15 +10,15 @@ var i = n(477900),
     d = n(74329),
     m = n(405916),
     h = n(338771),
-    g = n(616356),
-    f = n(287809),
+    f = n(616356),
+    g = n(287809),
     p = n(562153),
     A = n(652215),
     E = n(105292);
 function b(e, t, n) {
     let i = (0, l.bG)([c.A], () => (null != e ? c.A.getSelectedParticipantId(e.id) : null)),
-        s = (0, l.bG)([g.A], () => (null != i ? g.A.getActiveStreamForStreamKey(i) : null), [i]),
-        a = (0, l.cf)([f.default], () => n.reduce((e, t) => ((e[t.ownerId] = f.default.getUser(t.ownerId)), e), {}), [
+        s = (0, l.bG)([f.A], () => (null != i ? f.A.getActiveStreamForStreamKey(i) : null), [i]),
+        a = (0, l.cf)([g.default], () => n.reduce((e, t) => ((e[t.ownerId] = g.default.getUser(t.ownerId)), e), {}), [
             n,
         ]);
     return r.useMemo(() => {
@@ -36,8 +36,8 @@ function C(e) {
             activeStreams: r,
             hideSelfOptions: l = !1,
             showReportOption: c = !1,
-            handleGoLive: g,
-            onClose: f,
+            handleGoLive: f,
+            onClose: g,
             onSelect: p,
             appContext: C = A.BRT.APP,
             disableChangeWindows: v = !1,
@@ -50,7 +50,7 @@ function C(e) {
             disableChangeWindows: v,
             stream: T,
             showReportOption: c,
-            handleGoLive: g,
+            handleGoLive: f,
             minimal: !0,
             appContext: C,
         });
@@ -60,7 +60,7 @@ function C(e) {
             "data-menu-migrated": !0,
             onSelect: p,
             navId: "manage-streams",
-            onClose: f,
+            onClose: g,
             onInteraction: y,
             "aria-label": null != T ? E.intl.string(E.t.S5anIc) : E.intl.string(E.t.fjBNo1),
             children: [

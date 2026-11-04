@@ -11,8 +11,8 @@ var r = n(17928),
     d = n(728557),
     m = n(105292);
 function h(e, t, h) {
-    let g = (0, u.AO)(e),
-        f = (0, r.bG)([c.default], () => c.default.getId());
+    let f = (0, u.AO)(e),
+        g = (0, r.bG)([c.default], () => c.default.getId());
     if (null == e) return null;
     let p = (0, o._z)(e),
         A = d.A.getVideoStats(p) ?? {},
@@ -35,8 +35,8 @@ function h(e, t, h) {
                         return (n) =>
                             (0, i.jsx)(t, {
                                 stream: e,
-                                streamApplication: g,
-                                isStreamer: f === e?.ownerId,
+                                streamApplication: f,
+                                isStreamer: g === e?.ownerId,
                                 analyticsData: E,
                                 ...n,
                             });

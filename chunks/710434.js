@@ -2,15 +2,15 @@ n.d(t, { q: () => o });
 var r = n(477900);
 n(582128);
 var l = n(661531),
-    i = n(260612),
-    a = n(953727);
+    a = n(260612),
+    i = n(953727);
 function o(e) {
     let { size: t = "md", width: n, height: o, color: u = l.A.colors.INTERACTIVE_TEXT_DEFAULT, ...s } = e,
-        c = (0, i.J)(t),
+        c = (0, a.J)(t),
         d = c?.width ?? n,
         m = c?.height ?? o;
     return (0, r.jsxs)("svg", {
-        ...(0, a.A)(s),
+        ...(0, i.A)(s),
         xmlns: "http://www.w3.org/2000/svg",
         width: d,
         height: m,

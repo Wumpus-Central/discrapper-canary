@@ -5,8 +5,8 @@ var a = s(477900),
     l = s.n(n),
     r = s(722872),
     o = s(661531),
-    u = s(602853),
-    h = s(765671);
+    h = s(602853),
+    u = s(765671);
 function d(e, t) {
     let s = e.getBoundingClientRect();
     return Math.min(1, Math.max(0, (t.clientX - s.left) / s.width));
@@ -23,10 +23,10 @@ function v(e) {
 }
 function y(e) {
     var t, s, a, i;
-    let { context: n, devicePixelRatio: l, canvasHeight: r, segmentValue: o, segmentIndex: u, constrainMin: h } = e,
-        d = h ? 22 * o + 2 : 24 * o;
+    let { context: n, devicePixelRatio: l, canvasHeight: r, segmentValue: o, segmentIndex: h, constrainMin: u } = e,
+        d = u ? 22 * o + 2 : 24 * o;
     0 !== d &&
-        ((t = 6 * u * l),
+        ((t = 6 * h * l),
         (s = (r / 2 - d / 2) * l),
         (a = d * l),
         (i = +l),
@@ -51,12 +51,12 @@ function S(e, t, s) {
         [a, l]
     );
 }
-function C(e, t, s, a) {
+function T(e, t, s, a) {
     if (null == a) return [t, !1];
     let i = Math.min((s - a) / 200, 1);
     return 1 === i ? [t, !1] : [(0, c.De)(e, t, i), !0];
 }
-function T(e, t, s) {
+function C(e, t, s) {
     if (null == e) return 1;
     let a = Math.max(0, Math.min(e - (s > 1 ? (t / (s - 1)) * 60 : 0), 100));
     return Math.max(0, r.easeOutBack(a, 0, 1, 100, 2));
@@ -69,8 +69,8 @@ function b(e) {
             fluid: r = !1,
             neutralPlaybackColors: c = !1,
             animateOnMount: b = !1,
-            waveform: M,
-            currentTime: x,
+            waveform: x,
+            currentTime: M,
             duration: w,
             played: A,
             playing: _,
@@ -78,8 +78,8 @@ function b(e) {
             onDragStart: k,
             onDragEnd: R,
         } = e,
-        { ref: E, width: P } = (0, h.Ay)(),
-        V = i.useMemo(
+        { ref: E, width: P } = (0, u.Ay)(),
+        N = i.useMemo(
             () =>
                 6 *
                     Math.floor(
@@ -88,7 +88,7 @@ function b(e) {
                 4,
             [w],
         ),
-        N = i.useRef(void 0),
+        V = i.useRef(void 0),
         I =
             ((t = i.useMemo(
                 () =>
@@ -103,8 +103,8 @@ function b(e) {
                         let s = [];
                         for (let e = 0; e < t.length; e++) s[e] = t.charCodeAt(e) / 255;
                         return s;
-                    })(M),
-                [M],
+                    })(x),
+                [x],
             )),
             (s = i.useMemo(
                 () =>
@@ -153,17 +153,17 @@ function b(e) {
             lastInactiveFillColor: G,
             inactiveFillColor: Y,
         } = (function (e, t) {
-            let s = (0, u.r)(o.A.colors.BACKGROUND_MOD_MUTED).hex(),
-                a = (0, u.r)(o.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
-                i = (0, u.r)(o.A.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
-                n = (0, u.r)(o.A.unsafe_rawColors.BRAND_430).hex(),
-                l = (0, u.r)(o.A.unsafe_rawColors.WHITE).hex(),
+            let s = (0, h.r)(o.A.colors.BACKGROUND_MOD_MUTED).hex(),
+                a = (0, h.r)(o.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
+                i = (0, h.r)(o.A.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
+                n = (0, h.r)(o.A.unsafe_rawColors.BRAND_430).hex(),
+                l = (0, h.r)(o.A.unsafe_rawColors.WHITE).hex(),
                 r = t ? n : s,
-                [h, d] = S(r, t, e),
+                [u, d] = S(r, t, e),
                 [c, p] = S(t ? l : e ? i : a, t, e),
                 [m, g] = S(e ? r : a, t, e);
             return {
-                lastBackgroundFillColor: h,
+                lastBackgroundFillColor: u,
                 backgroundFillColor: d,
                 lastActiveFillColor: c,
                 activeFillColor: p,
@@ -171,7 +171,7 @@ function b(e) {
                 inactiveFillColor: g,
             };
         })(A, j),
-        $ = { currentTime: x, duration: w, played: A },
+        $ = { currentTime: M, duration: w, played: A },
         X = i.useRef($);
     (i.useEffect(() => {
         X.current = $;
@@ -182,12 +182,12 @@ function b(e) {
         i.useEffect(() => {
             let { currentTime: e, duration: t, played: s } = X.current,
                 a = v({ showAll: !s, currentTime: e, duration: t, numSegments: I.length });
-            N.current = I.map((e, t) => new m.A(t < a ? e : 0));
+            V.current = I.map((e, t) => new m.A(t < a ? e : 0));
         }, [I]),
         i.useEffect(() => {
-            let e = N.current;
+            let e = V.current;
             if (null == e) return;
-            let t = v({ showAll: !A, currentTime: x, duration: w, numSegments: I.length });
+            let t = v({ showAll: !A, currentTime: M, duration: w, numSegments: I.length });
             for (let s = 0; s < e.length; s++) {
                 let a = e[s];
                 if (s < t) {
@@ -196,14 +196,14 @@ function b(e) {
                 }
                 a.reset();
             }
-        }, [I, x, w, A]),
+        }, [I, M, w, A]),
         i.useEffect(() => {
             let e = null;
             return (
                 (e = requestAnimationFrame(function t(s) {
                     let a = E.current,
                         i = a?.getContext("2d"),
-                        n = N.current;
+                        n = V.current;
                     if (null == a || null == i || null == n) return;
                     let l = !1;
                     B.current && ((B.current = !1), (W.current = s));
@@ -216,10 +216,10 @@ function b(e) {
                         null != O.current && s > O.current + 200 && (O.current = null));
                     let o = a.height / F;
                     (i.clearRect(0, 0, a.width, a.height), i.beginPath());
-                    let [u, h] = C(H, z, s, O.current);
-                    ((l = l || h), (i.fillStyle = u));
+                    let [h, u] = T(H, z, s, O.current);
+                    ((l = l || u), (i.fillStyle = h));
                     for (let e = 0; e < I.length; e++) {
-                        let t = T(r, e, I.length);
+                        let t = C(r, e, I.length);
                         y({
                             context: i,
                             devicePixelRatio: F,
@@ -230,13 +230,13 @@ function b(e) {
                         });
                     }
                     i.fill();
-                    let [d, c] = C(G, Y, s, O.current);
+                    let [d, c] = T(G, Y, s, O.current);
                     l = l || c;
-                    let [p, m] = C(K, q, s, O.current);
+                    let [p, m] = T(K, q, s, O.current);
                     l = l || m;
                     for (let e = 0; e < n.length; e++) {
                         let t = n[e],
-                            s = T(r, e, n.length),
+                            s = C(r, e, n.length),
                             a = Math.max(t.getCurrentValue(), I[e] - 0.1) * s;
                         (i.beginPath(),
                             (i.fillStyle = t.isReset ? d : p),
@@ -257,7 +257,7 @@ function b(e) {
                     null != e && cancelAnimationFrame(e);
                 }
             );
-        }, [E, F, I, P, b, x, w, A, j, H, z, K, q, G, Y]));
+        }, [E, F, I, P, b, M, w, A, j, H, z, K, q, G, Y]));
     let [, Z] = (function (e) {
         let { ref: t, onDrag: s, onDragStart: a, onDragEnd: n } = e,
             [l, r] = i.useState(!1);
@@ -295,7 +295,7 @@ function b(e) {
     return (0, a.jsx)("canvas", {
         onMouseDown: Z,
         className: l()(g.J, n),
-        style: r ? void 0 : { width: V },
+        style: r ? void 0 : { width: N },
         ref: E,
         height: 32 * window.devicePixelRatio,
         width: (P ?? 0) * window.devicePixelRatio,

@@ -41,7 +41,7 @@ function I(e) {
                 !0,
             );
         }, [e, t?.cardId, t?.sessionId, t?.tilePosition, n, p]),
-        h = (0, l.K)((e) => {
+        x = (0, l.K)((e) => {
             e
                 ? A.current ||
                   (null === m.current &&
@@ -57,6 +57,6 @@ function I(e) {
             },
             [],
         ),
-        h
+        x
     );
 }

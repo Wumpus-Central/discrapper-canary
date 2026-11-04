@@ -94,7 +94,7 @@ function _(e) {
         icon: d.E,
     });
 }
-function T(e) {
+function v(e) {
     let { guild: t, checkboxText: n } = e,
         {
             canSubmitAcceptance: s,
@@ -159,7 +159,7 @@ function T(e) {
         ],
     });
 }
-function v(e) {
+function T(e) {
     let { guild: t, monetizationEligibility: n } = e,
         {
             eligibilityLoading: l,
@@ -173,7 +173,7 @@ function v(e) {
     return o
         ? c
             ? (0, i.jsx)(b, { ...n })
-            : (0, i.jsx)(T, { guild: t, checkboxText: d })
+            : (0, i.jsx)(v, { guild: t, checkboxText: d })
         : (0, i.jsx)(_, {
               guild: t,
               eligibility: a,
@@ -206,7 +206,7 @@ function y(e) {
                         children: I.intl.string(I.t["41wkMc"]),
                     }),
                     (0, i.jsx)(u.h, { size: 24 }),
-                    (0, i.jsx)(v, { guild: t, monetizationEligibility: n }),
+                    (0, i.jsx)(T, { guild: t, monetizationEligibility: n }),
                 ],
             }),
         ],

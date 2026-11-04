@@ -2,7 +2,7 @@
     n.d(t, {
         OAuth2AuthorizeModal: () => e6,
         getOAuth2AuthorizeProps: () => tr,
-        OAuth2AuthorizePage: () => e4,
+        OAuth2AuthorizePage: () => e5,
         openOAuth2Modal: () => ti,
         openOAuth2ModalWithCreateGuildModal: () => tn,
         useOAuth2AuthorizeForm: () => te,
@@ -602,7 +602,7 @@ function e1(e) {
 }
 var e2 = n(613057),
     e3 = n(292502);
-let e5 = (0, F.Fe)({
+let e4 = (0, F.Fe)({
     createPromise: () =>
         Promise.all([
             n.e("166171"),
@@ -742,7 +742,7 @@ let e5 = (0, F.Fe)({
         ]).then(n.bind(n, 991054)),
     webpackId: 991054,
 });
-function e4() {
+function e5() {
     let e = (0, l.zy)(),
         t = r.useMemo(() => (0, J._)(e.search), [e.search]);
     (0, P.A)();
@@ -1060,7 +1060,7 @@ function te(e) {
             return { requestedScopes: t, accountScopes: n };
         }, [eq?.scopes, D, e$]),
         e2 = r.useMemo(() => (e$ ? E.iu(eq?.permissions ?? 0) : P) ?? Z.x3, [eq?.permissions, P, e$]),
-        e4 = r.useRef(!1),
+        e5 = r.useRef(!1),
         [e6, te] = r.useState(ed ?? []),
         [tt, tn] = r.useState(null != ed && ed.length > 0);
     ((0, d.Ay)(() => {
@@ -1070,12 +1070,12 @@ function te(e) {
             : (0, y.rQ)({ withAnalyticsToken: !0 }).catch(et.tEg);
     }),
         r.useEffect(() => {
-            if (!e4.current && null == ed) {
+            if (!e5.current && null == ed) {
                 if (!$.default.isAuthenticated()) return void (0, er.Vh)(eh, "oauth2_error_not_authenticated");
                 e();
             }
             async function e() {
-                e4.current = !0;
+                e5.current = !0;
                 try {
                     let { disclosures: e, allAcked: t } = await (0, w.vG)(A);
                     (tn(!t), te(e));
@@ -1084,7 +1084,7 @@ function te(e) {
                     if (401 === e) return void (0, er.Vh)(eh, "oauth2_error_failed_disclosures");
                     eN(Error(null != t.message ? t.message : `${Object.keys(t)[0]}: ${Object.values(t)[0]}`));
                 } finally {
-                    e4.current = !1;
+                    e5.current = !1;
                 }
             }
         }, [A, eh, ed, te, eN, tn, eg]));
@@ -1138,7 +1138,7 @@ function te(e) {
         ta = r.useRef(!1),
         ts = r.useCallback(async () => {
             if (!$.default.isAuthenticated()) return void (0, er.Vh)(eh, "oauth2_error_not_authenticated");
-            if (!e4.current && !ta.current) {
+            if (!e5.current && !ta.current) {
                 ta.current = !0;
                 try {
                     var e;
@@ -1273,7 +1273,7 @@ function te(e) {
             break;
         case "SELECT_INSTALL_TYPE":
             if (null == ez) return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e9, {}) };
-            ((t = (0, i.jsx)(e5, {
+            ((t = (0, i.jsx)(e4, {
                 application: ez,
                 onSelect: function (e) {
                     (eK(e), ep(null), eg("AUTHORIZE_SCOPES"));

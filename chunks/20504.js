@@ -5,8 +5,8 @@ var a = s(477900),
     l = s.n(n),
     r = s(983851),
     o = s(358618),
-    u = s(793920),
-    h = s(939249),
+    h = s(793920),
+    u = s(939249),
     d = s(122641),
     c = s(105292),
     p = s(28680);
@@ -78,12 +78,12 @@ class m extends i.PureComponent {
                 maxValue: v,
                 value: y,
                 onVolumeShow: S,
-                onVolumeHide: C,
+                onVolumeHide: T,
             } = this.props,
-            { hovered: T, focused: b, dragging: M } = this.state,
-            x = r.H;
+            { hovered: C, focused: b, dragging: x } = this.state,
+            M = r.H;
         return (
-            g || y === f ? (x = o._) : y < v / 2 && (x = u.S),
+            g || y === f ? (M = o._) : y < v / 2 && (M = h.S),
             (0, a.jsxs)("div", {
                 className: l()(s, p.kL),
                 onMouseEnter: () => {
@@ -92,14 +92,14 @@ class m extends i.PureComponent {
                 onMouseLeave: () => {
                     (clearTimeout(this._hoverTimeout),
                         (this._hoverTimeout = setTimeout(() => {
-                            (this.setState({ hovered: !1 }), C?.());
+                            (this.setState({ hovered: !1 }), T?.());
                         }, 150)));
                 },
                 onBlur: () => this.setState({ focused: !1 }),
                 onKeyDown: this.handleKeyDown,
                 children: [
                     (0, a.jsx)("div", {
-                        className: l()(p.QS, i, { [p.OZ]: T || b || M }),
+                        className: l()(p.QS, i, { [p.OZ]: C || b || x }),
                         onMouseEnter: () => {
                             (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }));
                         },
@@ -119,11 +119,11 @@ class m extends i.PureComponent {
                             ref: this._mediaBar,
                         }),
                     }),
-                    (0, a.jsx)(h.D, {
+                    (0, a.jsx)(u.D, {
                         className: p.bk,
                         "aria-label": c.intl.string(c.t["19lt24"]),
                         onClick: this.handleToggleMute,
-                        children: (0, a.jsx)(x, { color: t, className: e }),
+                        children: (0, a.jsx)(M, { color: t, className: e }),
                     }),
                 ],
             })

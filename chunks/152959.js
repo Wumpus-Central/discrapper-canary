@@ -1,4 +1,4 @@
-a.d(n, { YK: () => c, bf: () => m, initNativeMarkdown: () => s, n9: () => f });
+a.d(n, { YK: () => c, bf: () => f, initNativeMarkdown: () => s, n9: () => g });
 var t = a(582128),
     l = a(917310),
     i = a(38405);
@@ -14,10 +14,10 @@ function s() {
 function c() {
     return r;
 }
-function m(e) {
+function f(e) {
     e && !r && t.use(s());
 }
-function f(e) {
+function g(e) {
     let n = t.useCallback(
         (n) => (
             u.add(n),

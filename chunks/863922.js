@@ -1,4 +1,4 @@
-n.d(t, { $T: () => C, Ay: () => M, C6: () => x, C7: () => j, O$: () => S, Oz: () => E, sK: () => _, s_: () => N });
+n.d(t, { $T: () => C, Ay: () => M, C6: () => x, C7: () => j, O$: () => y, Oz: () => E, sK: () => _, s_: () => N });
 var l = n(582128),
     s = n(435558),
     a = n.n(s),
@@ -70,7 +70,7 @@ function N(e, t) {
 function j(e, t) {
     o.h.dispatch({ type: "SET_SUMMARY_FEEDBACK", summary: e, rating: t });
 }
-async function y() {
+async function v() {
     let e, t;
     if (!f.A.shouldFetchChannelAffinities()) return Promise.resolve(null);
     let n = Date.now();
@@ -89,7 +89,7 @@ async function y() {
         receivedAt: Date.now(),
     });
 }
-async function v(e) {
+async function S(e) {
     let t,
         n,
         { useQuickSwitcher: l = !0, useChannelAffinities: s = !0 } =
@@ -130,7 +130,7 @@ async function v(e) {
         error: t,
     });
 }
-async function S(e) {
+async function y(e) {
     try {
         (await r.Bo.del({ url: p.BVt.CHANNEL_SUMMARY(e.channelId, e.id), rejectWithError: !1 }),
             o.h.dispatch({ type: "DELETE_SUMMARY", summary: e }));
@@ -146,7 +146,7 @@ let I =
                   setSelectedSummary: _,
                   setHighlightedSummary: x,
                   fetchSummaries: C,
-                  fetchSummariesBulk: v,
+                  fetchSummariesBulk: S,
                   useChannelSummaries: function (e) {
                       let { channelIds: t = [] } = e;
                       return (
@@ -158,16 +158,16 @@ let I =
                                   t && e();
                                   async function e() {
                                       try {
-                                          await y();
+                                          await v();
                                       } catch (e) {}
-                                      await v(n.split(","));
+                                      await S(n.split(","));
                                   }
                               }, [n, t]);
                           })(t),
                           (0, i.yK)([f.A], () => f.A.topSummaries(), [])
                       );
                   },
-                  deleteSummary: S,
+                  deleteSummary: y,
               }
             : null,
     M = 221552 == n.j ? I : null;

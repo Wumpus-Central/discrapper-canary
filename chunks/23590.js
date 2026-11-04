@@ -1,14 +1,14 @@
-n.d(t, { A: () => i });
+n.d(t, { A: () => a });
 var r = n(582128);
 let l = new (n(941426).Vy)("useMuxTracking");
-function i(e) {
-    let { videoRef: t, hls: i, contentMetadata: a, isHls: o, debug: u } = e,
+function a(e) {
+    let { videoRef: t, hls: a, contentMetadata: i, isHls: o, debug: u } = e,
         s = r.useRef(null),
-        [c, d] = r.useState(() => null == a);
+        [c, d] = r.useState(() => null == i);
     return (
         r.useEffect(() => {
-            if (null == t.current || null == a) return void d(!0);
-            if (o && null == i) return void d(!1);
+            if (null == t.current || null == i) return void d(!0);
+            if (o && null == a) return void d(!1);
             d(!1);
             let e = !1;
             return (
@@ -21,9 +21,9 @@ function i(e) {
                             ((s.current = new r({
                                 debug: u ?? !1,
                                 videoElement: t.current,
-                                hlsInstance: o ? (i ?? void 0) : void 0,
-                                feature: a.contentType,
-                                contentMetadata: a,
+                                hlsInstance: o ? (a ?? void 0) : void 0,
+                                feature: i.contentType,
+                                contentMetadata: i,
                             })),
                             s.current.initialize(),
                             d(!0));
@@ -35,7 +35,7 @@ function i(e) {
                     ((e = !0), null != s.current && (s.current.endSession(), s.current.destroy(), (s.current = null)));
                 }
             );
-        }, [o, i, t, a, u]),
+        }, [o, a, t, i, u]),
         { isReady: c }
     );
 }

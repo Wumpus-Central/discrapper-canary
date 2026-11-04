@@ -23,8 +23,8 @@ var i = n(477900),
     S = n(69282),
     C = n(657048),
     _ = n(963307),
-    T = n(734057),
-    v = n(317525),
+    v = n(734057),
+    T = n(317525),
     y = n(994500),
     R = n(287809),
     L = n(105292),
@@ -49,7 +49,7 @@ let w = l.memo(function (e) {
     let { row: t, guildId: n, className: l } = e,
         { id: s, name: a } = t.record,
         o = (0, S.Xx)({ guildId: n, roleId: s, size: 16 }),
-        h = (0, d.bG)([v.A], () => v.A.getRole(n, s)),
+        h = (0, d.bG)([T.A], () => T.A.getRole(n, s)),
         x = a.includes(_.QP) ? "" : "@",
         E = (0, c.r)(u.A.unsafe_rawColors.PRIMARY_300).hsl(),
         j = h?.colorString ?? E,
@@ -95,7 +95,7 @@ function H(e) {
             className: A,
         } = e,
         b = (0, I.GV)(),
-        S = (0, d.bG)([v.A], () => v.A.getRolesSnapshot(t)),
+        S = (0, d.bG)([T.A], () => T.A.getRolesSnapshot(t)),
         C = l.useMemo(
             () =>
                 (function (e, t, n) {
@@ -103,7 +103,7 @@ function H(e) {
                     let i = {};
                     return (
                         e.forEach((e) => {
-                            let t = T.A.getChannel(e);
+                            let t = v.A.getChannel(e);
                             null != t && (i[e] = P(t));
                         }),
                         t.forEach((e) => {

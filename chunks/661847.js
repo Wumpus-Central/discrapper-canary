@@ -16,9 +16,9 @@ var r = n(477900),
     A = n(466459),
     g = n(623373),
     E = n(561769),
-    h = n(758836),
-    _ = n(105292),
-    x = n(699704);
+    x = n(758836),
+    h = n(105292),
+    _ = n(699704);
 function C(e) {
     let {
             product: t,
@@ -34,7 +34,7 @@ function C(e) {
         {
             shownVariants: A,
             totalVariants: E,
-            hasOverflow: h,
+            hasOverflow: x,
         } = i.useMemo(() => {
             let e = c?.maxVariantsToShow;
             return (0, g.B1)(t)
@@ -43,7 +43,7 @@ function C(e) {
                     : { shownVariants: t.variants.slice(0, e - 1), totalVariants: t.variants.length, hasOverflow: !0 }
                 : { shownVariants: [], totalVariants: 0, hasOverflow: !1 };
         }, [t, c?.maxVariantsToShow]),
-        _ = i.useCallback(
+        h = i.useCallback(
             (e, n) => {
                 (e.stopPropagation(), (0, p.n)(t, n));
             },
@@ -59,7 +59,7 @@ function C(e) {
                   children: (e) => {
                       let { ref: i, ...a } = e;
                       return (0, r.jsxs)("div", {
-                          className: s()({ [x.yZ]: o, [x.sz]: !o, [x.LV]: d }, x.lO),
+                          className: s()({ [_.yZ]: o, [_.sz]: !o, [_.LV]: d }, _.lO),
                           ref: i,
                           ...a,
                           tabIndex: -1 === I ? -1 : a.tabIndex,
@@ -74,7 +74,7 @@ function C(e) {
                                           onVariantEnter: () => n(t),
                                           onVariantExit: l,
                                           zIndex: E - Math.abs(m - t),
-                                          onVariantClick: _,
+                                          onVariantClick: h,
                                           onTrackClick: f,
                                           parentTabIndex: I,
                                       },
@@ -82,7 +82,7 @@ function C(e) {
                                   ),
                               ),
                               null != c &&
-                                  h &&
+                                  x &&
                                   (0, r.jsx)(k, {
                                       zIndex: m >= c.maxVariantsToShow - 1 ? E + 1 : 0,
                                       isSelected: m >= c.maxVariantsToShow - 1,
@@ -113,13 +113,13 @@ function b(e) {
         { isPurchased: E } = (0, A.h)(t),
         C = i.useCallback(
             (e) => {
-                (v?.(h.sH.VARIANT_CLICK, n), u(e, n), m());
+                (v?.(x.sH.VARIANT_CLICK, n), u(e, n), m());
             },
             [u, m, n, v],
         ),
-        b = E ? `${t.variantLabel}, ${_.intl.string(_.t["6cfuDj"])}` : t.variantLabel;
+        b = E ? `${t.variantLabel}, ${h.intl.string(h.t["6cfuDj"])}` : t.variantLabel;
     return (0, r.jsx)(d.m, {
-        text: _.intl.string(_.t["6cfuDj"]),
+        text: h.intl.string(h.t["6cfuDj"]),
         shouldShow: E,
         ariaHidden: !0,
         children: (0, r.jsx)(c.D, {
@@ -127,7 +127,7 @@ function b(e) {
             onClick: C,
             onMouseEnter: o,
             onMouseLeave: f,
-            className: s()(x.bP, { [x.wH]: l }),
+            className: s()(_.bP, { [_.wH]: l }),
             style: { backgroundColor: t.variantValue, zIndex: I },
             ...g,
             tabIndex: -1 === p ? -1 : g.tabIndex,
@@ -138,25 +138,25 @@ function b(e) {
 function R(e) {
     let { variant: t } = e,
         n = i.useMemo(() => (0, m.qt)(t.variantValue) && 0.3 > (0, m.OK)((0, m.LX)(t.variantValue)), [t.variantValue]);
-    return (0, r.jsx)(f.B, { className: x.U, color: n ? o.A.colors.BLACK.css : o.A.colors.WHITE.css });
+    return (0, r.jsx)(f.B, { className: _.U, color: n ? o.A.colors.BLACK.css : o.A.colors.WHITE.css });
 }
 function k(e) {
     let { zIndex: t, isSelected: n, onOverflowClick: l, storeListingId: u, onTrackClick: o, parentTabIndex: d } = e,
         { onFocus: f, ...v } = (0, a.rm)(`shop-variants-group-${u}-overflow`),
         p = i.useCallback(
             (e) => {
-                (e.stopPropagation(), o?.(h.sH.VARIANT_CLICK_MORE), l(e), f());
+                (e.stopPropagation(), o?.(x.sH.VARIANT_CLICK_MORE), l(e), f());
             },
             [l, f, o],
         );
     return (0, r.jsx)(c.D, {
-        "aria-label": _.intl.string(_.t["+0zcgs"]),
+        "aria-label": h.intl.string(h.t["+0zcgs"]),
         onClick: p,
-        className: s()(x.bP, x.V3, { [x.wH]: n }),
+        className: s()(_.bP, _.V3, { [_.wH]: n }),
         style: { zIndex: t },
         ...v,
         tabIndex: -1 === d ? -1 : v.tabIndex,
-        children: (0, r.jsx)(I.j, { className: x.ab, color: "white" }),
+        children: (0, r.jsx)(I.j, { className: _.ab, color: "white" }),
     });
 }
 let y = function (e) {

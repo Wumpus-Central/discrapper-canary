@@ -1,4 +1,4 @@
-(n.d(t, { H3: () => tt, H9: () => e6, KQ: () => $, oe: () => tn, r8: () => te, t8: () => e9, xW: () => ti }),
+(n.d(t, { H3: () => tt, H9: () => e4, KQ: () => $, oe: () => tn, r8: () => te, t8: () => e9, xW: () => ti }),
     n(321073),
     n(205816));
 var i = n(621466),
@@ -323,8 +323,8 @@ function eO() {
     let e = T;
     if (null != e && eg(e)) return ((D = !0), !0);
     if (D || null == R || null == e) return !1;
-    for (let t of l.values()) if (t.iframe !== e && e5(t.iframe)?.clip != null) return !1;
-    let t = e5(e);
+    for (let t of l.values()) if (t.iframe !== e && e6(t.iframe)?.clip != null) return !1;
+    let t = e6(e);
     return t?.clip != null && JSON.stringify(t) === R.layout && eC({ iframe: e, clip: t.clip }) === R.value;
 }
 function eR(e) {
@@ -591,7 +591,7 @@ function eH(e) {
                 ew.clear();
                 let n = eU;
                 if (((eU = !1), null != e)) {
-                    if (JSON.stringify(e5(e.iframe)) !== e.lastLayout) return void eV();
+                    if (JSON.stringify(e6(e.iframe)) !== e.lastLayout) return void eV();
                     for (let n of t.keys())
                         if (
                             !(!n.isConnected || n === e.iframe || n.contains(e.iframe) || g.has(n)) &&
@@ -612,7 +612,7 @@ function ej() {
                 if (null == e) return !1;
                 let t = !1;
                 for (let [n, i] of l) {
-                    let r = e5(i.iframe),
+                    let r = e6(i.iframe),
                         a = JSON.stringify(r);
                     a !== i.lastLayout &&
                         ((i.lastLayout = a),
@@ -666,7 +666,7 @@ function ez() {
     let t = [],
         n = !1;
     for (let [i, r] of l) {
-        let a = e5(r.iframe);
+        let a = e6(r.iframe);
         a?.clip != null && t.push({ iframe: r.iframe, clip: a.clip });
         let l = JSON.stringify(a);
         l !== r.lastLayout &&
@@ -706,7 +706,7 @@ function ez() {
                 (function (e) {
                     if (((R = null), 1 !== e.length)) return;
                     let { iframe: t } = e[0],
-                        n = e5(t);
+                        n = e6(t);
                     n?.clip != null && (R = { layout: JSON.stringify(n), value: eC({ iframe: t, clip: n.clip }) });
                 })(t)),
             eK(),
@@ -853,10 +853,10 @@ let eZ = ["left", "middle", "right"],
 function e3() {
     return window.DiscordNative?.frameView ?? null;
 }
-function e6() {
+function e4() {
     return null != e3();
 }
-function e4(e, t) {
+function e5(e, t) {
     let n = Math.max(e.x, t.left),
         i = Math.max(e.y, t.top);
     return {
@@ -866,7 +866,7 @@ function e4(e, t) {
         height: Math.max(0, Math.min(e.y + e.height, t.bottom) - i),
     };
 }
-function e5(e) {
+function e6(e) {
     if (!e.isConnected) return null;
     let t = e.getBoundingClientRect();
     if (t.width <= 0 || t.height <= 0) return null;
@@ -874,10 +874,10 @@ function e5(e) {
         { devicePixelRatio: i } = window;
     if (!e.checkVisibility({ opacityProperty: !0, visibilityProperty: !0 }))
         return { frame: n, clip: null, devicePixelRatio: i };
-    let r = e4(n, { left: 0, top: 0, right: window.innerWidth, bottom: window.innerHeight });
+    let r = e5(n, { left: 0, top: 0, right: window.innerWidth, bottom: window.innerHeight });
     for (let t = e.parentElement; null != t && r.width > 0; t = t.parentElement) {
         let { overflowX: e, overflowY: n } = getComputedStyle(t);
-        ("visible" !== e || "visible" !== n) && (r = e4(r, t.getBoundingClientRect()));
+        ("visible" !== e || "visible" !== n) && (r = e5(r, t.getBoundingClientRect()));
     }
     return {
         frame: n,

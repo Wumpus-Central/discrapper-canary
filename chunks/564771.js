@@ -1,4 +1,4 @@
-n.d(t, { A: () => v, e: () => y });
+n.d(t, { A: () => S, e: () => v });
 var l = n(477900),
     s = n(582128),
     a = n(503698),
@@ -43,7 +43,7 @@ function j(e) {
         title: s,
     });
 }
-function y(e) {
+function v(e) {
     let { channelId: t, file: n } = e,
         a = (0, c.bG)([A.A], () => A.A.getMessageForFile(n.id)?.content),
         i = s.useMemo(() => {
@@ -104,7 +104,7 @@ function y(e) {
         ],
     });
 }
-let v = function (e) {
+let S = function (e) {
     let { className: t, url: n, fileName: s, fileSize: a, onClick: r, onContextMenu: c, renderAdjacentContent: u } = e;
     return (0, l.jsxs)("div", {
         className: i()(N.Ig, t),

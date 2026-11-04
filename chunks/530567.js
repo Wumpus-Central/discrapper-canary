@@ -1,7 +1,7 @@
-n.d(t, { $7: () => l, X4: () => a, Xq: () => o, ZH: () => u });
+n.d(t, { $7: () => l, X4: () => i, Xq: () => o, ZH: () => u });
 var r = n(876230);
 let l = 400,
-    i = {
+    a = {
         barHeightPx: 64,
         footerHorizontalPaddingPx: 20,
         footerBottomPx: 4,
@@ -24,9 +24,9 @@ let l = 400,
         volumeGroupMarginEndPx: 0,
         volumeFlexShrink: 1,
     },
-    a = {
+    i = {
         [r.oA.SM]: {
-            ...i,
+            ...a,
             barHeightPx: 40,
             footerHorizontalPaddingPx: 12,
             scrimHeightPx: 72,
@@ -35,8 +35,8 @@ let l = 400,
             iconSize: "sm",
             volumeSliderWidthPx: 48,
         },
-        [r.oA.MD]: { ...i },
-        [r.oA.LG]: { ...i, barHeightPx: 72, iconSize: "lg", buttonHeightPx: 32 },
+        [r.oA.MD]: { ...a },
+        [r.oA.LG]: { ...a, barHeightPx: 72, iconSize: "lg", buttonHeightPx: 32 },
     },
     o = {
         size: r.oA.SM,
@@ -63,5 +63,5 @@ let l = 400,
 function u(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         l = n ? r.oA.LG : (t?.size ?? e);
-    return { size: l, config: { ...a[l], ...(!n ? t?.overrides : void 0) } };
+    return { size: l, config: { ...i[l], ...(!n ? t?.overrides : void 0) } };
 }

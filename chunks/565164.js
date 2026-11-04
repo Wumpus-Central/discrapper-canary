@@ -1,8 +1,8 @@
 (n.d(t, { B8: () => p, wb: () => h, xx: () => m, z5: () => f }), n(321073));
 var r = n(477900),
     l = n(582128),
-    i = n(61491),
-    a = n(834730),
+    a = n(61491),
+    i = n(834730),
     o = n(584669),
     u = n(984212),
     s = n(42388);
@@ -17,7 +17,7 @@ function m(e) {
         : { imageUrl: n, x: parseInt(t[1], 10), y: parseInt(t[2], 10), w: parseInt(t[3], 10), h: parseInt(t[4], 10) };
 }
 function f(e, t, n, r) {
-    let [i, a] = l.useState(null),
+    let [a, i] = l.useState(null),
         [o, s] = l.useState(null);
     return (
         l.useEffect(() => {
@@ -40,7 +40,7 @@ function f(e, t, n, r) {
                     let r = m(n.text);
                     null != r && l.push({ startSec: n.startTime, endSec: n.endTime, ...r });
                 }
-                (l.sort((e, t) => e.startSec - t.startSec), a({ url: n, cues: l }));
+                (l.sort((e, t) => e.startSec - t.startSec), i({ url: n, cues: l }));
             }
         }, [n, t, e]),
         l.useEffect(() => {
@@ -54,7 +54,7 @@ function f(e, t, n, r) {
                 }
             );
         }, [r, e]),
-        null != i && i?.url === n && o === r ? i.cues : d
+        null != a && a?.url === n && o === r ? a.cues : d
     );
 }
 function p(e, t) {
@@ -63,10 +63,10 @@ function p(e, t) {
         r = e.length - 1;
     for (; n <= r;) {
         let l = (n + r) >> 1,
-            i = e[l];
-        if (t < i.startSec) r = l - 1;
+            a = e[l];
+        if (t < a.startSec) r = l - 1;
         else {
-            if (!(t >= i.endSec)) return i;
+            if (!(t >= a.endSec)) return a;
             n = l + 1;
         }
     }
@@ -85,12 +85,12 @@ function h(e) {
         style: { left: `${f}px`, bottom: "16px", width: `${t.w}px` },
         children: [
             (0, r.jsx)("div", { className: s.FF, style: (0, o.u)(t) }),
-            (0, r.jsx)(a.E, {
+            (0, r.jsx)(i.E, {
                 className: s.Sp,
                 variant: "body-xs/normal",
                 color: "text-overlay-light",
                 tabularNumbers: !0,
-                children: (0, i.rB)(n),
+                children: (0, a.rB)(n),
             }),
         ],
     });

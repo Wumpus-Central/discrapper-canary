@@ -15,8 +15,8 @@ let d = function (e) {
 };
 var m = n(543699),
     h = n(999291),
-    g = n(920601),
-    f = n(903209);
+    f = n(920601),
+    g = n(903209);
 let p = (0, n(945810).mj)({
     name: "2026-09-video-background-profile-fetch",
     kind: "user",
@@ -42,16 +42,16 @@ let C = function (e) {
         R = p.useConfig({ location: "VideoBackground" }).enabled,
         x = (0, h.Ay)(c ?? A.dJq, C),
         S = (0, m.tM)(x?.themeColors?.[0]) ?? A.NJ8.DARK,
-        { profileThemeStyle: O, profileThemeClassName: k } = (0, g.A)({
+        { profileThemeStyle: O, profileThemeClassName: N } = (0, f.A)({
             theme: S,
             themeType: E.d.VIDEO_TILE_BACKGROUND,
             primaryColor: x?.themeColors?.[0] ?? null,
             secondaryColor: x?.themeColors?.[1] ?? null,
         }),
-        N = x?.themeColors?.[0] != null && x?.themeColors?.[1] != null;
+        k = x?.themeColors?.[0] != null && x?.themeColors?.[1] != null;
     if (
         (r.useEffect(() => {
-            null != c && R && (0, f.A)(c, void 0, { guildId: C });
+            null != c && R && (0, g.A)(c, void 0, { guildId: C });
         }, [R, c, C]),
         null == n)
     )
@@ -59,8 +59,8 @@ let C = function (e) {
     let M = (0, i.jsx)(o.eu, { className: b.R, src: n, ...T }),
         P = { ...t, backgroundColor: I };
     return (0, i.jsx)("div", {
-        style: N ? { ...t, ...O } : { ...P },
-        className: s()(b.T, { [k]: N }),
+        style: k ? { ...t, ...O } : { ...P },
+        className: s()(b.T, { [N]: k }),
         children: v ? (0, i.jsx)(d, { shouldAnimate: y, children: M }) : M,
     });
 };

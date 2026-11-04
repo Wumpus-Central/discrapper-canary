@@ -5,8 +5,8 @@ var a = s(477900),
     l = s(28863),
     r = s(32880),
     o = s(174459),
-    u = s(652215),
-    h = s(105292);
+    h = s(652215),
+    u = s(105292);
 let d = function (e) {
     let {
             href: t,
@@ -21,9 +21,9 @@ let d = function (e) {
             ...y
         } = e,
         S = i.useMemo(() => n.V.getDefaultLinkInterceptor(t), [t]),
-        C = i.useCallback(
+        T = i.useCallback(
             (e) => {
-                (o.default.track(u.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
+                (o.default.track(h.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
                     attachment_type: m?.[0],
                     attachment_subtype: m?.[1],
                 }),
@@ -35,7 +35,7 @@ let d = function (e) {
     return null != g
         ? (0, a.jsx)(l.Anchor, {
               href: t,
-              onClick: C,
+              onClick: T,
               target: p,
               rel: c,
               className: s,
@@ -45,11 +45,11 @@ let d = function (e) {
           })
         : (0, a.jsx)(l.Anchor, {
               href: t,
-              onClick: C,
+              onClick: T,
               target: p,
               rel: c,
               className: s,
-              "aria-label": h.intl.string(h.t["1WjMbC"]),
+              "aria-label": u.intl.string(u.t["1WjMbC"]),
               focusProps: f,
               ...y,
               children: (0, a.jsx)(r.DownloadIcon, { size: "md", color: "currentColor", className: d }),

@@ -1,12 +1,12 @@
-t.d(n, { Se: () => b, Hv: () => I, Ig: () => p, F5: () => A, GZ: () => m });
+t.d(n, { Se: () => p, Hv: () => I, Ig: () => b, F5: () => A, GZ: () => m });
 var i = t(582128),
     l = t(70283),
     a = t(17928),
     o = t(554146),
     r = t(682618),
     s = t(982240),
-    c = t(826673),
-    u = t(287809),
+    u = t(826673),
+    c = t(287809),
     d = t(945810);
 let f = (0, d.mj)({
         name: "2026-09-gifting-badge-coachmark-audience",
@@ -34,32 +34,32 @@ function A(e) {
         { enabled: t } = g.useConfig({ location: `${e}${n ? "" : "-DISABLED"}` });
     return t && n;
 }
-function p(e) {
+function b(e) {
     return !!C.J.getConfig({ location: e }).enabled && g.getConfig({ location: e }).enabled;
 }
-function b(e) {
+function p(e) {
     return e?.complex_icon_static_url ?? e?.simple_icon_url;
 }
 function I(e) {
     let { platform: n, location: t, enabled: d = !0 } = e,
         { enabled: m } = C.J.useConfig({ location: t }),
         { enabled: A } = g.useConfig({ location: `${t}${"web" === n ? "" : "-DISABLED"}` }),
-        p = "web" === n ? A && m : m,
-        { enabled: b } = f.useConfig({ location: `${t}${p ? "" : "-DISABLED"}` }),
-        I = (0, a.bG)([u.default], () => u.default.getCurrentUser()?.hasHadPremium() ?? !1),
-        T = (0, c.HX)(o.M.NEW_GIFTING_BADGES_COACHMARK),
-        h = (0, a.bG)([s.Ay], () => s.Ay.getBadgeById(l.$.GIFTING)),
-        N = p && !T && d,
-        k = N && !b && I,
-        j = N && b && null == h;
+        b = "web" === n ? A && m : m,
+        { enabled: p } = f.useConfig({ location: `${t}${b ? "" : "-DISABLED"}` }),
+        I = (0, a.bG)([c.default], () => c.default.getCurrentUser()?.hasHadPremium() ?? !1),
+        h = (0, u.HX)(o.M.NEW_GIFTING_BADGES_COACHMARK),
+        T = (0, a.bG)([s.Ay], () => s.Ay.getBadgeById(l.$.GIFTING)),
+        N = b && !h && d,
+        k = N && !p && I,
+        _ = N && p && null == T;
     return (i.useEffect(() => {
-        j ? (0, r.Ay)(l.$.GIFTING) : k && (0, r.o0)(l.$.GIFTING);
-    }, [k, j]),
-    b)
-        ? N && null != h && !h.hidden && (I || h.owned)
+        _ ? (0, r.Ay)(l.$.GIFTING) : k && (0, r.o0)(l.$.GIFTING);
+    }, [k, _]),
+    p)
+        ? N && null != T && !T.hidden && (I || T.owned)
             ? "noCount"
             : null
-        : N && I && null != h
+        : N && I && null != T
           ? "count"
           : null;
 }

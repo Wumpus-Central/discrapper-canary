@@ -11,8 +11,8 @@ var r = n(503698),
     d = n(401843),
     m = n(616356),
     h = n(280450),
-    g = n(200749),
-    f = n(105292),
+    f = n(200749),
+    g = n(105292),
     p = n(604889);
 let A = n(913516);
 function E(e) {
@@ -26,13 +26,13 @@ function E(e) {
         );
     return (0, i.jsx)("div", {
         className: l()(p.Qs, p.FY),
-        children: (0, i.jsx)(g.A, {
+        children: (0, i.jsx)(f.A, {
             className: p.FP,
             artURL: A,
             noArt: r,
             selected: E,
-            size: (0, g.J)(n),
-            header: b ? null : f.intl.string(f.t.epU4Ec),
+            size: (0, f.J)(n),
+            header: b ? null : g.intl.string(g.t.epU4Ec),
             description: E
                 ? null
                 : (0, i.jsxs)("div", {
@@ -43,19 +43,19 @@ function E(e) {
                               children: (0, i.jsx)(a.$, {
                                   variant: "secondary",
                                   size: b ? "sm" : "md",
-                                  text: n < 175 ? f.intl.string(f.t.I6JG46) : f.intl.string(f.t["7Xq/nV"]),
+                                  text: n < 175 ? g.intl.string(g.t.I6JG46) : g.intl.string(g.t["7Xq/nV"]),
                               }),
                           }),
                           C
                               ? (0, i.jsx)("div", {
                                     className: l()(p.lO, p.EU),
                                     children: (0, i.jsx)(o.m, {
-                                        text: f.intl.string(f.t.wCrzut),
+                                        text: g.intl.string(g.t.wCrzut),
                                         children: (0, i.jsx)(u.K, {
                                             variant: "secondary",
                                             size: b ? "sm" : "md",
                                             icon: c.v,
-                                            "aria-label": f.intl.string(f.t.wCrzut),
+                                            "aria-label": g.intl.string(g.t.wCrzut),
                                             onClick: (e) => {
                                                 (e.stopPropagation(), (0, d.A9)(t.stream, { forceMultiple: !0 }));
                                             },

@@ -1,12 +1,12 @@
-i.d(t, { eT: () => a, fj: () => n });
+i.d(t, { eT: () => a, fj: () => r });
 var s = i(240921);
-let n = "1080p",
-    r = (0, s.Ay)({
+let r = "1080p",
+    n = (0, s.Ay)({
         name: "2026-04-server-boost-copy-1440p",
         kind: "user",
-        defaultConfig: { streamQualityMarketingResolution: n },
+        defaultConfig: { streamQualityMarketingResolution: r },
         variations: { 1: { streamQualityMarketingResolution: "1440p" } },
     });
 function a(e) {
-    return r.getConfig({ location: e }).streamQualityMarketingResolution;
+    return n.getConfig({ location: e }).streamQualityMarketingResolution;
 }

@@ -1892,9 +1892,9 @@ var eJ = n(33282),
     e1 = n(751124),
     e2 = n(852015),
     e3 = n(144367),
-    e6 = n(428420),
-    e4 = n(535384);
-class e5 extends e4.G {
+    e4 = n(428420),
+    e5 = n(535384);
+class e6 extends e5.G {
     constructor() {
         super("discord_protos.qos_token.v1.QosToken", [
             { no: 1, name: "client_provided", kind: "message", T: () => e9 },
@@ -1904,7 +1904,7 @@ class e5 extends e4.G {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, e6.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, e4.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, e3.x)(this, t, e),
             t
         );
@@ -1938,8 +1938,8 @@ class e5 extends e4.G {
         return (!1 !== i && (!0 == i ? e2.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e7 = new e5();
-class e8 extends e4.G {
+let e7 = new e6();
+class e8 extends e5.G {
     constructor() {
         super("discord_protos.qos_token.v1.ClientProvidedQosData", [
             { no: 1, name: "is_active", kind: "scalar", T: 8 },
@@ -1948,7 +1948,7 @@ class e8 extends e4.G {
     create(e) {
         let t = { isActive: !1 };
         return (
-            globalThis.Object.defineProperty(t, e6.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, e4.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, e3.x)(this, t, e),
             t
         );
@@ -1976,7 +1976,7 @@ class e8 extends e4.G {
     }
 }
 let e9 = new e8();
-class te extends e4.G {
+class te extends e5.G {
     constructor() {
         super("discord_protos.qos_token.v1.DerivedQosData", [
             { no: 1, name: "claims", kind: "scalar", T: 12 },
@@ -1987,7 +1987,7 @@ class te extends e4.G {
     create(e) {
         let t = { claims: new Uint8Array(0), signature: new Uint8Array(0), keyId: 0 };
         return (
-            globalThis.Object.defineProperty(t, e6.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, e4.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, e3.x)(this, t, e),
             t
         );
@@ -2026,7 +2026,7 @@ class te extends e4.G {
     }
 }
 let tt = new te();
-class tn extends e4.G {
+class tn extends e5.G {
     constructor() {
         super("discord_protos.qos_token.v1.Claims", [
             { no: 1, name: "user_id", kind: "scalar", T: 6 },
@@ -2039,7 +2039,7 @@ class tn extends e4.G {
     create(e) {
         let t = { userId: "0", issuedAt: "0", isStaff: !1, authTokenHash: new Uint8Array(0), expiresAt: "0" };
         return (
-            globalThis.Object.defineProperty(t, e6.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, e4.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, e3.x)(this, t, e),
             t
         );

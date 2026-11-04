@@ -16,9 +16,9 @@ var r = n(477900),
     A = n(561769),
     g = n(846957),
     E = n(929283),
-    h = n(448391),
-    _ = n(761365),
-    x = n(844266);
+    x = n(448391),
+    h = n(761365),
+    _ = n(844266);
 function C(e) {
     let { responsive: t } = e;
     return !0 !== t;
@@ -31,7 +31,7 @@ function b(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: l()(x.mA, { [x.zj]: (a || u) && !n, [x.Ge]: o }),
+                className: l()(_.mA, { [_.zj]: (a || u) && !n, [_.Ge]: o }),
                 children: (0, r.jsx)(R, { product: t, isCardHovered: n }),
             }),
             a && (0, r.jsx)(k, { hidden: n }),
@@ -52,13 +52,13 @@ function R(e) {
         case s.R.PROFILE_EFFECT:
             return (0, r.jsx)(v.A, { skuId: d.skuId, isHighlighted: i, removeSetHeight: !0, hideBackground: !0 });
         case s.R.PROFILE_FRAME:
-            return (0, r.jsx)("div", { className: x.pI, children: (0, r.jsx)(p.A, { frame: d, filterLayer: C }) });
+            return (0, r.jsx)("div", { className: _.pI, children: (0, r.jsx)(p.A, { frame: d, filterLayer: C }) });
         case s.R.AVATAR_DECORATION:
             return (0, r.jsx)(E.i, { item: d, user: l, isHighlighted: i, avatarSize: u._3.SIZE_120 });
         case s.R.NAMEPLATE:
-            return (0, r.jsx)(_.A, { nameplate: d, user: l, isHighlighted: i });
+            return (0, r.jsx)(h.A, { nameplate: d, user: l, isHighlighted: i });
         case s.R.BUNDLE:
-            return (0, r.jsx)(h.X, { product: n, user: l, isHighlighted: i });
+            return (0, r.jsx)(x.X, { product: n, user: l, isHighlighted: i });
         case s.R.EXTERNAL_SKU:
             return (0, r.jsx)(g.B, { product: n, animationState: i ? "on" : "off" });
         default:
@@ -72,7 +72,7 @@ function k(e) {
         color: d.A.colors.INTERACTIVE_TEXT_ACTIVE,
         width: 40,
         height: 40,
-        className: l()(x.zo, { [x.R]: t }),
+        className: l()(_.zo, { [_.R]: t }),
     });
 }
 let y = function (e) {

@@ -4,14 +4,14 @@ var a = s(477900),
 function n(e) {
     let t,
         s,
-        { muted: n, volume: l, playing: r, playbackRate: o, ref: u, ...h } = e,
+        { muted: n, volume: l, playing: r, playbackRate: o, ref: h, ...u } = e,
         [d, c] =
             ((t = i.useRef(null)),
             (s = i.useCallback(
                 (e) => {
-                    null != u && ("function" == typeof u ? u(e) : (u.current = e), (t.current = e));
+                    null != h && ("function" == typeof h ? h(e) : (h.current = e), (t.current = e));
                 },
-                [u],
+                [h],
             )),
             [t, s]);
     return (
@@ -31,6 +31,6 @@ function n(e) {
             let e = d.current;
             null == e || (void 0 !== r && (r ? e.play() : e.pause()));
         }, [d, r]),
-        (0, a.jsx)("audio", { ref: c, ...h })
+        (0, a.jsx)("audio", { ref: c, ...u })
     );
 }

@@ -1,24 +1,24 @@
-t.d(n, { JW: () => f, K5: () => A, MD: () => I, Mq: () => m, gc: () => p, kz: () => C, px: () => g, x: () => b });
+t.d(n, { JW: () => f, K5: () => A, MD: () => I, Mq: () => m, gc: () => b, kz: () => C, px: () => g, x: () => p });
 var i = t(582128),
     l = t(877624),
     a = t(17928),
     o = t(554146),
     r = t(841702),
     s = t(826673),
-    c = t(412260),
-    u = t(860300),
+    u = t(412260),
+    c = t(860300),
     d = t(202541);
 function f() {
     let [e, n] = i.useState(),
-        t = (0, a.yK)([c.A], () => c.A.getGiftPromotionRewardSkuIds()),
+        t = (0, a.yK)([u.A], () => u.A.getGiftPromotionRewardSkuIds()),
         { purchases: l, hasPreviouslyFetched: o, fetchPurchasesError: s } = (0, r.Wg)(),
-        u = i.useRef(!1);
+        c = i.useRef(!1);
     return (
         i.useEffect(() => {
             o &&
-                !u.current &&
+                !c.current &&
                 t.length > 0 &&
-                (n(null == s ? t.filter((e) => null == l.get(e)) : []), (u.current = !0));
+                (n(null == s ? t.filter((e) => null == l.get(e)) : []), (c.current = !0));
         }, [t, l, o, s]),
         e
     );
@@ -44,7 +44,7 @@ function A(e, n) {
     let r = null != i ? a.map((e, n) => `${e} ${i[n]}%`).join(", ") : a.join(", ");
     return { background: `linear-gradient(${o}deg, ${r})` };
 }
-function p(e) {
+function b(e) {
     if (null != e)
         return {
             backgroundImage: `url(${e})`,
@@ -53,7 +53,7 @@ function p(e) {
             backgroundRepeat: "no-repeat",
         };
 }
-function b(e, n) {
+function p(e, n) {
     if (null != e && null != n) {
         let t = n.background,
             i = e.backgroundImage;
@@ -69,9 +69,9 @@ function b(e, n) {
     return null != e ? e : null != n ? n : {};
 }
 function I() {
-    let { enabled: e } = u.J.getConfig({ location: "shouldShowGiftPromotionReminderNotice" });
-    if (!e || null == c.A.getMarketingComponentByType(l.C.GIFT_REMINDER_NAGBAR)) return !1;
-    let n = c.A.getGiftPromotion()?.id;
+    let { enabled: e } = c.J.getConfig({ location: "shouldShowGiftPromotionReminderNotice" });
+    if (!e || null == u.A.getMarketingComponentByType(l.C.GIFT_REMINDER_NAGBAR)) return !1;
+    let n = u.A.getGiftPromotion()?.id;
     return (
         null != n &&
         !!(0, s.u$)(o.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, n).isDismissed &&

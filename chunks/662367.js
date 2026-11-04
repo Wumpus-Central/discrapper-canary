@@ -8,20 +8,20 @@ var o = n(131937),
     r = n(315629),
     c = n(331322),
     d = n(834730),
-    p = n(404778),
-    u = n(534514),
+    u = n(404778),
+    p = n(534514),
     m = n(28863),
     x = n(821609),
     h = n(212245),
     b = n(736653),
     g = n(688810),
     A = n(139286),
-    j = n(392943),
-    N = n(498470),
+    N = n(392943),
+    j = n(498470),
     v = n(811611),
     y = n(807098),
-    T = n(637706),
-    I = n(412260),
+    I = n(637706),
+    T = n(412260),
     C = n(852218),
     _ = n(105292),
     f = n(734165);
@@ -35,22 +35,22 @@ function E(t) {
         name: o.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
         properties: { component_type: l.C.BILLING_SETTINGS_BANNER, component_id: e.id, promotion_id: e.promotionId },
     });
-    let k = (0, s.bG)([I.A], () => I.A.getPromotionByTypeAndId(C.pt.MARKETING_MOMENT, e.promotionId)?.endDate),
+    let k = (0, s.bG)([T.A], () => T.A.getPromotionByTypeAndId(C.pt.MARKETING_MOMENT, e.promotionId)?.endDate),
         H = e.properties.properties,
         R = "billingSettingsBanner" === H.oneofKind ? H.billingSettingsBanner : null,
-        S = (0, T.a)(R?.body ?? ""),
+        S = (0, I.a)(R?.body ?? ""),
         w = (0, y.T)(R?.asset);
     if (null == R) return null;
-    let B = (0, N.h)({
+    let B = (0, j.h)({
             buttonAction: R.button?.buttonAction,
             deeplinkSection: R.button?.deeplinkSection,
             applicationId: R.button?.navigableStorefrontApplicationId?.value,
             analyticsLocations: E,
             analyticsLocation: L.location,
         }),
-        P = (0, T.C)(R.helpArticle, ""),
-        { icon: G, iconPosition: O } = (0, N.x)({ buttonAction: R.button?.buttonAction }),
-        U = (0, v.ux)((n ?? k)?.toISOString());
+        P = (0, I.C)(R.helpArticle, ""),
+        { icon: G, iconPosition: D } = (0, j.x)({ buttonAction: R.button?.buttonAction }),
+        O = (0, v.ux)((n ?? k)?.toISOString());
     return (0, i.jsx)(r.h, {
         color: "nitro-pink",
         className: f.kL,
@@ -66,20 +66,20 @@ function E(t) {
                     justify: "space-between",
                     gap: 8,
                     children: [
-                        (0, i.jsx)(j.A, {
+                        (0, i.jsx)(N.A, {
                             color: "currentcolor",
                             className: f.Ss,
                             "aria-label": _.intl.string(_.t.lpNrPu),
                         }),
-                        null != U &&
+                        null != O &&
                             (0, i.jsx)(d.E, {
                                 variant: "body-sm/medium",
                                 color: M ? "text-subtle" : "text-default",
-                                children: U,
+                                children: O,
                             }),
                     ],
                 }),
-                (0, i.jsx)(p.c, {}),
+                (0, i.jsx)(u.c, {}),
                 (0, i.jsxs)(c.B, {
                     direction: "horizontal",
                     align: "center",
@@ -93,7 +93,7 @@ function E(t) {
                             fullWidth: !1,
                             className: f.pq,
                             children: [
-                                (0, i.jsx)(u.D, {
+                                (0, i.jsx)(p.D, {
                                     variant: "heading-xl/semibold",
                                     color: "text-strong",
                                     children: R.header,
@@ -121,7 +121,7 @@ function E(t) {
                                             onClick: B,
                                             text: R.button.copy,
                                             icon: G,
-                                            iconPosition: O,
+                                            iconPosition: D,
                                         }),
                                     }),
                             ],

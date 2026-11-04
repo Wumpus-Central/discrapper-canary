@@ -1,17 +1,17 @@
-s.d(t, { A: () => h });
+s.d(t, { A: () => u });
 var a = s(621466),
     i = s(933681),
     n = s(945810),
     l = s(544180),
     r = s(174459),
     o = s(652215);
-let u = (0, n.mj)({
+let h = (0, n.mj)({
     name: "2026-03-media-play-metrics",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-class h {
+class u {
     metadata;
     playTimeSec = 0;
     playWallTimeMs = 0;
@@ -28,7 +28,7 @@ class h {
     lastPlayingTime;
     analyticsEnabled;
     constructor(e) {
-        ((this.metadata = e), (this.analyticsEnabled = u.getConfig({ location: "media_player" }).enabled));
+        ((this.metadata = e), (this.analyticsEnabled = h.getConfig({ location: "media_player" }).enabled));
     }
     moveToState(e) {
         ((this.stateTime = performance.now()), (this.currentState = e));

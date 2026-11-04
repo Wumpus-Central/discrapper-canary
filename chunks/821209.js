@@ -6,11 +6,11 @@ var i = s(503698),
     l = s(782134),
     r = s(939249),
     o = s(692051),
-    u = s(953727);
-function h(e) {
+    h = s(953727);
+function u(e) {
     let { width: t = 16, height: s = 16, color: i = "currentColor", foreground: n, ...l } = e;
     return (0, a.jsx)("svg", {
-        ...(0, u.A)(l),
+        ...(0, h.A)(l),
         width: t,
         height: s,
         viewBox: "0 0 24 24",
@@ -29,7 +29,7 @@ let p = function (e) {
         onPlay: t,
         externalURL: s,
         className: i,
-        renderLinkComponent: u,
+        renderLinkComponent: h,
         inactive: p,
         messageId: m,
         channelId: g,
@@ -55,12 +55,12 @@ let p = function (e) {
                           })
                         : null,
                     null != s
-                        ? u({
+                        ? h({
                               href: s,
                               target: "_blank",
                               rel: "noreferrer noopener",
                               className: c.Rw,
-                              children: (0, a.jsx)(h, {
+                              children: (0, a.jsx)(u, {
                                   "aria-label": d.intl.string(d.t.wuRE8M),
                                   className: null != t ? c._L : c.Zl,
                               }),

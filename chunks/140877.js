@@ -1,4 +1,4 @@
-n.d(t, { A: () => C, e: () => _ });
+n.d(t, { A: () => C, e: () => h });
 var r,
     i = n(477900),
     l = n(582128),
@@ -16,15 +16,15 @@ var r,
     A = n(561769),
     g = n(57020),
     E = n(105292),
-    h = n(178287),
-    _ = (((r = {}).INLINE = "INLINE"), (r.STACKED = "STACKED"), r);
-function x(e) {
+    x = n(178287),
+    h = (((r = {}).INLINE = "INLINE"), (r.STACKED = "STACKED"), r);
+function _(e) {
     let { product: t, prioritizedCurrency: n, promoPriceLayout: r } = e,
         d = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
         v = o.Ay.canUseCollectibles(d),
         A = (0, c.xM)(d),
-        _ = null != A,
-        { isDisabled: x } = (0, f.I)(t.skuId),
+        h = null != A,
+        { isDisabled: _ } = (0, f.I)(t.skuId),
         { isPurchased: C, isPartiallyOwnedBundle: b } = (0, I.h)(t),
         R = (0, c.G0)(t),
         k = (0, c.tt)(t),
@@ -33,10 +33,10 @@ function x(e) {
             checkoutEligibleFormerPrices: S,
             hasSufficientOrbs: T,
             shouldCheckoutWithOrbs: j,
-        } = (0, g.F)({ product: t, hasShopDiscount: _, prioritizedCurrency: n }),
+        } = (0, g.F)({ product: t, hasShopDiscount: h, prioritizedCurrency: n }),
         O = y[0]?.currency,
-        P = l.useMemo(() => (0, c.fT)(t, _, O), [t, _, O]);
-    if (x)
+        P = l.useMemo(() => (0, c.fT)(t, h, O), [t, h, O]);
+    if (_)
         return (0, i.jsx)(a.E, {
             variant: "body-md/medium",
             color: "text-muted",
@@ -72,22 +72,22 @@ function x(e) {
             children: E.intl.string(E.t.rt69oo),
         });
     if (0 === y.length) return null;
-    let L = S[0],
-        N = null != L,
-        V = N && "STACKED" === r,
-        D = j && !T ? h.cR : void 0,
+    let N = S[0],
+        L = null != N,
+        V = L && "STACKED" === r,
+        D = j && !T ? x.cR : void 0,
         M = (0, i.jsx)(m.x, {
             priceAmount: y[0].amount,
             priceCurrency: y[0].currency,
-            discount: N ? c.rr : P,
-            discountIconConfig: _ ? { displayMode: "default", source: A ?? c.D0.NITRO, size: "sm" } : void 0,
-            className: V ? h.wC : D,
+            discount: L ? c.rr : P,
+            discountIconConfig: h ? { displayMode: "default", source: A ?? c.D0.NITRO, size: "sm" } : void 0,
+            className: V ? x.wC : D,
             variant: "body-md/semibold",
         });
-    return N
+    return L
         ? (0, i.jsxs)("div", {
-              className: V ? h.rV : h.KQ,
-              children: [(0, i.jsx)(p.a, { price: L, variant: "body-md/medium", className: V ? h.ug : void 0 }), M],
+              className: V ? x.rV : x.KQ,
+              children: [(0, i.jsx)(p.a, { price: N, variant: "body-md/medium", className: V ? x.ug : void 0 }), M],
           })
         : M;
 }
@@ -97,5 +97,5 @@ let C = function (e) {
         s = (0, d.Q)(l);
     if (null == l) return null;
     let a = (0, v.rb)(l, s);
-    return (0, i.jsx)(x, { product: a, prioritizedCurrency: n, promoPriceLayout: r });
+    return (0, i.jsx)(_, { product: a, prioritizedCurrency: n, promoPriceLayout: r });
 };

@@ -12,17 +12,17 @@ let s = l.lazy(() =>
         .then((e) => ({ default: e.ClipParticipantsList })),
 );
 function c(e) {
-    let { participants: n, maxVisibleParticipants: a, overflowLabel: c, guildId: m, layerContext: f } = e,
-        g = l.useRef(null),
-        h = n.length - a,
-        b = (0, l.useCallback)(
-            () => (0, t.jsx)(l.Suspense, { fallback: null, children: (0, t.jsx)(s, { users: n, guildId: m }) }),
-            [n, m],
+    let { participants: n, maxVisibleParticipants: a, overflowLabel: c, guildId: f, layerContext: g } = e,
+        m = l.useRef(null),
+        b = n.length - a,
+        h = (0, l.useCallback)(
+            () => (0, t.jsx)(l.Suspense, { fallback: null, children: (0, t.jsx)(s, { users: n, guildId: f }) }),
+            [n, f],
         );
     return (0, t.jsx)(i.Y, {
-        renderPopout: b,
-        layerContext: f,
-        targetElementRef: g,
+        renderPopout: h,
+        layerContext: g,
+        targetElementRef: m,
         position: "right",
         children: (e) =>
             (0, t.jsx)(r.m, {
@@ -30,7 +30,7 @@ function c(e) {
                 ariaHidden: !0,
                 children: (0, t.jsx)(d.D, {
                     ...e,
-                    innerRef: g,
+                    innerRef: m,
                     className: u.x,
                     "aria-label": c,
                     onClick: (n) => {
@@ -40,7 +40,7 @@ function c(e) {
                         className: u.s,
                         variant: "body-xs/medium",
                         color: "interactive-text-default",
-                        children: ["+", h],
+                        children: ["+", b],
                     }),
                 }),
             }),

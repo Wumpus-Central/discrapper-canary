@@ -1,4 +1,4 @@
-n.d(t, { Lq: () => c, U0: () => m, _n: () => g, mB: () => h, x4: () => u });
+n.d(t, { Lq: () => c, U0: () => m, _n: () => f, mB: () => h, x4: () => u });
 var i = n(775602),
     r = n(363195),
     l = n(253932),
@@ -67,7 +67,7 @@ function h(e) {
         formFactor: "desktop",
     };
 }
-function g() {
+function f() {
     return {
         theme: u(r.A.theme),
         ui_density: d(),
