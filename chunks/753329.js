@@ -35,12 +35,12 @@ var T = n(826058),
     B = n(616334),
     E = n(260498);
 n(321073);
-var O = n(189714),
-    F = n(733791),
-    X = n(314116),
-    N = n(371169),
-    R = n(189213),
-    W = n(331322),
+var F = n(189714),
+    O = n(733791),
+    W = n(314116),
+    X = n(371169),
+    N = n(189213),
+    R = n(331322),
     K = n(834730),
     L = n(192308),
     G = n(664619),
@@ -51,17 +51,17 @@ function V(e) {
         [s, d] = l.useState(!1),
         [f, h] = l.useState(null),
         p = "delete" === i,
-        m = p ? (0, F.fI)(n) : (0, F.Kd)(n),
-        g = p ? null : (0, F.L4)(n),
-        y = (0, F.Mi)(n),
+        m = p ? (0, O.fI)(n) : (0, O.Kd)(n),
+        g = p ? null : (0, O.L4)(n),
+        y = (0, O.Mi)(n),
         x = p
             ? A.intl.formatToPlainString($.default.CJBhb2, { name: n.projectName })
             : A.intl.formatToPlainString($.default.x6FvsZ, { app: n.appName });
-    return (0, r.jsx)(R.a, {
+    return (0, r.jsx)(N.a, {
         ...o,
         role: "alertdialog",
-        title: p ? x : (0, F.WX)((0, H.tb)($.default.x6FvsZ, n.appName)),
-        subtitle: p ? (0, F.J)(n) : A.intl.string($.default["8OKM1N"]),
+        title: p ? x : (0, O.WX)((0, H.tb)($.default.x6FvsZ, n.appName)),
+        subtitle: p ? (0, O.J)(n) : A.intl.string($.default["8OKM1N"]),
         "aria-label": x,
         notice: null == f ? void 0 : { message: f, type: "critical", role: "alert" },
         actions: [
@@ -74,16 +74,16 @@ function V(e) {
                 onClick: () => {
                     (async function () {
                         (d(!0), h(null));
-                        let e = p ? (0, N.xx)(t.id) : (0, G.YI)(t.id, { alsoRemovePreviewBot: u }),
+                        let e = p ? (0, X.xx)(t.id) : (0, G.YI)(t.id, { alsoRemovePreviewBot: u }),
                             r = await e.catch(() => null);
                         (d(!1), r?.ok !== !0)
                             ? h(A.intl.string(p ? $.default["0XDHob"] : $.default.PJ2Fkn))
-                            : (p || (0, a.P0)({ text: (0, F.p_)(n), variant: "success" }), o.onClose());
+                            : (p || (0, a.P0)({ text: (0, O.p_)(n), variant: "success" }), o.onClose());
                     })().catch(() => {});
                 },
             },
         ],
-        children: (0, r.jsxs)(W.B, {
+        children: (0, r.jsxs)(R.B, {
             gap: 12,
             children: [
                 m.length > 0 || null != g
@@ -110,7 +110,7 @@ function Z(e) {
         [c, s] = l.useState(null),
         d = (0, i.bG)([U.A], () => U.A.getApplication(t.application_id)?.name ?? t.name, [t.application_id, t.name]),
         f = A.intl.formatToPlainString($.default.m8KWic, { app: d });
-    return (0, r.jsx)(R.a, {
+    return (0, r.jsx)(N.a, {
         ...n,
         role: "alertdialog",
         title: f,
@@ -156,8 +156,8 @@ function en(e) {
             isOwner: w,
             canRemix: j,
             onPublish: S,
-            publishLabel: R,
-            publishDisabled: W = !1,
+            publishLabel: N,
+            publishDisabled: R = !1,
             onOpenProjectSettings: K,
             onExport: G,
             onImport: H,
@@ -176,7 +176,7 @@ function en(e) {
             previewProjectId: ed,
             onCloseMenu: ef,
         } = e,
-        eh = (0, O.iI)(t),
+        eh = (0, F.iI)(t),
         ep = (0, _.lQ)(t) && !el,
         em = l.useContext(T.bI),
         { pending: eg, refresh: ey } = (0, k.A)(es ?? null),
@@ -212,8 +212,8 @@ function en(e) {
         })(ed ?? null, et),
         ev = (0, i.bG)([z.A], () => (null == ed ? ee : z.A.getDeclaredConnections(ed))),
         ew = l.useMemo(() => (0, M.Xl)(ev), [ev]),
-        ej = (0, F.Bs)(t),
-        ek = (0, F.CU)(t) && w,
+        ej = (0, O.Bs)(t),
+        ek = (0, O.CU)(t) && w,
         eS = (0, i.bG)(
             [E.Ay],
             () => {
@@ -273,8 +273,8 @@ function en(e) {
                 ? (0, r.jsx)(p.rX, {
                       children: (0, r.jsx)(p.Dr, {
                           id: "publish",
-                          label: R ?? A.intl.string($.default["120EFN"]),
-                          disabled: W,
+                          label: N ?? A.intl.string($.default["120EFN"]),
+                          disabled: R,
                           action: S,
                       }),
                   })
@@ -299,6 +299,8 @@ function en(e) {
                                     icon: ez,
                                     leadingAccessory: { type: "icon", icon: ez },
                                     label: A.intl.string(eo ? A.t["NKV/MO"] : A.t["3Zypbv"]),
+                                    subtext: ep && !eo ? A.intl.string($.default.WjdaFw) : void 0,
+                                    disabled: ep && !eo,
                                     action: ea,
                                 })
                               : null,
@@ -345,7 +347,7 @@ function en(e) {
                         label: A.intl.string(eh ? $.default.s9rCuH : $.default["a+i/As"]),
                         icon: eq,
                         leadingAccessory: { type: "icon", icon: eq },
-                        action: () => (0, O.$L)(t, !eh),
+                        action: () => (0, F.$L)(t, !eh),
                     }),
                     null != en
                         ? (0, r.jsx)(p.Dr, { id: "dismiss", label: A.intl.string($.default.bWzWw9), action: en })
@@ -462,13 +464,13 @@ function en(e) {
                                         let e = E.Ay.getProject(t);
                                         if (null != e && null != ej) Q({ project: e, target: ej, action: "delete" });
                                         else
-                                            (0, X.A)({
+                                            (0, W.A)({
                                                 title: A.intl.formatToPlainString($.default.CJBhb2, { name: n }),
                                                 subtitle: A.intl.string($.default["0OmrVn"]),
                                                 confirmText: A.intl.string(A.t.oyYWHE),
                                                 variant: "critical",
                                                 onConfirm: () => {
-                                                    (0, N.K)(t, () =>
+                                                    (0, X.K)(t, () =>
                                                         (0, a.P0)({
                                                             text: A.intl.string($.default["0XDHob"]),
                                                             variant: "critical",
