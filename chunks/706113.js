@@ -26,13 +26,16 @@ function d(e) {
         state: h,
         retry: l.useCallback(() => {
             "" !== d &&
-                (0, s._v)({
-                    collectionIds: [d],
-                    includeUnpublishedCollections: t,
-                    includeUnpublishedProducts: t,
-                    includePricing: n,
-                    ignoreCache: !0,
-                });
+                (0, s._v)(
+                    {
+                        collectionIds: [d],
+                        includeUnpublishedCollections: t,
+                        includeUnpublishedProducts: t,
+                        includePricing: n,
+                        ignoreCache: !0,
+                    },
+                    { retryAfterError: !0 },
+                );
         }, [d, t, n]),
     };
 }

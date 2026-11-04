@@ -1,6 +1,6 @@
 l.d(t, { H: () => d, HX: () => C, Su: () => E, _v: () => a, cS: () => T, d2: () => h, q7: () => O });
-var c = l(73153),
-    n = l(181658),
+var n = l(73153),
+    c = l(181658),
     r = l(773669),
     o = l(371794),
     i = l(100704),
@@ -15,23 +15,27 @@ async function a(e) {
             ignoreCache: O = !1,
             includePricing: d = !1,
         } = e,
-        T = t.filter(
-            (e) =>
-                !!e &&
+        { retryAfterError: T = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        C = t.filter((e) => {
+            if (!e) return !1;
+            let t = u.A.getFetchState(e);
+            return (
+                (!!T && "error" === t) ||
                 (0, i.d3)({
-                    fetchState: u.A.getFetchState(e),
+                    fetchState: t,
                     fetchedAt: u.A.getFetchedAt(e),
                     needsPricing: d,
                     hasPricingCoverage: u.A.hasPricingCoverage(e),
-                }),
-        );
-    if (0 !== T.length)
+                })
+            );
+        });
+    if (0 !== C.length)
         try {
-            c.h.dispatch({ type: "STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH", collectionIds: T, includePricing: d });
+            n.h.dispatch({ type: "STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH", collectionIds: C, includePricing: d });
             let e = await (0, o.aP)({
                 url: s.Rsh.STOREFRONT_COLLECTIONS_WITH_PRODUCTS,
                 query: {
-                    collection_ids: T,
+                    collection_ids: C,
                     locale: r.default.locale,
                     with_bundled_skus: !0,
                     include_pricing: d,
@@ -42,17 +46,17 @@ async function a(e) {
                 },
                 rejectWithError: !0,
             });
-            c.h.dispatch({
+            n.h.dispatch({
                 type: "STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_SUCCESS",
-                collectionIds: T,
+                collectionIds: C,
                 collections: e.body.collections.map(_.A.fromServer),
                 includePricing: d,
             });
         } catch (e) {
-            c.h.dispatch({
+            n.h.dispatch({
                 type: "STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_FAILURE",
-                collectionIds: T,
-                apiError: new n.A(e),
+                collectionIds: C,
+                apiError: new c.A(e),
             });
         }
 }
@@ -60,10 +64,10 @@ function O(e) {
     let {
         applicationId: t,
         useShopOrdering: l = !0,
-        includeUnpublishedProducts: c = !1,
-        includeUnpublishedCollections: n = !1,
+        includeUnpublishedProducts: n = !1,
+        includeUnpublishedCollections: c = !1,
     } = e;
-    return `${t}:${l}:${c}:${n}`;
+    return `${t}:${l}:${n}:${c}`;
 }
 function d(e) {
     return `${O(e)}:${e.offset}:${e.limit}`;
@@ -90,7 +94,7 @@ async function T(e) {
         if (Date.now() - I <= e) return;
     }
     try {
-        c.h.dispatch({ type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH", pageKey: S });
+        n.h.dispatch({ type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH", pageKey: S });
         let e = await (0, o.aP)({
             url: s.Rsh.STOREFRONT_COLLECTIONS_FOR_APPLICATION,
             query: {
@@ -108,7 +112,7 @@ async function T(e) {
             },
             rejectWithError: !0,
         });
-        c.h.dispatch({
+        n.h.dispatch({
             type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_SUCCESS",
             pageKey: S,
             listKey: A,
@@ -117,10 +121,10 @@ async function T(e) {
             total: e.body.total,
         });
     } catch (e) {
-        c.h.dispatch({
+        n.h.dispatch({
             type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_FAILURE",
             pageKey: S,
-            apiError: new n.A(e),
+            apiError: new c.A(e),
         });
     }
 }
@@ -128,11 +132,11 @@ function C(e) {
     let {
         applicationId: t,
         anchorCollectionId: l,
-        limit: c,
-        includeUnpublishedProducts: n = !1,
+        limit: n,
+        includeUnpublishedProducts: c = !1,
         includeUnpublishedCollections: r = !1,
     } = e;
-    return `${t}:after:${l}:${c}:${n}:${r}`;
+    return `${t}:after:${l}:${n}:${c}:${r}`;
 }
 async function E(e) {
     let {
@@ -153,7 +157,7 @@ async function E(e) {
         if (Date.now() - F <= e) return;
     }
     try {
-        c.h.dispatch({ type: "STOREFRONT_COLLECTIONS_AFTER_FETCH", requestKey: E });
+        n.h.dispatch({ type: "STOREFRONT_COLLECTIONS_AFTER_FETCH", requestKey: E });
         let e = await (0, o.aP)({
             url: s.Rsh.STOREFRONT_COLLECTIONS_FOR_APPLICATION,
             query: {
@@ -171,13 +175,13 @@ async function E(e) {
             },
             rejectWithError: !0,
         });
-        c.h.dispatch({
+        n.h.dispatch({
             type: "STOREFRONT_COLLECTIONS_AFTER_FETCH_SUCCESS",
             requestKey: E,
             collections: e.body.collections.map(_.A.fromServer),
         });
     } catch (e) {
-        c.h.dispatch({ type: "STOREFRONT_COLLECTIONS_AFTER_FETCH_FAILURE", requestKey: E, apiError: new n.A(e) });
+        n.h.dispatch({ type: "STOREFRONT_COLLECTIONS_AFTER_FETCH_FAILURE", requestKey: E, apiError: new c.A(e) });
     }
 }
 async function h(e) {
@@ -210,7 +214,7 @@ async function h(e) {
         }
     }
     try {
-        c.h.dispatch({ type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH", applicationId: t });
+        n.h.dispatch({ type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH", applicationId: t });
         let e = await (0, o.aP)({
             url: s.Rsh.STOREFRONT_COLLECTIONS_FOR_APPLICATION,
             query: {
@@ -226,7 +230,7 @@ async function h(e) {
             },
             rejectWithError: !0,
         });
-        c.h.dispatch({
+        n.h.dispatch({
             type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_SUCCESS",
             applicationId: t,
             collections: e.body.collections.map(_.A.fromServer),
@@ -234,10 +238,10 @@ async function h(e) {
             skuTypes: d,
         });
     } catch (e) {
-        c.h.dispatch({
+        n.h.dispatch({
             type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_FAILURE",
             applicationId: t,
-            apiError: new n.A(e),
+            apiError: new c.A(e),
         });
     }
 }
