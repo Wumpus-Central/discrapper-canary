@@ -1273,10 +1273,16 @@ class ea extends o.G {
             { no: 2, name: "trinket_animation_url", kind: "scalar", T: 9 },
             { no: 3, name: "trinket_glow_animation_url", kind: "scalar", T: 9 },
             { no: 4, name: "gradient", kind: "message", T: () => w.H },
+            { no: 5, name: "trinket_rive_animation_url", kind: "scalar", T: 9 },
         ]);
     }
     create(e) {
-        let t = { boxAnimationUrl: "", trinketAnimationUrl: "", trinketGlowAnimationUrl: "" };
+        let t = {
+            boxAnimationUrl: "",
+            trinketAnimationUrl: "",
+            trinketGlowAnimationUrl: "",
+            trinketRiveAnimationUrl: "",
+        };
         return (
             globalThis.Object.defineProperty(t, l.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, s.x)(this, t, e),
@@ -1301,6 +1307,9 @@ class ea extends o.G {
                 case 4:
                     r.gradient = w.H.internalBinaryRead(e, e.uint32(), n, r.gradient);
                     break;
+                case 5:
+                    r.trinketRiveAnimationUrl = e.string();
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -1315,7 +1324,8 @@ class ea extends o.G {
         ("" !== e.boxAnimationUrl && t.tag(1, a.O0.LengthDelimited).string(e.boxAnimationUrl),
             "" !== e.trinketAnimationUrl && t.tag(2, a.O0.LengthDelimited).string(e.trinketAnimationUrl),
             "" !== e.trinketGlowAnimationUrl && t.tag(3, a.O0.LengthDelimited).string(e.trinketGlowAnimationUrl),
-            e.gradient && w.H.internalBinaryWrite(e.gradient, t.tag(4, a.O0.LengthDelimited).fork(), n).join());
+            e.gradient && w.H.internalBinaryWrite(e.gradient, t.tag(4, a.O0.LengthDelimited).fork(), n).join(),
+            "" !== e.trinketRiveAnimationUrl && t.tag(5, a.O0.LengthDelimited).string(e.trinketRiveAnimationUrl));
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? a.f$.onWrite : i)(this.typeName, e, t), t);
     }

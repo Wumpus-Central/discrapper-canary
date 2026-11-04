@@ -1,29 +1,33 @@
-(a.d(e, { K: () => f }), a(321073));
+(a.d(e, { K: () => v }), a(321073));
 var n = a(477900);
 a(582128);
 var t = a(192308),
-    i = a(294454),
-    d = a(118517),
-    o = a(734057),
-    r = a(31717),
-    s = a(596344),
-    c = a(518960),
-    u = a(489496),
-    h = a(132319),
-    m = a(589553),
-    g = a(696016);
-async function f(l, e) {
-    let { channelId: f, analyticsLocations: C, messageReference: p, povTargetInformation: v, onShared: _ } = e,
-        I = o.A.getChannel(f);
-    if (null != I) {
-        if (null != p) {
-            let l = s.A.getMessage(p.channel_id, p.message_id);
-            null != l && (0, d.Yf)({ message: l, channel: I, shouldMention: !1, showMentionToggle: !1 });
+    i = a(858899),
+    d = a(294454),
+    o = a(118517),
+    r = a(734057),
+    s = a(31717),
+    c = a(596344),
+    u = a(518960),
+    h = a(341923),
+    m = a(489496),
+    g = a(132319),
+    f = a(589553),
+    C = a(696016),
+    p = a(792996);
+async function v(l, e) {
+    let { channelId: v, analyticsLocations: _, messageReference: I, povTargetInformation: w, onShared: A } = e,
+        K = r.A.getChannel(v);
+    if (null != K) {
+        if (null != I) {
+            let l = c.A.getMessage(I.channel_id, I.message_id);
+            null != l && (0, o.Yf)({ message: l, channel: K, shouldMention: !1, showMentionToggle: !1 });
         }
+        let e = (0, h.s)();
         try {
-            let e = [],
-                a = [];
-            for (let n of l) {
+            let a = [],
+                n = [];
+            for (let t of l) {
                 let l = (function (l, e) {
                         if (null == e || null == l.syncTimestamp) return l;
                         let { duration: a, syncTimestamp: n } = e,
@@ -44,24 +48,24 @@ async function f(l, e) {
                                   },
                               }
                             : l;
-                    })(n, v),
-                    t = await (0, u.VO)(l, { analyticsLocations: C, isTemporaryEdit: l !== n }),
-                    i = (0, m.A)(l, l.type === g.nQ.SCREENSHOT ? "jpeg" : "mp4");
-                switch (n.type) {
-                    case g.nQ.CLIP:
-                    case g.nQ.VOICE_CLIP:
-                        (e.push(new File([t], i, { type: "video/mp4" })), a.push({ clip: (0, h.J)(l) }));
+                    })(t, w),
+                    i = await (0, m.VO)(l, { analyticsLocations: _, watermark: e, isTemporaryEdit: l !== t }),
+                    d = (0, f.A)(l, l.type === C.nQ.SCREENSHOT ? "jpeg" : "mp4");
+                switch (t.type) {
+                    case C.nQ.CLIP:
+                    case C.nQ.VOICE_CLIP:
+                        (a.push(new File([i], d, { type: "video/mp4" })), n.push({ clip: (0, g.J)(l) }));
                         break;
-                    case g.nQ.SCREENSHOT:
-                        (e.push(new File([t], i, { type: "image/jpeg" })), a.push({}));
+                    case C.nQ.SCREENSHOT:
+                        (a.push(new File([i], d, { type: "image/jpeg" })), n.push({}));
                         break;
                     default:
-                        n.type;
+                        t.type;
                 }
             }
-            ((0, c.R)(e, I, r.C.ChannelMessage, { filesMetadata: a, origin: "unknown:clip_share" }), _?.(), t.s7());
+            ((0, u.R)(a, K, s.C.ChannelMessage, { filesMetadata: n, origin: "unknown:clip_share" }), A?.(), t.s7());
         } catch (l) {
-            throw (g.GU.error(l), l);
+            throw (C.GU.error(l), e && (0, i.P0)({ text: p.intl.string(p.t.iufib1), variant: "critical" }), l);
         }
     } else
         (0, t.mM)(
@@ -230,8 +234,8 @@ async function f(l, e) {
                     a.e(895008),
                     a.e(92871),
                 ]).then(a.bind(a, 243258));
-                return (a) => (0, n.jsx)(e, { ...a, clips: l, analyticsLocations: C, onShared: _ });
+                return (a) => (0, n.jsx)(e, { ...a, clips: l, analyticsLocations: _, onShared: A });
             },
-            { stackingBehavior: "stack", modalKey: i.aU },
+            { stackingBehavior: "stack", modalKey: d.aU },
         );
 }

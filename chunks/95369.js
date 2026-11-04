@@ -8,8 +8,8 @@ t.d(
             let {
                 giftRecipient: n,
                 onClose: a,
-                analyticsLocations: o,
-                analyticsLocation: r,
+                analyticsLocations: r,
+                analyticsLocation: o,
                 analyticsObject: s,
                 giftMessage: u,
             } = e;
@@ -359,7 +359,6 @@ t.d(
                         t.e(912773),
                         t.e(180657),
                         t.e(35403),
-                        t.e(205610),
                         t.e(68904),
                         t.e(796867),
                         t.e(919307),
@@ -472,8 +471,8 @@ t.d(
                         (0, i.jsx)(e, {
                             ...t,
                             giftRecipient: n,
-                            analyticsLocations: o,
-                            analyticsLocation: r,
+                            analyticsLocations: r,
+                            analyticsLocation: o,
                             analyticsObject: s,
                             giftMessage: u,
                         });

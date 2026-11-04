@@ -96,6 +96,7 @@ n.d(
         $D: b,
         A_: "killIds",
         CN: 0x3c0000000,
+        DX: 40 / 608,
         EC: { none: 0, small: 0.02, medium: 0.05, large: 0.1 },
         Ew: function (e) {
             let t = (((15 * Math.round(e / 15)) % 360) + 360) % 360;
@@ -106,12 +107,14 @@ n.d(
         GU: C,
         Gy: L,
         Hz: G,
+        I4: "clip-share-watermark",
         LX: T,
         Me: U,
         Mu: "clips_player",
         P4: S,
         QK: { fontSize: 0.06, color: "#FFFFFF", strokeWidth: "none", strokeColor: "#000000" },
         QY: M,
+        Qh: 0.21875,
         Qw: function (e, t) {
             return Math.max(0.02, Math.min(0.35, (0.5 * e) / t));
         },
@@ -119,6 +122,7 @@ n.d(
         SC: ".autoclip-cache",
         UY: w,
         Vi: N,
+        Yj: 213 / 1080,
         _1: function (e) {
             if (e?.bounds != null) return e.bounds;
             let t = M(e?.preset);
@@ -126,6 +130,7 @@ n.d(
         },
         _9: ["image/png", "image/jpeg", "image/webp"],
         _S: { x: 0.5, y: 0.5 },
+        b1: 24 / 1080,
         cM: (e) => `Clip - ${new Date(e).toLocaleString()}`,
         gC: R,
         k9: D,
@@ -142,6 +147,7 @@ n.d(
         sc: /(NVIDIA GeForce (RTX (20|30|40|50).*))|(.*Radeon RX (57|58|59|6|7|9).*)/,
         ut: O,
         w6: "image/webp",
+        xv: "#00000024",
         yz: P,
     },
 );

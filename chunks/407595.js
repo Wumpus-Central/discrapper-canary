@@ -116,7 +116,7 @@ let h = (0, N.D)(() => ({
     userStateByType: new Map(),
     localeOverride: null,
 }));
-function P(e) {
+function v(e) {
     let t = h.useField("componentRowsByType"),
         n = h.useField("userStateByType"),
         o = h.useField("localeOverride");
@@ -176,7 +176,7 @@ function P(e) {
         [t, n, o, e],
     );
 }
-function v() {
+function P() {
     let e = h.useField("selected"),
         [t] = i.useState(() => new Date(Date.now() + 6048e5));
     return e?.endDate ?? t;
@@ -292,7 +292,7 @@ let w = "playground-announcement-modal",
         name: "Announcement Modal",
         id: "announcement-modal",
         component: function (e) {
-            let t = P(p.C.ANNOUNCEMENT_MODAL),
+            let t = v(p.C.ANNOUNCEMENT_MODAL),
                 o =
                     t?.properties.oneofKind === "announcementModalVariant1"
                         ? t.properties.announcementModalVariant1
@@ -424,7 +424,7 @@ let w = "playground-announcement-modal",
         },
         ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.ANNOUNCEMENT_MODAL }),
         useDefaultOverrides: () => {
-            let e = P(p.C.ANNOUNCEMENT_MODAL),
+            let e = v(p.C.ANNOUNCEMENT_MODAL),
                 t =
                     e?.properties.oneofKind === "announcementModalVariant1"
                         ? e.properties.announcementModalVariant1
@@ -493,10 +493,10 @@ let q = "playground-billing-settings-banner",
             let t,
                 n,
                 o,
-                l = P(p.C.BILLING_SETTINGS_BANNER),
+                l = v(p.C.BILLING_SETTINGS_BANNER),
                 a = l?.properties.oneofKind === "billingSettingsBanner" ? l.properties.billingSettingsBanner : null,
                 r = h.useField("selected"),
-                i = v(),
+                i = P(),
                 d = z.A.createFromServer(
                     j(
                         q,
@@ -540,7 +540,7 @@ let q = "playground-billing-settings-banner",
         },
         ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.BILLING_SETTINGS_BANNER }),
         useDefaultOverrides: () => {
-            let e = P(p.C.BILLING_SETTINGS_BANNER),
+            let e = v(p.C.BILLING_SETTINGS_BANNER),
                 t = e?.properties.oneofKind === "billingSettingsBanner" ? e.properties.billingSettingsBanner : null;
             return null == t
                 ? null
@@ -636,7 +636,7 @@ var eu = n(307069),
     ep = n(95701);
 function ec(e) {
     let { id: t, component_type: n, promotion_id: o, properties: l } = e,
-        a = v().getTime();
+        a = P().getTime();
     i.useEffect(() => {
         ((0, s.Ak)(),
             et.h.dispatch({
@@ -674,13 +674,13 @@ function eC() {}
 let eO = "playground-gift-reminder-nagbar";
 var eR = n(670474),
     eh = n(371764);
-let eP = {
+let ev = {
     name: "Marketing Page Banner",
     id: "marketing-page-banner",
     component: function (e) {
         let t,
             n,
-            o = P(p.C.MARKETING_PAGE_BANNER),
+            o = v(p.C.MARKETING_PAGE_BANNER),
             l = o?.properties.oneofKind === "marketingPageBanner" ? o.properties.marketingPageBanner : null,
             a =
                 ((t = e.showButton
@@ -712,7 +712,7 @@ let eP = {
     },
     ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.MARKETING_PAGE_BANNER }),
     useDefaultOverrides: () => {
-        let e = P(p.C.MARKETING_PAGE_BANNER),
+        let e = v(p.C.MARKETING_PAGE_BANNER),
             t = e?.properties.oneofKind === "marketingPageBanner" ? e.properties.marketingPageBanner : null;
         return null == t
             ? null
@@ -762,7 +762,7 @@ let eP = {
         },
     },
 };
-var ev = n(754804);
+var eP = n(754804);
 let eM = "playground-nagbar";
 var eL = n(834730),
     ex = n(709870),
@@ -848,7 +848,7 @@ let e0 = "playground-premium-tab-popover",
                     navigableStorefrontApplicationId: s,
                     assetUrl: c,
                 } = e,
-                m = P(p.C.PREMIUM_TAB_POPOVER),
+                m = v(p.C.PREMIUM_TAB_POPOVER),
                 _ = m?.properties.oneofKind === "premiumTabPopover" ? m.properties.premiumTabPopover : null;
             ec(
                 ((n = {
@@ -892,7 +892,7 @@ let e0 = "playground-premium-tab-popover",
         },
         ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.PREMIUM_TAB_POPOVER }),
         useDefaultOverrides: () => {
-            let e = P(p.C.PREMIUM_TAB_POPOVER),
+            let e = v(p.C.PREMIUM_TAB_POPOVER),
                 t = e?.properties.oneofKind === "premiumTabPopover" ? e.properties.premiumTabPopover : null;
             return null == t
                 ? null
@@ -978,7 +978,7 @@ let tl = {
                 to("Premium Surfaces", [
                     W,
                     Z,
-                    eP,
+                    ev,
                     {
                         name: "Nagbar",
                         id: "nagbar",
@@ -987,7 +987,7 @@ let tl = {
                             let n,
                                 o,
                                 { body: l, ctaLabel: a, helpArticleId: r } = e,
-                                i = P(p.C.NAGBAR),
+                                i = v(p.C.NAGBAR),
                                 d = i?.properties.oneofKind === "nagbar" ? i.properties.nagbar : null;
                             return (
                                 ec(
@@ -1016,12 +1016,12 @@ let tl = {
                                     })),
                                     j(eM, p.C.NAGBAR, "playground-nagbar-promotion", o)),
                                 ),
-                                (0, u.jsx)("div", { className: K.MT, children: (0, u.jsx)(ev.A, {}) })
+                                (0, u.jsx)("div", { className: K.MT, children: (0, u.jsx)(eP.A, {}) })
                             );
                         },
                         ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.NAGBAR }),
                         useDefaultOverrides: () => {
-                            let e = P(p.C.NAGBAR),
+                            let e = v(p.C.NAGBAR),
                                 t = e?.properties.oneofKind === "nagbar" ? e.properties.nagbar : null;
                             return null == t
                                 ? null
@@ -1089,7 +1089,7 @@ let tl = {
                         id: "payment-modal-banner",
                         component: function (e) {
                             let { body: t, assetUrl: n } = e,
-                                o = P(p.C.PAYMENT_MODAL_BANNER);
+                                o = v(p.C.PAYMENT_MODAL_BANNER);
                             ec(
                                 (function (e, t) {
                                     let { body: n, assetUrl: o } = e,
@@ -1124,7 +1124,7 @@ let tl = {
                         },
                         ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.PAYMENT_MODAL_BANNER }),
                         useDefaultOverrides: () => {
-                            let e = P(p.C.PAYMENT_MODAL_BANNER),
+                            let e = v(p.C.PAYMENT_MODAL_BANNER),
                                 t =
                                     e?.properties.oneofKind === "paymentModalBanner"
                                         ? e.properties.paymentModalBanner
@@ -1145,7 +1145,7 @@ let tl = {
                         id: "plan-select-card-banner",
                         component: function (e) {
                             let { body: t, assetUrl: n } = e,
-                                o = P(p.C.PLAN_SELECT_CARD_BANNER);
+                                o = v(p.C.PLAN_SELECT_CARD_BANNER);
                             ec(
                                 (function (e, t) {
                                     let { body: n, assetUrl: o } = e,
@@ -1179,7 +1179,7 @@ let tl = {
                         },
                         ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.PLAN_SELECT_CARD_BANNER }),
                         useDefaultOverrides: () => {
-                            let e = P(p.C.PLAN_SELECT_CARD_BANNER),
+                            let e = v(p.C.PLAN_SELECT_CARD_BANNER),
                                 t =
                                     e?.properties.oneofKind === "planSelectCardBanner"
                                         ? e.properties.planSelectCardBanner
@@ -1215,7 +1215,7 @@ let tl = {
                         },
                         ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.PREMIUM_TAB }),
                         useDefaultOverrides: () => {
-                            let e = P(p.C.PREMIUM_TAB),
+                            let e = v(p.C.PREMIUM_TAB),
                                 t = e?.properties.oneofKind === "premiumTab" ? e.properties.premiumTab : null;
                             return null == t
                                 ? null
@@ -1243,7 +1243,7 @@ let tl = {
                             let n,
                                 o,
                                 { header: l, body: a, assetUrl: r } = e,
-                                i = P(p.C.PREMIUM_TAB_TOOLTIP),
+                                i = v(p.C.PREMIUM_TAB_TOOLTIP),
                                 d =
                                     i?.properties.oneofKind === "premiumTabTooltip"
                                         ? i.properties.premiumTabTooltip
@@ -1266,7 +1266,7 @@ let tl = {
                         },
                         ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.PREMIUM_TAB_TOOLTIP }),
                         useDefaultOverrides: () => {
-                            let e = P(p.C.PREMIUM_TAB_TOOLTIP),
+                            let e = v(p.C.PREMIUM_TAB_TOOLTIP),
                                 t =
                                     e?.properties.oneofKind === "premiumTabTooltip"
                                         ? e.properties.premiumTabTooltip
@@ -1296,7 +1296,7 @@ let tl = {
                             let n,
                                 o,
                                 { body: l, ctaLabel: a, helpArticleId: r } = e,
-                                i = P(p.C.SHOP_NAGBAR),
+                                i = v(p.C.SHOP_NAGBAR),
                                 d = i?.properties.oneofKind === "shopNagbar" ? i.properties.shopNagbar : null;
                             ec(
                                 ((n = {
@@ -1344,7 +1344,7 @@ let tl = {
                         },
                         ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.SHOP_NAGBAR }),
                         useDefaultOverrides: () => {
-                            let e = P(p.C.SHOP_NAGBAR),
+                            let e = v(p.C.SHOP_NAGBAR),
                                 t = e?.properties.oneofKind === "shopNagbar" ? e.properties.shopNagbar : null;
                             return null == t
                                 ? null
@@ -1367,7 +1367,7 @@ let tl = {
                         id: "billing-settings-nitro-gift-banner",
                         component: function (e) {
                             let t,
-                                n = P(p.C.BILLING_SETTINGS_NITRO_GIFT_BANNER),
+                                n = v(p.C.BILLING_SETTINGS_NITRO_GIFT_BANNER),
                                 o =
                                     n?.properties.oneofKind === "billingSettingsNitroGiftBanner"
                                         ? n.properties.billingSettingsNitroGiftBanner
@@ -1395,7 +1395,7 @@ let tl = {
                         ControlsExtension: () =>
                             (0, u.jsx)(B, { componentType: p.C.BILLING_SETTINGS_NITRO_GIFT_BANNER }),
                         useDefaultOverrides: () => {
-                            let e = P(p.C.BILLING_SETTINGS_NITRO_GIFT_BANNER),
+                            let e = v(p.C.BILLING_SETTINGS_NITRO_GIFT_BANNER),
                                 t =
                                     e?.properties.oneofKind === "billingSettingsNitroGiftBanner"
                                         ? e.properties.billingSettingsNitroGiftBanner
@@ -1452,7 +1452,7 @@ let tl = {
                         id: "gift-customization-banner",
                         component: function (e) {
                             let { analyticsLocations: t } = (0, eo.Ay)(en.A.PAYMENT_FLOW_TEST_PAGE),
-                                n = P(p.C.GIFT_CUSTOMIZATION_BANNER),
+                                n = v(p.C.GIFT_CUSTOMIZATION_BANNER),
                                 o =
                                     n?.properties.oneofKind === "giftCustomizationBanner"
                                         ? n.properties.giftCustomizationBanner
@@ -1528,7 +1528,7 @@ let tl = {
                         },
                         ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.GIFT_CUSTOMIZATION_BANNER }),
                         useDefaultOverrides: () => {
-                            let e = P(p.C.GIFT_CUSTOMIZATION_BANNER),
+                            let e = v(p.C.GIFT_CUSTOMIZATION_BANNER),
                                 t =
                                     e?.properties.oneofKind === "giftCustomizationBanner"
                                         ? e.properties.giftCustomizationBanner
@@ -1573,7 +1573,7 @@ let tl = {
                         component: function (e) {
                             let t,
                                 n,
-                                o = P(p.C.GIFT_ICON),
+                                o = v(p.C.GIFT_ICON),
                                 l = o?.properties.oneofKind === "giftIcon" ? o.properties.giftIcon : null;
                             return (
                                 ec(
@@ -1583,6 +1583,7 @@ let tl = {
                                             "https://cdn.discordapp.com/assets/content/2587f697fb8e499a331c465aee4b37ae2b233d4a21ce130ef9a3032c1455f1c4.lottiejson",
                                         trinketGlowAnimationUrl:
                                             "https://cdn.discordapp.com/assets/content/a08eb1072a1016a58c1e5e3d92a9476900d8e8370a29c33c686c39ec9d333fb7.lottiejson",
+                                        trinketRiveAnimationUrl: "",
                                         gradient: {
                                             colors: [e.gradientStartColor, e.gradientEndColor],
                                             angle: e.gradientAngle,
@@ -1596,7 +1597,7 @@ let tl = {
                         },
                         ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.GIFT_ICON }),
                         useDefaultOverrides: () => {
-                            let e = P(p.C.GIFT_ICON),
+                            let e = v(p.C.GIFT_ICON),
                                 t = e?.properties.oneofKind === "giftIcon" ? e.properties.giftIcon : null;
                             if (null == t) return null;
                             let n = t.gradient?.colors ?? [];
@@ -1622,7 +1623,7 @@ let tl = {
                         name: "Gift Icon Coachmark",
                         id: "gift-icon-coachmark",
                         component: function (e) {
-                            let t = P(p.C.GIFT_ICON_COACHMARK),
+                            let t = v(p.C.GIFT_ICON_COACHMARK),
                                 n =
                                     t?.properties.oneofKind === "giftIconCoachmark"
                                         ? t.properties.giftIconCoachmark
@@ -1642,7 +1643,7 @@ let tl = {
                         },
                         ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.GIFT_ICON_COACHMARK }),
                         useDefaultOverrides: () => {
-                            let e = P(p.C.GIFT_ICON_COACHMARK),
+                            let e = v(p.C.GIFT_ICON_COACHMARK),
                                 t =
                                     e?.properties.oneofKind === "giftIconCoachmark"
                                         ? e.properties.giftIconCoachmark
@@ -1669,7 +1670,7 @@ let tl = {
                         id: "gift-plan-selection-card-banner",
                         component: function (e) {
                             let { analyticsLocations: t } = (0, eo.Ay)(en.A.PAYMENT_FLOW_TEST_PAGE),
-                                n = P(p.C.GIFT_PLAN_SELECTION_CARD_BANNER),
+                                n = v(p.C.GIFT_PLAN_SELECTION_CARD_BANNER),
                                 o =
                                     n?.properties.oneofKind === "giftPlanSelectionCardBanner"
                                         ? n.properties.giftPlanSelectionCardBanner
@@ -1743,7 +1744,7 @@ let tl = {
                         },
                         ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.GIFT_PLAN_SELECTION_CARD_BANNER }),
                         useDefaultOverrides: () => {
-                            let e = P(p.C.GIFT_PLAN_SELECTION_CARD_BANNER),
+                            let e = v(p.C.GIFT_PLAN_SELECTION_CARD_BANNER),
                                 t =
                                     e?.properties.oneofKind === "giftPlanSelectionCardBanner"
                                         ? e.properties.giftPlanSelectionCardBanner
@@ -1789,7 +1790,7 @@ let tl = {
                             let t,
                                 n,
                                 { body: o } = e,
-                                l = P(p.C.GIFT_REMINDER_NAGBAR),
+                                l = v(p.C.GIFT_REMINDER_NAGBAR),
                                 a =
                                     l?.properties.oneofKind === "giftReminderNagbar"
                                         ? l.properties.giftReminderNagbar
@@ -1811,7 +1812,7 @@ let tl = {
                         },
                         ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.GIFT_REMINDER_NAGBAR }),
                         useDefaultOverrides: () => {
-                            let e = P(p.C.GIFT_REMINDER_NAGBAR),
+                            let e = v(p.C.GIFT_REMINDER_NAGBAR),
                                 t =
                                     e?.properties.oneofKind === "giftReminderNagbar"
                                         ? e.properties.giftReminderNagbar

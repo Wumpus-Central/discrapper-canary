@@ -52,7 +52,7 @@ async function c(e) {
                         n.e(420053).then(n.bind(n, 161396)),
                         n.e(758913).then(n.bind(n, 884440)),
                         n.e(114792).then(n.bind(n, 290203)),
-                        n.e(205610).then(n.bind(n, 683825)),
+                        Promise.resolve().then(n.bind(n, 683825)),
                         n.e(142867).then(n.bind(n, 752222)),
                         n.e(114751).then(n.bind(n, 213570)),
                         n.e(602639).then(n.bind(n, 108690)),
