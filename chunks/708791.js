@@ -329,31 +329,33 @@ t.d(
         E1: function (e) {
             let a = (0, f.S)(),
                 { elementsAppearance: t } = (0, p.E)(),
-                { checkoutInvoicePreview: s, isPurchaseDisabled: i } = (0, v.t4)((e) => ({
+                s = (0, T.PU)(),
+                { checkoutInvoicePreview: i, isPurchaseDisabled: h } = (0, v.t4)((e) => ({
                     checkoutInvoicePreview: e.checkoutInvoicePreview,
                     isPurchaseDisabled: e.getIsPurchaseDisabled(),
                 })),
-                h = e.disablePurchase || i,
-                { expressCheckoutType: u, makePurchase: o } = n.useMemo(
-                    () => ({ expressCheckoutType: h ? "vault_only" : e.type, makePurchase: e.makePurchase ?? L.tEg }),
-                    [e.makePurchase, e.type, h],
+                u = e.disablePurchase || h,
+                { expressCheckoutType: o, makePurchase: c } = n.useMemo(
+                    () => ({ expressCheckoutType: u ? "vault_only" : e.type, makePurchase: e.makePurchase ?? L.tEg }),
+                    [e.makePurchase, e.type, u],
                 ),
-                c = n.useMemo(() => {
-                    if (null == s) return null;
-                    let e = s.getAmountDue();
+                d = n.useMemo(() => {
+                    if (null == i) return null;
+                    let e = i.getAmountDue();
                     return {
                         paymentMethodCreation: "manual",
-                        ...("vault_only" === u || e <= 0 ? { mode: "setup" } : { mode: "payment", amount: e }),
-                        currency: String(s.currency).toLowerCase(),
+                        ...("vault_only" === o || e <= 0 ? { mode: "setup" } : { mode: "payment", amount: e }),
+                        currency: String(i.currency).toLowerCase(),
+                        locale: s,
                         appearance: { ...t, variables: { ...t.variables, borderRadius: "8px" } },
                     };
-                }, [s, t, u]);
-            return null == a || null == c
+                }, [i, t, o, s]);
+            return null == a || null == d
                 ? null
                 : (0, l.jsx)(r.Elements, {
                       stripe: a,
-                      options: c,
-                      children: (0, l.jsx)(O, { ...e, type: u, makePurchase: o, disablePurchase: h }),
+                      options: d,
+                      children: (0, l.jsx)(O, { ...e, type: o, makePurchase: c, disablePurchase: u }),
                   });
         },
         Zr: function (e) {

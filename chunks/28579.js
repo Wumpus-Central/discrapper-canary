@@ -166,8 +166,9 @@ let H = l.memo(function (e) {
                     a.e(421060),
                     a.e(697367),
                     a.e(699011),
+                    a.e(536478),
                     a.e(703869),
-                    a.e(51212),
+                    a.e(426760),
                     a.e(420105),
                 ]).then(a.bind(a, 949488));
                 return (t) => (0, s.jsx)(e, { ...t, channel: c });
