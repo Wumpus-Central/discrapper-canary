@@ -1,4 +1,4 @@
-n.d(t, { y: () => b });
+n.d(t, { y: () => C });
 var i = n(477900),
     s = n(582128);
 if (221552 == n.j) var a = n(683063);
@@ -20,12 +20,12 @@ var f = n(780964),
     v = n(137005),
     k = n(792996),
     y = n(22579);
-function E(e) {
+function b(e) {
     let { channel: t, targetElementRef: n, position: s } = e,
         { visible: a, markAsDismissed: r } = (0, x.v)(t, "member_coachmark");
-    return a ? (0, i.jsx)(N, { guildId: t.guild_id, targetElementRef: n, position: s, markAsDismissed: r }) : null;
+    return a ? (0, i.jsx)(E, { guildId: t.guild_id, targetElementRef: n, position: s, markAsDismissed: r }) : null;
 }
-function N(e) {
+function E(e) {
     let { guildId: t, targetElementRef: n, position: a, markAsDismissed: r } = e;
     function x(e) {
         ("user:explicit" === e || "user:escape" === e) &&
@@ -60,7 +60,6 @@ function N(e) {
                                 text: k.intl.string(v.default.eJZ8MS),
                                 onClick: function () {
                                     ((0, A.Yy)({ noticeType: "member_coachmark", guildId: t }, "open_settings"),
-                                        r(j.i.TAKE_ACTION),
                                         (0, g.openUserSettings)(f.X.DATA_AND_PRIVACY_PANEL));
                                 },
                             },
@@ -72,7 +71,6 @@ function N(e) {
                                     variant: "primary",
                                     onClick: function () {
                                         ((0, A.Yy)({ noticeType: "member_coachmark", guildId: t }, "learn_more"),
-                                            r(j.i.TAKE_ACTION),
                                             window.open(
                                                 _.A.getArticleURL(h.MVz.DISCOVERABLE_CONTENT_ON_THE_WEB),
                                                 "_blank",
@@ -89,26 +87,26 @@ function N(e) {
         })
     );
 }
-var C = n(948115);
-function b(e) {
+var N = n(948115);
+function C(e) {
     let { channel: t } = e,
         n = s.useRef(null),
         o = k.intl.string(v.default.uneDIi);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)("span", { className: C.O, "aria-hidden": !0 }),
+            (0, i.jsx)("span", { className: N.O, "aria-hidden": !0 }),
             (0, i.jsx)(a.u, {
                 title: o,
                 body: k.intl.string(v.default["01KOls"]),
                 position: "bottom",
                 children: (0, i.jsx)("span", {
                     ref: n,
-                    className: C.P,
+                    className: N.P,
                     tabIndex: 0,
                     children: (0, i.jsx)(r.E, { variant: "body-sm/medium", color: "text-muted", children: o }),
                 }),
             }),
-            (0, i.jsx)(E, { channel: t, targetElementRef: n, position: "bottom" }),
+            (0, i.jsx)(b, { channel: t, targetElementRef: n, position: "bottom" }),
         ],
     });
 }
