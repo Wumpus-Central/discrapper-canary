@@ -1,26 +1,28 @@
 t.d(e, { R: () => i });
 var r = t(477900);
 t(582128);
-let c =
+let d =
     "https://cdn.discordapp.com/assets/content/905fd829443af468087dff86c879838d5fc2dba35ccdaa856f6481b1af1d5c74.riv";
-var d = t(857973),
+var c = t(729901),
     n = t(799226);
 let s = { Wumpus: {}, Background: {} },
-    u = { Wumpus: ["Auto Generated State Machine"], Background: ["State Machine_ALT", "State Machine 1"] };
+    u = { Wumpus: [], Background: [] },
+    o = { Wumpus: ["Auto Generated State Machine"], Background: ["State Machine_ALT", "State Machine 1"] };
 function i(a) {
     let { artboard: e = "Wumpus", stateMachine: t, ...i } = a,
-        { status: o, buffer: p } = (0, n.CE)(c),
-        b = (0, n.m2)(c);
-    return o === n.BW.Loading
+        { status: p, buffer: b } = (0, n.CE)(d),
+        f = (0, n.m2)(d);
+    return p === n.BW.Loading
         ? null
-        : (0, r.jsx)(d.w, {
-              ...(b ? { key: "override" } : {}),
-              buffer: p,
+        : (0, r.jsx)(c.w, {
+              ...(f ? { key: "override" } : {}),
+              buffer: b,
               artboard: e,
               stateMachine: t,
               artboardProperties: s,
-              artboardStateMachines: u,
+              artboardViewModelInstances: u,
+              artboardStateMachines: o,
               ...i,
           });
 }
-i.riveSrc = c;
+i.riveSrc = d;

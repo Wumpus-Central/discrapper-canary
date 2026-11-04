@@ -1,29 +1,31 @@
-(i(393431), i(532706), i(42231), i(232424), i(949626), i(767709), i(65162));
-var n = i(477900),
-    a = i(582128),
-    e = i(799226),
-    s = i(857973);
-i.d(
-    t,
+(t(393431), t(532706), t(42231), t(232424), t(949626), t(767709), t(65162));
+var a = t(477900),
+    i = t(582128),
+    e = t(799226),
+    s = t(270597),
+    d = t(729901);
+t.d(
+    n,
     {},
     {
         _: function (r) {
-            let { src: t, dynamicDataBinding: i, ...o } = r,
-                { status: p, buffer: d } = (0, e.CE)(t),
-                u = a.useMemo(
+            let { src: n, dynamicDataBinding: t, ...o } = r,
+                { status: p, buffer: u } = (0, e.CE)(n),
+                c = i.useMemo(
                     () =>
-                        "string" == typeof t
-                            ? t
-                            : String(t.byteLength) +
+                        "string" == typeof n
+                            ? n
+                            : String(n.byteLength) +
                               "-" +
-                              Array.from(new Uint8Array(t.slice(0, 64)))
+                              Array.from(new Uint8Array(n.slice(0, 64)))
                                   .map((r) => r.toString(16).padStart(2, "0"))
                                   .join(""),
-                    [t],
-                );
+                    [n],
+                ),
+                g = i.useCallback(() => (0, a.jsx)(s.Yn, { dynamicDataBinding: t }), [t]);
             return p === e.BW.Loading
                 ? null
-                : (0, n.jsx)(s.w, { buffer: d, artboardProperties: {}, dynamicDataBinding: i, ...o }, u);
+                : (0, a.jsx)(d.w, { buffer: u, artboardProperties: {}, renderDataBinding: g, ...o }, c);
         },
     },
 );

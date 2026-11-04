@@ -1,26 +1,47 @@
-o.d(c, { V: () => s });
-var a = o(477900);
-o(582128);
+o.d(e, { V: () => b });
+var a = o(477900),
+    c = o(582128);
 let t =
     "https://cdn.discordapp.com/assets/content/bee5073bff85cffaf0f4236456029b067925cd9de6742c5bb582f0ce39f1fa49.riv";
-var r = o(857973),
-    n = o(799226);
-let d = { "Icon Unlock": { reducedMotion: "boolean", locked: "boolean", fill: "color" } },
-    i = { "Icon Unlock": ["State Machine 1"] };
-function s(e) {
-    let { artboard: c = "Icon Unlock", stateMachine: o, ...s } = e,
-        { status: l, buffer: b } = (0, n.CE)(t),
-        f = (0, n.m2)(t);
-    return l === n.BW.Loading
+var l = o(729901),
+    d = o(611361),
+    r = o(799226),
+    i = o(270597);
+let s = { "Icon Unlock": { reducedMotion: "boolean", locked: "boolean", fill: "color" } },
+    u = { "Icon Unlock": ["locked", "unlock"] },
+    f = { "Icon Unlock": ["State Machine 1"] },
+    k = {
+        "Icon Unlock": function (n) {
+            let { dataBinding: e, onDataBindingChange: o } = n,
+                { instance: a, reducedMotionEnabled: c, playIfNeeded: t } = (0, d.o)();
+            return (
+                (0, i.Dr)("reducedMotion", a, e?.reducedMotion ?? c, void 0, t),
+                (0, i.Dr)("locked", a, e?.locked, o?.locked, t),
+                (0, i.QJ)("fill", a, e?.fill, o?.fill, t),
+                null
+            );
+        },
+    };
+function b(n) {
+    let { artboard: e = "Icon Unlock", stateMachine: o, dataBinding: d, onDataBindingChange: i, ...b } = n,
+        { status: h, buffer: p } = (0, r.CE)(t),
+        g = (0, r.m2)(t),
+        M = c.useCallback(() => {
+            let n = k[e];
+            return null == n ? null : (0, a.jsx)(n, { dataBinding: d, onDataBindingChange: i });
+        }, [e, d, i]);
+    return h === r.BW.Loading
         ? null
-        : (0, a.jsx)(r.w, {
-              ...(f ? { key: "override" } : {}),
-              buffer: b,
-              artboard: c,
+        : (0, a.jsx)(l.w, {
+              ...(g ? { key: "override" } : {}),
+              buffer: p,
+              artboard: e,
               stateMachine: o,
-              artboardProperties: d,
-              artboardStateMachines: i,
-              ...s,
+              artboardProperties: s,
+              artboardViewModelInstances: u,
+              artboardStateMachines: f,
+              renderDataBinding: M,
+              ...b,
           });
 }
-s.riveSrc = t;
+b.riveSrc = t;

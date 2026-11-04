@@ -1,11 +1,13 @@
-t.d(a, { m: () => u });
-var i = t(477900);
-t(582128);
+a.d(e, { m: () => c });
+var i = a(477900),
+    o = a(582128);
 let r =
     "https://cdn.discordapp.com/assets/content/944cf05122af903e5091602b52fbd726c5c4956954d3628f659f21040a431c4e.riv";
-var m = t(857973),
-    o = t(799226);
-let g = {
+var g = a(729901),
+    n = a(611361),
+    m = a(799226),
+    u = a(270597);
+let f = {
         MAIN: {
             reducedMotion: "boolean",
             twoFriends: "boolean",
@@ -148,27 +150,478 @@ let g = {
             ConnectorColor: "color",
         },
     },
-    n = {
+    I = {
+        MAIN: ["threeFriends", "twoFriends-reducedMotion", "threeFriends-reducedMotion", "twoFriends"],
+        Sidekick: ["threeFriends", "twoFriends-reducedMotion", "threeFriends-reducedMotion", "twoFriends"],
+        Avatar: ["Instance 03", "Instance 05", "Instance 04", "Instance 02", "Instance 01"],
+        Username: ["Instance 03", "Instance 05", "Instance 04", "Instance 02", "Instance 01"],
+        "Friends 01 Rotation": ["threeFriends", "twoFriends-reducedMotion", "threeFriends-reducedMotion", "twoFriends"],
+    },
+    d = {
         MAIN: ["State Machine 1"],
         Sidekick: ["State Machine 1"],
         Avatar: ["State Machine 1"],
         Username: ["State Machine 1"],
         "Friends 01 Rotation": ["State Machine 1"],
+    },
+    s = {
+        MAIN: function (t) {
+            let { dataBinding: e, onDataBindingChange: a } = t,
+                { instance: i, reducedMotionEnabled: o, playIfNeeded: r } = (0, n.o)();
+            return (
+                (0, u.Dr)("reducedMotion", i, e?.reducedMotion ?? o, void 0, r),
+                (0, u.Dr)("twoFriends", i, e?.twoFriends, a?.twoFriends, r),
+                (0, u.Of)("AnimationState", i, e?.AnimationState, a?.AnimationState, r),
+                (0, u.Of)(
+                    "Avatar01/ShadowVisibility",
+                    i,
+                    e?.["Avatar01/ShadowVisibility"],
+                    a?.["Avatar01/ShadowVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar01/StrokeVisibility",
+                    i,
+                    e?.["Avatar01/StrokeVisibility"],
+                    a?.["Avatar01/StrokeVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar01/UsernameVisibility",
+                    i,
+                    e?.["Avatar01/UsernameVisibility"],
+                    a?.["Avatar01/UsernameVisibility"],
+                    r,
+                ),
+                (0, u.QJ)("Avatar01/Stroke", i, e?.["Avatar01/Stroke"], a?.["Avatar01/Stroke"], r),
+                (0, u.QJ)("Avatar01/Fill", i, e?.["Avatar01/Fill"], a?.["Avatar01/Fill"], r),
+                (0, u.k6)("Avatar01/Username", i, e?.["Avatar01/Username"], a?.["Avatar01/Username"], r),
+                (0, u.SX)("Avatar01/img", i, e?.["Avatar01/img"], a?.["Avatar01/img"], r),
+                (0, u.Of)(
+                    "Avatar02/ShadowVisibility",
+                    i,
+                    e?.["Avatar02/ShadowVisibility"],
+                    a?.["Avatar02/ShadowVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar02/StrokeVisibility",
+                    i,
+                    e?.["Avatar02/StrokeVisibility"],
+                    a?.["Avatar02/StrokeVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar02/UsernameVisibility",
+                    i,
+                    e?.["Avatar02/UsernameVisibility"],
+                    a?.["Avatar02/UsernameVisibility"],
+                    r,
+                ),
+                (0, u.QJ)("Avatar02/Stroke", i, e?.["Avatar02/Stroke"], a?.["Avatar02/Stroke"], r),
+                (0, u.QJ)("Avatar02/Fill", i, e?.["Avatar02/Fill"], a?.["Avatar02/Fill"], r),
+                (0, u.k6)("Avatar02/Username", i, e?.["Avatar02/Username"], a?.["Avatar02/Username"], r),
+                (0, u.SX)("Avatar02/img", i, e?.["Avatar02/img"], a?.["Avatar02/img"], r),
+                (0, u.Of)(
+                    "Avatar03/ShadowVisibility",
+                    i,
+                    e?.["Avatar03/ShadowVisibility"],
+                    a?.["Avatar03/ShadowVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar03/StrokeVisibility",
+                    i,
+                    e?.["Avatar03/StrokeVisibility"],
+                    a?.["Avatar03/StrokeVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar03/UsernameVisibility",
+                    i,
+                    e?.["Avatar03/UsernameVisibility"],
+                    a?.["Avatar03/UsernameVisibility"],
+                    r,
+                ),
+                (0, u.QJ)("Avatar03/Stroke", i, e?.["Avatar03/Stroke"], a?.["Avatar03/Stroke"], r),
+                (0, u.QJ)("Avatar03/Fill", i, e?.["Avatar03/Fill"], a?.["Avatar03/Fill"], r),
+                (0, u.k6)("Avatar03/Username", i, e?.["Avatar03/Username"], a?.["Avatar03/Username"], r),
+                (0, u.SX)("Avatar03/img", i, e?.["Avatar03/img"], a?.["Avatar03/img"], r),
+                (0, u.Of)(
+                    "Avatar04/ShadowVisibility",
+                    i,
+                    e?.["Avatar04/ShadowVisibility"],
+                    a?.["Avatar04/ShadowVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar04/StrokeVisibility",
+                    i,
+                    e?.["Avatar04/StrokeVisibility"],
+                    a?.["Avatar04/StrokeVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar04/UsernameVisibility",
+                    i,
+                    e?.["Avatar04/UsernameVisibility"],
+                    a?.["Avatar04/UsernameVisibility"],
+                    r,
+                ),
+                (0, u.QJ)("Avatar04/Stroke", i, e?.["Avatar04/Stroke"], a?.["Avatar04/Stroke"], r),
+                (0, u.QJ)("Avatar04/Fill", i, e?.["Avatar04/Fill"], a?.["Avatar04/Fill"], r),
+                (0, u.k6)("Avatar04/Username", i, e?.["Avatar04/Username"], a?.["Avatar04/Username"], r),
+                (0, u.SX)("Avatar04/img", i, e?.["Avatar04/img"], a?.["Avatar04/img"], r),
+                (0, u.Of)(
+                    "Avatar05/ShadowVisibility",
+                    i,
+                    e?.["Avatar05/ShadowVisibility"],
+                    a?.["Avatar05/ShadowVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar05/StrokeVisibility",
+                    i,
+                    e?.["Avatar05/StrokeVisibility"],
+                    a?.["Avatar05/StrokeVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar05/UsernameVisibility",
+                    i,
+                    e?.["Avatar05/UsernameVisibility"],
+                    a?.["Avatar05/UsernameVisibility"],
+                    r,
+                ),
+                (0, u.QJ)("Avatar05/Stroke", i, e?.["Avatar05/Stroke"], a?.["Avatar05/Stroke"], r),
+                (0, u.QJ)("Avatar05/Fill", i, e?.["Avatar05/Fill"], a?.["Avatar05/Fill"], r),
+                (0, u.k6)("Avatar05/Username", i, e?.["Avatar05/Username"], a?.["Avatar05/Username"], r),
+                (0, u.SX)("Avatar05/img", i, e?.["Avatar05/img"], a?.["Avatar05/img"], r),
+                (0, u.QJ)("ConnectorColor", i, e?.ConnectorColor, a?.ConnectorColor, r),
+                null
+            );
+        },
+        Sidekick: function (t) {
+            let { dataBinding: e, onDataBindingChange: a } = t,
+                { instance: i, reducedMotionEnabled: o, playIfNeeded: r } = (0, n.o)();
+            return (
+                (0, u.Dr)("reducedMotion", i, e?.reducedMotion ?? o, void 0, r),
+                (0, u.Dr)("twoFriends", i, e?.twoFriends, a?.twoFriends, r),
+                (0, u.Of)("AnimationState", i, e?.AnimationState, a?.AnimationState, r),
+                (0, u.Of)(
+                    "Avatar01/ShadowVisibility",
+                    i,
+                    e?.["Avatar01/ShadowVisibility"],
+                    a?.["Avatar01/ShadowVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar01/StrokeVisibility",
+                    i,
+                    e?.["Avatar01/StrokeVisibility"],
+                    a?.["Avatar01/StrokeVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar01/UsernameVisibility",
+                    i,
+                    e?.["Avatar01/UsernameVisibility"],
+                    a?.["Avatar01/UsernameVisibility"],
+                    r,
+                ),
+                (0, u.QJ)("Avatar01/Stroke", i, e?.["Avatar01/Stroke"], a?.["Avatar01/Stroke"], r),
+                (0, u.QJ)("Avatar01/Fill", i, e?.["Avatar01/Fill"], a?.["Avatar01/Fill"], r),
+                (0, u.k6)("Avatar01/Username", i, e?.["Avatar01/Username"], a?.["Avatar01/Username"], r),
+                (0, u.SX)("Avatar01/img", i, e?.["Avatar01/img"], a?.["Avatar01/img"], r),
+                (0, u.Of)(
+                    "Avatar02/ShadowVisibility",
+                    i,
+                    e?.["Avatar02/ShadowVisibility"],
+                    a?.["Avatar02/ShadowVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar02/StrokeVisibility",
+                    i,
+                    e?.["Avatar02/StrokeVisibility"],
+                    a?.["Avatar02/StrokeVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar02/UsernameVisibility",
+                    i,
+                    e?.["Avatar02/UsernameVisibility"],
+                    a?.["Avatar02/UsernameVisibility"],
+                    r,
+                ),
+                (0, u.QJ)("Avatar02/Stroke", i, e?.["Avatar02/Stroke"], a?.["Avatar02/Stroke"], r),
+                (0, u.QJ)("Avatar02/Fill", i, e?.["Avatar02/Fill"], a?.["Avatar02/Fill"], r),
+                (0, u.k6)("Avatar02/Username", i, e?.["Avatar02/Username"], a?.["Avatar02/Username"], r),
+                (0, u.SX)("Avatar02/img", i, e?.["Avatar02/img"], a?.["Avatar02/img"], r),
+                (0, u.Of)(
+                    "Avatar03/ShadowVisibility",
+                    i,
+                    e?.["Avatar03/ShadowVisibility"],
+                    a?.["Avatar03/ShadowVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar03/StrokeVisibility",
+                    i,
+                    e?.["Avatar03/StrokeVisibility"],
+                    a?.["Avatar03/StrokeVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar03/UsernameVisibility",
+                    i,
+                    e?.["Avatar03/UsernameVisibility"],
+                    a?.["Avatar03/UsernameVisibility"],
+                    r,
+                ),
+                (0, u.QJ)("Avatar03/Stroke", i, e?.["Avatar03/Stroke"], a?.["Avatar03/Stroke"], r),
+                (0, u.QJ)("Avatar03/Fill", i, e?.["Avatar03/Fill"], a?.["Avatar03/Fill"], r),
+                (0, u.k6)("Avatar03/Username", i, e?.["Avatar03/Username"], a?.["Avatar03/Username"], r),
+                (0, u.SX)("Avatar03/img", i, e?.["Avatar03/img"], a?.["Avatar03/img"], r),
+                (0, u.Of)(
+                    "Avatar04/ShadowVisibility",
+                    i,
+                    e?.["Avatar04/ShadowVisibility"],
+                    a?.["Avatar04/ShadowVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar04/StrokeVisibility",
+                    i,
+                    e?.["Avatar04/StrokeVisibility"],
+                    a?.["Avatar04/StrokeVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar04/UsernameVisibility",
+                    i,
+                    e?.["Avatar04/UsernameVisibility"],
+                    a?.["Avatar04/UsernameVisibility"],
+                    r,
+                ),
+                (0, u.QJ)("Avatar04/Stroke", i, e?.["Avatar04/Stroke"], a?.["Avatar04/Stroke"], r),
+                (0, u.QJ)("Avatar04/Fill", i, e?.["Avatar04/Fill"], a?.["Avatar04/Fill"], r),
+                (0, u.k6)("Avatar04/Username", i, e?.["Avatar04/Username"], a?.["Avatar04/Username"], r),
+                (0, u.SX)("Avatar04/img", i, e?.["Avatar04/img"], a?.["Avatar04/img"], r),
+                (0, u.Of)(
+                    "Avatar05/ShadowVisibility",
+                    i,
+                    e?.["Avatar05/ShadowVisibility"],
+                    a?.["Avatar05/ShadowVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar05/StrokeVisibility",
+                    i,
+                    e?.["Avatar05/StrokeVisibility"],
+                    a?.["Avatar05/StrokeVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar05/UsernameVisibility",
+                    i,
+                    e?.["Avatar05/UsernameVisibility"],
+                    a?.["Avatar05/UsernameVisibility"],
+                    r,
+                ),
+                (0, u.QJ)("Avatar05/Stroke", i, e?.["Avatar05/Stroke"], a?.["Avatar05/Stroke"], r),
+                (0, u.QJ)("Avatar05/Fill", i, e?.["Avatar05/Fill"], a?.["Avatar05/Fill"], r),
+                (0, u.k6)("Avatar05/Username", i, e?.["Avatar05/Username"], a?.["Avatar05/Username"], r),
+                (0, u.SX)("Avatar05/img", i, e?.["Avatar05/img"], a?.["Avatar05/img"], r),
+                (0, u.QJ)("ConnectorColor", i, e?.ConnectorColor, a?.ConnectorColor, r),
+                null
+            );
+        },
+        Avatar: function (t) {
+            let { dataBinding: e, onDataBindingChange: a } = t,
+                { instance: i, playIfNeeded: o } = (0, n.o)();
+            return (
+                (0, u.Of)("ShadowVisibility", i, e?.ShadowVisibility, a?.ShadowVisibility, o),
+                (0, u.Of)("StrokeVisibility", i, e?.StrokeVisibility, a?.StrokeVisibility, o),
+                (0, u.Of)("UsernameVisibility", i, e?.UsernameVisibility, a?.UsernameVisibility, o),
+                (0, u.QJ)("Stroke", i, e?.Stroke, a?.Stroke, o),
+                (0, u.QJ)("Fill", i, e?.Fill, a?.Fill, o),
+                (0, u.k6)("Username", i, e?.Username, a?.Username, o),
+                (0, u.SX)("img", i, e?.img, a?.img, o),
+                null
+            );
+        },
+        Username: function (t) {
+            let { dataBinding: e, onDataBindingChange: a } = t,
+                { instance: i, playIfNeeded: o } = (0, n.o)();
+            return (
+                (0, u.Of)("ShadowVisibility", i, e?.ShadowVisibility, a?.ShadowVisibility, o),
+                (0, u.Of)("StrokeVisibility", i, e?.StrokeVisibility, a?.StrokeVisibility, o),
+                (0, u.Of)("UsernameVisibility", i, e?.UsernameVisibility, a?.UsernameVisibility, o),
+                (0, u.QJ)("Stroke", i, e?.Stroke, a?.Stroke, o),
+                (0, u.QJ)("Fill", i, e?.Fill, a?.Fill, o),
+                (0, u.k6)("Username", i, e?.Username, a?.Username, o),
+                (0, u.SX)("img", i, e?.img, a?.img, o),
+                null
+            );
+        },
+        "Friends 01 Rotation": function (t) {
+            let { dataBinding: e, onDataBindingChange: a } = t,
+                { instance: i, reducedMotionEnabled: o, playIfNeeded: r } = (0, n.o)();
+            return (
+                (0, u.Dr)("reducedMotion", i, e?.reducedMotion ?? o, void 0, r),
+                (0, u.Dr)("twoFriends", i, e?.twoFriends, a?.twoFriends, r),
+                (0, u.Of)("AnimationState", i, e?.AnimationState, a?.AnimationState, r),
+                (0, u.Of)(
+                    "Avatar01/ShadowVisibility",
+                    i,
+                    e?.["Avatar01/ShadowVisibility"],
+                    a?.["Avatar01/ShadowVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar01/StrokeVisibility",
+                    i,
+                    e?.["Avatar01/StrokeVisibility"],
+                    a?.["Avatar01/StrokeVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar01/UsernameVisibility",
+                    i,
+                    e?.["Avatar01/UsernameVisibility"],
+                    a?.["Avatar01/UsernameVisibility"],
+                    r,
+                ),
+                (0, u.QJ)("Avatar01/Stroke", i, e?.["Avatar01/Stroke"], a?.["Avatar01/Stroke"], r),
+                (0, u.QJ)("Avatar01/Fill", i, e?.["Avatar01/Fill"], a?.["Avatar01/Fill"], r),
+                (0, u.k6)("Avatar01/Username", i, e?.["Avatar01/Username"], a?.["Avatar01/Username"], r),
+                (0, u.SX)("Avatar01/img", i, e?.["Avatar01/img"], a?.["Avatar01/img"], r),
+                (0, u.Of)(
+                    "Avatar02/ShadowVisibility",
+                    i,
+                    e?.["Avatar02/ShadowVisibility"],
+                    a?.["Avatar02/ShadowVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar02/StrokeVisibility",
+                    i,
+                    e?.["Avatar02/StrokeVisibility"],
+                    a?.["Avatar02/StrokeVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar02/UsernameVisibility",
+                    i,
+                    e?.["Avatar02/UsernameVisibility"],
+                    a?.["Avatar02/UsernameVisibility"],
+                    r,
+                ),
+                (0, u.QJ)("Avatar02/Stroke", i, e?.["Avatar02/Stroke"], a?.["Avatar02/Stroke"], r),
+                (0, u.QJ)("Avatar02/Fill", i, e?.["Avatar02/Fill"], a?.["Avatar02/Fill"], r),
+                (0, u.k6)("Avatar02/Username", i, e?.["Avatar02/Username"], a?.["Avatar02/Username"], r),
+                (0, u.SX)("Avatar02/img", i, e?.["Avatar02/img"], a?.["Avatar02/img"], r),
+                (0, u.Of)(
+                    "Avatar03/ShadowVisibility",
+                    i,
+                    e?.["Avatar03/ShadowVisibility"],
+                    a?.["Avatar03/ShadowVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar03/StrokeVisibility",
+                    i,
+                    e?.["Avatar03/StrokeVisibility"],
+                    a?.["Avatar03/StrokeVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar03/UsernameVisibility",
+                    i,
+                    e?.["Avatar03/UsernameVisibility"],
+                    a?.["Avatar03/UsernameVisibility"],
+                    r,
+                ),
+                (0, u.QJ)("Avatar03/Stroke", i, e?.["Avatar03/Stroke"], a?.["Avatar03/Stroke"], r),
+                (0, u.QJ)("Avatar03/Fill", i, e?.["Avatar03/Fill"], a?.["Avatar03/Fill"], r),
+                (0, u.k6)("Avatar03/Username", i, e?.["Avatar03/Username"], a?.["Avatar03/Username"], r),
+                (0, u.SX)("Avatar03/img", i, e?.["Avatar03/img"], a?.["Avatar03/img"], r),
+                (0, u.Of)(
+                    "Avatar04/ShadowVisibility",
+                    i,
+                    e?.["Avatar04/ShadowVisibility"],
+                    a?.["Avatar04/ShadowVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar04/StrokeVisibility",
+                    i,
+                    e?.["Avatar04/StrokeVisibility"],
+                    a?.["Avatar04/StrokeVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar04/UsernameVisibility",
+                    i,
+                    e?.["Avatar04/UsernameVisibility"],
+                    a?.["Avatar04/UsernameVisibility"],
+                    r,
+                ),
+                (0, u.QJ)("Avatar04/Stroke", i, e?.["Avatar04/Stroke"], a?.["Avatar04/Stroke"], r),
+                (0, u.QJ)("Avatar04/Fill", i, e?.["Avatar04/Fill"], a?.["Avatar04/Fill"], r),
+                (0, u.k6)("Avatar04/Username", i, e?.["Avatar04/Username"], a?.["Avatar04/Username"], r),
+                (0, u.SX)("Avatar04/img", i, e?.["Avatar04/img"], a?.["Avatar04/img"], r),
+                (0, u.Of)(
+                    "Avatar05/ShadowVisibility",
+                    i,
+                    e?.["Avatar05/ShadowVisibility"],
+                    a?.["Avatar05/ShadowVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar05/StrokeVisibility",
+                    i,
+                    e?.["Avatar05/StrokeVisibility"],
+                    a?.["Avatar05/StrokeVisibility"],
+                    r,
+                ),
+                (0, u.Of)(
+                    "Avatar05/UsernameVisibility",
+                    i,
+                    e?.["Avatar05/UsernameVisibility"],
+                    a?.["Avatar05/UsernameVisibility"],
+                    r,
+                ),
+                (0, u.QJ)("Avatar05/Stroke", i, e?.["Avatar05/Stroke"], a?.["Avatar05/Stroke"], r),
+                (0, u.QJ)("Avatar05/Fill", i, e?.["Avatar05/Fill"], a?.["Avatar05/Fill"], r),
+                (0, u.k6)("Avatar05/Username", i, e?.["Avatar05/Username"], a?.["Avatar05/Username"], r),
+                (0, u.SX)("Avatar05/img", i, e?.["Avatar05/img"], a?.["Avatar05/img"], r),
+                (0, u.QJ)("ConnectorColor", i, e?.ConnectorColor, a?.ConnectorColor, r),
+                null
+            );
+        },
     };
-function u(e) {
-    let { artboard: a = "MAIN", stateMachine: t, ...u } = e,
-        { status: b, buffer: c } = (0, o.CE)(r),
-        I = (0, o.m2)(r);
-    return b === o.BW.Loading
+function c(t) {
+    let { artboard: e = "MAIN", stateMachine: a, dataBinding: n, onDataBindingChange: u, ...c } = t,
+        { status: l, buffer: b } = (0, m.CE)(r),
+        h = (0, m.m2)(r),
+        O = o.useCallback(() => {
+            let t = s[e];
+            return null == t ? null : (0, i.jsx)(t, { dataBinding: n, onDataBindingChange: u });
+        }, [e, n, u]);
+    return l === m.BW.Loading
         ? null
-        : (0, i.jsx)(m.w, {
-              ...(I ? { key: "override" } : {}),
-              buffer: c,
-              artboard: a,
-              stateMachine: t,
-              artboardProperties: g,
-              artboardStateMachines: n,
-              ...u,
+        : (0, i.jsx)(g.w, {
+              ...(h ? { key: "override" } : {}),
+              buffer: b,
+              artboard: e,
+              stateMachine: a,
+              artboardProperties: f,
+              artboardViewModelInstances: I,
+              artboardStateMachines: d,
+              renderDataBinding: O,
+              ...c,
           });
 }
-u.riveSrc = r;
+c.riveSrc = r;

@@ -1,78 +1,99 @@
-(r.r(t),
-    r.d(t, {
+(n.r(e),
+    n.d(e, {
         AIVisualIdentitySmallSurfaceRive: () => a.j,
-        AVSurveyFacesRive: () => n.i,
+        AVSurveyFacesRive: () => i.i,
         AnimatedNitroOrbRewardsRive: () => o.Z,
-        BadgeUnlockPulseRive: () => S,
-        BadgesCoachmarkRive: () => i.U,
-        BoostGemLevelOneRive: () => m.t,
-        BoostGemLevelThreeRive: () => M.z,
-        BoostGemLevelTwoRive: () => h.J,
-        BoostThisServerRive: () => g.D,
-        CheckpointCardRive: () => C,
-        CheckpointCharacterRive: () => I.W,
-        CheckpointFriendsRive: () => k.m,
-        CheckpointIntroRive: () => P,
-        CheckpointKnickKnacksRive: () => R.U,
-        CheckpointNumbersCenterAlignedRive: () => w.m,
-        CheckpointNumbersLeftAlignedRive: () => O.w,
-        DiceRive: () => N.m,
-        FistBumpRive: () => W.l,
-        GameServerHostingRive: () => A.E,
-        GlowButtonRive: () => V.s,
-        JetpackWumpusWithTrinketsRive: () => D.e,
-        NitroCoinRive: () => F.s,
-        NitroQuestOrbsMultiplierRive: () => G.E,
-        NitroRewardsMouseRive: () => y.C,
-        NitroWishlistingWumpusRive: () => T,
-        OrbsIllustration_HandsRive: () => j.a,
-        PerfTestRive: () => U.Q,
-        PulseGradientRive: () => H.M,
-        ServerHubPerkRive: () => Q.f,
-        TabHoverGradientRive: () => J.U,
-        TeenScreenTimeRive: () => K.w,
-        ThemeAwareNitroWishlistingWumpusRive: () => Z.u,
-        UnlockRive: () => z.V,
-        VibingWumpusBackgroundRive: () => Y.R,
-        VibingWumpusRive: () => q.Z,
-        WandAndSparklesRive: () => er,
+        BadgeUnlockPulseRive: () => B,
+        BadgesCoachmarkRive: () => r.U,
+        BoostGemLevelOneRive: () => f.t,
+        BoostGemLevelThreeRive: () => k.z,
+        BoostGemLevelTwoRive: () => P.J,
+        BoostThisServerRive: () => I.D,
+        CheckpointCardRive: () => v,
+        CheckpointCharacterRive: () => w.W,
+        CheckpointFriendsRive: () => N.m,
+        CheckpointIntroRive: () => y,
+        CheckpointKnickKnacksRive: () => W.U,
+        CheckpointNumbersCenterAlignedRive: () => G.m,
+        CheckpointNumbersLeftAlignedRive: () => Q.w,
+        DiceRive: () => J.m,
+        FistBumpRive: () => x.l,
+        GameServerHostingRive: () => X.E,
+        GlowButtonRive: () => j.s,
+        JetpackWumpusWithTrinketsRive: () => E.e,
+        NitroCoinRive: () => T.s,
+        NitroQuestOrbsMultiplierRive: () => U.E,
+        NitroRewardsMouseRive: () => H.C,
+        NitroWishlistingWumpusRive: () => $,
+        OrbsIllustration_HandsRive: () => tt.a,
+        PerfTestRive: () => te.Q,
+        PulseGradientRive: () => tn.M,
+        ServerHubPerkRive: () => ta.f,
+        TabHoverGradientRive: () => to.U,
+        TeenScreenTimeRive: () => ti.w,
+        ThemeAwareNitroWishlistingWumpusRive: () => tr.u,
+        UnlockRive: () => tl.V,
+        VibingWumpusBackgroundRive: () => ts.R,
+        VibingWumpusRive: () => td.Z,
+        WandAndSparklesRive: () => tS,
     }));
-var a = r(586036),
-    o = r(953927),
-    n = r(65274),
-    i = r(381791),
-    s = r(477900);
-r(582128);
-let c =
+var a = n(586036),
+    o = n(953927),
+    i = n(65274),
+    r = n(381791),
+    l = n(477900),
+    d = n(582128);
+let s =
     "https://cdn.discordapp.com/assets/content/f9902a37a9e65cbeee19648efc6501868d5394d331eb8e8fff9405e9b42adbad.riv";
-var d = r(857973),
-    l = r(799226);
-let b = { Web: { fill: "color" }, Mobile: { fill: "color" } },
-    u = { Web: ["State Machine 1"], Mobile: ["State Machine 1"] };
-function S(e) {
-    let { artboard: t = "Web", stateMachine: r, ...a } = e,
-        { status: o, buffer: n } = (0, l.CE)(c),
-        i = (0, l.m2)(c);
-    return o === l.BW.Loading
+var u = n(729901),
+    c = n(611361),
+    g = n(799226),
+    b = n(270597);
+let m = { Web: { fill: "color" }, Mobile: { fill: "color" } },
+    S = { Web: ["Instance"], Mobile: ["Instance"] },
+    M = { Web: ["State Machine 1"], Mobile: ["State Machine 1"] },
+    C = {
+        Web: function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, playIfNeeded: o } = (0, c.o)();
+            return ((0, b.QJ)("fill", a, e?.fill, n?.fill, o), null);
+        },
+        Mobile: function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, playIfNeeded: o } = (0, c.o)();
+            return ((0, b.QJ)("fill", a, e?.fill, n?.fill, o), null);
+        },
+    };
+function B(t) {
+    let { artboard: e = "Web", stateMachine: n, dataBinding: a, onDataBindingChange: o, ...i } = t,
+        { status: r, buffer: c } = (0, g.CE)(s),
+        b = (0, g.m2)(s),
+        B = d.useCallback(() => {
+            let t = C[e];
+            return null == t ? null : (0, l.jsx)(t, { dataBinding: a, onDataBindingChange: o });
+        }, [e, a, o]);
+    return r === g.BW.Loading
         ? null
-        : (0, s.jsx)(d.w, {
-              ...(i ? { key: "override" } : {}),
-              buffer: n,
-              artboard: t,
-              stateMachine: r,
-              artboardProperties: b,
-              artboardStateMachines: u,
-              ...a,
+        : (0, l.jsx)(u.w, {
+              ...(b ? { key: "override" } : {}),
+              buffer: c,
+              artboard: e,
+              stateMachine: n,
+              artboardProperties: m,
+              artboardViewModelInstances: S,
+              artboardStateMachines: M,
+              renderDataBinding: B,
+              ...i,
           });
 }
-S.riveSrc = c;
-var m = r(54759),
-    M = r(817943),
-    h = r(768179),
-    g = r(449349);
-let p =
+B.riveSrc = s;
+var f = n(54759),
+    k = n(817943),
+    P = n(768179),
+    I = n(449349);
+let L =
         "https://cdn.discordapp.com/assets/content/90100f5bba072ea8759cb5badbe01f05187ed7b573e7b6d6553775a3f78eef9d.riv",
-    v = {
+    h = {
         Main: {
             reducedMotion: "boolean",
             Icon: "artboard",
@@ -254,7 +275,35 @@ let p =
             FillColor: "color",
         },
     },
-    f = {
+    D = {
+        Main: ["Bonsai", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"],
+        "Cassette Icon": [],
+        Cassette: ["Bonsai", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"],
+        "Cat Icon": [],
+        Cat: ["Bonsai", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"],
+        "Banana Icon": [],
+        Banana: ["Bonsai", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"],
+        "Duck Icon": [],
+        Duck: ["Bonsai", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"],
+        "Snail Icon": [],
+        Snail: ["Bonsai", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"],
+        "Origami Icon": [],
+        Origami: ["Bonsai", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"],
+        "Disco Icon": [],
+        Disco: ["Bonsai", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"],
+        "Capybara Icon": [],
+        Capybara: ["Bonsai", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"],
+        "Donut Icon": [],
+        Donut: ["Bonsai", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"],
+        "Bonsai Icon": [],
+        Bonsai: ["Bonsai", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"],
+        "Globe Single Line": [],
+        "Card Back": ["Bonsai", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"],
+        knickknack: ["Bonsai", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"],
+        Globe: [],
+        Card: ["Bonsai", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"],
+    },
+    O = {
         Main: ["State Machine 1"],
         "Cassette Icon": ["State Machine 1", "State Machine 2"],
         Cassette: ["State Machine 1"],
@@ -281,29 +330,275 @@ let p =
         knickknack: ["State Machine 1"],
         Globe: ["State Machine 1"],
         Card: ["State Machine 1"],
+    },
+    p = {
+        Main: function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
+            return (
+                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, b.gl)("Icon", a, i, e?.Icon, r),
+                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                null
+            );
+        },
+        Cassette: function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
+            return (
+                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, b.gl)("Icon", a, i, e?.Icon, r),
+                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                null
+            );
+        },
+        Cat: function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
+            return (
+                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, b.gl)("Icon", a, i, e?.Icon, r),
+                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                null
+            );
+        },
+        Banana: function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
+            return (
+                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, b.gl)("Icon", a, i, e?.Icon, r),
+                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                null
+            );
+        },
+        Duck: function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
+            return (
+                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, b.gl)("Icon", a, i, e?.Icon, r),
+                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                null
+            );
+        },
+        Snail: function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
+            return (
+                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, b.gl)("Icon", a, i, e?.Icon, r),
+                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                null
+            );
+        },
+        Origami: function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
+            return (
+                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, b.gl)("Icon", a, i, e?.Icon, r),
+                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                null
+            );
+        },
+        Disco: function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
+            return (
+                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, b.gl)("Icon", a, i, e?.Icon, r),
+                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                null
+            );
+        },
+        Capybara: function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
+            return (
+                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, b.gl)("Icon", a, i, e?.Icon, r),
+                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                null
+            );
+        },
+        Donut: function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
+            return (
+                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, b.gl)("Icon", a, i, e?.Icon, r),
+                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                null
+            );
+        },
+        Bonsai: function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
+            return (
+                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, b.gl)("Icon", a, i, e?.Icon, r),
+                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                null
+            );
+        },
+        "Card Back": function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
+            return (
+                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, b.gl)("Icon", a, i, e?.Icon, r),
+                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                null
+            );
+        },
+        knickknack: function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
+            return (
+                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, b.gl)("Icon", a, i, e?.Icon, r),
+                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                null
+            );
+        },
+        Card: function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
+            return (
+                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, b.gl)("Icon", a, i, e?.Icon, r),
+                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                null
+            );
+        },
     };
-function C(e) {
-    let { artboard: t = "Main", stateMachine: r, ...a } = e,
-        { status: o, buffer: n } = (0, l.CE)(p),
-        i = (0, l.m2)(p);
-    return o === l.BW.Loading
+function v(t) {
+    let { artboard: e = "Main", stateMachine: n, dataBinding: a, onDataBindingChange: o, ...i } = t,
+        { status: r, buffer: s } = (0, g.CE)(L),
+        c = (0, g.m2)(L),
+        b = d.useCallback(() => {
+            let t = p[e];
+            return null == t ? null : (0, l.jsx)(t, { dataBinding: a, onDataBindingChange: o });
+        }, [e, a, o]);
+    return r === g.BW.Loading
         ? null
-        : (0, s.jsx)(d.w, {
-              ...(i ? { key: "override" } : {}),
-              buffer: n,
-              artboard: t,
-              stateMachine: r,
-              artboardProperties: v,
-              artboardStateMachines: f,
-              ...a,
+        : (0, l.jsx)(u.w, {
+              ...(c ? { key: "override" } : {}),
+              buffer: s,
+              artboard: e,
+              stateMachine: n,
+              artboardProperties: h,
+              artboardViewModelInstances: D,
+              artboardStateMachines: O,
+              renderDataBinding: b,
+              ...i,
           });
 }
-C.riveSrc = p;
-var I = r(516749),
-    k = r(360450);
-let B =
+v.riveSrc = L;
+var w = n(516749),
+    N = n(360450);
+let V =
         "https://cdn.discordapp.com/assets/content/756c8e37a14fc267712502cc0892be86b2e98d9132fe075f9ba75fd9e9a0aa48.riv",
-    L = {
+    A = {
         "Checkpoint Intro Desktop": {
             reducedMotion: "boolean",
             Subtitle: "string",
@@ -333,6 +628,15 @@ let B =
         },
     },
     _ = {
+        "Checkpoint Intro Desktop": ["Instance"],
+        Globe: ["Instance"],
+        "Globe Single Line": [],
+        "Looping Checkboard": [],
+        CheckRow: [],
+        Entry: ["Instance"],
+        "Start Button": ["Instance"],
+    },
+    F = {
         "Checkpoint Intro Desktop": ["State Machine 1"],
         Globe: ["State Machine 1"],
         "Globe Single Line": ["State Machine 1"],
@@ -340,84 +644,164 @@ let B =
         CheckRow: ["State Machine 1"],
         Entry: ["State Machine 1"],
         "Start Button": ["State Machine 1"],
+    },
+    R = {
+        "Checkpoint Intro Desktop": function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, reducedMotionEnabled: o, playIfNeeded: i } = (0, c.o)();
+            return (
+                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, i),
+                (0, b.k6)("Subtitle", a, e?.Subtitle, n?.Subtitle, i),
+                (0, b.Dr)("StartButton Pressed", a, e?.["StartButton Pressed"], n?.["StartButton Pressed"], i),
+                (0, b.k6)("StartButton", a, e?.StartButton, n?.StartButton, i),
+                null
+            );
+        },
+        Globe: function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, reducedMotionEnabled: o, playIfNeeded: i } = (0, c.o)();
+            return (
+                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, i),
+                (0, b.k6)("Subtitle", a, e?.Subtitle, n?.Subtitle, i),
+                (0, b.Dr)("StartButton Pressed", a, e?.["StartButton Pressed"], n?.["StartButton Pressed"], i),
+                (0, b.k6)("StartButton", a, e?.StartButton, n?.StartButton, i),
+                null
+            );
+        },
+        Entry: function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, reducedMotionEnabled: o, playIfNeeded: i } = (0, c.o)();
+            return (
+                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, i),
+                (0, b.k6)("Subtitle", a, e?.Subtitle, n?.Subtitle, i),
+                (0, b.Dr)("StartButton Pressed", a, e?.["StartButton Pressed"], n?.["StartButton Pressed"], i),
+                (0, b.k6)("StartButton", a, e?.StartButton, n?.StartButton, i),
+                null
+            );
+        },
+        "Start Button": function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, reducedMotionEnabled: o, playIfNeeded: i } = (0, c.o)();
+            return (
+                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, i),
+                (0, b.k6)("Subtitle", a, e?.Subtitle, n?.Subtitle, i),
+                (0, b.Dr)("StartButton Pressed", a, e?.["StartButton Pressed"], n?.["StartButton Pressed"], i),
+                (0, b.k6)("StartButton", a, e?.StartButton, n?.StartButton, i),
+                null
+            );
+        },
     };
-function P(e) {
-    let { artboard: t = "Checkpoint Intro Desktop", stateMachine: r, ...a } = e,
-        { status: o, buffer: n } = (0, l.CE)(B),
-        i = (0, l.m2)(B);
-    return o === l.BW.Loading
+function y(t) {
+    let { artboard: e = "Checkpoint Intro Desktop", stateMachine: n, dataBinding: a, onDataBindingChange: o, ...i } = t,
+        { status: r, buffer: s } = (0, g.CE)(V),
+        c = (0, g.m2)(V),
+        b = d.useCallback(() => {
+            let t = R[e];
+            return null == t ? null : (0, l.jsx)(t, { dataBinding: a, onDataBindingChange: o });
+        }, [e, a, o]);
+    return r === g.BW.Loading
         ? null
-        : (0, s.jsx)(d.w, {
-              ...(i ? { key: "override" } : {}),
-              buffer: n,
-              artboard: t,
-              stateMachine: r,
-              artboardProperties: L,
-              artboardStateMachines: _,
-              ...a,
+        : (0, l.jsx)(u.w, {
+              ...(c ? { key: "override" } : {}),
+              buffer: s,
+              artboard: e,
+              stateMachine: n,
+              artboardProperties: A,
+              artboardViewModelInstances: _,
+              artboardStateMachines: F,
+              renderDataBinding: b,
+              ...i,
           });
 }
-P.riveSrc = B;
-var R = r(206701),
-    w = r(663385),
-    O = r(469228),
-    N = r(90302),
-    W = r(7724),
-    A = r(828334),
-    V = r(470170),
-    D = r(970002),
-    F = r(883888),
-    G = r(454153),
-    y = r(915945);
-let E =
+y.riveSrc = V;
+var W = n(206701),
+    G = n(663385),
+    Q = n(469228),
+    J = n(90302),
+    x = n(7724),
+    X = n(828334),
+    j = n(470170),
+    E = n(970002),
+    T = n(883888),
+    U = n(454153),
+    H = n(915945);
+let K =
         "https://cdn.discordapp.com/assets/content/7d79185ce3c3038667277ee16ba8cb835b1b012f20b92ef5428b9166c5347c59.riv",
-    X = { "Nitro Wishlist": { reducedMotion: "boolean" } },
-    x = { "Nitro Wishlist": ["State Machine 1"] };
-function T(e) {
-    let { artboard: t = "Nitro Wishlist", stateMachine: r, ...a } = e,
-        { status: o, buffer: n } = (0, l.CE)(E),
-        i = (0, l.m2)(E);
-    return o === l.BW.Loading
+    Z = { "Nitro Wishlist": { reducedMotion: "boolean" } },
+    z = { "Nitro Wishlist": ["Instance"] },
+    q = { "Nitro Wishlist": ["State Machine 1"] },
+    Y = {
+        "Nitro Wishlist": function (t) {
+            let { dataBinding: e } = t,
+                { instance: n, reducedMotionEnabled: a, playIfNeeded: o } = (0, c.o)();
+            return ((0, b.Dr)("reducedMotion", n, e?.reducedMotion ?? a, void 0, o), null);
+        },
+    };
+function $(t) {
+    let { artboard: e = "Nitro Wishlist", stateMachine: n, dataBinding: a, onDataBindingChange: o, ...i } = t,
+        { status: r, buffer: s } = (0, g.CE)(K),
+        c = (0, g.m2)(K),
+        b = d.useCallback(() => {
+            let t = Y[e];
+            return null == t ? null : (0, l.jsx)(t, { dataBinding: a, onDataBindingChange: o });
+        }, [e, a, o]);
+    return r === g.BW.Loading
         ? null
-        : (0, s.jsx)(d.w, {
-              ...(i ? { key: "override" } : {}),
-              buffer: n,
-              artboard: t,
-              stateMachine: r,
-              artboardProperties: X,
-              artboardStateMachines: x,
-              ...a,
+        : (0, l.jsx)(u.w, {
+              ...(c ? { key: "override" } : {}),
+              buffer: s,
+              artboard: e,
+              stateMachine: n,
+              artboardProperties: Z,
+              artboardViewModelInstances: z,
+              artboardStateMachines: q,
+              renderDataBinding: b,
+              ...i,
           });
 }
-T.riveSrc = E;
-var j = r(190485),
-    U = r(3265),
-    H = r(893030),
-    Q = r(480749),
-    J = r(704007),
-    K = r(287172),
-    Z = r(580573),
-    z = r(213695),
-    q = r(372880),
-    Y = r(3200);
-let $ =
+$.riveSrc = K;
+var tt = n(190485),
+    te = n(3265),
+    tn = n(893030),
+    ta = n(480749),
+    to = n(704007),
+    ti = n(287172),
+    tr = n(580573),
+    tl = n(213695),
+    td = n(372880),
+    ts = n(3200);
+let tu =
         "https://cdn.discordapp.com/assets/content/026e9c119f280f5edf3ba486ba20c26e21c5dac14dfedd0a238373298bf289f0.riv",
-    ee = { "Surprise Me": { fill: "color" } },
-    et = { "Surprise Me": ["State Machine 1"] };
-function er(e) {
-    let { artboard: t = "Surprise Me", stateMachine: r, ...a } = e,
-        { status: o, buffer: n } = (0, l.CE)($),
-        i = (0, l.m2)($);
-    return o === l.BW.Loading
+    tc = { "Surprise Me": { fill: "color" } },
+    tg = { "Surprise Me": [""] },
+    tb = { "Surprise Me": ["State Machine 1"] },
+    tm = {
+        "Surprise Me": function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, playIfNeeded: o } = (0, c.o)();
+            return ((0, b.QJ)("fill", a, e?.fill, n?.fill, o), null);
+        },
+    };
+function tS(t) {
+    let { artboard: e = "Surprise Me", stateMachine: n, dataBinding: a, onDataBindingChange: o, ...i } = t,
+        { status: r, buffer: s } = (0, g.CE)(tu),
+        c = (0, g.m2)(tu),
+        b = d.useCallback(() => {
+            let t = tm[e];
+            return null == t ? null : (0, l.jsx)(t, { dataBinding: a, onDataBindingChange: o });
+        }, [e, a, o]);
+    return r === g.BW.Loading
         ? null
-        : (0, s.jsx)(d.w, {
-              ...(i ? { key: "override" } : {}),
-              buffer: n,
-              artboard: t,
-              stateMachine: r,
-              artboardProperties: ee,
-              artboardStateMachines: et,
-              ...a,
+        : (0, l.jsx)(u.w, {
+              ...(c ? { key: "override" } : {}),
+              buffer: s,
+              artboard: e,
+              stateMachine: n,
+              artboardProperties: tc,
+              artboardViewModelInstances: tg,
+              artboardStateMachines: tb,
+              renderDataBinding: b,
+              ...i,
           });
 }
-er.riveSrc = $;
+tS.riveSrc = tu;

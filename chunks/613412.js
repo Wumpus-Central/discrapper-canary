@@ -10,7 +10,7 @@ let i, r, a, s, l, o, d, c, u;
         SpanTtiNames: () => ee.wJ,
         analyticsTrackingStoreMaker: () => Q,
         encodeProperties: () => p,
-        extendSuperProperties: () => eg,
+        extendSuperProperties: () => eT,
         getBrowser: () => ef,
         getCampaignParams: () => em,
         getDevice: () => eI,
@@ -36,8 +36,8 @@ function p(e) {
 (n(142703), n(667532), n(321073));
 var m = n(115560);
 n(423034);
-var T = n(80703),
-    g = n(855986),
+var g = n(80703),
+    T = n(855986),
     S = n(620632),
     N = n(187207),
     C = n(611599),
@@ -73,8 +73,8 @@ let Y = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
         handleTrack: () => {},
         handleSetAnalyticsToken: () => {},
     },
-    z = [],
-    X = null,
+    X = [],
+    z = null,
     q = !1,
     Z = () => Promise.resolve({ sessionId: void 0 }),
     Q = (e) => {
@@ -92,16 +92,16 @@ let Y = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
             sendUnloadRequest: E,
         } = e;
         function A() {
-            return 0 !== z.length && (null != r ? null != i : null != a());
+            return 0 !== X.length && (null != r ? null != i : null != a());
         }
         function h(e) {
             let { shouldFlushOnNextTick: t = !1 } = e;
-            null == X && A() && (X = t ? setTimeout(f, 0) : c(f, { timeout: D }));
+            null == z && A() && (z = t ? setTimeout(f, 0) : c(f, { timeout: D }));
         }
         function f() {
-            if (((X = null), !A())) return Promise.resolve();
-            let e = z.slice();
-            ((z = []), (G = W(G)));
+            if (((z = null), !A())) return Promise.resolve();
+            let e = X.slice();
+            ((X = []), (G = W(G)));
             let t = e.length;
             ((x = Math.min(x, t)), (k = Math.max(k, t)), (F = W(F, t)));
             let n = I(e);
@@ -114,7 +114,7 @@ let Y = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                             (P = W(P)));
                     },
                     (t) => {
-                        (z.unshift(...e), (M = W(M)));
+                        (X.unshift(...e), (M = W(M)));
                         let { message: n } = t.body || t;
                         console.warn("[AnalyticsTrackingStore] Track:", n);
                     },
@@ -139,13 +139,13 @@ let Y = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
             );
         }
         function p() {
-            if (null != _ || null == E || 0 === z.length || !A()) return !1;
-            let e = z.slice(),
+            if (null != _ || null == E || 0 === X.length || !A()) return !1;
+            let e = X.slice(),
                 t = Date.now(),
                 n = e.map((e) => ({ ...e, properties: { ...e.properties, client_send_timestamp: t } }));
             return (
                 !!E(l, JSON.stringify({ token: i, events: n })) &&
-                ((z = []), (X = null), e.forEach((e) => e.resolve?.()), !0)
+                ((X = []), (z = null), e.forEach((e) => e.resolve?.()), !0)
             );
         }
         function N() {
@@ -268,11 +268,11 @@ let Y = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                             c = (function (e) {
                                 if (null != r) return r;
                                 let t = e.fingerprint ?? a();
-                                return null != t ? (0, T.d)(t) : null;
+                                return null != t ? (0, g.d)(t) : null;
                             })(d);
-                        if ((null != c && (d.properties.client_uuid = K.generate(c)), z.push(d), z.length > 1e4)) {
-                            let e = z.length - 1e4;
-                            ((v = W(v, e)), (z = z.slice(-1e4)));
+                        if ((null != c && (d.properties.client_uuid = K.generate(c)), X.push(d), X.length > 1e4)) {
+                            let e = X.length - 1e4;
+                            ((v = W(v, e)), (X = X.slice(-1e4)));
                         }
                         i ? h({ shouldFlushOnNextTick: !0 }) : h({ shouldFlushOnNextTick: !1 });
                     }),
@@ -283,7 +283,7 @@ let Y = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 let { analyticsToken: t, userId: n } = e;
                 return (null == i && null != t && ((i = t), (r = n), h({ shouldFlushOnNextTick: !1 })), !1);
             }));
-        class C extends g.Ay.Store {
+        class C extends T.Ay.Store {
             static displayName = "AnalyticsTrackingStore";
             initialize() {
                 null != d && this.waitFor(...d);
@@ -437,7 +437,7 @@ function em(e) {
         t
     );
 }
-function eT() {
+function eg() {
     let e,
         t = {};
     return (
@@ -487,12 +487,12 @@ if (null == a)
                     es.w.set(ec, 1));
             }
             let t = es.w.get(eu);
-            null == t && ((t = eT()), es.w.set(eu, t));
+            null == t && ((t = eg()), es.w.set(eu, t));
             let n = el.u.get(eu);
             if (null == n) {
                 var i;
                 let e;
-                ((i = eT()), (e = {}), Object.keys(i).map((t) => (e[`${t}_current`] = i[t])), (n = e), el.u.set(eu, n));
+                ((i = eg()), (e = {}), Object.keys(i).map((t) => (e[`${t}_current`] = i[t])), (n = e), el.u.set(eu, n));
             }
             return {
                 ...e,
@@ -522,7 +522,7 @@ if (null == a)
     } catch (e) {
         a = {};
     }
-function eg(e) {
+function eT(e) {
     s = p((a = { ...a, ...e }));
 }
 function eS() {
@@ -531,12 +531,12 @@ function eS() {
 function eN() {
     return s;
 }
-eg(
+eT(
     ((l = {}),
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("664509", 10))) || (l.client_build_number = d),
+    isNaN((d = parseInt("664512", 10))) || (l.client_build_number = d),
     null == (c = eE?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {

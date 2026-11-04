@@ -1,9 +1,11 @@
-var i = n(477900);
-n(582128);
-var r = n(671325),
-    a = n(857973),
-    s = n(799226);
-let l = {
+var i = n(477900),
+    r = n(582128),
+    a = n(671325),
+    s = n(729901),
+    l = n(611361),
+    o = n(799226),
+    d = n(270597);
+let c = {
         Base: { EntryTrigger: "trigger", ExitTrigger: "trigger", PosX: "number", PosY: "number" },
         "Nitro Illustration \u2014 Star": {},
         "Nitro Illustration \u2014 Key": {},
@@ -14,7 +16,18 @@ let l = {
         "Nitro Illustration \u2014 Lightning": {},
         "Nitro Illustration \u2014 Spaceship": {},
     },
-    o = {
+    u = {
+        Base: ["Instance"],
+        "Nitro Illustration \u2014 Star": [],
+        "Nitro Illustration \u2014 Key": [],
+        "Nitro Illustration \u2014 Battery": [],
+        "Nitro Illustration \u2014 Box": [],
+        Wumpus: [],
+        "Nitro Illustration \u2014 Power Jar": [],
+        "Nitro Illustration \u2014 Lightning": [],
+        "Nitro Illustration \u2014 Spaceship": [],
+    },
+    _ = {
         Base: ["State Machine 1"],
         "Nitro Illustration \u2014 Star": ["State Machine 1"],
         "Nitro Illustration \u2014 Key": ["State Machine 1"],
@@ -24,21 +37,40 @@ let l = {
         "Nitro Illustration \u2014 Power Jar": ["State Machine 1"],
         "Nitro Illustration \u2014 Lightning": ["State Machine 1"],
         "Nitro Illustration \u2014 Spaceship": ["State Machine 1"],
+    },
+    E = {
+        Base: function (e) {
+            let { dataBinding: t, onDataBindingChange: n } = e,
+                { instance: i, playIfNeeded: r } = (0, l.o)();
+            return (
+                (0, d.zJ)("EntryTrigger", i, t?.EntryTrigger, n?.EntryTrigger, r),
+                (0, d.zJ)("ExitTrigger", i, t?.ExitTrigger, n?.ExitTrigger, r),
+                (0, d.Of)("PosX", i, t?.PosX, n?.PosX, r),
+                (0, d.Of)("PosY", i, t?.PosY, n?.PosY, r),
+                null
+            );
+        },
     };
-function d(e) {
-    let { artboard: t = "Base", stateMachine: n, ...d } = e,
-        { status: c, buffer: u } = (0, s.CE)(r.A),
-        _ = (0, s.m2)(r.A);
-    return c === s.BW.Loading
+function A(e) {
+    let { artboard: t = "Base", stateMachine: n, dataBinding: l, onDataBindingChange: d, ...A } = e,
+        { status: h, buffer: f } = (0, o.CE)(a.A),
+        I = (0, o.m2)(a.A),
+        p = r.useCallback(() => {
+            let e = E[t];
+            return null == e ? null : (0, i.jsx)(e, { dataBinding: l, onDataBindingChange: d });
+        }, [t, l, d]);
+    return h === o.BW.Loading
         ? null
-        : (0, i.jsx)(a.w, {
-              ...(_ ? { key: "override" } : {}),
-              buffer: u,
+        : (0, i.jsx)(s.w, {
+              ...(I ? { key: "override" } : {}),
+              buffer: f,
               artboard: t,
               stateMachine: n,
-              artboardProperties: l,
-              artboardStateMachines: o,
-              ...d,
+              artboardProperties: c,
+              artboardViewModelInstances: u,
+              artboardStateMachines: _,
+              renderDataBinding: p,
+              ...A,
           });
 }
-((d.riveSrc = r.A), n.d(t, {}, { e: d }));
+((A.riveSrc = a.A), n.d(t, {}, { e: A }));
