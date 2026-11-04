@@ -2,16 +2,16 @@ t.d(n, { A: () => A });
 var i = t(477900),
     l = t(582128),
     a = t(503698),
-    o = t.n(a),
-    r = t(736819),
+    r = t.n(a),
+    o = t(736819),
     s = t(866323),
     u = t(939249),
     c = t(573435),
     d = t(953727);
 function f(e) {
-    let { width: n = 12, height: t = 12, color: l = "currentColor", foreground: a, ...o } = e;
+    let { width: n = 12, height: t = 12, color: l = "currentColor", foreground: a, ...r } = e;
     return (0, i.jsxs)("svg", {
-        ...(0, d.A)(o),
+        ...(0, d.A)(r),
         width: n,
         height: t,
         viewBox: "0 0 12 12",
@@ -40,9 +40,9 @@ function f(e) {
     });
 }
 function g(e) {
-    let { width: n = 10, height: t = 10, color: l = "currentColor", foreground: a, ...o } = e;
+    let { width: n = 10, height: t = 10, color: l = "currentColor", foreground: a, ...r } = e;
     return (0, i.jsx)("svg", {
-        ...(0, d.A)(o),
+        ...(0, d.A)(r),
         width: n,
         height: t,
         viewBox: "0 0 10 10",
@@ -69,8 +69,8 @@ let m = {
                 childClassName: a,
                 iconClassName: d,
                 icon: A,
-                children: b,
-                onClick: p,
+                children: p,
+                onClick: b,
                 onDoubleClick: I,
                 isActive: h,
                 onMouseEnter: T,
@@ -87,7 +87,7 @@ let m = {
                 "aria-keyshortcuts": O,
                 noHover: S,
             } = e,
-            E = (0, s.p)(null != b, { ...m, keys: (e) => (e ? "children" : "icon") });
+            E = (0, s.p)(null != p, { ...m, keys: (e) => (e ? "children" : "icon") });
         function D(e) {
             let { component: n } = e;
             return null != G
@@ -115,8 +115,8 @@ let m = {
             "aria-keyshortcuts": O,
             "aria-disabled": l,
             tabIndex: l ? -1 : 0,
-            className: o()(t, C.x6, { [C.vu]: h, [C.CK]: S, [C.s0]: j, [C.r9]: l }),
-            onClick: l ? void 0 : p,
+            className: r()(t, C.x6, { [C.vu]: h, [C.CK]: S, [C.s0]: j, [C.r9]: l }),
+            onClick: l ? void 0 : b,
             onDoubleClick: l ? void 0 : I,
             onMouseEnter: T,
             onMouseLeave: N,
@@ -128,19 +128,19 @@ let m = {
                     let { key: l } = t;
                     return n
                         ? (0, i.jsx)(
-                              r.animated.div,
-                              { style: e, className: o()(C._o, a), children: D({ component: b }) },
+                              o.animated.div,
+                              { style: e, className: r()(C._o, a), children: D({ component: p }) },
                               l,
                           )
                         : null != A
                           ? (0, i.jsx)(
-                                r.animated.div,
+                                o.animated.div,
                                 {
                                     style: e,
-                                    className: o()(C._o, a),
+                                    className: r()(C._o, a),
                                     children: D({
                                         component: (0, i.jsx)(A, {
-                                            className: o()(C.Kk, d, { [C.d1]: j }),
+                                            className: r()(C.Kk, d, { [C.d1]: j }),
                                             color: "currentColor",
                                         }),
                                     }),

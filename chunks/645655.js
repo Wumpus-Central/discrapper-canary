@@ -6,9 +6,9 @@ l.d(
     {},
     {
         A: function (e, t) {
-            let { clips: r, onBeforeDelete: s, onAfterDelete: o } = t;
+            let { clips: s, onBeforeDelete: r, onAfterDelete: o } = t;
             if (e?.shiftKey) {
-                (s?.(), r.forEach((e) => (0, i.oH)(e)), o?.());
+                (r?.(), s.forEach((e) => (0, i.oH)(e)), o?.());
                 return;
             }
             (0, n.mM)(
@@ -16,9 +16,9 @@ l.d(
                     let { default: e } = await l.e(913367).then(l.bind(l, 223818));
                     return (t) =>
                         (0, a.jsx)(e, {
-                            clips: r,
+                            clips: s,
                             ...t,
-                            onBeforeDelete: s,
+                            onBeforeDelete: r,
                             onAfterDelete: async () => {
                                 (await t.onClose(), o?.());
                             },

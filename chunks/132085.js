@@ -25,15 +25,15 @@ var r = n(534514),
     N = n(866665),
     y = n(147925),
     T = n(55999),
-    R = n(229087),
-    w = n(394245),
+    w = n(229087),
+    R = n(394245),
     k = n(229231),
     S = n(792996),
     L = n(149253);
 function _(e) {
     let { tags: t, allowEditing: n, widgetType: a, gameId: r, className: o, disableInteraction: d = !1 } = e,
         c = n && !d,
-        u = t?.filter((e) => null != (0, w.W)(e)) ?? [],
+        u = t?.filter((e) => null != (0, R.W)(e)) ?? [],
         m = u.length > 0,
         g = c && (0, k.mS)(a) && u.length < 20,
         { trackUserProfileAction: x, trackUserProfileEditAction: f } = (0, I.NJ)(),
@@ -79,7 +79,7 @@ function _(e) {
                             "aria-label": S.intl.string(S.t.EfjTi4),
                             children: P.map((e) =>
                                 (0, i.jsx)(
-                                    R.A,
+                                    w.A,
                                     {
                                         tag: e,
                                         onRemove: c
@@ -295,21 +295,21 @@ function z(e) {
         } = e,
         h = l.useRef(null),
         { gameId: j, comment: I, tags: N } = o,
-        { coverImageUrl: y, iconImageUrl: T, gameName: R, isLoading: w } = (0, p.A)(j),
+        { coverImageUrl: y, iconImageUrl: T, gameName: w, isLoading: R } = (0, p.A)(j),
         S = { variant: "heading-xs/medium", color: "text-default" },
         L = c && !u,
         P = 1 === (0, E.cv)(d),
         D = L && (0, k.y9)(d),
         O = L && !P,
         { registerDragHandleRef: G } = (0, C.r)();
-    if (w) return (0, i.jsx)(b.E, {});
+    if (R) return (0, i.jsx)(b.E, {});
     function F() {
         return (0, i.jsx)(A.A, {
             coverRef: x,
             className: (null == y && null == T) || u ? void 0 : U.iL,
             imageSrc: y,
             iconSrc: T,
-            gameName: R,
+            gameName: w,
             gameId: j,
             userId: t.id,
             disableInteraction: u,
@@ -331,8 +331,8 @@ function z(e) {
                     className: K.zH,
                     children: [
                         u
-                            ? (0, i.jsx)(r.D, { ...S, children: R })
-                            : (0, i.jsx)(H, { gameId: j, userId: t.id, gameName: R, ...S }),
+                            ? (0, i.jsx)(r.D, { ...S, children: w })
+                            : (0, i.jsx)(H, { gameId: j, userId: t.id, gameName: w, ...S }),
                         D
                             ? (0, i.jsx)(B, { text: I, user: t, guildId: n, channelId: a, widgetType: d, gameId: j })
                             : (0, i.jsx)(Y, { text: I, user: t, guildId: n, channelId: a }),

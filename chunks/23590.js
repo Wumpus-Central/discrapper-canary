@@ -5,13 +5,13 @@ n.d(
     {},
     {
         A: function (e) {
-            let { videoRef: t, hls: a, contentMetadata: i, isHls: o, debug: u } = e,
+            let { videoRef: t, hls: a, contentMetadata: i, isHls: u, debug: o } = e,
                 s = r.useRef(null),
                 [c, d] = r.useState(() => null == i);
             return (
                 r.useEffect(() => {
                     if (null == t.current || null == i) return void d(!0);
-                    if (o && null == a) return void d(!1);
+                    if (u && null == a) return void d(!1);
                     d(!1);
                     let e = !1;
                     return (
@@ -22,9 +22,9 @@ n.d(
                                 e ||
                                     null == t.current ||
                                     ((s.current = new r({
-                                        debug: u ?? !1,
+                                        debug: o ?? !1,
                                         videoElement: t.current,
-                                        hlsInstance: o ? (a ?? void 0) : void 0,
+                                        hlsInstance: u ? (a ?? void 0) : void 0,
                                         feature: i.contentType,
                                         contentMetadata: i,
                                     })),
@@ -39,7 +39,7 @@ n.d(
                                 null != s.current && (s.current.endSession(), s.current.destroy(), (s.current = null)));
                         }
                     );
-                }, [o, a, t, i, u]),
+                }, [u, a, t, i, o]),
                 { isReady: c }
             );
         },

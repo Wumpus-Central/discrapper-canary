@@ -36,13 +36,13 @@ n.d(
             if (!R.ok) return t;
             let h = (0, b.n)(N.button?.copy ?? "", C);
             if (!h.ok) return t;
-            let P = (0, o.jsx)(_.A, {
+            let v = (0, o.jsx)(_.A, {
                     componentType: a.C.PREMIUM_TAB_POPOVER,
                     componentId: y,
                     promotionId: S,
                     dismissibleContent: r.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL,
                 }),
-                { icon: v, iconPosition: M } = (0, p.x)({ buttonAction: N.button?.buttonAction });
+                { icon: P, iconPosition: M } = (0, p.x)({ buttonAction: N.button?.buttonAction });
             function L() {
                 return I(A.i.USER_DISMISS);
             }
@@ -57,7 +57,7 @@ n.d(
                                   applicationId: N.button.navigableStorefrontApplicationId?.value,
                                   onClose: L,
                               }),
-                              icon: v,
+                              icon: P,
                               iconPosition: M,
                           }
                         : void 0,
@@ -77,7 +77,7 @@ n.d(
             if (E) {
                 let e = { ...B, assetUrl: g ?? "", action: x, disableMediaViewer: !0 };
                 return (0, o.jsxs)(o.Fragment, {
-                    children: [P, (0, o.jsx)("div", { children: t }), (0, o.jsx)(i.H, { ...e })],
+                    children: [v, (0, o.jsx)("div", { children: t }), (0, o.jsx)(i.H, { ...e })],
                 });
             }
             let D = {
@@ -88,7 +88,7 @@ n.d(
                 gradientColor: "nitro-pink",
             };
             return (0, o.jsxs)(o.Fragment, {
-                children: [P, (0, o.jsx)("div", { children: t }), (0, o.jsx)(d.A, { ...D })],
+                children: [v, (0, o.jsx)("div", { children: t }), (0, o.jsx)(d.A, { ...D })],
             });
         },
     },

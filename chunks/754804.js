@@ -62,8 +62,8 @@ n.d(
                 R = e.getFormatVariableValues(I.intl.currentLocale),
                 h = (0, c.d)(t.body, R);
             if (!h.ok) return null;
-            let P = (0, c.n)(t.ctaLabel, R);
-            return P.ok
+            let v = (0, c.n)(t.ctaLabel, R);
+            return v.ok
                 ? (0, o.jsxs)(o.Fragment, {
                       children: [
                           (0, o.jsx)(m.A, {
@@ -87,9 +87,9 @@ n.d(
                                               }),
                                       ],
                                   }),
-                                  "" !== P.content &&
+                                  "" !== v.content &&
                                       (0, o.jsx)(_.fY, {
-                                          text: P.content,
+                                          text: v.content,
                                           onClick: function () {
                                               (s.default.track(A.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
                                                   notice_type: A.kqX.PREMIUM_MARKETING_NAGBAR,

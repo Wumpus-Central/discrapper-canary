@@ -1,8 +1,8 @@
 var i = t(477900),
     l = t(582128),
     a = t(855986),
-    o = t(206248),
-    r = t(597770),
+    r = t(206248),
+    o = t(597770),
     s = t(406810),
     u = t(475743),
     c = t(421108),
@@ -16,8 +16,8 @@ t.d(
     {},
     {
         A: function (e) {
-            let { onComplete: n, onCheckItOutClick: t, markAsDismissed: A, coachmarkConfig: b, children: p } = e,
-                I = (0, d.T)(b?.asset),
+            let { onComplete: n, onCheckItOutClick: t, markAsDismissed: A, coachmarkConfig: p, children: b } = e,
+                I = (0, d.T)(p?.asset),
                 { enabled: h } = g.J.useConfig({ location: "GiftPromotionPopout" }),
                 T = (0, a.bG)([f.A], () => f.A.getGiftPromotion()),
                 N = (0, c.dA)(T?.endDate),
@@ -29,22 +29,22 @@ t.d(
             }, [_, k, n, A]);
             let x = {
                 text: m.intl.string(m.t.Ve9Ge6),
-                icon: r.GiftIcon,
+                icon: o.GiftIcon,
                 onClick: () => {
                     (t(), n(), A(C.i.TAKE_ACTION));
                 },
             };
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)("div", { ref: j, children: p }),
-                    (0, i.jsx)(o.H, {
+                    (0, i.jsx)("div", { ref: j, children: b }),
+                    (0, i.jsx)(r.H, {
                         targetElementRef: j,
                         shouldShow: !0,
                         disableMediaViewer: !0,
                         position: "top",
                         align: "center",
-                        title: b?.header ?? "",
-                        body: b?.body ?? "",
+                        title: p?.header ?? "",
+                        body: p?.body ?? "",
                         assetUrl: I ?? "",
                         badge:
                             h && null != N

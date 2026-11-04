@@ -11,12 +11,12 @@ n.d(
                     r = n.current;
                 if (null == e || null == r) return;
                 ((r.width = a), (r.height = i));
-                let o = r.getContext("2d");
-                if (null == o) return;
-                let u = !1,
+                let u = r.getContext("2d");
+                if (null == u) return;
+                let o = !1,
                     s = -1 / 0;
                 function c() {
-                    u || e.readyState < 2 || o.drawImage(e, 0, 0, a, i);
+                    o || e.readyState < 2 || u.drawImage(e, 0, 0, a, i);
                 }
                 function d(e) {
                     e - s < 100 || ((s = e), c());
@@ -24,7 +24,7 @@ n.d(
                 if ("function" == typeof e.requestVideoFrameCallback) {
                     let t;
                     function m(n) {
-                        u || (d(n), (t = e.requestVideoFrameCallback(m)));
+                        o || (d(n), (t = e.requestVideoFrameCallback(m)));
                     }
                     function f() {
                         t = e.requestVideoFrameCallback(m);
@@ -40,7 +40,7 @@ n.d(
                         e.addEventListener("loadeddata", c),
                         e.paused ? e.readyState >= 2 && c() : (t = e.requestVideoFrameCallback(m)),
                         () => {
-                            ((u = !0),
+                            ((o = !0),
                                 e.cancelVideoFrameCallback(t),
                                 e.removeEventListener("play", f),
                                 e.removeEventListener("pause", p),
@@ -53,7 +53,7 @@ n.d(
                 {
                     let t;
                     function h(e) {
-                        u || (d(e), (t = requestAnimationFrame(h)));
+                        o || (d(e), (t = requestAnimationFrame(h)));
                     }
                     function x() {
                         t = requestAnimationFrame(h);
@@ -69,7 +69,7 @@ n.d(
                         e.addEventListener("loadeddata", c),
                         e.paused ? e.readyState >= 2 && c() : (t = requestAnimationFrame(h)),
                         () => {
-                            ((u = !0),
+                            ((o = !0),
                                 cancelAnimationFrame(t),
                                 e.removeEventListener("play", x),
                                 e.removeEventListener("pause", v),

@@ -31,7 +31,7 @@ function p() {
 function j() {
     u.A.fetchedConsents || null != x || (x = (0, a.Q)().then(p, p));
 }
-var _ = (((n = {}).ACTIVITY_SHARING = "activity_sharing"), (n.PERSONALIZATION = "personalization"), (n.ALL = "all"), n);
+var v = (((n = {}).ACTIVITY_SHARING = "activity_sharing"), (n.PERSONALIZATION = "personalization"), (n.ALL = "all"), n);
 l.d(
     t,
     {},
@@ -68,7 +68,7 @@ l.d(
                 i
             );
         },
-        kG: _,
+        kG: v,
         zE: j,
     },
 );

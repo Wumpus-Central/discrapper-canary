@@ -1,9 +1,9 @@
-(l.d(t, { p: () => y, T: () => j }), l(323874), l(14289), l(35956), l(321073));
+(l.d(t, { p: () => j, T: () => y }), l(323874), l(14289), l(35956), l(321073));
 var a = l(477900),
     n = l(582128),
     i = l(435558),
-    r = l(194498),
-    s = l(77729),
+    s = l(194498),
+    r = l(77729),
     o = l(489496);
 let c = new Map(),
     u = new Map();
@@ -27,47 +27,47 @@ var h = l(635793),
     x = l(792996);
 let g = (e, t, l, a) => (a([]), () => {}),
     b = n.createContext(null);
-function y(e) {
+function j(e) {
     var t;
-    let y,
-        j,
+    let j,
+        y,
         C,
         N,
-        w,
         E,
-        { children: k, clip: A, modalContainerRef: R, editOnly: L = !1 } = e,
+        k,
+        { children: w, clip: A, modalContainerRef: R, editOnly: L = !1 } = e,
         T = A.type === p.nQ.SCREENSHOT,
         {
             initialDuration: I,
-            initialCropStart: M,
-            initialCropEnd: D,
+            initialCropStart: D,
+            initialCropEnd: M,
             initialCurrentTime: S,
-        } = ((y = A.length / 1e3),
-        (j = A.editMetadata?.start ?? 0),
+        } = ((j = A.length / 1e3),
+        (y = A.editMetadata?.start ?? 0),
         (C = A.editMetadata?.end ?? 0),
-        (N = 0 !== j || (0 !== C && C !== y)),
+        (N = 0 !== y || (0 !== C && C !== j)),
         {
-            initialDuration: y,
-            initialCropStart: j,
+            initialDuration: j,
+            initialCropStart: y,
             initialCropEnd: C,
             isCropped: N,
-            initialCurrentTime: N ? j : y / 2,
+            initialCurrentTime: N ? y : j / 2,
         }),
         O = n.useMemo(
             () =>
-                null == s.A.clips.getClipProtocolURLFromPath ? null : s.A.clips.getClipProtocolURLFromPath(A.filepath),
+                null == r.A.clips.getClipProtocolURLFromPath ? null : r.A.clips.getClipProtocolURLFromPath(A.filepath),
             [A.filepath],
         ),
         [P, _] = n.useState({
             clipName: A.name,
-            cropStart: M,
-            cropEnd: 0 === D ? I : D,
+            cropStart: D,
+            cropEnd: 0 === M ? I : M,
             voiceAudioEnabled: A.editMetadata?.voiceAudio ?? !0,
             applicationAudioEnabled: A.editMetadata?.applicationAudio ?? !0,
             soundboardAudioEnabled: A.editMetadata?.soundboardAudio ?? !0,
             cropPreset: A.editMetadata?.crop?.preset ?? p.yz.ORIGINAL,
         }),
-        [U, z] = n.useState(h.Y.NONE),
+        [z, U] = n.useState(h.Y.NONE),
         {
             clipName: $,
             cropStart: G,
@@ -75,9 +75,9 @@ function y(e) {
             voiceAudioEnabled: H,
             applicationAudioEnabled: X,
             soundboardAudioEnabled: F,
-            cropPreset: W,
+            cropPreset: V,
         } = P,
-        V = n.useRef(null),
+        W = n.useRef(null),
         K = n.useRef(S),
         [Z, Y] = n.useState(I),
         [Q, q] = n.useState(!1),
@@ -85,8 +85,8 @@ function y(e) {
         et = n.useRef(new Set()),
         el = n.useRef(!1),
         [ea, en] = n.useState(null),
-        [ei, er] = n.useState(null),
-        [es, eo] = n.useState(null),
+        [ei, es] = n.useState(null),
+        [er, eo] = n.useState(null),
         [ec, eu] = n.useState([]),
         [ed, em] = n.useState(!1),
         [ef, eh] = n.useState(() => g),
@@ -94,17 +94,17 @@ function y(e) {
         [ex, eg] = n.useState(() => A.tracks ?? []),
         eb = n.useRef(ex);
     eb.current = ex;
-    let ey = n.useCallback(() => {
-            let e = V.current?.videoElement?.currentTime ?? G,
+    let ej = n.useCallback(() => {
+            let e = W.current?.videoElement?.currentTime ?? G,
                 t = (0, i.clamp)(e, G, B - 1);
             return { startSec: t, endSec: Math.min(t + 5, B) };
-        }, [G, B, V]),
-        ej = n.useCallback(() => {
+        }, [G, B, W]),
+        ey = n.useCallback(() => {
             let e = crypto.randomUUID(),
                 t = {
                     id: e,
                     type: p.Me.TEXT,
-                    ...ey(),
+                    ...ej(),
                     data: {
                         text: x.intl.string(v.default.v2jEIc),
                         style: { ...p.QK },
@@ -112,16 +112,16 @@ function y(e) {
                         rotationDeg: 0,
                     },
                 };
-            return (eg((e) => [...e, t]), z(h.Y.NONE), e);
-        }, [ey, z]),
-        eC = (0, p.QY)(W) ?? (null != ep ? ep.width / ep.height : null),
+            return (eg((e) => [...e, t]), U(h.Y.NONE), e);
+        }, [ej, U]),
+        eC = (0, p.QY)(V) ?? (null != ep ? ep.width / ep.height : null),
         eN = n.useCallback(
             (e) => {
                 let t = crypto.randomUUID(),
                     l = {
                         id: t,
                         type: p.Me.IMAGE,
-                        ...ey(),
+                        ...ej(),
                         data: {
                             ...e,
                             position: { ...p._S },
@@ -131,17 +131,17 @@ function y(e) {
                             shadowColor: p.pk,
                         },
                     };
-                return (eg((e) => [...e, l]), z(h.Y.NONE), t);
+                return (eg((e) => [...e, l]), U(h.Y.NONE), t);
             },
-            [ey, z, eC],
+            [ej, U, eC],
         ),
-        ew = n.useCallback((e) => {
+        eE = n.useCallback((e) => {
             eg((t) => t.filter((t) => t.id !== e));
         }, []),
-        eE = n.useCallback((e, t, l) => {
+        ek = n.useCallback((e, t, l) => {
             eg((a) => a.map((a) => (a.id === e ? { ...a, startSec: t, endSec: l } : a)));
         }, []),
-        ek = n.useCallback((e, t) => {
+        ew = n.useCallback((e, t) => {
             eg((l) => l.map((l) => (l.id === e && l.type === p.Me.TEXT ? { ...l, data: t(l.data) } : l)));
         }, []),
         eA = n.useCallback((e, t) => {
@@ -158,16 +158,16 @@ function y(e) {
                     applicationAudio: X,
                     voiceAudio: H,
                     soundboardAudio: F,
-                    crop: { preset: W },
+                    crop: { preset: V },
                 },
             }),
-            [A, $, G, B, X, H, F, W],
+            [A, $, G, B, X, H, F, V],
         ),
         eL = n.useCallback((e) => {
-            ((V.current = e), en(e.videoElement));
+            ((W.current = e), en(e.videoElement));
         }, []),
         eT = n.useCallback((e, t, l, a) => {
-            (er(e), eu(t), eo(l), eh(() => a));
+            (es(e), eu(t), eo(l), eh(() => a));
         }, []),
         eI = n.useCallback(() => {
             em(!0);
@@ -178,7 +178,7 @@ function y(e) {
                 a = new Worker(new URL("/assets/" + l.u(35886), l.b)),
                 n = new Map(),
                 i = 0,
-                r = null,
+                s = null,
                 o = !1;
             async function c(e, t, l) {
                 let a = [];
@@ -186,13 +186,13 @@ function y(e) {
                     a = await (async function (e, t, l, a, n) {
                         let i = document.createElement("video");
                         ((i.muted = !0), (i.preload = "auto"), (i.src = e));
-                        let r = [];
+                        let s = [];
                         try {
                             for (let e of (await f(i, "loadeddata"), t)) {
                                 if (n()) break;
                                 ((i.currentTime = e),
                                     await f(i, "seeked"),
-                                    r.push(
+                                    s.push(
                                         await createImageBitmap(i, {
                                             resizeWidth: l,
                                             resizeHeight: a,
@@ -201,12 +201,12 @@ function y(e) {
                                     ));
                             }
                         } catch (e) {
-                            for (let e of r) e.close();
+                            for (let e of s) e.close();
                             throw e;
                         } finally {
                             (0, m.A)(i);
                         }
-                        return r;
+                        return s;
                     })(l, t.timestamps, t.previewWidth, t.previewHeight, () => !n.has(e));
                 } catch (e) {
                     p.GU.warn("Timeline thumbnail video element fallback error:", e);
@@ -218,13 +218,13 @@ function y(e) {
                 }
                 i.onComplete(a);
             }
-            let u = (e, t, l, s) => {
+            let u = (e, t, l, r) => {
                 let u = ++i,
-                    d = { timestamps: e, previewWidth: t, previewHeight: l, onComplete: s };
+                    d = { timestamps: e, previewWidth: t, previewHeight: l, onComplete: r };
                 return (
                     n.set(u, d),
-                    o && null != r
-                        ? c(u, d, r)
+                    o && null != s
+                        ? c(u, d, s)
                         : a.postMessage({
                               type: "extract",
                               requestId: u,
@@ -241,7 +241,7 @@ function y(e) {
                 !(async function () {
                     let l;
                     try {
-                        l = await s.A.clips.loadClip(t);
+                        l = await r.A.clips.loadClip(t);
                     } catch {
                         eI();
                         return;
@@ -249,14 +249,14 @@ function y(e) {
                     ((e.onmessage = (e) => {
                         let { videoBuffer: t, audioTracks: l, audioBuffer: n } = e.data,
                             i = URL.createObjectURL(new Blob([t], { type: "video/mp4" }));
-                        r = i;
-                        let s = [];
+                        s = i;
+                        let r = [];
                         for (let e of l) {
                             let t = URL.createObjectURL(new Blob([e.buffer], { type: "audio/mp4" }));
-                            s.push({ arrayBuffer: e.buffer, url: t, trackName: e.trackName });
+                            r.push({ arrayBuffer: e.buffer, url: t, trackName: e.trackName });
                         }
                         (a.postMessage({ type: "init", videoBuffer: t }, [t]),
-                            eT(i, s, URL.createObjectURL(new Blob([n], { type: "audio/mp4" })), u));
+                            eT(i, r, URL.createObjectURL(new Blob([n], { type: "audio/mp4" })), u));
                     }),
                         (a.onmessage = (e) => {
                             let t = e.data;
@@ -281,14 +281,14 @@ function y(e) {
                                         break;
                                     let e = n.get(t.requestId);
                                     if (null == e) break;
-                                    if (null == r) {
+                                    if (null == s) {
                                         (n.delete(t.requestId), e.onComplete([]));
                                         break;
                                     }
                                     (o ||
                                         (p.GU.info("Timeline thumbnails: falling back to video element extraction"),
                                         (o = !0)),
-                                        c(t.requestId, e, r));
+                                        c(t.requestId, e, s));
                                 }
                             }
                         }),
@@ -313,14 +313,14 @@ function y(e) {
         ),
         n.useEffect(
             () => () => {
-                null != es && URL.revokeObjectURL(es);
+                null != er && URL.revokeObjectURL(er);
             },
-            [es],
+            [er],
         ),
         (function (e, t) {
-            let { clipId: l, clipProtocolVideoURL: a, isScreenshot: i, editOnly: r, pendingEdits: s } = e,
-                m = n.useRef(s);
-            ((m.current = s),
+            let { clipId: l, clipProtocolVideoURL: a, isScreenshot: i, editOnly: s, pendingEdits: r } = e,
+                m = n.useRef(r);
+            ((m.current = r),
                 n.useEffect(() => {
                     async function e() {
                         let e = {},
@@ -334,7 +334,7 @@ function y(e) {
                         await (0, o.Yy)(l, { ...n, tracks: t.current, ...e }, !0);
                     }
                     return () => {
-                        !r &&
+                        !s &&
                             (u.set(l, e),
                             c.has(l) ||
                                 (async function (e) {
@@ -346,7 +346,7 @@ function y(e) {
                                     }
                                 })(l));
                     };
-                }, [l, a, i, m, r, t]));
+                }, [l, a, i, m, s, t]));
         })(
             {
                 clipId: A.id,
@@ -361,7 +361,7 @@ function y(e) {
                         voiceAudio: H,
                         applicationAudio: X,
                         soundboardAudio: F,
-                        crop: { preset: W },
+                        crop: { preset: V },
                     },
                 },
             },
@@ -370,8 +370,8 @@ function y(e) {
         n.useEffect(() => {
             Z > 0 && B <= 0 && I <= 0 && _((e) => ({ ...e, cropEnd: Z }));
         }, [Z, B, I]));
-    let eM = n.useMemo(() => B - G, [G, B]),
-        eD = n.useCallback(
+    let eD = n.useMemo(() => B - G, [G, B]),
+        eM = n.useCallback(
             (e) => (
                 et.current.add(e),
                 () => {
@@ -384,21 +384,21 @@ function y(e) {
             setCropStart: eS,
             setCropEnd: eO,
             setCrop: eP,
-        } = ((w = n.useCallback(
+        } = ((E = n.useCallback(
             (e) => {
                 let t = (0, i.clamp)(e, 0, B - 1);
-                (_((e) => ({ ...e, cropStart: t })), V?.current?.seek(t));
+                (_((e) => ({ ...e, cropStart: t })), W?.current?.seek(t));
             },
-            [B, _, V],
+            [B, _, W],
         )),
         {
-            setCropStart: w,
+            setCropStart: E,
             setCropEnd: n.useCallback(
                 (e) => {
                     let t = (0, i.clamp)(e, G + 1, Z);
-                    (_((e) => ({ ...e, cropEnd: t })), V?.current?.seek(t));
+                    (_((e) => ({ ...e, cropEnd: t })), W?.current?.seek(t));
                 },
-                [G, Z, _, V],
+                [G, Z, _, W],
             ),
             setCrop: n.useCallback(
                 (e, t) => {
@@ -409,25 +409,25 @@ function y(e) {
         }),
         {
             play: e_,
-            pause: eU,
-            seek: ez,
-        } = ((E = n.useCallback(() => {
-            V?.current?.play();
-        }, [V])),
+            pause: ez,
+            seek: eU,
+        } = ((k = n.useCallback(() => {
+            W?.current?.play();
+        }, [W])),
         {
-            play: E,
+            play: k,
             pause: n.useCallback(() => {
-                V?.current?.pause();
-            }, [V]),
+                W?.current?.pause();
+            }, [W]),
             seek: n.useCallback(
                 (e) => {
-                    V?.current?.seek(e);
+                    W?.current?.seek(e);
                 },
-                [V],
+                [W],
             ),
         });
-    ((0, r.A)(() => {
-        let e = V.current?.videoElement;
+    ((0, s.A)(() => {
+        let e = W.current?.videoElement;
         if (null == e || !el.current) return;
         let t = e.currentTime;
         (K.current !== t && ((K.current = t), et.current.forEach((e) => e.onTimeUpdate?.(t))),
@@ -442,7 +442,7 @@ function y(e) {
                     ea.addEventListener("loadedmetadata", a),
                     ea.addEventListener("seeked", n),
                     ea.duration > 0 && Y(ea.duration),
-                    ea.readyState >= 1 && (ee(!0), V?.current?.seek(S)),
+                    ea.readyState >= 1 && (ee(!0), W?.current?.seek(S)),
                     q(!ea.paused),
                     () => {
                         (ea.removeEventListener("play", e),
@@ -462,12 +462,12 @@ function y(e) {
                 null != ea && Y(ea.duration);
             }
             function a() {
-                null != ea && (ee(!0), Y(ea.duration), V?.current?.seek(S));
+                null != ea && (ee(!0), Y(ea.duration), W?.current?.seek(S));
             }
             function n() {
                 el.current = !0;
             }
-        }, [ea, S, V, et, q, ee, Y, el]));
+        }, [ea, S, W, et, q, ee, Y, el]));
     let e$ = n.useCallback((e) => {
             _((t) => ({ ...t, clipName: e }));
         }, []),
@@ -506,7 +506,7 @@ function y(e) {
                 },
             [K, et],
         ),
-        eW = n.useMemo(
+        eV = n.useMemo(
             () => ({
                 useCurrentTime: eF,
                 duration: Z,
@@ -514,20 +514,20 @@ function y(e) {
                 isLoaded: J,
                 cropStart: G,
                 cropEnd: B,
-                cropDuration: eM,
+                cropDuration: eD,
                 setCropStart: eS,
                 setCropEnd: eO,
                 setCrop: eP,
-                cropPreset: W,
+                cropPreset: V,
                 setCropPreset: eG,
-                activeTool: U,
-                setActiveTool: z,
+                activeTool: z,
+                setActiveTool: U,
                 play: e_,
-                pause: eU,
-                seek: ez,
-                subscribe: eD,
+                pause: ez,
+                seek: eU,
+                subscribe: eM,
                 setVideoPlayerRef: eL,
-                videoPlayerRef: V,
+                videoPlayerRef: W,
                 videoURL: ei,
                 audioTracks: ec,
                 hasError: ed,
@@ -539,15 +539,15 @@ function y(e) {
                 setSoundboardAudioEnabled: eX,
                 getEditedClip: eR,
                 tracks: ex,
-                addTextTrack: ej,
+                addTextTrack: ey,
                 addImageTrack: eN,
-                removeTrack: ew,
-                updateTrackRange: eE,
-                updateTextTrackData: ek,
+                removeTrack: eE,
+                updateTrackRange: ek,
+                updateTextTrackData: ew,
                 updateImageTrackData: eA,
                 clipName: $,
                 setClipName: e$,
-                audioURL: es,
+                audioURL: er,
                 clip: A,
                 editOnly: L,
                 generateThumbnails: ef,
@@ -561,19 +561,19 @@ function y(e) {
                 J,
                 G,
                 B,
-                eM,
+                eD,
                 eS,
                 eO,
                 eP,
-                W,
+                V,
                 eG,
-                U,
                 z,
+                U,
                 e_,
-                eU,
                 ez,
-                es,
-                eD,
+                eU,
+                er,
+                eM,
                 eL,
                 ei,
                 ec,
@@ -586,11 +586,11 @@ function y(e) {
                 eX,
                 eR,
                 ex,
-                ej,
+                ey,
                 eN,
-                ew,
                 eE,
                 ek,
+                ew,
                 eA,
                 $,
                 e$,
@@ -599,9 +599,9 @@ function y(e) {
                 ep,
             ],
         );
-    return (0, a.jsx)(b.Provider, { value: eW, children: k });
+    return (0, a.jsx)(b.Provider, { value: eV, children: w });
 }
-function j() {
+function y() {
     let e = n.useContext(b);
     if (null == e) throw Error("useClipContext must be used within a ClipContextProvider");
     return e;

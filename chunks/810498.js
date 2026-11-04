@@ -1,8 +1,8 @@
 var i = t(582128),
     l = t(877624),
     a = t(855986),
-    o = t(554146),
-    r = t(841702),
+    r = t(554146),
+    o = t(841702),
     s = t(826673),
     u = t(412260),
     c = t(860300),
@@ -17,15 +17,15 @@ t.d(
         JW: function () {
             let [e, n] = i.useState(),
                 t = (0, a.yK)([u.A], () => u.A.getGiftPromotionRewardSkuIds()),
-                { purchases: l, hasPreviouslyFetched: o, fetchPurchasesError: s } = (0, r.Wg)(),
+                { purchases: l, hasPreviouslyFetched: r, fetchPurchasesError: s } = (0, o.Wg)(),
                 c = i.useRef(!1);
             return (
                 i.useEffect(() => {
-                    o &&
+                    r &&
                         !c.current &&
                         t.length > 0 &&
                         (n(null == s ? t.filter((e) => null == l.get(e)) : []), (c.current = !0));
-                }, [t, l, o, s]),
+                }, [t, l, r, s]),
                 e
             );
         },
@@ -33,10 +33,10 @@ t.d(
             if (null == e) return;
             let { reverse: t = !1, colorStops: i, defaultAngle: l = 78.98 } = n ?? {},
                 a = Array.isArray(e) ? e : e.gradient,
-                o = Array.isArray(e) || null == e.angle ? l : e.angle;
-            t && (o = (o + 180) % 360);
-            let r = null != i ? a.map((e, n) => `${e} ${i[n]}%`).join(", ") : a.join(", ");
-            return { background: `linear-gradient(${o}deg, ${r})` };
+                r = Array.isArray(e) || null == e.angle ? l : e.angle;
+            t && (r = (r + 180) % 360);
+            let o = null != i ? a.map((e, n) => `${e} ${i[n]}%`).join(", ") : a.join(", ");
+            return { background: `linear-gradient(${r}deg, ${o})` };
         },
         MD: function () {
             let { enabled: e } = c.J.getConfig({ location: "shouldShowGiftPromotionReminderNotice" });
@@ -44,8 +44,8 @@ t.d(
             let n = u.A.getGiftPromotion()?.id;
             return (
                 null != n &&
-                !!(0, s.u$)(o.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, n).isDismissed &&
-                !(0, s.u$)(o.M.GIFTING_PROMOTION_REMINDER, n).isDismissed
+                !!(0, s.u$)(r.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, n).isDismissed &&
+                !(0, s.u$)(r.M.GIFTING_PROMOTION_REMINDER, n).isDismissed
             );
         },
         Mq: f,

@@ -28,7 +28,7 @@ n.d(
                 T && !b && E();
             }, [T, b, E]);
             let x = null,
-                C = A.intl.string(A.t.d7b1p6);
+                v = A.intl.string(A.t.d7b1p6);
             switch (t) {
                 case 0:
                     x = A.intl.string(A.t.Xiwf1Q);
@@ -50,7 +50,7 @@ n.d(
                               className: N.Qs,
                               children: [
                                   (0, l.jsx)(c.D, { variant: "heading-sm/semibold", id: I, children: x }),
-                                  (0, l.jsx)(u.E, { color: "text-default", variant: "body-sm/normal", children: C }),
+                                  (0, l.jsx)(u.E, { color: "text-default", variant: "body-sm/normal", children: v }),
                                   (0, l.jsxs)("div", {
                                       className: N.UD,
                                       children: [

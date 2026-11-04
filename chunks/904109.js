@@ -15,8 +15,8 @@ var n = l(477900),
     x = l(821609),
     p = l(645619),
     j = l(915667),
-    _ = l(451395),
-    v = l(49303),
+    v = l(451395),
+    _ = l(49303),
     b = l(328006),
     A = l(857909),
     I = l(334840),
@@ -98,7 +98,7 @@ function U(e) {
                         null != m &&
                             (0, n.jsx)("div", {
                                 className: M.BU,
-                                children: (0, n.jsx)(_.jV, {
+                                children: (0, n.jsx)(v.jV, {
                                     iconSize: "xs",
                                     "aria-label": L.intl.formatToPlainString(D.default.NV85DR, { widgetName: l }),
                                 }),
@@ -244,7 +244,7 @@ function O(e) {
             m?.Edit != null &&
                 null != d &&
                 null == u &&
-                ((0, v.Nv)(t, l.type, l.id),
+                ((0, _.Nv)(t, l.type, l.id),
                 (function (e) {
                     let { widget: t, Edit: l, onCommit: i } = e,
                         s = (e) =>
@@ -266,11 +266,11 @@ function O(e) {
                 })({ widget: l, Edit: m.Edit, onCommit: d }));
         }, [l, m, d, u, t]);
     if (null == m) return null;
-    let { View: g, Edit: h, HeaderAccessory: x, HeaderActions: p, Title: j, TitleIcon: _, ViewHeaderTrailing: b } = m,
+    let { View: g, Edit: h, HeaderAccessory: x, HeaderActions: p, Title: j, TitleIcon: v, ViewHeaderTrailing: b } = m,
         A = "edit" === s,
         I = null != h && null != d && null == u,
         E = null != x ? (0, n.jsx)(x, { hydration: a, guildId: t }) : null,
-        N = null != _ ? (0, n.jsx)(_, { hydration: a }) : null,
+        N = null != v ? (0, n.jsx)(v, { hydration: a }) : null,
         y = null == u && null != p ? (0, n.jsx)(p, { hydration: a, guildId: t, column: l.position.column }) : null,
         C = l.default_title ?? "",
         S =

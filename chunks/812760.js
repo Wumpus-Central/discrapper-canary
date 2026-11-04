@@ -17,7 +17,7 @@ var l = n(477900),
     C = n(805251),
     p = n(792996),
     S = n(543136);
-let A = function (e) {
+let _ = function (e) {
     let { category: t, daysRemainingText: n = p.t.Io7ozn, className: s } = e;
     if (!(0, x.HF)(t.unpublishedAt)) return null;
     let a = (0, x.WU)(t.unpublishedAt),
@@ -27,13 +27,13 @@ let A = function (e) {
         children: (0, l.jsx)(C.E, { type: { text: r }, variant: "inverted" }),
     });
 };
-var _ = n(212407),
+var A = n(212407),
     v = n(761977);
 function b(e) {
     let { category: t, onSelect: n } = e,
         a = (0, c.bG)([E.Ay], () => E.Ay.useReducedMotion),
         x = (0, c.bG)([f.A], () => f.A.isFocused()),
-        { catalogBannerStatic: C, catalogBannerAnimated: S, catalogBannerRive: b } = (0, _.MV)(t),
+        { catalogBannerStatic: C, catalogBannerAnimated: S, catalogBannerRive: b } = (0, A.MV)(t),
         I = s.useRef(null),
         j = null != b,
         L =
@@ -75,7 +75,7 @@ function b(e) {
                           ],
                       }),
             }),
-            (0, l.jsx)(A, { category: t, className: v.v0, daysRemainingText: p.t["8gsP5M"] }),
+            (0, l.jsx)(_, { category: t, className: v.v0, daysRemainingText: p.t["8gsP5M"] }),
             null != n &&
                 (0, l.jsx)("div", {
                     className: v.IG,
