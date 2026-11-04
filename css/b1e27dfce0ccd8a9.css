@@ -1,0 +1,48 @@
+.status_kMejgG {
+    display: flex;
+    justify-content: center;
+    padding-block: var(--space-24);
+    text-align: center
+}
+
+.gameIcon_kMejgG {
+    border-radius: var(--radius-xs);
+    height: var(--space-16);
+    width: var(--space-16)
+}
+
+.card_kMejgG {
+    background-color: var(--background-mod-muted);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    flex-direction: column
+}
+
+.card_kMejgG,
+.row_kMejgG {
+    display: flex
+}
+
+.row_kMejgG {
+    align-items: center;
+    gap: var(--space-12);
+    padding: var(--space-12)
+}
+
+.row_kMejgG+.row_kMejgG {
+    border-block-start: 1px solid var(--border-subtle)
+}
+
+.organizationIcon_kMejgG {
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    height: var(--space-40);
+    width: var(--space-40)
+}
+
+.rowText_kMejgG {
+    flex: 1;
+    min-width: 0
+}
+
+/*# sourceMappingURL=b1e27dfce0ccd8a9.css.map*/

@@ -257,7 +257,7 @@ let r = {
             "SEARCH_MESSAGES_SUCCESS",
             "MOD_VIEW_SEARCH_MESSAGES_SUCCESS",
         ],
-        inlineRequire: () => n(227444).A,
+        inlineRequire: () => n(562845).A,
     },
     MessageManager: {
         actions: [

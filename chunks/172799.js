@@ -1,6 +1,8 @@
 var i,
     r,
-    a = (((i = {})[(i.GUILD = 0)] = "GUILD"), (i[(i.GROUP_DM = 1)] = "GROUP_DM"), (i[(i.FRIEND = 2)] = "FRIEND"), i);
-let s = new Set([0, 1]);
-var l = (((r = {}).MAIN = "main"), (r.SETTINGS = "settings"), r);
-n.d(t, {}, { QR: l, Xd: a, uR: s });
+    a,
+    s = (((i = {}).SENDING = "sending"), (i.SENT = "sent"), (i.ERROR = "error"), i),
+    l = (((r = {})[(r.GUILD = 0)] = "GUILD"), (r[(r.GROUP_DM = 1)] = "GROUP_DM"), (r[(r.FRIEND = 2)] = "FRIEND"), r);
+let o = new Set([0, 1]);
+var d = (((a = {}).MAIN = "main"), (a.SETTINGS = "settings"), a);
+n.d(t, {}, { QR: d, Xd: l, iu: s, uR: o });

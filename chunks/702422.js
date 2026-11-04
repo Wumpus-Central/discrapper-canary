@@ -69,7 +69,7 @@ var Y = n(46653),
     K = n(35241),
     W = n(587168),
     J = n(193738),
-    X = n(5885),
+    X = n(824638),
     Z = n(996988);
 function q(e) {
     let { user: t, guildId: n } = e;
