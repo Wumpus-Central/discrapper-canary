@@ -1,4 +1,4 @@
-e.exports = {
+i.exports = {
     rf: "body_yz6RlA",
     V$: "metricMeasure_yz6RlA",
     SY: "listArea_yz6RlA",
@@ -16,4 +16,7 @@ e.exports = {
     LF: "activityBarSubtitle_yz6RlA",
     rl: "activityBarRight_yz6RlA",
     Cm: "emptyLeaderboardContainer_yz6RlA",
+    ZH: "podiumStack_yz6RlA",
+    vG: "podiumRowExit_yz6RlA",
+    iS: "podiumRowExitItem_yz6RlA",
 };

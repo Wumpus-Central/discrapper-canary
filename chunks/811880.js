@@ -1415,7 +1415,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e4 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e4}, Build Number: 664476, Version Hash: aba03d8ddfd48a6f9b0c87c43677f73e75941610`,
+    `[BUILD INFO] Release Channel: ${e4}, Build Number: 664484, Version Hash: 2d0b35256906bfa1148318e2c1fb11f6d7c41011`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -1487,7 +1487,7 @@ let e4 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "664476";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "664484";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -4544,7 +4544,7 @@ let st = (0, i9.Fe)({
                 n.e(860350),
                 n.e(249169),
                 n.e(657266),
-                n.e(339467),
+                n.e(715867),
                 n.e(865429),
                 n.e(846201),
                 n.e(311913),
@@ -25926,7 +25926,7 @@ let yl = "isHideDevBanner",
                     className: td()(ys.Wz, ys.mr),
                     children: [
                         (0, v.jsx)(ya, { className: ys.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "664476" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "664484" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -30540,7 +30540,8 @@ let vp = (0, tW.Fe)({
                 n.e(203112),
                 n.e(886896),
                 n.e(447505),
-                n.e(339467),
+                n.e(715867),
+                n.e(207828),
                 n.e(648086),
                 n.e(936875),
                 n.e(599618),
@@ -30571,7 +30572,7 @@ let vp = (0, tW.Fe)({
                 n.e(283166),
                 n.e(952831),
                 n.e(43784),
-                n.e(503853),
+                n.e(562204),
                 n.e(486032),
                 n.e(493756),
             ]).then(n.bind(n, 930417)),
@@ -53524,7 +53525,7 @@ let W6 = (0, tW.Fe)({
             n.e(249169),
             n.e(880150),
             n.e(657266),
-            n.e(339467),
+            n.e(715867),
             n.e(552653),
             n.e(691398),
             n.e(506933),
@@ -56358,7 +56359,7 @@ let Kc = (0, i9.Fe)({
                 n.e(60002),
                 n.e(189423),
                 n.e(415695),
-                n.e(339467),
+                n.e(715867),
                 n.e(691398),
                 n.e(266201),
                 n.e(752704),
