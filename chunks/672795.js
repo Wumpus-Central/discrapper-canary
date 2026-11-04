@@ -332,8 +332,8 @@ function eA(e, t, n) {
                 l.e("390213"),
                 l.e("944602"),
                 l.e("421778"),
-                l.e("679019"),
-                l.e("210413"),
+                l.e("890282"),
+                l.e("525096"),
                 l.e("758219"),
             ]).then(l.bind(l, 499334));
             return (l) => (0, i.jsx)(s, { ...l, guildId: e, requirement: t, description: n });
@@ -674,7 +674,7 @@ function e6(e, t) {
         n = Math.max(0, t - l.length);
     return { visibleGames: l, overflowCount: n };
 }
-function e4(e) {
+function e8(e) {
     let { played: t, totalCount: l } = e,
         { visibleGames: n, overflowCount: s } = e6(t, l);
     return (0, i.jsxs)("div", {
@@ -702,7 +702,7 @@ function e4(e) {
         ],
     });
 }
-function e8(e) {
+function e4(e) {
     let { played: t, totalCount: l, children: n } = e,
         s = t.filter((e) => null != e.iconUrl || e.isLoading),
         { visibleGames: a, overflowCount: r } = e6(s, s.length),
@@ -726,7 +726,7 @@ function e8(e) {
                             secondGame: t[1].name,
                             otherCount: l - 2,
                         }),
-        asset: s.length > 0 ? (0, i.jsx)(e4, { played: s, totalCount: s.length }) : void 0,
+        asset: s.length > 0 ? (0, i.jsx)(e8, { played: s, totalCount: s.length }) : void 0,
         assetSize: 24 * d - 5 * (d - 1),
         children: n,
     });
@@ -736,14 +736,14 @@ function e9(e) {
         r = ef(s, l);
     return (0, i.jsx)("div", {
         className: eZ.ag,
-        children: (0, i.jsx)(e8, {
+        children: (0, i.jsx)(e4, {
             played: r,
             totalCount: n,
             children: (0, i.jsx)(L.D, {
                 className: j()(eZ.Nw, eZ.Dz),
                 "aria-label": E.intl.formatToPlainString(Z.default.o6mBdl, { name: t }),
                 onClick: a,
-                children: (0, i.jsx)(e4, { played: r, totalCount: n }),
+                children: (0, i.jsx)(e8, { played: r, totalCount: n }),
             }),
         }),
     });
@@ -846,7 +846,7 @@ function te(e) {
                                           colorStrings: g.roleColorStrings,
                                       }),
                         }),
-                        (0, i.jsx)(e8, {
+                        (0, i.jsx)(e4, {
                             played: f,
                             totalCount: l.application_count,
                             children: (0, i.jsx)(b.E, {
@@ -1612,7 +1612,7 @@ function t6(e) {
                 : null,
     });
 }
-function t4(e) {
+function t8(e) {
     let { guildId: t, requirement: l, onClick: n } = e,
         s = X(l, "popular_games");
     return (0, i.jsxs)("div", {
@@ -1646,7 +1646,7 @@ function t4(e) {
         ],
     });
 }
-function t8(e) {
+function t4(e) {
     let { guildId: t, user: l } = e,
         n = en.Ay.useName(t, void 0, l);
     return (0, i.jsx)(m.m, {
@@ -1696,7 +1696,7 @@ function t9(e) {
                         size: tO.DN.SIZE_24,
                         max: d.length,
                         renderUser: function (e) {
-                            return e instanceof tB.A ? (0, i.jsx)(t8, { guildId: t, user: e }) : null;
+                            return e instanceof tB.A ? (0, i.jsx)(t4, { guildId: t, user: e }) : null;
                         },
                         count: n,
                         hideMoreUsers: c <= 0,
@@ -1788,7 +1788,7 @@ function t5(e) {
                           className: t3.sQ,
                           children: [
                               null != u &&
-                                  (0, i.jsx)(t4, { guildId: t, requirement: u, onClick: () => _("activity_sharing") }),
+                                  (0, i.jsx)(t8, { guildId: t, requirement: u, onClick: () => _("activity_sharing") }),
                               (0, i.jsx)(t9, {
                                   guildId: t,
                                   memberIds: f,
@@ -2626,7 +2626,7 @@ var l1 = l(803613),
     l2 = l(682348),
     l3 = l(73152),
     l6 = l(280911);
-function l4(e) {
+function l8(e) {
     let { guildId: t, isCompact: l } = e,
         n = (0, R.bG)([K.default], () => K.default.getCurrentUser()),
         s = (0, R.bG)([el.Ay], () => (null != n ? el.Ay.getMember(t, n.id) : null)),
@@ -2684,7 +2684,7 @@ function l4(e) {
         ],
     });
 }
-function l8(e) {
+function l4(e) {
     let { widgetName: t, isCompact: l } = e;
     return (0, i.jsxs)("div", {
         className: l6.D_,
@@ -2720,7 +2720,7 @@ function l9(e) {
     return (0, i.jsxs)("div", {
         className: l6.UX,
         children: [
-            a ? (0, i.jsx)(l8, { widgetName: n, isCompact: s }) : (0, i.jsx)(l4, { guildId: t, isCompact: s }),
+            a ? (0, i.jsx)(l4, { widgetName: n, isCompact: s }) : (0, i.jsx)(l8, { guildId: t, isCompact: s }),
             (0, i.jsx)(z.$, {
                 variant: "secondary",
                 size: "sm",
@@ -2754,8 +2754,8 @@ function l9(e) {
                                     l.e("390213"),
                                     l.e("944602"),
                                     l.e("421778"),
-                                    l.e("679019"),
-                                    l.e("210413"),
+                                    l.e("890282"),
+                                    l.e("525096"),
                                     l.e("32820"),
                                 ]).then(l.bind(l, 70111));
                                 return (l) => (0, i.jsx)(e, { ...l, guildId: t, widgetName: n });
@@ -3431,8 +3431,8 @@ async function n1(e) {
 let n2 = [];
 var n3 = l(344351),
     n6 = l(256693),
-    n4 = l(343030),
-    n8 = l(317608),
+    n8 = l(343030),
+    n4 = l(317608),
     n9 = l(953538);
 let n5 = {
     [d.a.IMAGE_TEXT]: {
@@ -4040,9 +4040,9 @@ let n5 = {
                         className: n9.kL,
                         children: [
                             null != d &&
-                                (0, i.jsx)(n8.A, {
+                                (0, i.jsx)(n4.A, {
                                     frameId: (0, n6.Ri)(d),
-                                    level: n4.A.WithinAppContent,
+                                    level: n8.A.WithinAppContent,
                                     className: n9.t$,
                                 }),
                             null == d &&

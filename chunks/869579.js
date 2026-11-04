@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => e7 }), n(321073));
+(n.r(t), n.d(t, { default: () => e4 }), n(321073));
 var l = n(477900),
     r = n(582128),
     i = n(17928),
@@ -8,41 +8,41 @@ var l = n(477900),
     d = n(408278),
     c = n(625903),
     o = n(332837),
-    f = n(689175),
-    g = n(250527),
-    m = n(468689),
-    h = n(742589),
+    g = n(689175),
+    f = n(250527),
+    h = n(468689),
+    m = n(742589),
     E = n(868652),
     p = n(645619),
     A = n(71393),
-    x = n(473953),
-    C = n(636537),
+    C = n(473953),
+    x = n(636537),
     _ = n(73153),
     v = n(652215);
 async function b(e) {
     _.h.dispatch({ type: "GUILD_SPACE_CATALOG_FETCH_START", guildId: e });
     try {
-        let { body: t } = await C.Bo.get({ url: v.Rsh.GUILD_SPACE_WIDGETS_CATALOG(e), rejectWithError: !0 });
+        let { body: t } = await x.Bo.get({ url: v.Rsh.GUILD_SPACE_WIDGETS_CATALOG(e), rejectWithError: !0 });
         _.h.dispatch({ type: "GUILD_SPACE_CATALOG_FETCH_SUCCESS", guildId: e, widgets: t.widgets });
     } catch {
         _.h.dispatch({ type: "GUILD_SPACE_CATALOG_FETCH_FAILURE", guildId: e });
     }
 }
-var y = n(960960),
-    I = n(202762),
-    S = n(88592),
+var S = n(960960),
+    y = n(202762),
+    I = n(88592),
     D = n(363957),
     j = n(513446);
-let G = 0;
-async function T(e, t) {
+let w = 0;
+async function G(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     n && _.h.dispatch({ type: "GUILD_SPACE_HYDRATE_RESET_ERRORS", guildId: e, widgetIds: t });
     let l = D.A.getWidgetIdsToHydrate(e, t, n);
     if (0 === l.length) return;
-    let r = G++;
+    let r = w++;
     _.h.dispatch({ type: "GUILD_SPACE_HYDRATE_START", guildId: e, requestId: r, widgetIds: l });
     try {
-        let { body: t } = await C.Bo.get({
+        let { body: t } = await x.Bo.get({
             url: v.Rsh.GUILD_SPACE_WIDGETS_HYDRATE(e),
             query: { widget_ids: l },
             rejectWithError: !0,
@@ -52,61 +52,62 @@ async function T(e, t) {
         _.h.dispatch({ type: "GUILD_SPACE_HYDRATE_FAILURE", guildId: e, requestId: r, retryable: (0, j.a)(t) });
     }
 }
-var w = n(716357),
+var T = n(716357),
     L = n(593673),
-    R = n(313627),
-    N = n(344351),
-    P = n(795816),
-    k = n(933958),
-    U = n(44167),
-    M = n(872188),
-    B = n(868285),
-    O = n(36525),
+    R = n(49303),
+    N = n(313627),
+    P = n(344351),
+    k = n(795816),
+    U = n(933958),
+    M = n(44167),
+    B = n(872188),
+    O = n(868285),
+    W = n(36525),
     H = n(192308),
-    W = n(871682),
-    F = n(331322),
-    z = n(821609),
-    K = n(499373),
-    q = n(189213),
-    $ = n(939249),
-    V = n(245604),
-    X = n(104510),
-    Y = n(661531),
-    J = n(775602),
-    Q = n(855823),
-    Z = n(880098),
-    ee = n(105292),
-    et = n(517228);
-function en(e) {
+    F = n(871682),
+    z = n(331322),
+    K = n(821609),
+    q = n(499373),
+    $ = n(189213),
+    V = n(939249),
+    X = n(245604),
+    Y = n(104510),
+    J = n(661531),
+    Q = n(775602),
+    Z = n(855823),
+    ee = n(880098),
+    et = n(105292),
+    en = n(517228);
+function el(e) {
     let { widget: t, onClick: n } = e,
-        r = (0, i.bG)([J.Ay], () => J.Ay.useReducedMotion),
+        r = (0, i.bG)([Q.Ay], () => Q.Ay.useReducedMotion),
         { catalog_image_static_url: s, catalog_image_animated_url: u } = t.assets,
         d = (r ? null : u) ?? s,
         c = t.boost_price;
-    return (0, l.jsxs)($.D, {
-        className: et.HL,
+    return (0, l.jsxs)(V.D, {
+        className: en.HL,
         onClick: n,
         children: [
             (0, l.jsxs)("div", {
-                className: et.b3,
+                className: en.b3,
                 children: [
-                    null != d && (0, l.jsx)("img", { className: et.YI, src: d, alt: "" }),
+                    null != d && (0, l.jsx)("img", { className: en.YI, src: d, alt: "" }),
                     (0, l.jsxs)("div", {
-                        className: et.Nt,
+                        className: en.Nt,
                         "aria-hidden": !0,
                         children: [
-                            (0, l.jsx)("div", { className: et.Ti, children: (0, l.jsx)("div", { className: et.dK }) }),
-                            (0, l.jsxs)(F.B, {
-                                className: et.Cq,
+                            (0, l.jsx)("div", { className: en.Ti, children: (0, l.jsx)("div", { className: en.dK }) }),
+                            (0, l.jsxs)(z.B, {
+                                className: en.Cq,
                                 align: "center",
                                 justify: "center",
                                 gap: 4,
                                 children: [
-                                    (0, l.jsx)(V.U, {}),
+                                    (0, l.jsx)(X.U, {}),
                                     (0, l.jsx)(a.E, {
                                         variant: "body-sm/semibold",
                                         color: "text-default",
-                                        children: ee.intl.string(Z.default.IuT87w),
+                                        children: et.intl.string(ee.default.IuT87w),
                                     }),
                                 ],
                             }),
@@ -114,22 +115,22 @@ function en(e) {
                     }),
                 ],
             }),
-            (0, l.jsxs)(F.B, {
+            (0, l.jsxs)(z.B, {
                 gap: 4,
                 children: [
                     (0, l.jsx)(a.E, { variant: "body-sm/semibold", color: "text-default", children: t.name }),
                     null != c && c > 0
-                        ? (0, l.jsxs)(F.B, {
+                        ? (0, l.jsxs)(z.B, {
                               direction: "horizontal",
                               align: "center",
                               gap: 4,
                               children: [
-                                  (0, l.jsx)(X._, { size: "sm", color: Y.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
+                                  (0, l.jsx)(Y._, { size: "sm", color: J.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
                                   (0, l.jsx)(a.E, {
                                       variant: "body-sm/normal",
                                       color: "text-muted",
                                       lineClamp: 1,
-                                      children: ee.intl.format(Z.default["8wD0Un"], { boostPrice: c }),
+                                      children: et.intl.format(ee.default["8wD0Un"], { boostPrice: c }),
                                   }),
                               ],
                           })
@@ -137,21 +138,21 @@ function en(e) {
                               variant: "body-sm/normal",
                               color: "text-muted",
                               lineClamp: 1,
-                              children: ee.intl.string(Z.default.Lx0P8k),
+                              children: et.intl.string(ee.default.Lx0P8k),
                           }),
                 ],
             }),
         ],
     });
 }
-function el(e) {
+function er(e) {
     let { guildId: t, insertionTarget: n, onAddWidget: a, ...s } = e,
         u = (0, i.yK)(
-            [y.A, S.A],
+            [S.A, I.A],
             () => {
-                let e = S.A.getDraft(t)?.widgets ?? [],
-                    n = y.A.getWidgets(t) ?? [];
-                return (0, Q.aU)(n, e);
+                let e = I.A.getDraft(t)?.widgets ?? [],
+                    n = S.A.getWidgets(t) ?? [];
+                return (0, Z.aU)(n, e);
             },
             [t],
         );
@@ -159,16 +160,16 @@ function el(e) {
         r.useEffect(() => {
             b(t);
         }, [t]),
-        (0, l.jsx)(q.a, {
-            title: ee.intl.string(Z.default.L8Xfoo),
-            subtitle: ee.intl.string(Z.default["N8nJ+T"]),
+        (0, l.jsx)($.a, {
+            title: et.intl.string(ee.default.L8Xfoo),
+            subtitle: et.intl.string(ee.default["N8nJ+T"]),
             actions: [],
             ...s,
             children: (0, l.jsx)("div", {
-                className: et.Vg,
+                className: en.Vg,
                 children: u.map((e) =>
                     (0, l.jsx)(
-                        en,
+                        el,
                         {
                             widget: e,
                             onClick: () => {
@@ -182,12 +183,12 @@ function el(e) {
         })
     );
 }
-function er(e, t, n) {
-    let r = (r) => (0, l.jsx)(el, { guildId: e, insertionTarget: n, onAddWidget: t, ...r });
+function ei(e, t, n) {
+    let r = (r) => (0, l.jsx)(er, { guildId: e, insertionTarget: n, onAddWidget: t, ...r });
     (0, H.openModalLazy)(() => Promise.resolve(r), { modalKey: "guild-space-add-widget" });
 }
-let ei = r.createContext(null);
-function ea(e) {
+let ea = r.createContext(null);
+function es(e) {
     let { children: t } = e,
         n = r.useRef(null),
         i = r.useCallback((e, t) => {
@@ -203,88 +204,88 @@ function ea(e) {
             [],
         ),
         s = r.useMemo(() => ({ addWidget: i, registerAddWidgetHandler: a }), [i, a]);
-    return (0, l.jsx)(ei.Provider, { value: s, children: t });
+    return (0, l.jsx)(ea.Provider, { value: s, children: t });
 }
-function es() {
-    let e = r.useContext(ei);
+function eu() {
+    let e = r.useContext(ea);
     if (null == e) throw Error("GuildSpaceEditorAddWidgetProvider is required");
     return e;
 }
-var eu = n(992303);
-function ed(e) {
+var ed = n(992303);
+function ec(e) {
     let { guildId: t, isEditing: s, isPublished: d, isRemovalPending: c } = e,
-        { addWidget: o } = es(),
+        { addWidget: o } = eu(),
         {
-            saveStatus: f,
-            panelCount: g,
-            saveErrorMessage: m,
-            hasChanges: h,
+            saveStatus: g,
+            panelCount: f,
+            saveErrorMessage: h,
+            hasChanges: m,
         } = (0, i.cf)(
-            [S.A],
+            [I.A],
             () => ({
-                saveStatus: S.A.getSaveStatus(t),
-                panelCount: S.A.getDraft(t)?.widgets.length ?? 0,
-                saveErrorMessage: S.A.getSaveErrorMessage(t),
-                hasChanges: S.A.hasChanges(t),
+                saveStatus: I.A.getSaveStatus(t),
+                panelCount: I.A.getDraft(t)?.widgets.length ?? 0,
+                saveErrorMessage: I.A.getSaveErrorMessage(t),
+                hasChanges: I.A.hasChanges(t),
             }),
             [t],
         ),
-        E = "saving" === f,
+        E = "saving" === g,
         p = E || c,
-        A = p || !h,
-        x = m ?? ee.intl.string(Z.default.HmFYc5),
-        C = r.useCallback(() => {
+        A = p || !m,
+        C = h ?? et.intl.string(ee.default.HmFYc5),
+        x = r.useCallback(() => {
             if (!A) {
                 if (!d)
                     return void (0, H.openModalLazy)(async () => {
                         let { default: e } = await n.e("642138").then(n.bind(n, 921633));
                         return (n) => (0, l.jsx)(e, { ...n, guildId: t });
                     });
-                (0, I.Fj)(t);
+                (0, y.Fj)(t);
             }
         }, [t, d, A]),
         _ = r.useCallback(() => {
-            (0, I.iX)(t);
+            (0, y.iX)(t);
         }, [t]);
-    return (0, l.jsx)(B.F, {
+    return (0, l.jsx)(O.F, {
         component: "div",
         children:
             s &&
-            (0, l.jsx)(W.F, {
-                className: eu.K,
-                children: (0, l.jsx)(O.A, {
+            (0, l.jsx)(F.F, {
+                className: ed.K,
+                children: (0, l.jsx)(W.A, {
                     submitting: E,
                     disabled: A,
-                    onSave: C,
+                    onSave: x,
                     onReset: p ? void 0 : _,
-                    message: (0, l.jsxs)(F.B, {
+                    message: (0, l.jsxs)(z.B, {
                         direction: "horizontal",
                         align: "center",
                         gap: 12,
                         children: [
-                            (0, l.jsx)(z.$, {
+                            (0, l.jsx)(K.$, {
                                 variant: "secondary",
                                 size: "sm",
-                                icon: K.T,
-                                text: ee.intl.string(Z.default.L8Xfoo),
+                                icon: q.T,
+                                text: et.intl.string(ee.default.L8Xfoo),
                                 disabled: p,
-                                onClick: () => er(t, o),
+                                onClick: () => ei(t, o),
                             }),
-                            "error" === f
+                            "error" === g
                                 ? (0, l.jsx)(u.m, {
-                                      text: x,
+                                      text: C,
                                       children: (0, l.jsx)(a.E, {
                                           variant: "body-sm/medium",
                                           color: "text-feedback-critical",
                                           role: "alert",
                                           lineClamp: 1,
-                                          children: x,
+                                          children: C,
                                       }),
                                   })
                                 : (0, l.jsx)(a.E, {
                                       variant: "body-sm/medium",
                                       color: "text-subtle",
-                                      children: ee.intl.format(Z.default.hpAg80, { panelCount: g }),
+                                      children: et.intl.format(ee.default.hpAg80, { panelCount: f }),
                                   }),
                         ],
                     }),
@@ -292,29 +293,29 @@ function ed(e) {
             }),
     });
 }
-var ec = n(503698),
-    eo = n.n(ec),
+var eo = n(503698),
+    eg = n.n(eo),
     ef = n(425763),
-    eg = n(754674),
+    eh = n(754674),
     em = n(294918);
-function eh(e) {
+function eE(e) {
     let { height: t } = e;
     return (0, l.jsx)("div", { className: em.qf, style: null == t ? void 0 : { height: t }, "aria-hidden": !0 });
 }
-var eE = n(675816);
-let ep = "GUILD_SPACE_WIDGET",
-    eA = "GUILD_SPACE_WIDGETS",
-    ex = `${ep}_${eA}`;
-var eC = n(204581),
-    e_ = n(333007);
-let ev = "canvas, iframe, video";
-function eb(e) {
+var ep = n(675816);
+let eA = "GUILD_SPACE_WIDGET",
+    eC = "GUILD_SPACE_WIDGETS",
+    ex = `${eA}_${eC}`;
+var e_ = n(204581),
+    ev = n(333007);
+let eb = "canvas, iframe, video";
+function eS(e) {
     let { isKeyboardMode: t, targetColumn: n, getColumnElement: i } = e,
-        { isDragging: a, item: s } = (0, eE.V)((e) => ({
+        { isDragging: a, item: s } = (0, ep.V)((e) => ({
             isDragging: e.isDragging() && e.getItemType() === ex,
             item: e.getItem(),
         })),
-        u = (0, eC.u)(),
+        u = (0, e_.u)(),
         d = r.useRef(null),
         c = r.useRef(null);
     return (r.useLayoutEffect(() => {
@@ -338,9 +339,9 @@ function eb(e) {
         if (!a || t || null == e || null == n || null == l) return;
         let r = l.cloneNode(!0);
         n.style.width = `${l.getBoundingClientRect().width}px`;
-        let i = l.querySelectorAll(ev);
+        let i = l.querySelectorAll(eb);
         return (
-            r.querySelectorAll(ev).forEach((e, t) => {
+            r.querySelectorAll(eb).forEach((e, t) => {
                 let n = document.createElement("div"),
                     l = i.item(t),
                     r = l?.getBoundingClientRect(),
@@ -375,7 +376,7 @@ function eb(e) {
     }, [i, a, t, n]),
     !a || t || null == s)
         ? null
-        : (0, e_.createPortal)(
+        : (0, ev.createPortal)(
               (0, l.jsx)("div", {
                   ref: d,
                   className: em.dk,
@@ -417,7 +418,7 @@ function eI(e) {
         (0, l.jsx)("div", { ref: c, className: em.fi, children: n })
     );
 }
-function eS(e) {
+function eD(e) {
     let { column: t, dndName: n, onDropAtEnd: i } = e,
         a = r.useRef(null),
         [{ isOver: s }, u] = (0, ey.H)({
@@ -435,11 +436,11 @@ function eS(e) {
             ),
             [u],
         ),
-        (0, l.jsx)("div", { ref: a, className: eo()(em.wr, { [em.SX]: s }), "data-dnd-name": n })
+        (0, l.jsx)("div", { ref: a, className: eg()(em.wr, { [em.SX]: s }), "data-dnd-name": n })
     );
 }
-var eD = n(451395),
-    ej = n(42499),
+var ej = n(451395),
+    ew = n(42499),
     eG = n(539888);
 function eT(e) {
     let {
@@ -451,43 +452,43 @@ function eT(e) {
             flatIndex: d,
             leftColumnCount: c,
             isKeyboardMode: o,
-            onReorder: f,
-            onDrop: g,
-            onDragEnd: m,
-            registerSlotElement: h,
+            onReorder: g,
+            onDrop: f,
+            onDragEnd: h,
+            registerSlotElement: m,
             isSaving: E,
             getDropLabel: p,
             onRemove: A,
-            onCommitConfig: x,
-            isSettling: C,
+            onCommitConfig: C,
+            isSettling: x,
             onMotionEnd: _,
             isEntrancePreparing: v,
             isEntering: b,
-            onEntranceAnimationEnd: y,
-            isRemoving: I,
-            isRemovalPending: S,
+            onEntranceAnimationEnd: S,
+            isRemoving: y,
+            isRemovalPending: I,
             onRemovalAnimationEnd: j,
         } = e,
+        w = r.useRef(null),
         G = r.useRef(null),
-        T = r.useRef(null),
-        w = (0, i.bG)([D.A], () => (n.requires_hydration ? D.A.getHydration(t, n.id) : void 0), [
+        T = (0, i.bG)([D.A], () => (n.requires_hydration ? D.A.getHydration(t, n.id) : void 0), [
             t,
             n.id,
             n.requires_hydration,
         ]),
-        L = (0, ej.K)(t, n),
-        { isDragging: R, dragSourcePosition: N } = (0, eD.gY)({
-            dragRef: G,
-            dropRef: T,
+        L = (0, ew.K)(t, n),
+        { isDragging: R, dragSourcePosition: N } = (0, ej.gY)({
+            dragRef: w,
+            dropRef: G,
             index: d,
-            listType: eA,
-            itemType: ep,
+            listType: eC,
+            itemType: eA,
             itemId: n.id,
-            itemPreviewProps: { getSourceElement: () => T.current },
-            onDrop: (e) => g(e.id),
-            onReorder: f,
-            onEnd: (e, t) => m(e.id, t.didDrop()),
-            canDrag: !E && !S,
+            itemPreviewProps: { getSourceElement: () => G.current },
+            onDrop: (e) => f(e.id),
+            onReorder: g,
+            onEnd: (e, t) => h(e.id, t.didDrop()),
+            canDrag: !E && !I,
         }),
         P = null == N ? null : N < c ? 0 : 1,
         k = null != P && P !== a,
@@ -495,15 +496,15 @@ function eT(e) {
         M = o && null != N && !k && N < d,
         B = r.useCallback(
             (e) => {
-                ((T.current = e), h(n.id, e));
+                ((G.current = e), m(n.id, e));
             },
-            [h, n.id],
+            [m, n.id],
         );
     return (0, l.jsxs)("div", {
         ref: B,
-        className: eo()(em.NI, { [em.cB]: R, [em.Ni]: C, [em.fJ]: v, [em.Hu]: b, [em.kC]: I, [em.ne]: U, [em.O3]: M }),
+        className: eg()(em.NI, { [em.cB]: R, [em.Ni]: x, [em.fJ]: v, [em.Hu]: b, [em.kC]: y, [em.ne]: U, [em.O3]: M }),
         onAnimationEnd: (e) => {
-            e.target === e.currentTarget && (I ? j(n.id) : C ? _(n.id) : b && y(n.id));
+            e.target === e.currentTarget && (y ? j(n.id) : x ? _(n.id) : b && S(n.id));
         },
         "data-dnd-name": p(a, s, u),
         children: [
@@ -517,17 +518,17 @@ function eT(e) {
                 guildId: t,
                 widget: n,
                 guildSpaceMode: "edit",
-                hydration: w,
+                hydration: T,
                 lock: L,
-                dragHandleRef: G,
+                dragHandleRef: w,
                 disabled: E,
                 onRemove: () => A(n.id),
-                onCommitConfig: x,
+                onCommitConfig: C,
             }),
         ],
     });
 }
-function ew(e, t, n, l) {
+function eL(e, t, n, l) {
     let r = t.current?.getScrollerNode();
     if (null == r) return void l();
     let i = e.getBoundingClientRect(),
@@ -542,11 +543,11 @@ function ew(e, t, n, l) {
     }
     (r.addEventListener("scrollend", l, { once: !0 }), r.scrollTo({ top: s, behavior: "smooth" }));
 }
-var eL = n(672795);
-function eR(e) {
+var eR = n(672795);
+function eN(e) {
     let { column: t, disabled: n, onInsert: r } = e,
-        i = ee.intl.formatToPlainString(1 === t ? Z.default.U0SqHk : Z.default["9Ctu9P"], { positionNumber: 1 });
-    return (0, l.jsxs)(F.B, {
+        i = et.intl.formatToPlainString(1 === t ? ee.default.U0SqHk : ee.default["9Ctu9P"], { positionNumber: 1 });
+    return (0, l.jsxs)(z.B, {
         className: em.Y$,
         align: "center",
         justify: "center",
@@ -555,13 +556,13 @@ function eR(e) {
             (0, l.jsx)(a.E, {
                 variant: "body-sm/normal",
                 color: "text-muted",
-                children: ee.intl.string(Z.default["/OtM0k"]),
+                children: et.intl.string(ee.default["/OtM0k"]),
             }),
-            (0, l.jsx)(z.$, {
+            (0, l.jsx)(K.$, {
                 variant: "secondary",
                 size: "sm",
-                icon: K.T,
-                text: ee.intl.string(Z.default.L8Xfoo),
+                icon: q.T,
+                text: et.intl.string(ee.default.L8Xfoo),
                 "aria-label": i,
                 disabled: n,
                 onClick: () => r(t, 0),
@@ -569,12 +570,12 @@ function eR(e) {
         ],
     });
 }
-var eN = n(663341);
-function eP(e) {
+var eP = n(663341);
+function ek(e) {
     let { column: t, index: n, placement: r, onInsert: i } = e,
-        a = ee.intl.formatToPlainString(1 === t ? Z.default["h9P9H+"] : Z.default.xboFyi, { positionNumber: n + 1 });
-    return (0, l.jsxs)($.D, {
-        className: eo()(em.kZ, { [em.j2]: "before" === r, [em.AO]: "after" === r }),
+        a = et.intl.formatToPlainString(1 === t ? ee.default["h9P9H+"] : ee.default.xboFyi, { positionNumber: n + 1 });
+    return (0, l.jsxs)(V.D, {
+        className: eg()(em.kZ, { [em.j2]: "before" === r, [em.AO]: "after" === r }),
         onClick: () => i(t, n),
         "aria-label": a,
         children: [
@@ -582,62 +583,62 @@ function eP(e) {
             (0, l.jsx)("span", {
                 className: em.QN,
                 "aria-hidden": !0,
-                children: (0, l.jsx)(eN.PlusLargeIcon, { size: "xs", color: "currentColor" }),
+                children: (0, l.jsx)(eP.PlusLargeIcon, { size: "xs", color: "currentColor" }),
             }),
         ],
     });
 }
-function ek(e, t, n) {
-    return ee.intl.formatToPlainString(1 === e ? Z.default.O9RvHQ : Z.default["+cSvS8"], {
+function eU(e, t, n) {
+    return et.intl.formatToPlainString(1 === e ? ee.default.O9RvHQ : ee.default["+cSvS8"], {
         positionNumber: t,
         positionCount: n,
     });
 }
-function eU(e) {
+function eM(e) {
     let { guildId: t, widgets: n, onRemovalPendingChange: a, scrollerRef: s } = e,
-        u = r.useMemo(() => (0, eg.Rl)(n), [n]),
+        u = r.useMemo(() => (0, eh.Rl)(n), [n]),
         d = r.useMemo(
             () =>
                 u.map((e) =>
                     e.filter((e) => {
                         let { type: t } = e;
-                        return null != eL.m[t];
+                        return null != eR.m[t];
                     }),
                 ),
             [u],
         ),
         c = r.useMemo(() => [...d[0], ...d[1]], [d]),
-        o = (0, eE.V)((e) =>
+        o = (0, ep.V)((e) =>
             e.isDragging() && e.getItemType() === ex
                 ? { isDragging: !0, widgetId: e.getItem().id }
                 : { isDragging: !1 },
         ),
-        f = o.isDragging,
-        g = o.isDragging ? o.widgetId : null,
-        m = (0, ef.VU)(),
-        h = (0, i.bG)([J.Ay], () => J.Ay.useReducedMotion),
-        E = (0, i.bG)([S.A], () => "saving" === S.A.getSaveStatus(t), [t]),
-        p = f && !m,
-        [A, x] = r.useState(null),
-        C = A?.type === "removing" ? A.widgetId : null,
-        _ = null != C;
+        g = o.isDragging,
+        f = o.isDragging ? o.widgetId : null,
+        h = (0, ef.VU)(),
+        m = (0, i.bG)([Q.Ay], () => Q.Ay.useReducedMotion),
+        E = (0, i.bG)([I.A], () => "saving" === I.A.getSaveStatus(t), [t]),
+        p = g && !h,
+        [A, C] = r.useState(null),
+        x = A?.type === "removing" ? A.widgetId : null,
+        _ = null != x;
     r.useLayoutEffect(() => {
-        h && A?.type === "settling" && x(null);
-    }, [h, A]);
+        m && A?.type === "settling" && C(null);
+    }, [m, A]);
     let v = r.useCallback(
             (e, n, l) => {
-                ((0, I.j0)(t, e, n, l), h || x({ type: "settling", widgetId: e }));
+                ((0, y.j0)(t, e, n, l), m || C({ type: "settling", widgetId: e }));
             },
-            [t, h],
+            [t, m],
         ),
         {
             effectiveDestination: b,
-            draggedLocation: y,
+            draggedLocation: S,
             getColumnElement: D,
             getSlotElement: j,
-            gridDropSurfaceRef: G,
-            handleColumnHover: T,
-            handleDragEnd: w,
+            gridDropSurfaceRef: w,
+            handleColumnHover: G,
+            handleDragEnd: T,
             canAcceptPointerDrop: L,
             placeholderHeight: R,
             registerColumnElement: N,
@@ -655,18 +656,18 @@ function eU(e) {
                     isPointerDragging: d,
                     isKeyboardMode: c,
                     isSaving: o,
-                    reduceMotion: f,
-                    onMoveWidget: g,
+                    reduceMotion: g,
+                    onMoveWidget: f,
                 } = e,
-                [m, h] = r.useState(null),
+                [h, m] = r.useState(null),
                 E = r.useRef(null),
                 p = r.useRef(null),
                 A = r.useRef(null),
-                x = r.useRef(null),
-                C = r.useRef([null, null]),
+                C = r.useRef(null),
+                x = r.useRef([null, null]),
                 _ = r.useRef(new Map()),
                 [v, b] = r.useState(null),
-                { stopAutoScroll: y, updatePointerY: I } =
+                { stopAutoScroll: S, updatePointerY: y } =
                     ((t = r.useRef(null)),
                     (n = r.useRef(null)),
                     (l = r.useCallback(() => {
@@ -681,7 +682,7 @@ function eU(e) {
                                         let l = n.current;
                                         if (null == l) return;
                                         let r = (function () {
-                                                let e = x.current?.parentElement;
+                                                let e = C.current?.parentElement;
                                                 for (; null != e;) {
                                                     let t = window.getComputedStyle(e).overflowY;
                                                     if ("auto" === t || "scroll" === t) return e;
@@ -699,11 +700,11 @@ function eU(e) {
                                             (t.current = requestAnimationFrame(e)));
                                     })));
                         },
-                        [x],
+                        [C],
                     )),
                     r.useEffect(() => l, [l]),
                     { stopAutoScroll: l, updatePointerY: i }),
-                { clearSlotMotion: S, snapshotSlotRects: D } = (function (e) {
+                { clearSlotMotion: I, snapshotSlotRects: D } = (function (e) {
                     let { columns: t, pendingDestination: n, reduceMotion: l, slotElementsRef: i } = e,
                         a = r.useRef(new Map()),
                         s = r.useRef(new Map()),
@@ -753,7 +754,7 @@ function eU(e) {
                         r.useEffect(() => u, [u]),
                         { clearSlotMotion: d, snapshotSlotRects: c }
                     );
-                })({ columns: a, pendingDestination: m, reduceMotion: f, slotElementsRef: _ }),
+                })({ columns: a, pendingDestination: h, reduceMotion: g, slotElementsRef: _ }),
                 j = (() => {
                     if (null == u) return null;
                     for (let [e, t] of a.entries()) {
@@ -765,19 +766,19 @@ function eU(e) {
                     }
                     return null;
                 })(),
-                G = d && m?.widgetId === u && (null == j || m.column !== j.column || m.index !== j.index) ? m : null,
-                T = r.useCallback((e, t) => {
-                    C.current[e] = t;
+                w = d && h?.widgetId === u && (null == j || h.column !== j.column || h.index !== j.index) ? h : null,
+                G = r.useCallback((e, t) => {
+                    x.current[e] = t;
                 }, []),
-                w = r.useCallback((e) => C.current[e] ?? null, []),
+                T = r.useCallback((e) => x.current[e] ?? null, []),
                 L = r.useCallback((e, t) => {
                     null == t ? _.current.delete(e) : _.current.set(e, t);
                 }, []),
                 R = r.useCallback((e) => _.current.get(e) ?? null, []),
                 N = r.useCallback((e, t, n) => {
                     if (e === t) return !0;
-                    let l = C.current[0]?.getBoundingClientRect(),
-                        r = C.current[1]?.getBoundingClientRect();
+                    let l = x.current[0]?.getBoundingClientRect(),
+                        r = x.current[1]?.getBoundingClientRect();
                     if (null == l || null == r || !(l.right <= r.left)) return !0;
                     let i = (l.right + r.left) / 2;
                     return 1 === t ? n > i + 32 : n < i - 32;
@@ -788,12 +789,12 @@ function eU(e) {
                     if (null == e) return;
                     let t = E.current;
                     (t?.widgetId !== e.widgetId || t.column !== e.column || t.index !== e.index) &&
-                        (D(e.widgetId), (E.current = e), h(e));
+                        (D(e.widgetId), (E.current = e), m(e));
                 }, [D]),
                 k = r.useCallback(
                     (e, t, n, l) => {
                         if (o) return;
-                        I(l.y);
+                        y(l.y);
                         let r = E.current?.column ?? j?.column;
                         if (null == r || !N(r, t, l.x)) return;
                         let i =
@@ -804,7 +805,7 @@ function eU(e) {
                         ((p.current = { widgetId: e, column: t, index: Math.max(0, Math.min(n, i)) }),
                             null == A.current && (A.current = requestAnimationFrame(P)));
                     },
-                    [P, a, N, j?.column, o, I],
+                    [P, a, N, j?.column, o, y],
                 ),
                 U = r.useCallback(
                     (e, t, n) => {
@@ -826,7 +827,7 @@ function eU(e) {
                     (e, t) => {
                         let n = 0,
                             l = 1 / 0;
-                        (C.current.forEach((e, r) => {
+                        (x.current.forEach((e, r) => {
                             if (null == e) return;
                             let i = e.getBoundingClientRect(),
                                 a = t.x < i.left ? i.left - t.x : Math.max(0, t.x - i.right),
@@ -850,7 +851,7 @@ function eU(e) {
                 });
             r.useLayoutEffect(
                 () => (
-                    B(x),
+                    B(C),
                     () => {
                         B(null);
                     }
@@ -863,17 +864,17 @@ function eU(e) {
                     let n = E.current;
                     return n?.widgetId === e ? n : null;
                 }, []),
-                H = r.useCallback((e, t) => (0, eg.O6)(s[t.column] ?? [], a[t.column] ?? [], t.index, e), [a, s]),
-                W = r.useCallback(() => {
+                W = r.useCallback((e, t) => (0, eh.O6)(s[t.column] ?? [], a[t.column] ?? [], t.index, e), [a, s]),
+                H = r.useCallback(() => {
                     (null != A.current && cancelAnimationFrame(A.current),
                         (A.current = null),
                         (p.current = null),
                         (E.current = null),
-                        h(null),
+                        m(null),
                         b(null),
-                        S(),
-                        y());
-                }, [S, y]),
+                        I(),
+                        S());
+                }, [I, S]),
                 F = r.useCallback(() => d, [d]),
                 z = r.useCallback(
                     (e, t) => {
@@ -882,10 +883,10 @@ function eU(e) {
                             !c &&
                             null != n &&
                             (null == j || n.column !== j.column || n.index !== j.index) &&
-                            g(e, n.column, H(e, n)),
-                            W());
+                            f(e, n.column, W(e, n)),
+                            H());
                     },
-                    [W, j, O, H, c, g],
+                    [H, j, O, W, c, f],
                 );
             return (
                 r.useLayoutEffect(() => {
@@ -902,16 +903,16 @@ function eU(e) {
                     [],
                 ),
                 {
-                    effectiveDestination: G,
+                    effectiveDestination: w,
                     draggedLocation: j,
-                    getColumnElement: w,
+                    getColumnElement: T,
                     getSlotElement: R,
-                    gridDropSurfaceRef: x,
+                    gridDropSurfaceRef: C,
                     handleColumnHover: U,
                     handleDragEnd: z,
                     canAcceptPointerDrop: F,
                     placeholderHeight: v,
-                    registerColumnElement: T,
+                    registerColumnElement: G,
                     registerSlotElement: L,
                     snapshotSlotRects: D,
                 }
@@ -919,11 +920,11 @@ function eU(e) {
         })({
             columns: d,
             draftColumns: u,
-            draggedWidgetId: g,
+            draggedWidgetId: f,
             isPointerDragging: p,
-            isKeyboardMode: m,
+            isKeyboardMode: h,
             isSaving: E,
-            reduceMotion: h,
+            reduceMotion: m,
             onMoveWidget: v,
         }),
         {
@@ -943,12 +944,12 @@ function eU(e) {
                     snapshotSlotRects: d,
                     getSlotElement: c,
                 } = e,
-                { registerAddWidgetHandler: o } = es(),
-                [f, g] = r.useState(() => new Map()),
-                m = r.useRef(null),
-                [h, E] = r.useState(0),
+                { registerAddWidgetHandler: o } = eu(),
+                [g, f] = r.useState(() => new Map()),
+                h = r.useRef(null),
+                [m, E] = r.useState(0),
                 p = r.useCallback((e) => {
-                    g((t) => {
+                    f((t) => {
                         if (!t.has(e)) return t;
                         let n = new Map(t);
                         return (n.delete(e), n);
@@ -959,9 +960,9 @@ function eU(e) {
                         l ||
                             i ||
                             a ||
-                            ((m.current = null),
+                            ((h.current = null),
                             d(),
-                            (m.current = (0, I.lr)(t, e.type, e.name, e.locked, n)),
+                            (h.current = (0, y.lr)(t, e.type, e.name, e.locked, n)),
                             E((e) => e + 1));
                     },
                     [t, i, a, l, d],
@@ -969,7 +970,7 @@ function eU(e) {
             return (
                 r.useLayoutEffect(() => o(A), [A, o]),
                 r.useLayoutEffect(() => {
-                    let e = m.current;
+                    let e = h.current;
                     if (null == e) return;
                     let t = n.find((t) => {
                             let { id: n } = t;
@@ -977,94 +978,94 @@ function eU(e) {
                         }),
                         l = null == t ? null : c(t.id);
                     if (null == t || null == l) {
-                        m.current = null;
+                        h.current = null;
                         return;
                     }
-                    ((m.current = null), s)
-                        ? ew(l, u, !0, () => void 0)
-                        : (g((e) => new Map(e).set(t.id, "preparing")),
-                          ew(l, u, !1, () => {
+                    ((h.current = null), s)
+                        ? eL(l, u, !0, () => void 0)
+                        : (f((e) => new Map(e).set(t.id, "preparing")),
+                          eL(l, u, !1, () => {
                               l.isConnected &&
-                                  g((e) => ("preparing" !== e.get(t.id) ? e : new Map(e).set(t.id, "playing")));
+                                  f((e) => ("preparing" !== e.get(t.id) ? e : new Map(e).set(t.id, "playing")));
                           }));
-                }, [c, h, s, u, n]),
+                }, [c, m, s, u, n]),
                 {
                     clearWidgetEntrance: p,
                     handleAddWidget: A,
-                    isEntrancePreparing: (e) => "preparing" === f.get(e),
-                    isEntering: (e) => "playing" === f.get(e),
+                    isEntrancePreparing: (e) => "preparing" === g.get(e),
+                    isEntering: (e) => "playing" === g.get(e),
                 }
             );
         })({
             guildId: t,
             widgets: n,
             isSaving: E,
-            isDraggingWidget: f,
+            isDraggingWidget: g,
             isRemovalPending: _,
-            reduceMotion: h,
+            reduceMotion: m,
             scrollerRef: s,
             snapshotSlotRects: k,
             getSlotElement: j,
         }),
-        H = r.useCallback((e) => {
-            x((t) => (t?.type === "settling" && t.widgetId === e ? null : t));
+        W = r.useCallback((e) => {
+            C((t) => (t?.type === "settling" && t.widgetId === e ? null : t));
         }, []),
-        W = r.useCallback(
+        H = r.useCallback(
             (e) => {
-                (x(null == e ? null : { type: "removing", widgetId: e }), a(null != e));
+                (C(null == e ? null : { type: "removing", widgetId: e }), a(null != e));
             },
             [a],
         ),
         F = r.useCallback(
             (e) => {
-                C === e && (k(e), (0, I.GP)(t, e), W(null));
+                x === e && (k(e), (0, y.GP)(t, e), H(null));
             },
-            [t, C, W, k],
+            [t, x, H, k],
         ),
         z = r.useCallback(
             (e) => {
                 if (!E && !_) {
-                    if ((U(e), h)) {
-                        (k(e), (0, I.GP)(t, e));
+                    if ((U(e), m)) {
+                        (k(e), (0, y.GP)(t, e));
                         return;
                     }
-                    W(e);
+                    H(e);
                 }
             },
-            [U, t, _, E, h, W, k],
+            [U, t, _, E, m, H, k],
         );
     (r.useLayoutEffect(() => {
-        h && null != C && F(C);
-    }, [F, h, C]),
+        m && null != x && F(x);
+    }, [F, m, x]),
         r.useEffect(() => () => a(!1), [a]));
     let K = r.useCallback(
             (e, n) => {
                 let l = c[e],
                     r = c[n];
-                null != l && null != r && (0, I.j0)(t, l.id, r.position.column, r.position.order);
+                null != l && null != r && (0, y.j0)(t, l.id, r.position.column, r.position.order);
             },
             [t, c],
         ),
         q = r.useCallback(
             (e, n) => {
-                (0, I.j0)(t, e, n, u[n]?.length ?? 0);
+                (0, y.j0)(t, e, n, u[n]?.length ?? 0);
             },
             [u, t],
         ),
         $ = r.useCallback(
             (e, n) => {
-                let l = (0, eg.O6)(u[e] ?? [], d[e] ?? [], n);
-                er(t, M, { column: e, index: l });
+                let l = (0, eh.O6)(u[e] ?? [], d[e] ?? [], n);
+                ei(t, M, { column: e, index: l });
             },
             [d, u, t, M],
         );
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)("div", {
-                ref: G,
+                ref: w,
                 className: em.Z7,
                 children: (0, l.jsx)("div", {
-                    className: eo()(em.Vg, { [em.nl]: p }),
+                    className: eg()(em.Vg, { [em.nl]: p }),
                     children: d.map((e, n) =>
                         (0, l.jsxs)(
                             eI,
@@ -1072,16 +1073,16 @@ function eU(e) {
                                 column: n,
                                 isPointerDragging: p,
                                 registerColumnElement: N,
-                                onDragHover: T,
+                                onDragHover: G,
                                 children: [
                                     (function (e, n) {
-                                        if (0 === e.length && !f)
-                                            return (0, l.jsx)(eR, { column: n, disabled: E || _, onInsert: $ });
+                                        if (0 === e.length && !g)
+                                            return (0, l.jsx)(eN, { column: n, disabled: E || _, onInsert: $ });
                                         let r =
-                                            p && null != g
+                                            p && null != f
                                                 ? e.filter((e) => {
                                                       let { id: t } = e;
-                                                      return t !== g;
+                                                      return t !== f;
                                                   })
                                                 : e;
                                         return (function (e, t, n) {
@@ -1095,7 +1096,7 @@ function eU(e) {
                                             return (l.splice(Math.min(i, l.length), 0, { type: "placeholder" }), l);
                                         })(e, n, b).map((i) => {
                                             if ("placeholder" === i.type)
-                                                return (0, l.jsx)(eh, { height: R }, "drag-placeholder");
+                                                return (0, l.jsx)(eE, { height: R }, "drag-placeholder");
                                             let { widget: a } = i,
                                                 s = r.findIndex((e) => {
                                                     let { id: t } = e;
@@ -1112,20 +1113,20 @@ function eU(e) {
                                                     let { id: t } = e;
                                                     return t === a.id;
                                                 }),
-                                                g = e.findIndex((e) => {
+                                                f = e.findIndex((e) => {
                                                     let { id: t } = e;
                                                     return t === a.id;
                                                 }),
-                                                h = !f && !E && !_;
+                                                m = !g && !E && !_;
                                             return (0, l.jsxs)(
                                                 "div",
                                                 {
                                                     className: em.O4,
                                                     children: [
-                                                        h &&
-                                                            (0, l.jsx)(eP, {
+                                                        m &&
+                                                            (0, l.jsx)(ek, {
                                                                 column: n,
-                                                                index: g,
+                                                                index: f,
                                                                 placement: "before",
                                                                 onInsert: $,
                                                             }),
@@ -1137,28 +1138,28 @@ function eU(e) {
                                                             columnWidgetCount: r.length,
                                                             flatIndex: o,
                                                             leftColumnCount: d[0].length,
-                                                            isKeyboardMode: m,
+                                                            isKeyboardMode: h,
                                                             isSaving: E,
-                                                            getDropLabel: ek,
+                                                            getDropLabel: eU,
                                                             onReorder: K,
                                                             onDrop: L,
-                                                            onDragEnd: w,
+                                                            onDragEnd: T,
                                                             registerSlotElement: P,
                                                             isSettling:
-                                                                A?.type === "settling" && A.widgetId === a.id && !m,
-                                                            onMotionEnd: H,
+                                                                A?.type === "settling" && A.widgetId === a.id && !h,
+                                                            onMotionEnd: W,
                                                             isEntrancePreparing: B(a.id),
                                                             isEntering: O(a.id),
                                                             onEntranceAnimationEnd: U,
-                                                            isRemoving: C === a.id,
+                                                            isRemoving: x === a.id,
                                                             isRemovalPending: _,
                                                             onRemovalAnimationEnd: F,
                                                             onRemove: z,
-                                                            onCommitConfig: (e) => (0, I.Vk)(t, a.id, e),
+                                                            onCommitConfig: (e) => (0, y.Vk)(t, a.id, e),
                                                         }),
-                                                        h &&
-                                                            g === e.length - 1 &&
-                                                            (0, l.jsx)(eP, {
+                                                        m &&
+                                                            f === e.length - 1 &&
+                                                            (0, l.jsx)(ek, {
                                                                 column: n,
                                                                 index: e.length,
                                                                 placement: "after",
@@ -1170,12 +1171,12 @@ function eU(e) {
                                             );
                                         });
                                     })(e, n),
-                                    m &&
-                                        f &&
+                                    h &&
+                                        g &&
                                         !E &&
-                                        (0, l.jsx)(eS, {
+                                        (0, l.jsx)(eD, {
                                             column: n,
-                                            dndName: ee.intl.string(1 === n ? Z.default.fWef0G : Z.default.KcdDyT),
+                                            dndName: et.intl.string(1 === n ? ee.default.fWef0G : ee.default.KcdDyT),
                                             onDropAtEnd: q,
                                         }),
                                     p && (0, l.jsx)("div", { className: em.XP, "aria-hidden": !0 }),
@@ -1186,89 +1187,89 @@ function eU(e) {
                     ),
                 }),
             }),
-            (0, l.jsx)(eb, { isKeyboardMode: m, targetColumn: b?.column ?? y?.column ?? null, getColumnElement: D }),
+            (0, l.jsx)(eS, { isKeyboardMode: h, targetColumn: b?.column ?? S?.column ?? null, getColumnElement: D }),
         ],
     });
 }
-var eM = n(529609),
-    eB = n(191023),
-    eO = n(241326),
+var eB = n(529609),
+    eO = n(191023),
+    eW = n(241326),
     eH = n(534514),
-    eW = n(22231),
-    eF = n(654107),
-    ez = n(548118),
-    eK = n(837011),
-    eq = n(649640),
-    e$ = n(2553),
-    eV = n(405810),
-    eX = n(498642),
-    eY = n(486020),
-    eJ = n(488428),
-    eQ = n(776231),
-    eZ = n(986898);
-function e0(e) {
+    eF = n(22231),
+    ez = n(654107),
+    eK = n(548118),
+    eq = n(837011),
+    e$ = n(649640),
+    eV = n(2553),
+    eX = n(405810),
+    eY = n(498642),
+    eJ = n(486020),
+    eQ = n(488428),
+    eZ = n(776231),
+    e0 = n(986898);
+function e1(e) {
     let { guildId: t, header: n, canEdit: s, isEditing: c, isSaving: o } = e,
-        f = (0, i.bG)([A.A], () => A.A.getGuild(t), [t]),
-        g = (0, i.bG)([eX.A], () => eX.A.getOnlineCount(t), [t]),
-        m = (0, i.bG)([eX.A], () => eX.A.getMemberCount(t), [t]),
-        h = n.custom_banner,
-        E = (0, i.bG)([eK.A], () => eK.A.getProfile(t), [t]),
-        p = (0, eq.b2)().hex(),
-        x = null == f ? null : eY.Ay.getGuildIconURL({ id: f.id, icon: f.icon, size: 64 }),
-        C = (0, eF.Ay)(x, p),
-        _ = (0, eq.n6)(E?.brandColorPrimary ?? C),
+        g = (0, i.bG)([A.A], () => A.A.getGuild(t), [t]),
+        f = (0, i.bG)([eY.A], () => eY.A.getOnlineCount(t), [t]),
+        h = (0, i.bG)([eY.A], () => eY.A.getMemberCount(t), [t]),
+        m = n.custom_banner,
+        E = (0, i.bG)([eq.A], () => eq.A.getProfile(t), [t]),
+        p = (0, e$.b2)().hex(),
+        C = null == g ? null : eJ.Ay.getGuildIconURL({ id: g.id, icon: g.icon, size: 64 }),
+        x = (0, ez.Ay)(C, p),
+        _ = (0, e$.n6)(E?.brandColorPrimary ?? x),
         b = r.useMemo(
             () =>
-                null == f
+                null == g
                     ? null
-                    : "string" == typeof h
-                      ? h
-                      : void 0 === h && null != n.custom_banner_hash
+                    : "string" == typeof m
+                      ? m
+                      : void 0 === m && null != n.custom_banner_hash
                         ? (function (e, t) {
-                              let n = eY.QB ? "webp" : "jpg",
+                              let n = eJ.QB ? "webp" : "jpg",
                                   { CDN_HOST: l, API_ENDPOINT: r } = window.GLOBAL_ENV,
                                   i = v.Rsh.GUILD_SPACE_BANNER(e, t, n),
                                   a = null != l ? `https://${l}${i}` : location.protocol + r + i,
-                                  s = { size: (0, eQ.kr)(1200 * (0, eQ.mZ)()) };
-                              return ("jpg" === n && (s.quality = "lossless"), (a += `?${eJ.stringify(s)}`));
-                          })(f.id, n.custom_banner_hash)
-                        : eY.Ay.getGuildBannerURL({ id: f.id, banner: f.banner }),
-            [f, h, n.custom_banner_hash],
+                                  s = { size: (0, eZ.kr)(1200 * (0, eZ.mZ)()) };
+                              return ("jpg" === n && (s.quality = "lossless"), (a += `?${eQ.stringify(s)}`));
+                          })(g.id, n.custom_banner_hash)
+                        : eJ.Ay.getGuildBannerURL({ id: g.id, banner: g.banner }),
+            [g, m, n.custom_banner_hash],
         ),
-        y = "string" == typeof h || (void 0 === h && null != n.custom_banner_hash);
-    return null == f
+        S = "string" == typeof m || (void 0 === m && null != n.custom_banner_hash);
+    return null == g
         ? null
         : (0, l.jsxs)("div", {
-              className: eZ.wx,
+              className: e0.wx,
               children: [
                   null != b
-                      ? (0, l.jsx)("img", { className: eZ.vK, src: b, alt: "" })
-                      : (0, l.jsx)("div", { className: eZ.vK, style: { background: _ }, "aria-hidden": !0 }),
-                  (0, l.jsx)("div", { className: eZ.f5, "aria-hidden": !0 }),
+                      ? (0, l.jsx)("img", { className: e0.vK, src: b, alt: "" })
+                      : (0, l.jsx)("div", { className: e0.vK, style: { background: _ }, "aria-hidden": !0 }),
+                  (0, l.jsx)("div", { className: e0.f5, "aria-hidden": !0 }),
                   c
                       ? (0, l.jsxs)("div", {
-                            className: eZ.j0,
+                            className: e0.j0,
                             children: [
-                                (0, l.jsx)(eV.A, {
+                                (0, l.jsx)(eX.A, {
                                     variant: "overlay-secondary",
-                                    icon: eB.ImageIcon,
+                                    icon: eO.ImageIcon,
                                     size: "sm",
-                                    text: ee.intl.string(Z.default["EN+0gW"]),
-                                    onChange: (e) => (0, I.pC)(t, e),
+                                    text: et.intl.string(ee.default["EN+0gW"]),
+                                    onChange: (e) => (0, y.pC)(t, e),
                                     maxFileSizeBytes: 0xa00000,
-                                    onFileSizeError: () => (0, e$.A)(0xa00000),
+                                    onFileSizeError: () => (0, eV.A)(0xa00000),
                                     disabled: o,
                                 }),
-                                y
+                                S
                                     ? (0, l.jsx)(u.m, {
-                                          text: ee.intl.string(Z.default["CunK+J"]),
+                                          text: et.intl.string(ee.default["CunK+J"]),
                                           ariaHidden: !0,
                                           children: (0, l.jsx)(d.K, {
                                               variant: "overlay-secondary",
                                               size: "sm",
-                                              icon: eO.TrashIcon,
-                                              "aria-label": ee.intl.string(Z.default["CunK+J"]),
-                                              onClick: () => (0, I.pC)(t, null),
+                                              icon: eW.TrashIcon,
+                                              "aria-label": et.intl.string(ee.default["CunK+J"]),
+                                              onClick: () => (0, y.pC)(t, null),
                                               disabled: o,
                                           }),
                                       })
@@ -1277,57 +1278,59 @@ function e0(e) {
                         })
                       : null,
                   (0, l.jsxs)("div", {
-                      className: eZ.D_,
+                      className: e0.D_,
                       children: [
-                          (0, l.jsx)(ez.Ay, {
-                              className: eZ.Kk,
-                              guild: f,
-                              size: ez.Ay.Sizes.LARGE,
+                          (0, l.jsx)(eK.Ay, {
+                              className: e0.Kk,
+                              guild: g,
+                              size: eK.Ay.Sizes.LARGE,
                               active: !0,
                               "aria-hidden": !0,
                           }),
                           (0, l.jsxs)("div", {
-                              className: eZ.pq,
+                              className: e0.pq,
                               children: [
                                   (0, l.jsx)(eH.D, {
                                       variant: "heading-lg/semibold",
                                       color: "currentColor",
                                       lineClamp: 1,
-                                      children: f.name,
+                                      children: g.name,
                                   }),
                                   (0, l.jsxs)("div", {
-                                      className: eZ.M1,
+                                      className: e0.M1,
                                       children: [
-                                          null != g
+                                          null != f
                                               ? (0, l.jsxs)("div", {
-                                                    className: eZ.dJ,
+                                                    className: e0.dJ,
                                                     children: [
-                                                        (0, l.jsx)("span", { className: eZ.RS, "aria-hidden": !0 }),
+                                                        (0, l.jsx)("span", { className: e0.RS, "aria-hidden": !0 }),
                                                         (0, l.jsx)(a.E, {
                                                             variant: "body-xs/semibold",
                                                             color: "currentColor",
-                                                            children: ee.intl.format(Z.default.G08ClG, { count: g }),
+                                                            children: et.intl.format(ee.default.G08ClG, { count: f }),
                                                         }),
                                                     ],
                                                 })
                                               : null,
-                                          null != m
+                                          null != h
                                               ? (0, l.jsxs)("div", {
-                                                    className: eZ.dJ,
+                                                    className: e0.dJ,
                                                     children: [
-                                                        (0, l.jsx)("span", { className: eZ.kq, "aria-hidden": !0 }),
+                                                        (0, l.jsx)("span", { className: e0.kq, "aria-hidden": !0 }),
                                                         (0, l.jsx)(a.E, {
                                                             variant: "body-xs/semibold",
                                                             color: "currentColor",
-                                                            children: ee.intl.format(Z.default["rp7bx+"], { count: m }),
+                                                            children: et.intl.format(ee.default["rp7bx+"], {
+                                                                count: h,
+                                                            }),
                                                         }),
                                                     ],
                                                 })
                                               : null,
                                           (0, l.jsxs)("div", {
-                                              className: eZ.dJ,
+                                              className: e0.dJ,
                                               children: [
-                                                  (0, l.jsx)(X._, {
+                                                  (0, l.jsx)(Y._, {
                                                       size: "xs",
                                                       color: "currentColor",
                                                       "aria-hidden": !0,
@@ -1335,8 +1338,8 @@ function e0(e) {
                                                   (0, l.jsx)(a.E, {
                                                       variant: "body-xs/semibold",
                                                       color: "currentColor",
-                                                      children: ee.intl.format(Z.default.DwFqrb, {
-                                                          count: f.premiumSubscriberCount,
+                                                      children: et.intl.format(ee.default.DwFqrb, {
+                                                          count: g.premiumSubscriberCount,
                                                       }),
                                                   }),
                                               ],
@@ -1349,93 +1352,93 @@ function e0(e) {
                   }),
                   s &&
                       !c &&
-                      (0, l.jsx)(z.$, {
-                          icon: eW.PencilIcon,
-                          text: ee.intl.string(Z.default.KcOpCm),
+                      (0, l.jsx)(K.$, {
+                          icon: eF.PencilIcon,
+                          text: et.intl.string(ee.default.KcOpCm),
                           size: "sm",
-                          onClick: () => (0, I.Wd)(t),
+                          onClick: () => (0, y.Wd)(t),
                       }),
               ],
           });
 }
-var e1 = n(554146),
-    e2 = n(942857),
-    e3 = n(131607),
-    e6 = n(967198),
-    e8 = n(725041),
-    e9 = n(49999),
-    e5 = n(312152);
-function e7(e) {
+var e2 = n(554146),
+    e3 = n(942857),
+    e6 = n(131607),
+    e8 = n(967198),
+    e9 = n(725041),
+    e5 = n(49999),
+    e7 = n(312152);
+function e4(e) {
     let t,
-        { guildId: C } = e,
+        { guildId: x } = e,
         _ = r.useRef(null),
         j = r.useRef(null),
-        [G, B] = r.useState(!1),
-        [O, W, F] = (0, i.yK)([w.A], () => [w.A.getSpace(C), w.A.getFetchStatus(C), w.A.isInBackoff(C)], [C]),
-        z = (0, i.bG)([y.A], () => y.A.getFetchStatus(C), [C]),
-        K = (0, i.bG)([A.A], () => A.A.getGuild(C), [C]),
-        q = (0, R.mN)(K),
-        $ = r.useRef(!0);
+        [w, O] = r.useState(!1),
+        [W, F, z] = (0, i.yK)([T.A], () => [T.A.getSpace(x), T.A.getFetchStatus(x), T.A.isInBackoff(x)], [x]),
+        K = (0, i.bG)([S.A], () => S.A.getFetchStatus(x), [x]),
+        q = (0, i.bG)([A.A], () => A.A.getGuild(x), [x]),
+        $ = (0, N.mN)(q),
+        V = r.useRef(!0);
     (r.useEffect(
         () => (
-            ($.current = !0),
+            (V.current = !0),
             () => {
-                $.current = !1;
+                V.current = !1;
             }
         ),
         [],
     ),
         r.useEffect(() => {
-            let e = _.current !== C;
-            ((_.current = C),
+            let e = _.current !== x;
+            ((_.current = x),
                 (async function () {
                     let t = [];
-                    (("idle" === W || e) && t.push((0, x.u)(C, { shouldRefetch: e })),
-                        q && "idle" === z && t.push(b(C)),
+                    (("idle" === F || e) && t.push((0, C.u)(x, { shouldRefetch: e })),
+                        $ && "idle" === K && t.push(b(x)),
                         await Promise.all(t),
                         e &&
-                            $.current &&
-                            _.current === C &&
-                            q &&
-                            "success" === w.A.getFetchStatus(C) &&
-                            w.A.isSpaceMissing(C) &&
-                            (0, I.Wd)(C));
+                            V.current &&
+                            _.current === x &&
+                            $ &&
+                            "success" === T.A.getFetchStatus(x) &&
+                            T.A.isSpaceMissing(x) &&
+                            (0, y.Wd)(x));
                 })());
-        }, [q, z, W, C]),
+        }, [$, K, F, x]),
         r.useEffect(() => {
-            (0, g.L4)(C, !1, { respectBackoff: !0 });
-        }, [C]),
-        (t = (0, U.n)()),
+            (0, f.L4)(x, !1, { respectBackoff: !0 });
+        }, [x]),
+        (t = (0, M.n)()),
         r.useEffect(
             () => () => {
                 if (null == t) return;
-                let e = k.Ay.getCurrentEmbeddedActivity();
+                let e = U.Ay.getCurrentEmbeddedActivity();
                 null != e &&
-                    e.location.kind === N.T.GUILD_CHANNEL &&
+                    e.location.kind === P.T.GUILD_CHANNEL &&
                     e.location.channel_id === t &&
-                    (0, P._H)({ location: e.location, applicationId: e.applicationId, showFeedback: !1 });
+                    (0, k._H)({ location: e.location, applicationId: e.applicationId, showFeedback: !1 });
             },
             [t],
         ));
-    let V = K?.guildSpaceSettings?.publish_status === L.B.PUBLISHED,
-        X = r.useCallback(() => (0, x.W)(C, { publish_status: L.B.PUBLISHED }), [C]),
-        [Y, J] = (0, i.yK)([S.A], () => [S.A.getDraft(C), S.A.getSaveStatus(C)], [C]),
-        Q = q && null != Y;
+    let X = q?.guildSpaceSettings?.publish_status === L.B.PUBLISHED,
+        Y = r.useCallback(() => (0, C.W)(x, { publish_status: L.B.PUBLISHED }), [x]),
+        [J, Q] = (0, i.yK)([I.A], () => [I.A.getDraft(x), I.A.getSaveStatus(x)], [x]),
+        Z = $ && null != J;
     !(function (e, t) {
-        let a = (0, H.useHasModalOpen)(e8.J),
-            s = (0, i.bG)([e6.A], () => e6.A.getGuildId()),
-            u = (0, e2.A)(),
-            [d, c] = (0, e3.kn)(t && s === e && !u ? [e1.M.GUILD_SPACE_NUX_MODAL] : [], {
-                groupName: e9.m.GUILD_SPACE_NUX,
+        let a = (0, H.useHasModalOpen)(e9.J),
+            s = (0, i.bG)([e8.A], () => e8.A.getGuildId()),
+            u = (0, e3.A)(),
+            [d, c] = (0, e6.kn)(t && s === e && !u ? [e2.M.GUILD_SPACE_NUX_MODAL] : [], {
+                groupName: e5.m.GUILD_SPACE_NUX,
                 bypassAutoDismiss: !0,
             }),
             o = r.useRef(!1),
-            f = d === e1.M.GUILD_SPACE_NUX_MODAL;
+            g = d === e2.M.GUILD_SPACE_NUX_MODAL;
         (r.useEffect(() => {
             o.current = !1;
         }, [e, s]),
             r.useEffect(() => {
-                !f ||
+                !g ||
                     a ||
                     o.current ||
                     ((o.current = !0),
@@ -1450,35 +1453,35 @@ function e7(e) {
                                     onClose: n.onClose,
                                 });
                         },
-                        { modalKey: e8.J },
+                        { modalKey: e9.J },
                     ).catch(() => {
                         o.current = !1;
                     }));
-            }, [e, a, c, f]));
-    })(C, q && null != O);
-    let Z = Q ? Y.widgets : O?.widgets,
-        et = r.useMemo(() => Z?.some((e) => e.locked) ?? !1, [Z]);
+            }, [e, a, c, g]));
+    })(x, $ && null != W);
+    let ee = Z ? J.widgets : W?.widgets,
+        en = r.useMemo(() => ee?.some((e) => e.locked) ?? !1, [ee]);
     r.useEffect(() => {
-        q && et && ((0, E.AK)(C), (0, E.Xd)(C));
-    }, [q, C, et]);
-    let en = (0, i.bG)(
-        [p.A, y.A],
+        $ && en && ((0, E.AK)(x), (0, E.Xd)(x));
+    }, [$, x, en]);
+    let el = (0, i.bG)(
+        [p.A, S.A],
         () =>
-            O?.widgets.some((e) => {
-                let t = y.A.getWidget(C, e.type)?.powerup_sku_id;
-                return e.locked && null != t && p.A.getStateForGuild(C)?.unlockedPowerups[t] != null;
+            W?.widgets.some((e) => {
+                let t = S.A.getWidget(x, e.type)?.powerup_sku_id;
+                return e.locked && null != t && p.A.getStateForGuild(x)?.unlockedPowerups[t] != null;
             }) ?? !1,
-        [C, O],
+        [x, W],
     );
     (r.useEffect(() => {
-        en && (0, x.u)(C, { shouldRefetch: !0 });
-    }, [C, en]),
+        el && (0, C.u)(x, { shouldRefetch: !0 });
+    }, [x, el]),
         r.useEffect(() => {
-            q || null == Y || "saving" === J || (0, I.iX)(C);
-        }, [q, Y, J, C]));
-    let el = r.useMemo(
+            $ || null == J || "saving" === Q || (0, y.iX)(x, R.pb.PERMISSION_LOST);
+        }, [$, J, Q, x]));
+    let er = r.useMemo(
             () =>
-                (Z ?? [])
+                (ee ?? [])
                     .filter((e) => {
                         let { requires_hydration: t } = e;
                         return t;
@@ -1487,87 +1490,87 @@ function e7(e) {
                         let { id: t } = e;
                         return t;
                     }),
-            [Z],
+            [ee],
         ),
-        er = (0, i.yK)([D.A], () => D.A.getWidgetIdsToHydrate(C, el), [C, el]),
-        ei = r.useRef(null);
+        ei = (0, i.yK)([D.A], () => D.A.getWidgetIdsToHydrate(x, er), [x, er]),
+        ea = r.useRef(null);
     r.useEffect(() => {
-        if (ei.current !== C && null != O) {
-            ((ei.current = C), T(C, el, !0));
+        if (ea.current !== x && null != W) {
+            ((ea.current = x), G(x, er, !0));
             return;
         }
-        T(C, er);
-    }, [C, O, el, er]);
-    let es = r.useCallback(() => {
-        m.A.open(C, v.BEX.ENGAGEMENT, void 0, v.nd0.ENGAGEMENT_GUILD_SPACE);
-    }, [C]);
-    return null == O || null == Z
+        G(x, ei);
+    }, [x, W, er, ei]);
+    let eu = r.useCallback(() => {
+        h.A.open(x, v.BEX.ENGAGEMENT, void 0, v.nd0.ENGAGEMENT_GUILD_SPACE);
+    }, [x]);
+    return null == W || null == ee
         ? (0, l.jsx)("div", {
-              className: e5.MY,
+              className: e7.MY,
               children: (0, l.jsx)("div", {
-                  className: e5.F,
+                  className: e7.F,
                   children:
-                      "error" !== W || F
+                      "error" !== F || z
                           ? (0, l.jsx)(s.y, {
                                 type: s.y.Type.SPINNING_CIRCLE,
-                                "aria-label": ee.intl.string(ee.t.ZTNur7),
+                                "aria-label": et.intl.string(et.t.ZTNur7),
                             })
                           : (0, l.jsx)(a.E, {
                                 variant: "body-md/normal",
                                 color: "text-muted",
                                 role: "alert",
-                                children: ee.intl.string(ee.t.F8FvUy),
+                                children: et.intl.string(et.t.F8FvUy),
                             }),
               }),
           })
-        : (0, l.jsx)(ea, {
+        : (0, l.jsx)(es, {
               children: (0, l.jsxs)("div", {
-                  className: e5.MY,
+                  className: e7.MY,
                   children: [
-                      (0, l.jsxs)(h.A, {
+                      (0, l.jsxs)(m.A, {
                           toolbar:
-                              q &&
+                              $ &&
                               (0, l.jsx)(u.m, {
-                                  text: ee.intl.string(ee.t.OBskVU),
+                                  text: et.intl.string(et.t.OBskVU),
                                   children: (0, l.jsx)(d.K, {
                                       type: "button",
                                       variant: "icon-only",
                                       icon: c.SettingsIcon,
-                                      "aria-label": ee.intl.string(ee.t["3D5yo/"]),
+                                      "aria-label": et.intl.string(et.t["3D5yo/"]),
                                       size: "md",
-                                      onClick: es,
+                                      onClick: eu,
                                   }),
                               }),
                           children: [
-                              (0, l.jsx)(h.A.Icon, { icon: o.HomeIcon, "aria-hidden": !0 }),
-                              (0, l.jsx)(h.A.Title, { children: ee.intl.string(ee.t["04IVMq"]) }),
+                              (0, l.jsx)(m.A.Icon, { icon: o.HomeIcon, "aria-hidden": !0 }),
+                              (0, l.jsx)(m.A.Title, { children: et.intl.string(et.t["04IVMq"]) }),
                           ],
                       }),
-                      (0, l.jsx)(f.Ch, {
+                      (0, l.jsx)(g.Ch, {
                           ref: j,
-                          className: e5.XG,
+                          className: e7.XG,
                           children: (0, l.jsxs)("div", {
-                              className: e5.Qs,
+                              className: e7.Qs,
                               children: [
-                                  q && !V ? (0, l.jsx)(M.A, { onPublish: X }) : null,
-                                  (0, l.jsx)(e0, {
-                                      guildId: C,
-                                      header: Q ? Y.header : O.header,
-                                      isEditing: Q,
-                                      canEdit: q,
-                                      isSaving: "saving" === J,
+                                  $ && !X ? (0, l.jsx)(B.A, { onPublish: Y }) : null,
+                                  (0, l.jsx)(e1, {
+                                      guildId: x,
+                                      header: Z ? J.header : W.header,
+                                      isEditing: Z,
+                                      canEdit: $,
+                                      isSaving: "saving" === Q,
                                   }),
-                                  Q
+                                  Z
                                       ? (0, l.jsx)(
-                                            eU,
-                                            { guildId: C, widgets: Z, onRemovalPendingChange: B, scrollerRef: j },
-                                            C,
+                                            eM,
+                                            { guildId: x, widgets: ee, onRemovalPendingChange: O, scrollerRef: j },
+                                            x,
                                         )
-                                      : (0, l.jsx)(eM.A, { canEdit: q, guildId: C, widgets: Z }),
+                                      : (0, l.jsx)(eB.A, { canEdit: $, guildId: x, widgets: ee }),
                               ],
                           }),
                       }),
-                      (0, l.jsx)(ed, { guildId: C, isEditing: Q, isPublished: V, isRemovalPending: G }),
+                      (0, l.jsx)(ec, { guildId: x, isEditing: Z, isPublished: X, isRemovalPending: w }),
                   ],
               }),
           });

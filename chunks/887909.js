@@ -1,8 +1,8 @@
 (n.r(t),
     n.d(t, {
-        OAuth2AuthorizeModal: () => e6,
+        OAuth2AuthorizeModal: () => e4,
         getOAuth2AuthorizeProps: () => tr,
-        OAuth2AuthorizePage: () => e4,
+        OAuth2AuthorizePage: () => e6,
         openOAuth2Modal: () => ti,
         openOAuth2ModalWithCreateGuildModal: () => tn,
         useOAuth2AuthorizeForm: () => te,
@@ -703,7 +703,7 @@ let e5 = (0, F.Fe)({
             n.e("41402"),
             n.e("935715"),
             n.e("248329"),
-            n.e("130292"),
+            n.e("93939"),
             n.e("165595"),
             n.e("401590"),
             n.e("664977"),
@@ -711,7 +711,6 @@ let e5 = (0, F.Fe)({
             n.e("133902"),
             n.e("123353"),
             n.e("263765"),
-            n.e("231588"),
             n.e("776750"),
             n.e("445980"),
             n.e("76705"),
@@ -741,7 +740,7 @@ let e5 = (0, F.Fe)({
         ]).then(n.bind(n, 991054)),
     webpackId: 991054,
 });
-function e4() {
+function e6() {
     let e = (0, l.zy)(),
         t = r.useMemo(() => (0, J._)(e.search), [e.search]);
     (0, P.A)();
@@ -829,7 +828,7 @@ function e4() {
     }
     return (0, i.jsx)(eJ.$, {
         removeChildWrapper: !0,
-        children: (0, i.jsx)(e6, {
+        children: (0, i.jsx)(e4, {
             transitionState: I.i.ENTERED,
             ...t,
             showLogout: !0,
@@ -838,7 +837,7 @@ function e4() {
         }),
     });
 }
-function e6(e) {
+function e4(e) {
     let {
             label: t,
             title: n,
@@ -1059,8 +1058,8 @@ function te(e) {
             return { requestedScopes: t, accountScopes: n };
         }, [eq?.scopes, D, e$]),
         e2 = r.useMemo(() => (e$ ? E.iu(eq?.permissions ?? 0) : P) ?? Z.x3, [eq?.permissions, P, e$]),
-        e4 = r.useRef(!1),
-        [e6, te] = r.useState(ed ?? []),
+        e6 = r.useRef(!1),
+        [e4, te] = r.useState(ed ?? []),
         [tt, tn] = r.useState(null != ed && ed.length > 0);
     ((0, d.Ay)(() => {
         let e = $.default.getAnalyticsToken();
@@ -1069,12 +1068,12 @@ function te(e) {
             : (0, y.rQ)({ withAnalyticsToken: !0 }).catch(et.tEg);
     }),
         r.useEffect(() => {
-            if (!e4.current && null == ed) {
+            if (!e6.current && null == ed) {
                 if (!$.default.isAuthenticated()) return void (0, er.Vh)(eh, "oauth2_error_not_authenticated");
                 e();
             }
             async function e() {
-                e4.current = !0;
+                e6.current = !0;
                 try {
                     let { disclosures: e, allAcked: t } = await (0, w.vG)(A);
                     (tn(!t), te(e));
@@ -1083,7 +1082,7 @@ function te(e) {
                     if (401 === e) return void (0, er.Vh)(eh, "oauth2_error_failed_disclosures");
                     eN(Error(null != t.message ? t.message : `${Object.keys(t)[0]}: ${Object.values(t)[0]}`));
                 } finally {
-                    e4.current = !1;
+                    e6.current = !1;
                 }
             }
         }, [A, eh, ed, te, eN, tn, eg]));
@@ -1114,7 +1113,7 @@ function te(e) {
                         guildId: eY === u.b.GUILD_INSTALL && null != eb ? eb : void 0,
                         channelId: eY === u.b.GUILD_INSTALL && null != eP ? eP : void 0,
                     });
-                    if ((e && (await (0, w.Yx)(A, e6)), null != q))
+                    if ((e && (await (0, w.Yx)(A, e4)), null != q))
                         (q({ application: eI?.application, location: n.location, guild: eW, scopes: eZ, canceled: t }),
                             eo?.());
                     else if (null != n.location) {
@@ -1132,12 +1131,12 @@ function te(e) {
                         eO(!1));
                 }
             },
-            [ee, q, eI?.application, eW, eo, A, eZ, f, I, p, m, g, S, e2, ew, eb, eY, eE, eP, e6],
+            [ee, q, eI?.application, eW, eo, A, eZ, f, I, p, m, g, S, e2, ew, eb, eY, eE, eP, e4],
         ),
         ta = r.useRef(!1),
         ts = r.useCallback(async () => {
             if (!$.default.isAuthenticated()) return void (0, er.Vh)(eh, "oauth2_error_not_authenticated");
-            if (!e4.current && !ta.current) {
+            if (!e6.current && !ta.current) {
                 ta.current = !0;
                 try {
                     var e;
@@ -1358,7 +1357,7 @@ function te(e) {
                 (0, i.jsx)(em, {
                     application: eI.application,
                     scopes: eZ,
-                    disclosures: e6,
+                    disclosures: e4,
                     redirectUri: eI.redirect_uri ?? null,
                     approximateGuildCount: void 0 !== e ? e : null,
                     isEmbeddedFlow: W,
@@ -1438,7 +1437,7 @@ function tn(e, t) {
     (0, H._9)() ? B.A.openCreateGuildModal({ onSuccess: (n) => ti({ ...e, guildId: n }, t) }) : ti(e, t);
 }
 function ti(e, t) {
-    (0, O.openModal)((t) => (0, i.jsx)(e6, { ...t, ...e, callback: tt.bind(null, e) }), { onCloseCallback: t });
+    (0, O.openModal)((t) => (0, i.jsx)(e4, { ...t, ...e, callback: tt.bind(null, e) }), { onCloseCallback: t });
 }
 function tr(e) {
     let { hostname: t = "", host: n, pathname: i, search: r } = Q.A.toURLSafe(e) ?? {};
