@@ -1,4 +1,4 @@
-(r.r(t), r.d(t, { useCallback: () => s, useCallbackOne: () => o, useMemo: () => a, useMemoOne: () => i }));
+r.r(t);
 var n = r(582128);
 function i(e, t) {
     var r = (0, n.useState)(function () {
@@ -32,5 +32,4 @@ function o(e, t) {
         return e;
     }, t);
 }
-var a = i,
-    s = o;
+r.d(t, {}, { useCallback: o, useCallbackOne: o, useMemo: i, useMemoOne: i });

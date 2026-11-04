@@ -1,22 +1,27 @@
-n.d(t, { Ay: () => r, l0: () => s, u5: () => a });
 var i = n(582128);
-function r(e) {
-    let t = i.useRef(e);
-    i.useEffect(() => t.current(), []);
-}
-function a(e) {
-    let t = i.useRef(e);
-    i.useLayoutEffect(() => t.current(), []);
-}
-function s(e) {
-    let t = i.useRef(e);
-    (i.useEffect(() => {
-        t.current = e;
-    }),
-        i.useEffect(
-            () => () => {
-                t.current();
-            },
-            [],
-        ));
-}
+n.d(
+    t,
+    {},
+    {
+        Ay: function (e) {
+            let t = i.useRef(e);
+            i.useEffect(() => t.current(), []);
+        },
+        l0: function (e) {
+            let t = i.useRef(e);
+            (i.useEffect(() => {
+                t.current = e;
+            }),
+                i.useEffect(
+                    () => () => {
+                        t.current();
+                    },
+                    [],
+                ));
+        },
+        u5: function (e) {
+            let t = i.useRef(e);
+            i.useLayoutEffect(() => t.current(), []);
+        },
+    },
+);

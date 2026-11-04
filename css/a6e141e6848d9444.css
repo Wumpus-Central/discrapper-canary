@@ -1,0 +1,54 @@
+.container_RETnwM {
+    padding-top: 20px
+}
+
+.confirmationHeader_RETnwM,
+.container_RETnwM {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16)
+}
+
+.confirmationHeader_RETnwM {
+    align-items: center;
+    justify-content: center;
+    text-align: center
+}
+
+.otherOptions_RETnwM {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.row_RETnwM {
+    background-color: var(--background-base-lower);
+    border-radius: var(--radius-sm);
+    width: 100%
+}
+
+.featureGuide_RETnwM {
+    text-align: center
+}
+
+.iconContainer_RETnwM {
+    position: relative
+}
+
+.icon_RETnwM,
+.iconContainer_RETnwM {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.icon_RETnwM {
+    background-color: var(--background-surface-high);
+    border-radius: var(--radius-round);
+    bottom: -8px;
+    inset-inline-end: -8px;
+    padding: var(--space-4);
+    position: absolute
+}
+
+/*# sourceMappingURL=a6e141e6848d9444.css.map*/

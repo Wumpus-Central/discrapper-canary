@@ -1,59 +1,58 @@
-e.d(t, { z: () => p });
-var n = e(582128),
-    o = e(139033),
-    s = e(192308),
-    i = e(626584),
-    a = e(38405),
-    l = e(794400),
-    h = e(105292);
-let u = new i.A("RevenueErrorBoundary.tsx");
-class p extends n.PureComponent {
+var r = n(582128),
+    i = n(139033),
+    s = n(192308),
+    a = n(626584),
+    l = n(856383),
+    o = n(794400),
+    c = n(792996);
+let g = new a.A("RevenueErrorBoundary.tsx");
+class u extends r.PureComponent {
     state = { error: null, info: null };
-    getSentryTags(r, t) {
-        return { app_context: this.getSentryAppContext(), ...(t ? { crashed: "true" } : {}) };
+    getSentryTags(t, e) {
+        return { app_context: this.getSentryAppContext(), ...(e ? { crashed: "true" } : {}) };
     }
-    getSentryExtras(r) {
-        return r instanceof l.v && null != r.extraSentryInformation ? { ...r.extraSentryInformation } : {};
+    getSentryExtras(t) {
+        return t instanceof o.v && null != t.extraSentryInformation ? { ...t.extraSentryInformation } : {};
     }
-    onErrorCaught(r, t, e) {}
+    onErrorCaught(t, e, n) {}
     closeAndShowAlert() {
-        ((0, s.closeAllModals)(),
-            (0, o.A)({
-                title: h.intl.string(h.t.iufib1),
-                subtitle: h.intl.string(h.t.ZUEGFn),
-                confirmText: h.intl.string(h.t.TyCVIq),
+        ((0, s.s7)(),
+            (0, i.A)({
+                title: c.intl.string(c.t.iufib1),
+                subtitle: c.intl.string(c.t.ZUEGFn),
+                confirmText: c.intl.string(c.t.TyCVIq),
             }));
     }
-    getErrorHandlingBehavior(r) {
-        return r instanceof l.v ? r.errorHandlingBehavior : this.props.errorHandlingBehavior;
+    getErrorHandlingBehavior(t) {
+        return t instanceof o.v ? t.errorHandlingBehavior : this.props.errorHandlingBehavior;
     }
-    getCrashedFlag(r) {
-        return "rethrow" === this.getErrorHandlingBehavior(r);
+    getCrashedFlag(t) {
+        return "rethrow" === this.getErrorHandlingBehavior(t);
     }
-    emitSentryException(r, t) {
-        let e,
-            { additionalAnalyticsData: n } = this.props,
-            o = this.getCrashedFlag(r),
-            s = this.getSentryExtras(r),
-            i = {
-                tags: this.getSentryTags(r, o),
-                extra: { ...s, ...(n ?? {}), ...(null != t ? { reactErrorInfo: t } : {}) },
+    emitSentryException(t, e) {
+        let n,
+            { additionalAnalyticsData: r } = this.props,
+            i = this.getCrashedFlag(t),
+            s = this.getSentryExtras(t),
+            a = {
+                tags: this.getSentryTags(t, i),
+                extra: { ...s, ...(r ?? {}), ...(null != e ? { reactErrorInfo: e } : {}) },
             };
         return (
-            (r instanceof l.v && r.skipReportingToSentry) || (e = a.A.captureException(r, i)),
-            u.error("Revenue error occurred:", { error: r, additionalErrorContext: s }),
-            { sentryErrorOptions: i, sentryEventId: e }
+            (t instanceof o.v && t.skipReportingToSentry) || (n = l.A.captureException(t, a)),
+            g.error("Revenue error occurred:", { error: t, additionalErrorContext: s }),
+            { sentryErrorOptions: a, sentryEventId: n }
         );
     }
-    componentDidCatch(r, t) {
-        let { sentryErrorOptions: e, sentryEventId: n } = this.emitSentryException(r, t);
+    componentDidCatch(t, e) {
+        let { sentryErrorOptions: n, sentryEventId: r } = this.emitSentryException(t, e);
         if (
-            (this.onErrorCaught(r, t, n),
-            this.setState({ error: r, info: t }),
-            null != this.props.onErrorReported && this.props.onErrorReported(r, t, e),
-            "rethrow" === this.getErrorHandlingBehavior(r))
+            (this.onErrorCaught(t, e, r),
+            this.setState({ error: t, info: e }),
+            null != this.props.onErrorReported && this.props.onErrorReported(t, e, n),
+            "rethrow" === this.getErrorHandlingBehavior(t))
         )
-            throw r;
+            throw t;
         this.closeAndShowAlert();
     }
     render() {
@@ -64,3 +63,4 @@ class p extends n.PureComponent {
             : this.props.children;
     }
 }
+n.d(e, {}, { z: u });

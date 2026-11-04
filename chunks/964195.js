@@ -1,25 +1,20 @@
-e.d(n, { A: () => I, F: () => E });
 var l = e(477900),
     i = e(582128),
     a = e(503698),
     r = e.n(a),
-    s = e(589812),
+    s = e(886100),
     o = e(598748),
-    c = e(17928),
+    c = e(855986),
     u = e(939249),
     d = e(554830),
     A = e(975460),
     f = e(531913),
     g = e(633075),
-    m = e(321191),
-    p = e(903209),
-    x = e(105292),
+    m = e(851767),
+    p = e(917445),
+    x = e(792996),
     _ = e(374129);
 function I(t) {
-    let n = (0, A.g)(t.activityApplication);
-    return null == n ? null : (0, l.jsx)(N, { ...t, widgetApplication: n });
-}
-function N(t) {
     var n, e;
     let a,
         { hasWidget: r, isLoadingProfile: s } =
@@ -39,7 +34,7 @@ function N(t) {
             ));
     return s
         ? null
-        : (0, l.jsx)(E, {
+        : (0, l.jsx)(N, {
               className: t.className,
               userId: t.userId,
               widgetApplicationId: t.widgetApplication.id,
@@ -47,7 +42,7 @@ function N(t) {
               onClickViewMore: t.onClickViewMore,
           });
 }
-function E(t) {
+function N(t) {
     let {
             className: n,
             userId: e,
@@ -77,3 +72,14 @@ function E(t) {
           })
         : null;
 }
+e.d(
+    n,
+    {},
+    {
+        A: function (t) {
+            let n = (0, A.g)(t.activityApplication);
+            return null == n ? null : (0, l.jsx)(I, { ...t, widgetApplication: n });
+        },
+        F: N,
+    },
+);

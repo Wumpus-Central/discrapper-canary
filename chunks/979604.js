@@ -1,28 +1,27 @@
-i.d(n, { A: () => D });
 var e,
     s = i(477900),
     r = i(582128),
-    l = i(17928),
-    a = i(661531),
+    l = i(855986),
+    a = i(646514),
     o = i(821609),
     d = i(866665),
     u = i(5373),
-    p = i(59636),
-    c = i(212245),
+    c = i(59636),
+    p = i(212245),
     h = i(626584),
     g = i(976860),
     A = i(568004),
     b = i(227841),
     y = i(465797),
-    x = i(340829),
+    x = i(659096),
     L = i(966846),
     f = i(674378),
     N = i(723702),
     _ = i(541830),
-    I = i(113673),
+    I = i(35083),
     P = i(598429),
     S = i(652215),
-    C = i(105292),
+    C = i(792996),
     T = i(796084),
     w =
         (((e = w || {}).PLAY = "play"),
@@ -97,18 +96,18 @@ class B extends r.Component {
     handleAddToLibrary = async () => {
         try {
             let { libraryApplication: t } = this.props;
-            (await p.V(t.id, t.branchId, t.getFlags() & ~S.hM6.HIDDEN), (0, g.pX)(S.BVt.APPLICATION_LIBRARY));
+            (await c.V(t.id, t.branchId, t.getFlags() & ~S.hM6.HIDDEN), (0, g.pX)(S.BVt.APPLICATION_LIBRARY));
         } catch (t) {
             new h.A("LibraryApplicationButton").error(t);
         }
     };
     handleInstall = () => {
         let { libraryApplication: t, source: n } = this.props;
-        I.installApplication(t.id, t.branchId, n);
+        I.oc(t.id, t.branchId, n);
     };
     handleUpdate = () => {
         let { libraryApplication: t } = this.props;
-        I.updateApplication(t.id, t.branchId);
+        I.K3(t.id, t.branchId);
     };
     onClickHandlers = {
         add_to_library: this.handleAddToLibrary,
@@ -128,7 +127,7 @@ class B extends r.Component {
             ? e
             : null != n && n.type === S.WTw.UNINSTALLING
               ? "uninstalling"
-              : (0, N.isWeb)()
+              : (0, N.HZ)()
                 ? "play"
                 : "unsupported_os";
     }
@@ -227,18 +226,24 @@ class B extends r.Component {
         return null == e ? this.renderDisabledButton(i) : this.renderActionButton(i, e);
     }
 }
-function D(t) {
-    let { libraryApplication: n } = t,
-        i = (0, c.p)(),
-        [e, r] = (0, l.yK)([x.A, L.A], () => [(0, b.F)(n, x.A, L.A), x.A.getState(n.id, n.branchId)], [n]),
-        a = (0, l.bG)([y.A], () => y.A.isSyncing(n.id, n.branchId), [n]),
-        o = (0, l.bG)([A.A], () => A.A.hasNoBuild(n.id, n.branchId), [n]);
-    return (0, s.jsx)(B, {
-        ...t,
-        analyticsContext: i,
-        actionState: e,
-        dispatchState: r,
-        isCloudSyncing: a,
-        hasNoBuild: o,
-    });
-}
+i.d(
+    n,
+    {},
+    {
+        A: function (t) {
+            let { libraryApplication: n } = t,
+                i = (0, p.p)(),
+                [e, r] = (0, l.yK)([x.A, L.A], () => [(0, b.F)(n, x.A, L.A), x.A.getState(n.id, n.branchId)], [n]),
+                a = (0, l.bG)([y.A], () => y.A.isSyncing(n.id, n.branchId), [n]),
+                o = (0, l.bG)([A.A], () => A.A.hasNoBuild(n.id, n.branchId), [n]);
+            return (0, s.jsx)(B, {
+                ...t,
+                analyticsContext: i,
+                actionState: e,
+                dispatchState: r,
+                isCloudSyncing: a,
+                hasNoBuild: o,
+            });
+        },
+    },
+);

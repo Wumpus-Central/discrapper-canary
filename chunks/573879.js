@@ -1,14 +1,12 @@
-n.d(t, { Gl: () => r, WX: () => s, ov: () => i });
-let i = "switch-accounts-modal",
-    r = "multiaccount-login-modal";
-var a,
-    s =
-        (((a = {}).YOU_ACCOUNT_ACTION_SHEET = "you_account_action_sheet"),
-        (a.CHOOSE_ACCOUNT = "choose_account"),
-        (a.MANAGE_ACCOUNTS_MODAL = "manage_accounts_modal"),
-        (a.MULTI_ACCOUNTS_LIST = "multi_accounts_list"),
-        (a.MULTI_ACCOUNT_MENU = "multi_account_menu"),
-        (a.PUSH_NOTIFICATION_INITIAL = "push_notification_initial"),
-        (a.PUSH_NOTIFICATION = "push_notification"),
-        (a.SHARE_EXTENSION = "share_extension"),
-        a);
+var i,
+    r =
+        (((i = {}).YOU_ACCOUNT_ACTION_SHEET = "you_account_action_sheet"),
+        (i.CHOOSE_ACCOUNT = "choose_account"),
+        (i.MANAGE_ACCOUNTS_MODAL = "manage_accounts_modal"),
+        (i.MULTI_ACCOUNTS_LIST = "multi_accounts_list"),
+        (i.MULTI_ACCOUNT_MENU = "multi_account_menu"),
+        (i.PUSH_NOTIFICATION_INITIAL = "push_notification_initial"),
+        (i.PUSH_NOTIFICATION = "push_notification"),
+        (i.SHARE_EXTENSION = "share_extension"),
+        i);
+n.d(t, {}, { Gl: "multiaccount-login-modal", WX: r, ov: "switch-accounts-modal" });

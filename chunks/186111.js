@@ -1,5 +1,4 @@
-n.d(t, { A: () => o });
-var i = n(17928),
+var i = n(855986),
     r = n(73153);
 let a = [];
 function s() {
@@ -28,3 +27,4 @@ let o = new l(r.h, {
     LOGOUT: s,
     NOTIFICATION_CLICK: s,
 });
+n.d(t, {}, { A: o });

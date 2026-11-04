@@ -1,4 +1,3 @@
-n.d(t, { G: () => r });
 var i,
     r =
         (((i = {})[(i.COACHTIP = 0)] = "COACHTIP"),
@@ -7,3 +6,4 @@ var i,
         (i[(i.COACHMARK = 3)] = "COACHMARK"),
         (i[(i.TAB_TOOLTIP = 4)] = "TAB_TOOLTIP"),
         i);
+n.d(t, {}, { G: r });

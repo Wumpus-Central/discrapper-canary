@@ -1,4 +1,3 @@
-r.d(e, { i: () => i });
 let i = (0, r(196765).v)()((t) => ({
     overrideApplicationId: null,
     setOverrideApplicationId: (e) => t({ overrideApplicationId: e }),
@@ -16,3 +15,4 @@ let i = (0, r(196765).v)()((t) => ({
     currentPremiumPlanId: null,
     setCurrentPremiumPlanId: (e) => t({ currentPremiumPlanId: e }),
 }));
+r.d(e, {}, { i: i });

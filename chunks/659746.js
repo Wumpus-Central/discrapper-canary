@@ -1,17 +1,16 @@
-t.d(a, { Ay: () => y, Or: () => C });
 var l,
     n = t(477900),
     r = t(582128),
     s = t(503698),
     i = t.n(s),
     h = t(615300),
-    u = t(661531),
+    u = t(646514),
     o = t(462887),
     c = t(930861),
     d = t(602853),
     m = t(404374),
     A = t(998304),
-    p = t(202541),
+    p = t(682901),
     E = t(855310);
 let P = Object.freeze({
     DURATION: { [p.PremiumTypes.TIER_0]: 1e3, [p.PremiumTypes.TIER_1]: 1e3, [p.PremiumTypes.TIER_2]: 1500 },
@@ -297,4 +296,4 @@ function y(e) {
         s = (0, o.M)(a) ? l : r;
     return (0, n.jsx)(M, { ...t, theme: a, flashColor: s });
 }
-y.Types = C;
+((y.Types = C), t.d(a, {}, { Ay: y, Or: C }));

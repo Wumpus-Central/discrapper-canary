@@ -1,0 +1,608 @@
+.container_BpQixO {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2px
+}
+
+.title_BpQixO {
+    margin-inline: 2px 10px
+}
+
+.sliderContainer_BpQixO {
+    padding-inline-end: 10px;
+    position: relative;
+    top: -12px;
+    width: 200px
+}
+
+.contained_XLKukn {
+    background-color: var(--primary-600);
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden
+}
+
+.header_XLKukn {
+    display: flex;
+    flex: 0 0 auto
+}
+
+.headerDefault_XLKukn {
+    background-color: var(--custom-text-widget-background-color-header-default)
+}
+
+.activateContainer_XLKukn {
+    align-items: center;
+    display: flex;
+    height: 68px;
+    justify-content: flex-start
+}
+
+.activateKeybind_XLKukn {
+    border-radius: 5px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 20px;
+    padding: 10px 16px;
+    text-shadow: 0 0 1px var(--primary-500), 1px 1px 0 var(--primary-500)
+}
+
+.inGame_XLKukn .headerDefault_XLKukn {
+    background-color: hsl(var(--primary-600-hsl)/.2)
+}
+
+.inGameActive_XLKukn {
+    pointer-events: auto
+}
+
+.inGameActive_XLKukn .footerContent_XLKukn {
+    visibility: visible
+}
+
+.inGameActive_XLKukn .messages_XLKukn {
+    border-radius: 5px 5px 0 0
+}
+
+.headerPinned_XLKukn {
+    background-color: hsl(var(--primary-600-hsl)/.3)
+}
+
+.widget_XLKukn {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: auto
+}
+
+.widget_XLKukn:after {
+    border: none
+}
+
+.widgetWrapper_XLKukn,
+.widgetWrapperPinned_XLKukn {}
+
+.draggableStartArea_XLKukn {
+    cursor: move
+}
+
+.footer_XLKukn {
+    height: auto
+}
+
+.typingWrapper_XLKukn {
+    align-items: center;
+    display: flex;
+    margin-inline: -16px -8px;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.typing_XLKukn,
+.typingWrapper_XLKukn {
+    height: 24px;
+    overflow: hidden
+}
+
+.typing_XLKukn {
+    background: none
+}
+
+.messagesContainer_XLKukn {
+    display: flex;
+    flex: 1 1 auto;
+    min-height: 0;
+    position: relative
+}
+
+.messagesContainer_XLKukn.disableHoverStates_XLKukn {
+    pointer-events: none
+}
+
+.background-opacity-low .isDragging_XLKukn {
+    box-shadow: inset 0 0 2px var(--opacity-white-48)
+}
+
+.theme-dark .pinned_XLKukn:not(.locked_XLKukn) .footerContent_XLKukn,
+.theme-dark .pinned_XLKukn:not(.locked_XLKukn) .messages_XLKukn,
+.theme-dark .pinned_XLKukn:not(.locked_XLKukn) .typing_XLKukn {
+    background-color: transparent
+}
+
+.theme-dark .pinned_XLKukn:not(.locked_XLKukn) .footerContent_XLKukn,
+.theme-dark .pinned_XLKukn:not(.locked_XLKukn) .messagesContainer_XLKukn {
+    background-color: hsl(var(--primary-600-hsl)/.8)
+}
+
+.theme-dark .scroller_XLKukn::-webkit-scrollbar {
+    height: 0;
+    width: 0
+}
+
+.theme-dark .inGame_XLKukn .footerContentPinned_XLKukn {
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: var(--font-weight-medium);
+    padding: 8px 16px;
+    position: absolute;
+    text-shadow: 0 1px 1px var(--primary-400), 0 1px 0 var(--primary-400);
+    top: 8px
+}
+
+.theme-dark .inGame_XLKukn:not(.inGameActive_XLKukn) .messages_XLKukn {
+    background-color: transparent
+}
+
+.theme-dark .inGame_XLKukn:not(.inGameActive_XLKukn) .messages_XLKukn .scroller_XLKukn {
+    background-color: transparent
+}
+
+.theme-dark .inGame_XLKukn:not(.inGameActive_XLKukn) .footerContent_XLKukn {
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 0
+}
+
+.theme-dark .inGame_XLKukn:not(.inGameActive_XLKukn) .draggableStartArea_XLKukn {
+    cursor: default
+}
+
+.theme-dark .inGame_XLKukn:not(.inGameActive_XLKukn) .messagesContainer_XLKukn:not(.looksLocked_XLKukn) {
+    border-radius: 0 0 5px 5px
+}
+
+.theme-dark .inGame_XLKukn:not(.inGameActive_XLKukn) .footer_XLKukn:before,
+.theme-dark .inGame_XLKukn:not(.inGameActive_XLKukn) .footerContent_XLKukn:before,
+.theme-dark .inGame_XLKukn:not(.inGameActive_XLKukn) .typing_XLKukn:before {
+    content: none
+}
+
+.theme-dark .inGameActive_XLKukn .messagesContainer_XLKukn {
+    background-color: hsl(var(--primary-600-hsl)/.4)
+}
+
+.theme-dark .inGameActive_XLKukn .messages_XLKukn .scroller_XLKukn::-webkit-scrollbar-thumb {
+    background-color: var(--primary-600);
+    border-color: transparent
+}
+
+.theme-dark .inGameActive_XLKukn .messages_XLKukn .scroller_XLKukn::-webkit-scrollbar-track-piece {
+    background-color: hsl(var(--primary-630-hsl)/.3);
+    border-color: transparent
+}
+
+.footer_XLKukn {
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+    cursor: default;
+    display: flex;
+    flex: 0 0 auto;
+    padding: 0 16px;
+    position: relative
+}
+
+.footerContent_XLKukn {
+    background-color: var(--primary-600);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0
+}
+
+.resizeIcon_XLKukn {
+    background-image: url("/assets/5673195a37135698.svg");
+    background-repeat: no-repeat;
+    background-size: 16px;
+    bottom: -4px;
+    cursor: nwse-resize;
+    height: 24px;
+    inset-inline-end: -4px;
+    position: absolute;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    width: 24px;
+    z-index: 1
+}
+
+.headerContainer_qDptEN {
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 1px 0 hsl(var(--primary-700-hsl)/.7), 0 2px 0 var(--opacity-black-4);
+    position: relative;
+    z-index: 2
+}
+
+.background-opacity-high .headerContainer_qDptEN {
+    box-shadow: 0 1px 0 hsl(var(--primary-700-hsl)/.4)
+}
+
+.background-opacity-medium .headerContainer_qDptEN {
+    box-shadow: 0 1px 0 hsl(var(--primary-700-hsl)/.2)
+}
+
+.background-opacity-low .headerContainer_qDptEN {
+    box-shadow: 0 1px 0 hsl(var(--primary-700-hsl)/.05)
+}
+
+.opacityHeader_qDptEN {
+    align-items: center;
+    background-color: var(--custom-text-widget-background-color-header-default);
+    box-shadow: 0 1px 0 hsl(var(--primary-700-hsl)/.7), 0 2px 0 var(--opacity-black-4);
+    cursor: default;
+    height: 25px;
+    overflow: visible
+}
+
+.leaveCall_qDptEN {
+    transform: rotate(180deg)
+}
+
+.status_qDptEN {
+    margin-inline-start: 4px
+}
+
+.dragIcon_qDptEN {
+    color: var(--primary-300);
+    flex: 0 0 auto
+}
+
+.wrapper_Tgnk5v {
+    align-items: stretch;
+    box-shadow: 0 2px 10px 0 var(--opacity-black-20);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden
+}
+
+.controls_RzdgJr {
+    align-items: center;
+    background: hsl(var(--primary-700-hsl)/.85);
+    border-radius: 0 0 5px;
+    color: var(--white);
+    display: flex;
+    flex-shrink: 0;
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    padding: 16px 12px
+}
+
+.controls_RzdgJr.unpinned_RzdgJr {
+    background: var(--primary-700)
+}
+
+.content_RzdgJr {
+    flex: 1
+}
+
+.strikethrough_RzdgJr {
+    color: var(--icon-feedback-critical)
+}
+
+.icon_FyHA_s {
+    height: 16px;
+    margin-inline-start: 3px;
+    padding: 2px 0;
+    width: 16px
+}
+
+.icon_FyHA_s,
+.voiceIcon_FyHA_s {
+    display: block;
+    flex-shrink: 0
+}
+
+.voiceIcon_FyHA_s {
+    color: var(--interactive-text-hover);
+    padding: 2px
+}
+
+.voiceList_FyHA_s {
+    padding-block: 4px;
+    padding-inline: 4px 0
+}
+
+.dragIcon_FyHA_s {
+    margin-inline-end: 4px;
+    margin-inline-start: -4px
+}
+
+.draggableStartArea_FyHA_s {
+    cursor: move
+}
+
+.content_FyHA_s {
+    flex: 1
+}
+
+.speakerIcon_FyHA_s {
+    margin-inline-end: 3px
+}
+
+.interactive_FyHA_s:hover {
+    opacity: 1
+}
+
+.username_FyHA_s {
+    color: var(--text-default);
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    line-height: 16px;
+    margin: 0;
+    max-width: 158px;
+    padding: 2px 4px
+}
+
+.voiceUserWrapper_FyHA_s .username_FyHA_s {
+    flex: 0 1 auto
+}
+
+.locked_FyHA_s {
+    background-color: var(--background-base-low);
+    border-radius: 4px;
+    color: var(--text-default)
+}
+
+.lockedContainer_FyHA_s {
+    margin-bottom: 56px;
+    overflow: hidden !important;
+    pointer-events: none
+}
+
+.draggingHeader_FyHA_s,
+.faded_FyHA_s {
+    opacity: .4
+}
+
+.preview_FyHA_s {
+    opacity: .3
+}
+
+.hidden_FyHA_s {
+    display: none
+}
+
+.priority_FyHA_s {
+    background-color: var(--primary-400);
+    border-radius: 50%;
+    height: 10px;
+    margin-top: 3px;
+    margin-inline-start: 3px;
+    width: 10px
+}
+
+.prioritySpeaking_FyHA_s {
+    background-color: var(--green-360)
+}
+
+.topMargin_FyHA_s {
+    margin-top: var(--custom-voice-widget-top-margin)
+}
+
+.bottomMargin_FyHA_s {
+    margin-bottom: 52px
+}
+
+.title_FyHA_s {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.voiceUserList_FyHA_s {
+    width: var(--custom-voice-widget-widget-width)
+}
+
+.streamerControls_FyHA_s {
+    align-items: center;
+    background: hsl(var(--primary-700-hsl)/.85);
+    border-bottom: 1px solid var(--primary-600);
+    color: var(--text-default);
+    display: flex;
+    flex-shrink: 0;
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    padding: 16px 12px
+}
+
+.streamerControls_FyHA_s.hidden_FyHA_s {
+    display: none
+}
+
+.streamerControls_FyHA_s.unpinned_FyHA_s {
+    background: var(--primary-700)
+}
+
+.streamerContent_FyHA_s {
+    flex: 1;
+    justify-content: space-between
+}
+
+.streamerInner_FyHA_s {
+    display: flex;
+    flex: 1;
+    min-width: 0
+}
+
+.gameIcon_FyHA_s {
+    height: 30px;
+    width: 30px
+}
+
+.streamerInfo_FyHA_s {
+    margin-inline-start: 8px;
+    overflow: hidden
+}
+
+.streaming_FyHA_s {
+    color: var(--primary-100);
+    font-size: 14px;
+    line-height: 16px
+}
+
+.streamerIconWrapper_FyHA_s {
+    align-items: center;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    width: 32px
+}
+
+.streamerIcon_FyHA_s {
+    color: var(--primary-300);
+    display: flex;
+    height: 20px;
+    opacity: .9;
+    width: 20px
+}
+
+.streamerIcon_FyHA_s:hover {
+    color: var(--interactive-text-active)
+}
+
+.widget_ZJo-9s {
+    height: 100%;
+    width: 100%
+}
+
+.videoDev_T3Ot2R {
+    background-color: var(--black);
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    z-index: -1
+}
+
+.overlay_T3Ot2R,
+.videoDev_T3Ot2R {
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.overlay_T3Ot2R {
+    color: var(--white);
+    cursor: auto;
+    position: fixed
+}
+
+.overlayBackground_T3Ot2R {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    transition: opacity .2s ease, background-color .2s ease
+}
+
+.overlayActive_T3Ot2R {
+    background-color: var(--background-scrim)
+}
+
+.overlayLocked_T3Ot2R {
+    z-index: 1
+}
+
+.previewMode_T3Ot2R {
+    opacity: 0
+}
+
+.closeContainer_T3Ot2R {
+    inset-inline-end: 26px;
+    position: absolute;
+    top: 26px;
+    z-index: 99
+}
+
+.invalidContainer_T3Ot2R {
+    background-color: hsl(var(--primary-500-hsl)/.8);
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.inactiveContainer_T3Ot2R {
+    background-color: var(--primary-700);
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 20px 20px 25px;
+    text-align: center;
+    width: 300px
+}
+
+.layoutLocked_T3Ot2R {
+    inset-inline-start: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0
+}
+
+.layoutLocked_T3Ot2R>* {
+    pointer-events: auto
+}
+
+.overlayMountPx_T3Ot2R {
+    background-color: rgba(0, 0, 0, .01);
+    height: 1px;
+    inset-inline-start: 1px;
+    position: absolute;
+    top: 1px;
+    width: 1px;
+    z-index: 9999
+}
+
+.layoutUnlocked_T3Ot2R {
+    pointer-events: none
+}
+
+.layoutUnlocked_T3Ot2R>* {
+    pointer-events: auto
+}
+
+.previewingInGameHeader_T3Ot2R {
+    background-color: hsl(var(--primary-700-hsl)/.9);
+    border-radius: 0 0 10px 10px;
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: var(--font-weight-medium);
+    inset-inline-start: 33.33333vw;
+    letter-spacing: -.1px;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transition: opacity .2s ease;
+    width: 33.33333vw
+}
+
+.overlayDebugContainer_T3Ot2R {
+    bottom: 10px;
+    inset-inline-start: 50%;
+    position: fixed;
+    transform: translateX(-50%)
+}
+
+/*# sourceMappingURL=0259b7d9c13ae80e.css.map*/

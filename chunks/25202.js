@@ -1,10 +1,15 @@
-n.d(t, { A: () => a, j: () => s });
 var i = n(267355),
     r = n(188321);
-function a() {
-    return !r.A.isThrottling || (0, i.D)() ? 0 : 10;
-}
-function s() {
-    return 30 * !!r.A.isActive;
-}
-n(974477);
+(n(974477),
+    n.d(
+        t,
+        {},
+        {
+            A: function () {
+                return !r.A.isThrottling || (0, i.D)() ? 0 : 10;
+            },
+            j: function () {
+                return 30 * !!r.A.isActive;
+            },
+        },
+    ));

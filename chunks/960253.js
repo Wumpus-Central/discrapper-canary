@@ -1,5 +1,4 @@
-n.d(t, { Oh: () => E, l8: () => _, vz: () => A });
-var i = n(17928),
+var i = n(855986),
     r = n(936555),
     a = n(465932),
     s = n(440293),
@@ -15,17 +14,24 @@ function u(e) {
         s = i.features.has(c.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
     return !!((a && s) || n.isViewingServerShop(e));
 }
-function _(e, t) {
-    return !!u(e) || (0, d.I)(e, t);
-}
-function E(e) {
+function _(e) {
     let t = (0, d.A)(e),
         n = (0, i.bG)([o.A, l.A], () => u(e, [o.A, l.A]), [e]),
         { shouldHideGuildPurchaseEntryPoints: r } = (0, a.MH)(e);
     return !r && (n || t);
 }
-function A(e) {
-    let t = E(e),
-        n = (0, s.w)(e);
-    return t && !n;
-}
+n.d(
+    t,
+    {},
+    {
+        Oh: _,
+        l8: function (e, t) {
+            return !!u(e) || (0, d.I)(e, t);
+        },
+        vz: function (e) {
+            let t = _(e),
+                n = (0, s.w)(e);
+            return t && !n;
+        },
+    },
+);

@@ -1,36 +1,45 @@
-n.d(t, { A: () => f, u: () => m });
 var r = n(477900),
-    l = n(17928),
+    l = n(855986),
     a = n(876230),
     i = n(366010),
     o = n(834730),
-    u = n(363195),
-    s = n(267286),
-    c = n(105292),
+    u = n(413599),
+    s = n(302034),
+    c = n(792996),
     d = n(862649);
-function m(e) {
-    let { hasVideoAsset: t, playerState: n, pauseReason: r } = e;
-    return t
-        ? n === a.Q6.PAUSED && r === a.KB.VISIBILITY
-            ? c.intl.string(s.default["9St/zK"])
-            : n === a.Q6.PAUSED && r === a.KB.FOCUS
-              ? c.intl.string(s.default.c7IRfm)
-              : null
-        : c.intl.string(s.default["kX3+aM"]);
-}
-let f = function (e) {
-    let { message: t, showOverlay: n = !1 } = e,
-        a = (0, l.bG)([u.A], () => u.A.getState().theme);
-    return null == t
-        ? null
-        : (0, r.jsxs)(r.Fragment, {
-              children: [
-                  n && (0, r.jsx)("div", { className: d.MM }),
-                  (0, r.jsx)("div", {
-                      className: d.zG,
-                      style: { background: (0, i.M)(a) ? "rgba(0, 0, 0, 0.65)" : "rgba(255, 255, 255, 0.65)" },
-                      children: (0, r.jsx)(o.E, { variant: "body-sm/normal", color: "text-default", children: t }),
-                  }),
-              ],
-          });
-};
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { message: t, showOverlay: n = !1 } = e,
+                a = (0, l.bG)([u.A], () => u.A.getState().theme);
+            return null == t
+                ? null
+                : (0, r.jsxs)(r.Fragment, {
+                      children: [
+                          n && (0, r.jsx)("div", { className: d.MM }),
+                          (0, r.jsx)("div", {
+                              className: d.zG,
+                              style: { background: (0, i.M)(a) ? "rgba(0, 0, 0, 0.65)" : "rgba(255, 255, 255, 0.65)" },
+                              children: (0, r.jsx)(o.E, {
+                                  variant: "body-sm/normal",
+                                  color: "text-default",
+                                  children: t,
+                              }),
+                          }),
+                      ],
+                  });
+        },
+        u: function (e) {
+            let { hasVideoAsset: t, playerState: n, pauseReason: r } = e;
+            return t
+                ? n === a.Q6.PAUSED && r === a.KB.VISIBILITY
+                    ? c.intl.string(s.default["9St/zK"])
+                    : n === a.Q6.PAUSED && r === a.KB.FOCUS
+                      ? c.intl.string(s.default.c7IRfm)
+                      : null
+                : c.intl.string(s.default["kX3+aM"]);
+        },
+    },
+);

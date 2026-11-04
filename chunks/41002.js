@@ -1,1 +1,1 @@
-a.exports = { Nr: "card__6aefd", YK: "spacing__6aefd", z3: "error__6aefd" };
+p.exports = { Nr: "card_uvmEtw", YK: "spacing_uvmEtw", z3: "error_uvmEtw" };

@@ -1,58 +1,63 @@
-(n.r(t), n.d(t, { default: () => I }));
 var i = n(477900);
 n(582128);
 var s = n(793574),
     l = n(688810),
     r = n(151271),
-    a = n(609178),
+    a = n(335588),
     o = n(690521),
-    c = n(24482),
+    c = n(879610),
     u = n(732139),
     d = n(652215),
     m = n(307731),
-    f = n(202541),
-    E = n(105292);
-let I = function (e) {
-    let t,
-        {
-            onClose: n,
-            onUpsellClicked: I,
-            channel: g,
-            emojiDescriptor: h,
-            pickerIntention: p,
-            analyticsLocation: A,
-        } = e,
-        _ = (0, r.RQ)((e) => e.searchQuery),
-        { analyticsLocations: N } = (0, l.Ay)(s.A.EMOJI_PICKER);
-    t =
-        p === m.EmojiIntention.REACTION
-            ? f.e.EMOJI_PICKER_REACTION_EMOJI_CLICKED
-            : null == h
-              ? f.e.EMOJI_PICKER_FLOATING_UPSELL
-              : h.subCategory === u.tm.TOP_GUILD_EMOJI
-                ? f.e.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED
-                : h.subCategory === u.tm.NEWLY_ADDED_EMOJI
-                  ? f.e.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED
-                  : f.e.EMOJI_PICKER_EMOJI_CLICKED;
-    let C = null != h ? h.emoji : void 0,
-        y = null != C && C.animated,
-        x = null != C && !o.Ay.isInternalEmojiForGuildId(C, g?.getGuildId()),
-        j = null != C ? d.ZSU.EMOJI : d.ZSU.EMOJI_PICKER_FLOATING_UPSELL;
-    return (0, i.jsx)(a.A, {
-        title: E.intl.string(E.t["0+11FF"]),
-        description: E.intl.string(E.t.dURIzS),
-        analyticsLocationSection: d.JJy.EMOJI_UPSELL_POPOUT,
-        onClose: n,
-        onUpsellClicked: I,
-        upsellViewedTrackingData: {
-            type: t,
-            is_external: x,
-            location: { ...A, object: j },
-            location_stack: N,
-            sku_id: (0, c.mH)(c.Ay.getSkuIdForPremiumType(f.PremiumTypes.TIER_2)),
-            has_search_query: null != _ && "" !== _,
-            is_animated: y,
+    f = n(682901),
+    E = n(792996);
+n.d(
+    t,
+    {},
+    {
+        default: function (e) {
+            let t,
+                {
+                    onClose: n,
+                    onUpsellClicked: I,
+                    channel: g,
+                    emojiDescriptor: h,
+                    pickerIntention: p,
+                    analyticsLocation: A,
+                } = e,
+                _ = (0, r.RQ)((e) => e.searchQuery),
+                { analyticsLocations: N } = (0, l.Ay)(s.A.EMOJI_PICKER);
+            t =
+                p === m.EmojiIntention.REACTION
+                    ? f.e.EMOJI_PICKER_REACTION_EMOJI_CLICKED
+                    : null == h
+                      ? f.e.EMOJI_PICKER_FLOATING_UPSELL
+                      : h.subCategory === u.tm.TOP_GUILD_EMOJI
+                        ? f.e.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED
+                        : h.subCategory === u.tm.NEWLY_ADDED_EMOJI
+                          ? f.e.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED
+                          : f.e.EMOJI_PICKER_EMOJI_CLICKED;
+            let C = null != h ? h.emoji : void 0,
+                y = null != C && C.animated,
+                x = null != C && !o.Ay.isInternalEmojiForGuildId(C, g?.getGuildId()),
+                T = null != C ? d.ZSU.EMOJI : d.ZSU.EMOJI_PICKER_FLOATING_UPSELL;
+            return (0, i.jsx)(a.A, {
+                title: E.intl.string(E.t["0+11FF"]),
+                description: E.intl.string(E.t.dURIzS),
+                analyticsLocationSection: d.JJy.EMOJI_UPSELL_POPOUT,
+                onClose: n,
+                onUpsellClicked: I,
+                upsellViewedTrackingData: {
+                    type: t,
+                    is_external: x,
+                    location: { ...A, object: T },
+                    location_stack: N,
+                    sku_id: (0, c.mH)(c.Ay.getSkuIdForPremiumType(f.PremiumTypes.TIER_2)),
+                    has_search_query: null != _ && "" !== _,
+                    is_animated: y,
+                },
+                isEmojiPickerOverlay: !0,
+            });
         },
-        isEmojiPickerOverlay: !0,
-    });
-};
+    },
+);

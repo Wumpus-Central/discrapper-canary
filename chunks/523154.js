@@ -1,8 +1,7 @@
-n.d(t, { Sx: () => d, U_: () => o });
 var i = n(927813),
     r = n(518782),
-    a = n(880098),
-    s = n(105292);
+    a = n(135294),
+    s = n(792996);
 let l = {
     [r.zu.COMPETITION_ENDED]: {
         [r.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED]: a.default.unVTUQ,
@@ -20,38 +19,6 @@ let l = {
         [r.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED]: a.default.CHYFwK,
     },
 };
-function o(e, t, n) {
-    return null == e ? null : { data: e, subject: t ?? null, previousLeader: n ?? null };
-}
-function d(e, t) {
-    let n,
-        o,
-        d,
-        c = (function (e) {
-            let { event: t, stat: n } = e;
-            return t === r.zu.UNSPECIFIED || n === r.RE.GAMING_LEADERBOARD_STAT_UNSPECIFIED
-                ? null
-                : { event: t, stat: n };
-        })(e);
-    return null == c
-        ? null
-        : {
-              message: l[c.event][c.stat],
-              values:
-                  ((o = Math.floor(
-                      (n = Math.floor(Math.max(e.secondaryValue, 0) / i.A.Millis.MINUTE)) / i.A.Minutes.HOUR,
-                  )),
-                  (d = n % i.A.Minutes.HOUR),
-                  {
-                      ...t,
-                      value: e.value,
-                      gameTime:
-                          0 === o
-                              ? s.intl.formatToPlainString(a.default["5AjG8l"], { minutes: d })
-                              : s.intl.formatToPlainString(a.default["Sa+h68"], { hours: o, minutes: d }),
-                  }),
-          };
-}
 (r.zu.COMPETITION_ENDED,
     r.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
     a.default.Wwu6IA,
@@ -72,4 +39,43 @@ function d(e, t) {
     r.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
     a.default.exTWBN,
     r.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED,
-    a.default.dX9B32);
+    a.default.dX9B32,
+    n.d(
+        t,
+        {},
+        {
+            Sx: function (e, t) {
+                let n,
+                    o,
+                    d,
+                    c = (function (e) {
+                        let { event: t, stat: n } = e;
+                        return t === r.zu.UNSPECIFIED || n === r.RE.GAMING_LEADERBOARD_STAT_UNSPECIFIED
+                            ? null
+                            : { event: t, stat: n };
+                    })(e);
+                return null == c
+                    ? null
+                    : {
+                          message: l[c.event][c.stat],
+                          values:
+                              ((o = Math.floor(
+                                  (n = Math.floor(Math.max(e.secondaryValue, 0) / i.A.Millis.MINUTE)) /
+                                      i.A.Minutes.HOUR,
+                              )),
+                              (d = n % i.A.Minutes.HOUR),
+                              {
+                                  ...t,
+                                  value: e.value,
+                                  gameTime:
+                                      0 === o
+                                          ? s.intl.formatToPlainString(a.default["5AjG8l"], { minutes: d })
+                                          : s.intl.formatToPlainString(a.default["Sa+h68"], { hours: o, minutes: d }),
+                              }),
+                      };
+            },
+            U_: function (e, t, n) {
+                return null == e ? null : { data: e, subject: t ?? null, previousLeader: n ?? null };
+            },
+        },
+    ));

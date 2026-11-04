@@ -1,5 +1,5 @@
 let o, r;
-(n.d(t, { default: () => L }), n(323874), n(14289), n(35956), n(321073));
+(n(323874), n(14289), n(35956), n(321073));
 var s = n(143236),
     i = n(435558),
     l = n.n(i),
@@ -7,7 +7,7 @@ var s = n(143236),
     a = n(626584),
     d = n(111162),
     u = n(998218),
-    h = n(19575),
+    h = n(253400),
     p = n(636401),
     g = n(861621),
     A = n(313731),
@@ -16,7 +16,7 @@ var s = n(143236),
     C = n(546983),
     I = n(613057),
     S = n(652215),
-    O = n(264572).Buffer;
+    O = n(264572).hp;
 try {
     o = h.Ay.requireModule("discord_erlpack");
 } catch (e) {
@@ -112,7 +112,7 @@ class P extends s.EventEmitter {
         }),
             r.on("request", this.handleRequest.bind(this)),
             T(e));
-        const t = { instanceId: r.instanceId ?? 0, server: r };
+        let t = { instanceId: r.instanceId ?? 0, server: r };
         new _.ws.Server(t).on("connection", (e) => this.handleConnection(e));
     }
     getPort() {
@@ -199,3 +199,4 @@ class P extends s.EventEmitter {
     }
 }
 let L = new P();
+n.d(t, {}, { default: L });

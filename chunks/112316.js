@@ -1,4 +1,3 @@
-d.d(t, { t: () => s });
 var i = d(768611),
     e = d(242268),
     c = d(540647),
@@ -22,8 +21,8 @@ var i = d(768611),
                 showErrorIcon: p = !0,
                 class: N,
                 "aria-label": M,
-                "aria-labelledby": X,
-                "aria-describedby": r,
+                "aria-labelledby": r,
+                "aria-describedby": X,
                 "aria-invalid": y,
                 ...Y
             },
@@ -35,7 +34,7 @@ var i = d(768611),
                 w = !!b,
                 R = G ? `${l}-helper` : void 0,
                 S = W ? `${l}-error` : void 0,
-                C = [r, S, R].filter(Boolean).join(" ") || void 0;
+                C = [X, S, R].filter(Boolean).join(" ") || void 0;
             return (0, i.v)("div", {
                 class: (0, e.n)("IncodeCheckbox", "string" == typeof N ? N : void 0),
                 children: [
@@ -60,7 +59,7 @@ var i = d(768611),
                                             (I || L(l.target.checked), h?.(l));
                                         },
                                         "aria-label": M,
-                                        "aria-labelledby": X,
+                                        "aria-labelledby": r,
                                         "aria-describedby": C,
                                         "aria-invalid": y || !!W,
                                         "aria-required": !!m,
@@ -83,7 +82,7 @@ var i = d(768611),
                                         IncodeCheckboxTextM: "m" === s,
                                         IncodeCheckboxTextDisabled: w,
                                     }),
-                                    "aria-hidden": X ? "true" : void 0,
+                                    "aria-hidden": r ? "true" : void 0,
                                     children: [
                                         t,
                                         d &&
@@ -120,3 +119,4 @@ var i = d(768611),
             });
         },
     );
+d.d(t, {}, { t: s });

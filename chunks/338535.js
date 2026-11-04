@@ -1,4 +1,3 @@
-n.d(t, { A: () => r });
 var i = n(315069);
 class r extends i.A {
     skuId;
@@ -10,3 +9,4 @@ class r extends i.A {
         return new r({ ...n, skuId: t });
     }
 }
+n.d(t, {}, { A: r });

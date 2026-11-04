@@ -1,6 +1,5 @@
-n.d(t, { B: () => a });
 var i,
-    a =
+    s =
         221552 == n.j
             ? (((i = {}).GUILD_PRODUCTS = "guild_products"),
               (i.GUILD_ROLE_SUBSCRIPTIONS = "guild_role_subscriptions"),
@@ -8,3 +7,4 @@ var i,
               (i.GUILD_SHOP_FULL_PREVIEW = "guild_shop_full_preview"),
               i)
             : null;
+n.d(t, {}, { B: s });

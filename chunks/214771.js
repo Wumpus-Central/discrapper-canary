@@ -1,4 +1,3 @@
-n.d(t, { A: () => u });
 var i = n(435558),
     r = n.n(i),
     a = n(937724),
@@ -41,3 +40,4 @@ let c = new s.A("NonGuildVersions"),
         }
         resetInMemoryState() {}
     })();
+n.d(t, {}, { A: u });

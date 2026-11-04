@@ -1,0 +1,55 @@
+.modalContent_MEPToz {
+    gap: 20px
+}
+
+.modalContent_MEPToz,
+.radioGroup_MEPToz {
+    display: flex;
+    flex-direction: column
+}
+
+.radioItem_MEPToz {
+    color: var(--interactive-text-default);
+    padding: var(--space-8) var(--space-4) !important
+}
+
+.footer_MEPToz {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end
+}
+
+.footer_MEPToz button+button {
+    margin-inline-start: var(--space-8)
+}
+
+.cancel_MEPToz {
+    margin: 0;
+    padding: 0
+}
+
+.error_MEPToz {
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-8)
+}
+
+.closeIcon_MEPToz {
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    flex-grow: 1;
+    justify-content: flex-end
+}
+
+.reasonFreeText_MEPToz {
+    max-height: 150px;
+    overflow: hidden;
+    transition: max-height .3s ease-in-out
+}
+
+.reasonFreeText_MEPToz.hidden_MEPToz {
+    max-height: 0;
+    visibility: hidden
+}
+
+/*# sourceMappingURL=acde6c21b065d207.css.map*/

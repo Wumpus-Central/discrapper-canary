@@ -1,23 +1,22 @@
-t.d(n, { A: () => y });
 var l = t(477900),
     i = t(582128),
     a = t(503698),
     s = t.n(a),
-    r = t(17928),
+    r = t(855986),
     o = t(331322),
-    c = t(661531),
+    c = t(646514),
     u = t(192308),
     d = t(834730),
     h = t(939249),
-    g = t(689175),
-    A = t(66834),
-    m = t(306537),
+    g = t(516521),
+    A = t(778858),
+    m = t(171576),
     p = t(47167),
     j = t(713654),
     f = t(46054),
     x = t(506164),
     N = t(734057),
-    b = t(105292),
+    b = t(792996),
     C = t(596490),
     E = t(814316);
 function I(e) {
@@ -27,10 +26,10 @@ function I(e) {
         I = i.useCallback(() => {
             A.A.nsfwReturnToSafety(n?.id);
         }, [n]),
-        y = i.useCallback(() => {
+        _ = i.useCallback(() => {
             A.A.spoilerAgree(a);
         }, [a]),
-        _ = (0, p.Ay)(s),
+        y = (0, p.Ay)(s),
         T = null != s ? (0, j.gU)(s) : null,
         S =
             null != s
@@ -45,7 +44,7 @@ function I(e) {
                                   className: C.P0,
                                   children: (0, l.jsx)(T, { size: "md", color: c.A.colors.TEXT_DEFAULT }),
                               }),
-                          (0, l.jsx)("span", { className: C.HA, children: _ }),
+                          (0, l.jsx)("span", { className: C.HA, children: y }),
                       ],
                   })
                 : b.intl.string(b.t["q38/ae"]),
@@ -55,8 +54,8 @@ function I(e) {
         k = i.useCallback(() => {
             null != s &&
                 null != n &&
-                (0, u.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([t.e("921903"), t.e("608939")]).then(t.bind(t, 181094));
+                (0, u.mM)(async () => {
+                    let { default: e } = await Promise.all([t.e(921903), t.e(608939)]).then(t.bind(t, 181094));
                     return (t) => (0, l.jsx)(e, { ...t, channel: s, guild: n });
                 });
         }, [s, n]),
@@ -88,7 +87,7 @@ function I(e) {
                   })
                 : null;
     return (0, l.jsx)(x.A, {
-        onAgree: y,
+        onAgree: _,
         onDisagree: I,
         modalType: m.A5.SPOILER_CHANNEL,
         title: S,
@@ -100,21 +99,27 @@ function I(e) {
         channelId: a,
     });
 }
-let y = function (e) {
-    let { guild: n, channelId: t, className: a } = e,
-        r = i.useRef(null);
-    return (
-        i.useEffect(() => {
-            let { current: e } = r;
-            e?.scrollToBottom();
-        }, []),
-        (0, l.jsx)(g.Ch, {
-            ref: r,
-            className: E.X,
-            children: (0, l.jsx)("div", {
-                className: s()(a, E.i),
-                children: (0, l.jsx)(I, { guild: n, channelId: t }, t),
-            }),
-        })
-    );
-};
+t.d(
+    n,
+    {},
+    {
+        A: function (e) {
+            let { guild: n, channelId: t, className: a } = e,
+                r = i.useRef(null);
+            return (
+                i.useEffect(() => {
+                    let { current: e } = r;
+                    e?.scrollToBottom();
+                }, []),
+                (0, l.jsx)(g.Ch, {
+                    ref: r,
+                    className: E.X,
+                    children: (0, l.jsx)("div", {
+                        className: s()(a, E.i),
+                        children: (0, l.jsx)(I, { guild: n, channelId: t }, t),
+                    }),
+                })
+            );
+        },
+    },
+);

@@ -1,41 +1,50 @@
-l.d(t, { default: () => g });
 var n = l(477900),
     i = l(582128),
     r = l(277057),
     u = l.n(r),
     s = l(820284),
-    a = l(913122),
+    a = l(627784),
     d = l(513461),
     c = l(241499),
     p = l(242273),
     o = l(652215),
-    h = l(105292);
-let g = function (e) {
-    let { field: t, onSave: l, onClose: r, guild: g } = e,
-        [v, f] = i.useState(
-            t?.values != null ? t?.values.map((e) => ({ id: u()(), value: e })) : [{ id: u()(), value: "" }],
-        ),
-        [_, A] = i.useState(null);
-    async function C() {
-        null != _ && A(null);
-        let e = v.map((e) => e.value.trim()).filter((e) => "" !== e);
-        if (0 === e.length) return void A(h.intl.string(h.t.TCHkcd));
-        let t = { field_type: d.rX.TERMS, label: h.intl.string(h.t["9suSIA"]), values: e, required: !0 };
-        try {
-            (await l(t), r());
-        } catch (e) {
-            A(new a.LG(e).getAnyErrorMessage());
-        }
-    }
-    return (0, n.jsx)(s.A, {
-        page: o.liQ.GUILD_RULES_CREATE_MODAL,
-        children: (0, n.jsx)(p.A, {
-            ...e,
-            errorText: _,
-            title: h.intl.string(h.t["3pz9t3"]),
-            onCancel: r,
-            onConfirm: C,
-            children: (0, n.jsx)(c._, { guild: g, rules: v, setRules: f }),
-        }),
-    });
-};
+    h = l(792996);
+l.d(
+    t,
+    {},
+    {
+        default: function (e) {
+            let { field: t, onSave: l, onClose: r, guild: g } = e,
+                [v, f] = i.useState(
+                    t?.values != null ? t?.values.map((e) => ({ id: u()(), value: e })) : [{ id: u()(), value: "" }],
+                ),
+                [_, A] = i.useState(null);
+            return (0, n.jsx)(s.A, {
+                page: o.liQ.GUILD_RULES_CREATE_MODAL,
+                children: (0, n.jsx)(p.A, {
+                    ...e,
+                    errorText: _,
+                    title: h.intl.string(h.t["3pz9t3"]),
+                    onCancel: r,
+                    onConfirm: async function () {
+                        null != _ && A(null);
+                        let e = v.map((e) => e.value.trim()).filter((e) => "" !== e);
+                        if (0 === e.length) return void A(h.intl.string(h.t.TCHkcd));
+                        let t = {
+                            field_type: d.rX.TERMS,
+                            label: h.intl.string(h.t["9suSIA"]),
+                            values: e,
+                            required: !0,
+                        };
+                        try {
+                            (await l(t), r());
+                        } catch (e) {
+                            A(new a.LG(e).getAnyErrorMessage());
+                        }
+                    },
+                    children: (0, n.jsx)(c._, { guild: g, rules: v, setRules: f }),
+                }),
+            });
+        },
+    },
+);

@@ -1,7 +1,7 @@
 _.exports = {
-    yl: "modal__3850a",
-    _J: "followSuccessHeader__3850a",
-    Sl: "image__3850a",
-    rf: "body__3850a",
-    zr: "root__3850a",
+    yl: "modal_wRhEA_",
+    _J: "followSuccessHeader_wRhEA_",
+    Sl: "image_wRhEA_",
+    rf: "body_wRhEA_",
+    zr: "root_wRhEA_",
 };

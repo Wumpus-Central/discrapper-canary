@@ -69,4 +69,4 @@ var h = {
 ((g.displayName = "QRCode"),
     (g.propTypes = h),
     (g.defaultProps = { bgColor: "#FFFFFF", fgColor: "#000000", level: "L", size: 256 }),
-    (e.default = g));
+    (e.A = g));

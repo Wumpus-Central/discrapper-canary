@@ -1,22 +1,27 @@
-n.d(t, { A: () => a });
 var i = n(477900);
 n(582128);
 var r = n(953727);
-function a(e) {
-    let { width: t = 12, height: n = 12, color: a = "currentColor", foreground: s, ...l } = e;
-    return (0, i.jsx)("svg", {
-        ...(0, r.A)(l),
-        width: t,
-        height: n,
-        viewBox: "0 0 12 12",
-        children: (0, i.jsx)("rect", {
-            width: "9",
-            height: "9",
-            x: "1.5",
-            y: "1.5",
-            fill: "none",
-            stroke: a,
-            className: s,
-        }),
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { width: t = 12, height: n = 12, color: a = "currentColor", foreground: s, ...l } = e;
+            return (0, i.jsx)("svg", {
+                ...(0, r.A)(l),
+                width: t,
+                height: n,
+                viewBox: "0 0 12 12",
+                children: (0, i.jsx)("rect", {
+                    width: "9",
+                    height: "9",
+                    x: "1.5",
+                    y: "1.5",
+                    fill: "none",
+                    stroke: a,
+                    className: s,
+                }),
+            });
+        },
+    },
+);

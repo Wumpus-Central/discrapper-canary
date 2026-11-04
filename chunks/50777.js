@@ -1,9 +1,8 @@
-n.d(i, { A: () => z, I: () => Y });
 var e = n(477900),
     t = n(582128),
     a = n(503698),
     s = n.n(a),
-    o = n(17928),
+    o = n(855986),
     r = n(834730),
     c = n(318254),
     d = n(638495),
@@ -20,7 +19,7 @@ var e = n(477900),
     I = n(288106),
     T = n(993046),
     N = n(801228),
-    f = n(561794),
+    f = n(634110),
     _ = n(287809),
     v = n(67480),
     y = n(871123),
@@ -31,13 +30,13 @@ var e = n(477900),
     O = n(459005),
     P = n(510022),
     S = n(317560),
-    G = n(82343),
+    G = n(306984),
     L = n(971146),
     B = n(300182),
-    F = n(467884),
+    F = n(869099),
     M = n(533772),
     U = n(249434),
-    K = n(105292),
+    K = n(792996),
     H = n(702360);
 let w = { placement: k.Ye.EMBED };
 function W(l) {
@@ -104,11 +103,6 @@ function W(l) {
     });
 }
 function Y(l) {
-    let { applicationId: i, skuId: n, channel: t } = l,
-        a = (0, o.bG)([R.A], () => R.A.getGuildIdFromApplicationId(i));
-    return (0, e.jsx)(z, { applicationId: i, guildId: a, skuId: n, channel: t });
-}
-function z(l) {
     let { guildId: i, skuId: n, channel: a, applicationId: s, customNavigateToSocialLayerStorefront: M } = l,
         U = (0, d.k)(),
         Y = (0, o.bG)([v.A], () => v.A.isFetching(n)),
@@ -281,3 +275,15 @@ function z(l) {
             })
           : null;
 }
+n.d(
+    i,
+    {},
+    {
+        A: Y,
+        I: function (l) {
+            let { applicationId: i, skuId: n, channel: t } = l,
+                a = (0, o.bG)([R.A], () => R.A.getGuildIdFromApplicationId(i));
+            return (0, e.jsx)(Y, { applicationId: i, guildId: a, skuId: n, channel: t });
+        },
+    },
+);

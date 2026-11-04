@@ -1,0 +1,26 @@
+.messagePreviewLine_2qmWP0 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    overflow: hidden
+}
+
+.messageContent_2qmWP0 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.messageContent_2qmWP0>strong {
+    font-weight: var(--font-weight-medium)
+}
+
+.messageContentTrailingIcon_2qmWP0 {
+    flex-shrink: 0
+}
+
+.colorTextFeedbackPositive_2qmWP0 {
+    color: var(--text-feedback-positive)
+}
+
+/*# sourceMappingURL=8bf48949d5820d33.css.map*/

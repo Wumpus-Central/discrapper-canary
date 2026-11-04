@@ -1,7 +1,6 @@
-n.d(t, { r: () => m });
 var l = n(582128),
     r = n(59520),
-    s = n(174459),
+    s = n(129230),
     a = n(440938),
     i = n(12678),
     o = n(652215),
@@ -21,75 +20,82 @@ function d(e, t, n, l) {
             });
     }
 }
-function m(e, t) {
-    let n,
-        s,
-        c,
-        m,
-        { analyticsSource: g } = (0, i.lC)(t),
-        h = (0, r.I)(d, 5e3, [], { trailing: !0 }),
-        p = (0, a.uM)(),
-        x = p?.sessionId,
-        f =
-            ((n = l.useRef(0)),
-            (s = l.useRef(!1)),
-            (c = l.useRef(!1)),
-            (m = l.useRef(0)),
-            l.useEffect(() => {
-                let t = e.current?.getScrollerNode();
-                if (null != t)
-                    return (
-                        t.addEventListener("wheel", l, { passive: !0 }),
-                        t.addEventListener("touchmove", l, { passive: !0 }),
-                        t.addEventListener("keydown", a),
-                        t.addEventListener("pointerdown", i),
-                        t.addEventListener("scrollend", r),
-                        window.addEventListener("pointerup", o),
-                        window.addEventListener("pointercancel", o),
-                        () => {
-                            (t.removeEventListener("wheel", l),
-                                t.removeEventListener("touchmove", l),
-                                t.removeEventListener("keydown", a),
-                                t.removeEventListener("pointerdown", i),
-                                t.removeEventListener("scrollend", r),
-                                window.removeEventListener("pointerup", o),
-                                window.removeEventListener("pointercancel", o),
-                                (s.current = !1),
-                                (c.current = !1));
+n.d(
+    t,
+    {},
+    {
+        r: function (e, t) {
+            let n,
+                s,
+                c,
+                m,
+                { analyticsSource: g } = (0, i.lC)(t),
+                h = (0, r.I)(d, 5e3, [], { trailing: !0 }),
+                p = (0, a.uM)(),
+                x = p?.sessionId,
+                f =
+                    ((n = l.useRef(0)),
+                    (s = l.useRef(!1)),
+                    (c = l.useRef(!1)),
+                    (m = l.useRef(0)),
+                    l.useEffect(() => {
+                        let t = e.current?.getScrollerNode();
+                        if (null != t)
+                            return (
+                                t.addEventListener("wheel", l, { passive: !0 }),
+                                t.addEventListener("touchmove", l, { passive: !0 }),
+                                t.addEventListener("keydown", a),
+                                t.addEventListener("pointerdown", i),
+                                t.addEventListener("scrollend", r),
+                                window.addEventListener("pointerup", o),
+                                window.addEventListener("pointercancel", o),
+                                () => {
+                                    (t.removeEventListener("wheel", l),
+                                        t.removeEventListener("touchmove", l),
+                                        t.removeEventListener("keydown", a),
+                                        t.removeEventListener("pointerdown", i),
+                                        t.removeEventListener("scrollend", r),
+                                        window.removeEventListener("pointerup", o),
+                                        window.removeEventListener("pointercancel", o),
+                                        (s.current = !1),
+                                        (c.current = !1));
+                                }
+                            );
+                        function l() {
+                            ((n.current = Date.now()), (s.current = !0));
                         }
-                    );
-                function l() {
-                    ((n.current = Date.now()), (s.current = !0));
-                }
-                function r() {
-                    s.current = !1;
-                }
-                function a(e) {
-                    u.has(e.key) && l();
-                }
-                function i(e) {
-                    e.target === t && ((c.current = !0), (m.current = Date.now()), l());
-                }
-                function o() {
-                    c.current && ((c.current = !1), l());
-                }
-            }, [e]),
-            l.useCallback(
-                () => (c.current && Date.now() - m.current < 3e4) || (s.current && Date.now() - n.current < 1e3),
-                [],
-            ));
-    return {
-        handleScroll: l.useCallback(() => {
-            if (f() && null != e.current) {
-                let t = e.current.getScrollerNode();
-                null != t &&
-                    h(o.HAw.COLLECTIBLES_SHOP_SCROLLED, null != x ? x : "", g, {
-                        scrollTop: t.scrollTop,
-                        scrollOffset: t.offsetHeight,
-                        scrollHeight: t.scrollHeight,
-                        scrollWidth: t.scrollWidth,
-                    });
-            }
-        }, [h, g, x, e, f]),
-    };
-}
+                        function r() {
+                            s.current = !1;
+                        }
+                        function a(e) {
+                            u.has(e.key) && l();
+                        }
+                        function i(e) {
+                            e.target === t && ((c.current = !0), (m.current = Date.now()), l());
+                        }
+                        function o() {
+                            c.current && ((c.current = !1), l());
+                        }
+                    }, [e]),
+                    l.useCallback(
+                        () =>
+                            (c.current && Date.now() - m.current < 3e4) || (s.current && Date.now() - n.current < 1e3),
+                        [],
+                    ));
+            return {
+                handleScroll: l.useCallback(() => {
+                    if (f() && null != e.current) {
+                        let t = e.current.getScrollerNode();
+                        null != t &&
+                            h(o.HAw.COLLECTIBLES_SHOP_SCROLLED, null != x ? x : "", g, {
+                                scrollTop: t.scrollTop,
+                                scrollOffset: t.offsetHeight,
+                                scrollHeight: t.scrollHeight,
+                                scrollWidth: t.scrollWidth,
+                            });
+                    }
+                }, [h, g, x, e, f]),
+            };
+        },
+    },
+);

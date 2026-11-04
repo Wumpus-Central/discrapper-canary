@@ -1,44 +1,44 @@
-(n.d(t, { Ay: () => J, Dz: () => X, MV: () => P, S4: () => Y, qZ: () => z }), n(321073));
+n(321073);
 var l = n(477900),
     i = n(582128),
     r = n(503698),
     s = n.n(r),
-    a = n(17928),
-    o = n(52133),
-    u = n(342952),
+    a = n(855986),
+    u = n(52133),
+    o = n(342952),
     d = n(778712),
-    c = n(661531),
+    c = n(646514),
     h = n(890856),
     g = n(834730),
-    m = n(364522),
+    m = n(95362),
     I = n(683438),
     E = n(47167),
     A = n(713654),
     f = n(573435),
-    S = n(145497),
-    p = n(166444),
+    p = n(145497),
+    S = n(166444),
     N = n(565860),
     T = n(648427),
     y = n(379078),
     x = n(704554),
-    _ = n(427358),
+    _ = n(812020),
     C = n(95701),
     v = n(734057),
     R = n(808728),
     D = n(71393),
     b = n(576705),
     j = n(994500),
-    M = n(287809),
-    k = n(977997),
+    k = n(287809),
+    M = n(977997),
     O = n(403362),
     w = n(996439),
     F = n(652215),
-    G = n(105292),
+    G = n(792996),
     L = n(635613);
 let U = (e) => [
         e.userId,
         ...(function (e) {
-            let t = M.default.getUser(e.userId);
+            let t = k.default.getUser(e.userId);
             if (null == t) return [];
             let n = t.username,
                 l = (0, N.jP)(t);
@@ -51,7 +51,7 @@ let U = (e) => [
         searchStringGenerator: (e) => {
             let { channel: t, voiceStates: n } = e;
             return [
-                (0, E.m1)(t, M.default, j.A),
+                (0, E.m1)(t, k.default, j.A),
                 t.id,
                 t.guild_id,
                 D.A.getGuild(t.guild_id)?.name ?? "",
@@ -63,14 +63,14 @@ let U = (e) => [
     V = { searchType: y.n.FUZZY, sortType: y.r.JARO_WINKLER, searchStringGenerator: U, throttleMs: 100 },
     H = i.memo(function (e) {
         let { channel: t, query: n } = e,
-            [r] = (0, a.bG)([k.A], () => [k.A.getVoiceStatesForChannel(t.id), k.A.getVoiceStateVersion()], [t.id], w.D),
-            [s, o] = i.useState([]);
-        (0, x.RT)(n, Object.values(r), o, V);
+            [r] = (0, a.bG)([M.A], () => [M.A.getVoiceStatesForChannel(t.id), M.A.getVoiceStateVersion()], [t.id], w.D),
+            [s, u] = i.useState([]);
+        (0, x.RT)(n, Object.values(r), u, V);
         let c = (0, a.yK)(
-                [k.A, M.default, _.A, j.A],
+                [M.A, k.default, _.A, j.A],
                 () =>
-                    Object.values(k.A.getVoiceStatesForChannel(t.id))
-                        .map((e) => M.default.getUser(e.userId))
+                    Object.values(M.A.getVoiceStatesForChannel(t.id))
+                        .map((e) => k.default.getUser(e.userId))
                         .filter(O.Vq)
                         .sort((e, t) => {
                             if (s.length > 0 && "" !== n.trim()) {
@@ -90,7 +90,7 @@ let U = (e) => [
             g = Math.max(s.length, 2);
         return null == h
             ? null
-            : (0, l.jsx)(u.A, {
+            : (0, l.jsx)(o.A, {
                   users: c,
                   guildId: h,
                   maxUsers: Math.min(g, 4),
@@ -105,7 +105,7 @@ function Y() {
     let e,
         t =
             ((e = (0, a.yK)(
-                [M.default, j.A, _.A],
+                [k.default, j.A, _.A],
                 () =>
                     j.A.getFriendIDs()
                         .sort((e, t) =>
@@ -119,17 +119,17 @@ function Y() {
                                       (_.A.getUserAffinity(e)?.communicationProbability ?? 0),
                         )
                         .reduce((e, t) => {
-                            let n = M.default.getUser(t);
+                            let n = k.default.getUser(t);
                             return (null != n && e.push(n), e);
                         }, []),
                 [],
             )),
             (0, a.yK)(
-                [k.A, v.A, b.A],
+                [M.A, v.A, b.A],
                 () =>
                     Array.from(
                         e
-                            .map((e) => k.A.getDiscoverableVoiceStateForUser(e.id))
+                            .map((e) => M.A.getDiscoverableVoiceStateForUser(e.id))
                             .reduce((e, t) => {
                                 let n = t?.channelId;
                                 if (null == n) return e;
@@ -173,70 +173,19 @@ function Y() {
 function K(e, t) {
     if (e.length !== t.length) return !1;
     for (let n = 0; n < e.length; n++)
-        if (e[n].channel !== t[n].channel || !(0, o.v)(e[n].voiceStates ?? [], t[n].voiceStates ?? [])) return !1;
+        if (e[n].channel !== t[n].channel || !(0, u.v)(e[n].voiceStates ?? [], t[n].voiceStates ?? [])) return !1;
     return !0;
 }
-function z() {
-    return (0, a.bG)(
-        [D.A, R.Ay, k.A, j.A, b.A],
-        () =>
-            D.A.getGuildsArray()
-                .reduce(
-                    (e, t) => [
-                        ...e,
-                        ...R.Ay.getChannels(t.id)
-                            [R.vM].filter(
-                                (e) => b.A.can(F.xBc.VIEW_CHANNEL, e.channel) && b.A.can(F.xBc.CONNECT, e.channel),
-                            )
-                            .map((e) => {
-                                let { channel: t } = e;
-                                return t;
-                            }),
-                    ],
-                    [],
-                )
-                .map((e) => ({
-                    channel: e,
-                    voiceStates: Object.values(k.A.getVoiceStatesForChannel(e.id)).filter((e) =>
-                        j.A.isFriend(e.userId),
-                    ),
-                })),
-        [],
-        K,
-    );
-}
-function X() {
-    return (0, a.bG)(
-        [D.A, R.Ay, b.A],
-        () =>
-            D.A.getGuildsArray()
-                .reduce(
-                    (e, t) => [
-                        ...e,
-                        ...R.Ay.getChannels(t.id)
-                            [R.I6].map((e) => {
-                                let { channel: t } = e;
-                                return t;
-                            })
-                            .filter((e) => null != e && !!(0, C.pQ)(e.type) && b.A.can(F.xBc.VIEW_CHANNEL, e)),
-                    ],
-                    [],
-                )
-                .map((e) => ({ channel: e, voiceStates: [] })),
-        [],
-        K,
-    );
-}
-let B = i.memo(function (e) {
+let z = i.memo(function (e) {
         let { channel: t } = e,
             n = t.getGuildId(),
             i = (0, a.bG)([D.A], () => D.A.getGuild(n), [n]);
         if (null == i)
             switch (t.type) {
                 case F.rbe.DM:
-                    return (0, l.jsx)(p.Pk, { channel: t, size: d._3.SIZE_32 });
+                    return (0, l.jsx)(S.Pk, { channel: t, size: d._3.SIZE_32 });
                 case F.rbe.GROUP_DM:
-                    return (0, l.jsx)(p.IC, { channel: t, size: d._3.SIZE_32 });
+                    return (0, l.jsx)(S.IC, { channel: t, size: d._3.SIZE_32 });
                 default:
                     return null;
             }
@@ -246,7 +195,7 @@ let B = i.memo(function (e) {
             height: 32,
             children: (0, l.jsx)("div", {
                 className: L.Ko,
-                children: (0, l.jsx)(S.j, {
+                children: (0, l.jsx)(p.j, {
                     guildId: i.id,
                     guildName: i.name ?? G.intl.string(G.t.DmIUGK),
                     guildIcon: i.icon,
@@ -255,22 +204,22 @@ let B = i.memo(function (e) {
             }),
         });
     }),
-    Z = i.memo(function (e) {
+    X = i.memo(function (e) {
         let {
                 channelId: t,
                 isHighlighted: n,
                 currentVoiceChannel: i,
                 onClick: r,
-                onMouseOver: o,
-                onMouseLeave: u,
+                onMouseOver: u,
+                onMouseLeave: o,
                 query: d,
                 showVoiceAvatars: m = !0,
             } = e,
             I = (0, a.bG)([v.A], () => v.A.getChannel(t), [t]),
             f = (0, E.Ay)(I),
-            S = I?.getGuildId(),
-            p = (0, a.bG)([D.A], () => D.A.getGuild(S), [S]),
-            N = (0, A.gU)(I, p),
+            p = I?.getGuildId(),
+            S = (0, a.bG)([D.A], () => D.A.getGuild(p), [p]),
+            N = (0, A.gU)(I, S),
             T = i?.id === t,
             y = T ? "text-feedback-positive" : n ? "interactive-text-active" : "text-muted",
             x = T ? c.A.colors.TEXT_FEEDBACK_POSITIVE : n ? c.A.colors.INTERACTIVE_TEXT_ACTIVE : c.A.colors.ICON_MUTED;
@@ -281,10 +230,10 @@ let B = i.memo(function (e) {
                   focusProps: { offset: 4 },
                   "aria-label": f ?? "",
                   onClick: () => r(t),
-                  onMouseOver: () => o(t),
-                  onMouseLeave: () => u(t),
+                  onMouseOver: () => u(t),
+                  onMouseLeave: () => o(t),
                   children: [
-                      (0, l.jsx)("div", { className: L._N, children: (0, l.jsx)(B, { channel: I }) }),
+                      (0, l.jsx)("div", { className: L._N, children: (0, l.jsx)(z, { channel: I }) }),
                       (0, l.jsxs)("div", {
                           className: L.rg,
                           children: [
@@ -296,14 +245,14 @@ let B = i.memo(function (e) {
                                           variant: T ? "body-sm/semibold" : "body-sm/medium",
                                           color: y,
                                           className: L.rU,
-                                          children: (0, E.m1)(I, M.default, j.A),
+                                          children: (0, E.m1)(I, k.default, j.A),
                                       }),
                                   ],
                               }),
                               (0, l.jsx)(g.E, {
                                   variant: T ? "body-xs/semibold" : "body-xs/medium",
                                   color: y,
-                                  children: p?.name ?? f,
+                                  children: S?.name ?? f,
                               }),
                           ],
                       }),
@@ -314,22 +263,22 @@ let B = i.memo(function (e) {
                   ],
               });
     }),
-    W = i.memo(function (e) {
+    B = i.memo(function (e) {
         let { emptyText: t } = e;
         return (0, l.jsx)("div", {
             className: L.KJ,
             children: (0, l.jsx)(g.E, { variant: "body-md/normal", color: "text-strong", children: t }),
         });
     }),
-    $ = i.memo(function (e) {
+    Z = i.memo(function (e) {
         let {
                 sectionHeader: t,
                 channelIds: n,
                 currentVoiceChannel: r,
                 onSelect: s,
                 hasQuery: a,
-                query: o,
-                scrollable: u = !0,
+                query: u,
+                scrollable: o = !0,
                 showVoiceAvatars: d = !0,
             } = e,
             [c, h] = i.useState(null);
@@ -339,7 +288,7 @@ let B = i.memo(function (e) {
         function E() {
             h(null);
         }
-        let A = u ? m.Ip : "div";
+        let A = o ? m.Ip : "div";
         return (0, l.jsxs)("div", {
             children: [
                 (0, l.jsx)("div", {
@@ -349,10 +298,10 @@ let B = i.memo(function (e) {
                 (0, l.jsxs)(A, {
                     className: L.o5,
                     children: [
-                        a && 0 === n.length && (0, l.jsx)(W, { emptyText: G.intl.string(G.t.nxSS03) }),
+                        a && 0 === n.length && (0, l.jsx)(B, { emptyText: G.intl.string(G.t.nxSS03) }),
                         n.map((e) =>
                             (0, l.jsx)(
-                                Z,
+                                X,
                                 {
                                     channelId: e,
                                     isHighlighted: e === c,
@@ -362,7 +311,7 @@ let B = i.memo(function (e) {
                                     },
                                     onMouseOver: I,
                                     onMouseLeave: E,
-                                    query: o,
+                                    query: u,
                                     showVoiceAvatars: d,
                                 },
                                 e,
@@ -373,7 +322,7 @@ let B = i.memo(function (e) {
             ],
         });
     });
-function Q(e) {
+function W(e) {
     let { searchQuery: t, currentVoiceChannel: n, onSelect: i } = e,
         { recentVoiceChannelIds: r, friendVoiceChannelIds: a } = Y();
     return r.length > 0 || a.length > 0
@@ -381,7 +330,7 @@ function Q(e) {
               className: s()(L.o5, L.Hc),
               children: [
                   r.length > 0 &&
-                      (0, l.jsx)($, {
+                      (0, l.jsx)(Z, {
                           sectionHeader: G.intl.string(G.t.lnk2NQ),
                           channelIds: r.slice(0, 3),
                           hasQuery: !1,
@@ -391,7 +340,7 @@ function Q(e) {
                           scrollable: !1,
                       }),
                   a.length > 0 &&
-                      (0, l.jsx)($, {
+                      (0, l.jsx)(Z, {
                           sectionHeader: G.intl.string(G.t["0lvb9O"]),
                           channelIds: a.slice(0, 8),
                           hasQuery: !1,
@@ -402,77 +351,133 @@ function Q(e) {
                       }),
               ],
           })
-        : (0, l.jsx)(W, { emptyText: G.intl.string(G.t["3ET7Ay"]) });
+        : (0, l.jsx)(B, { emptyText: G.intl.string(G.t["3ET7Ay"]) });
 }
-function q(e) {
+function $(e) {
     e.stopPropagation();
 }
-function J(e) {
-    let { currentVoiceChannel: t, onClose: n, onSelect: r, allAvailableChannelRows: s } = e,
-        [a, o] = i.useState(""),
-        [u, d] = i.useState([]);
-    (0, x.RT)(a, s, d, P);
-    let c = i.useCallback(
-            (e) => {
-                "Escape" === e.key && n();
-            },
-            [n],
-        ),
-        h = i.useCallback(
-            (e, t) => {
-                (r(e, t), n());
-            },
-            [r, n],
-        );
-    i.useEffect(
-        () => (
-            document.addEventListener("keydown", c, !0),
-            () => {
-                document.removeEventListener("keydown", c, !0);
-            }
-        ),
-        [n, c],
-    );
-    let g = "" !== a.trim(),
-        m = u.length > 20,
-        E = { count: m ? 20 : u.length },
-        A = i.useMemo(() => ({ onMouseDown: q, onMouseMove: q, onMouseUp: q, onMouseEnter: q, onMouseLeave: q }), []);
-    return (0, l.jsxs)("div", {
-        className: L.Dz,
-        ...A,
-        children: [
-            (0, l.jsx)("div", {
-                className: L.PP,
-                children: (0, l.jsx)(I.I, {
-                    autoFocus: !0,
-                    query: a,
-                    placeholder: G.intl.string(G.t.UyA6ST),
-                    onClear: function () {
-                        o("");
+n.d(
+    t,
+    {},
+    {
+        Ay: function (e) {
+            let { currentVoiceChannel: t, onClose: n, onSelect: r, allAvailableChannelRows: s } = e,
+                [a, u] = i.useState(""),
+                [o, d] = i.useState([]);
+            (0, x.RT)(a, s, d, P);
+            let c = i.useCallback(
+                    (e) => {
+                        "Escape" === e.key && n();
                     },
-                    onKeyDown: c,
-                    onChange: function (e) {
-                        o(e);
+                    [n],
+                ),
+                h = i.useCallback(
+                    (e, t) => {
+                        (r(e, t), n());
                     },
-                    inputProps: { "aria-label": G.intl.string(G.t.UyA6ST) },
-                }),
-            }),
-            g
-                ? (0, l.jsx)($, {
-                      sectionHeader: m ? G.intl.format(G.t.qdXiQ1, E) : G.intl.format(G.t["Aq+8wB"], E),
-                      channelIds: u
-                          .map((e) => {
-                              let { channel: t } = e;
-                              return t.id;
+                    [r, n],
+                );
+            i.useEffect(
+                () => (
+                    document.addEventListener("keydown", c, !0),
+                    () => {
+                        document.removeEventListener("keydown", c, !0);
+                    }
+                ),
+                [n, c],
+            );
+            let g = "" !== a.trim(),
+                m = o.length > 20,
+                E = { count: m ? 20 : o.length },
+                A = i.useMemo(
+                    () => ({ onMouseDown: $, onMouseMove: $, onMouseUp: $, onMouseEnter: $, onMouseLeave: $ }),
+                    [],
+                );
+            return (0, l.jsxs)("div", {
+                className: L.Dz,
+                ...A,
+                children: [
+                    (0, l.jsx)("div", {
+                        className: L.PP,
+                        children: (0, l.jsx)(I.I, {
+                            autoFocus: !0,
+                            query: a,
+                            placeholder: G.intl.string(G.t.UyA6ST),
+                            onClear: function () {
+                                u("");
+                            },
+                            onKeyDown: c,
+                            onChange: function (e) {
+                                u(e);
+                            },
+                            inputProps: { "aria-label": G.intl.string(G.t.UyA6ST) },
+                        }),
+                    }),
+                    g
+                        ? (0, l.jsx)(Z, {
+                              sectionHeader: m ? G.intl.format(G.t.qdXiQ1, E) : G.intl.format(G.t["Aq+8wB"], E),
+                              channelIds: o
+                                  .map((e) => {
+                                      let { channel: t } = e;
+                                      return t.id;
+                                  })
+                                  .slice(0, 20),
+                              hasQuery: g,
+                              query: a,
+                              currentVoiceChannel: t,
+                              onSelect: (e) => h(e, "search channel"),
+                              showVoiceAvatars: !0,
                           })
-                          .slice(0, 20),
-                      hasQuery: g,
-                      query: a,
-                      currentVoiceChannel: t,
-                      onSelect: (e) => h(e, "search channel"),
-                      showVoiceAvatars: !0,
-                  })
-                : (0, l.jsx)(Q, { searchQuery: a, currentVoiceChannel: t, onSelect: h }),
-        ],
-    });
-}
+                        : (0, l.jsx)(W, { searchQuery: a, currentVoiceChannel: t, onSelect: h }),
+                ],
+            });
+        },
+        Dz: function () {
+            return (0, a.bG)(
+                [D.A, R.A, b.A],
+                () =>
+                    D.A.getGuildsArray()
+                        .reduce((e, t) => {
+                            let n = R.A.getChannels(t.id)
+                                [R.I].map((e) => {
+                                    let { channel: t } = e;
+                                    return t;
+                                })
+                                .filter((e) => null != e && !!(0, C.pQ)(e.type) && b.A.can(F.xBc.VIEW_CHANNEL, e));
+                            return [...e, ...n];
+                        }, [])
+                        .map((e) => ({ channel: e, voiceStates: [] })),
+                [],
+                K,
+            );
+        },
+        MV: P,
+        S4: Y,
+        qZ: function () {
+            return (0, a.bG)(
+                [D.A, R.A, M.A, j.A, b.A],
+                () =>
+                    D.A.getGuildsArray()
+                        .reduce((e, t) => {
+                            let n = R.A.getChannels(t.id)
+                                .VOCAL.filter(
+                                    (e) => b.A.can(F.xBc.VIEW_CHANNEL, e.channel) && b.A.can(F.xBc.CONNECT, e.channel),
+                                )
+                                .map((e) => {
+                                    let { channel: t } = e;
+                                    return t;
+                                });
+                            return [...e, ...n];
+                        }, [])
+                        .map((e) => ({
+                            channel: e,
+                            voiceStates: Object.values(M.A.getVoiceStatesForChannel(e.id)).filter((e) =>
+                                j.A.isFriend(e.userId),
+                            ),
+                        })),
+                [],
+                K,
+            );
+        },
+    },
+);

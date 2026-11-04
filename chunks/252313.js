@@ -1,4 +1,3 @@
-n.d(t, { p: () => r });
 var i,
     r =
         (((i = {})[(i.INVALID_PLACEMENT = 0)] = "INVALID_PLACEMENT"),
@@ -8,3 +7,4 @@ var i,
         (i[(i.QUEST_HOME_MOBILE_CAROUSEL = 4)] = "QUEST_HOME_MOBILE_CAROUSEL"),
         (i[(i.VIDEO_MODAL_MOBILE = 5)] = "VIDEO_MODAL_MOBILE"),
         i);
+n.d(t, {}, { p: r });

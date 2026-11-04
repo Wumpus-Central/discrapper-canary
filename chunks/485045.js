@@ -1,8 +1,7 @@
-n.d(t, { W: () => s, n: () => l });
-var a = n(17928),
+var a = n(855986),
     r = n(945810),
     o = n(287809),
-    u = n(24482);
+    u = n(879610);
 let i = (0, r.mj)({
     name: "2026-09-request-to-stream-go-live-modal",
     kind: "user",
@@ -12,16 +11,22 @@ let i = (0, r.mj)({
 function d(e, t) {
     return e && !u.Ay.canStreamQuality(u.Ay.StreamQuality.HIGH, t);
 }
-function l(e) {
-    let { location: t } = e,
-        { openGoLiveModal: n } = i.getConfig({ location: t });
-    return d(n, o.default.getCurrentUser());
-}
-function s(e) {
-    let { location: t } = e,
-        { openGoLiveModal: n } = i.useConfig({ location: t });
-    return d(
-        n,
-        (0, a.bG)([o.default], () => o.default.getCurrentUser()),
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        W: function (e) {
+            let { location: t } = e,
+                { openGoLiveModal: n } = i.useConfig({ location: t });
+            return d(
+                n,
+                (0, a.bG)([o.default], () => o.default.getCurrentUser()),
+            );
+        },
+        n: function (e) {
+            let { location: t } = e,
+                { openGoLiveModal: n } = i.getConfig({ location: t });
+            return d(n, o.default.getCurrentUser());
+        },
+    },
+);

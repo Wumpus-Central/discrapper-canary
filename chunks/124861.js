@@ -1,4 +1,3 @@
-l.d(t, { x: () => a });
 var n,
     a =
         (((n = {})[(n.NONE = 0)] = "NONE"),
@@ -8,3 +7,4 @@ var n,
         (n[(n.INELIGIBLE = 4)] = "INELIGIBLE"),
         (n[(n.ELIGIBLE = 5)] = "ELIGIBLE"),
         n);
+l.d(t, {}, { x: a });

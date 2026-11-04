@@ -1,0 +1,14 @@
+.listState_Kal6GS {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: var(--space-16);
+    text-align: center
+}
+
+.empty_Kal6GS {
+    padding: 0 var(--space-8)
+}
+
+/*# sourceMappingURL=04cd00d72ee2e37c.css.map*/

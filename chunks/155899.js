@@ -1,10 +1,9 @@
-n.d(t, { F: () => c });
 var l = n(477900),
     r = n(582128),
     a = n(732159),
     i = n(192308),
-    s = n(809526),
-    u = n(105292);
+    s = n(191850),
+    u = n(792996);
 function o(e) {
     let { matchingBackup: t, onConfirm: n, transitionState: i, onClose: o } = e,
         [c, d] = r.useState(!1);
@@ -27,6 +26,12 @@ function o(e) {
         onConfirm: () => n(c && null != t ? t : null),
     });
 }
-function c(e) {
-    (0, i.openModalLazy)(() => Promise.resolve((t) => (0, l.jsx)(o, { ...t, ...e })));
-}
+n.d(
+    t,
+    {},
+    {
+        F: function (e) {
+            (0, i.mM)(() => Promise.resolve((t) => (0, l.jsx)(o, { ...t, ...e })));
+        },
+    },
+);

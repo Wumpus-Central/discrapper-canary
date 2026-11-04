@@ -1,46 +1,51 @@
-l.d(t, { I: () => c, z: () => r });
 var n = l(582128),
-    a = l(17928),
+    a = l(855986),
     s = l(12510),
     i = l(673125);
-function r(e) {
-    let t = (0, n.useRef)(!1),
-        {
-            challengesForOrbWallet: l,
-            hasFetchedChallenges: r,
-            isFetchingChallenges: c,
-            fetchChallengesError: o,
-        } = (0, a.cf)([i.Ay], () => ({
-            challengesForOrbWallet: i.Ay.challengesForOrbWallet,
-            hasFetchedChallenges: i.Ay.hasFetchedChallenges,
-            isFetchingChallenges: i.Ay.isFetchingChallenges,
-            fetchChallengesError: i.Ay.fetchChallengesError,
-        })),
-        h = null != e && e.shouldFetch;
-    return (
-        (0, n.useEffect)(() => {
-            !(h && !t.current) ||
-                r ||
-                c ||
-                null != o ||
-                (0, s.Od)(function () {
-                    t.current = !0;
-                });
-        }, [r, c, h, o]),
-        { challengesForOrbWallet: l, hasFetchedChallenges: r, isFetchingChallenges: c, refetch: s.Od }
-    );
-}
-function c(e) {
-    let t = null == e || !1 !== e.enabled,
-        l = (0, n.useRef)(!1),
-        { hasUnreadUpdate: r, notificationType: c } = (0, a.cf)([i.Ay], () => ({
-            hasUnreadUpdate: i.Ay.hasUnreadUpdate,
-            notificationType: i.Ay.clientUnreadNotificationType,
-        }));
-    return (
-        (0, n.useEffect)(() => {
-            !t || l.current || i.Ay.hasFetchedChallenges || ((l.current = !0), (0, s.pu)());
-        }, [t]),
-        { hasUnreadUpdate: r, notificationType: c, ackUnread: s.eX }
-    );
-}
+l.d(
+    t,
+    {},
+    {
+        I: function (e) {
+            let t = null == e || !1 !== e.enabled,
+                l = (0, n.useRef)(!1),
+                { hasUnreadUpdate: r, notificationType: c } = (0, a.cf)([i.Ay], () => ({
+                    hasUnreadUpdate: i.Ay.hasUnreadUpdate,
+                    notificationType: i.Ay.clientUnreadNotificationType,
+                }));
+            return (
+                (0, n.useEffect)(() => {
+                    !t || l.current || i.Ay.hasFetchedChallenges || ((l.current = !0), (0, s.pu)());
+                }, [t]),
+                { hasUnreadUpdate: r, notificationType: c, ackUnread: s.eX }
+            );
+        },
+        z: function (e) {
+            let t = (0, n.useRef)(!1),
+                {
+                    challengesForOrbWallet: l,
+                    hasFetchedChallenges: r,
+                    isFetchingChallenges: c,
+                    fetchChallengesError: o,
+                } = (0, a.cf)([i.Ay], () => ({
+                    challengesForOrbWallet: i.Ay.challengesForOrbWallet,
+                    hasFetchedChallenges: i.Ay.hasFetchedChallenges,
+                    isFetchingChallenges: i.Ay.isFetchingChallenges,
+                    fetchChallengesError: i.Ay.fetchChallengesError,
+                })),
+                h = null != e && e.shouldFetch;
+            return (
+                (0, n.useEffect)(() => {
+                    !(h && !t.current) ||
+                        r ||
+                        c ||
+                        null != o ||
+                        (0, s.Od)(function () {
+                            t.current = !0;
+                        });
+                }, [r, c, h, o]),
+                { challengesForOrbWallet: l, hasFetchedChallenges: r, isFetchingChallenges: c, refetch: s.Od }
+            );
+        },
+    },
+);

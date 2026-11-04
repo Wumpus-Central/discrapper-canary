@@ -1,4 +1,3 @@
-t.d(n, { P: () => l });
 var i,
     l =
         (((i = {}).ACTIVITY = "ACTIVITY"),
@@ -6,3 +5,4 @@ var i,
         (i.EMOJI = "EMOJI"),
         (i.GIFTING = "GIFTING"),
         i);
+t.d(n, {}, { P: l });

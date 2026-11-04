@@ -1,0 +1,58 @@
+.host_KW3BaC {
+    display: inline-block;
+    font-kerning: none;
+    font-variant-ligatures: none;
+    height: 1lh;
+    line-height: inherit;
+    position: relative;
+    white-space: pre
+}
+
+.textLayer_KW3BaC {
+    display: block;
+    white-space: pre
+}
+
+.textLayer_KW3BaC.hidden_KW3BaC {
+    opacity: 0
+}
+
+.char_KW3BaC {
+    display: inline-block;
+    text-align: start;
+    transition: opacity 90ms linear
+}
+
+.char_KW3BaC.shifted_KW3BaC {
+    opacity: .55
+}
+
+.char_KW3BaC.scrambled_KW3BaC {
+    opacity: 0
+}
+
+.glyphLayer_KW3BaC {
+    color: var(--custom-ai-shimmer-glyph-color);
+    display: block;
+    font-family: AI Visual Identity Glyphs, monospace;
+    font-size: .76em;
+    inset-block-start: 50%;
+    inset-inline-start: 0;
+    line-height: 1;
+    pointer-events: none;
+    position: absolute;
+    transform: translateY(-50%);
+    white-space: pre
+}
+
+.glyphCell_KW3BaC {
+    display: inline-block;
+    text-align: center;
+    width: 1em
+}
+
+.reduce-motion .char_KW3BaC {
+    transition: none
+}
+
+/*# sourceMappingURL=8cf25692fd82e2f2.css.map*/

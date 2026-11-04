@@ -1,0 +1,16 @@
+.overrideSubtextContainer_WGkLoD {
+    height: 1lh;
+    position: relative;
+    width: 100%
+}
+
+.overrideSubtext_WGkLoD {
+    inset: 0;
+    min-width: 0;
+    overflow: hidden;
+    position: absolute;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+/*# sourceMappingURL=26deb1de1edcc761.css.map*/

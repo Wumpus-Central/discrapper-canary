@@ -1,47 +1,52 @@
-n.d(t, { I: () => l });
 var i = n(477900);
 n(582128);
 var r = n(7689),
-    a = n(432816),
+    a = n(116711),
     s = n(95477);
-function l(e) {
-    let {
-            query: t,
-            autoFocus: n,
-            onClear: l,
-            placeholder: o,
-            onKeyDown: d,
-            size: c = "md",
-            disabled: u = !1,
-            onChange: _,
-            onBlur: E,
-            onFocus: A,
-            autoComplete: h,
-            inputProps: f,
-            focusProps: I,
-            "aria-label": p,
-            ref: m,
-        } = e,
-        { i18n: T } = (0, a.G9)();
-    return (0, i.jsx)(s.k, {
-        role: "searchbox",
-        ...f,
-        onFocus: A,
-        onBlur: E,
-        value: t,
-        onChange: _,
-        onKeyDown: d,
-        placeholder: o ?? T.SEARCH,
-        disabled: u,
-        autoFocus: n,
-        autoComplete: h,
-        "aria-label": p ?? T.SEARCH,
-        inputRef: m,
-        leading: r.MagnifyingGlassIcon,
-        onClear: l,
-        clearable: null != l,
-        size: c,
-        fullWidth: !0,
-        focusProps: I,
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        I: function (e) {
+            let {
+                    query: t,
+                    autoFocus: n,
+                    onClear: l,
+                    placeholder: o,
+                    onKeyDown: d,
+                    size: c = "md",
+                    disabled: u = !1,
+                    onChange: _,
+                    onBlur: E,
+                    onFocus: A,
+                    autoComplete: h,
+                    inputProps: f,
+                    focusProps: I,
+                    "aria-label": p,
+                    ref: m,
+                } = e,
+                { i18n: T } = (0, a.G9)();
+            return (0, i.jsx)(s.k, {
+                role: "searchbox",
+                ...f,
+                onFocus: A,
+                onBlur: E,
+                value: t,
+                onChange: _,
+                onKeyDown: d,
+                placeholder: o ?? T.SEARCH,
+                disabled: u,
+                autoFocus: n,
+                autoComplete: h,
+                "aria-label": p ?? T.SEARCH,
+                inputRef: m,
+                leading: r.MagnifyingGlassIcon,
+                onClear: l,
+                clearable: null != l,
+                size: c,
+                fullWidth: !0,
+                focusProps: I,
+            });
+        },
+    },
+);

@@ -1,8 +1,8 @@
 e.exports = {
-    VA: "subtitle_f568b8",
-    hJ: "counter_f568b8",
-    qz: "nitroSweepText_f568b8",
-    cn: "nitroSweepWheel_f568b8",
-    fw: "nitroSweepActive_f568b8",
-    VN: "reducedMotion_f568b8",
+    VA: "subtitle_qdcC1y",
+    hJ: "counter_qdcC1y",
+    qz: "nitroSweepText_qdcC1y",
+    cn: "nitroSweepWheel_qdcC1y",
+    fw: "nitroSweepActive_qdcC1y",
+    VN: "reducedMotion_qdcC1y",
 };

@@ -1,19 +1,18 @@
-n.d(t, { A: () => y });
 var i = n(477900),
     l = n(582128),
-    a = n(17928),
+    a = n(855986),
     s = n(866665),
     r = n(939249),
     o = n(90804),
     d = n(734057),
     c = n(309010),
-    u = n(446243),
+    u = n(303227),
     h = n(538638),
     p = n(558076),
     m = n(544299),
     A = n(996752),
-    f = n(618922),
-    g = n(105292),
+    f = n(687782),
+    g = n(792996),
     x = n(781505);
 function C() {
     let e = l.useId();
@@ -53,40 +52,46 @@ function C() {
         ],
     });
 }
-function y(e) {
-    let { channelId: t, x: n, y, label: j, roomWidth: I, seat: N } = e,
-        v = (0, a.bG)([c.Ay], () => c.Ay.getVoiceChannelId() === t),
-        E = (0, a.bG)([p.A], () =>
-            p.A.getRoomUsers(t)
-                .values()
-                .some((e) => e.seat === N || (e.position?.x === n && e.position?.y === y)),
-        ),
-        b = (0, a.bG)([d.A], () => d.A.getChannel(t)?.guild_id),
-        S = l.useCallback(async () => {
-            null != b &&
-                (v
-                    ? (0, u.AQ)(b, t, { user_position: { x: n, y }, user_seat: N }).catch((e) =>
-                          (0, h.b)({ silent: !0 }),
-                      )
-                    : ((0, u.TJ)({ x: n, y }, N), (await (0, o.A)({ channelId: t })) || (0, u.Ys)()));
-        }, [v, b, t, n, y, N]),
-        T = (0, m.Sb)({
-            position: { x: n, y },
-            targetLabel: g.intl.formatToPlainString(f.default.NYm6Cb, { seatLabel: j }),
-        });
-    if (E || null == b) return null;
-    let { numericAvatarSize: _ } = (0, A.F)(I),
-        R = 1.2 * Math.max(_, 24);
-    return (0, i.jsx)(s.m, {
-        text: v || null != T ? null : g.intl.string(g.t["96ANUN"]),
-        children: (0, i.jsx)(r.D, {
-            role: "listitem",
-            "aria-label": j,
-            className: x.am,
-            style: { width: R, height: R, left: `calc(${n}% - ${R / 2}px)`, top: `calc(${y}% - ${R / 2}px)` },
-            onClick: S,
-            ...T,
-            children: (0, i.jsx)(C, {}),
-        }),
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { channelId: t, x: n, y, label: j, roomWidth: I, seat: N } = e,
+                v = (0, a.bG)([c.Ay], () => c.Ay.getVoiceChannelId() === t),
+                E = (0, a.bG)([p.A], () =>
+                    p.A.getRoomUsers(t)
+                        .values()
+                        .some((e) => e.seat === N || (e.position?.x === n && e.position?.y === y)),
+                ),
+                b = (0, a.bG)([d.A], () => d.A.getChannel(t)?.guild_id),
+                S = l.useCallback(async () => {
+                    null != b &&
+                        (v
+                            ? (0, u.AQ)(b, t, { user_position: { x: n, y }, user_seat: N }).catch((e) =>
+                                  (0, h.b)({ silent: !0 }),
+                              )
+                            : ((0, u.TJ)({ x: n, y }, N), (await (0, o.A)({ channelId: t })) || (0, u.Ys)()));
+                }, [v, b, t, n, y, N]),
+                _ = (0, m.Sb)({
+                    position: { x: n, y },
+                    targetLabel: g.intl.formatToPlainString(f.default.NYm6Cb, { seatLabel: j }),
+                });
+            if (E || null == b) return null;
+            let { numericAvatarSize: T } = (0, A.F)(I),
+                R = 1.2 * Math.max(T, 24);
+            return (0, i.jsx)(s.m, {
+                text: v || null != _ ? null : g.intl.string(g.t["96ANUN"]),
+                children: (0, i.jsx)(r.D, {
+                    role: "listitem",
+                    "aria-label": j,
+                    className: x.am,
+                    style: { width: R, height: R, left: `calc(${n}% - ${R / 2}px)`, top: `calc(${y}% - ${R / 2}px)` },
+                    onClick: S,
+                    ..._,
+                    children: (0, i.jsx)(C, {}),
+                }),
+            });
+        },
+    },
+);

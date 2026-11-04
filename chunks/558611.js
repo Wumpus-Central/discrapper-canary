@@ -1,7 +1,1 @@
-a.exports = {
-    kL: "container__2abba",
-    ZS: "imageContainer__2abba",
-    Sl: "image__2abba",
-    h3: "wiggling__2abba",
-    wx: "header__2abba",
-};
+e.exports = { kL: "container_VKW06O", ZS: "imageContainer_VKW06O", Sl: "image_VKW06O", wx: "header_VKW06O" };

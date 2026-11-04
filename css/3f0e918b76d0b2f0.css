@@ -1,0 +1,41 @@
+.modal__UjoAR {
+    font-size: 13px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 800px;
+    min-height: 0
+}
+
+.modalHeader__UjoAR {
+    display: flex;
+    justify-content: space-between
+}
+
+.header__UjoAR,
+.linkedLobbyNotice__UjoAR {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.linkedLobbyNotice__UjoAR {
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    margin-top: 16px;
+    padding: 8px 12px
+}
+
+.linkedLobbyNoticeSeparator__UjoAR {
+    margin: 0 4px
+}
+
+.linkedLobbyApplicationIcon__UjoAR {
+    height: 16px;
+    width: 16px
+}
+
+.channelIcon__UjoAR {
+    color: var(--interactive-text-default)
+}
+
+/*# sourceMappingURL=3f0e918b76d0b2f0.css.map*/

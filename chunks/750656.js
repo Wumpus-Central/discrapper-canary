@@ -1,17 +1,3 @@
-n.d(t, {
-    LP: () => h,
-    NU: () => f,
-    PS: () => A,
-    Wf: () => u,
-    _k: () => a,
-    fY: () => d,
-    gz: () => s,
-    ii: () => I,
-    kp: () => E,
-    lU: () => _,
-    rA: () => l,
-    re: () => o,
-});
 var i = n(508425),
     r = n(559949);
 let a = [r.x.PLAYPEN_SANS, r.x.ORBITRON, r.x.NEW_ROCKER, r.x.KALAM],
@@ -46,24 +32,35 @@ let a = [r.x.PLAYPEN_SANS, r.x.ORBITRON, r.x.NEW_ROCKER, r.x.KALAM],
         [0xd77bff, 0xb56bff, 0xe45ce5, 9137407],
         [0xd83a5f, 0xc94bcb, 9133311, 0xb06cff],
     ],
-    E = 0.78,
-    A = 0.72,
-    h = 38,
-    f = [
+    E = [
         [0xfe9242, 3534206, 0xffe047, 0xff4cd2, 5793266],
         [8316888, 8178687, 8359167, 0xb56dff, 0xf38ad8],
         [7997702, 0xc81e12, 0xf45a18, 0xff9500, 0xffd447],
     ];
-function I(e) {
-    switch (e) {
-        case i.z.GUMMY:
-            return _;
-        case i.z.PRISM:
-            return f;
-        case i.z.GRADIENT:
-        case i.z.GLOW:
-            return u.map((e) => e.colors);
-        default:
-            return c.map((e) => [e]);
-    }
-}
+n.d(
+    t,
+    {},
+    {
+        NU: E,
+        Wf: u,
+        _k: a,
+        fY: d,
+        gz: s,
+        ii: function (e) {
+            switch (e) {
+                case i.z.GUMMY:
+                    return _;
+                case i.z.PRISM:
+                    return E;
+                case i.z.GRADIENT:
+                case i.z.GLOW:
+                    return u.map((e) => e.colors);
+                default:
+                    return c.map((e) => [e]);
+            }
+        },
+        lU: _,
+        rA: l,
+        re: o,
+    },
+);

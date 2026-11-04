@@ -1,6 +1,5 @@
-n.d(t, { Ay: () => C, C3: () => S, sw: () => g, tM: () => T, wW: () => f, xc: () => m });
 var i = n(196765),
-    r = n(941426),
+    r = n(611599),
     a = n(554146),
     s = n(506774),
     l = n(97260),
@@ -19,19 +18,7 @@ function I() {
 function p(e) {
     (f.setState((t) => ({ ...t, ...e }), !0), s.w.set(A, f.getState()));
 }
-function m() {
-    p({ isNewOverlayUser: void 0 });
-}
-function T() {
-    p({ isUsingDefaultOverlayKeybind: void 0 });
-}
-function g(e) {
-    p({ overrideIsNewOverlayUser: e });
-}
-function S(e) {
-    p({ overrideIsUsingDefaultOverlayKeybind: e });
-}
-class N extends o.A {
+class m extends o.A {
     _hasInitialized = !1;
     _isProcessing = !1;
     initializeKeybind = () => {
@@ -131,4 +118,24 @@ class N extends o.A {
         OVERLAY_READY: this.handleOverlayReady,
     };
 }
-let C = new N();
+let T = new m();
+n.d(
+    t,
+    {},
+    {
+        Ay: T,
+        C3: function (e) {
+            p({ overrideIsUsingDefaultOverlayKeybind: e });
+        },
+        sw: function (e) {
+            p({ overrideIsNewOverlayUser: e });
+        },
+        tM: function () {
+            p({ isUsingDefaultOverlayKeybind: void 0 });
+        },
+        wW: f,
+        xc: function () {
+            p({ isNewOverlayUser: void 0 });
+        },
+    },
+);

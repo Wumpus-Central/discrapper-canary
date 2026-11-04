@@ -1,22 +1,21 @@
-e.d(i, { default: () => B });
 var n = e(477900),
     s = e(582128),
     l = e(189213),
     u = e(77468),
-    a = e(968309),
-    r = e(344987),
-    o = e(581298),
+    a = e(80320),
+    r = e(528689),
+    o = e(122088),
     c = e(419954),
-    d = e(107384),
+    d = e(374193),
     p = e(641216),
     _ = e(972737),
     f = e(606072),
     g = e(77915),
     m = e(652215),
     y = e(272984),
-    T = e(880098),
-    h = e(105292),
-    b = e(450216),
+    T = e(135294),
+    h = e(792996),
+    b = e(966756),
     S = e(205069);
 function v() {
     (0, _.O)({
@@ -57,23 +56,35 @@ let w = (0, c.v_)("guild_space_popular_music_spotify_connected_setting", {
         },
         useDisabled: () => !(0, g.B6)(),
     });
-function B(t) {
-    let { guildId: i, widgetName: e, transitionState: u, onClose: a } = t,
-        d = s.useMemo(
-            () =>
-                (0, c.zZ)("guild_space_popular_music_contribution_modal", {
-                    initialize: f.zE,
-                    buildLayout: () => [w, x, A, (0, f.F6)(i, { useTitle: () => h.intl.string(h.t.FoqwvH) }), p._],
-                }),
-            [i],
-        ),
-        { node: _ } = (0, o.Ay)(d, "");
-    return (0, n.jsx)(l.a, {
-        transitionState: u,
-        onClose: a,
-        title: h.intl.string(b.default.WhdCGP),
-        subtitle: h.intl.formatToPlainString(T.default.BeCUHZ, { widgetName: e }),
-        actions: [],
-        children: (0, n.jsx)("div", { className: S.W, children: (0, n.jsx)(r.A, { node: _ }) }),
-    });
-}
+e.d(
+    i,
+    {},
+    {
+        default: function (t) {
+            let { guildId: i, widgetName: e, transitionState: u, onClose: a } = t,
+                d = s.useMemo(
+                    () =>
+                        (0, c.zZ)("guild_space_popular_music_contribution_modal", {
+                            initialize: f.zE,
+                            buildLayout: () => [
+                                w,
+                                x,
+                                A,
+                                (0, f.F6)(i, { useTitle: () => h.intl.string(h.t.FoqwvH) }),
+                                p._,
+                            ],
+                        }),
+                    [i],
+                ),
+                { node: _ } = (0, o.Ay)(d, "");
+            return (0, n.jsx)(l.a, {
+                transitionState: u,
+                onClose: a,
+                title: h.intl.string(b.default.WhdCGP),
+                subtitle: h.intl.formatToPlainString(T.default.BeCUHZ, { widgetName: e }),
+                actions: [],
+                children: (0, n.jsx)("div", { className: S.W, children: (0, n.jsx)(r.A, { node: _ }) }),
+            });
+        },
+    },
+);

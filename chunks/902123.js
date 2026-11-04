@@ -1,10 +1,10 @@
-_.exports = {
-    uW: "section__07d82",
-    X$: "sectionImage__07d82",
-    f5: "sectionContent__07d82",
-    p_: "headerSpacing__07d82",
-    h8: "topSpacing__07d82",
-    Kf: "inputContainer__07d82",
-    yF: "divider__07d82",
-    rJ: "secret__07d82",
+e.exports = {
+    uW: "section_uV72M-",
+    X$: "sectionImage_uV72M-",
+    f5: "sectionContent_uV72M-",
+    p_: "headerSpacing_uV72M-",
+    h8: "topSpacing_uV72M-",
+    Kf: "inputContainer_uV72M-",
+    yF: "divider_uV72M-",
+    rJ: "secret_uV72M-",
 };

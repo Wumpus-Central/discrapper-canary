@@ -1,3 +1,237 @@
-r.exports = JSON.parse(
-    '{"H6Ny8N":["\u8FDB\u884C\u4E2D\u7684\u6311\u6218"],"k6h2J3":["\u6311\u6218\u5DF2\u5B8C\u6210"],"WmfVjs":["\u9886\u53D6"],"h2qWpS":["\u83B7\u5F97 ",[8,"orbIconHook",["orbIcon"]],[1,"orbAmount"]," Orb"],"B8Fxns":["\u83B7\u5F97 ",[8,"orbIconHook",["orbIcon"]]," ",[1,"orbAmount"]," Orb"],"p9PPYD":["\u5F00\u901A Nitro\uFF0C\u5C3D\u4EAB ",[1,"multiplier"]," \u500D Orb \u52A0\u6210"],"OHLdjq":[[1,"multiplier"],"x"],"04j3XV":[[2,"days"]," \u5929\u540E\u53EF\u83B7\u5F97 ",[1,"orbAmount"]," Orb"],"+kdkTi":["Orb\uFF0C\u5C06\u4E8E ",[1,"days"]," \u540E\u83B7\u5F97"],"B5tZXw":["\u7D2F\u8BA1\u5151\u6362 ",[2,"orbAmount"]," Orb"],"XW2CuY":["\u5168\u65B0\u6311\u6218\u5373\u5C06\u4E0A\u7EBF\uFF0C\u60A8\u7684 Orb \u5DF2\u968F\u65F6\u5F85\u547D\u3002"],"xOP5OP":["\u60A8\u5DF2\u5B8C\u6210\u5168\u90E8\u6311\u6218"],"FYb5rH":["\u9886\u53D6\u65F6\u51FA\u9519\u4E86\uFF0C\u8BF7\u91CD\u8BD5\u3002"],"ggLzeg":["\u52A0\u8F7D\u6311\u6218\u65F6\u51FA\u9519\u4E86\u3002",[8,"underlineHook",["\u91CD\u8BD5"]]],"XKj5L9":["Orb \u94B1\u5305"],"pJz0/A":["\u8BA2\u9605 Nitro\uFF0C\u8D5A\u53D6\u66F4\u591A Orb"],"JZycSO":["\u8BA2\u9605 Nitro\uFF0C\u89E3\u9501\u66F4\u591A Orb"],"FkfrRH":["Nitro Orb"],"U9UQJE":["\u83B7\u53D6 Nitro"],"Ba/7wO":["\u8BA2\u9605\u5373\u53EF\u6BCF\u6708\u9886\u53D6 Orb\uFF0C\u50A8\u5907\u8D44\u6E90\uFF0C\u4EAB\u53D7 ",[1,"multiplier"]," \u500D\u5956\u52B1\u3002"],"ZqCAos":["\u89E3\u9501\u66F4\u591A Orb"],"qa1xyr":["\u5546\u5E97"],"7raRgL":["\u5151\u6362 Orb"],"HACucK":["\u60A8\u7684 Orb \u5DF2\u8DB3\u591F\u5728\u5546\u5E97\u5151\u6362\u5546\u54C1\u3002"],"v8QrJf":["Orb \u5DF2\u5C31\u4F4D\uFF0C\u597D\u793C\u968F\u5FC3\u5151"],"1JZfaU":["\u5F00\u901A Nitro\uFF0C\u89E3\u9501 ",[1,"multiplier"]," \u500D Orb \u52A0\u6210"],"WOMrJf":["\u89E3\u9501 ",[1,"multiplier"]," \u500D"],"wE4a/r":["\u73B0\u5728\uFF0C\u60A8\u7684\u80DC\u5229\u5C06\u5347\u7EA7\u4E3A\u201C\u5927\u4E58\u80DC\u5229\u201D\uFF0COrb \u5956\u52B1\u5C06\u83B7\u5F97 ",[2,"bonusOrbMultiplier"]," \u500D\u52A0\u6210\u3002"]}',
-);
+(s.d(t, { A: () => x }), s(321073));
+var n,
+    i = s(477900),
+    r = s(582128),
+    o = s(695497),
+    l = s.n(o),
+    d = s(143236),
+    a = s(723702),
+    h = s(253400),
+    u = s(350535),
+    c = s(650583);
+let p = [];
+function m(e, t, s) {
+    let n = +!(0, a.uF)();
+    (e !== c.zY.MOUSE_BUTTON || s !== n) && p.forEach((n) => n._handleEvent(e, t, s));
+}
+class R extends d.EventEmitter {
+    combo = [];
+    constructor() {
+        (super(), p.push(this), 1 === p.length && h.Ay.setOnInputEventCallback(m));
+    }
+    destroy() {
+        (this.removeAllListeners(),
+            0 === (p = p.filter((e) => e !== this)).length && h.Ay.setOnInputEventCallback(null));
+    }
+    toString() {
+        return (0, u.dI)(this.combo);
+    }
+    _handleEvent(e, t, s) {
+        0 === t
+            ? (this.combo = this.combo.filter((t) => {
+                  let [n, i] = t;
+                  return n !== e || i !== s;
+              }))
+            : (this.combo.push([e, s, (0, u._$)()]), this.emit("change", this));
+    }
+}
+var g = s(503698),
+    C = s.n(g),
+    E = s(507392),
+    f = s.n(E),
+    D = s(435558),
+    _ = s.n(D),
+    v = s(559106),
+    b = s(821609),
+    N = s(235986),
+    O = s(792996),
+    I = s(317070),
+    y = (((n = {}).DEFAULT = "DEFAULT"), (n.RECORDING = "RECORDING"), n);
+let A = { DEFAULT: I.__invalid_default, RECORDING: I.oz };
+class U extends r.PureComponent {
+    _inputId = _().uniqueId("key-recorder-");
+    _unregisterNativeRecorder = null;
+    _mousedownMode = null;
+    _inputRef = r.createRef();
+    _containerRef = r.createRef();
+    componentWillUnmount() {
+        null != this._unregisterNativeRecorder && this._unregisterNativeRecorder();
+    }
+    componentDidUpdate(e) {
+        let { mode: t } = this.props,
+            { mode: s } = e;
+        if (s === t) return;
+        let { _inputRef: n } = this;
+        if (null == n.current) return;
+        let { activeElement: i } = document;
+        ("DEFAULT" === t && n.current === i && n.current.blur(),
+            "RECORDING" === t && n.current !== i && n.current.focus());
+    }
+    setInputRef = (e) => {
+        let { registerNativeRecorder: t, onChange: s } = this.props;
+        if (((this._inputRef.current = e), this._unregisterNativeRecorder?.(), null != e))
+            if (null != t && null != s)
+                try {
+                    this._unregisterNativeRecorder = t(e.id, s);
+                } catch (e) {
+                    this._unregisterNativeRecorder = null;
+                }
+            else null != s && (new (f())(e).handleKey = s);
+    };
+    handleClick = (e) => {
+        (e.stopPropagation(), e.preventDefault());
+        let { disabled: t, onClick: s, disableOnClickWhileRecording: n } = this.props;
+        !0 === t || (n && "RECORDING" === this._mousedownMode) || s();
+    };
+    handleMouseDown = () => {
+        this._mousedownMode = this.props.mode;
+    };
+    handleKeyDown = (e) => {
+        "RECORDING" === this.props.mode &&
+            e.key === c.dh.ESCAPE &&
+            (e.preventDefault(), e.stopPropagation(), this.props.onClick());
+    };
+    render() {
+        let e,
+            { mode: t, value: s, disabled: n, trailingActions: r } = this.props,
+            o = (0, u.dI)(s, !0);
+        return (
+            (e =
+                "RECORDING" === t
+                    ? O.intl.string(O.t.bmOri0)
+                    : 0 === s.length
+                      ? O.intl.string(O.t.co3wt9)
+                      : O.intl.string(O.t.idFMvH)),
+            (0, i.jsx)(v.vN, {
+                focusTarget: this._inputRef,
+                ringTarget: this._containerRef,
+                children: (0, i.jsx)("div", {
+                    onClick: this.handleClick,
+                    onMouseDown: this.handleMouseDown,
+                    ref: this._containerRef,
+                    className: C()(I.Qm, A[t], { [I.Qz]: n }),
+                    children: (0, i.jsxs)(N.A, {
+                        className: I.Pp,
+                        children: [
+                            (0, i.jsx)(N.A.Child, {
+                                className: I.bZ,
+                                children: (0, i.jsx)("input", {
+                                    id: this._inputId,
+                                    placeholder: O.intl.string(O.t.nWRdnl),
+                                    type: "text",
+                                    ref: this.setInputRef,
+                                    onKeyDown: this.handleKeyDown,
+                                    readOnly: !0,
+                                    value: o,
+                                    disabled: "RECORDING" !== this.props.mode || n,
+                                }),
+                            }),
+                            null != r && !1 !== r
+                                ? (0, i.jsx)("div", {
+                                      className: I.Sq,
+                                      onClick: (e) => e.stopPropagation(),
+                                      children: r,
+                                  })
+                                : (0, i.jsx)("div", {
+                                      className: I.UD,
+                                      children: (0, i.jsx)(b.$, {
+                                          size: "sm",
+                                          variant: "RECORDING" === this.props.mode ? "critical-secondary" : "secondary",
+                                          text: e,
+                                          onClick: (e) => {
+                                              (e.stopPropagation(), e.preventDefault(), this.handleClick(e));
+                                          },
+                                          disabled: n,
+                                      }),
+                                  }),
+                        ],
+                    }),
+                }),
+            })
+        );
+    }
+}
+let k = a.isPlatformEmbedded && null != h.Ay.getDiscordUtils().inputCaptureRegisterElement;
+class w extends r.PureComponent {
+    gs = null;
+    _mounted = !1;
+    constructor(e) {
+        super(e);
+        let { defaultValue: t } = e;
+        this.state = { codes: t, mode: y.DEFAULT };
+    }
+    componentDidMount() {
+        this._mounted = !0;
+    }
+    componentWillUnmount() {
+        ((this._mounted = !1), this.cleanUp());
+    }
+    componentDidUpdate(e) {
+        (this.props.defaultValue !== e.defaultValue && this.setState({ codes: this.props.defaultValue }),
+            !0 === this.props.disabled && !0 !== e.disabled && this.state.mode === y.RECORDING && this.recordEnd());
+    }
+    cleanUp() {
+        a.isPlatformEmbedded && null != this.gs && (this.gs.destroy(), (this.gs = null));
+    }
+    handleComboChange(e) {
+        let { mode: t } = this.state,
+            { disabled: s, onChange: n } = this.props;
+        if (!0 !== s && t === y.RECORDING) {
+            if (e.some((e) => "esc" === (0, u.dI)([e]).toLowerCase())) return void this.recordEnd();
+            (null != n && n(e), this.setState({ codes: e }));
+        }
+    }
+    recordStart = () => {
+        !0 !== this.props.disabled &&
+            (a.isPlatformEmbedded && !k && ((this.gs = new R()), this.gs.on("change", this.handleGSChange)),
+            this.setState({ mode: y.RECORDING }));
+    };
+    recordEnd = () => {
+        (this.cleanUp(), this.setState({ mode: y.DEFAULT }));
+    };
+    toggleRecordMode = () => {
+        this.state.mode === y.DEFAULT ? this.recordStart() : this.recordEnd();
+    };
+    handleComboKeys = (e, t, s) => {
+        if ((s.preventDefault(), "keydown" === s.type)) {
+            let e = t.map((e) => [c.zY.KEYBOARD_KEY, l()(e), c.g$.BROWSER]),
+                { keyCode: n } = s;
+            (null ==
+                e.find((e) => {
+                    let [, t] = e;
+                    return n === t;
+                }) && e.push([c.zY.KEYBOARD_KEY, n, c.g$.BROWSER]),
+                this.handleComboChange(e));
+        }
+    };
+    handleGSChange = (e) => {
+        if (!1 === this._mounted) return;
+        let t = [...e.combo];
+        this.handleComboChange(t);
+    };
+    handleNativeChange = (e) => {
+        (e.length > 0 && this.handleComboChange(e), this.recordEnd());
+    };
+    render() {
+        let e,
+            t,
+            { codes: s, mode: n } = this.state,
+            { disabled: r, trailingActions: o } = this.props;
+        return (
+            k
+                ? ((t = h.Ay.getDiscordUtils().inputCaptureRegisterElement), (e = this.handleNativeChange))
+                : a.isPlatformEmbedded || (e = this.handleComboKeys),
+            (0, i.jsx)(U, {
+                disabled: r,
+                value: s,
+                mode: n,
+                onClick: this.toggleRecordMode,
+                onChange: e,
+                registerNativeRecorder: t,
+                disableOnClickWhileRecording: k,
+                trailingActions: o,
+            })
+        );
+    }
+}
+let x = w;

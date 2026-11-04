@@ -1,13 +1,9 @@
-n.d(t, { Er: () => s, Mn: () => l });
 var r = n(873326),
     i = n(83220),
     o = n(875565),
     a = n(296438);
 let s = "__sentry_xhr_v3__";
-function l(e) {
-    ((0, r.s5)("xhr", e), (0, r.AS)("xhr", c));
-}
-function c() {
+function l() {
     if (!a.j.XMLHttpRequest) return;
     let e = XMLHttpRequest.prototype;
     ((e.open = new Proxy(e.open, {
@@ -63,3 +59,13 @@ function c() {
             },
         })));
 }
+n.d(
+    t,
+    {},
+    {
+        Er: s,
+        Mn: function (e) {
+            ((0, r.s5)("xhr", e), (0, r.AS)("xhr", l));
+        },
+    },
+);

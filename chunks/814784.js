@@ -1,19 +1,19 @@
-a.d(s, { CrossDocumentDataMatch: () => r });
-var c = a(768611),
-    d = a(200503),
-    e = a(628926),
-    i = a(538553),
-    n = a(918676),
-    u = a(136966),
-    h = ({ onFinish: t }) => {
-        let [s, a] = (0, d.u)(() => (0, u.w)());
+s.r(a);
+var c = s(768611),
+    e = s(200503),
+    r = s(628926),
+    d = s(538553),
+    n = s(918676),
+    i = s(136966),
+    u = ({ onFinish: t }) => {
+        let [a, s] = (0, e.u)(() => (0, i.createCrossDocumentDataMatchManager)());
         return (
             (0, c._)(() => {
-                a.load();
-            }, [a]),
-            (0, d.c)({ status: "finished" === s.status ? "finished" : "loading", onFinish: t }),
-            (0, c.v)(i.t, { fullScreen: !0 })
+                s.load();
+            }, [s]),
+            (0, e.c)({ status: "finished" === a.status ? "finished" : "loading", onFinish: t }),
+            (0, c.v)(d.t, { fullScreen: !0 })
         );
     },
-    r = ({ onFinish: t }) => (0, c.v)(e.t, { children: (0, c.v)(h, { onFinish: t }) });
-(0, n.t)(r, "incode-cross-document-data-match");
+    h = ({ onFinish: t }) => (0, c.v)(r.t, { children: (0, c.v)(u, { onFinish: t }) });
+((0, n.t)(h, "incode-cross-document-data-match"), s.d(a, {}, { CrossDocumentDataMatch: h }));

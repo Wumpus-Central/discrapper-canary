@@ -1,4 +1,3 @@
-t.d(_, { m: () => e });
 var d,
     e =
         (((d = {}).WIDGET_TOP = "widget_top"),
@@ -7,3 +6,4 @@ var d,
         (d.MINI_PROFILE = "mini_profile"),
         (d.ACTIVITY_ACCESSORY = "activity_accessory"),
         d);
+t.d(_, {}, { m: e });

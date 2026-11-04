@@ -1,0 +1,92 @@
+.icon_O0J7OR {
+    align-items: center;
+    color: var(--text-default);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    margin-top: 32px
+}
+
+.guidelines_O0J7OR {
+    margin: 8px 0
+}
+
+.divider_O0J7OR {
+    border: 1px solid var(--border-subtle);
+    margin: 24px 0
+}
+
+.previewSection_O0J7OR {
+    margin-bottom: 32px
+}
+
+.channelsWrapper_O0J7OR,
+.rolesWrapper_O0J7OR {
+    background-color: var(--background-base-lower);
+    border-radius: 8px
+}
+
+.protip_O0J7OR {
+    margin-top: 8px
+}
+
+.protipText_O0J7OR {
+    color: var(--text-feedback-positive);
+    font-weight: var(--font-weight-semibold);
+    text-transform: none
+}
+
+.sectionHeader_O0J7OR {
+    color: var(--text-strong);
+    font-size: 20px;
+    padding-bottom: 8px;
+    text-align: start
+}
+
+.channelsWrapper_O0J7OR {
+    padding: 16px
+}
+
+.channel_O0J7OR {
+    align-items: center;
+    color: var(--channels-default);
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    height: 30px;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.category_O0J7OR {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    margin-inline-start: -13px;
+    text-transform: none
+}
+
+.category_O0J7OR .channelIcon_O0J7OR {
+    height: 14px;
+    margin-inline-end: 1px;
+    width: 14px
+}
+
+.channelIcon_O0J7OR {
+    flex-shrink: 0;
+    margin-inline-end: 8px;
+    width: 20px
+}
+
+.channelText_O0J7OR {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.rolesWrapper_O0J7OR {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px
+}
+
+/*# sourceMappingURL=6c2840bd157434a2.css.map*/

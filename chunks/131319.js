@@ -1,7 +1,7 @@
-n.d(t, { A: () => l });
-var i = n(17928),
+var i = n(855986),
     r = n(73153);
-let a = n(731854).PR;
+n(731854);
+let a = 64e3;
 class s extends i.Ay.Store {
     static displayName = "BitRateStore";
     get bitrate() {
@@ -13,3 +13,4 @@ let l = new s(r.h, {
         a = e.bitrate;
     },
 });
+n.d(t, {}, { A: l });

@@ -1,1 +1,1 @@
-e.exports = { yf: "bulletItem__82995", mT: "bulletImage__82995" };
+e.exports = { yf: "bulletItem_T5FGY3", mT: "bulletImage_T5FGY3" };

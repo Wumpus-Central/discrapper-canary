@@ -1,34 +1,39 @@
-n.d(t, { F: () => a });
 var l = n(477900);
 n(582128);
-var i = n(661531),
+var i = n(646514),
     r = n(996682),
     s = n(27989);
-function a(e) {
-    let {
-            size: t = "md",
-            width: n,
-            height: a,
-            color: o = i.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: u = "",
-            ...c
-        } = e,
-        d = (0, s.J)(t),
-        h = d?.width ?? n,
-        m = d?.height ?? a;
-    return (0, l.jsx)("svg", {
-        ...(0, r.A)(c),
-        xmlns: "http://www.w3.org/2000/svg",
-        width: h,
-        height: m,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        children: (0, l.jsx)("path", {
-            fill: "string" == typeof o ? o : o.css,
-            fillRule: "evenodd",
-            d: "M19.12 2a.5.5 0 0 1 .43.76L8.22 21.64a.75.75 0 0 1-.64.36h-2.7a.5.5 0 0 1-.43-.76L15.78 2.36a.75.75 0 0 1 .64-.36h2.7Z",
-            clipRule: "evenodd",
-            className: u,
-        }),
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        F: function (e) {
+            let {
+                    size: t = "md",
+                    width: n,
+                    height: a,
+                    color: o = i.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: u = "",
+                    ...c
+                } = e,
+                d = (0, s.J)(t),
+                h = d?.width ?? n,
+                m = d?.height ?? a;
+            return (0, l.jsx)("svg", {
+                ...(0, r.A)(c),
+                xmlns: "http://www.w3.org/2000/svg",
+                width: h,
+                height: m,
+                fill: "none",
+                viewBox: "0 0 24 24",
+                children: (0, l.jsx)("path", {
+                    fill: "string" == typeof o ? o : o.css,
+                    fillRule: "evenodd",
+                    d: "M19.12 2a.5.5 0 0 1 .43.76L8.22 21.64a.75.75 0 0 1-.64.36h-2.7a.5.5 0 0 1-.43-.76L15.78 2.36a.75.75 0 0 1 .64-.36h2.7Z",
+                    clipRule: "evenodd",
+                    className: u,
+                }),
+            });
+        },
+    },
+);

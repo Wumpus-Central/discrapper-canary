@@ -1,5 +1,4 @@
-n.d(t, { A: () => d });
-var i = n(17928),
+var i = n(855986),
     l = n(73153),
     r = n(652215);
 let s = {};
@@ -94,3 +93,4 @@ let d = new u(l.h, {
         a(e.lobbyId).lossRate = e.lossRate;
     },
 });
+n.d(t, {}, { A: d });

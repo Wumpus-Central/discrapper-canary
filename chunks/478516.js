@@ -1,1 +1,1 @@
-i.exports = { jx: "modalSection__24ff5", yF: "divider__24ff5", gt: "sectionBody__24ff5" };
+o.exports = { jx: "modalSection_XAorGN", yF: "divider_XAorGN", gt: "sectionBody_XAorGN" };

@@ -1,7 +1,7 @@
-(l.d(t, { A: () => w }), l(321073), l(667532));
+(l(321073), l(667532));
 var r = l(811315),
     n = l.n(r),
-    u = l(17928),
+    u = l(855986),
     a = l(73153),
     s = l(450827),
     i = l(734057),
@@ -10,14 +10,14 @@ var r = l(811315),
     E = l(309010),
     L = l(351906),
     f = l(287809),
-    g = l(768038),
+    g = l(997625),
     h = l(695184),
     d = l(427262),
     R = l(822382),
     T = l(801146),
     I = l(902008),
     _ = l(5990),
-    A = l(304578),
+    A = l(224467),
     F = l(652215),
     p = l(926140);
 let N = null,
@@ -143,55 +143,51 @@ class P extends u.Ay.Store {
     }
 }
 let H = new P(a.h, {
-        SEARCH_AUTOCOMPLETE_INITIALIZE: function (e) {
-            let { searchContext: t } = e;
-            (v(t), q(t));
-        },
-        SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function (e) {
-            let t,
-                { searchContext: l, tokens: r, cursorScope: n } = e;
-            v(l);
-            let u = (0, R.lX)(r),
-                a = (0, R.Gk)(n, r),
-                s = (0, R.bS)(l),
-                i = W.get(s),
-                o = !0;
-            if (null != i && u === i.query && (null == i.mode || i.mode.filter === a.filter))
-                ((t = i.autocompletes), (o = !1));
-            else if (C(a)) {
-                let e = b(l),
-                    n = a.token,
-                    u = n?.getFullMatch()?.trim();
-                if (null != u && u.length > 0) {
-                    let r = (0, R.mt)(l);
-                    (null != r && h.A.requestMembers(r, u, 10),
-                        e.context.setQuery({
-                            query: u,
-                            filters: { guild: r ?? void 0 },
-                            boosters: (0, g.X3)(p.rD.USER),
-                        }),
-                        (t = i?.autocompletes ?? []),
-                        (o = !1));
-                } else (e.context.clearQuery(), (t = D(l, a, r)));
-            } else {
-                let e = k.get(s);
-                (null != e && (e.context.clearQuery(), (e.results = [])), (t = D(l, a, r)));
-            }
-            let c = m({ searchContext: l, query: u, mode: a, tokens: r, cursorScope: n, autocompletes: t });
-            return (W.set(s, c), o);
-        },
-        SEARCH_QUERY_TEXT_CLEAR: function (e) {
-            let { id: t } = e,
-                l = k.get(t);
-            (null != l && (l.context.destroy(), (l.results = []), k.delete(t)), W.delete(t), (N = null));
-        },
-        CHANNEL_CREATE: $,
-        CHANNEL_DELETE: $,
-        STREAMER_MODE_UPDATE: function () {
-            return null != N && q(N);
-        },
-        CHANNEL_SELECT: function () {
-            return null != N && q(N);
-        },
-    }),
-    w = H;
+    SEARCH_AUTOCOMPLETE_INITIALIZE: function (e) {
+        let { searchContext: t } = e;
+        (v(t), q(t));
+    },
+    SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function (e) {
+        let t,
+            { searchContext: l, tokens: r, cursorScope: n } = e;
+        v(l);
+        let u = (0, R.lX)(r),
+            a = (0, R.Gk)(n, r),
+            s = (0, R.bS)(l),
+            i = W.get(s),
+            o = !0;
+        if (null != i && u === i.query && (null == i.mode || i.mode.filter === a.filter))
+            ((t = i.autocompletes), (o = !1));
+        else if (C(a)) {
+            let e = b(l),
+                n = a.token,
+                u = n?.getFullMatch()?.trim();
+            if (null != u && u.length > 0) {
+                let r = (0, R.mt)(l);
+                (null != r && h.A.requestMembers(r, u, 10),
+                    e.context.setQuery({ query: u, filters: { guild: r ?? void 0 }, boosters: (0, g.X3)(p.rD.USER) }),
+                    (t = i?.autocompletes ?? []),
+                    (o = !1));
+            } else (e.context.clearQuery(), (t = D(l, a, r)));
+        } else {
+            let e = k.get(s);
+            (null != e && (e.context.clearQuery(), (e.results = [])), (t = D(l, a, r)));
+        }
+        let c = m({ searchContext: l, query: u, mode: a, tokens: r, cursorScope: n, autocompletes: t });
+        return (W.set(s, c), o);
+    },
+    SEARCH_QUERY_TEXT_CLEAR: function (e) {
+        let { id: t } = e,
+            l = k.get(t);
+        (null != l && (l.context.destroy(), (l.results = []), k.delete(t)), W.delete(t), (N = null));
+    },
+    CHANNEL_CREATE: $,
+    CHANNEL_DELETE: $,
+    STREAMER_MODE_UPDATE: function () {
+        return null != N && q(N);
+    },
+    CHANNEL_SELECT: function () {
+        return null != N && q(N);
+    },
+});
+l.d(t, {}, { A: H });

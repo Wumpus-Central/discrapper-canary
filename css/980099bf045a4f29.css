@@ -1,0 +1,34 @@
+.container_CHR0Z4 {
+    position: relative
+}
+
+.cardContainer_CHR0Z4 {
+    margin-top: 8px;
+    position: absolute;
+    z-index: 1000
+}
+
+.alignLeft_CHR0Z4 {
+    inset-inline-start: 0
+}
+
+.alignRight_CHR0Z4 {
+    inset-inline-end: 0
+}
+
+.coachmarkContainer_CHR0Z4 {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.hidden_CHR0Z4 {
+    visibility: hidden
+}
+
+.visible_CHR0Z4 {
+    visibility: visible
+}
+
+/*# sourceMappingURL=980099bf045a4f29.css.map*/

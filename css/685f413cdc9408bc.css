@@ -1,0 +1,32 @@
+.labelValueRow_PsMJfq {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.paymentElementStoryContainer_ViRNcX {
+    display: flex;
+    flex-direction: row;
+    gap: 12px
+}
+
+.paymentElementStepModalBody_ViRNcX {
+    background-color: var(--modal-background);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    max-width: 480px;
+    min-height: 750px;
+    padding: var(--space-24);
+    width: 480px
+}
+
+.fullLengthPaymentElementStepModalBody_ViRNcX {
+    min-height: 900px
+}
+
+.paymentElementContainer_ViRNcX {
+    margin: 8px
+}
+
+/*# sourceMappingURL=685f413cdc9408bc.css.map*/

@@ -1,8 +1,8 @@
-.actions__46671 {
+.actions__M7qrc {
     min-width: calc(100% + var(--space-8))
 }
 
-.destination__46671 {
+.destination__M7qrc {
     align-items: center;
     border-radius: var(--radius-sm);
     cursor: pointer;
@@ -17,43 +17,43 @@
     width: 100%
 }
 
-.destination__46671:hover {
+.destination__M7qrc:hover {
     background-color: var(--interactive-background-hover)
 }
 
-.destinationIcon__46671 {
+.destinationIcon__M7qrc {
     flex: none
 }
 
-.destinationText__46671 {
+.destinationText__M7qrc {
     flex: 1;
     flex-direction: column;
     justify-content: center
 }
 
-.destinationSecondary__46671,
-.destinationText__46671 {
+.destinationSecondary__M7qrc,
+.destinationText__M7qrc {
     display: flex;
     gap: calc(var(--space-4)/2);
     min-width: 0;
     overflow: hidden
 }
 
-.destinationSecondary__46671 {
+.destinationSecondary__M7qrc {
     align-items: center;
     color: var(--text-muted)
 }
 
-.destinationTextLine__46671 {
+.destinationTextLine__M7qrc {
     min-width: 0;
     overflow: hidden
 }
 
-.destinationSecondary__46671 .destinationTextLine__46671 {
+.destinationSecondary__M7qrc .destinationTextLine__M7qrc {
     flex: 1
 }
 
-.subtitleDestination__46671 {
+.subtitleDestination__M7qrc {
     align-items: center;
     color: var(--text-strong);
     display: inline-flex;
@@ -61,7 +61,7 @@
     white-space: nowrap
 }
 
-.canvas__81292 {
+.canvas_6oHqIH {
     --custom-waveform-spacing: 4px;
     color: var(--interactive-text-active);
     flex: 1;
@@ -74,12 +74,12 @@
     width: 0
 }
 
-.backupContainer__0efdf {
+.backupContainer_CNmkpo {
     display: flex;
     justify-content: center
 }
 
-.canvas__0efdf {
+.canvas_CNmkpo {
     cursor: pointer;
     flex: 1;
     height: 32px;
@@ -88,7 +88,7 @@
     min-width: 0
 }
 
-.playback_c15390 {
+.playback_E0Lm4d {
     align-items: center;
     display: flex;
     flex: 1;
@@ -96,26 +96,26 @@
     min-width: 0
 }
 
-.waveform_c15390 {
+.waveform_E0Lm4d {
     flex: 1;
     margin-inline-start: var(--space-4);
     min-width: 0;
     width: 0
 }
 
-.timerGroup_c15390 {
+.timerGroup_E0Lm4d {
     align-items: center;
     display: flex;
     flex: 0 0 auto
 }
 
-.timer_c15390 {
+.timer_E0Lm4d {
     color: var(--text-default);
     min-width: var(--space-32)
 }
 
-.audioElement_c15390 {
+.audioElement_E0Lm4d {
     display: none
 }
 
-/*# sourceMappingURL=490514.e58f600146c67496.css.map*/
+/*# sourceMappingURL=490514.cced6555f5db82d6.css.map*/

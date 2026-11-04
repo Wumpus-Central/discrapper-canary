@@ -1,4 +1,3 @@
-n.d(t, { D: () => o });
 var i = n(477900),
     r = n(582128),
     a = n(531142),
@@ -72,3 +71,4 @@ class o extends r.Component {
             : (0, i.jsx)(s.vN, { ...this.props.focusProps, children: this.renderInner() });
     }
 }
+n.d(t, {}, { D: o });

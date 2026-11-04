@@ -1,1 +1,1 @@
-p.exports = { j: "overflow_b0dfc2", E: "lineClamp2Plus_b0dfc2" };
+p.exports = { j: "overflow__WDjet", E: "lineClamp2Plus__WDjet" };

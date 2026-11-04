@@ -1,4 +1,3 @@
-n.d(t, { A: () => h });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -6,8 +5,8 @@ var i = n(477900),
     l = n(847374),
     o = n(177953),
     d = n(367513),
-    c = n(204651),
-    u = n(105292),
+    c = n(693409),
+    u = n(792996),
     _ = n(730393);
 function E(e) {
     let { className: t, isVertical: n } = e;
@@ -29,24 +28,30 @@ function A(e) {
         ],
     });
 }
-function h(e) {
-    let { channelId: t, className: n, isParticipantsOpen: a, isVertical: l = !1, hideTooltip: o = !1 } = e,
-        h = r.useCallback(
-            (e) => {
-                let { className: t } = e;
-                return a
-                    ? (0, i.jsx)(A, { className: t, isVertical: l })
-                    : (0, i.jsx)(E, { className: t, isVertical: l });
-            },
-            [a, l],
-        );
-    return (0, i.jsx)(c.A, {
-        label: a ? u.intl.string(u.t.QJMRUB) : u.intl.string(u.t.vZiwmG),
-        className: s()(_.N9, n),
-        onClick: function (e) {
-            (e.stopPropagation(), d.A.toggleParticipants(t, !a));
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { channelId: t, className: n, isParticipantsOpen: a, isVertical: l = !1, hideTooltip: o = !1 } = e,
+                h = r.useCallback(
+                    (e) => {
+                        let { className: t } = e;
+                        return a
+                            ? (0, i.jsx)(A, { className: t, isVertical: l })
+                            : (0, i.jsx)(E, { className: t, isVertical: l });
+                    },
+                    [a, l],
+                );
+            return (0, i.jsx)(c.A, {
+                label: a ? u.intl.string(u.t.QJMRUB) : u.intl.string(u.t.vZiwmG),
+                className: s()(_.N9, n),
+                onClick: function (e) {
+                    (e.stopPropagation(), d.A.toggleParticipants(t, !a));
+                },
+                iconComponent: h,
+                shouldShowTooltip: !o,
+            });
         },
-        iconComponent: h,
-        shouldShowTooltip: !o,
-    });
-}
+    },
+);

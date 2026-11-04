@@ -1,4 +1,3 @@
-n.d(t, { x: () => r });
 var i,
     r =
         (((i = {})[(i.DEFAULT = 11)] = "DEFAULT"),
@@ -19,3 +18,4 @@ var i,
         (i[(i.KALAM = 16)] = "KALAM"),
         (i[(i.HEXAGON = 17)] = "HEXAGON"),
         i);
+n.d(t, {}, { x: r });

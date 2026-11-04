@@ -1,4 +1,3 @@
-n.d(t, { A: () => s, n: () => l });
 var i,
     r = n(37411),
     a =
@@ -7,5 +6,5 @@ var i,
         (i.USER_NAVIGATED_BACK = "user_navigated_back"),
         (i.USER_NAVIGATED_FORWARD = "user_navigated_forward"),
         i);
-let s = a,
-    l = new Set([r.H9.EMBED, r.H9.FORUM]);
+let s = new Set([r.H9.EMBED, r.H9.FORUM]);
+n.d(t, {}, { A: a, n: s });

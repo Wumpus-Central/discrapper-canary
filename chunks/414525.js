@@ -1,8 +1,8 @@
-(n.d(t, { H: () => o }), n(321073));
+n(321073);
 var i = n(852015),
     r = n(144367),
     a = n(428420),
-    s = n(535384);
+    s = n(505816);
 class l extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.Gradient", [
@@ -48,3 +48,4 @@ class l extends s.G {
     }
 }
 let o = new l();
+n.d(t, {}, { H: o });

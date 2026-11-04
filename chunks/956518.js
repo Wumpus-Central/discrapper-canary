@@ -1,15 +1,8 @@
-(n.d(t, { Ay: () => s, S: () => o, sF: () => d }), n(323874), n(14289), n(35956));
+(n(323874), n(14289), n(35956));
 var i = n(147964),
     r = n(998218),
     a = n(10716);
 function s(e) {
-    return d()
-        ? a.A.getState().activityUrlOverride
-        : i.A.inTestModeForEmbeddedApplication(e)
-          ? i.A.testModeOriginURL
-          : l(e);
-}
-function l(e) {
     let t = window.GLOBAL_ENV.ACTIVITY_APPLICATION_HOST;
     if (null == t) return null;
     if (t.startsWith("//")) {
@@ -18,15 +11,29 @@ function l(e) {
     }
     return `https://${e}.${t}`;
 }
-function o(e) {
-    let t = r.A.toURLSafe(e);
-    if (null == t) return null;
-    let [n] = t.hostname.split(".", 1),
-        [i] = n.split("--", 1),
-        a = l(i);
-    return null != a && r.A.toURLSafe(a)?.origin === t.origin ? t.origin : null;
-}
-function d() {
+function l() {
     let e = a.A.getState();
     return e.useActivityUrlOverride && null != e.activityUrlOverride && "" !== e.activityUrlOverride;
 }
+n.d(
+    t,
+    {},
+    {
+        Ay: function (e) {
+            return l()
+                ? a.A.getState().activityUrlOverride
+                : i.A.inTestModeForEmbeddedApplication(e)
+                  ? i.A.testModeOriginURL
+                  : s(e);
+        },
+        S: function (e) {
+            let t = r.A.toURLSafe(e);
+            if (null == t) return null;
+            let [n] = t.hostname.split(".", 1),
+                [i] = n.split("--", 1),
+                a = s(i);
+            return null != a && r.A.toURLSafe(a)?.origin === t.origin ? t.origin : null;
+        },
+        sF: l,
+    },
+);

@@ -1,9 +1,8 @@
-n.d(t, { Ay: () => c, Vb: () => d, yE: () => o });
 var i,
     r = n(496431),
-    a = n(58703),
-    s = n(38405),
-    l = n(105292),
+    a = n(5377),
+    s = n(856383),
+    l = n(792996),
     o =
         (((i = {})[(i.SHORT_TIME_LEFT = 0)] = "SHORT_TIME_LEFT"),
         (i[(i.LONG_TIME_LEFT = 1)] = "LONG_TIME_LEFT"),
@@ -31,33 +30,41 @@ function d(e) {
     }
     return t.seconds > 0 ? { days: 0, hours: 0, minutes: 1, seconds: 0 } : t;
 }
-function c(e, t) {
-    let n;
-    switch (t) {
-        case 0:
-            n = { days: l.t["/wnvqA"], hours: l.t.Jsq0XN, minutes: l.t["SBd+Bs"] };
-            break;
-        case 1:
-            n = { days: l.t.UD5nn5, hours: l.t.Hg8Fee, minutes: l.t.XSbQZZ };
-            break;
-        case 2:
-            n = { days: l.t.rLqNad, hours: l.t.d1LvCA, minutes: l.t.Z2LX7K };
-            break;
-        case 4:
-            n = { days: l.t.xQ3zuN, hours: l.t.SFU7QN, minutes: l.t.Y4FNdL };
-            break;
-        case 3:
-            n = { days: l.t.fYmirx, hours: l.t["C3RO+g"], minutes: l.t.r77oHc };
-            break;
-        default:
-            throw Error(`Unknown messageType (${t}) when rendering time left`);
-    }
-    let i = d((0, r.A)(e.toDate(), 6e4)),
-        o = "";
-    try {
-        o = (0, a.uN)(i, n);
-    } catch {
-        s.A.captureMessage("Error trying to format string for fractional nitro duration pill");
-    }
-    return o;
-}
+n.d(
+    t,
+    {},
+    {
+        Ay: function (e, t) {
+            let n;
+            switch (t) {
+                case 0:
+                    n = { days: l.t["/wnvqA"], hours: l.t.Jsq0XN, minutes: l.t["SBd+Bs"] };
+                    break;
+                case 1:
+                    n = { days: l.t.UD5nn5, hours: l.t.Hg8Fee, minutes: l.t.XSbQZZ };
+                    break;
+                case 2:
+                    n = { days: l.t.rLqNad, hours: l.t.d1LvCA, minutes: l.t.Z2LX7K };
+                    break;
+                case 4:
+                    n = { days: l.t.xQ3zuN, hours: l.t.SFU7QN, minutes: l.t.Y4FNdL };
+                    break;
+                case 3:
+                    n = { days: l.t.fYmirx, hours: l.t["C3RO+g"], minutes: l.t.r77oHc };
+                    break;
+                default:
+                    throw Error(`Unknown messageType (${t}) when rendering time left`);
+            }
+            let i = d((0, r.A)(e.toDate(), 6e4)),
+                o = "";
+            try {
+                o = (0, a.uN)(i, n);
+            } catch {
+                s.A.captureMessage("Error trying to format string for fractional nitro duration pill");
+            }
+            return o;
+        },
+        Vb: d,
+        yE: o,
+    },
+);

@@ -1,1 +1,1 @@
-e.exports = { p: "staticLink__75a07" };
+t.exports = { p: "staticLink_cFKdQd" };

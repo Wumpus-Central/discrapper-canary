@@ -1,13 +1,13 @@
 let i;
-(n.d(t, { A: () => h }), n(321073));
+n(321073);
 var r = n(635377),
     a = n.n(r),
-    s = n(66834),
+    s = n(778858),
     l = n(71393),
     o = n(287809),
     d = n(927813),
     c = n(427262),
-    u = n(105292);
+    u = n(792996);
 let _ = new (a())({ maxAge: +d.A.Millis.MINUTE });
 function E(e, t, n) {
     (null != i && clearTimeout(i),
@@ -35,24 +35,30 @@ function A(e, t) {
     if (null != i) return i;
     _.set(n, !0);
 }
-let h = {
-    getGuildNameSuggestion: function (e) {
-        let t = o.default.getCurrentUser(),
-            n = c.mG(t);
-        return null == n || 0 === n.length
-            ? ""
-            : u.intl.formatToPlainString(u.t.Y6Qfju, { username: e?.truncateUsername ? n.slice(0, 20) : n });
+n.d(
+    t,
+    {},
+    {
+        A: {
+            getGuildNameSuggestion: function (e) {
+                let t = o.default.getCurrentUser(),
+                    n = c.mG(t);
+                return null == n || 0 === n.length
+                    ? ""
+                    : u.intl.formatToPlainString(u.t.Y6Qfju, { username: e?.truncateUsername ? n.slice(0, 20) : n });
+            },
+            requestMembers(e, t) {
+                let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
+                    i = Array.isArray(e),
+                    r = [],
+                    a = !1;
+                (i
+                    ? e.forEach((e) => {
+                          null == A(e, t) && r.push(e);
+                      })
+                    : null == A(e, t) && (a = !0),
+                    r.length > 0 && i ? E(r, t, n) : a && E(e, t, n));
+            },
+        },
     },
-    requestMembers(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
-            i = Array.isArray(e),
-            r = [],
-            a = !1;
-        (i
-            ? e.forEach((e) => {
-                  null == A(e, t) && r.push(e);
-              })
-            : null == A(e, t) && (a = !0),
-            r.length > 0 && i ? E(r, t, n) : a && E(e, t, n));
-    },
-};
+);

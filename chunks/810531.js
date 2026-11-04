@@ -1,2 +1,2 @@
-n.d(t, { L: () => i });
 let i = Symbol.for("PlainRecord.TypeTag");
+n.d(t, {}, { L: i });

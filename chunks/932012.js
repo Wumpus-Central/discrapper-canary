@@ -1,8 +1,8 @@
 _.exports = {
-    yV: "sectionDescription__9851a",
-    Nr: "card__9851a",
-    _e: "bannerImage__9851a",
-    FS: "textContainer__9851a",
-    wx: "header__9851a",
-    h_: "description__9851a",
+    yV: "sectionDescription_MGYftn",
+    Nr: "card_MGYftn",
+    _e: "bannerImage_MGYftn",
+    FS: "textContainer_MGYftn",
+    wx: "header_MGYftn",
+    h_: "description_MGYftn",
 };

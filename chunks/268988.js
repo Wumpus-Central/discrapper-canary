@@ -1,7 +1,7 @@
-(n.d(t, { A: () => c }), n(321073));
-var i = n(17928),
+n(321073);
+var i = n(855986),
     r = n(73153),
-    a = n(320095);
+    a = n(432005);
 let s = new Map();
 function l() {
     s = new Map();
@@ -35,3 +35,4 @@ let c = new d(r.h, {
     SEARCH_RECENT_MESSAGES_CLEAR: l,
     CONNECTION_OPEN: l,
 });
+n.d(t, {}, { A: c });

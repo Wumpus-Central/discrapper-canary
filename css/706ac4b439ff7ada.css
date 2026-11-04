@@ -1,0 +1,108 @@
+.optionButtonWrapper_87WSWY {
+    align-items: center;
+    background-color: var(--background-mod-muted);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    display: flex;
+    position: relative
+}
+
+.optionButtonWrapper_87WSWY:hover {
+    background-color: var(--background-mod-subtle);
+    border-color: var(--border-muted)
+}
+
+.optionButtonWrapper_87WSWY.selected_87WSWY {
+    background-color: var(--opacity-blurple-8);
+    border-color: var(--background-brand)
+}
+
+.optionButtonWrapper_87WSWY.selected_87WSWY.pressed_87WSWY {
+    background-color: var(--opacity-blurple-12)
+}
+
+.optionButtonWrapper_87WSWY.pressed_87WSWY {
+    background-color: var(--background-mod-normal);
+    transform: none
+}
+
+.optionButton_87WSWY {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-grow: 1;
+    padding: 12px 16px
+}
+
+.full-motion .optionButton_87WSWY {
+    transition: all .2s ease-in-out
+}
+
+.checkIcon_87WSWY {
+    border-radius: 50%;
+    inset-inline-end: -10px;
+    width: 20px
+}
+
+.checkIcon_87WSWY,
+.memberCount_87WSWY {
+    align-items: center;
+    background-color: var(--brand-500);
+    box-sizing: border-box;
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    position: absolute;
+    top: -10px
+}
+
+.memberCount_87WSWY {
+    border-radius: 10px;
+    inset-inline-end: 20px;
+    padding: 0 8px;
+    white-space: nowrap
+}
+
+.buttonEmoji_87WSWY {
+    align-self: center;
+    margin-inline-end: 12px
+}
+
+.buttonText_87WSWY {
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.newBadge_87WSWY {
+    display: flex;
+    inset-inline-end: -10px;
+    position: absolute;
+    top: -10px
+}
+
+.suffix_WpMpCz {
+    display: flex;
+    gap: 4px
+}
+
+.suffix_WpMpCz:hover .selectOptionMemberCount_WpMpCz {
+    opacity: 1
+}
+
+.newBadge_WpMpCz {
+    align-self: flex-start;
+    display: flex
+}
+
+.memberCount_WpMpCz {
+    opacity: 0;
+    transition: opacity .2s ease-in-out
+}
+
+[data-searchable-select-option]:focus .memberCount_WpMpCz,
+[data-searchable-select-option]:hover .memberCount_WpMpCz {
+    opacity: 1
+}
+
+/*# sourceMappingURL=706ac4b439ff7ada.css.map*/

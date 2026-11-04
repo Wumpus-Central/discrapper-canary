@@ -1,9 +1,9 @@
 e.exports = {
-    kL: "container_afa88e",
-    Qs: "content_afa88e",
-    G3: "bodyText_afa88e",
-    y3: "priceRow_afa88e",
-    wH: "selected_afa88e",
-    n1: "circle_afa88e",
-    Z6: "priceRowText_afa88e",
+    kL: "container_iS1sdD",
+    Qs: "content_iS1sdD",
+    G3: "bodyText_iS1sdD",
+    y3: "priceRow_iS1sdD",
+    wH: "selected_iS1sdD",
+    n1: "circle_iS1sdD",
+    Z6: "priceRowText_iS1sdD",
 };

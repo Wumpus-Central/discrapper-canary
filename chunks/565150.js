@@ -1,21 +1,17 @@
-n.d(t, { Ay: () => E, Cj: () => _, Sm: () => u });
 var i,
     r = n(143236),
     a = n(435558),
     s = n.n(a),
-    l = n(132500),
+    l = n(115560),
     o = n(274652),
     d = n(453771),
-    c = n(292348);
-function u(e) {
-    return void 0 !== e.isVideo && void 0 !== e.isImage;
-}
-var _ =
-    (((i = {})[(i.FILE_ATTACHMENT = 0)] = "FILE_ATTACHMENT"),
-    (i[(i.IMAGE_PICKER = 1)] = "IMAGE_PICKER"),
-    (i[(i.IMAGE_EDITOR = 2)] = "IMAGE_EDITOR"),
-    i);
-class E extends r.EventEmitter {
+    c = n(292348),
+    u =
+        (((i = {})[(i.FILE_ATTACHMENT = 0)] = "FILE_ATTACHMENT"),
+        (i[(i.IMAGE_PICKER = 1)] = "IMAGE_PICKER"),
+        (i[(i.IMAGE_EDITOR = 2)] = "IMAGE_EDITOR"),
+        i);
+class _ extends r.EventEmitter {
     id;
     uniqueId;
     filename;
@@ -36,7 +32,7 @@ class E extends r.EventEmitter {
     constructor(e) {
         if ((super(), (this.item = e), e.platform === o.x.REACT_NATIVE)) {
             this.id = e.id ?? e.uri;
-            const t = (0, c.ly)({ uri: e.uri, overrideFilename: e.filename, overrideType: e.mimeType });
+            let t = (0, c.ly)({ uri: e.uri, overrideFilename: e.filename, overrideType: e.mimeType });
             ((this.filename = t.filename),
                 (this.isImage = t.isImage),
                 (this.isVideo = t.isVideo),
@@ -63,3 +59,14 @@ class E extends r.EventEmitter {
         return this;
     }
 }
+n.d(
+    t,
+    {},
+    {
+        Ay: _,
+        Cj: u,
+        Sm: function (e) {
+            return void 0 !== e.isVideo && void 0 !== e.isImage;
+        },
+    },
+);

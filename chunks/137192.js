@@ -1,4 +1,3 @@
-a.d(e, { $l: () => _, IR: () => v, _n: () => I });
 var n = a(877784),
     t = a(712881),
     i = a(115979),
@@ -10,7 +9,7 @@ var n = a(877784),
     u = a(420663),
     h = a(190443),
     m = a(979563),
-    g = a(185973);
+    g = a(683825);
 let f = {
         [m.d.HatTrick]: n.q,
         [m.d.AerialGoal]: t.X,
@@ -116,12 +115,18 @@ let f = {
         [m.d.MatchStart]: null,
         [m.d.MatchEnd]: null,
     };
-function v() {
-    return { [h.e]: f };
-}
-function _() {
-    return { [h.e]: p };
-}
-function I() {
-    return { [h.e]: C };
-}
+a.d(
+    e,
+    {},
+    {
+        $l: function () {
+            return { [h.e]: p };
+        },
+        IR: function () {
+            return { [h.e]: f };
+        },
+        _n: function () {
+            return { [h.e]: C };
+        },
+    },
+);

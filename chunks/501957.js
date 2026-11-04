@@ -1,7 +1,6 @@
-n.d(t, { U: () => o, j: () => l });
 var i = n(925847),
-    r = n(174459),
-    a = n(24482),
+    r = n(129230),
+    a = n(879610),
     s = n(652215);
 function l(e) {
     return {
@@ -12,7 +11,14 @@ function l(e) {
         subscription_status: e.status,
     };
 }
-function o(e, t, n) {
-    let a = n ?? (0, i.A)();
-    r.default.track(s.HAw.PREMIUM_RESUBSCRIBE_COMPLETED, { location_stack: t, load_id: a, ...l(e) });
-}
+n.d(
+    t,
+    {},
+    {
+        U: function (e, t, n) {
+            let a = n ?? (0, i.A)();
+            r.default.track(s.HAw.PREMIUM_RESUBSCRIBE_COMPLETED, { location_stack: t, load_id: a, ...l(e) });
+        },
+        j: l,
+    },
+);

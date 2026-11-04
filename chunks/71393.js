@@ -1,16 +1,15 @@
-n.d(t, { A: () => f });
 var i = n(357758),
     r = n(867051),
     a = n(5180),
-    s = n(892842),
-    l = n(137903),
+    s = n(826406),
+    l = n(600866),
     o = n(260509),
-    d = n(149790),
-    c = n(935208),
-    u = n(280450),
+    d = n(537975),
+    c = n(811091),
+    u = n(46653),
     _ = n(349828);
 function E(e) {
-    return (0, r.yE)(o.vI, {
+    return (0, r.yE)("Guild", {
         ...e,
         features: (0, i.y)(e.features),
         joinedAt: null != e.joinedAt ? new Date(e.joinedAt) : null,
@@ -127,3 +126,4 @@ let f = new h(
     },
     s.P4.getCachedBridgedStoreMode(),
 );
+n.d(t, {}, { A: f });

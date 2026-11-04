@@ -1,9 +1,7 @@
-e.exports = {
-    Nn: "resultWrapper__2fe50",
-    bV: "sectionHeader__2fe50",
-    Ke: "result__2fe50",
-    tE: "resultAvatar__2fe50",
-    D6: "resultText__2fe50",
-    Xv: "results__2fe50",
-    wV: "noResults__2fe50 results__2fe50",
+s.exports = {
+    Nn: "resultWrapper_ffBc3q",
+    bV: "sectionHeader_ffBc3q",
+    Ke: "result_ffBc3q",
+    D6: "resultText_ffBc3q",
+    wV: "noResults_ffBc3q results_ffBc3q",
 };

@@ -1,7 +1,7 @@
 e.exports = {
-    wx: "header__82bda",
-    FS: "backButtonWrapper__82bda",
-    R_: "heading__82bda",
-    Ij: "fullWidth__82bda",
-    ZZ: "presetShuffle__82bda",
+    wx: "header_F5GIU2",
+    FS: "backButtonWrapper_F5GIU2",
+    R_: "heading_F5GIU2",
+    Ij: "fullWidth_F5GIU2",
+    ZZ: "presetShuffle_F5GIU2",
 };

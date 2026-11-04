@@ -1,10 +1,10 @@
-_.exports = {
-    x6: "button__06eda",
-    zB: "primary__06eda",
-    r9: "disabled__06eda",
-    Rm: "secondary__06eda",
-    Xe: "tertiary__06eda",
-    q1: "size24__06eda",
-    Hb: "size32__06eda",
-    VM: "size36__06eda",
+e.exports = {
+    x6: "button_C9-Bm6",
+    zB: "primary_C9-Bm6",
+    r9: "disabled_C9-Bm6",
+    Rm: "secondary_C9-Bm6",
+    Xe: "tertiary_C9-Bm6",
+    q1: "size24_C9-Bm6",
+    Hb: "size32_C9-Bm6",
+    VM: "size36_C9-Bm6",
 };

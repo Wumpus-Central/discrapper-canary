@@ -1,0 +1,241 @@
+.searchContainer_TCJuwN {
+    position: relative
+}
+
+.searchBox_TCJuwN {
+    padding: 0 innerPadding
+}
+
+.searchBar_TCJuwN {
+    flex-shrink: 0;
+    margin-inline: 16px
+}
+
+.resultsListContainer_TCJuwN {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--background-base-lowest);
+    border-radius: 0 0 5px 5px;
+    box-shadow: var(--shadow-border), var(--shadow-high);
+    height: auto;
+    max-height: 260px;
+    padding: 8px 12px 16px
+}
+
+.resultsList_TCJuwN {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.resultsListParent_TCJuwN {
+    z-index: 9999
+}
+
+.sectionTitle_TCJuwN {
+    color: var(--text-strong);
+    text-transform: none
+}
+
+.selectableSearchRow_TCJuwN {
+    cursor: pointer;
+    display: block;
+    margin-inline-end: 8px
+}
+
+.rowHeight_TCJuwN {
+    height: 26px
+}
+
+.sectionHeight_TCJuwN {
+    height: 16px
+}
+
+.sectionFooter_TCJuwN {
+    align-items: center;
+    display: flex;
+    height: 1px;
+    justify-content: center;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    vertical-align: middle
+}
+
+.rowContainer_TCJuwN {
+    padding: 0
+}
+
+.rowLabel_TCJuwN {
+    color: var(--text-default);
+    display: flex;
+    padding: 4px;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.searchRowLabel_TCJuwN {
+    background-color: var(--interactive-background-hover);
+    border-radius: 4px
+}
+
+.roleTagContainer_TCJuwN {
+    align-items: center;
+    flex-direction: row
+}
+
+.roleTag_TCJuwN {
+    display: inline
+}
+
+.roleTagIcon_TCJuwN {
+    margin-inline-end: 4px
+}
+
+.roleTagLabel_TCJuwN {
+    display: inline
+}
+
+.channelLabel_TCJuwN {
+    position: relative
+}
+
+.channelSpine_TCJuwN {
+    inset-inline-start: -10px;
+    top: 4px
+}
+
+.helperText_TCJuwN {
+    padding: 4px 0
+}
+
+.hasParent_TCJuwN {
+    margin-inline-start: 12px
+}
+
+.noIndent_TCJuwN {
+    margin-inline-start: -6px
+}
+
+.channelIcon_TCJuwN {
+    color: var(--text-muted);
+    margin-inline-end: 4px
+}
+
+.exemptionHint_ACSXAy {
+    margin-top: 4px
+}
+
+.triggerContainer_DpUkVj {
+    display: flex;
+    flex-direction: row
+}
+
+.triggerMainContainer_DpUkVj {
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 12px
+}
+
+.triggerCounterContainer_DpUkVj {
+    flex: 0;
+    margin-inline-end: 8px;
+    margin-top: 6px
+}
+
+.stepCountIcon_DpUkVj {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 32px;
+    justify-content: center;
+    width: 32px
+}
+
+.stepCount_DpUkVj {
+    line-height: 0
+}
+
+.stepCount_DpUkVj,
+.triggerHeader_DpUkVj {
+    color: var(--text-strong);
+    font-family: var(--font-primary);
+    font-size: 16px
+}
+
+.triggerHeader_DpUkVj {
+    line-height: 20px
+}
+
+.triggerSettingsContainer_DpUkVj {
+    padding-top: 8px
+}
+
+.dividerContainer_ZVlcwN {
+    margin: 0 auto;
+    padding: 0;
+    width: 0
+}
+
+.dividerIconContainer_ZVlcwN {
+    align-items: center;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    width: 24px
+}
+
+.dividierIcon_ZVlcwN {
+    color: var(--border-subtle)
+}
+
+.cardContentsContainer_tBft6O {
+    margin-top: 0;
+    margin-inline: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    position: relative;
+    z-index: 3
+}
+
+.paddingTop_tBft6O {
+    padding-top: 8px
+}
+
+.inputRuleNameContainer_tBft6O {
+    margin-top: 25px
+}
+
+.inputRuleExemptionsContainer_tBft6O {
+    margin-top: 24px
+}
+
+.ruleSubtextDescription_tBft6O {
+    color: var(--text-default);
+    font-family: var(--font-primary);
+    font-size: 14px;
+    line-height: 18px;
+    padding-bottom: 8px
+}
+
+.exemptEditButton_tBft6O {
+    margin-top: 16px
+}
+
+.ruleHeaderChannelHook_tBft6O {
+    display: flex
+}
+
+.ruleHeaderChannelHook_tBft6O .channelName_tBft6O {
+    background-color: var(--background-base-lower);
+    color: var(--text-muted)
+}
+
+.subHeaderText_tBft6O {
+    margin-top: 4px
+}
+
+/*# sourceMappingURL=5d62d3ce51bff130.css.map*/

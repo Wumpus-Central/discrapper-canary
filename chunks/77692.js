@@ -1,5 +1,4 @@
-r.d(t, { B: () => s, s: () => l });
-var n = r(519837),
+var n = r(652664),
     i = r(371716),
     o = r(582128);
 let a = {
@@ -22,8 +21,15 @@ function s() {
         u = (0, o.useMemo)(() => (n ? t : t ? { ...a, ...t } : a), [n]);
     return { visuallyHiddenProps: { ...l, style: u } };
 }
-function l(e) {
-    let { children: t, elementType: r = "div", isFocusable: i, style: a, ...l } = e,
-        { visuallyHiddenProps: u } = s(e);
-    return o.createElement(r, (0, n.v)(l, u), t);
-}
+r.d(
+    t,
+    {},
+    {
+        B: s,
+        s: function (e) {
+            let { children: t, elementType: r = "div", isFocusable: i, style: a, ...l } = e,
+                { visuallyHiddenProps: u } = s(e);
+            return o.createElement(r, (0, n.v)(l, u), t);
+        },
+    },
+);

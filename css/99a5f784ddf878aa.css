@@ -1,0 +1,27 @@
+.content_Zi5jmx {
+    padding: 16px
+}
+
+.card_Zi5jmx {
+    background: var(--background-mod-muted);
+    border-radius: var(--radius-sm);
+    margin-top: 16px;
+    pointer-events: none
+}
+
+.error_Zi5jmx,
+.footer_Zi5jmx {
+    display: flex;
+    gap: 8px
+}
+
+.error_Zi5jmx {
+    align-items: center;
+    background-color: hsl(var(--red-400-hsl)/.1);
+    border: 1px solid var(--red-400);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    padding: 8px
+}
+
+/*# sourceMappingURL=99a5f784ddf878aa.css.map*/

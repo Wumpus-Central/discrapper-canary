@@ -1,4 +1,3 @@
-n.d(t, { b: () => r });
 var i,
     r =
         (((i = {}).Destroy = "destroy"),
@@ -34,3 +33,4 @@ var i,
         (i.DeviceHardwareMutedChange = "device-hardware-muted-change"),
         (i.SpatialAudioStatus = "spatial-audio-status"),
         i);
+n.d(t, {}, { b: r });

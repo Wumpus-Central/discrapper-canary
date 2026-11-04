@@ -1,1 +1,1 @@
-e.exports = { n: "jumpButton_ade175", Q: "text_ade175" };
+t.exports = { n: "jumpButton_gduzfv", Q: "text_gduzfv" };

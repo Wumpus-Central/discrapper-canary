@@ -1,4 +1,4 @@
-(n.d(t, { A: () => P, l: () => h }), n(938796));
+n(938796);
 var e = n(284009),
     a = n.n(e),
     i = n(339048),
@@ -48,30 +48,36 @@ function P(o) {
         },
     });
 }
-async function C(o, t) {
-    let n = (await (0, i.LM)(o))
-        .filter((o) => null == o.ends_at || new Date(o.ends_at) > new Date())
-        .find((o) => o.sku_id === t);
-    a()(null == n, "User already has an active subscription to this SKU");
-}
-async function h(o) {
-    let { applicationId: t, skuId: n, initialPlanId: e, analyticsLocationObject: i, analyticsLocations: l } = o,
-        d = c.A.get(n),
-        s = u.A.getForSKU(n);
-    a()(null != d, "Failed to find SKU");
-    let h = (0, r.bg)(d.flags);
-    (a()(h, "Guild application subscriptions unsupported!"),
-        await C(t, n),
-        P({
-            initialPlanId: e ?? s[0]?.id,
-            activeSubscription: null,
-            analyticsLocations: l,
-            analyticsLocationObject: i,
-            analyticsSubscriptionType: p.rzx.APPLICATION,
-            planGroup: [],
-            skuId: n,
-            guildId: null,
-            showBenefitsFirst: !1,
-            applicationId: t,
-        }));
-}
+n.d(
+    t,
+    {},
+    {
+        A: P,
+        l: async function (o) {
+            let { applicationId: t, skuId: n, initialPlanId: e, analyticsLocationObject: l, analyticsLocations: d } = o,
+                s = c.A.get(n),
+                C = u.A.getForSKU(n);
+            a()(null != s, "Failed to find SKU");
+            let h = (0, r.bg)(s.flags);
+            (a()(h, "Guild application subscriptions unsupported!"),
+                await (async function (o, t) {
+                    let n = (await (0, i.LM)(o))
+                        .filter((o) => null == o.ends_at || new Date(o.ends_at) > new Date())
+                        .find((o) => o.sku_id === t);
+                    a()(null == n, "User already has an active subscription to this SKU");
+                })(t, n),
+                P({
+                    initialPlanId: e ?? C[0]?.id,
+                    activeSubscription: null,
+                    analyticsLocations: d,
+                    analyticsLocationObject: l,
+                    analyticsSubscriptionType: p.rzx.APPLICATION,
+                    planGroup: [],
+                    skuId: n,
+                    guildId: null,
+                    showBenefitsFirst: !1,
+                    applicationId: t,
+                }));
+        },
+    },
+);

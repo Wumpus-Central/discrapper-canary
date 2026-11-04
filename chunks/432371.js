@@ -1,14 +1,10 @@
-n.d(t, { Kc: () => c, cI: () => m, pk: () => u, vC: () => h });
-var l = n(702841),
+var l = n(164636),
     s = n(5180),
     a = n(260509),
     i = n(71393),
     r = n(652215),
     o = n(746080);
 function c(e) {
-    return u(e, !0, !1);
-}
-function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     return (
@@ -22,10 +18,10 @@ function u(e) {
                 return r.kvI.SUMMARIZEABLE.has(e.type) && !e.isNSFW() && !n && !l;
             })(e) ||
             (!1 === t && e.hasFlag(o.lx.SUMMARIES_DISABLED))
-        ) && d(i.A.getGuild(e.guild_id), n)
+        ) && u(i.A.getGuild(e.guild_id), n)
     );
 }
-function d(e) {
+function u(e) {
     var t;
     let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return (
@@ -35,14 +31,24 @@ function d(e) {
         (!n || e.features.has(r.GuildFeatures.SUMMARIES_ENABLED_BY_USER))
     );
 }
-function m(e) {
-    arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    return u(e, t);
-}
-function h(e) {
-    return (
-        arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        (0, l.bG)([i.A], () => d(i.A.getGuild(e?.id ?? r.dJq), !1), [e])
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        Kc: function (e) {
+            return c(e, !0, !1);
+        },
+        cI: function (e) {
+            arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+            return c(e, t);
+        },
+        pk: c,
+        vC: function (e) {
+            return (
+                arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                (0, l.bG)([i.A], () => u(i.A.getGuild(e?.id ?? ""), !1), [e])
+            );
+        },
+    },
+);

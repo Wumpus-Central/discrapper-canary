@@ -1,10 +1,10 @@
 _.exports = {
-    kL: "container__722ff",
-    ik: "callContainer__722ff",
-    pR: "sidebarVisible__722ff",
-    gy: "sidebarOrChatVisible__722ff",
-    MQ: "volumeSlider__722ff",
-    T6: "chatToasts__722ff",
-    c3: "rtsSidebarOpen__722ff",
-    B2: "channelChatWrapper__722ff",
+    kL: "container_DwQMm_",
+    ik: "callContainer_DwQMm_",
+    pR: "sidebarVisible_DwQMm_",
+    gy: "sidebarOrChatVisible_DwQMm_",
+    MQ: "volumeSlider_DwQMm_",
+    T6: "chatToasts_DwQMm_",
+    c3: "rtsSidebarOpen_DwQMm_",
+    B2: "channelChatWrapper_DwQMm_",
 };

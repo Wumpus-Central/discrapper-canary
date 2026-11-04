@@ -1,0 +1,20 @@
+.grid_4jTtXM {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(246px, 1fr));
+    grid-gap: var(--space-xl);
+    width: 100%
+}
+
+.tile_4jTtXM {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.feedHarness_4jTtXM {
+    height: 100%;
+    min-height: 640px;
+    width: 100%
+}
+
+/*# sourceMappingURL=b2e920b39c337565.css.map*/

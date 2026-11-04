@@ -1,0 +1,129 @@
+.viewer_3SsYXF {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0
+}
+
+.header_3SsYXF {
+    align-items: center;
+    border-bottom: 1px solid var(--border-subtle);
+    display: flex;
+    gap: var(--space-8);
+    padding-inline: var(--space-24) var(--space-16)
+}
+
+.header_3SsYXF .tabs_3SsYXF {
+    align-items: flex-end;
+    align-self: stretch;
+    border-bottom: none;
+    flex: 1;
+    margin-bottom: -1px;
+    min-width: 0;
+    overflow-x: auto;
+    padding-top: var(--space-16);
+    scrollbar-width: none
+}
+
+.header_3SsYXF .tabs_3SsYXF [role=tab] {
+    margin-bottom: 0
+}
+
+.tabLabel_3SsYXF {
+    align-items: center;
+    display: inline-flex;
+    gap: var(--space-6);
+    max-width: var(--space-192)
+}
+
+.tabLabel_3SsYXF,
+.tabTitle_3SsYXF {
+    min-width: 0
+}
+
+.liveDot_3SsYXF {
+    animation: livePulse_3SsYXF 2s ease-in-out infinite;
+    background: var(--icon-feedback-positive);
+    border-radius: var(--radius-round);
+    flex: 0 0 auto;
+    height: var(--space-8);
+    width: var(--space-8)
+}
+
+.liveDotEnded_3SsYXF {
+    animation: none;
+    background: var(--icon-muted)
+}
+
+@keyframes livePulse_3SsYXF {
+    50% {
+        opacity: .4
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .liveDot_3SsYXF {
+        animation: none
+    }
+}
+
+.reduce-motion .liveDot_3SsYXF {
+    animation: none
+}
+
+.session_3SsYXF {
+    flex: 1;
+    flex-direction: column;
+    padding: var(--space-16) var(--space-24) var(--space-24)
+}
+
+.session_3SsYXF,
+.stage_3SsYXF {
+    display: flex;
+    min-height: 0
+}
+
+.stage_3SsYXF {
+    background: var(--background-base-lowest);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    flex: 1;
+    overflow: hidden;
+    position: relative
+}
+
+.stageControlling_3SsYXF {
+    border-color: var(--control-primary-background-default);
+    box-shadow: 0 0 0 1px var(--control-primary-background-default)
+}
+
+.canvas_3SsYXF {
+    display: block;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    outline: none;
+    width: 100%
+}
+
+.canvasEnded_3SsYXF {
+    filter: grayscale(1)
+}
+
+.overlay_3SsYXF {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    inset: 0;
+    justify-content: center;
+    padding: var(--space-24);
+    position: absolute;
+    text-align: center
+}
+
+.overlayEnded_3SsYXF {
+    background: var(--background-scrim)
+}
+
+/*# sourceMappingURL=8202d8c857e0d9f6.css.map*/

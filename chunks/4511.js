@@ -1,11 +1,11 @@
-(n.d(t, { r: () => r }), n(321073));
+n(321073);
 var i = n(731854);
 class r {
     pixelBudget;
     ladder;
     orderedLadder;
     constructor(e = i.eQ) {
-        const { width: t, height: n } = e.videoBudget;
+        let { width: t, height: n } = e.videoBudget;
         if (t <= 0 || n <= 0) throw Error("Invalid argument");
         ((this.pixelBudget = t * n),
             (this.ladder = r.calculateLadder(this.pixelBudget)),
@@ -48,28 +48,28 @@ class r {
                 n.push({ pixelCount: t, width: r, height: i, budgetPortion: t / e, wantValue: 0 });
             }
         }
-        let a = {},
-            s = 0,
-            l = 100;
+        let i = {},
+            a = 0,
+            s = 100;
         for (let t = 1; t <= 25; ++t) {
-            let o = 0,
-                d = 0,
-                c = 0;
+            let l = 0,
+                o = 0,
+                d = 0;
             for (let i of n) {
                 if (i.pixelCount * t > e) break;
-                ((o = i.width), (d = i.height), (c = i.budgetPortion));
+                ((l = i.width), (o = i.height), (d = i.budgetPortion));
             }
-            if (s !== o) {
-                let e = r.getMutedFramerate(l);
-                ((a[l] = { width: o, height: d, budgetPortion: c, mutedFramerate: e, framerate: i.sG }),
-                    (l -= 10),
-                    (s = o));
+            if (a !== l) {
+                let e = r.getMutedFramerate(s);
+                ((i[s] = { width: l, height: o, budgetPortion: d, mutedFramerate: e, framerate: 30 }),
+                    (s -= 10),
+                    (a = l));
             }
         }
-        return a;
+        return i;
     }
     static getMutedFramerate(e) {
-        return e <= 20 ? i.XA : i.kc;
+        return e <= 20 ? 12 : 20;
     }
     static calculateOrderedLadder(e) {
         let t = [];
@@ -83,3 +83,4 @@ class r {
         return t;
     }
 }
+n.d(t, {}, { r: r });

@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => M }));
+n.r(t);
 var i = n(649852),
     r = n.n(i),
     a = n(73153),
@@ -7,14 +7,14 @@ var i = n(649852),
     o = n(833473),
     d = n(386723),
     c = n(855302),
-    u = n(312987),
+    u = n(854325),
     _ = n(347481),
     E = n(734057),
-    A = n(477653),
-    h = n(763827),
+    A = n(718197),
+    h = n(495867),
     f = n(309010),
     I = n(287809),
-    p = n(174459),
+    p = n(129230),
     m = n(650338),
     T = n(652215),
     g = n(257645),
@@ -64,316 +64,323 @@ let L = r()((e, t, n) => {
         trackToggleSelfMute(e) {},
         trackToggleSelfDeaf(e) {},
     },
-    { enable: D, isNotSupported: b, trackToggleSelfMute: v, trackToggleSelfDeaf: P } = (y = n(401124)),
-    M = {
-        enable: D,
-        toggleSelfMute() {
-            let {
-                context: e = S.x.DEFAULT,
-                syncRemote: t = !0,
-                usedKeybind: n = !1,
-                playSoundEffect: i = !0,
-                location: r,
-            } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return b()
-                ? Promise.resolve()
-                : (v({ usedKeybind: n, location: r }),
-                    (i = i && !A.Ay.hasActiveSystemTelecomCall()),
-                    I.default.getCurrentUser()?.isStaff() && N.info("Toggling self mute"),
-                    A.Ay.isEnabled())
-                  ? a.h.dispatch({ type: "AUDIO_TOGGLE_SELF_MUTE", context: e, syncRemote: t, playSoundEffect: i })
-                  : this.enable(!0);
-        },
-        setSelfMute(e, t) {
-            let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-            b() ||
-                ((n = n && !A.Ay.hasActiveSystemTelecomCall()),
-                I.default.getCurrentUser()?.isStaff() && N.info("Setting self mute", t),
-                a.h.dispatch({ type: "AUDIO_SET_SELF_MUTE", context: e, mute: t, playSoundEffect: n }));
-        },
-        setTemporarySelfMute(e) {
-            b() ||
-                (I.default.getCurrentUser()?.isStaff() && N.info("Setting temporary self mute", e),
-                a.h.dispatch({ type: "AUDIO_SET_TEMPORARY_SELF_MUTE", mute: e }));
-        },
-        toggleSelfDeaf() {
-            let {
-                context: e = S.x.DEFAULT,
-                syncRemote: t = !0,
-                usedKeybind: n = !1,
-                location: i,
-            } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            b() ||
-                (P({ usedKeybind: n, location: i }),
-                a.h.dispatch({ type: "AUDIO_TOGGLE_SELF_DEAF", context: e, syncRemote: t }));
-        },
-        toggleLocalMute(e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.x.DEFAULT;
-            b() || a.h.dispatch({ type: "AUDIO_TOGGLE_LOCAL_MUTE", context: t, userId: e });
-        },
-        toggleLocalSoundboardMute(e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.x.DEFAULT;
-            a.h.dispatch({ type: "AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE", context: t, userId: e });
-        },
-        setDisableLocalVideo(e, t) {
-            let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : S.x.DEFAULT,
-                i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
-                r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-            b() ||
-                a.h.dispatch({
-                    type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
-                    context: n,
-                    userId: e,
-                    videoToggleState: t,
-                    persist: i,
-                    isAutomatic: r,
-                });
-        },
-        setLocalVolume(e, t) {
-            let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : S.x.DEFAULT,
-                i = (0, d.z)(t, n);
-            (a.h.dispatch({ type: "AUDIO_SET_LOCAL_VOLUME", context: n, userId: e, volume: i }), L(e, n, i));
-        },
-        setSpatialAudioOverrides(e) {
-            a.h.dispatch({ type: "AUDIO_SET_SPATIAL_AUDIO_OVERRIDES", overrides: e });
-        },
-        setSpatialAudioEnabled(e) {
-            a.h.dispatch({ type: "AUDIO_SET_SPATIAL_AUDIO_ENABLED", enabled: e });
-        },
-        setSpatialAudio(e, t) {
-            if (b()) return;
-            let n = o.A.isSpatialAudioEnabled();
-            ((0, c.A)("spatial_audio_enabled", e, n, t), this.setSpatialAudioEnabled(e));
-        },
-        setLocalPan(e, t, n) {
-            let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : S.x.DEFAULT;
-            a.h.dispatch({ type: "AUDIO_SET_LOCAL_PAN", context: i, userId: e, left: t, right: n });
-        },
-        setMode(e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : S.x.DEFAULT,
-                { analyticsLocations: i } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-            if (b()) return;
-            let r = e !== A.Ay.getMode(),
-                s = A.Ay.getModeOptions(n);
-            if ((a.h.dispatch({ type: "AUDIO_SET_MODE", context: n, mode: e, options: { ...s, ...t } }), r)) {
-                let t = A.Ay.getMediaEngine().getAudioSubsystem(),
-                    n = A.Ay.getMediaEngine().getAudioLayer(),
-                    r = f.Ay.getVoiceChannelId(),
-                    a = null != r ? E.A.getChannel(r) : null,
-                    s = O();
-                p.default.track(T.HAw.VOICE_ACTIVATION_MODE_CHANGED, {
-                    mode: e,
-                    location_stack: i,
-                    voice_channel_type: a?.type,
-                    input_device_name: s,
-                    audio_subsystem: t,
-                    audio_layer: n,
-                });
-            } else if (e === T.TBI.VOICE_ACTIVITY && s !== t) {
-                let e = A.Ay.getMediaEngine().getAudioSubsystem(),
-                    n = A.Ay.getMediaEngine().getAudioLayer(),
-                    r = f.Ay.getVoiceChannelId(),
-                    a = null != r ? E.A.getChannel(r) : null,
-                    l = O();
-                p.default.track(T.HAw.VOICE_ACTIVITY_THRESHOLD_CHANGED, {
-                    location_stack: i,
-                    voice_channel_type: a?.type,
-                    input_device_name: l,
-                    audio_subsystem: e,
-                    audio_layer: n,
-                    old_threshold: s.threshold,
-                    new_threshold: t.threshold,
-                    old_auto_threshold: s.autoThreshold,
-                    new_auto_threshold: t.autoThreshold,
-                });
-            }
-        },
-        setBypassSystemInputProcessing(e, t) {
-            b() || a.h.dispatch({ type: "AUDIO_SET_BYPASS_SYSTEM_INPUT_PROCESSING", bypassEnabled: e, location: t });
-        },
-        setInputVolume(e) {
-            let { analyticsLocations: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            if (b()) return;
-            a.h.dispatch({ type: "AUDIO_SET_INPUT_VOLUME", volume: e });
-            let n = f.Ay.getVoiceChannelId(),
-                i = null != n ? E.A.getChannel(n) : null;
-            p.default.track(T.HAw.MEDIA_INPUT_VOLUME_CHANGED, {
-                volume: e,
-                location_stack: t,
-                voice_channel_type: i?.type,
-            });
-        },
-        setOutputVolume(e) {
-            let { analyticsLocations: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            if (b()) return;
-            a.h.dispatch({ type: "AUDIO_SET_OUTPUT_VOLUME", volume: e });
-            let n = f.Ay.getVoiceChannelId(),
-                i = null != n ? E.A.getChannel(n) : null;
-            p.default.track(T.HAw.MEDIA_OUTPUT_VOLUME_CHANGED, {
-                volume: e,
-                location_stack: t,
-                voice_channel_type: i?.type,
-            });
-        },
-        setInputDevice(e) {
-            let { location: t, analyticsLocations: n } =
-                arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            if (b()) return;
-            let i = A.Ay.getInputDeviceId();
-            ((null != t || null != n) &&
-                R(A.Ay.getInputDevices(), i, e, "Audio Input", { location: t, analyticsLocations: n }),
-                a.h.dispatch({ type: "AUDIO_SET_INPUT_DEVICE", id: e, oldId: i }),
-                C());
-        },
-        setOutputDevice(e) {
-            let { location: t, analyticsLocations: n } =
-                arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            if (b()) return;
-            let i = A.Ay.getOutputDeviceId();
-            ((null != t || null != n) &&
-                R(A.Ay.getOutputDevices(), i, e, "Audio Output", { location: t, analyticsLocations: n }),
-                a.h.dispatch({ type: "AUDIO_SET_OUTPUT_DEVICE", id: e, oldId: i }),
-                C());
-        },
-        setVideoDevice(e) {
-            let { location: t, analyticsLocations: n } =
-                arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            if (b()) return;
-            let i = A.Ay.getVideoDeviceId();
-            ((null != t || null != n) &&
-                R(A.Ay.getVideoDevices(), i, e, "Video", { location: t, analyticsLocations: n }),
-                a.h.dispatch({ type: "MEDIA_ENGINE_SET_VIDEO_DEVICE", id: e, oldId: i }));
-        },
-        setActiveInputProfile(e) {
-            let { analyticsLocations: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            b() ||
-                ((0, c.A)("active_input_profile", e, A.Ay.getActiveInputProfile() ?? void 0, t),
-                a.h.dispatch({ type: "AUDIO_SET_ACTIVE_INPUT_PROFILE", inputProfile: e }));
-        },
-        setEchoCancellation(e, t) {
-            b() || a.h.dispatch({ type: "AUDIO_SET_ECHO_CANCELLATION", enabled: e, location: t });
-        },
-        setSidechainCompression(e) {
-            let { analyticsLocations: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            b() ||
-                ((0, c.A)("stream_attenuation_enabled", e, A.Ay.getSidechainCompression(), t),
-                a.h.dispatch({ type: "AUDIO_SET_SIDECHAIN_COMPRESSION", enabled: e }));
-        },
-        setSidechainCompressionStrength(e) {
-            let { analyticsLocations: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            b() ||
-                ((0, c.A)("stream_attenuation_strength", e, A.Ay.getSidechainCompressionStrength(), t),
-                a.h.dispatch({ type: "AUDIO_SET_SIDECHAIN_COMPRESSION_STRENGTH", strength: e }));
-        },
-        setLoopback(e, t) {
-            b() || a.h.dispatch({ type: "AUDIO_SET_LOOPBACK", loopbackReason: e, enabled: t });
-        },
-        setNoiseSuppression(e, t) {
-            b() || a.h.dispatch({ type: "AUDIO_SET_NOISE_SUPPRESSION", enabled: e, location: t });
-        },
-        setNoiseCancellation(e, t) {
-            b() ||
-                (a.h.dispatch({ type: "AUDIO_SET_NOISE_CANCELLATION", enabled: e, location: t }),
-                a.h.dispatch({ type: "AUDIO_SET_NOISE_SUPPRESSION", enabled: !e, location: t }));
-        },
-        setAutomaticGainControl(e, t) {
-            b() || a.h.dispatch({ type: "AUDIO_SET_AUTOMATIC_GAIN_CONTROL", enabled: e, location: t });
-        },
-        setAttenuation(e, t, n) {
-            if (!b()) {
-                let i, r, s;
-                ((i = A.Ay.getAttenuation()),
-                    (r = A.Ay.getAttenuateWhileSpeakingSelf()),
-                    (s = A.Ay.getAttenuateWhileSpeakingOthers()),
-                    i !== e
-                        ? (0, c.A)("global_attenuation_strength", e, i)
-                        : r !== t
-                          ? (0, c.A)("global_attenuation_for_self_speak_enabled", t, r)
-                          : s !== n && (0, c.A)("global_attenuation_for_other_speak_enabled", n, s),
+    { enable: D, isNotSupported: b, trackToggleSelfMute: v, trackToggleSelfDeaf: P } = (y = n(401124));
+n.d(
+    t,
+    {},
+    {
+        default: {
+            enable: D,
+            toggleSelfMute() {
+                let {
+                    context: e = S.x.DEFAULT,
+                    syncRemote: t = !0,
+                    usedKeybind: n = !1,
+                    playSoundEffect: i = !0,
+                    location: r,
+                } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+                return b()
+                    ? Promise.resolve()
+                    : (v({ usedKeybind: n, location: r }),
+                        (i = i && !A.Ay.hasActiveSystemTelecomCall()),
+                        I.default.getCurrentUser()?.isStaff() && N.info("Toggling self mute"),
+                        A.Ay.isEnabled())
+                      ? a.h.dispatch({ type: "AUDIO_TOGGLE_SELF_MUTE", context: e, syncRemote: t, playSoundEffect: i })
+                      : this.enable(!0);
+            },
+            setSelfMute(e, t) {
+                let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+                b() ||
+                    ((n = n && !A.Ay.hasActiveSystemTelecomCall()),
+                    I.default.getCurrentUser()?.isStaff() && N.info("Setting self mute", t),
+                    a.h.dispatch({ type: "AUDIO_SET_SELF_MUTE", context: e, mute: t, playSoundEffect: n }));
+            },
+            setTemporarySelfMute(e) {
+                b() ||
+                    (I.default.getCurrentUser()?.isStaff() && N.info("Setting temporary self mute", e),
+                    a.h.dispatch({ type: "AUDIO_SET_TEMPORARY_SELF_MUTE", mute: e }));
+            },
+            toggleSelfDeaf() {
+                let {
+                    context: e = S.x.DEFAULT,
+                    syncRemote: t = !0,
+                    usedKeybind: n = !1,
+                    location: i,
+                } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+                b() ||
+                    (P({ usedKeybind: n, location: i }),
+                    a.h.dispatch({ type: "AUDIO_TOGGLE_SELF_DEAF", context: e, syncRemote: t }));
+            },
+            toggleLocalMute(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.x.DEFAULT;
+                b() || a.h.dispatch({ type: "AUDIO_TOGGLE_LOCAL_MUTE", context: t, userId: e });
+            },
+            toggleLocalSoundboardMute(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.x.DEFAULT;
+                a.h.dispatch({ type: "AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE", context: t, userId: e });
+            },
+            setDisableLocalVideo(e, t) {
+                let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : S.x.DEFAULT,
+                    i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
+                    r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+                b() ||
                     a.h.dispatch({
-                        type: "AUDIO_SET_ATTENUATION",
-                        attenuation: e,
-                        attenuateWhileSpeakingSelf: t,
-                        attenuateWhileSpeakingOthers: n,
-                    }));
-            }
+                        type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
+                        context: n,
+                        userId: e,
+                        videoToggleState: t,
+                        persist: i,
+                        isAutomatic: r,
+                    });
+            },
+            setLocalVolume(e, t) {
+                let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : S.x.DEFAULT,
+                    i = (0, d.z)(t, n);
+                (a.h.dispatch({ type: "AUDIO_SET_LOCAL_VOLUME", context: n, userId: e, volume: i }), L(e, n, i));
+            },
+            setSpatialAudioOverrides(e) {
+                a.h.dispatch({ type: "AUDIO_SET_SPATIAL_AUDIO_OVERRIDES", overrides: e });
+            },
+            setSpatialAudioEnabled(e) {
+                a.h.dispatch({ type: "AUDIO_SET_SPATIAL_AUDIO_ENABLED", enabled: e });
+            },
+            setSpatialAudio(e, t) {
+                if (b()) return;
+                let n = o.A.isSpatialAudioEnabled();
+                ((0, c.A)("spatial_audio_enabled", e, n, t), this.setSpatialAudioEnabled(e));
+            },
+            setLocalPan(e, t, n) {
+                let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : S.x.DEFAULT;
+                a.h.dispatch({ type: "AUDIO_SET_LOCAL_PAN", context: i, userId: e, left: t, right: n });
+            },
+            setMode(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : S.x.DEFAULT,
+                    { analyticsLocations: i } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+                if (b()) return;
+                let r = e !== A.Ay.getMode(),
+                    s = A.Ay.getModeOptions(n);
+                if ((a.h.dispatch({ type: "AUDIO_SET_MODE", context: n, mode: e, options: { ...s, ...t } }), r)) {
+                    let t = A.Ay.getMediaEngine().getAudioSubsystem(),
+                        n = A.Ay.getMediaEngine().getAudioLayer(),
+                        r = f.Ay.getVoiceChannelId(),
+                        a = null != r ? E.A.getChannel(r) : null,
+                        s = O();
+                    p.default.track(T.HAw.VOICE_ACTIVATION_MODE_CHANGED, {
+                        mode: e,
+                        location_stack: i,
+                        voice_channel_type: a?.type,
+                        input_device_name: s,
+                        audio_subsystem: t,
+                        audio_layer: n,
+                    });
+                } else if (e === T.TBI.VOICE_ACTIVITY && s !== t) {
+                    let e = A.Ay.getMediaEngine().getAudioSubsystem(),
+                        n = A.Ay.getMediaEngine().getAudioLayer(),
+                        r = f.Ay.getVoiceChannelId(),
+                        a = null != r ? E.A.getChannel(r) : null,
+                        l = O();
+                    p.default.track(T.HAw.VOICE_ACTIVITY_THRESHOLD_CHANGED, {
+                        location_stack: i,
+                        voice_channel_type: a?.type,
+                        input_device_name: l,
+                        audio_subsystem: e,
+                        audio_layer: n,
+                        old_threshold: s.threshold,
+                        new_threshold: t.threshold,
+                        old_auto_threshold: s.autoThreshold,
+                        new_auto_threshold: t.autoThreshold,
+                    });
+                }
+            },
+            setBypassSystemInputProcessing(e, t) {
+                b() ||
+                    a.h.dispatch({ type: "AUDIO_SET_BYPASS_SYSTEM_INPUT_PROCESSING", bypassEnabled: e, location: t });
+            },
+            setInputVolume(e) {
+                let { analyticsLocations: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                if (b()) return;
+                a.h.dispatch({ type: "AUDIO_SET_INPUT_VOLUME", volume: e });
+                let n = f.Ay.getVoiceChannelId(),
+                    i = null != n ? E.A.getChannel(n) : null;
+                p.default.track(T.HAw.MEDIA_INPUT_VOLUME_CHANGED, {
+                    volume: e,
+                    location_stack: t,
+                    voice_channel_type: i?.type,
+                });
+            },
+            setOutputVolume(e) {
+                let { analyticsLocations: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                if (b()) return;
+                a.h.dispatch({ type: "AUDIO_SET_OUTPUT_VOLUME", volume: e });
+                let n = f.Ay.getVoiceChannelId(),
+                    i = null != n ? E.A.getChannel(n) : null;
+                p.default.track(T.HAw.MEDIA_OUTPUT_VOLUME_CHANGED, {
+                    volume: e,
+                    location_stack: t,
+                    voice_channel_type: i?.type,
+                });
+            },
+            setInputDevice(e) {
+                let { location: t, analyticsLocations: n } =
+                    arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                if (b()) return;
+                let i = A.Ay.getInputDeviceId();
+                ((null != t || null != n) &&
+                    R(A.Ay.getInputDevices(), i, e, "Audio Input", { location: t, analyticsLocations: n }),
+                    a.h.dispatch({ type: "AUDIO_SET_INPUT_DEVICE", id: e, oldId: i }),
+                    C());
+            },
+            setOutputDevice(e) {
+                let { location: t, analyticsLocations: n } =
+                    arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                if (b()) return;
+                let i = A.Ay.getOutputDeviceId();
+                ((null != t || null != n) &&
+                    R(A.Ay.getOutputDevices(), i, e, "Audio Output", { location: t, analyticsLocations: n }),
+                    a.h.dispatch({ type: "AUDIO_SET_OUTPUT_DEVICE", id: e, oldId: i }),
+                    C());
+            },
+            setVideoDevice(e) {
+                let { location: t, analyticsLocations: n } =
+                    arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                if (b()) return;
+                let i = A.Ay.getVideoDeviceId();
+                ((null != t || null != n) &&
+                    R(A.Ay.getVideoDevices(), i, e, "Video", { location: t, analyticsLocations: n }),
+                    a.h.dispatch({ type: "MEDIA_ENGINE_SET_VIDEO_DEVICE", id: e, oldId: i }));
+            },
+            setActiveInputProfile(e) {
+                let { analyticsLocations: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                b() ||
+                    ((0, c.A)("active_input_profile", e, A.Ay.getActiveInputProfile() ?? void 0, t),
+                    a.h.dispatch({ type: "AUDIO_SET_ACTIVE_INPUT_PROFILE", inputProfile: e }));
+            },
+            setEchoCancellation(e, t) {
+                b() || a.h.dispatch({ type: "AUDIO_SET_ECHO_CANCELLATION", enabled: e, location: t });
+            },
+            setSidechainCompression(e) {
+                let { analyticsLocations: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                b() ||
+                    ((0, c.A)("stream_attenuation_enabled", e, A.Ay.getSidechainCompression(), t),
+                    a.h.dispatch({ type: "AUDIO_SET_SIDECHAIN_COMPRESSION", enabled: e }));
+            },
+            setSidechainCompressionStrength(e) {
+                let { analyticsLocations: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                b() ||
+                    ((0, c.A)("stream_attenuation_strength", e, A.Ay.getSidechainCompressionStrength(), t),
+                    a.h.dispatch({ type: "AUDIO_SET_SIDECHAIN_COMPRESSION_STRENGTH", strength: e }));
+            },
+            setLoopback(e, t) {
+                b() || a.h.dispatch({ type: "AUDIO_SET_LOOPBACK", loopbackReason: e, enabled: t });
+            },
+            setNoiseSuppression(e, t) {
+                b() || a.h.dispatch({ type: "AUDIO_SET_NOISE_SUPPRESSION", enabled: e, location: t });
+            },
+            setNoiseCancellation(e, t) {
+                b() ||
+                    (a.h.dispatch({ type: "AUDIO_SET_NOISE_CANCELLATION", enabled: e, location: t }),
+                    a.h.dispatch({ type: "AUDIO_SET_NOISE_SUPPRESSION", enabled: !e, location: t }));
+            },
+            setAutomaticGainControl(e, t) {
+                b() || a.h.dispatch({ type: "AUDIO_SET_AUTOMATIC_GAIN_CONTROL", enabled: e, location: t });
+            },
+            setAttenuation(e, t, n) {
+                if (!b()) {
+                    let i, r, s;
+                    ((i = A.Ay.getAttenuation()),
+                        (r = A.Ay.getAttenuateWhileSpeakingSelf()),
+                        (s = A.Ay.getAttenuateWhileSpeakingOthers()),
+                        i !== e
+                            ? (0, c.A)("global_attenuation_strength", e, i)
+                            : r !== t
+                              ? (0, c.A)("global_attenuation_for_self_speak_enabled", t, r)
+                              : s !== n && (0, c.A)("global_attenuation_for_other_speak_enabled", n, s),
+                        a.h.dispatch({
+                            type: "AUDIO_SET_ATTENUATION",
+                            attenuation: e,
+                            attenuateWhileSpeakingSelf: t,
+                            attenuateWhileSpeakingOthers: n,
+                        }));
+                }
+            },
+            setQoS(e) {
+                b() ||
+                    ((0, c.A)("quality_of_service_packets_enabled", e, A.Ay.getQoS()),
+                    a.h.dispatch({ type: "AUDIO_SET_QOS", enabled: e }));
+            },
+            reset() {
+                b() || a.h.dispatch({ type: "AUDIO_RESET" });
+            },
+            setSilenceWarning(e) {
+                b() ||
+                    ((0, c.A)("silence_warning_enabled", e, A.Ay.getEnableSilenceWarning()),
+                    a.h.dispatch({ type: "AUDIO_SET_DISPLAY_SILENCE_WARNING", enabled: e }));
+            },
+            async setDebugLogging(e) {
+                b() ||
+                    (await (0, c.A)("debug_logging_enabled", e, A.Ay.getDebugLogging()),
+                    a.h.dispatch({ type: "AUDIO_SET_DEBUG_LOGGING", enabled: e }));
+            },
+            setVideoHook(e) {
+                b() ||
+                    ((0, c.A)("video_hook_enabled", e, A.Ay.getVideoHook()),
+                    a.h.dispatch({ type: "MEDIA_ENGINE_SET_VIDEO_HOOK", enabled: e }));
+            },
+            setExperimentalSoundshare(e) {
+                b() ||
+                    ((0, c.A)("experimental_soundshare_enabled", e, A.Ay.getExperimentalSoundshare()),
+                    a.h.dispatch({ type: "MEDIA_ENGINE_SET_EXPERIMENTAL_SOUNDSHARE", enabled: e }));
+            },
+            setUseSystemScreensharePicker(e) {
+                b() ||
+                    ((0, c.A)("system_screenshare_picker_enabled", e, A.Ay.getUseSystemScreensharePicker()),
+                    a.h.dispatch({ type: "MEDIA_ENGINE_SET_USE_SYSTEM_SCREENSHARE_PICKER", enabled: e }));
+            },
+            async setAudioSubsystem(e) {
+                b() ||
+                    (await (0, c.A)("audio_subsystem", e, A.Ay.getAudioSubsystem()),
+                    a.h.dispatch({ type: "AUDIO_SET_SUBSYSTEM", subsystem: e }));
+            },
+            setVideoEnabled(e) {
+                (e && (0, u.PX)(), a.h.dispatch({ type: "MEDIA_ENGINE_SET_VIDEO_ENABLED", enabled: e }));
+            },
+            setGoLiveSource(e) {
+                (e?.qualityOptions != null &&
+                    (0, m.K2)(
+                        e.qualityOptions.preset,
+                        e.qualityOptions.resolution,
+                        e.qualityOptions.frameRate,
+                        e.desktopSettings?.sound,
+                    ),
+                    a.h.dispatch({ type: "MEDIA_ENGINE_SET_GO_LIVE_SOURCE", settings: e }));
+            },
+            setAecDump(e) {
+                b() ||
+                    ((0, c.A)("diagnostic_audio_recording_enabled", e, A.Ay.getAecDump()),
+                    a.h.dispatch({ type: "MEDIA_ENGINE_SET_AEC_DUMP", enabled: e }));
+            },
+            interact() {
+                b() || a.h.dispatch({ type: "MEDIA_ENGINE_INTERACTION_REQUIRED", required: !1 });
+            },
+            setEnableHardwareMuteNotice(e) {
+                b() || a.h.dispatch({ type: "MEDIA_ENGINE_SET_ENABLE_HARDWARE_MUTE_NOTICE", enabled: e });
+            },
+            setKrispSuppressionLevel(e) {
+                b() || a.h.dispatch({ type: "AUDIO_SET_KRISP_SUPPRESSION_LEVEL", level: e });
+            },
+            setKrispModelOverride(e) {
+                !b() &&
+                    (a.h.dispatch({ type: "AUDIO_SET_KRISP_MODEL_OVERRIDE", model: e }),
+                    A.Ay.getNoiseCancellation() && (this.setNoiseCancellation(!1), this.setNoiseCancellation(!0)));
+            },
+            setNoiseCancellationEnableStats(e) {
+                b() || a.h.dispatch({ type: "AUDIO_SET_NOISE_CANCELLATION_ENABLE_STATS", enabled: e });
+            },
+            setOpenH264Enabled(e) {
+                b() || a.h.dispatch({ type: "MEDIA_ENGINE_SET_OPENH264_ENABLED", enabled: e });
+            },
+            resetMediaEngineSettings: (e) => a.h.dispatch({ type: "MEDIA_ENGINE_RESET_SETTINGS", overrides: e }),
         },
-        setQoS(e) {
-            b() ||
-                ((0, c.A)("quality_of_service_packets_enabled", e, A.Ay.getQoS()),
-                a.h.dispatch({ type: "AUDIO_SET_QOS", enabled: e }));
-        },
-        reset() {
-            b() || a.h.dispatch({ type: "AUDIO_RESET" });
-        },
-        setSilenceWarning(e) {
-            b() ||
-                ((0, c.A)("silence_warning_enabled", e, A.Ay.getEnableSilenceWarning()),
-                a.h.dispatch({ type: "AUDIO_SET_DISPLAY_SILENCE_WARNING", enabled: e }));
-        },
-        async setDebugLogging(e) {
-            b() ||
-                (await (0, c.A)("debug_logging_enabled", e, A.Ay.getDebugLogging()),
-                a.h.dispatch({ type: "AUDIO_SET_DEBUG_LOGGING", enabled: e }));
-        },
-        setVideoHook(e) {
-            b() ||
-                ((0, c.A)("video_hook_enabled", e, A.Ay.getVideoHook()),
-                a.h.dispatch({ type: "MEDIA_ENGINE_SET_VIDEO_HOOK", enabled: e }));
-        },
-        setExperimentalSoundshare(e) {
-            b() ||
-                ((0, c.A)("experimental_soundshare_enabled", e, A.Ay.getExperimentalSoundshare()),
-                a.h.dispatch({ type: "MEDIA_ENGINE_SET_EXPERIMENTAL_SOUNDSHARE", enabled: e }));
-        },
-        setUseSystemScreensharePicker(e) {
-            b() ||
-                ((0, c.A)("system_screenshare_picker_enabled", e, A.Ay.getUseSystemScreensharePicker()),
-                a.h.dispatch({ type: "MEDIA_ENGINE_SET_USE_SYSTEM_SCREENSHARE_PICKER", enabled: e }));
-        },
-        async setAudioSubsystem(e) {
-            b() ||
-                (await (0, c.A)("audio_subsystem", e, A.Ay.getAudioSubsystem()),
-                a.h.dispatch({ type: "AUDIO_SET_SUBSYSTEM", subsystem: e }));
-        },
-        setVideoEnabled(e) {
-            (e && (0, u.PX)(), a.h.dispatch({ type: "MEDIA_ENGINE_SET_VIDEO_ENABLED", enabled: e }));
-        },
-        setGoLiveSource(e) {
-            (e?.qualityOptions != null &&
-                (0, m.K2)(
-                    e.qualityOptions.preset,
-                    e.qualityOptions.resolution,
-                    e.qualityOptions.frameRate,
-                    e.desktopSettings?.sound,
-                ),
-                a.h.dispatch({ type: "MEDIA_ENGINE_SET_GO_LIVE_SOURCE", settings: e }));
-        },
-        setAecDump(e) {
-            b() ||
-                ((0, c.A)("diagnostic_audio_recording_enabled", e, A.Ay.getAecDump()),
-                a.h.dispatch({ type: "MEDIA_ENGINE_SET_AEC_DUMP", enabled: e }));
-        },
-        interact() {
-            b() || a.h.dispatch({ type: "MEDIA_ENGINE_INTERACTION_REQUIRED", required: !1 });
-        },
-        setEnableHardwareMuteNotice(e) {
-            b() || a.h.dispatch({ type: "MEDIA_ENGINE_SET_ENABLE_HARDWARE_MUTE_NOTICE", enabled: e });
-        },
-        setKrispSuppressionLevel(e) {
-            b() || a.h.dispatch({ type: "AUDIO_SET_KRISP_SUPPRESSION_LEVEL", level: e });
-        },
-        setKrispModelOverride(e) {
-            !b() &&
-                (a.h.dispatch({ type: "AUDIO_SET_KRISP_MODEL_OVERRIDE", model: e }),
-                A.Ay.getNoiseCancellation() && (this.setNoiseCancellation(!1), this.setNoiseCancellation(!0)));
-        },
-        setNoiseCancellationEnableStats(e) {
-            b() || a.h.dispatch({ type: "AUDIO_SET_NOISE_CANCELLATION_ENABLE_STATS", enabled: e });
-        },
-        setOpenH264Enabled(e) {
-            b() || a.h.dispatch({ type: "MEDIA_ENGINE_SET_OPENH264_ENABLED", enabled: e });
-        },
-        resetMediaEngineSettings: (e) => a.h.dispatch({ type: "MEDIA_ENGINE_RESET_SETTINGS", overrides: e }),
-    };
+    },
+);

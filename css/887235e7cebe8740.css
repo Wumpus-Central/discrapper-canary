@@ -1,0 +1,68 @@
+.gameCover_R0hw0B {
+    aspect-ratio: 3/4;
+    box-sizing: border-box
+}
+
+.coverContainer_R0hw0B {
+    min-height: 0;
+    position: relative;
+    z-index: 0
+}
+
+.profileWidgetCover_R0hw0B,
+.widgetArtwork_R0hw0B {
+    border-radius: var(--radius-sm)
+}
+
+.widgetArtwork_R0hw0B {
+    height: 100%;
+    width: 100%
+}
+
+.gameCoverImage_R0hw0B {
+    position: relative
+}
+
+.gameCoverImage_R0hw0B:before {
+    border-radius: inherit;
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: background 50ms ease-in;
+    z-index: 1
+}
+
+.clickable_R0hw0B {
+    cursor: pointer
+}
+
+.clickable_R0hw0B:hover .gameCoverImage_R0hw0B:before {
+    background: linear-gradient(150deg, hsla(0, 0%, 100%, .2), hsla(0, 0%, 100%, 0) 40%), linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2));
+    transition: background .15s ease-out
+}
+
+.loadingCover_R0hw0B {
+    background-color: var(--background-mod-muted)
+}
+
+.gameCoverImage_R0hw0B,
+.loadingCover_R0hw0B {
+    border-radius: var(--radius-sm);
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, .16)
+}
+
+.full-motion .hoverActiveEffect_R0hw0B {
+    transition: transform .15s ease-in-out;
+    will-change: transform
+}
+
+.full-motion .hoverActiveEffect_R0hw0B:hover {
+    transform: scale(1.0225)
+}
+
+.full-motion .hoverActiveEffect_R0hw0B:active {
+    transform: scale(.9775)
+}
+
+/*# sourceMappingURL=887235e7cebe8740.css.map*/

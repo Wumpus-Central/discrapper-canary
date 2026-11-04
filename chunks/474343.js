@@ -1,4 +1,4 @@
-(n.d(t, { A: () => u }), n(938796));
+n(938796);
 var i = n(821418),
     r = n(665260),
     a = n(439372),
@@ -20,3 +20,4 @@ class c extends a.A {
     actions = { INVITE_ACCEPT_SUCCESS: d };
 }
 let u = new c();
+n.d(t, {}, { A: u });

@@ -25,9 +25,4 @@ function l(e) {
     }
     return i[e];
 }
-((s.keys = function () {
-    return Object.keys(i);
-}),
-    (s.resolve = l),
-    (e.exports = s),
-    (s.id = 12303));
+((s.keys = () => Object.keys(i)), (s.resolve = l), (e.exports = s), (s.id = 12303));

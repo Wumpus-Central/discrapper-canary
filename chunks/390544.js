@@ -1,4 +1,3 @@
-i.d(t, { M: () => r });
 var s,
     r =
         (((s = {}).STARTING = "starting"),
@@ -10,3 +9,4 @@ var s,
         (s.DELETED = "deleted"),
         (s.PROVIDER_ERRORED = "provider_errored"),
         s);
+i.d(t, {}, { M: r });

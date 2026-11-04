@@ -1,4 +1,3 @@
-n.d(t, { Ay: () => c, O$: () => d, Ur: () => l, hU: () => o });
 var i = n(955572),
     r = n(775602),
     a = n(652215);
@@ -9,5 +8,5 @@ function s(e) {
 }
 let l = { binds: ["mod+plus"], comboKeysBindGlobal: !0, action: () => ((0, i.Qp)(s(1)), !1) },
     o = { binds: ["mod+minus"], comboKeysBindGlobal: !0, action: () => ((0, i.Qp)(s(-1)), !1) },
-    d = { binds: ["mod+0"], comboKeysBindGlobal: !0, action: () => ((0, i.Qp)(a.hH7.ZOOM_DEFAULT), !1) },
-    c = { ZOOM_IN: l, ZOOM_OUT: o, ZOOM_RESET: d };
+    d = { binds: ["mod+0"], comboKeysBindGlobal: !0, action: () => ((0, i.Qp)(a.hH7.ZOOM_DEFAULT), !1) };
+n.d(t, {}, { Ay: { ZOOM_IN: l, ZOOM_OUT: o, ZOOM_RESET: d }, O$: d, Ur: l, hU: o });

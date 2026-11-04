@@ -1,4 +1,3 @@
-r.d(t, { A: () => g });
 var n = r(477900),
     i = r(582128),
     l = r(503698),
@@ -10,14 +9,14 @@ var n = r(477900),
     d = r(497685),
     _ = r(996566),
     f = r(594061),
-    E = r(625494),
+    E = r(188567),
     I = r(652215),
     h = r(650583),
-    S = r(105292),
+    S = r(792996),
     m = r(47299);
 let g = i.memo(function (e) {
-    let { width: t, height: r, src: l, gifSrc: g, url: p, format: R, className: F } = e,
-        [G, y] = i.useState(!1),
+    let { width: t, height: r, src: l, gifSrc: g, url: p, format: R, className: y } = e,
+        [F, G] = i.useState(!1),
         [C, A] = i.useState(!1),
         T = (0, _.km)((0, d.xo)(p), C),
         w = T ? S.intl.string(S.t["5/NS74"]) : S.intl.string(S.t.nIH0v8),
@@ -25,32 +24,32 @@ let g = i.memo(function (e) {
     function N(e) {
         (e.preventDefault(),
             e.stopPropagation(),
-            y(!0),
+            G(!0),
             T
                 ? (0, d.Tr)(p)
                 : ((0, d.wg)({ url: p, src: l, gifSrc: g, width: t, height: r, format: R }),
                   E._.dispatch(I.jej.FAVORITE_GIF)));
     }
-    function v() {
+    function U() {
         ((0, f.cE)(), A(!0));
     }
     return (
         i.useEffect(() => {
-            if (!G) return;
+            if (!F) return;
             let e = setTimeout(() => {
-                y(!1);
+                G(!1);
             }, 500);
             return () => clearTimeout(e);
-        }, [G]),
+        }, [F]),
         (0, n.jsx)(u.m, {
             text: w,
             children: (0, n.jsx)(c.D, {
                 "aria-label": w,
                 ignoreKeyPress: !0,
-                className: o()(F, m.jj, { [m.wH]: T, [m.TV]: G }),
+                className: o()(y, m.jj, { [m.wH]: T, [m.TV]: F }),
                 onMouseDown: (e) => e.preventDefault(),
-                onMouseEnter: v,
-                onFocus: v,
+                onMouseEnter: U,
+                onFocus: U,
                 onClick: N,
                 onKeyDown: function (e) {
                     (e.key === h.dh.ENTER || e.key === h.dh.SPACE) && N(e);
@@ -67,3 +66,4 @@ let g = i.memo(function (e) {
         })
     );
 });
+r.d(t, {}, { A: g });

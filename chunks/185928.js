@@ -1,4 +1,3 @@
-n.d(t, { Fc: () => o, Q_: () => l, dP: () => c, qj: () => d });
 var i,
     r,
     a = n(873298),
@@ -33,4 +32,5 @@ let c = {
     a.Sx.LIGHT,
     s.NJ8.LIGHT,
     a.Sx.MIDNIGHT,
-    s.NJ8.ONYX);
+    s.NJ8.ONYX,
+    n.d(t, {}, { Fc: o, Q_: l, dP: c, qj: d }));

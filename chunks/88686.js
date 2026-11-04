@@ -1,4 +1,3 @@
-n.d(t, { W: () => a, u: () => s });
 var i,
     r,
     a =
@@ -25,3 +24,4 @@ var i,
         (r.MUTUAL_FRIENDS_LIST = "mutual_friends_list"),
         (r.FRIENDS_LIST = "friends_list"),
         r);
+n.d(t, {}, { W: a, u: s });

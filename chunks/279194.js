@@ -1,2 +1,1 @@
-n.d(t, { qx: () => i });
-let i = "domainMigrationSuccess";
+n.d(t, {}, { qx: "domainMigrationSuccess" });

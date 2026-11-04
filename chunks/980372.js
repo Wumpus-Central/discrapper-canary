@@ -1,0 +1,89 @@
+(n.d(t, { kF: () => C, Oc: () => O, GY: () => L, M$: () => y, Fv: () => R }), n(667532));
+var i = n(310953),
+    r = n(473529),
+    a = n(335934),
+    s = n(380335),
+    l = n(157550),
+    o = n(366811),
+    d = n(253932),
+    c = n(189081),
+    u = n(839067),
+    _ = n(645959),
+    E = n(403362),
+    A = n(265422),
+    h = n(652215),
+    f = n(746080);
+let I = () => {
+    let e = s.A.getMessageRequestsCount() > 0 || l.A.getSpamChannelsCount() > 0;
+    return [
+        h.BVt.FRIENDS,
+        (0, a.HF)("navigateToChannel") ? h.BVt.ICYMI : null,
+        c.A.hasLibraryApplication() && !d.l_.getSetting() ? h.BVt.APPLICATION_LIBRARY : null,
+        e ? h.BVt.MESSAGE_REQUESTS : null,
+        h.BVt.APPLICATION_STORE,
+        h.BVt.COLLECTIBLES_SHOP,
+        d.dm.getSetting() ? h.BVt.FAMILY_CENTER : null,
+        h.BVt.QUEST_HOME,
+    ].filter(E.Vq);
+};
+function p() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+        t = o.A.getState().guildId;
+    if (null == t)
+        !(function (e) {
+            var t, n;
+            let { channelId: i, path: r, basePath: a } = o.A.getState(),
+                s = _.A.getPrivateChannelIds(),
+                l = __OVERLAY__ ? s : [...I(), ...s],
+                d =
+                    (null == i ? ((t = r ?? a), I().findIndex((e) => t.startsWith(e))) : null != i ? l.indexOf(i) : 0) +
+                    e;
+            d >= l.length ? (d = 0) : d < 0 && (d = l.length - 1);
+            let c = l[d];
+            if (I().includes(c)) {
+                let e;
+                ((e = u.A.getCurrentRoute()), c === h.BVt.APPLICATION_STORE && null != e ? (0, A.a)(e) : (0, A.a)(c));
+            } else ((n = h.ME), (0, A.i)(n, c));
+        })(e);
+    else {
+        var n, a, s;
+        let l, d;
+        ((l = o.A.getState().channelId),
+            (d = (0, i.A)(t, { withCurrentVoiceChannel: !0 }).map((e) => e.id)),
+            (0, r.K)(t) && d.unshift(f.VV.GUILD_HOME),
+            (n = (null != l ? d.indexOf(l) : -1) + e),
+            (a = d.length),
+            (s = d[n < 0 ? a - 1 : n >= a ? 0 : n]),
+            (0, A.i)(t, s));
+    }
+}
+var m = n(963169),
+    T = n(345942),
+    g = n(309010),
+    S = n(967198),
+    N = n(723702);
+let C = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (p(), !1) },
+    O = { binds: ["alt+up"], comboKeysBindGlobal: !0, action: () => (p(-1), !1) },
+    R = {
+        binds: ["mod+alt+right"],
+        comboKeysBindGlobal: !0,
+        action() {
+            let e;
+            if (null != S.A.getGuildId()) e = h.ME;
+            else {
+                let t = S.A.getLastSelectedGuildId();
+                null != t && ((e = t), (0, A.i)(t, g.Ay.getChannelId(t)));
+            }
+            return (null != e && (0, T.u)(e), !1);
+        },
+    },
+    L = {
+        binds: (0, N.cX)() || (0, N.Sn)() ? ["mod+["] : ["alt+left"],
+        comboKeysBindGlobal: !0,
+        action: () => ((0, m.OE)("keybind"), !1),
+    },
+    y = {
+        binds: (0, N.cX)() || (0, N.Sn)() ? ["mod+]"] : ["alt+right"],
+        comboKeysBindGlobal: !0,
+        action: () => ((0, m.Qb)("keybind"), !1),
+    };

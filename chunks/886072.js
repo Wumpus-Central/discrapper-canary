@@ -1,7 +1,7 @@
 e.exports = {
-    kL: "container__0919a",
-    Nr: "card__0919a",
-    Gt: "gameIcon__0919a",
-    Vx: "gameInfo__0919a",
-    qS: "badge__0919a",
+    kL: "container_2D_9Ek",
+    Nr: "card_2D_9Ek",
+    Gt: "gameIcon_2D_9Ek",
+    Vx: "gameInfo_2D_9Ek",
+    qS: "badge_2D_9Ek",
 };

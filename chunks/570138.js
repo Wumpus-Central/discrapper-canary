@@ -1,4 +1,3 @@
-n.d(t, { y: () => r });
 var i,
     r =
         (((i = {}).XBOX = "xbox"),
@@ -11,3 +10,4 @@ var i,
         (i.EMBEDDED = "embedded"),
         (i.META_QUEST = "meta_quest"),
         i);
+n.d(t, {}, { y: r });

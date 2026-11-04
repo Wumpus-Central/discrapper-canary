@@ -1,12 +1,10 @@
-t.d(l, { PE: () => n, mt: () => a, x7: () => u });
 var r,
-    i = t(998218),
-    s = t(652215);
-let n = "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts";
-var a = (((r = {}).YOUTUBE = "YouTube"), (r.TIKTOK = "TikTok"), (r.TWITCH = "Twitch"), r);
-let o = {
+    i = t(998218);
+t(652215);
+var n = (((r = {}).YOUTUBE = "YouTube"), (r.TIKTOK = "TikTok"), (r.TWITCH = "Twitch"), r);
+let s = {
     YouTube: {
-        params: { autoplay: "1", auto_play: "1", pageType: s.NzX },
+        params: { autoplay: "1", auto_play: "1", pageType: "2" },
         dynamicParams: (e) => {
             let { autoMute: l } = e;
             return { mute: l ? "1" : void 0 };
@@ -32,21 +30,29 @@ let o = {
         },
     },
 };
-function u(e, l, t) {
-    let r = o[l],
-        s = i.A.toURLSafe(e ?? "");
-    if (null === s) return "";
-    if (null == r) return s.toString();
-    if (null != r.stripParams) for (let e of r.stripParams) s.searchParams.delete(e);
-    if (null != r.params) for (let e in r.params) s.searchParams.set(e, r.params[e]);
-    if (null != r.appendParams)
-        for (let e in r.appendParams) for (let l of r.appendParams[e]) s.searchParams.append(e, l);
-    if (null != r.dynamicParams) {
-        let e = r.dynamicParams(t);
-        for (let l in e) {
-            let t = e[l];
-            null != t && s.searchParams.set(l, t);
-        }
-    }
-    return s.toString();
-}
+t.d(
+    l,
+    {},
+    {
+        PE: "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts",
+        mt: n,
+        x7: function (e, l, t) {
+            let r = s[l],
+                n = i.A.toURLSafe(e ?? "");
+            if (null === n) return "";
+            if (null == r) return n.toString();
+            if (null != r.stripParams) for (let e of r.stripParams) n.searchParams.delete(e);
+            if (null != r.params) for (let e in r.params) n.searchParams.set(e, r.params[e]);
+            if (null != r.appendParams)
+                for (let e in r.appendParams) for (let l of r.appendParams[e]) n.searchParams.append(e, l);
+            if (null != r.dynamicParams) {
+                let e = r.dynamicParams(t);
+                for (let l in e) {
+                    let t = e[l];
+                    null != t && n.searchParams.set(l, t);
+                }
+            }
+            return n.toString();
+        },
+    },
+);

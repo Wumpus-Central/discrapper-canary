@@ -1,6 +1,1 @@
-e.exports = {
-    jn: "thinkingPanel_ef6489",
-    Dq: "thinkingPanelReasoning_ef6489",
-    bb: "thinkingPanelBody_ef6489",
-    yP: "conjure-reveal-frontier-thinking_ef6489",
-};
+e.exports = { jn: "thinkingPanel_E8xTnT", Dq: "thinkingPanelReasoning_E8xTnT", bb: "thinkingPanelBody_E8xTnT" };

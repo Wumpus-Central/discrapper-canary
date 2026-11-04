@@ -1,6 +1,6 @@
-(n.d(e, { m: () => u, p: () => p }), n(938796));
+n(938796);
 var t = n(665260),
-    S = n(17928),
+    S = n(855986),
     r = n(717125),
     _ = n(734057),
     A = n(71393),
@@ -50,6 +50,13 @@ function p(l) {
         u?.isModeratorReportChannel()
     );
 }
-function u(l) {
-    return (0, S.bG)([i.A, r.A, _.A, A.A], () => p(l, i.A, r.A, _.A, A.A));
-}
+n.d(
+    e,
+    {},
+    {
+        m: function (l) {
+            return (0, S.bG)([i.A, r.A, _.A, A.A], () => p(l, i.A, r.A, _.A, A.A));
+        },
+        p: p,
+    },
+);

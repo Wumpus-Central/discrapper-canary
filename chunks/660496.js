@@ -1,4 +1,3 @@
-n.d(t, { C: () => l });
 var i,
     l =
         (((i = {})[(i.OVERVIEW = 0)] = "OVERVIEW"),
@@ -7,3 +6,4 @@ var i,
         (i[(i.AUTOMOD = 3)] = "AUTOMOD"),
         (i[(i.PERMISSIONS = 4)] = "PERMISSIONS"),
         i);
+n.d(t, {}, { C: l });

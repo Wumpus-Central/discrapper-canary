@@ -1,0 +1,35 @@
+.previewContainer_w__gu5 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    margin-block: 6.5px 0;
+    margin-inline: 2px 3px;
+    min-height: 560px;
+    padding-inline-start: 10px;
+    width: -moz-min-content;
+    width: min-content
+}
+
+.replayButton_w__gu5 {
+    display: flex;
+    height: 24px;
+    margin-block: 15px -8px;
+    margin-inline: 30px 0;
+    width: 149px
+}
+
+.replayButtonText_w__gu5 {
+    font-family: gg sans;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center
+}
+
+.retryIcon_w__gu5 {
+    color: var(--text-default);
+    margin-inline: 6px 3px
+}
+
+/*# sourceMappingURL=c38ca46ab9b13df5.css.map*/

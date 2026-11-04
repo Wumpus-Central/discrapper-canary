@@ -1,0 +1,135 @@
+.modalHeader_wOa7vN {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.modalFooter_wOa7vN {
+    border-top: 1px solid var(--border-subtle)
+}
+
+.modalImage_wOa7vN {
+    margin-bottom: 16px;
+    width: 160px
+}
+
+.infoContent_wOa7vN {
+    padding: 24px
+}
+
+.updateContent_wOa7vN {
+    padding: 24px 16px 16px
+}
+
+.infoList_wOa7vN {
+    display: flex;
+    flex-direction: column;
+    gap: 24px
+}
+
+.infoListItem_wOa7vN {
+    color: var(--text-default);
+    display: flex;
+    gap: 16px
+}
+
+.iconWrapper_wOa7vN {
+    background-color: var(--background-base-lowest);
+    border-radius: 50%;
+    height: 24px;
+    padding: 8px;
+    width: 24px
+}
+
+.deprivateTableBody_wOa7vN {
+    background-color: var(--background-base-lower);
+    border-radius: var(--radius-sm);
+    margin: 0 0 8px;
+    overflow: hidden
+}
+
+.deprivateExplainer_wOa7vN {
+    display: flex;
+    gap: 2px;
+    margin: 8px 0 24px
+}
+
+.selectableChannelCellFirst_wOa7vN {
+    align-items: center;
+    display: flex;
+    height: 32px;
+    max-width: 340px
+}
+
+.selectableChannelCellSecond_wOa7vN {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0
+}
+
+.channelName_wOa7vN {
+    text-overflow: ellipsis
+}
+
+.channelIcon_wOa7vN {
+    color: var(--text-default);
+    flex-shrink: 0;
+    margin-inline-end: 4px
+}
+
+.selectableChannelRow_wOa7vN {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 16px
+}
+
+.selectableChannelRow_wOa7vN:after {
+    background-color: var(--border-subtle);
+    content: "";
+    height: 1px;
+    margin-top: 54px;
+    position: absolute;
+    width: calc(100% - 64px)
+}
+
+.selectableChannelRow_wOa7vN:hover {
+    background-color: var(--background-mod-normal)
+}
+
+.selectableChannelRow_wOa7vN:hover:after {
+    display: none
+}
+
+.selectableChannelRow_wOa7vN:last-child:after {
+    display: none
+}
+
+.selectAllContainer_wOa7vN {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px
+}
+
+.selectAllCheckbox_wOa7vN,
+.selectAllContainer_wOa7vN {
+    align-items: center;
+    display: flex
+}
+
+.selectAllTitle_wOa7vN {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    text-transform: none
+}
+
+.selectAllButton_wOa7vN {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 4px
+}
+
+/*# sourceMappingURL=a63e3c594b1de261.css.map*/

@@ -1,11 +1,10 @@
-n.d(t, { A: () => eu });
 var i = n(477900),
     r = n(582128),
     a = n(284009),
     s = n.n(a),
     l = n(435558),
     o = n.n(l),
-    d = n(17928),
+    d = n(855986),
     c = n(205693),
     u = n(834730),
     _ = n(778712),
@@ -14,8 +13,8 @@ var i = n(477900),
     h = n(951001),
     f = n(398590),
     I = n(793574),
-    p = n(666860),
-    m = n(198052),
+    p = n(149468),
+    m = n(628983),
     T = n(94247),
     g = n(520698),
     S = n(525788),
@@ -27,7 +26,7 @@ var i = n(477900),
     y = n(880144),
     D = n(638480),
     b = n(338771),
-    v = n(72755),
+    v = n(697682),
     P = n(574172),
     M = n(976860),
     U = n(114129),
@@ -40,13 +39,13 @@ var i = n(477900),
     V = n(528057),
     H = n(352018),
     j = n(616356),
-    W = n(280450),
-    Y = n(477653),
+    W = n(46653),
+    Y = n(718197),
     K = n(994500),
     $ = n(287809),
     z = n(803301),
     X = n(531685),
-    q = n(174459),
+    q = n(129230),
     Z = n(562153),
     Q = n(427262),
     J = n(712577),
@@ -123,7 +122,7 @@ class ec extends r.PureComponent {
     };
     handleOpenPopout = () => {
         let { channel: e } = this.props;
-        ((0, N.XJ)(I.A.VIDEO_PIP, N.OP.POPOUT, !0), P.openChannelCallPopout(e));
+        ((0, N.XJ)(I.A.VIDEO_PIP, N.OP.POPOUT, !0), P.d8(e));
     };
     renderBottomLeftControls = () => {
         let { canSeeParticipantName: e } = this.viewProperties;
@@ -271,44 +270,50 @@ class ec extends r.PureComponent {
         );
     }
 }
-function eu(e) {
-    let { channel: t, width: n } = e,
-        r = (0, d.bG)([T.A], () => T.A.getSpeaker(t.id)),
-        a = (0, d.bG)([m.A], () => m.A.getParticipant(t.id, r), [t.id, r]),
-        s = (0, d.bG)([Y.Ay], () => o()(Y.Ay.getVideoDevices()).values().first()),
-        l = (0, d.bG)(
-            [z.A],
-            () =>
-                null != a && a.type !== el.lp.ACTIVITY && a.type !== el.lp.HIDDEN_STREAM
-                    ? z.A.getStreamId(a.user.id, t.getGuildId(), (0, g.A)(a.type))
-                    : null,
-            [a, t],
-        ),
-        u = null == s || s.disabled,
-        _ = !u,
-        E = (0, d.bG)([Y.Ay], () => !u && Y.Ay.isVideoEnabled(), [u]),
-        A = (0, d.bG)([Y.Ay], () => (0, y.A)(Y.Ay)),
-        h = (0, d.bG)([W.default], () => W.default.getId()),
-        f = (0, d.bG)([j.A], () => j.A.getCurrentUserActiveStream()),
-        I = null != a && "user" in a ? a.user.id : "",
-        p = (0, R.A)(a?.type === el.lp.STREAM ? c.x.STREAM : c.x.DEFAULT, I),
-        S = (0, O.A)(I),
-        N = (0, d.yK)([j.A], () => j.A.getAllActiveStreams()),
-        C = (0, d.bG)([X.A], () => X.A.isFocused());
-    return (0, i.jsx)(ec, {
-        channel: t,
-        streamId: l,
-        participantOnScreen: a,
-        isVideoAvailable: _,
-        isVideoEnabled: E,
-        canGoLive: A,
-        currentUserId: h,
-        activeStreams: N,
-        activeSelfStream: f,
-        isMainWindowFocused: C,
-        width: n,
-        isOverlayRenderingVideo: !1,
-        videoStreamError: p,
-        cameraEncodeError: S,
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { channel: t, width: n } = e,
+                r = (0, d.bG)([T.A], () => T.A.getSpeaker(t.id)),
+                a = (0, d.bG)([m.A], () => m.A.getParticipant(t.id, r), [t.id, r]),
+                s = (0, d.bG)([Y.Ay], () => o()(Y.Ay.getVideoDevices()).values().first()),
+                l = (0, d.bG)(
+                    [z.A],
+                    () =>
+                        null != a && a.type !== el.lp.ACTIVITY && a.type !== el.lp.HIDDEN_STREAM
+                            ? z.A.getStreamId(a.user.id, t.getGuildId(), (0, g.A)(a.type))
+                            : null,
+                    [a, t],
+                ),
+                u = null == s || s.disabled,
+                _ = !u,
+                E = (0, d.bG)([Y.Ay], () => !u && Y.Ay.isVideoEnabled(), [u]),
+                A = (0, d.bG)([Y.Ay], () => (0, y.A)(Y.Ay)),
+                h = (0, d.bG)([W.default], () => W.default.getId()),
+                f = (0, d.bG)([j.A], () => j.A.getCurrentUserActiveStream()),
+                I = null != a && "user" in a ? a.user.id : "",
+                p = (0, R.A)(a?.type === el.lp.STREAM ? c.x.STREAM : c.x.DEFAULT, I),
+                S = (0, O.A)(I),
+                N = (0, d.yK)([j.A], () => j.A.getAllActiveStreams()),
+                C = (0, d.bG)([X.A], () => X.A.isFocused());
+            return (0, i.jsx)(ec, {
+                channel: t,
+                streamId: l,
+                participantOnScreen: a,
+                isVideoAvailable: _,
+                isVideoEnabled: E,
+                canGoLive: A,
+                currentUserId: h,
+                activeStreams: N,
+                activeSelfStream: f,
+                isMainWindowFocused: C,
+                width: n,
+                isOverlayRenderingVideo: !1,
+                videoStreamError: p,
+                cameraEncodeError: S,
+            });
+        },
+    },
+);

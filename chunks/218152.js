@@ -1,12 +1,11 @@
-s.d(t, { Cp: () => A, ST: () => x, kU: () => S });
 var i = s(477900),
     n = s(582128),
     r = s(284009),
     a = s.n(r),
     h = s(882035),
     l = s(121894),
-    o = s(465532),
-    d = s(408018),
+    d = s(465532),
+    o = s(408018),
     u = s(734057),
     c = s(31717),
     g = s(522602),
@@ -30,24 +29,24 @@ class C {
     submitting = !1;
     formOpen = !1;
     name = "";
-    textAreaState = (0, d.ur)("");
+    textAreaState = (0, o.ur)("");
     hasClickedForm = !1;
     titleFocused = !1;
     bodyFocused = !1;
     constructor(e, t, s) {
         ((this.channelId = e), (this._set = t), (this.get = s));
-        const i = u.A.getChannel(e);
+        let i = u.A.getChannel(e);
         if (null == i) return;
-        const n = c.A.getThreadSettings(i.id) ?? {},
+        let n = c.A.getThreadSettings(i.id) ?? {},
             r = null == i.template ? "" : i.template.trim(),
             a = c.A.getDraft(i.id, c.C.FirstThreadMessage),
-            h = (0, d.ur)(null != a && "" !== a.trim() ? a : r);
+            h = (0, o.ur)(null != a && "" !== a.trim() ? a : r);
         ((this.name = n.name ?? ""),
             (this.appliedTags = new Set(n.appliedTags) ?? new Set()),
             (this.textAreaState = h));
-        const l = h.textValue !== r,
-            o = g.A.getUploads(i.id, c.C.FirstThreadMessage).length > 0;
-        ((this.formOpen = l || o), this.formOpen && p.A.clearForumSearch(i.id));
+        let l = h.textValue !== r,
+            d = g.A.getUploads(i.id, c.C.FirstThreadMessage).length > 0;
+        ((this.formOpen = l || d), this.formOpen && p.A.clearForumSearch(i.id));
     }
     set = (e) => {
         (0, l.r)(() => this._set(e));
@@ -72,7 +71,7 @@ class C {
         let { appliedTags: t } = this.get();
         ((t = new Set(t)).has(e) ? t.delete(e) : t.add(e),
             this.set({ appliedTags: t }),
-            o.A.changeThreadSettings(this.channelId, { appliedTags: t }));
+            d.A.changeThreadSettings(this.channelId, { appliedTags: t }));
     };
     setPopoutOpen = (e) => {
         this.set({ popoutOpen: e });
@@ -99,10 +98,10 @@ class C {
         this.set({ bodyFocused: e });
     };
     setName = (e) => {
-        (this.set({ name: e }), o.A.changeThreadSettings(this.channelId, { name: e }));
+        (this.set({ name: e }), d.A.changeThreadSettings(this.channelId, { name: e }));
     };
     setTextAreaState = (e) => {
-        (this.set({ textAreaState: e }), o.A.saveDraft(this.channelId, e.textValue, c.C.FirstThreadMessage));
+        (this.set({ textAreaState: e }), d.A.saveDraft(this.channelId, e.textValue, c.C.FirstThreadMessage));
     };
     setHasClickedForm = (e) => {
         this.set({ hasClickedForm: e });
@@ -110,7 +109,7 @@ class C {
     resetFormState = () => {
         let e = u.A.getChannel(this.channelId),
             t = null == e || null == e.template ? "" : e.template.trim();
-        (this.set({ name: "", textAreaState: (0, d.ur)(t), appliedTags: new Set(), hasClickedForm: !1 }),
+        (this.set({ name: "", textAreaState: (0, o.ur)(t), appliedTags: new Set(), hasClickedForm: !1 }),
             p.A.clearForumSearch(this.channelId));
     };
     setFormOpenFromUserAction = () => {
@@ -122,16 +121,22 @@ class C {
     };
 }
 let F = n.createContext(null);
-function A(e) {
-    let { children: t, channel: s } = e,
-        r = n.useMemo(() => (0, h.h)((e, t) => new C(s.id, e, t)), [s]);
-    return (0, i.jsx)(F.Provider, { value: r, children: t });
-}
-function S(e, t) {
-    let s = n.useContext(F);
-    return (a()(null != s, "[useForumPostComposerStore] Context should not be null"), s(e, t));
-}
-function x() {
-    let e = n.useContext(F);
-    return (a()(null != e, "[useForumPostComposerStore] Context should not be null"), e);
-}
+s.d(
+    t,
+    {},
+    {
+        Cp: function (e) {
+            let { children: t, channel: s } = e,
+                r = n.useMemo(() => (0, h.h)((e, t) => new C(s.id, e, t)), [s]);
+            return (0, i.jsx)(F.Provider, { value: r, children: t });
+        },
+        ST: function () {
+            let e = n.useContext(F);
+            return (a()(null != e, "[useForumPostComposerStore] Context should not be null"), e);
+        },
+        kU: function (e, t) {
+            let s = n.useContext(F);
+            return (a()(null != s, "[useForumPostComposerStore] Context should not be null"), s(e, t));
+        },
+    },
+);

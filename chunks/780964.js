@@ -1,4 +1,3 @@
-n.d(t, { X: () => r });
 var i,
     r =
         (((i = {}).PROFILE_SECTION = "profile_section"),
@@ -504,3 +503,4 @@ var i,
         (i.APPLICATION_TEST_MODE = "application_test_mode"),
         (i.LOGOUT_SIDEBAR_ITEM = "logout_sidebar_item"),
         i);
+n.d(t, {}, { X: r });

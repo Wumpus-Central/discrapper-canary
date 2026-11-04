@@ -1,4 +1,3 @@
-n.d(t, { A: () => c, i: () => s });
 var i,
     a = n(477900);
 n(582128);
@@ -11,21 +10,28 @@ let d = {
     limited: { border: o.rY, background: o.pm },
     newUpsell: { border: o.Ef, background: o.st },
 };
-function c(e) {
-    let {
-        children: t,
-        type: n = "premium",
-        isShown: i,
-        hasBackground: r = !1,
-        className: s,
-        backgroundClassName: c,
-        ref: u,
-    } = e;
-    if (!i) return t;
-    let { border: m, background: f } = d[n];
-    return (0, a.jsx)("div", {
-        ref: u,
-        className: l()(m, s),
-        children: (0, a.jsx)("div", { className: l()(r ? f : o.Tp, c), children: t }),
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let {
+                children: t,
+                type: n = "premium",
+                isShown: i,
+                hasBackground: r = !1,
+                className: s,
+                backgroundClassName: c,
+                ref: u,
+            } = e;
+            if (!i) return t;
+            let { border: m, background: f } = d[n];
+            return (0, a.jsx)("div", {
+                ref: u,
+                className: l()(m, s),
+                children: (0, a.jsx)("div", { className: l()(r ? f : o.Tp, c), children: t }),
+            });
+        },
+        i: s,
+    },
+);

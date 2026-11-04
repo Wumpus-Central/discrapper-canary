@@ -1,0 +1,135 @@
+(r.d(t, { _: () => u }), r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162));
+var a = r(582128),
+    n = r(626584);
+(r(323874), r(14289), r(35956), r(321073));
+let i = null;
+function o(e, t, r) {
+    let a = e._malloc(t);
+    if (0 === a) throw Error(`Failed to allocate ${t} bytes for ${r} - out of WASM memory`);
+    return a;
+}
+async function l() {
+    if (null != i) return i;
+    try {
+        let e = (await r.e(437971).then(r.bind(r, 543198))).default;
+        return (i = await e({ locateFile: (e) => (e.endsWith(".wasm") ? new URL(r(14927), r.b).href : e) }));
+    } catch (t) {
+        let e = Error("WebP module failed to load. Ensure webp_wasm.js and webp_wasm.wasm are built and available.");
+        throw ((e.cause = t), e);
+    }
+}
+let h = new n.A("useAnimatedImageCheck");
+function u(e) {
+    let t = e?.type === "image/gif",
+        n = e?.type === "image/webp",
+        [i, u] = a.useState(!1),
+        [c, s] = a.useState(null),
+        f = n && c !== e;
+    a.useEffect(() => {
+        let a = !1;
+        return (
+            t
+                ? (r.e(447580).then(r.bind(r, 844183)), u(!1), s(e))
+                : n && null != e
+                  ? !(async function () {
+                        try {
+                            let t = await e.arrayBuffer(),
+                                r = new Uint8Array(t),
+                                n = await (async function (e) {
+                                    if (!(e instanceof Uint8Array) || 0 === e.length) return !1;
+                                    try {
+                                        let { frameCount: t } = await (async function (e) {
+                                            if (!(e instanceof Uint8Array))
+                                                throw Error("webpData must be a Uint8Array");
+                                            if (0 === e.length) throw Error("webpData cannot be empty");
+                                            let t = await l(),
+                                                r = o(t, e.length, "WebP input data");
+                                            t.HEAPU8.set(e, r);
+                                            let a = t._malloc(8);
+                                            if (0 === a)
+                                                throw (
+                                                    t._free(r),
+                                                    Error(
+                                                        "Failed to allocate 8 bytes for WebPData struct - out of WASM memory",
+                                                    )
+                                                );
+                                            ((t.HEAPU32[a >> 2] = r), (t.HEAPU32[(a >> 2) + 1] = e.length));
+                                            let n = t._malloc(32);
+                                            if (0 === n)
+                                                throw (
+                                                    t._free(r),
+                                                    t._free(a),
+                                                    Error(
+                                                        "Failed to allocate 32 bytes for WebPAnimDecoderOptions - out of WASM memory",
+                                                    )
+                                                );
+                                            t._WebPAnimDecoderOptionsInitInternal(n, 263);
+                                            let i = t._WebPAnimDecoderNewInternal(a, n, 263);
+                                            if ((t._free(n), 0 === i))
+                                                throw (
+                                                    t._free(r),
+                                                    t._free(a),
+                                                    Error(
+                                                        "Failed to create WebP decoder - file may be corrupt or not a valid WebP",
+                                                    )
+                                                );
+                                            try {
+                                                let e = o(t, 32, "WebPAnimInfo");
+                                                t._WebPAnimDecoderGetInfo(i, e);
+                                                let r = t.HEAPU32[e >> 2],
+                                                    a = t.HEAPU32[(e >> 2) + 1],
+                                                    n = t.HEAPU32[(e >> 2) + 4];
+                                                t._free(e);
+                                                let l = [],
+                                                    h = r * a * 4;
+                                                for (; 0 !== t._WebPAnimDecoderHasMoreFrames(i);) {
+                                                    let e = t._malloc(4);
+                                                    if (0 === e)
+                                                        throw Error(
+                                                            "Failed to allocate 4 bytes for frame buffer pointer - out of WASM memory",
+                                                        );
+                                                    let n = t._malloc(4);
+                                                    if (0 === n)
+                                                        throw (
+                                                            t._free(e),
+                                                            Error(
+                                                                "Failed to allocate 4 bytes for timestamp pointer - out of WASM memory",
+                                                            )
+                                                        );
+                                                    let o = t._WebPAnimDecoderGetNext(i, e, n);
+                                                    if (0 === o) {
+                                                        (t._free(e), t._free(n));
+                                                        break;
+                                                    }
+                                                    let u = t.HEAPU32[e >> 2],
+                                                        c = t.HEAP32[n >> 2],
+                                                        s = new Uint8Array(t.HEAPU8.buffer, u, h).slice();
+                                                    (l.push({ data: s, timestamp: c, width: r, height: a }),
+                                                        t._free(e),
+                                                        t._free(n));
+                                                }
+                                                return { frames: l, width: r, height: a, frameCount: n };
+                                            } finally {
+                                                (t._WebPAnimDecoderDelete(i), t._free(r), t._free(a));
+                                            }
+                                        })(e);
+                                        return t > 1;
+                                    } catch {
+                                        return !1;
+                                    }
+                                })(r);
+                            a || (u(n), n && l(), s(e));
+                        } catch (t) {
+                            a || (h.error("Error checking WebP animation", t), u(!1), s(e));
+                        }
+                    })()
+                  : (u(!1), s(e)),
+            () => {
+                a = !0;
+            }
+        );
+    }, [e, t, n]);
+    let m = i && c === e,
+        A = t || m;
+    return { isGIF: t, isWebP: n, isAnimatedWebPFile: m, isCheckingAnimation: f, isEditableAnimatedImage: A };
+}

@@ -1,0 +1,153 @@
+.sidebar_TfLD5L {
+    background-color: var(--background-base-lower);
+    height: 100%;
+    margin-block: 0;
+    margin-inline: 8px 0;
+    min-width: 400px;
+    width: 25vw
+}
+
+.innerContainer_TfLD5L,
+.sidebar_TfLD5L {
+    display: flex;
+    flex-direction: column
+}
+
+.innerContainer_TfLD5L {
+    flex: 1;
+    gap: 8px;
+    padding-block: 8px;
+    padding-inline: 8px 1px;
+    position: relative
+}
+
+.cardContainer_TfLD5L {
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--elevation-low);
+    container-type: inline-size;
+    display: flex;
+    flex-direction: column
+}
+
+.clickable_TfLD5L {
+    cursor: pointer
+}
+
+.infoContainer_TfLD5L {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 8px
+}
+
+.responsesContainer_TfLD5L {
+    padding: 16px 16px 20px
+}
+
+.actionRow_TfLD5L {
+    border-top: 1px solid var(--border-subtle);
+    flex-direction: row;
+    gap: 1px;
+    justify-content: space-around;
+    margin-top: 1px
+}
+
+.actionButton_TfLD5L,
+.actionRow_TfLD5L {
+    align-items: center;
+    display: flex
+}
+
+.actionButton_TfLD5L {
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 16px
+}
+
+.actionButton_TfLD5L:hover {
+    background-color: var(--interactive-background-hover);
+    color: var(--interactive-text-active)
+}
+
+.disabled_TfLD5L {
+    cursor: default;
+    opacity: .8
+}
+
+.userInfoContainer_TfLD5L {
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow: hidden
+}
+
+.infoRow_TfLD5L {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px
+}
+
+.infoRow_TfLD5L:not(:last-child) {
+    border-bottom: 1px solid var(--border-subtle)
+}
+
+.accountLabel_TfLD5L {
+    margin-bottom: 8px;
+    margin-top: 20px
+}
+
+.actionContainer_TfLD5L {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 8px 16px 16px;
+    padding: 12px
+}
+
+.openInterviewButton_TfLD5L {
+    margin-inline-start: auto
+}
+
+@container (max-width: 420px) {
+    .openInterviewButton_TfLD5L {
+        flex-basis: 100%;
+        margin-inline-start: 0
+    }
+}
+
+.actionInfo_TfLD5L {
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.actionedInfo_TfLD5L {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.dot_TfLD5L {
+    background-color: var(--text-muted);
+    border-radius: 4px;
+    height: 4px;
+    width: 4px
+}
+
+/*# sourceMappingURL=d80929e5292e19aa.css.map*/

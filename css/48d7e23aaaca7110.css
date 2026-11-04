@@ -1,0 +1,26 @@
+.counter_CC244E {
+    background-color: var(--background-surface-highest);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-md);
+    box-shadow: none;
+    flex-direction: column;
+    padding: 10px 20px 12px
+}
+
+.counter_CC244E,
+.textRow_CC244E {
+    align-items: center;
+    display: flex
+}
+
+.info_CC244E {
+    color: var(--text-default);
+    margin-inline-start: 4px
+}
+
+.counterText_CC244E,
+.tooltip_CC244E {
+    text-align: center
+}
+
+/*# sourceMappingURL=48d7e23aaaca7110.css.map*/

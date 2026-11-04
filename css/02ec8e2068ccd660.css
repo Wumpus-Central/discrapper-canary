@@ -1,0 +1,17 @@
+.contentSection_YXXVAo {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    z-index: 1
+}
+
+.content_YXXVAo {
+    height: 100%;
+    max-width: 1300px;
+    width: 100%
+}
+
+/*# sourceMappingURL=02ec8e2068ccd660.css.map*/

@@ -1,6 +1,6 @@
 c.exports = {
-    VC: "clickZone__29c87",
-    r2: "clickZoneDebugContainer__29c87",
-    Nd: "clickBackground__29c87",
-    vk: "clickable__29c87",
+    VC: "clickZone_BDrUP9",
+    r2: "clickZoneDebugContainer_BDrUP9",
+    Nd: "clickBackground_BDrUP9",
+    vk: "clickable_BDrUP9",
 };

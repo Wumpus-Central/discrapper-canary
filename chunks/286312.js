@@ -1,9 +1,9 @@
 e.exports = {
-    Nr: "card_c3d27e",
-    Bj: "cardInfo_c3d27e",
-    jf: "statusRow_c3d27e",
-    Rh: "statusLabel_c3d27e",
-    SI: "guildSummary_c3d27e",
-    vk: "clickable_c3d27e",
-    hE: "trailingIcons_c3d27e",
+    Nr: "card_k0Unn4",
+    Bj: "cardInfo_k0Unn4",
+    jf: "statusRow_k0Unn4",
+    Rh: "statusLabel_k0Unn4",
+    SI: "guildSummary_k0Unn4",
+    vk: "clickable_k0Unn4",
+    hE: "trailingIcons_k0Unn4",
 };

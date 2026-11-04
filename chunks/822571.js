@@ -1,7 +1,6 @@
-n.d(t, { A: () => d });
 var i = n(181370),
     r = n.n(i),
-    a = n(925798),
+    a = n(235640),
     s = n(315069),
     l = n(927813),
     o = n(767589);
@@ -73,3 +72,4 @@ class d extends s.A {
         return r().v3(`${this.promotionId}:${e}`) % 1e4 < n;
     }
 }
+n.d(t, {}, { A: d });

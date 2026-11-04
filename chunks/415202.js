@@ -1,9 +1,8 @@
-n.d(t, { A: () => E });
 var i = n(439372),
     r = n(927813),
     a = n(961250),
     s = n(895944),
-    l = n(636592),
+    l = n(921894),
     o = n(26508),
     d = n(216238);
 let c = 5 * r.A.Millis.MINUTE,
@@ -58,3 +57,4 @@ class _ extends i.A {
     }
 }
 let E = new _();
+n.d(t, {}, { A: E });

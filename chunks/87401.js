@@ -1,5 +1,4 @@
-t.d(n, { A: () => o });
-var i = t(17928),
+var i = t(855986),
     l = t(73153),
     s = t(988794);
 let a = {};
@@ -34,3 +33,4 @@ let o = new r(l.h, {
         (delete t[n.id], (a = t));
     },
 });
+t.d(n, {}, { A: o });

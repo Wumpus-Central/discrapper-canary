@@ -1,10 +1,9 @@
-n.d(t, { default: () => I });
 var i = n(143236),
     r = n(481613),
     a = n.n(r),
     s = n(488428),
-    l = n(132500),
-    o = n(636537),
+    l = n(115560),
+    o = n(620632),
     d = n(636401),
     c = n(652215);
 let u = c.xEi + c.sJq - 1;
@@ -12,7 +11,7 @@ function _(e, t) {
     if (null == e || null == t) throw Error("cmd and name required");
     return `${e}:${t}`;
 }
-let E = s.parse(location.search.slice(1)),
+let E = s.qg(location.search.slice(1)),
     A = null != E.rpc && "" !== E.rpc ? parseInt(String(E.rpc), 10) : c.xEi,
     h = null;
 class f extends i.EventEmitter {
@@ -114,3 +113,4 @@ class f extends i.EventEmitter {
     }
 }
 let I = new f();
+n.d(t, {}, { default: I });

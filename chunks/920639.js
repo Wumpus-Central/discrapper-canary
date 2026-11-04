@@ -1,24 +1,11 @@
-(n.d(t, {
-    E2: () => g,
-    EB: () => T,
-    JF: () => O,
-    Ql: () => h,
-    U8: () => C,
-    Yv: () => m,
-    e6: () => S,
-    iY: () => N,
-    n0: () => f,
-    yt: () => I,
-    zR: () => p,
-}),
-    n(321073));
+n(321073);
 var i = n(821578),
-    r = n(666860),
-    a = n(280450),
+    r = n(149468),
+    a = n(46653),
     s = n(734057),
-    l = n(763827),
+    l = n(495867),
     o = n(977997),
-    d = n(174459),
+    d = n(129230),
     c = n(558076),
     u = n(996512),
     _ = n(652215);
@@ -56,111 +43,127 @@ function A(e, t) {
     }, 2500);
     l.A.addChangeListener(r);
 }
-function h(e) {
-    let { interactionType: t, ...n } = e;
-    A(n.channelId, (e) => {
-        r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_OBJECT_INTERACTED, { ...E(n), interaction_type: t, ...e });
-    });
-}
-function f(e) {
-    let { interactionType: t, ...n } = e;
-    A(n.channelId, (e) => {
-        r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_INTERACTED, { ...E(n), interaction_type: t, ...e });
-    });
-}
-function I(e) {
-    let { location: t, guildRoomOpen: n, ...i } = e;
-    A(i.channelId, (e) => {
-        r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_LAYOUT_TOGGLED, { ...E(i), location: t, guild_room_open: n, ...e });
-    });
-}
-function p(e) {
-    let { location: t, ...n } = e;
-    A(n.channelId, (e) => {
-        r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_OPENED, { ...E(n), location: t, ...e });
-    });
-}
-function m(e) {
-    let { actualSeatPosition: t, targetSeatPosition: n, actualSeatId: i, targetSeatId: a, ...s } = e;
-    A(s.channelId, (e) => {
-        var l;
-        let o, d, A, h;
-        r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_SEAT_SELECTED, {
-            ...E(s),
-            seat_name: (0, u.r)(i, t, s.channelId)?.name ?? "",
-            seat_position_v2: [t.x, t.y],
-            seat_id: i,
-            update_reason: t.x !== n?.x || t.y !== n?.y || i !== a ? "default" : "user_selected",
-            ...((l = s.channelId),
-            (o = []),
-            (d = []),
-            (A = []),
-            (h = []),
-            c.A.getRoomUsers(l).forEach((e, t) => {
-                (o.push(t),
-                    d.push((0, u.r)(e.seat, e.position, l)?.name ?? ""),
-                    A.push(e.position.x),
-                    h.push(e.position.y));
-            }),
-            { seated_user_ids: o, seated_user_seat_names: d, seated_user_x_positions: A, seated_user_y_positions: h }),
-            ...e,
-        });
-    });
-}
-function T(e) {
-    let { interactionType: t, ...n } = e;
-    A(n.channelId, (e) => {
-        r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_USER_INTERACTED, { ...E(n), interaction_type: t, ...e });
-    });
-}
-function g(e) {
-    A(e.channelId, (t) => {
-        r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_USER_CONNECTED, { ...E(e), ...t });
-    });
-}
-function S(e) {
-    r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_USER_DISCONNECTED, {
-        ...E(e),
-        voice_state_count: Object.keys(o.A.getVoiceStatesForChannel(e.channelId)).length,
-        voice_media_session_id: c.A.getMediaSessionId(e.channelId),
-    });
-}
-function N(e) {
-    let { rememberVideoOverlayVisibility: t } = e;
-    d.default.track(_.HAw.GUILD_ROOM_SETTINGS_UPDATE, { remember_video_overlay_visibility: t });
-}
-function C(e) {
-    let { update: t, ...n } = e;
-    A(n.channelId, (e) => {
-        r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_USER_UPDATED, {
-            ...E(n),
-            ...(function (e) {
-                let t = { update_type: e.updateType, update_reason: e.updateReason };
-                switch (e.updateType) {
-                    case "position":
-                        return { ...t, position_v2: [e.position.x, e.position.y] };
-                    case "seat":
-                        return { ...t, seat_id: e.seat };
-                    case "status_id":
-                        return { ...t, status_id: e.statusId };
-                    case "status_text":
-                        return { ...t, status_text: e.statusText };
-                }
-            })(t),
-            ...e,
-        });
-    });
-}
-function O(e) {
-    let { update: t, ...n } = e;
-    A(n.channelId, (e) => {
-        r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_UPDATED, {
-            ...E(n),
-            ...(function (e) {
-                let t = { update_type: e.updateType };
-                if ("background" === e.updateType) return { ...t, background: e.background };
-            })(t),
-            ...e,
-        });
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        E2: function (e) {
+            A(e.channelId, (t) => {
+                r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_USER_CONNECTED, { ...E(e), ...t });
+            });
+        },
+        EB: function (e) {
+            let { interactionType: t, ...n } = e;
+            A(n.channelId, (e) => {
+                r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_USER_INTERACTED, { ...E(n), interaction_type: t, ...e });
+            });
+        },
+        JF: function (e) {
+            let { update: t, ...n } = e;
+            A(n.channelId, (e) => {
+                r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_UPDATED, {
+                    ...E(n),
+                    ...(function (e) {
+                        let t = { update_type: e.updateType };
+                        if ("background" === e.updateType) return { ...t, background: e.background };
+                    })(t),
+                    ...e,
+                });
+            });
+        },
+        Ql: function (e) {
+            let { interactionType: t, ...n } = e;
+            A(n.channelId, (e) => {
+                r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_OBJECT_INTERACTED, { ...E(n), interaction_type: t, ...e });
+            });
+        },
+        U8: function (e) {
+            let { update: t, ...n } = e;
+            A(n.channelId, (e) => {
+                r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_USER_UPDATED, {
+                    ...E(n),
+                    ...(function (e) {
+                        let t = { update_type: e.updateType, update_reason: e.updateReason };
+                        switch (e.updateType) {
+                            case "position":
+                                return { ...t, position_v2: [e.position.x, e.position.y] };
+                            case "seat":
+                                return { ...t, seat_id: e.seat };
+                            case "status_id":
+                                return { ...t, status_id: e.statusId };
+                            case "status_text":
+                                return { ...t, status_text: e.statusText };
+                        }
+                    })(t),
+                    ...e,
+                });
+            });
+        },
+        Yv: function (e) {
+            let { actualSeatPosition: t, targetSeatPosition: n, actualSeatId: i, targetSeatId: a, ...s } = e;
+            A(s.channelId, (e) => {
+                var l;
+                let o, d, A, h;
+                r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_SEAT_SELECTED, {
+                    ...E(s),
+                    seat_name: (0, u.r)(i, t, s.channelId)?.name ?? "",
+                    seat_position_v2: [t.x, t.y],
+                    seat_id: i,
+                    update_reason: t.x !== n?.x || t.y !== n?.y || i !== a ? "default" : "user_selected",
+                    ...((l = s.channelId),
+                    (o = []),
+                    (d = []),
+                    (A = []),
+                    (h = []),
+                    c.A.getRoomUsers(l).forEach((e, t) => {
+                        (o.push(t),
+                            d.push((0, u.r)(e.seat, e.position, l)?.name ?? ""),
+                            A.push(e.position.x),
+                            h.push(e.position.y));
+                    }),
+                    {
+                        seated_user_ids: o,
+                        seated_user_seat_names: d,
+                        seated_user_x_positions: A,
+                        seated_user_y_positions: h,
+                    }),
+                    ...e,
+                });
+            });
+        },
+        e6: function (e) {
+            r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_USER_DISCONNECTED, {
+                ...E(e),
+                voice_state_count: Object.keys(o.A.getVoiceStatesForChannel(e.channelId)).length,
+                voice_media_session_id: c.A.getMediaSessionId(e.channelId),
+            });
+        },
+        iY: function (e) {
+            let { rememberVideoOverlayVisibility: t } = e;
+            d.default.track(_.HAw.GUILD_ROOM_SETTINGS_UPDATE, { remember_video_overlay_visibility: t });
+        },
+        n0: function (e) {
+            let { interactionType: t, ...n } = e;
+            A(n.channelId, (e) => {
+                r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_INTERACTED, { ...E(n), interaction_type: t, ...e });
+            });
+        },
+        yt: function (e) {
+            let { location: t, guildRoomOpen: n, ...i } = e;
+            A(i.channelId, (e) => {
+                r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_LAYOUT_TOGGLED, {
+                    ...E(i),
+                    location: t,
+                    guild_room_open: n,
+                    ...e,
+                });
+            });
+        },
+        zR: function (e) {
+            let { location: t, ...n } = e;
+            A(n.channelId, (e) => {
+                r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_OPENED, { ...E(n), location: t, ...e });
+            });
+        },
+    },
+);

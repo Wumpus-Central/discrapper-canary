@@ -1,29 +1,29 @@
-n.d(t, { A: () => o });
-var a = n(582128),
-    i = n(522579),
+var i = n(582128),
+    a = n(522579),
     l = n(77729),
     s = n(723702);
-class o extends a.Component {
+class o extends i.Component {
     getFileContents() {
-        let { fileContents: e } = this.props;
-        return ("function" == typeof e && (e = e()), e);
+        let { fileContents: t } = this.props;
+        return ("function" == typeof t && (t = t()), t);
     }
-    handleFileDownload = (e) => {
-        e.preventDefault();
-        let t = this.getFileContents(),
-            { fileName: n, onDownload: a } = this.props;
-        (s.isPlatformEmbedded ? this.downloadNative(t, n) : this.downloadHtml5(t, n), a?.());
+    handleFileDownload = (t) => {
+        t.preventDefault();
+        let e = this.getFileContents(),
+            { fileName: n, onDownload: i } = this.props;
+        (s.isPlatformEmbedded ? this.downloadNative(e, n) : this.downloadHtml5(e, n), i?.());
     };
-    downloadNative(e, t) {
-        l.A.fileManager.saveWithDialog(e, t);
+    downloadNative(t, e) {
+        l.A.fileManager.saveWithDialog(t, e);
     }
-    downloadHtml5(e, t) {
-        let n = new Blob([e], { type: this.props.contentType });
-        (0, i.saveAs)(n, t);
+    downloadHtml5(t, e) {
+        let n = new Blob([t], { type: this.props.contentType });
+        (0, a.saveAs)(n, e);
     }
     render() {
-        let { children: e } = this.props,
-            t = a.Children.only(e);
-        return a.cloneElement(t, { onClick: this.handleFileDownload });
+        let { children: t } = this.props,
+            e = i.Children.only(t);
+        return i.cloneElement(e, { onClick: this.handleFileDownload });
     }
 }
+n.d(e, {}, { A: o });

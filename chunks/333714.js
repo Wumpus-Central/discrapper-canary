@@ -1,6 +1,6 @@
 e.exports = {
-    KE: "panelContainer_fe44d5",
-    Th: "candidatesTable_fe44d5",
-    uI: "candidatesTableContainer_fe44d5",
-    pq: "info_fe44d5",
+    KE: "panelContainer_GrsQ2t",
+    Th: "candidatesTable_GrsQ2t",
+    uI: "candidatesTableContainer_GrsQ2t",
+    pq: "info_GrsQ2t",
 };

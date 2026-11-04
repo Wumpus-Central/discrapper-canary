@@ -1,5 +1,4 @@
-n.d(t, { A: () => i });
-let i = (0, n(240921).Ay)({
+let i = (0, n(400845).Ay)({
     kind: "user",
     name: "2025-12-proportional-vad-indicator",
     defaultConfig: { enabled: !1 },
@@ -10,3 +9,4 @@ let i = (0, n(240921).Ay)({
         4: { enabled: !0, disableUI: !0, dontEmitVolumeOnlySpeakingEvents: !0 },
     },
 });
+n.d(t, {}, { A: i });

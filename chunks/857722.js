@@ -1,8 +1,8 @@
-_.exports = {
-    Io: "pill__52929",
-    qS: "badge__52929",
-    as: "large__52929",
-    LI: "round__52929",
-    kI: "roundLeft__52929",
-    pT: "roundRight__52929",
+p.exports = {
+    Io: "pill_nFH31_",
+    qS: "badge_nFH31_",
+    as: "large_nFH31_",
+    LI: "round_nFH31_",
+    kI: "roundLeft_nFH31_",
+    pT: "roundRight_nFH31_",
 };

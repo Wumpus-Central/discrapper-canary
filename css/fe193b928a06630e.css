@@ -1,0 +1,48 @@
+.badge_8OcjHa {
+    border-radius: var(--radius-xs);
+    cursor: pointer;
+    padding: 0 var(--space-4)
+}
+
+.badgeActive_8OcjHa {
+    background-color: var(--background-code)
+}
+
+.badgeEnded_8OcjHa {
+    background-color: var(--background-mod-subtle)
+}
+
+.header_TUgyqq {
+    border-bottom: 1px solid var(--border-subtle);
+    justify-content: space-between;
+    padding-block-end: var(--space-4);
+    padding-inline-end: var(--space-8);
+    padding-inline-start: var(--space-16);
+    position: relative
+}
+
+.header_TUgyqq,
+.headerLeft_TUgyqq {
+    align-items: center;
+    display: flex
+}
+
+.headerLeft_TUgyqq,
+.title_TUgyqq {
+    gap: var(--space-8)
+}
+
+.title_TUgyqq {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.body_TUgyqq {
+    flex: 1 1 auto;
+    margin-bottom: -12px;
+    min-height: 0
+}
+
+/*# sourceMappingURL=fe193b928a06630e.css.map*/

@@ -1,19 +1,29 @@
-n.d(t, { $N: () => s, l6: () => l, tv: () => o });
-var i = n(132500),
-    r = n(604594);
-let a = null;
-function s() {
-    let e = Date.now();
-    return null == a
-        ? {
-              searchSession: (a = { uuid: (0, i.A)(), createdAtTimestamp: e, lastUsedTimestamp: e, version: r.Ir }),
-              isNew: !0,
-          }
-        : ((a.lastUsedTimestamp = e), { searchSession: a, isNew: !1 });
-}
-function l() {
-    a = null;
-}
-function o() {
-    return a;
-}
+var i = n(115560);
+n(604594);
+let r = null;
+n.d(
+    t,
+    {},
+    {
+        $N: function () {
+            let e = Date.now();
+            return null == r
+                ? {
+                      searchSession: (r = {
+                          uuid: (0, i.A)(),
+                          createdAtTimestamp: e,
+                          lastUsedTimestamp: e,
+                          version: 1,
+                      }),
+                      isNew: !0,
+                  }
+                : ((r.lastUsedTimestamp = e), { searchSession: r, isNew: !1 });
+        },
+        l6: function () {
+            r = null;
+        },
+        tv: function () {
+            return r;
+        },
+    },
+);

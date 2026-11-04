@@ -1,10 +1,9 @@
-s.d(a, { O: () => F, a: () => P });
 var t = s(477900),
     l = s(582128),
     n = s(503698),
     r = s.n(n),
     i = s(575593),
-    c = s(17928),
+    c = s(855986),
     u = s(462887),
     d = s(778712),
     m = s(736653),
@@ -88,25 +87,34 @@ function P(e) {
                 ],
             });
 }
-function F(e) {
-    let { product: a, sku: s } = e,
-        l = s?.id ?? a?.skuId,
-        n = (0, c.bG)([o.A], () => o.A.getProduct(s?.id)),
-        r = a ?? n;
-    if (r?.type === i.R.BUNDLE) return (0, t.jsx)(P, { product: r });
-    let [u] =
-        (r?.type === i.R.VARIANTS_GROUP ? (r.variants?.find((e) => e.skuId === l)?.items ?? r.items) : r?.items) ?? [];
-    if (void 0 !== l && l in R.m) return R.m[l].render({ animationState: "on_hover", className: E.Vr });
-    switch (u?.type) {
-        case i.R.AVATAR_DECORATION:
-            return (0, t.jsx)(S, { avatarDecoration: u, avatarSize: d._3.SIZE_40 });
-        case i.R.PROFILE_EFFECT:
-            return (0, t.jsx)(g, { item: u });
-        case i.R.PROFILE_FRAME:
-            return (0, t.jsx)(C, { item: u });
-        case i.R.NAMEPLATE:
-            return (0, t.jsx)(M, { nameplate: u });
-        default:
-            return null;
-    }
-}
+s.d(
+    a,
+    {},
+    {
+        O: function (e) {
+            let { product: a, sku: s } = e,
+                l = s?.id ?? a?.skuId,
+                n = (0, c.bG)([o.A], () => o.A.getProduct(s?.id)),
+                r = a ?? n;
+            if (r?.type === i.R.BUNDLE) return (0, t.jsx)(P, { product: r });
+            let [u] =
+                (r?.type === i.R.VARIANTS_GROUP
+                    ? (r.variants?.find((e) => e.skuId === l)?.items ?? r.items)
+                    : r?.items) ?? [];
+            if (void 0 !== l && l in R.m) return R.m[l].render({ animationState: "on_hover", className: E.Vr });
+            switch (u?.type) {
+                case i.R.AVATAR_DECORATION:
+                    return (0, t.jsx)(S, { avatarDecoration: u, avatarSize: d._3.SIZE_40 });
+                case i.R.PROFILE_EFFECT:
+                    return (0, t.jsx)(g, { item: u });
+                case i.R.PROFILE_FRAME:
+                    return (0, t.jsx)(C, { item: u });
+                case i.R.NAMEPLATE:
+                    return (0, t.jsx)(M, { nameplate: u });
+                default:
+                    return null;
+            }
+        },
+        a: P,
+    },
+);

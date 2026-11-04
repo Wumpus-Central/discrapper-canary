@@ -1,11 +1,10 @@
-n.d(t, { Ae: () => f, Wv: () => o, ZV: () => m, g2: () => h });
 var r = n(477900),
     i = n(582128),
     l = n(503698),
     u = n.n(l),
     s = n(866665),
     c = n(765671),
-    a = n(105292),
+    a = n(792996),
     d = n(738446);
 function o(e) {
     let { itemGapPx: t, items: n, maxLines: r, containerWidth: l } = e,
@@ -72,44 +71,53 @@ function f(e) {
         (0, r.jsx)("div", { ref: u, children: l })
     );
 }
-function m(e) {
-    let { className: t, items: n, renderItem: l, itemGapPx: s = 0, maxLines: m, renderOverflow: g } = e,
-        { ref: p, width: v = 0 } = (0, c.Ay)(),
-        {
-            lastVisibleIndex: x,
-            onItemLayout: j,
-            overflowItemsRef: k,
-        } = o({ items: n, itemGapPx: s, maxLines: m, containerWidth: v }),
-        N = i.useCallback((e) => (0, r.jsx)(h, { items: e, renderItem: l }), [l]),
-        R = i.useMemo(() => n.slice(0, x + 1), [n, x]),
-        b = i.useMemo(() => n.slice(x + 1), [n, x]);
-    return (0, r.jsxs)("div", {
-        className: u()(t, d.ld),
-        ref: p,
-        children: [
-            (0, r.jsxs)("div", {
-                "aria-hidden": !0,
-                className: d.Kk,
+n.d(
+    t,
+    {},
+    {
+        Ae: f,
+        Wv: o,
+        ZV: function (e) {
+            let { className: t, items: n, renderItem: l, itemGapPx: s = 0, maxLines: m, renderOverflow: g } = e,
+                { ref: p, width: v = 0 } = (0, c.Ay)(),
+                {
+                    lastVisibleIndex: x,
+                    onItemLayout: j,
+                    overflowItemsRef: k,
+                } = o({ items: n, itemGapPx: s, maxLines: m, containerWidth: v }),
+                N = i.useCallback((e) => (0, r.jsx)(h, { items: e, renderItem: l }), [l]),
+                R = i.useMemo(() => n.slice(0, x + 1), [n, x]),
+                b = i.useMemo(() => n.slice(x + 1), [n, x]);
+            return (0, r.jsxs)("div", {
+                className: u()(t, d.ld),
+                ref: p,
                 children: [
-                    (0, r.jsx)("div", {
-                        className: d.R5,
-                        children: n.map((e, t) =>
-                            (0, r.jsx)(
-                                f,
-                                { index: t, onItemLayout: j, children: l(e) },
-                                "string" == typeof e ? e : e.key,
-                            ),
-                        ),
+                    (0, r.jsxs)("div", {
+                        "aria-hidden": !0,
+                        className: d.Kk,
+                        children: [
+                            (0, r.jsx)("div", {
+                                className: d.R5,
+                                children: n.map((e, t) =>
+                                    (0, r.jsx)(
+                                        f,
+                                        { index: t, onItemLayout: j, children: l(e) },
+                                        "string" == typeof e ? e : e.key,
+                                    ),
+                                ),
+                            }),
+                            (0, r.jsx)("div", {
+                                className: d.zd,
+                                ref: k,
+                                children: l(a.intl.formatToPlainString(a.t.vGclWm, { count: Number(`1${n.length}`) })),
+                            }),
+                        ],
                     }),
-                    (0, r.jsx)("div", {
-                        className: d.zd,
-                        ref: k,
-                        children: l(a.intl.formatToPlainString(a.t.vGclWm, { count: Number(`1${n.length}`) })),
-                    }),
+                    R.map(l),
+                    b.length > 0 && (g ?? N)(b),
                 ],
-            }),
-            R.map(l),
-            b.length > 0 && (g ?? N)(b),
-        ],
-    });
-}
+            });
+        },
+        g2: h,
+    },
+);

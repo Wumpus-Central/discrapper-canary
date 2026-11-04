@@ -1,9 +1,9 @@
-e.exports = {
-    Xl: "timerContainer_d0d75b",
-    $R: "timeUnitsOuterContainer_d0d75b",
-    bh: "timeUnitInnerContainer_d0d75b",
-    kB: "time_d0d75b",
-    B2: "timeBoxOutline_d0d75b",
-    a3: "largeDigits_d0d75b",
-    cV: "unitDivider_d0d75b",
+i.exports = {
+    Xl: "timerContainer_u7GTn0",
+    $R: "timeUnitsOuterContainer_u7GTn0",
+    bh: "timeUnitInnerContainer_u7GTn0",
+    kB: "time_u7GTn0",
+    B2: "timeBoxOutline_u7GTn0",
+    a3: "largeDigits_u7GTn0",
+    cV: "unitDivider_u7GTn0",
 };

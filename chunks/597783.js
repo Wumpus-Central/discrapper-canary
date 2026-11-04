@@ -1,55 +1,71 @@
-n.d(t, { Z: () => m });
 var l = n(582128),
-    r = n(17928),
-    s = n(174459),
-    a = n(24482),
+    r = n(855986),
+    s = n(129230),
+    a = n(879610),
     i = n(440938),
     o = n(590180),
     c = n(993408),
     u = n(331884),
     d = n(652215);
-function m(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "product",
-        m = (0, i.uM)(),
-        g = (0, r.bG)([o.A], () => o.A.getProduct(e)),
-        h = (0, u.o)(),
-        p = a.Ay.canUseShopDiscounts(h),
-        x = l.useRef(null),
-        f = l.useCallback(() => {
-            let l = null != g ? (0, c.Br)(g, p, !1) : null,
-                r = null != g ? (0, c.c7)(g, p, !1) : void 0;
-            s.default.track(d.HAw.COLLECTIBLES_TILE_IMPRESSION, {
-                collectibles_shop_session_id: m?.sessionId,
-                sku_id: e,
-                display_price: l?.amount,
-                display_price_currency: l?.currency.toString(),
-                display_price_strikethrough: r,
-                position: m?.tilePosition,
-                page_type: t,
-                page_category: m?.pageCategory,
-                page_section: m?.pageSection,
-                type: n,
-                category_position: m?.categoryPosition,
-            });
-        }, [m?.sessionId, m?.categoryPosition, m?.pageCategory, m?.pageSection, m?.tilePosition, p, t, g, e, n]),
-        E = l.useCallback(
-            (e) => {
-                e
-                    ? null === x.current &&
-                      (x.current = setTimeout(() => {
-                          (f(), (x.current = null));
-                      }, 1e3))
-                    : null !== x.current && (clearTimeout(x.current), (x.current = null));
-            },
-            [f],
-        );
-    return (
-        l.useEffect(
-            () => () => {
-                null !== x.current && (clearTimeout(x.current), (x.current = null));
-            },
-            [e],
-        ),
-        { handleCardVisibilityChange: E }
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        Z: function (e, t) {
+            let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "product",
+                m = (0, i.uM)(),
+                g = (0, r.bG)([o.A], () => o.A.getProduct(e)),
+                h = (0, u.o)(),
+                p = a.Ay.canUseShopDiscounts(h),
+                x = l.useRef(null),
+                f = l.useCallback(() => {
+                    let l = null != g ? (0, c.Br)(g, p, !1) : null,
+                        r = null != g ? (0, c.c7)(g, p, !1) : void 0;
+                    s.default.track(d.HAw.COLLECTIBLES_TILE_IMPRESSION, {
+                        collectibles_shop_session_id: m?.sessionId,
+                        sku_id: e,
+                        display_price: l?.amount,
+                        display_price_currency: l?.currency.toString(),
+                        display_price_strikethrough: r,
+                        position: m?.tilePosition,
+                        page_type: t,
+                        page_category: m?.pageCategory,
+                        page_section: m?.pageSection,
+                        type: n,
+                        category_position: m?.categoryPosition,
+                    });
+                }, [
+                    m?.sessionId,
+                    m?.categoryPosition,
+                    m?.pageCategory,
+                    m?.pageSection,
+                    m?.tilePosition,
+                    p,
+                    t,
+                    g,
+                    e,
+                    n,
+                ]),
+                E = l.useCallback(
+                    (e) => {
+                        e
+                            ? null === x.current &&
+                              (x.current = setTimeout(() => {
+                                  (f(), (x.current = null));
+                              }, 1e3))
+                            : null !== x.current && (clearTimeout(x.current), (x.current = null));
+                    },
+                    [f],
+                );
+            return (
+                l.useEffect(
+                    () => () => {
+                        null !== x.current && (clearTimeout(x.current), (x.current = null));
+                    },
+                    [e],
+                ),
+                { handleCardVisibilityChange: E }
+            );
+        },
+    },
+);

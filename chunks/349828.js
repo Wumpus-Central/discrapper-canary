@@ -1,31 +1,8 @@
-n.d(t, {
-    A: () => c,
-    HH: () => u,
-    O8: () => s,
-    Rq: () => _,
-    Vc: () => r,
-    _z: () => a,
-    dh: () => o,
-    l0: () => E,
-    lj: () => l,
-    sY: () => A,
-    sv: () => d,
+let i = (0, n(537975).tJ)({
+    id: "373",
+    name: "Favorites",
+    description: "The place for all your favorite channels!",
+    joinedAt: new Date(),
+    maxMembers: 5e5,
 });
-var i = n(149790);
-let r = "373",
-    a = (0, i.tJ)({
-        id: r,
-        name: "Favorites",
-        description: "The place for all your favorite channels!",
-        joinedAt: new Date(),
-        maxMembers: 5e5,
-    }),
-    s = "0",
-    l = 200,
-    o = 20,
-    d = 100,
-    c = "Auto-Added Threads",
-    u = 0,
-    _ = [0, 7, 14],
-    E = "auto-added",
-    A = "all";
+n.d(t, {}, { A: "Auto-Added Threads", Rq: [0, 7, 14], _z: i, l0: "auto-added" });

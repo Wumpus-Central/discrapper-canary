@@ -1,0 +1,41 @@
+.sidebarContainer_MLLsfk {
+    margin: 0;
+    margin-inline-start: 8px
+}
+
+.loadingContainer_MLLsfk,
+.sidebarContainer_MLLsfk {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%
+}
+
+.loadingContainer_MLLsfk {
+    align-items: center;
+    justify-content: center
+}
+
+div.profileThemedContainer_MLLsfk {
+    border-radius: 8px 0 0 8px;
+    box-shadow: none;
+    max-height: auto;
+    min-height: auto;
+    width: auto
+}
+
+.innerContainer_MLLsfk,
+div.profileThemedContainer_MLLsfk {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 8px
+}
+
+.innerContainer_MLLsfk {
+    color: var(--text-default);
+    padding: 8px;
+    position: relative
+}
+
+/*# sourceMappingURL=ffa859064eb9ce7d.css.map*/

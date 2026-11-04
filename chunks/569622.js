@@ -1,8 +1,8 @@
 t.exports = {
-    I6: "inputWrapper_f08f8d",
-    XG: "scroller_f08f8d",
-    RZ: "editorContainer_f08f8d",
-    EN: "editor_f08f8d",
-    S0: "emojiButtonContainer_f08f8d",
-    Z8: "emojiButton_f08f8d",
+    I6: "inputWrapper_wH8Jbw",
+    XG: "scroller_wH8Jbw",
+    RZ: "editorContainer_wH8Jbw",
+    EN: "editor_wH8Jbw",
+    S0: "emojiButtonContainer_wH8Jbw",
+    Z8: "emojiButton_wH8Jbw",
 };

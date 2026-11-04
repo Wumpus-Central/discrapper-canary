@@ -1,4 +1,3 @@
-d.d(t, { t: () => G });
 var i = d(269882),
     e = d(646613),
     c = d(215628),
@@ -203,180 +202,191 @@ function W(l) {
     let d = l.context.uploadError;
     if ("string" == typeof d && 0 !== d.length) return { errorCode: d, reason: o(d) };
 }
-function G(l, t, d = new s.t()) {
-    return (0, e.l)({
-        actor: l,
-        mapState: Z,
-        createApi: m,
-        instrumentation: (0, i.s)(t, {
-            getEventScreenName: (l) =>
-                (function (l, t) {
-                    if (t === i.n.authFace || t === i.n.authentication)
-                        return (function (l) {
-                            let { value: t } = l;
-                            if (null == t) return;
-                            let d = (0, i.o)(t);
-                            if (void 0 !== d)
-                                switch (d) {
+d.d(
+    t,
+    {},
+    {
+        t: function (l, t, d = new s.t()) {
+            return (0, e.l)({
+                actor: l,
+                mapState: Z,
+                createApi: m,
+                instrumentation: (0, i.s)(t, {
+                    getEventScreenName: (l) =>
+                        (function (l, t) {
+                            if (t === i.n.authFace || t === i.n.authentication)
+                                return (function (l) {
+                                    let { value: t } = l;
+                                    if (null == t) return;
+                                    let d = (0, i.o)(t);
+                                    if (void 0 !== d)
+                                        switch (d) {
+                                            case "tutorial":
+                                                return i.r.authFaceTutorial;
+                                            case "capture":
+                                                return (function (l) {
+                                                    let { value: t } = l;
+                                                    if ("object" != typeof t || null === t) return;
+                                                    let d = t.capture;
+                                                    if (void 0 !== d) {
+                                                        if ("string" == typeof d)
+                                                            switch (d) {
+                                                                case "preparingUpload":
+                                                                case "uploading":
+                                                                case "validatingUpload":
+                                                                    return i.r.authFaceUpload;
+                                                                case "uploadError":
+                                                                    return i.r.authFaceError;
+                                                                case "success":
+                                                                    return i.r.authFaceUploadSuccess;
+                                                                case "checkingDeepsight":
+                                                                case "initializingDeepsight":
+                                                                case "checkingStream":
+                                                                case "initializing":
+                                                                case "detecting":
+                                                                case "capturing":
+                                                                case "capturingManual":
+                                                                    return i.r.authFace;
+                                                            }
+                                                        if ("object" == typeof d && null !== d) {
+                                                            let l = Object.keys(d);
+                                                            if (
+                                                                l.includes("uploading") ||
+                                                                l.includes("validatingUpload")
+                                                            )
+                                                                return i.r.authFaceUpload;
+                                                            if (l.includes("uploadError")) return i.r.authFaceError;
+                                                            if (l.includes("success")) return i.r.authFaceUploadSuccess;
+                                                        }
+                                                        return i.r.authFace;
+                                                    }
+                                                })(l);
+                                            case "finished":
+                                                return i.r.authFaceUploadSuccess;
+                                            case "error":
+                                                return i.r.authFaceUploadFailed;
+                                            default:
+                                                return i.r.authFace;
+                                        }
+                                })(l);
+                            let { value: d } = l;
+                            if (null == d) return;
+                            let e = (0, i.o)(d);
+                            if (void 0 !== e)
+                                switch (e) {
+                                    case "idle":
+                                    case "loading":
+                                    case "processing":
+                                        return "faceCapture.loading.processing";
                                     case "tutorial":
-                                        return i.r.authFaceTutorial;
+                                        if (l.context?.config?.ageAssurance === !0)
+                                            return "faceCapture.tutorial.ageAssurance";
+                                        if ("object" == typeof l.value && null !== l.value) {
+                                            let t = l.value.tutorial;
+                                            if ("object" == typeof t && null !== t && "initializingCamera" in t)
+                                                return "faceCapture.tutorial.loading";
+                                        }
+                                        return "faceCapture.tutorial.default";
+                                    case "permissions":
+                                        return "faceCapture.tutorial.default";
                                     case "capture":
                                         return (function (l) {
-                                            let { value: t } = l;
+                                            let { value: t, context: d } = l;
                                             if ("object" != typeof t || null === t) return;
-                                            let d = t.capture;
-                                            if (void 0 !== d) {
-                                                if ("string" == typeof d)
-                                                    switch (d) {
-                                                        case "preparingUpload":
-                                                        case "uploading":
-                                                        case "validatingUpload":
-                                                            return i.r.authFaceUpload;
-                                                        case "uploadError":
-                                                            return i.r.authFaceError;
-                                                        case "success":
-                                                            return i.r.authFaceUploadSuccess;
+                                            let i = t.capture;
+                                            if (void 0 !== i) {
+                                                if ("string" == typeof i)
+                                                    switch (i) {
                                                         case "checkingDeepsight":
                                                         case "initializingDeepsight":
                                                         case "checkingStream":
                                                         case "initializing":
+                                                            return "faceCapture.capturing.initiatingState";
                                                         case "detecting":
+                                                            switch (d?.detectionStatus) {
+                                                                case "getReady":
+                                                                case "getReadyFinished":
+                                                                    return "faceCapture.capturing.getReady";
+                                                                case "dark":
+                                                                    return "faceCapture.capturing.tooDark";
+                                                                case "tooBright":
+                                                                    return "faceCapture.capturing.tooBright";
+                                                                case "tooClose":
+                                                                    return "faceCapture.capturing.moveAway";
+                                                                case "tooFar":
+                                                                    return "faceCapture.capturing.moveCloser";
+                                                                case "moveLeft":
+                                                                    return "faceCapture.capturing.moveLeft";
+                                                                case "moveRight":
+                                                                    return "faceCapture.capturing.moveRight";
+                                                                case "blur":
+                                                                case "centerFace":
+                                                                case "noFace":
+                                                                case "tooManyFaces":
+                                                                    return "faceCapture.capturing.alignFace";
+                                                                case "faceAngle":
+                                                                case "lookAtCamera":
+                                                                    return "faceCapture.capturing.lookAtCamera";
+                                                                case "eyesClosed":
+                                                                    return "faceCapture.capturing.eyesClosed";
+                                                                case "faceMask":
+                                                                    return "faceCapture.capturing.maskDetected";
+                                                                case "lenses":
+                                                                    return "faceCapture.capturing.glassesDetected";
+                                                                case "headWear":
+                                                                    return "faceCapture.capturing.hatDetected";
+                                                                case "faceOcclusion":
+                                                                    return "faceCapture.capturing.faceOcclusion";
+                                                                case "manualCapture":
+                                                                    return "faceCapture.manualCapture.default";
+                                                                case "capturing":
+                                                                    return "faceCapture.loading.processing";
+                                                                case "detecting":
+                                                                case "idle":
+                                                                case "offline":
+                                                                    return "faceCapture.genericErrors.noConnection";
+                                                                default:
+                                                                    return "faceCapture.capturing.initiatingState";
+                                                            }
                                                         case "capturing":
+                                                            return "faceCapture.loading.processing";
                                                         case "capturingManual":
-                                                            return i.r.authFace;
+                                                            return "faceCapture.manualCapture.default";
+                                                        case "preparingUpload":
+                                                        case "uploading":
+                                                        case "validatingUpload":
+                                                            return "faceCapture.loading.uploading";
+                                                        case "uploadError":
+                                                            return b(d?.uploadError, d?.attemptsRemaining);
+                                                        case "success":
+                                                            return "faceCapture.resultSuccess.default";
                                                     }
-                                                if ("object" == typeof d && null !== d) {
-                                                    let l = Object.keys(d);
-                                                    if (l.includes("uploading") || l.includes("validatingUpload"))
-                                                        return i.r.authFaceUpload;
-                                                    if (l.includes("uploadError")) return i.r.authFaceError;
-                                                    if (l.includes("success")) return i.r.authFaceUploadSuccess;
+                                                if ("object" == typeof i && null !== i) {
+                                                    let l = Object.keys(i);
+                                                    if (l.includes("uploading")) return "faceCapture.loading.uploading";
+                                                    if (l.includes("uploadError"))
+                                                        return b(d?.uploadError, d?.attemptsRemaining);
+                                                    if (l.includes("success"))
+                                                        return "faceCapture.resultSuccess.default";
                                                 }
-                                                return i.r.authFace;
+                                                return "faceCapture.capturing.initiatingState";
                                             }
                                         })(l);
                                     case "finished":
-                                        return i.r.authFaceUploadSuccess;
+                                        return "faceCapture.resultSuccess.default";
+                                    case "closed":
+                                        return "faceCapture.closed";
                                     case "error":
-                                        return i.r.authFaceUploadFailed;
+                                        return "faceCapture.resultError.processingFailed";
                                     default:
-                                        return i.r.authFace;
+                                        return `faceCapture.${e}`;
                                 }
-                        })(l);
-                    let { value: d } = l;
-                    if (null == d) return;
-                    let e = (0, i.o)(d);
-                    if (void 0 !== e)
-                        switch (e) {
-                            case "idle":
-                            case "loading":
-                            case "processing":
-                                return "faceCapture.loading.processing";
-                            case "tutorial":
-                                if (l.context?.config?.ageAssurance === !0) return "faceCapture.tutorial.ageAssurance";
-                                if ("object" == typeof l.value && null !== l.value) {
-                                    let t = l.value.tutorial;
-                                    if ("object" == typeof t && null !== t && "initializingCamera" in t)
-                                        return "faceCapture.tutorial.loading";
-                                }
-                                return "faceCapture.tutorial.default";
-                            case "permissions":
-                                return "faceCapture.tutorial.default";
-                            case "capture":
-                                return (function (l) {
-                                    let { value: t, context: d } = l;
-                                    if ("object" != typeof t || null === t) return;
-                                    let i = t.capture;
-                                    if (void 0 !== i) {
-                                        if ("string" == typeof i)
-                                            switch (i) {
-                                                case "checkingDeepsight":
-                                                case "initializingDeepsight":
-                                                case "checkingStream":
-                                                case "initializing":
-                                                    return "faceCapture.capturing.initiatingState";
-                                                case "detecting":
-                                                    switch (d?.detectionStatus) {
-                                                        case "getReady":
-                                                        case "getReadyFinished":
-                                                            return "faceCapture.capturing.getReady";
-                                                        case "dark":
-                                                            return "faceCapture.capturing.tooDark";
-                                                        case "tooBright":
-                                                            return "faceCapture.capturing.tooBright";
-                                                        case "tooClose":
-                                                            return "faceCapture.capturing.moveAway";
-                                                        case "tooFar":
-                                                            return "faceCapture.capturing.moveCloser";
-                                                        case "moveLeft":
-                                                            return "faceCapture.capturing.moveLeft";
-                                                        case "moveRight":
-                                                            return "faceCapture.capturing.moveRight";
-                                                        case "blur":
-                                                        case "centerFace":
-                                                        case "noFace":
-                                                        case "tooManyFaces":
-                                                            return "faceCapture.capturing.alignFace";
-                                                        case "faceAngle":
-                                                        case "lookAtCamera":
-                                                            return "faceCapture.capturing.lookAtCamera";
-                                                        case "eyesClosed":
-                                                            return "faceCapture.capturing.eyesClosed";
-                                                        case "faceMask":
-                                                            return "faceCapture.capturing.maskDetected";
-                                                        case "lenses":
-                                                            return "faceCapture.capturing.glassesDetected";
-                                                        case "headWear":
-                                                            return "faceCapture.capturing.hatDetected";
-                                                        case "faceOcclusion":
-                                                            return "faceCapture.capturing.faceOcclusion";
-                                                        case "manualCapture":
-                                                            return "faceCapture.manualCapture.default";
-                                                        case "capturing":
-                                                            return "faceCapture.loading.processing";
-                                                        case "detecting":
-                                                        case "idle":
-                                                        case "offline":
-                                                            return "faceCapture.genericErrors.noConnection";
-                                                        default:
-                                                            return "faceCapture.capturing.initiatingState";
-                                                    }
-                                                case "capturing":
-                                                    return "faceCapture.loading.processing";
-                                                case "capturingManual":
-                                                    return "faceCapture.manualCapture.default";
-                                                case "preparingUpload":
-                                                case "uploading":
-                                                case "validatingUpload":
-                                                    return "faceCapture.loading.uploading";
-                                                case "uploadError":
-                                                    return b(d?.uploadError, d?.attemptsRemaining);
-                                                case "success":
-                                                    return "faceCapture.resultSuccess.default";
-                                            }
-                                        if ("object" == typeof i && null !== i) {
-                                            let l = Object.keys(i);
-                                            if (l.includes("uploading")) return "faceCapture.loading.uploading";
-                                            if (l.includes("uploadError"))
-                                                return b(d?.uploadError, d?.attemptsRemaining);
-                                            if (l.includes("success")) return "faceCapture.resultSuccess.default";
-                                        }
-                                        return "faceCapture.capturing.initiatingState";
-                                    }
-                                })(l);
-                            case "finished":
-                                return "faceCapture.resultSuccess.default";
-                            case "closed":
-                                return "faceCapture.closed";
-                            case "error":
-                                return "faceCapture.resultError.processingFailed";
-                            default:
-                                return `faceCapture.${e}`;
-                        }
-                })(l, t),
-            getErrorName: h,
-            getErrorPayload: W,
-            visibilityObserver: d,
-        }),
-    });
-}
+                        })(l, t),
+                    getErrorName: h,
+                    getErrorPayload: W,
+                    visibilityObserver: d,
+                }),
+            });
+        },
+    },
+);

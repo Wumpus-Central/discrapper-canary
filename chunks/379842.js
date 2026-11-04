@@ -1,7 +1,7 @@
 e.exports = {
-    u1: "spinner_fa25b7",
-    wx: "header_fa25b7",
-    b: "closeButton_fa25b7",
-    Qs: "content_fa25b7",
-    Hx: "modalFooter_fa25b7",
+    u1: "spinner_m1SX1n",
+    wx: "header_m1SX1n",
+    b: "closeButton_m1SX1n",
+    Qs: "content_m1SX1n",
+    Hx: "modalFooter_m1SX1n",
 };

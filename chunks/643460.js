@@ -1,4 +1,3 @@
-e.d(r, { default: () => j });
 var i = e(477900);
 e(582128);
 var s = e(189213),
@@ -11,20 +10,9 @@ var s = e(189213),
     m = e(975571),
     h = e(652215),
     u = e(99206),
-    x = e(105292),
+    x = e(792996),
     C = e(463292);
 function j(t) {
-    let { transitionState: r, onClose: e } = t;
-    return (0, i.jsx)(s.a, {
-        transitionState: r,
-        title: x.intl.string(x.t.pWLGnF),
-        subtitle: x.intl.string(x.t.WKxo8n),
-        actions: [],
-        onClose: e,
-        children: (0, i.jsx)(v, { onClose: e }),
-    });
-}
-function v(t) {
     let { onClose: r } = t,
         e = [
             { icon: (0, i.jsx)(n.$, { size: "refresh_sm", color: "currentColor" }), text: x.intl.string(x.t.vXBrdg) },
@@ -64,3 +52,20 @@ function v(t) {
         ],
     });
 }
+e.d(
+    r,
+    {},
+    {
+        default: function (t) {
+            let { transitionState: r, onClose: e } = t;
+            return (0, i.jsx)(s.a, {
+                transitionState: r,
+                title: x.intl.string(x.t.pWLGnF),
+                subtitle: x.intl.string(x.t.WKxo8n),
+                actions: [],
+                onClose: e,
+                children: (0, i.jsx)(j, { onClose: e }),
+            });
+        },
+    },
+);

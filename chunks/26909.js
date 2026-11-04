@@ -1,7 +1,7 @@
-(n.d(t, { Ay: () => f, RG: () => _ }), n(321073));
+n(321073);
 var i = n(435558),
     r = n.n(i),
-    a = n(17928),
+    a = n(855986),
     s = n(73153),
     l = n(283047),
     o = n(617617);
@@ -10,19 +10,9 @@ var d = n(355097);
 let c = { pendingUsages: [] },
     u = new l.A({ computeBonus: () => 1, lookupKey: (e) => e, afterCompute: () => {}, numFrequentlyItems: 100 });
 function _(e, t) {
-    return e
-        .filter((e) => {
-            if (e.includes(":"))
-                if (t?.guild != null) return t.guild.id === e.split(":")[1];
-                else return !1;
-            return !0;
-        })
-        .map((e) => e.split(":")[0]);
-}
-function E(e, t) {
     return 0 > Number(t.id) ? t.id : e?.guild != null && null != t.guildId ? `${t.id}:${e.guild.id}` : t.id;
 }
-function A() {
+function E() {
     let e = o.A.frecencyWithoutFetchingLatest,
         t = e.applicationCommandFrecency?.applicationCommands ?? {};
     u.overwriteHistory(
@@ -30,11 +20,11 @@ function A() {
         c.pendingUsages,
     );
 }
-class h extends a.Ay.PersistedStore {
+class A extends a.Ay.PersistedStore {
     static displayName = "ApplicationCommandFrecencyStore";
     static persistKey = "ApplicationCommandFrecencyV2";
     initialize(e) {
-        (null != e && (c = e), this.syncWith([o.A], A));
+        (null != e && (c = e), this.syncWith([o.A], E));
     }
     getState() {
         return c;
@@ -46,16 +36,16 @@ class h extends a.Ay.PersistedStore {
         return u;
     }
     getScoreWithoutLoadingLatest(e, t) {
-        return u.getScore(E(e, t)) ?? 0;
+        return u.getScore(_(e, t)) ?? 0;
     }
     getTopCommandsWithoutLoadingLatest() {
         return u.frequently;
     }
 }
-let f = new h(s.h, {
+let h = new A(s.h, {
     APPLICATION_COMMAND_USED: function (e) {
         let { command: t, context: n } = e,
-            i = E(n, t);
+            i = _(n, t);
         (c.pendingUsages.push({ key: i, timestamp: Date.now() }), u.track(i), u.compute());
     },
     USER_SETTINGS_PROTO_UPDATE: function (e) {
@@ -67,3 +57,20 @@ let f = new h(s.h, {
         c.pendingUsages = [];
     },
 });
+n.d(
+    t,
+    {},
+    {
+        Ay: h,
+        RG: function (e, t) {
+            return e
+                .filter((e) => {
+                    if (e.includes(":"))
+                        if (t?.guild != null) return t.guild.id === e.split(":")[1];
+                        else return !1;
+                    return !0;
+                })
+                .map((e) => e.split(":")[0]);
+        },
+    },
+);

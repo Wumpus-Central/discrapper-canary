@@ -1,7 +1,7 @@
 e.exports = {
-    XX: "appAsidePanelWrapper_a3002d",
-    Xq: "mobileAppAsidePanelWrapper_a3002d",
-    x$: "notAppAsidePanel_a3002d",
-    yA: "app_a3002d",
-    C$: "mobileApp_a3002d",
+    XX: "appAsidePanelWrapper_YRXZu0",
+    Xq: "mobileAppAsidePanelWrapper_YRXZu0",
+    x$: "notAppAsidePanel_YRXZu0",
+    yA: "app_YRXZu0",
+    C$: "mobileApp_YRXZu0",
 };

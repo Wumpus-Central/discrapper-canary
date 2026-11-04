@@ -1,4 +1,3 @@
-n.d(t, { Ay: () => x, e9: () => g, qd: () => p });
 var i = n(477900),
     l = n(582128),
     s = n(435558),
@@ -7,7 +6,7 @@ var i = n(477900),
     o = n(652896),
     u = n(834757),
     c = n(290863),
-    d = n(174459),
+    d = n(129230),
     m = n(652215);
 let p = { x: 0, y: 0 },
     g = l.createContext({
@@ -116,6 +115,14 @@ let p = { x: 0, y: 0 },
             );
         return (0, i.jsx)(g.Provider, { value: D, children: u });
     });
-function x(e) {
-    return e.enableZoom ? (0, i.jsx)(h, { ...e }) : e.children;
-}
+n.d(
+    t,
+    {},
+    {
+        Ay: function (e) {
+            return e.enableZoom ? (0, i.jsx)(h, { ...e }) : e.children;
+        },
+        e9: g,
+        qd: p,
+    },
+);

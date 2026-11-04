@@ -1,28 +1,9 @@
-n.d(t, { $g: () => o, LQ: () => u, TW: () => E, yR: () => d });
 var i = n(737291),
     r = n.n(i),
     a = n(997101),
     s = n(818348);
 let l = new Map(),
-    o = function (e, t, n) {
-        var i;
-        let r,
-            a,
-            o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        if (t === s.Yr.DISCORD_ORB) return e.toString();
-        let { convertToMajorUnits: u = !0, ..._ } = o,
-            E = t === s.Yr.IDR ? d[t] : void 0;
-        return ((i = {
-            style: "currency",
-            currency: t,
-            ...(null != E ? { minimumFractionDigits: E, maximumFractionDigits: E } : void 0),
-            ..._,
-        }),
-        (r = `${n}|${JSON.stringify(i)}`),
-        null == (a = l.get(r)) && ((a = Intl.NumberFormat(n, i)), l.set(r, a)),
-        a).format(u ? c(e, t) : e);
-    },
-    d = {
+    o = {
         [s.Yr.AED]: 2,
         [s.Yr.AFN]: 2,
         [s.Yr.ALL]: 2,
@@ -207,18 +188,7 @@ let l = new Map(),
         [s.Yr.ZWL]: 2,
         [s.Yr.DISCORD_ORB]: 0,
     },
-    c = (e, t) => {
-        let n = d[t];
-        if (null == n) throw Error(`Unexpected currency ${t}`);
-        return new (r())(e).dividedBy(10 ** n).toNumber();
-    },
-    u = (e, t) => {
-        let n = d[t];
-        if (null == n) return null;
-        let i = 10 ** n;
-        return Math.floor(e / i) * i;
-    },
-    _ = {
+    d = {
         [a.d.AD]: s.Yr.EUR,
         [a.d.AE]: s.Yr.AED,
         [a.d.AF]: s.Yr.AFN,
@@ -462,9 +432,48 @@ let l = new Map(),
         [a.d.YT]: s.Yr.EUR,
         [a.d.ZA]: s.Yr.ZAR,
         [a.d.ZM]: s.Yr.ZMW,
-    },
-    E = (e) => {
-        let t = s.Yr.USD,
-            [n, i] = e.split("-");
-        return void 0 === i ? t : (_[i.toUpperCase()] ?? t);
     };
+n.d(
+    t,
+    {},
+    {
+        $g: function (e, t, n) {
+            var i;
+            let a,
+                d,
+                c = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+            if (t === s.Yr.DISCORD_ORB) return e.toString();
+            let { convertToMajorUnits: u = !0, ..._ } = c,
+                E = t === s.Yr.IDR ? o[t] : void 0;
+            return ((i = {
+                style: "currency",
+                currency: t,
+                ...(null != E ? { minimumFractionDigits: E, maximumFractionDigits: E } : void 0),
+                ..._,
+            }),
+            (a = `${n}|${JSON.stringify(i)}`),
+            null == (d = l.get(a)) && ((d = Intl.NumberFormat(n, i)), l.set(a, d)),
+            d).format(
+                u
+                    ? ((e, t) => {
+                          let n = o[t];
+                          if (null == n) throw Error(`Unexpected currency ${t}`);
+                          return new (r())(e).dividedBy(10 ** n).toNumber();
+                      })(e, t)
+                    : e,
+            );
+        },
+        LQ: (e, t) => {
+            let n = o[t];
+            if (null == n) return null;
+            let i = 10 ** n;
+            return Math.floor(e / i) * i;
+        },
+        TW: (e) => {
+            let t = s.Yr.USD,
+                [n, i] = e.split("-");
+            return void 0 === i ? t : (d[i.toUpperCase()] ?? t);
+        },
+        yR: o,
+    },
+);

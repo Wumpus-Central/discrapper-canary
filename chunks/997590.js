@@ -1,9 +1,9 @@
-(r.d(e, { A: () => h }), r(321073), r(435558));
-var i = r(17928),
+(r(321073), r(435558));
+var i = r(855986),
     a = r(73153),
     _ = r(403362),
     o = r(324580),
-    s = r(105292);
+    s = r(792996);
 let n = null,
     c = [],
     E = [],
@@ -15,11 +15,11 @@ class D extends i.Ay.Store {
     }
     getDiscoveryCategories() {
         let t = o.FZ.map((t) => E.find((e) => e.categoryId === t)).filter(_.Vq);
-        return [{ categoryId: o.Iq, name: s.intl.string(s.t.Ym2Ri6) }, ...t];
+        return [{ categoryId: -1, name: s.intl.string(s.t.Ym2Ri6) }, ...t];
     }
     getClanDiscoveryCategories() {
         let t = o.FZ.map((t) => E.find((e) => e.categoryId === t)).filter(_.Vq);
-        return [{ categoryId: o.Iq, name: s.intl.string(s.t.QToH29) }, ...t];
+        return [{ categoryId: -1, name: s.intl.string(s.t.QToH29) }, ...t];
     }
     getAllCategories() {
         return E;
@@ -28,7 +28,7 @@ class D extends i.Ay.Store {
         return n;
     }
     getCategoryName(t) {
-        return t === o.Iq ? s.intl.string(s.t.Ym2Ri6) : p[t];
+        return -1 === t ? s.intl.string(s.t.Ym2Ri6) : p[t];
     }
 }
 let h = new D(a.h, {
@@ -41,13 +41,13 @@ let h = new D(a.h, {
             (r
                 .sort((t, e) => (t.name < e.name ? -1 : 1))
                 .forEach((t) => {
-                    let { id: r, name: i, is_primary: s } = t;
-                    if (r !== o.ig) {
-                        if (r === o.v) {
+                    let { id: r, name: i, is_primary: o } = t;
+                    if (0 !== r) {
+                        if (13 === r) {
                             e = { categoryId: r, name: i };
                             return;
                         }
-                        (!0 === s && a.push({ categoryId: r, name: i }),
+                        (!0 === o && a.push({ categoryId: r, name: i }),
                             _.push({ categoryId: r, name: i }),
                             (p[r] = i));
                     }
@@ -60,3 +60,4 @@ let h = new D(a.h, {
         ((n = i), (c = a), (E = _));
     },
 });
+r.d(e, {}, { A: h });

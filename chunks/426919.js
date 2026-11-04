@@ -1,1 +1,1 @@
-e.exports = { eg: "priceLine__05bc9", pw: "priceTagContainer__05bc9", zR: "orbText__05bc9", r9: "disabled__05bc9" };
+e.exports = { eg: "priceLine_zgws6w", pw: "priceTagContainer_zgws6w", zR: "orbText_zgws6w", r9: "disabled_zgws6w" };

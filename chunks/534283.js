@@ -1,10 +1,10 @@
 e.exports = {
-    OS: "singleSelectOption__12eef",
-    Mg: "deviceContainer__12eef",
-    Sy: "withIcon__12eef",
-    S2: "multiLine__12eef",
-    VT: "deviceSubLabel__12eef",
-    Kt: "deviceIcon__12eef",
-    hV: "deviceLabel__12eef",
-    pN: "deviceCertifiedPill__12eef",
+    OS: "singleSelectOption_bUNrgk",
+    Mg: "deviceContainer_bUNrgk",
+    Sy: "withIcon_bUNrgk",
+    S2: "multiLine_bUNrgk",
+    VT: "deviceSubLabel_bUNrgk",
+    Kt: "deviceIcon_bUNrgk",
+    hV: "deviceLabel_bUNrgk",
+    pN: "deviceCertifiedPill_bUNrgk",
 };

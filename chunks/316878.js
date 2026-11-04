@@ -1,8 +1,8 @@
 e.exports = {
-    pS: "questAcceptedHeader__1ba69",
-    Uu: "flex__1ba69",
-    TK: "headerText__1ba69",
-    rb: "submenuWrapper__1ba69",
-    Bx: "submenuIcon__1ba69",
-    U9: "interactiveNormal__1ba69",
+    pS: "questAcceptedHeader_ja4B1_",
+    Uu: "flex_ja4B1_",
+    TK: "headerText_ja4B1_",
+    rb: "submenuWrapper_ja4B1_",
+    Bx: "submenuIcon_ja4B1_",
+    U9: "interactiveNormal_ja4B1_",
 };

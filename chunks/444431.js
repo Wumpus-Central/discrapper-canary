@@ -1,4 +1,3 @@
-n.d(t, { J: () => l, L: () => s });
 var i = n(945810),
     r = n(723702);
 let a = (0, i.mj)({
@@ -25,9 +24,15 @@ let a = (0, i.mj)({
         },
     },
 });
-function s(e) {
-    return a.getConfig({ location: e });
-}
-function l() {
-    return (0, r.isDesktop)() && a.getConfig({ location: "quest_bar_circular_progress" }).questRingVisibleSteps;
-}
+n.d(
+    t,
+    {},
+    {
+        J: function () {
+            return (0, r.xl)() && a.getConfig({ location: "quest_bar_circular_progress" }).questRingVisibleSteps;
+        },
+        L: function (e) {
+            return a.getConfig({ location: e });
+        },
+    },
+);

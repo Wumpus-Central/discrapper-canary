@@ -1,5 +1,4 @@
-n.d(t, { $g: () => d, vn: () => l });
-var i = n(174459),
+var i = n(129230),
     r = n(929396),
     a = n(652215);
 function s(e) {
@@ -24,7 +23,7 @@ class l {
         let n = Date.now();
         null != this.state && n - this.state.lastActivityAt > 6e4 && this.endAt(this.state.lastActivityAt);
         let a = (this.state ??= {
-            id: (0, i.getNewAnalyticsLoadId)(),
+            id: (0, i.gL)(),
             startedAt: n,
             lastActivityAt: n,
             query: null,
@@ -104,7 +103,14 @@ class l {
     }
 }
 let o = new Map();
-function d(e, t) {
-    let n = o.get(e);
-    return (null == n && ((n = new l(e, t)), o.set(e, n)), n);
-}
+n.d(
+    t,
+    {},
+    {
+        $g: function (e, t) {
+            let n = o.get(e);
+            return (null == n && ((n = new l(e, t)), o.set(e, n)), n);
+        },
+        vn: l,
+    },
+);

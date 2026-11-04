@@ -1,4 +1,3 @@
-n.d(t, { O: () => a, e: () => r });
 var i = n(723702);
-let r = !1,
-    a = i.isPlatformEmbedded && ((0, i.isWindows)() || r) && !0;
+let r = i.isPlatformEmbedded && ((0, i.uF)() || !1) && !0;
+n.d(t, {}, { O: r });

@@ -1,8 +1,8 @@
 p.exports = {
-    iV: "activeWrapper__452c3",
-    iE: "wrapper__452c3",
-    tN: "videoWrapper__452c3",
-    $D: "gadientHighlight__452c3",
-    AX: "swipeWrapper__452c3",
-    By: "swipe__452c3",
+    iV: "activeWrapper_r1W-NV",
+    iE: "wrapper_r1W-NV",
+    tN: "videoWrapper_r1W-NV",
+    $D: "gadientHighlight_r1W-NV",
+    AX: "swipeWrapper_r1W-NV",
+    By: "swipe_r1W-NV",
 };

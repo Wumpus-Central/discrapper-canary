@@ -1,4 +1,3 @@
-l.d(a, { A: () => k, I: () => C });
 var n = l(477900),
     t = l(582128),
     r = l(503698),
@@ -8,7 +7,7 @@ var n = l(477900),
     u = l(866665),
     c = l(834730),
     o = l(140735),
-    h = l(364522),
+    h = l(95362),
     m = l(939249),
     x = l(97808),
     b = l(305866),
@@ -18,7 +17,7 @@ var n = l(477900),
     I = l(562153),
     g = l(427262),
     p = l(778712),
-    S = l(105292),
+    S = l(792996),
     E = l(661248);
 function v() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : p._3.SIZE_24;
@@ -129,184 +128,190 @@ function y(e) {
               ],
           });
 }
-function C(e) {
-    let { className: a, "aria-label": l, "aria-labelledby": t, "aria-hidden": r, ...s } = e;
-    return (0, n.jsx)("div", {
-        role: "group",
-        className: i()(a, E.HD),
-        "aria-label": l,
-        "aria-labelledby": t,
-        "aria-hidden": r,
-        children: (0, n.jsx)(y, { ...s }),
-    });
-}
-function k(e) {
-    let {
-            ref: a,
-            users: r,
-            maxUsers: s,
-            guildId: d,
-            channelId: u,
-            className: c,
-            size: o = p._3.SIZE_24,
-            overflowCountVariant: x,
-            overflowCountColor: g = "interactive-text-default",
-            overflowCountClassName: v,
-            popoutClassName: y,
-            hideOverflowCount: C = !1,
-            disableUsernameTooltip: k = !1,
-            disableUserPopout: w = !1,
-            onClickOverflow: R,
-            onFocusOverflow: A,
-            onUserClick: H,
-            onUserListOpenChange: P,
-            onUserPopoutRequestClose: z,
-            "aria-label": T,
-            "aria-labelledby": U,
-            "aria-hidden": q,
-        } = e,
-        [D, F] = t.useState(!1),
-        M = t.useRef(null),
-        G = t.useRef(null),
-        L = r.length - s,
-        O = L + 1,
-        V = L > 0 && !C && !q,
-        X = t.useCallback(() => {
-            ((G.current = null), F(!1), P?.(!1));
-        }, [P]),
-        Q = t.useCallback(
-            (e) => {
-                ((G.current = e ?? M.current), F(!0), P?.(!0));
-            },
-            [P],
-        );
-    return (t.useImperativeHandle(a, () => ({ openUserList: Q, closeUserList: X }), [Q, X]), r.length <= 0)
-        ? null
-        : (0, n.jsxs)(n.Fragment, {
-              children: [
-                  (0, n.jsxs)("div", {
-                      role: "group",
-                      "aria-label": T,
-                      "aria-labelledby": U,
-                      className: i()(c, E.HD),
-                      "aria-hidden": q,
+l.d(
+    a,
+    {},
+    {
+        A: function (e) {
+            let {
+                    ref: a,
+                    users: r,
+                    maxUsers: s,
+                    guildId: d,
+                    channelId: u,
+                    className: c,
+                    size: o = p._3.SIZE_24,
+                    overflowCountVariant: x,
+                    overflowCountColor: g = "interactive-text-default",
+                    overflowCountClassName: v,
+                    popoutClassName: y,
+                    hideOverflowCount: C = !1,
+                    disableUsernameTooltip: k = !1,
+                    disableUserPopout: w = !1,
+                    onClickOverflow: R,
+                    onFocusOverflow: A,
+                    onUserClick: H,
+                    onUserListOpenChange: P,
+                    onUserPopoutRequestClose: z,
+                    "aria-label": T,
+                    "aria-labelledby": U,
+                    "aria-hidden": q,
+                } = e,
+                [D, F] = t.useState(!1),
+                M = t.useRef(null),
+                G = t.useRef(null),
+                L = r.length - s,
+                O = L + 1,
+                V = L > 0 && !C && !q,
+                X = t.useCallback(() => {
+                    ((G.current = null), F(!1), P?.(!1));
+                }, [P]),
+                Q = t.useCallback(
+                    (e) => {
+                        ((G.current = e ?? M.current), F(!0), P?.(!0));
+                    },
+                    [P],
+                );
+            return (t.useImperativeHandle(a, () => ({ openUserList: Q, closeUserList: X }), [Q, X]), r.length <= 0)
+                ? null
+                : (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, n.jsx)(Z, {
-                              users: r,
-                              maxUsers: s,
-                              guildId: d,
-                              channelId: u,
-                              size: o,
-                              shouldShowOverflowCount: V,
-                              disableUsernameTooltip: k,
-                          }),
-                          V &&
-                              (0, n.jsx)(m.D, {
-                                  innerRef: M,
-                                  className: E.x6,
-                                  onFocus: A,
-                                  onClick: (e) => {
-                                      (R?.(e), Q());
-                                  },
-                                  "aria-expanded": D,
-                                  "aria-label": S.intl.formatToPlainString(S.t.R8Z8Qr, { count: O }),
-                                  children: (0, n.jsx)(N, {
-                                      count: O,
-                                      textVariant: x,
-                                      color: "interactive-text-default" === g ? "currentColor" : g,
+                          (0, n.jsxs)("div", {
+                              role: "group",
+                              "aria-label": T,
+                              "aria-labelledby": U,
+                              className: i()(c, E.HD),
+                              "aria-hidden": q,
+                              children: [
+                                  (0, n.jsx)(Z, {
+                                      users: r,
+                                      maxUsers: s,
+                                      guildId: d,
+                                      channelId: u,
                                       size: o,
-                                      className: v,
+                                      shouldShowOverflowCount: V,
+                                      disableUsernameTooltip: k,
                                   }),
+                                  V &&
+                                      (0, n.jsx)(m.D, {
+                                          innerRef: M,
+                                          className: E.x6,
+                                          onFocus: A,
+                                          onClick: (e) => {
+                                              (R?.(e), Q());
+                                          },
+                                          "aria-expanded": D,
+                                          "aria-label": S.intl.formatToPlainString(S.t.R8Z8Qr, { count: O }),
+                                          children: (0, n.jsx)(N, {
+                                              count: O,
+                                              textVariant: x,
+                                              color: "interactive-text-default" === g ? "currentColor" : g,
+                                              size: o,
+                                              className: v,
+                                          }),
+                                      }),
+                              ],
+                          }),
+                          D &&
+                              (0, n.jsx)(_.Y, {
+                                  targetElementRef: G,
+                                  renderPopout: () =>
+                                      (0, n.jsx)(b.l, {
+                                          className: E.XM,
+                                          "aria-label": T,
+                                          "aria-labelledby": U,
+                                          children: (0, n.jsx)(h.Ip, {
+                                              className: i()(E.XG, y),
+                                              children: r.map((e) =>
+                                                  (0, n.jsx)(
+                                                      f.A,
+                                                      {
+                                                          user: e,
+                                                          guildId: d,
+                                                          channelId: u,
+                                                          nick: I.Ay.getNickname(d, u, e),
+                                                          disablePopout: "function" == typeof w ? w(e.id) : w,
+                                                          onClick: H,
+                                                          onPopoutRequestClose: () => {
+                                                              z?.();
+                                                          },
+                                                          onContextMenu: (a) =>
+                                                              (0, j.L3)(
+                                                                  a,
+                                                                  async () => {
+                                                                      let { default: a } = await Promise.all([
+                                                                          l.e(668756),
+                                                                          l.e(790484),
+                                                                          l.e(463317),
+                                                                          l.e(834552),
+                                                                          l.e(708757),
+                                                                          l.e(585968),
+                                                                          l.e(893190),
+                                                                          l.e(776273),
+                                                                          l.e(253729),
+                                                                          l.e(189673),
+                                                                          l.e(234236),
+                                                                          l.e(638221),
+                                                                          l.e(576432),
+                                                                          l.e(797558),
+                                                                          l.e(76705),
+                                                                          l.e(451162),
+                                                                          l.e(229787),
+                                                                          l.e(936320),
+                                                                          l.e(482861),
+                                                                          l.e(576665),
+                                                                          l.e(332470),
+                                                                          l.e(624198),
+                                                                          l.e(715038),
+                                                                          l.e(60086),
+                                                                          l.e(190889),
+                                                                          l.e(242204),
+                                                                          l.e(856753),
+                                                                          l.e(61129),
+                                                                          l.e(205941),
+                                                                          l.e(331203),
+                                                                          l.e(255302),
+                                                                          l.e(349644),
+                                                                          l.e(172883),
+                                                                          l.e(825486),
+                                                                          l.e(169103),
+                                                                          l.e(873786),
+                                                                          l.e(532418),
+                                                                      ]).then(l.bind(l, 668569));
+                                                                      return (l) =>
+                                                                          (0, n.jsx)(a, {
+                                                                              ...l,
+                                                                              user: e,
+                                                                              guildId: d,
+                                                                              channelId: u,
+                                                                          });
+                                                                  },
+                                                                  { onClose: () => X() },
+                                                              ),
+                                                      },
+                                                      e.id,
+                                                  ),
+                                              ),
+                                          }),
+                                      }),
+                                  shouldShow: !0,
+                                  position: "bottom",
+                                  onRequestClose: X,
+                                  children: () => null,
                               }),
                       ],
-                  }),
-                  D &&
-                      (0, n.jsx)(_.Y, {
-                          targetElementRef: G,
-                          renderPopout: () =>
-                              (0, n.jsx)(b.l, {
-                                  className: E.XM,
-                                  "aria-label": T,
-                                  "aria-labelledby": U,
-                                  children: (0, n.jsx)(h.Ip, {
-                                      className: i()(E.XG, y),
-                                      children: r.map((e) =>
-                                          (0, n.jsx)(
-                                              f.A,
-                                              {
-                                                  user: e,
-                                                  guildId: d,
-                                                  channelId: u,
-                                                  nick: I.Ay.getNickname(d, u, e),
-                                                  disablePopout: "function" == typeof w ? w(e.id) : w,
-                                                  onClick: H,
-                                                  onPopoutRequestClose: () => {
-                                                      z?.();
-                                                  },
-                                                  onContextMenu: (a) =>
-                                                      (0, j.L3)(
-                                                          a,
-                                                          async () => {
-                                                              let { default: a } = await Promise.all([
-                                                                  l.e("321735"),
-                                                                  l.e("790484"),
-                                                                  l.e("463317"),
-                                                                  l.e("834552"),
-                                                                  l.e("708757"),
-                                                                  l.e("585968"),
-                                                                  l.e("893190"),
-                                                                  l.e("776273"),
-                                                                  l.e("253729"),
-                                                                  l.e("189673"),
-                                                                  l.e("234236"),
-                                                                  l.e("882073"),
-                                                                  l.e("797558"),
-                                                                  l.e("638221"),
-                                                                  l.e("76705"),
-                                                                  l.e("691994"),
-                                                                  l.e("229787"),
-                                                                  l.e("936320"),
-                                                                  l.e("482861"),
-                                                                  l.e("576665"),
-                                                                  l.e("332470"),
-                                                                  l.e("624198"),
-                                                                  l.e("715038"),
-                                                                  l.e("33611"),
-                                                                  l.e("190889"),
-                                                                  l.e("242204"),
-                                                                  l.e("856753"),
-                                                                  l.e("61129"),
-                                                                  l.e("205941"),
-                                                                  l.e("331203"),
-                                                                  l.e("255302"),
-                                                                  l.e("349644"),
-                                                                  l.e("172883"),
-                                                                  l.e("825486"),
-                                                                  l.e("920628"),
-                                                                  l.e("873786"),
-                                                                  l.e("532418"),
-                                                              ]).then(l.bind(l, 668569));
-                                                              return (l) =>
-                                                                  (0, n.jsx)(a, {
-                                                                      ...l,
-                                                                      user: e,
-                                                                      guildId: d,
-                                                                      channelId: u,
-                                                                  });
-                                                          },
-                                                          { onClose: () => X() },
-                                                      ),
-                                              },
-                                              e.id,
-                                          ),
-                                      ),
-                                  }),
-                              }),
-                          shouldShow: !0,
-                          position: "bottom",
-                          onRequestClose: X,
-                          children: () => null,
-                      }),
-              ],
-          });
-}
+                  });
+        },
+        I: function (e) {
+            let { className: a, "aria-label": l, "aria-labelledby": t, "aria-hidden": r, ...s } = e;
+            return (0, n.jsx)("div", {
+                role: "group",
+                className: i()(a, E.HD),
+                "aria-label": l,
+                "aria-labelledby": t,
+                "aria-hidden": r,
+                children: (0, n.jsx)(y, { ...s }),
+            });
+        },
+    },
+);

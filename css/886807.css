@@ -1,4 +1,4 @@
-.premiumTrialBadge__4c1e4 {
+.premiumTrialBadge_gLFXov {
     align-items: center;
     border-radius: var(--radius-md);
     color: var(--text-strong);
@@ -10,37 +10,37 @@
     text-transform: uppercase
 }
 
-.premiumOfferUnackedBadge__4c1e4 {
+.premiumOfferUnackedBadge_gLFXov {
     background: linear-gradient(90deg, #db00a4, #5968f0)
 }
 
-.premiumOfferWithTimerUnacknowledgedBadge__4c1e4 {
+.premiumOfferWithTimerUnacknowledgedBadge_gLFXov {
     background-image: linear-gradient(to right, var(--premium-tier-2-purple-for-gradients), var(--premium-tier-2-pink-for-gradients))
 }
 
-.premiumOfferWithTimerAcknowledgedBadge__4c1e4 {
+.premiumOfferWithTimerAcknowledgedBadge_gLFXov {
     background-color: var(--background-mod-strong)
 }
 
-.premiumTrialBadgeSelected__4c1e4 {
+.premiumTrialBadgeSelected_gLFXov {
     background-color: var(--background-base-lower)
 }
 
-.premiumOfferBadgeCopy__4c1e4 {
+.premiumOfferBadgeCopy_gLFXov {
     color: var(--white)
 }
 
-.acknowledgedBadgeLabel__4c1e4,
-.premiumOfferBadgeCopy__4c1e4 {
+.acknowledgedBadgeLabel_gLFXov,
+.premiumOfferBadgeCopy_gLFXov {
     text-transform: uppercase
 }
 
-.theme-light .premiumTrialBadge__4c1e4 {
+.theme-light .premiumTrialBadge_gLFXov {
     background-color: var(--background-base-lowest)
 }
 
-.theme-light .premiumTrialBadgeSelected__4c1e4 {
+.theme-light .premiumTrialBadgeSelected_gLFXov {
     background-color: var(--background-base-lower)
 }
 
-/*# sourceMappingURL=886807.3062708731b578c4.css.map*/
+/*# sourceMappingURL=886807.07a120ed171fc778.css.map*/

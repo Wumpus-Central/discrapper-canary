@@ -1,9 +1,8 @@
-n.d(t, { A: () => K });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(17928),
+    l = n(855986),
     o = n(289873),
     d = n(73153),
     c = n(367513),
@@ -13,9 +12,9 @@ var i = n(477900),
     A = n(688810),
     h = n(429913),
     f = n(568598),
-    I = n(198052),
+    I = n(628983),
     p = n(477754),
-    m = n(446243),
+    m = n(303227),
     T = n(558076),
     g = n(360729),
     S = n(976860),
@@ -30,7 +29,7 @@ var i = n(477900),
     v = n(838274),
     P = n(536246),
     M = n(108959),
-    U = n(156954),
+    U = n(358415),
     w = n(56129),
     G = n(824613),
     x = n(51250),
@@ -213,10 +212,16 @@ function Y(e) {
         },
     });
 }
-let K = (e) => {
-    let { channel: t, ...n } = e,
-        r = D.Ay.getCurrentEmbeddedActivity();
-    (0, v.A)({ connectedEmbeddedActivity: r });
-    let { analyticsLocations: a } = (0, A.Ay)(E.A.ACTIVITY_PIP);
-    return (0, i.jsx)(A.f5, { value: a, children: (0, i.jsx)(Y, { channel: t, isLoading: null == r, ...n }) });
-};
+n.d(
+    t,
+    {},
+    {
+        A: (e) => {
+            let { channel: t, ...n } = e,
+                r = D.Ay.getCurrentEmbeddedActivity();
+            (0, v.A)({ connectedEmbeddedActivity: r });
+            let { analyticsLocations: a } = (0, A.Ay)(E.A.ACTIVITY_PIP);
+            return (0, i.jsx)(A.f5, { value: a, children: (0, i.jsx)(Y, { channel: t, isLoading: null == r, ...n }) });
+        },
+    },
+);

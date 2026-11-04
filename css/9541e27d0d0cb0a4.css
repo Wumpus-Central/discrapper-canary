@@ -1,0 +1,66 @@
+.container_Zil16i {
+    background-color: var(--background-surface-highest);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 12px 36px 0 rgba(0, 0, 0, .12);
+    box-sizing: border-box;
+    max-width: 240px;
+    padding: var(--space-48) var(--space-24) var(--space-24);
+    position: relative
+}
+
+.container_Zil16i:after {
+    border: 8px solid transparent;
+    border-top: 8px solid var(--background-surface-highest);
+    content: "";
+    inset-inline-start: 50%;
+    margin-inline-start: -8px;
+    position: absolute;
+    top: 100%
+}
+
+.closeButton_Zil16i {
+    inset-inline-end: 12px;
+    position: absolute;
+    top: 12px
+}
+
+.tagContainer_Zil16i {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--space-16)
+}
+
+.tag_Zil16i {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    display: flex;
+    padding: var(--space-8) var(--space-12)
+}
+
+.badge_Zil16i {
+    margin-inline-end: var(--space-8)
+}
+
+.title_Zil16i {
+    margin-bottom: var(--space-4);
+    text-align: center
+}
+
+.description_Zil16i {
+    margin-bottom: var(--space-16);
+    text-align: center
+}
+
+.adoptButton_Zil16i {
+    margin-bottom: var(--space-8);
+    width: 100%
+}
+
+.editButton_Zil16i {
+    width: 100%
+}
+
+/*# sourceMappingURL=9541e27d0d0cb0a4.css.map*/

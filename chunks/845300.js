@@ -1,4 +1,3 @@
-E.d(e, { Z: () => A });
 var I,
     A =
         (((I = {}).INITIALIZED = "INITIALIZED"),
@@ -6,3 +5,4 @@ var I,
         (I.LOADED = "LOADED"),
         (I.ERROR = "ERROR"),
         I);
+E.d(e, {}, { Z: A });

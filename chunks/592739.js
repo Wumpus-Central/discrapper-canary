@@ -1,7 +1,7 @@
-c.exports = {
-    vk: "clickable__081d7",
-    GI: "appArch__081d7",
-    Pc: "versionHash__081d7",
-    oE: "compact__081d7",
-    Cr: "compactInfo__081d7",
+_.exports = {
+    vk: "clickable_C_Rpm7",
+    GI: "appArch_C_Rpm7",
+    Pc: "versionHash_C_Rpm7",
+    oE: "compact_C_Rpm7",
+    Cr: "compactInfo_C_Rpm7",
 };

@@ -1,4 +1,3 @@
-n.d(t, { G2: () => o, Qr: () => l, yZ: () => s });
 var i = n(136722),
     r = n(652215);
 let a = [
@@ -13,3 +12,4 @@ let a = [
     s = i.kg(...a),
     l = [r.xBc.MANAGE_CHANNELS, r.xBc.MANAGE_ROLES, ...a],
     o = i.kg(...l);
+n.d(t, {}, { G2: o, Qr: l, yZ: s });

@@ -1,6 +1,6 @@
 t.exports = {
-    kL: "container__39f84",
-    Qs: "content__39f84",
-    NO: "viewMoreButton__39f84",
-    O7: "viewMoreButtonCompact__39f84",
+    kL: "container_U6yR7S",
+    Qs: "content_U6yR7S",
+    NO: "viewMoreButton_U6yR7S",
+    O7: "viewMoreButtonCompact_U6yR7S",
 };

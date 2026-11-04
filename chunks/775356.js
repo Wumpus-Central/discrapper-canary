@@ -1,4 +1,4 @@
-(Object.defineProperty(t, "__esModule", { value: !0 }), (t.ImageTypes = void 0));
+t.ImageTypes = void 0;
 class n {}
 ((t.ImageTypes = n),
     (n.AVIF = {

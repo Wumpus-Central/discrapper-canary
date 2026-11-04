@@ -1,12 +1,11 @@
-l.d(a, { A: () => y });
 var t = l(477900),
     r = l(582128),
     s = l(503698),
     n = l.n(s),
-    i = l(17928),
+    i = l(855986),
     u = l(43990),
     d = l(770178),
-    c = l(363195),
+    c = l(413599),
     o = l(746002),
     h = l(855915),
     m = l(940622),
@@ -102,40 +101,46 @@ function b(e) {
         })
     );
 }
-function y(e) {
-    let { frame: a, className: l, filterLayer: s, fadeIn: n = !0, isPreview: d } = e,
-        o = (0, i.bG)([c.A], () => c.A.theme),
-        g = (0, m.eo)(),
-        p = (0, f.i)(a),
-        { profileFrameStyle: y, profileFrameClassName: j } = g?.css ?? p,
-        k = g?.layers ?? a.layers,
-        x = null == s ? k : k.filter(s),
-        I = x
-            .map((e) => {
-                let { id: a } = e;
-                return a;
-            })
-            .join("\0"),
-        v = r.useMemo(() => x, [I]),
-        { layerData: N, settled: A } = (0, h.A)({ skuId: a.skuId, layers: null != g ? void 0 : v }),
-        C = g?.layerData ?? N,
-        M = null != g || A;
-    return 0 !== v.length && M
-        ? (0, t.jsx)(u.N, {
-              theme: o,
-              children: (e) =>
-                  (0, t.jsx)(b, {
-                      skuId: a.skuId,
-                      label: a.label,
-                      layers: v,
-                      layerData: C,
-                      fadeIn: n,
-                      themeClass: e,
-                      profileFrameClassName: j,
-                      profileFrameStyle: y,
-                      className: l,
-                      isPreview: d,
-                  }),
-          })
-        : null;
-}
+l.d(
+    a,
+    {},
+    {
+        A: function (e) {
+            let { frame: a, className: l, filterLayer: s, fadeIn: n = !0, isPreview: d } = e,
+                o = (0, i.bG)([c.A], () => c.A.theme),
+                g = (0, m.eo)(),
+                p = (0, f.i)(a),
+                { profileFrameStyle: y, profileFrameClassName: j } = g?.css ?? p,
+                k = g?.layers ?? a.layers,
+                x = null == s ? k : k.filter(s),
+                I = x
+                    .map((e) => {
+                        let { id: a } = e;
+                        return a;
+                    })
+                    .join("\0"),
+                v = r.useMemo(() => x, [I]),
+                { layerData: N, settled: A } = (0, h.A)({ skuId: a.skuId, layers: null != g ? void 0 : v }),
+                C = g?.layerData ?? N,
+                M = null != g || A;
+            return 0 !== v.length && M
+                ? (0, t.jsx)(u.N, {
+                      theme: o,
+                      children: (e) =>
+                          (0, t.jsx)(b, {
+                              skuId: a.skuId,
+                              label: a.label,
+                              layers: v,
+                              layerData: C,
+                              fadeIn: n,
+                              themeClass: e,
+                              profileFrameClassName: j,
+                              profileFrameStyle: y,
+                              className: l,
+                              isPreview: d,
+                          }),
+                  })
+                : null;
+        },
+    },
+);

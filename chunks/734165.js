@@ -1,8 +1,8 @@
 e.exports = {
-    kL: "container__18169",
-    Zp: "layout__18169",
-    Ss: "wordmark__18169",
-    pq: "info__18169",
-    UD: "buttonContainer__18169",
-    LY: "asset__18169",
+    kL: "container_3tNs0W",
+    Zp: "layout_3tNs0W",
+    Ss: "wordmark_3tNs0W",
+    pq: "info_3tNs0W",
+    UD: "buttonContainer_3tNs0W",
+    LY: "asset_3tNs0W",
 };

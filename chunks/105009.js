@@ -1,4 +1,3 @@
-l.d(t, { n: () => f });
 var a = l(477900),
     n = l(192308),
     i = l(793574),
@@ -7,52 +6,61 @@ var a = l(477900),
     o = l(71393),
     c = l(576705),
     u = l(287809),
-    d = l(614584),
+    d = l(489496),
     m = l(696016);
-async function f(e, t) {
-    let { analyticsLocations: f, channelId: h } = t;
-    (0, d.H1)([e.id]);
-    let p = s.A.getChannel(h);
-    try {
-        let t = await (0, d.VO)(e, { analyticsLocations: [...f, i.A.CLIPS_EXPORT_TO_SOUNDBOARD], skipComposition: !0 });
-        (0, n.openModalLazy)(
-            async () => {
-                let { default: n } = await Promise.all([
-                        l.e("860350"),
-                        l.e("207998"),
-                        l.e("720210"),
-                        l.e("699733"),
-                        l.e("401295"),
-                        l.e("775417"),
-                        l.e("67491"),
-                        l.e("308555"),
-                        l.e("565065"),
-                        l.e("952577"),
-                        l.e("848625"),
-                        l.e("883952"),
-                        l.e("66580"),
-                        l.e("808979"),
-                        l.e("420643"),
-                        l.e("669006"),
-                        l.e("98913"),
-                        l.e("612811"),
-                    ]).then(l.bind(l, 191110)),
-                    i = p?.guild_id != null ? o.A.getGuild(p.guild_id) : null,
-                    s = null != i && (0, r.ie)(i, c.A, u.default).canCreateExpressions,
-                    d = null == e.name || "" === e.name ? (0, m.cM)(e.createdAt) : e.name,
-                    f = d.slice(0, 32);
-                return (e) =>
-                    (0, a.jsx)(n, {
-                        ...e,
-                        showGuildPicker: !0,
-                        guildId: s ? p?.guild_id : void 0,
-                        sourceFile: { file: new File([t], `${d}.mp4`, { type: "video/mp4" }), name: f },
+(l(980504),
+    l.d(
+        t,
+        {},
+        {
+            n: async function (e, t) {
+                let { analyticsLocations: f, channelId: h } = t;
+                (0, d.H1)([e.id]);
+                let p = s.A.getChannel(h);
+                try {
+                    let t = await (0, d.VO)(e, {
+                        analyticsLocations: [...f, i.A.CLIPS_EXPORT_TO_SOUNDBOARD],
+                        skipComposition: !0,
                     });
+                    (0, n.mM)(
+                        async () => {
+                            let { default: n } = await Promise.all([
+                                    l.e(860350),
+                                    l.e(207998),
+                                    l.e(720210),
+                                    l.e(699733),
+                                    l.e(401295),
+                                    l.e(775417),
+                                    l.e(67491),
+                                    l.e(308555),
+                                    l.e(565065),
+                                    l.e(952577),
+                                    l.e(848625),
+                                    l.e(883952),
+                                    l.e(66580),
+                                    l.e(808979),
+                                    l.e(420643),
+                                    l.e(4328),
+                                    l.e(1795),
+                                    l.e(68027),
+                                ]).then(l.bind(l, 122998)),
+                                i = p?.guild_id != null ? o.A.getGuild(p.guild_id) : null,
+                                s = null != i && (0, r.ie)(i, c.A, u.default).canCreateExpressions,
+                                d = null == e.name || "" === e.name ? (0, m.cM)(e.createdAt) : e.name,
+                                f = d.slice(0, 32);
+                            return (e) =>
+                                (0, a.jsx)(n, {
+                                    ...e,
+                                    showGuildPicker: !0,
+                                    guildId: s ? p?.guild_id : void 0,
+                                    sourceFile: { file: new File([t], `${d}.mp4`, { type: "video/mp4" }), name: f },
+                                });
+                        },
+                        { stackingBehavior: "stack" },
+                    );
+                } finally {
+                    (0, d.H1)(null);
+                }
             },
-            { stackingBehavior: "stack" },
-        );
-    } finally {
-        (0, d.H1)(null);
-    }
-}
-l(980504);
+        },
+    ));

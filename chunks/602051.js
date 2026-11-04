@@ -1,4 +1,3 @@
-n.d(t, { S: () => s, Z: () => a });
 var l,
     r,
     s = (((l = {}).HOME = "home"), (l.COLLECTION_INDEX = "collection_index"), l),
@@ -10,3 +9,4 @@ var l,
         (r.INLINE_HELP_TEXT_CLICKED = "inline_help_text_clicked"),
         (r.PROMO_VIEWED = "promo_viewed"),
         r);
+n.d(t, {}, { S: s, Z: a });

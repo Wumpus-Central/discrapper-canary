@@ -6,11 +6,16 @@ function i(e, t, n) {
         i
     );
 }
-async function r(e, t, n) {
-    try {
-        return await fetch(e, { method: "POST", headers: i("x-conjure-", t.type, n), body: t });
-    } catch {
-        return await fetch(e, { method: "POST", headers: i("x-vibegrations-", t.type, n), body: t });
-    }
-}
-n.d(t, { e: () => r });
+n.d(
+    t,
+    {},
+    {
+        e: async function (e, t, n) {
+            try {
+                return await fetch(e, { method: "POST", headers: i("x-conjure-", t.type, n), body: t });
+            } catch {
+                return await fetch(e, { method: "POST", headers: i("x-vibegrations-", t.type, n), body: t });
+            }
+        },
+    },
+);

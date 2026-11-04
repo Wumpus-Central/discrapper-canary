@@ -1,0 +1,73 @@
+.footer_vkK3UW {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    gap: 12px;
+    justify-content: space-between;
+    padding: 16px var(--custom-footer-horizontal-padding);
+    width: 100%
+}
+
+.details_vkK3UW,
+.footer_vkK3UW {
+    align-items: center;
+    display: flex
+}
+
+.details_vkK3UW {
+    gap: 8px;
+    justify-content: flex-start;
+    min-width: 0
+}
+
+.actions_vkK3UW {
+    flex-direction: row;
+    gap: 12px;
+    justify-content: flex-end
+}
+
+.actions_vkK3UW,
+.stackedFooter_vkK3UW {
+    align-items: center;
+    display: flex
+}
+
+.stackedFooter_vkK3UW {
+    background-color: var(--background-base-lower);
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    padding: 16px var(--custom-footer-horizontal-padding)
+}
+
+.stackedDetails_vkK3UW {
+    align-items: flex-start;
+    display: flex;
+    gap: 8px;
+    width: 100%
+}
+
+.stackedActions_vkK3UW {
+    display: flex;
+    gap: 12px;
+    width: 100%
+}
+
+.stackedSecondaryActionRow_vkK3UW {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    gap: 8px;
+    width: 100%
+}
+
+.stackedSecondaryAction_vkK3UW {
+    flex: 1;
+    min-width: 0
+}
+
+.modalBody_tWsxHy {
+    --custom-footer-horizontal-padding: calc(var(--space-16) + var(--space-4))
+}
+
+/*# sourceMappingURL=9f2dad4a438774ee.css.map*/

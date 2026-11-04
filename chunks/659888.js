@@ -1,5 +1,5 @@
 e.exports = {
-    IG: "streamerModeEnabled_aa3ffd",
-    ch: "userSettingsStreamerModeEnabled_aa3ffd",
-    Ac: "streamerModeEnabledBtn_aa3ffd",
+    IG: "streamerModeEnabled_yz0Tww",
+    ch: "userSettingsStreamerModeEnabled_yz0Tww",
+    Ac: "streamerModeEnabledBtn_yz0Tww",
 };

@@ -1,23 +1,28 @@
-function n() {
-    for (var e = arguments.length, t = Array(e), r = 0; r < e; r++) t[r] = arguments[r];
-    return 1 === t.length && t[0]
-        ? t[0]
-        : (e) => {
-              let r = !1,
-                  n = t.map((t) => {
-                      let n = i(t, e);
-                      return ((r ||= "function" == typeof n), n);
-                  });
-              if (r)
-                  return () => {
-                      n.forEach((e, r) => {
-                          "function" == typeof e ? e() : i(t[r], null);
-                      });
-                  };
-          };
-}
-function i(e, t) {
+function n(e, t) {
     if ("function" == typeof e) return e(t);
     null != e && (e.current = t);
 }
-r.d(t, { P: () => n });
+r.d(
+    t,
+    {},
+    {
+        P: function () {
+            for (var e = arguments.length, t = Array(e), r = 0; r < e; r++) t[r] = arguments[r];
+            return 1 === t.length && t[0]
+                ? t[0]
+                : (e) => {
+                      let r = !1,
+                          i = t.map((t) => {
+                              let i = n(t, e);
+                              return ((r ||= "function" == typeof i), i);
+                          });
+                      if (r)
+                          return () => {
+                              i.forEach((e, r) => {
+                                  "function" == typeof e ? e() : n(t[r], null);
+                              });
+                          };
+                  };
+        },
+    },
+);

@@ -1,4 +1,3 @@
-d.d(t, { n: () => c, t: () => a });
 var i = d(768611),
     e = d(242268),
     c = (0, i.a)(
@@ -30,33 +29,40 @@ var i = d(768611),
                 children: s,
             });
         },
-    ),
-    a = ({ stream: l, children: t, videoRef: d, onPlaying: c, className: a, mirrored: s, ...n }) => {
-        let Z = (0, i.l)(null);
-        return (
-            (0, i._)(() => {
-                Z.current && l && ((Z.current.srcObject = l), Z.current.play().catch(() => {}));
-            }, [l]),
-            (0, i.v)("div", {
-                class: (0, e.n)("IncodeCameraView", a),
-                ...n,
-                children: [
-                    (0, i.v)("div", {
-                        class: "IncodeCameraViewVideo",
-                        children: (0, i.v)("video", {
-                            ref: (l) => {
-                                ((Z.current = l), "function" == typeof d ? d(l) : d && (d.current = l));
-                            },
-                            autoplay: !0,
-                            playsInline: !0,
-                            muted: !0,
-                            onPlaying: c,
-                            "aria-hidden": "true",
-                            class: (0, e.n)("IncodeCameraViewVideoElement", s && "IncodeCameraViewVideoMirrored"),
+    );
+d.d(
+    t,
+    {},
+    {
+        n: c,
+        t: ({ stream: l, children: t, videoRef: d, onPlaying: c, className: a, mirrored: s, ...n }) => {
+            let Z = (0, i.l)(null);
+            return (
+                (0, i._)(() => {
+                    Z.current && l && ((Z.current.srcObject = l), Z.current.play().catch(() => {}));
+                }, [l]),
+                (0, i.v)("div", {
+                    class: (0, e.n)("IncodeCameraView", a),
+                    ...n,
+                    children: [
+                        (0, i.v)("div", {
+                            class: "IncodeCameraViewVideo",
+                            children: (0, i.v)("video", {
+                                ref: (l) => {
+                                    ((Z.current = l), "function" == typeof d ? d(l) : d && (d.current = l));
+                                },
+                                autoplay: !0,
+                                playsInline: !0,
+                                muted: !0,
+                                onPlaying: c,
+                                "aria-hidden": "true",
+                                class: (0, e.n)("IncodeCameraViewVideoElement", s && "IncodeCameraViewVideoMirrored"),
+                            }),
                         }),
-                    }),
-                    t,
-                ],
-            })
-        );
-    };
+                        t,
+                    ],
+                })
+            );
+        },
+    },
+);

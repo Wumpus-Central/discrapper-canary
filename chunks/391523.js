@@ -1,5 +1,4 @@
-l.d(n, { Dv: () => d, Ws: () => u, Yy: () => s });
-var t = l(174459),
+var t = l(129230),
     i = l(210470),
     a = l(652215);
 function r(e) {
@@ -9,24 +8,30 @@ function r(e) {
     }
     return { guild_id: e.guildId, notice_type: e.noticeType };
 }
-function u(e) {
-    t.default.track(a.HAw.SWP_NOTICE_VIEWED, r(e));
-}
-function s(e, n) {
-    t.default.track(a.HAw.SWP_NOTICE_ACTION, { ...r(e), action: n });
-}
-function d(e, n, l, r, u) {
-    let s = (0, i.Dq)(r),
-        d =
-            null != u
-                ? s.filter((e) => u.includedChannelIds.has(e))
-                : r.channels.filter((e) => e.eligible && e.included);
-    t.default.track(a.HAw.SWP_SETTINGS_VIEWED, {
-        guild_id: e,
-        view: n,
-        feature_key: l,
-        feature_enabled: r.enabled,
-        eligible_channel_count: s.length,
-        included_channel_count: d.length,
-    });
-}
+l.d(
+    n,
+    {},
+    {
+        Dv: function (e, n, l, r, u) {
+            let s = (0, i.Dq)(r),
+                d =
+                    null != u
+                        ? s.filter((e) => u.includedChannelIds.has(e))
+                        : r.channels.filter((e) => e.eligible && e.included);
+            t.default.track(a.HAw.SWP_SETTINGS_VIEWED, {
+                guild_id: e,
+                view: n,
+                feature_key: l,
+                feature_enabled: r.enabled,
+                eligible_channel_count: s.length,
+                included_channel_count: d.length,
+            });
+        },
+        Ws: function (e) {
+            t.default.track(a.HAw.SWP_NOTICE_VIEWED, r(e));
+        },
+        Yy: function (e, n) {
+            t.default.track(a.HAw.SWP_NOTICE_ACTION, { ...r(e), action: n });
+        },
+    },
+);

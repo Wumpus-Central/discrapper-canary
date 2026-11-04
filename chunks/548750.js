@@ -1,0 +1,180 @@
+i.d(e, { default: () => U });
+var a = i(477900),
+    n = i(582128),
+    s = i(192308),
+    l = i(772707),
+    r = i(116833),
+    c = i(683071),
+    o = i(793574),
+    C = i(688810),
+    _ = i(781300),
+    u = i(964404),
+    A = i(129230),
+    N = i(163437),
+    I = i(881892),
+    S = i(189213),
+    d = i(771871),
+    p = i(95477),
+    E = i(150934),
+    O = i(817281),
+    m = i(652215),
+    T = i(792996),
+    P = i(606065);
+let L = [
+    {
+        value: "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_USING_ENOUGH",
+        nameGetter: () => T.intl.string(T.t["+RZgNV"]),
+    },
+    {
+        value: "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_TOO_EXPENSIVE",
+        nameGetter: () => T.intl.string(T.t.kgPXgv),
+    },
+    {
+        value: "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_WORTH",
+        nameGetter: () => T.intl.string(T.t.vujsUK),
+    },
+    {
+        value: "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_SURE_HOW_TO_USE",
+        nameGetter: () => T.intl.string(T.t.AYAOLF),
+    },
+    {
+        value: "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER",
+        nameGetter: () => T.intl.string(T.t.wZLu3Y),
+    },
+];
+function g(t) {
+    let { application: e, subscriptionId: i, onClose: s, transitionState: l } = t,
+        [r, c] = n.useState(!1),
+        [o, C] = n.useState(null),
+        [_, u] = n.useState(""),
+        N = n.useCallback(() => {
+            null != o &&
+                (A.default.track(m.HAw.PREMIUM_APP_CANCELLATION_SURVEY_SUBMITTED, {
+                    answer: o,
+                    application_id: e.id,
+                    reason: _,
+                    subscription_id: i,
+                }),
+                s());
+        }, [e.id, i, o, s, _]);
+    return (
+        n.useEffect(() => {
+            O.Ay.updatedUnsyncedSettings({ disableApplicationSubscriptionCancellationSurvey: r });
+        }, [r]),
+        (0, a.jsxs)(S.a, {
+            title: T.intl.string(T.t.zPxMdQ),
+            subtitle: T.intl.string(T.t["QJGdB+"]),
+            actions: [{ variant: "primary", text: T.intl.string(T.t.geKm7t), onClick: N, disabled: null == o }],
+            onClose: s,
+            transitionState: l,
+            children: [
+                (0, a.jsx)("div", {
+                    className: P.U7,
+                    children: (0, a.jsx)(d.z, {
+                        value: o,
+                        options: L.map((t) => {
+                            let { nameGetter: e, value: i } = t;
+                            return { name: e(), value: i };
+                        }),
+                        onChange: (t) => C(t),
+                    }),
+                }),
+                "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER" === o &&
+                    (0, a.jsx)("div", {
+                        className: P.Xo,
+                        children: (0, a.jsx)(p.k, {
+                            autoFocus: !0,
+                            placeholder: T.intl.string(T.t.s6tM8c),
+                            value: _,
+                            onChange: u,
+                        }),
+                    }),
+                (0, a.jsx)(E.S, {
+                    checked: r,
+                    onChange: (t) => c(t),
+                    label: T.intl.string(T.t["3vPFQi"]),
+                    labelType: "secondary",
+                }),
+            ],
+        })
+    );
+}
+var R = i(687207);
+function U(t) {
+    let { transitionState: e, application: i, storeListing: S, subscription: d, guild: p, onClose: E } = t,
+        { analyticsLocations: O } = (0, C.Ay)(o.A.APPLICATION_SUBSCRIPTION_CANCELLATION_MODAL),
+        {
+            cancelSubscription: P,
+            error: L,
+            submitting: U,
+        } = (function (t) {
+            let [e, i] = n.useState(!1),
+                [a, s] = n.useState(null);
+            return {
+                cancelSubscription: async function (e) {
+                    try {
+                        return (i(!0), await _.M2(e, t), !0);
+                    } catch (t) {
+                        s(t);
+                    } finally {
+                        i(!1);
+                    }
+                },
+                error: a,
+                submitting: e,
+            };
+        })(O);
+    n.useEffect(() => {
+        A.default.track(m.HAw.CANCELLATION_FLOW_STARTED, { location_stack: O });
+    }, [O]);
+    let f = (0, N.bg)(S.skuFlags);
+    return (0, a.jsx)(l.k, {
+        actions: [
+            {
+                loading: U,
+                onClick: async function () {
+                    if (await P(d.id)) {
+                        try {
+                            await _.hP();
+                        } catch {}
+                        u.Ay.disableApplicationSubscriptionCancellationSurvey
+                            ? E()
+                            : (0, s.mM)(
+                                  async () => (
+                                      await E(),
+                                      (t) => (0, a.jsx)(g, { application: i, subscriptionId: d.id, ...t })
+                                  ),
+                              );
+                    }
+                },
+                text: T.intl.string(T.t.KSqyfW),
+                variant: "critical-primary",
+            },
+        ],
+        graphic: {
+            type: "dynamic",
+            component: r.DynamicGraphicComponent.APPLICATION_IMAGE_HEADER,
+            aspectRatio: "16/9",
+            props: { application: i, className: R.Sb },
+        },
+        title: T.intl.string(T.t.CeCHk1),
+        subtitle: f
+            ? T.intl.format(T.t.fZP9QD, { applicationName: i.name, timestamp: d.currentPeriodEnd.getTime() })
+            : p?.name !== void 0
+              ? T.intl.format(T.t["3LeWBF"], {
+                    guild: p.name,
+                    applicationName: i.name,
+                    timestamp: d.currentPeriodEnd.getTime(),
+                })
+              : T.intl.format(T.t["8vum6M"], { applicationName: i.name, timestamp: d.currentPeriodEnd.getTime() }),
+        transitionState: e,
+        onClose: E,
+        children: (0, a.jsxs)("div", {
+            className: R.oV,
+            children: [
+                null != L ? (0, a.jsx)(c.w, { type: "critical", message: L.message, role: "alert" }) : null,
+                (0, a.jsx)(I.iH, { applicationId: i.id, storeListingBenefits: S.benefits, className: R.iq }),
+            ],
+        }),
+    });
+}

@@ -1,0 +1,17 @@
+.row_OObHCR {
+    gap: var(--space-12);
+    padding: var(--space-12)
+}
+
+.icon_OObHCR {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-width: 32px
+}
+
+.username_OObHCR {
+    display: inline
+}
+
+/*# sourceMappingURL=4225c5e04b237e0f.css.map*/

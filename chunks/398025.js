@@ -1,7 +1,12 @@
-function c(n) {
-    return n;
-}
-function i(n) {
-    return n;
-}
-u.d(t, { Q: () => i, a: () => c });
+u.d(
+    t,
+    {},
+    {
+        Q: function (n) {
+            return n;
+        },
+        a: function (n) {
+            return n;
+        },
+    },
+);

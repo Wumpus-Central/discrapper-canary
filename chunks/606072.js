@@ -1,7 +1,7 @@
-(l.d(t, { F6: () => h, T4: () => v, UF: () => b, kG: () => _, zE: () => j }), l(321073));
+l(321073);
 var n,
     i = l(582128),
-    s = l(17928),
+    s = l(855986),
     a = l(290595),
     r = l(419954),
     d = l(253932),
@@ -32,34 +32,43 @@ function j() {
     u.A.fetchedConsents || null != x || (x = (0, a.Q)().then(p, p));
 }
 var _ = (((n = {}).ACTIVITY_SHARING = "activity_sharing"), (n.PERSONALIZATION = "personalization"), (n.ALL = "all"), n);
-function v(e) {
-    i.useEffect(j, []);
-    let t = d.tz.useSetting(),
-        l = !d.JG.useSetting().includes(e),
-        { hasFetchedConsents: n, hasPersonalizationConsent: a } = (0, s.cf)([u.A], () => ({
-            hasFetchedConsents: u.A.fetchedConsents,
-            hasPersonalizationConsent: u.A.hasConsented(g.YAq.PERSONALIZATION),
-        })),
-        r = null,
-        c = !t || !l;
-    return (
-        n && (c && !a ? (r = "all") : c ? (r = "activity_sharing") : a || (r = "personalization")),
-        {
-            isSharingActivity: t,
-            isSharingActivityInGuild: l,
-            hasFetchedConsents: n,
-            hasPersonalizationConsent: a,
-            requirement: r,
-        }
-    );
-}
-function b(e) {
-    let { guildId: t, useGuildSharingTitle: l, requirement: n } = e,
-        i = [];
-    return (
-        ("activity_sharing" === n || "all" === n) &&
-            (i.push(c._), i.push(h(t, { useTitle: l, useDisabled: () => !d.tz.useSetting() }))),
-        ("personalization" === n || "all" === n) && i.push(o._),
-        i
-    );
-}
+l.d(
+    t,
+    {},
+    {
+        F6: h,
+        T4: function (e) {
+            i.useEffect(j, []);
+            let t = d.tz.useSetting(),
+                l = !d.JG.useSetting().includes(e),
+                { hasFetchedConsents: n, hasPersonalizationConsent: a } = (0, s.cf)([u.A], () => ({
+                    hasFetchedConsents: u.A.fetchedConsents,
+                    hasPersonalizationConsent: u.A.hasConsented(g.YAq.PERSONALIZATION),
+                })),
+                r = null,
+                c = !t || !l;
+            return (
+                n && (c && !a ? (r = "all") : c ? (r = "activity_sharing") : a || (r = "personalization")),
+                {
+                    isSharingActivity: t,
+                    isSharingActivityInGuild: l,
+                    hasFetchedConsents: n,
+                    hasPersonalizationConsent: a,
+                    requirement: r,
+                }
+            );
+        },
+        UF: function (e) {
+            let { guildId: t, useGuildSharingTitle: l, requirement: n } = e,
+                i = [];
+            return (
+                ("activity_sharing" === n || "all" === n) &&
+                    (i.push(c._), i.push(h(t, { useTitle: l, useDisabled: () => !d.tz.useSetting() }))),
+                ("personalization" === n || "all" === n) && i.push(o._),
+                i
+            );
+        },
+        kG: _,
+        zE: j,
+    },
+);

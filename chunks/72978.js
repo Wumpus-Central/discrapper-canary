@@ -1,6 +1,5 @@
-(Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.stringSimilarity = void 0),
-    (t.stringSimilarity = function (e, t, r, n) {
+((t.jM = void 0),
+    (t.jM = function (e, t, r, n) {
         if (
             (void 0 === r && (r = 2),
             void 0 === n && (n = !1),
@@ -19,4 +18,4 @@
         }
         return (2 * s) / (e.length + t.length - (r - 1) * 2);
     }),
-    (t.default = t.stringSimilarity));
+    (t.Ay = t.jM));

@@ -1,9 +1,9 @@
 e.exports = {
-    IL: "galleryContainer_d75751",
-    nV: "gallery_d75751",
-    Qq: "galleryItem_d75751",
-    $1: "first_d75751",
-    HV: "last_d75751",
-    AD: "inactive_d75751",
-    cd: "obscured_d75751",
+    IL: "galleryContainer_wS56g1",
+    nV: "gallery_wS56g1",
+    Qq: "galleryItem_wS56g1",
+    $1: "first_wS56g1",
+    HV: "last_wS56g1",
+    AD: "inactive_wS56g1",
+    cd: "obscured_wS56g1",
 };

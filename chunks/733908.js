@@ -1,10 +1,10 @@
 e.exports = {
-    kL: "container_d03433",
-    Lt: "partnerLogotypeContainer_d03433",
-    a$: "partnerLogotype_d03433",
-    Th: "partnerContentContainer_d03433",
-    rw: "partnerGameTile_d03433",
-    Ly: "partnerCopyContainer_d03433",
-    fx: "partnerTitle_d03433",
-    z1: "rightCtaSlot_d03433",
+    kL: "container_IBNVLQ",
+    Lt: "partnerLogotypeContainer_IBNVLQ",
+    a$: "partnerLogotype_IBNVLQ",
+    Th: "partnerContentContainer_IBNVLQ",
+    rw: "partnerGameTile_IBNVLQ",
+    Ly: "partnerCopyContainer_IBNVLQ",
+    fx: "partnerTitle_IBNVLQ",
+    z1: "rightCtaSlot_IBNVLQ",
 };

@@ -1,0 +1,66 @@
+.modalRoot_WMUm3U {
+    height: 100%;
+    width: auto
+}
+
+.contentWrapper_WMUm3U {
+    background-color: var(--background-base-lower);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-border), var(--shadow-high);
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 424px;
+    z-index: 1
+}
+
+.nav_WMUm3U {
+    padding-block: 16px 0;
+    padding-inline: 16px 0
+}
+
+.uploadContainer_WMUm3U {
+    color: var(--text-default);
+    flex-direction: column;
+    height: 100%;
+    width: 100%
+}
+
+.uploadContainer_WMUm3U,
+.uploadIconOuterContainer_WMUm3U {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.uploadIconOuterContainer_WMUm3U {
+    position: relative
+}
+
+.uploadIconInnerContainer_WMUm3U {
+    background: var(--background-base-lowest);
+    border-radius: var(--radius-sm);
+    padding: 8px;
+    position: absolute
+}
+
+.uploadIcon_WMUm3U {
+    height: 40px;
+    width: 40px
+}
+
+.uploadInfo_WMUm3U {
+    padding-bottom: 10px;
+    padding-top: 24px
+}
+
+.uploadError_WMUm3U {
+    line-height: 20px;
+    padding: 8px 32px;
+    text-align: center
+}
+
+/*# sourceMappingURL=c59e5dc29bf6fc7b.css.map*/

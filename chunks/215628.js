@@ -1,4 +1,3 @@
-d.d(t, { n: () => o, t: () => h });
 var i = d(41851),
     e = d(646613),
     c = d(49954),
@@ -694,3 +693,4 @@ let u = (l) => l.captureAttempts ?? l.numberOfAttempts ?? 3,
             error: { entry: "stopMediaStream", on: { RESET: { target: "idle", actions: "resetContext" } } },
         },
     });
+d.d(t, {}, { n: o, t: h });

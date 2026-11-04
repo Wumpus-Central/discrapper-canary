@@ -1,22 +1,21 @@
-i.d(n, { A: () => I });
 var e = i(477900),
     s = i(582128),
-    r = i(17928),
+    r = i(855986),
     l = i(821609),
     a = i(866665),
     o = i(825484),
     d = i(408278),
     u = i(847374),
-    p = i(442433),
-    c = i(212245),
-    h = i(952818),
+    c = i(442433),
+    p = i(212245),
+    h = i(986322),
     g = i(651743),
     A = i(134861),
-    b = i(340829),
+    b = i(659096),
     y = i(723702),
-    x = i(113673),
+    x = i(35083),
     L = i(652215),
-    f = i(105292),
+    f = i(792996),
     N = i(627823);
 class _ extends s.PureComponent {
     static defaultProps = {
@@ -33,10 +32,10 @@ class _ extends s.PureComponent {
         t.stopPropagation();
         let { libraryApplication: n, onDropdownOpen: s, onDropdownClose: r } = this.props;
         if ((s?.(t), null == n)) throw Error("Unexpected missing libraryApplication");
-        p.L3(
+        c.L3(
             t,
             async () => {
-                let { default: t } = await i.e("45835").then(i.bind(i, 512134));
+                let { default: t } = await i.e(186056).then(i.bind(i, 980411));
                 return (i) => (0, e.jsx)(t, { ...i, libraryApplication: n, onPlay: this.handleClick });
             },
             { onClose: r },
@@ -68,7 +67,7 @@ class _ extends s.PureComponent {
             isLaunchable: s,
             isLaunching: r,
             isRunning: a,
-            hideNotLaunchable: p,
+            hideNotLaunchable: c,
         } = this.props;
         return s
             ? a
@@ -94,7 +93,7 @@ class _ extends s.PureComponent {
                               : null,
                       ],
                   })
-            : p
+            : c
               ? null
               : this.renderDisabledButton(
                     f.intl.string(f.t["359Pbd"]),
@@ -102,25 +101,31 @@ class _ extends s.PureComponent {
                 );
     }
 }
-function I(t) {
-    let { applicationId: n, libraryApplication: i } = t,
-        s = (0, c.p)(),
-        [l, a] = (0, r.yK)(
-            [A.A, g.A, b.A],
-            () => [
-                A.A.isConnected(n) || g.A.isLaunchable(n) || (null != i && b.A.isLaunchable(i.id, i.branchId)),
-                g.A.launchingGames.has(n),
-            ],
-            [n, i],
-        ),
-        o = (0, r.bG)([h.Ay], () => new Set(h.Ay.getRunningVerifiedApplicationIds()).has(n), [n]),
-        d = (0, r.bG)([b.A], () => (null != i ? b.A.getState(i.id, i.branchId) : null), [i]);
-    return (0, e.jsx)(_, {
-        ...t,
-        analyticsContext: s,
-        isLaunchable: l,
-        isLaunching: a,
-        isRunning: o,
-        dispatchState: d,
-    });
-}
+i.d(
+    n,
+    {},
+    {
+        A: function (t) {
+            let { applicationId: n, libraryApplication: i } = t,
+                s = (0, p.p)(),
+                [l, a] = (0, r.yK)(
+                    [A.A, g.A, b.A],
+                    () => [
+                        A.A.isConnected(n) || g.A.isLaunchable(n) || (null != i && b.A.isLaunchable(i.id, i.branchId)),
+                        g.A.launchingGames.has(n),
+                    ],
+                    [n, i],
+                ),
+                o = (0, r.bG)([h.Ay], () => new Set(h.Ay.getRunningVerifiedApplicationIds()).has(n), [n]),
+                d = (0, r.bG)([b.A], () => (null != i ? b.A.getState(i.id, i.branchId) : null), [i]);
+            return (0, e.jsx)(_, {
+                ...t,
+                analyticsContext: s,
+                isLaunchable: l,
+                isLaunching: a,
+                isRunning: o,
+                dispatchState: d,
+            });
+        },
+    },
+);

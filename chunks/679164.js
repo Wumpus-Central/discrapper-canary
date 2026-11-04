@@ -1,5 +1,4 @@
-n.d(t, { $r: () => T, AN: () => S, BX: () => A, i: () => E, w6: () => h });
-var i = n(636537),
+var i = n(620632),
     r = n(332714),
     a = n(534573),
     s = n(927813),
@@ -30,46 +29,54 @@ function E(e) {
     return _(e) && t;
 }
 function A(e) {
-    return (0, a.v4)(e);
-}
-function h(e) {
-    let t = l.A.toURLSafe(e);
-    if (null == t) return e;
-    for (let e of ["ex", "is", "hm"]) t.searchParams.delete(e);
-    return t;
-}
-function f(e) {
     let t,
         n = isNaN((t = parseInt(e.searchParams.get("ex") ?? "", 16))) ? void 0 : t * s.A.Millis.SECOND;
     return null == n || n <= Date.now() + c;
 }
-function I(e) {
+function h(e) {
     let t = l.A.toURLSafe(e.url);
-    return null != t && f(t);
+    return null != t && A(t);
 }
-function p(e) {
+function f(e) {
     if (null == e) return !1;
     let t = l.A.toURLSafe(e.url);
     return (
-        null != t && !!(!(!_(t) || t.pathname.startsWith("/external/")) && (t.searchParams.has("ex") || E(t))) && f(t)
+        null != t && !!(!(!_(t) || t.pathname.startsWith("/external/")) && (t.searchParams.has("ex") || E(t))) && A(t)
     );
 }
-function m(e) {
-    return p(e.image) || e.images?.some(p) || p(e.video);
+function I(e) {
+    return f(e.image) || e.images?.some(f) || f(e.video);
 }
-function T(e) {
-    return e.attachments.some(I) || e.embeds.some(m);
-}
-async function g(e) {
-    return (
-        await i.Bo.post({
-            url: d.Rsh.ATTACHMENTS_REFRESH_URLS,
-            body: { attachment_urls: [e] },
-            rejectWithError: (0, i.fT)(),
-        })
-    ).body.refreshed_urls[0].refreshed;
-}
-async function S(e) {
-    let t = l.A.toURLSafe(e);
-    return null != t && f(t) ? ((await g(e)) ?? e) : e;
-}
+n.d(
+    t,
+    {},
+    {
+        $r: function (e) {
+            return e.attachments.some(h) || e.embeds.some(I);
+        },
+        AN: async function (e) {
+            let t = l.A.toURLSafe(e);
+            return null != t && A(t)
+                ? ((await (async function (e) {
+                      return (
+                          await i.Bo.post({
+                              url: d.Rsh.ATTACHMENTS_REFRESH_URLS,
+                              body: { attachment_urls: [e] },
+                              rejectWithError: (0, i.fT)(),
+                          })
+                      ).body.refreshed_urls[0].refreshed;
+                  })(e)) ?? e)
+                : e;
+        },
+        BX: function (e) {
+            return (0, a.v4)(e);
+        },
+        i: E,
+        w6: function (e) {
+            let t = l.A.toURLSafe(e);
+            if (null == t) return e;
+            for (let e of ["ex", "is", "hm"]) t.searchParams.delete(e);
+            return t;
+        },
+    },
+);

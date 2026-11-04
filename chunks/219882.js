@@ -1,6 +1,5 @@
-n.d(t, { J6: () => d, M6: () => c, ew: () => o, rX: () => u, tb: () => _ });
 var i = n(945810),
-    r = n(202541);
+    r = n(682901);
 let a = "NitroFileUploadRollout",
     s = (0, i.mj)({
         name: "2026-09-nitro-file-upload-rollout",
@@ -16,19 +15,27 @@ let a = "NitroFileUploadRollout",
     });
 function o() {
     let { location: e, autoTrackExposure: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    return d({ location: e, autoTrackExposure: t }).enabled ? r.gb : r.f3;
-}
-function d() {
-    let { location: e, autoTrackExposure: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return s.getConfig({ location: e ?? a }, { autoTrackExposure: t });
 }
-function c(e) {
-    let { legacyCopy: t, rolloutCopy: n } = e;
-    return d().enabled ? n : t;
-}
-function u(e) {
-    return s.useConfig({ location: e ?? a }).enabled;
-}
-function _(e) {
-    return l.useConfig({ location: e }).enabled;
-}
+n.d(
+    t,
+    {},
+    {
+        J6: o,
+        M6: function (e) {
+            let { legacyCopy: t, rolloutCopy: n } = e;
+            return o().enabled ? n : t;
+        },
+        ew: function () {
+            let { location: e, autoTrackExposure: t } =
+                arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+            return o({ location: e, autoTrackExposure: t }).enabled ? r.gb : r.f3;
+        },
+        rX: function (e) {
+            return s.useConfig({ location: e ?? a }).enabled;
+        },
+        tb: function (e) {
+            return l.useConfig({ location: e }).enabled;
+        },
+    },
+);

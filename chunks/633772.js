@@ -1,13 +1,12 @@
-n.d(e, { default: () => m });
 var i = n(477900),
     r = n(582128),
     l = n(284009),
     s = n.n(l),
-    a = n(17928),
+    a = n(855986),
     u = n(287809),
-    p = n(24482),
+    p = n(879610),
     o = n(885377),
-    c = n(105292);
+    c = n(792996);
 class d extends r.Component {
     render() {
         let { user: t, transitionState: e, onClose: n } = this.props;
@@ -31,3 +30,4 @@ let m = a.Ay.connectStores([u.default], () => {
     let t = u.default.getCurrentUser();
     return (s()(null != t, "PremiumRequiredModal: user cannot be null"), { user: t });
 })(d);
+n.d(e, {}, { default: m });

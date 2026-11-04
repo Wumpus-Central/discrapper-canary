@@ -1,7 +1,7 @@
-e.exports = {
-    qq: "emojiContainer__9cef2",
-    nI: "emojiRow__9cef2",
-    H1: "emojiLabel__9cef2",
-    mp: "emojiImage__9cef2",
-    JN: "emojiAlias__9cef2",
+i.exports = {
+    qq: "emojiContainer_v5GRiK",
+    nI: "emojiRow_v5GRiK",
+    H1: "emojiLabel_v5GRiK",
+    mp: "emojiImage_v5GRiK",
+    JN: "emojiAlias_v5GRiK",
 };

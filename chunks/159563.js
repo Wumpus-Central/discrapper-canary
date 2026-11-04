@@ -106,7 +106,6 @@ function p(e) {
     var t = Q[e];
     return (t || u(18, e), t);
 }
-r.d(t, { Qx: () => n, jM: () => X, mq: () => Y, vD: () => $ });
 function g(e, t) {
     t && (p("Patches"), (e.u = []), (e.s = []), (e.v = t));
 }
@@ -486,3 +485,4 @@ var J = new ((function () {
         J.applyPatches.bind(J),
         J.createDraft.bind(J)),
     $ = J.finishDraft.bind(J);
+r.d(t, {}, { Qx: n, jM: X, mq: Y, vD: $ });

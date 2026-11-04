@@ -1,5 +1,4 @@
-(Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.WEEKDAY_OFFSET = t.NUMBER = void 0),
+((t.WEEKDAY_OFFSET = t.NUMBER = void 0),
     (t.toHankaku = function (e) {
         return String(e)
             .replace(/\u2019/g, "'")

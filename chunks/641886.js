@@ -1,4 +1,3 @@
-n.d(t, { AK: () => s, KO: () => a, Wj: () => l, Z6: () => o, fc: () => r });
 var i = n(88686);
 let r = {
         [i.W.Crimson]: { darkBackground: "#900007", lightBackground: "#E7040F", name: i.W.Crimson },
@@ -15,6 +14,5 @@ let r = {
         [i.W.Black]: { darkBackground: "#000000", lightBackground: "#000000", name: i.W.Black },
     },
     a = "invalid_palette",
-    s = "custom_palette",
-    l = { name: a, darkBackground: "", lightBackground: "" },
-    o = Object.values(r);
+    s = Object.values(r);
+n.d(t, {}, { AK: "custom_palette", KO: a, Wj: { name: a, darkBackground: "", lightBackground: "" }, Z6: s, fc: r });

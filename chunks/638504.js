@@ -1,12 +1,8 @@
-r.d(t, { V: () => l, e: () => s });
 var n = r(852015),
     i = r(82180),
     o = r(679314);
-let a = { readUnknownField: !0, readerFactory: (e) => new l(e) };
-function s(e) {
-    return e ? Object.assign(Object.assign({}, a), e) : a;
-}
-class l {
+let a = { readUnknownField: !0, readerFactory: (e) => new s(e) };
+class s {
     constructor(e, t) {
         ((this.varint64 = o.ls),
             (this.uint32 = o.Gn),
@@ -99,3 +95,13 @@ class l {
         return this.textDecoder.decode(this.bytes());
     }
 }
+r.d(
+    t,
+    {},
+    {
+        V: s,
+        e: function (e) {
+            return e ? Object.assign(Object.assign({}, a), e) : a;
+        },
+    },
+);

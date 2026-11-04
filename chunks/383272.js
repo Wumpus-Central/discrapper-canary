@@ -1,8 +1,7 @@
-n.d(t, { DD: () => d, Ov: () => c, Qs: () => o, g$: () => s, lY: () => u });
 var i = n(600975),
-    r = n(772788),
-    a = n(652215);
-let s = (0, i.C)({
+    r = n(772788);
+n(652215);
+let a = (0, i.C)({
     kind: "guild",
     id: "2026-04_server_theme",
     label: "Server Theme",
@@ -21,34 +20,41 @@ let s = (0, i.C)({
         },
     ],
 });
-function l(e, t, n) {
-    return e.inExperiment ? e : n && t.gatesApex ? t : s.definition.defaultConfig;
+function s(e, t, n) {
+    return e.inExperiment ? e : n && t.gatesApex ? t : a.definition.defaultConfig;
 }
-function o(e, t) {
-    return l(
-        s.getCurrentConfig({ guildId: e, location: t }, { autoTrackExposure: !1 }),
-        null != e ? r.K.getConfig({ guildId: e, location: t }) : r.K.definition.defaultConfig,
-        null != e,
-    ).enabled;
-}
-function d(e, t) {
-    return l(
-        s.useExperiment({ guildId: e, location: t }, { autoTrackExposure: !1 }),
-        r.K.useConfig({ guildId: e ?? a.dJq, location: t }),
-        null != e,
-    ).enabled;
-}
-function c(e, t) {
-    return l(
-        s.getCurrentConfig({ guildId: e, location: t }, { autoTrackExposure: !1 }),
-        null != e ? r.K.getConfig({ guildId: e, location: t }) : r.K.definition.defaultConfig,
-        null != e,
-    ).rollbackEnabled;
-}
-function u(e, t) {
-    return l(
-        s.useExperiment({ guildId: e, location: t }, { autoTrackExposure: !1 }),
-        r.K.useConfig({ guildId: e ?? a.dJq, location: t }),
-        null != e,
-    ).rollbackEnabled;
-}
+n.d(
+    t,
+    {},
+    {
+        DD: function (e, t) {
+            return s(
+                a.useExperiment({ guildId: e, location: t }, { autoTrackExposure: !1 }),
+                r.K.useConfig({ guildId: e ?? "", location: t }),
+                null != e,
+            ).enabled;
+        },
+        Ov: function (e, t) {
+            return s(
+                a.getCurrentConfig({ guildId: e, location: t }, { autoTrackExposure: !1 }),
+                null != e ? r.K.getConfig({ guildId: e, location: t }) : r.K.definition.defaultConfig,
+                null != e,
+            ).rollbackEnabled;
+        },
+        Qs: function (e, t) {
+            return s(
+                a.getCurrentConfig({ guildId: e, location: t }, { autoTrackExposure: !1 }),
+                null != e ? r.K.getConfig({ guildId: e, location: t }) : r.K.definition.defaultConfig,
+                null != e,
+            ).enabled;
+        },
+        g$: a,
+        lY: function (e, t) {
+            return s(
+                a.useExperiment({ guildId: e, location: t }, { autoTrackExposure: !1 }),
+                r.K.useConfig({ guildId: e ?? "", location: t }),
+                null != e,
+            ).rollbackEnabled;
+        },
+    },
+);

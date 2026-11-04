@@ -1,4 +1,9 @@
-function i() {
-    return document.hasFocus();
-}
-n.d(t, { R: () => i });
+n.d(
+    t,
+    {},
+    {
+        R: function () {
+            return document.hasFocus();
+        },
+    },
+);

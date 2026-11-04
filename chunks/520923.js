@@ -1,4 +1,3 @@
-n.d(s, { q: () => C });
 var a = n(477900),
     r = n(582128),
     i = n(503698),
@@ -15,14 +14,11 @@ var a = n(477900),
     y = n(983851),
     h = n(428689),
     g = n(451394),
-    j = n(432816),
+    j = n(116711),
     A = n(834730),
     b = n(43990),
     f = n(784189);
 function C(e) {
-    return (0, a.jsx)(b.N, { theme: c.NJ.DARK, children: (s) => (0, a.jsx)(N, { ...e, themeClassName: s }) });
-}
-function N(e) {
     let { variant: s, title: n, message: i, primaryAction: c, secondaryAction: b, onDismiss: C, themeClassName: N } = e,
         { i18n: w } = (0, j.G9)(),
         I = r.useId(),
@@ -168,3 +164,12 @@ function N(e) {
         })
     );
 }
+n.d(
+    s,
+    {},
+    {
+        q: function (e) {
+            return (0, a.jsx)(b.N, { theme: c.NJ.DARK, children: (s) => (0, a.jsx)(C, { ...e, themeClassName: s }) });
+        },
+    },
+);

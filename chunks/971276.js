@@ -1,5 +1,10 @@
-n.d(t, { s: () => r });
 var i = n(809733);
-function r() {
-    return !(0, i.IA)();
-}
+n.d(
+    t,
+    {},
+    {
+        s: function () {
+            return !(0, i.IA)();
+        },
+    },
+);

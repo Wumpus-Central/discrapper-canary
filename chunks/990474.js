@@ -1,7 +1,6 @@
-t.d(n, { Ay: () => N, Oh: () => v, gn: () => E });
 var l = t(477900),
     a = t(582128),
-    i = t(17928),
+    i = t(855986),
     r = t(314116),
     s = t(866665),
     o = t(821609),
@@ -15,11 +14,11 @@ var l = t(477900),
     g = t(31717),
     j = t(576705),
     f = t(309010),
-    A = t(625494),
+    A = t(188567),
     y = t(652215),
     I = t(73510);
 t(827669);
-var k = t(105292);
+var k = t(792996);
 function C(e, n, t, l, a) {
     null != e &&
         ("" !== g.A.getDraft(e, g.C.ChannelMessage)
@@ -86,22 +85,29 @@ function E(e) {
         ? (0, l.jsxs)(m.A, { role: "link", onClick: v, children: ["/", r] }, t)
         : (0, l.jsxs)("span", { children: ["/", r] });
 }
-function v(e) {
-    let { commandId: n, commandName: t, commandDescription: a, applicationId: r, onClick: c } = e,
-        u = (0, i.bG)([f.Ay], () => f.Ay.getChannelId());
-    return (0, l.jsx)(s.m, {
-        text: a,
-        position: "top",
-        children: (0, l.jsx)(o.$, {
-            size: "sm",
-            variant: "secondary",
-            onClick: function (e) {
-                (e?.stopPropagation(), C(u, t, n, d.Oh.POPULAR_COMMANDS, r), c?.(n));
-            },
-            text: `/${t}`,
-        }),
-    });
-}
-function N(e) {
-    return { react: (e, n, t) => (0, l.jsx)(E, { node: e, stateKey: t.key, children: n(e.content, t) }) };
-}
+t.d(
+    n,
+    {},
+    {
+        Ay: function (e) {
+            return { react: (e, n, t) => (0, l.jsx)(E, { node: e, stateKey: t.key, children: n(e.content, t) }) };
+        },
+        Oh: function (e) {
+            let { commandId: n, commandName: t, commandDescription: a, applicationId: r, onClick: c } = e,
+                u = (0, i.bG)([f.Ay], () => f.Ay.getChannelId());
+            return (0, l.jsx)(s.m, {
+                text: a,
+                position: "top",
+                children: (0, l.jsx)(o.$, {
+                    size: "sm",
+                    variant: "secondary",
+                    onClick: function (e) {
+                        (e?.stopPropagation(), C(u, t, n, d.Oh.POPULAR_COMMANDS, r), c?.(n));
+                    },
+                    text: `/${t}`,
+                }),
+            });
+        },
+        gn: E,
+    },
+);

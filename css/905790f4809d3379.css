@@ -1,0 +1,67 @@
+.container_fzXO3p {
+    align-items: center;
+    background-color: var(--background-base-low);
+    box-sizing: border-box;
+    display: flex;
+    flex-shrink: 0;
+    min-height: 54px;
+    padding: var(--space-xs) var(--space-md);
+    position: relative
+}
+
+.gradient_fzXO3p {
+    border-radius: inherit;
+    inset: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.themeDefault_fzXO3p {
+    background: linear-gradient(90deg, #212259, #343d88)
+}
+
+.themeNitro_fzXO3p {
+    background: linear-gradient(90deg, rgba(179, 38, 156, .7) 0, rgba(20, 20, 203, .7) 100%), var(--background-base-lowest)
+}
+
+.content_fzXO3p {
+    flex: 1;
+    gap: var(--space-xs);
+    justify-content: space-between;
+    position: relative
+}
+
+.content_fzXO3p,
+.rightContent_fzXO3p {
+    align-items: center;
+    display: flex
+}
+
+.rightContent_fzXO3p {
+    gap: var(--space-sm)
+}
+
+.rightContent_fzXO3p .dismissButton_fzXO3p {
+    position: static
+}
+
+.leftContent_fzXO3p {
+    align-items: center;
+    display: flex;
+    gap: var(--space-xxs)
+}
+
+.icon_fzXO3p {
+    flex-shrink: 0
+}
+
+.iconColor_fzXO3p {
+    fill: var(--text-overlay-light)
+}
+
+.link_fzXO3p {
+    color: currentColor;
+    text-decoration: underline
+}
+
+/*# sourceMappingURL=905790f4809d3379.css.map*/

@@ -1,4 +1,3 @@
-n.d(t, { A: () => d });
 var i = n(439372),
     r = n(77729),
     a = n(351906);
@@ -16,3 +15,4 @@ class o extends i.A {
     }
 }
 let d = new o();
+n.d(t, {}, { A: d });

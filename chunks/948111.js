@@ -1,7 +1,7 @@
 e.exports = {
-    rJ: "collection__6f806",
-    rf: "body__6f806",
-    wm: "logo__6f806",
-    hP: "supplemental__6f806",
-    kb: "left__6f806",
+    rJ: "collection_pz5eUz",
+    rf: "body_pz5eUz",
+    wm: "logo_pz5eUz",
+    hP: "supplemental_pz5eUz",
+    kb: "left_pz5eUz",
 };

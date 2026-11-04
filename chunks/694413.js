@@ -1,9 +1,9 @@
-_.exports = {
-    CR: "modalRoot__6c12c",
-    N1: "headerContainer__6c12c",
-    sB: "ratingBody__6c12c",
-    qr: "footer__6c12c",
-    OS: "problemInfo__6c12c",
-    _3: "problemContentSpacing__6c12c",
-    Ko: "ratingSelectorContainer__6c12c",
+e.exports = {
+    CR: "modalRoot_bNwrTb",
+    N1: "headerContainer_bNwrTb",
+    sB: "ratingBody_bNwrTb",
+    qr: "footer_bNwrTb",
+    OS: "problemInfo_bNwrTb",
+    _3: "problemContentSpacing_bNwrTb",
+    Ko: "ratingSelectorContainer_bNwrTb",
 };

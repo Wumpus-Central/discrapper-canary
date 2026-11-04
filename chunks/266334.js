@@ -1,9 +1,9 @@
-l.d(i, { VideoSelfie: () => I });
+l.r(i);
 var o = l(783285),
     n = l(768611),
     s = l(200503),
-    d = l(628926),
-    a = l(242268),
+    a = l(628926),
+    d = l(242268),
     t = l(326144),
     c = l(923349),
     r = l(658299),
@@ -48,13 +48,13 @@ var o = l(783285),
     },
     m = ({ config: e, onStart: i, isLoading: l }) => {
         let { t: s } = (0, o.n)(),
-            d = [
+            a = [
                 {
                     key: "permissions",
                     icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">\n<path fill-rule="evenodd" clip-rule="evenodd" d="M19.957 10.7852C19.956 10.3712 19.621 10.0372 19.207 10.0372H19.205C18.791 10.0382 18.456 10.3742 18.457 10.7892C18.465 14.3572 15.569 17.2672 12.005 17.2782C12.003 17.2782 12.002 17.2772 12 17.2772H11.997C10.269 17.2712 8.64699 16.5952 7.42799 15.3702C6.20799 14.1452 5.53899 12.5172 5.54299 10.7892C5.54399 10.3752 5.20899 10.0382 4.79499 10.0372H4.79299C4.37999 10.0372 4.04399 10.3712 4.04299 10.7852C4.03799 12.9142 4.86199 14.9192 6.36499 16.4292C7.68999 17.7602 9.40199 18.5632 11.25 18.7392V20.8752C11.25 21.2892 11.586 21.6252 12 21.6252C12.415 21.6252 12.75 21.2892 12.75 20.8752V18.7382C16.796 18.3492 19.967 14.9292 19.957 10.7852Z" fill="currentColor"/>\n<path fill-rule="evenodd" clip-rule="evenodd" d="M11.9981 14.9321H12.0031C14.2991 14.9261 16.1641 13.0531 16.1591 10.7571V6.53406C16.1591 4.24106 14.2931 2.37506 11.9991 2.37506C9.70609 2.37506 7.84009 4.24106 7.84009 6.53406V10.7561C7.83809 11.8691 8.26909 12.9161 9.05409 13.7051C9.83909 14.4941 10.8851 14.9301 11.9981 14.9321Z" fill="currentColor"/>\n</svg>\n',
                     label: s("videoSelfie.tutorial.permissions", { defaultValue: "Give recording permissions" }),
                 },
-                ...(0, g.hM)(e).map((e) => {
+                ...(0, g.resolveVideoSelfieSteps)(e).map((e) => {
                     let i = w[e];
                     return { key: e, icon: i.icon, label: s(i.key, { defaultValue: i.defaultValue }) };
                 }),
@@ -71,7 +71,7 @@ var o = l(783285),
                     class: "IncodeVideoSelfieTutorialBody",
                     children: (0, n.v)("ul", {
                         class: "IncodeVideoSelfieTutorialSteps",
-                        children: d.map((e) =>
+                        children: a.map((e) =>
                             (0, n.v)(
                                 "li",
                                 {
@@ -111,7 +111,7 @@ var o = l(783285),
         return (0, n.v)(n.x, {
             children: [
                 (0, n.v)("div", {
-                    class: (0, a.n)("IncodeVsSelfieMask", {
+                    class: (0, d.n)("IncodeVsSelfieMask", {
                         IncodeVsSelfieMaskLoading: "loading" === e,
                         IncodeVsSelfieMaskCapturing: o,
                         IncodeVsSelfieMaskError: l,
@@ -124,7 +124,7 @@ var o = l(783285),
                     }),
                 }),
                 (0, n.v)("p", {
-                    class: (0, a.n)("IncodeVsSelfieMaskText", { IncodeVsSelfieMaskTextCapturing: o }),
+                    class: (0, d.n)("IncodeVsSelfieMaskText", { IncodeVsSelfieMaskTextCapturing: o }),
                     role: "region",
                     "aria-live": "polite",
                     children: [
@@ -186,7 +186,7 @@ var o = l(783285),
         let { t: i } = (0, o.n)(),
             l = i("videoSelfie.showPoaOne"),
             s = i("videoSelfie.showPoaTwo"),
-            d = i("videoSelfie.showPoaThree");
+            a = i("videoSelfie.showPoaThree");
         return (0, n.v)("div", {
             class: "IncodeVsPoaMask",
             children: [
@@ -194,13 +194,13 @@ var o = l(783285),
                     class: "IncodeVsPoaBanner",
                     children: (0, n.v)("h2", {
                         class: "IncodeVsPoaBannerText",
-                        "aria-label": `${l} ${s} ${d}`,
+                        "aria-label": `${l} ${s} ${a}`,
                         children: [
                             l,
                             " ",
                             (0, n.v)("span", { class: "IncodeVsPoaBannerEmphasis", children: s }),
                             (0, n.v)("br", {}),
-                            d,
+                            a,
                         ],
                     }),
                 }),
@@ -211,9 +211,9 @@ var o = l(783285),
             ],
         });
     },
-    x = ({ count: e, onDone: i }) => {
+    S = ({ count: e, onDone: i }) => {
         let { t: l } = (0, o.n)(),
-            [d, t] = (0, n.p)([]),
+            [a, t] = (0, n.p)([]),
             [c, r] = (0, n.p)(!1),
             [p, f] = (0, n.p)(0),
             [v, h] = (0, n.p)(!1),
@@ -222,7 +222,7 @@ var o = l(783285),
         (0, n._)(() => {
             let i = !0;
             return (
-                (0, g.lV)(e).then((e) => {
+                (0, g.getVideoSelfieQuestions)(e).then((e) => {
                     i && t(e);
                 }),
                 () => {
@@ -230,19 +230,19 @@ var o = l(783285),
                 }
             );
         }, [e, V]);
-        let k = d.length > 1;
+        let k = a.length > 1;
         return c
             ? (0, n.v)("div", {
-                  class: (0, a.n)("IncodeVsVoicePanel", v && "IncodeVsVoicePanelActive"),
+                  class: (0, d.n)("IncodeVsVoicePanel", v && "IncodeVsVoicePanelActive"),
                   role: "dialog",
                   children: [
                       (0, n.v)("ol", {
                           class: "IncodeVsVoiceStepper",
                           "aria-hidden": "true",
-                          children: d.map((e, i) =>
+                          children: a.map((e, i) =>
                               (0, n.v)(
                                   "li",
-                                  { class: (0, a.n)("IncodeVsVoiceStep", p >= i && "IncodeVsVoiceStepActive") },
+                                  { class: (0, d.n)("IncodeVsVoiceStep", p >= i && "IncodeVsVoiceStepActive") },
                                   e.id,
                               ),
                           ),
@@ -254,7 +254,7 @@ var o = l(783285),
                       (0, n.v)("p", {
                           class: "IncodeVsVoicePanelTitle",
                           "aria-live": "assertive",
-                          children: d[p]?.question,
+                          children: a[p]?.question,
                       }),
                       v
                           ? (0, n.v)(n.x, {
@@ -268,16 +268,16 @@ var o = l(783285),
                                                     module: u.vb.videoSelfie,
                                                     screen: u.bB.videoSelfieVoiceQuestion,
                                                     code: u.nX.videoSelfieQuestionAnswered,
-                                                    payload: { index: p + 1, question: d[p] },
+                                                    payload: { index: p + 1, question: a[p] },
                                                 }),
                                                 (0, u.nU)({
                                                     module: u.vb.videoSelfie,
                                                     screen: u.bB.videoSelfieVoiceQuestion,
                                                     code: u.nX.audioStreamClosed,
-                                                    payload: { question: d[p] },
+                                                    payload: { question: a[p] },
                                                 }));
                                             let e = p + 1;
-                                            e >= d.length ? i() : (f(e), h(!1), m(!1));
+                                            e >= a.length ? i() : (f(e), h(!1), m(!1));
                                         },
                                         disabled: !w,
                                         "aria-live": "polite",
@@ -295,7 +295,7 @@ var o = l(783285),
                                             module: u.vb.videoSelfie,
                                             screen: u.bB.videoSelfieVoiceQuestion,
                                             code: u.nX.audioStreamOpened,
-                                            payload: { question: d[p] },
+                                            payload: { question: a[p] },
                                         }),
                                         V.schedule(() => {
                                             m(!0);
@@ -325,40 +325,40 @@ var o = l(783285),
                       (0, n.v)(C.t, {
                           class: "IncodeVsVoicePanelButton",
                           onClick: () => r(!0),
-                          disabled: 0 === d.length,
+                          disabled: 0 === a.length,
                           children: l("videoSelfie.readyAnswer", { defaultValue: "Ready to answer" }),
                       }),
                   ],
               });
     },
-    S = ({ composite: e, speechToTextCheck: i, numberOfTries: l, onDone: d }) => {
+    x = ({ composite: e, speechToTextCheck: i, numberOfTries: l, onDone: a }) => {
         let { t } = (0, o.n)(),
             [c, r] = (0, n.p)(""),
             [p, f] = (0, n.p)("instructions"),
             [v, h] = (0, n.p)(!1),
-            [w] = (0, n.p)(() => (0, g.B5)()),
+            [w] = (0, n.p)(() => (0, g.createConsentRecorder)()),
             m = (0, n.l)(0),
             V = (0, s.n)(),
             k = (0, s.n)(),
             L = (0, s.n)(),
-            M = (0, n.h)(() => d(), [d]),
-            x = (0, n.h)(() => {
+            M = (0, n.h)(() => a(), [a]),
+            S = (0, n.h)(() => {
                 (V.clear(), k.clear(), L.clear());
             }, [V, L, k]);
         (0, n._)(() => {
             let e = !0;
             return (
-                (0, g.ki)().then((i) => {
+                (0, g.getVoiceConsentPhrase)().then((i) => {
                     e && r(i);
                 }),
                 () => {
-                    ((e = !1), x(), w.cancel());
+                    ((e = !1), S(), w.cancel());
                 }
             );
-        }, [w, x]);
-        let S = () => {
+        }, [w, S]);
+        let x = () => {
                 if (
-                    (x(),
+                    (S(),
                     (0, u.nU)({
                         module: u.vb.videoSelfie,
                         screen: u.bB.videoSelfieVoiceFinalQuestion,
@@ -393,7 +393,7 @@ var o = l(783285),
                 role: "status",
                 children:
                     "submitting" === p
-                        ? (0, n.v)(a.t, { size: 48 })
+                        ? (0, n.v)(d.t, { size: 48 })
                         : (0, n.v)("p", {
                               class: "IncodeVsVoiceSuccess",
                               children: t("videoSelfie.allGood", { defaultValue: "All good" }),
@@ -435,7 +435,7 @@ var o = l(783285),
                     }),
                     (0, n.v)(C.t, {
                         class: "IncodeVsVoicePanelButton",
-                        onClick: S,
+                        onClick: x,
                         children: t("videoSelfie.imDone", { defaultValue: "I'm done" }),
                     }),
                     (0, n.v)(C.t, {
@@ -448,7 +448,7 @@ var o = l(783285),
             });
         let H = "recording" === p;
         return (0, n.v)("div", {
-            class: (0, a.n)("IncodeVsVoicePanel", H && "IncodeVsVoicePanelActive"),
+            class: (0, d.n)("IncodeVsVoicePanel", H && "IncodeVsVoicePanelActive"),
             role: "dialog",
             children: [
                 (0, n.v)("h2", {
@@ -462,7 +462,7 @@ var o = l(783285),
                               (0, n.v)("span", { class: "IncodeVsVoiceMic", "aria-hidden": "true" }),
                               (0, n.v)(C.t, {
                                   class: "IncodeVsVoicePanelButton",
-                                  onClick: S,
+                                  onClick: x,
                                   disabled: !v,
                                   "aria-live": "polite",
                                   children: t("common.tapWhenDone", { defaultValue: "Tap when done" }),
@@ -508,21 +508,21 @@ var o = l(783285),
         let { t: l } = (0, o.n)(),
             s = i >= e.length;
         return (0, n.v)("ol", {
-            class: (0, a.n)("IncodeVsStepsHeader", s && "IncodeVsStepsHeaderFinished"),
+            class: (0, d.n)("IncodeVsStepsHeader", s && "IncodeVsStepsHeaderFinished"),
             "aria-label": l("videoSelfie.progressSteps", { defaultValue: "Progress steps" }),
             children: e.map((e, o) => {
-                let d = o === i && !s,
+                let a = o === i && !s,
                     t = o < i && !s,
                     c = l(`videoSelfie.step.${e}`);
                 return (0, n.v)(
                     "li",
                     {
-                        class: (0, a.n)(
+                        class: (0, d.n)(
                             "IncodeVsStepsHeaderStep",
                             o <= i && !s && "IncodeVsStepsHeaderStepActive",
-                            d && "IncodeVsStepsHeaderStepCurrent",
+                            a && "IncodeVsStepsHeaderStepCurrent",
                         ),
-                        "aria-current": d ? "step" : void 0,
+                        "aria-current": a ? "step" : void 0,
                         children: s
                             ? (0, n.v)("img", {
                                   src: "data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M21.3334%2013.333L14.0001%2019.9997L10.6667%2016.6663'%20stroke='%230CD5A2'%20stroke-width='2'%20stroke-linecap='square'/%3e%3c/svg%3e",
@@ -533,7 +533,7 @@ var o = l(783285),
                                     src: "data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M21.3337%2013.333L14.0003%2019.9997L10.667%2016.6663'%20stroke='white'%20stroke-width='2'%20stroke-linecap='square'/%3e%3c/svg%3e",
                                     alt: c,
                                 })
-                              : d
+                              : a
                                 ? (0, n.v)("img", { src: y[e], alt: c })
                                 : null,
                     },
@@ -543,21 +543,25 @@ var o = l(783285),
         });
     },
     Z = ({ config: e, onFinish: i, onError: l }) => {
-        let { t: d } = (0, o.n)(),
-            a = (0, n.d)(() => (e ? (0, g.BA)(e) : null), [e]),
+        let { t: a } = (0, o.n)(),
+            d = (0, n.d)(() => (e ? (0, g.createVideoSelfieCameraWarmer)(e) : null), [e]),
             [C, v] = (0, s.u)(
-                () => (0, g.OD)({ config: e, dependencies: a ? { acquireCamera: a.acquireCamera } : void 0 }),
+                () =>
+                    (0, g.createVideoSelfieRecordingManager)({
+                        config: e,
+                        dependencies: d ? { acquireCamera: d.acquireCamera } : void 0,
+                    }),
                 { autoLoad: !1 },
             ),
             [u, w] = (0, n.p)(e?.showTutorials ? "tutorial" : "permissions"),
             { permissionStatus: k, manager: y } = (function ({ enabled: e, onGranted: i, onClose: l }) {
                 let [o, s] = (0, n.p)("idle"),
-                    d = (0, n.l)(i);
-                d.current = i;
-                let a = (0, n.l)(l);
-                a.current = l;
+                    a = (0, n.l)(i);
+                a.current = i;
+                let d = (0, n.l)(l);
+                d.current = l;
                 let t = (0, n.h)((e) => {
-                    "granted" === e ? d.current() : s("denied" === e ? "denied" : "idle");
+                    "granted" === e ? a.current() : s("denied" === e ? "denied" : "idle");
                 }, []);
                 return (
                     (0, n._)(() => {
@@ -582,16 +586,16 @@ var o = l(783285),
                                 s("learnMore");
                             }, []),
                             close: (0, n.h)(() => {
-                                a.current();
+                                d.current();
                             }, []),
                         },
                     }
                 );
             })({ enabled: "permissions" === u, onGranted: () => w("capture"), onClose: () => l?.(void 0) });
         ((0, n._)(() => {
-            ("tutorial" === u || "permissions" === u) && e && ((0, g.Wy)(e), a?.warm());
-        }, [u, e, a]),
-            (0, n._)(() => () => a?.dispose(), [a]),
+            ("tutorial" === u || "permissions" === u) && e && ((0, g.warmupVideoSelfieWasm)(e), d?.warm());
+        }, [u, e, d]),
+            (0, n._)(() => () => d?.dispose(), [d]),
             (0, n._)(() => {
                 "capture" === u && v.start();
             }, [v, u]),
@@ -602,16 +606,16 @@ var o = l(783285),
                 error: "error" === C.status ? C.error : void 0,
                 errorStatuses: ["error"],
             }));
-        let Z = (0, n.d)(() => (e ? (0, g.hM)(e) : []), [e]),
+        let Z = (0, n.d)(() => (e ? (0, g.resolveVideoSelfieSteps)(e) : []), [e]),
             I = C.step ?? "selfie",
             b = "frontId" === I || "backId" === I,
-            [P, B] = (0, n.p)(!1);
+            [P, T] = (0, n.p)(!1);
         if (
             ((0, n._)(() => {
-                b ? B(!0) : B(!1);
+                b ? T(!0) : T(!1);
             }, [I, b]),
             (0, s.t)(
-                (0, n.h)(() => B(!1), []),
+                (0, n.h)(() => T(!1), []),
                 b ? 3e3 : null,
             ),
             "tutorial" === u && e)
@@ -620,7 +624,7 @@ var o = l(783285),
         if ("permissions" === u) return (0, n.v)(f.i, { manager: y, permissionStatus: k });
         if ("finished" === C.status || "error" === C.status || "aborted" === C.status) return null;
         if ("finalizing" === C.status) return (0, n.v)(r.t, {});
-        let T = "user" === (0, g.P5)(I),
+        let B = "user" === (0, g.facingModeForStep)(I),
             _ = ((e) => {
                 if ("starting" === e.status || "switchingCamera" === e.status) return "loading";
                 switch (e.detectionStatus) {
@@ -636,40 +640,40 @@ var o = l(783285),
                         return "idle";
                 }
             })(C),
-            A = C.detectionStatus,
-            D = "backId" === I ? "back" : "front",
-            F = d(`videoSelfie.step.${I}`),
+            F = C.detectionStatus,
+            A = "backId" === I ? "back" : "front",
+            D = a(`videoSelfie.step.${I}`),
             z = () => {
-                if ("success" === A) return d("videoSelfie.allGood");
-                if ("capturing" === A) return d("common.processing");
-                if ("error" === A) return d("common.tryAgain");
-                if (T)
-                    switch (A) {
+                if ("success" === F) return a("videoSelfie.allGood");
+                if ("capturing" === F) return a("common.processing");
+                if ("error" === F) return a("common.tryAgain");
+                if (B)
+                    switch (F) {
                         case "tooFar":
-                            return d("notifications.moveCloser");
+                            return a("notifications.moveCloser");
                         case "tooClose":
-                            return d("notifications.moveAway");
+                            return a("notifications.moveAway");
                         case "blur":
-                            return d("notifications.onBlur");
+                            return a("notifications.onBlur");
                         case "faceMask":
-                            return d("notifications.mask");
+                            return a("notifications.mask");
                         case "lenses":
-                            return d("notifications.removeLenses");
+                            return a("notifications.removeLenses");
                         case "eyesClosed":
-                            return d("notifications.eyesClosed");
+                            return a("notifications.eyesClosed");
                         case "headWear":
-                            return d("notifications.removeHeadwear");
+                            return a("notifications.removeHeadwear");
                         default:
-                            return d("videoSelfie.lookCamera");
+                            return a("videoSelfie.lookCamera");
                     }
-                if (P) return "back" === D ? d("videoSelfie.showBack") : d("videoSelfie.showFront");
-                switch (A) {
+                if (P) return "back" === A ? a("videoSelfie.showBack") : a("videoSelfie.showFront");
+                switch (F) {
                     case "blur":
-                        return d("notifications.onBlur");
+                        return a("notifications.onBlur");
                     case "tooFar":
-                        return d("notifications.moveCloser");
+                        return a("notifications.moveCloser");
                     default:
-                        return "back" === D ? d("videoSelfie.showBack") : d("videoSelfie.showFront");
+                        return "back" === A ? a("videoSelfie.showBack") : a("videoSelfie.showFront");
                 }
             };
         return (0, n.v)(t.t, {
@@ -677,7 +681,7 @@ var o = l(783285),
             hideFooterBranding: !0,
             className: "IncodeVideoSelfieCapturePage",
             children: [
-                (0, n.v)(c.t, { className: "IncodeCaptureVisuallyHidden", children: F }),
+                (0, n.v)(c.t, { className: "IncodeCaptureVisuallyHidden", children: D }),
                 (0, n.v)(p.t, {
                     stream: C.composite ?? C.stream,
                     children: (0, n.v)("div", {
@@ -687,21 +691,21 @@ var o = l(783285),
                             "poa" === I
                                 ? (0, n.v)(M, { onContinue: () => v.nextStep() })
                                 : "questions" === I
-                                  ? (0, n.v)(x, { count: e?.voiceConsentQuestions ?? 0, onDone: () => v.nextStep() })
+                                  ? (0, n.v)(S, { count: e?.voiceConsentQuestions ?? 0, onDone: () => v.nextStep() })
                                   : "speech" === I
-                                    ? (0, n.v)(S, {
+                                    ? (0, n.v)(x, {
                                           composite: C.composite,
                                           speechToTextCheck: e?.speechToTextCheck ?? !0,
                                           numberOfTries: e?.numberOfTries ?? 3,
                                           onDone: () => v.nextStep(),
                                       })
-                                    : T
+                                    : B
                                       ? (0, n.v)(V, { borderState: _, message: z() })
                                       : (0, n.v)(L, {
                                             borderState: _,
-                                            mode: D,
+                                            mode: A,
                                             message: z(),
-                                            capturing: "capturing" === A,
+                                            capturing: "capturing" === F,
                                         }),
                         ],
                     }),
@@ -710,5 +714,5 @@ var o = l(783285),
         });
     },
     I = ({ config: e, onFinish: i, onError: l }) =>
-        (0, n.v)(d.t, { children: (0, n.v)(Z, { config: e, onFinish: i, onError: l }) });
-(0, v.t)(I, "incode-video-selfie");
+        (0, n.v)(a.t, { children: (0, n.v)(Z, { config: e, onFinish: i, onError: l }) });
+((0, v.t)(I, "incode-video-selfie"), l.d(i, {}, { VideoSelfie: I }));

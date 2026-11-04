@@ -1,7 +1,23 @@
-(n.d(t, {
-    $: () => r,
-    Ae: () =>
-        function e(t) {
+n(321073);
+let i = {};
+n.d(
+    t,
+    {},
+    {
+        $: function (e) {
+            return (function e(t) {
+                let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+                return (
+                    Array.isArray(t)
+                        ? t.forEach((t) => e(t, n))
+                        : "string" == typeof t.content
+                          ? n.push(t.content)
+                          : null != t.content && e(t.content, n),
+                    n
+                );
+            })(e).join("");
+        },
+        Ae: function e(t) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { limit: 200, hasBailedAst: !1 };
             if (Array.isArray(t)) {
                 let r = t.length;
@@ -27,8 +43,7 @@
             }
             return { ast: t, hasBailedAst: n.hasBailedAst };
         },
-    rI: () =>
-        function e(t, n) {
+        rI: function e(t, n) {
             let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
             if (Array.isArray(n)) {
                 let r = n.length,
@@ -71,19 +86,5 @@
                 ? n.content
                 : n;
         },
-}),
-    n(321073));
-let i = {};
-function r(e) {
-    return (function e(t) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-        return (
-            Array.isArray(t)
-                ? t.forEach((t) => e(t, n))
-                : "string" == typeof t.content
-                  ? n.push(t.content)
-                  : null != t.content && e(t.content, n),
-            n
-        );
-    })(e).join("");
-}
+    },
+);

@@ -1,7 +1,7 @@
-t.exports = {
-    mG: "inline__99afd",
-    qr: "footer__99afd",
-    Qs: "content__99afd",
-    x6: "button__99afd",
-    zt: "textButtonWrapper__99afd",
+o.exports = {
+    mG: "inline_WiFU02",
+    qr: "footer_WiFU02",
+    Qs: "content_WiFU02",
+    x6: "button_WiFU02",
+    zt: "textButtonWrapper_WiFU02",
 };

@@ -1,10 +1,10 @@
-.upsellOuter__50e68 {
+.upsellOuter_KxXBlr {
     border-radius: var(--radius-sm);
     margin: 8px 12px;
     position: relative
 }
 
-.upsellInner__50e68 {
+.upsellInner_KxXBlr {
     background: linear-gradient(to right, hsl(var(--premium-tier-2-purple-for-gradients-hsl)/.1) 0, hsl(var(--premium-tier-2-pink-for-gradients-hsl)/.1) 100%) border-box;
     border-radius: calc(var(--radius-sm) - 2px);
     display: flex;
@@ -13,27 +13,27 @@
     padding: 12px
 }
 
-.upsellTitle__50e68 {
+.upsellTitle_KxXBlr {
     display: flex;
     gap: 4px
 }
 
-.nitroWheel__50e68 {
+.nitroWheel_KxXBlr {
     color: var(--text-strong)
 }
 
-.close__50e68 {
+.close_KxXBlr {
     cursor: pointer;
     inset-inline-end: 8px;
     position: absolute;
     top: 8px
 }
 
-.closeIcon__50e68 {
+.closeIcon_KxXBlr {
     color: var(--interactive-text-default)
 }
 
-.soundButtonSettingContainer__84bad {
+.soundButtonSettingContainer_VACzzt {
     align-items: center;
     background: var(--input-background-default);
     border: 1px solid var(--input-border-default);
@@ -51,69 +51,69 @@
     width: 50%
 }
 
-.emoji__84bad {
+.emoji_VACzzt {
     flex-shrink: 0;
     margin-inline-end: 8px
 }
 
-.emoji__84bad,
-.secondaryIcon__84bad {
+.emoji_VACzzt,
+.secondaryIcon_VACzzt {
     height: 20px;
     width: 20px
 }
 
-.secondaryIcon__84bad {
+.secondaryIcon_VACzzt {
     margin: 0 4px
 }
 
-.secondaryIconActive__84bad {
+.secondaryIconActive_VACzzt {
     cursor: pointer
 }
 
-.secondaryIconDisabled__84bad {
+.secondaryIconDisabled_VACzzt {
     color: var(--icon-muted)
 }
 
-.container__84bad {
+.container_VACzzt {
     align-items: center;
     display: flex
 }
 
-.soundText__84bad {
+.soundText_VACzzt {
     max-width: 190px;
     overflow: hidden;
     text-overflow: ellipsis
 }
 
-.guildSelector_c582b4 {
+.guildSelector_sPmmqh {
     margin-bottom: 0;
     margin-top: 0
 }
 
-.nitroWheel_c582b4 {
+.nitroWheel_sPmmqh {
     height: 16px;
     margin-inline-start: 4px;
     width: 16px
 }
 
-.container_c582b4 {
+.container_sPmmqh {
     margin-bottom: 16px
 }
 
-.callSoundsTitle_c582b4 {
+.callSoundsTitle_sPmmqh {
     margin-bottom: 8px
 }
 
-.callSoundsDivider_c582b4 {
+.callSoundsDivider_sPmmqh {
     margin-bottom: 24px;
     margin-top: 4px
 }
 
-.notice_c582b4 {
+.notice_sPmmqh {
     margin-top: 8px
 }
 
-.pill_c582b4 {
+.pill_sPmmqh {
     align-items: center;
     background: var(--background-mod-normal);
     border-radius: 8px;
@@ -122,136 +122,136 @@
     padding: 4px 8px
 }
 
-.pillText_c582b4 {
+.pillText_sPmmqh {
     max-width: 150px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
 }
 
-.pillIcon_c582b4 {
+.pillIcon_sPmmqh {
     width: 16px
 }
 
-.micTestHelpLink__2958a {
+.micTestHelpLink_DUVXCa {
     margin-inline-start: 4px
 }
 
-.flex_aa3ffd {
+.flex_yz0Tww {
     display: flex
 }
 
-.alignStart_aa3ffd {
+.alignStart_yz0Tww {
     align-items: flex-start
 }
 
-.alignEnd_aa3ffd {
+.alignEnd_yz0Tww {
     align-items: flex-end
 }
 
-.alignCenter_aa3ffd {
+.alignCenter_yz0Tww {
     align-items: center
 }
 
-.alignStretch_aa3ffd {
+.alignStretch_yz0Tww {
     align-items: stretch
 }
 
-.alignBaseline_aa3ffd {
+.alignBaseline_yz0Tww {
     align-items: baseline
 }
 
-.justifyStart_aa3ffd {
+.justifyStart_yz0Tww {
     justify-content: flex-start
 }
 
-.justifyEnd_aa3ffd {
+.justifyEnd_yz0Tww {
     justify-content: flex-end
 }
 
-.justifyCenter_aa3ffd {
+.justifyCenter_yz0Tww {
     justify-content: center
 }
 
-.justifyAround_aa3ffd {
+.justifyAround_yz0Tww {
     justify-content: space-around
 }
 
-.justifyBetween_aa3ffd {
+.justifyBetween_yz0Tww {
     justify-content: space-between
 }
 
-.noWrap_aa3ffd {
+.noWrap_yz0Tww {
     flex-wrap: nowrap
 }
 
-.wrap_aa3ffd {
+.wrap_yz0Tww {
     flex-wrap: wrap
 }
 
-.wrapReverse_aa3ffd {
+.wrapReverse_yz0Tww {
     flex-wrap: wrap-reverse
 }
 
-.directionRow_aa3ffd {
+.directionRow_yz0Tww {
     flex-direction: row
 }
 
-.directionRowReverse_aa3ffd {
+.directionRowReverse_yz0Tww {
     flex-direction: row-reverse
 }
 
-.directionColumn_aa3ffd {
+.directionColumn_yz0Tww {
     flex-direction: column
 }
 
-.spacer_aa3ffd {
+.spacer_yz0Tww {
     flex: 1;
     overflow: hidden
 }
 
-.vertical_aa3ffd {
+.vertical_yz0Tww {
     display: flex;
     flex-direction: column
 }
 
-.horizontal_aa3ffd {
+.horizontal_yz0Tww {
     display: flex;
     flex-direction: row
 }
 
-.horizontalReverse_aa3ffd {
+.horizontalReverse_yz0Tww {
     display: flex;
     flex-direction: row-reverse
 }
 
-.horizontal_aa3ffd>.spacer_aa3ffd,
-.horizontalReverse_aa3ffd>.spacer_aa3ffd,
-.vertical_aa3ffd>.spacer_aa3ffd {
+.horizontal_yz0Tww>.spacer_yz0Tww,
+.horizontalReverse_yz0Tww>.spacer_yz0Tww,
+.vertical_yz0Tww>.spacer_yz0Tww {
     min-height: 1px
 }
 
-.flexCenter_aa3ffd,
-.streamerModeEnabled_aa3ffd {
+.flexCenter_yz0Tww,
+.streamerModeEnabled_yz0Tww {
     align-items: center;
     display: flex;
     justify-content: center
 }
 
-.streamerModeEnabled_aa3ffd {
+.streamerModeEnabled_yz0Tww {
     flex: 1;
     flex-direction: column
 }
 
-.userSettingsStreamerModeEnabled_aa3ffd {
+.userSettingsStreamerModeEnabled_yz0Tww {
     height: 100%
 }
 
-.streamerModeEnabledBtn_aa3ffd {
+.streamerModeEnabledBtn_yz0Tww {
     margin-top: var(--space-24)
 }
 
-.container__31e10 {
+.container_J9WkLo {
     align-items: center;
     background: linear-gradient(90deg, var(--expressive-gradient-blue-end) 0, var(--expressive-gradient-blue-start) 100%), var(--background-surface-high);
     border-radius: var(--radius-lg);
@@ -265,16 +265,16 @@
     padding: var(--space-16) var(--space-16) var(--space-16) calc(var(--space-24) + 4px)
 }
 
-.compact__31e10 {
+.compact_J9WkLo {
     padding: var(--space-24)
 }
 
-.content__31e10 {
+.content_J9WkLo {
     max-width: 400px;
     min-width: 0
 }
 
-.graphic__31e10 {
+.graphic_J9WkLo {
     flex-shrink: 0;
     height: 162px;
     -o-object-fit: contain;
@@ -282,21 +282,21 @@
     width: 216px
 }
 
-.animatedGraphic__31e10 {
+.animatedGraphic_J9WkLo {
     flex-shrink: 0;
     width: 282px
 }
 
 @container (max-width: 560px) {
 
-    .animatedGraphic__31e10,
-    .graphic__31e10 {
+    .animatedGraphic_J9WkLo,
+    .graphic_J9WkLo {
         display: none
     }
 }
 
-.container__27a85 {
+.container_W9asu2 {
     margin-top: 8px
 }
 
-/*# sourceMappingURL=135144.4d5d81da4200b5ae.css.map*/
+/*# sourceMappingURL=135144.114247f1aa11fb7c.css.map*/

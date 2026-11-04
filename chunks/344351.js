@@ -1,4 +1,3 @@
-n.d(t, { T: () => r });
 var i,
     r =
         (((i = {}).GUILD_CHANNEL = "gc"),
@@ -7,3 +6,4 @@ var i,
         (i.PRIVATE_CHANNEL_MESSAGE = "pcm"),
         (i.PARTY = "party"),
         i);
+n.d(t, {}, { T: r });

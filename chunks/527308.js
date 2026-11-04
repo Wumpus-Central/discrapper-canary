@@ -1,10 +1,10 @@
 e.exports = {
-    PD: "sideContainer_de3a16",
-    UT: "gridContainer_de3a16",
-    wu: "guildCountContainer_de3a16",
-    HG: "guildsIconContainer_de3a16",
-    hd: "sectionContainer_de3a16",
-    d5: "reducedGap_de3a16",
-    iY: "infoSection_de3a16",
-    RU: "linkGrid_de3a16",
+    PD: "sideContainer_bjJ-1t",
+    UT: "gridContainer_bjJ-1t",
+    wu: "guildCountContainer_bjJ-1t",
+    HG: "guildsIconContainer_bjJ-1t",
+    hd: "sectionContainer_bjJ-1t",
+    d5: "reducedGap_bjJ-1t",
+    iY: "infoSection_bjJ-1t",
+    RU: "linkGrid_bjJ-1t",
 };

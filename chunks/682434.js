@@ -1,8 +1,8 @@
 e.exports = {
-    uW: "section__9e177",
-    bm: "illustration__9e177",
-    kL: "container__9e177",
-    NQ: "introBody__9e177",
-    x6: "button__9e177",
-    yF: "divider__9e177",
+    uW: "section_hF04I1",
+    bm: "illustration_hF04I1",
+    kL: "container_hF04I1",
+    NQ: "introBody_hF04I1",
+    x6: "button_hF04I1",
+    yF: "divider_hF04I1",
 };

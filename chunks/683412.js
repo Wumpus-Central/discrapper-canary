@@ -1,4 +1,3 @@
-n.d(t, { A: () => l });
 var i = n(478676),
     r = n.n(i);
 let a = /\n$/,
@@ -16,3 +15,4 @@ let a = /\n$/,
             return { content: (0, i.parseInline)(t, e[1].trim(), { ...n, allowSubtext: !1 }) };
         },
     };
+n.d(t, {}, { A: l });

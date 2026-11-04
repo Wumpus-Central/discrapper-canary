@@ -1,8 +1,8 @@
 e.exports = {
-    Os: "group_f5fff4",
-    r9: "disabled_f5fff4",
-    AS: "item_f5fff4",
-    cw: "allow_f5fff4",
-    wH: "selected_f5fff4",
-    Xg: "deny_f5fff4",
+    Os: "group_2rG0YD",
+    r9: "disabled_2rG0YD",
+    AS: "item_2rG0YD",
+    cw: "allow_2rG0YD",
+    wH: "selected_2rG0YD",
+    Xg: "deny_2rG0YD",
 };

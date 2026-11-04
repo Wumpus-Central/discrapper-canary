@@ -1,0 +1,338 @@
+(n.d(t, {
+    U_: () => K,
+    I: () => M,
+    Yq: () => U,
+    T0: () => L,
+    ri: () => V,
+    Jo: () => D,
+    m: () => k,
+    Ge: () => O,
+    H9: () => R,
+    Ck: () => z,
+    VL: () => G,
+    UY: () => B,
+    Am: () => H,
+    r4: () => w,
+    G8: () => Y,
+    yp: () => F,
+}),
+    n(938796));
+var i = n(477900),
+    l = n(582128),
+    s = n(621466),
+    r = n(665260),
+    a = n(442433),
+    o = n(138399),
+    d = n(414798),
+    c = n(267102),
+    u = n(609969),
+    m = n(149468),
+    h = n(387408),
+    g = n(9842),
+    p = n(652215),
+    A = n(594061),
+    x = n(734057),
+    f = n(580745),
+    I = n(596344),
+    E = n(287809),
+    v = n(129230),
+    C = n(188567),
+    _ = n(723702),
+    j = n(427262),
+    N = n(841549),
+    y = n(439147),
+    b = n(81437);
+function T(e, t, n) {
+    return l.useCallback(() => {
+        n({ [e]: !t });
+    }, [e, n, t]);
+}
+function S(e, t, n) {
+    return l.useCallback(
+        (i) => {
+            let l = E.default.getUser(e);
+            if (null == l) return;
+            if ((i.preventDefault(), i.stopPropagation(), !i.shiftKey)) return void n();
+            let s = `@${j.Ay.getUserTag(l, { decoration: "never" })}`,
+                r = `<@${e}>`;
+            (C._.dispatchToLastSubscribed(p.jej.INSERT_TEXT, { plainText: s, rawText: r }), d.A.startTyping(t));
+        },
+        [e, t, n],
+    );
+}
+function k(e, t, n, i) {
+    let l = T("usernameProfile", n, i);
+    return S(e.author.id, t.id, l);
+}
+function R(e, t, n, i) {
+    let l = T("referencedUsernameProfile", n, i);
+    return S(e?.author.id, t.id, l);
+}
+function L(e, t, n, i) {
+    let l = T("interactionUsernameProfile", n, i);
+    return S(e?.user.id, t.id, l);
+}
+function M(e, t, n, i) {
+    let l = T("referencedUsernameProfile", n, i);
+    return S(e, t.id, l);
+}
+function P(e) {
+    return l.useCallback(
+        (t) => {
+            (t.preventDefault(), t.stopPropagation(), e());
+        },
+        [e],
+    );
+}
+function D(e, t) {
+    return P(T("avatarProfile", e, t));
+}
+function O(e, t) {
+    return P(T("referencedAvatarProfile", e, t));
+}
+function U(e, t) {
+    return P(T("interactionAvatarProfile", e, t));
+}
+function G(e, t, s, o) {
+    let { id: d } = t,
+        { id: u, flags: m } = e,
+        h = (0, r.Lt)(m, p.pr7.EPHEMERAL),
+        g = (0, c.Us)();
+    return l.useCallback(
+        (e, t) => {
+            if (h) return;
+            if (!_.isPlatformEmbedded) {
+                let t = e.target;
+                if (("A" === t.tagName && "" !== t.textContent) || null == window.getSelection) return;
+                let n = window.getSelection();
+                if (null != n && !n.isCollapsed && (n.focusNode === e.target || t.contains(n.focusNode))) return;
+            }
+            if (null != e.currentTarget.contains && !e.currentTarget.contains(e.target)) return;
+            let l = x.A.getChannel(d),
+                r = I.A.getMessage(d, u),
+                c = f.A.isEditing(d, u);
+            null == l ||
+                null == r ||
+                c ||
+                (v.default.track(p.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
+                    message_id: u,
+                    channel: d,
+                    location: "right_click",
+                }),
+                s({ contextMenu: !0 }),
+                (0, a.L3)(
+                    e,
+                    async () => {
+                        let { default: e } = await Promise.all([
+                            n.e(876400),
+                            n.e(24312),
+                            n.e(622936),
+                            n.e(216947),
+                            n.e(301850),
+                            n.e(587308),
+                            n.e(903758),
+                            n.e(768071),
+                            n.e(96922),
+                            n.e(292699),
+                            n.e(926787),
+                            n.e(571210),
+                            n.e(88342),
+                            n.e(311802),
+                            n.e(698965),
+                            n.e(235313),
+                            n.e(579245),
+                            n.e(603998),
+                            n.e(531741),
+                            n.e(465157),
+                            n.e(490010),
+                            n.e(691671),
+                            n.e(612287),
+                            n.e(720064),
+                            n.e(793438),
+                            n.e(60086),
+                            n.e(305557),
+                            n.e(36227),
+                            n.e(975933),
+                            n.e(856753),
+                            n.e(92295),
+                            n.e(458273),
+                            n.e(163069),
+                            n.e(26001),
+                            n.e(414591),
+                            n.e(652111),
+                            n.e(896804),
+                            n.e(411353),
+                            n.e(954289),
+                            n.e(295998),
+                            n.e(480945),
+                            n.e(228850),
+                            n.e(678195),
+                            n.e(527687),
+                            n.e(904774),
+                            n.e(78601),
+                            n.e(81189),
+                            n.e(200203),
+                            n.e(377804),
+                            n.e(780407),
+                            n.e(781949),
+                            n.e(78465),
+                            n.e(774021),
+                            n.e(710014),
+                            n.e(944801),
+                            n.e(549333),
+                            n.e(146149),
+                            n.e(911802),
+                            n.e(660833),
+                            n.e(159617),
+                            n.e(93907),
+                            n.e(660249),
+                            n.e(733416),
+                            n.e(440142),
+                            n.e(697116),
+                            n.e(733314),
+                            n.e(69727),
+                            n.e(557267),
+                            n.e(780611),
+                            n.e(752516),
+                            n.e(812663),
+                            n.e(787763),
+                        ]).then(n.bind(n, 761304));
+                        return (n) =>
+                            (0, i.jsx)(e, { ...n, message: r, channel: l, mediaItem: t, shouldHideMediaOptions: o });
+                    },
+                    { onClose: () => s({ contextMenu: !1 }), context: g },
+                ));
+        },
+        [h, d, u, s, g, o],
+    );
+}
+function w(e, t) {
+    return l.useCallback(
+        (n) => {
+            let i = E.default.getUser(e),
+                l = x.A.getChannel(t);
+            null != i && null != l && (n.stopPropagation(), (0, N.wQ)(n, i, l));
+        },
+        [e, t],
+    );
+}
+function B(e, t, n) {
+    return l.useCallback(
+        (i) => {
+            let l = E.default.getUser(e),
+                s = x.A.getChannel(t);
+            null != l &&
+                null != s &&
+                (i.stopPropagation(), (0, N.B8)(i, { user: l, channel: s, moderationAlertId: n }));
+        },
+        [e, t, n],
+    );
+}
+function H(e, t) {
+    return l.useCallback(
+        (n) => {
+            let i = E.default.getUser(e),
+                l = x.A.getChannel(t);
+            null != i && null != l && (n.stopPropagation(), (0, N.pB)(n, i, l.guild_id));
+        },
+        [e, t],
+    );
+}
+function V(e, t) {
+    let { id: n } = e,
+        { id: i } = t;
+    return l.useCallback(
+        (e) => {
+            e.altKey && (e.preventDefault(), (0, y.A)(i, n));
+        },
+        [i, n],
+    );
+}
+function F(e) {
+    let { groupId: t, message: n, defaultValue: i } = e,
+        s = n.author.id,
+        r = `${t}:${s}`,
+        a = l.useRef(i),
+        [o, d] = l.useState(i);
+    a.current = o || a.current;
+    let c = l.useCallback(() => {
+            ((0, A.cE)(), o || (C._.dispatchKeyed(p.zOV.ANIMATE_CHAT_AVATAR, r, !0), d(!0)));
+        }, [o, r]),
+        u = l.useCallback(() => {
+            (C._.dispatchKeyed(p.zOV.ANIMATE_CHAT_AVATAR, r, !1), d(!1));
+        }, [r]);
+    return { hasHovered: a.current, isHovered: o, handleMouseEnter: c, handleMouseLeave: u };
+}
+function Y(e, t) {
+    let [n, i] = l.useState(!1),
+        [r, a] = l.useState(!1);
+    return {
+        handleFocus: l.useCallback(
+            (t) => {
+                let n = (0, s.BF)(t)?.activeElement ?? null;
+                ((t.target === t.currentTarget || t.currentTarget.contains(n)) && (a(!0), i(!0)), null != e && e(t));
+            },
+            [e],
+        ),
+        handleBlur: l.useCallback(
+            (e) => {
+                let n = (0, s.BF)(e)?.activeElement ?? null;
+                ((e.target !== e.currentTarget && e.currentTarget.contains(n)) || i(!1), null != t && t(e));
+            },
+            [t],
+        ),
+        isFocused: n,
+        hasFocused: r,
+    };
+}
+function z(e, t, n) {
+    return l.useCallback(() => {
+        let { messageReference: i } = e,
+            l = t.message;
+        function s() {
+            let t = e.mediaMention;
+            o.A.jumpToMessage({
+                channelId: i.channel_id,
+                messageId: i.message_id,
+                flash: !0,
+                returnMessageId: e.id,
+                onJumpComplete:
+                    null != t
+                        ? () => {
+                              C._.dispatchKeyed(p.zOV.CLIP_SEEK_VIDEO, t.attachment_id, {
+                                  timestampMs: (0, u.$)(t.timestamp),
+                              });
+                          }
+                        : void 0,
+            });
+        }
+        let r = e.messageReference?.message_id,
+            a = null,
+            d = null;
+        if (t.state === g.a.LOADED) {
+            let e = (0, h.A)(t.message);
+            ((a =
+                e.attachments.length > 0 || e.embeds.length > 0 || e.stickerItems.length > 0 || e.stickers.length > 0),
+                (d = e.content?.length ?? 0));
+        }
+        ((0, m.zV)(p.HAw.REPLIED_MESSAGE_CLICKED, {
+            guild_id: n.guild_id ?? void 0,
+            channel_id: n.id,
+            reply_message_id: e.id,
+            replied_message_id: r,
+            replied_message_is_loaded: t.state === g.a.LOADED,
+            replied_message_has_media: a,
+            replied_message_length: d,
+        }),
+            (null == l || (0, b.A)(l, s)) && s());
+    }, [t, e, n]);
+}
+function K(e, t) {
+    let n = T("interactionData", e, t);
+    return l.useCallback(
+        (e) => {
+            (e.preventDefault(), e.stopPropagation(), n());
+        },
+        [n],
+    );
+}

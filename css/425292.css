@@ -1,4 +1,4 @@
-.platforms__9bb6a {
+.platforms_LgQLHU {
     --custom-game-platform-glyph-size: 20px;
     --custom-game-platform-glyph-gap: var(--space-4);
     align-items: center;
@@ -8,7 +8,7 @@
     min-width: calc(var(--custom-game-platform-glyph-size)*3 + var(--custom-game-platform-glyph-gap)*2)
 }
 
-.platformIcon__9bb6a {
+.platformIcon_LgQLHU {
     color: var(--icon-muted);
     display: grid;
     flex: 0 0 auto;
@@ -17,8 +17,8 @@
     width: var(--custom-game-platform-glyph-size)
 }
 
-.platformIcon__9bb6a+.platformIcon__9bb6a {
+.platformIcon_LgQLHU+.platformIcon_LgQLHU {
     margin-inline-start: var(--custom-game-platform-glyph-gap)
 }
 
-/*# sourceMappingURL=425292.edc424a0bf1f1a03.css.map*/
+/*# sourceMappingURL=425292.f79f553c25d41b62.css.map*/

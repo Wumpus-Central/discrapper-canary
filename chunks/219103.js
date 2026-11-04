@@ -1,4 +1,3 @@
-n.d(t, { x: () => S });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -12,30 +11,10 @@ var i = n(503698),
     m = n(580630),
     p = n(993408),
     h = n(818348),
-    C = n(105292),
-    f = n(833159),
+    C = n(792996),
+    f = n(337091),
     E = n(967957);
 function S(e) {
-    let {
-        priceAmount: t,
-        priceCurrency: n,
-        discountIconConfig: i,
-        className: r,
-        discount: a = p.rr,
-        variant: s = "body-md/semibold",
-    } = e;
-    return n === h.Yr.DISCORD_ORB
-        ? (0, l.jsx)(I, { orbAmount: t, className: r, discount: a, variant: s })
-        : (0, l.jsx)(y, {
-              priceAmount: t,
-              priceCurrency: n,
-              discountIconConfig: i,
-              className: r,
-              discount: a,
-              variant: s,
-          });
-}
-function g(e) {
     let { config: t } = e,
         n = t.size ?? "md";
     switch (t.source) {
@@ -59,7 +38,7 @@ function g(e) {
             return (t.source, null);
     }
 }
-function y(e) {
+function g(e) {
     let {
             priceAmount: t,
             priceCurrency: n,
@@ -70,7 +49,7 @@ function y(e) {
         } = e,
         d = (0, m.RS)(t, n),
         h =
-            s !== p.rr && s.discountPercentage >= p.es
+            s !== p.rr && s.discountPercentage >= 5
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(u.A, {
@@ -96,15 +75,15 @@ function y(e) {
     return (0, l.jsxs)("div", {
         className: r()(E.kL, a),
         children: [
-            null != i ? (0, l.jsx)(g, { config: i }) : null,
+            null != i ? (0, l.jsx)(S, { config: i }) : null,
             (0, l.jsx)(c.E, { variant: o, color: "currentColor", lineClamp: 1, children: h }),
         ],
     });
 }
-function I(e) {
+function y(e) {
     let { orbAmount: t, className: n, discount: i = p.rr, variant: a = "body-md/semibold" } = e,
         s =
-            i !== p.rr && i.discountPercentage >= p.es
+            i !== p.rr && i.discountPercentage >= 5
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(u.A, {
@@ -135,3 +114,29 @@ function I(e) {
         ],
     });
 }
+n.d(
+    t,
+    {},
+    {
+        x: function (e) {
+            let {
+                priceAmount: t,
+                priceCurrency: n,
+                discountIconConfig: i,
+                className: r,
+                discount: a = p.rr,
+                variant: s = "body-md/semibold",
+            } = e;
+            return n === h.Yr.DISCORD_ORB
+                ? (0, l.jsx)(y, { orbAmount: t, className: r, discount: a, variant: s })
+                : (0, l.jsx)(g, {
+                      priceAmount: t,
+                      priceCurrency: n,
+                      discountIconConfig: i,
+                      className: r,
+                      discount: a,
+                      variant: s,
+                  });
+        },
+    },
+);

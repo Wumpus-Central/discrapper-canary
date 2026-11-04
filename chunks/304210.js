@@ -1,5 +1,4 @@
-e.d(n, { FE: () => F, ST: () => s, TI: () => c, ty: () => d });
-var r = e(17928),
+var r = e(855986),
     l = e(918467),
     u = e(288106),
     a = e(223311),
@@ -16,14 +15,24 @@ function c() {
 function s() {
     return c().promotion;
 }
-function d(t) {
-    let n = s();
-    return null == n || (0, i.XF)(n)?.collectionId !== t || (null != n.endsAt && n.endsAt <= new Date()) ? null : n;
-}
-function F(t) {
-    let n = s(),
-        e = (0, r.bG)([l.A], () => "loading" === l.A.getFetchState(o.FYj));
-    return t
-        ? { promotion: e || n?.rewardStatus !== u.GM.EARNED ? null : n, isFetchingPromotion: e }
-        : { promotion: null, isFetchingPromotion: !1 };
-}
+e.d(
+    n,
+    {},
+    {
+        FE: function (t) {
+            let n = s(),
+                e = (0, r.bG)([l.A], () => "loading" === l.A.getFetchState(o.FYj));
+            return t
+                ? { promotion: e || n?.rewardStatus !== u.GM.EARNED ? null : n, isFetchingPromotion: e }
+                : { promotion: null, isFetchingPromotion: !1 };
+        },
+        ST: s,
+        TI: c,
+        ty: function (t) {
+            let n = s();
+            return null == n || (0, i.XF)(n)?.collectionId !== t || (null != n.endsAt && n.endsAt <= new Date())
+                ? null
+                : n;
+        },
+    },
+);

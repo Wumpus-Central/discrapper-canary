@@ -1,5 +1,4 @@
 let r, i, o;
-n.d(t, { i: () => l, z: () => s });
 var a = n(978862);
 function s(e) {
     let t = a.O._sentryDebugIds;
@@ -27,10 +26,17 @@ function s(e) {
               return n;
           }, {})));
 }
-function l(e, t) {
-    let n = s(e);
-    if (!n) return [];
-    let r = [];
-    for (let e of t) e && n[e] && r.push({ type: "sourcemap", code_file: e, debug_id: n[e] });
-    return r;
-}
+n.d(
+    t,
+    {},
+    {
+        i: function (e, t) {
+            let n = s(e);
+            if (!n) return [];
+            let r = [];
+            for (let e of t) e && n[e] && r.push({ type: "sourcemap", code_file: e, debug_id: n[e] });
+            return r;
+        },
+        z: s,
+    },
+);

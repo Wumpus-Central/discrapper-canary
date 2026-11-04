@@ -1,0 +1,50 @@
+.container_Gl6U0S {
+    background: transparent;
+    border-radius: var(--radius-md);
+    margin: calc(var(--space-xs)*-1) calc(var(--space-sm)*-1);
+    outline: none;
+    padding: var(--space-xs) var(--space-sm);
+    scroll-margin-bottom: var(--space-16);
+    scroll-margin-top: var(--space-16)
+}
+
+.container_Gl6U0S.flash_Gl6U0S {
+    background: var(--message-mentioned-background-default)
+}
+
+.full-motion .container_Gl6U0S.flash_Gl6U0S {
+    animation: settingNavAnchorFlash_Gl6U0S 2.25s ease;
+    background: transparent
+}
+
+@keyframes settingNavAnchorFlash_Gl6U0S {
+
+    0%,
+    11.11% {
+        background: transparent
+    }
+
+    33.33%,
+    77.78% {
+        background: var(--message-mentioned-background-default)
+    }
+
+    to {
+        background: transparent
+    }
+}
+
+.baseSettingWrapper_4Z2WJy {
+    min-height: 48px
+}
+
+.icon_W6yko_ {
+    align-items: center;
+    border-radius: var(--radius-sm);
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    width: 48px
+}
+
+/*# sourceMappingURL=f87f4b1c78501e4c.css.map*/

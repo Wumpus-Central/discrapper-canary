@@ -1,10 +1,15 @@
-n.d(i, { A: () => o });
-var p = n(894101),
+var p = n(16407),
     r = n(453771),
-    a = n(105292);
-function o(t) {
-    (0, p.openUploadError)({
-        title: a.intl.string(a.t["/tGlcj"]),
-        help: a.intl.formatToPlainString(a.t.fxEKdS, { maxSize: (0, r.Hb)(t) }),
-    });
-}
+    a = n(792996);
+n.d(
+    i,
+    {},
+    {
+        A: function (t) {
+            (0, p.openUploadError)({
+                title: a.intl.string(a.t["/tGlcj"]),
+                help: a.intl.formatToPlainString(a.t.fxEKdS, { maxSize: (0, r.Hb)(t) }),
+            });
+        },
+    },
+);

@@ -1,10 +1,9 @@
-e.exports = {
-    Kk: "icon__2ed4c",
-    vo: "notAllowedIcon__2ed4c icon__2ed4c",
-    X5: "frameGridItem__2ed4c",
-    IO: "framePresetItem__2ed4c",
-    wH: "selected__2ed4c",
-    uW: "section__2ed4c",
-    p_: "list__2ed4c",
-    sV: "shopIcon__2ed4c icon__2ed4c",
+o.exports = {
+    vo: "notAllowedIcon_EVjahG icon_EVjahG",
+    X5: "frameGridItem_EVjahG",
+    IO: "framePresetItem_EVjahG",
+    wH: "selected_EVjahG",
+    uW: "section_EVjahG",
+    p_: "list_EVjahG",
+    sV: "shopIcon_EVjahG icon_EVjahG",
 };

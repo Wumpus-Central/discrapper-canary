@@ -1,4 +1,3 @@
-e.d(i, { b: () => o });
 var s = e(477900),
     a = e(582128),
     n = e(435558),
@@ -43,3 +42,4 @@ class o extends a.Component {
         return (0, s.jsx)("div", { className: t, ref: this.ref, children: i });
     }
 }
+e.d(i, {}, { b: o });

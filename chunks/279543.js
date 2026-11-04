@@ -1,8 +1,8 @@
-a.exports = {
-    qr: "footer_e4c320",
-    Os: "group_e4c320",
-    al: "attribution_e4c320",
-    Kk: "icon_e4c320",
-    Pf: "label_e4c320",
-    G2: "attributionLabel_e4c320",
+_.exports = {
+    qr: "footer_MeMr9t",
+    Os: "group_MeMr9t",
+    al: "attribution_MeMr9t",
+    Kk: "icon_MeMr9t",
+    Pf: "label_MeMr9t",
+    G2: "attributionLabel_MeMr9t",
 };

@@ -1,4 +1,3 @@
-n.d(t, { A: () => o, E: () => s });
 var i = n(462180),
     r = n(882035),
     a = n(121894);
@@ -29,20 +28,27 @@ let s = (0, r.h)((e, t) => ({
         },
     })),
     l = new Set();
-function o(e) {
-    return s(
-        (t) => ({
-            selectedUserIds: t.selectedUserIds[e] ?? l,
-            addUsers: (n) => {
-                t.addUsers(e, n);
-            },
-            removeUser: (n) => {
-                t.removeUser(e, n);
-            },
-            clearSelection: () => {
-                t.clearSelection(e);
-            },
-        }),
-        i.x,
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            return s(
+                (t) => ({
+                    selectedUserIds: t.selectedUserIds[e] ?? l,
+                    addUsers: (n) => {
+                        t.addUsers(e, n);
+                    },
+                    removeUser: (n) => {
+                        t.removeUser(e, n);
+                    },
+                    clearSelection: () => {
+                        t.clearSelection(e);
+                    },
+                }),
+                i.x,
+            );
+        },
+        E: s,
+    },
+);

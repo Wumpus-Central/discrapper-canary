@@ -1,2 +1,1 @@
-c.d(p, { x: () => i });
-let i = "section";
+c.d(p, {}, { x: "section" });

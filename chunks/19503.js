@@ -1,45 +1,47 @@
-e.d(t, { MandatoryConsent: () => g });
+e.r(t);
 var s = e(783285),
     o = e(768611),
-    i = e(200503),
-    r = e(628926),
-    a = e(326144),
+    r = e(200503),
+    a = e(628926),
+    i = e(326144),
     c = e(658299),
     l = e(264957),
     d = e(112316),
     u = e(918676),
     h = e(779705),
-    C = e(637767),
+    C = e(424313),
     v = (n) => {
         n.target.closest("a") && n.stopPropagation();
     },
-    b = ({ config: n, manager: t, onFinish: e, onError: r }) => {
-        let { t: u, i18n: b } = (0, s.n)(),
-            g = (0, o.l)(null),
-            [m, p] = (0, i.u)(
+    g = ({ config: n, manager: t, onFinish: e, onError: a }) => {
+        let { t: u, i18n: g } = (0, s.n)(),
+            b = (0, o.l)(null),
+            [m, p] = (0, r.u)(
                 () => {
                     if (t) return t;
                     if (!n) throw Error("MandatoryConsent config is required when no manager is provided");
-                    return (0, C.n)({ config: { ...n, language: n.language ?? b.language } });
+                    return (0, C.createMandatoryConsentManager)({
+                        config: { ...n, language: n.language ?? g.language },
+                    });
                 },
                 { manageLifecycle: !t },
             );
         if (
             ((0, o._)(() => {
-                "display" === m.status && g.current?.focus();
+                "display" === m.status && b.current?.focus();
             }, [m.status]),
-            (0, i.c)({ status: m.status, onFinish: e, onError: r, error: "error" === m.status ? m.error : void 0 }),
-            (0, i.s)(m))
+            (0, r.c)({ status: m.status, onFinish: e, onError: a, error: "error" === m.status ? m.error : void 0 }),
+            (0, r.s)(m))
         )
             return null;
         if ("idle" === m.status || "loading" === m.status) return (0, o.v)(c.t, { hideText: !0 });
-        let k = m.text
+        let y = m.text
                 .split("\n")
                 .filter((n) => n.trim().length > 0)
                 .join(" "),
-            y = (n?.type ?? "MANDATORY") === "MANDATORY";
+            k = (n?.type ?? "MANDATORY") === "MANDATORY";
         return (0, o.v)(
-            a.t,
+            i.t,
             {
                 className: "IncodeConsentPage",
                 title: m.title,
@@ -66,7 +68,7 @@ var s = e(783285),
                                             role: "presentation",
                                             onClick: v,
                                             onKeyDown: v,
-                                            children: (0, o.v)(h.t, { content: k, class: "IncodeRichText" }),
+                                            children: (0, o.v)(h.t, { content: y, class: "IncodeRichText" }),
                                         }),
                                     }),
                                 }),
@@ -85,13 +87,13 @@ var s = e(783285),
                             children: [
                                 (0, o.v)(l.t, {
                                     "data-testid": "mandatory-consent-submit",
-                                    class: y ? void 0 : "IncodeConsentButton",
+                                    class: k ? void 0 : "IncodeConsentButton",
                                     onClick: () => p.submit(),
                                     disabled: !m.canSubmit,
                                     isLoading: "submitting" === m.status,
                                     children: u("biometricConsent.button.continue"),
                                 }),
-                                y &&
+                                k &&
                                     (0, o.v)(l.t, {
                                         variant: "link",
                                         onClick: () => p.cancel(),
@@ -105,6 +107,6 @@ var s = e(783285),
             "ready",
         );
     },
-    g = ({ config: n, manager: t, onFinish: e, onError: s }) =>
-        (0, o.v)(r.t, { children: n || t ? (0, o.v)(b, { config: n, manager: t, onFinish: e, onError: s }) : null });
-(0, u.t)(g, "incode-mandatory-consent");
+    b = ({ config: n, manager: t, onFinish: e, onError: s }) =>
+        (0, o.v)(a.t, { children: n || t ? (0, o.v)(g, { config: n, manager: t, onFinish: e, onError: s }) : null });
+((0, u.t)(b, "incode-mandatory-consent"), e.d(t, {}, { MandatoryConsent: b }));

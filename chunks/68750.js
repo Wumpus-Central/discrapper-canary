@@ -1,8 +1,8 @@
 t.exports = {
-    UA: "profileCustomizationSection__44061",
-    yt: "baseLayout__44061",
-    Fp: "previewsContainer__44061",
-    Vf: "previewTitle__44061",
-    oB: "formContent__44061",
-    Oz: "isSticky__44061",
+    UA: "profileCustomizationSection_Of7Y-V",
+    yt: "baseLayout_Of7Y-V",
+    Fp: "previewsContainer_Of7Y-V",
+    Vf: "previewTitle_Of7Y-V",
+    oB: "formContent_Of7Y-V",
+    Oz: "isSticky_Of7Y-V",
 };

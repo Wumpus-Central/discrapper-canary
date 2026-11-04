@@ -1,4 +1,3 @@
-n.d(t, { A: () => y });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -7,78 +6,87 @@ var l = n(477900),
     o = n(140735),
     u = n(355622),
     c = n(408018),
-    d = n(845207),
+    d = n(989161),
     m = n(915089),
-    p = n(95701),
-    h = n(202541),
-    C = n(652215),
-    f = n(105292),
-    E = n(540796);
-let S = (0, p.createChannelRecord)({ id: "1", type: C.rbe.DM }),
-    g = (0, m.Ld)();
-function y(e) {
-    let {
-            label: t = f.intl.string(f.t.B3miE8),
-            onTextChange: n,
-            pendingText: r,
-            currentText: m,
-            className: p,
-            innerClassName: C,
-            disableThemedBackground: y = !1,
-        } = e,
-        [I, A] = i.useState(r ?? m),
-        [P, v] = i.useState((0, c.x7)(I)),
-        x = i.useRef(!1);
-    function _(e, t, l) {
-        t !== I && (A(t), v(l), n(t));
-    }
-    function T() {
-        return new Promise((e) => {
-            e({ shouldClear: !1, shouldRefocus: !0 });
-        });
-    }
-    return (
-        i.useEffect(() => {
-            x.current = !0;
-        }, []),
-        i.useEffect(() => {
-            if (void 0 === r) {
-                let e = (0, c.x7)(m);
-                (A(m), v(e));
+    p = n(95701);
+n(682901);
+var h = n(652215),
+    C = n(792996),
+    f = n(540796);
+let E = (0, p.createChannelRecord)({ id: "1", type: h.rbe.DM }),
+    S = (0, m.Ld)();
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let {
+                    label: t = C.intl.string(C.t.B3miE8),
+                    onTextChange: n,
+                    pendingText: r,
+                    currentText: m,
+                    className: p,
+                    innerClassName: h,
+                    disableThemedBackground: g = !1,
+                } = e,
+                [y, I] = i.useState(r ?? m),
+                [A, P] = i.useState((0, c.x7)(y)),
+                v = i.useRef(!1);
+            function x(e, t, l) {
+                t !== y && (I(t), P(l), n(t));
             }
-        }, [r, m]),
-        (0, l.jsx)("div", {
-            className: a()(E.rf, p),
-            children: (0, l.jsx)(s.D, {
-                label: t,
-                children: (e) =>
-                    (0, l.jsxs)(l.Fragment, {
-                        children: [
-                            (0, l.jsx)(d.Ay, {
-                                "aria-describedby": `${e.describedById} ${g}`,
-                                "aria-labelledby": e.labelId,
-                                innerClassName: a()(E.Tg, C),
-                                editorClassName: E.OT,
-                                maxCharacterCount: h.Jo,
-                                onChange: _,
-                                channel: S,
-                                textValue: I,
-                                richValue: P,
-                                type: u.oU.CUSTOM_GIFT,
-                                onBlur: () => {
-                                    x.current = !1;
-                                },
-                                onFocus: () => {
-                                    x.current = !0;
-                                },
-                                focused: x.current,
-                                onSubmit: T,
-                                disableThemedBackground: y,
+            function _() {
+                return new Promise((e) => {
+                    e({ shouldClear: !1, shouldRefocus: !0 });
+                });
+            }
+            return (
+                i.useEffect(() => {
+                    v.current = !0;
+                }, []),
+                i.useEffect(() => {
+                    if (void 0 === r) {
+                        let e = (0, c.x7)(m);
+                        (I(m), P(e));
+                    }
+                }, [r, m]),
+                (0, l.jsx)("div", {
+                    className: a()(f.rf, p),
+                    children: (0, l.jsx)(s.D, {
+                        label: t,
+                        children: (e) =>
+                            (0, l.jsxs)(l.Fragment, {
+                                children: [
+                                    (0, l.jsx)(d.Ay, {
+                                        "aria-describedby": `${e.describedById} ${S}`,
+                                        "aria-labelledby": e.labelId,
+                                        innerClassName: a()(f.Tg, h),
+                                        editorClassName: f.OT,
+                                        maxCharacterCount: 190,
+                                        onChange: x,
+                                        channel: E,
+                                        textValue: y,
+                                        richValue: A,
+                                        type: u.oU.CUSTOM_GIFT,
+                                        onBlur: () => {
+                                            v.current = !1;
+                                        },
+                                        onFocus: () => {
+                                            v.current = !0;
+                                        },
+                                        focused: v.current,
+                                        onSubmit: _,
+                                        disableThemedBackground: g,
+                                    }),
+                                    (0, l.jsx)(o.A, {
+                                        id: S,
+                                        children: C.intl.format(C.t["+DFxLc"], { maxLength: 190 }),
+                                    }),
+                                ],
                             }),
-                            (0, l.jsx)(o.A, { id: g, children: f.intl.format(f.t["+DFxLc"], { maxLength: h.Jo }) }),
-                        ],
                     }),
-            }),
-        })
-    );
-}
+                })
+            );
+        },
+    },
+);

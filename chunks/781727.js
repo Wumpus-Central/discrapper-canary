@@ -1,8 +1,8 @@
 e.exports = {
-    LZ: "categories__97499",
-    L1: "category__97499",
-    UU: "name__97499",
-    U9: "count__97499",
-    wH: "selected__97499",
-    kL: "container__97499",
+    LZ: "categories_tLas8J",
+    L1: "category_tLas8J",
+    UU: "name_tLas8J",
+    U9: "count_tLas8J",
+    wH: "selected_tLas8J",
+    kL: "container_tLas8J",
 };

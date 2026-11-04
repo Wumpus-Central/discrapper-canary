@@ -1,4 +1,3 @@
-n.d(t, { A: () => d });
 var i = n(882035),
     r = n(121894),
     a = n(463347),
@@ -27,3 +26,4 @@ let d = (0, i.h)((e) => ({
         (0, r.r)(() => e({ path: null, guildId: n, channelId: i, basePath: t }));
     },
 }));
+n.d(t, {}, { A: d });

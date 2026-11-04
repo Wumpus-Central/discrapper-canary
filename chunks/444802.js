@@ -1,4 +1,3 @@
-n.d(t, { T4: () => _, WX: () => A, gC: () => c, jj: () => u, qY: () => E });
 var i = n(582128),
     r = n(923457),
     a = n(873298),
@@ -34,10 +33,19 @@ function _(e) {
         goreContentFriendDm: c({ setting: t?.goreContentFriendDm, isDm: !0, isFriend: !0 }),
     };
 }
-function E(e) {
-    let t = _();
-    l.qN.updateSetting({ ...t, ...e });
-}
-function A() {
-    return i.useMemo(() => d.MVz.EXPLICIT_MEDIA_REDACTION, []);
-}
+n.d(
+    t,
+    {},
+    {
+        T4: _,
+        WX: function () {
+            return i.useMemo(() => d.MVz.EXPLICIT_MEDIA_REDACTION, []);
+        },
+        gC: c,
+        jj: u,
+        qY: function (e) {
+            let t = _();
+            l.qN.updateSetting({ ...t, ...e });
+        },
+    },
+);

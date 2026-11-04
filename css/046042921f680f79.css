@@ -1,0 +1,123 @@
+[data-mana-component=modal]:has([data-expressive-v2-graphic]) div:has(>img) {
+    aspect-ratio: auto;
+    height: 104.5px
+}
+
+[data-mana-component=modal]:has([data-expressive-v2-graphic]) div:has(>div>div>img) {
+    padding-bottom: var(--space-4)
+}
+
+[data-mana-component=modal]:has([data-expressive-v2-graphic]) header {
+    padding-bottom: var(--space-8)
+}
+
+[data-mana-component=modal]:has([data-expressive-v2-graphic]) {
+    max-height: 720px;
+    max-width: 496px
+}
+
+[data-mana-component=modal]:has([data-expressive-v2-graphic]) header [data-text-variant="body-md/normal"] {
+    max-width: 384px
+}
+
+.methodRow_6Sxv-M {
+    align-items: flex-start;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    padding: var(--space-12);
+    text-align: start;
+    width: 432px
+}
+
+.methodRow_6Sxv-M:hover {
+    background-color: var(--background-mod-subtle)
+}
+
+.iconContainer_6Sxv-M {
+    align-items: center;
+    background-color: var(--background-surface-highest);
+    border-radius: var(--radius-sm);
+    color: var(--text-strong);
+    display: flex;
+    flex-shrink: 0;
+    height: var(--space-40);
+    justify-content: center;
+    margin-inline-end: var(--space-12);
+    width: var(--space-40)
+}
+
+.methodRow_6Sxv-M:not(.methodRowDisabled_6Sxv-M):hover .iconContainer_6Sxv-M {
+    background-color: var(--background-mod-muted)
+}
+
+.text_6Sxv-M {
+    display: flex;
+    flex: 0 0 322px;
+    flex-direction: column;
+    gap: 2px
+}
+
+.description_6Sxv-M {
+    margin-top: 2px
+}
+
+.vendor_6Sxv-M {
+    margin-top: var(--space-4)
+}
+
+.chevron_6Sxv-M {
+    align-self: center;
+    color: var(--icon-subtle);
+    flex-shrink: 0;
+    margin-inline-start: var(--space-12)
+}
+
+.footer_6Sxv-M {
+    margin-top: var(--space-24);
+    text-align: center
+}
+
+.outageBanner_6Sxv-M {
+    margin-bottom: var(--space-12)
+}
+
+.methodRowDisabled_6Sxv-M {
+    cursor: default
+}
+
+.methodRowDisabled_6Sxv-M:hover {
+    background-color: transparent
+}
+
+.rowSpinner_6Sxv-M {
+    align-self: center;
+    flex-shrink: 0;
+    height: var(--space-20);
+    margin-inline-start: var(--space-12);
+    width: var(--space-20)
+}
+
+@media (max-height:550px) and (pointer:coarse),
+(max-width:485px) {
+    [data-mana-component=modal]:has([data-expressive-v2-graphic]) {
+        max-height: none
+    }
+
+    [data-mana-component=modal]:has([data-expressive-v2-graphic]) main {
+        padding-inline: var(--custom-modal-padding)
+    }
+
+    .methodRow_6Sxv-M {
+        width: 100%
+    }
+
+    .text_6Sxv-M {
+        flex: 1;
+        min-width: 0
+    }
+}
+
+/*# sourceMappingURL=046042921f680f79.css.map*/

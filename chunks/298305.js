@@ -1,7 +1,6 @@
-n.d(e, { A: () => p });
 var r = n(477900);
 n(582128);
-var i = n(17928),
+var i = n(855986),
     s = n(289873),
     a = n(97808),
     l = n(778712),
@@ -30,28 +29,34 @@ function T(t) {
         avatarDecoration: C,
     });
 }
-function p(t) {
-    let { maxRewardImageSrc: e, claimableRewards: n, size: s, imageScaling: a = 1.5 } = t,
-        c = (0, i.bG)([d.default], () => d.default.getCurrentUser()),
-        g = (0, i.bG)([o.Ay], () => o.Ay.useReducedMotion),
-        u = (0, l.FT)(s);
-    return n.length > 0
-        ? (0, r.jsx)("img", { className: m.Sl, alt: "", src: e, style: { height: u * a } })
-        : (0, r.jsxs)("div", {
-              className: m.kL,
-              children: [
-                  (1 === n.length || 2 === n.length) &&
-                      (0, r.jsx)(T, {
-                          skuId: n[0],
-                          size: s,
-                          className: m.M8,
-                          src: 1 === n.length ? c?.getAvatarURL(void 0, (0, l.FT)(s), !g) : h,
-                      }),
-                  2 === n.length &&
-                      (0, r.jsx)("div", {
-                          style: { marginRight: -Math.round(0.321 * u) },
-                          children: (0, r.jsx)(T, { skuId: n[1], size: s, src: x }),
-                      }),
-              ],
-          });
-}
+n.d(
+    e,
+    {},
+    {
+        A: function (t) {
+            let { maxRewardImageSrc: e, claimableRewards: n, size: s, imageScaling: a = 1.5 } = t,
+                c = (0, i.bG)([d.default], () => d.default.getCurrentUser()),
+                g = (0, i.bG)([o.Ay], () => o.Ay.useReducedMotion),
+                u = (0, l.FT)(s);
+            return n.length > 0
+                ? (0, r.jsx)("img", { className: m.Sl, alt: "", src: e, style: { height: u * a } })
+                : (0, r.jsxs)("div", {
+                      className: m.kL,
+                      children: [
+                          (1 === n.length || 2 === n.length) &&
+                              (0, r.jsx)(T, {
+                                  skuId: n[0],
+                                  size: s,
+                                  className: m.M8,
+                                  src: 1 === n.length ? c?.getAvatarURL(void 0, (0, l.FT)(s), !g) : h,
+                              }),
+                          2 === n.length &&
+                              (0, r.jsx)("div", {
+                                  style: { marginRight: -Math.round(0.321 * u) },
+                                  children: (0, r.jsx)(T, { skuId: n[1], size: s, src: x }),
+                              }),
+                      ],
+                  });
+        },
+    },
+);

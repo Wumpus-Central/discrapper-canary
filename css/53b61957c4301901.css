@@ -1,0 +1,14 @@
+.giftCardModalRoot_OHM6NE [data-mana-component=modal] header [data-text-variant="body-md/normal"] {
+    color: var(--text-subtle);
+    font-size: 18px;
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    padding: 0 24px;
+    white-space: pre-line
+}
+
+.giftCardModalRoot_OHM6NE [data-mana-component=modal] header img {
+    max-width: 288px
+}
+
+/*# sourceMappingURL=53b61957c4301901.css.map*/

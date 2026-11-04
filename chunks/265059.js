@@ -1,50 +1,49 @@
-n.d(t, { A: () => d, q: () => s });
-var i = n(17928),
+var i = n(855986),
     r = n(73153),
     a = n(540999);
-let s = 460,
-    l = {
-        sidebarWidth: 460,
-        lastOpenTabId: null,
-        lastOpenSubTabId: null,
-        displayTools: !1,
-        showDevWidget: !1,
-        devWidgetPosition: { x: 0, y: 0 },
-        sortedScreenKeys: [],
-    };
-class o extends i.Ay.DeviceSettingsStore {
+let s = {
+    sidebarWidth: 460,
+    lastOpenTabId: null,
+    lastOpenSubTabId: null,
+    displayTools: !1,
+    showDevWidget: !1,
+    devWidgetPosition: { x: 0, y: 0 },
+    sortedScreenKeys: [],
+};
+class l extends i.Ay.DeviceSettingsStore {
     static displayName = "DevToolsSettingsStore";
     static persistKey = "DevToolsSettingsStore";
     initialize(e) {
-        ((l = e ?? l), (r.h.actionLogger.persist = a.A.isDeveloper));
+        ((s = e ?? s), (r.h.actionLogger.persist = a.A.isDeveloper));
     }
     getUserAgnosticState() {
-        return l;
+        return s;
     }
     get sidebarWidth() {
-        return this.displayTools ? l.sidebarWidth : 0;
+        return this.displayTools ? s.sidebarWidth : 0;
     }
     get lastOpenTabId() {
-        return l.lastOpenTabId ?? null;
+        return s.lastOpenTabId ?? null;
     }
     get lastOpenSubTabId() {
-        return l.lastOpenSubTabId ?? null;
+        return s.lastOpenSubTabId ?? null;
     }
     get displayTools() {
-        return a.A.isDeveloper && l.displayTools;
+        return a.A.isDeveloper && s.displayTools;
     }
     get showDevWidget() {
-        return a.A.isDeveloper && l.showDevWidget;
+        return a.A.isDeveloper && s.showDevWidget;
     }
     get devWidgetPosition() {
-        return l.devWidgetPosition;
+        return s.devWidgetPosition;
     }
     get sortedScreenKeys() {
-        return l.sortedScreenKeys;
+        return s.sortedScreenKeys;
     }
 }
-let d = new o(r.h, {
+let o = new l(r.h, {
     DEV_TOOLS_SETTINGS_UPDATE: function (e) {
-        a.A.isDeveloper && (l = { ...l, ...e.settings });
+        a.A.isDeveloper && (s = { ...s, ...e.settings });
     },
 });
+n.d(t, {}, { A: o });

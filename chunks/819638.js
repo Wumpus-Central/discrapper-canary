@@ -1,4 +1,3 @@
-n.d(t, { IR: () => s, fc: () => l, oS: () => a });
 var i,
     r,
     a =
@@ -9,4 +8,4 @@ var i,
         (i.CREATION_INTENT = "creation-intent"),
         i),
     s = (((r = {}).FRIENDS = "FRIENDS"), (r.COMMUNITY = "COMMUNITY"), (r.CLAN = "CLAN"), r);
-let l = "create-guild";
+n.d(t, {}, { IR: s, fc: "create-guild", oS: a });

@@ -1,7 +1,7 @@
 e.exports = {
-    UW: "warningContainer_bc32e9",
-    i4: "warningText_bc32e9",
-    ud: "acknowledgementContainer_bc32e9",
-    kc: "errorText_bc32e9",
-    Sl: "image_bc32e9",
+    UW: "warningContainer_OgsNUm",
+    i4: "warningText_OgsNUm",
+    ud: "acknowledgementContainer_OgsNUm",
+    kc: "errorText_OgsNUm",
+    Sl: "image_OgsNUm",
 };

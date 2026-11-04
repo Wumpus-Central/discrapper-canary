@@ -1,4 +1,3 @@
-e.d(s, { A: () => h });
 var i = e(477900),
     n = e(582128),
     a = e(503698),
@@ -45,4 +44,4 @@ class d extends n.PureComponent {
         });
     }
 }
-let h = d;
+e.d(s, {}, { A: d });

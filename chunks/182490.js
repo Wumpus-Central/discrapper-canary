@@ -1,4 +1,3 @@
-n.d(t, { D: () => r });
 var i,
     r =
         (((i = {}).TEXT = "text"),
@@ -37,3 +36,4 @@ var i,
         (i.SILENT_PREFIX = "silentPrefix"),
         (i.GAME_MENTION = "gameMention"),
         i);
+n.d(t, {}, { D: r });

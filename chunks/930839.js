@@ -1,11 +1,10 @@
-n.d(t, { A: () => u });
-var i = n(131937),
+var i = n(613412),
     r = n(167789),
     a = n(73153),
     s = n(434797),
-    l = n(390595),
-    o = n(174459),
-    d = n(280450),
+    l = n(903063),
+    o = n(129230),
+    d = n(46653),
     c = n(652215);
 let u = (0, i.analyticsTrackingStoreMaker)({
     dispatcher: a.h,
@@ -22,7 +21,8 @@ let u = (0, i.analyticsTrackingStoreMaker)({
     waitFor: [d.default],
     getFingerprint: d.default.getFingerprint,
     getSessionId: () => (0, l.Ht)().then((e) => ({ sessionId: e?.uuid })),
-    getLaunchSignature: () => o.launchSignature,
+    getLaunchSignature: () => o.OY,
     scheduleWhenIdle: r.O,
     sendUnloadRequest: s.L,
 });
+n.d(t, {}, { A: u });

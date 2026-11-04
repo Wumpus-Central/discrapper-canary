@@ -1,5 +1,4 @@
 let i;
-d.d(t, { a: () => G, i: () => p, n: () => h, o: () => u, r: () => o });
 var e = d(580607),
     c = class {
         constructor(l, t, d) {
@@ -78,7 +77,7 @@ let s = {
         timeoutMs: 1e4,
         disabledMessage: "TRI will be disabled for this session.",
     },
-    n = () => d.e("782997").then(d.bind(d, 971956));
+    n = () => d.e(782997).then(d.bind(d, 971956));
 var Z = class l {
     constructor() {
         ((this._isStarted = !1), (this._lazySdk = a.getInstance().create(n, s)));
@@ -144,29 +143,7 @@ function m() {
 function o() {
     return m().isStarted;
 }
-function u() {
-    ((i = void 0), Z.resetInstance());
-}
-async function h(l, t = {}) {
-    var d;
-    let i = (d = l)
-        ? d.token
-            ? d.apiURL
-                ? d
-                : (console.warn("[TRI] Not initialized: apiURL is required."), null)
-            : (console.warn("[TRI] Not initialized: token is required."), null)
-        : null;
-    if (!i) return "init-failed";
-    let e = await W(i);
-    return (o() && t.sessionToken && (await p(t.sessionToken)), e);
-}
-async function W(l) {
-    return ((i = l.apiURL), m().setup(l));
-}
-async function G() {
-    return m().reset();
-}
-async function p(l) {
+async function u(l) {
     return (
         !(
             !l ||
@@ -178,3 +155,32 @@ async function p(l) {
         ) && m().linkInterview(l)
     );
 }
+d.d(
+    t,
+    {},
+    {
+        a: async function () {
+            return m().reset();
+        },
+        i: u,
+        n: async function (l, t = {}) {
+            var d;
+            let e = (d = l)
+                ? d.token
+                    ? d.apiURL
+                        ? d
+                        : (console.warn("[TRI] Not initialized: apiURL is required."), null)
+                    : (console.warn("[TRI] Not initialized: token is required."), null)
+                : null;
+            if (!e) return "init-failed";
+            let c = await (async function (l) {
+                return ((i = l.apiURL), m().setup(l));
+            })(e);
+            return (o() && t.sessionToken && (await u(t.sessionToken)), c);
+        },
+        o: function () {
+            ((i = void 0), Z.resetInstance());
+        },
+        r: o,
+    },
+);

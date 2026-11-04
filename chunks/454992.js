@@ -1,10 +1,9 @@
-c.exports = {
-    kL: "container_b2dcc1",
-    Dx: "containerWithUpsell_b2dcc1",
-    N1: "headerContainer_b2dcc1",
-    TK: "headerText_b2dcc1",
-    G2: "soundList_b2dcc1",
-    bP: "loadingSoundItem_b2dcc1",
-    GJ: "soundboard-loading-animation_b2dcc1",
-    Sp: "upsellBanner_b2dcc1",
+e.exports = {
+    kL: "container_KljP7l",
+    Dx: "containerWithUpsell_KljP7l",
+    N1: "headerContainer_KljP7l",
+    TK: "headerText_KljP7l",
+    G2: "soundList_KljP7l",
+    bP: "loadingSoundItem_KljP7l",
+    Sp: "upsellBanner_KljP7l",
 };

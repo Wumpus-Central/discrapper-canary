@@ -1,8 +1,7 @@
 e.exports = {
-    Nr: "card__84e3e",
-    vk: "clickable__84e3e",
-    r9: "disabled__84e3e",
-    Do: "placeholderPulse__84e3e",
-    En: "cardPlaceholder__84e3e card__84e3e",
-    Hp: "transitionItem__84e3e",
+    Nr: "card_1U9V53",
+    vk: "clickable_1U9V53",
+    r9: "disabled_1U9V53",
+    En: "cardPlaceholder_1U9V53 card_1U9V53",
+    Hp: "transitionItem_1U9V53",
 };

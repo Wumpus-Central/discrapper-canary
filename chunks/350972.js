@@ -1,4 +1,3 @@
-n.d(t, { Ic: () => a, LW: () => l });
 var i,
     s,
     r,
@@ -36,4 +35,4 @@ var i,
         (r.CLYDE_STEIN = "ClydeSteinIcon"),
         (r.HEXAGON = "HexagonIcon"),
         r);
-({ ...l, ...a, ...o });
+n.d(t, {}, { Ic: a, LW: l });

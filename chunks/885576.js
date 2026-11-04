@@ -1,15 +1,14 @@
 let i;
-n.d(t, { A: () => L });
 var r = n(649852),
     a = n.n(r),
-    s = n(17928),
+    s = n(855986),
     l = n(73153),
-    o = n(730852),
+    o = n(597798),
     d = n(77729),
     c = n(253932),
     u = n(927813),
     _ = n(723702),
-    E = n(280450),
+    E = n(46653),
     A = n(652215),
     h = n(731854);
 let f = Date.now(),
@@ -19,14 +18,14 @@ let f = Date.now(),
     T = !1,
     g = !1;
 function S() {
-    return m || T || ((0, _.isAndroid)() && g);
+    return m || T || ((0, _.m0)() && g);
 }
 function N() {
     let e;
-    (Date.now() - f > A.sdF || S()
+    (Date.now() - f > 6e5 || S()
         ? I || l.h.dispatch({ type: "IDLE", idle: !0, idleSince: f })
         : I && l.h.dispatch({ type: "IDLE", idle: !1 }),
-        0 === (e = c.cU.getSetting()) || null != i || Date.now() - f > Math.min(e * u.A.Millis.SECOND, A.sdF) || S()
+        0 === (e = c.cU.getSetting()) || null != i || Date.now() - f > Math.min(e * u.A.Millis.SECOND, 6e5) || S()
             ? p || l.h.dispatch({ type: "AFK", afk: !0 })
             : p && l.h.dispatch({ type: "AFK", afk: !1 }));
 }
@@ -122,3 +121,4 @@ let L = new R(l.h, {
     OVERLAY_INITIALIZE: O,
     OVERLAY_SET_INPUT_LOCKED: O,
 });
+n.d(t, {}, { A: L });

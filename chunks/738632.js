@@ -1,7 +1,7 @@
 e.exports = {
-    Oy: "upsellButton_b21bbb",
-    pU: "editVanityUrlCard_b21bbb",
-    p2: "formTitleField_b21bbb",
-    J9: "removeVanityUrlButton_b21bbb",
-    YQ: "vanityInfo_b21bbb",
+    Oy: "upsellButton_LzBW0j",
+    pU: "editVanityUrlCard_LzBW0j",
+    p2: "formTitleField_LzBW0j",
+    J9: "removeVanityUrlButton_LzBW0j",
+    YQ: "vanityInfo_LzBW0j",
 };

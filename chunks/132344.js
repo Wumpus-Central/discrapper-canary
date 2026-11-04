@@ -1,8 +1,8 @@
 o.exports = {
-    WR: "giftCardPromotion_d1e69f",
-    TB: "giftImagePromotion_d1e69f",
-    QT: "giftInfoPromotion_d1e69f",
-    u_: "giftInfoTitlePromotion_d1e69f",
-    KW: "giftAdditionalTerm_d1e69f",
-    mG: "giftButtonPromotion_d1e69f",
+    WR: "giftCardPromotion_YCu_-o",
+    TB: "giftImagePromotion_YCu_-o",
+    QT: "giftInfoPromotion_YCu_-o",
+    u_: "giftInfoTitlePromotion_YCu_-o",
+    KW: "giftAdditionalTerm_YCu_-o",
+    mG: "giftButtonPromotion_YCu_-o",
 };

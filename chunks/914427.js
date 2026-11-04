@@ -1,4 +1,3 @@
-t.d(l, { p: () => u });
 var n = t(477900),
     a = t(582128),
     r = t(503698),
@@ -6,39 +5,45 @@ var n = t(477900),
     i = t(190199),
     c = t(305866),
     o = t(54265);
-function u(e) {
-    let {
-            children: l,
-            placeholder: t,
-            value: r,
-            onChange: u,
-            onClose: d,
-            className: h,
-            multiSelect: x,
-            emptyStateText: m,
-            emptyStateHeader: p,
-            onQueryChange: C,
-            ...b
-        } = e,
-        j = a.useCallback(
-            (e) => {
-                (u(e), x || d?.());
-            },
-            [u, d, x],
-        );
-    return (0, n.jsx)(c.l, {
-        className: s()(o.kL, o.XG, h),
-        children: (0, n.jsx)(i.G3, {
-            ...b,
-            value: r,
-            multiSelect: x,
-            onChange: j,
-            placeholder: t,
-            children: l,
-            listClassName: o.p_,
-            emptyStateText: m,
-            emptyStateHeader: p,
-            onQueryChange: C,
-        }),
-    });
-}
+t.d(
+    l,
+    {},
+    {
+        p: function (e) {
+            let {
+                    children: l,
+                    placeholder: t,
+                    value: r,
+                    onChange: u,
+                    onClose: d,
+                    className: h,
+                    multiSelect: x,
+                    emptyStateText: m,
+                    emptyStateHeader: p,
+                    onQueryChange: C,
+                    ...b
+                } = e,
+                j = a.useCallback(
+                    (e) => {
+                        (u(e), x || d?.());
+                    },
+                    [u, d, x],
+                );
+            return (0, n.jsx)(c.l, {
+                className: s()(o.kL, o.XG, h),
+                children: (0, n.jsx)(i.G3, {
+                    ...b,
+                    value: r,
+                    multiSelect: x,
+                    onChange: j,
+                    placeholder: t,
+                    children: l,
+                    listClassName: o.p_,
+                    emptyStateText: m,
+                    emptyStateHeader: p,
+                    onQueryChange: C,
+                }),
+            });
+        },
+    },
+);

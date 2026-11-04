@@ -1,4 +1,3 @@
-n.d(t, { Np: () => l, Rq: () => c, UG: () => h, cy: () => u, gr: () => o, oI: () => E, s9: () => _ });
 var i,
     r,
     a,
@@ -40,19 +39,16 @@ var i,
         (r.SHARE = "share"),
         r);
 let d = new Set([
-    "voice_face",
-    "messages_outfit",
-    "servers_headwear",
-    "emoji_shoes",
-    "games_wearable",
-    "game_time_aura",
-    "finalize_character",
-]);
-function c(e) {
-    return d.has(e);
-}
-let u = new Set(["sidekick_leave"]);
-var _ =
+        "voice_face",
+        "messages_outfit",
+        "servers_headwear",
+        "emoji_shoes",
+        "games_wearable",
+        "game_time_aura",
+        "finalize_character",
+    ]),
+    c = new Set(["sidekick_leave"]);
+var u =
         (((a = {}).IDLE = "idle"),
         (a.INTRODUCTION = "introduction"),
         (a.FACE = "face"),
@@ -65,7 +61,7 @@ var _ =
         (a.FINALIZE = "finalize"),
         (a.SUMMARY = "summary"),
         a),
-    E =
+    _ =
         (((s = {}).VOICE_INTRO = "voice_intro"),
         (s.VOICE = "voice"),
         (s.MESSAGES_INTRO = "messages_intro"),
@@ -83,7 +79,7 @@ var _ =
         (s.SUMMARY = "summary"),
         (s.SHARE = "share"),
         s);
-let A = {
+let E = {
     home: { characterStage: "idle" },
     introduction: { characterStage: "introduction" },
     voice_intro: { characterStage: "face", statsScreen: "voice_intro" },
@@ -118,6 +114,20 @@ let A = {
     summary: { characterStage: "summary", statsScreen: "summary" },
     share: { characterStage: "summary", statsScreen: "share" },
 };
-function h(e) {
-    return A[e];
-}
+n.d(
+    t,
+    {},
+    {
+        Np: l,
+        Rq: function (e) {
+            return d.has(e);
+        },
+        UG: function (e) {
+            return E[e];
+        },
+        cy: c,
+        gr: o,
+        oI: _,
+        s9: u,
+    },
+);

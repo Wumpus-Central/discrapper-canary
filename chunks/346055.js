@@ -1,4 +1,3 @@
-r.d(t, { M: () => a, f: () => d });
 var l = r(477900),
     n = r(582128);
 let u = 0;
@@ -44,8 +43,15 @@ function d(e, t) {
             return (l.observe(r, { childList: !0, subtree: !0 }), () => l.disconnect());
         }, [t, e, d]));
 }
-function a(e) {
-    let { children: t, className: r, enabled: u = !0, "aria-hidden": a } = e,
-        i = n.useRef(null);
-    return (d(i, u), (0, l.jsx)("div", { ref: i, className: r, "aria-hidden": a, children: t }));
-}
+r.d(
+    t,
+    {},
+    {
+        M: function (e) {
+            let { children: t, className: r, enabled: u = !0, "aria-hidden": a } = e,
+                i = n.useRef(null);
+            return (d(i, u), (0, l.jsx)("div", { ref: i, className: r, "aria-hidden": a, children: t }));
+        },
+        f: d,
+    },
+);

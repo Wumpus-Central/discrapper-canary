@@ -1,13 +1,18 @@
-r.d(t, { M: () => o });
-var n = r(834559),
+var n = r(802649),
     i = r(853830);
-function o(e) {
-    let { id: t, label: r, "aria-labelledby": o, "aria-label": a, labelElementType: s = "label" } = e;
-    t = (0, n.Bi)(t);
-    let l = (0, n.Bi)(),
-        u = {};
-    return (
-        r && ((o = o ? `${l} ${o}` : l), (u = { id: l, htmlFor: "label" === s ? t : void 0 })),
-        { labelProps: u, fieldProps: (0, i.b)({ id: t, "aria-label": a, "aria-labelledby": o }) }
-    );
-}
+r.d(
+    t,
+    {},
+    {
+        M: function (e) {
+            let { id: t, label: r, "aria-labelledby": o, "aria-label": a, labelElementType: s = "label" } = e;
+            t = (0, n.Bi)(t);
+            let l = (0, n.Bi)(),
+                u = {};
+            return (
+                r && ((o = o ? `${l} ${o}` : l), (u = { id: l, htmlFor: "label" === s ? t : void 0 })),
+                { labelProps: u, fieldProps: (0, i.b)({ id: t, "aria-label": a, "aria-labelledby": o }) }
+            );
+        },
+    },
+);

@@ -1,66 +1,12 @@
-i.d(e, { t: () => m });
 var n = i(477900),
     l = i(582128),
     s = i(703443),
-    d = i(651392),
+    d = i(890654),
     t = i(527717),
     c = i(834730),
     r = i(657718),
     o = i(219052);
 function m(a) {
-    let {
-            items: e,
-            selectedId: i,
-            defaultSelectedId: l,
-            onChange: t,
-            variant: c = "default",
-            disabled: r = !1,
-            keyboardActivation: m = "manual",
-            panelAnimation: h = "none",
-            "aria-label": p,
-            "aria-labelledby": j,
-        } = a,
-        x = (0, s.J)();
-    return (0, n.jsxs)(d.tU, {
-        className: o.vR,
-        selectedKey: i,
-        defaultSelectedKey: l,
-        onSelectionChange: function (a) {
-            let i = e.find((e) => e.id === a);
-            null != i && t?.(i.id);
-        },
-        keyboardActivation: m,
-        isDisabled: r,
-        "data-mana-component": "tabs",
-        "data-variant": c,
-        children: [
-            (0, n.jsxs)("div", {
-                className: o.bB,
-                children: [
-                    (0, n.jsx)("div", { className: o.H$ }),
-                    (0, n.jsx)(d.wb, {
-                        className: o.ld,
-                        "aria-label": p,
-                        "aria-labelledby": j,
-                        children: e.map((a) =>
-                            (0, n.jsx)(
-                                u,
-                                { item: a, formattedCount: null != a.count ? x.format(a.count) : void 0 },
-                                a.id,
-                            ),
-                        ),
-                    }),
-                ],
-            }),
-            (0, n.jsx)(d.T2, {
-                className: o.C3,
-                "data-animation": h,
-                children: e.map((a) => (0, n.jsx)(b, { item: a, animation: h }, a.id)),
-            }),
-        ],
-    });
-}
-function u(a) {
     let { item: e, formattedCount: i } = a,
         s = l.useRef(null);
     return (0, n.jsx)(d.oz, {
@@ -106,7 +52,66 @@ function u(a) {
         },
     });
 }
-function b(a) {
+function u(a) {
     let { item: e, animation: i } = a;
     return (0, n.jsx)(d.Kp, { id: e.id, className: o.nd, "data-animation": i, children: e.panel() });
 }
+i.d(
+    e,
+    {},
+    {
+        t: function (a) {
+            let {
+                    items: e,
+                    selectedId: i,
+                    defaultSelectedId: l,
+                    onChange: t,
+                    variant: c = "default",
+                    disabled: r = !1,
+                    keyboardActivation: b = "manual",
+                    panelAnimation: h = "none",
+                    "aria-label": p,
+                    "aria-labelledby": j,
+                } = a,
+                x = (0, s.J)();
+            return (0, n.jsxs)(d.tU, {
+                className: o.vR,
+                selectedKey: i,
+                defaultSelectedKey: l,
+                onSelectionChange: function (a) {
+                    let i = e.find((e) => e.id === a);
+                    null != i && t?.(i.id);
+                },
+                keyboardActivation: b,
+                isDisabled: r,
+                "data-mana-component": "tabs",
+                "data-variant": c,
+                children: [
+                    (0, n.jsxs)("div", {
+                        className: o.bB,
+                        children: [
+                            (0, n.jsx)("div", { className: o.H$ }),
+                            (0, n.jsx)(d.wb, {
+                                className: o.ld,
+                                "aria-label": p,
+                                "aria-labelledby": j,
+                                children: e.map((a) =>
+                                    (0, n.jsx)(
+                                        m,
+                                        { item: a, formattedCount: null != a.count ? x.format(a.count) : void 0 },
+                                        a.id,
+                                    ),
+                                ),
+                            }),
+                        ],
+                    }),
+                    (0, n.jsx)(d.T2, {
+                        className: o.C3,
+                        "data-animation": h,
+                        children: e.map((a) => (0, n.jsx)(u, { item: a, animation: h }, a.id)),
+                    }),
+                ],
+            });
+        },
+    },
+);

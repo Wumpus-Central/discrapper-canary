@@ -1,4 +1,3 @@
-r.d(t, { A: () => s });
 var n = r(582128);
 function i(e, t) {
     return (i =
@@ -168,7 +167,7 @@ var o = function (e) {
             t
         );
     })(n.Component);
-s.defaultProps = {
+((s.defaultProps = {
     id: "",
     className: "g-recaptcha",
     theme: "light",
@@ -179,4 +178,5 @@ s.defaultProps = {
     inject: !0,
     isolated: !1,
     hl: "",
-};
+}),
+    r.d(t, {}, { A: s }));

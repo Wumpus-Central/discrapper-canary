@@ -1,4 +1,4 @@
-(n.d(t, { IQ: () => E, WO: () => g }), n(321073));
+n(321073);
 var l = n(284009),
     i = n.n(l),
     r = n(47167),
@@ -10,14 +10,9 @@ var l = n(284009),
     d = n(967198),
     h = n(287809),
     m = n(427262),
-    f = n(820066),
+    f = n(339200),
     p = n(827669);
 function g(e, t) {
-    let { mode: n, ignoreTrailingEmptyNodes: l, preventEmojiSurrogates: i } = t ?? {},
-        [r, s] = t?.range != null ? f.ZF.edges(t.range) : [void 0, void 0];
-    return x(e, { mode: n, start: r, end: s, ignoreTrailingEmptyNodes: l, preventEmojiSurrogates: i });
-}
-function x(e, t) {
     let {
             mode: n,
             start: l,
@@ -52,7 +47,7 @@ function x(e, t) {
     for (let t = c; t <= d; t++) {
         let r = e[t];
         if (s && f.l5.isText(r) && 0 === r.text.length) continue;
-        let a = E(r, {
+        let a = x(r, {
             mode: n,
             start: null != l && t === c ? { path: l.path.slice(1), offset: l.offset } : void 0,
             end: null != i && t === d ? { path: i.path.slice(1), offset: i.offset } : void 0,
@@ -63,8 +58,8 @@ function x(e, t) {
     }
     return g.join(r);
 }
-function E(e, t) {
-    let { mode: n, start: l, allowBlockQuotePrefix: g = !1, preventEmojiSurrogates: E = !1 } = t ?? {};
+function x(e, t) {
+    let { mode: n, start: l, allowBlockQuotePrefix: x = !1, preventEmojiSurrogates: E = !1 } = t ?? {};
     if (f.l5.isText(e))
         return (function (e, t) {
             let { start: n, end: l } = t ?? {};
@@ -77,13 +72,13 @@ function E(e, t) {
     switch (e.type) {
         case "line":
         case "testInline":
-            return x(e.children, t);
+            return g(e.children, t);
         case "testInlineVoid":
             return "";
         case "blockQuote": {
-            let n = x(e.children, t),
+            let n = g(e.children, t),
                 i = null != l && 1 === l.path.length && 0 === l.path[0] && 0 === l.offset;
-            if (g && (null == l || i)) return `> ${n}`;
+            if (x && (null == l || i)) return `> ${n}`;
             return n;
         }
         case "emoji": {
@@ -142,21 +137,33 @@ function E(e, t) {
         case "hostInlineVoid":
             return e.raw;
         case "timestampMentionInput": {
-            let n = x(e.children, t);
+            let n = g(e.children, t);
             if (null == l) return `<@time:${n}>`;
             return n;
         }
         case "gameMentionInput": {
-            let n = x(e.children, t);
+            let n = g(e.children, t);
             if (null == l) return `@${n}`;
             return n;
         }
         case "applicationCommand":
-            return x(e.children, { ...t, separator: " ", ignoreEmptyNodes: !0 });
+            return g(e.children, { ...t, separator: " ", ignoreEmptyNodes: !0 });
         case "applicationCommandOption": {
-            let n = x(e.children, t);
+            let n = g(e.children, t);
             if (null == l) return `${e.optionDisplayName}:${n}`;
             return n;
         }
     }
 }
+n.d(
+    t,
+    {},
+    {
+        IQ: x,
+        WO: function (e, t) {
+            let { mode: n, ignoreTrailingEmptyNodes: l, preventEmojiSurrogates: i } = t ?? {},
+                [r, s] = t?.range != null ? f.ZF.edges(t.range) : [void 0, void 0];
+            return g(e, { mode: n, start: r, end: s, ignoreTrailingEmptyNodes: l, preventEmojiSurrogates: i });
+        },
+    },
+);

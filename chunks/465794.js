@@ -1,42 +1,47 @@
-d.d(s, { A: () => n });
-var i = d(477900),
-    t = d(821609),
-    r = d(783420),
-    c = d(938973);
-let n = function (e) {
-    let {
-            subscriptionTier: s,
-            onClick: d,
-            postSuccessGuild: n,
-            onSubscribeModalClose: a,
-            premiumModalAnalyticsLocation: l,
-            applicationId: p,
-            confirmationFooter: u,
-            buttonTextOverride: h,
-            defaultTextOverride: k,
-            iconOverride: b,
-            variantOverride: o,
-            disabled: C,
-            ...j
-        } = e,
-        { subscribeButtonProps: w } = (0, c.B)({
-            subscriptionTier: s,
-            buttonTextOverride: h,
-            defaultTextOverride: k,
-            iconOverride: b,
-            variantOverride: o,
-        });
-    return (0, i.jsx)(r.A, {
-        onClick: d,
-        subscriptionTier: s,
-        postSuccessGuild: n,
-        onSubscribeModalClose: a,
-        premiumModalAnalyticsLocation: l,
-        applicationId: p,
-        confirmationFooter: u,
-        children: (e) => {
-            let { onClick: s } = e;
-            return (0, i.jsx)(t.$, { onClick: s, ...w, ...j, disabled: !0 === w.disabled || !0 === C });
+var i = e(477900),
+    r = e(821609),
+    t = e(783420),
+    c = e(938973);
+e.d(
+    d,
+    {},
+    {
+        A: function (s) {
+            let {
+                    subscriptionTier: d,
+                    onClick: e,
+                    postSuccessGuild: n,
+                    onSubscribeModalClose: a,
+                    premiumModalAnalyticsLocation: p,
+                    applicationId: u,
+                    confirmationFooter: h,
+                    buttonTextOverride: l,
+                    defaultTextOverride: k,
+                    iconOverride: b,
+                    variantOverride: o,
+                    disabled: C,
+                    ...j
+                } = s,
+                { subscribeButtonProps: w } = (0, c.B)({
+                    subscriptionTier: d,
+                    buttonTextOverride: l,
+                    defaultTextOverride: k,
+                    iconOverride: b,
+                    variantOverride: o,
+                });
+            return (0, i.jsx)(t.A, {
+                onClick: e,
+                subscriptionTier: d,
+                postSuccessGuild: n,
+                onSubscribeModalClose: a,
+                premiumModalAnalyticsLocation: p,
+                applicationId: u,
+                confirmationFooter: h,
+                children: (s) => {
+                    let { onClick: d } = s;
+                    return (0, i.jsx)(r.$, { onClick: d, ...w, ...j, disabled: !0 === w.disabled || !0 === C });
+                },
+            });
         },
-    });
-};
+    },
+);

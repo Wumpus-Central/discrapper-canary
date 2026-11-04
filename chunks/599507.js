@@ -1,9 +1,9 @@
-_.exports = {
-    uF: "povCircle__41e19",
-    _: "povCircleActive__41e19",
-    U8: "povMedia__41e19",
-    ED: "povMediaActive__41e19",
-    a1: "povThumbnail__41e19",
-    UH: "povOwnerAvatar__41e19",
-    RG: "povAvatarChip__41e19",
+e.exports = {
+    uF: "povCircle_rBoB5H",
+    _: "povCircleActive_rBoB5H",
+    U8: "povMedia_rBoB5H",
+    ED: "povMediaActive_rBoB5H",
+    a1: "povThumbnail_rBoB5H",
+    UH: "povOwnerAvatar_rBoB5H",
+    RG: "povAvatarChip_rBoB5H",
 };

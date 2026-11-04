@@ -1,1 +1,1 @@
-d.exports = { tI: "rewardPill_b9d8f0", Ht: "rewardName_b9d8f0", yF: "divider_b9d8f0" };
+r.exports = { tI: "rewardPill_OVbfbc", Ht: "rewardName_OVbfbc", yF: "divider_OVbfbc" };

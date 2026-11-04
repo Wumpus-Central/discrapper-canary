@@ -1,0 +1,210 @@
+.modInfoItemContainer_M3Y1qv {
+    border-radius: var(--radius-sm);
+    flex-direction: column;
+    gap: 0;
+    overflow: hidden
+}
+
+.modInfoItem_M3Y1qv,
+.modInfoItemContainer_M3Y1qv {
+    box-shadow: var(--elevation-stroke);
+    display: flex
+}
+
+.modInfoItem_M3Y1qv {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    flex: 1;
+    flex-direction: row;
+    gap: 8px;
+    padding: 12px
+}
+
+.modInfoItem_M3Y1qv:not(:last-child) {
+    margin-bottom: 1px
+}
+
+.modInfoItemIcon_M3Y1qv {
+    flex: 0 0 auto;
+    height: 16px;
+    width: 16px
+}
+
+.modInfoItemName_M3Y1qv {
+    flex: 1 1 auto
+}
+
+.modInfoItemDescription_M3Y1qv {
+    display: block;
+    text-align: end
+}
+
+.modInfoAction_M3Y1qv {
+    box-shadow: var(--elevation-stroke);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out
+}
+
+.modInfoAction_M3Y1qv:hover {
+    background-color: var(--interactive-background-active);
+    color: var(--interactive-text-hover)
+}
+
+.modInfoItemActionIcon_M3Y1qv {
+    flex: 0 0 auto;
+    height: 16px;
+    width: 16px
+}
+
+.auditLogSection_fMOQCt {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column
+}
+
+.auditLogSectionLabel_fMOQCt {
+    margin-bottom: 8px
+}
+
+.auditLogItemContainer_fMOQCt {
+    flex: 0 0 auto
+}
+
+.auditLogItem_fMOQCt {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: flex-start;
+    padding: 12px
+}
+
+.auditLogItem_fMOQCt,
+.emptyAuditLogItem_fMOQCt {
+    align-items: flex-start;
+    flex: 0 0 auto
+}
+
+.auditLogItemTitleContainer_fMOQCt {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    gap: 4px;
+    width: 100%
+}
+
+.auditLogItemTitle_fMOQCt {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 4px
+}
+
+.username_fMOQCt {
+    cursor: pointer;
+    margin-inline-end: 4px
+}
+
+.auditLogItemDate_fMOQCt {
+    align-self: flex-end
+}
+
+.auditLogReason_fMOQCt {
+    display: block
+}
+
+.auditLogSecondaryContainer_fMOQCt {
+    display: flex;
+    flex-direction: row;
+    gap: 4px
+}
+
+.auditLogSecondary_fMOQCt {
+    flex: 1
+}
+
+.auditLogExpandedChangeDetails_fMOQCt {
+    background-color: transparent !important;
+    padding: 0
+}
+
+.auditLogExpandedChangeDetails_fMOQCt>div {
+    margin: 0
+}
+
+.inviteChipletContainer_wTuOih {
+    display: flex;
+    flex-direction: row
+}
+
+.inviteChiplet_wTuOih {
+    color: var(--text-muted);
+    flex: 0
+}
+
+.inviteContainer_wTuOih {
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-xs);
+    cursor: pointer;
+    overflow: hidden;
+    padding: 0 4px;
+    white-space: nowrap;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.inviteContainer_wTuOih,
+.inviterTooltipContainer_wTuOih,
+.linkedChannelContainer_wTuOih {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.linkedChannelContainer_wTuOih {
+    cursor: pointer;
+    max-width: 250px
+}
+
+.linkedChannelApplicationName_wTuOih {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.robot_wTuOih {
+    color: var(--text-link)
+}
+
+.integrationIcon_wTuOih {
+    background-size: contain
+}
+
+.unknownInvite_wTuOih {
+    flex: 0;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.inviterFooter_wTuOih {
+    margin-top: 4px
+}
+
+.inviterUserContainer_wTuOih {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px
+}
+
+.clickable_wTuOih {
+    cursor: pointer
+}
+
+.footerAlignment_wTuOih {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column
+}
+
+/*# sourceMappingURL=2b2bfaf3e679d8fc.css.map*/

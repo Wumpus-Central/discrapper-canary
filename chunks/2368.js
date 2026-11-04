@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => y, eF: () => S, lE: () => b }), n(321073));
+n(321073);
 var l = n(284009),
     i = n.n(l),
     r = n(155718),
@@ -8,7 +8,7 @@ var l = n(284009),
     u = n(22098),
     c = n(323350),
     d = n(35277),
-    h = n(820066);
+    h = n(339200);
 let m =
         /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\\\\|\\"|(?!")[^\\])+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
     f = new Set([
@@ -29,48 +29,29 @@ let m =
     x = new Set(["line", "blockQuote"]),
     E = new Set(["applicationCommandOption"]);
 function y(e, t, n) {
-    let { isInline: l, isVoid: i, onChange: r } = e;
-    ((e.isVoid = (e) => !!f.has(e.type) || i(e)), (e.isInline = (e) => !!(f.has(e.type) || g.has(e.type)) || l(e)));
-    let s = null,
-        a = !0;
-    return (
-        (e.onChange = () => {
-            let l = h.VW.richValue(e);
-            ((l !== s || e.previewMarkdown !== a) &&
-                (o.o.withMergedEntry(e, () => {
-                    h.VW.withoutNormalizing(e, () => S(e, t, n));
-                }),
-                (s = l),
-                (a = e.previewMarkdown)),
-                r());
-        }),
-        e
-    );
-}
-function S(e, t, n) {
     let l = h.VW.areStylesDisabled(e);
     for (let i of h.VW.blocks(e))
-        if (x.has(i[0].type)) l ? A(e, i, !0, null) : C(e, i, t, n);
+        if (x.has(i[0].type)) l ? C(e, i, !0, null) : S(e, i, t, n);
         else {
             let [r, s] = i;
             for (let i = r.children.length - 1; i >= 0; i--) {
                 let a = r.children[i];
                 if (!h.l5.isText(a) && E.has(a.type)) {
                     let r = [a, h.PW.child(s, i)];
-                    l ? A(e, r, !0, null) : C(e, r, t, n);
+                    l ? C(e, r, !0, null) : S(e, r, t, n);
                 }
             }
         }
 }
-function C(e, t, n, l) {
+function S(e, t, n, l) {
     let r = "line" === t[0].type && t[0].codeBlockState?.isInCodeBlock === !0,
         s = h.cv.markdown(t[0], n);
-    (A(e, t, r, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n))),
+    (C(e, t, r, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n))),
         !r &&
             ((function (e, t, n, l, r) {
                 let [s, o] = t,
                     u = !1,
-                    c = v(e, o);
+                    c = I(e, o);
                 for (let f = s.children.length - 1; f >= 0; f--) {
                     let p,
                         g = s.children[f];
@@ -82,9 +63,9 @@ function C(e, t, n, l) {
                             m.lastIndex = p.index + 1;
                             continue;
                         }
-                        if (N(c, { path: x, offset: p.index }, r)) continue;
+                        if (v(c, { path: x, offset: p.index }, r)) continue;
                         let i = (0, a.p)(p[0], n, l);
-                        null != i && T(e, l, t[0], i)
+                        null != i && N(e, l, t[0], i)
                             ? E.push({ index: p.index, length: p[0].length, node: i })
                             : (m.lastIndex = p.index + 1);
                     }
@@ -107,12 +88,12 @@ function C(e, t, n, l) {
                 }
                 return u;
             })(e, t, n, l, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n))),
-            b(e, t, l, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n)))));
+            A(e, t, l, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n)))));
 }
-function A(e, t, n, l) {
+function C(e, t, n, l) {
     let [i, r] = t,
         s = !1,
-        a = n || null == l ? null : v(e, r);
+        a = n || null == l ? null : I(e, r);
     for (let t = i.children.length - 1; t >= 0; t--) {
         let o = i.children[t];
         if (h.l5.isText(o) && !n) {
@@ -136,13 +117,13 @@ function A(e, t, n, l) {
         } else if (h.cv.isElement(o) && e.isVoid(o)) {
             let i = h.PW.child(r, t),
                 u = { path: h.PW.child(i, 0), offset: 0 };
-            (n || (null != l && N(a, u, l))) &&
+            (n || (null != l && v(a, u, l))) &&
                 (d.b.voidToText(e, (0, c.IQ)(o, { mode: "plain", preventEmojiSurrogates: !0 }), i), (s = !0));
         }
     }
     return s;
 }
-function b(e, t, n, l) {
+function A(e, t, n, l) {
     let i = t[1],
         r = !1,
         s = [...l.entries].reverse(),
@@ -222,29 +203,29 @@ function b(e, t, n, l) {
             default:
                 continue;
         }
-        if (!T(e, n, t[0], h)) continue;
+        if (!N(e, n, t[0], h)) continue;
         let p = (0, u.Q)(e, i, l.serializedChildren, m.start),
             g = (0, u.Q)(e, i, l.serializedChildren, m.start + m.text.length);
         (d.b.textToVoid(e, h, { anchor: p, focus: g }), (r = !0));
     }
     return r;
 }
-function I(e) {
+function b(e) {
     return e.join(",");
 }
-function v(e, t) {
+function I(e, t) {
     let n = new Map(),
         l = h.VW.nodes(e, { at: { anchor: h.VW.start(e, t), focus: h.VW.end(e, t) }, mode: "lowest" }),
         i = 0;
-    for (let [e, t] of l) (n.set(I(t), i), (i += h.l5.isText(e) ? e.text.length : 1));
+    for (let [e, t] of l) (n.set(b(t), i), (i += h.l5.isText(e) ? e.text.length : 1));
     return n;
 }
-function N(e, t, n) {
+function v(e, t, n) {
     if (null == e) return !1;
-    let l = e.get(I(t.path));
+    let l = e.get(b(t.path));
     if (null != l) l += t.offset;
     else {
-        let n = e.get(I(h.PW.parent(t.path)));
+        let n = e.get(b(h.PW.parent(t.path)));
         if (null == n) return !1;
         l = n + 1;
     }
@@ -256,7 +237,7 @@ function N(e, t, n) {
     }
     return !1;
 }
-function T(e, t, n, l) {
+function N(e, t, n, l) {
     if (e.chatInputType.markdown?.disableMentions === !0 && p.has(l.type)) return !1;
     if ("applicationCommandOption" !== n.type) return !0;
     switch (n.optionType) {
@@ -280,3 +261,31 @@ function T(e, t, n, l) {
             return !1;
     }
 }
+n.d(
+    t,
+    {},
+    {
+        Ay: function (e, t, n) {
+            let { isInline: l, isVoid: i, onChange: r } = e;
+            ((e.isVoid = (e) => !!f.has(e.type) || i(e)),
+                (e.isInline = (e) => !!(f.has(e.type) || g.has(e.type)) || l(e)));
+            let s = null,
+                a = !0;
+            return (
+                (e.onChange = () => {
+                    let l = h.VW.richValue(e);
+                    ((l !== s || e.previewMarkdown !== a) &&
+                        (o.o.withMergedEntry(e, () => {
+                            h.VW.withoutNormalizing(e, () => y(e, t, n));
+                        }),
+                        (s = l),
+                        (a = e.previewMarkdown)),
+                        r());
+                }),
+                e
+            );
+        },
+        eF: y,
+        lE: A,
+    },
+);

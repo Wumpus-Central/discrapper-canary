@@ -1,7 +1,6 @@
-n.d(t, { E: () => _ });
 var i = n(435558),
     r = n.n(i),
-    a = n(636537),
+    a = n(620632),
     s = n(451988),
     l = n(73153),
     o = n(311043),
@@ -24,6 +23,12 @@ let u = new s.OC(
         onCancelled: (e) => l.h.dispatch({ type: "GAME_FETCH_CANCELLED", gameIds: e }),
     },
 );
-async function _(e) {
-    0 !== e.length && (await u.queue(e));
-}
+n.d(
+    t,
+    {},
+    {
+        E: async function (e) {
+            0 !== e.length && (await u.queue(e));
+        },
+    },
+);

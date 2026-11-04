@@ -1,4 +1,4 @@
-(e.r(a), e.d(a, { default: () => h }));
+e.r(a);
 var d = e(477900),
     l = e(582128),
     i = e(834730),
@@ -24,3 +24,4 @@ let h = l.memo(function (s) {
         }),
     });
 });
+e.d(a, {}, { default: h });

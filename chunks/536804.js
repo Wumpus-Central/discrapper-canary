@@ -1,4 +1,3 @@
-n.d(t, { A: () => a });
 var i = n(582128);
 let r = Object.freeze({
     scrollTop: 0,
@@ -9,30 +8,36 @@ let r = Object.freeze({
     offsetWidth: 0,
     dirty: 0,
 });
-function a() {
-    let e = (0, i.useRef)(null),
-        t = (0, i.useCallback)(() => {
-            let { current: t } = e;
-            if (null != t) {
-                let {
-                    scrollTop: e,
-                    scrollLeft: n,
-                    scrollHeight: i,
-                    scrollWidth: r,
-                    offsetHeight: a,
-                    offsetWidth: s,
-                } = t;
-                return {
-                    scrollTop: e,
-                    scrollLeft: n,
-                    scrollHeight: i,
-                    scrollWidth: r,
-                    offsetHeight: a,
-                    offsetWidth: s,
-                    dirty: 0,
-                };
-            }
-            return r;
-        }, []);
-    return { scrollerRef: e, getScrollerState: t };
-}
+n.d(
+    t,
+    {},
+    {
+        A: function () {
+            let e = (0, i.useRef)(null),
+                t = (0, i.useCallback)(() => {
+                    let { current: t } = e;
+                    if (null != t) {
+                        let {
+                            scrollTop: e,
+                            scrollLeft: n,
+                            scrollHeight: i,
+                            scrollWidth: r,
+                            offsetHeight: a,
+                            offsetWidth: s,
+                        } = t;
+                        return {
+                            scrollTop: e,
+                            scrollLeft: n,
+                            scrollHeight: i,
+                            scrollWidth: r,
+                            offsetHeight: a,
+                            offsetWidth: s,
+                            dirty: 0,
+                        };
+                    }
+                    return r;
+                }, []);
+            return { scrollerRef: e, getScrollerState: t };
+        },
+    },
+);

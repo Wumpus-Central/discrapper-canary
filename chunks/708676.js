@@ -1,7 +1,6 @@
-n.d(i, { A: () => a, J: () => u });
 var r = n(536637),
     f = n.n(r),
-    e = n(105292);
+    e = n(792996);
 function u(t) {
     let i = f()();
     if (t <= i) return;
@@ -12,6 +11,13 @@ function u(t) {
     let u = t.diff(i, "minutes");
     return e.intl.formatToPlainString(e.t["3SLXAz"], { minutes: u });
 }
-function a(t) {
-    if (null != t) return u(t);
-}
+n.d(
+    i,
+    {},
+    {
+        A: function (t) {
+            if (null != t) return u(t);
+        },
+        J: u,
+    },
+);

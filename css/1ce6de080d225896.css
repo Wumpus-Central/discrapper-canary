@@ -1,0 +1,84 @@
+.title_g9DJn9 {
+    flex: 1;
+    margin-bottom: 0
+}
+
+.searchBar_g9DJn9 {
+    margin-top: 20px
+}
+
+.connectionsContainer_g9DJn9 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 8px;
+    margin-top: 16px;
+    margin-inline-end: -8px
+}
+
+.accountBtn_g9DJn9 {
+    margin-inline-end: 8px;
+    margin-bottom: 8px
+}
+
+.accountBtn_g9DJn9:last-child {
+    margin-inline-end: 0
+}
+
+.accountBtnInner_g9DJn9 {
+    background-color: var(--background-base-lower);
+    border: none
+}
+
+.accountBtnInner_g9DJn9:hover {
+    background-color: var(--background-mod-normal)
+}
+
+.applicationsHeader_g9DJn9 {
+    margin-top: 16px
+}
+
+.applicationsContainer_g9DJn9 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-inline-end: -8px;
+    margin-bottom: 16px;
+    margin-top: 12px
+}
+
+.application_g9DJn9 {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    width: 184px
+}
+
+.application_g9DJn9:hover {
+    background-color: var(--background-mod-normal);
+    cursor: pointer
+}
+
+.applicationIcon_g9DJn9 {
+    height: 32px;
+    min-width: 32px;
+    width: 32px
+}
+
+.applicationNameContainer_g9DJn9 {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    overflow: hidden
+}
+
+.applicationNameText_g9DJn9 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+/*# sourceMappingURL=1ce6de080d225896.css.map*/

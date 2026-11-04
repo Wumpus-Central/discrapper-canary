@@ -1,4 +1,3 @@
-n.d(t, { K: () => s, c: () => r });
 var l,
     i,
     r =
@@ -29,3 +28,4 @@ var l,
         (i.VOICE_CHANNEL = "voice_channel"),
         (i.VOICE_USER = "voice_user"),
         i);
+n.d(t, {}, { K: s, c: r });

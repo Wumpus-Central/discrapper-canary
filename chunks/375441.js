@@ -1,3 +1,2 @@
-n.d(t, { ag: () => i.ag, sz: () => r });
-var i = n(576908);
-let r = "__installation__";
+var i = n(967648);
+n.d(t, { ag: () => i.ag }, { sz: "__installation__" });

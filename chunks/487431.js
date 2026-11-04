@@ -1,11 +1,10 @@
-t.d(e, { Sy: () => D, VT: () => v, kW: () => L, nW: () => _ });
 var l,
     r = t(477900),
     i = t(503698),
     n = t.n(i),
-    c = t(17928),
-    a = t(661531),
-    o = t(193249),
+    c = t(855986),
+    a = t(646514),
+    o = t(143129),
     d = t(834730),
     u = t(123292),
     x = t(628284),
@@ -16,8 +15,8 @@ var l,
     E = t(975807),
     C = t(878118),
     O = t(281020),
-    b = t(673051),
-    N = t(105292),
+    b = t(86495),
+    N = t(792996),
     I = t(614965),
     _ =
         (((l = {})[(l.OVERALL_GOOD = 0)] = "OVERALL_GOOD"),
@@ -27,62 +26,21 @@ var l,
         (l[(l.BAD = 4)] = "BAD"),
         l);
 function v(s) {
-    let { overallStatus: e, flow: t, name: l, steps: i, isChosen: a, showGlobalFlowToggle: u = !1 } = s,
-        x = (0, c.bG)([C.A], () => C.A.getGloballyDisabledAuthorizationFlows()),
-        m = x.has(t);
-    return (0, r.jsxs)("div", {
-        className: I.Wk,
-        children: [
-            u &&
-                (0, r.jsx)("div", {
-                    className: I.WV,
-                    children: (0, r.jsx)(o.d, {
-                        label: N.intl.string(b.default.DWC99q),
-                        checked: !m,
-                        onChange: () => {
-                            m ? O.zi([...x].filter((s) => s !== t)) : O.zi([...x, t]);
-                        },
-                    }),
-                }),
-            (0, r.jsx)(D, { status: e, text: l }),
-            i.map((s, e) => (0, r.jsx)(f, { ...s }, e)),
-            a &&
-                (0, r.jsx)("div", {
-                    className: I.MH,
-                    children: (0, r.jsx)(d.E, {
-                        variant: "body-sm/medium",
-                        color: "text-subtle",
-                        children: N.intl.string(b.default.OEkrCx),
-                    }),
-                }),
-            m &&
-                (0, r.jsx)("div", {
-                    className: n()(I.MH, I.vi),
-                    children: (0, r.jsx)(d.E, {
-                        variant: "body-sm/medium",
-                        color: "text-subtle",
-                        children: N.intl.string(b.default.mgsmfY),
-                    }),
-                }),
-        ],
-    });
-}
-function D(s) {
     let { text: e, status: t } = s;
     return (0, r.jsxs)("div", {
         className: I.Km,
         children: [
             (0, r.jsx)(d.E, { variant: "body-md/semibold", color: "text-subtle", children: e }),
-            (0, r.jsx)(L, { status: t }),
+            (0, r.jsx)(f, { status: t }),
         ],
     });
 }
-function f(s) {
+function D(s) {
     let { status: e, text: t, description: l, learnMoreLink: i } = s;
     return (0, r.jsxs)("div", {
         className: I.jf,
         children: [
-            (0, r.jsx)(L, { status: e }),
+            (0, r.jsx)(f, { status: e }),
             (0, r.jsxs)("div", {
                 className: I.bc,
                 children: [
@@ -99,7 +57,7 @@ function f(s) {
         ],
     });
 }
-function L(s) {
+function f(s) {
     let { status: e } = s,
         t = { size: "sm", className: I.I8 };
     switch (e) {
@@ -115,3 +73,53 @@ function L(s) {
             return (0, r.jsx)(h.P, { ...t, color: a.A.colors.ICON_FEEDBACK_CRITICAL });
     }
 }
+t.d(
+    e,
+    {},
+    {
+        Sy: v,
+        VT: function (s) {
+            let { overallStatus: e, flow: t, name: l, steps: i, isChosen: a, showGlobalFlowToggle: u = !1 } = s,
+                x = (0, c.bG)([C.A], () => C.A.getGloballyDisabledAuthorizationFlows()),
+                m = x.has(t);
+            return (0, r.jsxs)("div", {
+                className: I.Wk,
+                children: [
+                    u &&
+                        (0, r.jsx)("div", {
+                            className: I.WV,
+                            children: (0, r.jsx)(o.d, {
+                                label: N.intl.string(b.default.DWC99q),
+                                checked: !m,
+                                onChange: () => {
+                                    m ? O.zi([...x].filter((s) => s !== t)) : O.zi([...x, t]);
+                                },
+                            }),
+                        }),
+                    (0, r.jsx)(v, { status: e, text: l }),
+                    i.map((s, e) => (0, r.jsx)(D, { ...s }, e)),
+                    a &&
+                        (0, r.jsx)("div", {
+                            className: I.MH,
+                            children: (0, r.jsx)(d.E, {
+                                variant: "body-sm/medium",
+                                color: "text-subtle",
+                                children: N.intl.string(b.default.OEkrCx),
+                            }),
+                        }),
+                    m &&
+                        (0, r.jsx)("div", {
+                            className: n()(I.MH, I.vi),
+                            children: (0, r.jsx)(d.E, {
+                                variant: "body-sm/medium",
+                                color: "text-subtle",
+                                children: N.intl.string(b.default.mgsmfY),
+                            }),
+                        }),
+                ],
+            });
+        },
+        kW: f,
+        nW: _,
+    },
+);

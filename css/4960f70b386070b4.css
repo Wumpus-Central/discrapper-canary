@@ -1,0 +1,45 @@
+.content_PNf29Z {
+    padding-top: 24px
+}
+
+.channelName_PNf29Z,
+.inline_PNf29Z {
+    display: inline
+}
+
+.channelName_PNf29Z {
+    color: var(--text-strong)
+}
+
+.icon_PNf29Z {
+    display: inline;
+    margin: -4px 4px
+}
+
+.locationIcon_PNf29Z {
+    color: var(--text-strong);
+    margin-block: -4px;
+    margin-inline: 2px 4px
+}
+
+.textContainer_PNf29Z {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 24px
+}
+
+.subheader_PNf29Z {
+    margin: 8px 0 16px;
+    text-align: center
+}
+
+.previewCard_PNf29Z {
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    cursor: default
+}
+
+/*# sourceMappingURL=4960f70b386070b4.css.map*/

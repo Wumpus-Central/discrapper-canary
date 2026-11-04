@@ -1,5 +1,4 @@
-(Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.YEAR_PATTERN = t.MONTH_DICTIONARY = t.WEEKDAY_DICTIONARY = void 0),
+((t.YEAR_PATTERN = t.MONTH_DICTIONARY = t.WEEKDAY_DICTIONARY = void 0),
     (t.parseYear = function (e) {
         if (e.match(/^[0-9]{1,4}$/)) {
             let t = parseInt(e);

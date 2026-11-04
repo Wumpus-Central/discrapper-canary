@@ -1,27 +1,5 @@
-(I.r(e),
-    I.d(e, {
-        INVITE_OPTIONS_100_TIMES: () => r,
-        INVITE_OPTIONS_10_TIMES: () => T,
-        INVITE_OPTIONS_12_HOURS: () => P,
-        INVITE_OPTIONS_14_DAYS: () => m,
-        INVITE_OPTIONS_1_DAY: () => f,
-        INVITE_OPTIONS_1_HOUR: () => S,
-        INVITE_OPTIONS_25_TIMES: () => O,
-        INVITE_OPTIONS_30_DAYS: () => g,
-        INVITE_OPTIONS_30_MINUTES: () => a,
-        INVITE_OPTIONS_50_TIMES: () => N,
-        INVITE_OPTIONS_5_TIMES: () => u,
-        INVITE_OPTIONS_60_DAYS: () => V,
-        INVITE_OPTIONS_6_HOURS: () => E,
-        INVITE_OPTIONS_7_DAYS: () => d,
-        INVITE_OPTIONS_8_HOURS: () => o,
-        INVITE_OPTIONS_FOREVER: () => D,
-        INVITE_OPTIONS_ONCE: () => _,
-        INVITE_OPTIONS_UNLIMITED: () => l,
-        MAX_AGE_OPTIONS: () => A,
-        MAX_USES_OPTIONS: () => s,
-    }));
-var n = I(105292);
+I.r(e);
+var n = I(792996);
 function i(t, e) {
     return {
         value: t,
@@ -50,3 +28,29 @@ let l = i(0, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 0 })),
     V = i(5184e3, () => n.intl.formatToPlainString(n.t["k2UNz+"], { days: 60 })),
     D = i(0, () => n.intl.string(n.t.PqEzn8)),
     A = [a, S, E, P, f, d, m, g, V, D];
+I.d(
+    e,
+    {},
+    {
+        INVITE_OPTIONS_100_TIMES: r,
+        INVITE_OPTIONS_10_TIMES: T,
+        INVITE_OPTIONS_12_HOURS: P,
+        INVITE_OPTIONS_14_DAYS: m,
+        INVITE_OPTIONS_1_DAY: f,
+        INVITE_OPTIONS_1_HOUR: S,
+        INVITE_OPTIONS_25_TIMES: O,
+        INVITE_OPTIONS_30_DAYS: g,
+        INVITE_OPTIONS_30_MINUTES: a,
+        INVITE_OPTIONS_50_TIMES: N,
+        INVITE_OPTIONS_5_TIMES: u,
+        INVITE_OPTIONS_60_DAYS: V,
+        INVITE_OPTIONS_6_HOURS: E,
+        INVITE_OPTIONS_7_DAYS: d,
+        INVITE_OPTIONS_8_HOURS: o,
+        INVITE_OPTIONS_FOREVER: D,
+        INVITE_OPTIONS_ONCE: _,
+        INVITE_OPTIONS_UNLIMITED: l,
+        MAX_AGE_OPTIONS: A,
+        MAX_USES_OPTIONS: s,
+    },
+);

@@ -1,8 +1,8 @@
-e.exports = {
-    eL: "tipRow__5bc4e",
-    VX: "tipNumber__5bc4e",
-    T6: "tipsList__5bc4e",
-    oO: "tipsHeader__5bc4e",
-    TK: "headerText__5bc4e",
-    iB: "tipsSection__5bc4e",
+t.exports = {
+    eL: "tipRow_zaXzS4",
+    VX: "tipNumber_zaXzS4",
+    T6: "tipsList_zaXzS4",
+    oO: "tipsHeader_zaXzS4",
+    TK: "headerText_zaXzS4",
+    iB: "tipsSection_zaXzS4",
 };

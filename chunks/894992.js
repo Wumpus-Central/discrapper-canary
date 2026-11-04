@@ -1,7 +1,6 @@
-n.d(t, { A: () => o });
 var i = n(517846),
     r = n(439372),
-    a = n(27620),
+    a = n(669700),
     s = n(859703);
 class l extends r.A {
     questCompletionStates = new Map();
@@ -35,3 +34,4 @@ class l extends r.A {
     };
 }
 let o = new l();
+n.d(t, {}, { A: o });

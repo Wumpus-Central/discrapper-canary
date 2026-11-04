@@ -1,0 +1,132 @@
+.unsupportedBrowser_iWNou2 {
+    background: #1b242b;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    text-align: center
+}
+
+.unsupportedBrowser_iWNou2,
+.wrap_iWNou2 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.wrap_iWNou2 {
+    flex-direction: column;
+    height: 100%;
+    min-width: 320px;
+    overflow: auto
+}
+
+.title_iWNou2 {
+    color: var(--white);
+    flex-shrink: 0;
+    font-size: 22px;
+    font-weight: var(--font-weight-semibold);
+    margin: 50px 0 10px;
+    text-transform: none
+}
+
+.message_iWNou2 {
+    color: #949494;
+    flex-shrink: 0;
+    margin: 0 auto 30px;
+    max-width: 420px;
+    padding: 0 20px
+}
+
+.browserList_iWNou2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px
+}
+
+.browserItem_iWNou2 {
+    border: 2px solid #282f36;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--white);
+    margin: 10px;
+    padding: 20px;
+    transition: .1s;
+    width: 188px
+}
+
+.browserItem_iWNou2:hover {
+    border-color: var(--brand-500);
+    transform: scale(1.04)
+}
+
+.browserItem_iWNou2:hover .browser_iWNou2 {
+    background-position-y: 100px
+}
+
+.browserItem_iWNou2:hover .btn_iWNou2 {
+    background-color: var(--brand-500);
+    border-color: var(--brand-500);
+    color: var(--white)
+}
+
+.browserItemText_iWNou2 {
+    font-size: 12px;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5em;
+    text-align: center;
+    text-transform: none
+}
+
+.browser_iWNou2 {
+    background: url("/assets/e840fd5a85524a8b.png");
+    background-size: 400px 200px;
+    display: inline-block;
+    height: 100px;
+    margin-bottom: 28px;
+    width: 100px
+}
+
+.browserDiscord_iWNou2 {
+    background-position-x: 0
+}
+
+.browserOpera_iWNou2 {
+    background-position-x: 100px
+}
+
+.browserFirefox_iWNou2 {
+    background-position-x: 200px
+}
+
+.browserChrome_iWNou2 {
+    background-position-x: 300px
+}
+
+.btn_iWNou2 {
+    border: 1px solid #282f36;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--white);
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    margin-top: 28px;
+    padding: 10px;
+    text-decoration: none;
+    transition: border .1s, background-color .1s;
+    width: 100%
+}
+
+.btn_iWNou2:active {
+    position: relative;
+    top: 1px
+}
+
+.btn_iWNou2 {
+    background: transparent
+}
+
+/*# sourceMappingURL=05874d72eef37639.css.map*/

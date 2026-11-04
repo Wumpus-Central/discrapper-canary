@@ -1,30 +1,35 @@
-t.d(n, { default: () => l });
 var a = t(477900);
 t(582128);
-var c = t(980707),
-    o = t(477782),
-    i = t(192308),
-    r = t(346411),
-    d = t(442433),
-    s = t(818348);
-let l = function (e) {
-    return (0, a.jsx)(c.W, {
-        "data-menu-migrated": !0,
-        onClose: d.Z_,
-        navId: "staff-only-entry-debug",
-        "aria-label": "staff only content inventory debug",
-        onSelect: s.tE,
-        children: (0, a.jsx)(o.Dr, {
-            id: "test",
-            label: "Debug (Staff-Only)",
-            action: () => {
-                (0, i.openModalLazy)(async () => {
-                    let { default: n } = await t.e("194022").then(t.bind(t, 924037));
-                    return (t) => (0, a.jsx)(n, { ...t, ...e });
-                });
-            },
-            icon: r.WrenchIcon,
-            leadingAccessory: { type: "icon", icon: r.WrenchIcon },
-        }),
-    });
-};
+var c = t(165862),
+    i = t(477782),
+    r = t(192308),
+    o = t(346411),
+    s = t(442433),
+    d = t(818348);
+t.d(
+    e,
+    {},
+    {
+        default: function (n) {
+            return (0, a.jsx)(c.W, {
+                "data-menu-migrated": !0,
+                onClose: s.Z_,
+                navId: "staff-only-entry-debug",
+                "aria-label": "staff only content inventory debug",
+                onSelect: d.tE,
+                children: (0, a.jsx)(i.Dr, {
+                    id: "test",
+                    label: "Debug (Staff-Only)",
+                    action: () => {
+                        (0, r.mM)(async () => {
+                            let { default: e } = await t.e(194022).then(t.bind(t, 146418));
+                            return (t) => (0, a.jsx)(e, { ...t, ...n });
+                        });
+                    },
+                    icon: o.WrenchIcon,
+                    leadingAccessory: { type: "icon", icon: o.WrenchIcon },
+                }),
+            });
+        },
+    },
+);

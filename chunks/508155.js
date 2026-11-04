@@ -1,7 +1,6 @@
-i.d(t, { t: () => a });
 var s = i(652215),
-    r = i(202541),
-    n = i(105292);
+    r = i(682901),
+    n = i(792996);
 let a = [
     {
         tier: s.TVA.TIER_1,
@@ -47,8 +46,9 @@ let a = [
             { perkIcon: r.TP.ANIMATED, getCopy: () => n.intl.string(n.t.nRKlmC) },
             {
                 perkIcon: r.TP.STAGE_VIDEO,
-                getCopy: () => n.intl.formatToPlainString(n.t.hsZ88d, { numStageSeats: s.uaN }),
+                getCopy: () => n.intl.formatToPlainString(n.t.hsZ88d, { numStageSeats: 300 }),
             },
         ],
     },
 ];
+i.d(t, {}, { t: a });

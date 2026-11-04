@@ -1,27 +1,32 @@
-i.d(e, { default: () => u });
 var t = i(477900),
     n = i(582128),
     l = i(939249),
-    s = i(980707),
+    s = i(165862),
     r = i(477782),
     c = i(442433),
     d = i(50268),
-    o = i(105292);
-function u(a) {
-    let { guild: e, shiftId: i, onSelect: u, closePopout: p, "aria-label": h } = a,
-        b = (0, d.A)({ id: e.id, label: o.intl.string(o.t["94lLD7"]), shiftId: i, onSuccess: p }),
-        g = n.useCallback((a) => {
-            a.stopPropagation();
-        }, []);
-    return (0, t.jsx)(l.D, {
-        onClick: g,
-        children: (0, t.jsx)(s.W, {
-            "data-menu-migrated-auto": !0,
-            onSelect: u,
-            navId: "guild-discovery-context-menu",
-            "aria-label": h ?? o.intl.string(o.t.ogxXGq),
-            onClose: c.Z_,
-            children: (0, t.jsx)(r.rX, { children: b }),
-        }),
-    });
-}
+    o = i(792996);
+i.d(
+    e,
+    {},
+    {
+        default: function (a) {
+            let { guild: e, shiftId: i, onSelect: u, closePopout: p, "aria-label": h } = a,
+                b = (0, d.A)({ id: e.id, label: o.intl.string(o.t["94lLD7"]), shiftId: i, onSuccess: p }),
+                g = n.useCallback((a) => {
+                    a.stopPropagation();
+                }, []);
+            return (0, t.jsx)(l.D, {
+                onClick: g,
+                children: (0, t.jsx)(s.W, {
+                    "data-menu-migrated-auto": !0,
+                    onSelect: u,
+                    navId: "guild-discovery-context-menu",
+                    "aria-label": h ?? o.intl.string(o.t.ogxXGq),
+                    onClose: c.Z_,
+                    children: (0, t.jsx)(r.rX, { children: b }),
+                }),
+            });
+        },
+    },
+);

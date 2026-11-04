@@ -1,4 +1,3 @@
-n.d(t, { A: () => h });
 var i = n(734057),
     r = n(536802);
 let a = new Set(),
@@ -79,3 +78,4 @@ class A extends r.A {
     }
 }
 let h = new A();
+n.d(t, {}, { A: h });

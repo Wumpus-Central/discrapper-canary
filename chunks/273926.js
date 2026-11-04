@@ -1,4 +1,3 @@
-n.d(s, { LK: () => j, Ot: () => v });
 var r = n(477900);
 n(582128);
 var l = n(503698),
@@ -8,7 +7,7 @@ var l = n(503698),
 if (221552 == n.j) var c = n(622629);
 var i = n(46054),
     d = n(31457),
-    u = n(105292),
+    u = n(792996),
     m = n(762062);
 function h(e) {
     let { terms: s, channelId: n, className: l } = e;
@@ -40,17 +39,23 @@ function x(e) {
         children: (0, r.jsx)(o.S, { checked: !!n, onChange: s, disabled: l, label: u.intl.string(u.t["2EXfGJ"]) }),
     });
 }
-function j(e) {
-    let { formField: s } = e;
-    return (0, r.jsx)(d.fu, { icon: c.B, text: u.intl.string(u.t["2xbmoG"]), meetsRequirement: !!s.response });
-}
-function v(e) {
-    let { channelId: s, formField: n, onChange: l } = e;
-    return (0, r.jsxs)(d.cS, {
-        title: u.intl.string(u.t["Q8OFN+"]),
-        children: [
-            (0, r.jsx)(h, { className: m.n_, terms: n.values, channelId: s }),
-            (0, r.jsx)(x, { onChange: l, checked: n.response }),
-        ],
-    });
-}
+n.d(
+    s,
+    {},
+    {
+        LK: function (e) {
+            let { formField: s } = e;
+            return (0, r.jsx)(d.fu, { icon: c.B, text: u.intl.string(u.t["2xbmoG"]), meetsRequirement: !!s.response });
+        },
+        Ot: function (e) {
+            let { channelId: s, formField: n, onChange: l } = e;
+            return (0, r.jsxs)(d.cS, {
+                title: u.intl.string(u.t["Q8OFN+"]),
+                children: [
+                    (0, r.jsx)(h, { className: m.n_, terms: n.values, channelId: s }),
+                    (0, r.jsx)(x, { onChange: l, checked: n.response }),
+                ],
+            });
+        },
+    },
+);

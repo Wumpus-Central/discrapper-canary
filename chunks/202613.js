@@ -1,27 +1,4 @@
-(n.d(t, {
-    A0: () => c,
-    Ay: () => l,
-    EE: () => A,
-    FQ: () => N,
-    F_: () => f,
-    IE: () => R,
-    LQ: () => O,
-    Pw: () => C,
-    Qh: () => u,
-    SJ: () => d,
-    Tu: () => _,
-    UG: () => S,
-    Ux: () => h,
-    WV: () => L,
-    Xj: () => I,
-    YS: () => o,
-    _1: () => m,
-    am: () => p,
-    cg: () => g,
-    i6: () => T,
-    rJ: () => E,
-}),
-    n(938796));
+n(938796);
 var i = n(665260),
     r = n(315069),
     a = n(403362),
@@ -102,11 +79,11 @@ class l extends r.A {
             case s.hes.CASH_APP:
                 return new N({ ...n, username: e.username });
             case s.hes.TDS_WALLET:
-                return new O({ ...n });
+                return new C({ ...n });
             case s.hes.PIX:
-                return new R({ ...n, email: e.email });
+                return new O({ ...n, email: e.email });
             case s.hes.PIX_AUTOMATICO:
-                return new L({ ...n, email: e.email });
+                return new R({ ...n, email: e.email });
             default:
                 (0, a.xb)(e);
         }
@@ -148,11 +125,11 @@ class l extends r.A {
             case s.hes.CASH_APP:
                 return new N(e);
             case s.hes.TDS_WALLET:
-                return new O(e);
+                return new C(e);
             case s.hes.PIX:
-                return new R(e);
+                return new O(e);
             case s.hes.PIX_AUTOMATICO:
-                return new L(e);
+                return new R(e);
             default:
                 (0, a.xb)(t);
         }
@@ -305,35 +282,18 @@ class N extends l {
 }
 class C extends l {
     constructor(e) {
-        if (
-            ((e.id = ""),
-            (e.paymentGateway = s.kM_.APPLE_PARTNER),
-            (e.type = s.hes.APPLE),
-            (e.billingAddress = {}),
-            (e.country = ""),
-            (e.invalid = !1),
-            (e.isDefault = !1),
-            (e.flags = 0),
-            super(e),
-            e.type !== s.hes.APPLE)
-        )
-            throw Error(`Cannot instantiate AppleSourceRecord with type: ${e.type}, must be ${s.hes.APPLE}`);
-    }
-}
-class O extends l {
-    constructor(e) {
         if ((super(e), e.type !== s.hes.TDS_WALLET))
             throw Error(`Cannot instantiate TDSWalletSourceRecord with type: ${e.type}, must be ${s.hes.TDS_WALLET}`);
     }
 }
-class R extends l {
+class O extends l {
     constructor(e) {
         if ((super(e), e.type !== s.hes.PIX))
             throw Error(`Cannot instantiate PixSourceRecord with type: ${e.type}, must be ${s.hes.PIX}`);
         this.email = e.email;
     }
 }
-class L extends l {
+class R extends l {
     constructor(e) {
         if ((super(e), e.type !== s.hes.PIX_AUTOMATICO))
             throw Error(
@@ -342,3 +302,46 @@ class L extends l {
         this.email = e.email;
     }
 }
+n.d(
+    t,
+    {},
+    {
+        A0: c,
+        Ay: l,
+        EE: A,
+        FQ: N,
+        F_: f,
+        IE: O,
+        LQ: C,
+        Pw: class extends l {
+            constructor(e) {
+                if (
+                    ((e.id = ""),
+                    (e.paymentGateway = s.kM_.APPLE_PARTNER),
+                    (e.type = s.hes.APPLE),
+                    (e.billingAddress = {}),
+                    (e.country = ""),
+                    (e.invalid = !1),
+                    (e.isDefault = !1),
+                    (e.flags = 0),
+                    super(e),
+                    e.type !== s.hes.APPLE)
+                )
+                    throw Error(`Cannot instantiate AppleSourceRecord with type: ${e.type}, must be ${s.hes.APPLE}`);
+            }
+        },
+        Qh: u,
+        SJ: d,
+        Tu: _,
+        UG: S,
+        Ux: h,
+        WV: R,
+        Xj: I,
+        YS: o,
+        _1: m,
+        am: p,
+        cg: g,
+        i6: T,
+        rJ: E,
+    },
+);

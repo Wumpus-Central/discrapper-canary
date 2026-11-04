@@ -1,10 +1,9 @@
-n.d(t, { y: () => U });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
     s = n.n(a),
     r = n(554146),
-    o = n(661531),
+    o = n(646514),
     d = n(866665),
     c = n(939249),
     u = n(323384),
@@ -18,37 +17,21 @@ var i = n(477900),
     C = n(834730),
     y = n(789645),
     j = n(964486),
-    I = n(648027),
+    I = n(994428),
     N = n(855446),
     v = n(793574),
     E = n(688810),
     b = n(975412),
     S = n(392054),
-    T = n(826673),
-    _ = n(757293),
-    R = n(174459),
+    _ = n(826673),
+    T = n(757293),
+    R = n(129230),
     O = n(272812),
     P = n(652215),
-    L = n(105292),
+    L = n(792996),
     M = n(253802),
     w = n(867010);
 function U(e) {
-    let {
-        channel: t,
-        guild: n,
-        width: l,
-        inPopout: a,
-        handleClose: s,
-        userParticipantCount: r,
-        activitiesEnabled: o = !0,
-    } = e;
-    return l < 250
-        ? (0, i.jsx)(D, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
-        : r > 1
-          ? (0, i.jsx)(G, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
-          : (0, i.jsx)(V, { channel: t, guild: n, width: l, inPopout: a, activitiesEnabled: o });
-}
-function D(e) {
     let { channel: t, inPopout: n, handleClose: l } = e,
         { analyticsLocations: a, newestAnalyticsLocation: r } = (0, E.Ay)(v.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
     return (0, i.jsx)(E.f5, {
@@ -92,7 +75,7 @@ function D(e) {
         }),
     });
 }
-function V(e) {
+function D(e) {
     let { channel: t, guild: a, inPopout: r, activitiesEnabled: o = !0 } = e;
     l.useEffect(() => {
         R.default.track(P.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
@@ -102,20 +85,20 @@ function V(e) {
     }, []);
     let { analyticsLocations: d, newestAnalyticsLocation: c } = (0, E.Ay)(v.A.VC_TILE_ACTIVITY_INVITE);
     function p() {
-        (0, m.openModalLazy)(
+        (0, m.mM)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("683621"),
-                    n.e("711162"),
-                    n.e("919170"),
-                    n.e("159957"),
-                    n.e("728136"),
-                    n.e("216084"),
-                    n.e("284819"),
-                ]).then(n.bind(n, 405342));
+                    n.e(683621),
+                    n.e(711162),
+                    n.e(919170),
+                    n.e(159957),
+                    n.e(728136),
+                    n.e(680029),
+                    n.e(966623),
+                ]).then(n.bind(n, 660194));
                 return (n) => (0, i.jsx)(e, { ...n, guild: a, channel: t, source: P.PE1.ACTIVITY_ENTRY_POINT_TILE });
             },
-            { contextKey: r ? A.KX : A.SY },
+            { contextKey: r ? "popout" : A.SY },
         );
     }
     function C() {
@@ -159,7 +142,7 @@ function V(e) {
         }),
     });
 }
-function G(e) {
+function V(e) {
     let { channel: t, guild: n, handleClose: a, width: o, userParticipantCount: d } = e;
     (0, j.Ay)(() => {
         R.default.track(P.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
@@ -206,10 +189,10 @@ function G(e) {
                             close_type: "permanent",
                             n_participants: d,
                         }),
-                            (0, T.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT));
+                            (0, _.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT));
                     },
                     children: [
-                        (0, i.jsx)(_.A, {}),
+                        (0, i.jsx)(T.A, {}),
                         (0, i.jsx)(C.E, { variant: "body-sm/medium", children: L.intl.string(L.t["5E9SB9"]) }),
                     ],
                 }),
@@ -229,3 +212,39 @@ function G(e) {
         }),
     });
 }
+n.d(
+    t,
+    {},
+    {
+        y: function (e) {
+            let {
+                channel: t,
+                guild: n,
+                width: l,
+                inPopout: a,
+                handleClose: s,
+                userParticipantCount: r,
+                activitiesEnabled: o = !0,
+            } = e;
+            return l < 250
+                ? (0, i.jsx)(U, {
+                      channel: t,
+                      guild: n,
+                      width: l,
+                      inPopout: a,
+                      handleClose: s,
+                      userParticipantCount: r,
+                  })
+                : r > 1
+                  ? (0, i.jsx)(V, {
+                        channel: t,
+                        guild: n,
+                        width: l,
+                        inPopout: a,
+                        handleClose: s,
+                        userParticipantCount: r,
+                    })
+                  : (0, i.jsx)(D, { channel: t, guild: n, width: l, inPopout: a, activitiesEnabled: o });
+        },
+    },
+);

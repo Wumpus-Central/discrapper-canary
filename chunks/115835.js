@@ -1,5 +1,4 @@
-(Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.ParsingResult = t.ParsingComponents = t.ReferenceWithTimezone = void 0));
+t.ParsingResult = t.ParsingComponents = t.ReferenceWithTimezone = void 0;
 let n = r(767130),
     a = r(180774),
     i = r(628403);
@@ -41,8 +40,8 @@ t.ReferenceWithTimezone = s;
 class o {
     constructor(e, t) {
         if (((this._tags = new Set()), (this.reference = e), (this.knownValues = {}), (this.impliedValues = {}), t))
-            for (const e in t) this.knownValues[e] = t[e];
-        const r = e.getDateWithAdjustedTimezone();
+            for (let e in t) this.knownValues[e] = t[e];
+        let r = e.getDateWithAdjustedTimezone();
         (this.imply("day", r.getDate()),
             this.imply("month", r.getMonth() + 1),
             this.imply("year", r.getFullYear()),
@@ -184,37 +183,38 @@ class o {
         return (e.setFullYear(this.get("year")), e);
     }
 }
-t.ParsingComponents = o;
-class u {
-    constructor(e, t, r, n, a) {
-        ((this.reference = e),
-            (this.refDate = e.instant),
-            (this.index = t),
-            (this.text = r),
-            (this.start = n || new o(e)),
-            (this.end = a));
-    }
-    clone() {
-        let e = new u(this.reference, this.index, this.text);
-        return ((e.start = this.start ? this.start.clone() : null), (e.end = this.end ? this.end.clone() : null), e);
-    }
-    date() {
-        return this.start.date();
-    }
-    addTag(e) {
-        return (this.start.addTag(e), this.end && this.end.addTag(e), this);
-    }
-    addTags(e) {
-        return (this.start.addTags(e), this.end && this.end.addTags(e), this);
-    }
-    tags() {
-        let e = new Set(this.start.tags());
-        if (this.end) for (let t of this.end.tags()) e.add(t);
-        return e;
-    }
-    toString() {
-        let e = Array.from(this.tags()).sort();
-        return `[ParsingResult {index: ${this.index}, text: '${this.text}', tags: ${JSON.stringify(e)} ...}]`;
-    }
-}
-t.ParsingResult = u;
+((t.ParsingComponents = o),
+    (t.ParsingResult = class e {
+        constructor(e, t, r, n, a) {
+            ((this.reference = e),
+                (this.refDate = e.instant),
+                (this.index = t),
+                (this.text = r),
+                (this.start = n || new o(e)),
+                (this.end = a));
+        }
+        clone() {
+            let t = new e(this.reference, this.index, this.text);
+            return (
+                (t.start = this.start ? this.start.clone() : null), (t.end = this.end ? this.end.clone() : null), t
+            );
+        }
+        date() {
+            return this.start.date();
+        }
+        addTag(e) {
+            return (this.start.addTag(e), this.end && this.end.addTag(e), this);
+        }
+        addTags(e) {
+            return (this.start.addTags(e), this.end && this.end.addTags(e), this);
+        }
+        tags() {
+            let e = new Set(this.start.tags());
+            if (this.end) for (let t of this.end.tags()) e.add(t);
+            return e;
+        }
+        toString() {
+            let e = Array.from(this.tags()).sort();
+            return `[ParsingResult {index: ${this.index}, text: '${this.text}', tags: ${JSON.stringify(e)} ...}]`;
+        }
+    }));

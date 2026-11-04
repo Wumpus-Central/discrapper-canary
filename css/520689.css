@@ -1,4 +1,4 @@
-.premiumIcon_b68a35 {
+.premiumIcon_2zQQDh {
     height: 24px;
     margin-inline-end: 8px;
     position: relative;
@@ -6,7 +6,7 @@
     width: 24px
 }
 
-.platformIcon_b68a35 {
+.platformIcon_2zQQDh {
     display: inline-block;
     height: 28px;
     margin-top: -4px;
@@ -16,16 +16,16 @@
     width: 28px
 }
 
-.platformIcon_b68a35+.platformIcon_b68a35 {
+.platformIcon_2zQQDh+.platformIcon_2zQQDh {
     margin-inline-start: -10px
 }
 
-.giftIcon_b68a35 {
+.giftIcon_2zQQDh {
     margin-inline-end: 4px;
     vertical-align: text-bottom
 }
 
-.icon_b68a35 {
+.icon_2zQQDh {
     display: inline-block;
     height: 20px;
     margin-inline-start: 10px;
@@ -35,39 +35,39 @@
     width: 20px
 }
 
-.icon_b68a35+.icon_b68a35 {
+.icon_2zQQDh+.icon_2zQQDh {
     margin-inline-start: 6px
 }
 
-.iconWindows_b68a35 {
-    -webkit-mask-image: url(/assets/20dd0e244b9a7065.svg);
-    mask-image: url(/assets/20dd0e244b9a7065.svg)
+.iconWindows_2zQQDh {
+    -webkit-mask-image: url("/assets/20dd0e244b9a7065.svg");
+    mask-image: url("/assets/20dd0e244b9a7065.svg")
 }
 
-.iconApple_b68a35,
-.iconWindows_b68a35 {
+.iconApple_2zQQDh,
+.iconWindows_2zQQDh {
     background-color: currentColor
 }
 
-.iconApple_b68a35 {
-    -webkit-mask-image: url(/assets/d11dc1928431aa27.svg);
-    mask-image: url(/assets/d11dc1928431aa27.svg)
+.iconApple_2zQQDh {
+    -webkit-mask-image: url("/assets/d11dc1928431aa27.svg");
+    mask-image: url("/assets/d11dc1928431aa27.svg")
 }
 
-.iconAndroid_b68a35 {
-    -webkit-mask-image: url(/assets/f625814fc53c325e.svg);
-    mask-image: url(/assets/f625814fc53c325e.svg)
+.iconAndroid_2zQQDh {
+    -webkit-mask-image: url("/assets/f625814fc53c325e.svg");
+    mask-image: url("/assets/f625814fc53c325e.svg")
 }
 
-.iconAndroid_b68a35,
-.iconMetaQuest_b68a35 {
+.iconAndroid_2zQQDh,
+.iconMetaQuest_2zQQDh {
     background-color: currentColor
 }
 
-.iconMetaQuest_b68a35 {
+.iconMetaQuest_2zQQDh {
     margin-inline-end: 4px;
-    -webkit-mask-image: url(/assets/ac961aa8d4bb48a5.svg);
-    mask-image: url(/assets/ac961aa8d4bb48a5.svg);
+    -webkit-mask-image: url("/assets/ac961aa8d4bb48a5.svg");
+    mask-image: url("/assets/ac961aa8d4bb48a5.svg");
     mask-mode: alpha;
     -webkit-mask-position: center;
     mask-position: center;
@@ -77,8 +77,8 @@
     mask-size: contain
 }
 
-.iconUSFlag_b68a35 {
-    background-image: url(/assets/423c2b95bd0fdafb.png);
+.iconUSFlag_2zQQDh {
+    background-image: url("/assets/423c2b95bd0fdafb.png");
     background-position: top;
     background-repeat: no-repeat;
     background-size: 85%;
@@ -86,11 +86,11 @@
     margin-top: 0
 }
 
-.icon_b68a35+.btn_b68a35 {
+.icon_2zQQDh+.btn_2zQQDh {
     margin-inline-start: 20px
 }
 
-.textLink_b68a35 {
+.textLink_2zQQDh {
     color: currentColor;
     padding-inline-start: 10px;
     text-decoration: underline;
@@ -98,16 +98,16 @@
     font-size: 12px
 }
 
-.testModeSKUSelector_b68a35 {
+.testModeSKUSelector_2zQQDh {
     height: 24px;
     margin-inline-start: 16px
 }
 
-.testModeNotice_b68a35 {
+.testModeNotice_2zQQDh {
     padding-inline-end: 76px
 }
 
-.testModeActions_b68a35 {
+.testModeActions_2zQQDh {
     align-items: center;
     bottom: 0;
     display: flex;
@@ -118,7 +118,7 @@
     -webkit-app-region: no-drag
 }
 
-.testModeActions_b68a35 .testModeActionButton_b68a35 {
+.testModeActions_2zQQDh .testModeActionButton_2zQQDh {
     align-items: center;
     background-color: var(--background-mod-subtle);
     border-radius: var(--radius-sm);
@@ -131,13 +131,13 @@
     width: 28px
 }
 
-.testModeActions_b68a35 .testModeActionButton_b68a35:active,
-.testModeActions_b68a35 .testModeActionButton_b68a35:hover {
+.testModeActions_2zQQDh .testModeActionButton_2zQQDh:active,
+.testModeActions_2zQQDh .testModeActionButton_2zQQDh:hover {
     background-color: var(--background-mod-normal)
 }
 
-.premiumLogo_b68a35 {
-    background-image: url(/assets/a3541a1173e706be.svg);
+.premiumLogo_2zQQDh {
+    background-image: url("/assets/a3541a1173e706be.svg");
     background-repeat: no-repeat;
     background-size: 100%;
     display: inline-block;
@@ -148,44 +148,44 @@
     width: 51px
 }
 
-.premiumText_b68a35 {
+.premiumText_2zQQDh {
     font-weight: var(--font-weight-medium)
 }
 
-.premiumAction_b68a35 {
+.premiumAction_2zQQDh {
     margin-inline-start: 20px
 }
 
-.ellipsis_b68a35 {
+.ellipsis_2zQQDh {
     margin-inline-start: 7px
 }
 
-.quarantineLearnMoreLink_b68a35 {
+.quarantineLearnMoreLink_2zQQDh {
     margin-inline-start: 10px;
     text-decoration: underline
 }
 
-.errorCodeNoticeText_b68a35 {
+.errorCodeNoticeText_2zQQDh {
     margin-inline-start: var(--space-8)
 }
 
-.errorCodeNoticeClickable_b68a35 {
+.errorCodeNoticeClickable_2zQQDh {
     cursor: pointer
 }
 
-.connectionDeprecationNoticeCTAButton_b68a35 {
+.connectionDeprecationNoticeCTAButton_2zQQDh {
     background: var(--background-mod-subtle);
     border: none;
     border-radius: var(--radius-sm)
 }
 
-.connectionDeprecationRemindLaterButton_b68a35 {
+.connectionDeprecationRemindLaterButton_2zQQDh {
     border: none;
     border-radius: var(--radius-sm);
     text-decoration: underline
 }
 
-.connectionDeprecationNoticeIcon_b68a35 {
+.connectionDeprecationNoticeIcon_2zQQDh {
     background: var(--background-mod-subtle);
     border-radius: var(--radius-xs);
     height: 16px;
@@ -193,4 +193,4 @@
     width: 16px
 }
 
-/*# sourceMappingURL=520689.be0862caedbf5896.css.map*/
+/*# sourceMappingURL=520689.b505df18764680e8.css.map*/

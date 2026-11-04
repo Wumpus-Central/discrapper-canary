@@ -1,1 +1,1 @@
-p.exports = { $N: "fontCode__230d2", E1: "inlineTimestamp__230d2" };
+p.exports = { $N: "fontCode_1a6Bd3", E1: "inlineTimestamp_1a6Bd3" };

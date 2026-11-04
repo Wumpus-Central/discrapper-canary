@@ -1,23 +1,11 @@
-(n.d(t, {
-    ET: () => L,
-    Wn: () => f,
-    aV: () => C,
-    dg: () => R,
-    eq: () => p,
-    iF: () => g,
-    kZ: () => S,
-    s7: () => N,
-    tH: () => O,
-    yo: () => I,
-}),
-    n(321073));
+n(321073);
 var i,
     r,
     a,
     s,
     l = n(499979),
     o = n(687658),
-    d = n(87306);
+    d = n(23845);
 let c = [0, 5e5, 1e6, 15e5, 2e6, 3e6, 4e6, 5e6, 6e6, 7e6, 8e6],
     u = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60],
     _ = [720, 480, 360],
@@ -558,46 +546,61 @@ class R {
         return e;
     }
 }
-class L extends R {
-    encoderBuckets = Object.fromEntries(Object.values(I).map((e) => [e, 0]));
-    encoderCodec = "UNKNOWN";
-    targetFrames = 0;
-    targetBytesMax = 0;
-    targetBytesNetwork = 0;
-    targetBitrateHistogram = new o.d();
-    outboundBytesAvailable = 0;
-    outboundBandwidthSurplus = new o.d();
-    averageEncodeTime = 0;
-    vmafScoreSum = 0;
-    vmafScoreNum = 0;
-    vmafHistogram = new o.d();
-    psnrDbSum = 0;
-    psnrDbNum = 0;
-    psnrHistogram = new o.d();
-    qualityDecodeErrors = 0;
-    qualityDecoderReboots = 0;
-    qualityScoreErrors = 0;
-    qualityFrameDrops = 0;
-    qualitySizeMismatches = 0;
-    outboundSinkWantSum = 0;
-    outboundSinkWantNum = 0;
-    framesDroppedRateLimiter = null;
-    framesDroppedEncoderQueue = null;
-    framesDroppedCongestionWindow = null;
-    framesDroppedEncoder = null;
-    consecutiveStaticColorFramesMax = 0;
-    appendTargetRates(e, t, n, i) {
-        if (this.statsWindow.length < 2) return;
-        ((e = e ?? 0), (t = t ?? 0), (n = n ?? 0), (i = i ?? 0));
-        let r =
-            (this.statsWindow[this.statsWindow.length - 1].timestamp -
-                this.statsWindow[this.statsWindow.length - 2].timestamp) /
-            1e3;
-        ((this.targetFrames = this.targetFrames + e * r),
-            (this.targetBytesNetwork = this.targetBytesNetwork + (t / 8) * r),
-            (this.targetBytesMax = this.targetBytesMax + (n / 8) * r),
-            (this.outboundBytesAvailable = this.outboundBytesAvailable + (i / 8) * r),
-            this.targetBitrateHistogram.addSample(t),
-            this.outboundBandwidthSurplus.addSample(i - t));
-    }
-}
+n.d(
+    t,
+    {},
+    {
+        ET: class extends R {
+            encoderBuckets = Object.fromEntries(Object.values(I).map((e) => [e, 0]));
+            encoderCodec = "UNKNOWN";
+            targetFrames = 0;
+            targetBytesMax = 0;
+            targetBytesNetwork = 0;
+            targetBitrateHistogram = new o.d();
+            outboundBytesAvailable = 0;
+            outboundBandwidthSurplus = new o.d();
+            averageEncodeTime = 0;
+            vmafScoreSum = 0;
+            vmafScoreNum = 0;
+            vmafHistogram = new o.d();
+            psnrDbSum = 0;
+            psnrDbNum = 0;
+            psnrHistogram = new o.d();
+            qualityDecodeErrors = 0;
+            qualityDecoderReboots = 0;
+            qualityScoreErrors = 0;
+            qualityFrameDrops = 0;
+            qualitySizeMismatches = 0;
+            outboundSinkWantSum = 0;
+            outboundSinkWantNum = 0;
+            framesDroppedRateLimiter = null;
+            framesDroppedEncoderQueue = null;
+            framesDroppedCongestionWindow = null;
+            framesDroppedEncoder = null;
+            consecutiveStaticColorFramesMax = 0;
+            appendTargetRates(e, t, n, i) {
+                if (this.statsWindow.length < 2) return;
+                ((e = e ?? 0), (t = t ?? 0), (n = n ?? 0), (i = i ?? 0));
+                let r =
+                    (this.statsWindow[this.statsWindow.length - 1].timestamp -
+                        this.statsWindow[this.statsWindow.length - 2].timestamp) /
+                    1e3;
+                ((this.targetFrames = this.targetFrames + e * r),
+                    (this.targetBytesNetwork = this.targetBytesNetwork + (t / 8) * r),
+                    (this.targetBytesMax = this.targetBytesMax + (n / 8) * r),
+                    (this.outboundBytesAvailable = this.outboundBytesAvailable + (i / 8) * r),
+                    this.targetBitrateHistogram.addSample(t),
+                    this.outboundBandwidthSurplus.addSample(i - t));
+            }
+        },
+        Wn: f,
+        aV: C,
+        dg: R,
+        eq: p,
+        iF: g,
+        kZ: S,
+        s7: N,
+        tH: O,
+        yo: I,
+    },
+);

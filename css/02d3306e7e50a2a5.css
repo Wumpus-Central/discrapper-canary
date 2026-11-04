@@ -1,0 +1,150 @@
+.classificationContainer_QJMoIk {
+    display: flex;
+    flex-direction: column
+}
+
+.section_QJMoIk {
+    padding: var(--space-16) var(--space-8) var(--space-8)
+}
+
+.body_QJMoIk {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24)
+}
+
+.classificationActionsTakenContainer_QJMoIk {
+    margin-top: 28px
+}
+
+.classificationActionsTakenCard_QJMoIk {
+    border-radius: 4px;
+    margin-top: 14px;
+    padding-bottom: 8px;
+    padding-top: 8px
+}
+
+.classificationActionsTakenRow_QJMoIk {
+    color: var(--text-strong);
+    display: list-item;
+    margin-top: 10px;
+    margin-inline-start: 4px
+}
+
+.classificationActionsTakenRowIcon_QJMoIk {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: 50%;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    margin-inline-end: 12px;
+    width: 24px
+}
+
+.classificationActionsTakenList_QJMoIk {
+    color: var(--text-strong);
+    list-style: inside
+}
+
+.redIcon_QJMoIk {
+    color: var(--icon-feedback-critical)
+}
+
+.warningIcon_QJMoIk {
+    color: var(--status-warning)
+}
+
+.classificationActionExplanationContainer_QJMoIk {
+    margin-top: 28px
+}
+
+.guidelinesExplanation_QJMoIk {
+    margin-top: 10px
+}
+
+.classificationAppealFooterContainer_QJMoIk {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 22px;
+    margin-top: 22px
+}
+
+.confirmMinimumAgeSection_QJMoIk {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12)
+}
+
+.confirmMinimumAgeButton_QJMoIk {
+    align-items: center;
+    background: var(--background-surface-highest);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+    gap: var(--space-10);
+    justify-content: space-between;
+    padding: var(--space-12)
+}
+
+.confirmMinimumAgeButton_QJMoIk:hover {
+    background: var(--interactive-background-hover)
+}
+
+.guidelinesFooter_QJMoIk {
+    margin-top: var(--space-12)
+}
+
+.guidelinesFooter_QJMoIk,
+.manualReviewFooter_QJMoIk {
+    margin-bottom: var(--space-16)
+}
+
+.classificationAppealWindowExpired_QJMoIk {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    text-align: center
+}
+
+.classificationPolicyCard_QJMoIk {
+    align-items: center;
+    background: var(--background-base-lower);
+    border-radius: 8px;
+    display: flex;
+    margin-top: 14px;
+    padding: var(--space-12) var(--space-16)
+}
+
+.classificationPolicyCard_QJMoIk:hover {
+    background: var(--interactive-background-hover)
+}
+
+.classificationPolicyCardIcon_QJMoIk {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: 200px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px
+}
+
+.classificationPolicyDescriptionContainer_QJMoIk {
+    display: flex;
+    flex-direction: column;
+    margin-inline-start: 12px
+}
+
+.classificationPolicyLinkIcon_QJMoIk {
+    margin-inline-start: auto
+}
+
+.classificationActionExplanationContainer_QJMoIk,
+.classificationActionsTakenContainer_QJMoIk {
+    margin-top: var(--space-24)
+}
+
+/*# sourceMappingURL=02d3306e7e50a2a5.css.map*/

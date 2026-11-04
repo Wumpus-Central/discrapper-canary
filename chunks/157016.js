@@ -1,5 +1,11 @@
-n.d(t, { O: () => r, V: () => i });
 let i = (0, n(515925).uc)();
-function r() {
-    return null != i;
-}
+n.d(
+    t,
+    {},
+    {
+        O: function () {
+            return null != i;
+        },
+        V: i,
+    },
+);

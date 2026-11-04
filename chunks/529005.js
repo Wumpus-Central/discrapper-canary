@@ -1,8 +1,8 @@
 e.exports = {
-    yl: "modal__6c516",
-    Hx: "modalFooter__6c516",
-    Hc: "modalHeader__6c516",
-    iT: "modalCloseButton__6c516",
-    jE: "modalContent__6c516",
-    u1: "spinner__6c516",
+    yl: "modal_J_nCoJ",
+    Hx: "modalFooter_J_nCoJ",
+    Hc: "modalHeader_J_nCoJ",
+    iT: "modalCloseButton_J_nCoJ",
+    jE: "modalContent_J_nCoJ",
+    u1: "spinner_J_nCoJ",
 };

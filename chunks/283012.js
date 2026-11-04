@@ -1,10 +1,10 @@
-(n.d(l, { A: () => D, v: () => U }), n(938796));
+n(938796);
 var s = n(477900),
     a = n(582128),
     t = n(503698),
     i = n.n(t),
     r = n(665260),
-    c = n(17928),
+    c = n(855986),
     d = n(993077),
     o = n(834730),
     u = n(628284),
@@ -26,7 +26,7 @@ var j = n(47167),
     G = n(111487),
     M = n(652215),
     L = n(340837),
-    _ = n(105292),
+    _ = n(792996),
     k = n(374636);
 function U(e) {
     let { title: l, emojiId: n, emojiName: a, icon: t, completed: r, Icon: c, onClick: h, ...x } = e,
@@ -97,53 +97,64 @@ function R(e) {
         onClick: N,
     });
 }
-function D(e) {
-    let { guildId: l } = e,
-        n = (0, c.bG)([E.h], () => E.h.getNewMemberActions(l), [l]),
-        t = (0, c.bG)([y.A], () => y.A.getCompletedActions(l)),
-        u = (0, c.bG)([N.Ay], () => N.Ay.getSelfMember(l)),
-        h = (0, c.bG)([f.A], () => f.A.getGuild(l));
-    a.useEffect(() => {
-        null == t && u?.flags != null && (0, r.Lt)(u.flags ?? 0, L.D.STARTED_HOME_ACTIONS) && (0, p.aW)(l);
-    }, [t, l, u?.flags]);
-    let j = a.useCallback(() => {
-        null != h && null != h.rulesChannelId && (0, p.qo)(h.id, h.rulesChannelId);
-    }, [h]);
-    return null == u || null == n || 0 === n.length
-        ? null
-        : (0, s.jsxs)("div", {
-              className: k.kL,
-              children: [
-                  (0, s.jsx)(x.D, {
-                      variant: "heading-lg/semibold",
-                      color: "text-strong",
-                      children: _.intl.string(_.t.LhlgY9),
-                  }),
-                  n.map((e) =>
-                      (0, s.jsx)(R, { action: e, completed: t?.[e.channelId] === !0, guildId: l }, e.channelId),
-                  ),
-                  h?.rulesChannelId != null &&
-                      (0, s.jsx)(m.D, {
-                          onClick: j,
-                          "aria-label": _.intl.string(_.t["K/i3iQ"]),
-                          children: (0, s.jsxs)(d.Z, {
-                              className: i()(k.XI, k.xU),
-                              children: [
-                                  (0, s.jsx)("div", {
-                                      className: k.KK,
-                                      children: (0, s.jsx)(g.B, { size: "xs", color: "currentColor", className: k.ZO }),
-                                  }),
-                                  (0, s.jsx)("div", {
-                                      className: k.$I,
-                                      children: (0, s.jsx)(o.E, {
-                                          variant: "body-md/semibold",
-                                          color: "text-strong",
-                                          children: _.intl.string(_.t["K/i3iQ"]),
-                                      }),
-                                  }),
-                              ],
+n.d(
+    l,
+    {},
+    {
+        A: function (e) {
+            let { guildId: l } = e,
+                n = (0, c.bG)([E.h], () => E.h.getNewMemberActions(l), [l]),
+                t = (0, c.bG)([y.A], () => y.A.getCompletedActions(l)),
+                u = (0, c.bG)([N.Ay], () => N.Ay.getSelfMember(l)),
+                h = (0, c.bG)([f.A], () => f.A.getGuild(l));
+            a.useEffect(() => {
+                null == t && u?.flags != null && (0, r.Lt)(u.flags ?? 0, L.D.STARTED_HOME_ACTIONS) && (0, p.aW)(l);
+            }, [t, l, u?.flags]);
+            let j = a.useCallback(() => {
+                null != h && null != h.rulesChannelId && (0, p.qo)(h.id, h.rulesChannelId);
+            }, [h]);
+            return null == u || null == n || 0 === n.length
+                ? null
+                : (0, s.jsxs)("div", {
+                      className: k.kL,
+                      children: [
+                          (0, s.jsx)(x.D, {
+                              variant: "heading-lg/semibold",
+                              color: "text-strong",
+                              children: _.intl.string(_.t.LhlgY9),
                           }),
-                      }),
-              ],
-          });
-}
+                          n.map((e) =>
+                              (0, s.jsx)(R, { action: e, completed: t?.[e.channelId] === !0, guildId: l }, e.channelId),
+                          ),
+                          h?.rulesChannelId != null &&
+                              (0, s.jsx)(m.D, {
+                                  onClick: j,
+                                  "aria-label": _.intl.string(_.t["K/i3iQ"]),
+                                  children: (0, s.jsxs)(d.Z, {
+                                      className: i()(k.XI, k.xU),
+                                      children: [
+                                          (0, s.jsx)("div", {
+                                              className: k.KK,
+                                              children: (0, s.jsx)(g.B, {
+                                                  size: "xs",
+                                                  color: "currentColor",
+                                                  className: k.ZO,
+                                              }),
+                                          }),
+                                          (0, s.jsx)("div", {
+                                              className: k.$I,
+                                              children: (0, s.jsx)(o.E, {
+                                                  variant: "body-md/semibold",
+                                                  color: "text-strong",
+                                                  children: _.intl.string(_.t["K/i3iQ"]),
+                                              }),
+                                          }),
+                                      ],
+                                  }),
+                              }),
+                      ],
+                  });
+        },
+        v: U,
+    },
+);

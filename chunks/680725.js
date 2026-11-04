@@ -1,4 +1,9 @@
-function i() {
-    return null;
-}
-n.d(t, { A: () => i });
+n.d(
+    t,
+    {},
+    {
+        A: function () {
+            return null;
+        },
+    },
+);

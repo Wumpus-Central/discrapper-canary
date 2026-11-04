@@ -1,4 +1,3 @@
-n.d(t, { x: () => r });
 var i,
     r =
         (((i = {})[(i.COMMON = 1)] = "COMMON"),
@@ -6,3 +5,4 @@ var i,
         (i[(i.EPIC = 3)] = "EPIC"),
         (i[(i.MYTHIC = 5)] = "MYTHIC"),
         i);
+n.d(t, {}, { x: r });

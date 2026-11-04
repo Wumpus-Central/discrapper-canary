@@ -1,11 +1,16 @@
-a.d(t, { A: () => d });
-var s = a(477900),
-    i = a(503698),
-    r = a.n(i),
+var i = a(477900),
+    r = a(503698),
+    s = a.n(r),
     n = a(343053),
     c = a(214847);
-function d(e) {
-    let { variant: t, className: a } = e,
-        { size: i } = (0, n.Z)();
-    return (0, s.jsx)("div", { className: r()(c.wordmark, c[i], "full" === t ? c.full : c.short, a) });
-}
+a.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { variant: t, className: a } = e,
+                { size: r } = (0, n.Z)();
+            return (0, i.jsx)("div", { className: s()(c.wordmark, c[r], "full" === t ? c.full : c.short, a) });
+        },
+    },
+);

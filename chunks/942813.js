@@ -1,1 +1,1 @@
-e.exports = { Ku: "memberItem__5017b", my: "avatar__5017b", L5: "unknown__5017b" };
+e.exports = { Ku: "memberItem_SISQ-M", my: "avatar_SISQ-M", L5: "unknown_SISQ-M" };

@@ -1,0 +1,77 @@
+.container_DwQMm_ {
+    background-color: var(--background-base-lowest);
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    height: 100%;
+    width: 100%
+}
+
+.callContainer_DwQMm_ {
+    background-color: var(--black);
+    flex: 1 1 auto;
+    overflow: hidden
+}
+
+.sidebarVisible_DwQMm_ {
+    margin-inline-end: 8px;
+    overflow: hidden
+}
+
+.sidebarOrChatVisible_DwQMm_ {
+    border-end-end-radius: 8px;
+    border-start-end-radius: 8px
+}
+
+.volumeSlider_DwQMm_ {
+    margin-top: -16px
+}
+
+.chatToasts_DwQMm_ {
+    height: 50%;
+    inset-inline-end: 16px;
+    overflow: hidden;
+    position: absolute;
+    top: 48px;
+    width: 304px
+}
+
+.chatToasts_DwQMm_.rtsSidebarOpen_DwQMm_ {
+    inset-inline-end: 336px
+}
+
+.channelChatWrapper_DwQMm_ {
+    display: flex
+}
+
+.notConnectedView_DwQMm_ {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.notConnectedChannelName_DwQMm_ {
+    font-weight: var(--font-weight-bold);
+    margin: 8px 0;
+    max-width: 75%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.notConnectedJoinButton_DwQMm_ {
+    border-radius: 999px;
+    margin-top: 24px
+}
+
+.customInviteButtonColors_DwQMm_ {
+    background-color: var(--primary-630);
+    color: #fff
+}
+
+.customInviteButtonColors_DwQMm_:hover {
+    background-color: var(--primary-700)
+}
+
+/*# sourceMappingURL=975637c0e0212497.css.map*/

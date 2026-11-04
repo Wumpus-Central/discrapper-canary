@@ -1,5 +1,4 @@
-l.d(t, { A: () => d });
-var n = l(17928),
+var n = l(855986),
     i = l(73153);
 let s = {};
 function a(e) {
@@ -43,3 +42,4 @@ let d = new r(i.h, {
         s = {};
     },
 });
+l.d(t, {}, { A: d });

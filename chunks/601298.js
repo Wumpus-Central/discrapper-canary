@@ -1,30 +1,42 @@
-n.d(t, { X: () => l });
 var r = n(403362),
     a = n(469054);
-function l(e) {
-    let {
-        assetOrigin: t = a.E.NEW_ASSET,
-        imageUri: n,
-        staticImageUri: l,
-        description: i,
-        originalAsset: u,
-        originalMd5: o,
-    } = e;
-    switch (t) {
-        case a.E.NEW_ASSET:
-            return {
-                assetOrigin: t,
+n.d(
+    t,
+    {},
+    {
+        X: function (e) {
+            let {
+                assetOrigin: t = a.E.NEW_ASSET,
                 imageUri: n,
-                staticImageUri: l,
-                description: i,
-                originalAsset: void 0,
+                staticImageUri: i,
+                description: l,
+                originalAsset: u,
                 originalMd5: o,
-            };
-        case a.E.EDITED_ARCHIVED_ASSET:
-            return { assetOrigin: t, imageUri: n, staticImageUri: l, description: i, originalAsset: u, originalMd5: o };
-        case a.E.ARCHIVED_ASSET:
-            return { assetOrigin: t, imageUri: n, description: void 0, originalAsset: u };
-        default:
-            (0, r.xb)(t);
-    }
-}
+            } = e;
+            switch (t) {
+                case a.E.NEW_ASSET:
+                    return {
+                        assetOrigin: t,
+                        imageUri: n,
+                        staticImageUri: i,
+                        description: l,
+                        originalAsset: void 0,
+                        originalMd5: o,
+                    };
+                case a.E.EDITED_ARCHIVED_ASSET:
+                    return {
+                        assetOrigin: t,
+                        imageUri: n,
+                        staticImageUri: i,
+                        description: l,
+                        originalAsset: u,
+                        originalMd5: o,
+                    };
+                case a.E.ARCHIVED_ASSET:
+                    return { assetOrigin: t, imageUri: n, description: void 0, originalAsset: u };
+                default:
+                    (0, r.xb)(t);
+            }
+        },
+    },
+);

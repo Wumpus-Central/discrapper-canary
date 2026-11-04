@@ -1,6 +1,5 @@
-n.d(t, { A: () => O, g: () => S });
 var i,
-    r = n(636537),
+    r = n(620632),
     a = n(765178),
     s = n(73153),
     l = n(315982),
@@ -16,7 +15,7 @@ var i,
     I = n(652215),
     p = n(235627),
     m = n(835002),
-    T = n(105292);
+    T = n(792996);
 function g(e) {
     ((0, f.Z_)(), h.A.show(e));
 }
@@ -60,123 +59,123 @@ function N(e, t, n) {
     throw e;
 }
 let C = {
-        sendRequest(e) {
-            let { discordTag: t, context: n, captchaPayload: i, note: a, errorUxConfig: s = 0 } = e,
-                [l, o] = t.split("#");
-            return r.Bo.post({
-                url: I.Rsh.USER_RELATIONSHIPS(),
-                body: { username: l, discriminator: parseInt(o), note: a, ...i },
-                context: n,
-                oldFormErrors: !0,
-                rejectWithError: (0, r.fT)(),
-            }).catch((e) => {
-                N(e, s, t);
-            });
-        },
-        addRelationship(e, t) {
-            let {
-                    userId: n,
-                    context: i,
-                    type: a,
-                    fromFriendSuggestion: s,
-                    confirmStrangerRequest: l,
-                    captchaPayload: o,
-                } = e,
-                d = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-                c = _.default.getUser(n);
-            return r.Bo.put({
-                url: I.Rsh.USER_RELATIONSHIP(n),
-                body: { type: a, from_friend_suggestion: s, confirm_stranger_request: l, ...o },
-                context: i,
-                oldFormErrors: !0,
-                rejectWithError: (0, r.fT)(),
-            })
-                .then(() => {
-                    t?.();
-                })
-                .catch((e) => (N(e, d, A.Ay.getUserTag(c)), Promise.reject(e)));
-        },
-        acceptFriendRequest: (e) =>
-            C.addRelationship(e, function () {
-                a.O.announce(T.intl.string(T.t["3goNa5"]));
-            }),
-        cancelFriendRequest: (e, t) =>
-            C.removeRelationship(e, t, function () {
-                a.O.announce(T.intl.string(T.t.pLUaxR));
-            }),
-        removeFriend(e, t) {
-            C.removeRelationship(e, t, function () {
-                a.O.announce(T.intl.string(T.t.vGSLa2));
-            });
-        },
-        blockUser: (e, t, n) =>
-            C.addRelationship({ userId: e, context: t, type: I.eA$.BLOCKED }, function () {
-                a.O.announce((0, c.$)(m.OB.BLOCK_SUCCESS, e, n));
-            }),
-        unblockUser: (e, t, n) =>
-            C.removeRelationship(e, t, function () {
-                a.O.announce((0, c.$)(m.OB.UNBLOCK_SUCCESS, e, n));
-            }),
-        removeRelationship: (e, t, n) =>
-            r.Bo.del({ url: I.Rsh.USER_RELATIONSHIP(e), context: t, oldFormErrors: !0, rejectWithError: (0, r.fT)() })
-                .then(() => {
-                    n?.();
-                })
-                .catch(() => {
-                    a.O.announce(T.intl.string(T.t.n6Jo3E));
-                }),
-        updateRelationship: (e, t) =>
-            r.Bo.patch({ url: I.Rsh.USER_RELATIONSHIP(e), body: { nickname: t }, rejectWithError: (0, r.fT)() }),
-        fetchRelationships() {
-            r.Bo.get({ url: I.Rsh.USER_RELATIONSHIPS(), oldFormErrors: !0, rejectWithError: !0 }).then(
-                (e) => s.h.dispatch({ type: "LOAD_RELATIONSHIPS_SUCCESS", relationships: e.body }),
-                () => s.h.dispatch({ type: "LOAD_RELATIONSHIPS_FAILURE" }),
-            );
-        },
-        clearPendingRelationships: () =>
-            r.Bo.del({
-                url: I.Rsh.USER_RELATIONSHIPS(),
-                query: { relationship_type: I.eA$.PENDING_INCOMING },
-                rejectWithError: (0, r.fT)(),
-            })
-                .then(() => {
-                    s.h.dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
-                })
-                .catch(() => {
-                    a.O.announce(T.intl.string(T.t.n6Jo3E));
-                }),
-        clearPendingSpamAndIgnored: () =>
-            r.Bo.del({
-                url: I.Rsh.USER_RELATIONSHIPS(),
-                query: { relationship_type: I.eA$.PENDING_INCOMING },
-                body: { filters: [p.w.SPAM, p.w.IGNORED] },
-                rejectWithError: (0, r.fT)(),
-            })
-                .then(() => {
-                    s.h.dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
-                })
-                .catch(() => {
-                    a.O.announce(T.intl.string(T.t.n6Jo3E));
-                }),
-        ignoreUser: (e, t, n) =>
-            r.Bo.put({ url: I.Rsh.IGNORE_USER(e), context: { location: t }, rejectWithError: (0, r.fT)() })
-                .then(() => {
-                    (s.h.dispatch({ type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId: e, timestamp: Date.now() }),
-                        d.A.showIgnoreSuccessToast(e, n),
-                        a.O.announce((0, c.$)(m.OB.IGNORE_SUCCESS, e, n)));
-                })
-                .catch(() => {
-                    (d.A.showFailedToast(), a.O.announce(T.intl.string(T.t.n6Jo3E)));
-                }),
-        unignoreUser: (e, t, n) =>
-            r.Bo.del({ url: I.Rsh.IGNORE_USER(e), context: { location: t }, rejectWithError: (0, r.fT)() })
-                .then(() => {
-                    (s.h.dispatch({ type: "RELATIONSHIP_UNIGNORE_USER_SUCCESS", userId: e }),
-                        d.A.showUnignoreSuccessToast(e, n),
-                        a.O.announce((0, c.$)(m.OB.UNIGNORE_SUCCESS, e, n)));
-                })
-                .catch(() => {
-                    (d.A.showFailedToast(), a.O.announce(T.intl.string(T.t.n6Jo3E)));
-                }),
+    sendRequest(e) {
+        let { discordTag: t, context: n, captchaPayload: i, note: a, errorUxConfig: s = 0 } = e,
+            [l, o] = t.split("#");
+        return r.Bo.post({
+            url: I.Rsh.USER_RELATIONSHIPS(),
+            body: { username: l, discriminator: parseInt(o), note: a, ...i },
+            context: n,
+            oldFormErrors: !0,
+            rejectWithError: (0, r.fT)(),
+        }).catch((e) => {
+            N(e, s, t);
+        });
     },
-    O = C;
+    addRelationship(e, t) {
+        let {
+                userId: n,
+                context: i,
+                type: a,
+                fromFriendSuggestion: s,
+                confirmStrangerRequest: l,
+                captchaPayload: o,
+            } = e,
+            d = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+            c = _.default.getUser(n);
+        return r.Bo.put({
+            url: I.Rsh.USER_RELATIONSHIP(n),
+            body: { type: a, from_friend_suggestion: s, confirm_stranger_request: l, ...o },
+            context: i,
+            oldFormErrors: !0,
+            rejectWithError: (0, r.fT)(),
+        })
+            .then(() => {
+                t?.();
+            })
+            .catch((e) => (N(e, d, A.Ay.getUserTag(c)), Promise.reject(e)));
+    },
+    acceptFriendRequest: (e) =>
+        C.addRelationship(e, function () {
+            a.O.announce(T.intl.string(T.t["3goNa5"]));
+        }),
+    cancelFriendRequest: (e, t) =>
+        C.removeRelationship(e, t, function () {
+            a.O.announce(T.intl.string(T.t.pLUaxR));
+        }),
+    removeFriend(e, t) {
+        C.removeRelationship(e, t, function () {
+            a.O.announce(T.intl.string(T.t.vGSLa2));
+        });
+    },
+    blockUser: (e, t, n) =>
+        C.addRelationship({ userId: e, context: t, type: I.eA$.BLOCKED }, function () {
+            a.O.announce((0, c.$)(m.OB.BLOCK_SUCCESS, e, n));
+        }),
+    unblockUser: (e, t, n) =>
+        C.removeRelationship(e, t, function () {
+            a.O.announce((0, c.$)(m.OB.UNBLOCK_SUCCESS, e, n));
+        }),
+    removeRelationship: (e, t, n) =>
+        r.Bo.del({ url: I.Rsh.USER_RELATIONSHIP(e), context: t, oldFormErrors: !0, rejectWithError: (0, r.fT)() })
+            .then(() => {
+                n?.();
+            })
+            .catch(() => {
+                a.O.announce(T.intl.string(T.t.n6Jo3E));
+            }),
+    updateRelationship: (e, t) =>
+        r.Bo.patch({ url: I.Rsh.USER_RELATIONSHIP(e), body: { nickname: t }, rejectWithError: (0, r.fT)() }),
+    fetchRelationships() {
+        r.Bo.get({ url: I.Rsh.USER_RELATIONSHIPS(), oldFormErrors: !0, rejectWithError: !0 }).then(
+            (e) => s.h.dispatch({ type: "LOAD_RELATIONSHIPS_SUCCESS", relationships: e.body }),
+            () => s.h.dispatch({ type: "LOAD_RELATIONSHIPS_FAILURE" }),
+        );
+    },
+    clearPendingRelationships: () =>
+        r.Bo.del({
+            url: I.Rsh.USER_RELATIONSHIPS(),
+            query: { relationship_type: I.eA$.PENDING_INCOMING },
+            rejectWithError: (0, r.fT)(),
+        })
+            .then(() => {
+                s.h.dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
+            })
+            .catch(() => {
+                a.O.announce(T.intl.string(T.t.n6Jo3E));
+            }),
+    clearPendingSpamAndIgnored: () =>
+        r.Bo.del({
+            url: I.Rsh.USER_RELATIONSHIPS(),
+            query: { relationship_type: I.eA$.PENDING_INCOMING },
+            body: { filters: [p.w.SPAM, p.w.IGNORED] },
+            rejectWithError: (0, r.fT)(),
+        })
+            .then(() => {
+                s.h.dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
+            })
+            .catch(() => {
+                a.O.announce(T.intl.string(T.t.n6Jo3E));
+            }),
+    ignoreUser: (e, t, n) =>
+        r.Bo.put({ url: I.Rsh.IGNORE_USER(e), context: { location: t }, rejectWithError: (0, r.fT)() })
+            .then(() => {
+                (s.h.dispatch({ type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId: e, timestamp: Date.now() }),
+                    d.A.showIgnoreSuccessToast(e, n),
+                    a.O.announce((0, c.$)(m.OB.IGNORE_SUCCESS, e, n)));
+            })
+            .catch(() => {
+                (d.A.showFailedToast(), a.O.announce(T.intl.string(T.t.n6Jo3E)));
+            }),
+    unignoreUser: (e, t, n) =>
+        r.Bo.del({ url: I.Rsh.IGNORE_USER(e), context: { location: t }, rejectWithError: (0, r.fT)() })
+            .then(() => {
+                (s.h.dispatch({ type: "RELATIONSHIP_UNIGNORE_USER_SUCCESS", userId: e }),
+                    d.A.showUnignoreSuccessToast(e, n),
+                    a.O.announce((0, c.$)(m.OB.UNIGNORE_SUCCESS, e, n)));
+            })
+            .catch(() => {
+                (d.A.showFailedToast(), a.O.announce(T.intl.string(T.t.n6Jo3E)));
+            }),
+};
+n.d(t, {}, { A: C, g: S });

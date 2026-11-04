@@ -1,1 +1,1 @@
-d.exports = { L: "voiceClipThumbnail__60cfd" };
+i.exports = { L: "voiceClipThumbnail_DkTKWs" };

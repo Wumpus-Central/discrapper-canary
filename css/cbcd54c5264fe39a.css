@@ -1,0 +1,42 @@
+.gifPickerContainer_-KEDVj {
+    height: 100vh;
+    overflow-y: hidden
+}
+
+.upsellHeaderContainer_-KEDVj {
+    margin: 0 var(--space-16)
+}
+
+.gifPicker_-KEDVj {
+    background-color: transparent;
+    box-sizing: border-box;
+    height: 100%;
+    padding-top: 16px;
+    width: 100%
+}
+
+.loadingOverlay_-KEDVj {
+    opacity: .6;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.full-motion .loadingOverlay_-KEDVj {
+    transition: all .2s ease
+}
+
+.spinner_-KEDVj {
+    position: absolute;
+    top: 50%;
+    inset-inline: 0;
+    margin: 0 auto
+}
+
+.nitroUpsell_-KEDVj {
+    inset-block: auto var(--space-24);
+    inset-inline: var(--space-12)
+}
+
+/*# sourceMappingURL=cbcd54c5264fe39a.css.map*/

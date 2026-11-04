@@ -1,5 +1,5 @@
-(n.d(e, { A: () => R }), n(321073));
-var r = n(17928),
+n(321073);
+var r = n(855986),
     i = n(73153),
     c = n(370876);
 let a = [],
@@ -55,3 +55,4 @@ let R = new E(i.h, {
         o[e] = { ...o[e], [l[e].mostRecentQuery]: { ...i, results: c } };
     },
 });
+n.d(e, {}, { A: R });

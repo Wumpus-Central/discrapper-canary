@@ -1,1 +1,1 @@
-e.exports = { kL: "container_cd2add", FS: "textContainer_cd2add", TK: "headerText_cd2add", Ad: "newBadge_cd2add" };
+n.exports = { kL: "container_8W_RfC", FS: "textContainer_8W_RfC", TK: "headerText_8W_RfC", Ad: "newBadge_8W_RfC" };

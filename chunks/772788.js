@@ -1,4 +1,3 @@
-n.d(t, { K: () => i });
 let i = (0, n(945810).mj)({
     kind: "guild",
     name: "2026-06-server-theme-apex-shadow",
@@ -11,3 +10,4 @@ let i = (0, n(945810).mj)({
         4: { enabled: !0, inExperiment: !0, gatesApex: !0, rollbackEnabled: !0 },
     },
 });
+n.d(t, {}, { K: i });

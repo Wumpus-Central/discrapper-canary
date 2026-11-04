@@ -1,4 +1,4 @@
-r.d(e, { RedirectToMobile: () => to });
+r.r(e);
 var n = r(249238),
     i = r(783285),
     o = r(768611),
@@ -7,7 +7,7 @@ var n = r(249238),
     l = r(242268),
     u = r(417914),
     c = r(326144);
-r(44263);
+r(685131);
 var d = r(658299),
     h = r(264957);
 r(455939);
@@ -17,7 +17,7 @@ var f = r(612346),
     v = r(434e3),
     m = r(249552),
     E = r(56847),
-    y = r(278893),
+    y = r(311836),
     C = ({ logoSrc: t }) => {
         let { t: e } = (0, i.n)();
         return (0, o.v)("header", {
@@ -162,7 +162,7 @@ var f = r(612346),
         }),
             (e.exports = r));
     }),
-    B = (0, n.t)((t, e) => {
+    M = (0, n.t)((t, e) => {
         function r(t) {
             if (!t || t < 1) throw Error("BitMatrix size must be defined and greater than 0");
             ((this.size = t), (this.data = new Uint8Array(t * t)), (this.reservedBit = new Uint8Array(t * t)));
@@ -182,7 +182,7 @@ var f = r(612346),
             }),
             (e.exports = r));
     }),
-    M = (0, n.t)((t) => {
+    B = (0, n.t)((t) => {
         var e = R().getSymbolSize;
         ((t.getRowColCoords = function (t) {
             if (1 === t) return [];
@@ -937,8 +937,8 @@ var f = r(612346),
         var e = R(),
             r = b(),
             n = A(),
-            i = B(),
-            o = M(),
+            i = M(),
+            o = B(),
             a = N(),
             s = P(),
             l = L(),
@@ -1323,7 +1323,7 @@ var f = r(612346),
                 return i.render(t, r);
             })));
     })(),
-    X = ({ value: t, size: e = 150, bgColor: r = "#ffffff", fgColor: n = "#000000" }) => {
+    Z = ({ value: t, size: e = 150, bgColor: r = "#ffffff", fgColor: n = "#000000" }) => {
         let { t: a } = (0, i.n)(),
             [s, l] = (0, o.p)("");
         return ((0, o._)(() => {
@@ -1341,7 +1341,7 @@ var f = r(612346),
               })
             : null;
     },
-    Z = ({ redirectUrl: t }) => {
+    X = ({ redirectUrl: t }) => {
         let { t: e } = (0, i.n)();
         return (0, o.v)(o.x, {
             children: [
@@ -1349,7 +1349,7 @@ var f = r(612346),
                     class: "IncodeRedirectTabDescription",
                     children: e("v2.redirectToMobile.qr.description"),
                 }),
-                (0, o.v)("div", { class: "IncodeRedirectQrWrapper", children: (0, o.v)(X, { value: t, size: 186 }) }),
+                (0, o.v)("div", { class: "IncodeRedirectQrWrapper", children: (0, o.v)(Z, { value: t, size: 186 }) }),
             ],
         });
     },
@@ -1492,7 +1492,7 @@ var f = r(612346),
                                     children: [
                                         (0, o.v)(E.t.Content, {
                                             value: "qr",
-                                            children: (0, o.v)(Z, { redirectUrl: t }),
+                                            children: (0, o.v)(X, { redirectUrl: t }),
                                         }),
                                         !n &&
                                             (0, o.v)(E.t.Content, {
@@ -1533,7 +1533,7 @@ var f = r(612346),
                 () => {
                     if (e) return e;
                     if (!t) throw Error("RedirectToMobile config is required when no manager is provided");
-                    return (0, y.X3)({ config: t, services: r });
+                    return (0, y.createRedirectToMobileManager)({ config: t, services: r });
                 },
                 { manageLifecycle: !e },
             ),
@@ -1574,4 +1574,5 @@ var f = r(612346),
                     ? (0, o.v)(ti, { config: t, manager: e, services: r, onFinish: n, onContinue: i, onError: a })
                     : null,
         });
-(0, v.t)(to, "incode-redirect-to-mobile", ["config", "services", "onFinish", "onContinue", "onError"]);
+((0, v.t)(to, "incode-redirect-to-mobile", ["config", "services", "onFinish", "onContinue", "onError"]),
+    r.d(e, {}, { RedirectToMobile: to }));

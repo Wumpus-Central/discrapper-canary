@@ -1,0 +1,27 @@
+.camera_xC6zgi {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    transform: scaleX(-1)
+}
+
+.cameraPreview_xC6zgi {
+    background: var(--background-mod-normal);
+    border-radius: 4px;
+    flex-shrink: 0;
+    height: 242px;
+    margin-inline: auto;
+    overflow: hidden;
+    position: relative;
+    width: 430px
+}
+
+@media (max-width:520px) {
+    .cameraPreview_xC6zgi {
+        height: 207px;
+        width: 368px
+    }
+}
+
+/*# sourceMappingURL=55e6c5090a3de890.css.map*/

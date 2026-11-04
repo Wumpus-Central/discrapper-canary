@@ -1,7 +1,7 @@
 e.exports = {
-    iE: "wrapper__4b63d",
-    kR: "cards__4b63d",
-    Nr: "card__4b63d",
-    Kk: "icon__4b63d",
-    h_: "description__4b63d",
+    iE: "wrapper_dgf5AJ",
+    kR: "cards_dgf5AJ",
+    Nr: "card_dgf5AJ",
+    Kk: "icon_dgf5AJ",
+    h_: "description_dgf5AJ",
 };

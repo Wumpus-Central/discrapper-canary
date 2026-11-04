@@ -1,1 +1,1 @@
-_.exports = { uW: "section__1f6ca", wx: "header__1f6ca", vk: "clickable__1f6ca", p_: "list__1f6ca" };
+t.exports = { uW: "section_JqVAf0", wx: "header_JqVAf0", vk: "clickable_JqVAf0", p_: "list_JqVAf0" };

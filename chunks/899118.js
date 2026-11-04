@@ -1,5 +1,5 @@
 e.exports = {
-    _: "sectionContentContainer_b18295",
-    H$: "sectionActivitiesContentContainer_b18295",
-    Gn: "searchOpenAppDetailAppCard_b18295",
+    _: "sectionContentContainer_p3cZPe",
+    H$: "sectionActivitiesContentContainer_p3cZPe",
+    Gn: "searchOpenAppDetailAppCard_p3cZPe",
 };

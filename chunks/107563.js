@@ -1,7 +1,6 @@
-r.d(e, { A: () => c });
-var i = r(17928),
+var i = r(855986),
     l = r(73153),
-    s = r(38405),
+    s = r(856383),
     n = r(855052);
 let u = {};
 function o() {
@@ -113,7 +112,8 @@ let c = new d(l.h, {
     },
     WISHLIST_ITEM_PURCHASED: function (t) {
         let { recipientId: e, skuId: i } = t,
-            l = r(321191).A.getFirstWishlistId(e);
+            l = r(851767).A.getFirstWishlistId(e);
         null != l && null != u[l] && null != u[l].data && (0, n.C3)(u[l].data, i) && (u[l].updatedAt = void 0);
     },
 });
+r.d(e, {}, { A: c });

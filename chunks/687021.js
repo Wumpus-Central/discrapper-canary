@@ -1,29 +1,19 @@
-(n.d(l, { A: () => m, v: () => v }), n(667532));
+n(667532);
 var i = n(477900),
     a = n(582128),
     r = n(503698),
     t = n.n(r),
-    s = n(17928),
+    s = n(855986),
     u = n(444550),
-    d = n(548118),
+    d = n(682163),
     c = n(128450),
     o = n(836602),
     p = n(71393),
     g = n(711014),
     h = n(403362),
-    f = n(105292),
+    f = n(792996),
     x = n(897023);
 function m(e) {
-    let { guildId: l, className: n, globalOption: a, hideDivider: r = !1, onChange: s, renderOptionSuffix: u } = e;
-    return (0, i.jsx)(c.A, {
-        className: t()(x.u, n),
-        title: f.intl.string(f.t.ref7Ki),
-        hideDivider: r,
-        forcedDivider: !0,
-        children: (0, i.jsx)(v, { guildId: l, onChange: s, renderOptionSuffix: u, globalOption: a }),
-    });
-}
-function v(e) {
     let { guildId: l, globalOption: n, onChange: r, renderOptionSuffix: t } = e,
         c = (0, s.bG)([o.A], () => o.A.showNotice()),
         m = (0, s.bG)([g.Ay], () => g.Ay.getFlattenedGuildIds()),
@@ -61,3 +51,27 @@ function v(e) {
         "data-migration-pending": !0,
     });
 }
+n.d(
+    l,
+    {},
+    {
+        A: function (e) {
+            let {
+                guildId: l,
+                className: n,
+                globalOption: a,
+                hideDivider: r = !1,
+                onChange: s,
+                renderOptionSuffix: u,
+            } = e;
+            return (0, i.jsx)(c.A, {
+                className: t()(x.u, n),
+                title: f.intl.string(f.t.ref7Ki),
+                hideDivider: r,
+                forcedDivider: !0,
+                children: (0, i.jsx)(m, { guildId: l, onChange: s, renderOptionSuffix: u, globalOption: a }),
+            });
+        },
+        v: m,
+    },
+);

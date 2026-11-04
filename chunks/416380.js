@@ -1,11 +1,11 @@
-(n.d(t, { A: () => y }), n(321073));
+n(321073);
 var i = n(435558),
     r = n.n(i),
     a = n(803805),
     s = n(439372),
     l = n(26909),
     o = n(630248),
-    d = n(236285),
+    d = n(121681),
     c = n(209932),
     u = n(931959),
     _ = n(205761),
@@ -101,7 +101,7 @@ class S extends s.A {
                             ((e.guildAndChannelFrecency = a.F1.create()),
                             (e.guildAndChannelFrecency.guildAndChannels = (0, f.Mr)(
                                 _.A.frecencyWithoutFetchingLatest.usageHistory,
-                                _.D,
+                                100,
                             ))));
                 },
             }));
@@ -134,3 +134,4 @@ function L(e, t) {
     (null != T && clearTimeout(T), (T = setTimeout(() => R(t), e)));
 }
 let y = new S();
+n.d(t, {}, { A: y });

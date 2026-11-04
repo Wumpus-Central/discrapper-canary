@@ -1,4 +1,3 @@
-n.d(e, { R: () => p, p: () => A });
 var a = n(284009),
     s = n.n(a),
     l = n(196765),
@@ -6,7 +5,7 @@ var a = n(284009),
     h = n(392421),
     i = n(602137),
     g = n(121894),
-    u = n(17928),
+    u = n(855986),
     S = n(734057),
     o = n(679804);
 let C = new Set(),
@@ -58,10 +57,16 @@ class d {
     };
 }
 let c = (0, l.v)((t, e) => new d(t, e));
-function p(t) {
-    let e = c();
-    return null == (0, u.bG)([S.A], () => S.A.getChannel(t)) ? T : e.getChannelState(t);
-}
-function A() {
-    return c;
-}
+n.d(
+    e,
+    {},
+    {
+        R: function (t) {
+            let e = c();
+            return null == (0, u.bG)([S.A], () => S.A.getChannel(t)) ? T : e.getChannelState(t);
+        },
+        p: function () {
+            return c;
+        },
+    },
+);

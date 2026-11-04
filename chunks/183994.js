@@ -1,2 +1,1 @@
-n.d(t, { o: () => i });
-let i = "resizable-sidebar-width-2";
+n.d(t, {}, { o: "resizable-sidebar-width-2" });

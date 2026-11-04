@@ -1,4 +1,3 @@
-n.d(t, { C: () => r, z: () => s });
 var i,
     r =
         (((i = {}).Kill = "cs2_kill"),
@@ -17,6 +16,13 @@ var i,
         (i.GameWinningKill = "cs2_game_winning_kill"),
         i);
 let a = new Set(Object.values(r));
-function s(e) {
-    return null != e.eventName && a.has(e.eventName);
-}
+n.d(
+    t,
+    {},
+    {
+        C: r,
+        z: function (e) {
+            return null != e.eventName && a.has(e.eventName);
+        },
+    },
+);

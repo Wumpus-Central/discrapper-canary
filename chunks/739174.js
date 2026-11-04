@@ -1,19 +1,18 @@
-n.d(t, { A: () => M });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
     a = n.n(s),
     r = n(284009),
     o = n.n(r),
-    c = n(17928),
+    c = n(855986),
     d = n(276293),
     u = n(834730),
     m = n(957485),
     g = n(97808),
     h = n(778712),
     x = n(866665),
-    p = n(194261),
-    A = n(442433),
+    A = n(194261),
+    p = n(442433),
     b = n(392054),
     f = n(168186),
     j = n(47167),
@@ -27,31 +26,9 @@ var i = n(477900),
     S = n(351906),
     k = n(287809),
     O = n(427262),
-    L = n(652215),
-    w = n(105292),
+    w = n(652215),
+    L = n(792996),
     R = n(924466);
-function M(e) {
-    let { guild: t, id: s, type: a, isLocked: r, lockTooltipText: c } = e,
-        d = !r || null != c;
-    o()(d, "No lockTooltipText provided while isLocked=true");
-    let u = l.useCallback(
-        (e) => {
-            (0, A.L3)(e, async () => {
-                let { default: e } = await n.e("715687").then(n.bind(n, 646938));
-                return (t) => (0, i.jsx)(e, { ...t, id: s, label: w.intl.string(w.t.oJ1Muw) });
-            });
-        },
-        [s],
-    );
-    switch (a) {
-        case b.RA.CHANNEL:
-            return (0, i.jsx)(_, { guild: t, id: s, isLocked: r, lockTooltipText: c, openEntryContextMenu: u });
-        case b.RA.ROLE:
-            return (0, i.jsx)(P, { guild: t, id: s, isLocked: r, lockTooltipText: c, openEntryContextMenu: u });
-        case b.RA.USER:
-            return (0, i.jsx)(W, { guild: t, id: s, isLocked: r, lockTooltipText: c, openEntryContextMenu: u });
-    }
-}
 function _(e) {
     let { guild: t, id: n, isLocked: s, lockTooltipText: r, openEntryContextMenu: o } = e,
         m = (0, f.Ap)(t.id),
@@ -62,7 +39,7 @@ function _(e) {
         } = (0, c.cf)(
             [v.A, k.default, y.A],
             () => {
-                if (m === n) return { name: w.intl.string(w.t["7YqSGx"]), icon: d.N };
+                if (m === n) return { name: L.intl.string(L.t["7YqSGx"]), icon: d.N };
                 let e = v.A.getChannel(n),
                     i = e?.parent_id != null ? v.A.getChannel(e.parent_id) : null;
                 return {
@@ -73,7 +50,7 @@ function _(e) {
             },
             [m, t, n],
         ),
-        p = l.useCallback(
+        A = l.useCallback(
             (e) => {
                 n !== m && o(e);
             },
@@ -82,7 +59,7 @@ function _(e) {
     return null == g || null == h
         ? null
         : (0, i.jsxs)("div", {
-              onContextMenu: p,
+              onContextMenu: A,
               className: R.Cv,
               children: [
                   (0, i.jsx)(g, {
@@ -96,11 +73,11 @@ function _(e) {
                   null != x
                       ? (0, i.jsxs)(u.E, { className: R.Tc, variant: "body-sm/normal", children: ["(", x, ")"] })
                       : null,
-                  s ? (0, i.jsx)(D, { tooltipText: r }) : null,
+                  s ? (0, i.jsx)(W, { tooltipText: r }) : null,
               ],
           });
 }
-function P(e) {
+function M(e) {
     let { guild: t, id: s, isLocked: r, lockTooltipText: o } = e,
         d = (0, c.bG)([I.A], () => I.A.getRole(t.id, s)),
         g = (0, E.Xx)({ guildId: t.id, roleId: s, size: 24 }),
@@ -108,8 +85,8 @@ function P(e) {
             (e) => {
                 null != t &&
                     null != d &&
-                    (0, A.L3)(e, async () => {
-                        let { default: e } = await n.e("41072").then(n.bind(n, 165747));
+                    (0, p.L3)(e, async () => {
+                        let { default: e } = await n.e(41072).then(n.bind(n, 165747));
                         return (n) => (0, i.jsx)(e, { ...n, guild: t, role: d });
                     });
             },
@@ -128,7 +105,7 @@ function P(e) {
                             width: 23,
                             height: 23,
                             className: a()(R.a, R.Sl),
-                            color: d.colorString ?? L.TpD,
+                            color: d.colorString ?? w.TpD,
                         }),
                   (0, i.jsx)(u.E, {
                       className: R.S3,
@@ -136,11 +113,11 @@ function P(e) {
                       variant: "body-md/normal",
                       children: d.name,
                   }),
-                  r ? (0, i.jsx)(D, { tooltipText: o }) : null,
+                  r ? (0, i.jsx)(W, { tooltipText: o }) : null,
               ],
           });
 }
-function W(e) {
+function P(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: s, openEntryContextMenu: a } = e,
         r = (0, c.bG)([k.default], () => k.default.getUser(n)),
         o = (0, c.bG)([T.Ay], () => T.Ay.getMember(t.id, n)?.nick, [t.id, n]),
@@ -166,17 +143,45 @@ function W(e) {
                   d
                       ? null
                       : (0, i.jsx)(u.E, { className: R.Tc, variant: "body-sm/normal", children: O.Ay.getUserTag(r) }),
-                  l ? (0, i.jsx)(D, { tooltipText: s }) : null,
+                  l ? (0, i.jsx)(W, { tooltipText: s }) : null,
               ],
           });
 }
-function D(e) {
+function W(e) {
     let { tooltipText: t } = e;
     return (0, i.jsx)(x.m, {
         text: t,
         children: (0, i.jsx)("div", {
             className: R.hz,
-            children: (0, i.jsx)(p.LockIcon, { size: "xs", color: "currentColor" }),
+            children: (0, i.jsx)(A.LockIcon, { size: "xs", color: "currentColor" }),
         }),
     });
 }
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { guild: t, id: s, type: a, isLocked: r, lockTooltipText: c } = e,
+                d = !r || null != c;
+            o()(d, "No lockTooltipText provided while isLocked=true");
+            let u = l.useCallback(
+                (e) => {
+                    (0, p.L3)(e, async () => {
+                        let { default: e } = await n.e(715687).then(n.bind(n, 646938));
+                        return (t) => (0, i.jsx)(e, { ...t, id: s, label: L.intl.string(L.t.oJ1Muw) });
+                    });
+                },
+                [s],
+            );
+            switch (a) {
+                case b.RA.CHANNEL:
+                    return (0, i.jsx)(_, { guild: t, id: s, isLocked: r, lockTooltipText: c, openEntryContextMenu: u });
+                case b.RA.ROLE:
+                    return (0, i.jsx)(M, { guild: t, id: s, isLocked: r, lockTooltipText: c, openEntryContextMenu: u });
+                case b.RA.USER:
+                    return (0, i.jsx)(P, { guild: t, id: s, isLocked: r, lockTooltipText: c, openEntryContextMenu: u });
+            }
+        },
+    },
+);

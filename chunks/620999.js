@@ -1,4 +1,9 @@
-t.d(d, { v: () => u });
-function u(a) {
-    return a.data.audible || a.data.userMuted;
-}
+t.d(
+    d,
+    {},
+    {
+        v: function (a) {
+            return a.data.audible || a.data.userMuted;
+        },
+    },
+);

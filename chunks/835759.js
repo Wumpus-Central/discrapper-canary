@@ -1,7 +1,6 @@
-s.d(l, { A: () => o });
 var t = s(477900),
     n = s(582128),
-    i = s(17928),
+    i = s(855986),
     r = s(531685),
     a = s(620141),
     c = s(19309),
@@ -20,6 +19,12 @@ function u(e) {
         null
     );
 }
-function o(e) {
-    return (0, t.jsx)(a.A, { confettiLocation: e.confettiLocation, children: (0, t.jsx)(u, { ...e }) });
-}
+s.d(
+    l,
+    {},
+    {
+        A: function (e) {
+            return (0, t.jsx)(a.A, { confettiLocation: e.confettiLocation, children: (0, t.jsx)(u, { ...e }) });
+        },
+    },
+);

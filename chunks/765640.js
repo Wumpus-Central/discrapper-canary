@@ -359,17 +359,16 @@ async function Module(moduleArg = {}) {
                 wasmExports
             );
         }
-        function _(_) {
-            return e(_.instance, _.module);
-        }
-        var t = getWasmImports();
+        var _,
+            t = getWasmImports();
         return Module.instantiateWasm
             ? new Promise((_, r) => {
                   Module.instantiateWasm(t, (t, r) => {
                       _(e(t, r));
                   });
               })
-            : ((wasmBinaryFile ??= findWasmBinary()), _(await instantiateAsync(wasmBinary, wasmBinaryFile, t)));
+            : ((wasmBinaryFile ??= findWasmBinary()),
+              e((_ = await instantiateAsync(wasmBinary, wasmBinaryFile, t)).instance, _.module));
     }
     class ExitStatus {
         name = "ExitStatus";
@@ -448,67 +447,56 @@ async function Module(moduleArg = {}) {
             var _ = 0,
                 t = 0;
             function r() {
-                return e[_++];
-            }
-            function s() {
                 for (var t = 0, r = 1; ;) {
                     var s = e[_++];
                     if (((t += (127 & s) * r), (r *= 128), !(128 & s))) break;
                 }
                 return t;
             }
-            function a() {
-                var t = s();
+            function s() {
+                var t = r();
                 return ((_ += t), UTF8ArrayToString(e, _ - t, t));
             }
-            function n() {
-                for (var e = s(), _ = []; e--;) _.push(a());
+            function a() {
+                for (var e = r(), _ = []; e--;) _.push(s());
                 return _;
             }
-            function o(e, _) {
+            function n(e, _) {
                 if (e) throw Error(_);
             }
             if (e instanceof WebAssembly.Module) {
-                var i = WebAssembly.Module.customSections(e, "dylink.0");
-                (o(0 === i.length, "need dylink section"), (t = (e = new Uint8Array(i[0])).length));
+                var o = WebAssembly.Module.customSections(e, "dylink.0");
+                (n(0 === o.length, "need dylink section"), (t = (e = new Uint8Array(o[0])).length));
             } else {
-                var d = new Uint32Array(new Uint8Array(e.subarray(0, 24)).buffer);
-                (o(0x6d736100 != d[0] && 6386541 != d[0], "need to see wasm magic number"),
-                    o(0 !== e[8], "need the dylink section to be first"),
+                var i = new Uint32Array(new Uint8Array(e.subarray(0, 24)).buffer);
+                (n(0x6d736100 != i[0] && 6386541 != i[0], "need to see wasm magic number"),
+                    n(0 !== e[8], "need the dylink section to be first"),
                     (_ = 9));
-                var u = s();
-                ((t = _ + u), o("dylink.0" !== a()));
+                var d = r();
+                ((t = _ + d), n("dylink.0" !== s()));
             }
             for (
-                var l = { neededDynlibs: [], tlsExports: new Set(), weakImports: new Set(), runtimePaths: [] },
-                    c = 1,
-                    m = 2,
-                    f = 3,
-                    p = 4,
-                    w = 5,
-                    g = 256,
-                    y = 3,
-                    h = 1;
+                var l = { neededDynlibs: [], tlsExports: new Set(), weakImports: new Set(), runtimePaths: [] };
                 _ < t;
             ) {
-                var b = r(),
-                    v = s();
-                if (b === c) ((l.memorySize = s()), (l.memoryAlign = s()), (l.tableSize = s()), (l.tableAlign = s()));
-                else if (b === m) l.neededDynlibs = n();
-                else if (b === f)
-                    for (var x = s(); x--;) {
-                        var A = a(),
-                            k = s();
-                        k & g && l.tlsExports.add(A);
+                var u = e[_++],
+                    c = r();
+                if (1 === u) ((l.memorySize = r()), (l.memoryAlign = r()), (l.tableSize = r()), (l.tableAlign = r()));
+                else if (2 === u) l.neededDynlibs = a();
+                else if (3 === u)
+                    for (var m = r(); m--;) {
+                        var f = s(),
+                            p = r();
+                        256 & p && l.tlsExports.add(f);
                     }
-                else if (b === p)
-                    for (var x = s(); x--;) {
-                        a();
-                        var A = a(),
-                            k = s();
-                        (k & y) == h && l.weakImports.add(A);
+                else if (4 === u)
+                    for (var m = r(); m--;) {
+                        s();
+                        var f = s(),
+                            p = r();
+                        (3 & p) == 1 && l.weakImports.add(f);
                     }
-                else b === w ? (l.runtimePaths = n()) : (_ += v);
+                else 5 === u ? (l.runtimePaths = a()) : (_ += c);
             }
             return l;
         };
@@ -675,11 +663,10 @@ async function Module(moduleArg = {}) {
             return !1;
         },
         relocateExports = (e, _ = 0) => {
-            function t(e, t) {
-                return isImmutableGlobal(t) ? new WebAssembly.Global({ value: "i32" }, t.value + _) : t;
-            }
-            var r = {};
-            for (var s in e) r[s] = t(s, e[s]);
+            var t,
+                r = {};
+            for (var s in e)
+                r[s] = isImmutableGlobal((t = e[s])) ? new WebAssembly.Global({ value: "i32" }, t.value + _) : t;
             return r;
         },
         isSymbolDefined = (e) => {
@@ -687,10 +674,7 @@ async function Module(moduleArg = {}) {
             return !!_ && !_.stub;
         },
         createNamedFunction = (e, _) => Object.defineProperty(_, "name", { value: e }),
-        dynCall = (e, _, t = [], r = !1) => {
-            var s;
-            return (s = getWasmTableEntry(_)(...t));
-        },
+        dynCall = (e, _, t = [], r = !1) => getWasmTableEntry(_)(...t),
         stackSave = () => _emscripten_stack_get_current(),
         stackRestore = (e) => __emscripten_stack_restore(e),
         createInvokeFunction =
@@ -844,7 +828,7 @@ async function Module(moduleArg = {}) {
                 _.global
                     ? s.global || ((s.global = !0), mergeLibSymbols(s.exports, e))
                     : t && Object.assign(t, s.exports),
-                _.nodelete && s.refcount !== 1 / 0 && (s.refcount = 1 / 0),
+                _.nodelete && 1 / 0 !== s.refcount && (s.refcount = 1 / 0),
                 s.refcount++,
                 r && (LDSO.loadedLibsByHandle[r] = s),
                 !_.loadAsync || Promise.resolve(!0)
@@ -954,9 +938,9 @@ async function Module(moduleArg = {}) {
     __abort_js.sig = "v";
     var getHeapMax = () => 0x80000000,
         growMemory = (e) => {
-            var _ = ((e - wasmMemory.buffer.byteLength + 65535) / 65536) | 0;
+            var _ = wasmMemory.buffer.byteLength;
             try {
-                return (wasmMemory.grow(_), updateMemoryViews(), 1);
+                return (wasmMemory.grow(((e - _ + 65535) / 65536) | 0), updateMemoryViews(), 1);
             } catch (e) {}
         },
         _emscripten_resize_heap = (e) => {
@@ -1048,7 +1032,7 @@ async function Module(moduleArg = {}) {
     _fd_read.sig = "iippp";
     var INT53_MAX = 0x20000000000000,
         INT53_MIN = -0x20000000000000,
-        bigintToI53Checked = (e) => (e < INT53_MIN || e > INT53_MAX ? NaN : Number(e));
+        bigintToI53Checked = (e) => (e < INT53_MIN || e > INT53_MAX ? 0 / 0 : Number(e));
     function _fd_seek(e, _, t, r) {
         return ((_ = bigintToI53Checked(_)), 70);
     }
@@ -1079,9 +1063,8 @@ async function Module(moduleArg = {}) {
         }
     }
     function _tree_sitter_parse_callback(e, _, t, r, s) {
-        let a = 10240,
-            n = Module.currentParseCallback(_, { row: t, column: r });
-        "string" == typeof n ? (setValue(s, n.length, "i32"), stringToUTF16(n, e, a)) : setValue(s, 0, "i32");
+        let a = Module.currentParseCallback(_, { row: t, column: r });
+        "string" == typeof a ? (setValue(s, a.length, "i32"), stringToUTF16(a, e, 10240)) : setValue(s, 0, "i32");
     }
     function _tree_sitter_progress_callback(e, _) {
         return !!Module.currentProgressCallback && Module.currentProgressCallback({ currentOffset: e, hasError: _ });
@@ -1450,11 +1433,13 @@ async function Module(moduleArg = {}) {
             return;
         }
         function _() {
-            if (((Module.calledRun = !0), !ABORT)) {
-                (initRuntime(), readyPromiseResolve?.(Module), Module.onRuntimeInitialized?.());
-                var _ = Module.noInitialRun || !1;
-                (_ || callMain(e), postRun());
-            }
+            ((Module.calledRun = !0),
+                ABORT ||
+                    (initRuntime(),
+                    readyPromiseResolve?.(Module),
+                    Module.onRuntimeInitialized?.(),
+                    Module.noInitialRun || callMain(e),
+                    postRun()));
         }
         Module.setStatus
             ? (Module.setStatus("Running..."),
@@ -1473,5 +1458,5 @@ async function Module(moduleArg = {}) {
               }))
     );
 }
-__webpack_require__.d(__webpack_exports__, { default: () => __rspack_default_export });
 let __rspack_default_export = Module;
+__webpack_require__.d(__webpack_exports__, { default: () => __rspack_default_export });

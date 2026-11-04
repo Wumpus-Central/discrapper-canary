@@ -1,0 +1,25 @@
+.footer_PiyhYP {
+    align-items: center;
+    justify-content: space-between
+}
+
+.failedDestinations_PiyhYP {
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    margin-top: 16px;
+    padding: 8px 16px
+}
+
+.failedRow_PiyhYP {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    height: 48px
+}
+
+.label_PiyhYP {
+    color: var(--text-strong)
+}
+
+/*# sourceMappingURL=869becb973bd9afd.css.map*/

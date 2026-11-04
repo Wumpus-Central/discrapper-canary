@@ -1,8 +1,7 @@
-n.d(t, { A: () => u, k: () => c });
-var i = n(17928),
+var i = n(855986),
     r = n(164956),
-    a = n(280450),
-    s = n(477653),
+    a = n(46653),
+    s = n(718197),
     l = n(576705),
     o = n(977997),
     d = n(652215);
@@ -21,15 +20,22 @@ function c(e) {
         f = _.isViewingRoles(h) && !u.can(d.xBc.SPEAK, t);
     return { selfMute: A, suppress: E?.suppress || f, mute: E?.mute ?? !1 };
 }
-function u(e) {
-    return (0, i.cf)([a.default, o.A, s.Ay, l.A, r.A], () =>
-        c({
-            channel: e,
-            authenticationStore: a.default,
-            voiceStateStore: o.A,
-            mediaEngineStore: s.Ay,
-            permissionStore: l.A,
-            impersonateStore: r.A,
-        }),
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            return (0, i.cf)([a.default, o.A, s.Ay, l.A, r.A], () =>
+                c({
+                    channel: e,
+                    authenticationStore: a.default,
+                    voiceStateStore: o.A,
+                    mediaEngineStore: s.Ay,
+                    permissionStore: l.A,
+                    impersonateStore: r.A,
+                }),
+            );
+        },
+        k: c,
+    },
+);

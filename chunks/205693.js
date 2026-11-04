@@ -1,4 +1,3 @@
-n.d(t, { Qo: () => d, Tr: () => u, WI: () => E, bg: () => l.b, gO: () => c, hB: () => A, x: () => o.x, yq: () => s.y });
 var i,
     r,
     a,
@@ -18,17 +17,26 @@ var i,
 function _(e) {
     switch (e) {
         case o.Ku.NATIVE:
-            return n(206959).A;
+            return n(31595).A;
         case o.Ku.WEBRTC:
-            return n(725999).A;
+            return n(510098).A;
         case o.Ku.DUMMY:
         default:
             return n(432351).A;
     }
 }
-function E() {
-    return [o.Ku.NATIVE, o.Ku.WEBRTC].find((e) => _(e).supported()) ?? o.Ku.DUMMY;
-}
-function A(e) {
-    return new (_(e))();
-}
+n.d(
+    t,
+    { bg: () => l.b, x: () => o.x, yq: () => s.y },
+    {
+        Qo: d,
+        Tr: u,
+        WI: function () {
+            return [o.Ku.NATIVE, o.Ku.WEBRTC].find((e) => _(e).supported()) ?? o.Ku.DUMMY;
+        },
+        gO: c,
+        hB: function (e) {
+            return new (_(e))();
+        },
+    },
+);

@@ -1,0 +1,12 @@
+.doubleInput_GpenTv {
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.doubleInput_GpenTv>div {
+    flex: 1 1 0;
+    width: 0
+}
+
+/*# sourceMappingURL=3a5680424f66f8f2.css.map*/

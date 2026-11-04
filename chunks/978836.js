@@ -1,9 +1,9 @@
 e.exports = {
-    zr: "root__97f53",
-    N: "lifted__97f53",
-    eq: "stop1__97f53",
-    l_: "stop2__97f53",
-    sM: "stop3__97f53",
-    zi: "stop4__97f53",
-    s1: "stop5__97f53",
+    zr: "root_p22bPt",
+    N: "lifted_p22bPt",
+    eq: "stop1_p22bPt",
+    l_: "stop2_p22bPt",
+    sM: "stop3_p22bPt",
+    zi: "stop4_p22bPt",
+    s1: "stop5_p22bPt",
 };

@@ -1,0 +1,66 @@
+.container_kQORUk {
+    align-items: center;
+    display: block;
+    flex: 1 1 auto;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    white-space: nowrap
+}
+
+.container_kQORUk .chipletContainer_kQORUk {
+    display: inline-block;
+    overflow: hidden
+}
+
+.container_kQORUk .chipletParent_kQORUk {
+    display: inline;
+    overflow: hidden;
+    padding-inline-start: 4px;
+    position: relative
+}
+
+.container_kQORUk .usernameContainer_kQORUk {
+    display: inline-block;
+    flex: 1;
+    margin-top: 2px;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.container_kQORUk.isOverlayContainer_kQORUk {
+    align-content: center;
+    background: var(--background-base-low);
+    border-radius: 4px;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    height: 20px
+}
+
+.container_kQORUk.isOverlayContainer_kQORUk .usernameContainer_kQORUk {
+    margin-top: 0
+}
+
+.container_kQORUk.isOverlayContainer_kQORUk .chipletContainer_kQORUk,
+.container_kQORUk.isOverlayContainer_kQORUk .chipletParent_kQORUk {
+    align-content: center;
+    align-items: center;
+    display: flex
+}
+
+.container_kQORUk.isOverlayContainer_kQORUk .chipletContainer_kQORUk {
+    margin: 0;
+    padding: 1.5px
+}
+
+.container_kQORUk.isOverlayContainer_kQORUk .chipletContainer_kQORUk.noPadding_kQORUk {
+    padding: 0
+}
+
+.isOverlayTag_kQORUk {
+    margin: 0
+}
+
+/*# sourceMappingURL=10e6ac2b444f0ee4.css.map*/

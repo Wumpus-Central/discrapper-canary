@@ -1,26 +1,25 @@
-i.d(l, { Ay: () => k, cq: () => I, q6: () => S });
 var n,
     a = i(477900),
     s = i(582128),
     t = i(503698),
     r = i.n(t),
     o = i(837381),
-    d = i(17928),
+    d = i(855986),
     m = i(789645),
     c = i(834730),
     u = i(939249),
     j = i(866665),
-    b = i(872162),
+    b = i(431527),
     y = i(442433),
-    g = i(788026),
+    g = i(565645),
     p = i(775602),
-    x = i(236285),
+    x = i(121681),
     h = i(253932),
     A = i(486020),
     f = i(957565),
     C = i(690521),
     L = i(732139),
-    M = i(105292),
+    M = i(792996),
     N = i(715434),
     v = (((n = v || {})[(n.SMALL = 0)] = "SMALL"), (n[(n.MEDIUM = 1)] = "MEDIUM"), n);
 function E(e) {
@@ -102,9 +101,7 @@ function k(e) {
                         f.p5 &&
                         n &&
                         (0, y.L3)(e, async () => {
-                            let { default: e } = await Promise.all([i.e("638221"), i.e("432612")]).then(
-                                i.bind(i, 960015),
-                            );
+                            let { default: e } = await Promise.all([i.e(638221), i.e(432612)]).then(i.bind(i, 960015));
                             return (i) => (0, a.jsx)(e, { ...i, tag: l });
                         })
                     )
@@ -127,26 +124,39 @@ function k(e) {
           })
         : (0, a.jsx)("div", { ...F, children: D });
 }
-function S(e) {
-    let { tags: l, count: i, size: n = 1, useManaTagGroup: s = !1 } = e,
-        t = 0 === n,
-        o = I(l);
-    return (0, a.jsx)(j.m, {
-        "aria-label": M.intl.string(M.t["P/y+sj"]),
-        __unsupportedReactNodeAsText: s
-            ? (0, a.jsx)(b.C, { variant: "filter", size: "xs", label: M.intl.string(M.t["P/y+sj"]), items: o })
-            : (0, a.jsx)(a.Fragment, {
-                  children: l.map((e) =>
-                      (0, a.jsx)(k, { tag: e, className: N.tooltipPill, size: k.Sizes.SMALL }, e.id),
-                  ),
-              }),
-        children: (0, a.jsx)("div", {
-            className: r()(N.pill, { [N.small]: t, [N.manaFilterTag]: s }),
-            children: (0, a.jsxs)(c.E, {
-                variant: s ? "body-xs/normal" : t ? "body-xs/semibold" : "body-sm/semibold",
-                children: ["+", i],
-            }),
-        }),
-    });
-}
-k.Sizes = v;
+((k.Sizes = v),
+    i.d(
+        l,
+        {},
+        {
+            Ay: k,
+            cq: I,
+            q6: function (e) {
+                let { tags: l, count: i, size: n = 1, useManaTagGroup: s = !1 } = e,
+                    t = 0 === n,
+                    o = I(l);
+                return (0, a.jsx)(j.m, {
+                    "aria-label": M.intl.string(M.t["P/y+sj"]),
+                    __unsupportedReactNodeAsText: s
+                        ? (0, a.jsx)(b.C, {
+                              variant: "filter",
+                              size: "xs",
+                              label: M.intl.string(M.t["P/y+sj"]),
+                              items: o,
+                          })
+                        : (0, a.jsx)(a.Fragment, {
+                              children: l.map((e) =>
+                                  (0, a.jsx)(k, { tag: e, className: N.tooltipPill, size: k.Sizes.SMALL }, e.id),
+                              ),
+                          }),
+                    children: (0, a.jsx)("div", {
+                        className: r()(N.pill, { [N.small]: t, [N.manaFilterTag]: s }),
+                        children: (0, a.jsxs)(c.E, {
+                            variant: s ? "body-xs/normal" : t ? "body-xs/semibold" : "body-sm/semibold",
+                            children: ["+", i],
+                        }),
+                    }),
+                });
+            },
+        },
+    ));

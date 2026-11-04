@@ -1,5 +1,4 @@
-i.d(t, { A: () => c, M: () => a });
-var s = i(17928),
+var s = i(855986),
     n = i(616356),
     r = i(994500),
     l = i(652215);
@@ -9,6 +8,13 @@ function a(e) {
         a = null != e ? t.getAnyDiscoverableStreamForUser(e) : null;
     return s === l.eA$.BLOCKED || null == e ? null : a;
 }
-function c(e) {
-    return (0, s.bG)([n.A, r.A], () => a(e, [n.A, r.A]), [e]);
-}
+i.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            return (0, s.bG)([n.A, r.A], () => a(e, [n.A, r.A]), [e]);
+        },
+        M: a,
+    },
+);

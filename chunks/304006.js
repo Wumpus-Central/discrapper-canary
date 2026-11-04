@@ -1,24 +1,33 @@
-i.d(t, { h: () => d });
 var r = i(477900),
     a = i(582128),
-    c = i(17928),
+    c = i(855986),
     n = i(477782),
     s = i(652896),
     l = i(144485),
     u = i(83942),
     p = i(259374),
     o = i(616356),
-    b = i(105292);
-function d(e) {
-    let { stream: t, channelId: i } = e,
-        d = (0, p.k)({ channelId: i }),
-        h = (0, c.bG)([o.A], () => null != o.A.getActiveStreamForApplicationStream(t)),
-        k = (0, s._z)(t),
-        m = (0, u.w)(k),
-        f = a.useCallback(() => {
-            l.A.openSecureFramesStreamVerification(k, i);
-        }, [i, k]);
-    return d && h && !m
-        ? (0, r.jsx)(n.Dr, { id: "secure-frames-stream-verification", label: b.intl.string(b.t.tjbJbf), action: f })
-        : null;
-}
+    b = i(792996);
+i.d(
+    t,
+    {},
+    {
+        h: function (e) {
+            let { stream: t, channelId: i } = e,
+                d = (0, p.k)({ channelId: i }),
+                h = (0, c.bG)([o.A], () => null != o.A.getActiveStreamForApplicationStream(t)),
+                k = (0, s._z)(t),
+                m = (0, u.w)(k),
+                f = a.useCallback(() => {
+                    l.A.openSecureFramesStreamVerification(k, i);
+                }, [i, k]);
+            return d && h && !m
+                ? (0, r.jsx)(n.Dr, {
+                      id: "secure-frames-stream-verification",
+                      label: b.intl.string(b.t.tjbJbf),
+                      action: f,
+                  })
+                : null;
+        },
+    },
+);

@@ -1,0 +1,20 @@
+n.d(t, { A: () => d });
+var l = n(582128),
+    i = n(997101),
+    s = n(855986),
+    a = n(966107),
+    r = n(840387),
+    o = n(454409);
+[...i.M.EU_COUNTRIES];
+let c = new Set(["GB"]);
+function d() {
+    let e, t;
+    return (
+        (e = (0, s.bG)([o.A], () => o.A.getUserCountryCode())),
+        l.useEffect(() => {
+            null == e && (0, a.xf)();
+        }, [e]),
+        (t = e),
+        (0, r.Z)() && null != t && c.has(t.alpha2)
+    );
+}

@@ -1,38 +1,43 @@
-r.d(e, { A: () => u, b: () => l });
-var n = r(477900);
-r(582128);
-var i = r(866665),
-    a = r(62010),
-    o = r(278416),
-    c = r(105292);
+var n = e(477900);
+e(582128);
+var i = e(866665),
+    a = e(805251),
+    o = e(278416),
+    c = e(792996);
 function s(t) {
-    let { promotion: e, children: r } = t;
+    let { promotion: r, children: e } = t;
     return (0, n.jsx)(i.m, {
         position: "top",
         asContainer: !0,
-        text: c.intl.formatToPlainString(c.t.cNtuKF, { offerName: e.displayName }),
-        children: r,
+        text: c.intl.formatToPlainString(c.t.cNtuKF, { offerName: r.displayName }),
+        children: e,
     });
 }
-function l(t) {
-    let { promotion: e } = t;
-    return (0, n.jsx)(s, {
-        promotion: e,
-        children: (0, n.jsx)(a.E, {
-            type: { text: c.intl.string(c.t["nb5PC/"]) },
-            variant: "inverted",
-            icon: o.TagIcon,
-        }),
-    });
-}
-let u = (t) => {
-    let { promotion: e } = t;
-    return (0, n.jsx)(s, {
-        promotion: e,
-        children: (0, n.jsx)(a.E, {
-            type: { text: c.intl.string(c.t["nb5PC/"]) },
-            variant: "expressive",
-            icon: o.TagIcon,
-        }),
-    });
-};
+e.d(
+    r,
+    {},
+    {
+        A: (t) => {
+            let { promotion: r } = t;
+            return (0, n.jsx)(s, {
+                promotion: r,
+                children: (0, n.jsx)(a.E, {
+                    type: { text: c.intl.string(c.t["nb5PC/"]) },
+                    variant: "expressive",
+                    icon: o.TagIcon,
+                }),
+            });
+        },
+        b: function (t) {
+            let { promotion: r } = t;
+            return (0, n.jsx)(s, {
+                promotion: r,
+                children: (0, n.jsx)(a.E, {
+                    type: { text: c.intl.string(c.t["nb5PC/"]) },
+                    variant: "inverted",
+                    icon: o.TagIcon,
+                }),
+            });
+        },
+    },
+);

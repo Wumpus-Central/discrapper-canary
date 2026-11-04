@@ -1,8 +1,7 @@
-n.d(t, { default: () => b });
 var a = n(477900),
     r = n(582128),
     s = n(575593),
-    i = n(17928),
+    i = n(855986),
     l = n(778712),
     d = n(534514),
     u = n(834730),
@@ -10,20 +9,20 @@ var a = n(477900),
     c = n(631670),
     m = n(162232),
     g = n(674658),
-    h = n(56348),
+    h = n(435911),
     p = n(84540),
     A = n(836602),
     f = n(287809),
-    v = n(38405),
-    C = n(427495),
-    x = n(738822),
-    j = n(77870),
-    k = n(31046),
-    R = n(801365),
-    w = n(801870),
-    E = n(586035),
-    D = n(190107),
-    _ = n(105292),
+    v = n(856383),
+    C = n(7891),
+    x = n(506988),
+    j = n(61387),
+    k = n(760914),
+    R = n(417404),
+    w = n(280249),
+    E = n(670092),
+    D = n(221596),
+    _ = n(792996),
     I = n(928213);
 function S(e) {
     let { quest: t, avatarDeco: n, onUseNow: r, user: s, mode: i } = e,
@@ -67,58 +66,74 @@ function S(e) {
         ],
     });
 }
-function b(e) {
-    let { initialQuest: t, onClose: n, transitionState: l, preview: d, location: u, sourceQuestContent: o } = e,
-        m = (0, j.C5)(t.id) ?? t,
-        k = r.useMemo(() => (0, R.nj)(m.config), [m]),
-        _ = (0, i.bG)([f.default], () => f.default.getCurrentUser()),
-        [I, b] = (function (e) {
-            let { product: t, isFetching: n } = (0, g.q)(e),
-                a = r.useMemo(
-                    () => (null == t || n ? null : (t.items.find((e) => e.type === s.R.AVATAR_DECORATION) ?? null)),
-                    [t, n],
-                );
-            async function i() {
-                if (null == a)
-                    return (v.A.addBreadcrumb({ message: "Error saving avatar decoration; it is null" }), !1);
-                (0, p.p)({ avatarDecoration: a });
-                let e = A.A.getPendingChanges(),
-                    t = (0, h.Sk)(e),
-                    n = await (0, c._L)(t);
-                return ((0, c.pZ)(), !!n?.ok);
-            }
-            return [a, i];
-        })(k?.skuId ?? null),
-        O = m.userStatus?.claimedAt != null,
-        y = !d && !O,
-        [L, N] = r.useState(y ? "loading" : "claimed");
-    r.useEffect(() => {
-        y &&
-            (0, C.Oq)(m.id, x.pY.CROSS_PLATFORM, u)
-                .then(() => N("claimed"))
-                .catch(() => N("error"));
-    }, [m.id, u, y]);
-    let Y = !0 === d && null === I && k?.skuId !== "",
-        q = null == _,
-        M = q || (null == I && !0 !== d) || Y || "loading" === L,
-        T = "error" === L || null == k;
-    async function W() {
-        (N("applying"), N((await b()) ? "applied" : "claimed"));
-    }
-    return (0, a.jsx)(E.A, {
-        onClose: n,
-        transitionState: l,
-        quest: m,
-        sourceQuestContent: o,
-        location: D.rE.COLLECTIBLE_REWARD_MODAL,
-        isRewardContentLoading: M,
-        rewardContentHasError: T,
-        rewardContent:
-            T || q
-                ? null
-                : (0, a.jsx)(w.A, {
-                      rewardName: k.messages.name,
-                      children: (0, a.jsx)(S, { quest: m, avatarDeco: I, user: _, mode: L, onUseNow: W }),
-                  }),
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        default: function (e) {
+            let { initialQuest: t, onClose: n, transitionState: l, preview: d, location: u, sourceQuestContent: o } = e,
+                m = (0, j.C5)(t.id) ?? t,
+                k = r.useMemo(() => (0, R.nj)(m.config), [m]),
+                _ = (0, i.bG)([f.default], () => f.default.getCurrentUser()),
+                [I, b] = (function (e) {
+                    let { product: t, isFetching: n } = (0, g.q)(e),
+                        a = r.useMemo(
+                            () =>
+                                null == t || n ? null : (t.items.find((e) => e.type === s.R.AVATAR_DECORATION) ?? null),
+                            [t, n],
+                        );
+                    return [
+                        a,
+                        async function () {
+                            if (null == a)
+                                return (
+                                    v.A.addBreadcrumb({ message: "Error saving avatar decoration; it is null" }), !1
+                                );
+                            (0, p.p)({ avatarDecoration: a });
+                            let e = A.A.getPendingChanges(),
+                                t = (0, h.Sk)(e),
+                                n = await (0, c._L)(t);
+                            return ((0, c.pZ)(), !!n?.ok);
+                        },
+                    ];
+                })(k?.skuId ?? null),
+                O = m.userStatus?.claimedAt != null,
+                y = !d && !O,
+                [L, N] = r.useState(y ? "loading" : "claimed");
+            r.useEffect(() => {
+                y &&
+                    (0, C.Oq)(m.id, x.pY.CROSS_PLATFORM, u)
+                        .then(() => N("claimed"))
+                        .catch(() => N("error"));
+            }, [m.id, u, y]);
+            let Y = !0 === d && null === I && k?.skuId !== "",
+                q = null == _,
+                M = q || (null == I && !0 !== d) || Y || "loading" === L,
+                T = "error" === L || null == k;
+            return (0, a.jsx)(E.A, {
+                onClose: n,
+                transitionState: l,
+                quest: m,
+                sourceQuestContent: o,
+                location: D.rE.COLLECTIBLE_REWARD_MODAL,
+                isRewardContentLoading: M,
+                rewardContentHasError: T,
+                rewardContent:
+                    T || q
+                        ? null
+                        : (0, a.jsx)(w.A, {
+                              rewardName: k.messages.name,
+                              children: (0, a.jsx)(S, {
+                                  quest: m,
+                                  avatarDeco: I,
+                                  user: _,
+                                  mode: L,
+                                  onUseNow: async function () {
+                                      (N("applying"), N((await b()) ? "applied" : "claimed"));
+                                  },
+                              }),
+                          }),
+            });
+        },
+    },
+);

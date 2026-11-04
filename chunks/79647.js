@@ -1,10 +1,10 @@
 e.exports = {
-    kL: "container__4a4f2",
-    nP: "flexContainer__4a4f2",
-    C0: "educationUpsell__4a4f2",
-    JM: "educationUpsellArrow__4a4f2",
-    o1: "actions__4a4f2",
-    K2: "next__4a4f2",
-    R: "hidden__4a4f2",
-    hE: "noticeRegion__4a4f2",
+    kL: "container_Mzv_GO",
+    nP: "flexContainer_Mzv_GO",
+    C0: "educationUpsell_Mzv_GO",
+    JM: "educationUpsellArrow_Mzv_GO",
+    o1: "actions_Mzv_GO",
+    K2: "next_Mzv_GO",
+    R: "hidden_Mzv_GO",
+    hE: "noticeRegion_Mzv_GO",
 };

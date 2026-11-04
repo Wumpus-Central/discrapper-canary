@@ -1,32 +1,7 @@
-n.d(t, { Ay: () => s, Uj: () => o, bG: () => l });
 var i = n(734057),
     r = n(696451),
     a = n(71393);
 function s(e) {
-    let { message: t, userId: n, suppressEveryone: i = !1, suppressRoles: r = !1 } = e;
-    return o({
-        userId: n,
-        channelId: t.channel_id,
-        mentionEveryone: t.mentionEveryone,
-        mentionUsers: t.mentions,
-        mentionRoles: t.mentionRoles,
-        suppressEveryone: i,
-        suppressRoles: r,
-    });
-}
-function l(e) {
-    let { rawMessage: t, userId: n, suppressEveryone: i = !1, suppressRoles: r = !1 } = e;
-    return o({
-        userId: n,
-        channelId: t.channel_id,
-        mentionEveryone: t.mention_everyone ?? !1,
-        mentionUsers: t.mentions?.map((e) => e.id) ?? [],
-        mentionRoles: t.mention_roles ?? [],
-        suppressEveryone: i,
-        suppressRoles: r,
-    });
-}
-function o(e) {
     let {
         userId: t,
         channelId: n,
@@ -45,3 +20,34 @@ function o(e) {
     let E = r.Ay.getMember(_, t);
     return null != E && o.some((e) => E.roles.includes(e));
 }
+n.d(
+    t,
+    {},
+    {
+        Ay: function (e) {
+            let { message: t, userId: n, suppressEveryone: i = !1, suppressRoles: r = !1 } = e;
+            return s({
+                userId: n,
+                channelId: t.channel_id,
+                mentionEveryone: t.mentionEveryone,
+                mentionUsers: t.mentions,
+                mentionRoles: t.mentionRoles,
+                suppressEveryone: i,
+                suppressRoles: r,
+            });
+        },
+        Uj: s,
+        bG: function (e) {
+            let { rawMessage: t, userId: n, suppressEveryone: i = !1, suppressRoles: r = !1 } = e;
+            return s({
+                userId: n,
+                channelId: t.channel_id,
+                mentionEveryone: t.mention_everyone ?? !1,
+                mentionUsers: t.mentions?.map((e) => e.id) ?? [],
+                mentionRoles: t.mention_roles ?? [],
+                suppressEveryone: i,
+                suppressRoles: r,
+            });
+        },
+    },
+);

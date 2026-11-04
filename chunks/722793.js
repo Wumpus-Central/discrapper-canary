@@ -1,4 +1,3 @@
-n.d(t, { A: () => l, H: () => r });
 var i,
     a = n(945810),
     r =
@@ -12,3 +11,4 @@ let l = (0, a.mj)({
     defaultConfig: { enabled: !1, phase: 0 },
     variations: { 0: { enabled: !1, phase: 0 }, 1: { enabled: !0, phase: 1 }, 2: { enabled: !0, phase: 2 } },
 });
+n.d(t, {}, { A: l, H: r });

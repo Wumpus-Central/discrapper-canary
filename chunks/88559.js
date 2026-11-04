@@ -1,5 +1,4 @@
-(Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.MergingRefiner = t.Filter = void 0),
+((t.MergingRefiner = t.Filter = void 0),
     (t.Filter = class {
         refine(e, t) {
             return t.filter((t) => this.isValid(e, t));

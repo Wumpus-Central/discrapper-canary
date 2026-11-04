@@ -1,4 +1,3 @@
-t.d(n, { A: () => g, x: () => h });
 var i,
     l = t(477900),
     s = t(582128),
@@ -48,33 +47,40 @@ function m(e) {
         }),
     });
 }
-function g(e) {
-    let {
-        screenMessage: n,
-        onDoubleClick: t,
-        onActive: i,
-        onForceIdle: s,
-        idle: a,
-        children: o,
-        renderChatToasts: c,
-        renderVoiceChannelEffects: d,
-        style: h,
-        hideControls: g = !1,
-        ...x
-    } = e;
-    return (0, l.jsxs)("div", {
-        className: r()(A.zr, { [A.N7]: a }),
-        style: h,
-        onMouseMove: i,
-        onMouseDown: i,
-        onMouseLeave: s,
-        onDoubleClick: t,
-        children: [
-            !g && (0, l.jsx)(m, { ...x }),
-            o,
-            null != n ? (0, l.jsx)(u.A, { size: "large", ...n }) : null,
-            c?.(),
-            d?.(),
-        ],
-    });
-}
+t.d(
+    n,
+    {},
+    {
+        A: function (e) {
+            let {
+                screenMessage: n,
+                onDoubleClick: t,
+                onActive: i,
+                onForceIdle: s,
+                idle: a,
+                children: o,
+                renderChatToasts: c,
+                renderVoiceChannelEffects: d,
+                style: h,
+                hideControls: g = !1,
+                ...x
+            } = e;
+            return (0, l.jsxs)("div", {
+                className: r()(A.zr, { [A.N7]: a }),
+                style: h,
+                onMouseMove: i,
+                onMouseDown: i,
+                onMouseLeave: s,
+                onDoubleClick: t,
+                children: [
+                    !g && (0, l.jsx)(m, { ...x }),
+                    o,
+                    null != n ? (0, l.jsx)(u.A, { size: "large", ...n }) : null,
+                    c?.(),
+                    d?.(),
+                ],
+            });
+        },
+        x: h,
+    },
+);

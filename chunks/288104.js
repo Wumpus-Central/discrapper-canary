@@ -1,7 +1,6 @@
-e.d(n, { A: () => E, b: () => _ });
 var i = e(477900);
 e(582128);
-var r = e(17928),
+var r = e(855986),
     l = e(477782),
     s = e(832712),
     a = e(769591),
@@ -12,7 +11,7 @@ var r = e(17928),
     u = e(652215),
     N = e(790782),
     L = e(355097),
-    c = e(105292);
+    c = e(792996);
 function A(t, n) {
     switch (t.type) {
         case u.rbe.GUILD_VOICE:
@@ -157,24 +156,36 @@ function _(t) {
               ],
           });
 }
-function E(t) {
-    let n = _(t),
-        e = (0, a.os)("ChannelNotificationItems") && S.B4.has(t.type),
-        s = (0, r.bG)([d.Ay], () => d.Ay.resolvedMessageNotifications(t), [t]),
-        o = (0, r.bG)([d.Ay], () => d.Ay.resolveUnreadSetting(t), [t]),
-        g = (0, r.bG)([d.Ay], () => d.Ay.getChannelOverrides(t.guild_id)[t.id], [t.guild_id, t.id]),
-        L = null == g ? u.orn.NULL : g.message_notifications,
-        E = e && s === u.orn.ONLY_MENTIONS && o === N.e.ALL_MESSAGES,
-        b =
-            L === u.orn.NULL && t.isGuildStageVoice()
-                ? c.intl.format(c.t.L2hmYy, {})
-                : E
-                  ? c.intl.string(c.t.JzbSEY)
-                  : A(t, !1)?.find((t) => {
-                        let { setting: n } = t;
-                        return n === s;
-                    })?.label;
-    return null != n
-        ? (0, i.jsx)(l.Dr, { id: "channel-notifications", label: c.intl.string(c.t.h850Ss), subtext: b, children: n })
-        : null;
-}
+e.d(
+    n,
+    {},
+    {
+        A: function (t) {
+            let n = _(t),
+                e = (0, a.os)("ChannelNotificationItems") && S.B4.has(t.type),
+                s = (0, r.bG)([d.Ay], () => d.Ay.resolvedMessageNotifications(t), [t]),
+                o = (0, r.bG)([d.Ay], () => d.Ay.resolveUnreadSetting(t), [t]),
+                g = (0, r.bG)([d.Ay], () => d.Ay.getChannelOverrides(t.guild_id)[t.id], [t.guild_id, t.id]),
+                L = null == g ? u.orn.NULL : g.message_notifications,
+                E = e && s === u.orn.ONLY_MENTIONS && o === N.e.ALL_MESSAGES,
+                b =
+                    L === u.orn.NULL && t.isGuildStageVoice()
+                        ? c.intl.format(c.t.L2hmYy, {})
+                        : E
+                          ? c.intl.string(c.t.JzbSEY)
+                          : A(t, !1)?.find((t) => {
+                                let { setting: n } = t;
+                                return n === s;
+                            })?.label;
+            return null != n
+                ? (0, i.jsx)(l.Dr, {
+                      id: "channel-notifications",
+                      label: c.intl.string(c.t.h850Ss),
+                      subtext: b,
+                      children: n,
+                  })
+                : null;
+        },
+        b: _,
+    },
+);

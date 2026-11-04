@@ -1,8 +1,7 @@
-n.d(t, { X: () => o });
 var i = n(852015),
     r = n(144367),
     a = n(428420),
-    s = n(535384);
+    s = n(505816);
 class l extends s.G {
     constructor() {
         super("discord_protos.common.v1.LocalizedString", [
@@ -149,4 +148,4 @@ class d extends s.G {
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
-new d();
+(new d(), n.d(t, {}, { X: o }));

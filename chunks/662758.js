@@ -1,11 +1,10 @@
-a.d(e, { default: () => b });
 var s = a(477900),
     n = a(582128),
     l = a(189213),
     o = a(993077),
     r = a(834730),
     i = a(95477),
-    d = a(105292),
+    d = a(792996),
     c = a(41002);
 function u(t) {
     let {
@@ -92,5 +91,4 @@ function u(t) {
         }),
     });
 }
-u.key = () => "password-confirm-modal";
-let b = u;
+((u.key = () => "password-confirm-modal"), a.d(e, {}, { default: u }));

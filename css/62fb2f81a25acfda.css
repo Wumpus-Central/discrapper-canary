@@ -1,0 +1,234 @@
+.spacing_Onug95 {
+    margin-bottom: 20px
+}
+
+.smallSpacing_Onug95 {
+    margin-bottom: 8px
+}
+
+.largeSpacing_Onug95 {
+    margin-bottom: 30px;
+    margin-top: 8px
+}
+
+.largeSpacing_Onug95:first-child {
+    margin-top: 0
+}
+
+.lighten_Onug95 {
+    opacity: .6
+}
+
+.marginReset_Onug95 {
+    margin: 0
+}
+
+.checkboxContainer_Onug95 {
+    margin-bottom: 0;
+    margin-top: 0;
+    position: relative
+}
+
+.checkboxContainer_Onug95:before {
+    content: "";
+    height: 100%;
+    inset-inline-start: -26px;
+    position: absolute;
+    top: 0;
+    width: 1px
+}
+
+.checkboxMute_Onug95 {
+    margin-bottom: 0;
+    margin-top: 0;
+    position: relative
+}
+
+.checkboxMute_Onug95:before {
+    background-color: var(--opacity-black-8);
+    content: "";
+    position: absolute;
+    top: -16px;
+    inset-inline: -26px;
+    bottom: -16px
+}
+
+.checkboxContainerMuted_Onug95 {
+    opacity: .3
+}
+
+.mutedContainer_Onug95 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between
+}
+
+.muteUntilTitle_Onug95 {
+    margin: 0
+}
+
+.muteUntilText_Onug95 {
+    color: var(--text-default)
+}
+
+.muteTimeSelector_Onug95 {
+    flex: 0 0 50%
+}
+
+.checkboxGroup_Onug95 {
+    margin-bottom: 0;
+    margin-top: 0;
+    width: 300px
+}
+
+.override_Onug95,
+.overrideHighlight_Onug95 {
+    align-items: stretch;
+    display: flex;
+    margin-bottom: 8px;
+    padding-block: 10px;
+    padding-inline: 10px 0;
+    position: relative;
+    transition: background-color .1s ease-in-out
+}
+
+.override_Onug95:last-child,
+.overrideHighlight_Onug95:last-child {
+    margin-bottom: 0
+}
+
+.override_Onug95:focus-within .removeOverride_Onug95,
+.override_Onug95:hover .removeOverride_Onug95,
+.overrideHighlight_Onug95:focus-within .removeOverride_Onug95,
+.overrideHighlight_Onug95:hover .removeOverride_Onug95 {
+    opacity: 1
+}
+
+.overridePlaceholder_Onug95 {
+    align-items: center;
+    border-radius: 3px;
+    display: flex;
+    height: 56px;
+    justify-content: center;
+    margin-bottom: 8px;
+    text-align: center
+}
+
+.nameContainer_Onug95 {
+    min-width: 0
+}
+
+.icon_Onug95 {
+    align-self: center;
+    flex-shrink: 0;
+    height: 20px
+}
+
+.icon_Onug95,
+.overrideHeader_Onug95 {}
+
+.header_Onug95 {
+    color: var(--text-default);
+    margin-bottom: 8px
+}
+
+.channelNotificationHeaders_Onug95 {
+    display: flex
+}
+
+.headerNameCell_Onug95 {
+    flex: 1 1 auto;
+    margin-inline-start: 8px
+}
+
+.headerOptionCell_Onug95 {
+    cursor: default;
+    flex: 0 0 auto;
+    text-align: center;
+    width: 75px
+}
+
+.headerName_Onug95,
+.headerOption_Onug95 {}
+
+.removeOverride_Onug95 {
+    inset-inline-end: -8px;
+    opacity: 0;
+    position: absolute;
+    top: -12px
+}
+
+.channelNameContainer_Onug95 {
+    overflow: hidden;
+    padding: 0 10px
+}
+
+.channelName_Onug95 {
+    color: var(--text-strong)
+}
+
+.channelName_Onug95,
+.channelNameByline_Onug95 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.channelNameByline_Onug95 {}
+
+.channelNameCategory_Onug95 {
+    font-size: 11px;
+    font-weight: var(--font-weight-medium);
+    opacity: .3;
+    text-transform: none
+}
+
+.betaTag_Onug95 {
+    display: inline;
+    margin-inline-start: 8px
+}
+
+.highlightsLink_Onug95 {
+    margin-top: 4px
+}
+
+.theme-dark .override_Onug95:hover {
+    background-color: hsl(var(--primary-700-hsl)/.1)
+}
+
+.theme-dark .overrideHighlight_Onug95,
+.theme-dark .overrideHighlight_Onug95:hover {
+    background-color: hsl(var(--primary-700-hsl)/.3)
+}
+
+.theme-dark .checkboxContainer_Onug95:before {
+    background-color: hsl(var(--primary-700-hsl)/.6)
+}
+
+.theme-dark .overridePlaceholder_Onug95 {
+    border: 1px dashed var(--primary-800)
+}
+
+.theme-light .override_Onug95:hover {
+    background-color: hsl(var(--primary-100-hsl)/.1)
+}
+
+.theme-light .overrideHighlight_Onug95,
+.theme-light .overrideHighlight_Onug95:hover {
+    background-color: hsl(var(--primary-100-hsl)/.3)
+}
+
+.theme-light .checkboxContainer_Onug95:before {
+    background-color: hsl(var(--primary-200-hsl)/.6)
+}
+
+.theme-light .overridePlaceholder_Onug95 {
+    border: 1px dashed var(--primary-300)
+}
+
+.override_Onug95,
+.overrideHighlight_Onug95 {
+    color: var(--text-muted)
+}
+
+/*# sourceMappingURL=62fb2f81a25acfda.css.map*/

@@ -1,11 +1,10 @@
-n.d(t, { Ay: () => y });
 var i = n(350835),
-    r = n(17928),
+    r = n(855986),
     a = n(73153),
     s = n(885576),
     l = n(309010),
     o = n(967198),
-    d = n(97005),
+    d = n(499466),
     c = n(735769),
     u = n(260498),
     _ = n(189117),
@@ -44,7 +43,7 @@ function N(e) {
         ? null != h && t
             ? (null == f &&
                   (f = setTimeout(() => {
-                      ((f = null), S() && L.emitChange());
+                      ((f = null), S() && O.emitChange());
                   }, 3e4)),
               !1)
             : S()
@@ -55,54 +54,12 @@ function N(e) {
               !(function e() {
                   (g(),
                       (I = setTimeout(() => {
-                          ((I = null), null != h && ((h = { ...h, details: T(h.details) }), e(), L.emitChange()));
+                          ((I = null), null != h && ((h = { ...h, details: T(h.details) }), e(), O.emitChange()));
                       }, 3e5)));
               })(),
               !0));
 }
-async function C() {
-    if ("success" !== u.Ay.getOwnedProjectsFetchState()) {
-        let { listProjects: e } = await Promise.resolve().then(n.bind(n, 371169));
-        (await e(),
-            await new Promise((e) => {
-                function t() {
-                    let n = u.Ay.getOwnedProjectsFetchState();
-                    ("success" === n || "error" === n) && (u.Ay.removeChangeListener(t), e());
-                }
-                (u.Ay.addChangeListener(t), t());
-            }));
-    }
-    if ("success" !== u.Ay.getOwnedProjectsFetchState()) throw Error("Conjure projects fetch failed");
-    return u.Ay.getOwnedProjects();
-}
-async function O() {
-    if (!p && ((p = !0), (0, d.zN)("conjure_resume")))
-        try {
-            let [e, { ensureConnection: t }] = await Promise.all([
-                C(),
-                Promise.all([
-                    n.e("661008"),
-                    n.e("916758"),
-                    n.e("356664"),
-                    n.e("741111"),
-                    n.e("421060"),
-                    n.e("11312"),
-                    n.e("763096"),
-                    n.e("967874"),
-                    n.e("202622"),
-                    n.e("736621"),
-                    n.e("117928"),
-                    n.e("773051"),
-                ]).then(n.bind(n, 322227)),
-            ]);
-            e.filter((e) => !0 === e.running)
-                .slice(0, 5)
-                .forEach((e) => t(e.id));
-        } catch {
-            p = !1;
-        }
-}
-class R extends r.Ay.Store {
+class C extends r.Ay.Store {
     static displayName = "ConjureRichPresenceStore";
     initialize() {
         this.syncWith([s.A, l.Ay, o.A, u.Ay, c.A], () => N({ withGracePeriod: !0 }));
@@ -111,9 +68,53 @@ class R extends r.Ay.Store {
         return h;
     }
 }
-let L = new R(a.h, {
-        CONNECTION_OPEN: () => N({ withGracePeriod: !1 }),
-        POST_CONNECTION_OPEN: () => (O(), !1),
-        LOGOUT: () => ((p = !1), S()),
-    }),
-    y = L;
+let O = new C(a.h, {
+    CONNECTION_OPEN: () => N({ withGracePeriod: !1 }),
+    POST_CONNECTION_OPEN: () => (
+        !(async function () {
+            if (!p && ((p = !0), (0, d.zN)("conjure_resume")))
+                try {
+                    let [e, { ensureConnection: t }] = await Promise.all([
+                        (async function () {
+                            if ("success" !== u.Ay.getOwnedProjectsFetchState()) {
+                                let { listProjects: e } = await Promise.resolve().then(n.bind(n, 371169));
+                                (await e(),
+                                    await new Promise((e) => {
+                                        function t() {
+                                            let n = u.Ay.getOwnedProjectsFetchState();
+                                            ("success" === n || "error" === n) && (u.Ay.removeChangeListener(t), e());
+                                        }
+                                        (u.Ay.addChangeListener(t), t());
+                                    }));
+                            }
+                            if ("success" !== u.Ay.getOwnedProjectsFetchState())
+                                throw Error("Conjure projects fetch failed");
+                            return u.Ay.getOwnedProjects();
+                        })(),
+                        Promise.all([
+                            n.e(661008),
+                            n.e(916758),
+                            n.e(356664),
+                            n.e(741111),
+                            n.e(421060),
+                            n.e(386594),
+                            n.e(763096),
+                            n.e(967874),
+                            n.e(202622),
+                            n.e(736621),
+                            n.e(117928),
+                            n.e(820362),
+                        ]).then(n.bind(n, 540665)),
+                    ]);
+                    e.filter((e) => !0 === e.running)
+                        .slice(0, 5)
+                        .forEach((e) => t(e.id));
+                } catch {
+                    p = !1;
+                }
+        })(),
+        !1
+    ),
+    LOGOUT: () => ((p = !1), S()),
+});
+n.d(t, {}, { Ay: O });

@@ -1,12 +1,17 @@
-d.d(e, { M: () => t });
-var i = d(477900);
-d(582128);
-var s = d(192308);
-function t(a) {
-    (0, s.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([d.e("231541"), d.e("940258"), d.e("273669"), d.e("364499")]).then(
-            d.bind(d, 296222),
-        );
-        return (d) => (0, i.jsx)(e, { ...d, guildId: a });
-    });
-}
+var s = i(477900);
+i(582128);
+var t = i(192308);
+i.d(
+    a,
+    {},
+    {
+        M: function (e) {
+            (0, t.mM)(async () => {
+                let { default: a } = await Promise.all([i.e(231541), i.e(940258), i.e(710727), i.e(245535)]).then(
+                    i.bind(i, 935074),
+                );
+                return (i) => (0, s.jsx)(a, { ...i, guildId: e });
+            });
+        },
+    },
+);

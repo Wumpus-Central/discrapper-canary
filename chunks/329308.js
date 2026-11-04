@@ -1,9 +1,8 @@
-n.d(t, { SV: () => c, t1: () => d });
 var i,
     r = n(315069),
     a = n(718446),
     s = n(652215),
-    l = n(190107),
+    l = n(221596),
     o = n(355097),
     d =
         (((i = d || {}).SHOP = "SHOP"),
@@ -33,7 +32,7 @@ class c extends r.A {
             case "APPS_HOME":
                 return new c({ path: s.BVt.GLOBAL_DISCOVERY_APPS, type: "APPS_HOME" });
             case "SETTINGS":
-                return new c({ path: t ?? (0, a.settingsPathToRoute)(o.od.ACCOUNT), label: n, type: "SETTINGS" });
+                return new c({ path: t ?? (0, a.T)(o.od.ACCOUNT), label: n, type: "SETTINGS" });
             case "PLAYGROUND":
                 return new c({ path: t ?? s.BVt.APP, type: "PLAYGROUND", label: n, collectionId: i, IconComponent: r });
             case "SHOP_ORBS_TAB":
@@ -54,3 +53,4 @@ class c extends r.A {
             (this.IconComponent = e.IconComponent));
     }
 }
+n.d(t, {}, { SV: c, t1: d });

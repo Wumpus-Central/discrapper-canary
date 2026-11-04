@@ -1,8 +1,8 @@
-(o.d(n, { default: () => d, loadActivityContextMenuIcons: () => l }), o(321073));
+o(321073);
 var a = o(477900),
     i = o(582128),
     s = o(477782),
-    t = o(980707),
+    t = o(165862),
     r = o(442433);
 let c = {
     add: async () => (await Promise.resolve().then(o.bind(o, 663341))).PlusLargeIcon,
@@ -71,86 +71,96 @@ let c = {
     robot: async () => (await Promise.resolve().then(o.bind(o, 430392))).RobotIcon,
     paint_palette: async () => (await Promise.resolve().then(o.bind(o, 650809))).PaintPaletteIcon,
 };
-async function l(e) {
-    let n = new Set();
-    !(function e(n, o) {
-        for (let a of n) (null != a.icon && a.icon in c && o.add(a.icon), null != a.items && e(a.items, o));
-    })(e, n);
-    let o = new Map();
-    return (
-        await Promise.all(
-            [...n].map(async (e) => {
-                try {
-                    o.set(e, await c[e]());
-                } catch {}
-            }),
-        ),
-        o
-    );
-}
-function d(e) {
-    let { items: n, icons: o, onSelectItem: c, onUnmount: l, onSelect: d } = e,
-        h = i.useRef(l);
-    return (
-        i.useEffect(() => () => h.current(), []),
-        (0, a.jsx)(t.W, {
-            navId: "activity-custom-context",
-            onClose: r.Z_,
-            onSelect: d,
-            "aria-label": "Activity actions",
-            children: (function (e) {
-                let n = [[]];
-                for (let o of e) "separator" === o.type ? n.push([]) : n[n.length - 1].push(o);
-                return n.filter((e) => e.length > 0);
-            })(n).map((e, n) =>
-                (0, a.jsx)(
-                    s.rX,
-                    {
-                        children: e.map((e, i) =>
-                            (function e(n, i) {
-                                if ("separator" === n.type) return (0, a.jsx)(s.bX, {}, i);
-                                let t = n.id;
-                                if (null == t || null == n.label) return null;
-                                let l = null != n.icon ? o.get(n.icon) : void 0,
-                                    d = {
-                                        id: t,
-                                        label: n.label,
-                                        subtext: n.subtext,
-                                        color: n.color,
-                                        disabled: n.disabled ?? !1,
-                                        leadingAccessory: null != l ? { type: "icon", icon: l } : void 0,
-                                    };
-                                function h() {
-                                    (c(t), (0, r.Z_)());
-                                }
-                                if ("checkbox" === n.type)
-                                    return (0, a.jsx)(
-                                        s.sL,
-                                        { ...d, leftIcon: l, checked: n.checked ?? !1, action: h },
-                                        i,
-                                    );
-                                if ("radio" === n.type)
-                                    return (0, a.jsx)(
-                                        s.iD,
-                                        {
-                                            ...d,
-                                            leftIcon: l,
-                                            group: n.group ?? "default",
-                                            checked: n.checked ?? !1,
-                                            action: h,
-                                        },
-                                        i,
-                                    );
-                                let b = n.items?.map((n, o) => e(n, `${i}-${o}`)).filter(Boolean);
-                                return null != b && b.length > 0
-                                    ? (0, a.jsx)(s.Dr, { ...d, iconLeft: l, children: b }, i)
-                                    : (0, a.jsx)(s.Dr, { ...d, iconLeft: l, action: h, dontCloseOnAction: !0 }, i);
-                            })(e, `${n}-${i}`),
+o.d(
+    n,
+    {},
+    {
+        default: function (e) {
+            let { items: n, icons: o, onSelectItem: c, onUnmount: l, onSelect: d } = e,
+                h = i.useRef(l);
+            return (
+                i.useEffect(() => () => h.current(), []),
+                (0, a.jsx)(t.W, {
+                    navId: "activity-custom-context",
+                    onClose: r.Z_,
+                    onSelect: d,
+                    "aria-label": "Activity actions",
+                    children: (function (e) {
+                        let n = [[]];
+                        for (let o of e) "separator" === o.type ? n.push([]) : n[n.length - 1].push(o);
+                        return n.filter((e) => e.length > 0);
+                    })(n).map((e, n) =>
+                        (0, a.jsx)(
+                            s.rX,
+                            {
+                                children: e.map((e, i) =>
+                                    (function e(n, i) {
+                                        if ("separator" === n.type) return (0, a.jsx)(s.bX, {}, i);
+                                        let t = n.id;
+                                        if (null == t || null == n.label) return null;
+                                        let l = null != n.icon ? o.get(n.icon) : void 0,
+                                            d = {
+                                                id: t,
+                                                label: n.label,
+                                                subtext: n.subtext,
+                                                color: n.color,
+                                                disabled: n.disabled ?? !1,
+                                                leadingAccessory: null != l ? { type: "icon", icon: l } : void 0,
+                                            };
+                                        function h() {
+                                            (c(t), (0, r.Z_)());
+                                        }
+                                        if ("checkbox" === n.type)
+                                            return (0, a.jsx)(
+                                                s.sL,
+                                                { ...d, leftIcon: l, checked: n.checked ?? !1, action: h },
+                                                i,
+                                            );
+                                        if ("radio" === n.type)
+                                            return (0, a.jsx)(
+                                                s.iD,
+                                                {
+                                                    ...d,
+                                                    leftIcon: l,
+                                                    group: n.group ?? "default",
+                                                    checked: n.checked ?? !1,
+                                                    action: h,
+                                                },
+                                                i,
+                                            );
+                                        let b = n.items?.map((n, o) => e(n, `${i}-${o}`)).filter(Boolean);
+                                        return null != b && b.length > 0
+                                            ? (0, a.jsx)(s.Dr, { ...d, iconLeft: l, children: b }, i)
+                                            : (0, a.jsx)(
+                                                  s.Dr,
+                                                  { ...d, iconLeft: l, action: h, dontCloseOnAction: !0 },
+                                                  i,
+                                              );
+                                    })(e, `${n}-${i}`),
+                                ),
+                            },
+                            `group-${n}`,
                         ),
-                    },
-                    `group-${n}`,
+                    ),
+                })
+            );
+        },
+        loadActivityContextMenuIcons: async function (e) {
+            let n = new Set();
+            !(function e(n, o) {
+                for (let a of n) (null != a.icon && a.icon in c && o.add(a.icon), null != a.items && e(a.items, o));
+            })(e, n);
+            let o = new Map();
+            return (
+                await Promise.all(
+                    [...n].map(async (e) => {
+                        try {
+                            o.set(e, await c[e]());
+                        } catch {}
+                    }),
                 ),
-            ),
-        })
-    );
-}
+                o
+            );
+        },
+    },
+);

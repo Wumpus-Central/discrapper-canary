@@ -1,0 +1,18 @@
+.notes_1gNa8I {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: start
+}
+
+.badgeNote_1gNa8I {
+    align-items: center;
+    display: flex;
+    gap: 12px
+}
+
+.badge_1gNa8I {
+    color: var(--icon-muted)
+}
+
+/*# sourceMappingURL=4effa3bd7ee82b7d.css.map*/

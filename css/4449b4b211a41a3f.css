@@ -1,0 +1,36 @@
+.scroller_lRPE7Q {
+    gap: 12px;
+    margin-inline-start: -12px
+}
+
+.friendsLoadingItem_lRPE7Q {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    margin-block: 1px;
+    margin-inline: 8px 0;
+    padding: 4px
+}
+
+.friendsLoadingItem_lRPE7Q>:first-child {
+    border-radius: var(--radius-round);
+    height: 40px;
+    margin: 0
+}
+
+.guildsLoadingItem_lRPE7Q {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    margin-block: 1px;
+    margin-inline: 8px 0;
+    padding: 4px
+}
+
+.guildsLoadingItem_lRPE7Q>:first-child {
+    border-radius: var(--radius-lg);
+    height: 40px;
+    margin: 0
+}
+
+/*# sourceMappingURL=4449b4b211a41a3f.css.map*/

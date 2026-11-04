@@ -1,4 +1,3 @@
-r.d(t, { S: () => E, v: () => d });
 var l = r(582128),
     s = r(196765),
     i = r(537812),
@@ -181,77 +180,90 @@ let d = (0, s.v)(
         },
     })),
 );
-function E(e) {
-    let { onSetResponse: t, setSearchError: r, setIsFetchingResults: s } = (0, a.S)();
-    l.useEffect(() => {
-        function l(e) {
-            async function l() {
-                s(!0);
-                try {
-                    let r,
-                        l,
-                        s,
-                        i,
-                        o = await (0, u.$)(e);
-                    t(
-                        ((r = o.skus),
-                        (l = o.pagination.total),
-                        (s = o.pagination.has_more),
-                        (i = o.pagination.offset),
-                        { skus: r, totalCount: l, hasMorePages: s, pageOffset: i, pageLimit: o.pagination.limit }),
-                    );
-                } catch (e) {
-                    r(e?.message ?? "Unknown error");
-                } finally {
-                    s(!1);
+r.d(
+    t,
+    {},
+    {
+        S: function (e) {
+            let { onSetResponse: t, setSearchError: r, setIsFetchingResults: s } = (0, a.S)();
+            l.useEffect(() => {
+                function l(e) {
+                    0 !== e.limit &&
+                        (async function () {
+                            s(!0);
+                            try {
+                                let r,
+                                    l,
+                                    s,
+                                    i,
+                                    o = await (0, u.$)(e);
+                                t(
+                                    ((r = o.skus),
+                                    (l = o.pagination.total),
+                                    (s = o.pagination.has_more),
+                                    (i = o.pagination.offset),
+                                    {
+                                        skus: r,
+                                        totalCount: l,
+                                        hasMorePages: s,
+                                        pageOffset: i,
+                                        pageLimit: o.pagination.limit,
+                                    }),
+                                );
+                            } catch (e) {
+                                r(e?.message ?? "Unknown error");
+                            } finally {
+                                s(!1);
+                            }
+                        })();
                 }
-            }
-            0 !== e.limit && l();
-        }
-        function i(t) {
-            return (function (e, t) {
-                let {
-                    itemTypeFilters: r,
-                    colorFilters: l,
-                    themeFilters: s,
-                    orbEligible: i,
-                    thirdPartyOnly: o,
-                    offerEligible: n,
-                    sort: u,
-                    searchQuery: a,
-                    queryPageSize: c,
-                    queryPageOffset: f,
-                } = e;
-                return {
-                    item_types: Array.from(r),
-                    colors: Array.from(l),
-                    themes: Array.from(s),
-                    orbs_eligible: !!i || void 0,
-                    is_first_party: !o && void 0,
-                    promotion_filter: !!n || void 0,
-                    offset: f,
-                    limit: c,
-                    sort_type: u.sortType,
-                    sort_direction: u.sortDirection,
-                    search: "" !== a ? a : void 0,
-                    include_unpublished: !!t || void 0,
-                    published_collections_only: !0,
+                function i(t) {
+                    return (function (e, t) {
+                        let {
+                            itemTypeFilters: r,
+                            colorFilters: l,
+                            themeFilters: s,
+                            orbEligible: i,
+                            thirdPartyOnly: o,
+                            offerEligible: n,
+                            sort: u,
+                            searchQuery: a,
+                            queryPageSize: c,
+                            queryPageOffset: f,
+                        } = e;
+                        return {
+                            item_types: Array.from(r),
+                            colors: Array.from(l),
+                            themes: Array.from(s),
+                            orbs_eligible: !!i || void 0,
+                            is_first_party: !o && void 0,
+                            promotion_filter: !!n || void 0,
+                            offset: f,
+                            limit: c,
+                            sort_type: u.sortType,
+                            sort_direction: u.sortDirection,
+                            search: "" !== a ? a : void 0,
+                            include_unpublished: !!t || void 0,
+                            published_collections_only: !0,
+                        };
+                    })(t, e);
+                }
+                l(i(d.getState()));
+                let o = d.subscribe(i, l, { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }),
+                    n = d.subscribe(
+                        (e) => e.hasFilters(),
+                        (e, t) => {
+                            if (!e && t) {
+                                let e = d.getState();
+                                e.userHasSelectedSort || d.setState({ sort: h(e) });
+                            }
+                        },
+                    );
+                return () => {
+                    (o(), n());
                 };
-            })(t, e);
-        }
-        l(i(d.getState()));
-        let o = d.subscribe(i, l, { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }),
-            n = d.subscribe(
-                (e) => e.hasFilters(),
-                (e, t) => {
-                    if (!e && t) {
-                        let e = d.getState();
-                        e.userHasSelectedSort || d.setState({ sort: h(e) });
-                    }
-                },
-            );
-        return () => {
-            (o(), n());
-        };
-    }, [t, r, s, e]);
-}
+            }, [t, r, s, e]);
+        },
+        v: d,
+    },
+);

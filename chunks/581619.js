@@ -1,4 +1,3 @@
-n.d(t, { h5: () => s, pd: () => r, zx: () => a });
 var i = n(652215);
 let r = new Set([
         i.Auw.AUTO_MODERATION_MESSAGE,
@@ -22,3 +21,4 @@ let r = new Set([
         i.Auw.POLL_RESULT,
     ]),
     s = new Set([i.Auw.IMAGE, i.Auw.GIFV]);
+n.d(t, {}, { h5: s, pd: r, zx: a });

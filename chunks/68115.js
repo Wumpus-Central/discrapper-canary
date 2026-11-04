@@ -1,1 +1,1 @@
-s.exports = { jE: "modalContent_b23a27", KP: "submitText_b23a27" };
+p.exports = { jE: "modalContent_poxwic", KP: "submitText_poxwic" };

@@ -1,0 +1,92 @@
+.body_gDWjMN {
+    padding-top: var(--space-16)
+}
+
+.wumpus_gDWjMN {
+    height: 187px;
+    margin: -95px auto 0
+}
+
+.textContainer_gDWjMN {
+    flex-direction: column;
+    text-align: center
+}
+
+.mute_gDWjMN,
+.textContainer_gDWjMN {
+    display: flex;
+    gap: var(--space-4)
+}
+
+.mute_gDWjMN {
+    align-items: center;
+    justify-content: center
+}
+
+.buttonContainer_gDWjMN {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16)
+}
+
+.ringContainer_gDWjMN {
+    height: 210px;
+    overflow: hidden;
+    position: absolute;
+    top: -211px;
+    width: 440px
+}
+
+.full-motion .iconButton_gDWjMN {
+    transition: background-color .2s ease
+}
+
+.full-motion .icon_gDWjMN {
+    transition: color .2s ease
+}
+
+.absolute_gDWjMN {
+    inset-inline-end: var(--space-16);
+    position: absolute;
+    top: var(--space-16)
+}
+
+.iconButton_gDWjMN {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: var(--radius-round);
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    padding: var(--space-8);
+    width: 24px
+}
+
+.iconButton_gDWjMN:hover {
+    background-color: var(--interactive-background-hover);
+    cursor: pointer
+}
+
+.iconButton_gDWjMN:hover .icon_gDWjMN {
+    color: var(--interactive-text-active)
+}
+
+.icon_gDWjMN {
+    color: var(--interactive-text-default)
+}
+
+.riveContainer_gDWjMN {
+    position: relative
+}
+
+.backgroundRive_gDWjMN {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    height: 100%;
+    inset-inline-end: 0;
+    width: 100%
+}
+
+/*# sourceMappingURL=99bea6a6eb967925.css.map*/

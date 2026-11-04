@@ -1,8 +1,8 @@
 e.exports = {
-    Ej: "paginationContainer_e8f197",
-    X$: "pagination_e8f197",
-    JV: "paginationInput_e8f197",
-    H9: "pageSizeInput_e8f197",
-    PO: "pageSizeSelection_e8f197",
-    Qh: "pageLabel_e8f197",
+    Ej: "paginationContainer_nkD26S",
+    X$: "pagination_nkD26S",
+    JV: "paginationInput_nkD26S",
+    H9: "pageSizeInput_nkD26S",
+    PO: "pageSizeSelection_nkD26S",
+    Qh: "pageLabel_nkD26S",
 };

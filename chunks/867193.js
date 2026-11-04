@@ -1,4 +1,3 @@
-n.d(t, { C: () => o, V: () => d });
 var i = n(582128);
 let r = 0,
     a = new Set();
@@ -8,9 +7,15 @@ function s(e) {
 function l() {
     return r;
 }
-function o(e) {
-    if (e !== r) for (let t of ((r = e), [...a])) t();
-}
-function d() {
-    return i.useSyncExternalStore(s, l);
-}
+n.d(
+    t,
+    {},
+    {
+        C: function (e) {
+            if (e !== r) for (let t of ((r = e), [...a])) t();
+        },
+        V: function () {
+            return i.useSyncExternalStore(s, l);
+        },
+    },
+);

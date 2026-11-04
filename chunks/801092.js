@@ -1,5 +1,4 @@
-(Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.WEEKDAY_OFFSET = t.NUMBER = void 0),
+((t.WEEKDAY_OFFSET = t.NUMBER = void 0),
     (t.zhStringToNumber = function (e) {
         let r = 0;
         for (let n = 0; n < e.length; n++) {

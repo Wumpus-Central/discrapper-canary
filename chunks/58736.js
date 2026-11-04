@@ -1,4 +1,3 @@
-n.d(t, { Ay: () => L, In: () => N });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -264,5 +263,5 @@ function R(e) {
         return "right" === t
             ? (0, i.jsx)(E._, { size: "md", color: "currentColor", className: s()(S.OW, n) })
             : (0, i.jsx)(A.n, { size: "md", color: "currentColor", className: s()(S.OW, n) });
-    }));
-let L = R;
+    }),
+    n.d(t, {}, { Ay: R, In: N }));

@@ -1,18 +1,3 @@
-n.d(t, {
-    Aq: () => L,
-    Bd: () => f,
-    D5: () => I,
-    JC: () => p,
-    RL: () => y,
-    TC: () => R,
-    ZD: () => O,
-    _U: () => m,
-    a2: () => S,
-    f5: () => D,
-    lj: () => C,
-    qu: () => N,
-    ug: () => T,
-});
 var i,
     r = n(73153),
     a = n(367513),
@@ -38,37 +23,12 @@ function f(e, t) {
     let n = d.Ay.getCurrentlySelectedChannelId();
     0 === u.A.getTabs().length && (null == n || (0, E.jq)(n))
         ? A(e, t)
-        : r.h.dispatch({ type: "CHANNEL_TABS_OPEN", kind: "channel", channelId: e, guildId: t });
-}
-function I(e, t) {
-    let n = d.Ay.getCurrentlySelectedChannelId();
-    0 === u.A.getTabs().length && (null == n || (0, E.jq)(n))
-        ? A(e, t)
         : u.A.isAtMaxTabs() ||
           (r.h.dispatch({ type: "CHANNEL_TABS_OPEN", kind: "channel", channelId: e, guildId: t, active: !0 }),
           d.Ay.getCurrentlySelectedChannelId() !== e && A(e, t));
 }
-function p() {
-    let e = u.A.getActiveTab();
-    if (null != e && "route" === e.kind) {
-        if (u.A.isAtMaxTabs()) return;
-        r.h.dispatch({
-            type: "CHANNEL_TABS_OPEN",
-            kind: "route",
-            routePath: e.routePath,
-            routeLabel: e.routeLabel,
-            active: !0,
-        });
-        return;
-    }
-    let t = e?.channelId ?? d.Ay.getCurrentlySelectedChannelId();
-    null == t || I(t, e?.guildId ?? c.A.getGuildId() ?? null);
-}
-function m(e, t) {
-    r.h.dispatch({ type: "CHANNEL_TABS_NAVIGATE_ROUTE", routePath: e, routeLabel: t });
-}
-var T = (((i = {}).Passthrough = "passthrough"), (i.Noop = "noop"), (i.Navigated = "navigated"), i);
-function g(e) {
+var I = (((i = {}).Passthrough = "passthrough"), (i.Noop = "noop"), (i.Navigated = "navigated"), i);
+function p(e) {
     if (!u.A.isEnabled()) return "passthrough";
     let t = u.A.getActiveTab();
     if (null == t || ("channel" === t.kind && d.Ay.getCurrentlySelectedChannelId() !== t.channelId))
@@ -90,16 +50,7 @@ function g(e) {
             A(i.channelId, i.guildId),
             "navigated");
 }
-function S() {
-    return g(-1);
-}
-function N() {
-    return g(1);
-}
-function C(e) {
-    r.h.dispatch({ type: "CHANNEL_TABS_SET_ENABLED", enabled: e });
-}
-function O(e) {
+function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = u.A.getTabs().find((t) => t.id === e);
     if (null != n) {
@@ -113,24 +64,67 @@ function O(e) {
         (r.h.dispatch({ type: "CHANNEL_TABS_SET_ACTIVE", tabId: e }), h(n, t));
     }
 }
-function R(e) {
-    let t = u.A.getTabs();
-    if (t.length <= 1) return;
-    let n = t.findIndex((e) => e.id === u.A.getActiveTabId());
-    if (-1 === n) return;
-    let i = (n + e + t.length) % t.length;
-    O(t[i].id);
-}
-function L(e, t) {
-    r.h.dispatch({ type: "CHANNEL_TABS_MOVE", tabId: e, toIndex: t });
-}
-function y(e, t) {
-    r.h.dispatch({ type: "CHANNEL_TABS_SET_PINNED", tabId: e, pinned: t });
-}
-function D(e) {
-    if (-1 === u.A.getTabs().findIndex((t) => t.id === e)) return;
-    let t = u.A.getActiveTabId() === e;
-    if ((r.h.dispatch({ type: "CHANNEL_TABS_CLOSE", tabId: e }), !t)) return;
-    let n = u.A.getActiveTab();
-    null != n && h(n);
-}
+n.d(
+    t,
+    {},
+    {
+        Aq: function (e, t) {
+            r.h.dispatch({ type: "CHANNEL_TABS_MOVE", tabId: e, toIndex: t });
+        },
+        Bd: function (e, t) {
+            let n = d.Ay.getCurrentlySelectedChannelId();
+            0 === u.A.getTabs().length && (null == n || (0, E.jq)(n))
+                ? A(e, t)
+                : r.h.dispatch({ type: "CHANNEL_TABS_OPEN", kind: "channel", channelId: e, guildId: t });
+        },
+        D5: f,
+        JC: function () {
+            let e = u.A.getActiveTab();
+            if (null != e && "route" === e.kind) {
+                if (u.A.isAtMaxTabs()) return;
+                r.h.dispatch({
+                    type: "CHANNEL_TABS_OPEN",
+                    kind: "route",
+                    routePath: e.routePath,
+                    routeLabel: e.routeLabel,
+                    active: !0,
+                });
+                return;
+            }
+            let t = e?.channelId ?? d.Ay.getCurrentlySelectedChannelId();
+            null == t || f(t, e?.guildId ?? c.A.getGuildId() ?? null);
+        },
+        RL: function (e, t) {
+            r.h.dispatch({ type: "CHANNEL_TABS_SET_PINNED", tabId: e, pinned: t });
+        },
+        TC: function (e) {
+            let t = u.A.getTabs();
+            if (t.length <= 1) return;
+            let n = t.findIndex((e) => e.id === u.A.getActiveTabId());
+            if (-1 === n) return;
+            let i = (n + e + t.length) % t.length;
+            m(t[i].id);
+        },
+        ZD: m,
+        _U: function (e, t) {
+            r.h.dispatch({ type: "CHANNEL_TABS_NAVIGATE_ROUTE", routePath: e, routeLabel: t });
+        },
+        a2: function () {
+            return p(-1);
+        },
+        f5: function (e) {
+            if (-1 === u.A.getTabs().findIndex((t) => t.id === e)) return;
+            let t = u.A.getActiveTabId() === e;
+            if ((r.h.dispatch({ type: "CHANNEL_TABS_CLOSE", tabId: e }), !t)) return;
+            let n = u.A.getActiveTab();
+            null != n && h(n);
+        },
+        lj: function (e) {
+            r.h.dispatch({ type: "CHANNEL_TABS_SET_ENABLED", enabled: e });
+        },
+        qu: function () {
+            return p(1);
+        },
+        ug: I,
+    },
+);

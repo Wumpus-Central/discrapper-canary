@@ -1,14 +1,19 @@
-n.d(t, { A: () => r });
-var i = n(582128);
-function r(e) {
-    let t = i.useRef(e);
-    return (
-        i.useInsertionEffect(() => {
-            t.current = e;
-        }),
-        i.useCallback(function () {
-            for (var e = arguments.length, n = Array(e), i = 0; i < e; i++) n[i] = arguments[i];
-            return t.current(...n);
-        }, [])
-    );
-}
+var n = t(582128);
+t.d(
+    e,
+    {},
+    {
+        A: function (r) {
+            let e = n.useRef(r);
+            return (
+                n.useInsertionEffect(() => {
+                    e.current = r;
+                }),
+                n.useCallback(function () {
+                    for (var r = arguments.length, t = Array(r), n = 0; n < r; n++) t[n] = arguments[n];
+                    return e.current(...t);
+                }, [])
+            );
+        },
+    },
+);

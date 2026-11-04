@@ -1,1 +1,1 @@
-a.exports = { O: "guildIconImage_d28ae0", q: "acronym_d28ae0" };
+s.exports = { O: "guildIconImage_sX5_6T", q: "acronym_sX5_6T" };

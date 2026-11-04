@@ -1,50 +1,23 @@
-n.d(t, {
-    AC: () => E,
-    F0: () => c,
-    Jk: () => I,
-    ZV: () => A,
-    ce: () => p,
-    jQ: () => _,
-    kn: () => u,
-    on: () => d,
-    zr: () => f,
-});
 var i,
     r,
     a,
     s = n(652215),
-    l = n(202541),
-    o = n(105292),
+    l = n(682901),
+    o = n(792996),
     d =
         (((i = {})[(i.RESOLUTION_480 = 480)] = "RESOLUTION_480"),
         (i[(i.RESOLUTION_720 = 720)] = "RESOLUTION_720"),
         (i[(i.RESOLUTION_1080 = 1080)] = "RESOLUTION_1080"),
         (i[(i.RESOLUTION_1440 = 1440)] = "RESOLUTION_1440"),
         (i[(i.RESOLUTION_SOURCE = 0)] = "RESOLUTION_SOURCE"),
-        i);
-function c(e) {
-    switch (e) {
-        case 480:
-            return 480;
-        case 720:
-            return 720;
-        case 1080:
-            return 1080;
-        case 1440:
-            return 1440;
-        case 0:
-            return 0;
-        default:
-            throw Error(`Unknown resolution: ${e}`);
-    }
-}
-var u =
+        i),
+    c =
         (((r = {})[(r.FPS_5 = 5)] = "FPS_5"),
         (r[(r.FPS_15 = 15)] = "FPS_15"),
         (r[(r.FPS_30 = 30)] = "FPS_30"),
         (r[(r.FPS_60 = 60)] = "FPS_60"),
         r),
-    _ =
+    u =
         (((a = {})[(a.PRESET_VIDEO = 1)] = "PRESET_VIDEO"),
         (a[(a.PRESET_DOCUMENTS = 2)] = "PRESET_DOCUMENTS"),
         (a[(a.PRESET_CUSTOM = 3)] = "PRESET_CUSTOM"),
@@ -53,21 +26,7 @@ var u =
         (a[(a.PRESET_MOBILE_PERFORMANCE = 6)] = "PRESET_MOBILE_PERFORMANCE"),
         (a[(a.PRESET_MOBILE_HIGH_QUALITY = 7)] = "PRESET_MOBILE_HIGH_QUALITY"),
         a);
-function E(e) {
-    switch (e) {
-        case 5:
-            return 5;
-        case 15:
-            return 15;
-        case 30:
-            return 30;
-        case 60:
-            return 60;
-        default:
-            throw Error(`Unknown frame rate: ${e}`);
-    }
-}
-let A = [
+let _ = [
     { resolution: 0, fps: 60, quality: l.uP.HIGH_STREAMING_QUALITY },
     { resolution: 0, fps: 30, quality: l.uP.HIGH_STREAMING_QUALITY },
     { resolution: 0, fps: 15, quality: l.uP.HIGH_STREAMING_QUALITY },
@@ -87,7 +46,7 @@ let A = [
     { resolution: 480, fps: 15 },
     { resolution: 480, fps: 5 },
 ];
-function h(e, t, n) {
+function E(e, t, n) {
     return {
         value: e,
         get label() {
@@ -98,14 +57,57 @@ function h(e, t, n) {
         },
     };
 }
-function f(e) {
+function A(e) {
     return 0 === e ? o.intl.string(o.t.XjXqzh) : o.intl.formatToPlainString(o.t.TEOC0I, { resolution: e });
 }
-(h(720), h(1080), h(1440), h(0, () => o.intl.string(o.t.XjXqzh)), h(720), h(1080), h(1440));
-let I = [h(480, () => f(480)), h(720, () => f(720)), h(1080, () => f(1080)), h(1440, () => f(1440)), h(0, () => f(0))];
-(h(15), h(30), h(60));
-let p = [
-    h(15, () => o.intl.formatToPlainString(o.t["bW+JCW"], { value: 15 })),
-    h(30, () => o.intl.formatToPlainString(o.t["bW+JCW"], { value: 30 })),
-    h(60, () => o.intl.formatToPlainString(o.t["bW+JCW"], { value: 60 })),
+(E(720), E(1080), E(1440), E(0, () => o.intl.string(o.t.XjXqzh)), E(720), E(1080), E(1440));
+let h = [E(480, () => A(480)), E(720, () => A(720)), E(1080, () => A(1080)), E(1440, () => A(1440)), E(0, () => A(0))];
+(E(15), E(30), E(60));
+let f = [
+    E(15, () => o.intl.formatToPlainString(o.t["bW+JCW"], { value: 15 })),
+    E(30, () => o.intl.formatToPlainString(o.t["bW+JCW"], { value: 30 })),
+    E(60, () => o.intl.formatToPlainString(o.t["bW+JCW"], { value: 60 })),
 ];
+n.d(
+    t,
+    {},
+    {
+        AC: function (e) {
+            switch (e) {
+                case 5:
+                    return 5;
+                case 15:
+                    return 15;
+                case 30:
+                    return 30;
+                case 60:
+                    return 60;
+                default:
+                    throw Error(`Unknown frame rate: ${e}`);
+            }
+        },
+        F0: function (e) {
+            switch (e) {
+                case 480:
+                    return 480;
+                case 720:
+                    return 720;
+                case 1080:
+                    return 1080;
+                case 1440:
+                    return 1440;
+                case 0:
+                    return 0;
+                default:
+                    throw Error(`Unknown resolution: ${e}`);
+            }
+        },
+        Jk: h,
+        ZV: _,
+        ce: f,
+        jQ: u,
+        kn: c,
+        on: d,
+        zr: A,
+    },
+);

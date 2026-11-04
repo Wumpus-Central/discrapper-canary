@@ -1,5 +1,4 @@
-n.d(t, { A: () => l, w: () => s });
-var i = n(17928),
+var i = n(855986),
     r = n(71393),
     a = n(652215);
 function s(e) {
@@ -9,9 +8,16 @@ function s(e) {
             e.features.has(a.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL))
     );
 }
-function l(e) {
-    return (0, i.bG)([r.A], () => {
-        let t = r.A.getGuild(e);
-        return null != t && s(t);
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            return (0, i.bG)([r.A], () => {
+                let t = r.A.getGuild(e);
+                return null != t && s(t);
+            });
+        },
+        w: s,
+    },
+);

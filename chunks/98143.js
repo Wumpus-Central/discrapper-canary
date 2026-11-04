@@ -1,4 +1,3 @@
-(r.r(t), r.d(t, { createProvider: () => u }));
 var a = r(614235);
 let i = {
         frost: 0.55,
@@ -116,7 +115,7 @@ var n = class {
             (this.usingRvfc = !1),
             (this.stopped = !1),
             (this.lastFrameAt = 0),
-            (this.minFrameIntervalMs = 33.333333333333336),
+            (this.minFrameIntervalMs = 1e3 / 30),
             (this.startTime = 0),
             (this.loop = (e) => {
                 if (this.stopped || (this.scheduleNextFrame(), e - this.lastFrameAt < this.minFrameIntervalMs)) return;
@@ -278,6 +277,12 @@ var n = class {
             : (this.rafId = requestAnimationFrame(this.loop));
     }
 };
-function u() {
-    return new n();
-}
+r.d(
+    t,
+    {},
+    {
+        createProvider: function () {
+            return new n();
+        },
+    },
+);

@@ -1,1 +1,1 @@
-_.exports = { Nr: "card__45a5a", wx: "header__45a5a", o5: "headerTrailing__45a5a" };
+t.exports = { Nr: "card_GuH4Z2", wx: "header_GuH4Z2", o5: "headerTrailing_GuH4Z2" };

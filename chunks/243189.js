@@ -1,9 +1,9 @@
-c.exports = {
-    Vs: "tile_c41dc3",
-    iH: "tileFrame_c41dc3",
-    om: "tileFrameGrid_c41dc3",
-    qb: "tileMediaWaiting_c41dc3",
-    cr: "tileVideo_c41dc3",
-    rm: "waitingPill_c41dc3",
-    cL: "tileOwner_c41dc3",
+i.exports = {
+    Vs: "tile_wDp5Lr",
+    iH: "tileFrame_wDp5Lr",
+    om: "tileFrameGrid_wDp5Lr",
+    qb: "tileMediaWaiting_wDp5Lr",
+    cr: "tileVideo_wDp5Lr",
+    rm: "waitingPill_wDp5Lr",
+    cL: "tileOwner_wDp5Lr",
 };

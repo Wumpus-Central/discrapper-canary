@@ -1,4 +1,3 @@
-n.d(t, { p: () => r });
 var i,
     r =
         (((i = {})[(i.NONE = 0)] = "NONE"),
@@ -8,3 +7,4 @@ var i,
         (i[(i.GUILD_ACTIVITY_STATUS = 8)] = "GUILD_ACTIVITY_STATUS"),
         (i[(i.SPAM_FILTERS = 16)] = "SPAM_FILTERS"),
         i);
+n.d(t, {}, { p: r });

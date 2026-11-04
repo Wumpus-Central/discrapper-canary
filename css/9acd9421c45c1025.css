@@ -1,0 +1,24 @@
+.giftButton_MoTl1p {
+    --button-outline-brand-text: var(--brand-500)
+}
+
+.innerGiftButton_MoTl1p {
+    align-items: center;
+    display: flex
+}
+
+.buttonText_MoTl1p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.giftIcon_MoTl1p {
+    height: 16px;
+    margin-inline-end: 4px;
+    min-height: 16px;
+    min-width: 16px;
+    width: 16px
+}
+
+/*# sourceMappingURL=9acd9421c45c1025.css.map*/

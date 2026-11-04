@@ -1,6 +1,6 @@
 e.exports = {
-    gj: "premiumLabel__34642",
-    wH: "selected__34642",
-    Tp: "background__34642",
-    _I: "selectedBackground__34642",
+    gj: "premiumLabel_2BIbU8",
+    wH: "selected_2BIbU8",
+    Tp: "background_2BIbU8",
+    _I: "selectedBackground_2BIbU8",
 };

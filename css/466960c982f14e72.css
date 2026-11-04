@@ -1,0 +1,57 @@
+.avatarDecorationPairOne_tgxuS7 {
+    transform: translate(50%, 50%) rotate(12deg)
+}
+
+.avatarDecorationPairTwo_tgxuS7 {
+    transform: translate(-50%, -50%) rotate(-12deg)
+}
+
+.nameplate_tgxuS7 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.profileEffectShopPreview_tgxuS7 {
+    align-self: start;
+    border-radius: var(--radius-md);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    overflow: hidden;
+    width: 84%
+}
+
+.profileFrameShopPreview_tgxuS7 {
+    height: 100%;
+    width: 50%
+}
+
+.bundlePreview_tgxuS7 {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+.bundleStaticPreview_tgxuS7 {
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center;
+    object-position: center
+}
+
+.easterEggContainer_tgxuS7 {
+    align-items: center;
+    display: flex;
+    height: 228px;
+    inset-inline-end: -100%;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+/*# sourceMappingURL=466960c982f14e72.css.map*/

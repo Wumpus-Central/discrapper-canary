@@ -1,6 +1,6 @@
 e.exports = {
-    hQ: "contentContainer__6f766",
-    i1: "previewContainer__6f766",
-    dD: "copyContainer__6f766",
-    R_: "heading__6f766",
+    hQ: "contentContainer_Q7Cp1t",
+    i1: "previewContainer_Q7Cp1t",
+    dD: "copyContainer_Q7Cp1t",
+    R_: "heading_Q7Cp1t",
 };

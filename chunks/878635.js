@@ -1,4 +1,4 @@
-(n.r(s), n.d(s, { OpenViduRecordingProvider: () => r }));
+n.r(s);
 var t = n(772292),
     r = class {
         async connect(e) {
@@ -63,3 +63,4 @@ var t = n(772292),
             };
         }
     };
+n.d(s, {}, { OpenViduRecordingProvider: r });

@@ -1,4 +1,3 @@
-l.d(t, { A: () => u });
 var n = l(477900),
     r = l(582128),
     i = l(478676),
@@ -6,7 +5,7 @@ var n = l(477900),
     a = l(28863),
     d = l(793574),
     o = l(688810),
-    c = l(123917);
+    c = l(889558);
 let u = r.memo(function (e) {
     let { onClick: t, trusted: l, title: i, href: u, children: m, messageId: h, channelId: v, ...g } = e,
         { analyticsLocations: x } = (0, o.Ay)(d.A.MASKED_LINK),
@@ -29,3 +28,4 @@ let u = r.memo(function (e) {
         children: m ?? i,
     });
 });
+l.d(t, {}, { A: u });

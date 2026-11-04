@@ -1,4 +1,3 @@
-n.d(t, { K: () => r });
 var i,
     r =
         (((i = {}).APP_CRASHED = "app_crashed"),
@@ -65,3 +64,4 @@ var i,
         (i.WASM_ASSET_ENCODED_BYTES = "wasm_asset_encoded_bytes"),
         (i.WASM_ASSET_DECODED_BYTES = "wasm_asset_decoded_bytes"),
         i);
+n.d(t, {}, { K: r });

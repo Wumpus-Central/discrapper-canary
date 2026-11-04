@@ -1,8 +1,7 @@
-n.d(t, { A: () => R });
 var r = n(477900),
     i = n(582128),
     o = n(265872),
-    l = n(980707),
+    l = n(165862),
     a = n(477782),
     s = n(365199),
     u = n(793574),
@@ -10,44 +9,50 @@ var r = n(477900),
     d = n(50268),
     p = n(183555),
     h = n(993401),
-    E = n(105292);
-function R(e) {
-    let { user: t, viewProfileItem: n } = e,
-        R = i.useRef(null),
-        { trackUserProfileAction: _ } = (0, p.NJ)(),
-        { analyticsLocations: b } = (0, c.Ay)(u.A.USER_PROFILE_OVERFLOW_MENU),
-        O = [
-            [n],
-            [
-                (0, d.A)({
-                    id: t.id,
-                    label: E.intl.string(E.t["/AXYnE"]),
-                    onSuccess: () => _({ action: "COPY_USER_ID", analyticsLocations: b }),
-                }),
-            ],
-        ];
-    return O.every((e) => e.every((e) => null == e))
-        ? null
-        : (0, r.jsx)(o.Y, {
-              targetElementRef: R,
-              renderPopout: (e) => {
-                  let { closePopout: t } = e;
-                  return (0, r.jsx)(l.W, {
-                      "data-menu-migrated-auto": !0,
-                      navId: "non-user-bot-profile-overflow-menu",
-                      onSelect: void 0,
-                      onClose: t,
-                      "aria-label": E.intl.string(E.t.AXIHpV),
-                      children: O.map((e, t) => (0, r.jsx)(a.rX, { children: e.map((e) => e) }, t)),
+    E = n(792996);
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { user: t, viewProfileItem: n } = e,
+                R = i.useRef(null),
+                { trackUserProfileAction: _ } = (0, p.NJ)(),
+                { analyticsLocations: b } = (0, c.Ay)(u.A.USER_PROFILE_OVERFLOW_MENU),
+                O = [
+                    [n],
+                    [
+                        (0, d.A)({
+                            id: t.id,
+                            label: E.intl.string(E.t["/AXYnE"]),
+                            onSuccess: () => _({ action: "COPY_USER_ID", analyticsLocations: b }),
+                        }),
+                    ],
+                ];
+            return O.every((e) => e.every((e) => null == e))
+                ? null
+                : (0, r.jsx)(o.Y, {
+                      targetElementRef: R,
+                      renderPopout: (e) => {
+                          let { closePopout: t } = e;
+                          return (0, r.jsx)(l.W, {
+                              "data-menu-migrated-auto": !0,
+                              navId: "non-user-bot-profile-overflow-menu",
+                              onSelect: void 0,
+                              onClose: t,
+                              "aria-label": E.intl.string(E.t.AXIHpV),
+                              children: O.map((e, t) => (0, r.jsx)(a.rX, { children: e.map((e) => e) }, t)),
+                          });
+                      },
+                      children: (e) =>
+                          (0, r.jsx)(h.br, {
+                              buttonRef: R,
+                              action: "PRESS_OPTIONS",
+                              icon: s.MoreHorizontalIcon,
+                              tooltipText: E.intl.string(E.t["UKOtz+"]),
+                              ...e,
+                          }),
                   });
-              },
-              children: (e) =>
-                  (0, r.jsx)(h.br, {
-                      buttonRef: R,
-                      action: "PRESS_OPTIONS",
-                      icon: s.MoreHorizontalIcon,
-                      tooltipText: E.intl.string(E.t["UKOtz+"]),
-                      ...e,
-                  }),
-          });
-}
+        },
+    },
+);

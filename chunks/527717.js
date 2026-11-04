@@ -1,4 +1,3 @@
-r.d(t, { i: () => s, r: () => a });
 var n = r(980807),
     i = r(3112),
     o = r(582128);
@@ -14,3 +13,4 @@ let a = (0, o.createContext)({ isSelected: !1 }),
             isVisible: r,
         });
     });
+r.d(t, {}, { i: s, r: a });

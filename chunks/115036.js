@@ -1,7 +1,6 @@
 let i, r;
-n.d(t, { A: () => g });
-var a = n(132500),
-    s = n(17928),
+var a = n(115560),
+    s = n(855986),
     l = n(506774),
     o = n(451988),
     d = n(73153),
@@ -52,3 +51,4 @@ let g = new T(d.h, {
     LOGOUT: m,
     REGISTER: m,
 });
+n.d(t, {}, { A: g });

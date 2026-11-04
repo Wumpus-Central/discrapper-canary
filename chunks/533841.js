@@ -1,1 +1,1 @@
-e.exports = { l7: "innerPanel_f4d9c8", P9: "snapshot_f4d9c8", Rm: "log_f4d9c8" };
+e.exports = { l7: "innerPanel_KTbz-h", P9: "snapshot_KTbz-h", Rm: "log_KTbz-h" };

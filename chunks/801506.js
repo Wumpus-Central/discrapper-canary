@@ -1,1 +1,1 @@
-d.exports = { C1: "guildBanner__6e6ad", F: "guildHeader__6e6ad", J5: "guildName__6e6ad", Wm: "dropdown__6e6ad" };
+C.exports = { C1: "guildBanner_RybCSC", F: "guildHeader_RybCSC", J5: "guildName_RybCSC", Wm: "dropdown_RybCSC" };

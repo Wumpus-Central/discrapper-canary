@@ -1,15 +1,3 @@
-n.d(t, {
-    Bt: () => _,
-    CD: () => l,
-    KS: () => o,
-    NC: () => c,
-    P_: () => u,
-    XY: () => d,
-    km: () => E,
-    mY: () => A,
-    pt: () => s,
-    qn: () => a,
-});
 var i,
     r,
     a = (((i = {}).BLOCKLIST = "blocklist"), (i.ALLOWLIST = "allowlist"), i),
@@ -23,11 +11,29 @@ var i,
         (r[(r.GIFT_PROMOTION = 6)] = "GIFT_PROMOTION"),
         (r[(r.THIRD_PARTY_OUTBOUND_RECURRING = 7)] = "THIRD_PARTY_OUTBOUND_RECURRING"),
         r);
-let l = { steelseries: { id: "steelseries", label: "SteelSeries" }, logitech: { id: "logitech", label: "Logitech" } },
-    o = "steelseries",
-    d = "logitech",
-    c = "youtube",
-    u = "best_buy",
-    _ = "call_of_duty",
-    E = new Set([d, c, u, _]),
-    A = [d, o];
+let l = "steelseries",
+    o = "logitech",
+    d = "youtube",
+    c = "best_buy",
+    u = "call_of_duty",
+    _ = new Set([o, d, c, u]),
+    E = [o, l];
+n.d(
+    t,
+    {},
+    {
+        Bt: u,
+        CD: {
+            steelseries: { id: "steelseries", label: "SteelSeries" },
+            logitech: { id: "logitech", label: "Logitech" },
+        },
+        KS: l,
+        NC: d,
+        P_: c,
+        XY: o,
+        km: _,
+        mY: E,
+        pt: s,
+        qn: a,
+    },
+);

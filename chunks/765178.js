@@ -1,4 +1,3 @@
-n.d(t, { O: () => a });
 var i = n(230906);
 let r = new Map(),
     a = {
@@ -13,3 +12,4 @@ let r = new Map(),
             (0, i.vS)(null != t ? t : null);
         },
     };
+n.d(t, {}, { O: a });

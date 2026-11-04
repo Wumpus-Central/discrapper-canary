@@ -1,12 +1,11 @@
-n.d(t, { A: () => h });
 var i = n(477900);
 n(582128);
 var l = n(503698),
     a = n.n(l),
     s = n(177953),
     r = n(834730),
-    o = n(204651),
-    d = n(105292),
+    o = n(693409),
+    d = n(792996),
     c = n(308625);
 function u(e) {
     let { className: t, count: n } = e;
@@ -18,15 +17,21 @@ function u(e) {
         ],
     });
 }
-function h(e) {
-    let { count: t, ...n } = e;
-    return (0, i.jsx)(o.A, {
-        label: d.intl.string(d.t["jNqDh/"]),
-        iconComponent: (e) => {
-            let { className: n } = e;
-            return (0, i.jsx)(u, { className: n, count: t });
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { count: t, ...n } = e;
+            return (0, i.jsx)(o.A, {
+                label: d.intl.string(d.t["jNqDh/"]),
+                iconComponent: (e) => {
+                    let { className: n } = e;
+                    return (0, i.jsx)(u, { className: n, count: t });
+                },
+                tooltipPosition: "bottom",
+                ...n,
+            });
         },
-        tooltipPosition: "bottom",
-        ...n,
-    });
-}
+    },
+);

@@ -1,0 +1,33 @@
+.row_nKMVXR {
+    color: var(--interactive-text-default);
+    line-height: 18px;
+    margin: 16px 0
+}
+
+.switchGroup_nKMVXR {
+    margin-bottom: 4px
+}
+
+.error_nKMVXR {
+    color: var(--text-feedback-critical);
+    text-align: center
+}
+
+.roleSelector_nKMVXR {
+    background-color: var(--background-base-lower);
+    border: 1px solid var(--background-base-lowest)
+}
+
+.roleCircle_nKMVXR {
+    border-radius: 50%;
+    display: inline-block;
+    height: 8px;
+    padding: 0;
+    width: 8px
+}
+
+.button_nKMVXR {
+    margin-inline-start: 8px
+}
+
+/*# sourceMappingURL=716d56719c4fedb7.css.map*/

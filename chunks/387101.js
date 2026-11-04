@@ -1,137 +1,142 @@
-a.d(e, { default: () => f });
 var n = a(477900),
     i = a(582128),
-    r = a(17928),
+    r = a(855986),
     s = a(499979),
     l = a(189213),
     o = a(568602),
     d = a(834730),
-    c = a(144228),
+    c = a(771871),
     u = a(103557),
     m = a(964486),
     y = a(77729),
-    _ = a(952818),
+    _ = a(986322),
     h = a(760751),
-    g = a(174459),
+    g = a(129230),
     p = a(41984),
-    b = a(296027),
+    b = a(861862),
     x = a(652215),
-    v = a(105292),
+    v = a(792996),
     k = a(75823);
-function f(t) {
-    let { onClose: e, transitionState: a, clientSettingType: f, gameId: w } = t,
-        [C, A] = i.useState("unreported"),
-        [S, j] = i.useState(""),
-        [E, M] = i.useState(!1),
-        [R, z] = i.useState(!1),
-        [D, F] = i.useState(!1),
-        [L, N] = i.useState(!1),
-        O = (0, r.bG)([h.A, _.Ay], () => {
-            let t = w ?? _.Ay.getCurrentGameForAnalytics()?.id;
-            return null == t ? null : h.A.getDetectableGame(t);
-        }),
-        P = (0, r.bG)([b.default], () => {
-            let t = b.default?.getMostRecentOverlayRenderMethod() ?? void 0;
-            return null != t ? p.Ue[t] : void 0;
-        }),
-        U = i.useMemo(() => {
-            let t = {
-                not_working: v.t.CHXHFX,
-                not_useful: v.t.a95skc,
-                game_crashes_occurred: v.t.IFZ0Sa,
-                poor_performance: v.t.exRczv,
-                too_many_notifications: v.t.XuBFBM,
-                multiple_monitors: v.t.p8Ekyz,
-                in_the_way_of_game: v.t.YP7Pin,
-                other: v.t["YP/Ttl"],
-            };
-            return Object.keys(t).map((e) => ({ name: v.intl.string(t[e]), value: e }));
-        }, []),
-        Y = i.useCallback(async () => {
-            if ("unreported" === C && 0 === S.length) {
-                (F(!0), await (0, s.yy)(100), F(!1), N(!0));
-                return;
-            }
-            (M(!0),
-                await g.default.track(x.HAw.OVERLAY_DISABLED_SURVEY, {
-                    reason: C,
-                    comment: S,
-                    client_setting_type: f,
-                    application_id: O?.id,
-                    application_name: O?.name,
-                    most_recent_overlay_render_method: P,
-                    hardware_display_count: (await y.A?.hardware?.getDisplayCount?.()) ?? null,
+a.d(
+    e,
+    {},
+    {
+        default: function (t) {
+            let { onClose: e, transitionState: a, clientSettingType: f, gameId: w } = t,
+                [C, A] = i.useState("unreported"),
+                [S, j] = i.useState(""),
+                [E, M] = i.useState(!1),
+                [R, z] = i.useState(!1),
+                [D, F] = i.useState(!1),
+                [L, N] = i.useState(!1),
+                O = (0, r.bG)([h.A, _.Ay], () => {
+                    let t = w ?? _.Ay.getCurrentGameForAnalytics()?.id;
+                    return null == t ? null : h.A.getDetectableGame(t);
                 }),
-                await (0, s.yy)(1e3),
-                M(!1),
-                z(!0),
-                await (0, s.yy)(1500),
-                e());
-        }, [C, S, f, O?.id, O?.name, P, e]);
-    (0, m.Ay)(() => {
-        g.default.track(x.HAw.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
-    });
-    let G = i.useMemo(
-        () => [
-            { variant: "secondary", text: v.intl.string(v.t["5Wxrcd"]), onClick: e, disabled: E },
-            {
-                variant: D ? "secondary" : "primary",
-                text: R ? v.intl.string(v.t.bxiZU6) : v.intl.string(v.t.geKm7t),
-                onClick: Y,
-                disabled: E || R,
-                loading: E,
-                autoFocus: !1,
-            },
-        ],
-        [e, E, R, Y, D],
-    );
-    return (0, n.jsxs)(l.a, {
-        onClose: e,
-        transitionState: a,
-        title: v.intl.string(v.t["9JKzxe"]),
-        subtitle: v.intl.string(v.t["2yjnmb"]),
-        actions: G,
-        children: [
-            (0, n.jsxs)("div", {
-                children: [
-                    (0, n.jsx)(o.b, {
-                        isShaking: D,
-                        intensity: 1,
-                        className: k.lm,
-                        children: (0, n.jsx)(d.E, {
-                            variant: "body-sm/semibold",
-                            color: L ? "text-feedback-critical" : "text-muted",
-                            children: v.intl.string(v.t.yhUvdd),
+                P = (0, r.bG)([b.default], () => {
+                    let t = b.default?.getMostRecentOverlayRenderMethod() ?? void 0;
+                    return null != t ? p.Ue[t] : void 0;
+                }),
+                U = i.useMemo(() => {
+                    let t = {
+                        not_working: v.t.CHXHFX,
+                        not_useful: v.t.a95skc,
+                        game_crashes_occurred: v.t.IFZ0Sa,
+                        poor_performance: v.t.exRczv,
+                        too_many_notifications: v.t.XuBFBM,
+                        multiple_monitors: v.t.p8Ekyz,
+                        in_the_way_of_game: v.t.YP7Pin,
+                        other: v.t["YP/Ttl"],
+                    };
+                    return Object.keys(t).map((e) => ({ name: v.intl.string(t[e]), value: e }));
+                }, []),
+                Y = i.useCallback(async () => {
+                    if ("unreported" === C && 0 === S.length) {
+                        (F(!0), await (0, s.yy)(100), F(!1), N(!0));
+                        return;
+                    }
+                    (M(!0),
+                        await g.default.track(x.HAw.OVERLAY_DISABLED_SURVEY, {
+                            reason: C,
+                            comment: S,
+                            client_setting_type: f,
+                            application_id: O?.id,
+                            application_name: O?.name,
+                            most_recent_overlay_render_method: P,
+                            hardware_display_count: (await y.A?.hardware?.getDisplayCount?.()) ?? null,
                         }),
-                    }),
-                    (0, n.jsx)(c.z, {
-                        value: "unreported" === C ? void 0 : C,
-                        options: U,
-                        onChange: function (t) {
-                            (A(t), N(!1), F(!1));
-                        },
-                    }),
+                        await (0, s.yy)(1e3),
+                        M(!1),
+                        z(!0),
+                        await (0, s.yy)(1500),
+                        e());
+                }, [C, S, f, O?.id, O?.name, P, e]);
+            (0, m.Ay)(() => {
+                g.default.track(x.HAw.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
+            });
+            let G = i.useMemo(
+                () => [
+                    { variant: "secondary", text: v.intl.string(v.t["5Wxrcd"]), onClick: e, disabled: E },
+                    {
+                        variant: D ? "secondary" : "primary",
+                        text: R ? v.intl.string(v.t.bxiZU6) : v.intl.string(v.t.geKm7t),
+                        onClick: Y,
+                        disabled: E || R,
+                        loading: E,
+                        autoFocus: !1,
+                    },
                 ],
-            }),
-            (0, n.jsxs)("div", {
-                className: k.xi,
+                [e, E, R, Y, D],
+            );
+            return (0, n.jsxs)(l.a, {
+                onClose: e,
+                transitionState: a,
+                title: v.intl.string(v.t["9JKzxe"]),
+                subtitle: v.intl.string(v.t["2yjnmb"]),
+                actions: G,
                 children: [
-                    (0, n.jsx)(d.E, {
-                        variant: "body-sm/semibold",
-                        color: "text-muted",
-                        className: k.NP,
-                        children: v.intl.string(v.t.LYnrhc),
+                    (0, n.jsxs)("div", {
+                        children: [
+                            (0, n.jsx)(o.b, {
+                                isShaking: D,
+                                intensity: 1,
+                                className: k.lm,
+                                children: (0, n.jsx)(d.E, {
+                                    variant: "body-sm/semibold",
+                                    color: L ? "text-feedback-critical" : "text-muted",
+                                    children: v.intl.string(v.t.yhUvdd),
+                                }),
+                            }),
+                            (0, n.jsx)(c.z, {
+                                value: "unreported" === C ? void 0 : C,
+                                options: U,
+                                onChange: function (t) {
+                                    (A(t), N(!1), F(!1));
+                                },
+                            }),
+                        ],
                     }),
-                    (0, n.jsx)(u.f, {
-                        autosize: !0,
-                        value: S,
-                        maxLength: 1e3,
-                        showRemainingCharacterCount: !1,
-                        placeholder: v.intl.string(v.t["gU+bVJ"]),
-                        onChange: j,
+                    (0, n.jsxs)("div", {
+                        className: k.xi,
+                        children: [
+                            (0, n.jsx)(d.E, {
+                                variant: "body-sm/semibold",
+                                color: "text-muted",
+                                className: k.NP,
+                                children: v.intl.string(v.t.LYnrhc),
+                            }),
+                            (0, n.jsx)(u.f, {
+                                autosize: !0,
+                                value: S,
+                                maxLength: 1e3,
+                                showRemainingCharacterCount: !1,
+                                placeholder: v.intl.string(v.t["gU+bVJ"]),
+                                onChange: j,
+                            }),
+                        ],
                     }),
                 ],
-            }),
-        ],
-    });
-}
+            });
+        },
+    },
+);

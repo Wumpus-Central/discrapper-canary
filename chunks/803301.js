@@ -1,83 +1,83 @@
-n.d(t, { A: () => A });
-var i = n(17928),
-    r = n(73153),
-    a = n(652215),
-    s = n(731854);
-let l = null,
-    o = null,
-    d = {},
-    c = {};
-function u(e, t) {
+var i = n(855986),
+    r = n(73153);
+n(652215);
+var a = n(731854);
+let s = null,
+    l = null,
+    o = {},
+    d = {};
+function c(e, t) {
     return `${e}:${t}`;
 }
-function _(e, t) {
+function u(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-        i = d[e];
+        i = o[e];
     if (null == i) return;
-    let r = i[t ?? a.eGj];
+    let r = i[t ?? "null"];
     if (null != r) {
-        for (let t of Object.values(s.x)) (n === t || null == n) && (delete r[t], delete c[u(n ?? t, e)]);
-        d[e][t ?? a.eGj] = r;
+        for (let t of Object.values(a.x)) (n === t || null == n) && (delete r[t], delete d[c(n ?? t, e)]);
+        o[e][t ?? "null"] = r;
     }
 }
-class E extends i.Ay.Store {
+class _ extends i.Ay.Store {
     static displayName = "VideoStreamStore";
     getStreamId(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.x.DEFAULT;
-        return d[e]?.[t ?? a.eGj]?.[n]?.streamId;
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.x.DEFAULT;
+        return o[e]?.[t ?? "null"]?.[n]?.streamId;
     }
     getUserStreamData(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.x.DEFAULT;
-        return d[e]?.[t ?? a.eGj]?.[n];
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.x.DEFAULT;
+        return o[e]?.[t ?? "null"]?.[n];
     }
     getTimedoutVideos() {
-        return c;
+        return d;
     }
     getTimedoutVideo(e, t) {
-        return c[u(e, t)];
+        return d[c(e, t)];
     }
 }
-let A = new E(r.h, {
+let E = new _(r.h, {
     CONNECTION_OPEN: function (e) {
         let { user: t, sessionId: n } = e;
-        ((l = t.id), (o = n));
+        ((s = t.id), (l = n));
     },
     OVERLAY_INITIALIZE: function (e) {
         let { user: t, sessionId: n } = e;
-        ((l = t.id), (o = n));
+        ((s = t.id), (l = n));
     },
     RTC_CONNECTION_VIDEO: function (e) {
         let { userId: t, guildId: n, streamId: i, context: r } = e;
         if (null != i) {
             let e;
-            (t in d || (d[t] = {}),
-                (e = d[t][n ?? a.eGj] ?? {}),
-                (d[t][n ?? a.eGj] = { ...e, [r]: { streamId: i } }),
-                delete c[u(r, t)]);
-        } else _(t, n, r);
+            (t in o || (o[t] = {}),
+                (e = o[t][n ?? "null"] ?? {}),
+                (o[t][n ?? "null"] = { ...e, [r]: { streamId: i } }),
+                delete d[c(r, t)]);
+        } else u(t, n, r);
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;
         return t.reduce((e, t) => {
-            let { userId: n, sessionId: i, channelId: r, guildId: s } = t;
-            if (null == r && n === l)
-                if (i !== o) return e;
-                else ((d = {}), (c = {}));
+            let { userId: n, sessionId: i, channelId: r, guildId: a } = t;
+            if (null == r && n === s)
+                if (i !== l) return e;
+                else ((o = {}), (d = {}));
             else {
-                if (null != r || d[n]?.[s ?? a.eGj] == null) return e;
-                _(n, s);
+                if (null != r || o[n]?.[a ?? "null"] == null) return e;
+                u(n, a);
             }
             return !0;
         }, !1);
     },
     VIDEO_STREAM_READY_TIMEOUT: function (e) {
         let { videoStreamId: t, userId: n, streamKey: i, mediaContext: r } = e;
-        c[u(r, n)] = { videoStreamId: t, userId: n, streamKey: i, mediaContext: r };
+        d[c(r, n)] = { videoStreamId: t, userId: n, streamKey: i, mediaContext: r };
     },
     CLEAR_VIDEO_STREAM_READY_TIMEOUT: function (e) {
         let { mediaContext: t, userId: n } = e,
-            i = u(t, n);
-        if (null == c[i]) return !1;
-        delete c[i];
+            i = c(t, n);
+        if (null == d[i]) return !1;
+        delete d[i];
     },
 });
+n.d(t, {}, { A: E });

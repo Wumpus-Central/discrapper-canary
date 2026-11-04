@@ -1,4 +1,3 @@
-n.d(t, { i: () => r });
 var i,
     r =
         (((i = {})[(i.ENTERING = 0)] = "ENTERING"),
@@ -7,3 +6,4 @@ var i,
         (i[(i.EXITED = 3)] = "EXITED"),
         (i[(i.HIDDEN = 4)] = "HIDDEN"),
         i);
+n.d(t, {}, { i: r });

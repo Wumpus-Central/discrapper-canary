@@ -1,8 +1,8 @@
-_.exports = {
-    yV: "sectionDescription__8d742",
-    Nr: "card__8d742",
-    RI: "handImage__8d742",
-    FS: "textContainer__8d742",
-    wx: "header__8d742",
-    h_: "description__8d742",
+e.exports = {
+    yV: "sectionDescription_edWQHR",
+    Nr: "card_edWQHR",
+    RI: "handImage_edWQHR",
+    FS: "textContainer_edWQHR",
+    wx: "header_edWQHR",
+    h_: "description_edWQHR",
 };

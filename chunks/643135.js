@@ -1,5 +1,4 @@
 let a;
-r.d(t, { d: () => s });
 var o = r(477900),
     l = r(582128),
     n = r(745262),
@@ -27,29 +26,7 @@ let d = `
         "border-width",
         "box-sizing",
     ];
-function s(e) {
-    let { style: t, autoFocus: r = !1, disabled: a = !1, autoCorrect: n = "off", maxRows: d = 15, ref: u, ...s } = e,
-        g = l.useRef(null),
-        [b, p] = l.useState(() => c(g.current, s.rows, d, s.value));
-    return (
-        l.useLayoutEffect(() => {
-            p(c(g.current, s.rows, d, s.value));
-        }, [s.rows, d, s.value]),
-        (0, o.jsx)(i.vN, {
-            children: (0, o.jsx)("textarea", {
-                ...s,
-                ref: function (e) {
-                    ((g.current = e), "function" == typeof u ? u(g.current) : null != u && (u.current = e));
-                },
-                style: { ...t, height: b },
-                autoFocus: r,
-                disabled: a,
-                autoCorrect: n,
-            }),
-        })
-    );
-}
-function c(e, t, r, o) {
+function s(e, t, r, o) {
     var l, i, s, c, g, b;
     let p, h, x, m, y, f;
     if (null == e) return;
@@ -100,3 +77,39 @@ function c(e, t, r, o) {
     let M = Math.ceil(a.scrollHeight + 1);
     return ("border-box" === j ? (M += w) : "content-box" === j && (M -= v), (M = Math.max(C, Math.min(M, V))));
 }
+r.d(
+    t,
+    {},
+    {
+        d: function (e) {
+            let {
+                    style: t,
+                    autoFocus: r = !1,
+                    disabled: a = !1,
+                    autoCorrect: n = "off",
+                    maxRows: d = 15,
+                    ref: u,
+                    ...c
+                } = e,
+                g = l.useRef(null),
+                [b, p] = l.useState(() => s(g.current, c.rows, d, c.value));
+            return (
+                l.useLayoutEffect(() => {
+                    p(s(g.current, c.rows, d, c.value));
+                }, [c.rows, d, c.value]),
+                (0, o.jsx)(i.vN, {
+                    children: (0, o.jsx)("textarea", {
+                        ...c,
+                        ref: function (e) {
+                            ((g.current = e), "function" == typeof u ? u(g.current) : null != u && (u.current = e));
+                        },
+                        style: { ...t, height: b },
+                        autoFocus: r,
+                        disabled: a,
+                        autoCorrect: n,
+                    }),
+                })
+            );
+        },
+    },
+);

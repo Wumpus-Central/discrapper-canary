@@ -1,4 +1,3 @@
-n.d(t, { A: () => f });
 var i = n(477900);
 n(582128);
 var l = n(503698),
@@ -6,26 +5,32 @@ var l = n(503698),
     s = n(29540),
     r = n(481901),
     o = n(323384),
-    d = n(204651),
+    d = n(693409),
     c = n(418241),
     u = n(708416),
-    h = n(885031),
-    p = n(105292),
-    m = n(618922),
+    h = n(786739),
+    p = n(792996),
+    m = n(687782),
     A = n(878772);
-function f(e) {
-    let { channel: t, returnsToRoom: n, className: l } = e,
-        f = t.id,
-        g = (0, u.kM)(t),
-        x = n ? m.default.f7g0DK : p.t["3jrUBj"],
-        C = p.intl.string(g ? x : h.default.ZtYyOx);
-    return (0, i.jsx)("div", {
-        className: a()(l, A.A),
-        children: (0, i.jsx)(d.A, {
-            iconComponent: g ? (n ? s.u : r.d) : o.k,
-            onClick: () => (0, c.s)(f),
-            className: A.u,
-            label: C,
-        }),
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { channel: t, returnsToRoom: n, className: l } = e,
+                f = t.id,
+                g = (0, u.kM)(t),
+                x = n ? m.default.f7g0DK : p.t["3jrUBj"],
+                C = p.intl.string(g ? x : h.default.ZtYyOx);
+            return (0, i.jsx)("div", {
+                className: a()(l, A.A),
+                children: (0, i.jsx)(d.A, {
+                    iconComponent: g ? (n ? s.u : r.d) : o.k,
+                    onClick: () => (0, c.s)(f),
+                    className: A.u,
+                    label: C,
+                }),
+            });
+        },
+    },
+);

@@ -1,10 +1,10 @@
 e.exports = {
-    KE: "toolbar_bef5a8",
-    IQ: "toolbarStatus_bef5a8",
-    uW: "section_bef5a8",
-    Gf: "sectionTitle_bef5a8",
-    N8: "statRow_bef5a8",
-    x7: "statRowHead_bef5a8",
-    kS: "statLabelGroup_bef5a8",
-    dh: "meterCritical_bef5a8",
+    KE: "toolbar_qaPTLC",
+    IQ: "toolbarStatus_qaPTLC",
+    uW: "section_qaPTLC",
+    Gf: "sectionTitle_qaPTLC",
+    N8: "statRow_qaPTLC",
+    x7: "statRowHead_qaPTLC",
+    kS: "statLabelGroup_qaPTLC",
+    dh: "meterCritical_qaPTLC",
 };

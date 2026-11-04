@@ -1,4 +1,3 @@
-n.d(t, { S: () => a, b: () => s });
 var i = n(600975),
     r = n(688151);
 let a = (0, i.C)({
@@ -12,6 +11,13 @@ let a = (0, i.C)({
         { id: 2, label: "Waveform icon only", config: { enableWaveformIcon: !0, enableHighlight: !1 } },
     ],
 });
-function s(e, t) {
-    return a.useExperiment({ guildId: e, location: t }, { autoTrackExposure: !1 });
-}
+n.d(
+    t,
+    {},
+    {
+        S: a,
+        b: function (e, t) {
+            return a.useExperiment({ guildId: e, location: t }, { autoTrackExposure: !1 });
+        },
+    },
+);

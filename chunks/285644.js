@@ -1,5 +1,5 @@
 e.exports = {
-    bE: "guildBoostUnavailableNotice__0c507",
-    _k: "lightTheme__0c507",
-    gp: "guildBoostUnavailableNoticeText__0c507",
+    bE: "guildBoostUnavailableNotice_Jru8ph",
+    _k: "lightTheme_Jru8ph",
+    gp: "guildBoostUnavailableNoticeText_Jru8ph",
 };

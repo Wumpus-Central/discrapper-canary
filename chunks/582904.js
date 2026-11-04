@@ -1,7 +1,7 @@
-(t.d(i, { Ln: () => p, Z0: () => f, kt: () => h }), t(321073));
+t(321073);
 var n = t(582128),
-    l = t(17928),
-    s = t(427358),
+    l = t(855986),
+    s = t(812020),
     a = t(95701),
     r = t(696451),
     d = t(576705),
@@ -11,48 +11,54 @@ var n = t(582128),
     A = t(605431),
     m = t(366251),
     g = t(652215);
-function h(e) {
-    let { channel: i } = e,
-        t = i?.guild_id;
-    return (0, l.yK)(
-        [s.A, u.Ay, r.Ay, o.default],
-        () => {
-            if (null == i) return [];
-            let e = s.A.getUserAffinitiesMap(),
-                n = null != i ? u.Ay.getVoiceStatesForChannel(i) : [],
-                l = new Set();
-            n.forEach((e) => l.add(e.user.id));
-            let d = [];
-            for (let e of r.Ay.getMembers(t)) {
-                if (l.has(e.userId)) continue;
-                let t = o.default.getUser(e.userId);
-                if (null == t) continue;
-                let n = (0, a.TA)(i.type);
-                (0, c.$3)({ permission: n, user: t, context: i }) && d.push(t);
-            }
-            function A(i) {
-                return e.get(i)?.vcProbability ?? 0;
-            }
-            return d.sort((e, i) => A(i.id) - A(e.id)).slice(0, 5);
+t.d(
+    i,
+    {},
+    {
+        Ln: function (e) {
+            let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                { collapsed: t = !1 } = i,
+                n = m.A.getShouldShowPopover(e.id),
+                l = d.A.can(g.xBc.CREATE_INSTANT_INVITE, e);
+            return n && l && !t;
         },
-        [i, t],
-    );
-}
-function f(e) {
-    let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { collapsed: t = !1 } = i,
-        s = (0, l.bG)([m.A], () => m.A.getShouldShowPopover(e.id), [e.id]);
-    return {
-        shouldShow: s && !t,
-        dismiss: n.useCallback(() => {
-            (0, A.w)(e.id);
-        }, [e]),
-    };
-}
-function p(e) {
-    let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { collapsed: t = !1 } = i,
-        n = m.A.getShouldShowPopover(e.id),
-        l = d.A.can(g.xBc.CREATE_INSTANT_INVITE, e);
-    return n && l && !t;
-}
+        Z0: function (e) {
+            let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                { collapsed: t = !1 } = i,
+                s = (0, l.bG)([m.A], () => m.A.getShouldShowPopover(e.id), [e.id]);
+            return {
+                shouldShow: s && !t,
+                dismiss: n.useCallback(() => {
+                    (0, A.w)(e.id);
+                }, [e]),
+            };
+        },
+        kt: function (e) {
+            let { channel: i } = e,
+                t = i?.guild_id;
+            return (0, l.yK)(
+                [s.A, u.Ay, r.Ay, o.default],
+                () => {
+                    if (null == i) return [];
+                    let e = s.A.getUserAffinitiesMap(),
+                        n = null != i ? u.Ay.getVoiceStatesForChannel(i) : [],
+                        l = new Set();
+                    n.forEach((e) => l.add(e.user.id));
+                    let d = [];
+                    for (let e of r.Ay.getMembers(t)) {
+                        if (l.has(e.userId)) continue;
+                        let t = o.default.getUser(e.userId);
+                        if (null == t) continue;
+                        let n = (0, a.TA)(i.type);
+                        (0, c.$3)({ permission: n, user: t, context: i }) && d.push(t);
+                    }
+                    function A(i) {
+                        return e.get(i)?.vcProbability ?? 0;
+                    }
+                    return d.sort((e, i) => A(i.id) - A(e.id)).slice(0, 5);
+                },
+                [i, t],
+            );
+        },
+    },
+);

@@ -1,4 +1,3 @@
-a.d(l, { A: () => C, L: () => f });
 var n = a(477900),
     s = a(582128),
     i = a(503698),
@@ -13,7 +12,7 @@ var n = a(477900),
     x = a(240248),
     p = a(946274),
     N = a(652215),
-    j = a(105292),
+    j = a(792996),
     v = a(120238);
 function f(e) {
     let { className: l, icon: a = null } = e;
@@ -54,22 +53,22 @@ class g extends s.PureComponent {
                 hint: r,
                 name: c,
                 makeURL: d,
-                disabled: g,
-                onChange: C,
-                showIcon: R,
-                showIconDisabled: k,
-                className: b,
-                imageClassName: D,
-                iconClassName: F,
-                iconWrapperClassName: w,
-                icon: y,
-                hideSize: A,
-                imageStyle: U,
-                showRemoveButton: z,
-                maxFileSizeBytes: I,
-                onFileSizeError: Y,
-                onOpenImageSelectModal: S,
-                "aria-label": X,
+                disabled: N,
+                onChange: g,
+                showIcon: C,
+                showIconDisabled: R,
+                className: k,
+                imageClassName: b,
+                iconClassName: D,
+                iconWrapperClassName: F,
+                icon: w,
+                hideSize: y,
+                imageStyle: A,
+                showRemoveButton: U,
+                maxFileSizeBytes: z,
+                onFileSizeError: I,
+                onOpenImageSelectModal: Y,
+                "aria-label": S,
             } = this.props;
         if (
             (null != (e = null != i && /^data:/.test(i) ? i : d(i))
@@ -81,14 +80,14 @@ class g extends s.PureComponent {
                       className: v.nX,
                       children: (0, x.oN)(c),
                   })),
-            g)
+            N)
         )
             return (0, n.jsx)("div", {
-                className: t()(v.WY, v.r9, b),
+                className: t()(v.WY, v.r9, k),
                 children: (0, n.jsxs)("div", {
-                    className: t()(v.Yp, D),
-                    style: { ...U, backgroundImage: l },
-                    children: [a, k && (0, n.jsx)("div", { className: t()(v.XD, v.$N, F), children: y })],
+                    className: t()(v.Yp, b),
+                    style: { ...A, backgroundImage: l },
+                    children: [a, R && (0, n.jsx)("div", { className: t()(v.XD, v.$N, D), children: w })],
                 }),
             });
         null != i
@@ -97,38 +96,38 @@ class g extends s.PureComponent {
                   onClick: this.handleRemove,
                   children: j.intl.string(j.t.N86XcP),
               }))
-            : A || (s = (0, n.jsx)("small", { className: v.UZ, children: j.intl.format(j.t.AH4c7Y, { size: N.eQT }) }));
-        let B = X ?? r ?? j.intl.string(j.t["Ge+941"]);
+            : y || (s = (0, n.jsx)("small", { className: v.UZ, children: j.intl.format(j.t.AH4c7Y, { size: 128 }) }));
+        let X = S ?? r ?? j.intl.string(j.t["Ge+941"]);
         return (0, n.jsxs)("div", {
-            className: t()(v.WY, b),
+            className: t()(v.WY, k),
             children: [
                 (0, n.jsx)(u.vN, {
                     within: !0,
                     children: (0, n.jsxs)("div", {
-                        className: R ? t()(v.U1, w) : void 0,
+                        className: C ? t()(v.U1, F) : void 0,
                         children: [
                             (0, n.jsxs)("div", {
-                                className: t()(v.Yp, D),
-                                style: { ...U, backgroundImage: l },
+                                className: t()(v.Yp, b),
+                                style: { ...A, backgroundImage: l },
                                 children: [
                                     (0, n.jsx)("span", { "aria-hidden": !0, children: a }),
-                                    null != S
-                                        ? (0, n.jsx)(m.D, { className: v.c4, "aria-label": B, onClick: S })
+                                    null != Y
+                                        ? (0, n.jsx)(m.D, { className: v.c4, "aria-label": X, onClick: Y })
                                         : (0, n.jsxs)(n.Fragment, {
                                               children: [
                                                   (0, n.jsx)(p.Ay, {
                                                       ref: this.inputRef,
-                                                      onChange: C,
+                                                      onChange: g,
                                                       className: v.c4,
-                                                      "aria-label": B,
+                                                      "aria-label": X,
                                                       tabIndex: -1,
                                                       "aria-hidden": !0,
-                                                      maxFileSizeBytes: I,
-                                                      onFileSizeError: Y,
+                                                      maxFileSizeBytes: z,
+                                                      onFileSizeError: I,
                                                   }),
                                                   (0, n.jsx)(m.D, {
                                                       className: v.c4,
-                                                      "aria-label": B,
+                                                      "aria-label": X,
                                                       onClick: this.handleActivateUpload,
                                                   }),
                                               ],
@@ -136,13 +135,13 @@ class g extends s.PureComponent {
                                 ],
                             }),
                             null != r && (0, n.jsx)("div", { className: v.$J, "aria-hidden": "true", children: r }),
-                            R && (0, n.jsx)(f, { className: F, icon: y }),
+                            C && (0, n.jsx)(f, { className: D, icon: w }),
                         ],
                     }),
                 }),
-                z ? s : null,
+                U ? s : null,
             ],
         });
     }
 }
-let C = g;
+a.d(l, {}, { A: g, L: f });

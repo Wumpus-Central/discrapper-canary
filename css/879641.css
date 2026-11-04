@@ -1,4 +1,4 @@
-.popoutWrapper__9ac28 {
+.popoutWrapper_NbMTpy {
     display: flex;
     inset-inline-start: -30px;
     max-height: 40vh;
@@ -6,51 +6,51 @@
     width: 200px
 }
 
-.scroller__9ac28 {
+.scroller_NbMTpy {
     background-color: var(--background-surface-high);
     border-radius: 4px;
     box-shadow: inset 0 0 0 1px var(--border-subtle), var(--shadow-high);
     padding: 8px 16px
 }
 
-.avatars__9ac28 {
+.avatars_NbMTpy {
     align-items: center;
     display: flex;
     flex-grow: 0;
     position: relative
 }
 
-.avatar__9ac28 {
-    -webkit-mask: url(/assets/38fe464a6fea7d0e.svg);
-    mask: url(/assets/38fe464a6fea7d0e.svg);
+.avatar_NbMTpy {
+    -webkit-mask: url("/assets/38fe464a6fea7d0e.svg");
+    mask: url("/assets/38fe464a6fea7d0e.svg");
     -webkit-mask-size: 100%;
     mask-size: 100%;
     mask-type: alpha
 }
 
-.avatar__9ac28.size16__9ac28 {
+.avatar_NbMTpy.size16_NbMTpy {
     margin-inline-end: -3px
 }
 
-.avatar__9ac28.size20__9ac28 {
+.avatar_NbMTpy.size20_NbMTpy {
     margin-inline-end: -5px
 }
 
-.avatar__9ac28.size24__9ac28 {
+.avatar_NbMTpy.size24_NbMTpy {
     margin-inline-end: -6px
 }
 
-.avatar__9ac28.size32__9ac28 {
+.avatar_NbMTpy.size32_NbMTpy {
     margin-inline-end: -8px
 }
 
-.avatar__9ac28.isLast__9ac28 {
+.avatar_NbMTpy.isLast_NbMTpy {
     margin-inline-end: 0;
     -webkit-mask: none;
     mask: none
 }
 
-.overflow__9ac28 {
+.overflow_NbMTpy {
     align-items: center;
     background-color: var(--background-base-lowest);
     border-radius: 16px;
@@ -60,38 +60,38 @@
     width: auto
 }
 
-.overflow__9ac28.size16__9ac28 {
+.overflow_NbMTpy.size16_NbMTpy {
     height: 16px;
     min-width: 16px;
     padding: 0 4px
 }
 
-.overflow__9ac28.size20__9ac28 {
+.overflow_NbMTpy.size20_NbMTpy {
     height: 20px;
     min-width: 20px;
     padding: 0 6px
 }
 
-.overflow__9ac28.size24__9ac28 {
+.overflow_NbMTpy.size24_NbMTpy {
     height: 24px;
     min-width: 24px;
     padding: 0 8px
 }
 
-.overflow__9ac28.size32__9ac28 {
+.overflow_NbMTpy.size32_NbMTpy {
     height: 32px;
     min-width: 32px;
     padding: 0 10px
 }
 
-.button__9ac28 {
+.button_NbMTpy {
     color: var(--interactive-text-default);
     cursor: pointer
 }
 
-.button__9ac28:hover,
-.keyboard-mode .button__9ac28:focus {
+.button_NbMTpy:hover,
+.keyboard-mode .button_NbMTpy:focus {
     color: var(--interactive-text-hover)
 }
 
-/*# sourceMappingURL=879641.f747b7ca59340320.css.map*/
+/*# sourceMappingURL=879641.e613f8a7c4323dc8.css.map*/

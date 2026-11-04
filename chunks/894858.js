@@ -1,4 +1,3 @@
-n.d(t, { A: () => i });
 let i = (0, n(839214).D)(() => ({
     currentPanelKey: void 0,
     currentCategoryKey: void 0,
@@ -7,3 +6,4 @@ let i = (0, n(839214).D)(() => ({
     showNavigationMobile: !0,
     scrollPositionSnapshots: new Map(),
 }));
+n.d(t, {}, { A: i });

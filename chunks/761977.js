@@ -1,10 +1,10 @@
 e.exports = {
-    sW: "catalogBanner__3f82e",
-    by: "riveBanner__3f82e",
-    vk: "clickable__3f82e",
-    Db: "bannerMedia__3f82e",
-    tr: "animationAsset__3f82e",
-    ze: "catalogBannerImage__3f82e",
-    v0: "limitedTimeBadge__3f82e",
-    IG: "arrowButton__3f82e",
+    sW: "catalogBanner_cvJOaf",
+    by: "riveBanner_cvJOaf",
+    vk: "clickable_cvJOaf",
+    Db: "bannerMedia_cvJOaf",
+    tr: "animationAsset_cvJOaf",
+    ze: "catalogBannerImage_cvJOaf",
+    v0: "limitedTimeBadge_cvJOaf",
+    IG: "arrowButton_cvJOaf",
 };

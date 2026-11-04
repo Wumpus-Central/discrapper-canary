@@ -1,5 +1,10 @@
-d.d(t, { t: () => e });
 var i = d(522681);
-function e(l) {
-    i.a.setDsEnabled(l);
-}
+d.d(
+    t,
+    {},
+    {
+        t: function (l) {
+            i.a.setDsEnabled(l);
+        },
+    },
+);

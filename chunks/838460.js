@@ -1,11 +1,10 @@
 let i;
-n.d(t, { A: () => f });
 var r = n(477900);
 n(582128);
 var a = n(192308),
     s = n(439372),
     l = n(695515),
-    o = n(794364),
+    o = n(491815),
     d = n(577517),
     c = n(748209),
     u = n(191627);
@@ -21,10 +20,10 @@ function E(e) {
         !d.A.hasShownModalToday() &&
         !_(Object.values(l.A.getLinkedUsers()))
     ) ||
-        (0, a.hasAnyModalOpen)() ||
-        (0, a.openModalLazy)(
+        (0, a.ue)() ||
+        (0, a.mM)(
             async () => {
-                let { default: e } = await Promise.all([n.e("454048"), n.e("144947")]).then(n.bind(n, 145662));
+                let { default: e } = await Promise.all([n.e(454048), n.e(790660)]).then(n.bind(n, 22063));
                 return (n) => (0, r.jsx)(e, { ...n, daysRemaining: t });
             },
             { modalKey: "ParentalConsentWarningModal" },
@@ -66,3 +65,4 @@ class h extends s.A {
     };
 }
 let f = new h();
+n.d(t, {}, { A: f });

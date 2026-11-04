@@ -1,5 +1,4 @@
-n.d(t, { mz: () => o, ni: () => l });
-var i = n(17928),
+var i = n(855986),
     r = n(945810),
     a = n(287809);
 let s = (0, r.mj)({
@@ -8,13 +7,19 @@ let s = (0, r.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-function l(e) {
-    let t = (0, i.bG)([a.default], () => a.default.getCurrentUser()),
-        n = t?.isStaff() === !0 || t?.isStaffPersonal() === !0,
-        r = s.useConfig({ location: e }).enabled;
-    return n || r;
-}
-function o(e) {
-    let t = a.default.getCurrentUser();
-    return t?.isStaff() === !0 || t?.isStaffPersonal() === !0 || s.getConfig({ location: e }).enabled;
-}
+n.d(
+    t,
+    {},
+    {
+        mz: function (e) {
+            let t = a.default.getCurrentUser();
+            return t?.isStaff() === !0 || t?.isStaffPersonal() === !0 || s.getConfig({ location: e }).enabled;
+        },
+        ni: function (e) {
+            let t = (0, i.bG)([a.default], () => a.default.getCurrentUser()),
+                n = t?.isStaff() === !0 || t?.isStaffPersonal() === !0,
+                r = s.useConfig({ location: e }).enabled;
+            return n || r;
+        },
+    },
+);

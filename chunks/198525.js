@@ -1,10 +1,10 @@
-(n.r(t), n.d(t, { default: () => K }));
+n.r(t);
 var a = n(477900),
     s = n(582128),
     i = n(736819),
     r = n(837381),
     l = n(323889),
-    u = n(17928),
+    u = n(855986),
     c = n(821609),
     d = n(462887),
     o = n(717421),
@@ -14,45 +14,45 @@ var a = n(477900),
     S = n(939249),
     h = n(834730),
     M = n(290136),
-    m = n(661531),
-    p = n(730852),
-    I = n(401843),
+    m = n(646514),
+    I = n(597798),
+    p = n(401843),
     A = n(765671),
     L = n(775602),
-    f = n(507395),
+    f = n(438457),
     g = n(144779),
     x = n(267102),
-    y = n(363195),
+    y = n(413599),
     _ = n(734057),
-    R = n(738822),
-    N = n(3738),
-    v = n(31046),
+    R = n(506988),
+    N = n(870273),
+    v = n(760914),
     F = n(590202),
     B = n(792620),
     k = n(814793),
-    j = n(657792),
-    b = n(62405),
+    j = n(280905),
+    b = n(639701),
     Q = n(398025),
-    P = n(617986),
+    P = n(321538),
     G = n(630037),
-    O = n(190107),
+    O = n(221596),
     q = n(652215),
     w = n(818348),
-    U = n(105292),
+    U = n(792996),
     D = n(457127);
 let H = "11px";
-function z(e) {
+function K(e) {
     let {
             quest: t,
             memberListItemRef: j,
-            applicationStream: z,
-            position: K,
-            closePopout: W,
+            applicationStream: K,
+            position: W,
+            closePopout: z,
             updatePosition: V,
             impressionRef: X,
             name: Y,
         } = e,
-        J = (0, u.bG)([_.A], () => _.A.getChannel(z?.channelId) ?? null),
+        J = (0, u.bG)([_.A], () => _.A.getChannel(K?.channelId) ?? null),
         Z = (0, G.D)({ quest: t, questContent: R.uF.MEMBERS_LIST, sourceQuestContent: R.uF.MEMBERS_LIST }),
         $ = t?.userStatus?.claimedAt != null,
         ee = t?.userStatus?.enrolledAt != null,
@@ -67,12 +67,12 @@ function z(e) {
     (s.useEffect(() => {
         let e = ed.current;
         return (
-            e?.addEventListener("scroll", W),
+            e?.addEventListener("scroll", z),
             () => {
-                e?.removeEventListener("scroll", W);
+                e?.removeEventListener("scroll", z);
             }
         );
-    }, [W, ed]),
+    }, [z, ed]),
         s.useEffect(() => {
             let e = ed.current,
                 t = j.current;
@@ -95,7 +95,7 @@ function z(e) {
     function eT() {
         ec.dispatch(q.jej.POPOUT_CLOSE);
     }
-    let eE = "top" === K ? "8px 8px 0 0" : "0 0 8px 8px";
+    let eE = "top" === W ? "8px 8px 0 0" : "0 0 8px 8px";
     function eS() {
         ((0, f.r)({
             type: g.F.CLICK_INTERNAL,
@@ -109,7 +109,7 @@ function z(e) {
             (0, P.mA)({ fromContent: R.uF.MEMBERS_LIST, questId: t.id }));
     }
     function eh() {
-        (0, k.Ll)(z, J) && null != J
+        (0, k.Ll)(K, J) && null != J
             ? ((0, f.r)({
                   type: g.F.CLICK_INTERNAL,
                   adCreativeType: l.p.QUEST,
@@ -119,8 +119,8 @@ function z(e) {
                   sourceQuestContent: R.uF.MEMBERS_LIST,
                   trackGuildAndChannelMetadata: !0,
               }),
-              (0, T.openModalLazy)(async () => {
-                  let { default: e } = await n.e("972879").then(n.bind(n, 48274));
+              (0, T.mM)(async () => {
+                  let { default: e } = await n.e(972879).then(n.bind(n, 48274));
                   return (n) =>
                       (0, a.jsx)(e, {
                           username: Y ?? "",
@@ -134,8 +134,8 @@ function z(e) {
                                   sourceQuestContent: R.uF.MEMBERS_LIST,
                                   trackGuildAndChannelMetadata: !0,
                               }),
-                              p.default.selectVoiceChannel(J.id),
-                              (0, I.Nl)(z)
+                              I.default.selectVoiceChannel(J.id),
+                              (0, p.Nl)(K)
                           ),
                           ...n,
                       });
@@ -158,7 +158,7 @@ function z(e) {
                     handleClickCta: eS,
                     tileAssetType: "reward",
                 };
-            if ((0, k.Ll)(z, J))
+            if ((0, k.Ll)(K, J))
                 return {
                     headerText: U.intl.string(U.t.Bz6SkH),
                     ctaText: U.intl.string(U.t.BXFP30),
@@ -294,12 +294,18 @@ function z(e) {
         }),
     });
 }
-function K(e) {
-    return (0, a.jsx)(j.R, {
-        questOrQuests: e.quest,
-        questContent: R.uF.MEMBERS_LIST,
-        trackGuildAndChannelMetadata: !0,
-        sourceQuestContent: R.uF.MEMBERS_LIST,
-        children: (t) => (0, a.jsx)(z, { impressionRef: t, ...e }),
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        default: function (e) {
+            return (0, a.jsx)(j.R, {
+                questOrQuests: e.quest,
+                questContent: R.uF.MEMBERS_LIST,
+                trackGuildAndChannelMetadata: !0,
+                sourceQuestContent: R.uF.MEMBERS_LIST,
+                children: (t) => (0, a.jsx)(K, { impressionRef: t, ...e }),
+            });
+        },
+    },
+);

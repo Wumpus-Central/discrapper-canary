@@ -1,8 +1,8 @@
 e.exports = {
-    xC: "overlaySettingsNux__1e102",
-    VV: "closeCircleButton__1e102",
-    tl: "nuxFirstImage__1e102",
-    lh: "nuxUserSettingsImage__1e102",
-    vJ: "mainTitleContainer__1e102",
-    yF: "divider__1e102",
+    xC: "overlaySettingsNux_pz9Ex4",
+    VV: "closeCircleButton_pz9Ex4",
+    tl: "nuxFirstImage_pz9Ex4",
+    lh: "nuxUserSettingsImage_pz9Ex4",
+    vJ: "mainTitleContainer_pz9Ex4",
+    yF: "divider_pz9Ex4",
 };

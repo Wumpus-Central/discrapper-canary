@@ -1,4 +1,5 @@
 !(function (e) {
+    "use strict";
     var r,
         n = {
             precision: 20,
@@ -70,7 +71,7 @@
                 var e, r, n, i;
                 if (((t = new this.constructor(t)), this.s !== t.s)) return this.s || -t.s;
                 if (this.e !== t.e) return (this.e > t.e) ^ (this.s < 0) ? 1 : -1;
-                for (e = 0, r = (n = this.d.length) < (i = t.d.length) ? n : i; e < r; ++e)
+                for (n = this.d.length, e = 0, r = n < (i = t.d.length) ? n : i; e < r; ++e)
                     if (this.d[e] !== t.d[e]) return (this.d[e] > t.d[e]) ^ (this.s < 0) ? 1 : -1;
                 return n === i ? 0 : (n > i) ^ (this.s < 0) ? 1 : -1;
             }),
@@ -197,13 +198,13 @@
                 for (
                     t = m(this),
                         i = !1,
-                        0 == (s = Math.sqrt(+this)) || s == 1 / 0
+                        0 == (s = Math.sqrt(+this)) || 1 / 0 == s
                             ? (((e = g(this.d)).length + t) % 2 == 0 && (e += "0"),
                               (s = Math.sqrt(e)),
                               (t = c((t + 1) / 2) - (t < 0 || t % 2)),
                               (n = new h(
                                   (e =
-                                      s == 1 / 0 ? "1e" + t : (e = s.toExponential()).slice(0, e.indexOf("e") + 1) + t),
+                                      1 / 0 == s ? "1e" + t : (e = s.toExponential()).slice(0, e.indexOf("e") + 1) + t),
                               )))
                             : (n = new h(s.toString())),
                         s = f = (r = h.precision) + 3;
@@ -415,7 +416,7 @@
                 P = i.d;
             if (!n.s) return new _(n);
             if (!i.s) throw Error(o + "Division by zero");
-            for (h = 0, f = n.e - i.e, L = P.length, S = q.length, g = (p = new _(D)).d = []; P[h] == (q[h] || 0);) ++h;
+            for (f = n.e - i.e, L = P.length, S = q.length, g = (p = new _(D)).d = [], h = 0; P[h] == (q[h] || 0);) ++h;
             if ((P[h] > (q[h] || 0) && --f, (b = null == s ? (s = _.precision) : u ? s + (m(n) - m(i)) + 1 : s) < 0))
                 return new _(0);
             if (((b = (b / 7 + 2) | 0), (h = 0), 1 == L))
@@ -429,7 +430,7 @@
                     w < L;
                 )
                     v[w++] = 0;
-                ((j = P.slice()).unshift(0), (O = P[0]), P[1] >= 1e7 / 2 && ++O);
+                ((j = P.slice()).unshift(0), (O = P[0]), P[1] >= 5e6 && ++O);
                 do
                     ((l = 0),
                         (c = e(P, v, L, w)) < 0
@@ -572,7 +573,7 @@
         if ((n = e - h) < 0) ((n += 7), (o = e), (p = v[(g = 0)]));
         else {
             if ((g = Math.ceil((n + 1) / 7)) >= (s = v.length)) return t;
-            for (h = 1, p = s = v[g]; s >= 10; s /= 10) h++;
+            for (p = s = v[g], h = 1; s >= 10; s /= 10) h++;
             ((n %= 7), (o = n - 7 + h));
         }
         if (

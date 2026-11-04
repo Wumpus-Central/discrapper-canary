@@ -1,8 +1,7 @@
-a.d(n, { default: () => g });
 var i = a(477900);
 a(582128);
-var e = a(17928),
-    r = a(980707),
+var e = a(855986),
+    r = a(165862),
     s = a(477782),
     l = a(442433),
     d = a(50268),
@@ -10,28 +9,34 @@ var e = a(17928),
     c = a(957565),
     p = a(832163),
     h = a(746080),
-    u = a(105292);
-function g(t) {
-    let { guild: n, onSelect: a } = t,
-        g = (0, e.bG)([p.A], () => p.A.getStorefrontData(n.id)?.storefront?.applicationId),
-        b = (0, d.A)({ id: g, label: u.intl.string(u.t["FfCL+6"]) });
-    return (0, i.jsxs)(r.W, {
-        "data-menu-migrated-auto": !0,
-        navId: "game-shop-context",
-        "aria-label": u.intl.string(u.t.vyaWs7),
-        onClose: l.Z_,
-        onSelect: a,
-        children: [
-            (0, i.jsx)(s.rX, {
-                children: (0, i.jsx)(s.Dr, {
-                    id: "game-shop-copy-link",
-                    label: u.intl.string(u.t.WqhZss),
-                    action: () => {
-                        (0, c.C)((0, o.n)(n.id, h.VV.GAME_SHOP));
-                    },
-                }),
-            }),
-            null != b && (0, i.jsx)(s.rX, { children: b }),
-        ],
-    });
-}
+    u = a(792996);
+a.d(
+    n,
+    {},
+    {
+        default: function (t) {
+            let { guild: n, onSelect: a } = t,
+                g = (0, e.bG)([p.A], () => p.A.getStorefrontData(n.id)?.storefront?.applicationId),
+                b = (0, d.A)({ id: g, label: u.intl.string(u.t["FfCL+6"]) });
+            return (0, i.jsxs)(r.W, {
+                "data-menu-migrated-auto": !0,
+                navId: "game-shop-context",
+                "aria-label": u.intl.string(u.t.vyaWs7),
+                onClose: l.Z_,
+                onSelect: a,
+                children: [
+                    (0, i.jsx)(s.rX, {
+                        children: (0, i.jsx)(s.Dr, {
+                            id: "game-shop-copy-link",
+                            label: u.intl.string(u.t.WqhZss),
+                            action: () => {
+                                (0, c.C)((0, o.n)(n.id, h.VV.GAME_SHOP));
+                            },
+                        }),
+                    }),
+                    null != b && (0, i.jsx)(s.rX, { children: b }),
+                ],
+            });
+        },
+    },
+);

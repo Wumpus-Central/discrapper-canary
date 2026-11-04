@@ -15,26 +15,6 @@ function i(e) {
           };
 }
 function r(e) {
-    return null == e ? null : { enabled: e.enabled, themeSettings: i(e.themeSettings) };
-}
-function a(e) {
-    var t;
-    return null == e
-        ? { preset_id: null, custom_user_theme_settings: null }
-        : {
-              preset_id: e.presetId ?? null,
-              custom_user_theme_settings:
-                  null == (t = e.customUserThemeSettings)
-                      ? null
-                      : {
-                            colors: [...t.colors],
-                            gradient_color_stops: null != t.gradientColorStops ? [...t.gradientColorStops] : [],
-                            gradient_angle: t.gradientAngle ?? 0,
-                            base_mix: t.baseMix ?? 0,
-                        },
-          };
-}
-function s(e) {
     return null == e || (null == e.preset_id && null == e.custom_user_theme_settings)
         ? null
         : {
@@ -50,7 +30,34 @@ function s(e) {
               })(e.custom_user_theme_settings),
           };
 }
-function l(e) {
-    return null == e ? null : { enabled: e.enabled, themeSettings: s(e) };
-}
-n.d(t, { L8: () => s, QK: () => a, UW: () => l, yX: () => r, z_: () => i });
+n.d(
+    t,
+    {},
+    {
+        L8: r,
+        QK: function (e) {
+            var t;
+            return null == e
+                ? { preset_id: null, custom_user_theme_settings: null }
+                : {
+                      preset_id: e.presetId ?? null,
+                      custom_user_theme_settings:
+                          null == (t = e.customUserThemeSettings)
+                              ? null
+                              : {
+                                    colors: [...t.colors],
+                                    gradient_color_stops: null != t.gradientColorStops ? [...t.gradientColorStops] : [],
+                                    gradient_angle: t.gradientAngle ?? 0,
+                                    base_mix: t.baseMix ?? 0,
+                                },
+                  };
+        },
+        UW: function (e) {
+            return null == e ? null : { enabled: e.enabled, themeSettings: r(e) };
+        },
+        yX: function (e) {
+            return null == e ? null : { enabled: e.enabled, themeSettings: i(e.themeSettings) };
+        },
+        z_: i,
+    },
+);

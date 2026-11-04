@@ -1,14 +1,13 @@
-i.d(e, { default: () => A });
 var s = i(477900),
     n = i(582128),
     a = i(189213),
     r = i(834730),
-    l = i(277984),
-    c = i(174459),
+    l = i(781300),
+    c = i(129230),
     h = i(580630),
     o = i(71532),
     u = i(652215),
-    p = i(105292),
+    p = i(792996),
     d = i(142374);
 class g extends n.Component {
     state = { step: 0, isAwaitingAuthentication: !1 };
@@ -101,4 +100,4 @@ class g extends n.Component {
         });
     }
 }
-let A = g;
+i.d(e, {}, { default: g });

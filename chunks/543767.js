@@ -1,62 +1,14 @@
-n.d(t, { $n: () => I, C8: () => T, OQ: () => A, QQ: () => p, YV: () => m, sL: () => g });
 var i = n(582128),
     r = n(284009),
     a = n.n(r),
-    s = n(636537),
+    s = n(620632),
     l = n(73153),
-    o = n(913122),
+    o = n(627784),
     d = n(570221),
-    c = n(24482),
+    c = n(879610),
     u = n(371794),
     _ = n(652215);
 async function E(e) {
-    let {
-            items: t,
-            paymentSourceId: n,
-            trialId: i,
-            code: r,
-            applyEntitlements: a = !1,
-            currency: u,
-            renewal: E,
-            metadata: A,
-            loadId: h,
-        } = e,
-        f = {
-            items: (t = (0, c.qn)(t)).map((e) => {
-                let { planId: t, ...n } = e;
-                return { ...n, plan_id: t };
-            }),
-            payment_source_id: n,
-            trial_id: i,
-            code: r,
-            apply_entitlements: a,
-            currency: u,
-            renewal: E,
-            metadata: A,
-            load_id: h,
-        };
-    try {
-        let e = await s.Bo.post({
-                url: _.Rsh.BILLING_SUBSCRIPTIONS_PREVIEW,
-                body: f,
-                oldFormErrors: !0,
-                rejectWithError: !1,
-            }),
-            t = d.A.createInvoiceFromServer(e.body);
-        return (
-            t.checkoutContext?.payment_sources != null &&
-                l.h.dispatch({
-                    type: "SUBSCRIPTION_PREVIEW_CHECKOUT_CONTEXT_UPDATE",
-                    checkoutContext: t.checkoutContext,
-                    paymentSourceId: n,
-                }),
-            t
-        );
-    } catch (e) {
-        throw new o.Ey(e);
-    }
-}
-async function A(e) {
     let {
         subscriptionId: t,
         items: n,
@@ -105,33 +57,7 @@ async function A(e) {
         throw new o.Ey(e);
     }
 }
-async function h(e) {
-    let {
-        paymentSourceId: t,
-        skuId: n,
-        subscriptionPlanId: i,
-        currency: r,
-        loadId: s,
-        quantity: l,
-        applyWalletBalance: c,
-    } = e;
-    a()(null != n && "" !== n, "SKU ID is missing for one time purchase gift invoice preview");
-    let E = { gift: !0, payment_source_id: t, sku_subscription_plan_id: i, currency: r, load_id: s };
-    (null != l && (E.quantity = l), null != c && (E.apply_wallet_balance = c));
-    try {
-        let e = await (0, u.aP)({ url: _.Rsh.STORE_SKU_PURCHASE(n), query: E, oldFormErrors: !0, rejectWithError: !1 });
-        return d.A.createFromOTPPreview(e.body);
-    } catch (e) {
-        throw new o.Ey(e);
-    }
-}
-async function f(e) {
-    let { subscriptionId: t, preventFetch: n } = e;
-    if (n) return null;
-    let i = await s.Bo.get({ url: _.Rsh.BILLING_SUBSCRIPTION_INVOICE(t), oldFormErrors: !0, rejectWithError: !1 });
-    return d.A.createInvoiceFromServer(i.body);
-}
-function I(e, t, n) {
+function A(e, t, n) {
     let { preventFetch: r = !1 } = e,
         [a, s] = (0, i.useState)(null),
         [l, o] = (0, i.useState)(null),
@@ -139,17 +65,17 @@ function I(e, t, n) {
     return (
         (0, i.useEffect)(() => {
             let e = !1;
-            async function n() {
-                try {
-                    o(null);
-                    let n = await t(d.current);
-                    e || ((d.current = n), s(n));
-                } catch (t) {
-                    e || ((d.current = null), o(t), s(null));
-                }
-            }
             return (
-                r || n(),
+                r ||
+                    (async function () {
+                        try {
+                            o(null);
+                            let n = await t(d.current);
+                            e || ((d.current = n), s(n));
+                        } catch (t) {
+                            e || ((d.current = null), o(t), s(null));
+                        }
+                    })(),
                 () => {
                     e = !0;
                 }
@@ -158,101 +84,203 @@ function I(e, t, n) {
         [a, l]
     );
 }
-function p(e, t) {
-    let n = (0, i.useRef)(e),
-        r = (0, i.useRef)(!1);
-    (0, i.useEffect)(() => {
-        n.current = e;
-    });
-    let a = JSON.stringify(e);
-    return I(
-        e,
-        (0, i.useCallback)(() => {
-            let e = n.current,
-                t = r.current ? e : { ...e, paymentSourceId: null };
-            return ((r.current = !0), h(t));
-        }, [a]),
-        t,
-    );
-}
-function m(e, t) {
-    let n, r, a;
-    if ("subscriptionId" in e && null == e.subscriptionId) {
-        let { subscriptionId: t, ...n } = e;
-        e = n;
-    }
-    let s = (0, i.useRef)(e),
-        l = (0, i.useRef)(!1),
-        {
-            serverPricedPreviewRef: o,
-            shouldReturnInvoiceCache: d,
-            updateServerPricedPreviewRef: c,
-        } = ((n = (0, i.useRef)(null)),
-        (0, i.useEffect)(() => {
-            n.current = null;
-        }, [t]),
-        (r = (0, i.useCallback)((e, t) => {
-            let i = n.current;
-            return (
-                null != i &&
-                null != e.paymentSourceId &&
-                e.paymentSourceId === i.serverSelectedPaymentSourceId &&
-                t === i.dedupeKey
+n.d(
+    t,
+    {},
+    {
+        $n: A,
+        C8: function (e, t) {
+            let n = (0, i.useRef)(e);
+            (0, i.useEffect)(() => {
+                n.current = e;
+            });
+            let r = JSON.stringify(e);
+            return A(
+                e,
+                (0, i.useCallback)(
+                    () =>
+                        (async function (e) {
+                            let { subscriptionId: t, preventFetch: n } = e;
+                            if (n) return null;
+                            let i = await s.Bo.get({
+                                url: _.Rsh.BILLING_SUBSCRIPTION_INVOICE(t),
+                                oldFormErrors: !0,
+                                rejectWithError: !1,
+                            });
+                            return d.A.createInvoiceFromServer(i.body);
+                        })(n.current),
+                    [r],
+                ),
+                t,
             );
-        }, [])),
-        (a = (0, i.useCallback)((e, t, i) => {
-            let r;
-            if (null != i) {
-                n.current = null;
-                return;
+        },
+        OQ: E,
+        QQ: function (e, t) {
+            let n = (0, i.useRef)(e),
+                r = (0, i.useRef)(!1);
+            (0, i.useEffect)(() => {
+                n.current = e;
+            });
+            let s = JSON.stringify(e);
+            return A(
+                e,
+                (0, i.useCallback)(() => {
+                    let e = n.current,
+                        t = r.current ? e : { ...e, paymentSourceId: null };
+                    return (
+                        (r.current = !0),
+                        (async function (e) {
+                            let {
+                                paymentSourceId: t,
+                                skuId: n,
+                                subscriptionPlanId: i,
+                                currency: r,
+                                loadId: s,
+                                quantity: l,
+                                applyWalletBalance: c,
+                            } = e;
+                            a()(null != n && "" !== n, "SKU ID is missing for one time purchase gift invoice preview");
+                            let E = {
+                                gift: !0,
+                                payment_source_id: t,
+                                sku_subscription_plan_id: i,
+                                currency: r,
+                                load_id: s,
+                            };
+                            (null != l && (E.quantity = l), null != c && (E.apply_wallet_balance = c));
+                            try {
+                                let e = await (0, u.aP)({
+                                    url: _.Rsh.STORE_SKU_PURCHASE(n),
+                                    query: E,
+                                    oldFormErrors: !0,
+                                    rejectWithError: !1,
+                                });
+                                return d.A.createFromOTPPreview(e.body);
+                            } catch (e) {
+                                throw new o.Ey(e);
+                            }
+                        })(t)
+                    );
+                }, [s]),
+                t,
+            );
+        },
+        YV: function (e, t) {
+            let n, r, a;
+            if ("subscriptionId" in e && null == e.subscriptionId) {
+                let { subscriptionId: t, ...n } = e;
+                e = n;
             }
-            n.current = {
-                record: e,
-                dedupeKey: t,
-                serverSelectedPaymentSourceId:
-                    null == (r = e.checkoutContext?.payment_sources) ? null : (r.find((e) => e.enabled)?.id ?? null),
-            };
-        }, [])),
-        { serverPricedPreviewRef: n, shouldReturnInvoiceCache: r, updateServerPricedPreviewRef: a });
-    (0, i.useEffect)(() => {
-        s.current = e;
-    });
-    let u = JSON.stringify(e),
-        _ = (0, i.useCallback)(() => {
-            let e = s.current,
-                t = l.current ? e : { ...e, paymentSourceId: null };
-            if ("subscriptionId" in t) return ((l.current = !0), A(t));
-            if (!("items" in t)) return null;
-            {
-                l.current = !0;
-                let e = JSON.stringify({ ...t, paymentSourceId: "exclude_from_dedupe" }),
-                    n = o.current;
-                return null != n && d(t, e)
-                    ? Promise.resolve(n.record)
-                    : E(t).then((n) => (c(n, e, t.paymentSourceId), n));
-            }
-        }, [u, o, d, c]);
-    return I(e, _, t);
-}
-function T(e, t) {
-    let n = (0, i.useRef)(e);
-    (0, i.useEffect)(() => {
-        n.current = e;
-    });
-    let r = JSON.stringify(e);
-    return I(
-        e,
-        (0, i.useCallback)(() => f(n.current), [r]),
-        t,
-    );
-}
-function g(e) {
-    let t = e.subscriptionPlanPrice;
-    return (
-        e.discounts.forEach((n) => {
-            let i = n.amount / e.quantity;
-            t -= i;
-        }),
-        t
-    );
-}
+            let u = (0, i.useRef)(e),
+                h = (0, i.useRef)(!1),
+                {
+                    serverPricedPreviewRef: f,
+                    shouldReturnInvoiceCache: I,
+                    updateServerPricedPreviewRef: p,
+                } = ((n = (0, i.useRef)(null)),
+                (0, i.useEffect)(() => {
+                    n.current = null;
+                }, [t]),
+                (r = (0, i.useCallback)((e, t) => {
+                    let i = n.current;
+                    return (
+                        null != i &&
+                        null != e.paymentSourceId &&
+                        e.paymentSourceId === i.serverSelectedPaymentSourceId &&
+                        t === i.dedupeKey
+                    );
+                }, [])),
+                (a = (0, i.useCallback)((e, t, i) => {
+                    let r;
+                    if (null != i) {
+                        n.current = null;
+                        return;
+                    }
+                    n.current = {
+                        record: e,
+                        dedupeKey: t,
+                        serverSelectedPaymentSourceId:
+                            null == (r = e.checkoutContext?.payment_sources)
+                                ? null
+                                : (r.find((e) => e.enabled)?.id ?? null),
+                    };
+                }, [])),
+                { serverPricedPreviewRef: n, shouldReturnInvoiceCache: r, updateServerPricedPreviewRef: a });
+            (0, i.useEffect)(() => {
+                u.current = e;
+            });
+            let m = JSON.stringify(e),
+                T = (0, i.useCallback)(() => {
+                    let e = u.current,
+                        t = h.current ? e : { ...e, paymentSourceId: null };
+                    if ("subscriptionId" in t) return ((h.current = !0), E(t));
+                    if (!("items" in t)) return null;
+                    {
+                        h.current = !0;
+                        let e = JSON.stringify({ ...t, paymentSourceId: "exclude_from_dedupe" }),
+                            n = f.current;
+                        return null != n && I(t, e)
+                            ? Promise.resolve(n.record)
+                            : (async function (e) {
+                                  let {
+                                          items: t,
+                                          paymentSourceId: n,
+                                          trialId: i,
+                                          code: r,
+                                          applyEntitlements: a = !1,
+                                          currency: u,
+                                          renewal: E,
+                                          metadata: A,
+                                          loadId: h,
+                                      } = e,
+                                      f = {
+                                          items: (t = (0, c.qn)(t)).map((e) => {
+                                              let { planId: t, ...n } = e;
+                                              return { ...n, plan_id: t };
+                                          }),
+                                          payment_source_id: n,
+                                          trial_id: i,
+                                          code: r,
+                                          apply_entitlements: a,
+                                          currency: u,
+                                          renewal: E,
+                                          metadata: A,
+                                          load_id: h,
+                                      };
+                                  try {
+                                      let e = await s.Bo.post({
+                                              url: _.Rsh.BILLING_SUBSCRIPTIONS_PREVIEW,
+                                              body: f,
+                                              oldFormErrors: !0,
+                                              rejectWithError: !1,
+                                          }),
+                                          t = d.A.createInvoiceFromServer(e.body);
+                                      return (
+                                          t.checkoutContext?.payment_sources != null &&
+                                              l.h.dispatch({
+                                                  type: "SUBSCRIPTION_PREVIEW_CHECKOUT_CONTEXT_UPDATE",
+                                                  checkoutContext: t.checkoutContext,
+                                                  paymentSourceId: n,
+                                              }),
+                                          t
+                                      );
+                                  } catch (e) {
+                                      throw new o.Ey(e);
+                                  }
+                              })(t).then((n) => (p(n, e, t.paymentSourceId), n));
+                    }
+                }, [m, f, I, p]);
+            return A(e, T, t);
+        },
+        sL: function (e) {
+            let t = e.subscriptionPlanPrice;
+            return (
+                e.discounts.forEach((n) => {
+                    let i = n.amount / e.quantity;
+                    t -= i;
+                }),
+                t
+            );
+        },
+    },
+);

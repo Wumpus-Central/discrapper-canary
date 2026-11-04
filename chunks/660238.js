@@ -1,9 +1,9 @@
 r.exports = {
-    iW: "main_c08b38",
-    Me: "fullBorderWithGradient_c08b38",
-    xX: "artwork_c08b38",
-    D7: "gradient_c08b38",
-    m6: "bottomCenterContent_c08b38",
-    Iv: "cover_c08b38",
-    hM: "privacyPolicy_c08b38",
+    iW: "main_kgfy3D",
+    Me: "fullBorderWithGradient_kgfy3D",
+    xX: "artwork_kgfy3D",
+    D7: "gradient_kgfy3D",
+    m6: "bottomCenterContent_kgfy3D",
+    Iv: "cover_kgfy3D",
+    hM: "privacyPolicy_kgfy3D",
 };

@@ -1,4 +1,4 @@
-.child_a226a5 {
+.child_onI6o8 {
     align-items: center;
     background: pink;
     border-radius: 8px;
@@ -12,7 +12,7 @@
     width: 100px
 }
 
-.badgeRow__9b0aa {
+.badgeRow_MShoFQ {
     align-items: center;
     display: flex;
     gap: var(--space-16);
@@ -21,7 +21,7 @@
     width: 100%
 }
 
-.badgeTrigger__9b0aa {
+.badgeTrigger_MShoFQ {
     align-items: center;
     display: inline-flex;
     height: var(--space-24);
@@ -29,35 +29,35 @@
     width: var(--space-24)
 }
 
-.badgeTriggerImg__9b0aa {
+.badgeTriggerImg_MShoFQ {
     height: 100%;
     -o-object-fit: contain;
     object-fit: contain;
     width: 100%
 }
 
-.container_e99fef,
-.progressHeader_e99fef {
+.container_5cFAmt,
+.progressHeader_5cFAmt {
     align-items: flex-start;
     align-self: stretch;
     display: flex;
     flex-direction: column
 }
 
-.progressHeader_e99fef {
+.progressHeader_5cFAmt {
     width: 100%
 }
 
-.progressBarContainer_e99fef {
+.progressBarContainer_5cFAmt {
     margin: var(--space-12) 0;
     width: 100%
 }
 
-.monthlyCodeCountdownLabel_e99fef {
+.monthlyCodeCountdownLabel_5cFAmt {
     margin-bottom: 10px
 }
 
-.promoCardContainer_e99fef {
+.promoCardContainer_5cFAmt {
     align-items: stretch;
     background-color: var(--background-surface-highest);
     border: 1px solid var(--border-muted);
@@ -68,47 +68,47 @@
     padding: var(--space-16) 0
 }
 
-.wrap_e99fef {
+.wrap_5cFAmt {
     display: flex;
     flex-direction: row;
     gap: 10px;
     padding: 0 var(--space-16)
 }
 
-.promoCardContent_e99fef {
+.promoCardContent_5cFAmt {
     width: 100%
 }
 
-.promoCardContentDetails_e99fef {
+.promoCardContentDetails_5cFAmt {
     width: 60%
 }
 
-.promoCardContentText_e99fef {
+.promoCardContentText_5cFAmt {
     display: flex;
     flex-direction: column;
     gap: 4px;
     margin: var(--space-12) 0
 }
 
-.promoCardAssetContainer_e99fef {
+.promoCardAssetContainer_5cFAmt {
     align-items: center;
     display: flex;
     width: 40%
 }
 
-.promoCardAsset_e99fef {
+.promoCardAsset_5cFAmt {
     margin: 0 auto
 }
 
-.promoCardAssetImageRounded_e99fef {
+.promoCardAssetImageRounded_5cFAmt {
     border-radius: 16px
 }
 
-.promoCardAssetImageLockedRounded_e99fef {
+.promoCardAssetImageLockedRounded_5cFAmt {
     border-radius: 10px
 }
 
-.lockIconContainer_e99fef {
+.lockIconContainer_5cFAmt {
     align-items: center;
     aspect-ratio: 1/1;
     background: var(--background-mod-subtle);
@@ -120,13 +120,13 @@
     width: 32px
 }
 
-.claimedFooterContainer_e99fef {
+.claimedFooterContainer_5cFAmt {
     border-top: 1px solid var(--border-muted);
     padding-top: var(--space-16)
 }
 
-.claimedFooter_e99fef,
-.claimedFooterContainer_e99fef {
+.claimedFooter_5cFAmt,
+.claimedFooterContainer_5cFAmt {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -134,16 +134,16 @@
     width: 100%
 }
 
-.claimedFooter_e99fef {
+.claimedFooter_5cFAmt {
     gap: 10px;
     margin: 0 var(--space-16)
 }
 
-.claimedFooterCode_e99fef {
+.claimedFooterCode_5cFAmt {
     flex: 1 0 0
 }
 
-.extraCodeButton_e99fef {
+.extraCodeButton_5cFAmt {
     align-items: center;
     background-color: var(--background-surface-highest);
     border-radius: 0 0 var(--radius-lg) var(--radius-lg);
@@ -155,17 +155,17 @@
     width: 80%
 }
 
-.progressBarSlim_e99fef {
+.progressBarSlim_5cFAmt {
     box-sizing: border-box;
     padding: 0 var(--space-16)
 }
 
-.sectionSpacer_e99fef {
+.sectionSpacer_5cFAmt {
     margin-top: var(--space-24);
     width: 100%
 }
 
-.modalTeaser_e99fef {
+.modalTeaser_5cFAmt {
     align-self: stretch;
     display: flex;
     flex-direction: column;
@@ -173,24 +173,24 @@
     padding-top: var(--space-24)
 }
 
-.modalTeaserTitle_e99fef {
+.modalTeaserTitle_5cFAmt {
     align-items: center;
     color: var(--text-default);
     display: flex;
     gap: var(--space-8)
 }
 
-.footerClaimButton_e99fef {
+.footerClaimButton_5cFAmt {
     box-sizing: border-box;
     width: 100%
 }
 
-.footerClaimButton_e99fef>button {
+.footerClaimButton_5cFAmt>button {
     width: 100%
 }
 
-.copyIconButton_e99fef {
+.copyIconButton_5cFAmt {
     --control-icon-only-icon-default: var(--text-strong)
 }
 
-/*# sourceMappingURL=456968.6d985cff2cf739da.css.map*/
+/*# sourceMappingURL=456968.191296bcab122a21.css.map*/

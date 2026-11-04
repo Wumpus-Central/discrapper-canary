@@ -1,4 +1,3 @@
-n.d(t, { E: () => r });
 var i,
     r =
         (((i = {}).JOIN_ATTEMPTS = "join_attempts"),
@@ -11,3 +10,4 @@ var i,
         (i.DECISION_ID = "decision_id"),
         (i.SUSPICIOUS_MENTION_ACTIVITY_UNTIL = "suspicious_mention_activity_until"),
         i);
+n.d(t, {}, { E: r });

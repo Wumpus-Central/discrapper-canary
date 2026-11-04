@@ -1,8 +1,8 @@
 e.exports = {
-    MY: "avatarUploader_e04502",
-    O7: "avatarUploaderDisabled_e04502",
-    f3: "avatarUploaderInnerSquare_e04502",
-    Hn: "avatarUploaderInnerSquareDisabled_e04502",
-    oB: "avatarUploadIcon_e04502",
-    BD: "hideDefaultIcon_e04502",
+    MY: "avatarUploader_iC_kEw",
+    O7: "avatarUploaderDisabled_iC_kEw",
+    f3: "avatarUploaderInnerSquare_iC_kEw",
+    Hn: "avatarUploaderInnerSquareDisabled_iC_kEw",
+    oB: "avatarUploadIcon_iC_kEw",
+    BD: "hideDefaultIcon_iC_kEw",
 };

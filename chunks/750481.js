@@ -1,10 +1,9 @@
-t.d(i, { N: () => _, n: () => I });
 var a = t(582128),
-    n = t(17928),
+    n = t(855986),
     o = t(73153),
     r = t(662502),
     s = t(287809),
-    c = t(379257),
+    c = t(871309),
     l = t(295972),
     d = t(652215),
     u = t(835002);
@@ -51,27 +50,37 @@ function A(e) {
         ),
     };
 }
-function I(e) {
-    let { onComplete: i, entryPoint: t, shouldShowExpressiveModal: n = !1, classificationId: o = null } = e,
-        { loading: r, startVerification: s } = A({ onComplete: i, entryPoint: t, shouldShowExpressiveModal: n });
-    return {
-        loading: r,
-        initiateAgeVerification: a.useCallback(
-            (e, i) => s(() => (0, l.uf)({ method: e, classificationId: o ?? void 0, vendor: i })),
-            [s, o],
-        ),
-    };
-}
-function _(e) {
-    let { onComplete: i, entryPoint: t, onMethodUnavailable: n } = e,
-        { loading: o, startVerification: r } = A({
-            onComplete: i,
-            entryPoint: t,
-            shouldShowExpressiveModal: !0,
-            onMethodUnavailable: n,
-        });
-    return {
-        loading: o,
-        initiateAgeVerificationV2: a.useCallback((e) => r(() => (0, l.en)(e.method, e.vendor), e), [r]),
-    };
-}
+t.d(
+    i,
+    {},
+    {
+        N: function (e) {
+            let { onComplete: i, entryPoint: t, onMethodUnavailable: n } = e,
+                { loading: o, startVerification: r } = A({
+                    onComplete: i,
+                    entryPoint: t,
+                    shouldShowExpressiveModal: !0,
+                    onMethodUnavailable: n,
+                });
+            return {
+                loading: o,
+                initiateAgeVerificationV2: a.useCallback((e) => r(() => (0, l.en)(e.method, e.vendor), e), [r]),
+            };
+        },
+        n: function (e) {
+            let { onComplete: i, entryPoint: t, shouldShowExpressiveModal: n = !1, classificationId: o = null } = e,
+                { loading: r, startVerification: s } = A({
+                    onComplete: i,
+                    entryPoint: t,
+                    shouldShowExpressiveModal: n,
+                });
+            return {
+                loading: r,
+                initiateAgeVerification: a.useCallback(
+                    (e, i) => s(() => (0, l.uf)({ method: e, classificationId: o ?? void 0, vendor: i })),
+                    [s, o],
+                ),
+            };
+        },
+    },
+);

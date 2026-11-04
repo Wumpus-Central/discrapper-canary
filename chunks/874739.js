@@ -1,13 +1,12 @@
-n.d(t, { A: () => y });
 var i = n(477900),
     l = n(582128),
-    a = n(17928),
+    a = n(855986),
     s = n(456412),
     r = n(878549),
-    o = n(198052),
+    o = n(628983),
     d = n(493387),
     c = n(235986),
-    u = n(625494),
+    u = n(188567),
     h = n(484191),
     p = n(665450),
     m = n(526369),
@@ -29,8 +28,8 @@ let y = (0, s.A)((e) => {
         channel: E,
         hasConnectPermission: b,
         className: S,
-        inCall: T,
-        showParticipants: _ = !0,
+        inCall: _,
+        showParticipants: T = !0,
         width: R,
         height: O,
         idle: P,
@@ -48,9 +47,9 @@ let y = (0, s.A)((e) => {
         ),
         V = (0, a.bG)([o.A], () => o.A.getVoiceParticipantsHidden(E.id), [E.id]);
     if (w?.channelId === E.id) return (0, i.jsx)(p.A, { height: O });
-    if (E?.isGuildVocalOrThread() && !T)
+    if (E?.isGuildVocalOrThread() && !_)
         return (0, i.jsx)(h.A, { channel: E, participants: t, hasConnectPermission: b });
-    if (((n = T ? n : t), L === g._Of.VOICE))
+    if (((n = _ ? n : t), L === g._Of.VOICE))
         return (0, i.jsx)(d.A, { guildId: E.guild_id, width: R, className: C.Er, participants: t, onContextMenu: N });
     if (null == s) {
         if (0 === n.length) {
@@ -69,7 +68,7 @@ let y = (0, s.A)((e) => {
                 onClick: I,
                 onDoubleClick: v,
                 onContextMenu: N,
-                inCall: T,
+                inCall: _,
                 popoutType: M,
             }),
         });
@@ -87,8 +86,9 @@ let y = (0, s.A)((e) => {
         height: O,
         width: R,
         layout: j,
-        inCall: T,
+        inCall: _,
         channel: E,
-        showParticipants: _,
+        showParticipants: T,
     });
 });
+n.d(t, {}, { A: y });

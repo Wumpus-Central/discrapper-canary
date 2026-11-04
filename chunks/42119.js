@@ -1,4 +1,3 @@
-r.d(t, { IK: () => c, wH: () => u });
 var s = r(477900),
     n = r(582128),
     i = r(947641),
@@ -46,32 +45,39 @@ function u(e) {
         children: (0, s.jsx)(i.r, { size: "xxs", color: "var(--white)" }),
     });
 }
-function c(e) {
-    let {
-        preset: t,
-        selected: r,
-        disabled: n,
-        onClick: i,
-        label: l,
-        theme: c,
-        buttonClassName: o,
-        graphicClassName: h,
-        selectedIndicatorClassName: x,
-        selectedIndicatorTestId: f,
-    } = e;
-    return (0, s.jsx)(a.m, {
-        text: l,
-        children: (0, s.jsxs)("button", {
-            type: "button",
-            className: o,
-            disabled: n,
-            "aria-label": l,
-            "aria-pressed": r,
-            onClick: i,
-            children: [
-                (0, s.jsx)(d, { preset: t, theme: c, className: h }),
-                r && (0, s.jsx)(u, { className: x, testId: f }),
-            ],
-        }),
-    });
-}
+r.d(
+    t,
+    {},
+    {
+        IK: function (e) {
+            let {
+                preset: t,
+                selected: r,
+                disabled: n,
+                onClick: i,
+                label: l,
+                theme: c,
+                buttonClassName: o,
+                graphicClassName: h,
+                selectedIndicatorClassName: x,
+                selectedIndicatorTestId: f,
+            } = e;
+            return (0, s.jsx)(a.m, {
+                text: l,
+                children: (0, s.jsxs)("button", {
+                    type: "button",
+                    className: o,
+                    disabled: n,
+                    "aria-label": l,
+                    "aria-pressed": r,
+                    onClick: i,
+                    children: [
+                        (0, s.jsx)(d, { preset: t, theme: c, className: h }),
+                        r && (0, s.jsx)(u, { className: x, testId: f }),
+                    ],
+                }),
+            });
+        },
+        wH: u,
+    },
+);

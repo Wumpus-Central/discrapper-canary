@@ -1,5 +1,4 @@
-n.d(t, { A: () => a });
-var i = n(187522);
+var i = n(691883);
 class r extends i.V {
     requestPermissionCore(e, t) {
         return Promise.resolve(!0);
@@ -14,3 +13,4 @@ class r extends i.V {
     openAlertModal(e) {}
 }
 let a = new r();
+n.d(t, {}, { A: a });

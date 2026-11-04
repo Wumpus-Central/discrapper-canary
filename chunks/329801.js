@@ -1,1 +1,1 @@
-_.exports = { my: "avatar__75742", vk: "clickable__75742", Lw: "overlay__75742", Rg: "focusRing__75742" };
+a.exports = { my: "avatar_WRLIGC", vk: "clickable_WRLIGC", Lw: "overlay_WRLIGC", Rg: "focusRing_WRLIGC" };

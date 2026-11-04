@@ -1,17 +1,24 @@
-e.d(r, { m: () => s });
-var i = e(636537),
+var i = e(620632),
     d = e(73153),
     u = e(287809),
     a = e(652215);
-async function s(t, r) {
-    try {
-        let e = await i.Bo.put({
-            url: a.Rsh.USER_SET_GUILD_IDENTITY,
-            body: { identity_guild_id: t, identity_enabled: r },
-            rejectWithError: !1,
-        });
-        return (d.h.dispatch({ type: "CURRENT_USER_UPDATE", user: { ...u.default.getCurrentUser(), ...e.body } }), e);
-    } catch (t) {
-        return t;
-    }
-}
+e.d(
+    r,
+    {},
+    {
+        m: async function (t, r) {
+            try {
+                let e = await i.Bo.put({
+                    url: a.Rsh.USER_SET_GUILD_IDENTITY,
+                    body: { identity_guild_id: t, identity_enabled: r },
+                    rejectWithError: !1,
+                });
+                return (
+                    d.h.dispatch({ type: "CURRENT_USER_UPDATE", user: { ...u.default.getCurrentUser(), ...e.body } }), e
+                );
+            } catch (t) {
+                return t;
+            }
+        },
+    },
+);

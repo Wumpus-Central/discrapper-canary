@@ -1,10 +1,10 @@
 e.exports = {
-    Vg: "grid__94629",
-    HL: "widget__94629",
-    b3: "widgetImageContainer__94629",
-    YI: "widgetImage__94629",
-    Nt: "widgetOverlay__94629",
-    Ti: "widgetOverlayBackground__94629",
-    dK: "widgetOverlayBackgroundInner__94629",
-    Cq: "widgetOverlayContent__94629",
+    Vg: "grid_2akU6F",
+    HL: "widget_2akU6F",
+    b3: "widgetImageContainer_2akU6F",
+    YI: "widgetImage_2akU6F",
+    Nt: "widgetOverlay_2akU6F",
+    Ti: "widgetOverlayBackground_2akU6F",
+    dK: "widgetOverlayBackgroundInner_2akU6F",
+    Cq: "widgetOverlayContent_2akU6F",
 };

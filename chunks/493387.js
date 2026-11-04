@@ -1,11 +1,11 @@
-(n.d(t, { A: () => S }), n(321073));
+n(321073);
 var i = n(477900),
     l = n(582128),
     a = n(503698),
     s = n.n(a),
     r = n(615300),
-    o = n(17928),
-    d = n(868285),
+    o = n(855986),
+    d = n(628274),
     c = n(462887),
     u = n(778712),
     h = n(890856),
@@ -13,11 +13,11 @@ var i = n(477900),
     m = n(421768),
     A = n(209932),
     f = n(541157),
-    g = n(477653),
+    g = n(718197),
     x = n(531685),
     C = n(85448),
     y = n(806931),
-    j = n(105292),
+    j = n(792996),
     I = n(836905),
     N = n(938442),
     v = n(138267);
@@ -98,61 +98,73 @@ class b extends l.PureComponent {
         });
     }
 }
-function S(e) {
-    var t;
-    let { participants: n, onContextMenu: l, className: a, onClick: r, width: c, guildId: N } = e,
-        v = (0, p.Ay)(),
-        E = ((t = n.length), ((0, u.FT)(u._3.SIZE_80) + 16) * t > c ? u._3.SIZE_40 : u._3.SIZE_80),
-        S = (0, o.bG)([x.A], () => x.A.isFocused()),
-        T = (0, f.oN)(),
-        _ = (0, o.bG)([g.Ay], () => new Map(n.filter(y.Xw).map((e) => [e.user.id, g.Ay.isLocalMute(e.user.id)])), [n]),
-        R = (0, o.bG)(
-            [A.A],
-            () => new Map(n.filter(y.Xw).map((e) => [e.user.id, A.A.isLocalSoundboardMuted(e.user.id)])),
-            [n],
-        ),
-        O = (0, m.g)(R.size > 0 ? "VoiceCallParticipants" : "Invalid - VoiceCallParticipants"),
-        P = n.map((e) => {
-            if (e.type !== y.lp.USER) return null;
-            let { user: t, speaking: n, ringing: a, playingSoundboard: s } = e,
-                o = (0, f.Nd)(e.voiceState, T),
-                d = null;
-            !0 === _.get(t.id)
-                ? (d = j.intl.string(j.t.Q8Uzof))
-                : o?.isVoiceDeafened() === !0
-                  ? (d = j.intl.string(j.t.NjmiOL))
-                  : o?.isVoiceMuted() === !0
-                    ? (d = j.intl.string(j.t.tjtv3P))
-                    : O && !0 === R.get(t.id) && (d = j.intl.string(j.t["9bJYWN"]));
-            let c =
-                null != d ? j.intl.formatToPlainString(j.t["1+MVBP"], { userName: t.username, status: d }) : t.username;
-            return (0, i.jsx)(
-                b,
-                {
-                    className: I.Wp,
-                    width: (0, u.FT)(E),
-                    theme: v,
-                    children: (0, i.jsx)(h.s, {
-                        "aria-label": c,
-                        onClick: (t) => r?.(e, t),
-                        onContextMenu: (t) => l?.(e, t),
-                        children: (0, i.jsx)(
-                            C.Ay,
-                            {
-                                userId: t.id,
-                                src: t.getAvatarURL(N, (0, u.FT)(E), n && S),
-                                size: E,
-                                muted: o?.isVoiceMuted() ?? !1,
-                                deafen: o?.isVoiceDeafened() ?? !1,
-                                voiceStatus: (0, u.n$)(n, s),
-                                ringing: a,
-                            },
-                            e.id,
-                        ),
-                    }),
-                },
-                t.id,
-            );
-        });
-    return (0, i.jsx)(d.F, { component: "div", role: "list", className: s()(I.zr, a), children: P });
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            var t;
+            let { participants: n, onContextMenu: l, className: a, onClick: r, width: c, guildId: N } = e,
+                v = (0, p.Ay)(),
+                E = ((t = n.length), ((0, u.FT)(u._3.SIZE_80) + 16) * t > c ? u._3.SIZE_40 : u._3.SIZE_80),
+                S = (0, o.bG)([x.A], () => x.A.isFocused()),
+                _ = (0, f.oN)(),
+                T = (0, o.bG)(
+                    [g.Ay],
+                    () => new Map(n.filter(y.Xw).map((e) => [e.user.id, g.Ay.isLocalMute(e.user.id)])),
+                    [n],
+                ),
+                R = (0, o.bG)(
+                    [A.A],
+                    () => new Map(n.filter(y.Xw).map((e) => [e.user.id, A.A.isLocalSoundboardMuted(e.user.id)])),
+                    [n],
+                ),
+                O = (0, m.g)(R.size > 0 ? "VoiceCallParticipants" : "Invalid - VoiceCallParticipants"),
+                P = n.map((e) => {
+                    if (e.type !== y.lp.USER) return null;
+                    let { user: t, speaking: n, ringing: a, playingSoundboard: s } = e,
+                        o = (0, f.Nd)(e.voiceState, _),
+                        d = null;
+                    !0 === T.get(t.id)
+                        ? (d = j.intl.string(j.t.Q8Uzof))
+                        : o?.isVoiceDeafened() === !0
+                          ? (d = j.intl.string(j.t.NjmiOL))
+                          : o?.isVoiceMuted() === !0
+                            ? (d = j.intl.string(j.t.tjtv3P))
+                            : O && !0 === R.get(t.id) && (d = j.intl.string(j.t["9bJYWN"]));
+                    let c =
+                        null != d
+                            ? j.intl.formatToPlainString(j.t["1+MVBP"], { userName: t.username, status: d })
+                            : t.username;
+                    return (0, i.jsx)(
+                        b,
+                        {
+                            className: I.Wp,
+                            width: (0, u.FT)(E),
+                            theme: v,
+                            children: (0, i.jsx)(h.s, {
+                                "aria-label": c,
+                                onClick: (t) => r?.(e, t),
+                                onContextMenu: (t) => l?.(e, t),
+                                children: (0, i.jsx)(
+                                    C.Ay,
+                                    {
+                                        userId: t.id,
+                                        src: t.getAvatarURL(N, (0, u.FT)(E), n && S),
+                                        size: E,
+                                        muted: o?.isVoiceMuted() ?? !1,
+                                        deafen: o?.isVoiceDeafened() ?? !1,
+                                        voiceStatus: (0, u.n$)(n, s),
+                                        ringing: a,
+                                    },
+                                    e.id,
+                                ),
+                            }),
+                        },
+                        t.id,
+                    );
+                });
+            return (0, i.jsx)(d.F, { component: "div", role: "list", className: s()(I.zr, a), children: P });
+        },
+    },
+);

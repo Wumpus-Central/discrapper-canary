@@ -1,1 +1,1 @@
-p.exports = { I: "pill__45408", q: "indicator__45408" };
+p.exports = { I: "pill_QDCvh-", q: "indicator_QDCvh-" };

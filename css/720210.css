@@ -1,4 +1,4 @@
-.emojiButton__04eed {
+.emojiButton_SjG8Ug {
     align-items: center;
     cursor: pointer;
     display: flex;
@@ -7,57 +7,57 @@
     max-height: 50px
 }
 
-.emojiButtonHovered__04eed,
-.emojiButtonNormal__04eed {}
+.emojiButtonHovered_SjG8Ug,
+.emojiButtonNormal_SjG8Ug {}
 
-.spriteContainer__04eed {
+.spriteContainer_SjG8Ug {
     position: relative;
     --custom-emoji-sprite-bg-position: calc(var(--custom-emoji-sprite-col)*-1*var(--custom-emoji-sprite-size)) calc(var(--custom-emoji-sprite-row)*-1*var(--custom-emoji-sprite-size));
     --custom-emoji-sprite-bg-size: calc(var(--custom-emoji-sprite-size)*20) calc(var(--custom-emoji-sprite-size)*4)
 }
 
-.sprite__04eed,
-.spriteContainer__04eed {
+.sprite_SjG8Ug,
+.spriteContainer_SjG8Ug {
     display: block;
     height: var(--custom-emoji-sprite-size);
     width: var(--custom-emoji-sprite-size)
 }
 
-.sprite__04eed {
+.sprite_SjG8Ug {
     inset-inline-start: 0;
     position: absolute;
     top: 0
 }
 
-.spriteColored__04eed {
-    background-image: url(/assets/1b05b930a77fbff9.png);
+.spriteColored_SjG8Ug {
+    background-image: url("/assets/1b05b930a77fbff9.png");
     background-position: var(--custom-emoji-sprite-bg-position);
     background-size: var(--custom-emoji-sprite-bg-size)
 }
 
-.spriteGreyscale__04eed {
+.spriteGreyscale_SjG8Ug {
     background-color: var(--interactive-text-default)
 }
 
-.spriteGreyscale__04eed,
-.spritePremiumColored__04eed {
-    -webkit-mask-image: url(/assets/decf85f79e02d276.png);
-    mask-image: url(/assets/decf85f79e02d276.png);
+.spriteGreyscale_SjG8Ug,
+.spritePremiumColored_SjG8Ug {
+    -webkit-mask-image: url("/assets/decf85f79e02d276.png");
+    mask-image: url("/assets/decf85f79e02d276.png");
     -webkit-mask-position: var(--custom-emoji-sprite-bg-position);
     mask-position: var(--custom-emoji-sprite-bg-position);
     -webkit-mask-size: var(--custom-emoji-sprite-bg-size);
     mask-size: var(--custom-emoji-sprite-bg-size)
 }
 
-.spritePremiumColored__04eed.reducedMotion__04eed {
+.spritePremiumColored_SjG8Ug.reducedMotion_SjG8Ug {
     background-color: var(--premium-tier-2-purple-for-gradients-2)
 }
 
-.spritePremiumColored__04eed:not(.reducedMotion__04eed) {
-    animation: spritePremiumPulsing__04eed 2s infinite
+.spritePremiumColored_SjG8Ug:not(.reducedMotion_SjG8Ug) {
+    animation: spritePremiumPulsing_SjG8Ug 2s infinite
 }
 
-@keyframes spritePremiumPulsing__04eed {
+@keyframes spritePremiumPulsing_SjG8Ug {
     0% {
         background-color: var(--premium-tier-2-purple)
     }
@@ -71,29 +71,29 @@
     }
 }
 
-.inactive__04eed {
+.inactive_SjG8Ug {
     opacity: 0
 }
 
-.active__04eed {
+.active_SjG8Ug {
     opacity: 1
 }
 
-.premiumUnlockAnimation__04eed {
+.premiumUnlockAnimation_SjG8Ug {
     position: absolute;
     z-index: 100
 }
 
-.premiumUnlockAnimation__04eed.reducedMotion__04eed {
+.premiumUnlockAnimation_SjG8Ug.reducedMotion_SjG8Ug {
     height: 48px;
     width: 48px
 }
 
-.premiumUnlockAnimation__04eed:not(.reducedMotion__04eed) {
-    animation: shrink__04eed 2s forwards
+.premiumUnlockAnimation_SjG8Ug:not(.reducedMotion_SjG8Ug) {
+    animation: shrink_SjG8Ug 2s forwards
 }
 
-@keyframes shrink__04eed {
+@keyframes shrink_SjG8Ug {
     0% {
         height: 60px;
         width: 60px
@@ -110,8 +110,8 @@
     }
 }
 
-.enable-forced-colors .spriteGreyscale__04eed {
+.enable-forced-colors .spriteGreyscale_SjG8Ug {
     background-color: ButtonText
 }
 
-/*# sourceMappingURL=720210.f577ebac05fce173.css.map*/
+/*# sourceMappingURL=720210.a94c85437fb3b267.css.map*/

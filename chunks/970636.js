@@ -1,4 +1,3 @@
-n.d(t, { A: () => p, r: () => I });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -9,9 +8,9 @@ var i = n(477900),
     c = n(943812),
     u = n(267102),
     _ = n(675991),
-    E = n(204651),
+    E = n(693409),
     A = n(652215),
-    h = n(105292),
+    h = n(792996),
     f = n(748292);
 function I(e) {
     let t,
@@ -48,54 +47,61 @@ function I(e) {
         })
     );
 }
-function p(e) {
-    let {
-            enabled: t,
-            join: n,
-            channel: r,
-            onChange: a,
-            onCameraUnavailable: l,
-            cameraUnavailable: o,
-            videoBlocked: d = !1,
-            hasPermission: c,
-            className: u,
-            channelLimitReached: _,
-            channelLimit: A,
-            centerButton: p = !1,
-            onPopoutClick: m,
-            ...T
-        } = e,
-        g = p ? E.l : E.A;
-    return (0, i.jsx)(I, {
-        enabled: t,
-        join: n,
-        channel: r,
-        onChange: a,
-        onCameraUnavailable: l,
-        cameraUnavailable: o,
-        videoBlocked: d,
-        hasPermission: c,
-        channelLimitReached: _,
-        channelLimit: A,
-        children: (e) => {
-            let { unavailable: r, onMouseEnter: a, onMouseLeave: l, isActive: o, ...c } = e;
-            return (0, i.jsx)(g, {
-                ...c,
-                ...T,
-                color: n ? "join" : o ? "green" : T.color,
-                caretColor: n ? "join" : t ? "green" : "primaryDark",
-                caretAriaLabel: h.intl.string(h.t.jO7lgy),
-                isActive: o,
-                onMouseEnter: (e) => {
-                    (T.onMouseEnter?.(e), a?.());
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let {
+                    enabled: t,
+                    join: n,
+                    channel: r,
+                    onChange: a,
+                    onCameraUnavailable: l,
+                    cameraUnavailable: o,
+                    videoBlocked: d = !1,
+                    hasPermission: c,
+                    className: u,
+                    channelLimitReached: _,
+                    channelLimit: A,
+                    centerButton: p = !1,
+                    onPopoutClick: m,
+                    ...T
+                } = e,
+                g = p ? E.l : E.A;
+            return (0, i.jsx)(I, {
+                enabled: t,
+                join: n,
+                channel: r,
+                onChange: a,
+                onCameraUnavailable: l,
+                cameraUnavailable: o,
+                videoBlocked: d,
+                hasPermission: c,
+                channelLimitReached: _,
+                channelLimit: A,
+                children: (e) => {
+                    let { unavailable: r, onMouseEnter: a, onMouseLeave: l, isActive: o, ...c } = e;
+                    return (0, i.jsx)(g, {
+                        ...c,
+                        ...T,
+                        color: n ? "join" : o ? "green" : T.color,
+                        caretColor: n ? "join" : t ? "green" : "primaryDark",
+                        caretAriaLabel: h.intl.string(h.t.jO7lgy),
+                        isActive: o,
+                        onMouseEnter: (e) => {
+                            (T.onMouseEnter?.(e), a?.());
+                        },
+                        onMouseLeave: (e) => {
+                            (T.onMouseLeave?.(e), l?.());
+                        },
+                        className: s()(u, { [f.t]: r && !d }),
+                        onPopoutClick: m,
+                        isTrayButton: !n,
+                    });
                 },
-                onMouseLeave: (e) => {
-                    (T.onMouseLeave?.(e), l?.());
-                },
-                className: s()(u, { [f.t]: r && !d }),
-                onPopoutClick: m,
-                isTrayButton: !n,
             });
         },
-    });
-}
+        r: I,
+    },
+);

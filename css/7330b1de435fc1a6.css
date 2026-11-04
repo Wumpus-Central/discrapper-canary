@@ -1,0 +1,76 @@
+.icon_hxzEt- {
+    height: 24px;
+    margin-bottom: 4px;
+    width: 24px
+}
+
+.shopIcon_hxzEt- {}
+
+.presetDecorationImg_hxzEt- {
+    height: 64px;
+    width: 64px
+}
+
+.decorationGridItem_hxzEt- {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: 4px;
+    color: var(--text-strong);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transition: box-shadow .15s ease-out
+}
+
+.selected_hxzEt- {
+    box-shadow: inset 0 0 0 2px var(--brand-500);
+    opacity: 1
+}
+
+.list_hxzEt- {
+    inset-inline-start: -12px;
+    max-height: 420px;
+    padding-bottom: 16px
+}
+
+.headings_hxzEt- {
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.spinner_UlS6S9 {
+    align-self: center;
+    margin: 8px
+}
+
+.modal_UlS6S9 {
+    border-radius: var(--radius-sm)
+}
+
+.modalHeader_UlS6S9 {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden
+}
+
+.modalCloseButton_UlS6S9 {
+    margin-inline-end: -8px;
+    padding: 0
+}
+
+.modalContent_UlS6S9 {
+    display: flex
+}
+
+.modalPreview_UlS6S9 {
+    margin-top: 24px
+}
+
+.modalFooter_UlS6S9 {
+    gap: var(--space-8)
+}
+
+/*# sourceMappingURL=7330b1de435fc1a6.css.map*/

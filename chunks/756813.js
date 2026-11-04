@@ -1,16 +1,12 @@
 let r, i, o;
-n.d(t, { i: () => u });
 var a = n(873326),
     s = n(690094),
     l = n(231577),
     c = n(296438);
-function u(e) {
-    ((0, a.s5)("dom", e), (0, a.AS)("dom", d));
-}
-function d() {
+function u() {
     if (!c.j.document) return;
     let e = a.aj.bind(null, "dom"),
-        t = p(e, !0);
+        t = d(e, !0);
     (c.j.document.addEventListener("click", t, !1),
         c.j.document.addEventListener("keypress", t, !1),
         ["EventTarget", "Node"].forEach((t) => {
@@ -27,7 +23,7 @@ function d() {
                                         this.__sentry_instrumentation_handlers__ || {}),
                                     o = (r[n] = r[n] || { refCount: 0 });
                                 if (!o.handler) {
-                                    let r = p(e);
+                                    let r = d(e);
                                     ((o.handler = r), t.call(this, n, r, i));
                                 }
                                 o.refCount++;
@@ -52,7 +48,7 @@ function d() {
                 }));
         }));
 }
-function p(e, t = !1) {
+function d(e, t = !1) {
     return (n) => {
         var a;
         if (!n || n._sentryCaptured) return;
@@ -84,3 +80,12 @@ function p(e, t = !1) {
             }, 1e3)));
     };
 }
+n.d(
+    t,
+    {},
+    {
+        i: function (e) {
+            ((0, a.s5)("dom", e), (0, a.AS)("dom", u));
+        },
+    },
+);

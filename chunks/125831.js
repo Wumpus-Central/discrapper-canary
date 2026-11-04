@@ -1,5 +1,4 @@
-n.d(t, { A: () => d });
-var i = n(17928),
+var i = n(855986),
     r = n(73153);
 let a = { topSoundboardSoundsByGuildId: {} },
     s = a,
@@ -37,3 +36,4 @@ let d = new o(r.h, {
         l[t] = !1;
     },
 });
+n.d(t, {}, { A: d });

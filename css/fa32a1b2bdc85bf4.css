@@ -1,0 +1,75 @@
+.hidden_z3MhG9 {
+    height: 0;
+    visibility: hidden
+}
+
+.verticalContainer_z3MhG9 {
+    align-items: flex-start
+}
+
+.verticalContainer_z3MhG9,
+.verticalContainerCentered_z3MhG9 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px
+}
+
+.verticalContainerCentered_z3MhG9 {
+    align-items: center
+}
+
+.balanceWidgetMenu_z3MhG9 {
+    width: -moz-max-content !important;
+    width: max-content !important
+}
+
+.balanceWidgetMenuContainer_z3MhG9 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto
+}
+
+.scroller_z3MhG9 {
+    height: 100%
+}
+
+.loader_z3MhG9 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.balanceWidgetPillContainer_z3MhG9 {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.tabularNums_z3MhG9 {
+    font-variant-numeric: tabular-nums
+}
+
+.headerWithSpacing_z3MhG9 {
+    margin-bottom: 8px;
+    margin-top: 4px
+}
+
+.labelValueRow_z3MhG9 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.orderSummaryContainer_z3MhG9 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px;
+    width: 100%
+}
+
+/*# sourceMappingURL=fa32a1b2bdc85bf4.css.map*/

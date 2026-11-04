@@ -1,9 +1,14 @@
-function i(e) {
-    let t = document.createElement("a");
-    return ((t.href = e), t.hostname);
-}
-function r(e) {
-    let t = document.createElement("a");
-    return ((t.href = e), t.protocol);
-}
-n.d(t, { E: () => i, J: () => r });
+n.d(
+    t,
+    {},
+    {
+        E: function (e) {
+            let t = document.createElement("a");
+            return ((t.href = e), t.hostname);
+        },
+        J: function (e) {
+            let t = document.createElement("a");
+            return ((t.href = e), t.protocol);
+        },
+    },
+);

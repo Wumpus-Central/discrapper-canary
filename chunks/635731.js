@@ -1,4 +1,3 @@
-n.d(t, { A: () => i });
 let i = class extends Array {
     maxSize;
     constructor(e) {
@@ -10,3 +9,4 @@ let i = class extends Array {
         return this.length;
     }
 };
+n.d(t, {}, { A: i });

@@ -1,61 +1,66 @@
-n.d(t, { A: () => a });
 var i = n(749394),
-    r = n(32731);
-class a {
-    id;
-    skuIds;
-    name;
-    summary;
-    options;
-    createdAt;
-    updatedAt;
-    skus;
-    primaryCollectionId;
-    primaryCollectionStyles;
-    primaryCollectionPdpBgUrl;
-    primaryCollectionWillUnpublishAt;
-    gameApplicationId;
-    badgeOverride;
-    hideBadge;
-    constructor(e) {
-        ((this.id = e.id),
-            (this.skuIds = e.skuIds),
-            (this.name = e.name),
-            (this.summary = e.summary),
-            (this.options = e.options),
-            (this.createdAt = e.createdAt),
-            (this.updatedAt = e.updatedAt),
-            (this.skus = e.skus),
-            (this.primaryCollectionId = e.primaryCollectionId),
-            (this.primaryCollectionStyles = e.primaryCollectionStyles),
-            (this.primaryCollectionPdpBgUrl = e.primaryCollectionPdpBgUrl),
-            (this.primaryCollectionWillUnpublishAt = e.primaryCollectionWillUnpublishAt),
-            (this.gameApplicationId = e.gameApplicationId),
-            (this.badgeOverride = e.badgeOverride),
-            (this.hideBadge = e.hideBadge));
-    }
-    static fromServer(e) {
-        let { sku_ids: t, options: n, created_at: s, updated_at: l, skus: o, tenant_metadata: d, ...c } = e;
-        return new a({
-            ...c,
-            skuIds: t,
-            options: n.map((e) => ({ name: e.name, optionValues: e.option_values })),
-            createdAt: new Date(s),
-            updatedAt: new Date(l),
-            skus: o.map((e) => r.A.createFromServer(e)),
-            primaryCollectionId: d.collectibles?.primary_collection_id,
-            primaryCollectionStyles:
-                d.collectibles?.primary_collection_styles != null
-                    ? i.A.fromServer(d.collectibles.primary_collection_styles)
-                    : void 0,
-            primaryCollectionPdpBgUrl: d.collectibles?.primary_collection_pdp_bg_url,
-            primaryCollectionWillUnpublishAt:
-                d.collectibles?.primary_collection_will_unpublish_at != null
-                    ? new Date(d.collectibles.primary_collection_will_unpublish_at)
-                    : void 0,
-            gameApplicationId: d.guild_monetization?.game_server?.game_application_id,
-            badgeOverride: d.collectibles?.badge_override,
-            hideBadge: d.collectibles?.hide_badge,
-        });
-    }
-}
+    r = n(431955);
+n.d(
+    t,
+    {},
+    {
+        A: class e {
+            id;
+            skuIds;
+            name;
+            summary;
+            options;
+            createdAt;
+            updatedAt;
+            skus;
+            primaryCollectionId;
+            primaryCollectionStyles;
+            primaryCollectionPdpBgUrl;
+            primaryCollectionWillUnpublishAt;
+            gameApplicationId;
+            badgeOverride;
+            hideBadge;
+            constructor(e) {
+                ((this.id = e.id),
+                    (this.skuIds = e.skuIds),
+                    (this.name = e.name),
+                    (this.summary = e.summary),
+                    (this.options = e.options),
+                    (this.createdAt = e.createdAt),
+                    (this.updatedAt = e.updatedAt),
+                    (this.skus = e.skus),
+                    (this.primaryCollectionId = e.primaryCollectionId),
+                    (this.primaryCollectionStyles = e.primaryCollectionStyles),
+                    (this.primaryCollectionPdpBgUrl = e.primaryCollectionPdpBgUrl),
+                    (this.primaryCollectionWillUnpublishAt = e.primaryCollectionWillUnpublishAt),
+                    (this.gameApplicationId = e.gameApplicationId),
+                    (this.badgeOverride = e.badgeOverride),
+                    (this.hideBadge = e.hideBadge));
+            }
+            static fromServer(t) {
+                let { sku_ids: n, options: a, created_at: s, updated_at: l, skus: o, tenant_metadata: d, ...c } = t;
+                return new e({
+                    ...c,
+                    skuIds: n,
+                    options: a.map((e) => ({ name: e.name, optionValues: e.option_values })),
+                    createdAt: new Date(s),
+                    updatedAt: new Date(l),
+                    skus: o.map((e) => r.A.createFromServer(e)),
+                    primaryCollectionId: d.collectibles?.primary_collection_id,
+                    primaryCollectionStyles:
+                        d.collectibles?.primary_collection_styles != null
+                            ? i.A.fromServer(d.collectibles.primary_collection_styles)
+                            : void 0,
+                    primaryCollectionPdpBgUrl: d.collectibles?.primary_collection_pdp_bg_url,
+                    primaryCollectionWillUnpublishAt:
+                        d.collectibles?.primary_collection_will_unpublish_at != null
+                            ? new Date(d.collectibles.primary_collection_will_unpublish_at)
+                            : void 0,
+                    gameApplicationId: d.guild_monetization?.game_server?.game_application_id,
+                    badgeOverride: d.collectibles?.badge_override,
+                    hideBadge: d.collectibles?.hide_badge,
+                });
+            }
+        },
+    },
+);

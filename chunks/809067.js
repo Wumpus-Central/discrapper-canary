@@ -1,1 +1,1 @@
-p.exports = { E: "editor__1b31f", q: "placeholder__1b31f" };
+p.exports = { E: "editor_SHcSVi", q: "placeholder_SHcSVi" };

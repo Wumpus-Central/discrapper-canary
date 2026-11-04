@@ -1,28 +1,10 @@
-(n.d(t, {
-    $Y: () => S,
-    A2: () => T,
-    G4: () => D,
-    H_: () => G,
-    L1: () => N,
-    Lx: () => R,
-    OG: () => x,
-    VU: () => L,
-    _N: () => O,
-    a: () => U,
-    rs: () => g,
-    sZ: () => y,
-    tb: () => M,
-    ui: () => v,
-    vV: () => w,
-}),
-    n(938796),
-    n(321073));
+(n(938796), n(321073));
 var i = n(665260),
-    r = n(17928),
+    r = n(855986),
     a = n(52133),
     s = n(148719),
     l = n(734057),
-    o = n(30370),
+    o = n(417869),
     d = n(808728),
     c = n(71393),
     u = n(576705),
@@ -34,44 +16,7 @@ var i = n(665260),
     I = n(652215),
     p = n(340837);
 let m = new Date(16824888e5);
-function T(e) {
-    return (0, r.bG)([c.A, u.A], () => {
-        let t = c.A.getGuild(e),
-            n = !!t?.features.has(I.GuildFeatures.COMMUNITY),
-            i = u.A.can(I.xBc.MANAGE_GUILD, t),
-            r = u.A.can(I.xBc.MANAGE_ROLES, t);
-        return n && i && r;
-    });
-}
-function g(e) {
-    let t = c.A.getGuild(e),
-        n = !!t?.features.has(I.GuildFeatures.COMMUNITY),
-        i = u.A.can(I.xBc.MANAGE_GUILD, t),
-        r = u.A.can(I.xBc.MANAGE_ROLES, t);
-    return n && i && r;
-}
-function S(e, t) {
-    if (
-        null == e ||
-        !e.features.has(I.GuildFeatures.GUILD_ONBOARDING) ||
-        null == t ||
-        null == t.joinedAt ||
-        new Date(t.joinedAt) < m
-    )
-        return !1;
-    let n = t.flags ?? 0;
-    return i.Lt(n, p.D.STARTED_ONBOARDING) && !i.Lt(n, p.D.COMPLETED_ONBOARDING);
-}
-function N(e, t) {
-    return (
-        !(
-            null != e &&
-            e.features.has(I.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
-            e.features.has(I.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED)
-        ) && null != t
-    );
-}
-function C(e, t, n) {
+function T(e, t, n) {
     let i = new Set();
     (e.forEach((e) => {
         e.options.forEach((e) => {
@@ -87,62 +32,17 @@ function C(e, t, n) {
         r.filter((e) => !i.has(e.id) && !(null != e.parent_id && i.has(e.parent_id))),
     ];
 }
-function O(e, t, n) {
-    return C(
-        t,
-        n,
-        d.Ay.getChannels(e)[d.I6].map((e) => {
-            let { channel: t } = e;
-            return t;
-        }),
-    );
-}
-function R(e, t, n) {
-    return C(
-        t,
-        n,
-        (0, r.bG)([d.Ay], () => d.Ay.getChannels(e))[d.I6].map((e) => {
-            let { channel: t } = e;
-            return t;
-        }),
-    );
-}
-function L(e) {
-    return y(l.A.getChannel(e));
-}
-function y(e) {
+function g(e) {
     return (
         null != e &&
         !!(0, h.S)(e.guild_id, e.id) &&
         (e.isForumChannel() ? E.MJ(I.xBc.SEND_MESSAGES_IN_THREADS, e) : E.MJ(I.xBc.SEND_MESSAGES, e))
     );
 }
-function D(e, t, n) {
-    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0,
-        r = b(e, t, (e) => e.id, i);
-    return (
-        n.forEach((t) => {
-            if (!t.required) return;
-            let n = b(e, t.options[0]?.channelIds ?? [], (e) => e.id),
-                a = t.options.reduce((t, n) => {
-                    if (null == n.channelIds) return [];
-                    let a = b(
-                        e,
-                        n.channelIds,
-                        (e) => e.id,
-                        (e) => i(e) && !r.includes(e),
-                    );
-                    return a.length < t.length ? a : t;
-                }, n);
-            r.push(...a);
-        }),
-        r
-    );
-}
-function b(e, t) {
+function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : (e) => e,
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0,
-        r = d.Ay.getChannels(e)[d.I6],
+        r = d.A.getChannels(e)[d.I],
         a = [];
     for (let { channel: e } of r)
         if (
@@ -154,86 +54,175 @@ function b(e, t) {
         }
     return a;
 }
-function v(e, t) {
-    var n;
-    let i = b(e, t),
-        r = d.Ay.getChannels(e)[d.I6],
-        a = {};
-    for (let e of r) a[e.channel.id] = e;
-    return [
-        ((n = i.map((e) => {
-            let { id: t } = e;
-            return t;
-        })),
-        n.filter((e) => y(a[e]?.channel))),
-        i,
-    ];
-}
-function P(e, t) {
+function N(e, t) {
     return e[0].length === t[0].length && e[1].length === t[1].length && (0, a.A)(e[0], t[0]) && (0, a.A)(e[1], t[1]);
 }
-function M(e, t) {
-    return (0, r.bG)(
-        [d.Ay],
-        () => {
-            let n = d.Ay.getChannels(e),
+n.d(
+    t,
+    {},
+    {
+        $Y: function (e, t) {
+            if (
+                null == e ||
+                !e.features.has(I.GuildFeatures.GUILD_ONBOARDING) ||
+                null == t ||
+                null == t.joinedAt ||
+                new Date(t.joinedAt) < m
+            )
+                return !1;
+            let n = t.flags ?? 0;
+            return i.Lt(n, p.D.STARTED_ONBOARDING) && !i.Lt(n, p.D.COMPLETED_ONBOARDING);
+        },
+        A2: function (e) {
+            return (0, r.bG)([c.A, u.A], () => {
+                let t = c.A.getGuild(e),
+                    n = !!t?.features.has(I.GuildFeatures.COMMUNITY),
+                    i = u.A.can(I.xBc.MANAGE_GUILD, t),
+                    r = u.A.can(I.xBc.MANAGE_ROLES, t);
+                return n && i && r;
+            });
+        },
+        G4: function (e, t, n) {
+            let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0,
+                r = S(e, t, (e) => e.id, i);
+            return (
+                n.forEach((t) => {
+                    if (!t.required) return;
+                    let n = S(e, t.options[0]?.channelIds ?? [], (e) => e.id),
+                        a = t.options.reduce((t, n) => {
+                            if (null == n.channelIds) return [];
+                            let a = S(
+                                e,
+                                n.channelIds,
+                                (e) => e.id,
+                                (e) => i(e) && !r.includes(e),
+                            );
+                            return a.length < t.length ? a : t;
+                        }, n);
+                    r.push(...a);
+                }),
+                r
+            );
+        },
+        H_: function (e) {
+            let t = e.filter((e) => e.connection_type === f.wZ.PROVIDER_CONNECTED_ACCOUNT && !!e.provider_id),
+                n = [],
+                i = [];
+            return (
+                t.forEach((e) => {
+                    let t = e.provider_id;
+                    if ((0, A.uJ)(t)) return;
+                    let r = o.A.getAccount(null, t);
+                    null == r || r.revoked ? i.push(t) : n.push(t);
+                }),
+                { connected: n, notConnected: i }
+            );
+        },
+        L1: function (e, t) {
+            return (
+                !(
+                    null != e &&
+                    e.features.has(I.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
+                    e.features.has(I.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED)
+                ) && null != t
+            );
+        },
+        Lx: function (e, t, n) {
+            return T(
+                t,
+                n,
+                (0, r.bG)([d.A], () => d.A.getChannels(e))[d.I].map((e) => {
+                    let { channel: t } = e;
+                    return t;
+                }),
+            );
+        },
+        OG: function (e) {
+            let t = e.filter((e) => e.connection_type === f.wZ.APPLICATION && !!e.application_id),
                 i = [],
                 r = [],
-                a = {};
-            for (let e of n[d.I6])
-                (0, h.S)(e.channel.guild_id, e.channel.id) &&
-                    ((t.has(e.channel.id) && !e.channel.isCategory()) ||
-                        (!e.channel.isThread() && null != e.channel.parent_id && t.has(e.channel.parent_id))) &&
-                    ((a[e.channel.id] = e), i.push(e.channel), y(e.channel) && r.push(e.channel.id));
-            return [r, i];
+                a = n(733110).A,
+                { FetchState: s } = n(733110);
+            return (
+                t.forEach((e) => {
+                    let t = e.application_id;
+                    if ((0, A.uJ)(t)) return;
+                    let n = a.getNewestTokenForApplication(t);
+                    a.getFetchStateForApplication(t) === s.FETCHED && null != n ? i.push(t) : r.push(t);
+                }),
+                { connected: i, notConnected: r }
+            );
         },
-        [e, t],
-        P,
-    );
-}
-function U(e) {
-    return new Set(
-        e
-            .map((e) => e.roleIds)
-            .flat()
-            .filter(_.Vq),
-    );
-}
-function w(e) {
-    return new Set(
-        e
-            .map((e) => e.channelIds)
-            .flat()
-            .filter(_.Vq),
-    );
-}
-function G(e) {
-    let t = e.filter((e) => e.connection_type === f.wZ.PROVIDER_CONNECTED_ACCOUNT && !!e.provider_id),
-        n = [],
-        i = [];
-    return (
-        t.forEach((e) => {
-            let t = e.provider_id;
-            if ((0, A.uJ)(t)) return;
-            let r = o.A.getAccount(null, t);
-            null == r || r.revoked ? i.push(t) : n.push(t);
-        }),
-        { connected: n, notConnected: i }
-    );
-}
-function x(e) {
-    let t = e.filter((e) => e.connection_type === f.wZ.APPLICATION && !!e.application_id),
-        i = [],
-        r = [],
-        a = n(733110).default,
-        { FetchState: s } = n(733110);
-    return (
-        t.forEach((e) => {
-            let t = e.application_id;
-            if ((0, A.uJ)(t)) return;
-            let n = a.getNewestTokenForApplication(t);
-            a.getFetchStateForApplication(t) === s.FETCHED && null != n ? i.push(t) : r.push(t);
-        }),
-        { connected: i, notConnected: r }
-    );
-}
+        VU: function (e) {
+            return g(l.A.getChannel(e));
+        },
+        _N: function (e, t, n) {
+            return T(
+                t,
+                n,
+                d.A.getChannels(e)[d.I].map((e) => {
+                    let { channel: t } = e;
+                    return t;
+                }),
+            );
+        },
+        a: function (e) {
+            return new Set(
+                e
+                    .map((e) => e.roleIds)
+                    .flat()
+                    .filter(_.Vq),
+            );
+        },
+        rs: function (e) {
+            let t = c.A.getGuild(e),
+                n = !!t?.features.has(I.GuildFeatures.COMMUNITY),
+                i = u.A.can(I.xBc.MANAGE_GUILD, t),
+                r = u.A.can(I.xBc.MANAGE_ROLES, t);
+            return n && i && r;
+        },
+        sZ: g,
+        tb: function (e, t) {
+            return (0, r.bG)(
+                [d.A],
+                () => {
+                    let n = d.A.getChannels(e),
+                        i = [],
+                        r = [],
+                        a = {};
+                    for (let e of n[d.I])
+                        (0, h.S)(e.channel.guild_id, e.channel.id) &&
+                            ((t.has(e.channel.id) && !e.channel.isCategory()) ||
+                                (!e.channel.isThread() && null != e.channel.parent_id && t.has(e.channel.parent_id))) &&
+                            ((a[e.channel.id] = e), i.push(e.channel), g(e.channel) && r.push(e.channel.id));
+                    return [r, i];
+                },
+                [e, t],
+                N,
+            );
+        },
+        ui: function (e, t) {
+            var n;
+            let i = S(e, t),
+                r = d.A.getChannels(e)[d.I],
+                a = {};
+            for (let e of r) a[e.channel.id] = e;
+            return [
+                ((n = i.map((e) => {
+                    let { id: t } = e;
+                    return t;
+                })),
+                n.filter((e) => g(a[e]?.channel))),
+                i,
+            ];
+        },
+        vV: function (e) {
+            return new Set(
+                e
+                    .map((e) => e.channelIds)
+                    .flat()
+                    .filter(_.Vq),
+            );
+        },
+    },
+);

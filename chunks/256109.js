@@ -1,1 +1,1 @@
-e.exports = { kb: "left_caab99", pG: "right_caab99", TR: "down_caab99", Nu: "downRight_caab99", l0: "upLeft_caab99" };
+c.exports = { kb: "left_VmGrWN", pG: "right_VmGrWN", TR: "down_VmGrWN", Nu: "downRight_VmGrWN", l0: "upLeft_VmGrWN" };

@@ -1,39 +1,44 @@
-n.d(t, { u: () => d });
 var l = n(997101),
     i = n(278416),
     r = n(166532),
-    a = n(202541),
-    s = n(758476),
-    o = n(105292);
+    a = n(682901),
+    s = n(379912),
+    o = n(792996);
 let u = [r.pn.REVIEW, r.pn.ADD_PAYMENT_STEPS];
 function c(e) {
     if (null != e) return null != l.d[e] ? e : void 0;
 }
-function d(e) {
-    let {
-            skuId: t,
-            step: n,
-            storeCountryFromCheckoutContext: l,
-            relocationCountry: d,
-            headerBadgePreset: m,
-            headerBadgeText: p,
-            headerBadgeIcon: h,
-            headerBadgeVariant: C,
-        } = e,
-        f = o.intl.string(o.t.q9EGps);
-    n === r.pn.ADD_PAYMENT_STEPS && (f = o.intl.string(o.t.CpOiEO));
-    let E = { headerBadgeText: p, headerBadgeIcon: h, headerBadgeVariant: C };
-    "beta" === m
-        ? ((E.headerBadgeText = o.intl.string(o.t.oW0eUd)), (E.headerBadgeVariant = "secondary"))
-        : "trial" === m
-          ? ((E.headerBadgeText = o.intl.string(s.default["mWL08+"])), (E.headerBadgeIcon = i.TagIcon))
-          : "promo" === m && (E.headerBadgeText = o.intl.string(s.default.Fjpyfj));
-    let S = null != n && u.includes(n) ? { countryCode: c(l), relocationCountryCode: c(d) } : void 0;
-    return null == t
-        ? { title: f, gradientColor: void 0, ...S, ...E }
-        : t === a.pe.TIER_0 || t === a.pe.TIER_1
-          ? { title: f, gradientColor: "nitro-green", ...S, ...E }
-          : t === a.pe.TIER_2
-            ? { title: f, gradientColor: "nitro-pink", ...S, ...E }
-            : { title: f, ...S, ...E };
-}
+n.d(
+    t,
+    {},
+    {
+        u: function (e) {
+            let {
+                    skuId: t,
+                    step: n,
+                    storeCountryFromCheckoutContext: l,
+                    relocationCountry: d,
+                    headerBadgePreset: m,
+                    headerBadgeText: p,
+                    headerBadgeIcon: h,
+                    headerBadgeVariant: C,
+                } = e,
+                f = o.intl.string(o.t.q9EGps);
+            n === r.pn.ADD_PAYMENT_STEPS && (f = o.intl.string(o.t.CpOiEO));
+            let E = { headerBadgeText: p, headerBadgeIcon: h, headerBadgeVariant: C };
+            "beta" === m
+                ? ((E.headerBadgeText = o.intl.string(o.t.oW0eUd)), (E.headerBadgeVariant = "secondary"))
+                : "trial" === m
+                  ? ((E.headerBadgeText = o.intl.string(s.default["mWL08+"])), (E.headerBadgeIcon = i.TagIcon))
+                  : "promo" === m && (E.headerBadgeText = o.intl.string(s.default.Fjpyfj));
+            let S = null != n && u.includes(n) ? { countryCode: c(l), relocationCountryCode: c(d) } : void 0;
+            return null == t
+                ? { title: f, gradientColor: void 0, ...S, ...E }
+                : t === a.pe.TIER_0 || t === a.pe.TIER_1
+                  ? { title: f, gradientColor: "nitro-green", ...S, ...E }
+                  : t === a.pe.TIER_2
+                    ? { title: f, gradientColor: "nitro-pink", ...S, ...E }
+                    : { title: f, ...S, ...E };
+        },
+    },
+);

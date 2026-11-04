@@ -1,10 +1,6 @@
-n.d(t, { A: () => s, F: () => a });
 var i = n(575593),
     r = n(338535);
-function a(e) {
-    return e instanceof s;
-}
-class s extends r.A {
+class a extends r.A {
     asset;
     label;
     palette;
@@ -16,6 +12,16 @@ class s extends r.A {
             (this.palette = e.palette));
     }
     static fromServer(e) {
-        return new s({ ...super.fromServer(e), ...e });
+        return new a({ ...super.fromServer(e), ...e });
     }
 }
+n.d(
+    t,
+    {},
+    {
+        A: a,
+        F: function (e) {
+            return e instanceof a;
+        },
+    },
+);

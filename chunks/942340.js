@@ -1,7 +1,7 @@
-(n.d(t, { E: () => p, p: () => C }), n(321073));
+n(321073);
 var l = n(582128),
     r = n(602853),
-    i = n(661531),
+    i = n(646514),
     a = n(964486),
     s = n(626584),
     u = n(739508),
@@ -49,73 +49,80 @@ function p() {
         },
     };
 }
-function C(e) {
-    let { onSetupError: t, elementsAppearanceOptions: n = {} } = e,
-        [r, i] = l.useState(void 0),
-        [s, m] = l.useState(null),
-        [C, y] = l.useState(!0),
-        [E, _] = l.useState([]),
-        { createSetupIntentDeduped: g } = (0, d.x)(),
-        [I, S] = l.useState([]),
-        { customPaymentMethods: A, customPaymentMethodIdsToSourceTypes: P } = l.useMemo(
-            () => ({
-                customPaymentMethods: (0, o.Dd)(E),
-                customPaymentMethodIdsToSourceTypes: E.reduce(
-                    (e, t) => ((e[t.custom_payment_method_id] = t.payment_source_type), e),
-                    {},
+n.d(
+    t,
+    {},
+    {
+        E: p,
+        p: function (e) {
+            let { onSetupError: t, elementsAppearanceOptions: n = {} } = e,
+                [r, i] = l.useState(void 0),
+                [s, m] = l.useState(null),
+                [C, y] = l.useState(!0),
+                [E, _] = l.useState([]),
+                { createSetupIntentDeduped: g } = (0, d.x)(),
+                [I, S] = l.useState([]),
+                { customPaymentMethods: A, customPaymentMethodIdsToSourceTypes: P } = l.useMemo(
+                    () => ({
+                        customPaymentMethods: (0, o.Dd)(E),
+                        customPaymentMethodIdsToSourceTypes: E.reduce(
+                            (e, t) => ((e[t.custom_payment_method_id] = t.payment_source_type), e),
+                            {},
+                        ),
+                    }),
+                    [E],
                 ),
-            }),
-            [E],
-        ),
-        x = l.useCallback(async () => {
-            try {
-                let e,
-                    t,
-                    { client_secret: n, custom_payment_methods: l, payment_method_order: r } = await g();
-                (_(l),
-                    i(n),
-                    S(
-                        null != r && Array.isArray(r)
-                            ? r
-                            : ((e = ["pix", "card"]),
-                              (t = l.find((e) => e.payment_source_type === f.he.PAYPAL)),
-                              null != t && e.push(t.custom_payment_method_id),
-                              e),
-                    ));
-            } catch (e) {
-                (m(e),
-                    null != t && t(e),
-                    h.error("there was an error on setup for Payment Elements: ", e),
-                    (0, u.pM)(e, { tags: { source: "payment_elements" } }));
-            }
-            y(!1);
-        }, [t, g]);
-    (0, a.Ay)(() => {
-        x();
-    });
-    let { elementsAppearance: v, elementsAppearanceOptions: R } = p(n),
-        M = (0, c.PU)(),
-        T = l.useMemo(
-            () =>
-                C
-                    ? null
-                    : {
-                          clientSecret: r,
-                          appearance: v,
-                          locale: M,
-                          customPaymentMethods: A,
-                          paymentMethodCreation: "manual",
-                      },
-            [v, M, r, A, C],
-        ),
-        b = {
-            setupError: s,
-            customPaymentMethods: A,
-            customPaymentMethodIdsToSourceTypes: P,
-            paymentMethodOrder: I,
-            elementsAppearanceOptions: R,
-        };
-    return null == r || null == T || C
-        ? { ...b, isLoading: !0, elementsOptions: T, setupIntentSecret: r }
-        : { ...b, isLoading: !1, elementsOptions: T, setupIntentSecret: r };
-}
+                x = l.useCallback(async () => {
+                    try {
+                        let e,
+                            t,
+                            { client_secret: n, custom_payment_methods: l, payment_method_order: r } = await g();
+                        (_(l),
+                            i(n),
+                            S(
+                                null != r && Array.isArray(r)
+                                    ? r
+                                    : ((e = ["pix", "card"]),
+                                      (t = l.find((e) => e.payment_source_type === f.he.PAYPAL)),
+                                      null != t && e.push(t.custom_payment_method_id),
+                                      e),
+                            ));
+                    } catch (e) {
+                        (m(e),
+                            null != t && t(e),
+                            h.error("there was an error on setup for Payment Elements: ", e),
+                            (0, u.pM)(e, { tags: { source: "payment_elements" } }));
+                    }
+                    y(!1);
+                }, [t, g]);
+            (0, a.Ay)(() => {
+                x();
+            });
+            let { elementsAppearance: v, elementsAppearanceOptions: R } = p(n),
+                T = (0, c.PU)(),
+                M = l.useMemo(
+                    () =>
+                        C
+                            ? null
+                            : {
+                                  clientSecret: r,
+                                  appearance: v,
+                                  locale: T,
+                                  customPaymentMethods: A,
+                                  paymentMethodCreation: "manual",
+                              },
+                    [v, T, r, A, C],
+                ),
+                b = {
+                    setupError: s,
+                    customPaymentMethods: A,
+                    customPaymentMethodIdsToSourceTypes: P,
+                    paymentMethodOrder: I,
+                    elementsAppearanceOptions: R,
+                };
+            return null == r || null == M || C
+                ? { ...b, isLoading: !0, elementsOptions: M, setupIntentSecret: r }
+                : { ...b, isLoading: !1, elementsOptions: M, setupIntentSecret: r };
+        },
+    },
+);

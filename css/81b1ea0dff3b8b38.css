@@ -1,0 +1,173 @@
+.roleContainer_U5Umrb {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px
+}
+
+.firstRole_U5Umrb {
+    height: 24px;
+    margin: 0
+}
+
+.otherRoles_U5Umrb {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: var(--radius-xs);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    height: 24px;
+    justify-content: center;
+    width: 24px
+}
+
+.eyebrow_yu8zQD {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium)
+}
+
+.actions_yu8zQD {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px
+}
+
+.inviteSettingsInviteRow_k0kUi1 {
+    box-shadow: 0 1px 0 0 var(--border-subtle);
+    color: var(--text-default);
+    font-size: 16px;
+    height: 62px;
+    line-height: 20px;
+    position: relative
+}
+
+.header_k0kUi1 {
+    padding-bottom: 40px
+}
+
+.subhead_k0kUi1 {
+    margin-top: var(--space-8)
+}
+
+.actions_k0kUi1 {
+    padding-bottom: 4px
+}
+
+.headerDivider_k0kUi1 {
+    margin-bottom: 16px;
+    margin-top: 16px
+}
+
+.inviteSettingsInviteRow_k0kUi1:focus-within .revokeInvite_k0kUi1,
+.inviteSettingsInviteRow_k0kUi1:hover .revokeInvite_k0kUi1 {
+    opacity: 1
+}
+
+.text_k0kUi1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.inviteDisabledRow_k0kUi1 {
+    opacity: .8
+}
+
+.inviteDisabledTip_k0kUi1 {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.inviteDisabledContainer_k0kUi1 {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.revokeInvite_k0kUi1,
+.text_k0kUi1 {
+    z-index: 2
+}
+
+.channelName_k0kUi1 {
+    margin-inline-start: 26px
+}
+
+.countdownColumn_k0kUi1 {
+    margin-inline-end: 0
+}
+
+.revokeInvite_k0kUi1 {
+    inset-inline-end: -31px;
+    opacity: 0;
+    position: absolute;
+    top: -12px;
+    transition: opacity .1s ease
+}
+
+.inviteCode_k0kUi1 {
+    font-family: var(--font-code);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+    white-space: nowrap
+}
+
+.inviteSourceContainer_k0kUi1 {
+    max-width: 100%;
+    overflow: hidden
+}
+
+.linkedChannelJoinSource_k0kUi1 {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.linkedChannelJoinSourceText_k0kUi1 {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.countdown_k0kUi1,
+.uses_k0kUi1 {
+    font-family: var(--font-code)
+}
+
+.user_k0kUi1 {
+    color: var(--text-strong);
+    display: flex
+}
+
+.discriminator_k0kUi1 {
+    color: var(--text-default)
+}
+
+.avatar_k0kUi1 {
+    display: flex;
+    flex-shrink: 0;
+    margin-inline-end: 12px
+}
+
+.bypass_k0kUi1 {
+    align-items: center;
+    display: flex;
+    gap: 2px
+}
+
+.infoIcon_k0kUi1 {
+    margin-inline-start: 4px
+}
+
+.marginBottom20_k0kUi1 {
+    margin-bottom: 20px
+}
+
+/*# sourceMappingURL=81b1ea0dff3b8b38.css.map*/

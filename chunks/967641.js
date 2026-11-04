@@ -1,1 +1,1 @@
-e.exports = { lm: "notice__30f28", z3: "error__30f28", wx: "header__30f28" };
+c.exports = { lm: "notice_FHSxiv", z3: "error_FHSxiv", wx: "header_FHSxiv" };

@@ -1,4 +1,3 @@
-n.d(t, { YL: () => d, aI: () => o, gH: () => c, tI: () => s.tI, vx: () => l });
 var i,
     r,
     a,
@@ -22,11 +21,20 @@ var i,
         (a[(a.QUNS_QUIET_TIME = 6)] = "QUNS_QUIET_TIME"),
         (a[(a.QUNS_APP = 7)] = "QUNS_APP"),
         a);
-let c = {
-    compatibilityHook: !1,
-    warn: !1,
-    enabled: !1,
-    enabledOOP: !1,
-    allowHook: !0,
-    supportsOutOfProcessOverlay: !1,
-};
+n.d(
+    t,
+    { tI: () => s.tI },
+    {
+        YL: d,
+        aI: o,
+        gH: {
+            compatibilityHook: !1,
+            warn: !1,
+            enabled: !1,
+            enabledOOP: !1,
+            allowHook: !0,
+            supportsOutOfProcessOverlay: !1,
+        },
+        vx: l,
+    },
+);

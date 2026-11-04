@@ -1,16 +1,4 @@
-n.d(t, { aA: () => i, jN: () => a, sx: () => r });
 let i = [
-        { name: "Soul", color: "#ff1c90" },
-        { name: "Volcano", color: "#e81d1e" },
-        { name: "Marsh", color: "#e86e1d" },
-        { name: "Thunder", color: "#e8c02f" },
-        { name: "Rising", color: "#71368a" },
-        { name: "Zephyr", color: "#029FFC" },
-        { name: "Cascade", color: "#4fe2ca" },
-        { name: "Earth", color: "#406601" },
-        { name: "Boulder", color: "#272727" },
-    ],
-    r = [
         "363445589247131668",
         "700136079562375258",
         "1402418696126992445",
@@ -114,4 +102,23 @@ let i = [
         "1272842103910699040",
         "1276737795012165766",
     ],
-    a = new Map(r.map((e, t, n) => [e, n.length - t]));
+    r = new Map(i.map((e, t, n) => [e, n.length - t]));
+n.d(
+    t,
+    {},
+    {
+        aA: [
+            { name: "Soul", color: "#ff1c90" },
+            { name: "Volcano", color: "#e81d1e" },
+            { name: "Marsh", color: "#e86e1d" },
+            { name: "Thunder", color: "#e8c02f" },
+            { name: "Rising", color: "#71368a" },
+            { name: "Zephyr", color: "#029FFC" },
+            { name: "Cascade", color: "#4fe2ca" },
+            { name: "Earth", color: "#406601" },
+            { name: "Boulder", color: "#272727" },
+        ],
+        jN: r,
+        sx: i,
+    },
+);

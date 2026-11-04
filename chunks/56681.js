@@ -1,6 +1,5 @@
-u.d(e, { Q7: () => n, bF: () => l, hW: () => r });
-var i = u(809526),
-    a = u(105292);
+var i = u(191850),
+    a = u(792996);
 function l(t) {
     switch (t) {
         case "simple":
@@ -13,8 +12,15 @@ function l(t) {
             return null;
     }
 }
-function n(t, e) {
-    let u = l(e);
-    return null != u ? { title: t, body: a.intl.string(u) } : { body: t };
-}
-let r = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: "Max" };
+u.d(
+    e,
+    {},
+    {
+        Q7: function (t, e) {
+            let u = l(e);
+            return null != u ? { title: t, body: a.intl.string(u) } : { body: t };
+        },
+        bF: l,
+        hW: { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: "Max" },
+    },
+);

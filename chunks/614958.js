@@ -1,7 +1,7 @@
 e.exports = {
-    Qs: "content_d77702",
-    R$: "radioGroup_d77702",
-    Gt: "gameIcon_d77702",
-    Gr: "detectedGameFrame_d77702",
-    q_: "detectedGameIcon_d77702",
+    Qs: "content_QYgmpy",
+    R$: "radioGroup_QYgmpy",
+    Gt: "gameIcon_QYgmpy",
+    Gr: "detectedGameFrame_QYgmpy",
+    q_: "detectedGameIcon_QYgmpy",
 };

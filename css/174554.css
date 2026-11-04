@@ -1,4 +1,4 @@
-.wrapper__4e6ce {
+.wrapper_6AvvhR {
     background-color: var(--background-base-lower);
     border-radius: 0 0 0 8px;
     display: grid;
@@ -10,19 +10,19 @@
     width: 48px
 }
 
-.high-contrast-mode .wrapper__4e6ce {
+.high-contrast-mode .wrapper_6AvvhR {
     border-inline-end: 1px solid var(--border-subtle);
     box-sizing: border-box
 }
 
-.listNavigatorRegion__4e6ce {
+.listNavigatorRegion_6AvvhR {
     height: 100%;
     min-height: 0;
     position: relative
 }
 
-.enable-forced-colors .wrapper__4e6ce {
+.enable-forced-colors .wrapper_6AvvhR {
     border-inline-end: 1px solid CanvasText
 }
 
-/*# sourceMappingURL=174554.1422b5ca8e5d41b9.css.map*/
+/*# sourceMappingURL=174554.85e2135b5c6496b8.css.map*/

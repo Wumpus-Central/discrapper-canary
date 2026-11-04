@@ -1,8 +1,7 @@
 i.exports = {
-    lm: "notice_d37fb3",
-    wp: "noticeWithoutRightPadding_d37fb3 notice_d37fb3",
-    Ug: "noticeWithRightPadding_d37fb3 notice_d37fb3",
-    g9: "noticeLeft_d37fb3",
-    Kk: "icon_d37fb3",
-    Qq: "text_d37fb3",
+    wp: "noticeWithoutRightPadding_UCQIss notice_UCQIss",
+    Ug: "noticeWithRightPadding_UCQIss notice_UCQIss",
+    g9: "noticeLeft_UCQIss",
+    Kk: "icon_UCQIss",
+    Qq: "text_UCQIss",
 };

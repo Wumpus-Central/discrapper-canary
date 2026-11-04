@@ -1,23 +1,28 @@
-n.d(t, { A: () => s });
 var l = n(582128),
     i = n(922590),
-    a = n(725663),
+    a = n(393426),
     r = n(433880),
-    o = n(105292);
-function s(e) {
-    let { user: t } = e,
-        n = (0, i.fi)(t.id),
-        s = l.useCallback(
-            (e) => {
-                a.A.acceptFriendRequest({ userId: t.id, applicationId: e.id, location: "Context Menu" });
-            },
-            [t.id],
-        );
-    return (0, r.A)({
-        user: t,
-        gameRelationships: n,
-        menuItemId: "add-game-friend",
-        label: o.intl.string(o.t.X76oLM),
-        onClick: s,
-    });
-}
+    o = n(792996);
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { user: t } = e,
+                n = (0, i.fi)(t.id),
+                s = l.useCallback(
+                    (e) => {
+                        a.A.acceptFriendRequest({ userId: t.id, applicationId: e.id, location: "Context Menu" });
+                    },
+                    [t.id],
+                );
+            return (0, r.A)({
+                user: t,
+                gameRelationships: n,
+                menuItemId: "add-game-friend",
+                label: o.intl.string(o.t.X76oLM),
+                onClick: s,
+            });
+        },
+    },
+);

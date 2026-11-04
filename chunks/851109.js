@@ -1,4 +1,3 @@
-n.d(t, { GE: () => c, RK: () => l, U5: () => s, X8: () => d });
 var i,
     r,
     a = n(945810),
@@ -18,9 +17,17 @@ let o = (0, a.mj)({
         3: { notificationCenterVariant: "sidebar", entrypoint: "server-rail-top", filterStyle: "dropdown" },
     },
 });
-function d(e) {
-    return o.useConfig(e);
-}
-function c(e) {
-    return o.getConfig(e);
-}
+n.d(
+    t,
+    {},
+    {
+        GE: function (e) {
+            return o.getConfig(e);
+        },
+        RK: l,
+        U5: s,
+        X8: function (e) {
+            return o.useConfig(e);
+        },
+    },
+);

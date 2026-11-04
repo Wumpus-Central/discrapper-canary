@@ -1,9 +1,8 @@
-n.d(s, { default: () => E });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
     t = n.n(a),
-    d = n(17928),
+    d = n(855986),
     r = n(521489),
     o = n(761508),
     c = n(834730),
@@ -12,128 +11,15 @@ var i = n(477900),
     f = n(866665),
     p = n(604525),
     x = n(289873),
-    h = n(546772),
+    h = n(504054),
     j = n(643210),
     g = n(648127),
     b = n(372795),
-    v = n(809526),
-    C = n(105292),
+    v = n(191850),
+    C = n(792996),
     N = n(606128),
     k = n(135422);
 function E(e) {
-    let { transitionState: s, onClose: n, projectId: a, sessionId: f, sessionIds: p } = e,
-        x = (0, d.yK)(
-            [j.A],
-            () => [
-                ...p.flatMap((e) => {
-                    let s = j.A.getTab(a, e);
-                    return null == s ? [] : [s];
-                }),
-                ...j.A.getTabs(a).filter((e) => !e.ended && !p.includes(e.session.id)),
-            ],
-            [a, p],
-        ),
-        [b, E] = l.useState(f),
-        [y, I] = l.useState(null),
-        T = x.find((e) => e.session.id === b) ?? x[0];
-    (null != T && T.session.id !== b && E(T.session.id),
-        null != y && y !== T?.session.id && I(null),
-        l.useEffect(() => {
-            if (null != y) return ((0, h.EG)(a, y, !0), () => (0, h.EG)(a, y, !1));
-        }, [a, y]));
-    let H = l.useRef([]);
-    return (
-        l.useEffect(() => {
-            H.current = x.map((e) => e.session.id);
-        }, [x]),
-        l.useEffect(
-            () => () => {
-                for (let e of H.current) (0, h.gG)(a, e);
-            },
-            [a],
-        ),
-        (0, i.jsx)(r.N, {
-            transitionState: s,
-            onClose: n,
-            "aria-label": C.intl.string(v.default.sGsShB),
-            children: (0, i.jsxs)("div", {
-                className: t()(k.lJ, N.T),
-                children: [
-                    (0, i.jsxs)("header", {
-                        className: k.wx,
-                        children: [
-                            (0, i.jsx)(o.V, {
-                                type: "top",
-                                selectedItem: T?.session.id,
-                                onItemSelect: E,
-                                "aria-label": C.intl.string(v.default.UjUsph),
-                                className: k.vR,
-                                children: x.map((e) => {
-                                    var s;
-                                    let n;
-                                    return (0, i.jsx)(
-                                        o.V.Item,
-                                        {
-                                            id: e.session.id,
-                                            "aria-label":
-                                                ((s = e),
-                                                (n = (0, g.i)(s.session)),
-                                                C.intl.formatToPlainString(
-                                                    s.ended ? v.default["OO/He7"] : v.default.FkosiV,
-                                                    { title: n },
-                                                )),
-                                            children: (0, i.jsxs)("span", {
-                                                className: k.Gn,
-                                                children: [
-                                                    (0, i.jsx)("span", { className: t()(k.W9, e.ended && k.oM) }),
-                                                    (0, i.jsx)(c.E, {
-                                                        tag: "span",
-                                                        variant: "body-sm/medium",
-                                                        color: "none",
-                                                        lineClamp: 1,
-                                                        className: k.WT,
-                                                        children: (0, g.i)(e.session),
-                                                    }),
-                                                ],
-                                            }),
-                                        },
-                                        e.session.id,
-                                    );
-                                }),
-                            }),
-                            null == T || T.ended
-                                ? null
-                                : (0, i.jsx)(w, {
-                                      projectId: a,
-                                      sessionId: T.session.id,
-                                      inControl: y === T.session.id,
-                                      onTakeControl: () => {
-                                          ((0, h.EG)(a, T.session.id, !0), I(T.session.id));
-                                      },
-                                      onHandBack: () => I(null),
-                                  }),
-                            (0, i.jsx)(u.K, {
-                                onClick: n,
-                                icon: m.XLargeIcon,
-                                size: "sm",
-                                variant: "icon-only",
-                                "aria-label": C.intl.string(C.t.cpT0Cq),
-                            }),
-                        ],
-                    }),
-                    null == T
-                        ? null
-                        : (0, i.jsx)(
-                              S,
-                              { projectId: a, tab: T, inControl: y === T.session.id, onHandBack: () => I(null) },
-                              T.session.id,
-                          ),
-                ],
-            }),
-        })
-    );
-}
-function w(e) {
     let { projectId: s, sessionId: n, inControl: l, onTakeControl: a, onHandBack: t } = e,
         d = (0, h.HJ)(s, n),
         r = l && "granted" === d,
@@ -153,7 +39,7 @@ function w(e) {
         }),
     });
 }
-function S(e) {
+function w(e) {
     let { projectId: s, tab: n, inControl: a, onHandBack: d } = e,
         { session: r } = n,
         [o, u] = l.useState({ state: "connecting", hasFrame: !1 }),
@@ -208,3 +94,130 @@ function S(e) {
         })
     );
 }
+n.d(
+    s,
+    {},
+    {
+        default: function (e) {
+            let { transitionState: s, onClose: n, projectId: a, sessionId: f, sessionIds: p } = e,
+                x = (0, d.yK)(
+                    [j.A],
+                    () => {
+                        let e = p.flatMap((e) => {
+                                let s = j.A.getTab(a, e);
+                                return null == s ? [] : [s];
+                            }),
+                            s = j.A.getTabs(a).filter((e) => !e.ended && !p.includes(e.session.id));
+                        return [...e, ...s];
+                    },
+                    [a, p],
+                ),
+                [b, S] = l.useState(f),
+                [y, I] = l.useState(null),
+                T = x.find((e) => e.session.id === b) ?? x[0];
+            (null != T && T.session.id !== b && S(T.session.id),
+                null != y && y !== T?.session.id && I(null),
+                l.useEffect(() => {
+                    if (null != y) return ((0, h.EG)(a, y, !0), () => (0, h.EG)(a, y, !1));
+                }, [a, y]));
+            let H = l.useRef([]);
+            return (
+                l.useEffect(() => {
+                    H.current = x.map((e) => e.session.id);
+                }, [x]),
+                l.useEffect(
+                    () => () => {
+                        for (let e of H.current) (0, h.gG)(a, e);
+                    },
+                    [a],
+                ),
+                (0, i.jsx)(r.N, {
+                    transitionState: s,
+                    onClose: n,
+                    "aria-label": C.intl.string(v.default.sGsShB),
+                    children: (0, i.jsxs)("div", {
+                        className: t()(k.lJ, N.T),
+                        children: [
+                            (0, i.jsxs)("header", {
+                                className: k.wx,
+                                children: [
+                                    (0, i.jsx)(o.V, {
+                                        type: "top",
+                                        selectedItem: T?.session.id,
+                                        onItemSelect: S,
+                                        "aria-label": C.intl.string(v.default.UjUsph),
+                                        className: k.vR,
+                                        children: x.map((e) => {
+                                            var s;
+                                            let n;
+                                            return (0, i.jsx)(
+                                                o.V.Item,
+                                                {
+                                                    id: e.session.id,
+                                                    "aria-label":
+                                                        ((s = e),
+                                                        (n = (0, g.i)(s.session)),
+                                                        C.intl.formatToPlainString(
+                                                            s.ended ? v.default["OO/He7"] : v.default.FkosiV,
+                                                            { title: n },
+                                                        )),
+                                                    children: (0, i.jsxs)("span", {
+                                                        className: k.Gn,
+                                                        children: [
+                                                            (0, i.jsx)("span", {
+                                                                className: t()(k.W9, e.ended && k.oM),
+                                                            }),
+                                                            (0, i.jsx)(c.E, {
+                                                                tag: "span",
+                                                                variant: "body-sm/medium",
+                                                                color: "none",
+                                                                lineClamp: 1,
+                                                                className: k.WT,
+                                                                children: (0, g.i)(e.session),
+                                                            }),
+                                                        ],
+                                                    }),
+                                                },
+                                                e.session.id,
+                                            );
+                                        }),
+                                    }),
+                                    null == T || T.ended
+                                        ? null
+                                        : (0, i.jsx)(E, {
+                                              projectId: a,
+                                              sessionId: T.session.id,
+                                              inControl: y === T.session.id,
+                                              onTakeControl: () => {
+                                                  ((0, h.EG)(a, T.session.id, !0), I(T.session.id));
+                                              },
+                                              onHandBack: () => I(null),
+                                          }),
+                                    (0, i.jsx)(u.K, {
+                                        onClick: n,
+                                        icon: m.XLargeIcon,
+                                        size: "sm",
+                                        variant: "icon-only",
+                                        "aria-label": C.intl.string(C.t.cpT0Cq),
+                                    }),
+                                ],
+                            }),
+                            null == T
+                                ? null
+                                : (0, i.jsx)(
+                                      w,
+                                      {
+                                          projectId: a,
+                                          tab: T,
+                                          inControl: y === T.session.id,
+                                          onHandBack: () => I(null),
+                                      },
+                                      T.session.id,
+                                  ),
+                        ],
+                    }),
+                })
+            );
+        },
+    },
+);

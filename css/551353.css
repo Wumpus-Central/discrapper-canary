@@ -1,15 +1,15 @@
-.container_c2b141 {
+.container_e76OBR {
     align-items: center;
     display: flex;
     flex-direction: column
 }
 
-.keybind_c2b141 {
+.keybind_e76OBR {
     margin-top: 6px;
     text-align: center
 }
 
-.closeButton_c2b141 {
+.closeButton_e76OBR {
     align-items: center;
     border-radius: 50%;
     border-style: solid;
@@ -22,58 +22,58 @@
     width: 36px
 }
 
-.closeButton_c2b141:active {
+.closeButton_e76OBR:active {
     transform: translateY(1px)
 }
 
-.closeButton_c2b141,
-.keybind_c2b141 {
+.closeButton_e76OBR,
+.keybind_e76OBR {
     color: var(--interactive-text-default)
 }
 
-.closeButton_c2b141:hover {
+.closeButton_e76OBR:hover {
     background-color: var(--interactive-background-hover);
     color: var(--interactive-text-hover)
 }
 
-.closeButton_c2b141:hover+.keybind_c2b141 {
+.closeButton_e76OBR:hover+.keybind_e76OBR {
     color: var(--interactive-text-hover)
 }
 
-.closeButton_c2b141:active {
+.closeButton_e76OBR:active {
     background-color: var(--interactive-background-active);
     color: var(--interactive-text-active)
 }
 
-.closeButton_c2b141:active+.keybind_c2b141 {
+.closeButton_e76OBR:active+.keybind_e76OBR {
     color: var(--interactive-text-active)
 }
 
-.closeButtonSolid_c2b141 {
+.closeButtonSolid_e76OBR {
     border: none;
     flex: 0 0 24px;
     height: 24px;
     width: 24px
 }
 
-.closeButtonSolid_c2b141:hover {
+.closeButtonSolid_e76OBR:hover {
     background-color: transparent
 }
 
-.theme-dark .closeButtonBold_c2b141:hover {
+.theme-dark .closeButtonBold_e76OBR:hover {
     background-color: hsl(var(--primary-300-hsl)/.3)
 }
 
-.enable-forced-colors .closeButton_c2b141 {
+.enable-forced-colors .closeButton_e76OBR {
     background-color: ButtonFace;
     border-color: ButtonText;
     color: ButtonText
 }
 
-.enable-forced-colors .closeButton_c2b141:active {
+.enable-forced-colors .closeButton_e76OBR:active {
     background-color: HighlightText;
     border-color: Highlight;
     color: Highlight
 }
 
-/*# sourceMappingURL=551353.2e0df466c9b4b858.css.map*/
+/*# sourceMappingURL=551353.1f37846f1ab1bbf2.css.map*/

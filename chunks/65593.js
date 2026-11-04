@@ -1,4 +1,3 @@
-r.d(t, { A: () => m });
 var s = r(477900),
     n = r(582128),
     a = r(503698),
@@ -6,8 +5,8 @@ var s = r(477900),
     l = r(192308),
     o = r(626584),
     d = r(961895),
-    p = r(894101),
-    c = r(105292),
+    p = r(16407),
+    c = r(792996),
     g = r(946027),
     h = r(138267);
 let v = new o.A("UploadArea");
@@ -93,7 +92,7 @@ class D extends n.Component {
         null != t &&
             this.hasFiles(t) &&
             ("move" === t.effectAllowed ? (t.dropEffect = "move") : (t.dropEffect = "copy"),
-            (0, l.hasModalOpen)(p.D) && (0, l.closeModal)(p.D),
+            (0, l.kB)(p.D) && (0, l.Oo)(p.D),
             e.stopPropagation(),
             e.preventDefault(),
             this.props.onDragOver?.(e),
@@ -152,4 +151,4 @@ class D extends n.Component {
         });
     }
 }
-let m = D;
+r.d(t, {}, { A: D });

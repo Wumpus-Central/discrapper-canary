@@ -1,19 +1,19 @@
-i.d(e, { Antifraud: () => h });
-var t = i(768611),
-    d = i(200503),
-    n = i(628926),
-    s = i(538553),
-    c = i(918676),
-    r = i(588080),
+t.r(e);
+var i = t(768611),
+    n = t(200503),
+    r = t(628926),
+    d = t(538553),
+    s = t(918676),
+    c = t(282804),
     u = ({ manager: a, onFinish: e }) => {
-        let [i, n] = (0, d.u)(() => a ?? (0, r.g)(), { manageLifecycle: !a });
+        let [t, r] = (0, n.u)(() => a ?? (0, c.createAntifraudManager)(), { manageLifecycle: !a });
         return (
-            (0, t._)(() => {
-                a || n.load();
-            }, [n, a]),
-            (0, d.c)({ status: "finished" === i.status ? "finished" : "loading", onFinish: e }),
-            (0, t.v)(s.t, { fullScreen: !0 })
+            (0, i._)(() => {
+                a || r.load();
+            }, [r, a]),
+            (0, n.c)({ status: "finished" === t.status ? "finished" : "loading", onFinish: e }),
+            (0, i.v)(d.t, { fullScreen: !0 })
         );
     },
-    h = ({ manager: a, onFinish: e }) => (0, t.v)(n.t, { children: (0, t.v)(u, { manager: a, onFinish: e }) });
-(0, c.t)(h, "incode-antifraud");
+    h = ({ manager: a, onFinish: e }) => (0, i.v)(r.t, { children: (0, i.v)(u, { manager: a, onFinish: e }) });
+((0, s.t)(h, "incode-antifraud"), t.d(e, {}, { Antifraud: h }));

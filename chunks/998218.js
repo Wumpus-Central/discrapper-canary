@@ -82,7 +82,7 @@ function O(e) {
     return !1;
 }
 function R(e) {
-    return null != e && g(l.parse(e).protocol);
+    return null != e && g(l.qg(e).protocol);
 }
 let L = {
     URL_REGEX: f,
@@ -99,7 +99,7 @@ let L = {
     isDiscordUrl: O,
     isDiscordUri: R,
     isDiscordCdnUrl: function (e) {
-        return null != e && l.parse(e).hostname === window.GLOBAL_ENV.CDN_HOST;
+        return null != e && l.qg(e).hostname === window.GLOBAL_ENV.CDN_HOST;
     },
     isDiscordDirectAssetUrl: S,
     isDiscordProxiedAssetUrl: N,
@@ -122,12 +122,12 @@ let L = {
             t.startsWith(c.BVt.ACTIVITY)
         );
     },
-    format: (e) => l.format(e),
-    formatPathWithQuery: (e, t) => l.format({ pathname: e, query: s().pickBy(t) }),
-    formatSearch: (e) => l.format({ query: s().pickBy(e) }),
+    format: (e) => l.GP(e),
+    formatPathWithQuery: (e, t) => l.GP({ pathname: e, query: s().pickBy(t) }),
+    formatSearch: (e) => l.GP({ query: s().pickBy(e) }),
     safeParseWithQuery(e) {
         try {
-            return l.parse(e, !0);
+            return l.qg(e, !0);
         } catch (e) {
             return null;
         }

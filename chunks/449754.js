@@ -1,4 +1,3 @@
-n.d(t, { A: () => f });
 var i = n(404144),
     r = n.n(i),
     a = n(439372);
@@ -40,3 +39,4 @@ class h extends a.A {
     actions = { VIBING_WUMPUS_PLAY_MUSIC: _, VIBING_WUMPUS_STOP_MUSIC: A, VIBING_WUMPUS_PAUSE_MUSIC: E };
 }
 let f = new h();
+n.d(t, {}, { A: f });

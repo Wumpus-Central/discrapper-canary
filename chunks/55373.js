@@ -1,10 +1,10 @@
 e.exports = {
-    kL: "container_f1a68f",
-    wx: "header_f1a68f",
-    m_: "subheader_f1a68f",
-    Qb: "explanation_f1a68f",
-    PW: "tenureBadgeControls_f1a68f",
-    Q: "perksTable_f1a68f",
-    Ts: "perksHeader_f1a68f",
-    iH: "perksCell_f1a68f",
+    kL: "container_cITv8F",
+    wx: "header_cITv8F",
+    m_: "subheader_cITv8F",
+    Qb: "explanation_cITv8F",
+    PW: "tenureBadgeControls_cITv8F",
+    Q: "perksTable_cITv8F",
+    Ts: "perksHeader_cITv8F",
+    iH: "perksCell_cITv8F",
 };

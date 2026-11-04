@@ -1,13 +1,12 @@
-n.d(t, { V6: () => R, rQ: () => N, s_: () => m });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(661531),
-    o = n(62010),
+    l = n(646514),
+    o = n(805251),
     d = n(815021),
     c = n(315629),
-    u = n(353795),
+    u = n(566345),
     _ = n(978495),
     E = n(534514),
     A = n(911608),
@@ -189,16 +188,24 @@ function O(e) {
         ],
     });
 }
-function R(e) {
-    let { gradientColor: t, graphic: n, badge: r, title: a, subtitle: s, ...l } = e;
-    return (0, i.jsx)(N, {
-        ...l,
-        gradientColor: t,
-        graphic: n,
-        badge: r,
-        title: a,
-        titleTextVariant: "heading-xl/semibold",
-        subtitle: s,
-        alignCenter: !0,
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        V6: function (e) {
+            let { gradientColor: t, graphic: n, badge: r, title: a, subtitle: s, ...l } = e;
+            return (0, i.jsx)(N, {
+                ...l,
+                gradientColor: t,
+                graphic: n,
+                badge: r,
+                title: a,
+                titleTextVariant: "heading-xl/semibold",
+                subtitle: s,
+                alignCenter: !0,
+            });
+        },
+        rQ: N,
+        s_: m,
+    },
+);

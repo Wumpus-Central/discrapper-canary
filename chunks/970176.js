@@ -1,8 +1,7 @@
 e.exports = {
-    iE: "wrapper__27106",
-    JW: "svg__27106",
-    Ae: "path__27106",
-    Tp: "background__27106 path__27106",
-    CU: "foreground__27106 path__27106",
-    Y3: "usageInfo__27106",
+    iE: "wrapper_bFFeGy",
+    JW: "svg_bFFeGy",
+    Tp: "background_bFFeGy path_bFFeGy",
+    CU: "foreground_bFFeGy path_bFFeGy",
+    Y3: "usageInfo_bFFeGy",
 };

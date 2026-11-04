@@ -1,8 +1,8 @@
 s.exports = {
-    _I: "secretsForm__9aad5",
-    QI: "secretsField__9aad5",
-    vU: "secretsCopyList__9aad5",
-    Jq: "secretsCopyRow__9aad5",
-    ll: "secretsCopyInfo__9aad5",
-    Ml: "secretsCopyValue__9aad5",
+    _I: "secretsForm_6O2-k2",
+    QI: "secretsField_6O2-k2",
+    vU: "secretsCopyList_6O2-k2",
+    Jq: "secretsCopyRow_6O2-k2",
+    ll: "secretsCopyInfo_6O2-k2",
+    Ml: "secretsCopyValue_6O2-k2",
 };

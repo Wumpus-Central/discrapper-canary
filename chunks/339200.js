@@ -1,0 +1,768 @@
+(n.d(t, {
+    e0: () => ei,
+    VW: () => q,
+    cv: () => Q,
+    AS: () => $,
+    PW: () => X,
+    Kh: () => Y,
+    ZF: () => J,
+    Ot: () => ee,
+    l5: () => Z,
+}),
+    n(134528),
+    n(947204));
+var l = n(284009),
+    i = n.n(l),
+    r = n(719442),
+    s = n(235599);
+n(321073);
+var a = n(635377),
+    o = n.n(a),
+    u = n(478676),
+    c = n(826059),
+    d = n(626584),
+    h = n(694403),
+    m = n(605275),
+    f = n(704726),
+    p = n(551965),
+    g = n(927813);
+let x = /^[a-z0-9_+\-.#]+$/i,
+    E = new d.A("MarkdownToSlate"),
+    y = {
+        link: { type: "skip" },
+        highlight: { type: "skip" },
+        blockQuote: { type: "skip" },
+        codeBlock: { type: "skip" },
+        list: { type: "skip" },
+        heading: { type: "skip" },
+        channelOrMessageUrl: { type: "skip" },
+        mediaPostLink: { type: "skip" },
+        attachmentLink: { type: "skip" },
+        newline: { type: "verbatim" },
+        br: { type: "verbatim" },
+        paragraph: { type: "verbatim" },
+        text: { type: "verbatim" },
+        emoticon: { type: "verbatim" },
+        mention: { type: "inlineObject" },
+        roleMention: { type: "inlineObject" },
+        commandMention: { type: "inlineObject" },
+        channelMention: { type: "inlineObject" },
+        gameMention: { type: "inlineObject" },
+        silentPrefix: { type: "inlineStyle", before: "@silent", after: " " },
+        emoji: { type: "inlineObject" },
+        customEmoji: { type: "inlineObject" },
+        looseEm: { type: "inlineStyle", before: "*", after: " *" },
+        autolink: { type: "inlineStyle", before: "<", after: ">" },
+        mailto: { type: "inlineStyle", before: "<", after: ">" },
+        tel: { type: "inlineStyle", before: "<", after: ">" },
+        strong: { type: "inlineStyle", before: "**", after: "**" },
+        u: { type: "inlineStyle", before: "__", after: "__" },
+        s: { type: "inlineStyle", before: "~~", after: "~~" },
+        escape: { type: "inlineStyle", before: "\\", after: "" },
+        staticRouteLink: { type: "inlineStyle", before: "<id:", after: ">" },
+        soundboard: { type: "inlineStyle", before: "<sound:", after: ">" },
+        spoiler: { type: "inlineStyle", before: "||", after: "||" },
+        url: { type: "inlineStyle", before: "", after: "" },
+        codeBlockText: { type: "inlineStyle", before: "", after: "" },
+        codeBlockSyntax: { type: "inlineStyle", before: "", after: "" },
+        codeBlockLang: { type: "inlineStyle", before: "", after: "" },
+        timestamp: { type: "inlineObject" },
+        timestampMentionInput: { type: "inlineObject" },
+        em: { type: "inlineStyle", before: "*", after: "*" },
+        inlineCode: { type: "inlineStyle", before: "`", after: "`" },
+        subtext: { type: "inlineStyle", before: "-# ", after: "" },
+    },
+    S = new Set(["start", "end"]),
+    C = new Map([
+        ["inlineCode", S],
+        ["spoiler", S],
+        ["s", S],
+        ["subtext", new Set(["start"])],
+        ["u", S],
+    ]),
+    A = new Set(["*", "_", "~", "|", "\\"]),
+    b = {},
+    I = {};
+for (let e in m.Ay.RULES) {
+    if (!(e in y))
+        throw Error(
+            `Slate: Unknown markdown rule: ${e}.  If you have just added a new markdown rule then you probably need to add it to this file so that the rich chat box understands it.`,
+        );
+    let t = y[e];
+    ("skip" !== t.type && (b[e] = v(m.Ay.RULES[e])),
+        "skip" !== t.type && "inlineObject" !== t.type && (I[e] = v("text" === e ? f.Ay : m.Ay.RULES[e])));
+}
+function v(e) {
+    i()(null != e.parse, "Slate: rule must have a parse function");
+    let t = e.parse;
+    return {
+        ...e,
+        parse(e, n, l) {
+            let i = t.call(this, e, n, l);
+            return (i instanceof Array || (i.originalMatch = e), i);
+        },
+    };
+}
+function N(e) {
+    return { type: "autolink", content: e[1], originalMatch: e };
+}
+let T = {
+        url: {
+            parse: (e) =>
+                null == (0, h.W1)(e[1])
+                    ? { type: "text", content: e[0], originalMatch: e }
+                    : { type: "link", content: e[1], originalMatch: e },
+        },
+        autolink: {
+            parse: (e) => (null == (0, h.W1)(e[1]) ? { type: "text", content: e[0], originalMatch: e } : N(e)),
+        },
+        mailto: { parse: N },
+        tel: { parse: N },
+        codeBlockSyntax: {
+            order: u.defaultRules.inlineCode.order - 0.1,
+            match: (e) => /^(```)([a-z0-9_+\-.#]+$)?/.exec(e),
+            parse: (e) =>
+                null != e[2] && "" !== e[2] && x.test(e[2])
+                    ? [
+                          { type: "codeBlockSyntax", content: e[1], originalMatch: e },
+                          { type: "codeBlockLang", content: e[2], originalMatch: e },
+                      ]
+                    : { type: "codeBlockSyntax", content: e[0], originalMatch: e },
+        },
+    },
+    k = /(-# +)/,
+    j = (0, p.A)([b, T]),
+    _ = (0, p.A)([I, T]),
+    R = c.X(j),
+    w = c.X(_),
+    O = { max: 250, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
+    L = new (o())(O),
+    M = new (o())(O);
+function P(e, t, n, l, r) {
+    let { content: s, type: a } = n,
+        o = null == n.originalMatch && "text" === a && "string" == typeof s;
+    o && E.warn(`Slate: parser bailed out past MAX_PARSE_DEPTH, rendering ${s.length} chars as plain text`);
+    let u = o ? [s] : n.originalMatch;
+    switch ((i()(null != u, "Slate: originalMatch must be set " + JSON.stringify(n, void 0, 2)), a)) {
+        case "newline":
+        case "br":
+        case "paragraph":
+        case "text":
+        case "emoticon":
+            return W(e, t, s || "", l, r);
+        case "emoji":
+        case "customEmoji":
+            if ((t.startsWith(u[0], l) || (l = H(e, t, l, t.length)), t.startsWith(u[0], l)))
+                return B({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: n });
+            throw Error(`Slate: Unable to find emoji: ${u[0]} in ${t} at ${l}`);
+        case "soundboard":
+            return B({
+                result: e,
+                sourceText: t,
+                text: u[0],
+                originalStart: l,
+                attributes: [a],
+                data: { guildId: n.guildId, soundId: n.soundId },
+            });
+        case "mention":
+        case "roleMention":
+        case "channelMention":
+        case "commandMention":
+        case "silentPrefix":
+        case "channel": {
+            let { text: r, id: s } = n;
+            if (null != r)
+                return (
+                    i()(r === u[0], "Slate: text mentions must exactly match the regex match"),
+                    B({
+                        result: e,
+                        sourceText: t,
+                        text: r,
+                        originalStart: l,
+                        attributes: ["textMention"],
+                        data: { text: r },
+                    })
+                );
+            return B({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: { id: s } });
+        }
+        case "staticRouteLink":
+            let { id: c, itemId: d } = n;
+            return B({
+                result: e,
+                sourceText: t,
+                text: u[0],
+                originalStart: l,
+                attributes: [a],
+                data: { id: c, itemId: d },
+            });
+        case "gameMention":
+            return B({
+                result: e,
+                sourceText: t,
+                text: u[0],
+                originalStart: l,
+                attributes: [a],
+                data: { id: n.gameId },
+            });
+        case "timestamp":
+        case "timestampMentionInput":
+            return B({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: n });
+        case "em":
+        case "autolink":
+        case "mailto":
+        case "tel":
+        case "strong":
+        case "u":
+        case "s":
+        case "escape":
+        case "inlineCode":
+        case "codeBlockSyntax":
+        case "codeBlockLang":
+        case "spoiler":
+        case "url":
+        case "link":
+        case "subtext": {
+            l = G(t, l);
+            let { before: n, after: i } = (function (e, t) {
+                    if ("inlineCode" === e) return { before: t[1], after: t[1] };
+                    if ("em" === e && t[0].startsWith("_")) return { before: "_", after: "_" };
+                    if ("subtext" === e) return { before: k.exec(t.input)[1], after: "" };
+                    let n = y["link" === e ? "url" : e];
+                    if ("inlineStyle" === n.type) return n;
+                    throw Error("Slate: rule must be an inlineStyle");
+                })(a, u),
+                o = D({
+                    attribute: "syntaxBefore",
+                    content: s,
+                    currentAttributes: r,
+                    sourceTextLength: t.length,
+                    type: a,
+                }),
+                c = D({
+                    attribute: "syntaxAfter",
+                    content: s,
+                    currentAttributes: r,
+                    sourceTextLength: t.length,
+                    type: a,
+                });
+            return (
+                (l = F({ result: e, sourceText: t, syntaxCharacters: n, pos: l, attributes: o })),
+                r.push(a),
+                (l = W(e, t, s ?? "", l, r)),
+                r.pop(),
+                (l = F({ result: e, sourceText: t, syntaxCharacters: i, pos: l, attributes: c })),
+                G(t, l)
+            );
+        }
+        default:
+            throw Error(`Slate: Unknown rule type: ${a}`);
+    }
+}
+function D(e) {
+    let { attribute: t, content: n, currentAttributes: l, sourceTextLength: i, type: r } = e,
+        s = "syntaxBefore" === t ? "before" : "after";
+    return !(function (e) {
+        let { boundary: t, content: n, sourceTextLength: l, type: i } = e;
+        return (
+            U(i, t) ||
+            (function (e) {
+                let { boundary: t, content: n, sourceTextLength: l } = e,
+                    i = n;
+                for (let e = 0; e < l && null != i && "string" != typeof i; e++) {
+                    let e = (function (e, t) {
+                        if ("start" === t) {
+                            for (let t = 0; t < e.length; t++) if (!V(e[t])) return e[t];
+                        } else for (let t = e.length - 1; t >= 0; t--) if (!V(e[t])) return e[t];
+                    })(i instanceof Array ? i : [i], t);
+                    if (null == e) break;
+                    if (U(e.type, t)) return !0;
+                    i = e.content;
+                }
+                return !1;
+            })({ boundary: t, content: n, sourceTextLength: l })
+        );
+    })({ boundary: "syntaxBefore" === t ? "start" : "end", content: n, sourceTextLength: i, type: r })
+        ? [t]
+        : [t, ...[...l, r].map((e) => `${s}_${e}`)];
+}
+function U(e, t) {
+    return C.get(e)?.has(t) ?? !1;
+}
+function V(e) {
+    return "text" === e.type && "string" == typeof e.content && "" === e.content.trim();
+}
+function W(e, t, n, l, i) {
+    return (
+        "string" == typeof n
+            ? (l = B({ result: e, sourceText: t, text: n, originalStart: l, attributes: i, data: null }))
+            : (n instanceof Array || (n = [n]),
+              n.forEach((n) => {
+                  l = P(e, t, n, l, i);
+              })),
+        G(t, l)
+    );
+}
+function F(e) {
+    let { result: t, sourceText: n, syntaxCharacters: l, pos: i, attributes: r } = e;
+    if (l.length > 0) {
+        let e = n.indexOf(l, i);
+        if (-1 === e) return K(`Slate: Unable to find syntax characters "${l}" at position ${i}`, l, i);
+        let s = n.substring(i, e + l.length);
+        (t.push({ text: s, attributes: [...r], start: i, data: null }), (i = e + l.length));
+    }
+    return i;
+}
+function B(e) {
+    let { result: t, sourceText: n, text: l, originalStart: i, attributes: r, data: s } = e,
+        a = G(n, i);
+    for (; "\n" === l.charAt(0) || " " === l.charAt(0);) l = l.substring(1);
+    let o = n.indexOf(l, a);
+    if ((o !== a ? (a = i = H(t, n, a, o)) : "\\" === l && "\\" === n.charAt(o + 1) && (o++, (i = ++a)), o !== a))
+        return K(`Slate: Unable to find content in source text at start position ${a} for text position ${o}`, l, i);
+    let u = a + l.length,
+        c = n.substring(i, u);
+    return (t.push({ text: c, attributes: r.slice(), start: i, data: s }), u);
+}
+function G(e, t) {
+    for (; "\n" === e.charAt(t) || " " === e.charAt(t);) t++;
+    return t;
+}
+function K(e, t, n) {
+    if (t.split("").some((e) => A.has(e))) return (E.error(e), n);
+    throw Error(e);
+}
+function H(e, t, n, l) {
+    for (; n < l;)
+        if (A.has(t[n]))
+            ((n = F({ result: e, sourceText: t, syntaxCharacters: t[n], pos: n, attributes: ["syntaxBefore"] })),
+                (n = G(t, n)));
+        else break;
+    return n;
+}
+var z = n(551483);
+if ((n(827669), n(654821), !r.KE._addedDiscordOverrides)) {
+    let e = r.KE.positions;
+    r.KE.positions = function* (t) {
+        let n,
+            l,
+            i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            { at: s = t.selection, unit: a = "offset", reverse: o = !1, voids: u = !1 } = i ?? {};
+        if (null == s) return;
+        if (("block" === a && (a = "line"), "offset" === a)) {
+            for (let n of e(t, i)) yield n;
+            return;
+        }
+        n = Y.isPoint(s)
+            ? o
+                ? { anchor: s, focus: q.start(t, []) }
+                : { anchor: s, focus: q.end(t, []) }
+            : q.range(t, s);
+        let [c, d] = J.edges(n),
+            h = q.blocks(t),
+            m = o ? -1 : 1,
+            f = c.path[0] ?? 0,
+            p = d.path[0] ?? h.length - 1,
+            g = o ? p : f,
+            x = o ? f : p,
+            E = !1;
+        function* y(n) {
+            let [s, h] = n,
+                f = h.length,
+                p = X.isAncestor(h, c.path),
+                g = X.isAncestor(h, d.path),
+                x = p ? c.path[f] : 0,
+                S = g ? d.path[f] : s.children.length - 1,
+                C = o ? S : x,
+                A = o ? x : S;
+            for (let n = C; !E && (!o ? n <= A : n >= A); n += m) {
+                let m = s.children[n],
+                    f = X.child(h, n);
+                if (Q.isElement(m)) {
+                    let e = o ? d.path : c.path;
+                    if (!(X.equals(f, e) || X.isAncestor(f, e))) {
+                        let e = t.isVoid(m);
+                        if ("line" === a && Q.isElement(m) && !e) {
+                            (null != l && (yield l, (l = void 0)), (E = !0));
+                            return;
+                        }
+                        if (!u && e) continue;
+                    }
+                    for (let e of y([m, f])) yield e;
+                } else if (Z.isText(m))
+                    if ("line" === a) l = { path: f, offset: o ? 0 : m.text.length };
+                    else if (0 === m.text.length) yield { path: f, offset: 0 };
+                    else {
+                        let n = r.KE.range(t, f);
+                        for (let l of (X.equals(f, c.path) && (n.anchor = c),
+                        X.equals(f, d.path) && (n.focus = d),
+                        e(t, { ...i, at: n })))
+                            yield l;
+                    }
+            }
+            "line" === a && Q.isElement(s) && !t.isVoid(s) && (null != l && (yield l, (l = void 0)), (E = !0));
+        }
+        "line" === a && (yield o ? d : c);
+        for (let e = g; !E && (!o ? e <= x : e >= x); e += m) for (let t of y(h[e])) yield t;
+    };
+    let t = s.rL.findDocumentOrShadowRoot;
+    ((s.rL.findDocumentOrShadowRoot = (e) => e.windowContext?.renderWindow.document ?? t(e)),
+        (r.KE._addedDiscordOverrides = !0));
+}
+let q = {
+        ...r.KE,
+        ...s.rL,
+        richValue: (e) => e.children,
+        blocks: (e) => q.richValue(e).map((e, t) => [e, [t]]),
+        isBlock: (e, t) => Q.isElement(t) && r.KE.isBlock(e, t),
+        isInline: (e, t) => Q.isElement(t) && r.KE.isInline(e, t),
+        isVoid: (e, t) => Q.isElement(t) && r.KE.isVoid(e, t),
+        isEditorEmpty(e) {
+            let t = q.richValue(e);
+            return !(t.length > 1) && (0 === t.length || ("line" === t[0].type && Q.isEmpty(t[0])));
+        },
+        getFirstText(e) {
+            let t = q.node(e, z.fP);
+            return Z.isText(t[0]) ? t[0] : null;
+        },
+        getCurrentBlock(e) {
+            return null == e.selection ? null : this.getParentBlock(e, e.selection);
+        },
+        getCurrentElement(e) {
+            return null == e.selection ? null : this.getParentElement(e, e.selection);
+        },
+        getCurrentInline(e) {
+            return null == e.selection ? null : this.getParentInline(e, e.selection);
+        },
+        getCurrentVoid(e) {
+            return null == e.selection ? null : this.getParentVoid(e, e.selection);
+        },
+        getCurrentText(e) {
+            let t = null != e.selection ? J.toPoint(e.selection) : null;
+            return null == t ? null : q.node(e, t.path);
+        },
+        getParentBlock: (e, t) =>
+            q.above(e, { at: t, match: (t) => Q.isElement(t) && q.isBlock(e, t), mode: "lowest" }) ?? null,
+        getParentElement: (e, t) => q.above(e, { at: t, match: (e) => Q.isElement(e), mode: "lowest" }) ?? null,
+        getParentInline: (e, t) => q.above(e, { at: t, match: (t) => q.isInline(e, t), mode: "lowest" }) ?? null,
+        getParentVoid: (e, t) => q.above(e, { at: t, match: (t) => q.isVoid(e, t), mode: "lowest" }) ?? null,
+        getParentOfType: (e, t, n) =>
+            q.above(e, { at: t, match: (e) => Q.isElement(e) && n.includes(e.type), mode: "lowest" }) ?? null,
+        getSelectedParentOfType(e, t) {
+            if (null == e.selection) return null;
+            let n = J.toPoint(e.selection);
+            return null == n ? null : q.getParentOfType(e, n, t);
+        },
+        getNodesOfType: (e, t) =>
+            q.nodes(e, { at: z.Dl, match: (e) => Q.isElement(e) && t.includes(e.type), mode: "highest" }),
+        getSelectedVoid(e) {
+            let t;
+            if (null == e.selection) return null;
+            if (J.isExpanded(e.selection)) {
+                let [n, l] = J.edges(e.selection),
+                    i = q.after(e, n, { unit: "offset" }),
+                    r = q.before(e, l, { unit: "offset" });
+                if (null == i || null == r || !Y.equals(i, r)) return null;
+                t = i;
+            } else t = e.selection.anchor;
+            return null == t ? null : q.getParentVoid(e, t);
+        },
+        getSelectedText(e, t) {
+            let n = null;
+            if (t) {
+                let t = s.rL.findDocumentOrShadowRoot(e).getSelection();
+                if (null != t && t.rangeCount > 0) {
+                    let l = t.getRangeAt(0);
+                    null != l && (n = s.rL.toSlateRange(e, l, { exactMatch: !0, suppressThrow: !0 }));
+                }
+            } else n = e.selection;
+            return null == n ? "" : this.getTextFromRange(e, n);
+        },
+        getTextFromRange(e, t) {
+            let [n, l] = J.edges(t),
+                i = q.nodes(e, { at: t, mode: "lowest", match: (e) => Z.isText(e) }),
+                r = "";
+            for (let [e, t] of i) {
+                let i = X.equals(t, n.path) ? n.offset : 0,
+                    s = X.equals(t, l.path) ? l.offset : 0;
+                r += e.text.substring(i, s);
+            }
+            return r;
+        },
+        withoutNormalizing(e, t) {
+            let n = q.isNormalizing(e);
+            q.setNormalizing(e, !1);
+            try {
+                t();
+            } finally {
+                q.setNormalizing(e, n);
+            }
+            !1 !== n && q.normalize(e);
+        },
+        areStylesDisabled(e) {
+            if (!e.previewMarkdown) return !0;
+            let t = q.richValue(e),
+                n = t[0],
+                l = n?.type === "line" ? n.children[0] : null;
+            if (null == l || !Z.isText(l)) return !1;
+            let i = e.chatInputType,
+                r = l.text;
+            return (
+                1 === t.length &&
+                1 === n.children.length &&
+                ((!0 === i.sedReplace && r.startsWith("s/")) ||
+                    (i.autocomplete?.reactions === !0 && ("+" === r || r.startsWith("+:"))))
+            );
+        },
+        focus(e) {
+            s.rL.isFocused(e) || (s.rL.focus(e), s.rL.deselect(e));
+        },
+        getSelectionOverlap(e, t) {
+            if (null == e.selection) return { anchor: null, focus: null };
+            if (X.isPath(t)) {
+                let n = q.range(e, t),
+                    [l] = q.node(e, t);
+                if (Q.isElement(l)) {
+                    let l = q.before(e, t),
+                        i = q.after(e, t);
+                    t = { anchor: l ?? n.anchor, focus: i ?? n.focus };
+                } else t = n;
+            }
+            let [n, l] = J.edges(t),
+                i = null,
+                r = null;
+            return (
+                Y.equals(e.selection.anchor, n)
+                    ? (i = "start")
+                    : Y.equals(e.selection.anchor, l)
+                      ? (i = "end")
+                      : J.includes(t, e.selection.anchor) && (i = "inside"),
+                Y.equals(e.selection.focus, n)
+                    ? (r = "start")
+                    : Y.equals(e.selection.focus, l)
+                      ? (r = "end")
+                      : J.includes(t, e.selection.focus) && (r = "inside"),
+                { anchor: i, focus: r }
+            );
+        },
+    },
+    $ = {
+        ...r.bP,
+        isType: (e, t) => r.Hg.isElement(e) && e.type === t,
+        isInTypes: (e, t) => r.Hg.isElement(e) && t.has(e.type),
+    },
+    Q = {
+        ...r.Hg,
+        updateElement(e, t) {
+            let n = q.node(e, t[1]);
+            return (
+                i()(!q.isEditor(t[0]), "Element is the root node"),
+                i()(null != n, "Failed to find element"),
+                i()(Q.isElement(n[0]), "Node at this path is no longer an element"),
+                i()(n[0].type === t[0].type, "Node at this path is a different type"),
+                n
+            );
+        },
+        markdown(e, t, n) {
+            let l = "line" === e.type && e.codeBlockState?.wasInCodeBlock === !0,
+                i = Q.serializeMarkdownChildren(e);
+            return {
+                entries: (function (e, t) {
+                    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                        l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+                        i = (function (e) {
+                            let t,
+                                n = [],
+                                l = /\\|```/g;
+                            for (; null != (t = l.exec(e));) {
+                                if ("\\" === t[0]) {
+                                    l.lastIndex += 1;
+                                    continue;
+                                }
+                                n.push(t.index);
+                            }
+                            return n;
+                        })(e);
+                    if ((i.push(e.length), 1 === i.length && n)) return [];
+                    let r = 0,
+                        s = n,
+                        a = [];
+                    for (let n of i) {
+                        if (s)
+                            a.push({ text: e.substring(r, n), start: r, attributes: ["codeBlockText"], data: void 0 });
+                        else {
+                            let s = n === i[i.length - 2] ? e.substring(n + 3) : "";
+                            n += 3 + (null != s.match(x) ? s : "").length;
+                            let o = e.substring(r, n);
+                            "" !== o &&
+                                (function (e, t, n) {
+                                    let l = [],
+                                        i = n ? M : L,
+                                        r = i.get(e);
+                                    if (null != r) return r;
+                                    let s =
+                                            e
+                                                .replace(/\r\n/g, " \n")
+                                                .replace(/[\r\f]/g, " ")
+                                                .replace(/\t/g, " ") + "\n\n",
+                                        a = {
+                                            originalMatch: { index: 0, 0: "" },
+                                            type: "paragraph",
+                                            content: (n ? w : R)(s, !0, {
+                                                returnMentionIds: !0,
+                                                disableAutoBlockNewlines: !0,
+                                                guildId: t,
+                                                isSlate: !0,
+                                                allowGameMentions: !0,
+                                                allowTimeMentionInput: !0,
+                                            }),
+                                        };
+                                    P(l, s, a, 0, []);
+                                    let o = (function (e) {
+                                        if (0 === (e = e.filter((e) => e.text.length > 0)).length) return e;
+                                        let t = [e[0]];
+                                        for (let n = 1; n < e.length; n++) {
+                                            let l = t[t.length - 1],
+                                                i = l.start + l.text.length,
+                                                r = e[n];
+                                            r.start === i &&
+                                            null == l.data &&
+                                            null == r.data &&
+                                            l.attributes.join("-") === r.attributes.join("-")
+                                                ? (l.text += r.text)
+                                                : t.push(r);
+                                        }
+                                        return t;
+                                    })(l);
+                                    return (i.set(e, o), o);
+                                })(o, t, l).forEach((e) => {
+                                    a.push({ ...e, start: e.start + r });
+                                });
+                        }
+                        ((s = !s), (r = n));
+                    }
+                    return a;
+                })(i.join(""), t ?? null, l, n),
+                serializedChildren: i,
+            };
+        },
+        serializeMarkdownChildren: (e) => e.children.map((e) => (Z.isText(e) ? e.text : "?")),
+        isEmpty(e) {
+            if (e.children.length > 1) return !1;
+            if (0 === e.children.length) return !0;
+            let t = e.children[0];
+            return Z.isText(t) && 0 === t.text.length;
+        },
+    },
+    Z = { ...r.EY },
+    X = {
+        ...r.wA,
+        isFirstEditorBlock: (e) => X.equals(e, z.Xg),
+        isFirstEditorText: (e) => X.equals(e, z.fP),
+        isFirstChild: (e, t) => X.equals(t, X.child(e, 0)),
+        child: (e, t) => [...e, t],
+    },
+    Y = {
+        ...r.bR,
+        start(e) {
+            let [, t] = e;
+            return { path: X.child(t, 0), offset: 0 };
+        },
+        end(e) {
+            let [t, n] = e,
+                l = t.children[t.children.length - 1];
+            return { path: X.child(n, t.children.length - 1), offset: Z.isText(l) ? l.text.length : 0 };
+        },
+        isAtStart(e, t) {
+            return Y.equals(e, this.start(t));
+        },
+        isAtEnd(e, t) {
+            return Y.equals(e, this.end(t));
+        },
+        clamp(e, t) {
+            let [n, l] = J.edges(t);
+            return (Y.isBefore(e, n) && (e = n), Y.isAfter(e, l) && (e = l), e);
+        },
+    },
+    J = {
+        ...r.Q6,
+        toPoint: (e) => (null == e || J.isExpanded(e) ? null : e.anchor),
+        children(e) {
+            let [t, n] = e,
+                l = t.children[t.children.length - 1];
+            return {
+                anchor: { path: X.child(n, 0), offset: 0 },
+                focus: { path: X.child(n, t.children.length - 1), offset: Z.isText(l) ? l.text.length : 0 },
+            };
+        },
+        clamp(e, t) {
+            let [n, l] = J.edges(e),
+                [i, r] = J.edges(t);
+            return (Y.isBefore(n, i) && (n = i), Y.isAfter(l, r) && (l = r), J.isForward(e))
+                ? { anchor: n, focus: l }
+                : { anchor: l, focus: n };
+        },
+    },
+    ee = {
+        equals: (e, t) => (null == e && null == t) || (null != e && null != t && J.equals(e, t)),
+        isValid(e, t) {
+            if (null == t) return !1;
+            let { anchor: n, focus: l } = t;
+            if (!q.hasPath(e, n.path) || !q.hasPath(e, l.path)) return !1;
+            let [i] = q.node(e, n.path),
+                [r] = q.node(e, l.path);
+            return Z.isText(i) && Z.isText(r) && n.offset <= i.text.length && l.offset <= r.text.length;
+        },
+    };
+function et(e, t) {
+    let n = (t.top + t.bottom) / 2;
+    return e.top <= n && e.bottom >= n;
+}
+function en(e, t, n) {
+    let l = q.toDOMRange(e, t).getBoundingClientRect(),
+        i = q.toDOMRange(e, n).getBoundingClientRect();
+    return et(l, i) && et(i, l);
+}
+function el(e, t, n, l) {
+    let i = { anchor: t, focus: t },
+        r = 0,
+        s = n.length,
+        a = Math.floor((r + s) / 2);
+    for (; a !== r;)
+        if (
+            (en(e, { anchor: n[a], focus: n[a] }, i) ? (l ? (s = a) : (r = a)) : l ? (r = a) : (s = a),
+            (a = Math.floor((r + s) / 2)),
+            !l && a === n.length - 2 && s === n.length - 1)
+        ) {
+            let t = n[n.length - 1];
+            en(e, { anchor: t, focus: t }, i) && (a = s);
+        }
+    return n[a];
+}
+let ei = {
+    getLineStart(e, t, n) {
+        let l = q.getParentElement(e, t);
+        if (null == l) return null;
+        let i = q.start(e, l[1]),
+            r = Array.from(q.positions(e, { at: { anchor: i, focus: t } })),
+            s = el(e, t, r, !0);
+        if (n && Y.equals(t, s) && !Y.isAtEnd(t, l)) {
+            let n = q.after(e, t);
+            if (null == n) return s;
+            s = el(e, n, r, !0);
+        }
+        return s;
+    },
+    getLineEnd(e, t, n) {
+        let l = q.getParentElement(e, t);
+        if (null == l) return null;
+        let i = q.end(e, l[1]),
+            r = Array.from(q.positions(e, { at: { anchor: t, focus: i } })),
+            s = el(e, t, r, !1);
+        if (n && Y.equals(t, s) && !Y.isAtEnd(t, l)) {
+            let n = q.after(e, t);
+            if (null == n) return s;
+            s = el(e, n, r, !1);
+        }
+        return s;
+    },
+};

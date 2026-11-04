@@ -1,6 +1,6 @@
 e.exports = {
-    si: "usagePanel_b86123 " + _(7409).n,
-    Q$: "usageRow_b86123",
-    mf: "usageRowHead_b86123",
-    Y$: "usageTrigger_b86123",
+    si: "usagePanel_m7vz1S " + a(7409).n,
+    Q$: "usageRow_m7vz1S",
+    mf: "usageRowHead_m7vz1S",
+    Y$: "usageTrigger_m7vz1S",
 };

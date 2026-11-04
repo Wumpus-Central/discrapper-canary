@@ -1,4 +1,3 @@
-n.d(t, { AR: () => d, UN: () => l, ul: () => o });
 var i = n(734057),
     r = n(576705),
     a = n(287809),
@@ -12,16 +11,24 @@ function l(e) {
 function o(e) {
     return null != e && !s.MRS.NON_REPORTABLE.has(e.type) && l(e.author);
 }
-function d(e) {
-    var t;
-    let n;
-    return (
-        null != e &&
-        o(e) &&
-        ((t = e.getChannelId()),
-        null != (n = i.A.getChannel(t)) &&
-            (n.type === s.rbe.DM ||
-                n.type === s.rbe.GROUP_DM ||
-                r.A.canWithPartialContext(s.xBc.MANAGE_MESSAGES, { channelId: t })))
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        AR: function (e) {
+            var t;
+            let n;
+            return (
+                null != e &&
+                o(e) &&
+                ((t = e.getChannelId()),
+                null != (n = i.A.getChannel(t)) &&
+                    (n.type === s.rbe.DM ||
+                        n.type === s.rbe.GROUP_DM ||
+                        r.A.canWithPartialContext(s.xBc.MANAGE_MESSAGES, { channelId: t })))
+            );
+        },
+        UN: l,
+        ul: o,
+    },
+);

@@ -1,0 +1,11 @@
+.backdrop_a-WhHU {
+    align-items: center;
+    background: var(--background-gradient-highest, var(--chat-background-default));
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    padding: var(--space-24) 0;
+    width: 100%
+}
+
+/*# sourceMappingURL=e4187b17400f2ce0.css.map*/

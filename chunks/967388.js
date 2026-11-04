@@ -1,11 +1,10 @@
-n.d(t, { A: () => R });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
     s = n.n(a),
-    r = n(17928),
-    o = n(273875),
-    d = n(798618),
+    r = n(855986),
+    o = n(195118),
+    d = n(31188),
     c = n(939249),
     u = n(97808),
     h = n(778712),
@@ -17,103 +16,111 @@ var i = n(477900),
     x = n(309010),
     C = n(287809),
     y = n(562153),
-    j = n(446243),
+    j = n(303227),
     I = n(920639),
     N = n(538638),
     v = n(781137),
     E = n(544299),
-    b = n(618922),
-    S = n(105292),
-    T = n(51685),
-    _ = n(505252);
-function R(e) {
-    let { channelId: t, note: n, roomWidth: a } = e,
-        [R, O] = (0, l.useState)(!1),
-        P = (0, l.useRef)(null),
-        L = (0, r.bG)([C.default], () => C.default.getUser(n.createdBy)),
-        M = (0, r.bG)([g.A], () => g.A.getChannel(t)?.guild_id),
-        w = (0, r.bG)([x.Ay], () => x.Ay.getVoiceChannelId() === t, [t]),
-        U = (0, y.tx)(M, t, L),
-        D = (0, E.Sb)({
-            position: n.position,
-            targetLabel: S.intl.formatToPlainString(b.default.w5Latp, { userName: U }),
-        });
-    return null == L || null == M
-        ? null
-        : (0, i.jsxs)(i.Fragment, {
-              children: [
-                  (0, i.jsx)(c.D, {
-                      innerRef: P,
-                      role: "listitem",
-                      "aria-label": S.intl.formatToPlainString(b.default.w5Latp, { userName: U }),
-                      className: _.kL,
-                      onClick: () => {
-                          (R || (0, I.Ql)({ channelId: t, interactionType: "note_opened" }), O(!R));
-                      },
-                      style: { left: `${n.position.x}%`, top: `${n.position.y}%` },
-                      ...D,
-                      children: (0, i.jsx)(v.A, { roomWidth: a }),
-                  }),
-                  (0, i.jsxs)(o.x, {
-                      shouldShow: R,
-                      onRequestClose: () => {
-                          O(!1);
-                      },
-                      closeOnClickOutside: !0,
-                      targetElementRef: P,
+    b = n(687782),
+    S = n(792996),
+    _ = n(861089),
+    T = n(505252);
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { channelId: t, note: n, roomWidth: a } = e,
+                [R, O] = (0, l.useState)(!1),
+                P = (0, l.useRef)(null),
+                L = (0, r.bG)([C.default], () => C.default.getUser(n.createdBy)),
+                M = (0, r.bG)([g.A], () => g.A.getChannel(t)?.guild_id),
+                w = (0, r.bG)([x.Ay], () => x.Ay.getVoiceChannelId() === t, [t]),
+                U = (0, y.tx)(M, t, L),
+                D = (0, E.Sb)({
+                    position: n.position,
+                    targetLabel: S.intl.formatToPlainString(b.default.w5Latp, { userName: U }),
+                });
+            return null == L || null == M
+                ? null
+                : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsxs)("div", {
-                              className: _.oO,
+                          (0, i.jsx)(c.D, {
+                              innerRef: P,
+                              role: "listitem",
+                              "aria-label": S.intl.formatToPlainString(b.default.w5Latp, { userName: U }),
+                              className: T.kL,
+                              onClick: () => {
+                                  (R || (0, I.Ql)({ channelId: t, interactionType: "note_opened" }), O(!R));
+                              },
+                              style: { left: `${n.position.x}%`, top: `${n.position.y}%` },
+                              ...D,
+                              children: (0, i.jsx)(v.A, { roomWidth: a }),
+                          }),
+                          (0, i.jsxs)(o.x, {
+                              shouldShow: R,
+                              onRequestClose: () => {
+                                  O(!1);
+                              },
+                              closeOnClickOutside: !0,
+                              targetElementRef: P,
                               children: [
                                   (0, i.jsxs)("div", {
-                                      className: _.wx,
+                                      className: T.oO,
                                       children: [
                                           (0, i.jsxs)("div", {
-                                              className: _.kQ,
+                                              className: T.wx,
                                               children: [
-                                                  (0, i.jsx)(u.eu, {
-                                                      "aria-label": U,
-                                                      src: L.getAvatarURL(M, 24),
-                                                      size: h._3.SIZE_24,
-                                                      className: _.my,
+                                                  (0, i.jsxs)("div", {
+                                                      className: T.kQ,
+                                                      children: [
+                                                          (0, i.jsx)(u.eu, {
+                                                              "aria-label": U,
+                                                              src: L.getAvatarURL(M, 24),
+                                                              size: h._3.SIZE_24,
+                                                              className: T.my,
+                                                          }),
+                                                          (0, i.jsx)(p.E, {
+                                                              variant: "body-md/normal",
+                                                              lineClamp: 1,
+                                                              children: U,
+                                                          }),
+                                                      ],
                                                   }),
-                                                  (0, i.jsx)(p.E, {
-                                                      variant: "body-md/normal",
-                                                      lineClamp: 1,
-                                                      children: U,
+                                                  (0, i.jsx)(m.m, {
+                                                      text: w ? null : S.intl.string(_.default.qRXats),
+                                                      children: (0, i.jsx)(c.D, {
+                                                          onClick: w
+                                                              ? function () {
+                                                                    null != M &&
+                                                                        (0, j.yF)(M, t, n.objectId).catch((e) =>
+                                                                            (0, N.b)(),
+                                                                        );
+                                                                }
+                                                              : void 0,
+                                                          "aria-disabled": !w,
+                                                          className: s()(T.Kk, { [T.Ir]: !w }),
+                                                          children: (0, i.jsx)(A.TrashIcon, {
+                                                              size: "sm",
+                                                              color: "currentColor",
+                                                          }),
+                                                      }),
                                                   }),
                                               ],
                                           }),
-                                          (0, i.jsx)(m.m, {
-                                              text: w ? null : S.intl.string(T.default.qRXats),
-                                              children: (0, i.jsx)(c.D, {
-                                                  onClick: w
-                                                      ? function () {
-                                                            null != M &&
-                                                                (0, j.yF)(M, t, n.objectId).catch((e) => (0, N.b)());
-                                                        }
-                                                      : void 0,
-                                                  "aria-disabled": !w,
-                                                  className: s()(_.Kk, { [_.Ir]: !w }),
-                                                  children: (0, i.jsx)(A.TrashIcon, {
-                                                      size: "sm",
-                                                      color: "currentColor",
-                                                  }),
-                                              }),
+                                          (0, i.jsx)(p.E, {
+                                              variant: "body-sm/normal",
+                                              color: "text-muted",
+                                              className: T.Qs,
+                                              children: f.A.parseTopic(n.content, !0, { channelId: t }),
                                           }),
                                       ],
                                   }),
-                                  (0, i.jsx)(p.E, {
-                                      variant: "body-sm/normal",
-                                      color: "text-muted",
-                                      className: _.Qs,
-                                      children: f.A.parseTopic(n.content, !0, { channelId: t }),
-                                  }),
+                                  (0, i.jsx)(d.F, {}),
                               ],
                           }),
-                          (0, i.jsx)(d.F, {}),
                       ],
-                  }),
-              ],
-          });
-}
+                  });
+        },
+    },
+);

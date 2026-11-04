@@ -1,4 +1,3 @@
-t.d(n, { C: () => N });
 var i,
     l = t(477900),
     s = t(582128),
@@ -15,7 +14,7 @@ var i,
     x = t(881343),
     C = t(697675),
     f = t(652215),
-    p = t(105292),
+    p = t(792996),
     E = t(441386);
 let j = ["embedded_cover"],
     I = { tension: 800, friction: 24 };
@@ -29,7 +28,7 @@ function N(e) {
             onActivityItemSelected: _,
             imageBackground: T,
             activityAction: b,
-            labelType: y,
+            labelType: S,
         } = (0, g.Ay)({
             context: n,
             activityItem: t,
@@ -39,7 +38,7 @@ function N(e) {
             assetNames: j,
             commandOrigin: N,
         }),
-        [S, O] = s.useState(!1),
+        [y, O] = s.useState(!1),
         P = s.useCallback(() => {
             O(!0);
         }, [O]),
@@ -50,9 +49,9 @@ function N(e) {
             () =>
                 (0, l.jsx)("div", {
                     className: E.Gz,
-                    children: (0, l.jsx)("div", { className: E.fC, children: (0, l.jsx)(C.A, { labelType: y }) }),
+                    children: (0, l.jsx)("div", { className: E.fC, children: (0, l.jsx)(C.A, { labelType: S }) }),
                 }),
-            [y],
+            [S],
         ),
         D = s.useMemo(() => {
             switch (b) {
@@ -95,7 +94,7 @@ function N(e) {
         children: (0, l.jsx)(A.c, {
             config: I,
             from: { value: 0 },
-            to: { value: +!!S },
+            to: { value: +!!y },
             children: (e) => {
                 let { value: n } = e;
                 return (0, l.jsx)(h.N, {
@@ -126,4 +125,4 @@ function N(e) {
         }),
     });
 }
-N.AspectRatio = v;
+((N.AspectRatio = v), t.d(n, {}, { C: N }));

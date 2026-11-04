@@ -1,15 +1,14 @@
-n.d(t, { A: () => g, b: () => p });
 var r = n(477900),
     l = n(582128),
     i = n(691885),
-    a = n(193249),
+    a = n(143129),
     s = n(834730),
     o = n(534554),
     u = n(56681),
     d = n(392208),
-    c = n(837984),
-    f = n(809526),
-    h = n(105292),
+    c = n(590221),
+    f = n(191850),
+    h = n(792996),
     m = n(944847);
 function p(e) {
     let { settings: t, tiers: n, choices: s, disabled: d, onChange: c } = e,
@@ -56,62 +55,69 @@ function p(e) {
         ],
     });
 }
-function g(e) {
-    let { settings: t, tiers: n, choices: l, disabled: i, onChange: a } = e,
-        u = d.P.indexOf(t.tier);
-    return (0, r.jsxs)("div", {
-        className: m.OA,
-        children: [
-            (0, r.jsxs)("div", {
-                className: m.hs,
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { settings: t, tiers: n, choices: l, disabled: i, onChange: a } = e,
+                u = d.P.indexOf(t.tier);
+            return (0, r.jsxs)("div", {
+                className: m.OA,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: m.UT,
+                        className: m.hs,
                         children: [
-                            (0, r.jsx)(s.E, {
-                                tag: "span",
-                                variant: "body-md/medium",
-                                color: "text-default",
-                                children: h.intl.string(f.default.aBPQxX),
+                            (0, r.jsxs)("div", {
+                                className: m.UT,
+                                children: [
+                                    (0, r.jsx)(s.E, {
+                                        tag: "span",
+                                        variant: "body-md/medium",
+                                        color: "text-default",
+                                        children: h.intl.string(f.default.aBPQxX),
+                                    }),
+                                    (0, r.jsx)(s.E, {
+                                        tag: "span",
+                                        variant: "body-sm/normal",
+                                        color: "text-muted",
+                                        children: (0, o.Tc)(t.tier),
+                                    }),
+                                ],
                             }),
-                            (0, r.jsx)(s.E, {
-                                tag: "span",
-                                variant: "body-sm/normal",
-                                color: "text-muted",
-                                children: (0, o.Tc)(t.tier),
+                            (0, r.jsxs)("div", {
+                                className: m.Nb,
+                                children: [
+                                    (0, r.jsx)(s.E, {
+                                        tag: "span",
+                                        variant: "body-sm/medium",
+                                        color: "text-subtle",
+                                        children: h.intl.string(f.default["/tlOR5"]),
+                                    }),
+                                    (0, r.jsx)(s.E, {
+                                        tag: "span",
+                                        variant: "body-sm/medium",
+                                        color: "text-subtle",
+                                        children: h.intl.string(f.default.FxoUwB),
+                                    }),
+                                ],
+                            }),
+                            (0, r.jsx)(c.A, {
+                                activeIndex: u,
+                                stops: d.P.map(o.D0),
+                                ariaLabel: h.intl.string(f.default.aBPQxX),
+                                disabled: i,
+                                onSelect: function (e) {
+                                    let n = d.P[e];
+                                    null != n && n !== t.tier && a((0, o.CM)((0, o.j6)(t, n)));
+                                },
                             }),
                         ],
                     }),
-                    (0, r.jsxs)("div", {
-                        className: m.Nb,
-                        children: [
-                            (0, r.jsx)(s.E, {
-                                tag: "span",
-                                variant: "body-sm/medium",
-                                color: "text-subtle",
-                                children: h.intl.string(f.default["/tlOR5"]),
-                            }),
-                            (0, r.jsx)(s.E, {
-                                tag: "span",
-                                variant: "body-sm/medium",
-                                color: "text-subtle",
-                                children: h.intl.string(f.default.FxoUwB),
-                            }),
-                        ],
-                    }),
-                    (0, r.jsx)(c.A, {
-                        activeIndex: u,
-                        stops: d.P.map(o.D0),
-                        ariaLabel: h.intl.string(f.default.aBPQxX),
-                        disabled: i,
-                        onSelect: function (e) {
-                            let n = d.P[e];
-                            null != n && n !== t.tier && a((0, o.CM)((0, o.j6)(t, n)));
-                        },
-                    }),
+                    (0, r.jsx)(p, { settings: t, tiers: n, choices: l, disabled: i, onChange: a }),
                 ],
-            }),
-            (0, r.jsx)(p, { settings: t, tiers: n, choices: l, disabled: i, onChange: a }),
-        ],
-    });
-}
+            });
+        },
+        b: p,
+    },
+);

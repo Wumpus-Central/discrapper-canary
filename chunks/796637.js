@@ -1,12 +1,12 @@
-(n.d(t, { D: () => v, g: () => P }), n(321073));
+n(321073);
 var i = n(582128),
     r = n(435558),
     a = n.n(r),
     s = n(873298),
     l = n(933958),
-    o = n(849335),
+    o = n(225123),
     d = n(698441),
-    c = n(297469),
+    c = n(791513),
     u = n(863005),
     _ = n(152007),
     E = n(353202),
@@ -15,7 +15,7 @@ var i = n(582128),
     f = n(734057),
     I = n(945886),
     p = n(576705),
-    m = n(573163),
+    m = n(218461),
     T = n(309010),
     g = n(543465),
     S = n(403362),
@@ -45,46 +45,10 @@ function b(e) {
     }
     return r;
 }
-function v() {
-    let { withSuggestionsNotice: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        [t, n] = i.useState(() => P(void 0, { withSuggestionsNotice: e })),
-        r = o.A.isConnected();
-    (i.useEffect(() => {
-        function t() {
-            n(P(void 0, { withSuggestionsNotice: e }));
-        }
-        t();
-        let i = a().throttle(t, 100);
-        return (
-            D.forEach((e) => e.addChangeListener(i)),
-            () => {
-                (i.cancel(), D.forEach((e) => e.removeChangeListener(i)));
-            }
-        );
-    }, [e]),
-        i.useEffect(() => {
-            if (r) {
-                let e;
-                0 === (e = b({ limit: R.lj, includeLoading: !1 })).length ? Promise.resolve() : E.A.loadThreadsBulk(e);
-            }
-        }, [r]));
-    let s = b({ limit: 1, includeLoading: !0 }).length > 0,
-        l = (function (e) {
-            if (e.getSections().length > c.TF) return !1;
-            let t = !1;
-            return (
-                e.forEachShownChannel(() => {
-                    t = !0;
-                }),
-                !t
-            );
-        })(t);
-    return { guildChannels: t, shouldShowEmptyState: l && !s, hasNoChannels: l };
-}
-function P(e) {
+function v(e) {
     let { withSuggestionsNotice: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = e ?? N.A.getFavoriteChannels(),
-        i = g.Ay.isGuildCollapsed(R.Vc),
+        i = g.Ay.isGuildCollapsed("373"),
         r = T.Ay.getChannelId(),
         l = f.A.getChannel(r),
         o = T.Ay.getVoiceChannelId(),
@@ -159,7 +123,7 @@ function P(e) {
                     i = N.A.getCategoryRecord(t);
                 if (null == i) return null;
                 let r = E[t] ?? [],
-                    a = g.Ay.isChannelMuted(R.Vc, t),
+                    a = g.Ay.isChannelMuted("373", t),
                     s = h.A.isCollapsed(t),
                     l = null;
                 return {
@@ -185,20 +149,20 @@ function P(e) {
     t && w.push(L.r.FAVORITES_SUGGESTIONS);
     let G = { isEmpty: () => 0 === w.length, getRows: () => w, getRow: (e) => w[e] ?? null };
     return {
-        id: R.Vc,
+        id: "373",
         hideMutedChannels: i,
         favoritesSectionNumber: 1,
         recentsSectionNumber: 2,
         voiceChannelsSectionNumber: -999,
         getSections() {
             let e = [];
-            ((e[c.Xt] = w.length), (e[c.PU] = 0), (e[c.HP] = 0), (e[c.yO] = 0), (e[c.bK] = v.channelList.length));
-            for (let t = 0; t < P.length; t++) e[c.TF + t] = Math.max(1, P[t].channelList.length);
+            ((e[0] = w.length), (e[1] = 0), (e[2] = 0), (e[3] = 0), (e[4] = v.channelList.length));
+            for (let t = 0; t < P.length; t++) e[5 + t] = Math.max(1, P[t].channelList.length);
             return e;
         },
-        isPlaceholderRow: (e, t) => !(e < c.TF) && 0 === t && 0 === P[e - c.TF].channelList.length,
-        getCategoryFromSection: (e) => (e === c.bK ? v : P[e - c.TF]),
-        getNamedCategoryFromSection: (e) => P[e - c.TF],
+        isPlaceholderRow: (e, t) => !(e < 5) && 0 === t && 0 === P[e - 5].channelList.length,
+        getCategoryFromSection: (e) => (4 === e ? v : P[e - 5]),
+        getNamedCategoryFromSection: (e) => P[e - 5],
         getChannelFromSectionRow(e, t) {
             let n = this.getCategoryFromSection(e);
             return null == n || null == n.channelList[t] ? null : { category: n, channel: n.channelList[t] };
@@ -216,7 +180,7 @@ function P(e) {
                 let s = r[a],
                     l = a > 0 ? P[a - 1] : null,
                     o = null != l && l.record.name.trim().toLowerCase() === R.A.toLowerCase(),
-                    d = a + c.bK;
+                    d = a + 4;
                 for (let r = 0; r < s.channelList.length; r++) {
                     let a = s.channelList[r];
                     if (a.id === e) {
@@ -244,3 +208,48 @@ function P(e) {
         getChannels: () => [],
     };
 }
+n.d(
+    t,
+    {},
+    {
+        D: function () {
+            let { withSuggestionsNotice: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+                [t, n] = i.useState(() => v(void 0, { withSuggestionsNotice: e })),
+                r = o.A.isConnected();
+            (i.useEffect(() => {
+                function t() {
+                    n(v(void 0, { withSuggestionsNotice: e }));
+                }
+                t();
+                let i = a().throttle(t, 100);
+                return (
+                    D.forEach((e) => e.addChangeListener(i)),
+                    () => {
+                        (i.cancel(), D.forEach((e) => e.removeChangeListener(i)));
+                    }
+                );
+            }, [e]),
+                i.useEffect(() => {
+                    if (r) {
+                        let e;
+                        0 === (e = b({ limit: 200, includeLoading: !1 })).length
+                            ? Promise.resolve()
+                            : E.A.loadThreadsBulk(e);
+                    }
+                }, [r]));
+            let s = b({ limit: 1, includeLoading: !0 }).length > 0,
+                l = (function (e) {
+                    if (e.getSections().length > 5) return !1;
+                    let t = !1;
+                    return (
+                        e.forEachShownChannel(() => {
+                            t = !0;
+                        }),
+                        !t
+                    );
+                })(t);
+            return { guildChannels: t, shouldShowEmptyState: l && !s, hasNoChannels: l };
+        },
+        g: v,
+    },
+);

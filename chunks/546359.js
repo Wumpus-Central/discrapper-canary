@@ -1,6 +1,6 @@
-(n.d(t, { A: () => et }), n(321073));
+n(321073);
 var i = n(350835),
-    r = n(17928),
+    r = n(855986),
     a = n(52133),
     s = n(73153),
     l = n(714114),
@@ -11,8 +11,8 @@ var i = n(350835),
     _ = n(994500),
     E = n(287809),
     A = n(977997),
-    h = n(970928),
-    f = n(935208),
+    h = n(913659),
+    f = n(811091),
     I = n(636889),
     p = n(427262),
     m = n(736347),
@@ -75,7 +75,7 @@ function M(e, t) {
             return (0, T.iX)(e.status) ? N : S;
         case m.Vj.ALPHABETICAL: {
             let t = e.name.normalize("NFD").match(/^\s*(\p{L})/u),
-                n = t?.[1].toLocaleUpperCase(o.default.locale) ?? T.Ce;
+                n = t?.[1].toLocaleUpperCase(o.default.locale) ?? "#";
             return { key: `letter:${n}`, type: m.ik.LETTER, label: n };
         }
     }
@@ -395,3 +395,4 @@ let et = new ee(s.h, {
     },
     FRIENDS_LIST_TEAR_DOWN: K,
 });
+n.d(t, {}, { A: et });

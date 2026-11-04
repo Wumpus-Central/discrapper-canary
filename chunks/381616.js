@@ -1,6 +1,6 @@
 let o;
-(i.d(e, { A: () => l }), i(321073));
-var s = i(17928),
+i(321073);
+var s = i(855986),
     n = i(73153);
 let a = { guildNoticeDismissed: [] },
     I = new Map(),
@@ -43,3 +43,4 @@ let l = new d(n.h, {
         S.delete(e);
     },
 });
+i.d(e, {}, { A: l });

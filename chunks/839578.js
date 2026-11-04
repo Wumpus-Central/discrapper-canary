@@ -1,6 +1,6 @@
-d.exports = {
-    r5: "sidebarTitleRow__3f4c5",
-    zo: "colorSection__3f4c5",
-    Ei: "colorPicker__3f4c5",
-    oP: "colorSwatch__3f4c5",
+i.exports = {
+    r5: "sidebarTitleRow_qVXIsE",
+    zo: "colorSection_qVXIsE",
+    Ei: "colorPicker_qVXIsE",
+    oP: "colorSwatch_qVXIsE",
 };

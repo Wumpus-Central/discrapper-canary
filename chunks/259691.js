@@ -1,4 +1,3 @@
-l.d(t, { A: () => b });
 var n = l(477900),
     a = l(582128),
     r = l(503698),
@@ -10,36 +9,43 @@ var n = l(477900),
     c = l(932111),
     f = l(161431),
     m = l(407653),
-    g = l(809526),
-    h = l(105292),
+    g = l(191850),
+    h = l(792996),
     p = l(587041);
-function b(e) {
-    let { attachmentId: t } = e,
-        l = a.useContext(c.Fu),
-        r = (0, f.Od)(l, t),
-        b = r?.name ?? h.intl.string(g.default.ff9Q4C),
-        x = (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)(m.A, { projectId: l, file: r, className: p.xn }), b] });
-    if (null == l || null == r || !o.XB.has(r.content_type))
-        return (0, n.jsx)("span", { className: p.Pq, children: x });
-    let y = async () => {
-        let e;
-        try {
-            e = await (0, d.PK)(l, r.id);
-        } catch {
-            return;
-        }
-        (0, u.R)({
-            items: [{ type: "IMAGE", url: e, alt: r.name }],
-            startingIndex: 0,
-            shouldHideMediaOptions: !0,
-            location: "ConjureChat",
-        });
-    };
-    return (0, n.jsx)(s.D, {
-        tag: "span",
-        className: i()(p.Pq, p.Td),
-        onClick: y,
-        "aria-label": h.intl.formatToPlainString(g.default.GtNukg, { name: r.name }),
-        children: x,
-    });
-}
+l.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { attachmentId: t } = e,
+                l = a.useContext(c.Fu),
+                r = (0, f.Od)(l, t),
+                b = r?.name ?? h.intl.string(g.default.ff9Q4C),
+                x = (0, n.jsxs)(n.Fragment, {
+                    children: [(0, n.jsx)(m.A, { projectId: l, file: r, className: p.xn }), b],
+                });
+            return null != l && null != r && o.XB.has(r.content_type)
+                ? (0, n.jsx)(s.D, {
+                      tag: "span",
+                      className: i()(p.Pq, p.Td),
+                      onClick: async () => {
+                          let e;
+                          try {
+                              e = await (0, d.PK)(l, r.id);
+                          } catch {
+                              return;
+                          }
+                          (0, u.R)({
+                              items: [{ type: "IMAGE", url: e, alt: r.name }],
+                              startingIndex: 0,
+                              shouldHideMediaOptions: !0,
+                              location: "ConjureChat",
+                          });
+                      },
+                      "aria-label": h.intl.formatToPlainString(g.default.GtNukg, { name: r.name }),
+                      children: x,
+                  })
+                : (0, n.jsx)("span", { className: p.Pq, children: x });
+        },
+    },
+);

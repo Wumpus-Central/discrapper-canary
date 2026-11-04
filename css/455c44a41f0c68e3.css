@@ -1,0 +1,160 @@
+.container__BLAbN {
+    background-color: var(--input-background-default);
+    border: 1px solid;
+    border-color: var(--input-border-default);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 40px;
+    min-height: 44px;
+    position: relative
+}
+
+.layout__BLAbN {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.base__BLAbN {
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 22px;
+    overflow: hidden;
+    padding-block: 10px;
+    padding-inline: 10px 0;
+    text-overflow: ellipsis;
+    transition: color .15s ease;
+    white-space: nowrap
+}
+
+.hiddenMessage__BLAbN {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 0
+}
+
+.input__BLAbN {
+    border: none;
+    box-sizing: border-box;
+    color: var(--text-strong);
+    flex: 1 1 auto;
+    min-width: 0;
+    position: relative;
+    width: 100%;
+    z-index: 1
+}
+
+.input__BLAbN::-moz-placeholder {
+    color: var(--input-placeholder-text-default)
+}
+
+.input__BLAbN::placeholder {
+    color: var(--input-placeholder-text-default)
+}
+
+.button__BLAbN {
+    border-radius: var(--radius-xs);
+    margin-block: 4px;
+    margin-inline: 0 4px;
+    padding: 2px 20px;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out
+}
+
+.disabled__BLAbN {
+    cursor: not-allowed;
+    opacity: .3
+}
+
+.disabled__BLAbN .button__BLAbN {
+    opacity: 1
+}
+
+.recorderContainer_0PgvPQ {
+    cursor: pointer;
+    transition: border .15s ease
+}
+
+.recorderContainer_0PgvPQ:not(.containerDisabled_0PgvPQ):not(.recording_0PgvPQ):focus-within,
+.recorderContainer_0PgvPQ:not(.containerDisabled_0PgvPQ):not(.recording_0PgvPQ):hover {
+    border-color: var(--border-strong)
+}
+
+.containerDisabled_0PgvPQ {
+    cursor: not-allowed
+}
+
+.recorderLayout_0PgvPQ {
+    align-items: center
+}
+
+.addKeybindButton_0PgvPQ {
+    overflow: hidden;
+    position: relative;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out, width .2s ease-in-out;
+    white-space: nowrap;
+    width: auto
+}
+
+.recorderContainer_0PgvPQ.recording_0PgvPQ {
+    animation: shadowPulse_0PgvPQ 1s ease-in infinite;
+    border-color: hsl(var(--red-400-hsl)/.6);
+    box-shadow: 0 0 6px hsl(var(--red-400-hsl)/.3);
+    color: var(--text-feedback-critical)
+}
+
+.recorderContainer_0PgvPQ.recording_0PgvPQ .addKeybindButton_0PgvPQ {
+    background-color: hsl(var(--red-400-hsl)/.1);
+    color: var(--text-feedback-critical)
+}
+
+.recorderContainer_0PgvPQ.recording_0PgvPQ .keybindInput_0PgvPQ {
+    color: var(--text-feedback-critical)
+}
+
+.recorderContainer_0PgvPQ.recording_0PgvPQ .keybindInput_0PgvPQ::-moz-placeholder {
+    color: transparent
+}
+
+.recorderContainer_0PgvPQ.recording_0PgvPQ .keybindInput_0PgvPQ::placeholder {
+    color: transparent
+}
+
+.keybindInput_0PgvPQ {
+    font-size: 14px;
+    font-weight: var(--font-weight-semibold);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+@keyframes shadowPulse_0PgvPQ {
+    0% {
+        box-shadow: 0 0 6px hsl(var(--red-400-hsl)/.3)
+    }
+
+    50% {
+        box-shadow: 0 0 10px hsl(var(--red-400-hsl)/.6)
+    }
+
+    to {
+        box-shadow: 0 0 6px hsl(var(--red-400-hsl)/.3)
+    }
+}
+
+.buttonContainer_0PgvPQ {
+    max-width: 128px;
+    padding: 4px
+}
+
+.trailingActions_0PgvPQ {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    padding-inline-end: 6px
+}
+
+/*# sourceMappingURL=455c44a41f0c68e3.css.map*/

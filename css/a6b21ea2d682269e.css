@@ -1,0 +1,36 @@
+.content_v35VuH {
+    align-items: stretch
+}
+
+.content_v35VuH,
+.room_v35VuH {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.room_v35VuH {
+    background-color: var(--background-mod-muted);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    cursor: pointer;
+    flex-basis: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--space-8)
+}
+
+.room_v35VuH:hover {
+    background-color: var(--background-mod-normal)
+}
+
+.room_v35VuH.selected_v35VuH {
+    border: 2px solid var(--background-brand)
+}
+
+.image_v35VuH {
+    height: auto;
+    width: 100%
+}
+
+/*# sourceMappingURL=a6b21ea2d682269e.css.map*/

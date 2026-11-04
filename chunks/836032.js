@@ -1,9 +1,9 @@
 e.exports = {
-    kL: "container_ad2413",
-    PG: "sizeSmall_ad2413",
-    Qs: "content_ad2413",
-    wx: "header_ad2413",
-    yF: "divider_ad2413",
-    M1: "stats_ad2413",
-    dJ: "stat_ad2413",
+    kL: "container_5TW5x6",
+    PG: "sizeSmall_5TW5x6",
+    Qs: "content_5TW5x6",
+    wx: "header_5TW5x6",
+    yF: "divider_5TW5x6",
+    M1: "stats_5TW5x6",
+    dJ: "stat_5TW5x6",
 };

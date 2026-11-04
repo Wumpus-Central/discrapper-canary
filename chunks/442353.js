@@ -1,27 +1,32 @@
-n.d(t, { A: () => o });
 var i = n(477900);
 n(582128);
 var r = n(192308),
     a = n(231723),
     s = n(253932),
     l = n(652215);
-function o(e, t) {
-    let o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    s.bm.getSetting() || o
-        ? (0, r.openModalLazy)(
-              async () => {
-                  let { default: t } = await Promise.all([
-                      n.e("932696"),
-                      n.e("25839"),
-                      n.e("683084"),
-                      n.e("650100"),
-                      n.e("195782"),
-                      n.e("655212"),
-                      n.e("410534"),
-                  ]).then(n.bind(n, 308229));
-                  return (n) => (0, i.jsx)(t, { ...n, onEnable: e, videoEnabled: !1 });
-              },
-              { modalKey: "camera-preview", contextKey: t === l.BRT.POPOUT ? a.KX : a.SY },
-          )
-        : e?.();
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e, t) {
+            let o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+            s.bm.getSetting() || o
+                ? (0, r.mM)(
+                      async () => {
+                          let { default: t } = await Promise.all([
+                              n.e(932696),
+                              n.e(25839),
+                              n.e(683084),
+                              n.e(650100),
+                              n.e(195782),
+                              n.e(655212),
+                              n.e(410534),
+                          ]).then(n.bind(n, 308229));
+                          return (n) => (0, i.jsx)(t, { ...n, onEnable: e, videoEnabled: !1 });
+                      },
+                      { modalKey: "camera-preview", contextKey: t === l.BRT.POPOUT ? "popout" : a.SY },
+                  )
+                : e?.();
+        },
+    },
+);

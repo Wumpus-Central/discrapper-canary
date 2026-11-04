@@ -1,0 +1,294 @@
+.standardSidebarView_jnk11m {
+    background: var(--background-base-lowest);
+    display: flex;
+    inset: 0;
+    position: absolute;
+    z-index: 101;
+    --custom-sidebar-scroller-margin-start: 40px;
+    --custom-sidebar-scroller-margin-end: 97px;
+    --custom-sidebar-scroller-max-width: 660px;
+    --custom-sidebar-scroller-min-width: 404px
+}
+
+.standardSidebarView_jnk11m,
+.standardSidebarView_jnk11m * {
+    box-sizing: border-box
+}
+
+.standardSidebarView_jnk11m.withUpsell_jnk11m {
+    top: 44px
+}
+
+.platform-win .standardSidebarView_jnk11m {
+    top: 22px
+}
+
+.sidebarRegion_jnk11m {
+    display: flex;
+    flex: 1 0 var(--custom-standard-sidebar-view-sidebar-total-width);
+    justify-content: flex-end;
+    min-height: 100%;
+    z-index: 1
+}
+
+.sidebarRegionScroller_jnk11m {
+    align-items: flex-start;
+    background: var(--background-base-lowest);
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: row;
+    justify-content: flex-end
+}
+
+.sidebar_jnk11m {
+    padding-block: 60px;
+    width: var(--custom-standard-sidebar-view-sidebar-total-width)
+}
+
+.mobileSidebar_jnk11m,
+.sidebar_jnk11m {
+    padding-inline: var(--custom-standard-sidebar-view-standard-padding) var(--custom-standard-sidebar-view-sidebar-content-scrollbar-padding)
+}
+
+.mobileSidebar_jnk11m {
+    padding-block: 10px 60px;
+    width: 100%
+}
+
+.contentRegionScroller_jnk11m {
+    align-items: flex-start;
+    background-color: var(--background-base-low);
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    overflow-x: hidden
+}
+
+.contentRegionScroller_jnk11m .toolsContainer_jnk11m {
+    margin-inline-end: 21px
+}
+
+.contentRegionScroller_jnk11m .tools_jnk11m {
+    position: fixed
+}
+
+.contentRegionHiddenSidebar_jnk11m {
+    justify-content: center
+}
+
+.contentRegionShownSidebar_jnk11m {
+    justify-content: flex-start
+}
+
+.contentRegion_jnk11m {
+    align-items: flex-start;
+    background: var(--background-base-low);
+    display: flex;
+    flex: 1 1 800px;
+    position: relative
+}
+
+.contentColumn_jnk11m,
+.customColumn_jnk11m {
+    flex: 1 1 auto;
+    max-width: 740px;
+    min-height: 100%;
+    min-width: 460px
+}
+
+.contentColumnWide_jnk11m {
+    max-width: 740px;
+    padding-block: 60px 80px;
+    padding-inline: 40px 10px
+}
+
+.contentColumnDefault_jnk11m {
+    padding: 60px 40px 80px;
+    position: relative
+}
+
+.contentColumnMinimal_jnk11m {
+    padding-inline-end: 40px
+}
+
+.contentColumnScrollable_jnk11m {
+    flex: 1 1 auto;
+    min-width: 460px;
+    position: relative
+}
+
+.customHeader_jnk11m {
+    padding-top: 60px
+}
+
+.customColumn_jnk11m {
+    padding-bottom: 0
+}
+
+.customContainer_jnk11m {
+    inset: 0;
+    overflow: hidden;
+    position: absolute
+}
+
+.customContent_jnk11m {
+    margin-inline: var(--custom-sidebar-scroller-margin-start) var(--custom-sidebar-scroller-margin-end);
+    max-width: var(--custom-sidebar-scroller-max-width);
+    min-width: var(--custom-sidebar-scroller-min-width)
+}
+
+.customScroller_jnk11m {
+    box-sizing: border-box;
+    display: block;
+    position: static
+}
+
+.customScroller_jnk11m>div {
+    margin-inline: var(--custom-sidebar-scroller-margin-start) var(--custom-sidebar-scroller-margin-end);
+    max-width: var(--custom-sidebar-scroller-max-width);
+    min-width: var(--custom-sidebar-scroller-min-width)
+}
+
+.noticeRegion_jnk11m {
+    bottom: 0;
+    inset-inline: 0 71px;
+    max-width: 740px;
+    padding: 0 var(--custom-standard-sidebar-view-standard-padding) var(--custom-standard-sidebar-view-standard-padding);
+    position: absolute;
+    z-index: 2
+}
+
+.noticeRegionHiddenSidebar_jnk11m {
+    margin: 0 auto
+}
+
+.toolsContainer_jnk11m {
+    flex: 0 0 36px;
+    margin-inline-end: 35px;
+    padding-top: 60px;
+    position: relative;
+    width: 60px
+}
+
+.mobileSidebarTools_jnk11m {
+    margin-inline-end: 0
+}
+
+@media (max-width:780px) {
+    .sidebarRegion_jnk11m {
+        flex-basis: 30%;
+        flex-shrink: 1;
+        min-width: 0
+    }
+
+    .contentRegion_jnk11m {
+        flex-basis: 70%;
+        flex-shrink: 1;
+        min-width: 0
+    }
+
+    .sidebar_jnk11m,
+    .sidebarRegionScroller_jnk11m {
+        max-width: 100%;
+        width: 100%
+    }
+
+    .contentColumn_jnk11m,
+    .contentColumnScrollable_jnk11m,
+    .customColumn_jnk11m {
+        flex-basis: 100%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        max-width: 100% !important;
+        min-width: unset
+    }
+
+    .contentRegionScroller_jnk11m,
+    .customScroller_jnk11m {
+        overflow: auto !important
+    }
+
+    .customContainer_jnk11m {
+        max-width: 100%;
+        position: static;
+        width: 100%
+    }
+
+    .toolsContainer_jnk11m {
+        inset-inline-end: 0;
+        margin-inline-end: 0 !important;
+        position: absolute;
+        width: 36px
+    }
+}
+
+.theme-light .customContainer_jnk11m:before {
+    border-bottom: 1px solid var(--opacity-black-8);
+    box-shadow: 0 1px 4px var(--opacity-black-8)
+}
+
+.theme-dark .customContainer_jnk11m:before {
+    border-bottom: 1px solid var(--opacity-black-20);
+    box-shadow: 0 1px 4px var(--opacity-black-20)
+}
+
+.flexFullWidth_jnk11m {
+    flex: 1 0 100%
+}
+
+.hidden_jnk11m {
+    display: none
+}
+
+.mobileContent_jnk11m {
+    box-sizing: border-box;
+    min-width: unset;
+    padding-top: 10px
+}
+
+.mobileContentHeader_jnk11m {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px
+}
+
+.mobileContentHeader_jnk11m.hideHamburger_jnk11m {
+    justify-content: flex-end
+}
+
+.mobileToolsContainer_jnk11m {
+    padding-top: 10px
+}
+
+.mobileToolsContainer_jnk11m.closeIconOnly_jnk11m {
+    margin-inline-end: 0
+}
+
+.mobileToolsContainer_jnk11m.isMobileAndroid_jnk11m {
+    position: absolute;
+    z-index: 1000
+}
+
+.mobileToolsCloseIcon_jnk11m>div {
+    flex: 0 0 24px;
+    height: 24px;
+    width: 24px
+}
+
+.mobileSidebarHeader_jnk11m {
+    display: flex;
+    justify-content: flex-end
+}
+
+&.platform-win .contentRegionScroller_jnk11m {
+    height: calc(100% - var(--custom-app-top-bar-height));
+    margin-top: var(--custom-app-top-bar-height)
+}
+
+.tabBarItemContainer_QdesSd {
+    align-items: center;
+    display: flex;
+    justify-content: space-between
+}
+
+/*# sourceMappingURL=598276aa57982bc7.css.map*/

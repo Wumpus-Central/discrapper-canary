@@ -1,29 +1,8 @@
-(s.r(k),
-    s.d(k, {
-        assets: () => e,
-        ddd: () => l,
-        default: () => u,
-        fr: () => d,
-        h: () => n,
-        ip: () => o,
-        layers: () => y,
-        markers: () => m,
-        meta: () => h,
-        nm: () => r,
-        op: () => p,
-        v: () => t,
-        w: () => i,
-    }));
-var d = 60,
-    t = "5.9.6",
-    o = 0,
-    p = 149,
-    i = 74,
-    n = 123,
-    r = "aligndevicelottie",
-    l = 0,
-    m = [],
-    e = [
+s.r(k);
+var d = "5.9.6",
+    t = "aligndevicelottie",
+    o = [],
+    p = [
         {
             nm: "modal align",
             fr: 60,
@@ -7349,7 +7328,7 @@ var d = 60,
             ],
         },
     ],
-    y = [
+    i = [
         {
             ty: 3,
             ddd: 0,
@@ -7398,5 +7377,36 @@ var d = 60,
             bm: 0,
         },
     ],
-    h = { a: "", d: "", tc: "", g: "Aninix" },
-    u = { fr: 60, v: t, ip: 0, op: 149, w: 74, h: 123, nm: r, ddd: 0, markers: m, assets: e, layers: y, meta: h };
+    n = { a: "", d: "", tc: "", g: "Aninix" };
+s.d(
+    k,
+    {},
+    {
+        assets: p,
+        ddd: 0,
+        default: {
+            fr: 60,
+            v: d,
+            ip: 0,
+            op: 149,
+            w: 74,
+            h: 123,
+            nm: t,
+            ddd: 0,
+            markers: o,
+            assets: p,
+            layers: i,
+            meta: n,
+        },
+        fr: 60,
+        h: 123,
+        ip: 0,
+        layers: i,
+        markers: o,
+        meta: n,
+        nm: t,
+        op: 149,
+        v: d,
+        w: 74,
+    },
+);

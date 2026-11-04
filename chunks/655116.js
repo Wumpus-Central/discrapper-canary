@@ -1,9 +1,9 @@
 let i, r, a;
-(n.d(t, { A: () => eA }), n(321073), n(938796));
+(n(321073), n(938796));
 var s = n(435558),
     l = n.n(s),
     o = n(158390),
-    d = n(17928),
+    d = n(855986),
     c = n(52133),
     u = n(451988),
     _ = n(73153),
@@ -11,15 +11,15 @@ var s = n(435558),
     A = n(573648),
     h = n(504337),
     f = n(626584),
-    I = n(952818),
-    p = n(280450),
-    m = n(30370),
+    I = n(986322),
+    p = n(46653),
+    m = n(417869),
     T = n(885576),
     g = n(290863),
     S = n(485296),
     N = n(977997),
-    C = n(174459),
-    O = n(970928),
+    C = n(129230),
+    O = n(913659),
     R = n(927813),
     L = n(403362),
     y = n(107750),
@@ -439,148 +439,142 @@ class e_ extends d.Ay.Store {
     }
 }
 let eE = new e_(_.h, {
-        USER_CONNECTIONS_UPDATE: el,
-        CONNECTION_OPEN: el,
-        SPOTIFY_ACCOUNT_ACCESS_TOKEN: function (e) {
-            let { accountId: t, accessToken: n } = e;
-            return (en(t, n), !1);
-        },
-        SPOTIFY_ACCOUNT_ACCESS_TOKEN_REVOKE: function (e) {
-            let { accountId: t } = e;
-            ei(t);
-        },
-        SPOTIFY_PROFILE_UPDATE: function (e) {
-            let { accountId: t, isPremium: n } = e,
-                i = K[t];
-            if (null == i) return !1;
-            ((i.isPremium = n), B.info(`Profile updated for ${t}: isPremium = ${n}`));
-        },
-        SPOTIFY_PLAYER_STATE: function (e) {
-            let t,
-                n,
-                a,
-                { accountId: s, isPlaying: o, repeat: d, track: u, position: E, device: A, context: f } = e,
-                I = !1;
-            if (null != A)
-                if (null != $[s]) {
-                    let e = $[s].find((e) => {
-                        let { id: t } = e;
-                        return t === A.id;
-                    });
-                    (null == e ? ($[s].push(A), (I = !0)) : (0, c.A)(e, A) || (Object.assign(e, A), (I = !0)),
-                        er(s, A.id));
-                } else (($[s] = [A]), (I = !0));
-            o ? q?.start(U, eo) : ((u = null), q?.stop());
-            let T = m.A.getAccount(s, b.fg2.SPOTIFY);
-            if (null == T) return I;
-            let g = z[s],
-                S =
-                    null != u
-                        ? {
-                              account: T,
-                              track: u,
-                              startTime:
-                                  ((t = Date.now()),
-                                  (n = null != g ? g.startTime : 0),
-                                  Math.abs((a = t - E) - n) > x ? a : n),
-                              context: f,
-                              repeat: d,
-                          }
-                        : null,
-                N = null != A && null != r && 0 === E && !o;
-            N || (z[s] = S);
-            let O = i;
-            if (
-                ((i = l()
-                    .values(z)
-                    .find((e) => null != e)),
-                ed(p.default.getId()),
-                null == u || N ? W.stop() : W.start(u.duration - E + G, () => Q(T.id)),
-                null != r && ((!o && E > 0) || null == A || (null != S && r.trackId !== S.track.id))
-                    ? (B.info(
-                          `Listen along active but playback stopped or track changed. Stopping listen along in ${G}ms`,
-                      ),
-                      Y.start(G, () => {
-                          (B.info("Stopping listening along"), (0, h.A)(), Q(T.id));
-                      }))
-                    : Y.isStarted() && (B.info("Listen along stop cancelled as playback of track resumed"), Y.stop()),
-                O === i ||
-                    (null == g && null == S) ||
-                    (null != g && null != S && g.track.id === S.track.id && g.startTime === S.startTime))
-            )
-                return I;
-            null != u &&
-                (_.h.dispatch({ type: "SPOTIFY_NEW_TRACK", track: u, connectionId: s }),
-                C.default.track(b.HAw.ACTIVITY_UPDATED, {
-                    party_platform: b.fg2.SPOTIFY,
-                    track_id: u.id,
-                    has_images: !0,
-                    details: u.album.name,
-                    state: u.name,
-                    album_id: u.album.id,
-                    author_ids: u.artists.map((e) => e.id),
-                    author_names: u.artists.map((e) => e.name),
-                }));
-        },
-        SPOTIFY_PLAYER_PLAY: function (e) {
-            let { id: t } = e;
-            a = t;
-        },
-        ACTIVITY_PLAY: function (e) {
-            let t,
-                { activity: n, metadata: i } = e,
-                a = Z();
-            if (null == a) return !1;
-            let { socket: s, device: l } = a,
-                { sync_id: o, party: d } = n;
-            return (
-                null != o &&
-                null != d &&
-                null != d.id &&
-                !!(0, D.pH)(d.id) &&
-                (null != i && (t = i.context_uri),
-                null != r && es(),
-                null != i &&
-                    void ((0, y.ZH)(s.accountId, s.accessToken, o, i.type ?? D.M0.TRACK, {
-                        contextUri: t,
-                        deviceId: l.id,
-                    }),
-                    B.info(`Play started: ${s.accountId} playing ${o} on ${l.name}`)))
-            );
-        },
-        ACTIVITY_SYNC: function (e) {
-            let { activity: t, userId: n } = e;
-            return ea(n, t, !0);
-        },
-        ACTIVITY_SYNC_STOP: es,
-        SPOTIFY_SET_DEVICES: function (e) {
-            let { accountId: t, devices: n } = e;
-            (($[t] = n), B.info(`Devices updated for ${t}:`, n));
-        },
-        SPOTIFY_SET_ACTIVE_DEVICE: function (e) {
-            let { accountId: t, deviceId: n } = e;
-            er(t, n);
-        },
-        SPEAKING: function (e) {
-            let { userId: t } = e;
-            return ed(t);
-        },
-        VOICE_STATE_UPDATES: function (e) {
-            let { voiceStates: t } = e;
-            return t.reduce((e, t) => {
-                let { userId: n } = t;
-                return ed(n) || e;
-            }, !1);
-        },
-        MEDIA_ENGINE_SET_GO_LIVE_SOURCE: function (e) {
-            let { settings: t } = e;
-            if (t?.desktopSettings != null) {
-                q?.stop();
-                let { sourceId: e, sound: n } = t?.desktopSettings;
-                null != e && I.Ay.getObservedAppNameForWindow(e) === v.name && n
-                    ? (q = new u.IX()).start(U, eo)
-                    : (q?.stop(), (q = null));
-            } else null == t && (q?.stop(), (q = null));
-        },
-    }),
-    eA = eE;
+    USER_CONNECTIONS_UPDATE: el,
+    CONNECTION_OPEN: el,
+    SPOTIFY_ACCOUNT_ACCESS_TOKEN: function (e) {
+        let { accountId: t, accessToken: n } = e;
+        return (en(t, n), !1);
+    },
+    SPOTIFY_ACCOUNT_ACCESS_TOKEN_REVOKE: function (e) {
+        let { accountId: t } = e;
+        ei(t);
+    },
+    SPOTIFY_PROFILE_UPDATE: function (e) {
+        let { accountId: t, isPremium: n } = e,
+            i = K[t];
+        if (null == i) return !1;
+        ((i.isPremium = n), B.info(`Profile updated for ${t}: isPremium = ${n}`));
+    },
+    SPOTIFY_PLAYER_STATE: function (e) {
+        let t,
+            n,
+            a,
+            { accountId: s, isPlaying: o, repeat: d, track: u, position: E, device: A, context: f } = e,
+            I = !1;
+        if (null != A)
+            if (null != $[s]) {
+                let e = $[s].find((e) => {
+                    let { id: t } = e;
+                    return t === A.id;
+                });
+                (null == e ? ($[s].push(A), (I = !0)) : (0, c.A)(e, A) || (Object.assign(e, A), (I = !0)), er(s, A.id));
+            } else (($[s] = [A]), (I = !0));
+        o ? q?.start(U, eo) : ((u = null), q?.stop());
+        let T = m.A.getAccount(s, b.fg2.SPOTIFY);
+        if (null == T) return I;
+        let g = z[s],
+            S =
+                null != u
+                    ? {
+                          account: T,
+                          track: u,
+                          startTime:
+                              ((t = Date.now()),
+                              (n = null != g ? g.startTime : 0),
+                              Math.abs((a = t - E) - n) > x ? a : n),
+                          context: f,
+                          repeat: d,
+                      }
+                    : null,
+            N = null != A && null != r && 0 === E && !o;
+        N || (z[s] = S);
+        let O = i;
+        if (
+            ((i = l()
+                .values(z)
+                .find((e) => null != e)),
+            ed(p.default.getId()),
+            null == u || N ? W.stop() : W.start(u.duration - E + G, () => Q(T.id)),
+            null != r && ((!o && E > 0) || null == A || (null != S && r.trackId !== S.track.id))
+                ? (B.info(`Listen along active but playback stopped or track changed. Stopping listen along in ${G}ms`),
+                  Y.start(G, () => {
+                      (B.info("Stopping listening along"), (0, h.A)(), Q(T.id));
+                  }))
+                : Y.isStarted() && (B.info("Listen along stop cancelled as playback of track resumed"), Y.stop()),
+            O === i ||
+                (null == g && null == S) ||
+                (null != g && null != S && g.track.id === S.track.id && g.startTime === S.startTime))
+        )
+            return I;
+        null != u &&
+            (_.h.dispatch({ type: "SPOTIFY_NEW_TRACK", track: u, connectionId: s }),
+            C.default.track(b.HAw.ACTIVITY_UPDATED, {
+                party_platform: b.fg2.SPOTIFY,
+                track_id: u.id,
+                has_images: !0,
+                details: u.album.name,
+                state: u.name,
+                album_id: u.album.id,
+                author_ids: u.artists.map((e) => e.id),
+                author_names: u.artists.map((e) => e.name),
+            }));
+    },
+    SPOTIFY_PLAYER_PLAY: function (e) {
+        let { id: t } = e;
+        a = t;
+    },
+    ACTIVITY_PLAY: function (e) {
+        let t,
+            { activity: n, metadata: i } = e,
+            a = Z();
+        if (null == a) return !1;
+        let { socket: s, device: l } = a,
+            { sync_id: o, party: d } = n;
+        return (
+            null != o &&
+            null != d &&
+            null != d.id &&
+            !!(0, D.pH)(d.id) &&
+            (null != i && (t = i.context_uri),
+            null != r && es(),
+            null != i &&
+                void ((0, y.ZH)(s.accountId, s.accessToken, o, i.type ?? D.M0.TRACK, { contextUri: t, deviceId: l.id }),
+                B.info(`Play started: ${s.accountId} playing ${o} on ${l.name}`)))
+        );
+    },
+    ACTIVITY_SYNC: function (e) {
+        let { activity: t, userId: n } = e;
+        return ea(n, t, !0);
+    },
+    ACTIVITY_SYNC_STOP: es,
+    SPOTIFY_SET_DEVICES: function (e) {
+        let { accountId: t, devices: n } = e;
+        (($[t] = n), B.info(`Devices updated for ${t}:`, n));
+    },
+    SPOTIFY_SET_ACTIVE_DEVICE: function (e) {
+        let { accountId: t, deviceId: n } = e;
+        er(t, n);
+    },
+    SPEAKING: function (e) {
+        let { userId: t } = e;
+        return ed(t);
+    },
+    VOICE_STATE_UPDATES: function (e) {
+        let { voiceStates: t } = e;
+        return t.reduce((e, t) => {
+            let { userId: n } = t;
+            return ed(n) || e;
+        }, !1);
+    },
+    MEDIA_ENGINE_SET_GO_LIVE_SOURCE: function (e) {
+        let { settings: t } = e;
+        if (t?.desktopSettings != null) {
+            q?.stop();
+            let { sourceId: e, sound: n } = t?.desktopSettings;
+            null != e && I.Ay.getObservedAppNameForWindow(e) === v.name && n
+                ? (q = new u.IX()).start(U, eo)
+                : (q?.stop(), (q = null));
+        } else null == t && (q?.stop(), (q = null));
+    },
+});
+n.d(t, {}, { A: eE });

@@ -1,21 +1,3 @@
-n.d(t, {
-    Eq: () => m,
-    O9: () => C,
-    PZ: () => p,
-    Sb: () => N,
-    W: () => D,
-    Xx: () => A,
-    YP: () => f,
-    _A: () => h,
-    _F: () => T,
-    bf: () => S,
-    ko: () => R,
-    n3: () => y,
-    nR: () => I,
-    oD: () => g,
-    od: () => O,
-    vv: () => L,
-});
 var i,
     r,
     a,
@@ -40,43 +22,27 @@ var i,
         (r.REDUCED_MOTION_STICKERS = "REDUCED_MOTION_STICKERS"),
         (r.GAME_MODE = "GAME_MODE"),
         r),
-    f = (((a = {}).AUTO = "auto"), (a.COMPACT = "compact"), (a.COZY = "cozy"), a);
-let I = "ROLE_SUBSCRIPTIONS",
-    p = "APPLICATION_SUBSCRIPTION_SUBSECTION";
-var m = (((s = {}).USER_PROFILE = "user_profile"), (s.GUILD = "guild"), s),
-    T = (((l = {}).TRY_IT_OUT = "try_it_out"), (l.GUILD_TAG = "guild_tag"), l),
-    g =
+    f = (((a = {}).AUTO = "auto"), (a.COMPACT = "compact"), (a.COZY = "cozy"), a),
+    I = (((s = {}).USER_PROFILE = "user_profile"), (s.GUILD = "guild"), s),
+    p = (((l = {}).TRY_IT_OUT = "try_it_out"), (l.GUILD_TAG = "guild_tag"), l),
+    m =
         (((o = {})[(o.PRELOADED_USER_SETTINGS = 1)] = "PRELOADED_USER_SETTINGS"),
         (o[(o.FRECENCY_AND_FAVORITES_SETTINGS = 2)] = "FRECENCY_AND_FAVORITES_SETTINGS"),
         (o[(o.TEST_SETTINGS = 3)] = "TEST_SETTINGS"),
         o),
-    S =
+    T =
         (((d = {}).USER_SETTINGS_PRIVACY_SAFETY = "user_settings_privacy_safety"),
         (d.USER_SETTINGS_ACTIVITY_PRIVACY = "user_settings_activity_privacy"),
         (d.SERVER_PRIVACY_MODAL = "server_privacy_modal"),
         d),
-    N =
+    g =
         (((c = {})[(c.INFREQUENT_USER_ACTION = 0)] = "INFREQUENT_USER_ACTION"),
         (c[(c.FREQUENT_USER_ACTION = 10)] = "FREQUENT_USER_ACTION"),
         (c[(c.SLOW_USER_ACTION = 20)] = "SLOW_USER_ACTION"),
         (c[(c.AUTOMATED = 30)] = "AUTOMATED"),
         (c[(c.DAILY = 86400)] = "DAILY"),
-        c);
-function C() {
-    return {
-        protoToSave: void 0,
-        timeout: void 0,
-        timeoutDelay: Number.MIN_SAFE_INTEGER,
-        rateLimited: !1,
-        cleanupFuncs: [],
-        errorCallbacks: [],
-        loaded: !1,
-        loading: !1,
-        triggeredMigrations: !1,
-        offlineEditDataVersion: void 0,
-    };
-}
-var O =
+        c),
+    S =
         (((u = {}).ACCOUNT = "account"),
         (u.ACCOUNT_STANDING = "account-standing"),
         (u.ACCOUNT_ACCOUNT_STANDING = "account/account-standing"),
@@ -118,26 +84,59 @@ var O =
         (u.EXPERIMENTS = "experiments"),
         (u.DEVELOPER_OPTIONS = "developer-options"),
         u),
-    R =
+    N =
         (((_ = {})[(_.CONFIRM_START = 0)] = "CONFIRM_START"),
         (_[(_.CONFIRM_CODE = 1)] = "CONFIRM_CODE"),
         (_[(_.CHANGE_EMAIL_REASONS = 2)] = "CHANGE_EMAIL_REASONS"),
         (_[(_.CHANGE_EMAIL_WARNING = 3)] = "CHANGE_EMAIL_WARNING"),
         (_[(_.EMAIL_AND_PASSWORD = 4)] = "EMAIL_AND_PASSWORD"),
         (_[(_.COMPLETE = 5)] = "COMPLETE"),
-        _);
-let L = {
-        NEW_FORUM_THREADS_ON: 16384,
-        NEW_FORUM_THREADS_OFF: 8192,
-        OPT_IN_ENABLED: 4096,
-        FAVORITED: 2048,
-        UNREADS_ALL_MESSAGES: 1024,
-        UNREADS_ONLY_MENTIONS: 512,
+        _),
+    C = (((E = {}).USER = "user"), (E.STREAM = "stream"), E);
+n.d(
+    t,
+    {},
+    {
+        Eq: I,
+        O9: function () {
+            return {
+                protoToSave: void 0,
+                timeout: void 0,
+                timeoutDelay: Number.MIN_SAFE_INTEGER,
+                rateLimited: !1,
+                cleanupFuncs: [],
+                errorCallbacks: [],
+                loaded: !1,
+                loading: !1,
+                triggeredMigrations: !1,
+                offlineEditDataVersion: void 0,
+            };
+        },
+        PZ: "APPLICATION_SUBSCRIPTION_SUBSECTION",
+        Sb: g,
+        W: C,
+        Xx: A,
+        YP: f,
+        _A: h,
+        _F: p,
+        bf: T,
+        ko: N,
+        n3: {
+            OPT_IN_CHANNELS_ON: 16384,
+            OPT_IN_CHANNELS_OFF: 8192,
+            UNREADS_ONLY_MENTIONS: 4096,
+            UNREADS_ALL_MESSAGES: 2048,
+        },
+        nR: "ROLE_SUBSCRIPTIONS",
+        oD: m,
+        od: S,
+        vv: {
+            NEW_FORUM_THREADS_ON: 16384,
+            NEW_FORUM_THREADS_OFF: 8192,
+            OPT_IN_ENABLED: 4096,
+            FAVORITED: 2048,
+            UNREADS_ALL_MESSAGES: 1024,
+            UNREADS_ONLY_MENTIONS: 512,
+        },
     },
-    y = {
-        OPT_IN_CHANNELS_ON: 16384,
-        OPT_IN_CHANNELS_OFF: 8192,
-        UNREADS_ONLY_MENTIONS: 4096,
-        UNREADS_ALL_MESSAGES: 2048,
-    };
-var D = (((E = {}).USER = "user"), (E.STREAM = "stream"), E);
+);

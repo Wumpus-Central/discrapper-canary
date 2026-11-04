@@ -1,9 +1,8 @@
-n.d(t, { eW: () => R, hP: () => O, oi: () => C, wN: () => N });
 var i = n(477900);
 n(582128);
 var r = n(503698),
     a = n.n(r),
-    s = n(661531),
+    s = n(646514),
     l = n(406810),
     o = n(789645),
     d = n(933832),
@@ -20,10 +19,7 @@ var r = n(503698),
     T = n(513461),
     g = n(791606),
     S = n(260727);
-function N(e, t, n) {
-    return (0, i.jsx)(u.hV, { count: e, color: t, "aria-hidden": n });
-}
-function C(e) {
+function N(e) {
     let t,
         {
             audio: n,
@@ -43,35 +39,9 @@ function C(e) {
         if (!o) return null;
         t = p.k;
     }
-    return L({ icon: t, isCurrentUserConnected: a });
+    return C({ icon: t, isCurrentUserConnected: a });
 }
-function O(e) {
-    let { unavailable: t, conjureWorking: n, mediaState: r } = e;
-    return t
-        ? (0, i.jsx)(u.fk, { icon: (0, _.k)(g.A), disableColor: !0, className: S.yk })
-        : n
-          ? L({ icon: m.D, className: S.lE })
-          : null != r
-            ? C(r)
-            : void 0;
-}
-function R(e) {
-    let { guildJoinRequestStatus: t } = e,
-        [n, i] = (function (e) {
-            switch (e) {
-                case T.B5.SUBMITTED:
-                    return [void 0, l.ClockIcon];
-                case T.B5.REJECTED:
-                    return [s.A.unsafe_rawColors.RED_400.css, o.P];
-                case T.B5.APPROVED:
-                    return [s.A.unsafe_rawColors.GREEN_360.css, d.CheckmarkLargeIcon];
-                default:
-                    return [void 0, c.PencilIcon];
-            }
-        })(t);
-    return L({ icon: i, color: n });
-}
-function L(e) {
+function C(e) {
     let { icon: t, color: n, isCurrentUserConnected: r, className: s } = e;
     return (0, i.jsx)(u.fk, {
         icon: t,
@@ -79,3 +49,39 @@ function L(e) {
         ...(null == n ? { disableColor: !0 } : { color: n }),
     });
 }
+n.d(
+    t,
+    {},
+    {
+        eW: function (e) {
+            let { guildJoinRequestStatus: t } = e,
+                [n, i] = (function (e) {
+                    switch (e) {
+                        case T.B5.SUBMITTED:
+                            return [void 0, l.ClockIcon];
+                        case T.B5.REJECTED:
+                            return [s.A.unsafe_rawColors.RED_400.css, o.P];
+                        case T.B5.APPROVED:
+                            return [s.A.unsafe_rawColors.GREEN_360.css, d.CheckmarkLargeIcon];
+                        default:
+                            return [void 0, c.PencilIcon];
+                    }
+                })(t);
+            return C({ icon: i, color: n });
+        },
+        hP: function (e) {
+            let { unavailable: t, conjureWorking: n, mediaState: r } = e;
+            return t
+                ? (0, i.jsx)(u.fk, { icon: (0, _.k)(g.A), disableColor: !0, className: S.yk })
+                : n
+                  ? C({ icon: m.D, className: S.lE })
+                  : null != r
+                    ? N(r)
+                    : void 0;
+        },
+        oi: N,
+        wN: function (e, t, n) {
+            return (0, i.jsx)(u.hV, { count: e, color: t, "aria-hidden": n });
+        },
+    },
+);

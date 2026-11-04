@@ -1,7 +1,7 @@
 e.exports = {
-    Xd: "errorPageContainer__5a176",
-    lr: "errorPageContent__5a176",
-    W9: "errorPageIllo__5a176",
-    mW: "errorPageTitle__5a176",
-    LS: "errorPagSubtitle__5a176",
+    Xd: "errorPageContainer_255Tjc",
+    lr: "errorPageContent_255Tjc",
+    W9: "errorPageIllo_255Tjc",
+    mW: "errorPageTitle_255Tjc",
+    LS: "errorPagSubtitle_255Tjc",
 };

@@ -1,5 +1,4 @@
-n.d(t, { A: () => l });
-var i = n(17928),
+var i = n(855986),
     r = n(73153);
 let a = { surveys: new Map() };
 class s extends i.Ay.Store {
@@ -13,3 +12,4 @@ let l = new s(r.h, {
         a.surveys.set(e.surveyId, e.surveyDetails);
     },
 });
+n.d(t, {}, { A: l });

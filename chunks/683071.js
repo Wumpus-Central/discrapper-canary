@@ -1,9 +1,8 @@
-n.d(t, { w: () => O });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(661531),
+    l = n(646514),
     o = n(84571),
     d = n(765178),
     c = n(821609),
@@ -13,7 +12,7 @@ var i = n(477900),
     A = n(695366),
     h = n(885574),
     f = n(738188),
-    I = n(432816),
+    I = n(116711),
     p = n(331322),
     m = n(834730),
     T = n(278817);
@@ -34,107 +33,113 @@ function S(e) {
 }
 let N = "body-sm/semibold",
     C = "body-sm/normal";
-function O(e) {
-    let { type: t, title: n, message: a, messageList: p, onDismiss: O, action: R, role: L, hidden: y } = e,
-        { i18n: D } = (0, I.G9)(),
-        b = r.useId(),
-        v = r.useId(),
-        P = (function (e) {
-            let t = { size: "xs", "aria-hidden": !0 };
-            switch (e) {
-                case "success":
-                    return (0, i.jsx)(E.y, { color: l.A.colors.ICON_FEEDBACK_POSITIVE, ...t });
-                case "critical":
-                    return (0, i.jsx)(A.E, { color: l.A.colors.ICON_FEEDBACK_CRITICAL, ...t });
-                case "info":
-                    return (0, i.jsx)(h.CircleInformationIcon, { color: l.A.colors.ICON_FEEDBACK_INFO, ...t });
-                default:
-                    return (0, i.jsx)(f.WarningIcon, { color: l.A.colors.ICON_FEEDBACK_WARNING, ...t });
-            }
-        })(t),
-        M = (function (e, t) {
-            switch (e) {
-                case "critical":
-                    return t.FEEDBACK_CRITICAL_ICON_A11Y_LABEL;
-                case "warning":
-                    return t.FEEDBACK_WARNING_ICON_A11Y_LABEL;
-                case "info":
-                    return t.FEEDBACK_INFO_ICON_A11Y_LABEL;
-                case "success":
-                    return t.FEEDBACK_POSITIVE_ICON_A11Y_LABEL;
-            }
-        })(t, D),
-        U = [M, (0, o.O)(n), (0, o.O)(a), ...(p ?? []).map(o.O)].filter(Boolean).join(", ");
-    return (
-        r.useEffect(() => {
-            "status" !== L || y || d.O.announce(U, "polite");
-        }, [L, y, U]),
-        (0, i.jsx)(S, {
-            hidden: y,
-            children: (0, i.jsxs)("div", {
-                role: "alert" === L ? "alert" : void 0,
-                className: s()(T.container, T[t]),
-                children: [
-                    (0, i.jsxs)("div", {
-                        className: T.iconAndTextContainer,
+n.d(
+    t,
+    {},
+    {
+        w: function (e) {
+            let { type: t, title: n, message: a, messageList: p, onDismiss: O, action: R, role: L, hidden: y } = e,
+                { i18n: D } = (0, I.G9)(),
+                b = r.useId(),
+                v = r.useId(),
+                P = (function (e) {
+                    let t = { size: "xs", "aria-hidden": !0 };
+                    switch (e) {
+                        case "success":
+                            return (0, i.jsx)(E.y, { color: l.A.colors.ICON_FEEDBACK_POSITIVE, ...t });
+                        case "critical":
+                            return (0, i.jsx)(A.E, { color: l.A.colors.ICON_FEEDBACK_CRITICAL, ...t });
+                        case "info":
+                            return (0, i.jsx)(h.CircleInformationIcon, { color: l.A.colors.ICON_FEEDBACK_INFO, ...t });
+                        default:
+                            return (0, i.jsx)(f.WarningIcon, { color: l.A.colors.ICON_FEEDBACK_WARNING, ...t });
+                    }
+                })(t),
+                M = (function (e, t) {
+                    switch (e) {
+                        case "critical":
+                            return t.FEEDBACK_CRITICAL_ICON_A11Y_LABEL;
+                        case "warning":
+                            return t.FEEDBACK_WARNING_ICON_A11Y_LABEL;
+                        case "info":
+                            return t.FEEDBACK_INFO_ICON_A11Y_LABEL;
+                        case "success":
+                            return t.FEEDBACK_POSITIVE_ICON_A11Y_LABEL;
+                    }
+                })(t, D),
+                U = [M, (0, o.O)(n), (0, o.O)(a), ...(p ?? []).map(o.O)].filter(Boolean).join(", ");
+            return (
+                r.useEffect(() => {
+                    "status" !== L || y || d.O.announce(U, "polite");
+                }, [L, y, U]),
+                (0, i.jsx)(S, {
+                    hidden: y,
+                    children: (0, i.jsxs)("div", {
+                        role: "alert" === L ? "alert" : void 0,
+                        className: s()(T.container, T[t]),
                         children: [
-                            (0, i.jsx)(m.E, {
-                                variant: null != n ? N : C,
-                                color: "none",
-                                className: T.iconContainer,
-                                children: P,
-                            }),
                             (0, i.jsxs)("div", {
-                                className: s()(T.contentsContainer, { [T.vertical]: null != O }),
+                                className: T.iconAndTextContainer,
                                 children: [
+                                    (0, i.jsx)(m.E, {
+                                        variant: null != n ? N : C,
+                                        color: "none",
+                                        className: T.iconContainer,
+                                        children: P,
+                                    }),
                                     (0, i.jsxs)("div", {
-                                        className: T.copyContainer,
+                                        className: s()(T.contentsContainer, { [T.vertical]: null != O }),
                                         children: [
-                                            (0, i.jsxs)(_.A, { id: b, children: [M, ":"] }),
-                                            null == n
-                                                ? null
-                                                : (0, i.jsx)(m.E, {
-                                                      id: v,
-                                                      variant: N,
-                                                      color: "text-strong",
-                                                      children: n,
-                                                  }),
-                                            (0, i.jsx)(m.E, {
-                                                id: null == n ? v : void 0,
-                                                variant: C,
-                                                color: "text-strong",
-                                                children: null != p ? (0, i.jsx)(g, { intro: a, items: p }) : a,
+                                            (0, i.jsxs)("div", {
+                                                className: T.copyContainer,
+                                                children: [
+                                                    (0, i.jsxs)(_.A, { id: b, children: [M, ":"] }),
+                                                    null == n
+                                                        ? null
+                                                        : (0, i.jsx)(m.E, {
+                                                              id: v,
+                                                              variant: N,
+                                                              color: "text-strong",
+                                                              children: n,
+                                                          }),
+                                                    (0, i.jsx)(m.E, {
+                                                        id: null == n ? v : void 0,
+                                                        variant: C,
+                                                        color: "text-strong",
+                                                        children: null != p ? (0, i.jsx)(g, { intro: a, items: p }) : a,
+                                                    }),
+                                                ],
                                             }),
+                                            null == R
+                                                ? null
+                                                : (0, i.jsx)(c.$, {
+                                                      variant: "secondary",
+                                                      size: "sm",
+                                                      text: R.text,
+                                                      onClick: R.onClick,
+                                                      loading: R.loading,
+                                                  }),
                                         ],
                                     }),
-                                    null == R
-                                        ? null
-                                        : (0, i.jsx)(c.$, {
-                                              variant: "secondary",
-                                              size: "sm",
-                                              text: R.text,
-                                              onClick: R.onClick,
-                                              loading: R.loading,
-                                          }),
                                 ],
                             }),
+                            null != O
+                                ? (0, i.jsx)(m.E, {
+                                      variant: null != n ? N : C,
+                                      color: "none",
+                                      className: T.iconContainer,
+                                      children: (0, i.jsx)(u.J, {
+                                          "aria-label": D.DISMISS_BUTTON_LABEL,
+                                          "aria-describedby": `${b} ${v}`,
+                                          size: "sm",
+                                          onClick: O,
+                                      }),
+                                  })
+                                : null,
                         ],
                     }),
-                    null != O
-                        ? (0, i.jsx)(m.E, {
-                              variant: null != n ? N : C,
-                              color: "none",
-                              className: T.iconContainer,
-                              children: (0, i.jsx)(u.J, {
-                                  "aria-label": D.DISMISS_BUTTON_LABEL,
-                                  "aria-describedby": `${b} ${v}`,
-                                  size: "sm",
-                                  onClick: O,
-                              }),
-                          })
-                        : null,
-                ],
-            }),
-        })
-    );
-}
+                })
+            );
+        },
+    },
+);

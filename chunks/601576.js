@@ -1,7 +1,7 @@
 n.exports = {
-    wx: "header_b1585f",
-    $J: "linkButton_b1585f",
-    xU: "linkTextContainer_b1585f",
-    wP: "linkIcon_b1585f",
-    nV: "linksContainer_b1585f",
+    wx: "header_nlOah7",
+    $J: "linkButton_nlOah7",
+    xU: "linkTextContainer_nlOah7",
+    wP: "linkIcon_nlOah7",
+    nV: "linksContainer_nlOah7",
 };

@@ -1,4 +1,3 @@
-n.d(t, { G9: () => c, Im: () => d, ZQ: () => s, sl: () => o, wJ: () => l, yZ: () => a });
 var i,
     r,
     a = (((i = {})[(i.BACKGROUND = 0)] = "BACKGROUND"), i),
@@ -12,7 +11,5 @@ var i,
         (r[(r.OPTION_9 = 9)] = "OPTION_9"),
         (r[(r.OPTION_10 = 10)] = "OPTION_10"),
         r);
-let l = [7, 8, 9, 10],
-    o = [7, 8, 9, 10, 0, 1, 2, 3].reduce((e, t, n) => ({ ...e, [t]: n }), {}),
-    d = { width: 1280, height: 720 },
-    c = 0xa00000;
+let l = [7, 8, 9, 10, 0, 1, 2, 3].reduce((e, t, n) => ({ ...e, [t]: n }), {});
+n.d(t, {}, { G9: 0xa00000, Im: { width: 1280, height: 720 }, ZQ: s, sl: l, wJ: [7, 8, 9, 10], yZ: a });

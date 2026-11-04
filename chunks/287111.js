@@ -1,24 +1,11 @@
-(n.d(t, {
-    G: () => w,
-    GU: () => p,
-    RQ: () => E,
-    XR: () => N,
-    fD: () => C,
-    iW: () => v,
-    lc: () => R,
-    rh: () => y,
-    xJ: () => U,
-}),
-    n(323874),
-    n(14289),
-    n(35956));
+(n(323874), n(14289), n(35956));
 var r = n(73153),
     l = n(839214),
-    a = n(322227),
+    a = n(540665),
     i = n(666476),
     s = n(989145),
-    o = n(809526),
-    c = n(105292);
+    o = n(191850),
+    c = n(792996);
 let u = [],
     d = 1,
     f = (0, l.D)(() => ({ draftsByProject: {} }));
@@ -65,73 +52,11 @@ function j(e, t) {
 function v(e) {
     return c.intl.formatToPlainString(o.default.JZ59Bo, { size: (0, i.sM)((0, i.Ju)(e)) });
 }
-function y(e, t, n, r) {
-    return (0, i.Oq)(t.size, r) ? (0, s.c9)(e, t, n, r) : Promise.resolve({ errorText: v(r) });
-}
-function w(e, t) {
-    return f.useState((n) => m(n, e, t));
-}
-function C(e, t, n) {
-    if (0 === n.length) return;
-    let r = n.map((e) => {
-        let { draft: t, upload: n } = e;
-        return { draft: { ...t, localId: d++ }, upload: n };
-    });
-    for (let { draft: n, upload: l } of (h(e, t, [
-        ...p(e, t),
-        ...r.map((e) => {
-            let { draft: t } = e;
-            return t;
-        }),
-    ]),
-    r))
-        l?.().then(
-            (r) => {
-                if ("errorText" in r) return void g(e, t, n.localId, { status: "error", errorText: r.errorText });
-                let { converted: l, ...a } = r;
-                g(e, t, n.localId, { ...l, status: "ready", ref: a })
-                    ? setTimeout(
-                          () => g(e, t, n.localId, { status: "error", errorText: c.intl.string(o.default.E7dS5n) }),
-                          i.o2 - 3e5,
-                      )
-                    : x(e, a.id);
-            },
-            (r) => {
-                (console.error("[conjure] attachment upload failed", r),
-                    g(e, t, n.localId, { status: "error", errorText: c.intl.string(o.default["kUw/b1"]) }));
-            },
-        );
-}
-function N(e, t, n) {
-    let r = p(e, t),
-        l = r.find((e) => e.localId === n);
-    null != l &&
-        (b(e, l),
-        h(
-            e,
-            t,
-            r.filter((e) => e.localId !== n),
-        ));
-}
-function U(e, t) {
-    let n = p(e, t);
-    if (0 !== n.length) {
-        for (let t of n) b(e, t);
-        h(e, t, u);
-    }
-}
-function R(e, t) {
+function y(e, t) {
     let n = p(e, t);
     if (0 === n.length) return [];
     for (let e of n) null != e.previewUrl && URL.revokeObjectURL(e.previewUrl);
     return (h(e, t, u), n.flatMap((e) => (null != e.ref ? [e.ref] : [])));
-}
-function E(e, t) {
-    let { clarificationAnswers: n, attachments: r = [] } =
-            arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        l = p(e, "chat"),
-        i = l.length > 0 && l.every((e) => "ready" === e.status) ? R(e, "chat") : [];
-    (0, a.sendUserMessage)(e, t, [...r, ...i], { clarificationAnswers: n });
 }
 (r.h.subscribe("LOGOUT", () => {
     for (let e of Object.keys(f.getState().draftsByProject)) j(e, { deleteFromWorker: !0 });
@@ -139,4 +64,80 @@ function E(e, t) {
     r.h.subscribe("CONJURE_PROJECT_DELETE_SUCCESS", (e) => {
         let { projectId: t } = e;
         j(t, { deleteFromWorker: !1 });
-    }));
+    }),
+    n.d(
+        t,
+        {},
+        {
+            G: function (e, t) {
+                return f.useState((n) => m(n, e, t));
+            },
+            GU: p,
+            RQ: function (e, t) {
+                let { clarificationAnswers: n, attachments: r = [] } =
+                        arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                    l = p(e, "chat"),
+                    i = l.length > 0 && l.every((e) => "ready" === e.status) ? y(e, "chat") : [];
+                (0, a.dv)(e, t, [...r, ...i], { clarificationAnswers: n });
+            },
+            XR: function (e, t, n) {
+                let r = p(e, t),
+                    l = r.find((e) => e.localId === n);
+                null != l &&
+                    (b(e, l),
+                    h(
+                        e,
+                        t,
+                        r.filter((e) => e.localId !== n),
+                    ));
+            },
+            fD: function (e, t, n) {
+                if (0 === n.length) return;
+                let r = n.map((e) => {
+                    let { draft: t, upload: n } = e;
+                    return { draft: { ...t, localId: d++ }, upload: n };
+                });
+                for (let { draft: n, upload: l } of (h(e, t, [
+                    ...p(e, t),
+                    ...r.map((e) => {
+                        let { draft: t } = e;
+                        return t;
+                    }),
+                ]),
+                r))
+                    l?.().then(
+                        (r) => {
+                            if ("errorText" in r)
+                                return void g(e, t, n.localId, { status: "error", errorText: r.errorText });
+                            let { converted: l, ...a } = r;
+                            g(e, t, n.localId, { ...l, status: "ready", ref: a })
+                                ? setTimeout(
+                                      () =>
+                                          g(e, t, n.localId, {
+                                              status: "error",
+                                              errorText: c.intl.string(o.default.E7dS5n),
+                                          }),
+                                      i.o2 - 3e5,
+                                  )
+                                : x(e, a.id);
+                        },
+                        (r) => {
+                            (console.error("[conjure] attachment upload failed", r),
+                                g(e, t, n.localId, { status: "error", errorText: c.intl.string(o.default["kUw/b1"]) }));
+                        },
+                    );
+            },
+            iW: v,
+            lc: y,
+            rh: function (e, t, n, r) {
+                return (0, i.Oq)(t.size, r) ? (0, s.c9)(e, t, n, r) : Promise.resolve({ errorText: v(r) });
+            },
+            xJ: function (e, t) {
+                let n = p(e, t);
+                if (0 !== n.length) {
+                    for (let t of n) b(e, t);
+                    h(e, t, u);
+                }
+            },
+        },
+    ));

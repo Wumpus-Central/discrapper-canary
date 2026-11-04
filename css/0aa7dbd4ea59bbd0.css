@@ -1,0 +1,235 @@
+.previewContainer_CM-7MR {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    height: 100%;
+    overflow: hidden
+}
+
+.quote_CM-7MR {
+    background-color: var(--border-subtle);
+    border-radius: 2px;
+    flex-shrink: 0;
+    height: 100%;
+    width: 4px
+}
+
+.content_CM-7MR {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 6px;
+    padding: 4px 0
+}
+
+.previewImage_CM-7MR {
+    height: auto;
+    max-height: 225px;
+    max-width: 225px;
+    width: auto
+}
+
+.icon_NKPsbl {
+    display: block;
+    flex: 0 0 auto;
+    height: 20px;
+    width: 20px
+}
+
+.iconWithGuildIcon_NKPsbl {
+    background: var(--background-mod-strong);
+    border-radius: var(--radius-round);
+    color: var(--text-subtle);
+    height: 12px;
+    margin-inline-start: 12px;
+    margin-top: -15px;
+    overflow: visible;
+    padding: 4px;
+    position: relative;
+    width: 12px
+}
+
+.channelGuildIcon_NKPsbl {
+    border-radius: var(--radius-sm)
+}
+
+.acronym_NKPsbl {
+    align-items: center;
+    background-color: var(--background-mod-strong);
+    color: var(--text-default);
+    display: flex;
+    font-weight: var(--font-weight-medium);
+    justify-content: center;
+    line-height: 1.2em;
+    white-space: nowrap
+}
+
+.search_yW5Dvc {
+    overflow: visible
+}
+
+.titleLine_yW5Dvc {
+    align-items: start;
+    flex: 1
+}
+
+.destinationRow_yW5Dvc,
+.titleLine_yW5Dvc {
+    display: flex;
+    justify-content: space-between
+}
+
+.destinationRow_yW5Dvc {
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-direction: row;
+    margin-inline: 16px 8px;
+    min-height: 48px;
+    padding: 0 8px
+}
+
+.destinationRow_yW5Dvc.disabled_yW5Dvc {
+    cursor: not-allowed
+}
+
+.destinationRow_yW5Dvc:not(.disabled_yW5Dvc):hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.identity_yW5Dvc {
+    align-items: center;
+    flex-direction: row;
+    flex-shrink: 1;
+    gap: 12px
+}
+
+.identity_yW5Dvc,
+.labels_yW5Dvc {
+    display: flex;
+    overflow: hidden
+}
+
+.labels_yW5Dvc {
+    flex-direction: column;
+    margin: 4px 0
+}
+
+.label_yW5Dvc {
+    color: var(--text-strong)
+}
+
+.sublabel_yW5Dvc {
+    color: var(--text-muted)
+}
+
+.threadSubLabel_yW5Dvc {
+    align-items: center;
+    display: flex
+}
+
+.subLabelIcon_yW5Dvc {
+    height: 12px;
+    margin-inline-end: 2px;
+    width: 12px
+}
+
+.subLabelSeparator_yW5Dvc {
+    margin: 0 4px
+}
+
+.disabled_yW5Dvc .iconWrapper_yW5Dvc {
+    opacity: 50%
+}
+
+.disabled_yW5Dvc .label_yW5Dvc,
+.disabled_yW5Dvc .subLabel_yW5Dvc {
+    color: var(--text-muted)
+}
+
+.checkbox_yW5Dvc {
+    flex: 0;
+    margin-inline-start: 16px
+}
+
+.fauxButton_yW5Dvc {
+    pointer-events: none
+}
+
+.warningIcon_yW5Dvc {
+    color: var(--text-feedback-warning)
+}
+
+.noResults_yW5Dvc {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    margin: 0 32px;
+    text-align: center
+}
+
+.noResultsImg_yW5Dvc {
+    width: 200px
+}
+
+.spinnerContainer_yW5Dvc {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+.destinationRow_dhbHaH {
+    align-items: center;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 -8px;
+    min-height: 48px;
+    padding: 0 8px
+}
+
+.destinationRow_dhbHaH.pressable_dhbHaH {
+    cursor: pointer
+}
+
+.destinationRow_dhbHaH.disabled_dhbHaH {
+    cursor: not-allowed
+}
+
+.destinationRow_dhbHaH.pressable_dhbHaH:not(.disabled_dhbHaH):hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.identity_dhbHaH {
+    align-items: center;
+    flex-direction: row;
+    flex-shrink: 1;
+    gap: 12px
+}
+
+.identity_dhbHaH,
+.labels_dhbHaH {
+    display: flex;
+    overflow: hidden
+}
+
+.labels_dhbHaH {
+    flex-direction: column;
+    margin: 4px 0
+}
+
+.disabled_dhbHaH .iconWrapper_dhbHaH {
+    opacity: 50%
+}
+
+.trailing_dhbHaH {
+    flex: 0;
+    margin-inline-start: 16px
+}
+
+/*# sourceMappingURL=0aa7dbd4ea59bbd0.css.map*/

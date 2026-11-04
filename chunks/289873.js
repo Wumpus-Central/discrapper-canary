@@ -1,11 +1,10 @@
-n.d(t, { t: () => u, y: () => _ });
 var i,
     r = n(477900),
     a = n(582128),
     s = n(503698),
     l = n.n(s),
     o = n(844222),
-    d = n(432816),
+    d = n(116711),
     c = n(244875),
     u =
         (((i = {}).WANDERING_CUBES = "wanderingCubes"),
@@ -81,4 +80,4 @@ function _(e) {
         }),
     });
 }
-_.Type = u;
+((_.Type = u), n.d(t, {}, { t: u, y: _ }));

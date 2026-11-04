@@ -1,4 +1,3 @@
-s.d(e, { default: () => v });
 var i = s(477900),
     a = s(582128),
     n = s(189213),
@@ -11,7 +10,7 @@ var i = s(477900),
     g = s(414121),
     m = s(287809),
     x = s(464477),
-    u = s(105292),
+    u = s(792996),
     p = s(902123);
 function b(t) {
     let { image: e, label: s, text: a, children: n } = t;
@@ -128,4 +127,4 @@ class j extends a.PureComponent {
         (this.setState({ isVerifying: !1 }), e(), t?.());
     };
 }
-let v = j;
+s.d(e, {}, { default: j });

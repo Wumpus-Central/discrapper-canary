@@ -1,0 +1,229 @@
+.inputs_FOCwq3 {
+    background: var(--background-base-lowest);
+    border-radius: 4px;
+    border-style: none;
+    color: var(--text-default);
+    width: 100px
+}
+
+.hexInput_FOCwq3 {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.previewsContainer_FOCwq3 {
+    flex: 0 0 auto;
+    padding-bottom: var(--space-16)
+}
+
+.preview_FOCwq3 {
+    background: var(--background-base-lowest);
+    padding: 8px
+}
+
+.preview_FOCwq3,
+.simArea_FOCwq3 {
+    border-radius: 8px;
+    width: 100%
+}
+
+.simArea_FOCwq3 {
+    background: var(--background-base-lower);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 10px;
+    padding-inline-end: 8px;
+    padding-top: 10px;
+    position: relative
+}
+
+.themePicker_FOCwq3 {
+    margin-top: 8px
+}
+
+.controls_FOCwq3 {
+    flex-direction: column;
+    margin-bottom: 32px;
+    margin-top: 8px
+}
+
+.controls_FOCwq3,
+.toggles_FOCwq3 {
+    display: flex;
+    gap: 8px
+}
+
+.dmlist_FOCwq3 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.dark_FOCwq3 {
+    background: #2b2d31
+}
+
+.light_FOCwq3 {
+    background: #f2f3f5
+}
+
+.overflowTooltip_FOCwq3 {
+    margin-inline-start: 8px;
+    max-width: 224px;
+    position: relative
+}
+
+.overflowTooltip_FOCwq3.fullWidth_FOCwq3 {
+    max-width: 100%
+}
+
+.clanTag_FOCwq3 {
+    margin-inline-start: 4px
+}
+
+.main_FOCwq3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-16)
+}
+
+.flex_FOCwq3 {
+    align-items: center;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.buttons_FOCwq3,
+.flex_FOCwq3 {
+    display: flex;
+    gap: 8px
+}
+
+.buttons_FOCwq3 {
+    flex: 0 0 250px;
+    flex-direction: column
+}
+
+.uploaded_FOCwq3 {
+    align-items: center;
+    background: var(--background-base-lowest);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 8px;
+    position: relative;
+    width: 250px
+}
+
+.uploadedImg_FOCwq3 {
+    max-height: 50px;
+    max-width: 80%
+}
+
+.uploadedArea_FOCwq3 {
+    background: var(--background-base-lower);
+    border-radius: 8px;
+    flex-direction: column;
+    height: auto;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.uploadedArea_FOCwq3,
+.uploadedControls_FOCwq3 {
+    display: flex;
+    gap: 8px
+}
+
+.xicon_FOCwq3 {
+    cursor: pointer;
+    inset-inline-end: 8px;
+    position: absolute;
+    top: 8px
+}
+
+.previews_FOCwq3 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 432px;
+    min-width: 264px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    resize: none
+}
+
+.label_FOCwq3 {
+    margin-inline-start: 8px
+}
+
+.rtcSim_FOCwq3 {
+    border-radius: 8px
+}
+
+.rtcSim_FOCwq3>div>div {
+    padding-inline: 10px !important
+}
+
+.theme-dark .rtcSim_FOCwq3 {
+    background: var(--background-gradient-lowest, var(--background-mod-normal))
+}
+
+.theme-light .rtcSim_FOCwq3 {
+    background: var(--background-gradient-low, var(--background-mod-normal))
+}
+
+.resizeHandle_FOCwq3 {
+    align-items: center;
+    background: var(--background-base-lowest);
+    border-radius: 4px;
+    bottom: 0;
+    cursor: ew-resize;
+    display: flex;
+    inset-inline-end: -2px;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    transition: background-color .2s ease;
+    width: 8px;
+    z-index: 10
+}
+
+.resizeHandle_FOCwq3:hover {
+    background: var(--background-base-lower)
+}
+
+.resizeHandle_FOCwq3:before {
+    background: var(--text-muted);
+    border-radius: 1px;
+    content: "";
+    height: 20px;
+    width: 2px
+}
+
+.resizeHandle_FOCwq3:after {
+    background: var(--text-muted);
+    border-radius: 1px;
+    content: "";
+    height: 20px;
+    inset-inline-start: 50%;
+    margin-inline-start: 2px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px
+}
+
+/*# sourceMappingURL=52db3a72bc3206bf.css.map*/

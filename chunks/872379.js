@@ -1,4 +1,3 @@
-t.d(i, { l: () => n });
 var R,
     n =
         (((R = {})[(R.DROP = 0)] = "DROP"),
@@ -8,3 +7,4 @@ var R,
         (R[(R.FIRST_DRAW = 4)] = "FIRST_DRAW"),
         (R[(R.ERROR = 5)] = "ERROR"),
         R);
+t.d(i, {}, { l: n });

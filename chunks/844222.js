@@ -1,4 +1,3 @@
-n.d(t, { C: () => i });
 let i = n(582128).createContext({
     reducedMotion: { enabled: !1, rawValue: "no-preference" },
     prefersCrossfades: !1,
@@ -9,3 +8,4 @@ let i = n(582128).createContext({
     switchIconsEnabled: !1,
     minToastDurationMs: 0,
 });
+n.d(t, {}, { C: i });

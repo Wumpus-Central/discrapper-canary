@@ -1,4 +1,3 @@
-t.d(r, { A: () => S });
 var l = t(477900),
     s = t(582128),
     n = t(503698),
@@ -123,4 +122,4 @@ class p extends s.PureComponent {
         return (0, l.jsxs)("div", { className: e, children: [r ? this.renderHeader() : null, this.renderBody()] });
     }
 }
-let S = p;
+t.d(r, {}, { A: p });

@@ -1,7 +1,7 @@
-n.d(t, { K: () => r });
 var i,
     r =
         (((i = {})[(i.APPLICATION_DIRECTORY = 1)] = "APPLICATION_DIRECTORY"),
         (i[(i.APP_LAUNCHER_IN_TEXT = 2)] = "APP_LAUNCHER_IN_TEXT"),
         (i[(i.APP_LAUNCHER_IN_VOICE_BANNER = 3)] = "APP_LAUNCHER_IN_VOICE_BANNER"),
         i);
+n.d(t, {}, { K: r });

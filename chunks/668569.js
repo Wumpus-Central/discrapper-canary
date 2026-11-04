@@ -1,7 +1,6 @@
-e.d(i, { default: () => m });
 var r = e(477900);
 e(582128);
-var s = e(980707),
+var s = e(165862),
     t = e(477782),
     d = e(442433),
     l = e(820284),
@@ -9,13 +8,13 @@ var s = e(980707),
     A = e(793574),
     a = e(688810),
     o = e(50268),
-    h = e(844065),
+    h = e(106401),
     u = e(803664),
     x = e(29293),
     j = e(509302),
     E = e(497600),
     X = e(239211),
-    p = e(373397),
+    p = e(949674),
     N = e(399476),
     _ = e(889460),
     C = e(301541),
@@ -25,7 +24,7 @@ var s = e(980707),
     f = e(972432),
     g = e(77544),
     k = e(652215),
-    v = e(105292);
+    v = e(792996);
 function I(n) {
     let {
             user: i,
@@ -77,10 +76,20 @@ function I(n) {
         ],
     });
 }
-function m(n) {
-    let { analyticsLocations: i } = (0, a.Ay)(n.analyticsLocations ?? [], A.A.CONTEXT_MENU, A.A.USER_GENERIC_MENU);
-    return (0, r.jsx)(a.f5, {
-        value: i,
-        children: (0, r.jsx)(l.A, { object: k.ZSU.CONTEXT_MENU, children: (0, r.jsx)(I, { ...n }) }),
-    });
-}
+e.d(
+    i,
+    {},
+    {
+        default: function (n) {
+            let { analyticsLocations: i } = (0, a.Ay)(
+                n.analyticsLocations ?? [],
+                A.A.CONTEXT_MENU,
+                A.A.USER_GENERIC_MENU,
+            );
+            return (0, r.jsx)(a.f5, {
+                value: i,
+                children: (0, r.jsx)(l.A, { object: k.ZSU.CONTEXT_MENU, children: (0, r.jsx)(I, { ...n }) }),
+            });
+        },
+    },
+);

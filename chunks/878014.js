@@ -7,10 +7,15 @@ function i(e) {
             ? (e.embedded_surfaces ?? [])
             : [];
 }
-function r(e) {
-    return i(e).length > 0;
-}
-function a(e, t) {
-    return i(e).includes(t);
-}
-n.d(t, { D: () => r, W: () => a });
+n.d(
+    t,
+    {},
+    {
+        D: function (e) {
+            return i(e).length > 0;
+        },
+        W: function (e, t) {
+            return i(e).includes(t);
+        },
+    },
+);

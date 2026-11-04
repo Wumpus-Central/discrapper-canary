@@ -1,11 +1,11 @@
-e.exports = {
-    kL: "container__2fba1",
-    qr: "footer__2fba1",
-    tp: "table__2fba1",
-    wx: "header__2fba1",
-    rf: "body__2fba1",
-    nM: "row__2fba1",
-    fi: "column__2fba1",
-    QP: "columnText__2fba1",
-    Hn: "cell__2fba1",
+t.exports = {
+    kL: "container_72PQI1",
+    qr: "footer_72PQI1",
+    tp: "table_72PQI1",
+    wx: "header_72PQI1",
+    rf: "body_72PQI1",
+    nM: "row_72PQI1",
+    fi: "column_72PQI1",
+    QP: "columnText_72PQI1",
+    Hn: "cell_72PQI1",
 };

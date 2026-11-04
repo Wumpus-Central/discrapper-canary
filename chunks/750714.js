@@ -1,4 +1,3 @@
-n.d(t, { Je: () => l, uH: () => s, xY: () => o });
 var i,
     r,
     a = n(873298),
@@ -17,3 +16,4 @@ let o = new Map([
     [1, a.he.NON_FRIENDS],
     [2, a.he.FRIENDS_AND_NON_FRIENDS],
 ]);
+n.d(t, {}, { Je: l, uH: s, xY: o });

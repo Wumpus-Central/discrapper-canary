@@ -1,6 +1,6 @@
 e.exports = {
-    iS: "newMembersNotice_acdcc0",
-    Lb: "memberNoticeAction_acdcc0",
-    Fu: "memberNoticeActionButton_acdcc0",
-    Ke: "memberNoticeActionIcon_acdcc0",
+    iS: "newMembersNotice_98M8Fe",
+    Lb: "memberNoticeAction_98M8Fe",
+    Fu: "memberNoticeActionButton_98M8Fe",
+    Ke: "memberNoticeActionIcon_98M8Fe",
 };

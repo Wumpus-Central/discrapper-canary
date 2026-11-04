@@ -1,29 +1,34 @@
-c.d(u, { X: () => s });
 var t = c(582128),
-    r = c(17928),
+    r = c(855986),
     e = c(77468),
-    l = c(30370);
-function s(n) {
-    let u = (0, r.bG)([l.A], () => (null != n ? l.A.getAccount(null, n) : null)),
-        c = (0, r.bG)([l.A], () => l.A.isFetching()),
-        s = null != u && !u.revoked;
-    return {
-        loading: c,
-        hasConnection: s,
-        canConnect: null != n,
-        startConnection: t.useCallback(
-            async (u) => {
-                if (null == n) return { success: !1 };
-                try {
-                    let c = await e.A.authorize(n, { location: u ?? "Account Linking" });
-                    if (c.body?.url != null) return { success: !0, url: c.body.url };
-                    return { success: !1 };
-                } catch (n) {
-                    return { success: !1 };
-                }
-            },
-            [n],
-        ),
-        account: u,
-    };
-}
+    l = c(417869);
+c.d(
+    u,
+    {},
+    {
+        X: function (n) {
+            let u = (0, r.bG)([l.A], () => (null != n ? l.A.getAccount(null, n) : null)),
+                c = (0, r.bG)([l.A], () => l.A.isFetching()),
+                s = null != u && !u.revoked;
+            return {
+                loading: c,
+                hasConnection: s,
+                canConnect: null != n,
+                startConnection: t.useCallback(
+                    async (u) => {
+                        if (null == n) return { success: !1 };
+                        try {
+                            let c = await e.A.authorize(n, { location: u ?? "Account Linking" });
+                            if (c.body?.url != null) return { success: !0, url: c.body.url };
+                            return { success: !1 };
+                        } catch (n) {
+                            return { success: !1 };
+                        }
+                    },
+                    [n],
+                ),
+                account: u,
+            };
+        },
+    },
+);

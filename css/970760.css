@@ -1,4 +1,4 @@
-.bannerButton_fb7f94 {
+.bannerButton_C4gRrZ {
     align-items: center;
     background: var(--control-overlay-secondary-background-default);
     border: 1px solid var(--opacity-white-8);
@@ -13,24 +13,24 @@
     width: var(--custom-button-button-sm-height)
 }
 
-.bannerButton_fb7f94:active,
-.bannerButton_fb7f94:hover {
+.bannerButton_C4gRrZ:active,
+.bannerButton_C4gRrZ:hover {
     background: var(--control-overlay-secondary-background-active);
     transition: background .15s ease-out
 }
 
-.bannerButton_fb7f94.disabled_fb7f94 {
+.bannerButton_C4gRrZ.disabled_C4gRrZ {
     cursor: normal;
     opacity: .5
 }
 
-.spinner_fb7f94 {
+.spinner_C4gRrZ {
     height: 16px;
     width: 16px
 }
 
-.spinner_fb7f94 .spinnerInner_fb7f94 {
+.spinner_C4gRrZ .spinnerInner_C4gRrZ {
     stroke: var(--interactive-text-active)
 }
 
-/*# sourceMappingURL=970760.8fc004c3e38778d6.css.map*/
+/*# sourceMappingURL=970760.f4a69dffd843e56f.css.map*/

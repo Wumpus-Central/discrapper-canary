@@ -1,18 +1,14 @@
-n.d(t, { Ok: () => E, se: () => c, tj: () => _ });
 var i = n(582128),
     r = n(557361);
 let a = "u" < typeof document ? void 0 : document,
     s = null == a ? () => void 0 : r.Ay,
     l = null == a ? i.useEffect : i.useLayoutEffect,
     o = 0,
-    d = new Set();
-function c() {
-    return r.rx.isActive();
-}
-let u = { current: !0 };
-function _(e) {
+    d = new Set(),
+    c = { current: !0 };
+function u(e) {
     var t, n, r;
-    let c,
+    let u,
         _,
         E,
         A,
@@ -21,7 +17,7 @@ function _(e) {
     ((t = f.returnRef),
         (n = !0 === f.disable),
         (r = !0 === f.disableReturn),
-        (c = i.useRef(a?.activeElement)),
+        (u = i.useRef(a?.activeElement)),
         (_ = i.useRef(null)),
         (E = i.useRef(t)),
         (A = i.useRef(n)),
@@ -36,7 +32,7 @@ function _(e) {
                 () => {
                     if (!A.current && !h.current) {
                         let t = E.current?.current ?? null;
-                        if (null != (t ?? c.current)) {
+                        if (null != (t ?? u.current)) {
                             let n = !0,
                                 i = [],
                                 r = _.current?.ownerDocument ?? a,
@@ -57,10 +53,10 @@ function _(e) {
                             n &&
                                 requestAnimationFrame(() => {
                                     let t = E.current?.current ?? null,
-                                        n = t?.isConnected ? t : c.current,
+                                        n = t?.isConnected ? t : u.current,
                                         r = _.current?.ownerDocument ?? a,
                                         s = r?.activeElement,
-                                        u = l || o;
+                                        c = l || o;
                                     Array.from(d).some((t) => {
                                         let i, r;
                                         return (
@@ -69,7 +65,7 @@ function _(e) {
                                             t.containerElementRef.current?.contains(s) === !0 &&
                                             ((i = null != e && t.sequence < e.sequence),
                                             (r = null != n && t.containerElementRef.current?.contains(n) === !0),
-                                            !u || !i || !r)
+                                            !c || !i || !r)
                                         );
                                     }) ||
                                         null == n ||
@@ -85,9 +81,19 @@ function _(e) {
         }, []));
     let I = i.useMemo(() => f.attachTo ?? e.current?.ownerDocument ?? a, [f.attachTo, e]),
         p = i.useRef(null);
-    return s(f.disable ? p : e, { disable: f.disable, disableReturnRef: u, attachTo: I });
+    return s(f.disable ? p : e, { disable: f.disable, disableReturnRef: c, attachTo: I });
 }
-function E(e) {
-    let { disableReturn: t } = e;
-    return (_(e.containerRef, { disableReturn: t }), e.children);
-}
+n.d(
+    t,
+    {},
+    {
+        Ok: function (e) {
+            let { disableReturn: t } = e;
+            return (u(e.containerRef, { disableReturn: t }), e.children);
+        },
+        se: function () {
+            return r.rx.isActive();
+        },
+        tj: u,
+    },
+);

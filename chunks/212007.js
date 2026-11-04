@@ -1,4 +1,3 @@
-a.d(t, { T: () => d });
 var s = a(196765),
     l = a(537812),
     n = a(121894),
@@ -16,12 +15,18 @@ let i = (0, s.v)(
         { name: "report-to-mod-channel-storage", storage: (0, l.KU)(() => r.A) },
     ),
 );
-function d(e) {
-    let t = i();
-    return null == e
-        ? { showResolvedFlags: !0, setShowResolvedFlags: () => {} }
-        : {
-              showResolvedFlags: t.getShowResolvedFlags(e) ?? !0,
-              setShowResolvedFlags: (a) => t.setShowResolvedFlags(e, a),
-          };
-}
+a.d(
+    t,
+    {},
+    {
+        T: function (e) {
+            let t = i();
+            return null == e
+                ? { showResolvedFlags: !0, setShowResolvedFlags: () => {} }
+                : {
+                      showResolvedFlags: t.getShowResolvedFlags(e) ?? !0,
+                      setShowResolvedFlags: (a) => t.setShowResolvedFlags(e, a),
+                  };
+        },
+    },
+);

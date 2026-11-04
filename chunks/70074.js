@@ -1,7 +1,6 @@
 e.exports = {
-    Rm: "toggleButton__79243",
-    mQ: "standard__79243 toggleButton__79243",
-    GA: "labeled__79243 toggleButton__79243",
-    kD: "critical__79243 toggleButton__79243",
-    e7: "iconOnly__79243 toggleButton__79243",
+    mQ: "standard_9EByBZ toggleButton_9EByBZ",
+    GA: "labeled_9EByBZ toggleButton_9EByBZ",
+    kD: "critical_9EByBZ toggleButton_9EByBZ",
+    e7: "iconOnly_9EByBZ toggleButton_9EByBZ",
 };

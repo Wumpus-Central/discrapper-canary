@@ -1,26 +1,15 @@
-n.d(t, { T2: () => l, XW: () => a, xg: () => s });
 var r,
     i,
     o = n(875565);
-function a(e) {
-    return new l((t) => {
-        t(e);
-    });
-}
-function s(e) {
-    return new l((t, n) => {
-        n(e);
-    });
-}
 (((r = i || (i = {}))[(r.PENDING = 0)] = "PENDING"),
     (r[(r.RESOLVED = 1)] = "RESOLVED"),
     (r[(r.REJECTED = 2)] = "REJECTED"));
-class l {
+class a {
     constructor(e) {
-        (l.prototype.__init.call(this),
-            l.prototype.__init2.call(this),
-            l.prototype.__init3.call(this),
-            l.prototype.__init4.call(this),
+        (a.prototype.__init.call(this),
+            a.prototype.__init2.call(this),
+            a.prototype.__init3.call(this),
+            a.prototype.__init4.call(this),
             (this._state = i.PENDING),
             (this._handlers = []));
         try {
@@ -30,7 +19,7 @@ class l {
         }
     }
     then(e, t) {
-        return new l((n, r) => {
+        return new a((n, r) => {
             (this._handlers.push([
                 !1,
                 (t) => {
@@ -59,7 +48,7 @@ class l {
         return this.then((e) => e, e);
     }
     finally(e) {
-        return new l((t, n) => {
+        return new a((t, n) => {
             let r, i;
             return this.then(
                 (t) => {
@@ -105,3 +94,20 @@ class l {
         };
     }
 }
+n.d(
+    t,
+    {},
+    {
+        T2: a,
+        XW: function (e) {
+            return new a((t) => {
+                t(e);
+            });
+        },
+        xg: function (e) {
+            return new a((t, n) => {
+                n(e);
+            });
+        },
+    },
+);

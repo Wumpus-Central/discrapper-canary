@@ -1,0 +1,49 @@
+.contentContainer_D4E_zR {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden
+}
+
+.wumpusContainer_D4E_zR {
+    height: 120px
+}
+
+.header_D4E_zR {
+    overflow-wrap: anywhere;
+    padding: 0 var(--space-16);
+    text-align: center;
+    word-break: break-word
+}
+
+.textContainer_D4E_zR {
+    min-height: 40px;
+    text-align: center
+}
+
+.nameplatePreviewContainer_D4E_zR {
+    padding: var(--space-24);
+    position: relative;
+    width: 320px
+}
+
+.footer_D4E_zR {
+    margin-top: var(--space-32);
+    width: 100%
+}
+
+.nameplateGlow_D4E_zR {
+    inset-inline-start: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1
+}
+
+.nameplatePreview_D4E_zR {
+    background: var(--background-surface-highest);
+    z-index: 1
+}
+
+/*# sourceMappingURL=d38fe3656dc8e407.css.map*/

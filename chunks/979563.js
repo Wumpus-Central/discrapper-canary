@@ -1,4 +1,3 @@
-n.d(t, { d: () => r });
 var i,
     r =
         (((i = {}).MatchStart = "rl_match_start"),
@@ -35,3 +34,4 @@ var i,
         (i.FirstTouch = "rl_first_touch"),
         (i.OwnGoal = "rl_own_goal"),
         i);
+n.d(t, {}, { d: r });

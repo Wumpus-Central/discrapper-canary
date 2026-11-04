@@ -1,5 +1,4 @@
-n.d(t, { A: () => p });
-var i = n(636537),
+var i = n(620632),
     r = n(439372),
     a = n(924985),
     s = n(734057),
@@ -64,3 +63,4 @@ class I extends r.A {
     saveUserGuildSettingsBulk = h;
 }
 let p = new I();
+n.d(t, {}, { A: p });

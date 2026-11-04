@@ -1,6 +1,6 @@
 e.exports = {
-    $C: "previewWidget_db7c4c",
-    PV: "previewWidgetStack_db7c4c",
-    a9: "previewWidgetFull_db7c4c",
-    ql: "previewWidgetPopout_db7c4c",
+    $C: "previewWidget_No5Lww",
+    PV: "previewWidgetStack_No5Lww",
+    a9: "previewWidgetFull_No5Lww",
+    ql: "previewWidgetPopout_No5Lww",
 };

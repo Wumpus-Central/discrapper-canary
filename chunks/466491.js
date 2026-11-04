@@ -1,8 +1,8 @@
 e.exports = {
-    IO: "timeline__76ea6",
-    s_: "timelineGradient__76ea6",
-    xL: "marker__76ea6",
-    BC: "markerInner__76ea6",
-    Zg: "emoji__76ea6",
-    Or: "chatIcon__76ea6",
+    IO: "timeline_48eibG",
+    s_: "timelineGradient_48eibG",
+    xL: "marker_48eibG",
+    BC: "markerInner_48eibG",
+    Zg: "emoji_48eibG",
+    Or: "chatIcon_48eibG",
 };

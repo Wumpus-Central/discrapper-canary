@@ -1,4 +1,3 @@
-s.d(i, { $: () => n });
 var t = s(477900);
 function r(e, i) {
     if (null == e) throw Error(`Attempted to render "${i}" but no renderer was provided`);
@@ -75,3 +74,4 @@ function n({ nodes: e, renderers: i }) {
         children: e.map((s, r) => (0, t.jsx)(a, { node: s, renderers: i, siblings: e, index: r }, r)),
     });
 }
+s.d(i, {}, { $: n });

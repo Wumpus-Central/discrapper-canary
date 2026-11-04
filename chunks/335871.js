@@ -1,10 +1,9 @@
-n.d(t, { D: () => c });
 var i = n(852015),
     r = n(144367),
     a = n(428420),
     s = n(467276),
     l = n(82180),
-    o = n(535384);
+    o = n(505816);
 class d extends o.G {
     constructor() {
         super("google.protobuf.Timestamp", [
@@ -102,3 +101,4 @@ class d extends o.G {
     }
 }
 let c = new d();
+n.d(t, {}, { D: c });

@@ -1,4 +1,3 @@
-n.d(t, { GV: () => l, Ld: () => s, V0: () => o });
 var i = n(277057),
     r = n.n(i),
     a = n(444927);
@@ -9,7 +8,15 @@ function s() {
 function l() {
     return (0, a.A)(() => s());
 }
-function o(e) {
-    let { children: t } = e;
-    return t(l());
-}
+n.d(
+    t,
+    {},
+    {
+        GV: l,
+        Ld: s,
+        V0: function (e) {
+            let { children: t } = e;
+            return t(l());
+        },
+    },
+);

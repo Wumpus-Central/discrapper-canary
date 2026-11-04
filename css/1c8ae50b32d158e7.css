@@ -1,0 +1,213 @@
+.paypalLogo_0MZZOr {
+    background-image: url("/assets/fb20a3f1b9783bae.svg")
+}
+
+.sofortLogo_0MZZOr {
+    background-image: url("/assets/eb22e43f6f710d3b.svg")
+}
+
+.paysafeCardLogo_0MZZOr {
+    background-image: url("/assets/745204c3b28350ab.svg")
+}
+
+.gcashLogo_0MZZOr {
+    background-image: url("/assets/7e5579c4c73ca390.svg")
+}
+
+.grabPayLogo_0MZZOr {
+    background-image: url("/assets/224f56365db6763e.svg")
+}
+
+.momoLogo_0MZZOr {
+    background-image: url("/assets/0dbebb1dde8de002.svg")
+}
+
+.kakaopayLogo_0MZZOr {
+    background-image: url("/assets/2a5fa2783cb39764.svg")
+}
+
+.goPayLogo_0MZZOr {
+    background-image: url("/assets/637bf6beddb5589b.svg")
+}
+
+.bancontactLogo_0MZZOr {
+    background-image: url("/assets/ce90dd2b5978b623.svg")
+}
+
+.epsLogo_0MZZOr {
+    background-image: url("/assets/3f80791089be55d4.svg")
+}
+
+.idealLogo_0MZZOr {
+    background-image: url("/assets/ac2dee95b30d4287.svg")
+}
+
+.p24Logo_0MZZOr {
+    background-image: url("/assets/3d961164938e62d7.svg")
+}
+
+.giropayLogo_0MZZOr {
+    background-image: url("/assets/fcb798c4bf712284.svg")
+}
+
+.message_0MZZOr {
+    font-size: 24px;
+    text-align: center
+}
+
+.verifyConnectedAccount_AiUQ8o {
+    background: url("/assets/1243734d7e2a4654.png") 0 0 repeat;
+    background-color: #282b30;
+    color: var(--white);
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.logos_AiUQ8o,
+.verifyConnectedAccount_AiUQ8o {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.logos_AiUQ8o {
+    margin-bottom: 95px
+}
+
+.logosDivider_AiUQ8o {
+    background-image: url("/assets/f9951f6f63451f68.svg");
+    background-size: 28px 28px;
+    content: " ";
+    display: inline-block;
+    height: 28px;
+    margin: 0 37px;
+    width: 28px
+}
+
+.logo_AiUQ8o {
+    background-size: 88px 88px;
+    height: 88px;
+    width: 88px
+}
+
+.logoDiscord_AiUQ8o {
+    background-image: url("/assets/8068c1873bb18d03.svg")
+}
+
+.root_UXxaSc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--space-24);
+    text-align: center
+}
+
+.wrapper_UXxaSc {
+    min-height: auto
+}
+
+.header_UXxaSc {
+    margin-bottom: var(--space-12)
+}
+
+.body_UXxaSc,
+.logos_UXxaSc {
+    margin-bottom: var(--space-24)
+}
+
+.error_UXxaSc {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%
+}
+
+.buttonContainer_RQRehI {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 16px
+}
+
+.message_RQRehI {
+    font-size: 18px;
+    text-align: center
+}
+
+.btn_RQRehI {
+    margin-top: 22px;
+    transition: background-color .2s ease
+}
+
+.btn_RQRehI .spinnerItem_RQRehI {
+    background-color: var(--white);
+    opacity: .25
+}
+
+.btn_RQRehI:disabled {
+    background-color: transparent;
+    cursor: default;
+    opacity: 1;
+    padding: 28px
+}
+
+.message_bu9M3O {
+    font-size: 18px;
+    text-align: center
+}
+
+.message_bu9M3O.error_bu9M3O {
+    color: var(--text-feedback-critical)
+}
+
+.message_bu9M3O.details_bu9M3O {
+    font-size: 16px
+}
+
+.message_bu9M3O.details_bu9M3O,
+.message_bu9M3O.errorDetails_bu9M3O {
+    color: var(--text-muted);
+    margin-top: 16px
+}
+
+.message_bu9M3O.errorDetails_bu9M3O {
+    font-size: 12px
+}
+
+.message_bu9M3O strong {
+    font-weight: var(--font-weight-bold)
+}
+
+.btn_bu9M3O {
+    margin-top: 22px;
+    transition: background-color .2s ease;
+    width: 100%
+}
+
+.btn_bu9M3O:disabled {
+    background-color: transparent;
+    cursor: default;
+    opacity: 1;
+    padding: 28px
+}
+
+.message_9nPBCw {
+    font-size: 18px;
+    text-align: center
+}
+
+.message_9nPBCw.details_9nPBCw {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-top: 16px
+}
+
+.message_9nPBCw strong {
+    font-weight: var(--font-weight-bold)
+}
+
+/*# sourceMappingURL=1c8ae50b32d158e7.css.map*/

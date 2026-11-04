@@ -1,4 +1,3 @@
-n.d(t, { A: () => r });
 var i = n(775602);
 let r = new (class {
     isSidebarCategoryAutoSelectEnabled = !0;
@@ -95,3 +94,4 @@ let r = new (class {
             (this.sidebarScrollerRef = null));
     }
 })();
+n.d(t, {}, { A: r });

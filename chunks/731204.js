@@ -1,0 +1,195 @@
+l.d(t, { A: () => M });
+var n = l(477900),
+    i = l(582128),
+    C = l(585510),
+    s = l(903093),
+    a = l(646514),
+    r = l(231483),
+    d = l(534514),
+    o = l(834730),
+    c = l(821609),
+    u = l(192308),
+    m = l(793574),
+    H = l(834409),
+    h = l(671576),
+    x = l(449585),
+    g = l(93474),
+    f = l(792996),
+    j = l(666097);
+function p(e) {
+    if (null == (e.dmsDisabledUntil ?? e.invitesDisabledUntil)) return "";
+    let t = null != e.dmsDisabledUntil,
+        l = null != e.invitesDisabledUntil;
+    switch (!0) {
+        case t && l:
+            return f.intl.string(f.t.CEygF8);
+        case t:
+            return f.intl.string(f.t.Wmbjcz);
+        case l:
+            return f.intl.string(f.t.Q1QrAi);
+        default:
+            return "";
+    }
+}
+function v(e) {
+    let { onHandleEnableLockdown: t, onHandleReportFalseAlarm: l, incidentData: i } = e,
+        C = i.raidDetectedAt ?? i.dmSpamDetectedAt;
+    return (0, n.jsxs)("div", {
+        className: j.hD,
+        children: [
+            (0, n.jsxs)("div", {
+                className: j.iD,
+                children: [
+                    (0, n.jsx)(r.ShieldIcon, { size: "md", className: j.F_, color: a.A.unsafe_rawColors.RED_345.css }),
+                    (0, n.jsxs)("div", {
+                        className: j.Tm,
+                        children: [
+                            (0, n.jsx)(d.D, {
+                                className: j.R_,
+                                variant: "heading-lg/semibold",
+                                color: "text-feedback-critical",
+                                children: (0, s.Qm)(i) ? f.intl.string(f.t.raRxxT) : f.intl.string(f.t["4nbAta"]),
+                            }),
+                            (0, n.jsx)(o.E, {
+                                className: j.Ng,
+                                variant: "body-sm/medium",
+                                children: f.intl.format(f.t["4QIIZl"], {
+                                    dateTime: new Date(C ?? "").toLocaleString(f.intl.currentLocale, s.yc),
+                                }),
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+            (0, n.jsxs)("div", {
+                className: j.UD,
+                children: [
+                    (0, n.jsx)(c.$, { variant: "secondary", onClick: l, text: f.intl.string(f.t.ISiXba), size: "sm" }),
+                    (0, n.jsx)(c.$, {
+                        variant: "critical-primary",
+                        onClick: t,
+                        size: "sm",
+                        text: f.intl.string(f.t.UgXhdn),
+                    }),
+                ],
+            }),
+        ],
+    });
+}
+function V(e) {
+    let { onHandleEnableLockdown: t, incidentData: l, guildName: i } = e;
+    return (0, n.jsxs)("div", {
+        className: j.hD,
+        children: [
+            (0, n.jsxs)("div", {
+                className: j.iD,
+                children: [
+                    (0, n.jsx)(r.ShieldIcon, {
+                        size: "md",
+                        className: j.F_,
+                        color: a.A.unsafe_rawColors.BRAND_360.css,
+                    }),
+                    (0, n.jsxs)("div", {
+                        className: j.Tm,
+                        children: [
+                            (0, n.jsx)(d.D, {
+                                className: j.R_,
+                                variant: "heading-lg/semibold",
+                                color: "text-brand",
+                                children: p(l),
+                            }),
+                            (0, n.jsx)(o.E, { className: j.Ng, variant: "body-sm/medium", children: (0, s.ql)(l, i) }),
+                        ],
+                    }),
+                ],
+            }),
+            (0, n.jsx)(c.$, { onClick: t, text: f.intl.string(f.t.e1bMNf), size: "sm" }),
+        ],
+    });
+}
+function b(e) {
+    let { onHandleEnableLockdown: t, onHandleReportFalseAlarm: l, incidentData: i, guildName: C } = e;
+    return (0, n.jsxs)("div", {
+        className: j.hD,
+        children: [
+            (0, n.jsxs)("div", {
+                className: j.iD,
+                children: [
+                    (0, n.jsx)(r.ShieldIcon, {
+                        size: "md",
+                        className: j.F_,
+                        color: a.A.unsafe_rawColors.BRAND_360.css,
+                    }),
+                    (0, n.jsxs)("div", {
+                        className: j.Tm,
+                        children: [
+                            (0, n.jsx)(d.D, {
+                                className: j.R_,
+                                variant: "heading-lg/semibold",
+                                color: "text-brand",
+                                children: p(i),
+                            }),
+                            (0, n.jsx)(o.E, { className: j.Ng, variant: "body-sm/medium", children: (0, s.ql)(i, C) }),
+                        ],
+                    }),
+                ],
+            }),
+            (0, n.jsxs)("div", {
+                className: j.UD,
+                children: [
+                    (0, n.jsx)(c.$, { onClick: l, text: f.intl.string(f.t.ISiXba), variant: "secondary", size: "sm" }),
+                    (0, n.jsx)(c.$, { onClick: t, text: f.intl.string(f.t.e1bMNf), size: "sm" }),
+                ],
+            }),
+        ],
+    });
+}
+function A(e) {
+    let { guild: t, incidentData: l, isUnderLockdown: C, isRaidDetected: a } = e,
+        r = i.useCallback(() => {
+            (0, u.mM)(async () => {
+                let e = { source: H.Eo.MEMBER_SAFETY_PAGE, location: m.A.MEMBER_SAFETY_PAGE, alertType: (0, s.$5)(l) };
+                return (l) => (0, n.jsx)(h.default, { ...l, guildId: t.id, analyticsData: e });
+            });
+        }, [t.id, l]),
+        d = i.useCallback(() => {
+            let e = g.A.getLastIncidentAlertMessage(t.id);
+            (0, x.is)(e, t.id);
+        }, [t.id]),
+        o = (function () {
+            switch (!0) {
+                case a && C:
+                    return 3;
+                case a:
+                    return 1;
+                case C:
+                    return 2;
+                default:
+                    return 0;
+            }
+        })();
+    if (null == t || null == l) return null;
+    switch (o) {
+        case 1:
+            return (0, n.jsx)(v, { onHandleEnableLockdown: r, onHandleReportFalseAlarm: d, incidentData: l });
+        case 2:
+            return (0, n.jsx)(V, { onHandleEnableLockdown: r, incidentData: l, guildName: t.name });
+        case 3:
+            return (0, n.jsx)(b, {
+                onHandleEnableLockdown: r,
+                onHandleReportFalseAlarm: d,
+                incidentData: l,
+                guildName: t.name,
+            });
+        default:
+            return null;
+    }
+}
+function M(e) {
+    let { guild: t } = e,
+        { shouldShowIncidentActions: l, incidentData: i, isUnderLockdown: a } = (0, C.Li)(t.id),
+        r = !1;
+    return (null != i && (r = (0, s.k$)(i) && l), r || a)
+        ? (0, n.jsx)(A, { guild: t, incidentData: i, isUnderLockdown: a, isRaidDetected: r })
+        : null;
+}

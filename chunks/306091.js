@@ -1,9 +1,8 @@
 e.exports = {
-    E3: "base__463b7",
-    rS: "baseShapeRound__463b7",
-    Q2: "baseShapeRoundLeft__463b7",
-    Hg: "baseShapeRoundRight__463b7",
-    bG: "iconBadge__463b7 base__463b7",
-    Do: "numberBadge__463b7 base__463b7",
-    Kk: "icon__463b7",
+    rS: "baseShapeRound_lMvXrQ",
+    Q2: "baseShapeRoundLeft_lMvXrQ",
+    Hg: "baseShapeRoundRight_lMvXrQ",
+    bG: "iconBadge_lMvXrQ base_lMvXrQ",
+    Do: "numberBadge_lMvXrQ base_lMvXrQ",
+    Kk: "icon_lMvXrQ",
 };

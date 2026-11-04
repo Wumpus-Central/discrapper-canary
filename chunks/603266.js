@@ -1,4 +1,3 @@
-n.d(t, { Rj: () => o, m4: () => a });
 var r,
     i,
     a =
@@ -11,3 +10,4 @@ var r,
         (r.CURRENT_USER_DISCONNECTED = "current_user_disconnected"),
         r),
     o = (((i = {}).RTC_DEBUG_PANEL = "rtc_debug_panel"), (i.RTC_SECURE_FRAMES = "rtc_secure_frames"), i);
+n.d(t, {}, { Rj: o, m4: a });

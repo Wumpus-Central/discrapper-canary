@@ -1,7 +1,6 @@
-n.d(t, { A: () => d, j: () => c });
-var i = n(636537),
+var i = n(620632),
     r = n(73153),
-    a = n(763827),
+    a = n(495867),
     s = n(403362),
     l = n(857071),
     o = n(652215);
@@ -26,10 +25,17 @@ async function d(e) {
             }),
         ));
 }
-async function c() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-        t = l.A.lurkingGuildIds();
-    if (0 === t.length || !(null == e || !t.includes(e))) return;
-    let n = [e, a.A.getGuildId()].filter(s.Vq);
-    await d(n);
-}
+n.d(
+    t,
+    {},
+    {
+        A: d,
+        j: async function () {
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+                t = l.A.lurkingGuildIds();
+            if (0 === t.length || !(null == e || !t.includes(e))) return;
+            let n = [e, a.A.getGuildId()].filter(s.Vq);
+            await d(n);
+        },
+    },
+);

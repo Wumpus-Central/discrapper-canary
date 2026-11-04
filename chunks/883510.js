@@ -1,8 +1,8 @@
-_.exports = {
-    iE: "wrapper__5c108",
-    Td: "cardHeaderImg__5c108",
-    zH: "details__5c108",
-    h_: "description__5c108",
-    qr: "footer__5c108",
-    GC: "buttonGroup__5c108",
+s.exports = {
+    iE: "wrapper_aMqvA2",
+    Td: "cardHeaderImg_aMqvA2",
+    zH: "details_aMqvA2",
+    h_: "description_aMqvA2",
+    qr: "footer_aMqvA2",
+    GC: "buttonGroup_aMqvA2",
 };

@@ -1,7 +1,7 @@
-e.exports = {
-    Vk: "errorLabel_f3e49b",
-    dr: "supportCallToAction_f3e49b",
-    nf: "errorDetails_f3e49b",
-    bE: "closeLink_f3e49b",
-    rf: "body_f3e49b",
+r.exports = {
+    Vk: "errorLabel_l2fz5u",
+    dr: "supportCallToAction_l2fz5u",
+    nf: "errorDetails_l2fz5u",
+    bE: "closeLink_l2fz5u",
+    rf: "body_l2fz5u",
 };

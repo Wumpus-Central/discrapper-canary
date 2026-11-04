@@ -1,11 +1,11 @@
-a.exports = {
-    LO: "game__4a84f",
-    r9: "disabled__4a84f",
-    Oe: "viewable__4a84f",
-    Rf: "gameImageContainer__4a84f",
-    Gj: "gameImageBorder__4a84f",
-    Uf: "gameImageOverlay__4a84f",
-    FS: "textContainer__4a84f",
-    Sl: "image__4a84f",
-    PW: "boostContainer__4a84f",
+e.exports = {
+    LO: "game_uITHYs",
+    r9: "disabled_uITHYs",
+    Oe: "viewable_uITHYs",
+    Rf: "gameImageContainer_uITHYs",
+    Gj: "gameImageBorder_uITHYs",
+    Uf: "gameImageOverlay_uITHYs",
+    FS: "textContainer_uITHYs",
+    Sl: "image_uITHYs",
+    PW: "boostContainer_uITHYs",
 };

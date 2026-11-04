@@ -1,10 +1,9 @@
-t.d(n, { $X: () => k, As: () => M, Ay: () => y });
 var r = t(477900);
 t(582128);
-var l = t(17928),
+var l = t(855986),
     i = t(477782),
     a = t(95701),
-    u = t(280450),
+    u = t(46653),
     s = t(576705),
     d = t(994500),
     c = t(996439),
@@ -14,8 +13,8 @@ var l = t(17928),
     I = t(509295),
     v = t(406595),
     f = t(652215),
-    N = t(254821),
-    g = t(105292);
+    N = t(361729),
+    g = t(792996);
 function S(e) {
     return e ? g.intl.string(g.t.Bou7lT) : g.intl.string(g.t["4wcdE/"]);
 }
@@ -91,9 +90,16 @@ function h(e, n, t) {
 function k(e, n, t) {
     return h(e, { kind: "CHANNEL", channel: n }, t);
 }
-function M(e, n) {
-    return h(A.x.FRIENDS, { kind: "USER", userId: e }, n);
-}
-function y(e, n, t) {
-    return k(e, n, t);
-}
+t.d(
+    n,
+    {},
+    {
+        $X: k,
+        As: function (e, n) {
+            return h(A.x.FRIENDS, { kind: "USER", userId: e }, n);
+        },
+        Ay: function (e, n, t) {
+            return k(e, n, t);
+        },
+    },
+);

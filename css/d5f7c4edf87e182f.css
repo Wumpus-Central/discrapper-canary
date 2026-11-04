@@ -1,0 +1,64 @@
+.card_b-ZS9X {
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px
+}
+
+.cardText_b-ZS9X {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.cardRow_b-ZS9X {
+    align-items: center;
+    display: flex;
+    margin-bottom: 8px
+}
+
+.cardHeaderIcon_b-ZS9X {
+    background-color: var(--platform-xbox);
+    border-radius: 4px;
+    color: var(--white);
+    margin-inline-end: 8px;
+    padding: 4px
+}
+
+.qrCode_b-ZS9X {
+    margin-inline-start: 32px
+}
+
+.closeButton_b-ZS9X {
+    inset-inline-end: 16px;
+    position: absolute;
+    top: 16px;
+    z-index: 1
+}
+
+.learnMore_b-ZS9X {
+    display: inline-block;
+    margin-top: 2px
+}
+
+.stepNumberContainer_b-ZS9X {
+    background-color: var(--background-mod-strong);
+    border-radius: 12px;
+    height: 24px;
+    margin-inline-end: 8px;
+    min-width: 24px;
+    width: 24px
+}
+
+.stepNumber_b-ZS9X {
+    color: var(--white);
+    line-height: 24px;
+    text-align: center
+}
+
+.instructions_b-ZS9X {
+    opacity: .6
+}
+
+/*# sourceMappingURL=d5f7c4edf87e182f.css.map*/

@@ -1,5 +1,10 @@
-n.d(t, { A: () => i });
-let i = new (class {
-    nativeMuteChanged(e) {}
-    updateNativeMute() {}
-})();
+n.d(
+    t,
+    {},
+    {
+        A: new (class {
+            nativeMuteChanged(e) {}
+            updateNativeMute() {}
+        })(),
+    },
+);

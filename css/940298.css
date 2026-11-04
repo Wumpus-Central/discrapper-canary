@@ -1,22 +1,22 @@
-.frame__13c4f {
+.frame_lzDcNJ {
     container: guild-space-page/inline-size;
     padding: var(--space-16)
 }
 
-.wide__13c4f {
+.wide_lzDcNJ {
     width: 1100px
 }
 
-.narrow__13c4f,
-.wide__13c4f {
+.narrow_lzDcNJ,
+.wide_lzDcNJ {
     max-width: 100%
 }
 
-.narrow__13c4f {
+.narrow_lzDcNJ {
     width: 600px
 }
 
-.card_ca15ae {
+.card_OQEDys {
     background: var(--background-surface-high);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
@@ -27,21 +27,21 @@
     width: 300px
 }
 
-.card_ca15ae,
-.mainContent_ca15ae {
+.card_OQEDys,
+.mainContent_OQEDys {
     display: flex;
     gap: var(--space-12)
 }
 
-.mainContent_ca15ae {
+.mainContent_OQEDys {
     align-items: flex-start
 }
 
-.copy_ca15ae {
+.copy_OQEDys {
     display: flex;
     flex-direction: column;
     gap: var(--space-4);
     min-width: 0
 }
 
-/*# sourceMappingURL=940298.d3d21f94027f4ae4.css.map*/
+/*# sourceMappingURL=940298.74cb69c0c2b079fa.css.map*/

@@ -1,0 +1,99 @@
+.loadingContainer_R9rqaI {
+    height: 100%;
+    justify-content: center
+}
+
+.loadingContainer_R9rqaI,
+.modalBody_R9rqaI {
+    align-items: center;
+    display: flex
+}
+
+.modalBody_R9rqaI {
+    flex-direction: column;
+    gap: 16px
+}
+
+.modalBodyText_R9rqaI {
+    text-align: center
+}
+
+.cannotLinkAccountWarning_R9rqaI {
+    margin-top: 8px;
+    text-align: center
+}
+
+.statusContainer_R9rqaI {
+    width: 100%
+}
+
+.statusRow_R9rqaI {
+    background-color: var(--background-surface-highest);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    justify-content: space-between;
+    padding: 8px
+}
+
+.statusLeft_R9rqaI,
+.statusRow_R9rqaI {
+    align-items: center;
+    display: flex
+}
+
+.statusLeft_R9rqaI {
+    gap: 8px
+}
+
+.statusText_R9rqaI {
+    text-align: center
+}
+
+.statusIcon_R9rqaI {
+    background-color: var(--icon-feedback-positive);
+    border-radius: 50%;
+    color: var(--badge-primary-text);
+    height: 20px;
+    justify-content: center;
+    width: 20px
+}
+
+.statusIcon_R9rqaI,
+.statusRight_R9rqaI {
+    align-items: center;
+    display: flex
+}
+
+.statusRight_R9rqaI {
+    gap: 8px
+}
+
+.expirationWarningContainer_R9rqaI {
+    margin-top: 16px
+}
+
+.modalBodyText_tEaB1Q {
+    text-align: center
+}
+
+.rewardNotice_tEaB1Q {
+    margin-top: var(--space-12)
+}
+
+.loadingContainer_QegJ3p {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center
+}
+
+.giftSentToGameNoticeContainerPadding_QegJ3p {
+    padding-top: 32px
+}
+
+.customGiftMessage_QegJ3p,
+.giftSenderText_QegJ3p {
+    text-align: center
+}
+
+/*# sourceMappingURL=ab76d5575a808a0b.css.map*/

@@ -1,0 +1,84 @@
+.markdownView_KFT5TX.markdownView_KFT5TX {
+    overflow-wrap: break-word;
+    padding: var(--space-8) var(--space-16);
+    white-space: normal
+}
+
+.markdownView_KFT5TX.markdownView_KFT5TX p {
+    margin: 0 0 var(--space-8)
+}
+
+.markdownView_KFT5TX.markdownView_KFT5TX .list_KFT5TX {
+    margin-block: 0 var(--space-8)
+}
+
+.markdownView_KFT5TX.markdownView_KFT5TX .list_KFT5TX>li {
+    margin-bottom: 0
+}
+
+.markdownView_KFT5TX.markdownView_KFT5TX .looseList_KFT5TX>li:not(:last-child) {
+    margin-bottom: var(--space-8)
+}
+
+.markdownView_KFT5TX.markdownView_KFT5TX .looseList_KFT5TX>li>:last-child {
+    margin-bottom: 0
+}
+
+.markdownView_KFT5TX.markdownView_KFT5TX li>.list_KFT5TX {
+    margin-block: 0
+}
+
+.markdownView_KFT5TX.markdownView_KFT5TX blockquote,
+.markdownView_KFT5TX.markdownView_KFT5TX pre {
+    max-width: 100%
+}
+
+.markdownView_KFT5TX.markdownView_KFT5TX .blockquote_KFT5TX,
+.markdownView_KFT5TX.markdownView_KFT5TX hr,
+.markdownView_KFT5TX.markdownView_KFT5TX pre,
+.markdownView_KFT5TX.markdownView_KFT5TX table {
+    margin-block: 0 var(--space-8)
+}
+
+.markdownView_KFT5TX.markdownView_KFT5TX .blockquote_KFT5TX>blockquote {
+    padding-block: var(--space-4)
+}
+
+.markdownView_KFT5TX.markdownView_KFT5TX .blockquote_KFT5TX>blockquote>:last-child {
+    margin-block-end: 0
+}
+
+.markdownView_KFT5TX.markdownView_KFT5TX :is(h1, h2, h3, h4, h5, h6):first-child {
+    margin-block-start: 0
+}
+
+.markdownView_KFT5TX.markdownView_KFT5TX hr {
+    border: 0;
+    border-top: 1px solid var(--border-subtle)
+}
+
+.markdownView_KFT5TX.markdownView_KFT5TX table {
+    border-collapse: collapse;
+    display: block;
+    max-width: 100%;
+    overflow-x: auto
+}
+
+.markdownView_KFT5TX.markdownView_KFT5TX td,
+.markdownView_KFT5TX.markdownView_KFT5TX th {
+    border: 1px solid var(--border-subtle);
+    padding: var(--space-4) var(--space-8);
+    vertical-align: top
+}
+
+.markdownView_KFT5TX.markdownView_KFT5TX th {
+    background-color: var(--background-surface-high);
+    font-weight: var(--font-weight-semibold)
+}
+
+.markdownEllipsis_KFT5TX {
+    display: block;
+    padding: 0 var(--space-16) var(--space-8)
+}
+
+/*# sourceMappingURL=efcd52ae61e07a3e.css.map*/

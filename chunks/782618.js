@@ -1,10 +1,9 @@
-n.d(t, { A: () => L });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
     l = n(837381),
-    o = n(17928),
+    o = n(855986),
     d = n(27232),
     c = n(406810),
     u = n(866665),
@@ -12,27 +11,27 @@ var i = n(477900),
     E = n(782134),
     A = n(890856),
     h = n(834730),
-    f = n(788026),
+    f = n(565645),
     I = n(253932),
     p = n(287809),
-    m = n(813564),
+    m = n(458976),
     T = n(453997),
     g = n(792348),
-    S = n(805945),
+    S = n(533491),
     N = n(257645),
-    C = n(105292),
+    C = n(792996),
     O = n(948611);
 function R(e) {
     let { sound: t, disabled: n, setIsChildTooltipShowing: a, previewSound: l, analyticsLocations: o } = e,
         { emojiId: A, emojiName: h } = t,
         { text: f, icon: I } = (function (e) {
             switch (e) {
-                case T.p0.FAVORITE:
+                case T.p.FAVORITE:
                     return {
                         text: C.intl.string(C.t["iJA/TE"]),
                         icon: (0, i.jsx)(d.StarIcon, { size: "xs", color: "currentColor", className: O.zr }),
                     };
-                case T.p0.FREQUENTLY_USED:
+                case T.p.FREQUENTLY_USED:
                     return {
                         text: C.intl.string(C.t["+cGVV6"]),
                         icon: (0, i.jsx)(c.ClockIcon, { size: "xs", color: "currentColor", className: O.zr }),
@@ -87,76 +86,87 @@ function R(e) {
               ],
           });
 }
-function L(e) {
-    let {
-            sound: t,
-            channel: n,
-            containerClassName: a,
-            className: d,
-            interactive: c,
-            onMouseEnter: _,
-            openUpsellForSound: E,
-            analyticsLocations: T,
-            ref: S,
-        } = e,
-        { name: L, emojiId: y, emojiName: D } = t,
-        b = (0, o.bG)([p.default], () => p.default.getCurrentUser()),
-        {
-            playSoundboardSound: v,
-            previewSound: P,
-            isPlayingSound: M,
-        } = (0, g.A)(t, n?.id ?? null, I.dG.getSetting()?.volume ?? 100, n?.isVocal() ? N.a.VOICE : N.a.DEFAULT),
-        U = r.useRef(null),
-        w = `sound-${t.soundId}`,
-        G = (0, l.rm)(w),
-        x = r.useMemo(() => ({ ...G, id: w, role: "button" }), [G, w]),
-        k = null != y || null != D,
-        F = !(0, m.Ir)(b, t, n, !1),
-        [B, V] = r.useState(!1),
-        H = r.useCallback(
-            (e) => {
-                F ? E?.(e) : v(T);
-            },
-            [F, E, v, T],
-        );
-    return (0, i.jsx)("li", {
-        ref: S,
-        className: s()(O.H, a),
-        onMouseEnter: _,
-        children: (0, i.jsx)(u.m, {
-            text: L,
-            position: "top",
-            shouldShow: !B,
-            delay: 500,
-            children: (0, i.jsxs)(A.s, {
-                buttonProps: x,
-                "aria-label": C.intl.formatToPlainString(C.t.tuMUJ2, { emojiName: D, soundName: L }),
-                className: s()(O.aG, O.CS, { [O.he]: M, [O.wT]: c, [O.fx]: !c }, d),
-                onClick: H,
-                children: [
-                    (0, i.jsxs)("div", {
-                        className: s()(O.KM, { [O.hn]: k }),
-                        "aria-hidden": !0,
-                        ref: U,
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let {
+                    sound: t,
+                    channel: n,
+                    containerClassName: a,
+                    className: d,
+                    interactive: c,
+                    onMouseEnter: _,
+                    openUpsellForSound: E,
+                    analyticsLocations: T,
+                    ref: S,
+                } = e,
+                { name: L, emojiId: y, emojiName: D } = t,
+                b = (0, o.bG)([p.default], () => p.default.getCurrentUser()),
+                {
+                    playSoundboardSound: v,
+                    previewSound: P,
+                    isPlayingSound: M,
+                } = (0, g.A)(
+                    t,
+                    n?.id ?? null,
+                    I.dG.getSetting()?.volume ?? 100,
+                    n?.isVocal() ? N.a.VOICE : N.a.DEFAULT,
+                ),
+                U = r.useRef(null),
+                w = `sound-${t.soundId}`,
+                G = (0, l.rm)(w),
+                x = r.useMemo(() => ({ ...G, id: w, role: "button" }), [G, w]),
+                k = null != y || null != D,
+                F = !(0, m.Ir)(b, t, n, !1),
+                [B, V] = r.useState(!1),
+                H = r.useCallback(
+                    (e) => {
+                        F ? E?.(e) : v(T);
+                    },
+                    [F, E, v, T],
+                );
+            return (0, i.jsx)("li", {
+                ref: S,
+                className: s()(O.H, a),
+                onMouseEnter: _,
+                children: (0, i.jsx)(u.m, {
+                    text: L,
+                    position: "top",
+                    shouldShow: !B,
+                    delay: 500,
+                    children: (0, i.jsxs)(A.s, {
+                        buttonProps: x,
+                        "aria-label": C.intl.formatToPlainString(C.t.tuMUJ2, { emojiName: D, soundName: L }),
+                        className: s()(O.aG, O.CS, { [O.he]: M, [O.wT]: c, [O.fx]: !c }, d),
+                        onClick: H,
                         children: [
-                            k && (0, i.jsx)(f.A, { emojiId: y, emojiName: D, className: O.Zg }),
-                            (0, i.jsx)(h.E, {
-                                variant: "body-xs/medium",
-                                color: c ? "text-default" : "text-muted",
-                                className: s()(O.TW, { [O.hn]: k }),
-                                children: L,
+                            (0, i.jsxs)("div", {
+                                className: s()(O.KM, { [O.hn]: k }),
+                                "aria-hidden": !0,
+                                ref: U,
+                                children: [
+                                    k && (0, i.jsx)(f.A, { emojiId: y, emojiName: D, className: O.Zg }),
+                                    (0, i.jsx)(h.E, {
+                                        variant: "body-xs/medium",
+                                        color: c ? "text-default" : "text-muted",
+                                        className: s()(O.TW, { [O.hn]: k }),
+                                        children: L,
+                                    }),
+                                ],
+                            }),
+                            (0, i.jsx)(R, {
+                                sound: t,
+                                disabled: F,
+                                setIsChildTooltipShowing: V,
+                                previewSound: P,
+                                analyticsLocations: T,
                             }),
                         ],
                     }),
-                    (0, i.jsx)(R, {
-                        sound: t,
-                        disabled: F,
-                        setIsChildTooltipShowing: V,
-                        previewSound: P,
-                        analyticsLocations: T,
-                    }),
-                ],
-            }),
-        }),
-    });
-}
+                }),
+            });
+        },
+    },
+);

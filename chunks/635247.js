@@ -1,1 +1,1 @@
-_.exports = { pG: "right__89d2b", TR: "down__89d2b", kb: "left__89d2b" };
+e.exports = { pG: "right_riP-ck", TR: "down_riP-ck", kb: "left_riP-ck" };

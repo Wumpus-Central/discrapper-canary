@@ -1,0 +1,68 @@
+.transitionJumbleContainer_06M6oI {
+    --custom-transition-max-top-offset: 12px;
+    --custom-transition-rail-height: calc(198px + var(--custom-transition-max-top-offset))
+}
+
+.transitionJumbleSpacer_06M6oI {
+    height: var(--custom-transition-rail-height);
+    min-height: var(--custom-transition-rail-height);
+    width: 100%
+}
+
+.overlayContainer_06M6oI {
+    bottom: 0;
+    overflow: clip;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.jumbleWrapper_06M6oI {
+    inset-inline: 0;
+    bottom: 0;
+    position: absolute;
+    top: 0;
+    transform: translateY(var(--custom-transition-rail-height));
+    transition: transform .1s ease-in-out
+}
+
+.full-motion .jumbleWrapper_06M6oI {
+    transition: transform .1s cubic-bezier(.48, -.08, .06, 1.4)
+}
+
+.jumbleWrapper_06M6oI.peaking_06M6oI {
+    transform: translateY(0);
+    transition-duration: .3s
+}
+
+.asset_06M6oI {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute
+}
+
+.full-motion .asset_06M6oI {
+    transition-property: transform;
+    transition-timing-function: ease-in-out
+}
+
+.clickable_06M6oI {
+    cursor: pointer
+}
+
+.avatar_06M6oI {
+    pointer-events: auto
+}
+
+.theme-dark .avatar_06M6oI {
+    background: #0c0e0e
+}
+
+.theme-light .avatar_06M6oI {
+    background: #a8a9aa
+}
+
+/*# sourceMappingURL=a2c8a37ac57dfab1.css.map*/

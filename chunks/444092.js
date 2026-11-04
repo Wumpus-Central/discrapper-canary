@@ -1,7 +1,6 @@
-n.d(t, { FU: () => f, G9: () => p, aI: () => u, bL: () => h, lX: () => I });
 var i = n(158390),
     r = n(927813),
-    a = n(935208),
+    a = n(811091),
     s = n(955817);
 let l = Date.UTC(2021, 0, 1),
     o = 15 * r.A.Millis.MINUTE;
@@ -98,23 +97,31 @@ function _() {
     };
 }
 let E = _(),
-    A = _();
-function h(e, t, n) {
-    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-    return (i.priority ?? "background") === "background" &&
-        !(function (e, t) {
-            let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now();
-            if (!a.default.isProbablyAValidSnowflake(e) || !a.default.isProbablyAValidSnowflake(t)) return !1;
-            let i = a.default.extractTimestamp(t);
-            return i >= l && i <= n + o;
-        })(e, t)
-        ? Promise.reject(new d("guild event id is not plausible"))
-        : E.guard(e, t, n, i);
-}
-let f = A.guard;
-function I(e, t, n) {
-    return E.onRetryable(`${e}/${t}`, n);
-}
-function p() {
-    (E.forgetTransientFailures(), A.forgetTransientFailures());
-}
+    A = _(),
+    h = A.guard;
+n.d(
+    t,
+    {},
+    {
+        FU: h,
+        G9: function () {
+            (E.forgetTransientFailures(), A.forgetTransientFailures());
+        },
+        aI: u,
+        bL: function (e, t, n) {
+            let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+            return (i.priority ?? "background") === "background" &&
+                !(function (e, t) {
+                    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now();
+                    if (!a.default.isProbablyAValidSnowflake(e) || !a.default.isProbablyAValidSnowflake(t)) return !1;
+                    let i = a.default.extractTimestamp(t);
+                    return i >= l && i <= n + o;
+                })(e, t)
+                ? Promise.reject(new d("guild event id is not plausible"))
+                : E.guard(e, t, n, i);
+        },
+        lX: function (e, t, n) {
+            return E.onRetryable(`${e}/${t}`, n);
+        },
+    },
+);

@@ -1,16 +1,16 @@
-:where(.banner__68edb) {
+:where(.banner_s9bWOi) {
     transition: background-color .1s
 }
 
-:not(.custom-user-profile-theme).user-profile-popout :where(.banner__68edb) {
+:not(.custom-user-profile-theme).user-profile-popout :where(.banner_s9bWOi) {
     border-radius: var(--custom-user-profile-banner-radius, var(--radius-sm) var(--radius-sm) 0 0)
 }
 
-.user-profile-modal-v2 :where(.banner__68edb) {
+.user-profile-modal-v2 :where(.banner_s9bWOi) {
     border-radius: var(--custom-user-profile-banner-radius, var(--radius-lg) var(--radius-lg) 0 0)
 }
 
-:where(.banner__68edb):before {
+:where(.banner_s9bWOi):before {
     border-bottom: 1px solid var(--border-muted);
     bottom: 0;
     content: "";
@@ -18,4 +18,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=58495.ad5de67af9a66ad3.css.map*/
+/*# sourceMappingURL=58495.110b4dc786068a2a.css.map*/

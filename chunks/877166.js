@@ -1,4 +1,4 @@
-(n.d(t, { A: () => r }), n(321073));
+n(321073);
 var i = n(73153);
 class r {
     socket;
@@ -26,3 +26,4 @@ class r {
                     .catch((t) => this.socket.resetSocketAndClearCacheOnError({ error: t, action: e.type })));
     }
 }
+n.d(t, {}, { A: r });

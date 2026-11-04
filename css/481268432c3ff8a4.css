@@ -1,0 +1,164 @@
+.benefits_5FcFkn {
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    padding: 16px
+}
+
+.container_2ciB6o {
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    padding: 16px
+}
+
+.headerContainer_2ciB6o {
+    align-items: center;
+    cursor: pointer;
+    display: flex
+}
+
+.headerTextContainer_2ciB6o {
+    flex: 1;
+    margin-inline-start: 16px
+}
+
+.guildName_2ciB6o {
+    color: var(--interactive-text-active);
+    margin-bottom: 2px
+}
+
+.arrowIcon_2ciB6o,
+.tierName_2ciB6o {
+    color: var(--interactive-text-default)
+}
+
+.arrowIcon_2ciB6o {
+    height: 24px;
+    width: 24px
+}
+
+.arrowIconExpanded_2ciB6o {
+    transform: rotate(180deg)
+}
+
+.headerSubtitleContainer_2ciB6o {
+    align-items: center;
+    display: flex;
+    gap: 6px
+}
+
+.platformBadge_2ciB6o {
+    display: flex
+}
+
+.divider_2ciB6o {
+    border-bottom: 1px solid var(--opacity-white-4);
+    margin: 16px 0
+}
+
+.changePlanNotice_2ciB6o {
+    background-color: var(--background-mod-normal);
+    margin-bottom: 16px
+}
+
+.subscriptionInfoCards_2ciB6o {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px
+}
+
+.container_2ciB6o .paymentSourceDropdown_2ciB6o {
+    margin-bottom: 16px
+}
+
+.container_2ciB6o .paymentSourceDropdown_2ciB6o,
+.paymentSourceDropdownOption_2ciB6o {
+    background-color: var(--background-mod-normal)
+}
+
+.infoCard_2ciB6o {
+    background-color: var(--card-background-default);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    flex: 1;
+    padding: 16px
+}
+
+.infoCardLabel_2ciB6o {
+    color: var(--interactive-text-default);
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 16px;
+    text-transform: none
+}
+
+.infoCardLabelContainer_2ciB6o {
+    display: flex;
+    flex-direction: row
+}
+
+.infoCardIcon_2ciB6o {
+    color: var(--interactive-text-default);
+    height: 16px;
+    margin-inline-start: 8px;
+    width: 16px
+}
+
+.infoCardValue_2ciB6o {
+    color: var(--text-strong);
+    font-weight: var(--font-weight-normal)
+}
+
+.rowButton_2ciB6o {
+    background-color: var(--background-mod-normal);
+    cursor: pointer
+}
+
+.rowButton_2ciB6o:first-child {
+    border-radius: 8px 8px 0 0
+}
+
+.rowButton_2ciB6o:last-child {
+    border-radius: 0 0 8px 8px
+}
+
+.rowButton_2ciB6o:last-child .rowButtonContent_2ciB6o {
+    border-bottom: none
+}
+
+.rowButtonContent_2ciB6o {
+    align-items: center;
+    border-bottom: 1px solid var(--opacity-white-4);
+    display: flex;
+    justify-content: space-between;
+    margin-inline-start: 16px;
+    padding-block: 16px;
+    padding-inline: 0 16px
+}
+
+.rowButtonArrow_2ciB6o {
+    color: var(--interactive-text-default);
+    height: 24px;
+    transform: rotate(-90deg);
+    width: 24px
+}
+
+.rowButtonLabel_2ciB6o {
+    color: var(--interactive-text-active);
+    font-weight: var(--font-weight-medium)
+}
+
+.paymentDueBadge_2ciB6o {
+    display: flex
+}
+
+.pageDescription_JpuKXj {
+    margin-bottom: 40px
+}
+
+.subscriptionsContainer_JpuKXj {
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
+/*# sourceMappingURL=481268432c3ff8a4.css.map*/

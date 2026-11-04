@@ -1,0 +1,214 @@
+.spacingTop24_imJCJi {
+    margin-top: 24px
+}
+
+.permissionWarning_imJCJi {
+    margin-top: 8px
+}
+
+.previewToggle_imJCJi {
+    margin-top: 24px
+}
+
+.cameraPreviewTitle_imJCJi {
+    align-items: center;
+    display: flex
+}
+
+.selector_imJCJi {
+    margin-top: 16px;
+    width: 100%
+}
+
+.selector_imJCJi.selectorNoHeader_imJCJi {
+    margin-top: 24px
+}
+
+.imageInput_imJCJi {
+    display: none
+}
+
+.backgroundIconOptionIcon_imJCJi {
+    height: 24px
+}
+
+.backgroundOptions_imJCJi {
+    display: grid;
+    gap: var(--space-16);
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+    margin-top: var(--space-16)
+}
+
+.backgroundImageOption_imJCJi {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.full-motion .backgroundImageOption_imJCJi {
+    transition: transform .2s ease-out
+}
+
+.backgroundOptionBackgroundBlurred_imJCJi {
+    filter: blur(14px);
+    position: absolute
+}
+
+.backgroundOptionBlurBackground_imJCJi {
+    background-image: url("https://cdn.discordapp.com/assets/content/9b1bb92a5685e3f1d67378826197687bb24f8cf1319a4ab2375fbc8a3fb7d0fe.png")
+}
+
+.backgroundOption_imJCJi {
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.full-motion .backgroundOption_imJCJi {
+    transition: box-shadow .2s ease-out, transform .2s ease-out, background .2s ease-out, opacity .2s ease-in
+}
+
+.backgroundOption_imJCJi:hover:not(.backgroundOption_imJCJi.backgroundOptionDisabled_imJCJi):not(.backgroundOptionSelected_imJCJi) {
+    box-shadow: var(--elevation-medium);
+    transform: translateY(-1px)
+}
+
+.backgroundOption_imJCJi:hover:not(.backgroundOption_imJCJi.backgroundOptionDisabled_imJCJi):not(.backgroundOptionSelected_imJCJi) .backgroundImageOption_imJCJi {
+    transform: scale(1.05) translateZ(0)
+}
+
+.backgroundOptionInner_imJCJi {
+    background-color: var(--primary-700);
+    border-radius: 4px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.playIcon_imJCJi {
+    align-items: center;
+    background-color: rgba(0, 0, 0, .4);
+    border-radius: 50%;
+    color: var(--white);
+    height: 16px;
+    inset-inline-end: 4px;
+    justify-content: center;
+    top: 4px;
+    width: 16px
+}
+
+.newBadgeCutout_imJCJi,
+.playIcon_imJCJi {
+    display: flex;
+    position: absolute
+}
+
+.newBadgeCutout_imJCJi {
+    background-color: var(--background-base-low);
+    border-radius: var(--radius-round);
+    inset-inline-start: -6px;
+    padding: 3px;
+    top: -3px
+}
+
+.backgroundOptionRing_imJCJi {
+    border: 2px solid var(--brand-500);
+    border-radius: 4px;
+    position: absolute;
+    top: -4px;
+    inset-inline: -4px;
+    bottom: -4px
+}
+
+.backgroundOptionDisabled_imJCJi {
+    cursor: not-allowed
+}
+
+.backgroundOptionDisabled_imJCJi .backgroundCustomInlineUpsellBackgroundDarkener_imJCJi {
+    opacity: .04
+}
+
+.backgroundOptionContent_imJCJi {
+    align-items: center;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    width: 100%
+}
+
+.overflowEllipsis_imJCJi {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.backgroundOptionText_imJCJi {
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 0 4px
+}
+
+.newBackgroundTooltipContainer_imJCJi {
+    position: relative
+}
+
+.backgroundCustomInlineUpsellBackground_imJCJi {
+    background-image: linear-gradient(90deg, var(--premium-tier-2-purple-for-gradients) 0, var(--premium-tier-2-purple-for-gradients-2) 50.24%, var(--premium-tier-2-pink-for-gradients) 100%);
+    position: absolute
+}
+
+.backgroundCustomInlineUpsellBackgroundDarkener_imJCJi {
+    background-color: var(--neutral-45);
+    filter: blur(12px);
+    height: 100%;
+    opacity: .2;
+    position: absolute;
+    width: 100%
+}
+
+.backgroundCustomInlineUpsell_imJCJi {
+    align-items: center;
+    display: flex
+}
+
+.backgroundCustomInlineUpsellIcon_imJCJi {
+    flex-shrink: 0;
+    height: 14px;
+    margin-inline-end: 4px;
+    width: 14px
+}
+
+.customBackgroundTooltip_imJCJi {
+    align-items: center;
+    color: var(--interactive-text-default);
+    display: flex
+}
+
+.customBackgroundTooltipIcon_imJCJi {
+    height: 16px;
+    margin-inline-end: 4px;
+    width: 16px
+}
+
+.theme-dark .backgroundOptionDisabled_imJCJi .backgroundCustomInlineUpsellBackground_imJCJi,
+.theme-dark .backgroundOptionDisabled_imJCJi .backgroundOptionContent_imJCJi {
+    opacity: .2
+}
+
+.theme-light .backgroundOptionDisabled_imJCJi .backgroundCustomInlineUpsellBackground_imJCJi,
+.theme-light .backgroundOptionDisabled_imJCJi .backgroundOptionContent_imJCJi {
+    opacity: .5
+}
+
+/*# sourceMappingURL=986f6a9024002fee.css.map*/

@@ -1,4 +1,3 @@
-n.d(t, { P: () => s, b: () => a });
 var i,
     r,
     a =
@@ -9,3 +8,4 @@ var i,
         (i.MINIMAL = "minimal"),
         i),
     s = (((r = {}).ALL = "all"), (r.UNREADS = "unreads"), (r.NONE = "none"), r);
+n.d(t, {}, { P: s, b: a });

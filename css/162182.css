@@ -1,4 +1,4 @@
-.container_a5f01b {
+.container_bwNRJo {
     background: var(--background-surface-high);
     border: 1px solid var(--border-subtle);
     border-radius: 16px;
@@ -8,22 +8,22 @@
     width: 288px
 }
 
-.soundContainer_a5f01b {
+.soundContainer_bwNRJo {
     padding: var(--space-16)
 }
 
-.emoji_a5f01b {
+.emoji_bwNRJo {
     height: 40px;
     width: 40px
 }
 
-.guildDetailsClickableContainer_a5f01b {
+.guildDetailsClickableContainer_bwNRJo {
     display: flex;
     flex-direction: column;
     padding: 0 var(--space-16) var(--space-16)
 }
 
-.guildDetailsContainer_a5f01b {
+.guildDetailsContainer_bwNRJo {
     background: var(--background-surface-higher);
     border-top: 1px solid var(--border-subtle);
     display: flex;
@@ -32,11 +32,11 @@
     padding: var(--space-16)
 }
 
-.guildDetailsContainer_a5f01b:focus {
+.guildDetailsContainer_bwNRJo:focus {
     outline: none
 }
 
-.clickable_a5f01b {
+.clickable_bwNRJo {
     align-items: center;
     align-self: stretch;
     background-color: var(--background-mod-subtle);
@@ -51,39 +51,39 @@
     transition: color .125s
 }
 
-.clickable_a5f01b:hover {
+.clickable_bwNRJo:hover {
     color: var(--interactive-text-hover)
 }
 
-.detailsContainer_a5f01b {
+.detailsContainer_bwNRJo {
     align-items: center;
     display: flex;
     flex-direction: row;
     gap: var(--space-8)
 }
 
-.textContainer_a5f01b {
+.textContainer_bwNRJo {
     flex: 1;
     min-width: 0
 }
 
-.nitroUpsell_a5f01b {
+.nitroUpsell_bwNRJo {
     border-top: 1px solid var(--border-subtle);
     padding-top: var(--space-12)
 }
 
-.nitroUpsell_a5f01b,
-.previewCTAContainer_a5f01b {
+.nitroUpsell_bwNRJo,
+.previewCTAContainer_bwNRJo {
     display: flex;
     flex-direction: column;
     gap: var(--space-8)
 }
 
-.previewCTAContainer_a5f01b {
+.previewCTAContainer_bwNRJo {
     align-items: center
 }
 
-.guildIconPlaceholder_a5f01b {
+.guildIconPlaceholder_bwNRJo {
     align-items: center;
     border-radius: var(--radius-sm);
     color: var(--text-muted);
@@ -93,15 +93,15 @@
     width: 40px
 }
 
-.guildIconPlaceholder_a5f01b,
-.textPlaceholder_a5f01b {
+.guildIconPlaceholder_bwNRJo,
+.textPlaceholder_bwNRJo {
     background-color: var(--background-mod-subtle)
 }
 
-.textPlaceholder_a5f01b {
+.textPlaceholder_bwNRJo {
     border-radius: var(--radius-xs);
     height: 14px;
     width: 120px
 }
 
-/*# sourceMappingURL=162182.99d5936f54486ba8.css.map*/
+/*# sourceMappingURL=162182.15a60b67ce29b12a.css.map*/

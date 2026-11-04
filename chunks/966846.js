@@ -1,17 +1,17 @@
 (n.d(t, { A: () => k }), n(321073), n(667532));
 var i = n(435558),
     r = n.n(i),
-    a = n(17928),
+    a = n(855986),
     s = n(506774),
     l = n(73153),
     o = n(92077),
-    d = n(952818),
-    c = n(280450),
+    d = n(986322),
+    c = n(46653),
     u = n(568004),
     _ = n(674378),
     E = n(962052),
     A = n(723702),
-    h = n(340829),
+    h = n(659096),
     f = n(652215),
     I = n(613057);
 let p = [I.Hi.AUTHENTICATION_FAILED, I.Hi.NOT_ENTITLED],
@@ -195,9 +195,9 @@ let k = new x(l.h, {
         }
     },
     CONNECTION_OPEN: function () {
-        (0, A.isDesktop)() && w();
+        (0, A.xl)() && w();
     },
     LOGOUT: function () {
-        (s.w.remove(m), (0, A.isDesktop)() && E.A.pause());
+        (s.w.remove(m), (0, A.xl)() && E.A.pause());
     },
 });

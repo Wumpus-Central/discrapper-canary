@@ -1,24 +1,30 @@
-(n.r(e), n.d(e, { default: () => h }));
-var s = n(477900),
-    u = n(582128),
-    d = n(806163),
-    l = n(718446),
-    o = n(899847),
-    i = n(33666),
-    r = n(41446),
-    c = n(107766),
-    a = n(652215),
-    p = n(355097);
-function h() {
-    let t = (0, i.A)(),
-        { teenId: e, linkCode: n } = (0, d.g)(),
-        h = "teen" !== t && null != e && null != n;
-    return (u.useEffect(() => {
-        h && null != e && null != n && (o.Ay.setPendingConnection(e, n), (0, c.Ew)(e, n));
-    }, [h, e, n]),
-    h)
-        ? (0, s.jsx)(d.rd, { to: a.BVt.FAMILY_CENTER })
-        : "teen" === t
-          ? (0, s.jsx)(d.rd, { to: (0, l.settingsPathToRoute)(p.od.FAMILY_CENTER) })
-          : (0, s.jsx)(r.A, {});
-}
+e.r(t);
+var s = e(477900),
+    u = e(582128),
+    d = e(806163),
+    l = e(718446),
+    r = e(899847),
+    c = e(33666),
+    i = e(890623),
+    o = e(107766),
+    p = e(652215),
+    a = e(355097);
+e.d(
+    t,
+    {},
+    {
+        default: function () {
+            let n = (0, c.A)(),
+                { teenId: t, linkCode: e } = (0, d.g)(),
+                E = "teen" !== n && null != t && null != e;
+            return (u.useEffect(() => {
+                E && null != t && null != e && (r.Ay.setPendingConnection(t, e), (0, o.Ew)(t, e));
+            }, [E, t, e]),
+            E)
+                ? (0, s.jsx)(d.rd, { to: p.BVt.FAMILY_CENTER })
+                : "teen" === n
+                  ? (0, s.jsx)(d.rd, { to: (0, l.T)(a.od.FAMILY_CENTER) })
+                  : (0, s.jsx)(i.A, {});
+        },
+    },
+);

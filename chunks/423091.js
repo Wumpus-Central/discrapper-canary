@@ -1,4 +1,3 @@
-n.d(t, { A: () => l });
 var i = n(827343),
     r = n(439372);
 let a = new (n(626584).A)("VideoFilterErrorManager");
@@ -12,3 +11,4 @@ class s extends r.A {
     };
 }
 let l = new s();
+n.d(t, {}, { A: l });

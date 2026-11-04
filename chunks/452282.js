@@ -1,4 +1,3 @@
-n.d(t, { Ay: () => u, U3: () => g });
 var i = n(477900),
     s = n(582128),
     a = n(503698),
@@ -110,3 +109,4 @@ class m extends s.Component {
     }
 }
 let u = (0, h.A)(m);
+n.d(t, {}, { Ay: u, U3: g });

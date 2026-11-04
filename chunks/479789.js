@@ -1,7 +1,7 @@
 e.exports = {
-    oO: "popover_ee4200",
-    IZ: "popoverVisible_ee4200",
-    VN: "close_ee4200",
-    fA: "graphic_ee4200",
-    Qq: "text_ee4200",
+    oO: "popover_YGS36Q",
+    IZ: "popoverVisible_YGS36Q",
+    VN: "close_YGS36Q",
+    fA: "graphic_YGS36Q",
+    Qq: "text_YGS36Q",
 };

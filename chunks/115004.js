@@ -1,6 +1,5 @@
 var r, n, a, i, s, o;
-(Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.Month = t.Weekday = t.Meridiem = void 0),
+((t.Month = t.Weekday = t.Meridiem = void 0),
     ((i = r || (t.Meridiem = r = {}))[(i.AM = 0)] = "AM"),
     (i[(i.PM = 1)] = "PM"),
     ((s = n || (t.Weekday = n = {}))[(s.SUNDAY = 0)] = "SUNDAY"),

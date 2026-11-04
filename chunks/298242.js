@@ -1,28 +1,33 @@
-n.d(t, { A: () => h });
 var i = n(477900);
 n(582128);
-var l = n(17928),
+var l = n(855986),
     r = n(477782),
     s = n(964355),
     a = n(827343),
-    o = n(477653),
+    o = n(718197),
     u = n(824744),
     d = n(723702),
-    c = n(105292);
-function h(e) {
-    let t = (0, l.bG)([o.Ay], () => (0, u.M)(o.Ay.getOutputVolume()));
-    return (0, i.jsx)(r.aK, {
-        id: "output",
-        label: c.intl.string(c.t.eATD2B),
-        interactive: !1,
-        control: (n, l) =>
-            (0, i.jsx)(s.i, {
-                ...n,
-                ref: l,
-                value: t,
-                maxValue: d.isPlatformEmbedded ? 200 : 100,
-                onChange: (t) => a.default.setOutputVolume((0, u.w)(t), { analyticsLocations: e }),
-                "aria-label": c.intl.string(c.t.eATD2B),
-            }),
-    });
-}
+    c = n(792996);
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let t = (0, l.bG)([o.Ay], () => (0, u.M)(o.Ay.getOutputVolume()));
+            return (0, i.jsx)(r.aK, {
+                id: "output",
+                label: c.intl.string(c.t.eATD2B),
+                interactive: !1,
+                control: (n, l) =>
+                    (0, i.jsx)(s.i, {
+                        ...n,
+                        ref: l,
+                        value: t,
+                        maxValue: d.isPlatformEmbedded ? 200 : 100,
+                        onChange: (t) => a.default.setOutputVolume((0, u.w)(t), { analyticsLocations: e }),
+                        "aria-label": c.intl.string(c.t.eATD2B),
+                    }),
+            });
+        },
+    },
+);

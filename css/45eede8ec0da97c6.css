@@ -1,0 +1,22 @@
+.emptyWidgetContainer_5nd-KJ {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 32px);
+    justify-content: center;
+    padding: 16px;
+    width: calc(100% - 32px)
+}
+
+.emptyWidgetContainer_5nd-KJ.absolute_5nd-KJ {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.emptyWidgetIcon_5nd-KJ {
+    opacity: .24
+}
+
+/*# sourceMappingURL=45eede8ec0da97c6.css.map*/

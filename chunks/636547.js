@@ -1,4 +1,3 @@
-n.d(t, { A: () => d });
 var i = n(477900);
 n(582128);
 var l = n(503698),
@@ -7,21 +6,27 @@ var l = n(503698),
     r = n(834730),
     o = n(404778),
     c = n(989401);
-function d(e) {
-    let { bar: t, children: n, className: l, inModal: d, title: u } = e;
-    return (0, i.jsxs)(a.Z, {
-        editable: !0,
-        className: s()(c.Nr, l, { [c.zE]: d }),
-        children: [
-            (0, i.jsxs)("div", {
-                className: s()(c.MY, { [c.zE]: d }),
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { bar: t, children: n, className: l, inModal: d, title: u } = e;
+            return (0, i.jsxs)(a.Z, {
+                editable: !0,
+                className: s()(c.Nr, l, { [c.zE]: d }),
                 children: [
-                    (0, i.jsx)(r.E, { variant: "body-sm/semibold", children: u }),
-                    (0, i.jsx)("div", { children: t }),
+                    (0, i.jsxs)("div", {
+                        className: s()(c.MY, { [c.zE]: d }),
+                        children: [
+                            (0, i.jsx)(r.E, { variant: "body-sm/semibold", children: u }),
+                            (0, i.jsx)("div", { children: t }),
+                        ],
+                    }),
+                    d ? (0, i.jsx)(o.c, {}) : null,
+                    n,
                 ],
-            }),
-            d ? (0, i.jsx)(o.c, {}) : null,
-            n,
-        ],
-    });
-}
+            });
+        },
+    },
+);

@@ -1,9 +1,8 @@
-n.d(t, { A: () => c });
-var i = n(17928),
+var i = n(855986),
     r = n(73153),
     a = n(439372),
     s = n(919577),
-    l = n(280450),
+    l = n(46653),
     o = n(734057);
 class d extends a.A {
     actions = {
@@ -39,3 +38,4 @@ class d extends a.A {
     }
 }
 let c = new d();
+n.d(t, {}, { A: c });

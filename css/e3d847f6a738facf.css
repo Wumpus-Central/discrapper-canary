@@ -1,0 +1,89 @@
+.akaBadge_AAMT29 {
+    display: inline-flex;
+    vertical-align: middle
+}
+
+.header_AAMT29 {
+    margin: 0 auto
+}
+
+.subHeader_AAMT29 {
+    text-align: center
+}
+
+.miniAvatar_AAMT29 {
+    margin-inline-start: 4px
+}
+
+.miniAvatar_AAMT29,
+.miniGuildIcon_AAMT29 {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.miniGuildIcon_AAMT29 {
+    margin-inline-start: 2px
+}
+
+.akaTransfer_AAMT29,
+.guildTransfer_AAMT29 {
+    display: inline-block
+}
+
+.guildName_AAMT29,
+.nickname_AAMT29 {
+    display: inline-block;
+    margin-inline-start: 4px
+}
+
+.spacing_AAMT29 {
+    margin-bottom: 20px
+}
+
+.fromToWrapper_AAMT29 {
+    background: no-repeat 50% 0;
+    margin-top: 24px;
+    padding-top: 24px
+}
+
+.from_AAMT29,
+.to_AAMT29 {
+    border-radius: 50%
+}
+
+.from_AAMT29 {
+    margin-inline-end: -27px;
+    opacity: .3
+}
+
+.to_AAMT29 {
+    background-color: var(--background-base-lower);
+    position: relative;
+    z-index: 1
+}
+
+.theme-dark .to_AAMT29 {
+    box-shadow: 0 0 0 4px var(--primary-600)
+}
+
+.theme-light .to_AAMT29 {
+    box-shadow: 0 0 0 4px var(--white)
+}
+
+.protectedText_AAMT29 {
+    margin-bottom: 20px
+}
+
+.roleSubscriptionText_AAMT29 {
+    margin-bottom: 16px
+}
+
+.images-light .fromToWrapper_AAMT29 {
+    background-image: url("/assets/9e6b1daa9504d89c.svg")
+}
+
+.images-dark .fromToWrapper_AAMT29 {
+    background-image: url("/assets/8b0b7b6309375fb9.svg")
+}
+
+/*# sourceMappingURL=e3d847f6a738facf.css.map*/

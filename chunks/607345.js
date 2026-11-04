@@ -1,12 +1,12 @@
-_.exports = {
-    DW: "overlayRoot_c00036",
-    aP: "box_c00036",
-    $A: "boxSelected_c00036",
-    ZV: "scaleHandle_c00036",
-    On: "handleTopStart_c00036",
-    zI: "handleTopEnd_c00036",
-    TP: "handleBottomEnd_c00036",
-    kb: "handleBottomStart_c00036",
-    t$: "rotateStem_c00036",
-    oT: "rotateHandle_c00036",
+e.exports = {
+    DW: "overlayRoot_1HiOnx",
+    aP: "box_1HiOnx",
+    $A: "boxSelected_1HiOnx",
+    ZV: "scaleHandle_1HiOnx",
+    On: "handleTopStart_1HiOnx",
+    zI: "handleTopEnd_1HiOnx",
+    TP: "handleBottomEnd_1HiOnx",
+    kb: "handleBottomStart_1HiOnx",
+    t$: "rotateStem_1HiOnx",
+    oT: "rotateHandle_1HiOnx",
 };

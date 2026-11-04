@@ -1,7 +1,6 @@
-n.d(t, { A: () => x, X: () => c });
 var i,
     l = n(158390),
-    s = n(17928),
+    s = n(855986),
     r = n(73153),
     a = n(9994),
     o = n(652215),
@@ -136,3 +135,4 @@ let x = new p(r.h, {
     },
     GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: g,
 });
+n.d(t, {}, { A: x, X: c });

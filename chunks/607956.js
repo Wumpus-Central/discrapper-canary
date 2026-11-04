@@ -1,32 +1,37 @@
-t.d(a, { default: () => s });
-var l = t(477900),
-    n = t(582128),
-    d = t(192308),
-    r = t(980707),
-    o = t(477782),
-    u = t(442433),
-    i = t(545059);
-function s(e) {
-    let { groupId: a, onSelect: s } = e,
-        c = n.useCallback(() => {
-            ((0, d.openModalLazy)(async () => {
-                let { default: e } = await t.e("51080").then(t.bind(t, 297147));
-                return (t) => (0, l.jsx)(e, { ...t, groupId: a });
-            }),
-                (0, u.Z_)());
-        }, [a]),
-        p = n.useCallback(() => {
-            (i.A.deleteGroup(a), (0, u.Z_)());
-        }, [a]);
-    return (0, l.jsxs)(r.W, {
-        "data-menu-migrated": !0,
-        "aria-label": "Group Context Menu",
-        navId: "group-context-menu",
-        onClose: u.Z_,
-        onSelect: s,
-        children: [
-            (0, l.jsx)(o.Dr, { id: "edit", label: "Edit Group", action: c }),
-            (0, l.jsx)(o.Dr, { id: "delete", label: "Delete Group", action: p, color: "danger" }),
-        ],
-    });
-}
+var l = a(477900),
+    n = a(582128),
+    r = a(192308),
+    d = a(165862),
+    u = a(477782),
+    o = a(442433),
+    i = a(545059);
+a.d(
+    t,
+    {},
+    {
+        default: function (e) {
+            let { groupId: t, onSelect: s } = e,
+                c = n.useCallback(() => {
+                    ((0, r.mM)(async () => {
+                        let { default: e } = await a.e(51080).then(a.bind(a, 297147));
+                        return (a) => (0, l.jsx)(e, { ...a, groupId: t });
+                    }),
+                        (0, o.Z_)());
+                }, [t]),
+                p = n.useCallback(() => {
+                    (i.A.deleteGroup(t), (0, o.Z_)());
+                }, [t]);
+            return (0, l.jsxs)(d.W, {
+                "data-menu-migrated": !0,
+                "aria-label": "Group Context Menu",
+                navId: "group-context-menu",
+                onClose: o.Z_,
+                onSelect: s,
+                children: [
+                    (0, l.jsx)(u.Dr, { id: "edit", label: "Edit Group", action: c }),
+                    (0, l.jsx)(u.Dr, { id: "delete", label: "Delete Group", action: p, color: "danger" }),
+                ],
+            });
+        },
+    },
+);

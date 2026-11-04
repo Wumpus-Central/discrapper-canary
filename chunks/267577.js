@@ -1,7 +1,7 @@
 e.exports = {
-    RW: "deleteEntitlementButton__23012",
-    Nr: "card__23012",
-    As: "clickableGroup__23012",
-    uW: "section__23012",
-    GC: "buttonGroup__23012",
+    RW: "deleteEntitlementButton_7LwIfE",
+    Nr: "card_7LwIfE",
+    As: "clickableGroup_7LwIfE",
+    uW: "section_7LwIfE",
+    GC: "buttonGroup_7LwIfE",
 };

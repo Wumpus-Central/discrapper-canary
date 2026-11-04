@@ -1,7 +1,7 @@
 e.exports = {
-    $j: "quickBar_b3c194",
-    e1: "clipContainer_b3c194",
-    WK: "clipThumbnailWrapper_b3c194",
-    $v: "autoClipIcon_b3c194",
-    N7: "stackCountIndicator_b3c194",
+    $j: "quickBar_y2dW7E",
+    e1: "clipContainer_y2dW7E",
+    WK: "clipThumbnailWrapper_y2dW7E",
+    $v: "autoClipIcon_y2dW7E",
+    N7: "stackCountIndicator_y2dW7E",
 };

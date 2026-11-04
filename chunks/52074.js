@@ -1,9 +1,14 @@
-e.d(t, { U: () => h });
 var a = e(73153),
-    c = e(849335),
+    c = e(225123),
     p = e(309698);
-function h(s) {
-    p.A.hasRequestedStatuses(s) ||
-        (a.h.dispatch({ type: "FETCH_CHANNEL_INFO", guildId: s }),
-        c.A.getSocket().requestChannelInfo(s, ["status", "voice_start_time"]));
-}
+e.d(
+    t,
+    {},
+    {
+        U: function (s) {
+            p.A.hasRequestedStatuses(s) ||
+                (a.h.dispatch({ type: "FETCH_CHANNEL_INFO", guildId: s }),
+                c.A.getSocket().requestChannelInfo(s, ["status", "voice_start_time"]));
+        },
+    },
+);

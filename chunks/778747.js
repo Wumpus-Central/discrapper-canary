@@ -1,4 +1,3 @@
-E.d(_, { K: () => t });
 var i,
     t =
         (((i = {}).PROFILE_WIDGET = "profile_widget"),
@@ -8,3 +7,4 @@ var i,
         (i.CHAT_MENTION = "chat_mention"),
         (i.INTEREST_PICKER = "interest_picker"),
         i);
+E.d(_, {}, { K: t });

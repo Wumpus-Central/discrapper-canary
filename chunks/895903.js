@@ -1,10 +1,9 @@
-t.d(n, { A: () => b });
 var i = t(477900),
     l = t(582128),
     s = t(503698),
     a = t.n(s),
-    r = t(17928),
-    o = t(661531),
+    r = t(855986),
+    o = t(646514),
     c = t(831544),
     d = t(834730),
     u = t(534514),
@@ -19,7 +18,7 @@ var i = t(477900),
     E = t(233993),
     j = t(19844),
     I = t(505543),
-    v = t(105292),
+    v = t(792996),
     N = t(269341);
 function _(e) {
     let { onClick: n, className: t } = e,
@@ -60,44 +59,50 @@ function T(e) {
         ],
     });
 }
-function b(e) {
-    let { channel: n, onContinueClick: t } = e,
-        s = (0, r.bG)([p.A], () => p.A.can(E.QY, n), [n]),
-        o = n.guild_id,
-        { canCreateGuildEvent: c } = (0, C.nr)(n),
-        A = (0, I.A)(n.id),
-        h = l.useRef(null);
-    return (0, i.jsxs)("div", {
-        className: N.kL,
-        ref: h,
-        children: [
-            (0, i.jsx)(f.A, { eventTargetRef: h }),
-            (0, i.jsxs)("div", {
-                className: N.Qs,
+t.d(
+    n,
+    {},
+    {
+        A: function (e) {
+            let { channel: n, onContinueClick: t } = e,
+                s = (0, r.bG)([p.A], () => p.A.can(E.QY, n), [n]),
+                o = n.guild_id,
+                { canCreateGuildEvent: c } = (0, C.nr)(n),
+                A = (0, I.A)(n.id),
+                h = l.useRef(null);
+            return (0, i.jsxs)("div", {
+                className: N.kL,
+                ref: h,
                 children: [
+                    (0, i.jsx)(f.A, { eventTargetRef: h }),
                     (0, i.jsxs)("div", {
-                        className: N.N1,
+                        className: N.Qs,
                         children: [
-                            (0, i.jsx)(u.D, {
-                                className: N.__invalid_title,
-                                variant: "heading-xxl/medium",
-                                children: v.intl.string(v.t.QGnDLs),
+                            (0, i.jsxs)("div", {
+                                className: N.N1,
+                                children: [
+                                    (0, i.jsx)(u.D, {
+                                        className: N.__invalid_title,
+                                        variant: "heading-xxl/medium",
+                                        children: v.intl.string(v.t.QGnDLs),
+                                    }),
+                                    (0, i.jsx)(d.E, {
+                                        tag: "div",
+                                        className: N.VA,
+                                        variant: "heading-lg/medium",
+                                        children: v.intl.string(v.t.djfK36),
+                                    }),
+                                ],
                             }),
-                            (0, i.jsx)(d.E, {
-                                tag: "div",
-                                className: N.VA,
-                                variant: "heading-lg/medium",
-                                children: v.intl.string(v.t.djfK36),
-                            }),
+                            A ? null : (0, i.jsx)(g.A, { channelId: n.id, showDismiss: !1 }),
+                            s ? (0, i.jsx)(x.A, { className: N.fN, channel: n }) : null,
+                            c ? (0, i.jsx)(m.A, { className: N.fN, guildId: o }) : null,
+                            s ? (0, i.jsx)(_, { className: a()({ [N.fN]: !0 }), onClick: t }) : null,
+                            (0, i.jsx)(T, { channel: n }),
                         ],
                     }),
-                    A ? null : (0, i.jsx)(g.A, { channelId: n.id, showDismiss: !1 }),
-                    s ? (0, i.jsx)(x.A, { className: N.fN, channel: n }) : null,
-                    c ? (0, i.jsx)(m.A, { className: N.fN, guildId: o }) : null,
-                    s ? (0, i.jsx)(_, { className: a()({ [N.fN]: !0 }), onClick: t }) : null,
-                    (0, i.jsx)(T, { channel: n }),
                 ],
-            }),
-        ],
-    });
-}
+            });
+        },
+    },
+);

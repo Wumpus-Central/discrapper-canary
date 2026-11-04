@@ -1,8 +1,8 @@
 e.exports = {
-    kL: "container__319e1",
-    zc: "iconContainer__319e1",
-    Kk: "icon__319e1",
-    uf: "stars__319e1",
-    wx: "header__319e1",
-    PP: "protip__319e1",
+    kL: "container_FgrH4y",
+    zc: "iconContainer_FgrH4y",
+    Kk: "icon_FgrH4y",
+    uf: "stars_FgrH4y",
+    wx: "header_FgrH4y",
+    PP: "protip_FgrH4y",
 };

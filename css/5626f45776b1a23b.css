@@ -1,0 +1,156 @@
+.container_GHRwjz {
+    align-items: center;
+    background: var(--background-base-lowest);
+    border: 1px solid var(--border-muted);
+    border-radius: 8px;
+    height: 44px;
+    justify-content: center;
+    margin: 24px auto 16px;
+    max-width: 80%;
+    min-width: 40%;
+    padding: 0 20px;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.container_GHRwjz,
+.iconContainer_GHRwjz {
+    display: flex
+}
+
+.icon_GHRwjz+.icon_GHRwjz {
+    margin-inline-start: -8px
+}
+
+.textContainer_GHRwjz {
+    margin-inline-start: 8px;
+    text-align: start
+}
+
+.root_PwiJiV {
+    text-align: center
+}
+
+.root_PwiJiV p {
+    margin: 0 0 16px
+}
+
+.contentContainer_PwiJiV {
+    display: flex;
+    flex-direction: row
+}
+
+.bodyContent_PwiJiV {
+    align-content: center
+}
+
+.header_PwiJiV {
+    margin-bottom: 24px
+}
+
+.enhancedHeader_PwiJiV,
+.subHeader_PwiJiV {
+    padding: 0 32px
+}
+
+.content_PwiJiV,
+.enhancedContent_PwiJiV {
+    margin-bottom: 32px
+}
+
+.enhancedContent_PwiJiV {
+    padding: 0
+}
+
+.footer_PwiJiV {
+    align-items: center;
+    justify-content: space-between
+}
+
+.enhancedFooter_PwiJiV {
+    background: var(--background-base-lowest)
+}
+
+.primaryActions_PwiJiV {
+    align-items: center;
+    display: flex
+}
+
+.enhancedPrimaryActions_PwiJiV {
+    justify-content: space-between;
+    width: 100%
+}
+
+.secondaryAction_PwiJiV {
+    margin-inline-end: 8px
+}
+
+.enhancedSecondaryAction_PwiJiV {
+    color: var(--premium-nitro-pink-text)
+}
+
+.enhancedSecondaryAction_PwiJiV:hover {
+    text-decoration: underline
+}
+
+.closeButton_PwiJiV {
+    align-self: flex-end;
+    color: var(--interactive-text-active);
+    margin: 12px;
+    position: absolute
+}
+
+.artContainer_PwiJiV {
+    border-radius: 8px;
+    margin: -48px auto 24px;
+    position: relative;
+    width: 225px
+}
+
+.artContainerBoxShadow_PwiJiV {
+    box-shadow: var(--elevation-medium)
+}
+
+.art_PwiJiV {
+    width: 225px
+}
+
+.sparkleBadge_PwiJiV {
+    display: block;
+    filter: drop-shadow(0 1px 3px var(--opacity-black-28));
+    height: 34px;
+    inset-inline-start: 0;
+    margin-top: -18px;
+    margin-inline-start: -12px;
+    position: absolute;
+    top: 0;
+    width: 47px
+}
+
+.newBadge_PwiJiV {
+    display: inline-block;
+    margin-top: -2px;
+    vertical-align: middle
+}
+
+.learnMoreLink_PwiJiV {
+    color: var(--text-link);
+    cursor: pointer
+}
+
+.context_PwiJiV {
+    margin-bottom: 16px
+}
+
+.betaTag_PwiJiV {
+    display: inline-flex;
+    margin-inline-start: .5em;
+    vertical-align: baseline
+}
+
+.videoBackgroundArt_PxLVP4 {
+    height: 154px;
+    width: 225px
+}
+
+/*# sourceMappingURL=5626f45776b1a23b.css.map*/

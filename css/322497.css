@@ -1,4 +1,4 @@
-.container__74da2 {
+.container_3vPJDG {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -7,7 +7,7 @@
     width: 100vw
 }
 
-.backgroundArtwork__74da2 {
+.backgroundArtwork_3vPJDG {
     height: 100%;
     inset-inline-start: 0;
     position: fixed;
@@ -15,11 +15,11 @@
     width: 100%
 }
 
-.appOpenedTitle__74da2 {
+.appOpenedTitle_3vPJDG {
     margin-bottom: 12px
 }
 
-.positioner_a516b9 {
+.positioner_0n9jnU {
     bottom: 0;
     inset-inline: 0;
     position: fixed;
@@ -27,7 +27,7 @@
     z-index: 1000
 }
 
-.container_a516b9 {
+.container_0n9jnU {
     align-items: center;
     background-color: var(--background-surface-high);
     border-radius: 8px;
@@ -39,38 +39,38 @@
     padding: 16px
 }
 
-.bindName_a516b9 {
+.bindName_0n9jnU {
     flex: 0 0 auto;
     margin-inline-end: 8px
 }
 
-.shortcut_a516b9 {
+.shortcut_0n9jnU {
     flex: 0 0 auto;
     margin: 0 2px
 }
 
-.separator_a516b9 {
+.separator_0n9jnU {
     color: var(--text-default);
     flex: 0 0 auto;
     font-weight: var(--font-weight-semibold);
     margin: 0 12px
 }
 
-.separator_a516b9:after {
+.separator_0n9jnU:after {
     content: "•"
 }
 
-.container__9fc7d {
+.container_l8ZeUq {
     display: flex
 }
 
-.dndKeyboardHelpBar__9fc7d {
+.dndKeyboardHelpBar_l8ZeUq {
     inset: auto !important;
     position: static !important
 }
 
-.dndKeyboardHelpBar__9fc7d>div {
+.dndKeyboardHelpBar_l8ZeUq>div {
     margin-bottom: 0
 }
 
-/*# sourceMappingURL=322497.5aad0d8cd6d408fe.css.map*/
+/*# sourceMappingURL=322497.ef4d0abb33ea0e09.css.map*/

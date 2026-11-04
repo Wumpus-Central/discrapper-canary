@@ -1,0 +1,113 @@
+.container_oWMwe2 {
+    margin-top: 16px
+}
+
+.messageContainer_UyQMSC {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    max-width: 432px
+}
+
+.saveNoticeContainer_UyQMSC {
+    bottom: 20px;
+    inset-inline-start: 50%;
+    position: absolute;
+    transform: translate(-50%);
+    width: 660px;
+    z-index: 100
+}
+
+.buttonContainer_UyQMSC {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.clearButton_UyQMSC {
+    font-size: 16px;
+    margin-inline-start: -16px
+}
+
+.noResultsContainer_ZMTSV1 {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    min-height: 300px;
+    padding: 36px;
+    width: 100%
+}
+
+.nagivateBackContainer_K-iqS8 {
+    align-items: center;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    margin: 2px 0;
+    padding-block: 6px;
+    padding-inline: 7px 8px
+}
+
+.nagivateBackContainer_K-iqS8:hover {
+    background-color: var(--brand-560);
+    color: var(--white)
+}
+
+.calendarContainer_K-iqS8 {
+    max-width: 500px
+}
+
+.calendar_K-iqS8 {
+    margin-bottom: -2px;
+    margin-top: 2px
+}
+
+.otherDatesContainer_K-iqS8 {
+    align-items: center;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    margin: 2px 0;
+    padding: 6px 8px
+}
+
+.otherDatesContainer_K-iqS8.focused_K-iqS8 {
+    background-color: var(--brand-600)
+}
+
+.leftContainer_K-iqS8 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.otherDateLabel_K-iqS8 {
+    color: var(--interactive-text-default)
+}
+
+.otherDateLabel_K-iqS8.focused_K-iqS8 {
+    color: var(--white)
+}
+
+.radioSelection_K-iqS8 {
+    color: var(--control-brand-foreground)
+}
+
+.labelWithIconContainer_vPFJvh {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: auto
+}
+
+.icon_vPFJvh {
+    margin-inline-end: 4px
+}
+
+/*# sourceMappingURL=c8e685df22976daa.css.map*/

@@ -1,6 +1,6 @@
 (r(848950), r(407544), r(887130));
 var n = r(497784);
-(Object.defineProperty(t, "Hue", {
+(Object.defineProperty(t, "RG", {
     enumerable: !0,
     get: function () {
         return a(n).default;
@@ -11,7 +11,7 @@ var o = r(574556);
 function a(e) {
     return e && e.__esModule ? e : { default: e };
 }
-(Object.defineProperty(t, "Saturation", {
+(Object.defineProperty(t, "VI", {
     enumerable: !0,
     get: function () {
         return a(o).default;

@@ -1,12 +1,11 @@
-n.d(t, { A: () => h });
 var i = n(477900),
     l = n(582128),
     r = n(621466),
-    s = n(17928),
+    s = n(855986),
     a = n(531685),
     o = n(787541),
-    u = n(558086),
-    d = n(79858);
+    u = n(600160),
+    d = n(179913);
 class c extends l.Component {
     static defaultProps = { position: "top", offsetX: 0, offsetY: 0, autoInvert: !0 };
     componentDidMount() {
@@ -82,10 +81,16 @@ class c extends l.Component {
             : l.Children.only(n);
     }
 }
-function h(e) {
-    let { tutorialId: t, disabled: n } = e,
-        l = (0, s.bG)([d.A], () => !n && d.A.shouldShow(t), [n, t]),
-        r = (0, s.bG)([a.A], () => a.A.isFocused()),
-        o = (0, s.bG)([a.A], () => a.A.windowSize(), []);
-    return (0, i.jsx)(c, { ...e, visible: l, windowFocused: r, windowSize: o });
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { tutorialId: t, disabled: n } = e,
+                l = (0, s.bG)([d.A], () => !n && d.A.shouldShow(t), [n, t]),
+                r = (0, s.bG)([a.A], () => a.A.isFocused()),
+                o = (0, s.bG)([a.A], () => a.A.windowSize(), []);
+            return (0, i.jsx)(c, { ...e, visible: l, windowFocused: r, windowSize: o });
+        },
+    },
+);

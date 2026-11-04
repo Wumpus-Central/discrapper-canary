@@ -1,0 +1,395 @@
+.guildInfoCard_kJwzWN {
+    text-align: start;
+    width: 100%
+}
+
+.presentedBy_kJwzWN {
+    color: var(--text-default);
+    font-family: var(--font-primary);
+    font-size: 12px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 16px;
+    text-transform: none
+}
+
+.guildContainer_kJwzWN {
+    display: flex;
+    flex-direction: row;
+    padding-top: 12px
+}
+
+.guildDetailsContanier_kJwzWN {
+    flex-direction: column;
+    padding-inline-start: 12px
+}
+
+.guildName_kJwzWN {
+    display: flex;
+    font-family: var(--font-primary)
+}
+
+.guildBadge_kJwzWN {
+    margin-inline-start: 4px
+}
+
+.guildInfoMemberCount_kJwzWN {
+    margin: 0;
+    padding: 2px 0 0
+}
+
+.guildInfoMemberCountText_kJwzWN {
+    font-size: 12px
+}
+
+.guildDescriptionContainer_kJwzWN {
+    padding-top: 12px
+}
+
+.guildEventCard_kJwzWN {
+    text-align: start;
+    width: 100%
+}
+
+.channelInfo_kJwzWN {
+    padding-top: 4px
+}
+
+.acceptButton_kJwzWN {
+    margin-top: 12px;
+    width: 100%
+}
+
+.container__Y6EQa {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%
+}
+
+.acceptButton__Y6EQa {
+    margin-top: 28px;
+    width: 100%
+}
+
+.redirectingText__Y6EQa {
+    margin-top: 16px;
+    width: 100%
+}
+
+.closeButtonContainer_s97CBE {
+    inset-inline-end: 12px;
+    position: absolute;
+    top: 12px;
+    z-index: 1
+}
+
+.modalContainerV1_s97CBE {
+    display: flex;
+    flex-direction: column;
+    margin-top: calc(var(--custom-modal-padding-top, var(--space-24))*-1);
+    max-height: min(85vh, 700px);
+    overflow: hidden
+}
+
+@media (max-height:550px),
+(max-width:485px) {
+    .modalContainerV1_s97CBE {
+        height: min(calc(100vh - 100px), 700px);
+        max-height: min(calc(100vh - 100px), 700px)
+    }
+}
+
+.bannerV1_s97CBE {
+    background-position: 50%;
+    background-size: cover;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    flex: 0 10 220px;
+    max-height: 220px;
+    min-height: 80px;
+    transition: max-height .35s ease;
+    width: 100%
+}
+
+.bannerV1_s97CBE[data-expanded=true] {
+    max-height: 80px
+}
+
+.bannerV1_s97CBE.gradient_s97CBE {
+    max-height: 120px
+}
+
+.contentWrapperV1_s97CBE {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    margin-bottom: 8px;
+    margin-top: -80px;
+    min-height: 0;
+    padding: 32px 32px 0;
+    position: relative
+}
+
+.contentWrapperV1Expanded_s97CBE {
+    border-bottom: 1px solid var(--border-subtle)
+}
+
+.footerWrapperV1_s97CBE {
+    padding: 16px 32px
+}
+
+.modalContainerV2_s97CBE {
+    background: var(--modal-background);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    height: min(600px, 80vh);
+    margin-bottom: calc(var(--custom-modal-padding-bottom)*-1);
+    margin-top: calc(var(--custom-modal-padding-top)*-1);
+    max-height: min(600px, 80vh);
+    min-height: min(600px, 80vh);
+    overflow: hidden;
+    position: relative
+}
+
+@media (max-height:550px),
+(max-width:485px) {
+    .modalContainerV2_s97CBE {
+        height: calc(100% + var(--custom-modal-padding-top) + var(--custom-modal-padding-bottom) + env(safe-area-inset-bottom, 0px));
+        margin-bottom: calc((var(--custom-modal-padding-bottom) + env(safe-area-inset-bottom, 0px))*-1);
+        max-height: none;
+        min-height: 0
+    }
+}
+
+.bannerV2_s97CBE {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    inset: 0;
+    position: absolute;
+    z-index: 0
+}
+
+.contentWrapperV2_s97CBE {
+    background: linear-gradient(to bottom, color-mix(in oklab, var(--modal-background) 80%, transparent), var(--modal-background) 40%);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    inset-inline-start: 0;
+    min-width: 400px;
+    overflow: hidden;
+    padding: 32px 32px 8px;
+    position: absolute;
+    top: 0;
+    width: 40%;
+    z-index: 1
+}
+
+.footerWrapperV2_s97CBE {
+    flex-shrink: 0;
+    padding: 16px 0
+}
+
+.guildIconContainer_s97CBE {
+    flex-shrink: 0;
+    margin-bottom: var(--space-8)
+}
+
+.guildIconContainerOutline_s97CBE {
+    margin-bottom: var(--space-4);
+    margin-inline-start: -4px
+}
+
+.guildIconMask_s97CBE {
+    background: var(--modal-background);
+    border-radius: inherit;
+    padding: 4px
+}
+
+.guildIconAcronym_s97CBE,
+.guildIconImage_s97CBE {
+    height: 100%;
+    width: 100%
+}
+
+.guildIconAcronym_s97CBE {
+    align-items: center;
+    background-color: var(--background-base-low);
+    color: var(--text-default);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.guildDetailsHeader_s97CBE {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4)
+}
+
+.nameRow_s97CBE {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-6)
+}
+
+.activityCount_s97CBE {
+    justify-content: flex-start
+}
+
+.metadataRow_s97CBE {
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+.metadataItem_s97CBE,
+.metadataRow_s97CBE {
+    align-items: center;
+    display: flex
+}
+
+.metadataItem_s97CBE {
+    gap: 4px
+}
+
+.metadataSeparator_s97CBE {
+    background: var(--text-muted);
+    border-radius: 50%;
+    flex-shrink: 0;
+    height: 4px;
+    width: 4px
+}
+
+.friendsList_s97CBE {
+    justify-content: flex-start
+}
+
+.scrollableSectionV1_s97CBE {
+    flex: 1 1 auto;
+    margin-top: var(--space-16);
+    margin-inline-end: -24px;
+    min-height: 0;
+    width: calc(100% + 24px)
+}
+
+.scrollableSectionWrapperV2_s97CBE {
+    flex: 1 1 auto;
+    margin-top: var(--space-16);
+    min-height: 0;
+    position: relative
+}
+
+.scrollableSectionV2_s97CBE {
+    height: 100%;
+    margin-inline-end: -24px;
+    min-height: 0;
+    width: calc(100% + 24px)
+}
+
+.scrollableContentInner_s97CBE {
+    box-sizing: border-box;
+    padding-inline-end: 24px
+}
+
+.scrollGradient_s97CBE {
+    background: linear-gradient(to top, var(--modal-background), transparent);
+    bottom: 0;
+    height: 24px;
+    inset-inline: 0;
+    inset-inline-end: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity .12s ease-out
+}
+
+.viewDetails_s97CBE {
+    align-items: center;
+    display: inline-flex;
+    gap: var(--space-4);
+    margin-top: 8px;
+    padding: 0
+}
+
+.expandableWrapper_s97CBE {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .35s ease
+}
+
+.expandableWrapper_s97CBE[data-expanded=true] {
+    grid-template-rows: 1fr;
+    padding-bottom: 24px
+}
+
+.expandableContent_s97CBE {
+    min-height: 0;
+    overflow: hidden
+}
+
+.reasonsToJoinList_s97CBE {
+    margin-top: var(--space-8)
+}
+
+.reasonToJoinEmoji_s97CBE {
+    height: 16px;
+    width: 16px
+}
+
+.aboutSection_s97CBE {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    margin-top: var(--space-24)
+}
+
+.errorContainer_s97CBE {
+    margin-bottom: var(--space-16)
+}
+
+.contentExtras_s97CBE {
+    margin-top: var(--space-32)
+}
+
+.contentExtraItem_s97CBE {
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+    padding: 12px 0
+}
+
+.contentExtraItemLeft_s97CBE {
+    flex-shrink: 0
+}
+
+.socialLinksWrapper_s97CBE {
+    display: flex;
+    gap: var(--space-12)
+}
+
+.categoriesWrapper_s97CBE {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    white-space: nowrap
+}
+
+.socialIcon_s97CBE {
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px
+}
+
+.guildCapPremiumUpsell_s97CBE {
+    margin-top: 0
+}
+
+.acceptUsername_s97CBE {
+    overflow-wrap: anywhere
+}
+
+/*# sourceMappingURL=5318be11f101fb69.css.map*/

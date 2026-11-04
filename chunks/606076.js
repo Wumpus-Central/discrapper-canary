@@ -1,5 +1,10 @@
-n.d(t, { A: () => r });
 let i = /\\/g;
-function r(e) {
-    return e.replace(i, "/");
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            return e.replace(i, "/");
+        },
+    },
+);

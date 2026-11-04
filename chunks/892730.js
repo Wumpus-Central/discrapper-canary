@@ -1,4 +1,3 @@
-r.d(t, { $: () => u });
 let n = new Set(["id"]),
     i = new Set(["aria-label", "aria-labelledby", "aria-describedby", "aria-details"]),
     o = new Set(["href", "hrefLang", "target", "rel", "download", "ping", "referrerPolicy"]),
@@ -40,19 +39,25 @@ let n = new Set(["id"]),
         "onTransitionStart",
     ]),
     l = /^(data-.*)$/;
-function u(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { labelable: r, isLink: u, global: c, events: f = c, propNames: d } = t,
-        p = {};
-    for (let t in e)
-        Object.prototype.hasOwnProperty.call(e, t) &&
-            (n.has(t) ||
-                (r && i.has(t)) ||
-                (u && o.has(t)) ||
-                (c && a.has(t)) ||
-                (f && (s.has(t) || (t.endsWith("Capture") && s.has(t.slice(0, -7))))) ||
-                d?.has(t) ||
-                l.test(t)) &&
-            (p[t] = e[t]);
-    return p;
-}
+r.d(
+    t,
+    {},
+    {
+        $: function (e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                { labelable: r, isLink: u, global: c, events: f = c, propNames: p } = t,
+                d = {};
+            for (let t in e)
+                Object.prototype.hasOwnProperty.call(e, t) &&
+                    (n.has(t) ||
+                        (r && i.has(t)) ||
+                        (u && o.has(t)) ||
+                        (c && a.has(t)) ||
+                        (f && (s.has(t) || (t.endsWith("Capture") && s.has(t.slice(0, -7))))) ||
+                        p?.has(t) ||
+                        l.test(t)) &&
+                    (d[t] = e[t]);
+            return d;
+        },
+    },
+);

@@ -1,7 +1,7 @@
 e.exports = {
-    EU: "reorderableGroupSection__672fc",
-    Me: "draggingGroupSection__672fc",
-    hV: "dropTargetGroupSection__672fc",
-    nH: "dropBeforeGroupSection__672fc",
-    _M: "dropAfterGroupSection__672fc",
+    EU: "reorderableGroupSection_r03v5M",
+    Me: "draggingGroupSection_r03v5M",
+    hV: "dropTargetGroupSection_r03v5M",
+    nH: "dropBeforeGroupSection_r03v5M",
+    _M: "dropAfterGroupSection_r03v5M",
 };

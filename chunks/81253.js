@@ -1,1 +1,1 @@
-c.r((a.exports = { frame: "frame__13c4f", wide: "wide__13c4f", narrow: "narrow__13c4f" }));
+a.r((r.exports = { frame: "frame_lzDcNJ", wide: "wide_lzDcNJ", narrow: "narrow_lzDcNJ" }));

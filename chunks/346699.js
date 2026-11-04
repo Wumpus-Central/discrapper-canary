@@ -1,4 +1,3 @@
-n.d(t, { d: () => r });
 var i,
     r =
         (((i = {})[(i.ACTION = 1)] = "ACTION"),
@@ -71,3 +70,4 @@ var i,
         (i[(i.ARCADE = 68)] = "ARCADE"),
         (i[(i.POINT_AND_CLICK = 69)] = "POINT_AND_CLICK"),
         i);
+n.d(t, {}, { d: r });

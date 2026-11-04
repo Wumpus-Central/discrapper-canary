@@ -1,4 +1,3 @@
-l.d(t, { default: () => b });
 var s = l(477900),
     a = l(582128),
     n = l(189213),
@@ -10,11 +9,11 @@ var s = l(477900),
     u = l(711014),
     p = l(652215),
     c = l(114329),
-    m = l(105292),
+    m = l(792996),
     C = l(668125);
 let g = (0, d.Fe)({
     createPromise: () =>
-        Promise.all([l.e("269714"), l.e("19385"), l.e("203930"), l.e("903663"), l.e("466147")]).then(l.bind(l, 48736)),
+        Promise.all([l.e(269714), l.e(19385), l.e(203930), l.e(903663), l.e(466147)]).then(l.bind(l, 48736)),
     webpackId: 48736,
 });
 class x extends a.PureComponent {
@@ -52,7 +51,7 @@ class x extends a.PureComponent {
                     children: [
                         (0, s.jsx)(i.k, {
                             label: m.intl.string(m.t.tGRbjA),
-                            maxLength: p.F05,
+                            maxLength: 32,
                             value: l,
                             onChange: this.handleNameChange,
                             placeholder: m.intl.string(m.t.xV9hVh),
@@ -78,4 +77,4 @@ class x extends a.PureComponent {
         });
     }
 }
-let b = x;
+l.d(t, {}, { default: x });

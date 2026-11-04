@@ -1,7 +1,6 @@
-n.d(i, { default: () => _ });
 var a = n(477900);
 n(582128);
-var e = n(980707),
+var e = n(165862),
     l = n(477782),
     r = n(442433),
     d = n(398590),
@@ -10,7 +9,7 @@ var e = n(980707),
     u = n(50268),
     h = n(976860),
     o = n(317910),
-    p = n(105292);
+    p = n(792996);
 let _ = (0, s.A)(
     function (t) {
         let { channel: i, onSelect: n } = t,
@@ -43,3 +42,4 @@ let _ = (0, s.A)(
     },
     [c.A.CONTEXT_MENU, c.A.CHANNEL_AUDIT_LOG_MENU],
 );
+n.d(i, {}, { default: _ });

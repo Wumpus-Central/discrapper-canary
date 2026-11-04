@@ -1,8 +1,5 @@
-function i(e) {
-    return "row" === e.type;
-}
-(n.d(t, { A: () => r, o: () => i }), n(321073));
-let r = class {
+n(321073);
+let i = class {
     sectionHeight = 0;
     rowHeight = 0;
     footerHeight = 0;
@@ -148,3 +145,13 @@ let r = class {
         return [i, null != t ? this.getHeightForRow(e, t) : this.getHeightForSection(r)];
     }
 };
+n.d(
+    t,
+    {},
+    {
+        A: i,
+        o: function (e) {
+            return "row" === e.type;
+        },
+    },
+);

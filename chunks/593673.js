@@ -1,4 +1,3 @@
-n.d(t, { B: () => s, a: () => a });
 var i,
     r,
     a =
@@ -9,3 +8,4 @@ var i,
         (i.POPULAR_GAMES = "popular_games"),
         i),
     s = (((r = {})[(r.DRAFT = 0)] = "DRAFT"), (r[(r.PUBLISHED = 1)] = "PUBLISHED"), r);
+n.d(t, {}, { B: s, a: a });

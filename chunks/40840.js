@@ -1,23 +1,19 @@
-(Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.TIME_UNITS_NO_ABBR_PATTERN =
-        t.TIME_UNITS_PATTERN =
-        t.YEAR_PATTERN =
-        t.ORDINAL_NUMBER_PATTERN =
-        t.NUMBER_PATTERN =
-        t.TIME_UNIT_DICTIONARY =
-        t.TIME_UNIT_DICTIONARY_NO_ABBR =
-        t.ORDINAL_WORD_DICTIONARY =
-        t.INTEGER_WORD_DICTIONARY =
-        t.MONTH_DICTIONARY =
-        t.FULL_MONTH_NAME_DICTIONARY =
-        t.WEEKDAY_DICTIONARY =
-            void 0),
-    (t.parseNumberPattern = i),
+((t.TIME_UNITS_NO_ABBR_PATTERN =
+    t.TIME_UNITS_PATTERN =
+    t.YEAR_PATTERN =
+    t.ORDINAL_NUMBER_PATTERN =
+    t.nj =
+    t.TIME_UNIT_DICTIONARY =
+    t.M1 =
+    t.Cg =
+    t.Vr =
+    t.MONTH_DICTIONARY =
+    t.FULL_MONTH_NAME_DICTIONARY =
+    t.WEEKDAY_DICTIONARY =
+        void 0),
     (t.parseOrdinalNumberPattern = function (e) {
         let r = e.toLowerCase();
-        return void 0 !== t.ORDINAL_WORD_DICTIONARY[r]
-            ? t.ORDINAL_WORD_DICTIONARY[r]
-            : parseInt((r = r.replace(/(?:st|nd|rd|th)$/i, "")));
+        return void 0 !== t.Cg[r] ? t.Cg[r] : parseInt((r = r.replace(/(?:st|nd|rd|th)$/i, "")));
     }),
     (t.parseYear = function (e) {
         if (/BE/i.test(e)) return parseInt((e = e.replace(/BE/i, ""))) - 543;
@@ -29,29 +25,28 @@
     (t.parseDuration = function (e) {
         let r = {},
             n = e,
-            a = o.exec(n);
+            a = s.exec(n);
         for (; a;)
             ((function (e, r) {
                 if (r[0].match(/^[a-zA-Z]+$/)) return;
-                let n = i(r[1]);
+                let n = (function (e) {
+                    let r = e.toLowerCase();
+                    if (void 0 !== t.Vr[r]) return t.Vr[r];
+                    if ("a" === r || "an" === r || "the" == r) return 1;
+                    if (r.match(/few/)) return 3;
+                    if (r.match(/half/)) return 0.5;
+                    if (r.match(/couple/)) return 2;
+                    else if (r.match(/several/)) return 7;
+                    return parseFloat(r);
+                })(r[1]);
                 e[t.TIME_UNIT_DICTIONARY[r[2].toLowerCase()]] = n;
             })(r, a),
                 (n = n.substring(a[0].length).trim()),
-                (a = o.exec(n)));
+                (a = s.exec(n)));
         return 0 == Object.keys(r).length ? null : r;
     }));
 let n = r(798401),
     a = r(574253);
-function i(e) {
-    let r = e.toLowerCase();
-    if (void 0 !== t.INTEGER_WORD_DICTIONARY[r]) return t.INTEGER_WORD_DICTIONARY[r];
-    if ("a" === r || "an" === r || "the" == r) return 1;
-    if (r.match(/few/)) return 3;
-    if (r.match(/half/)) return 0.5;
-    if (r.match(/couple/)) return 2;
-    else if (r.match(/several/)) return 7;
-    return parseFloat(r);
-}
 ((t.WEEKDAY_DICTIONARY = {
     sunday: 0,
     sun: 0,
@@ -119,7 +114,7 @@ function i(e) {
         dec: 12,
         "dec.": 12,
     })),
-    (t.INTEGER_WORD_DICTIONARY = {
+    (t.Vr = {
         one: 1,
         two: 2,
         three: 3,
@@ -133,7 +128,7 @@ function i(e) {
         eleven: 11,
         twelve: 12,
     }),
-    (t.ORDINAL_WORD_DICTIONARY = {
+    (t.Cg = {
         first: 1,
         second: 2,
         third: 3,
@@ -176,7 +171,7 @@ function i(e) {
         "thirty first": 31,
         "thirty-first": 31,
     }),
-    (t.TIME_UNIT_DICTIONARY_NO_ABBR = {
+    (t.M1 = {
         second: "second",
         seconds: "second",
         minute: "minute",
@@ -229,14 +224,14 @@ function i(e) {
             year: "year",
             years: "year",
         },
-        t.TIME_UNIT_DICTIONARY_NO_ABBR,
+        t.M1,
     )),
-    (t.NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.INTEGER_WORD_DICTIONARY)}|[0-9]+|[0-9]+\\.[0-9]+|half(?:\\s{0,2}an?)?|an?\\b(?:\\s{0,2}few)?|few|several|the|a?\\s{0,2}couple\\s{0,2}(?:of)?)`),
-    (t.ORDINAL_NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.ORDINAL_WORD_DICTIONARY)}|[0-9]{1,2}(?:st|nd|rd|th)?)`),
+    (t.nj = `(?:${(0, n.matchAnyPattern)(t.Vr)}|[0-9]+|[0-9]+\\.[0-9]+|half(?:\\s{0,2}an?)?|an?\\b(?:\\s{0,2}few)?|few|several|the|a?\\s{0,2}couple\\s{0,2}(?:of)?)`),
+    (t.ORDINAL_NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.Cg)}|[0-9]{1,2}(?:st|nd|rd|th)?)`),
     (t.YEAR_PATTERN = "(?:[1-9][0-9]{0,3}\\s{0,2}(?:BE|AD|BC|BCE|CE)|[1-2][0-9]{3}|[5-9][0-9]|2[0-5])"));
-let s = `(${t.NUMBER_PATTERN})\\s{0,3}(${(0, n.matchAnyPattern)(t.TIME_UNIT_DICTIONARY)})`,
-    o = RegExp(s, "i"),
-    u = `(${t.NUMBER_PATTERN})\\s{0,3}(${(0, n.matchAnyPattern)(t.TIME_UNIT_DICTIONARY_NO_ABBR)})`,
-    l = "\\s{0,5},?(?:\\s*and)?\\s{0,5}";
-((t.TIME_UNITS_PATTERN = (0, n.repeatedTimeunitPattern)("(?:(?:about|around)\\s{0,3})?", s, l)),
-    (t.TIME_UNITS_NO_ABBR_PATTERN = (0, n.repeatedTimeunitPattern)("(?:(?:about|around)\\s{0,3})?", u, l)));
+let i = `(${t.nj})\\s{0,3}(${(0, n.matchAnyPattern)(t.TIME_UNIT_DICTIONARY)})`,
+    s = RegExp(i, "i"),
+    o = `(${t.nj})\\s{0,3}(${(0, n.matchAnyPattern)(t.M1)})`,
+    u = "\\s{0,5},?(?:\\s*and)?\\s{0,5}";
+((t.TIME_UNITS_PATTERN = (0, n.repeatedTimeunitPattern)("(?:(?:about|around)\\s{0,3})?", i, u)),
+    (t.TIME_UNITS_NO_ABBR_PATTERN = (0, n.repeatedTimeunitPattern)("(?:(?:about|around)\\s{0,3})?", o, u)));

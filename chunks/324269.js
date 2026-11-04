@@ -1,14 +1,13 @@
-n.d(e, { default: () => x });
 var r = n(477900),
     i = n(582128),
     l = n(821609),
     o = n(477782),
-    s = n(980707),
+    s = n(165862),
     a = n(265872),
     c = n(112173),
     d = n(558060),
     u = n(284683),
-    p = n(105292);
+    p = n(792996);
 function h(t) {
     let { closePopout: e, sortOptionContext: n } = t,
         { sortOption: l, setSortOption: a, onReset: c } = n,
@@ -40,18 +39,24 @@ function h(t) {
         }),
     });
 }
-function x() {
-    let t = (0, d.R)(),
-        e = (0, u.Ac)(t.sortOption),
-        n = i.useRef(null);
-    return (0, r.jsx)(a.Y, {
-        targetElementRef: n,
-        renderPopout: (e) => {
-            let { closePopout: n } = e;
-            return (0, r.jsx)(h, { closePopout: n, sortOptionContext: t });
+n.d(
+    e,
+    {},
+    {
+        default: function () {
+            let t = (0, d.R)(),
+                e = (0, u.Ac)(t.sortOption),
+                n = i.useRef(null);
+            return (0, r.jsx)(a.Y, {
+                targetElementRef: n,
+                renderPopout: (e) => {
+                    let { closePopout: n } = e;
+                    return (0, r.jsx)(h, { closePopout: n, sortOptionContext: t });
+                },
+                position: "bottom",
+                align: "left",
+                children: (t) => (0, r.jsx)(l.$, { ...t, text: e, icon: c.J, variant: "secondary", buttonRef: n }),
+            });
         },
-        position: "bottom",
-        align: "left",
-        children: (t) => (0, r.jsx)(l.$, { ...t, text: e, icon: c.J, variant: "secondary", buttonRef: n }),
-    });
-}
+    },
+);

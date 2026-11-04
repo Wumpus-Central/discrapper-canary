@@ -1,1 +1,1 @@
-e.exports = { v: "banner_e110e7", C: "copy_e110e7" };
+e.exports = { v: "banner_07a9AE", C: "copy_07a9AE" };

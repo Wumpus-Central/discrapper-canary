@@ -1,36 +1,41 @@
-n.d(t, { B: () => o });
 var r = n(477900);
 n(582128);
 var i = n(683071),
-    a = n(298208),
+    a = n(516106),
     l = n(740053);
 let s = { info: "info", warning: "warning", critical: "critical" },
     u = ["info", "warning", "critical"];
-function o() {
-    let { notices: e, isExpressCheckoutVisible: t } = (0, a.t4)((e) => ({
-        notices: e.getPaymentSourceNotices(),
-        isExpressCheckoutVisible: e.getExpressCheckoutVisibilityState().shouldExpressCheckoutBeVisible,
-    }));
-    return t || 0 === e.length
-        ? null
-        : (0, r.jsx)("div", {
-              className: l.k,
-              children: (0, r.jsx)(i.w, {
-                  type: s[
-                      u[
-                          e.reduce((e, t) => {
-                              let { severity: n } = t;
-                              return Math.max(e, u.indexOf(n));
-                          }, 0)
-                      ]
-                  ],
-                  message: e
-                      .map((e) => {
-                          let { message: t } = e;
-                          return t;
-                      })
-                      .join(" "),
-                  role: "status",
-              }),
-          });
-}
+n.d(
+    t,
+    {},
+    {
+        B: function () {
+            let { notices: e, isExpressCheckoutVisible: t } = (0, a.t4)((e) => ({
+                notices: e.getPaymentSourceNotices(),
+                isExpressCheckoutVisible: e.getExpressCheckoutVisibilityState().shouldExpressCheckoutBeVisible,
+            }));
+            return t || 0 === e.length
+                ? null
+                : (0, r.jsx)("div", {
+                      className: l.k,
+                      children: (0, r.jsx)(i.w, {
+                          type: s[
+                              u[
+                                  e.reduce((e, t) => {
+                                      let { severity: n } = t;
+                                      return Math.max(e, u.indexOf(n));
+                                  }, 0)
+                              ]
+                          ],
+                          message: e
+                              .map((e) => {
+                                  let { message: t } = e;
+                                  return t;
+                              })
+                              .join(" "),
+                          role: "status",
+                      }),
+                  });
+        },
+    },
+);

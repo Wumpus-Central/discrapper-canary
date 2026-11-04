@@ -1,9 +1,9 @@
-(n.d(t, { A: () => R }), n(321073));
-var i = n(17928),
+n(321073);
+var i = n(855986),
     r = n(73153),
     a = n(999903),
     s = n(181079),
-    l = n(280450),
+    l = n(46653),
     o = n(734057),
     d = n(808728),
     c = n(71393),
@@ -19,7 +19,7 @@ function I(e, t) {
     e.index = t;
 }
 function p(e) {
-    let t = d.Ay.getChannels(e),
+    let t = d.A.getChannels(e),
         n = h();
     function i(e) {
         let { channel: t } = e;
@@ -30,8 +30,8 @@ function p(e) {
             let { channel: t } = e;
             (n._categories.push({ channel: t, index: -1 }), (n[t.id] = []));
         }),
-        t[d.I6].forEach(i),
-        t[d.vM].forEach(i),
+        t[d.I].forEach(i),
+        t.VOCAL.forEach(i),
         (0, a.A)(n._categories, n).forEach(I),
         (E[e] = n),
         n
@@ -68,7 +68,7 @@ function C() {
 class O extends i.Ay.Store {
     static displayName = "GuildCategoryStore";
     initialize() {
-        (this.waitFor(d.Ay, c.A, l.default, o.A, s.A), this.syncWith([s.A], C));
+        (this.waitFor(d.A, c.A, l.default, o.A, s.A), this.syncWith([s.A], C));
     }
     getCategories(e) {
         return null != e ? (E[e] ?? p(e)) : f;
@@ -125,3 +125,4 @@ let R = new O(r.h, {
         }, !1);
     },
 });
+n.d(t, {}, { A: R });

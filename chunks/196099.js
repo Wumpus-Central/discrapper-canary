@@ -1,21 +1,27 @@
-A.d(e, { H: () => a, M: () => N });
 var C,
-    E = A(582128),
-    r = A(688810),
-    I = A(174459),
-    _ = A(652215),
+    E = e(582128),
+    r = e(688810),
+    I = e(129230),
+    _ = e(652215),
     a = (((C = {}).CLAIM = "claim"), (C.PARTNER_PAGE_REDIRECT = "partner_page_redirect"), (C.CANCEL = "cancel"), C);
-function N(t) {
-    let { analyticsLocations: e } = (0, r.Ay)();
-    return E.useCallback(
-        (A, C) => {
-            I.default.track(_.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
-                partner: t,
-                cta_type: A,
-                url: C ?? null,
-                location_stack: e,
-            });
+e.d(
+    A,
+    {},
+    {
+        H: a,
+        M: function (t) {
+            let { analyticsLocations: A } = (0, r.Ay)();
+            return E.useCallback(
+                (e, C) => {
+                    I.default.track(_.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
+                        partner: t,
+                        cta_type: e,
+                        url: C ?? null,
+                        location_stack: A,
+                    });
+                },
+                [t, A],
+            );
         },
-        [t, e],
-    );
-}
+    },
+);

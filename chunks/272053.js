@@ -1,10 +1,10 @@
-(n.d(t, { A: () => d }), n(321073));
+n(321073);
 var i = n(775602),
     r = n(963935),
     a = n(894858),
     s = n(466448),
     l = n(397274);
-class o {
+let o = new (class {
     accessibleDirectory = null;
     navigateWithValidation = null;
     closeWithValidation = null;
@@ -161,5 +161,5 @@ class o {
             this.accordionExpandResolvers.clear(),
             (this.closeWithValidation = null));
     }
-}
-let d = new o();
+})();
+n.d(t, {}, { A: o });

@@ -1,9 +1,14 @@
-n.d(t, { A: () => r });
 var s = n(477900),
     i = n(503698),
     l = n.n(i),
     a = n(541769);
-function r(e) {
-    let { width: t, height: n, showPlaceholder: i, children: r, className: o } = e;
-    return i ? (0, s.jsx)("div", { className: l()(a.s, o), style: { width: t, height: n } }) : r;
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { width: t, height: n, showPlaceholder: i, children: r, className: o } = e;
+            return i ? (0, s.jsx)("div", { className: l()(a.s, o), style: { width: t, height: n } }) : r;
+        },
+    },
+);

@@ -1,1 +1,1 @@
-p.exports = { B: "platforms_e6539f" };
+p.exports = { B: "platforms_SgpU8W" };

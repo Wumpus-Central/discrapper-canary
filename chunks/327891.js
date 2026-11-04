@@ -1,0 +1,330 @@
+(n.d(t, { kJ: () => f, lg: () => h, Ay: () => I }), n(938796));
+var i,
+    r = (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"), (i[(i.OUT_OF_PROCESS = 1)] = "OUT_OF_PROCESS"), i),
+    a = n(136722),
+    s = n(315069),
+    l = n(878014),
+    o = n(486020),
+    d = n(811091);
+class c extends s.A {
+    id;
+    name;
+    static createFromServer(e) {
+        return new c(e);
+    }
+    constructor(e) {
+        (super(), (this.id = e.id), (this.name = e.name));
+    }
+}
+var u = n(619019),
+    _ = n(487887),
+    E = n(705751);
+let A = { [_.I4]: 7, [_.qA]: 12 };
+function h(e) {
+    let t = { os: e.os, name: e.name };
+    null != e.arguments && (t.arguments = e.arguments);
+    let n = e.is_launcher ?? e.isLauncher;
+    return (null != n && (t.isLauncher = n), t);
+}
+class f extends s.A {
+    id;
+    name;
+    icon;
+    description;
+    type;
+    coverImage;
+    primarySkuId;
+    bot;
+    splash;
+    thirdPartySkus;
+    isMonetized;
+    isVerified;
+    roleConnectionsVerificationUrl;
+    parentId;
+    _connectionEntrypointUrl;
+    contentClassification;
+    flags;
+    static createFromServer(e) {
+        return new f({
+            ...e,
+            coverImage: e.cover_image,
+            primarySkuId: e.primary_sku_id,
+            bot: null != e.bot ? new u.A(e.bot) : null,
+            thirdPartySkus: e.third_party_skus,
+            roleConnectionsVerificationUrl: e.role_connections_verification_url,
+            parentId: e.parent_id,
+            _connectionEntrypointUrl: e.connection_entrypoint_url,
+            contentClassification: e.content_classification,
+            flags: a.iu(e.flags_new ?? e.flags ?? 0),
+        });
+    }
+    constructor(e) {
+        (super(),
+            (this.id = e.id),
+            (this.name = e.name),
+            (this.icon = e.icon),
+            (this.splash = e.splash),
+            (this.primarySkuId = e.primarySkuId),
+            (this.thirdPartySkus = e.thirdPartySkus ?? []),
+            (this.description = e.description),
+            (this.bot = e.bot),
+            (this.coverImage = e.coverImage),
+            (this.type = e.type),
+            (this.isMonetized = e.is_monetized ?? e.isMonetized),
+            (this.isVerified = e.is_verified ?? e.isVerified),
+            (this.roleConnectionsVerificationUrl =
+                e.role_connections_verification_url ?? e.roleConnectionsVerificationUrl),
+            (this.parentId = e.parent_id ?? e.parentId),
+            (this._connectionEntrypointUrl = e.connection_entrypoint_url ?? e._connectionEntrypointUrl),
+            (this.contentClassification = e.content_classification ?? e.contentClassification),
+            (this.flags = a.iu(e.flags ?? 0)));
+    }
+    get connectionEntrypointUrl() {
+        let { APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS: e } = n(534952),
+            t = e[this.id];
+        return t?.connectionEntrypointUrlOverride != null
+            ? t.connectionEntrypointUrlOverride
+            : this._connectionEntrypointUrl;
+    }
+    getIconURL(e, t) {
+        return null != this.icon ? o.Ay.getGameAssetURL({ id: this.id, hash: this.icon, size: e, format: t }) : null;
+    }
+    getIconSource(e, t) {
+        return null != this.icon ? o.Ay.getGameAssetSource({ id: this.id, hash: this.icon, size: e, format: t }) : null;
+    }
+    getSplashURL(e, t) {
+        return null != this.splash
+            ? o.Ay.getGameAssetURL({ id: this.id, hash: this.splash, size: e, keepAspectRatio: !0, format: t })
+            : null;
+    }
+    getCoverImageURL(e) {
+        return null != this.coverImage
+            ? o.Ay.getApplicationIconURL({ id: this.id, icon: this.coverImage, size: e, keepAspectRatio: !0 })
+            : null;
+    }
+}
+class I extends f {
+    overlay;
+    overlayWarn;
+    overlayCompatibilityHook;
+    overlayMethods;
+    hook;
+    aliases;
+    publishers;
+    developers;
+    storeListingSkuId;
+    guildId;
+    guild;
+    executables;
+    hashes;
+    eulaId;
+    slug;
+    maxParticipants;
+    tags;
+    embeddedActivityConfig;
+    embeddedSurfaces;
+    team;
+    integrationTypesConfig;
+    storefront_available;
+    termsOfServiceUrl;
+    privacyPolicyUrl;
+    isDiscoverable;
+    customInstallUrl;
+    installParams;
+    directoryEntry;
+    categories;
+    linkedGames;
+    deepLinkUri;
+    applicationAccountLinkBenefitConfig;
+    conjureProjectId;
+    static createFromServer(e) {
+        return new I({
+            ...e,
+            coverImage: e.cover_image,
+            primarySkuId: e.primary_sku_id,
+            bot: null != e.bot ? new u.A(e.bot) : null,
+            thirdPartySkus: e.third_party_skus,
+            roleConnectionsVerificationUrl: e.role_connections_verification_url,
+            overlayWarn: e.overlay_warn,
+            overlayCompatibilityHook: e.overlay_compatibility_hook,
+            overlayMethods: e.overlay_methods ?? r.DEFAULT,
+            hook: e.hook,
+            storeListingSkuId: e.store_listing_sku_id,
+            guildId: e.guild_id,
+            guild: e.guild,
+            publishers: null != e.publishers ? e.publishers.map(c.createFromServer) : [],
+            developers: null != e.developers ? e.developers.map(c.createFromServer) : [],
+            eulaId: e.eula_id,
+            slug: e.slug,
+            flags: a.iu(e.flags_new ?? e.flags ?? 0),
+            maxParticipants: e.max_participants,
+            tags: e.tags,
+            embeddedActivityConfig: e.embedded_activity_config,
+            embeddedSurfaces: e.embedded_surfaces,
+            integrationTypesConfig:
+                null != e.integration_types_config
+                    ? Object.fromEntries(
+                          Object.entries(e.integration_types_config).map((e) => {
+                              let [t, n] = e;
+                              return [t, { oauth2InstallParams: (n ?? {}).oauth2_install_params }];
+                          }),
+                      )
+                    : void 0,
+            termsOfServiceUrl: e.terms_of_service_url,
+            privacyPolicyUrl: e.privacy_policy_url,
+            isDiscoverable: e.is_discoverable,
+            directoryEntry: e.directory_entry,
+            categories: e.categories,
+            linkedGames: e.linked_games?.map((e) => ({
+                ...e,
+                application: null != e.application ? I.createFromServer(e.application) : void 0,
+            })),
+            deepLinkUri: e.deeplink_uri,
+            applicationAccountLinkBenefitConfig: e.application_account_link_benefit_config,
+            conjureProjectId: e.conjure_project_id,
+            parentId: e.parent_id,
+        });
+    }
+    constructor(e) {
+        (super(e),
+            (this.overlay = e.overlay ?? !1),
+            (this.overlayWarn = e.overlayWarn ?? !1),
+            (this.overlayCompatibilityHook = e.overlayCompatibilityHook ?? !1),
+            (this.overlayMethods = e.overlayMethods ?? r.DEFAULT),
+            (this.hook = e.hook ?? !0),
+            (this.aliases = e.aliases ?? []),
+            (this.publishers = e.publishers ?? []),
+            (this.developers = e.developers ?? []),
+            (this.storeListingSkuId = e.storeListingSkuId),
+            (this.guildId = e.guildId),
+            (this.guild = e.guild),
+            (this.executables = (e.executables ?? []).map(h)),
+            (this.hashes = e.hashes ?? []),
+            (this.eulaId = e.eulaId),
+            (this.slug = e.slug),
+            (this.tags = e.tags ?? []),
+            (this.maxParticipants = e.maxParticipants),
+            (this.embeddedActivityConfig = e.embedded_activity_config ?? e.embeddedActivityConfig),
+            (this.embeddedSurfaces = e.embedded_surfaces ?? e.embeddedSurfaces),
+            (this.team = e.team),
+            (this.integrationTypesConfig = e.integrationTypesConfig),
+            (this.storefront_available = e.storefront_available),
+            (this.termsOfServiceUrl = e.termsOfServiceUrl),
+            (this.privacyPolicyUrl = e.privacyPolicyUrl),
+            (this.isDiscoverable = e.is_discoverable ?? e.isDiscoverable),
+            (this.customInstallUrl = e.custom_install_url ?? e.customInstallUrl),
+            (this.installParams = e.install_params ?? e.installParams),
+            (this.directoryEntry = e.directory_entry ?? e.directoryEntry),
+            (this.categories = e.categories),
+            (this.linkedGames =
+                e.linked_games?.map((e) => ({
+                    ...e,
+                    application: null != e.application ? I.createFromServer(e.application) : void 0,
+                })) ?? e.linkedGames),
+            (this.deepLinkUri = e.deepLinkUri ?? e.deeplink_uri),
+            (this.applicationAccountLinkBenefitConfig =
+                e.applicationAccountLinkBenefitConfig ?? e.application_account_link_benefit_config),
+            (this.conjureProjectId = e.conjureProjectId ?? e.conjure_project_id),
+            (this.parentId = e.parentId ?? e.parent_id));
+    }
+    getCanonicalGameId() {
+        return this.type === E.S7.GAME
+            ? d.default.cast(this.id)
+            : (this.linkedGames?.find((e) => e.application?.type === E.S7.GAME)?.id ?? null);
+    }
+    mergeFromApplicationUpdate(e) {
+        var t, n;
+        return new I({
+            id: e.id ?? this.id,
+            name: e.name ?? this.name,
+            icon: e.icon ?? this.icon,
+            splash: e.splash ?? this.splash,
+            overlay: e.overlay ?? this.overlay,
+            overlayWarn: e.overlayWarn ?? this.overlayWarn,
+            overlayCompatibilityHook: e.overlayCompatibilityHook ?? this.overlayCompatibilityHook,
+            overlayMethods: e.overlayMethods ?? this.overlayMethods,
+            hook: e.hook ?? this.hook,
+            aliases: e.aliases ?? this.aliases,
+            publishers: e.publishers ?? this.publishers,
+            developers: e.developers ?? this.developers,
+            primarySkuId: e.primarySkuId ?? this.primarySkuId,
+            storeListingSkuId: e.storeListingSkuId ?? this.storeListingSkuId,
+            thirdPartySkus: e.thirdPartySkus ?? this.thirdPartySkus,
+            guildId: e.guildId ?? this.guildId,
+            guild: e.guild ?? this.guild,
+            executables: e.executables ?? this.executables,
+            hashes: e.hashes ?? this.hashes,
+            description: e.description ?? this.description,
+            eulaId: e.eulaId ?? this.eulaId,
+            slug: e.slug ?? this.slug,
+            coverImage: e.coverImage ?? this.coverImage,
+            bot: e.bot ?? this.bot,
+            flags: e.flags ?? this.flags,
+            maxParticipants: e.maxParticipants ?? this.maxParticipants,
+            tags: e.tags ?? this.tags,
+            embeddedActivityConfig:
+                e.embeddedActivityConfig ??
+                (null != this.embeddedActivityConfig ? { ...this.embeddedActivityConfig } : void 0),
+            embeddedSurfaces: e.embeddedSurfaces ?? this.embeddedSurfaces,
+            type: e.type ?? this.type,
+            team: e.team ?? this.team,
+            roleConnectionsVerificationUrl: e.roleConnectionsVerificationUrl ?? this.roleConnectionsVerificationUrl,
+            _connectionEntrypointUrl: e._connectionEntrypointUrl ?? this._connectionEntrypointUrl,
+            integrationTypesConfig: e.integrationTypesConfig ?? this.integrationTypesConfig,
+            isMonetized: e.isMonetized ?? this.isMonetized,
+            storefront_available: e.storefront_available ?? this.storefront_available,
+            termsOfServiceUrl: e.termsOfServiceUrl ?? this.termsOfServiceUrl,
+            privacyPolicyUrl: e.privacyPolicyUrl ?? this.privacyPolicyUrl,
+            isVerified: e.isVerified ?? this.isVerified,
+            customInstallUrl: e.customInstallUrl ?? this.customInstallUrl,
+            installParams: e.installParams ?? this.installParams,
+            isDiscoverable: e.isDiscoverable ?? this.isDiscoverable,
+            directoryEntry: e.directoryEntry ?? this.directoryEntry,
+            categories: e.categories ?? this.categories,
+            linkedGames:
+                ((t = e.linkedGames),
+                (n = this.linkedGames),
+                null == t
+                    ? n
+                    : null == n
+                      ? t
+                      : t.map((e) => {
+                            if (null != e.application) return e;
+                            {
+                                let t = n.find((t) => t.id === e.id);
+                                return t?.application != null ? { ...e, application: t.application } : e;
+                            }
+                        })),
+            deepLinkUri: e.deepLinkUri ?? this.deepLinkUri,
+            applicationAccountLinkBenefitConfig:
+                e.applicationAccountLinkBenefitConfig ?? this.applicationAccountLinkBenefitConfig,
+            conjureProjectId: e.conjureProjectId ?? this.conjureProjectId,
+            contentClassification: e.contentClassification ?? this.contentClassification,
+            parentId: e.parentId ?? this.parentId,
+        });
+    }
+    getMaxParticipants() {
+        return this.maxParticipants ?? A[this.id] ?? 0;
+    }
+    get isEmbedded() {
+        return (0, l.D)(this);
+    }
+    supportsEmbeddedSurface(e) {
+        return (0, l.W)(this, e);
+    }
+    supportsIntegrationTypes() {
+        for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
+        let i = this.integrationTypesConfig;
+        return null != i && t.every((e) => e in i);
+    }
+    get destinationSkuId() {
+        return null != this.storeListingSkuId ? this.storeListingSkuId : this.primarySkuId;
+    }
+    get supportsOutOfProcessOverlay() {
+        return I.supportsOutOfProcessOverlay(this.overlayMethods);
+    }
+    static supportsOutOfProcessOverlay(e) {
+        let t = r.OUT_OF_PROCESS;
+        return null != e && (e & t) === t;
+    }
+}

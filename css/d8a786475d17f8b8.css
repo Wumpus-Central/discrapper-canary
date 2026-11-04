@@ -1,0 +1,121 @@
+.content_2LEGNU {
+    align-items: center;
+    background: var(--background-base-lower);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: calc(-1px - var(--custom-modal-padding-bottom));
+    margin-top: calc(-1px - var(--custom-modal-padding-top));
+    margin-inline: -1px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 24px;
+    position: relative
+}
+
+.background_2LEGNU {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    inset: 0;
+    -webkit-mask-image: linear-gradient(180deg, #000, transparent 50%);
+    mask-image: linear-gradient(180deg, #000, transparent 50%);
+    pointer-events: none;
+    position: absolute;
+    z-index: 0
+}
+
+.closeButton_2LEGNU {
+    inset-inline-end: 20px;
+    position: absolute;
+    top: 20px;
+    z-index: 2
+}
+
+.body_2LEGNU {
+    gap: 16px;
+    width: 100%;
+    z-index: 1
+}
+
+.body_2LEGNU,
+.titleContainer_2LEGNU {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative
+}
+
+.titleContainer_2LEGNU {
+    gap: 8px;
+    max-width: 100%;
+    padding-top: 200px;
+    text-align: center
+}
+
+.titleContainer_2LEGNU:before {
+    background: linear-gradient(to top, var(--background-base-lower) 0, var(--background-base-lower) 60%, transparent 100%);
+    bottom: -8px;
+    content: "";
+    filter: blur(24px);
+    height: 60px;
+    inset-inline: -200px;
+    pointer-events: none;
+    position: absolute;
+    z-index: -1
+}
+
+.title_2LEGNU {
+    white-space: pre-line
+}
+
+.cards_2LEGNU {
+    flex-direction: row;
+    margin-top: 8px;
+    width: 100%
+}
+
+.card_2LEGNU,
+.cards_2LEGNU {
+    display: flex;
+    gap: 16px
+}
+
+.card_2LEGNU {
+    align-items: center;
+    background: var(--background-surface-higher);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    flex: 1;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center
+}
+
+.cardImage_2LEGNU {
+    height: 120px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%
+}
+
+.cardCopy_2LEGNU {
+    flex-direction: column;
+    gap: 4px
+}
+
+.buttonContainer_2LEGNU,
+.cardCopy_2LEGNU {
+    align-items: center;
+    display: flex
+}
+
+.buttonContainer_2LEGNU {
+    justify-content: center;
+    margin-top: 8px;
+    width: 60%
+}
+
+/*# sourceMappingURL=d8a786475d17f8b8.css.map*/

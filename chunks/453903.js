@@ -1,4 +1,3 @@
-n.d(t, { $n: () => O, NA: () => N, oU: () => S });
 var i = n(477900),
     r = n(582128),
     a = n(64015),
@@ -15,7 +14,7 @@ var i = n(477900),
     f = n(750506),
     I = n(267102),
     p = n(712687),
-    m = n(38405),
+    m = n(856383),
     T = n(292036),
     g = n(652215);
 let S = Symbol("POPOUT_PREVENT_CLOSE"),
@@ -98,7 +97,7 @@ class O extends r.Component {
             this.context.windowDispatch.subscribe(this.closeAction, this.handleEscapeClose),
             (this.domElementRef.current = t),
             (this.isValidClickStart = !1),
-            e && (this.modalsAtOpen = (0, h.getOpenModalKeys)()),
+            e && (this.modalsAtOpen = (0, h.Kg)()),
             this.subscribeToModalStack(),
             this.forceUpdate());
     }
@@ -106,10 +105,10 @@ class O extends r.Component {
         !0 === this.props.clickTrap &&
             (this.updateModalStackedOnTop(),
             null == this.unsubscribeModalChanges &&
-                (this.unsubscribeModalChanges = (0, h.subscribeToModalChanges)(this.updateModalStackedOnTop)));
+                (this.unsubscribeModalChanges = (0, h.mc)(this.updateModalStackedOnTop)));
     }
     updateModalStackedOnTop = () => {
-        let e = (0, h.hasModalOpenedSince)(this.modalsAtOpen);
+        let e = (0, h.PD)(this.modalsAtOpen);
         this.state.isModalStackedOnTop !== e && this.setState({ isModalStackedOnTop: e });
     };
     unsubscribe() {
@@ -260,12 +259,7 @@ class O extends r.Component {
         let { ignoreModalClicks: t, closeOnClickOutside: n } = this.props;
         if (!1 === n) return !1;
         let i = this.domElementRef.current;
-        return !(
-            null == i ||
-            (0, E.H)(i, e.target) ||
-            p.A.isOpen() ||
-            (t && (0, h.hasModalOpenedSince)(this.modalsAtOpen))
-        );
+        return !(null == i || (0, E.H)(i, e.target) || p.A.isOpen() || (t && (0, h.PD)(this.modalsAtOpen)));
     }
     handleDocumentMouseDown = (e) => {
         this.isDismissingEventOutside(e) && (this.isValidClickStart = !0);
@@ -304,3 +298,4 @@ class O extends r.Component {
         });
     }, 1e3 / 60);
 }
+n.d(t, {}, { $n: O, NA: N, oU: S });

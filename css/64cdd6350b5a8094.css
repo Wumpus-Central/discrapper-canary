@@ -1,0 +1,8 @@
+.scroller_jkJlMe {
+    background: var(--background-gradient-chat, var(--background-base-lower));
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
+/*# sourceMappingURL=64cdd6350b5a8094.css.map*/

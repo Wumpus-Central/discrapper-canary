@@ -1,6 +1,5 @@
-n.d(t, { Ay: () => o, eY: () => l, zF: () => s });
 var i,
-    r = n(17928),
+    r = n(855986),
     a = n(977997),
     s =
         (((i = {})[(i.NONE = 0)] = "NONE"),
@@ -17,6 +16,14 @@ function l(e) {
             ? 3 * (!e.suppress && null == e.requestToSpeakTimestamp)
             : 2;
 }
-function o(e, t) {
-    return (0, r.bG)([a.A], () => (null == e || null == t ? 0 : l(a.A.getVoiceStateForChannel(t, e))), [e, t]);
-}
+n.d(
+    t,
+    {},
+    {
+        Ay: function (e, t) {
+            return (0, r.bG)([a.A], () => (null == e || null == t ? 0 : l(a.A.getVoiceStateForChannel(t, e))), [e, t]);
+        },
+        eY: l,
+        zF: s,
+    },
+);

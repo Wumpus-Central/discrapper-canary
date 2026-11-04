@@ -1,4 +1,3 @@
-n.d(t, { R: () => r });
 var i,
     r =
         (((i = {})[(i.ICY = 1)] = "ICY"),
@@ -17,3 +16,4 @@ var i,
         (i[(i.BUTTER = 14)] = "BUTTER"),
         (i[(i.IRIDESCENT = 15)] = "IRIDESCENT"),
         i);
+n.d(t, {}, { R: r });

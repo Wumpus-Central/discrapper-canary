@@ -1,4 +1,3 @@
-n.d(t, { PA: () => d, UG: () => o, X1: () => l, a4: () => u, s8: () => c });
 var i,
     r,
     a,
@@ -15,11 +14,11 @@ var i,
         (a[(a.OPENED_GAME_PROFILE = 8)] = "OPENED_GAME_PROFILE"),
         (a[(a.COPIED_LEADERBOARD_ROW = 9)] = "COPIED_LEADERBOARD_ROW"),
         (a[(a.APPLICATION_WIDGET_PREVIEW_VIEW_MORE = 10)] = "APPLICATION_WIDGET_PREVIEW_VIEW_MORE"),
-        a);
-let c = "https://www.igdb.com/about";
-var u =
-    (((s = {})[(s.SPOTIFY = 1)] = "SPOTIFY"),
-    (s[(s.CRUNCHYROLL = 2)] = "CRUNCHYROLL"),
-    (s[(s.XBOX = 3)] = "XBOX"),
-    (s[(s.PLAYSTATION = 4)] = "PLAYSTATION"),
-    s);
+        a),
+    c =
+        (((s = {})[(s.SPOTIFY = 1)] = "SPOTIFY"),
+        (s[(s.CRUNCHYROLL = 2)] = "CRUNCHYROLL"),
+        (s[(s.XBOX = 3)] = "XBOX"),
+        (s[(s.PLAYSTATION = 4)] = "PLAYSTATION"),
+        s);
+n.d(t, {}, { PA: d, UG: o, X1: l, a4: c, s8: "https://www.igdb.com/about" });

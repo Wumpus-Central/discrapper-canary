@@ -1,4 +1,3 @@
-l.d(n, { A: () => p });
 var t = l(477900),
     i = l(582128),
     s = l(503698),
@@ -10,7 +9,7 @@ var t = l(477900),
     u = l(442433),
     h = l(46054),
     x = l(742589),
-    m = l(105292),
+    m = l(792996),
     A = l(267283),
     j = l(165648);
 function g(e) {
@@ -30,8 +29,8 @@ class b extends i.Component {
             let l = n.parentNode;
             if (((0, a.vq)(l) && g(l)) || !e.currentTarget.contains(n)) return;
         }
-        (0, c.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([l.e("921903"), l.e("608939")]).then(l.bind(l, 181094));
+        (0, c.mM)(async () => {
+            let { default: e } = await Promise.all([l.e(921903), l.e(608939)]).then(l.bind(l, 181094));
             return (n) => (0, t.jsx)(e, { ...n, ...this.props });
         });
     };
@@ -39,25 +38,25 @@ class b extends i.Component {
         let { channel: n, guild: i } = this.props;
         (0, u.L3)(e, async () => {
             let { default: e } = await Promise.all([
-                l.e("926132"),
-                l.e("391763"),
-                l.e("591951"),
-                l.e("947502"),
-                l.e("550033"),
-                l.e("343266"),
-                l.e("309004"),
-                l.e("412255"),
-                l.e("63340"),
-                l.e("430997"),
-                l.e("379995"),
-                l.e("544058"),
-                l.e("275289"),
-                l.e("591377"),
-                l.e("35723"),
-                l.e("256372"),
-                l.e("29542"),
-                l.e("359545"),
-            ]).then(l.bind(l, 22496));
+                l.e(926132),
+                l.e(391763),
+                l.e(382563),
+                l.e(947502),
+                l.e(343266),
+                l.e(550033),
+                l.e(309004),
+                l.e(412255),
+                l.e(63340),
+                l.e(430997),
+                l.e(379995),
+                l.e(544058),
+                l.e(275289),
+                l.e(591377),
+                l.e(35723),
+                l.e(256372),
+                l.e(29542),
+                l.e(135610),
+            ]).then(l.bind(l, 834881));
             return (l) => (0, t.jsx)(e, { ...l, channel: n, guild: i, includeTopic: !0 });
         });
     };
@@ -96,4 +95,4 @@ class b extends i.Component {
             : null;
     }
 }
-let p = b;
+l.d(n, {}, { A: b });

@@ -1,4 +1,3 @@
-n.d(t, { X: () => l });
 var i,
     l =
         (((i = {}).BETTER_THAN_YOU = "better_than_you"),
@@ -26,3 +25,4 @@ var i,
         (i.LFG = "lfg"),
         (i.LOOKING_TO_LEARN = "looking_to_learn"),
         i);
+n.d(t, {}, { X: l });

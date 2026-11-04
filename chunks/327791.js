@@ -1,7 +1,12 @@
-n.d(t, { A: () => s });
-var a = n(17928),
-    l = n(287809),
-    r = n(24482);
-function s() {
-    return (0, a.bG)([l.default], () => r.Ay.canUsePremiumProfileCustomization(l.default.getCurrentUser()));
-}
+var a = n(855986),
+    r = n(287809),
+    l = n(879610);
+n.d(
+    t,
+    {},
+    {
+        A: function () {
+            return (0, a.bG)([r.default], () => l.Ay.canUsePremiumProfileCustomization(r.default.getCurrentUser()));
+        },
+    },
+);

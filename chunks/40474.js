@@ -1,10 +1,9 @@
-l.d(e, { A: () => u });
 var n = l(477900),
     r = l(582128),
     a = l(503698),
     i = l.n(a),
-    t = l(939249),
-    c = l(235986),
+    c = l(939249),
+    t = l(235986),
     d = l(147925),
     h = l(390758);
 class p extends r.PureComponent {
@@ -17,22 +16,22 @@ class p extends r.PureComponent {
                 activeId: l,
                 onBreadcrumbClick: r,
                 breadcrumbs: a,
-                renderCustomBreadcrumb: c,
+                renderCustomBreadcrumb: t,
                 separatorClassName: p,
             } = this.props,
             u = s.id === l,
             j = () => this.handleClick(s),
             o = e === a.length - 1,
             m =
-                null != c
-                    ? c(s, u)
+                null != t
+                    ? t(s, u)
                     : (0, n.jsx)("span", { className: i()(h.QF, { [h.aj]: u, [h._j]: null != r }), children: s.label });
         return (0, n.jsxs)(
             "div",
             {
                 className: i()(h.hj, { [h.jQ]: o }),
                 children: [
-                    null != r ? (0, n.jsx)(t.D, { tag: "span", onClick: j, className: h.$O, children: m }) : m,
+                    null != r ? (0, n.jsx)(c.D, { tag: "span", onClick: j, className: h.$O, children: m }) : m,
                     o ? null : (0, n.jsx)(d.A, { className: i()(h.LJ, p), direction: d.A.Directions.RIGHT }),
                 ],
             },
@@ -42,7 +41,7 @@ class p extends r.PureComponent {
     render() {
         let { breadcrumbs: s, className: e } = this.props,
             l = s.map(this.renderBreadcrumb);
-        return (0, n.jsx)(c.A, { justify: c.A.Justify.START, className: i()(h.jD, e), children: l });
+        return (0, n.jsx)(t.A, { justify: t.A.Justify.START, className: i()(h.jD, e), children: l });
     }
 }
-let u = p;
+l.d(e, {}, { A: p });

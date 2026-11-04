@@ -1,4 +1,3 @@
-n.d(t, { AE: () => N, LE: () => T, kr: () => S, mZ: () => _.A, yt: () => g });
 var i = n(435558),
     r = n.n(i),
     a = n(635377),
@@ -27,140 +26,147 @@ function m(e, t, n) {
     }
     null != i && i.forEach((n) => n(e, t));
 }
-function T(e) {
-    let t = p.get(e);
-    return null != t && t.loaded;
-}
-function g(e, t) {
-    let n = p.get(e);
-    if (null != n && n.loaded)
-        return (
-            null != t &&
-                c.A.awaitOnline().then(() => {
-                    null != n &&
-                        null != n.callbacks &&
-                        n.callbacks.forEach((t) => {
-                            null != n ? t(!1, n) : t(!0, { url: e, loaded: !0 });
-                        });
-                }),
-            A.tEg
-        );
+n.d(
+    t,
+    { mZ: () => _.A },
     {
-        let i;
-        return (
-            null == n &&
-                ((n = { url: e, loaded: !1 }),
-                p.set(e, n),
-                (function e(t) {
-                    let n = new Image();
-                    ((n.onerror = (function (t, n) {
-                        null == t.backoff && (t.backoff = new o.A());
-                        let { backoff: i } = t;
-                        return async () => {
-                            (await c.A.isOnline(),
-                                i.fails < 5
-                                    ? i.fail(() => {
-                                          e(t);
-                                      })
-                                    : m(!0, t, n));
-                        };
-                    })(t, n)),
-                        (n.onload = () => {
-                            let { backoff: e } = t;
-                            (null != e && e.succeed(), m(!1, t, n));
-                        }),
-                        (n.src = t.url));
-                })(n)),
-            null != t && ((i = t.bind(null)), null == n.callbacks && (n.callbacks = new Set()), n.callbacks.add(i)),
-            () => {
-                null != i &&
-                    null != n &&
-                    (null != n.callbacks && n.callbacks.delete(i), null != n.backoff && n.backoff.cancel());
-            }
-        );
-    }
-}
-function S(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    if (t) {
-        let t = I.filter((t) => t <= e).pop();
-        if (null != t && e / t <= 1.25) return t;
-    }
-    return I.find((t) => e <= t) ?? I[I.length - 1];
-}
-function N(e) {
-    let {
-            src: t,
-            width: i,
-            height: a,
-            maxWidth: s,
-            maxHeight: o,
-            ratio: c = 1,
-            format: I = null,
-            quality: p = null,
-            animated: m = !1,
-            srcIsAnimated: T = !1,
-        } = e,
-        g = i,
-        S = a;
-    (c < 1 && ((g = Math.round(i * c)), (S = Math.round(a * c))),
-        null != s && (g = Math.min(g, s)),
-        null != o && (S = Math.min(S, o)));
-    let N = (0, _.A)();
-    return (function (e) {
-        let {
-            src: t,
-            sourceWidth: i,
-            sourceHeight: a,
-            targetWidth: s,
-            targetHeight: o,
-            format: c = null,
-            quality: I = null,
-            animated: p = !1,
-            srcIsAnimated: m = !1,
-        } = e;
-        if (t.startsWith("data:image") || u.A.isDiscordCdnUrl(t)) return t;
-        let [T, g] = (function (e) {
-            let [t, n] = e.split("?");
-            return [t, l.parse(n)];
-        })(t);
-        (null != c && (g.format = c),
-            null != I && (g.quality = I),
-            p && m && (h.test(t) || f.test(t)) && (g.animated = !0),
-            f.test(t) && (g.format = "webp"));
-        let S = (0, d.Uj)({ width: s, height: o, maxWidth: A.uJv, maxHeight: A.uJv });
-        if (((s = S.width), (o = S.height), s !== i || o !== a)) {
-            let e = (function (e) {
-                    try {
-                        let { getAttachmentImageLadderConfig: t } = n(502571),
-                            i = t({ location: e });
-                        return !0 === i.enabled ? i : null;
-                    } catch {
-                        return null;
-                    }
-                })("ImageLoaderUtils.getSrcWithWidthAndHeight"),
-                t = { width: s, height: o };
-            (null != e &&
-                (t = (0, E.v7)({
-                    targetWidth: s,
-                    targetHeight: o,
+        AE: function (e) {
+            let {
+                    src: t,
+                    width: i,
+                    height: a,
+                    maxWidth: s,
+                    maxHeight: o,
+                    ratio: c = 1,
+                    format: A = null,
+                    quality: I = null,
+                    animated: p = !1,
+                    srcIsAnimated: m = !1,
+                } = e,
+                T = i,
+                g = a;
+            (c < 1 && ((T = Math.round(i * c)), (g = Math.round(a * c))),
+                null != s && (T = Math.min(T, s)),
+                null != o && (g = Math.min(g, o)));
+            let S = (0, _.A)();
+            return (function (e) {
+                let {
+                    src: t,
                     sourceWidth: i,
                     sourceHeight: a,
-                    maxUpscale: (0, E.iE)(e, (0, _.A)()),
-                    ladder: e.ladder,
-                })),
-                (t.width !== i || t.height !== a) && ((g.width = 0 | t.width), (g.height = 0 | t.height)));
-        }
-        return (r().isEmpty(g) || (T += "?" + l.stringify(g)), T);
-    })({
-        src: t,
-        sourceWidth: i,
-        sourceHeight: a,
-        targetWidth: (g *= N),
-        targetHeight: (S *= N),
-        format: I,
-        quality: p,
-        animated: m,
-        srcIsAnimated: T,
-    });
-}
+                    targetWidth: s,
+                    targetHeight: o,
+                    format: c = null,
+                    quality: A = null,
+                    animated: I = !1,
+                    srcIsAnimated: p = !1,
+                } = e;
+                if (t.startsWith("data:image") || u.A.isDiscordCdnUrl(t)) return t;
+                let [m, T] = (function (e) {
+                    let [t, n] = e.split("?");
+                    return [t, l.qg(n)];
+                })(t);
+                (null != c && (T.format = c),
+                    null != A && (T.quality = A),
+                    I && p && (h.test(t) || f.test(t)) && (T.animated = !0),
+                    f.test(t) && (T.format = "webp"));
+                let g = (0, d.Uj)({ width: s, height: o, maxWidth: 4096, maxHeight: 4096 });
+                if (((s = g.width), (o = g.height), s !== i || o !== a)) {
+                    let e = (function (e) {
+                            try {
+                                let { getAttachmentImageLadderConfig: t } = n(502571),
+                                    i = t({ location: e });
+                                return !0 === i.enabled ? i : null;
+                            } catch {
+                                return null;
+                            }
+                        })("ImageLoaderUtils.getSrcWithWidthAndHeight"),
+                        t = { width: s, height: o };
+                    (null != e &&
+                        (t = (0, E.v7)({
+                            targetWidth: s,
+                            targetHeight: o,
+                            sourceWidth: i,
+                            sourceHeight: a,
+                            maxUpscale: (0, E.iE)(e, (0, _.A)()),
+                            ladder: e.ladder,
+                        })),
+                        (t.width !== i || t.height !== a) && ((T.width = 0 | t.width), (T.height = 0 | t.height)));
+                }
+                return (r().isEmpty(T) || (m += "?" + l.As(T)), m);
+            })({
+                src: t,
+                sourceWidth: i,
+                sourceHeight: a,
+                targetWidth: (T *= S),
+                targetHeight: (g *= S),
+                format: A,
+                quality: I,
+                animated: p,
+                srcIsAnimated: m,
+            });
+        },
+        LE: function (e) {
+            let t = p.get(e);
+            return null != t && t.loaded;
+        },
+        kr: function (e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (t) {
+                let t = I.filter((t) => t <= e).pop();
+                if (null != t && e / t <= 1.25) return t;
+            }
+            return I.find((t) => e <= t) ?? I[I.length - 1];
+        },
+        yt: function (e, t) {
+            let n = p.get(e);
+            if (null != n && n.loaded)
+                return (
+                    null != t &&
+                        c.A.awaitOnline().then(() => {
+                            null != n &&
+                                null != n.callbacks &&
+                                n.callbacks.forEach((t) => {
+                                    null != n ? t(!1, n) : t(!0, { url: e, loaded: !0 });
+                                });
+                        }),
+                    A.tEg
+                );
+            {
+                let i;
+                return (
+                    null == n &&
+                        ((n = { url: e, loaded: !1 }),
+                        p.set(e, n),
+                        (function e(t) {
+                            let n = new Image();
+                            ((n.onerror = (function (t, n) {
+                                null == t.backoff && (t.backoff = new o.A());
+                                let { backoff: i } = t;
+                                return async () => {
+                                    (await c.A.isOnline(),
+                                        i.fails < 5
+                                            ? i.fail(() => {
+                                                  e(t);
+                                              })
+                                            : m(!0, t, n));
+                                };
+                            })(t, n)),
+                                (n.onload = () => {
+                                    let { backoff: e } = t;
+                                    (null != e && e.succeed(), m(!1, t, n));
+                                }),
+                                (n.src = t.url));
+                        })(n)),
+                    null != t &&
+                        ((i = t.bind(null)), null == n.callbacks && (n.callbacks = new Set()), n.callbacks.add(i)),
+                    () => {
+                        null != i &&
+                            null != n &&
+                            (null != n.callbacks && n.callbacks.delete(i), null != n.backoff && n.backoff.cancel());
+                    }
+                );
+            }
+        },
+    },
+);

@@ -1,4 +1,3 @@
-n.d(e, { I4: () => f, Oc: () => I, Qi: () => p, fB: () => C, ku: () => T, z9: () => h });
 var r = n(118751),
     i = n(933832),
     s = n(104510),
@@ -8,9 +7,9 @@ var r = n(118751),
     c = n(861004),
     g = n(343032),
     u = n(403581),
-    d = n(24482),
-    m = n(202541),
-    x = n(105292);
+    d = n(879610),
+    m = n(682901),
+    x = n(792996);
 let h = [
         { Icon: i.CheckmarkLargeIcon, getText: () => x.intl.string(x.t.kpMomJ) },
         {
@@ -28,10 +27,7 @@ let h = [
             Icon: s._,
             getText: function () {
                 let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "en-US";
-                return x.intl.formatToPlainString(x.t["T9RTr/"], {
-                    numBoosts: m.M4,
-                    percentageOff: (0, r.l9)(t, m.oX / 100),
-                });
+                return x.intl.formatToPlainString(x.t["T9RTr/"], { numBoosts: 2, percentageOff: (0, r.l9)(t, 0.3) });
             },
         },
         {
@@ -95,3 +91,4 @@ let h = [
         { Icon: g.i, getText: () => x.intl.string(x.t["taMwg/"]) },
         { Icon: u.t, getText: () => x.intl.string(x.t["8ukxAW"]) },
     ];
+n.d(e, {}, { I4: f, Oc: I, Qi: p, fB: C, ku: T, z9: h });

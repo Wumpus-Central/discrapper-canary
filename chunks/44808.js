@@ -1,4 +1,3 @@
-n.d(t, { m: () => A });
 var i,
     r = n(477900),
     a = n(582128),
@@ -38,4 +37,4 @@ function A(e) {
         })
     );
 }
-A.Types = u;
+((A.Types = u), n.d(t, {}, { m: A }));

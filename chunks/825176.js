@@ -1,1 +1,1 @@
-e.exports = { oJ: "avatarBackground_eb2508", my: "avatar_eb2508" };
+t.exports = { oJ: "avatarBackground_r9JhIo", my: "avatar_r9JhIo" };

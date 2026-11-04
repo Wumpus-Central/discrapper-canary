@@ -1,7 +1,7 @@
 e.exports = {
-    SP: "balanceCounterText__98f64",
-    sl: "balanceCounterMarginRightAlign__98f64",
-    $j: "balanceCounterTextRightAlign__98f64",
-    v6: "balanceCounterMarginLeftAlign__98f64",
-    Sc: "balanceCounterTextLeftAlign__98f64",
+    SP: "balanceCounterText_yIKdvW",
+    sl: "balanceCounterMarginRightAlign_yIKdvW",
+    $j: "balanceCounterTextRightAlign_yIKdvW",
+    v6: "balanceCounterMarginLeftAlign_yIKdvW",
+    Sc: "balanceCounterTextLeftAlign_yIKdvW",
 };

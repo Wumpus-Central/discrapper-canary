@@ -1,4 +1,3 @@
-n.d(t, { OB: () => s, YA: () => l, YX: () => o });
 var i,
     r,
     a,
@@ -36,3 +35,4 @@ var i,
         (a.LEARN_MORE = "learn_more"),
         (a.CONFIRM_AGE = "confirm_age"),
         a);
+n.d(t, {}, { OB: s, YA: l, YX: o });

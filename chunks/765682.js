@@ -1,4 +1,3 @@
-n.d(t, { F5: () => s, hL: () => l, iL: () => o });
 var i,
     r,
     a,
@@ -28,3 +27,4 @@ var i,
         (a.INPUT_MONITORING = "input_monitoring"),
         (a.SCREEN_RECORDING = "screen_recording"),
         a);
+n.d(t, {}, { F5: s, hL: l, iL: o });

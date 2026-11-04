@@ -1,5 +1,5 @@
-(n.d(t, { A: () => o }), n(321073));
-var i = n(17928),
+n(321073);
+var i = n(855986),
     r = n(73153);
 let a = {};
 function s() {
@@ -46,3 +46,4 @@ let o = new l(r.h, {
     },
     STOREFRONT_PROMOTION_ID_OVERRIDE_SET: s,
 });
+n.d(t, {}, { A: o });

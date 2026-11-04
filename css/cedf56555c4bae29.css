@@ -1,0 +1,91 @@
+.sectionHeader_7YUr_9 {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    margin-top: 16px;
+    text-transform: none
+}
+
+.fromGuildCard_7YUr_9 {
+    margin-top: 8px
+}
+
+.toGuildCardBorder_7YUr_9 {
+    background: var(--guild-boosting-pink-refresh);
+    border-radius: 8px;
+    margin-top: 8px;
+    padding: 2px
+}
+
+.modal_T4asAA {
+    overflow: hidden
+}
+
+.selectContent_T4asAA {
+    padding: 8px 0
+}
+
+.successBody_T4asAA {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px
+}
+
+.successAnimation_T4asAA {
+    height: 200px;
+    width: 300px
+}
+
+.quantitySelectorBody_T4asAA {
+    margin-top: 20px
+}
+
+.quantitySelectorDescription_T4asAA,
+.quantitySelectorHeader_T4asAA {
+    margin-bottom: 16px
+}
+
+.quantitySelectorWrapper_T4asAA {
+    align-items: center;
+    display: flex;
+    margin: 32px auto
+}
+
+.quantitySelectorLabel_T4asAA {
+    line-height: 20px;
+    margin-inline-start: 16px
+}
+
+.modalCloseButton_T4asAA {
+    inset-inline-end: 12px;
+    opacity: .8;
+    position: absolute;
+    top: 12px
+}
+
+.modalCloseButton_T4asAA:hover {
+    opacity: 1
+}
+
+.images-light .confirmImage_T4asAA {
+    background-image: url("/assets/52c92d8492ebe041.svg")
+}
+
+.images-light .transferConfirmImage_T4asAA {
+    background-image: url("/assets/2d416896e0bbb412.svg")
+}
+
+.images-dark .confirmImage_T4asAA {
+    background-image: url("/assets/52c92d8492ebe041.svg")
+}
+
+.images-dark .transferConfirmImage_T4asAA {
+    background-image: url("/assets/c278e895ac47b4af.svg")
+}
+
+.tierPill_T4asAA {
+    background-color: var(--background-mod-normal);
+    color: var(--text-default)
+}
+
+/*# sourceMappingURL=cedf56555c4bae29.css.map*/

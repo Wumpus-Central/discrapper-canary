@@ -1,4 +1,3 @@
-e.d(a, { E: () => t, l: () => j });
 var i = e(477900);
 e(582128);
 var c = e(503698),
@@ -17,31 +16,37 @@ function h(s) {
           })
         : (0, i.jsx)("div", { className: d()(r.mD, m.LH) });
 }
-function t(s) {
-    let { gameId: a, className: e, gridClassName: c } = s;
-    return (0, i.jsx)("div", {
-        className: d()(m.kL, e),
-        "aria-hidden": !0,
-        children: (0, i.jsxs)("div", {
-            className: d()(m.Yi, c),
-            children: [
-                null != a ? (0, i.jsx)(h, { gameId: a }) : (0, i.jsx)("div", { className: r.mD }),
-                (0, i.jsxs)("div", {
-                    className: m.RC,
-                    children: [(0, i.jsx)("div", { className: m.h$ }), (0, i.jsx)("div", { className: m.h$ })],
+e.d(
+    a,
+    {},
+    {
+        E: function (s) {
+            let { gameId: a, className: e, gridClassName: c } = s;
+            return (0, i.jsx)("div", {
+                className: d()(m.kL, e),
+                "aria-hidden": !0,
+                children: (0, i.jsxs)("div", {
+                    className: d()(m.Yi, c),
+                    children: [
+                        null != a ? (0, i.jsx)(h, { gameId: a }) : (0, i.jsx)("div", { className: r.mD }),
+                        (0, i.jsxs)("div", {
+                            className: m.RC,
+                            children: [(0, i.jsx)("div", { className: m.h$ }), (0, i.jsx)("div", { className: m.h$ })],
+                        }),
+                    ],
                 }),
-            ],
-        }),
-    });
-}
-function j(s) {
-    let { gameIds: a, className: e, gridClassName: c } = s;
-    return (0, i.jsx)("div", {
-        className: d()(m.kL, e),
-        "aria-hidden": !0,
-        children: (0, i.jsx)("div", {
-            className: d()(m.Nu, c),
-            children: a.slice(0, 4).map((s, a) => (0, i.jsx)(h, { gameId: s }, a)),
-        }),
-    });
-}
+            });
+        },
+        l: function (s) {
+            let { gameIds: a, className: e, gridClassName: c } = s;
+            return (0, i.jsx)("div", {
+                className: d()(m.kL, e),
+                "aria-hidden": !0,
+                children: (0, i.jsx)("div", {
+                    className: d()(m.Nu, c),
+                    children: a.slice(0, 4).map((s, a) => (0, i.jsx)(h, { gameId: s }, a)),
+                }),
+            });
+        },
+    },
+);

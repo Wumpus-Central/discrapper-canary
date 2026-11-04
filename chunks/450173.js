@@ -1,10 +1,10 @@
 e.exports = {
-    mO: "gameName__8c6c2",
-    On: "clickableGameName__8c6c2",
-    cm: "gameWrapper__8c6c2",
-    f9: "gameIconWrapper__8c6c2",
-    Ow: "clickableGameIcon__8c6c2",
-    Gt: "gameIcon__8c6c2",
-    pq: "info__8c6c2",
-    it: "liveBadge__8c6c2",
+    mO: "gameName_PY60v2",
+    On: "clickableGameName_PY60v2",
+    cm: "gameWrapper_PY60v2",
+    f9: "gameIconWrapper_PY60v2",
+    Ow: "clickableGameIcon_PY60v2",
+    Gt: "gameIcon_PY60v2",
+    pq: "info_PY60v2",
+    it: "liveBadge_PY60v2",
 };

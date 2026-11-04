@@ -1,9 +1,9 @@
 e.exports = {
-    Lq: "loading__9ed46",
-    G3: "bodyText__9ed46",
-    M5: "formDivider__9ed46",
-    N1: "headerContainer__9ed46",
-    Qw: "art__9ed46",
-    t4: "errorBody__9ed46",
-    aR: "errorArt__9ed46",
+    Lq: "loading_MdxyIO",
+    G3: "bodyText_MdxyIO",
+    M5: "formDivider_MdxyIO",
+    N1: "headerContainer_MdxyIO",
+    Qw: "art_MdxyIO",
+    t4: "errorBody_MdxyIO",
+    aR: "errorArt_MdxyIO",
 };

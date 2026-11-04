@@ -1,10 +1,10 @@
-.base_afb27c {
+.base_ngaTpP {
     height: 100vh;
     width: 100vw;
     --custom-chat-input-margin-bottom: var(--space-xs)
 }
 
-.titleBar_afb27c {
+.titleBar_ngaTpP {
     height: calc(32px/(var(--custom-zoom)/100));
     width: 100%;
     -webkit-app-region: drag
@@ -768,14 +768,14 @@ code {
     }
 }
 
-.appMount__51fd7,
+.appMount_gEkNtR,
 body,
 html {
     height: 100%;
     width: 100%
 }
 
-.appMount__51fd7 {
+.appMount_gEkNtR {
     color: var(--background-base-lowest);
     display: flex;
     flex-direction: column;
@@ -783,13 +783,13 @@ html {
     position: absolute
 }
 
-.appMount__51fd7,
+.appMount_gEkNtR,
 body {
     background: var(--background-base-lowest);
     text-rendering: optimizeLegibility
 }
 
-.overlay .appMount__51fd7,
+.overlay .appMount_gEkNtR,
 .overlay body {
     background: transparent
 }
@@ -899,10 +899,10 @@ html.enable-forced-colors:not(.platform-web) body:before {
     width: 100%
 }
 
-.enable-forced-colors:not(.platform-web) #app-mount__51fd7,
-.enable-forced-colors:not(.platform-web) .appMount__51fd7,
-html.enable-forced-colors:not(.platform-web) #app-mount__51fd7,
-html.enable-forced-colors:not(.platform-web) .appMount__51fd7 {
+.enable-forced-colors:not(.platform-web) #app-mount_gEkNtR,
+.enable-forced-colors:not(.platform-web) .appMount_gEkNtR,
+html.enable-forced-colors:not(.platform-web) #app-mount_gEkNtR,
+html.enable-forced-colors:not(.platform-web) .appMount_gEkNtR {
     background-color: Canvas;
     box-sizing: border-box;
     height: calc(100% - 6px);
@@ -942,4 +942,4 @@ html.enable-forced-colors:not(.platform-web).theme-light.app-focused body:before
     --shadow-border: 0 0 0 1px var(--border-strong) !important
 }
 
-/*# sourceMappingURL=419070.cd025d491c05554a.css.map*/
+/*# sourceMappingURL=419070.8ea992ea8347e7c0.css.map*/

@@ -1,9 +1,9 @@
-e.exports = {
-    MY: "page__99a7e",
-    FG: "contentWrapper__99a7e",
-    T_: "dragRegion__99a7e",
-    Yi: "splash__99a7e",
-    Eq: "defaultGradient__99a7e",
-    qj: "splashGradient__99a7e",
-    Iv: "cover__99a7e",
+o.exports = {
+    MY: "page_4JoJic",
+    FG: "contentWrapper_4JoJic",
+    T_: "dragRegion_4JoJic",
+    Yi: "splash_4JoJic",
+    Eq: "defaultGradient_4JoJic",
+    qj: "splashGradient_4JoJic",
+    Iv: "cover_4JoJic",
 };

@@ -1,0 +1,34 @@
+.container_OhOESF {
+    min-height: var(--space-32)
+}
+
+.ctaContainer_OhOESF {
+    gap: var(--space-10);
+    justify-content: space-between;
+    width: 100%
+}
+
+.ctaContainer_OhOESF,
+.textContainer_OhOESF {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.textContainer_OhOESF {
+    gap: var(--space-4);
+    text-align: start
+}
+
+.endContainer_OhOESF {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-12)
+}
+
+.icon_OhOESF {
+    flex-shrink: 0
+}
+
+/*# sourceMappingURL=60b0323e15275e0a.css.map*/

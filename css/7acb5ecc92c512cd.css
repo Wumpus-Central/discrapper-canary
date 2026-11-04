@@ -1,0 +1,24 @@
+.row_PrrPPz {
+    display: flex;
+    gap: var(--space-md);
+    overflow: hidden;
+    width: 100%
+}
+
+.row_PrrPPz>:nth-child(2) {
+    --custom-game-profile-skeleton-animation-delay: 150ms
+}
+
+.row_PrrPPz>:nth-child(3) {
+    --custom-game-profile-skeleton-animation-delay: 300ms
+}
+
+.row_PrrPPz>:nth-child(4) {
+    --custom-game-profile-skeleton-animation-delay: 450ms
+}
+
+.gap16_PrrPPz {
+    gap: var(--space-16)
+}
+
+/*# sourceMappingURL=7acb5ecc92c512cd.css.map*/

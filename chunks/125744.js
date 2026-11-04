@@ -1,4 +1,3 @@
-n.d(t, { s: () => l });
 var i,
     l =
         (((i = {}).DISCORD = "discord"),
@@ -6,3 +5,4 @@ var i,
         (i.YOUTUBE = "youtube"),
         (i.GUILD_SUBSCRIPTION = "guild_subscription"),
         i);
+n.d(t, {}, { s: l });

@@ -84,7 +84,7 @@ var r,
             if (((i = n[r]), r === t - 1)) {
                 if (i >= O(256, 5 - t)) return null;
             } else if (i > 255) return null;
-        for (r = 0, s = D(n); r < n.length; r++) s += n[r] * O(256, 3 - r);
+        for (s = D(n), r = 0; r < n.length; r++) s += n[r] * O(256, 3 - r);
         return s;
     },
     es = function (e) {
@@ -157,7 +157,7 @@ var r,
             return T(t, ".");
         }
         if ("object" == typeof e) {
-            for (n = 0, t = "", r = el(e); n < 8; n++)
+            for (t = "", r = el(e), n = 0; n < 8; n++)
                 (!a || 0 !== e[n]) &&
                     (a && (a = !1),
                     r === n ? ((t += n ? ":" : "::"), (a = !0)) : ((t += B(e[n], 16)), n < 7 && (t += ":")));
@@ -540,7 +540,7 @@ eV.prototype = {
             this.host = t;
         } else {
             if (M(en, e)) return W;
-            for (r = 0, t = "", n = m(e); r < n.length; r++) t += ef(n[r], eu);
+            for (t = "", n = m(e), r = 0; r < n.length; r++) t += ef(n[r], eu);
             this.host = t;
         }
     },

@@ -1,16 +1,16 @@
 let i;
-(n.d(t, { A: () => H }), n(321073));
-var r = n(17928),
+n(321073);
+var r = n(855986),
     a = n(73153),
     s = n(155718),
     l = n(194862),
     o = n(223273),
-    d = n(395671),
-    c = n(174459),
+    d = n(327891),
+    c = n(129230),
     u = n(927813),
     _ = n(403362),
     E = n(723702),
-    A = n(935208),
+    A = n(811091),
     h = n(652215),
     f = n(705751);
 let I = u.A.Millis.DAY,
@@ -29,7 +29,7 @@ let I = u.A.Millis.DAY,
     b = u.A.Millis.HOUR,
     v = new Set(),
     P = new Set(),
-    M = (0, E.isWindows)() ? "win32" : (0, E.isMac)() ? "darwin" : (0, E.isLinux)() ? "linux" : null,
+    M = (0, E.uF)() ? "win32" : (0, E.cX)() ? "darwin" : (0, E.j9)() ? "linux" : null,
     U = Object.freeze([]);
 function w(e) {
     return null != e && e.length > 0 ? e : U;
@@ -51,7 +51,7 @@ function F(e, t) {
 function B(e) {
     let t = e instanceof o.xg ? G(e) : e;
     for (let n of (p.set(e.id, t), F(t.id, k(t.name)), e.aliases)) F(t.id, k(n));
-    if ((0, E.isDesktop)()) for (let n of e.executables) T.set(n.name, t.id);
+    if ((0, E.xl)()) for (let n of e.executables) T.set(n.name, t.id);
 }
 class V extends r.Ay.PersistedStore {
     static displayName = "GameStore";
@@ -64,7 +64,7 @@ class V extends r.Ay.PersistedStore {
                       detectableGames: e.detectableGames?.map((e) => G(new o.xg(e))) ?? [],
                   }
                 : { detectableGamesEtag: "", detectableGames: [] },
-        (e) => ((0, E.isDesktop)() ? e : { detectableGamesEtag: "", detectableGames: [] }),
+        (e) => ((0, E.xl)() ? e : { detectableGamesEtag: "", detectableGames: [] }),
         () => ({ detectableGamesEtag: "", detectableGames: [] }),
         (e) => ({
             ...e,
@@ -82,7 +82,7 @@ class V extends r.Ay.PersistedStore {
             e.detectableGames?.forEach((e) => B(e)));
     }
     getState() {
-        return (0, E.isDesktop)()
+        return (0, E.xl)()
             ? {
                   detectableGamesEtag: g,
                   detectableGames: p.values(),
@@ -300,3 +300,4 @@ let H = new V(a.h, {
             (C = Date.now()));
     },
 });
+n.d(t, {}, { A: H });

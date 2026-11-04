@@ -1,6 +1,6 @@
 e.exports = {
-    AB: "privateChannels_ee924e",
-    ON: "searchBar_ee924e",
-    lU: "searchBarComponent_ee924e",
-    C3: "panels_ee924e",
+    AB: "privateChannels_6mnjB2",
+    ON: "searchBar_6mnjB2",
+    lU: "searchBarComponent_6mnjB2",
+    C3: "panels_6mnjB2",
 };

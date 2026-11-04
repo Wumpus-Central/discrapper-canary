@@ -1,6 +1,5 @@
-n.d(t, { A: () => u, e: () => l });
 var i,
-    r = n(17928),
+    r = n(855986),
     a = n(73153),
     s = n(927813),
     l =
@@ -84,3 +83,4 @@ let u = new c(a.h, {
             })({ applicationId: t, guildId: n });
     },
 });
+n.d(t, {}, { A: u, e: l });

@@ -1,4 +1,3 @@
-n.d(t, { A: () => c, x: () => u });
 var i = n(575593),
     r = n(384726),
     a = n(696444),
@@ -52,42 +51,42 @@ class c extends l.A {
             premium_type: n,
             category_sku_id: i,
             prices: l,
-            bundled_products: _,
-            preview_assets: E,
-            variants: A,
-            badge_override: h,
-            hide_badge: f,
-            is_first_party: I,
-            ...p
+            bundled_products: d,
+            preview_assets: _,
+            variants: E,
+            badge_override: A,
+            hide_badge: h,
+            is_first_party: f,
+            ...I
         } = e;
         return new c({
-            ...super.fromServer(p),
+            ...super.fromServer(I),
             type: t,
-            premiumType: n === d.oA2 ? null : n,
+            premiumType: 0 === n ? null : n,
             categorySkuId: i,
             isCategoryReward: o.MS.some((e) => {
                 let { rewardSkuId: t } = e;
-                return t === p.sku_id;
+                return t === I.sku_id;
             }),
             prices: (0, r.A)(l),
-            items: (0, s.Kh)(p.items),
-            bundledProducts: _?.map(a.A.fromServer),
+            items: (0, s.Kh)(I.items),
+            bundledProducts: d?.map(a.A.fromServer),
             previewAssets:
-                null != E
+                null != _
                     ? {
-                          fgStatic: E.fg_static,
-                          fgVideo: E.fg_video,
-                          fgAnimated: E.fg_animated,
-                          bgStatic: E.bg_static,
-                          bgAnimated: E.bg_animated,
+                          fgStatic: _.fg_static,
+                          fgVideo: _.fg_video,
+                          fgAnimated: _.fg_animated,
+                          bgStatic: _.bg_static,
+                          bgAnimated: _.bg_animated,
                       }
                     : void 0,
-            variants: A?.map(u.fromServer),
-            googleSkuIds: p.google_sku_ids,
-            eligibleOffers: p.eligible_offers,
-            badgeOverride: h,
-            hideBadge: f,
-            isFirstParty: I,
+            variants: E?.map(u.fromServer),
+            googleSkuIds: I.google_sku_ids,
+            eligibleOffers: I.eligible_offers,
+            badgeOverride: A,
+            hideBadge: h,
+            isFirstParty: f,
         });
     }
     static fromStorefrontProductRecord(e) {
@@ -110,7 +109,7 @@ class c extends l.A {
             type: E,
             baseVariantName: _ ? e.name : void 0,
             variantLabel: _ ? (f?.optionValue ?? "") : void 0,
-            premiumType: l.premiumType === d.oA2 ? null : l.premiumType,
+            premiumType: 0 === l.premiumType ? null : l.premiumType,
             items: A ?? [h].filter((e) => null != e),
             categorySkuId: e.primaryCollectionId ?? l.categorySkuId ?? "",
             categoryWillUnpublishAt: e.primaryCollectionWillUnpublishAt,
@@ -141,7 +140,7 @@ class c extends l.A {
                                   summary: t.summary,
                                   styles: void 0,
                                   type: n.type,
-                                  premiumType: n.premiumType === d.oA2 ? null : n.premiumType,
+                                  premiumType: 0 === n.premiumType ? null : n.premiumType,
                                   items: i ?? [a].filter((e) => null != e),
                                   categorySkuId: e.primaryCollectionId ?? n.categorySkuId ?? "",
                                   categoryWillUnpublishAt: e.primaryCollectionWillUnpublishAt,
@@ -173,7 +172,7 @@ class c extends l.A {
                         ? null
                         : new a.A({
                               type: t.type,
-                              premiumType: t.premiumType === d.oA2 ? null : t.premiumType,
+                              premiumType: 0 === t.premiumType ? null : t.premiumType,
                               name: e.name,
                               skuId: e.id,
                               summary: e.summary,
@@ -207,3 +206,4 @@ class u extends c {
         });
     }
 }
+n.d(t, {}, { A: c, x: u });

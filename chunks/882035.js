@@ -1,4 +1,3 @@
-r.d(t, { h: () => c, n: () => l });
 var n = r(582128),
     i = r(97729),
     o = r(976245);
@@ -9,8 +8,8 @@ function l(e, t = s, r) {
     return (n.useDebugValue(i), i);
 }
 let u = (e, t) => {
-        let r = (0, o.y)(e),
-            n = (e, n = t) => l(r, e, n);
-        return (Object.assign(n, r), n);
-    },
-    c = (e, t) => (e ? u(e, t) : u);
+    let r = (0, o.y)(e),
+        n = (e, n = t) => l(r, e, n);
+    return (Object.assign(n, r), n);
+};
+r.d(t, {}, { h: (e, t) => (e ? u(e, t) : u), n: l });

@@ -1,0 +1,20 @@
+.mainLoginContainer_qDi699 {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1
+}
+
+.card_qDi699 {
+    background-color: var(--modal-background);
+    box-shadow: none;
+    display: flex;
+    width: 100%
+}
+
+.buttonsContainer_qDi699 {
+    display: flex;
+    justify-content: space-between
+}
+
+/*# sourceMappingURL=8e52d04873a25d90.css.map*/

@@ -1,4 +1,3 @@
-n.d(t, { A: () => s, O: () => a });
 var i = n(196765);
 let r = [],
     a = (0, i.v)((e, t) => ({
@@ -31,5 +30,5 @@ let r = [],
         reset: () => {
             e({ errorHintsByQuestId: new Map() });
         },
-    })),
-    s = a;
+    }));
+n.d(t, {}, { A: a, O: a });

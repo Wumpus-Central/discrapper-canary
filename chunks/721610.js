@@ -1,4 +1,3 @@
-t.d(i, { $: () => c });
 let c = t(582128).createContext({
     selectedClipIds: new Set(),
     toggleClipSelection: () => {},
@@ -7,3 +6,4 @@ let c = t(582128).createContext({
     picker: void 0,
     onShareSession: void 0,
 });
+t.d(i, {}, { $: c });

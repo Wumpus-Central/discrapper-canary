@@ -1,5 +1,4 @@
-n.d(t, { A: () => c });
-var i = n(174459),
+var i = n(129230),
     r = n(998218),
     a = n(988102),
     s = n(376943),
@@ -25,36 +24,42 @@ function d(e) {
           ? "Discord Channel Link"
           : "Unknown";
 }
-let c = {
-    trackDiscordLinkClicked: function (e) {
-        i.default.track(l.HAw.LINK_CLICKED, { is_discord_link: !0, discord_link_type: d(e) });
+n.d(
+    t,
+    {},
+    {
+        A: {
+            trackDiscordLinkClicked: function (e) {
+                i.default.track(l.HAw.LINK_CLICKED, { is_discord_link: !0, discord_link_type: d(e) });
+            },
+            trackLinkClicked: function (e, t) {
+                if (null == e && null == t) return;
+                let n = r.A.isDiscordUrl(e, !0) || null != t;
+                i.default.track(l.HAw.LINK_CLICKED, {
+                    is_discord_link: n,
+                    discord_link_type: n
+                        ? (function (e, t) {
+                              if (null == t && null == e) return "Unknown";
+                              if (null != t) return d(t);
+                              for (let t of o) {
+                                  let n = t(e);
+                                  if (null != n) return n;
+                              }
+                              return "Unknown";
+                          })(e, t)
+                        : null,
+                });
+            },
+            trackAnnouncementMessageLinkClicked: function (e) {
+                let { messageId: t, channelId: n, guildId: r, sourceChannelId: a, sourceGuildId: s } = e;
+                i.default.track(l.HAw.ANNOUNCEMENT_MESSAGE_LINK_CLICKED, {
+                    message_id: t,
+                    channel_id: n,
+                    guild_id: r,
+                    source_channel_id: a,
+                    source_guild_id: s,
+                });
+            },
+        },
     },
-    trackLinkClicked: function (e, t) {
-        if (null == e && null == t) return;
-        let n = r.A.isDiscordUrl(e, !0) || null != t;
-        i.default.track(l.HAw.LINK_CLICKED, {
-            is_discord_link: n,
-            discord_link_type: n
-                ? (function (e, t) {
-                      if (null == t && null == e) return "Unknown";
-                      if (null != t) return d(t);
-                      for (let t of o) {
-                          let n = t(e);
-                          if (null != n) return n;
-                      }
-                      return "Unknown";
-                  })(e, t)
-                : null,
-        });
-    },
-    trackAnnouncementMessageLinkClicked: function (e) {
-        let { messageId: t, channelId: n, guildId: r, sourceChannelId: a, sourceGuildId: s } = e;
-        i.default.track(l.HAw.ANNOUNCEMENT_MESSAGE_LINK_CLICKED, {
-            message_id: t,
-            channel_id: n,
-            guild_id: r,
-            source_channel_id: a,
-            source_guild_id: s,
-        });
-    },
-};
+);

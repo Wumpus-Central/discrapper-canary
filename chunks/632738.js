@@ -1,4 +1,3 @@
-e.d(l, { PQ: () => b, Y0: () => h });
 var s = e(477900);
 e(582128);
 var i = e(503698),
@@ -15,21 +14,6 @@ function m(n) {
     return (0, s.jsx)(a.E, { variant: "body-sm/semibold", color: "text-default", children: l });
 }
 function h(n) {
-    let { children: l, title: e, description: i, accessibilityRole: r = "none", accessibilityLabel: c } = n;
-    return (0, s.jsxs)("div", {
-        className: x.kZ,
-        children: [
-            null != e && (0, s.jsx)(m, { title: e }),
-            null != i && (0, s.jsx)(a.E, { variant: "body-sm/normal", color: "text-subtle", children: i }),
-            (0, s.jsx)("div", { className: x.Qs, role: r, "aria-label": c, children: l }),
-        ],
-    });
-}
-function b(n) {
-    let { variant: l, ...e } = n;
-    return "clickable" === l ? (0, s.jsx)(v, { ...e }) : (0, s.jsx)(j, { ...e });
-}
-function j(n) {
     let {
             icon: l,
             title: e,
@@ -99,7 +83,7 @@ function j(n) {
         ],
     });
 }
-function v(n) {
+function b(n) {
     let {
         icon: l,
         title: e,
@@ -152,3 +136,24 @@ function v(n) {
         ],
     });
 }
+e.d(
+    l,
+    {},
+    {
+        PQ: function (n) {
+            let { variant: l, ...e } = n;
+            return "clickable" === l ? (0, s.jsx)(b, { ...e }) : (0, s.jsx)(h, { ...e });
+        },
+        Y0: function (n) {
+            let { children: l, title: e, description: i, accessibilityRole: r = "none", accessibilityLabel: c } = n;
+            return (0, s.jsxs)("div", {
+                className: x.kZ,
+                children: [
+                    null != e && (0, s.jsx)(m, { title: e }),
+                    null != i && (0, s.jsx)(a.E, { variant: "body-sm/normal", color: "text-subtle", children: i }),
+                    (0, s.jsx)("div", { className: x.Qs, role: r, "aria-label": c, children: l }),
+                ],
+            });
+        },
+    },
+);

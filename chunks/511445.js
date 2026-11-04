@@ -1,6 +1,6 @@
 e.exports = {
-    sq: "forwardPreview_e6dd8e",
-    kx: "linkContainer_e6dd8e",
-    wP: "cardImage_e6dd8e",
-    N4: "coverImage_e6dd8e",
+    sq: "forwardPreview_NT_mOQ",
+    kx: "linkContainer_NT_mOQ",
+    wP: "cardImage_NT_mOQ",
+    N4: "coverImage_NT_mOQ",
 };

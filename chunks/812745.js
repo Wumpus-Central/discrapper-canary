@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => x, Be: () => p, Nj: () => f, y3: () => v }), n(205816));
+n(205816);
 var r,
     i = n(477900),
     a = n(582128),
@@ -41,73 +41,16 @@ var r,
         (r.GIFT_CARD = "gift_card"),
         (r.PIX = "pix"),
         r);
-function f(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "dark";
-    if ("light" === t) {
-        if ("apple" === e) return n(685430);
-        if ("venmo" === e) return n(779777);
-    }
-    switch (e) {
-        case "visa":
-            return n(998723);
-        case "amex":
-            return n(44377);
-        case "discover":
-            return n(216329);
-        case "mastercard":
-            return n(2832);
-        case "paypal":
-            return n(331273);
-        case "paymentRequest":
-            return n(414456);
-        case "gPay":
-            return n(696551);
-        case "sofort":
-            return n(320648);
-        case "przelewy24":
-            return n(418971);
-        case "giropay":
-            return n(856718);
-        case "paysafecard":
-            return n(130512);
-        case "gcash":
-            return n(446409);
-        case "grabpay":
-            return n(238355);
-        case "momo_wallet":
-            return n(510669);
-        case "venmo":
-            return n(280427);
-        case "kakaopay":
-            return n(503714);
-        case "gopay_wallet":
-            return n(235323);
-        case "bancontact":
-            return n(999776);
-        case "eps":
-            return n(116129);
-        case "ideal":
-            return n(147496);
-        case "cash_app":
-            return n(464568);
-        case "apple":
-            return n(685430);
-        case "apple_light":
-            return n(545350);
-        default:
-            return n(511403);
-    }
-}
-let v = { SMALL: m.cardIconSmall, MEDIUM: m.cardIconMedium, LARGE: m.cardIconLarge, XLARGE: m.cardIconXLarge };
-class g extends a.PureComponent {
+let f = { SMALL: m.cardIconSmall, MEDIUM: m.cardIconMedium, LARGE: m.cardIconLarge, XLARGE: m.cardIconXLarge };
+class v extends a.PureComponent {
     static Types = p;
-    static Sizes = v;
+    static Sizes = f;
     static getType(e) {
         if (null == e) return "unknown";
         let t = e.replace(/[^a-z0-9_]/gi, "").toUpperCase();
         return Object.hasOwn(p, t) ? p[t] : "unknown";
     }
-    static defaultProps = { size: v.SMALL, flipped: !1 };
+    static defaultProps = { size: f.SMALL, flipped: !1 };
     render() {
         let { flipped: e, type: t, className: n, size: r } = this.props;
         return "bank" === t
@@ -125,4 +68,69 @@ class g extends a.PureComponent {
                     });
     }
 }
-let x = g;
+n.d(
+    t,
+    {},
+    {
+        Ay: v,
+        Be: p,
+        Nj: function (e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "dark";
+            if ("light" === t) {
+                if ("apple" === e) return n(685430);
+                if ("venmo" === e) return n(779777);
+            }
+            switch (e) {
+                case "visa":
+                    return n(998723);
+                case "amex":
+                    return n(44377);
+                case "discover":
+                    return n(216329);
+                case "mastercard":
+                    return n(2832);
+                case "paypal":
+                    return n(331273);
+                case "paymentRequest":
+                    return n(414456);
+                case "gPay":
+                    return n(696551);
+                case "sofort":
+                    return n(320648);
+                case "przelewy24":
+                    return n(418971);
+                case "giropay":
+                    return n(856718);
+                case "paysafecard":
+                    return n(130512);
+                case "gcash":
+                    return n(446409);
+                case "grabpay":
+                    return n(238355);
+                case "momo_wallet":
+                    return n(510669);
+                case "venmo":
+                    return n(280427);
+                case "kakaopay":
+                    return n(503714);
+                case "gopay_wallet":
+                    return n(235323);
+                case "bancontact":
+                    return n(999776);
+                case "eps":
+                    return n(116129);
+                case "ideal":
+                    return n(147496);
+                case "cash_app":
+                    return n(464568);
+                case "apple":
+                    return n(685430);
+                case "apple_light":
+                    return n(545350);
+                default:
+                    return n(511403);
+            }
+        },
+        y3: f,
+    },
+);

@@ -1,0 +1,40 @@
+.content_BW_5Lg {
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    gap: 16px;
+    margin: 16px 16px 0;
+    padding: 16px
+}
+
+.channelName_BW_5Lg,
+.content_BW_5Lg {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.channelName_BW_5Lg {
+    gap: 4px
+}
+
+.metadata_BW_5Lg {
+    gap: 12px
+}
+
+.metadata_BW_5Lg,
+.metadataHeader_BW_5Lg {
+    display: flex;
+    flex-direction: column
+}
+
+.metadataHeader_BW_5Lg {
+    gap: 2px
+}
+
+.divider_BW_5Lg {
+    background-color: var(--border-strong);
+    height: 1px;
+    width: 48px
+}
+
+/*# sourceMappingURL=971ce9c544f3ccdd.css.map*/

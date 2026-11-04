@@ -1,1 +1,1 @@
-s.exports = { uW: "section__3af27", Uv: "leftAlignSection__3af27", qr: "footer__3af27" };
+r.exports = { uW: "section_6xrjZF", Uv: "leftAlignSection_6xrjZF", qr: "footer_6xrjZF" };

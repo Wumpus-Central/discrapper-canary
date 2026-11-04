@@ -1,28 +1,27 @@
-n.d(t, { GS: () => R, JA: () => O, Tv: () => L, bA: () => D, xu: () => y });
 var i = n(284009),
     r = n.n(i),
     a = n(73153),
     s = n(465532),
     l = n(608299),
-    o = n(666860),
+    o = n(149468),
     d = n(964167),
     c = n(9588),
     u = n(267102),
-    _ = n(892340),
+    _ = n(374710),
     E = n(976860),
     A = n(378570),
     h = n(162199),
     f = n(940382),
     I = n(253932),
-    p = n(358047),
+    p = n(799704),
     m = n(31717),
     T = n(309010),
-    g = n(625494),
+    g = n(188567),
     S = n(37411),
     N = n(652215),
     C = n(746080);
 function O(e, t, n) {
-    if (!(0, _.C$)(e.id)) return void (0, c.showInaccessibleReportPostModal)();
+    if (!(0, _.C$)(e.id)) return void (0, c.E)();
     u.Uw.dispatch(N.jej.POPOUT_CLOSE);
     let i = { state: { hideThreadCallUI: !0 } };
     if (t || !I.SY.getSetting() || __OVERLAY__) {
@@ -47,36 +46,48 @@ function O(e, t, n) {
             g._.dispatch(N.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
         }, 0));
 }
-function R(e) {
-    let t = e.parent_id;
-    null == t || T.Ay.getCurrentlySelectedChannelId() === t
-        ? O(e)
-        : p.Ay.getSidebarState(t)?.type === f.PE.CREATE_THREAD &&
-          a.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: t });
-}
-function L(e, t, n) {
-    if (
-        (r()(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"),
-        r()(!__OVERLAY__, "Cannot create threads in the overlay."),
-        (0, o.zV)(N.HAw.THREAD_CREATION_STARTED, { location: n, channel_id: e.id, guild_id: e.guild_id }),
-        u.Uw.dispatch(N.jej.POPOUT_CLOSE),
-        T.Ay.getChannelId() !== e.id && (0, A.iN)(e.id),
-        "" === m.A.getDraft(e.id, m.C.FirstThreadMessage))
-    ) {
-        let t = m.A.getDraft(e.id, m.C.ChannelMessage);
-        (s.A.saveDraft(e.id, "", m.C.ChannelMessage), s.A.saveDraft(e.id, t, m.C.FirstThreadMessage));
-    }
-    setTimeout(() => {
-        a.h.dispatch({ type: "SIDEBAR_CREATE_THREAD", parentChannelId: e.id, parentMessageId: t?.id, location: n });
-    }, 0);
-}
-function y(e, t) {
-    ((0, E.pX)((0, d.V1)(N.BVt.CHANNEL(e, (0, C.mP)(t) ? C.VV.GUILD_HOME : t))),
-        a.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: t }));
-}
-function D(e) {
-    (a.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: e }),
-        l.A.clearAll(e, m.C.FirstThreadMessage),
-        a.h.dispatch({ type: "DRAFT_CLEAR", channelId: e, draftType: m.C.FirstThreadMessage }),
-        a.h.dispatch({ type: "DRAFT_CLEAR", channelId: e, draftType: m.C.ThreadSettings }));
-}
+n.d(
+    t,
+    {},
+    {
+        GS: function (e) {
+            let t = e.parent_id;
+            null == t || T.Ay.getCurrentlySelectedChannelId() === t
+                ? O(e)
+                : p.Ay.getSidebarState(t)?.type === f.PE.CREATE_THREAD &&
+                  a.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: t });
+        },
+        JA: O,
+        Tv: function (e, t, n) {
+            if (
+                (r()(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"),
+                r()(!__OVERLAY__, "Cannot create threads in the overlay."),
+                (0, o.zV)(N.HAw.THREAD_CREATION_STARTED, { location: n, channel_id: e.id, guild_id: e.guild_id }),
+                u.Uw.dispatch(N.jej.POPOUT_CLOSE),
+                T.Ay.getChannelId() !== e.id && (0, A.iN)(e.id),
+                "" === m.A.getDraft(e.id, m.C.FirstThreadMessage))
+            ) {
+                let t = m.A.getDraft(e.id, m.C.ChannelMessage);
+                (s.A.saveDraft(e.id, "", m.C.ChannelMessage), s.A.saveDraft(e.id, t, m.C.FirstThreadMessage));
+            }
+            setTimeout(() => {
+                a.h.dispatch({
+                    type: "SIDEBAR_CREATE_THREAD",
+                    parentChannelId: e.id,
+                    parentMessageId: t?.id,
+                    location: n,
+                });
+            }, 0);
+        },
+        bA: function (e) {
+            (a.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: e }),
+                l.A.clearAll(e, m.C.FirstThreadMessage),
+                a.h.dispatch({ type: "DRAFT_CLEAR", channelId: e, draftType: m.C.FirstThreadMessage }),
+                a.h.dispatch({ type: "DRAFT_CLEAR", channelId: e, draftType: m.C.ThreadSettings }));
+        },
+        xu: function (e, t) {
+            ((0, E.pX)((0, d.V1)(N.BVt.CHANNEL(e, (0, C.mP)(t) ? C.VV.GUILD_HOME : t))),
+                a.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: t }));
+        },
+    },
+);

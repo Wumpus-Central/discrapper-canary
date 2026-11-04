@@ -1,0 +1,305 @@
+.previewPage_KE3oYJ {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 20px;
+    place-content: center
+}
+
+.errorIcon_KE3oYJ,
+.questsIcon_KE3oYJ {
+    color: var(--text-strong);
+    height: 24px;
+    width: 24px
+}
+
+.messageWrapper_KE3oYJ {
+    margin-bottom: 12px;
+    padding: 12px
+}
+
+.message_KE3oYJ {
+    color: var(--text-default);
+    text-align: start;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text
+}
+
+.previewCard_KE3oYJ {
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    width: 450px
+}
+
+.previewBackground_KE3oYJ,
+.previewCard_KE3oYJ {
+    display: flex;
+    flex-direction: column
+}
+
+.previewBackground_KE3oYJ {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    border-radius: var(--radius-md);
+    justify-content: center;
+    padding-bottom: var(--space-md);
+    padding-top: var(--space-md);
+    width: 100%
+}
+
+.heading_KE3oYJ {
+    grid-row: 1/span 1
+}
+
+.heading_KE3oYJ,
+.questTile_KE3oYJ {
+    grid-column: 2/span 1
+}
+
+.questTile_KE3oYJ {
+    grid-row: 2/span 1
+}
+
+.questChannelCallHeaderWrapper_KE3oYJ>div {
+    inset-inline-start: auto;
+    margin-inline-start: 0;
+    position: relative;
+    top: auto
+}
+
+.embedCard_KE3oYJ {
+    align-self: flex-start;
+    min-width: 100%;
+    padding: 32px;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.wrapper_BSEPzZ {
+    align-items: center;
+    border-radius: inherit;
+    display: flex;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    justify-content: space-between;
+    padding: 4px 8px;
+    pointer-events: none;
+    z-index: 4
+}
+
+.opaqueExpandedBackground_BSEPzZ {
+    -webkit-backdrop-filter: blur(10px) brightness(.75);
+    backdrop-filter: blur(10px) brightness(.75);
+    border-radius: 8px;
+    height: 32px;
+    position: absolute;
+    top: 8px;
+    inset-inline: 8px
+}
+
+.high-contrast-mode .opaqueExpandedBackground_BSEPzZ {
+    -webkit-backdrop-filter: blur(10px) brightness(.25);
+    backdrop-filter: blur(10px) brightness(.25)
+}
+
+.rewardHighlightWrapper_BSEPzZ {
+    justify-content: flex-start
+}
+
+.interactable_BSEPzZ {
+    pointer-events: all
+}
+
+.wreathIcon_BSEPzZ {
+    height: 24px;
+    margin-inline: -4px 4px;
+    width: 24px
+}
+
+.rightContent_BSEPzZ {
+    flex: 0 0 auto;
+    height: 20px;
+    margin-inline-start: 12px;
+    position: relative;
+    width: 20px
+}
+
+.rightContent_BSEPzZ:before {
+    background-color: var(--opacity-white-40);
+    content: "";
+    height: 12px;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-6px, -50%);
+    width: 1px
+}
+
+.submenuWrapper_BSEPzZ {
+    cursor: pointer;
+    transition: opacity .125s
+}
+
+.submenuWrapper_BSEPzZ:focus,
+.submenuWrapper_BSEPzZ:hover {
+    opacity: .8
+}
+
+.submenuWrapper_BSEPzZ:active {
+    opacity: .7
+}
+
+.submenuIcon_BSEPzZ {
+    height: 16px;
+    inset-inline-start: 2px;
+    position: absolute;
+    top: 2px;
+    width: 16px
+}
+
+.white_BSEPzZ {
+    color: var(--white)
+}
+
+.promotedBadgeWrapper_BSEPzZ {
+    display: flex;
+    flex: 0 0 auto;
+    inset-inline-end: 16px;
+    position: absolute;
+    top: 14px
+}
+
+.logo_BSEPzZ {
+    transition: opacity .125s
+}
+
+.logo_BSEPzZ.clickable_BSEPzZ {
+    cursor: pointer
+}
+
+.logo_BSEPzZ.clickable_BSEPzZ:hover {
+    opacity: .8
+}
+
+.promotedBadge_BSEPzZ {
+    cursor: pointer;
+    display: flex;
+    flex: 1 0 auto;
+    gap: 3px;
+    place-items: center;
+    transition: opacity .125s
+}
+
+.promotedBadge_BSEPzZ:hover {
+    opacity: .8
+}
+
+.promotedBadgeIcon_BSEPzZ {
+    flex: 0 0 auto;
+    height: 12px;
+    width: 12px
+}
+
+.background_BSEPzZ {
+    background-color: transparent
+}
+
+.backgroundAnimation_BSEPzZ {
+    opacity: .5
+}
+
+.backgroundWrapper_BSEPzZ {
+    pointer-events: none
+}
+
+.rewardHighlightLogotypeHeightBoost_BSEPzZ {
+    height: 32px;
+    max-width: 130px
+}
+
+.rewardHighlightLogotype_BSEPzZ {
+    height: 24px
+}
+
+.partnerBranding_BSEPzZ {
+    transform-origin: left
+}
+
+.bountyHeader_BSEPzZ {
+    min-height: 40px
+}
+
+.bountyLeading_BSEPzZ,
+.bountyMenu_BSEPzZ {
+    align-items: center;
+    display: flex;
+    height: 32px;
+    position: absolute;
+    top: 8px
+}
+
+.bountyLeading_BSEPzZ {
+    gap: var(--space-8);
+    inset-inline-start: 16px;
+    max-width: calc(100% - var(--space-16)*2);
+    min-width: 0
+}
+
+.bountyMenu_BSEPzZ {
+    inset-inline-end: 16px
+}
+
+.bountyProductIconButton_BSEPzZ {
+    display: flex;
+    flex: 0 0 auto
+}
+
+.bountyProductIconScaler_BSEPzZ {
+    margin: calc(var(--space-4)*-1);
+    transform-origin: center
+}
+
+.bountyProductIcon_BSEPzZ {
+    background-color: var(--background-base-lowest);
+    border-radius: var(--radius-sm);
+    display: block;
+    height: 32px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 32px
+}
+
+.bountyLeadingLabel_BSEPzZ {
+    align-items: center;
+    display: grid;
+    min-width: 0
+}
+
+.bountyProductName_BSEPzZ {
+    grid-area: 1/1;
+    margin-inline-end: calc(103px + var(--space-12));
+    margin-inline-start: var(--space-8);
+    min-width: 0;
+    pointer-events: none
+}
+
+.bountyPromotedBadgeWrapper_BSEPzZ {
+    display: flex;
+    grid-area: 1/1;
+    justify-self: start
+}
+
+.bountyPromotedBadge_BSEPzZ {
+    flex: 0 0 auto
+}
+
+.bountyMenuTarget_BSEPzZ {
+    height: 20px;
+    position: relative;
+    width: 20px
+}
+
+/*# sourceMappingURL=c4614af4a0a51567.css.map*/

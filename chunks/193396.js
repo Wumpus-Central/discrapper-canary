@@ -1,7 +1,7 @@
 e.exports = {
-    zr: "root__5036c",
-    E4: "collectionItem__5036c",
-    Vx: "collectionItemContent__5036c",
-    bA: "collectionItemImage__5036c",
-    ET: "collectionItemImagePlaceholder__5036c",
+    zr: "root_xc-26D",
+    E4: "collectionItem_xc-26D",
+    Vx: "collectionItemContent_xc-26D",
+    bA: "collectionItemImage_xc-26D",
+    ET: "collectionItemImagePlaceholder_xc-26D",
 };

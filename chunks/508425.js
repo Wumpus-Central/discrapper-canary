@@ -1,4 +1,3 @@
-n.d(t, { z: () => r });
 var i,
     r =
         (((i = {})[(i.SOLID = 1)] = "SOLID"),
@@ -14,3 +13,4 @@ var i,
         (i[(i.TEST_3 = 1003)] = "TEST_3"),
         (i[(i.TEST_4 = 1004)] = "TEST_4"),
         i);
+n.d(t, {}, { z: r });

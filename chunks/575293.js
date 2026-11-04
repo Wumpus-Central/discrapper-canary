@@ -1,14 +1,13 @@
-n.d(t, { A: () => M });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
     s = n.n(r),
     a = n(615300),
-    o = n(702841),
+    o = n(164636),
     u = n(834730),
     c = n(276293),
     d = n(602853),
-    h = n(661531),
+    h = n(646514),
     m = n(939249),
     f = n(935286),
     p = n(628284),
@@ -25,7 +24,7 @@ var l = n(477900),
     N = n(473529),
     T = n(111487),
     k = n(652215),
-    j = n(105292),
+    j = n(792996),
     _ = n(160639);
 let R = { compact: 58, cozy: 74, default: 64 };
 function w(e) {
@@ -153,11 +152,17 @@ function L(e) {
                         }),
           });
 }
-function M(e) {
-    let { guildId: t, channel: n, className: i } = e,
-        r = (0, N.d)(t),
-        s = (0, o.bG)([C.Ay], () => C.Ay.getSelfMember(t)?.isPending === !0),
-        a = (0, v.jY)(t),
-        u = (0, o.bG)([A.A], () => A.A.getGuild(t)?.features.has(k.GuildFeatures.GUILD_SERVER_GUIDE));
-    return a || s || !r || !u ? null : (0, l.jsx)(L, { guildId: t, channel: n, className: i });
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { guildId: t, channel: n, className: i } = e,
+                r = (0, N.d)(t),
+                s = (0, o.bG)([C.Ay], () => C.Ay.getSelfMember(t)?.isPending === !0),
+                a = (0, v.jY)(t),
+                u = (0, o.bG)([A.A], () => A.A.getGuild(t)?.features.has(k.GuildFeatures.GUILD_SERVER_GUIDE));
+            return a || s || !r || !u ? null : (0, l.jsx)(L, { guildId: t, channel: n, className: i });
+        },
+    },
+);

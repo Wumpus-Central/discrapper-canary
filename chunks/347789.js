@@ -1,8 +1,8 @@
 e.exports = {
-    UO: "premiumSubscribeButton_d723f6",
-    PC: "premiumIcon_d723f6",
-    _d: "buttonText_d723f6",
-    Up: "tier1Gradient_d723f6",
-    PJ: "tier2Gradient_d723f6",
-    nz: "brandShine_d723f6",
+    UO: "premiumSubscribeButton_EHx6SK",
+    PC: "premiumIcon_EHx6SK",
+    _d: "buttonText_EHx6SK",
+    Up: "tier1Gradient_EHx6SK",
+    PJ: "tier2Gradient_EHx6SK",
+    nz: "brandShine_EHx6SK",
 };

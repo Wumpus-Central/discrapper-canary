@@ -1,0 +1,327 @@
+.container_XH4OpX {
+    position: relative;
+    transition: color 1s linear;
+    --custom-guild-banner-height: 130px
+}
+
+.clickable_XH4OpX {
+    cursor: pointer
+}
+
+.animatedBannerHoverLayer_XH4OpX {
+    cursor: default;
+    inset-inline-start: 0;
+    position: absolute;
+    top: var(--custom-channel-header-height);
+    width: 100%;
+    z-index: 100
+}
+
+.animatedContainer_XH4OpX {
+    background-color: var(--interactive-background-active);
+    box-shadow: var(--shadow-low);
+    overflow: hidden;
+    width: 100%
+}
+
+.animatedContainer_XH4OpX,
+.bannerImage_XH4OpX {
+    height: var(--custom-guild-banner-height);
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0
+}
+
+.bannerImage_XH4OpX,
+.bannerImg_XH4OpX {
+    width: 240px
+}
+
+.bannerImg_XH4OpX {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.bannerImage_XH4OpX,
+.bannerImg_XH4OpX {
+    height: var(--custom-guild-banner-height)
+}
+
+.bannerImage_XH4OpX,
+.bannerImg_XH4OpX {
+    aspect-ratio: 21/9;
+    width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width))
+}
+
+.bannerImgFullWidth_XH4OpX {
+    width: 100%
+}
+
+.bannerImage_XH4OpX:before {
+    background: linear-gradient(to bottom, var(--background-mod-strong), transparent 100%);
+    content: "";
+    display: none;
+    height: 58px;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.header_XH4OpX {
+    border-bottom: 1px solid var(--border-subtle);
+    box-shadow: none;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-medium);
+    height: var(--custom-channel-header-height);
+    padding: var(--space-xs);
+    position: relative;
+    transition: background-color .1s linear;
+    z-index: 1
+}
+
+.header_XH4OpX,
+.headerContent_XH4OpX {
+    align-items: center;
+    display: flex
+}
+
+.headerContent_XH4OpX {
+    color: var(--text-strong);
+    gap: var(--space-xxs);
+    justify-content: space-between;
+    width: 100%
+}
+
+.refresh-fast-follow-avatars .header_XH4OpX {
+    padding-inline-start: min(var(--space-md), 18px)
+}
+
+.primaryInfo_XH4OpX {
+    height: unset;
+    justify-content: space-between
+}
+
+.headerButton_XH4OpX {
+    inset: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.headerChildren_XH4OpX {
+    position: relative;
+    z-index: 4
+}
+
+.communityInfoContainer_XH4OpX {
+    align-items: flex-end;
+    display: flex;
+    overflow: hidden;
+    position: absolute
+}
+
+.communityInfoContainer_XH4OpX.hasSubheader_XH4OpX {
+    margin-bottom: -12px;
+    position: relative
+}
+
+.communityInfoVisible_XH4OpX .communityInfoContainer_XH4OpX {
+    height: 20px;
+    margin-top: 4px
+}
+
+.communityInfoVisible_XH4OpX .communityInfo_XH4OpX {
+    color: var(--white)
+}
+
+.communityInfoPill_XH4OpX {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border-radius: 10px;
+    display: flex;
+    padding: 2px 6px
+}
+
+.communityIcon_XH4OpX,
+.communityInfoPill_XH4OpX {
+    margin-inline-end: 4px
+}
+
+.bannerVisible_XH4OpX .headerContent_XH4OpX {
+    filter: drop-shadow(0 1px 3px var(--opacity-black-60))
+}
+
+.communityInfoVisible_XH4OpX .header_XH4OpX,
+.communityInfoVisible_XH4OpX .header_XH4OpX:hover,
+.hasBanner_XH4OpX .header_XH4OpX,
+.hasBanner_XH4OpX .header_XH4OpX:hover {
+    border-bottom: none;
+    box-shadow: none
+}
+
+.bannerVisible_XH4OpX .dropdown_XH4OpX {
+    opacity: 1
+}
+
+.name_XH4OpX {
+    margin-inline-end: auto;
+    z-index: 1
+}
+
+.favoritesIcon_XH4OpX {
+    margin-inline-end: 8px;
+    margin-bottom: 2px
+}
+
+.guildDropdown_XH4OpX {
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    gap: 2px;
+    height: 32px;
+    min-width: 0;
+    padding-block: 0;
+    padding-inline: var(--space-xs)
+}
+
+.guildDropdown_XH4OpX:hover {
+    background-color: var(--background-mod-subtle)
+}
+
+.guildBadgeAndName_XH4OpX {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    gap: var(--space-xs);
+    min-width: 0
+}
+
+.addActionButton_XH4OpX,
+.inviteButton_XH4OpX {
+    align-items: center;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+    flex: 0 0 auto;
+    height: 32px;
+    justify-content: center;
+    width: 32px
+}
+
+.addActionButton_XH4OpX:hover,
+.inviteButton_XH4OpX:hover {
+    background-color: var(--background-mod-subtle)
+}
+
+.inboxHeading_XH4OpX {
+    cursor: default
+}
+
+.inboxHeading_XH4OpX:hover {
+    background-color: transparent
+}
+
+.inboxFilterButtons_XH4OpX {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 2px
+}
+
+.refresh-fast-follow-distinct-borders .header_XH4OpX {
+    border-bottom-color: var(--app-frame-border)
+}
+
+.enable-forced-colors .container_XH4OpX {
+    border-bottom: 2px solid CanvasText
+}
+
+.enable-forced-colors .clickable_XH4OpX .header_XH4OpX {
+    background-color: ButtonFace;
+    color: ButtonText;
+    forced-color-adjust: none
+}
+
+.enable-forced-colors .clickable_XH4OpX .header_XH4OpX .headerContent_XH4OpX,
+.enable-forced-colors .clickable_XH4OpX .header_XH4OpX .name_XH4OpX {
+    color: ButtonText
+}
+
+.enable-forced-colors .selected_XH4OpX .header_XH4OpX {
+    background-color: HighlightText;
+    color: Highlight
+}
+
+.enable-forced-colors .selected_XH4OpX .header_XH4OpX .headerContent_XH4OpX,
+.enable-forced-colors .selected_XH4OpX .header_XH4OpX .name_XH4OpX {
+    color: Highlight
+}
+
+.theme-dark .themedHeaderMobile_XH4OpX {
+    background: var(--background-gradient-high, var(--__header-bar-background))
+}
+
+.theme-light .themedHeaderMobile_XH4OpX {
+    background: var(--background-gradient-low, var(--__header-bar-background))
+}
+
+.bannerVisible_XH4OpX .headerContent_XH4OpX,
+.bannerVisible_XH4OpX .name_XH4OpX {
+    color: var(--white)
+}
+
+.bannerVisible_XH4OpX .headerEllipseForeground_XH4OpX {
+    background: var(--opacity-black-52);
+    border-radius: 50%;
+    filter: blur(10px);
+    height: calc(var(--custom-channel-header-height)*2);
+    position: absolute;
+    top: calc((var(--custom-channel-header-height) - var(--space-xs)/2)*-1);
+    inset-inline: calc((var(--custom-guild-sidebar-width) - var(--custom-guild-list-width))*-1/4);
+    mix-blend-mode: multiply
+}
+
+.bannerVisible_XH4OpX .headerEllipseBackdrop_XH4OpX {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    height: var(--custom-channel-header-height);
+    position: absolute;
+    top: 0;
+    inset-inline: 1px
+}
+
+.bannerVisible_XH4OpX .headerGlass_XH4OpX {
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    border-bottom: 1px solid var(--border-subtle);
+    box-sizing: border-box;
+    height: calc(1px + var(--custom-channel-header-height));
+    inset-inline-start: 1px;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    width: calc(100% - 1px)
+}
+
+.bannerVisible_XH4OpX:hover .headerGlass_XH4OpX {
+    opacity: 1 !important;
+    transition: opacity .15s ease-in-out
+}
+
+.bannerVisible_XH4OpX .header_XH4OpX {
+    border-bottom: none;
+    border-start-start-radius: 12px;
+    border-top: 1px solid var(--app-frame-border)
+}
+
+.settingsButton_XH4OpX:hover .settingsButtonIcon_XH4OpX {
+    color: var(--interactive-text-hover)
+}
+
+.settingsButtonIcon_XH4OpX {
+    --chat-input-icon-size: 18px
+}
+
+/*# sourceMappingURL=fdfe0d4e5e8803fb.css.map*/

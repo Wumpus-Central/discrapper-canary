@@ -1,0 +1,106 @@
+.page_pGJQ7R {
+    background: var(--background-gradient-low, var(--background-base-lower));
+    border-top: 1px solid var(--app-frame-border);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
+    width: 100%
+}
+
+.theme-dark .main_pGJQ7R {
+    --custom-conjure-home-sweep-start: #2a2d53;
+    --custom-conjure-home-sweep-end: #53274b;
+    background: radial-gradient(ellipse 100% 104% at 50% 100%, var(--background-base-lowest) 39%, transparent 100%), linear-gradient(to right, var(--custom-conjure-home-sweep-start), var(--custom-conjure-home-sweep-end))
+}
+
+.layout_pGJQ7R,
+.main_pGJQ7R {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    min-width: 0
+}
+
+.main_pGJQ7R {
+    flex-direction: column
+}
+
+.scroller_pGJQ7R {
+    flex: 1;
+    min-height: 0
+}
+
+.content_pGJQ7R {
+    --custom-conjure-home-carousel-space-above: var(--space-80);
+    --custom-conjure-home-carousel-space-below: var(--space-80);
+    --custom-conjure-home-content-max-width: 976px;
+    --custom-conjure-home-content-gutter: var(--space-48);
+    padding-block-end: var(--space-64)
+}
+
+.content_pGJQ7R,
+.intro_pGJQ7R {
+    display: flex;
+    flex-direction: column
+}
+
+.intro_pGJQ7R {
+    gap: var(--space-40);
+    padding: var(--space-48) var(--custom-conjure-home-content-gutter) 0
+}
+
+.introOnConjurePage_pGJQ7R {
+    padding-block-start: var(--space-80)
+}
+
+.hero_pGJQ7R {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    margin: 0 auto;
+    max-width: var(--custom-conjure-home-content-max-width);
+    width: 100%
+}
+
+.subtitle_pGJQ7R {
+    max-width: 640px;
+    opacity: .8
+}
+
+.title_pGJQ7R {
+    text-transform: uppercase;
+    white-space: pre-line
+}
+
+.headerIconButton_pGJQ7R {
+    border-radius: var(--radius-sm);
+    transition: background-color .2s ease
+}
+
+.headerIconButton_pGJQ7R:hover {
+    background: var(--interactive-background-hover)
+}
+
+.projectLoading_pGJQ7R {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center
+}
+
+.notice_XwKvBN {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: var(--space-8);
+    justify-content: center;
+    padding: var(--space-24);
+    text-align: center
+}
+
+/*# sourceMappingURL=79ac2706374e239b.css.map*/

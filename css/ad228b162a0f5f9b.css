@@ -1,0 +1,81 @@
+.timeSelectRow_lVGlUj {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.timeSelect_lVGlUj {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden
+}
+
+.timeSelectEnd_lVGlUj [aria-hidden=true] .durationTrailingWrap_lVGlUj {
+    display: none
+}
+
+.timeSelectEnd_lVGlUj [role=option]>div:has(.durationTrailingWrap_lVGlUj) {
+    -moz-column-gap: 0;
+    column-gap: 0;
+    grid-template-columns: auto auto
+}
+
+.timeSelectEnd_lVGlUj [role=option]>div:has(.durationTrailingWrap_lVGlUj)>:last-child {
+    grid-column: 2;
+    justify-content: flex-start
+}
+
+.durationTrailingWrap_lVGlUj {
+    align-items: center;
+    display: inline-flex
+}
+
+.durationDot_lVGlUj {
+    flex-shrink: 0;
+    padding-inline: var(--space-6)
+}
+
+.daysRow_lVGlUj {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-8)
+}
+
+.dayButton_lVGlUj {
+    align-items: center;
+    background: var(--control-secondary-background-default);
+    border: 1px solid var(--control-secondary-border-default);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    color: var(--control-secondary-text-default);
+    cursor: pointer;
+    display: flex;
+    flex: 1 0 0;
+    height: 40px;
+    justify-content: center;
+    min-width: 44px
+}
+
+.dayButton_lVGlUj:hover {
+    background-color: var(--control-secondary-background-hover)
+}
+
+.dayButton_lVGlUj:active {
+    background-color: var(--control-secondary-background-active)
+}
+
+.dayButton_lVGlUj.selected_lVGlUj {
+    background: var(--color-opacity-blurple-16, rgba(88, 101, 242, .16));
+    border-color: var(--border-focus);
+    color: var(--control-secondary-text-default)
+}
+
+.full-motion .dayButton_lVGlUj {
+    transition: background-color .2s ease
+}
+
+.overlapWarningContent_lVGlUj {
+    margin-top: var(--space-16)
+}
+
+/*# sourceMappingURL=ad228b162a0f5f9b.css.map*/

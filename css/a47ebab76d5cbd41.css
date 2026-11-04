@@ -1,0 +1,41 @@
+.header_7dkpUR {
+    padding: 24px 16px 0
+}
+
+.channelPrompt_7dkpUR {
+    flex-grow: 0;
+    margin-bottom: 16px;
+    margin-top: 8px;
+    padding: 16px
+}
+
+.closeButton_7dkpUR {
+    inset-inline-end: 12px;
+    position: absolute;
+    top: 12px
+}
+
+.guildName_7dkpUR {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 8px
+}
+
+.title_7dkpUR {
+    font-size: 24px;
+    font-weight: var(--font-weight-bold);
+    line-height: 30px
+}
+
+.subtitle_7dkpUR {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 8px
+}
+
+.skipButton_7dkpUR {
+    color: var(--text-strong);
+    margin-inline-end: 16px
+}
+
+/*# sourceMappingURL=a47ebab76d5cbd41.css.map*/

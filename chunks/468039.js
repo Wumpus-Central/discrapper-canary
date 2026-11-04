@@ -1,1 +1,1 @@
-p.exports = { B: "platforms__9bb6a", t: "platformIcon__9bb6a" };
+p.exports = { B: "platforms_LgQLHU", t: "platformIcon_LgQLHU" };

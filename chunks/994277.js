@@ -1,4 +1,3 @@
-p.d(t, { i: () => E });
 var s,
     E =
         (((s = {}).AGE_GATE = "age-gate"),
@@ -9,3 +8,4 @@ var s,
         (s.CREATION_INTENT = "creation-intent"),
         (s.COMPLETE = "complete"),
         s);
+p.d(t, {}, { i: E });

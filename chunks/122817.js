@@ -1,4 +1,3 @@
-n.d(t, { d: () => r });
 var i,
     r =
         (((i = {})[(i.PREMIUM_PURCHASE = 1)] = "PREMIUM_PURCHASE"),
@@ -18,3 +17,4 @@ var i,
         (i[(i.STAFF_CREATE_SUBSCRIPTION_GROUP_LISTING_MASK = 384)] = "STAFF_CREATE_SUBSCRIPTION_GROUP_LISTING_MASK"),
         (i[(i.STOREFRONT_UPDATE_MASK = 12288)] = "STOREFRONT_UPDATE_MASK"),
         i);
+n.d(t, {}, { d: r });

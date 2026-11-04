@@ -1,4 +1,3 @@
-s.d(e, { A: () => d, e: () => m });
 var r = s(477900),
     t = s(582128),
     n = s(310784),
@@ -41,27 +40,34 @@ function d(a) {
         ],
     });
 }
-function m(a) {
-    let {
-            sku: e,
-            containerClassName: s,
-            backgroundImageClassName: t,
-            foregroundImageClassName: n,
-            shape: l,
-            cssPosition: u,
-        } = a,
-        i = (0, g.fq)(e),
-        c = (0, g.xf)(e);
-    return null == i
-        ? null
-        : (0, r.jsx)(d, {
-              cardImage: i,
-              cardBackgroundImage: c,
-              altText: e.name,
-              containerClassName: s,
-              backgroundImageClassName: t,
-              foregroundImageClassName: n,
-              shape: l,
-              cssPosition: u,
-          });
-}
+s.d(
+    e,
+    {},
+    {
+        A: d,
+        e: function (a) {
+            let {
+                    sku: e,
+                    containerClassName: s,
+                    backgroundImageClassName: t,
+                    foregroundImageClassName: n,
+                    shape: l,
+                    cssPosition: u,
+                } = a,
+                i = (0, g.fq)(e),
+                c = (0, g.xf)(e);
+            return null == i
+                ? null
+                : (0, r.jsx)(d, {
+                      cardImage: i,
+                      cardBackgroundImage: c,
+                      altText: e.name,
+                      containerClassName: s,
+                      backgroundImageClassName: t,
+                      foregroundImageClassName: n,
+                      shape: l,
+                      cssPosition: u,
+                  });
+        },
+    },
+);

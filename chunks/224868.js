@@ -1,6 +1,5 @@
-n.d(t, { f: () => N, p: () => S });
 var i = n(47167),
-    r = n(236285),
+    r = n(121681),
     a = n(7584),
     s = n(620181),
     l = n(863005),
@@ -12,14 +11,14 @@ var i = n(47167),
     E = n(576705),
     A = n(994500),
     h = n(287809),
-    f = n(768038),
+    f = n(997625),
     I = n(690521),
-    p = n(935208),
+    p = n(811091),
     m = n(408018),
     T = n(652215),
     g = n(307731);
 function S(e, t, n, m) {
-    let { allowUsers: S = !0, allowRoles: N = !0 } = m ?? {};
+    let { allowUsers: S = !0, allowRoles: C = !0 } = m ?? {};
     switch (e[0]) {
         case "@":
             return (function (e, t, n, i, r) {
@@ -41,15 +40,15 @@ function S(e, t, n, m) {
                               })
                     )
                         .map((e) => h.default.getUser(e))
-                        .filter((e) => void 0 !== e && C(a, s, e));
+                        .filter((e) => void 0 !== e && N(a, s, e));
                     if (1 === i.length) {
                         let e = i[0];
-                        if (C(a, s, e, { requireExact: !0 }))
+                        if (N(a, s, e, { requireExact: !0 }))
                             return { type: "userMention", userId: e.id, children: [{ text: "" }] };
                     }
                 }
                 return null;
-            })(e, t, n, S, N);
+            })(e, t, n, S, C);
         case ":":
             return (function (e, t, n) {
                 let i = a.Ay.EMOJI_NAME_RE.exec(e);
@@ -80,12 +79,12 @@ function S(e, t, n, m) {
                 R.length > 3 && '"' === R[1] && '"' === R[R.length - 1]
                     ? (0, i.LG)(R.slice(2, R.length - 1))
                     : R.slice(1);
-            let y = d.Ay.getTextChannelNameDisambiguations(L);
+            let y = d.A.getTextChannelNameDisambiguations(L);
             for (let e of p.default.keys(y))
                 if (y[e].name === O) return { type: "channelMention", channelId: e, children: [{ text: "" }] };
             for (let e of f.L3)
-                if (e !== d.I6) {
-                    for (let { channel: t } of d.Ay.getChannels(L)[e])
+                if (e !== d.I) {
+                    for (let { channel: t } of d.A.getChannels(L)[e])
                         if ((0, i.m1)(t, h.default, A.A) === O) {
                             if (t.isCategory() && !E.A.can(T.xBc.VIEW_CHANNEL, t)) continue;
                             return { type: "channelMention", channelId: t.id, children: [{ text: "" }] };
@@ -102,11 +101,18 @@ function S(e, t, n, m) {
     }
     return null;
 }
-function N(e, t, n, i) {
-    let r = S(e, t, n, i);
-    return null == r ? null : (0, m.QR)(r);
-}
-function C(e, t, n) {
+function N(e, t, n) {
     let { requireExact: i = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     return null != n && (i ? n.username === e : n.username.startsWith(e)) && n.discriminator === (t ?? "0");
 }
+n.d(
+    t,
+    {},
+    {
+        f: function (e, t, n, i) {
+            let r = S(e, t, n, i);
+            return null == r ? null : (0, m.QR)(r);
+        },
+        p: S,
+    },
+);

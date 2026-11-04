@@ -1,4 +1,4 @@
-.wrapper__14245 {
+.wrapper_kSdzCr {
     align-items: center;
     background-color: var(--background-surface-high);
     box-sizing: border-box;
@@ -9,7 +9,7 @@
     z-index: 1
 }
 
-.wrapper__14245:after {
+.wrapper_kSdzCr:after {
     background-color: inherit;
     content: "";
     height: 3px;
@@ -19,7 +19,7 @@
     width: 100%
 }
 
-.header__14245 {
+.header_kSdzCr {
     align-items: center;
     color: var(--text-default);
     display: flex;
@@ -28,52 +28,52 @@
     transition: color .125s
 }
 
-.interactive__14245:hover {
+.interactive_kSdzCr:hover {
     cursor: pointer
 }
 
-.interactive__14245:hover:hover {
+.interactive_kSdzCr:hover:hover {
     color: var(--interactive-text-active)
 }
 
-.headerIcon__14245 {
+.headerIcon_kSdzCr {
     display: contents;
     height: 100%;
     margin-inline-end: 8px
 }
 
-.headerLabel__14245 {
+.headerLabel_kSdzCr {
     margin-inline-end: 4px
 }
 
-.headerIcon__14245+.headerLabel__14245 {
+.headerIcon_kSdzCr+.headerLabel_kSdzCr {
     margin-inline-start: 4px
 }
 
-.headerCollapseIcon__14245 {
+.headerCollapseIcon_kSdzCr {
     flex-shrink: 0
 }
 
-.full-motion .headerCollapseIcon__14245 {
+.full-motion .headerCollapseIcon_kSdzCr {
     transition: transform .1s
 }
 
-.headerCollapseIconCollapsed__14245 {
+.headerCollapseIconCollapsed_kSdzCr {
     transform: rotate(-90deg)
 }
 
-.enable-forced-colors .wrapper__14245 {
+.enable-forced-colors .wrapper_kSdzCr {
     border-bottom: 1px solid CanvasText
 }
 
-.enable-forced-colors .interactive__14245 {
+.enable-forced-colors .interactive_kSdzCr {
     background-color: ButtonFace;
     color: ButtonText;
     forced-color-adjust: none
 }
 
-.enable-forced-colors .interactive__14245:hover {
+.enable-forced-colors .interactive_kSdzCr:hover {
     color: ButtonText
 }
 
-/*# sourceMappingURL=311580.cf55b3cb4841b265.css.map*/
+/*# sourceMappingURL=311580.8b352017a70682c7.css.map*/

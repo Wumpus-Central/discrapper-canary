@@ -1,6 +1,12 @@
-r.d(t, { b: () => a, u: () => l });
 var n,
     l = (((n = {}).MOSAIC = "mosaic"), (n.MEDIA_VIEWER = "media_viewer"), n);
-function a(e) {
-    return `DVPTopStartOverlay:${e}`;
-}
+r.d(
+    t,
+    {},
+    {
+        b: function (e) {
+            return `DVPTopStartOverlay:${e}`;
+        },
+        u: l,
+    },
+);

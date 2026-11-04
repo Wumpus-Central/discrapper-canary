@@ -1,0 +1,10 @@
+.slot_6IM8hR {
+    align-items: center;
+    display: flex
+}
+
+.slot_6IM8hR:first-child {
+    padding-inline-start: calc(var(--custom-guild-list-width) + var(--space-12))
+}
+
+/*# sourceMappingURL=dd2af50e83e253a3.css.map*/

@@ -1,4 +1,4 @@
-d.d(t, { n: () => i, t: () => b });
+d.r(t);
 var i = (0, d(249238).n)({
         assets: () => s,
         ddd: () => 0,
@@ -266,3 +266,4 @@ var i = (0, d(249238).n)({
     ],
     Z = { a: "", d: "", tc: "", g: "Aninix" },
     b = { fr: 60, v: e, ip: 0, op: 161, w: 271, h: 390, nm: c, ddd: 0, markers: a, assets: s, layers: n, meta: Z };
+d.d(t, {}, { n: i, t: b });

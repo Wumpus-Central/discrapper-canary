@@ -1,4 +1,3 @@
-n.d(t, { u: () => l });
 var i,
     l =
         (((i = {})[(i.HIGH_AFFINITY_MINIMUM = 0.1634)] = "HIGH_AFFINITY_MINIMUM"),
@@ -6,3 +5,4 @@ var i,
         (i[(i.MINIMUM_USER_AFFINITY = 0.0028)] = "MINIMUM_USER_AFFINITY"),
         (i[(i.FRIEND_BASE_COMMUNICATION_AFFINITY = 0.4)] = "FRIEND_BASE_COMMUNICATION_AFFINITY"),
         i);
+n.d(t, {}, { u: l });

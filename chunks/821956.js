@@ -1,4 +1,3 @@
-n.d(t, { Xq: () => a, bS: () => s, kn: () => l, uZ: () => o });
 var i = n(435558),
     r = n(628856);
 function a(e) {
@@ -16,9 +15,17 @@ function a(e) {
 function s(e) {
     return e?.expiresAt != null && 1e3 * e.expiresAt < Date.now();
 }
-function l(e, t) {
-    return null == e || null == t ? e === t : (0, i.isEqual)(a(e), a(t));
-}
-function o(e, t) {
-    return null != t && !s(e?.avatarDecoration) && e?.avatarDecoration?.asset != null;
-}
+n.d(
+    t,
+    {},
+    {
+        Xq: a,
+        bS: s,
+        kn: function (e, t) {
+            return null == e || null == t ? e === t : (0, i.isEqual)(a(e), a(t));
+        },
+        uZ: function (e, t) {
+            return null != t && !s(e?.avatarDecoration) && e?.avatarDecoration?.asset != null;
+        },
+    },
+);

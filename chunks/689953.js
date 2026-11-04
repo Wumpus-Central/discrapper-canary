@@ -1,4 +1,3 @@
-n.d(t, { z: () => r });
 var i,
     r =
         (((i = {})[(i.CLASSIC_IA = 0)] = "CLASSIC_IA"),
@@ -7,3 +6,4 @@ var i,
         (i[(i.YOU_BAR_IA = 3)] = "YOU_BAR_IA"),
         (i[(i.PHOENIX = 4)] = "PHOENIX"),
         i);
+n.d(t, {}, { z: r });

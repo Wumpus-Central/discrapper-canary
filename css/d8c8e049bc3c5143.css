@@ -1,0 +1,31 @@
+.targetList_4f0wkh,
+.upperBodyText_4f0wkh {
+    margin-bottom: 16px
+}
+
+.targetList_4f0wkh {
+    background-color: var(--background-base-low);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    box-shadow: var(--shadow-low);
+    display: flex;
+    flex-flow: column nowrap
+}
+
+.targetItem_4f0wkh {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 8px;
+    padding: 10px 12px
+}
+
+.targetItem_4f0wkh:not(:last-child) {
+    border-bottom: 1px solid var(--border-subtle)
+}
+
+.footer_4f0wkh {
+    background-color: var(--background-mod-normal)
+}
+
+/*# sourceMappingURL=d8c8e049bc3c5143.css.map*/

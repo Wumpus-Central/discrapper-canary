@@ -1,5 +1,4 @@
-n.d(t, { A: () => u });
-var i = n(17928),
+var i = n(855986),
     r = n(73153),
     a = n(723702),
     s = n(652215);
@@ -102,3 +101,4 @@ let u = new c(r.h, {
         o.screenDowntimeReminder = t;
     },
 });
+n.d(t, {}, { A: u });

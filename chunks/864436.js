@@ -1,4 +1,3 @@
-e.d(l, { A: () => p });
 var n = e(477900);
 e(582128);
 var a = e(503698),
@@ -8,16 +7,22 @@ var a = e(503698),
     s = e(866665);
 e(851883);
 var u = e(607013);
-function p(t) {
-    let { icon: l, tooltipText: e, tooltipAriaLabel: a, className: p, onTooltipShow: c } = t,
-        d = (0, o.S3)(r.clD.ONLINE);
-    return null == e
-        ? (0, n.jsx)(l, { size: "custom", color: d, className: i()(u.Kk, p) })
-        : (0, n.jsx)(s.m, {
-              ariaHidden: !0,
-              text: e,
-              delay: 150,
-              onTooltipShow: c,
-              children: (0, n.jsx)(l, { size: "custom", color: d, className: i()(u.Kk, p), "aria-label": a }),
-          });
-}
+e.d(
+    l,
+    {},
+    {
+        A: function (t) {
+            let { icon: l, tooltipText: e, tooltipAriaLabel: a, className: p, onTooltipShow: c } = t,
+                d = (0, o.S3)(r.clD.ONLINE);
+            return null == e
+                ? (0, n.jsx)(l, { size: "custom", color: d, className: i()(u.Kk, p) })
+                : (0, n.jsx)(s.m, {
+                      ariaHidden: !0,
+                      text: e,
+                      delay: 150,
+                      onTooltipShow: c,
+                      children: (0, n.jsx)(l, { size: "custom", color: d, className: i()(u.Kk, p), "aria-label": a }),
+                  });
+        },
+    },
+);

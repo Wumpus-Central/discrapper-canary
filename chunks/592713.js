@@ -1,4 +1,3 @@
-n.d(t, { A: () => u });
 var i = n(73153),
     r = n(439372),
     a = n(696451),
@@ -40,3 +39,4 @@ class c extends r.A {
     clearGuildMemberTimeout = d;
 }
 let u = new c();
+n.d(t, {}, { A: u });

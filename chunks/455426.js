@@ -1,5 +1,5 @@
-(n.d(t, { k: () => R, s: () => N }), n(321073));
-var i = n(941426),
+n(321073);
+var i = n(611599),
     r = n(91242),
     a = n(515718),
     s = n(998979),
@@ -84,13 +84,10 @@ function S(e) {
         (0, d.ik)(),
         I(e));
 }
-function N() {
-    null != u && S(m(u) ?? { status: "capture_failed", reason: "stopped" });
-}
-function C(e) {
+function N(e) {
     return null != e && Number.isFinite(e) ? Math.min(Math.max(Math.floor(e), 1), 1920) : 1280;
 }
-function O(e, t) {
+function C(e, t) {
     let { status: n, reason: i } = t,
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
     return (
@@ -101,60 +98,72 @@ function O(e, t) {
         { status: n }
     );
 }
-async function R(e) {
-    let { applicationId: t } = e;
-    if (!(0, d.y8)()) return O(t, { status: "unsupported", reason: "media engine" });
-    if (e.gate?.isAllowed() === !1) {
-        let n = { status: "no_game", reason: "game not targeted" };
-        return (u?.frameId === e.frameId && S(n), O(t, n));
-    }
-    if (!(0, d.aG)()) return O(t, { status: "no_game", reason: "no visible game" });
-    if (!1 === e.gameFocused) return (f(), O(t, { status: "game_not_focused", reason: "game window not focused" }));
-    E = !1;
-    let n = C(e.maxWidth),
-        i = C(e.maxHeight);
-    if (null == u || u.frameId !== e.frameId || u.maxWidth !== n || u.maxHeight !== i) {
-        if (
-            (null != u && g(u, !1),
-            (u = {
-                frameId: e.frameId,
-                applicationId: t,
-                maxWidth: n,
-                maxHeight: i,
-                startedAt: Date.now(),
-                hasFrame: !1,
-                gate: e.gate,
-            }),
-            (_ = null),
-            I({ status: "busy", reason: "another request took over the capture" }),
-            !(0, d.it)({ appId: t, appName: e.appName }, { width: n, height: i, intervalMs: 2e3 }, p))
-        )
-            return (
-                S({ status: "unsupported", reason: "snapshots did not start" }),
-                O(t, { status: "unsupported", reason: "snapshots did not start" })
-            );
-        g(u, !0);
-    }
-    (null != h && clearTimeout(h), (h = setTimeout(() => S({ status: "capture_failed", reason: "idle" }), 3e4)));
-    let r = Date.now(),
-        a =
-            null != _ && r - _.capturedAt <= 4e3
-                ? _
-                : await new Promise((e) => {
-                      let t = setTimeout(() => {
-                          ((A = A.filter((e) => e !== n)),
-                              e(
-                                  (0, d.aG)()
-                                      ? { status: "timeout", reason: "no frame within 5000ms" }
-                                      : { status: "no_game", reason: "game left while waiting" },
-                              ));
-                      }, 5e3);
-                      function n(n) {
-                          (clearTimeout(t), e(n));
-                      }
-                      A.push(n);
-                  });
-    return "status" in a
-        ? ("timeout" === a.status && u?.frameId === e.frameId && (0, d.DD)(t, "timeout"), O(t, a, Date.now() - r))
-        : ((0, d.DD)(t, null), { status: "ok", image: a.image, width: a.width, height: a.height });
-}
+n.d(
+    t,
+    {},
+    {
+        k: async function (e) {
+            let { applicationId: t } = e;
+            if (!(0, d.y8)()) return C(t, { status: "unsupported", reason: "media engine" });
+            if (e.gate?.isAllowed() === !1) {
+                let n = { status: "no_game", reason: "game not targeted" };
+                return (u?.frameId === e.frameId && S(n), C(t, n));
+            }
+            if (!(0, d.aG)()) return C(t, { status: "no_game", reason: "no visible game" });
+            if (!1 === e.gameFocused)
+                return (f(), C(t, { status: "game_not_focused", reason: "game window not focused" }));
+            E = !1;
+            let n = N(e.maxWidth),
+                i = N(e.maxHeight);
+            if (null == u || u.frameId !== e.frameId || u.maxWidth !== n || u.maxHeight !== i) {
+                if (
+                    (null != u && g(u, !1),
+                    (u = {
+                        frameId: e.frameId,
+                        applicationId: t,
+                        maxWidth: n,
+                        maxHeight: i,
+                        startedAt: Date.now(),
+                        hasFrame: !1,
+                        gate: e.gate,
+                    }),
+                    (_ = null),
+                    I({ status: "busy", reason: "another request took over the capture" }),
+                    !(0, d.it)({ appId: t, appName: e.appName }, { width: n, height: i, intervalMs: 2e3 }, p))
+                )
+                    return (
+                        S({ status: "unsupported", reason: "snapshots did not start" }),
+                        C(t, { status: "unsupported", reason: "snapshots did not start" })
+                    );
+                g(u, !0);
+            }
+            (null != h && clearTimeout(h),
+                (h = setTimeout(() => S({ status: "capture_failed", reason: "idle" }), 3e4)));
+            let r = Date.now(),
+                a =
+                    null != _ && r - _.capturedAt <= 4e3
+                        ? _
+                        : await new Promise((e) => {
+                              let t = setTimeout(() => {
+                                  ((A = A.filter((e) => e !== n)),
+                                      e(
+                                          (0, d.aG)()
+                                              ? { status: "timeout", reason: "no frame within 5000ms" }
+                                              : { status: "no_game", reason: "game left while waiting" },
+                                      ));
+                              }, 5e3);
+                              function n(n) {
+                                  (clearTimeout(t), e(n));
+                              }
+                              A.push(n);
+                          });
+            return "status" in a
+                ? ("timeout" === a.status && u?.frameId === e.frameId && (0, d.DD)(t, "timeout"),
+                  C(t, a, Date.now() - r))
+                : ((0, d.DD)(t, null), { status: "ok", image: a.image, width: a.width, height: a.height });
+        },
+        s: function () {
+            null != u && S(m(u) ?? { status: "capture_failed", reason: "stopped" });
+        },
+    },
+);

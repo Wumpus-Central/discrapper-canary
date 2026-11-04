@@ -1,19 +1,18 @@
-n.d(t, { A: () => D });
-var i = n(17928),
+var i = n(855986),
     r = n(73153),
     a = n(334738),
     s = n(874850),
     l = n(940382),
     o = n(617617),
-    d = n(280450),
+    d = n(46653),
     c = n(734057),
     u = n(808728),
     _ = n(696451),
     E = n(71393),
-    A = n(573163),
+    A = n(218461),
     h = n(543465),
     f = n(927813),
-    I = n(935208),
+    I = n(811091),
     p = n(652215);
 let m = new Set(),
     T = {},
@@ -45,7 +44,7 @@ function O(e, t) {
 }
 function R(e) {
     if (null != T[e]) return;
-    let t = u.Ay.getChannels(e)[u.I6].map((e) => e.channel.id),
+    let t = u.A.getChannels(e)[u.I].map((e) => e.channel.id),
         n = _.Ay.getMember(e, d.default.getId())?.joinedAt;
     if (null == n) return;
     T[e] = new Set();
@@ -74,7 +73,7 @@ function L() {
 class y extends i.Ay.Store {
     static displayName = "NewChannelsStore";
     initialize() {
-        (this.waitFor(d.default, c.A, u.Ay, _.Ay, E.A, A.Ay, h.Ay, o.A), this.syncWith([h.Ay], L));
+        (this.waitFor(d.default, c.A, u.A, _.Ay, E.A, A.Ay, h.Ay, o.A), this.syncWith([h.Ay], L));
     }
     getNewChannelIds(e) {
         null != e && null == T[e] && R(e);
@@ -151,3 +150,4 @@ let D = new y(r.h, {
         t.isVocal() || ((T[t.guild_id] = T[t.guild_id] ?? new Set()), T[t.guild_id].add(t.id));
     },
 });
+n.d(t, {}, { A: D });

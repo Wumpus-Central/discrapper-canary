@@ -1,4 +1,3 @@
-n.d(t, { L: () => f });
 var r = n(688331),
     i = n(469052),
     o = n(630449),
@@ -92,3 +91,4 @@ function g() {
     let e = (0, o.KU)();
     return (e && e.getOptions()) || { stackParser: () => [], attachStacktrace: !1 };
 }
+n.d(t, {}, { L: f });

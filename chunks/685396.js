@@ -1,10 +1,9 @@
-n.d(t, { F: () => _, K: () => E });
 var i = n(582128),
     r = n(350835),
-    a = n(17928),
-    s = n(236285),
+    a = n(855986),
+    s = n(121681),
     l = n(7584),
-    o = n(182159),
+    o = n(956396),
     d = n(253932);
 function c(e, t) {
     let n = null;
@@ -30,12 +29,18 @@ function u(e) {
     let t = o.A.getEmoji(e);
     return s.Ay.getUsableCustomEmojiById(e) ?? (null != t && o.A.isPackEmojiUsable(t) ? t : null);
 }
-function _(e) {
-    return c(e, u(e.emojiId));
-}
-function E() {
-    let e = d.G2.useSetting(),
-        t = e?.emojiId,
-        n = (0, a.bG)([s.Ay, o.A], () => u(t), [t]);
-    return (0, i.useMemo)(() => (null != e ? c(e, n) : null), [e, n]);
-}
+n.d(
+    t,
+    {},
+    {
+        F: function (e) {
+            return c(e, u(e.emojiId));
+        },
+        K: function () {
+            let e = d.G2.useSetting(),
+                t = e?.emojiId,
+                n = (0, a.bG)([s.Ay, o.A], () => u(t), [t]);
+            return (0, i.useMemo)(() => (null != e ? c(e, n) : null), [e, n]);
+        },
+    },
+);

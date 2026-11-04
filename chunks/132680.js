@@ -1,4 +1,3 @@
-d.d(t, { n: () => e, t: () => c });
 var i = d(886347);
 function e() {
     for (let l of (0, i.r)()
@@ -7,9 +6,16 @@ function e() {
         if (MediaRecorder.isTypeSupported(l)) return l;
     return "";
 }
-function c() {
-    let l = e();
-    return (0, i.r)()
-        ? { mimeType: l, videoBitsPerSecond: 1e6, bitsPerSecond: 1e6 }
-        : { mimeType: l, videoBitsPerSecond: 5e5, bitsPerSecond: 5e5 };
-}
+d.d(
+    t,
+    {},
+    {
+        n: e,
+        t: function () {
+            let l = e();
+            return (0, i.r)()
+                ? { mimeType: l, videoBitsPerSecond: 1e6, bitsPerSecond: 1e6 }
+                : { mimeType: l, videoBitsPerSecond: 5e5, bitsPerSecond: 5e5 };
+        },
+    },
+);

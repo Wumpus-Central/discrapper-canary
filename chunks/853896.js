@@ -1,4 +1,3 @@
-s.d(k, { default: () => d });
 var d = {
     fr: 60,
     v: "5.9.6",
@@ -268,3 +267,4 @@ var d = {
     ],
     meta: { a: "", d: "", tc: "", g: "Aninix" },
 };
+s.d(k, {}, { default: d });

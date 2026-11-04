@@ -1,32 +1,38 @@
-d.d(t, { a: () => b, i: () => Z, n: () => n, o: () => c, r: () => s, s: () => a, t: () => o });
 let i = null,
     e = null;
-function c(l) {
-    i = l;
-}
-function a(l) {
-    e = l;
-}
-function s() {
-    return e;
-}
-function n() {
+function c() {
     if (!i) throw Error('SDK not configured. Call setup({ apiURL: "..." }) first.');
     return i;
 }
-function Z() {
-    return null !== i;
-}
-function b() {
-    ((i = null), (e = null));
-}
-function m(l) {
+function a(l) {
     return e ? { ...l, headers: { "X-Incode-Hardware-Id": e, ...l?.headers } } : (l ?? {});
 }
-let o = {
-    get: (l, t) => n().get(l, m(t)),
-    post: (l, t, d) => n().post(l, t, m(d)),
-    put: (l, t, d) => n().put(l, t, m(d)),
-    patch: (l, t, d) => n().patch(l, t, m(d)),
-    delete: (l, t) => n().delete(l, m(t)),
-};
+d.d(
+    t,
+    {},
+    {
+        a: function () {
+            ((i = null), (e = null));
+        },
+        i: function () {
+            return null !== i;
+        },
+        n: c,
+        o: function (l) {
+            i = l;
+        },
+        r: function () {
+            return e;
+        },
+        s: function (l) {
+            e = l;
+        },
+        t: {
+            get: (l, t) => c().get(l, a(t)),
+            post: (l, t, d) => c().post(l, t, a(d)),
+            put: (l, t, d) => c().put(l, t, a(d)),
+            patch: (l, t, d) => c().patch(l, t, a(d)),
+            delete: (l, t) => c().delete(l, a(t)),
+        },
+    },
+);

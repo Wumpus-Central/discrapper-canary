@@ -1,7 +1,7 @@
 e.exports = {
-    kL: "container__8279f",
-    Em: "mainColumn__8279f",
-    DD: "title__8279f",
-    JS: "artContainer__8279f",
-    Qw: "art__8279f",
+    kL: "container_-hWC0t",
+    Em: "mainColumn_-hWC0t",
+    DD: "title_-hWC0t",
+    JS: "artContainer_-hWC0t",
+    Qw: "art_-hWC0t",
 };

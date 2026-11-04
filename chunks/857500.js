@@ -1,7 +1,6 @@
-n.d(t, { A: () => h });
 var i = n(73153),
     r = n(439372),
-    a = n(280450),
+    a = n(46653),
     s = n(131319),
     l = n(734057),
     o = n(309010),
@@ -39,3 +38,4 @@ class A extends r.A {
     actions = { CHANNEL_UPDATES: _, VOICE_STATE_UPDATES: E };
 }
 let h = new A();
+n.d(t, {}, { A: h });

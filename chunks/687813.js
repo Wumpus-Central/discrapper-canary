@@ -1,4 +1,3 @@
-e.d(n, { $1: () => rz, _u: () => rp, strFromU8: () => rw, unzipSync: () => rA, yU: () => rC });
 var t = {},
     a = function (r, n, e, a, f) {
         var o = new Worker(
@@ -63,7 +62,7 @@ for (
                             ++s
                         )
                             t[m[s] >> l] = c;
-            } else for (f = 0, t = new o(a); f < a; ++f) r[f] && (t[f] = m[u[r[f] - 1]++] >> (15 - r[f]));
+            } else for (t = new o(a), f = 0; f < a; ++f) r[f] && (t[f] = m[u[r[f] - 1]++] >> (15 - r[f]));
             return t;
         },
         k = new f(288),
@@ -777,224 +776,235 @@ var rm = function (r, n) {
     },
     rM = function (r, n, e, t, a) {
         (rl(r, n, 0x6054b50), rl(r, n + 8, e), rl(r, n + 10, e), rl(r, n + 12, t), rl(r, n + 16, a));
-    };
-function rC(r, n, e) {
-    (e || ((e = n), (n = {})), "function" != typeof e && $(7));
-    var t = {};
-    rs(r, "", t, n);
-    var a = Object.keys(t),
-        o = a.length,
-        i = 0,
-        u = 0,
-        l = o,
-        c = Array(o),
-        v = [],
-        s = function () {
-            for (var r = 0; r < v.length; ++r) v[r]();
-        },
-        h = function (r, n) {
-            rS(function () {
-                e(r, n);
-            });
-        };
-    rS(function () {
-        h = e;
-    });
-    var g = function () {
-        var r = new f(u + 22),
-            n = i,
-            e = u - i;
-        u = 0;
-        for (var t = 0; t < l; ++t) {
-            var a = c[t];
-            try {
-                var o = a.c.length;
-                rk(r, u, a, a.f, a.u, o);
-                var v = 30 + a.f.length + rx(a.extra),
-                    s = u + v;
-                (r.set(a.c, s), rk(r, i, a, a.f, a.u, o, u, a.m), (i += 16 + v + (a.m ? a.m.length : 0)), (u = s + o));
-            } catch (r) {
-                return h(r, null);
-            }
-        }
-        (rM(r, i, c.length, e, n), h(null, r));
-    };
-    o || g();
-    for (
-        var d = function (r) {
-                var n,
-                    e,
-                    f = a[r],
-                    l = t[f],
-                    d = l[0],
-                    p = l[1],
-                    w = N(),
-                    m = d.length;
-                w.p(d);
-                var y = rp(f),
-                    b = y.length,
-                    x = p.comment,
-                    k = x && rp(x),
-                    M = k && k.length,
-                    C = rx(p.extra),
-                    S = 8 * (0 != p.level),
-                    z = function (n, e) {
-                        if (n) (s(), h(n, null));
-                        else {
-                            var t = e.length;
-                            ((c[r] = Q(p, {
-                                size: m,
-                                crc: w.d(),
-                                c: e,
-                                f: y,
-                                m: k,
-                                u: b != f.length || (k && x.length != M),
-                                compression: S,
-                            })),
-                                (i += 30 + b + C + t),
-                                (u += 76 + 2 * (b + C) + (M || 0) + t),
-                                --o || g());
-                        }
-                    };
-                if ((b > 65535 && z($(11, 0, 1), null), S))
-                    if (m < 16e4)
-                        try {
-                            z(null, rc(d, p));
-                        } catch (r) {
-                            z(r, null);
-                        }
-                    else
-                        v.push(
-                            ((n = p),
-                            (e = z) || ((e = n), (n = {})),
-                            "function" != typeof e && $(7),
-                            rf(
-                                d,
-                                n,
-                                [re],
-                                function (r) {
-                                    return rt(rc(r.data[0], r.data[1]));
-                                },
-                                0,
-                                e,
-                            )),
-                        );
-                else z(null, d);
-            },
-            p = 0;
-        p < l;
-        ++p
-    )
-        d(p);
-    return s;
-}
-var rS =
-    "function" == typeof queueMicrotask
-        ? queueMicrotask
-        : "function" == typeof setTimeout
-          ? setTimeout
-          : function (r) {
-                r();
-            };
-function rz(r, n, e) {
-    (e || ((e = n), (n = {})), "function" != typeof e && $(7));
-    var t = [],
-        a = function () {
-            for (var r = 0; r < t.length; ++r) t[r]();
-        },
-        o = {},
-        i = function (r, n) {
-            rS(function () {
-                e(r, n);
-            });
-        };
-    rS(function () {
-        i = e;
-    });
-    for (var u = r.length - 22; 0x6054b50 != ri(r, u); --u)
-        if (!u || r.length - u > 65558) return (i($(13, 0, 1), null), a);
-    var l = ro(r, u + 8);
-    if (l) {
-        var c = l,
-            v = ri(r, u + 16),
-            s = 0xffffffff == v || 65535 == c;
-        if (s) {
-            var h = ri(r, u - 12);
-            (s = 0x6064b50 == ri(r, h)) && ((c = l = ri(r, h + 32)), (v = ri(r, h + 48)));
-        }
-        for (var g = n && n.filter, d = 0; d < c; ++d)
-            !(function () {
-                var n = ry(r, v, s),
-                    e = n[0],
-                    u = n[1],
-                    c = n[2],
-                    h = n[3],
-                    d = n[4],
-                    p = rm(r, n[5]);
-                v = d;
-                var w = function (r, n) {
-                    r ? (a(), i(r, null)) : (n && (o[h] = n), --l || i(null, o));
+    },
+    rC =
+        "function" == typeof queueMicrotask
+            ? queueMicrotask
+            : "function" == typeof setTimeout
+              ? setTimeout
+              : function (r) {
+                    r();
                 };
-                if (!g || g({ name: h, size: u, originalSize: c, compression: e }))
-                    if (e)
-                        if (8 == e) {
-                            var m,
-                                y,
-                                b = r.subarray(p, p + u);
-                            if (u < 32e4)
+e.d(
+    n,
+    {},
+    {
+        $1: function (r, n, e) {
+            (e || ((e = n), (n = {})), "function" != typeof e && $(7));
+            var t = [],
+                a = function () {
+                    for (var r = 0; r < t.length; ++r) t[r]();
+                },
+                o = {},
+                i = function (r, n) {
+                    rC(function () {
+                        e(r, n);
+                    });
+                };
+            rC(function () {
+                i = e;
+            });
+            for (var u = r.length - 22; 0x6054b50 != ri(r, u); --u)
+                if (!u || r.length - u > 65558) return (i($(13, 0, 1), null), a);
+            var l = ro(r, u + 8);
+            if (l) {
+                var c = l,
+                    v = ri(r, u + 16),
+                    s = 0xffffffff == v || 65535 == c;
+                if (s) {
+                    var h = ri(r, u - 12);
+                    (s = 0x6064b50 == ri(r, h)) && ((c = l = ri(r, h + 32)), (v = ri(r, h + 48)));
+                }
+                for (var g = n && n.filter, d = 0; d < c; ++d)
+                    !(function () {
+                        var n = ry(r, v, s),
+                            e = n[0],
+                            u = n[1],
+                            c = n[2],
+                            h = n[3],
+                            d = n[4],
+                            p = rm(r, n[5]);
+                        v = d;
+                        var w = function (r, n) {
+                            r ? (a(), i(r, null)) : (n && (o[h] = n), --l || i(null, o));
+                        };
+                        if (!g || g({ name: h, size: u, originalSize: c, compression: e }))
+                            if (e)
+                                if (8 == e) {
+                                    var m,
+                                        y,
+                                        b = r.subarray(p, p + u);
+                                    if (u < 32e4)
+                                        try {
+                                            w(null, rv(b, { out: new f(c) }));
+                                        } catch (r) {
+                                            w(r, null);
+                                        }
+                                    else
+                                        t.push(
+                                            ((m = { size: c }),
+                                            (y = w) || ((y = m), (m = {})),
+                                            "function" != typeof y && $(7),
+                                            rf(
+                                                b,
+                                                m,
+                                                [rn],
+                                                function (r) {
+                                                    return rt(rv(r.data[0], ra(r.data[1])));
+                                                },
+                                                1,
+                                                y,
+                                            )),
+                                        );
+                                } else w($(14, "unknown compression type " + e, 1), null);
+                            else w(null, j(r, p, p + u));
+                        else w(null, null);
+                    })();
+            } else i(null, {});
+            return a;
+        },
+        _u: rp,
+        strFromU8: rw,
+        unzipSync: function (r, n) {
+            for (var e = {}, t = r.length - 22; 0x6054b50 != ri(r, t); --t) (!t || r.length - t > 65558) && $(13);
+            var a = ro(r, t + 8);
+            if (!a) return {};
+            var o = ri(r, t + 16),
+                i = 0xffffffff == o || 65535 == a;
+            if (i) {
+                var u = ri(r, t - 12);
+                (i = 0x6064b50 == ri(r, u)) && ((a = ri(r, u + 32)), (o = ri(r, u + 48)));
+            }
+            for (var l = n && n.filter, c = 0; c < a; ++c) {
+                var v = ry(r, o, i),
+                    s = v[0],
+                    h = v[1],
+                    g = v[2],
+                    d = v[3],
+                    p = v[4],
+                    w = rm(r, v[5]);
+                ((o = p),
+                    (!l || l({ name: d, size: h, originalSize: g, compression: s })) &&
+                        (s
+                            ? 8 == s
+                                ? (e[d] = rv(r.subarray(w, w + h), { out: new f(g) }))
+                                : $(14, "unknown compression type " + s)
+                            : (e[d] = j(r, w, w + h))));
+            }
+            return e;
+        },
+        yU: function (r, n, e) {
+            (e || ((e = n), (n = {})), "function" != typeof e && $(7));
+            var t = {};
+            rs(r, "", t, n);
+            var a = Object.keys(t),
+                o = a.length,
+                i = 0,
+                u = 0,
+                l = o,
+                c = Array(o),
+                v = [],
+                s = function () {
+                    for (var r = 0; r < v.length; ++r) v[r]();
+                },
+                h = function (r, n) {
+                    rC(function () {
+                        e(r, n);
+                    });
+                };
+            rC(function () {
+                h = e;
+            });
+            var g = function () {
+                var r = new f(u + 22),
+                    n = i,
+                    e = u - i;
+                u = 0;
+                for (var t = 0; t < l; ++t) {
+                    var a = c[t];
+                    try {
+                        var o = a.c.length;
+                        rk(r, u, a, a.f, a.u, o);
+                        var v = 30 + a.f.length + rx(a.extra),
+                            s = u + v;
+                        (r.set(a.c, s),
+                            rk(r, i, a, a.f, a.u, o, u, a.m),
+                            (i += 16 + v + (a.m ? a.m.length : 0)),
+                            (u = s + o));
+                    } catch (r) {
+                        return h(r, null);
+                    }
+                }
+                (rM(r, i, c.length, e, n), h(null, r));
+            };
+            o || g();
+            for (
+                var d = function (r) {
+                        var n,
+                            e,
+                            f = a[r],
+                            l = t[f],
+                            d = l[0],
+                            p = l[1],
+                            w = N(),
+                            m = d.length;
+                        w.p(d);
+                        var y = rp(f),
+                            b = y.length,
+                            x = p.comment,
+                            k = x && rp(x),
+                            M = k && k.length,
+                            C = rx(p.extra),
+                            S = 8 * (0 != p.level),
+                            z = function (n, e) {
+                                if (n) (s(), h(n, null));
+                                else {
+                                    var t = e.length;
+                                    ((c[r] = Q(p, {
+                                        size: m,
+                                        crc: w.d(),
+                                        c: e,
+                                        f: y,
+                                        m: k,
+                                        u: b != f.length || (k && x.length != M),
+                                        compression: S,
+                                    })),
+                                        (i += 30 + b + C + t),
+                                        (u += 76 + 2 * (b + C) + (M || 0) + t),
+                                        --o || g());
+                                }
+                            };
+                        if ((b > 65535 && z($(11, 0, 1), null), S))
+                            if (m < 16e4)
                                 try {
-                                    w(null, rv(b, { out: new f(c) }));
+                                    z(null, rc(d, p));
                                 } catch (r) {
-                                    w(r, null);
+                                    z(r, null);
                                 }
                             else
-                                t.push(
-                                    ((m = { size: c }),
-                                    (y = w) || ((y = m), (m = {})),
-                                    "function" != typeof y && $(7),
+                                v.push(
+                                    ((n = p),
+                                    (e = z) || ((e = n), (n = {})),
+                                    "function" != typeof e && $(7),
                                     rf(
-                                        b,
-                                        m,
-                                        [rn],
+                                        d,
+                                        n,
+                                        [re],
                                         function (r) {
-                                            return rt(rv(r.data[0], ra(r.data[1])));
+                                            return rt(rc(r.data[0], r.data[1]));
                                         },
-                                        1,
-                                        y,
+                                        0,
+                                        e,
                                     )),
                                 );
-                        } else w($(14, "unknown compression type " + e, 1), null);
-                    else w(null, j(r, p, p + u));
-                else w(null, null);
-            })();
-    } else i(null, {});
-    return a;
-}
-function rA(r, n) {
-    for (var e = {}, t = r.length - 22; 0x6054b50 != ri(r, t); --t) (!t || r.length - t > 65558) && $(13);
-    var a = ro(r, t + 8);
-    if (!a) return {};
-    var o = ri(r, t + 16),
-        i = 0xffffffff == o || 65535 == a;
-    if (i) {
-        var u = ri(r, t - 12);
-        (i = 0x6064b50 == ri(r, u)) && ((a = ri(r, u + 32)), (o = ri(r, u + 48)));
-    }
-    for (var l = n && n.filter, c = 0; c < a; ++c) {
-        var v = ry(r, o, i),
-            s = v[0],
-            h = v[1],
-            g = v[2],
-            d = v[3],
-            p = v[4],
-            w = rm(r, v[5]);
-        ((o = p),
-            (!l || l({ name: d, size: h, originalSize: g, compression: s })) &&
-                (s
-                    ? 8 == s
-                        ? (e[d] = rv(r.subarray(w, w + h), { out: new f(g) }))
-                        : $(14, "unknown compression type " + s)
-                    : (e[d] = j(r, w, w + h))));
-    }
-    return e;
-}
+                        else z(null, d);
+                    },
+                    p = 0;
+                p < l;
+                ++p
+            )
+                d(p);
+            return s;
+        },
+    },
+);

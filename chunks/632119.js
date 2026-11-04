@@ -1,4 +1,3 @@
-n.d(t, { Bb: () => u, C$: () => A, Jz: () => h, Ys: () => E, fu: () => _ });
 var i = n(923457),
     r = n(873298),
     a = n(207560),
@@ -57,7 +56,17 @@ function A(e) {
         explicitContentFriendDm: E({ setting: t?.explicitContentFriendDm, isDm: !0, isFriend: !0 }),
     };
 }
-function h(e) {
-    let t = A();
-    s.Vd.updateSetting({ ...t, ...e });
-}
+n.d(
+    t,
+    {},
+    {
+        Bb: u,
+        C$: A,
+        Jz: function (e) {
+            let t = A();
+            s.Vd.updateSetting({ ...t, ...e });
+        },
+        Ys: E,
+        fu: _,
+    },
+);

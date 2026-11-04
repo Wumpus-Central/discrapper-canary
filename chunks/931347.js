@@ -1,52 +1,63 @@
-r.d(n, { n: () => E, t: () => F });
 var t = r(41851),
     s = r(269882),
     i = r(528239),
     a = r(646613),
     o = r(184054),
     c = r(761969);
-async function l(e) {
-    let n = await t.t.get(i.t.aesUnsignedDocuments, { signal: e });
-    if (!n.ok) throw Error(`GET ${i.t.aesUnsignedDocuments} failed: ${n.status} ${n.statusText}`);
-    return n.data;
-}
-async function u(e, n, r) {
-    let s = "qe" === n ? i.t.qesSignDocument : i.t.aesSignDocument;
-    try {
-        return (await t.t.post(s, { documentRef: e, userConsented: !0 }, { signal: r })).data;
-    } catch (e) {
-        (0, c.n)(s, e);
-    }
-}
-async function g(e) {
-    let n = await t.t.post(i.t.aesGenerateUploadUrl, {}, { signal: e });
-    if (!n.ok) throw Error(`POST ${i.t.aesGenerateUploadUrl} failed: ${n.status} ${n.statusText}`);
-    return n.data;
-}
-async function d(e, n, r) {
-    await (0, o.t)({ method: "PUT", url: e, headers: { "Content-Type": "application/pdf" }, body: n, signal: r });
-}
-let p = (0, a.a)(async ({ signal: e }) => l(e)),
-    f = (0, a.a)(async ({ input: e, signal: n }) =>
-        (await Promise.all(e.documents.map((r) => u(r.documentRef, e.variant, n)))).map((e) => ({
-            signed: !0 === e.success || !!e.signedDocumentUrl,
-            signedDocumentUrl: e.signedDocumentUrl,
-        })),
+let l = (0, a.a)(async ({ signal: e }) =>
+        (async function (e) {
+            let n = await t.t.get(i.t.aesUnsignedDocuments, { signal: e });
+            if (!n.ok) throw Error(`GET ${i.t.aesUnsignedDocuments} failed: ${n.status} ${n.statusText}`);
+            return n.data;
+        })(e),
     ),
-    m = (0, a.a)(async ({ signal: e }) => g(e)),
-    D = (0, a.a)(async ({ input: e, signal: n }) => {
+    u = (0, a.a)(async ({ input: e, signal: n }) =>
+        (
+            await Promise.all(
+                e.documents.map((r) =>
+                    (async function (e, n, r) {
+                        let s = "qe" === n ? i.t.qesSignDocument : i.t.aesSignDocument;
+                        try {
+                            return (await t.t.post(s, { documentRef: e, userConsented: !0 }, { signal: r })).data;
+                        } catch (e) {
+                            (0, c.n)(s, e);
+                        }
+                    })(r.documentRef, e.variant, n),
+                ),
+            )
+        ).map((e) => ({ signed: !0 === e.success || !!e.signedDocumentUrl, signedDocumentUrl: e.signedDocumentUrl })),
+    ),
+    g = (0, a.a)(async ({ signal: e }) =>
+        (async function (e) {
+            let n = await t.t.post(i.t.aesGenerateUploadUrl, {}, { signal: e });
+            if (!n.ok) throw Error(`POST ${i.t.aesGenerateUploadUrl} failed: ${n.status} ${n.statusText}`);
+            return n.data;
+        })(e),
+    ),
+    d = (0, a.a)(async ({ input: e, signal: n }) => {
         let r = e.getFileData();
         if (!r) throw Error("No file data available for upload");
-        await d(e.preSignedUrl, r, n);
+        await (async function (e, n, r) {
+            await (0, o.t)({
+                method: "PUT",
+                url: e,
+                headers: { "Content-Type": "application/pdf" },
+                body: n,
+                signal: r,
+            });
+        })(e.preSignedUrl, r, n);
     }),
-    S = ["terms", "signElectronically", "signDisplayed"],
-    h = ["issuance", "qesAcknowledgement", "qscdConfirmation", "termsAgreement", "documentsReviewed"];
-function U(e) {
+    p = ["terms", "signElectronically", "signDisplayed"],
+    f = ["issuance", "qesAcknowledgement", "qscdConfirmation", "termsAgreement", "documentsReviewed"];
+function m(e) {
+    return Object.fromEntries(("qe" === e ? f : p).map((e) => [e, !1]));
+}
+function D(e) {
     return Object.values(e).every(Boolean);
 }
-let E = (0, a.t)({
+let S = (0, a.t)({
     types: { context: {}, events: {}, input: {} },
-    actors: { fetchUnsignedDocs: p, signDocuments: f, generateUploadUrl: m, uploadFile: D },
+    actors: { fetchUnsignedDocs: l, signDocuments: u, generateUploadUrl: g, uploadFile: d },
     actions: {
         setDocuments: (0, a.r)(({ event: e }) => {
             let { output: n } = e;
@@ -75,7 +86,7 @@ let E = (0, a.t)({
         errorFromUpload: ({ context: e }) => "upload" === e.errorSource,
         shouldUpload: ({ context: e }) => !0 === e.config.uploadDocument,
         hasUploadUrl: ({ context: e }) => null !== e.preSignedUrl,
-        allConsented: ({ context: e }) => U(e.consentChecks),
+        allConsented: ({ context: e }) => D(e.consentChecks),
         hasDocuments: ({ event: e }) => {
             let { output: n } = e;
             return (n.documents?.length ?? 0) > 0;
@@ -101,7 +112,7 @@ let E = (0, a.t)({
         fileSize: null,
         fileUrl: null,
         preSignedUrl: null,
-        consentChecks: Object.fromEntries(("qe" === (e.config.variant ?? "ae") ? h : S).map((e) => [e, !1])),
+        consentChecks: m(e.config.variant ?? "ae"),
         viewingDocumentUrl: null,
         errorMessage: "",
         errorSource: null,
@@ -225,7 +236,7 @@ let E = (0, a.t)({
         closed: { type: "final" },
     },
 });
-function w(e) {
+function h(e) {
     let n = (0, s.o)(e.value);
     if (void 0 !== n)
         switch (n) {
@@ -252,7 +263,7 @@ function w(e) {
                 return;
         }
 }
-function v(e) {
+function U(e) {
     let n = (0, s.o)(e.value);
     if (void 0 !== n)
         switch (n) {
@@ -279,7 +290,7 @@ function v(e) {
                 return;
         }
 }
-function C(e) {
+function E(e) {
     let { context: n } = e;
     if (
         e.matches("idle") ||
@@ -296,7 +307,7 @@ function C(e) {
             variant: n.config.variant ?? "ae",
             documents: n.documents,
             consentChecks: n.consentChecks,
-            allConsented: U(n.consentChecks),
+            allConsented: D(n.consentChecks),
             viewingDocumentUrl: n.viewingDocumentUrl,
         };
     if (e.matches("processing")) return { status: "processing" };
@@ -312,55 +323,66 @@ function C(e) {
     if (e.matches("closed")) return { status: "closed" };
     throw Error(`Unhandled electronic-signature state: ${JSON.stringify(e.value)}`);
 }
-function F(e) {
-    var n;
-    let r = { current: null },
-        t =
-            ((n = { config: e.config, getFileData: () => r.current }),
-            (0, a.s)(E, { input: { config: n.config, getFileData: n.getFileData } }).start()),
-        i = "qe" === e.config.variant;
-    return (0, a.l)({
-        actor: t,
-        mapState: C,
-        createApi: (e) =>
-            (function ({ actor: e, trackElementClicked: n, fileDataRef: r }) {
-                return {
-                    load() {
-                        e.send({ type: "LOAD" });
-                    },
-                    setConsent(n, r) {
-                        e.send({ type: "SET_CONSENT", name: n, checked: r });
-                    },
-                    selectFile(n, t, s) {
-                        ((r.current = t),
-                            e.send({ type: "SELECT_FILE", fileName: n, fileSize: t.byteLength, fileUrl: s }));
-                    },
-                    replaceFile() {
-                        ((r.current = null), e.send({ type: "REPLACE_FILE" }));
-                    },
-                    confirmFile() {
-                        (n?.("confirmFile"), e.send({ type: "CONFIRM_FILE" }));
-                    },
-                    viewDocument(n) {
-                        e.send({ type: "VIEW_DOCUMENT", url: n });
-                    },
-                    closeDocumentView() {
-                        e.send({ type: "CLOSE_DOCUMENT_VIEW" });
-                    },
-                    sign() {
-                        (n?.("sign"), e.send({ type: "SIGN" }));
-                    },
-                    finish() {
-                        (n?.("finish"), e.send({ type: "FINISH" }));
-                    },
-                    retry() {
-                        (n?.("retry"), (r.current = null), e.send({ type: "RETRY" }));
-                    },
-                    close() {
-                        (n?.("close"), e.send({ type: "CLOSE" }));
-                    },
-                };
-            })({ ...e, fileDataRef: r }),
-        instrumentation: (0, s.s)(i ? s.n.qeSignature : s.n.aeSignature, { getEventScreenName: i ? v : w }),
-    });
-}
+r.d(
+    n,
+    {},
+    {
+        a: D,
+        i: f,
+        n: S,
+        r: p,
+        s: m,
+        t: function (e) {
+            var n;
+            let r = { current: null },
+                t =
+                    ((n = { config: e.config, getFileData: () => r.current }),
+                    (0, a.s)(S, { input: { config: n.config, getFileData: n.getFileData } }).start()),
+                i = "qe" === e.config.variant;
+            return (0, a.l)({
+                actor: t,
+                mapState: E,
+                createApi: (e) =>
+                    (function ({ actor: e, trackElementClicked: n, fileDataRef: r }) {
+                        return {
+                            load() {
+                                e.send({ type: "LOAD" });
+                            },
+                            setConsent(n, r) {
+                                e.send({ type: "SET_CONSENT", name: n, checked: r });
+                            },
+                            selectFile(n, t, s) {
+                                ((r.current = t),
+                                    e.send({ type: "SELECT_FILE", fileName: n, fileSize: t.byteLength, fileUrl: s }));
+                            },
+                            replaceFile() {
+                                ((r.current = null), e.send({ type: "REPLACE_FILE" }));
+                            },
+                            confirmFile() {
+                                (n?.("confirmFile"), e.send({ type: "CONFIRM_FILE" }));
+                            },
+                            viewDocument(n) {
+                                e.send({ type: "VIEW_DOCUMENT", url: n });
+                            },
+                            closeDocumentView() {
+                                e.send({ type: "CLOSE_DOCUMENT_VIEW" });
+                            },
+                            sign() {
+                                (n?.("sign"), e.send({ type: "SIGN" }));
+                            },
+                            finish() {
+                                (n?.("finish"), e.send({ type: "FINISH" }));
+                            },
+                            retry() {
+                                (n?.("retry"), (r.current = null), e.send({ type: "RETRY" }));
+                            },
+                            close() {
+                                (n?.("close"), e.send({ type: "CLOSE" }));
+                            },
+                        };
+                    })({ ...e, fileDataRef: r }),
+                instrumentation: (0, s.s)(i ? s.n.qeSignature : s.n.aeSignature, { getEventScreenName: i ? U : h }),
+            });
+        },
+    },
+);

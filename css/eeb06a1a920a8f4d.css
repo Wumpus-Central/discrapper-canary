@@ -1,0 +1,36 @@
+.container_Ef2jlc {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 400px;
+    overflow-y: auto
+}
+
+.row_Ef2jlc {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-md);
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px
+}
+
+.rowContent_Ef2jlc {
+    flex: 1;
+    margin-inline-end: 12px;
+    min-width: 0
+}
+
+.rowActions_Ef2jlc {
+    display: flex;
+    flex-shrink: 0;
+    gap: 8px
+}
+
+.empty_Ef2jlc {
+    padding: 24px;
+    text-align: center
+}
+
+/*# sourceMappingURL=eeb06a1a920a8f4d.css.map*/

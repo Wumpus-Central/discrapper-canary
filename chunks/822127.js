@@ -1,8 +1,8 @@
 e.exports = {
-    gE: "developerPortalCtaWrapper__540ed",
-    XU: "developerPortalCta__540ed",
-    SJ: "overviewData__540ed",
-    h_: "description__540ed",
-    WO: "developerPortalCtaText__540ed",
-    Rc: "streamerMode__540ed",
+    gE: "developerPortalCtaWrapper_CY6BMW",
+    XU: "developerPortalCta_CY6BMW",
+    SJ: "overviewData_CY6BMW",
+    h_: "description_CY6BMW",
+    WO: "developerPortalCtaText_CY6BMW",
+    Rc: "streamerMode_CY6BMW",
 };

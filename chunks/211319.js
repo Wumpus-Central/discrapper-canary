@@ -1,7 +1,7 @@
-a.exports = {
-    UX: "upsell__98044",
-    gm: "emojis__98044",
-    j3: "emojiMask__98044",
-    rT: "emojiBackground__98044",
-    Zg: "emoji__98044",
+i.exports = {
+    UX: "upsell_BttH2K",
+    gm: "emojis_BttH2K",
+    j3: "emojiMask_BttH2K",
+    rT: "emojiBackground_BttH2K",
+    Zg: "emoji_BttH2K",
 };

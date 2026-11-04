@@ -1,6 +1,5 @@
-n.d(t, { A: () => c, I: () => d });
-var i = n(17928),
-    r = n(280450),
+var i = n(855986),
+    r = n(46653),
     a = n(696451),
     s = n(317525),
     l = n(71393),
@@ -21,7 +20,14 @@ function d(e, t) {
     }
     return !1;
 }
-function c(e) {
-    let t = (0, i.bG)([r.default, a.Ay], () => (null == e ? null : a.Ay.getMember(e, r.default.getId())));
-    return (0, i.bG)([l.A, s.A], () => d(e, null != e ? s.A.getRolesSnapshot(e) : void 0, t, [l.A]), [e, t]);
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let t = (0, i.bG)([r.default, a.Ay], () => (null == e ? null : a.Ay.getMember(e, r.default.getId())));
+            return (0, i.bG)([l.A, s.A], () => d(e, null != e ? s.A.getRolesSnapshot(e) : void 0, t, [l.A]), [e, t]);
+        },
+        I: d,
+    },
+);

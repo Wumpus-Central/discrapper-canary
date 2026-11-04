@@ -1,9 +1,8 @@
-s.d(t, { default: () => B });
 var r = s(477900),
     n = s(582128),
-    o = s(131937),
+    o = s(613412),
     i = s(511815),
-    a = s(17928),
+    a = s(855986),
     l = s(139033),
     d = s(189213),
     h = s(192308),
@@ -15,25 +14,25 @@ var r = s(477900),
     A = s(696208),
     C = s(224640),
     m = s(830215),
-    w = s(52423),
+    w = s(785161),
     E = s(163050),
     R = s(139286),
     S = s(15552),
     P = s(854378),
     k = s(952116),
-    y = s(572469),
+    y = s(397404),
     b = s(557722),
     x = s(148864),
-    _ = s(354948),
+    _ = s(916226),
     T = s(976860),
-    M = s(363195),
-    j = s(933924),
-    F = s(280450),
+    j = s(413599),
+    M = s(933924),
+    F = s(46653),
     L = s(650048),
-    D = s(174459),
-    N = s(625494),
+    D = s(129230),
+    N = s(188567),
     v = s(652215),
-    U = s(105292),
+    U = s(792996),
     I = s(14107),
     O = s(221851);
 class G extends n.PureComponent {
@@ -58,7 +57,7 @@ class G extends n.PureComponent {
     }
     componentDidMount() {
         (window.addEventListener("keydown", this.handleTabOrEnter),
-            (0, j.a)({
+            (0, M.a)({
                 abortController: this.state.conditionalMediationAbortController,
                 loginSource: "multi-account",
                 isMultiAccount: !0,
@@ -133,7 +132,7 @@ class G extends n.PureComponent {
             let e = await m.A.forgotPassword(t);
             if (!1 === e) return;
             e === i.D.ONE_TIME_LOGIN
-                ? (0, h.openModal)((e) => {
+                ? (0, h.qf)((e) => {
                       let t = [
                           { variant: "primary", text: U.intl.string(U.t.BddRzS), onClick: e.onClose, fullWidth: !0 },
                       ];
@@ -352,38 +351,44 @@ class G extends n.PureComponent {
         this.setState({ undelete: !0 }, this.handleLogin);
     };
 }
-let B = function (e) {
-    let { onClose: t, transitionState: s, onBackPressed: i, ...l } = e,
-        { suspendedUserToken: d, ...h } = (0, a.cf)([L.A, F.default, x.A, M.A], () => ({
-            authenticated: F.default.isAuthenticated(),
-            loginStatus: F.default.getLoginStatus(),
-            mfaTicket: F.default.getMFATicket(),
-            mfaMethods: F.default.getMFAMethods(),
-            defaultRoute: L.A.defaultRoute,
-            country: x.A.getCountryCode(),
-            theme: M.A.theme,
-            suspendedUserToken: F.default.getSuspendedUserToken(),
-        }));
-    (0, R.A)({ type: o.ImpressionTypes.MODAL, name: o.ImpressionNames.USER_LOGIN });
-    let c = n.useCallback(() => {
-        (t(), i());
-    }, [t, i]);
-    return (
-        n.useEffect(() => {
-            null != d && t();
-        }, [d, t]),
-        (0, r.jsx)(C.d, {
-            size: "lg",
-            onClose: t,
-            transitionState: s,
-            children: (0, r.jsx)(G, {
-                ...l,
-                ...h,
-                transitionTo: T.pX,
-                replaceWith: T.bG,
-                onBackPressed: c,
-                authBoxClassName: I.Nr,
-            }),
-        })
-    );
-};
+s.d(
+    t,
+    {},
+    {
+        default: function (e) {
+            let { onClose: t, transitionState: s, onBackPressed: i, ...l } = e,
+                { suspendedUserToken: d, ...h } = (0, a.cf)([L.A, F.default, x.A, j.A], () => ({
+                    authenticated: F.default.isAuthenticated(),
+                    loginStatus: F.default.getLoginStatus(),
+                    mfaTicket: F.default.getMFATicket(),
+                    mfaMethods: F.default.getMFAMethods(),
+                    defaultRoute: L.A.defaultRoute,
+                    country: x.A.getCountryCode(),
+                    theme: j.A.theme,
+                    suspendedUserToken: F.default.getSuspendedUserToken(),
+                }));
+            (0, R.A)({ type: o.ImpressionTypes.MODAL, name: o.ImpressionNames.USER_LOGIN });
+            let c = n.useCallback(() => {
+                (t(), i());
+            }, [t, i]);
+            return (
+                n.useEffect(() => {
+                    null != d && t();
+                }, [d, t]),
+                (0, r.jsx)(C.d, {
+                    size: "lg",
+                    onClose: t,
+                    transitionState: s,
+                    children: (0, r.jsx)(G, {
+                        ...l,
+                        ...h,
+                        transitionTo: T.pX,
+                        replaceWith: T.bG,
+                        onBackPressed: c,
+                        authBoxClassName: I.Nr,
+                    }),
+                })
+            );
+        },
+    },
+);

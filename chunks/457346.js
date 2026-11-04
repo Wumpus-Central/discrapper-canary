@@ -1,8 +1,8 @@
-a.exports = {
-    Nr: "card__44861",
-    Tp: "background__44861",
-    Iv: "cover__44861",
-    pq: "info__44861",
-    UU: "name__44861",
-    yz: "friends__44861",
+e.exports = {
+    Nr: "card_qcgHqK",
+    Tp: "background_qcgHqK",
+    Iv: "cover_qcgHqK",
+    pq: "info_qcgHqK",
+    UU: "name_qcgHqK",
+    yz: "friends_qcgHqK",
 };

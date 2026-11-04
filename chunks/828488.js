@@ -1,5 +1,4 @@
-n.d(t, { LX: () => l, Lc: () => _, PD: () => u, WU: () => E, sV: () => A });
-var i = n(17928),
+var i = n(855986),
     r = n(945810),
     a = n(71393),
     s = n(652215);
@@ -32,26 +31,35 @@ function u(e, t) {
     );
 }
 function _(e, t) {
-    if (null == e) return !1;
-    if (u(e, t)) return !0;
-    if (!d.getConfig({ location: t }).enabled) return !1;
-    let n = a.A.getGuild(e);
-    return (
-        null != n &&
-        !n.features.has(s.GuildFeatures.SUMMARIES_ENABLED_GA) &&
-        n.features.has(s.GuildFeatures.CONVERSATIONS_EXTRACTION_PROCESSING) &&
-        o.getConfig({ guildId: e, location: t }).enabled
-    );
-}
-function E(e, t) {
     let n = l.useConfig({ location: t }).enabled;
     return c(e, s.GuildFeatures.CONVERSATIONS_EXTRACTION_PROCESSING) && n;
 }
-function A(e, t) {
-    let n = E(e, t),
-        i = d.useConfig({ location: t }).enabled,
-        r = o.useConfig({ guildId: e ?? "", location: t }).enabled,
-        a = c(e, s.GuildFeatures.CONVERSATIONS_EXTRACTION_PROCESSING),
-        l = c(e, s.GuildFeatures.SUMMARIES_ENABLED_GA);
-    return null != e && (!!n || (!!i && a && !l && r));
-}
+n.d(
+    t,
+    {},
+    {
+        LX: l,
+        Lc: function (e, t) {
+            if (null == e) return !1;
+            if (u(e, t)) return !0;
+            if (!d.getConfig({ location: t }).enabled) return !1;
+            let n = a.A.getGuild(e);
+            return (
+                null != n &&
+                !n.features.has(s.GuildFeatures.SUMMARIES_ENABLED_GA) &&
+                n.features.has(s.GuildFeatures.CONVERSATIONS_EXTRACTION_PROCESSING) &&
+                o.getConfig({ guildId: e, location: t }).enabled
+            );
+        },
+        PD: u,
+        WU: _,
+        sV: function (e, t) {
+            let n = _(e, t),
+                i = d.useConfig({ location: t }).enabled,
+                r = o.useConfig({ guildId: e ?? "", location: t }).enabled,
+                a = c(e, s.GuildFeatures.CONVERSATIONS_EXTRACTION_PROCESSING),
+                l = c(e, s.GuildFeatures.SUMMARIES_ENABLED_GA);
+            return null != e && (!!n || (!!i && a && !l && r));
+        },
+    },
+);

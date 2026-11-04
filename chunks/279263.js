@@ -1,7 +1,6 @@
-n.d(t, { A: () => o });
 var i = n(867051),
-    r = n(892842),
-    a = n(137903);
+    r = n(826406),
+    a = n(600866);
 let s = "Note";
 class l extends a.yW {
     static displayName = "NoteStore";
@@ -28,3 +27,4 @@ let o = new l(
     },
     r.P4.getCachedBridgedStoreMode(),
 );
+n.d(t, {}, { A: o });

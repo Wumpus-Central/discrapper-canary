@@ -1,7 +1,6 @@
-n.d(t, { A: () => l });
 var i = n(439372),
     r = n(913612),
-    a = n(935671);
+    a = n(526919);
 class s extends i.A {
     actions = { POST_CONNECTION_OPEN: this.handlePostConnectionOpen, LOGOUT: this.handleLogout };
     handlePostConnectionOpen() {
@@ -12,3 +11,4 @@ class s extends i.A {
     }
 }
 let l = new s();
+n.d(t, {}, { A: l });

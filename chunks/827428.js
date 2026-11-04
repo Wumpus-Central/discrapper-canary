@@ -1,6 +1,6 @@
 e.exports = {
-    qr: "footer__272c7",
-    xQ: "footerContainer__272c7",
-    wC: "footerButton__272c7",
-    lS: "redesignFooter__272c7",
+    qr: "footer_YBm90d",
+    xQ: "footerContainer_YBm90d",
+    wC: "footerButton_YBm90d",
+    lS: "redesignFooter_YBm90d",
 };

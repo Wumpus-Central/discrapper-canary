@@ -1,0 +1,22 @@
+.home_chLwsG {
+    background: var(--background-base-low);
+    border-top: 1px solid var(--app-frame-border);
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
+    position: relative
+}
+
+.notice_chLwsG {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: var(--space-24);
+    text-align: center
+}
+
+/*# sourceMappingURL=3bb51dbf1adb3e10.css.map*/

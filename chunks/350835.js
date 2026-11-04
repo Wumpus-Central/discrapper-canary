@@ -1,4 +1,3 @@
-n.d(t, { $: () => r });
 var i,
     r =
         (((i = {})[(i.PLAYING = 0)] = "PLAYING"),
@@ -9,3 +8,4 @@ var i,
         (i[(i.COMPETING = 5)] = "COMPETING"),
         (i[(i.HANG_STATUS = 6)] = "HANG_STATUS"),
         i);
+n.d(t, {}, { $: r });

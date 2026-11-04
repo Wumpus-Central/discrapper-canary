@@ -1,9 +1,8 @@
-i.d(t, { AM: () => p, Ay: () => u, JF: () => h, gA: () => o });
 var n = i(477900),
     a = i(582128),
-    l = i(780777),
-    s = i(693591),
-    r = i(105292);
+    s = i(307955),
+    l = i(693591),
+    r = i(792996);
 function o() {
     return [{ name: r.intl.string(r.t["Sp2NF+"]), extensions: ["jpg", "jpeg", "jfif", "png", "gif", "webp", "avif"] }];
 }
@@ -18,7 +17,7 @@ function p(e, t) {
 }
 function h(e, t, i) {
     p(e, (n) => {
-        if (e.type === s.a.MP4) return t(n, e);
+        if (e.type === l.a.MP4) return t(n, e);
         let a = new Image();
         ((a.src = n),
             (a.onload = () => {
@@ -56,12 +55,9 @@ class d extends a.PureComponent {
         this._isMounted && i(e, t);
     };
     handleFileError = async () => {
-        let { openUploadError: e } = await Promise.all([
-            i.e("454048"),
-            i.e("300699"),
-            i.e("488694"),
-            i.e("534822"),
-        ]).then(i.bind(i, 894101));
+        let { openUploadError: e } = await Promise.all([i.e(454048), i.e(300699), i.e(922716), i.e(717907)]).then(
+            i.bind(i, 16407),
+        );
         e({ title: r.intl.string(r.t["0egKg3"]), help: r.intl.string(r.t["7PnXqu"]) });
     };
     render() {
@@ -70,12 +66,12 @@ class d extends a.PureComponent {
             disabled: t,
             className: i,
             tabIndex: a,
-            "aria-label": s,
+            "aria-label": l,
             "aria-hidden": r,
             filters: p,
             title: h,
         } = this.props;
-        return (0, n.jsx)(l.A, {
+        return (0, n.jsx)(s.A, {
             ref: this._ref,
             onClick: this.props.onClick,
             onChange: this.handleFileChange,
@@ -84,10 +80,10 @@ class d extends a.PureComponent {
             disabled: t,
             className: i,
             tabIndex: a,
-            "aria-label": s,
+            "aria-label": l,
             "aria-hidden": r,
             title: h,
         });
     }
 }
-let u = d;
+i.d(t, {}, { AM: p, Ay: d, JF: h, gA: o });

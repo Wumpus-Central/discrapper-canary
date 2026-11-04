@@ -1,46 +1,10 @@
-n.d(t, { Dk: () => d, IP: () => E, Y: () => c, YX: () => A, Z5: () => _, xp: () => u });
 var i,
     r,
     a = n(582128),
-    s = n(763827),
-    l = n(174459),
-    o = n(652215);
-function d(e, t) {
-    let [n, i] = a.useState(e()),
-        r = a.useRef(e);
-    return (
-        a.useEffect(() => {
-            r.current = e;
-        }, [e]),
-        a.useEffect(() => {
-            i((e) => {
-                let t = r.current();
-                if (e.size > t.size || e.size < t.size) return t;
-                for (let n of e) if (!t.has(n)) return t;
-                for (let n of t) if (!e.has(n)) return t;
-                return e;
-            });
-        }, t),
-        n
-    );
-}
-function c(e, t) {
-    let { locked: n, shownUserIds: i, liveUserIds: r, contentInventoryIds: a } = t;
-    ((i?.length ?? 0) !== 0 || (r?.length ?? 0) !== 0 || (a?.length ?? 0) !== 0) &&
-        l.default.track(o.HAw.WIDGET_CONTENT_SHOWN, {
-            overlay_locked: n,
-            widget_type: e,
-            shown_user_ids: i,
-            live_user_ids: r,
-            content_inventory_ids: a,
-            media_session_id: s.A.getMediaSessionId(),
-        });
-}
-function u(e, t) {
-    let { pinned: n, opacity: i } = t;
-    l.default.track(o.HAw.WIDGET_SETTING_UPDATED, { widget_type: e, pinned: n, opacity: i });
-}
-var _ =
+    s = n(495867),
+    l = n(129230),
+    o = n(652215),
+    d =
         (((i = {}).SCREEN_SHARE = "screen share"),
         (i.CAMERA = "camera"),
         (i.MICROPHONE = "microphone"),
@@ -60,7 +24,7 @@ var _ =
         (i.TAB_SELECTED = "tab selected"),
         (i.CLIPS = "clips"),
         i),
-    E =
+    c =
         (((r = {}).UNKNOWN = "unknown"),
         (r.ENABLED = "enabled"),
         (r.DISABLED = "disabled"),
@@ -88,14 +52,57 @@ var _ =
         (r.VOICE_TAB_SELECTED = "voice tab selected"),
         (r.MESSAGES_TAB_SELECTED = "messages tab selected"),
         r);
-function A(e, t) {
-    let { type: n, value: i, userId: r, secondaryValue: a } = t;
-    l.default.track(o.HAw.WIDGET_INTERACTED, {
-        widget_type: e,
-        interaction_type: n,
-        interaction_value: i,
-        interaction_secondary_value: a,
-        target_user_id: r,
-        media_session_id: s.A.getMediaSessionId(),
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        Dk: function (e, t) {
+            let [n, i] = a.useState(e()),
+                r = a.useRef(e);
+            return (
+                a.useEffect(() => {
+                    r.current = e;
+                }, [e]),
+                a.useEffect(() => {
+                    i((e) => {
+                        let t = r.current();
+                        if (e.size > t.size || e.size < t.size) return t;
+                        for (let n of e) if (!t.has(n)) return t;
+                        for (let n of t) if (!e.has(n)) return t;
+                        return e;
+                    });
+                }, t),
+                n
+            );
+        },
+        IP: c,
+        Y: function (e, t) {
+            let { locked: n, shownUserIds: i, liveUserIds: r, contentInventoryIds: a } = t;
+            ((i?.length ?? 0) !== 0 || (r?.length ?? 0) !== 0 || (a?.length ?? 0) !== 0) &&
+                l.default.track(o.HAw.WIDGET_CONTENT_SHOWN, {
+                    overlay_locked: n,
+                    widget_type: e,
+                    shown_user_ids: i,
+                    live_user_ids: r,
+                    content_inventory_ids: a,
+                    media_session_id: s.A.getMediaSessionId(),
+                });
+        },
+        YX: function (e, t) {
+            let { type: n, value: i, userId: r, secondaryValue: a } = t;
+            l.default.track(o.HAw.WIDGET_INTERACTED, {
+                widget_type: e,
+                interaction_type: n,
+                interaction_value: i,
+                interaction_secondary_value: a,
+                target_user_id: r,
+                media_session_id: s.A.getMediaSessionId(),
+            });
+        },
+        Z5: d,
+        xp: function (e, t) {
+            let { pinned: n, opacity: i } = t;
+            l.default.track(o.HAw.WIDGET_SETTING_UPDATED, { widget_type: e, pinned: n, opacity: i });
+        },
+    },
+);

@@ -1,7 +1,6 @@
-i.d(t, { C: () => d, x: () => o });
-var s = i(17928),
+var s = i(855986),
     n = i(945810),
-    r = i(710195),
+    r = i(50258),
     l = i(287809);
 let a = { showDefaultBanner: !0, showHeroPlaceholder: !0 },
     c = {
@@ -10,11 +9,18 @@ let a = { showDefaultBanner: !0, showHeroPlaceholder: !0 },
         2: { showDefaultBanner: !1, showHeroPlaceholder: !1 },
     },
     d = (0, n.mj)({ name: "2026-07-quest-home-default-banner-removal", kind: "user", defaultConfig: a, variations: c });
-function o() {
-    return (0, s.bG)([l.default, r.A], () => {
-        let e = l.default.getCurrentUser()?.id;
-        if (null == e) return a;
-        let t = r.A.getAssignment("user", e, d.definition.name);
-        return t?.variantId == null || t.useAsEligibility ? a : (c[t.variantId] ?? a);
-    });
-}
+i.d(
+    t,
+    {},
+    {
+        C: d,
+        x: function () {
+            return (0, s.bG)([l.default, r.A], () => {
+                let e = l.default.getCurrentUser()?.id;
+                if (null == e) return a;
+                let t = r.A.getAssignment("user", e, d.definition.name);
+                return t?.variantId == null || t.useAsEligibility ? a : (c[t.variantId] ?? a);
+            });
+        },
+    },
+);

@@ -1,10 +1,10 @@
-e.exports = {
-    qr: "footer_f3bebf",
-    zH: "details_f3bebf",
-    o1: "actions_f3bebf",
-    bx: "stackedFooter_f3bebf",
-    O_: "stackedDetails_f3bebf",
-    pq: "stackedActions_f3bebf",
-    ad: "stackedSecondaryActionRow_f3bebf",
-    Ik: "stackedSecondaryAction_f3bebf",
+t.exports = {
+    qr: "footer_vkK3UW",
+    zH: "details_vkK3UW",
+    o1: "actions_vkK3UW",
+    bx: "stackedFooter_vkK3UW",
+    O_: "stackedDetails_vkK3UW",
+    pq: "stackedActions_vkK3UW",
+    ad: "stackedSecondaryActionRow_vkK3UW",
+    Ik: "stackedSecondaryAction_vkK3UW",
 };

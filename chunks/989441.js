@@ -1,4 +1,3 @@
-n.d(t, { D: () => r });
 var i,
     r =
         (((i = {}).STEAM = "steam"),
@@ -26,3 +25,4 @@ var i,
         (i.OPENCRITIC = "opencritic"),
         (i.SENSORTOWER = "sensortower"),
         i);
+n.d(t, {}, { D: r });

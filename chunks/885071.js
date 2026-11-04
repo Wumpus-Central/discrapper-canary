@@ -1,0 +1,29 @@
+(n.d(t, { A: () => d }), n(938796));
+var l = n(665260),
+    i = n(164636),
+    s = n(799704),
+    a = n(734057),
+    r = n(309010),
+    o = n(473529),
+    c = n(746080);
+function d(e) {
+    let t = (0, i.bG)([a.A, r.Ay, s.Ay], () => {
+            let t = a.A.getChannel(e);
+            if (
+                null != t &&
+                (0, l.Lt)(t.flags, c.lx.IS_GUILD_RESOURCE_CHANNEL) &&
+                (function (e) {
+                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Ay,
+                        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Ay,
+                        l = e.guild_id;
+                    return (
+                        t.getChannelId(l) === c.VV.GUILD_HOME && n.getCurrentSidebarChannelId(c.VV.GUILD_HOME) === e.id
+                    );
+                })(t, r.Ay, s.Ay)
+            )
+                return t.guild_id;
+        }),
+        n = (0, o.d)(t ?? "");
+    return null != t && n;
+}
+n(652215);

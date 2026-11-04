@@ -68,7 +68,7 @@ for (
 function i(e) {
     return n[(e = e.toLowerCase())] || e;
 }
-t.isKeyHotkey = function (e, t) {
+t.Sn = function (e, t) {
     var r, n, o, s, l;
     return (
         (r = e),

@@ -1,7 +1,7 @@
 e.exports = {
-    kL: "container_d03e0c",
-    C2: "emojiQuestionContainer_d03e0c",
-    lm: "notice_d03e0c",
-    Ux: "noticeMessage_d03e0c",
-    EP: "noticeIcon_d03e0c",
+    kL: "container_NTyAV6",
+    C2: "emojiQuestionContainer_NTyAV6",
+    lm: "notice_NTyAV6",
+    Ux: "noticeMessage_NTyAV6",
+    EP: "noticeIcon_NTyAV6",
 };

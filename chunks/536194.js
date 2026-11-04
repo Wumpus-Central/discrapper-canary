@@ -1,4 +1,3 @@
-n.d(t, { P: () => r });
 var i = n(77729);
 class r {
     static cached;
@@ -31,3 +30,4 @@ class r {
         return !1;
     }
 }
+n.d(t, {}, { P: r });

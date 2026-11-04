@@ -1,34 +1,6 @@
-(n.d(t, {
-    Dk: () => c,
-    Lj: () => o,
-    Mf: () => u,
-    aT: () => A,
-    bU: () => a,
-    br: () => r,
-    e3: () => f,
-    ei: () => s,
-    k0: () => I,
-    kV: () => l,
-    tf: () => h,
-    v$: () => d,
-}),
-    n(321073));
+n(321073);
 var i = n(781183);
-function r(e, t, n) {
-    return e.map((e) => {
-        let i = Array(e.length).fill(!1),
-            r = -1;
-        for (let a = 0; a <= e.length; a++) {
-            let s = a < e.length && e[a] >= n;
-            if ((s && -1 === r && (r = a), !s && -1 !== r)) {
-                if (a - r >= t.minConsecutiveChunks) for (let e = r; e < a; e++) i[e] = !0;
-                r = -1;
-            }
-        }
-        return e.map((e, t) => (i[t] ? e : 0));
-    });
-}
-function a(e, t) {
+function r(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         r = e.length,
         a = r > 0 ? e[0].length : 0,
@@ -51,25 +23,13 @@ function a(e, t) {
     }
     return l;
 }
-function s(e, t) {
+function a(e, t) {
     return e.map((e, n) => e.map((e, i) => (t[n][i] ? e : 0)));
 }
+function s(e, t) {
+    return t.requireAttribution ? r(e, t, !1) : null;
+}
 function l(e, t) {
-    return t.requireAttribution ? a(e, t, !1) : null;
-}
-function o(e, t, n, i) {
-    let r = l(n, i);
-    return null == r ? { laughter: e, shouting: t } : { laughter: s(e, r), shouting: s(t, r) };
-}
-function d(e, t) {
-    return 0 === t.rmsScale
-        ? e.map((e) => e.map(() => 1))
-        : e.map((e) => e.map((e) => (0, i.qE)(e * t.rmsScale, 0, 1)));
-}
-function c(e, t) {
-    return e.map((e, n) => e.map((e, i) => e * t[n][i]));
-}
-function u(e, t) {
     if (0 === e.length) return [];
     let n = [...e].sort((e, t) => e.tStart - t.tStart),
         i = [{ ...n[0] }];
@@ -80,13 +40,13 @@ function u(e, t) {
     }
     return i;
 }
-function _(e, t, n) {
+function o(e, t, n) {
     let i = e[t];
     for (let r = t + 1; r <= n; r++) i = Math.max(i, e[r]);
     return i;
 }
-function E(e, t, n) {
-    return u(
+function d(e, t, n) {
+    return l(
         (function (e, t) {
             let n = [],
                 i = -1;
@@ -107,98 +67,135 @@ function E(e, t, n) {
                 for (let r = t + 1; r <= n; r++) e[r] > e[i] && (i = r);
                 return i;
             })(e, n, i),
-            peakV: _(e, n, i),
+            peakV: o(e, n, i),
         };
     });
 }
-function A(e, t, n, i) {
-    if (n < 0 || n >= e.laughter.length) return { mainEventScore: 0, anchors: [], events: [] };
-    let r = [],
-        a = [],
-        s = [
-            {
-                emotion: "laughter",
-                gated: e.laughter[n],
-                intensity: t.laughter[n],
-                threshold: i.laughterEventThreshold,
-                weight: i.laughterWeight,
-            },
-            {
-                emotion: "shouting",
-                gated: e.shouting[n],
-                intensity: t.shouting[n],
-                threshold: i.shoutingEventThreshold,
-                weight: i.shoutingWeight,
-            },
-        ],
-        l = 0;
-    for (let { emotion: e, gated: t, intensity: n, threshold: o, weight: d } of s) {
-        let s;
-        if (0 === t.length) continue;
-        let c = E(t, o, i);
-        if (0 === c.length) continue;
-        for (let e of (a.push(
-            ...c.map((e) => {
-                let { tStart: t, tEnd: n } = e;
-                return { tStart: t, tEnd: n };
-            }),
-        ),
-        c)) {
-            let t = e.tEnd - e.tStart + 1,
-                i = _(n, e.tStart, e.tEnd) * Math.log1p(t);
-            (null == s || i > s.mag) && (s = { mag: i, window: e });
-        }
-        if (null == s) continue;
-        l += d * s.mag;
-        let { tStart: u, tEnd: A, peakT: h, peakV: f } = s.window;
-        r.push({ emotion: e, peakT: h, peakV: f, sustain: A - u + 1, tStart: u, tEnd: A });
-    }
-    return { mainEventScore: l, anchors: u(a, i.eventChainGapChunks), events: r };
-}
-function h(e, t, n, r, a) {
-    if (0 === e.length) return 0;
-    let s = t.length,
-        l = s > 0 ? t[0].length : 0;
-    if (0 === l) return 0;
-    let o = [];
-    for (let d of e) {
-        let e = (0, i.qE)(d.tStart - a.lagPreChunks, 0, l - 1),
-            c = (0, i.qE)(d.tEnd + a.lagPostChunks, 0, l - 1),
-            u = 1;
-        for (let i = 0; i < s; i++) {
-            if (i === r) continue;
-            let a = 0;
-            for (let r = e; r <= c; r++) a = Math.max(a, t[i][r], n[i][r]);
-            u *= 1 - a;
-        }
-        o.push(1 - u);
-    }
-    return Math.max(0, ...o);
-}
-function f(e, t) {
-    let n = [];
-    for (let { emotion: i, matrix: r, threshold: a } of [
-        { emotion: "laughter", matrix: e.laughter, threshold: t.laughterEventThreshold },
-        { emotion: "shouting", matrix: e.shouting, threshold: t.shoutingEventThreshold },
-    ])
-        for (let e = 0; e < r.length; e++) {
-            let s = r[e];
-            if (0 !== s.length)
-                for (let { tStart: r, tEnd: l, peakT: o, peakV: d } of E(s, a, t))
-                    n.push({ channel: e, emotion: i, tStart: r, tEnd: l, peakT: o, peakV: d });
-        }
-    return n;
-}
-function I(e, t, n) {
-    let i = e.length,
-        r = i > 0 ? e[0].length : 0,
-        a = Array(r).fill(0),
-        s = 0;
-    for (let l = 0; l < r; l++) {
-        let r = 0;
-        for (let a = 0; a < i; a++) (e[a][l] >= n.laughterEventThreshold || t[a][l] >= n.shoutingEventThreshold) && r++;
-        let o = Math.max(0, r - 1);
-        ((a[l] = o), (s += o));
-    }
-    return { coOccurrenceScore: s, coContribPerChunk: a };
-}
+n.d(
+    t,
+    {},
+    {
+        Dk: function (e, t) {
+            return e.map((e, n) => e.map((e, i) => e * t[n][i]));
+        },
+        Lj: function (e, t, n, i) {
+            let r = s(n, i);
+            return null == r ? { laughter: e, shouting: t } : { laughter: a(e, r), shouting: a(t, r) };
+        },
+        Mf: l,
+        aT: function (e, t, n, i) {
+            if (n < 0 || n >= e.laughter.length) return { mainEventScore: 0, anchors: [], events: [] };
+            let r = [],
+                a = [],
+                s = [
+                    {
+                        emotion: "laughter",
+                        gated: e.laughter[n],
+                        intensity: t.laughter[n],
+                        threshold: i.laughterEventThreshold,
+                        weight: i.laughterWeight,
+                    },
+                    {
+                        emotion: "shouting",
+                        gated: e.shouting[n],
+                        intensity: t.shouting[n],
+                        threshold: i.shoutingEventThreshold,
+                        weight: i.shoutingWeight,
+                    },
+                ],
+                c = 0;
+            for (let { emotion: e, gated: t, intensity: n, threshold: l, weight: u } of s) {
+                let s;
+                if (0 === t.length) continue;
+                let _ = d(t, l, i);
+                if (0 === _.length) continue;
+                for (let e of (a.push(
+                    ..._.map((e) => {
+                        let { tStart: t, tEnd: n } = e;
+                        return { tStart: t, tEnd: n };
+                    }),
+                ),
+                _)) {
+                    let t = e.tEnd - e.tStart + 1,
+                        i = o(n, e.tStart, e.tEnd) * Math.log1p(t);
+                    (null == s || i > s.mag) && (s = { mag: i, window: e });
+                }
+                if (null == s) continue;
+                c += u * s.mag;
+                let { tStart: E, tEnd: A, peakT: h, peakV: f } = s.window;
+                r.push({ emotion: e, peakT: h, peakV: f, sustain: A - E + 1, tStart: E, tEnd: A });
+            }
+            return { mainEventScore: c, anchors: l(a, i.eventChainGapChunks), events: r };
+        },
+        bU: r,
+        br: function (e, t, n) {
+            return e.map((e) => {
+                let i = Array(e.length).fill(!1),
+                    r = -1;
+                for (let a = 0; a <= e.length; a++) {
+                    let s = a < e.length && e[a] >= n;
+                    if ((s && -1 === r && (r = a), !s && -1 !== r)) {
+                        if (a - r >= t.minConsecutiveChunks) for (let e = r; e < a; e++) i[e] = !0;
+                        r = -1;
+                    }
+                }
+                return e.map((e, t) => (i[t] ? e : 0));
+            });
+        },
+        e3: function (e, t) {
+            let n = [];
+            for (let { emotion: i, matrix: r, threshold: a } of [
+                { emotion: "laughter", matrix: e.laughter, threshold: t.laughterEventThreshold },
+                { emotion: "shouting", matrix: e.shouting, threshold: t.shoutingEventThreshold },
+            ])
+                for (let e = 0; e < r.length; e++) {
+                    let s = r[e];
+                    if (0 !== s.length)
+                        for (let { tStart: r, tEnd: l, peakT: o, peakV: c } of d(s, a, t))
+                            n.push({ channel: e, emotion: i, tStart: r, tEnd: l, peakT: o, peakV: c });
+                }
+            return n;
+        },
+        ei: a,
+        k0: function (e, t, n) {
+            let i = e.length,
+                r = i > 0 ? e[0].length : 0,
+                a = Array(r).fill(0),
+                s = 0;
+            for (let l = 0; l < r; l++) {
+                let r = 0;
+                for (let a = 0; a < i; a++)
+                    (e[a][l] >= n.laughterEventThreshold || t[a][l] >= n.shoutingEventThreshold) && r++;
+                let o = Math.max(0, r - 1);
+                ((a[l] = o), (s += o));
+            }
+            return { coOccurrenceScore: s, coContribPerChunk: a };
+        },
+        kV: s,
+        tf: function (e, t, n, r, a) {
+            if (0 === e.length) return 0;
+            let s = t.length,
+                l = s > 0 ? t[0].length : 0;
+            if (0 === l) return 0;
+            let o = [];
+            for (let d of e) {
+                let e = (0, i.qE)(d.tStart - a.lagPreChunks, 0, l - 1),
+                    c = (0, i.qE)(d.tEnd + a.lagPostChunks, 0, l - 1),
+                    u = 1;
+                for (let i = 0; i < s; i++) {
+                    if (i === r) continue;
+                    let a = 0;
+                    for (let r = e; r <= c; r++) a = Math.max(a, t[i][r], n[i][r]);
+                    u *= 1 - a;
+                }
+                o.push(1 - u);
+            }
+            return Math.max(0, ...o);
+        },
+        v$: function (e, t) {
+            return 0 === t.rmsScale
+                ? e.map((e) => e.map(() => 1))
+                : e.map((e) => e.map((e) => (0, i.qE)(e * t.rmsScale, 0, 1)));
+        },
+    },
+);

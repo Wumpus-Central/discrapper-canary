@@ -1,8 +1,8 @@
 e.exports = {
-    wL: "searchHeader__83bd4",
-    Dr: "headerTitleWrapper__83bd4",
-    UE: "arrow__83bd4",
-    s7: "searchPageTitle__83bd4",
-    Je: "emptySearchWrapper__83bd4",
-    av: "emptySearchSubtitle__83bd4",
+    wL: "searchHeader_RRDnyC",
+    Dr: "headerTitleWrapper_RRDnyC",
+    UE: "arrow_RRDnyC",
+    s7: "searchPageTitle_RRDnyC",
+    Je: "emptySearchWrapper_RRDnyC",
+    av: "emptySearchSubtitle_RRDnyC",
 };

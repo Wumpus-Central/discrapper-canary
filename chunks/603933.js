@@ -1,1 +1,1 @@
-e.exports = { A: "keybinds__8b50d", y: "divider__8b50d" };
+e.exports = { A: "keybinds_K3du_B", y: "divider_K3du_B" };

@@ -1,4 +1,3 @@
-n.d(t, { Y: () => r });
 var l,
     r =
         (((l = {})[(l.PRE_RELEASE = 1)] = "PRE_RELEASE"),
@@ -7,3 +6,4 @@ var l,
         (l[(l.RETIRED_ABANDONED = 4)] = "RETIRED_ABANDONED"),
         (l[(l.CHILD_APP = 6)] = "CHILD_APP"),
         l);
+n.d(t, {}, { Y: r });

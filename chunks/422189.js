@@ -1,7 +1,6 @@
-t.d(i, { default: () => x });
 var n = t(477900);
 t(582128);
-var r = t(980707),
+var r = t(165862),
     s = t(477782),
     d = t(442433),
     l = t(820284),
@@ -12,7 +11,7 @@ var r = t(980707),
     u = t(243949),
     A = t(180798),
     _ = t(652215),
-    p = t(105292);
+    p = t(792996);
 let x = (0, a.A)(
     function (e) {
         let { user: i, guildId: t, analyticsContext: a, onSelect: c } = e,
@@ -40,3 +39,4 @@ let x = (0, a.A)(
     },
     [c.A.CONTEXT_MENU, c.A.AUDIT_LOG_USER_MENU],
 );
+t.d(i, {}, { default: x });

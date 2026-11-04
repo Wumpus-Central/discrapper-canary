@@ -1,15 +1,15 @@
-(s.d(t, { Ay: () => j }), s(321073));
+s(321073);
 var i = s(435558),
     n = s.n(i),
-    a = s(17928),
+    a = s(855986),
     r = s(73153),
     l = s(49229),
     o = s(315069),
-    u = s(736056),
-    c = s(710195),
-    h = s(586774),
+    u = s(343446),
+    c = s(50258),
+    h = s(565776),
     d = s(800828),
-    A = s(507104),
+    A = s(884883),
     m = s(616356),
     p = s(696451),
     N = s(71393),
@@ -17,7 +17,7 @@ var i = s(435558),
     E = s(994500),
     g = s(287809),
     y = s(652215),
-    f = s(202541);
+    f = s(682901);
 function v(e) {
     let t = g.default.getUser(e);
     return { user: t, usernameLower: null != t ? t.username.toLowerCase() : null };
@@ -109,7 +109,7 @@ class D {
                         spam: E.A.isSpam(s),
                         ignoredUser: E.A.isIgnored(s),
                         giftIntentType:
-                            i === y.eA$.FRIEND && A.Ay.getFriendAnniversaries().includes(s)
+                            i === y.eA$.FRIEND && A.A.getFriendAnniversaries().includes(s)
                                 ? f.np.FRIEND_ANNIVERSARY
                                 : void 0,
                         applicationId: E.A.getOriginApplicationId(s),
@@ -237,11 +237,11 @@ function T(e) {
 class b extends a.Ay.Store {
     static displayName = "FriendsStore";
     initialize() {
-        (this.waitFor(c.A, m.A, u.A, h.A, d.A, p.Ay, N.A, A.Ay, I.A, E.A, g.default),
+        (this.waitFor(c.A, m.A, u.A, h.A, d.A, p.Ay, N.A, A.A, I.A, E.A, g.default),
             this.syncWith([E.A], F),
             this.syncWith([d.A], F),
             this.syncWith([h.A], F),
-            this.syncWith([A.Ay], F),
+            this.syncWith([A.A], F),
             this.syncWith([g.default], T(v)),
             this.syncWith([I.A, m.A], T(C)),
             M());
@@ -274,3 +274,4 @@ let j = new b(r.h, {
         ((_ = e.section), (O = !0));
     },
 });
+s.d(t, {}, { Ay: j });

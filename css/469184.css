@@ -1,26 +1,26 @@
-.wrapper__553bf {
+.wrapper_hjotnx {
     isolation: isolate;
     position: relative
 }
 
-.withGradient__553bf {
+.withGradient_hjotnx {
     overflow: hidden;
     position: relative
 }
 
-.withGradient__553bf.withQuestHomeHeroContent__553bf:focus-within a,
-.withGradient__553bf.withQuestHomeHeroContent__553bf:hover a,
-.withOnboardingContent__553bf a {
+.withGradient_hjotnx.withQuestHomeHeroContent_hjotnx:focus-within a,
+.withGradient_hjotnx.withQuestHomeHeroContent_hjotnx:hover a,
+.withOnboardingContent_hjotnx a {
     color: var(--text-strong) !important
 }
 
-.withGradient__553bf.withQuestHomeHeroContent__553bf:focus-within svg,
-.withGradient__553bf.withQuestHomeHeroContent__553bf:hover svg,
-.withOnboardingContent__553bf svg {
+.withGradient_hjotnx.withQuestHomeHeroContent_hjotnx:focus-within svg,
+.withGradient_hjotnx.withQuestHomeHeroContent_hjotnx:hover svg,
+.withOnboardingContent_hjotnx svg {
     color: var(--icon-strong) !important
 }
 
-.withOnboardingContent__553bf:after {
+.withOnboardingContent_hjotnx:after {
     background-image: linear-gradient(90deg, #394aff, #e901d9);
     border-radius: inherit;
     bottom: 1px;
@@ -33,17 +33,17 @@
     z-index: 0
 }
 
-.withOnboardingContent__553bf:focus-within:after,
-.withOnboardingContent__553bf:hover:after {
+.withOnboardingContent_hjotnx:focus-within:after,
+.withOnboardingContent_hjotnx:hover:after {
     opacity: .2
 }
 
-.badge__553bf {
+.badge_hjotnx {
     position: relative;
     z-index: 2
 }
 
-.shine__553bf {
+.shine_hjotnx {
     background-image: linear-gradient(90deg, hsla(0, 0%, 100%, 0) 25%, hsla(0, 0%, 100%, .7) 50%, hsla(0, 0%, 100%, 0) 75%);
     height: var(--custom-shine-dimensions);
     inset-inline-end: calc(100% + var(--custom-shine-rotated-dimensions-delta));
@@ -52,14 +52,14 @@
     z-index: 3
 }
 
-.glow__553bf,
-.shine__553bf {
+.glow_hjotnx,
+.shine_hjotnx {
     pointer-events: none;
     position: absolute;
     top: 50%
 }
 
-.glow__553bf {
+.glow_hjotnx {
     background-image: radial-gradient(rgba(221, 0, 241, .5) 0, rgba(221, 0, 241, 0) 60%);
     height: 150px;
     inset-inline-end: 32px;
@@ -68,7 +68,7 @@
     z-index: 1
 }
 
-.glow__553bf:after {
+.glow_hjotnx:after {
     background-image: radial-gradient(rgba(241, 0, 4, .2) 0, rgba(241, 0, 4, 0) 60%);
     content: "";
     display: block;
@@ -76,7 +76,7 @@
     width: 100%
 }
 
-.questHomeHeroBackgroundImage__553bf {
+.questHomeHeroBackgroundImage_hjotnx {
     bottom: 0;
     height: 100%;
     inset-inline-end: 0;
@@ -91,56 +91,56 @@
     width: auto
 }
 
-.withQuestHomeHeroContent__553bf:focus-within .questHomeHeroBackgroundImage__553bf,
-.withQuestHomeHeroContent__553bf:hover .questHomeHeroBackgroundImage__553bf {
+.withQuestHomeHeroContent_hjotnx:focus-within .questHomeHeroBackgroundImage_hjotnx,
+.withQuestHomeHeroContent_hjotnx:hover .questHomeHeroBackgroundImage_hjotnx {
     opacity: 1
 }
 
-.container__9b0bb {
+.container_yjUuDF {
     padding: var(--space-24)
 }
 
-.section__9b0bb {
+.section_yjUuDF {
     padding-bottom: var(--space-24)
 }
 
-.formSwitch__9b0bb,
-.header__9b0bb {
+.formSwitch_yjUuDF,
+.header_yjUuDF {
     margin-bottom: var(--space-8)
 }
 
-.hotspotsSection__16e9e {
+.hotspotsSection_tbgIGV {
     padding: var(--space-24)
 }
 
-.statusIcon__16e9e {
+.statusIcon_tbgIGV {
     height: 16px;
     width: 16px
 }
 
-.checkmark__16e9e {
+.checkmark_tbgIGV {
     color: var(--status-positive)
 }
 
-.checkmark__16e9e,
-.xmark__16e9e {}
+.checkmark_tbgIGV,
+.xmark_tbgIGV {}
 
-.xmark__16e9e {
+.xmark_tbgIGV {
     color: var(--icon-feedback-critical)
 }
 
-.helpText__16e9e {
+.helpText_tbgIGV {
     margin-bottom: 32px
 }
 
-.hotspotSwitch__16e9e {
+.hotspotSwitch_tbgIGV {
     align-items: center;
     display: flex;
     margin: 8px 0
 }
 
-.overrideSelect__16e9e {
+.overrideSelect_tbgIGV {
     flex: 0 0 30%
 }
 
-/*# sourceMappingURL=469184.2ce9b1e0332559be.css.map*/
+/*# sourceMappingURL=469184.b99c1ec396633093.css.map*/

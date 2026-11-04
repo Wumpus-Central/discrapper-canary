@@ -1,4 +1,3 @@
-d.d(t, { t: () => e });
 var i = d(693160),
     e = class {
         constructor(l, t) {
@@ -10,14 +9,14 @@ var i = d(693160),
                 (this.video.autoplay = !0),
                 (this.video.playsInline = !0),
                 (this.video.muted = !0));
-            const d = l.getVideoTracks()[0]?.getSettings(),
+            let d = l.getVideoTracks()[0]?.getSettings(),
                 i = t?.width ?? d?.width ?? 1280,
                 e = t?.height ?? d?.height ?? 720;
             ((this.canvas = document.createElement("canvas")),
                 (this.canvas.width = i),
                 (this.canvas.height = e),
                 (this.ctx = this.canvas.getContext("2d", { willReadFrequently: !0 })));
-            const c = t?.fps ?? 10,
+            let c = t?.fps ?? 10,
                 a = c > 0 ? Math.max(16, Math.floor(1e3 / c)) : 0;
             this.video.addEventListener("loadedmetadata", () => {
                 this.video.videoWidth > 0 &&
@@ -90,3 +89,4 @@ var i = d(693160),
             }
         }
     };
+d.d(t, {}, { t: e });

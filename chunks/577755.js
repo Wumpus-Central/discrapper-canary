@@ -1,1 +1,1 @@
-e.exports = { T: "redIcon_e0923d", o: "strikethrough_e0923d" };
+t.exports = { T: "redIcon__WEKcz", o: "strikethrough__WEKcz" };

@@ -1,34 +1,29 @@
-r.d(s, { Bw: () => E, ld: () => p });
 var t = r(477900);
 r(582128);
-var l = r(17928),
-    e = r(661531),
+var l = r(855986),
+    e = r(646514),
     i = r(428678),
     a = r(834730),
     c = r(939249),
     o = r(952270),
     d = r(831544),
     m = r(778712),
-    x = r(364522),
+    x = r(95362),
     u = r(442433),
     j = r(85448),
     h = r(994500),
     b = r(427262),
     f = r(312006),
     v = r(366098),
-    g = r(105292),
+    g = r(792996),
     y = r(494392);
 function E(n) {
-    let { channelId: s } = n;
-    return (0, t.jsx)(k, { channelId: s });
-}
-function k(n) {
     let { channelId: s } = n,
         r = (0, v.D3)(s),
         l = (0, v.Xk)(s);
     if (0 === r && 0 === l) return null;
     function d(n) {
-        (0, u.jA)(n, (n) => (0, t.jsx)(N, { ...n, channelId: s }), { position: "left", align: "bottom" });
+        (0, u.jA)(n, (n) => (0, t.jsx)(p, { ...n, channelId: s }), { position: "left", align: "bottom" });
     }
     return r > 0 && l > 0
         ? (0, t.jsxs)("div", {
@@ -69,7 +64,7 @@ function k(n) {
                 ],
             });
 }
-function p(n) {
+function k(n) {
     let { user: s, showStatus: r, speaker: e, channelId: i } = n,
         c = (0, l.bG)([f.Ay], () => f.Ay.isModerator(s.id, i)),
         o = (0, l.bG)([h.A], () => h.A.isBlocked(s.id)),
@@ -137,7 +132,7 @@ function p(n) {
         })
     );
 }
-function N(n) {
+function p(n) {
     let { channelId: s } = n,
         r = (0, v.mT)(s),
         l = (0, v.Iv)(s);
@@ -145,7 +140,18 @@ function N(n) {
         className: y.kL,
         children: [...r, ...l].map((n) => {
             let { user: r } = n;
-            return (0, t.jsx)(p, { user: r, channelId: s }, r.id);
+            return (0, t.jsx)(k, { user: r, channelId: s }, r.id);
         }),
     });
 }
+r.d(
+    s,
+    {},
+    {
+        Bw: function (n) {
+            let { channelId: s } = n;
+            return (0, t.jsx)(E, { channelId: s });
+        },
+        ld: k,
+    },
+);

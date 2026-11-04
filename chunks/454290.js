@@ -1,4 +1,3 @@
-n.d(t, { Q: () => o, f: () => l });
 var i = n(582128),
     a = n(736819);
 let l = (0, i.createContext)({
@@ -10,6 +9,13 @@ let l = (0, i.createContext)({
     zoomed: !1,
     setZoomed() {},
 });
-function o() {
-    return (0, i.useContext)(l);
-}
+n.d(
+    t,
+    {},
+    {
+        Q: function () {
+            return (0, i.useContext)(l);
+        },
+        f: l,
+    },
+);

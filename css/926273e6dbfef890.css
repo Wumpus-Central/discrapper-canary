@@ -1,0 +1,49 @@
+.container_6EXS-A {
+    background: var(--background-base-low);
+    color: var(--text-default);
+    position: relative
+}
+
+.resizeHandle_6EXS-A {
+    cursor: ew-resize;
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    width: 8px;
+    z-index: 1
+}
+
+.sidebarContent_6EXS-A {
+    border-inline-start: 1px solid var(--background-base-lowest);
+    display: flex;
+    flex-direction: column;
+    height: 100%
+}
+
+.mobileHeaderCollapsed_6EXS-A {
+    cursor: pointer
+}
+
+.mobileContainerExpanded_6EXS-A {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 9999999999999
+}
+
+.layerContainer_6EXS-A {
+    inset-inline-end: 0
+}
+
+.popoutContainer_6EXS-A {
+    background: var(--background-base-low);
+    color: var(--text-default);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+/*# sourceMappingURL=926273e6dbfef890.css.map*/

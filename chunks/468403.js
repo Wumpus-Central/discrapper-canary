@@ -1,23 +1,28 @@
-n.d(i, { default: () => c });
 var a = n(477900),
     r = n(582128),
     s = n(189213),
     e = n(834730),
-    l = n(105292);
-function c(t) {
-    let { onConfirm: i, onClose: n, transitionState: c } = t,
-        o = r.useCallback(() => {
-            (i(), n());
-        }, [i, n]);
-    return (0, a.jsx)(s.a, {
-        title: l.intl.string(l.t["5yF7e1"]),
-        size: "sm",
-        onClose: n,
-        transitionState: c,
-        actions: [
-            { variant: "secondary", text: l.intl.string(l.t["ETE/oC"]), onClick: n },
-            { variant: "critical-primary", text: l.intl.string(l.t.R9GHya), onClick: o },
-        ],
-        children: (0, a.jsx)(e.E, { variant: "body-md/normal", children: l.intl.string(l.t.nmBUv7) }),
-    });
-}
+    l = n(792996);
+n.d(
+    i,
+    {},
+    {
+        default: function (t) {
+            let { onConfirm: i, onClose: n, transitionState: c } = t,
+                o = r.useCallback(() => {
+                    (i(), n());
+                }, [i, n]);
+            return (0, a.jsx)(s.a, {
+                title: l.intl.string(l.t["5yF7e1"]),
+                size: "sm",
+                onClose: n,
+                transitionState: c,
+                actions: [
+                    { variant: "secondary", text: l.intl.string(l.t["ETE/oC"]), onClick: n },
+                    { variant: "critical-primary", text: l.intl.string(l.t.R9GHya), onClick: o },
+                ],
+                children: (0, a.jsx)(e.E, { variant: "body-md/normal", children: l.intl.string(l.t.nmBUv7) }),
+            });
+        },
+    },
+);

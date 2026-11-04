@@ -1,0 +1,447 @@
+.container_3kXUvP {
+    margin-top: 16px
+}
+
+.formTitle_3kXUvP {
+    display: flex;
+    margin-bottom: 8px
+}
+
+.availabilityIndicator_3kXUvP {
+    background-color: var(--background-mod-normal);
+    border-radius: var(--radius-lg);
+    margin-inline-start: 4px;
+    padding: 1px 2px
+}
+
+.description_3kXUvP {
+    margin-bottom: 16px
+}
+
+.button_3kXUvP {
+    color: var(--interactive-text-active);
+    margin-inline-start: 16px
+}
+
+.previewContainer_3kXUvP {
+    align-items: center;
+    background: var(--background-base-lower);
+    border-radius: var(--radius-sm);
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    min-width: 80px
+}
+
+.preview_3kXUvP {
+    color: var(--interactive-text-default)
+}
+
+.previewDisabled_3kXUvP {
+    color: var(--icon-muted)
+}
+
+.uploadContainer_3kXUvP {
+    display: flex
+}
+
+.rolePreviewArea_3kXUvP {
+    align-items: center;
+    display: flex;
+    gap: 16px
+}
+
+.roleIconPreview_3kXUvP {
+    height: var(--custom-custom-role-icon-form-item-role-icon-preview-size);
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: var(--custom-custom-role-icon-form-item-role-icon-preview-size)
+}
+
+.container_lWGdzI {
+    margin-bottom: 20px
+}
+
+.text_lWGdzI {
+    margin-bottom: 16px
+}
+
+.notice_x29oOx {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: 3px;
+    display: flex;
+    padding: 8px
+}
+
+.noticeIcon_x29oOx {
+    color: var(--text-default)
+}
+
+.noticeIcon_x29oOx,
+.noticeIconPowerful_x29oOx {
+    display: inline-block;
+    height: 16px;
+    margin-inline-end: 8px;
+    width: 16px
+}
+
+.noticeIconPowerful_x29oOx {
+    color: var(--icon-feedback-warning)
+}
+
+.scroller_cXmH6r {
+    height: 100%;
+    padding-bottom: 60px
+}
+
+.colorPicker_cXmH6r {
+    margin-top: 24px
+}
+
+.colorDescription_cXmH6r {
+    margin-bottom: 8px
+}
+
+.divider_cXmH6r {
+    margin-bottom: 24px;
+    margin-top: 24px
+}
+
+.noticeContainer_cXmH6r {
+    margin-top: 16px
+}
+
+.noticeContainer_cXmH6r:empty {
+    margin-top: 0
+}
+
+.previewContainer_cXmH6r {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    margin-top: 16px;
+    overflow: hidden;
+    position: relative
+}
+
+.previewContainer_cXmH6r.disableInteraction_cXmH6r:after {
+    bottom: 0;
+    content: "";
+    cursor: default;
+    position: absolute;
+    top: 0;
+    inset-inline: 0
+}
+
+.messageWrapper_cXmH6r {
+    background-color: var(--background-base-low)
+}
+
+.messageContainer_cXmH6r {
+    padding-bottom: 16px;
+    padding-top: 16px
+}
+
+.lightThemeNotice_cXmH6r {
+    background-color: var(--background-mod-subtle);
+    padding: 8px 16px
+}
+
+.descriptionTitle_cXmH6r {
+    display: flex;
+    margin-bottom: 8px;
+    margin-top: 24px
+}
+
+.descriptionIcon_cXmH6r {
+    color: var(--interactive-text-default);
+    height: 14px;
+    margin-inline-start: 4px;
+    width: 14px
+}
+
+.roleStyleContainer_cXmH6r {
+    display: flex;
+    gap: var(--space-8);
+    padding-bottom: var(--space-8);
+    width: 100%
+}
+
+.roleStylePreview_cXmH6r {
+    flex: 0 0 auto;
+    overflow-x: hidden;
+    width: 142px
+}
+
+.roleStyleMessageContainer_cXmH6r {
+    background-color: var(--background-base-lowest);
+    overflow: visible;
+    padding: var(--space-8) var(--space-4);
+    pointer-events: none;
+    position: relative;
+    width: 142px
+}
+
+.roleStyleMessageContainer_cXmH6r [data-username-has-gradient]:after {
+    background: inherit;
+    -webkit-background-clip: text;
+    background-clip: text;
+    content: attr(data-text) /"";
+    inset: 0;
+    position: absolute;
+    -webkit-text-fill-color: transparent;
+    animation: gradientGlowFadeInAnimation .1s ease-in-out;
+    filter: blur(4px);
+    opacity: .7;
+    z-index: -1
+}
+
+.roleStyleMessageContainer_cXmH6r:after {
+    background: linear-gradient(to right, transparent, var(--background-base-lowest));
+    bottom: 0;
+    content: "";
+    inset-inline-end: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 40px
+}
+
+.roleStyleMessageContainer_cXmH6r>div {
+    margin-top: -8px;
+    overflow: hidden;
+    padding-top: var(--space-8);
+    width: 255px
+}
+
+.roleStylePreviewContainer_cXmH6r {
+    background-color: var(--background-base-low);
+    border: 2px solid transparent;
+    border-radius: var(--space-8);
+    box-shadow: 0 1px 2px -1px rgba(0, 0, 0, .05), 0 2px 4px -2px rgba(0, 0, 0, .07), 0 3px 8px -3px rgba(0, 0, 0, .07), 0 4px 12px -4px rgba(0, 0, 0, .07);
+    display: flex;
+    flex: 0 0 142px;
+    flex-direction: column;
+    min-width: 142px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 142px
+}
+
+.roleStylePreviewContainer_cXmH6r.selected_cXmH6r {
+    background: var(--background-mod-subtle);
+    border: 2px solid var(--brand-500)
+}
+
+.roleStyleLabel_cXmH6r {
+    background-color: var(--background-surface-higher);
+    color: var(--text-subtle);
+    margin: -2px 0;
+    padding: 6px;
+    text-align: center;
+    width: 100%
+}
+
+.selected_cXmH6r .roleStyleLabel_cXmH6r {
+    background-color: var(--background-mod-subtle);
+    color: var(--interactive-text-active)
+}
+
+.disabled_cXmH6r {
+    cursor: not-allowed;
+    opacity: .3;
+    pointer-events: none
+}
+
+.roleStyleUpsell_cXmH6r {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .14);
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    justify-content: space-between;
+    padding: var(--space-12)
+}
+
+.roleStyleUpsellMesssages_cXmH6r {
+    display: flex;
+    flex-direction: column
+}
+
+.guildBoostBadge_cXmH6r {
+    color: var(--control-primary-text-active)
+}
+
+.holographicInfoBox_cXmH6r {
+    margin-top: var(--space-8)
+}
+
+.roleStyleFormTitle_cXmH6r {
+    align-items: center;
+    display: flex;
+    margin-bottom: var(--space-8)
+}
+
+.newBadge_cXmH6r {
+    margin-inline-start: var(--space-4)
+}
+
+.container_I0dgbG {
+    align-items: center;
+    display: flex
+}
+
+.avatar_I0dgbG {
+    flex-shrink: 0
+}
+
+.textContainer_I0dgbG {
+    color: var(--interactive-text-default);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.name_I0dgbG {
+    margin-inline-start: 8px
+}
+
+.botTag_I0dgbG,
+.userTag_I0dgbG {
+    margin-inline-start: 4px
+}
+
+.container_mssHMP {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0
+}
+
+.headerContainer_mssHMP {
+    inset-inline: 0 16px;
+    position: absolute
+}
+
+.header_mssHMP {
+    background-color: var(--background-base-low);
+    margin-inline: -8px;
+    padding-bottom: 16px;
+    padding-top: 60px;
+    padding-inline: 8px;
+    position: relative;
+    z-index: 1
+}
+
+.searchContainer_mssHMP {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    margin-top: 24px
+}
+
+.searchWarning_mssHMP {
+    margin-top: 16px
+}
+
+.memberRow_mssHMP {
+    align-items: center;
+    border-radius: var(--radius-xs);
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    padding-inline-start: 8px
+}
+
+.memberRow_mssHMP:hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.memberRow_mssHMP:active {
+    background-color: var(--interactive-background-active)
+}
+
+.emptyRowContainer_mssHMP {
+    color: var(--text-muted)
+}
+
+.emptyRowText_mssHMP {
+    margin-inline-start: 8px
+}
+
+.memberDetails_mssHMP {
+    min-width: 0
+}
+
+.list_mssHMP {
+    height: 100%;
+    min-height: 0;
+    padding-bottom: 60px
+}
+
+.removeButtonContainer_mssHMP {
+    margin-inline-start: auto
+}
+
+.removeButton_mssHMP {
+    align-items: center;
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    margin-inline: 8px
+}
+
+.removeButton_mssHMP:hover {
+    color: var(--interactive-text-hover)
+}
+
+.removeButton_mssHMP:active {
+    color: var(--interactive-text-active)
+}
+
+.removeButtonDisabled_mssHMP {
+    color: var(--text-muted);
+    cursor: not-allowed
+}
+
+.removeButtonDisabled_mssHMP:hover {
+    color: var(--text-muted)
+}
+
+.removeTip_mssHMP {
+    margin-top: 12px
+}
+
+.enable-forced-colors .memberRow_mssHMP {
+    border: 1px solid CanvasText
+}
+
+.enable-forced-colors .removeButton_mssHMP {
+    color: ButtonText
+}
+
+.enable-forced-colors .removeButton_mssHMP:hover {
+    color: ButtonText
+}
+
+.enable-forced-colors .removeButton_mssHMP:active {
+    color: Highlight
+}
+
+.enable-forced-colors .removeButtonDisabled_mssHMP {
+    color: GrayText
+}
+
+.enable-forced-colors .removeButtonDisabled_mssHMP:hover {
+    color: GrayText
+}
+
+/*# sourceMappingURL=ee76de97f576ff4d.css.map*/

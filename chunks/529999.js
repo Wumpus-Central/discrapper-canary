@@ -1,24 +1,24 @@
-(i.d(e, { default: () => U }), i(323874), i(14289), i(35956));
+(i(323874), i(14289), i(35956));
 var l = i(477900),
     n = i(582128),
     a = i(503698),
     r = i.n(a),
-    s = i(17928),
+    s = i(855986),
     o = i(65154),
     c = i(834730),
     d = i(858899),
     u = i(292801),
-    h = i(661531),
+    h = i(646514),
     m = i(173936),
-    f = i(148494),
-    g = i(280889),
+    f = i(138399),
+    g = i(48325),
     x = i(342384),
     v = i(429913),
     p = i(573435),
-    y = i(228427),
+    y = i(92961),
     j = i(619517),
     w = i(274652),
-    b = i(823099),
+    b = i(458914),
     A = i(451909),
     C = i(135621),
     P = i(223863),
@@ -27,7 +27,7 @@ var l = i(477900),
     T = i(957565),
     _ = i(403362),
     I = i(381941),
-    L = i(105292),
+    L = i(792996),
     N = i(476765),
     R = i(739126);
 function S(t) {
@@ -90,151 +90,157 @@ function S(t) {
         })
     );
 }
-function U(t) {
-    let e,
-        i,
-        {
-            applicationId: a,
-            content: r,
-            link: o,
-            customId: c,
-            linkId: p,
-            channelId: j,
-            imageUrl: N,
-            files: R,
-            previewTitle: U,
-            previewSubtitle: W,
-            onClose: M,
-            onCopyLink: F,
-            onShare: O,
-            ...V
-        } = t,
-        [q] = (0, v.A)([a]),
-        H = (0, s.bG)([E.default], () => E.default.getCurrentUser()),
-        Z = R?.[0],
-        B = n.useMemo(() => (null != Z ? URL.createObjectURL(Z) : void 0), [Z]);
-    n.useEffect(() => {
-        if (null != B) return () => URL.revokeObjectURL(B);
-    }, [B]);
-    let G = n.useMemo(
-            () => o ?? (0, x.W)({ applicationId: a, referrerId: H?.id, customId: c, linkId: p, channelId: j }),
-            [o, a, H?.id, c, p, j],
-        ),
-        D = n.useCallback(
-            async (t, e, i) => {
-                let l,
-                    { withMessage: n, closeAfterSend: a } = e;
-                (i(!0),
-                    O(
-                        new Promise((t) => {
-                            l = t;
-                        }),
-                    ));
-                let s = 0,
-                    o = 0;
-                try {
-                    let e = (await Promise.all(t.map(P.pk)))
-                        .filter(_.Vq)
-                        .map((t) => k.A.getChannel(t))
-                        .filter(_.Vq);
-                    if (((o = t.length - e.length), 0 === e.length))
-                        return void (0, d.P0)({ text: L.intl.string(L.t.iufib1), variant: "critical" });
-                    let i = [N, r, n]
-                        .filter(_.Vq)
-                        .join("\n")
-                        .slice(0, (0, C.a)());
-                    for (let t of e) {
-                        let e;
-                        try {
-                            e = await f.A.sendMessage(t.id, A.Ay.parse(t, i), !1, {
-                                location: I.Hx.ACTIVITY_SHARE,
-                                attachmentsToUpload:
-                                    null != R && R.length > 0
-                                        ? R.map(
-                                              (e) =>
-                                                  new g.bK(
-                                                      {
-                                                          file: new File([e], e.name, { type: e.type }),
-                                                          platform: w.x.WEB,
-                                                          origin: "unknown:activity_share",
-                                                      },
-                                                      t.id,
-                                                  ),
-                                          )
-                                        : void 0,
-                                onAttachmentUploadError: (e, i, l) => {
-                                    (0, b.k)({
-                                        file: e,
-                                        guildId: t.getGuildId(),
-                                        analyticsLocations: [],
-                                        code: i,
-                                        reason: l,
-                                    });
-                                },
-                            });
-                        } catch {
-                            e = null;
-                        }
-                        null == e ? (o += 1) : (s += 1);
-                    }
-                    (o > 0
-                        ? (0, d.P0)({ text: L.intl.string(L.t.iufib1), variant: "critical" })
-                        : (0, d.P0)({
-                              text: L.intl.string(L.t.kwmYkt),
-                              icon: u.t,
-                              iconColor: h.A.colors.ICON_FEEDBACK_POSITIVE,
-                          }),
-                        a && s > 0 && M());
-                } catch {
-                    (0, d.P0)({ text: L.intl.string(L.t.iufib1), variant: "critical" });
-                } finally {
-                    (l(s > 0), i(!1));
-                }
-            },
-            [r, R, N, M, O],
-        ),
-        J = n.useMemo(
-            () => [
+i.d(
+    e,
+    {},
+    {
+        default: function (t) {
+            let e,
+                i,
                 {
-                    variant: "secondary",
-                    text: void 0,
-                    "aria-label": L.intl.string(L.t.WqhZss),
-                    onClick: () => {
-                        (0, T.C)(G, () => {
-                            (F(), (0, d.P0)({ text: L.intl.string(L.t["L/PwZf"]), variant: "success" }));
-                        });
+                    applicationId: a,
+                    content: r,
+                    link: o,
+                    customId: c,
+                    linkId: p,
+                    channelId: j,
+                    imageUrl: N,
+                    files: R,
+                    previewTitle: U,
+                    previewSubtitle: W,
+                    onClose: M,
+                    onCopyLink: F,
+                    onShare: O,
+                    ...V
+                } = t,
+                [q] = (0, v.A)([a]),
+                H = (0, s.bG)([E.default], () => E.default.getCurrentUser()),
+                Z = R?.[0],
+                B = n.useMemo(() => (null != Z ? URL.createObjectURL(Z) : void 0), [Z]);
+            n.useEffect(() => {
+                if (null != B) return () => URL.revokeObjectURL(B);
+            }, [B]);
+            let G = n.useMemo(
+                    () => o ?? (0, x.W)({ applicationId: a, referrerId: H?.id, customId: c, linkId: p, channelId: j }),
+                    [o, a, H?.id, c, p, j],
+                ),
+                D = n.useCallback(
+                    async (t, e, i) => {
+                        let l,
+                            { withMessage: n, closeAfterSend: a } = e;
+                        (i(!0),
+                            O(
+                                new Promise((t) => {
+                                    l = t;
+                                }),
+                            ));
+                        let s = 0,
+                            o = 0;
+                        try {
+                            let e = (await Promise.all(t.map(P.pk)))
+                                .filter(_.Vq)
+                                .map((t) => k.A.getChannel(t))
+                                .filter(_.Vq);
+                            if (((o = t.length - e.length), 0 === e.length))
+                                return void (0, d.P0)({ text: L.intl.string(L.t.iufib1), variant: "critical" });
+                            let i = [N, r, n]
+                                .filter(_.Vq)
+                                .join("\n")
+                                .slice(0, (0, C.a)());
+                            for (let t of e) {
+                                let e;
+                                try {
+                                    e = await f.A.sendMessage(t.id, A.Ay.parse(t, i), !1, {
+                                        location: I.Hx.ACTIVITY_SHARE,
+                                        attachmentsToUpload:
+                                            null != R && R.length > 0
+                                                ? R.map(
+                                                      (e) =>
+                                                          new g.bK(
+                                                              {
+                                                                  file: new File([e], e.name, { type: e.type }),
+                                                                  platform: w.x.WEB,
+                                                                  origin: "unknown:activity_share",
+                                                              },
+                                                              t.id,
+                                                          ),
+                                                  )
+                                                : void 0,
+                                        onAttachmentUploadError: (e, i, l) => {
+                                            (0, b.k)({
+                                                file: e,
+                                                guildId: t.getGuildId(),
+                                                analyticsLocations: [],
+                                                code: i,
+                                                reason: l,
+                                            });
+                                        },
+                                    });
+                                } catch {
+                                    e = null;
+                                }
+                                null == e ? (o += 1) : (s += 1);
+                            }
+                            (o > 0
+                                ? (0, d.P0)({ text: L.intl.string(L.t.iufib1), variant: "critical" })
+                                : (0, d.P0)({
+                                      text: L.intl.string(L.t.kwmYkt),
+                                      icon: u.t,
+                                      iconColor: h.A.colors.ICON_FEEDBACK_POSITIVE,
+                                  }),
+                                a && s > 0 && M());
+                        } catch {
+                            (0, d.P0)({ text: L.intl.string(L.t.iufib1), variant: "critical" });
+                        } finally {
+                            (l(s > 0), i(!1));
+                        }
                     },
-                    icon: m.LinkIcon,
-                },
-            ],
-            [F, G],
-        ),
-        K = q?.name ?? "";
-    return (0, l.jsx)(y.ForwardModal, {
-        ...V,
-        onClose: M,
-        source: "frame",
-        customPreview: (0, l.jsx)(S, {
-            title: U ?? K,
-            subtitle:
-                W ??
-                (null != R && R.length > 0
-                    ? ((e = R.filter((t) => t.type.startsWith("image/")).length),
-                      (i = R.filter((t) => t.type.startsWith("video/")).length),
-                      e > 0 && i > 0
-                          ? L.intl.formatToPlainString(L.t.Lr0Top, { image_count: e, video_count: i })
-                          : i > 0
-                            ? L.intl.formatToPlainString(L.t.SJ6pPX, { count: i })
-                            : e > 0
-                              ? L.intl.formatToPlainString(L.t.h4pFfU, { count: e })
-                              : L.intl.formatToPlainString(L.t["89ihS8"], { count: R.length }))
-                    : void 0),
-            imageUrl: N,
-            fileUrl: B,
-            isVideo: Z?.type.startsWith("video/") ?? !1,
-            overflowCount: Math.max((R?.length ?? 1) - 1, 0),
-        }),
-        customSendHandler: D,
-        additionalActions: J,
-    });
-}
+                    [r, R, N, M, O],
+                ),
+                J = n.useMemo(
+                    () => [
+                        {
+                            variant: "secondary",
+                            text: void 0,
+                            "aria-label": L.intl.string(L.t.WqhZss),
+                            onClick: () => {
+                                (0, T.C)(G, () => {
+                                    (F(), (0, d.P0)({ text: L.intl.string(L.t["L/PwZf"]), variant: "success" }));
+                                });
+                            },
+                            icon: m.LinkIcon,
+                        },
+                    ],
+                    [F, G],
+                ),
+                K = q?.name ?? "";
+            return (0, l.jsx)(y.ForwardModal, {
+                ...V,
+                onClose: M,
+                source: "frame",
+                customPreview: (0, l.jsx)(S, {
+                    title: U ?? K,
+                    subtitle:
+                        W ??
+                        (null != R && R.length > 0
+                            ? ((e = R.filter((t) => t.type.startsWith("image/")).length),
+                              (i = R.filter((t) => t.type.startsWith("video/")).length),
+                              e > 0 && i > 0
+                                  ? L.intl.formatToPlainString(L.t.Lr0Top, { image_count: e, video_count: i })
+                                  : i > 0
+                                    ? L.intl.formatToPlainString(L.t.SJ6pPX, { count: i })
+                                    : e > 0
+                                      ? L.intl.formatToPlainString(L.t.h4pFfU, { count: e })
+                                      : L.intl.formatToPlainString(L.t["89ihS8"], { count: R.length }))
+                            : void 0),
+                    imageUrl: N,
+                    fileUrl: B,
+                    isVideo: Z?.type.startsWith("video/") ?? !1,
+                    overflowCount: Math.max((R?.length ?? 1) - 1, 0),
+                }),
+                customSendHandler: D,
+                additionalActions: J,
+            });
+        },
+    },
+);

@@ -1,6 +1,6 @@
-(n.d(t, { X: () => u, l: () => c }), n(938796));
+n(938796);
 var i = n(665260),
-    r = n(17928),
+    r = n(855986),
     a = n(734057),
     s = n(543465),
     l = n(152007),
@@ -24,6 +24,13 @@ function c(e) {
           ? o.CP.ONLY_MENTIONS
           : o.CP.ALL_MESSAGES;
 }
-function u(e) {
-    return (0, r.bG)([l.A, s.Ay, a.A], () => c(e), [e]);
-}
+n.d(
+    t,
+    {},
+    {
+        X: function (e) {
+            return (0, r.bG)([l.A, s.Ay, a.A], () => c(e), [e]);
+        },
+        l: c,
+    },
+);

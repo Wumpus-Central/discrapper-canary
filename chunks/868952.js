@@ -1,4 +1,4 @@
-(n.d(i, { default: () => q }), n(321073));
+n(321073);
 var e = n(477900),
     t = n(582128),
     l = n(136722),
@@ -17,7 +17,7 @@ var e = n(477900),
     v = n(636042),
     N = n(652215),
     f = n(124759),
-    b = n(105292),
+    b = n(792996),
     y = n(448320);
 function E(s) {
     let { guild: i } = s,
@@ -144,41 +144,47 @@ function k(s) {
         }),
     });
 }
-function q(s) {
-    let { guild: i, transitionState: n, onClose: a } = s,
-        d = t.useMemo(() => {
-            let s = [],
-                n = [];
-            return (
-                f.dR.map((e) => {
-                    g.Ib(e, i) ? s.push(e) : n.push(e);
-                }),
-                { enabledPermissions: s, disabledPermissions: n }
-            );
-        }, [i]);
-    if (null == i) return null;
-    async function c() {
-        if (null == i) return;
-        let s = null != i ? h.A.getEveryoneRole(i) : void 0;
-        if (null == s) return;
-        let n = l.TF(s.permissions, f.e$);
-        (await (0, v.JY)(i.id, [{ ...s, permissions: n }]), a());
-    }
-    return (0, e.jsxs)(r.EO, {
-        transitionState: n,
-        size: r.rI.SMALL,
-        className: y.yl,
-        parentComponent: "DisableRiskyPermsModal",
-        "data-migration-pending": !0,
-        children: [
-            (0, e.jsx)(E, { guild: i }),
-            (0, e.jsx)(M, { permissions: d }),
-            (0, e.jsx)(k, {
-                onConfirm: c,
-                onDismiss: function () {
-                    a();
-                },
-            }),
-        ],
-    });
-}
+n.d(
+    i,
+    {},
+    {
+        default: function (s) {
+            let { guild: i, transitionState: n, onClose: a } = s,
+                d = t.useMemo(() => {
+                    let s = [],
+                        n = [];
+                    return (
+                        f.dR.map((e) => {
+                            g.Ib(e, i) ? s.push(e) : n.push(e);
+                        }),
+                        { enabledPermissions: s, disabledPermissions: n }
+                    );
+                }, [i]);
+            return null == i
+                ? null
+                : (0, e.jsxs)(r.EO, {
+                      transitionState: n,
+                      size: r.rI.SMALL,
+                      className: y.yl,
+                      parentComponent: "DisableRiskyPermsModal",
+                      "data-migration-pending": !0,
+                      children: [
+                          (0, e.jsx)(E, { guild: i }),
+                          (0, e.jsx)(M, { permissions: d }),
+                          (0, e.jsx)(k, {
+                              onConfirm: async function () {
+                                  if (null == i) return;
+                                  let s = null != i ? h.A.getEveryoneRole(i) : void 0;
+                                  if (null == s) return;
+                                  let n = l.TF(s.permissions, f.e$);
+                                  (await (0, v.JY)(i.id, [{ ...s, permissions: n }]), a());
+                              },
+                              onDismiss: function () {
+                                  a();
+                              },
+                          }),
+                      ],
+                  });
+        },
+    },
+);

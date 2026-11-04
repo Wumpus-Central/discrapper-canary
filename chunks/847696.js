@@ -1,4 +1,3 @@
-a.d(e, { HM: () => C, aQ: () => f, pv: () => g });
 var n = a(713608),
     t = a(918715),
     i = a(433492),
@@ -6,7 +5,7 @@ var n = a(713608),
     o = a(369606),
     r = a(106983),
     s = a(171251),
-    c = a(185973);
+    c = a(683825);
 let u = {
         [r.C.Kill]: n.q,
         [r.C.MultiKill]: n.q,
@@ -55,12 +54,18 @@ let u = {
         [r.C.GameWinningKill]: c.default.b0i6PM,
         [r.C.InMatchChange]: null,
     };
-function g() {
-    return Object.fromEntries(s.l.map((l) => [l, u]));
-}
-function f() {
-    return Object.fromEntries(s.l.map((l) => [l, m]));
-}
-function C() {
-    return Object.fromEntries(s.l.map((l) => [l, h]));
-}
+a.d(
+    e,
+    {},
+    {
+        HM: function () {
+            return Object.fromEntries(s.l.map((l) => [l, h]));
+        },
+        aQ: function () {
+            return Object.fromEntries(s.l.map((l) => [l, m]));
+        },
+        pv: function () {
+            return Object.fromEntries(s.l.map((l) => [l, u]));
+        },
+    },
+);

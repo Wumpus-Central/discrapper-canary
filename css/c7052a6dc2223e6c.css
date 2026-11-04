@@ -1,0 +1,18 @@
+.bannerFrame_91pKqa {
+    display: inline-block;
+    padding-bottom: var(--space-48);
+    position: relative
+}
+
+.roundedBanner_91pKqa {
+    border-radius: var(--radius-md);
+    overflow: hidden
+}
+
+.avatarOverlay_91pKqa {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 1
+}
+
+/*# sourceMappingURL=c7052a6dc2223e6c.css.map*/

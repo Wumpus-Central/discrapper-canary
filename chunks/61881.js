@@ -1,11 +1,11 @@
-(n.d(t, { A: () => p }), n(321073));
+n(321073);
 var i = n(435558),
     r = n.n(i),
-    a = n(17928),
+    a = n(855986),
     s = n(73153),
     l = n(287809),
     o = n(403362),
-    d = n(321191);
+    d = n(851767);
 let c = null,
     u = null,
     _ = !1,
@@ -122,3 +122,4 @@ let p = new I(s.h, {
             (E.suggestedWishlistGamesIds = E.suggestedWishlistGamesIds.filter((e) => e !== t)));
     },
 });
+n.d(t, {}, { A: p });

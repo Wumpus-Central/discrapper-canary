@@ -1,6 +1,5 @@
-n.d(t, { Az: () => S, DD: () => g, aG: () => m, ik: () => C, it: () => E, y8: () => I });
 var i = n(73153),
-    l = n(477653),
+    l = n(718197),
     r = n(37595),
     s = n(731854);
 let a = !1,
@@ -24,51 +23,61 @@ function g(e, t) {
 }
 async function A() {
     let e = performance.now(),
-        t = await S();
+        t = await I();
     if (a && e > o && t?.encodeFailed === !0) {
         let e = d;
-        (C(), null != e && g(e.appId, "encode_failed"));
+        (E(), null != e && g(e.appId, "encode_failed"));
     }
 }
 function p() {
     l.Ay.getMediaEngine().setSnapshotSource(h());
 }
 function m() {
-    return null != h();
-}
-function I() {
     return l.Ay.getMediaEngine().supports(s.O5.CONJURE_SNAPSHOT);
 }
-function E(e, t, n) {
-    for (let t of ["appId", "appName"]) {
-        let n = e?.[t];
-        if ("string" != typeof n || "" === n.trim())
-            throw Error(`startConjureSnapshots: app.${t} must be a non-empty string`);
-    }
-    if (!I()) return !1;
-    if (
-        (l.Ay.getMediaEngine().startSnapshotCapture(
-            (function (e) {
-                let { width: t, height: n, intervalMs: i } = e;
-                return { width: c(t), height: c(n), intervalMs: Math.max(Math.floor(i), 250) };
-            })(t),
-            n,
-        ),
-        !a)
-    ) {
-        for (let e of ((a = !0), (o = performance.now()), r.g)) e.addChangeListener(p);
-        (p(), (u = setInterval(A, 2e3)));
-    }
-    return ((d = e), f(e), !0);
-}
-function S() {
+function I() {
     return l.Ay.getMediaEngine()
         .getSnapshotStats()
         .catch(() => null);
 }
-function C() {
+function E() {
     if (!a) return;
     for (let e of ((a = !1), null != u && clearInterval(u), (u = null), r.g)) e.removeChangeListener(p);
     let e = l.Ay.getMediaEngine();
     (e.setSnapshotSource(null), e.stopSnapshotCapture(), (d = null), f(null));
 }
+n.d(
+    t,
+    {},
+    {
+        Az: I,
+        DD: g,
+        aG: function () {
+            return null != h();
+        },
+        ik: E,
+        it: function (e, t, n) {
+            for (let t of ["appId", "appName"]) {
+                let n = e?.[t];
+                if ("string" != typeof n || "" === n.trim())
+                    throw Error(`startConjureSnapshots: app.${t} must be a non-empty string`);
+            }
+            if (!m()) return !1;
+            if (
+                (l.Ay.getMediaEngine().startSnapshotCapture(
+                    (function (e) {
+                        let { width: t, height: n, intervalMs: i } = e;
+                        return { width: c(t), height: c(n), intervalMs: Math.max(Math.floor(i), 250) };
+                    })(t),
+                    n,
+                ),
+                !a)
+            ) {
+                for (let e of ((a = !0), (o = performance.now()), r.g)) e.addChangeListener(p);
+                (p(), (u = setInterval(A, 2e3)));
+            }
+            return ((d = e), f(e), !0);
+        },
+        y8: m,
+    },
+);

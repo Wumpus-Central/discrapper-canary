@@ -1,9 +1,9 @@
 e.exports = {
-    p: "channelIcon_e98186",
-    hz: "lockIcon_e98186",
-    Cv: "identifier_e98186",
-    Sl: "image_e98186 " + a(601645).WY,
-    a: "shield_e98186 " + a(601645).WY,
-    S3: "roleName_e98186",
-    Tc: "tag_e98186",
+    p: "channelIcon_2zb7OH",
+    hz: "lockIcon_2zb7OH",
+    Cv: "identifier_2zb7OH",
+    Sl: "image_2zb7OH " + r(601645).WY,
+    a: "shield_2zb7OH " + r(601645).WY,
+    S3: "roleName_2zb7OH",
+    Tc: "tag_2zb7OH",
 };

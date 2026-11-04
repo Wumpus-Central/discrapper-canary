@@ -1,7 +1,7 @@
 e.exports = {
-    NE: "progressSection__8f056",
-    ES: "nextLevelRow__8f056",
-    Tw: "nextLevelArt__8f056",
-    Bd: "nextLevelContent__8f056",
-    hr: "progressBar__8f056",
+    NE: "progressSection_Jln_7e",
+    ES: "nextLevelRow_Jln_7e",
+    Tw: "nextLevelArt_Jln_7e",
+    Bd: "nextLevelContent_Jln_7e",
+    hr: "progressBar_Jln_7e",
 };

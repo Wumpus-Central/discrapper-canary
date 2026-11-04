@@ -1,8 +1,8 @@
 e.exports = {
-    kL: "container_dba137",
-    wx: "header_dba137",
-    G3: "bodyText_dba137",
-    Kk: "smsNumberText_dba137",
-    GH: "smsNumberContainer_dba137",
-    pG: "copied_dba137",
+    kL: "container_kI-AOI",
+    wx: "header_kI-AOI",
+    G3: "bodyText_kI-AOI",
+    Kk: "smsNumberText_kI-AOI",
+    GH: "smsNumberContainer_kI-AOI",
+    pG: "copied_kI-AOI",
 };

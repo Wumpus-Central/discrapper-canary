@@ -1,4 +1,3 @@
-n.d(t, { A: () => r });
 var i = n(315069);
 class r extends i.A {
     id;
@@ -19,3 +18,4 @@ class r extends i.A {
         return null != this.intervalCount && this.intervalCount > 1;
     }
 }
+n.d(t, {}, { A: r });

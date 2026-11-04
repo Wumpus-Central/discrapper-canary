@@ -1,25 +1,25 @@
-.container__577c3 {
+.container_dPPWEK {
     background-color: var(--background-mod-muted);
     border-radius: var(--radius-sm);
     padding: var(--space-20)
 }
 
-.links__577c3 {
+.links_dPPWEK {
     display: flex;
     flex-direction: column;
     gap: var(--space-16);
     list-style: none
 }
 
-.link__577c3 {
+.link_dPPWEK {
     align-items: center;
     color: var(--text-link);
     display: flex;
     gap: var(--space-4)
 }
 
-.description__577c3 {
+.description_dPPWEK {
     text-align: center
 }
 
-/*# sourceMappingURL=50726.3556997612319073.css.map*/
+/*# sourceMappingURL=50726.8c5321ee8d96c3d3.css.map*/

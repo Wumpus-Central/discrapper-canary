@@ -1,5 +1,4 @@
-n.d(t, { Uq: () => _, mN: () => d, tT: () => u });
-var i = n(17928),
+var i = n(855986),
     r = n(71393),
     a = n(576705),
     s = n(256497),
@@ -15,12 +14,19 @@ function c(e, t) {
         (t || (null != (n = e.guildSpaceSettings) && n.enabled && n.publish_status === l.B.PUBLISHED))
     );
 }
-function u(e, t) {
-    return null != e && !!(0, s.aA)(e.id, t) && c(e, null != e && a.A.can(o.xBc.MANAGE_GUILD, e));
-}
-function _(e, t) {
-    let n = (0, s.fX)(e ?? void 0, t),
-        a = (0, i.bG)([r.A], () => r.A.getGuild(e), [e]),
-        l = d(a);
-    return null != a && !!n && c(a, l);
-}
+n.d(
+    t,
+    {},
+    {
+        Uq: function (e, t) {
+            let n = (0, s.fX)(e ?? void 0, t),
+                a = (0, i.bG)([r.A], () => r.A.getGuild(e), [e]),
+                l = d(a);
+            return null != a && !!n && c(a, l);
+        },
+        mN: d,
+        tT: function (e, t) {
+            return null != e && !!(0, s.aA)(e.id, t) && c(e, null != e && a.A.can(o.xBc.MANAGE_GUILD, e));
+        },
+    },
+);

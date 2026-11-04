@@ -1,4 +1,3 @@
-n.d(t, { Ec: () => d, v4: () => o });
 var i = n(332714),
     r = n(776231),
     a = n(998218);
@@ -14,31 +13,38 @@ function l(e) {
 function o(e) {
     return (s.has(e.hostname) || !1) && e.pathname.startsWith("/external/");
 }
-function d(e, t) {
-    let n = a.A.toURLSafe(e);
-    if (null == n) return e;
-    if (o(n)) {
-        let n = a.A.toURLSafe(e);
-        if (null == n || !o(n)) return e;
-        if (null != t.size) {
-            let e = l(t.size);
-            (n.searchParams.set("width", e), n.searchParams.set("height", e));
-        }
-        return (
-            !(function (e, t) {
-                let { keepAspectRatio: n, format: i } = t;
-                (null != n && e.searchParams.set("keep_aspect_ratio", String(n)),
-                    null != i && e.searchParams.set("format", i));
-            })(n, t),
-            n.toString()
-        );
-    }
-    if (!a.A.isDiscordCdnUrl(e)) return e;
-    if (null != t.size) {
-        let i = l(t.size),
-            r = Number(n.searchParams.get("size"));
-        if (r > 0 && Number(i) > r) return e;
-        n.searchParams.set("size", i);
-    }
-    return n.toString();
-}
+n.d(
+    t,
+    {},
+    {
+        Ec: function (e, t) {
+            let n = a.A.toURLSafe(e);
+            if (null == n) return e;
+            if (o(n)) {
+                let n = a.A.toURLSafe(e);
+                if (null == n || !o(n)) return e;
+                if (null != t.size) {
+                    let e = l(t.size);
+                    (n.searchParams.set("width", e), n.searchParams.set("height", e));
+                }
+                return (
+                    !(function (e, t) {
+                        let { keepAspectRatio: n, format: i } = t;
+                        (null != n && e.searchParams.set("keep_aspect_ratio", String(n)),
+                            null != i && e.searchParams.set("format", i));
+                    })(n, t),
+                    n.toString()
+                );
+            }
+            if (!a.A.isDiscordCdnUrl(e)) return e;
+            if (null != t.size) {
+                let i = l(t.size),
+                    r = Number(n.searchParams.get("size"));
+                if (r > 0 && Number(i) > r) return e;
+                n.searchParams.set("size", i);
+            }
+            return n.toString();
+        },
+        v4: o,
+    },
+);

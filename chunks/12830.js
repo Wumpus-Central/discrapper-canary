@@ -1,53 +1,26 @@
-n.d(t, { A: () => E });
 var i = n(477900),
     l = n(582128),
     a = n(991690),
-    s = n(17928),
+    s = n(855986),
     r = n(765671),
-    o = n(198052),
+    o = n(628983),
     d = n(144399),
-    c = n(228946),
+    c = n(240666),
     u = n(343030),
-    h = n(317608),
+    h = n(11411),
     p = n(378859),
     m = n(269094),
-    A = n(35367),
+    A = n(111518),
     f = n(130745),
     g = n(267102),
     x = n(51082),
-    C = n(280450),
+    C = n(46653),
     y = n(488947),
     j = n(806931),
-    I = n(885031),
-    N = n(105292),
+    I = n(786739),
+    N = n(792996),
     v = n(649914);
 function E(e) {
-    var t, n;
-    let l,
-        a,
-        { applicationId: d, channelId: c, guildId: u, renderPipOverlay: h } = e,
-        p =
-            ((t = (0, s.bG)([o.A], () => o.A.getParticipants(c), [c])),
-            (n = C.default.getId()),
-            null !=
-            (a =
-                (l = t.filter((e) => e.type !== j.lp.ACTIVITY && e.user?.id !== n && (0, x.Ay)(e))).find(
-                    (e) => e.type === j.lp.STREAM,
-                ) ?? l[0])
-                ? [a]
-                : []),
-        { ref: m, width: A, height: f } = (0, r.Ay)(),
-        g = p.length > 0 && null != A && null != f ? h?.(p, { width: A, height: f }) : null;
-    return (0, i.jsx)("div", {
-        className: v.MT,
-        children: (0, i.jsx)("div", {
-            ref: m,
-            className: v.dw,
-            children: (0, i.jsx)(b, { applicationId: d, channelId: c, guildId: u, overlay: g }),
-        }),
-    });
-}
-function b(e) {
     let { applicationId: t, channelId: n, guildId: s, overlay: r } = e,
         o = l.useMemo(() => ({ type: a.U.VOICE_CHANNEL, channelId: n, guildId: s }), [n, s]),
         x = (0, y.w)((0, g.Us)()),
@@ -85,3 +58,35 @@ function b(e) {
             return null;
     }
 }
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            var t, n;
+            let l,
+                a,
+                { applicationId: d, channelId: c, guildId: u, renderPipOverlay: h } = e,
+                p =
+                    ((t = (0, s.bG)([o.A], () => o.A.getParticipants(c), [c])),
+                    (n = C.default.getId()),
+                    null !=
+                    (a =
+                        (l = t.filter((e) => e.type !== j.lp.ACTIVITY && e.user?.id !== n && (0, x.Ay)(e))).find(
+                            (e) => e.type === j.lp.STREAM,
+                        ) ?? l[0])
+                        ? [a]
+                        : []),
+                { ref: m, width: A, height: f } = (0, r.Ay)(),
+                g = p.length > 0 && null != A && null != f ? h?.(p, { width: A, height: f }) : null;
+            return (0, i.jsx)("div", {
+                className: v.MT,
+                children: (0, i.jsx)("div", {
+                    ref: m,
+                    className: v.dw,
+                    children: (0, i.jsx)(E, { applicationId: d, channelId: c, guildId: u, overlay: g }),
+                }),
+            });
+        },
+    },
+);

@@ -1,4 +1,3 @@
-n.d(t, { V: () => r });
 var i,
     r =
         (((i = {}).BASE = "base"),
@@ -9,3 +8,4 @@ var i,
         (i.WEARABLE = "wearable"),
         (i.AURA = "aura"),
         i);
+n.d(t, {}, { V: r });

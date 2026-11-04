@@ -1,4 +1,3 @@
-n.d(t, { M: () => E, a: () => _ });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -87,9 +86,16 @@ function _(e) {
         })
     );
 }
-function E(e) {
-    return (0, i.jsx)(c.aF, {
-        onCloseRequest: e.dismissable ? e.onCancel : null,
-        renderModal: (t) => (0, i.jsx)(_, { ...t, ...e }),
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        M: function (e) {
+            return (0, i.jsx)(c.aF, {
+                onCloseRequest: e.dismissable ? e.onCancel : null,
+                renderModal: (t) => (0, i.jsx)(_, { ...t, ...e }),
+            });
+        },
+        a: _,
+    },
+);

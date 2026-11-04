@@ -1,4 +1,3 @@
-n.d(t, { M: () => a, V: () => s });
 var i,
     r,
     a =
@@ -596,3 +595,4 @@ var i,
         (r[(r.GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK = 11)] = "GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK"),
         (r[(r.GAME_SERVER_HOSTING_ENABLED_COACHMARK = 12)] = "GAME_SERVER_HOSTING_ENABLED_COACHMARK"),
         r);
+n.d(t, {}, { M: a, V: s });

@@ -1,4 +1,3 @@
-n.d(t, { Q: () => A, Y: () => E });
 var i,
     r = n(477900),
     a = n(582128),
@@ -102,7 +101,19 @@ function A(e) {
         i = a.useRef(null),
         [o, d] = a.useState(0);
     function u() {
-        return (A(), (0, r.jsx)(r.Fragment, {}));
+        return (
+            (async function () {
+                if (!_.current) {
+                    _.current = !0;
+                    let e = setTimeout(() => {
+                            (f(() => A), d((e) => e + 1));
+                        }, 300),
+                        n = await t();
+                    (f(() => n), d((e) => e + 1), clearTimeout(e));
+                }
+            })(),
+            (0, r.jsx)(r.Fragment, {})
+        );
     }
     (a.useLayoutEffect(() => {
         o > 0 && i.current?.ref?.current?.layerRef?.current?.updatePosition();
@@ -112,35 +123,25 @@ function A(e) {
             return () => clearTimeout(e);
         }));
     let _ = a.useRef(!1);
-    async function A() {
-        if (!_.current) {
-            _.current = !0;
-            let e = setTimeout(() => {
-                    (I(() => h), d((e) => e + 1));
-                }, 300),
-                n = await t();
-            (I(() => n), d((e) => e + 1), clearTimeout(e));
-        }
-    }
-    function h() {
+    function A() {
         let e = i.current?.ref?.current?.domElementRef?.current,
             t = Math.max(100, null == e ? 100 : e.offsetWidth - 20);
         return (0, r.jsx)("div", { className: c.w, style: { width: t }, children: (0, r.jsx)(s.y, {}) });
     }
-    let [f, I] = a.useState(() => u),
-        p = a.useRef(u);
+    let [h, f] = a.useState(() => u),
+        I = a.useRef(u);
     return (
         a.useEffect(() => {
-            p.current = u;
+            I.current = u;
         }),
         a.useEffect(() => {
             _.current
                 ? t().then((e) => {
-                      (I(() => e), d((e) => e + 1));
+                      (f(() => e), d((e) => e + 1));
                   })
-                : I(() => p.current);
+                : f(() => I.current);
         }, [t]),
-        (0, r.jsx)(E, { ref: i, ...n, renderPopout: f })
+        (0, r.jsx)(E, { ref: i, ...n, renderPopout: h })
     );
 }
-A.Animation = u;
+((A.Animation = u), n.d(t, {}, { Q: A, Y: E }));

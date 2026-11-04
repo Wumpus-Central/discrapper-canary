@@ -1,7 +1,6 @@
-t.d(n, { A: () => A });
 var i = t(477900),
     l = t(582128),
-    a = t(17928),
+    a = t(855986),
     o = t(206248),
     r = t(597770),
     s = t(406810),
@@ -11,48 +10,54 @@ var i = t(477900),
     f = t(412260),
     g = t(860300),
     C = t(49999),
-    m = t(105292);
-function A(e) {
-    let { onComplete: n, onCheckItOutClick: t, markAsDismissed: A, coachmarkConfig: b, children: p } = e,
-        I = (0, d.T)(b?.asset),
-        { enabled: h } = g.J.useConfig({ location: "GiftPromotionPopout" }),
-        T = (0, a.bG)([f.A], () => f.A.getGiftPromotion()),
-        N = (0, c.dA)(T?.endDate),
-        k = null != N,
-        _ = (0, u.Ay)(k),
-        j = l.useRef(null);
-    l.useEffect(() => {
-        !0 !== _ || k || (n(), A(C.i.AUTO_DISMISS));
-    }, [_, k, n, A]);
-    let x = {
-        text: m.intl.string(m.t.Ve9Ge6),
-        icon: r.GiftIcon,
-        onClick: () => {
-            (t(), n(), A(C.i.TAKE_ACTION));
-        },
-    };
-    return (0, i.jsxs)(i.Fragment, {
-        children: [
-            (0, i.jsx)("div", { ref: j, children: p }),
-            (0, i.jsx)(o.H, {
-                targetElementRef: j,
-                shouldShow: !0,
-                disableMediaViewer: !0,
-                position: "top",
-                align: "center",
-                title: b?.header ?? "",
-                body: b?.body ?? "",
-                assetUrl: I ?? "",
-                badge:
-                    h && null != N
-                        ? { type: { text: N.toUpperCase() }, variant: "primary", icon: s.ClockIcon }
-                        : void 0,
-                action: x,
-                caretConfig: { align: "center" },
-                onRequestClose: function () {
-                    (n(), A(C.i.USER_DISMISS));
+    m = t(792996);
+t.d(
+    n,
+    {},
+    {
+        A: function (e) {
+            let { onComplete: n, onCheckItOutClick: t, markAsDismissed: A, coachmarkConfig: b, children: p } = e,
+                I = (0, d.T)(b?.asset),
+                { enabled: h } = g.J.useConfig({ location: "GiftPromotionPopout" }),
+                T = (0, a.bG)([f.A], () => f.A.getGiftPromotion()),
+                N = (0, c.dA)(T?.endDate),
+                k = null != N,
+                _ = (0, u.Ay)(k),
+                j = l.useRef(null);
+            l.useEffect(() => {
+                !0 !== _ || k || (n(), A(C.i.AUTO_DISMISS));
+            }, [_, k, n, A]);
+            let x = {
+                text: m.intl.string(m.t.Ve9Ge6),
+                icon: r.GiftIcon,
+                onClick: () => {
+                    (t(), n(), A(C.i.TAKE_ACTION));
                 },
-            }),
-        ],
-    });
-}
+            };
+            return (0, i.jsxs)(i.Fragment, {
+                children: [
+                    (0, i.jsx)("div", { ref: j, children: p }),
+                    (0, i.jsx)(o.H, {
+                        targetElementRef: j,
+                        shouldShow: !0,
+                        disableMediaViewer: !0,
+                        position: "top",
+                        align: "center",
+                        title: b?.header ?? "",
+                        body: b?.body ?? "",
+                        assetUrl: I ?? "",
+                        badge:
+                            h && null != N
+                                ? { type: { text: N.toUpperCase() }, variant: "primary", icon: s.ClockIcon }
+                                : void 0,
+                        action: x,
+                        caretConfig: { align: "center" },
+                        onRequestClose: function () {
+                            (n(), A(C.i.USER_DISMISS));
+                        },
+                    }),
+                ],
+            });
+        },
+    },
+);

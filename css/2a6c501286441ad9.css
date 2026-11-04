@@ -1,0 +1,230 @@
+.container_ZcHFUr {
+    background-color: var(--background-base-lowest);
+    border-radius: var(--radius-xs);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    padding: var(--space-16) 0
+}
+
+.divider_ZcHFUr {
+    background-color: var(--background-base-low);
+    height: 1px
+}
+
+.section_ZcHFUr {
+    padding: 0 var(--space-16)
+}
+
+.body_ZcHFUr {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12)
+}
+
+.button_ZcHFUr {
+    padding: var(--space-8)
+}
+
+.keyComboInner_CXPwsk {
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--interactive-background-hover) !important;
+    box-shadow: inset 0 -4px 0 var(--interactive-background-selected) !important;
+    color: var(--text-default) !important;
+    cursor: pointer !important
+}
+
+.keyComboContainer_CXPwsk {
+    background-color: var(--interactive-background-selected);
+    border-radius: var(--radius-sm)
+}
+
+.backButton_CXPwsk {
+    cursor: pointer;
+    gap: 4px
+}
+
+.backButton_CXPwsk,
+.headerActions_CXPwsk {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.headerActions_CXPwsk {
+    gap: 8px
+}
+
+.container_4sPjw- {
+    background-color: color-mix(in oklab, var(--background-surface-high), transparent 20%);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--elevation-low);
+    overflow: hidden
+}
+
+.container_4sPjw-,
+.innerContainer_4sPjw- {
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
+.innerContainer_4sPjw- {
+    gap: 20px;
+    padding: 12px 16px
+}
+
+.panelSection_4sPjw- {
+    flex: 0 0 auto
+}
+
+.panelSection_4sPjw-:empty {
+    display: none
+}
+
+.keyComboInner_4sPjw- {
+    border: 1px solid var(--interactive-background-hover) !important;
+    box-shadow: inset 0 -4px 0 var(--interactive-background-selected) !important;
+    color: var(--text-default) !important;
+    cursor: pointer !important
+}
+
+.keyComboContainer_4sPjw-,
+.keyComboInner_4sPjw- {
+    background-color: var(--interactive-background-selected)
+}
+
+.keyComboContainer_4sPjw- {
+    border-radius: var(--radius-sm)
+}
+
+.header_4sPjw- {
+    background-color: color-mix(in oklab, var(--background-base-lower), transparent 20%);
+    box-shadow: var(--elevation-stroke), var(--elevation-low);
+    padding: 12px 16px;
+    z-index: 1
+}
+
+.header_4sPjw-,
+.headerTitle_4sPjw- {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.headerTitle_4sPjw- {
+    flex: 1
+}
+
+.headerActions_4sPjw- {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.headerRefreshButton_4sPjw- {
+    align-items: center;
+    border-radius: var(--radius-xs);
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    width: 24px
+}
+
+.headerRefreshButton_4sPjw-:hover {
+    color: var(--interactive-text-hover)
+}
+
+.headerRefreshButton_4sPjw-.disabled_4sPjw- {
+    cursor: not-allowed;
+    opacity: .5
+}
+
+.headerRefreshDots_4sPjw- {
+    align-items: center;
+    display: flex;
+    height: 16px;
+    justify-content: center;
+    width: 16px
+}
+
+.infoTitle_4sPjw- {
+    padding-bottom: 4px
+}
+
+.roleContainer_4sPjw- {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px
+}
+
+.highestRole_4sPjw- {
+    box-shadow: var(--elevation-stroke), var(--custom-guild-shop-channel-row-glow)
+}
+
+.otherRoles_4sPjw- {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.addRoleIcon_4sPjw- {
+    color: var(--interactive-text-default);
+    transition: color 80ms cubic-bezier(.48, 1.93, 1, .68)
+}
+
+.roleTooltip_4sPjw- {
+    padding-inline-end: 0;
+    padding: 4px 4px 0
+}
+
+.roleTooltipItemContainer_4sPjw- {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px
+}
+
+.roleTooltipItem_4sPjw- {
+    overflow: hidden
+}
+
+.addRoleContainer_4sPjw- {
+    cursor: pointer
+}
+
+.guildIcon_4sPjw- {
+    border-radius: var(--radius-sm);
+    overflow: hidden
+}
+
+.loadingSpinner_4sPjw- {
+    flex: 0;
+    height: 16px;
+    margin: 0;
+    width: 16px
+}
+
+.verifiedIcon_4sPjw- {
+    color: var(--text-feedback-positive)
+}
+
+.unverifiedIcon_4sPjw- {
+    color: var(--text-feedback-critical)
+}
+
+.noRoles_4sPjw- {
+    background-color: var(--background-mod-subtle);
+    border-radius: 4px;
+    padding: 4px
+}
+
+/*# sourceMappingURL=2a6c501286441ad9.css.map*/

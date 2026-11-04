@@ -1,52 +1,52 @@
-.theme-light .progressContainer__0fd7d.blue__0fd7d {
+.theme-light .progressContainer_ctJI0k.blue_ctJI0k {
     --custom-gradient-start: var(--blurple-80);
     --custom-gradient-end: var(--blurple-38);
     --custom-gradient-glow: var(--blurple-38)
 }
 
-.theme-light .progressContainer__0fd7d.orange__0fd7d {
+.theme-light .progressContainer_ctJI0k.orange_ctJI0k {
     --custom-gradient-start: var(--orange-new-80);
     --custom-gradient-end: var(--orange-new-24);
     --custom-gradient-glow: var(--orange-new-24)
 }
 
-.theme-dark .progressContainer__0fd7d.blue__0fd7d {
+.theme-dark .progressContainer_ctJI0k.blue_ctJI0k {
     --custom-gradient-start: var(--blurple-44);
     --custom-gradient-end: var(--blurple-24);
     --custom-gradient-glow: var(--blurple-24)
 }
 
-.theme-dark .progressContainer__0fd7d.orange__0fd7d {
+.theme-dark .progressContainer_ctJI0k.orange_ctJI0k {
     --custom-gradient-start: var(--orange-new-40);
     --custom-gradient-end: var(--orange-new-10);
     --custom-gradient-glow: var(--orange-new-10)
 }
 
-.theme-darker .progressContainer__0fd7d.blue__0fd7d {
+.theme-darker .progressContainer_ctJI0k.blue_ctJI0k {
     --custom-gradient-start: var(--blurple-54);
     --custom-gradient-end: var(--blurple-24);
     --custom-gradient-glow: var(--blurple-24)
 }
 
-.theme-darker .progressContainer__0fd7d.orange__0fd7d {
+.theme-darker .progressContainer_ctJI0k.orange_ctJI0k {
     --custom-gradient-start: var(--orange-new-48);
     --custom-gradient-end: var(--orange-new-10);
     --custom-gradient-glow: var(--orange-new-10)
 }
 
-.theme-midnight .progressContainer__0fd7d.blue__0fd7d {
+.theme-midnight .progressContainer_ctJI0k.blue_ctJI0k {
     --custom-gradient-start: var(--blurple-59);
     --custom-gradient-end: var(--blurple-24);
     --custom-gradient-glow: var(--blurple-24)
 }
 
-.theme-midnight .progressContainer__0fd7d.orange__0fd7d {
+.theme-midnight .progressContainer_ctJI0k.orange_ctJI0k {
     --custom-gradient-start: var(--orange-new-48);
     --custom-gradient-end: var(--orange-new-10);
     --custom-gradient-glow: var(--orange-new-10)
 }
 
-.progressContainer__0fd7d {
+.progressContainer_ctJI0k {
     --custom-background: var(--background-mod-normal);
     background: var(--custom-background);
     border-radius: 5px;
@@ -57,17 +57,17 @@
     width: 100%
 }
 
-.progressContainer__0fd7d.light__0fd7d {
+.progressContainer_ctJI0k.light_ctJI0k {
     --custom-expressive-progress-height: 4px;
     --custom-expressive-progress-glow-offset: -6px
 }
 
-.progressContainer__0fd7d.medium__0fd7d {
+.progressContainer_ctJI0k.medium_ctJI0k {
     --custom-expressive-progress-height: 6px;
     --custom-expressive-progress-glow-offset: -5px
 }
 
-.progress__0fd7d {
+.progress_ctJI0k {
     --custom-min-width: 10px;
     border-radius: 5px;
     height: 100%;
@@ -78,7 +78,7 @@
     width: 0
 }
 
-.glow__0fd7d {
+.glow_ctJI0k {
     background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--custom-gradient-glow) 70%, transparent));
     border-radius: 20px;
     filter: blur(3px);
@@ -92,20 +92,20 @@
     width: 100%
 }
 
-.glow__0fd7d.empty__0fd7d {
+.glow_ctJI0k.empty_ctJI0k {
     max-width: calc(var(--custom-min-width)*2);
     width: calc(var(--custom-min-width)*2)
 }
 
-.bar__0fd7d {
+.bar_ctJI0k {
     background: linear-gradient(90deg, var(--custom-gradient-start) 0, var(--custom-gradient-end) 100%);
     border-radius: 5px;
     height: 100%;
     width: 100%
 }
 
-.bar__0fd7d.empty__0fd7d {
+.bar_ctJI0k.empty_ctJI0k {
     background: var(--custom-gradient-end)
 }
 
-/*# sourceMappingURL=417867.c2e16ba90fb2bf68.css.map*/
+/*# sourceMappingURL=417867.e142debc161845b6.css.map*/

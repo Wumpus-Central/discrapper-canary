@@ -1,21 +1,21 @@
-(r.r(t), r.d(t, { default: () => S }));
+r.r(t);
 var s = r(477900),
     a = r(582128),
     i = r(736819),
     n = r(575593),
     l = r(334279),
-    c = r(702841),
+    c = r(164636),
     u = r(778712),
     d = r(717421),
     o = r(287809),
-    h = r(344346),
+    h = r(872200),
     m = r(139136),
     f = r(395744),
     g = r(846957),
     j = r(929283),
-    x = r(448391),
-    p = r(966971),
-    v = r(105292),
+    x = r(842385),
+    p = r(894585),
+    v = r(792996),
     y = r(730595),
     E = r(241988);
 function N(e) {
@@ -107,7 +107,13 @@ function A(e) {
         ],
     });
 }
-function S(e) {
-    let t = (0, p.K9)(e.product.categorySkuId);
-    return null != t ? (0, s.jsx)(A, { ...e, displayOptions: t }) : (0, s.jsx)(R, { ...e });
-}
+r.d(
+    t,
+    {},
+    {
+        default: function (e) {
+            let t = (0, p.K9)(e.product.categorySkuId);
+            return null != t ? (0, s.jsx)(A, { ...e, displayOptions: t }) : (0, s.jsx)(R, { ...e });
+        },
+    },
+);

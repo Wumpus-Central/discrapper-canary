@@ -1,1 +1,1 @@
-e.exports = { hY: "popoutHeader__628e6", p: "channelIcon__628e6", HA: "channelName__628e6" };
+e.exports = { hY: "popoutHeader_D5mQJH", p: "channelIcon_D5mQJH", HA: "channelName_D5mQJH" };

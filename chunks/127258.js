@@ -1,4 +1,3 @@
-n.d(t, { G: () => r });
 var i,
     r =
         (((i = {})[(i.PING = 1)] = "PING"),
@@ -15,3 +14,4 @@ var i,
         (i[(i.GAME_ORGANIZATION_FETCH_CHARACTER_ELIGIBILITY_FOR_USER = 12)] =
             "GAME_ORGANIZATION_FETCH_CHARACTER_ELIGIBILITY_FOR_USER"),
         i);
+n.d(t, {}, { G: r });

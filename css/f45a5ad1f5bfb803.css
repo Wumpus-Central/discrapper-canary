@@ -1,0 +1,25 @@
+.bugReporterSubmitModalRoot_poxwic {
+    height: auto;
+    width: 720px
+}
+
+.modalContent_poxwic {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0
+}
+
+.closeButton_poxwic {
+    box-sizing: content-box;
+    inset-inline-end: 4px;
+    position: absolute;
+    top: 12px
+}
+
+.submitText_poxwic {
+    max-width: 360px;
+    text-align: center
+}
+
+/*# sourceMappingURL=f45a5ad1f5bfb803.css.map*/

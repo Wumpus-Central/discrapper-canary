@@ -1,4 +1,3 @@
-n.d(t, { G: () => h });
 var i = n(477900);
 n(582128);
 var l = n(503698),
@@ -9,57 +8,63 @@ var l = n(503698),
     d = n(834730),
     c = n(964306),
     u = n(672812);
-function h(e) {
-    let {
-            id: t,
-            className: n,
-            innerClassName: l,
-            renderIcon: h,
-            text: m,
-            selected: g,
-            trailing: A,
-            background: f,
-            showUnread: p = !1,
-            ref: C,
-            ...E
-        } = e,
-        x = (0, r.rm)(t),
-        N = (0, a.O)(m) ?? "";
-    return (0, i.jsx)("li", {
-        ref: C,
-        children: (0, i.jsxs)(o.s, {
-            ...E,
-            buttonProps: { ...x, id: t, role: "button" },
-            "data-list-item-id": x["data-list-item-id"],
-            onFocus: x.onFocus,
-            tag: "div",
-            "aria-label": N,
-            focusProps: { offset: { top: 1, bottom: 1, right: 4 } },
-            onContextMenu:
-                null != E.onContextMenu
-                    ? E.onContextMenu
-                    : (e) => {
-                          e.stopPropagation();
-                      },
-            className: s()(c.fx, u.iE, { [u.J1]: g }, n),
-            children: [
-                f,
-                p ? (0, i.jsx)("div", { className: s()(u.gy, u.WS) }) : null,
-                (0, i.jsxs)("div", {
-                    className: s()([u.nf, u.ae, l]),
+n.d(
+    t,
+    {},
+    {
+        G: function (e) {
+            let {
+                    id: t,
+                    className: n,
+                    innerClassName: l,
+                    renderIcon: h,
+                    text: m,
+                    selected: g,
+                    trailing: A,
+                    background: f,
+                    showUnread: p = !1,
+                    ref: C,
+                    ...E
+                } = e,
+                x = (0, r.rm)(t),
+                N = (0, a.O)(m) ?? "";
+            return (0, i.jsx)("li", {
+                ref: C,
+                children: (0, i.jsxs)(o.s, {
+                    ...E,
+                    buttonProps: { ...x, id: t, role: "button" },
+                    "data-list-item-id": x["data-list-item-id"],
+                    onFocus: x.onFocus,
+                    tag: "div",
+                    "aria-label": N,
+                    focusProps: { offset: { top: 1, bottom: 1, right: 4 } },
+                    onContextMenu:
+                        null != E.onContextMenu
+                            ? E.onContextMenu
+                            : (e) => {
+                                  e.stopPropagation();
+                              },
+                    className: s()(c.fx, u.iE, { [u.J1]: g }, n),
                     children: [
-                        h(u.Kk),
-                        (0, i.jsx)(d.E, {
-                            color: "none",
-                            variant: "body-md/medium",
-                            className: u.UU,
-                            "aria-hidden": !0,
-                            children: m,
+                        f,
+                        p ? (0, i.jsx)("div", { className: s()(u.gy, u.WS) }) : null,
+                        (0, i.jsxs)("div", {
+                            className: s()([u.nf, u.ae, l]),
+                            children: [
+                                h(u.Kk),
+                                (0, i.jsx)(d.E, {
+                                    color: "none",
+                                    variant: "body-md/medium",
+                                    className: u.UU,
+                                    "aria-hidden": !0,
+                                    children: m,
+                                }),
+                                A,
+                            ],
                         }),
-                        A,
                     ],
                 }),
-            ],
-        }),
-    });
-}
+            });
+        },
+    },
+);

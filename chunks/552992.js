@@ -1,0 +1,14 @@
+n.d(t, { z: () => s });
+var i = n(192308),
+    r = n(73153),
+    a = n(946974);
+let s = {
+    binds: ["mod+/", "mod+shift+/"],
+    comboKeysBindGlobal: !0,
+    action: () => (
+        (0, i.kB)(a.P)
+            ? r.h.dispatch({ type: "HIDE_KEYBOARD_SHORTCUTS" })
+            : r.h.dispatch({ type: "SHOW_KEYBOARD_SHORTCUTS" }),
+        !1
+    ),
+};

@@ -1,5 +1,4 @@
-n.d(t, { A: () => o });
-var i = n(17928),
+var i = n(855986),
     r = n(73153);
 let a = {
         highlight_mana_buttons: "Highlight mana buttons",
@@ -51,3 +50,4 @@ let o = new l(r.h, {
         !1 === e.value ? delete s[e.toggle] : (s[e.toggle] = e.value);
     },
 });
+n.d(t, {}, { A: o });

@@ -1,29 +1,34 @@
-e.d(i, { A: () => A });
 var n = e(477900);
 e(582128);
-var a = e(17928),
+var a = e(855986),
     r = e(477782),
     s = e(367513),
-    c = e(198052),
+    c = e(628983),
     l = e(977997),
     u = e(652215),
-    d = e(105292);
-function A(t, i) {
-    let e = (0, a.bG)([c.A], () => t === c.A.getSelectedParticipantId(i), [i, t]);
-    return (0, a.bG)(
-        [c.A, l.A],
-        () => {
-            let e = l.A.isInChannel(i, t) && l.A.hasVideo(i),
-                n = c.A.getLayout(i),
-                a = n === u.DUB.MINIMUM || n === u.DUB.NORMAL;
-            return !e || a;
+    d = e(792996);
+e.d(
+    i,
+    {},
+    {
+        A: function (t, i) {
+            let e = (0, a.bG)([c.A], () => t === c.A.getSelectedParticipantId(i), [i, t]);
+            return (0, a.bG)(
+                [c.A, l.A],
+                () => {
+                    let e = l.A.isInChannel(i, t) && l.A.hasVideo(i),
+                        n = c.A.getLayout(i),
+                        a = n === u.DUB.MINIMUM || n === u.DUB.NORMAL;
+                    return !e || a;
+                },
+                [i, t],
+            )
+                ? null
+                : (0, n.jsx)(r.Dr, {
+                      id: "focus-video",
+                      label: e ? d.intl.string(d.t.KJPKUT) : d.intl.string(d.t["77cRN4"]),
+                      action: () => s.A.selectParticipant(i, e ? null : t),
+                  });
         },
-        [i, t],
-    )
-        ? null
-        : (0, n.jsx)(r.Dr, {
-              id: "focus-video",
-              label: e ? d.intl.string(d.t.KJPKUT) : d.intl.string(d.t["77cRN4"]),
-              action: () => s.A.selectParticipant(i, e ? null : t),
-          });
-}
+    },
+);

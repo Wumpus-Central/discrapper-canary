@@ -1,22 +1,27 @@
-c.d(u, { A: () => t });
 var s = c(582128),
     r = c(73153);
-function t(e) {
-    let u = (0, s.useRef)(e);
-    ((0, s.useEffect)(() => {
-        u.current = e;
-    }, [e]),
-        (0, s.useEffect)(() => {
-            if (__OVERLAY__) {
-                function e(e) {
-                    e.locked && u.current();
-                }
-                return (
-                    r.h.subscribe("OVERLAY_SET_INPUT_LOCKED", e),
-                    () => {
-                        r.h.unsubscribe("OVERLAY_SET_INPUT_LOCKED", e);
+c.d(
+    u,
+    {},
+    {
+        A: function (e) {
+            let u = (0, s.useRef)(e);
+            ((0, s.useEffect)(() => {
+                u.current = e;
+            }, [e]),
+                (0, s.useEffect)(() => {
+                    if (__OVERLAY__) {
+                        function e(e) {
+                            e.locked && u.current();
+                        }
+                        return (
+                            r.h.subscribe("OVERLAY_SET_INPUT_LOCKED", e),
+                            () => {
+                                r.h.unsubscribe("OVERLAY_SET_INPUT_LOCKED", e);
+                            }
+                        );
                     }
-                );
-            }
-        }, []));
-}
+                }, []));
+        },
+    },
+);

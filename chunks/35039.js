@@ -1,4 +1,3 @@
-n.d(t, { h: () => r });
 var i,
     r =
         (((i = {})[(i.NONE = 0)] = "NONE"),
@@ -9,3 +8,4 @@ var i,
         (i[(i.RED = 5)] = "RED"),
         (i[(i.YELLOW = 6)] = "YELLOW"),
         i);
+n.d(t, {}, { h: r });

@@ -1,50 +1,55 @@
-o.d(n, { default: () => x });
 var t = o(477900),
     l = o(582128),
-    u = o(17928),
-    s = o(442433),
-    i = o(322227),
+    s = o(855986),
+    i = o(442433),
+    u = o(540665),
     r = o(971079),
-    d = o(61577),
-    c = o(686507),
-    a = o(381991),
-    p = o(260498),
-    b = o(174865),
-    h = o(193072),
-    f = o(79733),
-    A = o(678793),
-    C = o(955260),
-    j = o(95264),
-    v = o(73588);
-function x(e) {
-    let { projectId: n, guildId: o, onExport: x, onImport: _ } = e,
-        k = (0, u.bG)([p.Ay], () => p.Ay.getProject(n), [n]),
-        m = null != k && (0, p.jf)(k),
-        P = (0, u.bG)([i.default], () => "open" === i.default.getConnState(n), [n]);
-    l.useEffect(() => {
-        m && (0, i.ensureConnection)(n);
-    }, [m, n]);
-    let y = (0, r.f)("ConjureServerProjectContextMenu"),
-        { publishOptions: g, publish: w, label: D } = (0, A.A)(n, o, !P),
-        E = (0, C.A)(n, w, g);
-    return null == k
-        ? null
-        : (0, t.jsx)(f.bI.Provider, {
-              value: g,
-              children: (0, t.jsx)(h.z, {
-                  ...(0, b.A)(k, o),
-                  onPublish: m ? () => E("context_menu") : void 0,
-                  publishLabel: D,
-                  publishDisabled: null == w || w.disabled,
-                  onRemix: () => (0, j.A)(k, o),
-                  onExport: x,
-                  onImport: _,
-                  onConnectTool: y ? () => (0, d.A)(n) : void 0,
-                  onHistory: () => {
-                      !(0, c.N)(n) && (0, a.A)(n, "project_list");
-                  },
-                  onDismiss: () => (0, v.tb)(n),
-                  onCloseMenu: s.Z_,
-              }),
-          });
-}
+    c = o(61577),
+    d = o(686507),
+    p = o(381991),
+    b = o(260498),
+    a = o(174865),
+    A = o(753329),
+    h = o(826058),
+    C = o(719593),
+    j = o(536468),
+    f = o(95264),
+    v = o(465080);
+o.d(
+    n,
+    {},
+    {
+        default: function (e) {
+            let { projectId: n, guildId: o, onExport: x, onImport: y } = e,
+                _ = (0, s.bG)([b.Ay], () => b.Ay.getProject(n), [n]),
+                k = null != _ && (0, b.jf)(_),
+                m = (0, s.bG)([u.Ay], () => "open" === u.Ay.getConnState(n), [n]);
+            l.useEffect(() => {
+                k && (0, u.ensureConnection)(n);
+            }, [k, n]);
+            let P = (0, r.f)("ConjureServerProjectContextMenu"),
+                { publishOptions: g, publish: w, label: D } = (0, C.A)(n, o, !m),
+                E = (0, j.A)(n, w, g);
+            return null == _
+                ? null
+                : (0, t.jsx)(h.bI.Provider, {
+                      value: g,
+                      children: (0, t.jsx)(A.z, {
+                          ...(0, a.A)(_, o),
+                          onPublish: k ? () => E("context_menu") : void 0,
+                          publishLabel: D,
+                          publishDisabled: null == w || w.disabled,
+                          onRemix: () => (0, f.A)(_, o),
+                          onExport: x,
+                          onImport: y,
+                          onConnectTool: P ? () => (0, c.A)(n) : void 0,
+                          onHistory: () => {
+                              !(0, d.N)(n) && (0, p.A)(n, "project_list");
+                          },
+                          onDismiss: () => (0, v.tb)(n),
+                          onCloseMenu: i.Z_,
+                      }),
+                  });
+        },
+    },
+);

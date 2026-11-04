@@ -1,0 +1,26 @@
+.connectContent_WKl-tc {
+    box-sizing: border-box;
+    position: relative
+}
+
+.closeButton_WKl-tc {
+    inset-block-start: 0;
+    inset-inline-end: var(--space-8);
+    position: absolute;
+    z-index: 1
+}
+
+.connectUrlRow_WKl-tc {
+    min-width: 0
+}
+
+.connectUrlField_WKl-tc {
+    flex: 1;
+    min-width: 0
+}
+
+.connectActions_WKl-tc {
+    flex: none
+}
+
+/*# sourceMappingURL=0d339f0df694d5ef.css.map*/

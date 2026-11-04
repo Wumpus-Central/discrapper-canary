@@ -1,52 +1,50 @@
-n.d(t, { A: () => S });
 var r = n(477900),
     i = n(582128),
     l = n(435558),
     s = n.n(l),
     o = n(258873),
     a = n(622242),
-    d = n(731738),
-    u = n(70298),
-    c = n(17928),
-    h = n(397613),
+    u = n(731738),
+    d = n(70298),
+    c = n(855986),
+    h = n(143592),
     f = n(821609),
     g = n(825484),
-    m = n(148810),
-    p = n(521502),
+    p = n(148810),
+    m = n(521502),
     A = n(380610),
-    y = n(807393),
+    y = n(913379),
     v = n(976860),
-    w = n(174459),
-    x = n(38405),
-    E = n(19575),
+    w = n(129230),
+    x = n(856383),
+    E = n(253400),
     b = n(721668),
     C = n(652215),
-    N = n(105292),
+    N = n(792996),
     O = n(684637);
 function _() {
     let [e, t] = i.useState(!1);
-    if (null == (0, c.bG)([p.A], () => ((0, A.kK)() ? p.A.getCurrentBuildOverride().overrides?.discord_web : null)))
-        return null;
-    async function n() {
-        try {
-            (t(!0), await (0, m.iD)(), window.location.reload(!0));
-        } catch (e) {
-            t(!1);
-        }
-    }
-    return (0, r.jsx)(f.$, {
-        variant: "primary",
-        size: "md",
-        text: N.intl.string(N.t["/Nz9rY"]),
-        onClick: n,
-        loading: e,
-    });
+    return null == (0, c.bG)([m.A], () => ((0, A.kK)() ? m.A.getCurrentBuildOverride().overrides?.discord_web : null))
+        ? null
+        : (0, r.jsx)(f.$, {
+              variant: "primary",
+              size: "md",
+              text: N.intl.string(N.t["/Nz9rY"]),
+              onClick: async function () {
+                  try {
+                      (t(!0), await (0, p.iD)(), window.location.reload(!0));
+                  } catch (e) {
+                      t(!1);
+                  }
+              },
+              loading: e,
+          });
 }
 let D = s().throttle(
     (e) => {
         y.A.increment(
             {
-                name: d.K.APP_CRASHED,
+                name: u.K.APP_CRASHED,
                 tags: [`reason:${o.J.UNHANDLED_JS_ERROR}`, `level:${a.k.FATAL}`, `modded_client:${e}`],
             },
             !0,
@@ -64,7 +62,7 @@ class I extends i.PureComponent {
     triggerSoftCrash(e, t) {
         let n = (0, v.JK)().location;
         this.setState({ error: e, info: t });
-        let r = (0, u.b)(),
+        let r = (0, d.b)(),
             i = x.A.captureCrash(e, { extra: t });
         (w.default.track(C.HAw.APP_CRASHED, {
             path: n.pathname,
@@ -128,4 +126,4 @@ class I extends i.PureComponent {
         return e;
     }
 }
-let S = I;
+n.d(t, {}, { A: I });

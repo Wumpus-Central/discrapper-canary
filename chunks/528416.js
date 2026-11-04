@@ -1,33 +1,36 @@
-!(function e(t, r, n) {
-    function i(a, s) {
-        if (!r[a]) {
-            if (!t[a]) {
-                if (o) return o(a, !0);
-                var l = Error("Cannot find module '" + a + "'");
-                throw ((l.code = "MODULE_NOT_FOUND"), l);
+!(function e(t, n, i) {
+    function o(s, l) {
+        if (!n[s]) {
+            if (!t[s]) {
+                var u = r(307004);
+                if (!l && u) return u(s, !0);
+                if (a) return a(s, !0);
+                var c = Error("Cannot find module '" + s + "'");
+                throw ((c.code = "MODULE_NOT_FOUND"), c);
             }
-            var u = (r[a] = { exports: {} });
-            t[a][0].call(
-                u.exports,
+            var f = (n[s] = { exports: {} });
+            t[s][0].call(
+                f.exports,
                 function (e) {
-                    return i(t[a][1][e] || e);
+                    return o(t[s][1][e] || e);
                 },
-                u,
-                u.exports,
+                f,
+                f.exports,
                 e,
                 t,
-                r,
                 n,
+                i,
             );
         }
-        return r[a].exports;
+        return n[s].exports;
     }
-    for (var o = void 0, a = 0; a < n.length; a++) i(n[a]);
-    return i;
+    for (var a = r(307004), s = 0; s < i.length; s++) o(i[s]);
+    return o;
 })(
     {
         1: [
             function (e, t, r) {
+                "use strict";
                 t.exports = (0, e("./adapter_factory.js").adapterFactory)({
                     window: "u" < typeof window ? void 0 : window,
                 });
@@ -36,6 +39,7 @@
         ],
         2: [
             function (e, t, r) {
+                "use strict";
                 (Object.defineProperty(r, "__esModule", { value: !0 }),
                     (r.adapterFactory = function () {
                         var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
@@ -169,6 +173,7 @@
         ],
         3: [
             function (e, t, r) {
+                "use strict";
                 (Object.defineProperty(r, "__esModule", { value: !0 }),
                     (r.shimGetDisplayMedia = r.shimGetUserMedia = void 0));
                 var n =
@@ -805,6 +810,7 @@
         ],
         4: [
             function (e, t, r) {
+                "use strict";
                 (Object.defineProperty(r, "__esModule", { value: !0 }),
                     (r.shimGetDisplayMedia = function (e, t) {
                         if (
@@ -841,6 +847,7 @@
         ],
         5: [
             function (e, t, r) {
+                "use strict";
                 Object.defineProperty(r, "__esModule", { value: !0 });
                 var n =
                     "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -1033,6 +1040,7 @@
         ],
         6: [
             function (e, t, r) {
+                "use strict";
                 Object.defineProperty(r, "__esModule", { value: !0 });
                 var n,
                     i =
@@ -1312,6 +1320,7 @@
         ],
         7: [
             function (e, t, r) {
+                "use strict";
                 (Object.defineProperty(r, "__esModule", { value: !0 }),
                     (r.shimGetDisplayMedia = r.shimGetUserMedia = void 0));
                 var n =
@@ -1596,6 +1605,7 @@
         ],
         8: [
             function (e, t, r) {
+                "use strict";
                 (Object.defineProperty(r, "__esModule", { value: !0 }),
                     (r.shimGetDisplayMedia = function (e, t) {
                         (e.navigator.mediaDevices && "getDisplayMedia" in e.navigator.mediaDevices) ||
@@ -1618,6 +1628,7 @@
         ],
         9: [
             function (e, t, r) {
+                "use strict";
                 Object.defineProperty(r, "__esModule", { value: !0 });
                 var n =
                     "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -1701,6 +1712,7 @@
         ],
         10: [
             function (e, t, r) {
+                "use strict";
                 Object.defineProperty(r, "__esModule", { value: !0 });
                 var n =
                     "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -1973,6 +1985,7 @@
         ],
         11: [
             function (e, t, r) {
+                "use strict";
                 Object.defineProperty(r, "__esModule", { value: !0 });
                 var n =
                     "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -2142,6 +2155,7 @@
         12: [function (e, t, r) {}, {}],
         13: [
             function (e, t, r) {
+                "use strict";
                 var n = {};
                 ((n.generateIdentifier = function () {
                     return Math.random().toString(36).substr(2, 10);

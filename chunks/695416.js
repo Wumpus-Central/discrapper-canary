@@ -1,1 +1,1 @@
-c.exports = { K2: "actionText_b8ffc2", ij: "descriptionText_b8ffc2" };
+c.exports = { K2: "actionText_cb8Ljq", ij: "descriptionText_cb8Ljq" };

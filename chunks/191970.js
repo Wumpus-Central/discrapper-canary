@@ -1,0 +1,5 @@
+s.r(a);
+let t = JSON.parse(
+    '{"o/An3l":[[1,"username"]," asked you to stream ",[1,"applicationName"]],"DKHhec":["Ask to Stream"],"8qq+H7":["Ask to Stream ",[1,"applicationName"]],"s7bMT0":[[1,"username"]," is asking you to stream ",[1,"applicationName"]],"7pndSl":["You asked someone to stream ",[1,"applicationName"]],"P0wwmM":["Already streaming"],"u4QmWl":["Request expired"],"qRXats":["Not in voice channel"],"43zohO":["Not running game"],"fac+eE":["No permission"],"mVFTUg":["Request sent too recently"],"8HU1M2":["Request sent"],"5+172e":["Stream"],"K0spYL":["Start a Stream"],"nAyuPp":["Stream Request"],"d/qbC0":[[8,"$b",[[1,"username"]]]," asked you to stream"],"8B3U5O":["You asked someone to stream"],"Bakb3u":[[8,"$b",["You"]]," asked someone to stream"],"UGbmBp":["Stream"],"EuarXc":[[8,"usernameHook",[[1,"username"]]]," asked you to stream"],"TFn1fS":["Stream ",[1,"gameName"]],"jTbTAF":[[8,"$b",[[1,"username"]]]," asked for someone to stream ",[8,"$b",[[1,"game"]]],"."]}',
+);
+s.d(a, {}, { default: t });

@@ -1,0 +1,501 @@
+.previewsContainerInner_5JXgdm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 346px
+}
+
+.profileEffectPreviewsContainerInner_5JXgdm {
+    margin-top: 0
+}
+
+.nameplatePreviewContainerInner_5JXgdm,
+.profileEffectPreviewsContainerInner_5JXgdm {
+    align-items: center
+}
+
+.combinedPreviewContent_5JXgdm {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.profilePreviewWithChat_5JXgdm.custom-profile-frame {
+    margin-block-end: 0
+}
+
+.nameplatePreview_5JXgdm {
+    width: 100%
+}
+
+.nameplateRightPanePreviewContainer_5JXgdm {
+    background-color: var(--background-surface-high);
+    border-radius: var(--radius-lg);
+    height: auto;
+    margin-inline: 60px 40px;
+    width: 240px
+}
+
+.nameplateRightPanePreviewAvatarContainer_5JXgdm,
+.nameplateRightPanePreviewAvatarInner_5JXgdm {
+    padding: 0 8px
+}
+
+.userBlue_5JXgdm {
+    color: var(--role-sky-blue)
+}
+
+.userPink_5JXgdm {
+    color: var(--role-magenta)
+}
+
+.userGreen_5JXgdm {
+    color: var(--role-light-green)
+}
+
+.nameplateRightPanePreviewSectionGroup_5JXgdm {
+    color: var(--channels-default);
+    font-family: var(--font-primary);
+    font-size: 12px;
+    letter-spacing: .02em;
+    line-height: 16px;
+    margin-bottom: 4px;
+    margin-top: 24px;
+    padding-inline-start: 16px;
+    text-transform: none
+}
+
+.chatPreview_5JXgdm {
+    align-items: stretch;
+    background: var(--background-gradient-chat, var(--background-base-low));
+    border-radius: var(--radius-sm);
+    bottom: 38px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    margin-inline-start: 42px;
+    overflow: hidden;
+    padding: 16px;
+    position: relative;
+    width: 290px;
+    z-index: 3
+}
+
+.mockMessage_5JXgdm {
+    margin-inline-start: -12px;
+    max-width: 220px;
+    padding-inline-end: 12px !important
+}
+
+.mockMessage_5JXgdm h2 div {
+    display: inline-block;
+    margin-bottom: -6px;
+    max-width: 112px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.mockInput_5JXgdm {
+    align-items: center;
+    background: var(--background-gradient-low, var(--channeltextarea-background));
+    border-radius: var(--radius-md);
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    padding: 0 8px
+}
+
+.mockInputButton_5JXgdm {
+    color: var(--interactive-text-default)
+}
+
+.container_JTQ5Db {
+    background: linear-gradient(180deg, #000 -17.38%, #36266d 109.68%);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    z-index: 1
+}
+
+.headerAsset_JTQ5Db {
+    height: 157px;
+    margin-bottom: 24px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 211px
+}
+
+.benefits_JTQ5Db {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px
+}
+
+.benefitRow_JTQ5Db {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.container_EqjDWO {
+    pointer-events: none
+}
+
+.externalProductProfilePreview_HB9X9Q {
+    position: relative;
+    width: 350px
+}
+
+.headerSection_pDUUyu {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    height: 24px
+}
+
+.partialOwnStateContainer_euLAud {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    opacity: .5
+}
+
+.partiallyOwnedDisclaimer_euLAud {
+    margin-inline-start: -8px
+}
+
+.iconWrapper_euLAud {
+    margin-top: 2px
+}
+
+.infoIcon_euLAud {
+    color: var(--interactive-text-active);
+    height: 16px;
+    width: 16px
+}
+
+.priceTagsContainer_nQlVdd {
+    align-items: flex-end;
+    display: inline-flex
+}
+
+.price_nQlVdd {
+    margin-inline-end: 8px
+}
+
+.premiumIcon_nQlVdd {
+    height: 16px;
+    margin-inline-end: 4px;
+    width: 16px
+}
+
+.premiumIcon_nQlVdd.fullPrice_nQlVdd {
+    margin-inline-end: 2px
+}
+
+.subscribeNow_2VKjbN {
+    cursor: pointer;
+    display: inline;
+    text-decoration: underline
+}
+
+.container_UsKXW_ {
+    align-items: center;
+    color: var(--text-default);
+    display: flex;
+    flex: 1;
+    margin-inline-end: 8px;
+    opacity: .7;
+    white-space: nowrap
+}
+
+.nitroIcon_UsKXW_ {
+    height: 16px;
+    margin-inline-end: 4px;
+    width: 16px
+}
+
+.priceLine_zgws6w {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 12px
+}
+
+.priceTagContainer_zgws6w {
+    align-items: flex-start;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px
+}
+
+.orbText_zgws6w {
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.disabled_zgws6w {
+    opacity: .5
+}
+
+.pricingSection_80OD1- {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 13px
+}
+
+.pricingSection_80OD1->:first-child {
+    margin-top: 0
+}
+
+.pricingSection_80OD1- [class*=striked] {
+    color: var(--text-muted);
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.25;
+    opacity: 1
+}
+
+.pricingSection_80OD1- [class*=priceTagsContainer] [class*=container] {
+    color: var(--text-default)
+}
+
+.pricingSection_80OD1- [class*=priceTagContainer]+[class*=container] {
+    color: var(--text-muted)
+}
+
+.pricingSection_80OD1- [class*=priceTagContainer]+[class*=container] * {
+    font-weight: var(--font-weight-medium)
+}
+
+.priceTag_80OD1- {
+    margin-top: 0
+}
+
+.promotionProgress_80OD1- {
+    align-items: center;
+    background-color: var(--background-feedback-mod-positive);
+    border-radius: var(--radius-sm);
+    color: var(--text-feedback-positive);
+    display: flex;
+    gap: var(--space-8);
+    justify-content: space-between;
+    padding-block: var(--space-4);
+    padding-inline: var(--space-4) var(--space-8)
+}
+
+.promotionProgressLabel_80OD1- {
+    align-items: center;
+    display: flex;
+    gap: var(--space-6)
+}
+
+.promotionProgressIcon_80OD1- {
+    flex-shrink: 0
+}
+
+.premiumPriceTag_80OD1-,
+.priceTagContainer_80OD1- {
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.priceTagContainer_80OD1- {
+    align-items: flex-start
+}
+
+.disclaimer_80OD1- {
+    color: var(--primary-230)
+}
+
+.disclaimerLight_80OD1- {
+    color: var(--text-muted)
+}
+
+.orbIconAligned_80OD1- {
+    margin-top: 1px;
+    vertical-align: top
+}
+
+.leftRail_xC7tSN {
+    background-color: var(--background-surface-high);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    padding: 24px;
+    position: relative;
+    width: 330px
+}
+
+.leftRail_xC7tSN.withLeftPreview_xC7tSN .headerWrapper_xC7tSN {
+    position: absolute;
+    top: 8px;
+    inset-inline: 16px;
+    z-index: 1
+}
+
+.leftPreviewSlot_xC7tSN {
+    align-items: flex-start;
+    container-type: size;
+    display: flex;
+    flex: 1 1 0;
+    justify-content: center;
+    min-height: 207px;
+    overflow: hidden;
+    position: relative
+}
+
+.leftPreviewSlot_xC7tSN>* {
+    margin-block: auto
+}
+
+@container (max-height: 219px) {
+    .leftPreviewSlot_xC7tSN:after {
+        background: linear-gradient(to bottom, transparent 0, var(--background-surface-high) 80%);
+        bottom: 0;
+        content: "";
+        height: 50px;
+        inset-inline: 0;
+        pointer-events: none;
+        position: absolute
+    }
+}
+
+.infoSlot_xC7tSN {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    min-height: 0;
+    padding-bottom: 24px
+}
+
+.leftRail_xC7tSN.withLeftPreview_xC7tSN .infoSlot_xC7tSN {
+    flex: 0 0 auto
+}
+
+.next_X26lB9,
+.prev_X26lB9 {
+    opacity: var(--custom-bundle-arrows-opacity, 0);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1
+}
+
+.full-motion .next_X26lB9,
+.full-motion .prev_X26lB9 {
+    transition: opacity .3s ease-out
+}
+
+.next_X26lB9:has(:focus-visible),
+.prev_X26lB9:has(:focus-visible) {
+    opacity: 1
+}
+
+.prev_X26lB9 {
+    inset-inline-start: 16px
+}
+
+.next_X26lB9 {
+    inset-inline-end: 16px
+}
+
+.collectiblePreviewsContainer_w2vPtx {
+    background-color: var(--background-surface-highest);
+    flex: 1 1 0;
+    height: 100%;
+    min-width: 0;
+    overflow: hidden;
+    position: relative
+}
+
+.previewContainer_w2vPtx {
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+    --custom-bundle-arrows-opacity: 0
+}
+
+.previewContainer_w2vPtx:hover {
+    --custom-bundle-arrows-opacity: 1
+}
+
+.previewSurface_w2vPtx {
+    align-items: center;
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    position: absolute
+}
+
+.full-motion .previewSurface_w2vPtx {
+    animation: previewFadeIn_w2vPtx .3s ease-in-out
+}
+
+@keyframes previewFadeIn_w2vPtx {
+    0% {
+        opacity: .2
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.collectiblePreviewsContainerNoChat_w2vPtx,
+.collectiblePreviewsContainerWithChat_w2vPtx,
+.fractionalNitroPreviewContainer_w2vPtx {}
+
+.pdpControls_w2vPtx {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    inset-inline-end: 16px;
+    justify-content: flex-end
+}
+
+.goToCollectionButton_w2vPtx,
+.pdpControls_w2vPtx {
+    position: absolute;
+    top: 16px;
+    z-index: 1
+}
+
+.goToCollectionButton_w2vPtx {
+    inset-inline-start: 16px
+}
+
+.modalRoot_fEFP8r {
+    background-color: var(--custom-background-primary);
+    border-radius: inherit;
+    margin-bottom: calc(var(--custom-modal-padding-bottom)*-1 - 1px);
+    margin-top: calc(var(--custom-modal-padding-top)*-1 - 1px);
+    margin-inline: -1px;
+    min-height: 0;
+    overflow-x: clip;
+    overflow-y: auto
+}
+
+.modalContent_fEFP8r {
+    display: flex;
+    height: 650px;
+    padding: 0
+}
+
+/*# sourceMappingURL=65dd2f7f6829ecef.css.map*/

@@ -1,21 +1,20 @@
-i.d(l, { A: () => j, Y: () => v });
-var t = i(477900),
-    n = i(582128),
-    s = i(821609),
-    a = i(376728),
-    r = i(415951),
-    o = i(849841),
-    c = i(976860),
-    d = i(345942),
-    u = i(449054),
-    m = i(348943),
-    x = i(461888),
-    I = i(652215),
-    h = i(105292);
+var i = t(477900),
+    n = t(582128),
+    s = t(821609),
+    a = t(574332),
+    r = t(415951),
+    o = t(849841),
+    c = t(976860),
+    d = t(345942),
+    u = t(449054),
+    m = t(348943),
+    x = t(461888),
+    I = t(652215),
+    h = t(792996);
 function v(e) {
     let {
             guildId: l,
-            ctaType: i,
+            ctaType: t,
             submitting: a,
             onGoToGuild: r,
             onAcceptInvite: d,
@@ -31,7 +30,7 @@ function v(e) {
             await (0, u.Z2)(l, { object: I.ZSU.GUILD_PROFILE });
         }, [l]),
         { text: b, onClick: y } = n.useMemo(() => {
-            switch (i) {
+            switch (t) {
                 case x.SP.IS_MEMBER:
                     return { text: h.intl.string(h.t.IRoQXr), onClick: r };
                 case x.SP.ADOPT_TAG:
@@ -49,7 +48,7 @@ function v(e) {
                 default:
                     return { text: null, onClick: null };
             }
-        }, [i, N, f, d, r, m, A]),
+        }, [t, N, f, d, r, m, A]),
         C = n.useCallback(
             async (e) => {
                 (e.stopPropagation(), g(!0));
@@ -64,28 +63,35 @@ function v(e) {
         );
     return null == b
         ? null
-        : (0, t.jsx)(s.$, { variant: "active", size: "sm", text: b, fullWidth: !0, loading: j || a, onClick: C });
+        : (0, i.jsx)(s.$, { variant: "active", size: "sm", text: b, fullWidth: !0, loading: j || a, onClick: C });
 }
-function j(e) {
-    let { profile: l, onComplete: i } = e,
-        { guildId: s, validInviteKey: o, ctaType: c } = (0, x.Ay)(l),
-        u = n.useCallback(() => (0, d.u)(s), [s]),
-        I = n.useCallback(() => {
-            null != o && a.Ay.acceptInvite({ inviteKey: o, context: { location: "guild_profile" } });
-        }, [o]),
-        h = n.useCallback(() => {
-            l.visibility !== m.n.PUBLIC_WITH_RECRUITMENT && null != o
-                ? I()
-                : r.A.openMemberVerificationModal(s, void 0, o);
-        }, [I, s, l.visibility, o]);
-    return null == c
-        ? null
-        : (0, t.jsx)(v, {
-              guildId: s,
-              ctaType: c,
-              onGoToGuild: u,
-              onAcceptInvite: I,
-              onStartApplication: h,
-              onComplete: i,
-          });
-}
+t.d(
+    l,
+    {},
+    {
+        A: function (e) {
+            let { profile: l, onComplete: t } = e,
+                { guildId: s, validInviteKey: o, ctaType: c } = (0, x.Ay)(l),
+                u = n.useCallback(() => (0, d.u)(s), [s]),
+                I = n.useCallback(() => {
+                    null != o && a.Ay.acceptInvite({ inviteKey: o, context: { location: "guild_profile" } });
+                }, [o]),
+                h = n.useCallback(() => {
+                    l.visibility !== m.n.PUBLIC_WITH_RECRUITMENT && null != o
+                        ? I()
+                        : r.A.openMemberVerificationModal(s, void 0, o);
+                }, [I, s, l.visibility, o]);
+            return null == c
+                ? null
+                : (0, i.jsx)(v, {
+                      guildId: s,
+                      ctaType: c,
+                      onGoToGuild: u,
+                      onAcceptInvite: I,
+                      onStartApplication: h,
+                      onComplete: t,
+                  });
+        },
+        Y: v,
+    },
+);

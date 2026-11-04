@@ -1,4 +1,3 @@
-n.d(t, { MV: () => E, lG: () => f, zR: () => _ });
 var i = n(477900),
     r = n(582128),
     a = n(765178),
@@ -7,7 +6,7 @@ var i = n(477900),
     o = n(559106),
     d = n(707554),
     c = n(140735),
-    u = n(432816);
+    u = n(116711);
 function _() {
     let e = r.useId(),
         t = r.useRef(null),
@@ -66,33 +65,41 @@ function h(e) {
             }),
     });
 }
-function f(e) {
-    let {
-            ref: t,
-            returnRef: n,
-            modal: a = !0,
-            setDialogRef: s,
-            trackingProps: o,
-            trackingComponentName: d = "Dialog",
-            ...c
-        } = e,
-        _ = r.useRef(null);
-    (r.useImperativeHandle(t, () => _.current),
-        r.useEffect(
-            () => (
-                s?.(_.current),
-                () => {
-                    s?.(null);
-                }
-            ),
-            [],
-        ));
-    let { trackImpression: E } = (0, u.G9)();
-    return (
-        r.useEffect(() => {
-            null != E && null != o && E({ componentName: d, payload: o });
-        }, [E, d, o]),
-        (0, l.tj)(_, { returnRef: n, disable: !a }),
-        (0, i.jsx)(a ? A : h, { ...c, ref: _ })
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        MV: E,
+        lG: function (e) {
+            let {
+                    ref: t,
+                    returnRef: n,
+                    modal: a = !0,
+                    setDialogRef: s,
+                    trackingProps: o,
+                    trackingComponentName: d = "Dialog",
+                    ...c
+                } = e,
+                _ = r.useRef(null);
+            (r.useImperativeHandle(t, () => _.current),
+                r.useEffect(
+                    () => (
+                        s?.(_.current),
+                        () => {
+                            s?.(null);
+                        }
+                    ),
+                    [],
+                ));
+            let { trackImpression: E } = (0, u.G9)();
+            return (
+                r.useEffect(() => {
+                    null != E && null != o && E({ componentName: d, payload: o });
+                }, [E, d, o]),
+                (0, l.tj)(_, { returnRef: n, disable: !a }),
+                (0, i.jsx)(a ? A : h, { ...c, ref: _ })
+            );
+        },
+        zR: _,
+    },
+);

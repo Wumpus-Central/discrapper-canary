@@ -1,7 +1,6 @@
-n.d(t, { H: () => T, Q: () => O });
 var i = n(477900),
     r = n(582128),
-    a = n(38339),
+    a = n(149110),
     s = n(503698),
     l = n.n(s),
     o = n(284009),
@@ -19,22 +18,11 @@ function m(e) {
     let t = (0, u.p3)(e, I.qd);
     return (null == t && (t = (0, u.wB)(e, h.IP)), t ?? null);
 }
-function T(e, t) {
-    if (e.contains(t)) return !0;
-    let n = m(t);
-    for (; null != n;) {
-        let t = p.get(n);
-        if (null == t) break;
-        if (e.contains(t)) return !0;
-        n = m(t);
-    }
-    return !1;
-}
-function g(e) {
+function T(e) {
     let { positionKey: t, position: n, align: i } = e;
     return null != t ? t : `${n}:${i}`;
 }
-function S(e, t, n, i, r) {
+function g(e, t, n, i, r) {
     switch (e) {
         case "top":
             return (
@@ -53,7 +41,7 @@ function S(e, t, n, i, r) {
             throw Error(`Unexpected position: ${e}`);
     }
 }
-function N(e) {
+function S(e) {
     switch (e) {
         case "top":
             return "bottom";
@@ -71,11 +59,11 @@ function N(e) {
             throw Error();
     }
 }
-function C(e) {
+function N(e) {
     let { targetRef: t, overrideTargetRect: n } = e;
     return null != n ? n : (d()(null != t.current, "Invalid ref"), t.current.getBoundingClientRect());
 }
-class O extends r.Component {
+class C extends r.Component {
     static defaultProps = { nudgeAlignIntoViewport: !1, spacing: 0, autoInvert: !1, disablePointerEvents: !1 };
     elementRef = r.createRef();
     resizeObserver;
@@ -166,7 +154,7 @@ class O extends r.Component {
     calculatePositionStyle(e, t, n, i) {
         var r, a;
         let { spacing: s = 0 } = this.props,
-            l = C(this.props),
+            l = N(this.props),
             o = n.getBoundingClientRect(),
             d =
                 ((r = o.left),
@@ -209,15 +197,15 @@ class O extends r.Component {
         let r = (0, f.J$)(i),
             { style: a, nudge: s } = this.calculatePositionStyle(e, i, r),
             l = { position: e, style: a, nudge: s },
-            o = S(e, a, i, r, n),
+            o = g(e, a, i, r, n),
             c = o,
             u = null,
             _ = 0;
         if (t && o < 0) {
-            let t = N(e),
+            let t = S(e),
                 a = this.calculatePositionStyle(t, i, r);
             ((u = a.style), (_ = a.nudge));
-            let s = S(t, u, i, r, n);
+            let s = g(t, u, i, r, n);
             if ((s > o && ((l = { position: t, style: u, nudge: _ }), (c = s)), o < 0 && s < 0)) {
                 let a,
                     s = l.position;
@@ -231,7 +219,7 @@ class O extends r.Component {
                     a !== t
                 ) {
                     let e = this.calculatePositionStyle(a, i, r, s),
-                        t = S(N(s), e.style, i, r, n);
+                        t = g(S(s), e.style, i, r, n);
                     t > c && ((l = { position: s, ...e }), (c = t));
                 }
             }
@@ -282,7 +270,7 @@ class O extends r.Component {
     componentDidUpdate(e, t) {
         var n;
         let i, r;
-        ((g(e) !== g(this.props) || ((n = this.props), (i = C(e)), (r = C(n)), i.top !== r.top || i.left !== r.left)) &&
+        ((T(e) !== T(this.props) || ((n = this.props), (i = N(e)), (r = N(n)), i.top !== r.top || i.left !== r.left)) &&
             this.updatePosition(),
             t.position !== this.state.position && this.props.onPositionChange?.(this.state.position));
     }
@@ -353,3 +341,21 @@ class O extends r.Component {
         });
     }
 }
+n.d(
+    t,
+    {},
+    {
+        H: function (e, t) {
+            if (e.contains(t)) return !0;
+            let n = m(t);
+            for (; null != n;) {
+                let t = p.get(n);
+                if (null == t) break;
+                if (e.contains(t)) return !0;
+                n = m(t);
+            }
+            return !1;
+        },
+        Q: C,
+    },
+);

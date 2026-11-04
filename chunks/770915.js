@@ -1,10 +1,10 @@
 t.exports = {
-    YL: "tooltip_fa450d",
-    BM: "tooltipLayer_fa450d",
-    mj: "richTooltip_fa450d",
-    rv: "tooltipContent_fa450d",
-    Rq: "caretIcon_fa450d",
-    vb: "caretFill_fa450d",
-    UL: "caretStroke_fa450d",
-    Cl: "tooltipWithShortcut_fa450d",
+    YL: "tooltip_ZDdyhE",
+    BM: "tooltipLayer_ZDdyhE",
+    mj: "richTooltip_ZDdyhE",
+    rv: "tooltipContent_ZDdyhE",
+    Rq: "caretIcon_ZDdyhE",
+    vb: "caretFill_ZDdyhE",
+    UL: "caretStroke_ZDdyhE",
+    Cl: "tooltipWithShortcut_ZDdyhE",
 };

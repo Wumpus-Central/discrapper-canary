@@ -1,9 +1,9 @@
-(n.d(t, { A: () => O, J: () => w }), n(323874), n(14289), n(35956));
+(n(323874), n(14289), n(35956));
 var l = n(477900),
     i = n(582128),
     r = n(503698),
     s = n.n(r),
-    a = n(17928),
+    a = n(855986),
     o = n(939249),
     u = n(192308),
     c = n(952270),
@@ -20,9 +20,9 @@ var l = n(477900),
     C = n(734057),
     A = n(515718),
     b = n(851023),
-    I = n(215497),
-    v = n(105292),
-    N = n(185973),
+    I = n(198554),
+    v = n(792996),
+    N = n(683825),
     T = n(429955);
 let k = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
 function j(e) {
@@ -221,156 +221,163 @@ function w(e) {
                 }),
             });
 }
-function O(e) {
-    let {
-            channelId: t,
-            draftType: r,
-            upload: o,
-            keyboardModeEnabled: g,
-            label: x,
-            size: E = I.L.MEDIUM,
-            canEdit: y = !0,
-            hideFileName: S = !1,
-            clip: A,
-        } = e,
-        k = null != A,
-        j = E === I.L.SMALL,
-        _ = (0, a.bG)([C.A], () => C.A.getChannel(t)?.guild_id);
-    function R() {
-        p.A.remove(t, o.id, r);
-    }
-    function O(e) {
-        (e.stopPropagation(), k)
-            ? (0, u.openModalLazy)(async () => {
-                  let { default: e } = await Promise.all([
-                      n.e("459368"),
-                      n.e("821717"),
-                      n.e("269714"),
-                      n.e("19385"),
-                      n.e("718955"),
-                      n.e("679502"),
-                      n.e("126301"),
-                      n.e("201074"),
-                      n.e("879641"),
-                      n.e("498167"),
-                      n.e("124006"),
-                      n.e("858337"),
-                      n.e("3131"),
-                      n.e("220287"),
-                      n.e("757598"),
-                      n.e("203930"),
-                      n.e("903663"),
-                      n.e("177104"),
-                      n.e("647177"),
-                      n.e("918024"),
-                      n.e("876990"),
-                      n.e("975945"),
-                      n.e("480436"),
-                      n.e("901922"),
-                      n.e("466147"),
-                      n.e("507406"),
-                      n.e("664430"),
-                      n.e("838090"),
-                      n.e("501962"),
-                      n.e("736926"),
-                      n.e("746623"),
-                      n.e("280559"),
-                      n.e("974049"),
-                      n.e("237715"),
-                      n.e("895008"),
-                      n.e("306270"),
-                      n.e("98717"),
-                      n.e("29621"),
-                  ]).then(n.bind(n, 723028));
-                  return (n) => (0, l.jsx)(e, { ...n, channelId: t, clipId: A.id, onEdit: R });
-              })
-            : (0, u.openModalLazy)(async () => {
-                  let { default: e } = await Promise.all([
-                      n.e("142753"),
-                      n.e("865429"),
-                      n.e("268582"),
-                      n.e("24889"),
-                      n.e("68532"),
-                      n.e("165778"),
-                  ]).then(n.bind(n, 342889));
-                  return (n) =>
-                      (0, l.jsx)(e, {
-                          ...n,
-                          upload: o,
-                          onSubmit: (e) => {
-                              let { name: n, description: l, spoiler: i } = e;
-                              p.A.update(t, o.id, r, { filename: n, description: l, spoiler: i });
-                          },
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let {
+                    channelId: t,
+                    draftType: r,
+                    upload: o,
+                    keyboardModeEnabled: g,
+                    label: x,
+                    size: E = I.L.MEDIUM,
+                    canEdit: y = !0,
+                    hideFileName: S = !1,
+                    clip: A,
+                } = e,
+                k = null != A,
+                j = E === I.L.SMALL,
+                _ = (0, a.bG)([C.A], () => C.A.getChannel(t)?.guild_id);
+            function R() {
+                p.A.remove(t, o.id, r);
+            }
+            function O(e) {
+                (e.stopPropagation(), k)
+                    ? (0, u.mM)(async () => {
+                          let { default: e } = await Promise.all([
+                              n.e(459368),
+                              n.e(821717),
+                              n.e(269714),
+                              n.e(19385),
+                              n.e(718955),
+                              n.e(679502),
+                              n.e(126301),
+                              n.e(201074),
+                              n.e(879641),
+                              n.e(498167),
+                              n.e(124006),
+                              n.e(858337),
+                              n.e(3131),
+                              n.e(220287),
+                              n.e(757598),
+                              n.e(203930),
+                              n.e(903663),
+                              n.e(177104),
+                              n.e(647177),
+                              n.e(918024),
+                              n.e(817551),
+                              n.e(546601),
+                              n.e(480436),
+                              n.e(901922),
+                              n.e(466147),
+                              n.e(507406),
+                              n.e(664430),
+                              n.e(838090),
+                              n.e(501962),
+                              n.e(736926),
+                              n.e(746623),
+                              n.e(280559),
+                              n.e(974049),
+                              n.e(237715),
+                              n.e(895008),
+                              n.e(306270),
+                              n.e(823077),
+                              n.e(29621),
+                          ]).then(n.bind(n, 723028));
+                          return (n) => (0, l.jsx)(e, { ...n, channelId: t, clipId: A.id, onEdit: R });
+                      })
+                    : (0, u.mM)(async () => {
+                          let { default: e } = await Promise.all([
+                              n.e(142753),
+                              n.e(865429),
+                              n.e(268582),
+                              n.e(24889),
+                              n.e(68532),
+                              n.e(669865),
+                          ]).then(n.bind(n, 507536));
+                          return (n) =>
+                              (0, l.jsx)(e, {
+                                  ...n,
+                                  upload: o,
+                                  onSubmit: (e) => {
+                                      let { name: n, description: l, spoiler: i } = e;
+                                      p.A.update(t, o.id, r, { filename: n, description: l, spoiler: i });
+                                  },
+                              });
                       });
-              });
-    }
-    return (0, l.jsxs)(I.A, {
-        actions: (0, l.jsxs)(i.Fragment, {
-            children: [
-                y
-                    ? (0, l.jsx)(b.A, {
-                          className: s()({ [T.action]: j }),
-                          tooltip: k ? v.intl.string(v.t.MYgdY2) : v.intl.string(v.t.cuurzA),
-                          onClick: () => {
-                              p.A.update(t, o.id, r, { spoiler: !o.spoiler });
-                          },
-                          children: o.spoiler
-                              ? (0, l.jsx)(c.EyeSlashIcon, {
-                                    size: "md",
-                                    color: "currentColor",
-                                    className: s()({ [T.actionBarIcon]: j }),
-                                })
-                              : (0, l.jsx)(d.EyeIcon, {
-                                    size: "xs",
-                                    color: "currentColor",
-                                    className: s()({ [T.actionBarIcon]: j }),
-                                }),
-                      })
-                    : null,
-                y
-                    ? (0, l.jsx)(b.A, {
-                          className: s()({ [T.action]: j }),
-                          tooltip: k ? v.intl.string(N.default.V8YlF7) : v.intl.string(v.t.Y8ujqr),
-                          onClick: O,
-                          children: (0, l.jsx)(h.PencilIcon, {
-                              size: "xs",
-                              color: "currentColor",
-                              className: s()({ [T.actionBarIcon]: j }),
-                          }),
-                      })
-                    : null,
-                (0, l.jsx)(b.A, {
-                    className: s()({ [T.action]: j }),
-                    tooltip: k ? v.intl.string(v.t.MskAXa) : v.intl.string(v.t.vN7REz),
-                    onClick: R,
-                    dangerous: !0,
-                    children: (0, l.jsx)(m.TrashIcon, {
-                        size: "md",
-                        color: "currentColor",
-                        className: s()({ [T.actionBarIcon]: j }),
-                    }),
+            }
+            return (0, l.jsxs)(I.A, {
+                actions: (0, l.jsxs)(i.Fragment, {
+                    children: [
+                        y
+                            ? (0, l.jsx)(b.A, {
+                                  className: s()({ [T.action]: j }),
+                                  tooltip: k ? v.intl.string(v.t.MYgdY2) : v.intl.string(v.t.cuurzA),
+                                  onClick: () => {
+                                      p.A.update(t, o.id, r, { spoiler: !o.spoiler });
+                                  },
+                                  children: o.spoiler
+                                      ? (0, l.jsx)(c.EyeSlashIcon, {
+                                            size: "md",
+                                            color: "currentColor",
+                                            className: s()({ [T.actionBarIcon]: j }),
+                                        })
+                                      : (0, l.jsx)(d.EyeIcon, {
+                                            size: "xs",
+                                            color: "currentColor",
+                                            className: s()({ [T.actionBarIcon]: j }),
+                                        }),
+                              })
+                            : null,
+                        y
+                            ? (0, l.jsx)(b.A, {
+                                  className: s()({ [T.action]: j }),
+                                  tooltip: k ? v.intl.string(N.default.V8YlF7) : v.intl.string(v.t.Y8ujqr),
+                                  onClick: O,
+                                  children: (0, l.jsx)(h.PencilIcon, {
+                                      size: "xs",
+                                      color: "currentColor",
+                                      className: s()({ [T.actionBarIcon]: j }),
+                                  }),
+                              })
+                            : null,
+                        (0, l.jsx)(b.A, {
+                            className: s()({ [T.action]: j }),
+                            tooltip: k ? v.intl.string(v.t.MskAXa) : v.intl.string(v.t.vN7REz),
+                            onClick: R,
+                            dangerous: !0,
+                            children: (0, l.jsx)(m.TrashIcon, {
+                                size: "md",
+                                color: "currentColor",
+                                className: s()({ [T.actionBarIcon]: j }),
+                            }),
+                        }),
+                    ],
                 }),
-            ],
-        }),
-        draftType: r,
-        id: o.id,
-        channelId: t,
-        handleEditModal: O,
-        keyboardModeEnabled: g,
-        size: E,
-        className: s()({ [T.attachmentItemSmall]: j }),
-        children: [
-            (0, l.jsx)(w, { upload: o, size: E, clip: A, guildId: _ }),
-            !S &&
-                (0, l.jsx)("div", {
-                    className: T.filenameContainer,
-                    "aria-hidden": !0,
-                    children: (0, l.jsx)(f.E, {
-                        className: T.filename,
-                        variant: "body-sm/normal",
-                        children: null != x ? x : k ? A.name : o.filename,
-                    }),
-                }),
-        ],
-    });
-}
+                draftType: r,
+                id: o.id,
+                channelId: t,
+                handleEditModal: O,
+                keyboardModeEnabled: g,
+                size: E,
+                className: s()({ [T.attachmentItemSmall]: j }),
+                children: [
+                    (0, l.jsx)(w, { upload: o, size: E, clip: A, guildId: _ }),
+                    !S &&
+                        (0, l.jsx)("div", {
+                            className: T.filenameContainer,
+                            "aria-hidden": !0,
+                            children: (0, l.jsx)(f.E, {
+                                className: T.filename,
+                                variant: "body-sm/normal",
+                                children: null != x ? x : k ? A.name : o.filename,
+                            }),
+                        }),
+                ],
+            });
+        },
+        J: w,
+    },
+);

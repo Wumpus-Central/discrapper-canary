@@ -1,0 +1,137 @@
+.header_wGoWhP {
+    padding: 24px 16px 0;
+    position: relative;
+    text-align: center
+}
+
+.title_wGoWhP {
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 8px
+}
+
+.closeButton_wGoWhP {
+    inset-inline-end: 12px;
+    position: absolute;
+    top: 12px
+}
+
+.inputForm_wGoWhP {
+    margin-bottom: 16px
+}
+
+.formTitle_wGoWhP {
+    color: var(--interactive-text-default);
+    margin-bottom: 8px
+}
+
+.formTitle_wGoWhP.error_wGoWhP {
+    color: var(--text-feedback-critical)
+}
+
+.examplesForm_wGoWhP {
+    margin-bottom: 16px
+}
+
+.sampleLinks_wGoWhP {
+    padding: var(--space-8) 0
+}
+
+.sampleLink_wGoWhP {
+    background-color: var(--background-mod-muted);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-xs);
+    color: var(--text-strong);
+    display: inline-block;
+    font-size: 14px;
+    line-height: 18px;
+    margin: var(--space-4);
+    padding: var(--space-4)
+}
+
+.footer_wGoWhP {
+    align-items: center;
+    justify-content: space-between
+}
+
+.joinFirstActions_wGoWhP {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-block: var(--space-4) var(--space-20)
+}
+
+@media (max-width:400px) {
+    .joinFirstActions_wGoWhP {
+        grid-template-columns: minmax(0, 1fr)
+    }
+}
+
+.joinFirstContent_wGoWhP {
+    padding-top: var(--space-24)
+}
+
+.joinFirstFooter_wGoWhP {
+    --text-brand: var(--text-link);
+    background-color: var(--background-mod-muted);
+    border-top: 1px solid var(--border-subtle);
+    justify-content: center;
+    text-align: center
+}
+
+.rowTextContainer_wGoWhP {
+    margin: 38px auto 16px;
+    text-align: center
+}
+
+.rowContainer_wGoWhP {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 16px;
+    padding: 12px;
+    text-align: start
+}
+
+.rowContainer_wGoWhP:hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.keyboard-mode .rowContainer_wGoWhP:focus {
+    background-color: var(--interactive-background-selected)
+}
+
+.rowContainer_wGoWhP:active {
+    background-color: var(--interactive-background-active)
+}
+
+.rowIcon_wGoWhP {
+    margin-inline-end: 12px
+}
+
+.rowText_wGoWhP {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.rowArrow_wGoWhP {
+    margin-inline: auto 16px
+}
+
+.modal_CHlSZL {
+    justify-content: center;
+    max-width: var(--modal-width-small);
+    width: 100%
+}
+
+.slideWrapper_CHlSZL {
+    max-height: calc(100vh - 48px)
+}
+
+.joinFirstModal_CHlSZL,
+.joinFirstSlideWrapper_CHlSZL {
+    width: min(var(--modal-width-small), calc(100vw - var(--space-32)))
+}
+
+/*# sourceMappingURL=f4348808a0b37abb.css.map*/

@@ -1,4 +1,4 @@
-(s.d(l, { Ay: () => eJ, Yl: () => eH }), s(321073));
+s(321073);
 var i = s(477900),
     t = s(582128),
     n = s(503698),
@@ -6,8 +6,8 @@ var i = s(477900),
     o = s(736819),
     d = s(738678),
     c = s(12470),
-    r = s(17928),
-    u = s(661531),
+    r = s(855986),
+    u = s(646514),
     p = s(31300),
     m = s(428689),
     A = s(289020),
@@ -45,14 +45,14 @@ var i = s(477900),
     H = s(556525),
     J = s(609425),
     Q = s(73392),
-    F = s(51092),
+    F = s(259264),
     K = s(40056),
-    q = s(117029),
-    Z = s(612258),
+    Z = s(117029),
+    q = s(612258),
     $ = s(551826),
-    ee = s(567249),
+    ee = s(293432),
     el = s(574172),
-    es = s(264378),
+    es = s(986491),
     ei = s(665691),
     et = s(635885),
     en = s(421768),
@@ -62,9 +62,9 @@ var i = s(477900),
     ec = s(461782),
     er = s(614518),
     eu = s(706787),
-    ep = s(280450),
+    ep = s(46653),
     em = s(111162),
-    eA = s(477653),
+    eA = s(718197),
     eh = s(290863),
     ex = s(485296),
     eI = s(977997),
@@ -72,14 +72,14 @@ var i = s(477900),
     eT = s(790381),
     ej = s(266080),
     eN = s(723702),
-    ef = s(19575),
+    ef = s(253400),
     eg = s(141035),
     eE = s(541157),
     eb = s(654820),
     eC = s(804980),
     eS = s(272812),
     ev = s(304047),
-    eO = s(802867),
+    eO = s(555148),
     eR = s(83982),
     eV = s(345812),
     eM = s(110234),
@@ -88,7 +88,7 @@ var i = s(477900),
     e_ = s(31408),
     eD = s(778712),
     eL = s(731854),
-    eU = s(105292),
+    eU = s(792996),
     eG = s(584841);
 let ew = [eP.lp.ACTIVITY],
     ez = t.memo((e) => {
@@ -125,7 +125,7 @@ let ew = [eP.lp.ACTIVITY],
                 controlsBottom: J,
             } = e,
             Q = t.useContext(ec.vG) || B,
-            [q, ee] = t.useState(!1),
+            [Z, ee] = t.useState(!1),
             el = ed.Q_.useSetting(),
             es = (0, r.bG)([em.default], () => em.default.isStreamInfoOverlayEnabled),
             [et, eh] = t.useState(!1),
@@ -183,12 +183,12 @@ let ew = [eP.lp.ACTIVITY],
                 }),
             eF = x.type === eP.lp.STREAM && ej === ey,
             eK = (0, r.bG)([er.A], () => (x.type === eP.lp.USER && null != ej ? er.A.getEffectForUserId(ej) : null)),
-            eq = (0, r.bG)([eI.A], () => eI.A.getVoicePlatformForChannel(C.id, ej ?? ek.dJq)),
-            eZ = (0, ei.UF)({ userId: ej, channelId: C.id }),
+            eZ = (0, r.bG)([eI.A], () => eI.A.getVoicePlatformForChannel(C.id, ej ?? "")),
+            eq = (0, ei.UF)({ userId: ej, channelId: C.id }),
             e$ = (0, ei.DY)({ streamKey: x.type === eP.lp.STREAM ? x.id : null, channelId: C.id }),
             e0 = t.useMemo(
-                () => (x.type === eP.lp.STREAM ? (e$ ?? !1) : x.type === eP.lp.USER && (eZ ?? !1)),
-                [e$, eZ, x.type],
+                () => (x.type === eP.lp.STREAM ? (e$ ?? !1) : x.type === eP.lp.USER && (eq ?? !1)),
+                [e$, eq, x.type],
             );
         t.useEffect(() => {
             ee(k);
@@ -196,30 +196,30 @@ let ew = [eP.lp.ACTIVITY],
         let e1 = t.useCallback(() => {
                 null != ej && _.default.toggleLocalMute(ej, eL.x.STREAM);
             }, [ej]),
-            e7 = t.useCallback(
+            e8 = t.useCallback(
                 (e) => {
                     j?.(x, e);
                 },
                 [j, x],
             ),
-            e8 = t.useCallback(
+            e6 = t.useCallback(
                 (e) => {
                     y?.(x, e);
                 },
                 [y, x],
             ),
-            e2 = t.useCallback(
+            e7 = t.useCallback(
                 (e, l, s) => {
                     T?.(x, e, l, s);
                 },
                 [T, x],
             ),
-            e6 = null,
+            e2 = null,
             e5 = null,
             e4 = "";
         switch (x.type) {
             case eP.lp.STREAM:
-                ((e6 = (0, i.jsx)(eO.A, {
+                ((e2 = (0, i.jsx)(eO.A, {
                     participant: x,
                     selected: R,
                     popoutType: I,
@@ -239,7 +239,7 @@ let ew = [eP.lp.ACTIVITY],
                     (e4 = eU.intl.formatToPlainString(eU.t.gHPz3Q, { streamerName: x.user.username })));
                 break;
             case eP.lp.USER:
-                ((e6 = (0, i.jsx)(eR.A, {
+                ((e2 = (0, i.jsx)(eR.A, {
                     channel: C,
                     inCall: O,
                     participant: x,
@@ -263,11 +263,11 @@ let ew = [eP.lp.ACTIVITY],
                     (e4 = eU.intl.formatToPlainString(eU.t["iC/x/Q"], { username: x.user.username })));
                 break;
             case eP.lp.ACTIVITY:
-                ((e6 = (0, i.jsx)(eC.Ay, { interactible: k, participant: x, selected: R, channel: C, width: S })),
+                ((e2 = (0, i.jsx)(eC.Ay, { interactible: k, participant: x, selected: R, channel: C, width: S })),
                     (e4 = eU.intl.formatToPlainString(eU.t.YCvOsO, { activityName: eN?.name })));
                 break;
             case eP.lp.HIDDEN_STREAM:
-                e6 = (0, i.jsx)(eO.A, {
+                e2 = (0, i.jsx)(eO.A, {
                     participant: x,
                     selected: R,
                     width: S,
@@ -315,9 +315,9 @@ let ew = [eP.lp.ACTIVITY],
                                 children: (0, i.jsxs)(h.s, {
                                     "aria-label": e4,
                                     className: eG.lG,
-                                    onDoubleClick: e8,
-                                    onContextMenu: (e) => e2(e, x.type === eP.lp.STREAM),
-                                    onClick: e7,
+                                    onDoubleClick: e6,
+                                    onContextMenu: (e) => e7(e, x.type === eP.lp.STREAM),
+                                    onClick: e8,
                                     onMouseDown: N,
                                     onKeyDown: f,
                                     focusProps: { offset: 1 },
@@ -340,7 +340,7 @@ let ew = [eP.lp.ACTIVITY],
                                                   }),
                                               })
                                             : null,
-                                        e6,
+                                        e2,
                                         V ? null : (0, i.jsx)("div", { className: eG.hD, children: e5 }),
                                         R
                                             ? (0, i.jsx)("div", {
@@ -363,14 +363,14 @@ let ew = [eP.lp.ACTIVITY],
                                                   hasVideo: eH ?? !1,
                                                   ...eQ,
                                                   idle: Q,
-                                                  platform: eq,
+                                                  platform: eZ,
                                                   title: (0, eg.A)(C, x),
                                                   blocked: P,
                                                   ignored: U,
                                                   localVideoDisabled: eV,
                                                   videoToggleState: ez,
                                                   hideAudioIcon: eF,
-                                                  onContextMenu: e2,
+                                                  onContextMenu: e7,
                                                   onToggleMute: e1,
                                                   participantUserId: ej,
                                                   channel: C,
@@ -392,7 +392,7 @@ let ew = [eP.lp.ACTIVITY],
                                 }),
                             }),
                             el && es && et && (0, i.jsx)(eb.A, { currentUserId: ey, participant: x }),
-                            (0, i.jsx)(Z.A, { isFiring: q, callTileRef: e9 }),
+                            (0, i.jsx)(q.A, { isFiring: Z, callTileRef: e9 }),
                         ],
                     }),
                 }),
@@ -441,7 +441,7 @@ function eX(e) {
         o = t.useMemo(() => (0, X.A)(l, s), [l, s]),
         d = (0, r.bG)([ee.A], () => ee.A.getIsAlwaysOnTop(o)),
         c = t.useCallback(() => {
-            ((0, B.XJ)(G.A.CALL_TILE_POPOUT, B.OP.STAY_ON_TOP, !d), el.setAlwaysOnTop(o, !d));
+            ((0, B.XJ)(G.A.CALL_TILE_POPOUT, B.OP.STAY_ON_TOP, !d), el.uR(o, !d));
         }, [o, d]);
     return eN.isPlatformEmbedded && ef.Ay.supportsFeature(ek.BYE.POPOUT_WINDOWS)
         ? (0, i.jsx)(eW, {
@@ -476,7 +476,7 @@ let eB = t.memo((e) => {
             serverMuted: H,
             serverDeafened: F,
             hasVideo: K,
-            hideAudioIcon: Z,
+            hideAudioIcon: q,
             onToggleMute: $,
             popoutType: ee,
             paused: ei,
@@ -505,14 +505,14 @@ let eB = t.memo((e) => {
         }
         return (ey.A.addChangeListener(l), () => ey.A.removeChangeListener(l));
     }, []);
-    let eb = !Z && x === eP.lp.STREAM && K && (!eN || W),
+    let eb = !q && x === eP.lp.STREAM && K && (!eN || W),
         eC = (function (e) {
             let { localMuted: l, serverMuted: s, serverDeafened: i, deafened: t, muted: n, soundboardMuted: a } = e;
             return i ? I.T : s ? y.O : t ? T.c : l ? y.O : n ? j.z : a ? N.N : null;
         })({ localMuted: W, serverMuted: H, serverDeafened: F, deafened: w, muted: L, soundboardMuted: ed }),
         eS = (0, v.z)({ value: null != en ? en : 0, config: { ...o.config.stiff, clamp: !0 } }, "animate-always"),
         eO = [];
-    (d && x === eP.lp.STREAM && eO.push((0, i.jsx)(q.A, { streamId: ea, paused: ei }, "zoom-controls")),
+    (d && x === eP.lp.STREAM && eO.push((0, i.jsx)(Z.A, { streamId: ea, paused: ei }, "zoom-controls")),
         d
             ? ee === Y.N.CALL_TILE &&
               (eO.push(
@@ -686,5 +686,5 @@ let eB = t.memo((e) => {
     });
 });
 eB.displayName = "CallTileOverlay";
-let eH = F.$,
-    eJ = ez;
+let eH = F.$;
+s.d(l, {}, { Ay: ez, Yl: eH });

@@ -1,4 +1,3 @@
-e.d(l, { default: () => A });
 var i = e(477900);
 e(582128);
 var t = e(284009),
@@ -8,13 +7,13 @@ var t = e(284009),
     r = e(939249),
     o = e(534514),
     d = e(730134),
-    p = e(289498),
-    u = e(80558),
+    u = e(289498),
+    p = e(80558),
     m = e(429913),
     x = e(672130),
-    h = e(874490),
+    h = e(643068),
     j = e(534952),
-    f = e(105292),
+    f = e(792996),
     v = e(556783);
 function N(n) {
     let {
@@ -23,7 +22,7 @@ function N(n) {
             includedPlatformTypes: t,
             includeApplicationConnections: s = !0,
         } = n,
-        a = (0, m.A)(s ? (0, j.getMigratedApplicationIdentityConnectionsScreenApplications)() : []),
+        a = (0, m.A)(s ? (0, j.Gl)() : []),
         c = (0, h.gn)();
     return (0, i.jsxs)("div", {
         className: v.lA,
@@ -33,7 +32,7 @@ function N(n) {
                 .filter((n) => !e?.has(n.type) && (null == t || t.has(n.type)))
                 .map((n) =>
                     (0, i.jsx)(
-                        p.A,
+                        u.A,
                         { type: n.type, className: v.W2, innerClassName: v.Uz, onConnect: () => l(n.type) },
                         n.type,
                     ),
@@ -100,7 +99,7 @@ function y(n) {
 }
 function g(n) {
     let { applicationId: l, onCompleteIdentityApplication: e } = n,
-        t = (0, u.O)(l);
+        t = (0, p.O)(l);
     if (null == t) return null;
     let s = t.bot;
     return (0, i.jsxs)(r.D, {
@@ -144,51 +143,57 @@ function C(n) {
               ],
           });
 }
-function A(n) {
-    let {
-        transitionState: l,
-        onComplete: e,
-        onClose: t,
-        excludedPlatformTypes: s,
-        includedPlatformTypes: c,
-        integrations: r,
-        onCompleteApplication: o,
-        includeApplicationConnections: d,
-        gameApplicationIds: p,
-        onCompleteIdentityApplication: u,
-    } = n;
-    return (0, i.jsxs)(a.a, {
-        title: f.intl.string(f.t.syl6HS),
-        transitionState: l,
-        onClose: t,
-        actions: [],
-        children: [
-            (0, i.jsx)(N, {
-                onComplete: function (n) {
-                    (e(n), t());
-                },
+e.d(
+    l,
+    {},
+    {
+        default: function (n) {
+            let {
+                transitionState: l,
+                onComplete: e,
+                onClose: t,
                 excludedPlatformTypes: s,
                 includedPlatformTypes: c,
-                includeApplicationConnections: d,
-            }),
-            (0, i.jsx)(y, {
                 integrations: r,
-                onCompleteApplication:
-                    null != o
-                        ? function (n) {
-                              (o?.(n), t());
-                          }
-                        : void 0,
-            }),
-            (0, i.jsx)(C, {
-                gameApplicationIds: p ?? null,
-                onCompleteIdentityApplication:
-                    null != u
-                        ? function (n) {
-                              (u?.(n), t());
-                          }
-                        : void 0,
-            }),
-        ],
-    });
-}
+                onCompleteApplication: o,
+                includeApplicationConnections: d,
+                gameApplicationIds: u,
+                onCompleteIdentityApplication: p,
+            } = n;
+            return (0, i.jsxs)(a.a, {
+                title: f.intl.string(f.t.syl6HS),
+                transitionState: l,
+                onClose: t,
+                actions: [],
+                children: [
+                    (0, i.jsx)(N, {
+                        onComplete: function (n) {
+                            (e(n), t());
+                        },
+                        excludedPlatformTypes: s,
+                        includedPlatformTypes: c,
+                        includeApplicationConnections: d,
+                    }),
+                    (0, i.jsx)(y, {
+                        integrations: r,
+                        onCompleteApplication:
+                            null != o
+                                ? function (n) {
+                                      (o?.(n), t());
+                                  }
+                                : void 0,
+                    }),
+                    (0, i.jsx)(C, {
+                        gameApplicationIds: u ?? null,
+                        onCompleteIdentityApplication:
+                            null != p
+                                ? function (n) {
+                                      (p?.(n), t());
+                                  }
+                                : void 0,
+                    }),
+                ],
+            });
+        },
+    },
+);

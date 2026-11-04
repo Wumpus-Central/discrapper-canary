@@ -1,7 +1,4 @@
-(t.d(r, { C: () => d, JE: () => v, NE: () => m, VU: () => w, bA: () => y, eo: () => E, lM: () => b, mb: () => A }),
-    t(323874),
-    t(14289),
-    t(35956));
+(t(323874), t(14289), t(35956));
 var l = t(582128),
     o = t(435558),
     n = t(196765),
@@ -149,77 +146,84 @@ let v = (0, n.v)((e) => ({
     setPreviewProfileFrameKey: (r) =>
         (0, a.r)(() => e((e) => ({ previewProfileFrameKey: r, previewEnabled: null != r || p(e) }))),
 }));
-function m() {
-    let e = v((e) => e.collectionAssets),
-        r = v((e) => e.avatarDecorationAssets);
-    return l.useMemo(
-        () => ({
-            collectionAssets: Object.values(e).sort((e, r) => e.name.localeCompare(r.name)),
-            avatarDecorationAssets: Object.values(r).sort((e, r) => e.name.localeCompare(r.name)),
-        }),
-        [e, r],
-    );
-}
-function A(e) {
-    return v((r) => (r.previewEnabled ? r.collectionAssets[e]?.src : null));
-}
-function d(e) {
-    let { previewEnabled: r, previewProfileEffectSkuId: t } = v(),
-        n = (0, s.ZK)(r ? t : null);
-    return l.useMemo(() => {
-        if (null == n || null == e) return null;
-        let { effects: r, stillFrames: t } = n,
-            l = null != t && Object.keys(t).length > 0;
-        if (0 === r.length && !l) return null;
-        let a = (0, o.cloneDeep)(e);
-        return (
-            (a.title = n.name),
-            (a.effects = r.map((e) => {
-                let { base64: r, ...t } = e;
-                return t;
-            })),
-            l &&
-                ((a.reducedMotionSrc = t[i.qH.REDUCED_MOTION]?.src ?? ""),
-                (a.staticFrameSrc = t[i.qH.STATIC]?.src ?? ""),
-                (a.thumbnailPreviewSrc = t[i.qH.THUMBNAIL]?.src ?? "")),
-            a
-        );
-    }, [n, e]);
-}
-function w() {
-    return v((e) =>
-        e.previewEnabled && null != e.previewAvatarDecorationKey
-            ? (e.avatarDecorationAssets[e.previewAvatarDecorationKey]?.src ?? null)
-            : null,
-    );
-}
-function b() {
-    let e = v((e) =>
-        e.previewEnabled && null != e.previewProfileFrameKey
-            ? (e.profileFrameAssets[e.previewProfileFrameKey] ?? null)
-            : null,
-    );
-    return l.useMemo(() => (null == e ? null : (0, c.i)(e)), [e]);
-}
-function E() {
-    let e = v((e) =>
-        e.previewEnabled && null != e.previewProfileFrameKey
-            ? (e.profileFrameAssets[e.previewProfileFrameKey] ?? null)
-            : null,
-    );
-    return l.useMemo(() => {
-        if (null == e) return null;
-        let r = {};
-        for (let t of e.layers) {
-            let l = e.layerSrcByLayerId[t.id];
-            if (null == l) continue;
-            let o = new Image();
-            ((o.src = l), (r[t.id] = o));
-        }
-        return { layers: e.layers, layerData: r, css: (0, c.i)(e) };
-    }, [e]);
-}
-function y() {
-    let e = v((e) => e.profileFrameAssets);
-    return l.useMemo(() => Object.values(e).sort((e, r) => e.key.localeCompare(r.key)), [e]);
-}
+t.d(
+    r,
+    {},
+    {
+        C: function (e) {
+            let { previewEnabled: r, previewProfileEffectSkuId: t } = v(),
+                n = (0, s.ZK)(r ? t : null);
+            return l.useMemo(() => {
+                if (null == n || null == e) return null;
+                let { effects: r, stillFrames: t } = n,
+                    l = null != t && Object.keys(t).length > 0;
+                if (0 === r.length && !l) return null;
+                let a = (0, o.cloneDeep)(e);
+                return (
+                    (a.title = n.name),
+                    (a.effects = r.map((e) => {
+                        let { base64: r, ...t } = e;
+                        return t;
+                    })),
+                    l &&
+                        ((a.reducedMotionSrc = t[i.qH.REDUCED_MOTION]?.src ?? ""),
+                        (a.staticFrameSrc = t[i.qH.STATIC]?.src ?? ""),
+                        (a.thumbnailPreviewSrc = t[i.qH.THUMBNAIL]?.src ?? "")),
+                    a
+                );
+            }, [n, e]);
+        },
+        JE: v,
+        NE: function () {
+            let e = v((e) => e.collectionAssets),
+                r = v((e) => e.avatarDecorationAssets);
+            return l.useMemo(
+                () => ({
+                    collectionAssets: Object.values(e).sort((e, r) => e.name.localeCompare(r.name)),
+                    avatarDecorationAssets: Object.values(r).sort((e, r) => e.name.localeCompare(r.name)),
+                }),
+                [e, r],
+            );
+        },
+        VU: function () {
+            return v((e) =>
+                e.previewEnabled && null != e.previewAvatarDecorationKey
+                    ? (e.avatarDecorationAssets[e.previewAvatarDecorationKey]?.src ?? null)
+                    : null,
+            );
+        },
+        bA: function () {
+            let e = v((e) => e.profileFrameAssets);
+            return l.useMemo(() => Object.values(e).sort((e, r) => e.key.localeCompare(r.key)), [e]);
+        },
+        eo: function () {
+            let e = v((e) =>
+                e.previewEnabled && null != e.previewProfileFrameKey
+                    ? (e.profileFrameAssets[e.previewProfileFrameKey] ?? null)
+                    : null,
+            );
+            return l.useMemo(() => {
+                if (null == e) return null;
+                let r = {};
+                for (let t of e.layers) {
+                    let l = e.layerSrcByLayerId[t.id];
+                    if (null == l) continue;
+                    let o = new Image();
+                    ((o.src = l), (r[t.id] = o));
+                }
+                return { layers: e.layers, layerData: r, css: (0, c.i)(e) };
+            }, [e]);
+        },
+        lM: function () {
+            let e = v((e) =>
+                e.previewEnabled && null != e.previewProfileFrameKey
+                    ? (e.profileFrameAssets[e.previewProfileFrameKey] ?? null)
+                    : null,
+            );
+            return l.useMemo(() => (null == e ? null : (0, c.i)(e)), [e]);
+        },
+        mb: function (e) {
+            return v((r) => (r.previewEnabled ? r.collectionAssets[e]?.src : null));
+        },
+    },
+);

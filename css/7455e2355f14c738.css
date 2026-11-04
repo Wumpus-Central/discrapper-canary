@@ -1,0 +1,79 @@
+.attachmentChip_RIbQ1J {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    color: var(--icon-muted);
+    display: flex;
+    gap: var(--space-8);
+    max-width: 100%;
+    padding: var(--space-4) var(--space-8)
+}
+
+.attachmentThumb_RIbQ1J {
+    border-radius: var(--radius-xs);
+    flex: 0 0 auto;
+    height: var(--space-32);
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: var(--space-32)
+}
+
+.attachmentChipBody_RIbQ1J {
+    display: flex;
+    flex-direction: column;
+    min-width: 0
+}
+
+.attachmentName_RIbQ1J {
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.attachmentChipCompact_RIbQ1J {
+    gap: var(--space-4)
+}
+
+.attachmentChipButton_RIbQ1J {
+    cursor: pointer;
+    text-align: start;
+    transition: background-color .2s ease, border-color .2s ease
+}
+
+.attachmentChipButton_RIbQ1J:hover {
+    background: var(--background-mod-normal);
+    border-color: var(--border-normal)
+}
+
+.attachmentChipCompact_RIbQ1J .attachmentThumb_RIbQ1J {
+    height: var(--space-20);
+    width: var(--space-20)
+}
+
+.attachmentSpinner_RIbQ1J {
+    flex: 0 0 auto;
+    height: var(--space-16);
+    width: var(--space-16)
+}
+
+.attachmentRemoveButton_RIbQ1J {
+    align-items: center;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-round);
+    color: var(--icon-muted);
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    padding: var(--space-4)
+}
+
+.attachmentRemoveButton_RIbQ1J:hover {
+    background: var(--interactive-background-hover);
+    color: var(--icon-default)
+}
+
+/*# sourceMappingURL=7455e2355f14c738.css.map*/

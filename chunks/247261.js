@@ -1,9 +1,9 @@
-a.exports = {
-    nM: "row__0a95c",
-    Kk: "icon__0a95c",
-    lN: "noIcon__0a95c",
-    zH: "details__0a95c",
-    UU: "name__0a95c",
-    my: "avatar__0a95c",
-    C9: "nick__0a95c",
+t.exports = {
+    nM: "row_wt-YD5",
+    Kk: "icon_wt-YD5",
+    lN: "noIcon_wt-YD5",
+    zH: "details_wt-YD5",
+    UU: "name_wt-YD5",
+    my: "avatar_wt-YD5",
+    C9: "nick_wt-YD5",
 };

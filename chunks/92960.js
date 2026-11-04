@@ -1,9 +1,8 @@
-n.d(t, { Df: () => v, LB: () => y });
 var i = n(367513),
     r = n(465532),
-    a = n(148494),
+    a = n(138399),
     s = n(334738),
-    l = n(198052),
+    l = n(628983),
     o = n(267102),
     d = n(118517),
     c = n(853145),
@@ -11,18 +10,18 @@ var i = n(367513),
     _ = n(940382),
     E = n(931664),
     A = n(631576),
-    h = n(358047),
+    h = n(799704),
     f = n(734057),
     I = n(72314),
     p = n(31717),
     m = n(580745),
-    T = n(232835),
-    g = n(573163),
+    T = n(596344),
+    g = n(218461),
     S = n(309010),
     N = n(967198),
     C = n(712687),
     O = n(531685),
-    R = n(625494),
+    R = n(188567),
     L = n(652215);
 function y(e) {
     return {
@@ -78,7 +77,7 @@ function b(e) {
     if (null == e) return !1;
     let t = !1;
     return (
-        T.A.getMessages(e).hasMoreAfter && (a.A.jumpToPresent(e, L.EMb), (t = !0)),
+        T.A.getMessages(e).hasMoreAfter && (a.A.jumpToPresent(e, 30), (t = !0)),
         g.Ay.hasUnread(e) &&
             ((0, s.I_)(e, { object: L.ZSU.MARK_CHANNEL_AS_READ_KEYBIND, objectType: L.btD.ACK_MANUAL }), (t = !0)),
         (0, s.fb)(e),
@@ -86,3 +85,4 @@ function b(e) {
     );
 }
 let v = y();
+n.d(t, {}, { Df: v, LB: y });

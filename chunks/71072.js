@@ -1,4 +1,3 @@
-d.d(t, { n: () => Z, t: () => n });
 var i = d(768611),
     e = {},
     c = new Set();
@@ -13,9 +12,15 @@ function a(l) {
 function s() {
     return e;
 }
-function n(l) {
-    for (let t of ((e = l), c)) t();
-}
-function Z() {
-    return (0, i.i)(a, s);
-}
+d.d(
+    t,
+    {},
+    {
+        n: function () {
+            return (0, i.i)(a, s);
+        },
+        t: function (l) {
+            for (let t of ((e = l), c)) t();
+        },
+    },
+);

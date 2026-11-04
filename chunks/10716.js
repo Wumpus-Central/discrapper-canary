@@ -1,7 +1,6 @@
-n.d(t, { $: () => c, A: () => A });
 var i,
     r = n(991690),
-    a = n(17928),
+    a = n(855986),
     s = n(73153),
     l = n(253932);
 function o() {
@@ -80,3 +79,4 @@ let A = new E(s.h, {
     },
     USER_SETTINGS_PROTO_UPDATE() {},
 });
+n.d(t, {}, { $: c, A: A });

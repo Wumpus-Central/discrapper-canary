@@ -1,10 +1,9 @@
-n.d(t, { A: () => w });
 var r = n(196765),
     l = n(537812),
     o = n(121894),
     a = n(506774),
     u = n(626584),
-    i = n(174459),
+    i = n(129230),
     _ = n(315290),
     s = n(652215);
 let c = "UserFlowAnalyticsStore_current",
@@ -80,7 +79,7 @@ function N(e, t) {
 function g() {
     return null != E.getState().activeFlow();
 }
-E.subscribe(
+(E.subscribe(
     (e) => (null != e.currentFlow ? e.flows[e.currentFlow] : void 0),
     (e) => {
         if (
@@ -114,12 +113,18 @@ E.subscribe(
                 }));
         }
     },
-);
-let w = {
-    flowStart: S,
-    flowStepOrStart: function (e, t) {
-        g() ? N(e, t) : S(e, t);
-    },
-    flowStep: N,
-    hasActiveFlow: g,
-};
+),
+    n.d(
+        t,
+        {},
+        {
+            A: {
+                flowStart: S,
+                flowStepOrStart: function (e, t) {
+                    g() ? N(e, t) : S(e, t);
+                },
+                flowStep: N,
+                hasActiveFlow: g,
+            },
+        },
+    ));

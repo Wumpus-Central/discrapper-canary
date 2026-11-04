@@ -1,8 +1,7 @@
-n.d(t, { A: () => _, h: () => E });
 var i = n(582128),
     r = n(435558),
     a = n.n(r),
-    s = n(17928),
+    s = n(855986),
     l = n(52133),
     o = n(403362),
     d = n(627363),
@@ -20,7 +19,14 @@ function _(e) {
         (0, s.yK)([c.A], () => e.map((e) => (null != e ? c.A.getApplication(e) : void 0)))
     );
 }
-function E(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return _(null != e ? [e] : [], t)[0];
-}
+n.d(
+    t,
+    {},
+    {
+        A: _,
+        h: function (e) {
+            let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+            return _(null != e ? [e] : [], t)[0];
+        },
+    },
+);

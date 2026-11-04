@@ -1,4 +1,3 @@
-n.d(t, { A: () => a });
 var i = n(315069),
     r = n(511963);
 class a extends i.A {
@@ -43,3 +42,4 @@ class a extends i.A {
         return null != this.expiresAt;
     }
 }
+n.d(t, {}, { A: a });

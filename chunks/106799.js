@@ -1,4 +1,3 @@
-t.d(e, { A: () => n, B: () => l });
 var a = t(477900),
     c = t(503698),
     i = t.n(c),
@@ -7,15 +6,15 @@ var a = t(477900),
     d = t(495845);
 let h = t(243884),
     o = t(79825);
-function l(s) {
-    let { customSize: e, shouldUseThemeColor: t = !1, loading: c, className: l } = s,
-        n = (0, r.Ay)(),
-        u = t && (0, p.q)(n) ? o : h;
+function n(s) {
+    let { customSize: e, shouldUseThemeColor: t = !1, loading: c, className: n } = s,
+        u = (0, r.Ay)(),
+        l = t && (0, p.q)(u) ? o : h;
     return (0, a.jsx)("img", {
-        className: i()(d.H8, l, { [d.Lq]: c }),
-        src: u,
+        className: i()(d.H8, n, { [d.Lq]: c }),
+        src: l,
         alt: "",
         style: void 0 !== e ? { height: e } : void 0,
     });
 }
-let n = l;
+t.d(e, {}, { A: n, B: n });

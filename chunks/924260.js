@@ -1,5 +1,4 @@
 let i, e, c;
-d.d(t, { a: () => F, c: () => r, d: () => o, i: () => g, n: () => U, o: () => S, r: () => j, s: () => R, t: () => D });
 var a = d(41851),
     s = d(269882),
     n = d(528239),
@@ -142,215 +141,237 @@ function W() {
 function G(l) {
     return l?.trim() || void 0;
 }
-async function p(l) {
-    var t, d;
-    let i,
-        e = await l.getHighEntropyValues(Array.from(h)),
-        { name: c, version: a } =
-            ((t = e.fullVersionList),
-            (d = l.brands),
-            (i = t?.[0] || d?.[0]),
-            { name: G(i?.brand), version: G(i?.version) });
-    return {
-        device: { model: G(e.model) },
-        os: { name: G(e.platform), version: G(e.platformVersion) },
-        browser: { name: c, version: a },
+var p = class {
+        constructor(l) {
+            this.ipLookup = l;
+        }
+        async getFingerprint(l = !1) {
+            let t = await (0, b.n)(),
+                [d, i] = await Promise.all([
+                    (async function () {
+                        var l;
+                        if ("u" < typeof navigator) return { device: {}, os: {}, browser: {} };
+                        let t = navigator,
+                            d = W();
+                        if (
+                            !t.userAgentData?.getHighEntropyValues ||
+                            "function" != typeof t.userAgentData.getHighEntropyValues
+                        )
+                            return d;
+                        try {
+                            return (
+                                (l = await (async function (l) {
+                                    var t, d;
+                                    let i,
+                                        e = await l.getHighEntropyValues(Array.from(h)),
+                                        { name: c, version: a } =
+                                            ((t = e.fullVersionList),
+                                            (d = l.brands),
+                                            (i = t?.[0] || d?.[0]),
+                                            { name: G(i?.brand), version: G(i?.version) });
+                                    return {
+                                        device: { model: G(e.model) },
+                                        os: { name: G(e.platform), version: G(e.platformVersion) },
+                                        browser: { name: c, version: a },
+                                    };
+                                })(t.userAgentData)),
+                                {
+                                    device: { model: l.device?.model || d.device.model },
+                                    os: { name: l.os?.name || d.os.name, version: l.os?.version || d.os.version },
+                                    browser: ((l) => {
+                                        let t = "u" > typeof navigator ? navigator.userAgent : "",
+                                            d = W();
+                                        if (!t) return l;
+                                        try {
+                                            return { ...l, name: d.browser.name, version: d.browser.version };
+                                        } catch {
+                                            return { ...l, name: "Unknown", version: "Unknown" };
+                                        }
+                                    })({
+                                        name: l.browser?.name || d.browser.name,
+                                        version: l.browser?.version || d.browser.version,
+                                    }),
+                                }
+                            );
+                        } catch {
+                            return d;
+                        }
+                    })(),
+                    l ? Promise.resolve("") : this.ipLookup.getIp(),
+                ]);
+            return { visitorId: t, ip: i, deviceInfo: d };
+        }
+    },
+    N = class {
+        async getIp() {
+            return void 0 !== i
+                ? i
+                : e ||
+                      (e = (async () => {
+                          try {
+                              let l = await (async function () {
+                                  if ("u" < typeof fetch) return "";
+                                  let l = 0,
+                                      t = new AbortController();
+                                  if (AbortSignal.timeout) {
+                                      let l = AbortSignal.timeout(3e3);
+                                      return (
+                                          await (await fetch("https://api.ipify.org?format=json", { signal: l })).json()
+                                      ).ip;
+                                  }
+                                  let d = new Promise((d, i) => {
+                                          l = setTimeout(() => {
+                                              (t.abort(), i(Error("Request timeout")));
+                                          }, 3e3);
+                                      }),
+                                      i = fetch("https://api.ipify.org?format=json", { signal: t.signal })
+                                          .then((l) => l.json())
+                                          .then((l) => l.ip),
+                                      e = await Promise.race([i, d]);
+                                  return (clearTimeout(l), e);
+                              })();
+                              return ((i = l), l);
+                          } catch {
+                              return ((i = ""), "");
+                          } finally {
+                              e = void 0;
+                          }
+                      })());
+        }
     };
-}
-async function N() {
-    var l;
-    if ("u" < typeof navigator) return { device: {}, os: {}, browser: {} };
-    let t = navigator,
-        d = W();
-    if (!t.userAgentData?.getHighEntropyValues || "function" != typeof t.userAgentData.getHighEntropyValues) return d;
-    try {
-        return (
-            (l = await p(t.userAgentData)),
-            {
-                device: { model: l.device?.model || d.device.model },
-                os: { name: l.os?.name || d.os.name, version: l.os?.version || d.os.version },
-                browser: ((l) => {
-                    let t = "u" > typeof navigator ? navigator.userAgent : "",
-                        d = W();
-                    if (!t) return l;
-                    try {
-                        return { ...l, name: d.browser.name, version: d.browser.version };
-                    } catch {
-                        return { ...l, name: "Unknown", version: "Unknown" };
-                    }
-                })({ name: l.browser?.name || d.browser.name, version: l.browser?.version || d.browser.version }),
-            }
-        );
-    } catch {
-        return d;
-    }
-}
-var M = class {
-    constructor(l) {
-        this.ipLookup = l;
-    }
-    async getFingerprint(l = !1) {
-        let t = await (0, b.n)(),
-            [d, i] = await Promise.all([N(), l ? Promise.resolve("") : this.ipLookup.getIp()]);
-        return { visitorId: t, ip: i, deviceInfo: d };
-    }
-};
-async function X() {
-    if ("u" < typeof fetch) return "";
-    let l = 0,
-        t = new AbortController();
-    if (AbortSignal.timeout) {
-        let l = AbortSignal.timeout(3e3);
-        return (await (await fetch("https://api.ipify.org?format=json", { signal: l })).json()).ip;
-    }
-    let d = new Promise((d, i) => {
-            l = setTimeout(() => {
-                (t.abort(), i(Error("Request timeout")));
-            }, 3e3);
-        }),
-        i = fetch("https://api.ipify.org?format=json", { signal: t.signal })
-            .then((l) => l.json())
-            .then((l) => l.ip),
-        e = await Promise.race([i, d]);
-    return (clearTimeout(l), e);
-}
-var r = class {
-    async getIp() {
-        return void 0 !== i
-            ? i
-            : e ||
-                  (e = (async () => {
-                      try {
-                          let l = await X();
-                          return ((i = l), l);
-                      } catch {
-                          return ((i = ""), "");
-                      } finally {
-                          e = void 0;
-                      }
-                  })());
-    }
-};
-let y = null;
-async function Y(l) {
-    if (y) return y;
-    let t = await a.t.get(n.t.featureConfig, { signal: l });
-    if (!t.ok) throw Error(`Failed to fetch feature config: ${t.status} ${t.statusText}`);
-    return (y = t.data);
-}
-async function T(l = {}, t) {
-    var d, i;
-    let { disableIpify: e = !1, hostingApp: c, signal: s } = l,
-        Z = await t.fingerprintProvider.getFingerprint(e),
-        m = (0, b.t)(t.browserEnv),
-        o = {
-            hash: Z.visitorId || "",
-            ip: Z.ip || "",
-            deviceType: "WEBAPP",
-            data: JSON.stringify(Z),
-            osVersion: ((d = Z.deviceInfo.os), `${d.name || "Unknown"} ${d.version || ""}`.trim()),
-            deviceModel: Z.deviceInfo.device.model || "",
-            browser: (i = Z.deviceInfo.browser).name && i.version ? `${i.name} ${i.version}` : "Unknown",
-            hasLiedBrowser: m,
-            sdkVersion: "2.1.1",
-            hostingApp: c ?? "Web SDK",
-        },
-        u = await a.t.post(n.t.deviceFingerprint, o, { signal: s });
-    if (!u.ok) throw Error(`Failed to submit fingerprint: ${u.status} ${u.statusText}`);
-    return u.data;
-}
-let V = !1,
-    L = null,
-    I = !1,
-    z = !0,
-    w = !0;
-function R(l) {
-    z = l;
-}
-function S(l) {
-    w = l;
-}
-let C = !1,
-    x = null;
-async function g(l = {}) {
-    let { token: t, hostingApp: d, signal: i } = l;
-    return (void 0 !== t && t !== (0, a.r)() && ((0, a.s)(t), F(), (0, m.r)() && (await (0, m.i)(t))), V && L)
-        ? { features: L, disableIpify: I, fingerprintSuccess: C, fingerprintResult: c }
-        : x ||
-              (x = (async () => {
-                  var l, t;
-                  let e,
-                      a,
-                      n = !1;
-                  try {
-                      ((l = (e = await Y(i)).features),
-                          (n = l?.find((l) => "DISABLE_IPIFY" === l.feature)?.enabled ?? !1));
-                  } catch {
-                      e = { sessionIdentifier: "" };
-                  }
-                  let b = ((t = n), !z || t),
-                      m = !1;
-                  if (w)
-                      try {
-                          let l = new M(new r()),
-                              t = new o();
-                          ((a = await T(
-                              { disableIpify: b, hostingApp: d, signal: i },
-                              { fingerprintProvider: l, browserEnv: t },
-                          )),
-                              (m = !0),
-                              (0, Z.n)());
-                      } catch (l) {
-                          console.warn("Failed to submit device fingerprint:", l);
-                      }
-                  else (0, Z.n)();
-                  try {
-                      let l = new u().getBrowserInfo();
-                      (0, s.g)({
-                          code: "browser",
-                          payload: {
-                              userAgent: l.userAgent,
-                              isWebRtcSupported: l.isWebRtcSupported,
-                              browser: l.browser,
-                              os: l.os,
-                              device: l.device,
-                              engine: l.engine,
-                              cpu: l.cpu,
-                          },
-                      });
-                  } catch (l) {
-                      console.warn("Failed to send browser info event:", l);
-                  }
-                  return (
-                      (V = !0),
-                      (L = e),
-                      (I = b),
-                      (C = m),
-                      (c = a),
-                      { features: e, disableIpify: b, fingerprintSuccess: m, fingerprintResult: a }
-                  );
-              })().finally(() => {
-                  ((x = null), (0, s._)()?.start());
-              }));
-}
-function D() {
-    return !z || I;
-}
-function j() {
-    return c;
-}
-function U() {
-    return w;
-}
-function F() {
-    ((V = !1),
-        (L = null),
-        (I = !1),
-        (C = !1),
+let M = null,
+    r = !1,
+    X = null,
+    y = !1,
+    Y = !0,
+    T = !0,
+    V = !1,
+    L = null;
+function I() {
+    ((r = !1),
+        (X = null),
+        (y = !1),
+        (V = !1),
         (c = void 0),
-        (x = null),
-        (y = null),
+        (L = null),
+        (M = null),
         (i = void 0),
         (e = void 0),
         (0, Z.r)());
 }
+d.d(
+    t,
+    {},
+    {
+        a: I,
+        c: N,
+        d: o,
+        i: async function (l = {}) {
+            let { token: t, hostingApp: d, signal: i } = l;
+            return (void 0 !== t && t !== (0, a.r)() && ((0, a.s)(t), I(), (0, m.r)() && (await (0, m.i)(t))), r && X)
+                ? { features: X, disableIpify: y, fingerprintSuccess: V, fingerprintResult: c }
+                : L ||
+                      (L = (async () => {
+                          var l, t;
+                          let e,
+                              m,
+                              h = !1;
+                          try {
+                              ((l = (e = await (async function (l) {
+                                  if (M) return M;
+                                  let t = await a.t.get(n.t.featureConfig, { signal: l });
+                                  if (!t.ok) throw Error(`Failed to fetch feature config: ${t.status} ${t.statusText}`);
+                                  return (M = t.data);
+                              })(i)).features),
+                                  (h = l?.find((l) => "DISABLE_IPIFY" === l.feature)?.enabled ?? !1));
+                          } catch {
+                              e = { sessionIdentifier: "" };
+                          }
+                          let W = ((t = h), !Y || t),
+                              G = !1;
+                          if (T)
+                              try {
+                                  let l = new p(new N()),
+                                      t = new o();
+                                  ((m = await (async function (l = {}, t) {
+                                      var d, i;
+                                      let { disableIpify: e = !1, hostingApp: c, signal: s } = l,
+                                          Z = await t.fingerprintProvider.getFingerprint(e),
+                                          m = (0, b.t)(t.browserEnv),
+                                          o = {
+                                              hash: Z.visitorId || "",
+                                              ip: Z.ip || "",
+                                              deviceType: "WEBAPP",
+                                              data: JSON.stringify(Z),
+                                              osVersion:
+                                                  ((d = Z.deviceInfo.os),
+                                                  `${d.name || "Unknown"} ${d.version || ""}`.trim()),
+                                              deviceModel: Z.deviceInfo.device.model || "",
+                                              browser:
+                                                  (i = Z.deviceInfo.browser).name && i.version
+                                                      ? `${i.name} ${i.version}`
+                                                      : "Unknown",
+                                              hasLiedBrowser: m,
+                                              sdkVersion: "2.1.1",
+                                              hostingApp: c ?? "Web SDK",
+                                          },
+                                          u = await a.t.post(n.t.deviceFingerprint, o, { signal: s });
+                                      if (!u.ok)
+                                          throw Error(`Failed to submit fingerprint: ${u.status} ${u.statusText}`);
+                                      return u.data;
+                                  })(
+                                      { disableIpify: W, hostingApp: d, signal: i },
+                                      { fingerprintProvider: l, browserEnv: t },
+                                  )),
+                                      (G = !0),
+                                      (0, Z.n)());
+                              } catch (l) {
+                                  console.warn("Failed to submit device fingerprint:", l);
+                              }
+                          else (0, Z.n)();
+                          try {
+                              let l = new u().getBrowserInfo();
+                              (0, s.g)({
+                                  code: "browser",
+                                  payload: {
+                                      userAgent: l.userAgent,
+                                      isWebRtcSupported: l.isWebRtcSupported,
+                                      browser: l.browser,
+                                      os: l.os,
+                                      device: l.device,
+                                      engine: l.engine,
+                                      cpu: l.cpu,
+                                  },
+                              });
+                          } catch (l) {
+                              console.warn("Failed to send browser info event:", l);
+                          }
+                          return (
+                              (r = !0),
+                              (X = e),
+                              (y = W),
+                              (V = G),
+                              (c = m),
+                              { features: e, disableIpify: W, fingerprintSuccess: G, fingerprintResult: m }
+                          );
+                      })().finally(() => {
+                          ((L = null), (0, s._)()?.start());
+                      }));
+        },
+        n: function () {
+            return T;
+        },
+        o: function (l) {
+            T = l;
+        },
+        r: function () {
+            return c;
+        },
+        s: function (l) {
+            Y = l;
+        },
+        t: function () {
+            return !Y || y;
+        },
+    },
+);

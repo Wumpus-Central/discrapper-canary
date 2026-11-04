@@ -1,4 +1,4 @@
-d.d(t, { Consent: () => p });
+d.r(t);
 var i = d(783285),
     e = d(768611),
     c = d(200503),
@@ -10,7 +10,7 @@ var i = d(783285),
     m = d(918676),
     o = d(779705),
     u = d(611797),
-    h = d(635385),
+    h = d(310644),
     W = (l) => {
         l.target.closest("a") && l.stopPropagation();
     },
@@ -20,12 +20,12 @@ var i = d(783285),
                 () => {
                     if (t) return t;
                     if (!l) throw Error("Consent config is required");
-                    return (0, h.w)({ config: { ...l, language: l.language ?? G.language } });
+                    return (0, h.createConsentManager)({ config: { ...l, language: l.language ?? G.language } });
                 },
                 { manageLifecycle: !t },
             ),
             M = "checkboxes" in p ? p.checkboxes : void 0,
-            X = (0, e.d)(() => (0, u.n)(M?.map((l) => l.required) ?? []), [M]);
+            r = (0, e.d)(() => (0, u.n)(M?.map((l) => l.required) ?? []), [M]);
         return ((0, c.c)({ status: p.status, onFinish: d, onError: a, error: "error" === p.status ? p.error : void 0 }),
         (0, c.s)(p))
             ? null
@@ -48,7 +48,7 @@ var i = d(783285),
                                             role: "group",
                                             "aria-label": m("biometricConsent.consentOptions"),
                                             children: p.checkboxes.map((l) => {
-                                                let t = (0, u.t)(X, l.required),
+                                                let t = (0, u.t)(r, l.required),
                                                     d = t ? m(`forms.label.${t}`) : void 0;
                                                 return (0, e.v)(
                                                     b.t,
@@ -102,4 +102,4 @@ var i = d(783285),
     },
     p = ({ config: l, manager: t, onFinish: d, onError: i }) =>
         (0, e.v)(a.t, { children: l || t ? (0, e.v)(G, { config: l, manager: t, onFinish: d, onError: i }) : null });
-(0, m.t)(p, "incode-consent");
+((0, m.t)(p, "incode-consent"), d.d(t, {}, { Consent: p }));

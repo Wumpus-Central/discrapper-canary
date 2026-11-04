@@ -1,5 +1,4 @@
-e.d(a, { Q: () => o });
-var d = e(17928),
+var d = e(855986),
     c = e(830215),
     i = e(121780),
     s = e(652215);
@@ -10,3 +9,4 @@ let o = (0, d.UT)(i.A, {
         await c.A.getLocationMetadata();
     },
 });
+e.d(a, {}, { Q: o });

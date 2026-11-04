@@ -1,8 +1,7 @@
 let i;
-n.d(t, { A: () => I });
 var r = n(435558),
     a = n.n(r),
-    s = n(17928),
+    s = n(855986),
     l = n(506774),
     o = n(73153),
     d = n(652215);
@@ -33,13 +32,13 @@ class h extends s.Ay.Store {
     }
 }
 let f = new h(o.h, {
-        LIBRARY_TABLE_SORT_UPDATE: function (e) {
-            let { direction: t, key: n } = e;
-            ((u = t), (_ = n), l.w.set(c, { sortDirection: u, sortKey: _ }));
-        },
-        LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE: function (e) {
-            let { key: t, isKeyboardEvent: n } = e;
-            (n && ((E = !0), A()), (i = t));
-        },
-    }),
-    I = f;
+    LIBRARY_TABLE_SORT_UPDATE: function (e) {
+        let { direction: t, key: n } = e;
+        ((u = t), (_ = n), l.w.set(c, { sortDirection: u, sortKey: _ }));
+    },
+    LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE: function (e) {
+        let { key: t, isKeyboardEvent: n } = e;
+        (n && ((E = !0), A()), (i = t));
+    },
+});
+n.d(t, {}, { A: f });

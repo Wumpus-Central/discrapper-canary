@@ -1,8 +1,8 @@
-(n.d(t, { L0: () => I, uE: () => A }), n(321073), n(667532));
+(n(321073), n(667532));
 var i = n(91242),
     r = n(112420),
     a = n(276983),
-    s = n(423976),
+    s = n(781045),
     l = n(17742),
     o = n(652215);
 function d(e) {
@@ -106,30 +106,36 @@ function E(e) {
         { result: r }
     );
 }
-function A(e, t) {
-    if (null == e) return u;
-    let n = { iframeId: e, recorded: [] };
-    return (
-        t?.beneathBatches === !0 ? _.push(n) : _.unshift(n),
-        f(),
-        {
-            iframeId: e,
-            drain: () => n.recorded.splice(0, n.recorded.length),
-            end: () => {
-                let e = _.indexOf(n);
-                -1 !== e && (_.splice(e, 1), f());
-            },
-        }
-    );
+let A = 0;
+function h() {
+    (0, r.C)(_.length > 0 || A > 0 ? E : null);
 }
-let h = 0;
-function f() {
-    (0, r.C)(_.length > 0 || h > 0 ? E : null);
-}
-function I() {
-    (h++, f());
-    let e = !1;
-    return () => {
-        e || ((e = !0), h--, f());
-    };
-}
+n.d(
+    t,
+    {},
+    {
+        L0: function () {
+            (A++, h());
+            let e = !1;
+            return () => {
+                e || ((e = !0), A--, h());
+            };
+        },
+        uE: function (e, t) {
+            if (null == e) return u;
+            let n = { iframeId: e, recorded: [] };
+            return (
+                t?.beneathBatches === !0 ? _.push(n) : _.unshift(n),
+                h(),
+                {
+                    iframeId: e,
+                    drain: () => n.recorded.splice(0, n.recorded.length),
+                    end: () => {
+                        let e = _.indexOf(n);
+                        -1 !== e && (_.splice(e, 1), h());
+                    },
+                }
+            );
+        },
+    },
+);

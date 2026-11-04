@@ -1,6 +1,11 @@
-n.d(t, { W: () => r });
-var i = n(17928),
+var i = n(855986),
     l = n(380335);
-function r() {
-    return (0, i.bG)([l.A], () => l.A.getMessageRequestsCount());
-}
+n.d(
+    t,
+    {},
+    {
+        W: function () {
+            return (0, i.bG)([l.A], () => l.A.getMessageRequestsCount());
+        },
+    },
+);

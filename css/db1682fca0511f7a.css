@@ -1,0 +1,9 @@
+html:not(.app-focused) .pauseWhenUnfocused_MJp8Qt,
+html:not(.app-focused) .pauseWhenUnfocused_MJp8Qt :after,
+html:not(.app-focused) .pauseWhenUnfocused_MJp8Qt :before,
+html:not(.app-focused) .pauseWhenUnfocused_MJp8Qt :not([data-conjure-entrance]) {
+    animation-play-state: paused !important;
+    transition: none !important
+}
+
+/*# sourceMappingURL=db1682fca0511f7a.css.map*/

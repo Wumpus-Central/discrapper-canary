@@ -1,4 +1,3 @@
-n.d(e, { A: () => g });
 var r = n(477900),
     i = n(582128),
     s = n(503698),
@@ -15,18 +14,24 @@ function c(t) {
         ],
     });
 }
-function g(t) {
-    let { src: e, backgroundSrc: n, alt: i, aspectRatio: s, className: l, imageChildClassName: g, ...u } = t;
-    return (0, r.jsxs)("div", {
-        className: a()(o.kL, l),
-        children: [
-            (0, r.jsx)("img", { src: n, alt: i, className: o.iL }),
-            (0, r.jsx)("div", { className: o.CC }),
-            (0, r.jsx)("div", {
-                style: { aspectRatio: s },
-                className: o.ZS,
-                children: (0, r.jsx)(c, { src: e, alt: i, className: a()(o.Sl, g), ...u }),
-            }),
-        ],
-    });
-}
+n.d(
+    e,
+    {},
+    {
+        A: function (t) {
+            let { src: e, backgroundSrc: n, alt: i, aspectRatio: s, className: l, imageChildClassName: g, ...u } = t;
+            return (0, r.jsxs)("div", {
+                className: a()(o.kL, l),
+                children: [
+                    (0, r.jsx)("img", { src: n, alt: i, className: o.iL }),
+                    (0, r.jsx)("div", { className: o.CC }),
+                    (0, r.jsx)("div", {
+                        style: { aspectRatio: s },
+                        className: o.ZS,
+                        children: (0, r.jsx)(c, { src: e, alt: i, className: a()(o.Sl, g), ...u }),
+                    }),
+                ],
+            });
+        },
+    },
+);

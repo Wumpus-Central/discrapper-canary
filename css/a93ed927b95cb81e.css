@@ -1,0 +1,20 @@
+.noScroll_A6_Yar {
+    overflow: visible !important
+}
+
+.settingsContent_A6_Yar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1
+}
+
+.switch_A6_Yar {
+    margin: 0
+}
+
+.selectedIcon_A6_Yar {
+    background-color: var(--background-base-lower)
+}
+
+/*# sourceMappingURL=a93ed927b95cb81e.css.map*/

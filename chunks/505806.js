@@ -1,4 +1,4 @@
-(n.d(t, { A: () => s }), n(321073));
+n(321073);
 var i = n(582128),
     r = n(451988);
 class a extends i.Component {
@@ -6,7 +6,7 @@ class a extends i.Component {
     static defaultProps = { numUpdatesToShow: 30, updateInterval: 500, pointsToSmooth: 10 };
     constructor(e) {
         super(e);
-        const t = this.props.getHistoricalTotalBytes(),
+        let t = this.props.getHistoricalTotalBytes(),
             n = this.calculateInitialDeltaBytes(t);
         this.state = {
             deltaBytes: n,
@@ -64,4 +64,4 @@ class a extends i.Component {
         return n(this.state.smoothedDeltaBytes, t, e);
     }
 }
-let s = a;
+n.d(t, {}, { A: a });

@@ -1,2 +1,1 @@
-n.d(t, { W: () => i });
-let i = { immediate: !0 };
+n.d(t, {}, { W: { immediate: !0 } });

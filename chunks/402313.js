@@ -1,4 +1,3 @@
-t.d(i, { A: () => n });
 let n = (0, t(600975).C)({
     kind: "guild",
     id: "2026-04_voice_user_duration",
@@ -12,3 +11,4 @@ let n = (0, t(600975).C)({
         },
     ],
 });
+t.d(i, {}, { A: n });

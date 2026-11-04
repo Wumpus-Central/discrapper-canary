@@ -1,4 +1,9 @@
-function i(e, t) {
-    return `<sound:${e}:${t}>`;
-}
-n.d(t, { A: () => i });
+n.d(
+    t,
+    {},
+    {
+        A: function (e, t) {
+            return `<sound:${e}:${t}>`;
+        },
+    },
+);

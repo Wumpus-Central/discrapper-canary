@@ -1,1 +1,1 @@
-o.exports = { P: "lottieIconColors__5eb9b", f: "lottieIcon__5eb9b" };
+o.exports = { P: "lottieIconColors_69Onuk", f: "lottieIcon_69Onuk" };

@@ -1,15 +1,14 @@
-n.d(e, { L: () => y, o: () => I });
 var l = n(477900),
     r = n(582128),
     i = n(503698),
     a = n.n(i),
     s = n(536637),
     c = n.n(s),
-    u = n(661531),
+    u = n(646514),
     o = n(834730),
     d = n(81466),
     m = n(406810),
-    x = n(62010),
+    x = n(805251),
     g = n(866665),
     h = n(602853),
     f = n(722260),
@@ -17,31 +16,12 @@ var l = n(477900),
     N = n(974930),
     v = n(604701),
     A = n(988794),
-    j = n(105292),
+    j = n(792996),
     T = n(202265);
-function I(t) {
-    let e,
-        { timeData: n, status: l, eventType: r, isCanceled: i } = t,
-        { startDateTimeString: a, endDateTimeString: s, currentOrPastEvent: c, upcomingEvent: u, diffMinutes: o } = n;
-    if (5 == (e = l === A.XG.CANCELED || i ? 5 : l === A.XG.ACTIVE ? 3 : A.lV.has(l) ? 4 : c ? 2 : +!!u))
-        return `${a}, ${j.intl.string(j.t.fyBVRm)}`;
-    let d = r === A.Ps.EXTERNAL ? j.intl.string(j.t.IyZxjH) : j.intl.string(j.t["X2K3/4"]),
-        m = a;
-    switch ((null != s && "" !== s && (m = j.intl.formatToPlainString(j.t.tXbu7I, { start: a, end: s })), e)) {
-        case 1:
-            return o > 0 ? j.intl.formatToPlainString(j.t.PQlCWk, { minutes: o }) : j.intl.string(j.t.WINqKV);
-        case 2:
-            return j.intl.string(j.t.WINqKV);
-        case 3:
-            return null != s && "" !== s ? j.intl.formatToPlainString(j.t.tXbu7I, { start: d, end: s }) : d;
-        default:
-            return m;
-    }
-}
-function C() {
+function I() {
     return (0, l.jsx)("div", { className: T.Ad, children: (0, l.jsx)(x.E, { type: "new", variant: "primary" }) });
 }
-function L(t) {
+function C(t) {
     let { children: e, className: n, tooltipText: r } = t;
     return (0, l.jsx)("div", {
         className: a()(T.cd, n),
@@ -53,14 +33,11 @@ function L(t) {
         }),
     });
 }
-function y(t) {
-    return null != t.timeData ? (0, l.jsx)(_, { ...t, timeData: t.timeData }) : (0, l.jsx)(D, { ...t });
+function L(t) {
+    let e = (0, E.A)(t.startTime, t.endTime);
+    return (0, l.jsx)(D, { ...t, timeData: e });
 }
 function D(t) {
-    let e = (0, E.A)(t.startTime, t.endTime);
-    return (0, l.jsx)(_, { ...t, timeData: e });
-}
-function _(t) {
     let {
             startTime: e,
             status: n,
@@ -69,17 +46,17 @@ function _(t) {
             liveText: x,
             textVariant: g = "body-sm/semibold",
             isNew: E,
-            recurrenceRule: I,
-            guildEventId: y,
-            recurrenceId: D,
-            timeData: _,
+            recurrenceRule: L,
+            guildEventId: D,
+            recurrenceId: _,
+            timeData: p,
         } = t,
-        p = (0, h.r)(u.A.colors.TEXT_BRAND).hex(),
+        y = (0, h.r)(u.A.colors.TEXT_BRAND).hex(),
         b = (0, h.r)(u.A.colors.TEXT_FEEDBACK_POSITIVE).hex(),
         w = (0, h.r)(u.A.colors.TEXT_FEEDBACK_CRITICAL).hex();
     null == x && (x = i === A.Ps.EXTERNAL ? j.intl.string(j.t.IyZxjH) : j.intl.string(j.t["X2K3/4"]));
-    let S = (0, f.A)(D, y),
-        { startDateTimeString: P, endDateTimeString: k, currentOrPastEvent: X, upcomingEvent: G, diffMinutes: V } = _,
+    let S = (0, f.A)(_, D),
+        { startDateTimeString: P, endDateTimeString: k, currentOrPastEvent: X, upcomingEvent: G, diffMinutes: V } = p,
         K = P;
     null != k && "" !== k && (K = j.intl.formatToPlainString(j.t.tXbu7I, { start: P, end: k }));
     let z = r.useMemo(
@@ -147,17 +124,17 @@ function _(t) {
                     return { Icon: c, iconColor: u, textColor: o, tooltipText: e };
                 })({
                     timeStatus: z,
-                    textBrand: p,
+                    textBrand: y,
                     textPositive: b,
                     textDanger: w,
                     endDateTimeString: k,
                     startDateTimeString: P,
                 }),
-            [z, p, b, w, k, P],
+            [z, y, b, w, k, P],
         ),
         B = null;
-    if (null != I) {
-        let t = (0, N.X7)(I);
+    if (null != L) {
+        let t = (0, N.X7)(L);
         B = j.intl.formatToPlainString(j.t.HmKEqW, { recurrenceRule: t.toText() });
         let n = c()(e);
         B = (function (t, e) {
@@ -184,14 +161,14 @@ function _(t) {
                 default:
                     return null;
             }
-        })((0, N.z7)(n, I), n);
+        })((0, N.z7)(n, L), n);
     }
-    return (0, l.jsxs)(L, {
+    return (0, l.jsxs)(C, {
         className: a()(s, { [T.AD]: null != B }),
         tooltipText: O,
         children: [
             E && n === A.XG.SCHEDULED
-                ? (0, l.jsx)(C, {})
+                ? (0, l.jsx)(I, {})
                 : (0, l.jsx)(W, { color: H, size: "custom", width: 20, height: 20 }),
             (0, l.jsxs)("div", {
                 className: T.Zy,
@@ -203,3 +180,37 @@ function _(t) {
         ],
     });
 }
+n.d(
+    e,
+    {},
+    {
+        L: function (t) {
+            return null != t.timeData ? (0, l.jsx)(D, { ...t, timeData: t.timeData }) : (0, l.jsx)(L, { ...t });
+        },
+        o: function (t) {
+            let e,
+                { timeData: n, status: l, eventType: r, isCanceled: i } = t,
+                {
+                    startDateTimeString: a,
+                    endDateTimeString: s,
+                    currentOrPastEvent: c,
+                    upcomingEvent: u,
+                    diffMinutes: o,
+                } = n;
+            if (5 == (e = l === A.XG.CANCELED || i ? 5 : l === A.XG.ACTIVE ? 3 : A.lV.has(l) ? 4 : c ? 2 : +!!u))
+                return `${a}, ${j.intl.string(j.t.fyBVRm)}`;
+            let d = r === A.Ps.EXTERNAL ? j.intl.string(j.t.IyZxjH) : j.intl.string(j.t["X2K3/4"]),
+                m = a;
+            switch ((null != s && "" !== s && (m = j.intl.formatToPlainString(j.t.tXbu7I, { start: a, end: s })), e)) {
+                case 1:
+                    return o > 0 ? j.intl.formatToPlainString(j.t.PQlCWk, { minutes: o }) : j.intl.string(j.t.WINqKV);
+                case 2:
+                    return j.intl.string(j.t.WINqKV);
+                case 3:
+                    return null != s && "" !== s ? j.intl.formatToPlainString(j.t.tXbu7I, { start: d, end: s }) : d;
+                default:
+                    return m;
+            }
+        },
+    },
+);

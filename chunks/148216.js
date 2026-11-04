@@ -1,36 +1,47 @@
-i.d(e, { default: () => p });
 var n = i(477900),
     a = i(582128),
     s = i(536637),
     l = i.n(s),
     r = i(732159),
     c = i(582306),
-    u = i(666944),
-    d = i(105292),
+    u = i(201895),
+    d = i(792996),
     o = i(642105);
-function p(t) {
-    let { createReminder: e, ...i } = t,
-        [s, p] = a.useState(() => l()()),
-        [h, b] = a.useState(() => l()()),
-        g = a.useCallback(() => {
-            e(s.toDate());
-        }, [e, s]);
-    function m(t) {
-        t.isValid() && p(t);
-    }
-    return (0, n.jsx)(r.u, {
-        title: d.intl.string(d.t.VKsXpY),
-        confirmText: d.intl.string(d.t["R3BPH+"]),
-        cancelText: d.intl.string(d.t["ETE/oC"]),
-        onConfirm: g,
-        ...i,
-        variant: "primary",
-        children: (0, n.jsxs)("div", {
-            className: o.U,
-            children: [
-                (0, n.jsx)(c.J, { label: d.intl.string(d.t.pSZKvM), required: !0, value: s, onSelect: m, minDate: h }),
-                (0, n.jsx)(u.c, { label: d.intl.string(d.t.GOmEb8), required: !0, value: s, onChange: m }),
-            ],
-        }),
-    });
-}
+i.d(
+    e,
+    {},
+    {
+        default: function (t) {
+            let { createReminder: e, ...i } = t,
+                [s, p] = a.useState(() => l()()),
+                [h, b] = a.useState(() => l()()),
+                g = a.useCallback(() => {
+                    e(s.toDate());
+                }, [e, s]);
+            function m(t) {
+                t.isValid() && p(t);
+            }
+            return (0, n.jsx)(r.u, {
+                title: d.intl.string(d.t.VKsXpY),
+                confirmText: d.intl.string(d.t["R3BPH+"]),
+                cancelText: d.intl.string(d.t["ETE/oC"]),
+                onConfirm: g,
+                ...i,
+                variant: "primary",
+                children: (0, n.jsxs)("div", {
+                    className: o.U,
+                    children: [
+                        (0, n.jsx)(c.J, {
+                            label: d.intl.string(d.t.pSZKvM),
+                            required: !0,
+                            value: s,
+                            onSelect: m,
+                            minDate: h,
+                        }),
+                        (0, n.jsx)(u.c, { label: d.intl.string(d.t.GOmEb8), required: !0, value: s, onChange: m }),
+                    ],
+                }),
+            });
+        },
+    },
+);

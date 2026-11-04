@@ -1,0 +1,39 @@
+.title_WPx7r9 {
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 8px;
+    margin-top: 24px;
+    text-align: center
+}
+
+.warningText_WPx7r9 {
+    text-align: center
+}
+
+.warningText_WPx7r9,
+.warningTextMana_WPx7r9 {
+    margin-bottom: 16px
+}
+
+.linkCalloutContainer_WPx7r9 {
+    align-items: center;
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    max-height: 144px;
+    max-width: 498px;
+    min-width: min(408px, calc(100vw - 50px));
+    overflow-wrap: anywhere;
+    padding: 16px
+}
+
+.checkbox_WPx7r9 {
+    margin-bottom: 24px
+}
+
+.checkbox_WPx7r9,
+.checkboxMana_WPx7r9 {
+    overflow-wrap: anywhere
+}
+
+/*# sourceMappingURL=7f0556ec5147e2e3.css.map*/

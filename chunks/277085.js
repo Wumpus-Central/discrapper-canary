@@ -1,11 +1,16 @@
-e.d(t, { p: () => u });
-var i = e(951178),
-    l = e(809526),
-    c = e(105292);
-function u(n) {
-    return "" === n
-        ? c.intl.string(l.default.l669D8)
-        : n.length < i.c6
-          ? c.intl.formatToPlainString(c.t.ONSqYd, { min: i.c6, max: i.eq })
-          : null;
-}
+i(951178);
+var e = i(191850),
+    l = i(792996);
+i.d(
+    t,
+    {},
+    {
+        p: function (n) {
+            return "" === n
+                ? l.intl.string(e.default.l669D8)
+                : n.length < 2
+                  ? l.intl.formatToPlainString(l.t.ONSqYd, { min: 2, max: 128 })
+                  : null;
+        },
+    },
+);

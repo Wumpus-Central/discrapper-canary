@@ -1,1 +1,1 @@
-e.exports = { aP: "box__376cb", Lq: "loading__376cb", YD: "singleMessage__376cb", XG: "scroller__376cb" };
+e.exports = { aP: "box_0JZW4Z", Lq: "loading_0JZW4Z", YD: "singleMessage_0JZW4Z", XG: "scroller_0JZW4Z" };

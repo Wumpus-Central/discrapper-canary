@@ -1,4 +1,3 @@
-n.d(t, { i: () => i });
 let i = (0, n(196765).v)((e, t) => ({
     responses: {},
     displayedQuestions: {},
@@ -25,3 +24,4 @@ let i = (0, n(196765).v)((e, t) => ({
         return null != n ? Array.from(n) : [];
     },
 }));
+n.d(t, {}, { i: i });

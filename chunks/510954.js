@@ -1,9 +1,9 @@
-a.exports = {
-    wx: "header_d9667a",
-    ap: "navRow_d9667a",
-    wE: "dockSlot_d9667a",
-    FC: "dockLogo_d9667a",
-    vR: "tabs_d9667a",
-    Mf: "tab_d9667a",
-    HK: "overflowMenuContainer_d9667a",
+o.exports = {
+    wx: "header_fv75R2",
+    ap: "navRow_fv75R2",
+    wE: "dockSlot_fv75R2",
+    FC: "dockLogo_fv75R2",
+    vR: "tabs_fv75R2",
+    Mf: "tab_fv75R2",
+    HK: "overflowMenuContainer_fv75R2",
 };

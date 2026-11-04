@@ -1,11 +1,11 @@
-_.exports = {
-    uW: "section_fa7eb1",
-    wx: "header_fa7eb1",
-    $s: "headerActions_fa7eb1",
-    d$: "arrows_fa7eb1",
-    XG: "scroller_fa7eb1",
-    vL: "fadeStart_fa7eb1",
-    y0: "fadeEnd_fa7eb1",
-    OW: "fadeBoth_fa7eb1",
-    AV: "scrollerItem_fa7eb1",
+e.exports = {
+    uW: "section_lgwLHA",
+    wx: "header_lgwLHA",
+    $s: "headerActions_lgwLHA",
+    d$: "arrows_lgwLHA",
+    XG: "scroller_lgwLHA",
+    vL: "fadeStart_lgwLHA",
+    y0: "fadeEnd_lgwLHA",
+    OW: "fadeBoth_lgwLHA",
+    AV: "scrollerItem_lgwLHA",
 };

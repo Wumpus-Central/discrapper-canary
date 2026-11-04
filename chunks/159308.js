@@ -1,1 +1,1 @@
-c.exports = { i: "home_c87fd6", l: "notice_c87fd6" };
+s.exports = { i: "home_chLwsG", l: "notice_chLwsG" };

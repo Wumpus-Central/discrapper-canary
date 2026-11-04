@@ -1,21 +1,5 @@
-r.d(t, { iP: () => i, pA: () => o });
 let n = null;
-function i(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "assertive",
-        r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 7e3;
-    n
-        ? n.announce(e, t, r)
-        : ((n = new a()),
-          ("boolean" == typeof IS_REACT_ACT_ENVIRONMENT ? IS_REACT_ACT_ENVIRONMENT : "u" > typeof jest)
-              ? n.announce(e, t, r)
-              : setTimeout(() => {
-                    n?.isAttached() && n?.announce(e, t, r);
-                }, 100));
-}
-function o(e) {
-    n && n.clear(e);
-}
-class a {
+class i {
     constructor() {
         ((this.node = null),
             (this.assertiveLog = null),
@@ -76,3 +60,24 @@ class a {
             (!e || "polite" === e) && this.politeLog && (this.politeLog.innerHTML = ""));
     }
 }
+r.d(
+    t,
+    {},
+    {
+        iP: function (e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "assertive",
+                r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 7e3;
+            n
+                ? n.announce(e, t, r)
+                : ((n = new i()),
+                  ("boolean" == typeof IS_REACT_ACT_ENVIRONMENT ? IS_REACT_ACT_ENVIRONMENT : "u" > typeof jest)
+                      ? n.announce(e, t, r)
+                      : setTimeout(() => {
+                            n?.isAttached() && n?.announce(e, t, r);
+                        }, 100));
+        },
+        pA: function (e) {
+            n && n.clear(e);
+        },
+    },
+);

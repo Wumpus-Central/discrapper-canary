@@ -1,0 +1,100 @@
+.nameRow_qROSAv {
+    align-items: flex-start;
+    display: flex;
+    gap: var(--space-16)
+}
+
+.iconSlot_qROSAv {
+    flex-shrink: 0
+}
+
+.iconSlot_qROSAv,
+.tile_qROSAv {
+    position: relative
+}
+
+.tile_qROSAv {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    height: var(--custom-app-icon-size, 64px);
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+    width: var(--custom-app-icon-size, 64px)
+}
+
+.tile_qROSAv:disabled {
+    cursor: default
+}
+
+.tileEmpty_qROSAv {
+    border-color: var(--border-strong);
+    border-style: dashed
+}
+
+.tileEmpty_qROSAv:focus-visible,
+.tileEmpty_qROSAv:hover:not(:disabled) {
+    background-color: var(--background-mod-normal);
+    border-color: var(--text-brand);
+    color: var(--text-strong)
+}
+
+.tileImage_qROSAv {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.tileOverlay_qROSAv {
+    align-items: center;
+    background-color: var(--opacity-black-40);
+    color: var(--white);
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .15s ease
+}
+
+.tile_qROSAv:focus-visible .tileOverlay_qROSAv,
+.tile_qROSAv:hover:not(:disabled) .tileOverlay_qROSAv {
+    opacity: 1
+}
+
+.nameField_qROSAv {
+    flex: 1;
+    min-width: 0;
+    position: relative
+}
+
+.fileInput_qROSAv {
+    display: none
+}
+
+@media (prefers-reduced-motion:reduce) {
+
+    .tile_qROSAv,
+    .tileOverlay_qROSAv {
+        transition: none
+    }
+}
+
+.loading_rqE2lZ {
+    display: flex;
+    justify-content: center;
+    padding-block: var(--space-16)
+}
+
+.projectTab_rqE2lZ {
+    padding-top: var(--space-12)
+}
+
+/*# sourceMappingURL=33b50733ff1f9b8c.css.map*/

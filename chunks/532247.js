@@ -1,6 +1,5 @@
-l.d(t, { QP: () => u, dv: () => s, h_: () => o, oV: () => d });
-var n = l(809526),
-    a = l(105292);
+var n = l(191850),
+    a = l(792996);
 let r = {
         enable: ["sandbox", "files", "packages", "prepare", "build", "server", "reload"],
         disable: ["snapshot", "stopping", "reload"],
@@ -20,9 +19,6 @@ function s(e) {
     return "starting" === e ? "enable" : "stopping" === e || "building" === e ? "disable" : null;
 }
 function u(e, t) {
-    return "live" === e ? "enable" : "idle" === e || ("error" === e && "disable" === t) ? "disable" : null;
-}
-function o(e, t) {
     let l,
         u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
         o = s(e),
@@ -38,16 +34,29 @@ function o(e, t) {
         stepCount: c.length,
     };
 }
-function d(e) {
-    let t = a.intl.string(n.default.xjblZt);
-    if ("error" === e.phase || (null == e.phase && null != e.error))
-        return a.intl.formatToPlainString(e.enabled ? n.default["9YJAIN"] : n.default.JUqlqE, { error: e.error ?? "" });
-    let l = o(e.phase, e.step);
-    return null != l
-        ? null == l.stepLabel
-            ? l.title
-            : `${l.title} \xb7 ${l.stepLabel}`
-        : "idle" === e.phase && e.enabled
-          ? `${a.intl.string(n.default.gCey7s)} \xb7 ${t}`
-          : t;
-}
+l.d(
+    t,
+    {},
+    {
+        QP: function (e, t) {
+            return "live" === e ? "enable" : "idle" === e || ("error" === e && "disable" === t) ? "disable" : null;
+        },
+        dv: s,
+        h_: u,
+        oV: function (e) {
+            let t = a.intl.string(n.default.xjblZt);
+            if ("error" === e.phase || (null == e.phase && null != e.error))
+                return a.intl.formatToPlainString(e.enabled ? n.default["9YJAIN"] : n.default.JUqlqE, {
+                    error: e.error ?? "",
+                });
+            let l = u(e.phase, e.step);
+            return null != l
+                ? null == l.stepLabel
+                    ? l.title
+                    : `${l.title} \xb7 ${l.stepLabel}`
+                : "idle" === e.phase && e.enabled
+                  ? `${a.intl.string(n.default.gCey7s)} \xb7 ${t}`
+                  : t;
+        },
+    },
+);

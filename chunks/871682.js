@@ -1,4 +1,3 @@
-a.d(e, { F: () => h });
 var n = a(477900),
     i = a(582128),
     s = a(503698),
@@ -37,3 +36,4 @@ class h extends i.Component {
         return (0, n.jsx)(r.A.div, { className: o()(t, p.a), style: this.getAnimatedStyle(), children: e });
     }
 }
+a.d(e, {}, { F: h });

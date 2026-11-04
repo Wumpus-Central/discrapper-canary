@@ -1,8 +1,7 @@
 let i;
-n.d(t, { A: () => d });
-var r = n(17928),
+var r = n(855986),
     a = n(73153),
-    s = n(952818),
+    s = n(986322),
     l = n(760751);
 class o extends r.Ay.Store {
     initialize() {
@@ -26,3 +25,4 @@ let d = new o(a.h, {
         i = e.associatedGame;
     },
 });
+n.d(t, {}, { A: d });

@@ -1,4 +1,3 @@
-n.d(t, { A: () => i });
 let i = (0, n(600975).C)({
     kind: "guild",
     id: "2026-03_guild_official_messages",
@@ -6,3 +5,4 @@ let i = (0, n(600975).C)({
     defaultConfig: { enabled: !1 },
     treatments: [{ id: 1, label: "Enable official messages", config: { enabled: !0 } }],
 });
+n.d(t, {}, { A: i });

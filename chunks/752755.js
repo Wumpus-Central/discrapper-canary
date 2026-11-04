@@ -1,7 +1,6 @@
-n.d(t, { A: () => c, e: () => l });
 var i,
-    a = n(17928),
-    s = n(73153),
+    s = n(855986),
+    a = n(73153),
     l =
         (((i = {})[(i.NOT_FETCHED = 0)] = "NOT_FETCHED"),
         (i[(i.FETCHING = 1)] = "FETCHING"),
@@ -10,7 +9,7 @@ var i,
         i);
 let r = {},
     o = {};
-class u extends a.Ay.Store {
+class u extends s.Ay.Store {
     static displayName = "MediaPostEmbedStore";
     getMediaPostEmbed(e) {
         if (null != e) return r[e];
@@ -22,7 +21,7 @@ class u extends a.Ay.Store {
         return r;
     }
 }
-let c = new u(s.h, {
+let c = new u(a.h, {
     CONNECTION_OPEN: function () {
         ((r = {}), (o = {}));
     },
@@ -42,3 +41,4 @@ let c = new u(s.h, {
         e.isSwitchingAccount || ((r = {}), (o = {}));
     },
 });
+n.d(t, {}, { A: c, e: l });

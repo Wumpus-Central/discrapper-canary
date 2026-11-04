@@ -1,4 +1,4 @@
-.toggleIconContainer__46219 {
+.toggleIconContainer__NMpQm {
     align-items: center;
     cursor: pointer;
     display: flex;
@@ -7,12 +7,12 @@
     width: 16px
 }
 
-.button__46219 {
+.button__NMpQm {
     border: none !important;
     position: relative
 }
 
-.cutoutContainer__46219 {
+.cutoutContainer__NMpQm {
     align-items: center;
     background: var(--background-mod-subtle);
     border: 3px solid var(--black);
@@ -27,18 +27,18 @@
     width: 16px
 }
 
-.toggledCutoutContainer__46219 {
+.toggledCutoutContainer__NMpQm {
     background: var(--white)
 }
 
-.separatorDot__46219 {
+.separatorDot__NMpQm {
     background: var(--background-mod-strong);
     border-radius: var(--radius-round);
     height: 4px;
     width: 4px
 }
 
-.guildIconContainer__46219 {
+.guildIconContainer__NMpQm {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -46,36 +46,36 @@
     justify-content: center
 }
 
-.guildName__46219 {
+.guildName__NMpQm {
     max-width: 180px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
 }
 
-.guildIcon__46219 {
+.guildIcon__NMpQm {
     height: 16px;
     width: 16px
 }
 
-.voiceChannelNameContainer__46219 {
+.voiceChannelNameContainer__NMpQm {
     gap: 4px
 }
 
-.channelIcon__46219,
-.voiceChannelNameContainer__46219 {
+.channelIcon__NMpQm,
+.voiceChannelNameContainer__NMpQm {
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: center
 }
 
-.channelIcon__46219 {
+.channelIcon__NMpQm {
     height: 16px;
     width: 16px
 }
 
-.channelName__46219 {
+.channelName__NMpQm {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -86,7 +86,7 @@
     white-space: nowrap
 }
 
-.panelContainer_a83780 {
+.panelContainer_6Ln5ei {
     align-items: center;
     background: var(--black);
     border: 1px solid var(--border-subtle);
@@ -98,13 +98,13 @@
     padding: 8px
 }
 
-.locked_a83780 {
+.locked_6Ln5ei {
     display: none;
     pointer-events: none
 }
 
-.buttonSection_a83780,
-.panelRow_a83780 {
+.buttonSection_6Ln5ei,
+.panelRow_6Ln5ei {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -112,18 +112,18 @@
     justify-content: center
 }
 
-.buttonSection_a83780 {
+.buttonSection_6Ln5ei {
     background: var(--background-mod-subtle);
     border: 1px solid var(--border-muted);
     border-radius: 12px;
     padding: 4px
 }
 
-.inCall_a83780 {
+.inCall_6Ln5ei {
     background: var(--background-feedback-mod-critical)
 }
 
-.streamerModeNotice_a83780 {
+.streamerModeNotice_6Ln5ei {
     align-self: stretch;
     border: none;
     border-radius: var(--radius-sm);
@@ -132,38 +132,38 @@
     z-index: auto
 }
 
-.streamerModeNotice_a83780 .ctaButton_a83780 {
+.streamerModeNotice_6Ln5ei .ctaButton_6Ln5ei {
     top: 0;
     vertical-align: baseline
 }
 
-.pro__30cbe {
+.pro_xW8MJW {
     text-transform: none
 }
 
-.tip__30cbe {
+.tip_xW8MJW {
     line-height: 16px;
     opacity: 1
 }
 
-.block__30cbe .pro__30cbe,
-.block__30cbe .tip__30cbe,
-.tip__30cbe {
+.block_xW8MJW .pro_xW8MJW,
+.block_xW8MJW .tip_xW8MJW,
+.tip_xW8MJW {
     font-size: 14px
 }
 
-.inline__30cbe .pro__30cbe,
-.inline__30cbe .tip__30cbe {
+.inline_xW8MJW .pro_xW8MJW,
+.inline_xW8MJW .tip_xW8MJW {
     display: inline;
     font-size: 12px
 }
 
-.inline__30cbe .pro__30cbe {
+.inline_xW8MJW .pro_xW8MJW {
     margin-inline-end: 3px
 }
 
-.enable-forced-colors .tip__30cbe {
+.enable-forced-colors .tip_xW8MJW {
     opacity: 1
 }
 
-/*# sourceMappingURL=587308.20108b40ff651392.css.map*/
+/*# sourceMappingURL=587308.7241ede0566f6d72.css.map*/

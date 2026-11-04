@@ -1,4 +1,3 @@
-n.d(t, { $: () => r });
 var i,
     r =
         (((i = {})[(i.PREMIUM_TENURE = 1)] = "PREMIUM_TENURE"),
@@ -24,3 +23,4 @@ var i,
         (i[(i.GAME_VARIETY = 21)] = "GAME_VARIETY"),
         (i[(i.STAFF = 22)] = "STAFF"),
         i);
+n.d(t, {}, { $: r });

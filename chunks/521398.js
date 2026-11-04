@@ -1,15 +1,20 @@
-a.d(e, { R: () => o });
-var n = a(477900);
-a(582128);
-var d = a(192308),
-    i = a(652215);
-function o() {
-    let { groupId: t, initialUserIds: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    (0, d.openModalLazy)(
-        async () => {
-            let { default: d } = await a.e("51080").then(a.bind(a, 297147));
-            return (a) => (0, n.jsx)(d, { ...a, groupId: t, initialUserIds: e });
+var a = i(477900);
+i(582128);
+var n = i(192308),
+    s = i(652215);
+i.d(
+    e,
+    {},
+    {
+        R: function () {
+            let { groupId: t, initialUserIds: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+            (0, n.mM)(
+                async () => {
+                    let { default: n } = await i.e(51080).then(i.bind(i, 297147));
+                    return (i) => (0, a.jsx)(n, { ...i, groupId: t, initialUserIds: e });
+                },
+                { contextKey: (0, n.TI)(s.BRT.OVERLAY) },
+            );
         },
-        { contextKey: (0, d.modalContextFromAppContext)(i.BRT.OVERLAY) },
-    );
-}
+    },
+);

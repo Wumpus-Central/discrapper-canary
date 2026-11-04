@@ -1,0 +1,29 @@
+.container_7oSLey {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    gap: 8px;
+    padding: 12px 16px
+}
+
+.icons_7oSLey {
+    display: flex;
+    flex: 1;
+    gap: 16px;
+    justify-content: flex-end
+}
+
+.iconContainer_7oSLey {
+    cursor: pointer
+}
+
+.icon_7oSLey {
+    color: var(--interactive-text-default)
+}
+
+.icon_7oSLey:hover {
+    color: var(--interactive-text-hover)
+}
+
+/*# sourceMappingURL=eed02e677544c05d.css.map*/

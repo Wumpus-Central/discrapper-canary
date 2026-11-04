@@ -1,0 +1,590 @@
+.container_RHUSWe {
+    overflow: hidden
+}
+
+.container_RHUSWe,
+.imageWrapper_RHUSWe {
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.imageWrapper_RHUSWe {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+@keyframes fadeIn_RHUSWe {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeOut_RHUSWe {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+.image_RHUSWe {
+    display: block;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    width: 100%
+}
+
+.full-motion .image_RHUSWe {
+    animation: fadeIn_RHUSWe .15s ease-out
+}
+
+.prevImage_RHUSWe {
+    display: block;
+    height: 100%;
+    inset: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1
+}
+
+.full-motion .prevImage_RHUSWe {
+    animation: fadeOut_RHUSWe .15s ease-in forwards
+}
+
+.full-motion .videoFadeIn_RHUSWe {
+    animation: fadeIn_RHUSWe .15s ease-out
+}
+
+.video_RHUSWe {
+    background: transparent;
+    container-type: size;
+    display: flex;
+    height: 100% !important;
+    overflow: hidden;
+    position: relative;
+    width: 100% !important
+}
+
+.video_RHUSWe video {
+    border-radius: 0
+}
+
+.container_RHUSWe .videoWrapper_RHUSWe {
+    border-radius: 0;
+    height: 100% !important;
+    width: 100% !important
+}
+
+.mediaPlayer_RHUSWe {
+    background: transparent;
+    flex: 1;
+    height: 100% !important;
+    inset-inline-start: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100% !important;
+
+    @container (min-aspect-ratio: 16/9) {
+        height: 56.25cqw !important
+    }
+
+    @container (max-aspect-ratio: 16/9) {
+        width: 177.78cqh !important
+    }
+}
+
+.mediaPlayer_RHUSWe div {
+    display: none
+}
+
+.upsell_pjsc5i {
+    cursor: pointer;
+    display: block;
+    width: 100%
+}
+
+@media (max-width:485px) {
+    .notice_pjsc5i {
+        min-width: 0;
+        overflow-wrap: anywhere
+    }
+
+    .notice_pjsc5i>svg {
+        flex-shrink: 0
+    }
+
+    .notice_pjsc5i>div {
+        flex-wrap: wrap;
+        min-width: 0
+    }
+
+    .notice_pjsc5i>div>div {
+        max-width: 100%;
+        min-width: 0
+    }
+}
+
+.activationButton_-OWpGx {
+    padding: var(--space-4) 0
+}
+
+@media (max-width:485px) {
+    .notice_-OWpGx {
+        min-width: 0;
+        overflow-wrap: anywhere
+    }
+
+    .notice_-OWpGx>svg {
+        flex-shrink: 0
+    }
+
+    .notice_-OWpGx>div {
+        flex-wrap: wrap;
+        min-width: 0
+    }
+
+    .notice_-OWpGx>div>div {
+        max-width: 100%;
+        min-width: 0
+    }
+}
+
+.modalRoot_gtEi_P {
+    background-color: var(--control-secondary-background-default);
+    height: 560px;
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    width: 1075px
+}
+
+.modalContent_gtEi_P {
+    background-color: var(--background-surface-high);
+    display: flex;
+    flex-direction: column;
+    padding: 0
+}
+
+.no-webkit-scrollbar .modalContent_gtEi_P {
+    scrollbar-width: none
+}
+
+.modalContent_gtEi_P::-webkit-scrollbar {
+    height: 0;
+    width: 0
+}
+
+.panelsContainer_gtEi_P {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    min-height: 0
+}
+
+.infoContainer_gtEi_P {
+    background-color: var(--background-surface-high);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content: normal;
+    overflow-y: auto;
+    padding: 0;
+    width: 328px;
+    z-index: 1
+}
+
+.infoContainerExclusive_gtEi_P {
+    background-image: radial-gradient(154.08% 141.42% at 0 0, color-mix(in srgb, var(--background-brand) 25%, transparent) 0, transparent 100%)
+}
+
+.no-webkit-scrollbar .infoContainer_gtEi_P {
+    scrollbar-width: none
+}
+
+.infoContainer_gtEi_P::-webkit-scrollbar {
+    height: 0;
+    width: 0
+}
+
+.infoBottomSection_gtEi_P {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    margin-top: 0;
+    padding: var(--space-12) var(--space-24) var(--space-24)
+}
+
+.infoBottomSectionBorder_gtEi_P {
+    border-top: 1px solid var(--border-subtle)
+}
+
+.statusBadge_gtEi_P {
+    align-self: flex-start;
+    margin-bottom: var(--space-16);
+    padding: 0 var(--space-24)
+}
+
+.logoContainer_gtEi_P {
+    flex-shrink: 0;
+    padding: var(--space-24)
+}
+
+.logo_gtEi_P {
+    height: 32px
+}
+
+.infoContentSection_gtEi_P {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+    overflow-y: auto
+}
+
+.infoContentSection_gtEi_P:after,
+.infoContentSection_gtEi_P:before {
+    content: "";
+    flex: 1
+}
+
+.no-webkit-scrollbar .infoContentSection_gtEi_P {
+    scrollbar-width: none
+}
+
+.infoContentSection_gtEi_P::-webkit-scrollbar {
+    height: 0;
+    width: 0
+}
+
+.titleSection_gtEi_P {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: 0 var(--space-24)
+}
+
+.bundleContentsSection_gtEi_P {
+    padding: var(--space-24) var(--space-24) 0
+}
+
+.itemDetailsSection_gtEi_P {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-16) var(--space-24) var(--space-16)
+}
+
+.labelIconContainer_gtEi_P {
+    align-items: center;
+    background-color: transparent;
+    border-radius: 0;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4);
+    padding: 0;
+    width: auto
+}
+
+.labelIcon_gtEi_P {
+    height: 16px;
+    width: 16px
+}
+
+.buttonsContainer_gtEi_P {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.primaryButtonsRow_gtEi_P {
+    flex-direction: row;
+    gap: var(--space-8)
+}
+
+.giftButton_gtEi_P,
+.primaryButtonsRow_gtEi_P {
+    align-items: center;
+    display: flex
+}
+
+.giftButton_gtEi_P {
+    background-color: var(--control-secondary-background-default);
+    border: 1px solid var(--control-secondary-border-default);
+    border-radius: var(--radius-sm);
+    color: var(--text-default);
+    cursor: pointer;
+    flex-shrink: 0;
+    height: 40px;
+    justify-content: center;
+    transition: background-color .2s ease-in-out;
+    width: 40px
+}
+
+.giftButton_gtEi_P:hover {
+    background-color: var(--background-mod-normal)
+}
+
+.titleDescriptionContainer_gtEi_P {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: 0 var(--space-24)
+}
+
+.mediaContainer_gtEi_P {
+    background-color: var(--background-base-low);
+    flex: 1;
+    overflow: hidden;
+    position: relative
+}
+
+.modalHeaderButtonsContainer_gtEi_P {
+    color: var(--primary-100);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-12);
+    inset-inline-end: var(--space-16);
+    position: absolute;
+    top: var(--space-16)
+}
+
+.headerButtonBase_gtEi_P {
+    align-items: center;
+    background-color: var(--control-overlay-secondary-background-default);
+    border: 1px solid var(--control-overlay-secondary-border-default);
+    border-radius: var(--radius-sm);
+    box-sizing: content-box;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    transition: background-color .2s ease-in-out
+}
+
+.headerButtonBase_gtEi_P:hover {
+    background-color: color-mix(in srgb, var(--black) 40%, transparent)
+}
+
+.modalHeaderButton_gtEi_P {
+    width: 40px
+}
+
+.wishlistButton_gtEi_P {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    padding: 0
+}
+
+.goToShopButton_gtEi_P {
+    color: var(--primary-100);
+    gap: var(--space-8);
+    inset-inline-start: var(--space-16);
+    padding-inline: var(--space-16);
+    position: absolute;
+    top: var(--space-16);
+    white-space: nowrap
+}
+
+.priceSectionContainer_gtEi_P {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    justify-content: flex-end
+}
+
+.salePriceRow_gtEi_P {
+    align-items: end;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-4)
+}
+
+.salePriceRowSpaceBetween_gtEi_P {
+    justify-content: space-between;
+    width: 100%
+}
+
+.orbsPriceDisplay_gtEi_P {
+    align-items: center;
+    color: var(--text-strong);
+    display: flex;
+    gap: var(--space-4)
+}
+
+.orbsEarnedContainer_gtEi_P,
+.orbsPriceDisplayMuted_gtEi_P {
+    color: var(--text-muted)
+}
+
+.orbsEarnedContainer_gtEi_P>div {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4)
+}
+
+@media (max-width:485px) {
+    .modalRoot_gtEi_P.modalRoot_gtEi_P {
+        height: 100dvh;
+        max-height: 100dvh;
+        overflow: hidden;
+        overflow-wrap: anywhere
+    }
+
+    .mobileHeader_gtEi_P {
+        align-items: center;
+        background-color: var(--background-surface-high);
+        border-bottom: 1px solid var(--border-subtle);
+        display: flex;
+        flex-shrink: 0;
+        flex-wrap: wrap;
+        gap: var(--space-8);
+        justify-content: flex-end;
+        padding-bottom: var(--space-12);
+        padding-inline-end: max(var(--space-16), env(safe-area-inset-right));
+        padding-top: max(var(--space-12), env(safe-area-inset-top));
+        padding-inline-start: max(var(--space-16), env(safe-area-inset-left))
+    }
+
+    .modalHeaderButtonsContainer_gtEi_P {
+        flex-wrap: wrap;
+        gap: var(--space-8);
+        margin-inline-start: auto;
+        max-width: 100%;
+        position: static
+    }
+
+    .mobileLogo_gtEi_P {
+        flex: 1;
+        min-width: 0
+    }
+
+    .goToShopButton_gtEi_P {
+        box-sizing: border-box;
+        height: auto;
+        margin-inline-end: auto;
+        max-width: 100%;
+        min-height: var(--space-40);
+        min-width: 0;
+        padding-block: var(--space-8);
+        position: static;
+        white-space: normal
+    }
+
+    .goToShopButton_gtEi_P,
+    .modalHeaderButton_gtEi_P {
+        background-color: var(--control-secondary-background-default);
+        border-color: var(--control-secondary-border-default);
+        color: var(--text-default);
+        flex-shrink: 0
+    }
+
+    .goToShopButton_gtEi_P:hover,
+    .modalHeaderButton_gtEi_P:hover {
+        background-color: var(--control-secondary-background-hover)
+    }
+
+    .modalContent_gtEi_P {
+        flex: 1;
+        min-height: 0
+    }
+
+    .panelsContainer_gtEi_P {
+        flex: 1 0 auto;
+        flex-direction: column;
+        min-height: auto
+    }
+
+    .mediaContainer_gtEi_P {
+        aspect-ratio: 4/3;
+        flex: none;
+        width: 100%
+    }
+
+    .infoContainer_gtEi_P {
+        flex: none;
+        min-width: 0;
+        overflow: visible;
+        padding-bottom: var(--space-16);
+        width: 100%
+    }
+
+    .infoContentSection_gtEi_P {
+        flex: none;
+        min-height: auto;
+        overflow: visible;
+        padding-top: var(--space-16)
+    }
+
+    .infoContentSection_gtEi_P:after,
+    .infoContentSection_gtEi_P:before {
+        display: none
+    }
+
+    .logo_gtEi_P {
+        max-width: 100%;
+        -o-object-fit: contain;
+        object-fit: contain
+    }
+
+    .bundleContentsSection_gtEi_P,
+    .itemDetailsSection_gtEi_P,
+    .statusBadge_gtEi_P,
+    .titleDescriptionContainer_gtEi_P,
+    .titleSection_gtEi_P {
+        padding-inline: var(--space-16)
+    }
+
+    .labelIcon_gtEi_P {
+        flex-shrink: 0
+    }
+
+    .infoBottomSection_gtEi_P {
+        background-color: var(--background-surface-high);
+        border-top: 1px solid var(--border-subtle);
+        bottom: 0;
+        flex-shrink: 0;
+        padding-bottom: max(var(--space-16), env(safe-area-inset-bottom));
+        padding-inline-end: max(var(--space-16), env(safe-area-inset-right));
+        padding-top: var(--space-12);
+        padding-inline-start: max(var(--space-16), env(safe-area-inset-left));
+        position: sticky;
+        z-index: 2
+    }
+
+    .primaryButtonsRow_gtEi_P {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) var(--space-40)
+    }
+
+    .giftButton_gtEi_P {
+        box-sizing: border-box
+    }
+
+    .orbsPriceDisplay_gtEi_P,
+    .salePriceRow_gtEi_P {
+        flex-wrap: wrap;
+        max-width: 100%;
+        min-width: 0
+    }
+}
+
+/*# sourceMappingURL=7678d81968c0f0ff.css.map*/

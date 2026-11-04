@@ -1,12 +1,11 @@
-n.d(t, { A: () => S, x: () => N });
 var i = n(435558),
     s = n.n(i),
-    r = n(17928),
+    r = n(855986),
     l = n(73153),
     a = n(827343),
     o = n(617617),
-    c = n(477653),
-    d = n(763827),
+    c = n(718197),
+    d = n(495867),
     u = n(723702),
     h = n(792205),
     C = n(731854);
@@ -20,7 +19,7 @@ let A = { ignoredDevices: {} },
     T = { id: null, justChanged: !1 },
     v = /\((.+)\)\s*$/;
 function N(e) {
-    if ((0, u.getPlatform)() === u.PlatformTypes.WINDOWS) {
+    if ((0, u.uo)() === u.fg.WINDOWS) {
         let t = e.name.match(v);
         if (null != t) return t[1];
     }
@@ -145,3 +144,4 @@ let S = new O(l.h, {
         (t && (m = {}), (g.neverShowModal = t));
     },
 });
+n.d(t, {}, { A: S, x: N });

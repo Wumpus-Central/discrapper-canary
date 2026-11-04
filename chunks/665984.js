@@ -1,10 +1,10 @@
 e.exports = {
-    iE: "wrapper_a04c02",
-    p_: "list_a04c02",
-    Aw: "listItem_a04c02",
-    $K: "listItemExpanded_a04c02",
-    k7: "questionWrapper_a04c02",
-    b1: "question_a04c02",
-    q4: "questionIcon_a04c02",
-    ZF: "answer_a04c02",
+    iE: "wrapper_eICevE",
+    p_: "list_eICevE",
+    Aw: "listItem_eICevE",
+    $K: "listItemExpanded_eICevE",
+    k7: "questionWrapper_eICevE",
+    b1: "question_eICevE",
+    q4: "questionIcon_eICevE",
+    ZF: "answer_eICevE",
 };

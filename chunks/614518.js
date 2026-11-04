@@ -1,25 +1,22 @@
 let i;
-(n.d(t, { A: () => A, a: () => p }), n(667532));
+n(667532);
 var l = n(435558),
-    s = n(17928),
+    s = n(855986),
     r = n(765178),
     a = n(73153),
     o = n(927813),
-    u = n(104142);
+    u = n(716365);
 n(806931);
 let c = [],
     d = {},
-    m = [];
-function p(e) {
-    null != e && a.h.dispatch({ type: "VOICE_CHANNEL_EFFECT_CLEAR", userId: e });
-}
-let g = [],
-    f = 10 * o.A.Millis.SECOND,
-    h = (0, l.debounce)(() => {
+    m = [],
+    p = [],
+    g = 10 * o.A.Millis.SECOND,
+    f = (0, l.debounce)(() => {
         let e = (0, u.fr)(m);
         (r.O.announce(e, "polite"), (m = []));
     }, 500);
-class x extends s.Ay.Store {
+class h extends s.Ay.Store {
     static displayName = "VoiceChannelEffectsStore";
     get recentlyUsedEmojis() {
         return c;
@@ -34,7 +31,7 @@ class x extends s.Ay.Store {
         return d[e];
     }
 }
-let A = new x(a.h, {
+let x = new h(a.h, {
     VOICE_CHANNEL_EFFECT_CLEAR: function (e) {
         let { userId: t } = e;
         null != d[t] && delete d[t];
@@ -49,14 +46,14 @@ let A = new x(a.h, {
             null != i &&
             ((d[n] = { emoji: t, sentAt: Date.now(), animationType: i }),
             (m = [...m, { emojiName: t.name, userId: n }]),
-            h());
+            f());
     },
     VOICE_CHANNEL_EFFECT_SENT_LOCAL: function () {
         let e = new Date();
-        if ((g = [e, ...g].slice(0, 20)).length >= 20) {
-            let t = g[g.length - 1],
+        if ((p = [e, ...p].slice(0, 20)).length >= 20) {
+            let t = p[p.length - 1],
                 n = e.getTime() - t.getTime();
-            n < f && (i = new Date(e.getTime() + f - n));
+            n < g && (i = new Date(e.getTime() + g - n));
         }
     },
     VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: function (e) {
@@ -64,3 +61,13 @@ let A = new x(a.h, {
         i = new Date(Date.now() + t);
     },
 });
+n.d(
+    t,
+    {},
+    {
+        A: x,
+        a: function (e) {
+            null != e && a.h.dispatch({ type: "VOICE_CHANNEL_EFFECT_CLEAR", userId: e });
+        },
+    },
+);

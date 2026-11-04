@@ -1,7 +1,1 @@
-e.exports = {
-    r$: "dots_bc2923",
-    Sp: "themed_bc2923",
-    Om: "dot_bc2923",
-    LI: "css-dots-pulse_bc2923",
-    Ft: "paused_bc2923",
-};
+e.exports = { r$: "dots_B8IhI-", Sp: "themed_B8IhI-", Om: "dot_B8IhI-", Ft: "paused_B8IhI-" };

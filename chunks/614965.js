@@ -1,10 +1,10 @@
 e.exports = {
-    Wk: "categoryContainer__3a0cf",
-    Km: "categoryHeader__3a0cf",
-    jf: "statusRow__3a0cf",
-    bc: "statusTextContainer__3a0cf",
-    I8: "statusIcon__3a0cf",
-    MH: "calloutBox__3a0cf",
-    vi: "calloutBoxDanger__3a0cf",
-    WV: "globalDisableToggle__3a0cf",
+    Wk: "categoryContainer_KG5liV",
+    Km: "categoryHeader_KG5liV",
+    jf: "statusRow_KG5liV",
+    bc: "statusTextContainer_KG5liV",
+    I8: "statusIcon_KG5liV",
+    MH: "calloutBox_KG5liV",
+    vi: "calloutBoxDanger_KG5liV",
+    WV: "globalDisableToggle_KG5liV",
 };

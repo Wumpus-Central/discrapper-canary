@@ -1,8 +1,8 @@
 e.exports = {
-    nM: "row__2935d",
-    jo: "rowHeading__2935d",
-    zf: "rowCheck__2935d",
-    G9: "rowTitle__2935d",
-    CZ: "rowSelected__2935d",
-    f1: "rowInert__2935d",
+    nM: "row_m0OnQa",
+    jo: "rowHeading_m0OnQa",
+    zf: "rowCheck_m0OnQa",
+    G9: "rowTitle_m0OnQa",
+    CZ: "rowSelected_m0OnQa",
+    f1: "rowInert_m0OnQa",
 };

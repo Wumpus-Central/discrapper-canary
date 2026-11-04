@@ -1,7 +1,6 @@
-a.d(i, { default: () => A });
 var e = a(477900);
 a(582128);
-var n = a(980707),
+var n = a(165862),
     r = a(477782),
     d = a(442433),
     l = a(847767),
@@ -10,7 +9,7 @@ var n = a(980707),
     o = a(688810),
     u = a(180798),
     E = a(652215),
-    _ = a(105292);
+    _ = a(792996);
 let A = (0, s.A)(
     (0, l.A)(
         function (t) {
@@ -33,3 +32,4 @@ let A = (0, s.A)(
     ),
     [c.A.CONTEXT_MENU, c.A.GUILD_MODERATION_USER_MENU],
 );
+a.d(i, {}, { default: A });

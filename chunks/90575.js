@@ -1,4 +1,9 @@
-function i(e, t) {
-    return `${e.toLowerCase().padEnd(32, "!")}${t.id}`;
-}
-n.d(t, { A: () => i });
+n.d(
+    t,
+    {},
+    {
+        A: function (e, t) {
+            return `${e.toLowerCase().padEnd(32, "!")}${t.id}`;
+        },
+    },
+);

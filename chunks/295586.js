@@ -1,4 +1,4 @@
-(r.d(t, { p: () => T }), r(321073));
+r(321073);
 var l = r(73153),
     o = r(350172),
     u = r(730202),
@@ -56,4 +56,4 @@ let T = {
             null != d && (clearTimeout(d), (d = null)));
     },
 };
-l.h.subscribe("LOGOUT", T.reset);
+(l.h.subscribe("LOGOUT", T.reset), r.d(t, {}, { p: T }));

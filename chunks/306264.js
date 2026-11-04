@@ -1,4 +1,3 @@
-n.d(t, { M: () => r });
 var i,
     r =
         (((i = {}).INBOX = "inbox"),
@@ -7,3 +6,4 @@ var i,
         (i.OVERLAY_INVITES = "overlay_invites"),
         (i.ADMIN = "admin"),
         i);
+n.d(t, {}, { M: r });

@@ -1,5 +1,4 @@
-u.d(n, { _: () => a });
-var e = u(17928),
+var e = u(855986),
     r = u(290595),
     i = u(171316),
     o = u(419954),
@@ -8,7 +7,7 @@ var e = u(17928),
     f = u(780964),
     l = u(972737),
     T = u(652215),
-    s = u(105292);
+    s = u(792996);
 let a = (0, o.zD)(f.X.DATA_USAGE_PERSONALIZATION_SETTING, {
     useTitle: () => s.intl.string(s.t.MNKzyg),
     useSubtitle: () =>
@@ -31,3 +30,4 @@ let a = (0, o.zD)(f.X.DATA_USAGE_PERSONALIZATION_SETTING, {
     },
     useDisabled: i.uM,
 });
+u.d(n, {}, { _: a });

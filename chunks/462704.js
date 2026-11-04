@@ -1,4 +1,4 @@
-t.d(r, { CurpValidation: () => P });
+t.r(r);
 var a = t(783285),
     n = t(768611),
     i = t(200503),
@@ -18,7 +18,7 @@ var f = t(806002);
 t(128743);
 var g = t(918676),
     m = t(611797),
-    b = t(393108),
+    b = t(883425),
     y = ({
         curp: e,
         errorKey: r,
@@ -68,7 +68,7 @@ var g = t(918676),
             ],
         });
     },
-    k = ({
+    I = ({
         form: e,
         validationErrors: r,
         onFormChange: t,
@@ -93,24 +93,24 @@ var g = t(918676),
                 generate: d("curp.generateCta") ?? "Generate CURP",
                 ...s,
             },
-            v = (0, n.d)(() => (0, m.n)(b.h9.map((e) => e.required)), []),
+            v = (0, n.d)(() => (0, m.n)(b.GENERATE_CURP_FIELDS.map((e) => e.required)), []),
             g = !!r && Object.keys(r).length > 0,
             y = (e) => (r) => {
                 t({ [e]: r.target.value });
             },
-            k = (e) => () => {
+            I = (e) => () => {
                 i(e);
             },
-            I = [
+            k = [
                 { value: "H", label: p.male },
                 { value: "M", label: p.female },
                 { value: "X", label: p.other },
             ],
-            P = b.eI.map((e) => ({ value: e.value, label: e.label }));
+            P = b.mexicanStates.map((e) => ({ value: e.value, label: e.label }));
         return (0, n.v)("div", {
             class: "IncodeCurpValidation IncodeGenerateCurpForm",
             children: [
-                b.h9.map((a) => {
+                b.GENERATE_CURP_FIELDS.map((a) => {
                     let i = (0, m.t)(v, a.required),
                         u = i ? (d(`forms.label.${i}`) ?? void 0) : void 0,
                         l = r?.[a.key],
@@ -132,7 +132,7 @@ var g = t(918676),
                             }
                         })(a.key);
                     if ("dropdown" === a.type) {
-                        let r = "gender" === a.key ? I : P,
+                        let r = "gender" === a.key ? k : P,
                             i = "gender" === a.key ? p.genderPlaceholder : p.statePlaceholder;
                         return (0, n.v)(
                             C.t,
@@ -148,7 +148,7 @@ var g = t(918676),
                                 onChange: (e) => {
                                     "gender" === a.key ? t({ gender: e }) : t({ [a.key]: e });
                                 },
-                                onBlur: k(a.key),
+                                onBlur: I(a.key),
                                 error: s,
                                 showErrorIcon: !!s,
                                 "data-testid": "gender" === a.key ? "curp-gender" : "curp-birth-state",
@@ -166,7 +166,7 @@ var g = t(918676),
                                   labelHint: u,
                                   value: e.birthDate,
                                   onInput: y("birthDate"),
-                                  onBlur: k("birthDate"),
+                                  onBlur: I("birthDate"),
                                   max: new Date().toISOString().split("T")[0],
                                   disabled: o,
                                   required: a.required,
@@ -190,7 +190,7 @@ var g = t(918676),
                                   labelHint: u,
                                   value: e[a.key],
                                   onInput: y(a.key),
-                                  onBlur: k(a.key),
+                                  onBlur: I(a.key),
                                   placeholder: c,
                                   disabled: o,
                                   required: a.required,
@@ -212,13 +212,13 @@ var g = t(918676),
             ],
         });
     },
-    I = ({ config: e, manager: r, onFinish: t, onError: u }) => {
+    k = ({ config: e, manager: r, onFinish: t, onError: u }) => {
         let { t: C } = (0, a.n)(),
             [f, g] = (0, i.u)(
                 () => {
                     if (r) return r;
                     if (!e) throw Error("CurpValidation config is required when no manager is provided");
-                    return (0, b.pX)({ config: e });
+                    return (0, b.createCurpValidationManager)({ config: e });
                 },
                 { manageLifecycle: !r },
             );
@@ -254,7 +254,7 @@ var g = t(918676),
                 className: "IncodeCurpValidationPage",
                 title: C("curp.generate") ?? "Generate your CURP",
                 hideFooterBranding: !0,
-                children: (0, n.v)(k, {
+                children: (0, n.v)(I, {
                     form: f.form,
                     validationErrors: f.validationErrors,
                     onFormChange: (e) => g.setGenerateForm(e),
@@ -347,5 +347,5 @@ var g = t(918676),
         return ("finished" === f.status || f.status, null);
     },
     P = ({ config: e, manager: r, onFinish: t, onError: a }) =>
-        (0, n.v)(u.t, { children: e || r ? (0, n.v)(I, { config: e, manager: r, onFinish: t, onError: a }) : null });
-(0, g.t)(P, "incode-curp-validation");
+        (0, n.v)(u.t, { children: e || r ? (0, n.v)(k, { config: e, manager: r, onFinish: t, onError: a }) : null });
+((0, g.t)(P, "incode-curp-validation"), t.d(r, {}, { CurpValidation: P }));

@@ -1,4 +1,3 @@
-e.d(i, { I: () => p, i: () => u });
 var n = e(73153),
     T = e(93465),
     I = e(870373),
@@ -11,8 +10,15 @@ function p(t, i) {
         n.h.dispatch({ type: "OVERLAY_SET_NOTIFICATION_DISABLED_SETTING", setting: t, disabled: i, shouldTrack: e })
     );
 }
-function u(t, i) {
-    let e = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        n = _.A.getDisabledSettingByNotificationType(t);
-    if (null != n) return p(n, i, e);
-}
+e.d(
+    i,
+    {},
+    {
+        I: p,
+        i: function (t, i) {
+            let e = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+                n = _.A.getDisabledSettingByNotificationType(t);
+            if (null != n) return p(n, i, e);
+        },
+    },
+);

@@ -1,7 +1,12 @@
-n.d(t, { A: () => a });
-var i = n(702841),
+var i = n(164636),
     r = n(734057);
-function a(e) {
-    let t = (0, i.bG)([r.A], () => r.A.getChannel(e));
-    return t?.isPrivate() ?? !1;
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let t = (0, i.bG)([r.A], () => r.A.getChannel(e));
+            return t?.isPrivate() ?? !1;
+        },
+    },
+);

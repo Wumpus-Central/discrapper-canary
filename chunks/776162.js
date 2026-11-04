@@ -1,8 +1,7 @@
-n.d(t, { Ay: () => R, i2: () => N, t3: () => b });
 var i = n(477900),
     r = n(582128),
-    l = n(17928),
-    s = n(193249),
+    l = n(855986),
+    s = n(143129),
     a = n(331322),
     o = n(534514),
     d = n(834730),
@@ -10,18 +9,18 @@ var i = n(477900),
     c = n(408278),
     h = n(789645),
     m = n(627363),
-    g = n(114994),
+    g = n(191827),
     p = n(522265),
-    f = n(649045),
-    x = n(32584),
+    f = n(104299),
+    x = n(83880),
     A = n(486020),
     E = n(302614),
     S = n(667419),
-    I = n(839814),
+    I = n(415173),
     v = n(661943),
     j = n(652215),
-    y = n(254821),
-    C = n(105292),
+    y = n(361729),
+    C = n(792996),
     T = n(255324);
 let b = [
     j.uss.VOICE_V3,
@@ -79,97 +78,105 @@ function N(e) {
         onChange: (e) => (0, v.ht)(n, !e),
     });
 }
-function R(e) {
-    let t,
-        n,
-        { onClose: s } = e,
-        m = r.useMemo(
-            () =>
-                b.flatMap((e) => {
-                    let t = I.A[e];
-                    return t?.label != null &&
-                        null != t.description &&
-                        null != t.icon &&
-                        (null == t.predicate || t.predicate())
-                        ? [{ type: e, Icon: t.icon, label: t.label(), description: t.description() }]
-                        : [];
-                }),
-            [],
-        ),
-        p =
-            ((t = r.useMemo(() => I.A[j.uss.CONJURE]?.predicate?.() ?? !1, [])),
-            (n = (0, l.bG)([g.A], () => g.A.getProjects())),
-            t ? n : []),
-        f = C.intl.string(C.t.cpT0Cq);
-    return (0, i.jsx)(E.A, {
-        className: T.nd,
-        children: (0, i.jsxs)("section", {
-            className: T.SV,
-            "aria-labelledby": "overlay-widgets-panel-title",
-            "data-testid": "overlay-widgets-panel",
-            children: [
-                (0, i.jsxs)(a.B, {
-                    direction: "horizontal",
-                    justify: "space-between",
-                    align: "start",
-                    gap: 8,
+n.d(
+    t,
+    {},
+    {
+        Ay: function (e) {
+            let t,
+                n,
+                { onClose: s } = e,
+                m = r.useMemo(
+                    () =>
+                        b.flatMap((e) => {
+                            let t = I.A[e];
+                            return t?.label != null &&
+                                null != t.description &&
+                                null != t.icon &&
+                                (null == t.predicate || t.predicate())
+                                ? [{ type: e, Icon: t.icon, label: t.label(), description: t.description() }]
+                                : [];
+                        }),
+                    [],
+                ),
+                p =
+                    ((t = r.useMemo(() => I.A[j.uss.CONJURE]?.predicate?.() ?? !1, [])),
+                    (n = (0, l.bG)([g.A], () => g.A.getProjects())),
+                    t ? n : []),
+                f = C.intl.string(C.t.cpT0Cq);
+            return (0, i.jsx)(E.A, {
+                className: T.nd,
+                children: (0, i.jsxs)("section", {
+                    className: T.SV,
+                    "aria-labelledby": "overlay-widgets-panel-title",
+                    "data-testid": "overlay-widgets-panel",
                     children: [
                         (0, i.jsxs)(a.B, {
-                            gap: 4,
+                            direction: "horizontal",
+                            justify: "space-between",
+                            align: "start",
+                            gap: 8,
                             children: [
-                                (0, i.jsx)(o.D, {
-                                    id: "overlay-widgets-panel-title",
-                                    variant: "heading-lg/semibold",
-                                    color: "text-strong",
-                                    children: C.intl.string(y.default["Qk/rJB"]),
+                                (0, i.jsxs)(a.B, {
+                                    gap: 4,
+                                    children: [
+                                        (0, i.jsx)(o.D, {
+                                            id: "overlay-widgets-panel-title",
+                                            variant: "heading-lg/semibold",
+                                            color: "text-strong",
+                                            children: C.intl.string(y.default["Qk/rJB"]),
+                                        }),
+                                        (0, i.jsx)(d.E, {
+                                            variant: "body-sm/normal",
+                                            color: "text-muted",
+                                            children: C.intl.string(y.default.HUjIgu),
+                                        }),
+                                    ],
                                 }),
-                                (0, i.jsx)(d.E, {
-                                    variant: "body-sm/normal",
-                                    color: "text-muted",
-                                    children: C.intl.string(y.default.HUjIgu),
+                                (0, i.jsx)(u.m, {
+                                    text: f,
+                                    children: (0, i.jsx)(c.K, {
+                                        icon: h.P,
+                                        variant: "icon-only",
+                                        size: "sm",
+                                        "aria-label": f,
+                                        onClick: s,
+                                    }),
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(u.m, {
-                            text: f,
-                            children: (0, i.jsx)(c.K, {
-                                icon: h.P,
-                                variant: "icon-only",
-                                size: "sm",
-                                "aria-label": f,
-                                onClick: s,
-                            }),
+                        (0, i.jsxs)(a.B, {
+                            gap: 8,
+                            children: [
+                                (0, i.jsx)(o.D, {
+                                    variant: "heading-xs/semibold",
+                                    color: "text-muted",
+                                    children: C.intl.string(C.t["/7xJCF"]),
+                                }),
+                                m.map((e) => {
+                                    let { type: t, Icon: n, label: r, description: l } = e;
+                                    return (0, i.jsx)(w, { type: t, Icon: n, label: r, description: l }, t);
+                                }),
+                            ],
                         }),
+                        p.length > 0
+                            ? (0, i.jsxs)(a.B, {
+                                  gap: 8,
+                                  children: [
+                                      (0, i.jsx)(o.D, {
+                                          variant: "heading-xs/semibold",
+                                          color: "text-muted",
+                                          children: C.intl.string(y.default["pbu+Yx"]),
+                                      }),
+                                      p.map((e) => (0, i.jsx)(N, { project: e }, e.id)),
+                                  ],
+                              })
+                            : null,
                     ],
                 }),
-                (0, i.jsxs)(a.B, {
-                    gap: 8,
-                    children: [
-                        (0, i.jsx)(o.D, {
-                            variant: "heading-xs/semibold",
-                            color: "text-muted",
-                            children: C.intl.string(C.t["/7xJCF"]),
-                        }),
-                        m.map((e) => {
-                            let { type: t, Icon: n, label: r, description: l } = e;
-                            return (0, i.jsx)(w, { type: t, Icon: n, label: r, description: l }, t);
-                        }),
-                    ],
-                }),
-                p.length > 0
-                    ? (0, i.jsxs)(a.B, {
-                          gap: 8,
-                          children: [
-                              (0, i.jsx)(o.D, {
-                                  variant: "heading-xs/semibold",
-                                  color: "text-muted",
-                                  children: C.intl.string(y.default["pbu+Yx"]),
-                              }),
-                              p.map((e) => (0, i.jsx)(N, { project: e }, e.id)),
-                          ],
-                      })
-                    : null,
-            ],
-        }),
-    });
-}
+            });
+        },
+        i2: N,
+        t3: b,
+    },
+);

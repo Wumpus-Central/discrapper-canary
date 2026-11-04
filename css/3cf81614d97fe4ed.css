@@ -1,0 +1,55 @@
+.container_reDhww {
+    position: relative
+}
+
+.spine_reDhww {
+    color: var(--spine-default);
+    top: 8px
+}
+
+.spine_reDhww,
+.spineBorder_reDhww {
+    inset-inline-start: 22px;
+    position: absolute
+}
+
+.spineBorder_reDhww {
+    background: var(--spine-default);
+    border-radius: 2px;
+    bottom: 24px;
+    top: 10px;
+    width: 2px
+}
+
+.spineWithGuildIcon_reDhww {
+    inset-inline-start: 32px
+}
+
+.spineBorderWithGuildIcon_reDhww {
+    inset-inline-start: 32px
+}
+
+.spine_reDhww,
+.spineBorder_reDhww {
+    inset-inline-start: var(--channels-spine-offset-left);
+    top: 0
+}
+
+.invertedSpine_reDhww {
+    top: var(--channels-spine-inverted-offset-top)
+}
+
+.row_eI9JXH .unread_eI9JXH {
+    inset-inline-start: 1px
+}
+
+.spinner_eI9JXH {
+    height: var(--space-16);
+    width: var(--space-16)
+}
+
+.spinnerPath_eI9JXH {
+    stroke: var(--icon-strong)
+}
+
+/*# sourceMappingURL=3cf81614d97fe4ed.css.map*/

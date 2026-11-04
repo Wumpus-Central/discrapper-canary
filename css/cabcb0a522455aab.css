@@ -1,0 +1,84 @@
+.game_uITHYs {
+    align-self: start;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: var(--space-8)
+}
+
+.game_uITHYs:hover {
+    background-color: var(--background-mod-muted)
+}
+
+.disabled_uITHYs {
+    cursor: not-allowed;
+    opacity: .5
+}
+
+.viewable_uITHYs {
+    pointer-events: none
+}
+
+.gameImageContainer_uITHYs {
+    border-radius: var(--radius-sm);
+    height: 175px;
+    overflow: hidden;
+    position: relative;
+    width: 130px
+}
+
+.gameImageBorder_uITHYs {
+    border: 1px solid var(--opacity-white-12);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box
+}
+
+.gameImageBorder_uITHYs,
+.gameImageOverlay_uITHYs {
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.gameImageOverlay_uITHYs {
+    background: linear-gradient(156deg, #fff, hsla(0, 0%, 100%, 0) 35.29%);
+    opacity: .2
+}
+
+.gameImageOverlay_uITHYs:hover {
+    opacity: .4
+}
+
+&.full-motion .gameImageOverlay_uITHYs {
+    transition: opacity .2s ease
+}
+
+.textContainer_uITHYs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    width: 130px
+}
+
+.image_uITHYs {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.boostContainer_uITHYs {
+    display: flex;
+    flex-direction: row;
+    margin-inline-start: -4px
+}
+
+.full-motion .game_uITHYs {
+    transition: background-color .1s ease
+}
+
+/*# sourceMappingURL=cabcb0a522455aab.css.map*/

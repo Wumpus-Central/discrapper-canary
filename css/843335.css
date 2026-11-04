@@ -1,4 +1,4 @@
-.badgeContainer__635ed {
+.badgeContainer_CTWncy {
     align-items: center;
     display: flex;
     flex-shrink: 0;
@@ -7,38 +7,38 @@
     overflow: hidden
 }
 
-.badgeContainer__635ed svg {
+.badgeContainer_CTWncy svg {
     flex-shrink: 0
 }
 
-.badgeLabel__635ed {
+.badgeLabel_CTWncy {
     overflow-x: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
 }
 
-:where(.badgesContainer__635ed) {
+:where(.badgesContainer_CTWncy) {
     align-items: center;
     display: flex;
     gap: 0 8px
 }
 
-:where(.badgesContainer__635ed):empty {
+:where(.badgesContainer_CTWncy):empty {
     display: none
 }
 
-.badgesContainerCard__635ed>:nth-child(n+3) {
+.badgesContainerCard_CTWncy>:nth-child(n+3) {
     display: none
 }
 
-.badgesContainerCard__635ed>:nth-child(2) {
+.badgesContainerCard_CTWncy>:nth-child(2) {
     flex-shrink: 1
 }
 
-.badgesContainerGameProfile__635ed,
-.badgesContainerPopout__635ed {
+.badgesContainerGameProfile_CTWncy,
+.badgesContainerPopout_CTWncy {
     flex-wrap: wrap;
     row-gap: 4px
 }
 
-/*# sourceMappingURL=843335.6509383f20d97c00.css.map*/
+/*# sourceMappingURL=843335.9150e76b00a738a0.css.map*/

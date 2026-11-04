@@ -1,0 +1,126 @@
+.trigger_GZw1kc {
+    align-items: center;
+    box-sizing: border-box;
+    color: var(--text-default);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    gap: var(--space-8);
+    height: 100%
+}
+
+.trigger_GZw1kc:hover {
+    border-bottom: 1px solid var(--brand-500);
+    padding-top: 1px
+}
+
+.logo_GZw1kc {
+    border-radius: var(--radius-xs);
+    flex-shrink: 0;
+    height: 24px;
+    min-width: 24px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 24px
+}
+
+.placeholder_GZw1kc {
+    opacity: .5;
+    pointer-events: none
+}
+
+.placeholder_GZw1kc .logo_GZw1kc {
+    background-color: var(--background-mod-subtle)
+}
+
+@media (max-width:948px) {
+    .logo_GZw1kc {
+        display: none
+    }
+}
+
+.headerContainer_yKeh5i {
+    background: var(--background-base-lower);
+    padding-bottom: 0;
+    padding-inline-end: var(--space-12);
+    padding-top: 0;
+    position: sticky;
+    top: 0
+}
+
+.shopHomeButton_yKeh5i {
+    align-items: center;
+    color: var(--text-default);
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center
+}
+
+.divider_yKeh5i {
+    align-self: center;
+    background-color: var(--border-strong);
+    flex-shrink: 0;
+    height: 32px;
+    width: 1px
+}
+
+.divider_yKeh5i,
+.dropdown_yKeh5i {
+    margin-inline-start: var(--space-24)
+}
+
+.titles_yKeh5i {
+    flex-direction: row;
+    gap: var(--space-24);
+    margin-inline-start: var(--space-24)
+}
+
+.titleWrapper_yKeh5i,
+.titles_yKeh5i {
+    align-items: center;
+    display: flex;
+    height: 100%
+}
+
+.titleWrapper_yKeh5i {
+    justify-content: center
+}
+
+.pageTitleContainer_yKeh5i {
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 100%
+}
+
+.pageTitleContainer_yKeh5i:hover {
+    border-bottom: 1px solid var(--brand-500);
+    padding-top: 1px
+}
+
+.pageTitleContainer_yKeh5i.selectedPageIndicator_yKeh5i {
+    border-bottom: 1px solid var(--icon-strong);
+    padding-top: 1px
+}
+
+.iconButton_yKeh5i {
+    align-items: center;
+    background-color: var(--control-secondary-background-default);
+    border: 1px solid var(--control-secondary-border-default);
+    border-radius: var(--radius-sm);
+    color: var(--control-secondary-text-default);
+    cursor: pointer;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    transition: background-color .1s ease;
+    width: 32px
+}
+
+.iconButton_yKeh5i:active,
+.iconButton_yKeh5i:hover {
+    background-color: var(--control-secondary-background-hover)
+}
+
+/*# sourceMappingURL=1a8010c159b4b3ce.css.map*/

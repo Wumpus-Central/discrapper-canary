@@ -1,8 +1,7 @@
-t.d(n, { A: () => E, MemberListContentSettingsMenu: () => I });
 var i = t(477900),
     l = t(582128),
-    s = t(17928),
-    r = t(980707),
+    s = t(855986),
+    r = t(165862),
     a = t(477782),
     o = t(885574),
     d = t(192308),
@@ -10,10 +9,10 @@ var i = t(477900),
     u = t(265872),
     h = t(939249),
     A = t(625903),
-    m = t(180170),
+    m = t(396696),
     p = t(435738),
     g = t(652215),
-    x = t(105292),
+    x = t(792996),
     f = t(569709);
 function I(e) {
     let { closePopout: n } = e,
@@ -32,10 +31,8 @@ function I(e) {
                     leadingAccessory: { type: "icon", icon: o.CircleInformationIcon },
                     icon: o.CircleInformationIcon,
                     action: () => {
-                        ((0, d.openModalLazy)(async () => {
-                            let { default: e } = await Promise.all([t.e("742445"), t.e("190309")]).then(
-                                t.bind(t, 643460),
-                            );
+                        ((0, d.mM)(async () => {
+                            let { default: e } = await Promise.all([t.e(742445), t.e(190309)]).then(t.bind(t, 643460));
                             return (n) => (0, i.jsx)(e, { ...n });
                         }),
                             n?.());
@@ -54,30 +51,37 @@ function I(e) {
         }),
     });
 }
-let E = function (e) {
-    let n = l.useRef(null);
-    return (0, i.jsx)(u.Y, {
-        targetElementRef: n,
-        animation: u.Y.Animation.NONE,
-        position: "bottom",
-        align: "right",
-        renderPopout: (e) => {
-            let { closePopout: n } = e;
-            return (0, i.jsx)(I, { closePopout: n });
-        },
-        children: (t) =>
-            (0, i.jsx)(h.D, {
-                ...t,
-                ...e,
-                innerRef: n,
-                "aria-label": x.intl.string(x.t.w2jvOf),
-                "aria-haspopup": !0,
-                onClick: (e) => {
-                    (e.stopPropagation(), t.onClick(e));
+t.d(
+    n,
+    {},
+    {
+        A: function (e) {
+            let n = l.useRef(null);
+            return (0, i.jsx)(u.Y, {
+                targetElementRef: n,
+                animation: u.Y.Animation.NONE,
+                position: "bottom",
+                align: "right",
+                renderPopout: (e) => {
+                    let { closePopout: n } = e;
+                    return (0, i.jsx)(I, { closePopout: n });
                 },
-                className: f.Se,
-                focusProps: { offset: 4 },
-                children: (0, i.jsx)(A.SettingsIcon, { size: "xxs", color: "currentColor" }),
-            }),
-    });
-};
+                children: (t) =>
+                    (0, i.jsx)(h.D, {
+                        ...t,
+                        ...e,
+                        innerRef: n,
+                        "aria-label": x.intl.string(x.t.w2jvOf),
+                        "aria-haspopup": !0,
+                        onClick: (e) => {
+                            (e.stopPropagation(), t.onClick(e));
+                        },
+                        className: f.Se,
+                        focusProps: { offset: 4 },
+                        children: (0, i.jsx)(A.SettingsIcon, { size: "xxs", color: "currentColor" }),
+                    }),
+            });
+        },
+        MemberListContentSettingsMenu: I,
+    },
+);

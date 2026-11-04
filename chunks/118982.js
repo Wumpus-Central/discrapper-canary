@@ -1,43 +1,48 @@
-l.d(t, { dI: () => m, k3: () => u, x0: () => x });
-var a = l(811996),
-    n = l(773669),
-    r = l(832163);
-l(652215);
-var s = l(961270),
-    i = l(105292);
-let o = {
-        [a.U.DESKTOP]: "PC",
-        [a.U.XBOX]: "Xbox",
-        [a.U.PLAYSTATION]: "PlayStation",
-        [a.U.SWITCH]: "Switch",
-        [a.U.APPLE_ARCADE]: "Apple Arcade",
-        [a.U.NETFLIX]: "Netflix",
-        [a.U.AMAZON_KIDS_PLUS]: "Amazon Kids+",
+var e = i(811996),
+    l = i(773669),
+    a = i(832163);
+i(652215);
+var o = i(25082),
+    r = i(792996);
+let f = {
+        [e.U.DESKTOP]: "PC",
+        [e.U.XBOX]: "Xbox",
+        [e.U.PLAYSTATION]: "PlayStation",
+        [e.U.SWITCH]: "Switch",
+        [e.U.APPLE_ARCADE]: "Apple Arcade",
+        [e.U.NETFLIX]: "Netflix",
+        [e.U.AMAZON_KIDS_PLUS]: "Amazon Kids+",
     },
-    d = [a.U.PLAYSTATION];
-function c(e) {
-    let t = (function (e) {
-        if (null == e) return d;
-        let t = r.A.getConfigForApplicationId(e);
-        return null == t ? d : t.excludedPlatforms;
-    })(e);
-    return 0 === t.length
+    u = [e.U.PLAYSTATION];
+function d(t) {
+    let n = (function (t) {
+        if (null == t) return u;
+        let n = a.A.getConfigForApplicationId(t);
+        return null == n ? u : n.excludedPlatforms;
+    })(t);
+    return 0 === n.length
         ? ""
-        : i.intl.formatToPlainString(s.default["5h8p5P"], {
-              platforms: new Intl.ListFormat(n.default.locale).format(t.map((e) => o[e])),
-              count: t.length,
+        : r.intl.formatToPlainString(o.default["5h8p5P"], {
+              platforms: new Intl.ListFormat(l.default.locale).format(n.map((t) => f[t])),
+              count: n.length,
           });
 }
-function u(e) {
-    return i.intl.format(s.default.Q0dHYO, { platforms_info: c(e?.id) });
-}
-function m(e) {
-    let t = e.name;
-    return i.intl.format(s.default.fO4b1C, { applicationName: t, platforms_info: c(e.id) });
-}
-function x(e, t) {
-    let { hasAlreadyLinked: l } = t,
-        a = e.name,
-        n = l ? s.default.yqAKVO : s.default.vyAtfo;
-    return i.intl.format(n, { applicationName: a, platforms_info: c(e.id) });
-}
+i.d(
+    n,
+    {},
+    {
+        dI: function (t) {
+            let n = t.name;
+            return r.intl.format(o.default.fO4b1C, { applicationName: n, platforms_info: d(t.id) });
+        },
+        k3: function (t) {
+            return r.intl.format(o.default.Q0dHYO, { platforms_info: d(t?.id) });
+        },
+        x0: function (t, n) {
+            let { hasAlreadyLinked: i } = n,
+                e = t.name,
+                l = i ? o.default.yqAKVO : o.default.vyAtfo;
+            return r.intl.format(l, { applicationName: e, platforms_info: d(t.id) });
+        },
+    },
+);

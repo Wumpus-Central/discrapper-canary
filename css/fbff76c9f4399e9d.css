@@ -1,0 +1,17 @@
+.emptyState_VHp4GX {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: var(--space-16);
+    justify-content: center;
+    overflow: hidden;
+    padding: var(--space-16);
+    text-align: center
+}
+
+.illustration_VHp4GX {
+    margin-bottom: var(--space-16)
+}
+
+/*# sourceMappingURL=fbff76c9f4399e9d.css.map*/

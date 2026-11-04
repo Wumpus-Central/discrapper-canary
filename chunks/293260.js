@@ -1,44 +1,51 @@
-a.d(e, { Ay: () => v, CB: () => h, c0: () => g });
-var n = a(477900);
-a(582128);
-var t = a(17928),
-    i = a(231723),
-    s = a(192308);
-if (221552 == a.j) var c = a(477782);
-if (221552 == a.j) var r = a(173936);
-var o = a(317525),
-    d = a(370480),
-    u = a(105292);
+var a = t(477900);
+t(582128);
+var n = t(855986),
+    i = t(231723),
+    s = t(192308);
+if (221552 == t.j) var c = t(477782);
+if (221552 == t.j) var r = t(173936);
+var d = t(317525),
+    o = t(370480),
+    u = t(792996);
 let h = "guild-connection-roles";
 function g(l) {
-    (0, s.openModalLazy)(
+    (0, s.mM)(
         async () => {
             let { default: e } = await Promise.all([
-                a.e("587882"),
-                a.e("727797"),
-                a.e("24922"),
-                a.e("150200"),
-                a.e("292837"),
-            ]).then(a.bind(a, 480900));
-            return (a) => (0, n.jsx)(e, { ...a, guildId: l });
+                t.e(587882),
+                t.e(727797),
+                t.e(24922),
+                t.e(150200),
+                t.e(292837),
+            ]).then(t.bind(t, 480900));
+            return (t) => (0, a.jsx)(e, { ...t, guildId: l });
         },
         {
             modalKey: h,
             contextKey: i.SY,
             onCloseRequest: () => {
-                (0, s.closeModal)(h, i.SY);
+                (0, s.Oo)(h, i.SY);
             },
         },
     );
 }
-function v(l) {
-    return (0, t.bG)([o.A], () => (0, d.N8)(o.A.getSortedRoles(l.id)), [l])
-        ? (0, n.jsx)(c.Dr, {
-              id: "guild-connection-roles",
-              label: u.intl.string(u.t.ghtnss),
-              icon: r.LinkIcon,
-              leadingAccessory: { type: "icon", icon: r.LinkIcon },
-              action: () => g(l.id),
-          })
-        : null;
-}
+t.d(
+    e,
+    {},
+    {
+        Ay: function (l) {
+            return (0, n.bG)([d.A], () => (0, o.N8)(d.A.getSortedRoles(l.id)), [l])
+                ? (0, a.jsx)(c.Dr, {
+                      id: "guild-connection-roles",
+                      label: u.intl.string(u.t.ghtnss),
+                      icon: r.LinkIcon,
+                      leadingAccessory: { type: "icon", icon: r.LinkIcon },
+                      action: () => g(l.id),
+                  })
+                : null;
+        },
+        CB: h,
+        c0: g,
+    },
+);

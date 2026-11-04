@@ -1,4 +1,3 @@
-t.d(n, { A: () => g });
 var i = t(477900),
     l = t(582128),
     s = t(265872),
@@ -8,44 +7,50 @@ var i = t(477900),
     c = t(384059),
     d = t(480890),
     u = t(246356),
-    A = t(204651),
+    A = t(693409),
     h = t(806931),
-    m = t(105292);
-let g = function (e) {
-    let { channel: n, remoteMode: t = !1 } = e,
-        { parentAnalyticsLocation: g } = (0, r.Ay)(),
-        x = l.useRef(null);
-    return (0, i.jsx)(s.Y, {
-        targetElementRef: x,
-        renderPopout: (e) => {
-            let { closePopout: l } = e;
-            return (0, i.jsx)(u.A, {
-                children: (0, i.jsx)(o.A, {
-                    onClose: l,
-                    channel: n,
-                    remoteMode: t,
-                    onInteraction: (0, d.s)("MoreSettingsMenu", g, { entrypoint: h.GK.THREE_DOT }),
-                }),
-            });
-        },
-        align: "right",
-        position: "top",
-        animation: s.Y.Animation.FADE,
-        spacing: 16,
-        children: (e, n) => {
-            let { onClick: t } = e,
-                { isShown: l } = n;
-            return (0, i.jsx)(A.l, {
-                ref: x,
-                isTrayButton: !0,
-                onClick: (e) => {
-                    ((0, c.XJ)(g, c.OP.MORE), t(e));
+    m = t(792996);
+t.d(
+    n,
+    {},
+    {
+        A: function (e) {
+            let { channel: n, remoteMode: t = !1 } = e,
+                { parentAnalyticsLocation: g } = (0, r.Ay)(),
+                x = l.useRef(null);
+            return (0, i.jsx)(s.Y, {
+                targetElementRef: x,
+                renderPopout: (e) => {
+                    let { closePopout: l } = e;
+                    return (0, i.jsx)(u.A, {
+                        children: (0, i.jsx)(o.A, {
+                            onClose: l,
+                            channel: n,
+                            remoteMode: t,
+                            onInteraction: (0, d.s)("MoreSettingsMenu", g, { entrypoint: h.GK.THREE_DOT }),
+                        }),
+                    });
                 },
-                label: m.intl.string(m.t.PdRCRg),
-                iconComponent: a.MoreHorizontalIcon,
-                color: "primaryDark",
-                isActive: l,
+                align: "right",
+                position: "top",
+                animation: s.Y.Animation.FADE,
+                spacing: 16,
+                children: (e, n) => {
+                    let { onClick: t } = e,
+                        { isShown: l } = n;
+                    return (0, i.jsx)(A.l, {
+                        ref: x,
+                        isTrayButton: !0,
+                        onClick: (e) => {
+                            ((0, c.XJ)(g, c.OP.MORE), t(e));
+                        },
+                        label: m.intl.string(m.t.PdRCRg),
+                        iconComponent: a.MoreHorizontalIcon,
+                        color: "primaryDark",
+                        isActive: l,
+                    });
+                },
             });
         },
-    });
-};
+    },
+);

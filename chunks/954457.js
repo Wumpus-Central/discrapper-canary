@@ -1,3 +1,7 @@
-a.d(s, { A: () => b });
-let b =
-    "https://cdn.discordapp.com/assets/content/60fb932c6ca2a353188680784e8689fa8384d04e7b7abbb8660c25dbb70afb9c.svg";
+a.d(
+    s,
+    {},
+    {
+        A: "https://cdn.discordapp.com/assets/content/60fb932c6ca2a353188680784e8689fa8384d04e7b7abbb8660c25dbb70afb9c.svg",
+    },
+);

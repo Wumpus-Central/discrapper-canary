@@ -1,0 +1,291 @@
+.row_cSRpF3 {
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 50px;
+    margin-inline-start: 8px;
+    position: relative
+}
+
+.leftIndicatorContainer_cSRpF3 {
+    align-items: center;
+    display: flex;
+    height: 8px;
+    inset-inline-start: -8px;
+    position: absolute;
+    top: 18px;
+    width: 4px
+}
+
+.channelIcon_cSRpF3 {
+    flex-shrink: 0;
+    height: 12px;
+    width: 12px
+}
+
+.offlineRow_cSRpF3 {
+    opacity: .6
+}
+
+.offlineRow_cSRpF3:active,
+.offlineRow_cSRpF3:focus-within,
+.offlineRow_cSRpF3:hover {
+    opacity: 1
+}
+
+.rowInner_cSRpF3 {
+    box-sizing: border-box;
+    height: 42px;
+    padding-block: var(--space-xxs) var(--space-xxs);
+    padding-inline: 0;
+    width: 100%;
+    z-index: 0
+}
+
+.rowRecentlyAdded_cSRpF3 {
+    animation: friendsWidgetRowRecentlyAdded_cSRpF3 .95s ease-out 1
+}
+
+@keyframes friendsWidgetRowRecentlyAdded_cSRpF3 {
+    0% {
+        background: color-mix(in srgb, var(--brand-500) 28%, transparent)
+    }
+
+    to {
+        background: transparent
+    }
+}
+
+.avatar_cSRpF3 {
+    margin-inline-end: 12px
+}
+
+.username_cSRpF3 {
+    color: var(--text-default)
+}
+
+.username_cSRpF3,
+.usernameContainer_cSRpF3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.usernameContainer_cSRpF3 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px
+}
+
+.activityIconContainer_cSRpF3 {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    height: 32px;
+    justify-content: center;
+    width: 32px
+}
+
+.rowActions_cSRpF3 {
+    align-items: center;
+    display: inline-flex;
+    gap: var(--space-xxs)
+}
+
+.badgesContainer_cSRpF3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 2px
+}
+
+.friendVoiceStatus_cSRpF3 {
+    gap: 8px
+}
+
+.friendVoiceStatus_cSRpF3,
+.voiceStatusContainer_cSRpF3 {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.voiceStatusContainer_cSRpF3 {
+    gap: 4px
+}
+
+.voiceStatusContainer_cSRpF3 .voiceText_cSRpF3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.friendVoiceStatusGuildContainer_cSRpF3 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    justify-content: flex-start
+}
+
+.guildName_cSRpF3 {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.voiceStatusIcon_cSRpF3 {
+    height: 12px;
+    width: 12px
+}
+
+.iconOnlyButton_xuqdvl {
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    width: 30px
+}
+
+.iconOnlyButton_xuqdvl:focus-visible,
+.iconOnlyButton_xuqdvl:hover {
+    background-color: var(--control-icon-only-background-hover);
+    border: 1px solid var(--control-icon-only-border-hover)
+}
+
+.iconOnlyButton_xuqdvl:active {
+    background-color: var(--background-mod-muted)
+}
+
+.iconOnlyButton_xuqdvl svg {
+    pointer-events: none
+}
+
+.container_C6-tbe {
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
+.container_C6-tbe,
+.list_C6-tbe {
+    min-height: 0;
+    min-width: 0
+}
+
+.list_C6-tbe {
+    border-top: 1px solid hsla(240, 4%, 61%, .035);
+    flex: 1 1 auto;
+    overflow: auto
+}
+
+.searchContainer_C6-tbe {
+    margin-top: -1px;
+    margin-inline-end: -1px;
+    padding: 0
+}
+
+.searchContainer_C6-tbe [data-error] {
+    background: hsla(240, 4%, 61%, .04);
+    border: none !important;
+    border-radius: 0;
+    outline: none !important;
+    padding: 8px 12px
+}
+
+.searchContainer_C6-tbe [data-error]:has(input:focus, textarea:focus) {
+    background: hsla(240, 4%, 61%, .08)
+}
+
+.section_C6-tbe {
+    height: auto;
+    padding-block: var(--space-lg) var(--space-xxs);
+    padding-inline: var(--space-md) var(--space-xxs)
+}
+
+.chevronIcon_C6-tbe {
+    height: 12px;
+    margin-inline-start: var(--space-xxs);
+    width: 12px
+}
+
+.sectionCollapsible_C6-tbe {
+    align-items: center;
+    cursor: pointer;
+    display: flex
+}
+
+.sectionCollapsible_C6-tbe:hover {
+    color: var(--text-strong)
+}
+
+.nonGroupSectionHeaderRow_C6-tbe {
+    align-items: center;
+    display: flex;
+    gap: var(--space-xxs);
+    justify-content: space-between
+}
+
+.nonGroupSectionHeaderHideButton_C6-tbe {
+    align-items: center;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: center;
+    margin-inline-end: 8px;
+    padding: var(--space-xxs)
+}
+
+.nonGroupSectionHeaderHideButton_C6-tbe:hover {
+    color: var(--text-strong)
+}
+
+.emptyStateContainer_C6-tbe {
+    align-items: center;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    padding: 16px
+}
+
+.reorderableGroupSection_r03v5M {
+    cursor: grab;
+    position: relative
+}
+
+.reorderableGroupSection_r03v5M:active {
+    cursor: grabbing
+}
+
+.draggingGroupSection_r03v5M {
+    opacity: .5
+}
+
+.dropTargetGroupSection_r03v5M {
+    background-color: var(--interactive-background-hover)
+}
+
+.dropBeforeGroupSection_r03v5M:before {
+    background-color: var(--text-brand);
+    content: "";
+    height: 2px;
+    inset-block-start: 0;
+    inset-inline: 0;
+    inset-inline-end: 0;
+    position: absolute
+}
+
+.dropAfterGroupSection_r03v5M:after {
+    background-color: var(--text-brand);
+    content: "";
+    height: 2px;
+    inset-block-end: 0;
+    inset-inline: 0;
+    inset-inline-end: 0;
+    position: absolute
+}
+
+/*# sourceMappingURL=21588c483a044355.css.map*/

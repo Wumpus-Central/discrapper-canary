@@ -1,5 +1,4 @@
-n.d(t, { A: () => s, T: () => l });
-var i = n(17928),
+var i = n(855986),
     r = n(587895),
     a = n(311043);
 function s(e) {
@@ -14,6 +13,13 @@ function s(e) {
         t
     );
 }
-function l(e) {
-    return (0, i.yK)([a.A, r.A], () => Array.from(s(e)), [e]);
-}
+n.d(
+    t,
+    {},
+    {
+        A: s,
+        T: function (e) {
+            return (0, i.yK)([a.A, r.A], () => Array.from(s(e)), [e]);
+        },
+    },
+);

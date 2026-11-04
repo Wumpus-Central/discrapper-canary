@@ -1,0 +1,465 @@
+.icon__MKscm {
+    align-items: center;
+    border-radius: 4px;
+    color: var(--interactive-text-default);
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    padding: 4px;
+    width: 24px
+}
+
+.icon__MKscm:hover {
+    color: var(--interactive-text-active)
+}
+
+.theme-dark .icon__MKscm {
+    background-color: var(--background-scrim)
+}
+
+.theme-light .icon__MKscm {
+    background-color: var(--background-base-lower)
+}
+
+.container_BTjcfU {
+    flex: 1;
+    position: relative
+}
+
+.card_BTjcfU {
+    display: flex;
+    flex-direction: column;
+    height: 320px
+}
+
+.card_BTjcfU:focus .iconMask_BTjcfU,
+.card_BTjcfU:hover .iconMask_BTjcfU {
+    background-color: var(--background-base-lowest)
+}
+
+.card_BTjcfU:focus .contextMenu_BTjcfU,
+.card_BTjcfU:hover .contextMenu_BTjcfU {
+    display: flex
+}
+
+.card_BTjcfU:focus .maximizeIcon_BTjcfU,
+.card_BTjcfU:hover .maximizeIcon_BTjcfU {
+    opacity: 1
+}
+
+.header_BTjcfU {
+    height: 146px;
+    position: relative
+}
+
+.full-motion .loaded_BTjcfU {
+    transition: opacity .2s, transform .2s ease-out
+}
+
+.banner_BTjcfU {
+    display: block;
+    height: 146px;
+    inset-inline-start: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.banner_BTjcfU.loaded_BTjcfU {
+    opacity: 1
+}
+
+.bannerImage_BTjcfU {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.icon_BTjcfU {
+    bottom: -26px;
+    inset-inline-start: 12px;
+    position: absolute
+}
+
+.iconMask_BTjcfU {
+    padding: 4px
+}
+
+.full-motion .iconMask_BTjcfU {
+    transition: box-shadow .2s ease-out, transform .2s ease-out, background .2s ease-out
+}
+
+.avatar_BTjcfU {
+    height: 100%;
+    width: 100%
+}
+
+.guildDetails_BTjcfU {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 28px 16px 16px
+}
+
+.title_BTjcfU {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.guildBadge_BTjcfU {
+    flex: 0 0 16px;
+    height: 16px;
+    margin-inline-start: -2px;
+    width: 16px
+}
+
+.guildName_BTjcfU {
+    white-space: nowrap
+}
+
+.description_BTjcfU,
+.guildName_BTjcfU {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.description_BTjcfU {
+    display: -webkit-box;
+    margin: 4px 0 16px;
+    min-height: 0;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical
+}
+
+.memberDetails_BTjcfU {
+    align-items: flex-end;
+    display: flex;
+    flex: 1;
+    gap: 16px
+}
+
+.memberDetailsCount_BTjcfU {
+    align-items: center;
+    display: flex;
+    gap: 4px;
+    min-width: 0
+}
+
+.memberDetailsText_BTjcfU {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.infoDot_BTjcfU {
+    border-radius: 50%;
+    flex-shrink: 0;
+    height: 8px;
+    width: 8px
+}
+
+.presenceCountDot_BTjcfU {
+    background-color: var(--green-360)
+}
+
+.memberCountDot_BTjcfU {
+    background-color: var(--primary-300)
+}
+
+.spinnerContainer_BTjcfU {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    z-index: 1
+}
+
+.spinner_BTjcfU {
+    background-color: var(--primary-800);
+    border-radius: 8px;
+    height: 48px;
+    width: 48px
+}
+
+.contextMenu_BTjcfU {
+    align-items: center;
+    display: none;
+    inset-inline-end: 16px;
+    justify-content: center;
+    position: absolute;
+    top: 130px
+}
+
+.maximizeIcon_BTjcfU {
+    inset-inline-end: 8px;
+    opacity: 0;
+    position: absolute;
+    top: 8px;
+    transition: opacity .1s ease-in-out
+}
+
+.maximizeIcon_BTjcfU:focus {
+    opacity: 1
+}
+
+.theme-dark .iconMask_BTjcfU {
+    background-color: var(--background-mod-normal)
+}
+
+.theme-light .iconMask_BTjcfU {
+    background-color: var(--background-base-lower)
+}
+
+.placeholder_BTjcfU,
+.transitionGroup_BTjcfU {
+    height: 320px;
+    width: 100%
+}
+
+.transitionGroup_BTjcfU {
+    display: flex;
+    position: relative
+}
+
+&.theme-dark .iconMask_BTjcfU,
+&.theme-light .iconMask_BTjcfU {
+    background-color: var(--background-base-low)
+}
+
+.card_BTjcfU:hover .iconMask_BTjcfU {
+    background-color: var(--background-surface-high)
+}
+
+.sectionTitle_vA5YGD {
+    padding-top: 24px;
+    padding-inline-start: 32px;
+    z-index: 1
+}
+
+.content_vA5YGD {
+    -moz-column-gap: var(--space-md);
+    column-gap: var(--space-md);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    padding: var(--space-md) var(--space-lg);
+    row-gap: var(--space-md)
+}
+
+.container_ng5G59 {
+    background-color: var(--card-background-default);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: var(--custom-hub-discovery-add-hub-card-card-height);
+    padding: 16px
+}
+
+.iconContainer_ng5G59 {
+    align-items: center;
+    background-color: var(--green-360);
+    border-radius: 48px;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    width: 48px
+}
+
+.header_ng5G59,
+.iconContainer_ng5G59 {
+    margin-bottom: 16px
+}
+
+.gap_ng5G59 {
+    flex: 1
+}
+
+.enable-forced-colors .container_ng5G59 {
+    border: 1px solid CanvasText
+}
+
+.disclaimer_AM9p4G {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 24px 32px;
+    white-space: pre-wrap
+}
+
+.text_AM9p4G {
+    max-width: 400px
+}
+
+.divider_AM9p4G {
+    background-color: var(--border-subtle);
+    height: 1px
+}
+
+.categories_Rrs1HT {
+    display: flex;
+    flex-direction: column;
+    gap: 2px
+}
+
+.category_Rrs1HT {
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px
+}
+
+.category_Rrs1HT:hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.name_Rrs1HT {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.count_Rrs1HT {
+    margin-inline-start: 8px
+}
+
+.selected_Rrs1HT {
+    background-color: var(--interactive-background-active)
+}
+
+.container_7Ag0W7 {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.container_OA1iZR {
+    align-items: center;
+    background: var(--background-gradient-low, var(--background-base-lower));
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: center;
+    padding: 16px;
+    text-align: center
+}
+
+.header_OA1iZR {
+    margin-bottom: 8px
+}
+
+.container_mwG7AJ {
+    width: 180px
+}
+
+.heading_pI94My {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px
+}
+
+.headingTopbar_pI94My {
+    margin-top: 24px
+}
+
+.headingFilters_pI94My {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    gap: 8px;
+    height: 44px;
+    justify-content: space-between
+}
+
+.masonryList_pI94My {
+    display: grid;
+    grid-template-columns: 1fr auto
+}
+
+.container_pI94My {
+    background: var(--background-gradient-chat, var(--background-base-low));
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    position: relative
+}
+
+.spinner_pI94My {
+    align-items: center;
+    display: flex;
+    height: 120px
+}
+
+.spinnerWithSidebar_pI94My {
+    margin-inline-end: 170px
+}
+
+.sidebar_pI94My {
+    height: 100%;
+    inset-inline-end: 0;
+    margin-top: 0;
+    padding-inline-end: 8px;
+    position: absolute;
+    top: 0;
+    width: 170px;
+    z-index: 1
+}
+
+.sidebarContent_pI94My {
+    position: sticky;
+    top: 0
+}
+
+.sidebarLanguageSelect_pI94My {
+    align-items: center;
+    display: flex;
+    height: 50px;
+    justify-content: flex-end;
+    margin-bottom: 18px
+}
+
+.container_67Xl1N {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    position: relative
+}
+
+.clickable_67Xl1N {
+    cursor: pointer
+}
+
+.search_67Xl1N {
+    background: var(--background-gradient-chat, var(--background-base-low))
+}
+
+.searchResultsHeader_67Xl1N {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.clanDiscoveryToolbar_67Xl1N {
+    padding: 0
+}
+
+.rightAlignedToolbar_67Xl1N {
+    gap: 4px;
+    justify-content: flex-end
+}
+
+/*# sourceMappingURL=78b3c3efe665dbba.css.map*/

@@ -1,4 +1,3 @@
-n.d(t, { WO: () => f, fD: () => y, mw: () => p, nU: () => S, ss: () => T });
 var i = n(158390),
     r = n(73153),
     s = n(688954),
@@ -9,99 +8,114 @@ let u = new Map();
 function o(e) {
     u.set(e, (u.get(e) ?? 0) + 1);
 }
-let f = {
-    settings(e, t) {
-        let { projectId: n } = t;
-        (o(n),
-            r.h.dispatch({
-                type: "CONJURE_SETTINGS_SET",
-                projectId: n,
-                settings: { schema: e.schema, values: e.values, secrets: e.secrets, connections: e.connections },
-            }),
-            !0 === e.values_changed && (0, a.BD)(n));
-    },
-};
-async function h(e) {
-    let t = u.get(e) ?? 0,
-        n = await (0, s.h)(e, "/agent/settings");
-    if (!n.ok) throw Error(`settings fetch failed (${n.status})`);
-    let i = await n.json();
-    if ((u.get(e) ?? 0) === t || null == l.A.getSettings(e)) {
-        if (!Array.isArray(i?.schema) || 0 === i.schema.length)
-            return void r.h.dispatch({ type: "CONJURE_SETTINGS_LOAD_STATE_SET", projectId: e, state: "loaded" });
-        r.h.dispatch({
-            type: "CONJURE_SETTINGS_SET",
-            projectId: e,
-            settings: {
-                schema: i.schema,
-                values: i.values ?? {},
-                secrets: i.secrets ?? [],
-                connections: i.connections,
-            },
-        });
-    }
-}
-let d = new Map();
-async function g(e, t) {
+let f = new Map();
+async function h(e, t) {
     ((t.inFlight = !0), (t.lastFetchAt = Date.now()));
     try {
-        await h(e);
+        await (async function (e) {
+            let t = u.get(e) ?? 0,
+                n = await (0, s.h)(e, "/agent/settings");
+            if (!n.ok) throw Error(`settings fetch failed (${n.status})`);
+            let i = await n.json();
+            if ((u.get(e) ?? 0) === t || null == l.A.getSettings(e)) {
+                if (!Array.isArray(i?.schema) || 0 === i.schema.length)
+                    return void r.h.dispatch({
+                        type: "CONJURE_SETTINGS_LOAD_STATE_SET",
+                        projectId: e,
+                        state: "loaded",
+                    });
+                r.h.dispatch({
+                    type: "CONJURE_SETTINGS_SET",
+                    projectId: e,
+                    settings: {
+                        schema: i.schema,
+                        values: i.values ?? {},
+                        secrets: i.secrets ?? [],
+                        connections: i.connections,
+                    },
+                });
+            }
+        })(e);
     } catch {
         if (((t.inFlight = !1), t.retries >= 5))
             return void r.h.dispatch({ type: "CONJURE_SETTINGS_LOAD_STATE_SET", projectId: e, state: "failed" });
-        ((t.retries += 1), t.backoff.fail(() => g(e, t)));
+        ((t.retries += 1), t.backoff.fail(() => h(e, t)));
         return;
     }
     ((t.inFlight = !1), (t.retries = 0), t.backoff.succeed());
 }
-function y(e) {
+function d(e) {
     let t,
         n =
-            (null == (t = d.get(e)) &&
+            (null == (t = f.get(e)) &&
                 ((t = { backoff: new i.A(1e3, 6e4), inFlight: !1, retries: 0, lastFetchAt: -1 / 0, deferred: null }),
-                d.set(e, t)),
+                f.set(e, t)),
             t);
     if (n.inFlight || n.backoff.pending || null != n.deferred) return;
     (r.h.dispatch({ type: "CONJURE_SETTINGS_LOAD_STATE_SET", projectId: e, state: "loading" }), (n.retries = 0));
     let s = n.lastFetchAt + 5e3 - Date.now();
     if (s > 0) {
         n.deferred = setTimeout(() => {
-            ((n.deferred = null), g(e, n));
+            ((n.deferred = null), h(e, n));
         }, s);
         return;
     }
-    g(e, n);
+    h(e, n);
 }
-function p(e) {
-    for (let t of e) "failed" === l.A.getLoadState(t) && y(t);
-}
-async function S(e, t) {
-    let n = await (0, s.h)(e, "/agent/settings", { method: "PUT", json: t });
-    if (!n.ok) throw Error(`settings submission failed (${n.status})`);
-    let i = null;
-    try {
-        i = await n.json();
-    } catch {}
-    o(e);
-    let a = l.A.getSettings(e);
-    return (
-        null != a &&
-            null != t.values &&
-            r.h.dispatch({
-                type: "CONJURE_SETTINGS_SET",
-                projectId: e,
-                settings: { ...a, values: (0, c.yj)(a.values, t.values) },
-            }),
-        { rebuildRequired: i?.rebuild_required === !0 }
-    );
-}
-function T(e) {
-    !(async function () {
-        try {
-            let t = await (0, s.h)(e, "/agent/rebuild", { method: "POST" });
-            t.ok || console.warn("[conjure] settings rebuild request failed", e, t.status);
-        } catch (t) {
-            console.warn("[conjure] settings rebuild request failed", e, t);
-        }
-    })();
-}
+n.d(
+    t,
+    {},
+    {
+        WO: {
+            settings(e, t) {
+                let { projectId: n } = t;
+                (o(n),
+                    r.h.dispatch({
+                        type: "CONJURE_SETTINGS_SET",
+                        projectId: n,
+                        settings: {
+                            schema: e.schema,
+                            values: e.values,
+                            secrets: e.secrets,
+                            connections: e.connections,
+                        },
+                    }),
+                    !0 === e.values_changed && (0, a.BD)(n));
+            },
+        },
+        fD: d,
+        mw: function (e) {
+            for (let t of e) "failed" === l.A.getLoadState(t) && d(t);
+        },
+        nU: async function (e, t) {
+            let n = await (0, s.h)(e, "/agent/settings", { method: "PUT", json: t });
+            if (!n.ok) throw Error(`settings submission failed (${n.status})`);
+            let i = null;
+            try {
+                i = await n.json();
+            } catch {}
+            o(e);
+            let a = l.A.getSettings(e);
+            return (
+                null != a &&
+                    null != t.values &&
+                    r.h.dispatch({
+                        type: "CONJURE_SETTINGS_SET",
+                        projectId: e,
+                        settings: { ...a, values: (0, c.yj)(a.values, t.values) },
+                    }),
+                { rebuildRequired: i?.rebuild_required === !0 }
+            );
+        },
+        ss: function (e) {
+            !(async function () {
+                try {
+                    let t = await (0, s.h)(e, "/agent/rebuild", { method: "POST" });
+                    t.ok || console.warn("[conjure] settings rebuild request failed", e, t.status);
+                } catch (t) {
+                    console.warn("[conjure] settings rebuild request failed", e, t);
+                }
+            })();
+        },
+    },
+);

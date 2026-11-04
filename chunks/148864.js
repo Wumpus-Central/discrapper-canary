@@ -1,8 +1,7 @@
 let n;
-s.d(t, { A: () => d });
-var r = s(17928),
+var r = s(855986),
     a = s(73153),
-    i = s(423764);
+    i = s(956956);
 let l = (0, i.rE)();
 function o(e) {
     let { countryCode: t } = e;
@@ -29,3 +28,4 @@ let d = new c(a.h, {
     CONNECTION_OPEN: o,
     SET_LOCATION_METADATA: o,
 });
+s.d(t, {}, { A: d });

@@ -119,17 +119,24 @@ function n(t) {
     }
     return f.toDataURL("image/png");
 }
-function a(t, e, i) {
-    let h = t.naturalWidth / t.naturalHeight,
-        a = e,
-        r = i;
-    t.naturalWidth > t.naturalHeight ? (a /= h) : (r *= h);
-    let c = { height: a, width: r };
-    return n({
-        image: t,
-        cropDimensions: { width: t.width, height: t.height },
-        cropOriginCoordinates: { x: 0, y: 0 },
-        maxDimensions: c,
-    });
-}
-i.d(e, { R7: () => h, h_: () => a, iL: () => n });
+i.d(
+    e,
+    {},
+    {
+        R7: h,
+        h_: function (t, e, i) {
+            let h = t.naturalWidth / t.naturalHeight,
+                a = e,
+                r = i;
+            t.naturalWidth > t.naturalHeight ? (a /= h) : (r *= h);
+            let c = { height: a, width: r };
+            return n({
+                image: t,
+                cropDimensions: { width: t.width, height: t.height },
+                cropOriginCoordinates: { x: 0, y: 0 },
+                maxDimensions: c,
+            });
+        },
+        iL: n,
+    },
+);

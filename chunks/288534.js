@@ -1,33 +1,28 @@
-(Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.TIME_UNITS_NO_ABBR_PATTERN =
-        t.TIME_UNITS_PATTERN =
-        t.TIME_UNIT_PATTERN =
-        t.ORDINAL_NUMBER_PATTERN =
-        t.NUMBER_PATTERN =
-        t.TIME_UNIT_NO_ABBR_DICTIONARY =
-        t.TIME_UNIT_DICTIONARY =
-        t.INTEGER_WORD_DICTIONARY =
-        t.ORDINAL_NUMBER_DICTIONARY =
-        t.MONTH_DICTIONARY =
-        t.WEEKDAY_DICTIONARY =
-            void 0),
+((t.TIME_UNITS_NO_ABBR_PATTERN =
+    t.TIME_UNITS_PATTERN =
+    t.nj =
+    t.ig =
+    t.EB =
+    t.Vr =
+    t.H0 =
+    t.MONTH_DICTIONARY =
+    t.WEEKDAY_DICTIONARY =
+        void 0),
     (t.parseDuration = function (e) {
         let r = {},
             n = e,
             a = s.exec(n);
         for (; a;)
             ((function (e, r) {
-                let n = u(r[1]);
-                e[t.TIME_UNIT_DICTIONARY[r[2].toLowerCase()]] = n;
+                let n = (function (e) {
+                    let r = e.toLowerCase();
+                    return void 0 !== t.Vr[r] ? t.Vr[r] : parseInt(r);
+                })(r[1]);
+                e[t.EB[r[2].toLowerCase()]] = n;
             })(r, a),
                 (n = n.substring(a[0].length)),
                 (a = s.exec(n)));
         return r;
-    }),
-    (t.parseNumberPattern = u),
-    (t.parseOrdinalNumberPattern = function (e) {
-        let r = e.toLowerCase();
-        return void 0 !== t.ORDINAL_NUMBER_DICTIONARY[r] ? t.ORDINAL_NUMBER_DICTIONARY[r] : parseInt(r);
     }),
     (t.parseYear = function (e) {
         if (/\d+/.test(e)) {
@@ -35,7 +30,7 @@
             return (t < 100 && (t = (0, a.findMostLikelyADYear)(t)), t);
         }
         let r = e.toLowerCase();
-        return void 0 !== t.INTEGER_WORD_DICTIONARY[r] ? t.INTEGER_WORD_DICTIONARY[r] : parseInt(e);
+        return void 0 !== t.Vr[r] ? t.Vr[r] : parseInt(e);
     }));
 let n = r(798401),
     a = r(574253);
@@ -99,7 +94,7 @@ let n = r(798401),
         dec: 12,
         "dec.": 12,
     }),
-    (t.ORDINAL_NUMBER_DICTIONARY = {
+    (t.H0 = {
         "f\xf6rsta": 1,
         andra: 2,
         tredje: 3,
@@ -132,7 +127,7 @@ let n = r(798401),
         trettionde: 30,
         "trettiof\xf6rsta": 31,
     }),
-    (t.INTEGER_WORD_DICTIONARY = {
+    (t.Vr = {
         en: 1,
         ett: 1,
         "tv\xe5": 2,
@@ -164,7 +159,7 @@ let n = r(798401),
         hundra: 100,
         tusen: 1e3,
     }),
-    (t.TIME_UNIT_DICTIONARY = {
+    (t.EB = {
         sek: "second",
         sekund: "second",
         sekunder: "second",
@@ -185,7 +180,7 @@ let n = r(798401),
         kvartаl: "quarter",
         kvartal: "quarter",
     }),
-    (t.TIME_UNIT_NO_ABBR_DICTIONARY = {
+    (t.ig = {
         sekund: "second",
         sekunder: "second",
         minut: "minute",
@@ -201,15 +196,11 @@ let n = r(798401),
         "\xe5r": "year",
         kvartal: "quarter",
     }),
-    (t.NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.INTEGER_WORD_DICTIONARY)}|\\d+)`),
-    (t.ORDINAL_NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.ORDINAL_NUMBER_DICTIONARY)}|\\d{1,2}(?:e|:e))`),
-    (t.TIME_UNIT_PATTERN = `(?:${(0, n.matchAnyPattern)(t.TIME_UNIT_DICTIONARY)})`));
-let i = `(${t.NUMBER_PATTERN})\\s{0,5}(${(0, n.matchAnyPattern)(t.TIME_UNIT_DICTIONARY)})\\s{0,5}`,
+    (t.nj = `(?:${(0, n.matchAnyPattern)(t.Vr)}|\\d+)`),
+    (0, n.matchAnyPattern)(t.H0),
+    (0, n.matchAnyPattern)(t.EB));
+let i = `(${t.nj})\\s{0,5}(${(0, n.matchAnyPattern)(t.EB)})\\s{0,5}`,
     s = RegExp(i, "i"),
-    o = `(${t.NUMBER_PATTERN})\\s{0,5}(${(0, n.matchAnyPattern)(t.TIME_UNIT_NO_ABBR_DICTIONARY)})\\s{0,5}`;
-function u(e) {
-    let r = e.toLowerCase();
-    return void 0 !== t.INTEGER_WORD_DICTIONARY[r] ? t.INTEGER_WORD_DICTIONARY[r] : parseInt(r);
-}
+    o = `(${t.nj})\\s{0,5}(${(0, n.matchAnyPattern)(t.ig)})\\s{0,5}`;
 ((t.TIME_UNITS_PATTERN = (0, n.repeatedTimeunitPattern)("", i)),
     (t.TIME_UNITS_NO_ABBR_PATTERN = (0, n.repeatedTimeunitPattern)("", o)));

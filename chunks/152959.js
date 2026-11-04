@@ -1,7 +1,6 @@
-a.d(n, { YK: () => c, bf: () => f, initNativeMarkdown: () => s, n9: () => g });
 var t = a(582128),
-    l = a(917310),
-    i = a(38405);
+    l = a(914710),
+    i = a(856383);
 let r = !1,
     d = null,
     o = null,
@@ -14,26 +13,34 @@ function s() {
 function c() {
     return r;
 }
-function f(e) {
-    e && !r && t.use(s());
-}
-function g(e) {
-    let n = t.useCallback(
-        (n) => (
-            u.add(n),
-            e &&
-                (o ??= (async () => {
-                    try {
-                        await s();
-                    } catch (e) {
-                        i.A.captureException(e);
+a.d(
+    n,
+    {},
+    {
+        YK: c,
+        bf: function (e) {
+            e && !r && t.use(s());
+        },
+        initNativeMarkdown: s,
+        n9: function (e) {
+            let n = t.useCallback(
+                (n) => (
+                    u.add(n),
+                    e &&
+                        (o ??= (async () => {
+                            try {
+                                await s();
+                            } catch (e) {
+                                i.A.captureException(e);
+                            }
+                        })()),
+                    () => {
+                        u.delete(n);
                     }
-                })()),
-            () => {
-                u.delete(n);
-            }
-        ),
-        [e],
-    );
-    return t.useSyncExternalStore(n, c);
-}
+                ),
+                [e],
+            );
+            return t.useSyncExternalStore(n, c);
+        },
+    },
+);

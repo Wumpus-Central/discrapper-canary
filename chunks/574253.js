@@ -1,7 +1,6 @@
-(Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.findMostLikelyADYear = function (e) {
-        return (e < 100 && (e > 50 ? (e += 1900) : (e += 2e3)), e);
-    }),
+((t.findMostLikelyADYear = function (e) {
+    return (e < 100 && (e > 50 ? (e += 1900) : (e += 2e3)), e);
+}),
     (t.findYearClosestToRef = function (e, t, r) {
         let a = new Date(e);
         (a.setMonth(r - 1), a.setDate(t));

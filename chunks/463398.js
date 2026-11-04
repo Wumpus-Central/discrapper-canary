@@ -1,9 +1,8 @@
-n.d(t, { A: () => u });
 var i = n(931093),
     r = n(439372),
     a = n(773669),
     s = n(166403),
-    l = n(962644),
+    l = n(158476),
     o = n(412260),
     d = n(818348);
 class c extends r.A {
@@ -75,3 +74,4 @@ class c extends r.A {
     }
 }
 let u = new c();
+n.d(t, {}, { A: u });

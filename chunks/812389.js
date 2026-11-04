@@ -179,7 +179,7 @@ if (
     }),
     (R.f = q =
         function (e) {
-            return e === D || e === o ? new a(e) : K(e);
+            return e === D || e === o ? new a() : K(e);
         }),
     !l && v(P) && B !== Object.prototype)
 ) {

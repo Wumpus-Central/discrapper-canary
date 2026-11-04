@@ -1,9 +1,9 @@
-e.exports = {
-    kL: "container__0a12b",
-    zc: "iconContainer__0a12b",
-    Kk: "icon__0a12b",
-    l1: "iconOffset__0a12b",
-    uf: "stars__0a12b",
-    wx: "header__0a12b",
-    Qq: "text__0a12b",
+_.exports = {
+    kL: "container_xsx8ic",
+    zc: "iconContainer_xsx8ic",
+    Kk: "icon_xsx8ic",
+    l1: "iconOffset_xsx8ic",
+    uf: "stars_xsx8ic",
+    wx: "header_xsx8ic",
+    Qq: "text_xsx8ic",
 };

@@ -1,8 +1,8 @@
-(s.d(t, { A: () => p }), s(321073));
+s(321073);
 var o = s(477900),
     h = s(582128),
-    l = s(503698),
-    n = s.n(l),
+    n = s(503698),
+    l = s.n(n),
     c = s(235986),
     r = s(953051),
     a = s(650583),
@@ -14,7 +14,7 @@ class d extends h.PureComponent {
         let { className: e } = this.props;
         return (0, o.jsx)("input", {
             ref: this.setCodeBlockRef,
-            className: n()(i.h, e),
+            className: l()(i.h, e),
             maxLength: 1,
             value: null != this.props.code ? this.props.code : void 0,
             autoFocus: this.props.autoFocus,
@@ -106,4 +106,4 @@ class u extends h.PureComponent {
         t?.(e);
     }
 }
-let p = u;
+s.d(t, {}, { A: u });

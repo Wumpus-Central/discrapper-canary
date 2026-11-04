@@ -1,4 +1,4 @@
-.root__2bf8a {
+.root_Gk-Dl6 {
     align-items: flex-start;
     display: flex;
     pointer-events: none;
@@ -14,19 +14,19 @@
     user-select: none
 }
 
-.speakingIndicator__2bf8a {
+.speakingIndicator_Gk-Dl6 {
     flex-direction: row;
     position: relative
 }
 
-.speakingIndicator__2bf8a,
-.speakingIndicatorText__2bf8a {
+.speakingIndicator_Gk-Dl6,
+.speakingIndicatorText_Gk-Dl6 {
     align-items: center;
     display: flex;
     gap: var(--space-4)
 }
 
-.speakingIndicatorText__2bf8a {
+.speakingIndicatorText_Gk-Dl6 {
     background-color: rgba(19, 19, 24, .8);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
@@ -43,7 +43,7 @@
     white-space: nowrap
 }
 
-.shareCTAButton__18cbd {
+.shareCTAButton_5-ruWd {
     align-items: center;
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
@@ -63,12 +63,12 @@
     transition: opacity .2s ease-in-out
 }
 
-.shareCTAButton__18cbd.inactivePlayer__18cbd {
+.shareCTAButton_5-ruWd.inactivePlayer_5-ruWd {
     bottom: var(--space-16)
 }
 
-.shareCTAButton__18cbd.active__18cbd {
+.shareCTAButton_5-ruWd.active_5-ruWd {
     opacity: 1
 }
 
-/*# sourceMappingURL=679502.5c2ddb6bfdcc7df5.css.map*/
+/*# sourceMappingURL=679502.6c7b73578c30c062.css.map*/

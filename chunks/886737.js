@@ -1,4 +1,3 @@
-t.d(n, { A: () => u, u: () => r });
 let l = new Set(["link", "url", "autolink", "mailto", "tel", "attachmentLink", "devLink"]);
 function r(e) {
     return `:${e.replace(/^:+|:+$/g, "")}:`;
@@ -30,3 +29,4 @@ function a(e) {
 function u(e) {
     return Array.isArray(e) ? e.map(a) : a(e);
 }
+t.d(n, {}, { A: u, u: r });

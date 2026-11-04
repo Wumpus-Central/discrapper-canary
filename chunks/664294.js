@@ -1,57 +1,28 @@
-((t.parse = function (r, t) {
+t.q = function (r, t) {
     if ("string" != typeof r) throw TypeError("argument str must be a string");
-    var e = {},
-        a = r.split(n),
-        o = (t || {}).decode || i;
+    var n = {},
+        o = r.split(i),
+        s = (t || {}).decode || e;
     return (
-        a.forEach(function (r) {
+        o.forEach(function (r) {
             var t = r.indexOf("=");
             if (!(t < 0)) {
-                var i = r.substr(0, t).trim(),
-                    n = r.substr(++t, r.length).trim();
-                ('"' == n[0] && (n = n.slice(1, -1)),
-                    void 0 == e[i] &&
-                        (e[i] = (function (r, t) {
+                var e = r.substr(0, t).trim(),
+                    i = r.substr(++t, r.length).trim();
+                ('"' == i[0] && (i = i.slice(1, -1)),
+                    void 0 == n[e] &&
+                        (n[e] = (function (r, t) {
                             try {
                                 return t(r);
                             } catch (t) {
                                 return r;
                             }
-                        })(n, o)));
+                        })(i, s)));
             }
         }),
-        e
+        n
     );
-}),
-    (t.serialize = function (r, t, i) {
-        var n = i || {},
-            o = n.encode || e;
-        if (!a.test(r)) throw TypeError("argument name is invalid");
-        var s = o(t);
-        if (s && !a.test(s)) throw TypeError("argument val is invalid");
-        var p = [r + "=" + s];
-        if (null != n.maxAge) {
-            var u = n.maxAge - 0;
-            if (isNaN(u)) throw Error("maxAge should be a Number");
-            p.push("Max-Age=" + Math.floor(u));
-        }
-        if (n.domain) {
-            if (!a.test(n.domain)) throw TypeError("option domain is invalid");
-            p.push("Domain=" + n.domain);
-        }
-        if (n.path) {
-            if (!a.test(n.path)) throw TypeError("option path is invalid");
-            p.push("Path=" + n.path);
-        }
-        return (
-            n.expires && p.push("Expires=" + n.expires.toUTCString()),
-            n.httpOnly && p.push("HttpOnly"),
-            n.secure && p.push("Secure"),
-            n.firstPartyOnly && p.push("First-Party-Only"),
-            p.join("; ")
-        );
-    }));
-var i = decodeURIComponent,
-    e = encodeURIComponent,
-    n = /; */,
-    a = /^[\u0009\u0020-\u007e\u0080-\u00ff]+$/;
+};
+var e = decodeURIComponent,
+    n = encodeURIComponent,
+    i = /; */;

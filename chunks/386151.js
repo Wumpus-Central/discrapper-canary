@@ -1,1 +1,1 @@
-_.exports = { pq: "info_f4bc97", e8: "withDisplayNameStyles_f4bc97", ok: "infoSpacing_f4bc97", Mp: "guildTag_f4bc97" };
+e.exports = { pq: "info_PTA1Mz", e8: "withDisplayNameStyles_PTA1Mz", ok: "infoSpacing_PTA1Mz", Mp: "guildTag_PTA1Mz" };

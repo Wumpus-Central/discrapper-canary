@@ -1,4 +1,3 @@
-n.d(t, { W: () => r });
 var i,
     r =
         (((i = {}).RAID = "raid"),
@@ -6,3 +5,4 @@ var i,
         (i.ACTIVITY_ALERTS_ENABLED = "activity_alerts_enabled"),
         (i.INTERACTION_BLOCKED = "interaction_blocked"),
         i);
+n.d(t, {}, { W: r });

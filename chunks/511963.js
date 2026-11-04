@@ -1,6 +1,5 @@
-n.d(t, { A: () => s });
 var i = n(315069),
-    r = n(202541);
+    r = n(682901);
 let a = { [r.Ff.DAY]: r.WT.DAY, [r.Ff.WEEK]: r.WT.DAY, [r.Ff.MONTH]: r.WT.MONTH, [r.Ff.YEAR]: r.WT.YEAR };
 class s extends i.A {
     id;
@@ -45,3 +44,4 @@ class s extends i.A {
         return Number.isNaN(t) ? null : Math.round(e * (1 - t / 100));
     }
 }
+n.d(t, {}, { A: s });

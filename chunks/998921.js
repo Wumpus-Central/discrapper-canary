@@ -1,10 +1,9 @@
-n.d(t, { A: () => N });
 var i = n(264572),
     r = n(143236),
     a = n(435558),
     s = n.n(a),
     l = n(626584),
-    o = n(19575),
+    o = n(253400),
     d = n(861621),
     c = n(313731),
     u = n(546983),
@@ -54,8 +53,8 @@ function m(e) {
 }
 function T(e, t) {
     t = JSON.stringify(t);
-    let n = i.Buffer.byteLength(t),
-        r = i.Buffer.alloc(8 + n);
+    let n = i.hp.byteLength(t),
+        r = i.hp.alloc(8 + n);
     return (
         r.writeInt32LE(e, 0),
         r.writeInt32LE(n, 4),
@@ -64,7 +63,7 @@ function T(e, t) {
     );
 }
 class g extends c.A {
-    messageBuffer = i.Buffer.alloc(0);
+    messageBuffer = i.hp.alloc(0);
     currentHeader = null;
     MAX_BUFFER_SIZE = 5242880;
     socket;
@@ -80,7 +79,7 @@ class g extends c.A {
             }));
     }
     copyBuffer(e, t, n) {
-        let r = i.Buffer.allocUnsafe(n - t);
+        let r = i.hp.allocUnsafe(n - t);
         return (e.copy(r, 0, t, n), r);
     }
     send(e) {
@@ -106,7 +105,7 @@ class g extends c.A {
             throw Error("total buffer size exceeded");
         ((this.messageBuffer =
             ((t = this.messageBuffer),
-            (n = i.Buffer.alloc(t.byteLength + e.byteLength)).set(t),
+            (n = i.hp.alloc(t.byteLength + e.byteLength)).set(t),
             n.set(e, t.byteLength),
             n)),
             this.processMessages());
@@ -166,7 +165,7 @@ class S extends r.EventEmitter {
     MAX_CONNECTIONS = 100;
     constructor() {
         super();
-        const e = A.net.createServer((e) => this.handleConnection(e));
+        let e = A.net.createServer((e) => this.handleConnection(e));
         (e.on("error", (e) => h.error(`Error: ${e.message}`)),
             A.getAvailableSocket(m).then((t) => {
                 e.listen(t, () => {
@@ -203,11 +202,11 @@ class S extends r.EventEmitter {
             }, 1e4);
         (e.on("readable", () => {
             let n = e.read();
-            null != n && t.read(i.Buffer.from(n));
+            null != n && t.read(i.hp.from(n));
         }),
             e.on("data", (e) => {
                 try {
-                    t.read(i.Buffer.from(e));
+                    t.read(i.hp.from(e));
                 } catch (e) {
                     (clearTimeout(n),
                         h.error(`Socket Error: ${e.message}`),
@@ -235,3 +234,4 @@ class S extends r.EventEmitter {
     }
 }
 let N = new S();
+n.d(t, {}, { A: N });

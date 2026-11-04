@@ -1,1 +1,1 @@
-t.exports = { N: "buttonsContainer__4962e", A: "newBadge__4962e" };
+t.exports = { N: "buttonsContainer_l1O0Cl", A: "newBadge_l1O0Cl" };

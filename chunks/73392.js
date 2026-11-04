@@ -1,4 +1,3 @@
-l.d(t, { a: () => f, p: () => d });
 var n = l(503698),
     s = l.n(n),
     a = l(559949),
@@ -24,9 +23,16 @@ let i = {
 function d(e) {
     return { name: (0, o.A)(e), className: i[e] ?? "" };
 }
-function f(e) {
-    let { displayNameStyles: t, compensateForSafari: l = !0 } = e;
-    if (!(0, u.W)({ location: "useDisplayNameStylesFont" }) || null == t) return "";
-    let n = d(t.fontId);
-    return "" === n.className ? "" : s()(c.zt, n.className, { [c.VM]: l && (0, r.nr)() });
-}
+l.d(
+    t,
+    {},
+    {
+        a: function (e) {
+            let { displayNameStyles: t, compensateForSafari: l = !0 } = e;
+            if (!(0, u.W)({ location: "useDisplayNameStylesFont" }) || null == t) return "";
+            let n = d(t.fontId);
+            return "" === n.className ? "" : s()(c.zt, n.className, { [c.VM]: l && (0, r.nr)() });
+        },
+        p: d,
+    },
+);

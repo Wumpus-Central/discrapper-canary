@@ -1,4 +1,3 @@
-s.d(t, { A: () => p });
 var a = s(477900),
     i = s(582128),
     n = s(503698),
@@ -161,4 +160,4 @@ class c extends i.Component {
         });
     }
 }
-let p = c;
+s.d(t, {}, { A: c });

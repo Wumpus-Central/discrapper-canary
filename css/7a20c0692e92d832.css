@@ -1,0 +1,132 @@
+.container_tE9t7v {
+    background-color: var(--background-surface-highest);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 25px auto 0;
+    padding: 8px;
+    width: 260px
+}
+
+.bannerImage_tE9t7v {
+    height: 33.75px;
+    width: 57.23px
+}
+
+.topContent_tE9t7v {
+    align-items: center;
+    display: flex;
+    gap: 12px
+}
+
+.textContent_tE9t7v {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px
+}
+
+.editorAnimate_sLUoDH {
+    animation: slidein_sLUoDH .5s ease-in 1s forwards;
+    margin-inline-end: calc((var(--custom-client-themes-editor-content-width) + (var(--custom-client-themes-editor-padding)*2))*-1)
+}
+
+@keyframes slidein_sLUoDH {
+    0% {
+        margin-inline-end: calc((var(--custom-client-themes-editor-content-width) + (var(--custom-client-themes-editor-padding)*2))*-1)
+    }
+
+    to {
+        margin-inline-end: 0
+    }
+}
+
+.themeEditor_sLUoDH {
+    background: var(--background-base-low);
+    border-inline-start: 6px solid var(--background-base-lower);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    height: 100%;
+    inset-inline-end: 0;
+    padding: var(--custom-client-themes-editor-padding) 0;
+    padding-inline: var(--space-12);
+    position: relative;
+    z-index: 1
+}
+
+.editorHeader_sLUoDH {
+    width: var(--custom-client-themes-editor-content-width)
+}
+
+.editorBody_sLUoDH,
+.editorHeader_sLUoDH {
+    padding: 0 var(--custom-client-themes-editor-padding)
+}
+
+.selectionGroup_sLUoDH {
+    margin-top: 16px;
+    width: var(--custom-client-themes-editor-content-width)
+}
+
+.editorFooter_sLUoDH {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+    max-width: 268px;
+    padding: 0 var(--custom-client-themes-editor-padding)
+}
+
+.closeCircleButton_sLUoDH {
+    cursor: pointer;
+    height: 20px;
+    inset-inline-end: 18px;
+    position: absolute;
+    top: 18px;
+    width: 20px;
+    z-index: 2
+}
+
+.closeCircle_sLUoDH {
+    color: var(--interactive-text-default);
+    height: 100%;
+    width: 100%
+}
+
+.closeCircle_sLUoDH:focus,
+.closeCircle_sLUoDH:hover {
+    color: var(--interactive-text-hover)
+}
+
+.footerUpsellRow_sLUoDH {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.footerWishlistButton_sLUoDH {
+    background: var(--control-secondary-background-hover);
+    border: 1px solid var(--control-secondary-border-hover)
+}
+
+.bannerUpsell_sLUoDH {
+    align-items: center;
+    background-image: var(--custom-premium-colors-premium-gradient-tier-2);
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 10px;
+    padding: 10px
+}
+
+.bannerUpsell_sLUoDH .premiumIcon_sLUoDH {
+    color: var(--white);
+    flex-shrink: 0
+}
+
+/*# sourceMappingURL=7a20c0692e92d832.css.map*/

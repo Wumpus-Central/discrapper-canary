@@ -1,0 +1,31 @@
+.answerChoicesContainer_11vtwc {
+    background-color: var(--background-mod-subtle);
+    border-radius: 8px;
+    margin-bottom: 16px;
+    padding: 12px
+}
+
+.otherField_11vtwc {
+    margin-bottom: 16px
+}
+
+.footer_11vtwc {
+    padding-top: 8px
+}
+
+.cancelModalBody_M93jvS {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px
+}
+
+.benefitsContainer_M93jvS {
+    margin-top: 0;
+    row-gap: 16px
+}
+
+.largeAppIcon_M93jvS {
+    border-radius: 0
+}
+
+/*# sourceMappingURL=f9962cf411d28771.css.map*/

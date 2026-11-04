@@ -1,17 +1,22 @@
-r.d(e, { A: () => u });
 var i = r(477900);
 r(582128);
 var n = r(477782),
     l = r(308528),
     s = r(734057),
-    a = r(105292);
-function u(t, e) {
-    let r = s.A.getChannel(t);
-    return null == r || r.isMultiUserDM()
-        ? null
-        : (0, i.jsx)(n.Dr, {
-              id: "close-dm",
-              label: a.intl.string(a.t.jsvgc3),
-              action: () => l.A.closePrivateChannel(t, e),
-          });
-}
+    a = r(792996);
+r.d(
+    e,
+    {},
+    {
+        A: function (t, e) {
+            let r = s.A.getChannel(t);
+            return null == r || r.isMultiUserDM()
+                ? null
+                : (0, i.jsx)(n.Dr, {
+                      id: "close-dm",
+                      label: a.intl.string(a.t.jsvgc3),
+                      action: () => l.A.closePrivateChannel(t, e),
+                  });
+        },
+    },
+);

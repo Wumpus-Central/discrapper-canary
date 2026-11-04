@@ -1,4 +1,9 @@
-function n() {
-    return !1;
-}
-r.d(t, { Nf: () => n });
+r.d(
+    t,
+    {},
+    {
+        Nf: function () {
+            return !1;
+        },
+    },
+);

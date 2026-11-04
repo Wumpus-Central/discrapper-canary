@@ -1,1 +1,1 @@
-t.exports = { E: "noticeWrapper__35939" };
+t.exports = { E: "noticeWrapper_Vg2yW0" };

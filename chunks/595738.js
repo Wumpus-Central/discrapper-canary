@@ -1,4 +1,3 @@
-n.d(l, { A: () => x });
 var r = n(477900);
 n(582128);
 var e = n(503698),
@@ -9,71 +8,95 @@ var e = n(503698),
     t = n(789645),
     o = n(376092),
     h = n(750382);
-function x(s) {
-    let {
-        grantedPermissions: l,
-        disabledPermissions: n,
-        grantedPermissionsHeader: e,
-        disabledPermissionsHeader: x,
-        className: m,
-    } = s;
-    return (0, r.jsxs)("div", {
-        className: a()(h.p_, m),
-        children: [
-            null != l && l.length > 0
-                ? (0, r.jsxs)(r.Fragment, {
-                      children: [
-                          null != e
-                              ? (0, r.jsx)(i.D, { variant: "heading-xs/semibold", color: "text-strong", children: e })
-                              : null,
-                          (0, r.jsx)("div", {
-                              className: h.kL,
-                              children: l.map((s) =>
-                                  (0, r.jsxs)(
-                                      "div",
-                                      {
-                                          className: h.EK,
-                                          children: [
-                                              (0, r.jsx)(c.CheckmarkLargeIcon, {
-                                                  size: "xs",
-                                                  color: "currentColor",
-                                                  className: h.z6,
-                                              }),
-                                              (0, r.jsx)(d.E, { variant: "body-sm/normal", children: (0, o.hx)(s) }),
-                                          ],
-                                      },
-                                      s.toString(),
-                                  ),
-                              ),
-                          }),
-                      ],
-                  })
-                : null,
-            null != n && n.length > 0
-                ? (0, r.jsxs)(r.Fragment, {
-                      children: [
-                          null != x
-                              ? (0, r.jsx)(i.D, { variant: "heading-xs/semibold", color: "text-strong", children: x })
-                              : null,
-                          (0, r.jsx)("div", {
-                              className: h.kL,
-                              children: n.map((s) =>
-                                  (0, r.jsxs)(
-                                      "div",
-                                      {
-                                          className: h.EK,
-                                          children: [
-                                              (0, r.jsx)(t.P, { size: "xs", color: "currentColor", className: h.$A }),
-                                              (0, r.jsx)(d.E, { variant: "body-sm/normal", children: (0, o.hx)(s) }),
-                                          ],
-                                      },
-                                      s.toString(),
-                                  ),
-                              ),
-                          }),
-                      ],
-                  })
-                : null,
-        ],
-    });
-}
+n.d(
+    l,
+    {},
+    {
+        A: function (s) {
+            let {
+                grantedPermissions: l,
+                disabledPermissions: n,
+                grantedPermissionsHeader: e,
+                disabledPermissionsHeader: x,
+                className: m,
+            } = s;
+            return (0, r.jsxs)("div", {
+                className: a()(h.p_, m),
+                children: [
+                    null != l && l.length > 0
+                        ? (0, r.jsxs)(r.Fragment, {
+                              children: [
+                                  null != e
+                                      ? (0, r.jsx)(i.D, {
+                                            variant: "heading-xs/semibold",
+                                            color: "text-strong",
+                                            children: e,
+                                        })
+                                      : null,
+                                  (0, r.jsx)("div", {
+                                      className: h.kL,
+                                      children: l.map((s) =>
+                                          (0, r.jsxs)(
+                                              "div",
+                                              {
+                                                  className: h.EK,
+                                                  children: [
+                                                      (0, r.jsx)(c.CheckmarkLargeIcon, {
+                                                          size: "xs",
+                                                          color: "currentColor",
+                                                          className: h.z6,
+                                                      }),
+                                                      (0, r.jsx)(d.E, {
+                                                          variant: "body-sm/normal",
+                                                          children: (0, o.hx)(s),
+                                                      }),
+                                                  ],
+                                              },
+                                              s.toString(),
+                                          ),
+                                      ),
+                                  }),
+                              ],
+                          })
+                        : null,
+                    null != n && n.length > 0
+                        ? (0, r.jsxs)(r.Fragment, {
+                              children: [
+                                  null != x
+                                      ? (0, r.jsx)(i.D, {
+                                            variant: "heading-xs/semibold",
+                                            color: "text-strong",
+                                            children: x,
+                                        })
+                                      : null,
+                                  (0, r.jsx)("div", {
+                                      className: h.kL,
+                                      children: n.map((s) =>
+                                          (0, r.jsxs)(
+                                              "div",
+                                              {
+                                                  className: h.EK,
+                                                  children: [
+                                                      (0, r.jsx)(t.P, {
+                                                          size: "xs",
+                                                          color: "currentColor",
+                                                          className: h.$A,
+                                                      }),
+                                                      (0, r.jsx)(d.E, {
+                                                          variant: "body-sm/normal",
+                                                          children: (0, o.hx)(s),
+                                                      }),
+                                                  ],
+                                              },
+                                              s.toString(),
+                                          ),
+                                      ),
+                                  }),
+                              ],
+                          })
+                        : null,
+                ],
+            });
+        },
+    },
+);

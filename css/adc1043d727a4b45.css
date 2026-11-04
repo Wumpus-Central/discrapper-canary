@@ -1,0 +1,76 @@
+.outer_spl_hF {
+    position: relative
+}
+
+.inner_spl_hF {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.root_sKUDgo {
+    display: flex;
+    width: clamp(var(--custom-interaction-iframe-modal-modal-min-width), calc(100vw - var(--custom-interaction-iframe-modal-modal-margin)*2), min((100vh - var(--custom-interaction-iframe-modal-modal-header-height) - var(--custom-interaction-iframe-modal-modal-margin) * 2) * 16/9, var(--custom-interaction-iframe-modal-modal-max-width)))
+}
+
+.applicationIcon_sKUDgo {
+    margin-inline-end: .5em
+}
+
+.submissionWarning_sKUDgo {
+    margin-bottom: 16px
+}
+
+.modalRoot_sKUDgo {
+    border-radius: var(--radius-md);
+    min-height: auto;
+    padding-bottom: 16px;
+    padding-top: 4px;
+    position: relative
+}
+
+.modalHeader_sKUDgo {
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--background-base-low);
+    padding: 12px 16px
+}
+
+.closeButtonContainer_sKUDgo {
+    margin-inline-start: auto
+}
+
+.closeButton_sKUDgo {
+    display: flex
+}
+
+.closeIcon_sKUDgo {
+    color: var(--interactive-text-default);
+    height: 24px;
+    width: 24px
+}
+
+.closeIcon_sKUDgo:hover {
+    color: var(--interactive-text-hover)
+}
+
+.closeIcon_sKUDgo:active {
+    color: var(--interactive-text-active)
+}
+
+.iframe_sKUDgo {
+    display: block;
+    height: 100%;
+    width: 100%
+}
+
+.botTag_sKUDgo {
+    margin-inline-start: 4px
+}
+
+.flexRow_sKUDgo {
+    display: flex;
+    flex-direction: row
+}
+
+/*# sourceMappingURL=adc1043d727a4b45.css.map*/

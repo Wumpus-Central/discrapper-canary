@@ -1,7 +1,12 @@
-p.d(i, { A: () => r });
-var n = p(17928),
+var n = p(855986),
     o = p(918467);
-function r(t) {
-    let i = (0, n.bG)([o.A], () => o.A.getPromotionsForApplication(t));
-    return i?.[0] ?? null;
-}
+p.d(
+    i,
+    {},
+    {
+        A: function (t) {
+            let i = (0, n.bG)([o.A], () => o.A.getPromotionsForApplication(t));
+            return i?.[0] ?? null;
+        },
+    },
+);

@@ -1,13 +1,6 @@
-n.d(t, { D3: () => l, J9: () => s, oL: () => a });
-var i = n(194004),
-    r = n(105292);
-function a() {
-    return [r.intl.string(r.t.b6wEe6), r.intl.string(r.t.i8o9hX)];
-}
-function s() {
-    return [r.intl.string(r.t.vqnToc), r.intl.string(r.t["9yh+dM"])];
-}
-let l = [
+var i = n(832628),
+    r = n(792996);
+let a = [
     {
         id: "781323471249604648",
         format_type: i.TG.APNG,
@@ -24,3 +17,16 @@ let l = [
     { id: "781324722394103808", format_type: i.TG.APNG, description: "Cheerful Choco cheers", name: "Cheer" },
     { id: "813951723822645278", format_type: i.TG.APNG, description: "Cheerful Choco gives thumbs up", name: "Nice" },
 ];
+n.d(
+    t,
+    {},
+    {
+        D3: a,
+        J9: function () {
+            return [r.intl.string(r.t.vqnToc), r.intl.string(r.t["9yh+dM"])];
+        },
+        oL: function () {
+            return [r.intl.string(r.t.b6wEe6), r.intl.string(r.t.i8o9hX)];
+        },
+    },
+);

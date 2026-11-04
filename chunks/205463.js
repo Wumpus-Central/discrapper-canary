@@ -1,22 +1,21 @@
-e.d(n, { default: () => C });
 var i = e(477900),
     r = e(582128),
     o = e(189213),
     a = e(964486),
-    u = e(174459),
-    s = e(137728),
-    l = e(751877),
-    c = e(202541),
+    u = e(129230),
+    s = e(736560),
+    l = e(470147),
+    c = e(682901),
     d = e(88001),
     f = e(652215),
-    m = e(899082),
-    _ = e(105292);
+    m = e(107198),
+    _ = e(792996);
 let p = { 1: "what_you_lose", 2: "confirmation" };
 function P(t) {
     let { onClose: n, currentUser: e, onNext: r, ...a } = t;
     return (0, i.jsx)(o.a, {
         title: _.intl.formatToPlainString(m.default["4e7WtF"], { premiumGroupProductName: (0, d.DP)() }),
-        subtitle: _.intl.formatToPlainString(m.default["3kVEg0"], { cooldownMonths: d.wl }),
+        subtitle: _.intl.formatToPlainString(m.default["3kVEg0"], { cooldownMonths: 12 }),
         onClose: n,
         ...a,
         actions: [
@@ -32,14 +31,14 @@ function P(t) {
         }),
     });
 }
-function w(t) {
+function C(t) {
     let { onClose: n, onConfirm: e, isRemovingUser: r, ...a } = t;
     return (0, i.jsx)(o.a, {
         size: "md",
         title: _.intl.formatToPlainString(m.default.IrvJHs, { premiumGroupProductName: (0, d.DP)() }),
         subtitle: _.intl.formatToPlainString(m.default.cQDYKU, {
             premiumGroupProductName: (0, d.DP)(),
-            cooldownMonths: d.wl,
+            cooldownMonths: 12,
         }),
         onClose: n,
         actions: [
@@ -49,52 +48,65 @@ function w(t) {
         ...a,
     });
 }
-let C = function (t) {
-    let { premiumGroupSubscriptionId: n, currentUser: e, onClose: o, ...s } = t,
-        [c, d] = r.useState(1),
-        [m, _] = r.useState(!1),
-        C = r.useRef(0),
-        E = r.useRef(0);
-    function M(t, e) {
-        (u.default.track(f.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_STEP, {
-            subscription_id: n,
-            from_step: p[t],
-            to_step: e,
-            step_duration_ms: Date.now() - E.current,
-            flow_duration_ms: Date.now() - C.current,
-        }),
-            (E.current = Date.now()));
-    }
-    async function R() {
-        (M(c, null), await o());
-    }
-    async function T() {
-        (_(!0),
-            (await (0, l.oO)(n, e.id)).ok &&
-                (u.default.track(f.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_COMPLETED, { subscription_id: n }), o()),
-            _(!1));
-    }
-    switch (
-        ((0, a.Ay)(() => {
-            let t = Date.now();
-            ((C.current = t),
-                (E.current = t),
-                u.default.track(f.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_STARTED, { subscription_id: n }));
-        }),
-        c)
-    ) {
-        case 1:
-            return (0, i.jsx)(P, {
-                ...s,
-                onNext: function () {
-                    (M(c, p[2]), d(2));
-                },
-                currentUser: e,
-                onClose: R,
-            });
-        case 2:
-            return (0, i.jsx)(w, { ...s, onConfirm: T, onClose: R, isRemovingUser: m });
-        default:
-            return null;
-    }
-};
+e.d(
+    n,
+    {},
+    {
+        default: function (t) {
+            let { premiumGroupSubscriptionId: n, currentUser: e, onClose: o, ...s } = t,
+                [c, d] = r.useState(1),
+                [m, _] = r.useState(!1),
+                E = r.useRef(0),
+                w = r.useRef(0);
+            function M(t, e) {
+                (u.default.track(f.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_STEP, {
+                    subscription_id: n,
+                    from_step: p[t],
+                    to_step: e,
+                    step_duration_ms: Date.now() - w.current,
+                    flow_duration_ms: Date.now() - E.current,
+                }),
+                    (w.current = Date.now()));
+            }
+            async function R() {
+                (M(c, null), await o());
+            }
+            switch (
+                ((0, a.Ay)(() => {
+                    let t = Date.now();
+                    ((E.current = t),
+                        (w.current = t),
+                        u.default.track(f.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_STARTED, { subscription_id: n }));
+                }),
+                c)
+            ) {
+                case 1:
+                    return (0, i.jsx)(P, {
+                        ...s,
+                        onNext: function () {
+                            (M(c, p[2]), d(2));
+                        },
+                        currentUser: e,
+                        onClose: R,
+                    });
+                case 2:
+                    return (0, i.jsx)(C, {
+                        ...s,
+                        onConfirm: async function () {
+                            (_(!0),
+                                (await (0, l.oO)(n, e.id)).ok &&
+                                    (u.default.track(f.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_COMPLETED, {
+                                        subscription_id: n,
+                                    }),
+                                    o()),
+                                _(!1));
+                        },
+                        onClose: R,
+                        isRemovingUser: m,
+                    });
+                default:
+                    return null;
+            }
+        },
+    },
+);

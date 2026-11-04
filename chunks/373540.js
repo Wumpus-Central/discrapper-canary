@@ -1,29 +1,34 @@
-a.d(n, { A: () => s });
-var e = a(477900);
-a(582128);
-var i = a(189213),
-    l = a(732159),
-    o = a(192308),
-    c = a(516288);
-function s(t, n, a, s) {
-    let u = (0, c.t)(t, n);
-    function r(t) {
-        return null == u.cancel
-            ? (0, e.jsx)(i.a, {
-                  ...t,
-                  title: u.title,
-                  subtitle: u.body,
-                  actions: [{ text: u.action, onClick: t.onClose }],
-              })
-            : (0, e.jsx)(l.u, {
-                  ...t,
-                  title: u.title,
-                  subtitle: u.body,
-                  confirmText: u.action,
-                  cancelText: u.cancel,
-                  variant: "primary",
-                  onConfirm: () => a?.(),
-              });
-    }
-    null != s && (0, o.hasModalOpen)(s) ? (0, o.updateModal)(s, r) : (0, o.openModal)(r, { modalKey: s });
-}
+var c = n(477900);
+n(582128);
+var e = n(189213),
+    a = n(732159),
+    l = n(192308),
+    o = n(516288);
+n.d(
+    i,
+    {},
+    {
+        A: function (t, i, n, s) {
+            let r = (0, o.t)(t, i);
+            function u(t) {
+                return null == r.cancel
+                    ? (0, c.jsx)(e.a, {
+                          ...t,
+                          title: r.title,
+                          subtitle: r.body,
+                          actions: [{ text: r.action, onClick: t.onClose }],
+                      })
+                    : (0, c.jsx)(a.u, {
+                          ...t,
+                          title: r.title,
+                          subtitle: r.body,
+                          confirmText: r.action,
+                          cancelText: r.cancel,
+                          variant: "primary",
+                          onConfirm: () => n?.(),
+                      });
+            }
+            null != s && (0, l.kB)(s) ? (0, l.zb)(s, u) : (0, l.qf)(u, { modalKey: s });
+        },
+    },
+);

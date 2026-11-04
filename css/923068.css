@@ -1,11 +1,11 @@
-.container__76394 {
+.container_KR9zF4 {
     border-radius: 20px;
     filter: saturate(var(--saturation-factor, 1));
     overflow: visible;
     position: relative
 }
 
-.glowAnimation__76394 {
+.glowAnimation_KR9zF4 {
     filter: blur(var(--custom-blur-amount)) saturate(var(--saturation-factor, 1)) hue-rotate(var(--custom-hue-rotate, 0deg));
     height: calc(100% + var(--custom-glow-amount)*2 + 2px);
     inset-inline-start: calc(var(--custom-glow-amount)*-1 - 1px);
@@ -16,4 +16,4 @@
     width: calc(100% + var(--custom-glow-amount)*2 + 2px)
 }
 
-/*# sourceMappingURL=923068.9079cf9d903150a8.css.map*/
+/*# sourceMappingURL=923068.58535e4835b20536.css.map*/

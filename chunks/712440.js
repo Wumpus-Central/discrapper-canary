@@ -1,11 +1,10 @@
-n.d(t, { A: () => c });
-var i = n(636537),
+var i = n(620632),
     r = n(451988),
     a = n(73153),
     s = n(733110),
     l = n(652215);
 let o = new r.OC(d, {
-    predicate: (e) => s.default.getFetchStateForApplication(e) !== s.FetchState.FETCHING,
+    predicate: (e) => s.A.getFetchStateForApplication(e) !== s.FetchState.FETCHING,
     onQueued: (e) =>
         a.h.dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST", request: { type: "partial", applicationIds: e } }),
     onCancelled: (e) => a.h.dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST_CANCELLED", applicationIds: e }),
@@ -35,18 +34,27 @@ async function d(e) {
         })(t.body, e),
     });
 }
-let c = {
-    fetch(e) {
-        if (s.default.getFetchState() !== s.FetchState.FETCHING)
-            if (null != e)
-                o.queue(e).catch((e) => {
-                    if (!(e instanceof r.bY)) throw e;
+n.d(
+    t,
+    {},
+    {
+        A: {
+            fetch(e) {
+                if (s.A.getFetchState() !== s.FetchState.FETCHING)
+                    if (null != e)
+                        o.queue(e).catch((e) => {
+                            if (!(e instanceof r.bY)) throw e;
+                        });
+                    else
+                        (o.reset(),
+                            a.h.dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST", request: { type: "full" } }),
+                            d());
+            },
+            delete(e) {
+                i.Bo.del({ url: l.Rsh.OAUTH2_TOKEN(e), oldFormErrors: !0, rejectWithError: !0 }).then(() => {
+                    this.fetch();
                 });
-            else (o.reset(), a.h.dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST", request: { type: "full" } }), d());
+            },
+        },
     },
-    delete(e) {
-        i.Bo.del({ url: l.Rsh.OAUTH2_TOKEN(e), oldFormErrors: !0, rejectWithError: !0 }).then(() => {
-            this.fetch();
-        });
-    },
-};
+);

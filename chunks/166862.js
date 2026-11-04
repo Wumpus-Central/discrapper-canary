@@ -1,8 +1,7 @@
-n.d(t, { A: () => m });
-var i = n(17928),
+var i = n(855986),
     r = n(73153),
     a = n(155718),
-    s = n(666860),
+    s = n(149468),
     l = n(723702),
     o = n(861382),
     d = n(652215);
@@ -29,7 +28,7 @@ function E(e) {
 function A() {
     return (c.clear(), u.clear(), !0);
 }
-let h = (0, l.isDesktop)();
+let h = (0, l.xl)();
 function f(e) {
     let { channelId: t, command: n } = e;
     I(t, n?.id);
@@ -153,3 +152,4 @@ let m = new p(r.h, {
         I(t, n?.id);
     },
 });
+n.d(t, {}, { A: m });

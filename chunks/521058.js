@@ -1,1 +1,1 @@
-e.exports = { v: "banner__88303" };
+e.exports = { v: "banner_kRSvVH" };

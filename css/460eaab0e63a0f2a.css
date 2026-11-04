@@ -1,0 +1,95 @@
+.cameraWrapper_3LYQ5J {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border: 1px solid var(--background-base-lowest);
+    border-radius: var(--radius-xs);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 220px;
+    width: 100%
+}
+
+.camera_3LYQ5J,
+.cameraBox_3LYQ5J,
+.cameraWrapper_3LYQ5J {
+    position: relative
+}
+
+.camera_3LYQ5J {
+    transform: scaleX(-1)
+}
+
+.autoThresholdSlider_d-Ihb0 {
+    height: auto
+}
+
+.noInputDevicesDetectedWarning_d-Ihb0 {
+    margin-top: 8px
+}
+
+.theme-light .sliderBar_d-Ihb0 {
+    background-color: var(--primary-200)
+}
+
+.theme-dark .sliderBar_d-Ihb0 {
+    background-color: var(--primary-400)
+}
+
+.sliderBar_d-Ihb0.disabled_d-Ihb0 {
+    opacity: .6
+}
+
+.sliderBar_d-Ihb0.speaking_d-Ihb0 {
+    background-color: var(--green-230)
+}
+
+.inputSensitivityToggle_d-Ihb0 .sliderBar_d-Ihb0 {
+    transition: background-color .2s linear
+}
+
+.inputSensitivityToggle_d-Ihb0.manual_d-Ihb0 .microphone_d-Ihb0 {
+    position: absolute;
+    width: 100%
+}
+
+.inputSensitivityToggle_d-Ihb0.manual_d-Ihb0 .microphone_d-Ihb0 .fill_d-Ihb0 {
+    background-color: var(--opacity-black-24);
+    height: 100%;
+    transition: width 35ms ease
+}
+
+.inputSensitivitySlider_d-Ihb0 {
+    height: 40px;
+    position: relative;
+    width: 100%
+}
+
+.inputSensitivityBar_d-Ihb0 {
+    border-radius: var(--radius-xs);
+    display: block;
+    height: 8px;
+    overflow: hidden;
+    position: relative
+}
+
+.inputSensitivityBarFill_d-Ihb0 {
+    background: var(--brand-500);
+    height: 100%
+}
+
+.inputSensitivityToggle_d-Ihb0.manual_d-Ihb0 .microphone_d-Ihb0 {
+    background-color: transparent
+}
+
+.inputSensitivityToggle_d-Ihb0:not(.manual_d-Ihb0) {
+    padding-top: 8px
+}
+
+.keybindContainer_xlidr7 {
+    display: grid;
+    min-width: 0;
+    width: clamp(160px, 30vw, 300px)
+}
+
+/*# sourceMappingURL=460eaab0e63a0f2a.css.map*/

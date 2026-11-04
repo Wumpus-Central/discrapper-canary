@@ -1,4 +1,3 @@
-n.d(t, { w: () => r });
 var i,
     r =
         (((i = {}).NITRO_UNSUBBED = "nitro_unsubbed"),
@@ -16,3 +15,4 @@ var i,
         (i.GUILD_ROOM_JOINED = "guild_room_joined"),
         (i.YOUTUBE_3PP_MODAL_DISMISSED = "youtube_3pp_modal_dismissed"),
         i);
+n.d(t, {}, { w: r });

@@ -1,4 +1,3 @@
-n.d(t, { A: () => d });
 var s = n(582128),
     i = n(736653),
     a = n(253932),
@@ -6,15 +5,21 @@ var s = n(582128),
     l = n(21878),
     o = n(951727),
     c = n(708676);
-function d(e, t) {
-    let n = (0, l.M)(e),
-        d = (0, r.d$)(n.getChannelId())[n.id],
-        u = (0, c.A)(n.poll?.expiry),
-        h = a.Sf.useSetting(),
-        m = (0, i.Ay)(),
-        x = t ?? m;
-    return s.useMemo(
-        () => (0, o.Ay)(n, d, { animateEmoji: h, theme: x, formattedExpirationLabel: u }),
-        [h, n, d, u, x],
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e, t) {
+            let n = (0, l.M)(e),
+                d = (0, r.d$)(n.getChannelId())[n.id],
+                u = (0, c.A)(n.poll?.expiry),
+                h = a.Sf.useSetting(),
+                m = (0, i.Ay)(),
+                x = t ?? m;
+            return s.useMemo(
+                () => (0, o.Ay)(n, d, { animateEmoji: h, theme: x, formattedExpirationLabel: u }),
+                [h, n, d, u, x],
+            );
+        },
+    },
+);

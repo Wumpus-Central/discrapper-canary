@@ -1,4 +1,3 @@
-r.d(t, { Ay: () => u, Ut: () => l, rx: () => a });
 var n = r(582128),
     i = function () {
         ((this.locks = []), (this.listeners = []));
@@ -83,91 +82,100 @@ var a = new i(),
             })
         );
     });
-function u(e, t) {
-    void 0 === t && (t = {});
-    var r,
-        i,
-        l,
-        u = t.returnRef,
-        c = t.disableReturnRef,
-        f = t.attachTo;
-    void 0 === f && (f = document);
-    var d = t.disable,
-        p = f instanceof HTMLElement ? f.ownerDocument : f,
-        h =
-            ((r = (0, n.useState)(function () {
-                return "lock-" + s++;
-            })[0]),
-            (i = (0, n.useRef)(!1)),
-            (0, n.useLayoutEffect)(
-                function () {
-                    return (
-                        a.add(r, function (e) {
-                            return (i.current = e);
-                        }),
+r.d(
+    t,
+    {},
+    {
+        Ay: function (e, t) {
+            void 0 === t && (t = {});
+            var r,
+                i,
+                l,
+                u = t.returnRef,
+                c = t.disableReturnRef,
+                f = t.attachTo;
+            void 0 === f && (f = document);
+            var p = t.disable,
+                d = f instanceof HTMLElement ? f.ownerDocument : f,
+                h =
+                    ((r = (0, n.useState)(function () {
+                        return "lock-" + s++;
+                    })[0]),
+                    (i = (0, n.useRef)(!1)),
+                    (0, n.useLayoutEffect)(
                         function () {
-                            return a.remove(r);
-                        }
-                    );
+                            return (
+                                a.add(r, function (e) {
+                                    return (i.current = e);
+                                }),
+                                function () {
+                                    return a.remove(r);
+                                }
+                            );
+                        },
+                        [r],
+                    ),
+                    i);
+            ((0, n.useEffect)(
+                function () {
+                    p && (h.current = !1);
                 },
-                [r],
+                [p, h],
             ),
-            i);
-    ((0, n.useEffect)(
-        function () {
-            d && (h.current = !1);
-        },
-        [d, h],
-    ),
-        (0, n.useLayoutEffect)(
-            function () {
-                var t = e.current;
-                function r(t) {
-                    requestAnimationFrame(function () {
-                        if (h.current) {
-                            var r = e.current;
-                            if (null != r) {
-                                var n = t.target || p.body;
-                                r.contains(n) || (t.preventDefault(), t.stopImmediatePropagation(), o(r, n));
+                (0, n.useLayoutEffect)(
+                    function () {
+                        var t = e.current;
+                        function r(t) {
+                            requestAnimationFrame(function () {
+                                if (h.current) {
+                                    var r = e.current;
+                                    if (null != r) {
+                                        var n = t.target || d.body;
+                                        r.contains(n) || (t.preventDefault(), t.stopImmediatePropagation(), o(r, n));
+                                    }
+                                }
+                            });
+                        }
+                        function n(t) {
+                            if (h.current) {
+                                var r = e.current;
+                                if (null != r) {
+                                    (null != t.relatedTarget && t.relatedTarget !== d.body) ||
+                                        (t.preventDefault(), r.focus());
+                                    var n = t.target || d.body;
+                                    r.contains(n) || o(r, n);
+                                }
                             }
                         }
-                    });
-                }
-                function n(t) {
-                    if (h.current) {
-                        var r = e.current;
-                        if (null != r) {
-                            (null != t.relatedTarget && t.relatedTarget !== p.body) || (t.preventDefault(), r.focus());
-                            var n = t.target || p.body;
-                            r.contains(n) || o(r, n);
-                        }
-                    }
-                }
-                return (
-                    null == t ||
-                        null == p.activeElement ||
-                        t.contains(p.activeElement) ||
-                        null != t.querySelector("[autofocus]") ||
-                        o(t, p.activeElement, !0),
-                    f.addEventListener("focusin", r, { capture: !0 }),
-                    f.addEventListener("focusout", n, { capture: !0 }),
-                    function () {
-                        (f.removeEventListener("focusin", r, { capture: !0 }),
-                            f.removeEventListener("focusout", n, { capture: !0 }));
-                    }
-                );
-            },
-            [f, p, e, h],
-        ),
-        (l = (0, n.useRef)(document.activeElement)),
-        (0, n.useLayoutEffect)(function () {
-            return function () {
-                (null != c && c.current) ||
-                    requestAnimationFrame(function () {
-                        null == u || null == u.current
-                            ? null == l || null == l.current || l.current.focus()
-                            : u.current.focus();
-                    });
-            };
-        }, []));
-}
+                        return (
+                            null == t ||
+                                null == d.activeElement ||
+                                t.contains(d.activeElement) ||
+                                null != t.querySelector("[autofocus]") ||
+                                o(t, d.activeElement, !0),
+                            f.addEventListener("focusin", r, { capture: !0 }),
+                            f.addEventListener("focusout", n, { capture: !0 }),
+                            function () {
+                                (f.removeEventListener("focusin", r, { capture: !0 }),
+                                    f.removeEventListener("focusout", n, { capture: !0 }));
+                            }
+                        );
+                    },
+                    [f, d, e, h],
+                ),
+                (l = (0, n.useRef)(document.activeElement)),
+                (0, n.useLayoutEffect)(function () {
+                    return function () {
+                        (null != c && c.current) ||
+                            requestAnimationFrame(function () {
+                                null == u || null == u.current
+                                    ? null == l || null == l.current || l.current.focus()
+                                    : u.current.focus();
+                            });
+                    };
+                }, []));
+        },
+        Ut: l,
+        rx: a,
+    },
+);

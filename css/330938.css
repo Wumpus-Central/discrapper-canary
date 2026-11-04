@@ -1,10 +1,10 @@
-.container__2baeb {
+.container_zR7iaP {
     height: calc(100% - 32px/(var(--custom-zoom)/100));
     position: relative;
     width: 100%
 }
 
-.loading__6ef4d {
+.loading_2kO-Fc {
     background: var(--background-base-lower);
     color: var(--text-default);
     height: 100vh;
@@ -12,7 +12,7 @@
     width: 100%
 }
 
-.container__5b927 {
+.container_oCxUd2 {
     background-color: var(--background-base-lower);
     border-radius: 3px;
     bottom: 0;
@@ -30,44 +30,44 @@
     z-index: 1001
 }
 
-.containerMinimized__5b927 {
+.containerMinimized_oCxUd2 {
     min-height: auto;
     width: auto
 }
 
-.content__5b927 {
+.content_oCxUd2 {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
     min-height: 5em
 }
 
-.contentMinimized__5b927 {
+.contentMinimized_oCxUd2 {
     display: none
 }
 
-.notTracked__5b927 {
+.notTracked_oCxUd2 {
     color: var(--text-muted)
 }
 
-.label__5b927 {
+.label_oCxUd2 {
     display: flex
 }
 
-.baseIcon__5b927 {
+.baseIcon_oCxUd2 {
     height: 12px;
     width: 12px
 }
 
-.iconNotTracked__5b927 {
+.iconNotTracked_oCxUd2 {
     color: var(--primary-300)
 }
 
-.iconTracked__5b927 {
+.iconTracked_oCxUd2 {
     color: var(--status-positive)
 }
 
-.minimizeButton__5b927 {
+.minimizeButton_oCxUd2 {
     cursor: pointer;
     inset-inline-end: 0;
     padding: 8px;
@@ -75,7 +75,7 @@
     top: 0
 }
 
-.jsonSection__5b927 {
+.jsonSection_oCxUd2 {
     margin-inline-start: 8px;
     margin-bottom: 8px;
     -webkit-user-select: text;
@@ -83,18 +83,18 @@
     user-select: text
 }
 
-.stack__5b927 {
+.stack_oCxUd2 {
     color: var(--text-muted)
 }
 
-.current__5b927,
-.stack__5b927 {}
+.current_oCxUd2,
+.stack_oCxUd2 {}
 
-.current__5b927 {
+.current_oCxUd2 {
     color: var(--text-default)
 }
 
-.container__0bec3 {
+.container_Gp5ukJ {
     height: 100%;
     inset-inline-start: 0;
     pointer-events: none;
@@ -104,7 +104,7 @@
     z-index: 9999
 }
 
-.gridOverlay__0bec3 {
+.gridOverlay_Gp5ukJ {
     height: 100%;
     width: 100%;
     --custom-grid-line-width: 0.3px;
@@ -113,19 +113,19 @@
     --custom-grid-line-color: var(--border-normal)
 }
 
-.gridOverlay__0bec3[data-horizontal=true][data-vertical=true] {
+.gridOverlay_Gp5ukJ[data-horizontal=true][data-vertical=true] {
     background-image: var(--custom-grid-horizontal-lines), var(--custom-grid-vertical-lines);
     background-position: 0 var(--custom-grid-vertical-spacing), var(--custom-grid-horizontal-spacing) 0;
     background-size: var(--custom-grid-horizontal-spacing) var(--custom-grid-vertical-spacing)
 }
 
-.gridOverlay__0bec3[data-horizontal=true][data-vertical=false] {
+.gridOverlay_Gp5ukJ[data-horizontal=true][data-vertical=false] {
     background-image: var(--custom-grid-horizontal-lines);
     background-position: 0 var(--custom-grid-horizontal-spacing), var(--custom-grid-horizontal-spacing) 0;
     background-size: var(--custom-grid-horizontal-spacing) var(--custom-grid-horizontal-spacing)
 }
 
-.gridOverlay__0bec3[data-horizontal=false][data-vertical=true] {
+.gridOverlay_Gp5ukJ[data-horizontal=false][data-vertical=true] {
     background-image: var(--custom-grid-vertical-lines);
     background-position: 0 var(--custom-grid-vertical-spacing), var(--custom-grid-vertical-spacing) 0;
     background-size: var(--custom-grid-vertical-spacing) var(--custom-grid-vertical-spacing)
@@ -133,30 +133,30 @@
 
 @media (-webkit-max-device-pixel-ratio:1.5),
 (max-resolution:1.5x) {
-    .gridOverlay__0bec3 {
+    .gridOverlay_Gp5ukJ {
         --custom-grid-line-width: 1px
     }
 }
 
-.pool__0aebc {
+.pool_r7XZkd {
     display: contents
 }
 
-.iframe__0aebc {
+.iframe_r7XZkd {
     height: 100%;
     min-height: 2px;
     min-width: 2px;
     width: 100%
 }
 
-.overlayLoading__0aebc {
+.overlayLoading_r7XZkd {
     align-items: center;
     background: var(--background-gradient-chat, var(--background-base-lower));
     display: flex;
     justify-content: center
 }
 
-.container_a7f798 {
+.container_YaYM9o {
     background-color: var(--background-base-lower);
     border-radius: 3px;
     bottom: 0;
@@ -173,17 +173,17 @@
     z-index: 1001
 }
 
-.status_a7f798 {
+.status_YaYM9o {
     align-items: center;
     display: flex;
     justify-content: center
 }
 
-.statusIndicator_a7f798 {
+.statusIndicator_YaYM9o {
     padding-inline-end: .5rem
 }
 
-.statusText_a7f798 {
+.statusText_YaYM9o {
     padding-inline-start: .5rem
 }
 
@@ -223,4 +223,4 @@ html.disable-forced-colors * {
     --link-decoration: underline
 }
 
-/*# sourceMappingURL=330938.7cfc7a0cb321bc4f.css.map*/
+/*# sourceMappingURL=330938.e2f6897f103c595b.css.map*/

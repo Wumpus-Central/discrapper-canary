@@ -1,0 +1,113 @@
+i.d(e, { TrialsSharedConfirmationModal: () => y });
+var s = i(477900),
+    n = i(582128),
+    r = i(503698),
+    a = i.n(r),
+    l = i(855986),
+    c = i(844222),
+    d = i(778712),
+    o = i(97808),
+    m = i(834730),
+    u = i(821609),
+    p = i(534890),
+    g = i(289873),
+    A = i(7724),
+    h = i(772707),
+    R = i(308528),
+    x = i(854627),
+    f = i(830543),
+    C = i(975571),
+    b = i(427262),
+    E = i(326084),
+    v = i(851746),
+    j = i(652215),
+    k = i(792996),
+    N = i(37576);
+function _(t) {
+    let { recipient: e, status: i, onClose: n } = t,
+        { avatarSrc: r, eventHandlers: l } = (0, x.A)({ userId: e?.id, size: d._3.SIZE_56 }),
+        c = b.Ay.getName(e),
+        g = i === E.o.FAIL;
+    return (0, s.jsxs)("div", {
+        className: N.w4,
+        children: [
+            (0, s.jsx)(o.eu, { imageClassName: a()({ [N.jN]: g }), src: r, "aria-label": c, size: d._3.SIZE_32, ...l }),
+            g
+                ? (0, s.jsxs)(s.Fragment, {
+                      children: [
+                          (0, s.jsx)(m.E, {
+                              className: N.E0,
+                              variant: "body-md/medium",
+                              color: "text-strong",
+                              children: c,
+                          }),
+                          (0, s.jsx)(m.E, {
+                              variant: "body-md/medium",
+                              className: N.nT,
+                              color: "text-strong",
+                              children: k.intl.format(k.t.RO3T4B, { userName: c }),
+                          }),
+                      ],
+                  })
+                : (0, s.jsx)(m.E, { variant: "body-md/medium", className: N.Pm, color: "text-strong", children: c }),
+            (0, s.jsx)(u.$, {
+                variant: "secondary",
+                size: "sm",
+                text: k.intl.string(k.t["g33r/P"]),
+                icon: p.ChatIcon,
+                onClick: () => {
+                    var t;
+                    return ((t = e.id), void ((0, f.default)(), R.A.openPrivateChannel({ recipientIds: t }), n()));
+                },
+            }),
+        ],
+    });
+}
+function y(t) {
+    let {
+            transitionState: e,
+            results: i,
+            onClose: r,
+            isReminderConfirmation: a,
+            showRecipientList: d = !0,
+            recipientName: o,
+        } = t,
+        m = (0, l.bG)([v.A], () => v.A.getReferralsRemaining()),
+        { reducedMotion: u } = n.useContext(c.C);
+    return null === m
+        ? (0, s.jsx)(g.y, {})
+        : (0, s.jsx)(h.k, {
+              graphic: u.enabled
+                  ? {
+                        src: "https://cdn.discordapp.com/assets/content/7d3bb543f57192ba573ca7c515ef59c9cf5c285538f43508ccd8e10637ccd902.svg",
+                        type: "image",
+                    }
+                  : { rive: A.l, type: "rive" },
+              gradientColor: "nitro-pink",
+              title:
+                  0 === i.filter((t) => t.status === E.o.SUCCESS).length
+                      ? k.intl.string(k.t["7VBEue"])
+                      : !0 === a
+                        ? k.intl.string(k.t.GP5lbq)
+                        : k.intl.string(k.t.tKCltd),
+              subtitle:
+                  null != o
+                      ? k.intl.format(k.t.s8VHbZ, {
+                            recipientName: o,
+                            helpdeskArticle: C.A.getArticleURL(j.MVz.REFERRAL_PROGRAM),
+                        })
+                      : !0 === a
+                        ? k.intl.format(k.t["4gJJfD"], { helpdeskArticle: C.A.getArticleURL(j.MVz.REFERRAL_PROGRAM) })
+                        : k.intl.format(k.t.AwGSWl, { helpdeskArticle: C.A.getArticleURL(j.MVz.REFERRAL_PROGRAM) }),
+              onClose: r,
+              transitionState: e,
+              children: d
+                  ? (0, s.jsx)("div", {
+                        className: N.Hz,
+                        children: i.map((t) =>
+                            (0, s.jsx)(_, { recipient: t.recipient, status: t.status, onClose: r }, t.recipient.id),
+                        ),
+                    })
+                  : null,
+          });
+}

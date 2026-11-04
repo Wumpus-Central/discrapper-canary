@@ -1,4 +1,3 @@
-n.d(t, { A: () => a });
 var i,
     r =
         (((i = r || {}).QUICK_SWITCHER = "quick switcher"),
@@ -679,4 +678,4 @@ var i,
         (i.CODE_BLURPLE_PREMIUM_TAB_POPOVER = "call of duty blueprint premium tab popover"),
         (i.FRIENDS_SIDEBAR = "friends sidebar"),
         i);
-let a = r;
+n.d(t, {}, { A: r });

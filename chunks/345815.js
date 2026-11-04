@@ -1,4 +1,3 @@
-r.d(t, { FT: () => c, RB: () => n, Zk: () => a });
 var o,
     l = r(310784),
     s = r.n(l),
@@ -30,21 +29,29 @@ function i(e) {
     );
 }
 function a(e) {
-    let { enabled: t, primaryColor: r, secondaryColor: o, baseMixAmount: l = 50, textMixAmount: s = 38 } = e,
-        { base: n, text: a } = i({ primaryColor: r, secondaryColor: o, isDarkTheme: !0 }),
-        { base: u, text: m } = i({ primaryColor: r, secondaryColor: o, isDarkTheme: !1 });
-    return {
-        "--custom-theme-base-color-amount": `${t ? l : 0}%`,
-        "--custom-theme-text-color-amount": `${t ? s : 0}%`,
-        "--custom-theme-base-color-light-hsl": c(u),
-        "--custom-theme-base-color-light": u.css(),
-        "--custom-theme-text-color-light": m.css(),
-        "--custom-theme-base-color-dark-hsl": c(n),
-        "--custom-theme-base-color-dark": n.css(),
-        "--custom-theme-text-color-dark": a.css(),
-    };
-}
-function c(e) {
     let [t, r, o] = e.hsl();
     return `${Number.isNaN(t) ? 0 : t} ${100 * r}% ${100 * o}%`;
 }
+r.d(
+    t,
+    {},
+    {
+        FT: a,
+        RB: n,
+        Zk: function (e) {
+            let { enabled: t, primaryColor: r, secondaryColor: o, baseMixAmount: l = 50, textMixAmount: s = 38 } = e,
+                { base: n, text: c } = i({ primaryColor: r, secondaryColor: o, isDarkTheme: !0 }),
+                { base: u, text: m } = i({ primaryColor: r, secondaryColor: o, isDarkTheme: !1 });
+            return {
+                "--custom-theme-base-color-amount": `${t ? l : 0}%`,
+                "--custom-theme-text-color-amount": `${t ? s : 0}%`,
+                "--custom-theme-base-color-light-hsl": a(u),
+                "--custom-theme-base-color-light": u.css(),
+                "--custom-theme-text-color-light": m.css(),
+                "--custom-theme-base-color-dark-hsl": a(n),
+                "--custom-theme-base-color-dark": n.css(),
+                "--custom-theme-text-color-dark": c.css(),
+            };
+        },
+    },
+);

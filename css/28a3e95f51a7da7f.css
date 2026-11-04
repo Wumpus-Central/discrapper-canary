@@ -1,0 +1,73 @@
+.modalRoot_C-o8GY {
+    max-height: 900px
+}
+
+.headerContainer_C-o8GY {
+    flex-direction: column
+}
+
+.modalCloseButton_C-o8GY {
+    inset-inline-end: var(--custom-feedback-modal-close-button-margin);
+    position: absolute;
+    top: var(--custom-feedback-modal-close-button-margin)
+}
+
+.helpdeskLink_C-o8GY {
+    margin-top: var(--space-8)
+}
+
+.header_C-o8GY,
+.ratingBody_C-o8GY {
+    flex: 1 1 auto;
+    text-align: center
+}
+
+.ratingBody_C-o8GY {
+    color: var(--text-default);
+    margin-top: var(--space-8)
+}
+
+.footer_C-o8GY {
+    justify-content: space-between
+}
+
+.noTitleCase_C-o8GY {
+    text-transform: none
+}
+
+.problemInfo_C-o8GY {
+    margin-bottom: var(--space-24);
+    margin-top: var(--space-8)
+}
+
+.ratingSelectorContainer_C-o8GY {
+    padding-bottom: var(--space-16);
+    padding-top: var(--space-16);
+    padding-inline: var(--space-24)
+}
+
+.presetList_C-o8GY {
+    padding-bottom: var(--space-8)
+}
+
+.hidden_C-o8GY {
+    visibility: hidden
+}
+
+.emoji_C-o8GY {
+    opacity: 1
+}
+
+.header_C-o8GY {
+    color: var(--text-default)
+}
+
+.problemInfo_C-o8GY {
+    margin-bottom: 0
+}
+
+.marginBottom16_C-o8GY {
+    margin-bottom: var(--space-16)
+}
+
+/*# sourceMappingURL=28a3e95f51a7da7f.css.map*/

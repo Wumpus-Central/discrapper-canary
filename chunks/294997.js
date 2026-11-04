@@ -1,7 +1,7 @@
-(n.d(t, { T: () => l }), n(321073));
+n(321073);
 var i = n(143236),
-    r = n(941426),
-    a = n(179689);
+    r = n(611599),
+    a = n(162252);
 let s = new r.Vy("Flux");
 class l extends i.EventEmitter {
     logs = [];
@@ -137,3 +137,4 @@ class d {
         };
     }
 }
+n.d(t, {}, { T: l });

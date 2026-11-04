@@ -1,4 +1,3 @@
-n.d(t, { j: () => r });
 let i = (0, n(945810).mj)({
     kind: "user",
     name: "2026-09-soundboard-quick-action",
@@ -8,6 +7,12 @@ let i = (0, n(945810).mj)({
         2: { enabled: !0, showQuickAccess: !1, showOnRTCHover: !0 },
     },
 });
-function r(e) {
-    return i.useConfig({ location: e });
-}
+n.d(
+    t,
+    {},
+    {
+        j: function (e) {
+            return i.useConfig({ location: e });
+        },
+    },
+);

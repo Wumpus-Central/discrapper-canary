@@ -1,4 +1,3 @@
-n.d(t, { Bp: () => u, G5: () => _, Wy: () => E, zF: () => A });
 var i = n(477900);
 n(582128);
 var r = n(503698),
@@ -6,36 +5,11 @@ var r = n(503698),
     s = n(462887),
     l = n(736653),
     o = n(953727),
-    d = n(202541),
+    d = n(682901),
     c = n(466756);
 let u = "premium_new_tier_2_gradient",
     _ = "premium_old_tier_2_gradient";
 function E(e) {
-    let { tier: t = d.PremiumTypes.TIER_2 } = e,
-        n = (0, l.Ay)(),
-        r = (0, s.q)(n);
-    return (0, i.jsxs)(i.Fragment, {
-        children: [
-            !r &&
-                (0, i.jsxs)(i.Fragment, {
-                    children: [
-                        (0, i.jsx)("div", {
-                            className: a()(c.WU, {
-                                [c.W4]: t === d.PremiumTypes.TIER_0,
-                                [c.WJ]: t === d.PremiumTypes.TIER_2,
-                            }),
-                        }),
-                        (0, i.jsx)(A, { foreground: c.iM }),
-                    ],
-                }),
-            (0, i.jsx)(A, { foreground: c.bP }),
-            (0, i.jsx)(A, { foreground: c.ir }),
-            (0, i.jsx)(A, { foreground: c.b4 }),
-            (0, i.jsx)(A, { foreground: c.iG }),
-        ],
-    });
-}
-function A(e) {
     let { width: t = 14, height: n = 13, color: r = "white", foreground: a, ...s } = e;
     return (0, i.jsxs)("svg", {
         ...(0, o.A)({ ...s }),
@@ -80,3 +54,37 @@ function A(e) {
         ],
     });
 }
+n.d(
+    t,
+    {},
+    {
+        Bp: u,
+        G5: _,
+        Wy: function (e) {
+            let { tier: t = d.PremiumTypes.TIER_2 } = e,
+                n = (0, l.Ay)(),
+                r = (0, s.q)(n);
+            return (0, i.jsxs)(i.Fragment, {
+                children: [
+                    !r &&
+                        (0, i.jsxs)(i.Fragment, {
+                            children: [
+                                (0, i.jsx)("div", {
+                                    className: a()(c.WU, {
+                                        [c.W4]: t === d.PremiumTypes.TIER_0,
+                                        [c.WJ]: t === d.PremiumTypes.TIER_2,
+                                    }),
+                                }),
+                                (0, i.jsx)(E, { foreground: c.iM }),
+                            ],
+                        }),
+                    (0, i.jsx)(E, { foreground: c.bP }),
+                    (0, i.jsx)(E, { foreground: c.ir }),
+                    (0, i.jsx)(E, { foreground: c.b4 }),
+                    (0, i.jsx)(E, { foreground: c.iG }),
+                ],
+            });
+        },
+        zF: E,
+    },
+);

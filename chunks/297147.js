@@ -1,54 +1,59 @@
-n.d(e, { default: () => p });
 var r = n(477900),
     i = n(582128),
-    a = n(17928),
+    a = n(855986),
     l = n(189213),
     u = n(95477),
     s = n(545059),
     o = n(870391),
-    d = n(105292);
-function p(t) {
-    let { onClose: e, transitionState: n, groupId: p, initialUserIds: c } = t,
-        m = (0, a.bG)([o.A], () => (null == p ? null : o.A.getGroup(p))),
-        [C, h] = i.useState(m?.name ?? ""),
-        k = null != p,
-        G = i.useCallback(() => {
-            if ("" !== C.trim()) {
-                if (k && null != p) s.A.updateGroup(p, C.trim());
-                else {
-                    let t = s.A.createGroup(C.trim());
-                    null != c && c.length > 0 && s.A.addUsersToGroup(t, c);
-                }
-                e();
-            }
-        }, [C, k, p, c, e]),
-        g = i.useCallback(
-            (t) => {
-                "Enter" === t.key && "" !== C.trim() && G();
-            },
-            [C, G],
-        );
-    return (0, r.jsx)(l.a, {
-        transitionState: n,
-        onClose: e,
-        size: "sm",
-        title: k ? "Edit Friend Group" : "Create Friend Group",
-        actions: [
-            { variant: "secondary", text: d.intl.string(d.t["ETE/oC"]), onClick: e },
-            {
-                variant: "primary",
-                text: k ? d.intl.string(d.t["R3BPH+"]) : d.intl.string(d.t.CumH4u),
-                onClick: G,
-                disabled: "" === C.trim(),
-            },
-        ],
-        children: (0, r.jsx)(u.k, {
-            value: C,
-            onChange: h,
-            placeholder: "Group Name",
-            maxLength: 100,
-            autoFocus: !0,
-            onKeyDown: g,
-        }),
-    });
-}
+    d = n(792996);
+n.d(
+    e,
+    {},
+    {
+        default: function (t) {
+            let { onClose: e, transitionState: n, groupId: p, initialUserIds: c } = t,
+                m = (0, a.bG)([o.A], () => (null == p ? null : o.A.getGroup(p))),
+                [C, h] = i.useState(m?.name ?? ""),
+                k = null != p,
+                G = i.useCallback(() => {
+                    if ("" !== C.trim()) {
+                        if (k && null != p) s.A.updateGroup(p, C.trim());
+                        else {
+                            let t = s.A.createGroup(C.trim());
+                            null != c && c.length > 0 && s.A.addUsersToGroup(t, c);
+                        }
+                        e();
+                    }
+                }, [C, k, p, c, e]),
+                g = i.useCallback(
+                    (t) => {
+                        "Enter" === t.key && "" !== C.trim() && G();
+                    },
+                    [C, G],
+                );
+            return (0, r.jsx)(l.a, {
+                transitionState: n,
+                onClose: e,
+                size: "sm",
+                title: k ? "Edit Friend Group" : "Create Friend Group",
+                actions: [
+                    { variant: "secondary", text: d.intl.string(d.t["ETE/oC"]), onClick: e },
+                    {
+                        variant: "primary",
+                        text: k ? d.intl.string(d.t["R3BPH+"]) : d.intl.string(d.t.CumH4u),
+                        onClick: G,
+                        disabled: "" === C.trim(),
+                    },
+                ],
+                children: (0, r.jsx)(u.k, {
+                    value: C,
+                    onChange: h,
+                    placeholder: "Group Name",
+                    maxLength: 100,
+                    autoFocus: !0,
+                    onKeyDown: g,
+                }),
+            });
+        },
+    },
+);

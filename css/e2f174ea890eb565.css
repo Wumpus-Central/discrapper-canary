@@ -1,0 +1,37 @@
+.backgroundImage_TgTH47 {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-mask-image: linear-gradient(180deg, #000 0, transparent 485px);
+    mask-image: linear-gradient(180deg, #000 0, transparent 485px);
+    max-height: 550px;
+    opacity: .5
+}
+
+.backgroundContainer_TgTH47,
+.backgroundImage_TgTH47 {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.backgroundContainer_TgTH47 {
+    background: var(--background-gradient-chat, var(--background-base-lowest));
+    min-width: 495px;
+    z-index: -1
+}
+
+.heroContainer_TgTH47 {
+    min-width: 0
+}
+
+.backgroundImageHero_TgTH47 {
+    bottom: auto;
+    height: 350px;
+    -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, .6) 60%, rgba(0, 0, 0, .4) 80%, transparent);
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, .6) 60%, rgba(0, 0, 0, .4) 80%, transparent);
+    opacity: 1
+}
+
+/*# sourceMappingURL=e2f174ea890eb565.css.map*/

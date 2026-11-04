@@ -1,6 +1,6 @@
 e.exports = {
-    XG: "scroller__3b923",
-    az: "hasToolbar__3b923",
-    cG: "editingHeader__3b923",
-    mJ: "ukTeenDisclaimer__3b923",
+    XG: "scroller_9onezO",
+    az: "hasToolbar_9onezO",
+    cG: "editingHeader_9onezO",
+    mJ: "ukTeenDisclaimer_9onezO",
 };

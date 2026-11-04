@@ -1,0 +1,60 @@
+.gameSearchCombobox_LAQe11 {
+    background-color: var(--modal-background);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    height: 336px;
+    padding: 8px;
+    width: 380px
+}
+
+.gameSearchCombobox_LAQe11 [role=option]:hover {
+    background-color: var(--interactive-background-hover);
+    color: var(--interactive-text-hover)
+}
+
+.gameSearchCombobox_LAQe11 [role=option]:has(.gameOption_LAQe11)>:last-child:empty {
+    display: none
+}
+
+.coverButton_LAQe11 {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    color: var(--icon-muted);
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    transition: color 50ms ease-in, background-color 50ms ease-in
+}
+
+.coverButton_LAQe11:hover {
+    background-color: var(--background-mod-normal);
+    color: var(--icon-strong);
+    transition: color .15s ease-out, background-color .15s ease-out
+}
+
+.gameOption_LAQe11 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-grow: 1;
+    gap: var(--space-8);
+    min-height: var(--select-option-height);
+    min-width: 0;
+    padding: calc(var(--space-4) - 1px) var(--space-8)
+}
+
+.gameOptionLabel_LAQe11 {
+    flex: 1 1 auto
+}
+
+.gameOptionIcon_LAQe11 {
+    border-radius: 2px;
+    flex: 0 0 auto;
+    height: 20px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 20px
+}
+
+/*# sourceMappingURL=1a48d214029acc33.css.map*/

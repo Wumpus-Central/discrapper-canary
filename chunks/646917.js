@@ -1,12 +1,8 @@
-n.d(t, { m: () => o, z: () => l });
-var i = n(17928),
+var i = n(855986),
     r = n(287809),
-    a = n(24482),
+    a = n(879610),
     s = n(576761);
-function l() {
-    return (0, i.bG)([r.default], () => o(r.default.getCurrentUser()));
-}
-function o(e) {
+function l(e) {
     return null == e
         ? s.MA.INELIGIBLE
         : a.Ay.canUseMoreQuestOrbs(e)
@@ -17,3 +13,13 @@ function o(e) {
             ? s.MA.INELIGIBLE
             : s.MA.UPSELL;
 }
+n.d(
+    t,
+    {},
+    {
+        m: l,
+        z: function () {
+            return (0, i.bG)([r.default], () => l(r.default.getCurrentUser()));
+        },
+    },
+);

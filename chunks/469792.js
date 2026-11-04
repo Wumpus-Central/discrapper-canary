@@ -1,7 +1,7 @@
-e.exports = {
-    Nr: "card_e60808",
-    hu: "leftContent_e60808",
-    P_: "textContent_e60808",
-    Kk: "icon_e60808",
-    ul: "connectedStatus_e60808",
+t.exports = {
+    Nr: "card_yId8-H",
+    hu: "leftContent_yId8-H",
+    P_: "textContent_yId8-H",
+    Kk: "icon_yId8-H",
+    ul: "connectedStatus_yId8-H",
 };

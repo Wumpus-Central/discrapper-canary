@@ -1,13 +1,12 @@
-t.d(i, { w: () => q });
 var n = t(477900),
     l = t(582128),
     s = t(503698),
     a = t.n(s),
     r = t(284009),
     d = t.n(r),
-    o = t(131937),
+    o = t(613412),
     u = t(350835),
-    c = t(17928),
+    c = t(855986),
     A = t(192308),
     m = t(315710),
     g = t(939249),
@@ -19,7 +18,7 @@ var n = t(477900),
     S = t(97808),
     _ = t(863610),
     x = t(283973),
-    y = t(376728),
+    y = t(574332),
     E = t(774300),
     N = t(566903),
     b = t(714114),
@@ -39,84 +38,10 @@ var n = t(477900),
     L = t(290863),
     F = t(427262),
     z = t(582904),
-    B = t(105292),
+    B = t(792996),
     K = t(469640);
 let Y = "VoiceInviteSuggestionsPopover";
 function q(e) {
-    let { channel: i, forceOpen: s, onHover: r, setPopoutRef: u, closePopout: c } = e,
-        p = l.useRef(null),
-        v = (0, P.M)(p),
-        S = (0, z.kt)({ channel: i }),
-        { analyticsLocations: _ } = (0, O.Ay)(T.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
-    (l.useEffect(() => {
-        s && p.current?.focus();
-    }, [s]),
-        (0, G.A)({
-            name: o.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
-            type: o.ImpressionTypes.POPOUT,
-            properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: _ },
-        }),
-        l.useEffect(() => {
-            u?.(p.current);
-        }, [u]),
-        l.useEffect(() => {
-            r?.(v);
-        }, [r, v]));
-    let x = l.useCallback(() => {
-        let e = U.A.getGuild(i.guild_id);
-        (d()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
-            (0, A.openModalLazy)(async () => {
-                let { default: l } = await Promise.all([
-                    t.e("683621"),
-                    t.e("711162"),
-                    t.e("919170"),
-                    t.e("159957"),
-                    t.e("728136"),
-                    t.e("216084"),
-                    t.e("284819"),
-                ]).then(t.bind(t, 405342));
-                return (t) => (0, n.jsx)(l, { ...t, guild: e, channel: i, source: I.PE1.VOICE_INVITE_SUGGESTIONS });
-            }),
-            c());
-    }, [i, c]);
-    return (
-        (0, m.tj)(p, { disable: !s }),
-        (0, n.jsx)("div", {
-            role: "dialog",
-            tabIndex: -1,
-            ref: p,
-            "aria-label": B.intl.string(B.t.o53CL2),
-            className: K.oO,
-            children: (0, n.jsx)("div", {
-                className: K.vW,
-                children: (0, n.jsxs)("ul", {
-                    className: K.p_,
-                    children: [
-                        S.map((e) => (0, n.jsx)($, { channel: i, user: e }, e.id)),
-                        (0, n.jsxs)(g.D, {
-                            tag: "li",
-                            onClick: x,
-                            className: a()(K.nM, K.vk),
-                            children: [
-                                (0, n.jsx)("div", {
-                                    className: K.R4,
-                                    children: (0, n.jsx)(h.n, { size: "custom", className: K.Kk }),
-                                }),
-                                (0, n.jsx)(f.E, {
-                                    variant: "body-sm/medium",
-                                    className: K.UU,
-                                    lineClamp: 1,
-                                    children: B.intl.string(B.t.NOP3Ry),
-                                }),
-                            ],
-                        }),
-                    ],
-                }),
-            }),
-        })
-    );
-}
-function $(e) {
     let { channel: i, user: t } = e,
         s = i.guild_id,
         r = l.useRef(null),
@@ -146,7 +71,8 @@ function $(e) {
         H = "success" === A || "sending" === A,
         W = l.useCallback(async () => {
             if (H) return;
-            async function e() {
+            m("sending");
+            let e = await (async function () {
                 let e = M.A.getInvite(i.id, {}) ?? null;
                 if (null == e) {
                     if (!D.A.can(I.xBc.CREATE_INSTANT_INVITE, i)) return null;
@@ -158,16 +84,14 @@ function $(e) {
                     e = M.A.getInvite(i.id, {}) ?? null;
                 }
                 return e?.code ?? null;
-            }
-            m("sending");
-            let n = await e();
-            null == n
+            })();
+            null == e
                 ? m(null)
                 : E.A.enqueue(
                       {
                           type: E.F.USER,
                           user: t,
-                          inviteKey: n,
+                          inviteKey: e,
                           location: Y,
                           inviteAnalyticsMetadata: { source: I.PE1.VOICE_INVITE_SUGGESTIONS },
                       },
@@ -246,3 +170,84 @@ function $(e) {
         ],
     });
 }
+t.d(
+    i,
+    {},
+    {
+        w: function (e) {
+            let { channel: i, forceOpen: s, onHover: r, setPopoutRef: u, closePopout: c } = e,
+                p = l.useRef(null),
+                v = (0, P.M)(p),
+                S = (0, z.kt)({ channel: i }),
+                { analyticsLocations: _ } = (0, O.Ay)(T.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
+            (l.useEffect(() => {
+                s && p.current?.focus();
+            }, [s]),
+                (0, G.A)({
+                    name: o.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
+                    type: o.ImpressionTypes.POPOUT,
+                    properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: _ },
+                }),
+                l.useEffect(() => {
+                    u?.(p.current);
+                }, [u]),
+                l.useEffect(() => {
+                    r?.(v);
+                }, [r, v]));
+            let x = l.useCallback(() => {
+                let e = U.A.getGuild(i.guild_id);
+                (d()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
+                    (0, A.mM)(async () => {
+                        let { default: l } = await Promise.all([
+                            t.e(683621),
+                            t.e(711162),
+                            t.e(919170),
+                            t.e(159957),
+                            t.e(728136),
+                            t.e(680029),
+                            t.e(966623),
+                        ]).then(t.bind(t, 660194));
+                        return (t) =>
+                            (0, n.jsx)(l, { ...t, guild: e, channel: i, source: I.PE1.VOICE_INVITE_SUGGESTIONS });
+                    }),
+                    c());
+            }, [i, c]);
+            return (
+                (0, m.tj)(p, { disable: !s }),
+                (0, n.jsx)("div", {
+                    role: "dialog",
+                    tabIndex: -1,
+                    ref: p,
+                    "aria-label": B.intl.string(B.t.o53CL2),
+                    className: K.oO,
+                    children: (0, n.jsx)("div", {
+                        className: K.vW,
+                        children: (0, n.jsxs)("ul", {
+                            className: K.p_,
+                            children: [
+                                S.map((e) => (0, n.jsx)(q, { channel: i, user: e }, e.id)),
+                                (0, n.jsxs)(g.D, {
+                                    tag: "li",
+                                    onClick: x,
+                                    className: a()(K.nM, K.vk),
+                                    children: [
+                                        (0, n.jsx)("div", {
+                                            className: K.R4,
+                                            children: (0, n.jsx)(h.n, { size: "custom", className: K.Kk }),
+                                        }),
+                                        (0, n.jsx)(f.E, {
+                                            variant: "body-sm/medium",
+                                            className: K.UU,
+                                            lineClamp: 1,
+                                            children: B.intl.string(B.t.NOP3Ry),
+                                        }),
+                                    ],
+                                }),
+                            ],
+                        }),
+                    }),
+                })
+            );
+        },
+    },
+);

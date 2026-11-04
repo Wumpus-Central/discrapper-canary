@@ -1,7 +1,7 @@
 _.exports = {
-    iE: "wrapper__3425d",
-    qd: "headerTitle__3425d",
-    rW: "subscriptionImg__3425d",
-    h_: "description__3425d",
-    PX: "benefits__3425d",
+    iE: "wrapper_8tYO_1",
+    qd: "headerTitle_8tYO_1",
+    rW: "subscriptionImg_8tYO_1",
+    h_: "description_8tYO_1",
+    PX: "benefits_8tYO_1",
 };

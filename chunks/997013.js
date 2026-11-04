@@ -1,7 +1,6 @@
-n.d(t, { A: () => c });
 var i = n(155718),
     r = n(315069),
-    a = n(395671),
+    a = n(327891),
     s = n(486020),
     l = n(403362),
     o = n(744700);
@@ -136,3 +135,4 @@ class c extends r.A {
         return this.companies?.filter((t) => t.roles.includes(e)) ?? [];
     }
 }
+n.d(t, {}, { A: c });

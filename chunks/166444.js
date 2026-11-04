@@ -1,10 +1,9 @@
-n.d(l, { Ay: () => B, IC: () => K, Pk: () => F, dG: () => w, gm: () => z });
 var s = n(477900),
     i = n(582128),
     t = n(503698),
     a = n.n(t);
 if (221552 == n.j) var r = n(837381);
-var u = n(17928);
+var u = n(855986);
 if (221552 == n.j) var c = n(3026);
 var o = n(97808),
     d = n(778712),
@@ -17,9 +16,9 @@ var N = n(25639),
     b = n(47167),
     _ = n(970812),
     D = n(713654),
-    T = n(723694),
+    T = n(501803),
     p = n(922301),
-    g = n(660184),
+    g = n(16371),
     x = n(598104),
     U = n(95035),
     M = n(162199),
@@ -29,7 +28,7 @@ var N = n(25639),
     j = n(741961),
     y = n(287809),
     R = n(977997),
-    L = n(19575),
+    L = n(253400),
     G = n(66933),
     S = n(652215),
     O = n(790782),
@@ -125,159 +124,6 @@ let z = i.memo(function (e) {
     });
 });
 function B(e) {
-    let {
-            channel: l,
-            name: n,
-            muted: t,
-            selected: o,
-            connected: d,
-            unread: A,
-            locked: N,
-            hasActiveThreads: m,
-            onClick: h,
-            onMouseDown: _,
-            onMouseUp: D,
-            onContextMenu: T,
-            connectDragPreview: p,
-            className: g,
-            iconClassName: x,
-            iconTooltipText: v,
-            subtitle: I,
-            subtitleColor: j,
-            channel: { type: y },
-            onMouseEnter: L,
-            onMouseLeave: H,
-            "aria-label": K,
-            children: F,
-            guild: B,
-            channelTypeOverride: J,
-            forceInteractable: W,
-            mentionCount: Y,
-            resolvedUnreadSetting: q,
-            isFavoriteSuggestion: X,
-            hasActiveEvent: $ = !1,
-            disableOverflowTooltip: Q = !1,
-            transitionExtras: ee,
-            ref: el,
-        } = e,
-        en = q === O.e.ALL_MESSAGES || (null != Y && Y > 0),
-        es = (0, u.bG)([R.A], () => Object.values(R.A.getVoiceStatesForChannel(l.id)).length > 0, [l.id]),
-        { role: ei, ...et } = (0, r.rm)(l.id),
-        ea = i.useRef(null),
-        er = i.useRef(null),
-        eu = (0, M.A)(l);
-    null != eu && G.A.getConfig({ guildId: eu, location: "channel_item" });
-    let ec = S.BVt.CHANNEL(eu, l.id),
-        eo = (0, b.Ay)(l),
-        ed = l.isGuildVocal(),
-        eA = null != h || null != D || null != _ || W,
-        eE = (0, s.jsx)("div", {
-            className: a()({ [P.ow]: X }),
-            ref: er,
-            children: (0, s.jsxs)(U.A, {
-                role: ed && !d ? "button" : "link",
-                href: ed ? void 0 : ec,
-                target: "_blank",
-                ref: ea,
-                className: P.nf,
-                onClick: () => h?.(l),
-                onAuxClick: (e) => (0, C.A)(e, l),
-                transitionExtras: ee,
-                ...et,
-                "aria-label": K,
-                "aria-current": o ? "page" : void 0,
-                focusProps: { enabled: !1 },
-                children: [
-                    (0, s.jsxs)("div", {
-                        className: P.Y5,
-                        children: [
-                            (0, s.jsx)(z, {
-                                className: x,
-                                tooltipText: v,
-                                channel: l,
-                                guild: B,
-                                hasUsersInVoiceChannel: es,
-                                hasActiveThreads: m,
-                                locked: N,
-                            }),
-                            (0, s.jsx)(c.A, {
-                                className: a()(P.UU, { [P.NW]: $ }),
-                                shouldShow: !Q,
-                                "aria-hidden": !0,
-                                children: (0, s.jsx)(Z, {
-                                    textVariant: "body-md/medium",
-                                    channel: l,
-                                    name: null != n ? n : eo,
-                                }),
-                            }),
-                            i.Children.count(F) > 0
-                                ? (0, s.jsx)("div", { onClick: w, onKeyPress: w, className: P.Y_, children: F })
-                                : null,
-                        ],
-                    }),
-                    null != I
-                        ? (0, s.jsx)("div", {
-                              className: P.MA,
-                              children: (0, s.jsx)(E.E, {
-                                  color: j ?? "text-muted",
-                                  variant: "body-xs/medium",
-                                  className: P.VA,
-                                  children: I,
-                              }),
-                          })
-                        : null,
-                ],
-            }),
-        });
-    return (0, s.jsx)(f.vN, {
-        focusTarget: ea,
-        ringTarget: er,
-        offset: { top: 2, bottom: 2, right: 4 },
-        children: (0, s.jsxs)("div", {
-            ref: el,
-            className: a()(
-                g,
-                eA ? P.iE : P.IA,
-                (function () {
-                    if (o) return a()(V.rM, k.SELECTED);
-                    if (d) return a()(V.rM, k.CONNECTED);
-                    if (N) return k.LOCKED;
-                    if (t) return k.MUTED;
-                    if (A)
-                        if (en) return k.UNREAD_IMPORTANT;
-                        else return k.UNREAD_LESS_IMPORTANT;
-                    return null;
-                })(),
-                (function (e) {
-                    switch (e) {
-                        case S.rbe.GUILD_STAGE_VOICE:
-                        case S.rbe.GUILD_VOICE:
-                            return P.typeVoice;
-                        case S.rbe.ANNOUNCEMENT_THREAD:
-                        case S.rbe.PUBLIC_THREAD:
-                        case S.rbe.PRIVATE_THREAD:
-                            return P.ZS;
-                        case S.rbe.GUILD_ANNOUNCEMENT:
-                        case S.rbe.GUILD_TEXT:
-                        case S.rbe.GUILD_STORE:
-                        case S.rbe.GUILD_FORUM:
-                        case S.rbe.GUILD_MEDIA:
-                        case S.rbe.GUILD_APP:
-                        default:
-                            return P.typeDefault;
-                    }
-                })(J ?? y),
-            ),
-            onMouseUp: (e) => D?.(e, l),
-            onMouseDown: (e) => _?.(e, l),
-            onContextMenu: (e) => T?.(e, l),
-            onMouseEnter: L,
-            onMouseLeave: H,
-            children: [t || !A ? null : (0, s.jsx)("div", { className: a()(P.gy, en ? P.WS : void 0) }), p?.(eE) ?? eE],
-        }),
-    });
-}
-function Z(e) {
     let { channel: l, name: n, textVariant: t } = e,
         a = l.isPrivate() && 1 === (l.rawRecipients ?? []).length,
         r = l.rawRecipients?.[0]?.display_name_styles,
@@ -292,3 +138,169 @@ function Z(e) {
           })
         : (0, s.jsx)(E.E, { variant: t, tag: "span", color: "none", children: n });
 }
+n.d(
+    l,
+    {},
+    {
+        Ay: function (e) {
+            let {
+                    channel: l,
+                    name: n,
+                    muted: t,
+                    selected: o,
+                    connected: d,
+                    unread: A,
+                    locked: N,
+                    hasActiveThreads: m,
+                    onClick: h,
+                    onMouseDown: _,
+                    onMouseUp: D,
+                    onContextMenu: T,
+                    connectDragPreview: p,
+                    className: g,
+                    iconClassName: x,
+                    iconTooltipText: v,
+                    subtitle: I,
+                    subtitleColor: j,
+                    channel: { type: y },
+                    onMouseEnter: L,
+                    onMouseLeave: H,
+                    "aria-label": K,
+                    children: F,
+                    guild: Z,
+                    channelTypeOverride: J,
+                    forceInteractable: W,
+                    mentionCount: Y,
+                    resolvedUnreadSetting: q,
+                    isFavoriteSuggestion: X,
+                    hasActiveEvent: $ = !1,
+                    disableOverflowTooltip: Q = !1,
+                    transitionExtras: ee,
+                    ref: el,
+                } = e,
+                en = q === O.e.ALL_MESSAGES || (null != Y && Y > 0),
+                es = (0, u.bG)([R.A], () => Object.values(R.A.getVoiceStatesForChannel(l.id)).length > 0, [l.id]),
+                { role: ei, ...et } = (0, r.rm)(l.id),
+                ea = i.useRef(null),
+                er = i.useRef(null),
+                eu = (0, M.A)(l);
+            null != eu && G.A.getConfig({ guildId: eu, location: "channel_item" });
+            let ec = S.BVt.CHANNEL(eu, l.id),
+                eo = (0, b.Ay)(l),
+                ed = l.isGuildVocal(),
+                eA = null != h || null != D || null != _ || W,
+                eE = (0, s.jsx)("div", {
+                    className: a()({ [P.ow]: X }),
+                    ref: er,
+                    children: (0, s.jsxs)(U.A, {
+                        role: ed && !d ? "button" : "link",
+                        href: ed ? void 0 : ec,
+                        target: "_blank",
+                        ref: ea,
+                        className: P.nf,
+                        onClick: () => h?.(l),
+                        onAuxClick: (e) => (0, C.A)(e, l),
+                        transitionExtras: ee,
+                        ...et,
+                        "aria-label": K,
+                        "aria-current": o ? "page" : void 0,
+                        focusProps: { enabled: !1 },
+                        children: [
+                            (0, s.jsxs)("div", {
+                                className: P.Y5,
+                                children: [
+                                    (0, s.jsx)(z, {
+                                        className: x,
+                                        tooltipText: v,
+                                        channel: l,
+                                        guild: Z,
+                                        hasUsersInVoiceChannel: es,
+                                        hasActiveThreads: m,
+                                        locked: N,
+                                    }),
+                                    (0, s.jsx)(c.A, {
+                                        className: a()(P.UU, { [P.NW]: $ }),
+                                        shouldShow: !Q,
+                                        "aria-hidden": !0,
+                                        children: (0, s.jsx)(B, {
+                                            textVariant: "body-md/medium",
+                                            channel: l,
+                                            name: null != n ? n : eo,
+                                        }),
+                                    }),
+                                    i.Children.count(F) > 0
+                                        ? (0, s.jsx)("div", { onClick: w, onKeyPress: w, className: P.Y_, children: F })
+                                        : null,
+                                ],
+                            }),
+                            null != I
+                                ? (0, s.jsx)("div", {
+                                      className: P.MA,
+                                      children: (0, s.jsx)(E.E, {
+                                          color: j ?? "text-muted",
+                                          variant: "body-xs/medium",
+                                          className: P.VA,
+                                          children: I,
+                                      }),
+                                  })
+                                : null,
+                        ],
+                    }),
+                });
+            return (0, s.jsx)(f.vN, {
+                focusTarget: ea,
+                ringTarget: er,
+                offset: { top: 2, bottom: 2, right: 4 },
+                children: (0, s.jsxs)("div", {
+                    ref: el,
+                    className: a()(
+                        g,
+                        eA ? P.iE : P.IA,
+                        (function () {
+                            if (o) return a()(V.rM, k.SELECTED);
+                            if (d) return a()(V.rM, k.CONNECTED);
+                            if (N) return k.LOCKED;
+                            if (t) return k.MUTED;
+                            if (A)
+                                if (en) return k.UNREAD_IMPORTANT;
+                                else return k.UNREAD_LESS_IMPORTANT;
+                            return null;
+                        })(),
+                        (function (e) {
+                            switch (e) {
+                                case S.rbe.GUILD_STAGE_VOICE:
+                                case S.rbe.GUILD_VOICE:
+                                    return P.typeVoice;
+                                case S.rbe.ANNOUNCEMENT_THREAD:
+                                case S.rbe.PUBLIC_THREAD:
+                                case S.rbe.PRIVATE_THREAD:
+                                    return P.ZS;
+                                case S.rbe.GUILD_ANNOUNCEMENT:
+                                case S.rbe.GUILD_TEXT:
+                                case S.rbe.GUILD_STORE:
+                                case S.rbe.GUILD_FORUM:
+                                case S.rbe.GUILD_MEDIA:
+                                case S.rbe.GUILD_APP:
+                                default:
+                                    return P.typeDefault;
+                            }
+                        })(J ?? y),
+                    ),
+                    onMouseUp: (e) => D?.(e, l),
+                    onMouseDown: (e) => _?.(e, l),
+                    onContextMenu: (e) => T?.(e, l),
+                    onMouseEnter: L,
+                    onMouseLeave: H,
+                    children: [
+                        t || !A ? null : (0, s.jsx)("div", { className: a()(P.gy, en ? P.WS : void 0) }),
+                        p?.(eE) ?? eE,
+                    ],
+                }),
+            });
+        },
+        IC: K,
+        Pk: F,
+        dG: w,
+        gm: z,
+    },
+);

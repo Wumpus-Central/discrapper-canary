@@ -1,0 +1,67 @@
+.fileMention_CTNGhK {
+    background: var(--mention-background);
+    border-radius: var(--radius-xs);
+    color: var(--mention-foreground);
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 2px;
+    text-overflow: ellipsis;
+    unicode-bidi: plaintext;
+    vertical-align: bottom;
+    white-space: nowrap
+}
+
+.fileMentionClickable_CTNGhK {
+    cursor: pointer
+}
+
+.fileMentionClickable_CTNGhK:hover {
+    text-decoration: underline
+}
+
+.thumbnail_CTNGhK {
+    border-radius: var(--radius-xs);
+    height: 1em;
+    margin-inline-end: .25em;
+    -o-object-fit: cover;
+    object-fit: cover;
+    vertical-align: -.125em;
+    width: 1em
+}
+
+.settingsForm_mpFQHm {
+    gap: var(--space-12)
+}
+
+.settingsForm_mpFQHm,
+.settingsSelect_mpFQHm {
+    display: flex;
+    flex-direction: column
+}
+
+.settingsSelect_mpFQHm {
+    gap: var(--space-4)
+}
+
+.secretRow_mpFQHm {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8);
+    justify-content: space-between
+}
+
+.secretRowInfo_mpFQHm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.settingsLoading_mpFQHm {
+    display: flex;
+    justify-content: center;
+    padding-block: var(--space-16)
+}
+
+/*# sourceMappingURL=fc5802ad44da5cf3.css.map*/

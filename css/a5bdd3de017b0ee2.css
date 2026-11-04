@@ -1,0 +1,153 @@
+.streamTile_NemNeq,
+.streamTileZoomWrapper_NemNeq,
+.tile_NemNeq {
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    flex: 1;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.streamTileWrapper_NemNeq {
+    background: transparent
+}
+
+.controls_NemNeq {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    height: 38px;
+    justify-content: space-between;
+    padding: 8px;
+    top: auto
+}
+
+.controlBackground_NemNeq,
+.controls_NemNeq {
+    bottom: 0;
+    inset-inline: 0;
+    position: absolute
+}
+
+.controlBackground_NemNeq {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    background: var(--background-scrim);
+    opacity: 1;
+    pointer-events: none;
+    top: 0;
+    transition: opacity .2s ease-in-out
+}
+
+.controlBackground_NemNeq.controlsWithActiveStream_NemNeq {
+    opacity: 0
+}
+
+.controlUser_NemNeq {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    min-width: 0
+}
+
+.controlUserContainer_NemNeq {
+    align-items: center;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background: var(--background-scrim);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    max-width: 90%;
+    padding: 6px 8px
+}
+
+.controlUserName_NemNeq,
+.guildTag_NemNeq {
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.controlUserName_NemNeq {
+    max-width: 100%;
+    text-overflow: ellipsis
+}
+
+.controlAction_NemNeq {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background: var(--background-scrim);
+    border-radius: var(--radius-round);
+    cursor: pointer;
+    height: 32px;
+    justify-content: center;
+    width: 32px
+}
+
+.controlAction_NemNeq,
+.controlActions_NemNeq {
+    align-items: center;
+    display: flex
+}
+
+.controlActions_NemNeq {
+    flex-direction: row;
+    flex-shrink: 0;
+    gap: 8px;
+    justify-content: flex-end
+}
+
+.absoluteFill_NemNeq,
+.streamPreview_NemNeq {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.streamPreview_NemNeq {
+    align-items: center;
+    background: var(--background-scrim);
+    display: flex;
+    justify-content: center;
+    opacity: .65;
+    overflow: hidden;
+    transition: opacity .2s ease-in-out
+}
+
+.liveIndicator_NemNeq {
+    inset-inline-end: 12px;
+    position: absolute;
+    top: 12px;
+    z-index: 10
+}
+
+.watchActionContainer_NemNeq {
+    align-items: center;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 10
+}
+
+.watchButton_NemNeq {
+    align-items: center;
+    background: var(--background-mod-strong);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    justify-content: flex-end;
+    padding: 8px 12px
+}
+
+/*# sourceMappingURL=a5bdd3de017b0ee2.css.map*/

@@ -1,12 +1,11 @@
-n.d(t, { A: () => T, Q: () => m });
 var l,
     i = n(477900);
 n(582128);
 var r = n(503698),
     s = n.n(r),
     a = n(935154),
-    o = n(863610),
-    u = n(47167),
+    u = n(863610),
+    o = n(47167),
     d = n(573435),
     c = n(260509),
     h = n(652215),
@@ -16,8 +15,8 @@ let I = { TINY_24: 24, SMALL_32: 32, MEDIUM_40: 40 },
     E = { TINY_24: 24, SMALL_32: 26, MEDIUM_40: 34 },
     A = { TINY_24: [13, 11, 10], SMALL_32: [13, 11, 10], MEDIUM_40: [24, 20, 16] },
     f = { TINY_24: [9, 8, 7], SMALL_32: [12, 11, 9.5], MEDIUM_40: [14, 13, 11] },
-    S = { TINY_24: g.d7, SMALL_32: g.OI, MEDIUM_40: g.H5 },
-    p = { TINY_24: 12, SMALL_32: 16, MEDIUM_40: 20 };
+    p = { TINY_24: g.d7, SMALL_32: g.OI, MEDIUM_40: g.H5 },
+    S = { TINY_24: 12, SMALL_32: 16, MEDIUM_40: 20 };
 function N(e, t) {
     return 0 === e.length
         ? 0
@@ -27,75 +26,90 @@ function N(e, t) {
             ? e[e.length - 1]
             : (e[t.length - 1] ?? e[e.length - 1]);
 }
-let T = function (e) {
-    var t;
-    let n,
-        { className: l, iconClassName: r, size: m, channel: T, guild: y, isTyping: x = !1, typingFillColor: _ } = e,
-        C = (0, u.Ay)(T),
-        v = (0, a.S3)(h.clD.ONLINE, null);
-    if (null == y) return null;
-    let R = A[m],
-        D = E[m],
-        b = I[m],
-        j = (0, c.Iv)(y, 48),
-        M = p[m],
-        k =
-            0 ===
-            (n =
-                null != (t = C ?? "")
-                    ? t
-                          .replace(/[-_]+/g, " ")
-                          .replace(/'s /g, " ")
-                          .replace(/\w+/g, (e) => e[0])
-                          .replace(/\s/g, "")
-                    : "").length
-                ? "?"
-                : n.slice(0, 3),
-        O = (0, c.Rb)(y);
-    return (0, i.jsxs)("div", {
-        className: s()(g.zr, l),
-        role: "img",
-        style: { width: b, height: b },
-        children: [
-            (0, i.jsx)(d.Ay, {
-                mask: d.hW.CHANNEL_ICON_WITH_GUILD_ICON,
-                width: D,
-                height: D,
-                children:
-                    null != j
-                        ? (0, i.jsx)("img", {
-                              alt: y.name,
-                              src: j,
-                              className: g.es,
-                              draggable: !1,
-                              style: { width: D, height: D },
-                          })
-                        : (0, i.jsx)("div", {
-                              className: s()(g.TT, g.q9),
-                              style: { fontSize: N(R, O), width: D, height: D },
-                              children: O,
-                          }),
-            }),
-            (0, i.jsx)("div", {
-                className: s()(g._C, S[m], r),
-                "aria-hidden": !0,
-                children: (0, i.jsx)(d.Ay, {
-                    mask: d.hW.SQUIRCLE,
-                    width: M,
-                    height: M,
-                    children: x
-                        ? (0, i.jsx)("div", {
-                              className: s()(S[m], g.WQ),
-                              style: { backgroundColor: _ ?? v },
-                              children: (0, i.jsx)(o.n, { dotRadius: M / 10 }),
-                          })
-                        : (0, i.jsx)("div", {
-                              className: s()(S[m], g.q9),
-                              style: { fontSize: N(f[m], k) },
-                              children: k,
-                          }),
-                }),
-            }),
-        ],
-    });
-};
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            var t;
+            let n,
+                {
+                    className: l,
+                    iconClassName: r,
+                    size: m,
+                    channel: T,
+                    guild: y,
+                    isTyping: x = !1,
+                    typingFillColor: _,
+                } = e,
+                C = (0, o.Ay)(T),
+                v = (0, a.S3)(h.clD.ONLINE, null);
+            if (null == y) return null;
+            let R = A[m],
+                D = E[m],
+                b = I[m],
+                j = (0, c.Iv)(y, 48),
+                k = S[m],
+                M =
+                    0 ===
+                    (n =
+                        null != (t = C ?? "")
+                            ? t
+                                  .replace(/[-_]+/g, " ")
+                                  .replace(/'s /g, " ")
+                                  .replace(/\w+/g, (e) => e[0])
+                                  .replace(/\s/g, "")
+                            : "").length
+                        ? "?"
+                        : n.slice(0, 3),
+                O = (0, c.Rb)(y);
+            return (0, i.jsxs)("div", {
+                className: s()(g.zr, l),
+                role: "img",
+                style: { width: b, height: b },
+                children: [
+                    (0, i.jsx)(d.Ay, {
+                        mask: d.hW.CHANNEL_ICON_WITH_GUILD_ICON,
+                        width: D,
+                        height: D,
+                        children:
+                            null != j
+                                ? (0, i.jsx)("img", {
+                                      alt: y.name,
+                                      src: j,
+                                      className: g.es,
+                                      draggable: !1,
+                                      style: { width: D, height: D },
+                                  })
+                                : (0, i.jsx)("div", {
+                                      className: s()(g.TT, g.q9),
+                                      style: { fontSize: N(R, O), width: D, height: D },
+                                      children: O,
+                                  }),
+                    }),
+                    (0, i.jsx)("div", {
+                        className: s()(g._C, p[m], r),
+                        "aria-hidden": !0,
+                        children: (0, i.jsx)(d.Ay, {
+                            mask: d.hW.SQUIRCLE,
+                            width: k,
+                            height: k,
+                            children: x
+                                ? (0, i.jsx)("div", {
+                                      className: s()(p[m], g.WQ),
+                                      style: { backgroundColor: _ ?? v },
+                                      children: (0, i.jsx)(u.n, { dotRadius: k / 10 }),
+                                  })
+                                : (0, i.jsx)("div", {
+                                      className: s()(p[m], g.q9),
+                                      style: { fontSize: N(f[m], M) },
+                                      children: M,
+                                  }),
+                        }),
+                    }),
+                ],
+            });
+        },
+        Q: m,
+    },
+);

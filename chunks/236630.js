@@ -1,7 +1,7 @@
-e.exports = {
-    nf: "swatch__0f59a",
-    GS: "fill__0f59a",
-    wH: "selected__0f59a",
-    eQ: "darkIcon__0f59a",
-    mT: "lightIcon__0f59a",
+t.exports = {
+    nf: "swatch_8kgd8A",
+    GS: "fill_8kgd8A",
+    wH: "selected_8kgd8A",
+    eQ: "darkIcon_8kgd8A",
+    mT: "lightIcon_8kgd8A",
 };

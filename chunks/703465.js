@@ -1,11 +1,11 @@
-(r.r(t), r.d(t, { default: () => B }));
+r.r(t);
 var c = r(477900),
     s = r(582128),
     u = r(806163),
     a = r(289873),
     n = r(976860),
     l = r(200789),
-    d = r(794885),
+    d = r(242495),
     o = r(404373),
     i = r(227007),
     j = r(398773),
@@ -14,7 +14,7 @@ var c = r(477900),
     k = r(371169),
     h = r(260498),
     E = r(313537),
-    v = r(73588),
+    v = r(465080),
     b = r(390924),
     x = r(425853),
     A = r(892715);
@@ -46,9 +46,15 @@ function P(e) {
               children: (0, c.jsx)(d.A, { project: b, projectsLoaded: x, onBack: g, guildId: t, onBackToServer: m }),
           });
 }
-function B(e) {
-    let { guildId: t, projectId: r } = e;
-    return (0, b.A)(t, "ConjureServerProjectPage")
-        ? (0, c.jsx)(P, { guildId: t, projectId: r }, r)
-        : (0, c.jsx)(x.A, {});
-}
+r.d(
+    t,
+    {},
+    {
+        default: function (e) {
+            let { guildId: t, projectId: r } = e;
+            return (0, b.A)(t, "ConjureServerProjectPage")
+                ? (0, c.jsx)(P, { guildId: t, projectId: r }, r)
+                : (0, c.jsx)(x.A, {});
+        },
+    },
+);

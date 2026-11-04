@@ -1,0 +1,278 @@
+.container_01aEQa {
+    display: flex;
+    flex-direction: row-reverse
+}
+
+.emojiContainer_01aEQa {
+    margin-inline-end: 16px
+}
+
+.name_01aEQa {
+    margin-bottom: 2px
+}
+
+.linkedName_01aEQa:hover {
+    cursor: pointer;
+    text-decoration: underline
+}
+
+.channelNameContainer_01aEQa {
+    align-items: center;
+    display: flex
+}
+
+.infoContainer_01aEQa {
+    flex: 1
+}
+
+.draftBadgeContainer_AWLkYu {
+    background-color: var(--background-base-lowest);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+    overflow: hidden;
+    padding: 2px;
+    position: relative;
+    z-index: 1
+}
+
+.tierName_AWLkYu {
+    font-family: var(--font-primary);
+    margin-bottom: 16px;
+    text-align: start
+}
+
+.tierImage_AWLkYu {
+    border-radius: 50%;
+    height: var(--custom-guild-role-subscription-card-basic-info-tier-image-size);
+    -o-object-fit: cover;
+    object-fit: cover;
+    overflow: hidden;
+    width: var(--custom-guild-role-subscription-card-basic-info-tier-image-size)
+}
+
+.tierPrice_AWLkYu {
+    color: var(--interactive-text-active);
+    font-size: 24px;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 2px;
+    margin-top: 16px
+}
+
+.tierPeriod_AWLkYu,
+.tierPrice_AWLkYu {
+    font-family: var(--font-primary)
+}
+
+.tierPeriod_AWLkYu {
+    letter-spacing: .02em;
+    margin-bottom: 16px;
+    text-transform: uppercase
+}
+
+@media (max-width:485px) {
+    .tierName_AWLkYu {
+        margin-bottom: 4px
+    }
+
+    .tierImage_AWLkYu {
+        height: var(--custom-guild-role-subscription-card-basic-info-tier-image-size) Mobile;
+        width: var(--custom-guild-role-subscription-card-basic-info-tier-image-size) Mobile
+    }
+}
+
+.container_bAXS8N {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex-direction: row
+}
+
+.tierTextInfoContainer_bAXS8N {
+    align-items: flex-start;
+    flex: 1;
+    flex-direction: column;
+    margin-inline-start: 16px
+}
+
+.tierPriceContainer_bAXS8N {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.tierPrice_bAXS8N {
+    color: var(--text-default);
+    font-size: 16px;
+    height: 20px;
+    text-align: start
+}
+
+.toggleButton_bAXS8N {
+    color: var(--interactive-text-default);
+    height: 24px;
+    justify-content: flex-end;
+    width: 24px
+}
+
+.confirmationContainer_Elr8oR {
+    margin-top: 56px
+}
+
+.confirmationHeader_Elr8oR {
+    color: var(--text-default);
+    margin-bottom: 8px;
+    text-align: center
+}
+
+.confirmationHeader_Elr8oR strong {
+    color: var(--text-strong)
+}
+
+.confirmationSubtitle_Elr8oR {
+    text-align: center
+}
+
+.actions_Elr8oR {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    row-gap: 8px
+}
+
+.container_GNnVEO {
+    border-radius: 8px;
+    flex: 1;
+    max-width: 320px;
+    overflow: hidden;
+    position: relative
+}
+
+.cardContainerWithoutTopIndicator_GNnVEO {
+    border-radius: 8px;
+    margin-top: 24px;
+    overflow: hidden
+}
+
+.tierTrialIndicator_GNnVEO {
+    background-color: var(--brand-500);
+    color: var(--white);
+    font-weight: var(--font-weight-medium);
+    padding-bottom: 4px;
+    padding-top: 4px
+}
+
+.tierTrialIndicatorIcon_GNnVEO {
+    margin-inline-start: 4px
+}
+
+.tierTopIndicator_GNnVEO {
+    display: flex;
+    font-family: var(--font-primary);
+    font-size: 12px;
+    justify-content: center;
+    line-height: 16px;
+    text-transform: uppercase
+}
+
+.tierInfoContainer_GNnVEO {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 16px 16px;
+    text-align: center
+}
+
+.theme-light .tierInfoContainer_GNnVEO {
+    background-color: hsla(0, 0%, 100%, .5)
+}
+
+.theme-dark .tierInfoContainer_GNnVEO {
+    background-color: var(--interactive-background-hover)
+}
+
+.tierDescriptionTruncate_GNnVEO {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden
+}
+
+.subscriptionPerks_GNnVEO {
+    background-color: var(--background-base-lower);
+    padding: 16px
+}
+
+.roleMessagePreview_GNnVEO {
+    background-color: var(--background-base-low);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    padding: 12px 0
+}
+
+.roleMessagePreview_GNnVEO:not(:last-child) {
+    margin-bottom: 24px
+}
+
+.sectionHeader_GNnVEO {
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: .02em;
+    text-transform: none
+}
+
+.benefitsSection_GNnVEO:not(:last-child) {
+    border-bottom: 1px solid var(--opacity-white-4);
+    margin-bottom: 16px;
+    padding-bottom: 16px
+}
+
+.benefitsList_GNnVEO {
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
+.emojiList_GNnVEO {
+    display: grid;
+    gap: 9px 8px;
+    grid-template-columns: repeat(9, 1fr)
+}
+
+.emojiListEmoji_GNnVEO {
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.divider_GNnVEO {
+    background-color: hsla(0, 0%, 100%, .06);
+    height: 1px;
+    margin: 16px 0;
+    width: 100%
+}
+
+@media (max-width:485px) {
+    .container_GNnVEO {
+        width: auto
+    }
+
+    .cardContainerWithoutTopIndicator_GNnVEO {
+        margin-top: 0
+    }
+
+    .tierInfoContainer_GNnVEO {
+        padding-top: 16px
+    }
+
+    .subscriptionPerks_GNnVEO {
+        background-color: var(--background-mod-normal)
+    }
+}
+
+.helpMessage_GNnVEO {
+    text-align: start
+}
+
+/*# sourceMappingURL=4fc2fa0766da2679.css.map*/

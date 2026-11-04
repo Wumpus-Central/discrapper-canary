@@ -1,4 +1,3 @@
-n.d(t, { A: () => u });
 var s = n(582128);
 let i = new Map(),
     a = new Map(),
@@ -44,21 +43,27 @@ function r(e) {
 function c(e, t) {
     e !== o(t) && (i.set(t, e), r(t).forEach((t) => t(e)));
 }
-function u() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window,
-        [t, n] = s.useState(o(e));
-    return (
-        s.useEffect(() => {
-            let t = (e) => {
-                n(e);
-            };
+n.d(
+    t,
+    {},
+    {
+        A: function () {
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window,
+                [t, n] = s.useState(o(e));
             return (
-                r(e).add(t),
-                () => {
-                    (r(e).delete(t), 0 === r(e).size && (l.get(e)?.(), l.delete(e), a.delete(e), i.delete(e)));
-                }
+                s.useEffect(() => {
+                    let t = (e) => {
+                        n(e);
+                    };
+                    return (
+                        r(e).add(t),
+                        () => {
+                            (r(e).delete(t), 0 === r(e).size && (l.get(e)?.(), l.delete(e), a.delete(e), i.delete(e)));
+                        }
+                    );
+                }, [e]),
+                t
             );
-        }, [e]),
-        t
-    );
-}
+        },
+    },
+);

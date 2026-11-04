@@ -1,14 +1,19 @@
-n.d(t, { Kl: () => l, LF: () => o, sF: () => s });
 var i = n(73153),
-    r = n(174459),
+    r = n(129230),
     a = n(652215);
-function s(e) {
-    (r.default.track(a.HAw.HOTSPOT_HIDDEN, { hotspot_location: e }),
-        i.h.dispatch({ type: "HOTSPOT_HIDE", location: e }));
-}
-function l(e, t) {
-    i.h.dispatch({ type: "HOTSPOT_OVERRIDE_SET", location: e, enabled: t });
-}
-function o(e) {
-    i.h.dispatch({ type: "HOTSPOT_OVERRIDE_CLEAR", location: e });
-}
+n.d(
+    t,
+    {},
+    {
+        Kl: function (e, t) {
+            i.h.dispatch({ type: "HOTSPOT_OVERRIDE_SET", location: e, enabled: t });
+        },
+        LF: function (e) {
+            i.h.dispatch({ type: "HOTSPOT_OVERRIDE_CLEAR", location: e });
+        },
+        sF: function (e) {
+            (r.default.track(a.HAw.HOTSPOT_HIDDEN, { hotspot_location: e }),
+                i.h.dispatch({ type: "HOTSPOT_HIDE", location: e }));
+        },
+    },
+);

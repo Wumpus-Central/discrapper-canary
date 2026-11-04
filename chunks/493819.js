@@ -1,7 +1,6 @@
-n.d(t, { A: () => m });
 var i = n(477900),
     l = n(582128),
-    s = n(17928),
+    s = n(855986),
     r = n(775602),
     a = n(607470),
     o = n(253932),
@@ -61,14 +60,20 @@ function h(e) {
         }, []);
     return (0, i.jsx)("img", { className: s, src: o ? t : n, alt: "", onMouseEnter: u, onMouseLeave: h });
 }
-function m(e) {
-    let { imageUrl: t, animatedUrl: n, className: l, autoPlayOnMount: a = !0 } = e,
-        c = (0, s.bG)([r.Ay], () => r.Ay.useReducedMotion),
-        m = o.kt.useSetting(),
-        g = a && m && !c;
-    return null != n && (0, d.LG)(n)
-        ? (0, i.jsx)(u, { src: n, className: l, autoPlayOnMount: g })
-        : null != n
-          ? (0, i.jsx)(h, { animatedSrc: n, staticSrc: t, className: l, autoPlayOnMount: g }, n)
-          : (0, i.jsx)("img", { className: l, src: t, alt: "" });
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { imageUrl: t, animatedUrl: n, className: l, autoPlayOnMount: a = !0 } = e,
+                c = (0, s.bG)([r.Ay], () => r.Ay.useReducedMotion),
+                m = o.kt.useSetting(),
+                g = a && m && !c;
+            return null != n && (0, d.LG)(n)
+                ? (0, i.jsx)(u, { src: n, className: l, autoPlayOnMount: g })
+                : null != n
+                  ? (0, i.jsx)(h, { animatedSrc: n, staticSrc: t, className: l, autoPlayOnMount: g }, n)
+                  : (0, i.jsx)("img", { className: l, src: t, alt: "" });
+        },
+    },
+);

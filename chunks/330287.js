@@ -1,8 +1,7 @@
-n.d(t, { O: () => d });
 var i = n(852015),
     r = n(144367),
     a = n(428420),
-    s = n(535384),
+    s = n(505816),
     l = n(991023);
 class o extends s.G {
     constructor() {
@@ -55,3 +54,4 @@ class o extends s.G {
     }
 }
 let d = new o();
+n.d(t, {}, { O: d });

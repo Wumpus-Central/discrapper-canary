@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => et }), n(321073));
+n(321073);
 var i = n(435558),
     r = n.n(i),
     a = n(478676),
@@ -6,10 +6,10 @@ var i = n(435558),
     l = n(551639),
     o = n(47167),
     d = n(555424),
-    c = n(236285),
+    c = n(121681),
     u = n(7584),
     _ = n(620181),
-    E = n(999915),
+    E = n(605275),
     A = n(704726),
     h = n(113051),
     f = n(677413),
@@ -24,7 +24,7 @@ var i = n(435558),
     O = n(994500),
     R = n(351906),
     L = n(287809),
-    y = n(768038),
+    y = n(997625),
     D = n(690521),
     b = n(403362),
     v = n(562153),
@@ -32,7 +32,7 @@ var i = n(435558),
     M = n(652215);
 n(827669);
 var U = n(307731),
-    w = n(105292);
+    w = n(792996);
 function G(e, t, n, i) {
     if (t[0] !== e) return;
     let r = t.substring(e.length);
@@ -368,16 +368,16 @@ function Q(e, t) {
                 let { id: t, name: n } = e;
                 return { id: t, text: n };
             }),
-        u = r()(T.Ay.getTextChannelNameDisambiguations(i)).map((e) => {
+        u = r()(T.A.getTextChannelNameDisambiguations(i)).map((e) => {
             let { id: t, name: n } = e;
             return { id: t, text: n };
         }),
         _ =
             null != i
                 ? r()(y.L3)
-                      .filter((e) => e !== T.I6)
+                      .filter((e) => e !== T.I)
                       .flatMap((e) =>
-                          T.Ay.getChannels(i)[e].map((e) =>
+                          T.A.getChannels(i)[e].map((e) =>
                               e.channel.isCategory() && !C.A.can(M.xBc.VIEW_CHANNEL, e.channel)
                                   ? null
                                   : { id: e.channel.id, text: (0, o.m1)(e.channel, L.default, O.A) },
@@ -421,25 +421,31 @@ function ee(e, t, n) {
         _ = { inline: !0, guild: l, channelId: t, isNotification: n };
     return Z(c(e, _), _, d);
 }
-let et = {
-    parse(e, t) {
-        var n, i;
-        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
-            a = arguments.length > 3 ? arguments[3] : void 0,
-            s = r ?? Q(e, a),
-            l = { content: t, tts: !1, invalidEmojis: [], validNonShortcutEmojis: [] };
-        return (
-            (n = l.content),
-            (i = (t, n) => {
-                D.Ay.isEmojiPremiumLocked({ emoji: t, channel: e, intention: U.EmojiIntention.CHAT })
-                    ? l.invalidEmojis.push(t)
-                    : n || l.validNonShortcutEmojis.push(t);
-            }),
-            (l.content = Z(X(n, s), s, u.Ay.translateInlineEmojiToSurrogates, i).content),
-            l
-        );
+n.d(
+    t,
+    {},
+    {
+        Ay: {
+            parse(e, t) {
+                var n, i;
+                let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
+                    a = arguments.length > 3 ? arguments[3] : void 0,
+                    s = r ?? Q(e, a),
+                    l = { content: t, tts: !1, invalidEmojis: [], validNonShortcutEmojis: [] };
+                return (
+                    (n = l.content),
+                    (i = (t, n) => {
+                        D.Ay.isEmojiPremiumLocked({ emoji: t, channel: e, intention: U.EmojiIntention.CHAT })
+                            ? l.invalidEmojis.push(t)
+                            : n || l.validNonShortcutEmojis.push(t);
+                    }),
+                    (l.content = Z(X(n, s), s, u.Ay.translateInlineEmojiToSurrogates, i).content),
+                    l
+                );
+            },
+            parsePreprocessor: (e, t) => X(t, Q(e)),
+            unparse: (e, t, n) => ee(e, t, n).content,
+            unparseWithMeta: ee,
+        },
     },
-    parsePreprocessor: (e, t) => X(t, Q(e)),
-    unparse: (e, t, n) => ee(e, t, n).content,
-    unparseWithMeta: ee,
-};
+);

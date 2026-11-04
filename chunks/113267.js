@@ -1,4 +1,3 @@
-n.d(t, { A: () => a });
 var i,
     r =
         (((i = r || {})[(i.UNKNOWN = 1)] = "UNKNOWN"),
@@ -28,10 +27,16 @@ var i,
         (i[(i.ACTIVITY_LAUNCH_INVALID_USER_REGION_FOR_APPLICATION = 20)] =
             "ACTIVITY_LAUNCH_INVALID_USER_REGION_FOR_APPLICATION"),
         i);
-class a {
-    reason;
-    static ReasonCodes = r;
-    constructor(e) {
-        this.reason = e;
-    }
-}
+n.d(
+    t,
+    {},
+    {
+        A: class {
+            reason;
+            static ReasonCodes = r;
+            constructor(e) {
+                this.reason = e;
+            }
+        },
+    },
+);

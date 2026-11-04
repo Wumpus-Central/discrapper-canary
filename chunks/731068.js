@@ -1,21 +1,10 @@
-(n.d(t, {
-    FE: () => f,
-    IS: () => u,
-    Rr: () => I,
-    Uv: () => A,
-    aG: () => h,
-    ad: () => _,
-    e5: () => E,
-    fj: () => m,
-    oU: () => p,
-}),
-    n(938796));
+n(938796);
 var i,
     r,
     a,
     s = n(665260),
     l = n(155718),
-    o = n(59318),
+    o = n(273185),
     d = n(998218),
     c = n(652215),
     u =
@@ -35,25 +24,6 @@ var i,
         r),
     E = (((a = {})[(a.IS_ANIMATED = 1)] = "IS_ANIMATED"), a);
 function A(e) {
-    var t;
-    return {
-        url: e.url,
-        proxyUrl: e.proxy_url,
-        height: e.height,
-        width: e.width,
-        placeholder: e.placeholder,
-        placeholderVersion: e.placeholder_version,
-        contentType: e.content_type,
-        originalContentType: e.original_content_type,
-        loadingState: e.loading_state,
-        contentScanMetadata:
-            null != e.content_scan_metadata
-                ? { version: (t = e.content_scan_metadata).version, flags: t.flags }
-                : void 0,
-        flags: e.flags ?? 0,
-    };
-}
-function h(e) {
     let t = 0;
     (0, s.Lt)(e.flags ?? 0, c.sbO.CONTAINS_EXPLICIT_MEDIA) && (t |= 1);
     let n = 0;
@@ -75,42 +45,77 @@ function h(e) {
         }
     );
 }
-function f(e) {
-    return (0, o.tT)(e.contentType)
-        ? "IMAGE"
-        : (0, o.XB)(e.contentType) && null != e.proxyUrl && null != d.A.toURLSafe(e.proxyUrl)
-          ? "VIDEO"
-          : "INVALID";
-}
-function I(e, t) {
-    return {
-        ...h(e),
-        type: (0, o.u)(e.filename) ? "IMAGE" : (0, o.AE)(e.filename) ? "VIDEO" : "INVALID",
-        alt: e.description,
-        sourceMetadata: {
-            message: t,
-            identifier: { type: "attachment", attachmentId: e.id, filename: e.filename, title: e.title, size: e.size },
+n.d(
+    t,
+    {},
+    {
+        FE: function (e) {
+            return (0, o.tT)(e.contentType)
+                ? "IMAGE"
+                : (0, o.XB)(e.contentType) && null != e.proxyUrl && null != d.A.toURLSafe(e.proxyUrl)
+                  ? "VIDEO"
+                  : "INVALID";
         },
-    };
-}
-function p(e, t, n) {
-    return {
-        type: n,
-        url: e.url,
-        proxyUrl: e.proxyURL,
-        width: e.width,
-        height: e.height,
-        placeholder: e.placeholder,
-        placeholderVersion: e.placeholderVersion,
-        sourceMetadata: t,
-        contentType: e.contentType,
-    };
-}
-function m(e) {
-    if (null == e) return null;
-    if ("VIDEO" === e.type && null != e.proxyUrl) {
-        let t = d.A.toURLSafe(e.proxyUrl);
-        return null == t ? null : (t.searchParams.append("format", "webp"), t.toString());
-    }
-    return e.proxyUrl ?? e.url ?? null;
-}
+        IS: u,
+        Rr: function (e, t) {
+            return {
+                ...A(e),
+                type: (0, o.u)(e.filename) ? "IMAGE" : (0, o.AE)(e.filename) ? "VIDEO" : "INVALID",
+                alt: e.description,
+                sourceMetadata: {
+                    message: t,
+                    identifier: {
+                        type: "attachment",
+                        attachmentId: e.id,
+                        filename: e.filename,
+                        title: e.title,
+                        size: e.size,
+                    },
+                },
+            };
+        },
+        Uv: function (e) {
+            var t;
+            return {
+                url: e.url,
+                proxyUrl: e.proxy_url,
+                height: e.height,
+                width: e.width,
+                placeholder: e.placeholder,
+                placeholderVersion: e.placeholder_version,
+                contentType: e.content_type,
+                originalContentType: e.original_content_type,
+                loadingState: e.loading_state,
+                contentScanMetadata:
+                    null != e.content_scan_metadata
+                        ? { version: (t = e.content_scan_metadata).version, flags: t.flags }
+                        : void 0,
+                flags: e.flags ?? 0,
+            };
+        },
+        aG: A,
+        ad: _,
+        e5: E,
+        fj: function (e) {
+            if (null == e) return null;
+            if ("VIDEO" === e.type && null != e.proxyUrl) {
+                let t = d.A.toURLSafe(e.proxyUrl);
+                return null == t ? null : (t.searchParams.append("format", "webp"), t.toString());
+            }
+            return e.proxyUrl ?? e.url ?? null;
+        },
+        oU: function (e, t, n) {
+            return {
+                type: n,
+                url: e.url,
+                proxyUrl: e.proxyURL,
+                width: e.width,
+                height: e.height,
+                placeholder: e.placeholder,
+                placeholderVersion: e.placeholderVersion,
+                sourceMetadata: t,
+                contentType: e.contentType,
+            };
+        },
+    },
+);

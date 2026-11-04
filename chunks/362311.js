@@ -1,7 +1,6 @@
-e.d(n, { A: () => u, m: () => D });
 var i = e(477900),
     a = e(582128),
-    r = e(17928),
+    r = e(855986),
     l = e(862482),
     s = e(935462),
     d = e(821609),
@@ -9,13 +8,13 @@ var i = e(477900),
     p = e(534514),
     m = e(95477),
     _ = e(308528),
-    g = e(913122),
+    g = e(627784),
     o = e(235986),
     E = e(915089),
-    b = e(548118),
+    b = e(682163),
     C = e(808728),
     T = e(71393),
-    G = e(105292),
+    G = e(792996),
     I = e(645781);
 function D(t) {
     let { createdGuildId: n, hasFooter: e = !0, onClose: D, onChannelPromptCompleted: u, isSlideReady: L } = t,
@@ -32,7 +31,7 @@ function D(t) {
             async (t) => {
                 if ((t.preventDefault(), null == N)) return;
                 (S(!0), x(null));
-                let n = C.Ay.getDefaultChannel(N.id);
+                let n = C.A.getDefaultChannel(N.id);
                 try {
                     let t = G.intl.formatToPlainString(G.t.V4lepJ, { topic: U });
                     (await _.A.createTextChannel(N.id, U, n?.parent_id, t), u());
@@ -125,7 +124,14 @@ function D(t) {
         footer: j,
     };
 }
-function u(t) {
-    let { content: n } = D(t);
-    return n;
-}
+e.d(
+    n,
+    {},
+    {
+        A: function (t) {
+            let { content: n } = D(t);
+            return n;
+        },
+        m: D,
+    },
+);

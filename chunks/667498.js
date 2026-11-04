@@ -1,13 +1,12 @@
-r.d(t, { mg: () => J, vd: () => W });
 var n = r(582128),
     i = r(655972),
     o = r.n(i),
     a = r(412700),
     s = r.n(a),
     u = r(284009),
-    c = r.n(u),
-    l = r(859141),
-    d = r.n(l);
+    l = r.n(u),
+    c = r(859141),
+    d = r.n(c);
 function f() {
     return (f =
         Object.assign ||
@@ -151,8 +150,8 @@ var v = {
                                 (r = s));
                     }
                     if (!r || !e[r]) return !1;
-                    var c = e[r].toLowerCase();
-                    return (n[r] || (n[r] = {}), i[r] || (i[r] = {}), !n[r][c] && ((i[r][c] = !0), !0));
+                    var l = e[r].toLowerCase();
+                    return (n[r] || (n[r] = {}), i[r] || (i[r] = {}), !n[r][l] && ((i[r][l] = !0), !0));
                 })
                     .reverse()
                     .forEach(function (t) {
@@ -176,7 +175,7 @@ var v = {
     I = function (e) {
         return Array.isArray(e) ? e.join("") : e;
     },
-    k = function (e, t) {
+    P = function (e, t) {
         return Array.isArray(e)
             ? e.reduce(
                   function (e, r) {
@@ -195,11 +194,11 @@ var v = {
               )
             : { default: e };
     },
-    A = function (e, t) {
+    k = function (e, t) {
         var r;
         return f({}, e, (((r = {})[t] = void 0), r));
     },
-    P = [v.NOSCRIPT, v.SCRIPT, v.STYLE],
+    A = [v.NOSCRIPT, v.SCRIPT, v.STYLE],
     N = function (e, t) {
         return (
             void 0 === t && (t = !0),
@@ -219,7 +218,7 @@ var v = {
             return t ? t + " " + n : n;
         }, "");
     },
-    L = function (e, t) {
+    R = function (e, t) {
         return (
             void 0 === t && (t = {}),
             Object.keys(e).reduce(function (t, r) {
@@ -227,7 +226,7 @@ var v = {
             }, t)
         );
     },
-    R = function (e, t) {
+    L = function (e, t) {
         return t.map(function (t, r) {
             var i,
                 o = (((i = { key: r })["data-rh"] = !0), i);
@@ -249,9 +248,9 @@ var v = {
                     toComponent: function () {
                         var e, r, i, o;
                         return (
-                            (r = t.titleAttributes),
-                            ((i = { key: (e = t.title) })["data-rh"] = !0),
-                            (o = L(r, i)),
+                            (i = t.titleAttributes),
+                            ((r = { key: (e = t.title) })["data-rh"] = !0),
+                            (o = R(i, r)),
                             [n.createElement(v.TITLE, o, e)]
                         );
                     },
@@ -272,7 +271,7 @@ var v = {
             case "htmlAttributes":
                 return {
                     toComponent: function () {
-                        return L(t);
+                        return R(t);
                     },
                     toString: function () {
                         return j(t);
@@ -281,7 +280,7 @@ var v = {
             default:
                 return {
                     toComponent: function () {
-                        return R(e, t);
+                        return L(e, t);
                     },
                     toString: function () {
                         return t.reduce(function (t, n) {
@@ -294,14 +293,14 @@ var v = {
                                         return e ? e + " " + i : i;
                                     }, ""),
                                 o = n.innerHTML || n.cssText || "",
-                                a = -1 === P.indexOf(e);
+                                a = -1 === A.indexOf(e);
                             return t + "<" + e + ' data-rh="true" ' + i + (a ? "/>" : ">" + o + "</" + e + ">");
                         }, "");
                     },
                 };
         }
     },
-    _ = function (e) {
+    V = function (e) {
         var t = e.baseTag,
             r = e.bodyAttributes,
             n = e.encode,
@@ -310,8 +309,8 @@ var v = {
             a = e.styleTags,
             s = e.title,
             u = e.titleAttributes,
-            c = e.linkTags,
-            l = e.metaTags,
+            l = e.linkTags,
+            c = e.metaTags,
             d = e.scriptTags,
             f = {
                 toComponent: function () {},
@@ -330,13 +329,13 @@ var v = {
                     ((p = e.linkTags),
                     (h = e.scriptTags),
                     (g = e.encode),
-                    (E = k(e.metaTags, b)),
-                    (O = k(p, y)),
-                    (T = k(h, m)),
+                    (E = P(e.metaTags, b)),
+                    (O = P(p, y)),
+                    (T = P(h, m)),
                     {
                         priorityMethods: {
                             toComponent: function () {
-                                return [].concat(R(v.META, E.priority), R(v.LINK, O.priority), R(v.SCRIPT, T.priority));
+                                return [].concat(L(v.META, E.priority), L(v.LINK, O.priority), L(v.SCRIPT, T.priority));
                             },
                             toString: function () {
                                 return (
@@ -352,23 +351,23 @@ var v = {
                         linkTags: O.default,
                         scriptTags: T.default,
                     });
-            ((f = S.priorityMethods), (c = S.linkTags), (l = S.metaTags), (d = S.scriptTags));
+            ((f = S.priorityMethods), (l = S.linkTags), (c = S.metaTags), (d = S.scriptTags));
         }
         return {
             priority: f,
             base: M(v.BASE, t, n),
             bodyAttributes: M("bodyAttributes", r, n),
             htmlAttributes: M("htmlAttributes", i, n),
-            link: M(v.LINK, c, n),
-            meta: M(v.META, l, n),
+            link: M(v.LINK, l, n),
+            meta: M(v.META, c, n),
             noscript: M(v.NOSCRIPT, o, n),
             script: M(v.SCRIPT, d, n),
             style: M(v.STYLE, a, n),
             title: M(v.TITLE, { title: void 0 === s ? "" : s, titleAttributes: u }, n),
         };
     },
-    U = [],
-    V = function (e, t) {
+    _ = [],
+    U = function (e, t) {
         var r = this;
         (void 0 === t && (t = "u" > typeof document),
             (this.instances = []),
@@ -378,21 +377,21 @@ var v = {
                 },
                 helmetInstances: {
                     get: function () {
-                        return r.canUseDOM ? U : r.instances;
+                        return r.canUseDOM ? _ : r.instances;
                     },
                     add: function (e) {
-                        (r.canUseDOM ? U : r.instances).push(e);
+                        (r.canUseDOM ? _ : r.instances).push(e);
                     },
                     remove: function (e) {
-                        var t = (r.canUseDOM ? U : r.instances).indexOf(e);
-                        (r.canUseDOM ? U : r.instances).splice(t, 1);
+                        var t = (r.canUseDOM ? _ : r.instances).indexOf(e);
+                        (r.canUseDOM ? _ : r.instances).splice(t, 1);
                     },
                 },
             }),
             (this.context = e),
             (this.canUseDOM = t),
             t ||
-                (e.helmet = _({
+                (e.helmet = V({
                     baseTag: [],
                     bodyAttributes: {},
                     encodeSpecialCharacters: !0,
@@ -407,15 +406,15 @@ var v = {
                 })));
     },
     H = n.createContext({}),
-    B = o().shape({
+    F = o().shape({
         setHelmet: o().func,
         helmetInstances: o().shape({ get: o().func, add: o().func, remove: o().func }),
     }),
-    F = "u" > typeof document,
-    W = (function (e) {
+    B = "u" > typeof document,
+    q = (function (e) {
         function t(r) {
             var n;
-            return (((n = e.call(this, r) || this).helmetData = new V(n.props.context, t.canUseDOM)), n);
+            return (((n = e.call(this, r) || this).helmetData = new U(n.props.context, t.canUseDOM)), n);
         }
         return (
             p(t, e),
@@ -425,11 +424,11 @@ var v = {
             t
         );
     })(n.Component);
-((W.canUseDOM = F),
-    (W.propTypes = { context: o().shape({ helmet: o().shape() }), children: o().node.isRequired }),
-    (W.defaultProps = { context: {} }),
-    (W.displayName = "HelmetProvider"));
-var Y = function (e, t) {
+((q.canUseDOM = B),
+    (q.propTypes = { context: o().shape({ helmet: o().shape() }), children: o().node.isRequired }),
+    (q.defaultProps = { context: {} }),
+    (q.displayName = "HelmetProvider"));
+var W = function (e, t) {
         var r,
             n = document.head || document.querySelector(v.HEAD),
             i = n.querySelectorAll(e + "[data-rh]"),
@@ -465,7 +464,7 @@ var Y = function (e, t) {
             { oldTags: o, newTags: a }
         );
     },
-    q = function (e, t) {
+    Y = function (e, t) {
         var r = document.getElementsByTagName(e)[0];
         if (r) {
             for (
@@ -478,10 +477,10 @@ var Y = function (e, t) {
                 s += 1
             ) {
                 var u = a[s],
-                    c = t[u] || "";
-                (r.getAttribute(u) !== c && r.setAttribute(u, c), -1 === i.indexOf(u) && i.push(u));
-                var l = o.indexOf(u);
-                -1 !== l && o.splice(l, 1);
+                    l = t[u] || "";
+                (r.getAttribute(u) !== l && r.setAttribute(u, l), -1 === i.indexOf(u) && i.push(u));
+                var c = o.indexOf(u);
+                -1 !== c && o.splice(c, 1);
             }
             for (var d = o.length - 1; d >= 0; d -= 1) r.removeAttribute(o[d]);
             i.length === o.length
@@ -489,7 +488,7 @@ var Y = function (e, t) {
                 : r.getAttribute("data-rh") !== a.join(",") && r.setAttribute("data-rh", a.join(","));
         }
     },
-    G = function (e, t) {
+    K = function (e, t) {
         var r = e.baseTag,
             n = e.htmlAttributes,
             i = e.linkTags,
@@ -497,20 +496,20 @@ var Y = function (e, t) {
             a = e.noscriptTags,
             s = e.onChangeClientState,
             u = e.scriptTags,
-            c = e.styleTags,
-            l = e.title,
+            l = e.styleTags,
+            c = e.title,
             d = e.titleAttributes;
-        (q(v.BODY, e.bodyAttributes),
-            q(v.HTML, n),
-            void 0 !== l && document.title !== l && (document.title = I(l)),
-            q(v.TITLE, d));
+        (Y(v.BODY, e.bodyAttributes),
+            Y(v.HTML, n),
+            void 0 !== c && document.title !== c && (document.title = I(c)),
+            Y(v.TITLE, d));
         var f = {
-                baseTag: Y(v.BASE, r),
-                linkTags: Y(v.LINK, i),
-                metaTags: Y(v.META, o),
-                noscriptTags: Y(v.NOSCRIPT, a),
-                scriptTags: Y(v.SCRIPT, u),
-                styleTags: Y(v.STYLE, c),
+                baseTag: W(v.BASE, r),
+                linkTags: W(v.LINK, i),
+                metaTags: W(v.META, o),
+                noscriptTags: W(v.NOSCRIPT, a),
+                scriptTags: W(v.SCRIPT, u),
+                styleTags: W(v.STYLE, l),
             },
             p = {},
             h = {};
@@ -523,7 +522,7 @@ var Y = function (e, t) {
             t && t(),
             s(e, p, h));
     },
-    K = null,
+    G = null,
     z = (function (e) {
         function t() {
             for (var t, r = arguments.length, n = Array(r), i = 0; i < r; i++) n[i] = arguments[i];
@@ -583,16 +582,16 @@ var Y = function (e, t) {
                         titleAttributes: C("titleAttributes", t),
                         prioritizeSeoTags: D(t, "prioritizeSeoTags"),
                     };
-                (W.canUseDOM
-                    ? (K && cancelAnimationFrame(K),
+                (q.canUseDOM
+                    ? (G && cancelAnimationFrame(G),
                       o.defer
-                          ? (K = requestAnimationFrame(function () {
-                                G(o, function () {
-                                    K = null;
+                          ? (G = requestAnimationFrame(function () {
+                                K(o, function () {
+                                    G = null;
                                 });
                             }))
-                          : (G(o), (K = null)))
-                    : _ && (i = _(o)),
+                          : (K(o), (G = null)))
+                    : V && (i = V(o)),
                     n(i));
             }),
             (r.init = function () {
@@ -605,7 +604,7 @@ var Y = function (e, t) {
             t
         );
     })(n.Component);
-((z.propTypes = { context: B.isRequired }), (z.displayName = "HelmetDispatcher"));
+((z.propTypes = { context: F.isRequired }), (z.displayName = "HelmetDispatcher"));
 var X = ["children"],
     $ = ["children"],
     J = (function (e) {
@@ -616,7 +615,7 @@ var X = ["children"],
         var r = t.prototype;
         return (
             (r.shouldComponentUpdate = function (e) {
-                return !s()(A(this.props, "helmetData"), A(e, "helmetData"));
+                return !s()(k(this.props, "helmetData"), k(e, "helmetData"));
             }),
             (r.mapNestedChildrenToProps = function (e, t) {
                 if (!t) return null;
@@ -677,7 +676,7 @@ var X = ["children"],
             }),
             (r.warnOnInvalidChildren = function (e, t) {
                 return (
-                    c()(
+                    l()(
                         E.some(function (t) {
                             return e.type === t;
                         }),
@@ -689,7 +688,7 @@ var X = ["children"],
                                   e.type +
                                   "> elements. Refer to our API for more information.",
                     ),
-                    c()(
+                    l()(
                         !t ||
                             "string" == typeof t ||
                             (Array.isArray(t) &&
@@ -757,7 +756,7 @@ var X = ["children"],
                     o = r.helmetData;
                 return (
                     t && (i = this.mapChildrenToProps(t, i)),
-                    !o || o instanceof V || (o = new V(o.context, o.instances)),
+                    !o || o instanceof U || (o = new U(o.context, o.instances)),
                     o
                         ? n.createElement(z, f({}, i, { context: o.value, helmetData: void 0 }))
                         : n.createElement(H.Consumer, null, function (e) {
@@ -789,4 +788,5 @@ var X = ["children"],
     helmetData: o().object,
 }),
     (J.defaultProps = { defer: !0, encodeSpecialCharacters: !0, prioritizeSeoTags: !1 }),
-    (J.displayName = "Helmet"));
+    (J.displayName = "Helmet"),
+    r.d(t, {}, { mg: J, vd: q }));

@@ -1,0 +1,39 @@
+.preview_Wu0ZxP {
+    height: 100%;
+    width: 100%;
+    filter: blur(5px);
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: top;
+    object-position: top;
+    opacity: .3
+}
+
+.container_Wu0ZxP,
+.preview_Wu0ZxP {
+    position: relative
+}
+
+.headerContainer_Wu0ZxP {
+    gap: var(--space-8)
+}
+
+.body_Wu0ZxP,
+.headerContainer_Wu0ZxP {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.body_Wu0ZxP {
+    gap: var(--space-16);
+    inset-inline-start: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%
+}
+
+/*# sourceMappingURL=e1f1c329a6fe44eb.css.map*/

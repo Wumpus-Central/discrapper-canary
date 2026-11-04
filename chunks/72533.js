@@ -1,14 +1,19 @@
-n.d(t, { A: () => r, o: () => a });
-var i = n(17928),
+var i = n(855986),
     l = n(71393),
     s = n(652215);
-function r(e) {
-    return (0, i.bG)([l.A], () => {
-        let t = l.A.getGuild(e);
-        return null != t && t.features.has(s.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED);
-    });
-}
-function a(e) {
-    let t = l.A.getGuild(e);
-    return null != t && t.features.has(s.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED);
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            return (0, i.bG)([l.A], () => {
+                let t = l.A.getGuild(e);
+                return null != t && t.features.has(s.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED);
+            });
+        },
+        o: function (e) {
+            let t = l.A.getGuild(e);
+            return null != t && t.features.has(s.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED);
+        },
+    },
+);

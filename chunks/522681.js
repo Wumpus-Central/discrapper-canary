@@ -4,21 +4,6 @@ function i(l) {
     let d = l.slice(t + 5);
     return "" === d || d.startsWith("?") ? `${l.slice(0, t)}.js${d}` : l;
 }
-d.d(t, {
-    a: () => L,
-    c: () => X,
-    d: () => h,
-    f: () => u,
-    i: () => U,
-    l: () => T,
-    n: () => O,
-    o: () => G,
-    p: () => i,
-    r: () => F,
-    s: () => y,
-    t: () => J,
-    u: () => r,
-});
 var e,
     c,
     a = class {
@@ -83,15 +68,17 @@ async function Z(l) {
     if ("function" != typeof t.Module) throw Error(`WASM glue at ${l} did not export a Module factory`);
     return t.Module;
 }
-async function b(l) {
-    let t = await fetch(l);
-    if (!t.ok) throw Error(`Failed to fetch WASM binary at ${l}: ${t.status} ${t.statusText}`);
-    return new Uint8Array(await t.arrayBuffer());
+async function b(l, t) {
+    return (
+        (window.wasmArrayBuffer = await (async function (l) {
+            let t = await fetch(l);
+            if (!t.ok) throw Error(`Failed to fetch WASM binary at ${l}: ${t.status} ${t.statusText}`);
+            return new Uint8Array(await t.arrayBuffer());
+        })(t)),
+        await l()
+    );
 }
-async function m(l, t) {
-    return ((window.wasmArrayBuffer = await b(t)), await l());
-}
-async function o(l) {
+async function m(l) {
     return (
         n ||
         s ||
@@ -103,14 +90,14 @@ async function o(l) {
                     try {
                         let t = await Z(l.glueCodeSimdPath ?? i(d));
                         window.Module = t;
-                        let e = { wasmModule: await m(t, d), simdUsed: !0 };
+                        let e = { wasmModule: await b(t, d), simdUsed: !0 };
                         return ((n = e), e);
                     } catch (l) {
                         console.warn("[Incode SDK] SIMD WASM load failed, falling back to non-SIMD", l);
                     }
                 let e = await Z(l.glueCodePath);
                 window.Module = e;
-                let c = { wasmModule: await m(e, l.wasmPath), simdUsed: !1 };
+                let c = { wasmModule: await b(e, l.wasmPath), simdUsed: !1 };
                 return ((n = c), c);
             } catch (l) {
                 throw ((s = null), l);
@@ -118,12 +105,12 @@ async function o(l) {
         })())
     );
 }
-let u =
+let o =
         (((e = {})[(e.IdCaptureV1x = 0)] = "IdCaptureV1x"),
         (e[(e.IdCaptureV2x = 1)] = "IdCaptureV2x"),
         (e[(e.IdCaptureV3x = 2)] = "IdCaptureV3x"),
         e),
-    h =
+    u =
         (((c = {})[(c.IdBlurGlarePipeline = 0)] = "IdBlurGlarePipeline"),
         (c[(c.IdBarcodeAndTextQualityPipeline = 1)] = "IdBarcodeAndTextQualityPipeline"),
         (c[(c.IdVideoSelfiePipeline = 2)] = "IdVideoSelfiePipeline"),
@@ -131,7 +118,7 @@ let u =
         (c[(c.SelfieWithQualityMetrics = 4)] = "SelfieWithQualityMetrics"),
         (c[(c.OnDeviceSelfieWorkflow = 5)] = "OnDeviceSelfieWorkflow"),
         c);
-async function W(l, t, d = !0, ...i) {
+async function h(l, t, d = !0, ...i) {
     let e = async () => {
         for (;;) {
             if (t(...i)) return;
@@ -140,7 +127,7 @@ async function W(l, t, d = !0, ...i) {
     };
     d ? await l.withLock(e) : await e();
 }
-var G = class extends Error {
+var W = class extends Error {
     constructor(l, t, d) {
         (super(l),
             (this.name = "WasmWebClientError"),
@@ -149,41 +136,11 @@ var G = class extends Error {
             (t > 0 || void 0 !== d) && (this.response = { status: t, data: d }));
     }
 };
-let p = null,
-    N = null,
-    M = new a(4);
-async function X(l, t, d, i, e) {
-    if (!p)
-        return (
-            N ||
-            (N = (async () => {
-                try {
-                    let { wasmModule: c } = await o({
-                        wasmPath: l,
-                        wasmSimdPath: t,
-                        glueCodePath: d,
-                        glueCodeSimdPath: i || void 0,
-                        useSimd: e,
-                    });
-                    if ("function" != typeof c.WebClient)
-                        throw Error(
-                            "WASM module does not expose a WebClient class. Update webLib.wasm to a build that includes WebClient.",
-                        );
-                    p = new c.WebClient();
-                } catch (l) {
-                    throw ((N = null), l);
-                }
-            })())
-        );
-}
-async function r(l, t, d, i, e) {
-    let c = V();
-    (c.resetSessionState?.(), c.setDefaultHeaders?.(i), await W(M, () => c.createApi(l, t, e, d), !1));
-    let a = c.getRequestResult(-1);
-    if (a.hasError) throw new G(a.errorMessage || "WebClient handshake failed", a.statusCode, a.result);
-}
-async function y(l, t, d, i, e, c, a, s = !1) {
-    let n = V(),
+let G = null,
+    p = null,
+    N = new a(4);
+async function M(l, t, d, i, e, c, a, s = !1) {
+    let n = X(),
         Z = ((l) => {
             if (!l) return;
             let t = {};
@@ -193,7 +150,7 @@ async function y(l, t, d, i, e, c, a, s = !1) {
             }
             return t;
         })(e);
-    return M.withLock(async (e) => {
+    return N.withLock(async (e) => {
         a &&
             n.setOnUploadProgress &&
             n.setOnUploadProgress((l) => {
@@ -205,8 +162,8 @@ async function y(l, t, d, i, e, c, a, s = !1) {
             });
         try {
             return (
-                await W(
-                    M,
+                await h(
+                    N,
                     () =>
                         (function (l, t, d, i, e, c, a, s, n) {
                             switch (t) {
@@ -229,7 +186,7 @@ async function y(l, t, d, i, e, c, a, s = !1) {
                 (function (l, t) {
                     let d = l.getRequestResult(t);
                     if (d.hasError)
-                        throw new G(d.errorMessage || "WasmWebClient request failed", d.statusCode, d.result);
+                        throw new W(d.errorMessage || "WasmWebClient request failed", d.statusCode, d.result);
                     return { data: d.result, status: d.statusCode };
                 })(n, e)
             );
@@ -238,15 +195,12 @@ async function y(l, t, d, i, e, c, a, s = !1) {
         }
     });
 }
-let Y = null;
-function T(l) {
-    Y = l;
+let r = null;
+function X() {
+    if (!G) throw Error("WasmWebClient not initialized. Call initializeWasmWebClient() first.");
+    return G;
 }
-function V() {
-    if (!p) throw Error("WasmWebClient not initialized. Call initializeWasmWebClient() first.");
-    return p;
-}
-var L = class l {
+var y = class l {
     constructor() {
         ((this.versionsFile = null),
             (this.modelsBuffers = null),
@@ -269,7 +223,7 @@ var L = class l {
     }
     async initialize(l, t, d, i, e, c, a) {
         (await this.freeResources(), (this.pipelines_ = a), (this.versionsFile = c));
-        let { wasmModule: s, simdUsed: n } = await o({
+        let { wasmModule: s, simdUsed: n } = await m({
             glueCodePath: d,
             glueCodeSimdPath: i || void 0,
             wasmPath: l,
@@ -287,10 +241,10 @@ var L = class l {
             (this.webApi = new this.wasmModule.WebApi({
                 post(l, t, d) {
                     let i = d ?? {},
-                        e = Y;
+                        e = r;
                     return e
                         ? e(l, t, i)
-                        : y("POST", l, t, i.headers ?? {}, i.params, i.timeout ?? 3e4, void 0, !0 === i.ie);
+                        : M("POST", l, t, i.headers ?? {}, i.params, i.timeout ?? 3e4, void 0, !0 === i.ie);
                 },
             })),
             (this.isInitialized_ = !0),
@@ -397,14 +351,14 @@ var L = class l {
         )
             throw Error("Unable to process the image, buffers haven't been allocated!");
         switch ((this.inputImageBuffer.set(l.data), t)) {
-            case h.IdBlurGlarePipeline:
-            case h.IdBarcodeAndTextQualityPipeline:
+            case u.IdBlurGlarePipeline:
+            case u.IdBarcodeAndTextQualityPipeline:
                 return this.idCaptureWasmApi.runIdCaptureWorkflow(this.pipelineTypeToWasmEnum(t));
-            case h.IdVideoSelfiePipeline:
+            case u.IdVideoSelfiePipeline:
                 return this.idCaptureWasmApi.runIdVideoSelfieWorkflow();
-            case h.SelfieWithAggregationMetrics:
-            case h.SelfieWithQualityMetrics:
-            case h.OnDeviceSelfieWorkflow:
+            case u.SelfieWithAggregationMetrics:
+            case u.SelfieWithQualityMetrics:
+            case u.OnDeviceSelfieWorkflow:
                 return this.faceProcessingWasmApi.runSelfieWorkflow(this.pipelineTypeToWasmEnum(t));
             default:
                 throw Error("Unknown pipeline type");
@@ -655,15 +609,15 @@ var L = class l {
     }
     async prc() {
         (this.checkWasmInitialization("Unable to prc, cpp API hasn't been initialized"),
-            await W(this.wasmCallSemaphore, () => this.utilityApi.prc(this.dsEnabled_, !1), !0));
+            await h(this.wasmCallSemaphore, () => this.utilityApi.prc(this.dsEnabled_, !1), !0));
     }
     async poc(l) {
         (this.checkWasmInitialization("Unable to poc, cpp API hasn't been initialized"),
-            await W(this.wasmCallSemaphore, () => this.utilityApi.poc(this.dsEnabled_, l), !0));
+            await h(this.wasmCallSemaphore, () => this.utilityApi.poc(this.dsEnabled_, l), !0));
     }
     async rsp() {
         (this.checkWasmInitialization("Unable to rsp, cpp API hasn't been initialized"),
-            await W(this.wasmCallSemaphore, () => this.utilityApi.rsp(this.dsEnabled_), !0));
+            await h(this.wasmCallSemaphore, () => this.utilityApi.rsp(this.dsEnabled_), !0));
     }
     ssl() {
         (this.checkWasmInitialization("Unable to ssl, cpp API hasn't been initialized"),
@@ -695,17 +649,17 @@ var L = class l {
     }
     pipelineTypeToWasmEnum(l) {
         switch (l) {
-            case h.IdBlurGlarePipeline:
+            case u.IdBlurGlarePipeline:
                 return this.wasmModule.WorkflowType.IdBlurGlareWorkflow;
-            case h.IdBarcodeAndTextQualityPipeline:
+            case u.IdBarcodeAndTextQualityPipeline:
                 return this.wasmModule.WorkflowType.IdBarcodeAndTextQualityWorkflow;
-            case h.IdVideoSelfiePipeline:
+            case u.IdVideoSelfiePipeline:
                 return this.wasmModule.WorkflowType.IdVideoSelfieWorkflow;
-            case h.SelfieWithAggregationMetrics:
+            case u.SelfieWithAggregationMetrics:
                 return this.wasmModule.WorkflowType.SelfieWithAggregationMetrics;
-            case h.SelfieWithQualityMetrics:
+            case u.SelfieWithQualityMetrics:
                 return this.wasmModule.WorkflowType.SelfieWithQualityMetrics;
-            case h.OnDeviceSelfieWorkflow:
+            case u.OnDeviceSelfieWorkflow:
                 return this.wasmModule.WorkflowType.OnDeviceSelfieWorkflow;
             default:
                 throw Error("Unknown pipeline type");
@@ -714,28 +668,28 @@ var L = class l {
     pipelineTypeFromWasmEnum(l) {
         switch (l) {
             case this.wasmModule.WorkflowType.IdBlurGlareWorkflow:
-                return h.IdBlurGlarePipeline;
+                return u.IdBlurGlarePipeline;
             case this.wasmModule.WorkflowType.IdBarcodeAndTextQualityWorkflow:
-                return h.IdBarcodeAndTextQualityPipeline;
+                return u.IdBarcodeAndTextQualityPipeline;
             case this.wasmModule.WorkflowType.IdVideoSelfieWorkflow:
-                return h.IdVideoSelfiePipeline;
+                return u.IdVideoSelfiePipeline;
             case this.wasmModule.WorkflowType.SelfieWithAggregationMetrics:
-                return h.SelfieWithAggregationMetrics;
+                return u.SelfieWithAggregationMetrics;
             case this.wasmModule.WorkflowType.SelfieWithQualityMetrics:
-                return h.SelfieWithQualityMetrics;
+                return u.SelfieWithQualityMetrics;
             case this.wasmModule.WorkflowType.OnDeviceSelfieWorkflow:
-                return h.OnDeviceSelfieWorkflow;
+                return u.OnDeviceSelfieWorkflow;
             default:
                 throw Error("Unknown pipeline type");
         }
     }
     IdCaptureModelTypeToWasmEnum(l) {
         switch (l) {
-            case u.IdCaptureV1x:
+            case o.IdCaptureV1x:
                 return this.wasmModule.IdCaptureModelType.IdCaptureV1x;
-            case u.IdCaptureV2x:
+            case o.IdCaptureV2x:
                 return this.wasmModule.IdCaptureModelType.IdCaptureV2x;
-            case u.IdCaptureV3x:
+            case o.IdCaptureV3x:
                 return this.wasmModule.IdCaptureModelType.IdCaptureV3x;
             default:
                 throw Error("Unknown Id Capture model type");
@@ -744,11 +698,11 @@ var L = class l {
     IdCaptureModelTypeFromWasmEnum(l) {
         switch (l) {
             case this.wasmModule.IdCaptureModelType.IdCaptureV1x:
-                return u.IdCaptureV1x;
+                return o.IdCaptureV1x;
             case this.wasmModule.IdCaptureModelType.IdCaptureV2x:
-                return u.IdCaptureV2x;
+                return o.IdCaptureV2x;
             case this.wasmModule.IdCaptureModelType.IdCaptureV3x:
-                return u.IdCaptureV3x;
+                return o.IdCaptureV3x;
             default:
                 throw Error("Unknown Id Capture model type");
         }
@@ -757,8 +711,8 @@ var L = class l {
         if (!this.isInitialized()) throw Error(l);
     }
 }.getInstance();
-let I = ["selfie", "idCapture"],
-    z = {
+let Y = ["selfie", "idCapture"],
+    T = {
         selfie: [
             "selfie_bf_angles_192x192_opset9_fp16.ortmodelv2",
             "face_attributes_v1_3_fp16.ortmodelv2",
@@ -782,100 +736,100 @@ let I = ["selfie", "idCapture"],
         ],
         videoSelfieId: ["id_capture_2_01_fp16.ortmodelv2"],
     },
-    w = "idle",
-    R = null,
-    S = null,
-    C = [],
-    x = null,
-    g = [];
-function D(l) {
+    V = "idle",
+    L = null,
+    I = null,
+    z = [],
+    w = null,
+    R = [];
+function S(l) {
     let t = l.lastIndexOf("/");
     return -1 === t ? "models" : `${l.substring(0, t)}/models`;
 }
-function j(l, t, d) {
+function C(l, t, d) {
     let i = new Map();
     for (let e of l) {
         let l = (function (l) {
             switch (l) {
                 case "selfie":
-                    return h.SelfieWithQualityMetrics;
+                    return u.SelfieWithQualityMetrics;
                 case "onDeviceSelfie":
-                    return h.OnDeviceSelfieWorkflow;
+                    return u.OnDeviceSelfieWorkflow;
                 case "idCapture":
-                    return h.IdBlurGlarePipeline;
+                    return u.IdBlurGlarePipeline;
                 case "videoSelfie":
-                    return h.SelfieWithAggregationMetrics;
+                    return u.SelfieWithAggregationMetrics;
                 case "videoSelfieId":
-                    return h.IdVideoSelfiePipeline;
+                    return u.IdVideoSelfiePipeline;
                 default:
                     throw Error(`Unknown pipeline: ${l}`);
             }
         })(e);
         if (!i.has(l)) {
-            let c = (d?.[e] ?? z[e]).map((l) => `${t}/${l}`);
+            let c = (d?.[e] ?? T[e]).map((l) => `${t}/${l}`);
             i.set(l, c);
         }
     }
     return i;
 }
-async function U(l) {
-    let t = l.pipelines ?? [...I],
-        d = l.modelsBasePath ?? D(l.wasmPath);
-    if ("loading" === w && R) {
-        let d = R;
-        return 0 === t.filter((l) => !g.includes(l)).length ? d : d.then(() => U(l));
+async function x(l) {
+    let t = l.pipelines ?? [...Y],
+        d = l.modelsBasePath ?? S(l.wasmPath);
+    if ("loading" === V && L) {
+        let d = L;
+        return 0 === t.filter((l) => !R.includes(l)).length ? d : d.then(() => x(l));
     }
-    if ("ready" === w) {
-        if (0 === t.filter((l) => !C.includes(l)).length) return;
-        if (!x) throw Error("Cannot add pipelines: original warmup config not available");
+    if ("ready" === V) {
+        if (0 === t.filter((l) => !z.includes(l)).length) return;
+        if (!w) throw Error("Cannot add pipelines: original warmup config not available");
         if (
-            x.wasmPath !== l.wasmPath ||
-            x.glueCodePath !== l.glueCodePath ||
-            (x.wasmSimdPath ?? x.wasmPath) !== (l.wasmSimdPath ?? l.wasmPath) ||
-            (x.glueCodeSimdPath ?? "") !== (l.glueCodeSimdPath ?? "") ||
-            (x.useSimd ?? !0) !== (l.useSimd ?? !0)
+            w.wasmPath !== l.wasmPath ||
+            w.glueCodePath !== l.glueCodePath ||
+            (w.wasmSimdPath ?? w.wasmPath) !== (l.wasmSimdPath ?? l.wasmPath) ||
+            (w.glueCodeSimdPath ?? "") !== (l.glueCodeSimdPath ?? "") ||
+            (w.useSimd ?? !0) !== (l.useSimd ?? !0)
         )
             throw Error(
                 "Cannot add pipelines: WASM config mismatch. Use same wasmPath, glueCodePath, and useSimd settings.",
             );
-        let d = [...new Set([...C, ...t])];
+        let d = [...new Set([...z, ...t])];
         return (
-            (w = "loading"),
-            (g = d),
-            (S = null),
-            (R = (async () => {
+            (V = "loading"),
+            (R = d),
+            (I = null),
+            (L = (async () => {
                 try {
-                    let l = j(d, x.modelsBasePath ?? D(x.wasmPath), x.pipelineModels);
-                    (await L.initialize(
-                        x.wasmPath,
-                        x.wasmSimdPath ?? x.wasmPath,
-                        x.glueCodePath,
-                        x.glueCodeSimdPath ?? "",
-                        x.useSimd ?? !0,
+                    let l = C(d, w.modelsBasePath ?? S(w.wasmPath), w.pipelineModels);
+                    (await y.initialize(
+                        w.wasmPath,
+                        w.wasmSimdPath ?? w.wasmPath,
+                        w.glueCodePath,
+                        w.glueCodeSimdPath ?? "",
+                        w.useSimd ?? !0,
                         "",
                         l,
                     ),
-                        await L.loadModels(),
-                        await L.initializePipelines(),
-                        (w = "ready"),
-                        (C = d),
-                        (x = { ...x, pipelines: d }),
-                        (R = null));
+                        await y.loadModels(),
+                        await y.initializePipelines(),
+                        (V = "ready"),
+                        (z = d),
+                        (w = { ...w, pipelines: d }),
+                        (L = null));
                 } catch (l) {
-                    throw ((w = "error"), (S = l instanceof Error ? l : Error(String(l))), (R = null), (g = []), S);
+                    throw ((V = "error"), (I = l instanceof Error ? l : Error(String(l))), (L = null), (R = []), I);
                 }
             })())
         );
     }
     return (
-        (w = "loading"),
-        (g = [...t]),
-        (S = null),
-        (R = (async () => {
+        (V = "loading"),
+        (R = [...t]),
+        (I = null),
+        (L = (async () => {
             try {
-                let i = j(t, d, l.pipelineModels);
-                (void 0 !== l.onDeviceMode && L.setOnDeviceMode(l.onDeviceMode),
-                    await L.initialize(
+                let i = C(t, d, l.pipelineModels);
+                (void 0 !== l.onDeviceMode && y.setOnDeviceMode(l.onDeviceMode),
+                    await y.initialize(
                         l.wasmPath,
                         l.wasmSimdPath ?? l.wasmPath,
                         l.glueCodePath,
@@ -884,22 +838,19 @@ async function U(l) {
                         "",
                         i,
                     ),
-                    await L.loadModels(),
-                    await L.initializePipelines(),
-                    (w = "ready"),
-                    (C = [...t]),
-                    (x = { ...l, pipelines: t }),
-                    (R = null));
+                    await y.loadModels(),
+                    await y.initializePipelines(),
+                    (V = "ready"),
+                    (z = [...t]),
+                    (w = { ...l, pipelines: t }),
+                    (L = null));
             } catch (l) {
-                throw ((w = "error"), (S = l instanceof Error ? l : Error(String(l))), (R = null), (g = []), S);
+                throw ((V = "error"), (I = l instanceof Error ? l : Error(String(l))), (L = null), (R = []), I);
             }
         })())
     );
 }
-function F(l) {
-    L.setOnDeviceMode(l);
-}
-var O = class {
+var g = class {
         constructor(l) {
             ((this._isInitialized = !1), (this.pipelineType = l));
         }
@@ -912,19 +863,19 @@ var O = class {
         }
         async initializeBase(l, t) {
             if (this._isInitialized) return;
-            let d = { isReady: "ready" === w, isLoading: "loading" === w, error: S ?? void 0, loadedPipelines: [...C] };
-            if (d.isLoading || "ready" === w || d.error)
-                await ("ready" === w
+            let d = { isReady: "ready" === V, isLoading: "loading" === V, error: I ?? void 0, loadedPipelines: [...z] };
+            if (d.isLoading || "ready" === V || d.error)
+                await ("ready" === V
                     ? Promise.resolve()
-                    : "loading" === w && R
-                      ? R
-                      : "error" === w
-                        ? Promise.reject(S ?? Error("WASM initialization failed"))
+                    : "loading" === V && L
+                      ? L
+                      : "error" === V
+                        ? Promise.reject(I ?? Error("WASM initialization failed"))
                         : Promise.reject(Error("WASM warmup was not started. Call warmupWasm() first.")));
             else {
                 if (!l.wasmPath || !l.glueCodePath)
                     throw Error("WASM path and glue code path are required. Call warmupWasm() first.");
-                await U({
+                await x({
                     wasmPath: l.wasmPath,
                     wasmSimdPath: l.wasmSimdPath,
                     glueCodePath: l.glueCodePath,
@@ -943,19 +894,19 @@ var O = class {
             this.ensureInitialized();
             let t = this.getPipelineType();
             return (
-                await L.allocateImageBuffers(l.width, l.height),
-                await L.handleDetectionCallAndUpdateState(t),
-                await L.process(l, t)
+                await y.allocateImageBuffers(l.width, l.height),
+                await y.handleDetectionCallAndUpdateState(t),
+                await y.process(l, t)
             );
         }
         reset() {
-            this._isInitialized && void 0 !== this.pipelineType && L.resetPipeline(this.pipelineType);
+            this._isInitialized && void 0 !== this.pipelineType && y.resetPipeline(this.pipelineType);
         }
         async dispose() {
             (this.reset(), (this._isInitialized = !1));
         }
     },
-    J = class l extends O {
+    D = class l extends g {
         static async getInstance() {
             return l.instance
                 ? l.instance
@@ -981,87 +932,138 @@ var O = class {
             throw Error("WasmUtilProvider does not support frame processing. Use encryptImage() instead.");
         }
         encryptImage(l) {
-            return (this.ensureInitialized(), L.ens(l));
+            return (this.ensureInitialized(), y.ens(l));
         }
         setSdkVersion(l) {
-            (this.ensureInitialized(), L.setSdkVersion(l));
+            (this.ensureInitialized(), y.setSdkVersion(l));
         }
         setSdkPlatform(l) {
-            (this.ensureInitialized(), L.setSdkPlatform(l));
+            (this.ensureInitialized(), y.setSdkPlatform(l));
         }
         setDeviceInfo(l, t = !0) {
-            (this.ensureInitialized(), L.setDeviceInfo(l, t));
+            (this.ensureInitialized(), y.setDeviceInfo(l, t));
         }
         setBrowserInfo(l, t = !0) {
-            (this.ensureInitialized(), L.setBrowserInfo(l, t));
+            (this.ensureInitialized(), y.setBrowserInfo(l, t));
         }
         setCameraInfo(l, t = !0) {
-            (this.ensureInitialized(), L.setCameraInfo(l, t));
+            (this.ensureInitialized(), y.setCameraInfo(l, t));
         }
         setMotionStatus(l) {
-            (this.ensureInitialized(), L.setMotionStatus(l));
+            (this.ensureInitialized(), y.setMotionStatus(l));
         }
         setBackgroundMode(l) {
-            (this.ensureInitialized(), L.setBackgroundMode(l));
+            (this.ensureInitialized(), y.setBackgroundMode(l));
         }
         setOnDeviceMode(l) {
-            (this.ensureInitialized(), L.setOnDeviceMode(l));
+            (this.ensureInitialized(), y.setOnDeviceMode(l));
         }
         setZc(l) {
-            (this.ensureInitialized(), L.setZc(l));
+            (this.ensureInitialized(), y.setZc(l));
         }
         setInspectorOpened(l) {
-            (this.ensureInitialized(), L.setInspectorOpened(l));
+            (this.ensureInitialized(), y.setInspectorOpened(l));
         }
         getInspectorOpened() {
-            return L.getInspectorOpened();
+            return y.getInspectorOpened();
         }
         async setProductionMode(l) {
-            (this.ensureInitialized(), await L.setProductionMode(l));
+            (this.ensureInitialized(), await y.setProductionMode(l));
         }
         getMetadata() {
-            return (this.ensureInitialized(), L.getMetadata());
+            return (this.ensureInitialized(), y.getMetadata());
         }
         async analyzeFrame(l) {
-            (this.ensureInitialized(), await L.analyzeFrame(l));
+            (this.ensureInitialized(), await y.analyzeFrame(l));
         }
         getCheck() {
-            return (this.ensureInitialized(), L.getCheck());
+            return (this.ensureInitialized(), y.getCheck());
         }
         getPipelineState() {
-            return (this.ensureInitialized(), L.getPipelineState());
+            return (this.ensureInitialized(), y.getPipelineState());
         }
         estimatePerformance() {
-            return (this.ensureInitialized(), L.estimatePerformance());
+            return (this.ensureInitialized(), y.estimatePerformance());
         }
         isVirtualCamera(l) {
-            return (this.ensureInitialized(), L.isVirtualCamera(l));
+            return (this.ensureInitialized(), y.isVirtualCamera(l));
         }
         async prc() {
-            (this.ensureInitialized(), await L.prc());
+            (this.ensureInitialized(), await y.prc());
         }
         async poc(l) {
-            (this.ensureInitialized(), await L.poc(l));
+            (this.ensureInitialized(), await y.poc(l));
         }
         async rsp() {
-            (this.ensureInitialized(), await L.rsp());
+            (this.ensureInitialized(), await y.rsp());
         }
         ssl() {
-            (this.ensureInitialized(), L.ssl());
+            (this.ensureInitialized(), y.ssl());
         }
         stl() {
-            (this.ensureInitialized(), L.stl());
+            (this.ensureInitialized(), y.stl());
         }
         osv() {
-            (this.ensureInitialized(), L.osv());
+            (this.ensureInitialized(), y.osv());
         }
         oev() {
-            (this.ensureInitialized(), L.oev());
+            (this.ensureInitialized(), y.oev());
         }
         ckvcks(l) {
-            (this.ensureInitialized(), L.ckvcks(l));
+            (this.ensureInitialized(), y.ckvcks(l));
         }
         async getVersions() {
-            return (this.ensureInitialized(), L.getVersions());
+            return (this.ensureInitialized(), y.getVersions());
         }
     };
+d.d(
+    t,
+    {},
+    {
+        a: y,
+        c: async function (l, t, d, i, e) {
+            if (!G)
+                return (
+                    p ||
+                    (p = (async () => {
+                        try {
+                            let { wasmModule: c } = await m({
+                                wasmPath: l,
+                                wasmSimdPath: t,
+                                glueCodePath: d,
+                                glueCodeSimdPath: i || void 0,
+                                useSimd: e,
+                            });
+                            if ("function" != typeof c.WebClient)
+                                throw Error(
+                                    "WASM module does not expose a WebClient class. Update webLib.wasm to a build that includes WebClient.",
+                                );
+                            G = new c.WebClient();
+                        } catch (l) {
+                            throw ((p = null), l);
+                        }
+                    })())
+                );
+        },
+        d: u,
+        f: o,
+        i: x,
+        l: function (l) {
+            r = l;
+        },
+        n: g,
+        o: W,
+        p: i,
+        r: function (l) {
+            y.setOnDeviceMode(l);
+        },
+        s: M,
+        t: D,
+        u: async function (l, t, d, i, e) {
+            let c = X();
+            (c.resetSessionState?.(), c.setDefaultHeaders?.(i), await h(N, () => c.createApi(l, t, e, d), !1));
+            let a = c.getRequestResult(-1);
+            if (a.hasError) throw new W(a.errorMessage || "WebClient handshake failed", a.statusCode, a.result);
+        },
+    },
+);

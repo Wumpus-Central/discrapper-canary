@@ -1,21 +1,21 @@
-(n.d(t, { default: () => G }), n(321073));
+n(321073);
 var i = n(477900),
     s = n(582128),
     l = n(91871),
     a = n.n(l),
-    r = n(17928),
+    r = n(855986),
     d = n(189213),
     c = n(683438),
     o = n(834730),
     u = n(939249),
     m = n(398590),
-    h = n(548118),
+    h = n(682163),
     g = n(976860),
     x = n(71393),
     j = n(711014),
     y = n(473145),
     p = n(652215),
-    f = n(105292),
+    f = n(792996),
     v = n(150319);
 function C(e) {
     let { setQuery: t, query: n } = e;
@@ -97,20 +97,31 @@ function b(e) {
         ],
     });
 }
-function G(e) {
-    let { onClose: t, onSelectGuild: n, transitionState: l, isTransfer: a = !1, selectedSlotGuilds: r } = e,
-        [c, o] = s.useState("");
-    async function u() {
-        await t();
-    }
-    let m = a ? f.intl.string(f.t.IB13DV) : f.intl.string(f.t.cQYceV);
-    return (0, i.jsx)(d.a, {
-        transitionState: l,
-        onClose: u,
-        size: "md",
-        title: m,
-        input: (0, i.jsx)(C, { query: c, setQuery: o }),
-        actions: [],
-        children: (0, i.jsx)(b, { onClose: t, onSelectGuild: n, query: c, isTransfer: a, selectedSlotGuilds: r }),
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        default: function (e) {
+            let { onClose: t, onSelectGuild: n, transitionState: l, isTransfer: a = !1, selectedSlotGuilds: r } = e,
+                [c, o] = s.useState(""),
+                u = a ? f.intl.string(f.t.IB13DV) : f.intl.string(f.t.cQYceV);
+            return (0, i.jsx)(d.a, {
+                transitionState: l,
+                onClose: async function () {
+                    await t();
+                },
+                size: "md",
+                title: u,
+                input: (0, i.jsx)(C, { query: c, setQuery: o }),
+                actions: [],
+                children: (0, i.jsx)(b, {
+                    onClose: t,
+                    onSelectGuild: n,
+                    query: c,
+                    isTransfer: a,
+                    selectedSlotGuilds: r,
+                }),
+            });
+        },
+    },
+);

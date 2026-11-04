@@ -1,4 +1,3 @@
-_.d(I, { Di: () => L, TA: () => O });
 var T,
     L =
         (((T = {}).STUDENT_PROMPT = "STUDENT_PROMPT"),
@@ -10,4 +9,4 @@ var T,
         (T.EMAIL_CONFIRMATION = "EMAIL_CONFIRMATION"),
         (T.EMAIL_WAITLIST = "EMAIL_WAITLIST"),
         T);
-let O = "884924873015689226";
+_.d(I, {}, { Di: L, TA: "884924873015689226" });

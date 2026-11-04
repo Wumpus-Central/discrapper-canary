@@ -1,11 +1,16 @@
-n.d(t, { K: () => i });
-class i {
-    promise;
-    resolve;
-    reject;
-    constructor() {
-        this.promise = new Promise((e, t) => {
-            ((this.resolve = e), (this.reject = t));
-        });
-    }
-}
+n.d(
+    t,
+    {},
+    {
+        K: class {
+            promise;
+            resolve;
+            reject;
+            constructor() {
+                this.promise = new Promise((e, t) => {
+                    ((this.resolve = e), (this.reject = t));
+                });
+            }
+        },
+    },
+);

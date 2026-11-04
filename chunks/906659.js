@@ -1,10 +1,9 @@
-_.exports = {
-    XG: "scroller__629e4",
-    gy: "unread__629e4 " + t(146916).kL,
-    bu: "unreadBar__629e4",
-    di: "unreadBottom__629e4 unread__629e4 " + t(146916).kL,
-    Eo: "positionedContainer__629e4",
-    Vq: "unreadTop__629e4 unread__629e4 " + t(146916).kL,
-    qz: "voiceUserSummary__629e4",
-    ts: "sectionDivider__629e4",
+e.exports = {
+    XG: "scroller_ysO7Gy",
+    bu: "unreadBar_ysO7Gy",
+    di: "unreadBottom_ysO7Gy unread_ysO7Gy " + _(146916).kL,
+    Eo: "positionedContainer_ysO7Gy",
+    Vq: "unreadTop_ysO7Gy unread_ysO7Gy " + _(146916).kL,
+    qz: "voiceUserSummary_ysO7Gy",
+    ts: "sectionDivider_ysO7Gy",
 };

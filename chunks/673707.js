@@ -1,11 +1,10 @@
-t.exports = {
-    kL: "container_a2844c",
-    VN: "close_a2844c",
-    zc: "iconContainer_a2844c",
-    Kk: "icon_a2844c",
-    Qq: "text_a2844c",
-    wx: "header_a2844c text_a2844c",
-    rf: "body_a2844c text_a2844c",
-    EZ: "invite_a2844c",
-    x6: "inviteDetail_a2844c",
+o.exports = {
+    kL: "container_9Joo3U",
+    VN: "close_9Joo3U",
+    zc: "iconContainer_9Joo3U",
+    Kk: "icon_9Joo3U",
+    wx: "header_9Joo3U text_9Joo3U",
+    rf: "body_9Joo3U text_9Joo3U",
+    EZ: "invite_9Joo3U",
+    x6: "inviteDetail_9Joo3U",
 };

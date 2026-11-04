@@ -1,4 +1,3 @@
-d.d(t, { n: () => n, r: () => Z, t: () => s });
 var i = d(41851),
     e = d(528239);
 let c = [];
@@ -9,12 +8,18 @@ async function a(l) {
         return;
     }
 }
-async function s(l) {
-    (0, i.r)() ? await a(l) : c.push(l);
-}
-function n() {
-    if ((0, i.r)()) for (let l of c.splice(0)) a(l);
-}
-function Z() {
-    c.length = 0;
-}
+d.d(
+    t,
+    {},
+    {
+        n: function () {
+            if ((0, i.r)()) for (let l of c.splice(0)) a(l);
+        },
+        r: function () {
+            c.length = 0;
+        },
+        t: async function (l) {
+            (0, i.r)() ? await a(l) : c.push(l);
+        },
+    },
+);

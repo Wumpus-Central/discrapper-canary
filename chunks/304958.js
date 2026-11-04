@@ -1,7 +1,7 @@
 e.exports = {
-    kL: "container_b39700",
-    O3: "barRow_b39700",
-    hr: "progressBar_b39700",
-    WD: "labels_b39700",
-    w5: "tierIcon_b39700",
+    kL: "container_GNAYPB",
+    O3: "barRow_GNAYPB",
+    hr: "progressBar_GNAYPB",
+    WD: "labels_GNAYPB",
+    w5: "tierIcon_GNAYPB",
 };

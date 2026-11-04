@@ -1,7 +1,7 @@
 e.exports = {
-    vK: "banner_ec75b3",
-    OQ: "ctaContainer_ec75b3",
-    x6: "button_ec75b3",
-    Qs: "content_ec75b3",
-    wx: "header_ec75b3",
+    vK: "banner_FNohsR",
+    OQ: "ctaContainer_FNohsR",
+    x6: "button_FNohsR",
+    Qs: "content_FNohsR",
+    wx: "header_FNohsR",
 };

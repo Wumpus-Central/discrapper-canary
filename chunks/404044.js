@@ -1,4 +1,3 @@
-n.d(t, { A: () => c });
 var i = n(439372),
     r = n(723702),
     a = n(536194),
@@ -8,7 +7,7 @@ var i = n(439372),
 class d extends i.A {
     actions = { AUDIO_SET_MODE: (e) => this.handleAudioSetMode(e) };
     isEnabled() {
-        return (0, r.isDesktop)() && (0, r.isMac)() && !a.P.isDiscordTestSet();
+        return (0, r.xl)() && (0, r.cX)() && !a.P.isDiscordTestSet();
     }
     handleAudioSetMode(e) {
         let { mode: t } = e;
@@ -16,3 +15,4 @@ class d extends i.A {
     }
 }
 let c = new d();
+n.d(t, {}, { A: c });

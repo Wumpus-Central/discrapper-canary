@@ -1,4 +1,3 @@
-n.d(t, { X: () => r });
 var i,
     r =
         (((i = {}).DEBUG = "DEBUG"),
@@ -6,3 +5,4 @@ var i,
         (i.OPTIONAL = "OPTIONAL"),
         (i.OPTIONAL_DEFAULT = "OPTIONAL_DEFAULT"),
         i);
+n.d(t, {}, { X: r });

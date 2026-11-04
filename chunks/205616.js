@@ -1,8 +1,8 @@
 e.exports = {
-    dm: "monitor__7eeec",
-    MQ: "overflowContainer__7eeec",
-    Qq: "text__7eeec",
-    DD: "title__7eeec",
-    TS: "rate__7eeec",
-    CD: "sparkChart__7eeec",
+    dm: "monitor_YmgG4G",
+    MQ: "overflowContainer_YmgG4G",
+    Qq: "text_YmgG4G",
+    DD: "title_YmgG4G",
+    TS: "rate_YmgG4G",
+    CD: "sparkChart_YmgG4G",
 };

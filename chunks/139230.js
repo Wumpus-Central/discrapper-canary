@@ -1,7 +1,7 @@
-_.exports = {
-    y_: "backForwardButtons__63abb",
-    x6: "button__63abb",
-    aX: "back__63abb",
-    sY: "forward__63abb",
-    r9: "disabled__63abb",
+r.exports = {
+    y_: "backForwardButtons_nS9Yqn",
+    x6: "button_nS9Yqn",
+    aX: "back_nS9Yqn",
+    sY: "forward_nS9Yqn",
+    r9: "disabled_nS9Yqn",
 };

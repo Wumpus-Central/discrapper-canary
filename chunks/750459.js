@@ -1,4 +1,3 @@
-n.d(t, { x: () => r });
 var i,
     r =
         (((i = {})[(i.UNSET = 0)] = "UNSET"),
@@ -25,3 +24,4 @@ var i,
         (i[(i.SEAT_21 = 21)] = "SEAT_21"),
         (i[(i.SEAT_22 = 22)] = "SEAT_22"),
         i);
+n.d(t, {}, { x: r });

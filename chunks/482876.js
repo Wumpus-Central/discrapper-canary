@@ -1,6 +1,5 @@
-n.d(t, { J: () => l, j: () => o });
-var i = n(636537),
-    r = n(280450),
+var i = n(620632),
+    r = n(46653),
     a = n(652215);
 function s(e) {
     return {
@@ -28,13 +27,24 @@ function s(e) {
         outageBannerMessage: e.outage_banner_message ?? null,
     };
 }
-async function l() {
-    return s((await i.Bo.get({ url: a.Rsh.AGE_VERIFICATION_METHODS_V2, rejectWithError: !0 })).body);
-}
-async function o() {
-    let e = r.default.getSuspendedUserToken();
-    return s(
-        (await i.Bo.post({ url: a.Rsh.AGE_VERIFICATION_SUSPENDED_METHODS_V2, body: { token: e }, rejectWithError: !0 }))
-            .body,
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        J: async function () {
+            return s((await i.Bo.get({ url: a.Rsh.AGE_VERIFICATION_METHODS_V2, rejectWithError: !0 })).body);
+        },
+        j: async function () {
+            let e = r.default.getSuspendedUserToken();
+            return s(
+                (
+                    await i.Bo.post({
+                        url: a.Rsh.AGE_VERIFICATION_SUSPENDED_METHODS_V2,
+                        body: { token: e },
+                        rejectWithError: !0,
+                    })
+                ).body,
+            );
+        },
+    },
+);

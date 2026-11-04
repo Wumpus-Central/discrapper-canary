@@ -1,1 +1,1 @@
-_.exports = { Kk: "icon__1bb46 " + a(307126).Kk, P0: "iconWrapper__1bb46", UU: "name__1bb46" };
+r.exports = { Kk: "icon_cuLZqL " + a(307126).Kk, P0: "iconWrapper_cuLZqL", UU: "name_cuLZqL" };

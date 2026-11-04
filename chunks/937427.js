@@ -1,6 +1,5 @@
 let i;
-n.d(t, { A: () => l });
-var r = n(17928),
+var r = n(855986),
     a = n(73153);
 class s extends r.Ay.Store {
     static displayName = "StorefrontPromotionOverrideStore";
@@ -16,3 +15,4 @@ let l = new s(a.h, {
         i = e.promotionIdOverride;
     },
 });
+n.d(t, {}, { A: l });

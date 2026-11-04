@@ -1,4 +1,3 @@
-a.d(i, { A: () => w });
 var s = a(477900),
     t = a(582128),
     n = a(503698),
@@ -47,3 +46,4 @@ let w = t.memo(function (e) {
         preview: b,
     });
 });
+a.d(i, {}, { A: w });

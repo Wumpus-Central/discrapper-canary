@@ -1,4 +1,3 @@
-n.d(t, { h: () => r });
 var i,
     r =
         (((i = {}).WAITING = "WAITING"),
@@ -6,3 +5,4 @@ var i,
         (i.FAIL = "FAIL"),
         (i.COMPLETED = "COMPLETED"),
         i);
+n.d(t, {}, { h: r });

@@ -1,0 +1,64 @@
+.header_OBZokR {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-16);
+    padding-top: var(--space-64);
+    text-align: center
+}
+
+.headerImage_OBZokR {
+    margin: -45px auto;
+    width: 85px
+}
+
+.title_OBZokR {
+    padding-bottom: var(--space-4)
+}
+
+.body_OBZokR,
+.title_OBZokR {
+    text-align: center
+}
+
+.content_OBZokR {
+    flex-direction: column;
+    padding: var(--space-16);
+    padding-top: 0
+}
+
+.content_OBZokR,
+.guildInfo_OBZokR {
+    align-items: center;
+    display: flex
+}
+
+.guildName_OBZokR {
+    margin-inline-start: var(--space-12)
+}
+
+.buttonGroup_OBZokR {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    width: 100%
+}
+
+.leave_OBZokR {
+    order: -1
+}
+
+.infoGroup_OBZokR {
+    border-radius: var(--radius-sm);
+    width: 100%
+}
+
+.infoRow_OBZokR {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-16);
+    padding: var(--space-16)
+}
+
+/*# sourceMappingURL=488188a13ad06eeb.css.map*/

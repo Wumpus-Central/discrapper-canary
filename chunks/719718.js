@@ -1,27 +1,26 @@
-a.d(t, { A: () => v, T: () => o });
-var s,
-    i = a(127639),
-    r = a(17928),
+var i,
+    r = a(127639),
+    s = a(855986),
     n = a(73153),
     c = a(287809),
     d = a(474090),
     l = a(817379),
     o =
-        (((s = {})[(s.INIT = 0)] = "INIT"),
-        (s[(s.FETCHING = 1)] = "FETCHING"),
-        (s[(s.SUCCESS = 2)] = "SUCCESS"),
-        (s[(s.ERROR = 3)] = "ERROR"),
-        s);
+        (((i = {})[(i.INIT = 0)] = "INIT"),
+        (i[(i.FETCHING = 1)] = "FETCHING"),
+        (i[(i.SUCCESS = 2)] = "SUCCESS"),
+        (i[(i.ERROR = 3)] = "ERROR"),
+        i);
 let u = { isMuted: !1, progress: null },
     h = {},
     f = { ...u },
-    _ = null,
     b = null,
+    _ = null,
     p = null,
     x = 0,
     m = null,
     g = !1;
-class A extends r.Ay.PersistedStore {
+class A extends s.Ay.PersistedStore {
     static displayName = "Checkpoint2026Store";
     static persistKey = "Checkpoint2026Store";
     static migrations = [(e) => ({ ...e, progress: null })];
@@ -35,10 +34,10 @@ class A extends r.Ay.PersistedStore {
         return f.isMuted;
     }
     get stats() {
-        return _;
+        return b;
     }
     get globalStats() {
-        return b;
+        return _;
     }
     get character() {
         return p;
@@ -67,17 +66,17 @@ let v = new A(n.h, {
         x = 1;
     },
     CHECKPOINT_FETCH_SUCCESS: function (e) {
-        ((_ = e.stats),
-            (b = e.globalStats),
+        ((b = e.stats),
+            (_ = e.globalStats),
             (p = e.character),
             (x = 2),
             null == p && null != f.progress
                 ? ((m = (function (e) {
                       let t = (0, d.ki)(c.default.getCurrentUser()),
                           a = {};
-                      for (let s of Object.values(i.V)) {
-                          let i = e[s];
-                          null == i || (0, l.tS)(s, i, { stats: _, hasNitro: t, savedCharacter: p }) || (a[s] = i);
+                      for (let i of Object.values(r.V)) {
+                          let r = e[i];
+                          null == r || (0, l.tS)(i, r, { stats: b, hasNitro: t, savedCharacter: p }) || (a[i] = r);
                       }
                       return a;
                   })(f.progress.selectedCharacterTraits)),
@@ -106,11 +105,12 @@ let v = new A(n.h, {
     CHECKPOINT_SAVE_PROGRESS: function (e) {
         let { stage: t } = e,
             a = m ?? p ?? h,
-            { progress: s } = f;
-        if (s?.stage === t && s.selectedCharacterTraits === a) return !1;
+            { progress: i } = f;
+        if (i?.stage === t && i.selectedCharacterTraits === a) return !1;
         f.progress = { stage: t, selectedCharacterTraits: a };
     },
     LOGOUT: function () {
-        ((f = { ...u }), (_ = null), (b = null), (p = null), (x = 0), (m = null), (g = !1));
+        ((f = { ...u }), (b = null), (_ = null), (p = null), (x = 0), (m = null), (g = !1));
     },
 });
+a.d(t, {}, { A: v, T: o });

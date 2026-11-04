@@ -1,10 +1,10 @@
 t.exports = {
-    _B: "attachmentChip__6fe49",
-    gJ: "attachmentThumb__6fe49",
-    Wd: "attachmentChipBody__6fe49",
-    Rr: "attachmentName__6fe49",
-    ND: "attachmentChipCompact__6fe49",
-    w8: "attachmentChipButton__6fe49",
-    Rk: "attachmentSpinner__6fe49",
-    o1: "attachmentRemoveButton__6fe49",
+    _B: "attachmentChip_RIbQ1J",
+    gJ: "attachmentThumb_RIbQ1J",
+    Wd: "attachmentChipBody_RIbQ1J",
+    Rr: "attachmentName_RIbQ1J",
+    ND: "attachmentChipCompact_RIbQ1J",
+    w8: "attachmentChipButton_RIbQ1J",
+    Rk: "attachmentSpinner_RIbQ1J",
+    o1: "attachmentRemoveButton_RIbQ1J",
 };

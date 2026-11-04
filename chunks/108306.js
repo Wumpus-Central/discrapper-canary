@@ -1,7 +1,7 @@
-d.exports = {
-    fT: "defaultColor__4bd52",
-    DN: "lineClamp1__4bd52",
-    ED: "lineClamp2Plus__4bd52",
-    rb: "selectable__4bd52",
-    w9: "tabularNumbers__4bd52",
+o.exports = {
+    fT: "defaultColor_MMUIw6",
+    DN: "lineClamp1_MMUIw6",
+    ED: "lineClamp2Plus_MMUIw6",
+    rb: "selectable_MMUIw6",
+    w9: "tabularNumbers_MMUIw6",
 };

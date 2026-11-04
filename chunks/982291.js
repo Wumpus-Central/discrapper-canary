@@ -1,15 +1,14 @@
-n.d(t, { c: () => E });
 var l = n(477900),
     i = n(582128),
-    r = n(951305),
+    r = n(418200),
     a = n(166532),
     s = n(735305),
     o = n(169801),
     u = n(810498),
     c = n(295405),
-    d = n(75304),
+    d = n(998312),
     m = n(558620),
-    p = n(298208),
+    p = n(516106),
     h = n(818348);
 function C(e) {
     let { returnStep: t = a.pn.REVIEW, returnStepIfNoPaymentSources: n, paymentModalStepProps: r } = e,
@@ -51,13 +50,24 @@ function f(e) {
         }, [E, S, t]);
     return (0, l.jsx)(C, { paymentModalStepProps: e, returnStep: a.pn.REVIEW, returnStepIfNoPaymentSources: g });
 }
-function E(e) {
-    let { checkoutFlow: t, returnStep: n = a.pn.REVIEW, isGiftCustomizationEnabled: r, paymentModalStepProps: s } = e,
-        { isExpressCheckoutEnabled: o } = (0, p.t4)((e) => ({
-            isExpressCheckoutEnabled: e.getIsExpressCheckoutEnabled(),
-        })),
-        u = i.useMemo(() => (o ? a.pn.REVIEW : r ? a.pn.GIFT_CUSTOMIZATION : void 0), [r, o]);
-    return t === d.C.PREMIUM_CHECKOUT
-        ? (0, l.jsx)(f, { ...s })
-        : (0, l.jsx)(C, { paymentModalStepProps: s, returnStep: n, returnStepIfNoPaymentSources: u });
-}
+n.d(
+    t,
+    {},
+    {
+        c: function (e) {
+            let {
+                    checkoutFlow: t,
+                    returnStep: n = a.pn.REVIEW,
+                    isGiftCustomizationEnabled: r,
+                    paymentModalStepProps: s,
+                } = e,
+                { isExpressCheckoutEnabled: o } = (0, p.t4)((e) => ({
+                    isExpressCheckoutEnabled: e.getIsExpressCheckoutEnabled(),
+                })),
+                u = i.useMemo(() => (o ? a.pn.REVIEW : r ? a.pn.GIFT_CUSTOMIZATION : void 0), [r, o]);
+            return t === d.C.PREMIUM_CHECKOUT
+                ? (0, l.jsx)(f, { ...s })
+                : (0, l.jsx)(C, { paymentModalStepProps: s, returnStep: n, returnStepIfNoPaymentSources: u });
+        },
+    },
+);

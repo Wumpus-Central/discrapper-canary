@@ -1,4 +1,3 @@
-n.d(t, { _: () => u });
 var r,
     u =
         (((r = {}).NO_GAME_ONLINE = "no_game_online"),
@@ -10,3 +9,4 @@ var r,
         (r.EXPIRED_CREDENTIAL = "expired_credential"),
         (r.PROVIDER_UNAVAILABLE = "provider_unavailable"),
         r);
+n.d(t, {}, { _: u });

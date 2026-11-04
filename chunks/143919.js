@@ -1,8 +1,8 @@
 e.exports = {
-    N6: "detailsList__85e60",
-    uk: "nestedDetailsList__85e60",
-    J1: "detailsRow__85e60",
-    nd: "panel__85e60",
-    qS: "statusText__85e60",
-    $n: "inputWithButtonRow__85e60",
+    N6: "detailsList_yR64nU",
+    uk: "nestedDetailsList_yR64nU",
+    J1: "detailsRow_yR64nU",
+    nd: "panel_yR64nU",
+    qS: "statusText_yR64nU",
+    $n: "inputWithButtonRow_yR64nU",
 };

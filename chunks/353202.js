@@ -1,89 +1,95 @@
-(n.d(t, { A: () => m }), n(321073));
-var i = n(636537),
-    r = n(73153),
-    a = n(695870),
-    s = n(849335),
-    l = n(463347),
-    o = n(334465),
-    d = n(95701),
-    c = n(734057),
-    u = n(309010),
-    _ = n(652215),
-    E = n(746080);
-let A = {},
-    h = !1;
-function f() {
-    h ||
-        ((h = !0),
+n(321073);
+var i = n(620632),
+    r = n(73153);
+n(695870);
+var a = n(225123),
+    s = n(463347),
+    l = n(334465),
+    o = n(95701),
+    d = n(734057),
+    c = n(309010),
+    u = n(652215),
+    _ = n(746080);
+let E = {},
+    A = !1;
+function h() {
+    A ||
+        ((A = !0),
         r.h.subscribe("CONNECTION_OPEN", () => {
-            A = {};
-            let e = u.Ay.getChannelId(),
-                t = c.A.getChannel(e);
-            null != e && null == t && p(e);
+            E = {};
+            let e = c.Ay.getChannelId(),
+                t = d.A.getChannel(e);
+            null != e && null == t && I(e);
         }));
 }
-function I(e, t) {
-    let n = (0, d.UE)(e);
+function f(e, t) {
+    let n = (0, o.UE)(e);
     r.h.dispatch({ type: "THREAD_CREATE", channel: n, messageId: t });
 }
-function p(e) {
-    if (null == e || e === a.E || (0, E.jq)(e) || null != c.A.getChannel(e) || (f(), !s.A.isConnected()))
+function I(e) {
+    if (null == e || "131" === e || (0, _.jq)(e) || null != d.A.getChannel(e) || (h(), !a.A.isConnected()))
         return Promise.resolve();
-    let t = A[e];
+    let t = E[e];
     if (null != t)
         if ("LOADING" === t.type) return t.promise;
         else return Promise.resolve();
-    let n = (0, o.B)(location.pathname, {
-            path: _.BVt.CHANNEL(l.pv.guildId(), l.pv.channelId(), ":messageId"),
+    let n = (0, l.B)(location.pathname, {
+            path: u.BVt.CHANNEL(s.pv.guildId(), s.pv.channelId(), ":messageId"),
             exact: !0,
         }),
-        u = i.Bo.get({ url: _.Rsh.CHANNEL(e), rejectWithError: (0, i.fT)() })
+        c = i.Bo.get({ url: u.Rsh.CHANNEL(e), rejectWithError: (0, i.fT)() })
             .then((t) => {
                 let { body: i } = t;
-                ((A[e] = { type: "LOADED" }), d.Le.has(i.type) && I(i, n?.params?.messageId));
+                ((E[e] = { type: "LOADED" }), o.Le.has(i.type) && f(i, n?.params?.messageId));
             })
             .catch(() => {
-                ((A[e] = { type: "NOT_FOUND" }),
+                ((E[e] = { type: "NOT_FOUND" }),
                     r.h.dispatch({
                         type: "CHANNEL_DELETE",
                         channel: { id: e, guild_id: n?.params?.guildId, parent_id: void 0 },
                     }));
             });
-    return ((A[e] = { type: "LOADING", promise: u }), u);
+    return ((E[e] = { type: "LOADING", promise: c }), c);
 }
-let m = {
-    getLoadState: function (e) {
-        return A[e]?.type;
-    },
-    loadThread: p,
-    loadThreadsBulk: function (e) {
-        if ((f(), !s.A.isConnected())) return Promise.resolve();
-        let t = [],
-            n = [];
-        for (let i of e) {
-            if (i === a.E || (0, E.jq)(i) || null != c.A.getChannel(i)) continue;
-            let e = A[i];
-            if (null != e) {
-                "LOADING" === e.type && t.push(e.promise);
-                continue;
-            }
-            n.push(i);
-        }
-        if (0 === n.length) return Promise.all(t).then(() => void 0);
-        let r = i.Bo.post({ url: _.Rsh.THREADS_BULK, body: { thread_ids: n }, rejectWithError: (0, i.fT)() })
-            .then((e) => {
-                let { body: t } = e,
-                    i = new Set();
-                for (let e of t.items) {
-                    let t = e.id;
-                    (i.add(t), (A[t] = { type: "LOADED" }), I(e));
+n.d(
+    t,
+    {},
+    {
+        A: {
+            getLoadState: function (e) {
+                return E[e]?.type;
+            },
+            loadThread: I,
+            loadThreadsBulk: function (e) {
+                if ((h(), !a.A.isConnected())) return Promise.resolve();
+                let t = [],
+                    n = [];
+                for (let i of e) {
+                    if ("131" === i || (0, _.jq)(i) || null != d.A.getChannel(i)) continue;
+                    let e = E[i];
+                    if (null != e) {
+                        "LOADING" === e.type && t.push(e.promise);
+                        continue;
+                    }
+                    n.push(i);
                 }
-                for (let e of n) i.has(e) || (A[e] = { type: "NOT_FOUND" });
-            })
-            .catch(() => {
-                for (let e of n) delete A[e];
-            });
-        for (let e of n) A[e] = { type: "LOADING", promise: r };
-        return 0 === t.length ? r : Promise.all([...t, r]).then(() => void 0);
+                if (0 === n.length) return Promise.all(t).then(() => void 0);
+                let r = i.Bo.post({ url: u.Rsh.THREADS_BULK, body: { thread_ids: n }, rejectWithError: (0, i.fT)() })
+                    .then((e) => {
+                        let { body: t } = e,
+                            i = new Set();
+                        for (let e of t.items) {
+                            let t = e.id;
+                            (i.add(t), (E[t] = { type: "LOADED" }), f(e));
+                        }
+                        for (let e of n) i.has(e) || (E[e] = { type: "NOT_FOUND" });
+                    })
+                    .catch(() => {
+                        for (let e of n) delete E[e];
+                    });
+                for (let e of n) E[e] = { type: "LOADING", promise: r };
+                return 0 === t.length ? r : Promise.all([...t, r]).then(() => void 0);
+            },
+        },
     },
-};
+);

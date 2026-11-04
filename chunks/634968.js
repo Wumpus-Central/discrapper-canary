@@ -1,8 +1,8 @@
 e.exports = {
-    Kk: "icon_b28dff",
-    Cv: "identifier_b28dff",
-    AS: "item_b28dff",
-    II: "statusContainer_b28dff",
-    Bs: "statusLine_b28dff",
-    I8: "statusIcon_b28dff",
+    Kk: "icon_KyI_aY",
+    Cv: "identifier_KyI_aY",
+    AS: "item_KyI_aY",
+    II: "statusContainer_KyI_aY",
+    Bs: "statusLine_KyI_aY",
+    I8: "statusIcon_KyI_aY",
 };

@@ -1,4 +1,3 @@
-n.d(t, { A: () => m });
 var l = n(477900);
 n(582128);
 var a = n(834730),
@@ -25,23 +24,33 @@ function c(e, t) {
                 ],
             });
 }
-function m(e) {
-    let { text: t, variant: n, prose: a } = e;
-    if (!0 === a) return t;
-    let o = (t.startsWith("$ ") ? i : r).exec(t);
-    return null == o || u.test(o[2]) || d.test(o[2])
-        ? c(t, n)
-        : (0, l.jsxs)(l.Fragment, {
-              children: [
-                  c(o[1], n),
-                  " ",
-                  o[2].split(/(\s+)/).map((e, t) => {
-                      let n;
-                      return /^\s*$/.test(e)
-                          ? e
-                          : ((n = e.startsWith("+") ? s.sI : e.startsWith("-") || e.startsWith("\u2212") ? s.eh : s.zH),
-                            (0, l.jsx)("span", { className: n, children: e }, t));
-                  }),
-              ],
-          });
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { text: t, variant: n, prose: a } = e;
+            if (!0 === a) return t;
+            let o = (t.startsWith("$ ") ? i : r).exec(t);
+            return null == o || u.test(o[2]) || d.test(o[2])
+                ? c(t, n)
+                : (0, l.jsxs)(l.Fragment, {
+                      children: [
+                          c(o[1], n),
+                          " ",
+                          o[2].split(/(\s+)/).map((e, t) => {
+                              let n;
+                              return /^\s*$/.test(e)
+                                  ? e
+                                  : ((n = e.startsWith("+")
+                                        ? s.sI
+                                        : e.startsWith("-") || e.startsWith("\u2212")
+                                          ? s.eh
+                                          : s.zH),
+                                    (0, l.jsx)("span", { className: n, children: e }, t));
+                          }),
+                      ],
+                  });
+        },
+    },
+);

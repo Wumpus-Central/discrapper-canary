@@ -1,30 +1,35 @@
-t.d(_, { A: () => i });
 var I = t(477900);
 t(582128);
-var a = t(17928),
+var a = t(855986),
     s = t(778712),
     E = t(478063),
     e = t(287809);
-let i = function (A) {
-    let { recipients: _, size: t, status: i, isTyping: L, className: h, ...l } = A,
-        C = s.vC[t],
-        n = (0, a.yK)(
-            [e.default],
-            () =>
-                _.slice(0, 2).map((A) => {
-                    let _ = e.default.getUser(A);
-                    if (null != _) return _.getAvatarURL(void 0, C.size, !1);
-                }),
-            [_, C.size],
-        );
-    return (0, I.jsx)(E.A, {
-        "aria-label": l["aria-label"],
-        "aria-hidden": l["aria-hidden"],
-        backSrc: n[0],
-        frontSrc: n[1],
-        size: t,
-        status: i,
-        isTyping: L ?? !1,
-        className: h,
-    });
-};
+t.d(
+    _,
+    {},
+    {
+        A: function (A) {
+            let { recipients: _, size: t, status: i, isTyping: L, className: h, ...l } = A,
+                C = s.vC[t],
+                n = (0, a.yK)(
+                    [e.default],
+                    () =>
+                        _.slice(0, 2).map((A) => {
+                            let _ = e.default.getUser(A);
+                            if (null != _) return _.getAvatarURL(void 0, C.size, !1);
+                        }),
+                    [_, C.size],
+                );
+            return (0, I.jsx)(E.A, {
+                "aria-label": l["aria-label"],
+                "aria-hidden": l["aria-hidden"],
+                backSrc: n[0],
+                frontSrc: n[1],
+                size: t,
+                status: i,
+                isTyping: L ?? !1,
+                className: h,
+            });
+        },
+    },
+);

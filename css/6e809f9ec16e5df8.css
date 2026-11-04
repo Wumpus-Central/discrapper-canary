@@ -1,0 +1,109 @@
+.heading_hnxCJk {
+    color: var(--text-strong);
+    margin-bottom: var(--space-12)
+}
+
+.previewDescription_hnxCJk {
+    color: var(--text-muted);
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: var(--space-16)
+}
+
+.memberListContainer_hnxCJk {
+    border-radius: var(--radius-md);
+    display: flex;
+    margin-top: var(--space-16);
+    padding: var(--space-8) 0;
+    width: 100%
+}
+
+.minimalMemberItem_hnxCJk {
+    border-radius: var(--radius-sm);
+    transition: background-color .1s ease;
+    width: 240px
+}
+
+.minimalMemberItem_hnxCJk:hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.minimalMemberItem_hnxCJk.selected_hnxCJk {
+    background-color: var(--interactive-background-selected)
+}
+
+.minimalMemberItem_hnxCJk>* {
+    cursor: pointer;
+    padding: var(--space-8) var(--space-12);
+    width: 100%
+}
+
+.memberItemContent_hnxCJk {
+    align-items: center;
+    display: flex;
+    gap: var(--space-12);
+    width: 100%
+}
+
+.memberInfo_hnxCJk {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0
+}
+
+.container_gm1x0B {
+    height: 100%;
+    width: 100%
+}
+
+.clamp_gm1x0B {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    height: 100%;
+    width: 790px
+}
+
+.controlsBarContainer_gm1x0B {
+    margin-bottom: var(--space-sm);
+    width: 90%
+}
+
+.progressBar_gm1x0B {
+    border-radius: 4px;
+    height: 8px;
+    overflow: hidden;
+    position: relative
+}
+
+.progressBarFill_gm1x0B {
+    background: linear-gradient(90deg, var(--brand-500) 0, var(--brand-360) 100%);
+    border-radius: 4px;
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.contentArea_gm1x0B {
+    border-radius: 8px;
+    flex: 1;
+    z-index: 1
+}
+
+.content_gm1x0B,
+.contentArea_gm1x0B {
+    overflow: visible;
+    position: relative
+}
+
+.content_gm1x0B {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%
+}
+
+/*# sourceMappingURL=6e809f9ec16e5df8.css.map*/

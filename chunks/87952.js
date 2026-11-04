@@ -1,17 +1,22 @@
-e.d(t, { A: () => i });
-var n = e(582128),
-    o = e(739508),
-    s = e(71532);
-function i() {
-    let [r, t] = n.useState(null);
-    return (
-        n.useEffect(() => {
-            (0, s.Cv)()
-                .then((r) => t(r))
-                .catch((r) => {
-                    (0, o.pM)(r);
-                });
-        }, []),
-        r
-    );
-}
+var r = n(582128),
+    i = n(739508),
+    s = n(71532);
+n.d(
+    e,
+    {},
+    {
+        A: function () {
+            let [t, e] = r.useState(null);
+            return (
+                r.useEffect(() => {
+                    (0, s.Cv)()
+                        .then((t) => e(t))
+                        .catch((t) => {
+                            (0, i.pM)(t);
+                        });
+                }, []),
+                t
+            );
+        },
+    },
+);

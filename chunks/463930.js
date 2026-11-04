@@ -1,11 +1,10 @@
-n.d(t, { V: () => m, g: () => A });
 var l = n(477900),
     r = n(582128),
     i = n(503698),
     a = n.n(i),
     s = n(834730),
     o = n(28863),
-    u = n(17928),
+    u = n(855986),
     d = n(473193),
     c = n(775602),
     f = n(36075),
@@ -84,36 +83,42 @@ function g(e) {
         ],
     });
 }
-function m(e) {
-    let {
-            name: t,
-            colorString: n,
-            roleName: r,
-            dotAlignment: i,
-            className: a,
-            colorStrings: s,
-            animateRoleGradient: d,
-            displayInline: f,
-            ref: _,
-            ...E
-        } = e,
-        m = (0, u.bG)([c.Ay], () => c.Ay.roleStyle),
-        A = "username" === m,
-        p = (0, l.jsx)(g, {
-            roleStyle: m,
-            name: t,
-            colorString: n,
-            roleName: r,
-            dotAlignment: i,
-            className: a,
-            colorStrings: s,
-            animateRoleGradient: d,
-            displayInline: f,
-        }),
-        S = A && null != n ? { color: n } : void 0;
-    return (0, l.jsx)(o.Anchor, { ...E, children: p, style: S, ref: _ });
-}
-function A(e) {
-    let t = (0, u.bG)([c.Ay], () => c.Ay.roleStyle);
-    return (0, l.jsx)(g, { ...e, roleStyle: t });
-}
+n.d(
+    t,
+    {},
+    {
+        V: function (e) {
+            let {
+                    name: t,
+                    colorString: n,
+                    roleName: r,
+                    dotAlignment: i,
+                    className: a,
+                    colorStrings: s,
+                    animateRoleGradient: d,
+                    displayInline: f,
+                    ref: _,
+                    ...E
+                } = e,
+                m = (0, u.bG)([c.Ay], () => c.Ay.roleStyle),
+                A = "username" === m,
+                p = (0, l.jsx)(g, {
+                    roleStyle: m,
+                    name: t,
+                    colorString: n,
+                    roleName: r,
+                    dotAlignment: i,
+                    className: a,
+                    colorStrings: s,
+                    animateRoleGradient: d,
+                    displayInline: f,
+                }),
+                S = A && null != n ? { color: n } : void 0;
+            return (0, l.jsx)(o.Anchor, { ...E, children: p, style: S, ref: _ });
+        },
+        g: function (e) {
+            let t = (0, u.bG)([c.Ay], () => c.Ay.roleStyle);
+            return (0, l.jsx)(g, { ...e, roleStyle: t });
+        },
+    },
+);

@@ -1,48 +1,53 @@
-i.d(n, { default: () => p });
 var e = i(477900),
     r = i(582128),
-    a = i(17928),
+    a = i(855986),
     l = i(189213),
     s = i(95477),
-    o = i(913122),
+    o = i(627784),
     c = i(445077),
     u = i(71393),
-    d = i(105292);
-function p(t) {
-    let { guildId: n } = t,
-        i = (0, a.bG)([u.A], () => u.A.getGuild(n)),
-        [p, g] = r.useState(null),
-        [h, f] = r.useState("");
-    async function k(n) {
-        let { onClose: i, guildId: e } = t;
-        (n.preventDefault(), g(null));
-        try {
-            (await (0, c.T)(e, { nick: h }), i?.());
-        } catch (t) {
-            g(new o.LG(t));
-        }
-    }
-    let { transitionState: m, onClose: C } = t;
-    return (0, e.jsx)(l.a, {
-        title: d.intl.formatToPlainString(d.t["d+6kzl"], { guildName: i?.name }),
-        actions: [
-            { variant: "secondary", text: d.intl.string(d.t["ETE/oC"]), onClick: C },
-            { variant: "primary", text: d.intl.string(d.t.Np4yXU), onClick: k },
-        ],
-        transitionState: m,
-        onClose: C,
-        children: (0, e.jsx)("form", {
-            onSubmit: k,
-            children: (0, e.jsx)(s.k, {
-                label: d.intl.string(d.t.pt6jhx),
-                placeholder: d.intl.string(d.t.RfWvWI),
-                description: d.intl.string(d.t.VAaqfF),
-                onChange: function (t) {
-                    f(t);
-                },
-                error: p?.getFirstFieldErrorMessage("name"),
-                value: h,
-            }),
-        }),
-    });
-}
+    d = i(792996);
+i.d(
+    n,
+    {},
+    {
+        default: function (t) {
+            let { guildId: n } = t,
+                i = (0, a.bG)([u.A], () => u.A.getGuild(n)),
+                [p, g] = r.useState(null),
+                [h, f] = r.useState("");
+            async function k(n) {
+                let { onClose: i, guildId: e } = t;
+                (n.preventDefault(), g(null));
+                try {
+                    (await (0, c.T)(e, { nick: h }), i?.());
+                } catch (t) {
+                    g(new o.LG(t));
+                }
+            }
+            let { transitionState: m, onClose: C } = t;
+            return (0, e.jsx)(l.a, {
+                title: d.intl.formatToPlainString(d.t["d+6kzl"], { guildName: i?.name }),
+                actions: [
+                    { variant: "secondary", text: d.intl.string(d.t["ETE/oC"]), onClick: C },
+                    { variant: "primary", text: d.intl.string(d.t.Np4yXU), onClick: k },
+                ],
+                transitionState: m,
+                onClose: C,
+                children: (0, e.jsx)("form", {
+                    onSubmit: k,
+                    children: (0, e.jsx)(s.k, {
+                        label: d.intl.string(d.t.pt6jhx),
+                        placeholder: d.intl.string(d.t.RfWvWI),
+                        description: d.intl.string(d.t.VAaqfF),
+                        onChange: function (t) {
+                            f(t);
+                        },
+                        error: p?.getFirstFieldErrorMessage("name"),
+                        value: h,
+                    }),
+                }),
+            });
+        },
+    },
+);

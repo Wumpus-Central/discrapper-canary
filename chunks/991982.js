@@ -1,27 +1,32 @@
-t.d(a, { R: () => i, Y: () => s });
-var n = t(477900);
-t(582128);
-var d = t(192308);
-function i(e) {
-    let { guildId: a, userId: i, anaylticsLocations: s, modReportId: l } = e;
-    (0, d.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([
-            t.e("142753"),
-            t.e("268582"),
-            t.e("161379"),
-            t.e("691671"),
-            t.e("470314"),
-            t.e("985256"),
-        ]).then(t.bind(t, 631963));
-        return (t) => (0, n.jsx)(e, { guildId: a, userId: i, anaylticsLocations: s, modReportId: l, ...t });
-    });
-}
-function s(e) {
-    let { guildId: a, userId: i, anaylticsLocations: s } = e;
-    (0, d.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([t.e("740291"), t.e("470314"), t.e("695067"), t.e("831815")]).then(
-            t.bind(t, 21754),
-        );
-        return (t) => (0, n.jsx)(e, { guildId: a, userId: i, anaylticsLocations: s, ...t });
-    });
-}
+var i = a(477900);
+a(582128);
+var s = a(192308);
+a.d(
+    t,
+    {},
+    {
+        R: function (e) {
+            let { guildId: t, userId: n, anaylticsLocations: d, modReportId: l } = e;
+            (0, s.mM)(async () => {
+                let { default: e } = await Promise.all([
+                    a.e(142753),
+                    a.e(268582),
+                    a.e(161379),
+                    a.e(691671),
+                    a.e(470314),
+                    a.e(318585),
+                ]).then(a.bind(a, 797472));
+                return (a) => (0, i.jsx)(e, { guildId: t, userId: n, anaylticsLocations: d, modReportId: l, ...a });
+            });
+        },
+        Y: function (e) {
+            let { guildId: t, userId: n, anaylticsLocations: d } = e;
+            (0, s.mM)(async () => {
+                let { default: e } = await Promise.all([a.e(740291), a.e(470314), a.e(695067), a.e(831815)]).then(
+                    a.bind(a, 21754),
+                );
+                return (a) => (0, i.jsx)(e, { guildId: t, userId: n, anaylticsLocations: d, ...a });
+            });
+        },
+    },
+);

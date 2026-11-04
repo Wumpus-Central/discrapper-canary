@@ -1,10 +1,10 @@
-e.exports = {
-    kL: "container_e0cd4a",
-    _e: "bannerImage_e0cd4a",
-    FS: "textContainer_e0cd4a",
-    R_: "heading_e0cd4a",
-    SB: "giftButtonContainer_e0cd4a",
-    pm: "gradientBackground_e0cd4a",
-    W0: "settings_e0cd4a",
-    OM: "settingsBody_e0cd4a",
+t.exports = {
+    kL: "container_gLR1C5",
+    _e: "bannerImage_gLR1C5",
+    FS: "textContainer_gLR1C5",
+    R_: "heading_gLR1C5",
+    SB: "giftButtonContainer_gLR1C5",
+    pm: "gradientBackground_gLR1C5",
+    W0: "settings_gLR1C5",
+    OM: "settingsBody_gLR1C5",
 };

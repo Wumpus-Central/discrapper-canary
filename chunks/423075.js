@@ -1,1 +1,1 @@
-a.exports = { GC: "captchaContainer_deee3a", P: "manaDesktopModal_deee3a" };
+s.exports = { GC: "captchaContainer_UNGyxs", P: "manaDesktopModal_UNGyxs" };

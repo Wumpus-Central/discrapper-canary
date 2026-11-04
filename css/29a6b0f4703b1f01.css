@@ -1,0 +1,16 @@
+.container_HFMl71 {
+    background: var(--background-gradient-chat, var(--background-base-lowest));
+    display: flex;
+    flex: 1 1 auto;
+    min-height: 0
+}
+
+.scroller_HFMl71 {
+    scroll-padding-top: var(--custom-top-nav-height)
+}
+
+.promotionBannerOffset_HFMl71 {
+    padding-top: var(--custom-compact-bar-height)
+}
+
+/*# sourceMappingURL=29a6b0f4703b1f01.css.map*/

@@ -1,4 +1,3 @@
-n.d(t, { Dx: () => o, PQ: () => l, aS: () => d, dI: () => a, wR: () => s });
 var i = n(477900),
     r = n(582128);
 function a(e) {
@@ -23,8 +22,18 @@ let l = a({
         reduceAdaptiveTheme: !1,
     }),
     o = r.createContext(l);
-function d(e) {
-    let { children: t } = e,
-        n = s();
-    return (0, i.jsx)(i.Fragment, { children: t(n) });
-}
+n.d(
+    t,
+    {},
+    {
+        Dx: o,
+        PQ: l,
+        aS: function (e) {
+            let { children: t } = e,
+                n = s();
+            return (0, i.jsx)(i.Fragment, { children: t(n) });
+        },
+        dI: a,
+        wR: s,
+    },
+);

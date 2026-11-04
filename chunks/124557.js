@@ -1,0 +1,86 @@
+n.d(e, { c: () => R });
+var a = n(477900),
+    i = n(582128),
+    r = n(554146),
+    l = n(192308),
+    s = n(858899),
+    c = n(765178),
+    u = n(263775),
+    d = n(855986),
+    o = n(688810),
+    h = n(851767),
+    p = n(808247),
+    f = n(634110),
+    A = n(240248),
+    g = n(792996),
+    m = n(49999);
+function R(t) {
+    let { userId: e, skuId: s, nuxGraphic: R, onNuxShow: I, location: P, onAddSuccess: T, onError: v } = t,
+        [E, O] = (0, u.kn)([r.M.WISHLIST_NUX_TOOLTIP_AND_MODAL], { bypassAutoDismiss: !0 }),
+        w = E === r.M.WISHLIST_NUX_TOOLTIP_AND_MODAL;
+    return {
+        ...(function (t) {
+            let {
+                    userId: e,
+                    skuId: n,
+                    location: a,
+                    onAddSuccess: r,
+                    onRemoveSuccess: l,
+                    onError: s,
+                    skipAddAnnouncement: u,
+                } = t,
+                { analyticsLocations: m } = (0, o.Ay)((0, A.uJ)(a) ? [] : [a]),
+                R = (0, d.bG)([h.A], () => h.A.getFirstWishlistId(e)),
+                y = (0, f.rJ)(R, n),
+                [I, P] = i.useState(null),
+                [T, v] = i.useState(!1),
+                E = null !== I ? I : y;
+            i.useEffect(() => {
+                (P(null), v(!1));
+            }, [n]);
+            let O = i.useCallback(async () => {
+                if (!T)
+                    if ((v(!0), E && null != R)) {
+                        P(!1);
+                        try {
+                            (await p.A.removeSkuFromWishlist(R, n, m), c.O.announce(g.intl.string(g.t.DSXOiP)), l?.());
+                        } catch (t) {
+                            s?.(t);
+                        } finally {
+                            (P(null), v(!1));
+                        }
+                    } else {
+                        P(!0);
+                        try {
+                            (await p.A.addSkuToWishlist(n, m), u || c.O.announce(g.intl.string(g.t["3T2jbf"])), r?.());
+                        } catch (t) {
+                            s?.(t);
+                        } finally {
+                            (P(null), v(!1));
+                        }
+                    }
+            }, [T, E, R, n, m, r, l, s, u]);
+            return { isWishlisted: E, isBusy: T, handleToggle: O };
+        })({
+            userId: e,
+            skuId: s,
+            location: P,
+            onAddSuccess: i.useCallback(() => {
+                (w &&
+                    null != R &&
+                    (I?.(),
+                    (0, l.mM)(async () => {
+                        let { default: t } = await Promise.all([n.e(454048), n.e(864581)]).then(n.bind(n, 38884));
+                        return (e) => (0, a.jsx)(t, { ...e, graphic: R });
+                    }),
+                    O(m.i.USER_DISMISS)),
+                    T?.());
+            }, [O, R, I, w, T]),
+            onError: v ?? y,
+        }),
+        isFirstTimeWishlister: w,
+    };
+}
+function y() {
+    ((0, s.P0)({ text: g.intl.string(g.t.F8FvUy), variant: "critical" }), c.O.announce(g.intl.string(g.t.F8FvUy)));
+}

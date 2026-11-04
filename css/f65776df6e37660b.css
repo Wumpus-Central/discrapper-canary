@@ -1,0 +1,24 @@
+.description_v4SB-o {
+    margin-top: 8px
+}
+
+.description_v4SB-o,
+.tooltip_v4SB-o {
+    color: var(--text-default);
+    text-align: center
+}
+
+.tooltip_v4SB-o {
+    background: var(--background-mod-subtle);
+    border: 1px solid hsla(0, 0%, 100%, .04);
+    border-radius: 8px;
+    box-shadow: var(--elevation-low);
+    margin-top: 16px;
+    padding: 12px
+}
+
+.help_v4SB-o {
+    margin-top: 8px
+}
+
+/*# sourceMappingURL=f65776df6e37660b.css.map*/

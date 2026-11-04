@@ -1,4 +1,3 @@
-n.d(t, { Z: () => r });
 var i,
     r =
         (((i = {})[(i.NONE = 0)] = "NONE"),
@@ -17,3 +16,4 @@ var i,
         (i[(i.BUTTERFLY_WINGS = 13)] = "BUTTERFLY_WINGS"),
         (i[(i.CAT_BACKPACK = 14)] = "CAT_BACKPACK"),
         i);
+n.d(t, {}, { Z: r });

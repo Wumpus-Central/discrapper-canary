@@ -1,8 +1,8 @@
-(t.r(e), t.d(e, { default: () => O }));
+t.r(e);
 var a = t(477900),
     l = t(582128),
     r = t(607399),
-    i = t(17928),
+    i = t(855986),
     n = t(534514),
     c = t(834730),
     d = t(821609),
@@ -11,113 +11,122 @@ var a = t(477900),
     m = t(197111),
     x = t(10088),
     N = t(976860),
-    E = t(427495),
-    j = t(738822),
+    E = t(7891),
+    j = t(506988),
     o = t(561844),
-    g = t(617986),
-    p = t(190107),
+    g = t(321538),
+    p = t(221596),
     v = t(652215),
     A = t(613057),
-    _ = t(105292),
+    _ = t(792996),
     f = t(51100),
     k = t(604880),
     C = t(318808);
 i.Ay.initialize();
 let I = r.Fr || r.v1;
-function O(s) {
-    let { match: e } = s,
-        t = (0, i.bG)([x.A], () => x.A.getState("quests")),
-        r = e.params.questId,
-        O = (function (s) {
-            let [e, t] = l.useState(null);
-            return (
-                l.useEffect(() => {
-                    (0, E.xB)(s)
-                        .then((s) => t({ status: "ok", value: s }))
-                        .catch(() => t({ status: "error" }));
-                }, [t, s]),
-                e
-            );
-        })(r);
-    l.useEffect(() => {
-        I ||
-            (null == t
-                ? ((0, o.av)({
-                      questId: r,
-                      event: v.HAw.QUEST_SHARE_LINK_DEEP_LINKED_INTO_DESKTOP_CLIENT,
-                      properties: {},
-                      sourceQuestContent: j.uF.QUEST_HOME_DESKTOP,
-                  }),
-                  m.A.openNativeAppModal("quests", v.e$_.DEEP_LINK, { type: A.XK.QUEST_HOME, params: { questId: r } }))
-                : t === v.fAW.OPEN_FAIL && (0, N.bG)({ pathname: v.BVt.QUEST_HOME, hash: r }));
-    }, [t, r]);
-    let S = l.useCallback(() => (0, g.QA)(r), [r]);
-    if (I)
-        return (0, a.jsxs)("div", {
-            className: f.MY,
-            children: [
-                (0, a.jsx)("img", { className: f.Bg, src: C.Ay, alt: "" }),
-                (0, a.jsx)("div", { className: f.r$, children: (0, a.jsx)("img", { src: k, alt: "" }) }),
-                null != O &&
-                    (0, a.jsxs)("div", {
-                        className: f.Nr,
-                        children: [
-                            "ok" === O.status &&
-                                (0, a.jsxs)(a.Fragment, {
-                                    children: [
-                                        (0, a.jsx)("div", {
-                                            className: f.rC,
-                                            children: (0, a.jsx)("img", {
-                                                src: `${p.CI}${r}/dark/${O.value.assets.gameTile}`,
-                                                alt: "",
-                                                className: f.o4,
-                                            }),
-                                        }),
-                                        (0, a.jsx)(n.D, {
-                                            variant: "heading-lg/semibold",
-                                            color: "text-default",
-                                            className: f.ky,
-                                            children: O.value.messages.questName,
-                                        }),
-                                    ],
-                                }),
-                            (0, a.jsx)(c.E, {
-                                variant: "body-md/normal",
-                                className: f.G3,
-                                children: _.intl.string(_.t.NweJI8),
-                            }),
-                            (0, a.jsx)(d.$, {
-                                variant: "primary",
-                                text: _.intl.string(_.t.UQvCf7),
-                                fullWidth: !0,
-                                onClick: S,
-                            }),
-                        ],
-                    }),
-            ],
-        });
-    let T = null == t || t === v.fAW.OPENING || t === v.fAW.OPEN_FAIL;
-    return (0, a.jsxs)(a.Fragment, {
-        children: [
-            (0, a.jsx)(u.A, { className: f.Lq, preserveAspectRatio: "xMinYMin slice" }),
-            (0, a.jsx)("div", {
-                className: f.kL,
-                children: (0, a.jsx)(h.Ay, {
-                    children: T
-                        ? (0, a.jsxs)(a.Fragment, {
-                              children: [
-                                  (0, a.jsx)(h.hE, { children: _.intl.string(_.t["Z+hCVU"]) }),
-                                  (0, a.jsx)(h.CK, {}),
-                              ],
-                          })
-                        : (0, a.jsxs)(a.Fragment, {
-                              children: [
-                                  (0, a.jsx)(h.hE, { className: f.Ns, children: _.intl.string(_.t.csrAMJ) }),
-                                  (0, a.jsx)(h.tK, { children: _.intl.string(_.t.ghBJz9) }),
-                              ],
+t.d(
+    e,
+    {},
+    {
+        default: function (s) {
+            let { match: e } = s,
+                t = (0, i.bG)([x.A], () => x.A.getState("quests")),
+                r = e.params.questId,
+                O = (function (s) {
+                    let [e, t] = l.useState(null);
+                    return (
+                        l.useEffect(() => {
+                            (0, E.xB)(s)
+                                .then((s) => t({ status: "ok", value: s }))
+                                .catch(() => t({ status: "error" }));
+                        }, [t, s]),
+                        e
+                    );
+                })(r);
+            l.useEffect(() => {
+                I ||
+                    (null == t
+                        ? ((0, o.av)({
+                              questId: r,
+                              event: v.HAw.QUEST_SHARE_LINK_DEEP_LINKED_INTO_DESKTOP_CLIENT,
+                              properties: {},
+                              sourceQuestContent: j.uF.QUEST_HOME_DESKTOP,
                           }),
-                }),
-            }),
-        ],
-    });
-}
+                          m.A.openNativeAppModal("quests", v.e$_.DEEP_LINK, {
+                              type: A.XK.QUEST_HOME,
+                              params: { questId: r },
+                          }))
+                        : t === v.fAW.OPEN_FAIL && (0, N.bG)({ pathname: v.BVt.QUEST_HOME, hash: r }));
+            }, [t, r]);
+            let S = l.useCallback(() => (0, g.QA)(r), [r]);
+            if (I)
+                return (0, a.jsxs)("div", {
+                    className: f.MY,
+                    children: [
+                        (0, a.jsx)("img", { className: f.Bg, src: C.Ay, alt: "" }),
+                        (0, a.jsx)("div", { className: f.r$, children: (0, a.jsx)("img", { src: k, alt: "" }) }),
+                        null != O &&
+                            (0, a.jsxs)("div", {
+                                className: f.Nr,
+                                children: [
+                                    "ok" === O.status &&
+                                        (0, a.jsxs)(a.Fragment, {
+                                            children: [
+                                                (0, a.jsx)("div", {
+                                                    className: f.rC,
+                                                    children: (0, a.jsx)("img", {
+                                                        src: `${p.CI}${r}/dark/${O.value.assets.gameTile}`,
+                                                        alt: "",
+                                                        className: f.o4,
+                                                    }),
+                                                }),
+                                                (0, a.jsx)(n.D, {
+                                                    variant: "heading-lg/semibold",
+                                                    color: "text-default",
+                                                    className: f.ky,
+                                                    children: O.value.messages.questName,
+                                                }),
+                                            ],
+                                        }),
+                                    (0, a.jsx)(c.E, {
+                                        variant: "body-md/normal",
+                                        className: f.G3,
+                                        children: _.intl.string(_.t.NweJI8),
+                                    }),
+                                    (0, a.jsx)(d.$, {
+                                        variant: "primary",
+                                        text: _.intl.string(_.t.UQvCf7),
+                                        fullWidth: !0,
+                                        onClick: S,
+                                    }),
+                                ],
+                            }),
+                    ],
+                });
+            let T = null == t || t === v.fAW.OPENING || t === v.fAW.OPEN_FAIL;
+            return (0, a.jsxs)(a.Fragment, {
+                children: [
+                    (0, a.jsx)(u.A, { className: f.Lq, preserveAspectRatio: "xMinYMin slice" }),
+                    (0, a.jsx)("div", {
+                        className: f.kL,
+                        children: (0, a.jsx)(h.Ay, {
+                            children: T
+                                ? (0, a.jsxs)(a.Fragment, {
+                                      children: [
+                                          (0, a.jsx)(h.hE, { children: _.intl.string(_.t["Z+hCVU"]) }),
+                                          (0, a.jsx)(h.CK, {}),
+                                      ],
+                                  })
+                                : (0, a.jsxs)(a.Fragment, {
+                                      children: [
+                                          (0, a.jsx)(h.hE, { className: f.Ns, children: _.intl.string(_.t.csrAMJ) }),
+                                          (0, a.jsx)(h.tK, { children: _.intl.string(_.t.ghBJz9) }),
+                                      ],
+                                  }),
+                        }),
+                    }),
+                ],
+            });
+        },
+    },
+);

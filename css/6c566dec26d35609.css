@@ -1,0 +1,67 @@
+.title_wRbpaT {
+    align-items: center;
+    display: flex;
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.viewFullProfileButton_wRbpaT {
+    margin-inline-start: auto
+}
+
+.disabled_wRbpaT {
+    opacity: .4;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.customizationSection_wRbpaT {
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 24px;
+    padding-bottom: 24px
+}
+
+.customizationSection_wRbpaT.hideDivider_wRbpaT {
+    border-bottom: none;
+    padding-bottom: 0
+}
+
+.customizationSection_wRbpaT:last-child:not(.withDivider_wRbpaT) {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0
+}
+
+.customizationSection_wRbpaT.showBorder_wRbpaT {
+    padding-bottom: 12px
+}
+
+.customizationSectionBackground_wRbpaT {
+    padding: 16px
+}
+
+.sectionDescription_wRbpaT {
+    margin-bottom: 16px
+}
+
+.errorMessage_wRbpaT {
+    margin-top: 8px
+}
+
+.customizationSectionBorder_wRbpaT {
+    margin: -12px -12px 0
+}
+
+.section_dnhlNI {
+    margin-top: 16px
+}
+
+.guildSelectOptionIcon_dnhlNI {
+    border-radius: 4px
+}
+
+/*# sourceMappingURL=6c566dec26d35609.css.map*/

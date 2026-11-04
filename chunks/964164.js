@@ -1,7 +1,7 @@
 e.exports = {
-    Nr: "card_a23cbe",
-    ev: "skuPreview_a23cbe",
-    ML: "scaledSkuPreview_a23cbe",
-    ZY: "collectiblesSkuPreview_a23cbe",
-    zW: "isOwnerAndHovering_a23cbe",
+    Nr: "card_PJ8wak",
+    ev: "skuPreview_PJ8wak",
+    ML: "scaledSkuPreview_PJ8wak",
+    ZY: "collectiblesSkuPreview_PJ8wak",
+    zW: "isOwnerAndHovering_PJ8wak",
 };

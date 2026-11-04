@@ -1,4 +1,3 @@
-n.d(t, { Ay: () => _, E0: () => A, Vr: () => h, c5: () => c, eI: () => E });
 var i = n(582128),
     r = n(485845),
     a = n(155718),
@@ -8,19 +7,7 @@ var i = n(582128),
     d = n(210978);
 let c = "no primary app command for application",
     u = [a.kc.PRIMARY_ENTRY_POINT];
-async function _(e, t) {
-    let n,
-        i = s.A.getChannel(e);
-    if (
-        (null != i &&
-            null == (n = E({ channel: i, type: "channel" }, t)) &&
-            (await (0, o.Zn)({ type: "application", applicationId: t }), (n = E({ channel: i, type: "channel" }, t))),
-        null != n)
-    )
-        return n;
-    throw Error(c);
-}
-function E(e, t) {
+function _(e, t) {
     return o.Ay.query(
         e,
         { commandTypes: [a.kc.PRIMARY_ENTRY_POINT] },
@@ -33,7 +20,7 @@ function E(e, t) {
         },
     ).commands[0];
 }
-function A(e, t) {
+function E(e, t) {
     var n, r;
     let { commands: a, loading: s } =
             ((n = e),
@@ -58,17 +45,39 @@ function A(e, t) {
         c
     );
 }
-function h(e) {
-    let { context: t, applicationId: n, botUserId: i } = e,
-        s = A(t, n);
-    return (
-        null != s &&
-        null != i &&
-        (function (e) {
-            if (null == e) return !1;
-            let t = null != e.integration_types && e.integration_types.includes(r.b.USER_INSTALL),
-                n = null != e.contexts && e.contexts.includes(a.OL.BOT_DM);
-            return t && n;
-        })(s)
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        Ay: async function (e, t) {
+            let n,
+                i = s.A.getChannel(e);
+            if (
+                (null != i &&
+                    null == (n = _({ channel: i, type: "channel" }, t)) &&
+                    (await (0, o.Zn)({ type: "application", applicationId: t }),
+                    (n = _({ channel: i, type: "channel" }, t))),
+                null != n)
+            )
+                return n;
+            throw Error(c);
+        },
+        E0: E,
+        Vr: function (e) {
+            let { context: t, applicationId: n, botUserId: i } = e,
+                s = E(t, n);
+            return (
+                null != s &&
+                null != i &&
+                (function (e) {
+                    if (null == e) return !1;
+                    let t = null != e.integration_types && e.integration_types.includes(r.b.USER_INSTALL),
+                        n = null != e.contexts && e.contexts.includes(a.OL.BOT_DM);
+                    return t && n;
+                })(s)
+            );
+        },
+        c5: c,
+        eI: _,
+    },
+);

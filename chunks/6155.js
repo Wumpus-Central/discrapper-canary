@@ -1,10 +1,10 @@
-(n.d(t, { A: () => O }), n(321073));
+n(321073);
 var i = n(477900),
     r = n(582128),
-    a = n(17928),
-    s = n(661531),
+    a = n(855986),
+    s = n(646514),
     l = n(477782),
-    o = n(980707),
+    o = n(165862),
     d = n(265872),
     c = n(939249),
     u = n(530005),
@@ -12,13 +12,13 @@ var i = n(477900),
     E = n(31728),
     A = n(933958),
     h = n(587895),
-    f = n(198052),
+    f = n(628983),
     I = n(616356),
     p = n(334463),
     m = n(287809),
     T = n(652215),
     g = n(806931),
-    S = n(105292),
+    S = n(792996),
     N = n(967481);
 function C(e) {
     let t,
@@ -79,27 +79,35 @@ function C(e) {
         }),
     });
 }
-let O = function (e) {
-    let { voiceChannelId: t, idle: n } = e,
-        l = r.useRef(null),
-        o = Array.from((0, a.bG)([p.A], () => p.A.pipWindows).values()).filter((e) => e.component !== T.o1q.ACTIVITY),
-        _ = (0, a.yK)([I.A], () => I.A.getAllActiveStreamsForChannel(t)).filter(
-            (e) => e.ownerId !== m.default.getCurrentUser()?.id && e.channelId === t,
-        ),
-        E = (1 === o.length && o[0].component === T.o1q.ACTIVITY) || 0 === _.length,
-        A = 1 === o.length && _.length <= 1;
-    return E || A
-        ? null
-        : (0, i.jsx)(d.Y, {
-              targetElementRef: l,
-              position: "bottom",
-              renderPopout: (e) => (0, i.jsx)(C, { voiceChannelId: t, pipWindows: o, idle: n, ...e }),
-              children: (e) =>
-                  (0, i.jsx)(c.D, {
-                      className: N.ro,
-                      ...e,
-                      innerRef: l,
-                      children: (0, i.jsx)(u.F, { size: "md", color: s.A.unsafe_rawColors.WHITE.css }),
-                  }),
-          });
-};
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { voiceChannelId: t, idle: n } = e,
+                l = r.useRef(null),
+                o = Array.from((0, a.bG)([p.A], () => p.A.pipWindows).values()).filter(
+                    (e) => e.component !== T.o1q.ACTIVITY,
+                ),
+                _ = (0, a.yK)([I.A], () => I.A.getAllActiveStreamsForChannel(t)).filter(
+                    (e) => e.ownerId !== m.default.getCurrentUser()?.id && e.channelId === t,
+                ),
+                E = (1 === o.length && o[0].component === T.o1q.ACTIVITY) || 0 === _.length,
+                A = 1 === o.length && _.length <= 1;
+            return E || A
+                ? null
+                : (0, i.jsx)(d.Y, {
+                      targetElementRef: l,
+                      position: "bottom",
+                      renderPopout: (e) => (0, i.jsx)(C, { voiceChannelId: t, pipWindows: o, idle: n, ...e }),
+                      children: (e) =>
+                          (0, i.jsx)(c.D, {
+                              className: N.ro,
+                              ...e,
+                              innerRef: l,
+                              children: (0, i.jsx)(u.F, { size: "md", color: s.A.unsafe_rawColors.WHITE.css }),
+                          }),
+                  });
+        },
+    },
+);

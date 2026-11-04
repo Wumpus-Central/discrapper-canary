@@ -1,0 +1,220 @@
+.container_O2KI4e {
+    gap: 16px;
+    width: 100%
+}
+
+.connectionList_O2KI4e,
+.container_O2KI4e {
+    display: flex;
+    flex-direction: column
+}
+
+.connectionList_O2KI4e {
+    gap: var(--space-16)
+}
+
+.addConnectionButton_O2KI4e {
+    align-items: center;
+    align-self: flex-start;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    gap: 2px;
+    transition: color 50ms ease-in
+}
+
+.addConnectionButton_O2KI4e:hover {
+    color: var(--interactive-text-hover);
+    transition: color .15s ease-out
+}
+
+.enable-forced-colors .addConnectionButton_O2KI4e {
+    color: ButtonText
+}
+
+.connection_O2KI4e {
+    display: flex;
+    gap: 8px
+}
+
+.connectionInfo_O2KI4e {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    min-width: 0
+}
+
+.platformIconContainer_O2KI4e {
+    align-items: center;
+    background-color: var(--white);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    color: var(--neutral-69);
+    display: flex;
+    flex-shrink: 0;
+    height: 24px;
+    justify-content: center;
+    width: 24px
+}
+
+.platformIcon_O2KI4e {
+    height: 18px;
+    width: 18px
+}
+
+.applicationConnectionIcon_O2KI4e {
+    border-radius: 18px
+}
+
+.accountName_O2KI4e {
+    align-items: center;
+    display: flex;
+    gap: 2px;
+    min-width: 0
+}
+
+.linkIcon_O2KI4e {
+    flex: 0 0 auto
+}
+
+.accountNameText_O2KI4e {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+    white-space: nowrap
+}
+
+.platformUrlAnchor_O2KI4e {
+    color: var(--text-default)
+}
+
+.platformUrlAnchor_O2KI4e:hover {
+    text-decoration: underline
+}
+
+.metadata_O2KI4e {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden
+}
+
+.metadata_O2KI4e:empty {
+    display: none
+}
+
+.connectedAppRoleAccountClickable_O2KI4e {
+    cursor: pointer;
+    margin-bottom: 2px
+}
+
+.connectedAppRoleAccountPoweredBy_O2KI4e {
+    display: inline
+}
+
+.section_bnpVhc {
+    color: var(--text-default)
+}
+
+.container_IEutSJ {
+    --custom-preview-inline-padding: 6px;
+    margin-inline: calc((var(--custom-preview-inline-padding) + 1px)*-1);
+    position: relative
+}
+
+.custom-user-profile-theme .container_IEutSJ {
+    --text-feedback-warning: var(--text-default)
+}
+
+.container_IEutSJ.compact_IEutSJ {
+    --custom-preview-inline-padding: var(--space-4)
+}
+
+.container_IEutSJ.growWidth_IEutSJ {
+    flex-grow: 1;
+    min-width: 0
+}
+
+.preview_IEutSJ {
+    align-items: stretch;
+    display: flex;
+    min-height: 0
+}
+
+.editable_IEutSJ {
+    align-items: flex-start;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-grow: 1;
+    min-width: 0;
+    padding-block: var(--space-4);
+    padding-inline-end: calc(var(--space-32) + var(--custom-preview-inline-padding));
+    padding-inline-start: var(--custom-preview-inline-padding);
+    transition: border-color .1s ease, background-color .1s ease
+}
+
+.editable_IEutSJ>* {
+    min-width: 0
+}
+
+.editable_IEutSJ:hover,
+.keyboard-mode .editable_IEutSJ:has(:focus) {
+    background-color: var(--input-background-default);
+    border-color: var(--border-strong)
+}
+
+.editable_IEutSJ.hasError_IEutSJ {
+    background-color: var(--input-background-error-default);
+    outline: 2px solid var(--input-border-error-default);
+    outline-offset: -2px
+}
+
+.editable_IEutSJ.hasError_IEutSJ:has(:focus),
+.editable_IEutSJ.hasError_IEutSJ:hover {
+    background-color: var(--input-background-error-default);
+    border-color: transparent
+}
+
+.editable_IEutSJ.hasWarning_IEutSJ {
+    background-color: var(--background-feedback-mod-warning);
+    border-color: var(--border-feedback-warning)
+}
+
+.editable_IEutSJ.hasWarning_IEutSJ:has(:focus),
+.editable_IEutSJ.hasWarning_IEutSJ:hover {
+    background-color: var(--background-feedback-mod-warning);
+    border-color: var(--border-feedback-warning);
+    outline: 2px solid var(--border-feedback-warning);
+    outline-offset: -2px
+}
+
+.placeholder_IEutSJ {
+    font-style: italic
+}
+
+.errorIcon_IEutSJ {
+    color: var(--icon-feedback-critical)
+}
+
+.warningIcon_IEutSJ {
+    color: var(--icon-feedback-warning)
+}
+
+.previewError_IEutSJ {
+    align-items: start;
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: auto 1fr;
+    padding-block-start: var(--space-4)
+}
+
+/*# sourceMappingURL=4a3740fb47b1de76.css.map*/

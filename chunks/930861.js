@@ -1,4 +1,3 @@
-n.d(t, { kF: () => f, wL: () => I });
 var i,
     r = n(477900),
     a = n(582128),
@@ -64,4 +63,4 @@ function I(e) {
         ],
     });
 }
-I.ShineSizes = E;
+((I.ShineSizes = E), n.d(t, {}, { kF: f, wL: I }));

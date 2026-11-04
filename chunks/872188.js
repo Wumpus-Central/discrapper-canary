@@ -1,52 +1,57 @@
-l.d(t, { A: () => m });
 var n = l(477900),
     i = l(582128),
     s = l(765178),
     a = l(885574),
     r = l(834730),
     d = l(821609),
-    c = l(880098),
-    o = l(105292),
+    c = l(135294),
+    o = l(792996),
     u = l(146108);
-function m(e) {
-    let { onPublish: t } = e,
-        [l, m] = i.useState(!1),
-        [f, g] = i.useState(!1),
-        h = i.useCallback(async () => {
-            (m(!0), g(!1));
-            try {
-                (await t(), s.O.announce(o.intl.string(c.default.pDzipI)));
-            } catch {
-                g(!0);
-            } finally {
-                m(!1);
-            }
-        }, [t]);
-    return (0, n.jsxs)("div", {
-        className: u.lm,
-        children: [
-            (0, n.jsx)(a.CircleInformationIcon, { size: "sm", color: "currentColor", className: u.Kk }),
-            f
-                ? (0, n.jsx)(r.E, {
-                      variant: "body-sm/medium",
-                      color: "text-feedback-critical",
-                      className: u.iU,
-                      role: "alert",
-                      children: o.intl.string(o.t.F8FvUy),
-                  })
-                : (0, n.jsx)(r.E, {
-                      variant: "body-sm/medium",
-                      color: "text-muted",
-                      className: u.iU,
-                      children: o.intl.string(c.default.Z2z85q),
-                  }),
-            (0, n.jsx)(d.$, {
-                variant: "secondary",
-                size: "sm",
-                text: o.intl.string(c.default["yul+0g"]),
-                loading: l,
-                onClick: h,
-            }),
-        ],
-    });
-}
+l.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { onPublish: t } = e,
+                [l, m] = i.useState(!1),
+                [f, g] = i.useState(!1),
+                h = i.useCallback(async () => {
+                    (m(!0), g(!1));
+                    try {
+                        (await t(), s.O.announce(o.intl.string(c.default.pDzipI)));
+                    } catch {
+                        g(!0);
+                    } finally {
+                        m(!1);
+                    }
+                }, [t]);
+            return (0, n.jsxs)("div", {
+                className: u.lm,
+                children: [
+                    (0, n.jsx)(a.CircleInformationIcon, { size: "sm", color: "currentColor", className: u.Kk }),
+                    f
+                        ? (0, n.jsx)(r.E, {
+                              variant: "body-sm/medium",
+                              color: "text-feedback-critical",
+                              className: u.iU,
+                              role: "alert",
+                              children: o.intl.string(o.t.F8FvUy),
+                          })
+                        : (0, n.jsx)(r.E, {
+                              variant: "body-sm/medium",
+                              color: "text-muted",
+                              className: u.iU,
+                              children: o.intl.string(c.default.Z2z85q),
+                          }),
+                    (0, n.jsx)(d.$, {
+                        variant: "secondary",
+                        size: "sm",
+                        text: o.intl.string(c.default["yul+0g"]),
+                        loading: l,
+                        onClick: h,
+                    }),
+                ],
+            });
+        },
+    },
+);

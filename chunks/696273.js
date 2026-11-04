@@ -19,7 +19,7 @@ t.exports =
         return "0385-07-25T07:06:39.999Z" !== f.call(new Date(-5e13 - 1));
     }) ||
     !o(function () {
-        f.call(new Date(NaN));
+        f.call(new Date(0 / 0));
     })
         ? function () {
               if (!u(p(this))) throw new i("Invalid time value");

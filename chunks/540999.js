@@ -1,5 +1,4 @@
-n.d(t, { A: () => E });
-var i = n(17928),
+var i = n(855986),
     r = n(73153),
     a = n(572009),
     s = n(71393),
@@ -25,3 +24,4 @@ class _ extends i.Ay.Store {
     }
 }
 let E = new _(r.h, { CONNECTION_OPEN: u, OVERLAY_INITIALIZE: u, CURRENT_USER_UPDATE: u });
+n.d(t, {}, { A: E });

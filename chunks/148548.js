@@ -1,10 +1,10 @@
 e.exports = {
-    kL: "container__70feb",
-    Vp: "withImageSpacing__70feb",
-    El: "coverImageContainer__70feb",
-    o1: "actions__70feb",
-    GU: "restoreCover__70feb",
-    Sl: "image__70feb",
-    hQ: "contentContainer__70feb",
-    cw: "contentBackground__70feb",
+    kL: "container_XqvxEs",
+    Vp: "withImageSpacing_XqvxEs",
+    El: "coverImageContainer_XqvxEs",
+    o1: "actions_XqvxEs",
+    GU: "restoreCover_XqvxEs",
+    Sl: "image_XqvxEs",
+    hQ: "contentContainer_XqvxEs",
+    cw: "contentBackground_XqvxEs",
 };

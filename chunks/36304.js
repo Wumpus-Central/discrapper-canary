@@ -1,26 +1,3 @@
-n.d(i, { default: () => d });
-var a = n(477900);
-n(582128);
-var e = n(189213),
-    l = n(993719),
-    s = n(362823),
-    r = n(850194),
-    c = n(105292);
-function d(t) {
-    let { onClose: i, transitionState: n } = t;
-    return (0, a.jsx)(e.a, {
-        title: c.intl.string(r.default["5wYjyW"]),
-        transitionState: n,
-        actions: [
-            { text: c.intl.string(r.default["01Jl9Z"]), onClick: i, variant: "secondary" },
-            {
-                text: c.intl.string(r.default.DxcYYG),
-                onClick: () => {
-                    (l.O(s.v.MUTE_TUTORIAL), i());
-                },
-            },
-        ],
-        onClose: i,
-        children: c.intl.string(r.default.bGygJZ),
-    });
-}
+i.exports = JSON.parse(
+    '{"u72Prd":["Transmite en resoluci\xf3n HD con Nitro"],"uwMBDo":["Compartir audio de la aplicaci\xf3n"],"3wwZ/Q":["Empezar a transmitir"],"OsS9Ll":["Dejar de transmitir"],"j+eAMQ":["Audio de la transmisi\xf3n"],"/XSr8v":["Modo de transmisi\xf3n"],"ibH7vy":["Calidad y rendimiento equilibrados (",[1,"resolution"],"p, ",[1,"fps"]," FPS)"],"2qmQ8N":["Predeterminado"],"q4gYBi":["Para v\xeddeo y juegos (",[1,"resolution"],"p, ",[1,"fps"]," FPS)"],"nMcXo1":["Alta calidad"],"fN0UQY":["Optimizado para dispositivos m\xe1s lentos (",[1,"resolution"],"p, ",[1,"fps"]," FPS)"],"5eO4/m":["Rendimiento"],"CrNjqp":["Ajustes de la transmisi\xf3n"]}',
+);

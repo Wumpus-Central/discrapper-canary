@@ -1,4 +1,3 @@
-n.d(t, { A: () => a });
 var s = n(196765),
     i = n(849077);
 let a = (0, s.v)((e) => ({
@@ -7,3 +6,4 @@ let a = (0, s.v)((e) => ({
         e({ selectedFilter: t });
     },
 }));
+n.d(t, {}, { A: a });

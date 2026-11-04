@@ -1,7 +1,6 @@
-_.exports = {
-    oE: "productsEmpty__70c55",
-    ZE: "products__70c55",
-    Ej: "paginationContainer__70c55",
-    qG: "fadeIn__70c55",
-    Kp: "loadIn__70c55",
+r.exports = {
+    oE: "productsEmpty_CrBxko",
+    ZE: "products_CrBxko",
+    Ej: "paginationContainer_CrBxko",
+    Kp: "loadIn_CrBxko",
 };

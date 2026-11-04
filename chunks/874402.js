@@ -1,10 +1,9 @@
-n.d(t, { $: () => E, m: () => p });
 var a = n(477900),
-    l = n(582128),
-    r = n(503698),
-    s = n.n(r),
+    r = n(582128),
+    l = n(503698),
+    s = n.n(l),
     i = n(736819),
-    o = n(17928),
+    o = n(855986),
     d = n(866323),
     c = n(765178),
     u = n(834730),
@@ -12,68 +11,75 @@ var a = n(477900),
     m = n(775602),
     g = n(485038);
 let p = "data-prevents-popout-dismiss";
-function E(e) {
-    let {
-            preventsPopoutDismiss: t,
-            isVisible: n,
-            labelId: r,
-            noticeText: E,
-            primaryAction: h,
-            secondaryAction: b,
-            isEmphasized: x = !1,
-            a11yAnnounceOnShow: A,
-            a11yAnnounceOnHide: _,
-        } = e,
-        N = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion),
-        R = l.useRef(null);
-    return (
-        l.useEffect(
-            () => () => {
-                null != R.current && clearTimeout(R.current);
-            },
-            [],
-        ),
-        (0, d.p)(n, {
-            from: { opacity: 0, y: 80 * !N },
-            enter: { opacity: 1, y: 0 },
-            leave: { opacity: 0, y: 80 * !N },
-            onRest: (e, t) => {
-                if (!e.finished) return;
-                let n = t.item ? A : _;
-                (null != R.current && clearTimeout(R.current),
-                    null != n
-                        ? (R.current = setTimeout(() => {
-                              ((R.current = null), c.O.announce(n));
-                          }, 300))
-                        : (R.current = null));
-            },
-        })((e, n) =>
-            n
-                ? (0, a.jsx)(i.animated.div, {
-                      style: e,
-                      children: (0, a.jsxs)("footer", {
-                          ...(!0 === t ? { [p]: "" } : null),
-                          className: s()(g.Qs, { [g.hO]: x }),
-                          "aria-labelledby": r,
-                          children: [
-                              (0, a.jsx)(u.E, {
-                                  variant: "body-sm/normal",
-                                  color: "none",
-                                  id: r,
-                                  className: g.ut,
-                                  children: E,
-                              }),
-                              (0, a.jsxs)("div", {
-                                  className: g.o1,
+n.d(
+    t,
+    {},
+    {
+        $: function (e) {
+            let {
+                    preventsPopoutDismiss: t,
+                    isVisible: n,
+                    labelId: l,
+                    noticeText: E,
+                    primaryAction: h,
+                    secondaryAction: b,
+                    isEmphasized: x = !1,
+                    a11yAnnounceOnShow: A,
+                    a11yAnnounceOnHide: _,
+                } = e,
+                N = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion),
+                R = r.useRef(null);
+            return (
+                r.useEffect(
+                    () => () => {
+                        null != R.current && clearTimeout(R.current);
+                    },
+                    [],
+                ),
+                (0, d.p)(n, {
+                    from: { opacity: 0, y: 80 * !N },
+                    enter: { opacity: 1, y: 0 },
+                    leave: { opacity: 0, y: 80 * !N },
+                    onRest: (e, t) => {
+                        if (!e.finished) return;
+                        let n = t.item ? A : _;
+                        (null != R.current && clearTimeout(R.current),
+                            null != n
+                                ? (R.current = setTimeout(() => {
+                                      ((R.current = null), c.O.announce(n));
+                                  }, 300))
+                                : (R.current = null));
+                    },
+                })((e, n) =>
+                    n
+                        ? (0, a.jsx)(i.animated.div, {
+                              style: e,
+                              children: (0, a.jsxs)("footer", {
+                                  ...(!0 === t ? { [p]: "" } : null),
+                                  className: s()(g.Qs, { [g.hO]: x }),
+                                  "aria-labelledby": l,
                                   children: [
-                                      (0, a.jsx)(f.$, { variant: "secondary", size: "sm", ...b }),
-                                      (0, a.jsx)(f.$, { variant: "primary", size: "sm", ...h }),
+                                      (0, a.jsx)(u.E, {
+                                          variant: "body-sm/normal",
+                                          color: "none",
+                                          id: l,
+                                          className: g.ut,
+                                          children: E,
+                                      }),
+                                      (0, a.jsxs)("div", {
+                                          className: g.o1,
+                                          children: [
+                                              (0, a.jsx)(f.$, { variant: "secondary", size: "sm", ...b }),
+                                              (0, a.jsx)(f.$, { variant: "primary", size: "sm", ...h }),
+                                          ],
+                                      }),
                                   ],
                               }),
-                          ],
-                      }),
-                  })
-                : null,
-        )
-    );
-}
+                          })
+                        : null,
+                )
+            );
+        },
+        m: p,
+    },
+);

@@ -1,6 +1,5 @@
-n.d(t, { A: () => S });
 var i = n(435558),
-    r = n(17928),
+    r = n(855986),
     a = n(873298),
     s = n(73153),
     l = n(617617),
@@ -14,7 +13,7 @@ let u = {},
     h = !1,
     f = !1,
     I = !0,
-    p = d.HH,
+    p = 0,
     m = d.l0;
 function T() {
     let e = l.A.settings.favorites,
@@ -34,14 +33,14 @@ function T() {
                     type: t.type,
                     channelType: t.channelType?.value,
                     order: t.position,
-                    parentId: t.parentId !== d.O8 ? t.parentId : null,
+                    parentId: "0" !== t.parentId ? t.parentId : null,
                 }));
         }
     let c = e?.guildVisible?.value ?? !(0, i.isEmpty)(n),
         T = e?.autoAddJoinedThreads ?? !1,
         g = e?.pruneInactiveThreads?.value ?? !0,
-        S = e?.pruneInactiveThreadsDays ?? d.HH,
-        N = e?.pruneAllFavoritedThreads === !0 ? d.sY : d.l0;
+        S = e?.pruneInactiveThreadsDays ?? 0,
+        N = e?.pruneAllFavoritedThreads === !0 ? "all" : d.l0;
     return (
         !(A === t && h === c && f === T && I === g && p === S && m === N && (0, i.isEqual)(u, n)) &&
         ((A = t), (h = c), (f = T), (I = g), (p = S), (m = N), (u = n), (_ = r), (E = s), !0)
@@ -113,3 +112,4 @@ class g extends r.Ay.Store {
     }
 }
 let S = new g(s.h, {});
+n.d(t, {}, { A: S });

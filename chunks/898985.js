@@ -1,10 +1,9 @@
-l.d(t, { J: () => c, _: () => d });
 var n = l(582128),
     s = l(508425),
     a = l(559949),
     r = l(430571),
-    o = l(872859),
-    u = l(105292);
+    o = l(842671),
+    u = l(792996);
 let c = {
         [s.z.SOLID]: o.default.OpWJ3f,
         [s.z.GRADIENT]: o.default["i9e/u1"],
@@ -24,15 +23,22 @@ let c = {
         [s.z.POP]: 3,
         [s.z.GUMMY]: 3,
     };
-function d(e) {
-    let t = (0, r.A)()[e];
-    return n.useMemo(
-        () => ({
-            name: u.intl.string(c[e] ?? o.default.OpWJ3f),
-            defaultColors: t,
-            previewStyles: { fontId: a.x.DEFAULT, effectId: e, colors: t },
-            minContrastRatio: i[e] ?? 3,
-        }),
-        [e, t],
-    );
-}
+l.d(
+    t,
+    {},
+    {
+        J: c,
+        _: function (e) {
+            let t = (0, r.A)()[e];
+            return n.useMemo(
+                () => ({
+                    name: u.intl.string(c[e] ?? o.default.OpWJ3f),
+                    defaultColors: t,
+                    previewStyles: { fontId: a.x.DEFAULT, effectId: e, colors: t },
+                    minContrastRatio: i[e] ?? 3,
+                }),
+                [e, t],
+            );
+        },
+    },
+);

@@ -1,4 +1,3 @@
-n.d(t, { A: () => r });
 var i = n(734057);
 let r = new (class {
     filterTagIds;
@@ -22,3 +21,4 @@ let r = new (class {
     getLayoutAnalytics = (e) => this.layout ?? i.A.getChannel(e)?.getDefaultLayout();
     getTagSettingAnalytics = (e) => this.tagSetting ?? i.A.getChannel(e)?.getDefaultTagSetting();
 })();
+n.d(t, {}, { A: r });

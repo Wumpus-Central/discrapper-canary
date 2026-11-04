@@ -1,40 +1,12 @@
-n.d(t, { Q: () => u });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(661531),
+    l = n(646514),
     o = n(602853),
     d = n(534409),
     c = n(622112);
 function u(e) {
-    let {
-            selected: t = !1,
-            lowerBadgeSize: n = { width: 16, height: 16 },
-            highlight: r = !1,
-            rounded: a = !1,
-            ...s
-        } = e,
-        c = !!s.isFolder,
-        u = (0, d.qK)("BlobMask"),
-        E = (0, o.r)(l.A.modules.guildbar.AVATAR_SIZE),
-        A = (0, o.r)(l.A.modules.guildbar.FOLDER_SIZE),
-        h = !u && c ? A : E,
-        f = h / 2;
-    return (0, i.jsx)(_, {
-        ...s,
-        selected: t,
-        rounded: a,
-        baseViewBoxSize: h,
-        viewBoxSize: h,
-        style: { width: h, height: h },
-        badgeMaskSize: f,
-        badgeMaskStroke: 2,
-        lowerBadgeSize: n,
-        highlight: r,
-    });
-}
-function _(e) {
     let {
             children: t,
             viewBoxSize: n,
@@ -221,3 +193,36 @@ function _(e) {
         `${C}-${N}`,
     );
 }
+n.d(
+    t,
+    {},
+    {
+        Q: function (e) {
+            let {
+                    selected: t = !1,
+                    lowerBadgeSize: n = { width: 16, height: 16 },
+                    highlight: r = !1,
+                    rounded: a = !1,
+                    ...s
+                } = e,
+                c = !!s.isFolder,
+                _ = (0, d.qK)("BlobMask"),
+                E = (0, o.r)(l.A.modules.guildbar.AVATAR_SIZE),
+                A = (0, o.r)(l.A.modules.guildbar.FOLDER_SIZE),
+                h = !_ && c ? A : E,
+                f = h / 2;
+            return (0, i.jsx)(u, {
+                ...s,
+                selected: t,
+                rounded: a,
+                baseViewBoxSize: h,
+                viewBoxSize: h,
+                style: { width: h, height: h },
+                badgeMaskSize: f,
+                badgeMaskStroke: 2,
+                lowerBadgeSize: n,
+                highlight: r,
+            });
+        },
+    },
+);

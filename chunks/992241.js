@@ -1,8 +1,7 @@
-a.d(e, { M: () => s });
 var o = a(980807),
     r = a(534502),
     i = a(892730),
-    n = a(519837),
+    n = a(652664),
     l = a(582128);
 let d = (0, l.createContext)({}),
     s = (0, l.forwardRef)(function (t, e) {
@@ -28,3 +27,4 @@ let d = (0, l.createContext)({}),
             )
         );
     });
+a.d(e, {}, { M: s });

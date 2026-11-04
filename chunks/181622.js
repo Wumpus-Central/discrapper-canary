@@ -1,7 +1,6 @@
-t.d(n, { ForwardFailedAlertModal: () => N });
 var i = t(477900),
     l = t(582128),
-    s = t(17928),
+    s = t(855986),
     a = t(834730),
     r = t(778712),
     u = t(732159),
@@ -16,7 +15,7 @@ var i = t(477900),
     j = t(287809),
     b = t(427262),
     p = t(294454),
-    g = t(105292),
+    g = t(792996),
     y = t(285738);
 function _(e) {
     let { icon: n, label: t } = e;
@@ -60,21 +59,27 @@ function G(e) {
             ? (0, i.jsx)(C, { channel: t })
             : null;
 }
-function N(e) {
-    let { message: n, failedDestinations: t, forwardOptions: s, ...a } = e,
-        r = l.useCallback(() => {
-            (0, p.fO)({ message: n, source: "retry-modal", initialSelectedDestinations: t, forwardOptions: s });
-        }, [t, n, s]);
-    return (0, i.jsx)(u.u, {
-        title: g.intl.string(g.t["/OPIaM"]),
-        subtitle: g.intl.format(g.t.cn9vFb, { count: t.length }),
-        confirmText: g.intl.string(g.t["5911Lb"]),
-        onConfirm: r,
-        ...a,
-        variant: "primary",
-        children: (0, i.jsx)("div", {
-            className: y.Zc,
-            children: t.map((e, n) => (0, i.jsx)(G, { destination: e }, n)),
-        }),
-    });
-}
+t.d(
+    n,
+    {},
+    {
+        ForwardFailedAlertModal: function (e) {
+            let { message: n, failedDestinations: t, forwardOptions: s, ...a } = e,
+                r = l.useCallback(() => {
+                    (0, p.fO)({ message: n, source: "retry-modal", initialSelectedDestinations: t, forwardOptions: s });
+                }, [t, n, s]);
+            return (0, i.jsx)(u.u, {
+                title: g.intl.string(g.t["/OPIaM"]),
+                subtitle: g.intl.format(g.t.cn9vFb, { count: t.length }),
+                confirmText: g.intl.string(g.t["5911Lb"]),
+                onConfirm: r,
+                ...a,
+                variant: "primary",
+                children: (0, i.jsx)("div", {
+                    className: y.Zc,
+                    children: t.map((e, n) => (0, i.jsx)(G, { destination: e }, n)),
+                }),
+            });
+        },
+    },
+);

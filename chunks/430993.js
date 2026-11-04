@@ -1,4 +1,3 @@
-n.d(t, { c: () => f, y: () => h });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -8,20 +7,13 @@ var i = n(477900),
     d = n(612324),
     c = n(707554),
     u = n(475825),
-    _ = n(689175),
+    _ = n(516521),
     E = n(834730),
     A = n(592551);
 function h(e) {
     return r.Children.toArray(e).filter(Boolean).length > 0;
 }
 function f(e) {
-    let { controls: t, children: n, listProps: r, onScroll: a, scrollerRef: s } = e;
-    if (!h(n) && null == t && null == r) return null;
-    let l =
-        "string" == typeof n ? (0, i.jsx)(E.E, { variant: "body-md/normal", color: "text-subtle", children: n }) : n;
-    return (0, i.jsx)(I, { controls: t, children: l, listProps: r, onScroll: a, scrollerRef: s });
-}
-function I(e) {
     let { controls: t, children: n, listProps: a, onScroll: l, scrollerRef: E } = e,
         [h, f] = r.useState(!1),
         [I, p] = r.useState(!0),
@@ -95,3 +87,19 @@ function I(e) {
         })
     );
 }
+n.d(
+    t,
+    {},
+    {
+        c: function (e) {
+            let { controls: t, children: n, listProps: r, onScroll: a, scrollerRef: s } = e;
+            if (!h(n) && null == t && null == r) return null;
+            let l =
+                "string" == typeof n
+                    ? (0, i.jsx)(E.E, { variant: "body-md/normal", color: "text-subtle", children: n })
+                    : n;
+            return (0, i.jsx)(f, { controls: t, children: l, listProps: r, onScroll: a, scrollerRef: s });
+        },
+        y: h,
+    },
+);

@@ -1,4 +1,4 @@
-i.d(t, { CustomFields: () => y });
+i.r(t);
 var s = i(783285),
     n = i(768611),
     a = i(200503),
@@ -66,7 +66,7 @@ var s = i(783285),
                 () => {
                     if (t) return t;
                     if (!e) throw Error("CustomFields config is required");
-                    return (0, b.s)({ config: e });
+                    return (0, b.createCustomFieldsManager)({ config: e });
                 },
                 { manageLifecycle: !t, autoLoad: !0 },
             );
@@ -115,4 +115,4 @@ var s = i(783285),
     },
     y = ({ config: e, manager: t, onFinish: i, onError: s }) =>
         (0, n.v)(l.t, { children: e || t ? (0, n.v)(I, { config: e, manager: t, onFinish: i, onError: s }) : null });
-(0, p.t)(y, "incode-custom-fields");
+((0, p.t)(y, "incode-custom-fields"), i.d(t, {}, { CustomFields: y }));

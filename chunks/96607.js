@@ -1,9 +1,14 @@
-n.d(t, { A: () => a });
-var i = n(17928),
+var i = n(855986),
     r = n(287809);
-function a() {
-    return (0, i.bG)([r.default], () => {
-        let e = r.default.getCurrentUser();
-        return e?.nsfwAllowed ?? null;
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        A: function () {
+            return (0, i.bG)([r.default], () => {
+                let e = r.default.getCurrentUser();
+                return e?.nsfwAllowed ?? null;
+            });
+        },
+    },
+);

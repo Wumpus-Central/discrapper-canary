@@ -1,0 +1,149 @@
+.root_kLiT4t {
+    align-items: center;
+    gap: var(--space-16)
+}
+
+.root_kLiT4t,
+.summary_kLiT4t {
+    display: flex;
+    min-width: 0
+}
+
+.summary_kLiT4t {
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center
+}
+
+.summaryDetail_kLiT4t {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.summaryDetail_kLiT4t span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.summaryDetail_kLiT4t span:last-child {
+    flex: 1 1 auto
+}
+
+.icon_kLiT4t {
+    flex-shrink: 0
+}
+
+.mutedIcon_kLiT4t {
+    color: var(--red-400)
+}
+
+.iconSummaryContainer_kLiT4t {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.ellipsis_kLiT4t {
+    color: var(--background-mod-subtle)
+}
+
+.sourceOrPresetName_kLiT4t {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.screenArrowIcon_kLiT4t {
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    color: var(--icon-muted);
+    flex-shrink: 0;
+    padding: var(--space-8)
+}
+
+.sourceIcon_kLiT4t {
+    height: 40px;
+    width: 40px
+}
+
+.root_oszuaw {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 80px);
+    max-height: 720px;
+    overflow: hidden;
+    width: 100%
+}
+
+.root_oszuaw.nativePicker_oszuaw {
+    height: 570px
+}
+
+@media (max-height:820px) {
+    .root_oszuaw.nativePicker_oszuaw {
+        height: min(570px, calc(100vh - 90px));
+        max-height: 550px
+    }
+}
+
+.root_oszuaw.channelSelector_oszuaw {
+    height: 504px
+}
+
+.root_oszuaw.confirmStep_oszuaw {
+    height: auto
+}
+
+.footer_oszuaw {
+    background-color: var(--background-surface-high)
+}
+
+.footerContent_oszuaw {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-32);
+    justify-content: space-between;
+    padding: var(--space-16) var(--space-24) 0
+}
+
+.header_oszuaw {
+    padding: var(--space-16) var(--space-24)
+}
+
+.segmentedControl_oszuaw {
+    flex: 1 1 auto
+}
+
+.segmentedControlOption_oszuaw {
+    flex-basis: 0
+}
+
+.content_oszuaw {
+    padding-inline: var(--space-24);
+    padding-top: var(--space-8);
+    position: relative
+}
+
+.rightButtonGroup_oszuaw {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.channelSelectorComponent_oszuaw {
+    margin: var(--space-16)
+}
+
+.channelSelectorComponent_oszuaw.withFooter_oszuaw {
+    margin-bottom: 0
+}
+
+.upsellRibbonContainer_oszuaw {
+    margin: var(--space-16);
+    margin-bottom: 0
+}
+
+/*# sourceMappingURL=382f23e453fa5ff3.css.map*/

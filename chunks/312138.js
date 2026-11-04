@@ -1,4 +1,4 @@
-(n.d(t, { Op: () => E, R7: () => c, sk: () => u }), n(477900));
+n(477900);
 var i = n(582128),
     r = n(52724),
     a = n(621466),
@@ -10,11 +10,7 @@ function c() {
     let e = i.useContext(d);
     return i.useMemo(() => ({ [l]: e }), [e]);
 }
-function u(e) {
-    let t = c();
-    return e.children(t);
-}
-async function _(e) {
+async function u(e) {
     if (e.key !== s.mi) return;
     let t = (0, a.BF)(e);
     if (null == t) return;
@@ -38,14 +34,25 @@ async function _(e) {
           ? (await c.getPreviousFocusableElement({ wrap: !0, from: i }))?.focus()
           : (await c.getNextFocusableElement({ wrap: !0, from: i }))?.focus();
 }
-function E(e) {
-    i.useEffect(() => {
-        if (e)
-            return (
-                window.addEventListener("keydown", _),
-                () => {
-                    window.removeEventListener("keydown", _);
-                }
-            );
-    }, [e]);
-}
+n.d(
+    t,
+    {},
+    {
+        Op: function (e) {
+            i.useEffect(() => {
+                if (e)
+                    return (
+                        window.addEventListener("keydown", u),
+                        () => {
+                            window.removeEventListener("keydown", u);
+                        }
+                    );
+            }, [e]);
+        },
+        R7: c,
+        sk: function (e) {
+            let t = c();
+            return e.children(t);
+        },
+    },
+);

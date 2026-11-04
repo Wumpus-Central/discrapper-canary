@@ -1,9 +1,8 @@
 let i;
-n.d(t, { A: () => f });
-var r = n(17928),
+var r = n(855986),
     a = n(73153),
     s = n(194862),
-    l = n(395671),
+    l = n(327891),
     o = n(927813),
     d = n(723702);
 let c = o.A.Millis.DAY,
@@ -18,7 +17,7 @@ class h extends r.Ay.PersistedStore {
         null != e && (null != e.etag && (_ = e.etag), e.nonGames?.forEach((e) => u.set(e.id, e)));
     }
     getState() {
-        return (0, d.isDesktop)() ? { etag: _, nonGames: u.values() } : { etag: "", nonGames: [] };
+        return (0, d.xl)() ? { etag: _, nonGames: u.values() } : { etag: "", nonGames: [] };
     }
     get nonGames() {
         return u.values();
@@ -65,3 +64,4 @@ let f = new h(a.h, {
         ((i = void 0), (E = Date.now()), (A = !0));
     },
 });
+n.d(t, {}, { A: f });

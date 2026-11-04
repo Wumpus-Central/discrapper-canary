@@ -1,25 +1,25 @@
 let i, r, a, s, l, o, d;
-(n.d(t, { A: () => V }), n(321073));
-var c = n(17928),
+n(321073);
+var c = n(855986),
     u = n(73153),
     _ = n(643501),
-    E = n(952818),
+    E = n(986322),
     A = n(652896),
     h = n(279250),
     f = n(254057),
     I = n(613235),
     p = n(830012),
     m = n(927813),
-    T = n(280450),
+    T = n(46653),
     g = n(734057),
     S = n(71393),
-    N = n(477653),
+    N = n(718197),
     C = n(576705),
-    O = n(763827),
+    O = n(495867),
     R = n(309010),
     L = n(977997),
     y = n(652215),
-    D = n(325278);
+    D = n(55010);
 let b = null,
     v = {},
     P = null,
@@ -126,7 +126,7 @@ class B extends c.Ay.PersistedStore {
     }
     getStreamForUser(e, t) {
         if (!(0, f.A)(N.Ay)) return null;
-        let n = r[e]?.[t ?? y.eGj];
+        let n = r[e]?.[t ?? "null"];
         return null != n && F(n) ? n : null;
     }
     getRTCStream(e) {
@@ -220,7 +220,7 @@ let V = new B(u.h, {
                                 discoverable: c,
                             }).ownerId
                         ] && (r[n.ownerId] = {}),
-                    (r[n.ownerId][n.guildId ?? y.eGj] = n),
+                    (r[n.ownerId][n.guildId ?? "null"] = n),
                     !0
                 );
             {
@@ -236,7 +236,7 @@ let V = new B(u.h, {
                         r.ownerId === i && (r.guildId ?? null) === (a ?? null) && (t = l.delete(n) || t);
                     }),
                     t);
-                return ((n = a ?? y.eGj), (r[i]?.[n] != null && (delete r[i][n], !0)) || c || e);
+                return ((n = a ?? "null"), (r[i]?.[n] != null && (delete r[i][n], !0)) || c || e);
             }
         }, !1);
     },
@@ -298,7 +298,7 @@ let V = new B(u.h, {
         else if (o === y.H2B.SAFETY_GUILD_RATE_LIMITED) {
             let { guildId: e } = (0, A.Iy)(r);
             (n
-                .e("452729")
+                .e(452729)
                 .then(n.bind(n, 116960))
                 .then((t) => {
                     let { default: n } = t;
@@ -360,3 +360,4 @@ let V = new B(u.h, {
     CONNECTION_CLOSED: U,
     LOGOUT: U,
 });
+n.d(t, {}, { A: V });

@@ -1,5 +1,4 @@
-n.d(t, { A: () => d });
-var i = n(17928),
+var i = n(855986),
     r = n(73153);
 let a = new Map(),
     s = new Set();
@@ -31,3 +30,4 @@ let d = new o(r.h, {
         ((a = new Map()), (s = new Set()));
     },
 });
+n.d(t, {}, { A: d });

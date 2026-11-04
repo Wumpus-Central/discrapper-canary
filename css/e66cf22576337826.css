@@ -1,0 +1,126 @@
+.modal_akL5Ip {
+    background: radial-gradient(181.07% 122.33% at -20.89% -23.8%, rgba(5, 75, 22, .4) 0, transparent 100%), var(--background-base-lower);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: calc(var(--custom-modal-padding-bottom, var(--space-16))*-1);
+    margin-top: calc(var(--custom-modal-padding-top, var(--space-24))*-1);
+    min-height: 0;
+    overflow: hidden;
+    padding: var(--space-24)
+}
+
+.header_akL5Ip {
+    flex-shrink: 0;
+    justify-content: space-between
+}
+
+.header_akL5Ip,
+.logoRow_akL5Ip {
+    align-items: center;
+    display: flex
+}
+
+.xboxLogo_akL5Ip {
+    height: 16px;
+    width: auto
+}
+
+.logoSeparator_akL5Ip {
+    margin-inline-end: var(--space-8);
+    margin-inline-start: var(--space-8)
+}
+
+.subtitle_akL5Ip {
+    flex-shrink: 0;
+    margin-top: var(--space-8);
+    width: 330px
+}
+
+.perkList_akL5Ip {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--space-16)
+}
+
+.perkCard_akL5Ip {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    display: flex;
+    margin-top: var(--space-8);
+    min-height: 120px;
+    padding: var(--space-20) var(--space-16)
+}
+
+.perkContent_akL5Ip {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding-block: var(--space-20);
+    padding-inline-end: var(--space-24);
+    width: 256px
+}
+
+.perkIcon_akL5Ip,
+.perkTitleRow_akL5Ip {
+    align-items: center;
+    display: flex
+}
+
+.perkIcon_akL5Ip {
+    margin-inline-end: var(--space-6)
+}
+
+.perkDescription_akL5Ip {
+    margin-top: var(--space-4)
+}
+
+.progressBar_akL5Ip {
+    margin-top: var(--space-12)
+}
+
+.perkThumbnail_akL5Ip {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-shrink: 0;
+    height: 120px;
+    justify-content: center;
+    margin-inline-start: var(--space-20);
+    overflow: hidden;
+    width: 120px
+}
+
+.perkThumbnailImage_akL5Ip {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.orbsMultiplierThumbnailImage_akL5Ip {
+    height: 55px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100px
+}
+
+.shopDiscountThumbnailImage_akL5Ip {
+    height: 70px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%
+}
+
+.footer_akL5Ip {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    margin-top: var(--space-16)
+}
+
+/*# sourceMappingURL=e66cf22576337826.css.map*/

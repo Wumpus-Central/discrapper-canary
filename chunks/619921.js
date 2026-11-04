@@ -1,5 +1,4 @@
-n.d(t, { A: () => A });
-var i = n(17928),
+var i = n(855986),
     r = n(73153),
     a = n(734057),
     s = n(650048),
@@ -50,3 +49,4 @@ let A = new E(r.h, {
         null == t.guild_id && null != t.id && null != u && u === c.BVt.CHANNEL(c.ME, t.id) && (u = null);
     },
 });
+n.d(t, {}, { A: A });

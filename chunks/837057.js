@@ -1,6 +1,21 @@
-(n.d(t, {
-    transitionToGlobalDiscovery: () =>
-        function e(t) {
+(n(323874), n(14289), n(35956));
+var i = n(310419),
+    r = n(965660),
+    a = n(601193),
+    s = n(216934),
+    l = n(976860),
+    o = n(287809),
+    d = n(129230),
+    c = n(726845),
+    u = n(488995),
+    _ = n(652215),
+    E = n(435220),
+    A = n(324580);
+n.d(
+    t,
+    {},
+    {
+        transitionToGlobalDiscovery: function e(t) {
             let n = t.tab;
             switch ((n !== u.GlobalDiscoveryTab.QUESTS && c.A.setState({ selectedTab: n }), n)) {
                 case u.GlobalDiscoveryTab.SERVERS:
@@ -93,19 +108,5 @@
                     throw Error(`[transitionToGlobalDiscovery] Unhandled tab type: ${n}`);
             }
         },
-}),
-    n(323874),
-    n(14289),
-    n(35956));
-var i = n(310419),
-    r = n(965660),
-    a = n(601193),
-    s = n(216934),
-    l = n(976860),
-    o = n(287809),
-    d = n(174459),
-    c = n(726845),
-    u = n(488995),
-    _ = n(652215),
-    E = n(435220),
-    A = n(324580);
+    },
+);

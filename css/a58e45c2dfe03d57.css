@@ -1,0 +1,208 @@
+.footer_lB8uMT {
+    font-weight: 400;
+    overflow: hidden;
+    padding: 80px 160px 48px;
+    position: relative
+}
+
+.footerPrimary_lB8uMT {
+    background: var(--primary-800)
+}
+
+.footerBackgroundPrimary_lB8uMT {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%
+}
+
+.footerBackgroundAnimate_lB8uMT {
+    animation: footer-blob-animation_lB8uMT 100s linear infinite alternate
+}
+
+.footerBackgroundPaused_lB8uMT {
+    animation-play-state: paused
+}
+
+.footerBackgroundPlay_lB8uMT {
+    animation-play-state: running
+}
+
+.footerContent_lB8uMT {
+    margin: 0 auto;
+    max-width: 1600px;
+    position: relative
+}
+
+.navigation_lB8uMT {
+    display: flex;
+    justify-content: space-between
+}
+
+.navigationHeader_lB8uMT {
+    color: var(--white);
+    font-size: 14px;
+    margin-bottom: 13px
+}
+
+.route_lB8uMT {
+    color: var(--opacity-white-60);
+    font-size: 14px;
+    line-height: 20px
+}
+
+.route_lB8uMT:hover {
+    color: var(--white)
+}
+
+.navigationSection_lB8uMT {
+    display: flex;
+    flex-direction: column;
+    margin: 0 16px
+}
+
+.logo_lB8uMT,
+.logoWrap_lB8uMT {
+    height: 36px;
+    width: 36px
+}
+
+.separator_lB8uMT {
+    background: url("/assets/96d2258c3aad9584.svg");
+    height: 1px;
+    margin: 34px 0;
+    opacity: .1;
+    width: 100%
+}
+
+.joinDiscord_lB8uMT {
+    display: flex
+}
+
+.stats_lB8uMT {
+    flex: 1
+}
+
+.readyToJoin_lB8uMT {
+    color: var(--white);
+    font-size: 26px;
+    line-height: 34px
+}
+
+.joinOtherPlayers_lB8uMT {
+    color: var(--opacity-white-60);
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 4px
+}
+
+.button_lB8uMT {
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 15px;
+    height: 15px;
+    line-height: 15px;
+    padding: 16px;
+    position: relative
+}
+
+.button_lB8uMT:hover {
+    box-shadow: 0 4px 14px 0 #1c1e2266;
+    top: -1px
+}
+
+.button_lB8uMT:active {
+    top: 1px
+}
+
+.buttonPrimary_lB8uMT {
+    background-color: var(--brand-500);
+    color: var(--white)
+}
+
+.buttonPrimary_lB8uMT:hover {
+    color: var(--white)
+}
+
+.buttonBlurple_lB8uMT {
+    background: var(--white);
+    color: var(--brand-500)
+}
+
+.footerBackgroundBlurple_lB8uMT {}
+
+.footerBackgroundBlurple_lB8uMT>path {
+    fill: rgba(106, 127, 203, .6)
+}
+
+.footerBlurple_lB8uMT {
+    background: var(--brand-500)
+}
+
+@media screen and (max-width:848px) {
+    .footer_lB8uMT {
+        padding-left: 8px;
+        padding-right: 8px
+    }
+
+    .footerBackgroundPrimary_lB8uMT {
+        animation: none;
+        display: none
+    }
+
+    .navigation_lB8uMT {
+        align-items: flex-start;
+        flex-flow: row wrap;
+        justify-content: space-around
+    }
+
+    .navigationSection_lB8uMT {
+        margin: 16px 0;
+        text-align: center;
+        width: 45%
+    }
+
+    .joinDiscord_lB8uMT {
+        flex-direction: column;
+        text-align: center
+    }
+
+    .logoWrap_lB8uMT {
+        display: flex;
+        margin: 16px 0;
+        width: 45%
+    }
+
+    .logo_lB8uMT {
+        height: 50px;
+        margin: 0 auto;
+        width: 50px
+    }
+
+    .button_lB8uMT {
+        align-self: center;
+        background-color: var(--white);
+        color: var(--brand-500);
+        margin-top: 16px
+    }
+
+    .button_lB8uMT:hover {
+        color: var(--brand-500)
+    }
+}
+
+@keyframes footer-blob-animation_lB8uMT {
+    0% {
+        d: path("M140.881198,194.260295 C257.600568,129.32862 342.939626,119.84993 418.009939,203.154617 C493.080251,286.459305 545.728689,70.9046172 636.439626,63.9593047 C727.150564,57.0139922 768.99822,139.670242 858.802907,119.431961 C948.607595,99.1936797 1071.91228,-32.9977266 1243.91228,7.75227342 C1415.91228,48.5022734 1404.10369,208.584305 1508.27166,178.709305 C1612.43963,148.834305 1633.73291,79.913472 1711.63588,98.8569055 C1776.28676,114.577866 1819.96778,221.391836 1889.37253,185.808108 C2017.32661,120.206212 2004.01952,336.769569 2004.01952,336.769569 L271.635881,337 L-149.063338,337 C-149.063338,337 -245.850307,175.637635 -58.0633382,228.867188 C33.8652851,254.92501 64.1722713,236.933925 140.881198,194.260295 Z")
+    }
+
+    50% {
+        d: path("M-60.13579,199.189799 C-33.8674767,-71.7287911 170.194454,11.9640675 274.985105,83.0972992 C379.775756,154.230531 409.072181,161.653171 521.54913,124.460269 C634.026079,87.2673683 645.348165,219.42808 735.152853,199.189799 C824.95754,178.951518 948.262228,46.7601116 1120.26223,87.5101116 C1292.26223,128.260112 1309.89513,321.347957 1414.0631,291.472957 C1518.23106,261.597957 1580.53259,89.5639434 1732.07052,88.5665294 C1892.57296,87.5101116 1897.70372,225.708266 2049.59054,199.189799 C2201.47736,172.671332 2002.94707,336.794682 2002.94707,336.794682 L270.563429,337.025114 L-60.13579,337.025114 C-60.13579,337.025114 -469.886827,134.917309 -282.099858,188.146862 C-190.171235,214.204685 -65.9645849,259.30515 -60.13579,199.189799 Z")
+    }
+
+    to {
+        d: path("M-160.553381,263.533987 C-124.4955,243.377988 -18.6139605,181.080724 56.456352,264.385412 C131.526664,347.690099 165.148428,226.409513 223.668826,168.5 C282.189224,110.590487 372.68516,208.331261 462.489847,188.09298 C552.294535,167.854699 723.262827,-40.1656225 847.424394,40.7522734 C971.58596,121.670169 1156.59375,252.295176 1300.40314,228.958726 C1444.21253,205.622277 1478.90991,106.221579 1563.51957,124.699258 C1655.80276,144.85274 1595.69955,250.007434 1832.41793,206.740235 C2069.1363,163.473036 2002.94707,336.794682 2002.94707,336.794682 L270.563429,337.025114 L-60.13579,337.025114 C-60.13579,337.025114 -495.794798,256.512987 -308.007829,309.74254 C-216.079206,335.800362 -208.740043,290.469854 -160.553381,263.533987 Z")
+    }
+}
+
+/*# sourceMappingURL=a58e45c2dfe03d57.css.map*/

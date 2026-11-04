@@ -1,0 +1,78 @@
+.error_Pef0Rk {
+    margin-top: 4px
+}
+
+.splash_Jr2nWU {
+    background-position: 50%;
+    background-size: cover;
+    filter: grayscale(100%);
+    height: 120px;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    -webkit-mask: linear-gradient(#000, transparent);
+    mask: linear-gradient(#000, transparent);
+    opacity: .1
+}
+
+.gameIcon_Jr2nWU {
+    margin-inline-end: 20px
+}
+
+.gameName_Jr2nWU {
+    flex-grow: 1;
+    font-size: 16px
+}
+
+.gameName_Jr2nWU,
+.installSize_Jr2nWU {
+    font-weight: var(--font-weight-semibold)
+}
+
+.installSize_Jr2nWU {
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 5px 8px;
+    white-space: nowrap
+}
+
+.divider_Jr2nWU {
+    height: 1px;
+    margin: 20px 0
+}
+
+.selector_Jr2nWU {
+    margin-bottom: 20px
+}
+
+.installButton_Jr2nWU {
+    align-items: center;
+    display: flex
+}
+
+.premiumIcon_Jr2nWU {
+    margin-inline-end: 4px
+}
+
+.terms_Jr2nWU {
+    margin-bottom: 20px
+}
+
+.theme-dark .gameName_Jr2nWU {
+    color: var(--primary-200)
+}
+
+.theme-dark .installSize_Jr2nWU {
+    background-color: var(--primary-500);
+    color: var(--primary-100)
+}
+
+.theme-dark .divider_Jr2nWU {
+    background-color: hsl(var(--primary-630-hsl)/.6)
+}
+
+.theme-dark .premiumTerms_Jr2nWU {
+    color: var(--primary-200)
+}
+
+/*# sourceMappingURL=873606aa0c7c3696.css.map*/

@@ -1,4 +1,3 @@
-n.d(t, { A: () => a });
 var i,
     r =
         (((i = r || {})[(i.PRIMARY_APP_COMMAND_NOT_FOUND = 0)] = "PRIMARY_APP_COMMAND_NOT_FOUND"),
@@ -6,11 +5,17 @@ var i,
         (i[(i.INVALID_CHANNEL = 2)] = "INVALID_CHANNEL"),
         (i[(i.CSP_UNAVAILABLE = 3)] = "CSP_UNAVAILABLE"),
         i);
-class a {
-    reason;
-    detailCode;
-    static Reasons = r;
-    constructor(e, t) {
-        ((this.reason = e), (this.detailCode = t));
-    }
-}
+n.d(
+    t,
+    {},
+    {
+        A: class {
+            reason;
+            detailCode;
+            static Reasons = r;
+            constructor(e, t) {
+                ((this.reason = e), (this.detailCode = t));
+            }
+        },
+    },
+);

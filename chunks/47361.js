@@ -1,4 +1,9 @@
-r.d(t, { C: () => u });
-var u = function (e) {
-    return Object.freeze(e);
-};
+r.d(
+    t,
+    {},
+    {
+        C: function (e) {
+            return Object.freeze(e);
+        },
+    },
+);

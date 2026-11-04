@@ -1,16 +1,16 @@
-i.d(t, { FiscalQr: () => g });
+i.r(t);
 var e = i(783285),
     r = i(768611),
     s = i(200503),
     a = i(628926),
     c = i(242268),
     l = i(326144),
-    n = i(44263),
+    n = i(685131),
     H = i(264957),
     V = i(503679),
     d = i(43961),
     o = i(918676),
-    h = i(441262),
+    h = i(348085),
     u = ({ manager: C, state: t }) => {
         let { t: i } = (0, e.n)(),
             s = "error" === t.status;
@@ -179,7 +179,10 @@ var e = i(783285),
         }),
     p = ({ config: C, manager: t, onFinish: i }) => {
         let { t: a } = (0, e.n)(),
-            [n, d] = (0, s.u)(() => t ?? (0, h.P)({ config: C ?? {} }), { manageLifecycle: !t, autoLoad: !0 });
+            [n, d] = (0, s.u)(() => t ?? (0, h.createFiscalQrManager)({ config: C ?? {} }), {
+                manageLifecycle: !t,
+                autoLoad: !0,
+            });
         return ((0, s.c)({ status: "finished" === n.status ? "finished" : "loading", onFinish: i }),
         "finished" === n.status)
             ? null
@@ -208,4 +211,4 @@ var e = i(783285),
                     });
     },
     g = ({ config: C = {}, onFinish: t }) => (0, r.v)(a.t, { children: (0, r.v)(p, { config: C, onFinish: t }) });
-(0, o.t)(g, "incode-fiscal-qr");
+((0, o.t)(g, "incode-fiscal-qr"), i.d(t, {}, { FiscalQr: g }));

@@ -1,4 +1,3 @@
-n.d(t, { N: () => r });
 var i,
     r =
         (((i = {})[(i.NONE = 0)] = "NONE"),
@@ -17,3 +16,4 @@ var i,
         (i[(i.TRAFFIC_CONE = 13)] = "TRAFFIC_CONE"),
         (i[(i.CROWN = 14)] = "CROWN"),
         i);
+n.d(t, {}, { N: r });

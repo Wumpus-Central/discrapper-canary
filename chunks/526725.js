@@ -1,10 +1,10 @@
 e.exports = {
-    U1: "headerRow__4fbcc",
-    $s: "headerActions__4fbcc",
-    y7: "emptyStateContainer__4fbcc",
-    q6: "emptyStateText__4fbcc",
-    XG: "scroller__4fbcc",
-    lm: "notice__4fbcc",
-    _E: "recommendationsContainerEmptyWishlist__4fbcc",
-    HZ: "recommendationsContainerWithWishlist__4fbcc",
+    U1: "headerRow_AI9GeR",
+    $s: "headerActions_AI9GeR",
+    y7: "emptyStateContainer_AI9GeR",
+    q6: "emptyStateText_AI9GeR",
+    XG: "scroller_AI9GeR",
+    lm: "notice_AI9GeR",
+    _E: "recommendationsContainerEmptyWishlist_AI9GeR",
+    HZ: "recommendationsContainerWithWishlist_AI9GeR",
 };

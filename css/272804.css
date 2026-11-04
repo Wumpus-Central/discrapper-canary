@@ -1,4 +1,4 @@
-.keybindHint__46002 {
+.keybindHint_mb9pZg {
     align-items: center;
     background-color: var(--background-base-lower);
     border-radius: var(--radius-sm);
@@ -8,29 +8,29 @@
     position: relative
 }
 
-.keybindHintText__46002 {
+.keybindHintText_mb9pZg {
     display: inline
 }
 
-.warningIcon__46002 {
+.warningIcon_mb9pZg {
     color: var(--yellow-300);
     margin-inline-end: 8px;
     min-width: 20px
 }
 
-.emoji__46002 {
+.emoji_mb9pZg {
     height: 100%;
     width: 100%
 }
 
-.closeButton__46002,
-.emoji__46002 {
+.closeButton_mb9pZg,
+.emoji_mb9pZg {
     color: var(--interactive-text-default)
 }
 
-.closeButton__46002 {
+.closeButton_mb9pZg {
     cursor: pointer;
     margin-top: -16px
 }
 
-/*# sourceMappingURL=272804.71d127ad86990416.css.map*/
+/*# sourceMappingURL=272804.ba30e45bbaab27d0.css.map*/

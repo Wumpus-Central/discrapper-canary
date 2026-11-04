@@ -1,4 +1,3 @@
-s.d(t, { A: () => c });
 var r = s(177068),
     a = s(409037),
     n = s(768570),
@@ -70,3 +69,4 @@ class _ extends a.c {
     }
 }
 let c = new _();
+s.d(t, {}, { A: c });

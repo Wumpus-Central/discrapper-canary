@@ -1,7 +1,6 @@
-t.d(n, { ExperimentEmbed: () => v });
 var l = t(477900),
     a = t(582128),
-    i = t(17928),
+    i = t(855986),
     r = t(858899),
     s = t(939249),
     o = t(173936),
@@ -9,7 +8,7 @@ var l = t(477900),
     u = t(331322),
     d = t(776078),
     m = t(821609),
-    h = t(280450),
+    h = t(46653),
     p = t(287809),
     x = t(957565),
     g = t(100392),
@@ -31,82 +30,96 @@ function E(e) {
         children: (0, l.jsx)(o.LinkIcon, { size: "sm", color: "currentColor" }),
     });
 }
-function v(e) {
-    let { url: n } = e,
-        t = (0, g.OL)(n),
-        r = (0, g.Kb)(n),
-        { experiments: s, overridesInfo: o } = (0, I.hI)(),
-        { experiments: x, overridesInfo: v } = (0, A.op)(),
-        N = a.useMemo(() => (null == t ? null : null != s[t] ? s[t] : x[t]), [s, x, t]),
-        b = a.useMemo(() => {
-            if (null == t);
-            else if (null != o[t]) return o[t];
-            else if (null != v[t]) return v[t];
-        }, [o, v, t]),
-        S = h.default.getId(),
-        M = (0, y.Fm)(N, S),
-        _ = a.useMemo(() => (0, g.GI)(N, M), [M, N]),
-        L = (0, i.bG)([p.default], () => {
-            let e = p.default.getCurrentUser();
-            return e?.isStaff() || e?.isStaffPersonal();
-        });
-    if (null == t || null == N) return null;
-    let w = (0, g.hp)(N).find((e) => e.value === r),
-        T = null != w ? k.Ps.EXPERIMENT_TREATMENT : k.Ps.EXPERIMENT,
-        P = null != b && null != w && b.variantId === w.value,
-        O = (0, l.jsx)(E, { url: n }),
-        R = null;
-    return (T === k.Ps.EXPERIMENT_TREATMENT && null != w
-        ? (R = (0, l.jsx)(c.E, { variant: "body-xs/normal", color: "text-muted", children: w.label }))
-        : null != M &&
-          (R = (0, l.jsxs)(c.E, { variant: "body-xs/normal", color: "text-muted", children: ["Server Config: ", _] })),
-    L)
-        ? (0, l.jsxs)("div", {
-              className: C.zr,
-              children: [
-                  (0, l.jsx)("div", {
-                      children: (0, l.jsx)("div", {
-                          className: C.wx,
-                          children: (0, l.jsxs)(u.B, {
-                              direction: "horizontal",
-                              justify: "space-between",
-                              children: [
-                                  (0, l.jsxs)(u.B, {
+t.d(
+    n,
+    {},
+    {
+        ExperimentEmbed: function (e) {
+            let { url: n } = e,
+                t = (0, g.OL)(n),
+                r = (0, g.Kb)(n),
+                { experiments: s, overridesInfo: o } = (0, I.hI)(),
+                { experiments: x, overridesInfo: v } = (0, A.op)(),
+                N = a.useMemo(() => (null == t ? null : null != s[t] ? s[t] : x[t]), [s, x, t]),
+                b = a.useMemo(() => {
+                    if (null == t);
+                    else if (null != o[t]) return o[t];
+                    else if (null != v[t]) return v[t];
+                }, [o, v, t]),
+                S = h.default.getId(),
+                _ = (0, y.Fm)(N, S),
+                M = a.useMemo(() => (0, g.GI)(N, _), [_, N]),
+                L = (0, i.bG)([p.default], () => {
+                    let e = p.default.getCurrentUser();
+                    return e?.isStaff() || e?.isStaffPersonal();
+                });
+            if (null == t || null == N) return null;
+            let w = (0, g.hp)(N).find((e) => e.value === r),
+                T = null != w ? k.Ps.EXPERIMENT_TREATMENT : k.Ps.EXPERIMENT,
+                P = null != b && null != w && b.variantId === w.value,
+                O = (0, l.jsx)(E, { url: n }),
+                R = null;
+            return (T === k.Ps.EXPERIMENT_TREATMENT && null != w
+                ? (R = (0, l.jsx)(c.E, { variant: "body-xs/normal", color: "text-muted", children: w.label }))
+                : null != _ &&
+                  (R = (0, l.jsxs)(c.E, {
+                      variant: "body-xs/normal",
+                      color: "text-muted",
+                      children: ["Server Config: ", M],
+                  })),
+            L)
+                ? (0, l.jsxs)("div", {
+                      className: C.zr,
+                      children: [
+                          (0, l.jsx)("div", {
+                              children: (0, l.jsx)("div", {
+                                  className: C.wx,
+                                  children: (0, l.jsxs)(u.B, {
                                       direction: "horizontal",
-                                      gap: 8,
+                                      justify: "space-between",
                                       children: [
-                                          (0, l.jsx)(d.g, { size: "lg" }),
                                           (0, l.jsxs)(u.B, {
-                                              direction: "vertical",
-                                              gap: 0,
+                                              direction: "horizontal",
+                                              gap: 8,
                                               children: [
-                                                  (0, l.jsx)(c.E, { variant: "body-md/semibold", children: N.title }),
-                                                  R,
+                                                  (0, l.jsx)(d.g, { size: "lg" }),
+                                                  (0, l.jsxs)(u.B, {
+                                                      direction: "vertical",
+                                                      gap: 0,
+                                                      children: [
+                                                          (0, l.jsx)(c.E, {
+                                                              variant: "body-md/semibold",
+                                                              children: N.title,
+                                                          }),
+                                                          R,
+                                                      ],
+                                                  }),
                                               ],
                                           }),
+                                          O,
                                       ],
                                   }),
-                                  O,
-                              ],
+                              }),
                           }),
-                      }),
-                  }),
-                  null != w
-                      ? (0, l.jsx)(m.$, {
-                            fullWidth: !0,
-                            variant: P ? "critical-primary" : "primary",
-                            text: P ? `Clear Treatment ${w.value}` : `Apply Treatment ${w.value}`,
-                            onClick: function () {
-                                null == t ||
-                                    null == N ||
-                                    (null != w && (P ? (0, j.t$)(N.system, t, null) : (0, j.t$)(N.system, t, w.value)));
-                            },
-                        })
-                      : (0, l.jsx)("div", {
-                            className: C.uh,
-                            children: (0, l.jsx)(f.g, { experiment: N, experimentId: t, overrideInfo: b }),
-                        }),
-              ],
-          })
-        : null;
-}
+                          null != w
+                              ? (0, l.jsx)(m.$, {
+                                    fullWidth: !0,
+                                    variant: P ? "critical-primary" : "primary",
+                                    text: P ? `Clear Treatment ${w.value}` : `Apply Treatment ${w.value}`,
+                                    onClick: function () {
+                                        null == t ||
+                                            null == N ||
+                                            (null != w &&
+                                                (P ? (0, j.t$)(N.system, t, null) : (0, j.t$)(N.system, t, w.value)));
+                                    },
+                                })
+                              : (0, l.jsx)("div", {
+                                    className: C.uh,
+                                    children: (0, l.jsx)(f.g, { experiment: N, experimentId: t, overrideInfo: b }),
+                                }),
+                      ],
+                  })
+                : null;
+        },
+    },
+);

@@ -1,15 +1,15 @@
-(n.d(t, { A: () => T }), n(321073));
+n(321073);
 var i = n(435558),
     r = n.n(i),
-    a = n(17928),
+    a = n(855986),
     s = n(73153),
     l = n(157559),
-    o = n(280889),
+    o = n(48325),
     d = n(972711),
-    c = n(174459),
+    c = n(129230),
     u = n(31717),
     _ = n(652215),
-    E = n(105292);
+    E = n(792996);
 let A = new Map(),
     h = [];
 function f(e, t) {
@@ -53,10 +53,10 @@ let T = new m(s.h, {
     UPLOAD_ATTACHMENT_ADD_FILES: function (e) {
         let { files: t, channelId: n, draftType: i, allowOptimization: a } = e,
             s = [...f(n, i)];
-        s.length + t.length > _.XgB && i !== u.C.SlashCommand && i !== u.C.ApplicationLauncherCommand
+        s.length + t.length > 10 && i !== u.C.SlashCommand && i !== u.C.ApplicationLauncherCommand
             ? l.A.show({
                   title: E.intl.string(E.t.wOr6hB),
-                  body: E.intl.formatToPlainString(E.t["qqyp/e"], { limit: _.XgB }),
+                  body: E.intl.formatToPlainString(E.t["qqyp/e"], { limit: 10 }),
               })
             : (r().forEach(t, (e) => {
                   let t = new o.bK(e, n, s.length, a);
@@ -112,3 +112,4 @@ let T = new m(s.h, {
         (l.upload(), s.push(l), p(t, r, s));
     },
 });
+n.d(t, {}, { A: T });

@@ -1,11 +1,10 @@
-a.d(e, { K7: () => f, P3: () => g, mk: () => m });
 var n = a(713608),
     t = a(918715),
     i = a(433492),
     d = a(369606),
     o = a(876474),
     r = a(801344),
-    s = a(105292);
+    s = a(792996);
 let c = {
         [r.n_.ChampionKill]: n.q,
         [r.n_.DoubleKill]: n.q,
@@ -84,12 +83,18 @@ let c = {
         [r.n_.GameEnd]: null,
         [r.n_.Respawn]: null,
     };
-function m() {
-    return { [o.m]: c };
-}
-function g() {
-    return { [o.m]: h };
-}
-function f() {
-    return { [o.m]: u };
-}
+a.d(
+    e,
+    {},
+    {
+        K7: function () {
+            return { [o.m]: u };
+        },
+        P3: function () {
+            return { [o.m]: h };
+        },
+        mk: function () {
+            return { [o.m]: c };
+        },
+    },
+);

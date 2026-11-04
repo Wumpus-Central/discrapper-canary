@@ -1,0 +1,131 @@
+.expandedUsersContainer_lQORMF {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-inline-end: 12px;
+    padding-bottom: 8px;
+    padding-inline-start: 56px
+}
+
+.expandedUsersRow_lQORMF {
+    border-radius: var(--radius-sm);
+    height: 24px;
+    padding: 4px
+}
+
+.expandedUsersRow_lQORMF:hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.expandedUsersRow_lQORMF:active {
+    background-color: var(--interactive-background-active)
+}
+
+.facepileContainer_lQORMF {
+    justify-content: center;
+    min-width: 24px;
+    position: relative
+}
+
+.expandedUserRow_lQORMF,
+.facepileContainer_lQORMF {
+    align-items: center;
+    display: flex;
+    min-height: 24px
+}
+
+.expandedUserRow_lQORMF {
+    gap: 6px
+}
+
+.expandedUserName_lQORMF {
+    flex-shrink: 0
+}
+
+.expandedUserName_lQORMF,
+.expandedUserNameContainer_lQORMF {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.expandedUserNameContainer_lQORMF {
+    flex: 1
+}
+
+.actionsRow_lQORMF,
+.expandedUserNameContainer_lQORMF {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.actionsRow_lQORMF {
+    flex-direction: row
+}
+
+.voiceIcons_lQORMF {
+    align-items: center;
+    display: inline-flex;
+    flex-shrink: 0;
+    gap: 4px
+}
+
+.voiceIcon_lQORMF {
+    height: 14px;
+    width: 14px
+}
+
+.expandedUserGameIcon_lQORMF {
+    border-radius: var(--radius-sm);
+    flex-shrink: 0
+}
+
+.gameActivitySecondaryText_lQORMF {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.gameControllerIcon_lQORMF {
+    color: var(--green-360);
+    flex-shrink: 0
+}
+
+.container_UGGrx1 {
+    background-color: #121214;
+    border: 1px solid hsla(240, 4%, 61%, .035);
+    border-radius: 12px;
+    box-shadow: var(--shadow-border) var(--shadow-high);
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 2
+}
+
+.content_UGGrx1 {
+    display: flex
+}
+
+.content_UGGrx1,
+.list_UGGrx1 {
+    flex: 1 1 auto;
+    min-height: 0;
+    min-width: 0
+}
+
+.list_UGGrx1 {
+    overflow: auto
+}
+
+/*# sourceMappingURL=8d4426bec26ce8ab.css.map*/

@@ -1,11 +1,16 @@
-i.d(e, { A: () => o, y: () => s });
-var n = i(17928),
-    l = i(532294),
-    a = i(233741),
+var n = i(855986),
+    l = i(373954),
+    a = i(887287),
     r = i(222506);
-function s() {
-    return l.default.isLocked(a.A.getTargetPID());
-}
-function o() {
-    return (0, n.bG)([r.A, a.A], () => r.A.isInputLocked(a.A.getTargetPID()));
-}
+i.d(
+    e,
+    {},
+    {
+        A: function () {
+            return (0, n.bG)([r.A, a.A], () => r.A.isInputLocked(a.A.getTargetPID()));
+        },
+        y: function () {
+            return l.default.isLocked(a.A.getTargetPID());
+        },
+    },
+);

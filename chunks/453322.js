@@ -1,28 +1,33 @@
-r.d(t, { A: () => c });
 var s = r(582128),
-    n = r(17928),
+    n = r(855986),
     l = r(964486),
     a = r(899847),
     i = r(695515),
     u = r(834981);
-function c(e) {
-    let t = (0, u.VT)(),
-        r = (0, n.bG)([i.A], () => i.A.getAreLinkedUsersProcessed());
-    (0, l.Ay)(() => {
-        i.A.getAreLinkedUsersProcessed() || a.Ay.fetchLinkedUsers().catch(() => {});
-    });
-    let c = s.useRef(e);
-    s.useEffect(() => {
-        c.current = e;
-    }, [e]);
-    let d = s.useRef(null);
-    s.useEffect(() => {
-        if (!r) return;
-        if (null == d.current) {
-            d.current = t;
-            return;
-        }
-        let e = t > d.current;
-        ((d.current = t), e && c.current());
-    }, [r, t]);
-}
+r.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let t = (0, u.VT)(),
+                r = (0, n.bG)([i.A], () => i.A.getAreLinkedUsersProcessed());
+            (0, l.Ay)(() => {
+                i.A.getAreLinkedUsersProcessed() || a.Ay.fetchLinkedUsers().catch(() => {});
+            });
+            let c = s.useRef(e);
+            s.useEffect(() => {
+                c.current = e;
+            }, [e]);
+            let d = s.useRef(null);
+            s.useEffect(() => {
+                if (!r) return;
+                if (null == d.current) {
+                    d.current = t;
+                    return;
+                }
+                let e = t > d.current;
+                ((d.current = t), e && c.current());
+            }, [r, t]);
+        },
+    },
+);

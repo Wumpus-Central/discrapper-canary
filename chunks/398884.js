@@ -1,11 +1,18 @@
-(n.d(t, { Om: () => l, Sn: () => o }), n(17928), n(450510));
+(n(855986), n(450510));
 var i = n(71393),
     r = n(287809),
-    a = n(24482),
-    s = n(652215);
-function l(e) {
+    a = n(879610);
+function s(e) {
     return a.Ay.canUseIncreasedGuildCap(e) || e?.isStaff() === !0;
 }
-function o() {
-    return i.A.getGuildCount() >= s.qlD && !l(r.default.getCurrentUser());
-}
+(n(652215),
+    n.d(
+        t,
+        {},
+        {
+            Om: s,
+            Sn: function () {
+                return i.A.getGuildCount() >= 100 && !s(r.default.getCurrentUser());
+            },
+        },
+    ));

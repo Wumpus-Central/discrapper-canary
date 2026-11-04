@@ -1,0 +1,96 @@
+.container_DKsPd0 {
+    background-color: rgba(19, 19, 24, .95);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-border) var(--shadow-high);
+    box-sizing: border-box;
+    flex: 1;
+    height: 100%;
+    max-width: 300px;
+    padding: var(--space-12)
+}
+
+.activityCard_DKsPd0 {
+    background-color: transparent;
+    flex: 1;
+    padding: 0 !important
+}
+
+.contentInventoryContainer_DKsPd0 {
+    border-top: 1px solid var(--background-mod-strong);
+    margin-top: var(--space-12);
+    padding-top: var(--space-12)
+}
+
+.contentInventoryHeader_DKsPd0 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4);
+    padding-bottom: var(--space-8)
+}
+
+.activityCard_DKsPd0+.row_DKsPd0,
+.inviteFriendsButton_DKsPd0+.row_DKsPd0 {
+    border-top: 1px solid var(--background-mod-strong);
+    margin-top: var(--space-12);
+    padding-top: var(--space-12)
+}
+
+.title_DKsPd0 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.avatar_DKsPd0 {
+    flex-shrink: 0
+}
+
+.row_DKsPd0 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.row_DKsPd0+.row_DKsPd0 {
+    margin-top: var(--space-12)
+}
+
+.details_DKsPd0 {
+    flex-grow: 1;
+    margin: 0 var(--space-12);
+    overflow: hidden
+}
+
+.usernameWrapper_DKsPd0 {
+    align-items: center;
+    display: flex
+}
+
+.username_DKsPd0 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.inviteButtons_DKsPd0 {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-8)
+}
+
+.inviteFriendsButton_DKsPd0 {
+    margin-top: var(--space-12);
+    margin-inline-start: 68px
+}
+
+.liveIndicator_DKsPd0 {
+    margin-inline-start: var(--space-8)
+}
+
+.badgesContainer_DKsPd0 {
+    flex-wrap: wrap
+}
+
+/*# sourceMappingURL=4187692321375e83.css.map*/

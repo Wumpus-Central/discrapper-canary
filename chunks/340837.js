@@ -1,4 +1,3 @@
-n.d(t, { D: () => r });
 var i,
     r =
         (((i = {})[(i.DID_REJOIN = 1)] = "DID_REJOIN"),
@@ -14,3 +13,4 @@ var i,
         (i[(i.DM_SETTINGS_UPSELL_ACKNOWLEDGED = 512)] = "DM_SETTINGS_UPSELL_ACKNOWLEDGED"),
         (i[(i.AUTOMOD_QUARANTINED_SERVER_TAG = 1024)] = "AUTOMOD_QUARANTINED_SERVER_TAG"),
         i);
+n.d(t, {}, { D: r });

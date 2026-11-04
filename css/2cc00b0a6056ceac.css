@@ -1,0 +1,92 @@
+.permissionTooltip_whSvVg {
+    padding-inline-end: 0;
+    padding: 4px 4px 0
+}
+
+.roleTooltipContainer_whSvVg {
+    display: block;
+    max-width: 300px;
+    width: auto
+}
+
+.roleTooltipContentContainer_whSvVg {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: center;
+    width: auto
+}
+
+.roleTooltipContentContainer_whSvVg,
+.roleTooltipItem_whSvVg {
+    align-self: center;
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 1
+}
+
+.roleTooltipItem_whSvVg {
+    overflow: hidden
+}
+
+.permissionsContainer_whSvVg {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start
+}
+
+.permissionsItemContainer_whSvVg {
+    flex: 0 0 auto
+}
+
+.permissionsItem_whSvVg {
+    align-items: flex-start;
+    flex: 0 0 auto
+}
+
+.permissionsDescription_whSvVg {
+    min-width: 0;
+    text-align: start;
+    width: 100%
+}
+
+.permissionChiplet_whSvVg {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border-radius: 4px;
+    cursor: normal;
+    display: flex;
+    gap: 4px;
+    padding: 4px
+}
+
+.noModPerms_whSvVg {
+    cursor: not-allowed
+}
+
+.elevatedPermission_whSvVg {
+    background-color: var(--background-mod-strong)
+}
+
+.headerContainer_whSvVg {
+    gap: 8px;
+    justify-content: space-between;
+    margin-bottom: var(--space-8)
+}
+
+.headerContainer_whSvVg,
+.viewAllPermissions_whSvVg {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.viewAllPermissions_whSvVg {
+    cursor: pointer
+}
+
+/*# sourceMappingURL=2cc00b0a6056ceac.css.map*/

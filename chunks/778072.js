@@ -1,9 +1,9 @@
 e.exports = {
-    iE: "wrapper__3b770",
-    R_: "heading__3b770",
-    kR: "cards__3b770",
-    Nr: "card__3b770",
-    Kk: "icon__3b770",
-    Dp: "iconImage__3b770",
-    h_: "description__3b770",
+    iE: "wrapper_c_ash1",
+    R_: "heading_c_ash1",
+    kR: "cards_c_ash1",
+    Nr: "card_c_ash1",
+    Kk: "icon_c_ash1",
+    Dp: "iconImage_c_ash1",
+    h_: "description_c_ash1",
 };

@@ -1,72 +1,77 @@
-n.d(e, { A: () => g });
 var i = n(477900),
     l = n(582128),
-    d = n(17928),
+    d = n(855986),
     r = n(192308),
     a = n(477782),
     s = n(49229),
-    o = n(327166),
-    u = n(994500),
+    u = n(327166),
+    o = n(994500),
     c = n(287809),
-    A = n(105292);
-function g(t) {
-    let {
-            user: e,
-            location: g = "ContextMenu",
-            onFriendRequestSent: f,
-            onFriendRemove: x,
-            appContext: I,
-            setLoading: h,
-            addFriendLabel: C,
-        } = t,
-        { id: v, username: m, bot: b } = e,
-        p = (0, d.bG)([c.default], () => c.default.getCurrentUser()?.id === v, [v]),
-        T = (0, o.D)(v, C),
-        [y, E] = (0, d.yK)([u.A], () => [u.A.isFriend(v), u.A.isBlocked(v)], [v]),
-        [N, D] = l.useState(!1);
-    return b || p
-        ? null
-        : y
-          ? (0, i.jsx)(a.Dr, {
-                id: "remove-friend",
-                label: A.intl.string(A.t.cvSt1J),
-                action: function () {
-                    (0, r.openModalLazy)(
-                        async () => {
-                            let { ConfirmModal: t } = await Promise.all([
-                                n.e("454048"),
-                                n.e("288688"),
-                                n.e("304823"),
-                                n.e("223976"),
-                                n.e("977260"),
-                            ]).then(n.bind(n, 397927));
-                            return (e) =>
-                                (0, i.jsx)(t, {
-                                    title: A.intl.formatToPlainString(A.t.fPLvZd, { name: m }),
-                                    subtitle: A.intl.format(A.t.l5FFq6, { name: m }),
-                                    confirmText: A.intl.string(A.t.cvSt1J),
-                                    cancelText: A.intl.string(A.t["ETE/oC"]),
-                                    onConfirm: () => {
-                                        (s.A.removeFriend(v, { location: g }), D(!1), x?.());
-                                    },
-                                    ...e,
-                                });
+    A = n(792996);
+n.d(
+    e,
+    {},
+    {
+        A: function (t) {
+            let {
+                    user: e,
+                    location: g = "ContextMenu",
+                    onFriendRequestSent: f,
+                    onFriendRemove: I,
+                    appContext: h,
+                    setLoading: v,
+                    addFriendLabel: x,
+                } = t,
+                { id: C, username: b, bot: m } = e,
+                T = (0, d.bG)([c.default], () => c.default.getCurrentUser()?.id === C, [C]),
+                p = (0, u.D)(C, x),
+                [E, N] = (0, d.yK)([o.A], () => [o.A.isFriend(C), o.A.isBlocked(C)], [C]),
+                [y, D] = l.useState(!1);
+            return m || T
+                ? null
+                : E
+                  ? (0, i.jsx)(a.Dr, {
+                        id: "remove-friend",
+                        label: A.intl.string(A.t.cvSt1J),
+                        action: function () {
+                            (0, r.mM)(
+                                async () => {
+                                    let { ConfirmModal: t } = await Promise.all([
+                                        n.e(454048),
+                                        n.e(288688),
+                                        n.e(304823),
+                                        n.e(223976),
+                                        n.e(977260),
+                                    ]).then(n.bind(n, 397927));
+                                    return (e) =>
+                                        (0, i.jsx)(t, {
+                                            title: A.intl.formatToPlainString(A.t.fPLvZd, { name: b }),
+                                            subtitle: A.intl.format(A.t.l5FFq6, { name: b }),
+                                            confirmText: A.intl.string(A.t.cvSt1J),
+                                            cancelText: A.intl.string(A.t["ETE/oC"]),
+                                            onConfirm: () => {
+                                                (s.A.removeFriend(C, { location: g }), D(!1), I?.());
+                                            },
+                                            ...e,
+                                        });
+                                },
+                                { contextKey: null != h ? (0, r.TI)(h) : void 0 },
+                            );
                         },
-                        { contextKey: null != I ? (0, r.modalContextFromAppContext)(I) : void 0 },
-                    );
-                },
-            })
-          : (0, i.jsx)(a.Dr, {
-                id: "add-friend",
-                label: N ? A.intl.string(A.t.xMH6vD) : T,
-                action: async () => {
-                    N ||
-                        (h?.(!0),
-                        await s.A.addRelationship({ userId: v, context: { location: g } }),
-                        D(!0),
-                        f?.(),
-                        h?.(!1));
-                },
-                disabled: E || (N && !y),
-            });
-}
+                    })
+                  : (0, i.jsx)(a.Dr, {
+                        id: "add-friend",
+                        label: y ? A.intl.string(A.t.xMH6vD) : p,
+                        action: async () => {
+                            y ||
+                                (v?.(!0),
+                                await s.A.addRelationship({ userId: C, context: { location: g } }),
+                                D(!0),
+                                f?.(),
+                                v?.(!1));
+                        },
+                        disabled: N || (y && !E),
+                    });
+        },
+    },
+);

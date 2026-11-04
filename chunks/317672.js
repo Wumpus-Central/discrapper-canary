@@ -1,8 +1,8 @@
 e.exports = {
-    lt: "configDetails__25956",
-    gt: "configListItem__25956",
-    YL: "surfaceEntry__25956",
-    FM: "configListItemSelected__25956 configListItem__25956",
-    Av: "configListItemClickable__25956",
-    zr: "root__25956",
+    lt: "configDetails_GDLuYm",
+    gt: "configListItem_GDLuYm",
+    YL: "surfaceEntry_GDLuYm",
+    FM: "configListItemSelected_GDLuYm configListItem_GDLuYm",
+    Av: "configListItemClickable_GDLuYm",
+    zr: "root_GDLuYm",
 };

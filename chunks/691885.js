@@ -1,404 +1,417 @@
-n.d(t, { l: () => O });
-var i = n(477900),
-    r = n(582128),
-    a = n(503698),
-    s = n.n(a),
-    l = n(494012),
-    o = n(612324),
-    d = n(661531),
-    c = n(603392),
-    u = n(890856),
-    _ = n(452027),
-    E = n(140735),
-    A = n(649998),
-    h = n(432816),
-    f = n(872162),
-    I = n(834730),
-    p = n(991957),
-    m = n(44482),
-    T = n(601973),
-    g = n(483084),
-    S = n(641668),
-    N = n(715022),
-    C = n(470791);
-function O(e) {
-    let { i18n: t } = (0, h.G9)(),
-        {
-            selectionMode: n,
-            readOnly: a,
-            autoFocus: f,
-            clearable: I,
-            fullWidth: O,
-            closeOnSelect: L,
-            shouldFocusWrap: y,
-            placeholder: D = t.SELECT_PLACEHOLDER,
-            name: b,
-            form: v,
-            autoComplete: P,
-            maxOptionsVisible: M = 5,
-            fitContent: U = !1,
-            options: w,
-            formatOption: G,
-            onSelectionChange: x,
-            value: k,
-            wrapTags: F = !1,
-            variant: B = "default",
-            ...V
-        } = e,
-        H = r.useRef(null),
-        { fieldProps: j } = (0, _.n)(V),
-        { id: W, required: Y, label: K, disabled: $ } = j,
-        {
-            isOpen: z,
-            setIsOpen: X,
-            refs: q,
-            floatingStyles: Z,
-            getReferenceProps: Q,
-            getFloatingProps: J,
-            transitionStyles: ee,
-        } = (0, S.G)(),
-        et = r.useId(),
-        { options: en, groups: ei, loading: er } = (0, g.K)({ active: z, options: w, renderOption: G }),
-        ea = r.useRef(null),
-        es = r.useRef(null),
-        [el, eo] = r.useState(null),
-        ed = null != el ? (0, N.ZN)(et, el) : void 0,
-        ec = r.useRef(!1),
-        eu = r.useRef(!1),
-        e_ = L ?? "multiple" !== n,
-        eE = Array.isArray(k) ? k.length > 0 : null != k,
-        eA = $ || a,
-        { measuredWidth: eh, itemsForMeasurement: ef } = (function (e, t) {
-            let { ref: n, width: a } = (0, l.Ay)(),
-                s = r.useId();
-            return {
-                measuredWidth: a,
-                itemsForMeasurement: r.useMemo(
-                    () =>
-                        (0, i.jsx)("div", {
-                            ref: n,
-                            style: {
-                                position: "absolute",
-                                visibility: "hidden",
-                                pointerEvents: "none",
-                                width: "max-content",
-                            },
-                            "aria-hidden": "true",
-                            children: (0, i.jsx)(A.q, {
-                                id: `measurement-${s}`,
-                                required: !1,
-                                items: e,
-                                selectionMode: t,
-                                selectedItems: [],
-                                onSelectionChange: () => {},
-                                shouldFocusWrap: !1,
-                                renderListItem: (e) => (0, i.jsx)(m.c, { ...e }),
-                            }),
-                        }),
-                    [e, t, s, n],
-                ),
-            };
-        })(en, n),
-        eI = r.useCallback(() => {
-            eA || X(!z);
-        }, [eA, X, z]),
-        ep = r.useCallback(
-            (e) => {
-                z && 0 === e.button && e.preventDefault();
-            },
-            [z],
-        ),
-        em = r.useCallback(() => {
-            (X(!1), ea.current?.focus());
-        }, [X]),
-        eT = r.useCallback(() => {
-            !1 !== I && ("multiple" === n ? x([]) : x(null), ea.current?.focus());
-        }, [x, n, I]);
-    r.useEffect(() => {
-        f && ea.current?.focus();
-    }, [f]);
-    let eg = r.useRef(null),
-        eS = r.useCallback(
-            (e) => {
-                if (!eg.current?.contains(e.relatedTarget)) {
-                    if (eu.current) {
-                        eu.current = !1;
-                        return;
-                    }
-                    if (z && "single" === n && null != el) {
-                        let e = en[el];
-                        null != e && !0 !== e.disabled && x(e.value);
-                    }
-                    z && X(!1);
-                }
-            },
-            [z, n, el, en, x, X],
-        ),
-        eN = r.useMemo(() => {
-            let e = Array.isArray(k) ? k : [k];
-            return en.filter((t) => (0, N.fI)(t.value, e));
-        }, [k, en]),
-        eC = r.useCallback(
-            (e) => {
-                if (eA) return;
-                let t = Array.from(e);
-                ("multiple" === n && t.length < 1
-                    ? x([])
-                    : "multiple" === n
-                      ? x(t.map((e) => e.value))
-                      : x(t[0]?.value),
-                    e_ && z && em());
-            },
-            [eA, n, x, e_, em, z],
-        ),
-        { activeIndex: eO, handleKeyDown: eR } = (0, A.l)(!0, en),
-        eL = r.useRef(null);
-    r.useEffect(() => {
-        let e = eO !== eL.current;
-        ((eL.current = eO), null != eO && e && (eo(eO), z || ((ec.current = !0), X(!0))));
-    }, [eO, z, X]);
-    let ey = r.useCallback(
-            (e) => {
-                if (eA) return;
-                let t = en.length;
-                switch (e.key) {
-                    case "ArrowDown":
-                    case "PageDown": {
-                        let n = "PageDown" === e.key ? 10 : 1;
-                        if (0 === t) return;
-                        if ((e.preventDefault(), !z || e.altKey)) {
-                            z || X(!0);
-                            return;
-                        }
-                        eo((e) => {
-                            if (null === e) return 0;
-                            let i = e + n;
-                            return i >= t && y ? 0 : Math.min(i, t - 1);
-                        });
-                        break;
-                    }
-                    case "ArrowUp":
-                    case "PageUp": {
-                        let n = "PageUp" === e.key ? 10 : 1;
-                        if (0 === t) return;
-                        if ((e.preventDefault(), e.altKey && z)) {
-                            if (null != el) {
-                                let e = en[el];
-                                if (null != e && !0 !== e.disabled) {
-                                    eC([e]);
-                                    break;
-                                }
-                            }
-                            em();
-                            break;
-                        }
-                        if (!z) return void X(!0);
-                        eo((e) => {
-                            if (null === e) return 0;
-                            let i = e - n;
-                            return i < 0 && y ? t - 1 : Math.max(i, 0);
-                        });
-                        break;
-                    }
-                    case "Enter":
-                    case " ":
-                        if ((e.preventDefault(), e.stopPropagation(), !z)) return void X(!0);
-                        if (null == el || el > t - 1) return;
-                        {
-                            let e = en[el];
-                            if (null == e || !0 === e.disabled) return;
-                            eC("single" === n ? [e] : (0, N.qH)(n, eN, e));
-                        }
-                        break;
-                    case "Home":
-                        if ((e.preventDefault(), 0 === t)) return;
-                        (eo(0), z || ((ec.current = !0), X(!0)));
-                        break;
-                    case "End":
-                        if ((e.preventDefault(), 0 === t)) return;
-                        (eo(t - 1), z || ((ec.current = !0), X(!0)));
-                        break;
-                    case "Tab":
-                        if (z && "single" === n && null != el) {
-                            let e = en[el];
-                            null != e && !0 !== e.disabled && x(e.value);
-                        }
-                        ((eu.current = !0), X(!1));
-                        break;
-                    case "ArrowLeft":
-                        (e.preventDefault(), H.current?.firstChild?.focus());
-                        break;
-                    case "ArrowRight":
-                        (e.preventDefault(), H.current?.lastChild?.focus());
-                        break;
-                    case "Backspace":
-                        eE && (e.preventDefault(), H.current?.lastChild?.focus());
-                        break;
-                    case "Escape":
-                        z
-                            ? (e.preventDefault(), e.stopPropagation(), em())
-                            : eE && I && (e.preventDefault(), e.stopPropagation(), eT());
-                        break;
-                    default:
-                        eR(e);
-                }
-            },
-            [eA, z, en, y, n, eN, el, x, eC, em, eT, eR, eE, I, X],
-        ),
-        eD = r.useMemo(() => {
-            if (!O || U) return `${Math.max(eh ?? 200, 200) * ("multiple" === n ? 1.5 : 1) + 24 * !!I + 36 + 12}px`;
-        }, [O, U, eh, n, I]),
-        eb = "multiple" === n && eN.length > 0,
-        ev = r.useRef(null);
-    r.useEffect(() => {
-        (clearTimeout(ev.current),
-            eb &&
-                !F &&
-                (ev.current = setTimeout(() => {
-                    H.current?.lastElementChild?.scrollIntoView({ behavior: "smooth", inline: "end", block: "end" });
-                }, 10)));
-    }, [eN, eb, F]);
-    let eP = (0, o.A)(es, q.setReference),
-        eM = r.useCallback(
-            (e) => {
-                if (eA) return;
-                let t = Array.from(e)[0],
-                    n = eN.filter((e) => e.id !== t);
-                (eC(n), 0 === n.length && ea.current?.focus());
-            },
-            [eC, eN, eA],
-        ),
-        eU = Math.max(
-            en.findIndex((e) => e.id === eN[eN.length - 1]?.id),
-            0,
-        ),
-        ew = r.useRef(!1);
-    r.useEffect(() => {
-        er || !z || ew.current
-            ? z || ((ew.current = !1), eo(null), (ec.current = !1))
-            : ((ew.current = !0), ec.current || eo(en.length > 0 ? eU : null), (ec.current = !1), ea.current?.focus());
-    }, [er, z, eU, en.length]);
-    let eG = (0, c.r)(d.A.modules.select.MAX_WIDTH),
-        ex = r.useMemo(
-            () =>
-                U && null != eD
-                    ? { horizontalControlColumnWidth: eD }
-                    : { horizontalControlColumnWidth: `min(${eG}px, auto)` },
-            [U, eD, eG],
-        );
-    return (0, i.jsx)(_.D, {
-        ...j,
-        "data-mana-component": "select",
-        layoutConfig: ex,
-        children: (e) =>
-            (0, i.jsx)("div", {
-                ref: eg,
-                style: { width: O ? "100%" : `minmax(${eD}px, 100%)` },
-                children: (0, i.jsxs)(i.Fragment, {
-                    children: [
-                        (0, i.jsx)(T.p, {
-                            ref: eP,
-                            disabled: $,
-                            readOnly: a,
-                            loading: er,
-                            clearable: I,
-                            fullWidth: O,
-                            isOpen: z,
-                            isInert: eA,
-                            hasValue: eE,
-                            hasError: e?.errorMessageId != null,
-                            handleToggle: eI,
-                            handleClear: eT,
-                            variant: B,
-                            ...Q(),
-                            children: (0, i.jsxs)(u.s, {
-                                "aria-label": K,
-                                buttonRef: ea,
-                                buttonProps: {
-                                    ...(null != W ? { id: W } : {}),
-                                    style: { marginLeft: -4 },
-                                    role: "combobox",
-                                    "aria-haspopup": "listbox",
-                                    "aria-controls": z ? et : void 0,
-                                    "aria-expanded": z,
-                                    "aria-activedescendant": ed,
-                                    "aria-errormessage": e?.errorMessageId,
-                                    "aria-invalid": e?.errorMessageId != null,
-                                    "aria-required": Y,
-                                    children: (0, i.jsx)(E.A, { children: eN.map((e) => e.label).join(", ") }),
-                                },
-                                focusProps: { ringTarget: es },
-                                className: s()(C.L5, { [C.kj]: F, [C.M8]: "multiple" === n }),
-                                onClick: eI,
-                                onMouseDown: ep,
-                                onKeyDown: ey,
-                                onBlur: eS,
-                                "aria-describedby": e?.describedById,
-                                children: [
-                                    (0, i.jsxs)(E.A, { children: [K, ", "] }),
-                                    (0, i.jsx)(R, {
-                                        tagGroupRef: H,
-                                        placeholder: D,
-                                        selectionMode: n,
-                                        selectedItems: eN,
-                                        onRemove: eM,
-                                    }),
-                                ],
-                            }),
-                        }),
-                        (0, i.jsx)(p.H, {
-                            name: b,
-                            form: v,
-                            disabled: eA,
-                            autoComplete: P,
-                            selectionMode: n,
-                            selectedItems: eN,
-                            onSelectionChange: eC,
-                            listItems: en,
-                        }),
-                        (!O || U) && ef,
-                        !eA &&
-                            z &&
-                            (0, i.jsx)("div", {
-                                ref: q.setFloating,
-                                className: C.S_,
-                                ...J(),
-                                style: { ...Z, ...ee },
-                                children: (0, i.jsx)(A.q, {
-                                    id: et,
-                                    tabIndex: -1,
-                                    required: Y,
-                                    items: en,
-                                    groups: ei,
-                                    selectionMode: n,
-                                    selectedItems: eN,
-                                    onSelectionChange: eC,
-                                    shouldFocusWrap: y,
-                                    activeDescendantIndex: el,
-                                    renderListItem: (e) => (0, i.jsx)(m.c, { ...e }),
-                                    maxVisibleItems: M,
-                                    loading: er,
-                                }),
-                            }),
-                    ],
-                }),
-            }),
-    });
-}
-function R(e) {
-    let { placeholder: t, selectionMode: n, selectedItems: r, onRemove: a, tagGroupRef: s } = e,
-        { i18n: l } = (0, h.G9)();
-    return null == r || 0 === r.length
-        ? (0, i.jsx)("div", {
-              className: C.qf,
-              children: (0, i.jsx)(I.E, {
+var t = l(477900),
+    n = l(582128),
+    a = l(503698),
+    s = l.n(a),
+    u = l(494012),
+    i = l(612324),
+    o = l(646514),
+    c = l(603392),
+    d = l(890856),
+    f = l(452027),
+    m = l(140735),
+    p = l(941030),
+    h = l(116711),
+    b = l(431527),
+    g = l(834730),
+    v = l(991957),
+    x = l(44482),
+    k = l(601973),
+    C = l(483084),
+    y = l(641668),
+    I = l(715022),
+    D = l(470791);
+function j(e) {
+    let { placeholder: r, selectionMode: l, selectedItems: n, onRemove: a, tagGroupRef: s } = e,
+        { i18n: u } = (0, h.G9)();
+    return null == n || 0 === n.length
+        ? (0, t.jsx)("div", {
+              className: D.qf,
+              children: (0, t.jsx)(g.E, {
                   variant: "body-md/normal",
                   color: "currentColor",
                   lineClamp: 1,
-                  children: t,
+                  children: r,
               }),
           })
-        : "multiple" === n
-          ? (0, i.jsx)(f.C, { listRef: s, label: l.SELECTED_TAGS_HEADING, items: r, layout: "inline", onRemove: a })
-          : (0, i.jsx)(m.c, { ...r[0], inInput: !0 });
+        : "multiple" === l
+          ? (0, t.jsx)(b.C, { listRef: s, label: u.SELECTED_TAGS_HEADING, items: n, layout: "inline", onRemove: a })
+          : (0, t.jsx)(x.c, { ...n[0], inInput: !0 });
 }
+l.d(
+    r,
+    {},
+    {
+        l: function (e) {
+            let { i18n: r } = (0, h.G9)(),
+                {
+                    selectionMode: l,
+                    readOnly: a,
+                    autoFocus: b,
+                    clearable: g,
+                    fullWidth: A,
+                    closeOnSelect: E,
+                    shouldFocusWrap: M,
+                    placeholder: R = r.SELECT_PLACEHOLDER,
+                    name: w,
+                    form: P,
+                    autoComplete: T,
+                    maxOptionsVisible: L = 5,
+                    fitContent: S = !1,
+                    options: q,
+                    formatOption: W,
+                    onSelectionChange: _,
+                    value: G,
+                    wrapTags: H = !1,
+                    variant: F = "default",
+                    ...K
+                } = e,
+                N = n.useRef(null),
+                { fieldProps: O } = (0, f.n)(K),
+                { id: $, required: B, label: U, disabled: V } = O,
+                {
+                    isOpen: z,
+                    setIsOpen: X,
+                    refs: Z,
+                    floatingStyles: J,
+                    getReferenceProps: Q,
+                    getFloatingProps: Y,
+                    transitionStyles: ee,
+                } = (0, y.G)(),
+                er = n.useId(),
+                { options: el, groups: et, loading: en } = (0, C.K)({ active: z, options: q, renderOption: W }),
+                ea = n.useRef(null),
+                es = n.useRef(null),
+                [eu, ei] = n.useState(null),
+                eo = null != eu ? (0, I.ZN)(er, eu) : void 0,
+                ec = n.useRef(!1),
+                ed = n.useRef(!1),
+                ef = E ?? "multiple" !== l,
+                em = Array.isArray(G) ? G.length > 0 : null != G,
+                ep = V || a,
+                { measuredWidth: eh, itemsForMeasurement: eb } = (function (e, r) {
+                    let { ref: l, width: a } = (0, u.Ay)(),
+                        s = n.useId();
+                    return {
+                        measuredWidth: a,
+                        itemsForMeasurement: n.useMemo(
+                            () =>
+                                (0, t.jsx)("div", {
+                                    ref: l,
+                                    style: {
+                                        position: "absolute",
+                                        visibility: "hidden",
+                                        pointerEvents: "none",
+                                        width: "max-content",
+                                    },
+                                    "aria-hidden": "true",
+                                    children: (0, t.jsx)(p.q, {
+                                        id: `measurement-${s}`,
+                                        required: !1,
+                                        items: e,
+                                        selectionMode: r,
+                                        selectedItems: [],
+                                        onSelectionChange: () => {},
+                                        shouldFocusWrap: !1,
+                                        renderListItem: (e) => (0, t.jsx)(x.c, { ...e }),
+                                    }),
+                                }),
+                            [e, r, s, l],
+                        ),
+                    };
+                })(el, l),
+                eg = n.useCallback(() => {
+                    ep || X(!z);
+                }, [ep, X, z]),
+                ev = n.useCallback(
+                    (e) => {
+                        z && 0 === e.button && e.preventDefault();
+                    },
+                    [z],
+                ),
+                ex = n.useCallback(() => {
+                    (X(!1), ea.current?.focus());
+                }, [X]),
+                ek = n.useCallback(() => {
+                    !1 !== g && ("multiple" === l ? _([]) : _(null), ea.current?.focus());
+                }, [_, l, g]);
+            n.useEffect(() => {
+                b && ea.current?.focus();
+            }, [b]);
+            let eC = n.useRef(null),
+                ey = n.useCallback(
+                    (e) => {
+                        if (!eC.current?.contains(e.relatedTarget)) {
+                            if (ed.current) {
+                                ed.current = !1;
+                                return;
+                            }
+                            if (z && "single" === l && null != eu) {
+                                let e = el[eu];
+                                null != e && !0 !== e.disabled && _(e.value);
+                            }
+                            z && X(!1);
+                        }
+                    },
+                    [z, l, eu, el, _, X],
+                ),
+                eI = n.useMemo(() => {
+                    let e = Array.isArray(G) ? G : [G];
+                    return el.filter((r) => (0, I.fI)(r.value, e));
+                }, [G, el]),
+                eD = n.useCallback(
+                    (e) => {
+                        if (ep) return;
+                        let r = Array.from(e);
+                        ("multiple" === l && r.length < 1
+                            ? _([])
+                            : "multiple" === l
+                              ? _(r.map((e) => e.value))
+                              : _(r[0]?.value),
+                            ef && z && ex());
+                    },
+                    [ep, l, _, ef, ex, z],
+                ),
+                { activeIndex: ej, handleKeyDown: eA } = (0, p.l)(!0, el),
+                eE = n.useRef(null);
+            n.useEffect(() => {
+                let e = ej !== eE.current;
+                ((eE.current = ej), null != ej && e && (ei(ej), z || ((ec.current = !0), X(!0))));
+            }, [ej, z, X]);
+            let eM = n.useCallback(
+                    (e) => {
+                        if (ep) return;
+                        let r = el.length;
+                        switch (e.key) {
+                            case "ArrowDown":
+                            case "PageDown": {
+                                let l = "PageDown" === e.key ? 10 : 1;
+                                if (0 === r) return;
+                                if ((e.preventDefault(), !z || e.altKey)) {
+                                    z || X(!0);
+                                    return;
+                                }
+                                ei((e) => {
+                                    if (null === e) return 0;
+                                    let t = e + l;
+                                    return t >= r && M ? 0 : Math.min(t, r - 1);
+                                });
+                                break;
+                            }
+                            case "ArrowUp":
+                            case "PageUp": {
+                                let l = "PageUp" === e.key ? 10 : 1;
+                                if (0 === r) return;
+                                if ((e.preventDefault(), e.altKey && z)) {
+                                    if (null != eu) {
+                                        let e = el[eu];
+                                        if (null != e && !0 !== e.disabled) {
+                                            eD([e]);
+                                            break;
+                                        }
+                                    }
+                                    ex();
+                                    break;
+                                }
+                                if (!z) return void X(!0);
+                                ei((e) => {
+                                    if (null === e) return 0;
+                                    let t = e - l;
+                                    return t < 0 && M ? r - 1 : Math.max(t, 0);
+                                });
+                                break;
+                            }
+                            case "Enter":
+                            case " ":
+                                if ((e.preventDefault(), e.stopPropagation(), !z)) return void X(!0);
+                                if (null == eu || eu > r - 1) return;
+                                {
+                                    let e = el[eu];
+                                    if (null == e || !0 === e.disabled) return;
+                                    eD("single" === l ? [e] : (0, I.qH)(l, eI, e));
+                                }
+                                break;
+                            case "Home":
+                                if ((e.preventDefault(), 0 === r)) return;
+                                (ei(0), z || ((ec.current = !0), X(!0)));
+                                break;
+                            case "End":
+                                if ((e.preventDefault(), 0 === r)) return;
+                                (ei(r - 1), z || ((ec.current = !0), X(!0)));
+                                break;
+                            case "Tab":
+                                if (z && "single" === l && null != eu) {
+                                    let e = el[eu];
+                                    null != e && !0 !== e.disabled && _(e.value);
+                                }
+                                ((ed.current = !0), X(!1));
+                                break;
+                            case "ArrowLeft":
+                                (e.preventDefault(), N.current?.firstChild?.focus());
+                                break;
+                            case "ArrowRight":
+                                (e.preventDefault(), N.current?.lastChild?.focus());
+                                break;
+                            case "Backspace":
+                                em && (e.preventDefault(), N.current?.lastChild?.focus());
+                                break;
+                            case "Escape":
+                                z
+                                    ? (e.preventDefault(), e.stopPropagation(), ex())
+                                    : em && g && (e.preventDefault(), e.stopPropagation(), ek());
+                                break;
+                            default:
+                                eA(e);
+                        }
+                    },
+                    [ep, z, el, M, l, eI, eu, _, eD, ex, ek, eA, em, g, X],
+                ),
+                eR = n.useMemo(() => {
+                    if (!A || S)
+                        return `${Math.max(eh ?? 200, 200) * ("multiple" === l ? 1.5 : 1) + 24 * !!g + 36 + 12}px`;
+                }, [A, S, eh, l, g]),
+                ew = "multiple" === l && eI.length > 0,
+                eP = n.useRef(null);
+            n.useEffect(() => {
+                (clearTimeout(eP.current),
+                    ew &&
+                        !H &&
+                        (eP.current = setTimeout(() => {
+                            N.current?.lastElementChild?.scrollIntoView({
+                                behavior: "smooth",
+                                inline: "end",
+                                block: "end",
+                            });
+                        }, 10)));
+            }, [eI, ew, H]);
+            let eT = (0, i.A)(es, Z.setReference),
+                eL = n.useCallback(
+                    (e) => {
+                        if (ep) return;
+                        let r = Array.from(e)[0],
+                            l = eI.filter((e) => e.id !== r);
+                        (eD(l), 0 === l.length && ea.current?.focus());
+                    },
+                    [eD, eI, ep],
+                ),
+                eS = Math.max(
+                    el.findIndex((e) => e.id === eI[eI.length - 1]?.id),
+                    0,
+                ),
+                eq = n.useRef(!1);
+            n.useEffect(() => {
+                en || !z || eq.current
+                    ? z || ((eq.current = !1), ei(null), (ec.current = !1))
+                    : ((eq.current = !0),
+                      ec.current || ei(el.length > 0 ? eS : null),
+                      (ec.current = !1),
+                      ea.current?.focus());
+            }, [en, z, eS, el.length]);
+            let eW = (0, c.r)(o.A.modules.select.MAX_WIDTH),
+                e_ = n.useMemo(
+                    () =>
+                        S && null != eR
+                            ? { horizontalControlColumnWidth: eR }
+                            : { horizontalControlColumnWidth: `min(${eW}px, auto)` },
+                    [S, eR, eW],
+                );
+            return (0, t.jsx)(f.D, {
+                ...O,
+                "data-mana-component": "select",
+                layoutConfig: e_,
+                children: (e) =>
+                    (0, t.jsx)("div", {
+                        ref: eC,
+                        style: { width: A ? "100%" : `minmax(${eR}px, 100%)` },
+                        children: (0, t.jsxs)(t.Fragment, {
+                            children: [
+                                (0, t.jsx)(k.p, {
+                                    ref: eT,
+                                    disabled: V,
+                                    readOnly: a,
+                                    loading: en,
+                                    clearable: g,
+                                    fullWidth: A,
+                                    isOpen: z,
+                                    isInert: ep,
+                                    hasValue: em,
+                                    hasError: e?.errorMessageId != null,
+                                    handleToggle: eg,
+                                    handleClear: ek,
+                                    variant: F,
+                                    ...Q(),
+                                    children: (0, t.jsxs)(d.s, {
+                                        "aria-label": U,
+                                        buttonRef: ea,
+                                        buttonProps: {
+                                            ...(null != $ ? { id: $ } : {}),
+                                            style: { marginLeft: -4 },
+                                            role: "combobox",
+                                            "aria-haspopup": "listbox",
+                                            "aria-controls": z ? er : void 0,
+                                            "aria-expanded": z,
+                                            "aria-activedescendant": eo,
+                                            "aria-errormessage": e?.errorMessageId,
+                                            "aria-invalid": e?.errorMessageId != null,
+                                            "aria-required": B,
+                                            children: (0, t.jsx)(m.A, { children: eI.map((e) => e.label).join(", ") }),
+                                        },
+                                        focusProps: { ringTarget: es },
+                                        className: s()(D.L5, { [D.kj]: H, [D.M8]: "multiple" === l }),
+                                        onClick: eg,
+                                        onMouseDown: ev,
+                                        onKeyDown: eM,
+                                        onBlur: ey,
+                                        "aria-describedby": e?.describedById,
+                                        children: [
+                                            (0, t.jsxs)(m.A, { children: [U, ", "] }),
+                                            (0, t.jsx)(j, {
+                                                tagGroupRef: N,
+                                                placeholder: R,
+                                                selectionMode: l,
+                                                selectedItems: eI,
+                                                onRemove: eL,
+                                            }),
+                                        ],
+                                    }),
+                                }),
+                                (0, t.jsx)(v.H, {
+                                    name: w,
+                                    form: P,
+                                    disabled: ep,
+                                    autoComplete: T,
+                                    selectionMode: l,
+                                    selectedItems: eI,
+                                    onSelectionChange: eD,
+                                    listItems: el,
+                                }),
+                                (!A || S) && eb,
+                                !ep &&
+                                    z &&
+                                    (0, t.jsx)("div", {
+                                        ref: Z.setFloating,
+                                        className: D.S_,
+                                        ...Y(),
+                                        style: { ...J, ...ee },
+                                        children: (0, t.jsx)(p.q, {
+                                            id: er,
+                                            tabIndex: -1,
+                                            required: B,
+                                            items: el,
+                                            groups: et,
+                                            selectionMode: l,
+                                            selectedItems: eI,
+                                            onSelectionChange: eD,
+                                            shouldFocusWrap: M,
+                                            activeDescendantIndex: eu,
+                                            renderListItem: (e) => (0, t.jsx)(x.c, { ...e }),
+                                            maxVisibleItems: L,
+                                            loading: en,
+                                        }),
+                                    }),
+                            ],
+                        }),
+                    }),
+            });
+        },
+    },
+);

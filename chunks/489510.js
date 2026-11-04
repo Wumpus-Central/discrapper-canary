@@ -1,4 +1,3 @@
-d.d(t, { i: () => lK, n: () => tT, r: () => lH, t: () => tI });
 var i,
     e = d(886347),
     c = d(219877),
@@ -16,8 +15,8 @@ var i,
     p = "vendor",
     N = "version",
     M = "architecture",
-    X = "major",
-    r = "model",
+    r = "major",
+    X = "model",
     y = "console",
     Y = "mobile",
     T = "tablet",
@@ -37,10 +36,10 @@ var i,
     F = D + "-" + g,
     O = D + "-form-factors",
     J = D + "-" + Y,
-    k = D + "-" + r,
+    k = D + "-" + X,
     E = D + "-" + C,
     v = E + "-version",
-    K = [w, S, Y, r, C, x, M, R, g],
+    K = [w, S, Y, X, C, x, M, R, g],
     H = "Amazon",
     Q = "Apple",
     P = "ASUS",
@@ -70,8 +69,8 @@ var i,
     lp = "Mobile ",
     lN = " Browser",
     lM = "Windows",
-    lX = typeof window !== b && window.navigator ? window.navigator : void 0,
-    lr = lX && lX.userAgentData ? lX.userAgentData : void 0,
+    lr = typeof window !== b && window.navigator ? window.navigator : void 0,
+    lX = lr && lr.userAgentData ? lr.userAgentData : void 0,
     ly = function (l, t) {
         var d = {},
             i = t;
@@ -391,37 +390,37 @@ var i,
         ],
         device: [
             [/\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i],
-            [r, [p, le], [G, T]],
+            [X, [p, le], [G, T]],
             [
                 /\b((?:s[cgp]h|gt|sm)-(?![lr])\w+|sc[g-]?[\d]+a?|galaxy nexus)/i,
                 /samsung[- ]((?!sm-[lr]|browser)[-\w]+)/i,
                 /sec-(sgh\w+)/i,
             ],
-            [r, [p, le], [G, Y]],
+            [X, [p, le], [G, Y]],
             [/(?:\/|\()(ip(?:hone|od)[\w, ]*)[\/\);]/i],
-            [r, [p, Q], [G, Y]],
+            [X, [p, Q], [G, Y]],
             [/\b(?:ios|apple\w+)\/.+[\(\/](ipad)/i, /\b(ipad)[\d,]*[;\] ].+(mac |i(pad)?)os/i],
-            [r, [p, Q], [G, T]],
+            [X, [p, Q], [G, T]],
             [/(macintosh);/i],
-            [r, [p, Q]],
+            [X, [p, Q]],
             [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
-            [r, [p, lc], [G, Y]],
+            [X, [p, lc], [G, Y]],
             [/\b((?:brt|eln|hey2?|gdi|jdn)-a?[lnw]09|(?:ag[rm]3?|jdn2|kob2)-a?[lw]0[09]hn)(?: bui|\)|;)/i],
-            [r, [p, $], [G, T]],
+            [X, [p, $], [G, T]],
             [/honor([-\w ]+)[;\)]/i],
-            [r, [p, $], [G, Y]],
+            [X, [p, $], [G, Y]],
             [
                 /\b((?:ag[rs][2356]?k?|bah[234]?|bg[2o]|bt[kv]|cmr|cpn|db[ry]2?|jdn2|got|kob2?k?|mon|pce|scm|sht?|[tw]gr|vrd)-[ad]?[lw][0125][09]b?|605hw|bg2-u03|(?:gem|fdr|m2|ple|t1)-[7a]0[1-4][lu]|t1-a2[13][lw]|mediapad[\w\. ]*(?= bui|\)))\b(?!.+d\/s)/i,
             ],
-            [r, [p, A], [G, T]],
+            [X, [p, A], [G, T]],
             [/(?:huawei) ?([-\w ]+)[;\)]/i, /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][\dc][adnt]?)\b(?!.+d\/s)/i],
-            [r, [p, A], [G, Y]],
+            [X, [p, A], [G, Y]],
             [
                 /oid[^\)]+; (2[\dbc]{4}(182|283|rp\w{2})[cgl]|m2105k81a?c)(?: bui|\))/i,
                 /\b(?:xiao)?((?:red)?mi[-_ ]?pad[\w- ]*)(?: bui|\))/i,
             ],
             [
-                [r, /_/g, " "],
+                [X, /_/g, " "],
                 [p, ls],
                 [G, T],
             ],
@@ -433,7 +432,7 @@ var i,
                 / ([\w ]+) miui\/v?\d/i,
             ],
             [
-                [r, /_/g, " "],
+                [X, /_/g, " "],
                 [p, ls],
                 [G, Y],
             ],
@@ -441,124 +440,124 @@ var i,
                 /droid.+; (cph2[3-6]\d[13579]|((gm|hd)19|(ac|be|in|kb)20|(d[en]|eb|le|mt)21|ne22)[0-2]\d|p[g-l]\w[1m]10)\b/i,
                 /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i,
             ],
-            [r, [p, ld], [G, Y]],
+            [X, [p, ld], [G, Y]],
             [/; (\w+) bui.+ oppo/i, /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i],
-            [r, [p, li], [G, Y]],
+            [X, [p, li], [G, Y]],
             [/\b(opd2(\d{3}a?))(?: bui|\))/i],
-            [r, [p, lD, { OnePlus: ["203", "304", "403", "404", "413", "415"], "*": li }], [G, T]],
+            [X, [p, lD, { OnePlus: ["203", "304", "403", "404", "413", "415"], "*": li }], [G, T]],
             [/(vivo (5r?|6|8l?|go|one|s|x[il]?[2-4]?)[\w\+ ]*)(?: bui|\))/i],
-            [r, [p, "BLU"], [G, Y]],
+            [X, [p, "BLU"], [G, Y]],
             [/; vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
-            [r, [p, "Vivo"], [G, Y]],
+            [X, [p, "Vivo"], [G, Y]],
             [/\b(rmx[1-3]\d{3})(?: bui|;|\))/i],
-            [r, [p, "Realme"], [G, Y]],
+            [X, [p, "Realme"], [G, Y]],
             [
                 /(ideatab[-\w ]+|602lv|d-42a|a101lv|a2109a|a3500-hv|s[56]000|pb-6505[my]|tb-?x?\d{3,4}(?:f[cu]|xu|[av])|yt\d?-[jx]?\d+[lfmx])( bui|;|\)|\/)/i,
                 /lenovo ?(b[68]0[08]0-?[hf]?|tab(?:[\w- ]+?)|tb[\w-]{6,7})( bui|;|\)|\/)/i,
             ],
-            [r, [p, _], [G, T]],
+            [X, [p, _], [G, T]],
             [/lenovo[-_ ]?([-\w ]+?)(?: bui|\)|\/)/i],
-            [r, [p, _], [G, Y]],
+            [X, [p, _], [G, Y]],
             [
                 /\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i,
                 /\bmot(?:orola)?[- ]([\w\s]+)(\)| bui)/i,
                 /((?:moto(?! 360)[-\w\(\) ]+|xt\d{3,4}[cgkosw\+]?[-\d]*|nexus 6)(?= bui|\)))/i,
             ],
-            [r, [p, ll], [G, Y]],
+            [X, [p, ll], [G, Y]],
             [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
-            [r, [p, ll], [G, T]],
+            [X, [p, ll], [G, T]],
             [/\b(?:lg)?([vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-            [r, [p, "LG"], [G, T]],
+            [X, [p, "LG"], [G, T]],
             [
                 /(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i,
                 /\blg[-e;\/ ]+(?!.*(?:browser|netcast|android tv|watch|webos))(\w+)/i,
                 /\blg-?([\d\w]+) bui/i,
             ],
-            [r, [p, "LG"], [G, Y]],
+            [X, [p, "LG"], [G, Y]],
             [/(nokia) (t[12][01])/i],
-            [p, r, [G, T]],
+            [p, X, [G, T]],
             [/(?:maemo|nokia).*(n900|lumia \d+|rm-\d+)/i, /nokia[-_ ]?(([-\w\. ]*?))( bui|\)|;|\/)/i],
             [
-                [r, /_/g, " "],
+                [X, /_/g, " "],
                 [G, Y],
                 [p, "Nokia"],
             ],
             [/(pixel (c|tablet))\b/i],
-            [r, [p, B], [G, T]],
+            [X, [p, B], [G, T]],
             [
                 /droid.+;(?: google)? (g(01[13]a|020[aem]|025[jn]|1b60|1f8f|2ybb|4s1m|576d|5nz6|8hhn|8vou|a02099|c15s|d1yq|e2ae|ec77|gh2x|kv4x|p4bc|pj41|r83y|tt9q|ur25|wvk6)|pixel[\d ]*a?( pro)?( xl)?( fold)?( \(5g\))?)( bui|\))/i,
             ],
-            [r, [p, B], [G, Y]],
+            [X, [p, B], [G, Y]],
             [/(google) (pixelbook( go)?)/i],
-            [p, r],
+            [p, X],
             [/droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-\w\w\d\d)(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i],
-            [r, [p, la], [G, Y]],
+            [X, [p, la], [G, Y]],
             [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
             [
-                [r, "Xperia Tablet"],
+                [X, "Xperia Tablet"],
                 [p, la],
                 [G, T],
             ],
             [/(alexa)webm/i, /(kf[a-z]{2}wi|aeo(?!bc)\w\w)( bui|\))/i, /(kf[a-z]+)( bui|\)).+silk\//i],
-            [r, [p, H], [G, T]],
+            [X, [p, H], [G, T]],
             [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
             [
-                [r, /(.+)/g, "Fire Phone $1"],
+                [X, /(.+)/g, "Fire Phone $1"],
                 [p, H],
                 [G, Y],
             ],
             [/(playbook);[-\w\),; ]+(rim)/i],
-            [r, p, [G, T]],
+            [X, p, [G, T]],
             [/\b((?:bb[a-f]|st[hv])100-\d)/i, /(?:blackberry|\(bb10;) (\w+)/i],
-            [r, [p, f], [G, Y]],
+            [X, [p, f], [G, Y]],
             [/(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i],
-            [r, [p, P], [G, T]],
+            [X, [p, P], [G, T]],
             [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
-            [r, [p, P], [G, Y]],
+            [X, [p, P], [G, Y]],
             [/(nexus 9)/i],
-            [r, [p, "HTC"], [G, T]],
+            [X, [p, "HTC"], [G, T]],
             [
                 /(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i,
                 /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i,
                 /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i,
             ],
-            [p, [r, /_/g, " "], [G, Y]],
+            [p, [X, /_/g, " "], [G, Y]],
             [
                 /tcl (xess p17aa)/i,
                 /droid [\w\.]+; ((?:8[14]9[16]|9(?:0(?:48|60|8[01])|1(?:3[27]|66)|2(?:6[69]|9[56])|466))[gqswx])(_\w(\w|\w\w))?(\)| bui)/i,
             ],
-            [r, [p, "TCL"], [G, T]],
+            [X, [p, "TCL"], [G, T]],
             [
                 /droid [\w\.]+; (418(?:7d|8v)|5087z|5102l|61(?:02[dh]|25[adfh]|27[ai]|56[dh]|59k|65[ah])|a509dl|t(?:43(?:0w|1[adepqu])|50(?:6d|7[adju])|6(?:09dl|10k|12b|71[efho]|76[hjk])|7(?:66[ahju]|67[hw]|7[045][bh]|71[hk]|73o|76[ho]|79w|81[hks]?|82h|90[bhsy]|99b)|810[hs]))(_\w(\w|\w\w))?(\)| bui)/i,
             ],
-            [r, [p, "TCL"], [G, Y]],
+            [X, [p, "TCL"], [G, Y]],
             [/(itel) ((\w+))/i],
-            [[p, lz], r, [G, lD, { tablet: ["p10001l", "w7001"], "*": "mobile" }]],
+            [[p, lz], X, [G, lD, { tablet: ["p10001l", "w7001"], "*": "mobile" }]],
             [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
-            [r, [p, "Acer"], [G, T]],
+            [X, [p, "Acer"], [G, T]],
             [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
-            [r, [p, "Meizu"], [G, Y]],
+            [X, [p, "Meizu"], [G, Y]],
             [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
-            [r, [p, "Ulefone"], [G, Y]],
+            [X, [p, "Ulefone"], [G, Y]],
             [/; (energy ?\w+)(?: bui|\))/i, /; energizer ([\w ]+)(?: bui|\))/i],
-            [r, [p, "Energizer"], [G, Y]],
+            [X, [p, "Energizer"], [G, Y]],
             [/; cat (b35);/i, /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i],
-            [r, [p, "Cat"], [G, Y]],
+            [X, [p, "Cat"], [G, Y]],
             [/((?:new )?andromax[\w- ]+)(?: bui|\))/i],
-            [r, [p, "Smartfren"], [G, Y]],
+            [X, [p, "Smartfren"], [G, Y]],
             [/droid.+; (a(in)?(0(15|59|6[35])|142)p?)/i],
-            [r, [p, "Nothing"], [G, Y]],
+            [X, [p, "Nothing"], [G, Y]],
             [
                 /; (x67 5g|tikeasy \w+|ac[1789]\d\w+)( b|\))/i,
                 /archos ?(5|gamepad2?|([\w ]*[t1789]|hello) ?\d+[\w ]*)( b|\))/i,
             ],
-            [r, [p, "Archos"], [G, T]],
+            [X, [p, "Archos"], [G, T]],
             [/archos ([\w ]+)( b|\))/i, /; (ac[3-6]\d\w{2,8})( b|\))/i],
-            [r, [p, "Archos"], [G, Y]],
+            [X, [p, "Archos"], [G, Y]],
             [/; (n159v)/i],
-            [r, [p, "HMD"], [G, Y]],
+            [X, [p, "HMD"], [G, Y]],
             [/(imo) (tab \w+)/i, /(infinix|tecno) (x1101b?|p904|dp(7c|8d|10a)( pro)?|p70[1-3]a?|p904|t1101)/i],
-            [p, r, [G, T]],
+            [p, X, [G, T]],
             [
                 /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus(?! zenw)|dell|jolla|meizu|motorola|polytron|tecno|micromax|advan)[-_ ]?([-\w]*)/i,
                 /; (blu|hmd|imo|infinix|lava|oneplus|tcl|wiko)[_ ]([\w\+ ]+?)(?: bui|\)|; r)/i,
@@ -568,92 +567,92 @@ var i,
                 /(hisense) ([ehv][\w ]+)\)/i,
                 /droid[^;]+; (philips)[_ ]([sv-x][\d]{3,4}[xz]?)/i,
             ],
-            [p, r, [G, Y]],
+            [p, X, [G, Y]],
             [/(kobo)\s(ereader|touch)/i, /(hp).+(touchpad(?!.+tablet)|tablet)/i, /(kindle)\/([\w\.]+)/i],
-            [p, r, [G, T]],
+            [p, X, [G, T]],
             [/(surface duo)/i],
-            [r, [p, q], [G, T]],
+            [X, [p, q], [G, T]],
             [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
-            [r, [p, "Fairphone"], [G, Y]],
+            [X, [p, "Fairphone"], [G, Y]],
             [/((?:tegranote|shield t(?!.+d tv))[\w- ]*?)(?: b|\))/i],
-            [r, [p, lt], [G, T]],
+            [X, [p, lt], [G, T]],
             [/(sprint) (\w+)/i],
-            [p, r, [G, Y]],
+            [p, X, [G, Y]],
             [/(kin\.[onetw]{3})/i],
             [
-                [r, /\./g, " "],
+                [X, /\./g, " "],
                 [p, q],
                 [G, Y],
             ],
             [/droid.+; ([c6]+|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-            [r, [p, ln], [G, T]],
+            [X, [p, ln], [G, T]],
             [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-            [r, [p, ln], [G, Y]],
+            [X, [p, ln], [G, Y]],
             [/(philips)[\w ]+tv/i, /smart-tv.+(samsung)/i],
             [p, [G, V]],
             [/hbbtv.+maple;(\d+)/i],
             [
-                [r, /^/, "SmartTV"],
+                [X, /^/, "SmartTV"],
                 [p, le],
                 [G, V],
             ],
             [/(vizio)(?: |.+model\/)(\w+-\w+)/i, /tcast.+(lg)e?. ([-\w]+)/i],
-            [p, r, [G, V]],
+            [p, X, [G, V]],
             [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
             [
                 [p, "LG"],
                 [G, V],
             ],
             [/(apple) ?tv/i],
-            [p, [r, Q + " TV"], [G, V]],
+            [p, [X, Q + " TV"], [G, V]],
             [/crkey.*devicetype\/chromecast/i],
             [
-                [r, lm + " Third Generation"],
+                [X, lm + " Third Generation"],
                 [p, B],
                 [G, V],
             ],
             [/crkey.*devicetype\/([^/]*)/i],
             [
-                [r, /^/, "Chromecast "],
+                [X, /^/, "Chromecast "],
                 [p, B],
                 [G, V],
             ],
             [/fuchsia.*crkey/i],
             [
-                [r, lm + " Nest Hub"],
+                [X, lm + " Nest Hub"],
                 [p, B],
                 [G, V],
             ],
             [/crkey/i],
             [
-                [r, lm],
+                [X, lm],
                 [p, B],
                 [G, V],
             ],
             [/(portaltv)/i],
-            [r, [p, lW], [G, V]],
+            [X, [p, lW], [G, V]],
             [/droid.+aft(\w+)( bui|\))/i],
-            [r, [p, H], [G, V]],
+            [X, [p, H], [G, V]],
             [/(shield \w+ tv)/i],
-            [r, [p, lt], [G, V]],
+            [X, [p, lt], [G, V]],
             [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
-            [r, [p, lc], [G, V]],
+            [X, [p, lc], [G, V]],
             [/(bravia[\w ]+)( bui|\))/i],
-            [r, [p, la], [G, V]],
+            [X, [p, la], [G, V]],
             [/(mi(tv|box)-?\w+) bui/i],
-            [r, [p, ls], [G, V]],
+            [X, [p, ls], [G, V]],
             [/Hbbtv.*(technisat) (.*);/i],
-            [p, r, [G, V]],
+            [p, X, [G, V]],
             [/\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i, /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i],
             [
                 [p, /.+\/(\w+)/, "$1", lD, { LG: "lge" }],
-                [r, lx],
+                [X, lx],
                 [G, V],
             ],
             [/(playstation \w+)/i],
-            [r, [p, la], [G, y]],
+            [X, [p, la], [G, y]],
             [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
-            [r, [p, q], [G, y]],
+            [X, [p, q], [G, y]],
             [
                 /(ouya)/i,
                 /(nintendo) (\w+)/i,
@@ -661,53 +660,53 @@ var i,
                 /(valve).+(steam deck)/i,
                 /droid.+; ((shield|rgcube|gr0006))( bui|\))/i,
             ],
-            [[p, lD, { Nvidia: "Shield", Anbernic: "RGCUBE", Logitech: "GR0006" }], r, [G, y]],
+            [[p, lD, { Nvidia: "Shield", Anbernic: "RGCUBE", Logitech: "GR0006" }], X, [G, y]],
             [/\b(sm-[lr]\d\d[0156][fnuw]?s?|gear live)\b/i],
-            [r, [p, le], [G, L]],
+            [X, [p, le], [G, L]],
             [/((pebble))app/i, /(asus|google|lg|oppo|xiaomi) ((pixel |zen)?watch[\w ]*)( bui|\))/i],
-            [p, r, [G, L]],
+            [p, X, [G, L]],
             [/(ow(?:19|20)?we?[1-3]{1,3})/i],
-            [r, [p, li], [G, L]],
+            [X, [p, li], [G, L]],
             [/(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i],
-            [r, [p, Q], [G, L]],
+            [X, [p, Q], [G, L]],
             [/(opwwe\d{3})/i],
-            [r, [p, ld], [G, L]],
+            [X, [p, ld], [G, L]],
             [/(moto 360)/i],
-            [r, [p, ll], [G, L]],
+            [X, [p, ll], [G, L]],
             [/(smartwatch 3)/i],
-            [r, [p, la], [G, L]],
+            [X, [p, la], [G, L]],
             [/(g watch r)/i],
-            [r, [p, "LG"], [G, L]],
+            [X, [p, "LG"], [G, L]],
             [/droid.+; (wt63?0{2,3})\)/i],
-            [r, [p, ln], [G, L]],
+            [X, [p, ln], [G, L]],
             [/droid.+; (glass) \d/i],
-            [r, [p, B], [G, "xr"]],
+            [X, [p, B], [G, "xr"]],
             [/(pico) ([\w ]+) os\d/i],
-            [p, r, [G, "xr"]],
+            [p, X, [G, "xr"]],
             [/(quest( \d| pro)?s?).+vr/i],
-            [r, [p, lW], [G, "xr"]],
+            [X, [p, lW], [G, "xr"]],
             [/mobile vr; rv.+firefox/i],
             [[G, "xr"]],
             [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
             [p, [G, I]],
             [/(aeobc)\b/i],
-            [r, [p, H], [G, I]],
+            [X, [p, H], [G, I]],
             [/(homepod).+mac os/i],
-            [r, [p, Q], [G, I]],
+            [X, [p, Q], [G, I]],
             [/windows iot/i],
             [[G, I]],
             [/droid.+; ([\w- ]+) (4k|android|smart|google)[- ]?tv/i],
-            [r, [G, V]],
+            [X, [G, V]],
             [/\b((4k|android|smart|opera)[- ]?tv|tv; rv:|large screen[\w ]+safari)\b/i],
             [[G, V]],
             [/droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew|; hmsc).+?(mobile|vr|\d) safari/i],
-            [r, [G, lD, { mobile: "Mobile", xr: "VR", "*": T }]],
+            [X, [G, lD, { mobile: "Mobile", xr: "VR", "*": T }]],
             [/\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i],
             [[G, T]],
             [/(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i],
             [[G, Y]],
             [/droid .+?; ([\w\. -]+)( bui|\))/i],
-            [r, [p, "Generic"]],
+            [X, [p, "Generic"]],
         ],
         engine: [
             [/windows.+ edge\/([\w\.]+)/i],
@@ -846,14 +845,14 @@ var i,
     lJ =
         ((i = { init: {}, isIgnore: {}, isIgnoreRgx: {}, toString: {} }),
         lR.call(i.init, [
-            [m, [W, N, X, G]],
+            [m, [W, N, r, G]],
             ["cpu", [M]],
-            [o, [G, r, p]],
+            [o, [G, X, p]],
             [u, [W, N]],
             ["os", [W, N]],
         ]),
         lR.call(i.isIgnore, [
-            [m, [N, X]],
+            [m, [N, r]],
             [u, [N]],
             ["os", [N]],
         ]),
@@ -864,7 +863,7 @@ var i,
         lR.call(i.toString, [
             [m, [W, N]],
             ["cpu", [M]],
-            [o, [p, r]],
+            [o, [p, X]],
             [u, [W, N]],
             ["os", [W, N]],
         ]),
@@ -882,8 +881,8 @@ var i,
                 return l;
             }),
             (a.prototype.withClientHints = function () {
-                return lr
-                    ? lr.getHighEntropyValues(K).then(function (t) {
+                return lX
+                    ? lX.getHighEntropyValues(K).then(function (t) {
                           return l.setCH(new lE(t, !1)).parseCH().get();
                       })
                     : l.parseCH().get();
@@ -935,7 +934,7 @@ function lE(l, t) {
             [w, lI(l[D])],
             [S, lI(l[j])],
             [Y, /\?1/.test(l[J])],
-            [r, lC(l[k])],
+            [X, lC(l[k])],
             [C, lC(l[E])],
             [x, lC(l[v])],
             [M, lC(l[U])],
@@ -975,7 +974,7 @@ function lK(l, t, d) {
             d = e;
         }
     if (!(this instanceof lK)) return new lK(l, t, d).getResult();
-    var b = typeof l === Z ? l : d && d[a] ? d[a] : lX && lX.userAgent ? lX.userAgent : "",
+    var b = typeof l === Z ? l : d && d[a] ? d[a] : lr && lr.userAgent ? lr.userAgent : "",
         W = new lE(d, !0),
         G = t ? ly(lO, t) : lO,
         p = function (l) {
@@ -1038,22 +1037,22 @@ function lH(l) {
         return ((this.uaCH = l), this);
     }),
     (lv.prototype.detectFeature = function () {
-        if (lX && lX.userAgent == this.ua)
+        if (lr && lr.userAgent == this.ua)
             switch (this.itemType) {
                 case m:
-                    lX.brave && typeof lX.brave.isBrave == s && this.set(W, "Brave");
+                    lr.brave && typeof lr.brave.isBrave == s && this.set(W, "Brave");
                     break;
                 case o:
-                    (!this.get(G) && lr && lr[Y] && this.set(G, Y),
-                        "Macintosh" == this.get(r) &&
-                            lX &&
-                            typeof lX.standalone !== b &&
-                            lX.maxTouchPoints &&
-                            lX.maxTouchPoints > 2 &&
-                            this.set(r, "iPad").set(G, T));
+                    (!this.get(G) && lX && lX[Y] && this.set(G, Y),
+                        "Macintosh" == this.get(X) &&
+                            lr &&
+                            typeof lr.standalone !== b &&
+                            lr.maxTouchPoints &&
+                            lr.maxTouchPoints > 2 &&
+                            this.set(X, "iPad").set(G, T));
                     break;
                 case "os":
-                    !this.get(W) && lr && lr[C] && this.set(W, lr[C]);
+                    !this.get(W) && lX && lX[C] && this.set(W, lX[C]);
                     break;
                 case h:
                     var l = this.data,
@@ -1067,7 +1066,7 @@ function lH(l) {
     (lv.prototype.parseUA = function () {
         switch ((this.itemType != h && lg.call(this.data, this.ua, this.rgxMap), this.itemType)) {
             case m:
-                this.set(X, lw(this.get(N)));
+                this.set(r, lw(this.get(N)));
                 break;
             case "os":
                 if ("iOS" == this.get(W) && "18.6" == this.get(N)) {
@@ -1094,7 +1093,7 @@ function lH(l) {
                             (!d || (/Chrom/.test(d) && c != lb) || (d == lo && /WebView2/.test(c))) &&
                             ((c = lD(c, lF)),
                             ((d = this.get(W)) && !/Chrom/.test(d) && /Chrom/.test(c)) ||
-                                this.set(W, c).set(N, a).set(X, lw(a)),
+                                this.set(W, c).set(N, a).set(r, lw(a)),
                             (d = c)),
                             this.itemType == u && c == lb && this.set(N, a));
                     }
@@ -1104,10 +1103,10 @@ function lH(l) {
                 s && (s && "64" == l[g] && (s += "64"), lg.call(this.data, s + ";", t));
                 break;
             case o:
-                if ((l[Y] && this.set(G, Y), l[r] && (this.set(r, l[r]), !this.get(G) || !this.get(p)))) {
+                if ((l[Y] && this.set(G, Y), l[X] && (this.set(X, l[X]), !this.get(G) || !this.get(p)))) {
                     var n,
                         Z = {};
-                    (lg.call(Z, "droid 9; " + l[r] + ")", t),
+                    (lg.call(Z, "droid 9; " + l[X] + ")", t),
                         !this.get(G) && Z.type && this.set(G, Z.type),
                         !this.get(p) && Z.vendor && this.set(p, Z.vendor));
                 }
@@ -1123,7 +1122,7 @@ function lH(l) {
                     var T = l[x];
                     (y == lM && (T = parseInt(lw(T), 10) >= 13 ? "11" : "10"), this.set(W, y).set(N, T));
                 }
-                this.get(W) == lM && "Xbox" == l[r] && this.set(W, "Xbox").set(N, void 0);
+                this.get(W) == lM && "Xbox" == l[X] && this.set(W, "Xbox").set(N, void 0);
                 break;
             case h:
                 var V = this.data,
@@ -1135,9 +1134,9 @@ function lH(l) {
         return this;
     }),
     (lK.VERSION = "2.0.9"),
-    (lK.BROWSER = lY([W, N, X, G])),
+    (lK.BROWSER = lY([W, N, r, G])),
     (lK.CPU = lY([M])),
-    (lK.DEVICE = lY([r, p, G, y, Y, V, T, L, I])),
+    (lK.DEVICE = lY([X, p, G, y, Y, V, T, L, I])),
     (lK.ENGINE = lK.OS = lY([W, N])));
 let lQ = "thumbmark",
     lP = "https://api.thumbmarkjs.com",
@@ -2312,160 +2311,6 @@ function tp(l) {
 }
 let tN = null,
     tM = null;
-async function tX(l) {
-    var t;
-    if ("u" < typeof document || "u" < typeof window)
-        return { thumbmark: "", components: {}, info: {}, version: "1.6.3", error: "Browser environment required" };
-    let d = { ...lf, ...l },
-        i = d.logging && !sessionStorage.getItem("_tmjs_l") && 1e-4 > Math.random(),
-        { elapsed: e, resolvedComponents: c } = await tr({ ...ts, ...tZ }, d),
-        a = {},
-        s = {};
-    if (i || d.experimental) {
-        let { elapsed: l, resolvedComponents: t } = await tr(tn, d);
-        ((a = t), (s = l));
-    }
-    let n = d.api_key
-            ? ((l, t) => {
-                  if (l.cache_api_call) {
-                      if (tM) return Promise.resolve(tM);
-                      let t = (function (l) {
-                          let t = tp(l);
-                          if (t && t.apiResponse && t.apiResponseExpiry && Date.now() <= t.apiResponseExpiry)
-                              return t.apiResponse;
-                      })(l);
-                      if (t) return Promise.resolve(t);
-                      if (tN) return tN;
-                  }
-                  let d = `${l.api_endpoint || lP}/thumbmark`,
-                      i = (function (l) {
-                          try {
-                              let t = tu(l),
-                                  d = localStorage.getItem(t);
-                              return (d || t === th || ((d = localStorage.getItem(th)) && tW(d, l)), d);
-                          } catch (l) {
-                              return null;
-                          }
-                      })(l),
-                      e = { components: t, options: l, clientHash: l0(ti(t)), version: "1.6.3" };
-                  i && (e.visitorId = i);
-                  let c = fetch(d, {
-                          method: "POST",
-                          headers: {
-                              "x-api-key": l.api_key,
-                              Authorization: "custom-authorized",
-                              "Content-Type": "application/json",
-                          },
-                          body: JSON.stringify(e),
-                      })
-                          .then((l) => {
-                              if (!l.ok) {
-                                  if (403 === l.status) throw Error("INVALID_API_KEY");
-                                  throw Error(`HTTP error! status: ${l.status}`);
-                              }
-                              return l.json();
-                          })
-                          .then(
-                              (t) => (
-                                  t.visitorId && t.visitorId !== i && tW(t.visitorId, l),
-                                  (tM = t),
-                                  (function (l, t) {
-                                      if (l.cache_api_call && l.cache_lifetime_in_ms) {
-                                          var d = {
-                                              apiResponseExpiry:
-                                                  l.cache_lifetime_in_ms > 2592e5
-                                                      ? Date.now() + 2592e5
-                                                      : Date.now() + l.cache_lifetime_in_ms,
-                                              apiResponse: t,
-                                          };
-                                          let i = { ...tp(l), ...d };
-                                          try {
-                                              localStorage.setItem(l.property_name_factory(tG), JSON.stringify(i));
-                                          } catch (l) {}
-                                      }
-                                  })(l, t),
-                                  (tN = null),
-                                  t
-                              ),
-                          )
-                          .catch((l) => {
-                              if (
-                                  (console.error("Error fetching pro data", l),
-                                  (tN = null),
-                                  "INVALID_API_KEY" === l.message)
-                              )
-                                  throw l;
-                              return null;
-                          }),
-                      a = l.timeout || 5e3;
-                  return (tN = Promise.race([
-                      c,
-                      new Promise((t) => {
-                          setTimeout(() => {
-                              let d = tp(l);
-                              d && d.apiResponse
-                                  ? t(d.apiResponse)
-                                  : t({ info: { timed_out: !0 }, ...(i && { visitorId: i }) });
-                          }, a);
-                      }),
-                  ]));
-              })(d, c)
-            : null,
-        Z = null;
-    if (n)
-        try {
-            Z = await n;
-        } catch (l) {
-            if (l instanceof Error && "INVALID_API_KEY" === l.message)
-                return {
-                    error: "Invalid API key or quota exceeded",
-                    components: {},
-                    info: {},
-                    version: "1.6.3",
-                    thumbmark: "",
-                };
-            throw l;
-        }
-    let b = { ...e, ...s },
-        m = d.performance ? { elapsed: b } : {},
-        o = tm((null == Z ? void 0 : Z.components) || {}, d),
-        u = { ...c, ...o },
-        h = (null == Z ? void 0 : Z.info) || { uniqueness: { score: "api only" } },
-        W = null != (t = null == Z ? void 0 : Z.thumbmark) ? t : l0(ti(u));
-    return (
-        i &&
-            (async function (l, t, d, i = {}) {
-                var e;
-                let c = `${lP}/log`,
-                    a = {
-                        thumbmark: l,
-                        components: t,
-                        experimental: i,
-                        version: "1.6.3",
-                        options: d,
-                        path: null == (e = null == window ? void 0 : window.location) ? void 0 : e.pathname,
-                    };
-                sessionStorage.setItem("_tmjs_l", "1");
-                try {
-                    await fetch(c, {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify(a),
-                    });
-                } catch (l) {}
-            })(W, u, d, a).catch(() => {}),
-        {
-            ...((null == Z ? void 0 : Z.visitorId) && { visitorId: Z.visitorId }),
-            thumbmark: W,
-            components: u,
-            info: h,
-            version: "1.6.3",
-            ...m,
-            ...(Object.keys(a).length > 0 && d.experimental && { experimental: a }),
-            ...((null == Z ? void 0 : Z.requestId) && { requestId: Z.requestId }),
-        }
-    );
-}
 async function tr(l, t) {
     var d, i;
     let e = { ...lf, ...t },
@@ -2507,12 +2352,174 @@ async function tr(l, t) {
         { elapsed: n, resolvedComponents: tm(Z, e) }
     );
 }
-var ty = class {
+var tX = class {
     constructor(l) {
         this.options = { ...lf, ...l };
     }
     async get(l) {
-        return tX({ ...this.options, ...l });
+        return (async function (l) {
+            var t;
+            if ("u" < typeof document || "u" < typeof window)
+                return {
+                    thumbmark: "",
+                    components: {},
+                    info: {},
+                    version: "1.6.3",
+                    error: "Browser environment required",
+                };
+            let d = { ...lf, ...l },
+                i = d.logging && !sessionStorage.getItem("_tmjs_l") && 1e-4 > Math.random(),
+                { elapsed: e, resolvedComponents: c } = await tr({ ...ts, ...tZ }, d),
+                a = {},
+                s = {};
+            if (i || d.experimental) {
+                let { elapsed: l, resolvedComponents: t } = await tr(tn, d);
+                ((a = t), (s = l));
+            }
+            let n = d.api_key
+                    ? ((l, t) => {
+                          if (l.cache_api_call) {
+                              if (tM) return Promise.resolve(tM);
+                              let t = (function (l) {
+                                  let t = tp(l);
+                                  if (t && t.apiResponse && t.apiResponseExpiry && Date.now() <= t.apiResponseExpiry)
+                                      return t.apiResponse;
+                              })(l);
+                              if (t) return Promise.resolve(t);
+                              if (tN) return tN;
+                          }
+                          let d = `${l.api_endpoint || lP}/thumbmark`,
+                              i = (function (l) {
+                                  try {
+                                      let t = tu(l),
+                                          d = localStorage.getItem(t);
+                                      return (d || t === th || ((d = localStorage.getItem(th)) && tW(d, l)), d);
+                                  } catch (l) {
+                                      return null;
+                                  }
+                              })(l),
+                              e = { components: t, options: l, clientHash: l0(ti(t)), version: "1.6.3" };
+                          i && (e.visitorId = i);
+                          let c = fetch(d, {
+                                  method: "POST",
+                                  headers: {
+                                      "x-api-key": l.api_key,
+                                      Authorization: "custom-authorized",
+                                      "Content-Type": "application/json",
+                                  },
+                                  body: JSON.stringify(e),
+                              })
+                                  .then((l) => {
+                                      if (!l.ok) {
+                                          if (403 === l.status) throw Error("INVALID_API_KEY");
+                                          throw Error(`HTTP error! status: ${l.status}`);
+                                      }
+                                      return l.json();
+                                  })
+                                  .then(
+                                      (t) => (
+                                          t.visitorId && t.visitorId !== i && tW(t.visitorId, l),
+                                          (tM = t),
+                                          (function (l, t) {
+                                              if (l.cache_api_call && l.cache_lifetime_in_ms) {
+                                                  var d = {
+                                                      apiResponseExpiry:
+                                                          l.cache_lifetime_in_ms > 2592e5
+                                                              ? Date.now() + 2592e5
+                                                              : Date.now() + l.cache_lifetime_in_ms,
+                                                      apiResponse: t,
+                                                  };
+                                                  let i = { ...tp(l), ...d };
+                                                  try {
+                                                      localStorage.setItem(
+                                                          l.property_name_factory(tG),
+                                                          JSON.stringify(i),
+                                                      );
+                                                  } catch (l) {}
+                                              }
+                                          })(l, t),
+                                          (tN = null),
+                                          t
+                                      ),
+                                  )
+                                  .catch((l) => {
+                                      if (
+                                          (console.error("Error fetching pro data", l),
+                                          (tN = null),
+                                          "INVALID_API_KEY" === l.message)
+                                      )
+                                          throw l;
+                                      return null;
+                                  }),
+                              a = l.timeout || 5e3;
+                          return (tN = Promise.race([
+                              c,
+                              new Promise((t) => {
+                                  setTimeout(() => {
+                                      let d = tp(l);
+                                      d && d.apiResponse
+                                          ? t(d.apiResponse)
+                                          : t({ info: { timed_out: !0 }, ...(i && { visitorId: i }) });
+                                  }, a);
+                              }),
+                          ]));
+                      })(d, c)
+                    : null,
+                Z = null;
+            if (n)
+                try {
+                    Z = await n;
+                } catch (l) {
+                    if (l instanceof Error && "INVALID_API_KEY" === l.message)
+                        return {
+                            error: "Invalid API key or quota exceeded",
+                            components: {},
+                            info: {},
+                            version: "1.6.3",
+                            thumbmark: "",
+                        };
+                    throw l;
+                }
+            let b = { ...e, ...s },
+                m = d.performance ? { elapsed: b } : {},
+                o = tm((null == Z ? void 0 : Z.components) || {}, d),
+                u = { ...c, ...o },
+                h = (null == Z ? void 0 : Z.info) || { uniqueness: { score: "api only" } },
+                W = null != (t = null == Z ? void 0 : Z.thumbmark) ? t : l0(ti(u));
+            return (
+                i &&
+                    (async function (l, t, d, i = {}) {
+                        var e;
+                        let c = `${lP}/log`,
+                            a = {
+                                thumbmark: l,
+                                components: t,
+                                experimental: i,
+                                version: "1.6.3",
+                                options: d,
+                                path: null == (e = null == window ? void 0 : window.location) ? void 0 : e.pathname,
+                            };
+                        sessionStorage.setItem("_tmjs_l", "1");
+                        try {
+                            await fetch(c, {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify(a),
+                            });
+                        } catch (l) {}
+                    })(W, u, d, a).catch(() => {}),
+                {
+                    ...((null == Z ? void 0 : Z.visitorId) && { visitorId: Z.visitorId }),
+                    thumbmark: W,
+                    components: u,
+                    info: h,
+                    version: "1.6.3",
+                    ...m,
+                    ...(Object.keys(a).length > 0 && d.experimental && { experimental: a }),
+                    ...((null == Z ? void 0 : Z.requestId) && { requestId: Z.requestId }),
+                }
+            );
+        })({ ...this.options, ...l });
     }
     getVersion() {
         return "1.6.3";
@@ -2521,62 +2528,73 @@ var ty = class {
         tZ[l] = t;
     }
 };
-let tY = { logging: !1 };
-async function tT() {
-    return (await new ty(tY).get()).thumbmark;
-}
-let tV = ["callPhantom", "_phantom", "phantom", "__nightmare", "domAutomation", "domAutomationController"],
-    tL = ["webdriver"];
-function tI(l) {
-    if (
-        (function (l) {
-            for (let t of tV) if (l.getWindowProperty(t)) return !0;
-            for (let t of tL) if (l.getNavigatorProperty(t)) return !0;
-            return !1;
-        })(l) ||
-        !lH().browser.name
-    )
-        return !0;
-    let t = l.getMaxTouchPoints(),
-        d = t > 0 || l.hasOnTouchStart();
-    if (d && 1 !== t) return !1;
-    let i = (0, c.t)();
-    return !!(
-        (d &&
-            ((function (l) {
-                var t;
-                let d = (0, c.t)().toLowerCase();
-                if (d.indexOf("edge/") >= 0 || d.indexOf("iemobile/") >= 0 || d.indexOf("opera mini") >= 0) return !1;
-                let i =
-                        (t = d).indexOf("edge/") >= 0 || t.indexOf("iemobile/") >= 0 || t.indexOf("opera mini") >= 0
-                            ? "Other"
-                            : t.indexOf("firefox/") >= 0
-                              ? "Firefox"
-                              : t.indexOf("opera/") >= 0 || t.indexOf(" opr/") >= 0
-                                ? "Opera"
-                                : t.indexOf("chrome/") >= 0
-                                  ? "Chrome"
-                                  : t.indexOf("safari/") >= 0
-                                    ? t.indexOf("android 1.") >= 0 ||
-                                      t.indexOf("android 2.") >= 0 ||
-                                      t.indexOf("android 3.") >= 0 ||
-                                      t.indexOf("android 4.") >= 0
-                                        ? "AOSP"
-                                        : "Safari"
-                                    : t.indexOf("trident/") >= 0
-                                      ? "Internet Explorer"
-                                      : "Other",
-                    e = l.getNavigatorProductSub();
-                if (("Chrome" === i || "Safari" === i || "Opera" === i) && "20030107" !== e) return !0;
-                let a = l.getEvalToStringLength();
-                return (
-                    (37 === a && "Safari" !== i && "Firefox" !== i && "Other" !== i) ||
-                    (39 === a && "Internet Explorer" !== i && "Other" !== i) ||
-                    (33 === a && "Chrome" !== i && "AOSP" !== i && "Opera" !== i && "Other" !== i) ||
-                    (l.tryFirefoxToSource() && "Firefox" !== i && "Other" !== i)
-                );
-            })(l) ||
-                i.includes("Mobile"))) ||
-        ((0, e.r)(i) && !l.hasOnTouchStart())
-    );
-}
+let ty = { logging: !1 },
+    tY = ["callPhantom", "_phantom", "phantom", "__nightmare", "domAutomation", "domAutomationController"],
+    tT = ["webdriver"];
+d.d(
+    t,
+    {},
+    {
+        i: lK,
+        n: async function () {
+            return (await new tX(ty).get()).thumbmark;
+        },
+        r: lH,
+        t: function (l) {
+            if (
+                (function (l) {
+                    for (let t of tY) if (l.getWindowProperty(t)) return !0;
+                    for (let t of tT) if (l.getNavigatorProperty(t)) return !0;
+                    return !1;
+                })(l) ||
+                !lH().browser.name
+            )
+                return !0;
+            let t = l.getMaxTouchPoints(),
+                d = t > 0 || l.hasOnTouchStart();
+            if (d && 1 !== t) return !1;
+            let i = (0, c.t)();
+            return !!(
+                (d &&
+                    ((function (l) {
+                        var t;
+                        let d = (0, c.t)().toLowerCase();
+                        if (d.indexOf("edge/") >= 0 || d.indexOf("iemobile/") >= 0 || d.indexOf("opera mini") >= 0)
+                            return !1;
+                        let i =
+                                (t = d).indexOf("edge/") >= 0 ||
+                                t.indexOf("iemobile/") >= 0 ||
+                                t.indexOf("opera mini") >= 0
+                                    ? "Other"
+                                    : t.indexOf("firefox/") >= 0
+                                      ? "Firefox"
+                                      : t.indexOf("opera/") >= 0 || t.indexOf(" opr/") >= 0
+                                        ? "Opera"
+                                        : t.indexOf("chrome/") >= 0
+                                          ? "Chrome"
+                                          : t.indexOf("safari/") >= 0
+                                            ? t.indexOf("android 1.") >= 0 ||
+                                              t.indexOf("android 2.") >= 0 ||
+                                              t.indexOf("android 3.") >= 0 ||
+                                              t.indexOf("android 4.") >= 0
+                                                ? "AOSP"
+                                                : "Safari"
+                                            : t.indexOf("trident/") >= 0
+                                              ? "Internet Explorer"
+                                              : "Other",
+                            e = l.getNavigatorProductSub();
+                        if (("Chrome" === i || "Safari" === i || "Opera" === i) && "20030107" !== e) return !0;
+                        let a = l.getEvalToStringLength();
+                        return (
+                            (37 === a && "Safari" !== i && "Firefox" !== i && "Other" !== i) ||
+                            (39 === a && "Internet Explorer" !== i && "Other" !== i) ||
+                            (33 === a && "Chrome" !== i && "AOSP" !== i && "Opera" !== i && "Other" !== i) ||
+                            (l.tryFirefoxToSource() && "Firefox" !== i && "Other" !== i)
+                        );
+                    })(l) ||
+                        i.includes("Mobile"))) ||
+                ((0, e.r)(i) && !l.hasOnTouchStart())
+            );
+        },
+    },
+);

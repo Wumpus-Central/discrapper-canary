@@ -1,23 +1,22 @@
-a.d(t, { A: () => c });
-var i = a(17928),
+var i = a(855986),
     s = a(73153),
     m = a(166403),
-    E = a(751877),
+    E = a(470147),
     n = a(88001),
     r = a(652215);
-let M = {
+let _ = {
     membersData: { data: null, isFetching: !1, isUpdating: !1 },
     membershipData: { data: null, isFetching: !1, hasFetched: !1 },
 };
-function _() {
-    M.membersData.isUpdating = !0;
+function M() {
+    _.membersData.isUpdating = !0;
 }
 function R(e) {
     let { subscriptionId: t } = e;
-    ((0, E.mm)(t).catch(r.FXj), (M.membersData.isUpdating = !1));
+    ((0, E.mm)(t).catch(r.FXj), (_.membersData.isUpdating = !1));
 }
 function U() {
-    M.membersData.isUpdating = !1;
+    _.membersData.isUpdating = !1;
 }
 class h extends i.Ay.Store {
     initialize() {
@@ -25,87 +24,88 @@ class h extends i.Ay.Store {
     }
     static displayName = "PremiumGroupStore";
     getMembers() {
-        return M.membersData.data;
+        return _.membersData.data;
     }
     isFetchingMembers() {
-        return M.membersData.isFetching;
+        return _.membersData.isFetching;
     }
     isUpdatingMembers() {
-        return M.membersData.isUpdating;
+        return _.membersData.isUpdating;
     }
     hasFetchedMembers() {
-        return null !== M.membersData.data;
+        return null !== _.membersData.data;
     }
     getMembership() {
-        return M.membershipData.data;
+        return _.membershipData.data;
     }
     isFetchingMembership() {
-        return M.membershipData.isFetching;
+        return _.membershipData.isFetching;
     }
     hasFetchedMembership() {
-        return null !== M.membershipData.data;
+        return null !== _.membershipData.data;
     }
     getNumUsedSeats() {
-        return null == M.membersData.data ? 0 : M.membersData.data.members.length;
+        return null == _.membersData.data ? 0 : _.membersData.data.members.length;
     }
     getNumAvailableInvites() {
-        if (null == M.membersData.data) return n.LM;
-        let e = M.membersData.data.members.length + M.membersData.data.invitedUsers.length;
-        return Math.max(0, n.LM - e);
+        return null == _.membersData.data
+            ? 5
+            : Math.max(0, 5 - (_.membersData.data.members.length + _.membersData.data.invitedUsers.length));
     }
     getNumTotalSeats() {
-        return n.LM;
+        return 5;
     }
 }
 let c = new h(s.h, {
     PREMIUM_GROUP_MEMBERS_REQUEST: function (e) {
         let { subscriptionId: t } = e;
-        return !M.membersData.isFetching && ((0, E.mm)(t).catch(r.FXj), !0);
+        return !_.membersData.isFetching && ((0, E.mm)(t).catch(r.FXj), !0);
     },
     PREMIUM_GROUP_MEMBERS_FETCH_START: function () {
-        M.membersData.isFetching = !0;
+        _.membersData.isFetching = !0;
     },
     PREMIUM_GROUP_MEMBERS_FETCH_SUCCESS: function (e) {
         let { members: t } = e;
-        ((M.membersData.data = t), (M.membersData.isFetching = !1));
+        ((_.membersData.data = t), (_.membersData.isFetching = !1));
     },
     PREMIUM_GROUP_MEMBERS_FETCH_FAILURE: function () {
-        M.membersData.isFetching = !1;
+        _.membersData.isFetching = !1;
     },
     PREMIUM_GROUP_MEMBERSHIP_REQUEST: function () {
-        return !M.membershipData.isFetching && ((0, E.JV)().catch(r.FXj), !0);
+        return !_.membershipData.isFetching && ((0, E.JV)().catch(r.FXj), !0);
     },
     PREMIUM_GROUP_MEMBERSHIP_FETCH_START: function () {
-        M.membershipData.isFetching = !0;
+        _.membershipData.isFetching = !0;
     },
     PREMIUM_GROUP_MEMBERSHIP_FETCH_SUCCESS: function (e) {
         let { membership: t } = e;
-        ((M.membershipData.data = t), (M.membershipData.isFetching = !1), (M.membershipData.hasFetched = !0));
+        ((_.membershipData.data = t), (_.membershipData.isFetching = !1), (_.membershipData.hasFetched = !0));
     },
     PREMIUM_GROUP_MEMBERSHIP_NOT_FOUND: function () {
-        ((M.membershipData.isFetching = !1), (M.membershipData.hasFetched = !0));
+        ((_.membershipData.isFetching = !1), (_.membershipData.hasFetched = !0));
     },
     PREMIUM_GROUP_MEMBERSHIP_FETCH_FAILURE: function () {
-        ((M.membershipData.isFetching = !1), (M.membershipData.hasFetched = !0));
+        ((_.membershipData.isFetching = !1), (_.membershipData.hasFetched = !0));
     },
-    PREMIUM_GROUP_INVITE_USERS_START: _,
+    PREMIUM_GROUP_INVITE_USERS_START: M,
     PREMIUM_GROUP_INVITE_USERS_SUCCESS: R,
     PREMIUM_GROUP_INVITE_USERS_FAILURE: U,
-    PREMIUM_GROUP_REMOVE_MEMBER_START: _,
+    PREMIUM_GROUP_REMOVE_MEMBER_START: M,
     PREMIUM_GROUP_REMOVE_MEMBER_SUCCESS: R,
     PREMIUM_GROUP_REMOVE_MEMBER_FAILURE: U,
-    PREMIUM_GROUP_REMOVE_INVITE_START: _,
+    PREMIUM_GROUP_REMOVE_INVITE_START: M,
     PREMIUM_GROUP_REMOVE_INVITE_SUCCESS: R,
     PREMIUM_GROUP_REMOVE_INVITE_FAILURE: function (e) {
         let { errorCode: t, subscriptionId: a } = e;
         if (t === n.Hy.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED)
-            return ((0, E.mm)(a).catch(r.FXj), (M.membersData.isUpdating = !1), !0);
+            return ((0, E.mm)(a).catch(r.FXj), (_.membersData.isUpdating = !1), !0);
         U();
     },
     LOGOUT: function () {
-        M = {
+        _ = {
             membersData: { data: null, isFetching: !1, isUpdating: !1 },
             membershipData: { data: null, isFetching: !1, hasFetched: !1 },
         };
     },
 });
+a.d(t, {}, { A: c });

@@ -1,4 +1,3 @@
-n.d(t, { A: () => c });
 var i = n(477900),
     l = n(582128),
     s = n(620141),
@@ -19,6 +18,12 @@ function u(e) {
         null
     );
 }
-function c(e) {
-    return (0, i.jsx)(s.A, { confettiLocation: o.k.CALL_TILE, children: (0, i.jsx)(u, { ...e }) });
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            return (0, i.jsx)(s.A, { confettiLocation: o.k.CALL_TILE, children: (0, i.jsx)(u, { ...e }) });
+        },
+    },
+);

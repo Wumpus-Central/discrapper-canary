@@ -1,16 +1,9 @@
-(n.d(t, { ZQ: () => p, _t: () => T, as: () => f, hU: () => S, j1: () => _, ol: () => A, uN: () => c }),
-    n(393431),
-    n(532706),
-    n(42231),
-    n(232424),
-    n(949626),
-    n(767709),
-    n(65162));
-var i = n(96326),
+(n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162));
+var i = n(826171),
     r = n(852015),
     a = n(144367),
     s = n(428420),
-    l = n(535384);
+    l = n(505816);
 class o extends l.G {
     constructor() {
         super("google.protobuf.DoubleValue", [{ no: 1, name: "value", kind: "scalar", T: 1 }]);
@@ -383,4 +376,4 @@ class N extends l.G {
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-new N();
+(new N(), n.d(t, {}, { ZQ: p, _t: T, as: f, hU: S, j1: _, ol: A, uN: c }));

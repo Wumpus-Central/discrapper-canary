@@ -1,20 +1,18 @@
-(Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.TIME_UNITS_PATTERN =
-        t.YEAR_PATTERN =
-        t.ORDINAL_NUMBER_PATTERN =
-        t.NUMBER_PATTERN =
-        t.TIME_UNIT_DICTIONARY =
-        t.ORDINAL_WORD_DICTIONARY =
-        t.INTEGER_WORD_DICTIONARY =
-        t.MONTH_DICTIONARY =
-        t.FULL_MONTH_NAME_DICTIONARY =
-        t.WEEKDAY_DICTIONARY =
-        t.REGEX_PARTS =
-            void 0),
-    (t.parseNumberPattern = i),
+((t.TIME_UNITS_PATTERN =
+    t.YEAR_PATTERN =
+    t.ORDINAL_NUMBER_PATTERN =
+    t.nj =
+    t.TIME_UNIT_DICTIONARY =
+    t.Cg =
+    t.Vr =
+    t.MONTH_DICTIONARY =
+    t.FULL_MONTH_NAME_DICTIONARY =
+    t.WEEKDAY_DICTIONARY =
+    t.REGEX_PARTS =
+        void 0),
     (t.parseOrdinalNumberPattern = function (e) {
         let r = e.toLowerCase();
-        return void 0 !== t.ORDINAL_WORD_DICTIONARY[r] ? t.ORDINAL_WORD_DICTIONARY[r] : parseInt(r);
+        return void 0 !== t.Cg[r] ? t.Cg[r] : parseInt(r);
     }),
     (t.parseYear = function (e) {
         if (
@@ -31,32 +29,31 @@
     (t.parseDuration = function (e) {
         let r = {},
             n = e,
-            a = u.exec(n);
+            a = o.exec(n);
         for (; a;)
             ((function (e, r) {
-                let n = i(r[1]);
+                let n = (function (e) {
+                    let r = e.toLowerCase();
+                    return void 0 !== t.Vr[r]
+                        ? t.Vr[r]
+                        : r.match(/\u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e/)
+                          ? 3
+                          : r.match(/\u043f\u043e\u043b/)
+                            ? 0.5
+                            : r.match(/\u043f\u0430\u0440/)
+                              ? 2
+                              : "" === r
+                                ? 1
+                                : parseFloat(r);
+                })(r[1]);
                 e[t.TIME_UNIT_DICTIONARY[r[2].toLowerCase()]] = n;
             })(r, a),
                 (n = n.substring(a[0].length).trim()),
-                (a = u.exec(n)));
+                (a = o.exec(n)));
         return r;
     }));
 let n = r(798401),
     a = r(574253);
-function i(e) {
-    let r = e.toLowerCase();
-    return void 0 !== t.INTEGER_WORD_DICTIONARY[r]
-        ? t.INTEGER_WORD_DICTIONARY[r]
-        : r.match(/\u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e/)
-          ? 3
-          : r.match(/\u043f\u043e\u043b/)
-            ? 0.5
-            : r.match(/\u043f\u0430\u0440/)
-              ? 2
-              : "" === r
-                ? 1
-                : parseFloat(r);
-}
 ((t.REGEX_PARTS = { leftBoundary: "([^\\p{L}\\p{N}_]|^)", rightBoundary: "(?=[^\\p{L}\\p{N}_]|$)", flags: "iu" }),
     (t.WEEKDAY_DICTIONARY = {
         воскресенье: 0,
@@ -149,7 +146,7 @@ function i(e) {
         дек: 12,
         "\u0434\u0435\u043A.": 12,
     })),
-    (t.INTEGER_WORD_DICTIONARY = {
+    (t.Vr = {
         один: 1,
         одна: 1,
         одной: 1,
@@ -180,7 +177,7 @@ function i(e) {
         двенадцать: 12,
         двенадцати: 12,
     }),
-    (t.ORDINAL_WORD_DICTIONARY = {
+    (t.Cg = {
         первое: 1,
         первого: 1,
         второе: 2,
@@ -302,13 +299,13 @@ function i(e) {
         годика: "year",
         годиков: "year",
     }),
-    (t.NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.INTEGER_WORD_DICTIONARY)}|[0-9]+|[0-9]+\\.[0-9]+|\u{43F}\u{43E}\u{43B}|\u{43D}\u{435}\u{441}\u{43A}\u{43E}\u{43B}\u{44C}\u{43A}\u{43E}|\u{43F}\u{430}\u{440}(?:\u{44B}|\u{443})|\\s{0,3})`),
-    (t.ORDINAL_NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.ORDINAL_WORD_DICTIONARY)}|[0-9]{1,2}(?:\u{433}\u{43E}|\u{43E}\u{433}\u{43E}|\u{435}|\u{43E}\u{435})?)`));
-let s = "(?:\\s+(?:\u0433\u043E\u0434\u0443|\u0433\u043E\u0434\u0430|\u0433\u043E\u0434|\u0433|\u0433.))?";
-t.YEAR_PATTERN = `(?:[1-9][0-9]{0,3}${s}\\s*(?:\u{43D}.\u{44D}.|\u{434}\u{43E} \u{43D}.\u{44D}.|\u{43D}. \u{44D}.|\u{434}\u{43E} \u{43D}. \u{44D}.)|[1-2][0-9]{3}${s}|[5-9][0-9]${s})`;
-let o = `(${t.NUMBER_PATTERN})\\s{0,3}(${(0, n.matchAnyPattern)(t.TIME_UNIT_DICTIONARY)})`,
-    u = RegExp(o, "i");
+    (t.nj = `(?:${(0, n.matchAnyPattern)(t.Vr)}|[0-9]+|[0-9]+\\.[0-9]+|\u{43F}\u{43E}\u{43B}|\u{43D}\u{435}\u{441}\u{43A}\u{43E}\u{43B}\u{44C}\u{43A}\u{43E}|\u{43F}\u{430}\u{440}(?:\u{44B}|\u{443})|\\s{0,3})`),
+    (t.ORDINAL_NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.Cg)}|[0-9]{1,2}(?:\u{433}\u{43E}|\u{43E}\u{433}\u{43E}|\u{435}|\u{43E}\u{435})?)`));
+let i = "(?:\\s+(?:\u0433\u043E\u0434\u0443|\u0433\u043E\u0434\u0430|\u0433\u043E\u0434|\u0433|\u0433.))?";
+t.YEAR_PATTERN = `(?:[1-9][0-9]{0,3}${i}\\s*(?:\u{43D}.\u{44D}.|\u{434}\u{43E} \u{43D}.\u{44D}.|\u{43D}. \u{44D}.|\u{434}\u{43E} \u{43D}. \u{44D}.)|[1-2][0-9]{3}${i}|[5-9][0-9]${i})`;
+let s = `(${t.nj})\\s{0,3}(${(0, n.matchAnyPattern)(t.TIME_UNIT_DICTIONARY)})`,
+    o = RegExp(s, "i");
 t.TIME_UNITS_PATTERN = (0, n.repeatedTimeunitPattern)(
     "(?:(?:\u043E\u043A\u043E\u043B\u043E|\u043F\u0440\u0438\u043C\u0435\u0440\u043D\u043E)\\s{0,3})?",
-    o,
+    s,
 );

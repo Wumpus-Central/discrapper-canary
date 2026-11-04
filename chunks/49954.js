@@ -1,4 +1,3 @@
-d.d(t, { a: () => o, i: () => N, n: () => M, o: () => m, r: () => h, t: () => W });
 var i = d(522681),
     e = d(880008),
     c = d(154676);
@@ -7,57 +6,35 @@ function s() {
     let l = (0, e.r)();
     l && l.setItem(a, String(!0));
 }
-async function n(l) {
-    try {
-        if ("u" < typeof navigator || !navigator.permissions) return "prompt";
-        return (await navigator.permissions.query({ name: l })).state;
-    } catch {
-        return "prompt";
-    }
+let n = !1;
+function Z() {
+    return n;
 }
-async function Z() {
-    return n("camera");
+async function b(l) {
+    return l.hasBeenRequestedThisSession()
+        ? "granted"
+        : l.hasMotionPermissionDeniedThisSession()
+          ? "denied"
+          : (async function (l = new e.t()) {
+                return l.requestPermission();
+            })(l);
 }
-let b = !1;
-function m() {
-    b = !1;
-}
-function o() {
-    return b;
-}
-async function u(l) {
-    return l.hasBeenRequestedThisSession() ? "granted" : l.hasMotionPermissionDeniedThisSession() ? "denied" : G(l);
-}
-async function h(l) {
-    let t;
-    if (!0 !== l.ds || b || !(!0 === l.cameraGranted || ((t = (0, e.r)()) && "true" === t.getItem(a)))) return;
-    let d = new e.t(),
-        i = await u(d);
-    "denied" === i || (("granted" === i || "not-required" === i) && (await p(d)));
-}
-async function W() {
-    let l = await Z();
-    return "granted" === l ? (s(), "granted") : "denied" === l ? "denied" : "prompt";
-}
-async function G(l = new e.t()) {
-    return l.requestPermission();
-}
-async function p(l = new e.t()) {
+async function m(l = new e.t()) {
     if (l.hasMotionPermissionDeniedThisSession() || !l.hasPermission) return !1;
     try {
         await l.start();
         let t = await i.t.getInstance();
-        return (await t.rsp(), t.ssl(), (b = !0), !0);
+        return (await t.rsp(), t.ssl(), (n = !0), !0);
     } catch {
         return !1;
     }
 }
-async function N(l = {}) {
+async function o(l = {}) {
     try {
         if (l.requestMotion) {
             let l = new e.t();
-            if ((await u(l)) === "denied") return "denied";
-            b || (await p(l));
+            if ((await b(l)) === "denied") return "denied";
+            Z() || (await m(l));
         }
         return ((0, c.a)(await (0, c.r)({ video: !0, audio: l.requestAudio ?? !1 })), s(), "granted");
     } catch (t) {
@@ -66,14 +43,46 @@ async function N(l = {}) {
         return "prompt";
     }
 }
-async function M(l) {
-    if (!l.requestMotionPermission) return N();
-    if ("granted" === l.permissionResult) {
-        if (!b) {
-            let l = new e.t();
-            if ((await u(l)) === "denied" || !(await p(l))) return "denied";
-        }
-        return "granted";
-    }
-    return N({ requestMotion: !0 });
-}
+d.d(
+    t,
+    {},
+    {
+        a: Z,
+        i: o,
+        n: async function (l) {
+            if (!l.requestMotionPermission) return o();
+            if ("granted" === l.permissionResult) {
+                if (!Z()) {
+                    let l = new e.t();
+                    if ((await b(l)) === "denied" || !(await m(l))) return "denied";
+                }
+                return "granted";
+            }
+            return o({ requestMotion: !0 });
+        },
+        o: function () {
+            n = !1;
+        },
+        r: async function (l) {
+            let t;
+            if (!0 !== l.ds || Z() || !(!0 === l.cameraGranted || ((t = (0, e.r)()) && "true" === t.getItem(a))))
+                return;
+            let d = new e.t(),
+                i = await b(d);
+            "denied" === i || (("granted" === i || "not-required" === i) && (await m(d)));
+        },
+        t: async function () {
+            let l = await (async function () {
+                return (async function (l) {
+                    try {
+                        if ("u" < typeof navigator || !navigator.permissions) return "prompt";
+                        return (await navigator.permissions.query({ name: l })).state;
+                    } catch {
+                        return "prompt";
+                    }
+                })("camera");
+            })();
+            return "granted" === l ? (s(), "granted") : "denied" === l ? "denied" : "prompt";
+        },
+    },
+);

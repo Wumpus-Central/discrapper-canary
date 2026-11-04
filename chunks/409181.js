@@ -1,7 +1,6 @@
-n.d(t, { u: () => o });
 var i = n(450510),
     r = n(868974),
-    a = n(763827),
+    a = n(495867),
     s = n(670455);
 let l = { chance: 0.2, cooldown: 864e5 },
     o = {
@@ -68,3 +67,4 @@ let l = { chance: 0.2, cooldown: 864e5 },
             feedbackType: s.MW.CONJURE,
         },
     };
+n.d(t, {}, { u: o });

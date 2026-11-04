@@ -1,9 +1,8 @@
-a.d(n, { A: () => m });
 var s = a(477900),
     i = a(582128),
     c = a(503698),
     r = a.n(c),
-    t = a(589812),
+    t = a(886100),
     l = a(598748),
     u = a(331322),
     o = a(834730),
@@ -25,35 +24,41 @@ function f(e) {
         ],
     });
 }
-function m(e) {
-    let { application: n, rendererProps: a, className: c, onClick: u, renderText: o } = e,
-        { trackUserProfileAction: d } = (0, h.NJ)(),
-        m = a.surfaceConfigs[l.m.MINI_PROFILE],
-        x = n.id;
-    return (!(function (e) {
-        let { trackUserProfileAction: n } = (0, h.NJ)(),
-            a = i.useRef(!1);
-        i.useEffect(() => {
-            a.current || (n({ action: "VIEW_APPLICATION_WIDGET_PREVIEW", applicationId: e }), (a.current = !0));
-        }, [n, e]);
-    })(x),
-    null == m)
-        ? null
-        : (0, s.jsx)(I.s, {
-              onClick: (e) => {
-                  e.target?.closest("a") == null &&
-                      (d({ action: "PRESS_APPLICATION_WIDGET_PREVIEW", applicationId: x }), u?.());
-              },
-              "aria-label": n.name,
-              children: (0, s.jsx)(p.A.Overlay, {
-                  className: r()(E.kL, c),
-                  children: (0, s.jsx)(t.kH, {
-                      ...a,
-                      renderText: o,
-                      surface: l.m.MINI_PROFILE,
-                      surfaceConfig: m,
-                      header: (0, s.jsx)(f, { applicationName: n.name, applicationIcon: n.getIconURL(16) }),
-                  }),
-              }),
-          });
-}
+a.d(
+    n,
+    {},
+    {
+        A: function (e) {
+            let { application: n, rendererProps: a, className: c, onClick: u, renderText: o } = e,
+                { trackUserProfileAction: d } = (0, h.NJ)(),
+                m = a.surfaceConfigs[l.m.MINI_PROFILE],
+                x = n.id;
+            return (!(function (e) {
+                let { trackUserProfileAction: n } = (0, h.NJ)(),
+                    a = i.useRef(!1);
+                i.useEffect(() => {
+                    a.current || (n({ action: "VIEW_APPLICATION_WIDGET_PREVIEW", applicationId: e }), (a.current = !0));
+                }, [n, e]);
+            })(x),
+            null == m)
+                ? null
+                : (0, s.jsx)(I.s, {
+                      onClick: (e) => {
+                          e.target?.closest("a") == null &&
+                              (d({ action: "PRESS_APPLICATION_WIDGET_PREVIEW", applicationId: x }), u?.());
+                      },
+                      "aria-label": n.name,
+                      children: (0, s.jsx)(p.A.Overlay, {
+                          className: r()(E.kL, c),
+                          children: (0, s.jsx)(t.kH, {
+                              ...a,
+                              renderText: o,
+                              surface: l.m.MINI_PROFILE,
+                              surfaceConfig: m,
+                              header: (0, s.jsx)(f, { applicationName: n.name, applicationIcon: n.getIconURL(16) }),
+                          }),
+                      }),
+                  });
+        },
+    },
+);

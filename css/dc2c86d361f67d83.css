@@ -1,0 +1,183 @@
+.circularButton_Cu5XdA {
+    background: var(--background-gradient-lowest, var(--background-mod-normal));
+    border-radius: 20px;
+    height: 40px;
+    width: 40px
+}
+
+.wrapper_Cu5XdA {
+    display: flex;
+    min-width: 32px;
+    position: relative;
+    width: auto
+}
+
+.wrapper_Cu5XdA svg {
+    flex-shrink: 0
+}
+
+.badge_Cu5XdA {
+    flex-grow: 0;
+    flex-shrink: 1;
+    inset-inline-end: -4px;
+    position: absolute;
+    top: -4px
+}
+
+.iframe_zZJGmH {
+    height: 100%;
+    width: 100%
+}
+
+.wrapper_zZJGmH {
+    background-color: #000;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+    z-index: 2
+}
+
+.wrapper_zZJGmH.resizable_zZJGmH {
+    height: 65%
+}
+
+.wrapper_zZJGmH.noChat_zZJGmH {
+    height: 100%;
+    max-height: 100%
+}
+
+.activityPanelContainer_zZJGmH {
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
+.header_zZJGmH {
+    padding: 14px 8px
+}
+
+.footer_zZJGmH,
+.header_zZJGmH {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.footer_zZJGmH {
+    justify-content: space-between;
+    padding: 12px 24px
+}
+
+.minimizeContainer_zZJGmH {
+    flex: 0
+}
+
+.circularButton_zZJGmH {
+    background: var(--background-mod-normal);
+    border-radius: 20px;
+    height: 40px;
+    width: 40px
+}
+
+.minimizeIcon_zZJGmH {
+    height: 20px;
+    width: 20px
+}
+
+.headerTitle_zZJGmH {
+    flex: 1;
+    text-align: center
+}
+
+.leaveButtonContainer_zZJGmH {
+    margin: 0 16px
+}
+
+.activityContainer_zZJGmH {
+    align-items: center;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    margin: 24px
+}
+
+.activityContainerNoMargin_zZJGmH {
+    margin: 0
+}
+
+.leaveActivityIcon_zZJGmH {
+    height: 20px;
+    width: 20px
+}
+
+.leaveActivityButton_zZJGmH {
+    height: 40px;
+    width: 40px
+}
+
+.footerButtons_zZJGmH {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center
+}
+
+.flex_zZJGmH {
+    flex: 1
+}
+
+.avatar_zZJGmH {
+    border-radius: 50%;
+    height: 32px;
+    width: 32px
+}
+
+.buttonSection_zZJGmH {
+    align-items: center;
+    background: var(--plum-23);
+    border: 1px solid hsl(var(--plum-11-hsl)/.06);
+    border-radius: 12px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    padding: 4px
+}
+
+.contextlessHeader_zZJGmH {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-12) var(--space-16)
+}
+
+.contextlessHeaderLeft_zZJGmH {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-8)
+}
+
+.contextlessInviteButtonIcon_zZJGmH {
+    height: 16px;
+    width: 16px
+}
+
+.contextlessLeaveActivityButton_zZJGmH {
+    border-radius: 8px;
+    padding: var(--space-4)
+}
+
+.contextlessLeaveActivityButtonIcon_zZJGmH {
+    padding: var(--space-4) var(--space-8)
+}
+
+.fortniteUpsellModalButton_zZJGmH {
+    background: var(--plum-23);
+    border: 1px solid hsl(var(--plum-11-hsl)/.06);
+    border-radius: 12px;
+    margin-inline-end: var(--space-24);
+    padding: 4px
+}
+
+/*# sourceMappingURL=dc2c86d361f67d83.css.map*/

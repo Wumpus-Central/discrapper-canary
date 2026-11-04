@@ -1,4 +1,3 @@
-n.d(t, { M: () => a, n: () => s });
 var i,
     r,
     a =
@@ -8,3 +7,4 @@ var i,
         (i.COMMAND_OR_APPLICATION = "command_or_application"),
         i),
     s = (((r = {}).ALLOW = "allow"), (r.ONLY_TEXT = "only_text"), (r.DENY = "deny"), r);
+n.d(t, {}, { M: a, n: s });

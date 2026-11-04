@@ -1,4 +1,3 @@
-d.d(t, { t: () => i });
 var i = class l {
     static getInstance() {
         return (l.instance || (l.instance = new l()), l.instance);
@@ -16,3 +15,4 @@ var i = class l {
         clearInterval(l);
     }
 };
+d.d(t, {}, { t: i });

@@ -1,31 +1,36 @@
-t.d(n, { A: () => d });
 var i = t(477900);
 t(582128);
-var l = t(17928),
+var l = t(855986),
     s = t(477782),
     a = t(138134),
     r = t(928658),
     o = t(734057),
-    c = t(105292);
-function d(e, n) {
-    let t = (0, l.bG)([o.A], () => o.A.getChannel(n)),
-        d = t?.getGuildId();
-    return null == e
-        ? null
-        : (0, i.jsx)(s.rX, {
-              children: (0, i.jsx)(s.Dr, {
-                  id: "report-app",
-                  color: "danger",
-                  label: c.intl.string(c.t.NgA5vp),
-                  action: () =>
-                      (0, r.r3)({
-                          application: e,
-                          entrypoint: "activity_ui_channel_call",
-                          contextualGuildId: d ?? void 0,
-                          contextualChannelId: t?.id,
+    c = t(792996);
+t.d(
+    n,
+    {},
+    {
+        A: function (e, n) {
+            let t = (0, l.bG)([o.A], () => o.A.getChannel(n)),
+                d = t?.getGuildId();
+            return null == e
+                ? null
+                : (0, i.jsx)(s.rX, {
+                      children: (0, i.jsx)(s.Dr, {
+                          id: "report-app",
+                          color: "danger",
+                          label: c.intl.string(c.t.NgA5vp),
+                          action: () =>
+                              (0, r.r3)({
+                                  application: e,
+                                  entrypoint: "activity_ui_channel_call",
+                                  contextualGuildId: d ?? void 0,
+                                  contextualChannelId: t?.id,
+                              }),
+                          icon: a.FlagIcon,
+                          leadingAccessory: { type: "icon", icon: a.FlagIcon },
                       }),
-                  icon: a.FlagIcon,
-                  leadingAccessory: { type: "icon", icon: a.FlagIcon },
-              }),
-          });
-}
+                  });
+        },
+    },
+);

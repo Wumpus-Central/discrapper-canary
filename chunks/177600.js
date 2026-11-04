@@ -1,1 +1,1 @@
-e.exports = { i: "wrapper__63f6b", f: "column__63f6b" };
+e.exports = { i: "wrapper_nLpEde", f: "column_nLpEde" };

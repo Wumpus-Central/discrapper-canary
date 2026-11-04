@@ -1,8 +1,7 @@
-n.d(t, { F: () => E, t: () => v });
 var i = n(582128),
-    l = n(17928),
+    l = n(855986),
     s = n(735991),
-    r = n(482030),
+    r = n(212613),
     a = n(837057),
     o = n(310419),
     d = n(734057),
@@ -14,7 +13,7 @@ var i = n(582128),
     p = n(354287),
     A = n(652215),
     x = n(488995),
-    f = n(105292);
+    f = n(792996);
 function I(e) {
     let { isDiscoverable: t, customInstallUrl: n, installParams: i, integrationTypesConfig: r } = e,
         a = (0, g.Ie)({ customInstallUrl: n, installParams: i, integrationTypesConfig: r }),
@@ -77,28 +76,35 @@ function E(e, t) {
         [e.id, l, n, d, c, u, s, t, m],
     );
 }
-function v(e) {
-    let { canViewApp: t, isInstallable: n } = I(e),
-        l = E(e);
-    return i.useMemo(
-        () =>
-            t && null != l
-                ? {
-                      label: f.intl.string(f.t.hvVgAZ),
-                      trackingArea: p.kY.VIEW,
-                      onClick() {
-                          l();
-                      },
-                  }
-                : n && null != l
-                  ? {
-                        label: f.intl.string(f.t.NgXl3C),
-                        trackingArea: p.kY.ADD_APP,
-                        onClick() {
-                            l();
-                        },
-                    }
-                  : void 0,
-        [t, n, l],
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        F: E,
+        t: function (e) {
+            let { canViewApp: t, isInstallable: n } = I(e),
+                l = E(e);
+            return i.useMemo(
+                () =>
+                    t && null != l
+                        ? {
+                              label: f.intl.string(f.t.hvVgAZ),
+                              trackingArea: p.kY.VIEW,
+                              onClick() {
+                                  l();
+                              },
+                          }
+                        : n && null != l
+                          ? {
+                                label: f.intl.string(f.t.NgXl3C),
+                                trackingArea: p.kY.ADD_APP,
+                                onClick() {
+                                    l();
+                                },
+                            }
+                          : void 0,
+                [t, n, l],
+            );
+        },
+    },
+);

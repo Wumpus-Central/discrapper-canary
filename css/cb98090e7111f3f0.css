@@ -1,0 +1,26 @@
+.warning_ANwjIa {
+    margin-bottom: 16px
+}
+
+.action_ANwjIa,
+.formHeader_ANwjIa {
+    margin-bottom: 8px
+}
+
+.action_ANwjIa {
+    background-color: var(--background-base-lower);
+    border: 1px solid var(--background-base-lowest);
+    border-radius: var(--radius-xs);
+    padding: 8px
+}
+
+.actionDescription_ANwjIa {
+    margin-bottom: 8px
+}
+
+.resetButton_ANwjIa {
+    display: block;
+    margin-top: 8px
+}
+
+/*# sourceMappingURL=cb98090e7111f3f0.css.map*/

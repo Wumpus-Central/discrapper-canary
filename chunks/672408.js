@@ -1,1 +1,1 @@
-e.exports = { K: "icon_bd6d20", q: "placeholder_bd6d20" };
+e.exports = { K: "icon_FY2iAe", q: "placeholder_FY2iAe" };

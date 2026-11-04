@@ -1,35 +1,33 @@
-s.d(r, { A: () => u });
-var e = s(477900);
+var c = s(477900);
 s(582128);
-var c = s(900797),
+var e = s(900797),
     o = s(847374),
     i = s(921853),
     a = s(320448),
-    l = s(103335);
-let h = { UP: l.hv, RIGHT: l.kL, DOWN: l.Gb, LEFT: l.PI };
-function n(t) {
+    h = s(103335);
+let l = { UP: h.hv, RIGHT: h.kL, DOWN: h.Gb, LEFT: h.PI };
+function n(r) {
     let {
-            direction: r = h.DOWN,
+            direction: t = l.DOWN,
             width: s = 24,
-            height: l = 24,
+            height: h = 24,
             color: n = "currentColor",
             className: u,
             foreground: p,
             expanded: d,
             ...k
-        } = t,
-        C = r;
-    !0 === d ? (C = h.DOWN) : !1 === d && (C = h.RIGHT);
-    let D = { [h.UP]: c.t, [h.DOWN]: o.a, [h.LEFT]: i.n, [h.RIGHT]: a._ }[C];
-    return (0, e.jsx)(D, {
+        } = r,
+        C = t;
+    !0 === d ? (C = l.DOWN) : !1 === d && (C = l.RIGHT);
+    let D = { [l.UP]: e.t, [l.DOWN]: o.a, [l.LEFT]: i.n, [l.RIGHT]: a._ }[C];
+    return (0, c.jsx)(D, {
         ...k,
         className: u,
         size: "custom",
         width: s,
-        height: l,
+        height: h,
         color: n ?? "currentColor",
         colorClass: p,
     });
 }
-n.Directions = h;
-let u = n;
+((n.Directions = l), s.d(t, {}, { A: n }));

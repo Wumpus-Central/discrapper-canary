@@ -1,0 +1,22 @@
+.localizedName_ykCVnh {
+    font-size: 14px;
+    font-weight: var(--font-weight-normal);
+    line-height: 20px
+}
+
+.flag_ykCVnh {
+    flex: 0 0 auto;
+    margin: 0 8px
+}
+
+.flagImage_ykCVnh {
+    display: block;
+    filter: saturate(var(--saturation-factor, 1));
+    height: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    width: 27px
+}
+
+/*# sourceMappingURL=fdbbd875716cf5c4.css.map*/

@@ -1,1 +1,1 @@
-e.exports = { Nr: "card__3eaf0", wx: "header__3eaf0", Kk: "icon__3eaf0", r2: "warningBody__3eaf0" };
+r.exports = { Nr: "card_RJPPHr", wx: "header_RJPPHr", Kk: "icon_RJPPHr", r2: "warningBody_RJPPHr" };

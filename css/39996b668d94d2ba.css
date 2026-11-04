@@ -1,0 +1,78 @@
+.modalContent_DuCnkE {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: calc(var(--custom-modal-padding-bottom)*-1);
+    max-height: 712px;
+    overflow: hidden
+}
+
+.tabBarWrapper_DuCnkE {
+    flex-shrink: 0;
+    padding: var(--space-16) var(--space-24) 0
+}
+
+.scroller_DuCnkE {
+    flex: 1;
+    min-height: 0
+}
+
+.content_DuCnkE {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    padding: var(--space-32) 18px var(--space-24)
+}
+
+.contentNonDm_DuCnkE {
+    padding-top: var(--space-16)
+}
+
+.sectionAnchor_DuCnkE {
+    scroll-margin-top: var(--space-8)
+}
+
+.cardsRow_DuCnkE {
+    align-items: stretch;
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--space-16)
+}
+
+.cardsRow_DuCnkE>* {
+    display: flex;
+    flex: 1;
+    min-width: 300px
+}
+
+.cardsRow_DuCnkE>*>* {
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
+.wishlistSection_DuCnkE {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: var(--space-16)
+}
+
+.wishlistHeader_DuCnkE {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-16);
+    justify-content: space-between
+}
+
+.wishlistTitle_DuCnkE {
+    text-align: start
+}
+
+.wishlistGrid_DuCnkE {
+    display: grid;
+    gap: var(--space-12);
+    grid-template-columns: repeat(4, 150px)
+}
+
+/*# sourceMappingURL=39996b668d94d2ba.css.map*/

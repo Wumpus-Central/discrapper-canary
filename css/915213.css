@@ -1,4 +1,4 @@
-.safetySettingsNotice__9536c {
+.safetySettingsNotice_TXFoTt {
     align-items: center;
     background: var(--background-base-lowest);
     border-radius: var(--radius-xs);
@@ -7,31 +7,31 @@
     padding: var(--space-16)
 }
 
-.safetySettingsNotice__9536c .closeButton__9536c {
+.safetySettingsNotice_TXFoTt .closeButton_TXFoTt {
     cursor: pointer;
     margin-inline-start: auto
 }
 
-.item__28071 {
+.item_E9MqU1 {
     background-color: var(--background-mod-muted);
     border-radius: 8px;
     margin-bottom: 20px;
     overflow: hidden
 }
 
-.row__28071 {
+.row_E9MqU1 {
     display: flex;
     height: 68px;
     padding: 16px
 }
 
-.divider__28071 {
+.divider_E9MqU1 {
     background-color: var(--border-subtle);
     height: 1px;
     margin: 0 16px
 }
 
-.section__28071 {
+.section_E9MqU1 {
     align-items: center;
     background-color: var(--background-mod-normal);
     display: flex;
@@ -39,22 +39,22 @@
     padding: 16px
 }
 
-.avatar__28071 {
+.avatar_E9MqU1 {
     margin-inline-end: 8px
 }
 
-.text__28071 {
+.text_E9MqU1 {
     display: flex;
     flex: 1;
     flex-direction: column
 }
 
-.icon__28071,
-.username__28071 {
+.icon_E9MqU1,
+.username_E9MqU1 {
     cursor: pointer
 }
 
-.icon__28071 {
+.icon_E9MqU1 {
     align-items: center;
     border-radius: 16px;
     display: flex;
@@ -63,26 +63,26 @@
     width: 32px
 }
 
-.full-motion .icon__28071 {
+.full-motion .icon_E9MqU1 {
     transition: background .1s ease-in-out
 }
 
-.icon__28071:hover {
+.icon_E9MqU1:hover {
     background-color: var(--interactive-background-selected)
 }
 
-.sectionIconContainer__28071 {
+.sectionIconContainer_E9MqU1 {
     background-color: var(--background-base-lower)
 }
 
-.item_be62d9 {
+.item_E_xQ-R {
     background-color: var(--background-mod-muted);
     border-radius: var(--radius-sm);
     margin-bottom: 20px;
     overflow: hidden
 }
 
-.emptyContainer__88a04 {
+.emptyContainer_zD90Gk {
     align-items: center;
     background-color: var(--background-surface-higher);
     border-radius: var(--radius-sm);
@@ -93,22 +93,22 @@
     padding: var(--space-48) 0
 }
 
-.noGamesConnectedText__88a04 {
+.noGamesConnectedText_zD90Gk {
     text-transform: none
 }
 
-.tabs__70e05 {
+.tabs_qVK4bU {
     margin-top: var(--space-12)
 }
 
-.card_a72ffc {
+.card_lh6aTV {
     background-color: var(--background-base-lower);
     border-radius: var(--radius-sm);
     box-shadow: var(--elevation-low);
     overflow: hidden
 }
 
-.header_a72ffc {
+.header_lh6aTV {
     align-items: center;
     background-color: var(--background-mod-normal);
     display: flex;
@@ -117,13 +117,13 @@
     padding: var(--space-16)
 }
 
-.text_a72ffc {
+.text_lh6aTV {
     display: flex;
     flex: 1;
     flex-direction: column
 }
 
-.iconContainer_a72ffc {
+.iconContainer_lh6aTV {
     align-items: center;
     background-color: var(--interactive-background-active);
     border-radius: var(--radius-round);
@@ -131,11 +131,11 @@
     padding: var(--space-8)
 }
 
-.usersList_a72ffc {
+.usersList_lh6aTV {
     padding-inline: var(--space-16)
 }
 
-.row_a72ffc {
+.row_lh6aTV {
     align-items: center;
     border-bottom: 1px solid var(--border-subtle);
     display: flex;
@@ -145,27 +145,27 @@
     padding-top: var(--space-16)
 }
 
-.lastRow_a72ffc {
+.lastRow_lh6aTV {
     border-bottom: none
 }
 
-.userInfo_a72ffc {
+.userInfo_lh6aTV {
     align-items: center;
     display: flex;
     gap: var(--space-8)
 }
 
-.loadMoreContainer_a72ffc {
+.loadMoreContainer_lh6aTV {
     padding-bottom: var(--space-16)
 }
 
-.loadMoreButton_a72ffc,
-.loadMoreContainer_a72ffc {
+.loadMoreButton_lh6aTV,
+.loadMoreContainer_lh6aTV {
     display: flex;
     justify-content: center
 }
 
-.loadMoreButton_a72ffc {
+.loadMoreButton_lh6aTV {
     align-items: center;
     background-color: var(--background-mod-muted);
     border-radius: 0 0 var(--radius-xs) var(--radius-xs);
@@ -175,15 +175,15 @@
     width: 40%
 }
 
-.guildSelectOptionIcon__53d6e {
+.guildSelectOptionIcon_JGnPL8 {
     border-radius: var(--radius-sm)
 }
 
-.searchableSelect__53d6e {
+.searchableSelect_JGnPL8 {
     align-items: center
 }
 
-.clydeIconContainer__53d6e {
+.clydeIconContainer_JGnPL8 {
     align-items: center;
     background-color: var(--background-brand);
     border-radius: var(--radius-sm);
@@ -193,8 +193,8 @@
     width: 24px
 }
 
-.description__53d6e {
+.description_JGnPL8 {
     margin-top: var(--space-8)
 }
 
-/*# sourceMappingURL=915213.e1f75c326409f1e4.css.map*/
+/*# sourceMappingURL=915213.c305cd19e07de0e2.css.map*/

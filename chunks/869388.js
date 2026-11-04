@@ -1,5 +1,4 @@
-n.d(e, { A: () => o });
-var a = n(17928),
+var a = n(855986),
     r = n(73153);
 let l = { transforms: [] },
     i = l;
@@ -30,3 +29,4 @@ let o = new s(r.h, {
         i = { ...i, transforms: i.transforms.filter((t) => t.id !== e) };
     },
 });
+n.d(e, {}, { A: o });

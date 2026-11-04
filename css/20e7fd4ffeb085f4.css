@@ -1,0 +1,26 @@
+.listContainer_pzCk_B {
+    background-color: var(--background-surface-higher);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 8px 16px;
+    width: 100%
+}
+
+.listItem_pzCk_B {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    margin: 8px 0
+}
+
+.divider_pzCk_B {
+    background-color: var(--border-muted);
+    opacity: .5
+}
+
+/*# sourceMappingURL=20e7fd4ffeb085f4.css.map*/

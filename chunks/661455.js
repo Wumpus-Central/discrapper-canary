@@ -1,20 +1,19 @@
-t.d(i, { O: () => k, default: () => v, n: () => _ });
 var e = t(477900);
 t(582128);
 var r = t(950305),
     l = t(534890),
     s = t(477782),
-    d = t(980707),
+    d = t(165862),
     a = t(442433),
     o = t(847767),
     c = t(358367),
     u = t(793574),
-    A = t(422229),
+    A = t(575079),
     h = t(855187),
     x = t(479335),
     j = t(470743),
     X = t(50268),
-    g = t(280450),
+    g = t(46653),
     C = t(239211),
     b = t(399476),
     p = t(301541),
@@ -22,7 +21,7 @@ var r = t(950305),
     U = t(243949),
     f = t(972432),
     m = t(652215),
-    E = t(105292);
+    E = t(792996);
 function _(n) {
     let { isOwnSettings: i, userId: t, channelId: d, guildId: a, context: o } = n,
         c = (0, U.A)({ userId: t, guildId: a, channelId: d, icon: r.UserIcon, label: E.intl.string(E.t.iXAna6) }),
@@ -82,3 +81,4 @@ let v = (0, c.A)(
     ),
     [u.A.VOICE_USER],
 );
+t.d(i, {}, { O: k, default: v, n: _ });

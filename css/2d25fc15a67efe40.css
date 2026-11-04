@@ -1,0 +1,55 @@
+.body_utybAV {
+    line-height: 20px
+}
+
+.errorBlock_utybAV {
+    margin-bottom: 16px
+}
+
+.cancelText_utybAV {
+    color: var(--text-feedback-critical)
+}
+
+.cancelText_utybAV,
+.radioOption_utybAV {
+    display: flex
+}
+
+.discountOfferContainer_L5ybxx {
+    align-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    gap: 16px
+}
+
+.discountOfferContent_L5ybxx {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4)
+}
+
+.nitroIcon_L5ybxx {
+    border-radius: var(--radius-sm);
+    filter: saturate(var(--saturation-factor, 1))
+}
+
+.offerDetailContainer_jGUOK0 {
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-md);
+    padding: var(--space-16)
+}
+
+.legalContainer_jGUOK0 {
+    margin: var(--space-16) 0
+}
+
+.spinnerContainer_jGUOK0 {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+/*# sourceMappingURL=2d25fc15a67efe40.css.map*/

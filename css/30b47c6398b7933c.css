@@ -1,0 +1,126 @@
+.marker_ERQytI {
+    margin-inline-start: 4px
+}
+
+.separator_lbddpW {
+    background: var(--border-subtle);
+    height: 1px;
+    margin: 24px 0
+}
+
+.formGroup_lbddpW {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.splitGroup_lbddpW {
+    display: flex;
+    justify-content: space-between
+}
+
+.channelIcon_lbddpW {
+    margin-top: 2px
+}
+
+.welcomeMessageTextInput_lbddpW {
+    min-height: 200px
+}
+
+.uploadImage_lbddpW {
+    background: var(--background-mod-normal);
+    background-size: 72px 72px;
+    border: 1px solid var(--background-base-lowest);
+    border-radius: var(--radius-xs);
+    height: 72px;
+    width: 72px
+}
+
+.uploader_lbddpW:hover .uploadImageIcon_lbddpW {
+    background: var(--background-surface-high)
+}
+
+.uploader_lbddpW .uploadImageIcon_lbddpW {
+    background: var(--background-mod-normal);
+    background-image: none;
+    border-radius: 0;
+    color: var(--interactive-text-default);
+    height: 24px;
+    inset-inline-start: 24px;
+    pointer-events: none;
+    top: 24px;
+    width: 24px
+}
+
+.iconUploadContainer_lbddpW {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    position: relative
+}
+
+.iconUploadContainer_lbddpW:hover .imageOverlay_lbddpW {
+    display: block
+}
+
+.iconUpload_lbddpW {
+    background-color: var(--background-mod-normal);
+    border: 1px solid var(--background-base-lowest);
+    border-radius: var(--radius-sm);
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    padding: 8px
+}
+
+.iconUpload_lbddpW:hover {
+    color: var(--interactive-text-hover)
+}
+
+.iconUpload_lbddpW:active {
+    color: var(--interactive-text-active)
+}
+
+.hiddenFileUpload_lbddpW {
+    height: 0;
+    position: relative;
+    width: 0
+}
+
+.editIconContainer_lbddpW {
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    padding: var(--space-8);
+    position: relative;
+    transition: background-color .2s ease-out
+}
+
+.editIconContainer_lbddpW .editButton_lbddpW {
+    inset-inline-end: var(--space-8);
+    opacity: 0;
+    position: absolute;
+    top: var(--space-8);
+    transition: opacity .2s ease-out
+}
+
+.editIconContainer_lbddpW:focus-within,
+.editIconContainer_lbddpW:hover {
+    background-color: var(--background-mod-normal)
+}
+
+.editIconContainer_lbddpW:focus-within .editButton_lbddpW,
+.editIconContainer_lbddpW:hover .editButton_lbddpW {
+    opacity: 1
+}
+
+.chosenIconContainer_lbddpW {
+    align-items: center;
+    border-radius: var(--radius-sm);
+    display: flex;
+    height: 56px;
+    justify-content: center;
+    overflow: hidden;
+    width: 56px
+}
+
+/*# sourceMappingURL=30b47c6398b7933c.css.map*/

@@ -1,9 +1,9 @@
 e.exports = {
-    Tz: "stickerPreviews_a4cf0b",
-    dp: "stickerPreviewContainer_a4cf0b",
-    UV: "stickerPreview_a4cf0b",
-    R: "stickerPreviewDivider_a4cf0b",
-    b: "closeButton_a4cf0b",
-    Nk: "closeIconContainer_a4cf0b",
-    ut: "closeIcon_a4cf0b",
+    Tz: "stickerPreviews_fD1u1f",
+    dp: "stickerPreviewContainer_fD1u1f",
+    UV: "stickerPreview_fD1u1f",
+    R: "stickerPreviewDivider_fD1u1f",
+    b: "closeButton_fD1u1f",
+    Nk: "closeIconContainer_fD1u1f",
+    ut: "closeIcon_fD1u1f",
 };

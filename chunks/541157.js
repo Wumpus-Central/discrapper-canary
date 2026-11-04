@@ -1,7 +1,6 @@
-t.d(n, { Nd: () => i, oN: () => c });
-var u = t(17928),
-    l = t(280450),
-    r = t(477653);
+var u = t(855986),
+    l = t(46653),
+    r = t(718197);
 function s() {
     return {
         sessionId: l.default.getSessionId(),
@@ -9,10 +8,16 @@ function s() {
         selfDeaf: r.Ay.isSelfDeaf(),
     };
 }
-function i(e, n) {
-    let { sessionId: t, selfMute: u, selfDeaf: l } = n;
-    return null != e && null != t && e.sessionId === t ? e.merge({ selfMute: u, selfDeaf: l }) : e;
-}
-function c() {
-    return (0, u.cf)([l.default, r.Ay], s);
-}
+t.d(
+    n,
+    {},
+    {
+        Nd: function (e, n) {
+            let { sessionId: t, selfMute: u, selfDeaf: l } = n;
+            return null != e && null != t && e.sessionId === t ? e.merge({ selfMute: u, selfDeaf: l }) : e;
+        },
+        oN: function () {
+            return (0, u.cf)([l.default, r.Ay], s);
+        },
+    },
+);

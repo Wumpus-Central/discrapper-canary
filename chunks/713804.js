@@ -1,46 +1,33 @@
-let r;
-(n.r(t),
-    n.d(t, {
-        getOrParseBioAST: () => O,
-        parseBioReact: () => f,
-        parseBioReactWithCachedAST: () => R,
-        parseBioReactWithoutScrolling: () => g,
-    }));
-var i = n(435558),
-    a = n.n(i),
-    l = n(635377),
-    o = n.n(l),
-    u = n(478676),
-    c = n.n(u),
-    s = n(807081),
-    m = n(247186),
-    p = n(999915);
-n(46054);
-var d = n(551965);
-let h = (0, d.A)([
-        p.Ay.PROFILE_BIO_RULES,
-        (0, m.Ay)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0 }),
-        (0, m.r3)(),
-    ]),
-    k = new (o())({ max: 2e3 }),
-    A = { allowGameMentions: !0 },
-    B = s.aV(h);
-function f(e, t, n, r) {
-    return B(e, t, { ...A, ...n }, r);
-}
-function O(e, t) {
-    let n = `${t ?? ""}:${e}`,
-        i = k.get(n);
-    return (null != i || ((i = r(e, !0, { guildId: t })), k.set(n, i)), i);
-}
-function R(e, t) {
-    if (0 === e.trim().length) return null;
-    let n = O(e, t);
-    return c().reactFor(c().ruleOutput(h, "react"))(n);
-}
-let g = s.aV(
-    (0, d.A)([
-        a().omit(h, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]),
+var i = a(435558),
+    t = a.n(i),
+    r = a(635377),
+    o = a.n(r);
+a(478676);
+var l = a(826059),
+    s = a(862316),
+    u = a(605275);
+a(46054);
+var m = a(551965);
+let c = (0, m.A)([
+    u.Ay.PROFILE_BIO_RULES,
+    (0, s.Ay)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0 }),
+    (0, s.r3)(),
+]);
+new (o())({ max: 2e3 });
+let d = { allowGameMentions: !0 },
+    p = l.aV(c);
+(l.aV(
+    (0, m.A)([
+        t().omit(c, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]),
         { emoji: { react: () => null } },
     ]),
-);
+),
+    a.d(
+        n,
+        {},
+        {
+            parseBioReact: function (e, n, a, i) {
+                return p(e, n, { ...d, ...a }, i);
+            },
+        },
+    ));

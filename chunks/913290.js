@@ -1,4 +1,3 @@
-n.d(t, { w: () => r });
 var i,
     r =
         (((i = {})[(i.UNKNOWN = 0)] = "UNKNOWN"),
@@ -12,3 +11,4 @@ var i,
         (i[(i.UNFULFILLMENT_NEEDED_MANUAL = 8)] = "UNFULFILLMENT_NEEDED_MANUAL"),
         (i[(i.INITIAL_FULFILLMENT_NEEDED = 9)] = "INITIAL_FULFILLMENT_NEEDED"),
         i);
+n.d(t, {}, { w: r });

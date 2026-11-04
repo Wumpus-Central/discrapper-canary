@@ -1,0 +1,90 @@
+.container_181pbz {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    border: 1px solid var(--background-base-lowest);
+    border-radius: 4px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    position: relative;
+    width: 40px
+}
+
+.container_181pbz .removeButton_181pbz {
+    height: 16px;
+    width: 16px
+}
+
+.removeButton_181pbz {
+    background-size: 12px;
+    inset-inline-end: -4px;
+    position: absolute;
+    top: -4px
+}
+
+.container_NTyAV6 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16)
+}
+
+.nameContainer_NTyAV6,
+.nameHeader_NTyAV6 {
+    margin-bottom: 12px
+}
+
+.nameContainer_NTyAV6 {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: var(--radius-xs);
+    display: flex;
+    margin-top: 8px;
+    padding: 0 4px
+}
+
+.divider_NTyAV6 {
+    margin: 16px 0
+}
+
+.rolesHeader_NTyAV6 {
+    margin-bottom: 12px
+}
+
+.emojiQuestionContainer_NTyAV6 {
+    display: flex;
+    justify-content: space-between
+}
+
+.emojiContainer_NTyAV6 {
+    align-items: center;
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    display: flex
+}
+
+.rolesInputHelp_NTyAV6 {
+    margin-bottom: 16px
+}
+
+.notice_NTyAV6 {
+    background-color: hsl(var(--yellow-300-hsl)/.1);
+    border: 1px solid var(--status-warning-background);
+    border-radius: var(--radius-xs);
+    margin: 8px 0;
+    padding: 8px
+}
+
+.noticeMessage_NTyAV6 {
+    align-items: center;
+    display: flex
+}
+
+.noticeIcon_NTyAV6 {
+    color: var(--status-warning-background);
+    flex-shrink: 0;
+    height: 16px;
+    margin-inline-end: 8px;
+    width: 16px
+}
+
+/*# sourceMappingURL=cafac6d4de8f1b48.css.map*/

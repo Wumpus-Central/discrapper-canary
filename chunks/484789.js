@@ -1,6 +1,5 @@
-let r;
-i.d(t, { Ck: () => $, IN: () => w, fK: () => _, rH: () => R, zB: () => E });
-let n = -1,
+let r,
+    n = -1,
     a = (e) => {
         addEventListener(
             "pageshow",
@@ -158,50 +157,26 @@ let m = (e, t, i = {}) => {
         });
     },
     L = [0.1, 0.25],
-    w = (e, t = {}) => {
-        let i = b();
-        E(
-            f(() => {
-                let r,
-                    n = h("CLS", 0),
-                    l = p(t, c),
-                    d = (e) => {
-                        for (let t of e) l.h(t);
-                        l.i > n.value && ((n.value = l.i), (n.entries = l.o), r());
-                    },
-                    u = m("layout-shift", d);
-                u &&
-                    ((r = s(e, n, L, t.reportAllChanges)),
-                    i.onHidden(() => {
-                        (d(u.takeRecords()), r(!0));
-                    }),
-                    a(() => {
-                        ((l.i = 0), (r = s(e, (n = h("CLS", 0)), L, t.reportAllChanges)), o(() => r()));
-                    }),
-                    setTimeout(r));
-            }),
-        );
-    },
-    S = 0,
-    k = 1 / 0,
-    A = 0,
-    I = (e) => {
+    w = 0,
+    S = 1 / 0,
+    k = 0,
+    A = (e) => {
         for (let t of e)
             t.interactionId &&
-                ((k = Math.min(k, t.interactionId)), (S = (A = Math.max(A, t.interactionId)) ? (A - k) / 7 + 1 : 0));
+                ((S = Math.min(S, t.interactionId)), (w = (k = Math.max(k, t.interactionId)) ? (k - S) / 7 + 1 : 0));
     },
-    M = () => (r ? S : (performance.interactionCount ?? 0)),
-    F = 0;
-class H {
+    I = () => (r ? w : (performance.interactionCount ?? 0)),
+    M = 0;
+class F {
     u = [];
     l = new Map();
     m;
     p;
     v() {
-        ((F = M()), (this.u.length = 0), this.l.clear());
+        ((M = I()), (this.u.length = 0), this.l.clear());
     }
     L() {
-        let e = Math.min(this.u.length - 1, Math.floor((M() - F) / 50));
+        let e = Math.min(this.u.length - 1, Math.floor((I() - M) / 50));
         return this.u[e];
     }
     h(e) {
@@ -223,7 +198,7 @@ class H {
         }
     }
 }
-let x = (e) => {
+let H = (e) => {
         let t = globalThis.requestIdleCallback || setTimeout;
         "hidden" === document.visibilityState
             ? e()
@@ -232,93 +207,124 @@ let x = (e) => {
                   (e(), removeEventListener("visibilitychange", e, { capture: !0 }));
               }));
     },
-    B = [200, 500],
-    R = (e, t = {}) => {
-        if (!globalThis.PerformanceEventTiming || !("interactionId" in PerformanceEventTiming.prototype)) return;
-        let i = b();
-        C(() => {
-            "interactionCount" in performance ||
-                r ||
-                (r = m("event", I, { type: "event", buffered: !0, durationThreshold: 0 }));
-            let n,
-                o = h("INP"),
-                l = p(t, H),
-                d = (e) => {
-                    x(() => {
-                        for (let t of e) l.h(t);
-                        let t = l.L();
-                        t && t.P !== o.value && ((o.value = t.P), (o.entries = t.entries), n());
-                    });
-                },
-                u = m("event", d, { durationThreshold: t.durationThreshold ?? 40 });
-            ((n = s(e, o, B, t.reportAllChanges)),
-                u &&
-                    (u.observe({ type: "first-input", buffered: !0 }),
-                    i.onHidden(() => {
-                        (d(u.takeRecords()), n(!0));
-                    }),
-                    a(() => {
-                        (l.v(), (n = s(e, (o = h("INP")), B, t.reportAllChanges)));
-                    })));
-        });
-    };
-class q {
+    x = [200, 500];
+class B {
     m;
     h(e) {
         this.m?.(e);
     }
 }
-let N = [2500, 4e3],
-    _ = (e, t = {}) => {
-        C(() => {
-            let i = b(),
-                r,
-                n = h("LCP"),
-                l = p(t, q),
-                u = (e) => {
-                    for (let a of (t.reportAllChanges || (e = e.slice(-1)), e))
-                        (l.h(a),
-                            a.startTime < i.firstHiddenTime &&
-                                ((n.value = Math.max(a.startTime - d(), 0)), (n.entries = [a]), r()));
-                },
-                c = m("largest-contentful-paint", u);
-            if (c) {
-                r = s(e, n, N, t.reportAllChanges);
-                let i = f(() => {
-                        (u(c.takeRecords()), c.disconnect(), r(!0));
-                    }),
-                    l = (e) => {
-                        e.isTrusted && (x(i), removeEventListener(e.type, l, { capture: !0 }));
-                    };
-                for (let e of ["keydown", "click", "visibilitychange"]) addEventListener(e, l, { capture: !0 });
-                a((i) => {
-                    ((r = s(e, (n = h("LCP")), N, t.reportAllChanges)),
-                        o(() => {
-                            ((n.value = performance.now() - i.timeStamp), r(!0));
-                        }));
-                });
-            }
-        });
-    },
-    D = [800, 1800],
-    O = (e) => {
+let R = [2500, 4e3],
+    q = [800, 1800],
+    N = (e) => {
         document.prerendering
-            ? C(() => O(e))
+            ? C(() => N(e))
             : "complete" !== document.readyState
-              ? addEventListener("load", () => O(e), !0)
+              ? addEventListener("load", () => N(e), !0)
               : setTimeout(e);
-    },
-    $ = (e, t = {}) => {
-        let i = h("TTFB"),
-            r = s(e, i, D, t.reportAllChanges);
-        O(() => {
-            let n = l();
-            n &&
-                ((i.value = Math.max(n.responseStart - d(), 0)),
-                (i.entries = [n]),
-                r(!0),
-                a(() => {
-                    (r = s(e, (i = h("TTFB", 0)), D, t.reportAllChanges))(!0);
-                }));
-        });
     };
+i.d(
+    t,
+    {},
+    {
+        Ck: (e, t = {}) => {
+            let i = h("TTFB"),
+                r = s(e, i, q, t.reportAllChanges);
+            N(() => {
+                let n = l();
+                n &&
+                    ((i.value = Math.max(n.responseStart - d(), 0)),
+                    (i.entries = [n]),
+                    r(!0),
+                    a(() => {
+                        (r = s(e, (i = h("TTFB", 0)), q, t.reportAllChanges))(!0);
+                    }));
+            });
+        },
+        IN: (e, t = {}) => {
+            let i = b();
+            E(
+                f(() => {
+                    let r,
+                        n = h("CLS", 0),
+                        l = p(t, c),
+                        d = (e) => {
+                            for (let t of e) l.h(t);
+                            l.i > n.value && ((n.value = l.i), (n.entries = l.o), r());
+                        },
+                        u = m("layout-shift", d);
+                    u &&
+                        ((r = s(e, n, L, t.reportAllChanges)),
+                        i.onHidden(() => {
+                            (d(u.takeRecords()), r(!0));
+                        }),
+                        a(() => {
+                            ((l.i = 0), (r = s(e, (n = h("CLS", 0)), L, t.reportAllChanges)), o(() => r()));
+                        }),
+                        setTimeout(r));
+                }),
+            );
+        },
+        fK: (e, t = {}) => {
+            C(() => {
+                let i = b(),
+                    r,
+                    n = h("LCP"),
+                    l = p(t, B),
+                    u = (e) => {
+                        for (let a of (t.reportAllChanges || (e = e.slice(-1)), e))
+                            (l.h(a),
+                                a.startTime < i.firstHiddenTime &&
+                                    ((n.value = Math.max(a.startTime - d(), 0)), (n.entries = [a]), r()));
+                    },
+                    c = m("largest-contentful-paint", u);
+                if (c) {
+                    r = s(e, n, R, t.reportAllChanges);
+                    let i = f(() => {
+                            (u(c.takeRecords()), c.disconnect(), r(!0));
+                        }),
+                        l = (e) => {
+                            e.isTrusted && (H(i), removeEventListener(e.type, l, { capture: !0 }));
+                        };
+                    for (let e of ["keydown", "click", "visibilitychange"]) addEventListener(e, l, { capture: !0 });
+                    a((i) => {
+                        ((r = s(e, (n = h("LCP")), R, t.reportAllChanges)),
+                            o(() => {
+                                ((n.value = performance.now() - i.timeStamp), r(!0));
+                            }));
+                    });
+                }
+            });
+        },
+        rH: (e, t = {}) => {
+            if (!globalThis.PerformanceEventTiming || !("interactionId" in PerformanceEventTiming.prototype)) return;
+            let i = b();
+            C(() => {
+                "interactionCount" in performance ||
+                    r ||
+                    (r = m("event", A, { type: "event", buffered: !0, durationThreshold: 0 }));
+                let n,
+                    o = h("INP"),
+                    l = p(t, F),
+                    d = (e) => {
+                        H(() => {
+                            for (let t of e) l.h(t);
+                            let t = l.L();
+                            t && t.P !== o.value && ((o.value = t.P), (o.entries = t.entries), n());
+                        });
+                    },
+                    u = m("event", d, { durationThreshold: t.durationThreshold ?? 40 });
+                ((n = s(e, o, x, t.reportAllChanges)),
+                    u &&
+                        (u.observe({ type: "first-input", buffered: !0 }),
+                        i.onHidden(() => {
+                            (d(u.takeRecords()), n(!0));
+                        }),
+                        a(() => {
+                            (l.v(), (n = s(e, (o = h("INP")), x, t.reportAllChanges)));
+                        })));
+            });
+        },
+        zB: E,
+    },
+);

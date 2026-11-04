@@ -1,17 +1,17 @@
-(i.d(a, { A: () => A }), i(321073));
-var l,
-    s = i(477900),
+i(321073);
+var s,
+    l = i(477900),
     n = i(582128),
     E = i(189213),
     c = i(456987),
-    t =
-        (((l = t || {}).UPGRADE = "UPGRADE"),
-        (l.CANCEL = "CANCEL"),
-        (l.UNVERIFIED = "UNVERIFIED"),
-        (l.UNCLAIMED = "UNCLAIMED"),
-        (l.GRANDFATHERED = "GRANDFATHERED"),
-        l);
-let r = {
+    r =
+        (((s = r || {}).UPGRADE = "UPGRADE"),
+        (s.CANCEL = "CANCEL"),
+        (s.UNVERIFIED = "UNVERIFIED"),
+        (s.UNCLAIMED = "UNCLAIMED"),
+        (s.GRANDFATHERED = "GRANDFATHERED"),
+        s);
+let t = {
     UPGRADE: "imageUpgrade",
     CANCEL: "imageCancel",
     UNVERIFIED: "imageUnverified",
@@ -19,20 +19,19 @@ let r = {
     GRANDFATHERED: "imageCancel",
 };
 function C(e) {
-    let { children: a, premiumModalType: i, primary: l, secondary: t, ...C } = e,
+    let { children: a, premiumModalType: i, primary: s, secondary: r, ...C } = e,
         A = n.useMemo(() => {
             let e = [];
             return (
-                null != t && e.push({ variant: "secondary", text: t.label, onClick: t.onClick }),
-                null != l && e.push({ variant: "primary", text: l.label, onClick: l.onClick }),
+                null != r && e.push({ variant: "secondary", text: r.label, onClick: r.onClick }),
+                null != s && e.push({ variant: "primary", text: s.label, onClick: s.onClick }),
                 e
             );
-        }, [l, t]);
-    return (0, s.jsxs)(E.a, {
+        }, [s, r]);
+    return (0, l.jsxs)(E.a, {
         ...C,
         actions: A,
-        children: [(0, s.jsx)("div", { className: c[r[i]] }), (0, s.jsx)("div", { className: c.message, children: a })],
+        children: [(0, l.jsx)("div", { className: c[t[i]] }), (0, l.jsx)("div", { className: c.message, children: a })],
     });
 }
-C.Types = t;
-let A = C;
+((C.Types = r), i.d(a, {}, { A: C }));

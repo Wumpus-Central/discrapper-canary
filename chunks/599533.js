@@ -1,4 +1,3 @@
-(a.r(e), a.d(e, { createProvider: () => b }));
 var i = a(614235),
     s = a(678410);
 function r(t) {
@@ -52,18 +51,17 @@ function u(t, e, a) {
 }
 var p = class {
     constructor(t = 512) {
+        var e;
         ((this.ctx = null),
             (this.presence = 0),
             (this.faceState = "detecting"),
-            (this.eased = (function (t) {
-                return {
-                    stops: [[...t.stops[0]], [...t.stops[1]], [...t.stops[2]], [...t.stops[3]]],
-                    occlusion: [...t.occlusion],
-                    contact: [...t.contact],
-                    feature: [...t.feature],
-                    halo: [...t.halo],
-                };
-            })(c.detecting)),
+            (this.eased = {
+                stops: [[...(e = c.detecting).stops[0]], [...e.stops[1]], [...e.stops[2]], [...e.stops[3]]],
+                occlusion: [...e.occlusion],
+                contact: [...e.contact],
+                feature: [...e.feature],
+                halo: [...e.halo],
+            }),
             (this.size = t),
             (this.canvas = document.createElement("canvas")),
             (this.canvas.width = t),
@@ -161,7 +159,7 @@ var p = class {
             t.beginPath(),
             t.ellipse(256, 424, 122, 26, 0, 0, 2 * Math.PI),
             t.fill());
-        let i = t.createRadialGradient(214, 205, 12, 256, 256, 157.5);
+        let i = t.createRadialGradient(256 - 0.28 * 150, 256 - 0.34 * 150, 12, 256, 256, 157.5);
         (i.addColorStop(0, n(e.stops[0])),
             i.addColorStop(0.45, n(e.stops[1])),
             i.addColorStop(0.8, n(e.stops[2])),
@@ -170,7 +168,7 @@ var p = class {
             t.beginPath(),
             t.arc(256, 256, 150, 0, 2 * Math.PI),
             t.fill());
-        let s = t.createRadialGradient(256, 256, 102.00000000000001, 256, 256, 150);
+        let s = t.createRadialGradient(256, 256, 0.68 * 150, 256, 256, 150);
         (s.addColorStop(0, o(e.occlusion, 0)),
             s.addColorStop(1, o(e.occlusion, 0.22)),
             (t.fillStyle = s),
@@ -261,7 +259,7 @@ var g = class {
                 (this.inputCtx = null),
                 (this.rafId = null),
                 (this.lastFrameAt = 0),
-                (this.minFrameIntervalMs = 33.333333333333336),
+                (this.minFrameIntervalMs = 1e3 / 30),
                 (this.stopped = !1),
                 (this.mediapipeModulePath = ""),
                 (this.mediapipeWasmPath = ""),
@@ -275,9 +273,9 @@ var g = class {
                 (this.sum = { yaw: 0, pitch: 0, roll: 0, cx: 0, cy: 0, dist: 0, faceH: 0 }),
                 (this.neutral = { yaw: 0, pitch: 0, roll: 0, cx: 0, cy: 0, dist: 1, faceH: 1 }),
                 (this.calAttempts = 0),
-                (this.prevCalYaw = NaN),
-                (this.prevCalPitch = NaN),
-                (this.prevCalRoll = NaN),
+                (this.prevCalYaw = 0 / 0),
+                (this.prevCalPitch = 0 / 0),
+                (this.prevCalRoll = 0 / 0),
                 (this.seeded = !1),
                 (this.medYaw = new g()),
                 (this.medPitch = new g()),
@@ -611,6 +609,12 @@ function v(t) {
         smile: t.smile,
     };
 }
-function b() {
-    return new k();
-}
+a.d(
+    e,
+    {},
+    {
+        createProvider: function () {
+            return new k();
+        },
+    },
+);

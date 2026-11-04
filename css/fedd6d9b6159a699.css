@@ -1,0 +1,355 @@
+.titleSkeleton_MzaeW3 {
+    border-radius: var(--radius-xs);
+    height: var(--size-24)
+}
+
+.card_u6Y3Ln {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: var(--space-8);
+    width: 168px
+}
+
+.clickable_u6Y3Ln {
+    cursor: pointer
+}
+
+.cover_u6Y3Ln {
+    aspect-ratio: 3/4;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-low);
+    overflow: hidden;
+    position: relative
+}
+
+.clickable_u6Y3Ln:hover .cover_u6Y3Ln {
+    box-shadow: var(--shadow-high)
+}
+
+.coverArt_u6Y3Ln {
+    border-radius: inherit;
+    height: 100%;
+    width: 100%
+}
+
+.full-motion .coverArt_u6Y3Ln {
+    transition: transform .6s cubic-bezier(.16, 1, .3, 1)
+}
+
+.full-motion .clickable_u6Y3Ln:hover .coverArt_u6Y3Ln {
+    transform: scale(1.06)
+}
+
+.coverSkeleton_u6Y3Ln {
+    border-radius: inherit;
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1
+}
+
+.name_u6Y3Ln {
+    border-radius: var(--radius-xs);
+    height: var(--size-20);
+    width: 70%
+}
+
+.card_qcgHqK {
+    --custom-friends-card-inset: var(--space-16);
+    --custom-friends-card-cover-width: 108px;
+    align-items: flex-end;
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--custom-friends-card-inset);
+    height: calc(var(--custom-friends-card-cover-width)*4/3 + var(--custom-friends-card-inset)*2);
+    max-width: 100%;
+    padding: var(--custom-friends-card-inset);
+    position: relative;
+    width: 420px
+}
+
+.background_qcgHqK {
+    border-radius: inherit;
+    inset: 0;
+    position: absolute
+}
+
+.cover_qcgHqK,
+.info_qcgHqK {
+    position: relative
+}
+
+.cover_qcgHqK {
+    aspect-ratio: 3/4;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    width: var(--custom-friends-card-cover-width)
+}
+
+.info_qcgHqK {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-8);
+    min-width: 0
+}
+
+.name_qcgHqK {
+    border-radius: var(--radius-xs);
+    height: var(--size-24);
+    width: 60%
+}
+
+.friends_qcgHqK {
+    border-radius: var(--radius-round);
+    height: var(--size-32);
+    width: 80%
+}
+
+.card_76EEFv {
+    --custom-jump-back-in-card-inset: var(--space-16);
+    --custom-jump-back-in-card-cover-width: 108px;
+    align-items: flex-end;
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--custom-jump-back-in-card-inset);
+    height: calc(var(--custom-jump-back-in-card-cover-width)*4/3 + var(--custom-jump-back-in-card-inset)*2);
+    max-width: 100%;
+    padding: var(--custom-jump-back-in-card-inset);
+    position: relative;
+    width: 420px
+}
+
+.background_76EEFv {
+    border-radius: inherit;
+    inset: 0;
+    position: absolute
+}
+
+.cover_76EEFv,
+.info_76EEFv {
+    position: relative
+}
+
+.cover_76EEFv {
+    aspect-ratio: 3/4;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    width: var(--custom-jump-back-in-card-cover-width)
+}
+
+.info_76EEFv {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-8);
+    min-width: 0
+}
+
+.name_76EEFv,
+.patchNote_76EEFv,
+.status_76EEFv {
+    border-radius: var(--radius-xs)
+}
+
+.name_76EEFv {
+    height: var(--size-24);
+    width: 60%
+}
+
+.status_76EEFv {
+    height: var(--space-16);
+    width: 40%
+}
+
+.patchNote_76EEFv {
+    height: var(--space-32);
+    width: 90%
+}
+
+.card_Oyz7Y6 {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: var(--space-8);
+    width: 180px
+}
+
+.cover_Oyz7Y6 {
+    aspect-ratio: 3/4;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-low)
+}
+
+.name_Oyz7Y6 {
+    border-radius: var(--radius-xs);
+    height: var(--size-20);
+    width: 70%
+}
+
+.header_Yg_nqe {
+    align-items: center;
+    display: flex;
+    gap: var(--space-12);
+    min-height: var(--size-32)
+}
+
+.tableContainer_Yg_nqe {
+    background-color: var(--card-background-default);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    overflow: hidden
+}
+
+.table_Yg_nqe {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%
+}
+
+.rankColumn_Yg_nqe {
+    width: 64px
+}
+
+.gameColumn_Yg_nqe {
+    width: 36%
+}
+
+.playsColumn_Yg_nqe {
+    width: 12%
+}
+
+.categoryColumn_Yg_nqe {
+    width: 20%
+}
+
+.columnHeader_Yg_nqe {
+    padding: var(--space-12) var(--space-16);
+    text-align: start
+}
+
+.row_Yg_nqe {
+    border-top: 1px solid var(--border-subtle)
+}
+
+.cell_Yg_nqe {
+    padding: var(--space-12) var(--space-16);
+    vertical-align: middle
+}
+
+.cellContent_Yg_nqe {
+    align-items: center;
+    display: flex;
+    gap: var(--space-12);
+    min-width: 0
+}
+
+.text_Yg_nqe {
+    max-width: 100%
+}
+
+.rank_Yg_nqe,
+.text_Yg_nqe {
+    border-radius: var(--radius-xs);
+    height: var(--space-16)
+}
+
+.rank_Yg_nqe {
+    width: var(--space-16)
+}
+
+.thumbnail_Yg_nqe {
+    aspect-ratio: 3/4;
+    border-radius: var(--radius-xs);
+    flex-shrink: 0;
+    width: 36px
+}
+
+.gameName_Yg_nqe {
+    width: 160px
+}
+
+.plays_Yg_nqe {
+    width: 48px
+}
+
+.category_Yg_nqe {
+    width: 140px
+}
+
+.week_Yg_nqe {
+    width: 120px
+}
+
+.serverIcon_Yg_nqe {
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+    height: var(--space-32);
+    width: var(--space-32)
+}
+
+.serverDetails_Yg_nqe {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-6);
+    min-width: 0
+}
+
+.serverName_Yg_nqe {
+    width: 120px
+}
+
+.serverOnline_Yg_nqe {
+    height: var(--space-12);
+    width: 80px
+}
+
+.button_Yg_nqe {
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    height: var(--size-32);
+    width: 72px
+}
+
+.container_hFJ_PX {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    position: relative
+}
+
+.content_hFJ_PX {
+    padding-inline: var(--space-64)
+}
+
+@media (max-width:600px) {
+    .content_hFJ_PX {
+        padding-inline: var(--space-16)
+    }
+}
+
+.container_I4BhVZ {
+    border-top: 1px solid var(--app-frame-border);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 100%
+}
+
+.dragRegion_I4BhVZ {
+    display: none;
+    height: 60px;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+/*# sourceMappingURL=fedd6d9b6159a699.css.map*/

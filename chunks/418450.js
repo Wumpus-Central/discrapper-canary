@@ -1,7 +1,6 @@
 e.exports = {
-    C$: "nav_b2eddf",
-    vi: "navPrev_b2eddf nav_b2eddf",
-    f8: "navNext_b2eddf nav_b2eddf",
-    JT: "obscureWrapper_b2eddf",
-    Qr: "obscure_b2eddf",
+    vi: "navPrev_ELGJ1P nav_ELGJ1P",
+    f8: "navNext_ELGJ1P nav_ELGJ1P",
+    JT: "obscureWrapper_ELGJ1P",
+    Qr: "obscure_ELGJ1P",
 };

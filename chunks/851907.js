@@ -1,9 +1,8 @@
-n.d(t, { Ay: () => A, LU: () => h, xi: () => f });
 var i = n(991690),
-    r = n(17928),
+    r = n(855986),
     a = n(587895),
     s = n(878014),
-    l = n(567249),
+    l = n(293432),
     o = n(646865),
     d = n(933958),
     c = n(969151),
@@ -19,26 +18,33 @@ function A(e) {
             return E.MLl.CHANNEL_CALL_POPOUT;
     }
 }
-function h(e) {
-    let { applicationId: t } = e,
-        n = d.Ay.getCurrentEmbeddedActivity();
-    if (null == n || n.applicationId !== t) return;
-    let i = a.A.getApplication(t);
-    if (null != i) return A({ application: i, channelId: (0, c.H)(n.location) });
-}
-function f(e) {
-    let { channelId: t } = e;
-    return (0, r.bG)([l.A, d.Ay, a.A], () => {
-        let e = (function (e) {
-            let { channelId: t, EmbeddedActivitiesStore: n, ApplicationStore: i } = e,
-                r = n.getSelfEmbeddedActivityForChannel(t),
-                a = i.getApplication(r?.applicationId);
-            if (null != a) return A({ application: a, channelId: t });
-        })({
-            channelId: t ?? d.Ay.getConnectedActivityChannelId(),
-            EmbeddedActivitiesStore: d.Ay,
-            ApplicationStore: a.A,
-        });
-        return null != e ? l.A.getWindow(e) : void 0;
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        Ay: A,
+        LU: function (e) {
+            let { applicationId: t } = e,
+                n = d.Ay.getCurrentEmbeddedActivity();
+            if (null == n || n.applicationId !== t) return;
+            let i = a.A.getApplication(t);
+            if (null != i) return A({ application: i, channelId: (0, c.H)(n.location) });
+        },
+        xi: function (e) {
+            let { channelId: t } = e;
+            return (0, r.bG)([l.A, d.Ay, a.A], () => {
+                let e = (function (e) {
+                    let { channelId: t, EmbeddedActivitiesStore: n, ApplicationStore: i } = e,
+                        r = n.getSelfEmbeddedActivityForChannel(t),
+                        a = i.getApplication(r?.applicationId);
+                    if (null != a) return A({ application: a, channelId: t });
+                })({
+                    channelId: t ?? d.Ay.getConnectedActivityChannelId(),
+                    EmbeddedActivitiesStore: d.Ay,
+                    ApplicationStore: a.A,
+                });
+                return null != e ? l.A.getWindow(e) : void 0;
+            });
+        },
+    },
+);

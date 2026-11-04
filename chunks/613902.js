@@ -1,4 +1,3 @@
-n.d(t, { E: () => r });
 var i = n(945810);
 let l = { enabled: !1 },
     s = (0, i.mj)({
@@ -7,7 +6,13 @@ let l = { enabled: !1 },
         defaultConfig: l,
         variations: { 0: l, 1: { enabled: !0 } },
     });
-function r(e) {
-    let { location: t } = e;
-    return s.useConfig({ location: t }).enabled;
-}
+n.d(
+    t,
+    {},
+    {
+        E: function (e) {
+            let { location: t } = e;
+            return s.useConfig({ location: t }).enabled;
+        },
+    },
+);

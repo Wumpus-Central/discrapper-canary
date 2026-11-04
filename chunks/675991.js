@@ -1,28 +1,33 @@
-n.d(t, { Q: () => l });
-var i = n(652215),
-    r = n(105292);
-function l(e) {
-    let {
-            enabled: t,
-            join: n,
-            channel: l,
-            cameraUnavailable: s,
-            hasPermission: a,
-            channelLimit: o = -1,
-            channelLimitReached: u = !1,
-        } = e,
-        c = t ? r.intl.string(r.t["4xAQ5w"]) : r.intl.string(r.t.kgIe9a);
-    return (
-        n && (c = l?.isManaged() || !l?.isPrivate() ? r.intl.string(r.t.clqrYm) : r.intl.string(r.t.W68MhH)),
-        s && (c = r.intl.string(r.t["8jSzSe"])),
-        a || (c = r.intl.string(r.t.uQn9B8)),
-        u &&
-            !t &&
-            (c = l?.isGuildStageVoice()
-                ? o >= i.uaN
-                    ? r.intl.string(r.t["j6h0/8"])
-                    : r.intl.string(r.t["jlZ+0h"])
-                : r.intl.formatToPlainString(r.t.x9mtl4, { limit: o })),
-        c
-    );
-}
+n(652215);
+var i = n(792996);
+n.d(
+    t,
+    {},
+    {
+        Q: function (e) {
+            let {
+                    enabled: t,
+                    join: n,
+                    channel: r,
+                    cameraUnavailable: l,
+                    hasPermission: s,
+                    channelLimit: a = -1,
+                    channelLimitReached: o = !1,
+                } = e,
+                u = t ? i.intl.string(i.t["4xAQ5w"]) : i.intl.string(i.t.kgIe9a);
+            return (
+                n && (u = r?.isManaged() || !r?.isPrivate() ? i.intl.string(i.t.clqrYm) : i.intl.string(i.t.W68MhH)),
+                l && (u = i.intl.string(i.t["8jSzSe"])),
+                s || (u = i.intl.string(i.t.uQn9B8)),
+                o &&
+                    !t &&
+                    (u = r?.isGuildStageVoice()
+                        ? a >= 300
+                            ? i.intl.string(i.t["j6h0/8"])
+                            : i.intl.string(i.t["jlZ+0h"])
+                        : i.intl.formatToPlainString(i.t.x9mtl4, { limit: a })),
+                u
+            );
+        },
+    },
+);

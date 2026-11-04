@@ -1,4 +1,3 @@
-n.d(t, { A: () => l });
 var i = n(506774),
     r = n(439372);
 let a = "formGuidelinesStorageKey";
@@ -19,3 +18,4 @@ class s extends r.A {
     }
 }
 let l = new s();
+n.d(t, {}, { A: l });

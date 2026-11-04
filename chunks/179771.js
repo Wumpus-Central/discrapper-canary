@@ -1,4 +1,3 @@
-n.d(t, { F: () => r, _: () => a });
 var i,
     r =
         (((i = {}).IDENTIFY = "identify"),
@@ -298,3 +297,4 @@ let a = {
         "webhook.incoming",
     ]),
 };
+n.d(t, {}, { F: r, _: a });

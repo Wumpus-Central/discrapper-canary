@@ -1,4 +1,4 @@
-(n.d(t, { A: () => A }), n(321073));
+n(321073);
 var i = n(927739),
     r = n(703806),
     a = n.n(r),
@@ -17,6 +17,38 @@ function _(e) {
 }
 function E(e, t, n) {
     return void 0 !== t && void 0 != n ? l()(t, n) : e;
+}
+function A(e, t) {
+    let n,
+        {
+            toValueMin: r,
+            toValueMax: a,
+            tension: s = 0,
+            friction: l = 0,
+            loop: o,
+            reverse: d,
+            invert: c,
+            callback: u,
+            type: _ = "spring",
+            shouldLoop: h,
+            durationMin: f,
+            durationMax: I,
+            ...p
+        } = t,
+        m = e._value,
+        T = E(t.duration, f, I),
+        g = E(t.toValue, r, a),
+        S = i[_](e, { ...p, toValue: g, tension: s, friction: l, duration: T }),
+        N = S;
+    if (d || c) {
+        let r = E(t.duration, f, I);
+        ((n = i[_](e, { ...p, toValue: d ? m : -g, tension: s, friction: l, duration: r })), (N = i.sequence([S, n])));
+    }
+    o
+        ? N.start(() => {
+              (!h || (h && h())) && (u ? u(A.bind(null, e, t)) : A(e, t));
+          })
+        : N.start(u);
 }
 i.inject.ApplyAnimatedValues(
     function (e, t, n) {
@@ -37,45 +69,13 @@ i.inject.ApplyAnimatedValues(
     },
     (e) => e,
 );
-let A = {
+let h = {
     ...i,
     Easing: a(),
     accelerate: function (e) {
         return ((e.transform = e.transform || []), e.transform.push({ translateZ: 0 }), e);
     },
-    animate: function e(t, n) {
-        let r,
-            {
-                toValueMin: a,
-                toValueMax: s,
-                tension: l = 0,
-                friction: o = 0,
-                loop: d,
-                reverse: c,
-                invert: u,
-                callback: _,
-                type: A = "spring",
-                shouldLoop: h,
-                durationMin: f,
-                durationMax: I,
-                ...p
-            } = n,
-            m = t._value,
-            T = E(n.duration, f, I),
-            g = E(n.toValue, a, s),
-            S = i[A](t, { ...p, toValue: g, tension: l, friction: o, duration: T }),
-            N = S;
-        if (c || u) {
-            let e = E(n.duration, f, I);
-            ((r = i[A](t, { ...p, toValue: c ? m : -g, tension: l, friction: o, duration: e })),
-                (N = i.sequence([S, r])));
-        }
-        d
-            ? N.start(() => {
-                  (!h || (h && h())) && (_ ? _(e.bind(null, t, n)) : e(t, n));
-              })
-            : N.start(_);
-    },
+    animate: A,
     interpolate: function (e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
         return e.interpolate({ inputRange: [0, 1], outputRange: n });
@@ -94,3 +94,4 @@ let A = {
     section: i.createAnimatedComponent("section"),
     video: i.createAnimatedComponent("video"),
 };
+n.d(t, {}, { A: h });

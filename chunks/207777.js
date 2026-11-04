@@ -1,19 +1,18 @@
 let i;
-n.d(t, { A: () => B, S: () => x });
 var r = n(435558),
     a = n.n(r),
     s = n(392421),
     l = n(602137),
     o = n(357758),
-    d = n(17928),
+    d = n(855986),
     c = n(73153),
     u = n(970278),
     _ = n(456874),
-    E = n(280450),
+    E = n(46653),
     A = n(734057),
-    h = n(573163),
+    h = n(218461),
     f = n(309010),
-    I = n(935208),
+    I = n(811091),
     p = n(767581);
 let m = [],
     T = null,
@@ -60,20 +59,9 @@ function w() {
 function G() {
     let e = f.Ay.getChannelId();
     if (null == e || !A.A.getChannel(e)?.isForumLikeChannel()) return (w(), !1);
-    k({ refreshThreadIds: !0 });
+    x({ refreshThreadIds: !0 });
 }
 function x(e) {
-    let t = A.A.getChannel(e);
-    return null == t
-        ? []
-        : Object.values(u.A.getThreadsForParent(t.guild_id, t.id))
-              .map((e) => {
-                  let { id: t } = e;
-                  return t;
-              })
-              .sort(U(N));
-}
-function k(e) {
     var t, n;
     let r = A.A.getChannel(g);
     if (null == r) return;
@@ -108,7 +96,7 @@ function k(e) {
         });
     i = null == d ? null : d;
 }
-class F extends d.Ay.Store {
+class k extends d.Ay.Store {
     static displayName = "ForumActivePostStore";
     initialize() {
         this.waitFor(u.A, E.default, A.A, h.Ay, f.Ay, _.A);
@@ -129,7 +117,7 @@ class F extends d.Ay.Store {
             (S = n),
             (N = t),
             (C = i),
-            r ? k({ refreshThreadIds: !0 }) : s ? k({ sortThreadIds: !0 }) : (a || l) && k(),
+            r ? x({ refreshThreadIds: !0 }) : s ? x({ sortThreadIds: !0 }) : (a || l) && x(),
             R
         );
     }
@@ -144,7 +132,7 @@ class F extends d.Ay.Store {
         return i;
     }
 }
-let B = new F(c.h, {
+let F = new k(c.h, {
     CONNECTION_OPEN: G,
     OVERLAY_INITIALIZE: G,
     GUILD_CREATE: G,
@@ -157,7 +145,7 @@ let B = new F(c.h, {
     THREAD_LIST_SYNC: function (e) {
         let { guildId: t } = e;
         if (null == g || t !== A.A.getChannel(g)?.guild_id) return !1;
-        k({ refreshThreadIds: !0 });
+        x({ refreshThreadIds: !0 });
     },
     THREAD_CREATE: function (e) {
         let { channel: t, isNewlyCreated: n } = e;
@@ -169,21 +157,21 @@ let B = new F(c.h, {
         if (null == t.parent_id || t.parent_id !== g) return !1;
         let n = (0, p.yr)(t.id),
             i = P.has(t.id);
-        if (n && !i) (P.add(t.id), k({ sortThreadIds: !0 }));
+        if (n && !i) (P.add(t.id), x({ sortThreadIds: !0 }));
         else {
             if (n || !i) return !1;
-            (P.delete(t.id), k({ sortThreadIds: !0 }));
+            (P.delete(t.id), x({ sortThreadIds: !0 }));
         }
     },
     THREAD_DELETE: function (e) {
         let { channel: t } = e;
         if (null == t.parent_id || t.parent_id !== g) return !1;
-        (v.add(t.id), k({ sortThreadIds: !0 }));
+        (v.add(t.id), x({ sortThreadIds: !0 }));
     },
     RESORT_THREADS: function (e) {
         let { channelId: t } = e;
         if (null == t || t !== g) return !1;
-        k({ refreshThreadIds: !0 });
+        x({ refreshThreadIds: !0 });
     },
     CHANNEL_ACK: function (e) {
         let { channelId: t } = e;
@@ -191,3 +179,21 @@ let B = new F(c.h, {
         L = !1;
     },
 });
+n.d(
+    t,
+    {},
+    {
+        A: F,
+        S: function (e) {
+            let t = A.A.getChannel(e);
+            return null == t
+                ? []
+                : Object.values(u.A.getThreadsForParent(t.guild_id, t.id))
+                      .map((e) => {
+                          let { id: t } = e;
+                          return t;
+                      })
+                      .sort(U(N));
+        },
+    },
+);

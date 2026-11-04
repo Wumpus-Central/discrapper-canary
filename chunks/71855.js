@@ -1,4 +1,3 @@
-n.d(t, { LI: () => p, cq: () => S, m2: () => I, v5: () => N });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -10,24 +9,16 @@ var i = n(477900),
     u = n(155545),
     _ = n(561155),
     E = n(723702),
-    A = n(19575),
-    h = n(105292),
+    A = n(253400),
+    h = n(792996),
     f = n(22405);
 function I(e) {
-    let { isPopoutWindow: t } = e;
-    return t ? "refresh-title-bar-small" : void 0;
-}
-function p(e) {
-    let { isPopoutWindow: t } = e;
-    return t ? 16 : 24;
-}
-function m(e) {
     return A.Ay.maximize(e);
 }
-function T(e) {
+function p(e) {
     e.stopPropagation();
 }
-function g(e) {
+function m(e) {
     let { windowKey: t, showDivider: n } = e,
         r = (0, i.jsx)(l.D, {
             className: s()(f.R6, f.d1),
@@ -38,7 +29,7 @@ function g(e) {
         }),
         a = (0, i.jsx)(l.D, {
             className: s()(f.R6, f.T0),
-            onClick: () => m(t),
+            onClick: () => I(t),
             "aria-label": h.intl.string(h.t.G1u0hK),
             tabIndex: -1,
             children: (0, i.jsx)(u.A, {}),
@@ -52,45 +43,60 @@ function g(e) {
         });
     return (0, i.jsxs)("div", { className: s()(f.kU, { [f.Fx]: n }), children: [o, a, r] });
 }
-function S(e) {
-    let { leading: t, title: n, trailing: a, windowKey: l, className: o, growLeading: d } = e,
-        c = (0, E.getPlatform)(),
-        u = r.useCallback(() => m(l), [l]),
-        _ = c === E.PlatformTypes.WINDOWS || c === E.PlatformTypes.LINUX,
-        h = r.useMemo(() => c === E.PlatformTypes.OSX && "rtl" === A.Ay.getSystemUIDirection(), [c]);
-    return (0, i.jsxs)("div", {
-        className: s()(f.M0, { [f.CP]: h }, o),
-        onDoubleClick: u,
-        "data-window-chrome": "true",
-        children: [
-            (0, i.jsx)("div", { className: f.DD, children: n }),
-            (0, i.jsx)("div", { className: s()(f.R4, { [f.MY]: d }), onDoubleClick: T, children: t }),
-            (0, i.jsxs)("div", {
-                className: f.ZY,
-                onDoubleClick: T,
-                children: [a, _ && (0, i.jsx)(g, { windowKey: l, showDivider: null != a })],
-            }),
-        ],
-    });
-}
-function N(e) {
-    let { fixed: t = !1, show: n, windowKey: a, isLayerOpen: l } = e,
-        c = (0, E.getPlatform)(),
-        u = r.useCallback(() => {
-            d.A.isOpen() && (0, o.jD)();
-        }, []),
-        _ = r.useCallback(() => {
-            let e = d.A.getLastShowTimestamp();
-            (null != e && Date.now() - e < 1e3) || m(a);
-        }, [a]),
-        A = c === E.PlatformTypes.WINDOWS;
-    if (c === E.PlatformTypes.WEB) return null;
-    let h = A || c === E.PlatformTypes.LINUX;
-    return (0, i.jsx)("div", {
-        className: s()(f.M0, f.bN, { [f.Zu]: t, [f.WU]: n, [f.dS]: l }),
-        onClick: u,
-        onDoubleClick: _,
-        children:
-            h && (0, i.jsx)("div", { className: f.ZY, onDoubleClick: T, children: (0, i.jsx)(g, { windowKey: a }) }),
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        LI: function (e) {
+            let { isPopoutWindow: t } = e;
+            return t ? 16 : 24;
+        },
+        cq: function (e) {
+            let { leading: t, title: n, trailing: a, windowKey: l, className: o, growLeading: d } = e,
+                c = (0, E.uo)(),
+                u = r.useCallback(() => I(l), [l]),
+                _ = c === E.fg.WINDOWS || c === E.fg.LINUX,
+                h = r.useMemo(() => c === E.fg.OSX && "rtl" === A.Ay.getSystemUIDirection(), [c]);
+            return (0, i.jsxs)("div", {
+                className: s()(f.M0, { [f.CP]: h }, o),
+                onDoubleClick: u,
+                "data-window-chrome": "true",
+                children: [
+                    (0, i.jsx)("div", { className: f.DD, children: n }),
+                    (0, i.jsx)("div", { className: s()(f.R4, { [f.MY]: d }), onDoubleClick: p, children: t }),
+                    (0, i.jsxs)("div", {
+                        className: f.ZY,
+                        onDoubleClick: p,
+                        children: [a, _ && (0, i.jsx)(m, { windowKey: l, showDivider: null != a })],
+                    }),
+                ],
+            });
+        },
+        m2: function (e) {
+            let { isPopoutWindow: t } = e;
+            return t ? "refresh-title-bar-small" : void 0;
+        },
+        v5: function (e) {
+            let { fixed: t = !1, show: n, windowKey: a, isLayerOpen: l } = e,
+                c = (0, E.uo)(),
+                u = r.useCallback(() => {
+                    d.A.isOpen() && (0, o.jD)();
+                }, []),
+                _ = r.useCallback(() => {
+                    let e = d.A.getLastShowTimestamp();
+                    (null != e && Date.now() - e < 1e3) || I(a);
+                }, [a]),
+                A = c === E.fg.WINDOWS;
+            if (c === E.fg.WEB) return null;
+            let h = A || c === E.fg.LINUX;
+            return (0, i.jsx)("div", {
+                className: s()(f.M0, f.bN, { [f.Zu]: t, [f.WU]: n, [f.dS]: l }),
+                onClick: u,
+                onDoubleClick: _,
+                children:
+                    h &&
+                    (0, i.jsx)("div", { className: f.ZY, onDoubleClick: p, children: (0, i.jsx)(m, { windowKey: a }) }),
+            });
+        },
+    },
+);

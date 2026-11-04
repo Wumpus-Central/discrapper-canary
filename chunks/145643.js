@@ -1,5 +1,4 @@
-n.d(t, { A: () => s });
-var i = n(17928),
+var i = n(855986),
     l = n(73153),
     a = n(71393);
 let r = new Map();
@@ -18,3 +17,4 @@ let s = new E(l.h, {
         r.set(t, n);
     },
 });
+n.d(t, {}, { A: s });

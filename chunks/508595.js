@@ -1,7 +1,7 @@
-(n.d(t, { A: () => c, q: () => d }), n(321073));
+n(321073);
 var i = n(477900);
 n(582128);
-var l = n(17928),
+var l = n(855986),
     s = n(148719),
     r = n(808728),
     a = n(64749),
@@ -10,10 +10,10 @@ function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return (0, l.yK)(
-        [r.Ay],
+        [r.A],
         () => {
-            let l = r.Ay.getChannels(e)[o.rbe.GUILD_CATEGORY],
-                d = [...r.Ay.getChannels(e)[r.I6], ...r.Ay.getChannels(e)[r.vM]],
+            let l = r.A.getChannels(e)[o.rbe.GUILD_CATEGORY],
+                d = [...r.A.getChannels(e)[r.I], ...r.A.getChannels(e).VOCAL],
                 c = [],
                 u = {};
             return (
@@ -58,25 +58,32 @@ function d(e, t) {
         [e, n, i, t],
     );
 }
-function c(e) {
-    let {
-            guildId: t,
-            selectedChannelIds: n,
-            onChange: l,
-            placeholder: s,
-            includeRoleRestrictedPrivateChannels: r = !1,
-            includeStageVoiceChannels: o = !1,
-            helperText: c,
-            className: u,
-        } = e,
-        m = d(t, n, r, o);
-    return (0, i.jsx)(a.Ay, {
-        channelRows: m,
-        guildId: t,
-        selectedChannelIds: n,
-        onChange: (e, t) => l(e),
-        placeholder: s,
-        helperText: c,
-        className: u,
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let {
+                    guildId: t,
+                    selectedChannelIds: n,
+                    onChange: l,
+                    placeholder: s,
+                    includeRoleRestrictedPrivateChannels: r = !1,
+                    includeStageVoiceChannels: o = !1,
+                    helperText: c,
+                    className: u,
+                } = e,
+                m = d(t, n, r, o);
+            return (0, i.jsx)(a.Ay, {
+                channelRows: m,
+                guildId: t,
+                selectedChannelIds: n,
+                onChange: (e, t) => l(e),
+                placeholder: s,
+                helperText: c,
+                className: u,
+            });
+        },
+        q: d,
+    },
+);

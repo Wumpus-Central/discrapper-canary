@@ -1,4 +1,3 @@
-n.d(t, { $2: () => h, Q_: () => m, Vv: () => _, Yj: () => l, c9: () => y, dY: () => d, lG: () => v });
 var r = n(968072);
 function i(e, t, n, r) {
     let i = { filename: e, function: "<anonymous>" === t ? "?" : t, in_app: !0 };
@@ -78,3 +77,4 @@ let o = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i,
             ? [-1 !== e.indexOf("@") ? e.split("@")[0] : "?", n ? `safari-extension:${t}` : `safari-web-extension:${t}`]
             : [e, t];
     };
+n.d(t, {}, { $2: h, Q_: m, Vv: _, Yj: l, c9: y, dY: d, lG: v });

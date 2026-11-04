@@ -1,1 +1,1 @@
-e.exports = { P: "premiumIcon__7b750" };
+c.exports = { P: "premiumIcon_uc7PyD" };

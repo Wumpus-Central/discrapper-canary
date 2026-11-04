@@ -1,34 +1,12 @@
-n.d(t, {
-    BE: () => A,
-    DP: () => h,
-    Hy: () => p,
-    LM: () => d,
-    Sc: () => _,
-    TE: () => E,
-    aw: () => c,
-    mU: () => f,
-    wl: () => u,
-    xI: () => I,
-});
 var i,
     r,
     a = n(975571),
     s = n(652215),
-    l = n(899082),
-    o = n(105292);
-let d = 5,
-    c = 6,
-    u = 12,
-    _ = "2026-07-premium-group-announcement-modal",
-    E = a.A.getArticleURL(s.MVz.PREMIUM_GROUP_ABOUT),
-    A = [s.Dmq.CANCELED, s.Dmq.PAUSED, s.Dmq.PAST_DUE, s.Dmq.ACCOUNT_HOLD, s.Dmq.BILLING_RETRY];
-function h() {
-    return o.intl.string(l.default.aFBQ3d);
-}
-function f() {
-    return o.intl.string(o.t.jI66M4);
-}
-var I =
+    l = n(107198),
+    o = n(792996);
+let d = a.A.getArticleURL(s.MVz.PREMIUM_GROUP_ABOUT),
+    c = [s.Dmq.CANCELED, s.Dmq.PAUSED, s.Dmq.PAST_DUE, s.Dmq.ACCOUNT_HOLD, s.Dmq.BILLING_RETRY];
+var u =
         (((i = {}).UNKNOWN = "UNKNOWN"),
         (i.FETCHING = "FETCHING"),
         (i.PENDING = "PENDING"),
@@ -37,7 +15,7 @@ var I =
         (i.NOT_FOUND = "NOT_FOUND"),
         (i.ERROR = "ERROR"),
         i),
-    p =
+    _ =
         (((r = {})[(r.UNKNOWN_USER = 10013)] = "UNKNOWN_USER"),
         (r[(r.BILLING_SUBSCRIPTION_GROUP_MAX_MEMBERS = 100123)] = "BILLING_SUBSCRIPTION_GROUP_MAX_MEMBERS"),
         (r[(r.BILLING_SUBSCRIPTION_GROUP_USER_INELIGIBLE = 100124)] = "BILLING_SUBSCRIPTION_GROUP_USER_INELIGIBLE"),
@@ -63,3 +41,20 @@ var I =
         (r[(r.BILLING_SUBSCRIPTION_GROUP_USER_INVALID_SUBSCRIPTION = 100137)] =
             "BILLING_SUBSCRIPTION_GROUP_USER_INVALID_SUBSCRIPTION"),
         r);
+n.d(
+    t,
+    {},
+    {
+        BE: c,
+        DP: function () {
+            return o.intl.string(l.default.aFBQ3d);
+        },
+        Hy: _,
+        Sc: "2026-07-premium-group-announcement-modal",
+        TE: d,
+        mU: function () {
+            return o.intl.string(o.t.jI66M4);
+        },
+        xI: u,
+    },
+);

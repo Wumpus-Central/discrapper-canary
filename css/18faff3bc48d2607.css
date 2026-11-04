@@ -1,0 +1,124 @@
+.container_ebzPvR {
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--elevation-low);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.topRow_ebzPvR {
+    align-items: center;
+    background-color: color-mix(in oklab, var(--background-base-lower), transparent 20%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 8px
+}
+
+.memberNameAndTagContainer_ebzPvR {
+    display: flex;
+    flex-direction: column
+}
+
+.memberNameContainer_ebzPvR {
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.memberName_ebzPvR {
+    gap: 4px
+}
+
+.memberName_ebzPvR,
+.memberNameGlobal_ebzPvR {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.memberNameTextContainer_ebzPvR {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.memberClanTag_ebzPvR {
+    padding: 4px
+}
+
+.memberClanTagContainer_ebzPvR {
+    flex-shrink: 0
+}
+
+.memberAvatar_ebzPvR {
+    align-self: center;
+    grid-row: span 2
+}
+
+.closeAction_ebzPvR {
+    color: var(--text-default);
+    cursor: pointer;
+    padding: 4px
+}
+
+.bottomRow_ebzPvR {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+    justify-content: space-between;
+    margin-top: 1px
+}
+
+.bottomRowAction_ebzPvR {
+    background-color: color-mix(in oklab, var(--background-base-lower), transparent 20%);
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.bottomRowAction_ebzPvR,
+.bottomRowAction_ebzPvR .innerBottomRowAction_ebzPvR {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center
+}
+
+.bottomRowAction_ebzPvR .innerBottomRowAction_ebzPvR {
+    gap: 4px;
+    height: 52px;
+    padding: 12px 8px;
+    width: calc(100% - 16px)
+}
+
+.bottomRowAction_ebzPvR .innerBottomRowAction_ebzPvR:hover {
+    background-color: var(--interactive-background-selected);
+    color: var(--interactive-text-hover)
+}
+
+.bottomRowActionDisabled_ebzPvR {
+    cursor: not-allowed
+}
+
+.bottomRowActionDisabled_ebzPvR .innerBottomRowAction_ebzPvR {
+    background-color: var(--background-mod-subtle);
+    color: var(--text-muted);
+    opacity: .5
+}
+
+.bottomRowActionDisabled_ebzPvR .innerBottomRowAction_ebzPvR:hover {
+    background-color: var(--background-mod-subtle);
+    color: var(--text-muted)
+}
+
+/*# sourceMappingURL=18faff3bc48d2607.css.map*/

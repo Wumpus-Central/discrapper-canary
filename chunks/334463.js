@@ -1,6 +1,5 @@
 let i, r, l;
-n.d(t, { A: () => g });
-var s = n(17928),
+var s = n(855986),
     a = n(73153),
     o = n(652215),
     u = n(806931);
@@ -8,7 +7,7 @@ let c = new Map(),
     d = {},
     m = o.CUs.BOTTOM_RIGHT,
     h = { [u.R8.VIDEO]: u.fG[u.R8.VIDEO], [u.R8.CAMERA_PREVIEW]: u.fG[u.R8.CAMERA_PREVIEW] };
-class f extends s.Ay.PersistedStore {
+class g extends s.Ay.PersistedStore {
     static displayName = "PictureInPictureStore";
     static persistKey = "PictureInPictureStore";
     static migrations = [
@@ -62,7 +61,7 @@ class f extends s.Ay.PersistedStore {
         return { openPosition: m, pipWidths: h };
     }
 }
-let g = new f(a.h, {
+let f = new g(a.h, {
     PICTURE_IN_PICTURE_OPEN: function (e) {
         let { id: t, component: n, props: s } = e;
         if (null != c.get(t)) return;
@@ -161,3 +160,4 @@ let g = new f(a.h, {
         ((i = null), (r = null), (l = null), (c = new Map()));
     },
 });
+n.d(t, {}, { A: f });

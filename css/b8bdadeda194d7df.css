@@ -1,0 +1,58 @@
+.confirmModal_ruBjhS {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px
+}
+
+.discordTag_ruBjhS {
+    display: inline-grid;
+    grid-auto-flow: column
+}
+
+.avatarIcon_ruBjhS {
+    margin-inline-end: 3px
+}
+
+.username_ruBjhS {
+    color: var(--text-strong);
+    display: flex
+}
+
+.discriminator_ruBjhS {
+    color: var(--text-default)
+}
+
+.fromToWrapper_ruBjhS {
+    background: no-repeat 50% 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px
+}
+
+.from_ruBjhS,
+.to_ruBjhS {
+    border-radius: 50%
+}
+
+.from_ruBjhS {
+    margin-inline-end: -27px;
+    opacity: .3
+}
+
+.to_ruBjhS {
+    position: relative;
+    z-index: 1
+}
+
+.videoPaused_y4dMFv {
+    align-items: center;
+    display: flex;
+    justify-content: start
+}
+
+.warningCircle_y4dMFv {
+    margin-inline-end: 4px
+}
+
+/*# sourceMappingURL=b8bdadeda194d7df.css.map*/

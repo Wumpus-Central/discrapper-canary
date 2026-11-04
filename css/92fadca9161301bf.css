@@ -1,0 +1,201 @@
+.platformIcon_BmAYlI {
+    height: 32px;
+    width: 32px
+}
+
+.botTag_BmAYlI {
+    margin-inline-start: 4px;
+    margin-top: -1px !important
+}
+
+.connectionsChecksGroups_BmAYlI {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    margin-inline-end: -8px;
+    max-height: 280px;
+    padding-bottom: 4px;
+    padding-top: 8px
+}
+
+.connectionsChecksGroup_BmAYlI {
+    align-items: center;
+    border: 2px solid var(--border-subtle);
+    border-radius: 12px;
+    -moz-column-gap: 16px;
+    column-gap: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+    padding: 20px 16px;
+    position: relative
+}
+
+.connectionsChecksGroup_BmAYlI:first-of-type {
+    margin-top: 0
+}
+
+.connectionsChecksGroup_BmAYlI:hover {
+    border-color: var(--border-muted)
+}
+
+.connectionsChecksGroupPassed_BmAYlI {
+    background-color: var(--background-base-lowest);
+    border: 2px solid var(--background-base-lowest);
+    cursor: unset
+}
+
+.connectionsChecksGroupPassed_BmAYlI:hover {
+    border-color: var(--background-base-lowest)
+}
+
+.connectionsChecksGroupPlatformDisabled_BmAYlI {
+    cursor: not-allowed;
+    opacity: .7
+}
+
+.connectionsChecksGroupTextContainer_BmAYlI {
+    flex: 1
+}
+
+.connectionsChecksGroupTextNameContainer_BmAYlI {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.connectionsChecksGroupTextNameInfoIcon_BmAYlI {
+    color: var(--text-feedback-warning);
+    height: 16px;
+    width: 16px
+}
+
+.connectionsChecksGroupRequirementsNotMet_BmAYlI {
+    background-color: var(--background-feedback-mod-critical);
+    border-radius: 12px;
+    inset-inline-end: 20px;
+    padding: 4px 8px;
+    position: absolute;
+    top: -8px
+}
+
+.connectionsChecksGroupCaret_BmAYlI {
+    color: var(--interactive-text-default);
+    height: 24px;
+    width: 24px
+}
+
+.connectionsChecksGroupRetryText_BmAYlI:hover {
+    text-decoration: underline
+}
+
+.connectionsChecksGroupCheckmark_BmAYlI {
+    color: var(--text-feedback-positive);
+    height: 20px;
+    width: 20px
+}
+
+.connectionsCheck_BmAYlI {
+    margin-top: 4px
+}
+
+.footerText_BmAYlI {
+    margin-bottom: 24px;
+    margin-top: 12px
+}
+
+.accountConnectedContainer_BmAYlI {
+    align-items: flex-start;
+    -moz-column-gap: 32px;
+    column-gap: 32px;
+    display: flex;
+    flex-direction: row;
+    margin: 24px 0
+}
+
+.accountConnectedLoading_BmAYlI {
+    margin: auto
+}
+
+.accountConnectedContainerChild_BmAYlI {
+    width: 268px
+}
+
+.accountConnectedHeader_BmAYlI {
+    align-items: center;
+    color: var(--interactive-text-default);
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.accountConnectedPreviewConnectedUserAccount_BmAYlI {
+    border: 1px solid var(--border-subtle);
+    list-style: none;
+    margin-top: 8px !important
+}
+
+.accountConnectedPrivacyOptionsContainer_BmAYlI {
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    margin-top: 8px;
+    padding: 8px
+}
+
+.roleGranted_BmAYlI {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+    padding: 12px 8px
+}
+
+.roleGrantedName_BmAYlI {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.verifiedIcon_BmAYlI {
+    margin-inline-end: 8px
+}
+
+.channelsGranted_BmAYlI {
+    background-color: var(--background-mod-normal);
+    border-radius: 0 0 4px 4px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    max-height: 200px;
+    padding: 16px
+}
+
+.channelName_BmAYlI {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 4px
+}
+
+.channelName_BmAYlI:last-child {
+    margin-bottom: 0
+}
+
+.channelNameIcon_BmAYlI {
+    color: var(--text-muted);
+    margin-inline-end: 8px;
+    min-width: 24px
+}
+
+.channelNameText_BmAYlI {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+/*# sourceMappingURL=92fadca9161301bf.css.map*/

@@ -1,0 +1,500 @@
+.connectConsoleButton_2HrAxW {
+    fill: var(--interactive-text-default)
+}
+
+.theme-light .playstationButtonConnected_2HrAxW {
+    fill: var(--platform-playstation)
+}
+
+.theme-light .xboxButtonConnected_2HrAxW {
+    fill: var(--platform-xbox)
+}
+
+.theme-dark .playstationButtonConnected_2HrAxW {
+    fill: var(--interactive-text-active);
+    filter: drop-shadow(0 0 1px var(--opacity-white-80))
+}
+
+.theme-dark .xboxButtonConnected_2HrAxW {
+    fill: var(--interactive-text-active);
+    filter: drop-shadow(0 0 1px var(--opacity-white-80))
+}
+
+.connectConsoleButtonWrapper_2HrAxW:hover {
+    cursor: pointer
+}
+
+.connectConsoleButtonWrapper_2HrAxW:hover .connectConsoleButtonUnconnected_2HrAxW {
+    fill: var(--interactive-text-hover)
+}
+
+.connectConsoleButtonWrapper_2HrAxW:active .connectConsoleButtonUnconnected_2HrAxW {
+    fill: var(--interactive-text-active)
+}
+
+.inlineConsoleConnectionDetails_2HrAxW {
+    background-color: var(--interactive-background-hover);
+    border: 1px solid var(--interactive-background-hover);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px
+}
+
+.inlineConsoleConnectionDetailsIcons_2HrAxW {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.consoleIconDivider_2HrAxW {
+    background-color: var(--border-subtle);
+    height: 12px;
+    margin: 0 8px;
+    width: 1px
+}
+
+.inlineConsoleConnectionDetailsUpper_2HrAxW {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 12px
+}
+
+.inlineConsoleConnectionDetailsLower_2HrAxW {
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    padding: 8px 12px
+}
+
+.inlineConsoleConnectionDetailsLowerItem_2HrAxW {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.marginTop4px_2HrAxW {
+    margin-top: 4px
+}
+
+.showConnectionsButton_2HrAxW {
+    color: var(--text-link);
+    margin-top: 4px
+}
+
+.showConnectionsButton_2HrAxW:hover {
+    cursor: pointer;
+    text-decoration: underline
+}
+
+.microphoneUnit_Ggksyu {
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px
+}
+
+.microphoneUnitHeader_Ggksyu {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 16px;
+    justify-content: flex-start;
+    margin-top: 16px
+}
+
+.warningCircle_Ggksyu {
+    color: var(--text-feedback-warning);
+    margin-inline-end: 4px
+}
+
+.errorCircle_Ggksyu {
+    color: var(--text-feedback-critical);
+    margin-inline-end: 4px
+}
+
+.microphoneUnitRefreshIconWrapper_Ggksyu {
+    margin-inline-start: auto
+}
+
+:not(.disabled_Ggksyu).microphoneUnitRefreshIconWrapper_Ggksyu:hover {
+    color: var(--interactive-text-hover);
+    cursor: pointer
+}
+
+:not(.disabled_Ggksyu).microphoneUnitRefreshIconWrapper_Ggksyu:active {
+    color: var(--interactive-text-active)
+}
+
+.theme-light .microphoneUnitRefreshIconWrapper_Ggksyu {
+    color: var(--opacity-black-48)
+}
+
+.theme-dark .microphoneUnitRefreshIconWrapper_Ggksyu {
+    color: var(--interactive-text-default)
+}
+
+.microphoneUnitBodyText_Ggksyu {
+    margin-top: 8px
+}
+
+.opacity_50_Ggksyu {
+    opacity: .5
+}
+
+.card_RJPPHr {
+    background-color: var(--message-background-hover);
+    border: 1px solid var(--interactive-background-hover);
+    border-radius: 8px;
+    margin-top: 12px;
+    padding: 12px
+}
+
+.header_RJPPHr {
+    align-items: center;
+    display: flex;
+    margin-bottom: 6px
+}
+
+.icon_RJPPHr {
+    color: var(--text-feedback-warning);
+    display: inline-block;
+    margin-inline-end: 6px
+}
+
+.warningBody_RJPPHr {
+    text-wrap: pretty
+}
+
+.buttonGroup_i8fzPi {
+    margin-top: 12px
+}
+
+.questPromoContent_ZzrVHV {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    z-index: 3
+}
+
+.ctaNotInteractable_ZzrVHV {
+    pointer-events: none
+}
+
+.divider_ZzrVHV {
+    background-color: var(--interactive-background-hover);
+    height: 1px;
+    margin-bottom: 12px;
+    width: 100%
+}
+
+.details_ZzrVHV {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 2px
+}
+
+.detailsMargin_ZzrVHV {
+    margin-top: 74px
+}
+
+.detailsMarginVideoQuest_ZzrVHV {
+    margin-top: 45px
+}
+
+.white_ZzrVHV {
+    color: var(--white)
+}
+
+.videoQuestPreviewCont_ZzrVHV {
+    aspect-ratio: 16/9;
+    border: 1px solid var(--themes-dark-background-background-modifier-accent, rgba(78, 80, 88, .48));
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-top: 12px;
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.assetBodyVideoPreviewMedia_ZzrVHV {
+    cursor: pointer;
+    height: 100%;
+    width: 100%
+}
+
+.assetBodyVideoPreviewVideo_ZzrVHV {
+    height: 102%;
+    inset-inline-start: -1px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    opacity: 0;
+    position: absolute;
+    top: -1px;
+    transition: opacity .3s;
+    width: 102%
+}
+
+.assetBodyVideoPreviewVisible_ZzrVHV {
+    opacity: 1
+}
+
+.heroAssetWrapper_ZzrVHV {
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    height: 100%;
+    inset-inline: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1
+}
+
+.high-contrast-mode .heroAssetWrapper_ZzrVHV {
+    border: 1px solid var(--border-subtle)
+}
+
+.legibilityGradient_ZzrVHV {
+    background-image: linear-gradient(180deg, transparent, var(--background-base-low));
+    bottom: 0;
+    inset-inline-start: 0;
+    z-index: 1
+}
+
+.heroAsset_ZzrVHV,
+.legibilityGradient_ZzrVHV {
+    height: 100%;
+    position: absolute;
+    width: 100%
+}
+
+.heroAsset_ZzrVHV {
+    -o-object-fit: cover;
+    object-fit: cover;
+    z-index: 0
+}
+
+.cta_ZzrVHV {
+    flex: 0 0 auto;
+    margin-top: 8px
+}
+
+.iconButton_ZzrVHV {
+    background-color: var(--interactive-background-hover);
+    padding: 8px
+}
+
+.iconButton_ZzrVHV:hover {
+    background-color: var(--background-mod-subtle)
+}
+
+.ctaClaimReward_ZzrVHV {
+    margin-bottom: 4px
+}
+
+.title_ZzrVHV {
+    margin-bottom: 2px
+}
+
+.rewardTile_ZzrVHV {
+    margin-bottom: 8px;
+    margin-top: 74px
+}
+
+.hiddenRewardTile_ZzrVHV {
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    visibility: hidden;
+    z-index: -1
+}
+
+.questAcceptedContentHeading_ZzrVHV {
+    align-items: center;
+    display: flex
+}
+
+.questProgressRewardTile_ZzrVHV {
+    border-radius: 4px;
+    box-shadow: var(--shadow-high);
+    display: block;
+    flex: 0 0 auto;
+    height: 28px;
+    margin-inline-end: 8px;
+    width: 28px
+}
+
+.questAcceptedContentHeading_ZzrVHV .questProgressRewardTile_ZzrVHV {
+    height: 32px;
+    width: 32px
+}
+
+.questAcceptedContentCopySubheading_ZzrVHV {
+    opacity: .7
+}
+
+.questAcceptedContent_ZzrVHV .description_ZzrVHV {
+    margin-bottom: 2px;
+    text-shadow: none
+}
+
+.description_ZzrVHV a:hover {
+    opacity: .8;
+    text-decoration: none
+}
+
+.promotedBadgeWrapper_ZzrVHV {
+    flex: 0 0 auto;
+    margin-inline-end: 4px;
+    padding-inline-end: 8px;
+    position: relative
+}
+
+.promotedBadge_ZzrVHV {
+    cursor: pointer;
+    display: flex;
+    flex: 1 0 auto;
+    gap: 3px;
+    opacity: .8;
+    place-items: center;
+    transition: opacity .125s
+}
+
+.promotedBadge_ZzrVHV:hover {
+    opacity: 1
+}
+
+.promotedBadgeWrapper_ZzrVHV:after {
+    background-color: var(--opacity-white-40);
+    content: "";
+    height: 12px;
+    inset-inline-end: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px
+}
+
+.promotedBadgeIcon_ZzrVHV {
+    flex: 0 0 auto;
+    height: 12px;
+    width: 12px
+}
+
+.postEnrollmentBackground_ZzrVHV {
+    background-color: var(--home-background);
+    border-radius: 8px 8px 0 0;
+    border-top: 2px solid var(--background-mod-subtle);
+    height: 100%;
+    inset-inline-start: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.postEnrollmentBackgroundCollapsed_ZzrVHV {
+    pointer-events: none;
+    z-index: 3
+}
+
+.postEnrollmentBackgroundExpanded_ZzrVHV {
+    z-index: -1
+}
+
+.previewPlayButtonCont_ZzrVHV {
+    align-items: center;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background: hsla(0, 0%, 100%, .08);
+    border-radius: 275px;
+    cursor: pointer;
+    display: flex;
+    height: 44px;
+    inset-inline-start: 50%;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px
+}
+
+.previewPlayButton_ZzrVHV {
+    cursor: pointer;
+    height: 22px;
+    width: 22px
+}
+
+.premiumOrbsGlow_ZzrVHV {
+    z-index: 2
+}
+
+.contentCollapsedBackgroundWrapper_ZzrVHV {
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    height: 50%;
+    inset-inline-start: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: translateZ(0);
+    width: 100%;
+    z-index: 2
+}
+
+.contentCollapsedBackgroundWrapper_ZzrVHV:after {
+    background-color: var(--background-base-low);
+    bottom: 0;
+    content: "";
+    display: block;
+    inset-inline: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0
+}
+
+.contentCollapsedBackground_ZzrVHV {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: -20px;
+    filter: brightness(.6) saturate(110%);
+    inset-inline: -20px;
+    position: absolute;
+    top: -20px
+}
+
+.blur_ZzrVHV {
+    bottom: -50px;
+    filter: blur(30px) brightness(.6) saturate(110%);
+    inset-inline: -50px;
+    top: -50px
+}
+
+.instructionRow_ZzrVHV {
+    align-items: center;
+    -moz-column-gap: 8px;
+    column-gap: 8px;
+    flex-wrap: wrap;
+    row-gap: 4px
+}
+
+.ctaButtons_ZzrVHV,
+.instructionRow_ZzrVHV {
+    display: flex;
+    flex-direction: row
+}
+
+.ctaButtons_ZzrVHV {
+    align-items: end;
+    gap: 8px
+}
+
+/*# sourceMappingURL=2195af40f74ad74e.css.map*/

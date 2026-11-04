@@ -1,4 +1,3 @@
-e.d(n, { A: () => f, Q: () => A });
 var l = e(477900);
 e(582128);
 var i = e(3026),
@@ -28,9 +27,15 @@ function d(t) {
           })
         : f();
 }
-function A(t) {
-    return (0, l.jsx)(d, { component: r.D, ...t });
-}
-function f(t) {
-    return (0, l.jsx)(d, { component: s.E, ...t });
-}
+e.d(
+    n,
+    {},
+    {
+        A: function (t) {
+            return (0, l.jsx)(d, { component: s.E, ...t });
+        },
+        Q: function (t) {
+            return (0, l.jsx)(d, { component: r.D, ...t });
+        },
+    },
+);

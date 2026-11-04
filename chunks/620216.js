@@ -1,4 +1,3 @@
-t.d(n, { t: () => r });
 var s,
     r =
         (((s = {}).ACCENT = "accent"),
@@ -8,3 +7,4 @@ var s,
         (s.RED = "statusRed"),
         (s.NONE = "transparent"),
         s);
+t.d(n, {}, { t: r });

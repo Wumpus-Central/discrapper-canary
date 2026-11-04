@@ -7,7 +7,7 @@ class i extends Error {
 let o = (e, t, r) =>
     new Promise((o, a) => {
         if ("number" != typeof t || t < 0) throw TypeError("Expected `milliseconds` to be a positive number");
-        if (t === 1 / 0) return void o(e);
+        if (1 / 0 === t) return void o(e);
         let s = setTimeout(() => {
             if ("function" == typeof r) {
                 try {

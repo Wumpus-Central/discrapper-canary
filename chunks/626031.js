@@ -1,4 +1,3 @@
-n.d(t, { A: () => R, t: () => w });
 var r = n(477900),
     a = n(582128),
     l = n(503698),
@@ -59,55 +58,54 @@ function w(e) {
     });
 }
 let D = (e) => {
-        let {
-                value: t,
-                onSetDigitCount: n,
-                onValueChange: l = g.tEg,
-                onValueReached: u = g.tEg,
-                targetTotalCounterTime: i = 3e3,
-                isRenderedWithoutLottieAnimation: d,
-                counterInnerClassName: o,
-            } = e,
-            [f, h] = (0, a.useState)(0),
-            N = (0, a.useRef)(null),
-            w = (0, a.useRef)(null);
-        (0, a.useEffect)(() => {
-            if (null === t) return;
-            if (null === N.current) {
-                N.current = t;
-                return;
-            }
-            let e = null !== N.current ? t - N.current : t;
-            (0 !== e && null !== N.current && l(e),
-                (w.current = { lastChangedAt: Date.now(), totalDelta: Math.abs(e) }));
-        }, [t, l]);
-        let D = t ?? 0,
-            R = N.current ?? D,
-            { duration: C, delay: E } = (0, m.v)(D - R, { targetTime: i, isRenderedWithoutLottieAnimation: d }),
-            { number: v } = (0, c.z)({
-                from: { number: N.current ?? D },
-                number: D,
-                config: { mass: 1, tension: 20, friction: 10, duration: C },
-                delay: E,
-                onStart: () => {
-                    n(A(R));
-                },
-                onRest: () => {
-                    if ((h(f + 1), u(), !b && null !== w.current && null !== N.current)) {
-                        let e = Date.now();
-                        p.log("Balance Counter finished updating: ", {
-                            time: e - w.current.lastChangedAt,
-                            delta: D - N.current,
-                        });
-                    }
-                    (n(A(D)), (N.current = D));
-                },
-            }),
-            x = A(Math.max(t ?? 0, v.get()));
-        return (0, r.jsx)(s.animated.div, {
-            style: { width: `calc(${x}ch)` },
-            className: o,
-            children: v.to((e) => `${e.toFixed(0)}`),
-        });
-    },
-    R = w;
+    let {
+            value: t,
+            onSetDigitCount: n,
+            onValueChange: l = g.tEg,
+            onValueReached: u = g.tEg,
+            targetTotalCounterTime: i = 3e3,
+            isRenderedWithoutLottieAnimation: d,
+            counterInnerClassName: o,
+        } = e,
+        [f, h] = (0, a.useState)(0),
+        N = (0, a.useRef)(null),
+        w = (0, a.useRef)(null);
+    (0, a.useEffect)(() => {
+        if (null === t) return;
+        if (null === N.current) {
+            N.current = t;
+            return;
+        }
+        let e = null !== N.current ? t - N.current : t;
+        (0 !== e && null !== N.current && l(e), (w.current = { lastChangedAt: Date.now(), totalDelta: Math.abs(e) }));
+    }, [t, l]);
+    let D = t ?? 0,
+        R = N.current ?? D,
+        { duration: C, delay: E } = (0, m.v)(D - R, { targetTime: i, isRenderedWithoutLottieAnimation: d }),
+        { number: v } = (0, c.z)({
+            from: { number: N.current ?? D },
+            number: D,
+            config: { mass: 1, tension: 20, friction: 10, duration: C },
+            delay: E,
+            onStart: () => {
+                n(A(R));
+            },
+            onRest: () => {
+                if ((h(f + 1), u(), !b && null !== w.current && null !== N.current)) {
+                    let e = Date.now();
+                    p.log("Balance Counter finished updating: ", {
+                        time: e - w.current.lastChangedAt,
+                        delta: D - N.current,
+                    });
+                }
+                (n(A(D)), (N.current = D));
+            },
+        }),
+        x = A(Math.max(t ?? 0, v.get()));
+    return (0, r.jsx)(s.animated.div, {
+        style: { width: `calc(${x}ch)` },
+        className: o,
+        children: v.to((e) => `${e.toFixed(0)}`),
+    });
+};
+n.d(t, {}, { A: w, t: w });

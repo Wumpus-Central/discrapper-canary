@@ -1,4 +1,3 @@
-n.d(t, { B: () => l, K: () => d });
 var i = n(582128),
     r = n(66455),
     a = n(206692);
@@ -29,15 +28,22 @@ function l(e, t) {
     );
 }
 let o = new Map([[1, { threshold: 1 }]]);
-function d(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-        n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        a = (0, r.A)((t) => {
-            e(t.isIntersecting);
-        }),
-        s = (0, i.useMemo)(() => {
-            let e;
-            return (null != (e = o.get(t)) || ((e = { threshold: t }), o.set(t, e)), e);
-        }, [t]);
-    return l(a.current, s, n);
-}
+n.d(
+    t,
+    {},
+    {
+        B: l,
+        K: function (e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+                n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+                a = (0, r.A)((t) => {
+                    e(t.isIntersecting);
+                }),
+                s = (0, i.useMemo)(() => {
+                    let e;
+                    return (null != (e = o.get(t)) || ((e = { threshold: t }), o.set(t, e)), e);
+                }, [t]);
+            return l(a.current, s, n);
+        },
+    },
+);

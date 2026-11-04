@@ -1,11 +1,10 @@
-i.d(e, { GlobalWorkerOptions: () => rV, getDocument: () => lv });
 var s,
     n,
     a,
     r,
     o = i(412319),
     l = i(72290),
-    h = i(264572).Buffer;
+    h = i(264572).hp;
 function d(t, e, i) {
     if ("function" == typeof t ? t === e : t.has(e)) return arguments.length < 3 ? e : i;
     throw TypeError("Private element is not present on this object");
@@ -248,38 +247,38 @@ function R(t, e, i = !1) {
 function F(t, e, i, s = !1) {
     return (Object.defineProperty(t, e, { value: i, enumerable: !s, configurable: !0, writable: !1 }), i);
 }
-var N = (function () {
+var B = (function () {
         function t(t, e) {
             ((this.message = t), (this.name = e));
         }
         return ((t.prototype = Error()), (t.constructor = t), t);
     })(),
-    B = class extends N {
+    O = class extends B {
         constructor(t, e) {
             (super(t, "PasswordException"), (this.code = e));
         }
     },
-    O = class extends N {
+    W = class extends B {
         constructor(t, e) {
             (super(t, "UnknownErrorException"), (this.details = e));
         }
     },
-    W = class extends N {
+    N = class extends B {
         constructor(t) {
             super(t, "InvalidPDFException");
         }
     },
-    U = class extends N {
+    U = class extends B {
         constructor(t, e, i) {
             (super(t, "ResponseException"), (this.status = e), (this.missing = i));
         }
     },
-    $ = class extends N {
+    $ = class extends B {
         constructor(t) {
             super(t, "FormatError");
         }
     },
-    H = class extends N {
+    H = class extends B {
         constructor(t) {
             super(t, "AbortException");
         }
@@ -794,7 +793,7 @@ var ta = class t {
                 (this.offsetX = n),
                 (this.offsetY = a),
                 (i *= e));
-            const f = (t[2] + t[0]) / 2,
+            let f = (t[2] + t[0]) / 2,
                 m = (t[3] + t[1]) / 2;
             switch (((s %= 360) < 0 && (s += 360), s)) {
                 case 180:
@@ -862,7 +861,7 @@ var ta = class t {
             return (V.applyInverseTransform(i, this.transform), i);
         }
     },
-    tr = class extends N {
+    tr = class extends B {
         constructor(t, e = 0) {
             (super(t, "RenderingCancelledException"), (this.extraDelay = e));
         }
@@ -979,7 +978,7 @@ function tb(t, e, i = !1, s = !0) {
 }
 var tv = class t {
         constructor() {
-            const { pixelRatio: e } = t;
+            let { pixelRatio: e } = t;
             ((this.sx = e), (this.sy = e));
         }
         get scaled() {
@@ -1145,23 +1144,23 @@ var tP = new WeakSet(),
             u(this, tP);
         }
         get pagesNumber() {
-            return tB._;
+            return tO._;
         }
         set pagesNumber(t) {
-            tB._ !== t && ((tB._ = t), 0 === t && ((tF._ = null), (tR._ = null)));
+            tO._ !== t && ((tO._ = t), 0 === t && ((tF._ = null), (tR._ = null)));
         }
         addListener(t) {
-            tO._.push(t);
+            tW._.push(t);
         }
         removeListener(t) {
-            let e = tO._.indexOf(t);
-            e >= 0 && tO._.splice(e, 1);
+            let e = tW._.indexOf(t);
+            e >= 0 && tW._.splice(e, 1);
         }
         movePages(t, e, i) {
             d(tP, this, tL).call(this, !0);
             let s = tF._,
                 n = tR._;
-            tN._.set(n);
+            tB._.set(n);
             let a = e.length,
                 r = new Uint32Array(a),
                 o = 0;
@@ -1169,7 +1168,7 @@ var tP = new WeakSet(),
                 let n = e[t] - 1;
                 ((r[t] = s[n]), n < i && (o += 1));
             }
-            let l = tB._,
+            let l = tO._,
                 h = i - o,
                 c = l - a;
             h = Z(h, 0, c);
@@ -1189,7 +1188,7 @@ var tP = new WeakSet(),
             return { pageIndices: tR._ ? tR._.map((t) => t - 1) : null };
         }
         getPrevPageNumber(t) {
-            return tN._[tF._[t - 1] - 1];
+            return tB._[tF._[t - 1] - 1];
         }
         getPageNumber(t) {
             return tR._?.[t - 1] ?? t;
@@ -1205,23 +1204,23 @@ var tP = new WeakSet(),
         }
     };
 function tI() {
-    for (let t of tO._) t();
+    for (let t of tW._) t();
 }
 function tL(t) {
     if (tF._) return;
-    let e = tB._,
+    let e = tO._,
         i = new Uint32Array(3 * e),
         s = (tF._ = i.subarray(0, e)),
         n = (tR._ = i.subarray(e, 2 * e));
     if (t) for (let t = 0; t < e; t++) s[t] = n[t] = t + 1;
-    tN._ = i.subarray(2 * e);
+    tB._ = i.subarray(2 * e);
 }
 var tR = { _: null },
     tF = { _: null },
-    tN = { _: null },
-    tB = { _: 0 },
-    tO = { _: [] },
-    tW = new WeakMap(),
+    tB = { _: null },
+    tO = { _: 0 },
+    tW = { _: [] },
+    tN = new WeakMap(),
     tU = new WeakMap(),
     t$ = new WeakMap(),
     tH = new WeakMap(),
@@ -1233,7 +1232,7 @@ var tR = { _: null },
     tX = class {
         constructor(t) {
             (u(this, tq),
-                p(this, tW, null),
+                p(this, tN, null),
                 p(this, tU, null),
                 p(this, t$, void 0),
                 p(this, tH, null),
@@ -1252,7 +1251,7 @@ var tR = { _: null },
                     })));
         }
         render() {
-            let t = g(tW, this, document.createElement("div"));
+            let t = g(tN, this, document.createElement("div"));
             (t.classList.add("editToolbar", "hidden"), t.setAttribute("role", "toolbar"));
             let e = f(t$, this)._uiManager._signal;
             e instanceof AbortSignal &&
@@ -1270,13 +1269,13 @@ var tR = { _: null },
             return t;
         }
         get div() {
-            return f(tW, this);
+            return f(tN, this);
         }
         hide() {
-            (f(tW, this).classList.add("hidden"), f(tU, this)?.hideDropdown());
+            (f(tN, this).classList.add("hidden"), f(tU, this)?.hideDropdown());
         }
         show() {
-            (f(tW, this).classList.remove("hidden"), f(tj, this)?.shown(), f(tz, this)?.shown());
+            (f(tN, this).classList.remove("hidden"), f(tj, this)?.shown(), f(tz, this)?.shown());
         }
         addDeleteButton() {
             let { editorType: t, _uiManager: e } = f(t$, this),
@@ -1352,7 +1351,7 @@ var tR = { _: null },
             f(tV, this) && (f(tV, this).title = t);
         }
         remove() {
-            (f(tW, this).remove(), f(tU, this)?.destroy(), g(tU, this, null));
+            (f(tN, this).remove(), f(tU, this)?.destroy(), g(tU, this, null));
         }
     };
 function tK(t) {
@@ -1491,15 +1490,15 @@ var et = class t {
             en._ = null;
         }
         static clearPointerIds() {
-            ((ee._ = NaN), (ei._ = null));
+            ((ee._ = 0 / 0), (ei._ = null));
         }
         static clearTimeStamp() {
-            es._ = NaN;
+            es._ = 0 / 0;
         }
     },
-    ee = { _: NaN },
+    ee = { _: 0 / 0 },
     ei = { _: null },
-    es = { _: NaN },
+    es = { _: 0 / 0 },
     en = { _: null },
     ea = new WeakMap(),
     er = class {
@@ -1651,7 +1650,7 @@ var ep = new WeakMap(),
         constructor(t = 128) {
             (p(this, ep, []), p(this, eg, !1), p(this, ef, void 0), p(this, em, -1), g(ef, this, t));
         }
-        add({ cmd: t, undo: e, post: i, mustExec: s, type: n = NaN, overwriteIfSameType: a = !1, keepUndo: r = !1 }) {
+        add({ cmd: t, undo: e, post: i, mustExec: s, type: n = 0 / 0, overwriteIfSameType: a = !1, keepUndo: r = !1 }) {
             if ((s && t(), f(eg, this))) return;
             let o = { cmd: t, undo: e, post: i, type: n };
             if (-1 === f(em, this)) {
@@ -1705,10 +1704,10 @@ var ep = new WeakMap(),
     ev = class {
         constructor(t) {
             (u(this, eb), (this.buffer = []), (this.callbacks = new Map()), (this.allKeys = new Set()));
-            const { isMac: e } = z.platform;
-            for (const [i, s, n = {}] of t)
-                for (const t of i) {
-                    const i = t.startsWith("mac+");
+            let { isMac: e } = z.platform;
+            for (let [i, s, n = {}] of t)
+                for (let t of i) {
+                    let i = t.startsWith("mac+");
                     e && i
                         ? (this.callbacks.set(t.slice(4), { callback: s, options: n }),
                           this.allKeys.add(t.split("+").at(-1)))
@@ -1787,10 +1786,10 @@ var e_ = new WeakMap(),
     eL = new WeakMap(),
     eR = new WeakMap(),
     eF = new WeakMap(),
-    eN = new WeakMap(),
     eB = new WeakMap(),
     eO = new WeakMap(),
     eW = new WeakMap(),
+    eN = new WeakMap(),
     eU = new WeakMap(),
     e$ = new WeakMap(),
     eH = new WeakMap(),
@@ -1923,11 +1922,11 @@ var e_ = new WeakMap(),
                 p(this, eL, null),
                 p(this, eR, 0),
                 p(this, eF, new Set()),
-                p(this, eN, null),
                 p(this, eB, null),
-                p(this, eO, new Set()),
+                p(this, eO, null),
+                p(this, eW, new Set()),
                 (0, o.t)(this, "_editorUndoBar", null),
-                p(this, eW, !1),
+                p(this, eN, !1),
                 p(this, eU, !1),
                 p(this, e$, !1),
                 p(this, eH, null),
@@ -1966,7 +1965,7 @@ var e_ = new WeakMap(),
                 p(this, ia, null),
                 p(this, ir, null),
                 p(this, io, null));
-            const x = (this._signal = f(e_, this).signal);
+            let x = (this._signal = f(e_, this).signal);
             (g(is, this, t),
                 g(ia, this, e),
                 g(ir, this, i),
@@ -2003,7 +2002,7 @@ var e_ = new WeakMap(),
                 g(eH, this, l.filterFactory),
                 g(e8, this, h),
                 g(eG, this, c || null),
-                g(eW, this, m),
+                g(eN, this, m),
                 g(eU, this, w),
                 g(e$, this, b),
                 g(e2, this, v || null),
@@ -2023,7 +2022,7 @@ var e_ = new WeakMap(),
                 t.destroy();
             (f(eS, this).clear(),
                 f(eM, this).clear(),
-                f(eO, this).clear(),
+                f(eW, this).clear(),
                 f(e1, this)?.clear(),
                 g(ex, this, null),
                 f(e5, this).clear(),
@@ -2205,15 +2204,15 @@ var e_ = new WeakMap(),
             f(ia, this).classList.toggle("noUserSelect", t);
         }
         addShouldRescale(t) {
-            f(eO, this).add(t);
+            f(eW, this).add(t);
         }
         removeShouldRescale(t) {
-            f(eO, this).delete(t);
+            f(eW, this).delete(t);
         }
         onScaleChanging({ scale: t }) {
             for (let e of (this.commitOrRemove(),
             (this.viewParameters.realScale = t * ts.PDF_TO_CSS_UNITS),
-            f(eO, this)))
+            f(eW, this)))
                 e.onScaleChanging();
             f(eL, this)?.onScaleChanging();
         }
@@ -2298,7 +2297,7 @@ var e_ = new WeakMap(),
         }
         dragOver(t) {
             for (let { type: e } of t.dataTransfer.items)
-                for (let i of f(eB, this))
+                for (let i of f(eO, this))
                     if (i.isHandlingMimeForPasting(e)) {
                         ((t.dataTransfer.dropEffect = "copy"), t.preventDefault());
                         return;
@@ -2306,7 +2305,7 @@ var e_ = new WeakMap(),
         }
         drop(t) {
             for (let e of t.dataTransfer.items)
-                for (let i of f(eB, this))
+                for (let i of f(eO, this))
                     if (i.isHandlingMimeForPasting(e.type)) {
                         (i.paste(e, this.currentLayer), t.preventDefault());
                         return;
@@ -2328,7 +2327,7 @@ var e_ = new WeakMap(),
             t.preventDefault();
             let { clipboardData: e } = t;
             for (let t of e.items)
-                for (let e of f(eB, this))
+                for (let e of f(eO, this))
                     if (e.isHandlingMimeForPasting(t.type)) return void e.paste(t, this.currentLayer);
             let i = e.getData("application/pdfjs");
             if (!i) return;
@@ -2405,8 +2404,8 @@ var e_ = new WeakMap(),
                   this.disableUserSelect(!1));
         }
         registerEditorTypes(t) {
-            if (!f(eB, this))
-                for (let e of (g(eB, this, t), f(eB, this))) d(il, this, iM).call(this, e.defaultPropertiesToUpdate);
+            if (!f(eO, this))
+                for (let e of (g(eO, this, t), f(eO, this))) d(il, this, iM).call(this, e.defaultPropertiesToUpdate);
         }
         getId() {
             return f(eX, this).id;
@@ -2454,7 +2453,7 @@ var e_ = new WeakMap(),
                         g(
                             ek,
                             this,
-                            await f(e9, this).getAnnotationsByType(new Set(f(eB, this).map((t) => t._editorType))),
+                            await f(e9, this).getAnnotationsByType(new Set(f(eO, this).map((t) => t._editorType))),
                         );
                     let t = new Set(),
                         e = [];
@@ -2486,7 +2485,7 @@ var e_ = new WeakMap(),
             t.mode !== f(e3, this) && this._eventBus.dispatch("switchannotationeditormode", { source: this, ...t });
         }
         updateParams(t, e) {
-            if (f(eB, this)) {
+            if (f(eO, this)) {
                 switch (t) {
                     case x.CREATE:
                         this.currentLayer.addNewEditor(e);
@@ -2500,7 +2499,7 @@ var e_ = new WeakMap(),
                             this.showAllEditors("highlight", e));
                 }
                 if (this.hasSelection) for (let i of f(e5, this)) i.updateParams(t, e);
-                else for (let i of f(eB, this)) i.updateDefaultParams(t, e);
+                else for (let i of f(eO, this)) i.updateDefaultParams(t, e);
             }
         }
         showAllEditors(t, e, i = !1) {
@@ -2683,8 +2682,8 @@ var e_ = new WeakMap(),
         }
         setUpDragSession() {
             if (this.hasSelection)
-                for (let t of (this.disableUserSelect(!0), g(eN, this, new Map()), f(e5, this)))
-                    f(eN, this).set(t, {
+                for (let t of (this.disableUserSelect(!0), g(eB, this, new Map()), f(e5, this)))
+                    f(eB, this).set(t, {
                         savedX: t.x,
                         savedY: t.y,
                         savedPageIndex: t.pageIndex,
@@ -2694,10 +2693,10 @@ var e_ = new WeakMap(),
                     });
         }
         endDragSession() {
-            if (!f(eN, this)) return !1;
+            if (!f(eB, this)) return !1;
             this.disableUserSelect(!1);
-            let t = f(eN, this);
-            g(eN, this, null);
+            let t = f(eB, this);
+            g(eB, this, null);
             let e = !1;
             for (let [{ x: i, y: s, pageIndex: n }, a] of t)
                 ((a.newX = i),
@@ -2725,7 +2724,7 @@ var e_ = new WeakMap(),
             );
         }
         dragSelectedEditors(t, e) {
-            if (f(eN, this)) for (let i of f(eN, this).keys()) i.drag(t, e);
+            if (f(eB, this)) for (let i of f(eB, this).keys()) i.drag(t, e);
         }
         rebuild(t) {
             if (null === t.parent) {
@@ -2863,7 +2862,7 @@ function ip() {
     }
 }
 function ig(t = "") {
-    f(e3, this) === _.HIGHLIGHT ? this.highlightSelection(t) : f(eW, this) && d(il, this, iu).call(this);
+    f(e3, this) === _.HIGHLIGHT ? this.highlightSelection(t) : f(eN, this) && d(il, this, iu).call(this);
 }
 function im() {
     document.addEventListener("selectionchange", d(il, this, ip).bind(this), { signal: this._signal });
@@ -2955,10 +2954,10 @@ var iI = new WeakMap(),
     iL = new WeakMap(),
     iR = new WeakMap(),
     iF = new WeakMap(),
-    iN = new WeakMap(),
     iB = new WeakMap(),
     iO = new WeakMap(),
     iW = new WeakMap(),
+    iN = new WeakMap(),
     iU = new WeakMap(),
     i$ = new WeakMap(),
     iH = new WeakMap(),
@@ -2971,10 +2970,10 @@ var iI = new WeakMap(),
                 p(this, iL, !1),
                 p(this, iR, null),
                 p(this, iF, null),
-                p(this, iN, null),
                 p(this, iB, null),
-                p(this, iO, !1),
-                p(this, iW, null),
+                p(this, iO, null),
+                p(this, iW, !1),
+                p(this, iN, null),
                 p(this, iU, null),
                 p(this, i$, null),
                 p(this, iH, null),
@@ -3022,7 +3021,7 @@ var iI = new WeakMap(),
                 t.addEventListener(
                     "keydown",
                     (e) => {
-                        e.target === t && "Enter" === e.key && (g(iO, this, !0), s(e));
+                        e.target === t && "Enter" === e.key && (g(iW, this, !0), s(e));
                     },
                     { signal: i },
                 ),
@@ -3031,7 +3030,7 @@ var iI = new WeakMap(),
             );
         }
         finish() {
-            f(iR, this) && (f(iR, this).focus({ focusVisible: f(iO, this) }), g(iO, this, !1));
+            f(iR, this) && (f(iR, this).focus({ focusVisible: f(iW, this) }), g(iW, this, !1));
         }
         isEmpty() {
             return f(ij, this) ? null === f(iI, this) : !f(iI, this) && !f(iL, this);
@@ -3056,14 +3055,14 @@ var iI = new WeakMap(),
         }
         toggleAltTextBadge(t = !1) {
             if (!f(ij, this) || f(iI, this)) {
-                (f(iW, this)?.remove(), g(iW, this, null));
+                (f(iN, this)?.remove(), g(iN, this, null));
                 return;
             }
-            if (!f(iW, this)) {
-                let t = g(iW, this, document.createElement("div"));
+            if (!f(iN, this)) {
+                let t = g(iN, this, document.createElement("div"));
                 ((t.className = "noAltTextBadge"), f(iU, this).div.append(t));
             }
-            f(iW, this).classList.toggle("hidden", !t);
+            f(iN, this).classList.toggle("hidden", !t);
         }
         serialize(t) {
             let e = f(iI, this);
@@ -3082,7 +3081,7 @@ var iI = new WeakMap(),
         }
         toggle(t = !1) {
             f(iR, this) &&
-                (!t && f(iB, this) && (clearTimeout(f(iB, this)), g(iB, this, null)), (f(iR, this).disabled = !t));
+                (!t && f(iO, this) && (clearTimeout(f(iO, this)), g(iO, this, null)), (f(iR, this).disabled = !t));
         }
         shown() {
             f(iU, this)._reportTelemetry({
@@ -3094,9 +3093,9 @@ var iI = new WeakMap(),
             (f(iR, this)?.remove(),
                 g(iR, this, null),
                 g(iF, this, null),
-                g(iN, this, null),
-                f(iW, this)?.remove(),
-                g(iW, this, null));
+                g(iB, this, null),
+                f(iN, this)?.remove(),
+                g(iN, this, null));
         }
     };
 function iV() {
@@ -3112,17 +3111,17 @@ async function iq() {
             f(iF, this)?.setAttribute("data-l10n-id", iX._[`${iV.call(d(iz, this))}-label`]),
             !f(iI, this))
         )
-            return void f(iN, this)?.remove();
+            return void f(iB, this)?.remove();
     } else {
         if (!f(iI, this) && !f(iL, this)) {
-            (t.classList.remove("done"), f(iN, this)?.remove());
+            (t.classList.remove("done"), f(iB, this)?.remove());
             return;
         }
         (t.classList.add("done"), t.setAttribute("data-l10n-id", "pdfjs-editor-alt-text-edit-button"));
     }
-    let e = f(iN, this);
+    let e = f(iB, this);
     if (!e) {
-        (g(iN, this, (e = document.createElement("span"))),
+        (g(iB, this, (e = document.createElement("span"))),
             (e.className = "tooltip"),
             e.setAttribute("role", "tooltip"),
             (e.id = `alt-text-tooltip-${f(iU, this).id}`));
@@ -3130,7 +3129,7 @@ async function iq() {
         (i.addEventListener(
             "abort",
             () => {
-                (clearTimeout(f(iB, this)), g(iB, this, null));
+                (clearTimeout(f(iO, this)), g(iO, this, null));
             },
             { once: !0 },
         ),
@@ -3138,11 +3137,11 @@ async function iq() {
                 "mouseenter",
                 () => {
                     g(
-                        iB,
+                        iO,
                         this,
                         setTimeout(() => {
-                            (g(iB, this, null),
-                                f(iN, this).classList.add("show"),
+                            (g(iO, this, null),
+                                f(iB, this).classList.add("show"),
                                 f(iU, this)._reportTelemetry({ action: "alt_text_tooltip" }));
                         }, 100),
                     );
@@ -3152,8 +3151,8 @@ async function iq() {
             t.addEventListener(
                 "mouseleave",
                 () => {
-                    (f(iB, this) && (clearTimeout(f(iB, this)), g(iB, this, null)),
-                        f(iN, this)?.classList.remove("show"));
+                    (f(iO, this) && (clearTimeout(f(iO, this)), g(iO, this, null)),
+                        f(iB, this)?.classList.remove("show"));
                 },
                 { signal: i },
             ));
@@ -3497,10 +3496,10 @@ var sf = new WeakMap(),
     sL = new WeakMap(),
     sR = new WeakMap(),
     sF = new WeakMap(),
-    sN = new WeakMap(),
     sB = new WeakMap(),
     sO = new WeakMap(),
     sW = new WeakMap(),
+    sN = new WeakMap(),
     sU = new WeakMap(),
     s$ = new WeakSet(),
     sH = class t {
@@ -3547,9 +3546,9 @@ var sf = new WeakMap(),
                 p(this, sL, !1),
                 p(this, sR, null),
                 p(this, sF, 0),
-                p(this, sN, 0),
-                p(this, sB, null),
+                p(this, sB, 0),
                 p(this, sO, null),
+                p(this, sW, null),
                 (0, o.t)(this, "isSelected", !1),
                 (0, o.t)(this, "_isCopy", !1),
                 (0, o.t)(this, "_editToolbar", null),
@@ -3558,7 +3557,7 @@ var sf = new WeakMap(),
                 (0, o.t)(this, "_isVisible", !0),
                 (0, o.t)(this, "_uiManager", null),
                 (0, o.t)(this, "_focusEventsAllowed", !0),
-                p(this, sW, !1),
+                p(this, sN, !1),
                 p(this, sU, t._zIndex++),
                 (this.parent = e.parent),
                 (this.id = e.id),
@@ -3575,7 +3574,7 @@ var sf = new WeakMap(),
                 (this.creationDate = e.creationDate || new Date()),
                 (this.modificationDate = e.modificationDate || null),
                 (this.canAddComment = !0));
-            const {
+            let {
                 rotation: i,
                 rawDims: { pageWidth: s, pageHeight: n, pageX: a, pageY: r },
             } = this.parent.viewport;
@@ -3583,7 +3582,7 @@ var sf = new WeakMap(),
                 (this.pageRotation = (360 + i - this._uiManager.viewParameters.rotation) % 360),
                 (this.pageDimensions = [s, n]),
                 (this.pageTranslation = [a, r]));
-            const [l, h] = this.parentDimensions;
+            let [l, h] = this.parentDimensions;
             ((this.x = e.x / l), (this.y = e.y / h), (this.isAttachedToDOM = !1), (this.deleted = !1));
         }
         updatePageIndex(t) {
@@ -3636,10 +3635,10 @@ var sf = new WeakMap(),
             return [];
         }
         get _isDraggable() {
-            return f(sW, this);
+            return f(sN, this);
         }
         set _isDraggable(t) {
-            (g(sW, this, t), this.div?.classList.toggle("draggable", t));
+            (g(sN, this, t), this.div?.classList.toggle("draggable", t));
         }
         get uid() {
             return this.annotationElementId || this.id;
@@ -4012,9 +4011,9 @@ var sf = new WeakMap(),
                 t9(this, t, ["keydown", "pointerdown", "dblclick"]),
                 this.isResizable &&
                     this._uiManager._supportsPinchToZoom &&
-                    (f(sO, this) ||
+                    (f(sW, this) ||
                         g(
-                            sO,
+                            sW,
                             this,
                             new sc({
                                 container: t,
@@ -4197,12 +4196,12 @@ var sf = new WeakMap(),
                 f(sR, this) && (clearTimeout(f(sR, this)), g(sR, this, null)),
                 d(s$, this, s8).call(this),
                 this.removeEditToolbar(),
-                f(sB, this))
+                f(sO, this))
             ) {
-                for (let t of f(sB, this).values()) clearTimeout(t);
-                g(sB, this, null);
+                for (let t of f(sO, this).values()) clearTimeout(t);
+                g(sO, this, null);
             }
-            ((this.parent = null), f(sO, this)?.destroy(), g(sO, this, null), f(sS, this)?.remove(), g(sS, this, null));
+            ((this.parent = null), f(sW, this)?.destroy(), g(sW, this, null), f(sS, this)?.remove(), g(sS, this, null));
         }
         get isResizable() {
             return !1;
@@ -4367,14 +4366,14 @@ var sf = new WeakMap(),
         }
         _reportTelemetry(e, i = !1) {
             if (i) {
-                f(sB, this) || g(sB, this, new Map());
+                f(sO, this) || g(sO, this, new Map());
                 let { action: i } = e,
-                    s = f(sB, this).get(i);
+                    s = f(sO, this).get(i);
                 (s && clearTimeout(s),
                     (s = setTimeout(() => {
-                        (this._reportTelemetry(e), f(sB, this).delete(i), 0 === f(sB, this).size && g(sB, this, null));
+                        (this._reportTelemetry(e), f(sO, this).delete(i), 0 === f(sO, this).size && g(sO, this, null));
                     }, t._telemetryTimeout)),
-                    f(sB, this).set(i, s));
+                    f(sO, this).set(i, s));
                 return;
             }
             ((e.type ||= this.editorType),
@@ -4665,7 +4664,7 @@ function s1(t) {
         };
     e &&
         (g(sF, this, t.clientX),
-        g(sN, this, t.clientY),
+        g(sB, this, t.clientY),
         g(sy, this, t.pointerId),
         g(s_, this, t.pointerType),
         window.addEventListener(
@@ -4674,8 +4673,8 @@ function s1(t) {
                 i || ((i = !0), this._uiManager.toggleComment(this, !0, !1), this._onStartDragging());
                 let { clientX: e, clientY: s, pointerId: n } = t;
                 if (n !== f(sy, this)) return void tu(t);
-                let [a, r] = this.screenToPageTranslation(e - f(sF, this), s - f(sN, this));
-                (g(sF, this, e), g(sN, this, s), this._uiManager.dragSelectedEditors(a, r));
+                let [a, r] = this.screenToPageTranslation(e - f(sF, this), s - f(sB, this));
+                (g(sF, this, e), g(sB, this, s), this._uiManager.dragSelectedEditors(a, r));
             },
             a,
         ),
@@ -4683,7 +4682,7 @@ function s1(t) {
         window.addEventListener(
             "pointerdown",
             (t) => {
-                (t.pointerType === f(s_, this) && (f(sO, this) || t.isPrimary) && r(t), tu(t));
+                (t.pointerType === f(s_, this) && (f(sW, this) || t.isPrimary) && r(t), tu(t));
             },
             a,
         ));
@@ -4937,7 +4936,7 @@ var nl = new WeakMap(),
     nh = class extends nr {
         constructor(t) {
             (super(), p(this, nl, void 0));
-            const { map: e, hash: i, transfer: s } = t.serializable;
+            let { map: e, hash: i, transfer: s } = t.serializable;
             g(nl, this, { map: structuredClone(e, s ? { transfer: s } : null), hash: i, transfer: s });
         }
         get print() {
@@ -5427,7 +5426,7 @@ var nS = new WeakMap(),
             return e;
         }
         get fontMatrix() {
-            let t = nN._;
+            let t = nB._;
             if (0 === f(nC, this).getUint8(t)) return;
             t += 1;
             let e = [];
@@ -5435,7 +5434,7 @@ var nS = new WeakMap(),
             return e;
         }
         get defaultVMetrics() {
-            let t = nB._;
+            let t = nO._;
             if (0 === f(nC, this).getUint8(t)) return;
             t += 1;
             let e = [];
@@ -5455,7 +5454,7 @@ var nS = new WeakMap(),
             return d(nT, this, nL).call(this, 3);
         }
         get data() {
-            let t = nO._,
+            let t = nW._,
                 e = f(nC, this).getUint32(t);
             t += 4 + e;
             let i = f(nC, this).getUint32(t);
@@ -5466,7 +5465,7 @@ var nS = new WeakMap(),
             if (0 !== n) return new Uint8Array(f(nS, this), t + 4, n);
         }
         clearData() {
-            let t = nO._,
+            let t = nW._,
                 e = f(nC, this).getUint32(t);
             t += 4 + e;
             let i = f(nC, this).getUint32(t);
@@ -5477,7 +5476,7 @@ var nS = new WeakMap(),
             (new Uint8Array(f(nS, this), t + 4, n).fill(0), f(nC, this).setUint32(t, 0));
         }
         get cssFontInfo() {
-            let t = nO._,
+            let t = nW._,
                 e = f(nC, this).getUint32(t);
             t += 4 + e;
             let i = f(nC, this).getUint32(t);
@@ -5488,7 +5487,7 @@ var nS = new WeakMap(),
             return (n.set(new Uint8Array(f(nS, this), t + 4, s)), new nb(n.buffer));
         }
         get systemFontInfo() {
-            let t = nO._,
+            let t = nW._,
                 e = f(nC, this).getUint32(t);
             t += 4 + e;
             let i = f(nC, this).getUint32(t);
@@ -5504,7 +5503,7 @@ var nS = new WeakMap(),
                 r = 0;
             for (let i of t.strings) ((a[i] = n.encode(e[i])), (r += 4 + a[i].length));
             let o = new ArrayBuffer(
-                    nO._ +
+                    nW._ +
                         4 +
                         r +
                         4 +
@@ -5530,21 +5529,21 @@ var nS = new WeakMap(),
             if ((I(d === nF._, "FontInfo.write: Number properties offset mismatch"), e.bbox))
                 for (let t of (h.setUint8(d++, 4), e.bbox)) (h.setInt16(d, t, !0), (d += 2));
             else (h.setUint8(d++, 0), (d += 8));
-            if ((I(d === nN._, "FontInfo.write: BBox properties offset mismatch"), e.fontMatrix))
+            if ((I(d === nB._, "FontInfo.write: BBox properties offset mismatch"), e.fontMatrix))
                 for (let t of (h.setUint8(d++, 6), e.fontMatrix)) (h.setFloat64(d, t, !0), (d += 8));
             else (h.setUint8(d++, 0), (d += 48));
-            if ((I(d === nB._, "FontInfo.write: FontMatrix properties offset mismatch"), e.defaultVMetrics))
+            if ((I(d === nO._, "FontInfo.write: FontMatrix properties offset mismatch"), e.defaultVMetrics))
                 for (let t of (h.setUint8(d++, 1), e.defaultVMetrics)) (h.setInt16(d, t, !0), (d += 2));
             else (h.setUint8(d++, 0), (d += 6));
-            for (let e of (I(d === nO._, "FontInfo.write: DefaultVMetrics properties offset mismatch"),
-            h.setUint32(nO._, 0),
+            for (let e of (I(d === nW._, "FontInfo.write: DefaultVMetrics properties offset mismatch"),
+            h.setUint32(nW._, 0),
             (d += 4),
             t.strings)) {
                 let t = a[e],
                     i = t.length;
                 (h.setUint32(d, i), l.set(t, d + 4), (d += 4 + i));
             }
-            if ((h.setUint32(nO._, d - nO._ - 4), i)) {
+            if ((h.setUint32(nW._, d - nW._ - 4), i)) {
                 let t = i.byteLength;
                 (h.setUint32(d, t),
                     I(d + 4 + t <= o.byteLength, "FontInfo.write: Buffer overflow at systemFontInfo"),
@@ -5578,7 +5577,7 @@ function nI(t) {
 }
 function nL(t) {
     I(t < nP.strings.length, "Invalid string index");
-    let e = nO._ + 4;
+    let e = nW._ + 4;
     for (let i = 0; i < t; i++) e += f(nC, this).getUint32(e) + 4;
     let i = f(nC, this).getUint32(e),
         s = new Uint8Array(i);
@@ -5600,10 +5599,10 @@ function nL(t) {
     (0, o.t)(nP, "strings", ["fallbackName", "loadedName", "mimetype", "name"]));
 var nR = { _: Math.ceil((2 * nP.bools.length) / 8) },
     nF = { _: d(nP, nP, nR)._ + 8 * nP.numbers.length },
-    nN = { _: d(nP, nP, nF)._ + 1 + 8 },
-    nB = { _: d(nP, nP, nN)._ + 1 + 48 },
-    nO = { _: d(nP, nP, nB)._ + 1 + 6 },
-    nW = class {
+    nB = { _: d(nP, nP, nF)._ + 1 + 8 },
+    nO = { _: d(nP, nP, nB)._ + 1 + 48 },
+    nW = { _: d(nP, nP, nO)._ + 1 + 6 },
+    nN = class {
         constructor(t) {
             ((this.buffer = t), (this.view = new DataView(t)), (this.data = new Uint8Array(t)));
         }
@@ -5830,7 +5829,7 @@ var nQ = (t) =>
     };
 function n2() {}
 function n3(t) {
-    if (t instanceof H || t instanceof W || t instanceof B || t instanceof U || t instanceof O) return t;
+    if (t instanceof H || t instanceof N || t instanceof O || t instanceof U || t instanceof W) return t;
     switch (
         (!(t instanceof Error || ("object" == typeof t && null !== t)) &&
             D('wrapReason: Expected "reason" to be a (possibly cloned) Error.'),
@@ -5839,15 +5838,15 @@ function n3(t) {
         case "AbortException":
             return new H(t.message);
         case "InvalidPDFException":
-            return new W(t.message);
+            return new N(t.message);
         case "PasswordException":
-            return new B(t.message, t.code);
+            return new O(t.message, t.code);
         case "ResponseException":
             return new U(t.message, t.status, t.missing);
         case "UnknownErrorException":
-            return new O(t.message, t.details);
+            return new W(t.message, t.details);
     }
-    return new O(t.message, t.toString());
+    return new W(t.message, t.toString());
 }
 var n5 = new WeakMap(),
     n4 = new WeakSet(),
@@ -6489,18 +6488,18 @@ var aL = class extends ar {},
             return aI(t);
         }
     },
-    aN = class extends aC {
+    aB = class extends aC {
         async _fetch(t) {
             return aI(t);
         }
     },
-    aB = class extends aP {
+    aO = class extends aP {
         async _fetch(t) {
             return aI(t);
         }
     },
-    aO = "__forcedDependency",
-    { floor: aW, ceil: aU } = Math;
+    aW = "__forcedDependency",
+    { floor: aN, ceil: aU } = Math;
 function a$(t, e, i, s, n, a) {
     ((t[4 * e + 0] = Math.min(t[4 * e + 0], i)),
         (t[4 * e + 1] = Math.min(t[4 * e + 1], s)),
@@ -6560,7 +6559,7 @@ var aH = new Uint32Array(new Uint8Array([255, 255, 0, 0]).buffer)[0],
         constructor(t, e, i = !1) {
             (u(this, rt),
                 p(this, aq, { __proto__: null }),
-                p(this, aX, { __proto__: null, transform: [], moveText: [], sameLineText: [], [aO]: [] }),
+                p(this, aX, { __proto__: null, transform: [], moveText: [], sameLineText: [], [aW]: [] }),
                 p(this, aK, new Map()),
                 p(this, aY, []),
                 p(this, aQ, []),
@@ -6592,7 +6591,7 @@ var aH = new Uint32Array(new Uint8Array([255, 255, 0, 0]).buffer)[0],
                     transform: { __proto__: f(aX, this).transform },
                     moveText: { __proto__: f(aX, this).moveText },
                     sameLineText: { __proto__: f(aX, this).sameLineText },
-                    [aO]: { __proto__: f(aX, this)[aO] },
+                    [aW]: { __proto__: f(aX, this)[aW] },
                 }),
                 g(aZ, this, { __proto__: f(aZ, this) }),
                 f(aY, this).push(t),
@@ -6647,14 +6646,14 @@ var aH = new Uint32Array(new Uint8Array([255, 255, 0, 0]).buffer)[0],
             f(aq, this)[t] = f(aK, this).get(e) ?? i;
         }
         recordFutureForcedDependency(t, e) {
-            return (this.recordIncrementalData(aO, e), this);
+            return (this.recordIncrementalData(aW, e), this);
         }
         inheritSimpleDataAsFutureForcedDependencies(t) {
             for (let e of t) e in f(aq, this) && this.recordFutureForcedDependency(e, f(aq, this)[e]);
             return this;
         }
         inheritPendingDependenciesAsFutureForcedDependencies() {
-            for (let t of f(a2, this)) this.recordFutureForcedDependency(aO, t);
+            for (let t of f(a2, this)) this.recordFutureForcedDependency(aW, t);
             return this;
         }
         resetBBox(t) {
@@ -6685,9 +6684,9 @@ var aH = new Uint32Array(new Uint8Array([255, 255, 0, 0]).buffer)[0],
         }
         recordBBox(t, e, i, s, n, a) {
             let r = f(aZ, this);
-            if (r[0] === 1 / 0) return this;
+            if (1 / 0 === r[0]) return this;
             let o = V.multiplyByDOMMatrix(f(aJ, this).at(-1), e.getTransform());
-            if (r[0] === -1 / 0) return (V.axialAlignedBoundingBox([i, n, s, a], o, f(a0, this)), this);
+            if (-1 / 0 === r[0]) return (V.axialAlignedBoundingBox([i, n, s, a], o, f(a0, this)), this);
             let l = [1 / 0, 1 / 0, -1 / 0, -1 / 0];
             return (
                 V.axialAlignedBoundingBox([i, n, s, a], o, l),
@@ -6756,7 +6755,7 @@ var aH = new Uint32Array(new Uint8Array([255, 255, 0, 0]).buffer)[0],
             return (f(aK, this).has(e) && f(a2, this).add(f(aK, this).get(e)), this);
         }
         recordOperation(t, e = !1) {
-            if ((this.recordDependencies(t, [aO]), f(a9, this))) {
+            if ((this.recordDependencies(t, [aW]), f(a9, this))) {
                 let e = aV(f(a9, this), t),
                     { dependencies: i } = e;
                 (f(a2, this).forEach(i.add, i),
@@ -6766,8 +6765,8 @@ var aH = new Uint32Array(new Uint8Array([255, 255, 0, 0]).buffer)[0],
                     (e.isRenderingOperation = !0));
             }
             if (f(a1, this) === t) {
-                let i = aW((256 * f(a0, this)[0]) / f(a4, this)),
-                    s = aW((256 * f(a0, this)[1]) / f(a6, this)),
+                let i = aN((256 * f(a0, this)[0]) / f(a4, this)),
+                    s = aN((256 * f(a0, this)[1]) / f(a6, this)),
                     n = aU((256 * f(a0, this)[2]) / f(a4, this)),
                     a = aU((256 * f(a0, this)[3]) / f(a6, this));
                 for (let e of (a$(f(a8, this), t, i, s, n, a), f(a2, this))) e !== t && a$(f(a8, this), e, i, s, n, a);
@@ -7102,9 +7101,9 @@ function r_(t, e, i, s, n, a, r, o) {
         L = b[o],
         R = b[o + 1],
         F = b[o + 2],
-        N = Math.round(_),
-        B = Math.round(S);
-    for (let t = N; t <= B; t++) {
+        B = Math.round(_),
+        O = Math.round(S);
+    for (let t = B; t <= O; t++) {
         let e;
         if (t < k) {
             let e = t < _ ? 0 : (_ - t) / (_ - k);
@@ -7445,7 +7444,7 @@ var rD = class {
         this.startNewPathAndClipBox(t || [0, 0, 0, 0]);
     }
     isEmptyClip() {
-        return this.minMax[0] === 1 / 0;
+        return 1 / 0 === this.minMax[0];
     }
     startNewPathAndClipBox(t) {
         (this.clipBox.set(t, 0), this.minMax.set(rC, 0));
@@ -7474,7 +7473,7 @@ function rI(t, e) {
             m = (o + 7) >> 3,
             w = z.isLittleEndian ? 0xff000000 : 255;
         for (i = 0; i < d; i++) {
-            for (s = 0, n = i < h ? 16 : l, p = 0; s < n; s++) {
+            for (n = i < h ? 16 : l, p = 0, s = 0; s < n; s++) {
                 let t = e - u,
                     i = 0,
                     s = t > m ? o : 8 * t - 7,
@@ -7497,11 +7496,11 @@ function rI(t, e) {
             t.putImageData(c, 0, 16 * i);
         }
     } else if (e.kind === k.RGBA_32BPP) {
-        for (i = 0, s = 0, a = 16 * o * 4; i < h; i++)
+        for (s = 0, a = 16 * o * 4, i = 0; i < h; i++)
             (f.set(g.subarray(u, u + a)), (u += a), t.putImageData(c, 0, s), (s += 16));
         i < d && ((a = o * l * 4), f.set(g.subarray(u, u + a)), t.putImageData(c, 0, s));
     } else if (e.kind === k.RGB_24BPP)
-        for (i = 0, a = o * (n = 16); i < d; i++) {
+        for (a = o * (n = 16), i = 0; i < d; i++) {
             for (i >= h && (a = o * (n = l)), p = 0, s = a; s--;)
                 ((f[p++] = g[u++]), (f[p++] = g[u++]), (f[p++] = g[u++]), (f[p++] = 255));
             t.putImageData(c, 0, 16 * i);
@@ -7589,15 +7588,15 @@ function rF(t) {
     let { filter: e } = t;
     "none" !== e && "" !== e && (t.filter = "none");
 }
-function rN(t, e) {
+function rB(t, e) {
     if (e) return !0;
     V.singularValueDecompose2dScale(t, rE);
     let i = Math.fround(tv.pixelRatio * ts.PDF_TO_CSS_UNITS);
     return rE[0] <= i && rE[1] <= i;
 }
-var rB = ["butt", "round", "square"],
-    rO = ["miter", "round", "bevel"],
-    rW = {},
+var rO = ["butt", "round", "square"],
+    rW = ["miter", "round", "bevel"],
+    rN = {},
     rU = {},
     r$ = new WeakSet(),
     rH = class t {
@@ -7763,7 +7762,7 @@ var rB = ["butt", "round", "square"],
             (y.translate(-g, -f),
                 y.transform(...u),
                 !n && ((n = (n = this._scaleImage(a.canvas, tw(y))).img), i && d && i.set(s, n)),
-                (y.imageSmoothingEnabled = rN(tm(y), e.interpolate)),
+                (y.imageSmoothingEnabled = rB(tm(y), e.interpolate)),
                 rP(y, n, 0, 0, n.width, n.height, 0, 0, o, l),
                 (y.globalCompositeOperation = "source-in"));
             let _ = V.transform(tw(y), [1, 0, 0, 1, -g, -f]);
@@ -7782,10 +7781,10 @@ var rB = ["butt", "round", "square"],
                 (this.ctx.lineWidth = e));
         }
         setLineCap(t, e) {
-            (this.dependencyTracker?.recordSimpleData("lineCap", t), (this.ctx.lineCap = rB[e]));
+            (this.dependencyTracker?.recordSimpleData("lineCap", t), (this.ctx.lineCap = rO[e]));
         }
         setLineJoin(t, e) {
-            (this.dependencyTracker?.recordSimpleData("lineJoin", t), (this.ctx.lineJoin = rO[e]));
+            (this.dependencyTracker?.recordSimpleData("lineJoin", t), (this.ctx.lineJoin = rW[e]));
         }
         setMiterLimit(t, e) {
             (this.dependencyTracker?.recordSimpleData("miterLimit", t), (this.ctx.miterLimit = e));
@@ -8143,7 +8142,7 @@ var rB = ["butt", "round", "square"],
             (this.ctx.fill(e), this.dependencyTracker?.recordDependencies(t, ru).recordOperation(t));
         }
         clip(t) {
-            (this.dependencyTracker?.recordFutureForcedDependency("clipMode", t), (this.pendingClip = rW));
+            (this.dependencyTracker?.recordFutureForcedDependency("clipMode", t), (this.pendingClip = rN));
         }
         eoClip(t) {
             (this.dependencyTracker?.recordFutureForcedDependency("clipMode", t), (this.pendingClip = rU));
@@ -8458,7 +8457,7 @@ var rB = ["butt", "round", "square"],
                 r.translate(o.x, o.y + o.textRise),
                 r.scale(g, d));
             let w = this.dependencyTracker;
-            for (i = 0, this.dependencyTracker = w ? new rl(w, t) : null; i < m; ++i) {
+            for (this.dependencyTracker = w ? new rl(w, t) : null, i = 0; i < m; ++i) {
                 if ("number" == typeof (s = e[i])) {
                     ((a = (c * s * h) / 1e3), this.ctx.translate(a, 0), (o.x += a * g));
                     continue;
@@ -8848,7 +8847,7 @@ var rB = ["butt", "round", "square"],
                 (rI(t, e), (i = this.applyTransferMapsToCanvas(t)));
             }
             let o = this._scaleImage(i, tw(a));
-            ((a.imageSmoothingEnabled = rN(tm(a), e.interpolate)),
+            ((a.imageSmoothingEnabled = rB(tm(a), e.interpolate)),
                 this.dependencyTracker
                     ?.resetBBox(t)
                     .recordBBox(t, a, 0, s, -n, 0)
@@ -9101,11 +9100,11 @@ var r9 = class {
             null === t)
         )
             return;
-        for (const i of ((this.name = t.name), (this.creator = t.creator), g(r8, this, t.order), t.groups))
+        for (let i of ((this.name = t.name), (this.creator = t.creator), g(r8, this, t.order), t.groups))
             f(r4, this).set(i.id, new r3(e, i));
-        if ("OFF" === t.baseState) for (const t of f(r4, this).values()) t._setVisible(rJ, !1);
-        for (const e of t.on) f(r4, this).get(e)._setVisible(rJ, !0);
-        for (const e of t.off) f(r4, this).get(e)._setVisible(rJ, !1);
+        if ("OFF" === t.baseState) for (let t of f(r4, this).values()) t._setVisible(rJ, !1);
+        for (let e of t.on) f(r4, this).get(e)._setVisible(rJ, !0);
+        for (let e of t.off) f(r4, this).get(e)._setVisible(rJ, !1);
         g(r6, this, this.getHash());
     }
     isVisible(t) {
@@ -9318,10 +9317,10 @@ var oo = new WeakSet(),
                 u(this, oo),
                 (0, o.t)(this, "_progressiveDone", !1),
                 (0, o.t)(this, "_queuedChunks", []));
-            const { pdfDataRangeTransport: e } = t,
+            let { pdfDataRangeTransport: e } = t,
                 { initialData: i, progressiveDone: s } = e;
             if (i?.length > 0) {
-                const t = or(i);
+                let t = or(i);
                 this._queuedChunks.push(t);
             }
             ((this._progressiveDone = s),
@@ -9370,9 +9369,9 @@ var od = class extends on {
                 (0, o.t)(this, "_done", !1),
                 (0, o.t)(this, "_queuedChunks", null),
                 (0, o.t)(this, "_requests", []));
-            const { pdfDataRangeTransport: e, disableRange: i, disableStream: s } = t._source,
+            let { pdfDataRangeTransport: e, disableRange: i, disableStream: s } = t._source,
                 { length: n, contentDispositionFilename: a } = e;
-            for (const e of ((this._queuedChunks = t._queuedChunks || []), this._queuedChunks))
+            for (let e of ((this._queuedChunks = t._queuedChunks || []), this._queuedChunks))
                 this._loaded += e.byteLength;
             ((this._done = t._progressiveDone),
                 (this._contentLength = n),
@@ -9601,7 +9600,7 @@ var oy = class extends os {
     o_ = class extends on {
         constructor(t) {
             (super(t), (0, o.t)(this, "_abortController", new AbortController()), (0, o.t)(this, "_reader", null));
-            const {
+            let {
                 disableRange: e,
                 disableStream: i,
                 length: s,
@@ -9651,7 +9650,7 @@ var oy = class extends os {
                 (0, o.t)(this, "_abortController", new AbortController()),
                 (0, o.t)(this, "_readCapability", Promise.withResolvers()),
                 (0, o.t)(this, "_reader", null));
-            const { url: s, withCredentials: n } = t._source,
+            let { url: s, withCredentials: n } = t._source,
                 a = new Headers(t.headers);
             (a.append("Range", `bytes=${e}-${i - 1}`),
                 ob(s, a, n, this._abortController)
@@ -9676,7 +9675,7 @@ var oy = class extends os {
     oM = new WeakSet(),
     oS = class extends os {
         constructor(t) {
-            (super(t, oP, oN),
+            (super(t, oP, oB),
                 u(this, oM),
                 p(this, ok, new WeakMap()),
                 (0, o.t)(this, "_responseOrigin", null),
@@ -9752,7 +9751,7 @@ var oT = new WeakSet(),
                 (0, o.t)(this, "_done", !1),
                 (0, o.t)(this, "_requests", []),
                 (0, o.t)(this, "_storedError", null));
-            const { length: e } = t._source;
+            let { length: e } = t._source;
             ((this._contentLength = e),
                 (this._fullRequestXhr = t._request({
                     onHeadersReceived: d(oT, this, oD).bind(this),
@@ -9829,7 +9828,7 @@ function oR(t) {
     this.onProgress?.({ loaded: t.loaded, total: t.lengthComputable ? t.total : this._contentLength });
 }
 var oF = new WeakSet(),
-    oN = class extends oa {
+    oB = class extends oa {
         constructor(t, e, i) {
             (super(t, e, i),
                 u(this, oF),
@@ -9841,9 +9840,9 @@ var oF = new WeakSet(),
                 (this._requestXhr = t._request({
                     begin: e,
                     end: i,
-                    onHeadersReceived: d(oF, this, oB).bind(this),
-                    onDone: d(oF, this, oO).bind(this),
-                    onError: d(oF, this, oW).bind(this),
+                    onHeadersReceived: d(oF, this, oO).bind(this),
+                    onDone: d(oF, this, oW).bind(this),
+                    onError: d(oF, this, oN).bind(this),
                     onProgress: null,
                 })));
         }
@@ -9862,15 +9861,15 @@ var oF = new WeakSet(),
             ((this._requests.length = 0), this._stream._abortRequest(this._requestXhr), this.onClosed?.());
         }
     };
-function oB() {
+function oO() {
     let t = op(this._requestXhr?.responseURL);
     try {
         ow(t, this._stream._responseOrigin);
     } catch (t) {
-        ((this._storedError = t), d(oF, this, oW).call(this, 0));
+        ((this._storedError = t), d(oF, this, oN).call(this, 0));
     }
 }
-function oO(t) {
+function oW(t) {
     for (let e of (this._requests.length > 0
         ? this._requests.shift().resolve({ value: t, done: !1 })
         : (this._queuedChunk = t),
@@ -9879,7 +9878,7 @@ function oO(t) {
         e.resolve({ value: void 0, done: !0 });
     ((this._requests.length = 0), this.onClosed?.());
 }
-function oW(t) {
+function oN(t) {
     for (let e of ((this._storedError ??= om(t, this._stream.url)), this._requests)) e.reject(this._storedError);
     ((this._requests.length = 0), (this._queuedChunk = null));
 }
@@ -9904,19 +9903,18 @@ function oH(t) {
 }
 var oj = class extends os {
         constructor(t) {
+            var e;
             (super(t, oz, oG),
-                (this.url = (function (t) {
-                    return new URL(oU.test(t) ? t : l.getBuiltinModule("url").pathToFileURL(t));
-                })(t.url)),
+                (this.url = ((e = t.url), new URL(oU.test(e) ? e : l.getBuiltinModule("url").pathToFileURL(e)))),
                 I("file:" === this.url.protocol, "PDFNodeStream only supports file:// URLs."));
         }
     },
     oz = class extends on {
         constructor(t) {
             (super(t), (0, o.t)(this, "_reader", null));
-            const { disableRange: e, disableStream: i, length: s, rangeChunkSize: n } = t._source;
+            let { disableRange: e, disableStream: i, length: s, rangeChunkSize: n } = t._source;
             ((this._contentLength = s), (this._isStreamingSupported = !i), (this._isRangeSupported = !e));
-            const a = t.url,
+            let a = t.url,
                 r = l.getBuiltinModule("fs");
             r.promises
                 .lstat(a)
@@ -9952,7 +9950,7 @@ var oj = class extends os {
             (super(t, e, i),
                 (0, o.t)(this, "_readCapability", Promise.withResolvers()),
                 (0, o.t)(this, "_reader", null));
-            const s = t.url,
+            let s = t.url,
                 n = l.getBuiltinModule("fs");
             try {
                 ((this._reader = o$(n.createReadStream(s, { start: e, end: i - 1 })).getReader()),
@@ -10075,7 +10073,7 @@ var oQ = new WeakMap(),
                 g(o7, this, s.scale * tv.pixelRatio),
                 g(o8, this, s.rotation),
                 g(o2, this, { div: null, properties: null, ctx: null }));
-            const { pageWidth: n, pageHeight: a, pageX: r, pageY: o } = s.rawDims;
+            let { pageWidth: n, pageHeight: a, pageX: r, pageY: o } = s.rawDims;
             (g(ln, this, [1, 0, 0, -1, -r, o + a]),
                 g(o5, this, n),
                 g(o3, this, a),
@@ -10318,7 +10316,7 @@ function lv(t = {}) {
         o = t.password ?? null,
         l = t.range instanceof lE ? t.range : null,
         d = Number.isInteger(t.rangeChunkSize) && t.rangeChunkSize > 0 ? t.rangeChunkSize : 65536,
-        c = t.worker instanceof lW ? t.worker : null,
+        c = t.worker instanceof lN ? t.worker : null,
         u = t.verbosity,
         p = "string" != typeof t.docBaseUrl || to(t.docBaseUrl) ? null : t.docBaseUrl,
         g = nY(t.cMapUrl),
@@ -10326,9 +10324,9 @@ function lv(t = {}) {
         m = t.CMapReaderFactory || (b ? aF : aa),
         w = nY(t.iccUrl),
         v = nY(t.standardFontDataUrl),
-        A = t.StandardFontDataFactory || (b ? aN : aT),
+        A = t.StandardFontDataFactory || (b ? aB : aT),
         y = nY(t.wasmUrl),
-        _ = t.WasmFactory || (b ? aB : aD),
+        _ = t.WasmFactory || (b ? aO : aD),
         x = !0 !== t.stopAtErrors,
         k = Number.isInteger(t.maxImageSize) && t.maxImageSize > -1 ? t.maxImageSize : -1,
         M = !1 !== t.isEvalSupported,
@@ -10344,13 +10342,13 @@ function lv(t = {}) {
         L = t.ownerDocument || globalThis.document,
         R = !0 === t.disableRange,
         F = !0 === t.disableStream,
-        N = !0 === t.disableAutoFetch,
-        B = !0 === t.pdfBug,
-        O = t.CanvasFactory || (b ? aR : as),
-        W = t.FilterFactory || (b ? aL : af),
+        B = !0 === t.disableAutoFetch,
+        O = !0 === t.pdfBug,
+        W = t.CanvasFactory || (b ? aR : as),
+        N = t.FilterFactory || (b ? aL : af),
         U = !0 === t.enableHWA,
         $ = !1 !== t.useWasm,
-        H = l ? l.length : (t.length ?? NaN),
+        H = l ? l.length : (t.length ?? 0 / 0),
         G = "boolean" == typeof t.useSystemFonts ? t.useSystemFonts : !b && !P,
         V =
             "boolean" == typeof t.useWorkerFetch
@@ -10368,19 +10366,19 @@ function lv(t = {}) {
                   );
     Number.isInteger(u) && (C = u);
     let q = {
-        canvasFactory: new O({ ownerDocument: L, enableHWA: U }),
-        filterFactory: new W({ docId: i, ownerDocument: L }),
+        canvasFactory: new W({ ownerDocument: L, enableHWA: U }),
+        filterFactory: new N({ docId: i, ownerDocument: L }),
         cMapReaderFactory: V ? null : new m({ baseUrl: g, isCompressed: f }),
         standardFontDataFactory: V ? null : new A({ baseUrl: v }),
         wasmFactory: V ? null : new _({ baseUrl: y }),
     };
-    c || (e._worker = c = lW.create({ verbosity: u, port: rV.workerPort }));
+    c || (e._worker = c = lN.create({ verbosity: u, port: rV.workerPort }));
     let X = {
             docId: i,
             apiVersion: "5.4.624",
             data: n,
             password: o,
-            disableAutoFetch: N,
+            disableAutoFetch: B,
             rangeChunkSize: d,
             length: H,
             docBaseUrl: p,
@@ -10405,10 +10403,10 @@ function lv(t = {}) {
         },
         K = {
             ownerDocument: L,
-            pdfBug: B,
+            pdfBug: O,
             styleElement: null,
             enableHWA: U,
-            loadingParams: { disableAutoFetch: N, enableXfa: I },
+            loadingParams: { disableAutoFetch: B, enableXfa: I },
         };
     return (
         c.promise
@@ -10960,41 +10958,41 @@ function lL() {
 }
 var lR = new WeakMap(),
     lF = new WeakMap(),
-    lN = new WeakMap(),
     lB = new WeakMap(),
-    lO = new WeakSet(),
-    lW = class t {
+    lO = new WeakMap(),
+    lW = new WeakSet(),
+    lN = class t {
         constructor({ name: t = null, port: e = null, verbosity: i = C } = {}) {
             if (
-                (u(this, lO),
+                (u(this, lW),
                 p(this, lR, Promise.withResolvers()),
                 p(this, lF, null),
-                p(this, lN, null),
                 p(this, lB, null),
+                p(this, lO, null),
                 (this.name = t),
                 (this.destroyed = !1),
                 (this.verbosity = i),
                 e)
             ) {
                 if (lq._.has(e)) throw Error("Cannot use more than one PDFWorker per port.");
-                (lq._.set(e, this), d(lO, this, l$).call(this, e));
-            } else d(lO, this, lH).call(this);
+                (lq._.set(e, this), d(lW, this, l$).call(this, e));
+            } else d(lW, this, lH).call(this);
         }
         get promise() {
             return f(lR, this).promise;
         }
         get port() {
-            return f(lN, this);
+            return f(lB, this);
         }
         get messageHandler() {
             return f(lF, this);
         }
         destroy() {
             ((this.destroyed = !0),
-                f(lB, this)?.terminate(),
+                f(lO, this)?.terminate(),
+                g(lO, this, null),
+                lq._.delete(f(lB, this)),
                 g(lB, this, null),
-                lq._.delete(f(lN, this)),
-                g(lN, this, null),
                 f(lF, this)?.destroy(),
                 g(lF, this, null));
         }
@@ -11026,43 +11024,43 @@ function lU() {
     (f(lR, this).resolve(), f(lF, this).send("configure", { verbosity: this.verbosity }));
 }
 function l$(t) {
-    (g(lN, this, t),
+    (g(lB, this, t),
         g(lF, this, new n6("main", "worker", t)),
         f(lF, this).on("ready", () => {}),
-        d(lO, this, lU).call(this));
+        d(lW, this, lU).call(this));
 }
 function lH() {
-    if (lV._ || lz.call(lW)) return void d(lO, this, lj).call(this);
-    let { workerSrc: t } = lW;
+    if (lV._ || lz.call(lN)) return void d(lW, this, lj).call(this);
+    let { workerSrc: t } = lN;
     try {
-        lW._isSameOrigin(window.location, t) || (t = lW._createCDNWrapper(new URL(t, window.location).href));
+        lN._isSameOrigin(window.location, t) || (t = lN._createCDNWrapper(new URL(t, window.location).href));
         let e = new Worker(t, { type: "module" }),
             i = new n6("main", "worker", e),
             s = () => {
                 (n.abort(),
                     i.destroy(),
                     e.terminate(),
-                    this.destroyed ? f(lR, this).reject(Error("Worker was destroyed")) : d(lO, this, lj).call(this));
+                    this.destroyed ? f(lR, this).reject(Error("Worker was destroyed")) : d(lW, this, lj).call(this));
             },
             n = new AbortController();
         (e.addEventListener(
             "error",
             () => {
-                f(lB, this) || s();
+                f(lO, this) || s();
             },
             { signal: n.signal },
         ),
             i.on("test", (t) => {
                 (n.abort(), this.destroyed || !t)
                     ? s()
-                    : (g(lF, this, i), g(lN, this, e), g(lB, this, e), d(lO, this, lU).call(this));
+                    : (g(lF, this, i), g(lB, this, e), g(lO, this, e), d(lW, this, lU).call(this));
             }),
             i.on("ready", (t) => {
                 if ((n.abort(), this.destroyed)) return void s();
                 try {
                     a();
                 } catch {
-                    d(lO, this, lj).call(this);
+                    d(lW, this, lj).call(this);
                 }
             }));
         let a = () => {
@@ -11074,19 +11072,19 @@ function lH() {
     } catch {
         T("The worker has been disabled.");
     }
-    d(lO, this, lj).call(this);
+    d(lW, this, lj).call(this);
 }
 function lj() {
     (lV._ || (P("Setting up fake worker."), (lV._ = !0)),
-        lW._setupFakeWorkerGlobal
+        lN._setupFakeWorkerGlobal
             .then((t) => {
                 var e, i;
                 if (this.destroyed) return void f(lR, this).reject(Error("Worker was destroyed"));
                 let s = new n1();
-                g(lN, this, s);
+                g(lB, this, s);
                 let n = `fake${((e = lG._), (i = e++), (lG._ = e), i)}`,
                     a = new n6(n + "_worker", n, s);
-                (t.setup(a, s), g(lF, this, new n6(n, n + "_worker", s)), d(lO, this, lU).call(this));
+                (t.setup(a, s), g(lF, this, new n6(n, n + "_worker", s)), d(lW, this, lU).call(this));
             })
             .catch((t) => {
                 f(lR, this).reject(Error(`Setting up fake worker failed: "${t.message}".`));
@@ -11102,24 +11100,24 @@ function lz() {
 var lG = { _: 0 },
     lV = { _: !1 },
     lq = { _: new WeakMap() };
-(b && ((lV._ = d(lW, lW, !0)), (rV.workerSrc ||= "./pdf.worker.mjs")),
-    (lW._isSameOrigin = (t, e) => {
+(b && ((lV._ = d(lN, lN, !0)), (rV.workerSrc ||= "./pdf.worker.mjs")),
+    (lN._isSameOrigin = (t, e) => {
         let i = URL.parse(t);
         if (!i?.origin || "null" === i.origin) return !1;
         let s = new URL(e, i);
         return i.origin === s.origin;
     }),
-    (lW._createCDNWrapper = (t) => {
+    (lN._createCDNWrapper = (t) => {
         let e = `await import("${t}");`;
         return URL.createObjectURL(new Blob([e], { type: "text/javascript" }));
     }),
-    (lW.fromPort = (t) => {
+    (lN.fromPort = (t) => {
         if (
             (console.log("Deprecated API usage: `PDFWorker.fromPort` - please use `PDFWorker.create` instead."),
             !t?.port)
         )
             throw Error("PDFWorker.fromPort - invalid method signature.");
-        return lW.create(t);
+        return lN.create(t);
     }));
 var lX = new WeakMap(),
     lK = new WeakMap(),
@@ -11355,7 +11353,7 @@ var lX = new WeakMap(),
                             this.commonObjs.resolve(e, s);
                             break;
                         case "Pattern":
-                            let r = new nW(s);
+                            let r = new nN(s);
                             this.commonObjs.resolve(e, r.getIR());
                             break;
                         default:
@@ -12045,9 +12043,9 @@ var hE = class {
                 case M.FREETEXT:
                     return new dR(t);
                 case M.LINE:
-                    return new dN(t);
+                    return new dB(t);
                 case M.SQUARE:
-                    return new dO(t);
+                    return new dW(t);
                 case M.CIRCLE:
                     return new dU(t);
                 case M.POLYLINE:
@@ -12071,17 +12069,17 @@ var hE = class {
                 case M.FILEATTACHMENT:
                     return new d3(t);
                 default:
-                    return new hB(t);
+                    return new hO(t);
             }
         }
     },
     hL = new WeakMap(),
     hR = new WeakMap(),
     hF = new WeakMap(),
-    hN = new WeakSet(),
-    hB = class t {
+    hB = new WeakSet(),
+    hO = class t {
         constructor(t, { isRenderable: e = !1, ignoreBorder: i = !1, createQuadrilaterals: s = !1 } = {}) {
-            (u(this, hN),
+            (u(this, hB),
                 p(this, hL, null),
                 p(this, hR, !1),
                 p(this, hF, null),
@@ -12135,7 +12133,7 @@ var hE = class {
                 for (let t of i)
                     for (let e = 0, i = t.length; e < i; e += 2)
                         t[e + 1] > a ? ((a = t[e + 1]), (n = t[e])) : t[e + 1] === a && (n = Math.max(n, t[e]));
-                if (n !== 1 / 0) return [n, a];
+                if (1 / 0 !== n) return [n, a];
             }
             return s ? [s[2], s[3]] : null;
         }
@@ -12173,14 +12171,14 @@ var hE = class {
             if (!this.container) return;
             t.rect && (f(hL, this) || g(hL, this, { rect: this.data.rect.slice(0) }));
             let { rect: e, popup: i } = t;
-            e && d(hN, this, hO).call(this, e);
+            e && d(hB, this, hW).call(this, e);
             let s = f(hF, this)?.popup || this.popup;
             (!s && i?.text && (this._createPopup(i), (s = f(hF, this).popup)),
                 s && (s.updateEdited(t), i?.deleted && (s.remove(), g(hF, this, null), (this.popup = null))));
         }
         resetEdited() {
             f(hL, this) &&
-                (d(hN, this, hO).call(this, f(hL, this).rect), f(hF, this)?.popup.resetEdited(), g(hL, this, null));
+                (d(hB, this, hW).call(this, f(hL, this).rect), f(hF, this)?.popup.resetEdited(), g(hL, this, null));
         }
         _createContainer(t) {
             let {
@@ -12482,7 +12480,7 @@ var hE = class {
             return this.data.rect[3] - this.data.rect[1];
         }
     };
-function hO(t) {
+function hW(t) {
     let {
         container: { style: e },
         data: { rect: i, rotation: s },
@@ -12499,7 +12497,7 @@ function hO(t) {
             ? ((e.width = `${(100 * (t[2] - t[0])) / n}%`), (e.height = `${(100 * (t[3] - t[1])) / a}%`))
             : this.setRotation(s));
 }
-var hW = class extends hB {
+var hN = class extends hO {
         constructor(t) {
             (super(t, { isRenderable: !0, ignoreBorder: !0 }), (this.editor = t.editor));
         }
@@ -12533,7 +12531,7 @@ var hW = class extends hB {
         }
     },
     hU = new WeakSet(),
-    h$ = class extends hB {
+    h$ = class extends hO {
         constructor(t, e = null) {
             (super(t, { isRenderable: !0, ignoreBorder: !!e?.ignoreBorder, createQuadrilaterals: !0 }),
                 u(this, hU),
@@ -12680,7 +12678,7 @@ function hz(t, e, i = "") {
         i && (t.title = i),
         d(hU, this, hH).call(this));
 }
-var hG = class extends hB {
+var hG = class extends hO {
         constructor(t) {
             super(t, { isRenderable: !0 });
         }
@@ -12697,7 +12695,7 @@ var hG = class extends hB {
             );
         }
     },
-    hV = class extends hB {
+    hV = class extends hO {
         render() {
             return this.container;
         }
@@ -12774,7 +12772,7 @@ var hG = class extends hB {
     },
     hq = class extends hV {
         constructor(t) {
-            const e = t.renderForms || t.data.hasOwnCanvas || (!t.data.hasAppearance && !!t.data.fieldValue);
+            let e = t.renderForms || t.data.hasOwnCanvas || (!t.data.hasAppearance && !!t.data.fieldValue);
             super(t, { isRenderable: e });
         }
         setPropertyOnSiblings(t, e, i, s) {
@@ -13355,18 +13353,18 @@ var hG = class extends hB {
         }
     },
     hZ = new WeakSet(),
-    h0 = class extends hB {
+    h0 = class extends hO {
         constructor(t) {
-            const { data: e, elements: i, parent: s } = t,
+            let { data: e, elements: i, parent: s } = t,
                 n = !!s._commentManager;
             if (
-                (super(t, { isRenderable: !n && hB._hasPopupData(e) }),
+                (super(t, { isRenderable: !n && hO._hasPopupData(e) }),
                 u(this, hZ),
                 (this.elements = i),
-                n && hB._hasPopupData(e))
+                n && hO._hasPopupData(e))
             ) {
-                const t = (this.popup = d(hZ, this, h1).call(this));
-                for (const e of i) e.popup = t;
+                let t = (this.popup = d(hZ, this, h1).call(this));
+                for (let e of i) e.popup = t;
             } else this.popup = null;
         }
         render() {
@@ -13769,7 +13767,7 @@ function dL() {
             this.isVisible &&
             ((f(h7, this).hidden = !0), (f(h7, this).style.zIndex = parseInt(f(h7, this).style.zIndex) - 1e3)));
 }
-var dR = class extends hB {
+var dR = class extends hO {
         constructor(t) {
             (super(t, { isRenderable: !0, ignoreBorder: !0 }),
                 (this.textContent = t.data.textContent),
@@ -13795,7 +13793,7 @@ var dR = class extends hB {
         }
     },
     dF = new WeakMap(),
-    dN = class extends hB {
+    dB = class extends hO {
         constructor(t) {
             (super(t, { isRenderable: !0, ignoreBorder: !0 }), p(this, dF, null));
         }
@@ -13825,17 +13823,17 @@ var dR = class extends hB {
             this.container.classList.add("highlightArea");
         }
     },
-    dB = new WeakMap(),
-    dO = class extends hB {
+    dO = new WeakMap(),
+    dW = class extends hO {
         constructor(t) {
-            (super(t, { isRenderable: !0, ignoreBorder: !0 }), p(this, dB, null));
+            (super(t, { isRenderable: !0, ignoreBorder: !0 }), p(this, dO, null));
         }
         render() {
             this.container.classList.add("squareAnnotation");
             let { data: t, width: e, height: i } = this,
                 s = this.svgFactory.create(e, i, !0),
                 n = t.borderStyle.width,
-                a = g(dB, this, this.svgFactory.createElement("svg:rect"));
+                a = g(dO, this, this.svgFactory.createElement("svg:rect"));
             return (
                 a.setAttribute("x", n / 2),
                 a.setAttribute("y", n / 2),
@@ -13851,23 +13849,23 @@ var dR = class extends hB {
             );
         }
         getElementsToTriggerPopup() {
-            return f(dB, this);
+            return f(dO, this);
         }
         addHighlightArea() {
             this.container.classList.add("highlightArea");
         }
     },
-    dW = new WeakMap(),
-    dU = class extends hB {
+    dN = new WeakMap(),
+    dU = class extends hO {
         constructor(t) {
-            (super(t, { isRenderable: !0, ignoreBorder: !0 }), p(this, dW, null));
+            (super(t, { isRenderable: !0, ignoreBorder: !0 }), p(this, dN, null));
         }
         render() {
             this.container.classList.add("circleAnnotation");
             let { data: t, width: e, height: i } = this,
                 s = this.svgFactory.create(e, i, !0),
                 n = t.borderStyle.width,
-                a = g(dW, this, this.svgFactory.createElement("svg:ellipse"));
+                a = g(dN, this, this.svgFactory.createElement("svg:ellipse"));
             return (
                 a.setAttribute("cx", e / 2),
                 a.setAttribute("cy", i / 2),
@@ -13883,14 +13881,14 @@ var dR = class extends hB {
             );
         }
         getElementsToTriggerPopup() {
-            return f(dW, this);
+            return f(dN, this);
         }
         addHighlightArea() {
             this.container.classList.add("highlightArea");
         }
     },
     d$ = new WeakMap(),
-    dH = class extends hB {
+    dH = class extends hO {
         constructor(t) {
             (super(t, { isRenderable: !0, ignoreBorder: !0 }),
                 p(this, d$, null),
@@ -13937,7 +13935,7 @@ var dR = class extends hB {
             (super(t), (this.containerClassName = "polygonAnnotation"), (this.svgElementName = "svg:polygon"));
         }
     },
-    dz = class extends hB {
+    dz = class extends hO {
         constructor(t) {
             super(t, { isRenderable: !0, ignoreBorder: !0 });
         }
@@ -13952,7 +13950,7 @@ var dR = class extends hB {
     dG = new WeakMap(),
     dV = new WeakMap(),
     dq = new WeakSet(),
-    dX = class extends hB {
+    dX = class extends hO {
         constructor(t) {
             (super(t, { isRenderable: !0, ignoreBorder: !0 }),
                 u(this, dq),
@@ -14032,7 +14030,7 @@ function dK(t, e) {
             return { transform: `translate(${-e[0]},${e[3]}) scale(1,-1)`, width: e[2] - e[0], height: e[3] - e[1] };
     }
 }
-var dY = class extends hB {
+var dY = class extends hO {
         constructor(t) {
             (super(t, { isRenderable: !0, ignoreBorder: !0, createQuadrilaterals: !0 }),
                 (this.annotationEditorType = _.HIGHLIGHT));
@@ -14053,7 +14051,7 @@ var dY = class extends hB {
             return this.container;
         }
     },
-    dQ = class extends hB {
+    dQ = class extends hO {
         constructor(t) {
             super(t, { isRenderable: !0, ignoreBorder: !0, createQuadrilaterals: !0 });
         }
@@ -14072,7 +14070,7 @@ var dY = class extends hB {
             return this.container;
         }
     },
-    dJ = class extends hB {
+    dJ = class extends hO {
         constructor(t) {
             super(t, { isRenderable: !0, ignoreBorder: !0, createQuadrilaterals: !0 });
         }
@@ -14091,7 +14089,7 @@ var dY = class extends hB {
             return this.container;
         }
     },
-    dZ = class extends hB {
+    dZ = class extends hO {
         constructor(t) {
             super(t, { isRenderable: !0, ignoreBorder: !0, createQuadrilaterals: !0 });
         }
@@ -14110,7 +14108,7 @@ var dY = class extends hB {
             return this.container;
         }
     },
-    d0 = class extends hB {
+    d0 = class extends hO {
         constructor(t) {
             (super(t, { isRenderable: !0, ignoreBorder: !0 }), (this.annotationEditorType = _.STAMP));
         }
@@ -14126,10 +14124,10 @@ var dY = class extends hB {
     },
     d1 = new WeakMap(),
     d2 = new WeakSet(),
-    d3 = class extends hB {
+    d3 = class extends hO {
         constructor(t) {
             (super(t, { isRenderable: !0 }), u(this, d2), p(this, d1, null));
-            const { file: e } = this.data;
+            let { file: e } = this.data;
             ((this.filename = e.filename),
                 (this.content = e.content),
                 this.linkService.eventBus?.dispatch("fileattachmentannotation", { source: this, ...e }));
@@ -14293,7 +14291,7 @@ var d4 = new WeakMap(),
         addFakeAnnotation(t) {
             let { div: e } = this,
                 { id: i, rotation: s } = t,
-                n = new hW({
+                n = new hN({
                     data: { id: i, rect: t.getPDFRect(), rotation: s },
                     editor: t,
                     layer: e,
@@ -14969,11 +14967,11 @@ var ck = new WeakMap(),
     cL = new WeakMap(),
     cR = new WeakMap(),
     cF = new WeakMap(),
-    cN = new WeakMap(),
-    cB = new WeakSet(),
-    cO = class {
+    cB = new WeakMap(),
+    cO = new WeakSet(),
+    cW = class {
         constructor({ x: t, y: e }, i, s, n, a, r = 0) {
-            (u(this, cB),
+            (u(this, cO),
                 p(this, ck, void 0),
                 p(this, cM, []),
                 p(this, cS, void 0),
@@ -14986,16 +14984,16 @@ var ck = new WeakMap(),
                 p(this, cL, void 0),
                 p(this, cR, void 0),
                 p(this, cF, void 0),
-                p(this, cN, []),
+                p(this, cB, []),
                 g(ck, this, i),
                 g(cF, this, n * s),
                 g(cE, this, a),
-                f(cT, this).set([NaN, NaN, NaN, NaN, t, e], 6),
+                f(cT, this).set([0 / 0, 0 / 0, 0 / 0, 0 / 0, t, e], 6),
                 g(cS, this, r),
                 g(cL, this, cV._ * s),
                 g(cI, this, cq._ * s),
                 g(cR, this, s),
-                f(cN, this).push(t, e));
+                f(cB, this).push(t, e));
         }
         isEmpty() {
             return isNaN(f(cT, this)[8]);
@@ -15014,7 +15012,7 @@ var ck = new WeakMap(),
                 b = m * c,
                 v = r,
                 A = o;
-            ((r = l), (o = h), (l += w), (h += b), f(cN, this)?.push(t, e));
+            ((r = l), (o = h), (l += w), (h += b), f(cB, this)?.push(t, e));
             let y = (-b / p) * f(cF, this),
                 _ = (w / p) * f(cF, this);
             return (f(cT, this).set(f(cT, this).subarray(2, 8), 0),
@@ -15024,17 +15022,17 @@ var ck = new WeakMap(),
             isNaN(f(cT, this)[6]))
                 ? (0 === f(cC, this).length &&
                       (f(cT, this).set([r + y, o + _], 2),
-                      f(cC, this).push(NaN, NaN, NaN, NaN, (r + y - i) / n, (o + _ - s) / a),
+                      f(cC, this).push(0 / 0, 0 / 0, 0 / 0, 0 / 0, (r + y - i) / n, (o + _ - s) / a),
                       f(cT, this).set([r - y, o - _], 14),
-                      f(cM, this).push(NaN, NaN, NaN, NaN, (r - y - i) / n, (o - _ - s) / a)),
+                      f(cM, this).push(0 / 0, 0 / 0, 0 / 0, 0 / 0, (r - y - i) / n, (o - _ - s) / a)),
                   f(cT, this).set([v, A, r, o, l, h], 6),
                   !this.isEmpty())
                 : ((f(cT, this).set([v, A, r, o, l, h], 6),
                   Math.abs(Math.atan2(A - o, v - r) - Math.atan2(b, w)) < Math.PI / 2)
                       ? (([r, o, l, h] = f(cT, this).subarray(2, 6)),
-                        f(cC, this).push(NaN, NaN, NaN, NaN, ((r + l) / 2 - i) / n, ((o + h) / 2 - s) / a),
+                        f(cC, this).push(0 / 0, 0 / 0, 0 / 0, 0 / 0, ((r + l) / 2 - i) / n, ((o + h) / 2 - s) / a),
                         ([r, o, v, A] = f(cT, this).subarray(14, 18)),
-                        f(cM, this).push(NaN, NaN, NaN, NaN, ((v + r) / 2 - i) / n, ((A + o) / 2 - s) / a))
+                        f(cM, this).push(0 / 0, 0 / 0, 0 / 0, 0 / 0, ((v + r) / 2 - i) / n, ((A + o) / 2 - s) / a))
                       : (([v, A, r, o, l, h] = f(cT, this).subarray(0, 6)),
                         f(cC, this).push(
                             ((v + 5 * r) / 6 - i) / n,
@@ -15059,19 +15057,19 @@ var ck = new WeakMap(),
             if (this.isEmpty()) return "";
             let t = f(cC, this),
                 e = f(cM, this);
-            if (isNaN(f(cT, this)[6]) && !this.isEmpty()) return d(cB, this, cU).call(this);
+            if (isNaN(f(cT, this)[6]) && !this.isEmpty()) return d(cO, this, cU).call(this);
             let i = [];
             i.push(`M${t[4]} ${t[5]}`);
             for (let e = 6; e < t.length; e += 6)
                 isNaN(t[e])
                     ? i.push(`L${t[e + 4]} ${t[e + 5]}`)
                     : i.push(`C${t[e]} ${t[e + 1]} ${t[e + 2]} ${t[e + 3]} ${t[e + 4]} ${t[e + 5]}`);
-            d(cB, this, cH).call(this, i);
+            d(cO, this, cH).call(this, i);
             for (let t = e.length - 6; t >= 6; t -= 6)
                 isNaN(e[t])
                     ? i.push(`L${e[t + 4]} ${e[t + 5]}`)
                     : i.push(`C${e[t]} ${e[t + 1]} ${e[t + 2]} ${e[t + 3]} ${e[t + 4]} ${e[t + 5]}`);
-            return (d(cB, this, c$).call(this, i), i.join(" "));
+            return (d(cO, this, c$).call(this, i), i.join(" "));
         }
         newFreeDrawOutline(t, e, i, s, n, a) {
             return new c2(t, e, i, s, n, a);
@@ -15081,40 +15079,40 @@ var ck = new WeakMap(),
                 e = f(cM, this),
                 i = f(cT, this),
                 [s, n, a, r] = f(ck, this),
-                o = new Float32Array((f(cN, this)?.length ?? 0) + 2);
+                o = new Float32Array((f(cB, this)?.length ?? 0) + 2);
             for (let t = 0, e = o.length - 2; t < e; t += 2)
-                ((o[t] = (f(cN, this)[t] - s) / a), (o[t + 1] = (f(cN, this)[t + 1] - n) / r));
+                ((o[t] = (f(cB, this)[t] - s) / a), (o[t + 1] = (f(cB, this)[t + 1] - n) / r));
             if (
                 ((o[o.length - 2] = (f(cP, this) - s) / a),
                 (o[o.length - 1] = (f(cD, this) - n) / r),
                 isNaN(i[6]) && !this.isEmpty())
             )
-                return d(cB, this, cj).call(this, o);
+                return d(cO, this, cj).call(this, o);
             let l = new Float32Array(f(cC, this).length + 24 + f(cM, this).length),
                 h = t.length;
             for (let e = 0; e < h; e += 2) {
                 if (isNaN(t[e])) {
-                    l[e] = l[e + 1] = NaN;
+                    l[e] = l[e + 1] = 0 / 0;
                     continue;
                 }
                 ((l[e] = t[e]), (l[e + 1] = t[e + 1]));
             }
-            h = d(cB, this, cG).call(this, l, h);
+            h = d(cO, this, cG).call(this, l, h);
             for (let t = e.length - 6; t >= 6; t -= 6)
                 for (let i = 0; i < 6; i += 2) {
                     if (isNaN(e[t + i])) {
-                        ((l[h] = l[h + 1] = NaN), (h += 2));
+                        ((l[h] = l[h + 1] = 0 / 0), (h += 2));
                         continue;
                     }
                     ((l[h] = e[t + i]), (l[h + 1] = e[t + i + 1]), (h += 2));
                 }
             return (
-                d(cB, this, cz).call(this, l, h),
+                d(cO, this, cz).call(this, l, h),
                 this.newFreeDrawOutline(l, o, f(ck, this), f(cR, this), f(cS, this), f(cE, this))
             );
         }
     };
-function cW() {
+function cN() {
     let t = f(cT, this).subarray(4, 6),
         e = f(cT, this).subarray(16, 18),
         [i, s, n, a] = f(ck, this);
@@ -15127,7 +15125,7 @@ function cW() {
 }
 function cU() {
     let [t, e, i, s] = f(ck, this),
-        [n, a, r, o] = d(cB, this, cW).call(this);
+        [n, a, r, o] = d(cO, this, cN).call(this);
     return `M${(f(cT, this)[2] - t) / i} ${(f(cT, this)[3] - e) / s} L${(f(cT, this)[4] - t) / i} ${(f(cT, this)[5] - e) / s} L${n} ${a} L${r} ${o} L${(f(cT, this)[16] - t) / i} ${(f(cT, this)[17] - e) / s} L${(f(cT, this)[14] - t) / i} ${(f(cT, this)[15] - e) / s} Z`;
 }
 function c$(t) {
@@ -15138,51 +15136,51 @@ function cH(t) {
     let [e, i, s, n] = f(ck, this),
         a = f(cT, this).subarray(4, 6),
         r = f(cT, this).subarray(16, 18),
-        [o, l, h, c] = d(cB, this, cW).call(this);
+        [o, l, h, c] = d(cO, this, cN).call(this);
     t.push(`L${(a[0] - e) / s} ${(a[1] - i) / n} L${o} ${l} L${h} ${c} L${(r[0] - e) / s} ${(r[1] - i) / n}`);
 }
 function cj(t) {
     let e = f(cT, this),
         [i, s, n, a] = f(ck, this),
-        [r, o, l, h] = d(cB, this, cW).call(this),
+        [r, o, l, h] = d(cO, this, cN).call(this),
         c = new Float32Array(36);
     return (
         c.set(
             [
-                NaN,
-                NaN,
-                NaN,
-                NaN,
+                0 / 0,
+                0 / 0,
+                0 / 0,
+                0 / 0,
                 (e[2] - i) / n,
                 (e[3] - s) / a,
-                NaN,
-                NaN,
-                NaN,
-                NaN,
+                0 / 0,
+                0 / 0,
+                0 / 0,
+                0 / 0,
                 (e[4] - i) / n,
                 (e[5] - s) / a,
-                NaN,
-                NaN,
-                NaN,
-                NaN,
+                0 / 0,
+                0 / 0,
+                0 / 0,
+                0 / 0,
                 r,
                 o,
-                NaN,
-                NaN,
-                NaN,
-                NaN,
+                0 / 0,
+                0 / 0,
+                0 / 0,
+                0 / 0,
                 l,
                 h,
-                NaN,
-                NaN,
-                NaN,
-                NaN,
+                0 / 0,
+                0 / 0,
+                0 / 0,
+                0 / 0,
                 (e[16] - i) / n,
                 (e[17] - s) / a,
-                NaN,
-                NaN,
-                NaN,
-                NaN,
+                0 / 0,
+                0 / 0,
+                0 / 0,
+                0 / 0,
                 (e[14] - i) / n,
                 (e[15] - s) / a,
             ],
@@ -15193,38 +15191,38 @@ function cj(t) {
 }
 function cz(t, e) {
     let i = f(cM, this);
-    return (t.set([NaN, NaN, NaN, NaN, i[4], i[5]], e), e + 6);
+    return (t.set([0 / 0, 0 / 0, 0 / 0, 0 / 0, i[4], i[5]], e), e + 6);
 }
 function cG(t, e) {
     let i = f(cT, this).subarray(4, 6),
         s = f(cT, this).subarray(16, 18),
         [n, a, r, o] = f(ck, this),
-        [l, h, c, u] = d(cB, this, cW).call(this);
+        [l, h, c, u] = d(cO, this, cN).call(this);
     return (
         t.set(
             [
-                NaN,
-                NaN,
-                NaN,
-                NaN,
+                0 / 0,
+                0 / 0,
+                0 / 0,
+                0 / 0,
                 (i[0] - n) / r,
                 (i[1] - a) / o,
-                NaN,
-                NaN,
-                NaN,
-                NaN,
+                0 / 0,
+                0 / 0,
+                0 / 0,
+                0 / 0,
                 l,
                 h,
-                NaN,
-                NaN,
-                NaN,
-                NaN,
+                0 / 0,
+                0 / 0,
+                0 / 0,
+                0 / 0,
                 c,
                 u,
-                NaN,
-                NaN,
-                NaN,
-                NaN,
+                0 / 0,
+                0 / 0,
+                0 / 0,
+                0 / 0,
                 (s[0] - n) / r,
                 (s[1] - a) / o,
             ],
@@ -15260,10 +15258,10 @@ var cV = { _: 8 },
                 g(cZ, this, s),
                 g(cY, this, n),
                 g(cQ, this, a),
-                (this.firstPoint = [NaN, NaN]),
-                (this.lastPoint = [NaN, NaN]),
+                (this.firstPoint = [0 / 0, 0 / 0]),
+                (this.lastPoint = [0 / 0, 0 / 0]),
                 d(c1, this, c3).call(this, a));
-            const [r, o, l, h] = f(cK, this);
+            let [r, o, l, h] = f(cK, this);
             for (let e = 0, i = t.length; e < i; e += 2) ((t[e] = (t[e] - r) / l), (t[e + 1] = (t[e + 1] - o) / h));
             for (let t = 0, i = e.length; t < i; t += 2) ((e[t] = (e[t] - r) / l), (e[t + 1] = (e[t + 1] - o) / h));
         }
@@ -15306,7 +15304,7 @@ var cV = { _: 8 },
             return f(cK, this);
         }
         newOutliner(t, e, i, s, n, a = 0) {
-            return new cO(t, e, i, s, n, a);
+            return new cW(t, e, i, s, n, a);
         }
         getNewOutline(t, e) {
             let [i, s, n, a] = f(cK, this),
@@ -15377,9 +15375,9 @@ var c5 = new WeakMap(),
                 p(this, c6, void 0),
                 p(this, c8, []),
                 p(this, c7, []));
-            const n = [1 / 0, 1 / 0, -1 / 0, -1 / 0];
-            for (const { x: i, y: s, width: a, height: r } of t) {
-                const t = 1e-4 * Math.floor((i - e) / 1e-4),
+            let n = [1 / 0, 1 / 0, -1 / 0, -1 / 0];
+            for (let { x: i, y: s, width: a, height: r } of t) {
+                let t = 1e-4 * Math.floor((i - e) / 1e-4),
                     o = 1e-4 * Math.ceil((i + a + e) / 1e-4),
                     l = 1e-4 * Math.floor((s - e) / 1e-4),
                     h = 1e-4 * Math.ceil((s + r + e) / 1e-4),
@@ -15387,16 +15385,16 @@ var c5 = new WeakMap(),
                     c = [o, l, h, !1];
                 (f(c8, this).push(d, c), V.rectBoundingBox(t, l, o, h, n));
             }
-            const a = n[2] - n[0] + 2 * i,
+            let a = n[2] - n[0] + 2 * i,
                 r = n[3] - n[1] + 2 * i,
                 o = n[0] - i,
-                l = n[1] - i;
-            let h = s ? -1 / 0 : 1 / 0,
-                d = 1 / 0;
-            const c = f(c8, this).at(s ? -1 : -2),
+                l = n[1] - i,
+                h = s ? -1 / 0 : 1 / 0,
+                d = 1 / 0,
+                c = f(c8, this).at(s ? -1 : -2),
                 m = [c[0], c[2]];
-            for (const t of f(c8, this)) {
-                const [e, i, n, c] = t;
+            for (let t of f(c8, this)) {
+                let [e, i, n, c] = t;
                 (!c && s
                     ? i < d
                         ? ((d = i), (h = e))
@@ -15549,7 +15547,7 @@ var ur = new WeakMap(),
             return ["highlightOutline"];
         }
     },
-    uh = class extends cO {
+    uh = class extends cW {
         newFreeDrawOutline(t, e, i, s, n, a) {
             return new ud(t, e, i, s, n, a);
         }
@@ -15622,14 +15620,14 @@ var ur = new WeakMap(),
                 (this._isDraggable = !1),
                 (this.defaultL10nId = "pdfjs-editor-highlight-editor"),
                 e.highlightId > -1
-                    ? (g(u_, this, !0), d(uT, this, uI).call(this, e), d(uT, this, uB).call(this))
+                    ? (g(u_, this, !0), d(uT, this, uI).call(this, e), d(uT, this, uO).call(this))
                     : f(up, this) &&
                       (g(uc, this, e.anchorNode),
                       g(uu, this, e.anchorOffset),
                       g(uw, this, e.focusNode),
                       g(ub, this, e.focusOffset),
                       d(uT, this, uD).call(this),
-                      d(uT, this, uB).call(this),
+                      d(uT, this, uO).call(this),
                       this.rotate(this.rotation)),
                 this.annotationElementId || this._uiManager.a11yAlert("pdfjs-editor-highlight-added-alert"));
         }
@@ -15720,19 +15718,19 @@ var ur = new WeakMap(),
             (this.annotationElementId || this.parent.addUndoableEditor(this), t && this.div.focus());
         }
         remove() {
-            (d(uT, this, uN).call(this), this._reportTelemetry({ action: "deleted" }), super.remove());
+            (d(uT, this, uB).call(this), this._reportTelemetry({ action: "deleted" }), super.remove());
         }
         rebuild() {
             !this.parent ||
                 (super.rebuild(),
-                null !== this.div && (d(uT, this, uB).call(this), this.isAttachedToDOM || this.parent.add(this)));
+                null !== this.div && (d(uT, this, uO).call(this), this.isAttachedToDOM || this.parent.add(this)));
         }
         setParent(t) {
             let e = !1;
             (this.parent && !t
-                ? d(uT, this, uN).call(this)
+                ? d(uT, this, uB).call(this)
                 : t &&
-                  (d(uT, this, uB).call(this, t), (e = !this.parent && this.div?.classList.contains("selectedEditor"))),
+                  (d(uT, this, uO).call(this, t), (e = !this.parent && this.div?.classList.contains("selectedEditor"))),
                 super.setParent(t),
                 this.show(this._isVisible),
                 e && this.select());
@@ -15741,11 +15739,11 @@ var ur = new WeakMap(),
             let i,
                 { drawLayer: s } = this.parent;
             (f(u_, this)
-                ? ((e = (e - this.rotation + 360) % 360), (i = uO.call(t, f(uA, this).box, e)))
-                : (i = uO.call(t, [this.x, this.y, this.width, this.height], e)),
+                ? ((e = (e - this.rotation + 360) % 360), (i = uW.call(t, f(uA, this).box, e)))
+                : (i = uW.call(t, [this.x, this.y, this.width, this.height], e)),
                 s.updateProperties(f(uy, this), { bbox: i, root: { "data-main-rotation": e } }),
                 s.updateProperties(f(uM, this), {
-                    bbox: uO.call(t, f(um, this).box, e),
+                    bbox: uW.call(t, f(um, this).box, e),
                     root: { "data-main-rotation": e },
                 }));
         }
@@ -15755,7 +15753,7 @@ var ur = new WeakMap(),
             (f(uS, this) && (t.setAttribute("aria-label", f(uS, this)), t.setAttribute("role", "mark")),
                 f(u_, this)
                     ? t.classList.add("free")
-                    : this.div.addEventListener("keydown", d(uT, this, uW).bind(this), {
+                    : this.div.addEventListener("keydown", d(uT, this, uN).bind(this), {
                           signal: this._uiManager._signal,
                       }));
             let e = g(uv, this, document.createElement("div"));
@@ -15933,7 +15931,7 @@ var ur = new WeakMap(),
                         width: (a[e + 2] - a[e]) / h,
                         height: (a[e + 1] - a[e + 5]) / c,
                     });
-                (d(uT, l, uD).call(l), d(uT, l, uB).call(l), l.rotate(l.rotation));
+                (d(uT, l, uD).call(l), d(uT, l, uO).call(l), l.rotate(l.rotation));
             } else if (r) {
                 g(u_, l, !0);
                 let t = r[0],
@@ -15951,7 +15949,7 @@ var ur = new WeakMap(),
                     !0,
                 );
                 (d(uT, l, uI).call(l, { highlightOutlines: s.getOutlines(), highlightId: n, clipPathId: a }),
-                    d(uT, l, uB).call(l),
+                    d(uT, l, uO).call(l),
                     l.rotate(l.parentRotation));
             }
             return l;
@@ -16009,11 +16007,11 @@ function uI({ highlightOutlines: t, highlightId: e, clipPathId: i }) {
     else if (this.parent) {
         let e = this.parent.viewport.rotation;
         (this.parent.drawLayer.updateProperties(f(uy, this), {
-            bbox: uO.call(uP, f(uA, this).box, (e - this.rotation + 360) % 360),
+            bbox: uW.call(uP, f(uA, this).box, (e - this.rotation + 360) % 360),
             path: { d: t.toSVGPath() },
         }),
             this.parent.drawLayer.updateProperties(f(uM, this), {
-                bbox: uO.call(uP, f(um, this).box, e),
+                bbox: uW.call(uP, f(um, this).box, e),
                 path: { d: f(um, this).toSVGPath() },
             }));
     }
@@ -16079,7 +16077,7 @@ function uF(t) {
         this.fixAndSetPosition(),
         this.setDims());
 }
-function uN() {
+function uB() {
     null !== f(uy, this) &&
         this.parent &&
         (this.parent.drawLayer.remove(f(uy, this)),
@@ -16087,7 +16085,7 @@ function uN() {
         this.parent.drawLayer.remove(f(uM, this)),
         g(uM, this, null));
 }
-function uB(t = this.parent) {
+function uO(t = this.parent) {
     null === f(uy, this) &&
         (({ id: m(g, [uy, this])._, clipPathId: m(g, [ug, this])._ } = t.drawLayer.draw(
             {
@@ -16113,7 +16111,7 @@ function uB(t = this.parent) {
         ),
         f(uv, this) && (f(uv, this).style.clipPath = f(ug, this)));
 }
-function uO([t, e, i, s], n) {
+function uW([t, e, i, s], n) {
     switch (n) {
         case 90:
             return [1 - e - s, t, s, i];
@@ -16124,7 +16122,7 @@ function uO([t, e, i, s], n) {
     }
     return [t, e, i, s];
 }
-function uW(t) {
+function uN(t) {
     uP._keyboardManager.exec(this, t);
 }
 function uU(t) {
@@ -16719,7 +16717,7 @@ var pt = new WeakMap(),
                 g(ps, this, n),
                 g(pn, this, a),
                 ([t, e] = d(pc, this, pp).call(this, t, e)));
-            const r = g(pe, this, [NaN, NaN, NaN, NaN, t, e]);
+            let r = g(pe, this, [0 / 0, 0 / 0, 0 / 0, 0 / 0, t, e]);
             (g(pa, this, [t, e]), g(pi, this, [{ line: r, points: f(pa, this) }]), f(pt, this).set(r, 0));
         }
         updateProperty(t, e) {
@@ -16739,7 +16737,7 @@ var pt = new WeakMap(),
             return 2 >= Math.hypot(f(ph, this) * r, f(pd, this) * o)
                 ? null
                 : ((f(pa, this).push(t, e), isNaN(i))
-                      ? (f(pt, this).set([n, a, t, e], 2), f(pe, this).push(NaN, NaN, NaN, NaN, t, e))
+                      ? (f(pt, this).set([n, a, t, e], 2), f(pe, this).push(0 / 0, 0 / 0, 0 / 0, 0 / 0, t, e))
                       : (isNaN(f(pt, this)[0]) && f(pe, this).splice(6, 6),
                         f(pt, this).set([i, s, n, a, t, e], 0),
                         f(pe, this).push(...cx.createBezierPoints(i, s, n, a, t, e))),
@@ -16751,7 +16749,7 @@ var pt = new WeakMap(),
         }
         startNew(t, e, i, s, n) {
             (g(ph, this, i), g(pd, this, s), g(ps, this, n), ([t, e] = d(pc, this, pp).call(this, t, e)));
-            let a = g(pe, this, [NaN, NaN, NaN, NaN, t, e]);
+            let a = g(pe, this, [0 / 0, 0 / 0, 0 / 0, 0 / 0, t, e]);
             g(pa, this, [t, e]);
             let r = f(pi, this).at(-1);
             return (
@@ -16975,17 +16973,32 @@ var pg = new WeakMap(),
                 for (let t of ((a = []), r)) {
                     let e = t.length;
                     if (2 === e) {
-                        a.push(new Float32Array([NaN, NaN, NaN, NaN, t[0], t[1]]));
+                        a.push(new Float32Array([0 / 0, 0 / 0, 0 / 0, 0 / 0, t[0], t[1]]));
                         continue;
                     }
                     if (4 === e) {
-                        a.push(new Float32Array([NaN, NaN, NaN, NaN, t[0], t[1], NaN, NaN, NaN, NaN, t[2], t[3]]));
+                        a.push(
+                            new Float32Array([
+                                0 / 0,
+                                0 / 0,
+                                0 / 0,
+                                0 / 0,
+                                t[0],
+                                t[1],
+                                0 / 0,
+                                0 / 0,
+                                0 / 0,
+                                0 / 0,
+                                t[2],
+                                t[3],
+                            ]),
+                        );
                         continue;
                     }
                     let i = new Float32Array(3 * (e - 2));
                     a.push(i);
                     let [s, n, r, o] = t.subarray(0, 4);
-                    i.set([NaN, NaN, NaN, NaN, s, n], 0);
+                    i.set([0 / 0, 0 / 0, 0 / 0, 0 / 0, s, n], 0);
                     for (let a = 4; a < e; a += 2) {
                         let e = t[a],
                             l = t[a + 1];
@@ -16995,14 +17008,14 @@ var pg = new WeakMap(),
             for (let t = 0, e = a.length; t < e; t++)
                 g.push({
                     line: p(
-                        a[t].map((t) => t ?? NaN),
+                        a[t].map((t) => t ?? 0 / 0),
                         h,
                         d,
                         c,
                         u,
                     ),
                     points: p(
-                        r[t].map((t) => t ?? NaN),
+                        r[t].map((t) => t ?? 0 / 0),
                         h,
                         d,
                         c,
@@ -17412,7 +17425,7 @@ var pL = class extends pk {
             let _ = d(t, this, pj).call(this, c.getImageData(0, 0, A, y).data),
                 x = d(t, this, pH).call(this, _),
                 k = d(t, this, pz).call(this, x),
-                M = d(t, this, pO).call(this, _, A, y, k);
+                M = d(t, this, pW).call(this, _, A, y, k);
             return this.processDrawnLines({
                 lines: { curves: M, width: A, height: y },
                 pageWidth: a,
@@ -17435,7 +17448,7 @@ var pL = class extends pk {
                     d(t, this, pV)._.kernelSize,
                 ),
                 u = d(t, this, pz).call(this, c),
-                p = d(t, this, pO).call(this, h, o, l, u);
+                p = d(t, this, pW).call(this, h, o, l, u);
             return this.processDrawnLines({
                 lines: { curves: p, width: o, height: l },
                 pageWidth: i,
@@ -17471,11 +17484,16 @@ var pL = class extends pk {
                     n = new Float32Array(s),
                     a = new Float32Array(3 * (2 === s ? 2 : s - 2));
                 if ((p.push({ line: a, points: n }), 2 === s)) {
-                    ((n[0] = i[0] * f), (n[1] = i[1] * m), a.set([NaN, NaN, NaN, NaN, n[0], n[1]], 0));
+                    ((n[0] = i[0] * f), (n[1] = i[1] * m), a.set([0 / 0, 0 / 0, 0 / 0, 0 / 0, n[0], n[1]], 0));
                     continue;
                 }
                 let [o, l, h, c] = i;
-                ((o *= f), (l *= m), (h *= f), (c *= m), n.set([o, l, h, c], 0), a.set([NaN, NaN, NaN, NaN, o, l], 0));
+                ((o *= f),
+                    (l *= m),
+                    (h *= f),
+                    (c *= m),
+                    n.set([o, l, h, c], 0),
+                    a.set([0 / 0, 0 / 0, 0 / 0, 0 / 0, o, l], 0));
                 for (let t = 4; t < s; t += 2) {
                     let e = (n[t] = i[t] * f),
                         s = (n[t + 1] = i[t + 1] * m);
@@ -17582,7 +17600,7 @@ var pL = class extends pk {
 function pF(t, e, i, s) {
     return ((i -= t), (s -= e), 0 === i) ? (s > 0 ? 0 : 4) : 1 === i ? s + 6 : 2 - s;
 }
-function pN(t, e, i, s, n, a, r) {
+function pB(t, e, i, s, n, a, r) {
     let o = d(pR, this, pF).call(this, i, s, n, a);
     for (let n = 0; n < 8; n++) {
         let a = (-n + o - r + 16) % 8;
@@ -17590,7 +17608,7 @@ function pN(t, e, i, s, n, a, r) {
     }
     return -1;
 }
-function pB(t, e, i, s, n, a, r) {
+function pO(t, e, i, s, n, a, r) {
     let o = d(pR, this, pF).call(this, i, s, n, a);
     for (let n = 0; n < 8; n++) {
         let a = (n + o + r + 16) % 8;
@@ -17598,7 +17616,7 @@ function pB(t, e, i, s, n, a, r) {
     }
     return -1;
 }
-function pO(t, e, i, s) {
+function pW(t, e, i, s) {
     let n,
         a = t.length,
         r = new Int32Array(a);
@@ -17631,7 +17649,7 @@ function pO(t, e, i, s) {
                     break;
                 }
             s ? (s.isHole ? (f.parent = g ? s.parent : n) : (f.parent = g ? n : s.parent)) : (f.parent = g ? n : 0);
-            let m = d(pR, this, pN).call(this, r, e, t, i, c, u, 0);
+            let m = d(pR, this, pB).call(this, r, e, t, i, c, u, 0);
             if (-1 === m) {
                 ((r[a] = -o), 1 !== r[a] && (n = Math.abs(r[a])));
                 continue;
@@ -17644,7 +17662,7 @@ function pO(t, e, i, s) {
             let y = t,
                 _ = i;
             for (;;) {
-                let s = d(pR, this, pB).call(this, r, e, y, _, c, u, 1);
+                let s = d(pR, this, pO).call(this, r, e, y, _, c, u, 1);
                 ((w = d(pR, this, pq)._[2 * s]), (b = d(pR, this, pq)._[2 * s + 1]));
                 let l = y + w,
                     h = _ + b;
@@ -17662,7 +17680,7 @@ function pO(t, e, i, s) {
     }
     return l;
 }
-function pW(t, e, i, s) {
+function pN(t, e, i, s) {
     if (i - e <= 4) {
         for (let n = e; n < i - 2; n += 2) s.push(t[n], t[n + 1]);
         return;
@@ -17689,13 +17707,13 @@ function pW(t, e, i, s) {
         e > A && ((y = s), (A = e));
     }
     A > (l * v) ** 2
-        ? (d(pR, this, pW).call(this, t, e, y + 2, s), d(pR, this, pW).call(this, t, y, i, s))
+        ? (d(pR, this, pN).call(this, t, e, y + 2, s), d(pR, this, pN).call(this, t, y, i, s))
         : s.push(n, a);
 }
 function pU(t) {
     let e = [],
         i = t.length;
-    return (d(pR, this, pW).call(this, t, 0, i, e), e.push(t[i - 2], t[i - 1]), e.length <= 4 ? null : e);
+    return (d(pR, this, pN).call(this, t, 0, i, e), e.push(t[i - 2], t[i - 1]), e.length <= 4 ? null : e);
 }
 function p$(t, e, i, s, n, a) {
     let r = new Float32Array(a ** 2),
@@ -18565,8 +18583,8 @@ var gu = new WeakMap(),
                 p(this, gM, null),
                 p(this, gS, -1),
                 p(this, gE, void 0));
-            const c = [...gN._.values()];
-            if (!t._initialized) for (const i of ((t._initialized = !0), c)) i.initialize(d, e);
+            let c = [...gB._.values()];
+            if (!t._initialized) for (let i of ((t._initialized = !0), c)) i.initialize(d, e);
             (e.registerEditorTypes(c),
                 g(gE, this, e),
                 (this.pageIndex = i),
@@ -18613,7 +18631,7 @@ var gu = new WeakMap(),
             let { classList: e } = this.div;
             if ((e.toggle("nonEditing", !1), t === _.POPUP)) e.toggle("commentEditing", !0);
             else
-                for (let i of (e.toggle("commentEditing", !1), gN._.values()))
+                for (let i of (e.toggle("commentEditing", !1), gB._.values()))
                     e.toggle(`${i._type}Editing`, t === i._editorType);
             this.div.hidden = !1;
         }
@@ -18731,7 +18749,7 @@ var gu = new WeakMap(),
             }
             (d(gC, this, gF).call(this), this.isEmpty && (this.div.hidden = !0));
             let { classList: i } = this.div;
-            for (let t of gN._.values()) i.remove(`${t._type}Editing`);
+            for (let t of gB._.values()) i.remove(`${t._type}Editing`);
             (this.disableTextSelection(),
                 this.toggleAnnotationLayerPointerEvents(!0),
                 t?.updateFakeAnnotations(e),
@@ -18873,7 +18891,7 @@ var gu = new WeakMap(),
         }
         async deserialize(t) {
             return (
-                (await gN._.get(t.annotationType ?? t.annotationEditorType)?.deserialize(t, this, f(gE, this))) || null
+                (await gB._.get(t.annotationType ?? t.annotationEditorType)?.deserialize(t, this, f(gE, this))) || null
             );
         }
         createAndAddNewEditor(t, e, i = {}) {
@@ -19030,7 +19048,7 @@ function gD(t) {
     }
 }
 function gI() {
-    return gN._.get(f(gE, this).getMode());
+    return gB._.get(f(gE, this).getMode());
 }
 function gL(t) {
     let e = gI.call(d(gC, this));
@@ -19051,20 +19069,20 @@ function gF() {
     for (let t of f(gw, this).values()) t.isEmpty() && t.remove();
 }
 (0, o.t)(gT, "_initialized", !1);
-var gN = { _: new Map([cp, pD, gs, uP, p0].map((t) => [t._editorType, t])) },
-    gB = new WeakMap(),
+var gB = { _: new Map([cp, pD, gs, uP, p0].map((t) => [t._editorType, t])) },
     gO = new WeakMap(),
     gW = new WeakMap(),
+    gN = new WeakMap(),
     gU = new WeakSet(),
     g$ = class t {
         constructor() {
-            (u(this, gU), p(this, gB, null), p(this, gO, new Map()), p(this, gW, new Map()));
+            (u(this, gU), p(this, gO, null), p(this, gW, new Map()), p(this, gN, new Map()));
         }
         setParent(t) {
-            if (!f(gB, this)) return void g(gB, this, t);
-            if (f(gB, this) !== t) {
-                if (f(gO, this).size > 0) for (let e of f(gO, this).values()) (e.remove(), t.append(e));
-                g(gB, this, t);
+            if (!f(gO, this)) return void g(gO, this, t);
+            if (f(gO, this) !== t) {
+                if (f(gW, this).size > 0) for (let e of f(gW, this).values()) (e.remove(), t.append(e));
+                g(gO, this, t);
             }
         }
         static get _svgFactory() {
@@ -19081,14 +19099,14 @@ var gN = { _: new Map([cp, pD, gs, uP, p0].map((t) => [t._editorType, t])) },
             let c = `path_${r}`;
             (h.setAttribute("id", c),
                 h.setAttribute("vector-effect", "non-scaling-stroke"),
-                i && f(gW, this).set(r, h));
+                i && f(gN, this).set(r, h));
             let u = s ? d(gU, this, gz).call(this, l, c) : null,
                 p = t._svgFactory.createElement("use");
             return (
                 o.append(p),
                 p.setAttribute("href", `#${c}`),
                 this.updateProperties(o, e),
-                f(gO, this).set(r, o),
+                f(gW, this).set(r, o),
                 { id: r, clipPathId: `url(#${u})` }
             );
         }
@@ -19129,17 +19147,17 @@ var gN = { _: new Map([cp, pD, gs, uP, p0].map((t) => [t._editorType, t])) },
                 u.classList.add("mainOutline"),
                 p.classList.add("secondaryOutline"),
                 this.updateProperties(o, e),
-                f(gO, this).set(r, o),
+                f(gW, this).set(r, o),
                 r
             );
         }
         finalizeDraw(t, e) {
-            (f(gW, this).delete(t), this.updateProperties(t, e));
+            (f(gN, this).delete(t), this.updateProperties(t, e));
         }
         updateProperties(e, i) {
             if (!i) return;
             let { root: s, bbox: n, rootClass: a, path: r } = i,
-                o = "number" == typeof e ? f(gO, this).get(e) : e;
+                o = "number" == typeof e ? f(gW, this).get(e) : e;
             if (o) {
                 if ((s && d(gU, this, gG).call(this, o, s), n && gH.call(t, o, n), a)) {
                     let { classList: t } = o;
@@ -19153,15 +19171,15 @@ var gN = { _: new Map([cp, pD, gs, uP, p0].map((t) => [t._editorType, t])) },
         }
         updateParent(t, e) {
             if (e === this) return;
-            let i = f(gO, this).get(t);
-            i && (f(gB, e).append(i), f(gO, this).delete(t), f(gO, e).set(t, i));
+            let i = f(gW, this).get(t);
+            i && (f(gO, e).append(i), f(gW, this).delete(t), f(gW, e).set(t, i));
         }
         remove(t) {
-            (f(gW, this).delete(t), null !== f(gB, this) && (f(gO, this).get(t).remove(), f(gO, this).delete(t)));
+            (f(gN, this).delete(t), null !== f(gO, this) && (f(gW, this).get(t).remove(), f(gW, this).delete(t)));
         }
         destroy() {
-            for (let t of (g(gB, this, null), f(gO, this).values())) t.remove();
-            (f(gO, this).clear(), f(gW, this).clear());
+            for (let t of (g(gO, this, null), f(gW, this).values())) t.remove();
+            (f(gW, this).clear(), f(gN, this).clear());
         }
     };
 function gH(t, [e, i, s, n]) {
@@ -19170,7 +19188,7 @@ function gH(t, [e, i, s, n]) {
 }
 function gj() {
     let t = g$._svgFactory.create(1, 1, !0);
-    return (f(gB, this).append(t), t.setAttribute("aria-hidden", !0), t);
+    return (f(gO, this).append(t), t.setAttribute("aria-hidden", !0), t);
 }
 function gz(t, e) {
     let i = g$._svgFactory.createElement("clipPath");
@@ -19293,7 +19311,7 @@ var gV = { _: 0 };
         },
         GlobalWorkerOptions: rV,
         ImageKind: k,
-        InvalidPDFException: W,
+        InvalidPDFException: N,
         isDataScheme: to,
         isPdfFile: tl,
         isValidExplicitDest: nJ,
@@ -19314,7 +19332,7 @@ var gV = { _: 0 };
         PasswordResponses: { NEED_PASSWORD: 1, INCORRECT_PASSWORD: 2 },
         PDFDataRangeTransport: lE,
         PDFDateString: tp,
-        PDFWorker: lW,
+        PDFWorker: lN,
         PermissionFlag: {
             PRINT: 4,
             MODIFY_CONTENTS: 8,
@@ -19341,4 +19359,5 @@ var gV = { _: 0 };
         VerbosityLevel: S,
         version: "5.4.624",
         XfaLayer: te,
-    }));
+    }),
+    i.d(e, {}, { GlobalWorkerOptions: rV, getDocument: lv }));

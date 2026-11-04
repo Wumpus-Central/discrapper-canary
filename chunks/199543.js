@@ -1,13 +1,12 @@
-n.d(t, { A: () => l });
 var i = n(439372),
     r = n(216623);
-async function a() {
-    await (0, r.AX)();
-}
-class s extends i.A {
+class a extends i.A {
     actions = { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() };
     handlePostConnectionOpen = () => {
-        a();
+        !(async function () {
+            await (0, r.AX)();
+        })();
     };
 }
-let l = new s();
+let s = new a();
+n.d(t, {}, { A: s });

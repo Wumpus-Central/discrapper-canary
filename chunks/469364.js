@@ -1,7 +1,7 @@
 e.exports = {
-    Vg: "grid__16960",
-    e6: "hasSquareItems__16960",
-    kL: "container__16960",
-    wx: "header__16960",
-    b: "closeButton__16960",
+    Vg: "grid_w1xbCm",
+    e6: "hasSquareItems_w1xbCm",
+    kL: "container_w1xbCm",
+    wx: "header_w1xbCm",
+    b: "closeButton_w1xbCm",
 };

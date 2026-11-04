@@ -1,39 +1,44 @@
-n.d(t, { t: () => a });
 var i = n(477900);
 n(582128);
-var s = n(661531),
+var s = n(646514),
     r = n(996682),
     l = n(27989);
-function a(e) {
-    let {
-            size: t = "md",
-            width: n,
-            height: a,
-            color: o = s.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: c = "",
-            ...d
-        } = e,
-        u = (0, l.J)(t),
-        h = u?.width ?? n,
-        C = u?.height ?? a;
-    return (0, i.jsxs)("svg", {
-        ...(0, r.A)(d),
-        xmlns: "http://www.w3.org/2000/svg",
-        width: h,
-        height: C,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        children: [
-            (0, i.jsx)("path", {
-                d: "M12.2 22c.5-.01.66-.84.37-1.24A3 3 0 0 1 15 16h.46c.35 0 .6-.34.56-.69a3 3 0 0 1 5.1-2.43l.06.06c.29.28.77.12.8-.28L22 12a10 10 0 1 0-18.45 5.36c.13.19.11.44-.04.61l-2.06 2.37A1 1 0 0 0 2.2 22h10Z",
-                fill: "string" == typeof o ? o : o.css,
-                className: c,
-            }),
-            (0, i.jsx)("path", {
-                d: "M19.7 14.3a1 1 0 0 0-1.4 1.4l.29.3 2 2H15a1 1 0 1 0 0 2h5.59l-2.3 2.3a1 1 0 0 0 1.42 1.4l4-4a1 1 0 0 0 0-1.4l-2.57-2.58-1.43-1.43Z",
-                fill: "string" == typeof o ? o : o.css,
-                className: c,
-            }),
-        ],
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        t: function (e) {
+            let {
+                    size: t = "md",
+                    width: n,
+                    height: a,
+                    color: o = s.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: c = "",
+                    ...d
+                } = e,
+                u = (0, l.J)(t),
+                h = u?.width ?? n,
+                C = u?.height ?? a;
+            return (0, i.jsxs)("svg", {
+                ...(0, r.A)(d),
+                xmlns: "http://www.w3.org/2000/svg",
+                width: h,
+                height: C,
+                fill: "none",
+                viewBox: "0 0 24 24",
+                children: [
+                    (0, i.jsx)("path", {
+                        d: "M12.2 22c.5-.01.66-.84.37-1.24A3 3 0 0 1 15 16h.46c.35 0 .6-.34.56-.69a3 3 0 0 1 5.1-2.43l.06.06c.29.28.77.12.8-.28L22 12a10 10 0 1 0-18.45 5.36c.13.19.11.44-.04.61l-2.06 2.37A1 1 0 0 0 2.2 22h10Z",
+                        fill: "string" == typeof o ? o : o.css,
+                        className: c,
+                    }),
+                    (0, i.jsx)("path", {
+                        d: "M19.7 14.3a1 1 0 0 0-1.4 1.4l.29.3 2 2H15a1 1 0 1 0 0 2h5.59l-2.3 2.3a1 1 0 0 0 1.42 1.4l4-4a1 1 0 0 0 0-1.4l-2.57-2.58-1.43-1.43Z",
+                        fill: "string" == typeof o ? o : o.css,
+                        className: c,
+                    }),
+                ],
+            });
+        },
+    },
+);

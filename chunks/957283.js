@@ -1,12 +1,17 @@
-n.d(t, { N: () => s });
-var i = n(17928),
+var i = n(855986),
     l = n(940382),
-    r = n(358047);
-function s() {
-    let e = (0, i.bG)([r.Ay], () => r.Ay.getSidebarState(r.fe)),
-        t = e?.type === l.PE.VIEW_MESSAGE_REQUEST ? e : null;
-    return {
-        channelId: t?.channelId,
-        hasSingleMessageRequest: t?.details != null && t.details.hasSingleMessageRequest,
-    };
-}
+    r = n(799704);
+n.d(
+    t,
+    {},
+    {
+        N: function () {
+            let e = (0, i.bG)([r.Ay], () => r.Ay.getSidebarState(r.fe)),
+                t = e?.type === l.PE.VIEW_MESSAGE_REQUEST ? e : null;
+            return {
+                channelId: t?.channelId,
+                hasSingleMessageRequest: t?.details != null && t.details.hasSingleMessageRequest,
+            };
+        },
+    },
+);

@@ -1,10 +1,10 @@
 e.exports = {
-    Nr: "card_a12047",
-    OA: "guildInfo_a12047",
-    $f: "guildIcon_a12047",
-    gI: "guildDetails_a12047",
-    ew: "statsRow_a12047",
-    QW: "statGroup_a12047",
-    Wz: "boostGemIcon_a12047",
-    zk: "dotSeparator_a12047",
+    Nr: "card_rH8mBz",
+    OA: "guildInfo_rH8mBz",
+    $f: "guildIcon_rH8mBz",
+    gI: "guildDetails_rH8mBz",
+    ew: "statsRow_rH8mBz",
+    QW: "statGroup_rH8mBz",
+    Wz: "boostGemIcon_rH8mBz",
+    zk: "dotSeparator_rH8mBz",
 };

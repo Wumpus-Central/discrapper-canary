@@ -1,14 +1,14 @@
-(n.d(t, { A: () => y }), n(321073));
+n(321073);
 var i = n(812729),
     r = n.n(i),
-    a = n(17928),
-    s = n(636537),
+    a = n(855986),
+    s = n(620632),
     l = n(73153),
     o = n(77468),
     d = n(573648),
-    c = n(970928),
+    c = n(913659),
     u = n(927813),
-    _ = n(30370),
+    _ = n(417869),
     E = n(351906),
     A = n(652215);
 let h = +u.A.Millis.MINUTE,
@@ -27,16 +27,7 @@ function N(e, t, n) {
         rejectWithError: !1,
     });
 }
-async function C(e, t) {
-    let n = S[e];
-    if (null != n) return n;
-    let {
-            body: { data: i },
-        } = await N("/games", { id: e }, t),
-        r = i[0]?.name;
-    return ((S[e] = r), r);
-}
-let O = new (class {
+let C = new (class {
     _nextCheck;
     _started;
     constructor() {
@@ -63,7 +54,15 @@ let O = new (class {
             if (null == i || "live" !== i.type) throw Error("no stream");
             let { thumbnail_url: r, game_id: a, title: s } = i,
                 l = { large_image: null != r ? ((0, c.Di)(A.fg2.TWITCH, r) ?? void 0) : void 0 },
-                o = await C(a, t),
+                o = await (async function (e, t) {
+                    let n = S[e];
+                    if (null != n) return n;
+                    let {
+                            body: { data: i },
+                        } = await N("/games", { id: e }, t),
+                        r = i[0]?.name;
+                    return ((S[e] = r), r);
+                })(a, t),
                 u = d.A.get(A.fg2.TWITCH),
                 _ = I.exec(r)?.[1] ?? e.name,
                 E = null != s && "" !== s ? s.slice(0, 128) : void 0,
@@ -141,22 +140,23 @@ let O = new (class {
         this._started && (this._nextCheck = setTimeout(() => this._check(), h));
     }
 })();
-function R() {
-    E.A.enabled ? O.start() : O.stop();
+function O() {
+    E.A.enabled ? C.start() : C.stop();
 }
-class L extends a.Ay.Store {
+class R extends a.Ay.Store {
     static displayName = "ExternalStreamingStore";
     initialize() {
-        (E.A.enabled && O.start(), this.waitFor(_.A, E.A), this.syncWith([E.A], R));
+        (E.A.enabled && C.start(), this.waitFor(_.A, E.A), this.syncWith([E.A], O));
     }
     getStream() {
         return p;
     }
 }
-let y = new L(l.h, {
+let L = new R(l.h, {
     STREAMING_UPDATE: function (e) {
         if (r()(e.stream, p)) return !1;
         p = e.stream ?? null;
     },
-    USER_CONNECTIONS_UPDATE: () => O._check(),
+    USER_CONNECTIONS_UPDATE: () => C._check(),
 });
+n.d(t, {}, { A: L });

@@ -1,7 +1,7 @@
 t.exports = {
-    BK: "themeContainer_fdf9c0",
-    Tp: "background_fdf9c0",
-    Qs: "content_fdf9c0",
-    FS: "textContainer_fdf9c0",
-    vb: "safetyTable_fdf9c0",
+    BK: "themeContainer_l1jyxT",
+    Tp: "background_l1jyxT",
+    Qs: "content_l1jyxT",
+    FS: "textContainer_l1jyxT",
+    vb: "safetyTable_l1jyxT",
 };

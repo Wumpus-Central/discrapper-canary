@@ -1,11 +1,16 @@
-n.d(t, { Py: () => a, S8: () => s, bc: () => r });
 var i = n(73153);
-function r(e) {
-    i.h.dispatch({ type: "UPDATE_BACKGROUND_GRADIENT_PRESET", presetId: e });
-}
-function a() {
-    i.h.dispatch({ type: "UPDATE_BACKGROUND_GRADIENT_PRESET", presetId: null });
-}
-function s() {
-    i.h.dispatch({ type: "RESET_PREVIEW_CLIENT_THEME" });
-}
+n.d(
+    t,
+    {},
+    {
+        Py: function () {
+            i.h.dispatch({ type: "UPDATE_BACKGROUND_GRADIENT_PRESET", presetId: null });
+        },
+        S8: function () {
+            i.h.dispatch({ type: "RESET_PREVIEW_CLIENT_THEME" });
+        },
+        bc: function (e) {
+            i.h.dispatch({ type: "UPDATE_BACKGROUND_GRADIENT_PRESET", presetId: e });
+        },
+    },
+);

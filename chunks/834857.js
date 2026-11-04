@@ -1,4 +1,3 @@
-t.d(n, { A: () => A });
 var i = t(477900);
 t(582128);
 var l = t(477782),
@@ -8,29 +7,35 @@ var l = t(477782),
     o = t(520006),
     c = t(576705),
     d = t(652215),
-    u = t(105292);
-function A(e, n, t, A) {
-    let h = { streamUserId: t, channel: e, applicationId: A, appContext: (0, r.Us)() };
-    function m() {
-        null != n &&
-            e.type === d.rbe.GUILD_VOICE &&
-            (0, o.X)({ guild: n, source: d.PE1.VOICE_CHANNEL_CALL_MENU_ITEM, ...h });
-    }
-    return null != A
-        ? (0, i.jsx)(l.Dr, {
-              id: "invite-to-stream",
-              label: u.intl.string(u.t["OzOM/q"]),
-              action: m,
-              icon: s.D,
-              leadingAccessory: { type: "icon", icon: s.D },
-          })
-        : null != n && null != e && c.A.can(d.xBc.CREATE_INSTANT_INVITE, e)
-          ? (0, i.jsx)(l.Dr, {
-                id: "invite-friends",
-                label: u.intl.string(u.t["EE+P0H"]),
-                action: m,
-                icon: a.R,
-                leadingAccessory: { type: "icon", icon: a.R },
-            })
-          : null;
-}
+    u = t(792996);
+t.d(
+    n,
+    {},
+    {
+        A: function (e, n, t, A) {
+            let h = { streamUserId: t, channel: e, applicationId: A, appContext: (0, r.Us)() };
+            function m() {
+                null != n &&
+                    e.type === d.rbe.GUILD_VOICE &&
+                    (0, o.X)({ guild: n, source: d.PE1.VOICE_CHANNEL_CALL_MENU_ITEM, ...h });
+            }
+            return null != A
+                ? (0, i.jsx)(l.Dr, {
+                      id: "invite-to-stream",
+                      label: u.intl.string(u.t["OzOM/q"]),
+                      action: m,
+                      icon: s.D,
+                      leadingAccessory: { type: "icon", icon: s.D },
+                  })
+                : null != n && null != e && c.A.can(d.xBc.CREATE_INSTANT_INVITE, e)
+                  ? (0, i.jsx)(l.Dr, {
+                        id: "invite-friends",
+                        label: u.intl.string(u.t["EE+P0H"]),
+                        action: m,
+                        icon: a.R,
+                        leadingAccessory: { type: "icon", icon: a.R },
+                    })
+                  : null;
+        },
+    },
+);

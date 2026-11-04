@@ -1,1 +1,1 @@
-e.exports = { XG: "scroller__44cf4", wG: "loader__44cf4", dB: "balanceWidgetPillContainer__44cf4" };
+e.exports = { XG: "scroller_Su8I72", wG: "loader_Su8I72", dB: "balanceWidgetPillContainer_Su8I72" };

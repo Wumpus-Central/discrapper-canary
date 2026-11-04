@@ -1,4 +1,3 @@
-(n.r(l), n.d(l, { openPlayground: () => d, openPlaygroundFromParsedUrl: () => c }));
 var o = n(398590),
     r = n(790271),
     t = n(186111),
@@ -43,7 +42,14 @@ async function d(e, l, n) {
         !0
     );
 }
-function c(e) {
-    let { match: l } = e;
-    return d(l.collection, l.story, l.controlOverrides);
-}
+n.d(
+    l,
+    {},
+    {
+        openPlayground: d,
+        openPlaygroundFromParsedUrl: function (e) {
+            let { match: l } = e;
+            return d(l.collection, l.story, l.controlOverrides);
+        },
+    },
+);

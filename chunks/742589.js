@@ -1,4 +1,3 @@
-l.d(a, { A: () => k, I: () => p });
 var i = l(477900);
 l(582128);
 var n = l(607399),
@@ -7,33 +6,33 @@ var n = l(607399),
     c = l(268218),
     t = l(335180),
     o = l(723702),
-    d = l(19575),
+    d = l(253400),
     u = l(58736),
     b = l(746080),
     m = l(549575);
 let h = (0, c.Fe)({
     createPromise: () =>
         Promise.all([
-            l.e("207309"),
-            l.e("603977"),
-            l.e("24922"),
-            l.e("369501"),
-            l.e("508371"),
-            l.e("220803"),
-            l.e("966016"),
-            l.e("671367"),
-            l.e("781202"),
-            l.e("79171"),
-            l.e("417664"),
-            l.e("421225"),
-            l.e("183752"),
-        ]).then(l.bind(l, 239793)),
-    webpackId: 239793,
+            l.e(207309),
+            l.e(603977),
+            l.e(24922),
+            l.e(369501),
+            l.e(508371),
+            l.e(220803),
+            l.e(966016),
+            l.e(671367),
+            l.e(781202),
+            l.e(79171),
+            l.e(417664),
+            l.e(421225),
+            l.e(183752),
+        ]).then(l.bind(l, 586944)),
+    webpackId: 586944,
     name: "Search",
     renderLoader: t.O7,
 });
 async function p(e) {
-    if (!e && (0, o.isMac)() && o.isPlatformEmbedded) {
+    if (!e && (0, o.cX)() && o.isPlatformEmbedded) {
         let e = await window.DiscordNative.app.getDefaultDoubleClickAction();
         "Minimize" === e ? d.Ay.minimize() : "Maximize" === e && d.Ay.maximize();
     }
@@ -121,5 +120,5 @@ function f(e) {
     (f.Icon = u.Ay.Icon),
     (f.ChannelIcon = u.Ay.ChannelIcon),
     (f.Divider = u.Ay.Divider),
-    (f.Caret = u.Ay.Caret));
-let k = f;
+    (f.Caret = u.Ay.Caret),
+    l.d(a, {}, { A: f, I: p }));

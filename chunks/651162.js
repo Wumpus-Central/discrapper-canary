@@ -1,4 +1,3 @@
-n.d(t, { g: () => r });
 var i,
     r =
         (((i = {})[(i.HERO = 0)] = "HERO"),
@@ -13,3 +12,4 @@ var i,
         (i[(i.FRAMES_PRODUCT_SHELF = 11)] = "FRAMES_PRODUCT_SHELF"),
         (i[(i.GAME_SERVER_HOSTING_BANNER = 12)] = "GAME_SERVER_HOSTING_BANNER"),
         i);
+n.d(t, {}, { g: r });

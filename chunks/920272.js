@@ -1,19 +1,18 @@
-s.d(e, { customFieldsMachine: () => l, s: () => m });
+s.r(e);
 var i = s(41851),
     n = s(269882),
-    u = s(528239),
-    a = s(646613),
+    a = s(528239),
+    u = s(646613),
     c = s(457093);
-async function r(t, e) {
-    let s = await i.t.post(u.t.addCustomFields, t.fields, { signal: e });
-    if (!s.ok) throw Error(`POST ${u.t.addCustomFields} failed: ${s.status} ${s.statusText}`);
-    return s.data;
-}
-let l = (0, a.t)({
+let r = (0, u.t)({
     types: { context: {}, events: {}, input: {} },
     actors: {
-        submitFields: (0, a.a)(async ({ input: t, signal: e }) =>
-            r(
+        submitFields: (0, u.a)(async ({ input: t, signal: e }) =>
+            (async function (t, e) {
+                let s = await i.t.post(a.t.addCustomFields, t.fields, { signal: e });
+                if (!s.ok) throw Error(`POST ${a.t.addCustomFields} failed: ${s.status} ${s.statusText}`);
+                return s.data;
+            })(
                 {
                     fields: (function (t, e) {
                         let s = {};
@@ -29,9 +28,9 @@ let l = (0, a.t)({
         ),
     },
     actions: {
-        setField: (0, a.r)(({ context: t, event: e }) => ({ fields: { ...t.fields, [e.name]: e.value } })),
-        markSuccess: (0, a.r)({ result: "success" }),
-        markFailed: (0, a.r)({ result: "failed" }),
+        setField: (0, u.r)(({ context: t, event: e }) => ({ fields: { ...t.fields, [e.name]: e.value } })),
+        markSuccess: (0, u.r)({ result: "success" }),
+        markFailed: (0, u.r)({ result: "failed" }),
     },
     guards: { apiSucceeded: ({ event: t }) => t.output.success },
 }).createMachine({
@@ -57,7 +56,7 @@ let l = (0, a.t)({
         finished: { type: "final" },
     },
 });
-function d(t) {
+function l(t) {
     let e = (0, n.o)(t.value);
     if (void 0 !== e)
         switch (e) {
@@ -72,7 +71,7 @@ function d(t) {
                 return;
         }
 }
-function o(t) {
+function d(t) {
     let { context: e } = t;
     if (t.matches("idle")) return { status: "idle" };
     if (t.matches("inputting")) {
@@ -99,7 +98,7 @@ function o(t) {
           ? { status: "success" }
           : { status: "finished", result: t.context.result };
 }
-function f({ actor: t }) {
+function o({ actor: t }) {
     return {
         load() {
             t.send({ type: "LOAD" });
@@ -112,11 +111,18 @@ function f({ actor: t }) {
         },
     };
 }
-function m(t) {
-    return (0, a.l)({
-        actor: (0, a.s)(l, { input: { config: t.config } }).start(),
-        mapState: o,
-        createApi: f,
-        instrumentation: (0, n.s)(n.n.customFields, { getEventScreenName: d }),
-    });
-}
+s.d(
+    e,
+    {},
+    {
+        createCustomFieldsManager: function (t) {
+            return (0, u.l)({
+                actor: (0, u.s)(r, { input: { config: t.config } }).start(),
+                mapState: d,
+                createApi: o,
+                instrumentation: (0, n.s)(n.n.customFields, { getEventScreenName: l }),
+            });
+        },
+        customFieldsMachine: r,
+    },
+);

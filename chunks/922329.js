@@ -1,4 +1,3 @@
-n.d(t, { n: () => f, p: () => m });
 var l = n(477900);
 n(582128);
 var a = n(503698),
@@ -30,15 +29,21 @@ function c(e) {
         ],
     });
 }
-function m(e) {
-    return (0, l.jsx)("div", { className: o(e.compact ?? !1), children: c(e) });
-}
-function f(e) {
-    let { name: t, thumbSrc: n, ariaLabel: a, onClick: r, onThumbError: i } = e;
-    return (0, l.jsx)(u.D, {
-        className: s()(o(!0), d.w8),
-        onClick: r,
-        "aria-label": a,
-        children: c({ name: t, thumbSrc: n, compact: !0, onThumbError: i }),
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        n: function (e) {
+            let { name: t, thumbSrc: n, ariaLabel: a, onClick: r, onThumbError: i } = e;
+            return (0, l.jsx)(u.D, {
+                className: s()(o(!0), d.w8),
+                onClick: r,
+                "aria-label": a,
+                children: c({ name: t, thumbSrc: n, compact: !0, onThumbError: i }),
+            });
+        },
+        p: function (e) {
+            return (0, l.jsx)("div", { className: o(e.compact ?? !1), children: c(e) });
+        },
+    },
+);

@@ -1,4 +1,4 @@
-@keyframes placeholderPulse__27cc6 {
+@keyframes placeholderPulse_ks3kJR {
     0% {
         opacity: .5
     }
@@ -12,58 +12,58 @@
     }
 }
 
-.multiplePlaceholder__27cc6,
-.placeholder__27cc6 {
+.multiplePlaceholder_ks3kJR,
+.placeholder_ks3kJR {
     box-sizing: border-box;
     cursor: pointer;
     overflow: hidden
 }
 
-.multiplePlaceholderAnimated__27cc6,
-.placeholderAnimated__27cc6 {
-    animation: placeholderPulse__27cc6 3s ease-in-out infinite
+.multiplePlaceholderAnimated_ks3kJR,
+.placeholderAnimated_ks3kJR {
+    animation: placeholderPulse_ks3kJR 3s ease-in-out infinite
 }
 
-.placeholder__27cc6 {
+.placeholder_ks3kJR {
     align-items: center;
     display: flex;
     height: 44px
 }
 
-.mulitplePlaceholderUsername__27cc6,
-.placeholderUsername__27cc6 {
+.mulitplePlaceholderUsername_ks3kJR,
+.placeholderUsername_ks3kJR {
     border-radius: 8px;
     height: 14px
 }
 
-.mulitplePlaceholderUsername__27cc6 {
+.mulitplePlaceholderUsername_ks3kJR {
     margin-top: 12px
 }
 
-.avatarSmall__27cc6 {
+.avatarSmall_ks3kJR {
     height: 32px;
     width: 32px
 }
 
-.avatarLarge__27cc6 {
+.avatarLarge_ks3kJR {
     height: 40px;
     width: 40px
 }
 
-.placeholderAvatar__27cc6 {
+.placeholderAvatar_ks3kJR {
     border-radius: 50%
 }
 
-.mulitplePlaceholderUsername__27cc6,
-.placeholderAvatar__27cc6,
-.placeholderUsername__27cc6 {
+.mulitplePlaceholderUsername_ks3kJR,
+.placeholderAvatar_ks3kJR,
+.placeholderUsername_ks3kJR {
     background-color: var(--background-base-low)
 }
 
-.avatarMasked__27cc6 {
+.avatarMasked_ks3kJR {
     margin-inline-end: -6px;
-    -webkit-mask-image: url(/assets/1f9b76e0279b91a4.svg);
-    mask-image: url(/assets/1f9b76e0279b91a4.svg);
+    -webkit-mask-image: url("/assets/1f9b76e0279b91a4.svg");
+    mask-image: url("/assets/1f9b76e0279b91a4.svg");
     -webkit-mask-position: 0 0;
     mask-position: 0 0;
     -webkit-mask-repeat: no-repeat;
@@ -72,4 +72,4 @@
     mask-size: 100% 100%
 }
 
-/*# sourceMappingURL=266201.ec5e8d500b3464d7.css.map*/
+/*# sourceMappingURL=266201.e3e1701ac6889e22.css.map*/

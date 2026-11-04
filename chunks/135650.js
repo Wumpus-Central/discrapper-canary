@@ -1,10 +1,10 @@
 _.exports = {
-    nM: "row__89036",
-    EY: "nameplated__89036",
-    Qs: "content__89036",
-    my: "avatar__89036",
-    zH: "details__89036",
-    Tc: "tag__89036",
-    QC: "displayName__89036",
-    D2: "discriminator__89036",
+    nM: "row__Bgzj0",
+    EY: "nameplated__Bgzj0",
+    Qs: "content__Bgzj0",
+    my: "avatar__Bgzj0",
+    zH: "details__Bgzj0",
+    Tc: "tag__Bgzj0",
+    QC: "displayName__Bgzj0",
+    D2: "discriminator__Bgzj0",
 };

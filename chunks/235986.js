@@ -1,4 +1,3 @@
-n.d(t, { A: () => A });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -46,5 +45,5 @@ function E(e) {
     (E.Direction = d),
     (E.Align = u),
     (E.Justify = c),
-    (E.Wrap = _));
-let A = E;
+    (E.Wrap = _),
+    n.d(t, {}, { A: E }));

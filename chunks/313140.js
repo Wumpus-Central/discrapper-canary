@@ -1,7 +1,6 @@
-t.d(n, { default: () => _ });
 var r = t(477900);
 t(582128);
-var i = t(980707),
+var i = t(165862),
     a = t(477782),
     l = t(442433),
     d = t(358367),
@@ -10,7 +9,7 @@ var i = t(980707),
     h = t(307623),
     u = t(317910),
     A = t(475777),
-    o = t(105292);
+    o = t(792996);
 let _ = (0, d.A)(
     function (e) {
         let { channel: n, guild: t, onSelect: d } = e,
@@ -34,3 +33,4 @@ let _ = (0, d.A)(
     },
     [s.A.CONTEXT_MENU, s.A.CHANNEL_LIST_STORE_CHANNEL_MENU],
 );
+t.d(n, {}, { default: _ });

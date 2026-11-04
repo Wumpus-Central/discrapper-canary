@@ -1,10 +1,10 @@
 e.exports = {
-    Wu: "scopes__29337",
-    bc: "noDivider__29337",
-    z8: "scope__29337",
-    rv: "scopeInner__29337",
-    a9: "sectionLabel__29337",
-    RC: "fakeScopeIcon__29337",
-    sc: "scopeIcon__29337",
-    Kk: "icon__29337",
+    Wu: "scopes_hSg5_A",
+    bc: "noDivider_hSg5_A",
+    z8: "scope_hSg5_A",
+    rv: "scopeInner_hSg5_A",
+    a9: "sectionLabel_hSg5_A",
+    RC: "fakeScopeIcon_hSg5_A",
+    sc: "scopeIcon_hSg5_A",
+    Kk: "icon_hSg5_A",
 };

@@ -1,4 +1,3 @@
-n.d(t, { Ct: () => u, Fr: () => d, KY: () => c, v1: () => o });
 var i = n(214958),
     r = n.n(i);
 let a = new Set(["iPad", "Kindle", "Kindle Fire", "Nook", "PlayBook"]),
@@ -11,3 +10,4 @@ let a = new Set(["iPad", "Kindle", "Kindle Fire", "Nook", "PlayBook"]),
     d = !o && s.has(r()?.os?.family ?? ""),
     c = r()?.os?.family === "iOS",
     u = r()?.os?.family === "Android";
+n.d(t, {}, { Ct: u, Fr: d, KY: c, v1: o });

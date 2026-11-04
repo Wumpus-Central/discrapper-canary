@@ -1,7 +1,7 @@
 e.exports = {
-    M0: "bar__84522",
-    iz: "commandInfo__84522",
-    h_: "description__84522",
-    z3: "error__84522",
-    o1: "actions__84522",
+    M0: "bar_AqTeBa",
+    iz: "commandInfo_AqTeBa",
+    h_: "description_AqTeBa",
+    z3: "error_AqTeBa",
+    o1: "actions_AqTeBa",
 };

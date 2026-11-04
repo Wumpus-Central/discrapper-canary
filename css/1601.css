@@ -1,4 +1,4 @@
-.devBanner__56d75 {
+.devBanner_RdTe0y {
     flex-grow: 0;
     flex-shrink: 0;
     font-size: 12px;
@@ -10,29 +10,29 @@
     white-space: no-wrap
 }
 
-.devBanner__56d75 strong {
+.devBanner_RdTe0y strong {
     font-weight: var(--font-weight-semibold)
 }
 
-.local__56d75 {
+.local_RdTe0y {
     background-color: var(--background-feedback-mod-warning)
 }
 
-.local__56d75,
-.staging__56d75 {
+.local_RdTe0y,
+.staging_RdTe0y {
     color: var(--text-default)
 }
 
-.staging__56d75 {
+.staging_RdTe0y {
     background-color: var(--background-feedback-mod-critical)
 }
 
-.buildOverride__56d75 {
+.buildOverride_RdTe0y {
     background-color: var(--status-positive-background);
     color: var(--white)
 }
 
-.icon__56d75 {
+.icon_RdTe0y {
     display: inline-block;
     height: auto;
     margin-inline-end: 4px;
@@ -40,7 +40,7 @@
     width: 12px
 }
 
-.closeButton__56d75 {
+.closeButton_RdTe0y {
     background-position: 50% 55%;
     background-size: 10px 10px;
     cursor: pointer;
@@ -54,13 +54,13 @@
     -webkit-app-region: no-drag
 }
 
-.closeButton__56d75:hover {
+.closeButton_RdTe0y:hover {
     opacity: 1
 }
 
-.closeIcon__56d75 {
+.closeIcon_RdTe0y {
     height: 14px;
     width: 14px
 }
 
-/*# sourceMappingURL=1601.d63e86c3dc3d0936.css.map*/
+/*# sourceMappingURL=1601.c5def72c1b71c013.css.map*/

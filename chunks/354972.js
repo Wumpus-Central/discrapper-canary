@@ -1,111 +1,116 @@
-n.d(t, { A: () => y });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
     a = n.n(r),
-    s = n(661531),
+    s = n(646514),
     o = n(834730),
     u = n(265872),
     c = n(305866),
     d = n(939249),
     m = n(460905),
-    p = n(969602),
+    p = n(920134),
     h = n(652215),
     C = n(307731),
-    f = n(105292),
+    f = n(792996),
     E = n(290484);
 let S = { section: h.JJy.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER, openPopoutType: "gift_effect_emoji_picker" },
     g = C.EmojiIntention.GIFT;
-function y(e) {
-    let { setEmojiConfetti: t, emojiConfetti: n } = e,
-        [r, h] = i.useState(!1),
-        C = i.useRef(null),
-        y = a()(E.Qq, E.Ow);
-    function I(e) {
-        return (0, l.jsxs)("div", {
-            className: E.ZC,
-            children: [
-                (0, l.jsxs)("div", {
-                    className: E.Ry,
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { setEmojiConfetti: t, emojiConfetti: n } = e,
+                [r, h] = i.useState(!1),
+                C = i.useRef(null),
+                y = a()(E.Qq, E.Ow);
+            function I(e) {
+                return (0, l.jsxs)("div", {
+                    className: E.ZC,
                     children: [
-                        (0, l.jsx)(o.E, { variant: "body-md/semibold", children: f.intl.string(f.t.Hl2Ige) }),
-                        (0, l.jsx)(o.E, { variant: "body-sm/normal", children: f.intl.string(f.t.stGFA3) }),
+                        (0, l.jsxs)("div", {
+                            className: E.Ry,
+                            children: [
+                                (0, l.jsx)(o.E, { variant: "body-md/semibold", children: f.intl.string(f.t.Hl2Ige) }),
+                                (0, l.jsx)(o.E, { variant: "body-sm/normal", children: f.intl.string(f.t.stGFA3) }),
+                            ],
+                        }),
+                        e,
                     ],
-                }),
-                e,
-            ],
-        });
-    }
-    function A(e) {
-        let { emoji: n } = e;
-        null != t && (t(n), h(!1));
-    }
-    return (0, l.jsx)(u.Y, {
-        targetElementRef: C,
-        shouldShow: r,
-        position: "bottom",
-        align: "left",
-        onRequestClose: () => h(!1),
-        renderPopout: (e) => {
-            let { closePopout: t } = e;
-            return (0, l.jsx)(c.l, {
-                children: (0, l.jsx)(p.A, {
-                    analyticsOverride: S,
-                    closePopout: t,
-                    onSelectEmoji: A,
-                    wrapper: "div",
-                    pickerIntention: g,
-                    showAddEmojiButton: !1,
-                    renderHeader: I,
-                    headerClassName: E.a8,
-                    className: E.vX,
-                    listHeaderClassName: E.vX,
-                    categoryListClassName: E.jv,
-                    searchProps: { accessory: (0, l.jsx)(l.Fragment, {}) },
-                }),
+                });
+            }
+            function A(e) {
+                let { emoji: n } = e;
+                null != t && (t(n), h(!1));
+            }
+            return (0, l.jsx)(u.Y, {
+                targetElementRef: C,
+                shouldShow: r,
+                position: "bottom",
+                align: "left",
+                onRequestClose: () => h(!1),
+                renderPopout: (e) => {
+                    let { closePopout: t } = e;
+                    return (0, l.jsx)(c.l, {
+                        children: (0, l.jsx)(p.A, {
+                            analyticsOverride: S,
+                            closePopout: t,
+                            onSelectEmoji: A,
+                            wrapper: "div",
+                            pickerIntention: g,
+                            showAddEmojiButton: !1,
+                            renderHeader: I,
+                            headerClassName: E.a8,
+                            className: E.vX,
+                            listHeaderClassName: E.vX,
+                            categoryListClassName: E.jv,
+                            searchProps: { accessory: (0, l.jsx)(l.Fragment, {}) },
+                        }),
+                    });
+                },
+                children: () =>
+                    (0, l.jsx)(d.D, {
+                        className: a()(E.kL, E.Ow),
+                        onClick: () => h(!0),
+                        innerRef: C,
+                        children:
+                            n?.name == null
+                                ? (0, l.jsxs)("div", {
+                                      className: E.hQ,
+                                      children: [
+                                          (0, l.jsx)(m.n, {
+                                              size: "custom",
+                                              color: s.A.colors.ICON_STRONG,
+                                              className: E.mI,
+                                              width: 14,
+                                              height: 14,
+                                          }),
+                                          (0, l.jsx)(o.E, {
+                                              className: y,
+                                              variant: "body-sm/semibold",
+                                              lineClamp: 1,
+                                              children: f.intl.string(f.t.Hl2Ige),
+                                          }),
+                                      ],
+                                  })
+                                : (0, l.jsxs)("div", {
+                                      className: E.hQ,
+                                      children: [
+                                          (0, l.jsx)(o.E, {
+                                              className: y,
+                                              variant: "body-sm/semibold",
+                                              children: null == n.guildId ? n.optionallyDiverseSequence : null,
+                                          }),
+                                          (0, l.jsx)(o.E, {
+                                              className: y,
+                                              variant: "body-sm/semibold",
+                                              lineClamp: 1,
+                                              children: n.name.replace(/_/g, " "),
+                                          }),
+                                      ],
+                                  }),
+                    }),
             });
         },
-        children: () =>
-            (0, l.jsx)(d.D, {
-                className: a()(E.kL, E.Ow),
-                onClick: () => h(!0),
-                innerRef: C,
-                children:
-                    n?.name == null
-                        ? (0, l.jsxs)("div", {
-                              className: E.hQ,
-                              children: [
-                                  (0, l.jsx)(m.n, {
-                                      size: "custom",
-                                      color: s.A.colors.ICON_STRONG,
-                                      className: E.mI,
-                                      width: 14,
-                                      height: 14,
-                                  }),
-                                  (0, l.jsx)(o.E, {
-                                      className: y,
-                                      variant: "body-sm/semibold",
-                                      lineClamp: 1,
-                                      children: f.intl.string(f.t.Hl2Ige),
-                                  }),
-                              ],
-                          })
-                        : (0, l.jsxs)("div", {
-                              className: E.hQ,
-                              children: [
-                                  (0, l.jsx)(o.E, {
-                                      className: y,
-                                      variant: "body-sm/semibold",
-                                      children: null == n.guildId ? n.optionallyDiverseSequence : null,
-                                  }),
-                                  (0, l.jsx)(o.E, {
-                                      className: y,
-                                      variant: "body-sm/semibold",
-                                      lineClamp: 1,
-                                      children: n.name.replace(/_/g, " "),
-                                  }),
-                              ],
-                          }),
-            }),
-    });
-}
+    },
+);

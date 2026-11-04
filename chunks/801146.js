@@ -1,7 +1,6 @@
-n.d(t, { A: () => c });
 var i = n(811315),
     r = n.n(i),
-    a = n(17928),
+    a = n(855986),
     s = n(73153);
 let l = null;
 function o(e) {
@@ -22,3 +21,4 @@ let c = new d(s.h, {
         l = null;
     },
 });
+n.d(t, {}, { A: c });

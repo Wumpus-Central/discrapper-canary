@@ -1,10 +1,10 @@
 e.exports = {
-    nM: "row__28071",
-    yF: "divider__28071",
-    uW: "section__28071",
-    my: "avatar__28071",
-    Qq: "text__28071",
-    Kk: "icon__28071",
-    Xh: "username__28071",
-    Qz: "sectionIconContainer__28071 icon__28071",
+    nM: "row_E9MqU1",
+    yF: "divider_E9MqU1",
+    uW: "section_E9MqU1",
+    my: "avatar_E9MqU1",
+    Qq: "text_E9MqU1",
+    Kk: "icon_E9MqU1",
+    Xh: "username_E9MqU1",
+    Qz: "sectionIconContainer_E9MqU1 icon_E9MqU1",
 };

@@ -1,7 +1,6 @@
-n.d(t, { EH: () => u, WA: () => c, kx: () => l, l9: () => d, tf: () => _ });
 var i = n(536637),
     r = n.n(i),
-    a = n(58703),
+    a = n(5377),
     s = n(927813);
 let l = {
     t: (e) => (0, a.i$)(e, "LT"),
@@ -41,9 +40,18 @@ function c(e) {
     let a = null != n ? l[n] : void 0;
     return (null == a && (a = l.f), { timestamp: t, format: n, parsed: i, full: l.F(i), formatted: a(i) });
 }
-function u(e, t) {
-    return c({ timestamp: e, format: t });
-}
-function _(e, t) {
-    return null != t ? `<t:${e}:${t}>` : `<t:${e}>`;
-}
+n.d(
+    t,
+    {},
+    {
+        EH: function (e, t) {
+            return c({ timestamp: e, format: t });
+        },
+        WA: c,
+        kx: l,
+        l9: d,
+        tf: function (e, t) {
+            return null != t ? `<t:${e}:${t}>` : `<t:${e}>`;
+        },
+    },
+);

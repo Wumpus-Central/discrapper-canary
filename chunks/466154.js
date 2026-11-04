@@ -1,7 +1,7 @@
 e.exports = {
-    Zj: "upsellContainer__17daa",
-    $P: "upsellHeader__17daa",
-    GR: "upsellDescription__17daa",
-    JO: "upsellButtons__17daa",
-    yF: "divider__17daa",
+    Zj: "upsellContainer_x-SGOT",
+    $P: "upsellHeader_x-SGOT",
+    GR: "upsellDescription_x-SGOT",
+    JO: "upsellButtons_x-SGOT",
+    yF: "divider_x-SGOT",
 };

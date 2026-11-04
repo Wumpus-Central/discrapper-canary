@@ -1,5 +1,4 @@
-s.d(t, { A: () => i });
-var n = s(17928),
+var n = s(855986),
     l = s(73153);
 let a = { toastsEnabledForChannel: {} },
     r = a;
@@ -25,3 +24,4 @@ let i = new u(l.h, {
         r.toastsEnabledForChannel = {};
     },
 });
+s.d(t, {}, { A: i });

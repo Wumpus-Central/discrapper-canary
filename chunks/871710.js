@@ -1,1 +1,1 @@
-e.exports = { TA: "offerDetailContainer__11ee8", V6: "legalContainer__11ee8", dc: "spinnerContainer__11ee8" };
+t.exports = { TA: "offerDetailContainer_jGUOK0", V6: "legalContainer_jGUOK0", dc: "spinnerContainer_jGUOK0" };

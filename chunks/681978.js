@@ -1,8 +1,8 @@
-e.exports = {
-    fC: "badgeContainer__635ed",
-    KT: "badgeLabel__635ed",
-    cV: "badgesContainer__635ed",
-    u3: "badgesContainerCard__635ed",
-    DY: "badgesContainerGameProfile__635ed",
-    BQ: "badgesContainerPopout__635ed",
+a.exports = {
+    fC: "badgeContainer_CTWncy",
+    KT: "badgeLabel_CTWncy",
+    cV: "badgesContainer_CTWncy",
+    u3: "badgesContainerCard_CTWncy",
+    DY: "badgesContainerGameProfile_CTWncy",
+    BQ: "badgesContainerPopout_CTWncy",
 };

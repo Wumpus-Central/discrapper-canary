@@ -1,4 +1,4 @@
-(l.d(n, { A: () => R }), l(321073));
+l(321073);
 var i = l(477900),
     s = l(582128),
     a = l(503698),
@@ -14,12 +14,12 @@ var i = l(477900),
     v = l(713654),
     N = l(235986),
     x = l(769015),
-    j = l(548118),
+    j = l(682163),
     g = l(776231),
     I = l(253932),
     C = l(486020),
     f = l(821589),
-    y = l(105292),
+    y = l(792996),
     A = l(548648);
 function k(e) {
     let { text: n, extra: l } = e;
@@ -224,5 +224,5 @@ function T(e) {
     (G.displayName = "InviteButton.Channel"),
     (D.displayName = "InviteButton.GuildSplash"),
     (P.displayName = "InviteButton.GuildName"),
-    (T.displayName = "InviteButton.GuildTemplateName"));
-let R = B;
+    (T.displayName = "InviteButton.GuildTemplateName"),
+    l.d(n, {}, { A: B }));

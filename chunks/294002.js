@@ -1,8 +1,8 @@
 e.exports = {
-    MY: "page__4ad69",
-    u9: "hasMore__4ad69",
-    z3: "error__4ad69",
-    tq: "deletedMessage__4ad69",
-    kb: "left__4ad69",
-    Bx: "deletedIcon__4ad69",
+    MY: "page_AjBRrC",
+    u9: "hasMore_AjBRrC",
+    z3: "error_AjBRrC",
+    tq: "deletedMessage_AjBRrC",
+    kb: "left_AjBRrC",
+    Bx: "deletedIcon_AjBRrC",
 };

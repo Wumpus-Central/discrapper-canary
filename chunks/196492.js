@@ -1,4 +1,3 @@
-n.d(t, { A: () => h });
 var i = n(477900);
 n(582128);
 var r = n(189213),
@@ -8,7 +7,7 @@ var r = n(189213),
     o = n(73153),
     d = n(272355),
     c = n(652215),
-    u = n(105292);
+    u = n(792996);
 let _ = "ActivityInviteManager";
 function E() {
     o.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_CLOSE" });
@@ -24,9 +23,9 @@ class A extends d.A {
     }
     handleModalOpen(e) {
         let { activity: t, isPrivate: o, context: d } = e,
-            A = d === c.BRT.POPOUT ? a.KX : a.SY;
+            A = d === c.BRT.POPOUT ? "popout" : a.SY;
         o
-            ? (0, s.openModal)(
+            ? (0, s.qf)(
                   (e) =>
                       (0, i.jsx)(r.a, {
                           title: u.intl.formatToPlainString(u.t["2tN7ih"], { name: t.name }),
@@ -44,14 +43,14 @@ class A extends d.A {
                   { onCloseCallback: E, modalKey: _ },
                   A,
               )
-            : (0, s.openModalLazy)(
+            : (0, s.mM)(
                   async () => {
                       let { default: e } = await Promise.all([
-                          n.e("866475"),
-                          n.e("31331"),
-                          n.e("692639"),
-                          n.e("890480"),
-                          n.e("842573"),
+                          n.e(866475),
+                          n.e(31331),
+                          n.e(692639),
+                          n.e(890480),
+                          n.e(842573),
                       ]).then(n.bind(n, 333189));
                       return (t) => (0, i.jsx)(e, { ...t });
                   },
@@ -59,7 +58,8 @@ class A extends d.A {
               );
     }
     handleModalClose(e) {
-        (0, s.closeModal)(_);
+        (0, s.Oo)(_);
     }
 }
 let h = new A();
+n.d(t, {}, { A: h });

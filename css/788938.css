@@ -1,4 +1,4 @@
-.progressCircle__28edc {
+.progressCircle_iEwb4a {
     align-items: center;
     color: var(--blue-345);
     display: flex;
@@ -8,7 +8,7 @@
     width: 100%
 }
 
-.circle__28edc {
+.circle_iEwb4a {
     bottom: 0;
     left: 0;
     position: absolute;
@@ -16,23 +16,23 @@
     top: 0
 }
 
-.circleBackgroundAlt__28edc {
+.circleBackgroundAlt_iEwb4a {
     fill: var(--opacity-black-20)
 }
 
-.circleBackground__28edc {
+.circleBackground_iEwb4a {
     fill: var(--background-mod-muted)
 }
 
-.circleProgress__28edc {
+.circleProgress_iEwb4a {
     fill: none
 }
 
-.circleOverlay__28edc {
+.circleOverlay_iEwb4a {
     align-items: center;
     display: flex;
     justify-content: center;
     position: relative
 }
 
-/*# sourceMappingURL=788938.27f59aea059a67d9.css.map*/
+/*# sourceMappingURL=788938.42629330f4287b84.css.map*/

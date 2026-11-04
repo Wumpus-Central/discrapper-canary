@@ -1,5 +1,5 @@
-(n.d(t, { A: () => E }), n(321073));
-var i = n(148494),
+n(321073);
+var i = n(138399),
     r = n(439372),
     a = n(451909),
     s = n(734057),
@@ -7,7 +7,7 @@ var i = n(148494),
     o = n(25201),
     d = n(46013),
     c = n(381941),
-    u = n(105292);
+    u = n(792996);
 class _ extends r.A {
     actions = { CHANNEL_SELECT: (e) => this.handleChannelSelect(e), DICE_ROLL_START: (e) => this.handleStartRoll(e) };
     rollTimer = null;
@@ -68,3 +68,4 @@ ${f}`;
     }
 }
 let E = new _();
+n.d(t, {}, { A: E });

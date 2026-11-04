@@ -1,4 +1,3 @@
-n.d(t, { A: () => p });
 var s = n(477900),
     i = n(582128),
     a = n(155718),
@@ -6,7 +5,7 @@ var s = n(477900),
     o = n(451909),
     r = n(652215),
     c = n(650583),
-    u = n(105292),
+    u = n(792996),
     d = n(17728);
 function h(e) {
     e.stopPropagation();
@@ -82,3 +81,4 @@ class p extends i.PureComponent {
         });
     }
 }
+n.d(t, {}, { A: p });

@@ -1,4 +1,3 @@
-d.d(t, { n: () => tR, r: () => tC, t: () => tD });
 var i,
     e,
     c,
@@ -17,8 +16,8 @@ var i,
     N = d(540647);
 d(455939);
 var M = d(612346),
-    X = d(936391),
-    r = d(269174),
+    r = d(936391),
+    X = d(269174),
     y = {
         version: 4,
         country_calling_codes: {
@@ -4519,8 +4518,8 @@ function lM(l, t, d, i, e) {
           })
         : l;
 }
-function lX(l) {
-    return (lX =
+function lr(l) {
+    return (lr =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
             ? function (l) {
                   return typeof l;
@@ -4531,7 +4530,7 @@ function lX(l) {
                       : typeof l;
               })(l);
 }
-function lr(l, t) {
+function lX(l, t) {
     var d = Object.keys(l);
     if (Object.getOwnPropertySymbols) {
         var i = Object.getOwnPropertySymbols(l);
@@ -4547,7 +4546,7 @@ function ly(l) {
     for (var t = 1; t < arguments.length; t++) {
         var d = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? lr(Object(d), !0).forEach(function (t) {
+            ? lX(Object(d), !0).forEach(function (t) {
                   var i, e, c;
                   ((i = l),
                       (e = t),
@@ -4558,7 +4557,7 @@ function ly(l) {
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(d))
-              : lr(Object(d)).forEach(function (t) {
+              : lX(Object(d)).forEach(function (t) {
                     Object.defineProperty(l, t, Object.getOwnPropertyDescriptor(d, t));
                 });
     }
@@ -4566,16 +4565,16 @@ function ly(l) {
 }
 function lY(l) {
     var t = (function (l, t) {
-        if ("object" != lX(l) || !l) return l;
+        if ("object" != lr(l) || !l) return l;
         var d = l[Symbol.toPrimitive];
         if (void 0 !== d) {
             var i = d.call(l, t || "default");
-            if ("object" != lX(i)) return i;
+            if ("object" != lr(i)) return i;
             throw TypeError("@@toPrimitive must return a primitive value.");
         }
         return ("string" === t ? String : Number)(l);
     })(l, "string");
-    return "symbol" == lX(t) ? t : t + "";
+    return "symbol" == lr(t) ? t : t + "";
 }
 var lT =
         ((i = function l(t, d, i) {
@@ -4762,12 +4761,12 @@ var lT =
                                 return "+".concat(p).concat(N);
                             case "RFC3966":
                                 var M = { number: "+".concat(p).concat(N), ext: l.ext },
-                                    X = M.number,
-                                    r = M.ext;
-                                if (!X) return "";
-                                if ("+" !== X[0])
+                                    r = M.number,
+                                    X = M.ext;
+                                if (!r) return "";
+                                if ("+" !== r[0])
                                     throw Error('"formatRFC3966()" expects "number" to be in E.164 format.');
-                                return "tel:".concat(X).concat(r ? ";ext=" + r : "");
+                                return "tel:".concat(r).concat(X ? ";ext=" + X : "");
                             case "IDD":
                                 if (!d.fromCountry) return;
                                 return (
@@ -6183,23 +6182,24 @@ var tb = l9("9", 15),
                 key: "chooseFormat",
                 value: function (l) {
                     for (
-                        var t, d, i, e = this, c = tn(this.matchingFormats.slice());
-                        !(i = c()).done &&
+                        var t, d, i = this, e = tn(this.matchingFormats.slice());
+                        !(d = e()).done &&
                         0 !==
-                            ((t = i.value),
-                            (d =
-                                e.chosenFormat === t
+                            (t = (function () {
+                                var t = d.value;
+                                return i.chosenFormat === t
                                     ? 0
-                                    : to.test(e.getFormatFormat(t, l.international))
-                                      ? e.createTemplateForFormat(t, l)
-                                          ? ((e.chosenFormat = t), 0)
-                                          : ((e.matchingFormats = e.matchingFormats.filter(function (l) {
+                                    : to.test(i.getFormatFormat(t, l.international))
+                                      ? i.createTemplateForFormat(t, l)
+                                          ? ((i.chosenFormat = t), 0)
+                                          : ((i.matchingFormats = i.matchingFormats.filter(function (l) {
                                                 return l !== t;
                                             })),
                                             1)
-                                      : 1));
+                                      : 1;
+                            })());
                     )
-                        if (1 === d) continue;
+                        if (1 === t) continue;
                     return (this.chosenFormat || this.resetFormat(), this.chosenFormat);
                 },
             },
@@ -6458,8 +6458,8 @@ function tG(l, t) {
 var tp = RegExp("^[" + $ + _ + "]+$", "i"),
     tN = "(?:[" + q + "][" + $ + _ + "]*|[" + $ + _ + "]+)",
     tM = RegExp("[^" + $ + _ + "]+.*$"),
-    tX = /[^\d\[\]]/,
-    tr =
+    tr = /[^\d\[\]]/,
+    tX =
         ((u = function l(t) {
             var d = t.defaultCountry,
                 i = t.defaultCallingCode,
@@ -6558,7 +6558,7 @@ var tp = RegExp("^[" + $ + _ + "]+$", "i"),
                     if (l) {
                         this.hasSelectedNumberingPlan = !0;
                         var t = l._nationalPrefixForParsing();
-                        this.couldPossiblyExtractAnotherNationalSignificantNumber = t && tX.test(t);
+                        this.couldPossiblyExtractAnotherNationalSignificantNumber = t && tr.test(t);
                     } else
                         ((this.hasSelectedNumberingPlan = void 0),
                             (this.couldPossiblyExtractAnotherNationalSignificantNumber = void 0));
@@ -6839,7 +6839,7 @@ var tT =
                         },
                     })),
                     (this.formatter = new tu({ state: this.state, metadata: this.metadata })),
-                    (this.parser = new tr({
+                    (this.parser = new tX({
                         defaultCountry: this.defaultCountry,
                         defaultCallingCode: this.defaultCallingCode,
                         metadata: this.metadata,
@@ -7430,15 +7430,11 @@ var tw = {
 function tS(l) {
     if (l) return tR.find((t) => t.code === l || t.code === l.toUpperCase());
 }
-function tC(l) {
-    let t = l.startsWith("+") ? l : `+${l}`;
-    return tR.find((l) => l.callingCode === t);
-}
-function tx(l, t, d) {
+function tC(l, t, d) {
     return new tI(d).input(`${t}${l}`).replace(t, "").trimStart();
 }
-var tg = { US: "(123) 456-7890", CA: "(123) 456-7890" },
-    tD = (0, p.a)(
+var tx = { US: "(123) 456-7890", CA: "(123) 456-7890" },
+    tg = (0, p.a)(
         (
             {
                 id: l,
@@ -7481,7 +7477,7 @@ var tg = { US: "(123) 456-7890", CA: "(123) 456-7890" },
                     () =>
                         c ??
                         (function (l) {
-                            let t = tg[l];
+                            let t = tx[l];
                             if (t) return t;
                             let d = (function () {
                                 return Y(tV, arguments);
@@ -7501,7 +7497,7 @@ var tg = { US: "(123) 456-7890", CA: "(123) 456-7890" },
                             })(d.formatNational(), d.nationalNumber);
                             if (i) return i;
                             let e = `+${tz(l)}`;
-                            return tx(d.nationalNumber, e, l);
+                            return tC(d.nationalNumber, e, l);
                         })(I),
                     [c, I],
                 ),
@@ -7541,7 +7537,7 @@ var tg = { US: "(123) 456-7890", CA: "(123) 456-7890" },
                 E = (0, p.h)(
                     (l) => {
                         let t = l.target.value;
-                        x ? (R(tx(t, x.callingCode, x.code)), J(t, x)) : R(t);
+                        x ? (R(tC(t, x.callingCode, x.code)), J(t, x)) : R(t);
                     },
                     [x, J],
                 ),
@@ -7568,7 +7564,7 @@ var tg = { US: "(123) 456-7890", CA: "(123) 456-7890" },
                                     }),
                             ],
                         }),
-                    (0, p.v)(r.t, {
+                    (0, p.v)(X.t, {
                         id: v,
                         options: C,
                         value: I,
@@ -7586,7 +7582,7 @@ var tg = { US: "(123) 456-7890", CA: "(123) 456-7890" },
                             return t ? `${t.emoji} ${t.callingCode}` : l.label;
                         },
                         class: "IncodePhoneInputComposedDropdown",
-                        siblingElement: (0, p.v)(X.t, {
+                        siblingElement: (0, p.v)(r.t, {
                             id: K,
                             ref: L,
                             type: "tel",
@@ -7658,4 +7654,16 @@ var tg = { US: "(123) 456-7890", CA: "(123) 456-7890" },
             });
         },
     );
-tD.displayName = "PhoneInputComposed";
+((tg.displayName = "PhoneInputComposed"),
+    d.d(
+        t,
+        {},
+        {
+            n: tR,
+            r: function (l) {
+                let t = l.startsWith("+") ? l : `+${l}`;
+                return tR.find((l) => l.callingCode === t);
+            },
+            t: tg,
+        },
+    ));

@@ -1,4 +1,3 @@
-r.d(n, { A: () => _, V: () => O });
 var t,
     i = r(477900);
 r(582128);
@@ -10,13 +9,13 @@ var s = r(28863),
     d = r(834730),
     u = r(404778),
     h = r(975807),
-    f = r(379257),
-    x = r(306537),
+    f = r(871309),
+    x = r(171576),
     j = r(36149),
     p = r(975571),
     A = r(418208),
     g = r(652215),
-    m = r(105292);
+    m = r(792996);
 function v(e) {
     return e
         ? m.intl.format(m.t.iWGjcg, {
@@ -73,15 +72,22 @@ function y(e) {
     });
 }
 var O = (((t = {})[(t.TOP = 0)] = "TOP"), (t[(t.BOTTOM = 1)] = "BOTTOM"), t);
-function _(e) {
-    let { className: n, noBackground: r, divider: t, channelId: s } = e;
-    if (!(0, A.Vv)(s ?? void 0)) return null;
-    let o = Array.isArray(t) ? t : null != t ? [t] : [];
-    return (0, i.jsxs)(i.Fragment, {
-        children: [
-            o.includes(0) && (0, i.jsx)(u.c, { gap: 16 }),
-            (0, i.jsx)("div", { className: n, children: r ? (0, i.jsx)(y, {}) : (0, i.jsx)(T, {}) }),
-            o?.includes(1) && (0, i.jsx)(u.c, { gap: 16 }),
-        ],
-    });
-}
+r.d(
+    n,
+    {},
+    {
+        A: function (e) {
+            let { className: n, noBackground: r, divider: t, channelId: s } = e;
+            if (!(0, A.Vv)(s ?? void 0)) return null;
+            let o = Array.isArray(t) ? t : null != t ? [t] : [];
+            return (0, i.jsxs)(i.Fragment, {
+                children: [
+                    o.includes(0) && (0, i.jsx)(u.c, { gap: 16 }),
+                    (0, i.jsx)("div", { className: n, children: r ? (0, i.jsx)(y, {}) : (0, i.jsx)(T, {}) }),
+                    o?.includes(1) && (0, i.jsx)(u.c, { gap: 16 }),
+                ],
+            });
+        },
+        V: O,
+    },
+);

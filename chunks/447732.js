@@ -1,4 +1,3 @@
-n.d(t, { G: () => r });
 var i,
     r =
         (((i = {})[(i.QUEST_REWARD = 1)] = "QUEST_REWARD"),
@@ -17,3 +16,4 @@ var i,
         (i[(i.GIFT_SUBSCRIPTION_GRANT = 14)] = "GIFT_SUBSCRIPTION_GRANT"),
         (i[(i.ORBS_ARCADE = 15)] = "ORBS_ARCADE"),
         i);
+n.d(t, {}, { G: r });

@@ -1,4 +1,3 @@
-P.d(A, { N: () => L, i: () => T });
 var _,
     T =
         (((_ = {}).XBOX_APPLICATION_ID = "622174530214821906"),
@@ -10,3 +9,4 @@ let L = {
     IMPLICIT_IDENTIFY_PREMIUM_APPLICATION_IDS: new Set(["622174530214821906"]),
     ALL: new Set(["622174530214821906", "984193235868065795", "1008890872156405890"]),
 };
+P.d(A, {}, { N: L, i: T });

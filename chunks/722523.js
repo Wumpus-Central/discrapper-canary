@@ -1,4 +1,3 @@
-r.d(i, { Ay: () => m, GU: () => k });
 var n = r(477900);
 r(582128);
 var l = r(503698),
@@ -10,8 +9,8 @@ var l = r(503698),
     c = r(689906),
     p = r(224331),
     o = r(568065),
-    x = r(959456),
-    h = r(105292),
+    x = r(586428),
+    h = r(792996),
     j = r(191137);
 function k(t) {
     let { className: i, guildId: r, powerup: l, onClick: a } = t,
@@ -73,7 +72,14 @@ function f(t) {
                 : null,
     });
 }
-function m(t) {
-    let { ...i } = t;
-    return (0, d.A)(i.guildId) ? (0, n.jsx)(f, { ...i }) : (0, n.jsx)(v, { ...i });
-}
+r.d(
+    i,
+    {},
+    {
+        Ay: function (t) {
+            let { ...i } = t;
+            return (0, d.A)(i.guildId) ? (0, n.jsx)(f, { ...i }) : (0, n.jsx)(v, { ...i });
+        },
+        GU: k,
+    },
+);

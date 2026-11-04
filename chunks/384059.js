@@ -1,8 +1,7 @@
-a.d(t, { OP: () => _, XJ: () => E, lO: () => T });
 var i,
     n = a(734057),
-    l = a(763827),
-    A = a(174459),
+    l = a(495867),
+    A = a(129230),
     S = a(652215),
     _ =
         (((i = {}).MIC = "Mic"),
@@ -45,26 +44,33 @@ var i,
         (i.VOICE_USER = "Voice User"),
         (i.STREAM_SETTINGS = "Stream Settings"),
         i);
-function E(e, t, a) {
-    let i = l.A.getChannelId(),
-        _ = l.A.getGuildId(),
-        E = n.A.getChannel(i)?.type;
-    A.default.track(S.HAw.CALL_BUTTON_CLICKED, {
-        location: e,
-        button_name: t,
-        toggled_active: a,
-        guild_id: _,
-        channel_id: i,
-        channel_type: E,
-    });
-}
-function T(e, t, a) {
-    let i = n.A.getChannel(a);
-    A.default.track(S.HAw.CALL_BUTTON_CLICKED, {
-        location: e,
-        button_name: t,
-        guild_id: i?.getGuildId(),
-        channel_id: a,
-        channel_type: i?.type,
-    });
-}
+a.d(
+    t,
+    {},
+    {
+        OP: _,
+        XJ: function (e, t, a) {
+            let i = l.A.getChannelId(),
+                _ = l.A.getGuildId(),
+                E = n.A.getChannel(i)?.type;
+            A.default.track(S.HAw.CALL_BUTTON_CLICKED, {
+                location: e,
+                button_name: t,
+                toggled_active: a,
+                guild_id: _,
+                channel_id: i,
+                channel_type: E,
+            });
+        },
+        lO: function (e, t, a) {
+            let i = n.A.getChannel(a);
+            A.default.track(S.HAw.CALL_BUTTON_CLICKED, {
+                location: e,
+                button_name: t,
+                guild_id: i?.getGuildId(),
+                channel_id: a,
+                channel_type: i?.type,
+            });
+        },
+    },
+);

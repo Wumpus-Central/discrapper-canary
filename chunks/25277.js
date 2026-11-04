@@ -1,4 +1,3 @@
-s.d(t, { A: () => l });
 var r = s(582128),
     n = s(650583);
 class l extends r.Component {
@@ -104,3 +103,4 @@ class l extends r.Component {
         return this.props.children;
     }
 }
+s.d(t, {}, { A: l });

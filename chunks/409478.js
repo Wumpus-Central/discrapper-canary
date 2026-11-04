@@ -1,23 +1,17 @@
-i.d(t, { A: () => g });
 var r = i(477900),
     a = i(582128),
     n = i(598748),
-    l = i(17928),
-    u = i(486610),
+    l = i(855986),
+    u = i(284460),
     o = i(531913),
     s = i(587895),
     d = i(633075),
     c = i(139730),
-    p = i(58216),
+    p = i(591410),
     f = i(287809),
     h = i(238490),
     w = i(844474);
 function g(e) {
-    let { applicationId: t } = e,
-        i = (0, l.bG)([f.default], () => f.default.getCurrentUser());
-    return null == i ? null : (0, r.jsx)(m, { applicationId: t, user: i });
-}
-function m(e) {
     let { applicationId: t, user: i } = e,
         f = (0, l.bG)([s.A], () => s.A.getApplication(t)),
         g = a.useMemo(() => new d.R({ applicationId: t }), [t]),
@@ -58,3 +52,14 @@ function m(e) {
           })
         : null;
 }
+i.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { applicationId: t } = e,
+                i = (0, l.bG)([f.default], () => f.default.getCurrentUser());
+            return null == i ? null : (0, r.jsx)(g, { applicationId: t, user: i });
+        },
+    },
+);

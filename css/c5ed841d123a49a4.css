@@ -1,0 +1,432 @@
+.notificationsIcon_CF-7-7 {
+    display: block
+}
+
+.full-motion .badgeTransition_CF-7-7 {
+    transition: all .2s cubic-bezier(0, 0, .2, 1.1)
+}
+
+.grayBadge_CF-7-7 {
+    background-color: var(--background-mod-strong) !important;
+    color: var(--white);
+    font-size: 10px
+}
+
+.grayBadge_CF-7-7.selected_CF-7-7 {
+    background-color: var(--interactive-text-active) !important;
+    color: var(--background-base-lowest)
+}
+
+.button_i2sb9B {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.frameOutline_f4VuTX {
+    box-shadow: 0 0 var(--space-12) var(--background-brand);
+    outline: 3px solid var(--background-brand)
+}
+
+.frameOutline_f4VuTX,
+.ink_f4VuTX {
+    pointer-events: none;
+    position: fixed;
+    z-index: 1003
+}
+
+.ink_f4VuTX {
+    overflow: hidden
+}
+
+.canvas_f4VuTX {
+    height: 100%;
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    touch-action: none;
+    width: 100%
+}
+
+.canvas_f4VuTX[data-interactive] {
+    cursor: crosshair;
+    pointer-events: auto
+}
+
+.canvas_f4VuTX[data-tool=move] {
+    cursor: move
+}
+
+.canvas_f4VuTX[data-tool=move][data-dragging] {
+    cursor: grabbing
+}
+
+.canvas_f4VuTX[data-tool=text] {
+    cursor: text
+}
+
+.selection_f4VuTX {
+    pointer-events: none
+}
+
+.handle_f4VuTX,
+.selection_f4VuTX {
+    border: 1px solid var(--background-brand);
+    position: absolute
+}
+
+.handle_f4VuTX {
+    background: var(--white);
+    border-radius: var(--radius-xs);
+    height: var(--space-8);
+    margin: calc(var(--space-4)*-1);
+    width: var(--space-8)
+}
+
+.handle_f4VuTX[data-corner=nw] {
+    inset-block-start: 0;
+    inset-inline-start: 0
+}
+
+.handle_f4VuTX[data-corner=ne] {
+    inset-block-start: 0;
+    inset-inline-end: 0
+}
+
+.handle_f4VuTX[data-corner=sw] {
+    inset-block-end: 0;
+    inset-inline-start: 0
+}
+
+.handle_f4VuTX[data-corner=se] {
+    inset-block-end: 0;
+    inset-inline-end: 0
+}
+
+.railDock_f4VuTX {
+    position: fixed;
+    z-index: 1006
+}
+
+.flyout_f4VuTX,
+.pickDock_f4VuTX,
+.rail_f4VuTX {
+    --togglebutton-icon-only-icon-default: var(--white);
+    --togglebutton-icon-only-icon-hover: var(--white);
+    --togglebutton-icon-only-icon-selected: var(--white);
+    --togglebutton-icon-only-icon-selected-hover: var(--white);
+    --togglebutton-icon-only-icon-active: var(--white);
+    --control-icon-only-icon-default: var(--white);
+    --control-icon-only-icon-hover: var(--white);
+    --control-icon-only-icon-active: var(--white);
+    --control-icon-only-background-hover: var(--brand-560);
+    --control-icon-only-background-active: var(--brand-630);
+    --control-icon-only-border-hover: transparent;
+    --control-icon-only-border-active: transparent
+}
+
+.stack_f4VuTX {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12)
+}
+
+.pickDock_f4VuTX {
+    --control-icon-only-background-hover: transparent;
+    --control-icon-only-background-active: transparent;
+    background: var(--background-brand);
+    box-shadow: var(--shadow-medium);
+    display: flex;
+    padding: var(--space-6)
+}
+
+.pickDock_f4VuTX,
+.pickDock_f4VuTX .tool_f4VuTX {
+    border-radius: var(--radius-round)
+}
+
+.pickDock_f4VuTX .tool_f4VuTX:hover {
+    background: var(--brand-560)
+}
+
+.pickDock_f4VuTX .tool_f4VuTX[data-active] {
+    background: var(--brand-630)
+}
+
+.rail_f4VuTX {
+    align-items: center;
+    background: var(--background-brand);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-medium);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-6)
+}
+
+.railDivider_f4VuTX {
+    align-self: stretch;
+    background: var(--white);
+    height: 1px;
+    opacity: .4
+}
+
+.tool_f4VuTX {
+    border-radius: var(--radius-sm);
+    display: flex
+}
+
+.tool_f4VuTX[data-active] {
+    background: var(--brand-630);
+    box-shadow: inset 0 0 0 1px var(--white)
+}
+
+.flyoutAnchor_f4VuTX {
+    position: relative
+}
+
+.flyout_f4VuTX {
+    background: var(--background-brand);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-medium);
+    display: flex;
+    gap: var(--space-4);
+    inset-block-start: calc(var(--space-6)*-1);
+    inset-inline-start: 100%;
+    margin-inline-start: var(--space-8);
+    padding: var(--space-6);
+    position: absolute
+}
+
+.flyout_f4VuTX:before {
+    content: "";
+    inset-block: 0;
+    inset-inline-start: calc(var(--space-8)*-1);
+    position: absolute;
+    width: var(--space-8)
+}
+
+.flyout_f4VuTX[data-direction=column] {
+    flex-direction: column
+}
+
+.flyout_f4VuTX[data-direction=row] {
+    flex-direction: row
+}
+
+.sketchThumb_f4VuTX {
+    background: var(--background-mod-normal);
+    border-radius: var(--radius-xs);
+    color: var(--icon-muted);
+    flex-shrink: 0;
+    height: var(--space-32);
+    position: relative;
+    width: var(--space-32)
+}
+
+.sketchBadge_f4VuTX,
+.sketchThumb_f4VuTX {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.sketchBadge_f4VuTX {
+    background: var(--background-brand);
+    border-radius: var(--radius-round);
+    color: var(--white);
+    height: var(--space-16);
+    inset-block-end: calc(var(--space-4)*-1);
+    inset-inline-end: calc(var(--space-4)*-1);
+    position: absolute;
+    width: var(--space-16)
+}
+
+.container_n6waMY {
+    background-color: var(--background-base-lowest);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    gap: var(--space-4);
+    padding: var(--space-4)
+}
+
+.container_u8H5i3 {
+    background-color: var(--background-base-lowest);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    padding: var(--space-4)
+}
+
+.clickable_bcIaZG {
+    cursor: pointer
+}
+
+.clickable_bcIaZG:hover {
+    --custom-game-profile-guild-icon-border-color: var(--background-surface-higher);
+    background-color: var(--background-surface-higher)
+}
+
+.container_ySYCnn {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    -moz-column-gap: var(--space-16);
+    column-gap: var(--space-16);
+    flex-wrap: wrap;
+    padding-block: var(--space-8);
+    padding-inline: var(--space-8) var(--space-16);
+    row-gap: var(--space-8)
+}
+
+.container_ySYCnn,
+.guildInfo_ySYCnn {
+    align-items: center;
+    display: flex
+}
+
+.guildInfo_ySYCnn {
+    flex: 1 1 240px;
+    gap: var(--space-12);
+    min-width: 0
+}
+
+.textContainer_ySYCnn {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    min-width: 0
+}
+
+.guildNameContainer_ySYCnn {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.guildName_ySYCnn {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.memberCounts_ySYCnn {
+    margin-inline-start: auto
+}
+
+.description_ySYCnn {
+    max-width: 540px
+}
+
+.scroller_zGFyZa {
+    scroll-padding-top: calc(var(--custom-top-nav-height) + var(--space-4));
+    z-index: 2
+}
+
+.topNavSpacer_zGFyZa {
+    flex: 0 0 var(--custom-top-nav-height);
+    height: var(--custom-top-nav-height)
+}
+
+.section_zGFyZa {
+    padding: var(--space-16)
+}
+
+.headerControls_zGFyZa {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.list_zGFyZa {
+    display: flex;
+    flex-direction: column
+}
+
+.grid_zGFyZa,
+.list_zGFyZa {
+    gap: var(--space-12)
+}
+
+.grid_zGFyZa {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
+}
+
+.card_zGFyZa,
+.skeletonCard_zGFyZa {
+    padding: var(--space-16)
+}
+
+.card_zGFyZa,
+.skeletonCard_zGFyZa,
+.skeletonListItem_zGFyZa {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg)
+}
+
+.skeletonListItem_zGFyZa {
+    align-items: center;
+    display: flex;
+    gap: var(--space-12);
+    padding-block: var(--space-8);
+    padding-inline: var(--space-8) var(--space-16)
+}
+
+.skeletonIcon_zGFyZa {
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+    height: var(--size-48);
+    width: var(--size-48)
+}
+
+.skeletonText_zGFyZa {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.skeletonName_zGFyZa {
+    border-radius: var(--radius-xs);
+    height: var(--size-20);
+    width: 60%
+}
+
+.skeletonDescription_zGFyZa {
+    width: 90%
+}
+
+.skeletonDescription_zGFyZa,
+.skeletonMemberCounts_zGFyZa {
+    border-radius: var(--radius-xs);
+    height: var(--size-12)
+}
+
+.skeletonMemberCounts_zGFyZa {
+    width: var(--size-160)
+}
+
+.skeletonListItem_zGFyZa .skeletonText_zGFyZa {
+    gap: 0
+}
+
+.skeletonListItem_zGFyZa .skeletonDescription_zGFyZa {
+    margin-block: calc(var(--space-xs) + var(--space-6)/2) calc(var(--space-6)/2);
+    max-width: 540px
+}
+
+.skeletonDescriptionSecondLine_zGFyZa {
+    border-radius: var(--radius-xs);
+    height: var(--size-12);
+    margin-block: calc(var(--space-6)/2);
+    max-width: 320px;
+    width: 60%
+}
+
+/*# sourceMappingURL=c5ed841d123a49a4.css.map*/

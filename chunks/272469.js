@@ -1,4 +1,3 @@
-s.d(e, { pq: () => a, vF: () => c });
 var i = s(780755),
     n = s(978862);
 let r = ["debug", "info", "warn", "error", "log", "assert", "trace"],
@@ -47,3 +46,4 @@ let c = (0, n.B)("logger", function () {
         e
     );
 });
+s.d(e, {}, { pq: a, vF: c });

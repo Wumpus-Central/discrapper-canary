@@ -1,8 +1,8 @@
 e.exports = {
-    ZZ: "field_ccf340",
-    $: "titleRow_ccf340",
-    TG: "editableRow_ccf340",
-    wz: "pencil_ccf340",
-    Qw: "titleText_ccf340",
-    qf: "placeholder_ccf340",
+    ZZ: "field_SP2x0M",
+    $: "titleRow_SP2x0M",
+    TG: "editableRow_SP2x0M",
+    wz: "pencil_SP2x0M",
+    Qw: "titleText_SP2x0M",
+    qf: "placeholder_SP2x0M",
 };

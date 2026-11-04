@@ -1,7 +1,6 @@
-n.d(t, { F: () => f, i: () => C });
 var l = n(284009),
     i = n.n(l),
-    r = n(277984),
+    r = n(781300),
     a = n(930767),
     s = n(71532),
     o = n(166532),
@@ -51,10 +50,7 @@ async function h(e, t) {
     let { billingAddressState: n, analyticsLocation: l } = e;
     return { paymentSource: await (0, r.A8)(n.info, t, l), responseType: "payment-source" };
 }
-function C(e) {
-    return e in f;
-}
-let f = {
+let C = {
     [u.he.CARD]: {
         submitAddressStep: async (e) =>
             e.shouldUsePaymentElement
@@ -143,3 +139,13 @@ let f = {
         },
     },
 };
+n.d(
+    t,
+    {},
+    {
+        F: C,
+        i: function (e) {
+            return e in C;
+        },
+    },
+);

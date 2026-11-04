@@ -1,4 +1,3 @@
-n.d(t, { P: () => a, e: () => s });
 var i,
     r,
     a =
@@ -15,3 +14,4 @@ var i,
         (r[(r.ALL_MESSAGES = 1)] = "ALL_MESSAGES"),
         (r[(r.ONLY_MENTIONS = 2)] = "ONLY_MENTIONS"),
         r);
+n.d(t, {}, { P: a, e: s });

@@ -1,21 +1,12 @@
-n.d(t, { L3: () => u, Z_: () => d, jA: () => c });
 var i = n(73153),
     r = n(267102),
     a = n(723702),
-    s = n(900582),
+    s = n(334604),
     l = n(652215);
 function o(e) {
     i.h.dispatch({ type: "CONTEXT_MENU_OPEN", contextMenu: e });
 }
-function d(e) {
-    {
-        let { flushSync: t } = n(333007);
-        t(() => {
-            i.h.dispatch({ type: "CONTEXT_MENU_CLOSE" }).finally(e);
-        });
-    }
-}
-function c(e, t, n, i) {
+function d(e, t, n, i) {
     if ((e.stopPropagation(), null != e.currentTarget.contains && !e.currentTarget.contains(e.target))) return;
     let d = 0,
         c = 0;
@@ -42,12 +33,27 @@ function c(e, t, n, i) {
             config: { context: __OVERLAY__ ? l.BRT.OVERLAY : ((0, r.zd)() ?? l.BRT.APP), ...n },
         },
         _ = "nativeEvent" in e ? e.nativeEvent : e;
-    if (n?.enableSpellCheck && (0, a.isDesktop)() && _.isTrusted) {
+    if (n?.enableSpellCheck && (0, a.xl)() && _.isTrusted) {
         let e = (0, s.nL)(function () {
             (e(), o(u));
         });
     } else (e.preventDefault(), o(u));
 }
-function u(e, t, n) {
-    c(e, void 0, n, t);
-}
+n.d(
+    t,
+    {},
+    {
+        L3: function (e, t, n) {
+            d(e, void 0, n, t);
+        },
+        Z_: function (e) {
+            {
+                let { flushSync: t } = n(333007);
+                t(() => {
+                    i.h.dispatch({ type: "CONTEXT_MENU_CLOSE" }).finally(e);
+                });
+            }
+        },
+        jA: d,
+    },
+);

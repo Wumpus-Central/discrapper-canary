@@ -1,8 +1,8 @@
-e.exports = {
-    zr: "root__0d52d",
-    iE: "wrapper__0d52d",
-    wx: "header__0d52d",
-    rf: "body__0d52d",
-    ry: "logos__0d52d",
-    z3: "error__0d52d",
+o.exports = {
+    zr: "root_UXxaSc",
+    iE: "wrapper_UXxaSc",
+    wx: "header_UXxaSc",
+    rf: "body_UXxaSc",
+    ry: "logos_UXxaSc",
+    z3: "error_UXxaSc",
 };

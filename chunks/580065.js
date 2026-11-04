@@ -1,9 +1,9 @@
 e.exports = {
-    QF: "breadcrumb_c2a763",
-    WH: "innerContainer_c2a763",
-    Pt: "icons_c2a763",
-    Kk: "icon_c2a763",
-    um: "displayCount_c2a763",
-    pp: "displayCountText_c2a763",
-    gq: "displayCountTextColor_c2a763",
+    QF: "breadcrumb_s6-upr",
+    WH: "innerContainer_s6-upr",
+    Pt: "icons_s6-upr",
+    Kk: "icon_s6-upr",
+    um: "displayCount_s6-upr",
+    pp: "displayCountText_s6-upr",
+    gq: "displayCountTextColor_s6-upr",
 };

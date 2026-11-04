@@ -1,4 +1,3 @@
-n.d(t, { A: () => i });
 let i = new (class {
     setActive(e) {
         return Promise.resolve();
@@ -23,3 +22,4 @@ let i = new (class {
         return !1;
     }
 })();
+n.d(t, {}, { A: i });

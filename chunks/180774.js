@@ -1,12 +1,9 @@
-(Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.TIMEZONE_ABBR_MAP = void 0),
-    (t.getNthWeekdayOfMonth = a),
-    (t.getLastWeekdayOfMonth = i),
+((t.Js = void 0),
     (t.toTimezoneOffset = function (e, r, n = {}) {
         var a;
         if (null == e) return null;
         if ("number" == typeof e) return e;
-        let i = null != (a = n[e]) ? a : t.TIMEZONE_ABBR_MAP[e];
+        let i = null != (a = n[e]) ? a : t.Js[e];
         return null == i
             ? null
             : "number" == typeof i
@@ -33,7 +30,7 @@ function i(e, t, r, n = 0) {
         (a = u === s ? 7 : u < s ? 7 + u - s : u - s), o.setDate(o.getDate() - a), new Date(e, t - 1, o.getDate(), n)
     );
 }
-t.TIMEZONE_ABBR_MAP = {
+t.Js = {
     ACDT: 630,
     ACST: 570,
     ADT: -180,

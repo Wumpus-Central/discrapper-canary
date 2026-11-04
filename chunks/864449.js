@@ -1,10 +1,10 @@
-_.exports = {
-    _P: "avatarDecorationPreview__9baf3",
-    xC: "profileEffectPreview__9baf3",
-    pI: "profileFramePreview__9baf3",
-    M4: "nameplatePreview__9baf3",
-    qF: "nameplate__9baf3",
-    l$: "giftAnimation__9baf3",
-    hT: "bundlePreview__9baf3",
-    dc: "spinnerContainer__9baf3",
+e.exports = {
+    _P: "avatarDecorationPreview_ySVCWt",
+    xC: "profileEffectPreview_ySVCWt",
+    pI: "profileFramePreview_ySVCWt",
+    M4: "nameplatePreview_ySVCWt",
+    qF: "nameplate_ySVCWt",
+    l$: "giftAnimation_ySVCWt",
+    hT: "bundlePreview_ySVCWt",
+    dc: "spinnerContainer_ySVCWt",
 };

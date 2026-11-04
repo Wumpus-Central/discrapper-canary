@@ -1,4 +1,3 @@
-n.d(t, { A: () => o, R: () => a });
 var l,
     r = n(582128),
     i = n(435558),
@@ -11,75 +10,82 @@ var l,
 function u(e) {
     return +(2 === e || 3 === e);
 }
-let o = function (e) {
-    let {
-            initialElementDimension: t,
-            resizableDomNodeRef: n,
-            maxDimension: l,
-            minDimension: a,
-            onElementResize: o,
-            onElementResizeStart: s,
-            onElementResizeEnd: c,
-            throttleDuration: f = 300,
-            orientation: p,
-            usePointerEvents: d = !1,
-            getClampedValue: h = i.clamp,
-            onApplyDimension: m,
-        } = e,
-        [g, y] = r.useState(!1),
-        E = r.useRef(0),
-        v = r.useRef(!1),
-        x = r.useRef(null == t ? 0 : t);
-    return (
-        r.useLayoutEffect(() => {
-            if (!g || null == n.current) return;
-            function e(e) {
-                let t = 1 === u(p) ? e.screenX : e.screenY,
-                    n = 0 === p || 2 === p,
-                    l = (t - E.current) * (n ? -1 : 1);
-                return x.current + l;
-            }
-            function t(e) {
-                return h(e, a ?? 0, l ?? e);
-            }
-            let r = null != o ? (0, i.throttle)(o, f) : null,
-                L = 1 === u(p) ? "width" : "height",
-                w =
-                    m ??
-                    ((e) => {
-                        null != n.current && (n.current.style[L] = `${e}px`);
-                    });
-            function T(l) {
-                if (null == n.current) return null;
-                let i = e(l),
-                    a = t(i);
-                (w(a), v.current || ((v.current = !0), s?.(a)), r?.(a, i));
-            }
-            function C(n) {
-                y(!1);
-                let l = e(n),
-                    r = t(l);
-                (w(r), o?.(r, l), c?.(r), (v.current = !1));
-            }
-            let R = d ? "pointerup" : "mouseup",
-                N = d ? "pointermove" : "mousemove",
-                S = n.current.ownerDocument;
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let {
+                    initialElementDimension: t,
+                    resizableDomNodeRef: n,
+                    maxDimension: l,
+                    minDimension: a,
+                    onElementResize: o,
+                    onElementResizeStart: s,
+                    onElementResizeEnd: c,
+                    throttleDuration: f = 300,
+                    orientation: p,
+                    usePointerEvents: d = !1,
+                    getClampedValue: h = i.clamp,
+                    onApplyDimension: m,
+                } = e,
+                [g, y] = r.useState(!1),
+                E = r.useRef(0),
+                v = r.useRef(!1),
+                x = r.useRef(null == t ? 0 : t);
             return (
-                S.addEventListener(R, C),
-                S.addEventListener(N, T),
-                () => {
-                    (S.removeEventListener(R, C), S.removeEventListener(N, T), r?.cancel());
-                }
+                r.useLayoutEffect(() => {
+                    if (!g || null == n.current) return;
+                    function e(e) {
+                        let t = 1 === u(p) ? e.screenX : e.screenY,
+                            n = 0 === p || 2 === p,
+                            l = (t - E.current) * (n ? -1 : 1);
+                        return x.current + l;
+                    }
+                    function t(e) {
+                        return h(e, a ?? 0, l ?? e);
+                    }
+                    let r = null != o ? (0, i.throttle)(o, f) : null,
+                        L = 1 === u(p) ? "width" : "height",
+                        w =
+                            m ??
+                            ((e) => {
+                                null != n.current && (n.current.style[L] = `${e}px`);
+                            });
+                    function T(l) {
+                        if (null == n.current) return null;
+                        let i = e(l),
+                            a = t(i);
+                        (w(a), v.current || ((v.current = !0), s?.(a)), r?.(a, i));
+                    }
+                    function C(n) {
+                        y(!1);
+                        let l = e(n),
+                            r = t(l);
+                        (w(r), o?.(r, l), c?.(r), (v.current = !1));
+                    }
+                    let R = d ? "pointerup" : "mouseup",
+                        N = d ? "pointermove" : "mousemove",
+                        S = n.current.ownerDocument;
+                    return (
+                        S.addEventListener(R, C),
+                        S.addEventListener(N, T),
+                        () => {
+                            (S.removeEventListener(R, C), S.removeEventListener(N, T), r?.cancel());
+                        }
+                    );
+                }, [g, o, a, l, p, n, f, c, d, h, s, m]),
+                r.useCallback(
+                    (e) => {
+                        let t = 1 === u(p);
+                        (null != n.current && (x.current = t ? n.current.offsetWidth : n.current.offsetHeight),
+                            (E.current = t ? e.screenX : e.screenY),
+                            y(!0));
+                    },
+                    [p, n],
+                )
             );
-        }, [g, o, a, l, p, n, f, c, d, h, s, m]),
-        r.useCallback(
-            (e) => {
-                let t = 1 === u(p);
-                (null != n.current && (x.current = t ? n.current.offsetWidth : n.current.offsetHeight),
-                    (E.current = t ? e.screenX : e.screenY),
-                    y(!0));
-            },
-            [p, n],
-        )
-    );
-};
+        },
+        R: a,
+    },
+);

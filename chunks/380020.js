@@ -1,7 +1,6 @@
-n.d(t, { A: () => o });
 var i = n(73153),
     r = n(439372),
-    a = n(842018);
+    a = n(894768);
 class s extends r.A {
     stores = new Map().set(a.A, l);
 }
@@ -14,3 +13,4 @@ function l() {
     });
 }
 let o = new s();
+n.d(t, {}, { A: o });

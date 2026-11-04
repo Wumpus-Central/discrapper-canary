@@ -1,0 +1,10 @@
+.container_jlSvwJ {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    min-height: 100px;
+    min-width: 300px;
+    position: relative
+}
+
+/*# sourceMappingURL=45e7101cc00299d0.css.map*/

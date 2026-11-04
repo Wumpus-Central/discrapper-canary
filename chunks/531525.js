@@ -1,1 +1,1 @@
-e.exports = { z: "loadingSkeletonPulse_aee3fe", m: "loadingSkeleton_aee3fe" };
+e.exports = { m: "loadingSkeleton_TCo9Gp" };

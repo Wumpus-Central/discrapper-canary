@@ -1,7 +1,12 @@
-function i(e) {
-    return e;
-}
-function r(e) {
-    return Promise.resolve(e);
-}
-n.d(t, { Y: () => r, Z: () => i });
+n.d(
+    t,
+    {},
+    {
+        Y: function (e) {
+            return Promise.resolve(e);
+        },
+        Z: function (e) {
+            return e;
+        },
+    },
+);

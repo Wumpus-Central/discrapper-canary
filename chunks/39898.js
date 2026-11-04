@@ -1,7 +1,7 @@
 e.exports = {
-    Zj: "upsellContainer__73000",
-    xw: "upsellContent__73000",
-    dt: "upsellFooter__73000",
-    $P: "upsellHeader__73000",
-    kz: "upsellClose__73000",
+    Zj: "upsellContainer_KrGPlR",
+    xw: "upsellContent_KrGPlR",
+    dt: "upsellFooter_KrGPlR",
+    $P: "upsellHeader_KrGPlR",
+    kz: "upsellClose_KrGPlR",
 };

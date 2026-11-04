@@ -1,5 +1,4 @@
-n.d(t, { A: () => f });
-var i = n(17928),
+var i = n(855986),
     r = n(73153),
     a = n(773669),
     s = n(403362);
@@ -73,3 +72,4 @@ let f = new h(r.h, {
     },
     STOREFRONT_PROMOTION_ID_OVERRIDE_SET: A,
 });
+n.d(t, {}, { A: f });

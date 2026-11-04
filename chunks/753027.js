@@ -1,5 +1,4 @@
-n.d(t, { A: () => u });
-var i = n(17928),
+var i = n(855986),
     r = n(73153),
     a = n(626584),
     s = n(927813),
@@ -42,3 +41,4 @@ class c extends i.Ay.Store {
     }
 }
 let u = new c();
+n.d(t, {}, { A: u });

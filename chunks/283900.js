@@ -1,12 +1,11 @@
-n.d(t, { A: () => x, H: () => m });
 var l = n(477900);
 n(582128);
 var i = n(97808),
     r = n(778712),
     s = n(854627),
-    a = n(19575),
-    d = n(83152),
-    c = n(105292),
+    a = n(253400),
+    d = n(665956),
+    c = n(792996),
     u = n(756308);
 let o = a.Ay.getEnableHardwareAcceleration() ? i.Js : i.eu;
 function m(e) {
@@ -22,13 +21,20 @@ function m(e) {
         }),
     });
 }
-let x = function (e) {
-    let { currentUser: t, otherUser: n, children: i } = e;
-    return (0, l.jsx)("div", {
-        className: u.b,
-        children: (0, l.jsxs)("div", {
-            className: u.M,
-            children: [(0, l.jsx)(m, { user: t }), i, (0, l.jsx)(m, { user: n })],
-        }),
-    });
-};
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { currentUser: t, otherUser: n, children: i } = e;
+            return (0, l.jsx)("div", {
+                className: u.b,
+                children: (0, l.jsxs)("div", {
+                    className: u.M,
+                    children: [(0, l.jsx)(m, { user: t }), i, (0, l.jsx)(m, { user: n })],
+                }),
+            });
+        },
+        H: m,
+    },
+);

@@ -1,66 +1,70 @@
-n.d(e, { default: () => c });
 var i = n(477900),
     s = n(582128),
-    r = n(131937),
+    r = n(613412),
     a = n(189213),
     l = n(95477),
     u = n(181658),
-    o = n(105292);
+    o = n(792996);
 let p = RegExp(
     "(^[-!#$%&'*+/=?^_`{}|~0-9A-Z]+(\\.[-!#$%&'*+/=?^_`{}|~0-9A-Z]+)*|^\"([\\001-\\010\\013\\014\\016-\\037!#-\\[\\]-\\177]|\\\\[\\001-011\\013\\014\\016-\\177])*\")@(?:[A-Z0-9](?:[A-Z0-9-]{0,2000}[A-Z0-9])?\\.)+[A-Z]{2,63}\\.?$",
     "i",
 );
-function c(t) {
-    let {
-            transitionState: e,
-            onFormSubmit: n,
-            onSuccess: c,
-            onClose: d,
-            headerText: m,
-            confirmButtonText: h,
-            confirmButtonVariant: f = "primary",
-            subtitle: A,
-        } = t,
-        [y, g] = s.useState(!1),
-        [b, k] = s.useState(""),
-        [v, C] = s.useState(null),
-        E = s.useRef(null);
-    async function x(t) {
-        if ((t.preventDefault(), C(null), g(!0), !1 === p.test(b))) {
-            (C(o.intl.string(o.t.hML7Gw)), g(!1));
-            return;
-        }
-        try {
-            let t = null != n ? await n(b) : void 0;
-            (null != c && (null != t ? c({ response: t, email: b }) : c(b)), d());
-        } catch (t) {
-            C(new u.A(t).getAnyErrorMessage());
-        } finally {
-            g(!1);
-        }
-    }
-    return (0, i.jsx)("form", {
-        onSubmit: x,
-        children: (0, i.jsx)(a.a, {
-            transitionState: e,
-            trackingProps: {
-                impression: { impressionName: r.ImpressionNames.URF_ENTER_EMAIL },
-                impressionType: r.ImpressionTypes.MODAL,
-            },
-            title: m,
-            subtitle: A,
-            actions: [
-                { text: o.intl.string(o.t["ETE/oC"]), onClick: d, variant: "secondary", disabled: y },
-                { text: h, variant: f, loading: y, type: "submit" },
-            ],
-            onClose: d,
-            children: (0, i.jsx)(l.k, {
-                label: o.intl.string(o.t.hvOfmC),
-                error: v,
-                value: b,
-                onChange: k,
-                inputRef: E,
-            }),
-        }),
-    });
-}
+n.d(
+    e,
+    {},
+    {
+        default: function (t) {
+            let {
+                    transitionState: e,
+                    onFormSubmit: n,
+                    onSuccess: c,
+                    onClose: d,
+                    headerText: m,
+                    confirmButtonText: h,
+                    confirmButtonVariant: f = "primary",
+                    subtitle: A,
+                } = t,
+                [y, g] = s.useState(!1),
+                [b, k] = s.useState(""),
+                [v, C] = s.useState(null),
+                E = s.useRef(null);
+            return (0, i.jsx)("form", {
+                onSubmit: async function (t) {
+                    if ((t.preventDefault(), C(null), g(!0), !1 === p.test(b))) {
+                        (C(o.intl.string(o.t.hML7Gw)), g(!1));
+                        return;
+                    }
+                    try {
+                        let t = null != n ? await n(b) : void 0;
+                        (null != c && (null != t ? c({ response: t, email: b }) : c(b)), d());
+                    } catch (t) {
+                        C(new u.A(t).getAnyErrorMessage());
+                    } finally {
+                        g(!1);
+                    }
+                },
+                children: (0, i.jsx)(a.a, {
+                    transitionState: e,
+                    trackingProps: {
+                        impression: { impressionName: r.ImpressionNames.URF_ENTER_EMAIL },
+                        impressionType: r.ImpressionTypes.MODAL,
+                    },
+                    title: m,
+                    subtitle: A,
+                    actions: [
+                        { text: o.intl.string(o.t["ETE/oC"]), onClick: d, variant: "secondary", disabled: y },
+                        { text: h, variant: f, loading: y, type: "submit" },
+                    ],
+                    onClose: d,
+                    children: (0, i.jsx)(l.k, {
+                        label: o.intl.string(o.t.hvOfmC),
+                        error: v,
+                        value: b,
+                        onChange: k,
+                        inputRef: E,
+                    }),
+                }),
+            });
+        },
+    },
+);

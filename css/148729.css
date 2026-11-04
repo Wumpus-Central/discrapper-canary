@@ -1,4 +1,4 @@
-.inspector_aeaaeb {
+.inspector_1bDrGE {
     align-items: center;
     background-color: var(--background-base-lower);
     border-top: 1px solid var(--border-normal);
@@ -12,40 +12,40 @@
     width: 100%
 }
 
-.graphicPrimary_aeaaeb {
+.graphicPrimary_1bDrGE {
     height: var(--custom-expression-picker-constants-expression-picker-inspector-bar-graphic-primary-dimensions);
     width: var(--custom-expression-picker-constants-expression-picker-inspector-bar-graphic-primary-dimensions)
 }
 
-.graphicSecondary_aeaaeb {
+.graphicSecondary_1bDrGE {
     height: var(--custom-expression-picker-constants-expression-picker-inspector-bar-graphic-secondary-dimensions);
     margin-inline-start: 8px;
     width: var(--custom-expression-picker-constants-expression-picker-inspector-bar-graphic-secondary-dimensions)
 }
 
-.textWrapper_aeaaeb {
+.textWrapper_1bDrGE {
     flex: 1;
     margin-inline-start: 8px;
     overflow: hidden
 }
 
-.titlePrimary_aeaaeb,
-.titleSecondary_aeaaeb {
+.titlePrimary_1bDrGE,
+.titleSecondary_1bDrGE {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
 }
 
-.titleSecondary_aeaaeb {
+.titleSecondary_1bDrGE {
     color: var(--interactive-text-default)
 }
 
-.favorite_aeaaeb {
+.favorite_1bDrGE {
     margin-inline-end: 3px;
     margin-bottom: -1px
 }
 
-.badgeLabel_aeaaeb {
+.badgeLabel_1bDrGE {
     align-items: center;
     border-radius: 4px;
     display: flex;
@@ -55,22 +55,22 @@
     text-transform: uppercase
 }
 
-.topGuildEmojiBadge_aeaaeb {
+.topGuildEmojiBadge_1bDrGE {
     background: linear-gradient(268.26deg, #bf5151, #db803f 102.45%)
 }
 
-.newlyAddedBadge_aeaaeb {
+.newlyAddedBadge_1bDrGE {
     background: linear-gradient(268.26deg, #097d8d, #60a654 102.45%)
 }
 
-.newlyAddedBadgeIcon_aeaaeb {
+.newlyAddedBadgeIcon_1bDrGE {
     color: #fff;
     height: 14px;
     width: 14px
 }
 
-.enable-forced-colors .inspector_aeaaeb {
+.enable-forced-colors .inspector_1bDrGE {
     border-top: 1px solid CanvasText
 }
 
-/*# sourceMappingURL=148729.b6c93a7ca72fbfcf.css.map*/
+/*# sourceMappingURL=148729.cb80c0131d654330.css.map*/

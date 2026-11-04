@@ -1,24 +1,22 @@
-n.d(t, { Ay: () => R, DQ: () => C, Dj: () => y, F5: () => j, Jc: () => E, L6: () => x, ZX: () => N, km: () => v });
 var i = n(477900),
     r = n(582128),
     l = n(503698),
     s = n.n(l),
-    a = n(17928);
+    a = n(855986);
 if (588245 != n.j) var o = n(834730);
 if (588245 != n.j) var d = n(866665);
 if (588245 != n.j) var u = n(821609);
 if (588245 != n.j) var c = n(150934);
-if (588245 != n.j) var h = n(364522);
+if (588245 != n.j) var h = n(95362);
 var m = n(964486),
-    g = n(849335),
+    g = n(225123),
     p = n(643784),
     f = n(730441);
 let x = 1e3 / 60,
     A = 1e3 / 30,
-    E = 5e3,
-    S = (1e3 / 60) * 3,
-    I = Math.ceil(3e3 / (1e3 / 60));
-function v(e, t) {
+    E = (1e3 / 60) * 3,
+    S = Math.ceil(3e3 / (1e3 / 60));
+function I(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : window,
         i = r.useRef(null),
         l = r.useRef(null),
@@ -47,8 +45,8 @@ function v(e, t) {
         o,
     ];
 }
-function j(e) {
-    let t = r.useRef(Array(I).fill(0)),
+function v(e) {
+    let t = r.useRef(Array(S).fill(0)),
         n = r.useRef(performance.now()),
         i = r.useRef(0),
         l = r.useRef(0),
@@ -70,8 +68,8 @@ function j(e) {
                         ((i.current -= t.current[s.current]),
                         (t.current[s.current] = r),
                         (i.current += r),
-                        l.current < I && (l.current += 1),
-                        (s.current = (s.current + 1) % I)));
+                        l.current < S && (l.current += 1),
+                        (s.current = (s.current + 1) % S)));
             }, []),
             function (e, t) {
                 let n = l.current ?? 1;
@@ -83,9 +81,9 @@ function j(e) {
         ]
     );
 }
-function y(e, t) {
+function j(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = r.useRef(Array(I).fill(0)),
+        i = r.useRef(Array(S).fill(0)),
         l = r.useRef(performance.now()),
         s = r.useRef(0),
         a = r.useRef(0),
@@ -111,9 +109,9 @@ function y(e, t) {
                     ((a.current -= i.current[u.current]),
                     (i.current[u.current] = h),
                     (a.current += h),
-                    d.current < I && (d.current += 1),
-                    (u.current = (u.current + 1) % I),
-                    h > S)
+                    d.current < S && (d.current += 1),
+                    (u.current = (u.current + 1) % S),
+                    h > E)
                 ) {
                     let t = 0 === d.current ? x : a.current / d.current,
                         n = Math.min(2 * x, t),
@@ -137,7 +135,7 @@ function y(e, t) {
         onResetFrameData: h,
     };
 }
-function C(e) {
+function y(e) {
     let t = e.dispatcher.getIsSchedulerBackgrounded(),
         n = r.useRef(t);
     n.current = t;
@@ -149,9 +147,9 @@ function C(e) {
         [n, i]
     );
 }
-function T(e) {
+function C(e) {
     let { socket: t, isAverageFrameTime: n } = e,
-        [l, s] = C(t),
+        [l, s] = y(t),
         {
             currentFPS: a,
             averageFrameTime: c,
@@ -159,24 +157,24 @@ function T(e) {
             onResetFrameData: g,
             droppedFramesRef: f,
             renderedFrameCount: A,
-            bufferFramecountRef: S,
-            frameCheckerEffect: I,
-        } = y(n, l),
-        [T, b, _] = j(t),
-        [w, N] = v(T, I),
-        R = performance.now() - s.current < E,
-        O = b(c, S.current);
+            bufferFramecountRef: E,
+            frameCheckerEffect: S,
+        } = j(n, l),
+        [C, T, b] = v(t),
+        [_, w] = I(C, S),
+        N = performance.now() - s.current < 5e3,
+        R = T(c, E.current);
     (0, m.Ay)(
         () => (
-            w(),
+            _(),
             () => {
-                N();
+                w();
             }
         ),
     );
-    let M = r.useCallback(() => {
-        (g(), _(), w());
-    }, [g, _, w]);
+    let O = r.useCallback(() => {
+        (g(), b(), _());
+    }, [g, b, _]);
     return (0, i.jsxs)("div", {
         className: p.st,
         children: [
@@ -213,7 +211,7 @@ function T(e) {
                         className: p.af,
                         children: ["(Dropped: ", ((f.current / A.current) * 100).toFixed(4), "%)"],
                     }),
-                    R &&
+                    N &&
                         (0, i.jsx)(d.m, {
                             position: "left",
                             text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
@@ -269,10 +267,10 @@ function T(e) {
                         (0, i.jsxs)(o.E, {
                             tag: "span",
                             variant: "body-md/semibold",
-                            color: O > 1 ? "text-feedback-critical" : "text-subtle",
-                            children: [O.toFixed(2), "ms"],
+                            color: R > 1 ? "text-feedback-critical" : "text-subtle",
+                            children: [R.toFixed(2), "ms"],
                         }),
-                        R &&
+                        N &&
                             (0, i.jsx)(d.m, {
                                 position: "left",
                                 text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
@@ -290,12 +288,12 @@ function T(e) {
             }),
             (0, i.jsx)("div", {
                 className: p.m8,
-                children: (0, i.jsx)(u.$, { variant: "primary", size: "sm", text: "Reset Frame Data", onClick: M }),
+                children: (0, i.jsx)(u.$, { variant: "primary", size: "sm", text: "Reset Frame Data", onClick: O }),
             }),
         ],
     });
 }
-function b(e) {
+function T(e) {
     let { socket: t, isAverageFrameTime: n, onToggleAverageFrameTime: l } = e,
         [s, a] = r.useState(t.dispatcher.getIsRequestIdleCallbackEnabled()),
         o = r.useRef(null);
@@ -332,7 +330,7 @@ function b(e) {
         })
     );
 }
-function _(e) {
+function b(e) {
     let { socket: t } = e,
         n = t.dispatcher.getDispatchTimings(),
         [l, a] = r.useState(!1);
@@ -394,7 +392,7 @@ function _(e) {
         ],
     });
 }
-function w(e) {
+function _(e) {
     let { socket: t } = e,
         n = t.dispatcher.getSchedulerTelemetry(),
         [l, a] = r.useState(n.isTelemetryEnabled),
@@ -473,7 +471,7 @@ function w(e) {
         ],
     });
 }
-function N() {
+function w() {
     let [, e] = r.useState({});
     r.useEffect(() => {
         let t = setInterval(() => {
@@ -484,22 +482,34 @@ function N() {
         };
     }, []);
 }
-function R() {
-    let e = (0, a.bG)([g.A], () => g.A.getSocket()),
-        [t, n] = r.useState(!1);
-    return (
-        N(),
-        (0, i.jsx)("div", {
-            className: s()(f.nd, p.nd),
-            children: (0, i.jsxs)(h.Ip, {
-                className: p.nd,
-                children: [
-                    (0, i.jsx)(T, { socket: e, isAverageFrameTime: t }),
-                    (0, i.jsx)(b, { socket: e, isAverageFrameTime: t, onToggleAverageFrameTime: n }),
-                    (0, i.jsx)(_, { socket: e }),
-                    (0, i.jsx)(w, { socket: e }),
-                ],
-            }),
-        })
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        Ay: function () {
+            let e = (0, a.bG)([g.A], () => g.A.getSocket()),
+                [t, n] = r.useState(!1);
+            return (
+                w(),
+                (0, i.jsx)("div", {
+                    className: s()(f.nd, p.nd),
+                    children: (0, i.jsxs)(h.Ip, {
+                        className: p.nd,
+                        children: [
+                            (0, i.jsx)(C, { socket: e, isAverageFrameTime: t }),
+                            (0, i.jsx)(T, { socket: e, isAverageFrameTime: t, onToggleAverageFrameTime: n }),
+                            (0, i.jsx)(b, { socket: e }),
+                            (0, i.jsx)(_, { socket: e }),
+                        ],
+                    }),
+                })
+            );
+        },
+        DQ: y,
+        Dj: j,
+        F5: v,
+        L6: x,
+        ZX: w,
+        km: I,
+    },
+);

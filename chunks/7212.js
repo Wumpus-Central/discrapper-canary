@@ -1,9 +1,9 @@
-e.exports = {
-    qr: "footer__57c71",
-    k0: "subscriberButtonContainer__57c71",
-    f4: "subscriberRowWithBanner__57c71",
-    UX: "upsell__57c71",
-    iQ: "descriptionContainer__57c71",
-    h_: "description__57c71",
-    UD: "buttonContainer__57c71",
+t.exports = {
+    qr: "footer_14qEft",
+    k0: "subscriberButtonContainer_14qEft",
+    f4: "subscriberRowWithBanner_14qEft",
+    UX: "upsell_14qEft",
+    iQ: "descriptionContainer_14qEft",
+    h_: "description_14qEft",
+    UD: "buttonContainer_14qEft",
 };

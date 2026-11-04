@@ -1,9 +1,8 @@
-i.d(e, { default: () => o });
 var s = i(477900),
     n = i(582128),
     l = i(192308),
     a = i(885377),
-    r = i(105292);
+    r = i(792996);
 class c extends n.Component {
     cancel = () => {
         let { onClose: t } = this.props;
@@ -12,15 +11,15 @@ class c extends n.Component {
     claimAccount = () => {
         let { onClose: t } = this.props;
         (t?.(),
-            (0, l.openModalLazy)(async () => {
+            (0, l.mM)(async () => {
                 let { default: t } = await Promise.all([
-                    i.e("144909"),
-                    i.e("213042"),
-                    i.e("188941"),
-                    i.e("349619"),
-                    i.e("627323"),
-                    i.e("319623"),
-                    i.e("121007"),
+                    i.e(144909),
+                    i.e(213042),
+                    i.e(188941),
+                    i.e(349619),
+                    i.e(627323),
+                    i.e(319623),
+                    i.e(121007),
                 ]).then(i.bind(i, 110744));
                 return (e) => (0, s.jsx)(t, { ...e });
             }));
@@ -41,4 +40,4 @@ class c extends n.Component {
         });
     }
 }
-let o = c;
+i.d(e, {}, { default: c });

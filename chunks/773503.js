@@ -1,15 +1,14 @@
-s.d(t, { A: () => I });
 var a = s(477900),
     n = s(582128),
     r = s(435558),
     i = s.n(r),
-    l = s(17928),
+    l = s(855986),
     o = s(97808),
-    d = s(778712),
-    u = s(834730),
-    c = s(7807),
-    m = s(661531),
-    h = s(788026),
+    u = s(778712),
+    d = s(834730),
+    m = s(7807),
+    c = s(646514),
+    h = s(565645),
     p = s(287809),
     g = s(562153),
     S = s(401381);
@@ -18,8 +17,8 @@ function v(e) {
     return (0, a.jsxs)("div", {
         className: S.AB,
         children: [
-            (0, a.jsx)(o.eu, { "aria-label": s, size: d._3.SIZE_24, src: t }),
-            (0, a.jsxs)(u.E, {
+            (0, a.jsx)(o.eu, { "aria-label": s, size: u._3.SIZE_24, src: t }),
+            (0, a.jsxs)(d.E, {
                 className: S.PW,
                 color: "text-overlay-light",
                 variant: "body-sm/normal",
@@ -45,21 +44,21 @@ function f(e) {
                   alt: t.name,
                   size: "reaction",
               })
-            : (0, a.jsx)(c.J, { size: "refresh_sm", color: m.A.colors.ICON_DEFAULT });
+            : (0, a.jsx)(m.J, { size: "refresh_sm", color: c.A.colors.ICON_DEFAULT });
     return (0, a.jsx)(v, { avatarURL: s.getAvatarURL(n, 24, !1), avatarLabel: s.username, text: t.name, leading: r });
 }
 let I = n.memo(function (e) {
     let { speakingUserIds: t, activeSoundboards: s, userIds: n, guildId: r, channelId: o } = e,
-        d = (0, l.cf)([p.default], () => i().pick(p.default.getUsers(), n));
+        u = (0, l.cf)([p.default], () => i().pick(p.default.getUsers(), n));
     return (0, a.jsxs)("div", {
         className: S.zr,
         children: [
             t.map((e) => {
-                let t = d[e];
+                let t = u[e];
                 return (0, a.jsx)(C, { user: t, guildId: r, channelId: o }, e);
             }),
             s.map((e) => {
-                let t = d[e.userId];
+                let t = u[e.userId];
                 return (0, a.jsx)(
                     f,
                     { soundboard: e, user: t, guildId: r, channelId: o },
@@ -69,3 +68,4 @@ let I = n.memo(function (e) {
         ],
     });
 });
+s.d(t, {}, { A: I });

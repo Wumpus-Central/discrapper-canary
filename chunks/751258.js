@@ -1,14 +1,13 @@
-n.d(t, { S: () => E });
 var s = n(478676),
     i = n.n(s),
     a = n(715943),
-    l = n(148494),
-    o = n(666860),
-    r = n(236285),
+    l = n(138399),
+    o = n(149468),
+    r = n(121681),
     c = n(649963),
     u = n(815807),
     d = n(253932),
-    h = n(232835),
+    h = n(596344),
     p = n(652215);
 let g = /\\([*?+/])/g,
     m = {
@@ -62,17 +61,23 @@ let g = /\\([*?+/])/g,
 function A(e, t, n, s) {
     return (o.Ay.trackWithMetadata(p.HAw.SLASH_COMMAND_USED, { command: e }), t.action(n, s));
 }
-function E(e, t) {
-    for (let n in m) {
-        let s = m[n];
-        if (null != s.match) {
-            if (s.match.regex?.test(e)) return A(n, s, e, t);
-            continue;
-        }
-        if (d.D_.getSetting() && "/" === e[0]) {
-            let i = e.split(" ");
-            if (n === i[0].slice(1) && null != s.action) return A(n, s, i.slice(1).join(" "), t);
-        }
-    }
-}
-Object.setPrototypeOf(m, null);
+(Object.setPrototypeOf(m, null),
+    n.d(
+        t,
+        {},
+        {
+            S: function (e, t) {
+                for (let n in m) {
+                    let s = m[n];
+                    if (null != s.match) {
+                        if (s.match.regex?.test(e)) return A(n, s, e, t);
+                        continue;
+                    }
+                    if (d.D_.getSetting() && "/" === e[0]) {
+                        let i = e.split(" ");
+                        if (n === i[0].slice(1) && null != s.action) return A(n, s, i.slice(1).join(" "), t);
+                    }
+                }
+            },
+        },
+    ));

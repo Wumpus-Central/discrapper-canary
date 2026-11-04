@@ -1,12 +1,11 @@
-n.d(t, { A: () => d });
-var i = n(17928),
+var i = n(855986),
     r = n(73153),
     a = n(733110);
 let s = new Map(),
     l = new Set();
 class o extends i.Ay.Store {
     initialize() {
-        this.waitFor(a.default);
+        this.waitFor(a.A);
     }
     static displayName = "AccountLinkStore";
     getPendingAuthorizations() {
@@ -21,7 +20,7 @@ class o extends i.Ay.Store {
 }
 let d = new o(r.h, {
     ACCOUNT_LINK_AUTHORIZATION_STARTED: function (e) {
-        null != a.default.getNewestTokenForApplication(e.applicationId) ||
+        null != a.A.getNewestTokenForApplication(e.applicationId) ||
             (null != e.accountLinkCallbacks &&
                 s.set(e.applicationId, {
                     applicationId: e.applicationId,
@@ -33,3 +32,4 @@ let d = new o(r.h, {
         l = new Set(e.flows);
     },
 });
+n.d(t, {}, { A: d });

@@ -1,10 +1,9 @@
-n.d(t, { A: () => d });
 var i = n(477900);
 n(582128);
 var s = n(503698),
     l = n.n(s),
     a = n(28863),
-    r = n(606049),
+    r = n(776579),
     o = n(224929);
 function c(e) {
     let {
@@ -46,11 +45,11 @@ function c(e) {
         ],
     });
 }
-c.Action = function (e) {
+((c.Action = function (e) {
     let { onClick: t, children: n } = e;
     return (0, i.jsxs)("span", {
         className: o.XI,
         children: ["\u2014", (0, i.jsx)(a.Anchor, { onClick: t, className: o.si, children: n })],
     });
-};
-let d = c;
+}),
+    n.d(t, {}, { A: c }));

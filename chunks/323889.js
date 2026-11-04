@@ -1,4 +1,3 @@
-n.d(t, { p: () => r });
 var i,
     r =
         (((i = {})[(i.INVALID = 0)] = "INVALID"),
@@ -8,3 +7,4 @@ var i,
         (i[(i.NO_FILL = 4)] = "NO_FILL"),
         (i[(i.PLAYABLE = 5)] = "PLAYABLE"),
         i);
+n.d(t, {}, { p: r });

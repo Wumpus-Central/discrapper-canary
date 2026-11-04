@@ -1,4 +1,3 @@
-s.d(e, { H: () => l });
 var i = s(680753),
     n = s(875565),
     r = s(272469),
@@ -7,7 +6,7 @@ var i = s(680753),
     c = s(83220),
     h = s(487851),
     u = s(286788);
-class _ {
+let _ = class t {
     constructor() {
         ((this._notifyingListeners = !1),
             (this._scopeListeners = []),
@@ -22,27 +21,27 @@ class _ {
             (this._propagationContext = { traceId: (0, a.el)(), spanId: (0, a.ZF)() }));
     }
     clone() {
-        let t = new _();
+        let e = new t();
         return (
-            (t._breadcrumbs = [...this._breadcrumbs]),
-            (t._tags = { ...this._tags }),
-            (t._extra = { ...this._extra }),
-            (t._contexts = { ...this._contexts }),
-            this._contexts.flags && (t._contexts.flags = { values: [...this._contexts.flags.values] }),
-            (t._user = this._user),
-            (t._level = this._level),
-            (t._session = this._session),
-            (t._transactionName = this._transactionName),
-            (t._fingerprint = this._fingerprint),
-            (t._eventProcessors = [...this._eventProcessors]),
-            (t._requestSession = this._requestSession),
-            (t._attachments = [...this._attachments]),
-            (t._sdkProcessingMetadata = { ...this._sdkProcessingMetadata }),
-            (t._propagationContext = { ...this._propagationContext }),
-            (t._client = this._client),
-            (t._lastEventId = this._lastEventId),
-            (0, u.r)(t, (0, u.f)(this)),
-            t
+            (e._breadcrumbs = [...this._breadcrumbs]),
+            (e._tags = { ...this._tags }),
+            (e._extra = { ...this._extra }),
+            (e._contexts = { ...this._contexts }),
+            this._contexts.flags && (e._contexts.flags = { values: [...this._contexts.flags.values] }),
+            (e._user = this._user),
+            (e._level = this._level),
+            (e._session = this._session),
+            (e._transactionName = this._transactionName),
+            (e._fingerprint = this._fingerprint),
+            (e._eventProcessors = [...this._eventProcessors]),
+            (e._requestSession = this._requestSession),
+            (e._attachments = [...this._attachments]),
+            (e._sdkProcessingMetadata = { ...this._sdkProcessingMetadata }),
+            (e._propagationContext = { ...this._propagationContext }),
+            (e._client = this._client),
+            (e._lastEventId = this._lastEventId),
+            (0, u.r)(e, (0, u.f)(this)),
+            e
         );
     }
     setClient(t) {
@@ -114,8 +113,8 @@ class _ {
         if (!t) return this;
         let e = "function" == typeof t ? t(this) : t,
             [s, i] =
-                e instanceof l ? [e.getScopeData(), e.getRequestSession()] : (0, n.Qd)(e) ? [t, t.requestSession] : [],
-            { tags: r, extra: o, user: a, contexts: c, level: h, fingerprint: u = [], propagationContext: _ } = s || {};
+                e instanceof _ ? [e.getScopeData(), e.getRequestSession()] : (0, n.Qd)(e) ? [t, t.requestSession] : [],
+            { tags: r, extra: o, user: a, contexts: c, level: h, fingerprint: u = [], propagationContext: l } = s || {};
         return (
             (this._tags = { ...this._tags, ...r }),
             (this._extra = { ...this._extra, ...o }),
@@ -123,7 +122,7 @@ class _ {
             a && Object.keys(a).length && (this._user = a),
             h && (this._level = h),
             u.length && (this._fingerprint = u),
-            _ && (this._propagationContext = _),
+            l && (this._propagationContext = l),
             i && (this._requestSession = i),
             this
         );
@@ -233,5 +232,5 @@ class _ {
             }),
             (this._notifyingListeners = !1));
     }
-}
-let l = _;
+};
+s.d(e, {}, { H: _ });

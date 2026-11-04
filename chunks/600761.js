@@ -1,4 +1,3 @@
-r.d(t, { i: () => o, q: () => c });
 var n = r(582128),
     u = r(675816),
     l = r(425763);
@@ -71,6 +70,13 @@ function o(e) {
         );
     }, [t, h, y?.itemType, v, r, o, c, i, d]);
 }
-function c(e) {
-    return (o(e), null);
-}
+r.d(
+    t,
+    {},
+    {
+        i: o,
+        q: function (e) {
+            return (o(e), null);
+        },
+    },
+);

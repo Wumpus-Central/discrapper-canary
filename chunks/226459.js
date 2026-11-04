@@ -1,8 +1,7 @@
-n.d(t, { A: () => d });
 var i = n(435558),
     r = n(439372),
     a = n(706341),
-    s = n(310031),
+    s = n(398269),
     l = n(849077);
 class o extends r.A {
     throttledPreloadInbox;
@@ -20,3 +19,4 @@ class o extends r.A {
     }
 }
 let d = new o();
+n.d(t, {}, { A: d });

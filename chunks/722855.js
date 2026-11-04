@@ -1,17 +1,16 @@
-n.d(t, { A: () => O });
 var i = n(508602),
-    r = n(148494),
+    r = n(138399),
     a = n(439372),
-    s = n(868207),
+    s = n(755364),
     l = n(626584),
     o = n(473503),
     d = n(662502),
-    c = n(358047),
+    c = n(799704),
     u = n(734057),
-    _ = n(232835),
+    _ = n(596344),
     E = n(309010),
     A = n(287809),
-    h = n(306537),
+    h = n(171576),
     f = n(424743),
     I = n(36149),
     p = n(277861),
@@ -38,7 +37,7 @@ function S(e) {
                       (d.A.showSuccessToast(T.OB.AGE_VERIFICATION_VERIFIED), (0, h.Vh)(h.oQ.VERIFIED_TEEN)));
 }
 function N(e) {
-    r.A.fetchMessages({ channelId: e, limit: m.EMb });
+    r.A.fetchMessages({ channelId: e, limit: 30 });
 }
 class C extends a.A {
     _previousAgeVerificationStatus = null;
@@ -47,7 +46,7 @@ class C extends a.A {
     };
     handleCurrentUserUpdate = (e) => {
         let { user: t } = e,
-            n = (0, A.transformUser)(t).ageVerificationStatus ?? null,
+            n = (0, A.oV)(t).ageVerificationStatus ?? null,
             i = this._previousAgeVerificationStatus !== n,
             r = i && (0, I.Lb)(n);
         i && (0, p.a6)();
@@ -80,3 +79,4 @@ class C extends a.A {
     };
 }
 let O = new C();
+n.d(t, {}, { A: O });

@@ -1,4 +1,3 @@
-n.d(t, { ContentInventoryEntryType: () => r });
 var i,
     r =
         (((i = {})[(i.CONTENT_TYPE_UNSPECIFIED = 0)] = "CONTENT_TYPE_UNSPECIFIED"),
@@ -12,3 +11,4 @@ var i,
         (i[(i.LAUNCHED_ACTIVITY = 8)] = "LAUNCHED_ACTIVITY"),
         (i[(i.LEADERBOARD = 9)] = "LEADERBOARD"),
         i);
+n.d(t, {}, { ContentInventoryEntryType: r });

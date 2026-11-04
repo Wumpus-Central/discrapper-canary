@@ -1,0 +1,206 @@
+.container_XqvxEs {
+    display: flex;
+    flex-direction: column;
+    isolation: isolate;
+    justify-content: flex-end;
+    position: relative
+}
+
+.container_XqvxEs.withImageSpacing_XqvxEs {
+    border-radius: var(--radius-md);
+    overflow: hidden
+}
+
+.coverImageContainer_XqvxEs {
+    background-color: var(--background-mod-muted);
+    inset: 0;
+    position: absolute;
+    z-index: -2
+}
+
+.custom-user-profile-theme .coverImageContainer_XqvxEs {
+    background-color: var(--background-mod-normal)
+}
+
+.custom-user-profile-theme.theme-light .coverImageContainer_XqvxEs {
+    background-color: var(--opacity-white-24)
+}
+
+.actions_XqvxEs.actions_XqvxEs {
+    background-color: var(--control-overlay-secondary-background-default);
+    border-color: var(--control-overlay-secondary-border-default);
+    inset-inline-end: var(--space-8);
+    opacity: 0;
+    position: absolute;
+    top: var(--space-8);
+    transition: opacity .1s ease
+}
+
+.actions_XqvxEs:has([aria-expanded=true]) {
+    opacity: 1
+}
+
+.container_XqvxEs:focus-within :is(.actions_XqvxEs),
+.container_XqvxEs:hover :is(.actions_XqvxEs) {
+    opacity: 1
+}
+
+.container_XqvxEs:has(:is(input:not([type=file]), textarea):focus) :is(.actions_XqvxEs) {
+    opacity: 0;
+    pointer-events: none
+}
+
+.restoreCover_XqvxEs {
+    translate: 0 -2px
+}
+
+.image_XqvxEs {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.contentContainer_XqvxEs {
+    --custom-cover-gap: calc(var(--space-4)*2 + 1px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: var(--custom-cover-gap);
+    justify-content: flex-end;
+    position: relative;
+    width: 100%
+}
+
+.contentContainer_XqvxEs.withImageSpacing_XqvxEs {
+    --custom-cover-title-line-height: 32px;
+    --custom-cover-subtitle-line-height: 18px;
+    --custom-cover-padding: var(--space-16);
+    margin-top: 56px;
+    min-height: calc(var(--custom-cover-title-line-height) + var(--custom-cover-gap) + var(--custom-cover-subtitle-line-height) + var(--custom-cover-padding)*2);
+    padding: var(--custom-cover-padding)
+}
+
+.contentBackground_XqvxEs {
+    background: linear-gradient(0deg, #000, 60%, transparent);
+    inset: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.container_qh0kRK {
+    display: grid;
+    gap: var(--space-16);
+    grid-template-columns: repeat(2, 1fr)
+}
+
+.addEntryButton_qh0kRK {
+    align-items: center;
+    border: 1px dashed var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4);
+    height: var(--space-48);
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .1s ease
+}
+
+.addEntryButton_qh0kRK:focus-visible,
+.addEntryButton_qh0kRK:hover {
+    opacity: 1
+}
+
+.addEntryButton_qh0kRK.alwaysVisible_qh0kRK {
+    opacity: 1
+}
+
+.entryContainer_qh0kRK {
+    display: flex;
+    gap: var(--space-12);
+    min-width: 0;
+    position: relative
+}
+
+.entryImageContainer_qh0kRK {
+    flex-shrink: 0;
+    position: relative
+}
+
+.entryImage_qh0kRK {
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    height: var(--space-48);
+    overflow: hidden;
+    width: var(--space-48)
+}
+
+.full-motion .entryImageEditable_qh0kRK {
+    transition: transform .1s ease
+}
+
+.entryImageContainer_qh0kRK:focus-within .entryImageEditable_qh0kRK:has(>img),
+.entryImageContainer_qh0kRK:hover .entryImageEditable_qh0kRK:has(>img) {
+    --custom-edit-overlay-opacity: 1;
+    --custom-edit-image-scale: 1.08333;
+    transform: scale(var(--custom-edit-image-scale))
+}
+
+.removeImageButton_qh0kRK.removeImageButton_qh0kRK {
+    background-color: var(--control-overlay-secondary-background-default);
+    border-color: var(--control-overlay-secondary-border-default);
+    inset-inline-end: calc(var(--space-8)*-1);
+    opacity: 0;
+    position: absolute;
+    top: calc(var(--space-8)*-1);
+    transition: opacity .1s ease;
+    z-index: 1
+}
+
+.entryContent_qh0kRK {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--space-4)*2 + 1px);
+    min-width: 0
+}
+
+.entryContent_qh0kRK:has(:is(input, textarea):focus) {
+    flex-grow: 1
+}
+
+.entryButtonContainer_qh0kRK.entryButtonContainer_qh0kRK {
+    background-color: var(--control-overlay-secondary-background-default);
+    border-color: var(--control-overlay-secondary-border-default);
+    inset-inline-end: calc(var(--space-8)*-1);
+    opacity: 0;
+    position: absolute;
+    top: calc(var(--space-8)*-1);
+    transition: opacity .1s ease
+}
+
+.entryContainer_qh0kRK:focus-within :is(.entryButtonContainer_qh0kRK),
+.entryContainer_qh0kRK:hover :is(.entryButtonContainer_qh0kRK) {
+    opacity: 1
+}
+
+.entryContainer_qh0kRK:has(:is(input, textarea):focus) :is(.entryButtonContainer_qh0kRK, .removeImageButton_qh0kRK) {
+    opacity: 0;
+    pointer-events: none
+}
+
+.entryContainer_qh0kRK:has(.entryImageContainer_qh0kRK:focus-within) .entryButtonContainer_qh0kRK:not(:focus-within),
+.entryContainer_qh0kRK:has(.entryImageContainer_qh0kRK:hover) .entryButtonContainer_qh0kRK:not(:focus-within) {
+    opacity: 0;
+    pointer-events: none
+}
+
+.entryImageContainer_qh0kRK:focus-within :is(.removeImageButton_qh0kRK),
+.entryImageContainer_qh0kRK:hover :is(.removeImageButton_qh0kRK) {
+    opacity: 1
+}
+
+/*# sourceMappingURL=4fb793f3cc7950f0.css.map*/

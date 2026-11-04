@@ -1,8 +1,7 @@
-n.d(t, { A: () => o, j: () => l });
 var i,
     r = n(315069),
-    a = n(32731),
-    s = n(395671),
+    a = n(431955),
+    s = n(327891),
     l = (((i = {}).WISHLIST = "WISHLIST"), (i.RECOMMENDATION = "RECOMMENDATION"), i);
 class o extends r.A {
     skus;
@@ -23,3 +22,4 @@ class o extends r.A {
         return new o(e);
     }
 }
+n.d(t, {}, { A: o, j: l });

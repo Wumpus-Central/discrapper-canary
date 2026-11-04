@@ -1,4 +1,3 @@
-n.d(t, { A: () => s });
 var i = n(806931),
     r = n(731854);
 let l = Object.freeze({
@@ -7,6 +6,12 @@ let l = Object.freeze({
     [i.lp.USER]: r.x.DEFAULT,
     [i.lp.ACTIVITY]: r.x.DEFAULT,
 });
-function s(e) {
-    return l[e];
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            return l[e];
+        },
+    },
+);

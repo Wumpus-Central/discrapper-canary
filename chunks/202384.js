@@ -1,4 +1,3 @@
-let i;
-n.d(t, { Ze: () => r });
-let r = (i = n(415951).A).openMemberVerificationModal;
-i.closeMemberVerificationModal;
+let i,
+    r = (i = n(415951).A).openMemberVerificationModal;
+(i.closeMemberVerificationModal, n.d(t, {}, { Ze: r }));

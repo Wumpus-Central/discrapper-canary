@@ -1,35 +1,34 @@
-t.d(a, { E1: () => w, Zr: () => Y, rI: () => Z });
 var l = t(477900),
     n = t(582128),
     r = t(643909),
     s = t(503698),
     i = t.n(s),
-    h = t(702841),
+    h = t(164636),
     u = t(858899),
     o = t(834730),
     c = t(391048),
-    d = t(913122),
+    d = t(627784),
     m = t(793574),
-    A = t(277984),
+    A = t(781300),
     p = t(942340),
     E = t(626584),
     P = t(97352),
     C = t(67480),
     M = t(739508),
-    y = t(24482),
+    y = t(879610),
     g = t(580630),
     T = t(71532),
     x = t(120700),
     I = t(822764),
     _ = t(56763),
-    v = t(298208),
+    v = t(516106),
     f = t(783327),
     R = t(705822),
     L = t(652215),
-    S = t(202541),
+    S = t(682901),
     H = t(818348),
-    k = t(758476),
-    D = t(105292),
+    k = t(379912),
+    D = t(792996),
     N = t(969933);
 let b = new E.A("StripeExpressCheckout.tsx"),
     j = { [S.WT.DAY]: "day", [S.WT.MONTH]: "month", [S.WT.YEAR]: "year" };
@@ -309,48 +308,7 @@ function O(e) {
         ],
     });
 }
-function w(e) {
-    let a = (0, f.S)(),
-        { elementsAppearance: t } = (0, p.E)(),
-        { checkoutInvoicePreview: s, isPurchaseDisabled: i } = (0, v.t4)((e) => ({
-            checkoutInvoicePreview: e.checkoutInvoicePreview,
-            isPurchaseDisabled: e.getIsPurchaseDisabled(),
-        })),
-        h = e.disablePurchase || i,
-        { expressCheckoutType: u, makePurchase: o } = n.useMemo(
-            () => ({ expressCheckoutType: h ? "vault_only" : e.type, makePurchase: e.makePurchase ?? L.tEg }),
-            [e.makePurchase, e.type, h],
-        ),
-        c = n.useMemo(() => {
-            if (null == s) return null;
-            let e = s.getAmountDue();
-            return {
-                paymentMethodCreation: "manual",
-                ...("vault_only" === u || e <= 0 ? { mode: "setup" } : { mode: "payment", amount: e }),
-                currency: String(s.currency).toLowerCase(),
-                appearance: { ...t, variables: { ...t.variables, borderRadius: "8px" } },
-            };
-        }, [s, t, u]);
-    return null == a || null == c
-        ? null
-        : (0, l.jsx)(r.Elements, {
-              stripe: a,
-              options: c,
-              children: (0, l.jsx)(O, { ...e, type: u, makePurchase: o, disablePurchase: h }),
-          });
-}
-function Z() {
-    let e = (0, v.t4)((e) => e.checkoutInvoicePreview),
-        a = n.useMemo(
-            () =>
-                null != e && e.hasGiftCardBalanceApplied
-                    ? D.intl.format(k.default.BMVyQO, { amount: (0, g.$g)(e.getAmountDue(), e.currency) })
-                    : D.intl.string(k.default.gVM8va),
-            [e],
-        );
-    return (0, l.jsx)(o.E, { variant: "body-sm/normal", color: "text-muted", className: N.OJ, children: a });
-}
-function U() {
+function w() {
     return (0, l.jsxs)("div", {
         className: N.ps,
         children: [
@@ -364,15 +322,66 @@ function U() {
         ],
     });
 }
-function Y(e) {
-    let { stripeExpressCheckoutComponent: a, fallbackComponent: t, showDividerBelow: n = !1 } = e,
-        { shouldExpressCheckoutBeVisible: r } = (0, v.t4)((e) => ({
-            shouldExpressCheckoutBeVisible: e.getExpressCheckoutVisibilityState().shouldExpressCheckoutBeVisible,
-        }));
-    return (0, l.jsxs)(l.Fragment, {
-        children: [
-            (0, l.jsxs)("div", { className: i()(N.n2, { [N.lX]: !r }), children: [a, n ? (0, l.jsx)(U, {}) : null] }),
-            !r && t,
-        ],
-    });
-}
+t.d(
+    a,
+    {},
+    {
+        E1: function (e) {
+            let a = (0, f.S)(),
+                { elementsAppearance: t } = (0, p.E)(),
+                { checkoutInvoicePreview: s, isPurchaseDisabled: i } = (0, v.t4)((e) => ({
+                    checkoutInvoicePreview: e.checkoutInvoicePreview,
+                    isPurchaseDisabled: e.getIsPurchaseDisabled(),
+                })),
+                h = e.disablePurchase || i,
+                { expressCheckoutType: u, makePurchase: o } = n.useMemo(
+                    () => ({ expressCheckoutType: h ? "vault_only" : e.type, makePurchase: e.makePurchase ?? L.tEg }),
+                    [e.makePurchase, e.type, h],
+                ),
+                c = n.useMemo(() => {
+                    if (null == s) return null;
+                    let e = s.getAmountDue();
+                    return {
+                        paymentMethodCreation: "manual",
+                        ...("vault_only" === u || e <= 0 ? { mode: "setup" } : { mode: "payment", amount: e }),
+                        currency: String(s.currency).toLowerCase(),
+                        appearance: { ...t, variables: { ...t.variables, borderRadius: "8px" } },
+                    };
+                }, [s, t, u]);
+            return null == a || null == c
+                ? null
+                : (0, l.jsx)(r.Elements, {
+                      stripe: a,
+                      options: c,
+                      children: (0, l.jsx)(O, { ...e, type: u, makePurchase: o, disablePurchase: h }),
+                  });
+        },
+        Zr: function (e) {
+            let { stripeExpressCheckoutComponent: a, fallbackComponent: t, showDividerBelow: n = !1 } = e,
+                { shouldExpressCheckoutBeVisible: r } = (0, v.t4)((e) => ({
+                    shouldExpressCheckoutBeVisible:
+                        e.getExpressCheckoutVisibilityState().shouldExpressCheckoutBeVisible,
+                }));
+            return (0, l.jsxs)(l.Fragment, {
+                children: [
+                    (0, l.jsxs)("div", {
+                        className: i()(N.n2, { [N.lX]: !r }),
+                        children: [a, n ? (0, l.jsx)(w, {}) : null],
+                    }),
+                    !r && t,
+                ],
+            });
+        },
+        rI: function () {
+            let e = (0, v.t4)((e) => e.checkoutInvoicePreview),
+                a = n.useMemo(
+                    () =>
+                        null != e && e.hasGiftCardBalanceApplied
+                            ? D.intl.format(k.default.BMVyQO, { amount: (0, g.$g)(e.getAmountDue(), e.currency) })
+                            : D.intl.string(k.default.gVM8va),
+                    [e],
+                );
+            return (0, l.jsx)(o.E, { variant: "body-sm/normal", color: "text-muted", className: N.OJ, children: a });
+        },
+    },
+);

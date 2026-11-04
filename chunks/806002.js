@@ -1,4 +1,3 @@
-d.d(t, { t: () => s });
 var i = d(768611),
     e = d(242268),
     c = d(455939),
@@ -48,4 +47,4 @@ var s = (0, i.a)(({ id: l, label: t, disabled: d, class: s, onInput: n, onBlur: 
         ...b,
     });
 });
-s.displayName = "DateInputComposed";
+((s.displayName = "DateInputComposed"), d.d(t, {}, { t: s }));

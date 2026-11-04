@@ -1,9 +1,9 @@
 e.exports = {
-    kL: "container__8a003",
-    p_: "list__8a003",
-    Aw: "listItem__8a003",
-    SF: "linkItem__8a003",
-    GU: "listIcon__8a003",
-    so: "listText__8a003",
-    GR: "listImage__8a003",
+    kL: "container_8Ges7q",
+    p_: "list_8Ges7q",
+    Aw: "listItem_8Ges7q",
+    SF: "linkItem_8Ges7q",
+    GU: "listIcon_8Ges7q",
+    so: "listText_8Ges7q",
+    GR: "listImage_8Ges7q",
 };

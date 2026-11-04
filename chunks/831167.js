@@ -1,4 +1,9 @@
-d.d(a, { A: () => e });
-function e(o) {
-    return o.clone().locale("en").format("YYYY-MM-DD");
-}
+d.d(
+    a,
+    {},
+    {
+        A: function (o) {
+            return o.clone().locale("en").format("YYYY-MM-DD");
+        },
+    },
+);

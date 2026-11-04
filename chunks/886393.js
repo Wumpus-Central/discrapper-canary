@@ -1,24 +1,29 @@
-i.d(t, { A: () => d });
 var l = i(477900);
 i(582128);
-var s = i(702841),
+var s = i(164636),
     a = i(477782),
     c = i(853742),
     e = i(734057),
     o = i(147036),
     r = i(957565),
     u = i(652215),
-    p = i(105292);
-function d(n, t, i) {
-    let d = (0, s.bG)([e.A], () => (null != n ? e.A.getChannel(n.parent_id) : null));
-    return null == n
-        ? null
-        : (0, l.jsx)(a.Dr, {
-              id: "channel-copy-link",
-              label: p.intl.string(p.t.WqhZss),
-              action: () => {
-                  (n.isForumPost() && (0, c.jC)({ postId: n.id, location: { section: u.JJy.CONTEXT_MENU } }),
-                      (0, r.C)((0, o.af)(n, d, t, i)));
-              },
-          });
-}
+    p = i(792996);
+i.d(
+    t,
+    {},
+    {
+        A: function (n, t, i) {
+            let d = (0, s.bG)([e.A], () => (null != n ? e.A.getChannel(n.parent_id) : null));
+            return null == n
+                ? null
+                : (0, l.jsx)(a.Dr, {
+                      id: "channel-copy-link",
+                      label: p.intl.string(p.t.WqhZss),
+                      action: () => {
+                          (n.isForumPost() && (0, c.jC)({ postId: n.id, location: { section: u.JJy.CONTEXT_MENU } }),
+                              (0, r.C)((0, o.af)(n, d, t, i)));
+                      },
+                  });
+        },
+    },
+);

@@ -1,10 +1,15 @@
-n.d(t, { A: () => r });
 var i = n(582128);
-function r() {
-    for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-    return i.useCallback((e) => {
-        t.forEach((t) => {
-            null != t && ("function" == typeof t ? t(e) : (t.current = e));
-        });
-    }, t);
-}
+n.d(
+    t,
+    {},
+    {
+        A: function () {
+            for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
+            return i.useCallback((e) => {
+                t.forEach((t) => {
+                    null != t && ("function" == typeof t ? t(e) : (t.current = e));
+                });
+            }, t);
+        },
+    },
+);

@@ -1,4 +1,3 @@
-n.d(t, { A: () => r });
 var i = n(315069);
 class r extends i.A {
     userId;
@@ -37,3 +36,4 @@ class r extends i.A {
         return this.selfDeaf || this.deaf;
     }
 }
+n.d(t, {}, { A: r });

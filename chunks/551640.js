@@ -1,4 +1,3 @@
-n.d(t, { A: () => a, t: () => s });
 var i,
     r,
     a =
@@ -16,3 +15,4 @@ var i,
         (r.POLL_CREATION = "poll_creation"),
         (r.SLASH_COMMAND = "slash_command"),
         r);
+n.d(t, {}, { A: a, t: s });

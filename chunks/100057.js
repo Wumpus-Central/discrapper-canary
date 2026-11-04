@@ -1,6 +1,5 @@
-n.d(t, { t: () => s, z: () => l });
 var i,
-    r = n(174459),
+    r = n(129230),
     a = n(652215),
     s =
         (((i = {}).SHOP_MOUNTED = "shop_mounted"),
@@ -10,13 +9,20 @@ var i,
         (i.SHOP_HOME_FETCH_COMPLETED = "shop_home_fetch_completed"),
         (i.SHOP_RENDERED = "shop_rendered"),
         i);
-function l(e) {
-    let { sessionId: t, checkpoint: n, tab: i, unpublishedCategoriesShown: s, cacheDisabled: l } = e;
-    r.default.track(a.HAw.COLLECTIBLES_SHOP_PERF_TRACKED, {
-        page_session_id: t,
-        checkpoint: n,
-        tab: i,
-        unpublished_categories_shown: s,
-        cache_disabled: l,
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        t: s,
+        z: function (e) {
+            let { sessionId: t, checkpoint: n, tab: i, unpublishedCategoriesShown: s, cacheDisabled: l } = e;
+            r.default.track(a.HAw.COLLECTIBLES_SHOP_PERF_TRACKED, {
+                page_session_id: t,
+                checkpoint: n,
+                tab: i,
+                unpublished_categories_shown: s,
+                cache_disabled: l,
+            });
+        },
+    },
+);

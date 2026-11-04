@@ -1,0 +1,212 @@
+.calendar_02T8vR {
+    box-sizing: border-box;
+    color: var(--text-default);
+    padding: var(--space-12) var(--space-8);
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.calendar_02T8vR.multiMonth_02T8vR {
+    max-width: none
+}
+
+.calendarHeader_02T8vR {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-8)
+}
+
+.monthHeadings_02T8vR {
+    display: flex;
+    flex: 1;
+    justify-content: space-around
+}
+
+.months_02T8vR {
+    display: flex;
+    gap: var(--space-16)
+}
+
+.month_02T8vR {
+    display: flex;
+    flex-direction: column
+}
+
+.calendarGrid_02T8vR {
+    border-collapse: separate;
+    border-spacing: 0 var(--space-4);
+    width: 100%
+}
+
+.headerCell_02T8vR {
+    text-align: center;
+    vertical-align: middle
+}
+
+.cell_02T8vR,
+.headerCell_02T8vR {
+    height: 40px;
+    width: 40px
+}
+
+.cell_02T8vR {
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 0;
+    position: relative
+}
+
+.cell_02T8vR[data-selected] {
+    background-color: var(--control-primary-background-default);
+    color: var(--control-primary-text-default)
+}
+
+.cell_02T8vR[data-disabled] {
+    color: var(--text-muted);
+    cursor: not-allowed;
+    opacity: .5
+}
+
+.cell_02T8vR[data-unavailable] {
+    color: var(--text-muted);
+    cursor: not-allowed;
+    text-decoration: line-through
+}
+
+.cell_02T8vR[data-selected][data-unavailable] {
+    color: var(--control-primary-text-default)
+}
+
+.cell_02T8vR[data-outside-month] {
+    color: var(--text-muted);
+    opacity: .5
+}
+
+.cell_02T8vR[data-focus-visible] {
+    outline: none;
+    z-index: 3
+}
+
+.cell_02T8vR[data-focus-visible] .cellContent_02T8vR {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px
+}
+
+.cell_02T8vR[data-hovered]:not([data-disabled]):not([data-unavailable]):not([data-selected]) {
+    background-color: var(--background-mod-subtle)
+}
+
+.cellContent_02T8vR {
+    align-items: center;
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    transition: background-color .15s ease;
+    width: 100%
+}
+
+.rangeSelection_02T8vR[data-hovered] .cellContent_02T8vR {
+    background-color: var(--background-mod-subtle)
+}
+
+.rangeSelection_02T8vR[data-selected=true] {
+    background-color: var(--datepicker-range-background-default);
+    border-radius: 0;
+    color: var(--text-strong)
+}
+
+.rangeSelection_02T8vR[data-selected=true][data-hovered] {
+    background-color: var(--datepicker-range-background-hover)
+}
+
+.rangeSelection_02T8vR[data-selection-end=true] .cellContent_02T8vR,
+.rangeSelection_02T8vR[data-selection-start=true] .cellContent_02T8vR {
+    background-color: var(--control-primary-background-default);
+    border: 1px solid var(--control-primary-border-default);
+    border-radius: calc(var(--radius-sm) - 1px);
+    color: var(--control-primary-text-default)
+}
+
+.rangeSelection_02T8vR[data-selection-end=true][data-hovered=true],
+.rangeSelection_02T8vR[data-selection-start=true][data-hovered=true] {
+    background-color: var(--datepicker-range-background-default)
+}
+
+.rangeSelection_02T8vR[data-selection-end=true][data-hovered=true] .cellContent_02T8vR,
+.rangeSelection_02T8vR[data-selection-start=true][data-hovered=true] .cellContent_02T8vR {
+    background-color: var(--control-primary-background-hover);
+    border: 1px solid var(--control-primary-border-hover);
+    color: var(--control-primary-text-hover)
+}
+
+.rangeSelection_02T8vR[data-selection-end=true][data-pressed=true] .cellContent_02T8vR,
+.rangeSelection_02T8vR[data-selection-start=true][data-pressed=true] .cellContent_02T8vR {
+    background-color: var(--control-primary-background-active);
+    color: var(--control-primary-text-active)
+}
+
+.rangeSelection_02T8vR[data-selection-start=true] {
+    border-bottom-left-radius: var(--radius-sm);
+    border-top-left-radius: var(--radius-sm)
+}
+
+.rangeSelection_02T8vR[data-selection-end=true] {
+    border-bottom-right-radius: var(--radius-sm);
+    border-top-right-radius: var(--radius-sm)
+}
+
+.calendarGrid_02T8vR td:first-child[aria-selected=true] .cell_02T8vR {
+    border-bottom-left-radius: var(--radius-sm);
+    border-top-left-radius: var(--radius-sm)
+}
+
+.calendarGrid_02T8vR td:last-child[aria-selected=true] .cell_02T8vR {
+    border-bottom-right-radius: var(--radius-sm);
+    border-top-right-radius: var(--radius-sm)
+}
+
+.enable-forced-colors .calendar_02T8vR {
+    background-color: Canvas;
+    border-color: ButtonBorder
+}
+
+.enable-forced-colors .cell_02T8vR {
+    color: CanvasText
+}
+
+.enable-forced-colors .cell_02T8vR[data-disabled] {
+    color: GrayText
+}
+
+.enable-forced-colors .cell_02T8vR[data-unavailable] {
+    color: GrayText;
+    text-decoration: line-through
+}
+
+.enable-forced-colors .cell_02T8vR[data-outside-month] {
+    color: GrayText;
+    opacity: .4
+}
+
+.enable-forced-colors .cell_02T8vR:hover:not([data-disabled]):not([data-unavailable]):not([data-selected]) .cellContent_02T8vR {
+    background-color: ButtonFace
+}
+
+.enable-forced-colors .cell_02T8vR[data-selected] .cellContent_02T8vR {
+    background-color: Highlight;
+    color: HighlightText
+}
+
+.enable-forced-colors .rangeSelection_02T8vR[data-selected] {
+    border-color: Highlight
+}
+
+.enable-forced-colors .cell_02T8vR[data-focus-visible] .cellContent_02T8vR {
+    outline: 2px solid Highlight
+}
+
+/*# sourceMappingURL=adb01a2603cc3892.css.map*/

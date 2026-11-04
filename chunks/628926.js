@@ -1,4 +1,3 @@
-d.d(t, { t: () => n });
 var i = d(783285),
     e = d(768611),
     c = d(200503),
@@ -46,7 +45,17 @@ function s() {
           )
         : null;
 }
-function n({ children: l }) {
-    let { isLandscapeMobile: t } = (0, c.l)();
-    return (0, e.v)("div", { class: "IncodeComponent", tabIndex: 0, children: [l, t ? (0, e.v)(s, {}) : null] });
-}
+d.d(
+    t,
+    {},
+    {
+        t: function ({ children: l }) {
+            let { isLandscapeMobile: t } = (0, c.l)();
+            return (0, e.v)("div", {
+                class: "IncodeComponent",
+                tabIndex: 0,
+                children: [l, t ? (0, e.v)(s, {}) : null],
+            });
+        },
+    },
+);

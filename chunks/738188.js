@@ -1,34 +1,39 @@
-(n.r(t), n.d(t, { WarningIcon: () => l }));
 var i = n(477900);
 n(582128);
-var r = n(661531),
+var r = n(646514),
     a = n(996682),
     s = n(27989);
-function l(e) {
-    let {
-            size: t = "md",
-            width: n,
-            height: l,
-            color: o = r.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: d = "",
-            ...c
-        } = e,
-        u = (0, s.J)(t),
-        _ = u?.width ?? n,
-        E = u?.height ?? l;
-    return (0, i.jsx)("svg", {
-        ...(0, a.A)(c),
-        xmlns: "http://www.w3.org/2000/svg",
-        width: _,
-        height: E,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        children: (0, i.jsx)("path", {
-            fill: "string" == typeof o ? o : o.css,
-            fillRule: "evenodd",
-            d: "M10 3.1a2.37 2.37 0 0 1 4 0l8.71 14.75c.84 1.41-.26 3.15-2 3.15H3.29c-1.74 0-2.84-1.74-2-3.15L9.99 3.1Zm3.25 14.65a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0ZM13.06 14l.37-5.94a1 1 0 0 0-1-1.06h-.87a1 1 0 0 0-1 1.06l.38 5.94a1.06 1.06 0 0 0 2.12 0Z",
-            clipRule: "evenodd",
-            className: d,
-        }),
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        WarningIcon: function (e) {
+            let {
+                    size: t = "md",
+                    width: n,
+                    height: l,
+                    color: o = r.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: d = "",
+                    ...c
+                } = e,
+                u = (0, s.J)(t),
+                _ = u?.width ?? n,
+                E = u?.height ?? l;
+            return (0, i.jsx)("svg", {
+                ...(0, a.A)(c),
+                xmlns: "http://www.w3.org/2000/svg",
+                width: _,
+                height: E,
+                fill: "none",
+                viewBox: "0 0 24 24",
+                children: (0, i.jsx)("path", {
+                    fill: "string" == typeof o ? o : o.css,
+                    fillRule: "evenodd",
+                    d: "M10 3.1a2.37 2.37 0 0 1 4 0l8.71 14.75c.84 1.41-.26 3.15-2 3.15H3.29c-1.74 0-2.84-1.74-2-3.15L9.99 3.1Zm3.25 14.65a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0ZM13.06 14l.37-5.94a1 1 0 0 0-1-1.06h-.87a1 1 0 0 0-1 1.06l.38 5.94a1.06 1.06 0 0 0 2.12 0Z",
+                    clipRule: "evenodd",
+                    className: d,
+                }),
+            });
+        },
+    },
+);

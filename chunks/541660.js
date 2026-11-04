@@ -1,7 +1,7 @@
 e.exports = {
-    nd: "panel_e4169f",
-    nM: "row_e4169f",
-    iL: "userCell_e4169f",
-    nz: "affinityCell_e4169f",
-    K8: "sortableHeader_e4169f",
+    nd: "panel_jzCErg",
+    nM: "row_jzCErg",
+    iL: "userCell_jzCErg",
+    nz: "affinityCell_jzCErg",
+    K8: "sortableHeader_jzCErg",
 };

@@ -1,5 +1,4 @@
-r.d(t, { A: () => i });
-var n = r(17928),
+var n = r(855986),
     l = r(73153);
 class a extends n.Ay.Store {
     static displayName = "VirtualCurrencyStore";
@@ -141,3 +140,4 @@ class a extends n.Ay.Store {
     }
 }
 let i = new a();
+r.d(t, {}, { A: i });

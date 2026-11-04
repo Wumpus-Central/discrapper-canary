@@ -1,4 +1,4 @@
-(n.d(t, { Lu: () => o, cE: () => c, le: () => p }), n(938796), n(321073));
+(n(938796), n(321073));
 var r = n(665260);
 n(873298);
 var i = n(669953);
@@ -17,17 +17,10 @@ function c(e) {
     return !t && !i && !a;
 }
 function o(e) {
-    if (c(e)) return void p(e);
-    {
-        let t = (0, h.WW)(e);
-        (0, d.e4)(e, !t);
-    }
-}
-function p(e) {
     let { include: t = new Set(), exclude: n = new Set() } =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        r = a.Ay.getChannels(e),
-        s = [...r[a.I6], ...r[a.vM]]
+        r = a.A.getChannels(e),
+        s = [...r[a.I], ...r.VOCAL]
             .filter((e) => {
                 let { channel: t } = e;
                 return !t.isThread() && !n.has(t.id);
@@ -38,3 +31,18 @@ function p(e) {
             });
     (t.forEach((e) => s.push(e)), i.A.onboardExistingMember(e, new Set(s)));
 }
+n.d(
+    t,
+    {},
+    {
+        Lu: function (e) {
+            if (c(e)) return void o(e);
+            {
+                let t = (0, h.WW)(e);
+                (0, d.e4)(e, !t);
+            }
+        },
+        cE: c,
+        le: o,
+    },
+);

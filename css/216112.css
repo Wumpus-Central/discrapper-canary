@@ -1,15 +1,15 @@
-.guildIconImage_d28ae0 {
+.guildIconImage_sX5_6T {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
     width: 100%
 }
 
-.guildIconImage_d28ae0.acronym_d28ae0 {
+.guildIconImage_sX5_6T.acronym_sX5_6T {
     background-color: var(--background-base-lowest)
 }
 
-.acronym_d28ae0 {
+.acronym_sX5_6T {
     align-items: center;
     color: var(--text-strong);
     display: flex;
@@ -21,4 +21,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=216112.cc8f94de5614d3b0.css.map*/
+/*# sourceMappingURL=216112.a11ae4a4b4487718.css.map*/

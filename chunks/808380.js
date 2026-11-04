@@ -1,4 +1,3 @@
-n.d(t, { Y: () => r });
 var i,
     r =
         (((i = {})[(i.DESKTOP = 0)] = "DESKTOP"),
@@ -11,3 +10,4 @@ var i,
         (i[(i.MACOS = 7)] = "MACOS"),
         (i[(i.ROBLOX = 8)] = "ROBLOX"),
         i);
+n.d(t, {}, { Y: r });

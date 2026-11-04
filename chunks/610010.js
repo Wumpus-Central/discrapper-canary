@@ -1,10 +1,9 @@
-n.d(t, { Bp: () => E, EX: () => _, TF: () => f, k0: () => h });
 var i = n(582128),
-    r = n(17928),
+    r = n(855986),
     a = n(363487),
     s = n(71393),
     l = n(576705),
-    o = n(498480),
+    o = n(940456),
     d = n(831617),
     c = n(475669);
 function u(e, t, n) {
@@ -12,13 +11,7 @@ function u(e, t, n) {
         r = (0, d.TS)(e.id, n);
     return i && r;
 }
-function _(e) {
-    return (0, r.yK)([s.A, l.A], () => s.A.getGuildsArray().filter((t) => u(t, l.A, e)));
-}
-function E(e) {
-    return (0, r.bG)([s.A, l.A], () => s.A.getGuildsArray().some((t) => u(t, l.A, e)));
-}
-let A = new Set([
+let _ = new Set([
     "363409643973771264",
     "1158877933042143272",
     "1199745463918788740",
@@ -34,26 +27,38 @@ let A = new Set([
     "1124358970618953818",
     "1441987315235946546",
 ]);
-function h(e) {
-    return null != e && A.has(e);
-}
-function f(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { shouldFetch: n = !1 } = t,
-        a = (0, r.bG)(
-            [c.A],
-            () => {
-                if (null == e) return !1;
-                let { catalog: t } = c.A.getGlobalCatalogState();
-                return Object.values(t).some((t) => t.gameId === e);
-            },
-            [e],
-        ),
-        s = (0, r.bG)([c.A], () => c.A.shouldFetchGlobalCatalog());
-    return (
-        i.useEffect(() => {
-            null != e && n && s && (0, o.K)();
-        }, [e, n, s]),
-        a
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        Bp: function (e) {
+            return (0, r.bG)([s.A, l.A], () => s.A.getGuildsArray().some((t) => u(t, l.A, e)));
+        },
+        EX: function (e) {
+            return (0, r.yK)([s.A, l.A], () => s.A.getGuildsArray().filter((t) => u(t, l.A, e)));
+        },
+        TF: function (e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                { shouldFetch: n = !1 } = t,
+                a = (0, r.bG)(
+                    [c.A],
+                    () => {
+                        if (null == e) return !1;
+                        let { catalog: t } = c.A.getGlobalCatalogState();
+                        return Object.values(t).some((t) => t.gameId === e);
+                    },
+                    [e],
+                ),
+                s = (0, r.bG)([c.A], () => c.A.shouldFetchGlobalCatalog());
+            return (
+                i.useEffect(() => {
+                    null != e && n && s && (0, o.K)();
+                }, [e, n, s]),
+                a
+            );
+        },
+        k0: function (e) {
+            return null != e && _.has(e);
+        },
+    },
+);

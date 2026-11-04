@@ -1,11 +1,10 @@
-a.d(t, { A: () => y });
 var n = a(477900),
     l = a(582128),
     i = a(503698),
     s = a.n(i),
     r = a(862482),
     o = a(939249),
-    d = a(980707),
+    d = a(165862),
     c = a(477782),
     u = a(265872),
     m = a(765671),
@@ -125,23 +124,29 @@ function f(e) {
         ],
     });
 }
-function y(e, t) {
-    let { tabs: a, initialSelectedTabId: i, onChangeTab: s } = e,
-        [r, o] = l.useState(i ?? a[0]?.id);
-    return {
-        TabBar: l.useCallback(
-            () =>
-                (0, n.jsx)(f, {
-                    tabs: a,
-                    selectedTabId: r,
-                    onSelectTab: (e) => {
-                        (o(e), s?.(e));
-                    },
-                }),
-            [r, o, s, ...t],
-        ),
-        renderSelectedTab: a.find((e) => e.id === r)?.render ?? (() => null),
-        selectedTabId: r,
-        setSelectedTabId: o,
-    };
-}
+a.d(
+    t,
+    {},
+    {
+        A: function (e, t) {
+            let { tabs: a, initialSelectedTabId: i, onChangeTab: s } = e,
+                [r, o] = l.useState(i ?? a[0]?.id);
+            return {
+                TabBar: l.useCallback(
+                    () =>
+                        (0, n.jsx)(f, {
+                            tabs: a,
+                            selectedTabId: r,
+                            onSelectTab: (e) => {
+                                (o(e), s?.(e));
+                            },
+                        }),
+                    [r, o, s, ...t],
+                ),
+                renderSelectedTab: a.find((e) => e.id === r)?.render ?? (() => null),
+                selectedTabId: r,
+                setSelectedTabId: o,
+            };
+        },
+    },
+);

@@ -1,13 +1,12 @@
-n.d(t, { A: () => A });
 var i = n(158390),
     r = n(439372),
     a = n(734057),
-    s = n(573163),
+    s = n(218461),
     l = n(309010),
-    o = n(935208),
+    o = n(811091),
     d = n(181041),
     c = n(828488),
-    u = n(623562),
+    u = n(856896),
     _ = n(575279);
 class E extends r.A {
     visibleTopMessageId = null;
@@ -122,3 +121,4 @@ class E extends r.A {
     }
 }
 let A = new E();
+n.d(t, {}, { A: A });

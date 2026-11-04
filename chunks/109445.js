@@ -1,6 +1,6 @@
 e.exports = {
-    l7: "innerPanel__4f62d",
-    TZ: "progressItem__4f62d",
-    $D: "progressSuccess__4f62d",
-    uL: "progressFail__4f62d",
+    l7: "innerPanel_-o_Pb2",
+    TZ: "progressItem_-o_Pb2",
+    $D: "progressSuccess_-o_Pb2",
+    uL: "progressFail_-o_Pb2",
 };

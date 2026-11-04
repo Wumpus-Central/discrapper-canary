@@ -1,5 +1,4 @@
 let l;
-(n.r(t), n.d(t, { default: () => v, renderChangelogMessageMarkup: () => N }));
 var s = n(478676),
     a = n.n(s),
     r = n(873879),
@@ -7,8 +6,8 @@ var s = n(478676),
     u = n(704726),
     i = n(46054);
 let c = a().defaultRules.lheading,
-    d = a().defaultRules.heading,
-    p = a().defaultRules.link,
+    p = a().defaultRules.heading,
+    d = a().defaultRules.link,
     m = a().defaultRules.image,
     g = a().defaultRules.list,
     h = a().defaultRules.blockQuote,
@@ -38,7 +37,7 @@ function y(e) {
               }
             : {}),
         image: { ...m, ...("function" == typeof l.customRules.image ? l.customRules.image(e) : l.customRules.image) },
-        link: { ...p, ...("function" == typeof l.customRules.link ? l.customRules.link(e) : l.customRules.link) },
+        link: { ...d, ...("function" == typeof l.customRules.link ? l.customRules.link(e) : l.customRules.link) },
         list: { ...g, ...("function" == typeof l.customRules.list ? l.customRules.list(e) : l.customRules.list) },
         interpolation: {
             order: u.Ay.order,
@@ -55,7 +54,7 @@ function y(e) {
             ...("function" == typeof l.customRules.lheading ? l.customRules.lheading(e) : l.customRules.lheading),
         },
         heading: {
-            ...d,
+            ...p,
             ...("function" == typeof l.customRules.heading ? l.customRules.heading(e) : l.customRules.heading),
         },
         blockQuote: {
@@ -71,27 +70,35 @@ function y(e) {
 function x(e) {
     return { ...y(e) };
 }
-l = n(682928);
-let v = {
-    getDefaultRules: x,
-    getSpecialRules: (e) => ({
-        ...y(e),
-        ...{
-            lheading: {
-                ...c,
-                parse: k({ transformUpperCase: !1 }),
-                ...("function" == typeof l.customRules.lheading ? l.customRules.lheading(e) : l.customRules.lheading),
+((l = n(843430)),
+    n.d(
+        t,
+        {},
+        {
+            A: {
+                getDefaultRules: x,
+                getSpecialRules: (e) => ({
+                    ...y(e),
+                    ...{
+                        lheading: {
+                            ...c,
+                            parse: k({ transformUpperCase: !1 }),
+                            ...("function" == typeof l.customRules.lheading
+                                ? l.customRules.lheading(e)
+                                : l.customRules.lheading),
+                        },
+                    },
+                }),
+                getMessageRules: (e) => ({
+                    ...{ ...y(e), newline: { ...a().defaultRules.newline }, text: u.Ay, list: r.A, subtext: o.A },
+                }),
+            },
+            renderChangelogMessageMarkup: function (e, t, n) {
+                return {
+                    hasSpoilerEmbeds: !1,
+                    hasBailedAst: !1,
+                    content: i.A.reactParserFor(x(t))(e.content, !1, null != n ? { changeLog: n } : {}),
+                };
             },
         },
-    }),
-    getMessageRules: (e) => ({
-        ...{ ...y(e), newline: { ...a().defaultRules.newline }, text: u.Ay, list: r.A, subtext: o.A },
-    }),
-};
-function N(e, t, n) {
-    return {
-        hasSpoilerEmbeds: !1,
-        hasBailedAst: !1,
-        content: i.A.reactParserFor(x(t))(e.content, !1, null != n ? { changeLog: n } : {}),
-    };
-}
+    ));

@@ -1,0 +1,79 @@
+.bannerImage_xC0IIt,
+.colorSwatch_xC0IIt {
+    height: 100%;
+    width: 100%
+}
+
+.bannerImage_xC0IIt {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.displayNamePreview_ewY9mf {
+    display: flex;
+    justify-content: center;
+    min-width: 0;
+    padding: 0 var(--space-8);
+    width: 100%
+}
+
+.displayNamePreview_ewY9mf>* {
+    min-width: 0
+}
+
+.enable-forced-colors .displayNamePreview_ewY9mf.hasStyles_ewY9mf {
+    color: CanvasText;
+    forced-color-adjust: none
+}
+
+.previewTextUnstyled_ewY9mf {
+    color: var(--text-muted);
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.enable-forced-colors .previewTextUnstyled_ewY9mf {
+    color: GrayText
+}
+
+.group_Z5MObs {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: 1fr 1fr
+}
+
+.label_Z5MObs {
+    color: var(--text-strong);
+    grid-column: 1/-1
+}
+
+.label_Z5MObs.disabled_Z5MObs {
+    color: var(--text-muted)
+}
+
+.enable-forced-colors .label_Z5MObs.disabled_Z5MObs {
+    color: GrayText
+}
+
+.errorMessage_Z5MObs {
+    align-items: start;
+    display: grid;
+    gap: var(--space-4);
+    grid-column: 1/-1;
+    grid-template-columns: auto 1fr
+}
+
+.labelHeading_Z5MObs {
+    display: inline
+}
+
+.labelBadge_Z5MObs,
+.labelIcon_Z5MObs {
+    display: inline-flex;
+    margin-inline-start: var(--space-4);
+    vertical-align: middle
+}
+
+/*# sourceMappingURL=f3ed66562287736e.css.map*/

@@ -1,5 +1,4 @@
-n.d(t, { l: () => c });
-var i = n(17928),
+var i = n(855986),
     r = n(73153),
     l = n(91242);
 let s = new Map(),
@@ -15,7 +14,7 @@ class o extends i.Ay.Store {
 let u = new o(r.h, {
     APPLICATION_FRAME_UPDATE: function (e) {
         let { applicationId: t, updatedAt: n } = e,
-            i = null != n ? Date.parse(n) : NaN,
+            i = null != n ? Date.parse(n) : 0 / 0,
             r = !1;
         for (let { id: e, applicationId: n } of l.A.getAllFrames()) {
             if (n !== t || a.has(e)) continue;
@@ -37,6 +36,12 @@ let u = new o(r.h, {
         return (s.set(t, Date.now()), a.delete(t));
     },
 });
-function c(e) {
-    return (0, i.bG)([u], () => u.isUpdateAvailable(e), [e]);
-}
+n.d(
+    t,
+    {},
+    {
+        l: function (e) {
+            return (0, i.bG)([u], () => u.isUpdateAvailable(e), [e]);
+        },
+    },
+);

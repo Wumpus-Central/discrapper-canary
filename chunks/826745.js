@@ -1,5 +1,4 @@
 let l;
-n.d(t, { y: () => m });
 var i = n(477900),
     r = n(582128),
     s = n(503698),
@@ -124,3 +123,4 @@ class m extends r.PureComponent {
         (t?.(e), this.calculateSize());
     };
 }
+n.d(t, {}, { y: m });

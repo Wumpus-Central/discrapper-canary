@@ -1,7 +1,6 @@
-i.d(t, { default: () => N });
 var n = i(477900);
 i(582128);
-var r = i(980707),
+var r = i(165862),
     s = i(477782),
     d = i(442433),
     l = i(820284),
@@ -11,7 +10,7 @@ var r = i(980707),
     u = i(301541),
     h = i(243949),
     A = i(652215),
-    E = i(105292);
+    E = i(792996);
 let N = (0, a.A)(
     function (e) {
         let { user: t, analyticsContext: i, onSelect: a } = e,
@@ -34,3 +33,4 @@ let N = (0, a.A)(
     },
     [c.A.CONTEXT_MENU, c.A.BANNED_USER_MENU],
 );
+i.d(t, {}, { default: N });

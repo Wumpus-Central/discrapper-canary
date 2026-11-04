@@ -1,4 +1,3 @@
-n.d(t, { K: () => a });
 var i = n(477900),
     r = n(582128),
     l = n(744682);
@@ -8,42 +7,48 @@ let s = {
     hover_enabled: { name: "hover_enabled", start: 180, duration: 70 },
     hover_disabled: { name: "hover_disabled", start: 280, duration: 70 },
 };
-function a(e) {
-    let t = r.useRef(null),
-        a = r.useRef(e);
-    a.current = e;
-    let o = r.useMemo(
-            () => () => {
-                null != t.current && t.current.play(e);
-            },
-            [e],
-        ),
-        u = r.useCallback(() => {
-            if (null == t.current) return;
-            let n = "enable" === e ? "hover_disabled" : "hover_enabled";
-            t.current.play(n);
-        }, [e]),
-        c = r.useCallback(() => {
-            if (null == t.current) return;
-            let n = "enable" === e ? "hover_disabled" : "hover_enabled";
-            t.current.stopIfPlaying(n);
-        }, [e]),
-        d = r.useCallback(
-            (e) =>
-                (0, i.jsx)(l.P, {
-                    ...e,
-                    src: () => n.e("160810").then(n.t.bind(n, 55089, 19)),
-                    ref: t,
-                    initialAnimation: a.current,
-                    markers: s,
-                }),
-            [],
-        );
-    return {
-        events: { onClick: o, onMouseEnter: u, onMouseLeave: c },
-        play: o,
-        getDuration: r.useCallback(() => t.current?.getDuration(), []),
-        getCurrentFrame: r.useCallback(() => t.current?.getCurrentFrame() ?? null, []),
-        Component: d,
-    };
-}
+n.d(
+    t,
+    {},
+    {
+        K: function (e) {
+            let t = r.useRef(null),
+                a = r.useRef(e);
+            a.current = e;
+            let o = r.useMemo(
+                    () => () => {
+                        null != t.current && t.current.play(e);
+                    },
+                    [e],
+                ),
+                u = r.useCallback(() => {
+                    if (null == t.current) return;
+                    let n = "enable" === e ? "hover_disabled" : "hover_enabled";
+                    t.current.play(n);
+                }, [e]),
+                c = r.useCallback(() => {
+                    if (null == t.current) return;
+                    let n = "enable" === e ? "hover_disabled" : "hover_enabled";
+                    t.current.stopIfPlaying(n);
+                }, [e]),
+                d = r.useCallback(
+                    (e) =>
+                        (0, i.jsx)(l.P, {
+                            ...e,
+                            src: () => n.e(160810).then(n.t.bind(n, 55089, 19)),
+                            ref: t,
+                            initialAnimation: a.current,
+                            markers: s,
+                        }),
+                    [],
+                );
+            return {
+                events: { onClick: o, onMouseEnter: u, onMouseLeave: c },
+                play: o,
+                getDuration: r.useCallback(() => t.current?.getDuration(), []),
+                getCurrentFrame: r.useCallback(() => t.current?.getCurrentFrame() ?? null, []),
+                Component: d,
+            };
+        },
+    },
+);

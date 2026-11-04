@@ -1,19 +1,6 @@
-n.d(t, {
-    B0: () => o,
-    B5: () => p,
-    BL: () => s,
-    Ji: () => r,
-    Si: () => f,
-    _D: () => _,
-    gi: () => c,
-    lb: () => a,
-    pZ: () => h,
-    q2: () => u,
-    s3: () => d,
-});
-var l = n(891784),
-    i = n(149987);
-function s(e) {
+n(891784);
+var l = n(149987);
+function i(e) {
     return (
         !0 === e.finished ||
         !0 === e.continued ||
@@ -21,57 +8,27 @@ function s(e) {
         null != e.proposal ||
         null != e.clarification ||
         null != e.intake ||
-        (0, i.T3)(e.steps)
+        (0, l.T3)(e.steps)
     );
 }
-function r(e) {
+function s(e) {
     if (null == e) return null;
     let t = !1;
     for (let n = e.length - 1; n >= 0; n--) {
         let l = e[n];
-        if (!("assistant" !== l.role || p(l)) && ((!t && ((t = !0), !s(l))) || (null != l.turn_id && !s(l)))) return l;
+        if (!("assistant" !== l.role || o(l)) && ((!t && ((t = !0), !i(l))) || (null != l.turn_id && !i(l)))) return l;
     }
     return null;
 }
-function u(e) {
-    return null != r(e);
+function r(e, t) {
+    return e.turn_id === t || e.id === `turn:${t}`;
 }
-function o(e, t) {
-    let n = e[t],
-        l = n?.turn_id;
-    if (null == n || "assistant" !== n.role || null == l || "" !== n.content || s(n)) return !1;
-    for (let n = t - 1; n >= 0; n--) {
-        let t = e[n];
-        if ("user" === t.role) break;
-        if (d(t, l)) return s(t) && !0 !== t.continued;
-    }
-    return !1;
-}
-function d(e, t) {
-    return e.turn_id === t || e.id === `${l.o_}${t}`;
-}
-function a(e) {
-    return null != e.turn_id ? e.turn_id : e.id.startsWith(l.o_) ? e.id.slice(l.o_.length) : null;
-}
-function c(e, t) {
+function u(e, t) {
     if (null == t) return -1;
-    for (let n = e.length - 1; n >= 0; n--) if (d(e[n], t)) return n;
+    for (let n = e.length - 1; n >= 0; n--) if (r(e[n], t)) return n;
     return -1;
 }
-function f(e, t) {
-    let n = c(e, t);
-    if (-1 !== n) return n;
-    for (let t = e.length - 1; t >= 0; t--) {
-        let n = e[t];
-        if (!("assistant" !== n.role || s(n)) && null == n.turn_id) return t;
-    }
-    return -1;
-}
-function _(e, t, n) {
-    let l = e.slice();
-    return ((l[t] = n), l);
-}
-function p(e) {
+function o(e) {
     return (
         "side_reply" === e.kind ||
         "publish_notice" === e.kind ||
@@ -79,6 +36,47 @@ function p(e) {
         "context_boundary" === e.kind
     );
 }
-function h(e) {
-    return "assistant" === e.role && !p(e) && !s(e) && !0 !== e.stopRequested;
-}
+n.d(
+    t,
+    {},
+    {
+        B0: function (e, t) {
+            let n = e[t],
+                l = n?.turn_id;
+            if (null == n || "assistant" !== n.role || null == l || "" !== n.content || i(n)) return !1;
+            for (let n = t - 1; n >= 0; n--) {
+                let t = e[n];
+                if ("user" === t.role) break;
+                if (r(t, l)) return i(t) && !0 !== t.continued;
+            }
+            return !1;
+        },
+        B5: o,
+        BL: i,
+        Ji: s,
+        Si: function (e, t) {
+            let n = u(e, t);
+            if (-1 !== n) return n;
+            for (let t = e.length - 1; t >= 0; t--) {
+                let n = e[t];
+                if (!("assistant" !== n.role || i(n)) && null == n.turn_id) return t;
+            }
+            return -1;
+        },
+        _D: function (e, t, n) {
+            let l = e.slice();
+            return ((l[t] = n), l);
+        },
+        gi: u,
+        lb: function (e) {
+            return null != e.turn_id ? e.turn_id : e.id.startsWith("turn:") ? e.id.slice(5) : null;
+        },
+        pZ: function (e) {
+            return "assistant" === e.role && !o(e) && !i(e) && !0 !== e.stopRequested;
+        },
+        q2: function (e) {
+            return null != s(e);
+        },
+        s3: r,
+    },
+);

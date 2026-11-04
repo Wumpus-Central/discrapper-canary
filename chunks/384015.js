@@ -1,57 +1,62 @@
-s.d(t, { A: () => d });
 var a = s(477900),
     i = s(582128),
     n = s(59652),
     l = s(28863),
     r = s(32880),
-    o = s(174459),
+    o = s(129230),
     h = s(652215),
-    u = s(105292);
-let d = function (e) {
-    let {
-            href: t,
-            className: s,
-            iconClassName: d,
-            rel: c,
-            target: p,
-            mimeType: m,
-            fileName: g,
-            focusProps: f,
-            onClick: v,
-            ...y
-        } = e,
-        S = i.useMemo(() => n.V.getDefaultLinkInterceptor(t), [t]),
-        T = i.useCallback(
-            (e) => {
-                (o.default.track(h.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
-                    attachment_type: m?.[0],
-                    attachment_subtype: m?.[1],
-                }),
-                    v?.(),
-                    S?.(e));
-            },
-            [S, m, v],
-        );
-    return null != g
-        ? (0, a.jsx)(l.Anchor, {
-              href: t,
-              onClick: T,
-              target: p,
-              rel: c,
-              className: s,
-              focusProps: f,
-              ...y,
-              children: g,
-          })
-        : (0, a.jsx)(l.Anchor, {
-              href: t,
-              onClick: T,
-              target: p,
-              rel: c,
-              className: s,
-              "aria-label": u.intl.string(u.t["1WjMbC"]),
-              focusProps: f,
-              ...y,
-              children: (0, a.jsx)(r.DownloadIcon, { size: "md", color: "currentColor", className: d }),
-          });
-};
+    u = s(792996);
+s.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let {
+                    href: t,
+                    className: s,
+                    iconClassName: d,
+                    rel: c,
+                    target: p,
+                    mimeType: m,
+                    fileName: g,
+                    focusProps: f,
+                    onClick: v,
+                    ...y
+                } = e,
+                S = i.useMemo(() => n.V.getDefaultLinkInterceptor(t), [t]),
+                T = i.useCallback(
+                    (e) => {
+                        (o.default.track(h.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
+                            attachment_type: m?.[0],
+                            attachment_subtype: m?.[1],
+                        }),
+                            v?.(),
+                            S?.(e));
+                    },
+                    [S, m, v],
+                );
+            return null != g
+                ? (0, a.jsx)(l.Anchor, {
+                      href: t,
+                      onClick: T,
+                      target: p,
+                      rel: c,
+                      className: s,
+                      focusProps: f,
+                      ...y,
+                      children: g,
+                  })
+                : (0, a.jsx)(l.Anchor, {
+                      href: t,
+                      onClick: T,
+                      target: p,
+                      rel: c,
+                      className: s,
+                      "aria-label": u.intl.string(u.t["1WjMbC"]),
+                      focusProps: f,
+                      ...y,
+                      children: (0, a.jsx)(r.DownloadIcon, { size: "md", color: "currentColor", className: d }),
+                  });
+        },
+    },
+);

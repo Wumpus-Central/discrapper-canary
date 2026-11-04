@@ -1,17 +1,16 @@
-n.d(t, { A: () => N, C: () => h });
 var i,
     r = n(435558),
     a = n.n(r),
-    s = n(17928),
+    s = n(855986),
     l = n(73153),
     o = n(458524),
     d = n(403362),
-    c = n(935208),
-    u = n(280450),
+    c = n(811091),
+    u = n(46653),
     _ = n(734057),
     E = n(919638);
-let A = n(652215).CS1 + 500;
-var h =
+n(652215);
+var A =
     (((i = {})[(i.ChannelMessage = 0)] = "ChannelMessage"),
     (i[(i.ThreadSettings = 1)] = "ThreadSettings"),
     (i[(i.FirstThreadMessage = 2)] = "FirstThreadMessage"),
@@ -22,51 +21,51 @@ var h =
     (i[(i.InteractionModal = 7)] = "InteractionModal"),
     (i[(i.ScheduledMessage = 8)] = "ScheduledMessage"),
     i);
-let f = {};
-function I(e) {
-    let t = f[e];
-    return (null == t && (t = f[e] = {}), t);
+let h = {};
+function f(e) {
+    let t = h[e];
+    return (null == t && (t = h[e] = {}), t);
 }
-function p(e) {
+function I(e) {
     let { type: t, channelId: n, draft: i, draftType: r, command: s } = e,
         l = _.A.getChannel(n);
     i === l?.template && (i = "");
     let d = u.default.getId();
     if (null != d && null != i && "" !== i) {
         var c;
-        let e = I(d),
+        let e = f(d),
             t = e[n];
-        (null == t && (t = e[n] = {}), (c = i).length > A && (c = c.substr(0, A)), (i = c));
+        (null == t && (t = e[n] = {}), (c = i).length > 4500 && (c = c.substr(0, 4500)), (i = c));
         let l = t[r],
             u = s ?? ((0, o.l)(l?.command, i) ? l?.command : void 0);
         (i === l?.draft && a().isEqual(u, l?.command)) || (t[r] = { timestamp: Date.now(), draft: i, command: u });
-    } else m(n, r);
+    } else p(n, r);
     return "DRAFT_SAVE" === t;
 }
-function m(e, t) {
+function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.default.getId();
     if (null == n) return !1;
-    let i = I(n),
+    let i = f(n),
         r = i[e];
     if (null == r) return !1;
     (delete r[t], a().isEmpty(r) && delete i[e]);
 }
-function T() {
+function m() {
     let e = u.default.getId();
     if (null == e || E.A.totalUnavailableGuilds > 0) return;
-    let t = I(e);
+    let t = f(e);
     for (let e in t) null == _.A.getChannel(e) && delete t[e];
 }
-function g(e) {
+function T(e) {
     let {
             channel: { id: t },
         } = e,
         n = u.default.getId();
     if (null == n) return !1;
-    let i = I(n);
+    let i = f(n);
     return (delete i[t], !1);
 }
-class S extends s.Ay.PersistedStore {
+class g extends s.Ay.PersistedStore {
     static displayName = "DraftStore";
     static persistKey = "DraftStore";
     static migrations = [
@@ -85,20 +84,20 @@ class S extends s.Ay.PersistedStore {
         },
     ];
     initialize(e) {
-        for (let [t, n] of ((f = e ?? {}), c.default.entries(f)))
+        for (let [t, n] of ((h = e ?? {}), c.default.entries(h)))
             for (let [e, i] of c.default.entries(n)) {
                 let n = i[0];
-                null != n && ("" === n.draft || "" === n.draft.trim()) && m(e, 0, t);
+                null != n && ("" === n.draft || "" === n.draft.trim()) && p(e, 0, t);
             }
         this.waitFor(u.default, _.A, E.A);
     }
     getState() {
-        return f;
+        return h;
     }
     getThreadDraftWithParentMessageId(e) {
         let t = u.default.getId();
         if (null == t) return;
-        let n = I(t),
+        let n = f(t),
             i = c.default.keys(n).find((t) => {
                 let n = this.getThreadSettings(t);
                 return n?.parentMessageId === e;
@@ -108,7 +107,7 @@ class S extends s.Ay.PersistedStore {
     getRecentlyEditedDrafts(e) {
         let t = u.default.getId();
         if (null == t) return [];
-        let n = I(t);
+        let n = f(t);
         return a()(n)
             .mapValues((t) => t?.[e])
             .pickBy(d.Vq)
@@ -126,7 +125,7 @@ class S extends s.Ay.PersistedStore {
     getDraft(e, t) {
         let n = u.default.getId();
         if (null == n) return "";
-        let i = I(n)[e];
+        let i = f(n)[e];
         if (null != i) {
             let e = i[t];
             if (null != e) return e.draft;
@@ -135,40 +134,40 @@ class S extends s.Ay.PersistedStore {
     }
     getDraftCommand(e, t) {
         let n = u.default.getId();
-        if (null != n) return I(n)[e]?.[t]?.command;
+        if (null != n) return f(n)[e]?.[t]?.command;
     }
     getThreadSettings(e) {
         let t = u.default.getId();
         if (null == t) return null;
-        let n = I(t)[e];
+        let n = f(t)[e];
         return null == n ? null : n[1];
     }
     getScheduledMessage(e) {
         let t = u.default.getId();
-        if (null != t) return I(t)[e]?.[8];
+        if (null != t) return f(t)[e]?.[8];
     }
 }
-let N = new S(l.h, {
+let S = new g(l.h, {
     CONNECTION_OPEN: function () {
         let e = u.default.getId();
-        return (e in f || (f[e] = {}), T(), !1);
+        return (e in h || (h[e] = {}), m(), !1);
     },
     LOGOUT: function (e) {
-        e.isSwitchingAccount || (f = {});
+        e.isSwitchingAccount || (h = {});
     },
     MULTI_ACCOUNT_REMOVE_ACCOUNT: function (e) {
-        e.userId in f && delete f[e.userId];
+        e.userId in h && delete h[e.userId];
     },
     GUILD_DELETE: function () {
-        return (T(), !1);
+        return (m(), !1);
     },
-    CHANNEL_DELETE: g,
-    THREAD_DELETE: g,
+    CHANNEL_DELETE: T,
+    THREAD_DELETE: T,
     THREAD_CREATE: function (e) {
         let { channel: t } = e,
             n = u.default.getId();
         if (null == n || t.ownerId === n) return !1;
-        let i = I(n),
+        let i = f(n),
             r = i[t.parent_id];
         if (null == r) return !1;
         let a = r[1];
@@ -177,27 +176,27 @@ let N = new S(l.h, {
             let e = i[t.parent_id];
             if (null == e) return !1;
             let n = e[2]?.draft ?? "";
-            ("" !== n && (i[t.id] = { 0: { timestamp: Date.now(), draft: n } }), m(t.parent_id, 1), m(t.parent_id, 2));
+            ("" !== n && (i[t.id] = { 0: { timestamp: Date.now(), draft: n } }), p(t.parent_id, 1), p(t.parent_id, 2));
         }
     },
-    DRAFT_SAVE: p,
-    DRAFT_CHANGE: p,
+    DRAFT_SAVE: I,
+    DRAFT_CHANGE: I,
     DRAFT_CLEAR: function (e) {
         let { channelId: t, draftType: n } = e;
-        return m(t, n);
+        return p(t, n);
     },
     DRAFT_COMMAND_CLEAR: function (e) {
         let { channelId: t, draftType: n } = e,
             i = u.default.getId();
         if (null == i) return !1;
-        let r = I(i)[t]?.[n];
+        let r = f(i)[t]?.[n];
         return r?.command != null && ((r.command = void 0), !1);
     },
     THREAD_SETTINGS_DRAFT_CHANGE: function (e) {
         let { channelId: t, draft: n } = e,
             i = u.default.getId();
         if (null == i) return;
-        let r = I(i),
+        let r = f(i),
             a = r[t];
         (null == a && (a = r[t] = {}), (a[1] = { timestamp: Date.now(), ...a[1], ...n, parentChannelId: t }));
     },
@@ -205,12 +204,13 @@ let N = new S(l.h, {
         let { channelId: t, draft: n } = e,
             i = u.default.getId();
         if (null == i) return;
-        let r = I(i),
+        let r = f(i),
             a = r[t];
         (null == a && (a = r[t] = {}), (a[8] = { ...a[8], ...n, timestamp: Date.now() }));
     },
     SCHEDULED_MESSAGES_CREATE_SUCCESS: function (e) {
         let { channelId: t } = e;
-        return m(t, 8);
+        return p(t, 8);
     },
 });
+n.d(t, {}, { A: S, C: A });

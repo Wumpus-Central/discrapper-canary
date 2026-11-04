@@ -1,8 +1,13 @@
-n.d(t, { V: () => a, j: () => r });
 let i = !1;
-function r() {
-    return i;
-}
-function a(e) {
-    i = e;
-}
+n.d(
+    t,
+    {},
+    {
+        V: function (e) {
+            i = e;
+        },
+        j: function () {
+            return i;
+        },
+    },
+);

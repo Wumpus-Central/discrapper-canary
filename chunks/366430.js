@@ -1,4 +1,3 @@
-n.d(t, { It: () => o, U4: () => c, VS: () => d });
 var i = n(991690),
     r = n(735991),
     a = n(20015),
@@ -14,10 +13,17 @@ function o(e) {
         for (let n of [i.U.APP_CHANNEL, i.U.VOICE_CHANNEL]) (0, s.W)(e, n) && t.add(n);
     return t;
 }
-function d(e) {
-    return o(e).size > 0;
-}
-function c(e) {
-    let t = o(e);
-    return t.has(i.U.MAIN) || t.has(i.U.APP_CHANNEL);
-}
+n.d(
+    t,
+    {},
+    {
+        It: o,
+        U4: function (e) {
+            let t = o(e);
+            return t.has(i.U.MAIN) || t.has(i.U.APP_CHANNEL);
+        },
+        VS: function (e) {
+            return o(e).size > 0;
+        },
+    },
+);

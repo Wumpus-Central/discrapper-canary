@@ -1,4 +1,3 @@
-n.d(t, { n: () => r, o: () => a });
 var i,
     r =
         (((i = {}).STREAM_ON_DESKTOP = "STREAM_ON_DESKTOP"),
@@ -26,3 +25,4 @@ let a = {
     IN_GAME: new Set(["ACHIEVEMENT_IN_ACTIVITY", "ACHIEVEMENT_IN_GAME"]),
     VIDEO: new Set(["WATCH_VIDEO", "WATCH_VIDEO_ON_MOBILE"]),
 };
+n.d(t, {}, { n: r, o: a });

@@ -1,19 +1,18 @@
-n.d(t, { Ay: () => f });
 var i = n(435558),
     r = n.n(i),
-    a = n(17928),
+    a = n(855986),
     s = n(506774),
     l = n(73153);
 n(677313);
 var o = n(185928),
-    d = n(355097),
-    c = n(652215),
-    u = n(698279);
+    d = n(355097);
+n(652215);
+var c = n(698279);
 n(276831);
-let _ = (window.innerWidth - c.MdR) / 2,
-    E = null,
-    A = {};
-class h extends a.Ay.DeviceSettingsStore {
+let u = (window.innerWidth - 240) / 2,
+    _ = null,
+    E = {};
+class A extends a.Ay.DeviceSettingsStore {
     static displayName = "UnsyncedUserSettingsStore";
     static persistKey = "UnsyncedUserSettingsStore";
     static migrations = [
@@ -56,111 +55,112 @@ class h extends a.Ay.DeviceSettingsStore {
         },
     ];
     initialize(e) {
-        (A = e ?? {}).hdrDynamicRange = A.hdrDynamicRange ?? "no-limit";
+        (E = e ?? {}).hdrDynamicRange = E.hdrDynamicRange ?? "no-limit";
     }
     getUserAgnosticState() {
-        return A;
+        return E;
     }
     get lowQualityImageMode() {
-        return A.lowQualityImageMode ?? !1;
+        return E.lowQualityImageMode ?? !1;
     }
     get videoUploadQuality() {
-        return A.videoUploadQuality ?? "standard";
+        return E.videoUploadQuality ?? "standard";
     }
     get dataSavingMode() {
-        return A.dataSavingMode ?? A.lowQualityImageMode ?? !1;
+        return E.dataSavingMode ?? E.lowQualityImageMode ?? !1;
     }
     get expressionPickerWidth() {
-        return A.expressionPickerWidth ?? u.wp.MIN;
+        return E.expressionPickerWidth ?? c.wp.MIN;
     }
     get messageRequestSidebarWidth() {
-        return A.messageRequestSidebarWidth ?? c.ItT;
+        return E.messageRequestSidebarWidth ?? 650;
     }
     get threadSidebarWidth() {
-        return A.threadSidebarWidth ?? c.da6;
+        return E.threadSidebarWidth ?? 480;
     }
     get postSidebarWidth() {
-        return A.postSidebarWidth ?? _;
+        return E.postSidebarWidth ?? u;
     }
     get callChatSidebarWidth() {
-        return A.callChatSidebarWidth ?? c.da6;
+        return E.callChatSidebarWidth ?? 480;
     }
     get stageAudienceSidebarWidth() {
-        return A.stageAudienceSidebarWidth ?? 320;
+        return E.stageAudienceSidebarWidth ?? 320;
     }
     get homeSidebarWidth() {
-        return A.homeSidebarWidth ?? (null == E && (E = Math.max((window.innerWidth - c.MdR) * 0.4, c.da6)), E);
+        return E.homeSidebarWidth ?? (null == _ && (_ = Math.max((window.innerWidth - 240) * 0.4, 480)), _);
     }
     get callHeaderHeight() {
-        return A.callHeaderHeight;
+        return E.callHeaderHeight;
     }
     get useSystemTheme() {
-        return A.useSystemTheme ?? o.Q_.UNSET;
+        return E.useSystemTheme ?? o.Q_.UNSET;
     }
     get activityPanelHeight() {
-        return A.activityPanelHeight;
+        return E.activityPanelHeight;
     }
     get disableVoiceChannelChangeAlert() {
-        return A.disableVoiceChannelChangeAlert ?? !1;
+        return E.disableVoiceChannelChangeAlert ?? !1;
     }
     get disableEmbeddedActivityPopOutAlert() {
-        return A.disableEmbeddedActivityPopOutAlert ?? !1;
+        return E.disableEmbeddedActivityPopOutAlert ?? !1;
     }
     get disableActivityHardwareAccelerationPrompt() {
-        return A.disableActivityHardwareAccelerationPrompt ?? !1;
+        return E.disableActivityHardwareAccelerationPrompt ?? !1;
     }
     get disableInviteWithTextChannelActivityLaunch() {
-        return A.disableInviteWithTextChannelActivityLaunch ?? !1;
+        return E.disableInviteWithTextChannelActivityLaunch ?? !1;
     }
     get disableHideSelfStreamAndVideoConfirmationAlert() {
-        return A.disableHideSelfStreamAndVideoConfirmationAlert ?? !1;
+        return E.disableHideSelfStreamAndVideoConfirmationAlert ?? !1;
     }
     get pushUpsellUserSettingsDismissed() {
-        return A.pushUpsellDismissed ?? !1;
+        return E.pushUpsellDismissed ?? !1;
     }
     get disableActivityHostLeftNitroUpsell() {
-        return A.disableActivityHostLeftNitroUpsell ?? !1;
+        return E.disableActivityHostLeftNitroUpsell ?? !1;
     }
     get disableCallUserConfirmationPrompt() {
-        return A.disableCallUserConfirmationPrompt ?? !1;
+        return E.disableCallUserConfirmationPrompt ?? !1;
     }
     get disableApplicationSubscriptionCancellationSurvey() {
-        return A.disableApplicationSubscriptionCancellationSurvey ?? !1;
+        return E.disableApplicationSubscriptionCancellationSurvey ?? !1;
     }
     get allowConjureRunInBackground() {
-        return A.allowConjureRunInBackground ?? !0;
+        return E.allowConjureRunInBackground ?? !0;
     }
     get darkSidebar() {
-        return A.darkSidebar ?? !1;
+        return E.darkSidebar ?? !1;
     }
     get saveCameraUploadsToDevice() {
-        return A.saveCameraUploadsToDevice ?? !0;
+        return E.saveCameraUploadsToDevice ?? !0;
     }
     isVisualRefreshDisabled(e) {
-        return A.disableVisualRefresh ?? e;
+        return E.disableVisualRefresh ?? e;
     }
     get listDensity() {
-        return A.listDensity ?? d.YP.COZY;
+        return E.listDensity ?? d.YP.COZY;
     }
     get hdrDynamicRange() {
-        return A.hdrDynamicRange ?? "no-limit";
+        return E.hdrDynamicRange ?? "no-limit";
     }
     get pauseSelfStreamPreviewWhenUnfocused() {
-        return A.pauseSelfStreamPreviewWhenUnfocused ?? !0;
+        return E.pauseSelfStreamPreviewWhenUnfocused ?? !0;
     }
     get videoBackground() {
-        return A.videoBackground ?? null;
+        return E.videoBackground ?? null;
     }
 }
-let f = new h(l.h, {
+let h = new A(l.h, {
     UNSYNCED_USER_SETTINGS_UPDATE: function (e) {
-        A = { ...A, ...e.settings };
+        E = { ...E, ...e.settings };
     },
     LOGOUT: function () {
-        A = { useSystemTheme: A.useSystemTheme };
+        E = { useSystemTheme: E.useSystemTheme };
     },
     LOGIN_SUCCESS: function () {
-        null == A && (A = {});
+        null == E && (E = {});
     },
     REGISTER_SUCCESS: function () {},
 });
+n.d(t, {}, { Ay: h });

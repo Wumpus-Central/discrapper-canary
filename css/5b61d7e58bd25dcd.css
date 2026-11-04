@@ -1,0 +1,13 @@
+.row_pjcvYh {
+    gap: var(--space-12);
+    padding: var(--space-12)
+}
+
+.icon_pjcvYh {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-width: 32px
+}
+
+/*# sourceMappingURL=5b61d7e58bd25dcd.css.map*/

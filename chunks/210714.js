@@ -1,17 +1,16 @@
-s.d(t, { DC: () => w, d0: () => m, y9: () => b });
-var r = s(132500),
+var r = s(115560),
     n = s(77729),
     a = s(824579),
-    i = s(550568),
-    d = s(174459),
+    i = s(437815),
+    d = s(129230),
     _ = s(612181),
-    c = s(19575),
-    o = s(464578),
+    c = s(253400),
+    o = s(935564),
     l = s(652215);
 function p() {
     return window.GLOBAL_ENV.HTML_TIMESTAMP;
 }
-class u {
+let u = new (class {
     loadId = (0, r.A)();
     appUIViewed = !1;
     trackEvent(e) {
@@ -102,14 +101,19 @@ class u {
             this.appUIViewed = !0;
         }
     }
-}
-let y = new u();
-function m(e) {
-    y.trackAppUIViewed(e);
-}
-function w() {
-    y.trackTTI();
-}
-function b() {
-    return y.loadId;
-}
+})();
+s.d(
+    t,
+    {},
+    {
+        DC: function () {
+            u.trackTTI();
+        },
+        d0: function (e) {
+            u.trackAppUIViewed(e);
+        },
+        y9: function () {
+            return u.loadId;
+        },
+    },
+);

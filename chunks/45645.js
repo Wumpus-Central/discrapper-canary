@@ -1,2 +1,1 @@
-function i(e) {}
-n.d(t, { e: () => i });
+n.d(t, {}, { e: function (e) {} });

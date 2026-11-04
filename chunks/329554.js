@@ -1,13 +1,12 @@
-i.d(t, { A: () => N });
 var l = i(477900);
 i(582128);
-var a = i(17928),
+var a = i(855986),
     n = i(534514),
     s = i(939249),
     d = i(834730),
     r = i(302959),
     c = i(765379),
-    o = i(709899),
+    o = i(961272),
     m = i(506326),
     p = i(409626),
     u = i(692969),
@@ -97,35 +96,41 @@ function g(e) {
         ],
     });
 }
-let N = function (e) {
-    let {
-            channel: t,
-            presenceActivity: i,
-            userId: n,
-            embeddedApp: s,
-            applicationStream: d,
-            onAction: c,
-            showHeader: m = !0,
-        } = e,
-        p = (0, a.bG)([h.default], () => (null != n ? h.default.getUser(n) : null), [n]);
-    if (null == p) return null;
-    let u = (0, v.Gf)(p.id, i, s);
-    return (0, l.jsxs)("div", {
-        children: [
-            u.isSpotify
-                ? (0, l.jsx)(v.vP, { resolvedActivity: u, showHeader: m })
-                : (0, l.jsx)(g, { resolvedActivity: u, presenceActivity: i, showHeader: m }),
-            (0, l.jsx)(o.A, {
-                type: null != d ? r.M.STREAM_PREVIEW : r.M.VOICE_CHANNEL,
-                activity: i,
-                embeddedActivity: s?.embeddedActivity,
-                applicationStream: d,
-                user: p,
-                guildId: t.guild_id,
-                channelId: t.id,
-                buttonVariant: "primary",
-                onAction: c,
-            }),
-        ],
-    });
-};
+i.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let {
+                    channel: t,
+                    presenceActivity: i,
+                    userId: n,
+                    embeddedApp: s,
+                    applicationStream: d,
+                    onAction: c,
+                    showHeader: m = !0,
+                } = e,
+                p = (0, a.bG)([h.default], () => (null != n ? h.default.getUser(n) : null), [n]);
+            if (null == p) return null;
+            let u = (0, v.Gf)(p.id, i, s);
+            return (0, l.jsxs)("div", {
+                children: [
+                    u.isSpotify
+                        ? (0, l.jsx)(v.vP, { resolvedActivity: u, showHeader: m })
+                        : (0, l.jsx)(g, { resolvedActivity: u, presenceActivity: i, showHeader: m }),
+                    (0, l.jsx)(o.A, {
+                        type: null != d ? r.M.STREAM_PREVIEW : r.M.VOICE_CHANNEL,
+                        activity: i,
+                        embeddedActivity: s?.embeddedActivity,
+                        applicationStream: d,
+                        user: p,
+                        guildId: t.guild_id,
+                        channelId: t.id,
+                        buttonVariant: "primary",
+                        onAction: c,
+                    }),
+                ],
+            });
+        },
+    },
+);

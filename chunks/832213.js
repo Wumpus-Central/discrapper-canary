@@ -1,4 +1,3 @@
-n.d(t, { D: () => a, M: () => r });
 var i,
     r =
         (((i = {}).Unknown = "unknown"),
@@ -10,14 +9,21 @@ var i,
         (i.Clips = "clips"),
         (i.Ndi = "ndi"),
         i);
-class a {
-    cpuCoreCount;
-    getSystemMetrics(e) {
-        return Promise.resolve(null);
-    }
-    setShouldCollectHermesInstrumentedStats(e) {}
-    getCurrentHermesInstrumentedStatsSummary() {}
-    getCPUCoreCount() {
-        return this.cpuCoreCount;
-    }
-}
+n.d(
+    t,
+    {},
+    {
+        D: class {
+            cpuCoreCount;
+            getSystemMetrics(e) {
+                return Promise.resolve(null);
+            }
+            setShouldCollectHermesInstrumentedStats(e) {}
+            getCurrentHermesInstrumentedStatsSummary() {}
+            getCPUCoreCount() {
+                return this.cpuCoreCount;
+            }
+        },
+        M: r,
+    },
+);

@@ -1,7 +1,6 @@
-n.d(t, { A: () => k });
 var i = n(962929),
     r = n.n(i),
-    a = n(17928),
+    a = n(855986),
     s = n(73153),
     l = n(739010),
     o = n(239093);
@@ -241,7 +240,7 @@ let k = new x(s.h, {
     },
     SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS: function (e) {
         let { success: t } = e;
-        ((P = t ? o.qN.SUCCESS : D < o.ti ? o.qN.LOADING : o.qN.FAILURE), (M = null));
+        ((P = t ? o.qN.SUCCESS : D < 5 ? o.qN.LOADING : o.qN.FAILURE), (M = null));
     },
     SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS_V2: function (e) {
         let { status: t } = e;
@@ -258,3 +257,4 @@ let k = new x(s.h, {
     LOGOUT: G,
     LOGIN_SUSPENDED_USER: G,
 });
+n.d(t, {}, { A: k });

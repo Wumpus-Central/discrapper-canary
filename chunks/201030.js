@@ -1,6 +1,1 @@
-e.exports = {
-    Lb: "body-md/medium_abb9ad",
-    Cf: "messageRequestItem_abb9ad body-md/medium_abb9ad",
-    CJ: "firstItem_abb9ad",
-    vu: "active_abb9ad",
-};
+e.exports = { Cf: "messageRequestItem_rRxPBT body-md/medium_rRxPBT", CJ: "firstItem_rRxPBT", vu: "active_rRxPBT" };

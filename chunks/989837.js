@@ -1,5 +1,4 @@
-n.d(t, { A: () => u });
-var i = n(17928),
+var i = n(855986),
     r = n(73153),
     a = n(500049);
 let s = {
@@ -77,3 +76,4 @@ let u = new o(r.h, {
     APPLICATION_COMMAND_SET_ACTIVE_COMMAND: c,
     APP_LAUNCHER_SET_ACTIVE_COMMAND: c,
 });
+n.d(t, {}, { A: u });

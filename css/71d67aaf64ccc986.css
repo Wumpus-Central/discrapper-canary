@@ -1,0 +1,176 @@
+.tile_HhFoZE {
+    align-self: flex-start;
+    border-radius: var(--radius-sm);
+    display: block;
+    height: calc(var(--custom-tile-height)*1px);
+    position: relative;
+    width: calc(var(--custom-tile-width)*1px)
+}
+
+.square_HhFoZE {
+    --custom-tile-width: 100;
+    --custom-tile-height: 100
+}
+
+.bar_HhFoZE {
+    --custom-tile-width: 208;
+    --custom-tile-height: 42
+}
+
+.full-height-bar_HhFoZE {
+    --custom-tile-width: 208;
+    --custom-tile-height: 100
+}
+
+.tileInner_HhFoZE {
+    background-color: var(--background-mod-subtle);
+    border-radius: inherit;
+    inset: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: background-color 50ms ease-in
+}
+
+.tileInner_HhFoZE:after {
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 1px var(--border-muted);
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.tileInner_HhFoZE:has(.tileButton_HhFoZE:focus-visible),
+.tileInner_HhFoZE:has(.tileButton_HhFoZE:hover) {
+    background-color: var(--background-mod-normal);
+    transition: background-color .15s ease-out
+}
+
+.full-motion .tileInner_HhFoZE {
+    transition: transform .1s ease, background-color 50ms ease-in;
+    will-change: transform
+}
+
+.full-motion .tileInner_HhFoZE:has(.tileButton_HhFoZE:focus-visible),
+.full-motion .tileInner_HhFoZE:has(.tileButton_HhFoZE:hover) {
+    transform: scale(calc(1 + 4/var(--custom-tile-width)));
+    transition: transform .1s ease, background-color .15s ease-out
+}
+
+.full-motion .tileInner_HhFoZE:has(.tileButton_HhFoZE:active) {
+    transform: scale(calc(1 - 4/var(--custom-tile-width)))
+}
+
+.enable-forced-colors .tileInner_HhFoZE:after {
+    border: 1px solid ButtonText;
+    box-shadow: none
+}
+
+.tileButton_HhFoZE {
+    cursor: pointer;
+    inset: 0;
+    position: absolute
+}
+
+.disabled_HhFoZE {
+    opacity: .5;
+    pointer-events: none
+}
+
+.disabled_HhFoZE .content_HhFoZE {
+    opacity: .6
+}
+
+.hasError_HhFoZE .tileInner_HhFoZE:before {
+    background-color: var(--input-background-error-default);
+    border-radius: inherit;
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.hasError_HhFoZE .tileInner_HhFoZE:after {
+    box-shadow: inset 0 0 0 1px var(--input-border-error-default)
+}
+
+.content_HhFoZE {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+.overlay_HhFoZE {
+    background-color: var(--opacity-black-40);
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity 50ms ease-in
+}
+
+.tile_HhFoZE.isInteracting_HhFoZE .overlay_HhFoZE,
+.tile_HhFoZE:hover .overlay_HhFoZE {
+    opacity: 1;
+    transition: opacity .15s ease-out
+}
+
+.iconContainer_HhFoZE {
+    align-items: center;
+    display: flex;
+    inset: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.iconAlignCenter_HhFoZE {
+    justify-content: center
+}
+
+.iconAlignRight_HhFoZE {
+    justify-content: flex-end;
+    padding-inline-end: 8px
+}
+
+.deleteButtonWrapper_HhFoZE {
+    inset-inline-end: 4px;
+    opacity: 0;
+    position: absolute;
+    top: 4px;
+    transition: opacity 50ms ease-in
+}
+
+.tile_HhFoZE.isInteracting_HhFoZE .deleteButtonWrapper_HhFoZE,
+.tile_HhFoZE:has(:focus-visible) .deleteButtonWrapper_HhFoZE,
+.tile_HhFoZE:hover .deleteButtonWrapper_HhFoZE {
+    opacity: 1;
+    transition: opacity .15s ease-out
+}
+
+.deleteButtonWrapper_HhFoZE.resetButton_HhFoZE {
+    opacity: 1
+}
+
+.overlayIcon_HhFoZE {
+    transition: opacity .1s ease-in
+}
+
+.overlayIconPrimaryColor_HhFoZE {
+    fill: var(--icon-strong)
+}
+
+.enable-forced-colors .overlayIconPrimaryColor_HhFoZE {
+    fill: ButtonText
+}
+
+.overlayIconSecondaryColor_HhFoZE {
+    fill: var(--icon-invert)
+}
+
+.enable-forced-colors .overlayIconSecondaryColor_HhFoZE {
+    fill: ButtonFace
+}
+
+/*# sourceMappingURL=71d67aaf64ccc986.css.map*/

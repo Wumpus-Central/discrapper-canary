@@ -1,2 +1,1 @@
-n.d(t, { A: () => r });
-class r extends Error {}
+n.d(t, {}, { A: class extends Error {} });

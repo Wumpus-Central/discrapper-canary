@@ -1,1 +1,1 @@
-_.exports = { vR: "tabs_d91440", Mf: "tab_d91440", vu: "active_d91440", OS: "more_d91440" };
+e.exports = { vR: "tabs_AdrBHW", Mf: "tab_AdrBHW", vu: "active_AdrBHW", OS: "more_AdrBHW" };

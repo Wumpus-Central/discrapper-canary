@@ -1,8 +1,8 @@
-e.exports = {
-    ci: "userMenuItem_d40c56",
-    DD: "userMenuUsername_d40c56",
-    gE: "userMenuText_d40c56",
-    df: "userMenuDiscriminator_d40c56",
-    in: "focused_d40c56",
-    s0: "activeIcon_d40c56",
+s.exports = {
+    ci: "userMenuItem_lZtGs8",
+    DD: "userMenuUsername_lZtGs8",
+    gE: "userMenuText_lZtGs8",
+    df: "userMenuDiscriminator_lZtGs8",
+    in: "focused_lZtGs8",
+    s0: "activeIcon_lZtGs8",
 };

@@ -1,11 +1,11 @@
 var n = r(745340),
     i = r(904124);
-((t.grammar = r(150594)),
-    (t.write = i),
-    (t.parse = n.parse),
-    (t.parseParams = n.parseParams),
-    (t.parseFmtpConfig = n.parseFmtpConfig),
-    (t.parsePayloads = n.parsePayloads),
-    (t.parseRemoteCandidates = n.parseRemoteCandidates),
-    (t.parseImageAttributes = n.parseImageAttributes),
-    (t.parseSimulcastStreamList = n.parseSimulcastStreamList));
+(r(150594),
+    (t.M9 = i),
+    (t.qg = n.parse),
+    n.parseParams,
+    n.parseFmtpConfig,
+    n.parsePayloads,
+    n.parseRemoteCandidates,
+    n.parseImageAttributes,
+    n.parseSimulcastStreamList);

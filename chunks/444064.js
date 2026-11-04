@@ -1,4 +1,3 @@
-d.d(t, { t: () => i });
 var i = class {
     isVisible() {
         return !document.hidden;
@@ -15,3 +14,4 @@ var i = class {
         );
     }
 };
+d.d(t, {}, { t: i });

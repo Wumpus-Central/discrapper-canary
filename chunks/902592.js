@@ -1,10 +1,10 @@
-(n.r(s), n.d(s, { default: () => R, openDevToolsPopout: () => k }));
+n.r(s);
 var i = n(477900),
     l = n(582128),
     o = n(503698),
     t = n.n(o),
-    a = n(131937),
-    c = n(17928),
+    a = n(613412),
+    c = n(855986),
     r = n(811893),
     d = n(789645),
     p = n(306471),
@@ -12,22 +12,22 @@ var i = n(477900),
     j = n(761929),
     x = n(139286),
     h = n(58736),
-    A = n(979186),
+    A = n(853757),
     T = n(574172),
     m = n(147925),
     b = n(538064),
     f = n(265059),
     N = n(867041),
-    O = n(354615),
+    O = n(171404),
     v = n(231643),
     D = n(652215),
-    E = n(105292),
+    E = n(792996),
     y = n(256459),
     P = n(730441);
 function I(e) {
     let { resizableNode: s, onResize: n, onResizeEnd: l } = e,
         o = (0, j.A)({
-            minDimension: f.q,
+            minDimension: 460,
             resizableDomNodeRef: s,
             onElementResize: n,
             onElementResizeEnd: l,
@@ -36,7 +36,7 @@ function I(e) {
     return (0, i.jsx)("div", { onMouseDown: o, className: y.Di });
 }
 function k() {
-    (0, T.open)(
+    (0, T.ho)(
         D.MLl.DEVTOOLS_POPOUT,
         () =>
             (0, i.jsx)(A.A, {
@@ -117,7 +117,7 @@ function w() {
         : (0, i.jsxs)("div", {
               ref: e,
               className: y.kL,
-              style: { minWidth: f.q, width: n },
+              style: { minWidth: 460, width: n },
               "data-app-right-panel": !0,
               children: [
                   (0, i.jsx)(I, { resizableNode: e, onResize: o, onResizeEnd: t }),
@@ -154,3 +154,4 @@ function R(e) {
           ? (0, i.jsx)("div", { className: y.jC, children: (0, i.jsx)(L, { isPopout: !0 }) })
           : (0, i.jsx)(w, {});
 }
+n.d(s, {}, { default: R, openDevToolsPopout: k });

@@ -1,0 +1,25 @@
+.iconContainer_YUKqn_ {
+    filter: saturate(var(--saturation-factor, 1));
+    height: 80px;
+    position: relative;
+    width: 80px
+}
+
+.filledIcon_YUKqn_ {
+    background-color: var(--background-mod-normal);
+    border-radius: 80px;
+    height: 80px;
+    width: 80px
+}
+
+.uploadLabel_YUKqn_ {
+    position: absolute;
+    top: 44px;
+    inset-inline: 0;
+    overflow-wrap: anywhere;
+    pointer-events: none;
+    text-align: center;
+    text-transform: none
+}
+
+/*# sourceMappingURL=c035fe1d73f4415f.css.map*/

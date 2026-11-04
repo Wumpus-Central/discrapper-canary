@@ -1,40 +1,8 @@
-d.d(t, { X5: () => a, _S: () => b, bh: () => i.i, l3: () => c.t, lh: () => s });
 var i = d(886347),
     e = d(219877);
 d(888091);
 var c = d(660125);
 function a() {
-    let l = (0, e.t)();
-    if (!l) return "other";
-    let t = l.toLowerCase();
-    return t.includes("edg/") || t.includes("edgios/")
-        ? "edge"
-        : t.includes("samsungbrowser/")
-          ? "samsung_browser"
-          : t.includes("opr/") || t.includes("opera") || t.includes("opios/") || t.includes("opt/")
-            ? "opera"
-            : t.includes("chrome") || t.includes("crios")
-              ? "chrome"
-              : t.includes("firefox") || t.includes("fxios")
-                ? "firefox"
-                : t.includes("safari")
-                  ? "safari"
-                  : "other";
-}
-function s(l, t) {
-    let d = () => "desktop" !== t && !(0, i.i)() && "landscape" === l.current;
-    return {
-        get isLandscapeMobile() {
-            return d();
-        },
-        subscribe: (t) =>
-            l.subscribe(() => {
-                t(d());
-            }),
-        cleanup: () => l.cleanup(),
-    };
-}
-function n() {
     if ("u" < typeof window || "u" < typeof screen) return !0;
     if ("function" == typeof window.matchMedia) return !window.matchMedia("(orientation: landscape)").matches;
     if (screen.orientation?.type?.includes("portrait")) return !0;
@@ -42,13 +10,13 @@ function n() {
     let l = window.orientation;
     return "number" == typeof l ? 0 === Math.abs(l) : window.innerHeight >= window.innerWidth;
 }
-function Z(l) {
+function s(l) {
     return l ? "portrait" : "landscape";
 }
-var b = class {
+var n = class {
     constructor() {
         if (
-            ((this._current = Z(n())),
+            ((this._current = s(a())),
             (this.subscribers = new Set()),
             (this.orientationChangeHandler = this.handleOrientationChange.bind(this)),
             (this.resizeHandler = this.handleResize.bind(this)),
@@ -98,7 +66,45 @@ var b = class {
         this.updateState();
     }
     updateState() {
-        let l = Z(n());
+        let l = s(a());
         if (l !== this._current) for (let t of ((this._current = l), this.subscribers)) t(this._current);
     }
 };
+d.d(
+    t,
+    { bh: () => i.i, l3: () => c.t },
+    {
+        X5: function () {
+            let l = (0, e.t)();
+            if (!l) return "other";
+            let t = l.toLowerCase();
+            return t.includes("edg/") || t.includes("edgios/")
+                ? "edge"
+                : t.includes("samsungbrowser/")
+                  ? "samsung_browser"
+                  : t.includes("opr/") || t.includes("opera") || t.includes("opios/") || t.includes("opt/")
+                    ? "opera"
+                    : t.includes("chrome") || t.includes("crios")
+                      ? "chrome"
+                      : t.includes("firefox") || t.includes("fxios")
+                        ? "firefox"
+                        : t.includes("safari")
+                          ? "safari"
+                          : "other";
+        },
+        _S: n,
+        lh: function (l, t) {
+            let d = () => "desktop" !== t && !(0, i.i)() && "landscape" === l.current;
+            return {
+                get isLandscapeMobile() {
+                    return d();
+                },
+                subscribe: (t) =>
+                    l.subscribe(() => {
+                        t(d());
+                    }),
+                cleanup: () => l.cleanup(),
+            };
+        },
+    },
+);

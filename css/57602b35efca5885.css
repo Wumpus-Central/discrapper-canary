@@ -1,0 +1,65 @@
+.flowCard_5RdDkH {
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: var(--space-16)
+}
+
+.flowHeader_5RdDkH {
+    align-items: center
+}
+
+.flowHeader_5RdDkH,
+.flowRow_5RdDkH {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-8)
+}
+
+.flowRow_5RdDkH {
+    align-items: flex-start
+}
+
+.statusIconColumn_5RdDkH {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    width: var(--space-20)
+}
+
+.flowRow_5RdDkH .statusIconColumn_5RdDkH {
+    margin-block-start: calc(var(--space-4)/2)
+}
+
+.flowName_5RdDkH {
+    flex-grow: 1;
+    min-width: 0
+}
+
+.flowStepText_5RdDkH {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0;
+    overflow-wrap: anywhere
+}
+
+.disabledCallout_5RdDkH {
+    background: var(--background-feedback-mod-critical);
+    border: 1px solid var(--border-feedback-critical);
+    border-radius: var(--radius-sm);
+    padding: var(--space-8)
+}
+
+.linkStatus_5RdDkH {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-8);
+    margin-block-end: var(--space-8)
+}
+
+/*# sourceMappingURL=57602b35efca5885.css.map*/

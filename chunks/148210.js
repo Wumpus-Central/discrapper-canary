@@ -1,33 +1,43 @@
-i.d(n, { default: () => c });
 var e = i(477900),
-    s = i(582128),
-    a = i(189213),
-    l = i(103557),
-    r = i(243277),
-    o = i(105292);
-function c(t) {
-    let { initialCustomMessage: n, onSubmit: i, onClose: c, transitionState: u } = t,
-        [d, h] = s.useState(n);
-    return (0, e.jsx)(a.a, {
-        onClose: c,
-        transitionState: u,
-        title: o.intl.string(o.t.Df4aUN),
-        subtitle: o.intl.string(o.t.eOWEmL),
-        actions: [
-            {
-                text: o.intl.string(o.t["ETE/oC"]),
-                onClick: function () {
-                    c();
-                },
-                variant: "secondary",
-            },
-            {
-                text: o.intl.string(o.t.bt75uw),
-                onClick: function () {
-                    i(d);
-                },
-            },
-        ],
-        children: (0, e.jsx)(l.f, { placeholder: o.intl.string(o.t.gDZw7A), value: d, onChange: h, maxLength: r.TZ }),
-    });
-}
+    a = i(582128),
+    s = i(189213),
+    r = i(103557);
+i(890634);
+var l = i(792996);
+i.d(
+    n,
+    {},
+    {
+        default: function (t) {
+            let { initialCustomMessage: n, onSubmit: i, onClose: o, transitionState: c } = t,
+                [u, d] = a.useState(n);
+            return (0, e.jsx)(s.a, {
+                onClose: o,
+                transitionState: c,
+                title: l.intl.string(l.t.Df4aUN),
+                subtitle: l.intl.string(l.t.eOWEmL),
+                actions: [
+                    {
+                        text: l.intl.string(l.t["ETE/oC"]),
+                        onClick: function () {
+                            o();
+                        },
+                        variant: "secondary",
+                    },
+                    {
+                        text: l.intl.string(l.t.bt75uw),
+                        onClick: function () {
+                            i(u);
+                        },
+                    },
+                ],
+                children: (0, e.jsx)(r.f, {
+                    placeholder: l.intl.string(l.t.gDZw7A),
+                    value: u,
+                    onChange: d,
+                    maxLength: 300,
+                }),
+            });
+        },
+    },
+);

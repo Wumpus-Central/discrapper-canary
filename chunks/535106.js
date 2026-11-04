@@ -1,4 +1,3 @@
-s.d(e, { default: () => i });
 let i = (0, s(249238).t)((t, e) => {
     var s, i;
     "u" > typeof document &&
@@ -93,7 +92,7 @@ let i = (0, s(249238).t)((t, e) => {
                             _updateVolume: function () {
                                 var t,
                                     e = this.audios.length;
-                                for (t = 0; t < e; t += 1) this.audios[t].volume(!this._isMuted * this._volume);
+                                for (t = 0; t < e; t += 1) this.audios[t].volume(this._volume * !this._isMuted);
                             },
                         }),
                         function () {
@@ -392,10 +391,10 @@ let i = (0, s(249238).t)((t, e) => {
                                                         if (((n.completed = !0), n.hasMask)) {
                                                             var m,
                                                                 c = n.masksProperties;
-                                                            for (h = 0, l = c.length; h < l; h += 1)
+                                                            for (l = c.length, h = 0; h < l; h += 1)
                                                                 if (c[h].pt.k.i) i(c[h].pt.k);
                                                                 else
-                                                                    for (p = 0, f = c[h].pt.k.length; p < f; p += 1)
+                                                                    for (f = c[h].pt.k.length, p = 0; p < f; p += 1)
                                                                         (c[h].pt.k[p].s && i(c[h].pt.k[p].s[0]),
                                                                             c[h].pt.k[p].e && i(c[h].pt.k[p].e[0]));
                                                         }
@@ -426,7 +425,7 @@ let i = (0, s(249238).t)((t, e) => {
                                                     if ("sh" === t[e].ty)
                                                         if (t[e].ks.k.i) i(t[e].ks.k);
                                                         else
-                                                            for (a = 0, r = t[e].ks.k.length; a < r; a += 1)
+                                                            for (r = t[e].ks.k.length, a = 0; a < r; a += 1)
                                                                 (t[e].ks.k[a].s && i(t[e].ks.k[a].s[0]),
                                                                     t[e].ks.k[a].e && i(t[e].ks.k[a].e[0]));
                                                     else "gr" === t[e].ty && s(t[e].it);
@@ -551,7 +550,7 @@ let i = (0, s(249238).t)((t, e) => {
                                                                         else if ("fl" === e[s].ty || "st" === e[s].ty)
                                                                             if (e[s].c.k && e[s].c.k[0].i)
                                                                                 for (
-                                                                                    i = 0, a = e[s].c.k.length;
+                                                                                    a = e[s].c.k.length, i = 0;
                                                                                     i < a;
                                                                                     i += 1
                                                                                 )
@@ -594,10 +593,10 @@ let i = (0, s(249238).t)((t, e) => {
                                                         for (s = 0; s < o; s += 1) {
                                                             if ((e = t[s]).hasMask) {
                                                                 var h = e.masksProperties;
-                                                                for (i = 0, a = h.length; i < a; i += 1)
+                                                                for (a = h.length, i = 0; i < a; i += 1)
                                                                     if (h[i].pt.k.i) h[i].pt.k.c = h[i].cl;
                                                                     else
-                                                                        for (r = 0, n = h[i].pt.k.length; r < n; r += 1)
+                                                                        for (n = h[i].pt.k.length, r = 0; r < n; r += 1)
                                                                             (h[i].pt.k[r].s &&
                                                                                 (h[i].pt.k[r].s[0].c = h[i].cl),
                                                                                 h[i].pt.k[r].e &&
@@ -611,7 +610,7 @@ let i = (0, s(249238).t)((t, e) => {
                                                                             if (e[s].ks.k.i) e[s].ks.k.c = e[s].closed;
                                                                             else
                                                                                 for (
-                                                                                    i = 0, a = e[s].ks.k.length;
+                                                                                    a = e[s].ks.k.length, i = 0;
                                                                                     i < a;
                                                                                     i += 1
                                                                                 )
@@ -1167,7 +1166,7 @@ let i = (0, s(249238).t)((t, e) => {
                             this.renderer.globalData.fontManager.addFonts(t.fonts, this.renderer.globalData.defs)),
                         t.assets)
                     )
-                        for (e = 0, a = t.assets.length; e < a; e += 1) this.animationData.assets.push(t.assets[e]);
+                        for (a = t.assets.length, e = 0; e < a; e += 1) this.animationData.assets.push(t.assets[e]);
                     ((this.animationData.__complete = !1),
                         to.completeAnimation(this.animationData, this.onSegmentComplete));
                 }),
@@ -1803,8 +1802,8 @@ let i = (0, s(249238).t)((t, e) => {
                             d = [],
                             m = [],
                             c = tb.newElement();
-                        for (a = 0, n = s.length; a < p; a += 1) {
-                            for (r = 0, h = a / (p - 1), l = 0; r < n; r += 1)
+                        for (n = s.length, a = 0; a < p; a += 1) {
+                            for (h = a / (p - 1), l = 0, r = 0; r < n; r += 1)
                                 ((o =
                                     w(1 - h, 3) * t[r] +
                                     3 * w(1 - h, 2) * h * s[r] +
@@ -1860,8 +1859,8 @@ let i = (0, s(249238).t)((t, e) => {
                                     s(e[0], e[1], i[0], i[1], i[0] + o[0], i[1] + o[1]) &&
                                     (g = 2);
                                 var _ = new a(g);
-                                for (l = 0, f = n.length; l < g; l += 1) {
-                                    for (p = 0, u = b(f), m = l / (g - 1), c = 0; p < f; p += 1)
+                                for (f = n.length, l = 0; l < g; l += 1) {
+                                    for (u = b(f), m = l / (g - 1), c = 0, p = 0; p < f; p += 1)
                                         ((d =
                                             w(1 - m, 3) * e[p] +
                                             3 * w(1 - m, 2) * m * (e[p] + n[p]) +
@@ -2004,7 +2003,7 @@ let i = (0, s(249238).t)((t, e) => {
                     var l = c.bezierData;
                     if (t >= o || t < h) {
                         var p = t >= o ? l.points.length - 1 : 0;
-                        for (u = 0, g = l.points[p].point.length; u < g; u += 1) f[u] = l.points[p].point[u];
+                        for (g = l.points[p].point.length, u = 0; u < g; u += 1) f[u] = l.points[p].point[u];
                     } else {
                         c.__fnct
                             ? (_ = c.__fnct)
@@ -2030,12 +2029,12 @@ let i = (0, s(249238).t)((t, e) => {
                             n;
                         ) {
                             if (((x += l.points[b].partialLength), 0 === S || 0 === A || b === l.points.length - 1)) {
-                                for (u = 0, g = l.points[b].point.length; u < g; u += 1) f[u] = l.points[b].point[u];
+                                for (g = l.points[b].point.length, u = 0; u < g; u += 1) f[u] = l.points[b].point[u];
                                 break;
                             }
                             if (S >= x && S < x + l.points[b + 1].partialLength) {
                                 for (
-                                    u = 0, P = (S - x) / l.points[b + 1].partialLength, g = l.points[b].point.length;
+                                    P = (S - x) / l.points[b + 1].partialLength, g = l.points[b].point.length, u = 0;
                                     u < g;
                                     u += 1
                                 )
@@ -2237,7 +2236,7 @@ let i = (0, s(249238).t)((t, e) => {
                 var a,
                     r = e.k.length;
                 for (
-                    a = 0, this.v = v("float32", r), this.pv = v("float32", r), this.vel = v("float32", r);
+                    this.v = v("float32", r), this.pv = v("float32", r), this.vel = v("float32", r), a = 0;
                     a < r;
                     a += 1
                 )
@@ -2342,7 +2341,7 @@ let i = (0, s(249238).t)((t, e) => {
                     (this.interpolateValue = tA),
                     (this.frameId = -1));
                 var p = e.k[0].s.length;
-                for (a = 0, this.v = v("float32", p), this.pv = v("float32", p); a < p; a += 1)
+                for (this.v = v("float32", p), this.pv = v("float32", p), a = 0; a < p; a += 1)
                     ((this.v[a] = -999999), (this.pv[a] = -999999));
                 ((this._caching = { lastFrame: -999999, lastIndex: 0, value: v("float32", p) }), (this.addEffect = tM));
             }
@@ -2541,7 +2540,7 @@ let i = (0, s(249238).t)((t, e) => {
                                     (n = u.s ? u.s[0] : c.e[0])),
                                 (r = c.s[0]));
                         }
-                        for (h = 0, p = e._length, f = r.i[0].length, s.lastIndex = i; h < p; h += 1)
+                        for (p = e._length, f = r.i[0].length, s.lastIndex = i, h = 0; h < p; h += 1)
                             for (l = 0; l < f; l += 1)
                                 ((m = o ? r.i[h][l] : r.i[h][l] + (n.i[h][l] - r.i[h][l]) * d),
                                     (e.i[h][l] = m),
@@ -2772,7 +2771,7 @@ let i = (0, s(249238).t)((t, e) => {
                                             m = -Math.PI / 2;
                                         m += this.r.v;
                                         var c = 3 === this.data.d ? -1 : 1;
-                                        for (t = 0, this.v._length = 0; t < a; t += 1) {
+                                        for (this.v._length = 0, t = 0; t < a; t += 1) {
                                             ((e = n ? o : h), (s = n ? l : p), (i = n ? f : d));
                                             var u = e * Math.cos(m),
                                                 g = e * Math.sin(m),
@@ -2856,7 +2855,7 @@ let i = (0, s(249238).t)((t, e) => {
                                             s = this.s.v[0] / 2,
                                             i = this.s.v[1] / 2,
                                             a = C(s, i, this.r.v),
-                                            r = 0.44810000000000005 * a;
+                                            r = a * (1 - 0.5519);
                                         ((this.v._length = 0),
                                             2 === this.d || 1 === this.d
                                                 ? (this.v.setTripleAt(
@@ -3700,7 +3699,7 @@ let i = (0, s(249238).t)((t, e) => {
                                 if (((p = (o = c.shape.paths)._length), (m = 0), !c.shape._mdf && c.pathsData.length))
                                     m = c.totalShapeLength;
                                 else {
-                                    for (l = 0, f = this.releasePathsData(c.pathsData); l < p; l += 1)
+                                    for (f = this.releasePathsData(c.pathsData), l = 0; l < p; l += 1)
                                         ((d = tk.getSegmentsLength(o.shapes[l])), f.push(d), (m += d.totalLength));
                                     ((c.totalShapeLength = m), (c.pathsData = f));
                                 }
@@ -3789,7 +3788,7 @@ let i = (0, s(249238).t)((t, e) => {
                         i < m;
                         i += 1
                     ) {
-                        for (a = 1, h = f[i].lengths, s.c = d[i].c, r = d[i].c ? h.length : h.length + 1; a < r; a += 1)
+                        for (h = f[i].lengths, s.c = d[i].c, r = d[i].c ? h.length : h.length + 1, a = 1; a < r; a += 1)
                             if (c + (n = h[a - 1]).addedLength < e.s) ((c += n.addedLength), (s.c = !1));
                             else if (c > e.e) {
                                 s.c = !1;
@@ -3864,7 +3863,7 @@ let i = (0, s(249238).t)((t, e) => {
                     for (f = 0; f < p; f += 1) ((l[0] += t.v[f][0]), (l[1] += t.v[f][1]));
                     ((l[0] /= p), (l[1] /= p));
                     var d = tz.newElement();
-                    for (f = 0, d.c = t.c; f < p; f += 1)
+                    for (d.c = t.c, f = 0; f < p; f += 1)
                         ((s = t.v[f][0] + (l[0] - t.v[f][0]) * h),
                             (i = t.v[f][1] + (l[1] - t.v[f][1]) * h),
                             (a = t.o[f][0] + -((l[0] - t.o[f][0]) * h)),
@@ -4242,7 +4241,7 @@ let i = (0, s(249238).t)((t, e) => {
                     y = e.v[(s + 1) % e._length],
                     v = 2 === r ? Math.sqrt(Math.pow(u[0] - g[0], 2) + Math.pow(u[1] - g[1], 2)) : 0,
                     b = 2 === r ? Math.sqrt(Math.pow(u[0] - y[0], 2) + Math.pow(u[1] - y[1], 2)) : 0;
-                ep(t, e.v[s % e._length], c, n, i, b / ((a + 1) * 2), v / ((a + 1) * 2), r);
+                ep(t, e.v[s % e._length], c, n, i, b / ((a + 1) * 2), v / ((a + 1) * 2));
             }
             function ed(t, e, s) {
                 var i = Math.atan2(e[0] - t[0], e[1] - t[1]);
@@ -4786,7 +4785,7 @@ let i = (0, s(249238).t)((t, e) => {
                                               )
                                             : 0,
                                     l = e.normalAngle(o);
-                                (ep(t, e.point(o), l, r, s, h / ((i + 1) * 2), h / ((i + 1) * 2), a), (r = -r));
+                                (ep(t, e.point(o), l, r, s, h / ((i + 1) * 2), h / ((i + 1) * 2)), (r = -r));
                             }
                             return r;
                         })(r, o, e, s, i, -n)),
@@ -5105,10 +5104,8 @@ let i = (0, s(249238).t)((t, e) => {
                                         }
                                     } else if ("g" === s[o].fOrigin || 1 === s[o].origin) {
                                         for (
-                                            l = 0,
-                                                h = document.querySelectorAll(
-                                                    'link[f-forigin="g"], link[f-origin="1"]',
-                                                );
+                                            h = document.querySelectorAll('link[f-forigin="g"], link[f-origin="1"]'),
+                                                l = 0;
                                             l < h.length;
                                             l += 1
                                         )
@@ -5124,10 +5121,10 @@ let i = (0, s(249238).t)((t, e) => {
                                         }
                                     } else if ("t" === s[o].fOrigin || 2 === s[o].origin) {
                                         for (
-                                            l = 0,
-                                                h = document.querySelectorAll(
-                                                    'script[f-forigin="t"], script[f-origin="2"]',
-                                                );
+                                            h = document.querySelectorAll(
+                                                'script[f-forigin="t"], script[f-origin="2"]',
+                                            ),
+                                                l = 0;
                                             l < h.length;
                                             l += 1
                                         )
@@ -5388,10 +5385,10 @@ let i = (0, s(249238).t)((t, e) => {
                                 i = new eC(r[s], e, this);
                                 break;
                             case 5:
-                                i = new eE(r[s], e, this);
+                                i = new eE(r[s], e);
                                 break;
                             default:
-                                i = new eF(r[s], e, this);
+                                i = new eF(r[s]);
                         }
                         i && this.effectElements.push(i);
                     }
@@ -5751,7 +5748,7 @@ let i = (0, s(249238).t)((t, e) => {
                             }),
                             this.viewData[f].prop.k || this.drawPath(r[f], this.viewData[f].prop.v, this.viewData[f]));
                     }
-                for (f = 0, this.maskElement = tr(l), a = o.length; f < a; f += 1) this.maskElement.appendChild(o[f]);
+                for (this.maskElement = tr(l), a = o.length, f = 0; f < a; f += 1) this.maskElement.appendChild(o[f]);
                 (n > 0 &&
                     (this.maskElement.setAttribute("id", h),
                     this.element.maskedElement.setAttribute(p, "url(" + c() + "#" + h + ")"),
@@ -5999,7 +5996,7 @@ let i = (0, s(249238).t)((t, e) => {
                     r = j(),
                     n = eq.createFilter(r, !0),
                     o = 0;
-                for (e = 0, this.filters = []; e < a; e += 1) {
+                for (this.filters = [], e = 0; e < a; e += 1) {
                     s = null;
                     var h = t.data.ef[e].ty;
                     (eW[h] &&
@@ -6659,7 +6656,7 @@ let i = (0, s(249238).t)((t, e) => {
                         if (e.g._cmdf || s) {
                             i = e.cst;
                             var u = e.g.c;
-                            for (a = 0, r = i.length; a < r; a += 1)
+                            for (r = i.length, a = 0; a < r; a += 1)
                                 ((n = i[a]).setAttribute("offset", u[4 * a] + "%"),
                                     n.setAttribute(
                                         "stop-color",
@@ -6668,7 +6665,7 @@ let i = (0, s(249238).t)((t, e) => {
                         }
                         if (l && (e.g._omdf || s)) {
                             var g = e.g.o;
-                            for (a = 0, r = (i = e.g._collapsable ? e.cst : e.ost).length; a < r; a += 1)
+                            for (r = (i = e.g._collapsable ? e.cst : e.ost).length, a = 0; a < r; a += 1)
                                 ((n = i[a]),
                                     e.g._collapsable || n.setAttribute("offset", g[2 * a] + "%"),
                                     n.setAttribute("stop-opacity", g[2 * a + 1]));
@@ -6838,7 +6835,7 @@ let i = (0, s(249238).t)((t, e) => {
                         n = [],
                         o = !1;
                     for (s = 0; s < r; s += 1) {
-                        for (t = 0, i = this.stylesList[s], o = !1, n.length = 0; t < a; t += 1)
+                        for (i = this.stylesList[s], o = !1, n.length = 0, t = 0; t < a; t += 1)
                             -1 !== (e = this.shapes[t]).styles.indexOf(i) && (n.push(e), (o = e._isAnimated || o));
                         n.length > 1 && o && this.setShapesAsAnimated(n);
                     }
@@ -6961,7 +6958,7 @@ let i = (0, s(249238).t)((t, e) => {
                                 t[o]._render && e[o].style.pElem.parentNode !== i && i.appendChild(e[o].style.pElem),
                                 u.push(e[o].style));
                         else if ("gr" === t[o].ty) {
-                            if (d) for (h = 0, l = e[o].it.length; h < l; h += 1) e[o].prevViewData[h] = e[o].it[h];
+                            if (d) for (l = e[o].it.length, h = 0; h < l; h += 1) e[o].prevViewData[h] = e[o].it[h];
                             else e[o] = this.createGroupElement(t[o]);
                             (this.searchShapes(t[o].it, e[o].it, e[o].prevViewData, e[o].gr, a + 1, m, n),
                                 t[o]._render && e[o].gr.parentNode !== i && i.appendChild(e[o].gr));
@@ -6993,8 +6990,8 @@ let i = (0, s(249238).t)((t, e) => {
                                       g.push(f));
                         this.addProcessedElement(t[o], o + 1);
                     }
-                    for (o = 0, c = u.length; o < c; o += 1) u[o].closed = !0;
-                    for (o = 0, c = g.length; o < c; o += 1) g[o].closed = !0;
+                    for (c = u.length, o = 0; o < c; o += 1) u[o].closed = !0;
+                    for (c = g.length, o = 0; o < c; o += 1) g[o].closed = !0;
                 }),
                 (si.prototype.renderInnerContent = function () {
                     this.renderModifiers();
@@ -7390,7 +7387,7 @@ let i = (0, s(249238).t)((t, e) => {
                     g([tL], i),
                     {
                         getTextSelectorProp: function (t, e, s) {
-                            return new i(t, e, s);
+                            return new i(t, e);
                         },
                     }
                 );
@@ -8124,7 +8121,7 @@ let i = (0, s(249238).t)((t, e) => {
                         }
                         (P.setAttribute("text-anchor", A), P.setAttribute("letter-spacing", f));
                         var S = this.buildTextContents(t.finalText);
-                        for (c = 0, u = S.length, l = t.ps ? t.ps[1] + t.ascent : 0; c < u; c += 1)
+                        for (u = S.length, l = t.ps ? t.ps[1] + t.ascent : 0, c = 0; c < u; c += 1)
                             (((g = this.textSpans[c].span || tr("tspan")).textContent = S[c]),
                                 g.setAttribute("x", 0),
                                 g.setAttribute("y", l),
@@ -8154,7 +8151,7 @@ let i = (0, s(249238).t)((t, e) => {
                     var t,
                         e,
                         s = this.textSpans.length;
-                    for (t = 0, this.renderedFrame = this.comp.renderedFrame; t < s; t += 1)
+                    for (this.renderedFrame = this.comp.renderedFrame, t = 0; t < s; t += 1)
                         (e = this.textSpans[t].glyph) &&
                             (e.prepareFrame(this.comp.renderedFrame - this.data.st), e._mdf && (this._mdf = !0));
                 }),
@@ -8173,7 +8170,7 @@ let i = (0, s(249238).t)((t, e) => {
                             a,
                             r = this.textAnimator.renderedLetters,
                             n = this.textProperty.currentData.l;
-                        for (t = 0, e = n.length; t < e; t += 1)
+                        for (e = n.length, t = 0; t < e; t += 1)
                             !n[t].n &&
                                 ((s = r[t]),
                                 (i = this.textSpans[t].span),
@@ -8427,3 +8424,4 @@ let i = (0, s(249238).t)((t, e) => {
               ? define(i)
               : ((s = "u" > typeof globalThis ? globalThis : s || self).lottie = i()));
 })();
+s.d(e, {}, { default: i });

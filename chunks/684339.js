@@ -1,13 +1,12 @@
-n.d(t, { M: () => f, u: () => p });
 var i,
     l = n(499979),
     s = n(626584),
-    r = n(280450),
+    r = n(46653),
     a = n(734057),
     o = n(544180),
-    u = n(763827),
+    u = n(495867),
     c = n(977997),
-    d = n(174459),
+    d = n(129230),
     m = n(652215),
     p =
         (((i = {}).SELF_VIDEO = "self_video"),
@@ -18,49 +17,56 @@ var i,
         (i.REPLAY_VIDEO_STREAM = "replay_video_stream"),
         i);
 let g = new Map();
-class f {
-    logger;
-    spinnerVisibleStart = null;
-    constructor(e) {
-        this.logger = new s.A(e);
-    }
-    onSpinnerStarted() {
-        null == this.spinnerVisibleStart && (this.spinnerVisibleStart = (0, l.tB)());
-    }
-    trackSpinnerDuration(e, t, n) {
-        let i;
-        if (null == this.spinnerVisibleStart) return;
-        let s = ((i = (g.get(n) ?? 0) + 1), g.set(n, i), i),
-            p = (0, l.tB)() - this.spinnerVisibleStart;
-        if (((this.spinnerVisibleStart = null), p < 0))
-            return void this.logger.warn(`spinner duration is negative: ${p} ms
+n.d(
+    t,
+    {},
+    {
+        M: class {
+            logger;
+            spinnerVisibleStart = null;
+            constructor(e) {
+                this.logger = new s.A(e);
+            }
+            onSpinnerStarted() {
+                null == this.spinnerVisibleStart && (this.spinnerVisibleStart = (0, l.tB)());
+            }
+            trackSpinnerDuration(e, t, n) {
+                let i;
+                if (null == this.spinnerVisibleStart) return;
+                let s = ((i = (g.get(n) ?? 0) + 1), g.set(n, i), i),
+                    p = (0, l.tB)() - this.spinnerVisibleStart;
+                if (((this.spinnerVisibleStart = null), p < 0))
+                    return void this.logger.warn(`spinner duration is negative: ${p} ms
         [${e}, count for stream: ${s}]`);
-        this.logger.info(`spinner visible for ${p} ms
+                this.logger.info(`spinner visible for ${p} ms
       [${e}, count for stream: ${s}]`);
-        let f = u.A.getGuildId(),
-            h = c.A.getUserVoiceChannelId(f, r.default.getId()),
-            x = (function (e) {
-                if (null != e) {
-                    if (e.isGuildVoice()) return "guild_voice";
-                    if (e.isGuildStageVoice()) return "is_stage_channel";
-                    if (e.isDM()) return "dm";
-                    if (e.isGroupDM()) return "group_dm";
-                }
-                return null;
-            })(a.A.getChannel(h));
-        d.default.track(m.HAw.VIDEO_SPINNER_SHOWN_V2, {
-            video_spinner_context: e,
-            duration_video_spinner_visible_ms: p,
-            rtc_connection_id: u.A.getRTCConnectionId(),
-            media_session_id: u.A.getMediaSessionId(),
-            event_count_for_stream: s,
-            guild_id: f,
-            channel_id: h,
-            channel_type: x,
-            spinning_user_id: t,
-            connection_type: o.A.getType(),
-            effective_connection_speed: o.A.getEffectiveConnectionSpeed(),
-            service_provider: o.A.getServiceProvider(),
-        });
-    }
-}
+                let f = u.A.getGuildId(),
+                    h = c.A.getUserVoiceChannelId(f, r.default.getId()),
+                    x = (function (e) {
+                        if (null != e) {
+                            if (e.isGuildVoice()) return "guild_voice";
+                            if (e.isGuildStageVoice()) return "is_stage_channel";
+                            if (e.isDM()) return "dm";
+                            if (e.isGroupDM()) return "group_dm";
+                        }
+                        return null;
+                    })(a.A.getChannel(h));
+                d.default.track(m.HAw.VIDEO_SPINNER_SHOWN_V2, {
+                    video_spinner_context: e,
+                    duration_video_spinner_visible_ms: p,
+                    rtc_connection_id: u.A.getRTCConnectionId(),
+                    media_session_id: u.A.getMediaSessionId(),
+                    event_count_for_stream: s,
+                    guild_id: f,
+                    channel_id: h,
+                    channel_type: x,
+                    spinning_user_id: t,
+                    connection_type: o.A.getType(),
+                    effective_connection_speed: o.A.getEffectiveConnectionSpeed(),
+                    service_provider: o.A.getServiceProvider(),
+                });
+            }
+        },
+        u: p,
+    },
+);

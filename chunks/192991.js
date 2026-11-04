@@ -1,114 +1,125 @@
-i.d(t, { default: () => m });
 var l = i(477900),
     s = i(582128),
     n = i(284009),
     a = i.n(n),
-    r = i(17928),
+    r = i(855986),
     u = i(189213),
     o = i(27192),
     d = i(683438),
-    c = i(66834),
+    c = i(778858),
     p = i(71393),
     h = i(200662),
-    b = i(739174),
-    g = i(73510),
-    k = i(105292),
-    C = i(490069);
-function m(e) {
-    let {
-            editPermissions: t,
-            guildId: i,
-            hasMemberSearch: n,
-            headerText: m,
-            onClose: y,
-            overwrittenKeys: E,
-            search: x,
-            searchPlaceholderText: f,
-            selectedPermissionCount: j,
-            transitionState: v,
-        } = e,
-        w = (0, r.bG)([p.A], () => p.A.getGuild(i), [i]);
-    a()(null != w, "");
-    let [A, T] = s.useState(null),
-        { query: I, results: M, setQuery: q } = x(i),
-        [N, O] = s.useState({}),
-        S = s.useMemo(() => Object.keys(N).length, [N]),
-        G = S + j >= g.iW,
-        H = s.useMemo(
-            () =>
-                M.filter((e) => {
-                    let t = (0, h.Eu)(e.id, e.type);
-                    return !E.includes(t);
-                }),
-            [E, M],
-        ),
-        R = s.useCallback(
-            (e, t) => {
-                O((i) => {
-                    let l = (0, h.Eu)(e, t),
-                        s = { ...i };
-                    return (l in i ? delete s[l] : G || (s[l] = { id: e, permission: !0, type: t }), s);
-                });
-            },
-            [G, O],
-        ),
-        V = s.useCallback(() => {
-            (t(N, []), y());
-        }, [t, y, N]);
-    s.useEffect(() => () => clearTimeout(A), [A]);
-    let W = s.useCallback(
-            (e) => {
-                (q(e),
-                    n &&
-                        T((t) =>
-                            (clearTimeout(t), 0 === e.length)
-                                ? null
-                                : setTimeout(() => {
-                                      c.A.requestMembers(i, e, 200, !1);
-                                  }, 500),
-                        ));
-            },
-            [i, n, q, T],
-        ),
-        _ = s.useCallback(
-            (e) => {
-                let t = H[e.rowIndex],
-                    i = (0, h.Eu)(t.id, t.type),
-                    s = i in N,
-                    n = G && !s;
-                return (0, l.jsx)(
-                    "div",
-                    {
-                        className: C.A,
-                        children: (0, l.jsx)(o.Kj, {
-                            type: o.Or.INVERTED,
-                            disabled: n,
-                            value: s,
-                            onChange: () => R(t.id, t.type),
-                            children: (0, l.jsx)(b.A, { guild: w, id: t.id, type: t.type, isLocked: !1 }),
+    b = i(739174);
+i(73510);
+var g = i(792996),
+    k = i(490069);
+i.d(
+    t,
+    {},
+    {
+        default: function (e) {
+            let {
+                    editPermissions: t,
+                    guildId: i,
+                    hasMemberSearch: n,
+                    headerText: C,
+                    onClose: m,
+                    overwrittenKeys: y,
+                    search: E,
+                    searchPlaceholderText: v,
+                    selectedPermissionCount: x,
+                    transitionState: f,
+                } = e,
+                j = (0, r.bG)([p.A], () => p.A.getGuild(i), [i]);
+            a()(null != j, "");
+            let [w, A] = s.useState(null),
+                { query: T, results: I, setQuery: M } = E(i),
+                [q, N] = s.useState({}),
+                O = s.useMemo(() => Object.keys(q).length, [q]),
+                S = O + x >= 100,
+                G = s.useMemo(
+                    () =>
+                        I.filter((e) => {
+                            let t = (0, h.Eu)(e.id, e.type);
+                            return !y.includes(t);
                         }),
+                    [y, I],
+                ),
+                H = s.useCallback(
+                    (e, t) => {
+                        N((i) => {
+                            let l = (0, h.Eu)(e, t),
+                                s = { ...i };
+                            return (l in i ? delete s[l] : S || (s[l] = { id: e, permission: !0, type: t }), s);
+                        });
                     },
-                    i,
+                    [S, N],
+                ),
+                R = s.useCallback(() => {
+                    (t(q, []), m());
+                }, [t, m, q]);
+            s.useEffect(() => () => clearTimeout(w), [w]);
+            let V = s.useCallback(
+                    (e) => {
+                        (M(e),
+                            n &&
+                                A((t) =>
+                                    (clearTimeout(t), 0 === e.length)
+                                        ? null
+                                        : setTimeout(() => {
+                                              c.A.requestMembers(i, e, 200, !1);
+                                          }, 500),
+                                ));
+                    },
+                    [i, n, M, A],
+                ),
+                _ = s.useCallback(
+                    (e) => {
+                        let t = G[e.rowIndex],
+                            i = (0, h.Eu)(t.id, t.type),
+                            s = i in q,
+                            n = S && !s;
+                        return (0, l.jsx)(
+                            "div",
+                            {
+                                className: k.A,
+                                children: (0, l.jsx)(o.Kj, {
+                                    type: o.Or.INVERTED,
+                                    disabled: n,
+                                    value: s,
+                                    onChange: () => H(t.id, t.type),
+                                    children: (0, l.jsx)(b.A, { guild: j, id: t.id, type: t.type, isLocked: !1 }),
+                                }),
+                            },
+                            i,
+                        );
+                    },
+                    [G, j, S, H, q],
                 );
-            },
-            [H, w, G, R, N],
-        );
-    return (
-        s.useEffect(() => {
-            c.A.requestMembers(i, void 0, 200, !1);
-        }, [i]),
-        (0, l.jsx)(u.a, {
-            "aria-label": k.intl.string(k.t["N+InBa"]),
-            transitionState: v,
-            title: m,
-            subtitle: G ? k.intl.string(k.t["XTwtW/"]) : void 0,
-            onClose: y,
-            input: (0, l.jsx)(d.I, { query: I, placeholder: f, "aria-label": f, onChange: W, onClear: () => q("") }),
-            actions: [
-                { text: k.intl.string(k.t["ETE/oC"]), onClick: y, variant: "secondary" },
-                { text: k.intl.string(k.t.OYkgVk), onClick: V, variant: "primary", disabled: 0 === S },
-            ],
-            listProps: { renderRow: _, sections: [H.length], rowHeight: 36, sectionHeight: 36 },
-        })
-    );
-}
+            return (
+                s.useEffect(() => {
+                    c.A.requestMembers(i, void 0, 200, !1);
+                }, [i]),
+                (0, l.jsx)(u.a, {
+                    "aria-label": g.intl.string(g.t["N+InBa"]),
+                    transitionState: f,
+                    title: C,
+                    subtitle: S ? g.intl.string(g.t["XTwtW/"]) : void 0,
+                    onClose: m,
+                    input: (0, l.jsx)(d.I, {
+                        query: T,
+                        placeholder: v,
+                        "aria-label": v,
+                        onChange: V,
+                        onClear: () => M(""),
+                    }),
+                    actions: [
+                        { text: g.intl.string(g.t["ETE/oC"]), onClick: m, variant: "secondary" },
+                        { text: g.intl.string(g.t.OYkgVk), onClick: R, variant: "primary", disabled: 0 === O },
+                    ],
+                    listProps: { renderRow: _, sections: [G.length], rowHeight: 36, sectionHeight: 36 },
+                })
+            );
+        },
+    },
+);

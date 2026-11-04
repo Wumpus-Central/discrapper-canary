@@ -1,22 +1,22 @@
-(r.r(t), r.d(t, { default: () => j }));
+r.r(t);
 var n = r(477900),
     a = r(503698),
     i = r.n(a),
     s = r(284009),
     l = r.n(s),
-    o = r(702841),
+    o = r(164636),
     d = r(197808),
     u = r(738876),
     c = r(877991),
     m = r(332779),
     p = r(274794),
-    h = r(28647),
+    h = r(552992),
     y = r(795816),
     f = r(933958),
     F = r(47294),
     g = r(47167),
     A = r(386467),
-    D = r(979186),
+    D = r(853757),
     b = r(734057),
     E = r(31717),
     v = r(309010),
@@ -24,43 +24,49 @@ var n = r(477900),
     C = r(540462),
     S = r(748337);
 let R = [c.L, m.T, p.w, h.z];
-function j(e) {
-    let { windowKey: t, channelId: r } = e,
-        a = (0, o.bG)([b.A], () => b.A.getChannel(r));
-    l()(null != a, "channel cannot be null for popout");
-    let s = (0, g.Ay)(a);
-    return (0, n.jsx)(D.A, {
-        withTitleBar: !0,
-        keybinds: R,
-        windowKey: t,
-        title: s ?? "",
-        channelId: a.id,
-        onBeforeUnload: function (e) {
-            let { e: t, unmountWindow: r } = e;
-            if (null == a) return;
-            let n = f.Ay.getSelfEmbeddedActivityForChannel(a.id),
-                i = v.Ay.getVoiceChannelId() === a.id;
-            if (null != n && i) {
-                let e = (0, y.od)(n.applicationId, a.id);
-                (t.preventDefault(),
-                    (0, F.A)({
-                        onConfirm: async () => {
-                            (await e, r());
-                        },
-                        usesPopoutContext: !0,
-                    }));
-            } else r();
+r.d(
+    t,
+    {},
+    {
+        default: function (e) {
+            let { windowKey: t, channelId: r } = e,
+                a = (0, o.bG)([b.A], () => b.A.getChannel(r));
+            l()(null != a, "channel cannot be null for popout");
+            let s = (0, g.Ay)(a);
+            return (0, n.jsx)(D.A, {
+                withTitleBar: !0,
+                keybinds: R,
+                windowKey: t,
+                title: s ?? "",
+                channelId: a.id,
+                onBeforeUnload: function (e) {
+                    let { e: t, unmountWindow: r } = e;
+                    if (null == a) return;
+                    let n = f.Ay.getSelfEmbeddedActivityForChannel(a.id),
+                        i = v.Ay.getVoiceChannelId() === a.id;
+                    if (null != n && i) {
+                        let e = (0, y.od)(n.applicationId, a.id);
+                        (t.preventDefault(),
+                            (0, F.A)({
+                                onConfirm: async () => {
+                                    (await e, r());
+                                },
+                                usesPopoutContext: !0,
+                            }));
+                    } else r();
+                },
+                children: (0, n.jsx)("div", {
+                    className: i()("root", S.M),
+                    children: (0, n.jsxs)(A.A.Provider, {
+                        value: a.guild_id,
+                        children: [
+                            (0, n.jsx)(u.A, { channel: a, draftType: E.C.ChannelMessage }),
+                            (0, n.jsx)(C.default, { channel: a, popoutType: x.N.VOICE_UI }),
+                            (0, n.jsx)(d.A, { popoutWindowKey: t, popoutWindowHasTitleBar: !0 }),
+                        ],
+                    }),
+                }),
+            });
         },
-        children: (0, n.jsx)("div", {
-            className: i()("root", S.M),
-            children: (0, n.jsxs)(A.A.Provider, {
-                value: a.guild_id,
-                children: [
-                    (0, n.jsx)(u.A, { channel: a, draftType: E.C.ChannelMessage }),
-                    (0, n.jsx)(C.default, { channel: a, popoutType: x.N.VOICE_UI }),
-                    (0, n.jsx)(d.A, { popoutWindowKey: t, popoutWindowHasTitleBar: !0 }),
-                ],
-            }),
-        }),
-    });
-}
+    },
+);

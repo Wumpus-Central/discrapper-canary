@@ -1,4 +1,3 @@
-n.d(t, { Q: () => l });
 var i = n(302495),
     r = n(334465),
     a = n(901123);
@@ -40,7 +39,13 @@ let s = new Set([
     a.BV.APPLICATION_DIRECTORY,
     a.BV.GAME_SHOP(i.p.guildId(), ":shopSkuId?", ":shopSlug?"),
 ]);
-function l(e) {
-    for (let t of s) if (null != (0, r.B)(e, { path: t })) return !0;
-    return !1;
-}
+n.d(
+    t,
+    {},
+    {
+        Q: function (e) {
+            for (let t of s) if (null != (0, r.B)(e, { path: t })) return !0;
+            return !1;
+        },
+    },
+);

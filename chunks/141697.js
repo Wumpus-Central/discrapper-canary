@@ -1,5 +1,5 @@
 var t;
-((e.exports.timeout = function (e, r) {
+((e.exports.w = function (e, r) {
     var n,
         i = new t();
     return Promise.race([
@@ -18,7 +18,7 @@ var t;
         },
     );
 }),
-    ((t = e.exports.TimeoutError =
+    ((t = e.exports.M =
         function () {
             (Error.call(this), (this.stack = Error().stack), (this.message = "Timeout"));
         }).prototype = Object.create(Error.prototype)),

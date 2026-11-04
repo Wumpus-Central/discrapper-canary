@@ -1,8 +1,8 @@
-_.exports = {
-    Nr: "card__5df76",
-    LO: "game__5df76",
-    vk: "clickable__5df76",
-    Fk: "players__5df76",
-    r6: "playersClickable__5df76",
-    Rd: "playerCount__5df76",
+e.exports = {
+    Nr: "card_zECB2R",
+    LO: "game_zECB2R",
+    vk: "clickable_zECB2R",
+    Fk: "players_zECB2R",
+    r6: "playersClickable_zECB2R",
+    Rd: "playerCount_zECB2R",
 };

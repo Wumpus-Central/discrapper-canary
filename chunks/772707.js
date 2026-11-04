@@ -1,33 +1,38 @@
-e.d(a, { k: () => n });
 var l = e(477900);
 e(582128);
 var s = e(224640),
     d = e(696208),
     r = e(430993),
     t = e(20742);
-function n(i) {
-    let {
-        size: a = "md",
-        gradientColor: e = "purple",
-        graphic: n,
-        badge: c,
-        title: p,
-        subtitle: u,
-        actionBarInput: h,
-        actions: o,
-        children: b,
-        "aria-label": g,
-        ...k
-    } = i;
-    return (0, l.jsxs)(s.d, {
-        ...k,
-        "aria-label": g ?? p,
-        size: a,
-        paddingSize: "lg",
-        children: [
-            (0, l.jsx)(t.V6, { gradientColor: e, graphic: n, badge: c, title: p, subtitle: u }),
-            (0, l.jsx)(r.c, { children: b }),
-            (0, l.jsx)(d.H, { leading: h, actions: o, actionsFullWidth: null == h }),
-        ],
-    });
-}
+e.d(
+    a,
+    {},
+    {
+        k: function (i) {
+            let {
+                size: a = "md",
+                gradientColor: e = "purple",
+                graphic: n,
+                badge: c,
+                title: p,
+                subtitle: u,
+                actionBarInput: h,
+                actions: o,
+                children: b,
+                "aria-label": g,
+                ...k
+            } = i;
+            return (0, l.jsxs)(s.d, {
+                ...k,
+                "aria-label": g ?? p,
+                size: a,
+                paddingSize: "lg",
+                children: [
+                    (0, l.jsx)(t.V6, { gradientColor: e, graphic: n, badge: c, title: p, subtitle: u }),
+                    (0, l.jsx)(r.c, { children: b }),
+                    (0, l.jsx)(d.H, { leading: h, actions: o, actionsFullWidth: null == h }),
+                ],
+            });
+        },
+    },
+);

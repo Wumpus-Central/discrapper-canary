@@ -1,0 +1,77 @@
+.icon_EVjahG {
+    height: 24px;
+    margin-bottom: 4px;
+    width: 24px
+}
+
+.notAllowedIcon_EVjahG {
+    transform: rotate(90deg)
+}
+
+.frameGridItem_EVjahG {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--text-strong);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transition: box-shadow .15s ease-out
+}
+
+.framePresetItem_EVjahG {
+    padding: var(--space-6) 14px
+}
+
+.selected_EVjahG {
+    box-shadow: 0 0 0 2px var(--brand-500)
+}
+
+.section_EVjahG {
+    display: flex;
+    flex-direction: column;
+    height: 100%
+}
+
+.list_EVjahG {
+    flex: 1;
+    inset-inline-start: -12px;
+    margin-top: 2px;
+    padding-bottom: 4px;
+    width: 298px
+}
+
+.shopIcon_EVjahG {}
+
+.modal_OmxG5b {
+    border-radius: var(--radius-sm);
+    width: unset
+}
+
+.modalFooter_OmxG5b {
+    gap: var(--space-8)
+}
+
+.modalHeader_OmxG5b {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden
+}
+
+.modalCloseButton_OmxG5b {
+    padding: 0
+}
+
+.modalContent_OmxG5b {
+    display: flex
+}
+
+.spinner_OmxG5b {
+    align-self: center;
+    margin: 8px
+}
+
+/*# sourceMappingURL=9639eef3972de4fe.css.map*/

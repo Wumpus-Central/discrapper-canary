@@ -1,21 +1,7 @@
-n.d(t, { Ay: () => d, WR: () => o, _e: () => l, i: () => s });
 var i = n(536637),
     r = n.n(i),
-    a = n(105292);
-function s() {
-    return {
-        minutes: a.t["XIGt+W"],
-        hours: a.t.rhY1Rs,
-        days: a.t.GBLpQ8,
-        weeks: a.t.veX7G1,
-        months: a.t.XzBNbS,
-        years: a.t.I1E8p6,
-    };
-}
-function l() {
-    return { minutes: a.t["GqQ/Y9"], hours: a.t.c5zfWZ, days: a.t.amjnaI, months: a.t.SoON3V, years: a.t["12B3Re"] };
-}
-function o(e) {
+    a = n(792996);
+function s(e) {
     let { seconds: t, getFormatter: n, includeWeeks: i = !1 } = e,
         r = n(),
         s = i ? r.weeks : void 0;
@@ -33,7 +19,33 @@ function o(e) {
                   ? a.intl.formatToPlainString(r.months, { months: Math.floor(t / 2592e3) })
                   : a.intl.formatToPlainString(r.years, { years: Math.floor(t / 31104e3) });
 }
-function d(e) {
-    let { since: t, getFormatter: n, includeWeeks: i } = e;
-    return o({ seconds: r()().diff(r()(t), "s"), getFormatter: n, includeWeeks: i });
-}
+n.d(
+    t,
+    {},
+    {
+        Ay: function (e) {
+            let { since: t, getFormatter: n, includeWeeks: i } = e;
+            return s({ seconds: r()().diff(r()(t), "s"), getFormatter: n, includeWeeks: i });
+        },
+        WR: s,
+        _e: function () {
+            return {
+                minutes: a.t["GqQ/Y9"],
+                hours: a.t.c5zfWZ,
+                days: a.t.amjnaI,
+                months: a.t.SoON3V,
+                years: a.t["12B3Re"],
+            };
+        },
+        i: function () {
+            return {
+                minutes: a.t["XIGt+W"],
+                hours: a.t.rhY1Rs,
+                days: a.t.GBLpQ8,
+                weeks: a.t.veX7G1,
+                months: a.t.XzBNbS,
+                years: a.t.I1E8p6,
+            };
+        },
+    },
+);

@@ -1,20 +1,19 @@
-n.d(t, { Ay: () => T, pL: () => x });
 var l = n(477900),
     r = n(582128),
     i = n(503698),
     a = n.n(i),
     s = n(575593),
-    u = n(17928),
-    c = n(661531),
+    u = n(855986),
+    c = n(646514),
     o = n(38021),
     d = n(844222),
-    f = n(583094),
+    f = n(580573),
     h = n(775602),
     m = n(139136),
     p = n(665411),
     C = n(474012),
     y = n(929283),
-    E = n(448391),
+    E = n(842385),
     _ = n(761365),
     g = n(366523),
     I = n(403362),
@@ -89,7 +88,7 @@ function R(e) {
         sku: t,
     });
 }
-function M(e) {
+function T(e) {
     let { eventTargetRef: t, assetClassName: n, disableHover: i } = e,
         s = (0, u.bG)([h.Ay], () => h.Ay.useReducedMotion),
         { theme: m, saturation: p } = (0, o.wR)(),
@@ -105,22 +104,37 @@ function M(e) {
         }),
     });
 }
-function T(e) {
-    let { sku: t, isFocused: n, user: r, guildId: i, eventTargetRef: a, assetClassName: s, disableHover: u } = e;
-    switch (t.productLine) {
-        case S.EZt.COLLECTIBLES:
-            return (0, l.jsx)(v, { sku: t, isFocused: n, user: r, guildId: i });
-        case S.EZt.SOCIAL_LAYER_GAME_ITEM:
-            return (0, l.jsx)(R, { sku: t, isFocused: n });
-        case S.EZt.APPLICATION:
-        case S.EZt.BOOST:
-        case S.EZt.GUILD_ROLE:
-            return null;
-        case S.EZt.PREMIUM:
-            return (0, l.jsx)(M, { eventTargetRef: a, assetClassName: s, disableHover: u });
-        case S.EZt.GUILD_PRODUCT:
-            return null;
-        default:
-            (0, I.xb)(t.productLine);
-    }
-}
+n.d(
+    t,
+    {},
+    {
+        Ay: function (e) {
+            let {
+                sku: t,
+                isFocused: n,
+                user: r,
+                guildId: i,
+                eventTargetRef: a,
+                assetClassName: s,
+                disableHover: u,
+            } = e;
+            switch (t.productLine) {
+                case S.EZt.COLLECTIBLES:
+                    return (0, l.jsx)(v, { sku: t, isFocused: n, user: r, guildId: i });
+                case S.EZt.SOCIAL_LAYER_GAME_ITEM:
+                    return (0, l.jsx)(R, { sku: t, isFocused: n });
+                case S.EZt.APPLICATION:
+                case S.EZt.BOOST:
+                case S.EZt.GUILD_ROLE:
+                    return null;
+                case S.EZt.PREMIUM:
+                    return (0, l.jsx)(T, { eventTargetRef: a, assetClassName: s, disableHover: u });
+                case S.EZt.GUILD_PRODUCT:
+                    return null;
+                default:
+                    (0, I.xb)(t.productLine);
+            }
+        },
+        pL: x,
+    },
+);

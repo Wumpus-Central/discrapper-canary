@@ -1,0 +1,36 @@
+.header_T5FGY3 {
+    padding: 0
+}
+
+.imageContainer_T5FGY3 {
+    align-items: center;
+    background-color: #1c3d50;
+    display: flex;
+    height: 120px;
+    justify-content: center;
+    width: 100%
+}
+
+.content_T5FGY3 {
+    padding: 18px 0
+}
+
+.footer_T5FGY3 {
+    width: 100%
+}
+
+.bulletItem_T5FGY3 {
+    align-items: flex-start;
+    display: flex
+}
+
+.bulletImage_T5FGY3 {
+    margin-inline-end: 8px;
+    margin-top: 3px
+}
+
+.remindMeLater_T5FGY3 {
+    color: var(--text-default)
+}
+
+/*# sourceMappingURL=b34b19de16a6ef5c.css.map*/

@@ -1,8 +1,8 @@
 e.exports = {
-    kL: "container_d02962",
-    FP: "categoryFade_d02962",
-    H7: "categoryFadeBlurple_d02962",
-    O1: "categoryText_d02962",
-    Yl: "categoryIcon_d02962",
-    yb: "categoryName_d02962",
+    kL: "container_d2GpC2",
+    FP: "categoryFade_d2GpC2",
+    H7: "categoryFadeBlurple_d2GpC2",
+    O1: "categoryText_d2GpC2",
+    Yl: "categoryIcon_d2GpC2",
+    yb: "categoryName_d2GpC2",
 };

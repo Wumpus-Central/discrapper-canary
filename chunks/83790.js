@@ -1,4 +1,3 @@
-n.d(t, { w: () => r });
 var i,
     r =
         (((i = {}).ANIMATED_EMOJIS = "animatedEmojis"),
@@ -28,3 +27,4 @@ var i,
         (i.QUEST_ORB_MULTIPLIER = "questOrbMultiplier"),
         (i.SHOP_MEMBER_PRICING = "shopMemberPricing"),
         i);
+n.d(t, {}, { w: r });

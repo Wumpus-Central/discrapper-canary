@@ -1,18 +1,29 @@
-n.d(e, { Jb: () => o, b4: () => r, oR: () => a, qf: () => l });
 var i = n(73153);
-function l(t, e, n) {
-    return new Promise((l) => {
-        setTimeout(() => {
-            i.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_OPEN", activity: t, isPrivate: e, context: n, resolve: l });
-        }, 0);
-    });
-}
-function a(t) {
-    i.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_QUERY", query: t });
-}
-function r(t) {
-    i.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_SEND", channelId: t });
-}
-function o(t) {
-    i.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_SEND", userId: t });
-}
+n.d(
+    e,
+    {},
+    {
+        Jb: function (t) {
+            i.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_SEND", userId: t });
+        },
+        b4: function (t) {
+            i.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_SEND", channelId: t });
+        },
+        oR: function (t) {
+            i.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_QUERY", query: t });
+        },
+        qf: function (t, e, n) {
+            return new Promise((l) => {
+                setTimeout(() => {
+                    i.h.dispatch({
+                        type: "ACTIVITY_INVITE_MODAL_OPEN",
+                        activity: t,
+                        isPrivate: e,
+                        context: n,
+                        resolve: l,
+                    });
+                }, 0);
+            });
+        },
+    },
+);

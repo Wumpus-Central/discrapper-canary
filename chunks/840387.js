@@ -1,6 +1,11 @@
-r.d(t, { Z: () => d });
-var s = r(17928),
+var s = r(855986),
     u = r(287809);
-function d() {
-    return !1 === (0, s.bG)([u.default], () => u.default.getCurrentUser()?.nsfwAllowed);
-}
+r.d(
+    t,
+    {},
+    {
+        Z: function () {
+            return !1 === (0, s.bG)([u.default], () => u.default.getCurrentUser()?.nsfwAllowed);
+        },
+    },
+);

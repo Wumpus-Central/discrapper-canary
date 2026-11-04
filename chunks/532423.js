@@ -1,34 +1,40 @@
-e.d(t, { X: () => h, n: () => j });
 var n = e(477900),
     i = e(582128),
-    c = e(503698),
-    r = e.n(c),
-    o = e(342952),
-    a = e(866665),
-    u = e(240248),
-    l = e(561794),
-    p = e(105292),
-    d = e(422596);
-function x(s) {
+    r = e(503698),
+    c = e.n(r),
+    a = e(342952),
+    o = e(866665),
+    u = e(240248);
+e(634110);
+var l = e(792996),
+    p = e(422596);
+function d(s) {
     let { spec: t, icon: e, tooltipText: i } = s,
-        c = !(0, u.uJ)(i),
-        o = (0, n.jsx)("div", {
-            className: r()(d.Fx, { [d.Y_]: c }),
+        r = !(0, u.uJ)(i),
+        a = (0, n.jsx)("div", {
+            className: c()(p.Fx, { [p.Y_]: r }),
             style: { top: t.iconInset, insetInlineEnd: t.iconInset },
             children: e,
         });
-    return c ? (0, n.jsx)(a.m, { text: i, position: "top", delay: l.Zh, children: o }) : o;
+    return r ? (0, n.jsx)(o.m, { text: i, position: "top", delay: 350, children: a }) : a;
 }
-function h(s) {
+function x(s) {
     let { spec: t, className: e, ...i } = s;
-    return (0, n.jsx)(x, {
+    return (0, n.jsx)(d, {
         spec: t,
-        icon: (0, n.jsx)(o.I, { className: r()(d.XA, e), ...i, size: t.avatarSize, maxUsers: 3 }),
-        tooltipText: p.intl.string(p.t["OnWY3/"]),
+        icon: (0, n.jsx)(a.I, { className: c()(p.XA, e), ...i, size: t.avatarSize, maxUsers: 3 }),
+        tooltipText: l.intl.string(l.t["OnWY3/"]),
     });
 }
-function j(s) {
-    let { user: t, ...e } = s,
-        c = i.useMemo(() => [t], [t]);
-    return (0, n.jsx)(h, { users: c, ...e });
-}
+e.d(
+    t,
+    {},
+    {
+        X: x,
+        n: function (s) {
+            let { user: t, ...e } = s,
+                r = i.useMemo(() => [t], [t]);
+            return (0, n.jsx)(x, { users: r, ...e });
+        },
+    },
+);

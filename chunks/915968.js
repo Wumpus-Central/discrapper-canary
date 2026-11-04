@@ -1,7 +1,6 @@
-n.d(t, { A: () => l });
 var i = n(439372),
-    r = n(280450),
-    a = n(84948);
+    r = n(46653),
+    a = n(402002);
 class s extends i.A {
     actions = {
         AUTHENTICATOR_DELETE: this.handleAuthenticatorDelete,
@@ -23,3 +22,4 @@ class s extends i.A {
     }
 }
 let l = new s();
+n.d(t, {}, { A: l });

@@ -1,4 +1,3 @@
-n.d(t, { B: () => r });
 var i,
     r =
         (((i = {}).STAGING = "staging"),
@@ -6,3 +5,4 @@ var i,
         (i.PRODUCTION = "production"),
         (i.TEST = "test"),
         i);
+n.d(t, {}, { B: r });

@@ -1,13 +1,12 @@
-n.d(t, { Bp: () => g, Hs: () => p, eq: () => S, t_: () => N });
 var i = n(582128),
     r = n(435558),
     a = n.n(r),
-    s = n(17928),
+    s = n(855986),
     l = n(52133),
     o = n(765548),
     d = n(347481),
-    c = n(477653),
-    u = n(763827),
+    c = n(718197),
+    u = n(495867),
     _ = n(179172),
     E = n(868162),
     A = n(731854);
@@ -57,16 +56,10 @@ function I() {
         !!r
     );
 }
-function p() {
-    if (!I()) return null;
-    let e = a().first(Object.keys(E.A.lastDeviceConnected)),
-        t = null != e && "" !== e ? E.A.lastDeviceConnected[e] : null;
-    return null == t || !0 === E.A.getState().ignoredDevices[t.displayName] ? null : f(t);
-}
-function m(e, t) {
+function p(e, t) {
     return e.length === t.length && e.every((e, n) => (0, l.A)(e, t[n]));
 }
-function T() {
+function m() {
     if (!I()) return [];
     let { ignoredDevices: e } = E.A.getState();
     return Object.values(E.A.lastDeviceConnected)
@@ -74,40 +67,52 @@ function T() {
         .map(f)
         .filter((e) => null != e);
 }
-function g() {
-    return (0, s.bG)([E.A, c.Ay, d.A, u.A], T, void 0, m);
-}
-function S(e, t) {
-    return null != t ? `${t.vendor.name} ${t.model.name}` : e.displayName;
-}
-function N(e) {
-    let { device: t, switchDeviceLocation: n, onMount: r, onIgnore: a } = e,
-        s = i.useRef(!1),
-        l = (0, o.A)(r);
-    return (
-        i.useEffect(() => {
-            if (null != t)
-                return (
-                    (s.current = !1),
-                    l(),
-                    () => {
-                        s.current || _.mk();
-                    }
-                );
-        }, [t, l]),
-        {
-            handleSwitch: i.useCallback(
-                (e) => {
-                    null != t && ((s.current = !0), _.TO(t.displayName, e, n));
-                },
-                [t, n],
-            ),
-            handleDontSwitch: i.useCallback(() => {
-                null != t && ((s.current = !0), _.mk());
-            }, [t]),
-            handleIgnore: i.useCallback(() => {
-                null != t && ((s.current = !0), _.BG(t.displayName), a());
-            }, [t, a]),
-        }
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        Bp: function () {
+            return (0, s.bG)([E.A, c.Ay, d.A, u.A], m, void 0, p);
+        },
+        Hs: function () {
+            if (!I()) return null;
+            let e = a().first(Object.keys(E.A.lastDeviceConnected)),
+                t = null != e && "" !== e ? E.A.lastDeviceConnected[e] : null;
+            return null == t || !0 === E.A.getState().ignoredDevices[t.displayName] ? null : f(t);
+        },
+        eq: function (e, t) {
+            return null != t ? `${t.vendor.name} ${t.model.name}` : e.displayName;
+        },
+        t_: function (e) {
+            let { device: t, switchDeviceLocation: n, onMount: r, onIgnore: a } = e,
+                s = i.useRef(!1),
+                l = (0, o.A)(r);
+            return (
+                i.useEffect(() => {
+                    if (null != t)
+                        return (
+                            (s.current = !1),
+                            l(),
+                            () => {
+                                s.current || _.mk();
+                            }
+                        );
+                }, [t, l]),
+                {
+                    handleSwitch: i.useCallback(
+                        (e) => {
+                            null != t && ((s.current = !0), _.TO(t.displayName, e, n));
+                        },
+                        [t, n],
+                    ),
+                    handleDontSwitch: i.useCallback(() => {
+                        null != t && ((s.current = !0), _.mk());
+                    }, [t]),
+                    handleIgnore: i.useCallback(() => {
+                        null != t && ((s.current = !0), _.BG(t.displayName), a());
+                    }, [t, a]),
+                }
+            );
+        },
+    },
+);

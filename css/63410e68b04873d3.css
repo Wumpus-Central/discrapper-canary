@@ -1,0 +1,229 @@
+.panel_Jtnpgj {
+    flex: 1;
+    min-height: 0
+}
+
+.header_Jtnpgj {
+    margin: 16px 0 8px
+}
+
+.headerBar_Jtnpgj {
+    box-shadow: var(--elevation-low)
+}
+
+.headerTitle_Jtnpgj {
+    flex: 1
+}
+
+.dispatcherHeader_Jtnpgj {
+    max-width: calc(100% - 90px)
+}
+
+.headerTitleText_Jtnpgj {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.inspectorWrapper_Jtnpgj {
+    font-family: var(--font-code);
+    font-size: 14px
+}
+
+.tabBarContainer_Jtnpgj {
+    align-items: center;
+    display: flex;
+    width: 100%
+}
+
+.tabBar_Jtnpgj {
+    background: var(--background-base-lower);
+    border-bottom: 1px solid var(--background-base-lowest);
+    flex-shrink: 0;
+    height: 36px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 95%
+}
+
+.tabContent_Jtnpgj {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px
+}
+
+.tabMeasurer_Jtnpgj {
+    height: 0;
+    inset-inline-start: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: 0
+}
+
+.tabItem_Jtnpgj {
+    border-bottom: 2px solid transparent;
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 22px;
+    overflow: hidden;
+    padding: 6px 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.tabItem_Jtnpgj:hover {
+    border-bottom-color: var(--brand-500)
+}
+
+.tabItem_Jtnpgj:active {
+    border-bottom-color: var(--control-brand-foreground)
+}
+
+.tabItem_Jtnpgj.selected_Jtnpgj {
+    border-bottom-color: var(--control-brand-foreground)
+}
+
+.menu_Jtnpgj {
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    width: 5%
+}
+
+.overflowChevron_Jtnpgj {
+    height: 100%;
+    position: relative
+}
+
+.table_Jtnpgj,
+.tableContainer_Jtnpgj {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0
+}
+
+.tableHeader_Jtnpgj {
+    background: var(--background-base-lower);
+    height: 24px;
+    text-transform: none
+}
+
+.tableHeader_Jtnpgj,
+.tableRow_Jtnpgj {
+    align-items: center;
+    border-bottom: 1px solid hsla(0, 0%, 100%, .06);
+    display: flex;
+    flex-direction: row;
+    padding: 8px
+}
+
+.tableRow_Jtnpgj {
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 22px;
+    min-height: 24px
+}
+
+.tableRow_Jtnpgj>div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.tableRow_Jtnpgj:hover {
+    background: var(--interactive-background-hover)
+}
+
+.tableRow_Jtnpgj:last-child {
+    border-bottom: none
+}
+
+.selectedTableRow_Jtnpgj {
+    background: var(--interactive-background-selected)
+}
+
+.properties_Jtnpgj {
+    align-items: baseline;
+    background: var(--background-base-lower);
+    box-shadow: var(--elevation-low);
+    display: grid;
+    gap: 16px 8px;
+    grid-template-columns: max-content auto;
+    padding: 16px
+}
+
+.propertyName_Jtnpgj {
+    color: var(--text-default);
+    flex: 0 0 auto;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: var(--font-weight-semibold);
+    text-align: end;
+    text-transform: uppercase
+}
+
+.propertyValue_Jtnpgj {
+    align-items: center;
+    display: flex
+}
+
+.propertyValue_Jtnpgj:hover>.copyPropertyButton_Jtnpgj {
+    opacity: 1
+}
+
+.propertyValue_Jtnpgj .copyPropertyButton_Jtnpgj {
+    color: var(--interactive-text-default);
+    height: 18px;
+    margin-inline-start: 4px;
+    opacity: 0;
+    transition: opacity .1s ease-in-out
+}
+
+.propertyValue_Jtnpgj .copyPropertyButton_Jtnpgj:hover {
+    color: var(--interactive-text-hover);
+    cursor: pointer
+}
+
+.toolbar_Jtnpgj {
+    align-items: center;
+    border-bottom: 1px solid var(--background-base-lowest);
+    display: flex;
+    flex-direction: row;
+    height: 34px
+}
+
+.toolbarGroup_Jtnpgj {
+    align-items: center;
+    display: inline-flex;
+    margin: 0 8px
+}
+
+.toolbarGroupLabel_Jtnpgj {
+    font-size: 14px;
+    margin-inline-end: 8px
+}
+
+.toolbarButton_Jtnpgj {
+    flex: 0 0 auto
+}
+
+.toolbarDivider_Jtnpgj {
+    border-inline-start: 1px solid var(--text-muted);
+    height: 18px;
+    margin: 8px 0
+}
+
+.premiumStreakOverride_Jtnpgj {
+    margin-top: 12px
+}
+
+/*# sourceMappingURL=63410e68b04873d3.css.map*/

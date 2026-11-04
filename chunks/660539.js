@@ -1,4 +1,3 @@
-d.d(t, { i: () => n, r: () => Z, t: () => m });
 var i = d(783285),
     e = d(768611),
     c = d(242268),
@@ -19,49 +18,7 @@ function n(l, t, d) {
             })(l, d),
         );
 }
-var Z = ({
-        name: l,
-        label: t,
-        displayLabel: d,
-        value: c = "",
-        error: a,
-        errorParams: Z,
-        type: b = "text",
-        placeholder: m,
-        placeholderParams: o,
-        required: u,
-        readonly: h,
-        maxLength: W,
-        disabled: G,
-        labelHint: p,
-        onChange: N,
-        onBlur: M,
-    }) => {
-        let { t: X } = (0, i.n)();
-        return (0, e.v)("div", {
-            className: "IncodeFormField",
-            children: (0, e.v)(s.t, {
-                id: l,
-                label: d ?? X(t),
-                labelHint: p,
-                name: l,
-                type: b,
-                value: c,
-                placeholder: m ? X(m, o) : void 0,
-                readOnly: h,
-                disabled: G,
-                required: u,
-                maxLength: W,
-                error: n(X, a, Z),
-                onInput: (t) => {
-                    N(l, t.target.value);
-                },
-                onBlur: M ? () => M(l) : void 0,
-                "data-testid": `form-field-${l}`,
-            }),
-        });
-    },
-    b = (0, e.a)(
+var Z = (0, e.a)(
         (
             {
                 id: l,
@@ -81,8 +38,8 @@ var Z = ({
                 "aria-label": p,
                 "aria-labelledby": N,
                 "aria-describedby": M,
-                "aria-invalid": X,
-                ...r
+                "aria-invalid": r,
+                ...X
             },
             y,
         ) => {
@@ -119,9 +76,9 @@ var Z = ({
                                         "aria-label": p,
                                         "aria-labelledby": N,
                                         "aria-describedby": R,
-                                        "aria-invalid": X || !!u,
+                                        "aria-invalid": r || !!u,
                                         "aria-required": !!Z,
-                                        ...r,
+                                        ...X,
                                     }),
                                     (0, e.v)("div", {
                                         class: (0, c.n)("IncodeRadioButtonVisual", {
@@ -176,7 +133,7 @@ var Z = ({
             });
         },
     ),
-    m = (0, e.a)(
+    b = (0, e.a)(
         (
             {
                 id: l,
@@ -186,7 +143,7 @@ var Z = ({
                 value: a,
                 defaultValue: s,
                 error: n,
-                helper: Z,
+                helper: b,
                 required: m = !1,
                 disabled: o = !1,
                 name: u,
@@ -198,12 +155,12 @@ var Z = ({
             },
             M,
         ) => {
-            let [X, r] = (0, e.p)(s ?? ""),
+            let [r, X] = (0, e.p)(s ?? ""),
                 y = void 0 !== a,
-                Y = y ? a : X,
+                Y = y ? a : r,
                 T = `${l}-label`,
                 V = n ? `${l}-error` : void 0,
-                L = Z && !n ? `${l}-helper` : void 0,
+                L = b && !n ? `${l}-helper` : void 0,
                 I = V ?? L,
                 z = u ?? l;
             return (0, e.v)("div", {
@@ -234,7 +191,7 @@ var Z = ({
                         "data-orientation": h,
                         children: i.map((t) =>
                             (0, e.v)(
-                                b,
+                                Z,
                                 {
                                     id: `${l}-${t.value}`,
                                     name: z,
@@ -247,7 +204,7 @@ var Z = ({
                                     "aria-describedby": I,
                                     onChange: (l) => {
                                         var d;
-                                        return ((d = t.value), void (!y && r(d), W?.(d, l)));
+                                        return ((d = t.value), void (!y && X(d), W?.(d, l)));
                                     },
                                     onBlur: G,
                                 },
@@ -256,8 +213,58 @@ var Z = ({
                         ),
                     }),
                     n && (0, e.v)("p", { id: V, class: "IncodeRadioGroupComposedError", role: "alert", children: n }),
-                    Z && !n && (0, e.v)("p", { id: L, class: "IncodeRadioGroupComposedHelper", children: Z }),
+                    b && !n && (0, e.v)("p", { id: L, class: "IncodeRadioGroupComposedHelper", children: b }),
                 ],
             });
         },
     );
+d.d(
+    t,
+    {},
+    {
+        i: n,
+        r: ({
+            name: l,
+            label: t,
+            displayLabel: d,
+            value: c = "",
+            error: a,
+            errorParams: Z,
+            type: b = "text",
+            placeholder: m,
+            placeholderParams: o,
+            required: u,
+            readonly: h,
+            maxLength: W,
+            disabled: G,
+            labelHint: p,
+            onChange: N,
+            onBlur: M,
+        }) => {
+            let { t: r } = (0, i.n)();
+            return (0, e.v)("div", {
+                className: "IncodeFormField",
+                children: (0, e.v)(s.t, {
+                    id: l,
+                    label: d ?? r(t),
+                    labelHint: p,
+                    name: l,
+                    type: b,
+                    value: c,
+                    placeholder: m ? r(m, o) : void 0,
+                    readOnly: h,
+                    disabled: G,
+                    required: u,
+                    maxLength: W,
+                    error: n(r, a, Z),
+                    onInput: (t) => {
+                        N(l, t.target.value);
+                    },
+                    onBlur: M ? () => M(l) : void 0,
+                    "data-testid": `form-field-${l}`,
+                }),
+            });
+        },
+        t: b,
+    },
+);

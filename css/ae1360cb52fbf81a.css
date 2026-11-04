@@ -1,0 +1,14 @@
+.scroller_kZ7Jiy {
+    background-color: var(--background-surface-higher);
+    border-radius: var(--radius-sm);
+    padding: var(--space-8) var(--space-16)
+}
+
+.popoutWrapper_kZ7Jiy {
+    display: flex;
+    max-height: 40vh;
+    position: relative;
+    width: 200px
+}
+
+/*# sourceMappingURL=ae1360cb52fbf81a.css.map*/

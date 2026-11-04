@@ -1,24 +1,10 @@
-n.d(t, { Y: () => c, s: () => d });
-var i = n(280450),
+var i = n(46653),
     r = n(734057),
-    a = n(763827),
-    s = n(174459),
+    a = n(495867),
+    s = n(129230),
     l = n(806931),
     o = n(652215);
-function d(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { targetUserId: i, tileType: r, entrypoint: a } = n;
-    return (n) =>
-        c({
-            menuItemProps: n,
-            menuName: e,
-            location: t,
-            entrypoint: a ?? l.GK.CONTEXT_MENU,
-            targetUserId: i,
-            tileType: r,
-        });
-}
-function c(e) {
+function d(e) {
     let {
             menuItemProps: { type: t },
             menuName: n,
@@ -43,3 +29,23 @@ function c(e) {
         tile_type: u,
     });
 }
+n.d(
+    t,
+    {},
+    {
+        Y: d,
+        s: function (e, t) {
+            let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                { targetUserId: i, tileType: r, entrypoint: a } = n;
+            return (n) =>
+                d({
+                    menuItemProps: n,
+                    menuName: e,
+                    location: t,
+                    entrypoint: a ?? l.GK.CONTEXT_MENU,
+                    targetUserId: i,
+                    tileType: r,
+                });
+        },
+    },
+);

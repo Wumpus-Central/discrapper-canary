@@ -1,1 +1,1 @@
-e.exports = { ZS: "imageContainer__68c2a", Sl: "image__68c2a", h2: "imageSkeleton__68c2a" };
+e.exports = { ZS: "imageContainer_VMx4zg", Sl: "image_VMx4zg", h2: "imageSkeleton_VMx4zg" };

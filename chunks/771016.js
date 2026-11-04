@@ -1,4 +1,3 @@
-R.d(I, { zY: () => A });
 var _,
     A =
         (((_ = {})[(_.MARKETING_UNCLAIMED = 0)] = "MARKETING_UNCLAIMED"),
@@ -6,3 +5,4 @@ var _,
         (_[(_.ORGANIC_REGISTERED = 2)] = "ORGANIC_REGISTERED"),
         (_[(_.ORGANIC_REGISTERED_GUILD_TEMPLATE = 3)] = "ORGANIC_REGISTERED_GUILD_TEMPLATE"),
         _);
+R.d(I, {}, { zY: A });

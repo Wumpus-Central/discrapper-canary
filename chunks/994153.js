@@ -1,4 +1,3 @@
-n.d(t, { N: () => a, V: () => s });
 var l = n(945810),
     i = n(258204);
 let r = (0, l.mj)({
@@ -10,8 +9,15 @@ let r = (0, l.mj)({
 function s(e) {
     return r.useConfig({ location: e }).enabled;
 }
-function a(e, t) {
-    let n = (0, i.t)(e),
-        l = s(n ? t : `Invalid - ${t}`);
-    return n && l;
-}
+n.d(
+    t,
+    {},
+    {
+        N: function (e, t) {
+            let n = (0, i.t)(e),
+                l = s(n ? t : `Invalid - ${t}`);
+            return n && l;
+        },
+        V: s,
+    },
+);

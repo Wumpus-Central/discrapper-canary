@@ -1,8 +1,8 @@
 e.exports = {
-    UD: "buttonContainer__3e6b4",
-    rf: "body__3e6b4",
-    FS: "textContainer__3e6b4",
-    h_: "description__3e6b4",
-    c8: "heroImage__3e6b4",
-    lG: "safetyTips__3e6b4",
+    UD: "buttonContainer_rMw7KK",
+    rf: "body_rMw7KK",
+    FS: "textContainer_rMw7KK",
+    h_: "description_rMw7KK",
+    c8: "heroImage_rMw7KK",
+    lG: "safetyTips_rMw7KK",
 };

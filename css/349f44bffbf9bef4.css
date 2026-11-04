@@ -1,0 +1,34 @@
+.barsRoot_7wuuc1 {
+    height: 100%;
+    pointer-events: none;
+    position: relative;
+    width: 100%
+}
+
+.animatedIconContainer_7wuuc1 {
+    display: inline-flex
+}
+
+.barsGroup_7wuuc1 {
+    align-items: center;
+    display: flex;
+    isolation: isolate;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    transform: translateZ(0)
+}
+
+.bar_7wuuc1,
+.barsGroup_7wuuc1 {
+    will-change: transform
+}
+
+.bar_7wuuc1 {
+    border-radius: 1px;
+    display: block;
+    flex: 0 0 auto;
+    transform-origin: center center
+}
+
+/*# sourceMappingURL=349f44bffbf9bef4.css.map*/

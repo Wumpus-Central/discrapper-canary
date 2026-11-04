@@ -1,4 +1,3 @@
-n.d(t, { A: () => r });
 var i,
     r =
         (((i = {}).IMAGE = "image"),
@@ -23,3 +22,4 @@ var i,
         (i.COMPONENTS = "components"),
         (i.AUDIO = "audio"),
         i);
+n.d(t, {}, { A: r });

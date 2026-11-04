@@ -1,9 +1,9 @@
 e.exports = {
-    gY: "tryItOutButtons__965a6",
-    c7: "previewThemeButton__965a6",
-    BU: "premiumTier2Divider__965a6",
-    cI: "displayClientThemesTitle__965a6",
-    EK: "displayClientThemesHeading__965a6",
-    Hq: "displayPremiumIcon__965a6",
-    _$: "colorThemesBackground__965a6",
+    gY: "tryItOutButtons_A7cGXu",
+    c7: "previewThemeButton_A7cGXu",
+    BU: "premiumTier2Divider_A7cGXu",
+    cI: "displayClientThemesTitle_A7cGXu",
+    EK: "displayClientThemesHeading_A7cGXu",
+    Hq: "displayPremiumIcon_A7cGXu",
+    _$: "colorThemesBackground_A7cGXu",
 };

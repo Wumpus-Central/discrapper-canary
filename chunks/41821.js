@@ -1,5 +1,5 @@
 e.exports = {
-    DK: "cloudPlaySection__33ecd",
-    tJ: "cloudPlaySectionTextContainer__33ecd",
-    Xl: "cloudPlayDivider__33ecd",
+    DK: "cloudPlaySection_1HA-j7",
+    tJ: "cloudPlaySectionTextContainer_1HA-j7",
+    Xl: "cloudPlayDivider_1HA-j7",
 };

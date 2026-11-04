@@ -1,8 +1,7 @@
-n.d(t, { A: () => d });
 var i = n(77729),
     r = n(626584),
     a = n(832213),
-    s = n(19575);
+    s = n(253400);
 let l = new r.A("ProcessUtilsElectron");
 class o extends a.D {
     lastMemoryUsageKB = void 0;
@@ -196,3 +195,4 @@ class o extends a.D {
     }
 }
 let d = new o();
+n.d(t, {}, { A: d });

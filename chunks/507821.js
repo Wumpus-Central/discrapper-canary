@@ -1,4 +1,3 @@
-n.d(t, { q: () => r });
 var i,
     r =
         (((i = {}).State = "state"),
@@ -15,3 +14,4 @@ var i,
         (i.RosterMapUpdate = "roster-map-update"),
         (i.UsersMerged = "users-merged"),
         i);
+n.d(t, {}, { q: r });

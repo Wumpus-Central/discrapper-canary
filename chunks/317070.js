@@ -1,10 +1,9 @@
-e.exports = {
-    Qm: "recorderContainer__2636e " + r(409757).kL,
-    Qz: "containerDisabled__2636e " + r(409757).r9,
-    oz: "recording__2636e",
-    Pp: "recorderLayout__2636e " + r(409757).Zp,
-    gu: "shadowPulse__2636e",
-    bZ: "keybindInput__2636e " + r(409757).hF,
-    UD: "buttonContainer__2636e",
-    Sq: "trailingActions__2636e",
+_.exports = {
+    Qm: "recorderContainer_0PgvPQ " + t(409757).kL,
+    Qz: "containerDisabled_0PgvPQ " + t(409757).r9,
+    oz: "recording_0PgvPQ",
+    Pp: "recorderLayout_0PgvPQ " + t(409757).Zp,
+    bZ: "keybindInput_0PgvPQ " + t(409757).hF,
+    UD: "buttonContainer_0PgvPQ",
+    Sq: "trailingActions_0PgvPQ",
 };

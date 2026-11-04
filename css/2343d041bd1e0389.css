@@ -1,0 +1,81 @@
+.wrapper_pI1Qq5 {
+    padding: 32px 16px 16px
+}
+
+.heroImage_pI1Qq5 {
+    display: block;
+    margin: 0 auto 24px;
+    width: 250px
+}
+
+.heroImageWithTrialOffer_pI1Qq5 {
+    margin-top: 24px
+}
+
+.premiumTrialBadge_pI1Qq5 {
+    inset-inline-start: 50%;
+    position: absolute;
+    top: 20px;
+    transform: translateX(-50%)
+}
+
+.closeButton_pI1Qq5 {
+    inset-inline-end: 4px;
+    position: absolute;
+    top: 12px
+}
+
+.heading_pI1Qq5 {
+    margin-bottom: 16px
+}
+
+.perks_pI1Qq5 {
+    background-color: var(--background-base-lower);
+    border-radius: 8px
+}
+
+.icon_pI1Qq5 {
+    height: 20px;
+    width: 20px
+}
+
+.iconColorLightBlue_pI1Qq5 {
+    color: var(--premium-perk-light-blue)
+}
+
+.iconColorGreen_pI1Qq5 {
+    color: var(--premium-perk-green)
+}
+
+.iconColorOrange_pI1Qq5 {
+    color: var(--premium-perk-orange)
+}
+
+.iconColorYellow_pI1Qq5 {
+    color: var(--premium-perk-yellow)
+}
+
+.iconColorPink_pI1Qq5 {
+    color: var(--guild-boosting-pink)
+}
+
+.iconColorPurple_pI1Qq5 {
+    color: var(--premium-perk-purple)
+}
+
+.iconColorDarkBlue_pI1Qq5 {
+    color: var(--guild-boosting-blue)
+}
+
+.iconColorBlue_pI1Qq5 {
+    color: var(--premium-perk-blue)
+}
+
+.footer_pI1Qq5 {
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: flex-end
+}
+
+/*# sourceMappingURL=2343d041bd1e0389.css.map*/

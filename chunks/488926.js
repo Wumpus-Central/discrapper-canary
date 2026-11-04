@@ -1,83 +1,3 @@
-n.d(t, {
-    $3: () => Y,
-    HJ: () => H,
-    Ib: () => $,
-    MJ: () => K,
-    TJ: () => x,
-    aH: () =>
-        function e(t) {
-            let n,
-                {
-                    forceRoles: i,
-                    context: r,
-                    overwrites: a,
-                    roles: s,
-                    checkElevated: l = !0,
-                    excludeGuildPermissions: o,
-                } = t,
-                d = y;
-            if (r instanceof E.YB) {
-                if (r.isScheduledForDeletion()) return O;
-                if (E.Le.has(r.type)) {
-                    let t = I.A.getChannel(r.parent_id);
-                    return null == t
-                        ? O
-                        : x(
-                              r,
-                              e({
-                                  forceRoles: i,
-                                  context: t,
-                                  overwrites: a,
-                                  roles: s,
-                                  checkElevated: l,
-                                  excludeGuildPermissions: o,
-                              }),
-                              !1,
-                              !1,
-                          );
-                }
-                ((d = r.computeLurkerPermissionsAllowList() ?? d),
-                    (a = null != a ? { ...r.permissionOverwrites, ...a } : r.permissionOverwrites));
-                let t = r.getGuildId();
-                n = null != t ? T.A.getGuild(t) : null;
-            } else ((a = a ?? {}), (n = r));
-            if (null == n) return O;
-            let c = {
-                userId: C.dJq,
-                nick: "",
-                guildId: n.id,
-                guildMemberAvatar: null,
-                roles: N.default.keys(i),
-                colorString: null,
-                colorStrings: null,
-                hoistRoleId: null,
-                premiumSince: null,
-                isPending: !1,
-                joinedAt: new Date().toISOString(),
-                communicationDisabledUntil: null,
-            };
-            return w({
-                userId: C.dJq,
-                member: c,
-                guild: n,
-                overwrites: a,
-                roles: s,
-                checkElevated: l,
-                excludeGuildPermissions: o,
-                lurkerPermissionsMask: d,
-            });
-        },
-    cc: () => G,
-    li: () => j,
-    qN: () => L,
-    r: () => F,
-    s9: () => k,
-    wO: () => V,
-    wT: () => B,
-    x3: () => O,
-    xT: () => W,
-    yC: () => P,
-});
 var i = n(435558),
     r = n.n(i),
     a = n(136722),
@@ -91,14 +11,14 @@ var i = n(435558),
     E = n(95701),
     A = n(260509),
     h = n(34457),
-    f = n(280450),
+    f = n(46653),
     I = n(734057),
     p = n(696451),
     m = n(317525),
     T = n(71393),
     g = n(287809),
     S = n(7864),
-    N = n(935208),
+    N = n(811091),
     C = n(652215);
 let O = a.iu(0),
     R = a.kg(...r().values(C.xBc)),
@@ -271,76 +191,154 @@ function x(e, t, n, i) {
 function k(e, t) {
     let { guild_id: n } = e,
         i = { ...e.permissionOverwrites };
-    if ((null != n && null == i[n] && (i[n] = W(n)), null != t)) {
+    if ((null != n && null == i[n] && (i[n] = F(n)), null != t)) {
         let e = i[t];
         i[t] = { id: t, type: s.r2.MEMBER, allow: a.WQ(e?.allow ?? O, l.yZ), deny: a.TF(e?.deny ?? O, l.yZ) };
     }
     return i;
 }
-function F(e, t, n) {
-    if (E.Le.has(e.type)) return !0;
-    let { guild_id: i } = e;
-    if (null == t || null == i || i !== t.guild_id) return !1;
-    let r = { ...e.permissionOverwrites },
-        s = k(t, n);
-    return (
-        null == r[i] && (r[i] = W(i)),
-        Object.keys(r).length === Object.keys(s).length &&
-            !Object.keys(r).some((e) => {
-                let t = r[e],
-                    n = s[e];
-                return !(null != n && a.aI(n.deny, t.deny) && a.aI(n.allow, t.allow));
-            })
-    );
-}
-function B(e) {
-    return r().some(m.A.getUnsafeMutableRoles(e.id), (e) => e.hoist && (0, h._m)(e, C.xBc.ADMINISTRATOR))
-        ? void 0
-        : (e.ownerId ?? void 0);
-}
-function V(e, t, n, i) {
-    return !!(null != t && (0, A.bM)(e, t)) || (null != n && (null == i || (0, S.zA)(n, i)));
-}
-function H(e, t) {
-    let n = p.Ay.getMember(e.id, t);
-    if (null != n) return m.A.getSortedRoles(e.id).find((e) => n.roles.includes(e.id));
-}
-function j(e, t) {
-    return null == t.hoistRoleId ? null : m.A.getRole(e.id, t.hoistRoleId);
-}
-function W(e) {
+function F(e) {
     return { id: e, type: s.r2.ROLE, allow: O, deny: O };
 }
-function Y(e) {
-    let { permission: t, user: n, context: i, overwrites: r, roles: s, excludeGuildPermissions: l } = e;
-    return a.zy(G({ user: n, context: i, overwrites: r, roles: s, checkElevated: !0, excludeGuildPermissions: l }), t);
-}
-function K(e, t) {
-    let n,
-        i = {};
-    if (t instanceof E.YB) {
-        if (t.type === C.rbe.PRIVATE_THREAD || (E.Le.has(t.type) && null == (t = I.A.getChannel(t.parent_id))))
-            return !1;
-        i = t.permissionOverwrites;
-        let e = t.getGuildId();
-        n = null != e ? T.A.getGuild(e) : null;
-    } else n = t;
-    if (null == n) return !1;
-    let r = m.A.getEveryoneRole(n).permissions,
-        s = i[n.id];
-    return (null != s && ((r = a.TF(r, s.deny)), (r = a.WQ(r, s.allow))), a.zy(r, e));
-}
-function $(e, t) {
-    let n,
-        i = {};
-    if (t instanceof E.YB) {
-        if (t.type === C.rbe.PRIVATE_THREAD || (E.Le.has(t.type) && null == (t = I.A.getChannel(t.parent_id))))
-            return !1;
-        i = t.permissionOverwrites;
-        let e = t.getGuildId();
-        n = null != e ? T.A.getGuild(e) : null;
-    } else n = t;
-    if (null == n) return !1;
-    let s = m.A.getEveryoneRole(n);
-    return !(!(0, h._m)(s, e) || r().some(i, (t) => a.zy(t.deny, e)));
-}
+n.d(
+    t,
+    {},
+    {
+        $3: function (e) {
+            let { permission: t, user: n, context: i, overwrites: r, roles: s, excludeGuildPermissions: l } = e;
+            return a.zy(
+                G({ user: n, context: i, overwrites: r, roles: s, checkElevated: !0, excludeGuildPermissions: l }),
+                t,
+            );
+        },
+        HJ: function (e, t) {
+            let n = p.Ay.getMember(e.id, t);
+            if (null != n) return m.A.getSortedRoles(e.id).find((e) => n.roles.includes(e.id));
+        },
+        Ib: function (e, t) {
+            let n,
+                i = {};
+            if (t instanceof E.YB) {
+                if (t.type === C.rbe.PRIVATE_THREAD || (E.Le.has(t.type) && null == (t = I.A.getChannel(t.parent_id))))
+                    return !1;
+                i = t.permissionOverwrites;
+                let e = t.getGuildId();
+                n = null != e ? T.A.getGuild(e) : null;
+            } else n = t;
+            if (null == n) return !1;
+            let s = m.A.getEveryoneRole(n);
+            return !(!(0, h._m)(s, e) || r().some(i, (t) => a.zy(t.deny, e)));
+        },
+        MJ: function (e, t) {
+            let n,
+                i = {};
+            if (t instanceof E.YB) {
+                if (t.type === C.rbe.PRIVATE_THREAD || (E.Le.has(t.type) && null == (t = I.A.getChannel(t.parent_id))))
+                    return !1;
+                i = t.permissionOverwrites;
+                let e = t.getGuildId();
+                n = null != e ? T.A.getGuild(e) : null;
+            } else n = t;
+            if (null == n) return !1;
+            let r = m.A.getEveryoneRole(n).permissions,
+                s = i[n.id];
+            return (null != s && ((r = a.TF(r, s.deny)), (r = a.WQ(r, s.allow))), a.zy(r, e));
+        },
+        TJ: x,
+        aH: function e(t) {
+            let n,
+                {
+                    forceRoles: i,
+                    context: r,
+                    overwrites: a,
+                    roles: s,
+                    checkElevated: l = !0,
+                    excludeGuildPermissions: o,
+                } = t,
+                d = y;
+            if (r instanceof E.YB) {
+                if (r.isScheduledForDeletion()) return O;
+                if (E.Le.has(r.type)) {
+                    let t = I.A.getChannel(r.parent_id);
+                    return null == t
+                        ? O
+                        : x(
+                              r,
+                              e({
+                                  forceRoles: i,
+                                  context: t,
+                                  overwrites: a,
+                                  roles: s,
+                                  checkElevated: l,
+                                  excludeGuildPermissions: o,
+                              }),
+                              !1,
+                              !1,
+                          );
+                }
+                ((d = r.computeLurkerPermissionsAllowList() ?? d),
+                    (a = null != a ? { ...r.permissionOverwrites, ...a } : r.permissionOverwrites));
+                let t = r.getGuildId();
+                n = null != t ? T.A.getGuild(t) : null;
+            } else ((a = a ?? {}), (n = r));
+            return null == n
+                ? O
+                : w({
+                      userId: "",
+                      member: {
+                          userId: "",
+                          nick: "",
+                          guildId: n.id,
+                          guildMemberAvatar: null,
+                          roles: N.default.keys(i),
+                          colorString: null,
+                          colorStrings: null,
+                          hoistRoleId: null,
+                          premiumSince: null,
+                          isPending: !1,
+                          joinedAt: new Date().toISOString(),
+                          communicationDisabledUntil: null,
+                      },
+                      guild: n,
+                      overwrites: a,
+                      roles: s,
+                      checkElevated: l,
+                      excludeGuildPermissions: o,
+                      lurkerPermissionsMask: d,
+                  });
+        },
+        cc: G,
+        li: function (e, t) {
+            return null == t.hoistRoleId ? null : m.A.getRole(e.id, t.hoistRoleId);
+        },
+        qN: L,
+        r: function (e, t, n) {
+            if (E.Le.has(e.type)) return !0;
+            let { guild_id: i } = e;
+            if (null == t || null == i || i !== t.guild_id) return !1;
+            let r = { ...e.permissionOverwrites },
+                s = k(t, n);
+            return (
+                null == r[i] && (r[i] = F(i)),
+                Object.keys(r).length === Object.keys(s).length &&
+                    !Object.keys(r).some((e) => {
+                        let t = r[e],
+                            n = s[e];
+                        return !(null != n && a.aI(n.deny, t.deny) && a.aI(n.allow, t.allow));
+                    })
+            );
+        },
+        s9: k,
+        wO: function (e, t, n, i) {
+            return !!(null != t && (0, A.bM)(e, t)) || (null != n && (null == i || (0, S.zA)(n, i)));
+        },
+        wT: function (e) {
+            return r().some(m.A.getUnsafeMutableRoles(e.id), (e) => e.hoist && (0, h._m)(e, C.xBc.ADMINISTRATOR))
+                ? void 0
+                : (e.ownerId ?? void 0);
+        },
+        x3: O,
+        xT: F,
+        yC: P,
+    },
+);

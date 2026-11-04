@@ -1,4 +1,3 @@
-n.d(t, { A: () => E });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -20,31 +19,37 @@ function _(e) {
         ],
     );
 }
-function E(e) {
-    let { title: t, className: n, icon: a } = e,
-        [l, u] = r.useState(_(t));
-    return (
-        r.useEffect(() => {
-            u(_(t));
-        }, [t]),
-        (0, i.jsxs)("div", {
-            className: s()(c.iE, n),
-            children: [
-                (0, i.jsx)(d.Ay, {
-                    mask: d.Ay.Masks.STATUS_SCREENSHARE,
-                    width: 32,
-                    height: 32,
-                    children:
-                        null == a || 0 === a.length
-                            ? (0, i.jsx)("div", {
-                                  className: c.Kk,
-                                  style: { backgroundColor: l },
-                                  children: t[0] ?? "?",
-                              })
-                            : (0, i.jsx)("img", { alt: "", src: a, className: c.Kk }),
-                }),
-                (0, i.jsx)(o.VideoIcon, { size: "md", color: "currentColor", className: c.qS }),
-            ],
-        })
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { title: t, className: n, icon: a } = e,
+                [l, u] = r.useState(_(t));
+            return (
+                r.useEffect(() => {
+                    u(_(t));
+                }, [t]),
+                (0, i.jsxs)("div", {
+                    className: s()(c.iE, n),
+                    children: [
+                        (0, i.jsx)(d.Ay, {
+                            mask: d.Ay.Masks.STATUS_SCREENSHARE,
+                            width: 32,
+                            height: 32,
+                            children:
+                                null == a || 0 === a.length
+                                    ? (0, i.jsx)("div", {
+                                          className: c.Kk,
+                                          style: { backgroundColor: l },
+                                          children: t[0] ?? "?",
+                                      })
+                                    : (0, i.jsx)("img", { alt: "", src: a, className: c.Kk }),
+                        }),
+                        (0, i.jsx)(o.VideoIcon, { size: "md", color: "currentColor", className: c.qS }),
+                    ],
+                })
+            );
+        },
+    },
+);

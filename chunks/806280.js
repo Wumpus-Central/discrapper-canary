@@ -1,11 +1,10 @@
-a.d(e, { default: () => p });
 var n = a(477900),
-    i = a(980707),
+    i = a(165862),
     c = a(442433),
     d = a(847767),
-    r = a(564189),
+    r = a(425912),
     s = a(652215),
-    l = a(105292);
+    l = a(792996);
 let p = (0, d.A)(
     function (t) {
         let { onSelect: e, navId: a } = t,
@@ -21,3 +20,4 @@ let p = (0, d.A)(
     },
     { object: s.ZSU.CONTEXT_MENU },
 );
+a.d(e, {}, { default: p });

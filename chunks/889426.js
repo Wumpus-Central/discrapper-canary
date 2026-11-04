@@ -1,12 +1,11 @@
-n.d(t, { A: () => A });
 var i = n(477900),
-    l = n(131937),
+    l = n(613412),
     a = n(442433),
     s = n(793574),
     r = n(139286),
     o = n(480890),
     d = n(326567),
-    c = n(280450),
+    c = n(46653),
     u = n(734057),
     h = n(287809),
     p = n(806931);
@@ -18,111 +17,117 @@ function m(e, t, n) {
         properties: { location: n, is_tile_owner: e.user.id === i, tile_type: t },
     });
 }
-function A(e) {
-    let {
-            participant: t,
-            event: l,
-            minimalContextMenu: r,
-            entrypoint: c,
-            channelId: A,
-            appContext: f,
-            location: g,
-        } = e,
-        x = u.A.getChannel(A);
-    if (null != x && t.type !== p.lp.ACTIVITY && t.type !== p.lp.HIDDEN_STREAM)
-        switch (t.type) {
-            case p.lp.STREAM:
-                (m(t, p.qs.STREAM, g),
-                    (0, a.L3)(
-                        l,
-                        async () => {
-                            let { default: e } = await Promise.all([
-                                n.e("189673"),
-                                n.e("245996"),
-                                n.e("529422"),
-                                n.e("58315"),
-                                n.e("870553"),
-                            ]).then(n.bind(n, 744960));
-                            return (n) =>
-                                (0, i.jsx)(e, {
-                                    ...n,
-                                    stream: t.stream,
-                                    exitFullscreen: () => {},
-                                    appContext: f,
-                                    minimal: r,
-                                    onInteraction: () =>
-                                        (0, o.s)("StreamContextMenu", s.A.GUILD_ROOM, {
-                                            entrypoint: c,
-                                            tileType: p.qs.STREAM,
-                                            targetUserId: t.user.id,
-                                        }),
-                                });
-                        },
-                        { context: f },
-                    ));
-                return;
-            case p.lp.USER:
-                let C = h.default.getUser(t.id);
-                if (null == C) return;
-                if ((m(t, p.qs.USER, g), r))
-                    return (0, d.r)(l, t.user, x, { context: f }, (e, n) =>
-                        (0, o.Y)({
-                            menuItemProps: n,
-                            menuName: e,
-                            entrypoint: c ?? p.GK.THREE_DOT,
-                            tileType: p.qs.USER,
-                            targetUserId: t.user.id,
-                            location: s.A.GUILD_ROOM,
-                        }),
-                    );
-                return (0, a.L3)(
-                    l,
-                    async () => {
-                        let { default: e } = await Promise.all([
-                            n.e("463317"),
-                            n.e("893190"),
-                            n.e("189673"),
-                            n.e("882073"),
-                            n.e("797558"),
-                            n.e("691994"),
-                            n.e("229787"),
-                            n.e("576665"),
-                            n.e("624198"),
-                            n.e("715038"),
-                            n.e("245996"),
-                            n.e("529422"),
-                            n.e("823427"),
-                            n.e("242204"),
-                            n.e("307059"),
-                            n.e("449145"),
-                            n.e("343116"),
-                            n.e("470314"),
-                            n.e("70515"),
-                            n.e("404524"),
-                            n.e("654148"),
-                            n.e("666939"),
-                            n.e("281165"),
-                            n.e("184841"),
-                        ]).then(n.bind(n, 107632));
-                        return (n) =>
-                            (0, i.jsx)(e, {
-                                ...n,
-                                showMediaItems: !0,
-                                showChannelCallItems: !0,
-                                showChatItems: !1,
-                                user: C,
-                                channel: x,
-                                guildId: x.guild_id,
-                                showModalItems: !0,
-                                onInteraction: () =>
-                                    (0, o.s)("GuildChannelUserContextMenu", s.A.GUILD_ROOM, {
-                                        entrypoint: c,
-                                        tileType: p.qs.USER,
-                                        targetUserId: t.user.id,
-                                    }),
-                            });
-                    },
-                    { context: f },
-                );
-        }
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let {
+                    participant: t,
+                    event: l,
+                    minimalContextMenu: r,
+                    entrypoint: c,
+                    channelId: A,
+                    appContext: f,
+                    location: g,
+                } = e,
+                x = u.A.getChannel(A);
+            if (null != x && t.type !== p.lp.ACTIVITY && t.type !== p.lp.HIDDEN_STREAM)
+                switch (t.type) {
+                    case p.lp.STREAM:
+                        (m(t, p.qs.STREAM, g),
+                            (0, a.L3)(
+                                l,
+                                async () => {
+                                    let { default: e } = await Promise.all([
+                                        n.e(189673),
+                                        n.e(245996),
+                                        n.e(529422),
+                                        n.e(58315),
+                                        n.e(338618),
+                                    ]).then(n.bind(n, 16001));
+                                    return (n) =>
+                                        (0, i.jsx)(e, {
+                                            ...n,
+                                            stream: t.stream,
+                                            exitFullscreen: () => {},
+                                            appContext: f,
+                                            minimal: r,
+                                            onInteraction: () =>
+                                                (0, o.s)("StreamContextMenu", s.A.GUILD_ROOM, {
+                                                    entrypoint: c,
+                                                    tileType: p.qs.STREAM,
+                                                    targetUserId: t.user.id,
+                                                }),
+                                        });
+                                },
+                                { context: f },
+                            ));
+                        return;
+                    case p.lp.USER:
+                        let C = h.default.getUser(t.id);
+                        if (null == C) return;
+                        if ((m(t, p.qs.USER, g), r))
+                            return (0, d.r)(l, t.user, x, { context: f }, (e, n) =>
+                                (0, o.Y)({
+                                    menuItemProps: n,
+                                    menuName: e,
+                                    entrypoint: c ?? p.GK.THREE_DOT,
+                                    tileType: p.qs.USER,
+                                    targetUserId: t.user.id,
+                                    location: s.A.GUILD_ROOM,
+                                }),
+                            );
+                        return (0, a.L3)(
+                            l,
+                            async () => {
+                                let { default: e } = await Promise.all([
+                                    n.e(463317),
+                                    n.e(893190),
+                                    n.e(189673),
+                                    n.e(576432),
+                                    n.e(797558),
+                                    n.e(451162),
+                                    n.e(229787),
+                                    n.e(576665),
+                                    n.e(624198),
+                                    n.e(715038),
+                                    n.e(245996),
+                                    n.e(529422),
+                                    n.e(823427),
+                                    n.e(242204),
+                                    n.e(307059),
+                                    n.e(495861),
+                                    n.e(343116),
+                                    n.e(470314),
+                                    n.e(70515),
+                                    n.e(404524),
+                                    n.e(654148),
+                                    n.e(666939),
+                                    n.e(281165),
+                                    n.e(184841),
+                                ]).then(n.bind(n, 107632));
+                                return (n) =>
+                                    (0, i.jsx)(e, {
+                                        ...n,
+                                        showMediaItems: !0,
+                                        showChannelCallItems: !0,
+                                        showChatItems: !1,
+                                        user: C,
+                                        channel: x,
+                                        guildId: x.guild_id,
+                                        showModalItems: !0,
+                                        onInteraction: () =>
+                                            (0, o.s)("GuildChannelUserContextMenu", s.A.GUILD_ROOM, {
+                                                entrypoint: c,
+                                                tileType: p.qs.USER,
+                                                targetUserId: t.user.id,
+                                            }),
+                                    });
+                            },
+                            { context: f },
+                        );
+                }
+        },
+    },
+);

@@ -1,6 +1,6 @@
-(n.d(t, { OT: () => f, eo: () => I, vz: () => h, zP: () => p }), n(321073));
+n(321073);
 var i,
-    r = n(17928),
+    r = n(855986),
     a = n(323073),
     s = n(597306),
     l = n(890615),
@@ -11,27 +11,14 @@ var c = n(71393),
     u = n(576705),
     _ = n(977997),
     E = n(147036),
-    A = n(652215);
-function h(e, t, n) {
-    let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-    if (e.isPrivate()) return !0;
-    let r = t.getGuild(e.getGuildId()),
-        a = r?.maxStageVideoChannelUsers ?? 0;
-    return (
-        (!e.isGuildStageVoice() || !(a <= 0)) &&
-        (!i || !!(0, l.A)(e, n)) &&
-        !!n.can(A.xBc.STREAM, e) &&
-        null != r &&
-        r.afkChannelId !== e.id
-    );
-}
-var f =
-    (((i = {})[(i.REMOTE_MODE = 0)] = "REMOTE_MODE"),
-    (i[(i.CHANNEL_FULL = 1)] = "CHANNEL_FULL"),
-    (i[(i.NO_PERMISSION = 2)] = "NO_PERMISSION"),
-    (i[(i.AGE_RESTRICTED = 3)] = "AGE_RESTRICTED"),
-    i);
-function I(e, t, n, i, r) {
+    A = n(652215),
+    h =
+        (((i = {})[(i.REMOTE_MODE = 0)] = "REMOTE_MODE"),
+        (i[(i.CHANNEL_FULL = 1)] = "CHANNEL_FULL"),
+        (i[(i.NO_PERMISSION = 2)] = "NO_PERMISSION"),
+        (i[(i.AGE_RESTRICTED = 3)] = "AGE_RESTRICTED"),
+        i);
+function f(e, t, n, i, r) {
     let o;
     if (null == e) return [!1, 2];
     let c = t.isInChannel(e.id),
@@ -44,6 +31,27 @@ function I(e, t, n, i, r) {
         [!__OVERLAY__ && !A && !h && (c || (_ && !u)), o]
     );
 }
-function p(e) {
-    return (0, r.yK)([_.A, c.A, u.A, o.default], () => I(e, _.A, c.A, u.A, o.default));
-}
+n.d(
+    t,
+    {},
+    {
+        OT: h,
+        eo: f,
+        vz: function (e, t, n) {
+            let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
+            if (e.isPrivate()) return !0;
+            let r = t.getGuild(e.getGuildId()),
+                a = r?.maxStageVideoChannelUsers ?? 0;
+            return (
+                (!e.isGuildStageVoice() || !(a <= 0)) &&
+                (!i || !!(0, l.A)(e, n)) &&
+                !!n.can(A.xBc.STREAM, e) &&
+                null != r &&
+                r.afkChannelId !== e.id
+            );
+        },
+        zP: function (e) {
+            return (0, r.yK)([_.A, c.A, u.A, o.default], () => f(e, _.A, c.A, u.A, o.default));
+        },
+    },
+);

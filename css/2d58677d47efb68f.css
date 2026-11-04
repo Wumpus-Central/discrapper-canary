@@ -1,0 +1,198 @@
+.container_MG-lb3 {
+    background: var(--background-gradient-chat, var(--background-base-low));
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
+    position: relative
+}
+
+.maxWidthWrapper_MG-lb3 {
+    max-width: var(--custom-guild-onboarding-home-page-max-page-width);
+    width: 100%
+}
+
+.homeContainer_MG-lb3 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+    padding: 32px
+}
+
+.homeContainer_MG-lb3::-webkit-scrollbar-track {
+    background-color: transparent
+}
+
+.homeContainerCollapsed_MG-lb3 {
+    flex-wrap: nowrap
+}
+
+.emptyHomeContainer_MG-lb3 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+    margin: 32px;
+    padding: 0
+}
+
+.emptyHeaderTitle_MG-lb3 {
+    align-self: center
+}
+
+.emptyContent_MG-lb3,
+.emptyHeaderTitle_MG-lb3 {
+    max-width: var(--custom-guild-onboarding-home-page-max-single-column-width);
+    width: 100%
+}
+
+@media (max-width:486px) {
+    .homeContainer_MG-lb3 {
+        padding: 16px
+    }
+}
+
+.homeContent_MG-lb3 {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin-top: 12px;
+    min-width: 0
+}
+
+.homeContent_MG-lb3,
+.mainContent_MG-lb3 {
+    flex: 1;
+    width: 100%
+}
+
+.sidebar_MG-lb3 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 300px;
+    width: 25%
+}
+
+.sidebarCardWrapper_MG-lb3 {
+    padding: 16px
+}
+
+.sidebarCard_MG-lb3 {
+    width: 100%
+}
+
+.sidebarCardHeader_MG-lb3 {
+    margin-bottom: 12px
+}
+
+.guildDescription_MG-lb3 {
+    margin-bottom: 8px
+}
+
+.guildInfo_MG-lb3 {
+    align-items: center;
+    color: var(--text-muted);
+    display: flex;
+    flex-direction: row
+}
+
+.guildInfoText_MG-lb3 {
+    margin-block: 0;
+    margin-inline: 4px 12px
+}
+
+.dotOnline_MG-lb3 {
+    background-color: var(--green-360);
+    border-radius: 50%;
+    flex-shrink: 0;
+    height: 4px;
+    width: 4px
+}
+
+.resourceChannelsList_MG-lb3 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 -8px
+}
+
+.resourceChannel_MG-lb3 {
+    align-items: center;
+    border-radius: 4px;
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    padding: 8px
+}
+
+.resourceChannel_MG-lb3:hover {
+    background-color: var(--border-subtle);
+    color: var(--interactive-text-hover)
+}
+
+.resourceImageBase_MG-lb3 {
+    border-radius: 4px;
+    height: 24px;
+    margin-inline-end: 4px;
+    width: 24px
+}
+
+.resourceImage_MG-lb3 {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.placeholderImage_MG-lb3 {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    display: flex;
+    justify-content: center
+}
+
+@media (max-width:1300px) {
+    .homeContainer_MG-lb3 {
+        flex-direction: column;
+        justify-content: normal;
+        padding-inline-end: 32px
+    }
+
+    .homeContent_MG-lb3 {
+        margin: auto;
+        max-width: var(--custom-guild-onboarding-home-page-max-single-column-width)
+    }
+}
+
+.title_MG-lb3 {
+    border-top: 1px solid var(--app-frame-border);
+    flex: 0 0 auto;
+    position: relative;
+    z-index: 100
+}
+
+.stop-animations .title_MG-lb3 {
+    -webkit-app-region: no-drag
+}
+
+.background_MG-lb3 {
+    background-color: var(--background-base-lower)
+}
+
+.theme-dark .headerBarInner_MG-lb3:after {
+    background: linear-gradient(to bottom, rgba(50, 52, 58, 0) 0, var(--home-background) 100%)
+}
+
+.theme-light .headerBarInner_MG-lb3:after {
+    background: linear-gradient(to bottom, rgba(247, 248, 249, 0) 0, var(--home-background) 100%)
+}
+
+.theme-midnight .background_MG-lb3 {
+    background-color: var(--home-background)
+}
+
+/*# sourceMappingURL=2d58677d47efb68f.css.map*/

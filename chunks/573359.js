@@ -1,5 +1,4 @@
-n.d(t, { A: () => l });
-var i = n(17928),
+var i = n(855986),
     r = n(73153);
 let a = { isDisplayingWowMomentConfirmation: !1, isAnimated: !1, nameplatePreviewOverrides: null };
 class s extends i.Ay.Store {
@@ -34,3 +33,4 @@ let l = new s(r.h, {
         a = { ...a, nameplatePreviewOverrides: null };
     },
 });
+n.d(t, {}, { A: l });

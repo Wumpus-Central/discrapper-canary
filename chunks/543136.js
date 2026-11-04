@@ -1,1 +1,1 @@
-e.exports = { Z: "badgeWrapper_dd79c2" };
+e.exports = { Z: "badgeWrapper_TPlUcx" };

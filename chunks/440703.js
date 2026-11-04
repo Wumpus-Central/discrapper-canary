@@ -1,4 +1,3 @@
-n.d(t, { l: () => r });
 var i,
     r =
         (((i = {})[(i.REWARD_CODE = 1)] = "REWARD_CODE"),
@@ -7,3 +6,4 @@ var i,
         (i[(i.VIRTUAL_CURRENCY = 4)] = "VIRTUAL_CURRENCY"),
         (i[(i.FRACTIONAL_PREMIUM = 5)] = "FRACTIONAL_PREMIUM"),
         i);
+n.d(t, {}, { l: r });

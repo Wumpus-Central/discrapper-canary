@@ -1,4 +1,4 @@
-(n.d(t, { e: () => d }), n(321073), n(775443));
+(n(321073), n(775443));
 var i = n(284009),
     r = n.n(i),
     a = n(115171),
@@ -35,7 +35,7 @@ class o {
             r = (t - e) / 1e3 + 1;
         for (let t = 0; t < r; t++) {
             let r = e + 1e3 * t,
-                a = c(n, r).playing ? 1 : 1 / 4;
+                a = d(n, r).playing ? 1 : 0.25;
             i.push({ timestamp_ms: r, modifier: a });
         }
         return i;
@@ -47,18 +47,18 @@ class o {
         return (0, s.j)(e) ? (0, a.d)(e).score : void 0;
     }
     isInGame(e) {
-        return c(this.gameStateTimeline, e).playing;
+        return d(this.gameStateTimeline, e).playing;
     }
     isInMatch(e) {
-        return c(this.gameStateTimeline, e).inMatch;
+        return d(this.gameStateTimeline, e).inMatch;
     }
     canAnchorReaction(e) {
         let t = e.eventName;
         return t === s.I.Kill || t === s.I.MultiKill || t === s.I.Death || t === s.I.RoshanKill;
     }
 }
-let d = { applicationIds: ["356875988589740042"], create: (e) => new o(e) };
-function c(e, t) {
+function d(e, t) {
     let n = e.findLast((e) => e.timestamp_ms <= t);
     return (r()(null != n, "bad timeline!"), n);
 }
+n.d(t, {}, { e: { applicationIds: ["356875988589740042"], create: (e) => new o(e) } });

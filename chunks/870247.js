@@ -1,1 +1,1 @@
-e.exports = { I1: "levelContainer__3dcc3", Ab: "perkContainer__3dcc3", kf: "perkIcon__3dcc3", uL: "perkText__3dcc3" };
+e.exports = { I1: "levelContainer_o7nzA2", Ab: "perkContainer_o7nzA2", kf: "perkIcon_o7nzA2", uL: "perkText_o7nzA2" };

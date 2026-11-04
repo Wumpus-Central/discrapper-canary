@@ -14,7 +14,6 @@ function o(e) {
     let t = null;
     return () => (null == t && (t = e()), t);
 }
-r.d(t, { H8: () => d, Tc: () => f, bh: () => l, cX: () => a, gm: () => h, lg: () => c, m0: () => p, un: () => u });
 let a = o(function () {
         return i(/^Mac/i);
     }),
@@ -31,17 +30,18 @@ let a = o(function () {
         return a() || u();
     }),
     f = o(function () {
-        return n(/AppleWebKit/i) && (u() || !d());
+        return n(/AppleWebKit/i) && (u() || !p());
     });
 o(function () {
-    return f() && !d() && !h();
+    return f() && !p() && !h();
 });
-let d = o(function () {
+let p = o(function () {
         return n(/Chrome|CriOS|CrMo/i);
     }),
-    p = o(function () {
+    d = o(function () {
         return n(/Android/i);
     }),
     h = o(function () {
         return n(/(Firefox|FxiOS)/i);
     });
+r.d(t, {}, { H8: p, Tc: f, bh: l, cX: a, gm: h, lg: c, m0: d, un: u });

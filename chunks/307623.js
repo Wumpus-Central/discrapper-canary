@@ -1,55 +1,62 @@
-t.d(n, { A: () => p });
 var s = t(477900);
 t(582128);
-var i = t(17928),
+var i = t(855986),
     a = t(477782),
     l = t(435183),
-    d = t(148494),
+    d = t(138399),
     c = t(608226),
     r = t(969043),
     A = t(715757),
     u = t(456874),
-    g = t(280450),
+    g = t(46653),
     o = t(576705),
-    h = t(935208),
+    h = t(811091),
     b = t(652215),
-    C = t(105292);
-function p(e) {
-    let n = e.isForumPost(),
-        t = (0, i.bG)([g.default], () => e.isOwner(g.default.getId()), [e]),
-        p = (0, A.V)(e),
-        { canManageChannel: f, canAccessChannel: G } = (0, i.cf)(
-            [o.A],
-            () => ({
-                canAccessChannel: o.A.can(e.accessPermissions, e),
-                canManageChannel: o.A.can(e.isThread() ? b.xBc.MANAGE_THREADS : b.xBc.MANAGE_CHANNELS, e),
-            }),
-            [e],
-        ),
-        M = (0, i.bG)([u.A], () => u.A.getCount(e.id) ?? 0, [e.id]),
-        { firstMessage: E } = (0, i.bG)([r.A], () => r.A.getMessage(e.id), [e.id]),
-        D = p && f && null == E,
-        N = n && (f || (t && M < 1) || D),
-        T = n && t && !f && M > 0 && null != E;
-    return G && (!p || D) && (f || N || T)
-        ? (0, s.jsx)(a.Dr, {
-              id: "delete-channel",
-              label:
-                  e.type === b.rbe.GUILD_CATEGORY
-                      ? C.intl.string(C.t.ifbXnL)
-                      : e.isForumPost()
-                        ? N
-                            ? C.intl.string(C.t.nEOg1N)
-                            : C.intl.string(C.t.xwMqD7)
-                        : e.isThread()
-                          ? C.intl.string(C.t.H7vTe2)
-                          : C.intl.string(C.t["8D8Rsb"]),
-              color: "danger",
-              action: () => {
-                  (0, c.O)(e, function () {
-                      T ? d.A.deleteMessage(e.id, h.default.castChannelIdAsMessageId(e.id)) : l.Ay.deleteChannel(e.id);
-                  });
-              },
-          })
-        : null;
-}
+    C = t(792996);
+t.d(
+    n,
+    {},
+    {
+        A: function (e) {
+            let n = e.isForumPost(),
+                t = (0, i.bG)([g.default], () => e.isOwner(g.default.getId()), [e]),
+                p = (0, A.V)(e),
+                { canManageChannel: f, canAccessChannel: G } = (0, i.cf)(
+                    [o.A],
+                    () => ({
+                        canAccessChannel: o.A.can(e.accessPermissions, e),
+                        canManageChannel: o.A.can(e.isThread() ? b.xBc.MANAGE_THREADS : b.xBc.MANAGE_CHANNELS, e),
+                    }),
+                    [e],
+                ),
+                M = (0, i.bG)([u.A], () => u.A.getCount(e.id) ?? 0, [e.id]),
+                { firstMessage: E } = (0, i.bG)([r.A], () => r.A.getMessage(e.id), [e.id]),
+                D = p && f && null == E,
+                N = n && (f || (t && M < 1) || D),
+                T = n && t && !f && M > 0 && null != E;
+            return G && (!p || D) && (f || N || T)
+                ? (0, s.jsx)(a.Dr, {
+                      id: "delete-channel",
+                      label:
+                          e.type === b.rbe.GUILD_CATEGORY
+                              ? C.intl.string(C.t.ifbXnL)
+                              : e.isForumPost()
+                                ? N
+                                    ? C.intl.string(C.t.nEOg1N)
+                                    : C.intl.string(C.t.xwMqD7)
+                                : e.isThread()
+                                  ? C.intl.string(C.t.H7vTe2)
+                                  : C.intl.string(C.t["8D8Rsb"]),
+                      color: "danger",
+                      action: () => {
+                          (0, c.O)(e, function () {
+                              T
+                                  ? d.A.deleteMessage(e.id, h.default.castChannelIdAsMessageId(e.id))
+                                  : l.Ay.deleteChannel(e.id);
+                          });
+                      },
+                  })
+                : null;
+        },
+    },
+);

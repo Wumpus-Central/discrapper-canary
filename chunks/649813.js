@@ -1,10 +1,9 @@
-n.d(t, { A: () => E });
 var i = n(73153),
-    r = n(730852),
+    r = n(597798),
     a = n(439372),
     s = n(976860),
     l = n(345942),
-    o = n(477653),
+    o = n(718197),
     d = n(309010),
     c = n(967198),
     u = n(652215);
@@ -25,7 +24,7 @@ class _ extends a.A {
         let { channel: t } = e;
         if (t.type !== u.rbe.GROUP_DM) return;
         let n = t.originChannelId,
-            i = d.Ay.getChannelId(u.eGj);
+            i = d.Ay.getChannelId("null");
         (null == c.A.getGuildId() && null != n && n === i && (0, s.pX)(u.BVt.CHANNEL(u.ME, t.id)),
             null != n && n === d.Ay.getVoiceChannelId() && r.default.selectVoiceChannel(t.id, o.Ay.isVideoEnabled()));
     }
@@ -41,3 +40,4 @@ class _ extends a.A {
     }
 }
 let E = new _();
+n.d(t, {}, { A: E });

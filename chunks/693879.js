@@ -1,9 +1,8 @@
-r.d(e, { A: () => A, z: () => f });
 var n = r(477900),
     a = r(582128),
     s = r(503698),
     i = r.n(s),
-    l = r(17928),
+    l = r(855986),
     o = r(834730),
     c = r(140735),
     d = r(773669),
@@ -37,24 +36,32 @@ function f(t) {
         ],
     });
 }
-let A = function (t) {
-    let { entry: e, textColor: r, hovered: a = !1, scaleFontToUserSetting: s = !1 } = t,
-        i = (0, h.Hd)(e),
-        p = (0, l.bG)([d.default], () => d.default.locale),
-        m = (0, l.bG)([u.A], () => u.A.getMatchingActivity(e)),
-        A = m?.timestamps?.start ?? m?.created_at;
-    if (null != A) return (0, n.jsx)(f, { entry: { start: A }, textColor: r, hovered: a, scaleFontToUserSetting: s });
-    if (i) return (0, n.jsx)(f, { entry: e, textColor: r, hovered: a, scaleFontToUserSetting: s });
-    let x = (0, h.aJ)(e, p),
-        S = (0, h.aJ)(e, p, void 0, { formatSet: h.sg });
-    return (0, n.jsxs)(o.E, {
-        variant: "body-xs/normal",
-        color: r,
-        lineClamp: 1,
-        scaleFontToUserSetting: s,
-        children: [
-            (0, n.jsx)(c.A, { tag: "span", children: S }),
-            (0, n.jsx)("span", { "aria-hidden": "true", children: x }),
-        ],
-    });
-};
+r.d(
+    e,
+    {},
+    {
+        A: function (t) {
+            let { entry: e, textColor: r, hovered: a = !1, scaleFontToUserSetting: s = !1 } = t,
+                i = (0, h.Hd)(e),
+                p = (0, l.bG)([d.default], () => d.default.locale),
+                m = (0, l.bG)([u.A], () => u.A.getMatchingActivity(e)),
+                A = m?.timestamps?.start ?? m?.created_at;
+            if (null != A)
+                return (0, n.jsx)(f, { entry: { start: A }, textColor: r, hovered: a, scaleFontToUserSetting: s });
+            if (i) return (0, n.jsx)(f, { entry: e, textColor: r, hovered: a, scaleFontToUserSetting: s });
+            let x = (0, h.aJ)(e, p),
+                S = (0, h.aJ)(e, p, void 0, { formatSet: h.sg });
+            return (0, n.jsxs)(o.E, {
+                variant: "body-xs/normal",
+                color: r,
+                lineClamp: 1,
+                scaleFontToUserSetting: s,
+                children: [
+                    (0, n.jsx)(c.A, { tag: "span", children: S }),
+                    (0, n.jsx)("span", { "aria-hidden": "true", children: x }),
+                ],
+            });
+        },
+        z: f,
+    },
+);

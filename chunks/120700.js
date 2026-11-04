@@ -1,4 +1,3 @@
-n.d(t, { C: () => r });
 var i,
     r =
         (((i = {}).ORB_CHECKOUT = "orb_checkout"),
@@ -14,3 +13,4 @@ var i,
         (i.GAME_SERVER_SUBSCRIPTION_CHECKOUT = "game_server_subscription_checkout"),
         (i.PAST_DUE_MAGIC_LINK_CHECKOUT = "past_due_magic_link_checkout"),
         i);
+n.d(t, {}, { C: r });

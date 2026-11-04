@@ -1,14 +1,13 @@
-n.d(t, { Ay: () => g, Zl: () => m, bF: () => p });
-var i = n(17928),
+var i = n(855986),
     r = n(439372),
     a = n(400492),
     s = n(734057),
-    l = n(477653),
+    l = n(718197),
     o = n(309010),
     d = n(977997),
     c = n(63995),
     u = n(113783),
-    _ = n(518769),
+    _ = n(597886),
     E = n(446600),
     A = n(39938);
 let h = !1,
@@ -39,19 +38,7 @@ function I() {
     let n = null != Object.values(d.A.getVoiceStatesForChannel(e)).find((e) => !e.suppress && !e.isVoiceMuted());
     n || h ? n && (f.pause(), (h = !1)) : ((f.volume = l.Ay.getOutputVolume() / 400), f.loop(), (h = !0));
 }
-function p(e) {
-    let t = (0, i.bG)([o.Ay], () => o.Ay.getVoiceChannelId() === e),
-        n = null != (0, u.E5)(e, _.ip.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
-        r = (0, i.bG)([E.A], () => E.A.getStageInstanceByChannel(e));
-    return t && null == r && !n;
-}
-function m(e) {
-    let t = o.Ay.getVoiceChannelId() === e,
-        n = null != c.A.getMutableParticipants(e, _.ip.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
-        i = E.A.getStageInstanceByChannel(e);
-    return t && null == i && !n;
-}
-class T extends r.A {
+class p extends r.A {
     actions = {
         VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect,
         LOGOUT: this.handleLogout,
@@ -90,4 +77,23 @@ class T extends r.A {
         I();
     }
 }
-let g = new T();
+let m = new p();
+n.d(
+    t,
+    {},
+    {
+        Ay: m,
+        Zl: function (e) {
+            let t = o.Ay.getVoiceChannelId() === e,
+                n = null != c.A.getMutableParticipants(e, _.ip.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
+                i = E.A.getStageInstanceByChannel(e);
+            return t && null == i && !n;
+        },
+        bF: function (e) {
+            let t = (0, i.bG)([o.Ay], () => o.Ay.getVoiceChannelId() === e),
+                n = null != (0, u.E5)(e, _.ip.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
+                r = (0, i.bG)([E.A], () => E.A.getStageInstanceByChannel(e));
+            return t && null == r && !n;
+        },
+    },
+);

@@ -1,9 +1,9 @@
-_.exports = {
-    KE: "panelContainer_a83780",
-    xt: "locked_a83780",
-    qi: "buttonSection_a83780",
-    Pm: "panelRow_a83780",
-    SV: "inCall_a83780",
-    $X: "streamerModeNotice_a83780",
-    lI: "ctaButton_a83780",
+e.exports = {
+    KE: "panelContainer_6Ln5ei",
+    xt: "locked_6Ln5ei",
+    qi: "buttonSection_6Ln5ei",
+    Pm: "panelRow_6Ln5ei",
+    SV: "inCall_6Ln5ei",
+    $X: "streamerModeNotice_6Ln5ei",
+    lI: "ctaButton_6Ln5ei",
 };

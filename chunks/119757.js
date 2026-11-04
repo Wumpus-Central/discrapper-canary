@@ -1,7 +1,7 @@
 e.exports = {
-    rf: "body__968a4",
-    S: "invoiceTable__968a4",
-    Au: "invoiceCancelRow__968a4",
-    z3: "error__968a4",
-    Lq: "loading__968a4",
+    rf: "body_U3eyFM",
+    S: "invoiceTable_U3eyFM",
+    Au: "invoiceCancelRow_U3eyFM",
+    z3: "error_U3eyFM",
+    Lq: "loading_U3eyFM",
 };

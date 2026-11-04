@@ -1,0 +1,389 @@
+.card_oA3MHg {
+    margin-bottom: 16px;
+    padding: 0
+}
+
+.pulse_oA3MHg {
+    animation: pulseBorder_oA3MHg .8s alternate;
+    border-color: transparent;
+    border-width: 1px
+}
+
+@keyframes pulseBorder_oA3MHg {
+    0% {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--brand-500)
+    }
+
+    to {
+        border-color: transparent
+    }
+}
+
+.header_oA3MHg {
+    cursor: pointer;
+    padding: 20px 16px
+}
+
+.body_oA3MHg {
+    padding: 0 16px 24px
+}
+
+.avatarWrapper_oA3MHg {
+    padding-inline-end: 12px
+}
+
+.avatarUploaderInner_oA3MHg {
+    height: 100px;
+    width: 100px
+}
+
+.topDivider_oA3MHg {
+    margin-bottom: 24px
+}
+
+.bottomDivider_oA3MHg {
+    margin: 24px 0
+}
+
+.copyButton_oA3MHg {
+    margin-inline-end: 16px
+}
+
+.expandIcon_oA3MHg {
+    color: var(--interactive-text-default)
+}
+
+.theme-light .card_oA3MHg {
+    border-color: var(--background-base-lowest)
+}
+
+.theme-dark .card_oA3MHg {
+    border-color: var(--border-subtle)
+}
+
+.groupHeader_PzTZKu {
+    margin-bottom: 16px;
+    margin-top: 24px
+}
+
+.channelName_PzTZKu {
+    color: var(--text-strong)
+}
+
+.header_vPsX0I {
+    margin-top: 20px
+}
+
+.headerDivider_vPsX0I {
+    margin: 32px 0
+}
+
+.headerDescription_vPsX0I {
+    font-size: 14px;
+    margin-top: 16px
+}
+
+.section_vPsX0I {
+    margin-bottom: 32px
+}
+
+.emptyCard_vPsX0I {
+    border-width: 0;
+    padding: 36px 16px;
+    text-align: center
+}
+
+.card_L02B3L {
+    margin-bottom: 16px;
+    padding: 0
+}
+
+.header_L02B3L {
+    padding: 20px 16px
+}
+
+.expandableHeader_L02B3L {
+    cursor: pointer
+}
+
+.body_L02B3L {
+    padding: 0 16px 16px
+}
+
+.topDivider_L02B3L {
+    margin-bottom: 24px
+}
+
+.midDivider_L02B3L {
+    margin: 24px 0
+}
+
+.bottomDivider_L02B3L {
+    margin: 24px 0 16px
+}
+
+.description_L02B3L>a {
+    color: var(--text-default)
+}
+
+.syncedRole_L02B3L>a {
+    color: var(--text-strong)
+}
+
+.emoji_L02B3L {
+    color: var(--text-muted);
+    margin-block: 8px 0 !important;
+    margin-inline: 0 8px !important;
+    max-height: 28px !important;
+    max-width: 28px !important;
+    min-height: 0 !important
+}
+
+.switch_L02B3L {
+    align-self: center
+}
+
+.expandIcon_L02B3L {
+    color: var(--interactive-text-default)
+}
+
+.enabledBadge_L02B3L {
+    background-color: var(--green-360)
+}
+
+.disableButton_L02B3L {
+    padding-inline: 0
+}
+
+.kickPermissionWarning_L02B3L {
+    margin-top: var(--space-4)
+}
+
+.theme-light .card_L02B3L {
+    border-color: var(--background-base-lowest)
+}
+
+.theme-dark .card_L02B3L {
+    border-color: var(--border-subtle)
+}
+
+.header_8W2gfe {
+    margin-top: 20px
+}
+
+.headerDivider_8W2gfe {
+    margin: 32px 0
+}
+
+.platformIcon_8W2gfe {
+    height: 28px;
+    width: 28px
+}
+
+.iconWrapper_8W2gfe {
+    background-color: var(--background-surface-high);
+    border-radius: 50%;
+    height: 48px;
+    width: 48px
+}
+
+.helpText_8W2gfe {
+    margin-top: 16px
+}
+
+.errorText_8W2gfe {
+    margin-bottom: 16px
+}
+
+.headerDivider_Nh9A12 {
+    margin: 32px 0
+}
+
+.emptyStateImage_Nh9A12 {
+    height: 145px;
+    margin-bottom: 24px;
+    margin-top: 32px;
+    width: 272px
+}
+
+.emptyStateButton_Nh9A12 {
+    margin-top: 12px
+}
+
+.sectionHeader_Nh9A12 {
+    color: var(--text-muted);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 16px;
+    margin-top: 32px
+}
+
+.channelName_Nh9A12 {
+    color: var(--text-strong)
+}
+
+.card_ZjaEbs {
+    background-color: var(--card-background-default);
+    border-color: var(--border-subtle);
+    border-radius: var(--radius-sm);
+    margin-bottom: 16px;
+    padding: 20px 16px
+}
+
+.caret_ZjaEbs {
+    color: var(--interactive-text-default);
+    margin-inline-start: 8px
+}
+
+.feature_ZjaEbs {
+    margin-inline-end: 16px
+}
+
+.clickable_ZjaEbs {
+    cursor: pointer
+}
+
+.headerDivider_qDbp9c {
+    margin: 32px 0
+}
+
+.header_qDbp9c {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px
+}
+
+.applicationGroup_qDbp9c {
+    display: flex;
+    flex-direction: column
+}
+
+.iconwrapper_qDbp9c {
+    background-color: unset
+}
+
+.divider_2S81sZ {
+    margin: 32px 0
+}
+
+.sectionHeader_2S81sZ {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px
+}
+
+.emptyStateWrapper_2S81sZ {
+    align-content: center
+}
+
+.emptyStateImage_2S81sZ {
+    align-self: center;
+    margin-bottom: 16px
+}
+
+.emptyStateText_2S81sZ {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center
+}
+
+.emptyStateCard_2S81sZ {
+    padding-bottom: 32px;
+    padding-top: 32px
+}
+
+.emptyStateCard_2S81sZ,
+.emptyStateSearchCard_2S81sZ {
+    align-items: center;
+    border-width: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 128px;
+    width: 100%
+}
+
+.emptyStateSearchCard_2S81sZ {
+    padding-top: 24px;
+    z-index: 1
+}
+
+.emptyStateSearchImage_2S81sZ {
+    filter: saturate(var(--saturation-factor, 1));
+    height: 72px;
+    margin-bottom: -24px;
+    width: 256px;
+    z-index: 100
+}
+
+.linkedLobbyIcon_2S81sZ {
+    background-color: unset;
+    border-radius: 4px
+}
+
+.platformIcon_2S81sZ {
+    height: 28px;
+    width: 28px
+}
+
+.searchContainer_2S81sZ {
+    margin-bottom: 16px
+}
+
+.infoIcon_2S81sZ {
+    color: var(--text-link);
+    margin: 10px
+}
+
+.headerDivider_fktNUi {
+    margin: 32px 0
+}
+
+.createButton_fktNUi {
+    margin-bottom: 24px
+}
+
+.emptyStateButton_fktNUi {
+    margin-top: 12px
+}
+
+.spinner_DOXz-7 {
+    margin-top: 40px
+}
+
+.backButton_DOXz-7 {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 28px;
+    margin-block: -4px;
+    margin-inline: 0 8px
+}
+
+.backArrow_DOXz-7 {
+    color: var(--text-muted)
+}
+
+.breadcrumbs_DOXz-7 {
+    margin-bottom: 20px
+}
+
+.breadcrumbActive_DOXz-7 {
+    color: var(--text-strong)
+}
+
+.breadcrumbInactive_DOXz-7 {
+    color: var(--text-default);
+    cursor: pointer
+}
+
+.breadcrumbInactive_DOXz-7:hover {
+    color: var(--text-strong)
+}
+
+/*# sourceMappingURL=b1e55ceeb70de45f.css.map*/

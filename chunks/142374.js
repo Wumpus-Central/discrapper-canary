@@ -1,5 +1,5 @@
 a.exports = {
-    E6: "authenticationFailImage__28393",
-    Xh: "authenticationRequiredImage__28393",
-    ZG: "authenticationSuccessImage__28393",
+    E6: "authenticationFailImage_ET1lxk",
+    Xh: "authenticationRequiredImage_ET1lxk",
+    ZG: "authenticationSuccessImage_ET1lxk",
 };

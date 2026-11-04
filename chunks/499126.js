@@ -1,12 +1,12 @@
-e.exports = {
-    wG: "flyingWumpusContainer_b99bd6",
-    lu: "flyingWumpusAsset_b99bd6",
-    nJ: "boltContainer_b99bd6",
-    Gj: "hammerContainer_b99bd6",
-    FV: "keyContainer_b99bd6",
-    E1: "starContainer_b99bd6",
-    OY: "starTrinket_b99bd6",
-    rs: "keyTrinket_b99bd6",
-    Wv: "hammerTrinket_b99bd6",
-    j7: "boltTrinket_b99bd6",
+n.exports = {
+    wG: "flyingWumpusContainer_S8ZWR1",
+    lu: "flyingWumpusAsset_S8ZWR1",
+    nJ: "boltContainer_S8ZWR1",
+    Gj: "hammerContainer_S8ZWR1",
+    FV: "keyContainer_S8ZWR1",
+    E1: "starContainer_S8ZWR1",
+    OY: "starTrinket_S8ZWR1",
+    rs: "keyTrinket_S8ZWR1",
+    Wv: "hammerTrinket_S8ZWR1",
+    j7: "boltTrinket_S8ZWR1",
 };

@@ -1,10 +1,10 @@
-(n.d(t, { A: () => N }), n(321073));
+n(321073);
 var i = n(507392),
     r = n.n(i),
     a = n(64460),
     s = n(626584),
     l = n(549205),
-    o = n(174459),
+    o = n(129230),
     d = n(723702),
     c = n(649334),
     u = n(652215);
@@ -72,7 +72,7 @@ function S(e) {
         null != n.keypress && i.call(h, e, T(t, n.keypress), "keypress");
     }
 }
-(0, d.isDesktop)() && new (r())(document.documentElement).bind("backspace", (e) => e.preventDefault());
+(0, d.xl)() && new (r())(document.documentElement).bind("backspace", (e) => e.preventDefault());
 let N = {
     combokeys: h,
     modKey: c.Mu,
@@ -112,3 +112,4 @@ let N = {
         return ((e = (e = e.replace("meta", "cmd")).replace(/right |left /i, "").trim()), t.includes(e));
     },
 };
+n.d(t, {}, { A: N });

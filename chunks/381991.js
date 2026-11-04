@@ -1,4 +1,3 @@
-n.d(t, { A: () => d, o: () => c });
 var i = n(976860),
     r = n(89310),
     a = n(260498),
@@ -11,6 +10,13 @@ function d(e, t) {
         d = null == r ? (0, o.hU)(null) : (0, s.z$)(r);
     null == t ? (0, i.pX)(d) : (0, i.pX)(d, { state: { conjureEntryPoint: t } });
 }
-function c() {
-    ((0, r.f)(), d(null));
-}
+n.d(
+    t,
+    {},
+    {
+        A: d,
+        o: function () {
+            ((0, r.f)(), d(null));
+        },
+    },
+);

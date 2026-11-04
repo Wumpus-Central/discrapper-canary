@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => w, W$: () => c, zT: () => N }), n(321073));
+n(321073);
 var i = n(435558),
     r = n.n(i),
     a = n(833272),
@@ -51,10 +51,10 @@ class N {
             (this.diversityChildren = {}),
             null != e.diversityChildren)
         )
-            for (const t of e.diversityChildren) {
-                const e = h[t];
+            for (let t of e.diversityChildren) {
+                let e = h[t];
                 if (null != e.diversity) {
-                    const t = e.diversity.join("-");
+                    let t = e.diversity.join("-");
                     this.diversityChildren[t] = new N(e);
                 }
             }
@@ -172,70 +172,78 @@ function U(e) {
         i = S(e)?.names[0] ?? n;
     return t ? `:${i}:` : i;
 }
-let w = {
-    getDefaultDiversitySurrogate: function () {
-        return o;
+n.d(
+    t,
+    {},
+    {
+        Ay: {
+            getDefaultDiversitySurrogate: function () {
+                return o;
+            },
+            setDefaultDiversitySurrogate: function (e) {
+                o = null != e && "" !== e ? e : null;
+            },
+            getCategories: function () {
+                return Object.keys(f);
+            },
+            getByName: O,
+            getByCategory: function (e) {
+                let t = R.get(e);
+                if (null == t) {
+                    let n = f[e];
+                    ((t = s.Ay.filterUnsupportedEmojis(h.slice(n[0], n[1])).map(C)), R.set(e, t));
+                }
+                return t;
+            },
+            contentHasUnicodeOrEmoji: L,
+            translateInlineEmojiToSurrogates: function (e) {
+                return e.replace(u, (e, t) => M(t, e));
+            },
+            maybeTranslateSurrogatesToInlineEmoji: function (e) {
+                if (!L(e)) return null;
+                let t = P(e, !0)
+                    .map((e) => ("text" === e.type ? e.text : e.emojiName))
+                    .join("");
+                return t === e ? null : t;
+            },
+            findInlineEmojisFromSurrogates: P,
+            translateSurrogatesToInlineEmoji: function (e) {
+                return P(e)
+                    .map((e) => ("text" === e.type ? e.text : e.emojiName))
+                    .join("");
+            },
+            convertNameToSurrogate: M,
+            convertSurrogateToName: U,
+            convertShortcutToName: function (e) {
+                let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+                    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "",
+                    i = n;
+                return (Object.prototype.hasOwnProperty.call(_, e) && (i = _[e]), t ? `:${i}:` : i);
+            },
+            convertSurrogateToBase: function (e) {
+                return O(
+                    U(
+                        c.reduce((e, t) => e.replace(t, ""), e),
+                        !1,
+                    ),
+                );
+            },
+            forEach: (e) => {
+                for (let t of h) t.hasDiversityParent || t.hasMultiDiversityParent || e(C(t));
+            },
+            numDiversitySprites: m,
+            numNonDiversitySprites: T,
+            EMOJI_NAME_RE: /^:([^\s:]+?(?:::skin-tone-\d)?):/,
+            EMOJI_NAME_AND_DIVERSITY_RE: u,
+            EMOJI_SHORTCUT_RE:
+                /^(>:\(|>:\-\(|>=\(|>=\-\(|:"\)|:\-"\)|="\)|=\-"\)|<\/3|<\\3|:\-\\|:\-\/|=\-\\|=\-\/|:'\(|:'\-\(|:,\(|:,\-\(|='\(|='\-\(|=,\(|=,\-\(|:\(|:\-\(|=\(|=\-\(|<3|\u2661|\]:\(|\]:\-\(|\]=\(|\]=\-\(|o:\)|O:\)|o:\-\)|O:\-\)|0:\)|0:\-\)|o=\)|O=\)|o=\-\)|O=\-\)|0=\)|0=\-\)|:'D|:'\-D|:,D|:,\-D|='D|='\-D|=,D|=,\-D|:\*|:\-\*|=\*|=\-\*|x\-\)|X\-\)|:\||:\-\||=\||=\-\||:o|:\-o|:O|:\-O|=o|=\-o|=O|=\-O|:@|:\-@|=@|=\-@|:D|:\-D|=D|=\-D|:'\)|:'\-\)|:,\)|:,\-\)|='\)|='\-\)|=,\)|=,\-\)|:\)|:\-\)|=\)|=\-\)|\]:\)|\]:\-\)|\]=\)|\]=\-\)|:,'\(|:,'\-\(|;\(|;\-\(|=,'\(|=,'\-\(|:P|:\-P|=P|=\-P|8\-\)|B\-\)|,:\(|,:\-\(|,=\(|,=\-\(|,:\)|,:\-\)|,=\)|,=\-\)|:s|:\-S|:z|:\-Z|:\$|:\-\$|=s|=\-S|=z|=\-Z|=\$|=\-\$|;\)|;\-\))/,
+            hasSurrogates: function (e) {
+                return r()
+                    .toArray(e)
+                    .some((e) => null != p[e]);
+            },
+        },
+        W$: c,
+        zT: N,
     },
-    setDefaultDiversitySurrogate: function (e) {
-        o = null != e && "" !== e ? e : null;
-    },
-    getCategories: function () {
-        return Object.keys(f);
-    },
-    getByName: O,
-    getByCategory: function (e) {
-        let t = R.get(e);
-        if (null == t) {
-            let n = f[e];
-            ((t = s.Ay.filterUnsupportedEmojis(h.slice(n[0], n[1])).map(C)), R.set(e, t));
-        }
-        return t;
-    },
-    contentHasUnicodeOrEmoji: L,
-    translateInlineEmojiToSurrogates: function (e) {
-        return e.replace(u, (e, t) => M(t, e));
-    },
-    maybeTranslateSurrogatesToInlineEmoji: function (e) {
-        if (!L(e)) return null;
-        let t = P(e, !0)
-            .map((e) => ("text" === e.type ? e.text : e.emojiName))
-            .join("");
-        return t === e ? null : t;
-    },
-    findInlineEmojisFromSurrogates: P,
-    translateSurrogatesToInlineEmoji: function (e) {
-        return P(e)
-            .map((e) => ("text" === e.type ? e.text : e.emojiName))
-            .join("");
-    },
-    convertNameToSurrogate: M,
-    convertSurrogateToName: U,
-    convertShortcutToName: function (e) {
-        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "",
-            i = n;
-        return (Object.prototype.hasOwnProperty.call(_, e) && (i = _[e]), t ? `:${i}:` : i);
-    },
-    convertSurrogateToBase: function (e) {
-        return O(
-            U(
-                c.reduce((e, t) => e.replace(t, ""), e),
-                !1,
-            ),
-        );
-    },
-    forEach: (e) => {
-        for (let t of h) t.hasDiversityParent || t.hasMultiDiversityParent || e(C(t));
-    },
-    numDiversitySprites: m,
-    numNonDiversitySprites: T,
-    EMOJI_NAME_RE: /^:([^\s:]+?(?:::skin-tone-\d)?):/,
-    EMOJI_NAME_AND_DIVERSITY_RE: u,
-    EMOJI_SHORTCUT_RE:
-        /^(>:\(|>:\-\(|>=\(|>=\-\(|:"\)|:\-"\)|="\)|=\-"\)|<\/3|<\\3|:\-\\|:\-\/|=\-\\|=\-\/|:'\(|:'\-\(|:,\(|:,\-\(|='\(|='\-\(|=,\(|=,\-\(|:\(|:\-\(|=\(|=\-\(|<3|\u2661|\]:\(|\]:\-\(|\]=\(|\]=\-\(|o:\)|O:\)|o:\-\)|O:\-\)|0:\)|0:\-\)|o=\)|O=\)|o=\-\)|O=\-\)|0=\)|0=\-\)|:'D|:'\-D|:,D|:,\-D|='D|='\-D|=,D|=,\-D|:\*|:\-\*|=\*|=\-\*|x\-\)|X\-\)|:\||:\-\||=\||=\-\||:o|:\-o|:O|:\-O|=o|=\-o|=O|=\-O|:@|:\-@|=@|=\-@|:D|:\-D|=D|=\-D|:'\)|:'\-\)|:,\)|:,\-\)|='\)|='\-\)|=,\)|=,\-\)|:\)|:\-\)|=\)|=\-\)|\]:\)|\]:\-\)|\]=\)|\]=\-\)|:,'\(|:,'\-\(|;\(|;\-\(|=,'\(|=,'\-\(|:P|:\-P|=P|=\-P|8\-\)|B\-\)|,:\(|,:\-\(|,=\(|,=\-\(|,:\)|,:\-\)|,=\)|,=\-\)|:s|:\-S|:z|:\-Z|:\$|:\-\$|=s|=\-S|=z|=\-Z|=\$|=\-\$|;\)|;\-\))/,
-    hasSurrogates: function (e) {
-        return r()
-            .toArray(e)
-            .some((e) => null != p[e]);
-    },
-};
+);

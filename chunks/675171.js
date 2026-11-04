@@ -1,5 +1,4 @@
-n.d(t, { A: () => h });
-var l = n(702841),
+var l = n(164636),
     i = n(933958),
     s = n(969151),
     a = n(108959),
@@ -15,9 +14,15 @@ let d = "no_text_activity",
         [c.Gd.PIP]: [o.i.NEW_MESSAGES, o.i.OPT_IN_CHANNEL, o.i.SUMMARIES],
         [c.Gd.ACTIVITY_POPOUT_WINDOW]: [o.i.NEW_MESSAGES, o.i.OPT_IN_CHANNEL, o.i.SUMMARIES],
     };
-function h() {
-    let e = (0, l.bG)([i.Ay], () => i.Ay.getCurrentEmbeddedActivity()),
-        t = (0, l.bG)([i.Ay], () => i.Ay.getActivityPanelMode()),
-        n = (0, s.H)(e?.location);
-    return void 0 === e || (0, a.A)(n, r.A) ? u[d] : u[t];
-}
+n.d(
+    t,
+    {},
+    {
+        A: function () {
+            let e = (0, l.bG)([i.Ay], () => i.Ay.getCurrentEmbeddedActivity()),
+                t = (0, l.bG)([i.Ay], () => i.Ay.getActivityPanelMode()),
+                n = (0, s.H)(e?.location);
+            return void 0 === e || (0, a.A)(n, r.A) ? u[d] : u[t];
+        },
+    },
+);

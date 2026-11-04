@@ -1,4 +1,3 @@
-n.d(t, { FU: () => s, SX: () => l, V1: () => r, pF: () => a });
 var i,
     r =
         (((i = {})[(i.OFFICIAL = 1)] = "OFFICIAL"),
@@ -24,6 +23,13 @@ var i,
         (i[(i.ROBLOX = 22)] = "ROBLOX"),
         (i[(i.MINECRAFT = 23)] = "MINECRAFT"),
         i);
-let a = [1, 4, 5, 8, 9, 19, 14, 6, 22, 15, 2, 10, 11, 12],
-    s = ["apps.apple.com", "itunes.apple.com"],
-    l = ["play.google.com"];
+n.d(
+    t,
+    {},
+    {
+        FU: ["apps.apple.com", "itunes.apple.com"],
+        SX: ["play.google.com"],
+        V1: r,
+        pF: [1, 4, 5, 8, 9, 19, 14, 6, 22, 15, 2, 10, 11, 12],
+    },
+);

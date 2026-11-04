@@ -1,4 +1,3 @@
-n.d(t, { A: () => a });
 var i = n(235079);
 let r = {
     [i.i.CLASSIC]: {
@@ -57,6 +56,12 @@ let r = {
         user_leave: "winter_user_leave",
     },
 };
-function a(e) {
-    return r[e];
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            return r[e];
+        },
+    },
+);

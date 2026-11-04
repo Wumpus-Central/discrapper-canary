@@ -1,7 +1,7 @@
 e.exports = {
-    BQ: "advancedModeDivider__4914c",
-    hZ: "trigger__4914c",
-    Vt: "advancedTitle__4914c",
-    yM: "titleCaret__4914c",
-    nd: "panel__4914c",
+    BQ: "advancedModeDivider_vNURip",
+    hZ: "trigger_vNURip",
+    Vt: "advancedTitle_vNURip",
+    yM: "titleCaret_vNURip",
+    nd: "panel_vNURip",
 };

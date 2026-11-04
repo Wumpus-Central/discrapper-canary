@@ -1,5 +1,4 @@
-n.d(t, { A: () => s });
-var i = n(17928),
+var i = n(855986),
     r = n(73153);
 class a extends i.Ay.Store {
     guildIds = new Set();
@@ -39,3 +38,4 @@ class a extends i.Ay.Store {
     }
 }
 let s = new a();
+n.d(t, {}, { A: s });

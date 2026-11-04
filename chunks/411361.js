@@ -1,4 +1,3 @@
-n.d(t, { HW: () => m, LZ: () => d, ao: () => h, k1: () => f });
 var r = n(922248),
     i = n(630449),
     o = n(92332),
@@ -8,29 +7,22 @@ var r = n(922248),
     c = n(582102);
 let u = "_frozenDsc";
 function d(e, t) {
-    (0, s.my)(e, u, t);
-}
-function p(e, t) {
     let n = t.getOptions(),
         { publicKey: i } = t.getDsn() || {},
         o = (0, s.Ce)({ environment: n.environment || r.U, release: n.release, public_key: i, trace_id: e });
     return (t.emit("createDsc", o), o);
 }
-function h(e, t) {
-    let n = t.getPropagationContext();
-    return n.dsc || p(n.traceId, e);
-}
-function f(e) {
+function p(e) {
     let t = (0, i.KU)();
     if (!t) return {};
     let n = (0, c.zU)(e),
         r = n[u];
     if (r) return r;
     let s = n.spanContext().traceState,
-        d = s && s.get("sentry.dsc"),
-        h = d && (0, a.yD)(d);
+        p = s && s.get("sentry.dsc"),
+        h = p && (0, a.yD)(p);
     if (h) return h;
-    let f = p(e.spanContext().traceId, t),
+    let f = d(e.spanContext().traceId, t),
         m = (0, c.et)(n),
         g = m.data || {},
         _ = g[o.sy];
@@ -44,7 +36,21 @@ function f(e) {
         f
     );
 }
-function m(e) {
-    let t = f(e);
-    return (0, a.De)(t);
-}
+n.d(
+    t,
+    {},
+    {
+        HW: function (e) {
+            let t = p(e);
+            return (0, a.De)(t);
+        },
+        LZ: function (e, t) {
+            (0, s.my)(e, u, t);
+        },
+        ao: function (e, t) {
+            let n = t.getPropagationContext();
+            return n.dsc || d(n.traceId, e);
+        },
+        k1: p,
+    },
+);

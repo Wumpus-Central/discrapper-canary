@@ -1,8 +1,8 @@
 e.exports = {
-    VL: "upsellWrapper__8fe94",
-    Hz: "unifyTrialUpsell__8fe94",
-    Tn: "upsellImage__8fe94",
-    ex: "upsellTitle__8fe94",
-    GR: "upsellDescription__8fe94",
-    kz: "upsellClose__8fe94",
+    VL: "upsellWrapper_K-9txm",
+    Hz: "unifyTrialUpsell_K-9txm",
+    Tn: "upsellImage_K-9txm",
+    ex: "upsellTitle_K-9txm",
+    GR: "upsellDescription_K-9txm",
+    kz: "upsellClose_K-9txm",
 };

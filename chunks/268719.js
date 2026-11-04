@@ -1,16 +1,21 @@
-n.d(t, { A: () => o });
 var i = n(477900);
 n(582128);
-var s = n(17928),
+var s = n(855986),
     l = n(994500),
-    a = n(217424);
+    a = n(267508);
 function r(e) {
     let { message: t, channel: n, compact: r } = e,
         o = (0, s.bG)([l.A], () => null != t.interaction && l.A.isBlocked(t.interaction.user.id), [t.interaction]);
     return (0, i.jsx)(a.A, { message: t, channel: n, compact: r, isInteractionUserBlocked: o });
 }
-function o(e, t, n) {
-    return null != e.interaction && "" !== e.interaction.displayName
-        ? (0, i.jsx)(r, { message: e, channel: t, compact: n })
-        : null;
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e, t, n) {
+            return null != e.interaction && "" !== e.interaction.displayName
+                ? (0, i.jsx)(r, { message: e, channel: t, compact: n })
+                : null;
+        },
+    },
+);

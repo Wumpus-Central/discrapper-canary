@@ -1,40 +1,40 @@
-.participantsButton__211d1 {
+.participantsButton_1uD6uZ {
     background: var(--primary-630);
     border-radius: 48px;
     box-shadow: var(--shadow-border), var(--shadow-high);
     padding: 4px
 }
 
-.participantsButton__211d1:hover {
+.participantsButton_1uD6uZ:hover {
     background: var(--primary-700)
 }
 
-.rightCaret__211d1 {
+.rightCaret_1uD6uZ {
     transform: rotate(-90deg)
 }
 
-.leftCaret__211d1 {
+.leftCaret_1uD6uZ {
     transform: rotate(90deg)
 }
 
-.upCaret__211d1 {
+.upCaret_1uD6uZ {
     transform: rotate(180deg)
 }
 
-.downCaret__211d1 {
+.downCaret_1uD6uZ {
     transform: rotate(0deg)
 }
 
-.members__211d1 {
+.members_1uD6uZ {
     margin-inline-end: 4px
 }
 
-.iconContainer__211d1 {
+.iconContainer_1uD6uZ {
     display: flex
 }
 
-.iconContainer__211d1>svg {
+.iconContainer_1uD6uZ>svg {
     color: var(--white)
 }
 
-/*# sourceMappingURL=638658.a85424db02f9a608.css.map*/
+/*# sourceMappingURL=638658.7b8a21575cb4fac3.css.map*/

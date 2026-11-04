@@ -1,15 +1,12 @@
-n.d(t, { BV: () => E, Cr: () => u, ME: () => s, YY: () => l, c$: () => d, gN: () => o, qx: () => c });
 var i = n(323125),
     r = n(758836);
 n(436317);
 var a = n(435220);
-let s = "@me",
-    l = "@favorites",
-    o = "@inbox",
-    d = "@guilds-empty-nux",
-    c = "@guild-upsell-list",
-    u = [s, l, d, o, c],
-    _ = Object.freeze({
+let s = "@favorites",
+    l = "@guilds-empty-nux",
+    o = "@guild-upsell-list",
+    d = ["@me", s, l, "@inbox", o],
+    c = Object.freeze({
         INDEX: "/",
         APP: "/app",
         APP_WITH_INVITE_AND_GUILD_ONBOARDING: (e) => `/app/invite-with-guild-onboarding/${e}`,
@@ -39,7 +36,7 @@ let s = "@me",
         ME: "/channels/@me",
         MESSAGE_REQUESTS: "/message-requests",
         CHANNEL: (e, t, n) => {
-            let i = null == t ? `/channels/${e || s}` : `/channels/${e || s}/${t}`;
+            let i = null == t ? `/channels/${e || "@me"}` : `/channels/${e || "@me"}/${t}`;
             return null == n ? i : `${i}/${n}`;
         },
         CHANNEL_THREAD_VIEW: (e, t, n, i) => {
@@ -63,7 +60,7 @@ let s = "@me",
         GUILD_TEMPLATE_LOGIN: (e) => `/template/${e}/login`,
         GIFT_CODE: (e) => `/gifts/${e}`,
         GIFT_CODE_LOGIN: (e) => `/gifts/${e}/login`,
-        WELCOME: (e, t) => (null != t ? `/welcome/${e ?? s}/${t}` : `/welcome/${e ?? s}`),
+        WELCOME: (e, t) => (null != t ? `/welcome/${e ?? "@me"}/${t}` : `/welcome/${e ?? "@me"}`),
         VERIFY: "/verify",
         VERIFY_REQUEST: "/verify-request",
         RESET: "/reset",
@@ -154,8 +151,7 @@ let s = "@me",
         APPLICATION_DIRECTORY: "/application-directory",
         APPLICATION_DIRECTORY_PROFILE: (e) => `/application-directory/${e}`,
         APPLICATION_DIRECTORY_PROFILE_SECTION: (e, t) => `/application-directory/${e}/${t}`,
-        APPLICATION_DIRECTORY_PROFILE_STORE_SKU: (e, t) =>
-            `/application-directory/${e}/${a.ApplicationDirectoryProfileSections.STORE}/${t}`,
+        APPLICATION_DIRECTORY_PROFILE_STORE_SKU: (e, t) => `/application-directory/${e}/${a.h.STORE}/${t}`,
         APPLICATION_DIRECTORY_SEARCH: "/application-directory/search",
         FAMILY_CENTER: "/family-center",
         FAMILY_CENTER_MY_FAMILY: (e, t) => `/feature/family-center/my-family/${e}/${t}`,
@@ -198,4 +194,5 @@ let s = "@me",
         QUEST_PREVIEW_TOOL_2: (e) => `/quest-home?tab=preview_tool&quest_id=${e}`,
         ICYMI: "/icymi",
     }),
-    E = (0, i.dN)(_, [":", "?", "@"]);
+    u = (0, i.dN)(c, [":", "?", "@"]);
+n.d(t, {}, { BV: u, Cr: d, YY: s, c$: l, qx: o });

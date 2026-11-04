@@ -1,1 +1,1 @@
-e.exports = { vK: "banner_f7e69e", GS: "fill_f7e69e", pH: "gifTag_f7e69e" };
+p.exports = { vK: "banner_vNEdYY", GS: "fill_vNEdYY", pH: "gifTag_vNEdYY" };

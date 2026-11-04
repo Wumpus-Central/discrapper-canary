@@ -1,1 +1,1 @@
-e.exports = { VD: "friendsEmpty_c7ea19", x6: "button_c7ea19", y7: "emptyStateContainer_c7ea19" };
+t.exports = { VD: "friendsEmpty_Bb-Yop", x6: "button_Bb-Yop", y7: "emptyStateContainer_Bb-Yop" };

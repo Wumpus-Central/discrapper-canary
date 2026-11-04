@@ -1,1 +1,1 @@
-e.exports = { rf: "body_b32ca4", pq: "info_b32ca4", kR: "cards_b32ca4", Lw: "overlay_b32ca4" };
+e.exports = { rf: "body_A7qlid", pq: "info_A7qlid", kR: "cards_A7qlid", Lw: "overlay_A7qlid" };

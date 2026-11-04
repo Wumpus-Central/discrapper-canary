@@ -1,0 +1,291 @@
+n.d(t, {
+    rw: () => T,
+    wH: () => O,
+    G4: () => D,
+    gG: () => L,
+    iC: () => U,
+    D4: () => x,
+    D8: () => G,
+    R2: () => R,
+    fb: () => b,
+    rZ: () => y,
+    Uu: () => C,
+    ss: () => N,
+    bQ: () => S,
+    getDismissedRecurringDismissibleContentState: () => g,
+    Sx: () => W,
+    J8: () => Y,
+    NZ: () => F,
+    FZ: () => P,
+    j6: () => M,
+    En: () => v,
+    X0: () => H,
+    YV: () => V,
+    d6: () => j,
+    qr: () => $,
+    uh: () => z,
+    $l: () => K,
+    Vh: () => B,
+    Wx: () => X,
+    cN: () => w,
+});
+var i = n(855986),
+    r = n(554146),
+    a = n(73153),
+    s = n(594061),
+    l = n(617617),
+    o = n(129230),
+    d = n(811091),
+    c = n(105565),
+    u = n(392121),
+    _ = n(541689),
+    E = n(199773),
+    A = n(517057),
+    h = n(256787),
+    f = n(68656),
+    I = n(643421),
+    p = n(652215),
+    m = n(49999);
+let T = 2592e6;
+function g(e) {
+    let t = l.A.settings.userContent?.recurringDismissibleContentStates[e];
+    return {
+        lastDismissedVersion: (0, h.L0)(e) ? (0, I.c)(e) : 0,
+        lastDismissedAtMs: new Date().getTime().toString(),
+        lastDismissedObjectId: (0, h.IL)(e) ? d.default.fromTimestamp(Date.now() + T) : "0",
+        numTimesDismissed: t?.numTimesDismissed ?? 0,
+    };
+}
+function S(e, t, n) {
+    return (0, s.$w)(e, {
+        lastDismissedVersion: t,
+        lastDismissedAtMs: Date.now().toString(),
+        lastDismissedObjectId: "0",
+        numTimesDismissed: n,
+    });
+}
+function N(e, t) {
+    return (0, s.$w)(e, {
+        lastDismissedVersion: 0,
+        lastDismissedAtMs: Date.now().toString(),
+        lastDismissedObjectId: "0",
+        numTimesDismissed: t,
+    });
+}
+function C(e, t, n) {
+    return (0, s.$w)(e, {
+        lastDismissedVersion: 0,
+        lastDismissedAtMs: Date.now().toString(),
+        lastDismissedObjectId: t,
+        numTimesDismissed: n,
+    });
+}
+function O(e, t, n) {
+    return (0, s.xs)(e, t, {
+        dismissed: !0,
+        lastDismissedVersion: 0,
+        lastDismissedAtMs: Date.now().toString(),
+        lastDismissedObjectId: "0",
+        numTimesDismissed: n,
+    });
+}
+function R(e, t, n) {
+    return (0, s.xs)(e, t, {
+        dismissed: !1,
+        lastDismissedVersion: 0,
+        lastDismissedAtMs: Date.now().toString(),
+        lastDismissedObjectId: "0",
+        numTimesDismissed: n,
+    });
+}
+function L(e, t, n) {
+    return (0, s.xs)(e, t, {
+        dismissed: !1,
+        lastDismissedVersion: 0,
+        lastDismissedAtMs: Date.now().toString(),
+        lastDismissedObjectId: "0",
+        numTimesDismissed: n,
+    });
+}
+function y(e, t, n) {
+    return (0, s.xs)(e, t, {
+        dismissed: !1,
+        lastDismissedVersion: 0,
+        lastDismissedAtMs: "0",
+        lastDismissedObjectId: "0",
+        numTimesDismissed: n,
+    });
+}
+function D(e, t, n, i) {
+    return (0, s.xs)(e, n, {
+        dismissed: !1,
+        lastDismissedVersion: 0,
+        lastDismissedAtMs: Date.now().toString(),
+        lastDismissedObjectId: t,
+        numTimesDismissed: i,
+    });
+}
+function b(e, t, n) {
+    return (0, s.xs)(e, t, {
+        dismissed: !1,
+        lastDismissedVersion: 0,
+        lastDismissedAtMs: "0",
+        lastDismissedObjectId: "0",
+        numTimesDismissed: n,
+    });
+}
+function v(e, t) {
+    if ((0, f.P3)(e)) return { isDismissed: !0, lastDismissedVersion: null };
+    let n = l.A.settings.userContent?.recurringDismissibleContentStates[e]?.lastDismissedVersion,
+        i = t ?? (0, I.c)(e);
+    return { isDismissed: null != n && n >= i, lastDismissedVersion: n };
+}
+function P(e, t) {
+    if ((0, f.P3)(e)) return { isDismissed: !0, lastDismissedAtMs: null };
+    let n = l.A.settings.userContent?.recurringDismissibleContentStates[e]?.lastDismissedAtMs,
+        i = null != n && "0" !== n ? (Number.isNaN(Number(n)) ? void 0 : Number(n)) : void 0;
+    if (void 0 === i) return { isDismissed: !1, lastDismissedAtMs: void 0 };
+    let r = !0;
+    if (null != t) {
+        let e = i + t.cooldownDurationMs,
+            n = Date.now(),
+            a = null == t.showAfterTimestamp || (n >= t.showAfterTimestamp && i <= t.showAfterTimestamp);
+        r = n < e || !a;
+    }
+    return { isDismissed: r, lastDismissedAtMs: i };
+}
+function M(e, t, n) {
+    if ((0, f.P3)(e)) return !0;
+    let i = l.A.settings.userContent?.recurringDismissibleContentStates[e]?.lastDismissedObjectId,
+        r = l.A.settings.userContent?.recurringDismissibleContentStates[e]?.lastDismissedAtMs,
+        a = null != r && "0" !== r ? (Number.isNaN(Number(r)) ? void 0 : Number(r)) : void 0,
+        s = !1;
+    if (null != n && null != a) {
+        let e = a + n.cooldownDurationMs,
+            t = Date.now(),
+            i = null == n.showAfterTimestamp || (t >= n.showAfterTimestamp && a <= n.showAfterTimestamp);
+        s = t < e || !i;
+    }
+    let o = null != i && 1 !== d.default.compare(t, i);
+    return s && o;
+}
+function U(e, t) {
+    if ((0, f.P3)(e)) return !0;
+    let n = l.A.getGuildDismissedContentState(t);
+    return null != n && null != n[e] && !0 === n[e].dismissed;
+}
+function w(e, t) {
+    return (0, i.bG)([l.A], () => null != e && U(e, t));
+}
+function G(e, t) {
+    if ((0, f.P3)(e)) return !0;
+    let n = l.A.getGuildDismissedContentState(t);
+    return null != n && null != n[e] && null != n[e].lastDismissedAtMs && "0" !== n[e].lastDismissedAtMs;
+}
+function x(e, t) {
+    if ((0, f.P3)(e)) return !0;
+    let n = l.A.getGuildDismissedContentState(t);
+    return null != n && null != n[e] && null != n[e].lastDismissedObjectId && "0" !== n[e].lastDismissedObjectId;
+}
+let k = new Set([r.M.ACCOUNT_LINK_INVITE_FRIENDS]);
+function F(e, t, n) {
+    return t && !(null == n && k.has(e));
+}
+function B(e, t, n, i) {
+    (0, A.dD)(e) ||
+        E.A.hasUserHitDCCap(e, t?.guildId) ||
+        F(e, n ?? !1, i ?? null) ||
+        (a.h.dispatch({ type: "DCF_EVENT_LOGGED", eventType: c.r.DC_SHOW_REQUEST, dismissibleContent: e }),
+        (0, A.oo)({
+            content: e,
+            groupName: t?.groupName,
+            onAdded: (n) => {
+                ((0, _.rF)(e, t?.guildId), X(e, t, n), t?.onShown?.());
+            },
+        }));
+}
+function V(e, t) {
+    (((0, A.dD)(e) || t.forceTrack) &&
+        (function (e, t) {
+            t?.dismissAction === m.i.TAKE_ACTION &&
+                (function (e) {
+                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                    if (E.A.hasTrackedActionedEvent(e)) return;
+                    (0, _.F_)(e);
+                    let [n] = (0, A.oF)(),
+                        i = E.A.getRenderedAtTimestamp(e);
+                    o.default.track(p.HAw.DISMISSIBLE_CONTENT_ACTIONED, {
+                        type: r.M[e],
+                        content_count: n,
+                        group_name: t.groupName,
+                        bypass_fatigue: (0, u.a9)(e),
+                        guild_id: t.guildId,
+                        shown_duration: null == i ? null : Date.now() - i,
+                        version: t.version,
+                        snowflake_id: t.snowflakeId,
+                    });
+                })(e, t);
+            let [n] = (0, A.oF)(),
+                i = E.A.getRenderedAtTimestamp(e),
+                a = new Date(),
+                s = null == i ? null : a.getTime() - i,
+                l = t?.guildId != null ? W(e, t.guildId) : Y(e, t ?? {});
+            o.default.track(p.HAw.DISMISSIBLE_CONTENT_DISMISSED, {
+                type: r.M[e],
+                action: t?.dismissAction ?? m.i.UNKNOWN,
+                content_count: n,
+                group_name: t?.groupName,
+                bypass_fatigue: (0, u.a9)(e),
+                guild_id: t?.guildId,
+                shown_duration: s,
+                version: t?.version,
+                num_times_dismissed: l,
+                snowflake_id: t?.snowflakeId,
+            });
+        })(e, t),
+        (0, _.Xw)(e, t.guildId ?? void 0));
+}
+function H(e, t) {
+    let n = !E.A.hasUserHitDCCap();
+    (0, A.pd)({ content: e, groupName: t?.groupName }, n);
+}
+async function j(e, t) {
+    let n = (0, I.c)(e);
+    await K(e, n, t);
+}
+function W(e, t) {
+    let n = l.A.getGuildDismissedContentState(t)?.[e];
+    return (n?.numTimesDismissed ?? 0) + 1;
+}
+function Y(e, t) {
+    if (null != t.numTimesDismissed) return t.numTimesDismissed;
+    let n = l.A.settings.userContent?.recurringDismissibleContentStates[e];
+    return (n?.numTimesDismissed ?? 0) + 1;
+}
+async function K(e, t, n) {
+    let i = Y(e, n);
+    (V(e, n), await S(e, t, i), H(e, n));
+}
+async function $(e, t, n) {
+    let i = Y(e, n);
+    (V(e, { ...n, snowflakeId: t }), await C(e, t, i), H(e, n));
+}
+async function z(e, t) {
+    let n = Y(e, t);
+    (V(e, t), await N(e, n), H(e, t));
+}
+function X(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+        [i, a] = (0, A.oF)();
+    o.default.track(p.HAw.DISMISSIBLE_CONTENT_SHOWN, {
+        type: r.M[e],
+        unselected_content_types: n?.map((e) => r.M[e]) ?? null,
+        content_count: i,
+        fatigable_content_count: a,
+        group_name: t?.groupName,
+        bypass_fatigue: (0, u.a9)(e),
+        guild_id: t?.guildId,
+        version: t?.version,
+        snowflake_id: t?.snowflakeId,
+    });
+}

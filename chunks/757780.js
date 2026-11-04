@@ -1,4 +1,3 @@
-n.d(t, { A: () => a });
 var i = n(882035);
 let r = { isSorting: !1 },
     a = (0, i.h)()((e, t) => ({
@@ -6,3 +5,4 @@ let r = { isSorting: !1 },
         startSorting: () => e({ isSorting: !0 }),
         stopSorting: () => e({ isSorting: !1 }),
     }));
+n.d(t, {}, { A: a });

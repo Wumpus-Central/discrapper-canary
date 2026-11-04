@@ -1,7 +1,7 @@
 e.exports = {
-    hQ: "contentContainer__665be",
-    tE: "rewardTileContainer__665be",
-    Qq: "rewardTile__665be",
-    dD: "copyContainer__665be",
-    R_: "heading__665be",
+    hQ: "contentContainer_wqxR8-",
+    tE: "rewardTileContainer_wqxR8-",
+    Qq: "rewardTile_wqxR8-",
+    dD: "copyContainer_wqxR8-",
+    R_: "heading_wqxR8-",
 };

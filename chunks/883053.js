@@ -1,1 +1,1 @@
-_.exports = { T: "rank__336fc" };
+t.exports = { T: "rank_DeLaSu" };

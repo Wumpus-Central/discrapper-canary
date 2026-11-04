@@ -1,0 +1,22 @@
+.container_T-SC9e {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px
+}
+
+.enableCard_T-SC9e {
+    background-color: var(--background-base-lower);
+    border: 1px solid var(--border-muted);
+    color: var(--text-strong);
+    padding: 12px 16px
+}
+
+.toggleSection_T-SC9e {
+    margin-bottom: 30px
+}
+
+.arrow_T-SC9e {
+    color: var(--text-strong)
+}
+
+/*# sourceMappingURL=bd36530d9421e6f4.css.map*/

@@ -1,26 +1,25 @@
-n.d(t, { A: () => y, U: () => U });
 var i = n(477900),
     l = n(582128),
-    o = n(503698),
-    s = n.n(o),
-    a = n(17928),
+    s = n(503698),
+    o = n.n(s),
+    a = n(855986),
     c = n(843282),
     r = n(462887),
     u = n(831544),
     d = n(597601),
     p = n(332461),
-    g = n(683071),
-    m = n(834730),
+    m = n(683071),
+    g = n(834730),
     v = n(827343),
     D = n(688810),
-    x = n(363195),
+    x = n(413599),
     f = n(934729),
     h = n(347481),
-    C = n(477653),
+    C = n(718197),
     b = n(74848),
     I = n(106713),
     O = n(731854),
-    S = n(105292),
+    S = n(792996),
     A = n(534283);
 function T(e) {
     return {
@@ -53,7 +52,7 @@ function T(e) {
 function j(e) {
     let {
             devices: t,
-            location: o,
+            location: s,
             selectedDeviceId: u,
             onSelectDevice: d,
             hideDeviceTypeIcon: p = !1,
@@ -63,33 +62,33 @@ function j(e) {
         } = e,
         { analyticsLocations: j } = (0, D.Ay)(),
         U = (0, a.bG)([x.A], () => x.A.theme),
-        y = l.useMemo(() => t.reduce((e, t) => ({ ...e, [t.id]: t }), {}), [t]),
-        N = y[u]?.deviceType ?? null,
-        _ = (0, a.bG)([C.Ay], () => null == N || T(N).getCanSetDevice(C.Ay)),
+        N = l.useMemo(() => t.reduce((e, t) => ({ ...e, [t.id]: t }), {}), [t]),
+        _ = N[u]?.deviceType ?? null,
+        y = (0, a.bG)([C.Ay], () => null == _ || T(_).getCanSetDevice(C.Ay)),
         { showDeviceFormFactorIndicators: w } = I.A.useConfig({ location: "SingleSelectDevices" }),
-        V = null != N ? (0, i.jsx)(g.w, { type: "warning", message: T(N).getWarningMessage(), role: "status" }) : null,
+        V = null != _ ? (0, i.jsx)(m.w, { type: "warning", message: T(_).getWarningMessage(), role: "status" }) : null,
         E = l.useCallback(
             (e) => {
                 if (!(d?.(e) ?? !0)) return;
-                let t = y[e]?.deviceType;
+                let t = N[e]?.deviceType;
                 if (null == t) return;
                 let { setDevice: n, getLocation: i } = T(t);
-                n(e, { location: i(o), analyticsLocations: j });
+                n(e, { location: i(s), analyticsLocations: j });
             },
-            [y, o, j, d],
+            [N, s, j, d],
         );
     function M(e) {
         let t,
             l = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            { prefix: o, subName: a } = (0, b.d)(e),
-            c = h.A.getCertifiedDeviceName(e.id, o);
+            { prefix: s, subName: a } = (0, b.d)(e),
+            c = h.A.getCertifiedDeviceName(e.id, s);
         if (h.A.isCertified(e.id)) {
             let e = (0, r.q)(U) ? n(961392) : n(848672);
             t = (0, i.jsx)("img", { src: e, alt: S.intl.string(S.t.smSKsj) });
         }
         let u = null == e ? null : w ? (0, b.d4)(e) : T(e.deviceType).IconComponent;
         return (0, i.jsxs)("div", {
-            className: s()(A.Mg, { [A.S2]: l && null != a, [A.Sy]: !p }),
+            className: o()(A.Mg, { [A.S2]: l && null != a, [A.Sy]: !p }),
             children: [
                 !p &&
                     null != u &&
@@ -97,7 +96,7 @@ function j(e) {
                         className: A.Kt,
                         children: (0, i.jsx)(u, { size: "custom", width: 20, height: 20, color: "currentColor" }),
                     }),
-                (0, i.jsx)(m.E, {
+                (0, i.jsx)(g.E, {
                     lineClamp: 2,
                     variant: f ?? "body-md/medium",
                     color: l ? "text-subtle" : "text-default",
@@ -105,7 +104,7 @@ function j(e) {
                     children: c,
                 }),
                 null != a &&
-                    (0, i.jsx)(m.E, {
+                    (0, i.jsx)(g.E, {
                         lineClamp: 2,
                         variant: f ?? (l ? "body-xs/medium" : "body-md/medium"),
                         color: "text-muted",
@@ -126,30 +125,36 @@ function j(e) {
                     let { id: t, name: n } = e;
                     return { value: t, label: n };
                 }),
-                isDisabled: !_,
+                isDisabled: !y,
                 popoutPosition: "bottom",
                 renderOptionLabel: (e) => {
                     let { value: t } = e;
-                    return M(y[t], !0);
+                    return M(N[t], !0);
                 },
                 renderOptionValue: (e) => {
                     let [{ value: t }] = e;
-                    return M(y[t]);
+                    return M(N[t]);
                 },
                 optionClassName: A.OS,
                 ...O,
                 "data-migration-pending": !0,
             }),
-            !_ && V,
+            !y && V,
         ],
     });
 }
-function U(e) {
-    let { deviceType: t, selectedDeviceId: n, ...l } = e,
-        o = (0, b.tR)(t),
-        { id: s } = (0, b.x5)(t);
-    return (0, i.jsx)(j, { ...l, devices: o, selectedDeviceId: n ?? s });
-}
-function y(e) {
-    return (0, i.jsx)(j, { ...e });
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            return (0, i.jsx)(j, { ...e });
+        },
+        U: function (e) {
+            let { deviceType: t, selectedDeviceId: n, ...l } = e,
+                s = (0, b.tR)(t),
+                { id: o } = (0, b.x5)(t);
+            return (0, i.jsx)(j, { ...l, devices: s, selectedDeviceId: n ?? o });
+        },
+    },
+);

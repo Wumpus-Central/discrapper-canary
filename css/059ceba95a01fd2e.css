@@ -1,0 +1,125 @@
+.container_aIIJLt {
+    height: 100%;
+    overflow: hidden
+}
+
+.usersCount_aIIJLt {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: var(--radius-round);
+    display: flex;
+    height: var(--space-20);
+    justify-content: center;
+    padding: var(--space-4);
+    width: var(--space-20)
+}
+
+.emailText_aIIJLt {
+    max-width: 225px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.iconText_aIIJLt {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.clickable_aIIJLt {
+    cursor: pointer
+}
+
+.clickableDisabled_aIIJLt {
+    cursor: not-allowed;
+    pointer-events: not-allowed
+}
+
+.userInfoDisabled_aIIJLt {
+    opacity: .5
+}
+
+.poolsScroller_aIIJLt {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-16);
+    min-height: 0
+}
+
+.accordion_aIIJLt {
+    width: 100%
+}
+
+.buttonContainer_aIIJLt {
+    margin-inline-start: auto;
+    margin-top: var(--space-16)
+}
+
+.panelHeader_6vjomV {
+    margin-bottom: 16px
+}
+
+.panelInner_6vjomV {
+    padding: var(--space-8)
+}
+
+.panelRow_6vjomV {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-12);
+    justify-content: flex-start;
+    margin-bottom: var(--space-16)
+}
+
+.scroller_cO774m {
+    max-height: 100%
+}
+
+.root_cO774m {
+    box-sizing: border-box
+}
+
+.stopsGrid_cO774m {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: max-content repeat(4, 1fr)
+}
+
+.stopLabel_cO774m {
+    min-width: 60px
+}
+
+.previewList_cO774m {
+    list-style: none;
+    margin: 0;
+    padding: 16px
+}
+
+.yamlBlock_cO774m {
+    background-color: var(--background-surface-high);
+    border-radius: 4px;
+    color: var(--text-default);
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0;
+    overflow: auto;
+    padding: 12px;
+    white-space: pre
+}
+
+.imageUploadSlot_cO774m {
+    position: relative
+}
+
+.colorSwatch_cO774m {
+    border-radius: 2px;
+    display: inline-block;
+    flex-shrink: 0;
+    height: 12px;
+    width: 12px
+}
+
+/*# sourceMappingURL=059ceba95a01fd2e.css.map*/

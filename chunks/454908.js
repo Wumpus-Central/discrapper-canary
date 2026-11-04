@@ -1,6 +1,5 @@
-n.d(t, { I: () => d, x: () => c });
 var i = n(582128),
-    r = n(17928),
+    r = n(855986),
     a = n(927813),
     s = n(920495),
     l = n(311043),
@@ -15,9 +14,16 @@ let d = (0, r.UT)(l.A, {
     getIsLoading: (e) => null != e && l.A.isFetching(e),
     getError: (e) => (null != e && l.A.didFetchingFail(e) ? Error("Failed to fetch game data") : null),
 });
-function c(e) {
-    i.useEffect(() => {
-        let t = e.map((e) => [e]);
-        d.fetchMany(...t);
-    }, [e]);
-}
+n.d(
+    t,
+    {},
+    {
+        I: d,
+        x: function (e) {
+            i.useEffect(() => {
+                let t = e.map((e) => [e]);
+                d.fetchMany(...t);
+            }, [e]);
+        },
+    },
+);

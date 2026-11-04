@@ -1,79 +1,83 @@
-n.d(t, { A: () => o });
 var i = n(477900),
     r = n(582128),
     a = n(663675),
     s = n(621466);
 let l = (e) => {
-        let {
-                alt: t,
-                externalRef: n,
-                autoPlay: l,
-                playOnHover: o,
-                onPlayError: d,
-                responsive: c,
-                mediaLayoutType: u,
-                useReducedMotion: _,
-                ...E
-            } = e,
-            A = !_ && !o && l,
-            h = r.useRef(null);
-        function f() {
-            o &&
-                h?.current?.play()?.catch((e) => {
-                    if (null != d) d(e);
-                    else throw e;
-                });
-        }
-        function I() {
-            o && h?.current?.pause();
-        }
-        (r.useLayoutEffect(
-            () => () => {
-                let { current: e } = h;
-                null != e &&
-                    (function (e) {
-                        (e.removeAttribute("src"),
-                            Array.from(e.children).forEach((e) => {
-                                ((0, s.vq)(e, HTMLSourceElement) &&
-                                    (e.removeAttribute("src"), e.removeAttribute("type")),
-                                    (0, s.vq)(e, HTMLImageElement) && e.removeAttribute("src"));
-                            }));
-                        try {
-                            e.load();
-                        } catch (e) {}
-                    })(e);
-            },
-            [],
-        ),
-            r.useLayoutEffect(
-                () => (
-                    "function" == typeof n ? (n(null), n(h.current)) : null != n && (n.current = h.current),
-                    () => {
-                        "function" == typeof n ? n(null) : null != n && (n.current = null);
-                    }
-                ),
-                [n, h],
-            ));
-        let p = E.tabIndex ?? (!0 === E.controls ? 0 : -1);
-        return (0, i.jsx)("video", {
-            "aria-label": t,
-            ref: h,
-            autoPlay: A,
-            onMouseEnter: f,
-            onMouseLeave: I,
-            onFocus: f,
-            onBlur: I,
-            style:
-                u === a.d.MOSAIC
-                    ? { width: "100%", height: "100%", maxHeight: "inherit", objectFit: "contain" }
-                    : c
-                      ? { maxWidth: E.width, maxHeight: E.height, width: "100%", height: "100%" }
-                      : {},
-            tabIndex: p,
-            ...E,
-        });
+    let {
+            alt: t,
+            externalRef: n,
+            autoPlay: l,
+            playOnHover: o,
+            onPlayError: d,
+            responsive: c,
+            mediaLayoutType: u,
+            useReducedMotion: _,
+            ...E
+        } = e,
+        A = !_ && !o && l,
+        h = r.useRef(null);
+    function f() {
+        o &&
+            h?.current?.play()?.catch((e) => {
+                if (null != d) d(e);
+                else throw e;
+            });
+    }
+    function I() {
+        o && h?.current?.pause();
+    }
+    (r.useLayoutEffect(
+        () => () => {
+            let { current: e } = h;
+            null != e &&
+                (function (e) {
+                    (e.removeAttribute("src"),
+                        Array.from(e.children).forEach((e) => {
+                            ((0, s.vq)(e, HTMLSourceElement) && (e.removeAttribute("src"), e.removeAttribute("type")),
+                                (0, s.vq)(e, HTMLImageElement) && e.removeAttribute("src"));
+                        }));
+                    try {
+                        e.load();
+                    } catch (e) {}
+                })(e);
+        },
+        [],
+    ),
+        r.useLayoutEffect(
+            () => (
+                "function" == typeof n ? (n(null), n(h.current)) : null != n && (n.current = h.current),
+                () => {
+                    "function" == typeof n ? n(null) : null != n && (n.current = null);
+                }
+            ),
+            [n, h],
+        ));
+    let p = E.tabIndex ?? (!0 === E.controls ? 0 : -1);
+    return (0, i.jsx)("video", {
+        "aria-label": t,
+        ref: h,
+        autoPlay: A,
+        onMouseEnter: f,
+        onMouseLeave: I,
+        onFocus: f,
+        onBlur: I,
+        style:
+            u === a.d.MOSAIC
+                ? { width: "100%", height: "100%", maxHeight: "inherit", objectFit: "contain" }
+                : c
+                  ? { maxWidth: E.width, maxHeight: E.height, width: "100%", height: "100%" }
+                  : {},
+        tabIndex: p,
+        ...E,
+    });
+};
+n.d(
+    t,
+    {},
+    {
+        A: (e) => {
+            let { ref: t, ...n } = e;
+            return (0, i.jsx)(l, { ...n, externalRef: t });
+        },
     },
-    o = (e) => {
-        let { ref: t, ...n } = e;
-        return (0, i.jsx)(l, { ...n, externalRef: t });
-    };
+);

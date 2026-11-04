@@ -1,4 +1,3 @@
-n.d(t, { B5: () => l, E8: () => s, Gd: () => a });
 var i,
     r,
     a =
@@ -9,4 +8,4 @@ var i,
         (i.ACTIVITY_POPOUT_WINDOW = "activity_popout_window"),
         i),
     s = (((r = {})[(r.NO_CHAT = 0)] = "NO_CHAT"), (r[(r.RESIZABLE = 1)] = "RESIZABLE"), r);
-let l = 16 / 9;
+n.d(t, {}, { B5: 16 / 9, E8: s, Gd: a });

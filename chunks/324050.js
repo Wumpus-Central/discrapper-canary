@@ -1,6 +1,5 @@
 let s;
-t.d(e, { A: () => d });
-var a = t(17928),
+var a = t(855986),
     n = t(73153);
 let l = { lastGuildDismissedTime: {} };
 class c extends a.Ay.DeviceSettingsStore {
@@ -23,3 +22,4 @@ let d = new c(n.h, {
         s.lastGuildDismissedTime[e] = Date.now();
     },
 });
+t.d(e, {}, { A: d });

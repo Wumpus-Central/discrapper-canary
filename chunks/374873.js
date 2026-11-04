@@ -1,11 +1,10 @@
-t.d(n, { Ay: () => F, d1: () => z, s6: () => H });
 var i = t(477900),
     l = t(582128),
     s = t(503698),
     a = t.n(s),
     r = t(284009),
     o = t.n(r),
-    c = t(17928),
+    c = t(855986),
     d = t(789645),
     u = t(297152),
     A = t(866665),
@@ -15,7 +14,7 @@ var i = t(477900),
     x = t(778712),
     C = t(463930),
     f = t(834730),
-    p = t(193249),
+    p = t(143129),
     E = t(475825),
     j = t(442433),
     I = t(730134),
@@ -24,8 +23,8 @@ var i = t(477900),
     _ = t(58736),
     T = t(967144),
     b = t(342296),
-    y = t(696451),
-    S = t(576705),
+    S = t(696451),
+    y = t(576705),
     O = t(290863),
     P = t(849736),
     R = t(113783),
@@ -34,8 +33,8 @@ var i = t(477900),
     M = t(699970),
     G = t(345687),
     k = t(818348),
-    U = t(185431),
-    V = t(105292),
+    U = t(383899),
+    V = t(792996),
     B = t(888299);
 let w = l.memo(function (e) {
     let { toggleRequestToSpeakSidebar: n, chatOpen: t } = e,
@@ -93,7 +92,7 @@ let Y = l.memo(function (e) {
                 isMobile: O.A.isMobileOnline(s.user.id),
                 status: O.A.getStatus(s.user.id, r),
             })),
-            A = (0, c.bG)([y.Ay], () => y.Ay.getMember(r, s.user.id)),
+            A = (0, c.bG)([S.Ay], () => S.Ay.getMember(r, s.user.id)),
             h = (0, T.gn)(n.guild_id, A?.userId, A?.colorStrings ?? null),
             m = l.useMemo(() => ({ [r]: [s.user.id] }), [r, s.user.id]);
         (0, N.Eq)(m, "RequestToSpeakSidebar");
@@ -102,31 +101,31 @@ let Y = l.memo(function (e) {
             null != r &&
                 (0, j.L3)(e, async () => {
                     let { default: e } = await Promise.all([
-                        t.e("463317"),
-                        t.e("893190"),
-                        t.e("189673"),
-                        t.e("882073"),
-                        t.e("797558"),
-                        t.e("691994"),
-                        t.e("229787"),
-                        t.e("576665"),
-                        t.e("624198"),
-                        t.e("715038"),
-                        t.e("245996"),
-                        t.e("529422"),
-                        t.e("823427"),
-                        t.e("242204"),
-                        t.e("307059"),
-                        t.e("449145"),
-                        t.e("343116"),
-                        t.e("78247"),
-                        t.e("470314"),
-                        t.e("70515"),
-                        t.e("404524"),
-                        t.e("654148"),
-                        t.e("666939"),
-                        t.e("281165"),
-                        t.e("184841"),
+                        t.e(463317),
+                        t.e(893190),
+                        t.e(189673),
+                        t.e(576432),
+                        t.e(797558),
+                        t.e(451162),
+                        t.e(229787),
+                        t.e(576665),
+                        t.e(624198),
+                        t.e(715038),
+                        t.e(245996),
+                        t.e(529422),
+                        t.e(823427),
+                        t.e(242204),
+                        t.e(307059),
+                        t.e(495861),
+                        t.e(343116),
+                        t.e(557830),
+                        t.e(470314),
+                        t.e(70515),
+                        t.e(404524),
+                        t.e(654148),
+                        t.e(666939),
+                        t.e(281165),
+                        t.e(184841),
                     ]).then(t.bind(t, 107632));
                     return (t) => (0, i.jsx)(e, { ...t, user: s.user, guildId: r, channel: n, showMediaItems: !0 });
                 });
@@ -179,12 +178,12 @@ let Y = l.memo(function (e) {
             ],
         });
     }),
-    z = l.memo(function (e) {
+    K = l.memo(function (e) {
         let { channel: n, useVerboseLabel: t = !1 } = e,
             [l, s] = (0, M.X)(n.id);
         return (0, i.jsx)(p.d, { label: V.intl.string(t ? U.default.HUcd3y : V.t.GYCh0W), checked: l, onChange: s });
     }),
-    K = l.memo(function () {
+    z = l.memo(function () {
         return (0, i.jsxs)("div", {
             className: B.y7,
             children: [
@@ -204,65 +203,73 @@ let Y = l.memo(function (e) {
             ],
         });
     });
-function F(e) {
-    let { channel: n, toggleRequestToSpeakSidebar: t, chatOpen: l } = e,
-        s = (0, R.J2)(n.id),
-        r = [
-            +!!(0, c.bG)([S.A], () => S.A.can(k.xB.MANAGE_CHANNELS, n) || S.A.can(k.xB.MANAGE_ROLES, n)),
-            Math.max(1, s.length),
-        ];
-    return (0, i.jsxs)("div", {
-        className: a()(B.kL, { [B.X_]: l }),
-        children: [
-            (0, i.jsx)(w, { toggleRequestToSpeakSidebar: t, chatOpen: l }),
-            (0, i.jsx)(E.OZ, {
-                className: B.hQ,
-                sections: r,
-                sectionHeight: function (e) {
-                    return 40 * (1 === e);
-                },
-                rowHeight: function (e) {
-                    switch (e) {
-                        case 0:
-                            return 66;
-                        case 1:
-                            if (0 === s.length) return 178;
-                            return 48;
-                    }
-                    return 0;
-                },
-                renderRow: function (e) {
-                    let { section: t, row: l } = e;
-                    switch (t) {
-                        case 0:
-                            return (0, i.jsx)(z, { channel: n }, "rts-toggle");
-                        case 1: {
-                            if (0 === s.length) return (0, i.jsx)(K, {}, "participants-empty");
-                            let e = s[l];
-                            return (0, i.jsx)(Y, { channel: n, participant: e }, e.id);
-                        }
-                    }
-                    return null;
-                },
-                renderSection: function (e) {
-                    let { section: n } = e;
-                    return 1 === n
-                        ? (0, i.jsx)(
-                              f.E,
-                              {
-                                  className: B.Vu,
-                                  variant: "body-xs/semibold",
-                                  color: "text-default",
-                                  children:
-                                      s.length > 0
-                                          ? V.intl.formatToPlainString(V.t["5z7q5a"], { numHands: s.length })
-                                          : V.intl.string(V.t.TYZgzW),
-                              },
-                              "participants-section",
-                          )
-                        : null;
-                },
-            }),
-        ],
-    });
-}
+t.d(
+    n,
+    {},
+    {
+        Ay: function (e) {
+            let { channel: n, toggleRequestToSpeakSidebar: t, chatOpen: l } = e,
+                s = (0, R.J2)(n.id),
+                r = [
+                    +!!(0, c.bG)([y.A], () => y.A.can(k.xB.MANAGE_CHANNELS, n) || y.A.can(k.xB.MANAGE_ROLES, n)),
+                    Math.max(1, s.length),
+                ];
+            return (0, i.jsxs)("div", {
+                className: a()(B.kL, { [B.X_]: l }),
+                children: [
+                    (0, i.jsx)(w, { toggleRequestToSpeakSidebar: t, chatOpen: l }),
+                    (0, i.jsx)(E.OZ, {
+                        className: B.hQ,
+                        sections: r,
+                        sectionHeight: function (e) {
+                            return 40 * (1 === e);
+                        },
+                        rowHeight: function (e) {
+                            switch (e) {
+                                case 0:
+                                    return 66;
+                                case 1:
+                                    if (0 === s.length) return 178;
+                                    return 48;
+                            }
+                            return 0;
+                        },
+                        renderRow: function (e) {
+                            let { section: t, row: l } = e;
+                            switch (t) {
+                                case 0:
+                                    return (0, i.jsx)(K, { channel: n }, "rts-toggle");
+                                case 1: {
+                                    if (0 === s.length) return (0, i.jsx)(z, {}, "participants-empty");
+                                    let e = s[l];
+                                    return (0, i.jsx)(Y, { channel: n, participant: e }, e.id);
+                                }
+                            }
+                            return null;
+                        },
+                        renderSection: function (e) {
+                            let { section: n } = e;
+                            return 1 === n
+                                ? (0, i.jsx)(
+                                      f.E,
+                                      {
+                                          className: B.Vu,
+                                          variant: "body-xs/semibold",
+                                          color: "text-default",
+                                          children:
+                                              s.length > 0
+                                                  ? V.intl.formatToPlainString(V.t["5z7q5a"], { numHands: s.length })
+                                                  : V.intl.string(V.t.TYZgzW),
+                                      },
+                                      "participants-section",
+                                  )
+                                : null;
+                        },
+                    }),
+                ],
+            });
+        },
+        d1: K,
+        s6: H,
+    },
+);

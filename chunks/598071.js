@@ -1,4 +1,3 @@
-n.d(t, { Ay: () => u, Sv: () => a });
 var l = n(582128),
     i = n(143236);
 class r extends i.EventEmitter {
@@ -19,5 +18,5 @@ class r extends i.EventEmitter {
     }
 }
 let s = l.createContext(new r()),
-    { Provider: a, Consumer: o } = s,
-    u = s;
+    { Provider: a, Consumer: o } = s;
+n.d(t, {}, { Ay: s, Sv: a });

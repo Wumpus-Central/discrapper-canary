@@ -1,5 +1,4 @@
-n.d(t, { A: () => c });
-var i = n(17928),
+var i = n(855986),
     r = n(73153);
 let a = { marketingsBySurfaces: null, fetchedAt: null },
     s = {},
@@ -43,3 +42,4 @@ let c = new d(r.h, {
         ((s = {}), (l = "NOT_FETCHED"), (o = a));
     },
 });
+n.d(t, {}, { A: c });

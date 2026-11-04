@@ -1,5 +1,4 @@
-n.d(t, { A: () => o });
-var i = n(17928),
+var i = n(855986),
     r = n(73153),
     a = n(235079);
 let s = { soundpack: a.i.CLASSIC, lastSoundpackExperimentId: null };
@@ -25,3 +24,4 @@ let o = new l(r.h, {
         s = { soundpack: t, lastSoundpackExperimentId: void 0 !== n ? n : s.lastSoundpackExperimentId };
     },
 });
+n.d(t, {}, { A: o });

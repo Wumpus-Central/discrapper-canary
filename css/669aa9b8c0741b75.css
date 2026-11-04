@@ -1,0 +1,26 @@
+.perks_zpaDaP {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12)
+}
+
+.perkRow_zpaDaP {
+    align-items: center;
+    display: flex
+}
+
+.perkIcon_zpaDaP {
+    height: 20px;
+    width: 20px
+}
+
+.perkText_zpaDaP {
+    margin-inline-start: var(--space-8)
+}
+
+.featurePreview_zpaDaP {
+    display: flex;
+    justify-content: center
+}
+
+/*# sourceMappingURL=669aa9b8c0741b75.css.map*/

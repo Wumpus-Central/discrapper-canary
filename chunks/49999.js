@@ -1,4 +1,3 @@
-n.d(t, { i: () => a, m: () => s });
 var i,
     r,
     a =
@@ -35,3 +34,4 @@ var i,
         (r.GUILD_THEME_NUX = "GUILD_THEME_NUX"),
         (r.GUILD_SPACE_NUX = "GUILD_SPACE_NUX"),
         r);
+n.d(t, {}, { i: a, m: s });

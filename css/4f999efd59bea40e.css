@@ -1,0 +1,22 @@
+.itemIcon_ge8IFm {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1
+}
+
+.itemIcon_ge8IFm.hasTooltip_ge8IFm {
+    pointer-events: auto
+}
+
+.promoIconContainer_ge8IFm {
+    align-items: center;
+    background-color: var(--control-overlay-secondary-background-default);
+    border-radius: var(--radius-round);
+    display: flex;
+    justify-content: center
+}
+
+/*# sourceMappingURL=4f999efd59bea40e.css.map*/

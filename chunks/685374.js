@@ -1,36 +1,25 @@
-(n.d(t, { default: () => v }), n(321073));
+n(321073);
 var i = n(477900),
     s = n(582128),
-    l = n(17928),
+    l = n(855986),
     r = n(770880),
     a = n(146151),
     c = n(834730),
     o = n(702805),
-    d = n(913122),
+    d = n(627784),
     u = n(47167),
     h = n(95701),
     g = n(734057),
     x = n(71393),
-    p = n(174459),
+    p = n(129230),
     y = n(147036),
-    A = n(517622),
+    A = n(904630),
     E = n(86944),
-    f = n(719366),
+    f = n(290261),
     m = n(652215),
-    b = n(105292),
+    b = n(792996),
     j = n(496434);
 function v(e) {
-    let { channelId: t, ...n } = e,
-        r = (0, l.bG)([g.A], () => g.A.getChannel(t), [t]),
-        a = (0, l.bG)([x.A], () => x.A.getGuild(r?.getGuildId()));
-    return (s.useEffect(() => {
-        p.default.track(m.HAw.OPEN_MODAL, { type: "Grant Channel Access" });
-    }, []),
-    null == r || null == a)
-        ? null
-        : (0, i.jsx)(k, { guild: a, channel: r, ...n });
-}
-function k(e) {
     let { guild: t, channel: n, onClose: l, newChannel: g, inSettings: x, ...p } = e,
         [m, v] = s.useState(""),
         [k, w] = s.useState({}),
@@ -40,34 +29,8 @@ function k(e) {
         H = (0, u.Ay)(n),
         { roles: O, members: N, getRichTag: M } = (0, E.K)(t, n, n.accessPermissions, m),
         _ = A.A.useSections({ roles: O, members: N }),
-        I = g && 0 === Object.keys(k).length;
-    async function L() {
-        if (null == n || 0 === Object.keys(k).length) return void l();
-        R(!0);
-        try {
-            var e, t, i;
-            let s;
-            (await ((e = n),
-            (t = k),
-            (i = x),
-            (s = []),
-            Object.values(t).forEach((t) => {
-                let { row: n } = t;
-                null != n.id &&
-                    "" !== n.id &&
-                    (n.rowType === f.T6.ROLE
-                        ? s.push((0, y.we)(n.id, e.type))
-                        : n.rowType === f.T6.MEMBER && s.push((0, y.n3)(n.id, e.type)));
-            }),
-            (0, o.R$)(e.id, s, i)),
-                l(),
-                R(!1));
-        } catch (t) {
-            let e = new d.LG(t);
-            (R(!1), T(e));
-        }
-    }
-    let P = (0, h.ke)(n.type) ? r.I : a.t;
+        I = g && 0 === Object.keys(k).length,
+        L = (0, h.ke)(n.type) ? r.I : a.t;
     return (0, i.jsx)(A.A.Provider, {
         listRef: G,
         query: m,
@@ -87,7 +50,7 @@ function k(e) {
                         className: j.HA,
                         variant: "body-lg/normal",
                         color: "text-default",
-                        children: [(0, i.jsx)(P, { className: j.p, size: "sm", color: "currentColor" }), H],
+                        children: [(0, i.jsx)(L, { className: j.p, size: "sm", color: "currentColor" }), H],
                     }),
                     n.isGuildStageVoice() &&
                         (0, i.jsx)(c.E, {
@@ -123,8 +86,55 @@ function k(e) {
                 ? [{ variant: "secondary", text: b.intl.string(b.t.u46sxe), onClick: l }]
                 : [
                       { variant: "secondary", text: b.intl.string(b.t["ETE/oC"]), onClick: l },
-                      { variant: "primary", text: b.intl.string(b.t.i4jeWR), onClick: L, loading: C },
+                      {
+                          variant: "primary",
+                          text: b.intl.string(b.t.i4jeWR),
+                          onClick: async function () {
+                              if (null == n || 0 === Object.keys(k).length) return void l();
+                              R(!0);
+                              try {
+                                  var e, t, i;
+                                  let s;
+                                  (await ((e = n),
+                                  (t = k),
+                                  (i = x),
+                                  (s = []),
+                                  Object.values(t).forEach((t) => {
+                                      let { row: n } = t;
+                                      null != n.id &&
+                                          "" !== n.id &&
+                                          (n.rowType === f.T6.ROLE
+                                              ? s.push((0, y.we)(n.id, e.type))
+                                              : n.rowType === f.T6.MEMBER && s.push((0, y.n3)(n.id, e.type)));
+                                  }),
+                                  (0, o.R$)(e.id, s, i)),
+                                      l(),
+                                      R(!1));
+                              } catch (t) {
+                                  let e = new d.LG(t);
+                                  (R(!1), T(e));
+                              }
+                          },
+                          loading: C,
+                      },
                   ],
         }),
     });
 }
+n.d(
+    t,
+    {},
+    {
+        default: function (e) {
+            let { channelId: t, ...n } = e,
+                r = (0, l.bG)([g.A], () => g.A.getChannel(t), [t]),
+                a = (0, l.bG)([x.A], () => x.A.getGuild(r?.getGuildId()));
+            return (s.useEffect(() => {
+                p.default.track(m.HAw.OPEN_MODAL, { type: "Grant Channel Access" });
+            }, []),
+            null == r || null == a)
+                ? null
+                : (0, i.jsx)(v, { guild: a, channel: r, ...n });
+        },
+    },
+);

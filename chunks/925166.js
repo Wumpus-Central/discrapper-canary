@@ -1,4 +1,3 @@
-n.d(t, { A: () => i });
 let i = (0, n(945810).mj)({
     name: "2026-09-friends-sidebar",
     kind: "user",
@@ -9,3 +8,4 @@ let i = (0, n(945810).mj)({
         2: { sidebarEnabled: !0, appBarToggleEnabled: !0 },
     },
 });
+n.d(t, {}, { A: i });

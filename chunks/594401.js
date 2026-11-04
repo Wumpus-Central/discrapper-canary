@@ -1,1 +1,1 @@
-t.exports = { NC: "buttonsContainer__1811e", Ad: "newBadge__1811e", DT: "removeButton__1811e" };
+t.exports = { NC: "buttonsContainer_yKgk8T", Ad: "newBadge_yKgk8T", DT: "removeButton_yKgk8T" };

@@ -1,0 +1,66 @@
+.forwardPreview_IHYJU0 {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    height: 100%;
+    justify-content: space-between;
+    margin-inline-end: 16px;
+    padding-inline-start: 16px;
+    position: relative;
+    width: calc(100% - 16px)
+}
+
+.forwardPreview_IHYJU0:before {
+    background-color: var(--border-subtle);
+    border-radius: 2px;
+    content: "";
+    flex-shrink: 0;
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 4px
+}
+
+.linkContainer_IHYJU0 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0
+}
+
+.linkIcon_IHYJU0 {
+    color: var(--text-muted)
+}
+
+.applicationInfo_IHYJU0 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px
+}
+
+.previewImageStack_IHYJU0 {
+    display: flex;
+    flex-shrink: 0
+}
+
+.previewImageContainer_IHYJU0 {
+    box-shadow: 0 0 0 2px var(--background-surface-high);
+    max-width: 40px;
+    min-width: 40px;
+    width: 40px;
+    z-index: 0
+}
+
+.previewImageContainer_IHYJU0:not(:first-child) {
+    margin-inline-start: -12px
+}
+
+.previewImageLayer_IHYJU0 {
+    max-width: 40px;
+    min-width: 40px;
+    width: 40px
+}
+
+/*# sourceMappingURL=ce8037ed70c6b104.css.map*/

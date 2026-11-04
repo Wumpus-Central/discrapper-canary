@@ -1,4 +1,3 @@
-e.d(r, { A: () => o });
 function o(t) {
     return (o =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -11,3 +10,4 @@ function o(t) {
                       : typeof t;
               })(t);
 }
+e.d(r, { A: () => o });

@@ -1,5 +1,4 @@
-n.d(t, { A: () => E });
-var i = n(17928),
+var i = n(855986),
     r = n(73153);
 let a = { chatOpen: !0, debugOpen: !1, previewSelection: null, chatScroll: null },
     s = null,
@@ -49,3 +48,4 @@ let E = new _(r.h, {
         ((s = null), (l = null), (o = !1), d.clear(), c.clear(), u.clear());
     },
 });
+n.d(t, {}, { A: E });

@@ -1,79 +1,3 @@
-n.d(t, {
-    $D: () => er,
-    A_: () => V,
-    CN: () => Z,
-    Cx: () => e_,
-    DX: () => eb,
-    EC: () => eU,
-    Ew: () => ef,
-    Fv: () => g,
-    G$: () => eL,
-    GU: () => k,
-    Gy: () => et,
-    HA: () => ew,
-    Hz: () => eM,
-    L4: () => eS,
-    LX: () => T,
-    Me: () => ed,
-    Mu: () => w,
-    Ot: () => C,
-    P4: () => N,
-    QK: () => em,
-    QY: () => el,
-    Qw: () => eP,
-    RC: () => ea,
-    SC: () => Q,
-    T7: () => eg,
-    UY: () => eI,
-    U_: () => J,
-    V0: () => D,
-    VP: () => j,
-    Vi: () => R,
-    Y2: () => q,
-    YK: () => eD,
-    YM: () => K,
-    _1: () => eo,
-    _9: () => ey,
-    _S: () => eE,
-    ad: () => eA,
-    cM: () => H,
-    dV: () => Y,
-    gC: () => ee,
-    gy: () => B,
-    iJ: () => $,
-    k9: () => ei,
-    kd: () => y,
-    ku: () => eR,
-    l6: () => b,
-    l_: () => v,
-    mO: () => ep,
-    mY: () => ec,
-    nQ: () => ek,
-    nS: () => ev,
-    nm: () => U,
-    nx: () => L,
-    p4: () => eh,
-    pZ: () => en,
-    pk: () => ex,
-    rD: () => eC,
-    rb: () => eF,
-    rv: () => X,
-    s3: () => x,
-    sL: () => eN,
-    sT: () => S,
-    sc: () => P,
-    sz: () => O,
-    tS: () => eu,
-    td: () => F,
-    ut: () => W,
-    vZ: () => G,
-    w6: () => eO,
-    xy: () => eG,
-    yz: () => es,
-    z2: () => eT,
-    zj: () => M,
-    zq: () => z,
-});
 var i,
     r,
     a,
@@ -96,47 +20,19 @@ var i,
         (i[(i.MINUTES_1 = m.A.Millis.MINUTE)] = "MINUTES_1"),
         (i[(i.MINUTES_2 = 2 * m.A.Millis.MINUTE)] = "MINUTES_2"),
         i),
-    g = (((r = {}).DECOUPLED = "decoupled"), (r.STREAMER = "streamer"), (r.VOICE = "voice"), r);
-let S = "v3";
-var N = (((a = {})[(a.Error = 0)] = "Error"), (a[(a.Disabled = 1)] = "Disabled"), (a[(a.Enabled = 2)] = "Enabled"), a);
-let C = "alt+c",
-    O = "f12",
-    R = 6 * m.A.Millis.SECOND,
-    L = new p.A("Clips"),
-    y = 6,
-    D = 2,
-    b = 1,
-    v = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
-    P = /(NVIDIA GeForce (RTX (20|30|40|50).*))|(.*Radeon RX (57|58|59|6|7|9).*)/,
-    M = 0.1,
-    U = "clips-gallery",
-    w = "clips_player",
-    G = 640,
-    x = 360,
-    k = 100,
-    F = 1e3,
-    B = "id",
-    V = "killIds",
-    H = (e) => `Clip - ${new Date(e).toLocaleString()}`,
-    j = 15,
-    W = 60 * m.A.Millis.SECOND,
-    Y = 3e4,
-    K = 30,
-    $ = 10;
+    g = (((r = {}).DECOUPLED = "decoupled"), (r.STREAMER = "streamer"), (r.VOICE = "voice"), r),
+    S = (((a = {})[(a.Error = 0)] = "Error"), (a[(a.Disabled = 1)] = "Disabled"), (a[(a.Enabled = 2)] = "Enabled"), a);
+let N = 6 * m.A.Millis.SECOND,
+    C = new p.A("Clips"),
+    O = 60 * m.A.Millis.SECOND;
 m.A.Millis.DAY;
-let z = 10,
-    X = 100,
-    q = 75,
-    Z = 0x3c0000000,
-    Q = ".autoclip-cache",
-    J = 0;
-var ee =
+var R =
         (((s = {}).ALL = ":all"),
         (s.APPLICATION = ":application"),
         (s.VOICE = ":voice"),
         (s.SOUNDBOARD = ":soundboard"),
         s),
-    et =
+    L =
         (((l = {}).MANUAL = "manual"),
         (l.DISTRIBUTED = "distributed"),
         (l.SHOUTING = "shouting"),
@@ -145,19 +41,19 @@ var ee =
         (l.SPEAKING = "speaking"),
         (l.SOUNDBOARD = "soundboard"),
         l),
-    en =
+    y =
         (((o = {})[(o.LAUGHTER = 1)] = "LAUGHTER"),
         (o[(o.SHOUTING = 2)] = "SHOUTING"),
         (o[(o.GAME_EVENTS = 4)] = "GAME_EVENTS"),
         o),
-    ei =
+    D =
         (((d = {}).UNKNOWN = "unknown"),
         (d.BELOW_MINIMUM = "below_minimum"),
         (d.MEETS_MINIMUM = "meets_minimum"),
         (d.MEETS_AUTO_ENABLE = "meets_auto_enable"),
         d),
-    er = (((c = {}).UNSET = "unset"), (c.DEFAULT = "default"), (c.USER = "user"), c),
-    ea =
+    b = (((c = {}).UNSET = "unset"), (c.DEFAULT = "default"), (c.USER = "user"), c),
+    v =
         (((u = {}).MAX_CONCURRENT_SAVES = "max_concurrent_saves"),
         (u.NO_ELIGIBLE_SOURCE = "no_eligible_source"),
         (u.MODULE_NOT_LOADED = "module_not_loaded"),
@@ -165,8 +61,8 @@ var ee =
         (u.BRIDGE_SHUTDOWN = "bridge_shutdown"),
         (u.RECORDING_NOT_READY = "recording_not_ready"),
         u),
-    es = (((_ = {}).ORIGINAL = "original"), (_.PORTRAIT_9_16 = "9:16"), (_.LANDSCAPE_16_9 = "16:9"), _);
-function el(e) {
+    P = (((_ = {}).ORIGINAL = "original"), (_.PORTRAIT_9_16 = "9:16"), (_.LANDSCAPE_16_9 = "16:9"), _);
+function M(e) {
     switch (e) {
         case "9:16":
             return 9 / 16;
@@ -176,47 +72,11 @@ function el(e) {
             return null;
     }
 }
-function eo(e) {
-    if (e?.bounds != null) return e.bounds;
-    let t = el(e?.preset);
-    return null != t ? { aspectRatio: t } : null;
-}
-var ed = (((E = {}).TEXT = "text"), (E.IMAGE = "image"), E);
-let ec = { text: "#D53FAE", image: "#3F7FD5" },
-    eu = 5,
-    e_ = 1,
-    eE = { x: 0.5, y: 0.5 },
-    eA = 0,
-    eh = 15;
-function ef(e) {
-    let t = (((Math.round(e / eh) * eh) % 360) + 360) % 360;
-    return t > 180 ? t - 360 : t;
-}
-var eI = (((A = {}).NONE = "none"), (A.SMALL = "small"), (A.MEDIUM = "medium"), (A.LARGE = "large"), A);
-let ep = { none: 0, small: 1 / 16, medium: 1 / 8, large: 1 / 4 },
-    em = { fontSize: 0.06, color: "#FFFFFF", strokeWidth: "none", strokeColor: "#000000" },
-    eT = 0.015,
-    eg = 0.5,
-    eS = 2048,
-    eN = 0x2000000,
-    eC = 2097152,
-    eO = "image/webp",
-    eR = 0.92,
-    eL = ["png", "jpg", "jpeg", "webp"],
-    ey = ["image/png", "image/jpeg", "image/webp"],
-    eD = 0.35,
-    eb = 0.02,
-    ev = 2;
-function eP(e, t) {
-    return Math.max(eb, Math.min(eD, (0.5 * e) / t));
-}
-var eM = (((h = {}).NONE = "none"), (h.SMALL = "small"), (h.MEDIUM = "medium"), (h.LARGE = "large"), h);
-let eU = { none: 0, small: 0.02, medium: 0.05, large: 0.1 },
-    ew = 0.4,
-    eG = "none",
-    ex = "#000000";
-var ek = (((f = {}).CLIP = "clip"), (f.SCREENSHOT = "screenshot"), (f.VOICE_CLIP = "voice_clip"), f),
-    eF =
+var U = (((E = {}).TEXT = "text"), (E.IMAGE = "image"), E),
+    w = (((A = {}).NONE = "none"), (A.SMALL = "small"), (A.MEDIUM = "medium"), (A.LARGE = "large"), A),
+    G = (((h = {}).NONE = "none"), (h.SMALL = "small"), (h.MEDIUM = "medium"), (h.LARGE = "large"), h),
+    x = (((f = {}).CLIP = "clip"), (f.SCREENSHOT = "screenshot"), (f.VOICE_CLIP = "voice_clip"), f),
+    k =
         (((I = {}).UNCLASSIFIED = "unclassified"),
         (I.KILL = "kill"),
         (I.MULTIKILL = "multikill"),
@@ -229,3 +89,59 @@ var ek = (((f = {}).CLIP = "clip"), (f.SCREENSHOT = "screenshot"), (f.VOICE_CLIP
         (I.TREASURE = "treasure"),
         (I.OBJECTIVE_KILL = "objective_kill"),
         I);
+n.d(
+    t,
+    {},
+    {
+        $D: b,
+        A_: "killIds",
+        CN: 0x3c0000000,
+        EC: { none: 0, small: 0.02, medium: 0.05, large: 0.1 },
+        Ew: function (e) {
+            let t = (((15 * Math.round(e / 15)) % 360) + 360) % 360;
+            return t > 180 ? t - 360 : t;
+        },
+        Fv: g,
+        G$: ["png", "jpg", "jpeg", "webp"],
+        GU: C,
+        Gy: L,
+        Hz: G,
+        LX: T,
+        Me: U,
+        Mu: "clips_player",
+        P4: S,
+        QK: { fontSize: 0.06, color: "#FFFFFF", strokeWidth: "none", strokeColor: "#000000" },
+        QY: M,
+        Qw: function (e, t) {
+            return Math.max(0.02, Math.min(0.35, (0.5 * e) / t));
+        },
+        RC: v,
+        SC: ".autoclip-cache",
+        UY: w,
+        Vi: N,
+        _1: function (e) {
+            if (e?.bounds != null) return e.bounds;
+            let t = M(e?.preset);
+            return null != t ? { aspectRatio: t } : null;
+        },
+        _9: ["image/png", "image/jpeg", "image/webp"],
+        _S: { x: 0.5, y: 0.5 },
+        cM: (e) => `Clip - ${new Date(e).toLocaleString()}`,
+        gC: R,
+        k9: D,
+        l_: /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
+        mO: { none: 0, small: 1 / 16, medium: 1 / 8, large: 0.25 },
+        mY: { text: "#D53FAE", image: "#3F7FD5" },
+        nQ: x,
+        nm: "clips-gallery",
+        pZ: y,
+        pk: "#000000",
+        rD: 2097152,
+        rb: k,
+        sL: 0x2000000,
+        sc: /(NVIDIA GeForce (RTX (20|30|40|50).*))|(.*Radeon RX (57|58|59|6|7|9).*)/,
+        ut: O,
+        w6: "image/webp",
+        yz: P,
+    },
+);

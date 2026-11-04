@@ -1,7 +1,12 @@
-o.d(e, { A: () => s });
-var t = o(636537),
-    p = o(652215);
-let s = {
-    resolveFlag: (r) => t.Bo.post({ url: p.Rsh.MODERATOR_REPORT_CLOSE(r), body: {}, rejectWithError: !0 }),
-    reopenModReport: (r) => t.Bo.put({ url: p.Rsh.REPORT_TO_MOD_REOPEN(r), rejectWithError: !0 }),
-};
+var p = o(620632),
+    s = o(652215);
+o.d(
+    e,
+    {},
+    {
+        A: {
+            resolveFlag: (r) => p.Bo.post({ url: s.Rsh.MODERATOR_REPORT_CLOSE(r), body: {}, rejectWithError: !0 }),
+            reopenModReport: (r) => p.Bo.put({ url: s.Rsh.REPORT_TO_MOD_REOPEN(r), rejectWithError: !0 }),
+        },
+    },
+);

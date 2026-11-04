@@ -1,6 +1,5 @@
-n.d(t, { A: () => o, b: () => l });
-var i = n(702841),
-    r = n(236285),
+var i = n(164636),
+    r = n(121681),
     a = n(307731);
 let s = [];
 function l(e) {
@@ -10,6 +9,13 @@ function l(e) {
         newlyAddedEmojis: i !== a.EmojiIntention.REACTION ? t.getNewlyAddedEmoji(n) : s,
     };
 }
-function o(e, t) {
-    return (0, i.cf)([r.Ay], () => l({ emojiStoreInstance: r.Ay, guildId: e, pickerIntention: t }), [e, t]);
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e, t) {
+            return (0, i.cf)([r.Ay], () => l({ emojiStoreInstance: r.Ay, guildId: e, pickerIntention: t }), [e, t]);
+        },
+        b: l,
+    },
+);

@@ -1,8 +1,7 @@
 e.exports = {
-    kL: "container__28d4e",
-    qP: "cardBase__28d4e",
-    j3: "gameCard__28d4e cardBase__28d4e",
-    Su: "gameImage__28d4e",
-    gm: "addCard__28d4e cardBase__28d4e",
-    WA: "addIconWrapper__28d4e",
+    kL: "container_uUFOpe",
+    j3: "gameCard_uUFOpe cardBase_uUFOpe",
+    Su: "gameImage_uUFOpe",
+    gm: "addCard_uUFOpe cardBase_uUFOpe",
+    WA: "addIconWrapper_uUFOpe",
 };

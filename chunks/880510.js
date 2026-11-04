@@ -1,24 +1,23 @@
-n.d(t, { default: () => y });
 var l = n(477900),
     i = n(582128),
-    s = n(17928),
+    s = n(855986),
     a = n(189213),
-    o = n(193249),
+    o = n(143129),
     d = n(205513),
     r = n(452027),
     u = n(331322),
-    h = n(144228),
+    h = n(771871),
     g = n(827343),
-    p = n(635242),
+    p = n(368484),
     c = n(625841),
-    V = n(477653),
+    V = n(718197),
     x = n(824744),
     T = n(319437),
     A = n(652215),
     C = n(731854),
-    j = n(105292),
-    m = n(221851);
-class b extends i.PureComponent {
+    m = n(792996),
+    b = n(221851);
+class j extends i.PureComponent {
     handleAutoThresholdChange = (e) => {
         let { onThresholdChange: t, threshold: n } = this.props;
         t?.(n, e);
@@ -33,7 +32,7 @@ class b extends i.PureComponent {
     renderAutomaticVADToggle() {
         let { autoThreshold: e } = this.props;
         return (0, l.jsx)(o.d, {
-            label: j.intl.string(j.t.I1Zuq0),
+            label: m.intl.string(m.t.I1Zuq0),
             checked: e,
             onChange: this.handleAutoThresholdChange,
         });
@@ -45,15 +44,15 @@ class b extends i.PureComponent {
                 initialValue: t + 100,
                 onValueRender: this.handleValueRender,
                 onValueChange: this.handleSensitivityChange,
-                label: j.intl.string(j.t["sqUm+k"]),
+                label: m.intl.string(m.t["sqUm+k"]),
                 hideLabel: !0,
             });
     }
     render() {
         return (0, l.jsx)("div", {
-            className: m.SX,
+            className: b.SX,
             children: (0, l.jsxs)(r.D, {
-                label: j.intl.string(j.t["sqUm+k"]),
+                label: m.intl.string(m.t["sqUm+k"]),
                 role: "group",
                 children: [this.renderAutomaticVADToggle(), this.renderSlider()],
             }),
@@ -67,7 +66,7 @@ function M(e) {
             inputVolume: a,
             outputVolume: o,
             inputMode: T,
-            shortcut: m,
+            shortcut: b,
             vadThreshold: M,
             vadAutoThreshold: y,
             delay: O,
@@ -80,9 +79,9 @@ function M(e) {
             vadAutoThreshold: V.Ay.getModeOptions(n).autoThreshold,
             delay: V.Ay.getModeOptions(n).delay,
         })),
-        I = [
-            { value: A.TBI.VOICE_ACTIVITY, name: j.intl.string(j.t.cHCEOJ) },
-            { value: A.TBI.PUSH_TO_TALK, name: j.intl.string(j.t.Q8gkVL) },
+        S = [
+            { value: A.TBI.VOICE_ACTIVITY, name: m.intl.string(m.t.cHCEOJ) },
+            { value: A.TBI.PUSH_TO_TALK, name: m.intl.string(m.t.Q8gkVL) },
         ];
     return (
         (t =
@@ -91,22 +90,22 @@ function M(e) {
                       gap: 20,
                       children: [
                           (0, l.jsx)(r.D, {
-                              label: j.intl.string(j.t.YkDjVM),
+                              label: m.intl.string(m.t.YkDjVM),
                               children: (0, l.jsx)(p.A, {
-                                  defaultValue: m,
+                                  defaultValue: b,
                                   onChange: (e) => g.default.setMode(T, { shortcut: e }, n),
                               }),
                           }),
                           (0, l.jsx)(d.G, {
-                              label: j.intl.string(j.t.y0ShVt),
+                              label: m.intl.string(m.t.y0ShVt),
                               initialValue: O,
                               onValueChange: (e) => g.default.setMode(T, { delay: e }, n),
                               onValueRender: (e) => (e >= 1e3 ? ((e /= 1e3), `${e.toFixed(2)}s`) : `${e.toFixed(0)}ms`),
-                              maxValue: A.IjB,
+                              maxValue: 2e3,
                           }),
                       ],
                   })
-                : (0, l.jsx)(b, {
+                : (0, l.jsx)(j, {
                       speaking: i,
                       inputMode: T,
                       threshold: M,
@@ -117,30 +116,30 @@ function M(e) {
             gap: 20,
             children: [
                 (0, l.jsx)(c.U, {
-                    label: j.intl.string(j.t.hHMYbb),
+                    label: m.intl.string(m.t.hHMYbb),
                     deviceType: C.oh.AUDIO_INPUT,
                     location: "VoiceSettingsModal",
                 }),
                 (0, l.jsx)(d.G, {
-                    label: j.intl.string(j.t.OX2Bnr),
+                    label: m.intl.string(m.t.OX2Bnr),
                     initialValue: (0, x.M)(a),
                     asValueChanges: (e) => g.default.setInputVolume((0, x.w)(e)),
                 }),
                 (0, l.jsx)(c.U, {
-                    label: j.intl.string(j.t.dl18zb),
+                    label: m.intl.string(m.t.dl18zb),
                     deviceType: C.oh.AUDIO_OUTPUT,
                     location: "VoiceSettingsModal",
                 }),
                 (0, l.jsx)(d.G, {
-                    label: j.intl.string(j.t.eATD2B),
+                    label: m.intl.string(m.t.eATD2B),
                     initialValue: (0, x.M)(o),
                     maxValue: 200,
                     asValueChanges: (e) => g.default.setOutputVolume((0, x.w)(e)),
                 }),
                 (0, l.jsx)(h.z, {
-                    label: j.intl.string(j.t["pS+K2L"]),
+                    label: m.intl.string(m.t["pS+K2L"]),
                     onChange: (e) => g.default.setMode(e, {}, n),
-                    options: I,
+                    options: S,
                     value: T,
                 }),
                 t,
@@ -148,18 +147,24 @@ function M(e) {
         })
     );
 }
-function y(e) {
-    return (
-        (0, T.A)(() => {
-            null != A.QCW && e.onClose();
-        }),
-        (0, l.jsx)(a.a, {
-            title: j.intl.string(j.t.NiTd0e),
-            subtitle: e.subtitle,
-            actions: void 0,
-            transitionState: e.transitionState,
-            onClose: e.onClose,
-            children: (0, l.jsx)(M, { mediaEngineContext: e.mediaEngineContext ?? C.x.DEFAULT }),
-        })
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        default: function (e) {
+            return (
+                (0, T.A)(() => {
+                    null != A.QCW && e.onClose();
+                }),
+                (0, l.jsx)(a.a, {
+                    title: m.intl.string(m.t.NiTd0e),
+                    subtitle: e.subtitle,
+                    actions: void 0,
+                    transitionState: e.transitionState,
+                    onClose: e.onClose,
+                    children: (0, l.jsx)(M, { mediaEngineContext: e.mediaEngineContext ?? C.x.DEFAULT }),
+                })
+            );
+        },
+    },
+);

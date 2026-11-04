@@ -1,29 +1,34 @@
-n.d(i, { default: () => l });
 var s = n(477900);
 n(582128);
 var a = n(189213),
-    r = n(730852),
+    r = n(597798),
     c = n(849736),
-    e = n(105292);
-function l(t) {
-    let { channel: i, transitionState: n, onClose: l } = t;
-    function o() {
-        (r.default.disconnect(), l());
-    }
-    return (0, s.jsx)(a.a, {
-        transitionState: n,
-        title: e.intl.string(e.t.pADdJu),
-        subtitle: e.intl.string(e.t.mT7jwN),
-        onClose: l,
-        actions: [
-            { text: e.intl.string(e.t.xTwqz2), onClick: o, variant: "secondary" },
-            {
-                text: e.intl.string(e.t["sBP/1s"]),
-                onClick: function () {
-                    ((0, c.OE)(i), o());
-                },
-                variant: "critical-primary",
-            },
-        ],
-    });
-}
+    e = n(792996);
+n.d(
+    i,
+    {},
+    {
+        default: function (t) {
+            let { channel: i, transitionState: n, onClose: l } = t;
+            function o() {
+                (r.default.disconnect(), l());
+            }
+            return (0, s.jsx)(a.a, {
+                transitionState: n,
+                title: e.intl.string(e.t.pADdJu),
+                subtitle: e.intl.string(e.t.mT7jwN),
+                onClose: l,
+                actions: [
+                    { text: e.intl.string(e.t.xTwqz2), onClick: o, variant: "secondary" },
+                    {
+                        text: e.intl.string(e.t["sBP/1s"]),
+                        onClick: function () {
+                            ((0, c.OE)(i), o());
+                        },
+                        variant: "critical-primary",
+                    },
+                ],
+            });
+        },
+    },
+);

@@ -1,0 +1,103 @@
+.headerContainer_bPh85R {
+    background: var(--background-gradient-chat, var(--background-base-lowest));
+    padding-bottom: 0;
+    padding-inline-end: var(--space-12);
+    padding-top: 0;
+    position: sticky;
+    top: 0
+}
+
+.logo_bPh85R {
+    height: 32px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 75px
+}
+
+.titleContainer_bPh85R {
+    cursor: pointer;
+    gap: 6px
+}
+
+.titleContainer_bPh85R,
+.titles_bPh85R {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.titles_bPh85R {
+    gap: 24px;
+    height: 100%;
+    margin-inline-start: 44px
+}
+
+.titleWrapper_bPh85R {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center
+}
+
+.pageTitleContainer_bPh85R {
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 100%
+}
+
+.pageTitleContainer_bPh85R:hover {
+    border-bottom: 2px solid var(--brand-500);
+    padding-top: 2px
+}
+
+.pageTitleContainer_bPh85R.selectedPageIndicator_bPh85R {
+    border-bottom: 2px solid var(--icon-strong);
+    padding-top: 2px
+}
+
+.alignedRightContent_bPh85R {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-inline-start: auto;
+    z-index: 1
+}
+
+.iconButton_bPh85R {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    transition: background-color .1s ease
+}
+
+.iconButton_bPh85R:active,
+.iconButton_bPh85R:hover {
+    background-color: var(--background-mod-normal)
+}
+
+.wishlistButton_bPh85R {
+    width: 32px
+}
+
+.devToolsButton_bPh85R,
+.learnMoreButton_bPh85R {
+    padding: 0 var(--space-12)
+}
+
+.devToolsButton_bPh85R {
+    gap: var(--space-8)
+}
+
+@media (max-width:948px) {
+    .logo_bPh85R {
+        display: none
+    }
+}
+
+/*# sourceMappingURL=6f14b7f87068ea13.css.map*/

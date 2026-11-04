@@ -1,16 +1,15 @@
-n.d(t, { A: () => P });
 var i = n(635377),
     r = n.n(i),
-    a = n(17928),
+    a = n(855986),
     s = n(73153),
-    l = n(320095),
-    o = n(280450),
+    l = n(432005),
+    o = n(46653),
     d = n(734057),
     c = n(994500),
     u = n(309010),
     _ = n(287809),
     E = n(403362),
-    A = n(935208),
+    A = n(811091),
     h = n(624044),
     f = n(161204),
     I = n(575279);
@@ -212,7 +211,7 @@ let P = new v(s.h, {
                 let e = (function (e, t) {
                     if (null == t) return 0;
                     let n = e.findIndex((e) => A.default.compare(e.startMessageId, t) >= 0);
-                    return (-1 === n && (n = e.length), Math.max(0, Math.min(n - Math.floor(25), e.length - 50)));
+                    return (-1 === n && (n = e.length), Math.max(0, Math.min(n - 25, e.length - 50)));
                 })(_, s);
                 (e > 0 && (I = null), e + 50 < _.length && (m = null), (_ = _.slice(e, e + 50)));
             }
@@ -316,3 +315,4 @@ let P = new v(s.h, {
         (p.reset(), m.clear(), g.clear());
     },
 });
+n.d(t, {}, { A: P });

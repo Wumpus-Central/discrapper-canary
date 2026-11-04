@@ -1,0 +1,165 @@
+.role_xL50-d {
+    align-items: center;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    display: flex;
+    min-height: 24px;
+    padding-block: 0;
+    padding-inline-end: 8px;
+    padding-inline-start: 2px
+}
+
+.custom-user-profile-theme .role_xL50-d {
+    border-color: var(--user-profile-border)
+}
+
+.roleDot_xL50-d {
+    font-size: 1.34em
+}
+
+.connectionRoleIcon_xL50-d {
+    color: var(--icon-default);
+    margin-inline-end: 4px
+}
+
+.roleIcon_xL50-d {
+    display: block;
+    line-height: 0;
+    margin-inline-start: 4px
+}
+
+.roleTag_xL50-d {
+    border-radius: var(--radius-sm);
+    max-width: 100%;
+    outline: none
+}
+
+.hasRemoveButton_xL50-d {
+    padding-inline-end: 0
+}
+
+.removeButton_xL50-d {
+    align-items: center;
+    background: transparent;
+    border-radius: var(--radius-xs);
+    box-sizing: border-box;
+    color: var(--icon-subtle);
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    height: 24px;
+    justify-content: center;
+    margin-block: -1px;
+    margin-inline-end: -1px;
+    padding: 0;
+    transition: color 50ms ease-in;
+    width: 24px
+}
+
+.removeButton_xL50-d:hover {
+    color: var(--icon-strong);
+    transition: color .15s ease-out
+}
+
+.roleListContainer_xL50-d {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-block-start: 2px;
+    position: relative
+}
+
+.listContentsInteractive_xL50-d {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    max-width: 100%
+}
+
+.listContentsStatic_xL50-d {
+    display: contents
+}
+
+.roleName_xL50-d,
+.roleNameOverflow_xL50-d {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.pillButton_xL50-d {
+    background: transparent;
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    min-width: 24px;
+    padding-inline: 4px;
+    transition: background 50ms ease-in, color 50ms ease-in
+}
+
+.pillButton_xL50-d:hover {
+    background: var(--background-mod-subtle);
+    color: var(--interactive-text-hover);
+    transition: background .15s ease-out, color .15s ease-out
+}
+
+.expandButton_xL50-d {
+    padding-inline-end: 8px;
+    padding-inline-start: 6px
+}
+
+.addButton_xL50-d {
+    align-items: center;
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    display: flex;
+    gap: 2px;
+    height: 24px;
+    justify-content: center;
+    min-width: 24px;
+    transition: color 50ms ease-in
+}
+
+.addButton_xL50-d:hover {
+    color: var(--interactive-text-hover);
+    transition: color .15s ease-out
+}
+
+.addButton_xL50-d.showLabel_xL50-d {
+    padding-inline-end: 4px
+}
+
+.enable-forced-colors .role_xL50-d {
+    border: 1px solid CanvasText
+}
+
+.enable-forced-colors .removeButton_xL50-d {
+    background-color: ButtonFace;
+    border: 1px solid CanvasText;
+    border-inline-start: none;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    color: ButtonText;
+    margin-inline-start: 4px
+}
+
+.enable-forced-colors .removeButton_xL50-d:hover {
+    color: ButtonText
+}
+
+.enable-forced-colors .pillButton_xL50-d,
+.enable-forced-colors .pillButton_xL50-d:hover {
+    background-color: ButtonFace;
+    border: 1px solid ButtonText;
+    color: ButtonText
+}
+
+.enable-forced-colors .addButton_xL50-d,
+.enable-forced-colors .addButton_xL50-d:hover {
+    background-color: ButtonFace;
+    border: 1px solid ButtonText;
+    color: ButtonText
+}
+
+/*# sourceMappingURL=f24bc39f1b4ffc48.css.map*/

@@ -1,0 +1,35 @@
+.connectedAccountVanityMetadata_VlBwYX {
+    margin-top: 4px
+}
+
+.connectedAccountVanityMetadata_VlBwYX>strong {
+    font-weight: inherit
+}
+
+.connectedAccountVanityMetadata_VlBwYX:not(:last-of-type) {
+    margin-inline-end: 8px
+}
+
+.connectedAccountVanityMetadataTag_VlBwYX {
+    background-color: var(--background-mod-subtle);
+    border-radius: 12px;
+    padding: 1px 8px
+}
+
+.connectedAccountVanityMetadataItem_VlBwYX {
+    align-items: center;
+    display: flex
+}
+
+.connectedAccountVanityMetadataItemIcon_VlBwYX {
+    height: 18px;
+    margin-inline-end: 4px;
+    width: 18px
+}
+
+.paypalVerifiedTag_VlBwYX {
+    background-color: var(--status-positive-background);
+    color: var(--white) !important
+}
+
+/*# sourceMappingURL=2be8e5626a51f883.css.map*/

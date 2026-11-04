@@ -1,4 +1,3 @@
-e.d(n, { A: () => g });
 var l = e(477900);
 e(582128);
 var i = e(889137),
@@ -22,32 +21,38 @@ function f(t) {
     let { entry: n } = t;
     return (0, l.jsx)(l.Fragment, { children: [s.Y8].map((t, e) => (0, l.jsx)(t, { entry: n }, `entry-${e}`)) });
 }
-function g(t) {
-    let { user: n, activity: e, className: g } = t,
-        m = (0, o.A)({ activity: e, user: n }),
-        p = (0, c.Cy)(e)
-            ? []
-            : e.type === a.$.PLAYING
-              ? [u.cy, u.QA]
-              : e.type === a.$.LISTENING
-                ? [u.QA]
-                : e.type === a.$.WATCHING
-                  ? [u.QA, u.Rq]
-                  : e.type === a.$.COMPETING
-                    ? [u.QA]
-                    : [];
-    return 0 === p.length
-        ? null
-        : (0, l.jsxs)(s.mG, {
-              location: s.N5.USER_PROFILE,
-              className: g,
-              children: [
-                  p.map((t, n) => (0, l.jsx)(t, { activity: e }, `activity-${n}`)),
-                  (0, i.YW)(m)
-                      .when(r.qQ, (t) => (0, l.jsx)(d, { entry: t }))
-                      .when(r.UQ, (t) => (0, l.jsx)(A, { entry: t }))
-                      .when(r.p6, (t) => (0, l.jsx)(f, { entry: t }))
-                      .otherwise(() => null),
-              ],
-          });
-}
+e.d(
+    n,
+    {},
+    {
+        A: function (t) {
+            let { user: n, activity: e, className: g } = t,
+                m = (0, o.A)({ activity: e, user: n }),
+                p = (0, c.Cy)(e)
+                    ? []
+                    : e.type === a.$.PLAYING
+                      ? [u.cy, u.QA]
+                      : e.type === a.$.LISTENING
+                        ? [u.QA]
+                        : e.type === a.$.WATCHING
+                          ? [u.QA, u.Rq]
+                          : e.type === a.$.COMPETING
+                            ? [u.QA]
+                            : [];
+            return 0 === p.length
+                ? null
+                : (0, l.jsxs)(s.mG, {
+                      location: s.N5.USER_PROFILE,
+                      className: g,
+                      children: [
+                          p.map((t, n) => (0, l.jsx)(t, { activity: e }, `activity-${n}`)),
+                          (0, i.YW)(m)
+                              .when(r.qQ, (t) => (0, l.jsx)(d, { entry: t }))
+                              .when(r.UQ, (t) => (0, l.jsx)(A, { entry: t }))
+                              .when(r.p6, (t) => (0, l.jsx)(f, { entry: t }))
+                              .otherwise(() => null),
+                      ],
+                  });
+        },
+    },
+);

@@ -1,4 +1,3 @@
-n.d(t, { M: () => a });
 var i = n(136722),
     r = n(652215);
 let a = i.kg(
@@ -10,3 +9,4 @@ let a = i.kg(
     r.xBc.MANAGE_ROLES,
     r.xBc.MANAGE_NICKNAMES,
 );
+n.d(t, {}, { M: a });

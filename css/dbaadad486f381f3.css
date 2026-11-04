@@ -1,0 +1,358 @@
+.container_x_EFs5 {
+    gap: 32px;
+    padding: 24px
+}
+
+.container_x_EFs5,
+.section_x_EFs5 {
+    display: flex;
+    flex-direction: column
+}
+
+.section_x_EFs5 {
+    gap: var(--space-16)
+}
+
+.section_x_EFs5:not(:last-child) {
+    border-bottom: 1px solid var(--border-muted)
+}
+
+.inputSection_x_EFs5 {
+    margin-bottom: 24px
+}
+
+.inputLabel_x_EFs5 {
+    margin-bottom: 8px
+}
+
+.previewContainer_x_EFs5 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16)
+}
+
+.previewProductCardContainer_x_EFs5 {
+    height: 246px
+}
+
+.placeholder_x_EFs5 {
+    border: 2px dashed var(--border-muted);
+    border-radius: 8px;
+    padding: 48px;
+    text-align: center
+}
+
+.errorText_x_EFs5 {
+    color: var(--text-feedback-critical)
+}
+
+.errorText_x_EFs5,
+.successText_x_EFs5 {
+    font-weight: 600;
+    margin-top: 4px
+}
+
+.successText_x_EFs5 {
+    color: var(--green-300)
+}
+
+.mutedText_x_EFs5 {
+    color: var(--text-subtle);
+    margin-top: 4px
+}
+
+.loadingText_x_EFs5 {
+    color: var(--text-strong);
+    margin-top: 4px
+}
+
+.wrapper_Iutnam {
+    flex: 1;
+    padding: var(--space-16)
+}
+
+.wrapper_Iutnam * {
+    box-sizing: border-box
+}
+
+.notice_Iutnam {
+    margin-top: var(--space-16)
+}
+
+.noticeBody_Iutnam {
+    gap: var(--space-8)
+}
+
+.content_Iutnam,
+.noticeBody_Iutnam {
+    display: flex;
+    flex-direction: column
+}
+
+.content_Iutnam {
+    padding-top: var(--space-16)
+}
+
+.nav_Iutnam {
+    flex-direction: row;
+    gap: var(--space-12)
+}
+
+.banner_Iutnam,
+.nav_Iutnam {
+    align-items: center;
+    display: flex
+}
+
+.banner_Iutnam {
+    background-position: 100%;
+    background-size: cover;
+    cursor: pointer;
+    height: 64px;
+    margin-top: 12px;
+    padding: 12px;
+    width: 100%
+}
+
+.pfxBanner_Iutnam {
+    background-image: url("https://cdn.discordapp.com/assets/content/100926ee18a28a73bf09b6dfeb3406b2c669808ff8cd820e4af6e93c6a5b184a.png")
+}
+
+.framesBanner_Iutnam {
+    background-image: url("https://cdn.discordapp.com/assets/content/e098caec36b45567537cf26623dd2da2ad2ede962c9aaaa6a4dda517b897160e.png")
+}
+
+.nameplateBanner_Iutnam {
+    background-image: url("https://cdn.discordapp.com/assets/content/f03942e6b99f99660e054f531489b8bf1ccc50d28242e893a8569929eee26fa7.png")
+}
+
+.bundlesBanner_Iutnam {
+    background-image: url("https://cdn.discordapp.com/assets/content/dec663d6f1a34d2c384a7c02d97a2ad2526a0cca19cb894ff9681ecf82b9c7b5.png")
+}
+
+.locatorEntry_VnvE6k {
+    background: var(--background-base-lower);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px
+}
+
+.entryAuthor_VnvE6k {
+    cursor: pointer;
+    padding: 4px 0
+}
+
+.content_NdkRGN {
+    gap: 32px;
+    height: 100%;
+    padding: 16px 8px;
+    width: 100%
+}
+
+.content_NdkRGN,
+.refreshContainer_NdkRGN {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column
+}
+
+.refreshContainer_NdkRGN {
+    padding: 8px
+}
+
+.cell_NdkRGN {
+    padding: 0 8px
+}
+
+.cellType_NdkRGN {
+    width: 40%
+}
+
+.cellCount_NdkRGN {
+    width: 20%
+}
+
+.container_OfPEKW {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    padding: var(--space-16)
+}
+
+.panel_UYsof2 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0
+}
+
+.tabBar_UYsof2 {
+    background: var(--background-base-lower);
+    border-bottom: 1px solid var(--background-base-lowest);
+    display: flex;
+    flex-shrink: 0
+}
+
+.tabItem_UYsof2 {
+    border-bottom: 2px solid transparent;
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    padding: 6px 12px;
+    white-space: nowrap
+}
+
+.tabItem_UYsof2:hover {
+    border-bottom-color: var(--brand-500)
+}
+
+.tabItemSelected_UYsof2 {
+    border-bottom-color: var(--control-brand-foreground)
+}
+
+.tabItemSelected_UYsof2:hover {
+    border-bottom-color: var(--control-brand-foreground)
+}
+
+.tabContent_UYsof2 {
+    flex: 1;
+    gap: var(--space-16);
+    min-height: 0;
+    overflow-y: auto;
+    padding: 12px
+}
+
+.section_UYsof2,
+.tabContent_UYsof2 {
+    display: flex;
+    flex-direction: column
+}
+
+.section_UYsof2 {
+    gap: var(--space-8)
+}
+
+.gamesSection_UYsof2 {
+    flex-grow: 1
+}
+
+.card_UYsof2 {
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: var(--space-12)
+}
+
+.card_UYsof2>.callLogAppRow_UYsof2:not(:last-child) {
+    border-bottom: 1px solid var(--border-strong);
+    padding-bottom: var(--space-4)
+}
+
+.cardHeader_UYsof2 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.appIcon_UYsof2 {
+    border-radius: var(--radius-xs);
+    flex-shrink: 0;
+    height: 32px;
+    width: 32px
+}
+
+.appInfo_UYsof2 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0
+}
+
+.callLogHeader_UYsof2 {
+    align-items: center
+}
+
+.callLogEntryHeader_UYsof2,
+.callLogHeader_UYsof2 {
+    display: flex;
+    justify-content: space-between
+}
+
+.callLogEntryHeader_UYsof2 {
+    align-items: baseline
+}
+
+.callLogAppRow_UYsof2 {
+    align-items: center;
+    display: flex;
+    font-size: 11px;
+    gap: var(--space-8)
+}
+
+.callLogAppIcon_UYsof2 {
+    border-radius: var(--radius-xs);
+    flex-shrink: 0;
+    height: 20px;
+    width: 20px
+}
+
+.callLogAppName_UYsof2 {
+    flex: 1;
+    font-weight: var(--font-weight-semibold);
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.eligible_UYsof2 {
+    color: var(--text-feedback-positive)
+}
+
+.excluded_UYsof2 {
+    color: var(--text-feedback-warning)
+}
+
+.content_j76hlY {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    height: 100%;
+    padding: 16px 8px;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+    width: 100%
+}
+
+.cell_j76hlY {
+    padding: 0 8px
+}
+
+.channelName_j76hlY {
+    width: 40%
+}
+
+.loadState_j76hlY {
+    width: 20%
+}
+
+.channelId_j76hlY {
+    flex: 1
+}
+
+.container_SLyO8C {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    padding: var(--space-24)
+}
+
+/*# sourceMappingURL=dbaadad486f381f3.css.map*/

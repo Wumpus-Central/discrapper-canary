@@ -1,0 +1,42 @@
+n.d(t, {
+    F2: () => p,
+    P$: () => d,
+    WZ: () => c,
+    e: () => o,
+    G1: () => I,
+    pj: () => l,
+    U4: () => f,
+    fG: () => E,
+    yg: () => h,
+    PH: () => A,
+    ws: () => _,
+    $x: () => u,
+});
+var i,
+    r,
+    a,
+    s = (((i = {})[(i.StreamNotificationsGuildMaxSize = 50)] = "StreamNotificationsGuildMaxSize"), i),
+    l =
+        (((r = {}).BLACK_SCREEN = "BLACK_SCREEN"),
+        (r.BLURRY = "BLURRY"),
+        (r.LAGGING = "LAGGING"),
+        (r.OUT_OF_SYNC = "OUT_OF_SYNC"),
+        (r.AUDIO_MISSING = "AUDIO_MISSING"),
+        (r.AUDIO_POOR = "AUDIO_POOR"),
+        (r.GAME_ISSUE = "GAME_ISSUE"),
+        (r.STREAM_STOPPED = "STREAM_STOPPED"),
+        (r.NO_ISSUE = "NO_ISSUE"),
+        (r.OTHER = "OTHER"),
+        (r.VIBES_OFF = "VIBES_OFF"),
+        r);
+let o = ">=22.0.0",
+    d = ">=22.0.0",
+    c = ">=24.0.0",
+    u = ">=10.0.17763",
+    _ = "<10.0.22000",
+    E = ">=10.0.26100",
+    A = ">=10.0.26100",
+    h = ">=10.0.22000";
+var f = (((a = {}).GUILD = "guild"), (a.CALL = "call"), a);
+let I = s.StreamNotificationsGuildMaxSize,
+    p = new Set(["chrome.exe", "opera.exe", "firefox.exe", "brave.exe", "msedge.exe"]);

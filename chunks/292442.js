@@ -1,4 +1,3 @@
-s.d(i, { tH: () => n });
 var t = s(582128);
 let r = (0, t.createContext)(null),
     a = { didCatch: !1, error: null };
@@ -56,3 +55,4 @@ class n extends t.Component {
         );
     }
 }
+s.d(i, {}, { tH: n });

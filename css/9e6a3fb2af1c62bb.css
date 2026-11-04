@@ -1,0 +1,20 @@
+.sidebarScrollable_EDKX0U {
+    bottom: 0;
+    position: absolute;
+    top: 0;
+    width: var(--custom-layout-sidebar-width)
+}
+
+.sidebarScrollable_EDKX0U+.content_EDKX0U {
+    margin-inline-start: var(--custom-layout-sidebar-width);
+    max-width: 468px
+}
+
+.scroller_EDKX0U {
+    background-color: var(--background-base-low);
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+/*# sourceMappingURL=9e6a3fb2af1c62bb.css.map*/

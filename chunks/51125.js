@@ -1,1 +1,1 @@
-c.exports = { zc: "iconContainer__98cf7", kl: "filledIcon__98cf7", iz: "uploadLabel__98cf7" };
+i.exports = { zc: "iconContainer_YUKqn_", kl: "filledIcon_YUKqn_", iz: "uploadLabel_YUKqn_" };

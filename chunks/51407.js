@@ -1,7 +1,7 @@
 t.exports = {
-    pQ: "connectedAccountVanityMetadata_fffe42",
-    RB: "connectedAccountVanityMetadataTag_fffe42",
-    uR: "connectedAccountVanityMetadataItem_fffe42",
-    pv: "connectedAccountVanityMetadataItemIcon_fffe42",
-    wI: "paypalVerifiedTag_fffe42",
+    pQ: "connectedAccountVanityMetadata_VlBwYX",
+    RB: "connectedAccountVanityMetadataTag_VlBwYX",
+    uR: "connectedAccountVanityMetadataItem_VlBwYX",
+    pv: "connectedAccountVanityMetadataItemIcon_VlBwYX",
+    wI: "paypalVerifiedTag_VlBwYX",
 };

@@ -1,17 +1,7 @@
-n.d(t, {
-    DisableCommunicationDuration: () => l,
-    MO: () => c,
-    Rv: () => _,
-    aZ: () => E,
-    getFriendlyDurationString: () => o,
-    hl: () => A,
-    hs: () => u,
-    ny: () => d,
-});
 var i,
     r = n(975571),
     a = n(652215),
-    s = n(105292),
+    s = n(792996),
     l =
         (((i = {})[(i.DURATION_60_SEC = 60)] = "DURATION_60_SEC"),
         (i[(i.DURATION_5_MIN = 300)] = "DURATION_5_MIN"),
@@ -38,15 +28,23 @@ function o(e) {
             return;
     }
 }
-let d = () =>
-        Object.keys(l)
-            .filter((e) => isNaN(Number(e)))
-            .map((e) => {
-                let t = o(l[e]) ?? "";
-                return { id: e, label: t, value: l[e] };
-            }),
-    c = r.A.getArticleURL(a.MVz.DISABLE_GUILD_COMMUNICATION),
-    u = "GuildCommunicationDisabledDismissedGuilds",
-    _ = "Set Communication Disabled Modal",
-    E = "Clear Communication Disabled Modal",
-    A = 512;
+let d = r.A.getArticleURL(a.MVz.DISABLE_GUILD_COMMUNICATION);
+n.d(
+    t,
+    {},
+    {
+        DisableCommunicationDuration: l,
+        MO: d,
+        Rv: "Set Communication Disabled Modal",
+        aZ: "Clear Communication Disabled Modal",
+        getFriendlyDurationString: o,
+        hs: "GuildCommunicationDisabledDismissedGuilds",
+        ny: () =>
+            Object.keys(l)
+                .filter((e) => isNaN(Number(e)))
+                .map((e) => {
+                    let t = o(l[e]) ?? "";
+                    return { id: e, label: t, value: l[e] };
+                }),
+    },
+);

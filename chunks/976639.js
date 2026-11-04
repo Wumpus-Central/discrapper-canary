@@ -1,11 +1,11 @@
-(n.d(t, { A: () => T }), n(938796));
+n(938796);
 var i = n(477900);
 n(582128);
 var r = n(665260),
     a = n(192308),
     s = n(439372),
     l = n(164956),
-    o = n(280450),
+    o = n(46653),
     d = n(734057),
     c = n(696451),
     u = n(967198),
@@ -40,13 +40,13 @@ class m extends s.A {
             this.onboardingCompleteGuilds.add(l);
             let e = E.h.getNewMemberActions(l)?.length ?? 0;
             if (0 === e) return;
-            (0, a.openModalLazy)(async () => {
+            (0, a.mM)(async () => {
                 let { default: t } = await Promise.all([
-                    n.e("243852"),
-                    n.e("645499"),
-                    n.e("858514"),
-                    n.e("741678"),
-                    n.e("663893"),
+                    n.e(243852),
+                    n.e(645499),
+                    n.e(858514),
+                    n.e(741678),
+                    n.e(663893),
                 ]).then(n.bind(n, 455796));
                 return (n) => (0, i.jsx)(t, { ...n, initialPercent: (e - 1) / e, numActions: e });
             });
@@ -107,3 +107,4 @@ class m extends s.A {
     };
 }
 let T = new m();
+n.d(t, {}, { A: T });

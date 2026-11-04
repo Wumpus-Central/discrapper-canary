@@ -1,4 +1,3 @@
-n.d(t, { u: () => r });
 var i,
     r =
         (((i = {})[(i.GIFT_INVENTORY_SETTINGS_BADGE = 0)] = "GIFT_INVENTORY_SETTINGS_BADGE"),
@@ -82,3 +81,4 @@ var i,
         (i[(i.DISPLAY_NAME_STYLES_SETTINGS = 78)] = "DISPLAY_NAME_STYLES_SETTINGS"),
         (i[(i.QUEST_HOME_HERO_BANNER = 79)] = "QUEST_HOME_HERO_BANNER"),
         i);
+n.d(t, {}, { u: r });

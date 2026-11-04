@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => E, _c: () => _, go: () => c, vF: () => u }), n(938796), n(321073));
+(n(938796), n(321073));
 var i = n(485845),
     r = n(665260),
     a = n(315069),
@@ -45,10 +45,7 @@ class u extends a.A {
         (super(), (this.message = new c(e.message)), (this.moderatorReport = e.moderator_report ?? null));
     }
 }
-function _(e) {
-    return (0, r.Lt)(e.flags, d.pr7.IS_COMPONENTS_V2);
-}
-let E = class extends c {
+let _ = class extends c {
     id;
     channel_id;
     author;
@@ -309,3 +306,15 @@ let E = class extends c {
         return this.id === this.channel_id && e.isForumPost();
     }
 };
+n.d(
+    t,
+    {},
+    {
+        Ay: _,
+        _c: function (e) {
+            return (0, r.Lt)(e.flags, d.pr7.IS_COMPONENTS_V2);
+        },
+        go: c,
+        vF: u,
+    },
+);

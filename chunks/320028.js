@@ -1,2 +1,1 @@
-n.d(t, { f: () => i });
-let i = "Captcha";
+n.d(t, {}, { f: "Captcha" });

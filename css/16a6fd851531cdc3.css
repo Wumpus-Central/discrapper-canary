@@ -1,0 +1,90 @@
+.icon_DvUIKH {
+    transform: translateY(3px)
+}
+
+.header_DvUIKH {
+    margin-bottom: 8px;
+    margin-top: 20px
+}
+
+.updatedForm_DvUIKH {
+    margin-top: 24px
+}
+
+.checklistIcon_DvUIKH {
+    margin-top: 1px
+}
+
+.checklistDescription_DvUIKH {
+    padding-inline-start: calc(var(--icon-size-sm) + var(--space-8))
+}
+
+.roleRow_DvUIKH {
+    align-items: center;
+    background: var(--interactive-background-selected);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    margin-inline-start: 4px;
+    padding-block: 4px;
+    padding-inline: 5px 6px
+}
+
+.roleDot_DvUIKH {
+    margin-inline-end: 4px
+}
+
+.roleName_DvUIKH {
+    align-self: baseline
+}
+
+.table_DvUIKH {
+    gap: 8px;
+    margin-top: 24px
+}
+
+.table_DvUIKH,
+.tableContainer_DvUIKH {
+    display: flex;
+    flex-direction: column
+}
+
+.tableContainer_DvUIKH {
+    background-color: var(--background-base-lower);
+    border-radius: 4px;
+    padding: 16px 20px
+}
+
+.tableHeader_DvUIKH {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    text-transform: none
+}
+
+.permissionsTable_DvUIKH {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 32px;
+    margin-top: 8px;
+    row-gap: 8px
+}
+
+.permissionRow_DvUIKH {
+    display: flex
+}
+
+.bullet_DvUIKH {
+    align-self: center;
+    background-color: var(--background-mod-muted);
+    border-radius: 50%;
+    height: 6px;
+    margin-inline-end: 8px;
+    width: 6px
+}
+
+.bulletWarning_DvUIKH {
+    background-color: var(--status-warning);
+    box-shadow: 0 0 4px rgba(250, 166, 26, .4)
+}
+
+/*# sourceMappingURL=16a6fd851531cdc3.css.map*/

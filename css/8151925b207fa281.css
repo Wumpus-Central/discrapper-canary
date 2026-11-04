@@ -1,0 +1,46 @@
+.ctaButtons_lhBl94 {
+    align-items: end;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.cta_lhBl94 {
+    flex: 1;
+    margin-top: 12px
+}
+
+.copyIcon_lhBl94 {
+    margin-inline-start: 8px
+}
+
+.iconButtonLarge_lhBl94 {
+    align-items: center;
+    background-color: var(--interactive-background-hover);
+    display: flex;
+    flex: 1 0 0;
+    height: 32px;
+    justify-content: center;
+    padding: 8px
+}
+
+.iconButtonLarge_lhBl94:hover {
+    background-color: var(--background-mod-subtle)
+}
+
+.iconButton_lhBl94 {
+    background-color: var(--interactive-background-hover);
+    padding: 8px
+}
+
+.iconButton_lhBl94:hover {
+    background-color: var(--background-mod-subtle)
+}
+
+.iconButtonInner_lhBl94 {
+    align-items: center;
+    color: var(--interactive-text-default);
+    display: flex
+}
+
+/*# sourceMappingURL=8151925b207fa281.css.map*/

@@ -1,1 +1,1 @@
-e.exports = { I: "pill__04ebc" };
+e.exports = { I: "pill_PW_tfH" };

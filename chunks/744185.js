@@ -1,22 +1,28 @@
-(i.r(e), i.d(e, { default: () => u }));
+i.r(e);
 var n = i(477900),
     l = i(503698),
     s = i.n(l),
     r = i(806163),
     a = i(573648),
     c = i(950198),
-    d = i(105292),
+    d = i(792996),
     p = i(893763);
-function u() {
-    let { type: t } = (0, r.g)(),
-        e = (0, c.mw)(t);
-    if (null == e) return null;
-    let i = a.A.get(e);
-    return (0, n.jsxs)(c.mP, {
-        platformType: e,
-        children: [
-            (0, n.jsx)("div", { className: p.i, children: d.intl.format(d.t.RzEB5v, { name: i.name }) }),
-            (0, n.jsx)("div", { className: s()(p.i, p.z), children: d.intl.string(d.t["Q+lNwZ"]) }),
-        ],
-    });
-}
+i.d(
+    e,
+    {},
+    {
+        default: function () {
+            let { type: t } = (0, r.g)(),
+                e = (0, c.mw)(t);
+            if (null == e) return null;
+            let i = a.A.get(e);
+            return (0, n.jsxs)(c.mP, {
+                platformType: e,
+                children: [
+                    (0, n.jsx)("div", { className: p.i, children: d.intl.format(d.t.RzEB5v, { name: i.name }) }),
+                    (0, n.jsx)("div", { className: s()(p.i, p.z), children: d.intl.string(d.t["Q+lNwZ"]) }),
+                ],
+            });
+        },
+    },
+);

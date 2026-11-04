@@ -1,38 +1,47 @@
-i.d(n, { A: () => g });
 var r = i(477900);
 i(582128);
 var s = i(477782),
     e = i(688810),
     l = i(612630),
-    a = i(402860),
-    o = i(280450),
+    a = i(702476),
+    o = i(46653),
     d = i(351906),
     c = i(652215),
     u = i(518477),
-    p = i(105292);
-function g(t) {
-    let { user: n, guildId: i, channelId: g, context: h } = t,
-        { id: O } = n,
-        { loading: b, note: A } = (0, l.A)(O),
-        f = !b && null != A && A.length > 0,
-        k = h === c.BRT.POPOUT || h === c.BRT.OVERLAY,
-        { analyticsLocations: x } = (0, e.Ay)();
-    return O === o.default.getId() || d.A.hidePersonalInformation || k
-        ? null
-        : (0, r.jsx)(s.Dr, {
-              id: "note",
-              label: b ? p.intl.string(p.t["WLKx/9"]) : f ? p.intl.string(p.t.sHHsOM) : p.intl.string(p.t.Dglxrf),
-              subtext: p.intl.string(p.t.r1BOdd),
-              action: () => {
-                  (0, a.openUserProfileModal)({
-                      userId: n.id,
-                      tabSection: u.RP.USER_INFO,
-                      scrollTarget: u.bk.NOTE,
-                      guildId: i,
-                      channelId: g,
-                      sourceAnalyticsLocations: x,
-                      appContext: h,
+    p = i(792996);
+i.d(
+    n,
+    {},
+    {
+        A: function (t) {
+            let { user: n, guildId: i, channelId: g, context: h } = t,
+                { id: O } = n,
+                { loading: b, note: A } = (0, l.A)(O),
+                f = !b && null != A && A.length > 0,
+                k = h === c.BRT.POPOUT || h === c.BRT.OVERLAY,
+                { analyticsLocations: x } = (0, e.Ay)();
+            return O === o.default.getId() || d.A.hidePersonalInformation || k
+                ? null
+                : (0, r.jsx)(s.Dr, {
+                      id: "note",
+                      label: b
+                          ? p.intl.string(p.t["WLKx/9"])
+                          : f
+                            ? p.intl.string(p.t.sHHsOM)
+                            : p.intl.string(p.t.Dglxrf),
+                      subtext: p.intl.string(p.t.r1BOdd),
+                      action: () => {
+                          (0, a.openUserProfileModal)({
+                              userId: n.id,
+                              tabSection: u.RP.USER_INFO,
+                              scrollTarget: u.bk.NOTE,
+                              guildId: i,
+                              channelId: g,
+                              sourceAnalyticsLocations: x,
+                              appContext: h,
+                          });
+                      },
                   });
-              },
-          });
-}
+        },
+    },
+);

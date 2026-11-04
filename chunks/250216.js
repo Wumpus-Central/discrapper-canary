@@ -1,11 +1,11 @@
-d.d(t, { Id: () => A });
+d.r(t);
 var i = d(783285),
     e = d(768611),
     c = d(200503),
     a = d(628926),
     s = d(242268),
     n = d(326144),
-    Z = d(44263),
+    Z = d(685131),
     b = d(538553);
 d(540937);
 var m = d(658299),
@@ -17,10 +17,10 @@ var m = d(658299),
     p = d(360710),
     N = d(585387),
     M = d(826365),
-    X = d(918676),
-    r = d(685044),
+    r = d(918676),
+    X = d(685044),
     y = d(56847),
-    Y = d(632127),
+    Y = d(251586),
     T = [
         {
             textKey: "idv2.ageVerificationPage.showYourIdAndScanIt",
@@ -135,7 +135,7 @@ var I = ({ state: l }) => {
                                     : null,
                                 (0, e.v)("div", {
                                     class: "IncodeDigitalIdUploadLaserOverlay",
-                                    children: (0, e.v)(p.i, { animationData: r.t, loop: !0, autoStop: !0 }),
+                                    children: (0, e.v)(p.i, { animationData: X.t, loop: !0, autoStop: !0 }),
                                 }),
                             ],
                         }),
@@ -874,7 +874,7 @@ var I = ({ state: l }) => {
     },
     P = !1,
     f = (0, e.c)(() =>
-        Promise.all([d.e("207756"), d.e("457732")])
+        Promise.all([d.e(636066), d.e(457732)])
             .then(d.bind(d, 19503))
             .then((l) => ({ default: l.MandatoryConsent })),
     ),
@@ -890,15 +890,15 @@ var I = ({ state: l }) => {
         (0, e._)(() => {
             P ||
                 ((P = !0),
-                d.e("68033").then(d.bind(d, 464344)),
-                d.e("815236").then(d.bind(d, 392303)),
-                d.e("943251").then(d.bind(d, 791006)));
+                d.e(68033).then(d.bind(d, 464344)),
+                d.e(815236).then(d.bind(d, 392303)),
+                d.e(943251).then(d.bind(d, 791006)));
         }, []);
         let [b, u] = (0, c.u)(
             () => {
                 if (t) return t;
                 if (!l) throw Error("ID capture config is required when no manager is provided");
-                return (0, Y.p_)({ config: l });
+                return (0, Y.createIdCaptureManager)({ config: l });
             },
             { manageLifecycle: !t },
         );
@@ -958,4 +958,4 @@ var I = ({ state: l }) => {
     },
     A = ({ config: l, manager: t, onFinish: d, onError: i }) =>
         (0, e.v)(a.t, { children: l || t ? (0, e.v)(B, { config: l, manager: t, onFinish: d, onError: i }) : null });
-(0, X.t)(A, "incode-id");
+((0, r.t)(A, "incode-id"), d.d(t, {}, { Id: A }));

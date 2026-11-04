@@ -1,7 +1,39 @@
-(n.d(t, {
-    Kh: () => c,
-    T7: () =>
-        function e(t) {
+n(321073);
+var i = n(575593),
+    r = n(898461),
+    a = n(837015),
+    s = n(203632),
+    l = n(892118),
+    o = n(166590),
+    d = n(652215);
+n.d(
+    t,
+    {},
+    {
+        Kh: function (e) {
+            return null == e
+                ? []
+                : e.reduce((e, t) => {
+                      switch (t.type) {
+                          case i.R.AVATAR_DECORATION:
+                              e.push(r.A.fromServer(t));
+                              break;
+                          case i.R.NAMEPLATE:
+                              e.push(a.A.fromServer(t));
+                              break;
+                          case i.R.PROFILE_EFFECT:
+                              e.push(s.Ay.fromServer(t));
+                              break;
+                          case i.R.PROFILE_FRAME:
+                              e.push(l.A.fromServer(t));
+                              break;
+                          default:
+                              e.push(o.A.fromServer(t));
+                      }
+                      return e;
+                  }, []);
+        },
+        T7: function e(t) {
             if (t.productLine !== d.EZt.COLLECTIBLES) return;
             if (t.type === d.Puh.BUNDLE) {
                 let n = [];
@@ -66,42 +98,11 @@
                         return;
                 }
         },
-    tP: () => u,
-}),
-    n(321073));
-var i = n(575593),
-    r = n(898461),
-    a = n(837015),
-    s = n(203632),
-    l = n(892118),
-    o = n(166590),
-    d = n(652215);
-function c(e) {
-    return null == e
-        ? []
-        : e.reduce((e, t) => {
-              switch (t.type) {
-                  case i.R.AVATAR_DECORATION:
-                      e.push(r.A.fromServer(t));
-                      break;
-                  case i.R.NAMEPLATE:
-                      e.push(a.A.fromServer(t));
-                      break;
-                  case i.R.PROFILE_EFFECT:
-                      e.push(s.Ay.fromServer(t));
-                      break;
-                  case i.R.PROFILE_FRAME:
-                      e.push(l.A.fromServer(t));
-                      break;
-                  default:
-                      e.push(o.A.fromServer(t));
-              }
-              return e;
-          }, []);
-}
-function u(e) {
-    if (null != e && 0 !== e.items.length)
-        return e.type === i.R.BUNDLE
-            ? { type: "bundle", items: e.items, previewAssets: e.previewAssets }
-            : { type: "single", item: e.items[0] };
-}
+        tP: function (e) {
+            if (null != e && 0 !== e.items.length)
+                return e.type === i.R.BUNDLE
+                    ? { type: "bundle", items: e.items, previewAssets: e.previewAssets }
+                    : { type: "single", item: e.items[0] };
+        },
+    },
+);

@@ -1,6 +1,6 @@
 e.exports = {
-    jh: "defaultKeybindGroup_f82450",
-    yZ: "defaultKeybind_f82450",
-    DM: "defaultKeybindShortcutGroup_f82450",
-    LE: "shortcut_f82450",
+    jh: "defaultKeybindGroup_-wlZx4",
+    yZ: "defaultKeybind_-wlZx4",
+    DM: "defaultKeybindShortcutGroup_-wlZx4",
+    LE: "shortcut_-wlZx4",
 };

@@ -1,7 +1,7 @@
-(n.d(t, { A: () => f }), n(321073));
+n(321073);
 var l = n(477900),
     i = n(582128),
-    a = n(17928),
+    a = n(855986),
     r = n(477782),
     o = n(429913),
     s = n(769015),
@@ -17,72 +17,78 @@ function p(e) {
         children: [(0, l.jsx)(s.A, { game: t, size: s.M.XXSMALL }), (0, l.jsx)("span", { children: t.name })],
     });
 }
-function f(e) {
-    let t,
-        { menuItemId: n, user: m, label: f, gameRelationships: A, onClick: h, color: b } = e,
-        { id: x, bot: C } = m,
-        k = (0, a.bG)([c.default], () => c.default.getCurrentUser()?.id === x) || C,
-        M = k ? g : A,
-        [I, j] = i.useState(!1),
-        v = i.useCallback(() => j(!0), []),
-        L = i.useMemo(
-            () =>
-                M.map((e) => {
-                    let { applicationId: t } = e;
-                    return t;
-                }),
-            [M],
-        ),
-        F = (0, a.bG)([u.A], () => u.A.getRelationshipType(x), [x]),
-        R = I || 1 === M.length,
-        X =
-            ((t = (0, o.A)(L, R)),
-            i.useMemo(() => {
-                let e = new Map();
-                return (
-                    t.forEach((t) => {
-                        null != t && e.set(t.id, t);
-                    }),
-                    e
-                );
-            }, [t]));
-    if (k || 0 === M.length || F === d.eA$.FRIEND) return null;
-    if (1 === M.length) {
-        let { applicationId: e } = M[0],
-            t = X.get(e);
-        return null == t
-            ? null
-            : (0, l.jsx)(r.Dr, {
-                  color: b,
-                  id: n,
-                  label: f,
-                  subtext: (0, l.jsx)(p, { application: t }),
-                  onFocus: v,
-                  action: () => h(t),
-              });
-    }
-    let y = [];
-    return (M.forEach((e) => {
-        let { applicationId: t } = e,
-            n = X.get(t);
-        if (null != n) {
-            let e = n.getIconURL(16);
-            y.push(
-                (0, l.jsx)(
-                    r.Dr,
-                    {
-                        id: t,
-                        label: n.name,
-                        icon: (0, l.jsx)(s.A, { game: n, size: s.M.XXSMALL }),
-                        leadingAccessory: null != e ? { type: "image", src: e } : void 0,
-                        action: () => h(n),
-                    },
-                    t,
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let t,
+                { menuItemId: n, user: m, label: f, gameRelationships: A, onClick: h, color: b } = e,
+                { id: x, bot: C } = m,
+                k = (0, a.bG)([c.default], () => c.default.getCurrentUser()?.id === x) || C,
+                M = k ? g : A,
+                [I, j] = i.useState(!1),
+                v = i.useCallback(() => j(!0), []),
+                L = i.useMemo(
+                    () =>
+                        M.map((e) => {
+                            let { applicationId: t } = e;
+                            return t;
+                        }),
+                    [M],
                 ),
-            );
-        }
-    }),
-    0 === y.length)
-        ? null
-        : (0, l.jsx)(r.Dr, { color: b, id: n, label: f, onFocus: v, children: y });
-}
+                F = (0, a.bG)([u.A], () => u.A.getRelationshipType(x), [x]),
+                R = I || 1 === M.length,
+                X =
+                    ((t = (0, o.A)(L, R)),
+                    i.useMemo(() => {
+                        let e = new Map();
+                        return (
+                            t.forEach((t) => {
+                                null != t && e.set(t.id, t);
+                            }),
+                            e
+                        );
+                    }, [t]));
+            if (k || 0 === M.length || F === d.eA$.FRIEND) return null;
+            if (1 === M.length) {
+                let { applicationId: e } = M[0],
+                    t = X.get(e);
+                return null == t
+                    ? null
+                    : (0, l.jsx)(r.Dr, {
+                          color: b,
+                          id: n,
+                          label: f,
+                          subtext: (0, l.jsx)(p, { application: t }),
+                          onFocus: v,
+                          action: () => h(t),
+                      });
+            }
+            let y = [];
+            return (M.forEach((e) => {
+                let { applicationId: t } = e,
+                    n = X.get(t);
+                if (null != n) {
+                    let e = n.getIconURL(16);
+                    y.push(
+                        (0, l.jsx)(
+                            r.Dr,
+                            {
+                                id: t,
+                                label: n.name,
+                                icon: (0, l.jsx)(s.A, { game: n, size: s.M.XXSMALL }),
+                                leadingAccessory: null != e ? { type: "image", src: e } : void 0,
+                                action: () => h(n),
+                            },
+                            t,
+                        ),
+                    );
+                }
+            }),
+            0 === y.length)
+                ? null
+                : (0, l.jsx)(r.Dr, { color: b, id: n, label: f, onFocus: v, children: y });
+        },
+    },
+);

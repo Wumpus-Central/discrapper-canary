@@ -1,33 +1,7 @@
-(n.d(t, {
-    $w: () => U,
-    D1: () => F,
-    Df: () => L,
-    JM: () => D,
-    Sb: () => T.Sb,
-    Sh: () => v,
-    TG: () => y,
-    XW: () => b,
-    _N: () => x,
-    bW: () => R,
-    cE: () => N,
-    ji: () => P,
-    nT: () => k,
-    o_: () => M,
-    wc: () => O,
-    xB: () => G,
-    xs: () => w,
-}),
-    n(393431),
-    n(532706),
-    n(42231),
-    n(232424),
-    n(949626),
-    n(767709),
-    n(65162),
-    n(582128));
+(n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(582128));
 var i = n(284009),
     r = n.n(i),
-    a = n(636537),
+    a = n(620632),
     s = n(554146),
     l = n(803805),
     o = n(873298),
@@ -35,7 +9,7 @@ var i = n(284009),
     c = n(73153),
     u = n(626584),
     _ = n(256787),
-    E = n(174459),
+    E = n(129230),
     A = n(927813);
 n(536194);
 var h = n(460288),
@@ -46,7 +20,6 @@ var h = n(460288),
     T = n(355097),
     g = n(652215);
 let S = "UserSettingsProtoLastWriteTimes";
-function N() {}
 (Date.now(),
     c.h.subscribe("CONNECTION_OPEN", () => {
         Date.now();
@@ -56,7 +29,7 @@ function N() {}
     }),
     "u" > typeof document &&
         (document.addEventListener("mousedown", () => {}), document.addEventListener("keydown", () => {})));
-class C {
+class N {
     ProtoClass;
     type;
     logger;
@@ -248,24 +221,14 @@ class C {
         this.dispatchChanges({ timeout: n, timeoutDelay: t });
     }
 }
-let O = new C(o.nT, T.oD.PRELOADED_USER_SETTINGS),
-    R = new C(l.aw, T.oD.FRECENCY_AND_FAVORITES_SETTINGS),
-    L = { [T.oD.PRELOADED_USER_SETTINGS]: O, [T.oD.FRECENCY_AND_FAVORITES_SETTINGS]: R };
-function y(e, t, n) {
-    return O.updateAsync("guilds", (n) => (0, m.$o)(n, e, t), n);
+let C = new N(o.nT, T.oD.PRELOADED_USER_SETTINGS),
+    O = new N(l.aw, T.oD.FRECENCY_AND_FAVORITES_SETTINGS),
+    R = { [T.oD.PRELOADED_USER_SETTINGS]: C, [T.oD.FRECENCY_AND_FAVORITES_SETTINGS]: O };
+function L(e, t, n) {
+    return C.updateAsync("guilds", (n) => (0, m.$o)(n, e, t), n);
 }
-function D(e) {
-    return O.updateAsync(
-        "appearance",
-        (t) => {
-            if ((t.defaultGuildThemePreference ?? o.tI.UNSPECIFIED) === e) return !1;
-            t.defaultGuildThemePreference = e;
-        },
-        T.Sb.INFREQUENT_USER_ACTION,
-    );
-}
-function b(e, t) {
-    return y(
+function y(e, t) {
+    return L(
         e,
         (e) => {
             e.guildThemeSourcePreference = t;
@@ -273,33 +236,8 @@ function b(e, t) {
         T.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function v(e) {
-    return b(e, o.tI.UNSPECIFIED);
-}
-function P(e, t, n, i) {
-    return y(e, (e) => (0, m.VB)(e, t, n), i);
-}
-function M(e) {
-    var t, n;
-    let i;
-    return (
-        (t = e),
-        I.A.hasLoaded(T.oD.PRELOADED_USER_SETTINGS) ||
-            ((n = t),
-            (null != (i = I.A.settings.userContent?.dismissedContents) && (0, h.c0)(i, n)) ||
-                E.default.track(g.HAw.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: s.M[t] })),
-        O.updateAsync(
-            "userContent",
-            (t) => {
-                if ((0, h.c0)(t.dismissedContents, e)) return !1;
-                t.dismissedContents = (0, h.Vf)(t.dismissedContents, e);
-            },
-            T.Sb.INFREQUENT_USER_ACTION,
-        )
-    );
-}
-async function U(e, t) {
-    return await O.updateAsync(
+async function D(e, t) {
+    return await C.updateAsync(
         "userContent",
         (n) => {
             n.recurringDismissibleContentStates[e] = { ...n.recurringDismissibleContentStates[e], ...t };
@@ -307,46 +245,102 @@ async function U(e, t) {
         T.Sb.INFREQUENT_USER_ACTION,
     );
 }
-async function w(e, t, n) {
-    return await y(
-        t,
-        (t) => {
-            t.guildDismissibleContentStates[e] = { ...t.guildDismissibleContentStates[e], ...n };
+n.d(
+    t,
+    { Sb: () => T.Sb },
+    {
+        $w: D,
+        D1: async function () {
+            let { getDismissedRecurringDismissibleContentState: e } = await Promise.resolve().then(n.bind(n, 543862));
+            return C.updateAsync(
+                "userContent",
+                (t) => {
+                    let n = new Uint8Array();
+                    for (let i of _.zd)
+                        (0, _.Zm)(i) ? (t.recurringDismissibleContentStates[i] = e(i)) : (n = (0, h.Vf)(n, i));
+                    t.dismissedContents = n;
+                },
+                T.Sb.INFREQUENT_USER_ACTION,
+            );
         },
-        T.Sb.INFREQUENT_USER_ACTION,
-    );
-}
-function G(e) {
-    return O.updateAsync(
-        "userContent",
-        (t) => {
-            if (!(0, h.c0)(t.dismissedContents, e)) return !1;
-            t.dismissedContents = (0, h.We)(t.dismissedContents, e);
+        Df: R,
+        JM: function (e) {
+            return C.updateAsync(
+                "appearance",
+                (t) => {
+                    if ((t.defaultGuildThemePreference ?? o.tI.UNSPECIFIED) === e) return !1;
+                    t.defaultGuildThemePreference = e;
+                },
+                T.Sb.INFREQUENT_USER_ACTION,
+            );
         },
-        T.Sb.INFREQUENT_USER_ACTION,
-    );
-}
-function x(e) {
-    return U(e, { lastDismissedVersion: 0, lastDismissedAtMs: "0", lastDismissedObjectId: "0", numTimesDismissed: 0 });
-}
-function k() {
-    return O.updateAsync(
-        "userContent",
-        (e) => {
-            ((e.dismissedContents = new Uint8Array()), (e.recurringDismissibleContentStates = {}));
+        Sh: function (e) {
+            return y(e, o.tI.UNSPECIFIED);
         },
-        T.Sb.INFREQUENT_USER_ACTION,
-    );
-}
-async function F() {
-    let { getDismissedRecurringDismissibleContentState: e } = await Promise.resolve().then(n.bind(n, 501419));
-    return O.updateAsync(
-        "userContent",
-        (t) => {
-            let n = new Uint8Array();
-            for (let i of _.zd) (0, _.Zm)(i) ? (t.recurringDismissibleContentStates[i] = e(i)) : (n = (0, h.Vf)(n, i));
-            t.dismissedContents = n;
+        TG: L,
+        XW: y,
+        _N: function (e) {
+            return D(e, {
+                lastDismissedVersion: 0,
+                lastDismissedAtMs: "0",
+                lastDismissedObjectId: "0",
+                numTimesDismissed: 0,
+            });
         },
-        T.Sb.INFREQUENT_USER_ACTION,
-    );
-}
+        bW: O,
+        cE: function () {},
+        ji: function (e, t, n, i) {
+            return L(e, (e) => (0, m.VB)(e, t, n), i);
+        },
+        nT: function () {
+            return C.updateAsync(
+                "userContent",
+                (e) => {
+                    ((e.dismissedContents = new Uint8Array()), (e.recurringDismissibleContentStates = {}));
+                },
+                T.Sb.INFREQUENT_USER_ACTION,
+            );
+        },
+        o_: function (e) {
+            var t, n;
+            let i;
+            return (
+                (t = e),
+                I.A.hasLoaded(T.oD.PRELOADED_USER_SETTINGS) ||
+                    ((n = t),
+                    (null != (i = I.A.settings.userContent?.dismissedContents) && (0, h.c0)(i, n)) ||
+                        E.default.track(g.HAw.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, {
+                            content_type: s.M[t],
+                        })),
+                C.updateAsync(
+                    "userContent",
+                    (t) => {
+                        if ((0, h.c0)(t.dismissedContents, e)) return !1;
+                        t.dismissedContents = (0, h.Vf)(t.dismissedContents, e);
+                    },
+                    T.Sb.INFREQUENT_USER_ACTION,
+                )
+            );
+        },
+        wc: C,
+        xB: function (e) {
+            return C.updateAsync(
+                "userContent",
+                (t) => {
+                    if (!(0, h.c0)(t.dismissedContents, e)) return !1;
+                    t.dismissedContents = (0, h.We)(t.dismissedContents, e);
+                },
+                T.Sb.INFREQUENT_USER_ACTION,
+            );
+        },
+        xs: async function (e, t, n) {
+            return await L(
+                t,
+                (t) => {
+                    t.guildDismissibleContentStates[e] = { ...t.guildDismissibleContentStates[e], ...n };
+                },
+                T.Sb.INFREQUENT_USER_ACTION,
+            );
+        },
+    },
+);

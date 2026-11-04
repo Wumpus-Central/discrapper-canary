@@ -1,5 +1,4 @@
 let i;
-n.d(t, { n: () => a });
 var r = n(973117);
 try {
     i = window.sessionStorage;
@@ -38,3 +37,4 @@ let a = !(function () {
               i.clear();
           }
       })();
+n.d(t, {}, { n: a });

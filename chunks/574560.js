@@ -1,5 +1,4 @@
-l.d(s, { A: () => r });
-var t = l(17928),
+var t = l(855986),
     i = l(73153);
 let a = { gameUpsellsDismissal: {} },
     n = { ...a };
@@ -42,3 +41,4 @@ let r = new o(i.h, {
         (delete i[s], (n = { gameUpsellsDismissal: { ...n.gameUpsellsDismissal, [l]: i } }));
     },
 });
+l.d(s, {}, { A: r });

@@ -1,11 +1,9 @@
 e.exports = {
-    XU: "collectiblePreviewsContainer__7f14f",
-    i1: "previewContainer__7f14f",
-    KR: "previewSurface__7f14f",
-    Or: "previewFadeIn__7f14f",
-    eF: "collectiblePreviewsContainerNoChat__7f14f collectiblePreviewsContainer__7f14f",
-    Jq: "collectiblePreviewsContainerWithChat__7f14f collectiblePreviewsContainer__7f14f",
-    bF: "fractionalNitroPreviewContainer__7f14f collectiblePreviewsContainer__7f14f",
-    VG: "pdpControls__7f14f",
-    GV: "goToCollectionButton__7f14f",
+    i1: "previewContainer_w2vPtx",
+    KR: "previewSurface_w2vPtx",
+    eF: "collectiblePreviewsContainerNoChat_w2vPtx collectiblePreviewsContainer_w2vPtx",
+    Jq: "collectiblePreviewsContainerWithChat_w2vPtx collectiblePreviewsContainer_w2vPtx",
+    bF: "fractionalNitroPreviewContainer_w2vPtx collectiblePreviewsContainer_w2vPtx",
+    VG: "pdpControls_w2vPtx",
+    GV: "goToCollectionButton_w2vPtx",
 };

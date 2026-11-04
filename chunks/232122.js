@@ -1,4 +1,3 @@
-i.d(t, { A: () => h, m: () => p });
 var s = i(477900),
     r = i(582128),
     n = i(503698),
@@ -8,10 +7,10 @@ var s = i(477900),
     c = i(939249),
     d = i(834730),
     u = i(847374),
-    m = i(661531),
+    m = i(646514),
     g = i(975571),
     T = i(652215),
-    E = i(105292),
+    E = i(792996),
     _ = i(462150);
 let p = [
     { getQuestion: () => E.intl.string(E.t.C4J8UB), getAnswer: () => E.intl.string(E.t.nhkk6k) },
@@ -27,61 +26,72 @@ let p = [
     { getQuestion: () => E.intl.string(E.t["6EN+TZ"]), getAnswer: () => E.intl.string(E.t.NZax1u) },
     { getQuestion: () => E.intl.string(E.t.f5B4EW), getAnswer: () => E.intl.string(E.t.Aje8Pb) },
 ];
-function h(e) {
-    let { className: t } = e,
-        [i, n] = r.useState(null),
-        [g, T] = r.useState(null);
-    return (0, s.jsxs)("div", {
-        className: a()(_.iE, t),
-        children: [
-            (0, s.jsx)(l.D, { className: _.R_, variant: "heading-xxl/semibold", children: E.intl.string(E.t.HPJ6Nj) }),
-            (0, s.jsx)(o.h, { size: 32 }),
-            (0, s.jsx)("ul", {
-                className: _.p_,
-                children: p.map((e, t) => {
-                    let r = i === t,
-                        l = g === t,
-                        o = r || l ? "text-default" : "text-muted";
-                    return (0, s.jsxs)(
-                        c.D,
-                        {
-                            tag: "li",
-                            className: a()(_.Aw, { [_.$K]: r }),
-                            onClick: () => n((e) => (e === t ? null : t)),
-                            onMouseEnter: () => T(t),
-                            onMouseLeave: () => T(null),
-                            children: [
-                                (0, s.jsxs)("div", {
-                                    className: _.k7,
+i.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { className: t } = e,
+                [i, n] = r.useState(null),
+                [g, T] = r.useState(null);
+            return (0, s.jsxs)("div", {
+                className: a()(_.iE, t),
+                children: [
+                    (0, s.jsx)(l.D, {
+                        className: _.R_,
+                        variant: "heading-xxl/semibold",
+                        children: E.intl.string(E.t.HPJ6Nj),
+                    }),
+                    (0, s.jsx)(o.h, { size: 32 }),
+                    (0, s.jsx)("ul", {
+                        className: _.p_,
+                        children: p.map((e, t) => {
+                            let r = i === t,
+                                l = g === t,
+                                o = r || l ? "text-default" : "text-muted";
+                            return (0, s.jsxs)(
+                                c.D,
+                                {
+                                    tag: "li",
+                                    className: a()(_.Aw, { [_.$K]: r }),
+                                    onClick: () => n((e) => (e === t ? null : t)),
+                                    onMouseEnter: () => T(t),
+                                    onMouseLeave: () => T(null),
                                     children: [
-                                        (0, s.jsx)(d.E, {
-                                            className: _.b1,
-                                            color: o,
-                                            variant: "heading-sm/semibold",
-                                            tag: "span",
-                                            children: e.getQuestion(),
+                                        (0, s.jsxs)("div", {
+                                            className: _.k7,
+                                            children: [
+                                                (0, s.jsx)(d.E, {
+                                                    className: _.b1,
+                                                    color: o,
+                                                    variant: "heading-sm/semibold",
+                                                    tag: "span",
+                                                    children: e.getQuestion(),
+                                                }),
+                                                (0, s.jsx)(u.a, {
+                                                    size: "sm",
+                                                    color: m.A.colors.INTERACTIVE_ICON_DEFAULT,
+                                                    className: _.q4,
+                                                    style: { transform: r ? "rotate(180deg)" : "rotate(0deg)" },
+                                                }),
+                                            ],
                                         }),
-                                        (0, s.jsx)(u.a, {
-                                            size: "sm",
-                                            color: m.A.colors.INTERACTIVE_ICON_DEFAULT,
-                                            className: _.q4,
-                                            style: { transform: r ? "rotate(180deg)" : "rotate(0deg)" },
-                                        }),
+                                        r &&
+                                            (0, s.jsx)(d.E, {
+                                                className: _.ZF,
+                                                color: "text-muted",
+                                                variant: "body-sm/medium",
+                                                children: e.getAnswer(),
+                                            }),
                                     ],
-                                }),
-                                r &&
-                                    (0, s.jsx)(d.E, {
-                                        className: _.ZF,
-                                        color: "text-muted",
-                                        variant: "body-sm/medium",
-                                        children: e.getAnswer(),
-                                    }),
-                            ],
-                        },
-                        t,
-                    );
-                }),
-            }),
-        ],
-    });
-}
+                                },
+                                t,
+                            );
+                        }),
+                    }),
+                ],
+            });
+        },
+        m: p,
+    },
+);

@@ -1,15 +1,15 @@
-(n.d(t, { H6: () => h, p3: () => f, qv: () => _, wP: () => p }), n(321073));
+n(321073);
 var r = n(582128),
     i = n(462180),
     u = n(882035),
     a = n(121894),
-    l = n(913122),
-    o = n(995786),
+    l = n(627784),
+    o = n(179832),
     E = n(904813),
-    s = n(243277),
-    A = n(652215);
-let S = {},
-    c = (0, u.h)((e, t) => ({
+    A = n(890634);
+n(652215);
+let s = {},
+    S = (0, u.h)((e, t) => ({
         rules: {},
         fetching: !1,
         error: null,
@@ -17,10 +17,10 @@ let S = {},
             let { guildId: r, id: i, triggerType: u } = n,
                 { rules: l } = t(),
                 o = l[r] ?? {},
-                s = o[u] ?? [],
-                A = s.some((e) => e.id === i),
-                S = s.filter((e) => !(0, E.R)(e.id) || e.triggerType !== u),
-                c = A ? S.map((e) => (e.id === i ? n : e)) : [...S, n];
+                A = o[u] ?? [],
+                s = A.some((e) => e.id === i),
+                S = A.filter((e) => !(0, E.R)(e.id) || e.triggerType !== u),
+                c = s ? S.map((e) => (e.id === i ? n : e)) : [...S, n];
             (0, a.r)(() => {
                 e({ rules: { ...l, [r]: { ...o, [u]: c } }, error: null });
             });
@@ -40,20 +40,20 @@ let S = {},
         syncRules: async (n) => {
             var r;
             let i;
-            if (((i = Date.now()), i - (S[n] ?? 0) > 2e4)) {
-                S[n] = Date.now();
+            if (((i = Date.now()), i - (s[n] ?? 0) > 2e4)) {
+                s[n] = Date.now();
                 try {
                     let i,
                         u =
                             ((r = await (0, o.H0)(n)),
                             (i = {
-                                [s.uh.KEYWORD]: [],
-                                [s.uh.ML_SPAM]: [],
-                                [s.uh.DEFAULT_KEYWORD_LIST]: [],
-                                [s.uh.MENTION_SPAM]: [],
-                                [s.uh.USER_PROFILE]: [],
-                                [s.uh.SERVER_POLICY]: [],
-                                [s.uh.APPLICATION]: [],
+                                [A.uh.KEYWORD]: [],
+                                [A.uh.ML_SPAM]: [],
+                                [A.uh.DEFAULT_KEYWORD_LIST]: [],
+                                [A.uh.MENTION_SPAM]: [],
+                                [A.uh.USER_PROFILE]: [],
+                                [A.uh.SERVER_POLICY]: [],
+                                [A.uh.APPLICATION]: [],
                             }),
                             r.forEach((e) => {
                                 let { triggerType: t } = e;
@@ -73,13 +73,9 @@ let S = {},
             }
         },
     }));
-function f(e, t) {
-    let n = c.getState().rules;
-    return (n[e]?.[t] ?? []).length;
-}
-function h(e) {
+function c(e) {
     let [t, n] = r.useState(!1),
-        [u, a] = c((e) => [e.syncRules, e.fetching], i.x);
+        [u, a] = S((e) => [e.syncRules, e.fetching], i.x);
     return [
         t,
         r.useCallback(async () => {
@@ -92,20 +88,35 @@ function h(e) {
         }, [e, a, u]),
     ];
 }
-function _(e) {
-    let [t, n] = h(e);
-    return (
-        r.useEffect(() => {
-            (async () => {
-                await n();
-            })();
-        }, [e, n]),
-        [t, n]
-    );
-}
-function p(e) {
-    return c(
-        (t) => ({ rulesByTriggerType: t.rules[e ?? A.dJq] ?? {}, updateRule: t.updateRule, removeRule: t.removeRule }),
-        i.x,
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        H6: c,
+        p3: function (e, t) {
+            let n = S.getState().rules;
+            return (n[e]?.[t] ?? []).length;
+        },
+        qv: function (e) {
+            let [t, n] = c(e);
+            return (
+                r.useEffect(() => {
+                    (async () => {
+                        await n();
+                    })();
+                }, [e, n]),
+                [t, n]
+            );
+        },
+        wP: function (e) {
+            return S(
+                (t) => ({
+                    rulesByTriggerType: t.rules[e ?? ""] ?? {},
+                    updateRule: t.updateRule,
+                    removeRule: t.removeRule,
+                }),
+                i.x,
+            );
+        },
+    },
+);

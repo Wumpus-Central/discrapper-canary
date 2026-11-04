@@ -10,7 +10,7 @@ n(
         proto: !0,
         forced: e(486816)(function () {
             return (
-                null !== new Date(NaN).toJSON() ||
+                null !== new Date(0 / 0).toJSON() ||
                 1 !==
                     o(Date.prototype.toJSON, {
                         toISOString: function () {

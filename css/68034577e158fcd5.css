@@ -1,0 +1,50 @@
+.descriptionWrapper_OrFQq1 {
+    margin-inline-start: 14px
+}
+
+.subText_OrFQq1 {
+    margin-top: 4px
+}
+
+.indicator_OrFQq1 {
+    align-items: center;
+    border-radius: 3px;
+    display: flex;
+    height: 14px;
+    line-height: 14px;
+    margin-inline-start: 8px;
+    padding: 0 4px;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.defaultIndicator_OrFQq1 {
+    background-color: var(--primary-500)
+}
+
+.defaultIndicator_OrFQq1,
+.premiumIndicator_OrFQq1 {
+    color: var(--white)
+}
+
+.premiumIndicator_OrFQq1 {
+    background-color: var(--brand-500)
+}
+
+.invalidIndicator_OrFQq1 {
+    background-color: var(--red-400);
+    color: var(--white)
+}
+
+.giftCardIcon_OrFQq1 {
+    align-items: center;
+    background-color: var(--brand-500);
+    border-radius: 2px;
+    color: var(--white);
+    display: flex;
+    height: 22px;
+    justify-content: center;
+    width: 32px
+}
+
+/*# sourceMappingURL=68034577e158fcd5.css.map*/

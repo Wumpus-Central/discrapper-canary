@@ -1,0 +1,383 @@
+.container_QbZ2-g {
+    align-self: stretch;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%;
+    padding: 16px;
+    width: 100%
+}
+
+.pageTitle_QbZ2-g {
+    color: var(--text-default);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .01em;
+    margin: 0
+}
+
+.sectionCard_QbZ2-g {
+    background: var(--background-surface-high);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-low);
+    gap: 8px;
+    padding: 12px
+}
+
+.section_QbZ2-g,
+.sectionCard_QbZ2-g {
+    display: flex;
+    flex-direction: column
+}
+
+.section_QbZ2-g {
+    gap: 6px
+}
+
+.header_QbZ2-g {
+    display: flex;
+    flex-direction: column;
+    gap: 2px
+}
+
+.title_QbZ2-g {
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: .06em;
+    text-transform: none
+}
+
+.value_QbZ2-g {
+    font-variant-numeric: tabular-nums
+}
+
+.canvas_QbZ2-g {
+    border-radius: 4px;
+    display: block;
+    overflow: hidden;
+    width: 100%
+}
+
+.chartWrap_QbZ2-g {
+    line-height: 0;
+    position: relative
+}
+
+.chartWrap_QbZ2-g canvas {
+    cursor: crosshair
+}
+
+.hoverReadout_QbZ2-g {
+    background: var(--background-surface-highest);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-low);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    inset-inline-start: 4px;
+    line-height: normal;
+    max-width: calc(100% - 8px);
+    padding: 4px 6px;
+    pointer-events: none;
+    position: absolute;
+    top: 4px;
+    z-index: 1
+}
+
+.hoverReadoutTime_QbZ2-g {
+    color: var(--text-muted);
+    font-size: 10px;
+    font-variant-numeric: tabular-nums
+}
+
+.hoverReadoutPin_QbZ2-g {
+    color: var(--text-default);
+    margin-inline-start: 6px
+}
+
+.hoverReadoutRow_QbZ2-g {
+    align-items: center;
+    display: flex;
+    gap: 6px
+}
+
+.hoverReadoutSwatch_QbZ2-g {
+    border-radius: 2px;
+    flex-shrink: 0;
+    height: 8px;
+    width: 8px
+}
+
+.hoverReadoutLabel_QbZ2-g {
+    color: var(--text-default);
+    flex: 1;
+    font-size: 11px;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.hoverReadoutValue_QbZ2-g {
+    color: var(--text-strong);
+    font-size: 11px;
+    font-variant-numeric: tabular-nums;
+    margin-inline-start: auto
+}
+
+.engines_QbZ2-g {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 4px
+}
+
+.engineRow_QbZ2-g {
+    color: var(--text-muted);
+    display: flex;
+    font-size: 11px;
+    justify-content: space-between
+}
+
+.engineLabel_QbZ2-g {
+    flex: 1
+}
+
+.engineValue_QbZ2-g {
+    font-variant-numeric: tabular-nums
+}
+
+.groupHeader_QbZ2-g {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between
+}
+
+.groupLabel_QbZ2-g {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: .06em;
+    text-transform: none
+}
+
+.groupLabel_QbZ2-g,
+.groupLabelName_QbZ2-g {
+    color: var(--text-muted);
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.groupLabelName_QbZ2-g {
+    font-size: 12px;
+    font-weight: 700
+}
+
+.groupMeta_QbZ2-g {
+    font-size: 11px;
+    font-variant-numeric: tabular-nums
+}
+
+.groupMeta_QbZ2-g,
+.totalRow_QbZ2-g {
+    color: var(--text-muted)
+}
+
+.totalRow_QbZ2-g {
+    align-items: baseline;
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    font-size: 11px;
+    gap: 6px;
+    padding-top: 6px
+}
+
+.totalLabel_QbZ2-g {
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: none
+}
+
+.totalValue_QbZ2-g {
+    color: var(--text-default);
+    font-variant-numeric: tabular-nums
+}
+
+.adapterGroup_QbZ2-g {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+.adapterCard_QbZ2-g {
+    background: var(--background-surface-higher);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 160px;
+    padding: 8px
+}
+
+.adapterName_QbZ2-g {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.cardGroup_QbZ2-g {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px
+}
+
+.cardGroup_QbZ2-g>* {
+    flex: 1 1 0;
+    min-width: 240px
+}
+
+.gcLegend_QbZ2-g {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    margin-top: 2px
+}
+
+.gcLegendItem_QbZ2-g {
+    align-items: center;
+    background: var(--background-surface-higher);
+    border: 1px solid var(--border-normal);
+    border-radius: var(--radius-sm);
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+    margin: 0;
+    padding: 3px 8px;
+    transition: opacity .1s ease, background .1s ease, border-color .1s ease
+}
+
+.gcLegendItem_QbZ2-g:hover {
+    background: var(--background-mod-subtle);
+    border-color: var(--border-strong)
+}
+
+.gcLegendItem_QbZ2-g:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 1px
+}
+
+.gcLegendItem_QbZ2-g[aria-pressed=false] {
+    background: none;
+    border-color: var(--border-subtle);
+    border-style: dashed;
+    opacity: .5
+}
+
+.gcLegendItem_QbZ2-g[aria-pressed=false] .gcLegendLabel_QbZ2-g {
+    text-decoration: line-through
+}
+
+.gcLegendSwatch_QbZ2-g {
+    border-radius: 1px;
+    flex-shrink: 0;
+    height: 12px;
+    width: 2px
+}
+
+.gcLegendLabel_QbZ2-g {
+    color: var(--text-muted);
+    font-size: 10px;
+    white-space: nowrap
+}
+
+.gameHeader_QbZ2-g {
+    align-items: center;
+    display: flex;
+    gap: 10px
+}
+
+.gameIcon_QbZ2-g {
+    border-radius: var(--radius-xs);
+    flex-shrink: 0
+}
+
+.gameTitleColumn_QbZ2-g {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0
+}
+
+.gameName_QbZ2-g {
+    color: var(--text-strong);
+    font-size: 14px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.gameEmpty_QbZ2-g {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-style: italic
+}
+
+.adapterChartRow_QbZ2-g {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px
+}
+
+.adapterChartRow_QbZ2-g>* {
+    flex: 1 1 0;
+    min-width: 240px
+}
+
+.legend_QbZ2-g {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 2px
+}
+
+.legendRow_QbZ2-g {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    min-width: 0
+}
+
+.legendSwatch_QbZ2-g {
+    border-radius: 2px;
+    flex-shrink: 0;
+    height: 10px;
+    width: 10px
+}
+
+.legendName_QbZ2-g {
+    color: var(--text-default);
+    flex: 1;
+    font-size: 12px;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.legendValue_QbZ2-g {
+    color: var(--text-muted);
+    flex-shrink: 0;
+    font-size: 11px;
+    font-variant-numeric: tabular-nums
+}
+
+/*# sourceMappingURL=a1a3d365d12c1a48.css.map*/

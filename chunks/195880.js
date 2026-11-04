@@ -1,8 +1,13 @@
-n.d(t, { m: () => s });
-var i = n(935208);
+var i = n(811091);
 let r = 0,
-    a = new i.SnowflakeSequence();
-function s() {
-    let e = Date.now();
-    return (r !== e && (a.reset(), (r = e)), i.default.fromTimestampWithSequence(e, a));
-}
+    a = new i.g();
+n.d(
+    t,
+    {},
+    {
+        m: function () {
+            let e = Date.now();
+            return (r !== e && (a.reset(), (r = e)), i.default.fromTimestampWithSequence(e, a));
+        },
+    },
+);

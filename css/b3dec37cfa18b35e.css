@@ -1,0 +1,39 @@
+.container_q-J6s2 {
+    background-color: var(--background-base-low);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--elevation-medium)
+}
+
+.listControls_mVhsM9 {
+    justify-content: space-between
+}
+
+.emptyState_mVhsM9,
+.listControls_mVhsM9 {
+    align-items: center;
+    display: flex
+}
+
+.emptyState_mVhsM9 {
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: var(--space-4);
+    justify-content: center;
+    max-height: 45vh;
+    padding: var(--space-16) var(--space-8);
+    text-align: center
+}
+
+.sortTrigger_mVhsM9 {
+    align-items: center;
+    color: var(--text-subtle);
+    cursor: pointer;
+    display: inline-flex;
+    gap: var(--space-4)
+}
+
+.sortTrigger_mVhsM9:hover {
+    color: var(--text-strong)
+}
+
+/*# sourceMappingURL=b3dec37cfa18b35e.css.map*/

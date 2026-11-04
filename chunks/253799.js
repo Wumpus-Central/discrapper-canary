@@ -1,4 +1,3 @@
-l.d(t, { C: () => n, I: () => i });
 var a,
     n =
         (((a = {}).MAIN_ACTION = "main_action"),
@@ -24,3 +23,4 @@ let i = new Set([
     "open_in_inspector",
     "clip_feedback",
 ]);
+l.d(t, {}, { C: n, I: i });

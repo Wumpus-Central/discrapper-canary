@@ -1,13 +1,12 @@
-n.d(t, { Ay: () => H, eW: () => P, th: () => U });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
     r = n.n(s),
     a = n(91871),
     o = n.n(a),
-    d = n(17928),
+    d = n(855986),
     c = n(602853),
-    u = n(661531),
+    u = n(646514),
     m = n(545442),
     g = n(834730),
     h = n(561392),
@@ -27,8 +26,8 @@ var i = n(477900),
     T = n(317525),
     y = n(994500),
     R = n(287809),
-    L = n(105292),
-    G = n(830175);
+    G = n(792996),
+    L = n(830175);
 let D = (0, I.Ld)(),
     O = "body-sm/medium";
 function M(e) {
@@ -55,11 +54,11 @@ let w = l.memo(function (e) {
         j = h?.colorString ?? E,
         f = (0, b.X_)(n, h, h?.colorStrings);
     return (0, i.jsxs)("div", {
-        className: r()(G.xZ, G.ex, l),
+        className: r()(L.xZ, L.ex, l),
         children: [
-            (0, i.jsx)(m.W, { className: G.__invalid_roleDot, color: j, colors: f, background: !1, tooltip: !1 }),
-            null != o ? (0, i.jsx)(C.A, { className: G.YS, ...o, enableTooltip: !1 }) : x,
-            (0, i.jsx)(g.E, { variant: O, className: G.pP, children: a }),
+            (0, i.jsx)(m.W, { className: L.__invalid_roleDot, color: j, colors: f, background: !1, tooltip: !1 }),
+            null != o ? (0, i.jsx)(C.A, { className: L.YS, ...o, enableTooltip: !1 }) : x,
+            (0, i.jsx)(g.E, { variant: O, className: L.pP, children: a }),
         ],
     });
 });
@@ -68,9 +67,9 @@ function F(e) {
         s = null != t.parent_id,
         a = (0, A.gU)(t);
     return (0, i.jsxs)("div", {
-        className: r()(G.xZ, G.sM, { [G.p7]: s }, l),
+        className: r()(L.xZ, L.sM, { [L.p7]: s }, l),
         children: [
-            null != a && (0, i.jsx)(a, { size: "xs", color: "currentColor", className: G.p }),
+            null != a && (0, i.jsx)(a, { size: "xs", color: "currentColor", className: L.p }),
             (0, i.jsx)(g.E, { variant: t.isCategory() ? "body-sm/medium" : O, children: n.display }),
         ],
     });
@@ -82,221 +81,238 @@ function B(e, t, n) {
           ? (0, i.jsx)(F, { row: e, channel: e.record, className: n }, e.record.id)
           : null;
 }
-function H(e) {
-    let {
-            guildId: t,
-            roleRows: n = [],
-            channelRows: s = [],
-            selectedChannelIds: a = new Set(),
-            selectedRoleIds: c = new Set(),
-            onChange: u,
-            placeholder: m,
-            helperText: p,
-            className: A,
-        } = e,
-        b = (0, I.GV)(),
-        S = (0, d.bG)([T.A], () => T.A.getRolesSnapshot(t)),
-        C = l.useMemo(
-            () =>
-                (function (e, t, n) {
-                    if (null == e) return {};
-                    let i = {};
-                    return (
-                        e.forEach((e) => {
-                            let t = v.A.getChannel(e);
-                            null != t && (i[e] = P(t));
-                        }),
-                        t.forEach((e) => {
-                            e in n && (i[e] = U(n[e]));
-                        }),
-                        i
-                    );
-                })(a, c, S),
-            [a, c, S],
-        ),
-        _ = l.useMemo(() => Object.keys(C), [C]),
-        [y, R] = l.useState(""),
-        [O, w] = l.useState(!1),
-        [F, H] = l.useState(!1),
-        [V, z] = l.useState(!1),
-        Y = l.useRef(null),
-        { refs: W, floatingStyles: K } = (0, h.u)({ placement: "bottom-start", offset: 0, matchReferenceWidth: !0 }),
-        { sections: X, sectionCounts: q } = l.useMemo(() => {
-            let e = "" !== y ? s.filter((e) => o()(y, e.display.toLocaleLowerCase())) : s,
-                t = "" !== y ? n.filter((e) => o()(y, e.display.toLocaleLowerCase())) : n,
-                i = [],
-                l = [];
-            return ((i[0] = e), (l[0] = e.length), (i[1] = t), (l[1] = t.length), { sections: i, sectionCounts: l });
-        }, [y, s, n]),
-        J = l.useCallback(
-            (e) => {
-                let t = Object.values(e),
-                    n = t
-                        .filter((e) => {
-                            let { row: t } = e;
-                            return k(t);
-                        })
-                        .map((e) => e.row.record.id),
-                    i = t
-                        .filter((e) => {
-                            let { row: t } = e;
-                            return M(t);
-                        })
-                        .map((e) => e.row.record.id);
-                u(new Set(n), new Set(i));
-            },
-            [u],
-        );
-    function Z() {
-        (w(!1), H(!1));
-    }
-    function Q(e, t, n) {
-        (n.stopPropagation(), n.preventDefault(), 2 === t ? w(e) : (1 === t || w(e), H(e)));
-    }
-    l.useEffect(() => {
-        let e = setTimeout(() => {
-            z(O || F);
-        }, 32);
-        return () => {
-            clearTimeout(e);
-        };
-    }, [O, F]);
-    let $ = l.useCallback(
-            (e) => {
-                let t = { ...C };
-                (k(e) ? (t[e.id] = P(e.record)) : M(e) && (t[e.id] = U(e.record)),
-                    J(t),
-                    R(""),
-                    Z(),
-                    setTimeout(() => {
-                        let e = Y.current?.containerRef.current,
-                            t = e?.firstChild;
-                        null != t && t.scrollTo({ top: t.scrollHeight, behavior: "smooth" });
-                    }, 16));
-            },
-            [J, C],
-        ),
-        ee = l.useCallback(
-            (e) => {
-                let { section: n, row: l } = e,
-                    s = X[n][l];
-                return (0, i.jsx)(
-                    x.D,
-                    {
-                        className: r()(G.Xs, G.iw),
-                        onClick: (e) => {
-                            (e.stopPropagation(), $(s));
-                        },
-                        children: (0, i.jsx)("div", { className: G.qd, children: B(s, t, G.Dq) }),
-                    },
-                    s.id,
-                );
-            },
-            [t, $, X],
-        ),
-        et = l.useMemo(
-            () =>
-                _.map((e) => {
-                    var n;
-                    return ((n = C[e]), { ...n.tag, label: B(n.row, t, G.yS) });
+n.d(
+    t,
+    {},
+    {
+        Ay: function (e) {
+            let {
+                    guildId: t,
+                    roleRows: n = [],
+                    channelRows: s = [],
+                    selectedChannelIds: a = new Set(),
+                    selectedRoleIds: c = new Set(),
+                    onChange: u,
+                    placeholder: m,
+                    helperText: p,
+                    className: A,
+                } = e,
+                b = (0, I.GV)(),
+                S = (0, d.bG)([T.A], () => T.A.getRolesSnapshot(t)),
+                C = l.useMemo(
+                    () =>
+                        (function (e, t, n) {
+                            if (null == e) return {};
+                            let i = {};
+                            return (
+                                e.forEach((e) => {
+                                    let t = v.A.getChannel(e);
+                                    null != t && (i[e] = P(t));
+                                }),
+                                t.forEach((e) => {
+                                    e in n && (i[e] = U(n[e]));
+                                }),
+                                i
+                            );
+                        })(a, c, S),
+                    [a, c, S],
+                ),
+                _ = l.useMemo(() => Object.keys(C), [C]),
+                [y, R] = l.useState(""),
+                [O, w] = l.useState(!1),
+                [F, H] = l.useState(!1),
+                [V, z] = l.useState(!1),
+                Y = l.useRef(null),
+                { refs: W, floatingStyles: K } = (0, h.u)({
+                    placement: "bottom-start",
+                    offset: 0,
+                    matchReferenceWidth: !0,
                 }),
-            [C, _, t],
-        );
-    return (0, i.jsxs)("div", {
-        className: r()(G.MT, A),
-        children: [
-            (0, i.jsxs)("div", {
-                className: G.M6,
-                ref: W.setReference,
+                { sections: X, sectionCounts: q } = l.useMemo(() => {
+                    let e = "" !== y ? s.filter((e) => o()(y, e.display.toLocaleLowerCase())) : s,
+                        t = "" !== y ? n.filter((e) => o()(y, e.display.toLocaleLowerCase())) : n,
+                        i = [],
+                        l = [];
+                    return (
+                        (i[0] = e), (l[0] = e.length), (i[1] = t), (l[1] = t.length), { sections: i, sectionCounts: l }
+                    );
+                }, [y, s, n]),
+                J = l.useCallback(
+                    (e) => {
+                        let t = Object.values(e),
+                            n = t
+                                .filter((e) => {
+                                    let { row: t } = e;
+                                    return k(t);
+                                })
+                                .map((e) => e.row.record.id),
+                            i = t
+                                .filter((e) => {
+                                    let { row: t } = e;
+                                    return M(t);
+                                })
+                                .map((e) => e.row.record.id);
+                        u(new Set(n), new Set(i));
+                    },
+                    [u],
+                );
+            function Z() {
+                (w(!1), H(!1));
+            }
+            function Q(e, t, n) {
+                (n.stopPropagation(), n.preventDefault(), 2 === t ? w(e) : (1 === t || w(e), H(e)));
+            }
+            l.useEffect(() => {
+                let e = setTimeout(() => {
+                    z(O || F);
+                }, 32);
+                return () => {
+                    clearTimeout(e);
+                };
+            }, [O, F]);
+            let $ = l.useCallback(
+                    (e) => {
+                        let t = { ...C };
+                        (k(e) ? (t[e.id] = P(e.record)) : M(e) && (t[e.id] = U(e.record)),
+                            J(t),
+                            R(""),
+                            Z(),
+                            setTimeout(() => {
+                                let e = Y.current?.containerRef.current,
+                                    t = e?.firstChild;
+                                null != t && t.scrollTo({ top: t.scrollHeight, behavior: "smooth" });
+                            }, 16));
+                    },
+                    [J, C],
+                ),
+                ee = l.useCallback(
+                    (e) => {
+                        let { section: n, row: l } = e,
+                            s = X[n][l];
+                        return (0, i.jsx)(
+                            x.D,
+                            {
+                                className: r()(L.Xs, L.iw),
+                                onClick: (e) => {
+                                    (e.stopPropagation(), $(s));
+                                },
+                                children: (0, i.jsx)("div", { className: L.qd, children: B(s, t, L.Dq) }),
+                            },
+                            s.id,
+                        );
+                    },
+                    [t, $, X],
+                ),
+                et = l.useMemo(
+                    () =>
+                        _.map((e) => {
+                            var n;
+                            return ((n = C[e]), { ...n.tag, label: B(n.row, t, L.yS) });
+                        }),
+                    [C, _, t],
+                );
+            return (0, i.jsxs)("div", {
+                className: r()(L.MT, A),
                 children: [
-                    (0, i.jsx)(N.A, {
-                        tags: et,
-                        maxHeight: 98,
-                        size: N.A.Sizes.MEDIUM,
-                        query: y,
-                        ref: Y,
-                        onRemoveTag: (e) => {
-                            let t = _[e],
-                                { [t]: n, ...i } = C;
-                            (J(i), R(""), Z());
-                        },
-                        onQueryChange: function (e) {
-                            R(e.trim().toLocaleLowerCase());
-                        },
-                        placeholder: m ?? L.intl.string(L.t.uqHLzW),
-                        sections: [_.length],
-                        inputProps: {
-                            "aria-controls": D,
-                            "aria-describedby": null != p ? b : void 0,
-                            "aria-expanded": V,
-                            onFocus: (e) => Q(!0, 2, e),
-                            onBlur: (e) => Q(!1, 2, e),
-                        },
-                    }),
-                    V &&
-                        (0, i.jsx)("div", {
-                            ref: W.setFloating,
-                            style: K,
-                            className: G.Dr,
-                            onFocus: (e) => Q(!0, 1, e),
-                            onBlur: (e) => Q(!1, 1, e),
-                            tabIndex: -1,
-                            children: (0, i.jsx)(f.Ei, {
-                                className: G.ac,
-                                innerClassName: G.bB,
-                                sections: q,
-                                renderRow: ee,
-                                rowHeight: 34,
-                                renderSection: (e) => {
-                                    let { section: t } = e;
-                                    return 0 === t
-                                        ? (0, i.jsx)(
-                                              j.D,
-                                              {
-                                                  variant: "heading-xs/semibold",
-                                                  className: r()(G.Gf, G.r6),
-                                                  children: L.intl.string(L.t.OGiMXJ),
-                                              },
-                                              L.intl.string(L.t.OGiMXJ),
-                                          )
-                                        : 1 === t
-                                          ? (0, i.jsx)(
-                                                j.D,
-                                                {
-                                                    variant: "heading-xs/semibold",
-                                                    className: r()(G.Gf, G.r6),
-                                                    children: L.intl.string(L.t["LPJmL/"]),
-                                                },
-                                                L.intl.string(L.t["LPJmL/"]),
-                                            )
-                                          : null;
+                    (0, i.jsxs)("div", {
+                        className: L.M6,
+                        ref: W.setReference,
+                        children: [
+                            (0, i.jsx)(N.A, {
+                                tags: et,
+                                maxHeight: 98,
+                                size: N.A.Sizes.MEDIUM,
+                                query: y,
+                                ref: Y,
+                                onRemoveTag: (e) => {
+                                    let t = _[e],
+                                        { [t]: n, ...i } = C;
+                                    (J(i), R(""), Z());
                                 },
-                                renderFooter: (e) => {
-                                    let { section: t } = e;
-                                    return 0 === t
-                                        ? 0 === q[1] && q[0] > 0
-                                            ? null
-                                            : (0, i.jsx)("div", { className: G.Nf, children: (0, i.jsx)(E.c, {}) })
-                                        : null;
+                                onQueryChange: function (e) {
+                                    R(e.trim().toLocaleLowerCase());
                                 },
-                                sectionHeight: 24,
-                                footerHeight: (e) => (0 === e ? (0 === q[1] && q[0] > 0 ? 0 : 32) : 0),
-                                role: void 0,
-                                innerRole: "listbox",
-                                innerId: D,
-                                innerAriaOrientation: "vertical",
+                                placeholder: m ?? G.intl.string(G.t.uqHLzW),
+                                sections: [_.length],
+                                inputProps: {
+                                    "aria-controls": D,
+                                    "aria-describedby": null != p ? b : void 0,
+                                    "aria-expanded": V,
+                                    onFocus: (e) => Q(!0, 2, e),
+                                    onBlur: (e) => Q(!1, 2, e),
+                                },
                             }),
+                            V &&
+                                (0, i.jsx)("div", {
+                                    ref: W.setFloating,
+                                    style: K,
+                                    className: L.Dr,
+                                    onFocus: (e) => Q(!0, 1, e),
+                                    onBlur: (e) => Q(!1, 1, e),
+                                    tabIndex: -1,
+                                    children: (0, i.jsx)(f.Ei, {
+                                        className: L.ac,
+                                        innerClassName: L.bB,
+                                        sections: q,
+                                        renderRow: ee,
+                                        rowHeight: 34,
+                                        renderSection: (e) => {
+                                            let { section: t } = e;
+                                            return 0 === t
+                                                ? (0, i.jsx)(
+                                                      j.D,
+                                                      {
+                                                          variant: "heading-xs/semibold",
+                                                          className: r()(L.Gf, L.r6),
+                                                          children: G.intl.string(G.t.OGiMXJ),
+                                                      },
+                                                      G.intl.string(G.t.OGiMXJ),
+                                                  )
+                                                : 1 === t
+                                                  ? (0, i.jsx)(
+                                                        j.D,
+                                                        {
+                                                            variant: "heading-xs/semibold",
+                                                            className: r()(L.Gf, L.r6),
+                                                            children: G.intl.string(G.t["LPJmL/"]),
+                                                        },
+                                                        G.intl.string(G.t["LPJmL/"]),
+                                                    )
+                                                  : null;
+                                        },
+                                        renderFooter: (e) => {
+                                            let { section: t } = e;
+                                            return 0 === t
+                                                ? 0 === q[1] && q[0] > 0
+                                                    ? null
+                                                    : (0, i.jsx)("div", {
+                                                          className: L.Nf,
+                                                          children: (0, i.jsx)(E.c, {}),
+                                                      })
+                                                : null;
+                                        },
+                                        sectionHeight: 24,
+                                        footerHeight: (e) => (0 === e ? (0 === q[1] && q[0] > 0 ? 0 : 32) : 0),
+                                        role: void 0,
+                                        innerRole: "listbox",
+                                        innerId: D,
+                                        innerAriaOrientation: "vertical",
+                                    }),
+                                }),
+                        ],
+                    }),
+                    null != p &&
+                        (0, i.jsx)(g.E, {
+                            id: b,
+                            variant: "body-xs/normal",
+                            color: "text-muted",
+                            className: L.cy,
+                            children: p,
                         }),
                 ],
-            }),
-            null != p &&
-                (0, i.jsx)(g.E, {
-                    id: b,
-                    variant: "body-xs/normal",
-                    color: "text-muted",
-                    className: G.cy,
-                    children: p,
-                }),
-        ],
-    });
-}
+            });
+        },
+        eW: P,
+        th: U,
+    },
+);

@@ -1,6 +1,5 @@
-n.d(t, { Ay: () => f, Gy: () => h, vG: () => I });
 var i,
-    r = n(17928),
+    r = n(855986),
     a = n(323073),
     s = n(734057),
     l = n(71393),
@@ -64,28 +63,36 @@ function f(e) {
     }
     return 0;
 }
-function I(e) {
-    let { userId: t, activity: n, channelId: i, application: u } = e,
-        E = (0, _.z)(),
-        A = (0, r.bG)([d.default], () => d.default.getCurrentUser()),
-        h = (0, r.bG)([s.A], () => s.A.getChannel(i), [i]),
-        I = (0, a.vL)(h);
-    return (0, r.bG)(
-        [s.A, c.A, o.A, l.A],
-        () =>
-            f({
-                userId: t,
-                activity: n,
-                application: u,
-                channelId: i,
-                currentUser: A,
-                isContentGated: I,
-                isActivitiesEnabledForCurrentPlatform: E,
-                ChannelStore: s.A,
-                VoiceStateStore: c.A,
-                PermissionStore: o.A,
-                GuildStore: l.A,
-            }),
-        [n, u, i, A, I, E, t],
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        Ay: f,
+        Gy: h,
+        vG: function (e) {
+            let { userId: t, activity: n, channelId: i, application: u } = e,
+                E = (0, _.z)(),
+                A = (0, r.bG)([d.default], () => d.default.getCurrentUser()),
+                h = (0, r.bG)([s.A], () => s.A.getChannel(i), [i]),
+                I = (0, a.vL)(h);
+            return (0, r.bG)(
+                [s.A, c.A, o.A, l.A],
+                () =>
+                    f({
+                        userId: t,
+                        activity: n,
+                        application: u,
+                        channelId: i,
+                        currentUser: A,
+                        isContentGated: I,
+                        isActivitiesEnabledForCurrentPlatform: E,
+                        ChannelStore: s.A,
+                        VoiceStateStore: c.A,
+                        PermissionStore: o.A,
+                        GuildStore: l.A,
+                    }),
+                [n, u, i, A, I, E, t],
+            );
+        },
+    },
+);

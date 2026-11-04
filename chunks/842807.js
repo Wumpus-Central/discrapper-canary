@@ -1,10 +1,10 @@
-_.exports = {
-    kL: "container__8fead",
-    wx: "header__8fead",
-    dJ: "stat__8fead",
-    gi: "globe__8fead",
-    h_: "description__8fead",
-    l7: "globalHeader__8fead",
-    ag: "games__8fead",
-    Zs: "globalGames__8fead",
+t.exports = {
+    kL: "container_eVi7eB",
+    wx: "header_eVi7eB",
+    dJ: "stat_eVi7eB",
+    gi: "globe_eVi7eB",
+    h_: "description_eVi7eB",
+    l7: "globalHeader_eVi7eB",
+    ag: "games_eVi7eB",
+    Zs: "globalGames_eVi7eB",
 };

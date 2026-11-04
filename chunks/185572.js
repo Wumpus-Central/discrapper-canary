@@ -1,4 +1,4 @@
-(n.r(e), n.d(e, { default: () => L }));
+n.r(e);
 var u = n(477900),
     t = n(582128),
     s = n(806163),
@@ -6,10 +6,10 @@ var u = n(477900),
     c = n(289873),
     d = n(976860),
     a = n(200789),
-    i = n(794885),
+    i = n(242495),
     o = n(404373),
-    j = n(97005),
-    f = n(863442),
+    j = n(499466),
+    f = n(712236),
     h = n(371169),
     x = n(434279),
     p = n(260498),
@@ -21,8 +21,8 @@ var u = n(477900),
     w = n(398773),
     P = n(751841),
     b = n(374523),
-    g = n(809526),
-    y = n(105292),
+    g = n(191850),
+    y = n(792996),
     I = n(159308);
 let B = "ConjurePage";
 function C() {
@@ -82,7 +82,13 @@ function O(l) {
           })
         : (0, u.jsx)(N, { projectId: e, workspaceGuildId: n }, e);
 }
-function L(l) {
-    let { projectId: e } = l;
-    return (0, j.TW)(B) ? (0, u.jsx)(O, { projectId: e }) : null;
-}
+n.d(
+    e,
+    {},
+    {
+        default: function (l) {
+            let { projectId: e } = l;
+            return (0, j.TW)(B) ? (0, u.jsx)(O, { projectId: e }) : null;
+        },
+    },
+);

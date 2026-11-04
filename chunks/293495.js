@@ -1,4 +1,3 @@
-n.d(t, { Ay: () => m, YY: () => f });
 var i = n(31728),
     l = n(272355),
     r = n(227042),
@@ -38,3 +37,4 @@ class p extends l.A {
     }
 }
 let m = new p();
+n.d(t, {}, { Ay: m, YY: f });

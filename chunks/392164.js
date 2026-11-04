@@ -1,2 +1,1 @@
-n.d(t, { f: () => i });
-let i = "DISCORD_OutOfProcessOverlay";
+n.d(t, {}, { f: "DISCORD_OutOfProcessOverlay" });

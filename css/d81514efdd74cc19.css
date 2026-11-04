@@ -1,0 +1,15 @@
+.themeSelector_j-R4rp {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    height: 32px
+}
+
+.themePillItem_j-R4rp {
+    border-radius: var(--radius-xs)
+}
+
+.themePillItemSelected_j-R4rp {
+    border: 1px solid var(--border-subtle)
+}
+
+/*# sourceMappingURL=d81514efdd74cc19.css.map*/

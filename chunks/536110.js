@@ -1,9 +1,8 @@
-i.d(e, { default: () => T });
 var n = i(477900),
     a = i(582128),
     l = i(284009),
     r = i.n(l),
-    s = i(17928),
+    s = i(855986),
     o = i(224640),
     c = i(289873),
     d = i(315629),
@@ -13,15 +12,15 @@ var n = i(477900),
     m = i(696208),
     x = i(793574),
     h = i(688810),
-    g = i(174459),
+    g = i(129230),
     E = i(975571),
     S = i(427262),
     p = i(326084),
     N = i(851746),
-    _ = i(809813),
+    _ = i(810852),
     f = i(232198),
     H = i(652215),
-    M = i(105292),
+    M = i(792996),
     b = i(214634),
     C = i(93712),
     j = i(954457);
@@ -40,15 +39,6 @@ function I(t) {
             h === f.H.HD_STREAMING
                 ? M.intl.string(M.t.NkgMIP)
                 : M.intl.format(M.t["2nw1yD"], { helpdeskArticle: E.A.getArticleURL(H.MVz.REFERRAL_PROGRAM) });
-    async function v() {
-        if (D.current || null == _ || _ <= 0) return;
-        ((D.current = !0),
-            T(!0),
-            L(!1),
-            g.default.track(H.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: x }));
-        let t = (await (0, p.xm)([l.id])).get(l.id) ?? p.o.FAIL;
-        ((D.current = !1), T(!1), h === f.H.HD_STREAMING && t === p.o.FAIL ? L(!0) : r({ recipient: l, status: t }));
-    }
     return null == _
         ? (0, n.jsx)(o.d, {
               transitionState: e,
@@ -97,7 +87,19 @@ function I(t) {
                           {
                               variant: "primary",
                               text: h === f.H.HD_STREAMING ? M.intl.string(M.t.dzQxHq) : M.intl.string(M.t.ItpQxk),
-                              onClick: v,
+                              onClick: async function () {
+                                  if (D.current || null == _ || _ <= 0) return;
+                                  ((D.current = !0),
+                                      T(!0),
+                                      L(!1),
+                                      g.default.track(H.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: x }));
+                                  let t = (await (0, p.xm)([l.id])).get(l.id) ?? p.o.FAIL;
+                                  ((D.current = !1),
+                                      T(!1),
+                                      h === f.H.HD_STREAMING && t === p.o.FAIL
+                                          ? L(!0)
+                                          : r({ recipient: l, status: t }));
+                              },
                               loading: I,
                               disabled: I || 0 === _,
                           },
@@ -107,36 +109,48 @@ function I(t) {
               ],
           });
 }
-let T = function (t) {
-    let { transitionState: e, onClose: i, recipient: l, sourceAnalyticsLocation: s, modalVariant: o = f.H.PROFILE } = t,
-        [c, d] = a.useState(1),
-        [u, A] = a.useState(null),
-        { analyticsLocations: R } = (0, h.Ay)([s, x.A.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
-    switch (c) {
-        case 1:
-            return (0, n.jsx)(I, {
-                transitionState: e,
-                onClose: i,
-                recipient: l,
-                analyticsLocations: R,
-                modalVariant: o,
-                onSendComplete: (t) => {
-                    (A(t), d(2));
-                },
-            });
-        case 2:
-            return (
-                r()(null != u, "Trial creation result should be set before showing the confirmation step"),
-                (0, n.jsx)(_.TrialsSharedConfirmationModal, {
+i.d(
+    e,
+    {},
+    {
+        default: function (t) {
+            let {
                     transitionState: e,
-                    results: [u],
                     onClose: i,
-                    isReminderConfirmation: !1,
-                    showRecipientList: !1,
-                    recipientName: o === f.H.HD_STREAMING ? S.Ay.getName(l) : void 0,
-                })
-            );
-        default:
-            return null;
-    }
-};
+                    recipient: l,
+                    sourceAnalyticsLocation: s,
+                    modalVariant: o = f.H.PROFILE,
+                } = t,
+                [c, d] = a.useState(1),
+                [u, A] = a.useState(null),
+                { analyticsLocations: R } = (0, h.Ay)([s, x.A.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
+            switch (c) {
+                case 1:
+                    return (0, n.jsx)(I, {
+                        transitionState: e,
+                        onClose: i,
+                        recipient: l,
+                        analyticsLocations: R,
+                        modalVariant: o,
+                        onSendComplete: (t) => {
+                            (A(t), d(2));
+                        },
+                    });
+                case 2:
+                    return (
+                        r()(null != u, "Trial creation result should be set before showing the confirmation step"),
+                        (0, n.jsx)(_.TrialsSharedConfirmationModal, {
+                            transitionState: e,
+                            results: [u],
+                            onClose: i,
+                            isReminderConfirmation: !1,
+                            showRecipientList: !1,
+                            recipientName: o === f.H.HD_STREAMING ? S.Ay.getName(l) : void 0,
+                        })
+                    );
+                default:
+                    return null;
+            }
+        },
+    },
+);

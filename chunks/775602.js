@@ -1,12 +1,12 @@
 n.d(t, { Ay: () => R, IG: () => I, _1: () => f });
 var i,
     r,
-    a = n(17928),
+    a = n(855986),
     s = n(506774),
     l = n(73153),
     o = n(188321),
     d = n(284016),
-    c = n(363195),
+    c = n(413599),
     u = n(253932),
     _ = n(617617),
     E = n(353835),
@@ -241,14 +241,14 @@ class O extends a.Ay.DeviceSettingsStore {
         return m.keyboardNavigationExplainerModalSeen;
     }
     get messageGroupSpacing() {
-        return null != m.messageGroupSpacing ? m.messageGroupSpacing : u.hH.getSetting() ? h.y5 : h.ES;
+        return null != m.messageGroupSpacing ? m.messageGroupSpacing : 16 * !u.hH.getSetting();
     }
     get isMessageGroupSpacingIncreased() {
-        let e = u.hH.getSetting() ? h.y5 : h.ES;
+        let e = 16 * !u.hH.getSetting();
         return this.messageGroupSpacing > e;
     }
     get isMessageGroupSpacingDecreased() {
-        let e = u.hH.getSetting() ? h.y5 : h.ES;
+        let e = 16 * !u.hH.getSetting();
         return this.messageGroupSpacing < e;
     }
     get isSubmitButtonEnabled() {

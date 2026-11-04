@@ -1,8 +1,8 @@
 e.exports = {
-    Dt: "guildSelector_c582b4",
-    ax: "nitroWheel_c582b4",
-    lm: "notice_c582b4",
-    Io: "pill_c582b4",
-    dK: "pillText_c582b4",
-    nW: "pillIcon_c582b4",
+    Dt: "guildSelector_sPmmqh",
+    ax: "nitroWheel_sPmmqh",
+    lm: "notice_sPmmqh",
+    Io: "pill_sPmmqh",
+    dK: "pillText_sPmmqh",
+    nW: "pillIcon_sPmmqh",
 };

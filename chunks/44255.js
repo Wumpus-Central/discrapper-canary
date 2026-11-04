@@ -1,6 +1,6 @@
-(l.d(t, { Dt: () => s, TP: () => i, lD: () => r }), l(321073));
-var n = l(809526),
-    a = l(105292);
+l(321073);
+var n = l(191850),
+    a = l(792996);
 function r(e) {
     if ("cron" === e.type) return a.intl.formatToPlainString(n.default.aewci7, { expression: e.expression });
     let t = e.everyMs / 6e4;
@@ -13,26 +13,34 @@ function r(e) {
 function i(e) {
     return new Date(e).toLocaleString(void 0, { dateStyle: "medium", timeStyle: "short" });
 }
-function s(e) {
-    let t = r(e.trigger);
-    "interval" === e.trigger.type &&
-        null != e.trigger.startsAt &&
-        (t = a.intl.formatToPlainString(n.default["qCM+Fa"], { interval: t, time: i(e.trigger.startsAt) }));
-    let l = [t];
-    l.push(a.intl.formatToPlainString(n.default["T/dCkl"], { time: i(e.next_run_at) }));
-    let s = e.last_run;
-    if (null != s) {
-        let e = i(s.scheduled_at);
-        l.push(
-            "succeeded" === s.status
-                ? a.intl.formatToPlainString(n.default.yMA4zs, { time: e })
-                : "skipped" === s.status
-                  ? a.intl.formatToPlainString(n.default["0ikIhz"], { time: e })
-                  : a.intl.formatToPlainString(n.default.HMNRj4, {
-                        time: e,
-                        error: s.error ?? a.intl.string(n.default.dRxtva),
-                    }),
-        );
-    }
-    return l;
-}
+l.d(
+    t,
+    {},
+    {
+        Dt: function (e) {
+            let t = r(e.trigger);
+            "interval" === e.trigger.type &&
+                null != e.trigger.startsAt &&
+                (t = a.intl.formatToPlainString(n.default["qCM+Fa"], { interval: t, time: i(e.trigger.startsAt) }));
+            let l = [t];
+            l.push(a.intl.formatToPlainString(n.default["T/dCkl"], { time: i(e.next_run_at) }));
+            let s = e.last_run;
+            if (null != s) {
+                let e = i(s.scheduled_at);
+                l.push(
+                    "succeeded" === s.status
+                        ? a.intl.formatToPlainString(n.default.yMA4zs, { time: e })
+                        : "skipped" === s.status
+                          ? a.intl.formatToPlainString(n.default["0ikIhz"], { time: e })
+                          : a.intl.formatToPlainString(n.default.HMNRj4, {
+                                time: e,
+                                error: s.error ?? a.intl.string(n.default.dRxtva),
+                            }),
+                );
+            }
+            return l;
+        },
+        TP: i,
+        lD: r,
+    },
+);

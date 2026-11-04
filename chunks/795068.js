@@ -1,4 +1,3 @@
-n.d(t, { a: () => r, l: () => i });
 var s = n(582128);
 let r = s.createContext({
         quest: null,
@@ -11,3 +10,4 @@ let r = s.createContext({
         targetSec: 0,
     }),
     i = s.createContext({ questConfig: null });
+n.d(t, {}, { a: r, l: i });

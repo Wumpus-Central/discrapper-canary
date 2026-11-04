@@ -1,6 +1,5 @@
-n.d(t, { A: () => o });
 var i = n(439372),
-    r = n(97005),
+    r = n(499466),
     a = n(371169),
     s = n(260498);
 class l extends i.A {
@@ -10,3 +9,4 @@ let o = new l();
 function d() {
     s.Ay.isReconnectListPending() && (0, r.zN)("ConjureProjectReconnectManager") && (0, a.hy)();
 }
+n.d(t, {}, { A: o });

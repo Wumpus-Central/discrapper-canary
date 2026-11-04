@@ -1,4 +1,3 @@
-n.d(t, { N: () => a });
 var i,
     a =
         (((i = {}).REFERRAL_PROGRAM = "referralProgram"),
@@ -19,3 +18,4 @@ var i,
         (i.MACARON = "macaron"),
         (i.CODE_BLURPLE = "codeBlurple"),
         i);
+n.d(t, {}, { N: a });

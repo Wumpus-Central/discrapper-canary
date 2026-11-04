@@ -1,1 +1,1 @@
-_.exports = { Vs: "tile__70246", Ml: "productTile__70246", vg: "productDayNumber__70246" };
+z.exports = { Vs: "tile_i9BE2q", Ml: "productTile_i9BE2q", vg: "productDayNumber_i9BE2q" };

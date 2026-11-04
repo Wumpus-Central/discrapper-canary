@@ -1,11 +1,11 @@
-(n.d(t, { A: () => g }), n(938796));
+n(938796);
 var i = n(435558),
     r = n.n(i),
-    a = n(17928),
+    a = n(855986),
     s = n(73153),
     l = n(544743),
     o = n(95701),
-    d = n(280450);
+    d = n(46653);
 let c = {},
     u = new l.Ay(),
     _ = new Set();
@@ -103,90 +103,88 @@ class m extends a.Ay.Store {
     }
 }
 let T = new m(s.h, {
-        CONNECTION_OPEN: function (e) {
-            (u.reset(),
-                (_ = new Set()),
-                (c = {}),
-                e.guilds.forEach((e) => {
-                    A(e);
-                }));
-        },
-        OVERLAY_INITIALIZE: function (e) {
-            let { joinedThreads: t } = e;
-            c = r()(t)
-                .map((e) => ({ ...e, joinTimestamp: new Date(e.joinTimestamp) }))
-                .keyBy("threadId")
-                .value();
-        },
-        GUILD_CREATE: function (e) {
-            let { guild: t } = e;
-            (E(t.id), A(t));
-        },
-        GUILD_DELETE: function (e) {
-            let { guild: t } = e;
-            E(t.id);
-        },
-        THREAD_CREATE: function (e) {
-            let { channel: t } = e;
-            h(t);
-        },
-        THREAD_LIST_SYNC: I,
-        SEARCH_MESSAGES_SUCCESS: p,
-        MOD_VIEW_SEARCH_MESSAGES_SUCCESS: p,
-        LOAD_THREADS_SUCCESS: I,
-        LOAD_ARCHIVED_THREADS_SUCCESS: I,
-        THREAD_DELETE: function (e) {
-            let { channel: t } = e;
-            if (!(t.id in c)) return !1;
-            ((c = { ...c }), delete c[t.id]);
-        },
-        THREAD_MEMBER_UPDATE: function (e) {
-            if (d.default.getId() !== e.userId) return !1;
-            ((c[e.id] = {
-                threadId: e.id,
-                guildId: e.guildId,
-                flags: e.flags,
-                muted: e.muted,
-                muteConfig: e.muteConfig,
-                joinTimestamp: new Date(e.joinTimestamp),
+    CONNECTION_OPEN: function (e) {
+        (u.reset(),
+            (_ = new Set()),
+            (c = {}),
+            e.guilds.forEach((e) => {
+                A(e);
+            }));
+    },
+    OVERLAY_INITIALIZE: function (e) {
+        let { joinedThreads: t } = e;
+        c = r()(t)
+            .map((e) => ({ ...e, joinTimestamp: new Date(e.joinTimestamp) }))
+            .keyBy("threadId")
+            .value();
+    },
+    GUILD_CREATE: function (e) {
+        let { guild: t } = e;
+        (E(t.id), A(t));
+    },
+    GUILD_DELETE: function (e) {
+        let { guild: t } = e;
+        E(t.id);
+    },
+    THREAD_CREATE: function (e) {
+        let { channel: t } = e;
+        h(t);
+    },
+    THREAD_LIST_SYNC: I,
+    SEARCH_MESSAGES_SUCCESS: p,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: p,
+    LOAD_THREADS_SUCCESS: I,
+    LOAD_ARCHIVED_THREADS_SUCCESS: I,
+    THREAD_DELETE: function (e) {
+        let { channel: t } = e;
+        if (!(t.id in c)) return !1;
+        ((c = { ...c }), delete c[t.id]);
+    },
+    THREAD_MEMBER_UPDATE: function (e) {
+        if (d.default.getId() !== e.userId) return !1;
+        ((c[e.id] = {
+            threadId: e.id,
+            guildId: e.guildId,
+            flags: e.flags,
+            muted: e.muted,
+            muteConfig: e.muteConfig,
+            joinTimestamp: new Date(e.joinTimestamp),
+        }),
+            f(e.id));
+    },
+    THREAD_MEMBER_LOCAL_UPDATE: function (e) {
+        let { id: t, userId: n, guildId: i, isJoining: r } = e;
+        if (d.default.getId() !== n || null === i) return !1;
+        r
+            ? (c[t] = {
+                  threadId: t,
+                  guildId: i,
+                  flags: 0,
+                  muted: !0,
+                  muteConfig: { end_time: void 0 },
+                  joinTimestamp: new Date(),
+              })
+            : delete c[t];
+    },
+    THREAD_MEMBERS_UPDATE: function (e) {
+        let t = !1;
+        return (
+            e.removedMemberIds?.includes(d.default.getId()) && e.id in c && ((c = { ...c }), delete c[e.id], (t = !0)),
+            e.addedMembers?.forEach((n) => {
+                n.userId === d.default.getId() &&
+                    (((c = { ...c })[e.id] = {
+                        threadId: e.id,
+                        guildId: e.guildId,
+                        flags: n.flags,
+                        muted: n.muted,
+                        muteConfig: n.muteConfig,
+                        joinTimestamp: new Date(n.joinTimestamp),
+                    }),
+                    f(e.id),
+                    (t = !0));
             }),
-                f(e.id));
-        },
-        THREAD_MEMBER_LOCAL_UPDATE: function (e) {
-            let { id: t, userId: n, guildId: i, isJoining: r } = e;
-            if (d.default.getId() !== n || null === i) return !1;
-            r
-                ? (c[t] = {
-                      threadId: t,
-                      guildId: i,
-                      flags: 0,
-                      muted: !0,
-                      muteConfig: { end_time: void 0 },
-                      joinTimestamp: new Date(),
-                  })
-                : delete c[t];
-        },
-        THREAD_MEMBERS_UPDATE: function (e) {
-            let t = !1;
-            return (
-                e.removedMemberIds?.includes(d.default.getId()) &&
-                    e.id in c &&
-                    ((c = { ...c }), delete c[e.id], (t = !0)),
-                e.addedMembers?.forEach((n) => {
-                    n.userId === d.default.getId() &&
-                        (((c = { ...c })[e.id] = {
-                            threadId: e.id,
-                            guildId: e.guildId,
-                            flags: n.flags,
-                            muted: n.muted,
-                            muteConfig: n.muteConfig,
-                            joinTimestamp: new Date(n.joinTimestamp),
-                        }),
-                        f(e.id),
-                        (t = !0));
-                }),
-                t
-            );
-        },
-    }),
-    g = T;
+            t
+        );
+    },
+});
+n.d(t, {}, { A: T });

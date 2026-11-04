@@ -1,0 +1,17 @@
+.guildContainer_wWIOj0 {
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: var(--space-16)
+}
+
+.guildInfo_wWIOj0 {
+    align-items: center;
+    display: flex
+}
+
+.guildName_wWIOj0 {
+    margin-inline-start: var(--space-12)
+}
+
+/*# sourceMappingURL=85d07dacb04f92a6.css.map*/

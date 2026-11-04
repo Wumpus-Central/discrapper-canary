@@ -1,4 +1,3 @@
-n.d(t, { i: () => i, z: () => r });
 var l = n(582128);
 let i = (0, l.createContext)({
     setCustomConfettiVisible: () => {},
@@ -14,6 +13,13 @@ let i = (0, l.createContext)({
     completesCollectAndClaimPromotion: !1,
     setCompletesCollectAndClaimPromotion: () => {},
 });
-function r() {
-    return (0, l.useContext)(i);
-}
+n.d(
+    t,
+    {},
+    {
+        i: i,
+        z: function () {
+            return (0, l.useContext)(i);
+        },
+    },
+);

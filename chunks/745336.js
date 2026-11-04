@@ -1,4 +1,3 @@
-t.d(a, { default: () => p });
 var n = t(477900),
     s = t(582128),
     i = t(192308),
@@ -7,38 +6,49 @@ var n = t(477900),
     c = t(793163),
     l = t(40449),
     d = t(679017);
-let p = function (e) {
-    let { onClose: a, onComplete: t, onCancel: p, transitionState: u, webviewUrl: m } = e,
-        f = (0, o.W$)(),
-        h = s.useCallback(() => {
-            (t(), a());
-        }, [t, a]),
-        k = s.useCallback(() => {
-            (0, i.hasModalOpen)(l.SW) && h();
-        }, [h]);
-    (0, r.dZ)(k);
-    let C = s.useCallback(
-        (e) => {
-            f && "" !== m && e?.data?.eventType === "Verification.Result" && h();
+t.d(
+    a,
+    {},
+    {
+        default: function (e) {
+            let { onClose: a, onComplete: t, onCancel: p, transitionState: u, webviewUrl: k } = e,
+                m = (0, o.W$)(),
+                f = s.useCallback(() => {
+                    (t(), a());
+                }, [t, a]),
+                C = s.useCallback(() => {
+                    (0, i.kB)(l.SW) && f();
+                }, [f]);
+            (0, r.dZ)(C);
+            let h = s.useCallback(
+                (e) => {
+                    m && "" !== k && e?.data?.eventType === "Verification.Result" && f();
+                },
+                [k, f, m],
+            );
+            return (
+                s.useEffect(
+                    () => (
+                        window.addEventListener("message", h),
+                        () => {
+                            window.removeEventListener("message", h);
+                        }
+                    ),
+                    [h],
+                ),
+                (0, n.jsx)(c.A, {
+                    parentComponent: "AgeVerificationModal",
+                    transitionState: u,
+                    onBackToStart: a,
+                    onCancel: p,
+                    children: (0, n.jsx)("iframe", {
+                        id: "frame",
+                        src: k,
+                        className: d.pU,
+                        allow: "camera; microphone",
+                    }),
+                })
+            );
         },
-        [m, h, f],
-    );
-    return (
-        s.useEffect(
-            () => (
-                window.addEventListener("message", C),
-                () => {
-                    window.removeEventListener("message", C);
-                }
-            ),
-            [C],
-        ),
-        (0, n.jsx)(c.A, {
-            parentComponent: "AgeVerificationModal",
-            transitionState: u,
-            onBackToStart: a,
-            onCancel: p,
-            children: (0, n.jsx)("iframe", { id: "frame", src: m, className: d.pU, allow: "camera; microphone" }),
-        })
-    );
-};
+    },
+);

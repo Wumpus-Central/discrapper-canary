@@ -1,4 +1,3 @@
-r.d(t, { L: () => n });
 class n extends Set {
     constructor(e, t, r) {
         (super(e),
@@ -7,3 +6,4 @@ class n extends Set {
                 : ((this.anchorKey = t ?? null), (this.currentKey = r ?? null)));
     }
 }
+r.d(t, {}, { L: n });

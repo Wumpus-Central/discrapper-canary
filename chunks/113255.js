@@ -1,7 +1,6 @@
-r.d(n, { default: () => C });
 var t = r(477900);
 r(582128);
-var i = r(980707),
+var i = r(165862),
     a = r(477782),
     l = r(442433),
     s = r(358367),
@@ -12,7 +11,7 @@ var i = r(980707),
     u = r(307623),
     _ = r(317910),
     o = r(475777),
-    p = r(105292);
+    p = r(792996);
 let C = (0, s.A)(
     function (e) {
         let { channel: n, guild: r, onSelect: s } = e,
@@ -38,3 +37,4 @@ let C = (0, s.A)(
     },
     [d.A.CONTEXT_MENU, d.A.CHANNEL_ACTIVITY_FEED_VOICE_MENU],
 );
+r.d(n, {}, { default: C });

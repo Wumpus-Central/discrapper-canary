@@ -1,9 +1,8 @@
-n.d(t, { Ah: () => c, EG: () => h, EH: () => u, Vo: () => d });
 var l = n(477900),
     i = n(582128),
     r = n(143236),
     s = n(444927),
-    a = n(625494);
+    a = n(188567);
 class o {
     emitter = new r.EventEmitter();
     subscribe(e, t) {
@@ -28,11 +27,6 @@ let u = i.createContext(
     })(),
 );
 function c(e) {
-    let { children: t, ref: n } = e,
-        r = (0, s.A)(() => new o());
-    return (i.useImperativeHandle(n, () => r, [r]), (0, l.jsx)(u.Provider, { value: r, children: t }));
-}
-function d(e) {
     let { event: t, handler: n } = e,
         l = i.useContext(u),
         r = i.useRef(n);
@@ -57,6 +51,19 @@ function d(e) {
         null
     );
 }
-function h(e) {
-    return (d(e), null);
-}
+n.d(
+    t,
+    {},
+    {
+        Ah: function (e) {
+            let { children: t, ref: n } = e,
+                r = (0, s.A)(() => new o());
+            return (i.useImperativeHandle(n, () => r, [r]), (0, l.jsx)(u.Provider, { value: r, children: t }));
+        },
+        EG: function (e) {
+            return (c(e), null);
+        },
+        EH: u,
+        Vo: c,
+    },
+);

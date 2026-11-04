@@ -1,4 +1,3 @@
-n.d(t, { W: () => l, t: () => o });
 var i = n(477900),
     s = n(582128),
     r = n(121894);
@@ -89,27 +88,35 @@ let l = s.createContext({
     manager: new a(!0),
     useThoughtfullyAnimated: () => ({ animate: !0, registerRef: () => {} }),
 });
-function o(e) {
-    let { children: t } = e,
-        [n] = s.useState(() => {
-            let e = new a();
-            return {
-                manager: e,
-                useThoughtfullyAnimated() {
-                    let t = s.useRef(null),
-                        [n, i] = s.useState(!1);
+n.d(
+    t,
+    {},
+    {
+        W: l,
+        t: function (e) {
+            let { children: t } = e,
+                [n] = s.useState(() => {
+                    let e = new a();
                     return {
-                        animate: n,
-                        registerRef: s.useCallback((n) => {
-                            (null != t.current && e.unregisterNode(t.current),
-                                (t.current = n),
-                                null != t.current && e.registerNode(t.current, i));
-                        }, []),
+                        manager: e,
+                        useThoughtfullyAnimated() {
+                            let t = s.useRef(null),
+                                [n, i] = s.useState(!1);
+                            return {
+                                animate: n,
+                                registerRef: s.useCallback((n) => {
+                                    (null != t.current && e.unregisterNode(t.current),
+                                        (t.current = n),
+                                        null != t.current && e.registerNode(t.current, i));
+                                }, []),
+                            };
+                        },
                     };
-                },
-            };
-        });
-    return (
-        s.useEffect(() => () => n.manager.cleanUp(), [n.manager]), (0, i.jsx)(l.Provider, { value: n, children: t })
-    );
-}
+                });
+            return (
+                s.useEffect(() => () => n.manager.cleanUp(), [n.manager]),
+                (0, i.jsx)(l.Provider, { value: n, children: t })
+            );
+        },
+    },
+);

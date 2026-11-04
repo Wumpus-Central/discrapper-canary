@@ -1,29 +1,8 @@
-(t.r(a),
-    t.d(a, {
-        assets: () => h,
-        ddd: () => p,
-        default: () => f,
-        fr: () => k,
-        h: () => y,
-        ip: () => d,
-        layers: () => n,
-        markers: () => g,
-        metadata: () => e,
-        nm: () => r,
-        op: () => x,
-        v: () => s,
-        w: () => o,
-    }));
+t.r(a);
 var s = "5.7.5",
-    k = 100,
-    d = 0,
-    x = 398,
-    o = 296,
-    y = 296,
-    r = "Comp 1",
-    p = 0,
-    e = {},
-    h = [
+    k = "Comp 1",
+    d = {},
+    x = [
         {
             id: "0",
             layers: [
@@ -1633,7 +1612,7 @@ var s = "5.7.5",
             ],
         },
     ],
-    n = [
+    o = [
         {
             ddd: 0,
             refId: "0",
@@ -1649,5 +1628,36 @@ var s = "5.7.5",
             st: 0,
         },
     ],
-    g = [],
-    f = { v: s, fr: 100, ip: 0, op: 398, w: 296, h: 296, nm: r, ddd: 0, metadata: e, assets: h, layers: n, markers: g };
+    y = [];
+t.d(
+    a,
+    {},
+    {
+        assets: x,
+        ddd: 0,
+        default: {
+            v: s,
+            fr: 100,
+            ip: 0,
+            op: 398,
+            w: 296,
+            h: 296,
+            nm: k,
+            ddd: 0,
+            metadata: d,
+            assets: x,
+            layers: o,
+            markers: y,
+        },
+        fr: 100,
+        h: 296,
+        ip: 0,
+        layers: o,
+        markers: y,
+        metadata: d,
+        nm: k,
+        op: 398,
+        v: s,
+        w: 296,
+    },
+);

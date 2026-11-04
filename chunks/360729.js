@@ -1,5 +1,4 @@
-n.d(t, { W8: () => o, mf: () => d, vJ: () => s });
-var i = n(17928),
+var i = n(855986),
     r = n(600975),
     a = n(696451);
 let s = "2026-06_guild_rooms",
@@ -36,15 +35,22 @@ let s = "2026-06_guild_rooms",
             },
         ],
     });
-function o(e, t) {
-    var n;
-    return l.getCurrentConfig(e, {
-        autoTrackExposure: !0,
-        ...t,
-        disable: (t?.disable ?? !1) || !(null != (n = e.guildId) && !a.Ay.isCurrentUserGuest(n)),
-    });
-}
-function d(e, t) {
-    let n = (0, i.bG)([a.Ay], () => null != e.guildId && !a.Ay.isCurrentUserGuest(e.guildId), [e.guildId]);
-    return l.useExperiment(e, { autoTrackExposure: !0, ...t, disable: (t?.disable ?? !1) || !n });
-}
+n.d(
+    t,
+    {},
+    {
+        W8: function (e, t) {
+            var n;
+            return l.getCurrentConfig(e, {
+                autoTrackExposure: !0,
+                ...t,
+                disable: (t?.disable ?? !1) || !(null != (n = e.guildId) && !a.Ay.isCurrentUserGuest(n)),
+            });
+        },
+        mf: function (e, t) {
+            let n = (0, i.bG)([a.Ay], () => null != e.guildId && !a.Ay.isCurrentUserGuest(e.guildId), [e.guildId]);
+            return l.useExperiment(e, { autoTrackExposure: !0, ...t, disable: (t?.disable ?? !1) || !n });
+        },
+        vJ: s,
+    },
+);

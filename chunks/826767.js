@@ -1,7 +1,7 @@
 n.d(t, { A: () => s, F: () => l });
-var i = n(573163),
+var i = n(218461),
     r = n(927813),
-    a = n(935208);
+    a = n(811091);
 function s(e) {
     if (null == e.threadMetadata) return 0;
     let t = e.threadMetadata.autoArchiveDuration * r.A.Millis.MINUTE;

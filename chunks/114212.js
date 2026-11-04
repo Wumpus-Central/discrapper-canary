@@ -1,4 +1,3 @@
-e.d(a, { Ay: () => N, B5: () => x, BP: () => p, FQ: () => o, Uj: () => y, VF: () => v, _G: () => j });
 var n = e(477900);
 e(582128);
 var i = e(503698),
@@ -70,33 +69,35 @@ function u(s) {
         ],
     });
 }
-let x = 44,
-    j = 22,
-    p = 26,
-    y = 26,
-    v = 6;
-function N(s) {
-    let { messages: a, groupSpacing: e = 0, compact: i = !1, attachmentSpecs: t, className: l } = s,
-        c = null != t ? (t.last ? a - 1 : r().random(0, a - 1)) : -1,
-        d = r().random(80, 120),
-        h = r().random(0.1, 0.2);
-    return (0, n.jsx)(n.Fragment, {
-        children: Array(a)
-            .fill(null)
-            .map((s, a) =>
-                (0, n.jsx)(
-                    u,
-                    {
-                        compact: i,
-                        className: l,
-                        usernameWidth: d,
-                        usernameOpacity: h,
-                        groupStart: 0 === a,
-                        attachmentSpecs: a === c ? t : void 0,
-                        style: 0 === a ? { marginTop: m(e) } : void 0,
-                    },
-                    a,
-                ),
-            ),
-    });
-}
+e.d(
+    a,
+    {},
+    {
+        A: function (s) {
+            let { messages: a, groupSpacing: e = 0, compact: i = !1, attachmentSpecs: t, className: l } = s,
+                c = null != t ? (t.last ? a - 1 : r().random(0, a - 1)) : -1,
+                d = r().random(80, 120),
+                h = r().random(0.1, 0.2);
+            return (0, n.jsx)(n.Fragment, {
+                children: Array(a)
+                    .fill(null)
+                    .map((s, a) =>
+                        (0, n.jsx)(
+                            u,
+                            {
+                                compact: i,
+                                className: l,
+                                usernameWidth: d,
+                                usernameOpacity: h,
+                                groupStart: 0 === a,
+                                attachmentSpecs: a === c ? t : void 0,
+                                style: 0 === a ? { marginTop: m(e) } : void 0,
+                            },
+                            a,
+                        ),
+                    ),
+            });
+        },
+        F: o,
+    },
+);

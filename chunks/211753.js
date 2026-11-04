@@ -1,4 +1,3 @@
-n.d(t, { x: () => l });
 var i,
     r = n(506774),
     a = n(206885),
@@ -84,3 +83,4 @@ class l {
         return (d.save(), d);
     }
 }
+n.d(t, {}, { x: l });

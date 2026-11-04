@@ -1,0 +1,87 @@
+.addItemContainer_QIsS6D {
+    cursor: pointer;
+    display: flex;
+    margin-top: 8px
+}
+
+.addItemButton_QIsS6D {
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.dragging_QIsS6D {
+    opacity: .6
+}
+
+.draggableInputContainer_QIsS6D {
+    align-items: center;
+    display: flex;
+    margin-inline-end: -8px;
+    position: relative
+}
+
+.inputWrapper_QIsS6D {
+    flex: 1;
+    flex-direction: row-reverse;
+    margin-bottom: 12px;
+    position: relative
+}
+
+.inputWrapper_QIsS6D:hover .clearButton_QIsS6D {
+    opacity: 1
+}
+
+.clearButton_QIsS6D {
+    color: var(--interactive-text-default);
+    inset-inline-end: 8px;
+    opacity: 0;
+    position: absolute;
+    top: 6px;
+    transition: opacity .2s ease-in-out;
+    z-index: 2
+}
+
+.clearButton_QIsS6D:focus-within,
+.clearButton_QIsS6D:hover {
+    opacity: 1
+}
+
+.dragContainer_QIsS6D {
+    align-items: center;
+    cursor: move;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+    width: 32px
+}
+
+.dragIcon_QIsS6D {
+    color: var(--interactive-text-default)
+}
+
+.divider_QIsS6D {
+    background-color: var(--border-subtle);
+    height: 1px;
+    margin: 24px 0
+}
+
+.errorText_QIsS6D {
+    margin-top: 8px
+}
+
+.spacedItem_QIsS6D {
+    margin-bottom: 16px
+}
+
+.radioIconEmptyContainer_QIsS6D {
+    display: flex;
+    margin-bottom: 12px;
+    padding-inline-end: 10px
+}
+
+.radioIconEmpty_QIsS6D {
+    color: var(--interactive-text-default)
+}
+
+/*# sourceMappingURL=dfee8977f85c06c2.css.map*/

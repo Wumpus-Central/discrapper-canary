@@ -1,19 +1,18 @@
-(n.d(t, { A: () => p }), n(321073));
+n(321073);
 var i = n(435558),
     r = n(73153),
     a = n(378939),
-    s = n(148494),
+    s = n(138399),
     l = n(334738),
-    o = n(409686),
+    o = n(849171),
     d = n(976860),
-    c = n(573163),
-    u = n(935208),
+    c = n(218461),
+    u = n(811091),
     _ = n(932883),
-    E = n(310031),
+    E = n(398269),
     A = n(849077),
     h = n(652215);
-let f = (0, i.throttle)(I, 1500);
-async function I(e) {
+let f = (0, i.throttle)(async function (e) {
     let { preload: t = !1, ...n } = e,
         i = Date.now(),
         l = E.A.getNotifyingChannelIds();
@@ -28,26 +27,26 @@ async function I(e) {
                       let e = c.Ay.lastMessageId(i),
                           r = null != e && u.default.age(e) > A.V$;
                       if (n.length >= 5 || r) break;
-                      let a = s.A.fetchMessages({ channelId: i, limit: A.EM, feature: A.j5 });
+                      let a = s.A.fetchMessages({ channelId: i, limit: 50, feature: A.j5 });
                       !1 !== a && null != a && n.push(a);
                   }
                   return n;
               })(l),
-        f = o.Ay.getMentions(),
-        I = null != f && f.length > 0 ? f[f.length - 1].id : null,
-        p = !1;
+        h = o.Ay.getMentions(),
+        f = null != h && h.length > 0 ? h[h.length - 1].id : null,
+        I = !1;
     (o.Ay.hasMore || !o.Ay.hasLoadedEver) &&
         !o.Ay.loading &&
         (d.push(
             a.A.fetchRecentMentions({
-                before: I,
-                limit: h.Ue3,
+                before: f,
+                limit: 25,
                 roles: o.Ay.roleFilter,
                 everyone: o.Ay.everyoneFilter,
                 feature: A.j5,
             }),
         ),
-        (p = !0));
+        (I = !0));
     if (0 === d.length)
         return void r.h.dispatch({
             type: "NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_SUCCESS",
@@ -60,8 +59,8 @@ async function I(e) {
             timeToLoad: Date.now() - i,
             loadingTrigger: n.loadingTrigger ?? A.VA.UNKNOWN,
             viewId: n.viewId,
-            channelsFetched: d.length - !!p,
-            mentionsFetched: p,
+            channelsFetched: d.length - !!I,
+            mentionsFetched: I,
         };
         (t && (0, _.P3)(e),
             r.h.dispatch({
@@ -73,36 +72,52 @@ async function I(e) {
     } catch (e) {
         r.h.dispatch({ type: "NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_FAILURE" });
     }
-}
-let p = {
-    loadMoreInbox() {
-        let { preload: e = !1, ...t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        if (!E.A.canLoadMore({ preload: e })) return !1;
-        (r.h.dispatch({ type: "NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_START", preload: e }), f({ preload: e, ...t }));
+}, 1500);
+n.d(
+    t,
+    {},
+    {
+        A: {
+            loadMoreInbox() {
+                let { preload: e = !1, ...t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+                if (!E.A.canLoadMore({ preload: e })) return !1;
+                (r.h.dispatch({ type: "NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_START", preload: e }),
+                    f({ preload: e, ...t }));
+            },
+            inboxItemClick: function (e) {
+                let {
+                    message: t,
+                    channel: n,
+                    isUnread: i,
+                    isSidebar: a,
+                    viewId: o,
+                    track: c = !0,
+                    autoTriggeredOnInboxOpen: u = !1,
+                } = e;
+                (r.h.dispatch({
+                    type: "NOTIFICATIONS_INBOX_ITEM_CLICK",
+                    messageId: t.id,
+                    channelId: n.id,
+                    isUnread: i,
+                }),
+                    c && (0, _.Ml)({ interactionType: _.X8.CLICK, message: t, viewId: o }),
+                    i &&
+                        l.I_(
+                            t.channel_id,
+                            {
+                                section: h.JJy.INBOX,
+                                object: h.ZSU.ACK_MESSAGE_VIEWED,
+                                objectType: h.btD.ACK_SEMI_AUTOMATIC,
+                            },
+                            !0,
+                            void 0,
+                            t.id,
+                        ),
+                    s.A.trackJump(n.id, t.id, A.XU));
+                let E = a ? h.gNP : n.guild_id,
+                    f = h.BVt.CHANNEL(E, n.id, t.id);
+                u && a ? (0, d.bG)(f) : (0, d.pX)(f);
+            },
+        },
     },
-    inboxItemClick: function (e) {
-        let {
-            message: t,
-            channel: n,
-            isUnread: i,
-            isSidebar: a,
-            viewId: o,
-            track: c = !0,
-            autoTriggeredOnInboxOpen: u = !1,
-        } = e;
-        (r.h.dispatch({ type: "NOTIFICATIONS_INBOX_ITEM_CLICK", messageId: t.id, channelId: n.id, isUnread: i }),
-            c && (0, _.Ml)({ interactionType: _.X8.CLICK, message: t, viewId: o }),
-            i &&
-                l.I_(
-                    t.channel_id,
-                    { section: h.JJy.INBOX, object: h.ZSU.ACK_MESSAGE_VIEWED, objectType: h.btD.ACK_SEMI_AUTOMATIC },
-                    !0,
-                    void 0,
-                    t.id,
-                ),
-            s.A.trackJump(n.id, t.id, A.XU));
-        let E = a ? h.gNP : n.guild_id,
-            f = h.BVt.CHANNEL(E, n.id, t.id);
-        u && a ? (0, d.bG)(f) : (0, d.pX)(f);
-    },
-};
+);

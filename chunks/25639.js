@@ -1,6 +1,5 @@
-t.d(l, { A: () => C, s: () => o });
 var n,
-    i = t(17928),
+    i = t(855986),
     a = t(73153),
     r = t(967198),
     s = t(977997),
@@ -42,42 +41,42 @@ class I extends i.Ay.Store {
     }
 }
 let A = new I(a.h, {
-        VOICE_STATE_UPDATES: function (e) {
-            let { voiceStates: l } = e,
-                t = r.A.getGuildId();
-            t !== u && null != t && (u = t);
-            let n = {};
-            for (let e of l)
-                e.guildId === t &&
-                    (null != e.oldChannelId && (n[e.oldChannelId] = (n[e.oldChannelId] ?? 0) - 1),
-                    null != e.channelId && (n[e.channelId] = (n[e.channelId] ?? 0) + 1));
-            let i = !1;
-            for (let [e, l] of Object.entries(n))
-                (function (e, l) {
-                    let t = c[e],
-                        n = t?.userCount ?? 0,
-                        i = Math.max(0, n + l);
-                    return 0 === n && i > 0
-                        ? ((c[e] = { style: "GENTLE_AMBIENT_WITH_INTRO", userCount: i }), T(e), !0)
-                        : n > 0 && i > n
-                          ? ((c[e] = { style: "HIGH_CONTRAST", userCount: i }), T(e), !0)
-                          : 0 === i
-                            ? (h(e), delete c[e], !0)
-                            : null != t && i !== n && ((c[e] = { ...t, userCount: i }), !0);
-                })(e, l) && (i = !0);
-            return i;
-        },
-        CHANNEL_SELECT: function (e) {
-            let { guildId: l } = e;
-            if (l === u || null == l) return !1;
-            ((u = l), E());
-            let t = s.A.getVoiceStates(l),
-                n = {};
-            for (let e of Object.values(t)) null != e.channelId && (n[e.channelId] = (n[e.channelId] ?? 0) + 1);
-            for (let [e, l] of Object.entries(n)) l > 0 && (c[e] = { style: "GENTLE_AMBIENT", userCount: l });
-            return !0;
-        },
-        CONNECTION_OPEN: N,
-        LOGOUT: N,
-    }),
-    C = A;
+    VOICE_STATE_UPDATES: function (e) {
+        let { voiceStates: l } = e,
+            t = r.A.getGuildId();
+        t !== u && null != t && (u = t);
+        let n = {};
+        for (let e of l)
+            e.guildId === t &&
+                (null != e.oldChannelId && (n[e.oldChannelId] = (n[e.oldChannelId] ?? 0) - 1),
+                null != e.channelId && (n[e.channelId] = (n[e.channelId] ?? 0) + 1));
+        let i = !1;
+        for (let [e, l] of Object.entries(n))
+            (function (e, l) {
+                let t = c[e],
+                    n = t?.userCount ?? 0,
+                    i = Math.max(0, n + l);
+                return 0 === n && i > 0
+                    ? ((c[e] = { style: "GENTLE_AMBIENT_WITH_INTRO", userCount: i }), T(e), !0)
+                    : n > 0 && i > n
+                      ? ((c[e] = { style: "HIGH_CONTRAST", userCount: i }), T(e), !0)
+                      : 0 === i
+                        ? (h(e), delete c[e], !0)
+                        : null != t && i !== n && ((c[e] = { ...t, userCount: i }), !0);
+            })(e, l) && (i = !0);
+        return i;
+    },
+    CHANNEL_SELECT: function (e) {
+        let { guildId: l } = e;
+        if (l === u || null == l) return !1;
+        ((u = l), E());
+        let t = s.A.getVoiceStates(l),
+            n = {};
+        for (let e of Object.values(t)) null != e.channelId && (n[e.channelId] = (n[e.channelId] ?? 0) + 1);
+        for (let [e, l] of Object.entries(n)) l > 0 && (c[e] = { style: "GENTLE_AMBIENT", userCount: l });
+        return !0;
+    },
+    CONNECTION_OPEN: N,
+    LOGOUT: N,
+});
+t.d(l, {}, { A: A, s: o });

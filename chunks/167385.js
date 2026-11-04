@@ -1,5 +1,4 @@
-(Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.AbstractParserWithWordBoundaryChecking = void 0),
+((t.AbstractParserWithWordBoundaryChecking = void 0),
     (t.AbstractParserWithWordBoundaryChecking = class {
         constructor() {
             ((this.cachedInnerPattern = null), (this.cachedPattern = null));

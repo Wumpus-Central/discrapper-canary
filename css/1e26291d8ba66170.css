@@ -1,0 +1,221 @@
+.roleInputContainer_aNR2Za {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: 1fr auto auto
+}
+
+.roleColorContainer_aNR2Za {
+    align-items: center;
+    display: flex;
+    height: 100%
+}
+
+.dropperIconContainer_aNR2Za {
+    cursor: pointer;
+    height: 16px
+}
+
+.dropperIconContainer_aNR2Za:hover {
+    opacity: .85;
+    transition: opacity .2s ease
+}
+
+.dropperIcon_aNR2Za {
+    color: var(--interactive-text-default)
+}
+
+.roleColorPreview_aNR2Za {
+    border-radius: 50%;
+    height: 16px;
+    width: 16px
+}
+
+.input_aNR2Za {
+    padding-inline-end: 60px
+}
+
+.roleHeader_drMiFq {
+    margin-bottom: 5px
+}
+
+.warningTitle_drMiFq {
+    display: flex;
+    flex-direction: row
+}
+
+.warningIcon_drMiFq {
+    color: var(--text-feedback-warning)
+}
+
+.attachedRoleContainer_drMiFq {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border: 1px solid var(--interactive-background-active);
+    border-radius: 6px;
+    display: inline-flex;
+    padding: 12px 10px
+}
+
+.attachedRoleColor_drMiFq {
+    border-radius: 50%;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px
+}
+
+.attachedRoleClose_drMiFq {
+    height: 16px
+}
+
+.attachedRoleClose_drMiFq:hover {
+    opacity: .7;
+    transition: opacity .2s ease
+}
+
+.attachedRoleCloseIcon_drMiFq {
+    color: var(--text-default);
+    cursor: pointer
+}
+
+.detachWarningHeading_drMiFq {
+    margin-bottom: 4px;
+    margin-top: 16px
+}
+
+.detachWarningHeading_drMiFq,
+.reattachRoleRow_drMiFq {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.modalRoot_jeUvMR {
+    border-radius: 12px;
+    height: 896px;
+    margin: 0 40px;
+    max-width: 1026px
+}
+
+.modalHeader_jeUvMR {
+    border-bottom: 1px solid var(--border-subtle);
+    gap: 8px;
+    justify-content: space-between;
+    padding-block: 24px;
+    padding-inline: 24px 16px
+}
+
+.headerText_jeUvMR {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.modalContent_jeUvMR {
+    background-color: var(--background-base-low);
+    display: grid;
+    grid-template-columns: 1fr 1px 388px;
+    padding: 0
+}
+
+.productFieldsSection_jeUvMR {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px
+}
+
+.nameArea_jeUvMR {
+    padding-bottom: 47px
+}
+
+.descriptionArea_jeUvMR {
+    min-height: 66px
+}
+
+.thumbnailLabel_jeUvMR {
+    margin-bottom: 5px
+}
+
+.productPreviewScroller_jeUvMR {
+    display: flex;
+    flex: 1
+}
+
+.productPreview_jeUvMR {
+    display: flex;
+    flex-direction: column;
+    padding-block: 24px;
+    padding-inline: 24px 16px
+}
+
+.productPreviewCtaButton_jeUvMR {
+    cursor: default
+}
+
+.previewHeading_jeUvMR {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    text-transform: none
+}
+
+.footerActionButtons_jeUvMR {
+    display: flex;
+    flex: 1;
+    justify-content: space-between
+}
+
+.footerActionLeftButtons_jeUvMR,
+.footerActionRightButtons_jeUvMR {
+    display: flex;
+    gap: 12px
+}
+
+.benefitToggleContainer_jeUvMR {
+    align-items: center;
+    background-color: var(--interactive-background-hover);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 7px 10px
+}
+
+.disabled_jeUvMR {
+    cursor: not-allowed
+}
+
+.horizontalSeparator_jeUvMR {
+    height: calc(100% - 48px);
+    width: 1px
+}
+
+.horizontalSeparator_jeUvMR,
+.verticalSeparator_jeUvMR {
+    background: var(--interactive-background-hover);
+    margin: 24px 0
+}
+
+.verticalSeparator_jeUvMR {
+    height: 1px;
+    width: 100%
+}
+
+.successNoticeContainer_jeUvMR {
+    display: flex;
+    justify-content: center;
+    z-index: 1
+}
+
+.successNotice_jeUvMR {
+    inset-inline: auto;
+    bottom: 20px;
+    width: 480px
+}
+
+.successNoticeMessage_jeUvMR {
+    align-items: center;
+    display: flex;
+    gap: 16px
+}
+
+/*# sourceMappingURL=1e26291d8ba66170.css.map*/

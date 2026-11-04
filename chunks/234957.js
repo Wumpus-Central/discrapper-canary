@@ -1,7 +1,6 @@
-i.d(s, { A: () => m });
 var l = i(477900),
     n = i(582128),
-    a = i(17928),
+    a = i(855986),
     t = i(9842),
     d = i(994500),
     r = i(763754),
@@ -38,8 +37,14 @@ let g = { formatInline: !0, allowGameMentions: !0 },
             showReplySpine: !0,
         });
     });
-function m(e, s, i, n, a) {
-    return e.type !== u.lAJ.REPLY || null == i
-        ? null
-        : (0, l.jsx)(A, { baseMessage: e, channel: s, referencedMessage: n, compact: a });
-}
+i.d(
+    s,
+    {},
+    {
+        A: function (e, s, i, n, a) {
+            return e.type !== u.lAJ.REPLY || null == i
+                ? null
+                : (0, l.jsx)(A, { baseMessage: e, channel: s, referencedMessage: n, compact: a });
+        },
+    },
+);

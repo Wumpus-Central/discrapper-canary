@@ -1,9 +1,9 @@
 e.exports = {
-    Os: "group__344e6",
-    AS: "item__344e6",
-    r9: "disabled__344e6",
-    cw: "allow__344e6",
-    wH: "selected__344e6",
-    Xg: "deny__344e6",
-    le: "passthrough__344e6",
+    Os: "group_8GP31u",
+    AS: "item_8GP31u",
+    r9: "disabled_8GP31u",
+    cw: "allow_8GP31u",
+    wH: "selected_8GP31u",
+    Xg: "deny_8GP31u",
+    le: "passthrough_8GP31u",
 };

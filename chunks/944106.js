@@ -1,9 +1,9 @@
-e.exports = {
-    y7: "emptyStateContainer__5ec2f",
-    e3: "peopleList__5ec2f",
-    ON: "searchBar__5ec2f",
-    Gf: "sectionTitle__5ec2f",
-    mt: "clearButton__5ec2f",
-    RE: "viewSpamButton__5ec2f",
-    Nf: "sectionFooter__5ec2f",
+t.exports = {
+    y7: "emptyStateContainer_wVFOQW",
+    e3: "peopleList_wVFOQW",
+    ON: "searchBar_wVFOQW",
+    Gf: "sectionTitle_wVFOQW",
+    mt: "clearButton_wVFOQW",
+    RE: "viewSpamButton_wVFOQW",
+    Nf: "sectionFooter_wVFOQW",
 };

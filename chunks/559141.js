@@ -1,10 +1,8 @@
 e.exports = {
-    Tp: "background__09691",
-    r0: "hubContainer__09691 background__09691",
-    zr: "verified__09691 background__09691",
-    PF: "staff__09691 background__09691",
-    _I: "partnered__09691 background__09691",
-    e4: "hub__09691 hubContainer__09691 background__09691",
-    Kk: "icon__09691",
-    Il: "verifiedHub__09691 hubContainer__09691 background__09691",
+    zr: "verified_tbg0LG background_tbg0LG",
+    PF: "staff_tbg0LG background_tbg0LG",
+    _I: "partnered_tbg0LG background_tbg0LG",
+    e4: "hub_tbg0LG hubContainer_tbg0LG background_tbg0LG",
+    Kk: "icon_tbg0LG",
+    Il: "verifiedHub_tbg0LG hubContainer_tbg0LG background_tbg0LG",
 };

@@ -1,6 +1,11 @@
-r.d(t, { K: () => i });
-var n = r(144276);
-function i(e, t, r) {
-    let { labelProps: i, inputProps: o, isSelected: a, ...s } = (0, n.e)(e, t, r);
-    return { labelProps: i, inputProps: { ...o, role: "switch", checked: a }, isSelected: a, ...s };
-}
+var t = p(144276);
+p.d(
+    s,
+    {},
+    {
+        K: function (e, s, p) {
+            let { labelProps: c, inputProps: i, isSelected: r, ...d } = (0, t.e)(e, s, p);
+            return { labelProps: c, inputProps: { ...i, role: "switch", checked: r }, isSelected: r, ...d };
+        },
+    },
+);

@@ -1,0 +1,68 @@
+.card_ZpA_TE {
+    position: relative
+}
+
+.container_ZpA_TE {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16)
+}
+
+.containerHeader_ZpA_TE {
+    position: absolute;
+    top: var(--space-12);
+    inset-inline: var(--space-16);
+    pointer-events: none;
+    z-index: 9999
+}
+
+.containerHeader_ZpA_TE [role=button],
+.containerHeader_ZpA_TE a,
+.containerHeader_ZpA_TE button {
+    pointer-events: auto
+}
+
+.header_ZpA_TE {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    min-height: var(--space-24)
+}
+
+.headerIcon_ZpA_TE {
+    color: var(--interactive-icon-default);
+    flex-shrink: 0
+}
+
+.nitroUpsellContainer_ZpA_TE {
+    align-items: center;
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-16);
+    isolation: isolate;
+    overflow: hidden;
+    padding: var(--space-12);
+    position: relative
+}
+
+.nitroUpsellBackground_ZpA_TE {
+    inset: 0;
+    position: absolute;
+    z-index: -1
+}
+
+.nitroUpsellCopy_ZpA_TE {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.divider_ZpA_TE {
+    margin-inline: calc(var(--space-12)*-1)
+}
+
+/*# sourceMappingURL=b719edf4ad068fe8.css.map*/

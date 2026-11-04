@@ -1,7 +1,7 @@
 e.exports = {
-    D7: "gradient_f11c9b",
-    Dh: "swatchButton_f11c9b",
-    OS: "swatchOuter_f11c9b",
-    Hy: "swatchInner_f11c9b",
-    rY: "isLowContrast_f11c9b",
+    D7: "gradient_Z2TFt5",
+    Dh: "swatchButton_Z2TFt5",
+    OS: "swatchOuter_Z2TFt5",
+    Hy: "swatchInner_Z2TFt5",
+    rY: "isLowContrast_Z2TFt5",
 };

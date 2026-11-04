@@ -1,4 +1,3 @@
-n.d(t, { K: () => r });
 var i,
     r =
         (((i = {})[(i.TRAIT_TYPE_UNSPECIFIED = 0)] = "TRAIT_TYPE_UNSPECIFIED"),
@@ -15,3 +14,4 @@ var i,
         (i[(i.TOP_PARENT_ITEM_TOTAL_COUNT = 11)] = "TOP_PARENT_ITEM_TOTAL_COUNT"),
         (i[(i.AGGREGATE_COUNT = 12)] = "AGGREGATE_COUNT"),
         i);
+n.d(t, {}, { K: r });

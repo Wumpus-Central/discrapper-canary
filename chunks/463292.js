@@ -1,1 +1,1 @@
-s.exports = { Q2: "notes__91f7b", Gc: "badgeNote__91f7b", qS: "badge__91f7b" };
+a.exports = { Q2: "notes_1gNa8I", Gc: "badgeNote_1gNa8I", qS: "badge_1gNa8I" };

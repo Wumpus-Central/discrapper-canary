@@ -1,4 +1,3 @@
-n.d(t, { Nu: () => o, RE: () => a, Rt: () => d, e7: () => l, zu: () => s });
 var i,
     r,
     a =
@@ -13,44 +12,52 @@ var i,
         (r[(r.COMPETITION_STARTED = 2)] = "COMPETITION_STARTED"),
         (r[(r.LEADER_CHANGED = 3)] = "LEADER_CHANGED"),
         r);
-function l(e) {
-    return null == e ? [] : [e.user_id, e.secondary_user_id].filter((e) => null != e);
-}
-function o(e) {
-    return null != e &&
-        null != e.user_id &&
-        null != e.value &&
-        null != e.event &&
-        0 !== e.event &&
-        e.event in s &&
-        null != e.stat &&
-        0 !== e.stat &&
-        e.stat in a
-        ? {
-              event: e.event,
-              stat: e.stat,
-              userId: e.user_id,
-              secondaryUserId: e.secondary_user_id ?? null,
-              value: e.value,
-              secondaryValue: null != e.secondary_value && e.secondary_value > 0 ? e.secondary_value : e.value,
-          }
-        : null;
-}
-function d(e) {
-    if (null == e) return null;
-    let t = e.winning_stat ?? null,
-        n = e.winning_streak ?? null,
-        i = e.winning_week ?? null,
-        r = e.current_leader_stat ?? null,
-        a = e.current_leader_week ?? null;
-    return null == t && null == n && null == i && null == r && null == a
-        ? null
-        : {
-              winningStat: t,
-              winningStreak: n,
-              winningWeek: i,
-              winningValue: e.winning_value ?? null,
-              currentLeaderStat: r,
-              currentLeaderWeek: a,
-          };
-}
+n.d(
+    t,
+    {},
+    {
+        Nu: function (e) {
+            return null != e &&
+                null != e.user_id &&
+                null != e.value &&
+                null != e.event &&
+                0 !== e.event &&
+                e.event in s &&
+                null != e.stat &&
+                0 !== e.stat &&
+                e.stat in a
+                ? {
+                      event: e.event,
+                      stat: e.stat,
+                      userId: e.user_id,
+                      secondaryUserId: e.secondary_user_id ?? null,
+                      value: e.value,
+                      secondaryValue: null != e.secondary_value && e.secondary_value > 0 ? e.secondary_value : e.value,
+                  }
+                : null;
+        },
+        RE: a,
+        Rt: function (e) {
+            if (null == e) return null;
+            let t = e.winning_stat ?? null,
+                n = e.winning_streak ?? null,
+                i = e.winning_week ?? null,
+                r = e.current_leader_stat ?? null,
+                a = e.current_leader_week ?? null;
+            return null == t && null == n && null == i && null == r && null == a
+                ? null
+                : {
+                      winningStat: t,
+                      winningStreak: n,
+                      winningWeek: i,
+                      winningValue: e.winning_value ?? null,
+                      currentLeaderStat: r,
+                      currentLeaderWeek: a,
+                  };
+        },
+        e7: function (e) {
+            return null == e ? [] : [e.user_id, e.secondary_user_id].filter((e) => null != e);
+        },
+        zu: s,
+    },
+);

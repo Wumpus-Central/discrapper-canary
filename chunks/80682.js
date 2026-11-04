@@ -1,10 +1,9 @@
-n.d(t, { Eq: () => c, k6: () => u });
 var i = n(582128),
     r = n(435558),
     a = n.n(r),
     s = n(361610),
-    l = n(860071),
-    o = n(38405);
+    l = n(949744),
+    o = n(856383);
 let d = !1;
 function c(e, t) {
     i.useEffect(
@@ -25,10 +24,17 @@ function c(e, t) {
         [e, t],
     );
 }
-function u(e, t) {
-    let n = i.useMemo(() => (0 === t.length ? {} : { [e]: t }), [e, t]);
-    (i.useEffect(() => {
-        t.forEach((t) => l.A.requestMember(e, t));
-    }, [e, t]),
-        c(n, "useEnsureHydratedGuildUsers"));
-}
+n.d(
+    t,
+    {},
+    {
+        Eq: c,
+        k6: function (e, t) {
+            let n = i.useMemo(() => (0 === t.length ? {} : { [e]: t }), [e, t]);
+            (i.useEffect(() => {
+                t.forEach((t) => l.A.requestMember(e, t));
+            }, [e, t]),
+                c(n, "useEnsureHydratedGuildUsers"));
+        },
+    },
+);

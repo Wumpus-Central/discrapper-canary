@@ -1,4 +1,3 @@
-n.d(t, { M: () => r });
 var i,
     r =
         (((i = {}).TEXT_CHAT = "TEXT_CHAT"),
@@ -11,3 +10,4 @@ var i,
         (i.CLIPS = "CLIPS"),
         (i.REQUEST_TO_STREAM = "REQUEST_TO_STREAM"),
         i);
+n.d(t, {}, { M: r });

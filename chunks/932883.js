@@ -1,48 +1,24 @@
-n.d(t, { GM: () => f, Hi: () => S, Ml: () => m, P3: () => g, Ut: () => T, X8: () => p, op: () => I });
 var i,
     r = n(477900),
     a = n(582128),
-    s = n(132500),
+    s = n(115560),
     l = n(819169),
-    o = n(17928),
+    o = n(855986),
     d = n(964486),
-    c = n(174459),
-    u = n(310031),
+    c = n(129230),
+    u = n(398269),
     _ = n(394953),
     E = n(849077),
     A = n(652215);
 let h = a.createContext("");
-function f(e) {
-    let { children: t } = e,
-        [n] = a.useState(() => (0, s.A)());
-    return (0, r.jsx)(h.Provider, { value: n, children: t });
-}
-function I() {
-    return a.useContext(h);
-}
-var p =
+var f =
     (((i = {}).CLICK = "click"),
     (i.CONTEXT_MENU = "context_menu"),
     (i.BOOKMARK = "bookmark"),
     (i.ACK = "ack"),
     (i.SETTINGS = "settings"),
     i);
-function m(e) {
-    let { message: t, interactionType: n, viewId: i } = e;
-    c.default.track(A.HAw.NOTIFICATIONS_INBOX_ITEM_INTERACTED, {
-        interaction_type: n,
-        message_id: t.id,
-        channel_id: t.channel_id,
-        author_id: t.author.id,
-        message_type: t.type,
-        view_id: i,
-    });
-}
-function T(e) {
-    let { section: t, enabled: n, viewId: i } = e;
-    c.default.track(A.HAw.NOTIFICATIONS_INBOX_SECTION_INTERACTED, { section: t, enabled: n, view_id: i });
-}
-function g(e) {
+function I(e) {
     let {
         timeToLoad: t,
         messagesCount: n,
@@ -62,97 +38,139 @@ function g(e) {
         view_id: l,
     });
 }
-function S(e) {
-    let {
-            notificationCenterVariant: t,
-            entrypoint: n,
-            messages: i,
-            unreadMessages: r,
-            viewId: s,
-            messagesByCategory: h,
-        } = e,
-        f = a.useRef(null),
-        I = a.useRef(!1),
-        p = (0, o.bG)([u.A], () => u.A.isLoading),
-        m = (0, l.A)(p),
-        T = (0, o.bG)([u.A], () => u.A.currentRequestAnalyticsPayload ?? null),
-        { unreadRecentMentionsCount: S, unreadChannelIds: N } = (0, _.U4)();
-    ((0, d.Ay)(() => {
-        (!(function (e) {
-            let { variant: t, viewId: n, entrypoint: i } = e;
-            c.default.track(A.HAw.NOTIFICATIONS_INBOX_OPENED, { inbox_variant: t, inbox_entrypoint: i, view_id: n });
-        })({ variant: t, viewId: s, entrypoint: n }),
-            (f.current = Date.now()));
-    }),
-        a.useEffect(() => {
-            if (null != f.current && (i?.length > 0 || r?.length > 0) && !I.current) {
-                let e = Date.now() - f.current;
-                ((I.current = !0),
-                    (function (e) {
+n.d(
+    t,
+    {},
+    {
+        GM: function (e) {
+            let { children: t } = e,
+                [n] = a.useState(() => (0, s.A)());
+            return (0, r.jsx)(h.Provider, { value: n, children: t });
+        },
+        Hi: function (e) {
+            let {
+                    notificationCenterVariant: t,
+                    entrypoint: n,
+                    messages: i,
+                    unreadMessages: r,
+                    viewId: s,
+                    messagesByCategory: h,
+                } = e,
+                f = a.useRef(null),
+                p = a.useRef(!1),
+                m = (0, o.bG)([u.A], () => u.A.isLoading),
+                T = (0, l.A)(m),
+                g = (0, o.bG)([u.A], () => u.A.currentRequestAnalyticsPayload ?? null),
+                { unreadRecentMentionsCount: S, unreadChannelIds: N } = (0, _.U4)();
+            ((0, d.Ay)(() => {
+                (!(function (e) {
+                    let { variant: t, viewId: n, entrypoint: i } = e;
+                    c.default.track(A.HAw.NOTIFICATIONS_INBOX_OPENED, {
+                        inbox_variant: t,
+                        inbox_entrypoint: i,
+                        view_id: n,
+                    });
+                })({ variant: t, viewId: s, entrypoint: n }),
+                    (f.current = Date.now()));
+            }),
+                a.useEffect(() => {
+                    if (null != f.current && (i?.length > 0 || r?.length > 0) && !p.current) {
+                        let e = Date.now() - f.current;
+                        ((p.current = !0),
+                            (function (e) {
+                                let {
+                                    timeToLoad: t,
+                                    unreadsCount: n,
+                                    totalMessagesCount: i,
+                                    viewId: r,
+                                    unreadsBadgeMentionCount: a,
+                                    unreadsBadgeChannelCount: s,
+                                    unreadMessageItemsCount: l,
+                                    unreadMentionsCount: o,
+                                } = e;
+                                c.default.track(A.HAw.NOTIFICATIONS_INBOX_READY, {
+                                    time_to_load: t,
+                                    unreads_count: n,
+                                    total_messages_count: i,
+                                    view_id: r,
+                                    unreads_badge_mention_count: a,
+                                    unreads_badge_channel_count: s,
+                                    unread_message_items_count: l,
+                                    unread_mentions_count: o,
+                                });
+                            })({
+                                timeToLoad: e,
+                                unreadsCount: r.length,
+                                totalMessagesCount: i.length,
+                                unreadsBadgeMentionCount: S,
+                                unreadsBadgeChannelCount: N.length,
+                                unreadMessageItemsCount: h.UNREAD.length,
+                                unreadMentionsCount: h.UNREAD.filter((e) => e.every((e) => e.kind === E.yL.MENTION))
+                                    .length,
+                                viewId: s,
+                            }));
+                    }
+                }, [i, r, s, N, S, h]),
+                a.useEffect(() => {
+                    let e = g?.loadingTrigger === E.VA.AUTO_LOAD;
+                    null == g ||
+                        !0 !== T ||
+                        !1 !== m ||
+                        e ||
+                        I({
+                            timeToLoad: g?.timeToLoad,
+                            messagesCount: i.length,
+                            unreadMessagesCount: r.length,
+                            loadingTrigger: g?.loadingTrigger ?? E.VA.UNKNOWN,
+                            viewId: g?.viewId,
+                            channelsFetched: g?.channelsFetched,
+                            mentionsFetched: g?.mentionsFetched,
+                        });
+                }, [m, i, r, s, T, g]),
+                (0, d.l0)(() => {
+                    !(function (e) {
                         let {
-                            timeToLoad: t,
-                            unreadsCount: n,
-                            totalMessagesCount: i,
-                            viewId: r,
-                            unreadsBadgeMentionCount: a,
-                            unreadsBadgeChannelCount: s,
-                            unreadMessageItemsCount: l,
-                            unreadMentionsCount: o,
+                            unreadsCount: t,
+                            totalMessagesCount: n,
+                            unreadItemsCount: i,
+                            totalItemsCount: r,
+                            viewId: a,
                         } = e;
-                        c.default.track(A.HAw.NOTIFICATIONS_INBOX_READY, {
-                            time_to_load: t,
-                            unreads_count: n,
-                            total_messages_count: i,
-                            view_id: r,
-                            unreads_badge_mention_count: a,
-                            unreads_badge_channel_count: s,
-                            unread_message_items_count: l,
-                            unread_mentions_count: o,
+                        c.default.track(A.HAw.NOTIFICATIONS_INBOX_UNMOUNTED, {
+                            unreads_count: t,
+                            total_messages_count: n,
+                            unread_items_count: i,
+                            total_items_count: r,
+                            view_id: a,
                         });
                     })({
-                        timeToLoad: e,
-                        unreadsCount: r.length,
-                        totalMessagesCount: i.length,
-                        unreadsBadgeMentionCount: S,
-                        unreadsBadgeChannelCount: N.length,
-                        unreadMessageItemsCount: h.UNREAD.length,
-                        unreadMentionsCount: h.UNREAD.filter((e) => e.every((e) => e.kind === E.yL.MENTION)).length,
+                        unreadsCount: r?.length ?? 0,
+                        totalMessagesCount: i?.length ?? 0,
+                        unreadItemsCount: h.UNREAD.length,
+                        totalItemsCount: h.TODAY.length + h.YESTERDAY.length + h.OLDER.length,
                         viewId: s,
-                    }));
-            }
-        }, [i, r, s, N, S, h]),
-        a.useEffect(() => {
-            let e = T?.loadingTrigger === E.VA.AUTO_LOAD;
-            null == T ||
-                !0 !== m ||
-                !1 !== p ||
-                e ||
-                g({
-                    timeToLoad: T?.timeToLoad,
-                    messagesCount: i.length,
-                    unreadMessagesCount: r.length,
-                    loadingTrigger: T?.loadingTrigger ?? E.VA.UNKNOWN,
-                    viewId: T?.viewId,
-                    channelsFetched: T?.channelsFetched,
-                    mentionsFetched: T?.mentionsFetched,
-                });
-        }, [p, i, r, s, m, T]),
-        (0, d.l0)(() => {
-            !(function (e) {
-                let { unreadsCount: t, totalMessagesCount: n, unreadItemsCount: i, totalItemsCount: r, viewId: a } = e;
-                c.default.track(A.HAw.NOTIFICATIONS_INBOX_UNMOUNTED, {
-                    unreads_count: t,
-                    total_messages_count: n,
-                    unread_items_count: i,
-                    total_items_count: r,
-                    view_id: a,
-                });
-            })({
-                unreadsCount: r?.length ?? 0,
-                totalMessagesCount: i?.length ?? 0,
-                unreadItemsCount: h.UNREAD.length,
-                totalItemsCount: h.TODAY.length + h.YESTERDAY.length + h.OLDER.length,
-                viewId: s,
+                    });
+                }));
+        },
+        Ml: function (e) {
+            let { message: t, interactionType: n, viewId: i } = e;
+            c.default.track(A.HAw.NOTIFICATIONS_INBOX_ITEM_INTERACTED, {
+                interaction_type: n,
+                message_id: t.id,
+                channel_id: t.channel_id,
+                author_id: t.author.id,
+                message_type: t.type,
+                view_id: i,
             });
-        }));
-}
+        },
+        P3: I,
+        Ut: function (e) {
+            let { section: t, enabled: n, viewId: i } = e;
+            c.default.track(A.HAw.NOTIFICATIONS_INBOX_SECTION_INTERACTED, { section: t, enabled: n, view_id: i });
+        },
+        X8: f,
+        op: function () {
+            return a.useContext(h);
+        },
+    },
+);

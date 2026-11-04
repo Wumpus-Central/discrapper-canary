@@ -1,12 +1,12 @@
-(r.d(t, { A: () => F }), r(323874), r(14289), r(35956));
-var n = r(17928),
+(r(323874), r(14289), r(35956));
+var n = r(855986),
     i = r(803805),
     l = r(73153),
     o = r(723702),
     a = r(652215),
-    s = r(105292);
+    s = r(792996);
 let u = "webm",
-    c = (0, o.isLinux)() ? "tinywebp" : u,
+    c = (0, o.j9)() ? "tinywebp" : u,
     d = !(function (e) {
         switch (e) {
             case "fixed_height.mp4":
@@ -72,7 +72,7 @@ class R extends n.Ay.Store {
         return m;
     }
 }
-let F = new R(l.h, {
+let y = new R(l.h, {
     GIF_PICKER_INITIALIZE: function (e) {
         _ = e.analyticsID;
     },
@@ -117,3 +117,4 @@ let F = new R(l.h, {
         m = t;
     },
 });
+r.d(t, {}, { A: y });

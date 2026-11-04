@@ -1,11 +1,11 @@
-_.exports = {
-    kL: "container_c0860a",
-    wx: "header_c0860a",
-    Gv: "backButton_c0860a",
-    U1: "headerRow_c0860a",
-    Qs: "content_c0860a",
-    jR: "suggestionGrid_c0860a",
-    FP: "categoryFade_c0860a",
-    O1: "categoryText_c0860a",
-    yb: "categoryName_c0860a",
+e.exports = {
+    kL: "container_wYAXYX",
+    wx: "header_wYAXYX",
+    Gv: "backButton_wYAXYX",
+    U1: "headerRow_wYAXYX",
+    Qs: "content_wYAXYX",
+    jR: "suggestionGrid_wYAXYX",
+    FP: "categoryFade_wYAXYX",
+    O1: "categoryText_wYAXYX",
+    yb: "categoryName_wYAXYX",
 };

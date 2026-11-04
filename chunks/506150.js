@@ -1,6 +1,6 @@
 e.exports = {
-    g$: "premiumRetentionNotice_a606ef",
-    lu: "premiumRetentionNoticeIcon_a606ef",
-    YF: "premiumRetentionNoticeClose_a606ef",
-    Xn: "premiumRetentionNoticeContent_a606ef",
+    g$: "premiumRetentionNotice_25qZIx",
+    lu: "premiumRetentionNoticeIcon_25qZIx",
+    YF: "premiumRetentionNoticeClose_25qZIx",
+    Xn: "premiumRetentionNoticeContent_25qZIx",
 };

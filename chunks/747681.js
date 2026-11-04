@@ -1,8 +1,8 @@
 e.exports = {
-    kL: "container__71153",
-    rf: "body__71153",
-    Eb: "activity__71153",
-    zH: "details__71153",
-    Uq: "value__71153",
-    aY: "code__71153",
+    kL: "container_-Qo_u9",
+    rf: "body_-Qo_u9",
+    Eb: "activity_-Qo_u9",
+    zH: "details_-Qo_u9",
+    Uq: "value_-Qo_u9",
+    aY: "code_-Qo_u9",
 };

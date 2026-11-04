@@ -1,4 +1,3 @@
-n.d(t, { BO: () => s, SQ: () => a });
 var i,
     r,
     a = (((i = {}).MULTIPLE_CHOICE = "MC"), (i.TEXT_ENTRY = "TE"), (i.DESCRIPTIVE_BLOCK = "DB"), i),
@@ -19,3 +18,4 @@ var i,
         (r.RANK = "Rank"),
         (r.TEXT_BLOCK = "TB"),
         r);
+n.d(t, {}, { BO: s, SQ: a });

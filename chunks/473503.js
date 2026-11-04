@@ -1,11 +1,10 @@
-n.d(t, { OA: () => f, kB: () => p });
 var i = n(435558),
     r = n.n(i),
-    a = n(17928),
-    s = n(636537),
+    a = n(855986),
+    s = n(620632),
     l = n(73153),
     o = n(734057),
-    d = n(935208),
+    d = n(811091),
     c = n(207777),
     u = n(969043);
 n(246943);
@@ -61,58 +60,64 @@ let A = new (class {
         }
     })(),
     h = null;
-function f(e) {
-    let { enabled: t = !0, allowArchived: n = !1 } =
-            arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { loaded: i, firstMessage: r } = (0, a.cf)([u.A], () => u.A.getMessage(e.id)),
-        s = (0, a.bG)([o.A], () => o.A.getChannel(e.parent_id));
-    return (
-        t &&
-            null != s &&
-            !i &&
-            null == r &&
-            (n
-                ? I(s, [e.id])
-                : (function (e, t) {
-                      if (A.hasRequested(e.id, t)) return;
-                      let n = (0, c.S)(e.id),
-                          i = n.findIndex((e) => e === t),
-                          r = n.slice(i, i + 5).filter((t) => !A.hasRequested(e.id, t));
-                      I(e, r);
-                  })(s, e.id)),
-        { loaded: i, firstMessage: t ? r : null }
-    );
-}
-function I(e, t) {
+function f(e, t) {
     let n = !1;
     (t.forEach((t) => {
         let { loaded: i, firstMessage: r } = u.A.getMessage(t);
         i || null != r || (A.request(e.id, t), (n = !0));
     }),
-        n && null == h && (h = setTimeout(m, 0)));
+        n && null == h && (h = setTimeout(I, 0)));
 }
-function p(e) {
-    I(e, (0, c.S)(e.id).slice(0, 10));
-}
-async function m() {
+async function I() {
     try {
-        for (; A.hasNext();) await T(A.next());
+        for (; A.hasNext();)
+            await (async function (e) {
+                let t = A.getNextBatch(e, 10);
+                try {
+                    if (0 === t.length) return;
+                    let n = o.A.getChannel(e)?.guild_id;
+                    if (null == n) return;
+                    let {
+                        body: { threads: i },
+                    } = await s.Bo.post({ url: _.Rsh.FORUM_POSTS(e), body: { thread_ids: t }, rejectWithError: !0 });
+                    l.h.dispatch({ type: "LOAD_FORUM_POSTS", guildId: n, threads: i });
+                } catch (e) {
+                } finally {
+                    A.finishRequesting(e, t);
+                }
+            })(A.next());
     } finally {
         h = null;
     }
 }
-async function T(e) {
-    let t = A.getNextBatch(e, 10);
-    try {
-        if (0 === t.length) return;
-        let n = o.A.getChannel(e)?.guild_id;
-        if (null == n) return;
-        let {
-            body: { threads: i },
-        } = await s.Bo.post({ url: _.Rsh.FORUM_POSTS(e), body: { thread_ids: t }, rejectWithError: !0 });
-        l.h.dispatch({ type: "LOAD_FORUM_POSTS", guildId: n, threads: i });
-    } catch (e) {
-    } finally {
-        A.finishRequesting(e, t);
-    }
-}
+n.d(
+    t,
+    {},
+    {
+        OA: function (e) {
+            let { enabled: t = !0, allowArchived: n = !1 } =
+                    arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                { loaded: i, firstMessage: r } = (0, a.cf)([u.A], () => u.A.getMessage(e.id)),
+                s = (0, a.bG)([o.A], () => o.A.getChannel(e.parent_id));
+            return (
+                t &&
+                    null != s &&
+                    !i &&
+                    null == r &&
+                    (n
+                        ? f(s, [e.id])
+                        : (function (e, t) {
+                              if (A.hasRequested(e.id, t)) return;
+                              let n = (0, c.S)(e.id),
+                                  i = n.findIndex((e) => e === t),
+                                  r = n.slice(i, i + 5).filter((t) => !A.hasRequested(e.id, t));
+                              f(e, r);
+                          })(s, e.id)),
+                { loaded: i, firstMessage: t ? r : null }
+            );
+        },
+        kB: function (e) {
+            f(e, (0, c.S)(e.id).slice(0, 10));
+        },
+    },
+);

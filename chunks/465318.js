@@ -1,4 +1,3 @@
-n.d(t, { A: () => r });
 let r = (0, n(945810).mj)({
     name: "2026-07-personal-widget",
     kind: "user",
@@ -9,3 +8,4 @@ let r = (0, n(945810).mj)({
         2: { enabled: !0, showCreateEntrypoint: !0 },
     },
 });
+n.d(t, {}, { A: r });

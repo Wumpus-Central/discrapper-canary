@@ -1,4 +1,4 @@
-.wrapper__29ebd {
+.wrapper_fGpd5- {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -9,13 +9,13 @@
     text-align: center
 }
 
-.theme-dark .wrapper__29ebd {
+.theme-dark .wrapper_fGpd5- {
     color: var(--primary-400)
 }
 
-.theme-dark .forceLightTheme__29ebd .wrapper__29ebd,
-.theme-light .wrapper__29ebd {
+.theme-dark .forceLightTheme_fGpd5- .wrapper_fGpd5-,
+.theme-light .wrapper_fGpd5- {
     color: #99aab5
 }
 
-/*# sourceMappingURL=401317.61f34a14b109b53a.css.map*/
+/*# sourceMappingURL=401317.4a082f004d79ceaa.css.map*/

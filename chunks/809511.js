@@ -1,18 +1,16 @@
-(Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.mergeDateTimeResult = function (e, t) {
-        let r = e.clone();
-        if (((r.start = i(e.start, t.start)), null != e.end || null != t.end)) {
-            let n = i(null == e.end ? e.start : e.end, null == t.end ? t.start : t.end);
-            if (null == e.end && n.date().getTime() < r.start.date().getTime()) {
-                let e = new Date(n.date().getTime());
-                (e.setDate(e.getDate() + 1),
-                    n.isCertain("day") ? (0, a.assignSimilarDate)(n, e) : (0, a.implySimilarDate)(n, e));
-            }
-            r.end = n;
+t.mergeDateTimeResult = function (e, t) {
+    let r = e.clone();
+    if (((r.start = i(e.start, t.start)), null != e.end || null != t.end)) {
+        let n = i(null == e.end ? e.start : e.end, null == t.end ? t.start : t.end);
+        if (null == e.end && n.date().getTime() < r.start.date().getTime()) {
+            let e = new Date(n.date().getTime());
+            (e.setDate(e.getDate() + 1),
+                n.isCertain("day") ? (0, a.assignSimilarDate)(n, e) : (0, a.implySimilarDate)(n, e));
         }
-        return r;
-    }),
-    (t.mergeDateTimeComponent = i));
+        r.end = n;
+    }
+    return r;
+};
 let n = r(115004),
     a = r(767130);
 function i(e, t) {

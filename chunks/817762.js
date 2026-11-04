@@ -1,13 +1,11 @@
-(Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.isHeicSignatureIncluded =
-        t.isAvifStringIncluded =
-        t.isFileContaineJfiforExifHeader =
-        t.isFlvStringIncluded =
-        t.isftypStringIncluded =
-        t.findMatroskaDocTypeElements =
-        t.fetchFromObject =
-        t.getFileChunk =
-            void 0),
+((t.isHeicSignatureIncluded =
+    t.isAvifStringIncluded =
+    t.isFlvStringIncluded =
+    t.isftypStringIncluded =
+    t.findMatroskaDocTypeElements =
+    t.fetchFromObject =
+    t.getFileChunk =
+        void 0),
     (t.getFileChunk = function (e, t = 32) {
         let n = e instanceof ArrayBuffer ? new Uint8Array(e) : e,
             i = [];
@@ -48,10 +46,6 @@
     (t.isFlvStringIncluded = function (e) {
         let t = e.slice(0, 3);
         return new TextDecoder().decode(new Uint8Array(t)).includes("FLV");
-    }),
-    (t.isFileContaineJfiforExifHeader = function (e) {
-        let t = e[3];
-        return 224 === t || 225 === t;
     }),
     (t.isAvifStringIncluded = function (e) {
         return (

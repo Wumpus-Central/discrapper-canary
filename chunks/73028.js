@@ -1,49 +1,54 @@
-e.d(t, { U: () => r });
 var i = e(477900);
 e(582128);
 var a = e(192308),
     o = e(157559),
-    s = e(818348),
-    l = e(105292);
-function r(n, t) {
-    let r = `group-dm-edit-modal-${n}`,
-        c = !1;
-    function d(n) {
-        c = n;
-    }
-    function u() {
-        c
-            ? o.A.show({
-                  title: l.intl.string(l.t.pvRCSu),
-                  body: l.intl.string(l.t.DRi46S),
-                  confirmText: l.intl.string(l.t["6GQDFu"]),
-                  confirmVariant: "critical-primary",
-                  cancelText: l.intl.string(l.t.DmDzZB),
-                  onConfirm: () => (0, a.closeModal)(r),
-                  onCancel: s.tE,
-              })
-            : (0, a.closeModal)(r);
-    }
-    (0, a.openModalLazy)(
-        async () => {
-            let { default: a } = await Promise.all([
-                e.e("144909"),
-                e.e("55994"),
-                e.e("841567"),
-                e.e("188941"),
-                e.e("958428"),
-                e.e("695067"),
-                e.e("442455"),
-            ]).then(e.bind(e, 66442));
-            return (e) =>
-                (0, i.jsx)(a, {
-                    closeOrShowDiscardChangesAlert: u,
-                    setHasPendingChanges: d,
-                    channelId: n,
-                    location: t,
-                    ...e,
-                });
+    r = e(818348),
+    s = e(792996);
+e.d(
+    n,
+    {},
+    {
+        U: function (t, n) {
+            let c = `group-dm-edit-modal-${t}`,
+                l = !1;
+            function d(t) {
+                l = t;
+            }
+            function u() {
+                l
+                    ? o.A.show({
+                          title: s.intl.string(s.t.pvRCSu),
+                          body: s.intl.string(s.t.DRi46S),
+                          confirmText: s.intl.string(s.t["6GQDFu"]),
+                          confirmVariant: "critical-primary",
+                          cancelText: s.intl.string(s.t.DmDzZB),
+                          onConfirm: () => (0, a.Oo)(c),
+                          onCancel: r.tE,
+                      })
+                    : (0, a.Oo)(c);
+            }
+            (0, a.mM)(
+                async () => {
+                    let { default: a } = await Promise.all([
+                        e.e(144909),
+                        e.e(55994),
+                        e.e(841567),
+                        e.e(188941),
+                        e.e(958428),
+                        e.e(695067),
+                        e.e(442455),
+                    ]).then(e.bind(e, 66442));
+                    return (e) =>
+                        (0, i.jsx)(a, {
+                            closeOrShowDiscardChangesAlert: u,
+                            setHasPendingChanges: d,
+                            channelId: t,
+                            location: n,
+                            ...e,
+                        });
+                },
+                { modalKey: c, onCloseRequest: u },
+            );
         },
-        { modalKey: r, onCloseRequest: u },
-    );
-}
+    },
+);

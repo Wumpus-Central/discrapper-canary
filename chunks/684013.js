@@ -1,10 +1,9 @@
-n.d(t, { A: () => I });
-var i = n(132500),
+var i = n(115560),
     r = n(73153),
     a = n(626584),
     s = n(810412),
     l = n(41984),
-    o = n(32584),
+    o = n(83880),
     d = n(157257),
     c = n(531685),
     u = n(5463),
@@ -113,7 +112,7 @@ let h = new a.A("OverlayActionCreators"),
             });
         },
         setPinChat(e) {
-            let t = _.OVERLAY_LAYOUT_ID,
+            let t = _.YU,
                 n = o.A.getWidgetsForLayout(t),
                 r = o.A.getWidgetConfig(A.uss.GUILDS),
                 a = o.A.getWidgetConfig(A.uss.TEXT),
@@ -213,5 +212,5 @@ let h = new a.A("OverlayActionCreators"),
         ackTextChatChannel(e) {
             r.h.dispatch({ type: "OVERLAY_TEXT_CHAT_ACK_CHANNEL", channelId: e });
         },
-    },
-    I = f;
+    };
+n.d(t, {}, { A: f });

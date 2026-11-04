@@ -1,0 +1,59 @@
+.container_zeTVUi {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16)
+}
+
+.required_zeTVUi {
+    color: var(--text-feedback-critical);
+    padding-inline-start: 4px
+}
+
+.header_nlOah7,
+.linkButton_nlOah7 {
+    margin-bottom: 8px
+}
+
+.linkButton_nlOah7 {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    min-height: 64px;
+    padding: 0
+}
+
+.linkButton_nlOah7:hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.keyboard-mode .linkButton_nlOah7:focus {
+    background-color: var(--interactive-background-selected)
+}
+
+.linkButton_nlOah7:active {
+    background-color: var(--interactive-background-active)
+}
+
+.linkTextContainer_nlOah7 {
+    flex: 1;
+    margin-block: 8px;
+    margin-inline: 16px 0
+}
+
+.linkIcon_nlOah7 {
+    color: var(--interactive-text-default);
+    flex-shrink: 0;
+    height: 24px;
+    margin-block: 0;
+    margin-inline: 8px 16px;
+    width: 24px
+}
+
+.linksContainer_nlOah7 {
+    margin: 0
+}
+
+/*# sourceMappingURL=84e6dc113852a589.css.map*/

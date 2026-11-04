@@ -1,9 +1,11 @@
 e.exports = (function () {
     var e = [
             function (e, t, r) {
+                "use strict";
                 e.exports = r(1);
             },
             function (e, t, r) {
+                "use strict";
                 var n =
                         Object.assign ||
                         function (e) {
@@ -329,6 +331,7 @@ e.exports = (function () {
             },
             function (e, t, r) {
                 (function (e, n) {
+                    "use strict";
                     var o =
                             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                                 ? function (e) {
@@ -833,6 +836,7 @@ e.exports = (function () {
             },
             function (e, t, r) {
                 (function (e) {
+                    "use strict";
                     var n = r(4),
                         o = r(5),
                         i = r(6);
@@ -1833,6 +1837,7 @@ e.exports = (function () {
                 );
             },
             function (e, t) {
+                "use strict";
                 ((t.byteLength = function (e) {
                     return (3 * e.length) / 4 - c(e);
                 }),
@@ -1929,7 +1934,7 @@ e.exports = (function () {
                     for (s = i & ((1 << -l) - 1), i >>= -l, l += n; l > 0; s = 256 * s + e[t + f], f += p, l -= 8);
                     if (0 === i) i = 1 - u;
                     else {
-                        if (i === c) return s ? NaN : (1 / 0) * (h ? -1 : 1);
+                        if (i === c) return s ? 0 / 0 : (h ? -1 : 1) * 2e308;
                         ((s += Math.pow(2, n)), (i -= u));
                     }
                     return (h ? -1 : 1) * s * Math.pow(2, i - n);
@@ -1946,7 +1951,7 @@ e.exports = (function () {
                             d = n ? 1 : -1,
                             g = +(t < 0 || (0 === t && 1 / t < 0));
                         for (
-                            isNaN((t = Math.abs(t))) || t === 1 / 0
+                            isNaN((t = Math.abs(t))) || 1 / 0 === t
                                 ? ((a = +!!isNaN(t)), (s = l))
                                 : ((s = Math.floor(Math.log(t) / Math.LN2)),
                                   t * (c = Math.pow(2, -s)) < 1 && (s--, (c *= 2)),
@@ -2569,6 +2574,7 @@ e.exports = (function () {
             },
             function (e, t, r) {
                 (function (e) {
+                    "use strict";
                     var r = {};
                     ((t.escapeJavaScript = function (e) {
                         if (!e) return "";
@@ -2634,6 +2640,7 @@ e.exports = (function () {
                 }).call(t, r(3).Buffer);
             },
             function (e, t, r) {
+                "use strict";
                 var n =
                         Object.assign ||
                         function (e) {
@@ -3184,6 +3191,7 @@ e.exports = (function () {
                     }));
             },
             function (e, t, r) {
+                "use strict";
                 var n = r(2);
                 ((t.create = function (e, t) {
                     n.assert("string" == typeof e, "Invalid reference key:", e);
@@ -3212,6 +3220,7 @@ e.exports = (function () {
                     }));
             },
             function (e, t, r) {
+                "use strict";
                 var n =
                         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                             ? function (e) {
@@ -3343,8 +3352,8 @@ e.exports = (function () {
                                     (a[u] && c.push(a[u]), c.push(i[u]));
                                 i = c;
                             }
-                            return i === 1 / 0 ||
-                                i === -1 / 0 ||
+                            return 1 / 0 === i ||
+                                -1 / 0 === i ||
                                 Number.isNaN(i) ||
                                 "function" == typeof i ||
                                 (void 0 === i ? "undefined" : n(i)) === "symbol"
@@ -3412,6 +3421,7 @@ e.exports = (function () {
                     }));
             },
             function (e, t) {
+                "use strict";
                 t.errors = {
                     root: "value",
                     key: '"{{!key}}" ',
@@ -3551,6 +3561,7 @@ e.exports = (function () {
             },
             function (e, t, r) {
                 (function (t) {
+                    "use strict";
                     var n =
                             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                                 ? function (e) {
@@ -3637,6 +3648,7 @@ e.exports = (function () {
                 }).call(t, r(3).Buffer);
             },
             function (e, t, r) {
+                "use strict";
                 var n =
                         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                             ? function (e) {
@@ -3690,6 +3702,7 @@ e.exports = (function () {
                     }));
             },
             function (e, t, r) {
+                "use strict";
                 var n,
                     o = r(14),
                     i = r(15),
@@ -3820,6 +3833,7 @@ e.exports = (function () {
             },
             function (e, t, r) {
                 (function (t) {
+                    "use strict";
                     var n =
                             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                                 ? function (e) {
@@ -4252,6 +4266,7 @@ e.exports = (function () {
             },
             function (e, t, r) {
                 (function (e) {
+                    "use strict";
                     var n =
                             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                                 ? function (e) {
@@ -4880,6 +4895,7 @@ e.exports = (function () {
                 }).call(t, r(7));
             },
             function (e, t, r) {
+                "use strict";
                 var n = r(24);
                 e.exports = {
                     createUriRegex: function (e, t, r) {
@@ -4896,6 +4912,7 @@ e.exports = (function () {
                 };
             },
             function (e, t) {
+                "use strict";
                 var r = { rfc3986: {} };
                 ((r.generate = function () {
                     var e = "[0-9]",
@@ -4971,6 +4988,7 @@ e.exports = (function () {
                     (e.exports = r.rfc3986));
             },
             function (e, t, r) {
+                "use strict";
                 var n = r(24),
                     o = {
                         Ip: {
@@ -4992,6 +5010,7 @@ e.exports = (function () {
                     (e.exports = o.Ip));
             },
             function (e, t, r) {
+                "use strict";
                 var n = r(14),
                     o = r(15),
                     i = r(2),
@@ -5025,7 +5044,7 @@ e.exports = (function () {
                             var n = { errors: null, value: e };
                             if ("string" == typeof e && r.convert) {
                                 var o = parseFloat(e);
-                                n.value = isNaN(o) || !isFinite(e) ? NaN : o;
+                                n.value = isNaN(o) || !isFinite(e) ? 0 / 0 : o;
                             }
                             var i = "number" == typeof n.value && !isNaN(n.value);
                             if (r.convert && "precision" in this._flags && i) {
@@ -5111,6 +5130,7 @@ e.exports = (function () {
                     (e.exports = new s.Number()));
             },
             function (e, t, r) {
+                "use strict";
                 var n = r(14),
                     o = r(2),
                     i = { Set: r(18) };
@@ -5201,6 +5221,7 @@ e.exports = (function () {
                     (e.exports = new i.Boolean()));
             },
             function (e, t, r) {
+                "use strict";
                 var n =
                         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                             ? function (e) {
@@ -5332,6 +5353,7 @@ e.exports = (function () {
                     (e.exports = new c.Alternatives()));
             },
             function (e, t, r) {
+                "use strict";
                 var n =
                         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                             ? function (e) {
@@ -5898,6 +5920,7 @@ e.exports = (function () {
                     (e.exports = new l.Object()));
             },
             function (e, t, r) {
+                "use strict";
                 var n = r(2),
                     o = {};
                 ((e.exports = o.Topo =
@@ -6014,6 +6037,7 @@ e.exports = (function () {
                     }));
             },
             function (e, t, r) {
+                "use strict";
                 var n = r(1);
                 t.options = n
                     .object({
@@ -6035,6 +6059,7 @@ e.exports = (function () {
                     .strict();
             },
             function (e, t, r) {
+                "use strict";
                 var n = r(14),
                     o = r(2),
                     i = {};
@@ -6083,6 +6108,7 @@ e.exports = (function () {
                     (e.exports = new i.Lazy()));
             },
             function (e, t, r) {
+                "use strict";
                 var n =
                         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                             ? function (e) {
@@ -6553,6 +6579,7 @@ e.exports = (function () {
             },
             function (e, t, r) {
                 (function (t) {
+                    "use strict";
                     var n = r(14),
                         o = r(2),
                         i = {};

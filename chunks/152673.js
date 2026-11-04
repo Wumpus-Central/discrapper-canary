@@ -1,11 +1,11 @@
-_.exports = {
-    kL: "container__527b1",
-    U1: "headerRow__527b1",
-    b: "closeButton__527b1",
-    wx: "header__527b1",
-    rf: "body__527b1",
-    qr: "footer__527b1",
-    qI: "listContainer__527b1",
-    lD: "listElement__527b1",
-    E8: "listElementWrapper__527b1",
+t.exports = {
+    kL: "container_5tvYxx",
+    U1: "headerRow_5tvYxx",
+    b: "closeButton_5tvYxx",
+    wx: "header_5tvYxx",
+    rf: "body_5tvYxx",
+    qr: "footer_5tvYxx",
+    qI: "listContainer_5tvYxx",
+    lD: "listElement_5tvYxx",
+    E8: "listElementWrapper_5tvYxx",
 };

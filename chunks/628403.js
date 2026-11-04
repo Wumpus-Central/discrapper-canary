@@ -1,5 +1,4 @@
-(Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.EmptyDuration = void 0),
+((t.EmptyDuration = void 0),
     (t.addDuration = function (e, t) {
         var r, n, a, i, s, o, u;
         let l = new Date(e);

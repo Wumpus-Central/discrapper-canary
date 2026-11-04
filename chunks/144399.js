@@ -1,4 +1,3 @@
-n.d(t, { A: () => f, x: () => h });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -7,8 +6,8 @@ var i = n(477900),
     o = n(663417),
     d = n(625180),
     c = n(828936),
-    u = n(809526),
-    _ = n(105292),
+    u = n(191850),
+    _ = n(792996),
     E = n(762653),
     A = n(959760);
 function h(e) {
@@ -44,14 +43,21 @@ function h(e) {
         ],
     });
 }
-function f(e) {
-    let { frameId: t } = e,
-        n = (0, c.l)(t),
-        a = r.useCallback(
-            (e) => {
-                (e.stopPropagation(), d.A.refreshProxyTicket(t));
-            },
-            [t],
-        );
-    return n ? (0, i.jsx)("div", { className: E.m, children: (0, i.jsx)(h, { onReload: a }) }) : null;
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { frameId: t } = e,
+                n = (0, c.l)(t),
+                a = r.useCallback(
+                    (e) => {
+                        (e.stopPropagation(), d.A.refreshProxyTicket(t));
+                    },
+                    [t],
+                );
+            return n ? (0, i.jsx)("div", { className: E.m, children: (0, i.jsx)(h, { onReload: a }) }) : null;
+        },
+        x: h,
+    },
+);

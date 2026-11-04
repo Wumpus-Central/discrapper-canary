@@ -1,4 +1,3 @@
-n.d(t, { B1: () => u, B6: () => d, QW: () => c, iy: () => l });
 var i,
     r,
     a = n(73153);
@@ -108,26 +107,10 @@ var d =
     (r.VideoBackgroundUnsupported = "VideoBackgroundError.UNSUPPORTED"),
     (r.VideoBackgroundInitFailed = "VideoBackgroundError.INIT_FAILED"),
     r);
-function c(e) {
-    let { type: t, ...n } = e;
-    s.error(`AV error reported: ${t} ${JSON.stringify(n)}`);
-    let i = o[t];
-    a.h.dispatch({
-        type: "REPORT_AV_ERROR",
-        error: t,
-        errorCode: i.errorCode,
-        severity: i.severity,
-        category: i.category,
-        context: e,
-    });
-}
-function u(e) {
-    return o[e];
-}
-let _ = Object.values(o).map((e) => e.errorCode),
-    E = new Set(_);
-if (_.length !== E.size) {
-    let e = _.filter((e, t) => _.indexOf(e) !== t),
+let c = Object.values(o).map((e) => e.errorCode),
+    u = new Set(c);
+if (c.length !== u.size) {
+    let e = c.filter((e, t) => c.indexOf(e) !== t),
         t = Object.entries(o)
             .filter((t) => {
                 let [n, i] = t;
@@ -140,3 +123,27 @@ if (_.length !== E.size) {
     throw Error(`Duplicate AV error codes found:
 ${t.join("\n")}`);
 }
+n.d(
+    t,
+    {},
+    {
+        B1: function (e) {
+            return o[e];
+        },
+        B6: d,
+        QW: function (e) {
+            let { type: t, ...n } = e;
+            s.error(`AV error reported: ${t} ${JSON.stringify(n)}`);
+            let i = o[t];
+            a.h.dispatch({
+                type: "REPORT_AV_ERROR",
+                error: t,
+                errorCode: i.errorCode,
+                severity: i.severity,
+                category: i.category,
+                context: e,
+            });
+        },
+        iy: l,
+    },
+);

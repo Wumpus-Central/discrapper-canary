@@ -1,4 +1,3 @@
-n.d(t, { E: () => a, R: () => r });
 var i = n(540185);
 class r {
     id;
@@ -32,6 +31,13 @@ class r {
         return { widgetEdited: this.type, applicationId: this.applicationId };
     }
 }
-function a(e, t) {
-    return null != t && e instanceof r && e.applicationId === t;
-}
+n.d(
+    t,
+    {},
+    {
+        E: function (e, t) {
+            return null != t && e instanceof r && e.applicationId === t;
+        },
+        R: r,
+    },
+);

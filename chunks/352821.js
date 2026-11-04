@@ -1,5 +1,4 @@
-n.d(t, { A: () => g });
-var i = n(17928),
+var i = n(855986),
     l = n(73153),
     s = n(591552),
     r = n(555337),
@@ -60,8 +59,8 @@ let g = new m(l.h, {
     GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: u,
     GUILD_SETTINGS_ONBOARDING_CONNECTIONS_ADD: function (e) {
         let { connection: t } = e;
-        if (o.length >= a.pA) {
-            c = [`Maximum ${a.pA} connections allowed`];
+        if (o.length >= 10) {
+            c = ["Maximum 10 connections allowed"];
             return;
         }
         ((o = [...o, t]), (c = (0, a.n4)(o)));
@@ -98,3 +97,4 @@ let g = new m(l.h, {
         ((d = !1), (c = t));
     },
 });
+n.d(t, {}, { A: g });

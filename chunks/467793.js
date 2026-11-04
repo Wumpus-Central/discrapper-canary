@@ -1,1 +1,1 @@
-e.exports = { Y: "oauth2PageWrapper__647f0", Q: "oauth2PageContent__647f0" };
+e.exports = { Y: "oauth2PageWrapper_xeZtU7", Q: "oauth2PageContent_xeZtU7" };

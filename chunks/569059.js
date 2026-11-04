@@ -1,7 +1,6 @@
-l.d(n, { P: () => d, _: () => o });
 var t = l(582128),
     a = l(688810),
-    r = l(252732),
+    r = l(468450),
     i = l(339984);
 let s = [{ name: "gif, webp", extensions: ["gif", "webp"] }];
 function u(e) {
@@ -21,10 +20,16 @@ function u(e) {
         [n, l, i, o, s, u],
     );
 }
-function o(e) {
-    let { isPremiumTryItOut: n, ...l } = e;
-    return u({ ...l, uploadType: i.HL.AVATAR, isPremiumTryItOut: n, filters: n ? s : void 0 });
-}
-function d(e) {
-    return u({ ...e, uploadType: i.HL.BANNER });
-}
+l.d(
+    n,
+    {},
+    {
+        P: function (e) {
+            return u({ ...e, uploadType: i.HL.BANNER });
+        },
+        _: function (e) {
+            let { isPremiumTryItOut: n, ...l } = e;
+            return u({ ...l, uploadType: i.HL.AVATAR, isPremiumTryItOut: n, filters: n ? s : void 0 });
+        },
+    },
+);

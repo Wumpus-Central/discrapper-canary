@@ -1,0 +1,20 @@
+.container__WUTbI {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
+.description__WUTbI {
+    padding-inline: 24px;
+    text-align: center
+}
+
+.loading__WUTbI {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-block: 40px
+}
+
+/*# sourceMappingURL=97351ca4e3d4b948.css.map*/

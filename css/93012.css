@@ -1,4 +1,4 @@
-.bar_a750ac {
+.bar_Rp_Lxb {
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     background-color: linear-gradient(0deg, hsl(var(--black-hsl)/.2) 0, hsl(var(--black-hsl)/.2) 100%), var(--background-mod-normal);
@@ -16,22 +16,22 @@
     user-select: none
 }
 
-.bar_a750ac,
-.emojis_a750ac {
+.bar_Rp_Lxb,
+.emojis_Rp_Lxb {
     align-items: center;
     display: flex;
     gap: var(--space-4)
 }
 
-.emojis_a750ac {
+.emojis_Rp_Lxb {
     justify-content: center
 }
 
-.bar_a750ac.minimized_a750ac {
+.bar_Rp_Lxb.minimized_Rp_Lxb {
     pointer-events: none
 }
 
-.button_a750ac {
+.button_Rp_Lxb {
     align-items: center;
     background: none;
     border: none;
@@ -42,23 +42,23 @@
     padding: var(--space-4)
 }
 
-.button_a750ac:hover {
+.button_Rp_Lxb:hover {
     background-color: var(--background-mod-strong)
 }
 
-.divider_a750ac {
+.divider_Rp_Lxb {
     background-color: hsl(var(--white-hsl)/.1);
     height: 100%;
     width: 1px
 }
 
-.messageCount_a750ac {
+.messageCount_Rp_Lxb {
     cursor: pointer;
     margin-inline-start: var(--space-4)
 }
 
-.messageCount_a750ac>div:hover {
+.messageCount_Rp_Lxb>div:hover {
     text-decoration: underline
 }
 
-/*# sourceMappingURL=93012.62a676b0479f5388.css.map*/
+/*# sourceMappingURL=93012.53ac046cf65d1a8d.css.map*/

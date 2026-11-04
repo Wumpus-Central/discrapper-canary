@@ -1,1 +1,1 @@
-f.exports = { Zp: "layout_ff6017", Gt: "frame_ff6017", sc: "narrow_ff6017", U: "wide_ff6017" };
+s.exports = { Zp: "layout_xKsXVs", Gt: "frame_xKsXVs", sc: "narrow_xKsXVs", U: "wide_xKsXVs" };

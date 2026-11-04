@@ -1,18 +1,17 @@
-e.d(n, { default: () => d });
 var s = e(477900),
     i = e(582128),
-    o = e(17928),
+    o = e(855986),
     a = e(116833),
     u = e(772707),
-    r = e(427495),
+    r = e(7891),
     E = e(859703),
-    T = e(738822),
-    c = e(3738),
-    C = e(77870),
+    T = e(506988),
+    c = e(870273),
+    C = e(61387),
     l = e(590202),
-    _ = e(657792),
-    L = e(190107),
-    N = e(105292);
+    _ = e(280905),
+    L = e(221596),
+    N = e(792996);
 function A(t) {
     let { transitionState: n, onClose: e, quest: _ } = t,
         A = (0, C.fc)(_),
@@ -47,12 +46,18 @@ function A(t) {
         actions: [{ text: N.intl.string(N.t.l7E81v), variant: "primary", onClick: p, loading: U }],
     });
 }
-function d(t) {
-    let { quest: n, transitionState: e, onClose: i } = t;
-    return (0, s.jsx)(_.R, {
-        questOrQuests: n,
-        questContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
-        sourceQuestContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
-        children: () => (0, s.jsx)(A, { quest: n, transitionState: e, onClose: i }),
-    });
-}
+e.d(
+    n,
+    {},
+    {
+        default: function (t) {
+            let { quest: n, transitionState: e, onClose: i } = t;
+            return (0, s.jsx)(_.R, {
+                questOrQuests: n,
+                questContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
+                sourceQuestContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
+                children: () => (0, s.jsx)(A, { quest: n, transitionState: e, onClose: i }),
+            });
+        },
+    },
+);

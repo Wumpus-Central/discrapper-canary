@@ -1,18 +1,23 @@
-i.d(a, { A: () => e });
 var n = i(536637),
     s = i.n(n),
-    d = i(66834);
-let e = {
-    async setCommunicationDisabledDuration(t, a, i, n, e, o) {
-        let l = null != i ? s()().add(i, "s").toISOString() : null;
-        await d.A.setCommunicationDisabledUntil({
-            guildId: t,
-            userId: a,
-            communicationDisabledUntilTimestamp: l,
-            duration: i,
-            reason: n,
-            location: e,
-            moderatorReportId: o,
-        });
+    d = i(778858);
+i.d(
+    a,
+    {},
+    {
+        A: {
+            async setCommunicationDisabledDuration(t, a, i, n, o, e) {
+                let r = null != i ? s()().add(i, "s").toISOString() : null;
+                await d.A.setCommunicationDisabledUntil({
+                    guildId: t,
+                    userId: a,
+                    communicationDisabledUntilTimestamp: r,
+                    duration: i,
+                    reason: n,
+                    location: o,
+                    moderatorReportId: e,
+                });
+            },
+        },
     },
-};
+);

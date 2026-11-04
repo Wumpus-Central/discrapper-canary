@@ -1,4 +1,4 @@
-.errorNotificationContainer_e13eda {
+.errorNotificationContainer_WnAwLj {
     background-color: rgba(19, 19, 24, .95);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
@@ -6,7 +6,7 @@
     position: relative !important
 }
 
-.errorNotificationWrapper_e13eda {
+.errorNotificationWrapper_WnAwLj {
     height: auto;
     position: relative;
     top: auto;
@@ -18,32 +18,32 @@
     width: 300px
 }
 
-.errorClickNotification_e13eda {
+.errorClickNotification_WnAwLj {
     width: 300px
 }
 
-.stackTraceCode_e13eda {
+.stackTraceCode_WnAwLj {
     font-family: var(--font-code)
 }
 
-.code_e13eda {
+.code_WnAwLj {
     padding: 15px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
 }
 
-.notificationIcon_e13eda {
+.notificationIcon_WnAwLj {
     fill: var(--white)
 }
 
-.popout__0bd4a {
+.popout_9Aa-7R {
     display: flex;
     flex-direction: column;
     height: 100vh
 }
 
-.content__0bd4a {
+.content_9Aa-7R {
     align-items: center;
     display: flex;
     flex: 1 1 auto;
@@ -55,8 +55,8 @@
     --custom-chat-input-margin-bottom: var(--space-xs)
 }
 
-.titleBar__0bd4a {
+.titleBar_9Aa-7R {
     background: var(--background-gradient-app-frame, var(--background-base-lowest))
 }
 
-/*# sourceMappingURL=47268.60521ec029451704.css.map*/
+/*# sourceMappingURL=47268.47e1ddb8aa3ad777.css.map*/

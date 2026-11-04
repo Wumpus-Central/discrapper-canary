@@ -1,0 +1,17 @@
+.content_Rn4I_F {
+    font-size: 14px;
+    font-weight: var(--font-weight-normal);
+    overflow: hidden;
+    padding: 0 0 16px;
+    white-space: pre-wrap
+}
+
+.content_Rn4I_F a {
+    color: var(--text-link)
+}
+
+.content_Rn4I_F a:hover {
+    text-decoration: underline
+}
+
+/*# sourceMappingURL=304ef391ee94b7cf.css.map*/

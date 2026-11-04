@@ -1,1 +1,1 @@
-d.exports = { A: "skeletonsContainer__72fa0", s: "bannerSkeleton__72fa0" };
+e.exports = { A: "skeletonsContainer_SzDcnN", s: "bannerSkeleton_SzDcnN" };

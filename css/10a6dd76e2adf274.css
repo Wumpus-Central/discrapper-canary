@@ -1,0 +1,35 @@
+.thumbnailButton_NJVMoP {
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: inline-flex;
+    flex-shrink: 0
+}
+
+.thumbnailButton_NJVMoP:focus-visible img,
+.thumbnailButton_NJVMoP:hover img {
+    opacity: .85
+}
+
+.titleButton_NJVMoP {
+    max-width: 100%;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.cloudPlaySection_NJVMoP {
+    justify-content: space-between
+}
+
+.cloudPlaySectionTextContainer_NJVMoP {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.appWidgetPreview_NJVMoP {
+    margin-block-end: calc(var(--custom-content-card-padding)*-1);
+    margin-inline: calc(var(--custom-content-card-padding)*-1);
+    width: calc(100% + var(--custom-content-card-padding)*2)
+}
+
+/*# sourceMappingURL=10a6dd76e2adf274.css.map*/

@@ -1,13 +1,12 @@
-n.d(t, { Ay: () => g, Hq: () => L, l$: () => T, o6: () => b, wK: () => w });
 var i,
-    a = n(691426),
+    a = n(273626),
     l = n(155718),
     o = n(688810),
     c = n(429913),
     r = n(20015),
     p = n(723702),
     u = n(933958),
-    d = n(62583),
+    d = n(211449),
     s = n(988534),
     A = n(685399),
     _ = n(969151),
@@ -16,62 +15,15 @@ var i,
     f = n(902439),
     y = n(620148),
     h = n(283488),
-    v = n(818023),
+    v = n(487887),
     I = n(652215),
     b = (((i = {})[(i.START = 0)] = "START"), (i[(i.JOIN = 1)] = "JOIN"), (i[(i.LEAVE = 2)] = "LEAVE"), i);
-function g(e) {
-    let {
-            activityItem: t,
-            context: n,
-            locationObject: i,
-            onActivityItemSelected: a,
-            assetNames: o = ["embedded_cover"],
-            backgroundResolution: c = 250,
-            launchingComponentId: r,
-            commandOrigin: u,
-            source: d,
-        } = e,
-        { application: s, activity: _ } = t,
-        f = _.client_platform_config[(0, E.A)((0, p.getOS)())],
-        y = Date.now(),
-        v =
-            null != f.label_until &&
-            y < Date.parse(f.label_until) &&
-            null != f.label_from &&
-            y > Date.parse(f.label_from),
-        I = (0, h.A)({ applicationId: s.id, size: c, names: o, format: "webp" }),
-        b = null != _.activity_preview_video_asset_id ? (0, m.A)(s.id, _.activity_preview_video_asset_id) : null,
-        g = (0, A.Ay)("channel" === n.type ? n.channel : void 0).find((e) => {
-            let { embeddedActivity: t } = e;
-            return s.id === t.applicationId;
-        }),
-        S = L({ context: n, applicationId: s.id }),
-        C = w({
-            application: t.application,
-            context: n,
-            locationObject: i,
-            onActivityItemSelectedProp: a,
-            launchingComponentId: r,
-            commandOrigin: u,
-            source: d,
-        }),
-        N = T(s, t.activity);
-    return {
-        imageBackground: I,
-        videoUrl: b,
-        joinableEmbeddedApp: g,
-        activityAction: S,
-        onActivityItemSelected: C,
-        labelType: v ? f.label_type : l.Hr.NONE,
-        staffReleasePhase: N,
-    };
-}
 function T(e, t) {
     if (!((0, r.n)(e, I.gfo.EMBEDDED_RELEASED) || (0, r.n)(e, I.gfo.EMBEDDED_FIRST_PARTY))) return;
-    let n = t.client_platform_config[(0, E.A)((0, p.getOS)())].release_phase;
+    let n = t.client_platform_config[(0, E.A)((0, p.R0)())].release_phase;
     return v.qG.includes(n) ? n.replace("_", " ").replace(/(^\w|\s\w)/g, (e) => e.toUpperCase()) : void 0;
 }
-function L(e) {
+function g(e) {
     let { context: t, applicationId: n, fetchesApplication: i = !0 } = e,
         a = 0,
         l = "channel" === t.type ? t.channel : void 0,
@@ -86,7 +38,7 @@ function L(e) {
     let d = (0, _.H)(o?.location);
     return (null != l && d === l.id && r?.id === p.id ? (a = 2) : null != u && (a = 1), a);
 }
-function w(e) {
+function L(e) {
     let {
             application: t,
             context: n,
@@ -102,7 +54,7 @@ function w(e) {
             onConfirmActivityLaunchChecksAlertOpen: y,
         } = e,
         h = t?.id ?? "",
-        v = L({ context: n, applicationId: h, fetchesApplication: _ }),
+        v = g({ context: n, applicationId: h, fetchesApplication: _ }),
         { analyticsLocations: I } = (0, o.Ay)(),
         b = (0, f.A)();
     if (null == t)
@@ -149,3 +101,63 @@ function w(e) {
             };
     }
 }
+n.d(
+    t,
+    {},
+    {
+        Ay: function (e) {
+            let {
+                    activityItem: t,
+                    context: n,
+                    locationObject: i,
+                    onActivityItemSelected: a,
+                    assetNames: o = ["embedded_cover"],
+                    backgroundResolution: c = 250,
+                    launchingComponentId: r,
+                    commandOrigin: u,
+                    source: d,
+                } = e,
+                { application: s, activity: _ } = t,
+                f = _.client_platform_config[(0, E.A)((0, p.R0)())],
+                y = Date.now(),
+                v =
+                    null != f.label_until &&
+                    y < Date.parse(f.label_until) &&
+                    null != f.label_from &&
+                    y > Date.parse(f.label_from),
+                I = (0, h.A)({ applicationId: s.id, size: c, names: o, format: "webp" }),
+                b =
+                    null != _.activity_preview_video_asset_id
+                        ? (0, m.A)(s.id, _.activity_preview_video_asset_id)
+                        : null,
+                w = (0, A.Ay)("channel" === n.type ? n.channel : void 0).find((e) => {
+                    let { embeddedActivity: t } = e;
+                    return s.id === t.applicationId;
+                }),
+                C = g({ context: n, applicationId: s.id }),
+                R = L({
+                    application: t.application,
+                    context: n,
+                    locationObject: i,
+                    onActivityItemSelectedProp: a,
+                    launchingComponentId: r,
+                    commandOrigin: u,
+                    source: d,
+                }),
+                S = T(s, t.activity);
+            return {
+                imageBackground: I,
+                videoUrl: b,
+                joinableEmbeddedApp: w,
+                activityAction: C,
+                onActivityItemSelected: R,
+                labelType: v ? f.label_type : l.Hr.NONE,
+                staffReleasePhase: S,
+            };
+        },
+        Hq: g,
+        l$: T,
+        o6: b,
+        wK: L,
+    },
+);

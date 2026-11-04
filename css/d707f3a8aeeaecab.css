@@ -1,0 +1,37 @@
+.frame_HsOb2X {
+    --custom-conjure-app-icon-tile-size: var(--custom-conjure-project-icon-size);
+    border-radius: calc(var(--custom-conjure-project-icon-size)/4);
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    height: var(--custom-conjure-project-icon-size);
+    outline: 1px solid var(--border-subtle);
+    outline-offset: -1px;
+    width: var(--custom-conjure-project-icon-size)
+}
+
+.header_HsOb2X {
+    --custom-conjure-project-icon-size: var(--space-20)
+}
+
+.sidebar_HsOb2X {
+    --custom-conjure-project-icon-size: var(--space-32)
+}
+
+.card_HsOb2X {
+    --custom-conjure-project-icon-size: var(--space-40)
+}
+
+.list_HsOb2X {
+    --custom-conjure-project-icon-size: calc(var(--space-40) + var(--space-4))
+}
+
+.dialog_HsOb2X {
+    --custom-conjure-project-icon-size: var(--space-48)
+}
+
+.image_HsOb2X {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+/*# sourceMappingURL=d707f3a8aeeaecab.css.map*/

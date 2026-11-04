@@ -1,0 +1,21 @@
+.newContentCard_mgabta {
+    cursor: pointer
+}
+
+.newContentCard_mgabta:hover .newContentRow_mgabta {
+    background: var(--user-profile-overlay-background-hover)
+}
+
+.newContentRow_mgabta {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-8);
+    padding: var(--space-8)
+}
+
+.newContentDot_mgabta {
+    flex-shrink: 0
+}
+
+/*# sourceMappingURL=782c38942d869ba2.css.map*/

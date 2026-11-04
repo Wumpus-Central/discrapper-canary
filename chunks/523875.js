@@ -1,4 +1,3 @@
-n.d(t, { L: () => a });
 var i = n(477900),
     l = n(582128),
     r = n(744682);
@@ -8,42 +7,48 @@ let s = {
     hover_unmuted: { name: "hover_unmuted", start: 180, duration: 40 },
     hover_muted: { name: "hover_muted", start: 240, duration: 40 },
 };
-function a(e) {
-    let t = l.useRef(null),
-        a = l.useRef(e);
-    a.current = e;
-    let o = l.useMemo(
-            () => () => {
-                null != t.current && t.current.play(e);
-            },
-            [e],
-        ),
-        u = l.useCallback(() => {
-            if (null == t.current) return;
-            let n = "mute" === e ? "hover_unmuted" : "hover_muted";
-            t.current.play(n);
-        }, [e]),
-        d = l.useCallback(() => {
-            if (null == t.current) return;
-            let n = "mute" === e ? "hover_unmuted" : "hover_muted";
-            t.current.stopIfPlaying(n);
-        }, [e]),
-        c = l.useCallback(
-            (e) =>
-                (0, i.jsx)(r.P, {
-                    ...e,
-                    src: () => n.e("218133").then(n.t.bind(n, 705844, 19)),
-                    ref: t,
-                    initialAnimation: a.current,
-                    markers: s,
-                }),
-            [],
-        );
-    return {
-        events: { onClick: o, onMouseEnter: u, onMouseLeave: d },
-        play: o,
-        getDuration: l.useCallback(() => t.current?.getDuration(), []),
-        getCurrentFrame: l.useCallback(() => t.current?.getCurrentFrame() ?? null, []),
-        Component: c,
-    };
-}
+n.d(
+    t,
+    {},
+    {
+        L: function (e) {
+            let t = l.useRef(null),
+                a = l.useRef(e);
+            a.current = e;
+            let o = l.useMemo(
+                    () => () => {
+                        null != t.current && t.current.play(e);
+                    },
+                    [e],
+                ),
+                u = l.useCallback(() => {
+                    if (null == t.current) return;
+                    let n = "mute" === e ? "hover_unmuted" : "hover_muted";
+                    t.current.play(n);
+                }, [e]),
+                d = l.useCallback(() => {
+                    if (null == t.current) return;
+                    let n = "mute" === e ? "hover_unmuted" : "hover_muted";
+                    t.current.stopIfPlaying(n);
+                }, [e]),
+                c = l.useCallback(
+                    (e) =>
+                        (0, i.jsx)(r.P, {
+                            ...e,
+                            src: () => n.e(218133).then(n.t.bind(n, 705844, 19)),
+                            ref: t,
+                            initialAnimation: a.current,
+                            markers: s,
+                        }),
+                    [],
+                );
+            return {
+                events: { onClick: o, onMouseEnter: u, onMouseLeave: d },
+                play: o,
+                getDuration: l.useCallback(() => t.current?.getDuration(), []),
+                getCurrentFrame: l.useCallback(() => t.current?.getCurrentFrame() ?? null, []),
+                Component: c,
+            };
+        },
+    },
+);

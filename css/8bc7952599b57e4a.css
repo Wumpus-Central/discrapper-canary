@@ -1,0 +1,33 @@
+.modal_wRhEA_ {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    padding: 32px;
+    text-align: center;
+    width: 400px
+}
+
+.followSuccessHeader_wRhEA_ {
+    font-weight: var(--font-weight-bold)
+}
+
+.image_wRhEA_ {
+    margin-bottom: 0;
+    margin-top: -96px;
+    width: 280px
+}
+
+.body_wRhEA_ {
+    margin: 16px 0 32px
+}
+
+.root_wRhEA_ {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    overflow: visible
+}
+
+/*# sourceMappingURL=8bc7952599b57e4a.css.map*/

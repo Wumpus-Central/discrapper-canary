@@ -1,0 +1,146 @@
+.header_ESecGU {
+    align-items: flex-end;
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-sizing: border-box;
+    display: flex;
+    height: 240px;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: var(--space-16);
+    position: relative
+}
+
+.banner_ESecGU {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.banner_ESecGU,
+.scrim_ESecGU {
+    inset: 0;
+    position: absolute
+}
+
+.scrim_ESecGU {
+    background: linear-gradient(0deg, var(--opacity-black-40) 0, transparent 86.5%), linear-gradient(0deg, var(--primary-830) 0, transparent 50%)
+}
+
+.editControls_ESecGU {
+    gap: var(--space-8);
+    inset-block-end: var(--space-16);
+    inset-inline-end: var(--space-16);
+    position: absolute;
+    z-index: 1
+}
+
+.editControls_ESecGU,
+.identity_ESecGU {
+    align-items: center;
+    display: flex
+}
+
+.identity_ESecGU {
+    color: var(--text-overlay-light);
+    gap: var(--space-10);
+    min-width: 0;
+    position: relative;
+    width: 100%
+}
+
+.icon_ESecGU {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-high);
+    flex: 0 0 auto
+}
+
+.info_ESecGU {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.stats_ESecGU {
+    flex-wrap: wrap;
+    gap: var(--space-4) var(--space-12)
+}
+
+.stat_ESecGU,
+.stats_ESecGU {
+    align-items: center;
+    display: flex
+}
+
+.stat_ESecGU {
+    color: var(--opacity-white-72);
+    gap: var(--space-4)
+}
+
+.memberDot_ESecGU,
+.onlineDot_ESecGU {
+    border-radius: var(--radius-round);
+    flex: 0 0 auto;
+    height: var(--space-8);
+    width: var(--space-8)
+}
+
+.onlineDot_ESecGU {
+    background-color: var(--icon-status-online)
+}
+
+.memberDot_ESecGU {
+    background-color: var(--opacity-white-72)
+}
+
+.iconContainer_XmFhxL {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-shrink: 0;
+    height: 42px;
+    justify-content: center;
+    width: 42px
+}
+
+.page_QQ_HWZ {
+    background-color: var(--background-base-lower);
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 0;
+    overflow: hidden;
+    position: relative
+}
+
+.page_QQ_HWZ,
+.scroller_QQ_HWZ {
+    flex: 1 1 auto
+}
+
+.content_QQ_HWZ {
+    container: guild-space-page/inline-size;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    margin-inline: auto;
+    max-width: 1400px;
+    padding: var(--space-16);
+    padding-block-end: var(--space-96)
+}
+
+.centered_QQ_HWZ {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: var(--space-16)
+}
+
+/*# sourceMappingURL=b5838910488778f8.css.map*/

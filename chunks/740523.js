@@ -1,7 +1,7 @@
-_.exports = {
-    T8: "purchasePlaceholder__32d1b",
-    _P: "avatarDecorationPreview__32d1b",
-    M4: "nameplatePreview__32d1b",
-    pI: "profileFramePreview__32d1b",
-    ZS: "profileFrameInner__32d1b",
+e.exports = {
+    T8: "purchasePlaceholder_W0dbC4",
+    _P: "avatarDecorationPreview_W0dbC4",
+    M4: "nameplatePreview_W0dbC4",
+    pI: "profileFramePreview_W0dbC4",
+    ZS: "profileFrameInner_W0dbC4",
 };

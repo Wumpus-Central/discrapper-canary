@@ -1,15 +1,20 @@
-n.d(i, { default: () => r });
 var s = n(477900);
 n(582128);
 var a = n(189213),
-    e = n(105292);
-function r(t) {
-    let { transitionState: i, onClose: n } = t;
-    return (0, s.jsx)(a.a, {
-        title: e.intl.string(e.t.xSV3nU),
-        subtitle: e.intl.string(e.t.jPMGbB),
-        actions: [{ text: e.intl.string(e.t["NX+WJN"]), onClick: n }],
-        transitionState: i,
-        onClose: n,
-    });
-}
+    e = n(792996);
+n.d(
+    i,
+    {},
+    {
+        default: function (t) {
+            let { transitionState: i, onClose: n } = t;
+            return (0, s.jsx)(a.a, {
+                title: e.intl.string(e.t.xSV3nU),
+                subtitle: e.intl.string(e.t.jPMGbB),
+                actions: [{ text: e.intl.string(e.t["NX+WJN"]), onClick: n }],
+                transitionState: i,
+                onClose: n,
+            });
+        },
+    },
+);

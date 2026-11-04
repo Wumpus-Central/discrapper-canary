@@ -1,5 +1,4 @@
-e.d(t, { A: () => h });
-var s = e(17928),
+var s = e(855986),
     l = e(73153);
 let i = { speechRate: 1, currentMessage: null },
     n = i;
@@ -41,3 +40,4 @@ let h = new c(
               },
           },
 );
+e.d(t, {}, { A: h });

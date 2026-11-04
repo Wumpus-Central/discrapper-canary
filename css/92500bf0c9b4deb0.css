@@ -1,0 +1,26 @@
+.textarea_7NTkEC {
+    background-color: transparent;
+    border: none;
+    box-sizing: border-box;
+    color: var(--text-default);
+    font-size: 12px;
+    line-height: 14px;
+    max-height: 88px;
+    padding: 4px;
+    resize: none;
+    width: 100%
+}
+
+.textarea_7NTkEC::-moz-placeholder {
+    color: var(--text-default)
+}
+
+.textarea_7NTkEC::placeholder {
+    color: var(--text-default)
+}
+
+.textarea_7NTkEC:focus {
+    background-color: var(--background-base-lowest)
+}
+
+/*# sourceMappingURL=92500bf0c9b4deb0.css.map*/

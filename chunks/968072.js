@@ -1,10 +1,9 @@
-n.d(t, { RV: () => u, gd: () => o, qQ: () => c, vk: () => a });
 let r = /\(error: (.*)\)/,
     i = /captureMessage|captureException/;
 function o(...e) {
     let t = e.sort((e, t) => e[0] - t[0]).map((e) => e[1]);
     return (e, n = 0, o = 0) => {
-        let a = [],
+        let s = [],
             l = e.split("\n");
         for (let e = n; e < l.length; e++) {
             let n = l[e];
@@ -14,50 +13,57 @@ function o(...e) {
                 for (let e of t) {
                     let t = e(i);
                     if (t) {
-                        a.push(t);
+                        s.push(t);
                         break;
                     }
                 }
-                if (a.length >= 50 + o) break;
+                if (s.length >= 50 + o) break;
             }
         }
-        var c = a.slice(o);
+        var c = s.slice(o);
         if (!c.length) return [];
         let u = Array.from(c);
         return (
-            /sentryWrapped/.test(s(u).function || "") && u.pop(),
+            /sentryWrapped/.test(a(u).function || "") && u.pop(),
             u.reverse(),
-            i.test(s(u).function || "") && (u.pop(), i.test(s(u).function || "") && u.pop()),
-            u.slice(0, 50).map((e) => ({ ...e, filename: e.filename || s(u).filename, function: e.function || "?" }))
+            i.test(a(u).function || "") && (u.pop(), i.test(a(u).function || "") && u.pop()),
+            u.slice(0, 50).map((e) => ({ ...e, filename: e.filename || a(u).filename, function: e.function || "?" }))
         );
     };
 }
 function a(e) {
-    return Array.isArray(e) ? o(...e) : e;
-}
-function s(e) {
     return e[e.length - 1] || {};
 }
-let l = "<anonymous>";
-function c(e) {
-    try {
-        if (!e || "function" != typeof e) return l;
-        return e.name || l;
-    } catch (e) {
-        return l;
-    }
-}
-function u(e) {
-    let t = e.exception;
-    if (t) {
-        let e = [];
-        try {
-            return (
-                t.values.forEach((t) => {
-                    t.stacktrace.frames && e.push(...t.stacktrace.frames);
-                }),
-                e
-            );
-        } catch (e) {}
-    }
-}
+let s = "<anonymous>";
+n.d(
+    t,
+    {},
+    {
+        RV: function (e) {
+            let t = e.exception;
+            if (t) {
+                let e = [];
+                try {
+                    return (
+                        t.values.forEach((t) => {
+                            t.stacktrace.frames && e.push(...t.stacktrace.frames);
+                        }),
+                        e
+                    );
+                } catch (e) {}
+            }
+        },
+        gd: o,
+        qQ: function (e) {
+            try {
+                if (!e || "function" != typeof e) return s;
+                return e.name || s;
+            } catch (e) {
+                return s;
+            }
+        },
+        vk: function (e) {
+            return Array.isArray(e) ? o(...e) : e;
+        },
+    },
+);

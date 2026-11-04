@@ -1,6 +1,5 @@
-n.d(t, { Lq: () => c, U0: () => m, _n: () => f, mB: () => h, x4: () => u });
 var i = n(775602),
-    r = n(363195),
+    r = n(413599),
     l = n(253932),
     s = n(157146);
 let a = Object.freeze({
@@ -43,39 +42,48 @@ function c() {
 function d() {
     let e =
         "u" > typeof window && "function" == typeof window.matchMedia
-            ? window.matchMedia(s.Un).matches
+            ? window.matchMedia(s.U).matches
                 ? "cozy"
                 : "compact"
-            : s.fS;
-    return (0, s.dV)(l.Xi.getSetting(), e);
+            : "cozy";
+    return (0, s.d)(l.Xi.getSetting(), e);
 }
 function m() {
     let e = i.Ay.fontScale;
     return Number.isFinite(e) ? Math.round(100 * e) / 100 : a.fontScale;
 }
-function h(e) {
-    return {
-        baseTheme: u(r.A.theme),
-        customTheme: c(),
-        uiDensity: d(),
-        messageDisplayCompact: l.hH.getSetting(),
-        fontScale: m(),
-        reducedMotion: e,
-        highContrast: i.Ay.isHighContrastModeEnabled,
-        forcedColors: i.Ay.useForcedColors,
-        underlineLinks: i.Ay.alwaysShowLinkDecorations,
-        formFactor: "desktop",
-    };
-}
-function f() {
-    return {
-        theme: u(r.A.theme),
-        ui_density: d(),
-        message_display_compact: String(l.hH.getSetting()),
-        font_scale: String(m()),
-        reduced_motion: String(i.Ay.useReducedMotion),
-        high_contrast: String(i.Ay.isHighContrastModeEnabled),
-        forced_colors: String(i.Ay.useForcedColors),
-        underline_links: String(i.Ay.alwaysShowLinkDecorations),
-    };
-}
+n.d(
+    t,
+    {},
+    {
+        Lq: c,
+        U0: m,
+        _n: function () {
+            return {
+                theme: u(r.A.theme),
+                ui_density: d(),
+                message_display_compact: String(l.hH.getSetting()),
+                font_scale: String(m()),
+                reduced_motion: String(i.Ay.useReducedMotion),
+                high_contrast: String(i.Ay.isHighContrastModeEnabled),
+                forced_colors: String(i.Ay.useForcedColors),
+                underline_links: String(i.Ay.alwaysShowLinkDecorations),
+            };
+        },
+        mB: function (e) {
+            return {
+                baseTheme: u(r.A.theme),
+                customTheme: c(),
+                uiDensity: d(),
+                messageDisplayCompact: l.hH.getSetting(),
+                fontScale: m(),
+                reducedMotion: e,
+                highContrast: i.Ay.isHighContrastModeEnabled,
+                forcedColors: i.Ay.useForcedColors,
+                underlineLinks: i.Ay.alwaysShowLinkDecorations,
+                formFactor: "desktop",
+            };
+        },
+        x4: u,
+    },
+);

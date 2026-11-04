@@ -1,0 +1,268 @@
+.root_KUkQ06 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 var(--space-24);
+    width: 1080px
+}
+
+.settings_KUkQ06 {
+    margin: 0;
+    width: 100%
+}
+
+.settings_KUkQ06 .titleText_KUkQ06 {
+    margin-bottom: var(--space-48);
+    text-align: start
+}
+
+.settings_KUkQ06 .pill_KUkQ06.pillGradient_KUkQ06 {
+    background: linear-gradient(90deg, rgba(155, 29, 165, .84) 0, rgba(30, 35, 83, .84) 127%), var(--background-base-lower)
+}
+
+.settings_KUkQ06 .headerLabelCell_KUkQ06,
+.settings_KUkQ06 .labelCell_KUkQ06 {
+    min-width: 0
+}
+
+.settings_KUkQ06 .cell_KUkQ06 {
+    flex-shrink: 0;
+    width: 27%
+}
+
+.settings_KUkQ06 .gradientColumn_KUkQ06 {
+    pointer-events: none;
+    width: 27%
+}
+
+.settings_KUkQ06 .gradientColumn_KUkQ06.tier0_KUkQ06 {
+    inset-inline-end: 27%
+}
+
+.titleText_KUkQ06 {
+    justify-content: center;
+    margin-bottom: var(--space-64);
+    text-align: center
+}
+
+.planTitleWithPrice_KUkQ06 {
+    display: flex;
+    flex-direction: column;
+    z-index: 1
+}
+
+.planTitle_KUkQ06 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    margin-bottom: var(--space-4)
+}
+
+.table_KUkQ06 {
+    display: flex;
+    flex-direction: column
+}
+
+.headerRow_KUkQ06,
+.row_KUkQ06 {
+    display: flex;
+    flex-direction: row
+}
+
+.headerRow_KUkQ06 {
+    border-bottom: 1px solid var(--border-strong);
+    padding-bottom: var(--space-16)
+}
+
+.cell_KUkQ06 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 180px
+}
+
+.headerLabelCell_KUkQ06,
+.labelCell_KUkQ06 {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    text-align: start
+}
+
+.sectionTitle_KUkQ06 {
+    margin-top: 42px
+}
+
+.sectionTitle_KUkQ06 .labelCell_KUkQ06 {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px
+}
+
+.planComparisonItem_KUkQ06 {
+    border-bottom: 1px solid var(--border-strong);
+    padding: var(--space-24) 0
+}
+
+.tableWrapper_KUkQ06 {
+    position: relative
+}
+
+.backgroundGradient_KUkQ06 {
+    background: linear-gradient(180deg, var(--pink-49) 0, var(--premium-tier-0-purple) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    padding: 2px
+}
+
+.gradientColumn_KUkQ06 {
+    height: calc(100% + 28px);
+    position: absolute;
+    top: -31px;
+    width: 180px;
+    z-index: 1
+}
+
+.gradientColumn_KUkQ06.tier0_KUkQ06 {
+    inset-inline-end: 180px
+}
+
+.gradientColumn_KUkQ06.tier2_KUkQ06 {
+    inset-inline-end: 0
+}
+
+.gradientColumnBorder_KUkQ06 {
+    border-radius: var(--radius-md);
+    height: 100%;
+    inset-inline-start: -2px;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.pill_KUkQ06 {
+    inset-inline-start: 50%;
+    position: absolute;
+    top: 1px;
+    transform: translate(-50%, -50%);
+    z-index: 2
+}
+
+.pill_KUkQ06.pillGradient_KUkQ06 {
+    background: linear-gradient(90deg, rgba(155, 29, 165, .84) 0, rgba(30, 35, 83, .84) 120%), var(--background-base-lower)
+}
+
+.gradientBackgroundContainer_KUkQ06 {
+    border-radius: calc(var(--radius-md) - 2px);
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1
+}
+
+.gradientBackgroundPosition_KUkQ06 {
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0
+}
+
+.nitroWheelIconColor_KUkQ06 {
+    fill: var(--icon-strong)
+}
+
+.container_0fgkqL {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative
+}
+
+.fadeInFromTop_0fgkqL {
+    animation: fadeInFromTop_0fgkqL .6s ease-out forwards;
+    will-change: opacity, transform
+}
+
+@keyframes fadeInFromTop_0fgkqL {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.containerBackground_0fgkqL {
+    background: var(--background-base-lowest)
+}
+
+.responsiveContainer_0fgkqL {
+    container-name: premium-marketing-page-container;
+    container-type: inline-size
+}
+
+.sectionsContainer_0fgkqL {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    width: 100%
+}
+
+.bestOfNitroSectionContainer_0fgkqL,
+.heroHeadingContainer_0fgkqL,
+.planCardsContainer_0fgkqL,
+.planComparisonTableContainer_0fgkqL,
+.whatsNewSectionContainer_0fgkqL {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%
+}
+
+.whatsNewSectionContainer_0fgkqL {
+    margin-top: 80px
+}
+
+.bestOfNitroSectionContainer_0fgkqL,
+.planCardsContainer_0fgkqL,
+.planComparisonTableContainer_0fgkqL {
+    margin-top: 164px
+}
+
+.bottomOfPageVisibilitySensor_0fgkqL {
+    bottom: 0;
+    height: 300px;
+    position: absolute
+}
+
+.scroller_0fgkqL {
+    background-color: var(--background-base-low);
+    contain: layout size
+}
+
+.topOfPageGradient_0fgkqL {
+    position: absolute;
+    top: 0
+}
+
+.topOfPageGradientWithCountdown_0fgkqL {
+    opacity: .75
+}
+
+.bottomOfPageGradient_0fgkqL {
+    bottom: 0;
+    position: absolute;
+    transform: rotate(180deg)
+}
+
+/*# sourceMappingURL=12fa6bdd9b3cf24a.css.map*/

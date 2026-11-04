@@ -1,0 +1,299 @@
+.placeholderFill_yL2nEB {
+    fill: var(--background-mod-normal)
+}
+
+.container_YTrnZP {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12)
+}
+
+.circular_YTrnZP,
+.spinner_YTrnZP {
+    height: 56px
+}
+
+.circular_YTrnZP {
+    border-radius: var(--radius-round);
+    display: block;
+    width: 56px
+}
+
+.recentAvatarsHeader_YTrnZP {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4)
+}
+
+.recentAvatarContainer_YTrnZP {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    margin-top: var(--space-4)
+}
+
+.hasError_YTrnZP {
+    margin-bottom: var(--space-8)
+}
+
+.errorMessage_YTrnZP {
+    align-items: start;
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: auto 1fr
+}
+
+.recentAvatarSlots_YTrnZP {
+    position: relative
+}
+
+.recentAvatarList_YTrnZP,
+.recentAvatarSlots_YTrnZP {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.recentAvatarButtonContainer_YTrnZP {
+    position: relative
+}
+
+.recentAvatarButton_YTrnZP {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden
+}
+
+.recentAvatarButton_YTrnZP:after {
+    background-color: transparent;
+    content: "";
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    transition: background-color 50ms ease-in;
+    width: 100%
+}
+
+.recentAvatarButton_YTrnZP:hover:after {
+    background-color: var(--opacity-black-20);
+    transition: background-color .15s ease-out
+}
+
+.recentAvatar_YTrnZP {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.deleteButton_YTrnZP {
+    align-items: center;
+    background-color: var(--control-overlay-secondary-background-default);
+    border-radius: var(--radius-round);
+    color: var(--control-overlay-secondary-text-default);
+    cursor: pointer;
+    display: flex;
+    height: 28px;
+    inset-inline-end: -6px;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    top: -6px;
+    transition: background-color 50ms ease-in;
+    width: 28px
+}
+
+.deleteButton_YTrnZP:hover {
+    background-color: var(--control-overlay-secondary-background-hover);
+    transition: background-color .15s ease-out
+}
+
+.deleteButton_YTrnZP:focus-visible,
+.deleteButton_YTrnZP:hover,
+.recentAvatarButtonContainer_YTrnZP:has(:focus-visible) .deleteButton_YTrnZP,
+.recentAvatarButtonContainer_YTrnZP:hover .deleteButton_YTrnZP {
+    opacity: 1
+}
+
+.full-motion .deleteIcon_YTrnZP {
+    transition: transform .15s ease-in-out
+}
+
+.full-motion .deleteButton_YTrnZP:hover .deleteIcon_YTrnZP {
+    transform: scale(1.125)
+}
+
+.full-motion .deleteButton_YTrnZP:active .deleteIcon_YTrnZP {
+    transform: scale(.875)
+}
+
+.emptyAvatarSlots_YTrnZP {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-12)
+}
+
+.avatarPlaceholder_YTrnZP {}
+
+.modalContent_U8Q-Sg {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24)
+}
+
+.imageSelectionSection_U8Q-Sg {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.optionsList_U8Q-Sg {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: 1fr 1fr
+}
+
+.option_U8Q-Sg {
+    align-items: stretch;
+    aspect-ratio: 1;
+    background-color: var(--background-mod-normal);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding: var(--space-16);
+    position: relative;
+    row-gap: var(--space-12);
+    transition: background-color 50ms ease-in;
+    z-index: 1
+}
+
+.optionDescription_U8Q-Sg {
+    align-items: center;
+    display: grid;
+    justify-items: center
+}
+
+.optionDescription_U8Q-Sg.hasBoostingPill_U8Q-Sg {
+    grid-template-rows: auto 1fr auto
+}
+
+.optionDescription_U8Q-Sg.hasBoostingPill_U8Q-Sg:before {
+    content: "";
+    display: block;
+    height: 22px
+}
+
+.optionIconAndLabel_U8Q-Sg {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.optionLabelText_U8Q-Sg {
+    align-items: center;
+    -moz-column-gap: var(--space-4);
+    column-gap: var(--space-4);
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+
+.hasPremiumIcon_U8Q-Sg {
+    margin-inline-end: 2px
+}
+
+.gifGrid_U8Q-Sg {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    z-index: -1
+}
+
+.gifGrid_U8Q-Sg:after {
+    content: "";
+    inset: 0;
+    position: absolute;
+    transition: background-color 50ms ease-in;
+    z-index: 1
+}
+
+.theme-dark .imageUploadOption_U8Q-Sg:before {
+    background-color: transparent;
+    content: "";
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    transition: background-color 50ms ease-in;
+    z-index: -1
+}
+
+.theme-dark .gifGrid_U8Q-Sg:after {
+    background-color: var(--opacity-black-64);
+    transition: background-color 50ms ease-in
+}
+
+.theme-dark .option_U8Q-Sg:hover.imageUploadOption_U8Q-Sg:before {
+    background-color: var(--opacity-black-8);
+    transition: background-color .15s ease-out
+}
+
+.theme-dark .option_U8Q-Sg:hover .gifGrid_U8Q-Sg:after {
+    background-color: var(--opacity-black-68);
+    transition: background-color .15s ease-out
+}
+
+.theme-light .gifGrid_U8Q-Sg:after {
+    background-color: var(--opacity-white-64)
+}
+
+.theme-light .option_U8Q-Sg:hover {
+    background-color: var(--interactive-background-selected)
+}
+
+.theme-light .option_U8Q-Sg:hover .gifGrid_U8Q-Sg:after {
+    background-color: var(--opacity-white-56)
+}
+
+.gif_U8Q-Sg {
+    background-position: 50%;
+    background-size: cover
+}
+
+.premiumWheel_U8Q-Sg {
+    margin-top: 3px
+}
+
+.boostingPill_U8Q-Sg {
+    background-color: var(--background-surface-highest);
+    border-radius: var(--radius-round);
+    color: var(--interactive-text-default);
+    padding: 4px
+}
+
+.imageInputContainer_U8Q-Sg {
+    height: 0;
+    position: relative;
+    width: 0
+}
+
+.imagePickerContainer_U8Q-Sg {
+    display: flex;
+    justify-content: center
+}
+
+.imageSpecifications_U8Q-Sg {
+    padding: 0 var(--space-4)
+}
+
+.premiumUpsell_U8Q-Sg {
+    border-radius: var(--radius-sm);
+    margin: 0
+}
+
+/*# sourceMappingURL=66df9678fbb4c628.css.map*/

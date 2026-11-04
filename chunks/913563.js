@@ -1,7 +1,6 @@
-l.d(t, { A: () => o });
 var n = l(559949),
-    s = l(872859),
-    a = l(483756);
+    s = l(842671),
+    a = l(701256);
 let r = {
     [n.x.DEFAULT]: s.default.ZEL6mz,
     [n.x.CHERRY_BOMB]: s.default.rN7cuX,
@@ -17,6 +16,12 @@ let r = {
     [n.x.KALAM]: s.default.t9Les4,
     [n.x.HEXAGON]: a.default.ALTlzk,
 };
-function o(e) {
-    return r[e] ?? s.default.ZEL6mz;
-}
+l.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            return r[e] ?? s.default.ZEL6mz;
+        },
+    },
+);

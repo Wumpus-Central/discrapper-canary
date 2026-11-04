@@ -1,18 +1,12 @@
-(n.d(t, { $l: () => l, Ay: () => c, O_: () => d, xx: () => o }), n(321073));
+n(321073);
 var i = n(543531),
     r = n(407689),
     a = n(853742),
-    s = n(935505);
+    s = n(944279);
 function l(e) {
     return `${r.mG.FORUM_CHANNEL}_${e}`;
 }
-function o(e, t, n) {
-    (0, i.wR)(l(e), t, n);
-}
-function d(e, t, n) {
-    (0, i.zK)(l(e), t, n);
-}
-class c extends r.id {
+class o extends r.id {
     guildId;
     channelId;
     sessionId;
@@ -45,3 +39,17 @@ class c extends r.id {
             })(i);
     };
 }
+n.d(
+    t,
+    {},
+    {
+        $l: l,
+        Ay: o,
+        O_: function (e, t, n) {
+            (0, i.zK)(l(e), t, n);
+        },
+        xx: function (e, t, n) {
+            (0, i.wR)(l(e), t, n);
+        },
+    },
+);

@@ -1,4 +1,3 @@
-n.d(t, { G: () => u, n: () => c });
 var i = n(462180),
     r = n(882035),
     a = n(976245),
@@ -16,10 +15,16 @@ let d = (0, a.y)((e, t) => ({
         i.has(n) && (i.delete(n), l.w.set(o.hs, i), (0, s.r)(() => e({ notificationDismissedInGuilds: i })));
     },
 }));
-function c(e) {
-    let [t, n] = (0, r.n)(d, (e) => [e.notificationDismissedInGuilds, e.dismissNotification], i.x);
-    return [!t.has(e), n];
-}
-function u(e) {
-    return d.getState().resetNotification(e);
-}
+n.d(
+    t,
+    {},
+    {
+        G: function (e) {
+            return d.getState().resetNotification(e);
+        },
+        n: function (e) {
+            let [t, n] = (0, r.n)(d, (e) => [e.notificationDismissedInGuilds, e.dismissNotification], i.x);
+            return [!t.has(e), n];
+        },
+    },
+);

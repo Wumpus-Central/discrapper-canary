@@ -1,5 +1,4 @@
-n.d(t, { A: () => u });
-var i = n(17928),
+var i = n(855986),
     r = n(73153);
 let a = {},
     s = null,
@@ -51,3 +50,4 @@ let u = new c(r.h, {
         o(t, null);
     },
 });
+n.d(t, {}, { A: u });

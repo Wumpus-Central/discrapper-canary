@@ -1,10 +1,10 @@
-e.exports = {
-    Mg: "messageWithAttachments__2eae8",
-    PI: "attachmentCount__2eae8",
-    oE: "compact__2eae8",
-    MY: "page__2eae8",
-    fH: "upsellBar__2eae8",
-    Mh: "unknownChannel__2eae8",
-    WV: "unknownChannelLabel__2eae8",
-    V2: "unknownChannelIcon__2eae8",
+n.exports = {
+    Mg: "messageWithAttachments_IWr1Bs",
+    PI: "attachmentCount_IWr1Bs",
+    oE: "compact_IWr1Bs",
+    MY: "page_IWr1Bs",
+    fH: "upsellBar_IWr1Bs",
+    Mh: "unknownChannel_IWr1Bs",
+    WV: "unknownChannelLabel_IWr1Bs",
+    V2: "unknownChannelIcon_IWr1Bs",
 };

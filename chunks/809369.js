@@ -1,4 +1,3 @@
-n.d(t, { k: () => m });
 var i = n(73153),
     l = n(367513),
     a = n(401843),
@@ -8,31 +7,37 @@ var i = n(73153),
     d = n(616356),
     c = n(734057),
     u = n(977997),
-    h = n(446243),
+    h = n(303227),
     p = n(652215);
-async function m(e) {
-    let { channelId: t } = e,
-        n = c.A.getChannel(t);
-    if (null == n) return;
-    if (!u.A.isInChannel(t)) {
-        if (
-            !(await s.A.handleVoiceConnect({
-                channel: n,
-                connected: !1,
-                needSubscriptionToAccess: (0, o.p)(e.channelId).needSubscriptionToAccess,
-            }))
-        )
-            return;
-        await new Promise((e) => {
-            i.h.subscribe("GUILD_ROOM_CONNECT", function n(l) {
-                l.room.roomId === t && (i.h.unsubscribe("GUILD_ROOM_CONNECT", n), e(!0));
-            });
-        });
-    }
-    let m = d.A.getActiveStreamForApplicationStream(e);
-    if (null != m && m.state !== p.XYD.ENDED && m.ownerId === e.ownerId) {
-        (l.A.selectParticipant(e.channelId, (0, r._z)(e)), (0, h.UV)(!0, e.channelId));
-        return;
-    }
-    (0, a.A9)(e);
-}
+n.d(
+    t,
+    {},
+    {
+        k: async function (e) {
+            let { channelId: t } = e,
+                n = c.A.getChannel(t);
+            if (null == n) return;
+            if (!u.A.isInChannel(t)) {
+                if (
+                    !(await s.A.handleVoiceConnect({
+                        channel: n,
+                        connected: !1,
+                        needSubscriptionToAccess: (0, o.p)(e.channelId).needSubscriptionToAccess,
+                    }))
+                )
+                    return;
+                await new Promise((e) => {
+                    i.h.subscribe("GUILD_ROOM_CONNECT", function n(l) {
+                        l.room.roomId === t && (i.h.unsubscribe("GUILD_ROOM_CONNECT", n), e(!0));
+                    });
+                });
+            }
+            let m = d.A.getActiveStreamForApplicationStream(e);
+            if (null != m && m.state !== p.XYD.ENDED && m.ownerId === e.ownerId) {
+                (l.A.selectParticipant(e.channelId, (0, r._z)(e)), (0, h.UV)(!0, e.channelId));
+                return;
+            }
+            (0, a.A9)(e);
+        },
+    },
+);

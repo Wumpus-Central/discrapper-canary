@@ -1,5 +1,10 @@
-r.d(t, { a: () => n });
-var u = r(47361),
-    n = function (e, t) {
-        ((this.inlineSize = e), (this.blockSize = t), (0, u.C)(this));
-    };
+var u = r(47361);
+r.d(
+    t,
+    {},
+    {
+        a: function (e, t) {
+            ((this.inlineSize = e), (this.blockSize = t), (0, u.C)(this));
+        },
+    },
+);

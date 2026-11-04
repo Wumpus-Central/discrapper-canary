@@ -1,19 +1,19 @@
-n.d(t, { A: () => m });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
     l = n(667498),
     o = n(806163),
-    d = n(17928),
+    d = n(855986),
     c = n(590703),
     u = n(265059),
-    _ = n(567249),
+    _ = n(293432),
     E = n(611635),
     A = n(892019),
     h = n(726249),
     f = n(203480),
     I = n(652215);
+n(389215);
 let p = new Set([I.BVt.LOGIN, I.BVt.REGISTER]),
     m = r.memo(function (e) {
         let { children: t, skipsSettingDefaultPageTitle: n } = e;
@@ -41,3 +41,4 @@ let p = new Set([I.BVt.LOGIN, I.BVt.REGISTER]),
             ],
         });
     });
+n.d(t, {}, { A: m });

@@ -1,13 +1,8 @@
-n.d(t, { P: () => s });
 var r = n(272469),
     i = n(690094),
     o = n(978862),
     a = n(873326);
-function s(e) {
-    let t = "console";
-    ((0, a.s5)(t, e), (0, a.AS)(t, l));
-}
-function l() {
+function s() {
     "console" in o.O &&
         r.Ow.forEach(function (e) {
             e in o.O.console &&
@@ -23,3 +18,13 @@ function l() {
                 });
         });
 }
+n.d(
+    t,
+    {},
+    {
+        P: function (e) {
+            let t = "console";
+            ((0, a.s5)(t, e), (0, a.AS)(t, s));
+        },
+    },
+);

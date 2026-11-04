@@ -32,13 +32,13 @@ function u(e) {
             n,
             o = [0, 0, 0, 1];
         if ((t = e.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i))) {
-            for (r = 0, n = t[2], t = t[1]; r < 3; r++) {
+            for (n = t[2], t = t[1], r = 0; r < 3; r++) {
                 var i = 2 * r;
                 o[r] = parseInt(t.slice(i, i + 2), 16);
             }
             n && (o[3] = parseInt(n, 16) / 255);
         } else if ((t = e.match(/^#([a-f0-9]{3,4})$/i))) {
-            for (r = 0, n = (t = t[1])[3]; r < 3; r++) o[r] = parseInt(t[r] + t[r], 16);
+            for (n = (t = t[1])[3], r = 0; r < 3; r++) o[r] = parseInt(t[r] + t[r], 16);
             n && (o[3] = parseInt(n + n, 16) / 255);
         } else if (
             (t = e.match(

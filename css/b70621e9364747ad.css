@@ -1,0 +1,485 @@
+.auditLog_LajYMK {
+    background-color: var(--card-background-default);
+    border: 1px solid;
+    border-color: var(--border-subtle);
+    border-radius: var(--radius-sm);
+    color: var(--text-default);
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-4)
+}
+
+.auditLog_LajYMK strong {
+    color: var(--text-strong);
+    font-weight: var(--font-weight-medium)
+}
+
+.divider_LajYMK {
+    background-color: unset;
+    height: 1px;
+    width: 100%
+}
+
+.header_LajYMK {
+    align-items: center;
+    display: flex;
+    padding-block: 10px;
+    padding-inline: 10px 20px;
+    transition: background-color .2s ease;
+    width: 100%
+}
+
+.headerDefault_LajYMK {
+    cursor: default
+}
+
+.headerClickable_LajYMK,
+.headerExpanded_LajYMK {
+    cursor: pointer
+}
+
+.headerExpanded_LajYMK {
+    background-color: var(--card-secondary-bg);
+    border-radius: var(--radius-xs)
+}
+
+.headerClickable_LajYMK {}
+
+.timeWrap_LajYMK {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    max-width: calc(100% - 118px)
+}
+
+.timeWrap_LajYMK,
+.title_LajYMK {
+    flex-grow: 1
+}
+
+.avatar_LajYMK {
+    margin-inline-start: 10px
+}
+
+.expand_LajYMK .expandForeground_LajYMK {
+    transition: d .2s ease, stroke .2s ease
+}
+
+.colorsHook_LajYMK {
+    font-weight: var(--font-weight-medium)
+}
+
+.colorHook_LajYMK {
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    position: relative;
+    top: -1px;
+    width: 10px
+}
+
+.userHook_LajYMK {
+    align-items: baseline;
+    color: var(--text-strong);
+    display: inline-flex;
+    font-weight: var(--font-weight-medium)
+}
+
+.changeDetails_LajYMK {
+    background-color: unset;
+    display: flex;
+    flex-direction: column;
+    padding: 0 8px 10px
+}
+
+.detail_LajYMK {
+    align-items: baseline;
+    display: flex;
+    margin-top: 8px;
+    margin-inline-start: 40px
+}
+
+.prefix_LajYMK {
+    flex-grow: 0
+}
+
+.typeCreate_LajYMK {
+    color: var(--green-230)
+}
+
+.typeDelete_LajYMK {
+    color: var(--red-360)
+}
+
+.typeUpdate_LajYMK {
+    color: var(--yellow-260)
+}
+
+.dash_LajYMK {
+    margin: 0 10px
+}
+
+.change_LajYMK {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    overflow: hidden
+}
+
+.changeStr_LajYMK,
+.overflowEllipsis_LajYMK {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.overflowEllipsis_LajYMK {
+    align-items: baseline;
+    white-space: nowrap
+}
+
+.subListItem_LajYMK {
+    margin: 4px 0
+}
+
+.subListItem_LajYMK:last-child {
+    margin-bottom: 0
+}
+
+.onboardingChangeLogContainer_LajYMK {
+    align-items: baseline;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 12px 0
+}
+
+.onboardingChangeLogItemTitle_LajYMK {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.onboardingChangeLogItemChanges_LajYMK {
+    margin-inline-start: 40px;
+    overflow: hidden
+}
+
+.icon_LajYMK {
+    filter: saturate(var(--saturation-factor, 1));
+    height: 24px;
+    min-width: 24px;
+    position: relative;
+    width: 24px
+}
+
+.icon_LajYMK:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.typeCreate_LajYMK:after {
+    background: url("/assets/9dabbd95e9e8a278.svg")
+}
+
+.typeDelete_LajYMK:after {
+    background: url("/assets/273a82a28d0e1160.svg")
+}
+
+.typeUpdate_LajYMK:after {
+    background: url("/assets/f50ede2a8b3701be.svg")
+}
+
+.timestamp_LajYMK {
+    color: var(--text-muted)
+}
+
+.theme-light .auditLog_LajYMK {
+    border-color: var(--primary-300)
+}
+
+.theme-light .auditLog_LajYMK:hover .expandForeground_LajYMK {
+    stroke: hsl(var(--primary-400-hsl)/1)
+}
+
+.theme-light .headerClickable_LajYMK,
+.theme-light .headerDefault_LajYMK {
+    background-color: hsl(var(--primary-100-hsl)/.3)
+}
+
+.theme-light .headerExpanded_LajYMK {
+    background-color: var(--primary-100)
+}
+
+.theme-light .discrim_LajYMK {
+    opacity: .6
+}
+
+.theme-light .expandForeground_LajYMK {
+    stroke: hsl(var(--primary-400-hsl)/.6)
+}
+
+.theme-light .changeDetails_LajYMK {
+    background-color: hsl(var(--primary-100-hsl)/.3)
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetAll_LajYMK,
+.theme-light .icon_LajYMK.targetAll_LajYMK {
+    background: url("/assets/573976ea56ebddcd.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetBan_LajYMK,
+.theme-light .icon_LajYMK.targetBan_LajYMK {
+    background: url("/assets/24243230825c2c4e.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetChannel_LajYMK,
+.theme-light .icon_LajYMK.targetChannel_LajYMK {
+    background: url("/assets/39fa213330e56d4a.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetGuild_LajYMK,
+.theme-light .icon_LajYMK.targetGuild_LajYMK {
+    background: url("/assets/4161f29c69130cdd.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetEmoji_LajYMK,
+.theme-light .icon_LajYMK.targetEmoji_LajYMK {
+    background: url("/assets/b59ebc1822da2a0e.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetSticker_LajYMK,
+.theme-light .icon_LajYMK.targetSticker_LajYMK {
+    background: url("/assets/d6e3f94f5910677c.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetIntegration_LajYMK,
+.theme-light .icon_LajYMK.targetIntegration_LajYMK {
+    background: url("/assets/90a2a4f8d8fa159f.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetInvite_LajYMK,
+.theme-light .icon_LajYMK.targetInvite_LajYMK {
+    background: url("/assets/440d208fccbaba65.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetMemberRole_LajYMK,
+.theme-light .icon_LajYMK.targetMemberRole_LajYMK {
+    background: url("/assets/0119c42e7eb9c848.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetMember_LajYMK,
+.theme-light .icon_LajYMK.targetMember_LajYMK {
+    background: url("/assets/e168c3c034c1d0cb.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetPermission_LajYMK,
+.theme-light .icon_LajYMK.targetPermission_LajYMK {
+    background: url("/assets/f0d99535c0dceb52.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetRole_LajYMK,
+.theme-light .icon_LajYMK.targetRole_LajYMK {
+    background: url("/assets/e850e1e3d9500baa.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetOnboarding_LajYMK,
+.theme-light .icon_LajYMK.targetOnboarding_LajYMK {
+    background: url("/assets/0f665f281fbc0180.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetVanityUrl_LajYMK,
+.theme-light .icon_LajYMK.targetVanityUrl_LajYMK {
+    background: url("/assets/c7b5dc58ffc4e595.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetWebhook_LajYMK,
+.theme-light .icon_LajYMK.targetWebhook_LajYMK {
+    background: url("/assets/10d3479da12f9040.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetWidget_LajYMK,
+.theme-light .icon_LajYMK.targetWidget_LajYMK {
+    background: url("/assets/bdf6c4d043e4e45c.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetMessage_LajYMK,
+.theme-light .icon_LajYMK.targetMessage_LajYMK {
+    background: url("/assets/feaccc58464f03a4.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetStageInstance_LajYMK,
+.theme-light .icon_LajYMK.targetStageInstance_LajYMK {
+    background: url("/assets/c7cf6befa3c699d9.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetGuildScheduledEvent_LajYMK,
+.theme-light .icon_LajYMK.targetGuildScheduledEvent_LajYMK {
+    background: url("/assets/83d40d9ba3a9db6f.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.thread_LajYMK,
+.theme-light .icon_LajYMK.thread_LajYMK {
+    background: url("/assets/608c1103a1687613.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.applicationCommand_LajYMK,
+.theme-light .icon_LajYMK.applicationCommand_LajYMK {
+    background: url("/assets/c54e976df2bc84cb.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.autoModerationRule_LajYMK,
+.theme-light .icon_LajYMK.autoModerationRule_LajYMK {
+    background: url("/assets/10d3479da12f9040.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.autoModerationBlockMessage_LajYMK,
+.theme-light .icon_LajYMK.autoModerationBlockMessage_LajYMK {
+    background: url("/assets/10d3479da12f9040.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetGuildHome_LajYMK,
+.theme-light .icon_LajYMK.targetGuildHome_LajYMK {
+    background: url("/assets/69869694b4135993.svg")
+}
+
+.themeOverrideLight_LajYMK.icon_LajYMK.targetGuildSoundboard_LajYMK,
+.theme-light .icon_LajYMK.targetGuildSoundboard_LajYMK {
+    background: url("/assets/f21dd7f12034e6cb.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetAll_LajYMK,
+.theme-dark .icon_LajYMK.targetAll_LajYMK {
+    background: url("/assets/df1be54a7d6a8857.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetBan_LajYMK,
+.theme-dark .icon_LajYMK.targetBan_LajYMK {
+    background: url("/assets/798d305c92bcebf6.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetChannel_LajYMK,
+.theme-dark .icon_LajYMK.targetChannel_LajYMK {
+    background: url("/assets/b120d96b118bf2c1.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetGuild_LajYMK,
+.theme-dark .icon_LajYMK.targetGuild_LajYMK {
+    background: url("/assets/ac84ae8206a6f5e1.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetEmoji_LajYMK,
+.theme-dark .icon_LajYMK.targetEmoji_LajYMK {
+    background: url("/assets/e8e77b2ca603a44a.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetSticker_LajYMK,
+.theme-dark .icon_LajYMK.targetSticker_LajYMK {
+    background: url("/assets/6d6c4298fbda978b.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetIntegration_LajYMK,
+.theme-dark .icon_LajYMK.targetIntegration_LajYMK {
+    background: url("/assets/0f213e7334ec406b.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetInvite_LajYMK,
+.theme-dark .icon_LajYMK.targetInvite_LajYMK {
+    background: url("/assets/83713b6ddb3aaba9.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetMemberRole_LajYMK,
+.theme-dark .icon_LajYMK.targetMemberRole_LajYMK {
+    background: url("/assets/e50ed58cbe31755a.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetMember_LajYMK,
+.theme-dark .icon_LajYMK.targetMember_LajYMK {
+    background: url("/assets/69a57bf1542db6d0.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetPermission_LajYMK,
+.theme-dark .icon_LajYMK.targetPermission_LajYMK {
+    background: url("/assets/02df409dfd89ffbc.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetRole_LajYMK,
+.theme-dark .icon_LajYMK.targetRole_LajYMK {
+    background: url("/assets/eea18d5e3a85428c.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetOnboarding_LajYMK,
+.theme-dark .icon_LajYMK.targetOnboarding_LajYMK {
+    background: url("/assets/e35fcd676e720a43.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetVanityUrl_LajYMK,
+.theme-dark .icon_LajYMK.targetVanityUrl_LajYMK {
+    background: url("/assets/b74a77e98b76ceb0.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetWebhook_LajYMK,
+.theme-dark .icon_LajYMK.targetWebhook_LajYMK {
+    background: url("/assets/91bd7f1643fe02ff.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetWidget_LajYMK,
+.theme-dark .icon_LajYMK.targetWidget_LajYMK {
+    background: url("/assets/a0ba681b0596ef90.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetMessage_LajYMK,
+.theme-dark .icon_LajYMK.targetMessage_LajYMK {
+    background: url("/assets/14bedd367511ce89.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetStageInstance_LajYMK,
+.theme-dark .icon_LajYMK.targetStageInstance_LajYMK {
+    background: url("/assets/b81e4773a96fb05d.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetGuildScheduledEvent_LajYMK,
+.theme-dark .icon_LajYMK.targetGuildScheduledEvent_LajYMK {
+    background: url("/assets/06e0c61b48f72f6d.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.thread_LajYMK,
+.theme-dark .icon_LajYMK.thread_LajYMK {
+    background: url("/assets/f31aad3177a6c7c8.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.applicationCommand_LajYMK,
+.theme-dark .icon_LajYMK.applicationCommand_LajYMK {
+    background: url("/assets/3934256e60927112.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.autoModerationRule_LajYMK,
+.theme-dark .icon_LajYMK.autoModerationRule_LajYMK {
+    background: url("/assets/91bd7f1643fe02ff.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.autoModerationBlockMessage_LajYMK,
+.theme-dark .icon_LajYMK.autoModerationBlockMessage_LajYMK {
+    background: url("/assets/91bd7f1643fe02ff.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetGuildHome_LajYMK,
+.theme-dark .icon_LajYMK.targetGuildHome_LajYMK {
+    background: url("/assets/606a039f64780e30.svg")
+}
+
+.themeOverrideDark_LajYMK.icon_LajYMK.targetGuildSoundboard_LajYMK,
+.theme-dark .icon_LajYMK.targetGuildSoundboard_LajYMK {
+    background: url("/assets/547b254784ef1abb.svg")
+}
+
+.headerClickable_LajYMK,
+.headerDefault_LajYMK {
+    background-color: unset;
+    color: var(--text-default)
+}
+
+/*# sourceMappingURL=b70621e9364747ad.css.map*/

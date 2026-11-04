@@ -1,4 +1,9 @@
-function i() {
-    return window.devicePixelRatio ?? 1;
-}
-n.d(t, { A: () => i });
+n.d(
+    t,
+    {},
+    {
+        A: function () {
+            return window.devicePixelRatio ?? 1;
+        },
+    },
+);

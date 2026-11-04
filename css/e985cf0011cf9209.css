@@ -1,0 +1,53 @@
+.pickerWrapper_qOZw1R {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 180px
+}
+
+.saturation_qOZw1R {
+    cursor: crosshair;
+    flex: 1;
+    height: 140px;
+    position: relative
+}
+
+.saturation_qOZw1R>div {
+    border-radius: 8px
+}
+
+.saturation_qOZw1R>div>div {
+    border-radius: 8px
+}
+
+.saturation_qOZw1R>div>div>div {
+    border-radius: 8px
+}
+
+.hue_qOZw1R {
+    cursor: crosshair;
+    height: 20px;
+    position: relative
+}
+
+.hue_qOZw1R>div>div {
+    border-radius: 8px
+}
+
+.customPointer_qOZw1R {
+    align-items: center;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 13.2px 0 rgba(0, 0, 0, .15), 0 1px 2px 0 rgba(0, 0, 0, .05);
+    display: flex;
+    height: 12px;
+    justify-content: center;
+    transform: translate(-8px, -8px);
+    width: 12px
+}
+
+.huePointer_qOZw1R {
+    transform: translate(-8px, 1px)
+}
+
+/*# sourceMappingURL=e985cf0011cf9209.css.map*/

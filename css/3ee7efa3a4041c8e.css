@@ -1,0 +1,114 @@
+.container_GNAYPB {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%
+}
+
+.barRow_GNAYPB {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.progressBar_GNAYPB {
+    flex: 1
+}
+
+.labels_GNAYPB {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.tierIcon_GNAYPB {
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.row_U7i7gh {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.content_U7i7gh {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 8px
+}
+
+.labels_U7i7gh {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 5px;
+    min-height: 16px
+}
+
+.tierIcon_U7i7gh {
+    -o-object-fit: contain;
+    object-fit: contain;
+    padding: 16px
+}
+
+.content_5hwVXB {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center
+}
+
+.progress_5hwVXB {
+    box-sizing: border-box;
+    padding-inline: var(--space-16);
+    padding-inline-end: var(--space-16);
+    padding-bottom: var(--space-16);
+    width: 100%
+}
+
+.messageSection_5hwVXB {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+    text-align: center;
+    width: 100%
+}
+
+.description_5hwVXB {
+    margin: 0 32px
+}
+
+.levelUpBody_5hwVXB {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 24px;
+    text-align: center;
+    width: 100%
+}
+
+.badgeIcon_5hwVXB {
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.levelUpProgress_5hwVXB {
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    margin-top: 12px;
+    padding: 0 48px
+}
+
+.levelUpDescription_5hwVXB {
+    padding: 16px 48px
+}
+
+/*# sourceMappingURL=3ee7efa3a4041c8e.css.map*/

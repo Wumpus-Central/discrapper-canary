@@ -1,6 +1,6 @@
-a.d(n, { D: () => l, d: () => i });
 let i = Object.freeze({
         SWP_CHANNEL_SUMMARIES_DISABLED: "SWP_CHANNEL_SUMMARIES_DISABLED",
         SWP_CHANNEL_MESSAGES_DISABLED: "SWP_CHANNEL_MESSAGES_DISABLED",
     }),
     l = Object.freeze({ SWP_CHANNEL_SUMMARIES_EXCLUDED: 0x1000000, SWP_CHANNEL_MESSAGES_EXCLUDED: 0x2000000 });
+a.d(n, {}, { D: l, d: i });

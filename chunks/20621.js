@@ -1,1 +1,1 @@
-a.exports = { YK: "spacing_a959b1", Nr: "card_a959b1 spacing_a959b1" };
+p.exports = { YK: "spacing_xQw8Aq", Nr: "card_xQw8Aq spacing_xQw8Aq" };

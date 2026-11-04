@@ -1,11 +1,10 @@
-n.d(l, { default: () => I });
 var e = n(477900),
     i = n(582128),
     s = n(503698),
     r = n.n(s),
     a = n(284009),
     d = n.n(a),
-    c = n(17928),
+    c = n(855986),
     o = n(139033),
     u = n(821609),
     x = n(189213),
@@ -23,7 +22,7 @@ var e = n(477900),
     E = n(391442),
     z = n(411342),
     k = n(179499),
-    C = n(105292),
+    C = n(792996),
     P = n(777291);
 function w(t) {
     let { guildProductListing: l, guildId: n, invoicePreview: i } = t,
@@ -105,69 +104,77 @@ function K(t) {
 function O(t) {
     return (0, e.jsx)(m.E, { tag: "span", variant: "body-md/semibold", color: "text-default", children: t });
 }
-function I(t) {
-    let { onClose: l, transitionState: n, guildProductListingId: s, guildId: r, invoicePreview: a } = t,
-        u = (0, c.bG)([p.A], () => p.A.getGuildProduct(s));
-    d()(null != u, "guildProductListing cannot be null");
-    let [g, b] = i.useState(!1);
-    i.useEffect(() => {
-        !(async function () {
-            try {
-                (b(!0), await (0, f.py)(r, s), b(!1));
-            } catch (t) {
-                (l(),
-                    (0, o.A)({
-                        title: C.intl.string(C.t.OCwKlu),
-                        subtitle: C.intl.string(C.t.VQ0lXY),
-                        confirmText: C.intl.string(C.t["NX+WJN"]),
-                    }));
-            }
-        })();
-    }, [r, s, l]);
-    let y = (u.attachments ?? []).length > 0,
-        A = u.role_id,
-        N = (0, c.bG)([v.A], () => (null != A ? v.A.getRole(r, A) : void 0));
-    return (0, e.jsx)(x.a, {
-        title: C.intl.string(C.t.dhAgv3),
-        subtitle: C.intl.format(C.t.X6yvvo, { productName: u.name, emphasisHook: O }),
-        onClose: l,
-        transitionState: n,
-        size: "md",
-        actions: [],
-        children:
-            null == u
-                ? null
-                : g
-                  ? (0, e.jsx)(j.y, {})
-                  : (0, e.jsxs)(e.Fragment, {
-                        children: [
-                            (0, e.jsxs)(m.E, {
-                                variant: "body-md/normal",
-                                color: "text-default",
+n.d(
+    l,
+    {},
+    {
+        default: function (t) {
+            let { onClose: l, transitionState: n, guildProductListingId: s, guildId: r, invoicePreview: a } = t,
+                u = (0, c.bG)([p.A], () => p.A.getGuildProduct(s));
+            d()(null != u, "guildProductListing cannot be null");
+            let [g, b] = i.useState(!1);
+            i.useEffect(() => {
+                !(async function () {
+                    try {
+                        (b(!0), await (0, f.py)(r, s), b(!1));
+                    } catch (t) {
+                        (l(),
+                            (0, o.A)({
+                                title: C.intl.string(C.t.OCwKlu),
+                                subtitle: C.intl.string(C.t.VQ0lXY),
+                                confirmText: C.intl.string(C.t["NX+WJN"]),
+                            }));
+                    }
+                })();
+            }, [r, s, l]);
+            let y = (u.attachments ?? []).length > 0,
+                A = u.role_id,
+                N = (0, c.bG)([v.A], () => (null != A ? v.A.getRole(r, A) : void 0));
+            return (0, e.jsx)(x.a, {
+                title: C.intl.string(C.t.dhAgv3),
+                subtitle: C.intl.format(C.t.X6yvvo, { productName: u.name, emphasisHook: O }),
+                onClose: l,
+                transitionState: n,
+                size: "md",
+                actions: [],
+                children:
+                    null == u
+                        ? null
+                        : g
+                          ? (0, e.jsx)(j.y, {})
+                          : (0, e.jsxs)(e.Fragment, {
                                 children: [
-                                    y ? C.intl.string(C.t["A/RnkK"]) + " " : "",
-                                    null != N ? C.intl.format(C.t.IeJDKs, { roleName: N.name, emphasisHook: O }) : "",
+                                    (0, e.jsxs)(m.E, {
+                                        variant: "body-md/normal",
+                                        color: "text-default",
+                                        children: [
+                                            y ? C.intl.string(C.t["A/RnkK"]) + " " : "",
+                                            null != N
+                                                ? C.intl.format(C.t.IeJDKs, { roleName: N.name, emphasisHook: O })
+                                                : "",
+                                        ],
+                                    }),
+                                    (0, e.jsx)(h.h, { size: 12 }),
+                                    (0, e.jsx)(m.E, {
+                                        variant: "body-md/normal",
+                                        color: "text-default",
+                                        children: C.intl.string(C.t["9S3QHF"]),
+                                    }),
+                                    (0, e.jsx)(h.h, { size: 24 }),
+                                    (0, e.jsx)(w, { guildProductListing: u, guildId: r, invoicePreview: a }),
+                                    (0, e.jsx)(h.h, { size: 32 }),
+                                    (0, e.jsx)("div", { className: P.yF }),
+                                    (0, e.jsx)(h.h, { size: 32 }),
+                                    (0, e.jsxs)("ul", {
+                                        className: P.iq,
+                                        children: [
+                                            (0, e.jsx)(G, { guildProductListing: u, guildId: r }),
+                                            (0, e.jsx)(K, { role: N }),
+                                        ],
+                                    }),
                                 ],
                             }),
-                            (0, e.jsx)(h.h, { size: 12 }),
-                            (0, e.jsx)(m.E, {
-                                variant: "body-md/normal",
-                                color: "text-default",
-                                children: C.intl.string(C.t["9S3QHF"]),
-                            }),
-                            (0, e.jsx)(h.h, { size: 24 }),
-                            (0, e.jsx)(w, { guildProductListing: u, guildId: r, invoicePreview: a }),
-                            (0, e.jsx)(h.h, { size: 32 }),
-                            (0, e.jsx)("div", { className: P.yF }),
-                            (0, e.jsx)(h.h, { size: 32 }),
-                            (0, e.jsxs)("ul", {
-                                className: P.iq,
-                                children: [
-                                    (0, e.jsx)(G, { guildProductListing: u, guildId: r }),
-                                    (0, e.jsx)(K, { role: N }),
-                                ],
-                            }),
-                        ],
-                    }),
-    });
-}
+            });
+        },
+    },
+);

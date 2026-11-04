@@ -1,1 +1,1 @@
-_.exports = { w: "favoriteIcon_c9fddf" };
+e.exports = { w: "favoriteIcon_850pDF" };

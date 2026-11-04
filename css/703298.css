@@ -1,4 +1,4 @@
-.pauseBackground_d70e0d {
+.pauseBackground_rz0czc {
     align-self: center;
     background-color: var(--background-mod-strong);
     border-radius: 50%;
@@ -10,15 +10,12 @@
     width: 16px
 }
 
-.pause_d70e0d {
+.pause_rz0czc {
     align-self: center;
     color: var(--interactive-text-active)
 }
 
-@value popoutBackgroundColor var(--background-surface-highest);
-@value popoutWidth 256px;
-
-.pendingFolderButtonIcon__93fc9 {
+.pendingFolderButtonIcon_zGpE7E {
     align-items: center;
     background-color: var(--background-mod-subtle);
     border-radius: var(--radius-md);
@@ -31,21 +28,21 @@
     width: var(--guildbar-avatar-size)
 }
 
-.pendingFolderButtonIcon__93fc9:hover {
+.pendingFolderButtonIcon_zGpE7E:hover {
     background-color: var(--background-mod-normal)
 }
 
-.container__93fc9 {
+.container_zGpE7E {
     display: flex;
     flex-direction: column
 }
 
-.popoutAnchor__93fc9 {
+.popoutAnchor_zGpE7E {
     align-self: center;
     width: 48px
 }
 
-.popoutContainer__93fc9 {
+.popoutContainer_zGpE7E {
     background: var(--background-surface-highest);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-border), var(--shadow-high);
@@ -55,8 +52,8 @@
     width: 256px
 }
 
-.popoutCaret__93fc9,
-.popoutCaretLeft__93fc9 {
+.popoutCaret_zGpE7E,
+.popoutCaretLeft_zGpE7E {
     border: 6px solid;
     border-color: var(--background-surface-highest);
     bottom: -6px;
@@ -68,26 +65,26 @@
     z-index: 1
 }
 
-.popoutCaretLeft__93fc9 {
+.popoutCaretLeft_zGpE7E {
     inset-inline-start: -6px;
     top: 18px
 }
 
-.popoutContent__93fc9 {
+.popoutContent_zGpE7E {
     box-sizing: border-box;
     padding: 16px;
     width: 256px;
     z-index: 2
 }
 
-.coachmarkTextContainer__93fc9 {
+.coachmarkTextContainer_zGpE7E {
     display: flex;
     flex-direction: column;
     gap: 8px;
     margin-bottom: 16px
 }
 
-.wrapper_ef3116 {
+.wrapper_5dqHTG {
     background-color: var(--background-base-lowest);
     display: flex;
     flex-direction: column;
@@ -100,26 +97,26 @@
     width: var(--custom-guild-list-width)
 }
 
-.wrapper_ef3116.hidden_ef3116 {
+.wrapper_5dqHTG.hidden_5dqHTG {
     visibility: hidden;
     width: 0
 }
 
-.refresh-fast-follow-guild-bg .wrapper_ef3116 {
+.refresh-fast-follow-guild-bg .wrapper_5dqHTG {
     background-color: var(--app-frame-background)
 }
 
 @supports (grid-template-columns:subgrid) and (white-space-collapse:collapse) {
-    .wrapper_ef3116 {
+    .wrapper_5dqHTG {
         grid-area: guildsList
     }
 }
 
-.platform-osx .wrapper_ef3116 {
+.platform-osx .wrapper_5dqHTG {
     margin-top: 0
 }
 
-.tree_ef3116 {
+.tree_5dqHTG {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -127,7 +124,7 @@
     position: relative
 }
 
-.scroller_ef3116 {
+.scroller_5dqHTG {
     flex: 0 1 auto;
     padding-bottom: calc(var(--space-xs, 8px) + 16px) !important;
     padding: 0;
@@ -136,30 +133,30 @@
     user-select: none
 }
 
-.scroller_ef3116>[hidden] {
+.scroller_5dqHTG>[hidden] {
     margin-top: calc(var(--space-xs)*-1);
     visibility: hidden
 }
 
-.scroller_ef3116.scrolling_ef3116>* {
+.scroller_5dqHTG.scrolling_5dqHTG>* {
     pointer-events: none
 }
 
-.scroller_ef3116:has([data-guilds-bar-home] :focus-visible) {
+.scroller_5dqHTG:has([data-guilds-bar-home] :focus-visible) {
     padding-top: 8px !important
 }
 
-.platform-osx .scroller_ef3116,
-.platform-win .scroller_ef3116 {
+.platform-osx .scroller_5dqHTG,
+.platform-win .scroller_5dqHTG {
     padding-top: 4px
 }
 
-.platform-overlay .scroller_ef3116 {
+.platform-overlay .scroller_5dqHTG {
     padding-top: 12px
 }
 
-.unreadMentionsIndicatorBottom_ef3116,
-.unreadMentionsIndicatorTop_ef3116 {
+.unreadMentionsIndicatorBottom_5dqHTG,
+.unreadMentionsIndicatorTop_5dqHTG {
     box-sizing: border-box;
     height: auto;
     inset-inline: 0;
@@ -171,15 +168,15 @@
     z-index: 10
 }
 
-.unreadMentionsIndicatorTop_ef3116 {
+.unreadMentionsIndicatorTop_5dqHTG {
     padding-top: 8px
 }
 
-.unreadMentionsIndicatorBottom_ef3116 {
+.unreadMentionsIndicatorBottom_5dqHTG {
     padding-bottom: calc(var(--space-xs, 8px) + 16px)
 }
 
-.unreadMentionsBar_ef3116:before {
+.unreadMentionsBar_5dqHTG:before {
     position: absolute;
     top: 0;
     inset-inline: -8px;
@@ -187,44 +184,44 @@
     content: ""
 }
 
-.unreadMentionsIndicatorTop_ef3116 {
+.unreadMentionsIndicatorTop_5dqHTG {
     top: 0
 }
 
-.unreadMentionsIndicatorTop_ef3116 .unreadMentionsBar_ef3116:before {
+.unreadMentionsIndicatorTop_5dqHTG .unreadMentionsBar_5dqHTG:before {
     top: -8px
 }
 
-.unreadMentionsIndicatorBottom_ef3116 {
+.unreadMentionsIndicatorBottom_5dqHTG {
     bottom: 0
 }
 
-.unreadMentionsIndicatorBottom_ef3116 .unreadMentionsBar_ef3116:before {
+.unreadMentionsIndicatorBottom_5dqHTG .unreadMentionsBar_5dqHTG:before {
     bottom: -8px
 }
 
-.unreadMentionsFixedFooter_ef3116 {
+.unreadMentionsFixedFooter_5dqHTG {
     bottom: 0
 }
 
-.discoveryIcon_ef3116 {
+.discoveryIcon_5dqHTG {
     color: var(--text-default)
 }
 
-.platform-osx .unreadMentionsIndicatorTop_ef3116 .unreadMentionsBar_ef3116 {
+.platform-osx .unreadMentionsIndicatorTop_5dqHTG .unreadMentionsBar_5dqHTG {
     -webkit-app-region: unset
 }
 
-.custom-theme-background .tree_ef3116 {
+.custom-theme-background .tree_5dqHTG {
     background: var(--background-gradient-app-frame, var(--background-base-lowest))
 }
 
-.bottomRailNotifCenterButton_ef3116 {
+.bottomRailNotifCenterButton_5dqHTG {
     padding-bottom: 12px;
     padding-top: 8px
 }
 
-.bottomRailNotifCenterButton_ef3116:before {
+.bottomRailNotifCenterButton_5dqHTG:before {
     background: linear-gradient(to bottom, transparent, var(--background-base-lowest) 75%, var(--background-base-lowest) 100%);
     content: "";
     height: 16px;
@@ -233,16 +230,16 @@
     width: 100%
 }
 
-.custom-theme-background .bottomRailNotifCenterButton_ef3116 {
+.custom-theme-background .bottomRailNotifCenterButton_5dqHTG {
     padding-top: 12px
 }
 
-.custom-theme-background .bottomRailNotifCenterButton_ef3116:before {
+.custom-theme-background .bottomRailNotifCenterButton_5dqHTG:before {
     display: none
 }
 
-.unreadMentionsFixedFooterBottomNotifCenterEntrypoint_ef3116 {
+.unreadMentionsFixedFooterBottomNotifCenterEntrypoint_5dqHTG {
     bottom: 76px
 }
 
-/*# sourceMappingURL=703298.3a6bc42d000fc604.css.map*/
+/*# sourceMappingURL=703298.26d2f42bc41c6844.css.map*/

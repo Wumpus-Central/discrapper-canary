@@ -1,6 +1,6 @@
 e.exports = {
-    hd: "sectionContainer__04485",
-    WA: "resetButton__04485",
-    yz: "colorSwatchLabel__04485",
-    YX: "sparkleContainer__04485",
+    hd: "sectionContainer__NUg7a",
+    WA: "resetButton__NUg7a",
+    yz: "colorSwatchLabel__NUg7a",
+    YX: "sparkleContainer__NUg7a",
 };

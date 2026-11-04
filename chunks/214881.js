@@ -1,4 +1,4 @@
-(n.d(t, { A: () => m }), n(508300));
+n(508300);
 var r = n(477900),
     l = n(582128),
     a = n(503698),
@@ -11,42 +11,12 @@ var r = n(477900),
     p = n(88686),
     f = n(431939);
 function m(e) {
-    let { nameplate: t, hovered: n, selected: a, content: s, placement: c } = e,
-        o = (0, d._)(s, t, n, a, c),
-        m = (0, i.i)(n, a),
-        I = l.useRef(null == t);
-    return (l.useEffect(() => {
-        I.current || null != t || (I.current = !0);
-    }, [t]),
-    null == t)
-        ? null
-        : (0, r.jsx)("div", {
-              className: u()(f.kL, { [f.qG]: I.current, [f.WB]: c === p.u.ACCOUNT }),
-              style: { background: o.background },
-              "aria-hidden": !0,
-              children: (0, r.jsx)(g, {
-                  nameplate: t,
-                  className: u()(f._8, {
-                      [f.PT]: n,
-                      [f.wH]: a,
-                      [f.ct]: c === p.u.ACCOUNT,
-                      [f.VH]: c === p.u.PREVIEW,
-                      [f.Hh]: c === p.u.MINI_PREVIEW,
-                      [f.Ix]: c === p.u.CHANNEL,
-                  }),
-                  style: { maskImage: o.maskImage },
-                  animate: m,
-                  loop: !0 === m && !0 === n,
-              }),
-          });
-}
-function g(e) {
     let { nameplate: t, className: n, style: l, animate: a, loop: u } = e,
         { staticImageUrl: s, animatedImageUrl: i, videoUrl: d } = (0, o.K)(t),
         { preload: p } = c.A.getConfig({ location: "Nameplate_Asset" });
     if (null == s) return null;
     if (null != d)
-        return (0, r.jsx)(I, {
+        return (0, r.jsx)(g, {
             animatedAsset: d,
             staticAsset: s,
             animate: a,
@@ -56,9 +26,9 @@ function g(e) {
             className: n,
         });
     let f = a && null != i ? i : s;
-    return (0, r.jsx)(E, { asset: f, className: n, style: l });
+    return (0, r.jsx)(I, { asset: f, className: n, style: l });
 }
-function I(e) {
+function g(e) {
     let { staticAsset: t, animatedAsset: n, animate: a, loop: u, preload: c, className: i, style: o } = e,
         d = l.useRef(null);
     return (
@@ -87,7 +57,43 @@ function I(e) {
         })
     );
 }
-function E(e) {
+function I(e) {
     let { asset: t, className: n, style: l } = e;
     return (0, r.jsx)("img", { src: t, className: n, style: l, alt: "" });
 }
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { nameplate: t, hovered: n, selected: a, content: s, placement: c } = e,
+                o = (0, d._)(s, t, n, a, c),
+                g = (0, i.i)(n, a),
+                I = l.useRef(null == t);
+            return (l.useEffect(() => {
+                I.current || null != t || (I.current = !0);
+            }, [t]),
+            null == t)
+                ? null
+                : (0, r.jsx)("div", {
+                      className: u()(f.kL, { [f.qG]: I.current, [f.WB]: c === p.u.ACCOUNT }),
+                      style: { background: o.background },
+                      "aria-hidden": !0,
+                      children: (0, r.jsx)(m, {
+                          nameplate: t,
+                          className: u()(f._8, {
+                              [f.PT]: n,
+                              [f.wH]: a,
+                              [f.ct]: c === p.u.ACCOUNT,
+                              [f.VH]: c === p.u.PREVIEW,
+                              [f.Hh]: c === p.u.MINI_PREVIEW,
+                              [f.Ix]: c === p.u.CHANNEL,
+                          }),
+                          style: { maskImage: o.maskImage },
+                          animate: g,
+                          loop: !0 === g && !0 === n,
+                      }),
+                  });
+        },
+    },
+);

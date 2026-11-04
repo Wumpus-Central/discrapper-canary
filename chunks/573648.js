@@ -1,4 +1,3 @@
-n.d(t, { A: () => _ });
 var i = n(435558),
     r = n.n(i),
     a = n(374994),
@@ -59,7 +58,7 @@ let d = [
             },
             enabled: !0,
             migrationData: {
-                replacedBy: o.ApplicationIdentityAppIds.BATTLENET,
+                replacedBy: o.Wy.BATTLENET,
                 helpCenterLink: "https://discord.com/blog/link-world-of-warcraft-with-discord",
                 deprecationDate: new Date("2026-09-22Z-07:00"),
             },
@@ -125,11 +124,11 @@ let d = [
                 whitePNG: n(801294),
                 lightSVG: n(604199),
                 darkSVG: n(604199),
-                whiteSVG: n(415369),
+                whiteSVG: n(637750),
             },
             enabled: !0,
             migrationData: {
-                replacedBy: o.ApplicationIdentityAppIds.RIOT_GAMES,
+                replacedBy: o.Wy.RIOT_GAMES,
                 helpCenterLink: "https://www.riotgames.com/en/riot-games-discord-account-linking",
                 deprecationDate: new Date("2026-07-10Z-07:00"),
             },
@@ -349,7 +348,7 @@ let d = [
             },
             enabled: !0,
             migrationData: {
-                replacedBy: o.ApplicationIdentityAppIds.RIOT_GAMES,
+                replacedBy: o.Wy.RIOT_GAMES,
                 helpCenterLink: "https://www.riotgames.com/en/riot-games-discord-account-linking",
                 deprecationDate: new Date("2026-07-10Z-07:00"),
             },
@@ -538,31 +537,37 @@ let d = [
     ],
     c = r().keyBy(d, "type"),
     u = {};
-d.forEach((e) => {
+(d.forEach((e) => {
     e.domains?.forEach((t) => {
         u[t] = e;
     });
-});
-let _ = {
-    get: (e) => c[e] ?? null,
-    getByUrl(e) {
-        let t = s.A.toURLSafe(e);
-        if (null == t) return;
-        let n = t.hostname;
-        return u[n.startsWith("www.") ? n.slice(4) : n];
-    },
-    isSupported: (e) => Object.prototype.hasOwnProperty.call(c, e),
-    map: (e) => d.map(e),
-    filter(e) {
-        let t = d.filter(e);
-        return (
-            t.sort((e, t) => {
-                let { name: n } = e,
-                    { name: i } = t;
-                return n.localeCompare(i);
-            }),
-            t
-        );
-    },
-    find: (e) => d.find(e),
-};
+}),
+    n.d(
+        t,
+        {},
+        {
+            A: {
+                get: (e) => c[e] ?? null,
+                getByUrl(e) {
+                    let t = s.A.toURLSafe(e);
+                    if (null == t) return;
+                    let n = t.hostname;
+                    return u[n.startsWith("www.") ? n.slice(4) : n];
+                },
+                isSupported: (e) => Object.prototype.hasOwnProperty.call(c, e),
+                map: (e) => d.map(e),
+                filter(e) {
+                    let t = d.filter(e);
+                    return (
+                        t.sort((e, t) => {
+                            let { name: n } = e,
+                                { name: i } = t;
+                            return n.localeCompare(i);
+                        }),
+                        t
+                    );
+                },
+                find: (e) => d.find(e),
+            },
+        },
+    ));

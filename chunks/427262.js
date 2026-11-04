@@ -1,20 +1,8 @@
-n.d(t, {
-    $3: () => u,
-    Ay: () => N,
-    G2: () => I,
-    Gn: () => S,
-    MU: () => h,
-    QV: () => T,
-    R1: () => g,
-    mG: () => _,
-    mv: () => p,
-    tx: () => E,
-});
-var i = n(17928),
+var i = n(855986),
     r = n(351906),
     a = n(287809),
     s = n(652215),
-    l = n(105292);
+    l = n(792996);
 function o(e) {
     return `${e[0]}\u{2026}`;
 }
@@ -72,61 +60,74 @@ function f(e, t) {
     let r = Date.now() - e.createdAt.getTime();
     return (null == n || !!(r <= 864e5 * n)) && !!(r >= 864e5 * i);
 }
-function I(e) {
-    return !f(e, { minDaysOld: 0, maxDaysOld: 30 });
-}
-function p(e) {
-    return f(e, { minDaysOld: 0, maxDaysOld: 7 });
-}
-function m(e, t, n) {
+function I(e, t, n) {
     if (null == e) return l.intl.string(l.t.sKdZ6U);
     if (!c(e.username)) return "???";
     let i = n;
     if (
         ("always" === t.identifiable ? (i = !1) : "never" === t.identifiable && (i = !0),
-        "0" !== e.discriminator && e.discriminator !== s.h3J)
+        "0" !== e.discriminator && "0000" !== e.discriminator)
     )
         return "username" === t.mode || i ? e.username : `${e.username}#${e.discriminator}`;
     let r = i ? o(e.username) : e.username;
     return "never" !== t.decoration ? `@${r}` : r;
 }
-function T(e, t) {
+function p(e, t) {
     let n = { ...d, ...t },
         i = "auto" !== n.identifiable || r.A.hidePersonalInformation;
-    return m(e, n, i);
+    return I(e, n, i);
 }
-function g(e) {
+function m(e) {
     return (0, i.bG)([a.default], () => {
         if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null;
     });
 }
-function S() {
+function T() {
     let e = a.default.getCurrentUser();
     return null != e && e.isStaff();
 }
-let N = {
-    getName: _,
-    useName: E,
-    isNameConcealed: function (e) {
-        return 2 === e.length && e.endsWith("\u2026");
+n.d(
+    t,
+    {},
+    {
+        $3: u,
+        Ay: {
+            getName: _,
+            useName: E,
+            isNameConcealed: function (e) {
+                return 2 === e.length && e.endsWith("\u2026");
+            },
+            getUserTag: p,
+            useUserTag: function (e, t) {
+                return I(
+                    e,
+                    { ...d, ...t },
+                    (0, i.bG)([r.A], () => r.A.hidePersonalInformation),
+                );
+            },
+            getUserIsStaff: T,
+            getFormattedName: function (e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                if (null == e) return "???";
+                let n = A(e),
+                    i = t ? p(e) : (e.username ?? "???");
+                return n === i ? n : null != n ? `${n} (${i})` : i;
+            },
+            getGlobalName: A,
+            humanizeStatus: h,
+            useDirectMessageRecipient: m,
+        },
+        G2: function (e) {
+            return !f(e, { minDaysOld: 0, maxDaysOld: 30 });
+        },
+        Gn: T,
+        MU: h,
+        QV: p,
+        R1: m,
+        mG: _,
+        mv: function (e) {
+            return f(e, { minDaysOld: 0, maxDaysOld: 7 });
+        },
+        tx: E,
     },
-    getUserTag: T,
-    useUserTag: function (e, t) {
-        return m(
-            e,
-            { ...d, ...t },
-            (0, i.bG)([r.A], () => r.A.hidePersonalInformation),
-        );
-    },
-    getUserIsStaff: S,
-    getFormattedName: function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (null == e) return "???";
-        let n = A(e),
-            i = t ? T(e) : (e.username ?? "???");
-        return n === i ? n : null != n ? `${n} (${i})` : i;
-    },
-    getGlobalName: A,
-    humanizeStatus: h,
-    useDirectMessageRecipient: g,
-};
+);

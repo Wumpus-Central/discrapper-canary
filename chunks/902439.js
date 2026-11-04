@@ -1,6 +1,11 @@
-u.d(t, { A: () => r });
-var n = u(17928),
+var n = u(855986),
     d = u(933958);
-function r() {
-    return (0, n.bG)([d.Ay], () => d.Ay.getCurrentEmbeddedActivity());
-}
+u.d(
+    t,
+    {},
+    {
+        A: function () {
+            return (0, n.bG)([d.Ay], () => d.Ay.getCurrentEmbeddedActivity());
+        },
+    },
+);

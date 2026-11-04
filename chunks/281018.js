@@ -1,5 +1,4 @@
-n.d(t, { A: () => _, n: () => p });
-var l = n(17928),
+var l = n(855986),
     i = n(311043),
     r = n(454908),
     a = n(287809),
@@ -13,28 +12,35 @@ let m = [],
 function p(e, t) {
     return (0, o.T_)(e) && !(0, s.b)(e, t) && (0, d.zu)(e);
 }
-function _(e) {
-    let t = null != e && !c.b.has(e),
-        { data: n, isLoading: d, error: s } = (0, u.$M)(e, t),
-        o = t && null != n ? n : m;
-    (0, r.x)(o);
-    let _ = (0, l.bG)(
-            [i.A],
-            () => o.some((e) => null == i.A.getGame(e) && !i.A.hasNoData(e) && !i.A.didFetchingFail(e)),
-            [o],
-        ),
-        f = (0, l.yK)(
-            [i.A, a.default],
-            () => {
-                let e = a.default.getCurrentUser()?.nsfwAllowed;
-                return o
-                    .map((e) => i.A.getGame(e))
-                    .filter((e) => null != e)
-                    .filter((t) => p(t, e));
-            },
-            [o],
-        );
-    return t
-        ? { isFetching: (null == s && null == n) || d || _, similarGames: f }
-        : { isFetching: !1, similarGames: h };
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let t = null != e && !c.b.has(e),
+                { data: n, isLoading: d, error: s } = (0, u.$M)(e, t),
+                o = t && null != n ? n : m;
+            (0, r.x)(o);
+            let _ = (0, l.bG)(
+                    [i.A],
+                    () => o.some((e) => null == i.A.getGame(e) && !i.A.hasNoData(e) && !i.A.didFetchingFail(e)),
+                    [o],
+                ),
+                f = (0, l.yK)(
+                    [i.A, a.default],
+                    () => {
+                        let e = a.default.getCurrentUser()?.nsfwAllowed;
+                        return o
+                            .map((e) => i.A.getGame(e))
+                            .filter((e) => null != e)
+                            .filter((t) => p(t, e));
+                    },
+                    [o],
+                );
+            return t
+                ? { isFetching: (null == s && null == n) || d || _, similarGames: f }
+                : { isFetching: !1, similarGames: h };
+        },
+        n: p,
+    },
+);

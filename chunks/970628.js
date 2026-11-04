@@ -1,1 +1,1 @@
-p.exports = { n: "panel__777bf", k: "container__777bf" };
+p.exports = { n: "panel_dPFDYI", k: "container_dPFDYI" };

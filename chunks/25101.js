@@ -1,7 +1,7 @@
 e.exports = {
-    kL: "container_a08a9d",
-    Nr: "card_a08a9d",
-    Qs: "content_a08a9d",
-    qq: "emojiContainer_a08a9d",
-    qS: "statusText_a08a9d",
+    kL: "container_9-OcBK",
+    Nr: "card_9-OcBK",
+    Qs: "content_9-OcBK",
+    qq: "emojiContainer_9-OcBK",
+    qS: "statusText_9-OcBK",
 };

@@ -1,9 +1,9 @@
-_.exports = {
-    qB: "progress_f81261",
-    PM: "step_f81261",
-    Om: "dot_f81261",
-    vk: "clickable_f81261",
-    hZ: "unlockedDot_f81261",
-    RQ: "unlockedIcon_f81261",
-    CD: "unlockedStep_f81261",
+t.exports = {
+    qB: "progress_Csz0CI",
+    PM: "step_Csz0CI",
+    Om: "dot_Csz0CI",
+    vk: "clickable_Csz0CI",
+    hZ: "unlockedDot_Csz0CI",
+    RQ: "unlockedIcon_Csz0CI",
+    CD: "unlockedStep_Csz0CI",
 };

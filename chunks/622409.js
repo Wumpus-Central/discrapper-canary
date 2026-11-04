@@ -1,8 +1,8 @@
 e.exports = {
-    oU: "embedSections_b5ecb2",
-    wu: "embedHelper_b5ecb2",
-    cy: "helperText_b5ecb2",
-    Lj: "embedWrapper_b5ecb2",
-    zx: "embedSection_b5ecb2",
-    n0: "questsEmbed_b5ecb2",
+    oU: "embedSections_3yYzAt",
+    wu: "embedHelper_3yYzAt",
+    cy: "helperText_3yYzAt",
+    Lj: "embedWrapper_3yYzAt",
+    zx: "embedSection_3yYzAt",
+    n0: "questsEmbed_3yYzAt",
 };

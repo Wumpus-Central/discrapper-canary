@@ -1,2 +1,1 @@
-n.d(t, { P: () => i });
-let i = "hide_icymi_tab";
+n.d(t, {}, { P: "hide_icymi_tab" });

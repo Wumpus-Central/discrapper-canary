@@ -1,0 +1,111 @@
+.perkCard_ua3BFY {
+    align-items: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-8);
+    width: 220px
+}
+
+.perkCard_ua3BFY:hover:not(.disabled_ua3BFY) {
+    background: var(--interactive-background-hover);
+    border-radius: calc(var(--radius-sm) + var(--space-8));
+    cursor: pointer
+}
+
+.perkCard_ua3BFY.disabled_ua3BFY:hover {
+    cursor: not-allowed
+}
+
+.activeCard_ua3BFY:hover {
+    cursor: default
+}
+
+.perkCardImage_ua3BFY {
+    align-items: center;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    display: flex;
+    height: 140px;
+    justify-content: center;
+    margin-bottom: var(--space-8);
+    padding: var(--space-16);
+    width: 204px
+}
+
+.perkCardImage_ua3BFY.active_ua3BFY {
+    background: var(--background-mod-subtle);
+    border-color: hsla(var(--green-360-hsl)/.35)
+}
+
+.toggleButton_ua3BFY {
+    opacity: 0;
+    pointer-events: none
+}
+
+.perkCard_ua3BFY:focus-within .toggleButton_ua3BFY,
+.perkCard_ua3BFY:hover .toggleButton_ua3BFY {
+    opacity: 1;
+    pointer-events: auto
+}
+
+.perkCard_ua3BFY:hover:not(.disabled_ua3BFY) .perkCardImage_ua3BFY:not(.active_ua3BFY) {
+    background: var(--interactive-background-hover);
+    border-color: var(--border-normal)
+}
+
+.perkCard_ua3BFY.disabled_ua3BFY .perkCardImage_ua3BFY img {
+    opacity: .3
+}
+
+.theme-light .perkCardImage_ua3BFY.active_ua3BFY {
+    border-color: hsla(var(--green-400-hsl)/.35)
+}
+
+.footerContainer_ua3BFY {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+.footerDetails_ua3BFY {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%
+}
+
+.statusContainer_ua3BFY {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    justify-content: flex-start
+}
+
+.perkCardImageContainer_ua3BFY {
+    position: relative
+}
+
+.badge_ua3BFY {
+    display: flex;
+    inset-inline-end: var(--space-8);
+    position: absolute;
+    top: var(--space-8)
+}
+
+.perkCardsContainer_3DtxSY {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+    margin-inline: calc(var(--space-8)*-1)
+}
+
+.footerInfoContainer_3DtxSY {
+    max-width: 220px
+}
+
+/*# sourceMappingURL=79d0bdc1adc50c2d.css.map*/

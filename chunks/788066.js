@@ -1,1 +1,1 @@
-e.exports = { MK: "menu__43313", Eq: "customMenuItem__43313", CO: "customNotches__43313" };
+t.exports = { MK: "menu_7ppJp2", Eq: "customMenuItem_7ppJp2", CO: "customNotches_7ppJp2" };

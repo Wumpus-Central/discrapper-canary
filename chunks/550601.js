@@ -1,4 +1,3 @@
-n.d(t, { D: () => c });
 var r = n(326447),
     i = n(688331),
     o = n(272469),
@@ -124,3 +123,4 @@ function u(e) {
         return (r.T && o.vF.error(`Cannot extract url for event ${(0, a.$X)(e)}`), null);
     }
 }
+n.d(t, {}, { D: c });

@@ -1,8 +1,8 @@
-_.exports = {
-    vK: "banner_dd6b5e",
-    nw: "bannerInfo_dd6b5e",
-    q3: "bannerIcon_dd6b5e",
-    Tm: "bannerDetails_dd6b5e",
-    xv: "subtitleRow_dd6b5e",
-    nE: "nitroWheelIcon_dd6b5e",
+e.exports = {
+    vK: "banner_tWF9s9",
+    nw: "bannerInfo_tWF9s9",
+    q3: "bannerIcon_tWF9s9",
+    Tm: "bannerDetails_tWF9s9",
+    xv: "subtitleRow_tWF9s9",
+    nE: "nitroWheelIcon_tWF9s9",
 };

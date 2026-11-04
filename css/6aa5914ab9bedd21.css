@@ -1,0 +1,28 @@
+.wrapper_7EwAPl {
+    align-items: center;
+    background-color: var(--background-base-low);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+.textContainer_7EwAPl {
+    box-sizing: border-box;
+    margin-inline: auto;
+    max-width: 800px;
+    width: 100%;
+    z-index: 1
+}
+
+.heading_7EwAPl {
+    text-wrap: balance
+}
+
+.heading_7EwAPl,
+.text_7EwAPl {
+    text-align: center
+}
+
+/*# sourceMappingURL=6aa5914ab9bedd21.css.map*/

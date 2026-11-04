@@ -1,12 +1,12 @@
-(n.d(t, { O: () => r }), n(321073));
+n(321073);
 var h = n(582128),
     s = n(435558),
     i = n.n(s),
-    l = n(17928),
+    l = n(855986),
     a = n(451988),
     p = n(627363),
     c = n(587895);
-class d {
+let d = new (class {
     _lastFetchedAttempted = new Map();
     _pending = new Set();
     _flushHandler = new a.J_(32, () => this._flush());
@@ -39,13 +39,18 @@ class d {
                         p.Ay.fetchApplications(e, !0);
                     }));
     }
-}
-let u = new d();
-function r(e) {
-    return (
-        h.useEffect(() => {
-            null != e && "" !== e && u.request(e);
-        }, [e]),
-        (0, l.bG)([c.A], () => (null != e && "" !== e ? c.A.getApplication(e) : null), [e])
-    );
-}
+})();
+n.d(
+    t,
+    {},
+    {
+        O: function (e) {
+            return (
+                h.useEffect(() => {
+                    null != e && "" !== e && d.request(e);
+                }, [e]),
+                (0, l.bG)([c.A], () => (null != e && "" !== e ? c.A.getApplication(e) : null), [e])
+            );
+        },
+    },
+);

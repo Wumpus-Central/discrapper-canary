@@ -1,5 +1,4 @@
 let n;
-r.d(t, { e: () => u, h: () => c });
 var i = r(679314);
 let o =
     ((n = new DataView(new ArrayBuffer(8))),
@@ -130,4 +129,4 @@ class c extends l {
         return (a(o), o.V.setInt32(0, this.lo, !0), o.V.setInt32(4, this.hi, !0), o.V.getBigInt64(0, !0));
     }
 }
-c.ZERO = new c(0, 0);
+((c.ZERO = new c(0, 0)), r.d(t, {}, { e: u, h: c }));

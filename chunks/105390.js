@@ -1,4 +1,3 @@
-i.d(e, { Ag: () => S, MA: () => C, fY: () => A });
 var r = i(477900),
     n = i(582128),
     o = i(503698),
@@ -6,16 +5,16 @@ var r = i(477900),
     a = i(406810),
     s = i(834730),
     u = i(866665),
-    d = i(62010),
+    d = i(805251),
     c = i(496431),
-    p = i(58703),
-    m = i(24482),
+    p = i(5377),
+    m = i(879610),
     g = i(236056),
     h = i(872725),
-    T = i(732280),
+    T = i(77528),
     f = i(99462),
-    x = i(202541),
-    b = i(105292),
+    x = i(682901),
+    b = i(792996),
     v = i(432458);
 function y(t) {
     let {
@@ -46,37 +45,6 @@ function y(t) {
           });
 }
 function S(t) {
-    let { isTabSelected: e, trialOffer: i, badgeStyle: n } = t,
-        o = (0, T.V)()?.subscriptionTrial,
-        l = (0, m.tS)({ intervalType: o?.interval, intervalCount: o?.intervalCount }),
-        a = i.trialId === x.Tt,
-        s = (0, f.Fu)(i);
-    return (0, r.jsx)(C, {
-        isTabSelected: e,
-        badgeCopy: l,
-        offerExpiresAt: i.expiresAt?.toISOString() ?? null,
-        tooltipTextOverride: s,
-        tooltipPosition: "right",
-        hideTooltip: a,
-        badgeStyle: n,
-    });
-}
-function A(t) {
-    let { isTabSelected: e, userDiscount: i, includesAmountOff: n, badgeStyle: o } = t,
-        l = b.intl.formatToPlainString(b.t.iiLbvu, { percent: i.discount.amount }),
-        a = n ? l : b.intl.string(b.t["/DTtr6"]),
-        s = i.expiresAt?.toISOString() ?? null,
-        u = (0, f.__)(i);
-    return (0, r.jsx)(C, {
-        isTabSelected: e,
-        badgeCopy: a,
-        offerExpiresAt: s,
-        tooltipTextOverride: u,
-        tooltipPosition: "right",
-        badgeStyle: o,
-    });
-}
-function C(t) {
     let {
         isTabSelected: e,
         badgeCopy: i,
@@ -110,3 +78,41 @@ function C(t) {
                 children: (0, r.jsx)(s.E, { variant: "body-xs/semibold", className: v.md, children: i }),
             });
 }
+i.d(
+    e,
+    {},
+    {
+        Ag: function (t) {
+            let { isTabSelected: e, trialOffer: i, badgeStyle: n } = t,
+                o = (0, T.V)()?.subscriptionTrial,
+                l = (0, m.tS)({ intervalType: o?.interval, intervalCount: o?.intervalCount }),
+                a = i.trialId === x.Tt,
+                s = (0, f.Fu)(i);
+            return (0, r.jsx)(S, {
+                isTabSelected: e,
+                badgeCopy: l,
+                offerExpiresAt: i.expiresAt?.toISOString() ?? null,
+                tooltipTextOverride: s,
+                tooltipPosition: "right",
+                hideTooltip: a,
+                badgeStyle: n,
+            });
+        },
+        MA: S,
+        fY: function (t) {
+            let { isTabSelected: e, userDiscount: i, includesAmountOff: n, badgeStyle: o } = t,
+                l = b.intl.formatToPlainString(b.t.iiLbvu, { percent: i.discount.amount }),
+                a = n ? l : b.intl.string(b.t["/DTtr6"]),
+                s = i.expiresAt?.toISOString() ?? null,
+                u = (0, f.__)(i);
+            return (0, r.jsx)(S, {
+                isTabSelected: e,
+                badgeCopy: a,
+                offerExpiresAt: s,
+                tooltipTextOverride: u,
+                tooltipPosition: "right",
+                badgeStyle: o,
+            });
+        },
+    },
+);

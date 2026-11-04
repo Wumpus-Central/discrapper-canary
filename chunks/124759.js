@@ -1,22 +1,7 @@
-A.d(S, {
-    SP: () => I,
-    Vi: () => B,
-    bK: () => i,
-    dH: () => e,
-    dR: () => R,
-    e$: () => x,
-    hs: () => s,
-    pj: () => G,
-    wX: () => _,
-});
 var c,
     M = A(136722),
     N = A(652215);
-let _ = "publicSuccessModalSeen",
-    B = "667560445975986187",
-    s = "669627189624307712",
-    I = "1",
-    R = [
+let _ = [
         N.xBc.ADMINISTRATOR,
         N.xBc.KICK_MEMBERS,
         N.xBc.BAN_MEMBERS,
@@ -32,13 +17,24 @@ let _ = "publicSuccessModalSeen",
         N.xBc.MENTION_EVERYONE,
         N.xBc.MANAGE_OFFICIAL_MESSAGES,
     ],
-    x = M.kg(...R),
-    e = 1e3,
-    i = "Enable Community Modal";
-var G =
+    B = M.kg(..._);
+var s =
     (((c = {}).INTRO = "intro"),
     (c.SAFETY_CHECK = "safety_check"),
     (c.BASICS = "basics"),
     (c.FINISH = "finish"),
     (c.RULES = "rules"),
     c);
+A.d(
+    S,
+    {},
+    {
+        Vi: "667560445975986187",
+        bK: "Enable Community Modal",
+        dR: _,
+        e$: B,
+        hs: "669627189624307712",
+        pj: s,
+        wX: "publicSuccessModalSeen",
+    },
+);

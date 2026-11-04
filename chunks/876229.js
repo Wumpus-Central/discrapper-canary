@@ -1,4 +1,3 @@
-d.d(t, { i: () => c, n: () => n, r: () => a, t: () => s });
 var i = d(522681),
     e = d(693160),
     c = class extends i.n {
@@ -167,25 +166,31 @@ var i = d(522681),
                 (this.originalCapturedCanvas = null));
         }
     };
-let a = {
-        blurThreshold: 0.2,
-        blurChangeThreshold: 0.2,
-        glareThreshold: 0.3,
-        clsThreshold: 0.98,
-        sideThreshold: 0.8,
-        iouThreshold: 0.8,
-        idDetectedTimeout: 1e4,
-        autocaptureTimeout: 5e3,
-        framesAggregationInterval: 3e3,
+d.d(
+    t,
+    {},
+    {
+        i: c,
+        r: {
+            blurThreshold: 0.2,
+            blurChangeThreshold: 0.2,
+            glareThreshold: 0.3,
+            clsThreshold: 0.98,
+            sideThreshold: 0.8,
+            iouThreshold: 0.8,
+            idDetectedTimeout: 1e4,
+            autocaptureTimeout: 5e3,
+            framesAggregationInterval: 3e3,
+        },
+        t: {
+            areaDown: 25e3,
+            areaUp: 55e3,
+            areaIOSPassportUp: 3e4,
+            areaIOSPassportDown: 2e4,
+            widthIOSUp: 160,
+            widthIOSDown: 85,
+            widthDown: 110,
+            widthUp: 205,
+        },
     },
-    s = {
-        areaDown: 25e3,
-        areaUp: 55e3,
-        areaIOSPassportUp: 3e4,
-        areaIOSPassportDown: 2e4,
-        widthIOSUp: 160,
-        widthIOSDown: 85,
-        widthDown: 110,
-        widthUp: 205,
-    },
-    n = "v2";
+);

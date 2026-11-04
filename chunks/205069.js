@@ -1,1 +1,1 @@
-s.exports = { W: "settings__47679" };
+s.exports = { W: "settings_TTKQqP" };

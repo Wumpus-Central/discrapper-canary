@@ -1,4 +1,3 @@
-n.d(t, { t: () => r });
 var i,
     r =
         (((i = {})[(i.NONE = 0)] = "NONE"),
@@ -13,3 +12,4 @@ var i,
         (i[(i.JOIN_DISCOVERABLE_SERVER = 256)] = "JOIN_DISCOVERABLE_SERVER"),
         (i[(i.NOTICE = 512)] = "NOTICE"),
         i);
+n.d(t, {}, { t: r });

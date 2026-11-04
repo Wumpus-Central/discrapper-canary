@@ -1,0 +1,41 @@
+.content_QYgmpy {
+    gap: 16px
+}
+
+.content_QYgmpy,
+.radioGroup_QYgmpy {
+    display: flex;
+    flex-direction: column;
+    text-align: start
+}
+
+.radioGroup_QYgmpy {
+    gap: 8px;
+    margin-top: 8px
+}
+
+.gameIcon_QYgmpy {
+    border-radius: 4px;
+    flex-shrink: 0;
+    height: 24px;
+    width: 24px
+}
+
+.detectedGameFrame_QYgmpy {
+    align-items: center;
+    background: hsla(0, 0%, 100%, .04);
+    border-radius: 8px;
+    display: flex;
+    gap: 12px;
+    margin: 8px 0;
+    padding: 12px
+}
+
+.detectedGameIcon_QYgmpy {
+    border-radius: 8px;
+    flex-shrink: 0;
+    height: 48px;
+    width: 48px
+}
+
+/*# sourceMappingURL=5ec307a647e200ec.css.map*/

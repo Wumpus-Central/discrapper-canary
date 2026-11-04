@@ -1,4 +1,3 @@
-n.d(t, { AG: () => _, G$: () => l, ZT: () => u, lT: () => c, uD: () => o, vf: () => s, z1: () => d });
 var i = n(945810),
     r = n(723702);
 let a = (0, i.mj)({
@@ -31,32 +30,36 @@ let a = (0, i.mj)({
         },
     },
 });
-function s(e) {
-    return a.getConfig({ location: e });
-}
-function l(e) {
-    return (0, r.isDesktop)() && (0, r.isWindows)() && a.getConfig({ location: e }).fullscreenPopupOcclusion;
-}
-function o() {
-    return (
-        (0, r.isDesktop)() &&
-        (0, r.isWindows)() &&
-        a.getConfig({ location: "system_metrics_sample" }).nativeSystemCpuTimes
-    );
-}
-function d() {
-    return (
-        (0, r.isDesktop)() &&
-        (0, r.isWindows)() &&
-        a.getConfig({ location: "avatar_speaking_styles" }).overlayOnlyAnimatesItself
-    );
-}
-function c() {
-    return (0, r.isDesktop)() && a.getConfig({ location: "overlay_voice_user" }).overlayHiddenWavePaused;
-}
-function u(e) {
-    return (0, r.isDesktop)() && (0, r.isWindows)() && a.getConfig({ location: e }).renderOverlayWhileMinimized;
-}
-function _() {
-    return (0, r.isDesktop)() && a.getConfig({ location: "icon_cropping_utils" }).notificationIconCpuCanvas;
-}
+n.d(
+    t,
+    {},
+    {
+        AG: function () {
+            return (0, r.xl)() && a.getConfig({ location: "icon_cropping_utils" }).notificationIconCpuCanvas;
+        },
+        G$: function (e) {
+            return (0, r.xl)() && (0, r.uF)() && a.getConfig({ location: e }).fullscreenPopupOcclusion;
+        },
+        ZT: function (e) {
+            return (0, r.xl)() && (0, r.uF)() && a.getConfig({ location: e }).renderOverlayWhileMinimized;
+        },
+        lT: function () {
+            return (0, r.xl)() && a.getConfig({ location: "overlay_voice_user" }).overlayHiddenWavePaused;
+        },
+        uD: function () {
+            return (
+                (0, r.xl)() && (0, r.uF)() && a.getConfig({ location: "system_metrics_sample" }).nativeSystemCpuTimes
+            );
+        },
+        vf: function (e) {
+            return a.getConfig({ location: e });
+        },
+        z1: function () {
+            return (
+                (0, r.xl)() &&
+                (0, r.uF)() &&
+                a.getConfig({ location: "avatar_speaking_styles" }).overlayOnlyAnimatesItself
+            );
+        },
+    },
+);

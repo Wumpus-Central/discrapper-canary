@@ -43,7 +43,7 @@ function l(e, t) {
         this.color = f(g);
     }
     if (c[this.model])
-        for (r = 0, u = n[this.model].channels; r < u; r++) {
+        for (u = n[this.model].channels, r = 0; r < u; r++) {
             var m = c[this.model][r];
             m && (this.color[r] = m(this.color[r]));
         }

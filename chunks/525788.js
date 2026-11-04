@@ -1,14 +1,13 @@
-n.d(t, { A: () => w });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
     l = n(435558),
     o = n.n(l),
-    d = n(17928),
+    d = n(855986),
     c = n(451988),
     u = n(305866),
-    _ = n(689175),
+    _ = n(516521),
     E = n(534514),
     A = n(866665),
     h = n(39623),
@@ -25,7 +24,7 @@ var i = n(477900),
     R = n(562153),
     L = n(806931),
     y = n(652215),
-    D = n(105292),
+    D = n(792996),
     b = n(552244);
 function v(e, t) {
     switch (e) {
@@ -98,138 +97,148 @@ function M(e) {
     });
 }
 let U = [];
-function w(e) {
-    let {
-            channelId: t,
-            guildId: a,
-            participant: l,
-            className: u,
-            compact: _ = !1,
-            disableInteraction: E = !1,
-            maxVisibleUsers: A = 3,
-        } = e,
-        h = r.useRef(null),
-        S = (0, g.A)(),
-        [R, D] = r.useState(!1),
-        v = r.useRef(new c.J_(150, () => D(!1))),
-        w = (0, d.yK)(
-            [N.A, C.default],
-            () => {
-                if (l.type === L.lp.STREAM) {
-                    let e = N.A.getViewerIds(l.id);
-                    return e.length > 0 ? e.map((e) => C.default.getUser(e)).filter(O.Vq) : U;
-                }
-                return l.type === L.lp.ACTIVITY && l.participants.length > 0
-                    ? Array.from(l.participants)
-                          .map((e) => C.default.getUser(e.userId))
-                          .filter(O.Vq)
-                    : U;
-            },
-            [l],
-        );
-    r.useEffect(() => {
-        S && (v.current.cancel(), D(!1));
-    }, [S]);
-    let G = r.useCallback(() => {
-            (v.current.cancel(), D(!0));
-        }, []),
-        x = r.useCallback(() => {
-            v.current.delay();
-        }, []),
-        k = r.useCallback(
-            (e, t) => {
-                (G(),
-                    (0, m.L3)(
-                        e,
-                        async () => {
-                            let { default: e } = await Promise.all([
-                                n.e("321735"),
-                                n.e("790484"),
-                                n.e("463317"),
-                                n.e("834552"),
-                                n.e("708757"),
-                                n.e("585968"),
-                                n.e("893190"),
-                                n.e("776273"),
-                                n.e("253729"),
-                                n.e("189673"),
-                                n.e("234236"),
-                                n.e("882073"),
-                                n.e("797558"),
-                                n.e("638221"),
-                                n.e("691994"),
-                                n.e("229787"),
-                                n.e("936320"),
-                                n.e("576665"),
-                                n.e("624198"),
-                                n.e("715038"),
-                                n.e("33611"),
-                                n.e("190889"),
-                                n.e("242204"),
-                                n.e("856753"),
-                                n.e("61129"),
-                                n.e("205941"),
-                                n.e("331203"),
-                                n.e("255302"),
-                                n.e("349644"),
-                                n.e("172883"),
-                                n.e("825486"),
-                                n.e("920628"),
-                                n.e("873786"),
-                                n.e("532418"),
-                                n.e("299086"),
-                            ]).then(n.bind(n, 668569));
-                            return (n) => (0, i.jsx)(e, { ...n, user: t });
-                        },
-                        { onClose: x },
-                    ));
-            },
-            [x, G],
-        );
-    if (0 === w.length) return null;
-    if (_)
-        return (0, i.jsx)(M, {
-            maxVisibleUsers: A,
-            users: w,
-            guildId: a,
-            channelId: t,
-            className: u,
-            participantType: l.type,
-        });
-    let F = o()(w)
-        .take(A)
-        .map((e) =>
-            (0, i.jsx)(
-                f.eu,
-                { src: e.getAvatarURL(a, 24), "aria-label": e.username, size: I._3.SIZE_24, className: b.lJ },
-                e.id,
-            ),
-        )
-        .value();
-    return (
-        w.length > A &&
-            (F[F.length - 1] = (0, i.jsxs)("div", { className: b.ju, children: ["+", w.length - A + 1] }, "overflow")),
-        (0, i.jsx)(T.A, {
-            section: y.JJy.STREAM_VIEWER_POPOUT,
-            children: (0, i.jsx)("div", {
-                onMouseEnter: G,
-                onMouseLeave: x,
-                children: (0, i.jsx)(p.Y, {
-                    targetElementRef: h,
-                    renderPopout: () =>
-                        (0, i.jsx)(P, {
-                            participantType: l.type,
-                            handleUserContextMenu: k,
-                            guildId: a,
-                            channelId: t,
-                            users: w,
-                            disableInteraction: E,
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let {
+                    channelId: t,
+                    guildId: a,
+                    participant: l,
+                    className: u,
+                    compact: _ = !1,
+                    disableInteraction: E = !1,
+                    maxVisibleUsers: A = 3,
+                } = e,
+                h = r.useRef(null),
+                S = (0, g.A)(),
+                [R, D] = r.useState(!1),
+                v = r.useRef(new c.J_(150, () => D(!1))),
+                w = (0, d.yK)(
+                    [N.A, C.default],
+                    () => {
+                        if (l.type === L.lp.STREAM) {
+                            let e = N.A.getViewerIds(l.id);
+                            return e.length > 0 ? e.map((e) => C.default.getUser(e)).filter(O.Vq) : U;
+                        }
+                        return l.type === L.lp.ACTIVITY && l.participants.length > 0
+                            ? Array.from(l.participants)
+                                  .map((e) => C.default.getUser(e.userId))
+                                  .filter(O.Vq)
+                            : U;
+                    },
+                    [l],
+                );
+            r.useEffect(() => {
+                S && (v.current.cancel(), D(!1));
+            }, [S]);
+            let G = r.useCallback(() => {
+                    (v.current.cancel(), D(!0));
+                }, []),
+                x = r.useCallback(() => {
+                    v.current.delay();
+                }, []),
+                k = r.useCallback(
+                    (e, t) => {
+                        (G(),
+                            (0, m.L3)(
+                                e,
+                                async () => {
+                                    let { default: e } = await Promise.all([
+                                        n.e(668756),
+                                        n.e(790484),
+                                        n.e(463317),
+                                        n.e(834552),
+                                        n.e(708757),
+                                        n.e(585968),
+                                        n.e(893190),
+                                        n.e(776273),
+                                        n.e(253729),
+                                        n.e(189673),
+                                        n.e(234236),
+                                        n.e(638221),
+                                        n.e(576432),
+                                        n.e(797558),
+                                        n.e(451162),
+                                        n.e(229787),
+                                        n.e(936320),
+                                        n.e(576665),
+                                        n.e(624198),
+                                        n.e(715038),
+                                        n.e(60086),
+                                        n.e(190889),
+                                        n.e(242204),
+                                        n.e(856753),
+                                        n.e(61129),
+                                        n.e(205941),
+                                        n.e(331203),
+                                        n.e(255302),
+                                        n.e(349644),
+                                        n.e(172883),
+                                        n.e(825486),
+                                        n.e(169103),
+                                        n.e(873786),
+                                        n.e(532418),
+                                        n.e(299086),
+                                    ]).then(n.bind(n, 668569));
+                                    return (n) => (0, i.jsx)(e, { ...n, user: t });
+                                },
+                                { onClose: x },
+                            ));
+                    },
+                    [x, G],
+                );
+            if (0 === w.length) return null;
+            if (_)
+                return (0, i.jsx)(M, {
+                    maxVisibleUsers: A,
+                    users: w,
+                    guildId: a,
+                    channelId: t,
+                    className: u,
+                    participantType: l.type,
+                });
+            let F = o()(w)
+                .take(A)
+                .map((e) =>
+                    (0, i.jsx)(
+                        f.eu,
+                        { src: e.getAvatarURL(a, 24), "aria-label": e.username, size: I._3.SIZE_24, className: b.lJ },
+                        e.id,
+                    ),
+                )
+                .value();
+            return (
+                w.length > A &&
+                    (F[F.length - 1] = (0, i.jsxs)(
+                        "div",
+                        { className: b.ju, children: ["+", w.length - A + 1] },
+                        "overflow",
+                    )),
+                (0, i.jsx)(T.A, {
+                    section: y.JJy.STREAM_VIEWER_POPOUT,
+                    children: (0, i.jsx)("div", {
+                        onMouseEnter: G,
+                        onMouseLeave: x,
+                        children: (0, i.jsx)(p.Y, {
+                            targetElementRef: h,
+                            renderPopout: () =>
+                                (0, i.jsx)(P, {
+                                    participantType: l.type,
+                                    handleUserContextMenu: k,
+                                    guildId: a,
+                                    channelId: t,
+                                    users: w,
+                                    disableInteraction: E,
+                                }),
+                            shouldShow: R && !S,
+                            position: "top",
+                            children: () => (0, i.jsx)("div", { ref: h, className: s()(b.Mj, u), children: F }),
                         }),
-                    shouldShow: R && !S,
-                    position: "top",
-                    children: () => (0, i.jsx)("div", { ref: h, className: s()(b.Mj, u), children: F }),
-                }),
-            }),
-        })
-    );
-}
+                    }),
+                })
+            );
+        },
+    },
+);

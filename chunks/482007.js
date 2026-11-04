@@ -1,1 +1,1 @@
-t.exports = { S4: "newContentCard__62256", Uq: "newContentRow__62256", Pf: "newContentDot__62256" };
+t.exports = { S4: "newContentCard_mgabta", Uq: "newContentRow_mgabta", Pf: "newContentDot_mgabta" };

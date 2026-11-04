@@ -1,4 +1,3 @@
-(r.r(t), r.d(t, { XXH64: () => u, hash: () => c }));
 let n = 2n ** 64n - 1n,
     i = new TextEncoder();
 function o(e, t, r, n) {
@@ -144,6 +143,12 @@ class u {
         );
     }
 }
-function c(e, t = 0) {
-    return new u(t).update(e).digest();
-}
+r.d(
+    t,
+    {},
+    {
+        hash: function (e, t = 0) {
+            return new u(t).update(e).digest();
+        },
+    },
+);

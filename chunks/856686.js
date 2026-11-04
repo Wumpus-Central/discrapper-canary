@@ -1,4 +1,3 @@
-r.d(t, { S: () => i });
 var l = r(196765);
 let s = { skus: [], currentPage: 0, totalCount: 0, hasMorePages: !1, searchError: null, isFetchingResults: !1 },
     i = (0, l.v)((e) => ({
@@ -20,3 +19,4 @@ let s = { skus: [], currentPage: 0, totalCount: 0, hasMorePages: !1, searchError
             e({ ...s });
         },
     }));
+r.d(t, {}, { S: i });

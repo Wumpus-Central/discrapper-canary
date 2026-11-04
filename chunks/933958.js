@@ -1,15 +1,15 @@
 let i;
-(n.d(t, { Am: () => R, Ay: () => et }), n(321073));
-var r = n(17928),
+n(321073);
+var r = n(855986),
     a = n(73153),
     s = n(155718),
     l = n(392054),
     o = n(159993),
-    d = n(280450),
+    d = n(46653),
     c = n(734057),
     u = n(309010),
     _ = n(287809),
-    E = n(625494),
+    E = n(188567),
     A = n(723702),
     h = n(646865),
     f = n(240583),
@@ -18,7 +18,7 @@ var r = n(17928),
     m = n(969151),
     T = n(847381),
     g = n(108959),
-    S = n(818023),
+    S = n(487887),
     N = n(5867),
     C = n(652215);
 let O = {
@@ -384,168 +384,160 @@ class J extends r.Ay.PersistedStore {
     }
 }
 let ee = new J(a.h, {
-        ACTIVITY_LAYOUT_MODE_UPDATE: function (e) {
-            let { applicationId: t, layoutMode: n } = e;
-            V.set(t, n);
-        },
-        CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
-            let { guilds: t } = e;
-            (v.clear(), b.clear(), P.clear(), t.forEach((e) => q(e)));
-            let n = d.default.getId();
-            for (let e of Array.from(D.values()))
-                ee
-                    .getEmbeddedActivitiesForLocationIncludingHidden(e.location)
-                    .some(
-                        (t) => t.applicationId === e.applicationId && t.launchId === e.launchId && t.userIds.has(n),
-                    ) || Z(e);
-        },
-        GUILD_CREATE: function (e) {
-            let { guild: t } = e;
-            q(t);
-        },
-        CHANNEL_DELETE: function (e) {
-            let { channel: t } = e,
-                n = v.get(t.id),
-                i = n?.getItems("all") ?? R;
-            v.delete(t.id);
-            let r = K(t.guild_id),
-                a = b.get(r);
-            (a?.removeWhere((e) => (0, m.H)(e.location) === t.id),
-                i.forEach((e) => {
-                    P.delete(e.location.id);
-                }));
-        },
-        EMBEDDED_ACTIVITY_LAUNCH_START: function (e) {
-            let {
-                applicationId: t,
-                componentId: n,
-                commandOrigin: i,
-                launchParams: r,
-                channelId: a,
-                inviterUserId: s,
-            } = e;
-            (U.set(M(a, t), { isLaunching: !0, componentId: n, inviterUserId: s, launchParams: r }),
-                (W = i === l.iw.APP_DMS_ENTRY_POINT_COMMAND_BUTTON ? N.E8.NO_CHAT : N.E8.RESIZABLE));
-        },
-        EMBEDDED_ACTIVITY_LAUNCH_SET_PROXY_TICKET: function (e) {
-            let { applicationId: t, channelId: n, proxyTicket: i } = e,
-                r = M(n, t),
-                a = U.get(r);
-            null != a && U.set(r, { ...a, proxyTicket: i });
-        },
-        EMBEDDED_ACTIVITY_UPDATE_CONNECTED_PROXY_TICKET: function (e) {
-            let { applicationId: t, proxyTicket: n } = e,
-                i = D.get(t);
-            if (null == i) return !1;
-            D.set(t, { ...i, proxyTicket: n });
-        },
-        EMBEDDED_ACTIVITY_SET_PROXY_TICKET_REFRESHING: function (e) {
-            let { applicationId: t, refreshing: n } = e;
-            n ? w.add(t) : w.delete(t);
-        },
-        EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: function (e) {
-            let { applicationId: t } = e;
-            O.everLaunchedActivities.add(t);
-        },
-        EMBEDDED_ACTIVITY_LAUNCH_FAIL: function (e) {
-            let { applicationId: t, channelId: n } = e;
-            (Q({ applicationId: t, channelId: n }), w.delete(t));
-        },
-        EMBEDDED_ACTIVITY_LAUNCH_CANCEL: function (e) {
-            let { applicationId: t, channelId: n } = e;
-            (Q({ applicationId: t, channelId: n }), w.delete(t));
-        },
-        EMBEDDED_ACTIVITY_CLOSE: function (e) {
-            let { applicationId: t } = e,
-                n = D.get(t);
-            (D.delete(t), n?.location.id === i?.id && (i = void 0));
-        },
-        EMBEDDED_ACTIVITY_UPDATE_POPOUT_WINDOW_LAYOUT: function (e) {
-            let { layout: t } = e;
-            Y = t;
-        },
-        EMBEDDED_ACTIVITY_UPDATE_V2: function (e) {
-            let { instance: t } = e;
-            X(t);
-        },
-        LOCAL_ACTIVITY_UPDATE: function (e) {
-            let { activity: t } = e;
-            if (null == t) return !1;
-            let n = D.get(t.application_id ?? "");
-            if (null == n) return !1;
-            D.set(n.applicationId, { ...n });
-        },
-        EMBEDDED_ACTIVITY_SET_CONFIG: function (e) {
-            let { applicationId: t, config: n } = e,
-                i = D.get(t);
-            null != i && D.set(i.applicationId, { ...i, config: n });
-        },
-        EMBEDDED_ACTIVITY_FETCH_SHELF: function (e) {
-            let { guildId: t } = e,
-                n = K(t),
-                i = x.get(n);
-            (x.set(n, { isFetching: !0, lastFetchTimestampMs: i?.lastFetchTimestampMs }),
-                (O.lastCheckedForBadgeableActivities = new Date(Date.now()).toISOString()));
-        },
-        EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: function (e) {
-            let { guildId: t, activities: n } = e,
-                i = K(t);
-            G.set(i, n);
-            let r = Date.now();
-            (!(function (e) {
-                let { activities: t, now: n } = e,
-                    i = (0, T.A)((0, A.getOS)()),
-                    r = t.reduce((e, t) => {
-                        let r = t.client_platform_config[i];
-                        if (null == r.label_from || null == r.label_until) return e;
-                        let a = { fromDate: r.label_from, untilDate: r.label_until },
-                            l = new Date(r.label_from).getTime(),
-                            o = new Date(r.label_until).getTime();
-                        return (
-                            l > n ||
-                                o < n ||
-                                Object.values(s.YI)
-                                    .filter((e) => !r.omit_badge_from_surfaces.includes(e))
-                                    .forEach((t) => {
-                                        let n = e[t];
-                                        (null == n || new Date(n.fromDate).getTime() < l) && (e[t] = a);
-                                    }),
-                            e
-                        );
-                    }, {});
-                O.dateRangesForSurfaces = r;
-            })({ activities: n, now: r }),
-                x.set(i, { isFetching: !1, lastFetchTimestampMs: r }));
-        },
-        EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL: function (e) {
-            let { guildId: t } = e,
-                n = K(t),
-                i = x.get(n);
-            x.set(n, { isFetching: !1, lastFetchTimestampMs: i?.lastFetchTimestampMs });
-        },
-        EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE: function (e) {
-            let { applicationId: t, lockState: n, pictureInPictureLockState: i, gridLockState: r } = e;
-            (null == n ? k.delete(t) : k.set(t, n),
-                null === i ? F.delete(t) : void 0 !== i && F.set(t, i),
-                null === r ? B.delete(t) : void 0 !== r && B.set(t, r));
-        },
-        EMBEDDED_ACTIVITY_SET_PANEL_MODE: function (e) {
-            let { activityPanelMode: t } = e;
-            j = t;
-        },
-        EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT: function (e) {
-            let { focusedActivityLayout: t } = e;
-            W = t;
-        },
-        CHANNEL_SELECT: function (e) {
-            let { channelId: t } = e;
-            if (null == i) return;
-            let n = (0, m.H)(i);
-            null != n && n !== t && j === N.Gd.PANEL && (j = N.Gd.PIP);
-        },
-        POPOUT_WINDOW_CLOSE: function (e) {
-            let { key: t } = e;
-            t === C.MLl.ACTIVITY_POPOUT && (j = N.Gd.PIP);
-        },
-    }),
-    et = ee;
+    ACTIVITY_LAYOUT_MODE_UPDATE: function (e) {
+        let { applicationId: t, layoutMode: n } = e;
+        V.set(t, n);
+    },
+    CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
+        let { guilds: t } = e;
+        (v.clear(), b.clear(), P.clear(), t.forEach((e) => q(e)));
+        let n = d.default.getId();
+        for (let e of Array.from(D.values()))
+            ee
+                .getEmbeddedActivitiesForLocationIncludingHidden(e.location)
+                .some((t) => t.applicationId === e.applicationId && t.launchId === e.launchId && t.userIds.has(n)) ||
+                Z(e);
+    },
+    GUILD_CREATE: function (e) {
+        let { guild: t } = e;
+        q(t);
+    },
+    CHANNEL_DELETE: function (e) {
+        let { channel: t } = e,
+            n = v.get(t.id),
+            i = n?.getItems("all") ?? R;
+        v.delete(t.id);
+        let r = K(t.guild_id),
+            a = b.get(r);
+        (a?.removeWhere((e) => (0, m.H)(e.location) === t.id),
+            i.forEach((e) => {
+                P.delete(e.location.id);
+            }));
+    },
+    EMBEDDED_ACTIVITY_LAUNCH_START: function (e) {
+        let { applicationId: t, componentId: n, commandOrigin: i, launchParams: r, channelId: a, inviterUserId: s } = e;
+        (U.set(M(a, t), { isLaunching: !0, componentId: n, inviterUserId: s, launchParams: r }),
+            (W = i === l.iw.APP_DMS_ENTRY_POINT_COMMAND_BUTTON ? N.E8.NO_CHAT : N.E8.RESIZABLE));
+    },
+    EMBEDDED_ACTIVITY_LAUNCH_SET_PROXY_TICKET: function (e) {
+        let { applicationId: t, channelId: n, proxyTicket: i } = e,
+            r = M(n, t),
+            a = U.get(r);
+        null != a && U.set(r, { ...a, proxyTicket: i });
+    },
+    EMBEDDED_ACTIVITY_UPDATE_CONNECTED_PROXY_TICKET: function (e) {
+        let { applicationId: t, proxyTicket: n } = e,
+            i = D.get(t);
+        if (null == i) return !1;
+        D.set(t, { ...i, proxyTicket: n });
+    },
+    EMBEDDED_ACTIVITY_SET_PROXY_TICKET_REFRESHING: function (e) {
+        let { applicationId: t, refreshing: n } = e;
+        n ? w.add(t) : w.delete(t);
+    },
+    EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: function (e) {
+        let { applicationId: t } = e;
+        O.everLaunchedActivities.add(t);
+    },
+    EMBEDDED_ACTIVITY_LAUNCH_FAIL: function (e) {
+        let { applicationId: t, channelId: n } = e;
+        (Q({ applicationId: t, channelId: n }), w.delete(t));
+    },
+    EMBEDDED_ACTIVITY_LAUNCH_CANCEL: function (e) {
+        let { applicationId: t, channelId: n } = e;
+        (Q({ applicationId: t, channelId: n }), w.delete(t));
+    },
+    EMBEDDED_ACTIVITY_CLOSE: function (e) {
+        let { applicationId: t } = e,
+            n = D.get(t);
+        (D.delete(t), n?.location.id === i?.id && (i = void 0));
+    },
+    EMBEDDED_ACTIVITY_UPDATE_POPOUT_WINDOW_LAYOUT: function (e) {
+        let { layout: t } = e;
+        Y = t;
+    },
+    EMBEDDED_ACTIVITY_UPDATE_V2: function (e) {
+        let { instance: t } = e;
+        X(t);
+    },
+    LOCAL_ACTIVITY_UPDATE: function (e) {
+        let { activity: t } = e;
+        if (null == t) return !1;
+        let n = D.get(t.application_id ?? "");
+        if (null == n) return !1;
+        D.set(n.applicationId, { ...n });
+    },
+    EMBEDDED_ACTIVITY_SET_CONFIG: function (e) {
+        let { applicationId: t, config: n } = e,
+            i = D.get(t);
+        null != i && D.set(i.applicationId, { ...i, config: n });
+    },
+    EMBEDDED_ACTIVITY_FETCH_SHELF: function (e) {
+        let { guildId: t } = e,
+            n = K(t),
+            i = x.get(n);
+        (x.set(n, { isFetching: !0, lastFetchTimestampMs: i?.lastFetchTimestampMs }),
+            (O.lastCheckedForBadgeableActivities = new Date(Date.now()).toISOString()));
+    },
+    EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: function (e) {
+        let { guildId: t, activities: n } = e,
+            i = K(t);
+        G.set(i, n);
+        let r = Date.now();
+        (!(function (e) {
+            let { activities: t, now: n } = e,
+                i = (0, T.A)((0, A.R0)()),
+                r = t.reduce((e, t) => {
+                    let r = t.client_platform_config[i];
+                    if (null == r.label_from || null == r.label_until) return e;
+                    let a = { fromDate: r.label_from, untilDate: r.label_until },
+                        l = new Date(r.label_from).getTime(),
+                        o = new Date(r.label_until).getTime();
+                    return (
+                        l > n ||
+                            o < n ||
+                            Object.values(s.YI)
+                                .filter((e) => !r.omit_badge_from_surfaces.includes(e))
+                                .forEach((t) => {
+                                    let n = e[t];
+                                    (null == n || new Date(n.fromDate).getTime() < l) && (e[t] = a);
+                                }),
+                        e
+                    );
+                }, {});
+            O.dateRangesForSurfaces = r;
+        })({ activities: n, now: r }),
+            x.set(i, { isFetching: !1, lastFetchTimestampMs: r }));
+    },
+    EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL: function (e) {
+        let { guildId: t } = e,
+            n = K(t),
+            i = x.get(n);
+        x.set(n, { isFetching: !1, lastFetchTimestampMs: i?.lastFetchTimestampMs });
+    },
+    EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE: function (e) {
+        let { applicationId: t, lockState: n, pictureInPictureLockState: i, gridLockState: r } = e;
+        (null == n ? k.delete(t) : k.set(t, n),
+            null === i ? F.delete(t) : void 0 !== i && F.set(t, i),
+            null === r ? B.delete(t) : void 0 !== r && B.set(t, r));
+    },
+    EMBEDDED_ACTIVITY_SET_PANEL_MODE: function (e) {
+        let { activityPanelMode: t } = e;
+        j = t;
+    },
+    EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT: function (e) {
+        let { focusedActivityLayout: t } = e;
+        W = t;
+    },
+    CHANNEL_SELECT: function (e) {
+        let { channelId: t } = e;
+        if (null == i) return;
+        let n = (0, m.H)(i);
+        null != n && n !== t && j === N.Gd.PANEL && (j = N.Gd.PIP);
+    },
+    POPOUT_WINDOW_CLOSE: function (e) {
+        let { key: t } = e;
+        t === C.MLl.ACTIVITY_POPOUT && (j = N.Gd.PIP);
+    },
+});
+n.d(t, {}, { Am: R, Ay: ee });

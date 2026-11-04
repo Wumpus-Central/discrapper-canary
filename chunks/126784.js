@@ -1,33 +1,33 @@
-s.d(e, { default: () => C });
 var n = s(477900),
     a = s(582128),
-    i = s(17928),
-    l = s(935462),
-    o = s(192308),
-    r = s(989837),
-    d = s(500049),
-    p = s(524579),
+    i = s(855986),
+    r = s(935462),
+    l = s(192308),
+    o = s(989837),
+    p = s(500049),
+    d = s(621377),
     c = s(699803),
     h = s(60809),
-    u = s(105292),
+    u = s(792996),
     A = s(886720);
 let C = a.memo(function (t) {
     let { context: e, ...s } = t,
-        C = (0, i.bG)([r.A], () => r.A.shouldShowModal());
+        C = (0, i.bG)([o.A], () => o.A.shouldShowModal());
     a.useEffect(() => {
-        C || (0, o.closeModalInAllContexts)(h.gS);
+        C || (0, l.CT)(h.gS);
     });
     let g = (0, c.A)();
     return (0, n.jsx)("span", {
         style: h.sK,
-        children: (0, n.jsx)(l.EO, {
+        children: (0, n.jsx)(r.EO, {
             className: A.z,
             "aria-label": u.intl.string(u.t.shUONg),
-            size: l.rI.DYNAMIC,
+            size: r.rI.DYNAMIC,
             ...s,
             parentComponent: "AppLauncherModal",
             "data-migration-pending": !0,
-            children: (0, n.jsx)(p.A, { context: e, entrypoint: d.s4.VOICE, initHistory: g }),
+            children: (0, n.jsx)(d.A, { context: e, entrypoint: p.s4.VOICE, initHistory: g }),
         }),
     });
 });
+s.d(e, {}, { default: C });

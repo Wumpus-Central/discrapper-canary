@@ -1,1 +1,1 @@
-s.exports = { W: "settings__01d52" };
+s.exports = { W: "settings_JmdOM-" };

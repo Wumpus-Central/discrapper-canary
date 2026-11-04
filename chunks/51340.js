@@ -1,15 +1,14 @@
-r.d(t, { $: () => m, k: () => h });
 var n = r(980807),
-    i = r(149154),
+    i = r(419726),
     o = r(29474),
     a = r(477692),
     s = r(805206),
     l = r(892730),
-    u = r(519837),
+    u = r(652664),
     c = r(582128),
     f = r(736570),
-    d = r(599291),
-    p = r(834559);
+    p = r(599291),
+    d = r(802649);
 let h = (0, c.createContext)({}),
     m = (0, s.U7)(function (e, t) {
         [e, t] = (0, n.JT)(e, t, h);
@@ -24,7 +23,7 @@ let h = (0, c.createContext)({}),
             return e;
         })(m, s);
         let { focusProps: g, isFocused: b, isFocusVisible: w } = (0, f.o)(e),
-            { hoverProps: _, isHovered: S } = (0, d.M)({ ...e, isDisabled: e.isDisabled || s }),
+            { hoverProps: _, isHovered: S } = (0, p.M)({ ...e, isDisabled: e.isDisabled || s }),
             E = {
                 isHovered: S,
                 isPressed: (r.isPressed || y) && !s,
@@ -34,16 +33,16 @@ let h = (0, c.createContext)({}),
                 isPending: s ?? !1,
             },
             x = (0, n.Sl)({ ...e, values: E, defaultClassName: "react-aria-Button" }),
-            C = (0, p.Bi)(m.id),
-            k = (0, p.Bi)(),
+            k = (0, d.Bi)(m.id),
+            C = (0, d.Bi)(),
             T = m["aria-labelledby"];
-        s && (T ? (T = `${T} ${k}`) : m["aria-label"] && (T = `${C} ${k}`));
+        s && (T ? (T = `${T} ${C}`) : m["aria-label"] && (T = `${k} ${C}`));
         let M = (0, c.useRef)(s);
         (0, c.useEffect)(() => {
-            let e = { "aria-labelledby": T || C };
+            let e = { "aria-labelledby": T || k };
             (!M.current && b && s ? (0, o.iP)(e, "assertive") : M.current && b && !s && (0, o.iP)(e, "assertive"),
                 (M.current = s));
-        }, [s, b, T, C]);
+        }, [s, b, T, k]);
         let P = (0, l.$)(e, { global: !0 });
         return (
             delete P.onClick,
@@ -52,7 +51,7 @@ let h = (0, c.createContext)({}),
                 {
                     ...(0, u.v)(P, x, m, g, _),
                     type: "submit" === m.type && s ? "button" : m.type,
-                    id: C,
+                    id: k,
                     ref: t,
                     "aria-labelledby": T,
                     slot: e.slot || void 0,
@@ -64,8 +63,9 @@ let h = (0, c.createContext)({}),
                     "data-pending": s || void 0,
                     "data-focus-visible": w || void 0,
                 },
-                c.createElement(i.K.Provider, { value: { id: k } }, x.children),
+                c.createElement(i.K.Provider, { value: { id: C } }, x.children),
             )
         );
     }),
     v = /Focus|Blur|Hover|Pointer(Enter|Leave|Over|Out)|Mouse(Enter|Leave|Over|Out)/;
+r.d(t, {}, { $: m, k: h });

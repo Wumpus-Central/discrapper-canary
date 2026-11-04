@@ -1,76 +1,86 @@
-a.d(t, { A: () => g });
-var i = a(477900);
-a(582128);
-var l = a(192308),
-    n = a(401843),
-    s = a(327649),
-    d = a(734057),
-    r = a(71393),
-    h = a(477653),
-    o = a(287809),
-    c = a(723702),
-    u = a(753070);
-function g(e, t, g) {
-    if (c.isPlatformEmbedded)
-        (0, l.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([
-                a.e("249169"),
-                a.e("329172"),
-                a.e("879641"),
-                a.e("473782"),
-                a.e("662387"),
-                a.e("553464"),
-                a.e("321735"),
-                a.e("130662"),
-                a.e("342551"),
-                a.e("498552"),
-                a.e("253729"),
-                a.e("827708"),
-                a.e("721690"),
-                a.e("234236"),
-                a.e("988077"),
-                a.e("76705"),
-                a.e("718573"),
-                a.e("256255"),
-                a.e("128534"),
-                a.e("784103"),
-                a.e("499941"),
-                a.e("976148"),
-                a.e("858337"),
-                a.e("236946"),
-                a.e("757598"),
-                a.e("338601"),
-                a.e("486672"),
-                a.e("944801"),
-                a.e("944727"),
-                a.e("943371"),
-                a.e("725241"),
-                a.e("707068"),
-                a.e("521221"),
-                a.e("82001"),
-                a.e("352435"),
-                a.e("191782"),
-                a.e("190088"),
-            ]).then(a.bind(a, 266536));
-            return (t) => (0, i.jsx)(e, { ...t, analyticsLocations: g });
-        });
-    else {
-        let a = d.A.getChannel(t),
-            i = (0, s.A)(
-                u.jQ.PRESET_CUSTOM,
-                u.on.RESOLUTION_1080,
-                u.kn.FPS_30,
-                o.default.getCurrentUser(),
-                r.A.getGuild(e)?.premiumTier,
-                a,
-            )
-                ? { width: 1920, height: 1080 }
-                : { width: 1280, height: 720 };
-        ((0, n.Xd)({ preset: u.jQ.PRESET_CUSTOM, resolution: i.height, frameRate: u.kn.FPS_30, soundshareEnabled: !0 }),
-            h.Ay.getMediaEngine()
-                .getDesktopSource(i, !0)
-                .then((a) => {
-                    (0, n.XI)(e, t, { pid: null, sourceId: a, sourceName: null, analyticsLocations: g });
-                }));
-    }
-}
+var a = i(477900);
+i(582128);
+var l = i(192308),
+    s = i(401843),
+    n = i(676030),
+    r = i(734057),
+    d = i(71393),
+    h = i(718197),
+    o = i(287809),
+    c = i(723702),
+    u = i(753070);
+i.d(
+    t,
+    {},
+    {
+        A: function (e, t, g) {
+            if (c.isPlatformEmbedded)
+                (0, l.mM)(async () => {
+                    let { default: e } = await Promise.all([
+                        i.e(249169),
+                        i.e(506933),
+                        i.e(879641),
+                        i.e(473782),
+                        i.e(662387),
+                        i.e(553464),
+                        i.e(668756),
+                        i.e(130662),
+                        i.e(342551),
+                        i.e(498552),
+                        i.e(253729),
+                        i.e(827708),
+                        i.e(721690),
+                        i.e(234236),
+                        i.e(988077),
+                        i.e(76705),
+                        i.e(718573),
+                        i.e(376883),
+                        i.e(647211),
+                        i.e(784103),
+                        i.e(499941),
+                        i.e(464242),
+                        i.e(858337),
+                        i.e(236946),
+                        i.e(757598),
+                        i.e(338601),
+                        i.e(482511),
+                        i.e(944801),
+                        i.e(944727),
+                        i.e(943371),
+                        i.e(725241),
+                        i.e(114792),
+                        i.e(758913),
+                        i.e(489876),
+                        i.e(352435),
+                        i.e(191782),
+                        i.e(190088),
+                    ]).then(i.bind(i, 742527));
+                    return (t) => (0, a.jsx)(e, { ...t, analyticsLocations: g });
+                });
+            else {
+                let i = r.A.getChannel(t),
+                    a = (0, n.A)(
+                        u.jQ.PRESET_CUSTOM,
+                        u.on.RESOLUTION_1080,
+                        u.kn.FPS_30,
+                        o.default.getCurrentUser(),
+                        d.A.getGuild(e)?.premiumTier,
+                        i,
+                    )
+                        ? { width: 1920, height: 1080 }
+                        : { width: 1280, height: 720 };
+                ((0, s.Xd)({
+                    preset: u.jQ.PRESET_CUSTOM,
+                    resolution: a.height,
+                    frameRate: u.kn.FPS_30,
+                    soundshareEnabled: !0,
+                }),
+                    h.Ay.getMediaEngine()
+                        .getDesktopSource(a, !0)
+                        .then((i) => {
+                            (0, s.XI)(e, t, { pid: null, sourceId: i, sourceName: null, analyticsLocations: g });
+                        }));
+            }
+        },
+    },
+);

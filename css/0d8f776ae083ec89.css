@@ -1,0 +1,128 @@
+.tag_E5LDT0 {
+    align-items: center;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4);
+    padding-block: calc(var(--space-4) - 1px);
+    padding-inline: var(--space-6) var(--space-8)
+}
+
+.button_E5LDT0 {
+    color: var(--text-subtle);
+    cursor: pointer;
+    transition: background 50ms ease-in, border-style 50ms ease-in, color 50ms ease-in
+}
+
+.button_E5LDT0:not(.disabled_E5LDT0):hover {
+    background: var(--background-mod-normal);
+    color: var(--text-strong);
+    transition: background .15s ease-out, border-style .15s ease-out, color .15s ease-out
+}
+
+.custom-user-profile-theme.theme-light .button_E5LDT0:not(.disabled_E5LDT0):hover {
+    background: var(--opacity-white-32)
+}
+
+.disabled_E5LDT0 {
+    cursor: default;
+    transition: none
+}
+
+.addButton_E5LDT0 {
+    background: transparent;
+    border: 1px dashed var(--border-subtle)
+}
+
+.addButton_E5LDT0:hover {
+    border-style: solid
+}
+
+.removeButton_E5LDT0 {
+    align-items: center;
+    color: var(--icon-subtle);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-block: calc((var(--space-4) - 1px)*-1);
+    margin-inline: -1px calc((var(--space-4) - 1px)*-1);
+    padding: calc(var(--space-4) - 1px);
+    transition: color 50ms ease-in
+}
+
+.removeButton_E5LDT0:hover {
+    color: var(--icon-strong);
+    transition: color .15s ease-out
+}
+
+.tagsMenu_E5LDT0 {
+    max-height: 400px;
+    overflow-y: auto
+}
+
+.filledPill_E5LDT0 {
+    background: var(--background-mod-subtle);
+    border-color: var(--border-muted);
+    flex-shrink: 0;
+    padding-inline: var(--space-8);
+    white-space: nowrap
+}
+
+.filledTag_E5LDT0 {
+    color: var(--icon-overlay-light)
+}
+
+.filledButton_E5LDT0 {
+    color: var(--text-overlay-light);
+    cursor: pointer;
+    transition: background 50ms ease-in, border-style 50ms ease-in
+}
+
+.filledButton_E5LDT0:not(.disabled_E5LDT0):hover {
+    background: var(--control-overlay-secondary-background-hover);
+    transition: background .15s ease-out, border-style .15s ease-out
+}
+
+.filledAddButton_E5LDT0 {
+    background: transparent;
+    border: 1px dashed var(--border-normal);
+    gap: calc(var(--space-4)/2);
+    padding-inline: var(--space-4) var(--space-8)
+}
+
+.filledAddButton_E5LDT0:hover {
+    border-style: solid
+}
+
+.filledRemoveButton_E5LDT0 {
+    color: var(--icon-overlay-light)
+}
+
+.filledRemoveButton_E5LDT0:hover {
+    background: var(--control-overlay-secondary-background-hover);
+    border-radius: var(--radius-xs);
+    color: var(--icon-overlay-light)
+}
+
+.enable-forced-colors .filledRemoveButton_E5LDT0,
+.enable-forced-colors .removeButton_E5LDT0 {
+    color: ButtonText
+}
+
+.enable-forced-colors .button_E5LDT0,
+.enable-forced-colors .button_E5LDT0:hover,
+.enable-forced-colors .filledButton_E5LDT0,
+.enable-forced-colors .filledButton_E5LDT0:hover,
+.enable-forced-colors .filledPill_E5LDT0 {
+    border-color: ButtonText;
+    color: ButtonText
+}
+
+.enable-forced-colors .button_E5LDT0.disabled_E5LDT0,
+.enable-forced-colors .filledButton_E5LDT0.disabled_E5LDT0 {
+    border-color: GrayText;
+    color: GrayText
+}
+
+/*# sourceMappingURL=0d8f776ae083ec89.css.map*/

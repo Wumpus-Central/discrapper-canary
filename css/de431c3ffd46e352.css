@@ -1,0 +1,211 @@
+.imagePreviewContainer_GNQQ1c {
+    background-color: var(--background-mod-normal);
+    border-radius: var(--radius-xs);
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 175px;
+    overflow: hidden;
+    position: relative;
+    transition: background-color var(--custom-button-transition-duration) ease
+}
+
+.imagePreviewContainer_GNQQ1c:hover {
+    background-color: var(--input-background-default)
+}
+
+.imagePreviewContainer_GNQQ1c:focus-within .altBadge_GNQQ1c,
+.imagePreviewContainer_GNQQ1c:hover .altBadge_GNQQ1c {
+    opacity: 0
+}
+
+.imagePreviewContainer_GNQQ1c:focus-within .altTextPreview_GNQQ1c,
+.imagePreviewContainer_GNQQ1c:hover .altTextPreview_GNQQ1c {
+    opacity: 1
+}
+
+.altBadge_GNQQ1c {
+    border-radius: var(--radius-xs);
+    bottom: 5px;
+    inset-inline-start: 5px;
+    padding: 4px;
+    text-transform: uppercase;
+    transition: opacity var(--custom-button-transition-duration) ease
+}
+
+.altBadge_GNQQ1c,
+.altTextPreview_GNQQ1c {
+    background: var(--background-surface-high);
+    position: absolute
+}
+
+.altTextPreview_GNQQ1c {
+    bottom: 0;
+    box-sizing: border-box;
+    color: var(--primary-360);
+    inset-inline-start: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 6px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%
+}
+
+.full-motion .altTextPreview_GNQQ1c {
+    transition: all var(--custom-button-transition-duration) ease
+}
+
+.altTextPreview_GNQQ1c:hover {
+    color: var(--primary-230)
+}
+
+.expressionPickerButton_GNQQ1c {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    position: relative
+}
+
+.expressionPickerButton_GNQQ1c .media_GNQQ1c {
+    transition: opacity var(--custom-button-transition-duration) ease
+}
+
+.expressionPickerButton_GNQQ1c:hover .media_GNQQ1c {
+    opacity: .6
+}
+
+.expressionPickerButton_GNQQ1c .editIcon_GNQQ1c {
+    color: var(--interactive-text-default);
+    height: 16px;
+    inset-inline-start: 14px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity var(--custom-button-transition-duration) ease;
+    width: 16px
+}
+
+.expressionPickerButton_GNQQ1c.canEditMedia_GNQQ1c:focus .media_GNQQ1c,
+.expressionPickerButton_GNQQ1c.canEditMedia_GNQQ1c:hover .media_GNQQ1c {
+    opacity: .15
+}
+
+.expressionPickerButton_GNQQ1c.canEditMedia_GNQQ1c:focus .editIcon_GNQQ1c,
+.expressionPickerButton_GNQQ1c.canEditMedia_GNQQ1c:hover .editIcon_GNQQ1c {
+    opacity: 1
+}
+
+.expressionPickerButtonDefault_GNQQ1c {
+    width: 38px
+}
+
+.expressionPickerIconDefault_GNQQ1c {
+    color: var(--interactive-text-default);
+    margin-inline-start: 6px
+}
+
+.expressionPickerIconDefault_GNQQ1c:hover {
+    color: var(--interactive-text-active)
+}
+
+.emojiPicker_GNQQ1c {
+    box-shadow: none
+}
+
+.emojiDefault_GNQQ1c {
+    height: 22px;
+    margin-inline-start: 6px;
+    width: 22px
+}
+
+.gif_GNQQ1c {
+    transition: opacity var(--custom-button-transition-duration) ease
+}
+
+.gifDefault_GNQQ1c {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 48px
+}
+
+.spinnerWrapper_GNQQ1c {
+    align-items: center;
+    cursor: default;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    width: 48px
+}
+
+.spinnerWrapperDefault_GNQQ1c {
+    height: 48px;
+    width: 48px
+}
+
+.menuContainer_GNQQ1c {
+    margin-block: -16px 0;
+    margin-inline: 6px 0
+}
+
+.content_mCABKp {
+    display: flex;
+    flex-direction: column
+}
+
+.addAnswerButton_mCABKp {
+    align-self: flex-end
+}
+
+.addAnswerButtonDefault_mCABKp {
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    gap: 8px;
+    justify-content: flex-start;
+    padding-block: 0;
+    padding-inline: 9px 20px
+}
+
+.addAnswerButtonDefault_mCABKp.canRemoveMoreAnswers_mCABKp {
+    margin-inline-end: 36px
+}
+
+.addAnswerButtonDefault_mCABKp:hover {
+    background-color: var(--background-mod-normal)
+}
+
+.addAnswerIconDefault_mCABKp {
+    color: var(--text-muted);
+    height: 28px;
+    width: 28px
+}
+
+.addAnswerButtonLabel_mCABKp {
+    padding: 13px 0
+}
+
+.duration_mCABKp {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 14px
+}
+
+.durationSelect_mCABKp {
+    font-weight: 400;
+    gap: 4px;
+    min-width: 6rem;
+    padding: 13px;
+    width: 150px
+}
+
+.checkbox_mCABKp {
+    align-self: center
+}
+
+.apiErrorBlock_mCABKp {
+    margin-bottom: 24px
+}
+
+/*# sourceMappingURL=de431c3ffd46e352.css.map*/

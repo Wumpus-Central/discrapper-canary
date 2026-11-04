@@ -1,13 +1,12 @@
-a.d(t, { S: () => i, g: () => c });
-var s,
-    i =
+var i,
+    r =
         588245 != a.j
-            ? (((s = {})[(s.DEFAULT = 0)] = "DEFAULT"),
-              (s[(s.NO_PERSONAL_DATA = 1)] = "NO_PERSONAL_DATA"),
-              (s[(s.ZERO_DATA = 2)] = "ZERO_DATA"),
-              s)
+            ? (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"),
+              (i[(i.NO_PERSONAL_DATA = 1)] = "NO_PERSONAL_DATA"),
+              (i[(i.ZERO_DATA = 2)] = "ZERO_DATA"),
+              i)
             : null;
-let r = { voice: { totalVoiceMinutes: 54423, totalVoiceMinutesPercentile: 92 } },
+let s = { voice: { totalVoiceMinutes: 54423, totalVoiceMinutesPercentile: 92 } },
     n = {
         voice: { totalVoiceMinutes: 0, totalVoiceMinutesPercentile: 0 },
         messages: { numMessagesSent: 0, numMessagesSentPercentile: 0 },
@@ -24,13 +23,20 @@ let r = { voice: { totalVoiceMinutes: 54423, totalVoiceMinutesPercentile: 92 } }
         users: [],
         power: { powerLevel: 0, powerLevelPercentile: 0 },
     };
-function c(e) {
-    switch (e) {
-        case 0:
-            return r;
-        case 1:
-            return null;
-        case 2:
-            return n;
-    }
-}
+a.d(
+    t,
+    {},
+    {
+        S: r,
+        g: function (e) {
+            switch (e) {
+                case 0:
+                    return s;
+                case 1:
+                    return null;
+                case 2:
+                    return n;
+            }
+        },
+    },
+);

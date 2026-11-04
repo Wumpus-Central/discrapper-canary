@@ -1,42 +1,15 @@
-e.d(n, { _: () => f, b: () => m });
 var i,
     r = e(477900);
 e(582128);
 var l = e(834730),
-    a = e(24482),
+    a = e(879610),
     s = e(916974),
     o = e(652215),
-    u = e(105292),
+    u = e(792996),
     c = e(130428),
     d = e(67423),
     m = (((i = {}).NONE = "none"), (i.CONFIRMING = "confirming"), (i.APPLIED = "applied"), i);
 function f(t) {
-    let { userDiscountOffer: n, offerState: e = "none" } = t,
-        { discountedPrice: i, premiumSubscription: a } = (0, s.X)();
-    return (0, r.jsxs)("div", {
-        className: c.j2,
-        children: [
-            (0, r.jsx)("img", { alt: "", src: d, className: c.oU }),
-            (0, r.jsxs)("div", {
-                className: c.br,
-                children: [
-                    (0, r.jsx)(l.E, {
-                        variant: "body-md/semibold",
-                        children:
-                            a.status === o.Dmq.CANCELED
-                                ? u.intl.format(u.t["DC+nPC"], {
-                                      numMonths: n.discount.intervalCount,
-                                      discountedPrice: i,
-                                  })
-                                : u.intl.format(u.t.tQvNll, { numMonths: n.discount.intervalCount }),
-                    }),
-                    (0, r.jsx)(p, { userDiscountOffer: n, offerState: e }),
-                ],
-            }),
-        ],
-    });
-}
-function p(t) {
     let { userDiscountOffer: n, offerState: e } = t,
         { discountedPrice: i, fullPrice: c, premiumSubscription: d } = (0, s.X)();
     switch (e) {
@@ -91,3 +64,36 @@ function p(t) {
             });
     }
 }
+e.d(
+    n,
+    {},
+    {
+        _: function (t) {
+            let { userDiscountOffer: n, offerState: e = "none" } = t,
+                { discountedPrice: i, premiumSubscription: a } = (0, s.X)();
+            return (0, r.jsxs)("div", {
+                className: c.j2,
+                children: [
+                    (0, r.jsx)("img", { alt: "", src: d, className: c.oU }),
+                    (0, r.jsxs)("div", {
+                        className: c.br,
+                        children: [
+                            (0, r.jsx)(l.E, {
+                                variant: "body-md/semibold",
+                                children:
+                                    a.status === o.Dmq.CANCELED
+                                        ? u.intl.format(u.t["DC+nPC"], {
+                                              numMonths: n.discount.intervalCount,
+                                              discountedPrice: i,
+                                          })
+                                        : u.intl.format(u.t.tQvNll, { numMonths: n.discount.intervalCount }),
+                            }),
+                            (0, r.jsx)(f, { userDiscountOffer: n, offerState: e }),
+                        ],
+                    }),
+                ],
+            });
+        },
+        b: m,
+    },
+);

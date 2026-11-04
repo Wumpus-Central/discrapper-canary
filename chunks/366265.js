@@ -1,120 +1,22 @@
-t.d(n, { A: () => j });
 var i = t(477900),
     l = t(582128),
-    s = t(17928),
+    s = t(855986),
     a = t(834730),
     r = t(821609),
     o = t(367513),
-    c = t(464120),
+    c = t(233824),
     d = t(71393),
     u = t(576705),
-    A = t(174459),
+    A = t(129230),
     h = t(113783),
-    m = t(518769),
+    m = t(597886),
     g = t(233993),
     x = t(533233),
     C = t(652215),
-    f = t(202541),
-    p = t(105292),
+    f = t(682901),
+    p = t(792996),
     E = t(391203);
-function j(e) {
-    let { channel: n } = e,
-        t = (0, h.uy)(n.id),
-        j = (0, h.zy)(n.id, m.ip.AUDIENCE),
-        v = (0, s.bG)([d.A], () => d.A.getGuild(n.guild_id), [n.guild_id]),
-        N = v?.maxStageVideoChannelUsers ?? 0,
-        _ =
-            null != v && v.features.has(C.GuildFeatures.COMMUNITY)
-                ? N < C.p2C
-                : v?.premiumTier !== C.TVA.TIER_3 && N <= C.nyz,
-        T = (0, x.A)(n),
-        b = (0, s.bG)([u.A], () => u.A.can(g.QY, n));
-    function y() {
-        (o.A.updateStageVideoLimitBoostUpsellDismissed(n.id, !0),
-            A.default.track(C.HAw.BOOSTING_UPSELL_CLICKED, {
-                guild_id: n.guild_id,
-                type: f.e.VIDEO_STAGE_LIMIT,
-                is_moderator: b,
-                action: f.pd.DISMISS,
-            }));
-    }
-    let S = { canModerate: b, audienceCount: j, channel: n, speakerCount: t },
-        O = l.useRef(S);
-    return (l.useEffect(() => {
-        O.current = S;
-    }),
-    l.useEffect(() => {
-        let { canModerate: e, audienceCount: n, channel: t, speakerCount: i } = O.current;
-        T &&
-            A.default.track(C.HAw.BOOSTING_UPSELL_VIEWED, {
-                guild_id: t.guild_id,
-                type: f.e.VIDEO_STAGE_LIMIT,
-                is_moderator: e,
-                listener_count: i + n,
-            });
-    }, [T]),
-    T)
-        ? (0, i.jsxs)("div", {
-              className: E.bp,
-              children: [
-                  (0, i.jsx)(I, {}),
-                  (0, i.jsxs)("div", {
-                      className: E.Qq,
-                      children: [
-                          (0, i.jsx)(a.E, {
-                              variant: "body-md/medium",
-                              color: "text-strong",
-                              children: _ ? p.intl.string(p.t["T+zF9M"]) : p.intl.string(p.t["IZ+SVv"]),
-                          }),
-                          (0, i.jsx)(a.E, {
-                              variant: "body-xs/medium",
-                              color: "text-default",
-                              children: _ ? p.intl.string(p.t.Izgpmv) : p.intl.string(p.t["7FHbPG"]),
-                          }),
-                      ],
-                  }),
-                  (0, i.jsx)("div", {
-                      className: E.Uo,
-                      children: _
-                          ? (0, i.jsxs)(i.Fragment, {
-                                children: [
-                                    (0, i.jsx)(r.$, {
-                                        onClick: y,
-                                        size: "sm",
-                                        variant: "secondary",
-                                        text: p.intl.string(p.t.L5eIZ2),
-                                    }),
-                                    (0, i.jsx)(r.$, {
-                                        variant: "expressive",
-                                        onClick: function () {
-                                            ((0, c.K4)({
-                                                guildId: n.guild_id,
-                                                location: { section: C.JJy.STAGE_VIDEO_LIMIT },
-                                            }),
-                                                A.default.track(C.HAw.BOOSTING_UPSELL_CLICKED, {
-                                                    guild_id: n.guild_id,
-                                                    type: f.e.VIDEO_STAGE_LIMIT,
-                                                    is_moderator: b,
-                                                    action: f.pd.BOOST,
-                                                }));
-                                        },
-                                        size: "sm",
-                                        text: p.intl.string(p.t.Uj0md3),
-                                    }),
-                                ],
-                            })
-                          : (0, i.jsx)(r.$, {
-                                variant: "primary",
-                                onClick: y,
-                                size: "sm",
-                                text: p.intl.string(p.t.WAI6xu),
-                            }),
-                  }),
-              ],
-          })
-        : null;
-}
-function I() {
+function j() {
     return (0, i.jsxs)("svg", {
         width: "36",
         height: "36",
@@ -161,3 +63,106 @@ function I() {
         ],
     });
 }
+t.d(
+    n,
+    {},
+    {
+        A: function (e) {
+            let { channel: n } = e,
+                t = (0, h.uy)(n.id),
+                I = (0, h.zy)(n.id, m.ip.AUDIENCE),
+                v = (0, s.bG)([d.A], () => d.A.getGuild(n.guild_id), [n.guild_id]),
+                N = v?.maxStageVideoChannelUsers ?? 0,
+                _ =
+                    null != v && v.features.has(C.GuildFeatures.COMMUNITY)
+                        ? N < 1e4
+                        : v?.premiumTier !== C.TVA.TIER_3 && N <= 150,
+                T = (0, x.A)(n),
+                b = (0, s.bG)([u.A], () => u.A.can(g.QY, n));
+            function S() {
+                (o.A.updateStageVideoLimitBoostUpsellDismissed(n.id, !0),
+                    A.default.track(C.HAw.BOOSTING_UPSELL_CLICKED, {
+                        guild_id: n.guild_id,
+                        type: f.e.VIDEO_STAGE_LIMIT,
+                        is_moderator: b,
+                        action: f.pd.DISMISS,
+                    }));
+            }
+            let y = { canModerate: b, audienceCount: I, channel: n, speakerCount: t },
+                O = l.useRef(y);
+            return (l.useEffect(() => {
+                O.current = y;
+            }),
+            l.useEffect(() => {
+                let { canModerate: e, audienceCount: n, channel: t, speakerCount: i } = O.current;
+                T &&
+                    A.default.track(C.HAw.BOOSTING_UPSELL_VIEWED, {
+                        guild_id: t.guild_id,
+                        type: f.e.VIDEO_STAGE_LIMIT,
+                        is_moderator: e,
+                        listener_count: i + n,
+                    });
+            }, [T]),
+            T)
+                ? (0, i.jsxs)("div", {
+                      className: E.bp,
+                      children: [
+                          (0, i.jsx)(j, {}),
+                          (0, i.jsxs)("div", {
+                              className: E.Qq,
+                              children: [
+                                  (0, i.jsx)(a.E, {
+                                      variant: "body-md/medium",
+                                      color: "text-strong",
+                                      children: _ ? p.intl.string(p.t["T+zF9M"]) : p.intl.string(p.t["IZ+SVv"]),
+                                  }),
+                                  (0, i.jsx)(a.E, {
+                                      variant: "body-xs/medium",
+                                      color: "text-default",
+                                      children: _ ? p.intl.string(p.t.Izgpmv) : p.intl.string(p.t["7FHbPG"]),
+                                  }),
+                              ],
+                          }),
+                          (0, i.jsx)("div", {
+                              className: E.Uo,
+                              children: _
+                                  ? (0, i.jsxs)(i.Fragment, {
+                                        children: [
+                                            (0, i.jsx)(r.$, {
+                                                onClick: S,
+                                                size: "sm",
+                                                variant: "secondary",
+                                                text: p.intl.string(p.t.L5eIZ2),
+                                            }),
+                                            (0, i.jsx)(r.$, {
+                                                variant: "expressive",
+                                                onClick: function () {
+                                                    ((0, c.K4)({
+                                                        guildId: n.guild_id,
+                                                        location: { section: C.JJy.STAGE_VIDEO_LIMIT },
+                                                    }),
+                                                        A.default.track(C.HAw.BOOSTING_UPSELL_CLICKED, {
+                                                            guild_id: n.guild_id,
+                                                            type: f.e.VIDEO_STAGE_LIMIT,
+                                                            is_moderator: b,
+                                                            action: f.pd.BOOST,
+                                                        }));
+                                                },
+                                                size: "sm",
+                                                text: p.intl.string(p.t.Uj0md3),
+                                            }),
+                                        ],
+                                    })
+                                  : (0, i.jsx)(r.$, {
+                                        variant: "primary",
+                                        onClick: S,
+                                        size: "sm",
+                                        text: p.intl.string(p.t.WAI6xu),
+                                    }),
+                          }),
+                      ],
+                  })
+                : null;
+        },
+    },
+);

@@ -1,58 +1,58 @@
-.betaTag_f11d9e {
+.betaTag_VtZJ9m {
     display: inline-block;
     margin-inline-start: 4px;
     margin-bottom: -2px
 }
 
-.headerContainer_f11d9e {
+.headerContainer_VtZJ9m {
     margin-bottom: 24px
 }
 
-.descriptionContainer_f11d9e {
+.descriptionContainer_VtZJ9m {
     gap: 0
 }
 
-.descriptionContainer_f11d9e,
-.settingsRowHeader_f11d9e {
+.descriptionContainer_VtZJ9m,
+.settingsRowHeader_VtZJ9m {
     align-items: center;
     display: flex;
     flex: 1;
     flex-direction: row
 }
 
-.settingsRowHeader_f11d9e {
+.settingsRowHeader_VtZJ9m {
     gap: 4px
 }
 
-.divider_f11d9e {
+.divider_VtZJ9m {
     margin: 24px 0
 }
 
-.switchItem_f11d9e {
+.switchItem_VtZJ9m {
     margin: 0
 }
 
-.switchItemTextContent_f11d9e {
+.switchItemTextContent_VtZJ9m {
     display: flex;
     flex-direction: column;
     gap: 4px
 }
 
-.setupContainer_f11d9e {
+.setupContainer_VtZJ9m {
     gap: 12px
 }
 
-.setupContainer_f11d9e,
-.setupGroup_f11d9e {
+.setupContainer_VtZJ9m,
+.setupGroup_VtZJ9m {
     display: flex;
     flex-direction: column
 }
 
-.setupGroup_f11d9e {
+.setupGroup_VtZJ9m {
     gap: 8px
 }
 
-.settingsRowSubsection_f11d9e {
+.settingsRowSubsection_VtZJ9m {
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -60,7 +60,7 @@
     padding: 8px 12px
 }
 
-.settingsRowSubsectionItem_f11d9e {
+.settingsRowSubsectionItem_VtZJ9m {
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -69,7 +69,7 @@
     white-space: nowrap
 }
 
-.channelContainer_f11d9e {
+.channelContainer_VtZJ9m {
     align-items: center;
     gap: 0;
     overflow: hidden;
@@ -78,29 +78,29 @@
     white-space: nowrap
 }
 
-.channelIcon_f11d9e {
+.channelIcon_VtZJ9m {
     margin-inline-end: -3px;
     margin-bottom: -2px
 }
 
-.setupAutomodButton_f11d9e {
+.setupAutomodButton_VtZJ9m {
     align-items: center;
     display: flex;
     flex-direction: row
 }
 
-.setupAutomodIcon_f11d9e {
+.setupAutomodIcon_VtZJ9m {
     margin-inline-start: 4px
 }
 
-.roleIcon_ee71ee {
+.roleIcon_3jSSrV {
     display: inline-block;
     -o-object-fit: contain;
     object-fit: contain;
     overflow: hidden
 }
 
-.roleIcon_ee71ee:before {
+.roleIcon_3jSSrV:before {
     background-color: var(--background-mod-subtle);
     border-radius: 50%;
     content: "";
@@ -109,8 +109,8 @@
     width: 100%
 }
 
-.clickable_ee71ee {
+.clickable_3jSSrV {
     cursor: pointer
 }
 
-/*# sourceMappingURL=996907.f44faedf28bbf7c2.css.map*/
+/*# sourceMappingURL=996907.24b169356f5d51e7.css.map*/

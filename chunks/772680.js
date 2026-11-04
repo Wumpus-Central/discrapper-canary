@@ -1,25 +1,11 @@
-n.d(t, { Ay: () => _, RI: () => c });
-var i = n(636537),
+var i = n(620632),
     r = n(439372),
     a = n(733110),
     s = n(927813),
     l = n(878118),
     o = n(652215);
 let d = 20 * s.A.Millis.MINUTE;
-async function c(e) {
-    let { applicationId: t, onSuccess: n, onError: r } = e;
-    try {
-        (await i.Bo.post({
-            url: o.Rsh.OAUTH2_ACCOUNT_LINKING_ACHIEVEMENT,
-            body: { application_id: t },
-            rejectWithError: !0,
-        }),
-            n?.());
-    } catch (e) {
-        r?.(e);
-    }
-}
-class u extends r.A {
+class c extends r.A {
     static displayName = "AccountLinkManager";
     actions = {
         OAUTH2_TOKEN_CREATE: (e) => this.handleOAuth2TokenCreate(e),
@@ -37,7 +23,7 @@ class u extends r.A {
                     i.accountLinkCallbacks?.onError?.("Account link authorization timed out"));
                 continue;
             }
-            null != a.default.getNewestTokenForApplication(n) &&
+            null != a.A.getNewestTokenForApplication(n) &&
                 (i.accountLinkCallbacks?.onSuccess?.(), l.A.deletePendingAuthorization(n));
         }
     }
@@ -54,4 +40,24 @@ class u extends r.A {
         e.state === o.g6G.ACTIVE && this.evaluatePending();
     }
 }
-let _ = new u();
+let u = new c();
+n.d(
+    t,
+    {},
+    {
+        Ay: u,
+        RI: async function (e) {
+            let { applicationId: t, onSuccess: n, onError: r } = e;
+            try {
+                (await i.Bo.post({
+                    url: o.Rsh.OAUTH2_ACCOUNT_LINKING_ACHIEVEMENT,
+                    body: { application_id: t },
+                    rejectWithError: !0,
+                }),
+                    n?.());
+            } catch (e) {
+                r?.(e);
+            }
+        },
+    },
+);

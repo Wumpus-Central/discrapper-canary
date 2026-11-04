@@ -1,4 +1,3 @@
-n.d(t, { x: () => i });
 let i = {
     IN_APP: new Set([
         "application",
@@ -17,3 +16,4 @@ let i = {
     UNAUTHENTICATED: new Set(["guild_urf", "media_takedown", "message_urf", "user_urf"]),
     CONSOLE: new Set(["playstation_console_voice", "xbox_console_voice"]),
 };
+n.d(t, {}, { x: i });

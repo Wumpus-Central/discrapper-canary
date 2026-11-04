@@ -1,4 +1,3 @@
-e.d(r, { N: () => c, e: () => p });
 var n = e(116833),
     t = e(871123);
 function p(a) {
@@ -24,7 +23,19 @@ function p(a) {
         },
     };
 }
-function c(a) {
-    let { reward: r } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return p({ imageUrl: (0, t.fq)(a), backgroundImageUrl: (0, t.xf)(a), altText: a.name, rewardGraphic: r?.graphic });
-}
+e.d(
+    r,
+    {},
+    {
+        N: function (a) {
+            let { reward: r } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            return p({
+                imageUrl: (0, t.fq)(a),
+                backgroundImageUrl: (0, t.xf)(a),
+                altText: a.name,
+                rewardGraphic: r?.graphic,
+            });
+        },
+        e: p,
+    },
+);

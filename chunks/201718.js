@@ -1,6 +1,5 @@
-n.d(t, { A: () => d, P: () => c });
-var i = n(17928),
-    r = n(636537),
+var i = n(855986),
+    r = n(620632),
     a = n(73153),
     s = n(339580),
     l = n(652215);
@@ -27,9 +26,9 @@ let o = {
             await r.Bo.patch({ url: l.Rsh.SELF_APPLICATION_IDENTITY_CONFIG(e, t), body: n, rejectWithError: !0 });
         },
     },
-    d = o,
-    c = (0, i.UT)(s.A, {
+    d = (0, i.UT)(s.A, {
         getQueryId: l.fic.USER_APPLICATION_IDENTITIES,
         get: (e) => s.A.getUserIdentities(e),
         load: (e) => o.fetchUserApplicationIdentitiesWithProfiles(e),
     });
+n.d(t, {}, { A: o, P: d });

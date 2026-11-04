@@ -1,13 +1,18 @@
-n.d(t, { A: () => s });
 var i = n(834757),
     l = n(562153),
-    a = n(105292);
-function s(e, t, n) {
-    let s = (0, i.AO)(n),
-        r = l.Ay.getName(e.getGuildId(), e.id, t);
-    return null == n
-        ? r
-        : s?.name != null
-          ? a.intl.formatToPlainString(a.t["9jpVOZ"], { applicationName: s?.name, username: r })
-          : a.intl.formatToPlainString(a.t["+h0Z59"], { username: r });
-}
+    a = n(792996);
+n.d(
+    t,
+    {},
+    {
+        A: function (e, t, n) {
+            let s = (0, i.AO)(n),
+                r = l.Ay.getName(e.getGuildId(), e.id, t);
+            return null == n
+                ? r
+                : s?.name != null
+                  ? a.intl.formatToPlainString(a.t["9jpVOZ"], { applicationName: s?.name, username: r })
+                  : a.intl.formatToPlainString(a.t["+h0Z59"], { username: r });
+        },
+    },
+);

@@ -1504,15 +1504,15 @@ var d = {
     d.createBoxCtor("avcC", function (t) {
         var e, i;
         for (
-            e = 0,
-                this.configurationVersion = t.readUint8(),
+            this.configurationVersion = t.readUint8(),
                 this.AVCProfileIndication = t.readUint8(),
                 this.profile_compatibility = t.readUint8(),
                 this.AVCLevelIndication = t.readUint8(),
                 this.lengthSizeMinusOne = 3 & t.readUint8(),
                 this.nb_SPS_nalus = 31 & t.readUint8(),
                 i = this.size - this.hdr_size - 6,
-                this.SPS = [];
+                this.SPS = [],
+                e = 0;
             e < this.nb_SPS_nalus;
             e++
         )
@@ -1898,11 +1898,11 @@ var d = {
     }),
     d.createFullBoxCtor("ipma", function (t) {
         var e, i;
-        for (e = 0, entry_count = t.readUint32(), this.associations = []; e < entry_count; e++) {
+        for (entry_count = t.readUint32(), this.associations = [], e = 0; e < entry_count; e++) {
             var s = {};
             (this.associations.push(s), this.version < 1 ? (s.id = t.readUint16()) : (s.id = t.readUint32()));
             var r = t.readUint8();
-            for (i = 0, s.props = []; i < r; i++) {
+            for (s.props = [], i = 0; i < r; i++) {
                 var n = t.readUint8(),
                     a = {};
                 (s.props.push(a),
@@ -2067,7 +2067,7 @@ var d = {
     }),
     d.createFullBoxCtor("pixi", function (t) {
         var e;
-        for (e = 0, this.num_channels = t.readUint8(), this.bits_per_channels = []; e < this.num_channels; e++)
+        for (this.num_channels = t.readUint8(), this.bits_per_channels = [], e = 0; e < this.num_channels; e++)
             this.bits_per_channels[e] = t.readUint8();
     }),
     d.createBoxCtor("pmax", function (t) {
@@ -2162,10 +2162,10 @@ var d = {
     d.createSampleGroupCtor("alst", function (t) {
         var e,
             i = t.readUint16();
-        for (e = 0, this.first_output_sample = t.readUint16(), this.sample_offset = []; e < i; e++)
+        for (this.first_output_sample = t.readUint16(), this.sample_offset = [], e = 0; e < i; e++)
             this.sample_offset[e] = t.readUint32();
         var s = this.description_length - 4 - 4 * i;
-        for (e = 0, this.num_output_samples = [], this.num_total_samples = []; e < s / 4; e++)
+        for (this.num_output_samples = [], this.num_total_samples = [], e = 0; e < s / 4; e++)
             ((this.num_output_samples[e] = t.readUint16()), (this.num_total_samples[e] = t.readUint16()));
     }),
     d.createSampleGroupCtor("avll", function (t) {
@@ -2431,7 +2431,7 @@ var d = {
     }),
     d.createFullBoxCtor("stsd", function (t) {
         var e, i, s, n;
-        for (e = 1, this.entries = [], s = t.readUint32(); e <= s; e++) {
+        for (this.entries = [], s = t.readUint32(), e = 1; e <= s; e++) {
             if ((i = d.parseOneBox(t, !0, this.size - (t.getPosition() - this.start))).code !== d.OK) return;
             (d[i.type + "SampleEntry"]
                 ? (((n = new d[i.type + "SampleEntry"](i.size)).hdr_size = i.hdr_size), (n.start = i.start))
@@ -2469,13 +2469,13 @@ var d = {
     d.createFullBoxCtor("stss", function (t) {
         var e, i;
         if (((i = t.readUint32()), 0 === this.version))
-            for (e = 0, this.sample_numbers = []; e < i; e++) this.sample_numbers.push(t.readUint32());
+            for (this.sample_numbers = [], e = 0; e < i; e++) this.sample_numbers.push(t.readUint32());
     }),
     d.createFullBoxCtor("stsz", function (t) {
         var e;
         if (((this.sample_sizes = []), 0 === this.version))
             for (
-                e = 0, this.sample_size = t.readUint32(), this.sample_count = t.readUint32();
+                this.sample_size = t.readUint32(), this.sample_count = t.readUint32(), e = 0;
                 e < this.sample_count;
                 e++
             )
@@ -2532,7 +2532,7 @@ var d = {
             else r.error("BoxParser", "Error in length field in stz2 box");
     }),
     d.createFullBoxCtor("subs", function (t) {
-        for (e = 0, s = t.readUint32(), this.entries = []; e < s; e++) {
+        for (s = t.readUint32(), this.entries = [], e = 0; e < s; e++) {
             var e,
                 i,
                 s,
@@ -3017,7 +3017,7 @@ var d = {
                         r,
                         n = [];
                     for (
-                        s = 0, i = (this.vvcC.ptl_frame_only_constraint << 7) | (this.vvcC.ptl_multilayer_enabled << 6);
+                        i = (this.vvcC.ptl_frame_only_constraint << 7) | (this.vvcC.ptl_multilayer_enabled << 6), s = 0;
                         s < this.vvcC.general_constraint_info.length;
                         ++s
                     )
@@ -3112,7 +3112,7 @@ var d = {
     }),
     (d.avcCBox.prototype.write = function (t) {
         var e;
-        for (e = 0, this.size = 7; e < this.SPS.length; e++) this.size += 2 + this.SPS[e].length;
+        for (this.size = 7, e = 0; e < this.SPS.length; e++) this.size += 2 + this.SPS[e].length;
         for (e = 0; e < this.PPS.length; e++) this.size += 2 + this.PPS[e].length;
         for (
             this.ext && (this.size += this.ext.length),
@@ -3374,7 +3374,7 @@ var d = {
     }),
     (d.sgpdBox.prototype.write = function (t) {
         var e, i;
-        for (e = 0, this.flags = 0, this.size = 12; e < this.entries.length; e++)
+        for (this.flags = 0, this.size = 12, e = 0; e < this.entries.length; e++)
             ((i = this.entries[e]),
                 1 === this.version && (0 === this.default_length && (this.size += 4), (this.size += i.data.length)));
         for (
@@ -4183,7 +4183,7 @@ var u = function (t) {
                         " needs a buffer with a fileStart position of " +
                         o.offset,
                 ),
-                o.offset === 1 / 0
+                1 / 0 === o.offset
                     ? (o = { offset: this.nextParsePosition, time: 0 })
                     : (o.offset = this.stream.getEndFilePositionAfter(o.offset)),
                 r.info("ISOFile", "Adjusted seek position (after checking data already in buffer): " + o.offset),
@@ -4467,7 +4467,7 @@ var u = function (t) {
     (u.prototype.samplesDataSize = 0),
     (u.prototype.resetTables = function () {
         for (
-            t = 0, this.initial_duration = this.moov.mvhd.duration, this.moov.mvhd.duration = 0;
+            this.initial_duration = this.moov.mvhd.duration, this.moov.mvhd.duration = 0, t = 0;
             t < this.moov.traks.length;
             t++
         ) {
@@ -4946,7 +4946,7 @@ var u = function (t) {
                         case 2:
                             r.warn("Item storage with construction_method : not supported");
                     }
-                    for (e = 0, i.extents = [], i.size = 0; e < a.extents.length; e++)
+                    for (i.extents = [], i.size = 0, e = 0; e < a.extents.length; e++)
                         ((i.extents[e] = {}),
                             (i.extents[e].offset = a.extents[e].extent_offset + a.base_offset),
                             (i.extents[e].length = a.extents[e].extent_length),

@@ -1,8 +1,8 @@
-c.exports = {
-    mp: "feedback__4c857",
-    NC: "buttonsContainer__4c857",
-    eH: "buttonsBackground__4c857",
-    r9: "disabled__4c857",
-    QT: "buttonsBackgroundActive__4c857",
-    LM: "buttonsBackgroundInactive__4c857",
+t.exports = {
+    mp: "feedback_WSbj-l",
+    NC: "buttonsContainer_WSbj-l",
+    eH: "buttonsBackground_WSbj-l",
+    r9: "disabled_WSbj-l",
+    QT: "buttonsBackgroundActive_WSbj-l",
+    LM: "buttonsBackgroundInactive_WSbj-l",
 };

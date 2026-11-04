@@ -1,38 +1,13 @@
-(n.d(t, { D2: () => o, M: () => d, WL: () => c }), n(323874), n(14289), n(35956));
-var i = n(636537),
-    r = n(280450),
+(n(323874), n(14289), n(35956));
+var i = n(620632),
+    r = n(46653),
     a = n(956518),
     s = n(652215);
 let l = new Map();
-async function o(e, t, n, i) {
-    if (null != i) return _(e, t, n, i);
-    let r = u(e, t, n),
-        a = l.get(r);
-    if ((l.delete(r), null != a && a.expiresAt > Date.now()))
-        try {
-            let e = await a.ticket;
-            if (null != e) return e;
-        } catch {}
-    return _(e, t, n);
-}
-function d(e, t, n) {
-    let i = u(e, t, n),
-        r = l.get(i);
-    if (null != r && r.expiresAt > Date.now()) return;
-    let a = _(e, t, n),
-        s = { ticket: a, expiresAt: Date.now() + 6e4 };
-    (l.set(i, s),
-        a.catch(() => {
-            l.get(i) === s && l.delete(i);
-        }));
-}
-function c(e, t, n, i) {
-    l.set(u(t, n, i), { ticket: Promise.resolve(e), expiresAt: Date.now() + 6e4 });
-}
-function u(e, t, n) {
+function o(e, t, n) {
     return [r.default.getId(), e, t ?? "", n ?? ""].join(":");
 }
-async function _(e, t, n, r) {
+async function d(e, t, n, r) {
     var l = e;
     let o = (0, a.Ay)(l);
     if (null != o)
@@ -51,3 +26,34 @@ async function _(e, t, n, r) {
         (await i.Bo.post({ url: s.Rsh.APPLICATION_PROXY_TICKET(e), body: d, rejectWithError: !0 })).body.ticket
     );
 }
+n.d(
+    t,
+    {},
+    {
+        D2: async function (e, t, n, i) {
+            if (null != i) return d(e, t, n, i);
+            let r = o(e, t, n),
+                a = l.get(r);
+            if ((l.delete(r), null != a && a.expiresAt > Date.now()))
+                try {
+                    let e = await a.ticket;
+                    if (null != e) return e;
+                } catch {}
+            return d(e, t, n);
+        },
+        M: function (e, t, n) {
+            let i = o(e, t, n),
+                r = l.get(i);
+            if (null != r && r.expiresAt > Date.now()) return;
+            let a = d(e, t, n),
+                s = { ticket: a, expiresAt: Date.now() + 6e4 };
+            (l.set(i, s),
+                a.catch(() => {
+                    l.get(i) === s && l.delete(i);
+                }));
+        },
+        WL: function (e, t, n, i) {
+            l.set(o(t, n, i), { ticket: Promise.resolve(e), expiresAt: Date.now() + 6e4 });
+        },
+    },
+);

@@ -1,0 +1,48 @@
+.layout_xKsXVs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-24);
+    padding: var(--space-16)
+}
+
+.frame_xKsXVs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.narrow_xKsXVs {
+    width: 380px
+}
+
+.wide_xKsXVs {
+    width: 685px
+}
+
+.layout_LiMjrt {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-24);
+    padding: var(--space-16)
+}
+
+.frame_LiMjrt {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.wide_LiMjrt {
+    width: 685px
+}
+
+.narrow_LiMjrt {
+    width: 380px
+}
+
+.minimum_LiMjrt {
+    width: 320px
+}
+
+/*# sourceMappingURL=98c2a338e39f6f31.css.map*/

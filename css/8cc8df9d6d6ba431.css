@@ -1,0 +1,42 @@
+.modal_XAorGN {
+    width: 450px
+}
+
+.modalSection_XAorGN {
+    display: flex;
+    flex-direction: column
+}
+
+.modalInner_XAorGN {
+    padding-bottom: 20px
+}
+
+.header_XAorGN img {
+    vertical-align: bottom
+}
+
+.divider_XAorGN {
+    margin-top: 20px
+}
+
+.divider_XAorGN,
+.sectionBody_XAorGN {
+    margin-bottom: 20px
+}
+
+.phoneNumber_XAorGN {
+    font-weight: var(--font-weight-semibold);
+    padding-inline-end: 4px
+}
+
+.linkButton_XAorGN {
+    font-size: 16px;
+    padding-inline-start: 0
+}
+
+.sectionBody_XAorGN,
+.subHeader_XAorGN {
+    color: var(--text-muted)
+}
+
+/*# sourceMappingURL=8cc8df9d6d6ba431.css.map*/

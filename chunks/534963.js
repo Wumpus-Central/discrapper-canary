@@ -1,15 +1,20 @@
-l.d(t, { A: () => o });
-var n = l(636537),
+var n = l(620632),
     i = l(73153),
     r = l(652215);
-let o = {
-    fetchRegions(e) {
-        n.Bo.get({ url: r.Rsh.REGIONS(e), retries: 1, oldFormErrors: !0, rejectWithError: !0 }).then(
-            (t) => i.h.dispatch({ type: "LOAD_REGIONS", regions: t.body, guildId: e }),
-            () => i.h.dispatch({ type: "LOAD_REGIONS", regions: [], guildId: e }),
-        );
+l.d(
+    t,
+    {},
+    {
+        A: {
+            fetchRegions(e) {
+                n.Bo.get({ url: r.Rsh.REGIONS(e), retries: 1, oldFormErrors: !0, rejectWithError: !0 }).then(
+                    (t) => i.h.dispatch({ type: "LOAD_REGIONS", regions: t.body, guildId: e }),
+                    () => i.h.dispatch({ type: "LOAD_REGIONS", regions: [], guildId: e }),
+                );
+            },
+            changeCallRegion(e, t) {
+                n.Bo.patch({ url: r.Rsh.CALL(e), body: { region: t }, oldFormErrors: !0, rejectWithError: !0 });
+            },
+        },
     },
-    changeCallRegion(e, t) {
-        n.Bo.patch({ url: r.Rsh.CALL(e), body: { region: t }, oldFormErrors: !0, rejectWithError: !0 });
-    },
-};
+);

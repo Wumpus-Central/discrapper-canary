@@ -1,0 +1,299 @@
+.clickable__axdQh {
+    border-radius: var(--radius-round);
+    padding: var(--space-8)
+}
+
+.container__axdQh {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-8)
+}
+
+:root {
+    --custom-app-launcher-sticky-header-height: 66px;
+    --custom-app-launcher-container-border-radius: var(--radius-sm)
+}
+
+.stickyContainer_6GE03- {
+    position: sticky;
+    top: 0;
+    z-index: 1
+}
+
+.stickyBannerContainer_6GE03- {
+    height: 0
+}
+
+.stickyBanner_6GE03- {
+    flex-shrink: 0;
+    height: var(--custom-app-launcher-sticky-header-height)
+}
+
+.bannerBackground_6GE03- {
+    flex-shrink: 0;
+    height: 106px
+}
+
+.backButtonContainer_6GE03- {
+    inset-inline-start: var(--space-16)
+}
+
+.backButtonContainer_6GE03-,
+.moreMenuButtonContainer_6GE03- {
+    cursor: pointer;
+    position: absolute;
+    top: var(--space-16);
+    z-index: 1
+}
+
+.moreMenuButtonContainer_6GE03- {
+    inset-inline-end: var(--space-16)
+}
+
+.headerButton_6GE03- {
+    align-items: center;
+    background-color: color-mix(in oklab, var(--background-surface-highest) 50%, transparent);
+    display: flex;
+    justify-content: center
+}
+
+.headerButton_6GE03-:hover,
+.keyboard-mode .headerButton_6GE03-:focus {
+    background-color: color-mix(in oklab, var(--background-mod-muted) 40%, color-mix(in oklab, var(--background-surface-highest) 50%, transparent))
+}
+
+.headerButton_6GE03-:active {
+    background-color: color-mix(in oklab, var(--background-mod-muted) 60%, color-mix(in oklab, var(--background-surface-highest) 50%, transparent))
+}
+
+.nameContainer_6GE03- {
+    align-content: center;
+    height: var(--custom-app-launcher-sticky-header-height);
+    inset-inline-start: 0;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.textApplicationName_6GE03- {
+    opacity: 0;
+    text-align: center
+}
+
+.container_LnpMRH {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 16px 16px;
+    grid-gap: 16px
+}
+
+.activityUrlOverride_LnpMRH {
+    margin-top: 16px
+}
+
+.searchBar_LnpMRH {
+    padding: 8px
+}
+
+.container_7S4FFm,
+.monetizationDisclosureContainerStyle_7S4FFm {
+    --custom-disclosure-spacing: var(--space-12)
+}
+
+.container_7S4FFm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--custom-disclosure-spacing);
+    padding-inline: var(--space-16)
+}
+
+.videoContainer_7S4FFm {
+    position: relative
+}
+
+.videoCover_7S4FFm {
+    aspect-ratio: 16/9;
+    border-start-end-radius: var(--radius-sm);
+    border-start-start-radius: var(--radius-sm);
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.video_7S4FFm {
+    animation: fadeIn_7S4FFm .5s;
+    position: absolute
+}
+
+@keyframes fadeIn_7S4FFm {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.overviewContainerWithVideo_7S4FFm {
+    background-color: var(--background-base-low);
+    border-end-end-radius: var(--radius-sm);
+    border-end-start-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: var(--space-12)
+}
+
+.tabBar_7S4FFm {
+    height: 29px
+}
+
+.tabBar_7S4FFm .tabItem_7S4FFm {
+    font-weight: 500;
+    line-height: 18px
+}
+
+.overviewContainerNoVideo_7S4FFm {
+    background-color: var(--background-base-low);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: var(--space-12)
+}
+
+.titleContainer_7S4FFm {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-8)
+}
+
+.partnerLabelContainer_7S4FFm {
+    background-color: var(--interactive-background-active);
+    border-radius: var(--radius-lg);
+    justify-content: center;
+    padding: 2px var(--space-8)
+}
+
+.tagsContainer_7S4FFm {
+    flex-wrap: wrap;
+    max-height: 24px;
+    overflow: hidden
+}
+
+.tagContainer_7S4FFm,
+.tagsContainer_7S4FFm {
+    display: flex;
+    gap: var(--space-4)
+}
+
+.tagContainer_7S4FFm {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: var(--space-4);
+    flex-direction: row;
+    padding: 2px var(--space-4)
+}
+
+.descriptionContainer_7S4FFm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4)
+}
+
+.primaryEntryPointWarningMessage_7S4FFm {
+    margin-top: 4px
+}
+
+.entrypointContainer_7S4FFm {
+    display: flex;
+    gap: 8px;
+    height: 48px;
+    margin-top: var(--space-12)
+}
+
+.developerShelfControlsContainer_7S4FFm+.entrypointContainer_7S4FFm {
+    margin-top: var(--space-4)
+}
+
+.experimentTitleContainer_7S4FFm {
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.expandableDescriptionClickable_7S4FFm {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4)
+}
+
+.overflowHidden_7S4FFm {
+    overflow: hidden
+}
+
+.developerShelfControlsContainer_7S4FFm {
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 12px
+}
+
+.developerShelfControlsContainer_7S4FFm:not(:last-child) {
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 12px
+}
+
+.developerShelfControls_7S4FFm {
+    padding: 0
+}
+
+.monetizationDisclosureContainerStyle_7S4FFm {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--custom-disclosure-spacing);
+    margin-bottom: 16.75px
+}
+
+.monetizationDisclosureStyle_7S4FFm {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4)
+}
+
+.container_7S4FFm.fixedHeight_7S4FFm {
+    height: 100%
+}
+
+:root {
+    --custom-app-launcher-sticky-header-height: 66px;
+    --custom-app-launcher-container-border-radius: var(--radius-sm)
+}
+
+.container_46XT_r {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto
+}
+
+.appIcon_46XT_r,
+.container_46XT_r {
+    background-color: var(--background-base-lower)
+}
+
+.appIcon_46XT_r {
+    border: var(--space-4) solid var(--background-base-lower);
+    border-radius: var(--radius-xl);
+    height: 80px;
+    inset-inline-start: var(--space-12);
+    position: absolute;
+    top: 0;
+    transform: translateY(var(--custom-app-launcher-sticky-header-height));
+    width: 80px
+}
+
+/*# sourceMappingURL=8b8ff88ebbd04f1f.css.map*/

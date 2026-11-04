@@ -1,8 +1,7 @@
-i.d(e, { default: () => W });
 var d = i(477900);
 i(582128);
-var l = i(17928),
-    r = i(980707),
+var l = i(855986),
+    r = i(165862),
     s = i(477782),
     t = i(442433),
     A = i(820284),
@@ -12,15 +11,15 @@ var l = i(17928),
     u = i(688810),
     h = i(810845),
     x = i(854182),
-    j = i(422229),
+    j = i(575079),
     C = i(855187),
     E = i(479335),
     U = i(50268),
     I = i(708645),
-    N = i(630821),
+    N = i(414636),
     X = i(346247),
     g = i(235052),
-    _ = i(844065),
+    _ = i(106401),
     T = i(237749),
     p = i(734057),
     M = i(309010),
@@ -28,9 +27,9 @@ var l = i(17928),
     y = i(29293),
     G = i(497600),
     m = i(291247),
-    L = i(646911),
+    L = i(173500),
     S = i(239211),
-    k = i(373397),
+    k = i(949674),
     v = i(984894),
     f = i(399476),
     w = i(889460),
@@ -44,7 +43,7 @@ var l = i(17928),
     q = i(972432),
     B = i(77544),
     F = i(652215),
-    P = i(105292);
+    P = i(792996);
 function V(n) {
     let {
             user: e,
@@ -142,22 +141,28 @@ function V(n) {
         ],
     });
 }
-function W(n) {
-    let { analyticsLocations: e } = (0, u.Ay)(
-        n.analyticsLocations ?? [],
-        o.A.GUILD_CHANNEL_USER_MENU,
-        o.A.CONTEXT_MENU,
-    );
-    return (0, d.jsx)(u.f5, {
-        value: e,
-        children: (0, d.jsx)(A.A, {
-            object: F.ZSU.CONTEXT_MENU,
-            children: (0, d.jsx)(I.ZQ, {
-                user: n.user,
-                guildId: n.guildId,
-                location: "GuildChannelUserContextMenu",
-                children: (0, d.jsx)(V, { ...n }),
-            }),
-        }),
-    });
-}
+i.d(
+    e,
+    {},
+    {
+        default: function (n) {
+            let { analyticsLocations: e } = (0, u.Ay)(
+                n.analyticsLocations ?? [],
+                o.A.GUILD_CHANNEL_USER_MENU,
+                o.A.CONTEXT_MENU,
+            );
+            return (0, d.jsx)(u.f5, {
+                value: e,
+                children: (0, d.jsx)(A.A, {
+                    object: F.ZSU.CONTEXT_MENU,
+                    children: (0, d.jsx)(I.ZQ, {
+                        user: n.user,
+                        guildId: n.guildId,
+                        location: "GuildChannelUserContextMenu",
+                        children: (0, d.jsx)(V, { ...n }),
+                    }),
+                }),
+            });
+        },
+    },
+);

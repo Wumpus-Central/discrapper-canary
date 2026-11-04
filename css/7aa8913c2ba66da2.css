@@ -1,0 +1,31 @@
+.privacyLevel_1dazMn {
+    align-items: baseline;
+    display: inline-flex;
+    margin: 0 3px
+}
+
+.publicIcon_1dazMn {
+    align-self: center;
+    margin-inline-end: 4px
+}
+
+.verticalSpacing_1dazMn {
+    margin-top: 16px
+}
+
+.errorMessage_1dazMn {
+    margin-top: 8px
+}
+
+.notificationToggle_1dazMn {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.ageVerificationNotice_1dazMn {
+    margin-top: 16px
+}
+
+/*# sourceMappingURL=7aa8913c2ba66da2.css.map*/

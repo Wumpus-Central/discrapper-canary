@@ -1,34 +1,32 @@
-@value transitionDuration 200ms;
-
-div.modalRoot {
+div.modalRoot_1FzWi5 {
     border-radius: 12px;
     position: relative
 }
 
-div.modalHeader_c28af8 {
+div.modalHeader_1FzWi5 {
     overflow-x: visible
 }
 
-.closeBtn_c28af8 {
+.closeBtn_1FzWi5 {
     inset-inline-end: 12px;
     position: absolute;
     top: 12px
 }
 
-.asset_c28af8 {
+.asset_1FzWi5 {
     height: auto;
     margin-bottom: 24px;
     width: 205px
 }
 
-.modalContent_c28af8 {
+.modalContent_1FzWi5 {
     display: flex;
     flex-direction: column;
     gap: 6px;
     padding: 0 16px 24px
 }
 
-.completedModalContent_c28af8 {
+.completedModalContent_1FzWi5 {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -36,7 +34,7 @@ div.modalHeader_c28af8 {
     padding: 16px 24px
 }
 
-.choiceContainer_c28af8 {
+.choiceContainer_1FzWi5 {
     align-items: center;
     background-color: var(--background-base-lower);
     border: 1px solid var(--border-muted);
@@ -48,21 +46,21 @@ div.modalHeader_c28af8 {
     padding: 12px
 }
 
-.full-motion .choiceContainer_c28af8 {
+.full-motion .choiceContainer_1FzWi5 {
     transition: background-color .2s ease-in-out
 }
 
-.choiceContainer_c28af8:hover {
+.choiceContainer_1FzWi5:hover {
     background-color: var(--message-background-hover)
 }
 
-.closeButtonContainer_c28af8 {
+.closeButtonContainer_1FzWi5 {
     border-radius: 3px;
     overflow: hidden;
     position: relative
 }
 
-.progressOverlay_c28af8 {
+.progressOverlay_1FzWi5 {
     background-color: var(--background-base-lower);
     inset: 0;
     opacity: .2;
@@ -71,8 +69,8 @@ div.modalHeader_c28af8 {
     z-index: 10
 }
 
-.modalHeader_c28af8 {
+.modalHeader_1FzWi5 {
     padding-bottom: 12px
 }
 
-/*# sourceMappingURL=634225.593926b6c702ab88.css.map*/
+/*# sourceMappingURL=634225.83d0f69f0f0b39ff.css.map*/

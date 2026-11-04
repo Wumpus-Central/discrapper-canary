@@ -1,8 +1,8 @@
 e.exports = {
-    eZ: "openPageButton__3c9fa",
-    xu: "accentColorContainer__3c9fa",
-    pB: "buttonPreview__3c9fa",
-    jP: "hideColorButtons__3c9fa",
-    se: "contentRegion__3c9fa",
-    r9: "disabled__3c9fa",
+    eZ: "openPageButton_By9xSt",
+    xu: "accentColorContainer_By9xSt",
+    pB: "buttonPreview_By9xSt",
+    jP: "hideColorButtons_By9xSt",
+    se: "contentRegion_By9xSt",
+    r9: "disabled_By9xSt",
 };

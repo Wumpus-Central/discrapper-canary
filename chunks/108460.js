@@ -1,9 +1,8 @@
-t.d(n, { A: () => h });
 var i = t(477900),
     l = t(582128),
     s = t(503698),
     a = t.n(s),
-    r = t(132500),
+    r = t(115560),
     o = t(863610),
     c = t(534890),
     d = t(315502),
@@ -38,16 +37,22 @@ function A(e) {
         ],
     });
 }
-function h(e) {
-    let { className: n, unreadCount: t, mentionCount: l, isTyping: s, canBadge: r } = e,
-        o = null != l && l > 0,
-        c = (o ? l : t) ?? 0,
-        h = r && null != t && t > 0;
-    return (0, i.jsxs)("div", {
-        className: a()(u.Or, n),
-        children: [
-            (0, i.jsx)(A, { isBadged: h, isTyping: s }),
-            h && (0, i.jsx)(d.A, { hasMentions: o, truncatedCount: c > 99 ? "99+" : c, className: u.qS }),
-        ],
-    });
-}
+t.d(
+    n,
+    {},
+    {
+        A: function (e) {
+            let { className: n, unreadCount: t, mentionCount: l, isTyping: s, canBadge: r } = e,
+                o = null != l && l > 0,
+                c = (o ? l : t) ?? 0,
+                h = r && null != t && t > 0;
+            return (0, i.jsxs)("div", {
+                className: a()(u.Or, n),
+                children: [
+                    (0, i.jsx)(A, { isBadged: h, isTyping: s }),
+                    h && (0, i.jsx)(d.A, { hasMentions: o, truncatedCount: c > 99 ? "99+" : c, className: u.qS }),
+                ],
+            });
+        },
+    },
+);

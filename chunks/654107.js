@@ -1,18 +1,14 @@
-n.d(t, { Ay: () => f, D1: () => h, l0: () => E, rh: () => I });
 var i = n(582128),
     r = n(440745),
     a = n.n(r),
     s = n(196765),
     l = n(121894),
-    o = n(17928),
+    o = n(855986),
     d = n(775602),
     c = n(998304),
     u = n(515718);
 let _ = (0, s.v)(() => ({ palette: {}, fetching: {} }));
 async function E(e) {
-    null == _.getState().palette[e] && (await A(e));
-}
-async function A(e) {
     if (!_.getState().fetching[e]) {
         (0, l.r)(() => _.setState((t) => ({ fetching: { ...t.fetching, [e]: !0 } })));
         try {
@@ -29,21 +25,13 @@ async function A(e) {
         }
     }
 }
-function h(e) {
-    return !_((t) => null != e && t.fetching[e]);
-}
-function f(e, t) {
-    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        [i] = I(e, t, n);
-    return i;
-}
-function I(e, t) {
+function A(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         r = _((t) => (null == e ? void 0 : t.palette[e])),
         s = (0, o.bG)([d.Ay], () => (n && d.Ay.desaturateUserColors ? d.Ay.saturation : 1));
     return (
         i.useEffect(() => {
-            null != e && null == r && A(e);
+            null != e && null == r && E(e);
         }, [e, r]),
         i.useMemo(
             () =>
@@ -56,3 +44,21 @@ function I(e, t) {
         ) ?? [t, t]
     );
 }
+n.d(
+    t,
+    {},
+    {
+        Ay: function (e, t) {
+            let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+                [i] = A(e, t, n);
+            return i;
+        },
+        D1: function (e) {
+            return !_((t) => null != e && t.fetching[e]);
+        },
+        l0: async function (e) {
+            null == _.getState().palette[e] && (await E(e));
+        },
+        rh: A,
+    },
+);

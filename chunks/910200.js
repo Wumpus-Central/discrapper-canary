@@ -1,4 +1,3 @@
-n.d(t, { Ay: () => h, O0: () => f });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -62,8 +61,17 @@ function C(e) {
         ...n,
     });
 }
-function f(e) {
-    let { text: t, endDatetime: n, ...i } = e,
-        r = (0, m.dA)(n);
-    return null != n && null == r ? null : (0, l.jsx)(C, { text: t, trailingText: null != r ? r : void 0, ...i });
-}
+n.d(
+    t,
+    {},
+    {
+        Ay: h,
+        O0: function (e) {
+            let { text: t, endDatetime: n, ...i } = e,
+                r = (0, m.dA)(n);
+            return null != n && null == r
+                ? null
+                : (0, l.jsx)(C, { text: t, trailingText: null != r ? r : void 0, ...i });
+        },
+    },
+);

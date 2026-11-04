@@ -1,4 +1,3 @@
-n.d(t, { A: () => u, J: () => c });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -37,21 +36,28 @@ function u(e) {
         ],
     });
 }
-function c(e) {
-    let {
-        text: t,
-        gradientColor: n,
-        Icon: i = a.TagIcon,
-        iconSize: c,
-        customGraphic: d,
-        className: m,
-        textVariant: p = "body-sm/medium",
-        textColor: h = "currentColor",
-    } = e;
-    return (0, l.jsx)(u, {
-        className: r()(o.Cu, m),
-        gradientColor: n,
-        ...(null != d ? { customGraphic: d } : { Icon: i, iconSize: c }),
-        children: (0, l.jsx)(s.E, { variant: p, color: h, className: o.Ct, children: t }),
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        A: u,
+        J: function (e) {
+            let {
+                text: t,
+                gradientColor: n,
+                Icon: i = a.TagIcon,
+                iconSize: c,
+                customGraphic: d,
+                className: m,
+                textVariant: p = "body-sm/medium",
+                textColor: h = "currentColor",
+            } = e;
+            return (0, l.jsx)(u, {
+                className: r()(o.Cu, m),
+                gradientColor: n,
+                ...(null != d ? { customGraphic: d } : { Icon: i, iconSize: c }),
+                children: (0, l.jsx)(s.E, { variant: p, color: h, className: o.Ct, children: t }),
+            });
+        },
+    },
+);

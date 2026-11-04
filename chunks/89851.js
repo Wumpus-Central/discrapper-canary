@@ -1,9 +1,9 @@
 e.exports = {
-    Os: "group__96e81",
-    Pf: "label__96e81",
-    r9: "disabled__96e81",
-    gJ: "errorMessage__96e81",
-    DV: "labelHeading__96e81",
-    ot: "labelBadge__96e81",
-    IX: "labelIcon__96e81",
+    Os: "group_Z5MObs",
+    Pf: "label_Z5MObs",
+    r9: "disabled_Z5MObs",
+    gJ: "errorMessage_Z5MObs",
+    DV: "labelHeading_Z5MObs",
+    ot: "labelBadge_Z5MObs",
+    IX: "labelIcon_Z5MObs",
 };

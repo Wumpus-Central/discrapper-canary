@@ -1,14 +1,14 @@
-.premiumTooltipFooterBackground__7d7fe {
+.premiumTooltipFooterBackground_8UhZYO {
     background: linear-gradient(90deg, #b473f5, #e292aa);
     width: "100%"
 }
 
-.tooltipBodyContainer__7d7fe {
+.tooltipBodyContainer_8UhZYO {
     padding: 8px 12px;
     text-align: center
 }
 
-.tooltipPremiumFooterContainer__7d7fe {
+.tooltipPremiumFooterContainer_8UhZYO {
     align-items: center;
     background: linear-gradient(90deg, #b473f5, #e292aa);
     border-radius: 0 0 5px 5px;
@@ -17,16 +17,16 @@
     justify-content: center
 }
 
-.tooltipRemovePadding__7d7fe {
+.tooltipRemovePadding_8UhZYO {
     padding: 0
 }
 
-.gemIcon__7d7fe {
+.gemIcon_8UhZYO {
     margin-top: 2px;
     margin-inline-start: -4px
 }
 
-.tooltipPremiumFooterSegment__7d7fe {
+.tooltipPremiumFooterSegment_8UhZYO {
     align-items: center;
     display: flex;
     flex-basis: 0;
@@ -36,13 +36,13 @@
     text-align: center
 }
 
-.tooltipPremiumFooterTierSegment__7d7fe {
+.tooltipPremiumFooterTierSegment_8UhZYO {
     border-inline-end: 1px solid;
     border-color: var(--background-surface-high)
 }
 
-.clanBadgeContainer__7d7fe img {
+.clanBadgeContainer_8UhZYO img {
     margin: 0
 }
 
-/*# sourceMappingURL=124054.c16d2582e307b7c4.css.map*/
+/*# sourceMappingURL=124054.cc236814c1ed7fc0.css.map*/

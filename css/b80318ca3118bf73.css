@@ -1,0 +1,61 @@
+.content_gm2kSr {
+    padding: 24px
+}
+
+.modalHeader_gm2kSr {
+    margin-bottom: 16px
+}
+
+.marginAfter_gm2kSr {
+    margin-bottom: 8px
+}
+
+.separator_gm2kSr {
+    background-color: var(--border-subtle);
+    height: 1px;
+    margin: 24px 0;
+    width: 100%
+}
+
+.failingBlock_gm2kSr {
+    margin-bottom: 24px
+}
+
+.closeButton_gm2kSr {
+    inset-inline-end: 12px;
+    position: absolute;
+    top: 12px
+}
+
+.progressWrapper_gm2kSr {
+    height: 8px;
+    margin: 16px 0 8px;
+    position: relative
+}
+
+.progressBackground_gm2kSr {
+    background-color: var(--background-base-lower);
+    width: 100%
+}
+
+.progressBackground_gm2kSr,
+.progressBar_gm2kSr {
+    border-radius: 4px;
+    height: 8px;
+    position: absolute
+}
+
+.progressBar_gm2kSr {
+    transition: background-color .2s ease
+}
+
+.labelWrapper_gm2kSr {
+    display: flex;
+    justify-content: space-between
+}
+
+.requirement_gm2kSr {
+    text-align: end
+}
+
+/*# sourceMappingURL=b80318ca3118bf73.css.map*/

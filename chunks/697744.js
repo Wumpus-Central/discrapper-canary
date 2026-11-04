@@ -1,28 +1,39 @@
-n.d(t, { c: () => a });
 var l = n(477900),
     i = n(582128),
     r = n(744682);
 let s = { hover: { name: "hover", start: 0, duration: 59 }, click: { name: "click", start: 68, duration: 26 } };
-function a() {
-    let e = i.useRef(null),
-        t = i.useCallback(() => {
-            null != e.current && e.current.play("click");
-        }, []),
-        a = i.useCallback(() => {
-            null != e.current && e.current.play("hover");
-        }, []),
-        o = i.useCallback(() => {
-            null != e.current && e.current.stopIfPlaying("hover");
-        }, []),
-        u = i.useCallback(
-            (t) => (0, l.jsx)(r.P, { ...t, src: () => n.e("57830").then(n.t.bind(n, 695941, 19)), ref: e, markers: s }),
-            [],
-        );
-    return {
-        events: { onMouseEnter: a, onMouseLeave: o },
-        play: t,
-        getDuration: i.useCallback(() => e.current?.getDuration(), []),
-        getCurrentFrame: i.useCallback(() => e.current?.getCurrentFrame() ?? null, []),
-        Component: u,
-    };
-}
+n.d(
+    t,
+    {},
+    {
+        c: function () {
+            let e = i.useRef(null),
+                t = i.useCallback(() => {
+                    null != e.current && e.current.play("click");
+                }, []),
+                a = i.useCallback(() => {
+                    null != e.current && e.current.play("hover");
+                }, []),
+                o = i.useCallback(() => {
+                    null != e.current && e.current.stopIfPlaying("hover");
+                }, []),
+                u = i.useCallback(
+                    (t) =>
+                        (0, l.jsx)(r.P, {
+                            ...t,
+                            src: () => n.e(57830).then(n.t.bind(n, 695941, 19)),
+                            ref: e,
+                            markers: s,
+                        }),
+                    [],
+                );
+            return {
+                events: { onMouseEnter: a, onMouseLeave: o },
+                play: t,
+                getDuration: i.useCallback(() => e.current?.getDuration(), []),
+                getCurrentFrame: i.useCallback(() => e.current?.getCurrentFrame() ?? null, []),
+                Component: u,
+            };
+        },
+    },
+);

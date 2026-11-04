@@ -1,5 +1,4 @@
-t.d(n, { A: () => o });
-var i = t(17928),
+var i = t(855986),
     l = t(73153),
     a = t(381941);
 let s = {};
@@ -16,3 +15,4 @@ let o = new r(l.h, {
             null != n.nonce && n.nonce !== n.id && n.nonce in s && delete s[n.nonce]);
     },
 });
+t.d(n, {}, { A: o });

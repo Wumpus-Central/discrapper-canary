@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => o, E8: () => l, vI: () => s }), n(321073));
+n(321073);
 var i = n(435558),
     r = n.n(i);
 let a = new (n(626584).A)("DragAndDropUtils");
@@ -25,20 +25,28 @@ function l(e, t, n) {
         r = [...e];
     return (r.splice(t, 1), r.splice(n, 0, i), r);
 }
-let o = {
-    moveItemFromTo: l,
-    calculatePositionDeltas: s,
-    getPositionUpdates: function (e) {
-        let {
-            objectArray: t,
-            fromPosition: n,
-            toPosition: i,
-            idGetter: a,
-            existingPositionGetter: o,
-            ascending: d = !0,
-        } = e;
-        Array.isArray(t) || (t = r().values(t));
-        let c = l(t, n, i);
-        return s({ oldOrdering: t, newOrdering: c, idGetter: a, existingPositionGetter: o, ascending: d });
+n.d(
+    t,
+    {},
+    {
+        Ay: {
+            moveItemFromTo: l,
+            calculatePositionDeltas: s,
+            getPositionUpdates: function (e) {
+                let {
+                    objectArray: t,
+                    fromPosition: n,
+                    toPosition: i,
+                    idGetter: a,
+                    existingPositionGetter: o,
+                    ascending: d = !0,
+                } = e;
+                Array.isArray(t) || (t = r().values(t));
+                let c = l(t, n, i);
+                return s({ oldOrdering: t, newOrdering: c, idGetter: a, existingPositionGetter: o, ascending: d });
+            },
+        },
+        E8: l,
+        vI: s,
     },
-};
+);

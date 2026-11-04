@@ -1,7 +1,7 @@
 e.exports = {
-    jf: "statusRow__7f08d",
-    Xx: "activityBar__7f08d",
-    XF: "connStatus__7f08d",
-    BP: "runeCounter__7f08d",
-    A1: "queuedCounter__7f08d",
+    jf: "statusRow_o2jgDU",
+    Xx: "activityBar_o2jgDU",
+    XF: "connStatus_o2jgDU",
+    BP: "runeCounter_o2jgDU",
+    A1: "queuedCounter_o2jgDU",
 };

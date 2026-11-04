@@ -1,10 +1,9 @@
-n.d(t, { x: () => A });
 var i = n(687966),
     l = n(797421),
     a = n(197284),
     s = n(435271),
     r = n(406810),
-    o = n(618922),
+    o = n(687782),
     d = n(311582),
     c = n(535522),
     u = n(460625),
@@ -25,3 +24,4 @@ let A = [
     { id: 2, label: o.default.WsrDmY, userLabel: o.default.WLBG6w, icon: s.BookIcon, src: h.A, avatarClassName: d.m },
     { id: 3, label: o.default.kEnnV1, userLabel: o.default.Iq4IWe, icon: r.ClockIcon, src: c.A, avatarClassName: d.X },
 ];
+n.d(t, {}, { x: A });

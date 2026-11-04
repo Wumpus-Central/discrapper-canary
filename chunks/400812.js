@@ -1,4 +1,3 @@
-n.d(e, { Hy: () => s, kd: () => r, mj: () => a, ql: () => o, ti: () => d });
 var i,
     l,
     s =
@@ -22,17 +21,27 @@ var a =
     (l[(l.EDIT_CONNECTIONS = 6)] = "EDIT_CONNECTIONS"),
     l);
 let d = r.filter((t) => 0 !== t);
-function o(t) {
-    switch (t) {
-        case 1:
-            return "Safety Check";
-        case 2:
-            return "Default Channels";
-        case 4:
-            return "Customization Questions";
-        case 6:
-            return "Home Settings";
-        default:
-            return null;
-    }
-}
+n.d(
+    e,
+    {},
+    {
+        Hy: s,
+        kd: r,
+        mj: a,
+        ql: function (t) {
+            switch (t) {
+                case 1:
+                    return "Safety Check";
+                case 2:
+                    return "Default Channels";
+                case 4:
+                    return "Customization Questions";
+                case 6:
+                    return "Home Settings";
+                default:
+                    return null;
+            }
+        },
+        ti: d,
+    },
+);

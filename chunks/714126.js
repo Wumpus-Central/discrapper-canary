@@ -1,4 +1,3 @@
-n.d(e, { W: () => i });
 var s = n(477900),
     t = n(582128),
     c = n(834730),
@@ -21,3 +20,4 @@ class i extends t.PureComponent {
             : this.props.children;
     }
 }
+n.d(e, {}, { W: i });

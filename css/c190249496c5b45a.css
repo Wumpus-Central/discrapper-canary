@@ -1,0 +1,19 @@
+.modalContent_9A4zg9 {
+    align-items: left;
+    display: flex;
+    flex-direction: column
+}
+
+.avatarContainer_9A4zg9 {
+    align-self: center;
+    margin-bottom: var(--space-12)
+}
+
+.avatar_9A4zg9,
+.avatarContainer_9A4zg9 {
+    border-radius: var(--radius-round);
+    height: 120px;
+    width: 120px
+}
+
+/*# sourceMappingURL=c190249496c5b45a.css.map*/

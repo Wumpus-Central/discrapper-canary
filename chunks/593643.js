@@ -1,4 +1,3 @@
-n.d(t, { D8: () => s, _U: () => a });
 var i = n(600975),
     r = n(688151);
 let a = (0, i.C)({
@@ -12,7 +11,14 @@ let a = (0, i.C)({
         { id: 1, label: "Show voice badges", config: { enabled: !0 } },
     ],
 });
-function s(e) {
-    let { guildId: t, location: n } = e;
-    return a.useExperiment({ guildId: t, location: n }, { autoTrackExposure: !0 });
-}
+n.d(
+    t,
+    {},
+    {
+        D8: function (e) {
+            let { guildId: t, location: n } = e;
+            return a.useExperiment({ guildId: t, location: n }, { autoTrackExposure: !0 });
+        },
+        _U: a,
+    },
+);

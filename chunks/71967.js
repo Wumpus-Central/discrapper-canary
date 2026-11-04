@@ -1,10 +1,10 @@
 e.exports = {
-    kL: "container_ea79f0",
-    Qs: "content_ea79f0",
-    wx: "header_ea79f0",
-    h_: "description_ea79f0",
-    kR: "cards_ea79f0",
-    SO: "disabledActions_ea79f0",
-    Nr: "card_ea79f0",
-    JH: "changeKeybindButton_ea79f0",
+    kL: "container_qIIk0K",
+    Qs: "content_qIIk0K",
+    wx: "header_qIIk0K",
+    h_: "description_qIIk0K",
+    kR: "cards_qIIk0K",
+    SO: "disabledActions_qIIk0K",
+    Nr: "card_qIIk0K",
+    JH: "changeKeybindButton_qIIk0K",
 };

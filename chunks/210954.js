@@ -1,9 +1,8 @@
-n.d(t, { A: () => R });
 var i = n(477900);
 n(582128);
 var r = n(503698),
     a = n.n(r),
-    s = n(17928),
+    s = n(855986),
     l = n(793574),
     o = n(688810),
     d = n(429913),
@@ -14,7 +13,7 @@ var r = n(503698),
     A = n(334463),
     h = n(343030),
     f = n(91242),
-    I = n(317608),
+    I = n(11411),
     p = n(113192),
     m = n(165610),
     T = n(652215),
@@ -65,7 +64,13 @@ function O() {
         },
     });
 }
-let R = () => {
-    let { analyticsLocations: e } = (0, o.Ay)(l.A.FRAME_PIP);
-    return (0, i.jsx)(o.f5, { value: e, children: (0, i.jsx)(O, {}) });
-};
+n.d(
+    t,
+    {},
+    {
+        A: () => {
+            let { analyticsLocations: e } = (0, o.Ay)(l.A.FRAME_PIP);
+            return (0, i.jsx)(o.f5, { value: e, children: (0, i.jsx)(O, {}) });
+        },
+    },
+);

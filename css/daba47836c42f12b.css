@@ -1,0 +1,23 @@
+.applicationStore_6U3jXZ {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: var(--background-base-low)
+}
+
+.navigation_6U3jXZ {
+    margin: 40px 35px
+}
+
+.marketingHeader_6U3jXZ {
+    background-color: var(--primary-700)
+}
+
+.marketingFooter_6U3jXZ {
+    overflow: visible !important
+}
+
+/*# sourceMappingURL=daba47836c42f12b.css.map*/

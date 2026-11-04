@@ -1,0 +1,43 @@
+.container_urGCPP {
+    align-items: center;
+    background: var(--background-base-low);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%
+}
+
+.platform-linux .container_urGCPP,
+.platform-osx .container_urGCPP,
+.platform-win .container_urGCPP {
+    padding-top: var(--custom-app-top-bar-height)
+}
+
+.pageContainer_urGCPP {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    height: 100%;
+    max-width: 740px;
+    overflow: auto;
+    padding: var(--space-64) var(--space-40) var(--space-80);
+    width: 100%
+}
+
+.nagbar_urGCPP {
+    width: 100%
+}
+
+.helpMessageContent_urGCPP {
+    align-items: center;
+    display: flex;
+    justify-content: space-between
+}
+
+.clickableIcon_urGCPP {
+    cursor: pointer;
+    display: flex
+}
+
+/*# sourceMappingURL=391839dced060a99.css.map*/

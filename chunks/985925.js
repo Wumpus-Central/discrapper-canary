@@ -1,6 +1,5 @@
-l.d(t, { q: () => I, r: () => a });
 var n = l(136722),
-    r = l(17928),
+    r = l(855986),
     u = l(71393),
     d = l(287809),
     i = l(488926),
@@ -14,6 +13,13 @@ function a(e) {
     let I = r.getCurrentUser();
     return n.X8(i.cc({ user: I, context: a, checkElevated: !1 }), E.M);
 }
-function I(e) {
-    return (0, r.bG)([u.A, d.default], () => a(e, [u.A, d.default]), [e]);
-}
+l.d(
+    t,
+    {},
+    {
+        q: function (e) {
+            return (0, r.bG)([u.A, d.default], () => a(e, [u.A, d.default]), [e]);
+        },
+        r: a,
+    },
+);

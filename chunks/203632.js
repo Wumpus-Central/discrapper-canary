@@ -1,12 +1,8 @@
-n.d(t, { Ay: () => o, C3: () => l, HL: () => s });
 var i,
     r = n(575593),
     a = n(338535),
     s = (((i = {}).FromLoop = "fromLoop"), (i.FromStart = "fromStart"), i);
-function l(e) {
-    return e instanceof o;
-}
-class o extends a.A {
+class l extends a.A {
     title;
     description;
     accessibilityLabel;
@@ -28,6 +24,17 @@ class o extends a.A {
             (this.staticFrameSrc = e.staticFrameSrc));
     }
     static fromServer(e) {
-        return new o({ ...super.fromServer(e), ...e });
+        return new l({ ...super.fromServer(e), ...e });
     }
 }
+n.d(
+    t,
+    {},
+    {
+        Ay: l,
+        C3: function (e) {
+            return e instanceof l;
+        },
+        HL: s,
+    },
+);

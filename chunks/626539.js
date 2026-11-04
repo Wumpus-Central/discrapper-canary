@@ -1,13 +1,12 @@
-n.d(t, { A: () => d });
 var i = n(157559),
     r = n(723702),
-    a = n(19575),
-    s = n(187522),
+    a = n(253400),
+    s = n(691883),
     l = n(765682);
 class o extends s.V {
     nativeUtils = a.Ay.getDiscordUtils();
     get platformAlwaysPermits() {
-        return !!(0, r.isLinux)();
+        return !!(0, r.j9)();
     }
     static requestTypeLookup = {
         [l.iL.CAMERA]: a.kw.Camera,
@@ -41,7 +40,7 @@ class o extends s.V {
               );
     }
     openSettings(e) {
-        if ((0, r.isWindows)())
+        if ((0, r.uF)())
             switch (e) {
                 case l.iL.AUDIO:
                     window.open("ms-settings:privacy-microphone");
@@ -65,3 +64,4 @@ class o extends s.V {
     }
 }
 let d = new o();
+n.d(t, {}, { A: d });

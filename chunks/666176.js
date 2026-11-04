@@ -1,6 +1,5 @@
-n.d(t, { HT: () => o, WY: () => a });
 var i = n(573648),
-    r = n(395671);
+    r = n(327891);
 let a = "spotify",
     s = i.A.get(a);
 class l extends r.Ay {
@@ -15,3 +14,4 @@ class l extends r.Ay {
     }
 }
 let o = new l();
+n.d(t, {}, { HT: o, WY: a });

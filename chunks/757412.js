@@ -1,9 +1,8 @@
-e.exports = {
-    f1: "userContainer__3e7e2",
-    a_: "quotes__3e7e2",
-    wV: "heroQuotes__3e7e2 quotes__3e7e2",
-    FD: "testimonialHeroContainer__3e7e2",
-    nI: "animatedContainer__3e7e2",
-    EV: "testimonial__3e7e2",
-    Jv: "testimonialsControls__3e7e2",
+n.exports = {
+    f1: "userContainer_5ankAK",
+    wV: "heroQuotes_5ankAK quotes_5ankAK",
+    FD: "testimonialHeroContainer_5ankAK",
+    nI: "animatedContainer_5ankAK",
+    EV: "testimonial_5ankAK",
+    Jv: "testimonialsControls_5ankAK",
 };

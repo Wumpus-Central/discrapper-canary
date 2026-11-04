@@ -1,5 +1,4 @@
-n.d(t, { A: () => o });
-var i = n(17928),
+var i = n(855986),
     r = n(73153),
     a = n(617617);
 let s = new Set();
@@ -40,3 +39,4 @@ let o = new l(r.h, {
         s = new Set();
     },
 });
+n.d(t, {}, { A: o });

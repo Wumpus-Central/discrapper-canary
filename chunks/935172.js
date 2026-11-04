@@ -1,4 +1,3 @@
-n.d(t, { y: () => r });
 var i,
     r =
         (((i = {}).Destroy = "destroy"),
@@ -48,3 +47,4 @@ var i,
         (i.SdpError = "sdp-error"),
         (i.UsersMerged = "users-merged"),
         i);
+n.d(t, {}, { y: r });

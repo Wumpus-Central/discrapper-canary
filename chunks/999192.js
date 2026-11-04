@@ -1,7 +1,6 @@
 e.exports = {
-    FV: "mainTableContainer__09a38",
-    Hk: "horizontalScroller__09a38",
-    NQ: "loaderContainer__09a38",
-    b0: "loaderBar__09a38",
-    gZ: "loadingBar__09a38",
+    FV: "mainTableContainer_-blG2T",
+    Hk: "horizontalScroller_-blG2T",
+    NQ: "loaderContainer_-blG2T",
+    b0: "loaderBar_-blG2T",
 };

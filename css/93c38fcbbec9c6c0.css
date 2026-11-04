@@ -1,0 +1,54 @@
+.messageWithAttachments_IWr1Bs {
+    margin-block-end: 2px;
+    margin-block-start: var(--space-12)
+}
+
+.attachmentCount_IWr1Bs {
+    align-items: center;
+    color: var(--text-muted);
+    display: flex;
+    gap: var(--space-4);
+    margin-block-end: var(--space-12);
+    margin-inline-end: var(--space-16);
+    padding-inline-start: var(--custom-message-margin-left-content-cozy)
+}
+
+.attachmentCount_IWr1Bs.compact_IWr1Bs {
+    padding-inline-start: var(--custom-message-margin-compact-indent)
+}
+
+.page_IWr1Bs {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0
+}
+
+.upsellBar_IWr1Bs {
+    flex-shrink: 0;
+    padding: var(--space-8) var(--space-16) var(--space-16)
+}
+
+.unknownChannel_IWr1Bs {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-12)
+}
+
+.unknownChannelLabel_IWr1Bs {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.unknownChannelIcon_IWr1Bs {
+    align-items: center;
+    background: var(--background-base-lowest);
+    border-radius: var(--radius-sm);
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    width: 24px
+}
+
+/*# sourceMappingURL=93c38fcbbec9c6c0.css.map*/

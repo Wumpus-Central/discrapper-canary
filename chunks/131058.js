@@ -1,8 +1,8 @@
-e.exports = {
-    kL: "container__37bfc",
-    gU: "tabListScroller__37bfc",
-    YU: "tabBarItem__37bfc",
-    Pf: "newContentDot__37bfc",
-    NM: "tabBarPanel__37bfc",
-    gN: "tabPanelScroller__37bfc",
+t.exports = {
+    kL: "container_y4ZEM5",
+    gU: "tabListScroller_y4ZEM5",
+    YU: "tabBarItem_y4ZEM5",
+    Pf: "newContentDot_y4ZEM5",
+    NM: "tabBarPanel_y4ZEM5",
+    gN: "tabPanelScroller_y4ZEM5",
 };

@@ -1,4 +1,3 @@
-n.d(t, { VZ: () => o, Vj: () => s, ik: () => l });
 var i,
     r,
     a,
@@ -15,3 +14,4 @@ var i,
         (r[(r.OFFLINE = 4)] = "OFFLINE"),
         r),
     o = (((a = {})[(a.FRIEND = 0)] = "FRIEND"), (a[(a.VOICE_GROUP = 1)] = "VOICE_GROUP"), a);
+n.d(t, {}, { VZ: o, Vj: s, ik: l });

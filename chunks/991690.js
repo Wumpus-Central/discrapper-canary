@@ -1,4 +1,3 @@
-n.d(t, { U: () => r });
 var i,
     r =
         (((i = {})[(i.MAIN = 0)] = "MAIN"),
@@ -8,3 +7,4 @@ var i,
         (i[(i.OVERLAY = 4)] = "OVERLAY"),
         (i[(i.GUILD_SPACE = 5)] = "GUILD_SPACE"),
         i);
+n.d(t, {}, { U: r });

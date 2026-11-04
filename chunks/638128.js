@@ -1,11 +1,10 @@
-n.d(t, { A: () => m });
 var l = n(377941),
     r = n.n(l),
-    i = n(17928),
+    i = n(855986),
     a = n(506774),
     u = n(73153),
-    o = n(724066),
-    s = n(900582);
+    o = n(449275),
+    s = n(334604);
 let c = "SpellcheckStore",
     f = !0,
     p = new Set();
@@ -44,3 +43,4 @@ let m = new h(u.h, {
         (p.delete(t.toLocaleLowerCase()), (0, s.d1)(p), d());
     },
 });
+n.d(t, {}, { A: m });

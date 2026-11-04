@@ -1,6 +1,11 @@
-n.d(a, { D: () => t });
-var i = n(858899),
-    s = n(105292);
-function t() {
-    (0, i.P0)({ text: s.intl.string(s.t["3T2jbf"]), variant: "success" });
-}
+var i = t(858899),
+    a = t(792996);
+t.d(
+    n,
+    {},
+    {
+        D: function () {
+            (0, i.P0)({ text: a.intl.string(a.t["3T2jbf"]), variant: "success" });
+        },
+    },
+);

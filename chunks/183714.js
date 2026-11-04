@@ -1,12 +1,12 @@
-_.exports = {
-    gP: "statsOverlay__1219f",
-    wx: "header__1219f",
-    Pz: "headerButtons__1219f",
-    b: "closeButton__1219f",
-    cL: "copyButton__1219f",
-    Qs: "content__1219f",
-    N8: "statRow__1219f",
-    Zh: "statLabel__1219f",
-    cR: "statValue__1219f",
-    K6: "errorSection__1219f",
+t.exports = {
+    gP: "statsOverlay_WrOgGp",
+    wx: "header_WrOgGp",
+    Pz: "headerButtons_WrOgGp",
+    b: "closeButton_WrOgGp",
+    cL: "copyButton_WrOgGp",
+    Qs: "content_WrOgGp",
+    N8: "statRow_WrOgGp",
+    Zh: "statLabel_WrOgGp",
+    cR: "statValue_WrOgGp",
+    K6: "errorSection_WrOgGp",
 };

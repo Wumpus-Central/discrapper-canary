@@ -1,4 +1,3 @@
-n.d(t, { J: () => d, c: () => o });
 var i = n(95701),
     r = n(734057),
     a = n(576705),
@@ -10,6 +9,13 @@ function o(e) {
         (e.type === s.rbe.DM || e.type === s.rbe.GROUP_DM || ((0, i.pQ)(e.type) && a.A.canBasicChannel(l, e)))
     );
 }
-function d(e) {
-    return null != e && o(r.A.getBasicChannel(e));
-}
+n.d(
+    t,
+    {},
+    {
+        J: function (e) {
+            return null != e && o(r.A.getBasicChannel(e));
+        },
+        c: o,
+    },
+);

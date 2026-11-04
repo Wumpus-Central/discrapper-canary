@@ -1,0 +1,545 @@
+.sidebar_7NrAL2 {
+    border-inline-end: 1px solid var(--border-subtle);
+    box-sizing: border-box;
+    height: 100vh;
+    min-width: 0
+}
+
+.platform-win .sidebar_7NrAL2 {
+    height: calc(100vh - var(--custom-app-top-bar-height))
+}
+
+.container_7NrAL2 {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    position: relative
+}
+
+.titleContainer_7NrAL2 {
+    align-items: center;
+    background-color: var(--background-base-low);
+    display: flex;
+    justify-content: space-between;
+    margin-block: 0 8px;
+    margin-inline: 16px 8px;
+    padding: 60px 8px 16px;
+    z-index: 2
+}
+
+.titleElevated_7NrAL2 {
+    box-shadow: var(--elevation-low)
+}
+
+.title_7NrAL2 {
+    align-items: center;
+    color: var(--text-default);
+    cursor: pointer;
+    display: flex
+}
+
+.title_7NrAL2:hover {
+    color: var(--text-strong)
+}
+
+.titleText_7NrAL2 {
+    margin-inline-start: 8px;
+    text-transform: none
+}
+
+.disabledTitleText_7NrAL2 {
+    color: var(--text-strong);
+    margin-inline-start: 0
+}
+
+.addRole_7NrAL2 {
+    color: var(--text-strong);
+    cursor: pointer
+}
+
+.list_7NrAL2 {
+    flex-grow: 0;
+    min-height: 0;
+    padding-block: 0 96px;
+    padding-inline: 40px 16px
+}
+
+.row_7NrAL2 {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: 4px;
+    height: 34px;
+    margin-inline-start: -6px;
+    overflow: visible;
+    position: relative
+}
+
+.lock_7NrAL2 {
+    color: var(--interactive-text-default);
+    margin-inline-start: 4px
+}
+
+.dragAfter_7NrAL2:after,
+.dragBefore_7NrAL2:before {
+    background-color: var(--green-360);
+    border-radius: 2px;
+    box-shadow: 0 0 3px var(--opacity-black-40);
+    content: "";
+    height: 4px;
+    inset-inline: 0;
+    position: absolute;
+    z-index: 1
+}
+
+.dragBefore_7NrAL2:before {
+    top: -2px
+}
+
+.dragAfter_7NrAL2:after {
+    bottom: -2px
+}
+
+.helpSeparator_7NrAL2,
+.helpText_7NrAL2 {
+    margin-bottom: 12px
+}
+
+.helpSeparator_7NrAL2 {
+    background-color: var(--border-subtle);
+    height: 1px
+}
+
+.tooltip_7NrAL2 {
+    text-align: center
+}
+
+.verifiedRoleIcon_7NrAL2 {
+    flex-shrink: 0;
+    margin: 0 4px
+}
+
+.enable-forced-colors .title_7NrAL2 {
+    background-color: ButtonFace;
+    border: 1px solid ButtonFace;
+    color: ButtonText
+}
+
+.enable-forced-colors .title_7NrAL2:hover {
+    border-color: ButtonText
+}
+
+.page_cKeB2a {
+    display: flex;
+    height: 100%;
+    max-width: 740px;
+    min-width: 460px;
+    width: 100%
+}
+
+.container_cKeB2a {
+    display: flex;
+    flex-grow: 1;
+    min-height: 0
+}
+
+.sidebar_cKeB2a {
+    flex-shrink: 0;
+    padding-top: 60px;
+    width: 195px
+}
+
+.contentContainer_cKeB2a,
+.sidebar_cKeB2a {
+    bottom: 0;
+    position: absolute;
+    top: 0
+}
+
+.contentContainer_cKeB2a {
+    inset-inline: 232px 0
+}
+
+.optionContainer_cKeB2a {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-inline-start: 24px;
+    min-width: 0
+}
+
+.container_Ax3P1g {
+    align-items: center;
+    background-color: var(--card-background-default);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    display: flex;
+    padding: 16px;
+    padding-inline-end: 24px
+}
+
+.container_Ax3P1g:hover {
+    background-color: var(--interactive-background-hover);
+    color: var(--interactive-text-hover)
+}
+
+.container_Ax3P1g:active {
+    background-color: var(--interactive-background-active);
+    color: var(--interactive-text-active)
+}
+
+.icon_Ax3P1g {
+    align-items: center;
+    background-color: var(--background-base-low);
+    border-radius: 50%;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    width: 32px
+}
+
+.description_Ax3P1g {
+    margin-inline-start: 16px
+}
+
+.label_Ax3P1g {
+    margin-bottom: 4px
+}
+
+.arrow_Ax3P1g {
+    margin-inline-start: auto
+}
+
+.enable-forced-colors .container_Ax3P1g {
+    border: 1px solid ButtonText
+}
+
+.enable-forced-colors .arrow_Ax3P1g {
+    color: ButtonText
+}
+
+.section_hF04I1 {
+    margin-top: 60px;
+    padding-bottom: 80px;
+    position: relative
+}
+
+.callout_hF04I1 {
+    position: absolute;
+    top: -84px;
+    width: 100%
+}
+
+.illustration_hF04I1 {
+    margin-bottom: 32px;
+    margin-top: 12px
+}
+
+.container_hF04I1 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center
+}
+
+.introBody_hF04I1 {
+    margin-top: 8px
+}
+
+.button_hF04I1 {
+    margin-top: 16px
+}
+
+.divider_hF04I1 {
+    margin: 32px 0
+}
+
+.guildProductRoleIcon_58vqyk {
+    align-items: center;
+    background-image: linear-gradient(to right, var(--custom-guild-shop-gradient-start), var(--custom-guild-shop-gradient-end));
+    border-radius: 50px;
+    color: var(--white);
+    display: flex;
+    margin-inline-start: 12px;
+    overflow: hidden;
+    padding: 4px;
+    position: relative
+}
+
+@keyframes Shine_58vqyk {
+    0% {
+        transform: translate3d(-75%, 0, 0)
+    }
+
+    to {
+        transform: translate3d(200%, 0, 0)
+    }
+}
+
+.emptyRoles_YEKbw3 {
+    color: var(--text-muted)
+}
+
+.emptyRolesText_YEKbw3 {
+    margin-inline-start: 8px
+}
+
+.emptyRoles_YEKbw3,
+.roleRow_YEKbw3 {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 61px;
+    margin-inline: -32px -8px;
+    padding-inline-end: 8px;
+    padding-top: 1px
+}
+
+.roleRow_YEKbw3 {
+    border-radius: var(--radius-xs);
+    position: relative
+}
+
+.roleRow_YEKbw3:before {
+    background-color: var(--border-subtle);
+    content: "";
+    height: 1px;
+    inset-inline: 32px 8px;
+    position: absolute;
+    top: 0
+}
+
+.roleRow_YEKbw3:last-child:after {
+    background-color: var(--border-subtle);
+    content: "";
+    height: 1px;
+    inset-inline: 32px 8px;
+    bottom: -1px;
+    position: absolute
+}
+
+.roleRow_YEKbw3:hover+.roleRow_YEKbw3:before,
+.roleRow_YEKbw3:hover:after,
+.roleRow_YEKbw3:hover:before {
+    background-color: transparent
+}
+
+.roleRowDragging_YEKbw3 {
+    background-color: var(--interactive-background-hover)
+}
+
+.dragIcon_YEKbw3 {
+    color: var(--interactive-text-default);
+    cursor: grab;
+    padding: 8px;
+    visibility: hidden
+}
+
+.dragIcon_YEKbw3:hover {
+    color: var(--interactive-text-hover)
+}
+
+.dragIcon_YEKbw3:active {
+    cursor: grabbing
+}
+
+.roleNameContainer_YEKbw3 {
+    align-items: center;
+    display: flex;
+    overflow: hidden
+}
+
+.shield_YEKbw3 {
+    flex-shrink: 0;
+    margin-inline-end: 10px;
+}
+
+.roleIcon_YEKbw3 {
+    margin-inline-end: 8px
+}
+
+.lock_YEKbw3,
+.subscriptionRoleIcon_YEKbw3 {
+    color: var(--text-muted);
+    flex-shrink: 0;
+    margin-inline-start: 8px
+}
+
+.lock_YEKbw3 {
+    margin-inline-start: var(--space-4)
+}
+
+.roleName_YEKbw3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.memberCountContainer_YEKbw3 {
+    align-items: center;
+    color: var(--interactive-text-default);
+    display: flex;
+    height: 100%;
+    justify-content: flex-end
+}
+
+.memberCountContainer_YEKbw3:hover {
+    color: var(--interactive-text-hover)
+}
+
+.person_YEKbw3 {
+    flex-shrink: 0;
+    margin-inline-start: 4px
+}
+
+.buttonsContainer_YEKbw3 {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end
+}
+
+.roleRow_YEKbw3:hover:not(.roleRowDisableHover_YEKbw3) {
+    background-color: var(--interactive-background-hover)
+}
+
+.roleRow_YEKbw3:hover:not(.roleRowDisableHover_YEKbw3) .dragIcon_YEKbw3:not(.dragIconHidden_YEKbw3) {
+    visibility: visible
+}
+
+.containerDragAfter_YEKbw3:after,
+.containerDragBefore_YEKbw3:before {
+    background-color: var(--green-360);
+    border-radius: 2px;
+    box-shadow: 0 0 3px var(--opacity-black-40);
+    content: "";
+    height: 4px;
+    inset-inline: 32px 8px;
+    position: absolute;
+    z-index: 1
+}
+
+.containerDragBefore_YEKbw3:before {
+    top: -2px
+}
+
+.containerDragAfter_YEKbw3:after {
+    bottom: -2px
+}
+
+.tooltip_YEKbw3 {
+    text-align: center
+}
+
+.roleFlowerStar_YEKbw3 {
+    flex-shrink: 0;
+    margin-inline-end: 10px
+}
+
+.enable-forced-colors .containerDragAfter_YEKbw3:after,
+.enable-forced-colors .containerDragBefore_YEKbw3:before {
+    background-color: Highlight;
+    outline: 1px solid Canvas
+}
+
+.enable-forced-colors .roleRow_YEKbw3 {
+    border-top: 1px solid CanvasText
+}
+
+.enable-forced-colors .dragIcon_YEKbw3 {
+    background-color: ButtonFace;
+    color: ButtonText
+}
+
+.enable-forced-colors .dragIcon_YEKbw3:active {
+    background-color: HighlightText;
+    color: Highlight
+}
+
+.enable-forced-colors .circleButton_YEKbw3,
+.enable-forced-colors .memberCountContainer_YEKbw3 {
+    background-color: ButtonFace !important;
+    border: 1px solid ButtonFace;
+    color: ButtonText
+}
+
+.enable-forced-colors .circleButton_YEKbw3:focus,
+.enable-forced-colors .circleButton_YEKbw3:hover,
+.enable-forced-colors .memberCountContainer_YEKbw3:focus,
+.enable-forced-colors .memberCountContainer_YEKbw3:hover {
+    border-color: ButtonText;
+    color: ButtonText
+}
+
+.helpText_EerRtM {
+    margin-top: 8px
+}
+
+.migrationInfoBox_EerRtM {
+    margin-bottom: var(--space-24)
+}
+
+.migrateButton_EerRtM {
+    display: block;
+    inset-inline-end: 4px;
+    position: relative
+}
+
+.searchContainer_EerRtM {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    margin-top: 32px
+}
+
+.rolesTable_EerRtM {
+    margin-top: 32px
+}
+
+.tableHeader_EerRtM {
+    display: flex;
+    margin-bottom: 8px;
+    margin-inline: -32px -8px;
+    padding-inline-end: 8px
+}
+
+.tableTitle_EerRtM {
+    color: var(--text-default);
+    font-size: 14px;
+    font-weight: var(--font-weight-semibold);
+    text-transform: none
+}
+
+.dragSpacing_EerRtM {
+    flex: 0 0 32px
+}
+
+.roleNameSpacing_EerRtM {
+    flex: 0 1 273px
+}
+
+.memberSpacing_EerRtM {
+    flex: 0 0 112px;
+    margin-inline-start: 16px;
+    text-align: end
+}
+
+.buttonsSpacing_EerRtM {
+    flex: 1 0 88px;
+    margin-inline-start: 16px
+}
+
+.description_EerRtM {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px
+}
+
+.descriptionAction_EerRtM {
+    cursor: pointer;
+    margin-inline-start: 4px
+}
+
+/*# sourceMappingURL=d3cc0c1d0394407a.css.map*/

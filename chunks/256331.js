@@ -1,5 +1,4 @@
-n.d(t, { A: () => r });
-var l = n(17928),
+var l = n(855986),
     i = n(73153);
 let s = !0;
 class a extends l.Ay.DeviceSettingsStore {
@@ -23,3 +22,4 @@ let r = new a(i.h, {
         s = !s;
     },
 });
+n.d(t, {}, { A: r });

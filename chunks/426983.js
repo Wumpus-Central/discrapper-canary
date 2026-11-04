@@ -1,4 +1,3 @@
-o.d(t, { K: () => l, _: () => s });
 var e,
     i = o(176128),
     s =
@@ -10,18 +9,25 @@ var e,
         (e[(e.STAFF = 5)] = "STAFF"),
         (e[(e.NONE = 6)] = "NONE"),
         e);
-function l(r) {
-    return r.staff
-        ? 5
-        : r.verified && r.partnered
-          ? 2
-          : r.verified
-            ? 1
-            : r.partnered
-              ? 0
-              : r.community && r.visibility === i.qo.PUBLIC
-                ? 4
-                : r.community
-                  ? 3
-                  : 6;
-}
+o.d(
+    t,
+    {},
+    {
+        K: function (r) {
+            return r.staff
+                ? 5
+                : r.verified && r.partnered
+                  ? 2
+                  : r.verified
+                    ? 1
+                    : r.partnered
+                      ? 0
+                      : r.community && r.visibility === i.qo.PUBLIC
+                        ? 4
+                        : r.community
+                          ? 3
+                          : 6;
+        },
+        _: s,
+    },
+);

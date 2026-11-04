@@ -5,13 +5,13 @@ Object.defineProperty(t, "__esModule", { value: !0 });
 var i = n(r(901012)),
     o = r(666764),
     a = r(333007),
-    s = r(54482),
+    s = r(505911),
     l = n(r(271104)),
     u = r(472090),
     c = r(675106),
     f = n(r(269274)),
-    d = /^--/,
-    p = {},
+    p = /^--/,
+    d = {},
     h = {
         animationIterationCount: !0,
         borderImageOutset: !0,
@@ -360,8 +360,8 @@ var E = u.createHost(
                 f = Object.keys(l).map(function (t) {
                     return r || e.hasAttribute(t)
                         ? t
-                        : p[t] ||
-                              (p[t] = t.replace(/([A-Z])/g, function (e) {
+                        : d[t] ||
+                              (d[t] = t.replace(/([A-Z])/g, function (e) {
                                   return "-" + e.toLowerCase();
                               }));
                 });
@@ -374,10 +374,10 @@ var E = u.createHost(
                                 ((r = t),
                                 null == (i = n[t]) || "boolean" == typeof i || "" === i
                                     ? ""
-                                    : "number" != typeof i || 0 === i || d.test(r) || (h.hasOwnProperty(r) && h[r])
+                                    : "number" != typeof i || 0 === i || p.test(r) || (h.hasOwnProperty(r) && h[r])
                                       ? ("" + i).trim()
                                       : i + "px");
-                        "float" === t ? (t = "cssFloat") : d.test(t) ? e.style.setProperty(t, l) : (e.style[t] = l);
+                        "float" === t ? (t = "cssFloat") : p.test(t) ? e.style.setProperty(t, l) : (e.style[t] = l);
                     }
                 (f.forEach(function (t, r) {
                     e.setAttribute(t, u[r]);

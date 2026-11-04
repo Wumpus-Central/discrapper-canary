@@ -1,4 +1,3 @@
-_.d(t, { m: () => i });
 var u,
     i =
         (((u = {}).VIEW_SETTINGS_PAGE = "view_settings_page"),
@@ -8,3 +7,4 @@ var u,
         (u.RESTRICT_GUILD_MESSAGE_REQUEST_TOGGLE = "restrict_guild_message_request_toggle"),
         (u.RESTRICT_GUILD_ACTIVITY_JOIN_TOGGLE = "restrict_guild_activity_join_toggle"),
         u);
+_.d(t, {}, { m: i });

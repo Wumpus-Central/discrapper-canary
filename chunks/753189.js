@@ -1,6 +1,5 @@
-n.d(t, { A: () => l });
 var i = n(439372),
-    r = n(174459),
+    r = n(129230),
     a = n(652215);
 class s extends i.A {
     actions = {
@@ -33,3 +32,4 @@ class s extends i.A {
     }
 }
 let l = new s();
+n.d(t, {}, { A: l });

@@ -1,7 +1,6 @@
-t.d(i, { A: () => f, U: () => d });
 var n = t(435558),
     r = t.n(n),
-    l = t(17928),
+    l = t(855986),
     s = t(73153),
     o = t(513461);
 let d = { version: "", description: "", formFields: [] },
@@ -44,3 +43,4 @@ let f = new u(s.h, {
         delete c[i?.id];
     },
 });
+t.d(i, {}, { A: f, U: d });

@@ -1,4 +1,9 @@
-function i(e) {
-    return Array.isArray(e) ? e[0] : e;
-}
-n.d(t, { p: () => i });
+n.d(
+    t,
+    {},
+    {
+        p: function (e) {
+            return Array.isArray(e) ? e[0] : e;
+        },
+    },
+);

@@ -1,23 +1,23 @@
-.orbUserStatusMenuIconWrapper__0fc4d {
+.orbUserStatusMenuIconWrapper_cmAgST {
     gap: var(--space-4)
 }
 
-.loadingText__0fc4d {
+.loadingText_cmAgST {
     margin-inline-end: 2px
 }
 
-.userMenuItem_d40c56 {
+.userMenuItem_lZtGs8 {
     align-items: center;
     display: flex;
     gap: var(--space-8)
 }
 
-.userMenuUsername_d40c56 {
+.userMenuUsername_lZtGs8 {
     flex-grow: 1;
     max-width: 132px
 }
 
-.userMenuText_d40c56 {
+.userMenuText_lZtGs8 {
     color: var(--text-strong);
     display: block;
     overflow: hidden;
@@ -25,26 +25,26 @@
     white-space: nowrap
 }
 
-.userMenuDiscriminator_d40c56 {
+.userMenuDiscriminator_lZtGs8 {
     color: var(--text-default)
 }
 
-.focused_d40c56 .userMenuUsername_d40c56 .userMenuText_d40c56 {
+.focused_lZtGs8 .userMenuUsername_lZtGs8 .userMenuText_lZtGs8 {
     color: var(--text-strong)
 }
 
-.focused_d40c56 .userMenuUsername_d40c56 .userMenuDiscriminator_d40c56 {
+.focused_lZtGs8 .userMenuUsername_lZtGs8 .userMenuDiscriminator_lZtGs8 {
     color: var(--text-default)
 }
 
-.activeIcon_d40c56 {
+.activeIcon_lZtGs8 {
     flex-shrink: 0
 }
 
-.container_caf802 {
+.container_DpwhzK {
     align-items: center;
     display: flex;
     gap: 3px
 }
 
-/*# sourceMappingURL=939329.5d103ce7177a61bb.css.map*/
+/*# sourceMappingURL=939329.d3eb86b206eec37a.css.map*/

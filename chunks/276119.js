@@ -1,12 +1,12 @@
-e.exports = {
-    XV: "topBar__31961",
-    cB: "dragging__31961",
-    LD: "headerLeft__31961",
-    G1: "headerTitleRow__31961",
-    oH: "parentChannelLink__31961",
-    ln: "parentChannelSeparator__31961",
-    IE: "headerRight__31961",
-    DD: "title__31961",
-    X7: "currentlyPlaying__31961",
-    gr: "titleIcon__31961",
+t.exports = {
+    XV: "topBar_pU9D6x",
+    cB: "dragging_pU9D6x",
+    LD: "headerLeft_pU9D6x",
+    G1: "headerTitleRow_pU9D6x",
+    oH: "parentChannelLink_pU9D6x",
+    ln: "parentChannelSeparator_pU9D6x",
+    IE: "headerRight_pU9D6x",
+    DD: "title_pU9D6x",
+    X7: "currentlyPlaying_pU9D6x",
+    gr: "titleIcon_pU9D6x",
 };

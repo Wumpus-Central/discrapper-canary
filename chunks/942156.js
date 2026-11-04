@@ -1,4 +1,3 @@
-s.d(e, { A: () => d });
 var n = s(477900),
     a = s(582128),
     i = s(503698),
@@ -42,3 +41,4 @@ class d extends a.Component {
         });
     }
 }
+s.d(e, {}, { A: d });

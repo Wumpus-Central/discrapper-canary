@@ -1,9 +1,8 @@
-e.exports = {
-    vD: "body-xs/normal_b4f99f",
-    kL: "container_b4f99f",
-    s: "assetContainer_b4f99f",
-    Cb: "orbAsset_b4f99f",
-    kx: "linkContainer_b4f99f",
-    D5: "linkPreText_b4f99f",
-    CU: "learnMoreLink_b4f99f body-xs/normal_b4f99f",
+s.exports = {
+    kL: "container_mGvcDs",
+    s: "assetContainer_mGvcDs",
+    Cb: "orbAsset_mGvcDs",
+    kx: "linkContainer_mGvcDs",
+    D5: "linkPreText_mGvcDs",
+    CU: "learnMoreLink_mGvcDs body-xs/normal_mGvcDs",
 };

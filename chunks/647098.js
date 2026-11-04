@@ -1,0 +1,31 @@
+e.d(a, { default: () => d });
+var c = e(477900);
+e(582128);
+var n = e(87719),
+    s = e(945240),
+    i = e(682901),
+    o = e(652215),
+    r = e(792996),
+    p = e(960329);
+function d(t) {
+    let { onClose: a, analyticsSource: e, onLearnMore: d, ...l } = t,
+        u = i.pe.TIER_2,
+        _ = r.intl.format(r.t.hDMlqD, {
+            onLearnMore: function () {
+                (d?.(), a(), (0, n.e)());
+            },
+        });
+    return (0, c.jsx)(s.A, {
+        artURL: "https://cdn.discordapp.com/assets/content/2d563ce5f261ca4793e70ca87ccd10fd2b224ba302a5cd36414a5e4b4a374725.svg",
+        artContainerClassName: p.z,
+        type: i.e.VIDEO_BACKGROUNDS_MODAL,
+        title: r.intl.string(r.t.fHqiDW),
+        body: _,
+        glowUp: _,
+        analyticsSource: e,
+        analyticsLocation: { page: o.liQ.PREMIUM_UPSELL_MODAL_VIDEO_BACKGROUNDS, object: o.ZSU.BUTTON_CTA },
+        onClose: a,
+        subscriptionTier: u,
+        ...l,
+    });
+}

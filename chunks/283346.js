@@ -1,4 +1,4 @@
-var n = r(264572).Buffer;
+var n = r(264572).hp;
 !(function (e) {
     function t() {}
     function r(e, t) {

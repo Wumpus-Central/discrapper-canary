@@ -1,8 +1,7 @@
-n.d(t, { u: () => o });
 var i = n(852015),
     r = n(144367),
     a = n(428420),
-    s = n(535384);
+    s = n(505816);
 class l extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.Versions", [
@@ -53,3 +52,4 @@ class l extends s.G {
     }
 }
 let o = new l();
+n.d(t, {}, { u: o });

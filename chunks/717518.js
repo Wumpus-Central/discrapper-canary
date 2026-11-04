@@ -1,7 +1,6 @@
-l.d(t, { A: () => h });
 var n = l(435558),
     i = l.n(n),
-    r = l(17928),
+    r = l(855986),
     o = l(73153),
     s = l(71393);
 let d = null,
@@ -49,3 +48,4 @@ let h = new u(o.h, {
         delete g[e.guild.id];
     },
 });
+l.d(t, {}, { A: h });

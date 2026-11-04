@@ -1,8 +1,7 @@
-n.d(t, { Py: () => d, d9: () => o });
 var i = n(526218),
-    r = n(636537),
+    r = n(620632),
     a = n(73153);
-n(582388);
+n(281581);
 var s = n(652215);
 async function l(e, t) {
     if (null == e || null == t) return null;
@@ -27,20 +26,26 @@ async function l(e, t) {
             return (n.type, null);
     }
 }
-async function o(e, t, n) {
-    let i = n ?? void 0;
-    if (null == t || null != i) return { customId: i };
-    try {
-        let n = await l(e, t);
-        if (null == n) return { customId: void 0 };
-        return { customId: n.custom_id };
-    } catch {
-        return { customId: void 0 };
-    }
-}
-async function d(e, t) {
-    if (null == e || null == t) return Promise.reject("appId or linkId null");
-    let n = await l(e, t);
-    if (null == n) return Promise.reject("fetchCustomActivityLink body is null");
-    a.h.dispatch({ type: "CUSTOM_ACTIVITY_LINK_FETCH_SUCCESS", applicationId: e, link: n });
-}
+n.d(
+    t,
+    {},
+    {
+        Py: async function (e, t) {
+            if (null == e || null == t) return Promise.reject("appId or linkId null");
+            let n = await l(e, t);
+            if (null == n) return Promise.reject("fetchCustomActivityLink body is null");
+            a.h.dispatch({ type: "CUSTOM_ACTIVITY_LINK_FETCH_SUCCESS", applicationId: e, link: n });
+        },
+        d9: async function (e, t, n) {
+            let i = n ?? void 0;
+            if (null == t || null != i) return { customId: i };
+            try {
+                let n = await l(e, t);
+                if (null == n) return { customId: void 0 };
+                return { customId: n.custom_id };
+            } catch {
+                return { customId: void 0 };
+            }
+        },
+    },
+);

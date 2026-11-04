@@ -1,8 +1,7 @@
-n.d(t, { SU: () => _, Vf: () => u, b$: () => E, oW: () => d });
 var i = n(481613),
     r = n.n(i),
-    a = n(742821),
-    s = n(280450),
+    a = n(869733),
+    s = n(46653),
     l = n(652215);
 let o = "linux";
 function d(e) {
@@ -26,30 +25,37 @@ function c() {
             ? "osx"
             : "win";
 }
-function u(e) {
-    return { win: "Windows", osx: "Mac", [o]: "Linux" }[c(e)];
-}
-function _() {
-    let e = c();
-    return d(e, !1, e === o ? "tar.gz" : null);
-}
-function E(e, t, n) {
-    let i = null != n ? n.toString() : null;
-    switch (t) {
-        case "iOS":
-            return (0, a.Ay)(i ?? "https://itunes.apple.com/us/app/discord-chat-for-games/id985746746", {
-                utmSource: e,
-                fingerprint: s.default.getFingerprint(),
-                attemptId: (0, a.I_)(),
-            });
-        case "Android":
-            return (0, a.Ay)(i ?? "https://play.google.com/store/apps/details", {
-                utmSource: e,
-                id: "com.discord",
-                fingerprint: s.default.getFingerprint(),
-                attemptId: (0, a.I_)(),
-            });
-        default:
-            return i ?? "https://www.discord.com";
-    }
-}
+n.d(
+    t,
+    {},
+    {
+        SU: function () {
+            let e = c();
+            return d(e, !1, e === o ? "tar.gz" : null);
+        },
+        Vf: function (e) {
+            return { win: "Windows", osx: "Mac", [o]: "Linux" }[c(e)];
+        },
+        b$: function (e, t, n) {
+            let i = null != n ? n.toString() : null;
+            switch (t) {
+                case "iOS":
+                    return (0, a.Ay)(i ?? "https://itunes.apple.com/us/app/discord-chat-for-games/id985746746", {
+                        utmSource: e,
+                        fingerprint: s.default.getFingerprint(),
+                        attemptId: (0, a.I_)(),
+                    });
+                case "Android":
+                    return (0, a.Ay)(i ?? "https://play.google.com/store/apps/details", {
+                        utmSource: e,
+                        id: "com.discord",
+                        fingerprint: s.default.getFingerprint(),
+                        attemptId: (0, a.I_)(),
+                    });
+                default:
+                    return i ?? "https://www.discord.com";
+            }
+        },
+        oW: d,
+    },
+);

@@ -1,5 +1,4 @@
-n.d(t, { A: () => o });
-var i = n(17928),
+var i = n(855986),
     r = n(73153);
 let a = 0,
     s = {};
@@ -31,3 +30,4 @@ let o = new l(r.h, {
         return ((s[e.guildId] = { type: "failed" }), !1);
     },
 });
+n.d(t, {}, { A: o });

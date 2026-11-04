@@ -1,4 +1,3 @@
-i.d(t, { Z: () => I, y: () => n });
 var s,
     S = i(778712),
     n =
@@ -52,3 +51,4 @@ let I = Object.freeze({
         wishlistButtonSize: "md",
     }),
 });
+i.d(t, {}, { Z: I, y: n });

@@ -1,4 +1,3 @@
-n.d(t, { z: () => r });
 var i,
     r =
         (((i = {})[(i.NONE = 0)] = "NONE"),
@@ -10,3 +9,4 @@ var i,
         (i[(i.WEEKEND_ONLY = 6)] = "WEEKEND_ONLY"),
         (i[(i.DAILY = 7)] = "DAILY"),
         i);
+n.d(t, {}, { z: r });

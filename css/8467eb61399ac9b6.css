@@ -1,0 +1,67 @@
+.legacyInputCommandHeader_GxVGvr {
+    display: flex;
+    justify-content: space-between
+}
+
+.noAutocompleteResults_yOcjAN {
+    height: 200px
+}
+
+.secondarySection_osfyzP {
+    padding-top: 0
+}
+
+.divider_osfyzP {
+    padding-bottom: 0 !important
+}
+
+.spinner_9cZX5o {
+    padding-top: 8px
+}
+
+.scrollerContainer_9cZX5o {
+    position: relative
+}
+
+.horizontalAutocompletes_9cZX5o {
+    display: flex;
+    margin-bottom: -4px;
+    overflow-x: auto;
+    padding: 0 8px
+}
+
+.scrollButton_9cZX5o {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity .15s ease;
+    z-index: 1
+}
+
+.scrollButtonStart_9cZX5o {
+    inset-inline-start: var(--space-8)
+}
+
+.scrollButtonEnd_9cZX5o {
+    inset-inline-end: var(--space-8)
+}
+
+.scrollButtonHidden_9cZX5o {
+    opacity: 0;
+    pointer-events: none
+}
+
+.no-webkit-scrollbar .horizontalAutocompletes_9cZX5o {
+    scrollbar-width: thin
+}
+
+.horizontalAutocomplete_9cZX5o {
+    margin-bottom: 4px
+}
+
+.horizontalAutocomplete_9cZX5o img {
+    height: 150px;
+    width: auto
+}
+
+/*# sourceMappingURL=8467eb61399ac9b6.css.map*/

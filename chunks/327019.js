@@ -1,4 +1,3 @@
-n.d(t, { l: () => r });
 var i,
     r =
         (((i = {})[(i.SM_TILE = 0)] = "SM_TILE"),
@@ -6,3 +5,4 @@ var i,
         (i[(i.LG_TILE = 2)] = "LG_TILE"),
         (i[(i.VIDEO_TILE = 3)] = "VIDEO_TILE"),
         i);
+n.d(t, {}, { l: r });

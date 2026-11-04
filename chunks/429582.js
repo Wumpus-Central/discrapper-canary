@@ -1,8 +1,6 @@
-(n.d(t, { H3: () => tt, H9: () => e4, KQ: () => $, oe: () => tn, r8: () => te, t8: () => e9, xW: () => ti }),
-    n(321073),
-    n(205816));
+(n(321073), n(205816));
 var i = n(621466),
-    r = n(941426),
+    r = n(611599),
     a = n(350723);
 let s = new r.Vy("NativeFrameView"),
     l = new Map(),
@@ -323,8 +321,8 @@ function eO() {
     let e = T;
     if (null != e && eg(e)) return ((D = !0), !0);
     if (D || null == R || null == e) return !1;
-    for (let t of l.values()) if (t.iframe !== e && e6(t.iframe)?.clip != null) return !1;
-    let t = e6(e);
+    for (let t of l.values()) if (t.iframe !== e && e5(t.iframe)?.clip != null) return !1;
+    let t = e5(e);
     return t?.clip != null && JSON.stringify(t) === R.layout && eC({ iframe: e, clip: t.clip }) === R.value;
 }
 function eR(e) {
@@ -591,7 +589,7 @@ function eH(e) {
                 ew.clear();
                 let n = eU;
                 if (((eU = !1), null != e)) {
-                    if (JSON.stringify(e6(e.iframe)) !== e.lastLayout) return void eV();
+                    if (JSON.stringify(e5(e.iframe)) !== e.lastLayout) return void eV();
                     for (let n of t.keys())
                         if (
                             !(!n.isConnected || n === e.iframe || n.contains(e.iframe) || g.has(n)) &&
@@ -612,7 +610,7 @@ function ej() {
                 if (null == e) return !1;
                 let t = !1;
                 for (let [n, i] of l) {
-                    let r = e6(i.iframe),
+                    let r = e5(i.iframe),
                         a = JSON.stringify(r);
                     a !== i.lastLayout &&
                         ((i.lastLayout = a),
@@ -666,7 +664,7 @@ function ez() {
     let t = [],
         n = !1;
     for (let [i, r] of l) {
-        let a = e6(r.iframe);
+        let a = e5(r.iframe);
         a?.clip != null && t.push({ iframe: r.iframe, clip: a.clip });
         let l = JSON.stringify(a);
         l !== r.lastLayout &&
@@ -706,7 +704,7 @@ function ez() {
                 (function (e) {
                     if (((R = null), 1 !== e.length)) return;
                     let { iframe: t } = e[0],
-                        n = e6(t);
+                        n = e5(t);
                     n?.clip != null && (R = { layout: JSON.stringify(n), value: eC({ iframe: t, clip: n.clip }) });
                 })(t)),
             eK(),
@@ -853,10 +851,7 @@ let eZ = ["left", "middle", "right"],
 function e3() {
     return window.DiscordNative?.frameView ?? null;
 }
-function e4() {
-    return null != e3();
-}
-function e5(e, t) {
+function e6(e, t) {
     let n = Math.max(e.x, t.left),
         i = Math.max(e.y, t.top);
     return {
@@ -866,7 +861,7 @@ function e5(e, t) {
         height: Math.max(0, Math.min(e.y + e.height, t.bottom) - i),
     };
 }
-function e6(e) {
+function e5(e) {
     if (!e.isConnected) return null;
     let t = e.getBoundingClientRect();
     if (t.width <= 0 || t.height <= 0) return null;
@@ -874,23 +869,23 @@ function e6(e) {
         { devicePixelRatio: i } = window;
     if (!e.checkVisibility({ opacityProperty: !0, visibilityProperty: !0 }))
         return { frame: n, clip: null, devicePixelRatio: i };
-    let r = e5(n, { left: 0, top: 0, right: window.innerWidth, bottom: window.innerHeight });
+    let r = e6(n, { left: 0, top: 0, right: window.innerWidth, bottom: window.innerHeight });
     for (let t = e.parentElement; null != t && r.width > 0; t = t.parentElement) {
         let { overflowX: e, overflowY: n } = getComputedStyle(t);
-        ("visible" !== e || "visible" !== n) && (r = e5(r, t.getBoundingClientRect()));
+        ("visible" !== e || "visible" !== n) && (r = e6(r, t.getBoundingClientRect()));
     }
     return {
         frame: n,
         clip:
             (r = (function (e, t) {
                 let { x: n, y: i, width: r, height: a } = e,
-                    s = Math.ceil(n * t - e7) / t,
-                    l = Math.ceil(i * t - e7) / t;
+                    s = Math.ceil(n * t - e4) / t,
+                    l = Math.ceil(i * t - e4) / t;
                 return {
                     x: s,
                     y: l,
-                    width: Math.max(0, Math.floor((n + r) * t + e7) / t - s),
-                    height: Math.max(0, Math.floor((i + a) * t + e7) / t - l),
+                    width: Math.max(0, Math.floor((n + r) * t + e4) / t - s),
+                    height: Math.max(0, Math.floor((i + a) * t + e4) / t - l),
                 };
             })(r, i)).width > 0 && r.height > 0
                 ? r
@@ -898,478 +893,498 @@ function e6(e) {
         devicePixelRatio: i,
     };
 }
-let e7 = 1 / 64;
+let e4 = 1 / 64;
 function e8(e) {
     for (let [t, n] of l) if (n.iframe === e) return t;
     return null;
 }
-function e9(e) {
-    return null != e8(e);
-}
-function te(e) {
-    let t = e8(e);
-    return null != t && j === t;
-}
-function tt(e) {
-    for (let t of l.values())
-        if (t.source === e) {
-            if (null == t.shell || t.shell.closed) return null;
-            return {
-                shell: t.shell,
-                guest: (function (e) {
-                    try {
-                        return e.document.querySelector("iframe")?.contentWindow ?? null;
-                    } catch {
-                        return null;
-                    }
-                })(t.shell),
-            };
-        }
-    return null;
-}
-function tn(e, t) {
-    let n = e3(),
-        i = e8(e);
-    return null == n || null == i ? null : n.capture(i, t);
-}
-function ti(e, t, n, r, d) {
-    let c = e3();
-    if (null == c || e.ownerDocument !== document) return null;
-    (null == k &&
-        ((F = V()),
-        (k = new MutationObserver(H)).observe(document.documentElement, { attributes: !0, attributeFilter: ["class"] }),
-        k.observe(document.head, { childList: !0, subtree: !0, characterData: !0 })),
-        o !== c &&
-            ((o = c),
-            c.onMessage((e, t, n) => {
-                let i = l.get(e);
-                null != i &&
-                    window.dispatchEvent(new MessageEvent("message", { data: t, origin: n, source: i.source }));
-            }),
-            c.onLoad((e) => l.get(e)?.onLoad()),
-            c.onCursor((e, t) => {
-                let n = l.get(e)?.inputTarget;
-                null != n &&
-                    (function (e, t, n) {
-                        let i = e1.get(e);
-                        if (null == i) {
-                            null == e0 && ((e0 = document.createElement("style")), document.head.appendChild(e0));
-                            let n = e0.sheet;
-                            if (null == n) return;
-                            let r = e2++;
-                            t.setAttribute(eJ, String(r));
-                            let a = n.insertRule(`[${eJ}="${r}"] {}`, n.cssRules.length);
-                            ((i = n.cssRules[a]), e1.set(e, i));
-                        }
-                        i.style.cursor = n;
-                    })(e, n, Object.hasOwn(eQ, t) ? eQ[t] : t.includes("-panning") ? "all-scroll" : "default");
-            }),
-            c.onUnder?.(eF),
-            c.onExit((e, t) => {
-                var n, i;
-                let r,
-                    a,
-                    s,
-                    o = l.get(e);
-                null != o &&
-                    ((n = o.iframe),
-                    (i = t),
-                    null !=
-                    (s =
-                        (a = (r = [
-                            ...document.querySelectorAll(
-                                'a[href], area[href], button, input, select, textarea, iframe, summary, [tabindex], [contenteditable="true"]',
-                            ),
-                        ].filter(
-                            (e) =>
-                                e === n ||
-                                (e.tabIndex >= 0 && !e.matches(":disabled") && e.getClientRects().length > 0),
-                        )).indexOf(n)) < 0
-                            ? null
-                            : r[i ? a - 1 : a + 1])
-                        ? s.focus()
-                        : n.blur());
-            }),
-            c.onFocus((e, t) => {
-                if (l.has(e)) {
-                    if (t) {
-                        ((j = e), (0, a.XC)(window, !0));
-                        return;
-                    }
-                    (j === e && (j = null), document.hasFocus() || (0, a.XC)(window, !1));
+n.d(
+    t,
+    {},
+    {
+        H3: function (e) {
+            for (let t of l.values())
+                if (t.source === e) {
+                    if (null == t.shell || t.shell.closed) return null;
+                    return {
+                        shell: t.shell,
+                        guest: (function (e) {
+                            try {
+                                return e.document.querySelector("iframe")?.contentWindow ?? null;
+                            } catch {
+                                return null;
+                            }
+                        })(t.shell),
+                    };
                 }
-            })));
-    let _ = (function (e, t) {
-        let { port1: n } = new MessageChannel();
-        return (
-            Object.defineProperty(n, "postMessage", {
-                value: (n, i) => {
-                    e.postMessage(t, n, "string" == typeof i ? i : "/").catch(() => {});
-                },
-            }),
-            n
-        );
-    })(c, t);
-    (Object.defineProperty(e, "contentWindow", { configurable: !0, get: () => _ }),
-        Object.defineProperty(e, "src", { configurable: !0, get: () => n.src }));
-    let E = e.parentElement,
-        h =
-            null != E
-                ? (function (e, t, n) {
-                      let i = new AbortController(),
-                          { signal: r } = i,
-                          a = !1,
-                          l = !1,
-                          o = !1,
-                          d = !1,
-                          c = null,
-                          u = 0,
-                          _ = 0,
-                          E = [];
-                      function A(e) {
-                          return (
-                              _++,
-                              e.finally(() => {
-                                  if (--_ > 0 || d || null != c) return;
-                                  let e = E;
-                                  for (let t of ((E = []), e)) t();
-                              })
-                          );
-                      }
-                      function h(n) {
-                          if (d) {
-                              c = n;
-                              return;
-                          }
-                          function i() {
-                              d = !1;
-                              let e = c;
-                              ((c = null), null == e || r.aborted || h(e));
-                          }
-                          ((d = !0),
-                              A(
-                                  e.sendInput(t, n).then(i, (e) => {
-                                      (s.warn(`frame view ${t} input failed`, e), i());
-                                  }),
-                              ));
-                      }
-                      function f(n) {
-                          let i = null != c ? [c, n] : [n];
-                          for (let n of ((c = null), i))
-                              A(e.sendInput(t, n).catch((e) => s.warn(`frame view ${t} input failed`, e)));
-                      }
-                      function I(e, t, i) {
-                          n.addEventListener(
-                              e,
-                              (e) => {
-                                  a || t(e);
-                              },
-                              { signal: r, ...i },
-                          );
-                      }
-                      function p(e, t) {
-                          let n;
-                          return {
-                              type: e,
-                              x: t.clientX,
-                              y: t.clientY,
-                              modifiers:
-                                  ((n = []),
-                                  t.shiftKey && n.push("shift"),
-                                  t.ctrlKey && n.push("control"),
-                                  t.altKey && n.push("alt"),
-                                  t.metaKey && n.push("meta"),
-                                  (1 & t.buttons) != 0 && n.push("leftButtonDown"),
-                                  (2 & t.buttons) != 0 && n.push("rightButtonDown"),
-                                  (4 & t.buttons) != 0 && n.push("middleButtonDown"),
-                                  n),
-                          };
-                      }
-                      function m(e) {
-                          let i = document.elementFromPoint(e.clientX, e.clientY);
-                          (null != i && n.contains(i)) || (f(p("mouseLeave", e)), ek(t, !1));
-                      }
-                      (I("pointerdown", (e) => {
-                          "mouse" === e.pointerType && (n.setPointerCapture(e.pointerId), (l = !0));
-                      }),
-                          I("lostpointercapture", (e) => {
-                              ((l = !1), eD === t && eB(), o && ((o = !1), m(e)));
-                          }),
-                          I("mousedown", (e) => {
-                              (e.preventDefault(), (u = e.buttons), ey === t && eV());
-                              let n = eZ[e.button];
-                              null != n && f({ ...p("mouseDown", e), button: n, clickCount: e.detail });
-                          }),
-                          I("mouseup", (e) => {
-                              u = e.buttons;
-                              let n = eZ[e.button];
-                              (null != n && f({ ...p("mouseUp", e), button: n, clickCount: e.detail }),
-                                  eD === t && eB());
-                          }));
-                      let T = !1;
-                      for (let e of (n.addEventListener(
-                          "pointerrawupdate",
-                          (e) => {
-                              (T = "mouse" === e.pointerType) &&
-                                  !a &&
-                                  ((u = e.buttons), h(p("mouseMove", e)), ek(t, !0));
-                          },
-                          { signal: r },
-                      ),
-                      I("mousemove", (e) => {
-                          T || ((u = e.buttons), h(p("mouseMove", e)), ek(t, !0));
-                      }),
-                      I("mouseenter", (e) => {
-                          (f(p("mouseEnter", e)), ek(t, !0));
-                      }),
-                      I("mouseleave", (e) => {
-                          if (l) {
-                              o = !0;
-                              return;
-                          }
-                          m(e);
-                      }),
-                      I(
-                          "wheel",
-                          (e) => {
-                              e.preventDefault();
-                              let t =
-                                  e.deltaMode === WheelEvent.DOM_DELTA_LINE
-                                      ? 40
-                                      : e.deltaMode === WheelEvent.DOM_DELTA_PAGE
-                                        ? n.clientHeight
-                                        : 1;
-                              f({ ...p("mouseWheel", e), deltaX: e.deltaX * t, deltaY: e.deltaY * t });
-                          },
-                          { passive: !1 },
-                      ),
-                      I("contextmenu", (e) => e.preventDefault()),
-                      ["dragenter", "dragover", "drop"]))
-                          I(e, (e) => e.stopPropagation());
-                      return (
-                          r.addEventListener("abort", () => {
-                              ((c = null),
-                                  (function (e, t) {
-                                      let n = e1.get(e);
-                                      if (null == n) return;
-                                      (e1.delete(e), t.removeAttribute(eJ));
-                                      let i = e0?.sheet;
-                                      if (null == i) return;
-                                      let r = [...i.cssRules].indexOf(n);
-                                      r >= 0 && i.deleteRule(r);
-                                  })(t, n),
-                                  ek(t, !1));
-                          }),
-                          {
-                              abort: () => i.abort(),
-                              setSuspended(e) {
-                                  (e && !a && f({ type: "mouseLeave", x: 0, y: 0, modifiers: [] }), (a = e));
-                              },
-                              idle: () => 0 === u && !l,
-                              drained: () =>
-                                  0 !== _ || d || null != c ? new Promise((e) => E.push(e)) : Promise.resolve(),
-                          }
-                      );
-                  })(c, t, E)
-                : null,
-        f = n.colorScheme,
-        I = {
-            iframe: e,
-            source: _,
-            shell: null,
-            onLoad: r,
-            inputTarget: E,
-            lastLayout: null,
-            inputSuspended: !1,
-            input: h,
+            return null;
         },
-        m = new AbortController();
-    function N() {
-        l.get(t) === I &&
-            (l.delete(t),
-            T === e && (T = null),
-            ey === t && (ey = null),
-            eP++,
-            eD === t && (eD = null),
-            eb === t && (eb = null),
-            ev === t && (ev = null),
-            M?.visibility?.unobserve(e),
-            eq(),
-            h?.abort(),
-            m.abort(),
-            j === t && ((j = null), document.hasFocus() || (0, a.XC)(window, !1)),
-            Reflect.deleteProperty(e, "contentWindow"),
-            Reflect.deleteProperty(e, "src"),
-            0 === l.size &&
-                (null != M &&
-                    (M.controller.abort(),
-                    M.mutations.disconnect(),
-                    M.ancestors?.disconnect(),
-                    M.containers?.disconnect(),
-                    M.visibility?.disconnect(),
-                    (M = null),
-                    U.clear(),
-                    w.clear(),
-                    (G = ""),
-                    S.clear(),
-                    C.clear(),
-                    O.clear(),
-                    b.clear(),
-                    (D = !1),
-                    eG.clear(),
-                    (ey = null),
-                    (eD = null),
-                    (eb = null),
-                    (ev = null),
-                    ew.clear(),
-                    (R = null),
-                    (L = !1),
-                    (p = null),
-                    (A = !1),
-                    null != u && (clearTimeout(u), (u = null))),
-                eR([]),
-                k?.disconnect(),
-                (k = null),
-                (x = !1)));
-    }
-    return (
-        e.addEventListener(
-            "focus",
-            () => {
-                setTimeout(() => {
-                    l.get(t) === I &&
-                        document.activeElement === e &&
-                        c.enter(t).catch((e) => s.warn(`frame view ${t} focus failed`, e));
-                }, 0);
-            },
-            { signal: m.signal },
-        ),
-        l.set(t, I),
-        !(function () {
-            if (null != M) return;
-            let e = new AbortController(),
-                { signal: t } = e,
-                n = { capture: !0, signal: t },
-                r = { capture: !0, passive: !0, signal: t };
-            for (let n of ((M = {
-                controller: e,
-                mutations: new MutationObserver(eX),
-                ancestors: "u" > typeof ResizeObserver ? new ResizeObserver(ej) : null,
-                containers: "u" > typeof ResizeObserver ? new ResizeObserver(eY) : null,
-                visibility:
-                    "u" > typeof IntersectionObserver
-                        ? new IntersectionObserver(() => eW(!0), { threshold: [0, 0.01, 0.25, 0.5, 0.75, 0.99, 1] })
-                        : null,
-            }).mutations.observe(document.documentElement, {
-                subtree: !0,
-                childList: !0,
-                attributes: !0,
-                attributeFilter: ["class", "style", "hidden", "open", "data-theme"],
-            }),
-            M.mutations.observe(document.head, { subtree: !0, childList: !0, characterData: !0 }),
-            window.addEventListener("resize", () => eW(!1), { signal: t }),
-            document.addEventListener(
-                "scroll",
-                (e) => {
-                    eT(e.target) && eW(!1);
-                },
-                r,
-            ),
-            ["pointerover", "pointerout", "pointerdown", "pointerup", "focusin", "focusout"]))
-                document.addEventListener(n, eY, r);
-            for (let e of ["transitionrun", "animationstart"])
-                document.addEventListener(
-                    e,
-                    (t) => {
-                        let { target: n } = t;
-                        if ((0, i.vq)(n, Element)) {
-                            if (null != ey) {
-                                (ew.set(n, 64), eH(!1));
+        H9: function () {
+            return null != e3();
+        },
+        KQ: $,
+        oe: function (e, t) {
+            let n = e3(),
+                i = e8(e);
+            return null == n || null == i ? null : n.capture(i, t);
+        },
+        r8: function (e) {
+            let t = e8(e);
+            return null != t && j === t;
+        },
+        t8: function (e) {
+            return null != e8(e);
+        },
+        xW: function (e, t, n, r, d) {
+            let c = e3();
+            if (null == c || e.ownerDocument !== document) return null;
+            (null == k &&
+                ((F = V()),
+                (k = new MutationObserver(H)).observe(document.documentElement, {
+                    attributes: !0,
+                    attributeFilter: ["class"],
+                }),
+                k.observe(document.head, { childList: !0, subtree: !0, characterData: !0 })),
+                o !== c &&
+                    ((o = c),
+                    c.onMessage((e, t, n) => {
+                        let i = l.get(e);
+                        null != i &&
+                            window.dispatchEvent(new MessageEvent("message", { data: t, origin: n, source: i.source }));
+                    }),
+                    c.onLoad((e) => l.get(e)?.onLoad()),
+                    c.onCursor((e, t) => {
+                        let n = l.get(e)?.inputTarget;
+                        null != n &&
+                            (function (e, t, n) {
+                                let i = e1.get(e);
+                                if (null == i) {
+                                    null == e0 &&
+                                        ((e0 = document.createElement("style")), document.head.appendChild(e0));
+                                    let n = e0.sheet;
+                                    if (null == n) return;
+                                    let r = e2++;
+                                    t.setAttribute(eJ, String(r));
+                                    let a = n.insertRule(`[${eJ}="${r}"] {}`, n.cssRules.length);
+                                    ((i = n.cssRules[a]), e1.set(e, i));
+                                }
+                                i.style.cursor = n;
+                            })(e, n, Object.hasOwn(eQ, t) ? eQ[t] : t.includes("-panning") ? "all-scroll" : "default");
+                    }),
+                    c.onUnder?.(eF),
+                    c.onExit((e, t) => {
+                        var n, i;
+                        let r,
+                            a,
+                            s,
+                            o = l.get(e);
+                        null != o &&
+                            ((n = o.iframe),
+                            (i = t),
+                            null !=
+                            (s =
+                                (a = (r = [
+                                    ...document.querySelectorAll(
+                                        'a[href], area[href], button, input, select, textarea, iframe, summary, [tabindex], [contenteditable="true"]',
+                                    ),
+                                ].filter(
+                                    (e) =>
+                                        e === n ||
+                                        (e.tabIndex >= 0 && !e.matches(":disabled") && e.getClientRects().length > 0),
+                                )).indexOf(n)) < 0
+                                    ? null
+                                    : r[i ? a - 1 : a + 1])
+                                ? s.focus()
+                                : n.blur());
+                    }),
+                    c.onFocus((e, t) => {
+                        if (l.has(e)) {
+                            if (t) {
+                                ((j = e), (0, a.XC)(window, !0));
                                 return;
                             }
-                            (!(function (e) {
-                                let t = eE(),
-                                    n = e;
-                                for (let e = 0; null != n && e < 40; e++, n = n.parentElement) {
-                                    if (C.has(n)) return;
-                                    if (
-                                        "none" === getComputedStyle(n).pointerEvents &&
-                                        ((null != t && n.contains(t)) || em(n))
-                                    ) {
-                                        (C.add(n), eW(!0));
+                            (j === e && (j = null), document.hasFocus() || (0, a.XC)(window, !1));
+                        }
+                    })));
+            let _ = (function (e, t) {
+                let { port1: n } = new MessageChannel();
+                return (
+                    Object.defineProperty(n, "postMessage", {
+                        value: (n, i) => {
+                            e.postMessage(t, n, "string" == typeof i ? i : "/").catch(() => {});
+                        },
+                    }),
+                    n
+                );
+            })(c, t);
+            (Object.defineProperty(e, "contentWindow", { configurable: !0, get: () => _ }),
+                Object.defineProperty(e, "src", { configurable: !0, get: () => n.src }));
+            let E = e.parentElement,
+                h =
+                    null != E
+                        ? (function (e, t, n) {
+                              let i = new AbortController(),
+                                  { signal: r } = i,
+                                  a = !1,
+                                  l = !1,
+                                  o = !1,
+                                  d = !1,
+                                  c = null,
+                                  u = 0,
+                                  _ = 0,
+                                  E = [];
+                              function A(e) {
+                                  return (
+                                      _++,
+                                      e.finally(() => {
+                                          if (--_ > 0 || d || null != c) return;
+                                          let e = E;
+                                          for (let t of ((E = []), e)) t();
+                                      })
+                                  );
+                              }
+                              function h(n) {
+                                  if (d) {
+                                      c = n;
+                                      return;
+                                  }
+                                  function i() {
+                                      d = !1;
+                                      let e = c;
+                                      ((c = null), null == e || r.aborted || h(e));
+                                  }
+                                  ((d = !0),
+                                      A(
+                                          e.sendInput(t, n).then(i, (e) => {
+                                              (s.warn(`frame view ${t} input failed`, e), i());
+                                          }),
+                                      ));
+                              }
+                              function f(n) {
+                                  let i = null != c ? [c, n] : [n];
+                                  for (let n of ((c = null), i))
+                                      A(e.sendInput(t, n).catch((e) => s.warn(`frame view ${t} input failed`, e)));
+                              }
+                              function I(e, t, i) {
+                                  n.addEventListener(
+                                      e,
+                                      (e) => {
+                                          a || t(e);
+                                      },
+                                      { signal: r, ...i },
+                                  );
+                              }
+                              function p(e, t) {
+                                  let n;
+                                  return {
+                                      type: e,
+                                      x: t.clientX,
+                                      y: t.clientY,
+                                      modifiers:
+                                          ((n = []),
+                                          t.shiftKey && n.push("shift"),
+                                          t.ctrlKey && n.push("control"),
+                                          t.altKey && n.push("alt"),
+                                          t.metaKey && n.push("meta"),
+                                          (1 & t.buttons) != 0 && n.push("leftButtonDown"),
+                                          (2 & t.buttons) != 0 && n.push("rightButtonDown"),
+                                          (4 & t.buttons) != 0 && n.push("middleButtonDown"),
+                                          n),
+                                  };
+                              }
+                              function m(e) {
+                                  let i = document.elementFromPoint(e.clientX, e.clientY);
+                                  (null != i && n.contains(i)) || (f(p("mouseLeave", e)), ek(t, !1));
+                              }
+                              (I("pointerdown", (e) => {
+                                  "mouse" === e.pointerType && (n.setPointerCapture(e.pointerId), (l = !0));
+                              }),
+                                  I("lostpointercapture", (e) => {
+                                      ((l = !1), eD === t && eB(), o && ((o = !1), m(e)));
+                                  }),
+                                  I("mousedown", (e) => {
+                                      (e.preventDefault(), (u = e.buttons), ey === t && eV());
+                                      let n = eZ[e.button];
+                                      null != n && f({ ...p("mouseDown", e), button: n, clickCount: e.detail });
+                                  }),
+                                  I("mouseup", (e) => {
+                                      u = e.buttons;
+                                      let n = eZ[e.button];
+                                      (null != n && f({ ...p("mouseUp", e), button: n, clickCount: e.detail }),
+                                          eD === t && eB());
+                                  }));
+                              let T = !1;
+                              for (let e of (n.addEventListener(
+                                  "pointerrawupdate",
+                                  (e) => {
+                                      (T = "mouse" === e.pointerType) &&
+                                          !a &&
+                                          ((u = e.buttons), h(p("mouseMove", e)), ek(t, !0));
+                                  },
+                                  { signal: r },
+                              ),
+                              I("mousemove", (e) => {
+                                  T || ((u = e.buttons), h(p("mouseMove", e)), ek(t, !0));
+                              }),
+                              I("mouseenter", (e) => {
+                                  (f(p("mouseEnter", e)), ek(t, !0));
+                              }),
+                              I("mouseleave", (e) => {
+                                  if (l) {
+                                      o = !0;
+                                      return;
+                                  }
+                                  m(e);
+                              }),
+                              I(
+                                  "wheel",
+                                  (e) => {
+                                      e.preventDefault();
+                                      let t =
+                                          e.deltaMode === WheelEvent.DOM_DELTA_LINE
+                                              ? 40
+                                              : e.deltaMode === WheelEvent.DOM_DELTA_PAGE
+                                                ? n.clientHeight
+                                                : 1;
+                                      f({ ...p("mouseWheel", e), deltaX: e.deltaX * t, deltaY: e.deltaY * t });
+                                  },
+                                  { passive: !1 },
+                              ),
+                              I("contextmenu", (e) => e.preventDefault()),
+                              ["dragenter", "dragover", "drop"]))
+                                  I(e, (e) => e.stopPropagation());
+                              return (
+                                  r.addEventListener("abort", () => {
+                                      ((c = null),
+                                          (function (e, t) {
+                                              let n = e1.get(e);
+                                              if (null == n) return;
+                                              (e1.delete(e), t.removeAttribute(eJ));
+                                              let i = e0?.sheet;
+                                              if (null == i) return;
+                                              let r = [...i.cssRules].indexOf(n);
+                                              r >= 0 && i.deleteRule(r);
+                                          })(t, n),
+                                          ek(t, !1));
+                                  }),
+                                  {
+                                      abort: () => i.abort(),
+                                      setSuspended(e) {
+                                          (e && !a && f({ type: "mouseLeave", x: 0, y: 0, modifiers: [] }), (a = e));
+                                      },
+                                      idle: () => 0 === u && !l,
+                                      drained: () =>
+                                          0 !== _ || d || null != c ? new Promise((e) => E.push(e)) : Promise.resolve(),
+                                  }
+                              );
+                          })(c, t, E)
+                        : null,
+                f = n.colorScheme,
+                I = {
+                    iframe: e,
+                    source: _,
+                    shell: null,
+                    onLoad: r,
+                    inputTarget: E,
+                    lastLayout: null,
+                    inputSuspended: !1,
+                    input: h,
+                },
+                m = new AbortController();
+            function N() {
+                l.get(t) === I &&
+                    (l.delete(t),
+                    T === e && (T = null),
+                    ey === t && (ey = null),
+                    eP++,
+                    eD === t && (eD = null),
+                    eb === t && (eb = null),
+                    ev === t && (ev = null),
+                    M?.visibility?.unobserve(e),
+                    eq(),
+                    h?.abort(),
+                    m.abort(),
+                    j === t && ((j = null), document.hasFocus() || (0, a.XC)(window, !1)),
+                    Reflect.deleteProperty(e, "contentWindow"),
+                    Reflect.deleteProperty(e, "src"),
+                    0 === l.size &&
+                        (null != M &&
+                            (M.controller.abort(),
+                            M.mutations.disconnect(),
+                            M.ancestors?.disconnect(),
+                            M.containers?.disconnect(),
+                            M.visibility?.disconnect(),
+                            (M = null),
+                            U.clear(),
+                            w.clear(),
+                            (G = ""),
+                            S.clear(),
+                            C.clear(),
+                            O.clear(),
+                            b.clear(),
+                            (D = !1),
+                            eG.clear(),
+                            (ey = null),
+                            (eD = null),
+                            (eb = null),
+                            (ev = null),
+                            ew.clear(),
+                            (R = null),
+                            (L = !1),
+                            (p = null),
+                            (A = !1),
+                            null != u && (clearTimeout(u), (u = null))),
+                        eR([]),
+                        k?.disconnect(),
+                        (k = null),
+                        (x = !1)));
+            }
+            return (
+                e.addEventListener(
+                    "focus",
+                    () => {
+                        setTimeout(() => {
+                            l.get(t) === I &&
+                                document.activeElement === e &&
+                                c.enter(t).catch((e) => s.warn(`frame view ${t} focus failed`, e));
+                        }, 0);
+                    },
+                    { signal: m.signal },
+                ),
+                l.set(t, I),
+                !(function () {
+                    if (null != M) return;
+                    let e = new AbortController(),
+                        { signal: t } = e,
+                        n = { capture: !0, signal: t },
+                        r = { capture: !0, passive: !0, signal: t };
+                    for (let n of ((M = {
+                        controller: e,
+                        mutations: new MutationObserver(eX),
+                        ancestors: "u" > typeof ResizeObserver ? new ResizeObserver(ej) : null,
+                        containers: "u" > typeof ResizeObserver ? new ResizeObserver(eY) : null,
+                        visibility:
+                            "u" > typeof IntersectionObserver
+                                ? new IntersectionObserver(() => eW(!0), {
+                                      threshold: [0, 0.01, 0.25, 0.5, 0.75, 0.99, 1],
+                                  })
+                                : null,
+                    }).mutations.observe(document.documentElement, {
+                        subtree: !0,
+                        childList: !0,
+                        attributes: !0,
+                        attributeFilter: ["class", "style", "hidden", "open", "data-theme"],
+                    }),
+                    M.mutations.observe(document.head, { subtree: !0, childList: !0, characterData: !0 }),
+                    window.addEventListener("resize", () => eW(!1), { signal: t }),
+                    document.addEventListener(
+                        "scroll",
+                        (e) => {
+                            eT(e.target) && eW(!1);
+                        },
+                        r,
+                    ),
+                    ["pointerover", "pointerout", "pointerdown", "pointerup", "focusin", "focusout"]))
+                        document.addEventListener(n, eY, r);
+                    for (let e of ["transitionrun", "animationstart"])
+                        document.addEventListener(
+                            e,
+                            (t) => {
+                                let { target: n } = t;
+                                if ((0, i.vq)(n, Element)) {
+                                    if (null != ey) {
+                                        (ew.set(n, 64), eH(!1));
                                         return;
                                     }
+                                    (!(function (e) {
+                                        let t = eE(),
+                                            n = e;
+                                        for (let e = 0; null != n && e < 40; e++, n = n.parentElement) {
+                                            if (C.has(n)) return;
+                                            if (
+                                                "none" === getComputedStyle(n).pointerEvents &&
+                                                ((null != t && n.contains(t)) || em(n))
+                                            ) {
+                                                (C.add(n), eW(!0));
+                                                return;
+                                            }
+                                        }
+                                    })(n),
+                                        eT(n) ? (S.add(n), eW(!0)) : "transitionrun" === e && g.has(n) && eW(!0));
                                 }
-                            })(n),
-                                eT(n) ? (S.add(n), eW(!0)) : "transitionrun" === e && g.has(n) && eW(!0));
-                        }
-                    },
-                    n,
-                );
-            for (let e of ["transitionend", "transitioncancel", "animationend", "animationcancel"])
-                document.addEventListener(
-                    e,
+                            },
+                            n,
+                        );
+                    for (let e of ["transitionend", "transitioncancel", "animationend", "animationcancel"])
+                        document.addEventListener(
+                            e,
+                            (e) => {
+                                let { target: t } = e;
+                                if ((0, i.vq)(t, Element)) {
+                                    null != ey && (ew.set(t, 0), eH(!1));
+                                    for (let e of [...C])
+                                        e.contains(t) &&
+                                            ((e.isConnected && "none" === getComputedStyle(e).pointerEvents) ||
+                                                (C.delete(e), eW(!0)));
+                                    S.delete(t) && eW(!0);
+                                }
+                            },
+                            n,
+                        );
+                    for (let e of (document.addEventListener(
+                        "load",
+                        (e) => {
+                            let { target: t } = e;
+                            (0, i.vq)(t, HTMLLinkElement) && eW(!0);
+                        },
+                        n,
+                    ),
+                    ei))
+                        window.matchMedia(e).addEventListener("change", () => eW(!0), { signal: t });
+                    for (let e of ["dragstart", "dragenter"]) document.addEventListener(e, () => eV(), r);
+                    document.addEventListener(
+                        "pointerover",
+                        (e) => {
+                            let { target: t } = e;
+                            if (null == eb) return;
+                            let n = l.get(eb)?.inputTarget;
+                            (null != n && (0, i.vq)(t, Element) && n.contains(t)) || ek(eb, !1);
+                        },
+                        r,
+                    );
+                })(),
+                M?.visibility?.observe(e),
+                eq(),
+                c.create(t, n).then(
                     (e) => {
-                        let { target: t } = e;
-                        if ((0, i.vq)(t, Element)) {
-                            null != ey && (ew.set(t, 0), eH(!1));
-                            for (let e of [...C])
-                                e.contains(t) &&
-                                    ((e.isConnected && "none" === getComputedStyle(e).pointerEvents) ||
-                                        (C.delete(e), eW(!0)));
-                            S.delete(t) && eW(!0);
-                        }
+                        l.get(t) === I &&
+                            ((I.shell = window.open(e.url, e.name)),
+                            null == I.shell &&
+                                (s.error(`frame view ${t} shell did not open`),
+                                N(),
+                                c.destroy(t).catch(() => {}),
+                                d?.()));
                     },
-                    n,
-                );
-            for (let e of (document.addEventListener(
-                "load",
-                (e) => {
-                    let { target: t } = e;
-                    (0, i.vq)(t, HTMLLinkElement) && eW(!0);
-                },
-                n,
-            ),
-            ei))
-                window.matchMedia(e).addEventListener("change", () => eW(!0), { signal: t });
-            for (let e of ["dragstart", "dragenter"]) document.addEventListener(e, () => eV(), r);
-            document.addEventListener(
-                "pointerover",
-                (e) => {
-                    let { target: t } = e;
-                    if (null == eb) return;
-                    let n = l.get(eb)?.inputTarget;
-                    (null != n && (0, i.vq)(t, Element) && n.contains(t)) || ek(eb, !1);
-                },
-                r,
+                    (e) => {
+                        l.get(t) === I && (s.error(`frame view ${t} was not created`, e), N(), d?.());
+                    },
+                ),
+                eW(!0),
+                {
+                    destroy() {
+                        l.get(t) === I && (N(), c.destroy(t).catch(() => {}));
+                    },
+                    setInputSuspended(e) {
+                        ((I.inputSuspended = e), e && ey === t && eV(), h?.setSuspended(e));
+                    },
+                    setColorScheme(e) {
+                        e !== f &&
+                            l.get(t) === I &&
+                            ((f = e),
+                            c.setColorScheme(t, e).catch((e) => s.warn(`frame view ${t} color scheme failed`, e)));
+                    },
+                }
             );
-        })(),
-        M?.visibility?.observe(e),
-        eq(),
-        c.create(t, n).then(
-            (e) => {
-                l.get(t) === I &&
-                    ((I.shell = window.open(e.url, e.name)),
-                    null == I.shell &&
-                        (s.error(`frame view ${t} shell did not open`), N(), c.destroy(t).catch(() => {}), d?.()));
-            },
-            (e) => {
-                l.get(t) === I && (s.error(`frame view ${t} was not created`, e), N(), d?.());
-            },
-        ),
-        eW(!0),
-        {
-            destroy() {
-                l.get(t) === I && (N(), c.destroy(t).catch(() => {}));
-            },
-            setInputSuspended(e) {
-                ((I.inputSuspended = e), e && ey === t && eV(), h?.setSuspended(e));
-            },
-            setColorScheme(e) {
-                e !== f &&
-                    l.get(t) === I &&
-                    ((f = e), c.setColorScheme(t, e).catch((e) => s.warn(`frame view ${t} color scheme failed`, e)));
-            },
-        }
-    );
-}
+        },
+    },
+);

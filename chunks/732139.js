@@ -1,17 +1,3 @@
-n.d(t, {
-    AA: () => A,
-    Do: () => _,
-    Ec: () => p,
-    N6: () => h,
-    R2: () => d,
-    as: () => u,
-    g9: () => I,
-    k1: () => E,
-    lq: () => o,
-    ni: () => f,
-    s: () => l,
-    tm: () => c,
-});
 var i,
     r,
     a,
@@ -27,9 +13,8 @@ var i,
         (i.TOP_GUILD_EMOJI = "TOP_GUILD_EMOJI"),
         (i.PREMIUM_UPSELL = "PREMIUM_UPSELL"),
         (i.SUGGESTED = "SUGGESTED"),
-        i);
-let o = "emoji-picker-grid";
-var d =
+        i),
+    o =
         (((r = {}).RECENT = "recent"),
         (r.FAVORITES = "favorites"),
         (r.TOP_GUILD_EMOJI = "top guild emoji"),
@@ -45,12 +30,23 @@ var d =
         (r.PREMIUM_UPSELL = "premium emoji"),
         (r.SUGGESTED = "suggested"),
         r),
-    c = (((a = {}).NONE = ""), (a.TOP_GUILD_EMOJI = "top_server"), (a.NEWLY_ADDED_EMOJI = "newly_added"), a),
-    u = (((s = {})[(s.MEDIUM = 40)] = "MEDIUM"), (s[(s.LARGE = 48)] = "LARGE"), s);
-let _ = "emoji-picker-tab-panel",
-    E = "emoji-picker-tab",
-    A = "soundboard-picker-tab-panel",
-    h = "soundboard-picker-tab",
-    f = "gif-picker-tab-panel",
-    I = "gif-picker-tab",
-    p = { reaction: 40, default: 44, jumbo: 96 };
+    d = (((a = {}).NONE = ""), (a.TOP_GUILD_EMOJI = "top_server"), (a.NEWLY_ADDED_EMOJI = "newly_added"), a),
+    c = (((s = {})[(s.MEDIUM = 40)] = "MEDIUM"), (s[(s.LARGE = 48)] = "LARGE"), s);
+n.d(
+    t,
+    {},
+    {
+        AA: "soundboard-picker-tab-panel",
+        Do: "emoji-picker-tab-panel",
+        Ec: { reaction: 40, default: 44, jumbo: 96 },
+        N6: "soundboard-picker-tab",
+        R2: o,
+        as: c,
+        g9: "gif-picker-tab",
+        k1: "emoji-picker-tab",
+        lq: "emoji-picker-grid",
+        ni: "gif-picker-tab-panel",
+        s: l,
+        tm: d,
+    },
+);

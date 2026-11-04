@@ -1,8 +1,8 @@
-(n.d(t, { A: () => y }), n(321073), n(667532));
+(n(321073), n(667532));
 var l = n(435558),
     r = n.n(l),
     a = n(136722),
-    i = n(17928),
+    i = n(855986),
     s = n(73153),
     E = n(411153),
     u = n(95701),
@@ -228,7 +228,7 @@ let y = new j(s.h, {
             (m = e.automodRules ?? []),
             (D = e.threads),
             (R = e.applicationCommands),
-            e.logs.length < A.$jw && (M = !1));
+            e.logs.length < 50 && (M = !1));
     },
     AUDIT_LOG_FETCH_FAIL: function () {
         ((h = !1), (U = !0), (I = []));
@@ -255,7 +255,7 @@ let y = new j(s.h, {
             (m = a),
             (D = i),
             (R = s),
-            (0 === t.length || t.length < A.$jw) && (M = !1),
+            (0 === t.length || t.length < 50) && (M = !1),
             t.length > 0)
         ) {
             let e = k(t);
@@ -298,3 +298,4 @@ let y = new j(s.h, {
             (D = []));
     },
 });
+n.d(t, {}, { A: y });

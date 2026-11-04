@@ -1,4 +1,4 @@
-.overlay__65dc6 {
+.overlay_JHO5jQ {
     border-radius: inherit;
     inset-inline: 0;
     bottom: 0;
@@ -6,11 +6,11 @@
     position: absolute
 }
 
-.overlay__65dc6:has(.content__65dc6:empty) {
+.overlay_JHO5jQ:has(.content_JHO5jQ:empty) {
     display: none
 }
 
-.backdrop__65dc6 {
+.backdrop_JHO5jQ {
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     border-radius: inherit;
@@ -23,7 +23,7 @@
     position: absolute
 }
 
-.content__65dc6 {
+.content_JHO5jQ {
     display: flex;
     flex-direction: column;
     gap: var(--space-8);
@@ -32,4 +32,4 @@
     position: relative
 }
 
-/*# sourceMappingURL=887789.c9b5b7d433caa3b7.css.map*/
+/*# sourceMappingURL=887789.70970cafc719df11.css.map*/

@@ -1,16 +1,16 @@
-.wrapper_fab8e8 {
+.wrapper_ncMHEz {
     display: flex;
     position: relative
 }
 
-.masked_fab8e8 {
+.masked_ncMHEz {
     --custom-dot-cutout-radius: 5px;
     display: flex;
     -webkit-mask-image: radial-gradient(circle at calc(100% - 3px) calc(100% - 3px), transparent var(--custom-dot-cutout-radius), #000 calc(var(--custom-dot-cutout-radius) + .5px));
     mask-image: radial-gradient(circle at calc(100% - 3px) calc(100% - 3px), transparent var(--custom-dot-cutout-radius), #000 calc(var(--custom-dot-cutout-radius) + .5px))
 }
 
-.dot_fab8e8 {
+.dot_ncMHEz {
     background-color: var(--blurple-50);
     border-radius: 100%;
     bottom: 0;
@@ -21,39 +21,39 @@
     width: 6px
 }
 
-.container_b2dcc1 {
+.container_KljP7l {
     background: var(--background-surface-high);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
     padding: var(--space-md)
 }
 
-.containerWithUpsell_b2dcc1 {
+.containerWithUpsell_KljP7l {
     border-bottom: none;
     border-radius: var(--radius-md) var(--radius-md) 0 0
 }
 
-.headerContainer_b2dcc1 {
+.headerContainer_KljP7l {
     display: flex;
     justify-content: space-between
 }
 
-.headerText_b2dcc1 {
+.headerText_KljP7l {
     align-items: center;
     display: flex;
     flex-direction: row;
     gap: var(--space-xxs)
 }
 
-.soundList_b2dcc1 {
+.soundList_KljP7l {
     display: grid;
     gap: var(--space-xs);
     grid-template-columns: repeat(3, 1fr);
     padding-top: var(--space-sm)
 }
 
-.loadingSoundItem_b2dcc1 {
-    animation: soundboard-loading-animation_b2dcc1 1.5s ease-in-out infinite;
+.loadingSoundItem_KljP7l {
+    animation: soundboard-loading-animation_KljP7l 1.5s ease-in-out infinite;
     background-image: linear-gradient(to right, var(--background-mod-muted) 0, var(--background-mod-subtle) 50%, var(--background-mod-muted) 100%);
     background-size: 200% 100%;
     border-radius: var(--radius-sm);
@@ -61,7 +61,7 @@
     width: 148px
 }
 
-@keyframes soundboard-loading-animation_b2dcc1 {
+@keyframes soundboard-loading-animation_KljP7l {
 
     0%,
     to {
@@ -73,7 +73,7 @@
     }
 }
 
-.upsellBanner_b2dcc1 {
+.upsellBanner_KljP7l {
     align-items: center;
     background-color: var(--modal-background);
     background-image: radial-gradient(410.96% 144.82% at 50% 144.82%, var(--modal-background) 60%, rgba(20, 20, 21, 0) 100%), linear-gradient(99deg, rgba(25, 23, 92, .65) 1.67%, rgba(140, 50, 151, .65) 87.95%, rgba(6, 6, 6, .65) 174.23%);
@@ -88,4 +88,4 @@
     padding: var(--space-sm) var(--space-md) var(--space-sm)
 }
 
-/*# sourceMappingURL=51382.09961740d418225e.css.map*/
+/*# sourceMappingURL=51382.793e8471b5d1483e.css.map*/

@@ -1,6 +1,6 @@
 e.exports = {
-    MT: "surface__5b95d",
-    gO: "nagbarOverride__5b95d",
-    $K: "promotionSelector__5b95d",
-    WG: "chatInputSurface__5b95d",
+    MT: "surface_EV6q6S",
+    gO: "nagbarOverride_EV6q6S",
+    $K: "promotionSelector_EV6q6S",
+    WG: "chatInputSurface_EV6q6S",
 };

@@ -1,1 +1,1 @@
-e.exports = { r: "collapsible__5c0bc" };
+e.exports = { r: "collapsible_OGVQYy" };

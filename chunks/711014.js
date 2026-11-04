@@ -1,5 +1,5 @@
 let i;
-(n.d(t, { Ay: () => B }), n(321073));
+n(321073);
 var r = n(812729),
     a = n.n(r),
     s = n(284009),
@@ -252,3 +252,4 @@ class F extends p.A {
     }
 }
 let B = new F();
+n.d(t, {}, { Ay: B });

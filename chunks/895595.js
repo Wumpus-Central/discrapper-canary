@@ -1,34 +1,39 @@
-n.d(t, { L: () => d });
 var i = n(73153),
     r = n(393033),
     a = n(462714),
     s = n(482876),
     l = n(757319);
 let o = null;
-function d(e) {
-    return (0, l._)(e)
-        ? null != o
-            ? o
-            : (o = (async () => {
-                  try {
-                      let e = (0, r.qn)() ? await (0, s.j)() : await (0, s.J)();
-                      if (
-                          (i.h.dispatch({
-                              type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS",
-                              methods: e.methods,
-                              footerMessage: e.footerMessage,
-                              outageBannerMessage: e.outageBannerMessage,
-                          }),
-                          null != e.outageBannerMessage)
-                      )
-                          return !1;
-                      let t = await (0, a.Y)(e.methods);
-                      return 0 === t.length;
-                  } catch {
-                      return !1;
-                  }
-              })().finally(() => {
-                  o = null;
-              }))
-        : Promise.resolve(!1);
-}
+n.d(
+    t,
+    {},
+    {
+        L: function (e) {
+            return (0, l._)(e)
+                ? null != o
+                    ? o
+                    : (o = (async () => {
+                          try {
+                              let e = (0, r.qn)() ? await (0, s.j)() : await (0, s.J)();
+                              if (
+                                  (i.h.dispatch({
+                                      type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS",
+                                      methods: e.methods,
+                                      footerMessage: e.footerMessage,
+                                      outageBannerMessage: e.outageBannerMessage,
+                                  }),
+                                  null != e.outageBannerMessage)
+                              )
+                                  return !1;
+                              let t = await (0, a.Y)(e.methods);
+                              return 0 === t.length;
+                          } catch {
+                              return !1;
+                          }
+                      })().finally(() => {
+                          o = null;
+                      }))
+                : Promise.resolve(!1);
+        },
+    },
+);

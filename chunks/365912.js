@@ -1,4 +1,3 @@
-n.d(t, { Ay: () => I, J$: () => h, Pb: () => _, Wd: () => f });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -35,12 +34,7 @@ function A(e) {
         );
     return (0, i.jsx)("div", { className: s()(_, n), ref: l });
 }
-function h(e) {
-    let t = (0, o.p3)(e, u.n7);
-    if ((null == t && (t = (0, o.wB)(e, c.IP)), null == t)) throw Error("Unexpected missing parent container");
-    return t;
-}
-let f = (e) => {
+let h = (e) => {
     let { layerContext: t, children: n } = e;
     return (0, i.jsx)(t.Consumer, {
         children: (e) =>
@@ -50,18 +44,31 @@ let f = (e) => {
             })(e, n),
     });
 };
-function I(e) {
-    let t = r.createContext([null, () => {}]),
-        n = {
-            LayerProvider: (e) => (0, i.jsx)(E, { layerContext: t, ...e }),
-            LayerContainer: (e) => (0, i.jsx)(A, { layerContext: t, ...e }),
-            Layer: (e) => (0, i.jsx)(f, { layerContext: t, ...e }),
-            layerContext: t,
-        };
-    return (
-        (n.LayerProvider.displayName = `${e}LayerProvider`),
-        (n.LayerContainer.displayName = `${e}LayerContainer`),
-        (n.Layer.displayName = `${e}Layer`),
-        n
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        Ay: function (e) {
+            let t = r.createContext([null, () => {}]),
+                n = {
+                    LayerProvider: (e) => (0, i.jsx)(E, { layerContext: t, ...e }),
+                    LayerContainer: (e) => (0, i.jsx)(A, { layerContext: t, ...e }),
+                    Layer: (e) => (0, i.jsx)(h, { layerContext: t, ...e }),
+                    layerContext: t,
+                };
+            return (
+                (n.LayerProvider.displayName = `${e}LayerProvider`),
+                (n.LayerContainer.displayName = `${e}LayerContainer`),
+                (n.Layer.displayName = `${e}Layer`),
+                n
+            );
+        },
+        J$: function (e) {
+            let t = (0, o.p3)(e, u.n7);
+            if ((null == t && (t = (0, o.wB)(e, c.IP)), null == t)) throw Error("Unexpected missing parent container");
+            return t;
+        },
+        Pb: _,
+        Wd: h,
+    },
+);

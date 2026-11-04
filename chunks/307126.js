@@ -1,7 +1,7 @@
-_.exports = {
-    fX: "userTooltip__6b453",
-    my: "avatar__6b453",
-    D2: "discriminator__6b453",
-    Kk: "icon__6b453",
-    gS: "tabular__6b453",
+r.exports = {
+    fX: "userTooltip_lXrdH_",
+    my: "avatar_lXrdH_",
+    D2: "discriminator_lXrdH_",
+    Kk: "icon_lXrdH_",
+    gS: "tabular_lXrdH_",
 };

@@ -1,6 +1,11 @@
-n.d(t, { A: () => r });
 var i = n(492462);
-function r() {
-    let { load_id: e } = (0, i.parse)(window.location.search);
-    return Array.isArray(e) ? e[0] : e;
-}
+n.d(
+    t,
+    {},
+    {
+        A: function () {
+            let { load_id: e } = (0, i.qg)(window.location.search);
+            return Array.isArray(e) ? e[0] : e;
+        },
+    },
+);

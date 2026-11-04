@@ -1,9 +1,9 @@
 t.exports = {
-    o1: "actions__46671",
-    j_: "destination__46671",
-    sm: "destinationIcon__46671",
-    Yr: "destinationText__46671",
-    lj: "destinationSecondary__46671",
-    ed: "destinationTextLine__46671",
-    Fx: "subtitleDestination__46671",
+    o1: "actions__M7qrc",
+    j_: "destination__M7qrc",
+    sm: "destinationIcon__M7qrc",
+    Yr: "destinationText__M7qrc",
+    lj: "destinationSecondary__M7qrc",
+    ed: "destinationTextLine__M7qrc",
+    Fx: "subtitleDestination__M7qrc",
 };

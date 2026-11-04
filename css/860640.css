@@ -1,15 +1,15 @@
-.comboWrapper__21874 {
+.comboWrapper_8dy5-m {
     pointer-events: none;
     position: absolute;
     z-index: 1000
 }
 
-.comboText__21874,
-.comboWrapper__21874 {
+.comboText_8dy5-m,
+.comboWrapper_8dy5-m {
     width: var(--custom-echo-text-width)
 }
 
-.comboText__21874 {
+.comboText_8dy5-m {
     background: linear-gradient(180deg, #fff 14%, #f9c900 15%, #f8a900 29%, #f7874f 30%, #f7766b 44%, #f66587 45%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -18,39 +18,39 @@
     text-align: center
 }
 
-.echoList_effefc {
+.echoList_Ag-7tW {
     bottom: calc(100% + 8px);
     flex-direction: column;
     pointer-events: none;
     width: 100%
 }
 
-.echoList_effefc,
-.rowWrapper_effefc {
+.echoList_Ag-7tW,
+.rowWrapper_Ag-7tW {
     align-items: center;
     display: flex;
     justify-content: center;
     position: absolute
 }
 
-.rowWrapper_effefc {
+.rowWrapper_Ag-7tW {
     bottom: 0;
     padding-top: 6px;
     pointer-events: auto
 }
 
-.echoRow_effefc {
+.echoRow_Ag-7tW {
     gap: 8px
 }
 
-.echoPill_effefc,
-.echoRow_effefc {
+.echoPill_Ag-7tW,
+.echoRow_Ag-7tW {
     align-items: center;
     display: flex;
     justify-content: center
 }
 
-.echoPill_effefc {
+.echoPill_Ag-7tW {
     -webkit-backdrop-filter: blur(18px);
     backdrop-filter: blur(18px);
     background: var(--control-overlay-secondary-background-default);
@@ -62,79 +62,79 @@
     padding: 4px 8px
 }
 
-.echoPill_effefc:hover:not(.echoPillDisabled_effefc):not(.echoPillActive_effefc) {
+.echoPill_Ag-7tW:hover:not(.echoPillDisabled_Ag-7tW):not(.echoPillActive_Ag-7tW) {
     background: var(--control-overlay-secondary-background-hover);
     border: 1px solid var(--control-overlay-secondary-border-hover)
 }
 
-.full-motion .echoPill_effefc:active:not(.echoPillDisabled_effefc) {
+.full-motion .echoPill_Ag-7tW:active:not(.echoPillDisabled_Ag-7tW) {
     transform: translateY(2px)
 }
 
-.echoPill_effefc.echoPillActive_effefc {
+.echoPill_Ag-7tW.echoPillActive_Ag-7tW {
     background: var(--control-overlay-secondary-background-active);
     border: 1px solid var(--brand-500);
     border-radius: 8px
 }
 
-.voiceChannelEffectEmoji_effefc {
+.voiceChannelEffectEmoji_Ag-7tW {
     height: 20px;
     width: 20px
 }
 
-.reactionCount_effefc {
+.reactionCount_Ag-7tW {
     display: flex;
     flex-direction: row
 }
 
-.verticalDivider_effefc {
+.verticalDivider_Ag-7tW {
     background-color: var(--border-subtle);
     height: 20px;
     width: 1px
 }
 
-.echoRowDisabled_effefc {
+.echoRowDisabled_Ag-7tW {
     opacity: .5
 }
 
-.echoPillDisabled_effefc {
+.echoPillDisabled_Ag-7tW {
     cursor: not-allowed
 }
 
-.avatarStack_effefc {
+.avatarStack_Ag-7tW {
     flex-direction: row;
     justify-content: flex-end;
     width: 32px
 }
 
-.avatarStack_effefc,
-.avatarWrapper_effefc {
+.avatarStack_Ag-7tW,
+.avatarWrapper_Ag-7tW {
     align-items: center;
     display: flex
 }
 
-.avatarWrapper_effefc {
+.avatarWrapper_Ag-7tW {
     border-radius: 100%;
     box-shadow: var(--shadow-high);
     justify-content: center
 }
 
-.stackedAvatarWrapper_effefc {
+.stackedAvatarWrapper_Ag-7tW {
     margin-inline-start: -8px
 }
 
-.avatar_effefc {
+.avatar_Ag-7tW {
     border-radius: 100%;
     overflow: visible
 }
 
-.authorAvatar_effefc {
+.authorAvatar_Ag-7tW {
     margin-inline-start: 0
 }
 
-.replyAvatar_effefc {
-    -webkit-mask: url(/assets/02d380a308c19fed.svg);
-    mask: url(/assets/02d380a308c19fed.svg);
+.replyAvatar_Ag-7tW {
+    -webkit-mask: url("/assets/02d380a308c19fed.svg");
+    mask: url("/assets/02d380a308c19fed.svg");
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-size: 100%;
@@ -142,11 +142,11 @@
     mask-type: alpha
 }
 
-.full-motion .animateIn_effefc {
-    animation: animate-grow_effefc .2s ease-in-out
+.full-motion .animateIn_Ag-7tW {
+    animation: animate-grow_Ag-7tW .2s ease-in-out
 }
 
-@keyframes animate-grow_effefc {
+@keyframes animate-grow_Ag-7tW {
     0% {
         height: 8px;
         scale: 0;
@@ -160,4 +160,4 @@
     }
 }
 
-/*# sourceMappingURL=860640.5e7f3f75d219b6a3.css.map*/
+/*# sourceMappingURL=860640.0ef09f9399ec8ab6.css.map*/

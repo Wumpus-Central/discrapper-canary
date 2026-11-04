@@ -1,8 +1,8 @@
 e.exports = {
-    uW: "section_eeba05",
-    G1: "above_eeba05",
-    Dk: "carousel_eeba05",
-    Vs: "tile_eeba05",
-    jv: "carouselScroller_eeba05",
-    o1: "actions_eeba05",
+    uW: "section_gVq5J1",
+    G1: "above_gVq5J1",
+    Dk: "carousel_gVq5J1",
+    Vs: "tile_gVq5J1",
+    jv: "carouselScroller_gVq5J1",
+    o1: "actions_gVq5J1",
 };

@@ -1,10 +1,10 @@
 t.exports = {
-    D7: "gradient__7dbcf",
-    cG: "closeButtonContainer__7dbcf",
-    JS: "artContainer__7dbcf",
-    tW: "followupArtContainer__7dbcf artContainer__7dbcf",
-    Qs: "content__7dbcf",
-    rf: "body__7dbcf",
-    wx: "header__7dbcf",
-    v0: "buttonRow__7dbcf",
+    D7: "gradient_Qbh8dz",
+    cG: "closeButtonContainer_Qbh8dz",
+    JS: "artContainer_Qbh8dz",
+    tW: "followupArtContainer_Qbh8dz artContainer_Qbh8dz",
+    Qs: "content_Qbh8dz",
+    rf: "body_Qbh8dz",
+    wx: "header_Qbh8dz",
+    v0: "buttonRow_Qbh8dz",
 };

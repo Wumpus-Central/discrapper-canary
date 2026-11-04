@@ -1,29 +1,14 @@
-n.d(t, { JH: () => I, VC: () => u, b4: () => A, oQ: () => _, qv: () => E, tg: () => f, xl: () => h });
-var i = n(17928),
+var i = n(855986),
     r = n(52133),
     a = n(55730),
-    s = n(952818);
-n(567249);
-var l = n(480595),
-    o = n(842018),
-    d = n(233741);
+    s = n(986322);
+n(293432);
+var l = n(491009),
+    o = n(894768),
+    d = n(887287);
 n(392164);
 var c = n(652215);
-function u(e, t) {
-    if (e === t) return !0;
-    if (e.length !== t.length) return !1;
-    for (let n = 0; n < e.length; n++) if (e[n].widget !== t[n].widget) return !1;
-    return !0;
-}
-function _(e, t) {
-    if (e === t) return !0;
-    if (e.length !== t.length) return !1;
-    for (let n = 0; n < e.length; n++)
-        if (e[n].index !== t[n].index || e[n].notification !== t[n].notification || e[n].locked !== t[n].locked)
-            return !1;
-    return !0;
-}
-function E() {
+function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.Ay,
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.A,
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.A,
@@ -34,22 +19,7 @@ function E() {
         ? void 0
         : { id: r?.id ?? a?.application_id, altId: a?.application_id, name: r?.name ?? a?.name };
 }
-function A() {
-    return (0, i.bG)([s.Ay, l.A, d.A], () => E(s.Ay, l.A, d.A), [], r.A);
-}
-function h(e) {
-    return (0, i.bG)(
-        [o.A, l.A],
-        () =>
-            (function (e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.A,
-                    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.A;
-                return null == e ? null : (t.getApplicationActivity(e, !0) ?? n.getApplicationActivity(e) ?? null);
-            })(e, o.A, l.A),
-        [e],
-    );
-}
-function f(e) {
+function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.A,
         n = t.getActivities(!0);
     return (
@@ -58,6 +28,45 @@ function f(e) {
         null
     );
 }
-function I(e) {
-    return (0, i.bG)([o.A], () => f(e, o.A), [e]);
-}
+n.d(
+    t,
+    {},
+    {
+        JH: function (e) {
+            return (0, i.bG)([o.A], () => _(e, o.A), [e]);
+        },
+        VC: function (e, t) {
+            if (e === t) return !0;
+            if (e.length !== t.length) return !1;
+            for (let n = 0; n < e.length; n++) if (e[n].widget !== t[n].widget) return !1;
+            return !0;
+        },
+        b4: function () {
+            return (0, i.bG)([s.Ay, l.A, d.A], () => u(s.Ay, l.A, d.A), [], r.A);
+        },
+        oQ: function (e, t) {
+            if (e === t) return !0;
+            if (e.length !== t.length) return !1;
+            for (let n = 0; n < e.length; n++)
+                if (e[n].index !== t[n].index || e[n].notification !== t[n].notification || e[n].locked !== t[n].locked)
+                    return !1;
+            return !0;
+        },
+        qv: u,
+        tg: _,
+        xl: function (e) {
+            return (0, i.bG)(
+                [o.A, l.A],
+                () =>
+                    (function (e) {
+                        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.A,
+                            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.A;
+                        return null == e
+                            ? null
+                            : (t.getApplicationActivity(e, !0) ?? n.getApplicationActivity(e) ?? null);
+                    })(e, o.A, l.A),
+                [e],
+            );
+        },
+    },
+);

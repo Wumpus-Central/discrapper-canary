@@ -1,6 +1,10 @@
-n.d(t, {
-    A: () =>
-        function e(t) {
+var i = n(155718),
+    r = n(731068);
+n.d(
+    t,
+    {},
+    {
+        A: function e(t) {
             return (Array.isArray(t) ? t : [t])
                 .flatMap((t) => {
                     switch (t.type) {
@@ -21,6 +25,5 @@ n.d(t, {
                 })
                 .map((e) => ("proxy_url" in e ? (0, r.Uv)(e) : e));
         },
-});
-var i = n(155718),
-    r = n(731068);
+    },
+);

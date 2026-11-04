@@ -1,1 +1,1 @@
-o.exports = { C: "newMemberBadge_f80704" };
+o.exports = { C: "newMemberBadge_P4-UkH" };

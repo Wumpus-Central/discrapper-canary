@@ -1,6 +1,5 @@
-r.d(e, { A: () => s });
 var i = r(315069),
-    l = r(32731);
+    l = r(431955);
 class s extends i.A {
     skuId;
     skuProductLine;
@@ -32,3 +31,4 @@ class s extends i.A {
         });
     }
 }
+r.d(e, {}, { A: s });

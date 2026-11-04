@@ -1,69 +1,78 @@
-i.d(a, { default: () => m });
-var n = i(477900),
-    s = i(582128),
-    e = i(189213),
-    l = i(192308),
-    r = i(834730),
-    d = i(47167),
-    c = i(769015),
-    o = i(514810),
-    x = i(105292),
-    h = i(96749);
-let m = function (t) {
-    let { channel: a, application: m, onClose: u, transitionState: p } = t,
-        j = (0, o.N)(a),
-        y = s.useCallback(
-            () => (
-                u(),
-                (0, l.openModalLazy)(async () => {
-                    let { default: t } = await Promise.all([i.e("421060"), i.e("193154")]).then(i.bind(i, 428185));
-                    return (i) => (0, n.jsx)(t, { ...i, channelId: a.id, application: m });
-                })
-            ),
-            [m, a.id, u],
-        ),
-        v = (0, d.Ay)(a, !0);
-    return (0, n.jsx)(e.a, {
-        transitionState: p,
-        "aria-label": x.intl.string(x.t.OJknhi),
-        onClose: u,
-        title: x.intl.string(x.t.OJknhi),
-        actions: [
-            { text: x.intl.string(x.t["ETE/oC"]), onClick: u, variant: "secondary" },
-            { text: x.intl.string(x.t.LLWaxQ), onClick: y, variant: "critical-primary" },
-        ],
-        children: (0, n.jsxs)("div", {
-            className: h.Qs,
-            children: [
-                (0, n.jsx)(c.A, { game: m, size: c.M.XLARGE }),
-                (0, n.jsxs)("div", {
-                    className: h.yu,
+var n = a(477900),
+    s = a(582128),
+    e = a(189213),
+    l = a(192308),
+    r = a(834730),
+    c = a(47167),
+    d = a(769015),
+    o = a(514810),
+    m = a(792996),
+    x = a(96749);
+a.d(
+    i,
+    {},
+    {
+        default: function (t) {
+            let { channel: i, application: h, onClose: u, transitionState: j } = t,
+                p = (0, o.N)(i),
+                v = s.useCallback(
+                    () => (
+                        u(),
+                        (0, l.mM)(async () => {
+                            let { default: t } = await Promise.all([a.e(421060), a.e(193154)]).then(a.bind(a, 428185));
+                            return (a) => (0, n.jsx)(t, { ...a, channelId: i.id, application: h });
+                        })
+                    ),
+                    [h, i.id, u],
+                ),
+                y = (0, c.Ay)(i, !0);
+            return (0, n.jsx)(e.a, {
+                transitionState: j,
+                "aria-label": m.intl.string(m.t.OJknhi),
+                onClose: u,
+                title: m.intl.string(m.t.OJknhi),
+                actions: [
+                    { text: m.intl.string(m.t["ETE/oC"]), onClick: u, variant: "secondary" },
+                    { text: m.intl.string(m.t.LLWaxQ), onClick: v, variant: "critical-primary" },
+                ],
+                children: (0, n.jsxs)("div", {
+                    className: x.Qs,
                     children: [
+                        (0, n.jsx)(d.A, { game: h, size: d.M.XLARGE }),
                         (0, n.jsxs)("div", {
-                            className: h.py,
+                            className: x.yu,
                             children: [
-                                (0, n.jsx)(r.E, {
-                                    variant: "body-md/semibold",
-                                    color: "text-strong",
-                                    children: m.name,
+                                (0, n.jsxs)("div", {
+                                    className: x.py,
+                                    children: [
+                                        (0, n.jsx)(r.E, {
+                                            variant: "body-md/semibold",
+                                            color: "text-strong",
+                                            children: h.name,
+                                        }),
+                                        (0, n.jsx)(r.E, {
+                                            variant: "body-sm/normal",
+                                            color: "text-muted",
+                                            children: m.intl.format(m.t["0NJZAU"], { channelName: y }),
+                                        }),
+                                    ],
                                 }),
-                                (0, n.jsx)(r.E, {
-                                    variant: "body-sm/normal",
-                                    color: "text-muted",
-                                    children: x.intl.format(x.t["0NJZAU"], { channelName: v }),
-                                }),
+                                null != p &&
+                                    (0, n.jsxs)(n.Fragment, {
+                                        children: [
+                                            (0, n.jsx)("div", { className: x.yF }),
+                                            (0, n.jsx)(r.E, {
+                                                variant: "body-xs/normal",
+                                                color: "text-muted",
+                                                children: p,
+                                            }),
+                                        ],
+                                    }),
                             ],
                         }),
-                        null != j &&
-                            (0, n.jsxs)(n.Fragment, {
-                                children: [
-                                    (0, n.jsx)("div", { className: h.yF }),
-                                    (0, n.jsx)(r.E, { variant: "body-xs/normal", color: "text-muted", children: j }),
-                                ],
-                            }),
                     ],
                 }),
-            ],
-        }),
-    });
-};
+            });
+        },
+    },
+);

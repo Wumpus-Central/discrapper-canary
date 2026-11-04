@@ -1,0 +1,64 @@
+.channelName_0SicsV {
+    align-items: center;
+    display: flex;
+    justify-self: center;
+    margin-bottom: var(--space-8)
+}
+
+.channelIcon_0SicsV {
+    padding-inline-end: var(--space-4)
+}
+
+.description_0SicsV {
+    margin-bottom: var(--space-12)
+}
+
+.subtext_0SicsV {
+    margin-top: var(--space-4)
+}
+
+.description_GTawiK {
+    margin-bottom: var(--space-8)
+}
+
+.emojiButton_GTawiK {
+    border-radius: 0;
+    padding-inline-end: 12px
+}
+
+.icon_GTawiK {
+    margin-inline-end: 12px;
+    opacity: .6;
+    fill: var(--primary-300)
+}
+
+.searchHelpText_GTawiK {
+    margin: var(--space-4) 0
+}
+
+.channelTypeDescription_GTawiK,
+.storeChannelOptionSelector_GTawiK {
+    margin-bottom: 20px
+}
+
+.addMemberError_GTawiK {
+    padding-inline: 8px
+}
+
+.createError_GTawiK {
+    margin: 16px
+}
+
+.newBadge_GTawiK {
+    display: inline-flex;
+    margin-inline-start: 4px;
+    vertical-align: middle
+}
+
+.createChannelContent_GTawiK {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+/*# sourceMappingURL=d4a8ecd2125ee1b3.css.map*/

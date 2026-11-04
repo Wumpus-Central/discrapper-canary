@@ -1,4 +1,3 @@
-n.d(t, { CP: () => d, KX: () => o, SY: () => l, ip: () => a, xt: () => s });
 var i,
     r = n(582128),
     a =
@@ -8,7 +7,5 @@ var i,
         (i[(i.EXITED = 3)] = "EXITED"),
         (i[(i.HIDDEN = 4)] = "HIDDEN"),
         i);
-let s = 300,
-    l = "default",
-    o = "popout",
-    d = r.createContext({ headerId: void 0, headerIdIsManaged: !1, transitionState: void 0 });
+let s = r.createContext({ headerId: void 0, headerIdIsManaged: !1, transitionState: void 0 });
+n.d(t, {}, { CP: s, SY: "default", ip: a });

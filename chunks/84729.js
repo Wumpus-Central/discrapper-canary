@@ -1,6 +1,6 @@
 t.exports = {
-    g4: "loadingContainer_f3bc7c",
-    S3: "giftSentToGameNoticeContainerPadding_f3bc7c",
-    pt: "customGiftMessage_f3bc7c",
-    j7: "giftSenderText_f3bc7c",
+    g4: "loadingContainer_QegJ3p",
+    S3: "giftSentToGameNoticeContainerPadding_QegJ3p",
+    pt: "customGiftMessage_QegJ3p",
+    j7: "giftSenderText_QegJ3p",
 };

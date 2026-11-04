@@ -1,4 +1,3 @@
-n.d(t, { n: () => a, r: () => s });
 var i,
     r,
     a =
@@ -32,3 +31,4 @@ var i,
         (r.APPLICATION_ACCOUNT_LINK = "application-account-link"),
         (r.FAVORITES_SUGGESTIONS = "favorites-suggestions"),
         r);
+n.d(t, {}, { n: a, r: s });

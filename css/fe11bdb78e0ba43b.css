@@ -1,0 +1,322 @@
+@keyframes outgoing-call-pulse_COIWNl {
+    0% {
+        opacity: .5
+    }
+
+    11.56% {
+        opacity: 1
+    }
+
+    39.02% {
+        opacity: .5
+    }
+
+    39.04% {
+        opacity: 1
+    }
+
+    66.48% {
+        opacity: .5
+    }
+
+    to {
+        opacity: .5
+    }
+}
+
+@keyframes outgoing-call-ellipsis_COIWNl {
+    0% {
+        content: ""
+    }
+
+    66.48% {
+        content: ""
+    }
+
+    66.5% {
+        content: "."
+    }
+
+    85% {
+        content: ".."
+    }
+
+    90% {
+        content: "..."
+    }
+
+    to {
+        content: ""
+    }
+}
+
+.modal_COIWNl {
+    max-height: 645px;
+    min-height: 144px
+}
+
+.closeButton_COIWNl {
+    height: 12px;
+    inset-inline-end: 28px;
+    position: absolute;
+    top: 12px;
+    width: 12px;
+    z-index: 3
+}
+
+.channelIcon_COIWNl {
+    color: var(--interactive-text-default);
+    height: 16px;
+    margin: 0 2px -2px;
+    width: 16px
+}
+
+.inviteSectionHeader_COIWNl {
+    align-items: center;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    gap: var(--space-xxs);
+    height: calc(var(--custom-invite-section-header-height)*1px);
+    padding: 0;
+    padding-top: calc(var(--custom-invite-section-header-gap)*1px)
+}
+
+.inviteSectionToggleIcon_COIWNl {
+    height: 12px;
+    transform: rotate(var(--custom-icon-collapse-rotate));
+    transition: transform .1s linear;
+    width: 12px
+}
+
+.inviteRow_COIWNl {
+    align-items: center;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: flex;
+    height: 48px;
+    justify-content: space-between;
+    margin: 0 -8px;
+    padding-bottom: 7px;
+    padding-inline-end: 8px;
+    padding-top: 7px;
+    padding-inline-start: 5px
+}
+
+.inviteRowAvatar_COIWNl {
+    flex: none;
+    margin-top: 0;
+    margin-inline-end: 10px;
+    margin-inline-start: 3px
+}
+
+.inviteRowInfo_COIWNl {
+    align-items: center;
+    display: flex;
+    margin-inline-end: 4px;
+    overflow: hidden
+}
+
+.inviteRowLabels_COIWNl {
+    display: flex;
+    flex-direction: column;
+    margin: 4px 0;
+    overflow: hidden
+}
+
+.inviteRowLabels_COIWNl.ringing_COIWNl {
+    animation: outgoing-call-pulse_COIWNl var(--custom-call-avatar-outgoing-duration) infinite ease-out
+}
+
+.inviteRowSubLabel_COIWNl {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-xxs)
+}
+
+.inviteRowSubLabel_COIWNl.ringing_COIWNl:after {
+    animation: outgoing-call-ellipsis_COIWNl var(--custom-call-avatar-outgoing-duration) infinite ease-out;
+    bottom: 2px;
+    content: "";
+    inset-inline-start: -2px;
+    opacity: .5;
+    position: relative
+}
+
+.inviteRowStatusIcon_COIWNl {
+    height: 12px;
+    width: 12px
+}
+
+.inviteRowEmptyState_COIWNl {
+    align-items: center;
+    display: flex;
+    height: 200px;
+    justify-content: center
+}
+
+.inviteRowActions_COIWNl {
+    display: flex;
+    gap: var(--space-xs)
+}
+
+.warningContainer_COIWNl {
+    align-items: center;
+    display: flex;
+    margin: 8px 0
+}
+
+.warningIcon_COIWNl {
+    margin-inline-end: 8px
+}
+
+.input_COIWNl {
+    background-color: transparent;
+    border: none
+}
+
+.noPadding_COIWNl {
+    padding-top: 0
+}
+
+.content_COIWNl {
+    width: 100%
+}
+
+.content_COIWNl:before {
+    content: "";
+    height: 1px;
+    margin-inline-start: -6px;
+    transform: translateY(-20px);
+    width: 412px
+}
+
+.copyInput_COIWNl {
+    flex-grow: 1
+}
+
+.copyButton_COIWNl {
+    margin-inline-end: 4px;
+    width: 75px
+}
+
+.subText_COIWNl {
+    color: var(--text-subtle);
+    margin-bottom: 12px
+}
+
+.formText_COIWNl {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.toggle_COIWNl {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    max-width: 100%
+}
+
+.noScroll_COIWNl {
+    overflow: visible !important
+}
+
+.settingsFooter_COIWNl {
+    z-index: 0
+}
+
+.inviteRow_COIWNl:hover {
+    background-color: var(--interactive-background-hover);
+    color: var(--interactive-text-hover)
+}
+
+.inviteRowMember_COIWNl .inviteRowInfo_COIWNl {
+    color: var(--text-muted)
+}
+
+.inviteRowMember_COIWNl:hover {
+    background-color: transparent
+}
+
+.footer_COIWNl {
+    background-color: var(--background-base-lower)
+}
+
+.copied_COIWNl {
+    border-color: var(--green-360)
+}
+
+.footerText_COIWNl {
+    color: var(--text-muted)
+}
+
+.headerContainer_COIWNl {
+    width: 100%
+}
+
+.errorMessage_COIWNl {
+    margin-top: 8px
+}
+
+.errorLink_COIWNl {
+    cursor: pointer;
+    margin: 8px 0
+}
+
+.premiumIcon_COIWNl {
+    color: var(--guild-boosting-pink);
+    flex: 0 0 auto;
+    height: 24px;
+    margin: 0 12px;
+    position: relative;
+    top: 1px;
+    width: 16px
+}
+
+.acronym_COIWNl {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    border-radius: 16px;
+    display: flex;
+    flex: none;
+    height: 32px;
+    justify-content: center;
+    margin-top: 0;
+    margin-inline-end: 10px;
+    margin-inline-start: 3px;
+    white-space: nowrap;
+    width: 32px
+}
+
+.guestBody_COIWNl {
+    padding: 16px 0
+}
+
+.guestSendInviteLinkHeader_COIWNl {
+    margin-bottom: 8px;
+    margin-top: 20px
+}
+
+.guestSelectChannelHeader_COIWNl {
+    margin-bottom: 8px;
+    margin-top: 16px
+}
+
+.divider_COIWNl {
+    align-self: stretch;
+    background: var(--border-subtle);
+    height: 1px;
+    margin: 16px 0
+}
+
+.footerWithCheckbox_COIWNl {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+/*# sourceMappingURL=fe11bdb78e0ba43b.css.map*/

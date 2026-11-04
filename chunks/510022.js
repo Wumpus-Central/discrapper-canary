@@ -1,52 +1,57 @@
-n.d(t, { n: () => u });
 var l = n(477900),
     i = n(192308),
-    r = n(174459),
+    r = n(129230),
     a = n(188275),
     s = n(652215);
-let o = "social-layer-storefront-item-claimed-successfully-modal",
-    u = (e) => {
-        let { sku: t, application: u, analyticsLocations: c, entitlement: d, contextKey: m } = e,
-            p = m ?? (0, i.getInteractingModalContext)(),
-            h = !1;
-        function C(e) {
-            h = e.shouldIgnoreCloseRequest;
-        }
-        (0, i.openModalLazy)(
-            async () => {
-                let { SocialLayerStorefrontItemClaimedSuccessfullyModal: e } = await Promise.all([
-                    n.e("728809"),
-                    n.e("572963"),
-                    n.e("493014"),
-                    n.e("672877"),
-                    n.e("520491"),
-                    n.e("361684"),
-                    n.e("180307"),
-                ]).then(n.bind(n, 472734));
-                return (n) =>
-                    (0, l.jsx)(e, {
-                        ...n,
-                        sku: t,
-                        application: u,
-                        analyticsLocations: c,
-                        entitlement: d,
-                        onSetIgnoreCloseRequest: C,
-                    });
-            },
-            {
-                modalKey: o,
-                contextKey: p,
-                onCloseRequest: () => {
-                    h || (0, i.closeModal)(o, p);
+let o = "social-layer-storefront-item-claimed-successfully-modal";
+n.d(
+    t,
+    {},
+    {
+        n: (e) => {
+            let { sku: t, application: u, analyticsLocations: c, entitlement: d, contextKey: m } = e,
+                p = m ?? (0, i.lx)(),
+                h = !1;
+            function C(e) {
+                h = e.shouldIgnoreCloseRequest;
+            }
+            (0, i.mM)(
+                async () => {
+                    let { SocialLayerStorefrontItemClaimedSuccessfullyModal: e } = await Promise.all([
+                        n.e(728809),
+                        n.e(572963),
+                        n.e(493014),
+                        n.e(672877),
+                        n.e(520491),
+                        n.e(361684),
+                        n.e(180307),
+                    ]).then(n.bind(n, 472734));
+                    return (n) =>
+                        (0, l.jsx)(e, {
+                            ...n,
+                            sku: t,
+                            application: u,
+                            analyticsLocations: c,
+                            entitlement: d,
+                            onSetIgnoreCloseRequest: C,
+                        });
                 },
-                onCloseCallback: () => {
-                    r.default.track(s.HAw.SLAYER_STOREFRONT_MODAL_CLOSED, {
-                        type: a.e2,
-                        sku_id: t.id,
-                        application_id: u.id,
-                        location_stack: c ?? [],
-                    });
+                {
+                    modalKey: o,
+                    contextKey: p,
+                    onCloseRequest: () => {
+                        h || (0, i.Oo)(o, p);
+                    },
+                    onCloseCallback: () => {
+                        r.default.track(s.HAw.SLAYER_STOREFRONT_MODAL_CLOSED, {
+                            type: a.e2,
+                            sku_id: t.id,
+                            application_id: u.id,
+                            location_stack: c ?? [],
+                        });
+                    },
                 },
-            },
-        );
-    };
+            );
+        },
+    },
+);

@@ -1,5 +1,6 @@
 !(function () {
     var t = function (e) {
+        "use strict";
         e = e || {};
         var t,
             r,
@@ -8,8 +9,8 @@
             a,
             i,
             s,
-            c,
             l,
+            c,
             u,
             h,
             f,
@@ -36,15 +37,15 @@
             (d.safari = Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0),
             (d.supported = d.chrome || d.ff || d.opera));
         var _ = [];
-        ((h = function () {}), (c = f = !1));
+        ((h = function () {}), (l = f = !1));
         var y = {};
         ((y.ready = function () {
-            ((c = !0), y.reset(), h());
+            ((l = !0), y.reset(), h());
         }),
             (y.reset = function () {
-                c &&
+                l &&
                     ((_ = []),
-                    (l = !1),
+                    (c = !1),
                     (u = !1),
                     i.clearRect(0, 0, o, n),
                     i.drawImage(s, 0, 0, o, n),
@@ -53,9 +54,9 @@
                     window.clearTimeout(g));
             }),
             (y.start = function () {
-                if (c && !u) {
+                if (l && !u) {
                     var e = function () {
-                        ((l = _[0]), (u = !1), _.length > 0 && (_.shift(), y.start()));
+                        ((c = _[0]), (u = !1), _.length > 0 && (_.shift(), y.start()));
                     };
                     if (_.length > 0) {
                         u = !0;
@@ -73,9 +74,9 @@
                                     !1,
                                 ));
                         };
-                        l
+                        c
                             ? S.run(
-                                  l.options,
+                                  c.options,
                                   function () {
                                       r();
                                   },
@@ -145,8 +146,7 @@
                 i.closePath());
         }),
             (w.rectangle = function (e) {
-                e = v(e);
-                (2 === e.len
+                (2 === (e = v(e)).len
                     ? ((e.x = e.x - 0.4 * e.w), (e.w = 1.4 * e.w))
                     : e.len >= 3 && ((e.x = e.x - 0.65 * e.w), (e.w = 1.65 * e.w)),
                     i.clearRect(0, 0, o, n),
@@ -351,7 +351,7 @@
                                 throw Error("Error setting badge. Message: " + e.message);
                             }
                         }),
-                        c && h());
+                        l && h());
                 },
                 video: function (e) {
                     ((h = function () {
@@ -371,7 +371,7 @@
                             throw Error("Error setting video. Message: " + e.message);
                         }
                     }),
-                        c && h());
+                        l && h());
                 },
                 image: function (e) {
                     ((h = function () {
@@ -379,19 +379,19 @@
                             var t = e.width,
                                 r = e.height,
                                 s = document.createElement("img"),
-                                c = t / o < r / n ? t / o : r / n;
+                                l = t / o < r / n ? t / o : r / n;
                             (s.setAttribute("crossOrigin", "anonymous"),
                                 (s.onload = function () {
                                     (i.clearRect(0, 0, o, n), i.drawImage(s, 0, 0, o, n), x.setIcon(a));
                                 }),
                                 s.setAttribute("src", e.getAttribute("src")),
-                                (s.height = r / c),
-                                (s.width = t / c));
+                                (s.height = r / l),
+                                (s.width = t / l));
                         } catch (e) {
                             throw Error("Error setting image. Message: " + e.message);
                         }
                     }),
-                        c && h());
+                        l && h());
                 },
                 webcam: function (e) {
                     if (
@@ -428,7 +428,7 @@
                                     throw Error("Error setting webcam. Message: " + e.message);
                                 }
                             }),
-                            c && h());
+                            l && h());
                     }
                 },
                 reset: y.reset,

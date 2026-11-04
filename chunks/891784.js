@@ -1,5 +1,5 @@
-(n.d(t, { Bd: () => u, YF: () => o, iW: () => s, o_: () => d }), n(321073), n(134528), n(947204));
-var l = n(935208),
+(n(321073), n(134528), n(947204));
+var l = n(811091),
     i = n(149987);
 function s(e, t) {
     let {
@@ -9,7 +9,7 @@ function s(e, t) {
             attachments: s,
             turnId: r,
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        u = l ?? `m${++a}`;
+        u = l ?? `m${++o}`;
     return {
         id: u,
         render_id: u,
@@ -26,13 +26,13 @@ function r(e) {
     var t;
     let n,
         r = s(e.role, e.content, { ts: e.ts, id: e.id, userId: e.user_id, attachments: e.attachments }),
-        u =
+        o =
             ((t = e.id),
-            null != (n = t?.startsWith(d) === !0 ? t.slice(d.length) : t) && l.default.isProbablyAValidSnowflake(n)
+            null != (n = t?.startsWith(u) === !0 ? t.slice(u.length) : t) && l.default.isProbablyAValidSnowflake(n)
                 ? l.default.extractTimestamp(n)
                 : null);
     if (
-        (null != u && ("assistant" === e.role || null == e.ts) && (r.created_at = u),
+        (null != o && ("assistant" === e.role || null == e.ts) && (r.created_at = o),
         "assistant" === e.role && null != e.ts)
     ) {
         let t = Date.parse(e.ts);
@@ -69,80 +69,87 @@ function r(e) {
             "awaiting_user" === t.kind && "secrets" === t.action && (r.awaitingUser = { action: t.action }));
     return r;
 }
-function u(e) {
-    let t = e.map(r),
-        n = new Map(),
-        l = [];
-    for (let [r, u] of t.entries()) {
-        var s;
-        let o =
-            ((s = e[r]),
-            "publish_notice" === s.kind
-                ? null != s.ts
-                    ? u.created_at
-                    : null
-                : "user" === s.role
-                  ? (s.steered_at ?? null)
-                  : null);
-        if (null != o) {
-            l.push({ index: r, at: o });
-            continue;
-        }
-        if (!u.id.startsWith(d)) continue;
-        let a = u.settled_at ?? -1 / 0,
-            c = l.filter((e) => u.created_at < e.at && e.at < a);
-        l = [];
-        let f = [...c].sort((e, t) => e.at - t.at),
-            _ = f.map((e) => e.at),
-            p =
-                0 === f.length
-                    ? null
-                    : (function (e, t) {
-                          if (null == e) return null;
-                          let n = [[], ...t.map(() => [])],
-                              l = 0;
-                          for (let i of e) {
-                              if (null == i.ts) return null;
-                              for (; l < t.length && t[l] <= i.ts;) l++;
-                              n[l].push(i);
-                          }
-                          return n;
-                      })(e[r].steps, _);
-        if (null == p || p.slice(0, -1).every((e) => 0 === e.length)) continue;
-        let h = u.id.slice(d.length),
-            g = u.created_at;
-        for (let [e, l] of f.entries()) {
-            let s = `${u.id}:${e}`,
-                r = {
-                    id: s,
-                    render_id: s,
-                    role: "assistant",
-                    content: "",
-                    turn_id: h,
-                    steps: (0, i.Zu)(p[e]),
-                    created_at: g,
-                    continued: !0,
-                    finished_at: l.at,
-                };
-            (n.set(c[e].index, p[e].length > 0 ? [r, t[l.index]] : [t[l.index]]), (g = l.at));
-        }
-        t[r] = { ...u, turn_id: h, steps: (0, i.Zu)(p[f.length]), created_at: g };
-    }
-    return 0 === n.size ? t : t.flatMap((e, t) => n.get(t) ?? [e]);
-}
-function o(e) {
-    let t = new Map();
-    for (let n of e) null != n.contextSwitch && t.set(n.contextSwitch.id, n.contextSwitch);
-    if (0 === t.size) return e;
-    let n = new Set();
-    return e.flatMap((e) => {
-        let l = e.contextSwitch?.id;
-        if (null == l) return [e];
-        if (n.has(l)) return [];
-        n.add(l);
-        let i = t.get(l);
-        return i?.status === "undone" ? [] : [i === e.contextSwitch ? e : { ...e, contextSwitch: i }];
-    });
-}
-let d = "turn:",
-    a = 0;
+let u = "turn:",
+    o = 0;
+n.d(
+    t,
+    {},
+    {
+        Bd: function (e) {
+            let t = e.map(r),
+                n = new Map(),
+                l = [];
+            for (let [r, o] of t.entries()) {
+                var s;
+                let d =
+                    ((s = e[r]),
+                    "publish_notice" === s.kind
+                        ? null != s.ts
+                            ? o.created_at
+                            : null
+                        : "user" === s.role
+                          ? (s.steered_at ?? null)
+                          : null);
+                if (null != d) {
+                    l.push({ index: r, at: d });
+                    continue;
+                }
+                if (!o.id.startsWith(u)) continue;
+                let a = o.settled_at ?? -1 / 0,
+                    c = l.filter((e) => o.created_at < e.at && e.at < a);
+                l = [];
+                let f = [...c].sort((e, t) => e.at - t.at),
+                    _ = f.map((e) => e.at),
+                    p =
+                        0 === f.length
+                            ? null
+                            : (function (e, t) {
+                                  if (null == e) return null;
+                                  let n = [[], ...t.map(() => [])],
+                                      l = 0;
+                                  for (let i of e) {
+                                      if (null == i.ts) return null;
+                                      for (; l < t.length && t[l] <= i.ts;) l++;
+                                      n[l].push(i);
+                                  }
+                                  return n;
+                              })(e[r].steps, _);
+                if (null == p || p.slice(0, -1).every((e) => 0 === e.length)) continue;
+                let h = o.id.slice(u.length),
+                    g = o.created_at;
+                for (let [e, l] of f.entries()) {
+                    let s = `${o.id}:${e}`,
+                        r = {
+                            id: s,
+                            render_id: s,
+                            role: "assistant",
+                            content: "",
+                            turn_id: h,
+                            steps: (0, i.Zu)(p[e]),
+                            created_at: g,
+                            continued: !0,
+                            finished_at: l.at,
+                        };
+                    (n.set(c[e].index, p[e].length > 0 ? [r, t[l.index]] : [t[l.index]]), (g = l.at));
+                }
+                t[r] = { ...o, turn_id: h, steps: (0, i.Zu)(p[f.length]), created_at: g };
+            }
+            return 0 === n.size ? t : t.flatMap((e, t) => n.get(t) ?? [e]);
+        },
+        YF: function (e) {
+            let t = new Map();
+            for (let n of e) null != n.contextSwitch && t.set(n.contextSwitch.id, n.contextSwitch);
+            if (0 === t.size) return e;
+            let n = new Set();
+            return e.flatMap((e) => {
+                let l = e.contextSwitch?.id;
+                if (null == l) return [e];
+                if (n.has(l)) return [];
+                n.add(l);
+                let i = t.get(l);
+                return i?.status === "undone" ? [] : [i === e.contextSwitch ? e : { ...e, contextSwitch: i }];
+            });
+        },
+        iW: s,
+    },
+);

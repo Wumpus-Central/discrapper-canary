@@ -1,10 +1,9 @@
-n.d(e, { A: () => p });
 var s = n(477900),
     i = n(582128),
     l = n(435558),
     r = n.n(l),
-    a = n(58703),
-    h = n(105292);
+    a = n(5377),
+    h = n(792996);
 class d extends i.PureComponent {
     static defaultProps = { showDays: !0, showUnits: !1, stopAtOneSec: !1, intervalDuration: 1e3 };
     _interval;
@@ -43,10 +42,10 @@ class d extends i.PureComponent {
     }
     render() {
         let { deadline: t, children: e, className: n, stopAtOneSec: i } = this.props;
-        if (t === 1 / 0)
+        if (1 / 0 === t)
             return (0, s.jsx)("span", { className: n, "aria-label": h.intl.string(h.t.PqEzn8), children: "\u221E" });
         let l = (0, a.Tf)(Date.now(), t, i);
         return null != e ? e(l, this.defaultRender.bind(this, l)) : this.defaultRender(l);
     }
 }
-let p = d;
+n.d(e, {}, { A: d });

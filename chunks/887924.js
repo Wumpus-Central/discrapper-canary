@@ -3,7 +3,7 @@ let n = r(20816),
     o = r(597084),
     a = () => {},
     s = new i.TimeoutError();
-t.default = class extends n {
+t.A = class extends n {
     constructor(e) {
         var t, r, n, i;
         if (
@@ -36,7 +36,7 @@ t.default = class extends n {
                 `Expected \`interval\` to be a finite number >= 0, got \`${null != (i = null == (n = e.interval) ? void 0 : n.toString()) ? i : ""}\` (${typeof e.interval})`,
             );
         ((this._carryoverConcurrencyCount = e.carryoverConcurrencyCount),
-            (this._isIntervalIgnored = e.intervalCap === 1 / 0 || 0 === e.interval),
+            (this._isIntervalIgnored = 1 / 0 === e.intervalCap || 0 === e.interval),
             (this._intervalCap = e.intervalCap),
             (this._interval = e.interval),
             (this._queue = new e.queueClass()),

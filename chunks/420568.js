@@ -1,4 +1,4 @@
-C.d(t, { Geolocation: () => b });
+C.r(t);
 var o = C(783285),
     i = C(768611),
     L = C(200503),
@@ -9,7 +9,7 @@ var o = C(783285),
     c = C(469020),
     r = C(918676),
     p = C(987683),
-    d = C(914055),
+    d = C(689960),
     f = () =>
         (0, i.v)("svg", {
             class: "IncodeGeolocationIcon",
@@ -617,7 +617,7 @@ var K = () =>
                 () => {
                     if (t) return t;
                     if (!e) throw Error("Geolocation config is required");
-                    return (0, d.s)({ config: e });
+                    return (0, d.createGeolocationManager)({ config: e });
                 },
                 { manageLifecycle: !t },
             );
@@ -646,4 +646,4 @@ var K = () =>
     },
     b = ({ config: e, manager: t, onFinish: C, onError: o }) =>
         (0, i.v)(a.t, { children: e ? (0, i.v)(N, { config: e, manager: t, onFinish: C, onError: o }) : null });
-(0, r.t)(b, "incode-geolocation");
+((0, r.t)(b, "incode-geolocation"), C.d(t, {}, { Geolocation: b }));

@@ -1,31 +1,31 @@
-.balanceCounterText__98f64 {
+.balanceCounterText_yIKdvW {
     color: var(--text-strong)
 }
 
-.full-motion .balanceCounterText__98f64 {
+.full-motion .balanceCounterText_yIKdvW {
     transition: all .4s ease-out, opacity .4s ease-in
 }
 
-.balanceCounterMarginRightAlign__98f64 {
+.balanceCounterMarginRightAlign_yIKdvW {
     margin-inline-start: 2px
 }
 
-.balanceCounterTextRightAlign__98f64 {
+.balanceCounterTextRightAlign_yIKdvW {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     text-align: end
 }
 
-.balanceCounterMarginLeftAlign__98f64 {
+.balanceCounterMarginLeftAlign_yIKdvW {
     margin-inline-end: 2px
 }
 
-.balanceCounterTextLeftAlign__98f64 {
+.balanceCounterTextLeftAlign_yIKdvW {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     text-align: start
 }
 
-/*# sourceMappingURL=450998.30bf0590fbb02d48.css.map*/
+/*# sourceMappingURL=450998.46c0f071d9fbcaed.css.map*/

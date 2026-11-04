@@ -1,0 +1,110 @@
+.notePreview_zt0NuP {
+    white-space: pre-wrap;
+    word-break: break-word
+}
+
+.oldNote_nr7Zul {
+    margin: -4px
+}
+
+.oldNote_nr7Zul textarea {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 4px
+}
+
+.oldNote_nr7Zul textarea::-moz-placeholder {
+    color: var(--text-muted)
+}
+
+.oldNote_nr7Zul textarea::placeholder {
+    color: var(--text-muted)
+}
+
+.oldNote_nr7Zul textarea:hover {
+    border-color: var(--input-border-default)
+}
+
+.oldNote_nr7Zul textarea:focus {
+    background: var(--user-profile-note-background-focus);
+    border-color: var(--border-strong)
+}
+
+.oldNote_nr7Zul textarea:focus::-moz-placeholder {
+    color: transparent
+}
+
+.oldNote_nr7Zul textarea:focus::placeholder {
+    color: transparent
+}
+
+.oldNote_nr7Zul textarea:focus:focus,
+.oldNote_nr7Zul textarea:focus:focus:hover {
+    border-color: var(--border-strong)
+}
+
+.note_nr7Zul {
+    margin-block-start: calc(var(--space-4)*-1)
+}
+
+.container_jgBSi6 {
+    height: 40px
+}
+
+.content_jgBSi6 {
+    align-items: center;
+    background-color: var(--background-surface-highest);
+    border: 1px solid var(--border-normal);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-high);
+    color: var(--text-strong);
+    display: flex;
+    line-height: 24px;
+    margin-bottom: 12px;
+    padding: var(--space-10) var(--space-16)
+}
+
+.content_jgBSi6[data-type=success] {
+    background-color: var(--notice-background-positive);
+    color: var(--notice-text-positive)
+}
+
+.content_jgBSi6[data-type=failure] {
+    background-color: var(--notice-background-critical);
+    color: var(--notice-text-critical)
+}
+
+.icon_jgBSi6 {
+    height: 20px;
+    margin-inline-end: var(--space-8);
+    width: 20px
+}
+
+.actionButton_jgBSi6 {
+    margin-inline-start: var(--space-32)
+}
+
+.scrim_cNDDnH {
+    align-items: center;
+    background: var(--background-scrim);
+    border-radius: inherit;
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity .15s, visibility .15s;
+    visibility: hidden;
+    z-index: var(--custom-user-profile-scrim-z-index)
+}
+
+.scrim_cNDDnH.isVisible_cNDDnH {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible
+}
+
+/*# sourceMappingURL=f215b9d4b5e112d3.css.map*/

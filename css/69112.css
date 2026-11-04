@@ -1,61 +1,61 @@
-.pictureInPicture__6341f {
+.pictureInPicture_69M0s9 {
     inset-inline-start: 0;
     position: absolute;
     top: 0
 }
 
-.pictureInPicture__6341f.dragging__6341f {
+.pictureInPicture_69M0s9.dragging_69M0s9 {
     cursor: grabbing;
     height: 100%;
     pointer-events: auto;
     width: 100%
 }
 
-.pictureInPictureWindow__6341f {
+.pictureInPictureWindow_69M0s9 {
     position: absolute;
     z-index: 1000
 }
 
-.borderRadius__6341f {
+.borderRadius_69M0s9 {
     border-radius: 8px
 }
 
-.hidden__6341f {
+.hidden_69M0s9 {
     display: none
 }
 
-.resizeHandle__6341f {
+.resizeHandle_69M0s9 {
     height: 20px;
     position: absolute;
     width: 20px
 }
 
-.resizeHandleTopRight__6341f {
+.resizeHandleTopRight_69M0s9 {
     bottom: -7px;
     cursor: nesw-resize;
     inset-inline-start: -7px
 }
 
-.resizeHandleTopLeft__6341f {
+.resizeHandleTopLeft_69M0s9 {
     bottom: -7px;
     cursor: nwse-resize;
     inset-inline-end: -7px
 }
 
-.resizeHandleBottomRight__6341f {
+.resizeHandleBottomRight_69M0s9 {
     cursor: nwse-resize;
     inset-inline-start: -7px;
     top: -7px
 }
 
-.resizeHandleBottomLeft__6341f {
+.resizeHandleBottomLeft_69M0s9 {
     cursor: nesw-resize;
     inset-inline-end: -7px;
     top: -7px
 }
 
-.belowSidebar__6341f {
+.belowSidebar_69M0s9 {
     z-index: 90 !important
 }
 
-/*# sourceMappingURL=69112.71957229c682f743.css.map*/
+/*# sourceMappingURL=69112.fa4e5348c09ccf76.css.map*/

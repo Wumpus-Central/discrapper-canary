@@ -1,17 +1,16 @@
-s.d(t, { N: () => H, s: () => U });
 var n = s(477900),
     a = s(582128),
     i = s(536637),
     l = s.n(i),
-    r = s(17928),
+    r = s(855986),
     u = s(778712),
     o = s(56059),
     d = s(276293),
-    c = s(661531),
+    c = s(646514),
     b = s(834730),
     m = s(658675),
     g = s(966327),
-    A = s(115718),
+    A = s(662090),
     f = s(47167),
     p = s(598104),
     h = s(255266),
@@ -20,13 +19,13 @@ var n = s(477900),
     L = s(734057),
     S = s(71393),
     x = s(290863),
-    _ = s(573163),
+    _ = s(218461),
     D = s(994500),
     N = s(287809),
-    I = s(58703),
+    I = s(5377),
     y = s(403362),
     P = s(427262),
-    j = s(473511),
+    j = s(969223),
     v = s(359378),
     G = s(790782),
     T = s(837695);
@@ -153,47 +152,54 @@ function H(e) {
             return (0, y.xb)(a);
     }
 }
-function U(e) {
-    let {
-            rowData: t,
-            message: s,
-            originChannel: i,
-            selectedDestinations: l,
-            handleToggleDestination: r,
-            disableSelection: u,
-            rowClassName: o,
-            validateDestination: d,
-        } = e,
-        c = a.useMemo(() => l?.map(C.I) ?? [], [l]),
-        b = a.useCallback(
-            (e) => {
-                let { section: a, row: l } = e;
-                if (a > 0) return;
-                let b = t[l],
-                    { type: g, record: f } = b;
-                if (g === A.rD.HEADER) return;
-                let p = (0, C.I)((0, C.hY)(b)),
-                    h = (0, j.pE)(s, i, f, d),
-                    E = c.includes(p),
-                    L = (u && !E) || null != h;
-                return (0, n.jsx)(
-                    H,
-                    {
-                        result: b,
-                        subLabel: null != h ? h.label : void 0,
-                        subLabelLineClamp: h?.lineClamp,
-                        disabled: L,
-                        selected: E,
-                        trailing: (0, n.jsx)(m.P, { checked: E, disabled: L }),
-                        onPressDestination: r,
-                        "aria-posinset": l + 1,
-                        "aria-setsize": t.length,
-                        className: o,
+s.d(
+    t,
+    {},
+    {
+        N: H,
+        s: function (e) {
+            let {
+                    rowData: t,
+                    message: s,
+                    originChannel: i,
+                    selectedDestinations: l,
+                    handleToggleDestination: r,
+                    disableSelection: u,
+                    rowClassName: o,
+                    validateDestination: d,
+                } = e,
+                c = a.useMemo(() => l?.map(C.I) ?? [], [l]),
+                b = a.useCallback(
+                    (e) => {
+                        let { section: a, row: l } = e;
+                        if (a > 0) return;
+                        let b = t[l],
+                            { type: g, record: f } = b;
+                        if (g === A.rD.HEADER) return;
+                        let p = (0, C.I)((0, C.hY)(b)),
+                            h = (0, j.pE)(s, i, f, d),
+                            E = c.includes(p),
+                            L = (u && !E) || null != h;
+                        return (0, n.jsx)(
+                            H,
+                            {
+                                result: b,
+                                subLabel: null != h ? h.label : void 0,
+                                subLabelLineClamp: h?.lineClamp,
+                                disabled: L,
+                                selected: E,
+                                trailing: (0, n.jsx)(m.P, { checked: E, disabled: L }),
+                                onPressDestination: r,
+                                "aria-posinset": l + 1,
+                                "aria-setsize": t.length,
+                                className: o,
+                            },
+                            p,
+                        );
                     },
-                    p,
+                    [u, r, s, i, t, c, o, d],
                 );
-            },
-            [u, r, s, i, t, c, o, d],
-        );
-    return { sections: [t.length], sectionHeight: 0, rowHeight: 48, renderRow: b };
-}
+            return { sections: [t.length], sectionHeight: 0, rowHeight: 48, renderRow: b };
+        },
+    },
+);

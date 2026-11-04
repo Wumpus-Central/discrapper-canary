@@ -1,5 +1,4 @@
-n.d(t, { A: () => w });
-var i = n(17928),
+var i = n(855986),
     r = n(73153),
     a = n(518782),
     s = n(383233),
@@ -254,3 +253,4 @@ let w = new U(r.h, {
         p[e.userId] = { expiry: Date.now() + 3e5, isStranger: e.isStranger };
     },
 });
+n.d(t, {}, { A: w });

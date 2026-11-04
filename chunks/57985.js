@@ -1,4 +1,3 @@
-n.d(t, { Y1: () => r });
 let i = (0, n(945810).mj)({
     kind: "user",
     name: "2025-08-voice-user-affinity",
@@ -9,6 +8,12 @@ let i = (0, n(945810).mj)({
         2: { enabled: !0, sortType: "communication_probability" },
     },
 });
-function r(e) {
-    return i.getConfig({ location: e }).sortType;
-}
+n.d(
+    t,
+    {},
+    {
+        Y1: function (e) {
+            return i.getConfig({ location: e }).sortType;
+        },
+    },
+);

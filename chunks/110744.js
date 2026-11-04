@@ -1,4 +1,3 @@
-i.d(e, { default: () => v });
 var a = i(477900),
     s = i(582128),
     n = i(935462),
@@ -12,11 +11,11 @@ var a = i(477900),
     h = i(631670),
     x = i(235986),
     j = i(894778),
-    p = i(174459),
+    p = i(129230),
     C = i(53505),
     f = i(652215),
     g = i(315290),
-    b = i(105292),
+    b = i(792996),
     A = i(27977);
 function N(t) {
     let { email: e, setEmail: i, claimRequired: p, onSuccess: C, onClose: f } = t,
@@ -24,14 +23,6 @@ function N(t) {
         [v, _] = s.useState(""),
         [y, k] = s.useState(""),
         [E, w] = s.useState(!1);
-    async function D(t) {
-        (t.preventDefault(), w(!0), S(""), k(""));
-        try {
-            (await (0, h.KD)({ email: e, password: v }), w(!1), C());
-        } catch (t) {
-            (t?.body?.email && S(t.body.email), t?.body?.password && k(t.body.password), w(!1));
-        }
-    }
     return (
         s.useEffect(() => j.A.flowStep(g.do.ANY, g.hc.CLAIM_ACCOUNT), []),
         (0, a.jsxs)("div", {
@@ -59,7 +50,14 @@ function N(t) {
                 (0, a.jsx)(n.$m, {
                     children: (0, a.jsx)("form", {
                         className: A.oB,
-                        onSubmit: D,
+                        onSubmit: async function (t) {
+                            (t.preventDefault(), w(!0), S(""), k(""));
+                            try {
+                                (await (0, h.KD)({ email: e, password: v }), w(!1), C());
+                            } catch (t) {
+                                (t?.body?.email && S(t.body.email), t?.body?.password && k(t.body.password), w(!1));
+                            }
+                        },
                         children: (0, a.jsxs)(o.B, {
                             gap: 16,
                             children: [
@@ -160,19 +158,31 @@ function S(t) {
         })
     );
 }
-function v(t) {
-    let { onClose: e, transitionState: i, claimRequired: l = !1 } = t,
-        [r, o] = s.useState(""),
-        [c, d] = s.useState(!1);
-    return c
-        ? (0, a.jsx)(n.EO, {
-              transitionState: i,
-              parentComponent: "ClaimAccountModal",
-              children: (0, a.jsx)(S, { email: r, claimRequired: l, onClose: e }),
-          })
-        : (0, a.jsx)(n.EO, {
-              transitionState: i,
-              parentComponent: "ClaimAccountModal",
-              children: (0, a.jsx)(N, { email: r, setEmail: o, claimRequired: l, onSuccess: () => d(!0), onClose: e }),
-          });
-}
+i.d(
+    e,
+    {},
+    {
+        default: function (t) {
+            let { onClose: e, transitionState: i, claimRequired: l = !1 } = t,
+                [r, o] = s.useState(""),
+                [c, d] = s.useState(!1);
+            return c
+                ? (0, a.jsx)(n.EO, {
+                      transitionState: i,
+                      parentComponent: "ClaimAccountModal",
+                      children: (0, a.jsx)(S, { email: r, claimRequired: l, onClose: e }),
+                  })
+                : (0, a.jsx)(n.EO, {
+                      transitionState: i,
+                      parentComponent: "ClaimAccountModal",
+                      children: (0, a.jsx)(N, {
+                          email: r,
+                          setEmail: o,
+                          claimRequired: l,
+                          onSuccess: () => d(!0),
+                          onClose: e,
+                      }),
+                  });
+        },
+    },
+);

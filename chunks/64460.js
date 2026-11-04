@@ -1,4 +1,4 @@
-(n.d(t, { J: () => u }), n(321073));
+n(321073);
 var i = n(749884),
     r = n(976860),
     a = n(345942),
@@ -37,3 +37,4 @@ let u = {
             return (n === c.ME && null == o.A.getGuildId() ? (0, r.pX)(c.BVt.CHANNEL(n)) : (0, a.u)(n), !1);
     },
 };
+n.d(t, {}, { J: u });

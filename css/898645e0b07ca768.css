@@ -1,0 +1,193 @@
+.centeredSection_YuplL1 {
+    box-sizing: border-box;
+    max-width: 1144px;
+    padding-inline: var(--space-32);
+    position: relative;
+    width: 100%
+}
+
+.container_YuplL1 {
+    background-color: var(--background-base-lowest);
+    border: 2px solid var(--border-normal);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-high);
+    container-type: inline-size;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: var(--space-24);
+    position: relative
+}
+
+.containerSingle_YuplL1 {
+    border-width: 1px;
+    box-shadow: var(--shadow-medium)
+}
+
+.backgroundImage_YuplL1 {
+    background-position: 50%;
+    background-size: cover
+}
+
+.backgroundImage_YuplL1,
+.gradient_YuplL1 {
+    inset: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.logo_YuplL1 {
+    align-self: flex-start;
+    height: 32px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    position: relative
+}
+
+.copy_YuplL1 {
+    gap: var(--space-24);
+    position: relative
+}
+
+.copy_YuplL1,
+.promoSection_YuplL1 {
+    display: flex;
+    flex-direction: column
+}
+
+.promoSection_YuplL1 {
+    gap: var(--space-16)
+}
+
+.metaRow_YuplL1 {
+    flex-wrap: wrap;
+    gap: var(--space-12)
+}
+
+.metaRow_YuplL1,
+.timeLeft_YuplL1 {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.timeLeft_YuplL1 {
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-round);
+    color: var(--control-primary-text-default);
+    gap: var(--space-6);
+    padding: calc(var(--space-4) - 1px) var(--space-6);
+    white-space: nowrap
+}
+
+.content_YuplL1 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24);
+    min-width: 0;
+    position: relative
+}
+
+.singleLayout_YuplL1 {
+    align-items: center;
+    flex-direction: row;
+    gap: var(--space-48)
+}
+
+.singleLayout_YuplL1>.copy_YuplL1 {
+    box-sizing: content-box;
+    flex: 0 1 478px;
+    min-width: 0;
+    padding: var(--space-8)
+}
+
+.cardSection_YuplL1 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24);
+    min-width: 0
+}
+
+.cardSection_YuplL1 .cardScroller_YuplL1 {
+    margin: calc(0px - var(--space-20));
+    padding: 0;
+    width: calc(100% + var(--space-40))
+}
+
+.singleLayout_YuplL1>.cardSection_YuplL1 {
+    flex: 1 1 0;
+    gap: 0;
+    min-width: 0
+}
+
+.cardGrid_YuplL1 {
+    display: grid;
+    gap: var(--space-24);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    position: relative
+}
+
+.scrollCardItem_YuplL1 {
+    flex: 1 0 246px;
+    padding-block: var(--space-20)
+}
+
+.scrollCardItem_YuplL1:first-child {
+    padding-inline-start: var(--space-20)
+}
+
+.scrollCardItem_YuplL1:last-child {
+    padding-inline-end: var(--space-20)
+}
+
+.scrollCardItemDense_YuplL1 {
+    flex-basis: 220px
+}
+
+.cardItem_YuplL1 {
+    position: relative
+}
+
+.cardItem_YuplL1:is(:hover, :has(:focus-visible)) {
+    z-index: 1
+}
+
+.cardItem_YuplL1 .bannerCard_YuplL1 {
+    border: none
+}
+
+.cardItem_YuplL1 .bannerCard_YuplL1:is(:hover, :has(:focus-visible)) {
+    transform: scale(100%)
+}
+
+@container (max-width: 850px) {
+    .singleLayout_YuplL1 {
+        align-items: stretch;
+        flex-direction: column;
+        gap: var(--space-24)
+    }
+
+    .singleLayout_YuplL1>.copy_YuplL1 {
+        box-sizing: border-box;
+        flex: none
+    }
+
+    .singleLayout_YuplL1>.cardSection_YuplL1 {
+        flex: none;
+        width: 100%
+    }
+}
+
+.marvelRivalsCopyright_YuplL1 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: -12px;
+    margin-top: -12px
+}
+
+/*# sourceMappingURL=898645e0b07ca768.css.map*/

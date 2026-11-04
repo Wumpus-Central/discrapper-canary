@@ -1,4 +1,4 @@
-n.d(e, { Phone: () => E });
+n.r(e);
 var r = n(783285),
     i = n(768611),
     o = n(200503),
@@ -10,7 +10,7 @@ var r = n(783285),
     l = n(112316),
     h = n(910276),
     v = n(918676),
-    c = n(259617);
+    c = n(680022);
 function g(t) {
     return "invalidPhone" === t ? "phone.invalidPhone" : "serverError" === t ? "phone.serverError" : t;
 }
@@ -20,7 +20,7 @@ var m = ({ config: t, manager: e, onFinish: n, onError: s }) => {
                 () => {
                     if (e) return e;
                     if (!t) throw Error("Phone config is required");
-                    return (0, c.Y)({ config: t });
+                    return (0, c.createPhoneManager)({ config: t });
                 },
                 { manageLifecycle: !e },
             ),
@@ -141,4 +141,4 @@ var m = ({ config: t, manager: e, onFinish: n, onError: s }) => {
     },
     E = ({ config: t, manager: e, onFinish: n, onError: r }) =>
         (0, i.v)(s.t, { children: t || e ? (0, i.v)(m, { config: t, manager: e, onFinish: n, onError: r }) : null });
-(0, v.t)(E, "incode-phone");
+((0, v.t)(E, "incode-phone"), n.d(e, {}, { Phone: E }));

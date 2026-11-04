@@ -1,5 +1,10 @@
-n.d(t, { A: () => r });
 var i = n(559868);
-function r(e) {
-    return null != e && e === i.tL;
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            return null != e && e === i.tL;
+        },
+    },
+);

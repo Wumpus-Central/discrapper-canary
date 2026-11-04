@@ -1,20 +1,16 @@
-(Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.TIME_UNITS_PATTERN =
-        t.YEAR_PATTERN =
-        t.ORDINAL_NUMBER_PATTERN =
-        t.NUMBER_PATTERN =
-        t.TIME_UNIT_DICTIONARY =
-        t.ORDINAL_WORD_DICTIONARY =
-        t.INTEGER_WORD_DICTIONARY =
-        t.MONTH_DICTIONARY =
-        t.WEEKDAY_DICTIONARY =
-            void 0),
-    (t.parseNumberPattern = i),
+((t.TIME_UNITS_PATTERN =
+    t.YEAR_PATTERN =
+    t.ORDINAL_NUMBER_PATTERN =
+    t.nj =
+    t.TIME_UNIT_DICTIONARY =
+    t.Cg =
+    t.Vr =
+    t.MONTH_DICTIONARY =
+    t.WEEKDAY_DICTIONARY =
+        void 0),
     (t.parseOrdinalNumberPattern = function (e) {
         let r = e.toLowerCase();
-        return void 0 !== t.ORDINAL_WORD_DICTIONARY[r]
-            ? t.ORDINAL_WORD_DICTIONARY[r]
-            : parseInt((r = r.replace(/(?:ste|de)$/i, "")));
+        return void 0 !== t.Cg[r] ? t.Cg[r] : parseInt((r = r.replace(/(?:ste|de)$/i, "")));
     }),
     (t.parseYear = function (e) {
         if (/voor Christus/i.test(e)) return -parseInt((e = e.replace(/voor Christus/i, "")));
@@ -25,28 +21,27 @@
     (t.parseDuration = function (e) {
         let r = {},
             n = e,
-            a = o.exec(n);
+            a = s.exec(n);
         for (; a;)
             ((function (e, r) {
-                let n = i(r[1]);
+                let n = (function (e) {
+                    let r = e.toLowerCase();
+                    return void 0 !== t.Vr[r]
+                        ? t.Vr[r]
+                        : "paar" === r
+                          ? 2
+                          : "half" === r || r.match(/halve?/)
+                            ? 0.5
+                            : parseFloat(r.replace(",", "."));
+                })(r[1]);
                 e[t.TIME_UNIT_DICTIONARY[r[2].toLowerCase()]] = n;
             })(r, a),
                 (n = n.substring(a[0].length)),
-                (a = o.exec(n)));
+                (a = s.exec(n)));
         return r;
     }));
 let n = r(798401),
     a = r(574253);
-function i(e) {
-    let r = e.toLowerCase();
-    return void 0 !== t.INTEGER_WORD_DICTIONARY[r]
-        ? t.INTEGER_WORD_DICTIONARY[r]
-        : "paar" === r
-          ? 2
-          : "half" === r || r.match(/halve?/)
-            ? 0.5
-            : parseFloat(r.replace(",", "."));
-}
 ((t.WEEKDAY_DICTIONARY = {
     zondag: 0,
     zon: 0,
@@ -122,7 +117,7 @@ function i(e) {
         dec: 12,
         "dec.": 12,
     }),
-    (t.INTEGER_WORD_DICTIONARY = {
+    (t.Vr = {
         een: 1,
         twee: 2,
         drie: 3,
@@ -136,7 +131,7 @@ function i(e) {
         elf: 11,
         twaalf: 12,
     }),
-    (t.ORDINAL_WORD_DICTIONARY = {
+    (t.Cg = {
         eerste: 1,
         tweede: 2,
         derde: 3,
@@ -195,9 +190,9 @@ function i(e) {
         jr: "year",
         jaren: "year",
     }),
-    (t.NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.INTEGER_WORD_DICTIONARY)}|[0-9]+|[0-9]+[\\.,][0-9]+|halve?|half|paar)`),
-    (t.ORDINAL_NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.ORDINAL_WORD_DICTIONARY)}|[0-9]{1,2}(?:ste|de)?)`),
+    (t.nj = `(?:${(0, n.matchAnyPattern)(t.Vr)}|[0-9]+|[0-9]+[\\.,][0-9]+|halve?|half|paar)`),
+    (t.ORDINAL_NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.Cg)}|[0-9]{1,2}(?:ste|de)?)`),
     (t.YEAR_PATTERN = "(?:[1-9][0-9]{0,3}\\s*(?:voor Christus|na Christus)|[1-2][0-9]{3}|[5-9][0-9])"));
-let s = `(${t.NUMBER_PATTERN})\\s{0,5}(${(0, n.matchAnyPattern)(t.TIME_UNIT_DICTIONARY)})\\s{0,5}`,
-    o = RegExp(s, "i");
-t.TIME_UNITS_PATTERN = (0, n.repeatedTimeunitPattern)("(?:(?:binnen|in)\\s*)?", s);
+let i = `(${t.nj})\\s{0,5}(${(0, n.matchAnyPattern)(t.TIME_UNIT_DICTIONARY)})\\s{0,5}`,
+    s = RegExp(i, "i");
+t.TIME_UNITS_PATTERN = (0, n.repeatedTimeunitPattern)("(?:(?:binnen|in)\\s*)?", i);

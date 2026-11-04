@@ -58,7 +58,7 @@ var r = n(834647),
     eo = /^[0-9a-f]+$/i,
     ei = function (e, t) {
         var n = en(e, t, t + 2);
-        return er(eo, n) ? $(n, 16) : NaN;
+        return er(eo, n) ? $(n, 16) : 0 / 0;
     },
     es = function (e) {
         for (var t = 0, n = 128; n > 0 && (e & n) != 0; n >>= 1) t++;

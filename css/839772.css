@@ -1,17 +1,17 @@
-.text__7b750 {
+.text_uc7PyD {
     display: inline-block
 }
 
-.text__7b750,
-.text__7b750 a {
+.text_uc7PyD,
+.text_uc7PyD a {
     color: currentColor
 }
 
-.text__7b750 a {
+.text_uc7PyD a {
     text-decoration: underline
 }
 
-.premiumIcon__7b750 {
+.premiumIcon_uc7PyD {
     height: 24px;
     margin-inline-end: 8px;
     position: relative;
@@ -19,37 +19,37 @@
     width: 24px
 }
 
-.notice__36c3e {
+.notice_UBdWBJ {
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: center
 }
 
-.guildIcon__36c3e {
+.guildIcon_UBdWBJ {
     margin-inline-end: 8px
 }
 
-.guildName__36c3e {
+.guildName_UBdWBJ {
     color: inherit
 }
 
-.guildName__36c3e:hover {
+.guildName_UBdWBJ:hover {
     text-decoration: underline
 }
 
-.actionButton__36c3e {
+.actionButton_UBdWBJ {
     margin-inline-start: 12px;
     top: 0
 }
 
-.actionButtonInner__36c3e {
+.actionButtonInner_UBdWBJ {
     align-items: center;
     display: flex;
     gap: 4px
 }
 
-.notice__30f28 {
+.notice_FHSxiv {
     align-items: center;
     background-color: var(--brand-600);
     box-shadow: none;
@@ -60,11 +60,11 @@
     padding: 0 8px
 }
 
-.notice__30f28.error__30f28 {
+.notice_FHSxiv.error_FHSxiv {
     background-color: var(--background-feedback-mod-critical)
 }
 
-.button__30f28 {
+.button_FHSxiv {
     align-items: center;
     font-weight: var(--font-weight-semibold);
     height: -moz-fit-content;
@@ -72,66 +72,66 @@
     padding: 4px 8px
 }
 
-.button__30f28:hover {
+.button_FHSxiv:hover {
     background-color: var(--brand-530)
 }
 
-.error__30f28>.button__30f28:hover {
+.error_FHSxiv>.button_FHSxiv:hover {
     background-color: var(--red-430)
 }
 
-.header__30f28 {
+.header_FHSxiv {
     color: var(--white);
     display: inline;
     margin-inline-end: 16px
 }
 
-.backButtonInner__84419 {
+.backButtonInner_QQS-rv {
     display: flex;
     gap: 8px;
     padding: 2px 0
 }
 
-.backButton__84419:hover {
+.backButton_QQS-rv:hover {
     background-color: var(--brand-530)
 }
 
-.backNotice__84419 {
+.backNotice_QQS-rv {
     background-color: var(--brand-600);
     border-radius: 0;
     padding: 8px
 }
 
-.closeButton__84419 {
+.closeButton_QQS-rv {
     height: 100%
 }
 
-.left_caab99 {
+.left_VmGrWN {
     transform: rotate(270deg)
 }
 
-.right_caab99 {
+.right_VmGrWN {
     transform: rotate(90deg)
 }
 
-.down_caab99 {
+.down_VmGrWN {
     transform: rotate(180deg)
 }
 
-.downRight_caab99 {
+.downRight_VmGrWN {
     transform: rotate(135deg)
 }
 
-.upLeft_caab99 {
+.upLeft_VmGrWN {
     transform: rotate(315deg)
 }
 
-.discordMemberCreatedAt_e6abe8 {
+.discordMemberCreatedAt_XvCt_s {
     display: flex;
     gap: 10px
 }
 
-.discordMemberCreatedAtIconContainer_e6abe8 {
+.discordMemberCreatedAtIconContainer_XvCt_s {
     background-color: var(--interactive-background-hover);
     border-radius: 50%;
     color: var(--interactive-text-active);
@@ -140,51 +140,51 @@
     width: 24px
 }
 
-.discordMemberCreatedAtIcon_e6abe8 {
+.discordMemberCreatedAtIcon_XvCt_s {
     align-self: center
 }
 
-.discordMemberCreatedAtText_e6abe8 {
+.discordMemberCreatedAtText_XvCt_s {
     display: flex;
     flex-direction: column
 }
 
-.connectedAccounts_e6abe8 {
+.connectedAccounts_XvCt_s {
     display: flex;
     flex-direction: row;
     width: 100%
 }
 
-.connectedAccountsColumn_e6abe8 {
+.connectedAccountsColumn_XvCt_s {
     display: flex;
     flex-direction: column;
     width: calc(50% - 8px)
 }
 
-.connectedAccountsColumn_e6abe8+.connectedAccountsColumn_e6abe8 {
+.connectedAccountsColumn_XvCt_s+.connectedAccountsColumn_XvCt_s {
     margin-inline-start: 16px
 }
 
-.connectedAccountContainer_e6abe8 {
+.connectedAccountContainer_XvCt_s {
     border: 1px solid var(--user-profile-border);
     border-radius: var(--radius-sm);
     margin-top: 16px;
     padding: 8px
 }
 
-.connectedAccountContainerWithMetadata_e6abe8 {
+.connectedAccountContainerWithMetadata_XvCt_s {
     padding-bottom: 8px;
     padding-top: 8px
 }
 
-.connectedAccount_e6abe8 {
+.connectedAccount_XvCt_s {
     align-items: center;
     display: flex;
     flex: 0 1;
     gap: 8px
 }
 
-.connectedAccountChildren_e6abe8 {
+.connectedAccountChildren_XvCt_s {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -193,51 +193,51 @@
     overflow: hidden
 }
 
-.connectedAccountChildrenNoIcon_e6abe8 {
+.connectedAccountChildrenNoIcon_XvCt_s {
     margin-inline-start: 0
 }
 
-.connectedAccountPoweredBy_e6abe8 {
+.connectedAccountPoweredBy_XvCt_s {
     color: var(--text-muted);
     cursor: pointer;
     display: inline-block;
     margin-top: 8px
 }
 
-.connectedAccountPoweredByText_e6abe8 {
+.connectedAccountPoweredByText_XvCt_s {
     display: inline-flex;
     flex-direction: row;
     gap: 4px;
     vertical-align: text-top
 }
 
-.connectedAccountIcon_e6abe8 {
+.connectedAccountIcon_XvCt_s {
     flex-shrink: 0;
     height: 24px;
     width: 24px
 }
 
-.connectedAccountNameContainer_e6abe8 {
+.connectedAccountNameContainer_XvCt_s {
     flex-grow: 1;
     overflow: hidden
 }
 
-.connectedAccountNameContainerClickable_e6abe8 {
+.connectedAccountNameContainerClickable_XvCt_s {
     cursor: pointer
 }
 
-.connectedAccountName_e6abe8,
-.connectedAccountNameTextContainer_e6abe8 {
+.connectedAccountName_XvCt_s,
+.connectedAccountNameTextContainer_XvCt_s {
     align-items: center;
     display: flex;
     overflow: hidden
 }
 
-.connectedAccountNameTextContainer_e6abe8 {
+.connectedAccountNameTextContainer_XvCt_s {
     flex: 1
 }
 
-.connectedAccountNameText_e6abe8 {
+.connectedAccountNameText_XvCt_s {
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-user-select: text;
@@ -246,18 +246,18 @@
     white-space: nowrap
 }
 
-.connectedAccountVerifiedIcon_e6abe8 {
+.connectedAccountVerifiedIcon_XvCt_s {
     margin-inline-start: 4px
 }
 
-.connectedAccountHideIcon_e6abe8 {
+.connectedAccountHideIcon_XvCt_s {
     color: var(--interactive-text-default);
     height: 14px;
     margin: 2px;
     width: 14px
 }
 
-.connectedAccountContainer_e6abe8 .connectedAccountOpenIcon_e6abe8 {
+.connectedAccountContainer_XvCt_s .connectedAccountOpenIcon_XvCt_s {
     color: var(--interactive-text-default);
     display: block;
     height: 16px;
@@ -265,12 +265,12 @@
     width: 16px
 }
 
-.connectedAccountContainer_e6abe8 .connectedAccountOpenIcon_e6abe8:hover {
+.connectedAccountContainer_XvCt_s .connectedAccountOpenIcon_XvCt_s:hover {
     color: var(--interactive-text-hover)
 }
 
-.connectedAccountContainer_e6abe8 .connectedAccountOpenIcon_e6abe8:active {
+.connectedAccountContainer_XvCt_s .connectedAccountOpenIcon_XvCt_s:active {
     color: var(--interactive-text-active)
 }
 
-/*# sourceMappingURL=839772.b2ccb2eebdcc96e4.css.map*/
+/*# sourceMappingURL=839772.7bb14808391bb1e8.css.map*/

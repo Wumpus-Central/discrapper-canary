@@ -1,0 +1,587 @@
+.key_EoNHK8 {
+    background-color: var(--brand-500);
+    border-bottom: var(--custom-keybind-shadow-width) var(--brand-600) solid;
+    border-radius: 3px;
+    color: var(--white);
+    display: inline-block;
+    margin-inline: var(--custom-keybind-space-around-key);
+    padding: var(--custom-keybind-applied-vertical-padding) 9px
+}
+
+.container_x30rfK {
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: var(--white);
+    font-size: 14px;
+    line-height: 1.3;
+    padding: var(--custom-notification-spacing);
+    position: relative;
+    width: var(--custom-notification-container-width)
+}
+
+.container_x30rfK+.container_x30rfK {
+    margin-top: 8px
+}
+
+.clickBlocker_x30rfK {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    cursor: auto;
+    z-index: 100
+}
+
+.content_x30rfK {
+    align-items: top;
+    display: flex
+}
+
+.details_x30rfK {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden
+}
+
+.hintText_x30rfK {
+    font-weight: var(--font-weight-medium);
+    text-align: center
+}
+
+.clickable_x30rfK {
+    cursor: pointer
+}
+
+.dismissButton_x30rfK {
+    cursor: pointer;
+    height: 24px;
+    inset-inline-end: 5px;
+    line-height: 0;
+    position: absolute;
+    top: 5px;
+    visibility: hidden;
+    width: 24px
+}
+
+.dismissButton_x30rfK .dismissIcon_x30rfK {
+    opacity: .5
+}
+
+.dismissButton_x30rfK:hover .dismissIcon_x30rfK {
+    opacity: 1
+}
+
+.container_x30rfK:hover .dismissButton_x30rfK,
+.dismissButton_x30rfK:hover {
+    visibility: visible
+}
+
+.buttonContainer_x30rfK {
+    display: flex;
+    margin-inline: -5px
+}
+
+.button_x30rfK {
+    margin-inline: 5px
+}
+
+.avatar_x30rfK {
+    flex: 0 0 auto;
+    margin-inline-end: 10px
+}
+
+.title_x30rfK {
+    font-size: 16px;
+    overflow: hidden;
+    -webkit-line-clamp: 2
+}
+
+.body_x30rfK,
+.title_x30rfK {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical
+}
+
+.body_x30rfK {
+    overflow-wrap: break-word
+}
+
+.divider_x30rfK {
+    height: 1px;
+    margin-bottom: var(--custom-notification-space-around-divider);
+    margin-top: var(--custom-notification-space-around-divider);
+    position: relative;
+    width: 100%
+}
+
+.footer_x30rfK {
+    color: var(--primary-300)
+}
+
+.keybindMessage_x30rfK,
+.keybindMessage_x30rfK .keybind_x30rfK {
+    font-weight: var(--font-weight-medium)
+}
+
+.keybindMessage_x30rfK .keybind_x30rfK {
+    font-size: 13px;
+    line-height: 14px;
+    margin-inline: 6px
+}
+
+.hintSubtleText_x30rfK {
+    font-size: 12px;
+    text-align: center
+}
+
+.themePrimary_x30rfK.container_x30rfK {
+    background-color: hsl(var(--primary-600-hsl)/.95)
+}
+
+.themePrimary_x30rfK.container_x30rfK.clickable_x30rfK:hover {
+    background-color: var(--primary-600)
+}
+
+.themePrimary_x30rfK.container_x30rfK.clickable_x30rfK:hover .hintText_x30rfK {
+    color: var(--white)
+}
+
+.themePrimary_x30rfK .body_x30rfK,
+.themePrimary_x30rfK .hintSubtleText_x30rfK,
+.themePrimary_x30rfK .hintText_x30rfK,
+.themePrimary_x30rfK .keybindMessage_x30rfK {
+    color: var(--primary-300)
+}
+
+.themePrimary_x30rfK .divider_x30rfK {
+    background-color: var(--primary-500)
+}
+
+.themePrimary_x30rfK .dismissButton_x30rfK {
+    background-color: var(--primary-600);
+    box-shadow: 0 0 var(--custom-notification-box-shadow-blur-radius) var(--custom-notification-box-shadow-spread-radius) var(--primary-600)
+}
+
+.themeBrand_x30rfK.container_x30rfK {
+    background-color: var(--brand-95a)
+}
+
+.themeBrand_x30rfK.container_x30rfK.clickable_x30rfK:hover {
+    background-color: var(--brand-500)
+}
+
+.themeBrand_x30rfK.container_x30rfK.clickable_x30rfK:hover .hintText_x30rfK {
+    color: var(--white)
+}
+
+.themeBrand_x30rfK .body_x30rfK,
+.themeBrand_x30rfK .hintText_x30rfK,
+.themeBrand_x30rfK .keybindMessage_x30rfK {
+    color: var(--brand-200)
+}
+
+.themeBrand_x30rfK .footer_x30rfK {
+    align-items: center;
+    color: var(--white);
+    display: flex
+}
+
+.themeBrand_x30rfK .divider_x30rfK {
+    background-color: var(--opacity-white-16)
+}
+
+.themeBrand_x30rfK .dismissButton_x30rfK {
+    background-color: var(--brand-500);
+    box-shadow: 0 0 var(--custom-notification-box-shadow-blur-radius) var(--custom-notification-box-shadow-spread-radius) var(--brand-500)
+}
+
+.themeBrand_x30rfK .keybind_x30rfK {
+    background-color: var(--white);
+    border-bottom-color: var(--brand-300)
+}
+
+.themeBrand_x30rfK .button_x30rfK .innerText_x30rfK,
+.themeBrand_x30rfK .keybind_x30rfK {
+    color: var(--brand-500)
+}
+
+.themeDanger_x30rfK.container_x30rfK {
+    background-color: hsl(var(--red-400-hsl)/.95)
+}
+
+.themeDanger_x30rfK.container_x30rfK.clickable_x30rfK:hover {
+    background-color: var(--red-400)
+}
+
+.themeDanger_x30rfK.container_x30rfK.clickable_x30rfK:hover .hintText_x30rfK {
+    color: var(--white)
+}
+
+.themeDanger_x30rfK .body_x30rfK,
+.themeDanger_x30rfK .hintText_x30rfK,
+.themeDanger_x30rfK .keybindMessage_x30rfK {
+    color: var(--red-200)
+}
+
+.themeDanger_x30rfK .footer_x30rfK {
+    align-items: center;
+    color: var(--white);
+    display: flex
+}
+
+.themeDanger_x30rfK .divider_x30rfK {
+    background-color: var(--red-360)
+}
+
+.themeDanger_x30rfK .dismissButton_x30rfK {
+    background-color: hsl(var(--red-400-hsl)/var(--custom-notification-box-shadow-opacity));
+    box-shadow: 0 0 var(--custom-notification-box-shadow-blur-radius) var(--custom-notification-box-shadow-spread-radius) hsl(var(--red-400-hsl)/var(--custom-notification-box-shadow-opacity))
+}
+
+.themeDanger_x30rfK .dismissButton_x30rfK .dismissIcon_x30rfK {
+    color: var(--white);
+    opacity: .8
+}
+
+.themeDanger_x30rfK .dismissButton_x30rfK:hover .dismissIcon_x30rfK {
+    opacity: 1
+}
+
+.themeDanger_x30rfK .keybind_x30rfK {
+    background-color: var(--white);
+    border-bottom-color: var(--red-260);
+    color: var(--red-400)
+}
+
+.themeDanger_x30rfK .button_x30rfK .innerText_x30rfK {
+    color: var(--red-400)
+}
+
+.content_UB4ZYW {
+    display: flex
+}
+
+.staticSize_UB4ZYW {
+    flex-shrink: 0
+}
+
+.widget_UB4ZYW {
+    border-radius: 5px;
+    box-shadow: 0 2px 10px 0 var(--opacity-black-20);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    max-height: var(--custom-widget-max-widget-height);
+    position: relative;
+    z-index: 1
+}
+
+.widget_UB4ZYW.inGame_UB4ZYW,
+.widget_UB4ZYW.inGameActive_UB4ZYW,
+.widget_UB4ZYW.inGameText_UB4ZYW {
+    box-shadow: none
+}
+
+.widget_UB4ZYW.default_UB4ZYW {
+    background-color: var(--primary-630)
+}
+
+.widget_UB4ZYW.unpinned_UB4ZYW {
+    background-color: var(--primary-600)
+}
+
+.bar_UB4ZYW {
+    background-color: hsl(var(--primary-600-hsl)/.85);
+    color: var(--white);
+    display: flex;
+    flex-shrink: 0;
+    font-size: 16px;
+    height: var(--custom-widget-bar-height);
+    justify-content: space-between;
+    line-height: 1.25;
+    padding: var(--custom-widget-bar-padding)
+}
+
+.bar_UB4ZYW,
+.bar_UB4ZYW .content_UB4ZYW {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.bar_UB4ZYW .content_UB4ZYW {
+    align-items: center;
+    font-weight: var(--font-weight-semibold)
+}
+
+.bar_UB4ZYW:first-child {
+    border-radius: 5px 5px 0 0;
+    box-shadow: inset 0 -1px 0 0 var(--opacity-black-8)
+}
+
+.background-opacity-low .bar_UB4ZYW:first-child {
+    box-shadow: inset 0 -1px 0 0 var(--opacity-white-8)
+}
+
+.bar_UB4ZYW:last-child {
+    border-radius: 0 0 5px 5px;
+    box-shadow: inset 0 1px 0 0 var(--opacity-black-8)
+}
+
+.bar_UB4ZYW:last-child.inGame_UB4ZYW,
+.bar_UB4ZYW:last-child.inGameActive_UB4ZYW,
+.bar_UB4ZYW:last-child.inGameText_UB4ZYW {
+    box-shadow: none
+}
+
+.bar_UB4ZYW.default_UB4ZYW {
+    background-color: #282b30
+}
+
+.bar_UB4ZYW.unpinned_UB4ZYW {
+    background-color: var(--primary-600)
+}
+
+.body_UB4ZYW {
+    color: var(--white);
+    font-size: 16px;
+    line-height: 1.25;
+    padding-block: var(--custom-widget-body-padding) var(--custom-widget-body-padding);
+    padding-inline: var(--custom-widget-body-padding) 0
+}
+
+.body_UB4ZYW:first-child {
+    border-radius: 5px 5px 0 0
+}
+
+.body_UB4ZYW:last-child {
+    border-radius: 0 0 5px 5px
+}
+
+.body_UB4ZYW.default_UB4ZYW {
+    background-color: var(--primary-630)
+}
+
+.body_UB4ZYW.unpinned_UB4ZYW {
+    background-color: var(--primary-600)
+}
+
+.body_UB4ZYW.pinned_UB4ZYW {
+    background-color: hsl(var(--primary-600-hsl)/.75)
+}
+
+.body_UB4ZYW.inGame_UB4ZYW {
+    background-color: hsl(var(--white-hsl)/0)
+}
+
+.icon_UB4ZYW {
+    color: var(--white);
+    cursor: pointer;
+    margin-inline-start: 8px;
+    opacity: .6
+}
+
+.icon_UB4ZYW:hover {
+    opacity: 1
+}
+
+.icon_UB4ZYW.toggledIconOn_UB4ZYW {
+    opacity: 1
+}
+
+.tutorialTip_UB4ZYW {
+    text-align: center
+}
+
+.container__srsUG {
+    inset-inline-start: 0;
+    padding: 10px;
+    position: fixed;
+    top: 0
+}
+
+.stackTrace__srsUG {
+    inset-inline-start: 10px;
+    position: absolute;
+    top: 140px
+}
+
+.stackTraceCode__srsUG {
+    font-family: var(--font-code)
+}
+
+.code__srsUG {
+    padding: 15px;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text
+}
+
+.errorMessage__srsUG {
+    font-size: 18px;
+    font-weight: var(--font-weight-semibold);
+    margin-inline-start: 30px
+}
+
+.notificationButton__srsUG {
+    border: 1px solid var(--white)
+}
+
+.notificationIcon__srsUG {
+    fill: var(--white)
+}
+
+.footer_JAaHzL {
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    position: relative
+}
+
+.ctaButton_JAaHzL {
+    flex-grow: 1
+}
+
+.container_rZWrG9 {
+    position: absolute;
+    z-index: 100
+}
+
+.topLeft_rZWrG9 {
+    inset-inline-start: 0;
+    top: 0
+}
+
+.topRight_rZWrG9 {
+    inset-inline-end: 0;
+    top: 0
+}
+
+.bottomLeft_rZWrG9 {
+    bottom: 0;
+    inset-inline-start: 0
+}
+
+.bottomRight_rZWrG9 {
+    bottom: 0;
+    inset-inline-end: 0
+}
+
+.notificationGroup_rZWrG9 {
+    padding: 10px;
+    position: relative
+}
+
+.notificationGroup_rZWrG9:not(:first-child) {
+    padding-top: 0
+}
+
+.wrapper_X_AbQB {
+    box-sizing: border-box;
+    position: absolute
+}
+
+.wrapper_X_AbQB>* {
+    box-sizing: border-box;
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.operation_X_AbQB>* {
+    pointer-events: none
+}
+
+.handle_X_AbQB {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 1
+}
+
+.resizeNorth_X_AbQB {
+    bottom: auto;
+    top: var(--custom-drag-resize-container-handle-offset)
+}
+
+.resizeNorth_X_AbQB,
+.resizeSouth_X_AbQB {
+    height: var(--custom-drag-resize-container-handle-size)
+}
+
+.resizeSouth_X_AbQB {
+    bottom: var(--custom-drag-resize-container-handle-offset);
+    top: auto
+}
+
+.resizeNSCursor_X_AbQB {
+    cursor: ns-resize
+}
+
+.resizeWest_X_AbQB {
+    inset-inline: var(--custom-drag-resize-container-handle-offset) auto
+}
+
+.resizeEast_X_AbQB,
+.resizeWest_X_AbQB {
+    cursor: ew-resize;
+    width: var(--custom-drag-resize-container-handle-size)
+}
+
+.resizeEast_X_AbQB {
+    inset-inline: auto var(--custom-drag-resize-container-handle-offset)
+}
+
+.resizeEWCursor_X_AbQB {
+    cursor: ew-resize
+}
+
+.resizeNorthWest_X_AbQB {
+    cursor: nwse-resize;
+    inset-inline: var(--custom-drag-resize-container-handle-offset) auto
+}
+
+.resizeNorthEast_X_AbQB,
+.resizeNorthWest_X_AbQB {
+    bottom: auto;
+    height: calc(var(--custom-drag-resize-container-handle-size)*2);
+    top: var(--custom-drag-resize-container-handle-offset);
+    width: calc(var(--custom-drag-resize-container-handle-size)*2)
+}
+
+.resizeNorthEast_X_AbQB {
+    cursor: nesw-resize;
+    inset-inline: auto var(--custom-drag-resize-container-handle-offset)
+}
+
+.resizeSouthWest_X_AbQB {
+    cursor: nesw-resize;
+    inset-inline: var(--custom-drag-resize-container-handle-offset) auto
+}
+
+.resizeSouthEast_X_AbQB,
+.resizeSouthWest_X_AbQB {
+    bottom: var(--custom-drag-resize-container-handle-offset);
+    height: calc(var(--custom-drag-resize-container-handle-size)*2);
+    top: auto;
+    width: calc(var(--custom-drag-resize-container-handle-size)*2)
+}
+
+.resizeSouthEast_X_AbQB {
+    inset-inline: auto var(--custom-drag-resize-container-handle-offset)
+}
+
+.resizeNWSECursor_X_AbQB,
+.resizeSouthEast_X_AbQB {
+    cursor: nwse-resize
+}
+
+.resizeNESWCursor_X_AbQB {
+    cursor: nesw-resize
+}
+
+/*# sourceMappingURL=f44b9d556cc3d57b.css.map*/

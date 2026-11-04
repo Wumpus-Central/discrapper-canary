@@ -1,4 +1,3 @@
-l.d(t, { g: () => r, n: () => u });
 var n,
     r =
         (((n = {})[(n.UNKNOWN = 0)] = "UNKNOWN"),
@@ -7,4 +6,4 @@ var n,
         (n[(n.PERMISSIONS = 3)] = "PERMISSIONS"),
         (n[(n.AUDIT_LOG = 4)] = "AUDIT_LOG"),
         n);
-let u = { 0: "UNKNOWN", 1: "INFO", 2: "MESSAGE_HISTORY", 3: "PERMISSIONS", 4: "AUDIT_LOG" };
+l.d(t, {}, { g: r, n: { 0: "UNKNOWN", 1: "INFO", 2: "MESSAGE_HISTORY", 3: "PERMISSIONS", 4: "AUDIT_LOG" } });

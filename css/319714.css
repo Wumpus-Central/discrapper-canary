@@ -1,4 +1,4 @@
-.wrapper_f7ecac {
+.wrapper_Z0MHyc {
     align-items: center;
     background-color: var(--background-surface-highest);
     border-radius: 4px;
@@ -16,11 +16,11 @@
     user-select: none
 }
 
-.full-motion .wrapper_f7ecac:hover {
+.full-motion .wrapper_Z0MHyc:hover {
     box-shadow: var(--shadow-border), var(--shadow-medium)
 }
 
-.button_f7ecac {
+.button_Z0MHyc {
     align-items: center;
     color: var(--interactive-text-default);
     cursor: pointer;
@@ -33,24 +33,24 @@
     position: relative
 }
 
-.button_f7ecac:hover {
+.button_Z0MHyc:hover {
     background-color: var(--interactive-background-hover);
     color: var(--interactive-text-hover)
 }
 
-.button_f7ecac:active {
+.button_Z0MHyc:active {
     background-color: var(--interactive-background-active);
     color: var(--interactive-text-active);
     padding-bottom: 3px;
     padding-top: 5px
 }
 
-.button_f7ecac.selected_f7ecac {
+.button_Z0MHyc.selected_Z0MHyc {
     background-color: var(--interactive-background-selected);
     color: var(--interactive-text-active)
 }
 
-.separator_f7ecac {
+.separator_Z0MHyc {
     background-color: var(--border-subtle);
     flex: 0 0 auto;
     height: 100%;
@@ -58,9 +58,9 @@
     width: 1px
 }
 
-.button_f7ecac.disabled_f7ecac,
-.button_f7ecac.disabled_f7ecac:active,
-.button_f7ecac.disabled_f7ecac:hover {
+.button_Z0MHyc.disabled_Z0MHyc,
+.button_Z0MHyc.disabled_Z0MHyc:active,
+.button_Z0MHyc.disabled_Z0MHyc:hover {
     background-color: transparent;
     color: var(--interactive-text-default);
     cursor: default;
@@ -68,24 +68,24 @@
     padding: 4px
 }
 
-.button_f7ecac.dangerous_f7ecac {
+.button_Z0MHyc.dangerous_Z0MHyc {
     color: var(--control-critical-secondary-text-default)
 }
 
-.button_f7ecac.dangerous_f7ecac:hover {
+.button_Z0MHyc.dangerous_Z0MHyc:hover {
     color: var(--control-critical-secondary-text-hover)
 }
 
-.button_f7ecac.dangerous_f7ecac:active {
+.button_Z0MHyc.dangerous_Z0MHyc:active {
     color: var(--control-critical-secondary-text-active)
 }
 
-.enable-forced-colors .wrapper_f7ecac {
+.enable-forced-colors .wrapper_Z0MHyc {
     border: 1px solid CanvasText;
     height: 36px
 }
 
-.enable-forced-colors .button_f7ecac {
+.enable-forced-colors .button_Z0MHyc {
     background-color: ButtonFace;
     border: 1px solid ButtonFace;
     color: ButtonText;
@@ -93,12 +93,12 @@
     min-width: 26px
 }
 
-.enable-forced-colors .button_f7ecac.selected_f7ecac,
-.enable-forced-colors .button_f7ecac:active,
-.enable-forced-colors .button_f7ecac:hover {
+.enable-forced-colors .button_Z0MHyc.selected_Z0MHyc,
+.enable-forced-colors .button_Z0MHyc:active,
+.enable-forced-colors .button_Z0MHyc:hover {
     background-color: HighlightText;
     border-color: Highlight;
     color: Highlight
 }
 
-/*# sourceMappingURL=319714.6b83daa2353b16f3.css.map*/
+/*# sourceMappingURL=319714.ed8ab247ced2e267.css.map*/

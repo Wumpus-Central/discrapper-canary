@@ -1,0 +1,98 @@
+.destinationRow_R-K6-V {
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    min-height: 48px;
+    padding: 0 8px
+}
+
+.destinationRow_R-K6-V.disabled_R-K6-V {
+    cursor: not-allowed
+}
+
+.destinationRow_R-K6-V:not(.disabled_R-K6-V):hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.identity_R-K6-V {
+    align-items: center;
+    flex-direction: row;
+    flex-shrink: 1;
+    gap: 12px
+}
+
+.identity_R-K6-V,
+.labels_R-K6-V {
+    display: flex;
+    overflow: hidden
+}
+
+.labels_R-K6-V {
+    flex-direction: column;
+    margin: 4px 0
+}
+
+.label_R-K6-V {
+    color: var(--text-strong)
+}
+
+.sublabel_R-K6-V {
+    color: var(--text-muted)
+}
+
+.threadSubLabel_R-K6-V {
+    align-items: center;
+    display: flex
+}
+
+.subLabelIcon_R-K6-V {
+    height: 12px;
+    margin-inline-end: 2px;
+    width: 12px
+}
+
+.subLabelSeparator_R-K6-V {
+    margin: 0 4px
+}
+
+.disabled_R-K6-V .iconWrapper_R-K6-V {
+    opacity: 50%
+}
+
+.disabled_R-K6-V .label_R-K6-V,
+.disabled_R-K6-V .subLabel_R-K6-V {
+    color: var(--text-muted)
+}
+
+.checkbox_R-K6-V {
+    flex: 0;
+    margin-inline-start: 16px
+}
+
+.fauxButton_R-K6-V {
+    pointer-events: none
+}
+
+.warningIcon_R-K6-V {
+    color: var(--text-feedback-warning)
+}
+
+.noResults_R-K6-V {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    margin: 0 32px;
+    text-align: center
+}
+
+.noResultsImg_R-K6-V {
+    width: 200px
+}
+
+/*# sourceMappingURL=422fe5d8c53a598c.css.map*/

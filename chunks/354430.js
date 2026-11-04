@@ -1,5 +1,4 @@
-n.d(t, { A: () => d });
-var i = n(17928),
+var i = n(855986),
     r = n(73153);
 let a = { topEmojisByGuildId: {} },
     s = a,
@@ -33,3 +32,4 @@ let d = new o(r.h, {
         ((s.topEmojisByGuildId[t] = n.map((e) => e.emojiId)), (l[t] = !1));
     },
 });
+n.d(t, {}, { A: d });

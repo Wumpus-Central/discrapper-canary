@@ -1,4 +1,3 @@
-n.d(t, { z: () => r });
 var i,
     r =
         (((i = {})[(i.PURCHASE = 1)] = "PURCHASE"),
@@ -19,3 +18,4 @@ var i,
         (i[(i.PURCHASE_REWARD = 16)] = "PURCHASE_REWARD"),
         (i[(i.ORBS_ARCADE_REWARD = 17)] = "ORBS_ARCADE_REWARD"),
         i);
+n.d(t, {}, { z: r });

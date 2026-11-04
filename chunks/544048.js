@@ -1,11 +1,10 @@
-n.d(t, { t: () => m });
 var i = n(477900),
     s = n(582128),
     r = n(503698),
     a = n.n(r),
     l = n(941861),
     o = n(844222),
-    u = n(432816),
+    u = n(116711),
     c = n(471544);
 class d extends s.PureComponent {
     static defaultProps = { pauseWhileUnfocused: !0, pause: !1 };
@@ -23,7 +22,7 @@ class d extends s.PureComponent {
                 useReducedMotion: a,
                 rendererSettings: l,
             } = this.props,
-            [o, { default: u }] = await Promise.all([e(), n.e("996382").then(n.t.bind(n, 883885, 23))]);
+            [o, { default: u }] = await Promise.all([e(), n.e(996382).then(n.t.bind(n, 883885, 23))]);
         null != this.animationRef &&
             ((this.animation = u.loadAnimation({
                 container: this.animationRef,
@@ -89,12 +88,18 @@ class d extends s.PureComponent {
         return (0, i.jsx)("div", { ref: this.handleSetRef, className: a()(this.props.className, c.i) });
     }
 }
-function m(e) {
-    let { componentRef: t, ignoreReducedMotion: n = !1, ...r } = e,
-        { isWindowFocused: a } = (0, u.G9)(),
-        c = (0, l.Rs)(),
-        { reducedMotion: m } = s.useContext(o.C),
-        h = m.enabled && !n,
-        p = { ...r, isWindowFocused: a?.() ?? c, useReducedMotion: h };
-    return (0, i.jsx)(d, { ...p, ref: t });
-}
+n.d(
+    t,
+    {},
+    {
+        t: function (e) {
+            let { componentRef: t, ignoreReducedMotion: n = !1, ...r } = e,
+                { isWindowFocused: a } = (0, u.G9)(),
+                c = (0, l.Rs)(),
+                { reducedMotion: m } = s.useContext(o.C),
+                h = m.enabled && !n,
+                p = { ...r, isWindowFocused: a?.() ?? c, useReducedMotion: h };
+            return (0, i.jsx)(d, { ...p, ref: t });
+        },
+    },
+);

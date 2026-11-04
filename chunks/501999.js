@@ -1,11 +1,11 @@
-e.exports = {
-    qR: "descriptionBox__981f7",
-    eg: "descriptionSection__981f7",
-    VP: "descriptionRow__981f7",
-    Sy: "descriptionIcon__981f7",
-    yF: "divider__981f7",
-    x6: "button__981f7",
-    eS: "rightButtonContainer__981f7",
-    U2: "lastSync__981f7",
-    UD: "buttonContainer__981f7",
+t.exports = {
+    qR: "descriptionBox_5tsZcq",
+    eg: "descriptionSection_5tsZcq",
+    VP: "descriptionRow_5tsZcq",
+    Sy: "descriptionIcon_5tsZcq",
+    yF: "divider_5tsZcq",
+    x6: "button_5tsZcq",
+    eS: "rightButtonContainer_5tsZcq",
+    U2: "lastSync_5tsZcq",
+    UD: "buttonContainer_5tsZcq",
 };

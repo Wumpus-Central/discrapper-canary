@@ -1,9 +1,9 @@
 e.exports = {
-    wx: "header_b5f5a6",
-    x6: "button_b5f5a6",
-    Iw: "modeSelectButton_b5f5a6",
-    qy: "ghost_b5f5a6",
-    $E: "modeSelectContent_b5f5a6",
-    QG: "controlsPopout_b5f5a6",
-    wB: "expandedSearchInput_b5f5a6",
+    wx: "header_s2-xHg",
+    x6: "button_s2-xHg",
+    Iw: "modeSelectButton_s2-xHg",
+    qy: "ghost_s2-xHg",
+    $E: "modeSelectContent_s2-xHg",
+    QG: "controlsPopout_s2-xHg",
+    wB: "expandedSearchInput_s2-xHg",
 };

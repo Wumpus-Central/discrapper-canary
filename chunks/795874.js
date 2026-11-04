@@ -1,7 +1,7 @@
 e.exports = {
-    Jz: "availabilityIndicator__40463",
-    Kk: "icon__40463",
-    RQ: "unlockedIcon__40463 icon__40463",
-    h_: "description__40463",
-    vk: "clickable__40463",
+    Jz: "availabilityIndicator_C3UYpl",
+    Kk: "icon_C3UYpl",
+    RQ: "unlockedIcon_C3UYpl icon_C3UYpl",
+    h_: "description_C3UYpl",
+    vk: "clickable_C3UYpl",
 };

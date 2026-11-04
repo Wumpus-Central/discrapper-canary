@@ -1,0 +1,64 @@
+.wrapper_SIFeFa {
+    background: var(--background-gradient-chat, var(--background-base-lower))
+}
+
+.container_SIFeFa {
+    background-color: var(--interactive-background-selected);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px
+}
+
+.container_SIFeFa .top_SIFeFa {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.container_SIFeFa .left_SIFeFa {
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.container_SIFeFa .left_SIFeFa .help_SIFeFa {
+    margin-inline-end: 8px
+}
+
+.container_SIFeFa .left_SIFeFa .help_SIFeFa:hover {
+    cursor: pointer
+}
+
+.container_SIFeFa .left_SIFeFa .help_SIFeFa .helpText_SIFeFa {
+    display: inline;
+    margin-inline-end: 3px
+}
+
+.container_SIFeFa .left_SIFeFa .help_SIFeFa .helpIcon_SIFeFa {
+    vertical-align: middle
+}
+
+.container_SIFeFa .right_SIFeFa .imgWrapper_SIFeFa {
+    height: 38px;
+    position: relative;
+    width: 38px
+}
+
+.container_SIFeFa .right_SIFeFa .imgWrapper_SIFeFa .imgUnderlay_SIFeFa {
+    background: linear-gradient(155deg, var(--teal-230) 11.08%, var(--yellow-260) 88.92%);
+    border-radius: 50%;
+    filter: blur(20px);
+    inset: 2.5px;
+    position: absolute
+}
+
+.assetTile_SIFeFa {
+    border-radius: 8px;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 2
+}
+
+/*# sourceMappingURL=ce21c7a50975c2e9.css.map*/

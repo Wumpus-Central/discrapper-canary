@@ -1,7 +1,7 @@
 e.exports = {
-    C2: "gameSearchCombobox__36be8",
-    mN: "gameOption__36be8",
-    cV: "coverButton__36be8 " + p(365611).Wp,
-    EF: "gameOptionLabel__36be8",
-    DG: "gameOptionIcon__36be8",
+    C2: "gameSearchCombobox_LAQe11",
+    mN: "gameOption_LAQe11",
+    cV: "coverButton_LAQe11 " + p(365611).Wp,
+    EF: "gameOptionLabel_LAQe11",
+    DG: "gameOptionIcon_LAQe11",
 };

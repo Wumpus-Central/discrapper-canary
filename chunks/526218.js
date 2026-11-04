@@ -1,18 +1,24 @@
-n.d(t, { G: () => r, t: () => a });
 var i,
     r = (((i = {})[(i.MANAGED = 0)] = "MANAGED"), (i[(i.QUICK = 1)] = "QUICK"), i);
-function a(e) {
-    if (null == e) return null;
-    let [t, n] = e.split("-"),
-        i = (function (e) {
-            switch (e) {
-                case "0":
-                    return 0;
-                case "1":
-                    return 1;
-                default:
-                    return null;
-            }
-        })(t);
-    return null == i ? null : { type: i, encodedLinkId: e, decodedLinkId: n };
-}
+n.d(
+    t,
+    {},
+    {
+        G: r,
+        t: function (e) {
+            if (null == e) return null;
+            let [t, n] = e.split("-"),
+                i = (function (e) {
+                    switch (e) {
+                        case "0":
+                            return 0;
+                        case "1":
+                            return 1;
+                        default:
+                            return null;
+                    }
+                })(t);
+            return null == i ? null : { type: i, encodedLinkId: e, decodedLinkId: n };
+        },
+    },
+);

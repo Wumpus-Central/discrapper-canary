@@ -1,0 +1,324 @@
+.row_oQWonh {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px
+}
+
+.col_oQWonh,
+.row_oQWonh {
+    display: flex;
+    justify-content: flex-start
+}
+
+.col_oQWonh {
+    flex-direction: column;
+    max-width: 100%;
+    min-width: 0
+}
+
+.grid_oQWonh {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fill, 450px);
+    max-width: 100%;
+    overflow: hidden;
+    width: 100%
+}
+
+.customEffectsGrid_oQWonh {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fill, 400px)
+}
+
+.end_oQWonh {
+    align-items: flex-end;
+    justify-content: flex-end
+}
+
+.section_oQWonh {
+    margin: 12px 0
+}
+
+.root_oQWonh {
+    margin-top: var(--space-24)
+}
+
+.previewCard_oQWonh {
+    background: var(--background-surface-high);
+    border-radius: 4px;
+    cursor: pointer;
+    height: 250px;
+    transition: box-shadow .2s ease-in-out
+}
+
+.previewCard_oQWonh:hover {
+    box-shadow: var(--shadow-high)
+}
+
+.previewCardImage_oQWonh {
+    height: 200px
+}
+
+.previewCardFooter_oQWonh {
+    align-items: center;
+    background: var(--background-surface-high);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-between;
+    padding: 12px 8px
+}
+
+.preview_oQWonh {
+    overflow: hidden;
+    position: relative;
+    width: 400px
+}
+
+.profileEffectPreviewContent_oQWonh {
+    height: 100%;
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 400px;
+    z-index: 1
+}
+
+.fullProfilePreview_oQWonh {
+    width: 400px
+}
+
+.userProfileThemeContainer_oQWonh.user-profile-modal-v2 {
+    width: 400px
+}
+
+.userProfileThemeContainer_oQWonh.user-profile-modal-v2>div {
+    padding: 0
+}
+
+.condensedProfilePreview_oQWonh {
+    margin-top: 20px;
+    width: 300px
+}
+
+.dangerControls_oQWonh {
+    display: flex;
+    justify-content: center;
+    margin: 12px 0
+}
+
+.options_oQWonh {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px
+}
+
+.checkBox_oQWonh {
+    height: 20px;
+    width: 16px
+}
+
+.uploadButton_oQWonh {
+    background-color: green;
+    border-radius: 4px;
+    flex: 1px;
+    height: 38px;
+    padding-top: 8px;
+    position: relative;
+    text-align: center;
+    width: 200px
+}
+
+.input_oQWonh {
+    box-sizing: border-box;
+    margin-inline-start: 0;
+    max-width: 100%;
+    width: 100%
+}
+
+.bottomControls_oQWonh {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 12px 0
+}
+
+.shareSection_oQWonh {
+    border: 1px solid var(--control-primary-border-default);
+    border-radius: 4px;
+    padding: 4px 12px
+}
+
+.randomizedRules_oQWonh {
+    background: var(--background-base-lower);
+    border-radius: 4px;
+    margin-top: 24px;
+    padding: 4px
+}
+
+.randomizedRules_oQWonh ol {
+    list-style: decimal;
+    margin-top: 8px;
+    padding-inline-start: 24px
+}
+
+.randomizedRules_oQWonh ol li {
+    color: var(--text-strong);
+    margin-top: 4px
+}
+
+.warningText_oQWonh {
+    color: var(--text-feedback-critical);
+    font-weight: 800
+}
+
+.layers_oQWonh {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-top: 8px
+}
+
+.layerForm_oQWonh {
+    background: var(--background-base-lower);
+    border-radius: 8px;
+    padding: 8px
+}
+
+.layerPreviewContainer_oQWonh {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.layerPreview_oQWonh {
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    height: 250px
+}
+
+.stillFramesContainer_oQWonh {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px
+}
+
+.stillFramePreviewContainer_oQWonh {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.stillFramePreviewWrapper_oQWonh {
+    border: 1px solid var(--border-strong);
+    border-radius: 4px;
+    height: 250px;
+    margin-bottom: 4px;
+    overflow: hidden;
+    position: relative
+}
+
+.stillFramePreviewClickable_oQWonh {
+    cursor: pointer
+}
+
+.full-motion .stillFramePreviewClickable_oQWonh {
+    transition: transform .2s ease-in-out
+}
+
+.full-motion .stillFramePreviewClickable_oQWonh:hover {
+    transform: scale(1.02)
+}
+
+.stillFramePreviewClickable_oQWonh:focus {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px
+}
+
+.stillFramePreview_oQWonh {
+    height: 100%;
+    inset: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top;
+    object-position: top;
+    position: absolute;
+    width: 100%;
+    z-index: 1
+}
+
+.reducedMotionModalContent_oQWonh {
+    align-items: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    max-height: 800px;
+    padding: 48px 24px 24px
+}
+
+.reducedMotionModalCloseButton_oQWonh {
+    inset-inline-end: 16px;
+    position: fixed;
+    top: 16px;
+    z-index: 10
+}
+
+.reducedMotionModalWrapper_oQWonh {
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    height: 100%;
+    overflow: hidden;
+    position: relative
+}
+
+.pfxGrid_oQWonh {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 12px 0
+}
+
+.pfxListItem_oQWonh {
+    aspect-ratio: 450/880;
+    background-position: 50%;
+    background-size: cover;
+    cursor: pointer;
+    height: auto;
+    justify-content: flex-end;
+    text-align: center;
+    width: 180px
+}
+
+.pfxListItem_oQWonh,
+.pfxListItemFooter_oQWonh {
+    display: flex;
+    flex-direction: column
+}
+
+.pfxListItemFooter_oQWonh {
+    background: rgba(0, 0, 0, .6);
+    height: 32px;
+    justify-content: center
+}
+
+.sampleProfilePreview_oQWonh {
+    background-color: var(--background-base-lower);
+    height: 100%;
+    width: 100%
+}
+
+.fullProfilePreview_oQWonh [class*=profileFrameContainer] {
+    display: none
+}
+
+.fullProfilePreview_oQWonh [class*=tabBarPanel],
+.fullProfilePreview_oQWonh [class*=tabListScroller] {
+    display: none
+}
+
+/*# sourceMappingURL=c2a1edeeef627609.css.map*/

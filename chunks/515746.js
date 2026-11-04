@@ -1,1 +1,1 @@
-_.exports = { qS: "badge__2906f", Qk: "badgeActive__2906f", yM: "badgeEnded__2906f" };
+e.exports = { qS: "badge_8OcjHa", Qk: "badgeActive_8OcjHa", yM: "badgeEnded_8OcjHa" };

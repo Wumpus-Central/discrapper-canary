@@ -1,4 +1,3 @@
-n.d(t, { A: () => C });
 var i = n(582128),
     r = n(284009),
     a = n.n(r),
@@ -7,16 +6,16 @@ var i = n(582128),
     o = n.n(l),
     d = n(447732),
     c = n(931093),
-    u = n(17928),
+    u = n(855986),
     _ = n(339048),
     E = n(964486),
     A = n(287809),
     h = n(166403),
     f = n(469778),
     I = n(739508),
-    p = n(24482),
+    p = n(879610),
     m = n(652215),
-    T = n(202541);
+    T = n(682901);
 function g(e) {
     let {
             isFetching: t = !1,
@@ -72,45 +71,52 @@ function S(e, t) {
 function N(e) {
     return null != e && !f.A.applicationIdsFetching.has(T.tv) && !f.A.applicationIdsFetched.has(T.tv);
 }
-function C() {
-    let {
-            forceFetch: e,
-            excludeReverseTrial: t,
-            excludeReverseTrialFromCountdown: n,
-        } = arguments.length > 0 && void 0 !== arguments[0]
-            ? arguments[0]
-            : { forceFetch: !1, excludeReverseTrial: !1, excludeReverseTrialFromCountdown: !1 },
-        r = (0, u.bG)([A.default], () => A.default.getCurrentUser()),
-        a = (0, u.yK)([f.A], () => f.A.getFractionalPremium({ excludeReverseTrial: t })),
-        l = (0, u.bG)([f.A], () => f.A.fetchedAllEntitlements),
-        o = (0, u.yK)([f.A], () => f.A.getUnactivatedFractionalPremiumUnits()),
-        d = (0, u.bG)([h.A], () => h.A.getPremiumTypeSubscription()),
-        [I, p] = i.useState(
-            g({
-                isFetching: S(e, r) || f.A.fetchingAllEntitlements || N(r) || f.A.applicationIdsFetching.has(T.tv),
-                entitlements: a,
-                unactivatedFractionalPremiumUnits: o,
-                currentUser: r,
-                premiumSubscription: d,
-                fetchedAllEntitlements: l,
-                excludeReverseTrialFromCountdown: n,
-            }),
-        );
-    return (
-        (0, E.Ay)(() => {
-            (S(e, r) && (0, _.qw)({ entitlementType: c.z.FRACTIONAL_REDEMPTION }), N(r) && (0, _.LM)(T.tv));
-        }),
-        i.useEffect(() => {
-            let e = g({
-                entitlements: a,
-                unactivatedFractionalPremiumUnits: o,
-                currentUser: r,
-                premiumSubscription: d,
-                fetchedAllEntitlements: l,
-                excludeReverseTrialFromCountdown: n,
-            });
-            p((t) => ((0, s.isEqual)(t, e) ? t : e));
-        }, [r, a, d, o, l, n]),
-        I
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        A: function () {
+            let {
+                    forceFetch: e,
+                    excludeReverseTrial: t,
+                    excludeReverseTrialFromCountdown: n,
+                } = arguments.length > 0 && void 0 !== arguments[0]
+                    ? arguments[0]
+                    : { forceFetch: !1, excludeReverseTrial: !1, excludeReverseTrialFromCountdown: !1 },
+                r = (0, u.bG)([A.default], () => A.default.getCurrentUser()),
+                a = (0, u.yK)([f.A], () => f.A.getFractionalPremium({ excludeReverseTrial: t })),
+                l = (0, u.bG)([f.A], () => f.A.fetchedAllEntitlements),
+                o = (0, u.yK)([f.A], () => f.A.getUnactivatedFractionalPremiumUnits()),
+                d = (0, u.bG)([h.A], () => h.A.getPremiumTypeSubscription()),
+                [I, p] = i.useState(
+                    g({
+                        isFetching:
+                            S(e, r) || f.A.fetchingAllEntitlements || N(r) || f.A.applicationIdsFetching.has(T.tv),
+                        entitlements: a,
+                        unactivatedFractionalPremiumUnits: o,
+                        currentUser: r,
+                        premiumSubscription: d,
+                        fetchedAllEntitlements: l,
+                        excludeReverseTrialFromCountdown: n,
+                    }),
+                );
+            return (
+                (0, E.Ay)(() => {
+                    (S(e, r) && (0, _.qw)({ entitlementType: c.z.FRACTIONAL_REDEMPTION }), N(r) && (0, _.LM)(T.tv));
+                }),
+                i.useEffect(() => {
+                    let e = g({
+                        entitlements: a,
+                        unactivatedFractionalPremiumUnits: o,
+                        currentUser: r,
+                        premiumSubscription: d,
+                        fetchedAllEntitlements: l,
+                        excludeReverseTrialFromCountdown: n,
+                    });
+                    p((t) => ((0, s.isEqual)(t, e) ? t : e));
+                }, [r, a, d, o, l, n]),
+                I
+            );
+        },
+    },
+);

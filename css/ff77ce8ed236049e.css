@@ -1,0 +1,301 @@
+.container_4T6RB7 {
+    min-height: 100vh;
+    position: relative
+}
+
+.sidebarHeader_4T6RB7 {
+    opacity: .9;
+    transition: opacity .2s ease
+}
+
+.sidebarHeader_4T6RB7:hover {
+    opacity: 1
+}
+
+.sidebarHeader_4T6RB7:hover .addRoleIcon_4T6RB7 {
+    opacity: 1
+}
+
+.layoutStyle_4T6RB7 {
+    color: var(--text-default);
+    padding-bottom: 80px;
+    padding-top: 24px;
+    padding-inline: 0 15px;
+    position: relative
+}
+
+.inline_4T6RB7 {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    overflow: hidden
+}
+
+.xsmallAvatar_4T6RB7 {
+    flex-shrink: 0;
+    height: 20px !important;
+    width: 20px !important
+}
+
+.warning_4T6RB7 {
+    gap: 4px;
+    margin-top: 4px
+}
+
+.sidebarHeaderDefault_4T6RB7,
+.warning_4T6RB7 {
+    align-items: center;
+    display: flex
+}
+
+.sidebarHeaderDefault_4T6RB7 {
+    cursor: pointer;
+    justify-content: space-between
+}
+
+.sidebarHeaderLocked_4T6RB7 {
+    cursor: default
+}
+
+.addRoleIcon_4T6RB7 {
+    opacity: .8;
+    transition: opacity .2s ease
+}
+
+.username_4T6RB7 {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.description_4T6RB7 {
+    margin-bottom: 20px
+}
+
+.button_4T6RB7 {
+    margin: 0 auto
+}
+
+.userRowAvatar_4T6RB7 {
+    flex-shrink: 0;
+    margin-inline-end: 16px
+}
+
+.userRowText_4T6RB7 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap
+}
+
+.userRowSubText_4T6RB7 {
+    align-items: center;
+    display: flex;
+    margin-top: 2px;
+    white-space: pre-wrap
+}
+
+.userRowSubAvatar_4T6RB7 {
+    flex-shrink: 0;
+    margin-inline-end: 4px
+}
+
+.permissionsForm_4T6RB7:not(:last-of-type) {
+    margin-bottom: var(--space-40)
+}
+
+.createOverwritePopout_4T6RB7 {
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    box-shadow: var(--elevation-high);
+    width: 250px
+}
+
+.roleRow_4T6RB7 {
+    gap: 8px;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0 12px
+}
+
+.roleName_4T6RB7 {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.searchBar_4T6RB7 {
+    padding: 12px 12px 8px
+}
+
+.removeButtonContainer_4T6RB7 {
+    margin-top: var(--space-40)
+}
+
+.appChannelPermissionsNotice_4T6RB7 {
+    margin-bottom: var(--space-24)
+}
+
+.advancedModeDivider_vNURip {
+    margin: 40px 0 31px
+}
+
+.trigger_vNURip {
+    all: unset;
+    cursor: pointer
+}
+
+.advancedTitle_vNURip {
+    align-items: center;
+    display: inline-flex
+}
+
+.titleCaret_vNURip {
+    margin-inline-start: 14px;
+    transform: rotate(-90deg)
+}
+
+.full-motion .titleCaret_vNURip {
+    transition: transform .2s ease
+}
+
+[data-expanded] .titleCaret_vNURip {
+    transform: rotate(0)
+}
+
+.panel_vNURip {
+    height: var(--disclosure-panel-height);
+    overflow: clip
+}
+
+.full-motion .panel_vNURip {
+    transition: height .2s ease-in-out
+}
+
+.cardContent_sqr8YE {
+    padding: 16px
+}
+
+.cardDescription_sqr8YE {
+    padding-top: 8px;
+    padding-inline-start: 4px
+}
+
+.card_Q6iJsn {
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    margin-top: 16px;
+    padding: 16px
+}
+
+.label_Q6iJsn {
+    flex: 1;
+    margin: 0 10px
+}
+
+.easyModeContainer_1X7XDm {
+    padding: 0
+}
+
+.settingCard_1X7XDm {
+    background: var(--background-mod-muted);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    margin-top: 16px
+}
+
+.settingCard_1X7XDm.active_1X7XDm {
+    background: var(--background-mod-subtle)
+}
+
+.shield_1X7XDm {}
+
+.cardIcon_1X7XDm {
+    color: var(--text-default)
+}
+
+.cardFolder_1X7XDm {
+    background: var(--background-surface-high);
+    border-end-end-radius: var(--radius-md);
+    border-end-start-radius: var(--radius-md)
+}
+
+.adminWarning_1X7XDm {
+    padding: 16px
+}
+
+.folderHeader_1X7XDm {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px
+}
+
+.folderTitle_1X7XDm {
+    color: var(--text-default);
+    margin: 0
+}
+
+.sectionTitle_1X7XDm {
+    padding-bottom: 16px
+}
+
+.roleMemberList_1X7XDm {
+    max-height: 400px;
+    padding: 0 16px 8px
+}
+
+.divider_1X7XDm {
+    padding-bottom: 16px
+}
+
+.memberRow_1X7XDm {
+    justify-content: space-between;
+    padding-bottom: 16px
+}
+
+.memberRow_1X7XDm,
+.memberRowBody_1X7XDm {
+    align-items: center;
+    display: flex
+}
+
+.memberRowBody_1X7XDm {
+    gap: 4px;
+    justify-content: flex-start
+}
+
+.rowLabelSubText_1X7XDm {
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.removeIconContainer_1X7XDm {
+    margin-inline-start: 4px
+}
+
+.removeIcon_1X7XDm {
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    height: 16px;
+    width: 16px
+}
+
+.disabledRemoveIcon_1X7XDm {
+    color: var(--icon-muted);
+    cursor: auto
+}
+
+.enable-forced-colors .cardFolder_1X7XDm {
+    border: 1px solid CanvasText
+}
+
+.enable-forced-colors .removeIcon_1X7XDm {
+    color: ButtonText
+}
+
+.enable-forced-colors .disabledRemoveIcon_1X7XDm {
+    color: GrayText
+}
+
+/*# sourceMappingURL=ff77ce8ed236049e.css.map*/

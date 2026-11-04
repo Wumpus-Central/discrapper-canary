@@ -1,8 +1,18 @@
-l.d(s, { M: () => a, e: () => i });
 var t = l(73153);
-function i(e, s) {
-    t.h.dispatch({ type: "GAME_UPSELL_DISMISS_CLEAR", applicationId: e, dismissibleContent: s });
-}
-function a(e, s) {
-    t.h.dispatch({ type: "GAME_UPSELL_DISMISS", applicationIds: e, dismissedAt: Date.now(), dismissibleContent: s });
-}
+l.d(
+    s,
+    {},
+    {
+        M: function (e, s) {
+            t.h.dispatch({
+                type: "GAME_UPSELL_DISMISS",
+                applicationIds: e,
+                dismissedAt: Date.now(),
+                dismissibleContent: s,
+            });
+        },
+        e: function (e, s) {
+            t.h.dispatch({ type: "GAME_UPSELL_DISMISS_CLEAR", applicationId: e, dismissibleContent: s });
+        },
+    },
+);

@@ -1,15 +1,5 @@
 let i;
-r.d(t, {
-    B5: () => Y,
-    BA: () => B,
-    OD: () => V,
-    P5: () => v.t,
-    Wy: () => z,
-    hM: () => v.n,
-    ki: () => j,
-    lV: () => H,
-    videoSelfieFlowModuleMachine: () => Z,
-});
+r.r(t);
 var s = r(522681),
     a = r(334954),
     n = r(580607),
@@ -46,169 +36,7 @@ function y(e, t) {
         t.addEventListener("abort", n, { once: !0 });
     });
 }
-async function b(e) {
-    let { config: t, deps: r, stream: i, signal: s, onStatus: a } = e,
-        n = new h.b();
-    (await n.initialize({ autocaptureInterval: 1e4, useOnDeviceWorkflow: !1, videoSelfie: !0 }),
-        n.setChecksEnabled({
-            lenses: t.validateLenses ?? !1,
-            mask: t.validateFaceMask ?? !1,
-            closedEyes: t.validateClosedEyes ?? !1,
-            headWear: t.validateHeadCover ?? !1,
-            occlusion: !1,
-        }));
-    let o = !0 === t.useAsSelfie ? "selfie" : "videoSelfie",
-        c = new m.t(i),
-        d = {
-            showTutorial: !1,
-            validateBrightness: !1,
-            validateLenses: t.validateLenses ?? !1,
-            validateFaceMask: t.validateFaceMask ?? !1,
-            validateClosedEyes: t.validateClosedEyes ?? !1,
-            validateHeadCover: t.validateHeadCover ?? !1,
-            autoCaptureTimeout: 10,
-        },
-        l = () =>
-            new Promise((e, t) => {
-                let i = () => {
-                        (u.cleanup(), t(Error("aborted")));
-                    },
-                    l = (e) => {
-                        (s.removeEventListener("abort", i), e());
-                    };
-                s.addEventListener("abort", i, { once: !0 });
-                let u = (0, h.l)({
-                    config: d,
-                    capturer: c,
-                    provider: n,
-                    onUpdate: (e) => a?.(e),
-                    onSuccess: (i, s) => {
-                        (async () => {
-                            try {
-                                (await (0, h.m)({
-                                    encryptedBase64Image: await (0, h.a)({
-                                        canvas: i,
-                                        dependencies: { getWasmUtil: async () => r.getWasmUtil() },
-                                    }),
-                                    faceCoordinates: s,
-                                    imageType: o,
-                                }),
-                                    await (0, h.p)(o),
-                                    l(e));
-                            } catch (e) {
-                                l(() => t(e instanceof Error ? e : Error(String(e))));
-                            }
-                        })();
-                    },
-                });
-            });
-    try {
-        for (let e = 1; e <= 3; e++)
-            try {
-                await l();
-                return;
-            } catch (t) {
-                if (s.aborted || e >= 3) throw t;
-                (a?.("error"), n.reset(), await y(1500, s));
-            }
-    } finally {
-        (c.dispose(), n.dispose());
-    }
-}
-async function T(e) {
-    let { step: t, config: r, stream: i, signal: s, onStatus: a } = e,
-        n = new w.i();
-    await n.initialize({ videoSelfie: !0 });
-    let o = (0, g.n)();
-    (n.setGeometry({
-        ...w.t,
-        windowOuterWidth: o.outerWidth,
-        windowOuterHeight: o.outerHeight,
-        windowInnerWidth: o.innerWidth,
-        windowInnerHeight: o.innerHeight,
-    }),
-        n.setSettings({
-            isFixedMask: !1,
-            isIPhone14OrHigher: !1,
-            idType: "backId" === t ? "BackId" : "FrontId",
-            blurCheckEnabled: !0,
-            glareCheckEnabled: !1,
-            faceQualityCheckEnabled: !1,
-            iouCheckEnabled: !0,
-            fpsLimitEnabled: !1,
-        }),
-        n.setThresholds(w.r),
-        n.setModelType(w.n));
-    let c = new m.t(i);
-    return new Promise((e, i) => {
-        let o = !1,
-            d = !1;
-        n.setCallbacks({
-            onFarAway: () => {
-                d && !o && a?.("tooFar");
-            },
-            onBlur: () => {
-                d && !o && a?.("blur");
-            },
-            onCapturing: () => {
-                if (!d || o) return;
-                let n = c.getLatestCanvas()?.getBase64Image();
-                n &&
-                    ((o = !0),
-                    a?.("capturing"),
-                    (async () => {
-                        try {
-                            if (await k(t, r, n)) {
-                                (a?.("success"), await y(900, s), p(), e());
-                                return;
-                            }
-                            o = !1;
-                        } catch (e) {
-                            (p(), i(e instanceof Error ? e : Error(String(e))));
-                        }
-                    })());
-            },
-        });
-        let l = new h.y({ capturer: c, provider: n }),
-            u = !1,
-            p = () => {
-                u || ((u = !0), l.dispose(), c.dispose(), n.dispose());
-            };
-        (s.addEventListener(
-            "abort",
-            () => {
-                (p(), i(Error("aborted")));
-            },
-            { once: !0 },
-        ),
-            y(3e3, s)
-                .then(() => {
-                    u || s.aborted || ((d = !0), a?.("detecting"));
-                })
-                .catch(() => {}));
-    });
-}
-async function k(e, t, r) {
-    if ("backId" === e) {
-        if (t.compareBackIdEnabled) {
-            let e = await E(c.t.videoSelfieCompareBackId, r);
-            if (!1 === e.idSideMatched || !1 === e.success) return !1;
-        }
-        return !t.compareBackOcrEnabled || !1 !== (await E(c.t.videoSelfieCompareBackOcr, r)).success;
-    }
-    if (t.compareIdEnabled) {
-        var i;
-        let e = await E(c.t.videoSelfieCompareId, r);
-        if (
-            !1 === e.idTypeMatched ||
-            ("number" == typeof e.faceRecognitionConfidence &&
-                !("number" != typeof (i = e.faceRecognitionConfidence) || i >= 1))
-        )
-            return !1;
-    }
-    return !t.compareOcrEnabled || !1 !== (await E(c.t.videoSelfieCompareOcr, r)).success;
-}
-var I = class {
+var b = class {
         constructor(e = {}) {
             ((this.canvas = null),
                 (this.ctx = null),
@@ -273,7 +101,7 @@ var I = class {
             this.rafId = requestAnimationFrame(e);
         }
     },
-    S = class {
+    T = class {
         constructor() {
             ((this.mediaRecorder = null),
                 (this._isRecording = !1),
@@ -357,71 +185,71 @@ var I = class {
                 (this.buffer = []),
                 (this.bufferedBytes = 0));
         }
-    };
-async function C() {
-    return (await o.t.post(c.t.videoSelfieUploadInitiate, {})).data.uploadId;
-}
-async function R(e, t, r) {
-    let i = await o.t.post(c.t.videoSelfieUploadPart, r, {
-        query: { uploadId: e, partNumber: t },
-        headers: { "Content-Type": "application/octet-stream" },
-    });
-    return { partNumber: i.data.partNumber, eTag: i.data.eTag };
-}
-async function x(e, t) {
-    return (await o.t.post(c.t.videoSelfieUploadComplete, { uploadId: e, parts: t })).data.status;
-}
-var A = class {
-    constructor() {
-        ((this.recorder = new S()),
-            (this.uploadId = null),
-            (this.parts = []),
-            (this.inflight = []),
-            (this.uploadFailed = !1));
-    }
-    get isRecording() {
-        return this.recorder.isRecording;
-    }
-    async start(e) {
-        ((this.uploadId = await C()),
-            (this.parts = []),
-            (this.inflight = []),
-            (this.uploadFailed = !1),
-            this.recorder.startRecording(e, ({ chunk: e, partNumber: t }) => {
-                let r = this.uploadId;
-                if (!r) return;
-                let i = R(r, t, e)
-                    .then((e) => {
-                        this.parts.push(e);
-                    })
-                    .catch(() => {
-                        this.uploadFailed = !0;
-                    });
-                this.inflight.push(i);
-            }));
-    }
-    async stop() {
-        let e = this.uploadId;
-        if (
-            !this.recorder.isRecording ||
-            !e ||
-            (await this.recorder.stopRecording(),
-            await Promise.all(this.inflight),
-            this.uploadFailed || 0 === this.parts.length)
-        )
-            return { recordingId: null };
-        let t = [...this.parts].sort((e, t) => e.partNumber - t.partNumber);
-        try {
-            return (await x(e, t), { recordingId: e });
-        } catch {
-            return { recordingId: null };
+    },
+    S = class {
+        constructor() {
+            ((this.recorder = new T()),
+                (this.uploadId = null),
+                (this.parts = []),
+                (this.inflight = []),
+                (this.uploadFailed = !1));
         }
-    }
-    cleanup() {
-        this.recorder.reset();
-    }
-};
-async function _(e, t) {
+        get isRecording() {
+            return this.recorder.isRecording;
+        }
+        async start(e) {
+            ((this.uploadId = await (async function () {
+                return (await o.t.post(c.t.videoSelfieUploadInitiate, {})).data.uploadId;
+            })()),
+                (this.parts = []),
+                (this.inflight = []),
+                (this.uploadFailed = !1),
+                this.recorder.startRecording(e, ({ chunk: e, partNumber: t }) => {
+                    let r = this.uploadId;
+                    if (!r) return;
+                    let i = (async function (e, t, r) {
+                        let i = await o.t.post(c.t.videoSelfieUploadPart, r, {
+                            query: { uploadId: e, partNumber: t },
+                            headers: { "Content-Type": "application/octet-stream" },
+                        });
+                        return { partNumber: i.data.partNumber, eTag: i.data.eTag };
+                    })(r, t, e)
+                        .then((e) => {
+                            this.parts.push(e);
+                        })
+                        .catch(() => {
+                            this.uploadFailed = !0;
+                        });
+                    this.inflight.push(i);
+                }));
+        }
+        async stop() {
+            let e = this.uploadId;
+            if (
+                !this.recorder.isRecording ||
+                !e ||
+                (await this.recorder.stopRecording(),
+                await Promise.all(this.inflight),
+                this.uploadFailed || 0 === this.parts.length)
+            )
+                return { recordingId: null };
+            let t = [...this.parts].sort((e, t) => e.partNumber - t.partNumber);
+            try {
+                return (
+                    await (async function (e, t) {
+                        return (await o.t.post(c.t.videoSelfieUploadComplete, { uploadId: e, parts: t })).data.status;
+                    })(e, t),
+                    { recordingId: e }
+                );
+            } catch {
+                return { recordingId: null };
+            }
+        }
+        cleanup() {
+            this.recorder.reset();
+        }
+    };
+async function I(e, t) {
     if ("environment" !== e) return (0, u.i)({ video: { facingMode: e }, audio: t });
     let { stream: r } = await (0, p.n)();
     if (t)
@@ -432,56 +260,20 @@ async function _(e, t) {
         }
     return r;
 }
-function D(e) {
+function k(e) {
     e?.getTracks().forEach((e) => e.stop());
 }
-function B(e) {
-    let t = (0, v.t)((0, v.n)(e)[0] ?? "selfie"),
-        r = null,
-        i = null,
-        s = !1;
-    return {
-        warm() {
-            r ||
-                (r = (async () => {
-                    try {
-                        if ((await (0, l.t)()) !== "granted") return null;
-                        return (i = await _(t, !0));
-                    } catch {
-                        return null;
-                    }
-                })());
-        },
-        async acquireCamera(e, a) {
-            if (!s && e === t && a) {
-                s = !0;
-                let e = i ?? (r ? await r : null);
-                if (((i = null), e)) return e;
-            }
-            return _(e, a);
-        },
-        dispose() {
-            !s &&
-                (i
-                    ? (D(i), (i = null))
-                    : r &&
-                      r.then((e) => {
-                          s || D(e);
-                      }));
-        },
-    };
-}
-let F = () => new Promise(() => {});
-function U(e) {
+let C = () => new Promise(() => {});
+function R(e) {
     return e.output;
 }
-function q(e) {
+function x(e) {
     return e.output.recordingId;
 }
-function L(e) {
+function A(e) {
     return String(e.error);
 }
-let M = (0, d.t)({
+let _ = (0, d.t)({
         types: { context: {}, events: {}, input: {} },
         actors: {
             acquireCamera: (0, d.a)(async ({ input: e, signal: t }) => {
@@ -526,22 +318,22 @@ let M = (0, d.t)({
             isLastStep: ({ context: e }) => e.stepIndex >= e.steps.length - 1,
             nextStepFlipsCamera: ({ context: e }) =>
                 (0, v.t)(e.steps[e.stepIndex]) !== (0, v.t)(e.steps[e.stepIndex + 1]),
-            uploadReturnedNoRecordingId: ({ event: e }) => null === q(e),
+            uploadReturnedNoRecordingId: ({ event: e }) => null === x(e),
         },
     }),
-    O = [
+    D = [
         { target: "finalizing", guard: "isLastStep" },
         { target: "switchingCamera", guard: "nextStepFlipsCamera", actions: "advanceStep" },
         { target: "recording", reenter: !0, actions: "advanceStep" },
     ],
-    P = M.createMachine({
+    F = _.createMachine({
         id: "videoSelfieRecording",
         initial: "idle",
         context: ({ input: e }) => ({
-            service: e.dependencies?.createRecordingService?.() ?? new A(),
-            compositor: e.dependencies?.createCompositor?.() ?? new I(),
-            acquireCamera: e.dependencies?.acquireCamera ?? _,
-            detect: e.dependencies?.detect ?? F,
+            service: e.dependencies?.createRecordingService?.() ?? new S(),
+            compositor: e.dependencies?.createCompositor?.() ?? new b(),
+            acquireCamera: e.dependencies?.acquireCamera ?? I,
+            detect: e.dependencies?.detect ?? C,
             steps: e.steps && e.steps.length > 0 ? e.steps : ["selfie"],
             stepIndex: 0,
             stream: void 0,
@@ -566,15 +358,15 @@ let M = (0, d.t)({
                         target: "starting",
                         actions: [
                             ({ context: e, event: t }) => {
-                                e.compositor.start(U(t));
+                                e.compositor.start(R(t));
                             },
                             (0, d.r)({
-                                stream: ({ event: e }) => U(e),
+                                stream: ({ event: e }) => R(e),
                                 composite: ({ context: e }) => e.compositor.stream,
                             }),
                         ],
                     },
-                    onError: { target: "error", actions: (0, d.r)({ error: ({ event: e }) => L(e) }) },
+                    onError: { target: "error", actions: (0, d.r)({ error: ({ event: e }) => A(e) }) },
                 },
             },
             starting: {
@@ -582,7 +374,7 @@ let M = (0, d.t)({
                     src: "startRecording",
                     input: ({ context: e }) => ({ service: e.service, stream: e.composite }),
                     onDone: { target: "recording" },
-                    onError: { target: "error", actions: (0, d.r)({ error: ({ event: e }) => L(e) }) },
+                    onError: { target: "error", actions: (0, d.r)({ error: ({ event: e }) => A(e) }) },
                 },
             },
             recording: {
@@ -593,8 +385,8 @@ let M = (0, d.t)({
                 },
                 on: {
                     DETECTION_STATUS: { actions: "setDetectionStatus" },
-                    DETECTION_DONE: O,
-                    NEXT_STEP: O,
+                    DETECTION_DONE: D,
+                    NEXT_STEP: D,
                     DETECTION_FAILED: { target: "error", actions: "setErrorFromDetection" },
                 },
             },
@@ -610,12 +402,12 @@ let M = (0, d.t)({
                         target: "recording",
                         actions: [
                             ({ context: e, event: t }) => {
-                                e.compositor.switchVideo(U(t));
+                                e.compositor.switchVideo(R(t));
                             },
-                            (0, d.r)({ stream: ({ event: e }) => U(e) }),
+                            (0, d.r)({ stream: ({ event: e }) => R(e) }),
                         ],
                     },
-                    onError: { target: "error", actions: (0, d.r)({ error: ({ event: e }) => L(e) }) },
+                    onError: { target: "error", actions: (0, d.r)({ error: ({ event: e }) => A(e) }) },
                 },
             },
             finalizing: {
@@ -626,11 +418,11 @@ let M = (0, d.t)({
                         {
                             target: "error",
                             guard: "uploadReturnedNoRecordingId",
-                            actions: [(0, d.r)({ recordingId: ({ event: e }) => q(e) }), "setUploadFailedError"],
+                            actions: [(0, d.r)({ recordingId: ({ event: e }) => x(e) }), "setUploadFailedError"],
                         },
-                        { target: "finished", actions: (0, d.r)({ recordingId: ({ event: e }) => q(e) }) },
+                        { target: "finished", actions: (0, d.r)({ recordingId: ({ event: e }) => x(e) }) },
                     ],
-                    onError: { target: "error", actions: (0, d.r)({ error: ({ event: e }) => L(e) }) },
+                    onError: { target: "error", actions: (0, d.r)({ error: ({ event: e }) => A(e) }) },
                 },
             },
             finished: { type: "final", entry: "cleanup" },
@@ -638,7 +430,7 @@ let M = (0, d.t)({
             aborted: { type: "final", entry: "cleanup" },
         },
     });
-function N(e) {
+function B(e) {
     let t = "string" == typeof e.value ? e.value : "idle",
         { context: r } = e,
         i = r.steps,
@@ -655,7 +447,7 @@ function N(e) {
         error: r.error,
     };
 }
-function W({ actor: e }) {
+function U({ actor: e }) {
     return {
         start() {
             e.send({ type: "START" });
@@ -668,87 +460,38 @@ function W({ actor: e }) {
         },
     };
 }
-function V(e = {}) {
-    let t = (function (e = {}) {
-            var t;
-            let r = e.config,
-                i =
-                    e.dependencies?.detect ??
-                    (r
-                        ? ((t = { getWasmUtil: () => s.t.getInstance() }),
-                          ({ step: e, stream: i, signal: s, onStatus: a }) =>
-                              "selfie" === e
-                                  ? b({ config: r, deps: t, stream: i, signal: s, onStatus: a })
-                                  : "frontId" === e || "backId" === e
-                                    ? T({ step: e, config: r, stream: i, signal: s, onStatus: a })
-                                    : new Promise(() => {}))
-                        : void 0);
-            return (0, d.s)(P, {
-                input: { steps: r ? (0, v.n)(r) : void 0, dependencies: { ...e.dependencies, detect: i } },
-            }).start();
-        })(e),
-        r = (0, d.l)({ actor: t, mapState: N, createApi: W });
-    return {
-        ...r,
-        stop() {
-            ("active" === t.getSnapshot().status && t.send({ type: "ABORT" }), r.stop());
-        },
-    };
-}
-function z(e) {
-    return (0, a.t)((0, v.r)(e));
-}
-async function H(e) {
-    return (
-        (await o.t.get(c.t.questionAndAnswer, { query: { numberOfQuestions: e, returnVoiceConsentQuestion: !1 } })).data
-            .questionAndAnswers ?? []
-    );
-}
-async function j() {
-    return (
-        (await o.t.get(c.t.questionAndAnswer, { query: { numberOfQuestions: 0, returnVoiceConsentQuestion: !0 } })).data
-            .questionAndAnswers?.[0]?.answer ?? ""
-    );
-}
-async function $(e) {
-    try {
-        return { success: !0 === (await o.t.post(c.t.addSpeechV2, { base64Media: e, audioOnly: !0 })).data.success };
-    } catch {
-        return { success: !1 };
-    }
-}
-let Q = window.AudioContext || window.webkitAudioContext,
-    X = (e) => {
+let q = window.AudioContext || window.webkitAudioContext,
+    M = (e) => {
         let t = new Event("error");
         return ((t.data = Error("Wrong state for " + e)), t);
     };
-var G = class e {
+var L = class e {
     constructor(t, r = null) {
+        let i;
         ((this.stream = t),
             (this.config = r),
             (this.state = "inactive"),
             (this.em = document.createDocumentFragment()),
-            (this.encoder = ((e) => {
-                let t = new Blob([
-                    e
+            (this.encoder =
+                ((i = new Blob([
+                    e.encoder
                         .toString()
                         .replace(/^(\(\)\s*=>|function\s*\(\))\s*{/, "")
                         .replace(/}$/, ""),
-                ]);
-                return new Worker(URL.createObjectURL(t));
-            })(e.encoder)));
-        let i = this;
+                ])),
+                new Worker(URL.createObjectURL(i)))));
+        let s = this;
         this.encoder.addEventListener("message", (e) => {
             let t = new Event("dataavailable");
-            ((t.data = new Blob([e.data], { type: i.mimeType })),
-                i.em.dispatchEvent(t),
-                "inactive" === i.state && i.em.dispatchEvent(new Event("stop")));
+            ((t.data = new Blob([e.data], { type: s.mimeType })),
+                s.em.dispatchEvent(t),
+                "inactive" === s.state && s.em.dispatchEvent(new Event("stop")));
         });
     }
     start(e) {
-        if ("inactive" !== this.state) return this.em.dispatchEvent(X("start"));
+        if ("inactive" !== this.state) return this.em.dispatchEvent(M("start"));
         ((this.state = "recording"),
-            i || (i = new Q(this.config)),
+            i || (i = new q(this.config)),
             (this.clone = this.stream.clone()),
             (this.input = i.createMediaStreamSource(this.clone)),
             (this.processor = i.createScriptProcessor(2048, 1, 1)),
@@ -766,7 +509,7 @@ var G = class e {
     }
     stop() {
         return "inactive" === this.state
-            ? this.em.dispatchEvent(X("stop"))
+            ? this.em.dispatchEvent(M("stop"))
             : (this.requestData(),
               (this.state = "inactive"),
               this.clone.getTracks().forEach((e) => {
@@ -778,17 +521,17 @@ var G = class e {
     }
     pause() {
         return "recording" !== this.state
-            ? this.em.dispatchEvent(X("pause"))
+            ? this.em.dispatchEvent(M("pause"))
             : ((this.state = "paused"), this.em.dispatchEvent(new Event("pause")));
     }
     resume() {
         return "paused" !== this.state
-            ? this.em.dispatchEvent(X("resume"))
+            ? this.em.dispatchEvent(M("resume"))
             : ((this.state = "recording"), this.em.dispatchEvent(new Event("resume")));
     }
     requestData() {
         return "inactive" === this.state
-            ? this.em.dispatchEvent(X("requestData"))
+            ? this.em.dispatchEvent(M("requestData"))
             : this.encoder.postMessage(["dump", i.sampleRate]);
     }
     addEventListener(...e) {
@@ -801,10 +544,10 @@ var G = class e {
         this.em.dispatchEvent(...e);
     }
 };
-((G.prototype.mimeType = "audio/wav"),
-    (G.isTypeSupported = (e) => G.prototype.mimeType === e),
-    (G.notSupported = !navigator.mediaDevices || !Q),
-    (G.encoder = () => {
+((L.prototype.mimeType = "audio/wav"),
+    (L.isTypeSupported = (e) => L.prototype.mimeType === e),
+    (L.notSupported = !navigator.mediaDevices || !q),
+    (L.encoder = () => {
         let e = [];
         onmessage = (t) => {
             "encode" === t.data[0]
@@ -842,7 +585,7 @@ var G = class e {
                   })(t.data[1]);
         };
     }),
-    (G.encoder = () => {
+    (L.encoder = () => {
         let e;
         importScripts("https://cdnjs.cloudflare.com/ajax/libs/lamejs/1.2.0/lame.min.js");
         let t = new Int8Array();
@@ -866,9 +609,9 @@ var G = class e {
             }
         };
     }),
-    (G.prototype.mimeType = "audio/mpeg"));
-let J = "audio/mpeg";
-var K = class {
+    (L.prototype.mimeType = "audio/mpeg"));
+let O = "audio/mpeg";
+var P = class {
     constructor() {
         ((this.recorder = null), (this.chunks = []), (this._isRecording = !1));
     }
@@ -877,8 +620,8 @@ var K = class {
     }
     start(e) {
         (this.reset(), (this.chunks = []));
-        let t = new G(new MediaStream(e.getAudioTracks()).clone());
-        ((t.mimeType = J),
+        let t = new L(new MediaStream(e.getAudioTracks()).clone());
+        ((t.mimeType = O),
             t.addEventListener("dataavailable", (e) => {
                 e.data.size > 0 && this.chunks.push(e.data);
             }),
@@ -894,10 +637,10 @@ var K = class {
                       ((this._isRecording = !1),
                           e.stream?.getTracks().forEach((e) => e.stop()),
                           (this.recorder = null),
-                          t(new Blob(this.chunks, { type: J })));
+                          t(new Blob(this.chunks, { type: O })));
                   }),
                   e.stop())
-                : t(new Blob([], { type: J }));
+                : t(new Blob([], { type: O }));
         });
     }
     async stopAsBase64() {
@@ -929,19 +672,342 @@ var K = class {
         ((this.recorder = null), (this._isRecording = !1));
     }
 };
-function Y() {
-    let e = new K();
-    return {
-        start(t) {
-            e.start(t);
+let N = (0, d.t)({}).createMachine({ id: "videoSelfieFlowModule", initial: "running", states: { running: {} } });
+r.d(
+    t,
+    { facingModeForStep: () => v.t, resolveVideoSelfieSteps: () => v.n, videoSelfieWasmPipelines: () => v.r },
+    {
+        createConsentRecorder: function () {
+            let e = new P();
+            return {
+                start(t) {
+                    e.start(t);
+                },
+                async submit() {
+                    let t = await e.stopAsBase64();
+                    return 0 === t.length
+                        ? { success: !1 }
+                        : (async function (e) {
+                              try {
+                                  return {
+                                      success:
+                                          !0 ===
+                                          (await o.t.post(c.t.addSpeechV2, { base64Media: e, audioOnly: !0 })).data
+                                              .success,
+                                  };
+                              } catch {
+                                  return { success: !1 };
+                              }
+                          })(t);
+                },
+                cancel() {
+                    e.reset();
+                },
+            };
         },
-        async submit() {
-            let t = await e.stopAsBase64();
-            return 0 === t.length ? { success: !1 } : $(t);
+        createVideoSelfieCameraWarmer: function (e) {
+            let t = (0, v.t)((0, v.n)(e)[0] ?? "selfie"),
+                r = null,
+                i = null,
+                s = !1;
+            return {
+                warm() {
+                    r ||
+                        (r = (async () => {
+                            try {
+                                if ((await (0, l.t)()) !== "granted") return null;
+                                return (i = await I(t, !0));
+                            } catch {
+                                return null;
+                            }
+                        })());
+                },
+                async acquireCamera(e, a) {
+                    if (!s && e === t && a) {
+                        s = !0;
+                        let e = i ?? (r ? await r : null);
+                        if (((i = null), e)) return e;
+                    }
+                    return I(e, a);
+                },
+                dispose() {
+                    !s &&
+                        (i
+                            ? (k(i), (i = null))
+                            : r &&
+                              r.then((e) => {
+                                  s || k(e);
+                              }));
+                },
+            };
         },
-        cancel() {
-            e.reset();
+        createVideoSelfieRecordingManager: function (e = {}) {
+            let t = (function (e = {}) {
+                    var t;
+                    let r = e.config,
+                        i =
+                            e.dependencies?.detect ??
+                            (r
+                                ? ((t = { getWasmUtil: () => s.t.getInstance() }),
+                                  ({ step: e, stream: i, signal: s, onStatus: a }) =>
+                                      "selfie" === e
+                                          ? (async function (e) {
+                                                let { config: t, deps: r, stream: i, signal: s, onStatus: a } = e,
+                                                    n = new h.b();
+                                                (await n.initialize({
+                                                    autocaptureInterval: 1e4,
+                                                    useOnDeviceWorkflow: !1,
+                                                    videoSelfie: !0,
+                                                }),
+                                                    n.setChecksEnabled({
+                                                        lenses: t.validateLenses ?? !1,
+                                                        mask: t.validateFaceMask ?? !1,
+                                                        closedEyes: t.validateClosedEyes ?? !1,
+                                                        headWear: t.validateHeadCover ?? !1,
+                                                        occlusion: !1,
+                                                    }));
+                                                let o = !0 === t.useAsSelfie ? "selfie" : "videoSelfie",
+                                                    c = new m.t(i),
+                                                    d = {
+                                                        showTutorial: !1,
+                                                        validateBrightness: !1,
+                                                        validateLenses: t.validateLenses ?? !1,
+                                                        validateFaceMask: t.validateFaceMask ?? !1,
+                                                        validateClosedEyes: t.validateClosedEyes ?? !1,
+                                                        validateHeadCover: t.validateHeadCover ?? !1,
+                                                        autoCaptureTimeout: 10,
+                                                    },
+                                                    l = () =>
+                                                        new Promise((e, t) => {
+                                                            let i = () => {
+                                                                    (u.cleanup(), t(Error("aborted")));
+                                                                },
+                                                                l = (e) => {
+                                                                    (s.removeEventListener("abort", i), e());
+                                                                };
+                                                            s.addEventListener("abort", i, { once: !0 });
+                                                            let u = (0, h.l)({
+                                                                config: d,
+                                                                capturer: c,
+                                                                provider: n,
+                                                                onUpdate: (e) => a?.(e),
+                                                                onSuccess: (i, s) => {
+                                                                    (async () => {
+                                                                        try {
+                                                                            (await (0, h.m)({
+                                                                                encryptedBase64Image: await (0, h.a)({
+                                                                                    canvas: i,
+                                                                                    dependencies: {
+                                                                                        getWasmUtil: async () =>
+                                                                                            r.getWasmUtil(),
+                                                                                    },
+                                                                                }),
+                                                                                faceCoordinates: s,
+                                                                                imageType: o,
+                                                                            }),
+                                                                                await (0, h.p)(o),
+                                                                                l(e));
+                                                                        } catch (e) {
+                                                                            l(() =>
+                                                                                t(
+                                                                                    e instanceof Error
+                                                                                        ? e
+                                                                                        : Error(String(e)),
+                                                                                ),
+                                                                            );
+                                                                        }
+                                                                    })();
+                                                                },
+                                                            });
+                                                        });
+                                                try {
+                                                    for (let e = 1; e <= 3; e++)
+                                                        try {
+                                                            await l();
+                                                            return;
+                                                        } catch (t) {
+                                                            if (s.aborted || e >= 3) throw t;
+                                                            (a?.("error"), n.reset(), await y(1500, s));
+                                                        }
+                                                } finally {
+                                                    (c.dispose(), n.dispose());
+                                                }
+                                            })({ config: r, deps: t, stream: i, signal: s, onStatus: a })
+                                          : "frontId" === e || "backId" === e
+                                            ? (async function (e) {
+                                                  let { step: t, config: r, stream: i, signal: s, onStatus: a } = e,
+                                                      n = new w.i();
+                                                  await n.initialize({ videoSelfie: !0 });
+                                                  let o = (0, g.n)();
+                                                  (n.setGeometry({
+                                                      ...w.t,
+                                                      windowOuterWidth: o.outerWidth,
+                                                      windowOuterHeight: o.outerHeight,
+                                                      windowInnerWidth: o.innerWidth,
+                                                      windowInnerHeight: o.innerHeight,
+                                                  }),
+                                                      n.setSettings({
+                                                          isFixedMask: !1,
+                                                          isIPhone14OrHigher: !1,
+                                                          idType: "backId" === t ? "BackId" : "FrontId",
+                                                          blurCheckEnabled: !0,
+                                                          glareCheckEnabled: !1,
+                                                          faceQualityCheckEnabled: !1,
+                                                          iouCheckEnabled: !0,
+                                                          fpsLimitEnabled: !1,
+                                                      }),
+                                                      n.setThresholds(w.r),
+                                                      n.setModelType("v2"));
+                                                  let d = new m.t(i);
+                                                  return new Promise((e, i) => {
+                                                      let o = !1,
+                                                          l = !1;
+                                                      n.setCallbacks({
+                                                          onFarAway: () => {
+                                                              l && !o && a?.("tooFar");
+                                                          },
+                                                          onBlur: () => {
+                                                              l && !o && a?.("blur");
+                                                          },
+                                                          onCapturing: () => {
+                                                              if (!l || o) return;
+                                                              let n = d.getLatestCanvas()?.getBase64Image();
+                                                              n &&
+                                                                  ((o = !0),
+                                                                  a?.("capturing"),
+                                                                  (async () => {
+                                                                      try {
+                                                                          if (
+                                                                              await (async function (e, t, r) {
+                                                                                  if ("backId" === e) {
+                                                                                      if (t.compareBackIdEnabled) {
+                                                                                          let e = await E(
+                                                                                              c.t
+                                                                                                  .videoSelfieCompareBackId,
+                                                                                              r,
+                                                                                          );
+                                                                                          if (
+                                                                                              !1 === e.idSideMatched ||
+                                                                                              !1 === e.success
+                                                                                          )
+                                                                                              return !1;
+                                                                                      }
+                                                                                      return (
+                                                                                          !t.compareBackOcrEnabled ||
+                                                                                          !1 !==
+                                                                                              (
+                                                                                                  await E(
+                                                                                                      c.t
+                                                                                                          .videoSelfieCompareBackOcr,
+                                                                                                      r,
+                                                                                                  )
+                                                                                              ).success
+                                                                                      );
+                                                                                  }
+                                                                                  if (t.compareIdEnabled) {
+                                                                                      var i;
+                                                                                      let e = await E(
+                                                                                          c.t.videoSelfieCompareId,
+                                                                                          r,
+                                                                                      );
+                                                                                      if (
+                                                                                          !1 === e.idTypeMatched ||
+                                                                                          ("number" ==
+                                                                                              typeof e.faceRecognitionConfidence &&
+                                                                                              !(
+                                                                                                  "number" !=
+                                                                                                      typeof (i =
+                                                                                                          e.faceRecognitionConfidence) ||
+                                                                                                  i >= 1
+                                                                                              ))
+                                                                                      )
+                                                                                          return !1;
+                                                                                  }
+                                                                                  return (
+                                                                                      !t.compareOcrEnabled ||
+                                                                                      !1 !==
+                                                                                          (
+                                                                                              await E(
+                                                                                                  c.t
+                                                                                                      .videoSelfieCompareOcr,
+                                                                                                  r,
+                                                                                              )
+                                                                                          ).success
+                                                                                  );
+                                                                              })(t, r, n)
+                                                                          ) {
+                                                                              (a?.("success"),
+                                                                                  await y(900, s),
+                                                                                  g(),
+                                                                                  e());
+                                                                              return;
+                                                                          }
+                                                                          o = !1;
+                                                                      } catch (e) {
+                                                                          (g(),
+                                                                              i(
+                                                                                  e instanceof Error
+                                                                                      ? e
+                                                                                      : Error(String(e)),
+                                                                              ));
+                                                                      }
+                                                                  })());
+                                                          },
+                                                      });
+                                                      let u = new h.y({ capturer: d, provider: n }),
+                                                          p = !1,
+                                                          g = () => {
+                                                              p || ((p = !0), u.dispose(), d.dispose(), n.dispose());
+                                                          };
+                                                      (s.addEventListener(
+                                                          "abort",
+                                                          () => {
+                                                              (g(), i(Error("aborted")));
+                                                          },
+                                                          { once: !0 },
+                                                      ),
+                                                          y(3e3, s)
+                                                              .then(() => {
+                                                                  p || s.aborted || ((l = !0), a?.("detecting"));
+                                                              })
+                                                              .catch(() => {}));
+                                                  });
+                                              })({ step: e, config: r, stream: i, signal: s, onStatus: a })
+                                            : new Promise(() => {}))
+                                : void 0);
+                    return (0, d.s)(F, {
+                        input: { steps: r ? (0, v.n)(r) : void 0, dependencies: { ...e.dependencies, detect: i } },
+                    }).start();
+                })(e),
+                r = (0, d.l)({ actor: t, mapState: B, createApi: U });
+            return {
+                ...r,
+                stop() {
+                    ("active" === t.getSnapshot().status && t.send({ type: "ABORT" }), r.stop());
+                },
+            };
         },
-    };
-}
-let Z = (0, d.t)({}).createMachine({ id: "videoSelfieFlowModule", initial: "running", states: { running: {} } });
+        getVideoSelfieQuestions: async function (e) {
+            return (
+                (
+                    await o.t.get(c.t.questionAndAnswer, {
+                        query: { numberOfQuestions: e, returnVoiceConsentQuestion: !1 },
+                    })
+                ).data.questionAndAnswers ?? []
+            );
+        },
+        getVoiceConsentPhrase: async function () {
+            return (
+                (
+                    await o.t.get(c.t.questionAndAnswer, {
+                        query: { numberOfQuestions: 0, returnVoiceConsentQuestion: !0 },
+                    })
+                ).data.questionAndAnswers?.[0]?.answer ?? ""
+            );
+        },
+        videoSelfieFlowModuleMachine: N,
+        warmupVideoSelfieWasm: function (e) {
+            return (0, a.t)((0, v.r)(e));
+        },
+    },
+);

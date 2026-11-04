@@ -6,7 +6,7 @@ t.exports = function (t) {
     var r = o(s(this)),
         e = "",
         u = n(t);
-    if (u < 0 || u === 1 / 0) throw new i("Wrong number of repetitions");
+    if (u < 0 || 1 / 0 === u) throw new i("Wrong number of repetitions");
     for (; u > 0; (u >>>= 1) && (r += r)) 1 & u && (e += r);
     return e;
 };

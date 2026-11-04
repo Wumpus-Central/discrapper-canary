@@ -1,4 +1,9 @@
-function i(e, t) {
-    return `hydration-${e}-${t}`;
-}
-n.d(t, { V: () => i });
+n.d(
+    t,
+    {},
+    {
+        V: function (e, t) {
+            return `hydration-${e}-${t}`;
+        },
+    },
+);

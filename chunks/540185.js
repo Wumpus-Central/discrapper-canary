@@ -1,4 +1,3 @@
-n.d(t, { x: () => r });
 var i,
     r =
         (((i = {}).CURRENT_GAMES = "current_games"),
@@ -9,3 +8,4 @@ var i,
         (i.PERSONAL = "personal"),
         (i.CLIPS_GALLERY = "clips_gallery"),
         i);
+n.d(t, {}, { x: r });

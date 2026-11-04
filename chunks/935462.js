@@ -1,4 +1,3 @@
-n.d(t, { $m: () => P, Dc: () => w, EO: () => b, WM: () => D, jl: () => M, rI: () => L, rQ: () => v, s_: () => U });
 var i,
     r,
     a = n(477900),
@@ -6,13 +5,13 @@ var i,
     l = n(503698),
     o = n.n(l),
     d = n(736819),
-    c = n(131937),
+    c = n(613412),
     u = n(615300),
     _ = n(789645),
     E = n(844222),
     A = n(717421),
     h = n(559106),
-    f = n(689175),
+    f = n(516521),
     I = n(707554),
     p = n(475825),
     m = n(862482),
@@ -21,129 +20,141 @@ var i,
     S = n(235986),
     N = n(231723),
     C = n(818348),
-    O = n(105292),
+    O = n(792996),
     R = n(268814),
     L = (((i = {}).SMALL = "small"), (i.MEDIUM = "medium"), (i.LARGE = "large"), (i.DYNAMIC = "dynamic"), i);
 let y = Object.freeze({ small: R.EX, medium: R.Y, large: R.as, dynamic: null });
 var D = (((r = {}).DEFAULT = "default"), (r.SUBTLE = "subtle"), r);
-function b(e) {
-    let {
-            transitionState: t,
-            children: n,
-            size: i = "small",
-            role: r = "dialog",
-            className: l,
-            fullscreenOnMobile: _ = !0,
-            hideShadow: f = !1,
-            onAnimationEnd: I = C.tE,
-            returnRef: p,
-            animation: m = "default",
-            parentComponent: S,
-            ...O
-        } = e,
-        L = t === N.ip.ENTERING || t === N.ip.ENTERED;
-    s.useContext(g.A)({
-        type: c.ImpressionTypes.PAGE,
-        name: c.ImpressionNames.MODAL_ROOT_LEGACY,
-        properties: { variant: S },
-    });
-    let { reducedMotion: D } = s.useContext(E.C),
-        b = (0, A.z)(
-            {
-                opacity: +!!L,
-                transform: L || D.enabled || "subtle" === m ? "scale(1)" : "scale(0.7)",
-                config: { duration: 200, easing: u.A.Easing.out(u.A.Easing.quad), clamp: !0 },
-                onRest: I,
-            },
-            "animate-always",
-        ),
-        v = s.useRef(null),
-        P = null != O["aria-label"],
-        M = null != O["aria-labelledby"],
-        U = s.useId(),
-        w = O["aria-labelledby"] ?? U,
-        G = s.useMemo(() => ({ headerId: w, headerIdIsManaged: M, transitionState: t }), [w, M, t]);
-    return (0, a.jsx)(N.CP.Provider, {
-        value: G,
-        children: (0, a.jsx)(T.l, {
-            className: R.Gg,
-            role: r,
-            returnRef: p,
-            impressionType: c.ImpressionTypes.MODAL,
-            "aria-labelledby": P ? void 0 : G.headerId,
-            ...O,
-            children: (0, a.jsx)(d.animated.div, {
-                className: o()(l, R.zr, y[i], { [R.z]: _, [R.vl]: !f }),
-                ref: v,
-                style: b,
-                children: (0, a.jsx)(h.xp, { containerRef: v, children: n }),
-            }),
-        }),
-    });
-}
-function v(e) {
-    let { headerId: t, headerIdIsManaged: n } = s.useContext(N.CP);
-    return (0, a.jsx)(S.A, {
-        grow: 0,
-        shrink: 0,
-        direction: e.direction ?? S.A.Direction.HORIZONTAL,
-        justify: e.justify ?? S.A.Justify.START,
-        align: e.align ?? S.A.Align.CENTER,
-        wrap: e.wrap ?? S.A.Wrap.NO_WRAP,
-        className: o()(R.wx, e.className, { [R.me]: e.separator ?? !0 }),
-        id: n ? void 0 : t,
-        children: e.children,
-    });
-}
-function P(e) {
-    let { className: t, children: n, scrollerRef: i, scrollbarType: r, scrollbarGutter: s, ...l } = e,
-        d = (function (e) {
-            switch (e ?? "thin") {
-                case "auto":
-                    return f.Gt;
-                case "none":
-                    return f.zC;
-                default:
-                    return f.Ch;
-            }
-        })(r),
-        c = r ?? "thin",
-        u = !1 === s || "none" === c ? void 0 : "auto" === c ? R.QX : R.h3;
-    return (0, a.jsx)(d, {
-        "data-migration-pending": !0,
-        className: o()(R.Qs, u, t),
-        scrollbarGutter: s,
-        ref: i,
-        ...l,
-        children: (0, a.jsx)(I.F, { children: n }),
-    });
-}
-function M(e) {
-    return (0, a.jsx)(S.A, {
-        grow: 0,
-        shrink: 0,
-        direction: e.direction ?? S.A.Direction.HORIZONTAL_REVERSE,
-        justify: e.justify ?? S.A.Justify.START,
-        align: e.align ?? S.A.Align.STRETCH,
-        wrap: e.wrap ?? S.A.Wrap.NO_WRAP,
-        className: o()(R.qr, e.className, { [R.h0]: e.separator ?? !0 }),
-        children: (0, a.jsx)(I.F, { children: e.children }),
-    });
-}
-function U(e) {
-    return (0, a.jsx)(m.$n, {
-        "data-migration-pending": !0,
-        focusProps: e.focusProps,
-        "aria-label": O.intl.string(O.t.cpT0Cq),
-        look: m.$n.Looks.BLANK,
-        size: m.$n.Sizes.NONE,
-        onClick: e.onClick,
-        innerClassName: o()(e.innerClassName, { [R.Xk]: e.withCircleBackground }),
-        className: o()(e.className, { [R.zB]: e.hideOnFullscreen, [R.VN]: !e.withCircleBackground }),
-        children: (0, a.jsx)(_.P, { size: "md", color: "currentColor", className: o()(e.innerClassName, R.ut) }),
-    });
-}
-function w(e) {
-    let { className: t, scrollerRef: n, ...i } = e;
-    return (0, a.jsx)(p.OZ, { className: t, ref: n, ...i });
-}
+n.d(
+    t,
+    {},
+    {
+        $m: function (e) {
+            let { className: t, children: n, scrollerRef: i, scrollbarType: r, scrollbarGutter: s, ...l } = e,
+                d = (function (e) {
+                    switch (e ?? "thin") {
+                        case "auto":
+                            return f.Gt;
+                        case "none":
+                            return f.zC;
+                        default:
+                            return f.Ch;
+                    }
+                })(r),
+                c = r ?? "thin",
+                u = !1 === s || "none" === c ? void 0 : "auto" === c ? R.QX : R.h3;
+            return (0, a.jsx)(d, {
+                "data-migration-pending": !0,
+                className: o()(R.Qs, u, t),
+                scrollbarGutter: s,
+                ref: i,
+                ...l,
+                children: (0, a.jsx)(I.F, { children: n }),
+            });
+        },
+        Dc: function (e) {
+            let { className: t, scrollerRef: n, ...i } = e;
+            return (0, a.jsx)(p.OZ, { className: t, ref: n, ...i });
+        },
+        EO: function (e) {
+            let {
+                    transitionState: t,
+                    children: n,
+                    size: i = "small",
+                    role: r = "dialog",
+                    className: l,
+                    fullscreenOnMobile: _ = !0,
+                    hideShadow: f = !1,
+                    onAnimationEnd: I = C.tE,
+                    returnRef: p,
+                    animation: m = "default",
+                    parentComponent: S,
+                    ...O
+                } = e,
+                L = t === N.ip.ENTERING || t === N.ip.ENTERED;
+            s.useContext(g.A)({
+                type: c.ImpressionTypes.PAGE,
+                name: c.ImpressionNames.MODAL_ROOT_LEGACY,
+                properties: { variant: S },
+            });
+            let { reducedMotion: D } = s.useContext(E.C),
+                b = (0, A.z)(
+                    {
+                        opacity: +!!L,
+                        transform: L || D.enabled || "subtle" === m ? "scale(1)" : "scale(0.7)",
+                        config: { duration: 200, easing: u.A.Easing.out(u.A.Easing.quad), clamp: !0 },
+                        onRest: I,
+                    },
+                    "animate-always",
+                ),
+                v = s.useRef(null),
+                P = null != O["aria-label"],
+                M = null != O["aria-labelledby"],
+                U = s.useId(),
+                w = O["aria-labelledby"] ?? U,
+                G = s.useMemo(() => ({ headerId: w, headerIdIsManaged: M, transitionState: t }), [w, M, t]);
+            return (0, a.jsx)(N.CP.Provider, {
+                value: G,
+                children: (0, a.jsx)(T.l, {
+                    className: R.Gg,
+                    role: r,
+                    returnRef: p,
+                    impressionType: c.ImpressionTypes.MODAL,
+                    "aria-labelledby": P ? void 0 : G.headerId,
+                    ...O,
+                    children: (0, a.jsx)(d.animated.div, {
+                        className: o()(l, R.zr, y[i], { [R.z]: _, [R.vl]: !f }),
+                        ref: v,
+                        style: b,
+                        children: (0, a.jsx)(h.xp, { containerRef: v, children: n }),
+                    }),
+                }),
+            });
+        },
+        WM: D,
+        jl: function (e) {
+            return (0, a.jsx)(S.A, {
+                grow: 0,
+                shrink: 0,
+                direction: e.direction ?? S.A.Direction.HORIZONTAL_REVERSE,
+                justify: e.justify ?? S.A.Justify.START,
+                align: e.align ?? S.A.Align.STRETCH,
+                wrap: e.wrap ?? S.A.Wrap.NO_WRAP,
+                className: o()(R.qr, e.className, { [R.h0]: e.separator ?? !0 }),
+                children: (0, a.jsx)(I.F, { children: e.children }),
+            });
+        },
+        rI: L,
+        rQ: function (e) {
+            let { headerId: t, headerIdIsManaged: n } = s.useContext(N.CP);
+            return (0, a.jsx)(S.A, {
+                grow: 0,
+                shrink: 0,
+                direction: e.direction ?? S.A.Direction.HORIZONTAL,
+                justify: e.justify ?? S.A.Justify.START,
+                align: e.align ?? S.A.Align.CENTER,
+                wrap: e.wrap ?? S.A.Wrap.NO_WRAP,
+                className: o()(R.wx, e.className, { [R.me]: e.separator ?? !0 }),
+                id: n ? void 0 : t,
+                children: e.children,
+            });
+        },
+        s_: function (e) {
+            return (0, a.jsx)(m.$n, {
+                "data-migration-pending": !0,
+                focusProps: e.focusProps,
+                "aria-label": O.intl.string(O.t.cpT0Cq),
+                look: m.$n.Looks.BLANK,
+                size: m.$n.Sizes.NONE,
+                onClick: e.onClick,
+                innerClassName: o()(e.innerClassName, { [R.Xk]: e.withCircleBackground }),
+                className: o()(e.className, { [R.zB]: e.hideOnFullscreen, [R.VN]: !e.withCircleBackground }),
+                children: (0, a.jsx)(_.P, {
+                    size: "md",
+                    color: "currentColor",
+                    className: o()(e.innerClassName, R.ut),
+                }),
+            });
+        },
+    },
+);

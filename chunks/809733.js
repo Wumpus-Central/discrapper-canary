@@ -1,4 +1,9 @@
-function i() {
-    return !1;
-}
-n.d(t, { IA: () => i });
+n.d(
+    t,
+    {},
+    {
+        IA: function () {
+            return !1;
+        },
+    },
+);

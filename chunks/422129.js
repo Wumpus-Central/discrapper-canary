@@ -1,7 +1,7 @@
 e.exports = {
-    kL: "container_b27fdc",
-    nj: "tierTextInfoContainer_b27fdc",
-    VS: "tierPriceContainer_b27fdc",
-    Us: "tierPrice_b27fdc",
-    Rm: "toggleButton_b27fdc",
+    kL: "container_bAXS8N",
+    nj: "tierTextInfoContainer_bAXS8N",
+    VS: "tierPriceContainer_bAXS8N",
+    Us: "tierPrice_bAXS8N",
+    Rm: "toggleButton_bAXS8N",
 };

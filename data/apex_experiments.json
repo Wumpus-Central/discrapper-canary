@@ -1617,7 +1617,7 @@
     "name": "2026-04-server-boost-copy-1440p",
     "kind": "user",
     "defaultConfig": {
-      "streamQualityMarketingResolution": null
+      "streamQualityMarketingResolution": "1080p"
     },
     "variations": {
       "0": {
@@ -3438,7 +3438,7 @@
     "name": "2026-08-user-bio-max-length",
     "kind": "user",
     "defaultConfig": {
-      "maxLength": null
+      "maxLength": 190
     },
     "variations": {
       "0": {
@@ -3446,7 +3446,7 @@
         "variant": 0
       },
       "1": {
-        "maxLength": null
+        "maxLength": 300
       }
     }
   },

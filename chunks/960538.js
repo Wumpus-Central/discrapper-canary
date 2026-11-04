@@ -1,4 +1,4 @@
-(n.d(t, { t: () => j }), n(938796));
+n(938796);
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -17,7 +17,7 @@ var i = n(477900),
     f = n(429433),
     I = n(652215),
     E = n(307731),
-    v = n(105292),
+    v = n(792996),
     C = n(356974),
     _ = n(988626);
 class j extends l.Component {
@@ -78,8 +78,8 @@ class j extends l.Component {
                         onClick: (e) => {
                             this.handleAddReactionClick(e);
                         },
-                        onMouseEnter: () => (0, p.K)(E.EmojiInteractionPoint.AddReactionPopoutMouseEntered),
-                        onFocus: () => (0, p.K)(E.EmojiInteractionPoint.AddReactionPopoutFocused),
+                        onMouseEnter: () => (0, p.K)(E.Vl.AddReactionPopoutMouseEntered),
+                        onFocus: () => (0, p.K)(E.Vl.AddReactionPopoutFocused),
                         className: r()(o.reactionBtn, { [o.active]: a }, t),
                         children: [(0, i.jsx)(g.n, { ...c }), n],
                     }),
@@ -88,3 +88,4 @@ class j extends l.Component {
         });
     }
 }
+n.d(t, {}, { t: j });

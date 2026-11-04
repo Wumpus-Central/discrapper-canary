@@ -1,4 +1,4 @@
-@keyframes pulseIcon__24af7 {
+@keyframes pulseIcon_hfM7yP {
 
     0%,
     to {
@@ -10,7 +10,7 @@
     }
 }
 
-@keyframes pulseButton__24af7 {
+@keyframes pulseButton_hfM7yP {
 
     0%,
     to {
@@ -22,7 +22,7 @@
     }
 }
 
-@keyframes sparkle__24af7 {
+@keyframes sparkle_hfM7yP {
     0% {
         opacity: 0;
         transform: rotate(-50deg) scale(0)
@@ -44,7 +44,7 @@
     }
 }
 
-.button__24af7 {
+.button_hfM7yP {
     align-items: center;
     color: var(--interactive-text-default);
     cursor: pointer;
@@ -52,56 +52,56 @@
     justify-content: center
 }
 
-.button__24af7:hover {
+.button_hfM7yP:hover {
     color: var(--interactive-text-hover)
 }
 
-.button__24af7:active {
+.button_hfM7yP:active {
     color: var(--interactive-text-active)
 }
 
-.button__24af7.disabled__24af7 {
+.button_hfM7yP.disabled_hfM7yP {
     cursor: not-allowed;
     opacity: .5
 }
 
-.button__24af7:not(.noHover__24af7) {
+.button_hfM7yP:not(.noHover_hfM7yP) {
     border-radius: 8px;
     transition-duration: .2s
 }
 
-.button__24af7:not(.noHover__24af7):hover {
+.button_hfM7yP:not(.noHover_hfM7yP):hover {
     background-color: var(--interactive-background-selected)
 }
 
-.iconMask__24af7 {
+.iconMask_hfM7yP {
     display: block;
     height: 20px;
     width: 20px
 }
 
-.buttonContent__24af7 {
+.buttonContent_hfM7yP {
     position: relative
 }
 
-.icon__24af7 {
+.icon_hfM7yP {
     height: 20px;
     width: 20px
 }
 
-.pulseIcon__24af7 {
-    animation: pulseIcon__24af7 .6s ease
+.pulseIcon_hfM7yP {
+    animation: pulseIcon_hfM7yP .6s ease
 }
 
-.pulseButton__24af7 .buttonWrapper__24af7 {
-    animation: pulseButton__24af7 .6s ease
+.pulseButton_hfM7yP .buttonWrapper_hfM7yP {
+    animation: pulseButton_hfM7yP .6s ease
 }
 
-.buttonWrapper__24af7 svg {
+.buttonWrapper_hfM7yP svg {
     display: block
 }
 
-.notificationDot__24af7 {
+.notificationDot_hfM7yP {
     background-color: var(--background-feedback-notification);
     border-radius: 100%;
     bottom: 0;
@@ -111,24 +111,24 @@
     width: 7px
 }
 
-.notificationDot__24af7,
-.sparkleContainer__24af7 {
+.notificationDot_hfM7yP,
+.sparkleContainer_hfM7yP {
     position: absolute
 }
 
-.sparkleStar__24af7 {
+.sparkleStar_hfM7yP {
     color: var(--platform-gold);
     inset-inline-start: 20px;
     top: -12px
 }
 
-.sparklePlus__24af7,
-.sparkleStar__24af7 {
-    animation: sparkle__24af7 2.5s ease-in-out infinite;
+.sparklePlus_hfM7yP,
+.sparkleStar_hfM7yP {
+    animation: sparkle_hfM7yP 2.5s ease-in-out infinite;
     position: relative
 }
 
-.sparklePlus__24af7 {
+.sparklePlus_hfM7yP {
     animation-delay: .5s;
     color: var(--brand-500);
     inset-inline-start: -20px;
@@ -136,9 +136,9 @@
     top: 16px
 }
 
-.active__24af7 .buttonWrapper__24af7,
-.buttonWrapper__24af7:hover {
+.active_hfM7yP .buttonWrapper_hfM7yP,
+.buttonWrapper_hfM7yP:hover {
     color: var(--interactive-text-active)
 }
 
-/*# sourceMappingURL=799357.e8b9dad8bad5ac0b.css.map*/
+/*# sourceMappingURL=799357.faf52603430b09b3.css.map*/

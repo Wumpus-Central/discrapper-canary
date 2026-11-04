@@ -1,33 +1,38 @@
-t.d(n, { default: () => c });
 var i = t(477900);
 t(582128);
-var r = t(980707),
+var r = t(165862),
     l = t(477782),
     a = t(442433),
-    o = t(105292);
-function c(e) {
-    let { roleId: n, onLeaveRole: t, onSelect: c } = e;
-    return (0, i.jsx)(
-        r.W,
-        {
-            "data-menu-migrated": !0,
-            navId: "guild-role-connections-context",
-            "aria-label": o.intl.string(o.t.vytvJF),
-            onClose: a.Z_,
-            onSelect: c,
-            children: (0, i.jsx)(l.rX, {
-                children: (0, i.jsx)(
-                    l.Dr,
-                    {
-                        id: "guild-role-connections-leave-role",
-                        label: o.intl.string(o.t.vytvJF),
-                        action: t,
-                        color: "danger",
-                    },
-                    n,
-                ),
-            }),
+    o = t(792996);
+t.d(
+    n,
+    {},
+    {
+        default: function (e) {
+            let { roleId: n, onLeaveRole: t, onSelect: c } = e;
+            return (0, i.jsx)(
+                r.W,
+                {
+                    "data-menu-migrated": !0,
+                    navId: "guild-role-connections-context",
+                    "aria-label": o.intl.string(o.t.vytvJF),
+                    onClose: a.Z_,
+                    onSelect: c,
+                    children: (0, i.jsx)(l.rX, {
+                        children: (0, i.jsx)(
+                            l.Dr,
+                            {
+                                id: "guild-role-connections-leave-role",
+                                label: o.intl.string(o.t.vytvJF),
+                                action: t,
+                                color: "danger",
+                            },
+                            n,
+                        ),
+                    }),
+                },
+                n,
+            );
         },
-        n,
-    );
-}
+    },
+);

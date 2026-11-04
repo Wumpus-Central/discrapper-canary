@@ -1,4 +1,3 @@
-Object.defineProperty(t, "__esModule", { value: !0 });
 let n = r(152772);
 t.default = class {
     constructor() {

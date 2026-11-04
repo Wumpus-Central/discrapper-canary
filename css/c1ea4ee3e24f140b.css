@@ -1,0 +1,32 @@
+.countdownRing_KDcywG {
+    height: 16px;
+    transform: rotate(-90deg);
+    width: 16px
+}
+
+.countdownTrack_KDcywG {
+    fill: none;
+    stroke: color-mix(in srgb, var(--text-default) 20%, transparent)
+}
+
+.countdownProgress_KDcywG {
+    fill: none;
+    stroke: var(--text-default);
+    stroke-linecap: round;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-name: countdown-ring_KDcywG;
+    animation-timing-function: linear
+}
+
+@keyframes countdown-ring_KDcywG {
+    0% {
+        stroke-dashoffset: 0
+    }
+
+    to {
+        stroke-dashoffset: var(--custom-final-offset, 100)
+    }
+}
+
+/*# sourceMappingURL=c1ea4ee3e24f140b.css.map*/

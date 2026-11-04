@@ -1,17 +1,22 @@
-i.d(n, { default: () => l });
 var r = i(477900);
 i(582128);
 var e = i(732159),
-    s = i(105292);
-function l(t) {
-    let { onConfirm: n, onBack: i, ...l } = t;
-    return (0, r.jsx)(e.u, {
-        title: s.intl.string(s.t.YrV3I9),
-        subtitle: s.intl.string(s.t.MXSMtl),
-        confirmText: s.intl.string(s.t.X7eUJq),
-        cancelText: s.intl.string(s.t["13/7kX"]),
-        onConfirm: n,
-        onCancel: i,
-        ...l,
-    });
-}
+    s = i(792996);
+i.d(
+    n,
+    {},
+    {
+        default: function (t) {
+            let { onConfirm: n, onBack: i, ...l } = t;
+            return (0, r.jsx)(e.u, {
+                title: s.intl.string(s.t.YrV3I9),
+                subtitle: s.intl.string(s.t.MXSMtl),
+                confirmText: s.intl.string(s.t.X7eUJq),
+                cancelText: s.intl.string(s.t["13/7kX"]),
+                onConfirm: n,
+                onCancel: i,
+                ...l,
+            });
+        },
+    },
+);

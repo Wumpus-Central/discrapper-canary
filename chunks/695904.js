@@ -1,7 +1,6 @@
-i.d(e, { aS: () => u, bq: () => c, kM: () => A });
-var n = i(17928),
+var n = i(855986),
     l = i(945810),
-    s = i(710195),
+    s = i(50258),
     r = i(287809);
 let a = { enabled: !1 },
     d = { 0: a, 1: { enabled: !0 } },
@@ -12,10 +11,17 @@ function u() {
     let e = s.A.getAssignment("user", t, o.definition.name);
     return e?.variantId == null || e.useAsEligibility ? null : (d[e.variantId] ?? null);
 }
-function c() {
-    return (0, n.bG)([r.default, s.A], u);
-}
-function A(t) {
-    let { location: e } = t;
-    return (o.useConfig({ location: e }), null);
-}
+i.d(
+    e,
+    {},
+    {
+        aS: u,
+        bq: function () {
+            return (0, n.bG)([r.default, s.A], u);
+        },
+        kM: function (t) {
+            let { location: e } = t;
+            return (o.useConfig({ location: e }), null);
+        },
+    },
+);

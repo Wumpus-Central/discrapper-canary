@@ -1,0 +1,153 @@
+.channelNameContainer_NNQ_IR,
+.label_NNQ_IR {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.channelName_NNQ_IR {
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.recentChannelsMenu_NNQ_IR {
+    background: #121214;
+    border: 1px solid hsla(240, 4%, 61%, .035);
+    border-radius: 16px;
+    box-shadow: var(--shadow-high);
+    max-height: 500px;
+    overflow: hidden;
+    padding: 8px;
+    width: 360px
+}
+
+.recentChannelsMenuHeader_NNQ_IR {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    margin-bottom: 2px;
+    padding: 0 12px
+}
+
+.channelMenuSubContainer_NNQ_IR {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.icon_NNQ_IR {
+    width: auto
+}
+
+.guildIconWrapper_NNQ_IR {
+    align-items: center;
+    background: var(--background-surface-highest);
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    width: 32px
+}
+
+.overflowCount_NNQ_IR {
+    max-height: 22px;
+    max-width: 24px
+}
+
+.channelItemContainer_NNQ_IR {
+    align-items: center;
+    background-color: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    height: 48px;
+    justify-content: space-between;
+    margin-bottom: 2px;
+    min-width: 0;
+    overflow: hidden;
+    padding: 6px;
+    padding-inline-start: 0;
+    transition: border-color .1s ease-in-out;
+    width: calc(100% - 16px)
+}
+
+.channelItemContainer_NNQ_IR:hover {
+    background-color: var(--background-mod-strong)
+}
+
+.channelItemContainer_NNQ_IR.channelItemHighlighted_NNQ_IR {
+    background-color: var(--background-mod-strong)
+}
+
+.searchBarContainer_NNQ_IR {
+    padding-bottom: 16px
+}
+
+.emptyChannelItem_NNQ_IR {
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center
+}
+
+.channelItemIcon_NNQ_IR,
+.emptyChannelItem_NNQ_IR {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.channelItemNameContainer_NNQ_IR {
+    align-items: flex-start;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0;
+    min-width: 0
+}
+
+.channelItemName_NNQ_IR {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    max-width: 100%
+}
+
+.channelIcon_NNQ_IR {
+    min-width: 16px
+}
+
+.channelItemNameText_NNQ_IR {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.channelItemAvatars_NNQ_IR {
+    align-items: center;
+    display: flex;
+    gap: 4px;
+    padding-inline-end: 4px
+}
+
+.channelList_NNQ_IR {
+    max-height: 360px
+}
+
+.channelListWrapper_NNQ_IR {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+/*# sourceMappingURL=b819e1a0c48d9b56.css.map*/

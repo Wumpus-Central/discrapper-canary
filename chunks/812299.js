@@ -1,4 +1,3 @@
-n.d(t, { k: () => A, y: () => o });
 var s = n(477900);
 n(582128);
 var u = n(709066),
@@ -19,17 +18,24 @@ function A(e) {
         t
     );
 }
-function o(e) {
-    let { message: t, channel: n, user: r, compact: i, isRepliedMessage: o, hideIcon: c = !1, children: d } = e,
-        p = A({ message: t, channel: n, user: r, compact: i, isRepliedMessage: o, hideIcon: c, children: d });
-    return null == p
-        ? null
-        : (0, s.jsx)(u.A, {
-              className: i ? l.jW : l.RQ,
-              type: p,
-              verified: r?.isVerifiedBot(),
-              hideIcon: c,
-              useRemSizes: !0,
-              children: d,
-          });
-}
+n.d(
+    t,
+    {},
+    {
+        k: A,
+        y: function (e) {
+            let { message: t, channel: n, user: r, compact: i, isRepliedMessage: o, hideIcon: c = !1, children: d } = e,
+                p = A({ message: t, channel: n, user: r, compact: i, isRepliedMessage: o, hideIcon: c, children: d });
+            return null == p
+                ? null
+                : (0, s.jsx)(u.A, {
+                      className: i ? l.jW : l.RQ,
+                      type: p,
+                      verified: r?.isVerifiedBot(),
+                      hideIcon: c,
+                      useRemSizes: !0,
+                      children: d,
+                  });
+        },
+    },
+);

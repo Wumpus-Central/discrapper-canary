@@ -1,6 +1,5 @@
-n.d(t, { D: () => h, b: () => C });
 var l = n(582128),
-    i = n(17928),
+    i = n(855986),
     r = n(561573),
     a = n(240248),
     s = n(936785),
@@ -8,8 +7,8 @@ var l = n(582128),
     u = n(296045),
     c = n(556766),
     d = n(459005),
-    m = n(961270),
-    p = n(105292);
+    m = n(25082),
+    p = n(792996);
 function h(e) {
     let { surface: t, applicationId: n, skuId: h } = e,
         C = (0, c.m)(n),
@@ -86,10 +85,17 @@ function h(e) {
         }, [t, S, g, y, I, A, P])
     );
 }
-function C(e) {
-    let { surface: t, applicationId: n, skuId: i } = e,
-        r = h({ surface: t, applicationId: n, skuId: i }),
-        a = (0, d.n)({ surface: t, skuId: i }),
-        s = (0, u.x)({ surface: t, skuId: i });
-    return l.useMemo(() => ({ display: r, reward: a, offers: s }), [r, a, s]);
-}
+n.d(
+    t,
+    {},
+    {
+        D: h,
+        b: function (e) {
+            let { surface: t, applicationId: n, skuId: i } = e,
+                r = h({ surface: t, applicationId: n, skuId: i }),
+                a = (0, d.n)({ surface: t, skuId: i }),
+                s = (0, u.x)({ surface: t, skuId: i });
+            return l.useMemo(() => ({ display: r, reward: a, offers: s }), [r, a, s]);
+        },
+    },
+);

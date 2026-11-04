@@ -1,4 +1,4 @@
-.verifiedRole_e59759 {
+.verifiedRole_GifsdZ {
     align-items: center;
     border: 2px solid var(--border-subtle);
     border-radius: 12px;
@@ -10,36 +10,36 @@
     position: relative
 }
 
-.verifiedRole_e59759:hover {
+.verifiedRole_GifsdZ:hover {
     border-color: var(--border-muted)
 }
 
-.verifiedRoleNameDescriptionContainer_e59759 {
+.verifiedRoleNameDescriptionContainer_GifsdZ {
     flex: 2;
     overflow: hidden
 }
 
-.verifiedRoleDescription_e59759,
-.verifiedRoleName_e59759 {
+.verifiedRoleDescription_GifsdZ,
+.verifiedRoleName_GifsdZ {
     overflow: hidden;
     text-overflow: ellipsis
 }
 
-.verifiedRoleDescription_e59759 {
+.verifiedRoleDescription_GifsdZ {
     margin-top: 4px
 }
 
-.verifiedRoleHasRole_e59759 {
+.verifiedRoleHasRole_GifsdZ {
     background-color: var(--background-base-lowest);
     border: 2px solid var(--background-base-lowest);
     cursor: unset
 }
 
-.verifiedRoleHasRole_e59759:hover {
+.verifiedRoleHasRole_GifsdZ:hover {
     border-color: var(--background-base-lowest)
 }
 
-.roleCheckmark_e59759 {
+.roleCheckmark_GifsdZ {
     background-color: var(--brand-500);
     border-radius: 50%;
     color: var(--white);
@@ -48,22 +48,22 @@
     top: -8px
 }
 
-.botAvatar_e59759,
-.roleCheckmark_e59759,
-.roleCheckmark_e59759 svg {
+.botAvatar_GifsdZ,
+.roleCheckmark_GifsdZ,
+.roleCheckmark_GifsdZ svg {
     height: 20px;
     width: 20px
 }
 
-.botAvatar_e59759 {
+.botAvatar_GifsdZ {
     padding: 2px
 }
 
-.clickableChannelTextArea_d8b277 {
+.clickableChannelTextArea_gXT6Kp {
     cursor: pointer
 }
 
-.container__41af8 {
+.container_SHuBkB {
     align-items: center;
     background: var(--input-background-default);
     border: 1px solid var(--input-border-default);
@@ -74,15 +74,15 @@
     padding: var(--space-12)
 }
 
-.subtitle__41af8 {
+.subtitle_SHuBkB {
     flex: 1;
     min-width: 0
 }
 
-.actions__41af8 {
+.actions_SHuBkB {
     display: flex;
     flex-shrink: 0;
     gap: var(--space-8)
 }
 
-/*# sourceMappingURL=727797.7dcf03026bd3e80b.css.map*/
+/*# sourceMappingURL=727797.e6df31e4d8ca7730.css.map*/

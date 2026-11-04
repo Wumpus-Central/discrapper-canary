@@ -1,5 +1,4 @@
-i.d(t, { Ay: () => h, t$: () => o });
-var s = i(17928),
+var s = i(855986),
     n = i(734057),
     r = i(576705),
     l = i(977997),
@@ -34,15 +33,22 @@ function o(e) {
         ? d
         : { voiceState: i, voiceChannel: s };
 }
-function h(e) {
-    let { userId: t, guildId: i, includeNonDiscoverable: a } = e;
-    return (0, s.cf)(
-        [n.A, r.A, l.A],
-        () =>
-            o(
-                { userId: t, guildId: i, includeNonDiscoverable: a },
-                { ChannelStore: n.A, PermissionStore: r.A, VoiceStateStore: l.A },
-            ),
-        [i, t, a],
-    );
-}
+i.d(
+    t,
+    {},
+    {
+        Ay: function (e) {
+            let { userId: t, guildId: i, includeNonDiscoverable: a } = e;
+            return (0, s.cf)(
+                [n.A, r.A, l.A],
+                () =>
+                    o(
+                        { userId: t, guildId: i, includeNonDiscoverable: a },
+                        { ChannelStore: n.A, PermissionStore: r.A, VoiceStateStore: l.A },
+                    ),
+                [i, t, a],
+            );
+        },
+        t$: o,
+    },
+);

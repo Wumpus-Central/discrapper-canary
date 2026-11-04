@@ -29,14 +29,14 @@
     --__spoiler-container-box-shadow-color: transparent
 }
 
-.spoilerContent__299eb {
+.spoilerContent_0_7_Rr {
     --__current--spoiler-content-opacity: 1;
     --__current--spoiler-background-color: var(--__spoiler-background-color--revealed);
     --__current--spoiler-border-color: var(--__spoiler-border-color--revealed);
     --__current--spoiler-pointer-events: all
 }
 
-.spoilerContent__299eb.hidden__299eb {
+.spoilerContent_0_7_Rr.hidden_0_7_Rr {
     --__current--spoiler-content-opacity: 0;
     --__current--spoiler-text-color: var(--__spoiler-text-color--hidden);
     --__current--spoiler-background-color: var(--__spoiler-background-color--hidden);
@@ -46,72 +46,72 @@
     --__current--spoiler-warning-background-color: var(--__spoiler-warning-background-color)
 }
 
-.spoilerContent__299eb.hidden__299eb.hovered__299eb,
-.spoilerContent__299eb.hidden__299eb:hover {
+.spoilerContent_0_7_Rr.hidden_0_7_Rr.hovered_0_7_Rr,
+.spoilerContent_0_7_Rr.hidden_0_7_Rr:hover {
     --__current--spoiler-background-color: var(--__spoiler-background-color--hidden--hover);
     --__current--spoiler-border-color: var(--__spoiler-border-color--hidden--hover);
     --__current--spoiler-warning-text-color: var(--__spoiler-warning-text-color--hover);
     --__current--spoiler-warning-background-color: var(--__spoiler-warning-background-color--hover)
 }
 
-.spoilerContent__299eb.hidden__299eb.opaque__299eb {
+.spoilerContent_0_7_Rr.hidden_0_7_Rr.opaque_0_7_Rr {
     --__obscured-background-brightness: 0;
     --__obscured-background-blur-radius: 500px
 }
 
-.spoilerContent__299eb.hidden__299eb.opaque__299eb.hovered__299eb,
-.spoilerContent__299eb.hidden__299eb.opaque__299eb:hover {
+.spoilerContent_0_7_Rr.hidden_0_7_Rr.opaque_0_7_Rr.hovered_0_7_Rr,
+.spoilerContent_0_7_Rr.hidden_0_7_Rr.opaque_0_7_Rr:hover {
     --__current--spoiler-background-color: var(--__spoiler-background-color--hidden);
     --__current--spoiler-border-color: var(--__spoiler-border-color--hidden);
     --__current--spoiler-warning-text-color: var(--__spoiler-warning-text-color);
     --__current--spoiler-warning-background-color: var(--__spoiler-warning-background-color)
 }
 
-.spoilerContainer__299eb {
+.spoilerContainer_0_7_Rr {
     background-color: var(--__current--spoiler-background-color);
     filter: blur(0);
     position: relative
 }
 
-.spoilerContainer__299eb.embedContainer__299eb {
+.spoilerContainer_0_7_Rr.embedContainer_0_7_Rr {
     border-radius: var(--radius-xs)
 }
 
-.spoilerContainer__299eb.attachmentContainer__299eb {
+.spoilerContainer_0_7_Rr.attachmentContainer_0_7_Rr {
     border-radius: var(--radius-sm)
 }
 
-.spoilerContainer__299eb.hiddenSpoiler__299eb {
+.spoilerContainer_0_7_Rr.hiddenSpoiler_0_7_Rr {
     cursor: pointer
 }
 
-.spoilerContainer__299eb.hidden__299eb {
+.spoilerContainer_0_7_Rr.hidden_0_7_Rr {
     overflow: hidden
 }
 
-.spoilerContainer__299eb.hidden__299eb article {
+.spoilerContainer_0_7_Rr.hidden_0_7_Rr article {
     background-color: var(--__current--spoiler-background-color);
     border-color: var(--__current--spoiler-background-color)
 }
 
-.spoilerContainer__299eb.hidden__299eb:not(:focus) {
+.spoilerContainer_0_7_Rr.hidden_0_7_Rr:not(:focus) {
     box-shadow: .5px .5px 1px 1px var(--__spoiler-container-box-shadow-color)
 }
 
-.enable-forced-colors .spoilerContainer__299eb {
+.enable-forced-colors .spoilerContainer_0_7_Rr {
     border: 1px solid var(--__current--spoiler-border-color)
 }
 
-.enable-forced-colors .spoilerContainer__299eb article {
+.enable-forced-colors .spoilerContainer_0_7_Rr article {
     border-color: var(--__current--spoiler-border-color)
 }
 
-.spoilerInnerContainer__299eb {
+.spoilerInnerContainer_0_7_Rr {
     height: 100%;
     width: 100%
 }
 
-.obscureWarning__299eb {
+.obscureWarning_0_7_Rr {
     align-items: center;
     color: var(--__current--spoiler-warning-text-color);
     display: flex;
@@ -127,7 +127,7 @@
     z-index: 1
 }
 
-.constrainedObscureContent__299eb {
+.constrainedObscureContent_0_7_Rr {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -135,16 +135,16 @@
     min-width: 146px
 }
 
-.explicitContentWarning__299eb {
+.explicitContentWarning_0_7_Rr {
     text-align: center;
     width: 100%
 }
 
-.explicitContentWarningText__299eb {
+.explicitContentWarningText_0_7_Rr {
     margin-top: var(--space-4)
 }
 
-.spoilerWarning__299eb {
+.spoilerWarning_0_7_Rr {
     background-color: var(--__current--spoiler-warning-background-color);
     border-radius: 20px;
     cursor: pointer;
@@ -154,11 +154,11 @@
     text-transform: uppercase
 }
 
-.spoilerWarning__299eb.embed__299eb {
+.spoilerWarning_0_7_Rr.embed_0_7_Rr {
     margin-inline-start: 4px
 }
 
-.spoilerMarkdownContent__299eb {
+.spoilerMarkdownContent_0_7_Rr {
     background-color: var(--__current--spoiler-background-color);
     border-radius: var(--radius-xs);
     -webkit-box-decoration-break: clone;
@@ -166,31 +166,31 @@
     transition: background-color .2s ease
 }
 
-.spoilerMarkdownContent__299eb.hidden__299eb {
+.spoilerMarkdownContent_0_7_Rr.hidden_0_7_Rr {
     cursor: pointer
 }
 
-.spoilerMarkdownContent__299eb.hidden__299eb .obscuredBlockContent__299eb,
-.spoilerMarkdownContent__299eb.hidden__299eb .obscuredTextContent__299eb {
+.spoilerMarkdownContent_0_7_Rr.hidden_0_7_Rr .obscuredBlockContent_0_7_Rr,
+.spoilerMarkdownContent_0_7_Rr.hidden_0_7_Rr .obscuredTextContent_0_7_Rr {
     cursor: pointer;
     pointer-events: none
 }
 
-.spoilerMarkdownContent__299eb.hidden__299eb .obscuredTextContentInner__299eb {
+.spoilerMarkdownContent_0_7_Rr.hidden_0_7_Rr .obscuredTextContentInner_0_7_Rr {
     forced-color-adjust: none
 }
 
-.spoilerMarkdownContent__299eb.hidden__299eb ::-moz-selection {
+.spoilerMarkdownContent_0_7_Rr.hidden_0_7_Rr ::-moz-selection {
     background-color: Highlight;
     color: transparent
 }
 
-.spoilerMarkdownContent__299eb.hidden__299eb ::selection {
+.spoilerMarkdownContent_0_7_Rr.hidden_0_7_Rr ::selection {
     background-color: Highlight;
     color: transparent
 }
 
-.enable-forced-colors .obscuredTextContent__299eb {
+.enable-forced-colors .obscuredTextContent_0_7_Rr {
     border: 1px solid var(--__current--spoiler-border-color);
     border-radius: var(--radius-xs);
     -webkit-box-decoration-break: clone;
@@ -198,27 +198,27 @@
     padding: 0 2px
 }
 
-.obscuredTextContentInner__299eb {
+.obscuredTextContentInner_0_7_Rr {
     color: var(--__current--spoiler-text-color)
 }
 
-.obscuredTextContentInner__299eb code,
-.obscuredTextContentInner__299eb span {
+.obscuredTextContentInner_0_7_Rr code,
+.obscuredTextContentInner_0_7_Rr span {
     opacity: var(--__current--spoiler-content-opacity);
     transition: opacity .1s ease
 }
 
-.enable-forced-colors .spoilerMarkdownContent__299eb a {
+.enable-forced-colors .spoilerMarkdownContent_0_7_Rr a {
     background-color: var(--__current--spoiler-background-color)
 }
 
-.spoilerMarkdownContent__299eb blockquote {
+.spoilerMarkdownContent_0_7_Rr blockquote {
     color: var(--__current--spoiler-text-color);
     pointer-events: all;
     position: relative
 }
 
-.spoilerMarkdownContent__299eb blockquote:before {
+.spoilerMarkdownContent_0_7_Rr blockquote:before {
     background-color: var(--__current--spoiler-background-color);
     border-radius: var(--radius-xs);
     content: "";
@@ -228,19 +228,19 @@
     width: 100%
 }
 
-.enable-forced-colors .spoilerMarkdownContent__299eb blockquote:before {
+.enable-forced-colors .spoilerMarkdownContent_0_7_Rr blockquote:before {
     border: 1px solid var(--__current--spoiler-border-color)
 }
 
-.spoilerMarkdownContent__299eb pre {
+.spoilerMarkdownContent_0_7_Rr pre {
     pointer-events: all
 }
 
-.spoilerMarkdownContent__299eb pre>div {
+.spoilerMarkdownContent_0_7_Rr pre>div {
     position: relative
 }
 
-.spoilerMarkdownContent__299eb pre>div:before {
+.spoilerMarkdownContent_0_7_Rr pre>div:before {
     background-color: var(--__current--spoiler-background-color);
     border-radius: var(--radius-xs);
     color: var(--__current--spoiler-text-color);
@@ -250,27 +250,27 @@
     position: absolute
 }
 
-.enable-forced-colors .spoilerMarkdownContent__299eb pre>div:before {
+.enable-forced-colors .spoilerMarkdownContent_0_7_Rr pre>div:before {
     border: 1px solid var(--__current--spoiler-border-color)
 }
 
-.spoilerMarkdownContent__299eb pre code {
+.spoilerMarkdownContent_0_7_Rr pre code {
     opacity: var(--__current--spoiler-content-opacity)
 }
 
-.spoilerMarkdownContent__299eb ol li::marker,
-.spoilerMarkdownContent__299eb ul li::marker {
+.spoilerMarkdownContent_0_7_Rr ol li::marker,
+.spoilerMarkdownContent_0_7_Rr ul li::marker {
     color: var(--text-default)
 }
 
-.spoilerMarkdownContent__299eb h1>span,
-.spoilerMarkdownContent__299eb h2>span,
-.spoilerMarkdownContent__299eb h3>span,
-.spoilerMarkdownContent__299eb h4>span,
-.spoilerMarkdownContent__299eb h5>span,
-.spoilerMarkdownContent__299eb ol li>span,
-.spoilerMarkdownContent__299eb small>span,
-.spoilerMarkdownContent__299eb ul li>span {
+.spoilerMarkdownContent_0_7_Rr h1>span,
+.spoilerMarkdownContent_0_7_Rr h2>span,
+.spoilerMarkdownContent_0_7_Rr h3>span,
+.spoilerMarkdownContent_0_7_Rr h4>span,
+.spoilerMarkdownContent_0_7_Rr h5>span,
+.spoilerMarkdownContent_0_7_Rr ol li>span,
+.spoilerMarkdownContent_0_7_Rr small>span,
+.spoilerMarkdownContent_0_7_Rr ul li>span {
     background: var(--__current--spoiler-background-color);
     border-radius: var(--radius-xs);
     -webkit-box-decoration-break: clone;
@@ -280,29 +280,29 @@
     pointer-events: all
 }
 
-.enable-forced-colors .spoilerMarkdownContent__299eb h1>span,
-.enable-forced-colors .spoilerMarkdownContent__299eb h2>span,
-.enable-forced-colors .spoilerMarkdownContent__299eb h3>span,
-.enable-forced-colors .spoilerMarkdownContent__299eb h4>span,
-.enable-forced-colors .spoilerMarkdownContent__299eb h5>span,
-.enable-forced-colors .spoilerMarkdownContent__299eb ol li>span,
-.enable-forced-colors .spoilerMarkdownContent__299eb small>span,
-.enable-forced-colors .spoilerMarkdownContent__299eb ul li>span {
+.enable-forced-colors .spoilerMarkdownContent_0_7_Rr h1>span,
+.enable-forced-colors .spoilerMarkdownContent_0_7_Rr h2>span,
+.enable-forced-colors .spoilerMarkdownContent_0_7_Rr h3>span,
+.enable-forced-colors .spoilerMarkdownContent_0_7_Rr h4>span,
+.enable-forced-colors .spoilerMarkdownContent_0_7_Rr h5>span,
+.enable-forced-colors .spoilerMarkdownContent_0_7_Rr ol li>span,
+.enable-forced-colors .spoilerMarkdownContent_0_7_Rr small>span,
+.enable-forced-colors .spoilerMarkdownContent_0_7_Rr ul li>span {
     border: 1px solid var(--__current--spoiler-border-color)
 }
 
-.spoilerMarkdownContent__299eb h1>span>span,
-.spoilerMarkdownContent__299eb h2>span>span,
-.spoilerMarkdownContent__299eb h3>span>span,
-.spoilerMarkdownContent__299eb h4>span>span,
-.spoilerMarkdownContent__299eb h5>span>span,
-.spoilerMarkdownContent__299eb ol li>span>span,
-.spoilerMarkdownContent__299eb small>span>span,
-.spoilerMarkdownContent__299eb ul li>span>span {
+.spoilerMarkdownContent_0_7_Rr h1>span>span,
+.spoilerMarkdownContent_0_7_Rr h2>span>span,
+.spoilerMarkdownContent_0_7_Rr h3>span>span,
+.spoilerMarkdownContent_0_7_Rr h4>span>span,
+.spoilerMarkdownContent_0_7_Rr h5>span>span,
+.spoilerMarkdownContent_0_7_Rr ol li>span>span,
+.spoilerMarkdownContent_0_7_Rr small>span>span,
+.spoilerMarkdownContent_0_7_Rr ul li>span>span {
     pointer-events: var(--__current--spoiler-pointer-events)
 }
 
-.obscureButtonContainer__299eb {
+.obscureButtonContainer_0_7_Rr {
     bottom: var(--space-4);
     inset-inline-end: var(--space-4);
     position: absolute;
@@ -310,4 +310,4 @@
     z-index: 1
 }
 
-/*# sourceMappingURL=880150.72f6e780a5ac8c48.css.map*/
+/*# sourceMappingURL=880150.9d69ca16ad251b60.css.map*/

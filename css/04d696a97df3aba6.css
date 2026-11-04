@@ -1,0 +1,73 @@
+.header_krOYhC {
+    flex: 0 0 auto;
+    padding-inline-end: var(--space-xs);
+    position: relative;
+    width: 100%;
+    z-index: 100
+}
+
+.breadcrumb_krOYhC {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden
+}
+
+.icon_krOYhC {
+    flex-shrink: 0;
+    margin-inline-end: var(--space-12)
+}
+
+.backButton_krOYhC {
+    color: var(--interactive-icon-default);
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    margin-inline-end: var(--space-16)
+}
+
+.backButton_krOYhC:hover {
+    color: var(--interactive-icon-hover)
+}
+
+.backButton_krOYhC:active {
+    color: var(--interactive-icon-active)
+}
+
+.projectIconButton_krOYhC {
+    border-radius: calc(var(--space-20)/4);
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    margin-inline-end: var(--space-8)
+}
+
+.title_krOYhC {
+    flex: 0 1 auto;
+    margin-inline-end: 0;
+    min-width: 0;
+    overflow: hidden
+}
+
+.titleText_krOYhC {
+    text-overflow: ellipsis
+}
+
+.shareTarget_krOYhC {
+    min-width: 0
+}
+
+.breadcrumb_krOYhC .shareTargetDivider_krOYhC {
+    margin-inline: var(--space-6)
+}
+
+.stop-animations .header_krOYhC {
+    -webkit-app-region: no-drag
+}
+
+.theme-light.custom-client-theme .header_krOYhC {
+    --background-gradient-lowest: var(--background-gradient-chat)
+}
+
+/*# sourceMappingURL=04d696a97df3aba6.css.map*/

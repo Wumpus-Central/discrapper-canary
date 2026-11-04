@@ -1,4 +1,3 @@
-t.d(n, { A: () => m });
 var i = t(477900),
     l = t(582128),
     s = t(503698),
@@ -8,59 +7,70 @@ var i = t(477900),
     c = t(534514),
     d = t(834730),
     u = t(320448),
-    A = t(105292),
+    A = t(792996),
     h = t(906212);
-function m(e) {
-    let {
-            className: n,
-            iconContainerClassName: t,
-            icon: s,
-            title: m,
-            description: g,
-            userCount: x,
-            onClick: C,
-            highlight: f,
-            onDismiss: p,
-        } = e,
-        E = l.useCallback(
-            (e) => {
-                (e.stopPropagation(), p?.());
-            },
-            [p],
-        );
-    return (0, i.jsxs)(o.D, {
-        className: a()(h.kL, n, null != f && { [h.U6]: f }),
-        onClick: C,
-        children: [
-            (0, i.jsx)("div", { className: a()(h.Kk, t), children: s }),
-            (0, i.jsxs)("div", {
-                className: h.FS,
+t.d(
+    n,
+    {},
+    {
+        A: function (e) {
+            let {
+                    className: n,
+                    iconContainerClassName: t,
+                    icon: s,
+                    title: m,
+                    description: g,
+                    userCount: x,
+                    onClick: C,
+                    highlight: f,
+                    onDismiss: p,
+                } = e,
+                E = l.useCallback(
+                    (e) => {
+                        (e.stopPropagation(), p?.());
+                    },
+                    [p],
+                );
+            return (0, i.jsxs)(o.D, {
+                className: a()(h.kL, n, null != f && { [h.U6]: f }),
+                onClick: C,
                 children: [
-                    (0, i.jsx)(c.D, { variant: "heading-sm/semibold", color: "text-strong", children: m }),
-                    (0, i.jsx)(d.E, { variant: "body-xs/normal", color: "text-strong", className: h.mG, children: g }),
-                    null != x && x > 0
-                        ? (0, i.jsxs)(i.Fragment, {
-                              children: [
-                                  (0, i.jsx)(d.E, {
-                                      variant: "body-xs/normal",
-                                      color: "text-strong",
-                                      className: h.Om,
-                                      children: "\u2022",
-                                  }),
-                                  (0, i.jsx)(d.E, {
-                                      variant: "body-xs/normal",
-                                      color: "text-strong",
-                                      className: h.mG,
-                                      children: A.intl.format(A.t.NywdIj, { count: x }),
-                                  }),
-                              ],
-                          })
-                        : null,
+                    (0, i.jsx)("div", { className: a()(h.Kk, t), children: s }),
+                    (0, i.jsxs)("div", {
+                        className: h.FS,
+                        children: [
+                            (0, i.jsx)(c.D, { variant: "heading-sm/semibold", color: "text-strong", children: m }),
+                            (0, i.jsx)(d.E, {
+                                variant: "body-xs/normal",
+                                color: "text-strong",
+                                className: h.mG,
+                                children: g,
+                            }),
+                            null != x && x > 0
+                                ? (0, i.jsxs)(i.Fragment, {
+                                      children: [
+                                          (0, i.jsx)(d.E, {
+                                              variant: "body-xs/normal",
+                                              color: "text-strong",
+                                              className: h.Om,
+                                              children: "\u2022",
+                                          }),
+                                          (0, i.jsx)(d.E, {
+                                              variant: "body-xs/normal",
+                                              color: "text-strong",
+                                              className: h.mG,
+                                              children: A.intl.format(A.t.NywdIj, { count: x }),
+                                          }),
+                                      ],
+                                  })
+                                : null,
+                        ],
+                    }),
+                    null != p
+                        ? (0, i.jsx)("div", { className: h.r, children: (0, i.jsx)(r.J, { size: "xs", onClick: E }) })
+                        : (0, i.jsx)(u._, { size: "xs", color: "currentColor", className: h.OW }),
                 ],
-            }),
-            null != p
-                ? (0, i.jsx)("div", { className: h.r, children: (0, i.jsx)(r.J, { size: "xs", onClick: E }) })
-                : (0, i.jsx)(u._, { size: "xs", color: "currentColor", className: h.OW }),
-        ],
-    });
-}
+            });
+        },
+    },
+);

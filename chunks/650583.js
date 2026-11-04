@@ -1,31 +1,18 @@
-n.d(t, {
-    C8: () => _,
-    G1: () => d,
-    N$: () => l.Key,
-    Nu: () => A,
-    RX: () => I,
-    V8: () => E,
-    Yy: () => c,
-    dh: () => f,
-    g$: () => h,
-    mi: () => o,
-    zY: () => u,
-});
 var i,
     r,
     a,
     s,
     l = n(16336);
-let o = l.Key.F6,
+let o = l.U.F6,
     d = new Map([
-        [l.Key.F6, "f6"],
-        [l.Key.Tab, "tab"],
-        [l.Key.ArrowDown, "down"],
-        [l.Key.ArrowUp, "up"],
-        [l.Key.ArrowLeft, "left"],
-        [l.Key.ArrowRight, "right"],
-        [l.Key.Home, "home"],
-        [l.Key.End, "end"],
+        [l.U.F6, "f6"],
+        [l.U.Tab, "tab"],
+        [l.U.ArrowDown, "down"],
+        [l.U.ArrowUp, "up"],
+        [l.U.ArrowLeft, "left"],
+        [l.U.ArrowRight, "right"],
+        [l.U.Home, "home"],
+        [l.U.End, "end"],
     ]),
     c = new Set(["tab", "shift+tab", "down", "up", "left", "right", "home", "end"]);
 var u =
@@ -432,3 +419,4 @@ var h =
         (s[(s.Back = 3)] = "Back"),
         (s[(s.Forward = 4)] = "Forward"),
         s);
+n.d(t, { N$: () => l.U }, { C8: _, G1: d, Nu: A, RX: I, V8: E, Yy: c, dh: f, g$: h, mi: o, zY: u });

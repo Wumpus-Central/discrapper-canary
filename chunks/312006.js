@@ -1,7 +1,6 @@
-n.d(t, { Ay: () => C });
 var i = n(435558),
     r = n.n(i),
-    a = n(17928),
+    a = n(855986),
     s = n(73153),
     l = n(734057),
     o = n(696451),
@@ -124,3 +123,4 @@ let C = new N(s.h, {
     GUILD_CREATE: S,
     GUILD_DELETE: S,
 });
+n.d(t, {}, { Ay: C });

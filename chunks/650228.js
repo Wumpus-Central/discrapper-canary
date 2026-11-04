@@ -1,9 +1,9 @@
 e.exports = {
-    h1: "avatarPreviewContainer__349b1",
-    sm: "pfxPreviewContainer__349b1",
-    VY: "pfxPreviewContainerSolo__349b1 pfxPreviewContainer__349b1",
-    ob: "profileFramePreviewContainer__349b1",
-    fE: "profileFramePreviewContainerSolo__349b1 profileFramePreviewContainer__349b1",
-    Dz: "nameplatePreviewContainer__349b1",
-    M4: "nameplatePreview__349b1",
+    h1: "avatarPreviewContainer_i6WTJd",
+    sm: "pfxPreviewContainer_i6WTJd",
+    VY: "pfxPreviewContainerSolo_i6WTJd pfxPreviewContainer_i6WTJd",
+    ob: "profileFramePreviewContainer_i6WTJd",
+    fE: "profileFramePreviewContainerSolo_i6WTJd profileFramePreviewContainer_i6WTJd",
+    Dz: "nameplatePreviewContainer_i6WTJd",
+    M4: "nameplatePreview_i6WTJd",
 };

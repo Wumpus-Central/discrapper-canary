@@ -1,20 +1,3 @@
-n.d(t, {
-    Kl: () => O,
-    SW: () => p,
-    VL: () => T,
-    Wi: () => b,
-    _R: () => y,
-    aY: () => v,
-    bz: () => C,
-    gm: () => S,
-    hK: () => L,
-    hv: () => m,
-    j8: () => R,
-    qZ: () => D,
-    rA: () => g,
-    rY: () => I,
-    zt: () => N,
-});
 var i,
     r,
     a,
@@ -23,17 +6,17 @@ var i,
 n(873298);
 var o = n(36149);
 n(865116);
-var d = n(807393),
+var d = n(913379),
     c = n(207560),
     u = n(203389),
     _ = n(734057),
-    E = n(174459);
-n(900019);
-var A = n(338717),
-    h = n(961440),
-    f = n(652215);
-n(105292);
-var I =
+    E = n(129230);
+n(705833);
+var A = n(338717);
+n(961440);
+var h = n(652215);
+n(792996);
+var f =
         (((i = {}).EXPLICIT_MEDIA_LEARN_MORE_VIEWED = "explicit_media_learn_more_viewed"),
         (i.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS = "explicit_media_learn_more_click_settings"),
         (i.EXPLICIT_MEDIA_LEARN_MORE_CLICK_LEARN_MORE = "explicit_media_learn_more_click_learn_more"),
@@ -48,155 +31,166 @@ var I =
         (i.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED = "explicit_media_sender_false_positive_button_clicked"),
         (i.EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT = "explicit_media_false_positive_clyde_message_sent"),
         i),
-    p =
+    I =
         (((r = {}).EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW = "explicit_media_obscured_false_positive_flow"),
         (r.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW = "explicit_media_sender_false_positive_flow"),
         (r.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED = "explicit_media_message_send_blocked"),
         (r.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED = "explicit_media_add_media_to_forum_post_blocked"),
-        r);
-function m(e) {
-    let { action: t, channelId: n, messageId: i, context: r } = e;
-    if (null == n || null == i) return;
-    let a = _.A.getChannel(n);
-    E.default.track(f.HAw.EXPLICIT_MEDIA_ACTION, {
-        action: t,
-        guild_id: a?.guild_id,
-        channel_id: n,
-        message_id: i,
-        user_is_underage: (0, u.L)(),
-        context: r,
-    });
-}
-var T = (((a = {}).UPDATE = "update"), (a.TIMEOUT = "timeout"), a);
-function g(e, t) {
-    let n = Math.min(Math.floor((Date.now() - e) / 1e3), 3);
-    d.A.increment({
-        name: l.K.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING,
-        tags: [`timingBucket:${n}`, `source:${t}`, "metricVersion:1"],
-    });
-}
-function S(e) {
-    let { channelId: t, messageId: n, attachmentIds: i, embedIds: r } = e;
-    if (null == t || null == n || ((i?.length ?? 0) === 0 && (r?.length ?? 0) === 0)) return;
-    let a = _.A.getChannel(t);
-    (E.default.track(f.HAw.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, {
-        channel_id: t,
-        guild_id: a?.guild_id,
-        message_id: n,
-        embed_ids: r,
-        user_is_underage: (0, u.L)(),
-        scan_timeout_duration: h.MX,
-        attachment_ids_v2: i,
-    }),
-        d.A.increment({ name: l.K.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, tags: ["metricVersion:1"] }),
-        d.A.distribution(
-            { name: l.K.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION },
-            (i?.length ?? 0) + (r?.length ?? 0),
-        ));
-}
-function N(e) {
-    let {
-        channelId: t,
-        numOfAttachments: n,
-        numOfAttachmentsPendingScan: i,
-        numOfEmbeds: r,
-        numOfEmbedsPendingScan: a,
-    } = e;
-    if (null == t) return;
-    let s = _.A.getChannel(t);
-    E.default.track(f.HAw.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, {
-        channel_id: t,
-        guild_id: s?.guild_id,
-        num_of_attachments: n,
-        num_of_attachments_pending_scan: i,
-        num_of_embeds: r,
-        num_of_embeds_pending_scan: a,
-    });
-    let o = i + a;
-    o > 0 && d.A.distribution({ name: l.K.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2 }, o);
-}
-function C(e) {
-    let {
-            messageId: t,
-            channelId: n,
-            numOfAttachments: i,
-            numOfSelfHarmAttachments: r,
-            numOfEmbeds: a,
-            numOfGoreAttachments: s,
-            numOfExplicitAttachments: l,
-            numOfSelfHarmEmbeds: o,
-            numOfGoreEmbeds: d,
-            numOfExplicitEmbeds: c,
-        } = e,
-        u = l > 0 || c > 0,
-        A = s > 0 || d > 0,
-        h = r > 0 || o > 0;
-    if (null == n || null == t || (!u && !A && !h)) return;
-    let I = _.A.getChannel(n);
-    E.default.track(f.HAw.REDACTABLE_MESSAGE_LOADED, {
-        message_id: t,
-        channel_id: n,
-        channel_type: I?.type,
-        guild_id: I?.guild_id,
-        num_of_attachments: i,
-        num_of_gore_attachments: s,
-        num_of_explicit_attachments: l,
-        num_of_self_harm_attachments: r,
-        num_of_embeds: a,
-        num_of_gore_embeds: d,
-        num_of_explicit_embeds: c,
-        num_of_self_harm_embeds: o,
-        has_redactable_explicit: u,
-        has_redactable_gore: A,
-        has_redactable_self_harm: h,
-    });
-}
-function O(e) {
-    let {
-        messageId: t,
-        channelId: n,
-        numOfAttachments: i,
-        numOfExplicitAttachments: r,
-        numOfEmbeds: a,
-        numOfExplicitEmbeds: s,
-    } = e;
-    if (null == n) return;
-    let l = _.A.getChannel(n);
-    E.default.track(f.HAw.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, {
-        message_id: t,
-        channel_id: n,
-        channel_type: l?.type,
-        guild_id: l?.guild_id,
-        num_of_attachments: i,
-        num_of_explicit_attachments: r,
-        num_of_embeds: a,
-        num_of_explicit_embeds: s,
-    });
-}
-function R(e, t) {
-    return null != e && null != t && (e <= h._L || t <= h.jd);
-}
-function L() {
-    let e = (0, c.d6)(s.t.SENSITIVE_CONTENT_SHOW_SETTING),
-        t = (0, o.p9)();
-    return e && t;
-}
-function y() {
+        r),
+    p = (((a = {}).UPDATE = "update"), (a.TIMEOUT = "timeout"), a);
+function m() {
     let e = (0, c.aX)(s.t.SENSITIVE_CONTENT_SHOW_SETTING),
         t = (0, o.i2)();
     return e && t;
 }
-function D(e) {
-    return !!y() && null != e && A.tY.has(e);
-}
-function b(e) {
-    let { obscure: t } = e;
-    (0, o.$8)() && E.default.track(f.HAw.EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2, { toggle_direction: t ? "hide" : "show" });
-}
-function v(e) {
-    return e.message_snapshots?.some(
-        (e) =>
-            (e.message?.attachments != null && e.message.attachments.length > 0) ||
-            (e.message?.embeds != null && e.message.embeds.length > 0),
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        Kl: function (e) {
+            let {
+                messageId: t,
+                channelId: n,
+                numOfAttachments: i,
+                numOfExplicitAttachments: r,
+                numOfEmbeds: a,
+                numOfExplicitEmbeds: s,
+            } = e;
+            if (null == n) return;
+            let l = _.A.getChannel(n);
+            E.default.track(h.HAw.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, {
+                message_id: t,
+                channel_id: n,
+                channel_type: l?.type,
+                guild_id: l?.guild_id,
+                num_of_attachments: i,
+                num_of_explicit_attachments: r,
+                num_of_embeds: a,
+                num_of_explicit_embeds: s,
+            });
+        },
+        SW: I,
+        VL: p,
+        Wi: function (e) {
+            let { obscure: t } = e;
+            (0, o.$8)() &&
+                E.default.track(h.HAw.EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2, { toggle_direction: t ? "hide" : "show" });
+        },
+        _R: m,
+        aY: function (e) {
+            return e.message_snapshots?.some(
+                (e) =>
+                    (e.message?.attachments != null && e.message.attachments.length > 0) ||
+                    (e.message?.embeds != null && e.message.embeds.length > 0),
+            );
+        },
+        bz: function (e) {
+            let {
+                    messageId: t,
+                    channelId: n,
+                    numOfAttachments: i,
+                    numOfSelfHarmAttachments: r,
+                    numOfEmbeds: a,
+                    numOfGoreAttachments: s,
+                    numOfExplicitAttachments: l,
+                    numOfSelfHarmEmbeds: o,
+                    numOfGoreEmbeds: d,
+                    numOfExplicitEmbeds: c,
+                } = e,
+                u = l > 0 || c > 0,
+                A = s > 0 || d > 0,
+                f = r > 0 || o > 0;
+            if (null == n || null == t || (!u && !A && !f)) return;
+            let I = _.A.getChannel(n);
+            E.default.track(h.HAw.REDACTABLE_MESSAGE_LOADED, {
+                message_id: t,
+                channel_id: n,
+                channel_type: I?.type,
+                guild_id: I?.guild_id,
+                num_of_attachments: i,
+                num_of_gore_attachments: s,
+                num_of_explicit_attachments: l,
+                num_of_self_harm_attachments: r,
+                num_of_embeds: a,
+                num_of_gore_embeds: d,
+                num_of_explicit_embeds: c,
+                num_of_self_harm_embeds: o,
+                has_redactable_explicit: u,
+                has_redactable_gore: A,
+                has_redactable_self_harm: f,
+            });
+        },
+        gm: function (e) {
+            let { channelId: t, messageId: n, attachmentIds: i, embedIds: r } = e;
+            if (null == t || null == n || ((i?.length ?? 0) === 0 && (r?.length ?? 0) === 0)) return;
+            let a = _.A.getChannel(t);
+            (E.default.track(h.HAw.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, {
+                channel_id: t,
+                guild_id: a?.guild_id,
+                message_id: n,
+                embed_ids: r,
+                user_is_underage: (0, u.L)(),
+                scan_timeout_duration: 3e3,
+                attachment_ids_v2: i,
+            }),
+                d.A.increment({ name: l.K.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, tags: ["metricVersion:1"] }),
+                d.A.distribution(
+                    { name: l.K.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION },
+                    (i?.length ?? 0) + (r?.length ?? 0),
+                ));
+        },
+        hK: function () {
+            let e = (0, c.d6)(s.t.SENSITIVE_CONTENT_SHOW_SETTING),
+                t = (0, o.p9)();
+            return e && t;
+        },
+        hv: function (e) {
+            let { action: t, channelId: n, messageId: i, context: r } = e;
+            if (null == n || null == i) return;
+            let a = _.A.getChannel(n);
+            E.default.track(h.HAw.EXPLICIT_MEDIA_ACTION, {
+                action: t,
+                guild_id: a?.guild_id,
+                channel_id: n,
+                message_id: i,
+                user_is_underage: (0, u.L)(),
+                context: r,
+            });
+        },
+        j8: function (e, t) {
+            return null != e && null != t && (e <= 146 || t <= 212);
+        },
+        qZ: function (e) {
+            return !!m() && null != e && A.tY.has(e);
+        },
+        rA: function (e, t) {
+            let n = Math.min(Math.floor((Date.now() - e) / 1e3), 3);
+            d.A.increment({
+                name: l.K.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING,
+                tags: [`timingBucket:${n}`, `source:${t}`, "metricVersion:1"],
+            });
+        },
+        rY: f,
+        zt: function (e) {
+            let {
+                channelId: t,
+                numOfAttachments: n,
+                numOfAttachmentsPendingScan: i,
+                numOfEmbeds: r,
+                numOfEmbedsPendingScan: a,
+            } = e;
+            if (null == t) return;
+            let s = _.A.getChannel(t);
+            E.default.track(h.HAw.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, {
+                channel_id: t,
+                guild_id: s?.guild_id,
+                num_of_attachments: n,
+                num_of_attachments_pending_scan: i,
+                num_of_embeds: r,
+                num_of_embeds_pending_scan: a,
+            });
+            let o = i + a;
+            o > 0 && d.A.distribution({ name: l.K.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2 }, o);
+        },
+    },
+);

@@ -1,6 +1,5 @@
-n.d(t, { A: () => d });
 var i = n(439372),
-    r = n(741231),
+    r = n(362280),
     a = n(14509),
     s = n(276041),
     l = n(652215);
@@ -12,3 +11,4 @@ class o extends i.A {
     actions = { CHANNEL_CREATE: this.handleChannelCreate };
 }
 let d = new o();
+n.d(t, {}, { A: d });

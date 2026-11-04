@@ -1,7 +1,7 @@
 e.exports = {
-    MP: "itemCard__7e549",
-    dJ: "questCardContextMenuTrigger__7e549",
-    aM: "emptyCard__7e549",
-    jU: "emptyHeader__7e549",
-    BI: "emptyText__7e549",
+    MP: "itemCard_-7KzVR",
+    dJ: "questCardContextMenuTrigger_-7KzVR",
+    aM: "emptyCard_-7KzVR",
+    jU: "emptyHeader_-7KzVR",
+    BI: "emptyText_-7KzVR",
 };

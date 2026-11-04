@@ -1,7 +1,7 @@
 e.exports = {
-    pz: "sidebar__9835e",
-    Y_: "children__9835e",
-    wx: "header__9835e",
-    bl: "draggableStartArea__9835e",
-    qd: "headerTitle__9835e",
+    pz: "sidebar_z-Dk_P",
+    Y_: "children_z-Dk_P",
+    wx: "header_z-Dk_P",
+    bl: "draggableStartArea_z-Dk_P",
+    qd: "headerTitle_z-Dk_P",
 };

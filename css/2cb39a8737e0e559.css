@@ -1,0 +1,211 @@
+.root_RJkt6C {
+    background: var(--background-base-lower);
+    background-color: var(--background-surface-higher);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    overflow: hidden
+}
+
+.option_RJkt6C {
+    align-items: center;
+    background-color: none;
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--interactive-text-active);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-16) var(--space-12)
+}
+
+.option_RJkt6C:hover {
+    background: var(--interactive-background-hover);
+    background-color: var(--background-mod-normal);
+    border-bottom-color: transparent
+}
+
+.option_RJkt6C:last-child {
+    border-bottom: none
+}
+
+.text_RJkt6C {
+    padding-inline-end: 5px
+}
+
+.caret_RJkt6C {
+    color: var(--interactive-text-default);
+    flex-shrink: 0;
+    height: 24px;
+    margin-inline-start: 8px;
+    width: 24px
+}
+
+.ratingSelector_UNsDQI {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+    width: 240px
+}
+
+.textLabels_UNsDQI {
+    width: 100%
+}
+
+.emojis_UNsDQI,
+.textLabels_UNsDQI {
+    margin-inline: auto
+}
+
+.emoji_UNsDQI {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    filter: grayscale(100%);
+    height: var(--custom-feedback-modal-emoji-size);
+    width: var(--custom-feedback-modal-emoji-size)
+}
+
+.textLabel_UNsDQI {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: .5em
+}
+
+.textLabel_UNsDQI .emoji_UNsDQI {
+    height: 1.75em;
+    width: 1.75em
+}
+
+.full-motion .emojiContainer_UNsDQI .emoji_UNsDQI {
+    transition: all .2s ease;
+    transition-property: transform opacity filter
+}
+
+.full-motion .emojiContainer_UNsDQI:hover .emoji_UNsDQI {
+    transform: scale(1.06)
+}
+
+.emojiContainer_UNsDQI .emoji_UNsDQI.selected_UNsDQI,
+.emojiContainer_UNsDQI:hover .emoji_UNsDQI {
+    filter: none
+}
+
+.emojiContainer_UNsDQI .emoji_UNsDQI.selected_UNsDQI,
+.emojiContainer_UNsDQI:hover .emoji_UNsDQI {
+    opacity: 1
+}
+
+.sadFace_UNsDQI {
+    background-image: url("/assets/6251823cd63fdeac.svg")
+}
+
+.neutralFace_UNsDQI {
+    background-image: url("/assets/c0070cb5c7749661.svg")
+}
+
+.happyFace_UNsDQI {
+    background-image: url("/assets/d7b222069635263e.svg")
+}
+
+.sadFaceRefresh_UNsDQI {
+    background-image: url("/assets/c72c14c5fb979985.svg")
+}
+
+.neutralFaceRefresh_UNsDQI {
+    background-image: url("/assets/64c147f3bde37010.svg")
+}
+
+.happyFaceRefresh_UNsDQI {
+    background-image: url("/assets/06cd4bebf997d8e1.svg")
+}
+
+.thumbsDown_UNsDQI {
+    background-image: url("/assets/2e6ff432eeb1ef80.svg")
+}
+
+.thumbsUp_UNsDQI {
+    background-image: url("/assets/8f1e1e90bea53650.svg")
+}
+
+.animatedFace_UNsDQI {
+    filter: none
+}
+
+.modalRoot_bNwrTb {
+    max-height: 900px
+}
+
+.headerContainer_bNwrTb {
+    flex-direction: column
+}
+
+.modalCloseButton_bNwrTb {
+    inset-inline-end: var(--custom-feedback-modal-close-button-margin);
+    position: absolute;
+    top: var(--custom-feedback-modal-close-button-margin)
+}
+
+.helpdeskLink_bNwrTb {
+    margin-top: var(--space-8)
+}
+
+.header_bNwrTb,
+.ratingBody_bNwrTb {
+    flex: 1 1 auto;
+    text-align: center
+}
+
+.ratingBody_bNwrTb {
+    color: var(--text-default);
+    margin-top: var(--space-8)
+}
+
+.footer_bNwrTb {
+    justify-content: space-between
+}
+
+.problemInfo_bNwrTb {
+    margin-bottom: 0;
+    margin-top: var(--space-8)
+}
+
+.problemContentSpacing_bNwrTb,
+.ratingSelectorContainer_bNwrTb {
+    padding-bottom: var(--space-16)
+}
+
+.ratingSelectorContainer_bNwrTb {
+    padding-top: var(--space-16);
+    padding-inline: var(--space-24)
+}
+
+.presetList_bNwrTb {
+    padding-bottom: var(--space-8)
+}
+
+.hidden_bNwrTb {
+    visibility: hidden
+}
+
+.theme-dark .emoji_bNwrTb {
+    opacity: .4
+}
+
+.theme-light .emoji_bNwrTb {
+    opacity: .6
+}
+
+.emoji_bNwrTb {
+    opacity: 1
+}
+
+.header_bNwrTb {
+    color: var(--text-default)
+}
+
+.marginBottom16_bNwrTb {
+    margin-bottom: var(--space-16)
+}
+
+/*# sourceMappingURL=2cb39a8737e0e559.css.map*/

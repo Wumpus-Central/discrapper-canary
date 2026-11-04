@@ -1,6 +1,5 @@
-l.d(t, { A: () => d, T: () => i });
 var n = l(582128),
-    r = l(17928),
+    r = l(855986),
     o = l(977445),
     u = l(733391),
     s = l(832163);
@@ -28,21 +27,28 @@ function i(e) {
           }
         : { isTestMode: !1, entries: f, selectedStorefrontId: c, liveStorefrontId: c, liveStorefront: l };
 }
-function d(e) {
-    let { applicationId: t } = e,
-        { isTestMode: l, selectedStorefrontId: o, liveStorefrontId: f, liveStorefront: d } = i(t),
-        c = l && null != o && o !== f;
-    (n.useEffect(() => {
-        null != t && (0, u.ap)(t, { eager: !1 });
-    }, [t]),
-        n.useEffect(() => {
-            c && null != t && null != o && (0, u.d8)(t, o);
-        }, [c, t, o]));
-    let a = (0, r.bG)([s.A], () => (c && null != o ? s.A.getStorefrontById(o) : void 0), [c, o]);
-    return {
-        isTestMode: l,
-        selectedStorefrontId: o,
-        liveStorefrontId: f,
-        effectiveStorefront: c ? (a?.storefront ?? null) : d,
-    };
-}
+l.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { applicationId: t } = e,
+                { isTestMode: l, selectedStorefrontId: o, liveStorefrontId: f, liveStorefront: d } = i(t),
+                c = l && null != o && o !== f;
+            (n.useEffect(() => {
+                null != t && (0, u.ap)(t, { eager: !1 });
+            }, [t]),
+                n.useEffect(() => {
+                    c && null != t && null != o && (0, u.d8)(t, o);
+                }, [c, t, o]));
+            let a = (0, r.bG)([s.A], () => (c && null != o ? s.A.getStorefrontById(o) : void 0), [c, o]);
+            return {
+                isTestMode: l,
+                selectedStorefrontId: o,
+                liveStorefrontId: f,
+                effectiveStorefront: c ? (a?.storefront ?? null) : d,
+            };
+        },
+        T: i,
+    },
+);

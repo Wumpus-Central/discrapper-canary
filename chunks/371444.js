@@ -1,3 +1,3 @@
-n.d(t, { C: () => r });
 var i,
     r = (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"), (i[(i.LIST = 1)] = "LIST"), (i[(i.GRID = 2)] = "GRID"), i);
+n.d(t, {}, { C: r });

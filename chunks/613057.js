@@ -1,76 +1,28 @@
-n.d(t, {
-    Hi: () => h,
-    LQ: () => o,
-    OE: () => A,
-    VH: () => u,
-    W_: () => _,
-    XK: () => E,
-    hj: () => c,
-    kw: () => d,
-    sm: () => l,
-    z4: () => f,
-});
 var i,
     r,
     a,
     s,
-    l = (((i = {}).ANY = "$any"), (i.ALL = "$all"), i);
-let o = "RPC_PRIVATE_SCOPE",
-    d = "RPC_PRIVATE_LIMITED_SCOPE",
-    c = "RPC_LOCAL_SCOPE",
-    u = "RPC_AUTHENTICATED_SCOPE",
-    _ = "RPC_EMBEDDED_APP_SCOPE";
-var E =
-    (((r = {}).USER_SETTINGS = "USER_SETTINGS"),
-    (r.CHANGELOG = "CHANGELOG"),
-    (r.LIBRARY = "LIBRARY"),
-    (r.STORE_HOME = "STORE_HOME"),
-    (r.STORE_LISTING = "STORE_LISTING"),
-    (r.CHANNEL = "CHANNEL"),
-    (r.GAME_SHOP = "GAME_SHOP"),
-    (r.PICK_GUILD_SETTINGS = "PICK_GUILD_SETTINGS"),
-    (r.QUEST_HOME = "QUEST_HOME"),
-    (r.DISCOVERY_GAME_RESULTS = "DISCOVERY_GAME_RESULTS"),
-    (r.OAUTH2 = "OAUTH2"),
-    (r.FEATURES = "FEATURES"),
-    (r.SHOP = "SHOP"),
-    (r.ACTIVITIES = "ACTIVITIES"),
-    (r.QUEST_PREVIEW_TOOL = "QUEST_PREVIEW_TOOL"),
-    (r.ONE_TIME_LOGIN = "ONE_TIME_LOGIN"),
-    (r.PLAYGROUND = "PLAYGROUND"),
-    r);
-function A(e) {
-    switch (e) {
-        case "USER_SETTINGS":
-            return "settings";
-        case "CHANGELOG":
-            return "changelog";
-        case "LIBRARY":
-            return "library";
-        case "STORE_HOME":
-        case "STORE_LISTING":
-            return "store";
-        case "CHANNEL":
-            return "channel";
-        case "PICK_GUILD_SETTINGS":
-            return "guild_settings";
-        case "QUEST_HOME":
-            return "quest_home";
-        case "QUEST_PREVIEW_TOOL":
-            return "quest_preview_tool";
-        case "DISCOVERY_GAME_RESULTS":
-            return "discovery_game";
-        case "SHOP":
-            return "shop";
-        case "ACTIVITIES":
-            return "activities";
-        case "PLAYGROUND":
-            return "playground";
-        default:
-            return e;
-    }
-}
-var h =
+    l = (((i = {}).ANY = "$any"), (i.ALL = "$all"), i),
+    o =
+        (((r = {}).USER_SETTINGS = "USER_SETTINGS"),
+        (r.CHANGELOG = "CHANGELOG"),
+        (r.LIBRARY = "LIBRARY"),
+        (r.STORE_HOME = "STORE_HOME"),
+        (r.STORE_LISTING = "STORE_LISTING"),
+        (r.CHANNEL = "CHANNEL"),
+        (r.GAME_SHOP = "GAME_SHOP"),
+        (r.PICK_GUILD_SETTINGS = "PICK_GUILD_SETTINGS"),
+        (r.QUEST_HOME = "QUEST_HOME"),
+        (r.DISCOVERY_GAME_RESULTS = "DISCOVERY_GAME_RESULTS"),
+        (r.OAUTH2 = "OAUTH2"),
+        (r.FEATURES = "FEATURES"),
+        (r.SHOP = "SHOP"),
+        (r.ACTIVITIES = "ACTIVITIES"),
+        (r.QUEST_PREVIEW_TOOL = "QUEST_PREVIEW_TOOL"),
+        (r.ONE_TIME_LOGIN = "ONE_TIME_LOGIN"),
+        (r.PLAYGROUND = "PLAYGROUND"),
+        r),
+    d =
         (((a = {})[(a.APPLICATION_NOT_FOUND = 101)] = "APPLICATION_NOT_FOUND"),
         (a[(a.DISK_LOW = 2022)] = "DISK_LOW"),
         (a[(a.DISK_PERMISSION_DENIED = 2025)] = "DISK_PERMISSION_DENIED"),
@@ -92,4 +44,50 @@ var h =
         (a[(a.INVALID_DRIVE = 2078)] = "INVALID_DRIVE"),
         (a[(a.DISK_FULL = 2080)] = "DISK_FULL"),
         a),
-    f = (((s = {}).IPC = "ipc"), (s.WEBSOCKET = "ws"), (s.HTTP = "http"), (s.POST_MESSAGE = "post_message"), s);
+    c = (((s = {}).IPC = "ipc"), (s.WEBSOCKET = "ws"), (s.HTTP = "http"), (s.POST_MESSAGE = "post_message"), s);
+n.d(
+    t,
+    {},
+    {
+        Hi: d,
+        LQ: "RPC_PRIVATE_SCOPE",
+        OE: function (e) {
+            switch (e) {
+                case "USER_SETTINGS":
+                    return "settings";
+                case "CHANGELOG":
+                    return "changelog";
+                case "LIBRARY":
+                    return "library";
+                case "STORE_HOME":
+                case "STORE_LISTING":
+                    return "store";
+                case "CHANNEL":
+                    return "channel";
+                case "PICK_GUILD_SETTINGS":
+                    return "guild_settings";
+                case "QUEST_HOME":
+                    return "quest_home";
+                case "QUEST_PREVIEW_TOOL":
+                    return "quest_preview_tool";
+                case "DISCOVERY_GAME_RESULTS":
+                    return "discovery_game";
+                case "SHOP":
+                    return "shop";
+                case "ACTIVITIES":
+                    return "activities";
+                case "PLAYGROUND":
+                    return "playground";
+                default:
+                    return e;
+            }
+        },
+        VH: "RPC_AUTHENTICATED_SCOPE",
+        W_: "RPC_EMBEDDED_APP_SCOPE",
+        XK: o,
+        hj: "RPC_LOCAL_SCOPE",
+        kw: "RPC_PRIVATE_LIMITED_SCOPE",
+        sm: l,
+        z4: c,
+    },
+);

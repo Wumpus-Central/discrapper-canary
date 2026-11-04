@@ -1,4 +1,4 @@
-(n.d(t, { Ao: () => c, id: () => _, mG: () => d }), n(321073));
+n(321073);
 var i,
     r,
     a = n(284009),
@@ -48,123 +48,132 @@ class u {
         );
     }
 }
-class _ {
-    trackedFeedItems;
-    _lastFlushTimeMillis;
-    _pausedFeedItemIds;
-    _paused;
-    _windowId;
-    _isReactNavigationFocused;
-    _id;
-    constructor({ id: e, windowId: t, isPaused: n }) {
-        ((this.trackedFeedItems = {}),
-            (this._id = e),
-            (this._windowId = t),
-            (this._pausedFeedItemIds = new Set()),
-            (this._paused = n ?? !1),
-            (this._isReactNavigationFocused = !0),
-            (this._lastFlushTimeMillis = Date.now()));
-    }
-    onInitialize;
-    onTerminate;
-    onFeedItemSeen;
-    onFeedItemUnseen;
-    initialize = () => {
-        (o.h.subscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen),
-            o.h.subscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen),
-            o.h.subscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush),
-            o.h.subscribe("APP_STATE_UPDATE", this.handleAppStateUpdate),
-            o.h.subscribe("WINDOW_FOCUS", this.handleWindowFocus),
-            this.onInitialize?.());
-    };
-    terminate = () => {
-        (o.h.unsubscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen),
-            o.h.unsubscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen),
-            o.h.unsubscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush),
-            o.h.unsubscribe("APP_STATE_UPDATE", this.handleAppStateUpdate),
-            o.h.unsubscribe("WINDOW_FOCUS", this.handleWindowFocus),
-            this.onTerminate?.(),
-            this.maybeFlushSeenItems(0));
-    };
-    handleFeedItemFlush = (e) => {
-        let { id: t, force: n } = e;
-        this._id === t && this.maybeFlushSeenItems(n);
-    };
-    async maybeFlushSeenItems(e) {
-        if (
-            (null == e && Date.now() - this._lastFlushTimeMillis < 6e4) ||
-            (1 === e && Date.now() - this._lastFlushTimeMillis < 3e3)
-        )
-            return;
-        let t = this.createFlushSeenItemsFunction(e);
-        if (null != t) {
-            if (((this._lastFlushTimeMillis = Date.now()), 0 === e || 1 === e)) return void (await t());
-            (await (0, l.yy)(100), await t());
-        }
-    }
-    handleFeedItemSeen = (e) => {
-        let t = e.id,
-            n = e.timestampMillis,
-            i = e.feedItemId;
-        if (t !== this._id) return;
-        if (this._paused) return void this._pausedFeedItemIds.add(i);
-        let r = this.getTrackedFeedItem(i).maybeMarkSeen(n);
-        this.onFeedItemSeen?.(i, r);
-    };
-    handleFeedItemUnseen = (e) => {
-        let t = e.id,
-            n = e.timestampMillis,
-            i = e.feedItemId;
-        if (t !== this._id) return;
-        this._paused && this._pausedFeedItemIds.delete(i);
-        let r = this.getTrackedFeedItem(i).maybeMarkUnseen(n);
-        (this.onFeedItemUnseen?.(i, r), this.maybeFlushSeenItems());
-    };
-    getTrackedFeedItem = (e) => (
-        null == this.trackedFeedItems[e] && (this.trackedFeedItems[e] = new u()),
-        this.trackedFeedItems[e]
-    );
-    getVisibleFeedItemIds = () =>
-        new Set(Object.keys(this.trackedFeedItems).filter((e) => this.trackedFeedItems[e]?.isVisible()));
-    handleAppStateUpdate = (e) => {
-        let { state: t } = e;
-        ("active" === t && this._isReactNavigationFocused && this.resume(),
-            "background" === t && (this._isReactNavigationFocused && this.pause(), this.maybeFlushSeenItems(0)));
-    };
-    clearPausedFeedItemIds = () => {
-        ((this._pausedFeedItemIds = new Set()), (this._paused = !1));
-    };
-    pause = () => {
-        if (this._paused) return;
-        let e = this.getVisibleFeedItemIds();
-        (e.forEach((e) => {
-            this.handleFeedItemUnseen({
-                id: this._id,
-                feedItemId: e,
-                timestampMillis: Date.now(),
-                type: "ANALYTICS_FEED_ITEM_UNSEEN",
-            });
-        }),
-            (this._paused = !0),
-            (this._pausedFeedItemIds = e));
-    };
-    resume = () => {
-        this._paused &&
-            ((this._paused = !1),
-            this._pausedFeedItemIds.forEach((e) => {
-                this.handleFeedItemSeen({
-                    id: this._id,
-                    feedItemId: e,
-                    timestampMillis: Date.now(),
-                    type: "ANALYTICS_FEED_ITEM_SEEN",
-                });
-            }),
-            this.clearPausedFeedItemIds());
-    };
-    handleReactNavigationFocus = (e) => {
-        ((this._isReactNavigationFocused = e), this._isReactNavigationFocused ? this.resume() : this.pause());
-    };
-    handleWindowFocus = (e) => {
-        this._windowId === e.windowId && (e.focused ? this.resume() : this.pause());
-    };
-}
+n.d(
+    t,
+    {},
+    {
+        Ao: c,
+        id: class {
+            trackedFeedItems;
+            _lastFlushTimeMillis;
+            _pausedFeedItemIds;
+            _paused;
+            _windowId;
+            _isReactNavigationFocused;
+            _id;
+            constructor({ id: e, windowId: t, isPaused: n }) {
+                ((this.trackedFeedItems = {}),
+                    (this._id = e),
+                    (this._windowId = t),
+                    (this._pausedFeedItemIds = new Set()),
+                    (this._paused = n ?? !1),
+                    (this._isReactNavigationFocused = !0),
+                    (this._lastFlushTimeMillis = Date.now()));
+            }
+            onInitialize;
+            onTerminate;
+            onFeedItemSeen;
+            onFeedItemUnseen;
+            initialize = () => {
+                (o.h.subscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen),
+                    o.h.subscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen),
+                    o.h.subscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush),
+                    o.h.subscribe("APP_STATE_UPDATE", this.handleAppStateUpdate),
+                    o.h.subscribe("WINDOW_FOCUS", this.handleWindowFocus),
+                    this.onInitialize?.());
+            };
+            terminate = () => {
+                (o.h.unsubscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen),
+                    o.h.unsubscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen),
+                    o.h.unsubscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush),
+                    o.h.unsubscribe("APP_STATE_UPDATE", this.handleAppStateUpdate),
+                    o.h.unsubscribe("WINDOW_FOCUS", this.handleWindowFocus),
+                    this.onTerminate?.(),
+                    this.maybeFlushSeenItems(0));
+            };
+            handleFeedItemFlush = (e) => {
+                let { id: t, force: n } = e;
+                this._id === t && this.maybeFlushSeenItems(n);
+            };
+            async maybeFlushSeenItems(e) {
+                if (
+                    (null == e && Date.now() - this._lastFlushTimeMillis < 6e4) ||
+                    (1 === e && Date.now() - this._lastFlushTimeMillis < 3e3)
+                )
+                    return;
+                let t = this.createFlushSeenItemsFunction(e);
+                if (null != t) {
+                    if (((this._lastFlushTimeMillis = Date.now()), 0 === e || 1 === e)) return void (await t());
+                    (await (0, l.yy)(100), await t());
+                }
+            }
+            handleFeedItemSeen = (e) => {
+                let t = e.id,
+                    n = e.timestampMillis,
+                    i = e.feedItemId;
+                if (t !== this._id) return;
+                if (this._paused) return void this._pausedFeedItemIds.add(i);
+                let r = this.getTrackedFeedItem(i).maybeMarkSeen(n);
+                this.onFeedItemSeen?.(i, r);
+            };
+            handleFeedItemUnseen = (e) => {
+                let t = e.id,
+                    n = e.timestampMillis,
+                    i = e.feedItemId;
+                if (t !== this._id) return;
+                this._paused && this._pausedFeedItemIds.delete(i);
+                let r = this.getTrackedFeedItem(i).maybeMarkUnseen(n);
+                (this.onFeedItemUnseen?.(i, r), this.maybeFlushSeenItems());
+            };
+            getTrackedFeedItem = (e) => (
+                null == this.trackedFeedItems[e] && (this.trackedFeedItems[e] = new u()),
+                this.trackedFeedItems[e]
+            );
+            getVisibleFeedItemIds = () =>
+                new Set(Object.keys(this.trackedFeedItems).filter((e) => this.trackedFeedItems[e]?.isVisible()));
+            handleAppStateUpdate = (e) => {
+                let { state: t } = e;
+                ("active" === t && this._isReactNavigationFocused && this.resume(),
+                    "background" === t &&
+                        (this._isReactNavigationFocused && this.pause(), this.maybeFlushSeenItems(0)));
+            };
+            clearPausedFeedItemIds = () => {
+                ((this._pausedFeedItemIds = new Set()), (this._paused = !1));
+            };
+            pause = () => {
+                if (this._paused) return;
+                let e = this.getVisibleFeedItemIds();
+                (e.forEach((e) => {
+                    this.handleFeedItemUnseen({
+                        id: this._id,
+                        feedItemId: e,
+                        timestampMillis: Date.now(),
+                        type: "ANALYTICS_FEED_ITEM_UNSEEN",
+                    });
+                }),
+                    (this._paused = !0),
+                    (this._pausedFeedItemIds = e));
+            };
+            resume = () => {
+                this._paused &&
+                    ((this._paused = !1),
+                    this._pausedFeedItemIds.forEach((e) => {
+                        this.handleFeedItemSeen({
+                            id: this._id,
+                            feedItemId: e,
+                            timestampMillis: Date.now(),
+                            type: "ANALYTICS_FEED_ITEM_SEEN",
+                        });
+                    }),
+                    this.clearPausedFeedItemIds());
+            };
+            handleReactNavigationFocus = (e) => {
+                ((this._isReactNavigationFocused = e), this._isReactNavigationFocused ? this.resume() : this.pause());
+            };
+            handleWindowFocus = (e) => {
+                this._windowId === e.windowId && (e.focused ? this.resume() : this.pause());
+            };
+        },
+        mG: d,
+    },
+);

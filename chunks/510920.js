@@ -1,1 +1,1 @@
-p.exports = { dc: "spinnerContainer__6efa2", jK: "emptyArt__6efa2" };
+p.exports = { dc: "spinnerContainer_VAgy6F", jK: "emptyArt_VAgy6F" };

@@ -1,30 +1,29 @@
-t.d(i, { A: () => T, V: () => C });
 var n = t(477900),
     l = t(582128),
     s = t(503698),
     r = t.n(s),
-    a = t(17928),
+    a = t(855986),
     u = t(97808),
     o = t(935154),
     d = t(890856),
-    A = t(960076),
-    c = t(793574),
+    c = t(960076),
+    A = t(793574),
     h = t(688810),
     p = t(178418),
     g = t(290863),
-    m = t(24482),
-    f = t(19575),
-    v = t(183555),
-    I = t(146655),
-    M = t(854627),
-    R = t(939496),
-    b = t(305385),
+    m = t(879610),
+    v = t(253400),
+    f = t(183555),
+    M = t(146655),
+    R = t(854627),
+    b = t(939496),
+    I = t(305385),
     y = t(518477),
     E = t(652215),
-    w = t(202541),
-    N = t(105292),
+    w = t(682901),
+    N = t(792996),
     V = t(329801);
-let O = f.Ay.getEnableHardwareAcceleration() ? u.Js : u.eu;
+let O = v.Ay.getEnableHardwareAcceleration() ? u.Js : u.eu;
 function C(e) {
     let {
             user: i,
@@ -34,78 +33,89 @@ function C(e) {
             avatarSize: r,
             animateOnHover: u,
             previewStatus: d,
-            avatarDecorationOverride: c,
+            avatarDecorationOverride: A,
             avatarOverride: h,
         } = e,
-        { theme: f } = (0, R.E)(),
-        v = m.Ay.isPremiumAtLeast(t?.premiumType, w.PremiumTypes.TIER_2),
-        b = l.useMemo(() => i.isNonUserBot() || (0, p.c)(i, s), [i, s]),
-        { live: N } = (0, I.A)(i.id),
-        [V] = N,
+        { theme: v } = (0, b.E)(),
+        f = m.Ay.isPremiumAtLeast(t?.premiumType, w.PremiumTypes.TIER_2),
+        I = l.useMemo(() => i.isNonUserBot() || (0, p.c)(i, s), [i, s]),
+        { live: y } = (0, M.A)(i.id),
+        [N] = y,
         {
-            status: O,
-            isMobileOnline: C,
-            isVROnline: T,
+            status: V,
+            isMobileOnline: O,
+            isVROnline: C,
         } = (0, a.cf)([g.A], () => ({
-            status: (0, A.A)(V) ? E.clD.STREAMING : g.A.getStatus(i.id),
+            status: (0, c.A)(N) ? E.clD.STREAMING : g.A.getStatus(i.id),
             isMobileOnline: g.A.isMobileOnline(i.id),
             isVROnline: g.A.isVROnline(i.id),
         })),
         {
-            avatarDecorationSrc: P,
-            avatarSrc: _,
-            eventHandlers: k,
-            isAnimating: x,
-        } = (0, M.A)({
+            avatarDecorationSrc: T,
+            avatarSrc: P,
+            eventHandlers: _,
+            isAnimating: k,
+        } = (0, R.A)({
             userId: i.id,
             guildId: null != t ? t.guildId : n,
             size: r,
             animateOnHover: u,
-            avatarDecorationOverride: c,
+            avatarDecorationOverride: A,
             avatarOverride: h,
         });
     return {
         avatarProps: {
-            src: _,
-            avatarDecoration: P,
+            src: P,
+            avatarDecoration: T,
             size: r,
             "aria-label": i.username,
-            status: b ? E.clD.UNKNOWN : void 0 !== d ? d : O,
-            statusBackdropColor: v && !b ? (0, o.C$)(f) : void 0,
-            isMobile: C,
-            isVR: T,
+            status: I ? E.clD.UNKNOWN : void 0 !== d ? d : V,
+            statusBackdropColor: f && !I ? (0, o.C$)(v) : void 0,
+            isMobile: O,
+            isVR: C,
             statusTooltip: !0,
-            statusTooltipDelay: y.In,
+            statusTooltipDelay: 300,
         },
-        eventHandlers: k,
-        isAnimating: x,
+        eventHandlers: _,
+        isAnimating: k,
     };
 }
-function T(e) {
-    let { onOpenProfile: i, onOpenAvatar: t, className: l, imageAnimatingClassName: s, ...a } = e,
-        { analyticsLocations: u } = (0, h.Ay)(c.A.AVATAR),
-        { trackUserProfileAction: o } = (0, v.NJ)(),
-        { avatarProps: A, eventHandlers: p, isAnimating: g } = C(a),
-        m = r()(V.my, l),
-        f = a.displayProfile?.guildId ?? a.guildId,
-        I = null != a.user.avatar || a.user.hasAvatarForGuild(f) ? t : void 0;
-    return null == i && null == I
-        ? (0, n.jsx)("div", { ...p, className: m, children: (0, n.jsx)(O, { ...A, imageClassName: g ? s : void 0 }) })
-        : (0, n.jsx)(d.s, {
-              "aria-label": N.intl.string(null != I ? N.t.xB7MI3 : N.t["+Xp3hq"]),
-              ...p,
-              onMouseEnter: function () {
-                  (p.onMouseEnter(), null != I && (0, b.V)({ user: a.user, guildId: f }));
-              },
-              className: r()(m, V.vk),
-              focusProps: { ringClassName: V.Rg },
-              onClick: () => {
-                  if (null != I) {
-                      (o({ action: y.pt.VIEW_AVATAR, analyticsLocations: u }), I());
-                      return;
-                  }
-                  (o({ action: y.pt.PRESS_VIEW_PROFILE, analyticsLocations: u }), i?.());
-              },
-              children: (0, n.jsx)(O, { ...A, imageClassName: r()(V.Lw, g && s) }),
-          });
-}
+t.d(
+    i,
+    {},
+    {
+        A: function (e) {
+            let { onOpenProfile: i, onOpenAvatar: t, className: l, imageAnimatingClassName: s, ...a } = e,
+                { analyticsLocations: u } = (0, h.Ay)(A.A.AVATAR),
+                { trackUserProfileAction: o } = (0, f.NJ)(),
+                { avatarProps: c, eventHandlers: p, isAnimating: g } = C(a),
+                m = r()(V.my, l),
+                v = a.displayProfile?.guildId ?? a.guildId,
+                M = null != a.user.avatar || a.user.hasAvatarForGuild(v) ? t : void 0;
+            return null == i && null == M
+                ? (0, n.jsx)("div", {
+                      ...p,
+                      className: m,
+                      children: (0, n.jsx)(O, { ...c, imageClassName: g ? s : void 0 }),
+                  })
+                : (0, n.jsx)(d.s, {
+                      "aria-label": N.intl.string(null != M ? N.t.xB7MI3 : N.t["+Xp3hq"]),
+                      ...p,
+                      onMouseEnter: function () {
+                          (p.onMouseEnter(), null != M && (0, I.V)({ user: a.user, guildId: v }));
+                      },
+                      className: r()(m, V.vk),
+                      focusProps: { ringClassName: V.Rg },
+                      onClick: () => {
+                          if (null != M) {
+                              (o({ action: y.pt.VIEW_AVATAR, analyticsLocations: u }), M());
+                              return;
+                          }
+                          (o({ action: y.pt.PRESS_VIEW_PROFILE, analyticsLocations: u }), i?.());
+                      },
+                      children: (0, n.jsx)(O, { ...c, imageClassName: r()(V.Lw, g && s) }),
+                  });
+        },
+        V: C,
+    },
+);

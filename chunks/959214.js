@@ -1,9 +1,9 @@
-_.exports = {
-    Qs: "content__38377",
-    wm: "logo__38377",
-    DD: "title__38377",
-    h_: "description__38377",
-    kz: "formItem__38377",
-    qr: "footer__38377",
-    _o: "buttonWrapper__38377",
+s.exports = {
+    Qs: "content_gW5-F4",
+    wm: "logo_gW5-F4",
+    DD: "title_gW5-F4",
+    h_: "description_gW5-F4",
+    kz: "formItem_gW5-F4",
+    qr: "footer_gW5-F4",
+    _o: "buttonWrapper_gW5-F4",
 };

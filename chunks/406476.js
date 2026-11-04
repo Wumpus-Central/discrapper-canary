@@ -1,6 +1,6 @@
-e.exports = {
-    pS: "quantitySelectorBody__0f8ce",
-    TH: "quantitySelectorDescription__0f8ce",
-    g9: "quantitySelectorWrapper__0f8ce",
-    v$: "quantitySelectorLabel__0f8ce",
+r.exports = {
+    pS: "quantitySelectorBody_T4asAA",
+    TH: "quantitySelectorDescription_T4asAA",
+    g9: "quantitySelectorWrapper_T4asAA",
+    v$: "quantitySelectorLabel_T4asAA",
 };

@@ -1,5 +1,4 @@
-n.d(t, { A: () => O, z: () => u });
-var c = n(702841),
+var c = n(164636),
     r = n(253932),
     i = n(576705),
     E = n(652215);
@@ -14,7 +13,14 @@ function O(e, t) {
             return !1;
     }
 }
-function u(e) {
-    let t = (0, c.bG)([i.A], () => i.A.can(E.xBc.MANAGE_MESSAGES, e));
-    return !O(r.gs.useSetting(), t);
-}
+n.d(
+    t,
+    {},
+    {
+        A: O,
+        z: function (e) {
+            let t = (0, c.bG)([i.A], () => i.A.can(E.xBc.MANAGE_MESSAGES, e));
+            return !O(r.gs.useSetting(), t);
+        },
+    },
+);

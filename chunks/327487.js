@@ -1,25 +1,3 @@
-d.d(t, {
-    _: () => M,
-    a: () => S,
-    b: () => W,
-    c: () => T,
-    d: () => D,
-    f: () => z,
-    g: () => N,
-    h: () => p,
-    i: () => O,
-    l: () => C,
-    m: () => r,
-    n: () => U,
-    o: () => R,
-    p: () => Y,
-    r: () => J,
-    s: () => j,
-    t: () => F,
-    u: () => g,
-    v: () => X,
-    y: () => G,
-});
 var i = d(522681),
     e = d(41851),
     c = d(528239),
@@ -298,84 +276,9 @@ async function N(l) {
 async function M(l) {
     return (await e.t.post(c.t.recordingStopV2, { videoRecordingId: l })).data;
 }
-async function X(l, t) {
-    try {
-        return (
-            (
-                await e.t.post(
-                    c.t.deepsightVideoImport,
-                    { video: l, type: "selfie" },
-                    { headers: { "X-Incode-Hardware-Id": t } },
-                )
-            ).data.recordingId ?? ""
-        );
-    } catch {
-        return "";
-    }
-}
-async function r({
-    encryptedBase64Image: l,
-    faceCoordinates: t,
-    signal: d,
-    metadata: i,
-    recordingId: s,
-    imageType: n = "selfie",
-    deepsightService: Z,
-}) {
-    try {
-        let b = {
-                base64Image: l,
-                faceCoordinates: t ?? void 0,
-                encrypted: !0,
-                clientInfo: { deviceClass: (0, o.t)() },
-                metadata: i ?? void 0,
-            },
-            m = { imageType: n };
-        s && (m.recordingId = s);
-        let u = await e.t.post(c.t.selfie, b, { signal: d, query: m });
-        if (!u.ok) throw Error(`POST ${c.t.selfie} failed: ${u.status} ${u.statusText}`);
-        return (
-            Z &&
-                (0, a.t)({
-                    frontIdStatsAnalysisStatus: "",
-                    backIdStatsAnalysisStatus: "",
-                    selfieStatsAnalysisStatus: Z.getAnalysisStatus(),
-                    motionStatus: Z.getMotionStatus(),
-                }),
-            u.data
-        );
-    } catch (t) {
-        let l = y(t);
-        if (l) throw Error(l);
-        throw Error(u.t.SERVER);
-    }
-}
-let y = (l) => {
-    if (!1 === l.ok && "number" == typeof l.status)
-        return 400 !== l.status
-            ? u.t.SERVER
-            : "number" != typeof l.data?.status
-              ? u.t.BAD_REQUEST
-              : ({
-                    3004: u.t.FACE_NOT_FOUND,
-                    3005: u.t.FACE_NOT_FOUND,
-                    3006: u.t.TOO_BLURRY,
-                    3007: u.t.TOO_DARK,
-                    4010: u.t.MULTIPLE_FACES,
-                    4019: u.t.FACE_NOT_FOUND,
-                    4077: u.t.BAD_PHOTO_QUALITY,
-                    4078: u.t.FACE_OCCLUDED,
-                }[l.data.status] ?? u.t.BAD_REQUEST);
-};
-async function Y(l = "selfie", t) {
-    return (await e.t.post(c.t.processFace, {}, { query: { imageType: l }, signal: t })).data;
-}
-function T() {
-    return (0, a.t)({ cameraLabelInspectionStatus: "FAIL" });
-}
-let V = { video: { facingMode: "user", height: { ideal: 480 }, width: { ideal: 640 } }, audio: !1 },
-    L = { video: { height: { ideal: 1080 } }, audio: !1 };
-function I(l, t) {
+let r = { video: { facingMode: "user", height: { ideal: 480 }, width: { ideal: 640 } }, audio: !1 },
+    X = { video: { height: { ideal: 1080 } }, audio: !1 };
+function y(l, t) {
     return l
         ? {
               video: {
@@ -387,194 +290,293 @@ function I(l, t) {
               audio: !1,
           }
         : (0, s.a)()
-          ? L
-          : V;
+          ? X
+          : r;
 }
-function z(l) {
-    (0, n.a)(l);
-}
-async function w(l) {
-    return (0, s.n)()
-        ? l
-            ? (0, m.t)((t) => (0, n.r)(I(l, t)))
-            : (0, m.t)((l) => (0, m.r)(l ? { deviceId: l } : {}))
-        : (0, n.r)(l ? I(l) : I());
-}
-async function R(l) {
-    let { config: t } = l,
-        d = I(t.cameraResolution),
-        i = new W();
-    return (
-        await i.initialize({
-            autocaptureInterval: U(t) ? 0x7fffffff : 1e3 * t.autoCaptureTimeout,
-            useOnDeviceWorkflow: !0 === t.onDeviceFaceResultsSubmissionEnabled,
-        }),
-        i.setChecksEnabled({
-            lenses: t.validateLenses ?? !1,
-            mask: t.validateFaceMask ?? !1,
-            closedEyes: t.validateClosedEyes ?? !1,
-            headWear: t.validateHeadCover ?? !1,
-            occlusion: !1,
-        }),
-        await l.deepsightService.performPrcCheck({ constraints: { video: d.video } }),
-        { stream: t.assistedOnboarding ? (await (0, m.n)()).stream : await w(t.cameraResolution), provider: i }
-    );
-}
-async function S({ canvas: l, dependencies: t }) {
+async function Y({ canvas: l, dependencies: t }) {
     let d = l.getBase64Image();
     if (!d) throw Error("Canvas image is empty or null");
     return (await t.getWasmUtil()).encryptImage(d);
 }
-function C(l) {
-    let t,
-        d,
-        { provider: i } = l,
-        e = (i) => {
-            d?.isDisposed() === !0 || (t !== i && ((t = i), l.onUpdate(i)));
+let T = (l) => !0 === l.onDeviceFaceResultsSubmissionEnabled;
+d.d(
+    t,
+    {},
+    {
+        _: M,
+        a: Y,
+        b: W,
+        c: function () {
+            return (0, a.t)({ cameraLabelInspectionStatus: "FAIL" });
         },
-        c = () => {
-            d?.dispose();
-        },
-        a = () => {
-            c();
-        };
-    return (
-        (async () => {
+        d: async function (l) {
             try {
-                (i.setCallbacks({
-                    onFarAway: () => e("tooFar"),
-                    onTooClose: () => e("tooClose"),
-                    onTooManyFaces: () => e("tooManyFaces"),
-                    onNoFace: () => e("idle"),
-                    onCenterFace: () => e("centerFace"),
-                    onGetReady: () => e("getReady"),
-                    onGetReadyFinished: () => e("getReadyFinished"),
-                    onDark: () => {
-                        l.config.validateBrightness && e("dark");
-                    },
-                    onBlur: () => e("blur"),
-                    onFaceAngle: () => e("faceAngle"),
-                    onLenses: () => {
-                        l.config.validateLenses && e("lenses");
-                    },
-                    onMask: () => {
-                        l.config.validateFaceMask && e("faceMask");
-                    },
-                    onEyesClosed: () => {
-                        l.config.validateClosedEyes && e("eyesClosed");
-                    },
-                    onHeadWear: () => {
-                        l.config.validateHeadCover && e("headWear");
-                    },
-                    onFaceOccluded: () => e("faceOcclusion"),
-                    onFaceData: l.onPose,
-                    onSwitchToManualCapture: () => {
-                        (e("manualCapture"), c());
-                    },
-                    onCapture: (t, d) => {
-                        (e("success"), l.onSuccess(t, d), a());
-                    },
-                }),
-                    e("detecting"),
-                    (d = new G({ capturer: l.capturer, provider: i, onFrame: l.onFrame })));
-            } catch {
-                (e("error"), a());
+                await M(l.videoRecordingId);
+            } finally {
+                await l.connection.disconnect();
             }
-        })(),
-        {
-            cleanup: a,
-            reset: () => {
-                i.reset();
-            },
-        }
-    );
-}
-async function x() {
-    let { OpenViduRecordingProvider: l } = await Promise.all([d.e("655205"), d.e("684344")]).then(d.bind(d, 878635));
-    return new l();
-}
-async function g(l) {
-    if ("VIDEOLIVENESS" === l.config.deepsightLiveness || !0 !== l.config.enableFaceRecording) return;
-    if (l.existing) return l.existing;
-    let t = l.config.recording?.capability ?? (await x()),
-        d = l.clonedStream,
-        i = d.getAudioTracks().length > 0,
-        e = (function (l) {
-            let t = l.getVideoTracks()[0];
-            if (!t) return;
-            let d = t.getSettings(),
-                i = d.width,
-                e = d.height;
-            if ("number" == typeof i && "number" == typeof e) return `${i}x${e}`;
-        })(d),
-        c = await p("selfie"),
-        a = await t.connect({ sessionToken: c.token, stream: d, events: {} });
-    return (
-        await N({ videoRecordingId: c.videoRecordingId, type: "selfie", resolution: e, hasAudio: i }),
-        {
-            token: c.token,
-            sessionId: c.sessionId,
-            videoRecordingId: c.videoRecordingId,
-            connection: a,
-            resolution: e,
-            hasAudio: i,
-        }
-    );
-}
-async function D(l) {
-    try {
-        await M(l.videoRecordingId);
-    } finally {
-        await l.connection.disconnect();
-    }
-}
-async function j(l) {
-    let { loadDeepsightSession: t } = await d.e("234370").then(d.bind(d, 307289));
-    return t({ ds: l.ds, storage: l.storage });
-}
-let U = (l) => !0 === l.onDeviceFaceResultsSubmissionEnabled;
-async function F(l) {
-    let t = (0, e.r)(),
-        d = (await l.recordingService?.stop())?.recordingId ?? null;
-    try {
-        l.deepsightService &&
-            (await Promise.all([
-                l.deepsightService.performVirtualCameraCheck(t, "SELFIE"),
-                l.deepsightService.analyzeFrame(l.capturedImage.getImageData()),
-            ]));
-    } catch (l) {}
-    let i = l.deepsightService?.getPipelineState() ?? "";
-    return (
-        l.dependencies.trackCaptureAttemptFinished?.({ logs: i }),
-        { encryptedBase64Image: await S({ canvas: l.capturedImage, dependencies: l.dependencies }), recordingId: d }
-    );
-}
-async function O(l) {
-    if (!l.capturedImage) throw Error("On-device capture requires a captured image canvas");
-    if (!l.provider) throw Error("On-device capture requires the FaceDetectionProvider to be initialized");
-    return (
-        l.manualCaptureTriggered &&
-            (await new Promise((l) => {
-                let t = !1,
-                    d = () => {
-                        t || ((t = !0), l());
-                    };
-                ("function" == typeof requestAnimationFrame &&
-                    requestAnimationFrame(() => {
-                        requestAnimationFrame(() => {
-                            setTimeout(d, 0);
-                        });
+        },
+        f: function (l) {
+            (0, n.a)(l);
+        },
+        g: N,
+        h: p,
+        i: async function (l) {
+            if (!l.capturedImage) throw Error("On-device capture requires a captured image canvas");
+            if (!l.provider) throw Error("On-device capture requires the FaceDetectionProvider to be initialized");
+            return (
+                l.manualCaptureTriggered &&
+                    (await new Promise((l) => {
+                        let t = !1,
+                            d = () => {
+                                t || ((t = !0), l());
+                            };
+                        ("function" == typeof requestAnimationFrame &&
+                            requestAnimationFrame(() => {
+                                requestAnimationFrame(() => {
+                                    setTimeout(d, 0);
+                                });
+                            }),
+                            setTimeout(d, 100));
                     }),
-                    setTimeout(d, 100));
-            }),
-            await (0, Z.t)(350),
-            l.provider.processPhoto(l.capturedImage.canvas)),
-        { encryptedBase64Image: "", recordingId: null }
-    );
-}
-async function J(l, t) {
-    let d = l.provider;
-    if (!d) throw Error("On-device upload requires the FaceDetectionProvider to be initialized");
-    let i = (0, e.r)();
-    return (await d.postFaceResults({ headers: i ? { "X-Incode-Hardware-Id": i } : void 0, timeout: 3e4 })) ?? {};
-}
+                    await (0, Z.t)(350),
+                    l.provider.processPhoto(l.capturedImage.canvas)),
+                { encryptedBase64Image: "", recordingId: null }
+            );
+        },
+        l: function (l) {
+            let t,
+                d,
+                { provider: i } = l,
+                e = (i) => {
+                    d?.isDisposed() === !0 || (t !== i && ((t = i), l.onUpdate(i)));
+                },
+                c = () => {
+                    d?.dispose();
+                },
+                a = () => {
+                    c();
+                };
+            return (
+                (async () => {
+                    try {
+                        (i.setCallbacks({
+                            onFarAway: () => e("tooFar"),
+                            onTooClose: () => e("tooClose"),
+                            onTooManyFaces: () => e("tooManyFaces"),
+                            onNoFace: () => e("idle"),
+                            onCenterFace: () => e("centerFace"),
+                            onGetReady: () => e("getReady"),
+                            onGetReadyFinished: () => e("getReadyFinished"),
+                            onDark: () => {
+                                l.config.validateBrightness && e("dark");
+                            },
+                            onBlur: () => e("blur"),
+                            onFaceAngle: () => e("faceAngle"),
+                            onLenses: () => {
+                                l.config.validateLenses && e("lenses");
+                            },
+                            onMask: () => {
+                                l.config.validateFaceMask && e("faceMask");
+                            },
+                            onEyesClosed: () => {
+                                l.config.validateClosedEyes && e("eyesClosed");
+                            },
+                            onHeadWear: () => {
+                                l.config.validateHeadCover && e("headWear");
+                            },
+                            onFaceOccluded: () => e("faceOcclusion"),
+                            onFaceData: l.onPose,
+                            onSwitchToManualCapture: () => {
+                                (e("manualCapture"), c());
+                            },
+                            onCapture: (t, d) => {
+                                (e("success"), l.onSuccess(t, d), a());
+                            },
+                        }),
+                            e("detecting"),
+                            (d = new G({ capturer: l.capturer, provider: i, onFrame: l.onFrame })));
+                    } catch {
+                        (e("error"), a());
+                    }
+                })(),
+                {
+                    cleanup: a,
+                    reset: () => {
+                        i.reset();
+                    },
+                }
+            );
+        },
+        m: async function ({
+            encryptedBase64Image: l,
+            faceCoordinates: t,
+            signal: d,
+            metadata: i,
+            recordingId: s,
+            imageType: n = "selfie",
+            deepsightService: Z,
+        }) {
+            try {
+                let b = {
+                        base64Image: l,
+                        faceCoordinates: t ?? void 0,
+                        encrypted: !0,
+                        clientInfo: { deviceClass: (0, o.t)() },
+                        metadata: i ?? void 0,
+                    },
+                    m = { imageType: n };
+                s && (m.recordingId = s);
+                let u = await e.t.post(c.t.selfie, b, { signal: d, query: m });
+                if (!u.ok) throw Error(`POST ${c.t.selfie} failed: ${u.status} ${u.statusText}`);
+                return (
+                    Z &&
+                        (0, a.t)({
+                            frontIdStatsAnalysisStatus: "",
+                            backIdStatsAnalysisStatus: "",
+                            selfieStatsAnalysisStatus: Z.getAnalysisStatus(),
+                            motionStatus: Z.getMotionStatus(),
+                        }),
+                    u.data
+                );
+            } catch (t) {
+                let l = ((l) => {
+                    if (!1 === l.ok && "number" == typeof l.status)
+                        return 400 !== l.status
+                            ? u.t.SERVER
+                            : "number" != typeof l.data?.status
+                              ? u.t.BAD_REQUEST
+                              : ({
+                                    3004: u.t.FACE_NOT_FOUND,
+                                    3005: u.t.FACE_NOT_FOUND,
+                                    3006: u.t.TOO_BLURRY,
+                                    3007: u.t.TOO_DARK,
+                                    4010: u.t.MULTIPLE_FACES,
+                                    4019: u.t.FACE_NOT_FOUND,
+                                    4077: u.t.BAD_PHOTO_QUALITY,
+                                    4078: u.t.FACE_OCCLUDED,
+                                }[l.data.status] ?? u.t.BAD_REQUEST);
+                })(t);
+                if (l) throw Error(l);
+                throw Error(u.t.SERVER);
+            }
+        },
+        n: T,
+        o: async function (l) {
+            let { config: t } = l,
+                d = y(t.cameraResolution),
+                i = new W();
+            return (
+                await i.initialize({
+                    autocaptureInterval: T(t) ? 0x7fffffff : 1e3 * t.autoCaptureTimeout,
+                    useOnDeviceWorkflow: !0 === t.onDeviceFaceResultsSubmissionEnabled,
+                }),
+                i.setChecksEnabled({
+                    lenses: t.validateLenses ?? !1,
+                    mask: t.validateFaceMask ?? !1,
+                    closedEyes: t.validateClosedEyes ?? !1,
+                    headWear: t.validateHeadCover ?? !1,
+                    occlusion: !1,
+                }),
+                await l.deepsightService.performPrcCheck({ constraints: { video: d.video } }),
+                {
+                    stream: t.assistedOnboarding
+                        ? (await (0, m.n)()).stream
+                        : await (async function (l) {
+                              return (0, s.n)()
+                                  ? l
+                                      ? (0, m.t)((t) => (0, n.r)(y(l, t)))
+                                      : (0, m.t)((l) => (0, m.r)(l ? { deviceId: l } : {}))
+                                  : (0, n.r)(l ? y(l) : y());
+                          })(t.cameraResolution),
+                    provider: i,
+                }
+            );
+        },
+        p: async function (l = "selfie", t) {
+            return (await e.t.post(c.t.processFace, {}, { query: { imageType: l }, signal: t })).data;
+        },
+        r: async function (l, t) {
+            let d = l.provider;
+            if (!d) throw Error("On-device upload requires the FaceDetectionProvider to be initialized");
+            let i = (0, e.r)();
+            return (
+                (await d.postFaceResults({ headers: i ? { "X-Incode-Hardware-Id": i } : void 0, timeout: 3e4 })) ?? {}
+            );
+        },
+        s: async function (l) {
+            let { loadDeepsightSession: t } = await d.e(234370).then(d.bind(d, 307289));
+            return t({ ds: l.ds, storage: l.storage });
+        },
+        t: async function (l) {
+            let t = (0, e.r)(),
+                d = (await l.recordingService?.stop())?.recordingId ?? null;
+            try {
+                l.deepsightService &&
+                    (await Promise.all([
+                        l.deepsightService.performVirtualCameraCheck(t, "SELFIE"),
+                        l.deepsightService.analyzeFrame(l.capturedImage.getImageData()),
+                    ]));
+            } catch (l) {}
+            let i = l.deepsightService?.getPipelineState() ?? "";
+            return (
+                l.dependencies.trackCaptureAttemptFinished?.({ logs: i }),
+                {
+                    encryptedBase64Image: await Y({ canvas: l.capturedImage, dependencies: l.dependencies }),
+                    recordingId: d,
+                }
+            );
+        },
+        u: async function (l) {
+            if ("VIDEOLIVENESS" === l.config.deepsightLiveness || !0 !== l.config.enableFaceRecording) return;
+            if (l.existing) return l.existing;
+            let t =
+                    l.config.recording?.capability ??
+                    (await (async function () {
+                        let { OpenViduRecordingProvider: l } = await Promise.all([d.e(655205), d.e(684344)]).then(
+                            d.bind(d, 878635),
+                        );
+                        return new l();
+                    })()),
+                i = l.clonedStream,
+                e = i.getAudioTracks().length > 0,
+                c = (function (l) {
+                    let t = l.getVideoTracks()[0];
+                    if (!t) return;
+                    let d = t.getSettings(),
+                        i = d.width,
+                        e = d.height;
+                    if ("number" == typeof i && "number" == typeof e) return `${i}x${e}`;
+                })(i),
+                a = await p("selfie"),
+                s = await t.connect({ sessionToken: a.token, stream: i, events: {} });
+            return (
+                await N({ videoRecordingId: a.videoRecordingId, type: "selfie", resolution: c, hasAudio: e }),
+                {
+                    token: a.token,
+                    sessionId: a.sessionId,
+                    videoRecordingId: a.videoRecordingId,
+                    connection: s,
+                    resolution: c,
+                    hasAudio: e,
+                }
+            );
+        },
+        v: async function (l, t) {
+            try {
+                return (
+                    (
+                        await e.t.post(
+                            c.t.deepsightVideoImport,
+                            { video: l, type: "selfie" },
+                            { headers: { "X-Incode-Hardware-Id": t } },
+                        )
+                    ).data.recordingId ?? ""
+                );
+            } catch {
+                return "";
+            }
+        },
+        y: G,
+    },
+);

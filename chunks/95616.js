@@ -1,14 +1,13 @@
-i.d(t, { default: () => g });
 var n = i(477900);
 i(582128);
-var r = i(980707),
+var r = i(165862),
     l = i(477782),
     a = i(442433),
     d = i(847767),
     s = i(358367),
     o = i(793574),
     c = i(886393),
-    A = i(868548),
+    A = i(511904),
     E = i(995102),
     h = i(288104),
     u = i(50268),
@@ -16,8 +15,8 @@ var r = i(980707),
     N = i(708653),
     _ = i(297460),
     C = i(652215),
-    T = i(105292),
-    X = i(291185);
+    T = i(792996),
+    X = i(307805);
 let g = (0, s.A)(
     (0, d.A)(
         function (e) {
@@ -46,3 +45,4 @@ let g = (0, s.A)(
     ),
     [o.A.CONTEXT_MENU, o.A.OVERLAY, o.A.REPORT_TO_MOD_CHANNEL_CONTEXT_MENU],
 );
+i.d(t, {}, { default: g });

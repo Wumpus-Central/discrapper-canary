@@ -1,4 +1,3 @@
-s.d(a, { p: () => t });
 let t = {
     ada: {
         languageId: "ada",
@@ -666,3 +665,4 @@ let t = {
         highlights: new URL(s(913547), s.b),
     },
 };
+s.d(a, {}, { p: t });

@@ -1,8 +1,7 @@
-i.exports = {
-    Wi: "descriptionWrapper__43963",
-    Sv: "subText__43963",
-    q3: "indicator__43963",
-    Zn: "defaultIndicator__43963 indicator__43963",
-    NV: "premiumIndicator__43963 indicator__43963",
-    tG: "invalidIndicator__43963 indicator__43963",
+r.exports = {
+    Wi: "descriptionWrapper_OrFQq1",
+    Sv: "subText_OrFQq1",
+    Zn: "defaultIndicator_OrFQq1 indicator_OrFQq1",
+    NV: "premiumIndicator_OrFQq1 indicator_OrFQq1",
+    tG: "invalidIndicator_OrFQq1 indicator_OrFQq1",
 };

@@ -1,4 +1,3 @@
-n.d(t, { I: () => r });
 var i,
     r =
         (((i = {}).INVITE = "INVITE"),
@@ -25,3 +24,4 @@ var i,
         (i.USER_PROFILE = "USER_PROFILE"),
         (i.GAME_ORGANIZATION_INVITE = "GAME_ORGANIZATION_INVITE"),
         i);
+n.d(t, {}, { I: r });

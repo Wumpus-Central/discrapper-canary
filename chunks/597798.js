@@ -1,0 +1,187 @@
+(n.r(t), n.d(t, { default: () => U }));
+var i = n(73153),
+    r = n(323073),
+    a = n(433061),
+    s = n(643501),
+    l = n(574172),
+    o = n(976860),
+    d = n(288254),
+    c = n(734057),
+    u = n(718197),
+    _ = n(115560),
+    E = n(192308),
+    A = n(890615),
+    h = n(51758),
+    f = n(776781),
+    I = n(96566),
+    p = n(854325),
+    m = n(149468),
+    T = n(329551),
+    g = n(912630),
+    S = n(965162),
+    N = n(495867),
+    C = n(309010),
+    O = n(287809),
+    R = n(446685),
+    L = n(71393),
+    y = n(834942),
+    D = n(576705),
+    b = n(977997),
+    v = n(147036);
+let P = { fromGuildId: void 0, fromChannelId: void 0 };
+var M = n(652215);
+let U = {
+    selectChannel(e) {
+        let {
+                guildId: t,
+                channelId: n,
+                messageId: r,
+                jumpType: a,
+                source: s,
+                skipMessageFetch: l,
+                opensChannel: o,
+                isAppStartupNavigation: d,
+            } = e,
+            { fromGuildId: c, fromChannelId: u } = P;
+        i.h.dispatch({
+            type: "CHANNEL_SELECT",
+            guildId: t === M.ME ? null : t,
+            channelId: n,
+            fromGuildId: c,
+            fromChannelId: u,
+            messageId: r,
+            jumpType: a,
+            source: s,
+            skipMessageFetch: l,
+            opensChannel: o,
+            isAppStartupNavigation: d,
+        });
+    },
+    selectPrivateChannel(e) {
+        (0, o.pX)(M.BVt.CHANNEL(M.ME, e));
+    },
+    selectVoiceChannel(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+            s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+            l = c.A.getChannel(e),
+            P = l?.getGuildId();
+        l?.isGuildVocalOrThread() && ((0, r.qR)(l) || (0, d.BV)(l))
+            ? (0, o.pX)(M.BVt.CHANNEL(P, e))
+            : u.Ay.isSupported() &&
+              (null != e && u.Ay.getMediaEngine().interact(),
+              (function (e, t) {
+                  let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                      a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+                      { lockVoiceStateForResume: s = !1, bypassIdleUpdate: l = !1 } =
+                          arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
+                      o = c.A.getChannel(e),
+                      d = b.A.getCurrentClientVoiceChannelId(t ?? null) === e,
+                      P = null != o ? y.A.getCheck(o.guild_id) : null;
+                  if (!(null != t && (0, h.V)(t)) && (null == P || P.canChat || (0, f.pC)(o))) {
+                      if (null != o && !d) {
+                          let e = (0, v.Pd)(o, b.A, L.A);
+                          if (e && o.isGuildStageVoice() && (0, I.xn)(o.id))
+                              return (0, E.mM)(async () => {
+                                  let { default: e } = await Promise.all([
+                                      n.e(196063),
+                                      n.e(392028),
+                                      n.e(424199),
+                                      n.e(454048),
+                                      n.e(543039),
+                                      n.e(901555),
+                                      n.e(266900),
+                                      n.e(314243),
+                                      n.e(721690),
+                                      n.e(35757),
+                                      n.e(832817),
+                                      n.e(893928),
+                                      n.e(165595),
+                                      n.e(416143),
+                                      n.e(844695),
+                                      n.e(92124),
+                                      n.e(988077),
+                                      n.e(232551),
+                                      n.e(561216),
+                                      n.e(692835),
+                                      n.e(588940),
+                                      n.e(21219),
+                                      n.e(829177),
+                                      n.e(106943),
+                                      n.e(348674),
+                                      n.e(14962),
+                                      n.e(786751),
+                                      n.e(749966),
+                                  ]).then(n.bind(n, 291453));
+                                  return (t) => e({ channel: o, ...t });
+                              });
+                          if (e)
+                              return (0, E.mM)(async () => {
+                                  let { default: e } = await n.e(354207).then(n.bind(n, 361698));
+                                  return (t) => e(t);
+                              });
+                          if (!(0, A.A)(o, D.A)) return;
+                      }
+                      (r && (0, p.PX)(),
+                          (function (e, t, n) {
+                              let r = C.Ay.getVoiceChannelId(),
+                                  a = c.A.getChannel(r);
+                              if (null == t && null != r && null != a) {
+                                  let t,
+                                      r,
+                                      s =
+                                          ((t = N.A.getRTCConnection()),
+                                          (r = t?.getVoiceDurationStats()),
+                                          {
+                                              channel_id: a.id,
+                                              channel_type: a.type,
+                                              guild_id: a.getGuildId(),
+                                              rtc_connection_id: N.A.getRTCConnectionId(),
+                                              duration: N.A.getDuration(),
+                                              media_session_id: N.A.getMediaSessionId(),
+                                              ...(0, m.JK)(N.A.getGuildId(), N.A.getChannelId(), n),
+                                              duration_muted_ms: r?.duration_muted_ms ?? null,
+                                              output_audio_route_type: R.A.getCurrentRouteType(),
+                                          });
+                                  if ((e(), g.A.hasUsedBackgroundInCall)) {
+                                      let e,
+                                          t = {
+                                              ...s,
+                                              ...((e = (0, T.i)(O.default.getCurrentUser())),
+                                              {
+                                                  video_device_name:
+                                                      u.Ay.getVideoDevices()[u.Ay.getVideoDeviceId()]?.name,
+                                                  video_hardware_scaling_enabled: u.Ay.getHardwareEncoding(),
+                                                  video_effect_type: (0, S.wC)(e),
+                                                  video_effect_detail: (0, S._V)(e),
+                                              }),
+                                          };
+                                      i.h.dispatch({ type: "VIDEO_BACKGROUND_SHOW_FEEDBACK", analyticsData: t });
+                                  } else i.h.dispatch({ type: "VOICE_CHANNEL_SHOW_FEEDBACK", analyticsData: s });
+                              } else e();
+                          })(
+                              function () {
+                                  let n = (0, _.A)();
+                                  i.h.dispatch({
+                                      type: "VOICE_CHANNEL_SELECT",
+                                      guildId: t,
+                                      channelId: e,
+                                      currentVoiceChannelId: C.Ay.getVoiceChannelId(),
+                                      video: r,
+                                      stream: a,
+                                      lockVoiceStateForResume: s,
+                                      joinVoiceId: n,
+                                      bypassIdleUpdate: l,
+                                  });
+                              },
+                              e,
+                              r,
+                          ));
+                  }
+              })(e, P, t, a, s));
+    },
+    disconnect() {
+        let e = s.default.getRemoteSessionId();
+        (null != e && a.Fc(e), this.selectVoiceChannel(null), l.close(M.MLl.CHANNEL_CALL_POPOUT));
+    },
+};

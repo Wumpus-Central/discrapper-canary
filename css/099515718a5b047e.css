@@ -1,0 +1,144 @@
+.inputField_vxox-C {
+    align-items: center;
+    display: flex;
+    height: var(--control-input-height-md);
+    justify-content: space-between;
+    max-width: 180px;
+    padding-left: var(--space-8);
+    padding-right: var(--space-4)
+}
+
+.inputFieldMinute_vxox-C {
+    max-width: 320px
+}
+
+.inputFieldRange_vxox-C {
+    max-width: 360px
+}
+
+.inputFieldRangeMinute_vxox-C {
+    max-width: 680px
+}
+
+.inputFieldFullWidth_vxox-C {
+    max-width: unset
+}
+
+.picker_vxox-C {
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    padding-bottom: var(--space-4);
+    padding-top: var(--space-4);
+    width: 100%
+}
+
+.placeholder_vxox-C {
+    color: var(--text-subtle)
+}
+
+.inputGroup_vxox-C {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    width: 100%
+}
+
+.segment_vxox-C {
+    border-radius: var(--radius-xs);
+    padding: 0 2px
+}
+
+.segment_vxox-C:focus {
+    background-color: var(--opacity-blurple-8);
+    color: var(--text-strong);
+    outline: 1px solid var(--border-focus)
+}
+
+.separator_vxox-C {
+    color: var(--text-muted);
+    padding: 0 var(--space-4)
+}
+
+.calendarButton_vxox-C {
+    align-items: center;
+    align-self: flex-end;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    aspect-ratio: 1/1;
+    background: transparent;
+    border-radius: var(--radius-xs);
+    color: var(--control-icon-only-icon-default);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin: 0 0 0 auto;
+    padding: 0;
+    transition: all .15s ease
+}
+
+.calendarButton_vxox-C[data-hovered] {
+    background-color: var(--control-icon-only-background-hover);
+    border-color: var(--control-icon-only-border-hover);
+    color: var(--control-icon-only-icon-hover)
+}
+
+.calendarButton_vxox-C[data-pressed] {
+    background-color: var(--control-icon-only-background-active);
+    border-color: var(--control-icon-only-border-active);
+    color: var(--control-icon-only-icon-active)
+}
+
+.calendarButton_vxox-C[data-focus-visible] {
+    outline: 2px solid var(--border-focus);
+    outline-offset: -1px
+}
+
+.dialog_vxox-C,
+.popover_vxox-C {
+    z-index: 10
+}
+
+.dialog_vxox-C {
+    background-color: var(--background-surface-higher);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 2px 8px 0 var(--opacity-black-16);
+    box-sizing: border-box;
+    max-height: 100%;
+    overflow: auto !important
+}
+
+.enable-forced-colors .inputGroup_vxox-C {
+    background-color: Field;
+    border-color: ButtonBorder
+}
+
+.enable-forced-colors .inputGroup_vxox-C.error_vxox-C {
+    border-color: Mark
+}
+
+.enable-forced-colors .segment_vxox-C {
+    color: FieldText
+}
+
+.enable-forced-colors .segment_vxox-C:focus {
+    background-color: Highlight;
+    color: HighlightText
+}
+
+.enable-forced-colors .separator_vxox-C {
+    color: FieldText
+}
+
+.enable-forced-colors .calendarButton_vxox-C {
+    color: ButtonText
+}
+
+.enable-forced-colors .calendarButton_vxox-C:hover {
+    background-color: ButtonFace
+}
+
+/*# sourceMappingURL=099515718a5b047e.css.map*/

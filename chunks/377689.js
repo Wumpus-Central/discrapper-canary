@@ -1,4 +1,3 @@
-d.d(t, { t: () => e });
 var i = d(880008),
     e = class {
         async get(l) {
@@ -38,3 +37,4 @@ var i = d(880008),
             l && l.clear();
         }
     };
+d.d(t, {}, { t: e });

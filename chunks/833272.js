@@ -1,5 +1,4 @@
-n.d(s, { A: () => t });
-let t = (function () {
+var t = (function () {
     var e = {
             base: "https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/",
             ext: ".png",
@@ -165,3 +164,4 @@ let t = (function () {
         return n.join(s || "-");
     }
 })();
+n.d(s, {}, { A: t });

@@ -1,0 +1,37 @@
+.bugReporterSubmitModalRoot_HbY48n {
+    background-color: transparent !important;
+    background-image: url("/assets/2f537bacfaadd7c3.png") !important;
+    background-position: 50% !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    border: none;
+    box-shadow: none !important;
+    height: auto;
+    width: 720px
+}
+
+.modalContent_HbY48n {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0
+}
+
+.closeButton_HbY48n {
+    box-sizing: content-box;
+    inset-inline-end: 4px;
+    position: absolute;
+    top: 12px
+}
+
+.submitText_HbY48n {
+    color: #74664b;
+    font-family: Arial Rounded MT Bold, Arial Rounded MT;
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 20px;
+    max-width: 360px;
+    text-align: center
+}
+
+/*# sourceMappingURL=d10f232bf062513f.css.map*/

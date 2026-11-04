@@ -1,4 +1,3 @@
-d.d(t, { t: () => Z });
 var i = d(768611),
     e = d(242268),
     c = d(540647),
@@ -25,8 +24,8 @@ var i = d(768611),
                 rightIcon: p,
                 required: N,
                 suppressMessages: M = !1,
-                class: X,
-                value: r,
+                class: r,
+                value: X,
                 ...y
             },
             Y,
@@ -35,7 +34,7 @@ var i = d(768611),
                 V = `${l}-error`,
                 L = [!M && h ? T : null, !M && o ? V : null, b].filter(Boolean).join(" ") || void 0;
             return (0, i.v)("div", {
-                class: (0, e.n)("IncodeInputComposed", X),
+                class: (0, e.n)("IncodeInputComposed", r),
                 children: [
                     t &&
                         (0, i.v)("label", {
@@ -61,12 +60,12 @@ var i = d(768611),
                                 ...y,
                                 ref: Y,
                                 required: N,
-                                "data-has-value": !!(r && String(r).length > 0),
+                                "data-has-value": !!(X && String(X).length > 0),
                                 ...(!t && Z ? { "aria-label": Z } : {}),
                                 "aria-describedby": L,
                                 "aria-required": N ? "true" : void 0,
                                 "aria-invalid": o ? "true" : void 0,
-                                value: r,
+                                value: X,
                             }),
                             p,
                             G?.show &&
@@ -118,3 +117,4 @@ var i = d(768611),
             });
         },
     );
+d.d(t, {}, { t: Z });

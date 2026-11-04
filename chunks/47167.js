@@ -1,12 +1,11 @@
-n.d(t, { Ay: () => p, Bi: () => A, Eq: () => f, Jo: () => u, LG: () => I, e5: () => E, ks: () => _, m1: () => h });
-var i = n(17928),
-    r = n(736056),
+var i = n(855986),
+    r = n(343446),
     a = n(994500),
     s = n(287809),
     l = n(403362),
     o = n(427262),
     d = n(652215),
-    c = n(105292);
+    c = n(792996);
 function u(e, t, n) {
     let i = e
         .map(t.getUser)
@@ -19,15 +18,7 @@ function u(e, t, n) {
 function _(e, t, n) {
     return u(e.recipients, t, n);
 }
-function E(e) {
-    return (0, i.bG)([s.default, a.A], () => (null != e && e.isMultiUserDM() ? _(e, s.default, a.A) : null));
-}
-function A(e) {
-    if (e.isObfuscated() || !e.isMultiUserDM()) return;
-    let t = e.name;
-    if ("" !== t) return t;
-}
-function h(e, t, n) {
+function E(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
         a = e.name;
@@ -51,8 +42,8 @@ function h(e, t, n) {
             if (i) return `#${a}`;
             return a;
         case d.rbe.GUILD_CATEGORY:
-            if (e.id === d._Ee) return c.intl.string(c.t.GSfOoo);
-            if (r) return `#"${f(a)}"`;
+            if ("null" === e.id) return c.intl.string(c.t.GSfOoo);
+            if (r) return `#"${A(a)}"`;
             return a;
         case d.rbe.PUBLIC_THREAD:
         case d.rbe.PRIVATE_THREAD:
@@ -60,7 +51,7 @@ function h(e, t, n) {
         case d.rbe.MEDIA_THREAD:
         case d.rbe.GUILD_VOICE:
         case d.rbe.GUILD_STAGE_VOICE:
-            if (r) return `#"${f(a)}"`;
+            if (r) return `#"${A(a)}"`;
             if (i && e.isThread()) return `"${a}"`;
             return a;
         case d.rbe.GUILD_STORE:
@@ -71,13 +62,31 @@ function h(e, t, n) {
             return a;
     }
 }
-function f(e) {
+function A(e) {
     return e.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
 }
-function I(e) {
-    return e.replace(/\\"/g, '"').replace(/\\\\/g, "\\");
-}
-function p(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return (0, i.bG)([s.default, r.A, a.A], () => (null == e ? null : h(e, s.default, a.A, t)));
-}
+n.d(
+    t,
+    {},
+    {
+        Ay: function (e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            return (0, i.bG)([s.default, r.A, a.A], () => (null == e ? null : E(e, s.default, a.A, t)));
+        },
+        Bi: function (e) {
+            if (e.isObfuscated() || !e.isMultiUserDM()) return;
+            let t = e.name;
+            if ("" !== t) return t;
+        },
+        Eq: A,
+        Jo: u,
+        LG: function (e) {
+            return e.replace(/\\"/g, '"').replace(/\\\\/g, "\\");
+        },
+        e5: function (e) {
+            return (0, i.bG)([s.default, a.A], () => (null != e && e.isMultiUserDM() ? _(e, s.default, a.A) : null));
+        },
+        ks: _,
+        m1: E,
+    },
+);

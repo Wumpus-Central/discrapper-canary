@@ -1,66 +1,71 @@
-a.d(i, { default: () => u });
 var e = a(477900);
 a(582128);
 var n = a(503698),
     t = a.n(n),
     l = a(224640),
-    r = a(364522),
+    r = a(95362),
     d = a(534514),
     c = a(270003),
     x = a(696208),
     h = a(915089),
-    j = a(871194),
+    j = a(584265),
     o = a(895600),
-    p = a(105292),
+    p = a(792996),
     m = a(744409);
-function u(s) {
-    let { transitionState: i, onClose: a, guildTemplate: n } = s,
-        { form: u, preview: v, handleSubmit: C } = (0, j.A)(n, !1),
-        N = (0, h.GV)();
-    return (0, e.jsxs)(l.d, {
-        transitionState: i,
-        onClose: a,
-        size: "xxl",
-        "aria-labelledby": N,
-        children: [
-            (0, e.jsxs)("div", {
-                className: m.jT,
+a.d(
+    i,
+    {},
+    {
+        default: function (s) {
+            let { transitionState: i, onClose: a, guildTemplate: n } = s,
+                { form: u, preview: v, handleSubmit: C } = (0, j.A)(n, !1),
+                N = (0, h.GV)();
+            return (0, e.jsxs)(l.d, {
+                transitionState: i,
+                onClose: a,
+                size: "xxl",
+                "aria-labelledby": N,
                 children: [
-                    (0, e.jsx)("div", {
-                        className: t()(m.jx, m.Iz),
-                        children: (0, e.jsx)("div", {
-                            className: m.OQ,
-                            children: (0, e.jsx)(o.A, { guildTemplate: n, headerId: N }),
-                        }),
-                    }),
-                    (0, e.jsx)("div", {
-                        className: t()(m.jx, m.gy),
-                        children: (0, e.jsxs)(r.Ip, {
-                            className: m.KJ,
-                            children: [
-                                (0, e.jsx)(d.D, {
-                                    variant: "heading-xl/semibold",
-                                    className: m.wx,
-                                    children: p.intl.string(p.t.UNFvtM),
+                    (0, e.jsxs)("div", {
+                        className: m.jT,
+                        children: [
+                            (0, e.jsx)("div", {
+                                className: t()(m.jx, m.Iz),
+                                children: (0, e.jsx)("div", {
+                                    className: m.OQ,
+                                    children: (0, e.jsx)(o.A, { guildTemplate: n, headerId: N }),
                                 }),
-                                (0, e.jsxs)(c.n, { children: [u, v] }),
-                            ],
-                        }),
+                            }),
+                            (0, e.jsx)("div", {
+                                className: t()(m.jx, m.gy),
+                                children: (0, e.jsxs)(r.Ip, {
+                                    className: m.KJ,
+                                    children: [
+                                        (0, e.jsx)(d.D, {
+                                            variant: "heading-xl/semibold",
+                                            className: m.wx,
+                                            children: p.intl.string(p.t.UNFvtM),
+                                        }),
+                                        (0, e.jsxs)(c.n, { children: [u, v] }),
+                                    ],
+                                }),
+                            }),
+                        ],
+                    }),
+                    (0, e.jsx)(x.H, {
+                        actions: [
+                            { variant: "secondary", text: p.intl.string(p.t.cpT0Cq), onClick: a },
+                            {
+                                variant: "primary",
+                                text: p.intl.string(p.t.CumH4u),
+                                onClick: () => {
+                                    C();
+                                },
+                            },
+                        ],
                     }),
                 ],
-            }),
-            (0, e.jsx)(x.H, {
-                actions: [
-                    { variant: "secondary", text: p.intl.string(p.t.cpT0Cq), onClick: a },
-                    {
-                        variant: "primary",
-                        text: p.intl.string(p.t.CumH4u),
-                        onClick: () => {
-                            C();
-                        },
-                    },
-                ],
-            }),
-        ],
-    });
-}
+            });
+        },
+    },
+);

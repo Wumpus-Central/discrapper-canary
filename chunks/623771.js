@@ -9,7 +9,7 @@ var n,
             return e;
         },
     o = (n = r(582128)) && n.__esModule ? n : { default: n };
-t.default = function (e) {
+t.A = function (e) {
     var t = e.fill,
         r = e.width,
         n = e.height,

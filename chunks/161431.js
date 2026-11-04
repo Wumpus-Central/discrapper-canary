@@ -1,6 +1,5 @@
-l.d(t, { IP: () => d, Od: () => f, rU: () => c });
 var n = l(582128),
-    a = l(17928),
+    a = l(855986),
     r = l(73153),
     i = l(183011),
     s = l(989145);
@@ -22,19 +21,26 @@ function d(e) {
             })
             .finally(() => o.delete(e)));
 }
-function c(e) {
-    return (0, a.bG)([i.A], () => i.A.getAttachments(e) ?? u, [e]);
-}
-function f(e, t) {
-    let l = (0, a.bG)([i.A], () => i.A.getAttachment(t), [t]),
-        s = null == l;
-    return (
-        n.useEffect(() => {
-            !s ||
-                null == e ||
-                i.A.wasLookedUp(t) ||
-                (r.h.dispatch({ type: "CONJURE_STORED_ATTACHMENT_LOOKUP", attachmentId: t }), d(e));
-        }, [s, e, t]),
-        l
-    );
-}
+l.d(
+    t,
+    {},
+    {
+        IP: d,
+        Od: function (e, t) {
+            let l = (0, a.bG)([i.A], () => i.A.getAttachment(t), [t]),
+                s = null == l;
+            return (
+                n.useEffect(() => {
+                    !s ||
+                        null == e ||
+                        i.A.wasLookedUp(t) ||
+                        (r.h.dispatch({ type: "CONJURE_STORED_ATTACHMENT_LOOKUP", attachmentId: t }), d(e));
+                }, [s, e, t]),
+                l
+            );
+        },
+        rU: function (e) {
+            return (0, a.bG)([i.A], () => i.A.getAttachments(e) ?? u, [e]);
+        },
+    },
+);

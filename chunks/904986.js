@@ -1,4 +1,3 @@
-n.d(t, { A: () => _, y: () => o.y });
 var i = n(480664),
     r = n.n(i),
     a = n(656742),
@@ -26,8 +25,8 @@ class _ extends l.A {
     videoSupported = !1;
     useElectronVideo = !1;
     spatialAudioEnabled = !1;
-    voiceBitrate = c.PR;
-    remoteSinkWantsMaxFramerate = c.sG;
+    voiceBitrate = 64e3;
+    remoteSinkWantsMaxFramerate = 30;
     videoQualityManager;
     wantsPriority = new Set();
     localSpeakingFlags = {};
@@ -43,7 +42,7 @@ class _ extends l.A {
     framerateReducer;
     constructor(e, t) {
         (super(), (this.context = e), (this.userId = t), (this.videoQualityManager = new d.k7(e, this)));
-        const i = n(429430).A;
+        let i = n(429430).A;
         this.framerateReducer = new i(this, this.videoQualityManager);
     }
     destroy() {
@@ -153,7 +152,7 @@ class _ extends l.A {
             });
     }
     getLocalWant(e) {
-        let t = this.videoStreamParameters.some((t) => t.ssrc === e && t.quality === c.Y4) || void 0 === e,
+        let t = this.videoStreamParameters.some((t) => t.ssrc === e && 100 === t.quality) || void 0 === e,
             n = this.context === c.x.DEFAULT || t,
             i = this.remoteVideoSinkWants[e ?? this.videoStreamParameters[0]?.ssrc ?? 0];
         if (null != i && i > 0) return i;
@@ -183,3 +182,4 @@ class _ extends l.A {
         this.videoQualityManager.setFakeGoLiveEncodePixelCount(e);
     }
 }
+n.d(t, { y: () => o.y }, { A: _ });

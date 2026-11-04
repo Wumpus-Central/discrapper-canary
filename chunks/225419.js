@@ -1,21 +1,7 @@
-(E.d(i, {
-    BK: () => o,
-    LZ: () => s,
-    Nk: () => R,
-    Si: () => x,
-    eD: () => _,
-    iG: () => N,
-    k6: () => T,
-    m6: () => l,
-    mL: () => B,
-    od: () => g,
-    qI: () => M,
-    xd: () => I,
-}),
-    E(321073));
+E(321073);
 var n = E(403362),
     S = E(818348),
-    r = E(105292);
+    r = E(792996);
 function A(t) {
     let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (
@@ -288,37 +274,12 @@ function _(t) {
         },
     };
 }
-function s(t) {
-    let i,
-        E,
-        n,
-        s,
-        B,
-        l = _(t),
-        o = [
-            ((i = [
-                S.xB.VIEW_CHANNEL,
-                S.xB.MANAGE_CHANNELS,
-                S.xB.MANAGE_ROLES,
-                S.xB.CREATE_GUILD_EXPRESSIONS,
-                S.xB.MANAGE_GUILD_EXPRESSIONS,
-                S.xB.VIEW_AUDIT_LOG,
-                S.xB.VIEW_GUILD_ANALYTICS,
-            ]),
-            t.showCreatorMonetizationAnalyticsPermission && i.push(S.xB.VIEW_CREATOR_MONETIZATION_ANALYTICS),
-            i.push(S.xB.MANAGE_WEBHOOKS),
-            i.push(S.xB.MANAGE_GUILD),
-            A({ title: r.intl.string(r.t["mYck+B"]), permissions: e(i, l) })),
-            ((E = [
-                S.xB.CREATE_INSTANT_INVITE,
-                S.xB.CHANGE_NICKNAME,
-                S.xB.MANAGE_NICKNAMES,
-                S.xB.KICK_MEMBERS,
-                S.xB.BAN_MEMBERS,
-                S.xB.MODERATE_MEMBERS,
-            ]),
-            A({ title: r.intl.string(r.t.Ny49TN), permissions: e(E, l) })),
-            ((n = [
+E.d(
+    i,
+    {},
+    {
+        BK: function (t, i, E) {
+            let n = [
                 S.xB.SEND_MESSAGES,
                 S.xB.SEND_MESSAGES_IN_THREADS,
                 S.xB.CREATE_PUBLIC_THREADS,
@@ -339,160 +300,199 @@ function s(t) {
                 S.xB.SEND_TTS_MESSAGES,
                 S.xB.SEND_VOICE_MESSAGES,
                 S.xB.SEND_POLLS,
-            ]),
-            t.inSoundmojiExperiment || (n = n.filter((t) => t !== S.xB.USE_EXTERNAL_SOUNDS)),
-            A({ title: r.intl.string(r.t.cKobO5), permissions: e(n, l) })),
-            ((s = [
-                S.xB.CONNECT,
-                S.xB.SPEAK,
-                S.xB.STREAM,
-                S.xB.USE_SOUNDBOARD,
+            ];
+            return (
+                E.inSoundmojiExperiment || (n = n.filter((t) => t !== S.xB.USE_EXTERNAL_SOUNDS)),
+                (E.showPrivateThreads && E.showCreateThreads) ||
+                    (n = n.filter((t) => t !== S.xB.CREATE_PRIVATE_THREADS)),
+                E.showCreateThreads || (n = n.filter((t) => t !== S.xB.CREATE_PUBLIC_THREADS)),
+                { title: i, description: E.sectionDescription, permissions: e(n, t) }
+            );
+        },
+        LZ: function (t) {
+            let i,
+                E,
+                n,
+                s,
+                B,
+                l = _(t),
+                o = [
+                    ((i = [
+                        S.xB.VIEW_CHANNEL,
+                        S.xB.MANAGE_CHANNELS,
+                        S.xB.MANAGE_ROLES,
+                        S.xB.CREATE_GUILD_EXPRESSIONS,
+                        S.xB.MANAGE_GUILD_EXPRESSIONS,
+                        S.xB.VIEW_AUDIT_LOG,
+                        S.xB.VIEW_GUILD_ANALYTICS,
+                    ]),
+                    t.showCreatorMonetizationAnalyticsPermission && i.push(S.xB.VIEW_CREATOR_MONETIZATION_ANALYTICS),
+                    i.push(S.xB.MANAGE_WEBHOOKS),
+                    i.push(S.xB.MANAGE_GUILD),
+                    A({ title: r.intl.string(r.t["mYck+B"]), permissions: e(i, l) })),
+                    ((E = [
+                        S.xB.CREATE_INSTANT_INVITE,
+                        S.xB.CHANGE_NICKNAME,
+                        S.xB.MANAGE_NICKNAMES,
+                        S.xB.KICK_MEMBERS,
+                        S.xB.BAN_MEMBERS,
+                        S.xB.MODERATE_MEMBERS,
+                    ]),
+                    A({ title: r.intl.string(r.t.Ny49TN), permissions: e(E, l) })),
+                    ((n = [
+                        S.xB.SEND_MESSAGES,
+                        S.xB.SEND_MESSAGES_IN_THREADS,
+                        S.xB.CREATE_PUBLIC_THREADS,
+                        S.xB.CREATE_PRIVATE_THREADS,
+                        S.xB.EMBED_LINKS,
+                        S.xB.ATTACH_FILES,
+                        S.xB.ADD_REACTIONS,
+                        S.xB.USE_EXTERNAL_EMOJIS,
+                        S.xB.USE_EXTERNAL_STICKERS,
+                        S.xB.USE_EXTERNAL_SOUNDS,
+                        S.xB.MENTION_EVERYONE,
+                        S.xB.MANAGE_MESSAGES,
+                        S.xB.PIN_MESSAGES,
+                        S.xB.MANAGE_OFFICIAL_MESSAGES,
+                        S.xB.BYPASS_SLOWMODE,
+                        S.xB.MANAGE_THREADS,
+                        S.xB.READ_MESSAGE_HISTORY,
+                        S.xB.SEND_TTS_MESSAGES,
+                        S.xB.SEND_VOICE_MESSAGES,
+                        S.xB.SEND_POLLS,
+                    ]),
+                    t.inSoundmojiExperiment || (n = n.filter((t) => t !== S.xB.USE_EXTERNAL_SOUNDS)),
+                    A({ title: r.intl.string(r.t.cKobO5), permissions: e(n, l) })),
+                    ((s = [
+                        S.xB.CONNECT,
+                        S.xB.SPEAK,
+                        S.xB.STREAM,
+                        S.xB.USE_SOUNDBOARD,
+                        S.xB.USE_EXTERNAL_SOUNDS,
+                        S.xB.USE_VAD,
+                        S.xB.PRIORITY_SPEAKER,
+                        S.xB.MUTE_MEMBERS,
+                        S.xB.DEAFEN_MEMBERS,
+                        S.xB.MOVE_MEMBERS,
+                        S.xB.SET_VOICE_CHANNEL_STATUS,
+                    ]),
+                    A({ title: r.intl.string(r.t["46Ra1b"]), permissions: e(s, l) })),
+                    ((B = [S.xB.USE_APPLICATION_COMMANDS, S.xB.USE_EMBEDDED_ACTIVITIES, S.xB.USE_EXTERNAL_APPS]),
+                    A({ title: r.intl.string(r.t["rrh/W6"]), permissions: e(B, l) })),
+                ];
+            return (
+                t.showStageChannelPermissions &&
+                    o.push(
+                        A(
+                            { title: r.intl.string(r.t.yniauk), permissions: e([S.xB.REQUEST_TO_SPEAK], l) },
+                            t.showExperimental,
+                        ),
+                    ),
+                o.push(
+                    A(
+                        {
+                            title: r.intl.string(r.t.b8lplT),
+                            permissions: e([S.xB.CREATE_EVENTS, S.xB.MANAGE_EVENTS], l),
+                        },
+                        t.showExperimental,
+                    ),
+                ),
+                o.push(A({ title: r.intl.string(r.t["3uI5CX"]), permissions: e([S.xB.ADMINISTRATOR], l) })),
+                o
+            );
+        },
+        Nk: function (t) {
+            return null == t ? t : "string" == typeof t ? t.trim() : "function" == typeof t ? r.intl.format(t, {}) : t;
+        },
+        Si: function (t, i) {
+            let E = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { showActivities: !0 };
+            return {
+                title: i,
+                permissions: e(
+                    [
+                        S.xB.USE_APPLICATION_COMMANDS,
+                        E.showActivities ? S.xB.USE_EMBEDDED_ACTIVITIES : null,
+                        S.xB.USE_EXTERNAL_APPS,
+                    ].filter(n.Vq),
+                    t,
+                ),
+            };
+        },
+        eD: _,
+        iG: function (t, i) {
+            return {
+                title: i,
+                permissions: e(
+                    [
+                        S.xB.CONNECT,
+                        S.xB.SPEAK,
+                        S.xB.STREAM,
+                        S.xB.USE_SOUNDBOARD,
+                        S.xB.USE_EXTERNAL_SOUNDS,
+                        S.xB.USE_VAD,
+                        S.xB.PRIORITY_SPEAKER,
+                        S.xB.MUTE_MEMBERS,
+                        S.xB.DEAFEN_MEMBERS,
+                        S.xB.MOVE_MEMBERS,
+                        S.xB.SET_VOICE_CHANNEL_STATUS,
+                    ],
+                    t,
+                ),
+            };
+        },
+        k6: function (t, i, E) {
+            let n = [
+                S.xB.SEND_MESSAGES,
+                S.xB.EMBED_LINKS,
+                S.xB.ATTACH_FILES,
+                S.xB.ADD_REACTIONS,
+                S.xB.USE_EXTERNAL_EMOJIS,
+                S.xB.USE_EXTERNAL_STICKERS,
                 S.xB.USE_EXTERNAL_SOUNDS,
-                S.xB.USE_VAD,
-                S.xB.PRIORITY_SPEAKER,
-                S.xB.MUTE_MEMBERS,
-                S.xB.DEAFEN_MEMBERS,
-                S.xB.MOVE_MEMBERS,
-                S.xB.SET_VOICE_CHANNEL_STATUS,
-            ]),
-            A({ title: r.intl.string(r.t["46Ra1b"]), permissions: e(s, l) })),
-            ((B = [S.xB.USE_APPLICATION_COMMANDS, S.xB.USE_EMBEDDED_ACTIVITIES, S.xB.USE_EXTERNAL_APPS]),
-            A({ title: r.intl.string(r.t["rrh/W6"]), permissions: e(B, l) })),
-        ];
-    return (
-        t.showStageChannelPermissions &&
-            o.push(
-                A({ title: r.intl.string(r.t.yniauk), permissions: e([S.xB.REQUEST_TO_SPEAK], l) }, t.showExperimental),
-            ),
-        o.push(
-            A(
-                { title: r.intl.string(r.t.b8lplT), permissions: e([S.xB.CREATE_EVENTS, S.xB.MANAGE_EVENTS], l) },
-                t.showExperimental,
-            ),
-        ),
-        o.push(A({ title: r.intl.string(r.t["3uI5CX"]), permissions: e([S.xB.ADMINISTRATOR], l) })),
-        o
-    );
-}
-function B(t, i) {
-    let E = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { showManageWebhooks: !0 };
-    return {
-        title: i,
-        permissions: e(
-            E?.showManageWebhooks
-                ? [S.xB.VIEW_CHANNEL, S.xB.MANAGE_CHANNELS, S.xB.MANAGE_ROLES, S.xB.MANAGE_WEBHOOKS]
-                : [S.xB.VIEW_CHANNEL, S.xB.MANAGE_CHANNELS, S.xB.MANAGE_ROLES],
-            t,
-        ),
-    };
-}
-function l(t, i) {
-    return { title: i, permissions: e([S.xB.CREATE_INSTANT_INVITE], t) };
-}
-function o(t, i, E) {
-    let n = [
-        S.xB.SEND_MESSAGES,
-        S.xB.SEND_MESSAGES_IN_THREADS,
-        S.xB.CREATE_PUBLIC_THREADS,
-        S.xB.CREATE_PRIVATE_THREADS,
-        S.xB.EMBED_LINKS,
-        S.xB.ATTACH_FILES,
-        S.xB.ADD_REACTIONS,
-        S.xB.USE_EXTERNAL_EMOJIS,
-        S.xB.USE_EXTERNAL_STICKERS,
-        S.xB.USE_EXTERNAL_SOUNDS,
-        S.xB.MENTION_EVERYONE,
-        S.xB.MANAGE_MESSAGES,
-        S.xB.PIN_MESSAGES,
-        S.xB.MANAGE_OFFICIAL_MESSAGES,
-        S.xB.BYPASS_SLOWMODE,
-        S.xB.MANAGE_THREADS,
-        S.xB.READ_MESSAGE_HISTORY,
-        S.xB.SEND_TTS_MESSAGES,
-        S.xB.SEND_VOICE_MESSAGES,
-        S.xB.SEND_POLLS,
-    ];
-    return (
-        E.inSoundmojiExperiment || (n = n.filter((t) => t !== S.xB.USE_EXTERNAL_SOUNDS)),
-        (E.showPrivateThreads && E.showCreateThreads) || (n = n.filter((t) => t !== S.xB.CREATE_PRIVATE_THREADS)),
-        E.showCreateThreads || (n = n.filter((t) => t !== S.xB.CREATE_PUBLIC_THREADS)),
-        { title: i, description: E.sectionDescription, permissions: e(n, t) }
-    );
-}
-function N(t, i) {
-    return {
-        title: i,
-        permissions: e(
-            [
-                S.xB.CONNECT,
-                S.xB.SPEAK,
-                S.xB.STREAM,
-                S.xB.USE_SOUNDBOARD,
-                S.xB.USE_EXTERNAL_SOUNDS,
-                S.xB.USE_VAD,
-                S.xB.PRIORITY_SPEAKER,
-                S.xB.MUTE_MEMBERS,
-                S.xB.DEAFEN_MEMBERS,
-                S.xB.MOVE_MEMBERS,
-                S.xB.SET_VOICE_CHANNEL_STATUS,
-            ],
-            t,
-        ),
-    };
-}
-function T(t, i, E) {
-    let n = [
-        S.xB.SEND_MESSAGES,
-        S.xB.EMBED_LINKS,
-        S.xB.ATTACH_FILES,
-        S.xB.ADD_REACTIONS,
-        S.xB.USE_EXTERNAL_EMOJIS,
-        S.xB.USE_EXTERNAL_STICKERS,
-        S.xB.USE_EXTERNAL_SOUNDS,
-        S.xB.MENTION_EVERYONE,
-        S.xB.MANAGE_MESSAGES,
-        S.xB.BYPASS_SLOWMODE,
-        S.xB.READ_MESSAGE_HISTORY,
-        S.xB.SEND_TTS_MESSAGES,
-        S.xB.SEND_VOICE_MESSAGES,
-        S.xB.SEND_POLLS,
-    ];
-    return (
-        E.inSoundmojiExperiment || (n = n.filter((t) => t !== S.xB.USE_EXTERNAL_SOUNDS)),
-        { title: i, description: E.sectionDescription, permissions: e(n, t) }
-    );
-}
-function x(t, i) {
-    let E = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { showActivities: !0 };
-    return {
-        title: i,
-        permissions: e(
-            [
-                S.xB.USE_APPLICATION_COMMANDS,
-                E.showActivities ? S.xB.USE_EMBEDDED_ACTIVITIES : null,
-                S.xB.USE_EXTERNAL_APPS,
-            ].filter(n.Vq),
-            t,
-        ),
-    };
-}
-function g(t, i, E) {
-    return {
-        title: i,
-        permissions: e(
-            E
-                ? [S.xB.CONNECT, S.xB.STREAM, S.xB.MUTE_MEMBERS, S.xB.MOVE_MEMBERS]
-                : [S.xB.CONNECT, S.xB.MUTE_MEMBERS, S.xB.MOVE_MEMBERS],
-            t,
-        ),
-    };
-}
-function M(t, i) {
-    return { title: i, permissions: e([S.xB.REQUEST_TO_SPEAK, S.xB.MENTION_EVERYONE], t) };
-}
-function I(t, i) {
-    return { title: i, permissions: e([S.xB.CREATE_EVENTS, S.xB.MANAGE_EVENTS], t) };
-}
-function R(t) {
-    return null == t ? t : "string" == typeof t ? t.trim() : "function" == typeof t ? r.intl.format(t, {}) : t;
-}
+                S.xB.MENTION_EVERYONE,
+                S.xB.MANAGE_MESSAGES,
+                S.xB.BYPASS_SLOWMODE,
+                S.xB.READ_MESSAGE_HISTORY,
+                S.xB.SEND_TTS_MESSAGES,
+                S.xB.SEND_VOICE_MESSAGES,
+                S.xB.SEND_POLLS,
+            ];
+            return (
+                E.inSoundmojiExperiment || (n = n.filter((t) => t !== S.xB.USE_EXTERNAL_SOUNDS)),
+                { title: i, description: E.sectionDescription, permissions: e(n, t) }
+            );
+        },
+        m6: function (t, i) {
+            return { title: i, permissions: e([S.xB.CREATE_INSTANT_INVITE], t) };
+        },
+        mL: function (t, i) {
+            let E = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { showManageWebhooks: !0 };
+            return {
+                title: i,
+                permissions: e(
+                    E?.showManageWebhooks
+                        ? [S.xB.VIEW_CHANNEL, S.xB.MANAGE_CHANNELS, S.xB.MANAGE_ROLES, S.xB.MANAGE_WEBHOOKS]
+                        : [S.xB.VIEW_CHANNEL, S.xB.MANAGE_CHANNELS, S.xB.MANAGE_ROLES],
+                    t,
+                ),
+            };
+        },
+        od: function (t, i, E) {
+            return {
+                title: i,
+                permissions: e(
+                    E
+                        ? [S.xB.CONNECT, S.xB.STREAM, S.xB.MUTE_MEMBERS, S.xB.MOVE_MEMBERS]
+                        : [S.xB.CONNECT, S.xB.MUTE_MEMBERS, S.xB.MOVE_MEMBERS],
+                    t,
+                ),
+            };
+        },
+        qI: function (t, i) {
+            return { title: i, permissions: e([S.xB.REQUEST_TO_SPEAK, S.xB.MENTION_EVERYONE], t) };
+        },
+        xd: function (t, i) {
+            return { title: i, permissions: e([S.xB.CREATE_EVENTS, S.xB.MANAGE_EVENTS], t) };
+        },
+    },
+);

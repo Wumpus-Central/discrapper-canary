@@ -1,4 +1,3 @@
-o.d(i, { X: () => a, h: () => d });
 var n = o(477900),
     e = o(582128),
     u = o(945810);
@@ -13,15 +12,21 @@ let r = { clickRoutesToGift: !1, showGiftButton: !0 },
         },
     }),
     s = e.createContext(r);
-function a() {
-    return e.useContext(s);
-}
-function l(t) {
+function a(t) {
     let { location: i, children: o } = t,
         e = c.useConfig({ location: i });
     return (0, n.jsx)(s.Provider, { value: e, children: o });
 }
-function d(t) {
-    let { isGifting: i, location: o, children: e } = t;
-    return i ? (0, n.jsx)(l, { location: o, children: e }) : e;
-}
+o.d(
+    i,
+    {},
+    {
+        X: function () {
+            return e.useContext(s);
+        },
+        h: function (t) {
+            let { isGifting: i, location: o, children: e } = t;
+            return i ? (0, n.jsx)(a, { location: o, children: e }) : e;
+        },
+    },
+);

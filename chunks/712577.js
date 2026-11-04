@@ -1,4 +1,3 @@
-n.d(t, { A: () => d });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -53,4 +52,4 @@ class o extends r.PureComponent {
         t?.(e, n);
     };
 }
-let d = o;
+n.d(t, {}, { A: o });

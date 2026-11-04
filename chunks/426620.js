@@ -1,5 +1,4 @@
-n.d(t, { A: () => o });
-var i = n(17928),
+var i = n(855986),
     r = n(73153);
 let a = null;
 class s extends i.Ay.PersistedStore {
@@ -16,12 +15,12 @@ class s extends i.Ay.PersistedStore {
     }
 }
 let l = new s(r.h, {
-        NUF_NEW_USER: function (e) {
-            let { newUserType: t } = e;
-            ((a = t), l.persist());
-        },
-        NUF_COMPLETE: function () {
-            ((a = null), l.persist());
-        },
-    }),
-    o = l;
+    NUF_NEW_USER: function (e) {
+        let { newUserType: t } = e;
+        ((a = t), l.persist());
+    },
+    NUF_COMPLETE: function () {
+        ((a = null), l.persist());
+    },
+});
+n.d(t, {}, { A: l });

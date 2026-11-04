@@ -1,8 +1,8 @@
-a.exports = {
-    iE: "wrapper__78aa3",
-    QR: "infoWrapper__78aa3",
-    nY: "usageWrapper__78aa3",
-    Sl: "image__78aa3",
-    h_: "description__78aa3",
-    sP: "source__78aa3",
+i.exports = {
+    iE: "wrapper_6QglCi",
+    QR: "infoWrapper_6QglCi",
+    nY: "usageWrapper_6QglCi",
+    Sl: "image_6QglCi",
+    h_: "description_6QglCi",
+    sP: "source_6QglCi",
 };

@@ -1,1 +1,0 @@
-_.exports = { p: "list_c47777" };

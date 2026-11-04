@@ -1,0 +1,184 @@
+.modal_88G_dS {
+    border-radius: 8px
+}
+
+.header_88G_dS {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    overflow: visible
+}
+
+.headerIconContainer_88G_dS {
+    flex: 0;
+    height: auto;
+    position: relative;
+    width: auto
+}
+
+.acronym_88G_dS {
+    align-items: center;
+    background-color: var(--background-base-low);
+    border-radius: 50%;
+    color: var(--text-default);
+    display: flex;
+    font-size: 28px;
+    height: 80px;
+    justify-content: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80px
+}
+
+.ping_88G_dS {
+    border: 3px solid var(--modal-background);
+    border-radius: 50%;
+    bottom: -2px;
+    height: 24px;
+    inset-inline-end: -2px;
+    position: absolute;
+    width: 24px;
+    z-index: 999
+}
+
+.redPing_88G_dS {
+    background-color: var(--background-feedback-notification)
+}
+
+.greenPing_88G_dS {
+    background-color: var(--status-positive)
+}
+
+.headerText_88G_dS {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 16px;
+    margin-top: 112px;
+    max-width: 350px;
+    text-align: center
+}
+
+.updatedHeader_88G_dS {
+    margin-top: 12px
+}
+
+.formTitle_88G_dS {
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 8px
+}
+
+.checklistRow_88G_dS {
+    align-items: center;
+    display: flex;
+    margin-top: 8px
+}
+
+.checklistRow_88G_dS:first-child {
+    margin-top: 0
+}
+
+.checklistIcon_88G_dS {
+    margin-inline-end: 8px;
+    width: 18px
+}
+
+.icon_88G_dS {
+    transform: translateY(3px)
+}
+
+.infoIconWrapper_88G_dS {
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex
+}
+
+.infoIconWrapper_88G_dS:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px
+}
+
+.roleRow_88G_dS {
+    align-items: center;
+    background: var(--interactive-background-selected);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    margin-inline-start: 4px;
+    padding-block: 4px;
+    padding-inline: 5px 6px
+}
+
+.roleDot_88G_dS {
+    margin-inline-end: 4px
+}
+
+.roleName_88G_dS {
+    align-self: baseline
+}
+
+.table_88G_dS {
+    gap: 4px;
+    margin-top: 12px
+}
+
+.table_88G_dS,
+.tableContainer_88G_dS {
+    display: flex;
+    flex-direction: column
+}
+
+.tableContainer_88G_dS {
+    background-color: var(--background-base-lower);
+    border-radius: 4px;
+    padding: 16px 20px
+}
+
+.tableHeader_88G_dS {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    text-transform: none
+}
+
+.permissionsTable_88G_dS {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 32px;
+    margin-top: 8px;
+    row-gap: 8px
+}
+
+.permissionRow_88G_dS {
+    display: flex
+}
+
+.bullet_88G_dS {
+    align-self: center;
+    background-color: var(--background-mod-muted);
+    border-radius: 50%;
+    height: 6px;
+    margin-inline-end: 8px;
+    width: 6px
+}
+
+.bulletWarning_88G_dS {
+    background-color: var(--status-warning);
+    box-shadow: 0 0 4px rgba(250, 166, 26, .4)
+}
+
+.bulletPositive_88G_dS {
+    background-color: var(--status-positive);
+    box-shadow: 0 0 6px rgba(59, 165, 92, .35)
+}
+
+.acceptText_88G_dS {
+    margin-inline-start: 16px
+}
+
+.footer_88G_dS {
+    gap: 4px
+}
+
+/*# sourceMappingURL=617e2b6f771c9be8.css.map*/

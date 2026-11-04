@@ -1,4 +1,3 @@
-t.d(i, { RQ: () => p, Ri: () => S, U: () => V, bf: () => w, ed: () => h, ke: () => k, r$: () => u, v8: () => r });
 var a = t(277057),
     c = t.n(a),
     l = t(537812),
@@ -54,33 +53,41 @@ function r(e, i) {
                 }),
             ));
 }
-function h(e, i) {
-    let t = d.getState();
-    null == t.activeView
-        ? w(t.lastActiveView ?? o.kx.EMOJI, e, i)
-        : t.activeViewType !== e || t.activeChannelId !== i
-          ? w(t.activeView, e, i)
-          : r();
-}
-function u(e, i, t) {
-    let a = d.getState();
-    a.activeView === e && a.activeViewType === i && a.activeChannelId === t ? r() : w(e, i, t);
-}
-function V(e) {
-    (0, s.r)(() =>
-        d.setState({
-            activeView: e,
-            lastActiveView: d.getState().activeView,
-            showEmojiPacks: !1,
-            showSelectedEmojiPackId: void 0,
-        }),
-    );
-}
-function k(e) {
-    (0, s.r)(() => d.setState({ showEmojiPacks: e, showSelectedEmojiPackId: void 0 }));
-}
-function S(e) {
-    let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    (0, s.r)(() => d.setState({ searchQuery: e, isSearchSuggestion: i }));
-}
-let p = d;
+t.d(
+    i,
+    {},
+    {
+        RQ: d,
+        Ri: function (e) {
+            let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            (0, s.r)(() => d.setState({ searchQuery: e, isSearchSuggestion: i }));
+        },
+        U: function (e) {
+            (0, s.r)(() =>
+                d.setState({
+                    activeView: e,
+                    lastActiveView: d.getState().activeView,
+                    showEmojiPacks: !1,
+                    showSelectedEmojiPackId: void 0,
+                }),
+            );
+        },
+        bf: w,
+        ed: function (e, i) {
+            let t = d.getState();
+            null == t.activeView
+                ? w(t.lastActiveView ?? o.kx.EMOJI, e, i)
+                : t.activeViewType !== e || t.activeChannelId !== i
+                  ? w(t.activeView, e, i)
+                  : r();
+        },
+        ke: function (e) {
+            (0, s.r)(() => d.setState({ showEmojiPacks: e, showSelectedEmojiPackId: void 0 }));
+        },
+        r$: function (e, i, t) {
+            let a = d.getState();
+            a.activeView === e && a.activeViewType === i && a.activeChannelId === t ? r() : w(e, i, t);
+        },
+        v8: r,
+    },
+);

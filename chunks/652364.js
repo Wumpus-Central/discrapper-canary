@@ -1,12 +1,12 @@
-(n.d(t, { A: () => _ }), n(323874), n(14289), n(35956), n(321073));
+(n(323874), n(14289), n(35956), n(321073));
 var i = n(439372),
-    r = n(236285),
+    r = n(121681),
     a = n(734057),
     s = n(486020),
     l = n(690521),
     o = n(746080),
     d = n(732139);
-let c = new Worker(new URL("/assets/" + n.u("179908"), n.b));
+let c = new Worker(new URL("/assets/" + n.u(179908), n.b));
 class u extends i.A {
     actions = { CHANNEL_PRELOAD: this.handleChannelPreload };
     handleChannelPreload(e) {
@@ -48,3 +48,4 @@ class u extends i.A {
     }
 }
 let _ = new u();
+n.d(t, {}, { A: _ });

@@ -1,11 +1,10 @@
-n.d(t, { Ay: () => g, gN: () => p });
-var i = n(17928),
+var i = n(855986),
     r = n(713402),
     a = n(451988),
     s = n(73153),
-    l = n(280450),
+    l = n(46653),
     o = n(309010),
-    d = n(625494),
+    d = n(188567),
     c = n(3137),
     u = n(103640),
     _ = n(31408),
@@ -77,57 +76,57 @@ class m extends i.Ay.Store {
     }
 }
 let T = new m(s.h, {
-        POGGERMODE_UPDATE_COMBO: function (e) {
-            let { type: t, ...n } = e;
-            if (!c.A.isEnabled()) return !1;
-            !(function e(t) {
-                let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                    i = h.get(I(t)),
-                    r = {
-                        ...i,
-                        ...t,
-                        value: t.value ?? i?.value ?? 0,
-                        multiplier: Math.min(t.multiplier ?? i?.multiplier ?? 1, 7),
-                        decayInterval: i?.decayInterval ?? new a.IX(),
-                    };
-                (h.set(I(t), r),
-                    n &&
-                        r.decayInterval?.start(1e3, () => {
-                            let t = h.get(I(r));
-                            if (null != t) {
-                                let n = r.multiplier !== t.multiplier && r.value !== t.value;
-                                t.value <= 0 || n
-                                    ? (t.decayInterval?.stop(),
-                                      t.value <= 0 && (e({ ...t, value: 0, multiplier: 1 }), T.emitChange()))
-                                    : (e({ ...t, value: t.value - 1 }), T.emitChange());
-                            }
-                        }));
-            })(n);
-        },
-        POGGERMODE_UPDATE_MESSAGE_COMBO: function (e) {
-            let { comboMessage: t } = e;
-            if (!c.A.isEnabled()) return !1;
-            f.set(t.messageId, t);
-        },
-        MESSAGE_CREATE: function (e) {
-            let {
-                channelId: t,
-                message: { mentions: n, author: i, nonce: r },
-            } = e;
-            if (!c.A.isEnabled()) return !1;
-            let a = l.default.getId();
-            if (!p(i?.id, a, r, A)) return !1;
-            let s = h.get(I({ userId: i?.id ?? "???", channelId: t }));
-            if (
-                c.A.screenshakeEnabled &&
-                c.A.screenshakeEnabledLocations[_.uD.MENTION] &&
-                null != n &&
-                null != n.find((e) => e.id === a)
-            ) {
-                let e = null != s ? ((0, u.U$)(s, _.fZ.LEVEL_4) ?? 0.001) : 4 * Math.random();
-                return (d._.dispatch(E.jej.SHAKE_APP, { duration: 1e3, intensity: e }), !0);
-            }
-            return !1;
-        },
-    }),
-    g = T;
+    POGGERMODE_UPDATE_COMBO: function (e) {
+        let { type: t, ...n } = e;
+        if (!c.A.isEnabled()) return !1;
+        !(function e(t) {
+            let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+                i = h.get(I(t)),
+                r = {
+                    ...i,
+                    ...t,
+                    value: t.value ?? i?.value ?? 0,
+                    multiplier: Math.min(t.multiplier ?? i?.multiplier ?? 1, 7),
+                    decayInterval: i?.decayInterval ?? new a.IX(),
+                };
+            (h.set(I(t), r),
+                n &&
+                    r.decayInterval?.start(1e3, () => {
+                        let t = h.get(I(r));
+                        if (null != t) {
+                            let n = r.multiplier !== t.multiplier && r.value !== t.value;
+                            t.value <= 0 || n
+                                ? (t.decayInterval?.stop(),
+                                  t.value <= 0 && (e({ ...t, value: 0, multiplier: 1 }), T.emitChange()))
+                                : (e({ ...t, value: t.value - 1 }), T.emitChange());
+                        }
+                    }));
+        })(n);
+    },
+    POGGERMODE_UPDATE_MESSAGE_COMBO: function (e) {
+        let { comboMessage: t } = e;
+        if (!c.A.isEnabled()) return !1;
+        f.set(t.messageId, t);
+    },
+    MESSAGE_CREATE: function (e) {
+        let {
+            channelId: t,
+            message: { mentions: n, author: i, nonce: r },
+        } = e;
+        if (!c.A.isEnabled()) return !1;
+        let a = l.default.getId();
+        if (!p(i?.id, a, r, A)) return !1;
+        let s = h.get(I({ userId: i?.id ?? "???", channelId: t }));
+        if (
+            c.A.screenshakeEnabled &&
+            c.A.screenshakeEnabledLocations[_.uD.MENTION] &&
+            null != n &&
+            null != n.find((e) => e.id === a)
+        ) {
+            let e = null != s ? ((0, u.U$)(s, _.fZ.LEVEL_4) ?? 0.001) : 4 * Math.random();
+            return (d._.dispatch(E.jej.SHAKE_APP, { duration: 1e3, intensity: e }), !0);
+        }
+        return !1;
+    },
+});
+n.d(t, {}, { Ay: T, gN: p });

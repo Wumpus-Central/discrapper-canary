@@ -1,9 +1,9 @@
 let i, a;
 t.r(n);
 var o = t(830215),
-    r = t(849335),
+    r = t(225123),
     s = t(569745),
-    d = t(280450);
+    d = t(46653);
 ((i = 0),
     (a = window.setInterval(() => {
         if (((i += 1), r.A.isConnected() || r.A.isTryingToConnect() || i > 20)) return void window.clearInterval(a);

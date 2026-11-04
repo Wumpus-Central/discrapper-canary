@@ -1,4 +1,3 @@
-n.d(t, { A: () => s });
 var l = n(435558),
     i = n(842901);
 let s = (0, l.memoize)(
@@ -11,3 +10,4 @@ let s = (0, l.memoize)(
         return `${t}:${n}`;
     },
 );
+n.d(t, {}, { A: s });

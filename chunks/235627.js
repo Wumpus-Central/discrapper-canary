@@ -1,4 +1,3 @@
-n.d(t, { p: () => s, w: () => a });
 var i,
     r,
     a = (((i = {})[(i.SPAM = 1)] = "SPAM"), (i[(i.IGNORED = 2)] = "IGNORED"), i),
@@ -11,3 +10,4 @@ var i,
         (r.CANCEL_IGNORE = "CANCEL_IGNORE"),
         (r.CANCEL_BLOCK = "CANCEL_BLOCK"),
         r);
+n.d(t, {}, { p: s, w: a });

@@ -1,30 +1,30 @@
-let r, l, i, a, u, o;
-(n.d(t, { A: () => W }), n(938796));
+let r, i, l, a, u, o;
+n(938796);
 var s = n(435558),
     d = n.n(s),
     E = n(536637),
     _ = n.n(E),
     c = n(371444),
     T = n(602137),
-    S = n(17928),
-    N = n(636537),
+    S = n(855986),
+    N = n(620632),
     h = n(73153),
     I = n(7584),
     f = n(815807),
     m = n(95701),
     C = n(671759),
-    A = n(889227),
-    p = n(149790),
+    A = n(619019),
+    p = n(537975),
     L = n(734057),
-    g = n(652215),
-    v = n(37411);
-let y = g.XlH.CLOSED,
+    g = n(652215);
+n(37411);
+let v = g.XlH.CLOSED,
+    y = {},
     H = {},
-    O = {},
+    O = !1,
     R = !1,
-    U = !1,
-    G = null,
-    j = [
+    U = null,
+    G = [
         "name",
         "type",
         "topic_",
@@ -49,12 +49,12 @@ let y = g.XlH.CLOSED,
         "themeColor",
         "application_id",
     ];
-function D(e, t, n) {
+function j(e, t, n) {
     switch (e) {
         case "topic_":
             return t ?? "";
         case "defaultAutoArchiveDuration":
-            return t ?? v.cM;
+            return t ?? 4320;
         case "defaultSortOrder":
             return t ?? T.T.LATEST_ACTIVITY;
         case "defaultForumLayout":
@@ -73,38 +73,38 @@ function D(e, t, n) {
             return t;
     }
 }
-function b(e) {
+function D(e) {
     ((r = e.section),
-        (l = e.subsection),
+        (i = e.subsection),
         null != a &&
             r === g.p_A.INSTANT_INVITES &&
-            ((R = !0),
+            ((O = !0),
             N.Bo.get({ url: g.Rsh.INSTANT_INVITES(a.id), oldFormErrors: !0, rejectWithError: !0 }).then(
                 (e) => {
-                    ((R = !1), h.h.dispatch({ type: "CHANNEL_SETTINGS_LOADED_INVITES", invites: e.body }));
+                    ((O = !1), h.h.dispatch({ type: "CHANNEL_SETTINGS_LOADED_INVITES", invites: e.body }));
                 },
-                () => (R = !1),
+                () => (O = !1),
             )));
 }
-function M() {
-    ((U = !1), (y = g.XlH.CLOSED), (r = null), (a = i = null), (u = null), (O = {}));
+function b() {
+    ((R = !1), (v = g.XlH.CLOSED), (r = null), (a = l = null), (u = null), (H = {}));
 }
-let P = d().debounce(() => {
-    if (null == a || null == i) return !1;
+let M = d().debounce(() => {
+    if (null == a || null == l) return !1;
     let e = a.toJS(),
-        t = i.toJS(),
+        t = l.toJS(),
         n = e.type;
-    j.every((r) => {
-        let l = e[r],
-            i = t[r],
-            a = D(r, l, n),
-            u = D(r, i, n);
+    G.every((r) => {
+        let i = e[r],
+            l = t[r],
+            a = j(r, i, n),
+            u = j(r, l, n);
         return d().isEqual(a, u);
     }) &&
-        a !== i &&
-        ((a = i), k.emitChange());
+        a !== l &&
+        ((a = l), F.emitChange());
 }, 500);
-function w(e) {
+function P(e) {
     return new C.A({
         code: e.code,
         temporary: e.temporary,
@@ -120,22 +120,22 @@ function w(e) {
         roles: e.roles,
     });
 }
-function V(e) {
+function w(e) {
     return (
         !!(function (e) {
-            if (null == i || i.id !== e) return !1;
-            if (i === a) {
+            if (null == l || l.id !== e) return !1;
+            if (l === a) {
                 let t = L.A.getChannel(e);
                 if (null == t) return !1;
-                ((a = i = t), (u = L.A.getChannel(a.parent_id)));
+                ((a = l = t), (u = L.A.getChannel(a.parent_id)));
             } else {
                 let t = L.A.getChannel(e);
                 if (null == t) return !1;
-                ((i = t),
+                ((l = t),
                     null != a &&
                         ((a = a
-                            .set("permissionOverwrites", i.permissionOverwrites)
-                            .set("availableTags", i.availableTags)),
+                            .set("permissionOverwrites", l.permissionOverwrites)
+                            .set("availableTags", l.availableTags)),
                         (u = L.A.getChannel(a.parent_id))));
             }
             return !0;
@@ -144,26 +144,26 @@ function V(e) {
         (null != o && null == a.permissionOverwrites[o] && (o = a.getGuildId()), !0)
     );
 }
-function B(e) {
+function V(e) {
     let { channelId: t } = e;
-    return V(t);
+    return w(t);
 }
-class F extends S.Ay.Store {
+class B extends S.Ay.Store {
     static displayName = "ChannelSettingsStore";
     initialize() {
         this.waitFor(L.A);
     }
     hasChanges() {
-        return a !== i;
+        return a !== l;
     }
     isOpen() {
-        return U;
+        return R;
     }
     getSection() {
         return r;
     }
     getInvites() {
-        return { invites: O, loading: R };
+        return { invites: H, loading: O };
     }
     showNotice() {
         return this.hasChanges();
@@ -172,55 +172,55 @@ class F extends S.Ay.Store {
         return a;
     }
     getFormState() {
-        return y;
+        return v;
     }
     getCategory() {
         return u;
     }
     getProps() {
         return {
-            submitting: y === g.XlH.SUBMITTING,
-            errors: H,
+            submitting: v === g.XlH.SUBMITTING,
+            errors: y,
             channel: a,
             section: r,
-            subsection: l,
-            invites: O,
+            subsection: i,
+            invites: H,
             selectedOverwriteId: o,
             hasChanges: this.hasChanges(),
-            analyticsLocation: G,
+            analyticsLocation: U,
         };
     }
 }
-let k = new F(h.h, {
+let F = new B(h.h, {
         CHANNEL_SETTINGS_INIT: function (e) {
             let t = L.A.getChannel(e.channelId);
-            if (null == t) return M();
-            ((y = g.XlH.OPEN),
-                (a = i = t),
-                (G = "location" in e && null != e.location ? e.location : null),
-                (l = "subsection" in e ? e.subsection : null),
+            if (null == t) return b();
+            ((v = g.XlH.OPEN),
+                (a = l = t),
+                (U = "location" in e && null != e.location ? e.location : null),
+                (i = "subsection" in e ? e.subsection : null),
                 null != a && (a = a.set("nsfw", a.isNSFW())),
                 (u = L.A.getChannel(a.parent_id)),
                 (o = a.getGuildId()));
             let n = a.isModeratorReportChannel() ? g.p_A.PERMISSIONS : g.p_A.OVERVIEW;
-            return ((H = {}), b({ type: "CHANNEL_SETTINGS_SET_SECTION", section: r ?? n, subsection: l }), !0);
+            return ((y = {}), D({ type: "CHANNEL_SETTINGS_SET_SECTION", section: r ?? n, subsection: i }), !0);
         },
         CHANNEL_SETTINGS_SUBMIT: function () {
-            ((y = g.XlH.SUBMITTING), (H = {}));
+            ((v = g.XlH.SUBMITTING), (y = {}));
         },
         CHANNEL_SETTINGS_SUBMIT_SUCCESS: function () {
-            ((i = a), (y = g.XlH.OPEN));
+            ((l = a), (v = g.XlH.OPEN));
         },
         CHANNEL_SETTINGS_SUBMIT_FAILURE: function (e) {
-            ((y = g.XlH.OPEN),
-                (H = Object.keys(e.errors ?? {}).reduce((t, n) => {
+            ((v = g.XlH.OPEN),
+                (y = Object.keys(e.errors ?? {}).reduce((t, n) => {
                     let r = e.errors[n];
                     return ((0, s.isArray)(r) ? (t[n] = r.join("\n")) : (t[n] = r), t);
                 }, {})));
         },
-        CHANNEL_SETTINGS_CLOSE: M,
-        CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: B,
-        CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: B,
+        CHANNEL_SETTINGS_CLOSE: b,
+        CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: V,
+        CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: V,
         CHANNEL_SETTINGS_OVERWRITE_SELECT: function (e) {
             let { overwriteId: t } = e;
             o = t;
@@ -230,8 +230,8 @@ let k = new F(h.h, {
                 name: t,
                 channelType: n,
                 topic: r,
-                bitrate: l,
-                userLimit: i,
+                bitrate: i,
+                userLimit: l,
                 nsfw: u,
                 flags: o,
                 rateLimitPerUser: s,
@@ -255,8 +255,8 @@ let k = new F(h.h, {
             if (null == a) return !1;
             (null != t && (a = a.set("name", t)),
                 null != r && (a = a.set("topic", r)),
-                null != l && (a = a.set("bitrate", l)),
-                null != i && (a = a.set("userLimit", i)),
+                null != i && (a = a.set("bitrate", i)),
+                null != l && (a = a.set("userLimit", l)),
                 null != u && (a = a.set("nsfw", u)),
                 null != o && (a = a.set("flags", o)),
                 null != s && (a = a.set("rateLimitPerUser", s)),
@@ -277,38 +277,39 @@ let k = new F(h.h, {
                 void 0 !== p && (a = a.set("iconEmoji", p)),
                 null != L && (a = a.set("themeColor", L)),
                 void 0 !== g && (a = a.set("application_id", g)),
-                P());
+                M());
         },
-        CHANNEL_SETTINGS_SET_SECTION: b,
+        CHANNEL_SETTINGS_SET_SECTION: D,
         CHANNEL_SETTINGS_LOADED_INVITES: function (e) {
-            ((O = {}),
+            ((H = {}),
                 e.invites.forEach((e) => {
-                    O[e.code] = w(e);
+                    H[e.code] = P(e);
                 }));
         },
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e;
             if (null == a) return !1;
             let n = !1;
-            for (let e of t) n = V(e.id) || n;
+            for (let e of t) n = w(e.id) || n;
             return n;
         },
         THREAD_UPDATE: function (e) {
             let { channel: t } = e;
-            return null != a && V(t.id);
+            return null != a && w(t.id);
         },
         CHANNEL_DELETE: function (e) {
             let {
                 channel: { id: t },
             } = e;
             if (null == a || a.id !== t) return !1;
-            y = g.XlH.CLOSED;
+            v = g.XlH.CLOSED;
         },
         INSTANT_INVITE_REVOKE_SUCCESS: function (e) {
-            ((O = { ...O }), delete O[e.code]);
+            ((H = { ...H }), delete H[e.code]);
         },
         INSTANT_INVITE_CREATE_SUCCESS: function (e) {
-            O = { ...O, [e.invite.code]: w(e.invite) };
+            H = { ...H, [e.invite.code]: P(e.invite) };
         },
     }),
-    W = 221552 == n.j ? k : null;
+    k = 221552 == n.j ? F : null;
+n.d(t, {}, { A: k });

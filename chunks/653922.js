@@ -1,9 +1,14 @@
-s.d(r, { A: () => t });
 var a = s(998280),
     c = s(531651),
     i = s(618027);
-function t(p, r) {
-    (0, i.A)(2, arguments);
-    var s = (0, a.A)(r);
-    return (0, c.A)(p, 1e3 * s);
-}
+s.d(
+    r,
+    {},
+    {
+        A: function (p, r) {
+            (0, i.A)(2, arguments);
+            var s = (0, a.A)(r);
+            return (0, c.A)(p, 1e3 * s);
+        },
+    },
+);

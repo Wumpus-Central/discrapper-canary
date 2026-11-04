@@ -1,0 +1,70 @@
+.wrapper_vVEhpw {
+    background-color: var(--background-base-low);
+    border-radius: 0 0 8px 8px;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 12px;
+    position: relative
+}
+
+.wrapper_vVEhpw:only-child {
+    border-radius: 8px
+}
+
+.foreground_vVEhpw {
+    position: relative
+}
+
+.gameTile_vVEhpw {
+    aspect-ratio: 1;
+    border-radius: 8px;
+    flex: 0 0 50px;
+    height: 50px;
+    width: 50px
+}
+
+.gameTile_vVEhpw,
+.gameTile_vVEhpw img {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.gameTile_vVEhpw img {
+    border-radius: inherit;
+    display: block;
+    height: 100%;
+    width: 100%
+}
+
+.ctas_vVEhpw {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.primaryButtonWrapper_vVEhpw {
+    flex: 1 1 auto
+}
+
+.header_vVEhpw {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: auto 1fr;
+    margin-bottom: 10px
+}
+
+.headerCopy_vVEhpw {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: 2px
+}
+
+.titleOrbIcon_vVEhpw {
+    display: inline-block;
+    margin-block-end: 3px;
+    margin-inline-end: 2px;
+    vertical-align: middle
+}
+
+/*# sourceMappingURL=62a3a505e0dadd7a.css.map*/

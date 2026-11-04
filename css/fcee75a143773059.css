@@ -1,0 +1,201 @@
+.fullCover_oKjO_f {
+    height: 100%;
+    inset: 0;
+    position: absolute;
+    width: 100%
+}
+
+.scrollingBackground_oKjO_f {
+    --custom-tile-width: 209.75cqh;
+    background-image: url("https://cdn.discordapp.com/assets/content/e73648073e1dcaeeac52b95585562e060eb45bd213c23076b10f61ecc16db557.png");
+    background-repeat: repeat-x;
+    background-size: auto 100%
+}
+
+.full-motion .scrollingBackground_oKjO_f {
+    animation: scrollLeft_oKjO_f 60s linear infinite
+}
+
+@keyframes scrollLeft_oKjO_f {
+    0% {
+        background-position-x: 0
+    }
+
+    to {
+        background-position-x: calc(var(--custom-tile-width)*-1)
+    }
+}
+
+.videoContainer_oKjO_f {
+    container-type: size;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative
+}
+
+.progressiveBlur_oKjO_f {
+    -webkit-backdrop-filter: blur(27px);
+    backdrop-filter: blur(27px);
+    -webkit-mask-image: linear-gradient(245deg, transparent 44%, #000 50%);
+    mask-image: linear-gradient(245deg, transparent 44%, #000 50%)
+}
+
+.overlay_oKjO_f {
+    background: radial-gradient(181.07% 122.33% at -20.89% -23.8%, rgba(5, 75, 22, .4) 0, transparent 100%)
+}
+
+.fade_oKjO_f,
+.overlay_oKjO_f {}
+
+.fade_oKjO_f {
+    background: linear-gradient(-70.9deg, transparent 43%, var(--background-base-lowest) 80.68%)
+}
+
+.content_oKjO_f {
+    align-items: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: var(--space-24);
+    width: 100%;
+    z-index: 1
+}
+
+.heading_oKjO_f {
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    word-break: break-word
+}
+
+@container premium-marketing-page-container (min-width: 720px) {
+    .videoContainer_oKjO_f {
+        height: 100%;
+        inset: 0;
+        position: absolute;
+        width: 100%
+    }
+}
+
+.container_Lb4UkJ {
+    container-name: premium-marketing-page-container;
+    container-type: inline-size;
+    overflow: visible;
+    width: 100%
+}
+
+.card_Lb4UkJ,
+.container_Lb4UkJ {
+    border-radius: 20px;
+    position: relative
+}
+
+.card_Lb4UkJ {
+    background: none;
+    border: 1px solid var(--border-subtle);
+    overflow: hidden
+}
+
+.cardInner_Lb4UkJ {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%
+}
+
+.videoContainer_Lb4UkJ {
+    border-radius: 20px 20px 0 0;
+    height: 250px;
+    overflow: visible
+}
+
+.stackedGradientOverlay_Lb4UkJ {
+    background: linear-gradient(to bottom, transparent 0, color-mix(in srgb, var(--card-background-default) 70%, transparent) 50%, var(--card-background-default) 100%);
+    bottom: 0;
+    height: 100px;
+    inset-inline: 0;
+    position: absolute
+}
+
+.scrollingBackground_Lb4UkJ {}
+
+.progressiveBlur_Lb4UkJ {
+    display: none
+}
+
+.overlay_Lb4UkJ {
+    display: none
+}
+
+.fade_Lb4UkJ {
+    display: none
+}
+
+.content_Lb4UkJ {
+    background-color: var(--card-background-default);
+    justify-content: flex-end
+}
+
+.logo_Lb4UkJ {
+    height: 24px;
+    margin-bottom: var(--space-12);
+    width: 196px
+}
+
+.title_Lb4UkJ {
+    font-style: italic;
+    margin-bottom: var(--space-8);
+    text-transform: uppercase
+}
+
+.description_Lb4UkJ {
+    margin-bottom: var(--space-20)
+}
+
+.ctaRow_Lb4UkJ {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.disclaimer_Lb4UkJ {
+    align-items: flex-start;
+    display: flex;
+    gap: var(--space-4);
+    margin-top: var(--space-8)
+}
+
+@container premium-marketing-page-container (min-width: 720px) {
+    .cardInner_Lb4UkJ {
+        flex-direction: row;
+        height: 380px
+    }
+
+    .videoContainer_Lb4UkJ {
+        border-radius: 0;
+        height: 100%;
+        overflow: hidden
+    }
+
+    .stackedGradientOverlay_Lb4UkJ {
+        display: none
+    }
+
+    .progressiveBlur_Lb4UkJ {
+        display: block;
+        -webkit-mask-image: linear-gradient(245deg, transparent 56%, #000 62%);
+        mask-image: linear-gradient(245deg, transparent 56%, #000 62%)
+    }
+
+    .fade_Lb4UkJ,
+    .overlay_Lb4UkJ {
+        display: block
+    }
+
+    .content_Lb4UkJ {
+        background-color: transparent;
+        max-width: 530px;
+        padding: var(--space-32)
+    }
+}
+
+/*# sourceMappingURL=fcee75a143773059.css.map*/

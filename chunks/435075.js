@@ -1,7 +1,7 @@
-_.exports = {
-    kL: "container__7700a",
-    FS: "textContainer__7700a",
-    zc: "iconContainer__7700a",
-    nt: "gameIconContainer__7700a",
-    Am: "warningCorner__7700a",
+e.exports = {
+    kL: "container_eGA28Q",
+    FS: "textContainer_eGA28Q",
+    zc: "iconContainer_eGA28Q",
+    nt: "gameIconContainer_eGA28Q",
+    Am: "warningCorner_eGA28Q",
 };

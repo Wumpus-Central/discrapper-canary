@@ -1,8 +1,8 @@
 e.exports = {
-    Fg: "premiumTrialBadge__4c1e4",
-    AT: "premiumOfferUnackedBadge__4c1e4",
-    C8: "premiumOfferWithTimerAcknowledgedBadge__4c1e4",
-    WO: "premiumTrialBadgeSelected__4c1e4",
-    md: "premiumOfferBadgeCopy__4c1e4",
-    a7: "acknowledgedBadgeLabel__4c1e4",
+    Fg: "premiumTrialBadge_gLFXov",
+    AT: "premiumOfferUnackedBadge_gLFXov",
+    C8: "premiumOfferWithTimerAcknowledgedBadge_gLFXov",
+    WO: "premiumTrialBadgeSelected_gLFXov",
+    md: "premiumOfferBadgeCopy_gLFXov",
+    a7: "acknowledgedBadgeLabel_gLFXov",
 };

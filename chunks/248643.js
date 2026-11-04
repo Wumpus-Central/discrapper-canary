@@ -1,11 +1,10 @@
-n.d(t, { A: () => c });
 var l = n(477900),
     s = n(582128),
     a = n(453771),
     i = n(619517),
-    r = n(380629);
+    r = n(153440);
 n(516653);
-var o = n(105292);
+var o = n(792996);
 class c extends s.Component {
     render() {
         let {
@@ -19,8 +18,8 @@ class c extends s.Component {
             naturalHeight: m,
             playable: h,
             downloadable: f = !0,
-            volume: p,
-            autoPlay: g,
+            volume: g,
+            autoPlay: p,
             autoMute: A,
             responsive: C,
             mediaLayoutType: x,
@@ -72,8 +71,8 @@ class c extends s.Component {
                     width: o,
                     height: c,
                     responsive: C,
-                    volume: p,
-                    autoPlay: g ?? !1,
+                    volume: g,
+                    autoPlay: p ?? !1,
                     autoMute: A ?? !1,
                     type: r.Ay.Types.VIDEO,
                     mediaLayoutType: x,
@@ -105,3 +104,4 @@ class c extends s.Component {
         });
     }
 }
+n.d(t, {}, { A: c });

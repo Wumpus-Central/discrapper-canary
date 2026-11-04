@@ -1,18 +1,17 @@
-n.d(t, { Ay: () => T, GM: () => I, HY: () => p, kW: () => m });
-var i = n(636537),
+var i = n(620632),
     r = n(73153),
-    a = n(913122),
+    a = n(627784),
     s = n(178253),
     l = n(627363),
     o = n(587895),
     d = n(197111),
-    c = n(815996),
+    c = n(110676),
     u = n(590180),
     _ = n(166590),
     E = n(45938),
-    A = n(38405),
+    A = n(856383),
     h = n(652215),
-    f = n(202541);
+    f = n(682901);
 async function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -45,17 +44,7 @@ function p(e) {
         null
     );
 }
-async function m(e, t) {
-    return (
-        await i.Bo.post({
-            url: h.Rsh.USER_GIFT_CODE_DELIVERIES,
-            body: { checkout_session_id: t, recipient_ids: e },
-            oldFormErrors: !0,
-            rejectWithError: !0,
-        })
-    ).body;
-}
-let T = {
+let m = {
     resolveGiftCode: I,
     reportUnexpectedGiftCodeError: p,
     async fetchUserGiftCodesForSKU(e) {
@@ -103,3 +92,22 @@ let T = {
     },
     ...n(75255).A,
 };
+n.d(
+    t,
+    {},
+    {
+        Ay: m,
+        GM: I,
+        HY: p,
+        kW: async function (e, t) {
+            return (
+                await i.Bo.post({
+                    url: h.Rsh.USER_GIFT_CODE_DELIVERIES,
+                    body: { checkout_session_id: t, recipient_ids: e },
+                    oldFormErrors: !0,
+                    rejectWithError: !0,
+                })
+            ).body;
+        },
+    },
+);

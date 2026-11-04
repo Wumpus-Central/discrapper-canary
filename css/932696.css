@@ -1,10 +1,10 @@
-.singleSelectOption__12eef {
+.singleSelectOption_bUNrgk {
     -moz-column-gap: 8px;
     column-gap: 8px;
     display: flex
 }
 
-.deviceContainer__12eef {
+.deviceContainer_bUNrgk {
     align-items: center;
     display: grid;
     gap: 4px;
@@ -13,57 +13,57 @@
     width: 100%
 }
 
-.deviceContainer__12eef.withIcon__12eef {
+.deviceContainer_bUNrgk.withIcon_bUNrgk {
     grid-template-areas: "icon label subLabel certifiedPill";
     grid-template-columns: min-content auto 1fr min-content
 }
 
-.deviceContainer__12eef.multiLine__12eef {
+.deviceContainer_bUNrgk.multiLine_bUNrgk {
     grid-template-areas: "label certifiedPill" "subLabel certifiedPill";
     grid-template-columns: 1fr min-content
 }
 
-.deviceContainer__12eef.multiLine__12eef.withIcon__12eef {
+.deviceContainer_bUNrgk.multiLine_bUNrgk.withIcon_bUNrgk {
     grid-template-areas: "icon label certifiedPill" "icon subLabel certifiedPill";
     grid-template-columns: min-content 1fr min-content
 }
 
-.deviceContainer__12eef.multiLine__12eef .deviceSubLabel__12eef:before {
+.deviceContainer_bUNrgk.multiLine_bUNrgk .deviceSubLabel_bUNrgk:before {
     content: ""
 }
 
-.deviceContainer__12eef.multiLine__12eef .deviceSubLabel__12eef:after {
+.deviceContainer_bUNrgk.multiLine_bUNrgk .deviceSubLabel_bUNrgk:after {
     content: ""
 }
 
-.deviceContainer__12eef .deviceIcon__12eef {
+.deviceContainer_bUNrgk .deviceIcon_bUNrgk {
     align-items: center;
     display: flex;
     grid-area: icon;
     margin-inline-end: var(--space-4)
 }
 
-.deviceContainer__12eef .deviceLabel__12eef {
+.deviceContainer_bUNrgk .deviceLabel_bUNrgk {
     grid-area: label
 }
 
-.deviceContainer__12eef .deviceSubLabel__12eef {
+.deviceContainer_bUNrgk .deviceSubLabel_bUNrgk {
     grid-area: subLabel;
     text-overflow: ellipsis
 }
 
-.deviceContainer__12eef .deviceSubLabel__12eef:before {
+.deviceContainer_bUNrgk .deviceSubLabel_bUNrgk:before {
     content: "("
 }
 
-.deviceContainer__12eef .deviceSubLabel__12eef:after {
+.deviceContainer_bUNrgk .deviceSubLabel_bUNrgk:after {
     content: ")"
 }
 
-.deviceContainer__12eef .deviceCertifiedPill__12eef {
+.deviceContainer_bUNrgk .deviceCertifiedPill_bUNrgk {
     align-items: center;
     display: flex;
     grid-area: certifiedPill
 }
 
-/*# sourceMappingURL=932696.96137147521e5db7.css.map*/
+/*# sourceMappingURL=932696.a261281d6a9623d4.css.map*/

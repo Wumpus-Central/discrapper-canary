@@ -1,20 +1,20 @@
-e.d(t, { WatchlistForBusiness: () => p });
+e.r(t);
 var i = e(783285),
     n = e(768611),
     a = e(200503),
     u = e(628926),
-    o = e(242268),
-    l = e(326144),
-    r = e(264957),
+    r = e(242268),
+    o = e(326144),
+    l = e(264957),
     c = e(612346),
     d = e(936391),
     h = e(918676),
     m = e(688702),
     b = e(533903),
-    v = e(271977),
+    v = e(467167),
     f = ({ onFinish: s }) => {
         let { t } = (0, i.n)(),
-            [e, u] = (0, a.u)(() => (0, v.E)());
+            [e, u] = (0, a.u)(() => (0, v.createWatchlistForBusinessManager)());
         if (
             ((0, n._)(() => {
                 u.load();
@@ -26,7 +26,7 @@ var i = e(783285),
         if ("submitting" === e.status)
             return (0, n.v)(b.t, {
                 variant: "loading",
-                icon: (0, n.v)(o.t, { size: 64 }),
+                icon: (0, n.v)(r.t, { size: 64 }),
                 title: t("watchlistForBusiness.processing"),
                 subtitle: t("common.wontTakeLong"),
             });
@@ -34,7 +34,7 @@ var i = e(783285),
             return (0, n.v)(b.t, { variant: "success", icon: (0, n.v)(c.t, { size: 64 }), title: t("common.done") });
         if ("form" === e.status || "idle" === e.status) {
             let s = "form" === e.status ? e : null;
-            return (0, n.v)(l.t, {
+            return (0, n.v)(o.t, {
                 className: "IncodeWatchlistForBusinessPage",
                 title: t("watchlistForBusiness.title"),
                 hideFooterBranding: !0,
@@ -59,7 +59,7 @@ var i = e(783285),
                             value: s?.businessName ?? "",
                             onInput: (s) => u.setBusinessName(s.target.value),
                         }),
-                        (0, n.v)(r.t, {
+                        (0, n.v)(l.t, {
                             type: "submit",
                             disabled: !s?.isValid,
                             "data-testid": "watchlist-for-business-submit",
@@ -72,4 +72,4 @@ var i = e(783285),
         return null;
     },
     p = ({ onFinish: s }) => (0, n.v)(u.t, { children: (0, n.v)(f, { onFinish: s }) });
-(0, h.t)(p, "incode-watchlist-for-business");
+((0, h.t)(p, "incode-watchlist-for-business"), e.d(t, {}, { WatchlistForBusiness: p }));

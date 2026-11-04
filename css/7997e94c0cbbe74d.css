@@ -1,0 +1,119 @@
+.confirmation_Br3ZUd {
+    align-items: center;
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 400px;
+    padding: 24px;
+    text-align: center
+}
+
+.iconWrapper_Br3ZUd {
+    background: var(--background-base-lowest);
+    border-radius: 50%;
+    padding: 12px
+}
+
+.statusTextContainer_Br3ZUd {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 100%;
+    overflow: hidden;
+    overflow-wrap: break-word
+}
+
+.incompleteButtonsContainer_Br3ZUd {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%
+}
+
+.confirmationButtonRow_Br3ZUd {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    width: 100%
+}
+
+.confirmationButton_Br3ZUd {
+    display: flex;
+    flex: 1;
+    width: auto
+}
+
+.rejectionReasonLabel_Br3ZUd {
+    margin-inline-end: 4px
+}
+
+.confirmationTooltipContents_Br3ZUd {
+    width: 100%
+}
+
+.page_4JoJic {
+    background-color: var(--background-surface-high);
+    box-sizing: border-box
+}
+
+.contentWrapper_4JoJic,
+.page_4JoJic {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+.contentWrapper_4JoJic {
+    border-inline-start: 1px solid var(--border-subtle);
+    border-start-start-radius: var(--radius-md);
+    border-top: 1px solid var(--border-subtle);
+    position: relative
+}
+
+.refresh-fast-follow-distinct-borders .contentWrapper_4JoJic {
+    border-color: var(--app-frame-border)
+}
+
+.dragRegion_4JoJic {
+    display: none;
+    height: 100px
+}
+
+.dragRegion_4JoJic,
+.splash_4JoJic {
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.splash_4JoJic {
+    height: 100%
+}
+
+.defaultGradient_4JoJic {
+    background: linear-gradient(112deg, var(--background-base-lower) 0, var(--background-base-lowest) 100%)
+}
+
+.defaultGradient_4JoJic,
+.splashGradient_4JoJic {
+    height: 100%;
+    position: absolute;
+    width: 100%
+}
+
+.splashGradient_4JoJic {
+    background: linear-gradient(180deg, hsl(var(--primary-800-hsl)/.5) 0, hsl(var(--primary-800-hsl)/1) 100%)
+}
+
+.cover_4JoJic {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+/*# sourceMappingURL=7997e94c0cbbe74d.css.map*/

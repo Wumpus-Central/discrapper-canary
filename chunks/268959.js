@@ -1,16 +1,15 @@
-n.d(t, { A: () => k, s: () => b });
 var r = n(477900);
 n(582128);
 var i = n(503698),
-    l = n.n(i),
-    s = n(17928),
+    s = n.n(i),
+    l = n(855986),
     a = n(559106),
     u = n(866665),
-    o = n(62010),
+    o = n(805251),
     d = n(926321),
     c = n(318254),
     f = n(287809),
-    I = n(24482),
+    I = n(879610),
     v = n(590180),
     p = n(298072),
     m = n(993408),
@@ -18,7 +17,7 @@ var i = n(503698),
     g = n(623373),
     E = n(561769),
     x = n(57020),
-    h = n(105292),
+    h = n(792996),
     _ = n(31005);
 let C = (e) => {
         let { ref: t, ...n } = e;
@@ -30,7 +29,7 @@ let C = (e) => {
         return (0, r.jsx)(u.m, {
             text: h.intl.string(h.t.dCou7i),
             children: (0, r.jsx)(C, {
-                className: l()(t, _.$),
+                className: s()(t, _.$),
                 tabIndex: n,
                 role: "img",
                 "aria-label": i,
@@ -49,10 +48,10 @@ function R(e) {
         } = e,
         { isPurchased: p, isPartiallyOwnedBundle: C } = (0, A.h)(t),
         R = (0, m.G0)(t),
-        k = (0, s.bG)([v.A], () => v.A.getCategoryForProduct(t.skuId)),
+        k = (0, l.bG)([v.A], () => v.A.getCategoryForProduct(t.skuId)),
         y = t.categoryWillUnpublishAt ?? k?.unpublishedAt,
         S = null != y ? (0, m.WU)(y) : null,
-        T = (0, s.bG)([f.default], () => f.default.getCurrentUser()),
+        T = (0, l.bG)([f.default], () => f.default.getCurrentUser()),
         j = I.Ay.canUseShopDiscounts(T),
         { isOrbExclusive: O } = (0, x.F)({ product: t, hasShopDiscount: j, prioritizedCurrency: u }),
         P = n;
@@ -75,7 +74,7 @@ function R(e) {
     if (P === E.AW.DYNAMIC) return (0, r.jsx)(b, { className: a, tabIndex: d });
     if (P === E.AW.ORBS_EXCLUSIVE)
         return (0, r.jsx)("div", {
-            className: l()(a, _.$),
+            className: s()(a, _.$),
             children: (0, r.jsx)(o.E, { type: { text: h.intl.string(h.t["0TmQRG"]) }, variant: "inverted", icon: c.C }),
         });
     let N = null;
@@ -95,20 +94,27 @@ function R(e) {
         case E.AW.BADGE_OVERRIDE:
             null != i && "" !== i && (N = (0, r.jsx)(o.E, { type: { text: i }, variant: "inverted" }));
     }
-    return null == N ? null : (0, r.jsx)("div", { className: l()(a, _.$), children: N });
+    return null == N ? null : (0, r.jsx)("div", { className: s()(a, _.$), children: N });
 }
-let k = function (e) {
-    let { skuId: t, badgeOverride: n, className: i, prioritizedCurrency: l, tabIndex: s } = e,
-        a = (0, E.Vm)(t),
-        u = (0, p.Q)(a);
-    if (null == a || a.hideBadge) return null;
-    let o = (0, g.rb)(a, u);
-    return (0, r.jsx)(R, {
-        product: o,
-        badgeOverride: n,
-        productBadgeOverride: a.badgeOverride,
-        className: i,
-        prioritizedCurrency: l,
-        tabIndex: s,
-    });
-};
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { skuId: t, badgeOverride: n, className: i, prioritizedCurrency: s, tabIndex: l } = e,
+                a = (0, E.Vm)(t),
+                u = (0, p.Q)(a);
+            if (null == a || a.hideBadge) return null;
+            let o = (0, g.rb)(a, u);
+            return (0, r.jsx)(R, {
+                product: o,
+                badgeOverride: n,
+                productBadgeOverride: a.badgeOverride,
+                className: i,
+                prioritizedCurrency: s,
+                tabIndex: l,
+            });
+        },
+        s: b,
+    },
+);

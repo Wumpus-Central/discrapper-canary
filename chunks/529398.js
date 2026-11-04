@@ -1,17 +1,16 @@
-s.d(t, { default: () => j });
 var n = s(477900),
     a = s(582128),
     r = s(534514),
     i = s(834730),
     l = s(821609),
-    o = s(427495),
-    d = s(77870),
-    c = s(801365),
-    u = s(62405),
-    m = s(801870),
-    h = s(586035),
-    x = s(190107),
-    f = s(105292),
+    o = s(7891),
+    d = s(61387),
+    c = s(417404),
+    u = s(639701),
+    m = s(280249),
+    h = s(670092),
+    x = s(221596),
+    f = s(792996),
     g = s(40170);
 function C(e) {
     let { quest: t, rewardName: s, location: a, sourceQuestContent: o } = e;
@@ -56,40 +55,46 @@ function C(e) {
         ],
     });
 }
-function j(e) {
-    let { initialQuest: t, onClose: s, transitionState: r, location: i, sourceQuestContent: l } = e,
-        u = (0, d.C5)(t.id) ?? t,
-        f = a.useMemo(() => (0, c.f)(u.config), [u]),
-        g = u.userStatus?.claimedAt != null,
-        j = !u.preview && !g,
-        [v, A] = a.useState(j ? "loading" : "claimed");
-    a.useEffect(() => {
-        if (j) {
-            let e = (0, c.$s)(u.config);
-            (0, o.Oq)(u.id, e, i)
-                .then(() => A("claimed"))
-                .catch(() => A("error"));
-        }
-    }, [u, i, j]);
-    let E = "error" === v || null == f;
-    return (0, n.jsx)(h.A, {
-        onClose: s,
-        transitionState: r,
-        quest: u,
-        sourceQuestContent: l,
-        location: x.rE.INGAME_REWARD_MODAL,
-        isRewardContentLoading: "loading" === v,
-        rewardContentHasError: E,
-        rewardContent: E
-            ? null
-            : (0, n.jsx)(m.A, {
-                  rewardName: f.messages.name,
-                  children: (0, n.jsx)(C, {
-                      quest: u,
-                      rewardName: f.messages.name,
-                      location: i,
-                      sourceQuestContent: l,
-                  }),
-              }),
-    });
-}
+s.d(
+    t,
+    {},
+    {
+        default: function (e) {
+            let { initialQuest: t, onClose: s, transitionState: r, location: i, sourceQuestContent: l } = e,
+                u = (0, d.C5)(t.id) ?? t,
+                f = a.useMemo(() => (0, c.f)(u.config), [u]),
+                g = u.userStatus?.claimedAt != null,
+                j = !u.preview && !g,
+                [v, A] = a.useState(j ? "loading" : "claimed");
+            a.useEffect(() => {
+                if (j) {
+                    let e = (0, c.$s)(u.config);
+                    (0, o.Oq)(u.id, e, i)
+                        .then(() => A("claimed"))
+                        .catch(() => A("error"));
+                }
+            }, [u, i, j]);
+            let E = "error" === v || null == f;
+            return (0, n.jsx)(h.A, {
+                onClose: s,
+                transitionState: r,
+                quest: u,
+                sourceQuestContent: l,
+                location: x.rE.INGAME_REWARD_MODAL,
+                isRewardContentLoading: "loading" === v,
+                rewardContentHasError: E,
+                rewardContent: E
+                    ? null
+                    : (0, n.jsx)(m.A, {
+                          rewardName: f.messages.name,
+                          children: (0, n.jsx)(C, {
+                              quest: u,
+                              rewardName: f.messages.name,
+                              location: i,
+                              sourceQuestContent: l,
+                          }),
+                      }),
+            });
+        },
+    },
+);

@@ -1,16 +1,15 @@
-n.d(t, { N0: () => f, lC: () => p, uS: () => x });
 var l = n(582128),
-    r = n(17928),
+    r = n(855986),
     s = n(793574),
     a = n(688810),
-    i = n(10392),
+    i = n(739053),
     o = n(82498),
-    c = n(174459),
-    u = n(24482),
+    c = n(129230),
+    u = n(879610),
     d = n(870216),
     m = n(758836),
     g = n(652215),
-    h = n(202541);
+    h = n(682901);
 function p(e) {
     let { analyticsSource: t, analyticsLocations: n } = (0, r.cf)([d.A], () => d.A.getAnalytics()),
         l = (function (e) {
@@ -45,27 +44,35 @@ function p(e) {
         { analyticsLocations: i, newestAnalyticsLocation: o } = (0, a.Ay)([...n, s.A.COLLECTIBLES_SHOP, l]);
     return { analyticsSource: t, analyticsLocations: i, newestAnalyticsLocation: o, currentTabLocation: l };
 }
-function x(e, t, n, r) {
-    let { sourceButton: s, enabled: a = !0 } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-        { analyticsLocations: i, analyticsSource: o, currentTabLocation: u, newestAnalyticsLocation: d } = p(t);
-    l.useEffect(() => {
-        if (!a || r !== m.Pf.VISIBLE || d !== u) return;
-        let l = t === m.G2.CATALOG ? s : o;
-        c.default.track(g.HAw.COLLECTIBLES_SHOP_VIEWED, {
-            location_stack: i,
-            source: l,
-            page_session_id: e,
-            page_type: t === m.G2.CATALOG ? "full" : t,
-            category: t === m.G2.HOME ? void 0 : n,
-        });
-    }, [i, e, t, n, u, r, s, o, d, a]);
-}
-function f(e, t) {
-    let { analyticsLocations: n } = p(e);
-    l.useEffect(() => {
-        null == t ||
-            u.Ay.canUseCollectibles(t) ||
-            (c.default.track(g.HAw.PREMIUM_UPSELL_VIEWED, { type: h.e.COLLECTIBLES_SHOP, location_stack: n }),
-            (0, i.sq)(g.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, o.uq)(h.e.COLLECTIBLES_SHOP)));
-    }, [n, t]);
-}
+n.d(
+    t,
+    {},
+    {
+        N0: function (e, t) {
+            let { analyticsLocations: n } = p(e);
+            l.useEffect(() => {
+                null == t ||
+                    u.Ay.canUseCollectibles(t) ||
+                    (c.default.track(g.HAw.PREMIUM_UPSELL_VIEWED, { type: h.e.COLLECTIBLES_SHOP, location_stack: n }),
+                    (0, i.sq)(g.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, o.uq)(h.e.COLLECTIBLES_SHOP)));
+            }, [n, t]);
+        },
+        lC: p,
+        uS: function (e, t, n, r) {
+            let { sourceButton: s, enabled: a = !0 } =
+                    arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
+                { analyticsLocations: i, analyticsSource: o, currentTabLocation: u, newestAnalyticsLocation: d } = p(t);
+            l.useEffect(() => {
+                if (!a || r !== m.Pf.VISIBLE || d !== u) return;
+                let l = t === m.G2.CATALOG ? s : o;
+                c.default.track(g.HAw.COLLECTIBLES_SHOP_VIEWED, {
+                    location_stack: i,
+                    source: l,
+                    page_session_id: e,
+                    page_type: t === m.G2.CATALOG ? "full" : t,
+                    category: t === m.G2.HOME ? void 0 : n,
+                });
+            }, [i, e, t, n, u, r, s, o, d, a]);
+        },
+    },
+);

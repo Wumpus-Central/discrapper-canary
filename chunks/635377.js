@@ -182,7 +182,7 @@ function v(e, i, s, t, r) {
             t = !1;
         o(this, "allowStale") && ((s += "\n  allowStale: true"), (t = !0));
         var r = o(this, "max");
-        r && r !== 1 / 0 && (t && (s += ","), (s += "\n  max: " + a.inspect(r, i)), (t = !0));
+        r && 1 / 0 !== r && (t && (s += ","), (s += "\n  max: " + a.inspect(r, i)), (t = !0));
         var n = o(this, "maxAge");
         n && (t && (s += ","), (s += "\n  maxAge: " + a.inspect(n, i)), (t = !0));
         var h = o(this, "lengthCalculator");

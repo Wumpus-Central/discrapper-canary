@@ -1,1 +1,1 @@
-a.exports = { zr: "root__2bf8a", AB: "speakingIndicator__2bf8a", PW: "speakingIndicatorText__2bf8a" };
+r.exports = { zr: "root_Gk-Dl6", AB: "speakingIndicator_Gk-Dl6", PW: "speakingIndicatorText_Gk-Dl6" };

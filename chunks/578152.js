@@ -1,5 +1,5 @@
-(n.d(t, { A: () => m }), n(321073));
-var i = n(636537),
+n(321073);
+var i = n(620632),
     r = n(506774),
     a = n(73153),
     s = n(439372),
@@ -7,7 +7,7 @@ var i = n(636537),
     o = n(626584),
     d = n(927813),
     c = n(723702),
-    u = n(19575);
+    u = n(253400);
 let _ = +d.A.Millis.HOUR,
     E = 7 * d.A.Millis.DAY,
     A = +d.A.Millis.DAY,
@@ -49,7 +49,7 @@ class p extends s.A {
                 : location.reload(!0));
     }
     isNewUpdater() {
-        return f.includes((0, c.getNewUpdaterPlatformName)() ?? "");
+        return f.includes((0, c.cZ)() ?? "");
     }
     handlePostConnectionOpen() {
         (this.checkForUpdates(),
@@ -88,7 +88,7 @@ class p extends s.A {
                 rejectWithError: !0,
             }).then(
                 (e) => {
-                    if (null == e.body || "f81c54c439b725ca9139150d6a449b1615ace712" === e.body.hash)
+                    if (null == e.body || "3ec1f92d60d740f32dd0d034a31997ecded582f9" === e.body.hash)
                         return this._handleUpdateNotAvailable();
                     if (e.body.required || (0, l.kK)()) return this._handleUpdateDownloaded(!1);
                     let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? E : A;
@@ -118,3 +118,4 @@ class p extends s.A {
     };
 }
 let m = new p();
+n.d(t, {}, { A: m });

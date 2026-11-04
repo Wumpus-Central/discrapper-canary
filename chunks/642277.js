@@ -1,4 +1,3 @@
-n.d(t, { A: () => a, W: () => r });
 var i = n(477900);
 if ((n(582128), 221552 == n.j)) var l = n(806163);
 var s = n(323125);
@@ -13,3 +12,4 @@ let a =
               return (0, i.jsx)(l.rd, { to: r() });
           }
         : null;
+n.d(t, {}, { A: a, W: r });

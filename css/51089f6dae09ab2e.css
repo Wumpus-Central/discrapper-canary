@@ -1,0 +1,28 @@
+.showcase_wF0-QX {
+    gap: var(--space-24)
+}
+
+.section_wF0-QX,
+.showcase_wF0-QX {
+    display: flex;
+    flex-direction: column
+}
+
+.section_wF0-QX {
+    gap: var(--space-8)
+}
+
+.stage_wF0-QX {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    min-height: 48px;
+    padding: var(--space-12) var(--space-16)
+}
+
+.log_wF0-QX {
+    font-variant-numeric: tabular-nums
+}
+
+/*# sourceMappingURL=51089f6dae09ab2e.css.map*/

@@ -1,0 +1,32 @@
+.imagesContainer_1y_Jb1 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+
+.appIconContainer_1y_Jb1 {
+    border-color: var(--opacity-24);
+    border-radius: var(--radius-xl);
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    transform: rotate(-12.41deg)
+}
+
+.questIcon_1y_Jb1 {
+    border-radius: calc(var(--radius-xl) - 1px);
+    height: 105px;
+    width: 105px
+}
+
+.rewardTileContainer_1y_Jb1 {
+    border-color: var(--opacity-24);
+    border-radius: var(--radius-xl);
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    transform: translateX(-5px) rotate(7.81deg)
+}
+
+/*# sourceMappingURL=22b8417746dc4a31.css.map*/

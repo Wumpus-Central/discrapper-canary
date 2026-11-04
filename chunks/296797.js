@@ -1,8 +1,7 @@
-n.d(t, { A: () => S });
 var i = n(435558),
     r = n.n(i),
     a = n(73153),
-    s = n(691426),
+    s = n(273626),
     l = n(110782),
     o = n(439372),
     d = n(627363),
@@ -14,7 +13,7 @@ var i = n(435558),
     h = n(403362),
     f = n(723702),
     I = n(953384),
-    p = n(952818),
+    p = n(986322),
     m = n(765741),
     T = n(863160);
 class g extends o.A {
@@ -64,7 +63,7 @@ class g extends o.A {
         d.YY.fetchMany(...t);
     }
     handlePostConnectionOpen() {
-        ((0, f.isDesktop)() && !E.A.fetched && (0, l.Yq)(),
+        ((0, f.xl)() && !E.A.fetched && (0, l.Yq)(),
             s.A.getDetectableGames(),
             s.A.getDetectableBlocklist(),
             (this.intervalId = setInterval(
@@ -87,3 +86,4 @@ class g extends o.A {
     }
 }
 let S = new g();
+n.d(t, {}, { A: S });

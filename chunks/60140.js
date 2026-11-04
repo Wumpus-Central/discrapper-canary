@@ -1,16 +1,15 @@
-n.d(t, { A: () => y });
 var l = n(477900),
     r = n(582128),
-    s = n(197935),
+    s = n(151869),
     a = n(440938),
     i = n(590180),
     o = n(511265),
     c = n(313276),
     u = n(206077),
-    d = n(905276),
+    d = n(987421),
     m = n(561769),
     g = n(484469),
-    h = n(105292),
+    h = n(792996),
     p = n(105499);
 let x = { flattenProductVariants: !1 };
 function f(e) {
@@ -69,30 +68,36 @@ function C(e) {
         children: (0, l.jsx)(d.A, { skuId: t.skuId, prioritizedCurrency: r, listItemProps: s }),
     });
 }
-let y = function (e) {
-    let t,
-        n,
-        s,
-        { heroBlockRecord: a, layout: d, tab: m, isBlockLoading: g = !1 } = e,
-        { products: h } =
-            ((t = (0, c.A)()),
-            (n = (0, o.p)()),
-            (s = r.useMemo(() => (g ? [] : n(t(a.rankedSkuIds))), [g, t, a.rankedSkuIds, n])),
-            { products: (0, u.X)(s) }),
-        p = r.useMemo(
-            () =>
-                !g &&
-                0 !== a.rankedSkuIds.length &&
-                !(h.length > 0) &&
-                a.rankedSkuIds.every((e) => i.A.getProduct(e)?.variantGroupStoreListingId != null),
-            [g, a.rankedSkuIds, h.length],
-        ),
-        x = g || p,
-        f = r.useMemo(() => h.filter((e) => null != i.A.getCategoryForProduct(e.skuId)), [h]);
-    switch (d) {
-        case "feed":
-            return (0, l.jsx)(v, { isLoading: x, products: f, tab: m });
-        case "hscroll":
-            return (0, l.jsx)(_, { isLoading: x, products: f, tab: m });
-    }
-};
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let t,
+                n,
+                s,
+                { heroBlockRecord: a, layout: d, tab: m, isBlockLoading: g = !1 } = e,
+                { products: h } =
+                    ((t = (0, c.A)()),
+                    (n = (0, o.p)()),
+                    (s = r.useMemo(() => (g ? [] : n(t(a.rankedSkuIds))), [g, t, a.rankedSkuIds, n])),
+                    { products: (0, u.X)(s) }),
+                p = r.useMemo(
+                    () =>
+                        !g &&
+                        0 !== a.rankedSkuIds.length &&
+                        !(h.length > 0) &&
+                        a.rankedSkuIds.every((e) => i.A.getProduct(e)?.variantGroupStoreListingId != null),
+                    [g, a.rankedSkuIds, h.length],
+                ),
+                x = g || p,
+                f = r.useMemo(() => h.filter((e) => null != i.A.getCategoryForProduct(e.skuId)), [h]);
+            switch (d) {
+                case "feed":
+                    return (0, l.jsx)(v, { isLoading: x, products: f, tab: m });
+                case "hscroll":
+                    return (0, l.jsx)(_, { isLoading: x, products: f, tab: m });
+            }
+        },
+    },
+);

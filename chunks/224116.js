@@ -1,4 +1,4 @@
-(r.r(s), r.d(s, { default: () => f }));
+r.r(s);
 var t = r(477900),
     i = r(582128),
     n = r(503698),
@@ -11,7 +11,7 @@ var t = r(477900),
     h = r(53505),
     p = r(877062),
     w = r(652215),
-    b = r(105292),
+    b = r(792996),
     u = r(746820);
 let x = [
         { id: "discord", getName: () => b.intl.string(b.t.uON9Ui), url: (0, h.SU)() },
@@ -74,4 +74,4 @@ class j extends i.Component {
         });
     }
 }
-let f = j;
+r.d(s, {}, { default: j });

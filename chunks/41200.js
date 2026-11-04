@@ -1,18 +1,25 @@
-n.d(t, { K: () => d, r: () => o });
 var i = n(465932),
     r = n(440293),
     a = n(960253),
     s = n(486418),
     l = n(652215);
-function o(e) {
-    let t = (0, r.w)(e?.id),
-        n = (0, a.Oh)(e?.id),
-        o = (0, s.P)(e),
-        { shouldHideGuildPurchaseEntryPoints: d } = (0, i.MH)(e?.id);
-    return null != e && !d && (e.features.has(l.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE) || (t && n) || o);
-}
-function d(e, t) {
-    let n = (0, r.$)(e?.id),
-        i = (0, a.l8)(e?.id, t);
-    return null != e && (e.features.has(l.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE) || (n && i));
-}
+n.d(
+    t,
+    {},
+    {
+        K: function (e, t) {
+            let n = (0, r.$)(e?.id),
+                i = (0, a.l8)(e?.id, t);
+            return null != e && (e.features.has(l.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE) || (n && i));
+        },
+        r: function (e) {
+            let t = (0, r.w)(e?.id),
+                n = (0, a.Oh)(e?.id),
+                o = (0, s.P)(e),
+                { shouldHideGuildPurchaseEntryPoints: d } = (0, i.MH)(e?.id);
+            return (
+                null != e && !d && (e.features.has(l.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE) || (t && n) || o)
+            );
+        },
+    },
+);

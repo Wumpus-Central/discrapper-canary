@@ -1,0 +1,25 @@
+.keybindFlexboxLayout_AW0Yww {
+    align-items: baseline;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    justify-content: flex-start;
+    max-width: 100%;
+    overflow: visible;
+    white-space: normal;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.keyCombo_AW0Yww {
+    vertical-align: middle
+}
+
+.keyCombo_AW0Yww,
+.keyComboKey_AW0Yww {
+    display: inline-block
+}
+
+/*# sourceMappingURL=c605101badabe0c0.css.map*/

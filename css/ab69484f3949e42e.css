@@ -1,0 +1,220 @@
+.emptyPreview_-9W-th:after {
+    border: 2px dotted var(--border-normal);
+    border-radius: var(--radius-round);
+    content: "";
+    inset: calc(var(--space-8)*-1);
+    position: absolute
+}
+
+.enable-forced-colors .emptyPreview_-9W-th:after {
+    border-color: GrayText
+}
+
+.fadeInAvatarImg_-9W-th {
+    animation: fadeIn_-9W-th .5s
+}
+
+@keyframes fadeIn_-9W-th {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.samplePlaceholder_N7MIYY {
+    animation: fadeIn_N7MIYY .15s ease-out;
+    filter: grayscale(100%)
+}
+
+@keyframes fadeIn_N7MIYY {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.container_BorJ2C {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -10px;
+    margin-inline-end: -10px
+}
+
+.container_BorJ2C.gradient_BorJ2C {
+    flex-wrap: nowrap
+}
+
+.container_BorJ2C.gradientFullWidth_BorJ2C {
+    flex-wrap: wrap;
+    margin-inline-end: 0
+}
+
+.container_BorJ2C.gradientFullWidth_BorJ2C>* {
+    flex: 1 0 100%
+}
+
+.container_BorJ2C.gradientFullWidth_BorJ2C .colorPickerRow_BorJ2C {
+    gap: var(--space-8)
+}
+
+.container_BorJ2C.gradientFullWidth_BorJ2C .gradientPreset_BorJ2C {
+    flex: 1;
+    margin-inline-end: 0;
+    width: auto
+}
+
+.customContainer_BorJ2C,
+.defaultContainer_BorJ2C {
+    flex: 1;
+    margin-top: 10px;
+    margin-inline-end: 10px;
+    max-width: 70px;
+    min-width: 60px
+}
+
+.custom_BorJ2C .preset_BorJ2C {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: vertical
+}
+
+.customColorPicker_BorJ2C {
+    background-color: var(--background-base-low);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    box-shadow: var(--shadow-border), var(--shadow-high);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    width: 220px
+}
+
+.customColorPickerInputContainer_BorJ2C {
+    align-items: center;
+    display: flex;
+    gap: 12px
+}
+
+.customColorPickerEyeDropper_BorJ2C {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 16px;
+    justify-content: center;
+    margin: 0;
+    width: 16px
+}
+
+.customColorPickerInput_BorJ2C {
+    flex: 1
+}
+
+.customColorPickerInput_BorJ2C .input_BorJ2C {
+    height: 24px;
+    text-transform: uppercase
+}
+
+.colorPickerRow_BorJ2C {
+    display: flex;
+    flex-wrap: wrap;
+    height: 20px;
+    margin-top: 10px;
+    overflow: hidden
+}
+
+.colorPickerRow_BorJ2C.singleRow_BorJ2C {
+    flex-wrap: nowrap;
+    gap: var(--space-8);
+    height: auto;
+    margin-top: 0;
+    overflow: visible
+}
+
+.colorPickerRow_BorJ2C.singleRow_BorJ2C .colorPickerSwatch_BorJ2C {
+    flex-shrink: 0;
+    margin-inline-end: 0
+}
+
+.colorPickerSwatch_BorJ2C {
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    margin-inline-end: 10px;
+    padding: 0;
+    position: relative;
+    width: 20px
+}
+
+.colorPickerSwatch_BorJ2C.custom_BorJ2C,
+.colorPickerSwatch_BorJ2C.default_BorJ2C {
+    border-radius: 8px;
+    height: 50px;
+    margin-inline-end: 0;
+    width: 100%
+}
+
+.colorPickerSwatch_BorJ2C.gradientPreset_BorJ2C {
+    border: none;
+    height: 20px;
+    margin-inline-end: var(--space-8);
+    width: 40px
+}
+
+.colorPickerSwatch_BorJ2C.disabled_BorJ2C {
+    cursor: not-allowed;
+    opacity: .3;
+    pointer-events: none
+}
+
+.colorPickerSwatch_BorJ2C .colorPickerDropper_BorJ2C {
+    inset-inline-end: 4px;
+    position: absolute;
+    top: 4px
+}
+
+.suggestedColors_BorJ2C {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center
+}
+
+.suggestedColor_BorJ2C {
+    border: 1px solid var(--primary-400);
+    border-radius: 4px;
+    cursor: pointer;
+    height: 32px;
+    width: 32px
+}
+
+.theme-dark .colorPickerSwatch_BorJ2C.noColor_BorJ2C {
+    border-color: var(--opacity-white-8)
+}
+
+.theme-light .colorPickerSwatch_BorJ2C.noColor_BorJ2C {
+    border-color: hsl(var(--primary-500-hsl)/.1)
+}
+
+.enable-forced-colors .colorPickerSwatch_BorJ2C {
+    border: 1px solid ButtonText;
+    forced-color-adjust: none
+}
+
+.enable-forced-colors .colorPickerSwatch_BorJ2C.disabled_BorJ2C {
+    border-color: GrayText
+}
+
+/*# sourceMappingURL=ab69484f3949e42e.css.map*/

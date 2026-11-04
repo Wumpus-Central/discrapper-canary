@@ -1,6 +1,6 @@
 e.exports = {
-    LL: "howItWorksContainer_dd30dc",
-    kD: "howItWorksCard_dd30dc " + _(296315).Nr,
-    sM: "howItWorksImageContainer_dd30dc",
-    Q7: "howItWorksDescription_dd30dc",
+    LL: "howItWorksContainer_TZZenC",
+    kD: "howItWorksCard_TZZenC " + r(296315).Nr,
+    sM: "howItWorksImageContainer_TZZenC",
+    Q7: "howItWorksDescription_TZZenC",
 };

@@ -1,8 +1,8 @@
-a.exports = {
-    Nr: "card_a3aa72",
-    vk: "clickable_a3aa72",
-    Iv: "cover_a3aa72",
-    xe: "coverArt_a3aa72",
-    XE: "coverSkeleton_a3aa72",
-    UU: "name_a3aa72",
+e.exports = {
+    Nr: "card_u6Y3Ln",
+    vk: "clickable_u6Y3Ln",
+    Iv: "cover_u6Y3Ln",
+    xe: "coverArt_u6Y3Ln",
+    XE: "coverSkeleton_u6Y3Ln",
+    UU: "name_u6Y3Ln",
 };

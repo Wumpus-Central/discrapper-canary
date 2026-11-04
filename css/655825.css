@@ -1,4 +1,4 @@
-.chatWheelMouseInput_adfa30 {
+.chatWheelMouseInput_ov2c5T {
     align-items: center;
     display: flex;
     height: 100%;
@@ -6,30 +6,30 @@
     width: 100%
 }
 
-.chatWheel_adfa30 {
+.chatWheel_ov2c5T {
     position: relative
 }
 
-.chatWheelBackground_adfa30 {
+.chatWheelBackground_ov2c5T {
     height: 100%;
     width: 100%
 }
 
-.chatWheelDeadZone_adfa30 {
+.chatWheelDeadZone_ov2c5T {
     fill: var(--background-surface-high);
     opacity: 0
 }
 
-.chatWheelDeadZone_adfa30:hover {
+.chatWheelDeadZone_ov2c5T:hover {
     opacity: .3
 }
 
-.chatWheelCenter_adfa30 {
+.chatWheelCenter_ov2c5T {
     fill: var(--background-surface-high);
     opacity: .6
 }
 
-.innerContent_adfa30 {
+.innerContent_ov2c5T {
     align-items: center;
     bottom: 0;
     display: flex;
@@ -40,7 +40,7 @@
     pointer-events: none
 }
 
-.chatWheelDeadZoneIcon_adfa30 {
+.chatWheelDeadZoneIcon_ov2c5T {
     color: var(--white);
     cursor: pointer;
     height: 48px;
@@ -49,7 +49,7 @@
     z-index: 9999
 }
 
-.paginationHint_adfa30 {
+.paginationHint_ov2c5T {
     background-color: var(--opacity-black-28);
     border-radius: var(--radius-sm);
     color: var(--white);
@@ -59,23 +59,23 @@
     padding: 4px
 }
 
-.chatWheelBackground_adfa30 {
+.chatWheelBackground_ov2c5T {
     fill: none;
     stroke: var(--background-surface-high);
     opacity: .9
 }
 
-.chatWheelItem_adfa30 {
+.chatWheelItem_ov2c5T {
     align-items: center;
     display: flex;
     justify-content: center;
     position: absolute
 }
 
-.soundButton_d9cf5f {
+.soundButton_JhiVh1 {
     box-shadow: var(--shadow-border), var(--shadow-high);
     height: 52px;
     width: 96px
 }
 
-/*# sourceMappingURL=655825.b90ad650abccc9d9.css.map*/
+/*# sourceMappingURL=655825.f31a082315b73932.css.map*/

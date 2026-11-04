@@ -1,8 +1,8 @@
 e.exports = {
-    nd: "panel_eefb55 " + _(7409).n,
-    wx: "header_eefb55",
-    XG: "scroller_eefb55",
-    p_: "list_eefb55",
-    AS: "item_eefb55",
-    Qs: "content_eefb55",
+    nd: "panel_7LDgP1 " + a(7409).n,
+    wx: "header_7LDgP1",
+    XG: "scroller_7LDgP1",
+    p_: "list_7LDgP1",
+    AS: "item_7LDgP1",
+    Qs: "content_7LDgP1",
 };

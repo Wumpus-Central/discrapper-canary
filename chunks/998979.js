@@ -1,7 +1,6 @@
-n.d(t, { A: () => o });
-var i = n(17928),
+var i = n(855986),
     r = n(73153),
-    a = n(280450);
+    a = n(46653);
 let s = { users: {} };
 class l extends i.Ay.DeviceSettingsStore {
     static displayName = "ConjureDevicePermissionStore";
@@ -35,3 +34,4 @@ let o = new l(r.h, {
         s = { ...s };
     },
 });
+n.d(t, {}, { A: o });

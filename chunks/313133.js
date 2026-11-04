@@ -1,7 +1,7 @@
 i.exports = {
-    iE: "wrapper__0a838",
-    iJ: "innerWrapper__0a838",
-    q4: "invisible__0a838",
-    iQ: "descriptionContainer__0a838",
-    oU: "nitroIcon__0a838",
+    iE: "wrapper_dxEE3g",
+    iJ: "innerWrapper_dxEE3g",
+    q4: "invisible_dxEE3g",
+    iQ: "descriptionContainer_dxEE3g",
+    oU: "nitroIcon_dxEE3g",
 };

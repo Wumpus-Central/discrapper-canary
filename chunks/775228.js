@@ -1,15 +1,15 @@
 let i;
 n.d(t, { A: () => I });
-var r = n(17928),
+var r = n(855986),
     a = n(73153),
     s = n(77729),
     l = n(723702),
-    o = n(340829),
-    d = n(105292);
+    o = n(659096),
+    d = n(792996);
 let c = {},
-    u = (0, l.isWindows)()
+    u = (0, l.uF)()
         ? `${s.A.process.env.LOCALAPPDATA}\\DiscordGames`
-        : (0, l.isMac)()
+        : (0, l.cX)()
           ? "/Applications/DiscordGames"
           : "/tmp";
 function _(e, t) {

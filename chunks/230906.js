@@ -1,26 +1,5 @@
-r.d(t, { iP: () => i, pA: () => o, vS: () => a });
 let n = null;
-function i(e, t = "assertive", r = 7e3) {
-    n
-        ? n.announce(e, t, r)
-        : ((n = new s()),
-          ("boolean" == typeof IS_REACT_ACT_ENVIRONMENT ? IS_REACT_ACT_ENVIRONMENT : "u" > typeof jest)
-              ? n.announce(e, t, r)
-              : setTimeout(() => {
-                    (null == n ? void 0 : n.isAttached()) && (null == n || n.announce(e, t, r));
-                }, 100));
-}
-function o(e) {
-    n && n.clear(e);
-}
-function a(e = null) {
-    n
-        ? n.move(e)
-        : (function (e = null) {
-              n || (n = new s(e));
-          })(e);
-}
-class s {
+class i {
     isAttached() {
         var e;
         return null == (e = this.node) ? void 0 : e.isConnected;
@@ -88,3 +67,29 @@ class s {
                 this.parentNode.prepend(this.node)));
     }
 }
+r.d(
+    t,
+    {},
+    {
+        iP: function (e, t = "assertive", r = 7e3) {
+            n
+                ? n.announce(e, t, r)
+                : ((n = new i()),
+                  ("boolean" == typeof IS_REACT_ACT_ENVIRONMENT ? IS_REACT_ACT_ENVIRONMENT : "u" > typeof jest)
+                      ? n.announce(e, t, r)
+                      : setTimeout(() => {
+                            (null == n ? void 0 : n.isAttached()) && (null == n || n.announce(e, t, r));
+                        }, 100));
+        },
+        pA: function (e) {
+            n && n.clear(e);
+        },
+        vS: function (e = null) {
+            n
+                ? n.move(e)
+                : (function (e = null) {
+                      n || (n = new i(e));
+                  })(e);
+        },
+    },
+);

@@ -1,14 +1,4 @@
-(a.d(t, { A: () => g, h: () => S }),
-    a(393431),
-    a(532706),
-    a(42231),
-    a(232424),
-    a(949626),
-    a(767709),
-    a(65162),
-    a(323874),
-    a(14289),
-    a(35956));
+(a(393431), a(532706), a(42231), a(232424), a(949626), a(767709), a(65162), a(323874), a(14289), a(35956));
 var n = a(477900),
     r = a(582128),
     i = a(139033),
@@ -17,46 +7,25 @@ var n = a(477900),
     o = a(430993),
     c = a(696208),
     u = a(629584),
-    d = a(834730),
-    f = a(192308);
+    f = a(834730),
+    d = a(192308);
 if (588245 != a.j) var h = a(821609);
-var p = a(77729),
-    b = a(231545),
+var b = a(77729),
+    p = a(231545),
     m = a(808994);
 let x = [
         { name: "View", value: "view" },
         { name: "Edit", value: "edit" },
     ],
     y = [117, 117, 105, 100];
-async function v(e) {
-    let { default: t } = await a.e("25777").then(a.t.bind(a, 293384, 19)),
-        n = t.createFile(!1),
-        r = new Promise((e, t) => {
-            ((n.onReady = e), (n.onError = (e) => t(Error(e))));
-        }),
-        i = e.slice(0);
-    if (((i.fileStart = 0), n.appendBuffer(i), n.flush(), await r, null == n.boxes)) return null;
-    for (let e of n.boxes) {
-        if ("uuid" !== e.type || "a1c8529933464db888f083f57a75a5ef" !== e.uuid) continue;
-        let t = e.data;
-        if (null == t) break;
-        return {
-            boxStart: e.start,
-            boxSize: e.size,
-            hdrSize: e.hdr_size,
-            metadata: JSON.parse(new TextDecoder().decode(t)),
-        };
-    }
-    return null;
-}
-function A(e) {
+function v(e) {
     let {
             filename: t,
             initialJson: a,
             fileBuffer: i,
-            boxStart: f,
+            boxStart: d,
             boxSize: h,
-            hdrSize: p,
+            hdrSize: b,
             transitionState: v,
             onClose: A,
         } = e,
@@ -106,9 +75,9 @@ function A(e) {
                         "aria-hidden": "edit" !== w,
                         className: "edit" === w ? m.jX : m.R,
                     }),
-                    "view" === w && (0, n.jsx)(b.A, { data: g }),
+                    "view" === w && (0, n.jsx)(p.A, { data: g }),
                     null != j &&
-                        (0, n.jsx)(d.E, { variant: "body-sm/medium", color: "text-feedback-critical", children: j }),
+                        (0, n.jsx)(f.E, { variant: "body-sm/medium", color: "text-feedback-critical", children: j }),
                 ],
             }),
             (0, n.jsx)(c.H, {
@@ -155,7 +124,7 @@ function A(e) {
                                                       c.set(o, s.length + l.length),
                                                       c.buffer
                                                   );
-                                              })(i, f, h, p, s);
+                                              })(i, d, h, b, s);
                                           ((n = new Blob([o], { type: "video/mp4" })),
                                               (a = URL.createObjectURL(n)),
                                               ((r = document.createElement("a")).href = a),
@@ -175,55 +144,82 @@ function A(e) {
         ],
     });
 }
-async function E(e, t) {
+async function A(e, t) {
     try {
-        let a = await v(e);
-        if (null == a)
+        let r = await (async function (e) {
+            let { default: t } = await a.e(25777).then(a.t.bind(a, 293384, 19)),
+                n = t.createFile(!1),
+                r = new Promise((e, t) => {
+                    ((n.onReady = e), (n.onError = (e) => t(Error(e))));
+                }),
+                i = e.slice(0);
+            if (((i.fileStart = 0), n.appendBuffer(i), n.flush(), await r, null == n.boxes)) return null;
+            for (let e of n.boxes) {
+                if ("uuid" !== e.type || "a1c8529933464db888f083f57a75a5ef" !== e.uuid) continue;
+                let t = e.data;
+                if (null == t) break;
+                return {
+                    boxStart: e.start,
+                    boxSize: e.size,
+                    hdrSize: e.hdr_size,
+                    metadata: JSON.parse(new TextDecoder().decode(t)),
+                };
+            }
+            return null;
+        })(e);
+        if (null == r)
             return void (0, i.A)({ title: "No metadata found", subtitle: `No clip metadata UUID box found in ${t}` });
-        let r = JSON.stringify(a.metadata, null, 2);
-        (0, f.openModal)((i) =>
-            (0, n.jsx)(A, {
-                ...i,
+        let l = JSON.stringify(r.metadata, null, 2);
+        (0, d.qf)((a) =>
+            (0, n.jsx)(v, {
+                ...a,
                 filename: t,
-                initialJson: r,
+                initialJson: l,
                 fileBuffer: e,
-                boxStart: a.boxStart,
-                boxSize: a.boxSize,
-                hdrSize: a.hdrSize,
+                boxStart: r.boxStart,
+                boxSize: r.boxSize,
+                hdrSize: r.hdrSize,
             }),
         );
     } catch (e) {
         (0, i.A)({ title: "Failed to parse clip metadata", subtitle: e instanceof Error ? e.message : String(e) });
     }
 }
-async function w(e) {
-    let t = await e.arrayBuffer();
-    await E(t, e.name);
-}
-async function S(e) {
-    try {
-        let { data: t, filename: a } = await p.A.clips.loadClip(e),
-            n = t.buffer.slice(t.byteOffset, t.byteOffset + t.byteLength);
-        await E(n, a);
-    } catch (e) {
-        (0, i.A)({ title: "Failed to load clip", subtitle: e instanceof Error ? e.message : String(e) });
-    }
-}
-function g() {
-    let e = r.useRef(null);
-    return (0, n.jsxs)(n.Fragment, {
-        children: [
-            (0, n.jsx)("input", {
-                ref: e,
-                type: "file",
-                accept: "video/mp4,.mp4",
-                onChange: function (e) {
-                    let t = e.target.files?.[0];
-                    ((e.target.value = ""), null != t && w(t));
-                },
-                className: m.Z_,
-            }),
-            (0, n.jsx)(h.$, { text: "Open File", onClick: () => e.current?.click() }),
-        ],
-    });
-}
+a.d(
+    t,
+    {},
+    {
+        A: function () {
+            let e = r.useRef(null);
+            return (0, n.jsxs)(n.Fragment, {
+                children: [
+                    (0, n.jsx)("input", {
+                        ref: e,
+                        type: "file",
+                        accept: "video/mp4,.mp4",
+                        onChange: function (e) {
+                            let t = e.target.files?.[0];
+                            ((e.target.value = ""),
+                                null != t &&
+                                    (async function (e) {
+                                        let t = await e.arrayBuffer();
+                                        await A(t, e.name);
+                                    })(t));
+                        },
+                        className: m.Z_,
+                    }),
+                    (0, n.jsx)(h.$, { text: "Open File", onClick: () => e.current?.click() }),
+                ],
+            });
+        },
+        h: async function (e) {
+            try {
+                let { data: t, filename: a } = await b.A.clips.loadClip(e),
+                    n = t.buffer.slice(t.byteOffset, t.byteOffset + t.byteLength);
+                await A(n, a);
+            } catch (e) {
+                (0, i.A)({ title: "Failed to load clip", subtitle: e instanceof Error ? e.message : String(e) });
+            }
+        },
+    },
+);

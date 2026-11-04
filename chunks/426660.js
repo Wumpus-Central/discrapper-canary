@@ -1,8 +1,7 @@
-s.d(i, { A: () => c });
 var r = s(477900);
 s(582128);
-var t = s(440166),
-    l = s(19575),
+var t = s(893030),
+    l = s(253400),
     n = s(105100);
 let a = l.Ay.getEnableHardwareAcceleration();
 function o() {
@@ -131,7 +130,13 @@ function o() {
         ],
     });
 }
-let c = function (e) {
-    let { eventTargetRef: i, disableAnimation: s = !1 } = e;
-    return s || !a ? (0, r.jsx)(o, {}) : (0, r.jsx)(t.M, { className: n.Q_, eventTargetRef: i });
-};
+s.d(
+    i,
+    {},
+    {
+        A: function (e) {
+            let { eventTargetRef: i, disableAnimation: s = !1 } = e;
+            return s || !a ? (0, r.jsx)(o, {}) : (0, r.jsx)(t.M, { className: n.Q_, eventTargetRef: i });
+        },
+    },
+);

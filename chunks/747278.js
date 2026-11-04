@@ -1,1 +1,1 @@
-e.exports = { K: "tooltipDescription_cd30d9", R: "tooltipWordmark_cd30d9" };
+t.exports = { K: "tooltipDescription_sj14Wo", R: "tooltipWordmark_sj14Wo" };

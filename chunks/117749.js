@@ -1,11 +1,10 @@
-n.d(t, { A: () => u });
 var i = n(439372),
     r = n(30793),
     a = n(67480),
     s = n(828596),
     l = n(918467),
     o = n(652215),
-    d = n(202541);
+    d = n(682901);
 class c extends i.A {
     actions = {
         SKU_PURCHASE_SUCCESS: this.onPurchaseSuccess.bind(this),
@@ -31,3 +30,4 @@ class c extends i.A {
     }
 }
 let u = new c();
+n.d(t, {}, { A: u });

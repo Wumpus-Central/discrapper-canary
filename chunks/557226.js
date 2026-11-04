@@ -1,6 +1,6 @@
 c.exports = {
-    bv: "churnDiscountBadge_b65b20",
-    Hf: "churnDiscountAcknowledgedBadge_b65b20",
-    aW: "churnDiscountBadgeIcon_b65b20",
-    jf: "churnDiscountBadgeLabel_b65b20",
+    bv: "churnDiscountBadge_0WdzI8",
+    Hf: "churnDiscountAcknowledgedBadge_0WdzI8",
+    aW: "churnDiscountBadgeIcon_0WdzI8",
+    jf: "churnDiscountBadgeLabel_0WdzI8",
 };

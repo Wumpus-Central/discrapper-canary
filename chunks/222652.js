@@ -1,4 +1,3 @@
-i.d(t, { N: () => x, z: () => p });
 var s,
     n = i(743368),
     a = i(975807),
@@ -9,57 +8,64 @@ var c = i(727811),
     o = i(263910),
     d = i(102488),
     u = i(631368),
-    m = i(385740),
-    g = i(105292),
+    m = i(831768),
+    g = i(792996),
     x = (((s = {}).DEFAULT = "default"), (s.SUBSCRIBE = "subscribe"), s);
-function p() {
-    let e,
-        t = (0, u.$)(),
-        { status: i, requestInProgress: s, redirect: x } = (0, d.L)(),
-        p = (0, o.A)(x),
-        f = (0, r.M)("xbox");
-    if (t === u.C.NO_ACCESS) return { kind: "subscribe", text: g.intl.string(g.t.sEAnVH) };
-    let h = (function (e) {
-        switch (e) {
-            case c.P.NOT_CLAIMED:
-            case c.P.CLAIM_IN_PROGRESS:
-                return { text: g.intl.string(m.default.EL3rU4) };
-            case c.P.CLAIMED:
-                return { text: g.intl.string(m.default["0mQ2U6"]), icon: n.W, iconPosition: "end" };
-            case c.P.CANCELLATION_IN_PROGRESS:
-                return { text: g.intl.string(m.default.wBz9aO), disabled: !0 };
-        }
-    })(i);
-    if (t === u.C.NONE)
-        return {
-            kind: "default",
-            claimStatus: i,
-            requestInProgress: s,
-            text: h.text,
-            disabled: !0,
-            loading: !0,
-            icon: h.icon,
-            iconPosition: h.iconPosition,
-        };
-    if (i === c.P.NOT_CLAIMED || i === c.P.CLAIM_IN_PROGRESS)
-        e = () => {
-            p();
-        };
-    else if (i === c.P.CLAIMED) {
-        let t = (0, l.isWindows)() ? "msxbox://" : "https://xbox.com/play";
-        e = () => {
-            ((0, a.A)(t), f(r.H.PARTNER_PAGE_REDIRECT, t));
-        };
-    }
-    return {
-        kind: "default",
-        claimStatus: i,
-        requestInProgress: s,
-        text: h.text,
-        disabled: (h.disabled ?? !1) || s,
-        loading: s,
-        icon: h.icon,
-        iconPosition: h.iconPosition,
-        onClick: e,
-    };
-}
+i.d(
+    t,
+    {},
+    {
+        N: x,
+        z: function () {
+            let e,
+                t = (0, u.$)(),
+                { status: i, requestInProgress: s, redirect: x } = (0, d.L)(),
+                p = (0, o.A)(x),
+                f = (0, r.M)("xbox");
+            if (t === u.C.NO_ACCESS) return { kind: "subscribe", text: g.intl.string(g.t.sEAnVH) };
+            let h = (function (e) {
+                switch (e) {
+                    case c.P.NOT_CLAIMED:
+                    case c.P.CLAIM_IN_PROGRESS:
+                        return { text: g.intl.string(m.default.EL3rU4) };
+                    case c.P.CLAIMED:
+                        return { text: g.intl.string(m.default["0mQ2U6"]), icon: n.W, iconPosition: "end" };
+                    case c.P.CANCELLATION_IN_PROGRESS:
+                        return { text: g.intl.string(m.default.wBz9aO), disabled: !0 };
+                }
+            })(i);
+            if (t === u.C.NONE)
+                return {
+                    kind: "default",
+                    claimStatus: i,
+                    requestInProgress: s,
+                    text: h.text,
+                    disabled: !0,
+                    loading: !0,
+                    icon: h.icon,
+                    iconPosition: h.iconPosition,
+                };
+            if (i === c.P.NOT_CLAIMED || i === c.P.CLAIM_IN_PROGRESS)
+                e = () => {
+                    p();
+                };
+            else if (i === c.P.CLAIMED) {
+                let t = (0, l.uF)() ? "msxbox://" : "https://xbox.com/play";
+                e = () => {
+                    ((0, a.A)(t), f(r.H.PARTNER_PAGE_REDIRECT, t));
+                };
+            }
+            return {
+                kind: "default",
+                claimStatus: i,
+                requestInProgress: s,
+                text: h.text,
+                disabled: (h.disabled ?? !1) || s,
+                loading: s,
+                icon: h.icon,
+                iconPosition: h.iconPosition,
+                onClick: e,
+            };
+        },
+    },
+);

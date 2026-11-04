@@ -1,13 +1,11 @@
-e.exports = {
-    qG: "fadeIn_eff18d",
-    Uw: "fadeInContentFullMotion_eff18d",
-    Tp: "background_eff18d",
-    gh: "backgroundFill_eff18d",
-    zX: "assetLayers_eff18d",
-    cU: "sunbeamGradient_eff18d",
-    kL: "container_eff18d",
-    vx: "fadeInContent_eff18d",
-    jw: "riveIllustration_eff18d",
-    h_: "description_eff18d",
-    qr: "footer_eff18d",
+o.exports = {
+    Tp: "background_pGS-85",
+    gh: "backgroundFill_pGS-85",
+    zX: "assetLayers_pGS-85",
+    cU: "sunbeamGradient_pGS-85",
+    kL: "container_pGS-85",
+    vx: "fadeInContent_pGS-85",
+    jw: "riveIllustration_pGS-85",
+    h_: "description_pGS-85",
+    qr: "footer_pGS-85",
 };

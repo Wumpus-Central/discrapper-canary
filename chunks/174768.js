@@ -1,33 +1,33 @@
 let i;
-(n.d(t, { A: () => et }), n(321073), n(667532));
+(n(321073), n(667532));
 var r = n(435558),
     a = n.n(r),
-    s = n(17928),
+    s = n(855986),
     l = n(506774),
     o = n(73153),
-    d = n(115718),
+    d = n(662090),
     c = n(280157),
     u = n(243264),
     _ = n(455234),
     E = n(940382),
     A = n(863005),
-    h = n(363195),
-    f = n(280450),
-    I = n(358047),
+    h = n(413599),
+    f = n(46653),
+    I = n(799704),
     p = n(734057),
     m = n(31717),
     T = n(808728),
     g = n(696451),
     S = n(71393),
     N = n(576705),
-    C = n(573163),
+    C = n(218461),
     O = n(309010),
     R = n(967198),
     L = n(543465),
-    y = n(768038),
+    y = n(997625),
     D = n(403362),
     b = n(652215),
-    v = n(105292);
+    v = n(792996);
 let P = "seenQSTutorial";
 function M(e) {
     return e === d.rD.USER || e === d.rD.USER_GLOBAL;
@@ -132,7 +132,7 @@ function q(e, t) {
                                       limit: 100,
                                       fuzzy: !0,
                                       filter: () => !0,
-                                      type: T.vM,
+                                      type: "VOCAL",
                                       allowEmptyQueries: !0,
                                   });
                           }
@@ -182,7 +182,7 @@ function q(e, t) {
                               E))
                                   (a.add(t.record.id), a.add(e), r.push(t));
                           if (null != n) {
-                              let e = T.Ay.getSelectableChannelIds(n)
+                              let e = T.A.getSelectableChannelIds(n)
                                   .filter((e) => {
                                       let t = p.A.getChannel(e);
                                       return (
@@ -272,7 +272,7 @@ class J extends s.Ay.PersistedStore {
     static displayName = "QuickSwitcherStore";
     static persistKey = "QuickSwitcherStore";
     initialize(e) {
-        (this.waitFor(A.A, f.default, I.Ay, p.A, m.A, u.A, T.Ay, g.Ay, S.A, N.A, C.Ay, O.Ay, R.A, h.A, L.Ay),
+        (this.waitFor(A.A, f.default, I.Ay, p.A, m.A, u.A, T.A, g.Ay, S.A, N.A, C.Ay, O.Ay, R.A, h.A, L.Ay),
             this.syncWith([h.A], () => !0),
             (G = l.w.get(P) || !1),
             (j = e?.channelHistory ?? []));
@@ -319,66 +319,66 @@ class J extends s.Ay.PersistedStore {
     }
 }
 let ee = new J(o.h, {
-        CONNECTION_OPEN: K,
-        CONNECTION_OPEN_SUPPLEMENTAL: K,
-        QUICKSWITCHER_SHOW: z,
-        SHOW_ACTION_SHEET_QUICK_SWITCHER: z,
-        QUICKSWITCHER_HIDE: Z,
-        OVERLAY_SET_INPUT_LOCKED: Z,
-        HIDE_ACTION_SHEET_QUICK_SWITCHER: Z,
-        QUICKSWITCHER_SEARCH: function (e) {
-            let { query: t, queryMode: n } = e,
-                r = t.trim();
-            if (null == i) return !1;
-            if (k !== n) {
-                (null == n ? i.setResultTypes(U()) : M(n) ? i.setResultTypes([d.rD.USER]) : i.setResultTypes([n]),
-                    i.setLimit(null != n ? 100 : 5));
-                let e = R.A.getGuildId() ?? void 0;
-                n === d.rD.USER && null != e
-                    ? i.setOptions({ userFilters: { guild: e, friends: !0 } }, !0)
-                    : n === d.rD.VOICE_CHANNEL
-                      ? i.setOptions({ voiceChannelGuildFilter: null }, !0)
-                      : i.setOptions({ userFilters: null, voiceChannelGuildFilter: void 0 }, !0);
-            }
-            if ((k = n) === d.rD.USER) {
-                let e = R.A.getGuildId() ?? null;
-                i.search(r, e);
-            } else i.search(r, void 0);
-        },
-        QUICKSWITCHER_SELECT: function (e) {
-            w = e.selectedIndex;
-        },
-        QUICKSWITCHER_SWITCH_TO: function () {
-            if (G) return !1;
-            ((G = !0), l.w.set(P, !0));
-        },
-        CHANNEL_SELECT: function (e) {
-            let { guildId: t, channelId: n } = e;
-            if (((W = null), null == n)) return !1;
-            X(n);
-            let i = I.Ay.getSidebarState(n);
-            if (
-                i?.type !== E.PE.VIEW_CHANNEL ||
-                i.channelId === n ||
-                null == I.Ay.getCurrentSidebarChannelId(n) ||
-                null != I.Ay.getGuildSidebarState(t)
-            )
-                return;
-            let r = j;
-            X(i.channelId);
-            let a = { parentId: n, channelId: i.channelId, historyBeforeRestore: r };
-            ((W = a),
-                queueMicrotask(() => {
-                    W === a && (W = null);
-                }));
-        },
-        SIDEBAR_VIEW_CHANNEL: function (e) {
-            let t = W;
-            if (((W = null), e.sidebarType !== E.PE.VIEW_CHANNEL)) return !1;
-            (null != t && t.parentId === e.baseChannelId && t.channelId !== e.channelId && (j = t.historyBeforeRestore),
-                X(e.channelId));
-        },
-        GAME_AUTOCOMPLETE_FETCH_SUCCESS: Q,
-        GAME_AUTOCOMPLETE_FETCH_FAILURE: Q,
-    }),
-    et = ee;
+    CONNECTION_OPEN: K,
+    CONNECTION_OPEN_SUPPLEMENTAL: K,
+    QUICKSWITCHER_SHOW: z,
+    SHOW_ACTION_SHEET_QUICK_SWITCHER: z,
+    QUICKSWITCHER_HIDE: Z,
+    OVERLAY_SET_INPUT_LOCKED: Z,
+    HIDE_ACTION_SHEET_QUICK_SWITCHER: Z,
+    QUICKSWITCHER_SEARCH: function (e) {
+        let { query: t, queryMode: n } = e,
+            r = t.trim();
+        if (null == i) return !1;
+        if (k !== n) {
+            (null == n ? i.setResultTypes(U()) : M(n) ? i.setResultTypes([d.rD.USER]) : i.setResultTypes([n]),
+                i.setLimit(null != n ? 100 : 5));
+            let e = R.A.getGuildId() ?? void 0;
+            n === d.rD.USER && null != e
+                ? i.setOptions({ userFilters: { guild: e, friends: !0 } }, !0)
+                : n === d.rD.VOICE_CHANNEL
+                  ? i.setOptions({ voiceChannelGuildFilter: null }, !0)
+                  : i.setOptions({ userFilters: null, voiceChannelGuildFilter: void 0 }, !0);
+        }
+        if ((k = n) === d.rD.USER) {
+            let e = R.A.getGuildId() ?? null;
+            i.search(r, e);
+        } else i.search(r, void 0);
+    },
+    QUICKSWITCHER_SELECT: function (e) {
+        w = e.selectedIndex;
+    },
+    QUICKSWITCHER_SWITCH_TO: function () {
+        if (G) return !1;
+        ((G = !0), l.w.set(P, !0));
+    },
+    CHANNEL_SELECT: function (e) {
+        let { guildId: t, channelId: n } = e;
+        if (((W = null), null == n)) return !1;
+        X(n);
+        let i = I.Ay.getSidebarState(n);
+        if (
+            i?.type !== E.PE.VIEW_CHANNEL ||
+            i.channelId === n ||
+            null == I.Ay.getCurrentSidebarChannelId(n) ||
+            null != I.Ay.getGuildSidebarState(t)
+        )
+            return;
+        let r = j;
+        X(i.channelId);
+        let a = { parentId: n, channelId: i.channelId, historyBeforeRestore: r };
+        ((W = a),
+            queueMicrotask(() => {
+                W === a && (W = null);
+            }));
+    },
+    SIDEBAR_VIEW_CHANNEL: function (e) {
+        let t = W;
+        if (((W = null), e.sidebarType !== E.PE.VIEW_CHANNEL)) return !1;
+        (null != t && t.parentId === e.baseChannelId && t.channelId !== e.channelId && (j = t.historyBeforeRestore),
+            X(e.channelId));
+    },
+    GAME_AUTOCOMPLETE_FETCH_SUCCESS: Q,
+    GAME_AUTOCOMPLETE_FETCH_FAILURE: Q,
+});
+n.d(t, {}, { A: ee });

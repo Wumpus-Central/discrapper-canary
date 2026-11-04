@@ -1,4 +1,3 @@
-s.d(p, { U: () => t });
 var i,
     t =
         (((i = {}).DESKTOP = "desktop"),
@@ -9,3 +8,4 @@ var i,
         (i.NETFLIX = "netflix"),
         (i.AMAZON_KIDS_PLUS = "amazon kids+"),
         i);
+s.d(p, {}, { U: t });

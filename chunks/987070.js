@@ -1,8 +1,8 @@
-e.exports = {
-    XG: "scroller__38ddd",
-    Nr: "card__38ddd",
-    aZ: "skeletonArtwork__38ddd",
-    cW: "cardWrapper__38ddd",
-    xe: "coverArt__38ddd",
-    uz: "skeletonArtworkOverlay__38ddd",
+t.exports = {
+    XG: "scroller_lfwvtm",
+    Nr: "card_lfwvtm",
+    aZ: "skeletonArtwork_lfwvtm",
+    cW: "cardWrapper_lfwvtm",
+    xe: "coverArt_lfwvtm",
+    uz: "skeletonArtworkOverlay_lfwvtm",
 };

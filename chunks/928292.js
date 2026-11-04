@@ -1,4 +1,3 @@
-r.d(t, { v: () => s });
 var n = r(518206);
 let i = new Map(),
     o = new Set();
@@ -30,10 +29,16 @@ function a() {
     }),
         document.body.addEventListener("transitionend", t));
 }
-function s(e) {
-    requestAnimationFrame(() => {
-        for (let [e] of i) "isConnected" in e && !e.isConnected && i.delete(e);
-        0 === i.size ? e() : o.add(e);
-    });
-}
-"u" > typeof document && ("loading" !== document.readyState ? a() : document.addEventListener("DOMContentLoaded", a));
+("u" > typeof document && ("loading" !== document.readyState ? a() : document.addEventListener("DOMContentLoaded", a)),
+    r.d(
+        t,
+        {},
+        {
+            v: function (e) {
+                requestAnimationFrame(() => {
+                    for (let [e] of i) "isConnected" in e && !e.isConnected && i.delete(e);
+                    0 === i.size ? e() : o.add(e);
+                });
+            },
+        },
+    ));

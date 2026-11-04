@@ -1,2 +1,1 @@
-a.d(s, { N: () => r });
-let r = { tension: 250, friction: 20 };
+a.d(s, {}, { N: { tension: 250, friction: 20 } });

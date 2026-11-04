@@ -1,13 +1,5 @@
-s.d(a, { A: () => r });
-var t = s(210038);
-async function r() {
-    let e = await p(),
-        [a, r] = await Promise.all([(0, t.LM)(new URL(s(103810), s.b)), (0, t.LM)(new URL(s(201490), s.b))]),
-        i = await e({ wasmBinary: a }),
-        g = await i.loadWebAssemblyModule(r, { loadAsync: !0 });
-    return new n(i, g);
-}
-class n {
+var t = s(195152);
+class r {
     host;
     abi;
     constructor(e, a) {
@@ -19,7 +11,7 @@ class n {
                 "grammar-registration-failed",
                 "loadGrammar: languageId is required (must match the name referenced by injection queries)",
             );
-        let [a, s, r, n] = await Promise.all([
+        let [a, s, r, i] = await Promise.all([
                 (0, t.LM)(e.wasm),
                 (0, t.WY)(e.highlights),
                 void 0 === e.injections ? "" : (0, t.WY)(e.injections),
@@ -52,7 +44,7 @@ class n {
         let [p, o] = (0, t.BW)(this.host, e.languageId),
             [c, l] = (0, t.BW)(this.host, s),
             [b, m] = (0, t.BW)(this.host, r),
-            [w, d] = (0, t.BW)(this.host, n),
+            [w, d] = (0, t.BW)(this.host, i),
             h = 0;
         try {
             h = this.abi.arborium_rt_register_grammar(g, p, o, c, l, b, m, w, d);
@@ -64,10 +56,10 @@ class n {
                 "grammar-registration-failed",
                 "arborium_rt_register_grammar returned 0 (query compile failure, bad language ptr, or empty name?)",
             );
-        return new i(this, h, g, e.languageId);
+        return new n(this, h, g, e.languageId);
     }
 }
-class i {
+class n {
     runtime;
     id;
     languagePtr;
@@ -80,7 +72,7 @@ class i {
         this.#a();
         let e = this.runtime.abi.arborium_rt_create_session(this.id);
         if (0 === e) throw new t.gT("session-creation-failed", `arborium_rt_create_session(${this.id}) returned 0`);
-        return new g(this, e);
+        return new i(this, e);
     }
     unregister() {
         this.#e || (this.runtime.abi.arborium_rt_unregister_grammar(this.id), (this.#e = !0));
@@ -89,7 +81,7 @@ class i {
         if (this.#e) throw new t.gT("grammar-registration-failed", `grammar ${this.id} has been unregistered`);
     }
 }
-class g {
+class i {
     grammar;
     id;
     #s = !1;
@@ -199,6 +191,18 @@ class g {
         }
     }
 }
-async function p() {
-    return (await s.e("819825").then(s.bind(s, 765640))).default;
-}
+s.d(
+    a,
+    {},
+    {
+        A: async function () {
+            let e = await (async function () {
+                    return (await s.e(819825).then(s.bind(s, 765640))).default;
+                })(),
+                [a, n] = await Promise.all([(0, t.LM)(new URL(s(103810), s.b)), (0, t.LM)(new URL(s(201490), s.b))]),
+                i = await e({ wasmBinary: a }),
+                g = await i.loadWebAssemblyModule(n, { loadAsync: !0 });
+            return new r(i, g);
+        },
+    },
+);

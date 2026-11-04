@@ -1,17 +1,17 @@
-.buttonHighlighted__5d39a {
+.buttonHighlighted_uTnppa {
     background: linear-gradient(95.07deg, var(--premium-tier-2-purple-for-gradients) 0, var(--premium-tier-2-purple-for-gradients-2) 49.96%, var(--premium-tier-2-pink-for-gradients) 95.93%)
 }
 
-.button__5d39a {
+.button_uTnppa {
     align-items: center;
     display: flex
 }
 
-.buttonIcon__5d39a {
+.buttonIcon_uTnppa {
     margin-inline-end: 4px
 }
 
-.wrapper__9ed0b {
+.wrapper_RcIw1d {
     inset-inline-start: 0;
     isolation: isolate;
     pointer-events: none;
@@ -22,15 +22,15 @@
     z-index: 10
 }
 
-.innerWrapper__9ed0b,
-.wrapper__9ed0b {
+.innerWrapper_RcIw1d,
+.wrapper_RcIw1d {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     display: flex;
     justify-content: center
 }
 
-.innerWrapper__9ed0b {
+.innerWrapper_RcIw1d {
     align-items: center;
     -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
@@ -46,44 +46,44 @@
     transform: translateZ(0)
 }
 
-.theme-light .innerWrapper__9ed0b {
+.theme-light .innerWrapper_RcIw1d {
     background-color: rgba(0, 0, 0, .08);
     border-color: rgba(0, 0, 0, .1)
 }
 
-.guildInfo__9ed0b {
+.guildInfo_RcIw1d {
     align-items: center;
     display: flex;
     gap: 8px
 }
 
-.guildIcon__9ed0b {
+.guildIcon_RcIw1d {
     border: 1px solid hsla(0, 0%, 100%, .16);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-low);
     flex: 0 0 auto
 }
 
-.theme-light .guildIcon__9ed0b {
+.theme-light .guildIcon_RcIw1d {
     border-color: rgba(0, 0, 0, .1)
 }
 
-.ctaButton__9ed0b {
+.ctaButton_RcIw1d {
     flex: 0 0 auto
 }
 
-.guildName__9ed0b {
+.guildName_RcIw1d {
     color: var(--white);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
 }
 
-.theme-light .guildName__9ed0b {
+.theme-light .guildName_RcIw1d {
     color: var(--primary-800)
 }
 
-.container__040eb {
+.container_hKMjy9 {
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-high);
@@ -96,7 +96,7 @@
     width: 100%
 }
 
-.thumbnail__040eb {
+.thumbnail_hKMjy9 {
     display: block;
     height: auto;
     -o-object-fit: cover;
@@ -104,21 +104,21 @@
     width: 100%
 }
 
-.overlay__040eb {
+.overlay_hKMjy9 {
     background: radial-gradient(ellipse at center, rgba(25, 22, 58, .2) 0, rgba(25, 22, 58, .9) 100%)
 }
 
-.overlay__040eb,
-.playButton__040eb {
+.overlay_hKMjy9,
+.playButton_hKMjy9 {
     inset: 0;
     pointer-events: none;
     position: absolute
 }
 
-.playButton__040eb {
+.playButton_hKMjy9 {
     align-items: center;
     display: flex;
     justify-content: center
 }
 
-/*# sourceMappingURL=392028.8ae70792a7216e3b.css.map*/
+/*# sourceMappingURL=392028.2ea52324400b107d.css.map*/

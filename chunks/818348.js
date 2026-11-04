@@ -1,70 +1,3 @@
-n.d(t, {
-    AD: () => ei,
-    Cm: () => ea,
-    DY: () => er,
-    FX: () => w.FX,
-    Gg: () => Z,
-    Jo: () => eb,
-    KI: () => W,
-    Kc: () => ee,
-    L_: () => eW,
-    Lt: () => ep,
-    Lw: () => eO,
-    NJ: () => P.NJ,
-    Nc: () => es,
-    OL: () => en,
-    Pq: () => eP,
-    Q7: () => ec,
-    Sb: () => ew,
-    TG: () => eK,
-    Tk: () => eG,
-    U2: () => B,
-    U7: () => eA,
-    VV: () => e_,
-    Wz: () => eH,
-    Xl: () => V,
-    YI: () => eR,
-    YQ: () => w.YQ,
-    Yr: () => eV,
-    ZE: () => eC,
-    _A: () => $,
-    __: () => eo,
-    bZ: () => eF,
-    cl: () => Y,
-    dH: () => G.d,
-    dL: () => em,
-    do: () => Q,
-    e$: () => eN,
-    fr: () => eE,
-    gx: () => e$,
-    hC: () => H,
-    hV: () => eh,
-    he: () => J,
-    il: () => ey,
-    js: () => w.js,
-    kM: () => z,
-    kv: () => et,
-    mX: () => eB,
-    me: () => eS,
-    nf: () => eI,
-    ps: () => X,
-    qF: () => ev,
-    qm: () => q,
-    rI: () => el,
-    rz: () => ed,
-    sE: () => ek,
-    sJ: () => eg,
-    sh: () => eL,
-    tE: () => w.tE,
-    tF: () => eu,
-    w7: () => ex,
-    x0: () => ej,
-    xB: () => ef,
-    xE: () => eT,
-    xe: () => eY,
-    xf: () => K,
-    zy: () => eD,
-});
 var i,
     r,
     a,
@@ -104,8 +37,7 @@ let x = "u" < typeof location ? "" : location.protocol,
     F = x + "//discord.gg",
     B = "discord.com",
     V = "support.discord.com",
-    H = "support-dev.discord.com",
-    j = "discord.com";
+    H = "discord.com";
 Object.freeze({
     HINT_PURPLE: "#c9d2f0",
     DARK_PURPLE: "#697ec4",
@@ -130,8 +62,8 @@ Object.freeze({
     GREY7: "#1c242b",
     GREY9: "#202226",
 });
-var W = (((i = {})[(i.PRIVATE = 0)] = "PRIVATE"), (i[(i.PUBLIC = 1)] = "PUBLIC"), i),
-    Y =
+var j = (((i = {})[(i.PRIVATE = 0)] = "PRIVATE"), (i[(i.PUBLIC = 1)] = "PUBLIC"), i),
+    W =
         (((r = {}).ONLINE = "online"),
         (r.OFFLINE = "offline"),
         (r.IDLE = "idle"),
@@ -140,15 +72,14 @@ var W = (((i = {})[(i.PRIVATE = 0)] = "PRIVATE"), (i[(i.PUBLIC = 1)] = "PUBLIC")
         (r.STREAMING = "streaming"),
         (r.UNKNOWN = "unknown"),
         r),
-    K =
+    Y =
         (((a = {}).DESKTOP = "desktop"),
         (a.WEB = "web"),
         (a.MOBILE = "mobile"),
         (a.VR = "vr"),
         (a.UNKNOWN = "unknown"),
-        a);
-let $ = "6Lef5iQTAAAAAKeIvIY-DeexoO3gj7ryl9rLMEnn";
-var z =
+        a),
+    K =
         (((s = {})[(s.STRIPE = 1)] = "STRIPE"),
         (s[(s.BRAINTREE = 2)] = "BRAINTREE"),
         (s[(s.APPLE = 3)] = "APPLE"),
@@ -159,8 +90,8 @@ var z =
         (s[(s.APPLE_ADVANCED_COMMERCE = 9)] = "APPLE_ADVANCED_COMMERCE"),
         (s[(s.TDS = 10)] = "TDS"),
         s),
-    X = (((l = {})[(l.VIRTUAL_CURRENCY = 8)] = "VIRTUAL_CURRENCY"), l);
-let q = Object.freeze({
+    $ = (((l = {})[(l.VIRTUAL_CURRENCY = 8)] = "VIRTUAL_CURRENCY"), l);
+let z = Object.freeze({
         1: "Stripe",
         2: "Braintree",
         3: "Apple",
@@ -171,13 +102,13 @@ let q = Object.freeze({
         9: "Apple",
         10: "TDS",
     }),
-    Z = Object.freeze({
+    X = Object.freeze({
         BRAINTREE: { KEY: "u" < typeof window ? "" : window.GLOBAL_ENV.BRAINTREE_KEY, PAYMENT_GATEWAY: "braintree" },
         STRIPE: { KEY: "u" < typeof window ? "" : window.GLOBAL_ENV.STRIPE_KEY, PAYMENT_GATEWAY: "stripe" },
         ADYEN: { KEY: "u" < typeof window ? "" : window.GLOBAL_ENV.ADYEN_KEY, PAYMENT_GATEWAY: "adyen" },
     });
-var Q = (((o = {}).GOOGLE_PAY = "google_pay"), (o.APPLE_PAY = "apple_pay"), o),
-    J =
+var q = (((o = {}).GOOGLE_PAY = "google_pay"), (o.APPLE_PAY = "apple_pay"), o),
+    Z =
         (((d = {})[(d.UNKNOWN = 0)] = "UNKNOWN"),
         (d[(d.CARD = 1)] = "CARD"),
         (d[(d.PAYPAL = 2)] = "PAYPAL"),
@@ -202,7 +133,7 @@ var Q = (((o = {}).GOOGLE_PAY = "google_pay"), (o.APPLE_PAY = "apple_pay"), o),
         (d[(d.PIX_AUTOMATICO = 21)] = "PIX_AUTOMATICO"),
         (d[(d.PAYMENT_REQUEST = 99)] = "PAYMENT_REQUEST"),
         d);
-let ee = new Map([
+let Q = new Map([
         [7, "paysafecard"],
         [8, "gcash"],
         [9, "grabpay_MY"],
@@ -211,19 +142,19 @@ let ee = new Map([
         [12, "gopay_wallet"],
         [17, "cashapp"],
     ]),
-    et = new Map([
+    J = new Map([
         [14, "bancontact"],
         [3, "giropay"],
         [16, "ideal"],
         [20, "pix"],
     ]),
-    en = new Set([7, 8, 9, 12, 10, 13, 14, 15, 16, 4, 3, 5, 17]),
-    ei = new Set([7, 9, 3, 5, 4, 14, 15, 16]),
-    er = new Set([1, 2, 6, 8, 10, 11, 13, 12, 17, 19, 21]),
-    ea = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
-    es = new Set([6]);
-var el = (((c = {})[(c.NEW = 1)] = "NEW"), (c[(c.FAILED_ADDRESS = 16)] = "FAILED_ADDRESS"), c),
-    eo =
+    ee = new Set([7, 8, 9, 12, 10, 13, 14, 15, 16, 4, 3, 5, 17]),
+    et = new Set([7, 9, 3, 5, 4, 14, 15, 16]),
+    en = new Set([1, 2, 6, 8, 10, 11, 13, 12, 17, 19, 21]),
+    ei = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
+    er = new Set([6]);
+var ea = (((c = {})[(c.NEW = 1)] = "NEW"), (c[(c.FAILED_ADDRESS = 16)] = "FAILED_ADDRESS"), c),
+    es =
         (((u = {})[(u.PENDING = 0)] = "PENDING"),
         (u[(u.COMPLETED = 1)] = "COMPLETED"),
         (u[(u.FAILED = 2)] = "FAILED"),
@@ -231,36 +162,36 @@ var el = (((c = {})[(c.NEW = 1)] = "NEW"), (c[(c.FAILED_ADDRESS = 16)] = "FAILED
         (u[(u.REFUNDED = 4)] = "REFUNDED"),
         (u[(u.CANCELED = 5)] = "CANCELED"),
         u),
-    ed =
+    el =
         (((_ = {})[(_.PREMIUM = 1)] = "PREMIUM"),
         (_[(_.GUILD = 2)] = "GUILD"),
         (_[(_.APPLICATION = 3)] = "APPLICATION"),
         (_[(_.GAME_SERVER = 4)] = "GAME_SERVER"),
         (_[(_.GIFT = 5)] = "GIFT"),
         _),
-    ec =
+    eo =
         (((E = {}).PAYPAL_POPUP_CLOSED = "PAYPAL_POPUP_CLOSED"),
         (E.VENMO_APP_CANCELED = "VENMO_APP_CANCELED"),
         (E.VENMO_DESKTOP_CANCELED = "VENMO_DESKTOP_CANCELED"),
         (E.VENMO_CANCELED = "VENMO_CANCELED"),
         E);
 Object.freeze({ CONSTANT: 1, APPLE_STICKER: 2 });
-var eu = (((A = {})[(A.DISCOVERY = 0)] = "DISCOVERY"), (A[(A.CHECKOUT = 1)] = "CHECKOUT"), A),
-    e_ = (((h = {})[(h.SUBSCRIPTION = 0)] = "SUBSCRIPTION"), (h[(h.ONE_TIME = 1)] = "ONE_TIME"), h);
-let eE = Object.freeze({ 0: "subscription", 1: "sku" });
-var eA =
+var ed = (((A = {})[(A.DISCOVERY = 0)] = "DISCOVERY"), (A[(A.CHECKOUT = 1)] = "CHECKOUT"), A),
+    ec = (((h = {})[(h.SUBSCRIPTION = 0)] = "SUBSCRIPTION"), (h[(h.ONE_TIME = 1)] = "ONE_TIME"), h);
+let eu = Object.freeze({ 0: "subscription", 1: "sku" });
+var e_ =
         (((f = {}).PREMIUM_UPSELL_VIEWED = "premium_upsell_viewed"),
         (f.VIDEO_STREAM_ENDED = "video_stream_ended"),
         (f.USER_PROFILE_ACTION = "user_profile_action"),
         (f.JOIN_VOICE_CHANNEL = "join_voice_channel"),
         (f.CHANNEL_OPENED = "channel_opened"),
         f),
-    eh =
+    eE =
         (((I = {})[(I.VIEW_CHANNEL = 1024)] = "VIEW_CHANNEL"),
         (I[(I.READ_MESSAGE_HISTORY = 65536)] = "READ_MESSAGE_HISTORY"),
         (I[(I.CONNECT = 1048576)] = "CONNECT"),
         I);
-let ef = Object.freeze({
+let eA = Object.freeze({
         CREATE_INSTANT_INVITE: M.vI(0),
         KICK_MEMBERS: M.vI(1),
         BAN_MEMBERS: M.vI(2),
@@ -315,23 +246,19 @@ let ef = Object.freeze({
         MANAGE_EVENTS: M.vI(33),
         CREATE_EVENTS: M.vI(44),
     }),
-    eI = [
-        ef.KICK_MEMBERS,
-        ef.BAN_MEMBERS,
-        ef.ADMINISTRATOR,
-        ef.MANAGE_CHANNELS,
-        ef.MANAGE_GUILD,
-        ef.MANAGE_ROLES,
-        ef.MANAGE_MESSAGES,
-        ef.MANAGE_THREADS,
-        ef.MODERATE_MEMBERS,
+    eh = [
+        eA.KICK_MEMBERS,
+        eA.BAN_MEMBERS,
+        eA.ADMINISTRATOR,
+        eA.MANAGE_CHANNELS,
+        eA.MANAGE_GUILD,
+        eA.MANAGE_ROLES,
+        eA.MANAGE_MESSAGES,
+        eA.MANAGE_THREADS,
+        eA.MODERATE_MEMBERS,
     ],
-    ep = M.kg(...eI),
-    em = 1,
-    eT = 6463,
-    eg = 10,
-    eS = "RpcApplicationLogger";
-var eN =
+    ef = M.kg(...eh);
+var eI =
         (((p = {}).DISPATCH = "DISPATCH"),
         (p.SET_CONFIG = "SET_CONFIG"),
         (p.AUTHORIZE = "AUTHORIZE"),
@@ -465,7 +392,7 @@ var eN =
         (p.QUEST_START_TIMER = "QUEST_START_TIMER"),
         (p.GET_QUEST = "GET_QUEST"),
         p),
-    eC =
+    ep =
         (((m = {}).CURRENT_USER_UPDATE = "CURRENT_USER_UPDATE"),
         (m.CURRENT_GUILD_MEMBER_UPDATE = "CURRENT_GUILD_MEMBER_UPDATE"),
         (m.GUILD_STATUS = "GUILD_STATUS"),
@@ -518,7 +445,7 @@ var eN =
         (m.READY = "READY"),
         (m.ERROR = "ERROR"),
         m),
-    eO =
+    em =
         (((T = {})[(T.UNKNOWN_ERROR = 1e3)] = "UNKNOWN_ERROR"),
         (T[(T.SERVICE_UNAVAILABLE = 1001)] = "SERVICE_UNAVAILABLE"),
         (T[(T.TRANSACTION_ABORTED = 1002)] = "TRANSACTION_ABORTED"),
@@ -554,7 +481,7 @@ var eN =
         (T[(T.UNAUTHORIZED_FOR_APPLICATION = 5012)] = "UNAUTHORIZED_FOR_APPLICATION"),
         (T[(T.NO_CONNECTION_FOUND = 5013)] = "NO_CONNECTION_FOUND"),
         T),
-    eR =
+    eT =
         (((g = {})[(g.CLOSE_NORMAL = 1e3)] = "CLOSE_NORMAL"),
         (g[(g.CLOSE_UNSUPPORTED = 1003)] = "CLOSE_UNSUPPORTED"),
         (g[(g.CLOSE_ABNORMAL = 1006)] = "CLOSE_ABNORMAL"),
@@ -565,11 +492,7 @@ var eN =
         (g[(g.INVALID_VERSION = 4004)] = "INVALID_VERSION"),
         (g[(g.INVALID_ENCODING = 4005)] = "INVALID_ENCODING"),
         g);
-let eL = 250,
-    ey = "token",
-    eD = "tokens",
-    eb = "https://status.discord.com",
-    ev = {
+let eg = {
         PRESSKIT: "https://app.box.com/s/5puqm5ijahrrdao7yldi7fr3zah5i1am",
         REBRAND_PRESSKIT:
             "https://www.dropbox.com/scl/fo/2vittfakjukwa3zl4gnxh/AOS0AZlx-zA4TjDyv-M-dgk?rlkey=kn0v1lcqfq1lurj3lk3x1ujhf&dl=0",
@@ -577,14 +500,14 @@ let eL = 250,
         HELP_AND_SUPPORT: `//${V}/hc/en-us`,
         HELP_ARTICLE_ORBS_FAQ: `https://${V}/hc/en-us/articles/30593690165783`,
         FEEDBACK: "//feedback.discord.com",
-        EMAIL_SUPPORT: `mailto:support@${j}`,
-        EMAIL_LAW_ENFORCEMENT: `mailto:lawenforcement@${j}`,
-        EMAIL_HYPESQUAD: `mailto:hypesquad@${j}`,
-        EMAIL_JOBS: `mailto:jobs@${j}`,
+        EMAIL_SUPPORT: `mailto:support@${H}`,
+        EMAIL_LAW_ENFORCEMENT: `mailto:lawenforcement@${H}`,
+        EMAIL_HYPESQUAD: `mailto:hypesquad@${H}`,
+        EMAIL_JOBS: `mailto:jobs@${H}`,
         DEV_PERKS_FORM: "https://goo.gl/forms/oZfKBStV3sR8GHdU2",
         VERIFICATION_REQUIREMENTS: "https://dis.gd/vfqual",
         BASE_URL: `https://${B}`,
-        PRESS_INQUIRIES: `mailto:press@${j}`,
+        PRESS_INQUIRIES: `mailto:press@${H}`,
         CONTACT_US: "https://dis.gd/contact",
         DEV_LANDING: "/build",
         DEV_PORTAL: "/developers",
@@ -600,10 +523,10 @@ let eL = 250,
         TWITTER_SUPPORT: "https://twitter.com/discord_support",
         QUESTS: "/quests",
     },
-    eP = Object.freeze({
+    eS = Object.freeze({
         TWITTER: Object.freeze({ default: "https://twitter.com/discord", ja: "https://twitter.com/discord_jp" }),
     }),
-    eM = Object.freeze({
+    eN = Object.freeze({
         WELCOME: `${k}/welcome/`,
         ME: `${k}/channels/@me`,
         SETTINGS: (e, t) => `${k}/settings/${e}${null != t && "" !== t ? `/${t}` : ""}`,
@@ -625,8 +548,8 @@ let eL = 250,
         QUEST_HOME_PREVIEW: (e) => `${k}/quest-home?ad_creative_ids=${e}`,
         QUEST_BAR_PREVIEW: (e) => `${k}/quest-bar-preview?ad_creative_ids=${e}`,
     });
-var eU =
-    (((S = eU || {}).INDEX = "/"),
+var eC =
+    (((S = eC || {}).INDEX = "/"),
     (S.INDEX_WORD = "/index"),
     (S.INDEX_BUCKET = "/index/:bucketId"),
     (S.CHANGELOGS = "/changelogs/:date"),
@@ -714,15 +637,15 @@ var eU =
     (S.SNOWSGIVING_GIVEAWAY_INSTAGRAM = "/terms/snowsgiving-2020/instagram"),
     (S.SNOWSGIVING_GIVEAWAY_TWITTER = "/terms/snowsgiving-2020/twitter"),
     S);
-let ew = (0, U.dN)(eM),
-    eG = (0, U.dN)(eU),
-    ex = Object.freeze({
+let eO = (0, U.dN)(eN),
+    eR = (0, U.dN)(eC),
+    eL = Object.freeze({
         FACEBOOK_URL: "https://www.facebook.com/discord/",
         INSTAGRAM_URL: "https://www.instagram.com/discord/",
         YOUTUBE_URL: "https://www.youtube.com/discord/",
         TIKTOK_URL: "https://www.tiktok.com/@discord",
     });
-var ek =
+var ey =
         (((N = {}).EXPERIMENT_USER_TRIGGERED = "experiment_user_triggered"),
         (N.EXPERIMENT_GUILD_TRIGGERED = "experiment_guild_triggered"),
         (N.EXPERIMENT_SAVE_EXPOSURE_FAILED = "experiment_save_exposure_failed"),
@@ -763,9 +686,9 @@ var ek =
         (N.ADS_MANAGER_CTA_CLICKED = "ads_manager_cta_clicked"),
         (N.ADS_MANAGER_NO_AD_ACCOUNTS_VIEWED = "ads_manager_no_ad_accounts_viewed"),
         N),
-    eF = (((C = {}).CLIENT_TELEMETRY = "client_telemetry"), C),
-    eB = (((O = {}).CLIENT_TELEMETRY = "/beaker"), O),
-    eV =
+    eD = (((C = {}).CLIENT_TELEMETRY = "client_telemetry"), C),
+    eb = (((O = {}).CLIENT_TELEMETRY = "/beaker"), O),
+    ev =
         (((R = {}).AED = "aed"),
         (R.AFN = "afn"),
         (R.ALL = "all"),
@@ -949,9 +872,8 @@ var ek =
         (R.ZMW = "zmw"),
         (R.ZWL = "zwl"),
         (R.DISCORD_ORB = "discord_orb"),
-        R);
-let eH = "US";
-var ej =
+        R),
+    eP =
         (((L = {})[(L.SINGLE_PLAYER = 1)] = "SINGLE_PLAYER"),
         (L[(L.ONLINE_MULTIPLAYER = 2)] = "ONLINE_MULTIPLAYER"),
         (L[(L.LOCAL_MULTIPLAYER = 3)] = "LOCAL_MULTIPLAYER"),
@@ -966,14 +888,72 @@ var ej =
         (L[(L.ONLINE_COOP = 12)] = "ONLINE_COOP"),
         (L[(L.SECURE_NETWORKING = 13)] = "SECURE_NETWORKING"),
         L),
-    eW =
+    eM =
         (((y = {})[(y.GUILD_ROLE_SUBSCRIPTIONS = 1)] = "GUILD_ROLE_SUBSCRIPTIONS"),
         (y[(y.GUILD_PRODUCTS = 2)] = "GUILD_PRODUCTS"),
         y),
-    eY =
+    eU =
         (((D = {}).PERMISSION_DENIED = "PERMISSION_DENIED"),
         (D.PERMISSION_DISMISSED = "PERMISSION_DISMISSED"),
         (D.NO_DEVICES_FOUND = "NO_DEVICES_FOUND"),
         D),
-    eK = (((b = {}).SWIPE = "SWIPE"), (b.BROWSER = "BROWSER"), (b.KEYBIND = "KEYBIND"), b),
-    e$ = (((v = {})[(v.IN_PROMPT = 1)] = "IN_PROMPT"), v);
+    ew = (((b = {}).SWIPE = "SWIPE"), (b.BROWSER = "BROWSER"), (b.KEYBIND = "KEYBIND"), b),
+    eG = (((v = {})[(v.IN_PROMPT = 1)] = "IN_PROMPT"), v);
+n.d(
+    t,
+    { FX: () => w.FX, NJ: () => P.NJ, YQ: () => w.YQ, dH: () => G.d, js: () => w.js, tE: () => w.tE },
+    {
+        AD: et,
+        Cm: ei,
+        DY: en,
+        Gg: X,
+        Jo: "https://status.discord.com",
+        KI: j,
+        Kc: Q,
+        L_: eM,
+        Lt: ef,
+        Lw: em,
+        Nc: er,
+        OL: ee,
+        Pq: eS,
+        Q7: eo,
+        Sb: eO,
+        TG: ew,
+        Tk: eR,
+        U2: B,
+        U7: e_,
+        VV: ec,
+        Xl: V,
+        YI: eT,
+        Yr: ev,
+        ZE: ep,
+        _A: "6Lef5iQTAAAAAKeIvIY-DeexoO3gj7ryl9rLMEnn",
+        __: es,
+        bZ: eD,
+        cl: W,
+        do: q,
+        e$: eI,
+        fr: eu,
+        gx: eG,
+        hC: "support-dev.discord.com",
+        hV: eE,
+        he: Z,
+        kM: K,
+        kv: J,
+        mX: eb,
+        me: "RpcApplicationLogger",
+        nf: eh,
+        ps: $,
+        qF: eg,
+        qm: z,
+        rI: ea,
+        rz: el,
+        sE: ey,
+        tF: ed,
+        w7: eL,
+        x0: eP,
+        xB: eA,
+        xe: eU,
+        xf: Y,
+    },
+);

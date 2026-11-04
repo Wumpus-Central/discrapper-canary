@@ -1,10 +1,9 @@
-a.d(e, { PC: () => h, dP: () => g, kv: () => m });
 var n = a(713608),
     t = a(918715),
     i = a(877784),
     d = a(144705),
     o = a(826685),
-    r = a(185973);
+    r = a(683825);
 let s = {
         [d.I.Kill]: n.q,
         [d.I.MultiKill]: n.q,
@@ -41,12 +40,18 @@ let s = {
         [d.I.InMatchChange]: null,
         [d.I.PlayStateChange]: null,
     };
-function h() {
-    return { [o.b]: s };
-}
-function m() {
-    return { [o.b]: u };
-}
-function g() {
-    return { [o.b]: c };
-}
+a.d(
+    e,
+    {},
+    {
+        PC: function () {
+            return { [o.b]: s };
+        },
+        dP: function () {
+            return { [o.b]: c };
+        },
+        kv: function () {
+            return { [o.b]: u };
+        },
+    },
+);

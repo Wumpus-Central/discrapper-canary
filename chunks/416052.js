@@ -1,4 +1,3 @@
-s.d(e, { A: () => l });
 var o = s(477900),
     i = s(582128),
     n = s(451988),
@@ -6,7 +5,7 @@ var o = s(477900),
     p = s(109802),
     d = s(765178),
     h = s(957565),
-    a = s(105292);
+    a = s(792996);
 class u extends i.PureComponent {
     _timeout;
     static defaultProps = { delay: 1e3 };
@@ -48,4 +47,4 @@ class u extends i.PureComponent {
         }
     }
 }
-let l = u;
+s.d(e, {}, { A: u });

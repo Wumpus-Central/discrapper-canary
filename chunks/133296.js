@@ -1,4 +1,3 @@
-s.d(t, { A: () => o });
 var i = s(477900),
     r = s(582128),
     a = s(451988);
@@ -55,4 +54,4 @@ class n extends r.Component {
         return (0, i.jsx)("div", { ...r, className: t, children: e });
     }
 }
-let o = n;
+s.d(t, {}, { A: n });

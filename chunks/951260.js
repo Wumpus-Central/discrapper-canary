@@ -1,10 +1,15 @@
-n.d(t, { n: () => i });
 let l = (0, n(945810).mj)({
     name: "2026-06-chat-bar-customization",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-function i(e) {
-    return l.useConfig({ location: e }).enabled;
-}
+n.d(
+    t,
+    {},
+    {
+        n: function (e) {
+            return l.useConfig({ location: e }).enabled;
+        },
+    },
+);

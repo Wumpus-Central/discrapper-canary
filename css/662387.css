@@ -1,4 +1,4 @@
-.wishlistButton__979b1 {
+.wishlistButton_M2FQyv {
     align-items: center;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -15,122 +15,122 @@
     transition: background-color 50ms ease-in, opacity .15s ease
 }
 
-.wishlistButton__979b1.disabled__979b1 {
+.wishlistButton_M2FQyv.disabled_M2FQyv {
     cursor: not-allowed;
     filter: brightness(110%)
 }
 
-.wishlistButton__979b1:not(.disabled__979b1):hover {
+.wishlistButton_M2FQyv:not(.disabled_M2FQyv):hover {
     background: var(--control-overlay-secondary-background-hover);
     transition: background-color .15s ease-out
 }
 
-.wishlistButton__979b1:not(.disabled__979b1):active {
+.wishlistButton_M2FQyv:not(.disabled_M2FQyv):active {
     background: var(--control-overlay-secondary-background-active);
     transition: background-color .15s ease-out
 }
 
-.visuallyHidden__979b1 {
+.visuallyHidden_M2FQyv {
     opacity: 0;
     pointer-events: none
 }
 
-.xs__979b1 {
+.xs_M2FQyv {
     border-radius: 6px;
     height: 24px;
     width: 24px
 }
 
-.sm__979b1 {
+.sm_M2FQyv {
     height: 32px;
     width: 32px
 }
 
-.md__979b1 {
+.md_M2FQyv {
     height: 40px;
     width: 40px
 }
 
-.theme-light .wishlistButton__979b1.variantDefault__979b1 {
+.theme-light .wishlistButton_M2FQyv.variantDefault_M2FQyv {
     background: hsl(var(--primary-100-hsl)/.66);
     border: 1px solid var(--border-subtle)
 }
 
-.theme-light .wishlistButton__979b1.variantDefault__979b1:not(.disabled__979b1):hover {
+.theme-light .wishlistButton_M2FQyv.variantDefault_M2FQyv:not(.disabled_M2FQyv):hover {
     background: hsl(var(--primary-100-hsl)/1)
 }
 
-.theme-light .wishlistButton__979b1.variantDefault__979b1:not(.disabled__979b1):active {
+.theme-light .wishlistButton_M2FQyv.variantDefault_M2FQyv:not(.disabled_M2FQyv):active {
     background: hsl(var(--primary-100-hsl)/.52)
 }
 
-.theme-dark .wishlistButton__979b1.variantDefault__979b1 {
+.theme-dark .wishlistButton_M2FQyv.variantDefault_M2FQyv {
     background: var(--control-overlay-secondary-background-default);
     border: 1px solid var(--border-muted)
 }
 
-.theme-dark .wishlistButton__979b1.variantDefault__979b1:not(.disabled__979b1):hover {
+.theme-dark .wishlistButton_M2FQyv.variantDefault_M2FQyv:not(.disabled_M2FQyv):hover {
     background: var(--control-overlay-secondary-background-hover)
 }
 
-.theme-dark .wishlistButton__979b1.variantDefault__979b1:not(.disabled__979b1):active {
+.theme-dark .wishlistButton_M2FQyv.variantDefault_M2FQyv:not(.disabled_M2FQyv):active {
     background: var(--control-overlay-secondary-background-active)
 }
 
-.wishlistButton__979b1.variantSecondary__979b1 {
+.wishlistButton_M2FQyv.variantSecondary_M2FQyv {
     background: var(--control-secondary-background-default);
     border: 1px solid var(--control-secondary-border-default)
 }
 
-.wishlistButton__979b1.variantSecondary__979b1:not(.disabled__979b1):hover {
+.wishlistButton_M2FQyv.variantSecondary_M2FQyv:not(.disabled_M2FQyv):hover {
     background: var(--control-secondary-background-hover)
 }
 
-.wishlistButton__979b1.variantSecondary__979b1:not(.disabled__979b1):active {
+.wishlistButton_M2FQyv.variantSecondary_M2FQyv:not(.disabled_M2FQyv):active {
     background: var(--control-secondary-background-active)
 }
 
-.normalIconColor__979b1 {
+.normalIconColor_M2FQyv {
     fill: var(--icon-strong);
     transition: fill 50ms ease-in
 }
 
-.variantSecondaryOverlay__979b1 .normalIconColor__979b1 {
+.variantSecondaryOverlay_M2FQyv .normalIconColor_M2FQyv {
     fill: var(--white)
 }
 
-.normalIconColor__979b1.wishlistedOrAnimating__979b1 {
+.normalIconColor_M2FQyv.wishlistedOrAnimating_M2FQyv {
     fill: #ec1060;
     transition: fill .15s ease-out
 }
 
-.disabled__979b1 .normalIconColor__979b1 {
+.disabled_M2FQyv .normalIconColor_M2FQyv {
     opacity: .5;
     fill: var(--icon-subtle)
 }
 
-.toastIcon__979b1 {
+.toastIcon_M2FQyv {
     flex-shrink: 0;
     margin-inline-end: 4px
 }
 
-.iconContainer__979b1,
-.toastIcon__979b1 {
+.iconContainer_M2FQyv,
+.toastIcon_M2FQyv {
     align-items: center;
     display: flex
 }
 
-.iconContainer__979b1 {
+.iconContainer_M2FQyv {
     justify-content: center;
     overflow: visible;
     position: relative
 }
 
-.iconWrapper__979b1 {
+.iconWrapper_M2FQyv {
     display: flex
 }
 
-.animationOverlay__979b1 {
+.animationOverlay_M2FQyv {
     align-items: center;
     display: flex;
     inset: 0;
@@ -141,11 +141,11 @@
     transform-origin: center
 }
 
-.animationOverlay__979b1 path {
+.animationOverlay_M2FQyv path {
     fill: var(--white)
 }
 
-.halloweenAnimationOverlay__979b1 {
+.halloweenAnimationOverlay_M2FQyv {
     display: none;
     height: 64px;
     inset-inline-start: 50%;
@@ -158,29 +158,29 @@
     z-index: 1
 }
 
-.full-motion .halloweenAnimationOverlay__979b1 {
+.full-motion .halloweenAnimationOverlay_M2FQyv {
     display: block
 }
 
-.full-motion .wishlistButton__979b1:active .canAnimate__979b1 .animationOverlay__979b1 {
-    animation: holdScale__979b1 .1s cubic-bezier(.67, 0, .26, 1) forwards;
+.full-motion .wishlistButton_M2FQyv:active .canAnimate_M2FQyv .animationOverlay_M2FQyv {
+    animation: holdScale_M2FQyv .1s cubic-bezier(.67, 0, .26, 1) forwards;
     animation-delay: 50ms
 }
 
-.full-motion .clickAnimation__979b1 {
-    animation: clickScale__979b1 .4s cubic-bezier(.67, 0, .26, 1) forwards
+.full-motion .clickAnimation_M2FQyv {
+    animation: clickScale_M2FQyv .4s cubic-bezier(.67, 0, .26, 1) forwards
 }
 
-.full-motion .clickAnimation__979b1 path {
-    animation: clickColor__979b1 .4s cubic-bezier(.67, 0, .26, 1) forwards
+.full-motion .clickAnimation_M2FQyv path {
+    animation: clickColor_M2FQyv .4s cubic-bezier(.67, 0, .26, 1) forwards
 }
 
-.full-motion .wishlistButton__979b1:focus-visible .canHover__979b1,
-.full-motion .wishlistButton__979b1:hover .canHover__979b1 {
-    animation: hoverPulse__979b1 1.25s cubic-bezier(.23, 0, .58, 1) infinite
+.full-motion .wishlistButton_M2FQyv:focus-visible .canHover_M2FQyv,
+.full-motion .wishlistButton_M2FQyv:hover .canHover_M2FQyv {
+    animation: hoverPulse_M2FQyv 1.25s cubic-bezier(.23, 0, .58, 1) infinite
 }
 
-@keyframes holdScale__979b1 {
+@keyframes holdScale_M2FQyv {
     0% {
         transform: scale(0)
     }
@@ -190,7 +190,7 @@
     }
 }
 
-@keyframes clickScale__979b1 {
+@keyframes clickScale_M2FQyv {
     0% {
         transform: scale(0)
     }
@@ -204,7 +204,7 @@
     }
 }
 
-@keyframes clickColor__979b1 {
+@keyframes clickColor_M2FQyv {
 
     0%,
     20% {
@@ -217,7 +217,7 @@
     }
 }
 
-@keyframes hoverPulse__979b1 {
+@keyframes hoverPulse_M2FQyv {
     0% {
         transform: scale(1)
     }
@@ -236,4 +236,4 @@
     }
 }
 
-/*# sourceMappingURL=662387.3468855aa00f7840.css.map*/
+/*# sourceMappingURL=662387.600c33990e4c134f.css.map*/

@@ -1,4 +1,3 @@
-d.d(t, { i: () => U, n: () => k, r: () => F, t: () => E });
 var i = d(783285),
     e = d(768611),
     c = d(200503),
@@ -111,7 +110,7 @@ var G = ({ i18nKey: l }) =>
                 }),
             ],
         }),
-    X = (l) =>
+    r = (l) =>
         (0, e.v)("svg", {
             width: 38,
             height: 38,
@@ -200,7 +199,7 @@ var G = ({ i18nKey: l }) =>
                 }),
             ],
         }),
-    r = (l) =>
+    X = (l) =>
         (0, e.v)("svg", {
             width: 40,
             height: 40,
@@ -982,7 +981,7 @@ var G = ({ i18nKey: l }) =>
             ],
             chrome: [
                 { uuid: "1", icon: T, instructionKey: "open", boldKey: "idv2.permissions.denied.settings" },
-                { uuid: "2", icon: X, instructionKey: "scroll", boldKey: "idv2.permissions.denied.yourBrowser" },
+                { uuid: "2", icon: r, instructionKey: "scroll", boldKey: "idv2.permissions.denied.yourBrowser" },
                 { uuid: "3", icon: y, instructionKey: "tap", boldKey: "idv2.permissions.denied.camera" },
                 {
                     uuid: "4",
@@ -992,23 +991,9 @@ var G = ({ i18nKey: l }) =>
                     additionalTextKey: "idv2.permissions.denied.or",
                     secondBoldKey: "denied.ask",
                 },
-                { uuid: "5", icon: X, instructionKey: "returnPress", boldKey: "idv2.permissions.denied.refreshPage" },
+                { uuid: "5", icon: r, instructionKey: "returnPress", boldKey: "idv2.permissions.denied.refreshPage" },
             ],
             edge: [
-                { uuid: "1", icon: T, instructionKey: "open", boldKey: "idv2.permissions.denied.settings" },
-                { uuid: "2", icon: X, instructionKey: "scroll", boldKey: "idv2.permissions.denied.yourBrowser" },
-                { uuid: "3", icon: y, instructionKey: "tap", boldKey: "idv2.permissions.denied.camera" },
-                {
-                    uuid: "4",
-                    icon: V,
-                    instructionKey: "changeTo",
-                    boldKey: "idv2.permissions.denied.allow",
-                    additionalTextKey: "idv2.permissions.denied.or",
-                    secondBoldKey: "denied.ask",
-                },
-                { uuid: "5", icon: X, instructionKey: "returnPress", boldKey: "idv2.permissions.denied.refreshPage" },
-            ],
-            firefox: [
                 { uuid: "1", icon: T, instructionKey: "open", boldKey: "idv2.permissions.denied.settings" },
                 { uuid: "2", icon: r, instructionKey: "scroll", boldKey: "idv2.permissions.denied.yourBrowser" },
                 { uuid: "3", icon: y, instructionKey: "tap", boldKey: "idv2.permissions.denied.camera" },
@@ -1021,6 +1006,20 @@ var G = ({ i18nKey: l }) =>
                     secondBoldKey: "denied.ask",
                 },
                 { uuid: "5", icon: r, instructionKey: "returnPress", boldKey: "idv2.permissions.denied.refreshPage" },
+            ],
+            firefox: [
+                { uuid: "1", icon: T, instructionKey: "open", boldKey: "idv2.permissions.denied.settings" },
+                { uuid: "2", icon: X, instructionKey: "scroll", boldKey: "idv2.permissions.denied.yourBrowser" },
+                { uuid: "3", icon: y, instructionKey: "tap", boldKey: "idv2.permissions.denied.camera" },
+                {
+                    uuid: "4",
+                    icon: V,
+                    instructionKey: "changeTo",
+                    boldKey: "idv2.permissions.denied.allow",
+                    additionalTextKey: "idv2.permissions.denied.or",
+                    secondBoldKey: "denied.ask",
+                },
+                { uuid: "5", icon: X, instructionKey: "returnPress", boldKey: "idv2.permissions.denied.refreshPage" },
             ],
             opera: [
                 { uuid: "1", icon: T, instructionKey: "open", boldKey: "idv2.permissions.denied.settings" },
@@ -1038,7 +1037,7 @@ var G = ({ i18nKey: l }) =>
             ],
             other: [
                 { uuid: "1", icon: T, instructionKey: "open", boldKey: "idv2.permissions.denied.settings" },
-                { uuid: "2", icon: X, instructionKey: "scroll", boldKey: "idv2.permissions.denied.yourBrowser" },
+                { uuid: "2", icon: r, instructionKey: "scroll", boldKey: "idv2.permissions.denied.yourBrowser" },
                 { uuid: "3", icon: y, instructionKey: "tap", boldKey: "idv2.permissions.denied.camera" },
                 {
                     uuid: "4",
@@ -1048,7 +1047,7 @@ var G = ({ i18nKey: l }) =>
                     additionalTextKey: "idv2.permissions.denied.or",
                     secondBoldKey: "denied.ask",
                 },
-                { uuid: "5", icon: X, instructionKey: "returnPress", boldKey: "idv2.permissions.denied.refreshPage" },
+                { uuid: "5", icon: r, instructionKey: "returnPress", boldKey: "idv2.permissions.denied.refreshPage" },
             ],
         },
         android: {
@@ -1062,7 +1061,7 @@ var G = ({ i18nKey: l }) =>
                 },
                 { uuid: "2", icon: N, instructionKey: "tap", boldKey: "idv2.permissions.denied.siteSettings" },
                 { uuid: "3", icon: M, instructionKey: "tap", boldKey: "idv2.permissions.denied.cameraAllow" },
-                { uuid: "4", icon: X, instructionKey: "returnPress", boldKey: "idv2.permissions.denied.refreshPage" },
+                { uuid: "4", icon: r, instructionKey: "returnPress", boldKey: "idv2.permissions.denied.refreshPage" },
             ],
             firefox: [
                 {
@@ -1094,7 +1093,7 @@ var G = ({ i18nKey: l }) =>
                     instructionKey: "tap",
                     boldKey: "idv2.permissions.denied.cameraAllow",
                 },
-                { uuid: "4", icon: r, instructionKey: "returnPress", boldKey: "idv2.permissions.denied.refreshPage" },
+                { uuid: "4", icon: X, instructionKey: "returnPress", boldKey: "idv2.permissions.denied.refreshPage" },
             ],
             edge: [
                 {
@@ -1106,7 +1105,7 @@ var G = ({ i18nKey: l }) =>
                 },
                 { uuid: "2", icon: N, instructionKey: "tap", boldKey: "idv2.permissions.denied.siteSettings" },
                 { uuid: "3", icon: M, instructionKey: "tap", boldKey: "idv2.permissions.denied.cameraAllow" },
-                { uuid: "4", icon: X, instructionKey: "returnPress", boldKey: "idv2.permissions.denied.refreshPage" },
+                { uuid: "4", icon: r, instructionKey: "returnPress", boldKey: "idv2.permissions.denied.refreshPage" },
             ],
             opera: [
                 {
@@ -1204,7 +1203,7 @@ var G = ({ i18nKey: l }) =>
                 },
                 { uuid: "2", icon: N, instructionKey: "tap", boldKey: "idv2.permissions.denied.siteSettings" },
                 { uuid: "3", icon: M, instructionKey: "tap", boldKey: "idv2.permissions.denied.cameraAllow" },
-                { uuid: "4", icon: X, instructionKey: "returnPress", boldKey: "idv2.permissions.denied.refreshPage" },
+                { uuid: "4", icon: r, instructionKey: "returnPress", boldKey: "idv2.permissions.denied.refreshPage" },
             ],
             samsung_browser: [
                 {
@@ -1625,96 +1624,8 @@ function j({ onAllowPermissions: l, onDenyPermissions: t, showDenyButton: d = !0
         })
     );
 }
-var U = ({ manager: l, permissionStatus: t }) => {
-        let d = (0, c.a)(),
-            { t: a } = (0, i.n)();
-        if ("requesting" === t)
-            return (0, e.v)(Z.t, {
-                className: "IncodePermissionsRequestingPage",
-                presentational: !0,
-                spinnerConfig: { title: a("loadingCircle.holdOn"), subtitle: a("loadingCircle.preparingCamera") },
-            });
-        if ("learnMore" === t)
-            return (0, e.v)(D, {
-                onAllowPermissions: () => l.requestPermission(),
-                onQuitProcess: () => l.close(),
-                "data-testid": "permissions",
-                "data-permission-status": "learnMore",
-            });
-        if ("denied" === t)
-            return (0, e.v)(x, {
-                onRefresh: () => window.location.reload(),
-                "data-testid": "permissions",
-                "data-permission-status": "denied",
-            });
-        let n = "motionOnly" === t,
-            m = null;
-        return (
-            (m = d
-                ? (0, e.v)(j, {
-                      showDenyButton: !n,
-                      onAllowPermissions: l.requestPermission,
-                      onDenyPermissions: l.goToLearnMore,
-                  })
-                : (0, e.v)(o.t.Root, {
-                      open: !0,
-                      children: (0, e.v)(o.t.Content, {
-                          children: [
-                              (0, e.v)(o.t.Close, { onClick: l.close }),
-                              (0, e.v)(o.t.TitleSection, {
-                                  children: [
-                                      (0, e.v)(o.t.Title, { children: a("idv2.permissions.allowPermissionsV2") }),
-                                      (0, e.v)(o.t.Subtitle, { children: a("idv2.permissions.subtitleV2") }),
-                                  ],
-                              }),
-                              (0, e.v)(o.t.Actions, {
-                                  children: [
-                                      !n &&
-                                          (0, e.v)(b.t, {
-                                              variant: "secondary",
-                                              onClick: l.goToLearnMore,
-                                              children: a("idv2.permissions.dontAllow"),
-                                          }),
-                                      (0, e.v)(b.t, {
-                                          variant: "primary",
-                                          onClick: l.requestPermission,
-                                          children: a("idv2.permissions.allowV2"),
-                                      }),
-                                  ],
-                              }),
-                          ],
-                      }),
-                  })),
-            (0, e.v)(s.t, {
-                className: "IncodePermissionsPage",
-                hideHeader: !0,
-                hideFooterBranding: !0,
-                "data-testid": "permissions",
-                "data-permission-status": t,
-                children: m,
-            })
-        );
-    },
-    F = () =>
-        (0, e.v)("svg", {
-            width: "292",
-            height: "272",
-            viewBox: "0 0 292 272",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            class: "IncodeFaceOutline",
-            "aria-hidden": "true",
-            children: [
-                (0, e.v)("title", { children: "Outline" }),
-                (0, e.v)("path", {
-                    opacity: "0.8",
-                    d: "M145.633 8.0625C115.606 8.06268 85.6206 26.5984 76.9712 54.293L76.771 54.9492C70.4539 76.1063 75.0139 100.802 76.8687 110.58L77.3628 113.188L75.1528 114.656C66.1187 120.66 63.5861 124.089 62.8472 126.92C62.4669 128.377 62.4644 130.035 62.8003 132.412C63.1635 134.983 63.7533 137.484 64.4233 141.347L64.5142 141.841C65.5056 146.956 68.1062 152.133 71.2749 156.618C74.5527 161.257 78.2056 164.826 80.7349 166.584L82.4517 167.777V169.869C82.4517 177.866 85.3476 186.144 89.6763 194.128C93.9906 202.085 99.5748 209.473 104.623 215.646L105.526 216.751V218.178C105.526 220.891 105.68 223.73 105.801 226.9C105.92 230.011 106.003 233.347 105.828 236.771C105.475 243.652 104.077 251.044 99.7446 258.227C91.1977 272.397 72.1081 284.401 31.8677 291.776L29.936 292.124C-41.1597 304.684 -61.4563 361.617 -63.2153 392.062H145.633V400.062H-71.3638L-71.3462 396.044C-71.2048 364.597 -50.9804 298.295 28.5444 284.246L30.4448 283.904C69.9919 276.654 86.1642 265.253 92.894 254.095C96.3216 248.412 97.5261 242.442 97.8374 236.362C97.9939 233.307 97.9241 230.262 97.8071 227.206C97.7111 224.697 97.5799 222.105 97.5396 219.615C92.5931 213.5 87.048 206.064 82.644 197.941C78.308 189.944 74.9442 181.04 74.5024 171.896C71.3932 169.387 67.8531 165.638 64.7417 161.234C61.1656 156.173 57.9337 149.942 56.6587 143.353L56.5415 142.714C55.9864 139.514 55.2491 136.155 54.8784 133.531C54.4806 130.715 54.3377 127.843 55.106 124.899C56.5344 119.427 60.7885 114.886 68.5259 109.489C66.4692 98.2995 62.7062 74.0938 69.106 52.6602L69.3345 51.9092C79.2266 20.2173 112.853 0.0626788 145.633 0.0625V8.0625ZM145.635 0.0625C178.415 0.0625 212.042 20.2172 221.934 51.9092L222.163 52.6602C228.562 74.0938 224.799 98.2996 222.743 109.489C230.48 114.886 234.734 119.427 236.163 124.899C236.931 127.843 236.788 130.715 236.39 133.531C236.019 136.155 235.282 139.514 234.727 142.714L234.61 143.353C233.335 149.942 230.103 156.173 226.527 161.234C223.415 165.638 219.875 169.387 216.766 171.896C216.324 181.04 212.961 189.944 208.625 197.941C204.221 206.064 198.676 213.5 193.729 219.615C193.689 222.105 193.557 224.697 193.461 227.206C193.344 230.262 193.275 233.307 193.431 236.362C193.742 242.442 194.947 248.412 198.375 254.095C205.104 265.253 221.277 276.654 260.824 283.904L262.724 284.246C342.249 298.294 362.473 364.597 362.615 396.044L362.632 400.062H145.635V392.062H354.484C352.725 361.616 332.429 304.683 261.333 292.124L259.401 291.776C219.161 284.401 200.071 272.397 191.524 258.227C187.192 251.044 185.793 243.652 185.441 236.771C185.266 233.347 185.348 230.011 185.467 226.9C185.589 223.73 185.743 220.891 185.743 218.178V216.751L186.646 215.646C191.694 209.473 197.278 202.085 201.592 194.128C205.921 186.144 208.817 177.866 208.817 169.869V167.777L210.534 166.584C213.063 164.826 216.716 161.257 219.994 156.618C223.162 152.133 225.763 146.956 226.754 141.841L226.845 141.347C227.515 137.484 228.105 134.983 228.468 132.412C228.804 130.034 228.802 128.377 228.421 126.92C227.682 124.089 225.15 120.66 216.116 114.656L213.906 113.188L214.4 110.58C216.255 100.802 220.815 76.1064 214.498 54.9492L214.297 54.293C205.648 26.5983 175.662 8.0625 145.635 8.0625V0.0625Z",
-                    fill: "white",
-                }),
-            ],
-        }),
-    O = "var(--surface-neutral-100)",
-    J = ({ fill: l, gradientId: t, gradientColor: d }) =>
+var U = "var(--surface-neutral-100)",
+    F = ({ fill: l, gradientId: t, gradientColor: d }) =>
         (0, e.v)("svg", {
             width: "100%",
             height: "100%",
@@ -1747,134 +1658,230 @@ var U = ({ manager: l, permissionStatus: t }) => {
                       })
                     : null,
             ],
-        }),
-    k = ({ borderState: l = "idle" }) => {
-        let t = (0, e.m)(),
-            d = "loading" === l || "capturing" === l,
-            i = ((l) => {
-                switch (l) {
-                    case "success":
-                    case "capturing":
-                        return "var(--surface-status-positive-500)";
-                    case "loading":
-                        return "var(--surface-brand-500)";
-                    case "error":
-                        return "var(--surface-status-negative-500)";
-                    case "idle":
-                        return O;
-                }
-            })(l),
-            c = d ? `url(#${t})` : i;
-        return (0, e.v)("div", {
-            class: "IncodeLoadingBorder",
-            "aria-hidden": "true",
-            children: [
-                d ? (0, e.v)("div", { class: "IncodeLoadingBorderBase", children: (0, e.v)(J, { fill: O }) }) : null,
-                (0, e.v)("div", {
-                    class: (0, a.n)("IncodeLoadingBorderForeground", { IncodeLoadingBorderSpinning: d }),
-                    children: (0, e.v)(J, { fill: c, gradientId: d ? t : void 0, gradientColor: d ? i : void 0 }),
-                }),
-            ],
         });
-    },
-    E = ({ detectionState: l, disabled: t }) => {
-        let { t: d } = (0, i.n)(),
-            c = (0, e.l)(null),
-            s = (0, e.l)({ message: "", at: 0 }),
-            n = (0, e.l)(l),
-            Z = (0, e.l)(t),
-            b = (0, e.l)(!1),
-            m = (0, e.l)(),
-            o = (0, e.l)(),
-            u =
-                {
-                    idle: d("notifications.centerFaceV2"),
-                    noFace: d("notifications.faceNotFound"),
-                    tooManyFaces: d("notifications.tooManyFaces"),
-                    tooClose: d("notifications.moveAway"),
-                    tooFar: d("notifications.moveCloser"),
-                    blur: d("notifications.onBlur"),
-                    dark: d("notifications.onDark"),
-                    faceAngle: d("notifications.onFaceAngleV2"),
-                    headWear: d("notifications.removeHeadwear"),
-                    lenses: d("notifications.removeLenses"),
-                    eyesClosed: d("notifications.eyesClosed"),
-                    faceMask: d("notifications.mask"),
-                    centerFace: d("notifications.centerFaceV2"),
-                    getReady: d("notifications.getReady"),
-                    capturing: d("idv2.capture.takingPhoto"),
-                    error: d("common.tryAgain"),
-                }[l] ?? "",
-            h = (0, e.h)((l) => {
-                let t = Date.now(),
-                    d = s.current;
-                if (l === d.message && t - d.at < 200) return;
-                s.current = { message: l, at: t };
-                let i = c.current;
-                i &&
-                    (clearTimeout(m.current),
-                    (i.textContent = ""),
-                    (o.current = setTimeout(() => {
-                        ((i.textContent = l),
-                            (m.current = setTimeout(() => {
-                                i.textContent = "";
-                            }, 3e3)));
-                    }, 50)));
-            }, []);
-        return (
-            (0, e._)(() => {
-                let i = Z.current;
-                if (((Z.current = t), t || "manualCapture" === l)) {
-                    b.current = !1;
-                    return;
-                }
-                if (b.current) return;
-                let e = setTimeout(
-                    () => {
-                        ((b.current = !0), h(d("selfiev2.autoCapture.defaultAriaInstructions")));
-                    },
-                    i ? 1e3 : 500,
-                );
-                return () => clearTimeout(e);
-            }, [l, t, h, d]),
-            (0, e._)(() => {
-                let i = n.current;
-                ((n.current = l),
-                    t ||
-                        ("manualCapture" !== i &&
-                            "manualCapture" === l &&
-                            h(d("idv2.capture.manualCapture.modeSwitchAriaAnnouncement"))));
-            }, [h, l, d, t]),
-            (0, e._)(() => {
-                !t && u && h(u);
-            }, [u, h, t]),
-            (0, e._)(
-                () => () => {
-                    (clearTimeout(o.current), clearTimeout(m.current));
-                },
-                [],
-            ),
-            (0, e.v)(e.x, {
-                children: [
-                    (0, e.v)("div", {
-                        ref: c,
-                        class: "IncodeCaptureVisuallyHidden",
-                        "aria-live": "assertive",
-                        "aria-atomic": "true",
-                    }),
-                    u
-                        ? (0, e.v)(e.x, {
+d.d(
+    t,
+    {},
+    {
+        i: ({ manager: l, permissionStatus: t }) => {
+            let d = (0, c.a)(),
+                { t: a } = (0, i.n)();
+            if ("requesting" === t)
+                return (0, e.v)(Z.t, {
+                    className: "IncodePermissionsRequestingPage",
+                    presentational: !0,
+                    spinnerConfig: { title: a("loadingCircle.holdOn"), subtitle: a("loadingCircle.preparingCamera") },
+                });
+            if ("learnMore" === t)
+                return (0, e.v)(D, {
+                    onAllowPermissions: () => l.requestPermission(),
+                    onQuitProcess: () => l.close(),
+                    "data-testid": "permissions",
+                    "data-permission-status": "learnMore",
+                });
+            if ("denied" === t)
+                return (0, e.v)(x, {
+                    onRefresh: () => window.location.reload(),
+                    "data-testid": "permissions",
+                    "data-permission-status": "denied",
+                });
+            let n = "motionOnly" === t,
+                m = null;
+            return (
+                (m = d
+                    ? (0, e.v)(j, {
+                          showDenyButton: !n,
+                          onAllowPermissions: l.requestPermission,
+                          onDenyPermissions: l.goToLearnMore,
+                      })
+                    : (0, e.v)(o.t.Root, {
+                          open: !0,
+                          children: (0, e.v)(o.t.Content, {
                               children: [
-                                  (0, e.v)("div", {
-                                      class: "IncodeNotification",
-                                      "aria-hidden": "true",
-                                      children: (0, e.v)("p", { class: "IncodeNotificationText", children: u }),
+                                  (0, e.v)(o.t.Close, { onClick: l.close }),
+                                  (0, e.v)(o.t.TitleSection, {
+                                      children: [
+                                          (0, e.v)(o.t.Title, { children: a("idv2.permissions.allowPermissionsV2") }),
+                                          (0, e.v)(o.t.Subtitle, { children: a("idv2.permissions.subtitleV2") }),
+                                      ],
                                   }),
-                                  (0, e.v)(a.r, { size: 24 }),
+                                  (0, e.v)(o.t.Actions, {
+                                      children: [
+                                          !n &&
+                                              (0, e.v)(b.t, {
+                                                  variant: "secondary",
+                                                  onClick: l.goToLearnMore,
+                                                  children: a("idv2.permissions.dontAllow"),
+                                              }),
+                                          (0, e.v)(b.t, {
+                                              variant: "primary",
+                                              onClick: l.requestPermission,
+                                              children: a("idv2.permissions.allowV2"),
+                                          }),
+                                      ],
+                                  }),
                               ],
-                          })
+                          }),
+                      })),
+                (0, e.v)(s.t, {
+                    className: "IncodePermissionsPage",
+                    hideHeader: !0,
+                    hideFooterBranding: !0,
+                    "data-testid": "permissions",
+                    "data-permission-status": t,
+                    children: m,
+                })
+            );
+        },
+        n: ({ borderState: l = "idle" }) => {
+            let t = (0, e.m)(),
+                d = "loading" === l || "capturing" === l,
+                i = ((l) => {
+                    switch (l) {
+                        case "success":
+                        case "capturing":
+                            return "var(--surface-status-positive-500)";
+                        case "loading":
+                            return "var(--surface-brand-500)";
+                        case "error":
+                            return "var(--surface-status-negative-500)";
+                        case "idle":
+                            return U;
+                    }
+                })(l),
+                c = d ? `url(#${t})` : i;
+            return (0, e.v)("div", {
+                class: "IncodeLoadingBorder",
+                "aria-hidden": "true",
+                children: [
+                    d
+                        ? (0, e.v)("div", { class: "IncodeLoadingBorderBase", children: (0, e.v)(F, { fill: U }) })
                         : null,
+                    (0, e.v)("div", {
+                        class: (0, a.n)("IncodeLoadingBorderForeground", { IncodeLoadingBorderSpinning: d }),
+                        children: (0, e.v)(F, { fill: c, gradientId: d ? t : void 0, gradientColor: d ? i : void 0 }),
+                    }),
                 ],
-            })
-        );
-    };
+            });
+        },
+        r: () =>
+            (0, e.v)("svg", {
+                width: "292",
+                height: "272",
+                viewBox: "0 0 292 272",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                class: "IncodeFaceOutline",
+                "aria-hidden": "true",
+                children: [
+                    (0, e.v)("title", { children: "Outline" }),
+                    (0, e.v)("path", {
+                        opacity: "0.8",
+                        d: "M145.633 8.0625C115.606 8.06268 85.6206 26.5984 76.9712 54.293L76.771 54.9492C70.4539 76.1063 75.0139 100.802 76.8687 110.58L77.3628 113.188L75.1528 114.656C66.1187 120.66 63.5861 124.089 62.8472 126.92C62.4669 128.377 62.4644 130.035 62.8003 132.412C63.1635 134.983 63.7533 137.484 64.4233 141.347L64.5142 141.841C65.5056 146.956 68.1062 152.133 71.2749 156.618C74.5527 161.257 78.2056 164.826 80.7349 166.584L82.4517 167.777V169.869C82.4517 177.866 85.3476 186.144 89.6763 194.128C93.9906 202.085 99.5748 209.473 104.623 215.646L105.526 216.751V218.178C105.526 220.891 105.68 223.73 105.801 226.9C105.92 230.011 106.003 233.347 105.828 236.771C105.475 243.652 104.077 251.044 99.7446 258.227C91.1977 272.397 72.1081 284.401 31.8677 291.776L29.936 292.124C-41.1597 304.684 -61.4563 361.617 -63.2153 392.062H145.633V400.062H-71.3638L-71.3462 396.044C-71.2048 364.597 -50.9804 298.295 28.5444 284.246L30.4448 283.904C69.9919 276.654 86.1642 265.253 92.894 254.095C96.3216 248.412 97.5261 242.442 97.8374 236.362C97.9939 233.307 97.9241 230.262 97.8071 227.206C97.7111 224.697 97.5799 222.105 97.5396 219.615C92.5931 213.5 87.048 206.064 82.644 197.941C78.308 189.944 74.9442 181.04 74.5024 171.896C71.3932 169.387 67.8531 165.638 64.7417 161.234C61.1656 156.173 57.9337 149.942 56.6587 143.353L56.5415 142.714C55.9864 139.514 55.2491 136.155 54.8784 133.531C54.4806 130.715 54.3377 127.843 55.106 124.899C56.5344 119.427 60.7885 114.886 68.5259 109.489C66.4692 98.2995 62.7062 74.0938 69.106 52.6602L69.3345 51.9092C79.2266 20.2173 112.853 0.0626788 145.633 0.0625V8.0625ZM145.635 0.0625C178.415 0.0625 212.042 20.2172 221.934 51.9092L222.163 52.6602C228.562 74.0938 224.799 98.2996 222.743 109.489C230.48 114.886 234.734 119.427 236.163 124.899C236.931 127.843 236.788 130.715 236.39 133.531C236.019 136.155 235.282 139.514 234.727 142.714L234.61 143.353C233.335 149.942 230.103 156.173 226.527 161.234C223.415 165.638 219.875 169.387 216.766 171.896C216.324 181.04 212.961 189.944 208.625 197.941C204.221 206.064 198.676 213.5 193.729 219.615C193.689 222.105 193.557 224.697 193.461 227.206C193.344 230.262 193.275 233.307 193.431 236.362C193.742 242.442 194.947 248.412 198.375 254.095C205.104 265.253 221.277 276.654 260.824 283.904L262.724 284.246C342.249 298.294 362.473 364.597 362.615 396.044L362.632 400.062H145.635V392.062H354.484C352.725 361.616 332.429 304.683 261.333 292.124L259.401 291.776C219.161 284.401 200.071 272.397 191.524 258.227C187.192 251.044 185.793 243.652 185.441 236.771C185.266 233.347 185.348 230.011 185.467 226.9C185.589 223.73 185.743 220.891 185.743 218.178V216.751L186.646 215.646C191.694 209.473 197.278 202.085 201.592 194.128C205.921 186.144 208.817 177.866 208.817 169.869V167.777L210.534 166.584C213.063 164.826 216.716 161.257 219.994 156.618C223.162 152.133 225.763 146.956 226.754 141.841L226.845 141.347C227.515 137.484 228.105 134.983 228.468 132.412C228.804 130.034 228.802 128.377 228.421 126.92C227.682 124.089 225.15 120.66 216.116 114.656L213.906 113.188L214.4 110.58C216.255 100.802 220.815 76.1064 214.498 54.9492L214.297 54.293C205.648 26.5983 175.662 8.0625 145.635 8.0625V0.0625Z",
+                        fill: "white",
+                    }),
+                ],
+            }),
+        t: ({ detectionState: l, disabled: t }) => {
+            let { t: d } = (0, i.n)(),
+                c = (0, e.l)(null),
+                s = (0, e.l)({ message: "", at: 0 }),
+                n = (0, e.l)(l),
+                Z = (0, e.l)(t),
+                b = (0, e.l)(!1),
+                m = (0, e.l)(),
+                o = (0, e.l)(),
+                u =
+                    {
+                        idle: d("notifications.centerFaceV2"),
+                        noFace: d("notifications.faceNotFound"),
+                        tooManyFaces: d("notifications.tooManyFaces"),
+                        tooClose: d("notifications.moveAway"),
+                        tooFar: d("notifications.moveCloser"),
+                        blur: d("notifications.onBlur"),
+                        dark: d("notifications.onDark"),
+                        faceAngle: d("notifications.onFaceAngleV2"),
+                        headWear: d("notifications.removeHeadwear"),
+                        lenses: d("notifications.removeLenses"),
+                        eyesClosed: d("notifications.eyesClosed"),
+                        faceMask: d("notifications.mask"),
+                        centerFace: d("notifications.centerFaceV2"),
+                        getReady: d("notifications.getReady"),
+                        capturing: d("idv2.capture.takingPhoto"),
+                        error: d("common.tryAgain"),
+                    }[l] ?? "",
+                h = (0, e.h)((l) => {
+                    let t = Date.now(),
+                        d = s.current;
+                    if (l === d.message && t - d.at < 200) return;
+                    s.current = { message: l, at: t };
+                    let i = c.current;
+                    i &&
+                        (clearTimeout(m.current),
+                        (i.textContent = ""),
+                        (o.current = setTimeout(() => {
+                            ((i.textContent = l),
+                                (m.current = setTimeout(() => {
+                                    i.textContent = "";
+                                }, 3e3)));
+                        }, 50)));
+                }, []);
+            return (
+                (0, e._)(() => {
+                    let i = Z.current;
+                    if (((Z.current = t), t || "manualCapture" === l)) {
+                        b.current = !1;
+                        return;
+                    }
+                    if (b.current) return;
+                    let e = setTimeout(
+                        () => {
+                            ((b.current = !0), h(d("selfiev2.autoCapture.defaultAriaInstructions")));
+                        },
+                        i ? 1e3 : 500,
+                    );
+                    return () => clearTimeout(e);
+                }, [l, t, h, d]),
+                (0, e._)(() => {
+                    let i = n.current;
+                    ((n.current = l),
+                        t ||
+                            ("manualCapture" !== i &&
+                                "manualCapture" === l &&
+                                h(d("idv2.capture.manualCapture.modeSwitchAriaAnnouncement"))));
+                }, [h, l, d, t]),
+                (0, e._)(() => {
+                    !t && u && h(u);
+                }, [u, h, t]),
+                (0, e._)(
+                    () => () => {
+                        (clearTimeout(o.current), clearTimeout(m.current));
+                    },
+                    [],
+                ),
+                (0, e.v)(e.x, {
+                    children: [
+                        (0, e.v)("div", {
+                            ref: c,
+                            class: "IncodeCaptureVisuallyHidden",
+                            "aria-live": "assertive",
+                            "aria-atomic": "true",
+                        }),
+                        u
+                            ? (0, e.v)(e.x, {
+                                  children: [
+                                      (0, e.v)("div", {
+                                          class: "IncodeNotification",
+                                          "aria-hidden": "true",
+                                          children: (0, e.v)("p", { class: "IncodeNotificationText", children: u }),
+                                      }),
+                                      (0, e.v)(a.r, { size: 24 }),
+                                  ],
+                              })
+                            : null,
+                    ],
+                })
+            );
+        },
+    },
+);

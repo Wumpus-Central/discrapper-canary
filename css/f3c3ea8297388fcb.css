@@ -1,0 +1,487 @@
+.formError_GZ8P8e {
+    margin-bottom: 20px
+}
+
+.card_GZ8P8e {
+    padding: 20px
+}
+
+.formActions_GZ8P8e {
+    -moz-column-gap: 2px;
+    column-gap: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px
+}
+
+.addressSection_GZ8P8e,
+.formActions_GZ8P8e {
+    margin-top: 20px
+}
+
+.defaultSection_GZ8P8e {
+    margin: var(--space-12) 0
+}
+
+.defaultCheckboxLabel_GZ8P8e {
+    margin-inline-start: 4px
+}
+
+.sectionHeader_GZ8P8e {
+    color: var(--text-muted);
+    margin-bottom: 10px
+}
+
+.subText_GZ8P8e {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-top: 20px
+}
+
+.errorSubText_GZ8P8e {
+    color: var(--red-400)
+}
+
+.disabledTooltipWrapper_GZ8P8e {
+    position: relative
+}
+
+.disabledTooltipTarget_GZ8P8e {
+    cursor: not-allowed;
+    inset: 0;
+    position: absolute;
+    z-index: 1
+}
+
+.paymentSourceRow_d3LvfJ {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0
+}
+
+.giftCardRowRight_d3LvfJ {
+    align-items: center;
+    display: flex;
+    gap: 12px
+}
+
+.giftCardBalance_d3LvfJ {
+    align-items: center;
+    border: 1px solid var(--custom-background-modifier-accent);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    min-height: 32px;
+    min-width: 64px;
+    padding: 4px 12px
+}
+
+.subText_d3LvfJ {
+    margin-top: 4px
+}
+
+.footer_d3LvfJ {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px
+}
+
+.footerContent_d3LvfJ {
+    flex: 1
+}
+
+.lockIcon_d3LvfJ {
+    margin-inline-end: var(--space-4)
+}
+
+.syncing_ku2ve4 {
+    align-items: center;
+    display: flex;
+    height: 300px;
+    justify-content: center
+}
+
+.pageActions_icKWdt {
+    border-radius: 3px;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    padding: 20px 0
+}
+
+.buttons_icKWdt {
+    align-items: center;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    gap: var(--space-8);
+    padding: var(--space-4)
+}
+
+.payment_dlyOyM {
+    transition: background-color .2s ease;
+    width: 100%
+}
+
+.payment_dlyOyM:hover {
+    background-color: var(--background-mod-muted)
+}
+
+.payment_dlyOyM[data-expanded=true] {
+    background-color: var(--background-mod-muted)
+}
+
+.expandInfo_dlyOyM {
+    padding: 20px
+}
+
+.summaryInfo_dlyOyM {
+    color: var(--text-strong);
+    cursor: pointer;
+    padding: var(--space-16);
+    transition: background-color .2s ease
+}
+
+.summaryInfo_dlyOyM[data-expanded=true] {
+    background-color: var(--background-mod-muted)
+}
+
+.summaryInfo_dlyOyM:hover {
+    background-color: var(--background-mod-subtle)
+}
+
+.expandedInfo_dlyOyM {
+    padding: var(--space-16)
+}
+
+.paymentHeader_dlyOyM {
+    border-top: 1px solid;
+    border-color: var(--primary-500);
+    font-size: 16px;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 8px;
+    margin-top: 20px;
+    padding-top: 20px
+}
+
+.paymentHeader_dlyOyM:first-child {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0
+}
+
+.paymentText_dlyOyM {
+    color: var(--text-default);
+    font-size: 14px;
+    line-height: 1.4
+}
+
+.paymentBreakdown_dlyOyM {
+    padding-top: 10px
+}
+
+.paymentDetail_dlyOyM {
+    margin-top: 12px
+}
+
+.paymentDetail_dlyOyM:first-child {
+    margin-top: 20px
+}
+
+.additionalInformationButtonContainer_dlyOyM {
+    margin-top: 16px
+}
+
+.guildProductDetail_dlyOyM {}
+
+.date_dlyOyM {
+    flex-shrink: 0;
+    width: 20%
+}
+
+.amount_dlyOyM {
+    align-content: center;
+    display: flex;
+    justify-content: flex-end
+}
+
+.statusTag_dlyOyM {
+    border-radius: 3px;
+    color: var(--white);
+    display: block;
+    font-size: 11px;
+    font-weight: var(--font-weight-medium);
+    height: 14px;
+    letter-spacing: .4px;
+    line-height: 14px;
+    margin-inline-end: 20px;
+    max-width: 180px;
+    overflow: hidden;
+    padding: 0 4px;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap
+}
+
+.statusTagGreen_dlyOyM {
+    background-color: var(--green-360)
+}
+
+.statusTagRed_dlyOyM {
+    background-color: var(--background-feedback-mod-critical);
+    color: var(--text-feedback-critical)
+}
+
+.statusTagGrey_dlyOyM {
+    background-color: var(--primary-400)
+}
+
+.statusTagYellow_dlyOyM {
+    background-color: var(--yellow-360)
+}
+
+.price_dlyOyM {
+    white-space: nowrap
+}
+
+.orbPrice_dlyOyM {
+    align-items: center;
+    display: inline-flex;
+    gap: 4px
+}
+
+.description_dlyOyM {
+    align-items: center;
+    display: flex;
+    flex: 1 1 50%;
+    margin-inline-end: 8px
+}
+
+.descriptionIcon_dlyOyM {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    margin-inline-end: 10px
+}
+
+.nitroColorlessIcon_dlyOyM {
+    background: var(--background-mod-normal);
+    display: grid;
+    overflow: clip;
+    place-items: center
+}
+
+.nitroColorlessIconNormal_dlyOyM {
+    border-radius: 4.5px;
+    height: 24px;
+    width: 24px
+}
+
+.guildDescriptionIcon_dlyOyM {
+    background-color: var(--background-mod-muted)
+}
+
+.shopIcon_dlyOyM {
+    height: 20px;
+    margin-inline-end: 10px;
+    width: 20px
+}
+
+.expand_dlyOyM {
+    height: 24px;
+    margin-inline-start: 20px;
+    width: 24px
+}
+
+.downloadInvoice_dlyOyM {
+    font-size: 14px;
+    margin-top: 12px
+}
+
+.downloadRefundInvoice_dlyOyM {
+    margin-inline-start: 14px
+}
+
+.refundSubHeader_dlyOyM {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    margin: 20px 0 8px;
+    text-transform: none
+}
+
+.refundSelect_dlyOyM {
+    flex: 1;
+    margin-inline-end: 12px
+}
+
+.refundCriteria_dlyOyM {
+    margin-inline-end: 32px
+}
+
+.refundCriteriaIcon_dlyOyM {
+    height: 16px;
+    margin-inline-end: 8px;
+    width: 16px
+}
+
+.giftIcon_dlyOyM {
+    color: var(--text-default);
+    height: 16px;
+    margin-inline-start: 10px;
+    width: 16px
+}
+
+@media (max-width:800px) {
+    .refundCriteria_dlyOyM {
+        margin-inline-end: 16px
+    }
+}
+
+.refundActions_dlyOyM {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between
+}
+
+.refundIconContainer_dlyOyM,
+.refundRules_dlyOyM {
+    display: flex
+}
+
+.copiableContainer_dlyOyM {
+    cursor: pointer
+}
+
+.paymentInfo_dlyOyM {
+    display: flex;
+    justify-content: space-between
+}
+
+.divider_dlyOyM {
+    border-top: 1px solid var(--interactive-background-hover);
+    margin-bottom: 16px;
+    margin-top: 16px;
+    width: 100%
+}
+
+.sectionDivider_dlyOyM {
+    margin-bottom: 20px;
+    margin-top: 20px
+}
+
+.guildProductBenefits_dlyOyM {
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    padding: 16px
+}
+
+.guildProductBenefitLabel_dlyOyM {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 12px;
+    text-transform: none
+}
+
+.warningBlock_dlyOyM {
+    align-items: center;
+    overflow: auto;
+    width: 100%
+}
+
+.paymentTag_tHiYcT {
+    border-radius: var(--radius-xs);
+    padding: 0 var(--space-4);
+    text-transform: uppercase;
+    white-space: nowrap
+}
+
+.paymentTagPositive_tHiYcT {
+    background-color: var(--background-feedback-mod-positive);
+    color: var(--text-feedback-positive)
+}
+
+.paymentTagCritical_tHiYcT {
+    background-color: var(--background-feedback-mod-critical);
+    color: var(--text-feedback-critical)
+}
+
+.paymentPane_VuWkDZ {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    color: var(--text-strong);
+    overflow: hidden
+}
+
+.paymentRow_VuWkDZ {
+    cursor: default
+}
+
+.paymentRowHeader_VuWkDZ {
+    font-size: 12px;
+    font-weight: var(--font-weight-semibold);
+    margin-inline-end: 44px;
+    padding: 20px
+}
+
+.paymentRowHeaderDescription_VuWkDZ {
+    display: flex;
+    flex: 1 1 50%;
+    margin-inline-start: 8px
+}
+
+.tab_VuWkDZ {
+    font-size: 14px;
+    font-weight: var(--font-weight-semibold);
+    margin-inline-start: 12px;
+    padding-bottom: 12px
+}
+
+.tab_VuWkDZ:first-child {
+    margin-inline-start: 0
+}
+
+.externalRow_VuWkDZ {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 20px
+}
+
+.externalRowHeader_VuWkDZ {
+    color: var(--text-default);
+    font-size: 16px
+}
+
+.externalRowBody_VuWkDZ {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 8px
+}
+
+.bottomDivider_VuWkDZ {
+    border-bottom: 1px solid var(--border-subtle)
+}
+
+.bottomDivider_VuWkDZ:last-child {
+    border-bottom: none
+}
+
+.verticalFit_VuWkDZ {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.listItem_kPtvGA {
+    align-items: center;
+    display: flex;
+    gap: calc(var(--space-4) + 2px);
+    padding-inline-start: 2px
+}
+
+/*# sourceMappingURL=f3c3ea8297388fcb.css.map*/

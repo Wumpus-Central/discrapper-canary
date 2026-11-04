@@ -1,5 +1,4 @@
-n.d(t, { A: () => u, b: () => c });
-var i = n(17928),
+var i = n(855986),
     r = n(260509),
     a = n(71393),
     s = n(576705),
@@ -20,6 +19,13 @@ function c(e, t) {
         ) && c.canManageUser(d.xBc.MODERATE_MEMBERS, _, u)
     );
 }
-function u(e, t) {
-    return (0, i.bG)([l.default, a.A, s.A], () => c(e, t, [l.default, a.A, s.A]), [e, t]);
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e, t) {
+            return (0, i.bG)([l.default, a.A, s.A], () => c(e, t, [l.default, a.A, s.A]), [e, t]);
+        },
+        b: c,
+    },
+);

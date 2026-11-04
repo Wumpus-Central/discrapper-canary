@@ -1,4 +1,3 @@
-t.d(l, { A: () => N });
 var n,
     i = t(477900);
 t(582128);
@@ -9,7 +8,7 @@ var a = t(503698),
     c = t(285796),
     d = t(789645),
     u = t(834730),
-    h = t(105292),
+    h = t(792996),
     T = t(563744),
     E = (((n = E || {}).DEFAULT = ""), (n.BOLD = "Bold"), (n.SOLID = "Solid"), n);
 function N(e) {
@@ -32,4 +31,4 @@ function N(e) {
         ],
     });
 }
-N.Variants = E;
+((N.Variants = E), t.d(l, {}, { A: N }));

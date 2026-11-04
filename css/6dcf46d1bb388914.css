@@ -1,0 +1,23 @@
+.container_2CRZ2- {
+    margin-bottom: var(--space-8)
+}
+
+.header_2CRZ2- {
+    color: var(--text-default);
+    margin-bottom: 8px
+}
+
+.slideContainer_Svq80J {
+    display: flex;
+    flex-direction: column;
+    max-height: clamp(200px, calc(100vh - 80px), 660px)
+}
+
+@media screen and (max-height:550px),
+screen and (max-width:485px) {
+    .slideContainer_Svq80J {
+        max-height: none
+    }
+}
+
+/*# sourceMappingURL=6dcf46d1bb388914.css.map*/

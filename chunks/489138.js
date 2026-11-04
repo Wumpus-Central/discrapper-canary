@@ -1,4 +1,9 @@
-t.d(a, { z: () => r });
-function r(e, a) {
-    return e - a * Math.floor(e / a);
-}
+t.d(
+    a,
+    {},
+    {
+        z: function (e, a) {
+            return e - a * Math.floor(e / a);
+        },
+    },
+);

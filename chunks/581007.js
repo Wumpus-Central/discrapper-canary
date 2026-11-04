@@ -1,4 +1,3 @@
-n.d(t, { Dm: () => s, aC: () => a, kY: () => l });
 var i = n(600975),
     r = n(688151);
 let a = (0, i.C)({
@@ -9,11 +8,18 @@ let a = (0, i.C)({
     commonTriggerPoint: r.$G.VOICE_CALL,
     treatments: [{ id: 1, label: "Enable Hangout Window", config: { enableHangoutWindow: !0 } }],
 });
-function s(e) {
-    let { guildId: t, location: n } = e;
-    return a.useExperiment({ guildId: t, location: n }, { autoTrackExposure: !0 });
-}
-function l(e) {
-    let { guildId: t, location: n } = e;
-    return a.getCurrentConfig({ guildId: t, location: n }, { autoTrackExposure: !0 });
-}
+n.d(
+    t,
+    {},
+    {
+        Dm: function (e) {
+            let { guildId: t, location: n } = e;
+            return a.useExperiment({ guildId: t, location: n }, { autoTrackExposure: !0 });
+        },
+        aC: a,
+        kY: function (e) {
+            let { guildId: t, location: n } = e;
+            return a.getCurrentConfig({ guildId: t, location: n }, { autoTrackExposure: !0 });
+        },
+    },
+);

@@ -1,10 +1,10 @@
-e.exports = {
-    XK: "microphoneUnit__7f3d5",
-    oK: "microphoneUnitHeader__7f3d5",
-    pH: "warningCircle__7f3d5",
-    JA: "errorCircle__7f3d5",
-    w: "microphoneUnitRefreshIconWrapper__7f3d5",
-    r9: "disabled__7f3d5",
-    eW: "microphoneUnitBodyText__7f3d5",
-    Iu: "opacity_50__7f3d5",
+r.exports = {
+    XK: "microphoneUnit_Ggksyu",
+    oK: "microphoneUnitHeader_Ggksyu",
+    pH: "warningCircle_Ggksyu",
+    JA: "errorCircle_Ggksyu",
+    w: "microphoneUnitRefreshIconWrapper_Ggksyu",
+    r9: "disabled_Ggksyu",
+    eW: "microphoneUnitBodyText_Ggksyu",
+    Iu: "opacity_50_Ggksyu",
 };

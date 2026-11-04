@@ -1,4 +1,3 @@
-n.d(t, { $: () => r });
 var i,
     r =
         (((i = {}).PRICE = "price"),
@@ -7,3 +6,4 @@ var i,
         (i.POPULARITY = "popularity"),
         (i.RELEVANCE = "relevance"),
         i);
+n.d(t, {}, { $: r });

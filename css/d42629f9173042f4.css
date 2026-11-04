@@ -1,0 +1,12 @@
+.warningInput_0zqV5Z {
+    --input-background-default: var(--background-feedback-mod-warning);
+    --input-border-default: var(--icon-feedback-warning);
+    --input-border-active: var(--icon-feedback-warning);
+    --input-border-hover: var(--icon-feedback-warning)
+}
+
+.warningText_0zqV5Z {
+    color: var(--icon-feedback-warning)
+}
+
+/*# sourceMappingURL=d42629f9173042f4.css.map*/

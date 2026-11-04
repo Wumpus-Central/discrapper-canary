@@ -1,28 +1,28 @@
-(n.d(t, { Ay: () => N, D3: () => S, RT: () => T, Ts: () => d, VN: () => E, c4: () => _, fy: () => c }), n(938796));
-var r = n(636537),
-    l = n(73153),
-    i = n(568185);
+n(938796);
+var r = n(620632),
+    i = n(73153),
+    l = n(568185);
 n(250953);
-var a = n(472456);
+var a = n(7909);
 n(863036);
 var u = n(734057),
     o = n(398590),
     s = n(652215);
 function d(e, t, n) {
-    l.h.dispatch({ type: "CHANNEL_SETTINGS_INIT", channelId: e, location: t, subsection: n });
+    i.h.dispatch({ type: "CHANNEL_SETTINGS_INIT", channelId: e, location: t, subsection: n });
 }
 function E() {
-    l.h.dispatch({ type: "CHANNEL_SETTINGS_CLOSE" });
+    i.h.dispatch({ type: "CHANNEL_SETTINGS_CLOSE" });
 }
 function _(e) {
-    l.h.dispatch({ type: "CHANNEL_SETTINGS_SET_SECTION", section: e });
+    i.h.dispatch({ type: "CHANNEL_SETTINGS_SET_SECTION", section: e });
 }
 function c(e) {
     let {
         name: t,
         type: n,
         topic: r,
-        bitrate: i,
+        bitrate: l,
         userLimit: a,
         nsfw: u,
         flags: o,
@@ -44,12 +44,12 @@ function c(e) {
         themeColor: L,
         applicationId: g,
     } = e;
-    l.h.dispatch({
+    i.h.dispatch({
         type: "CHANNEL_SETTINGS_UPDATE",
         name: t,
         channelType: n,
         topic: r,
-        bitrate: i,
+        bitrate: l,
         userLimit: a,
         nsfw: u,
         flags: o,
@@ -104,7 +104,7 @@ async function T(e, t) {
         D = u.A.getChannel(e);
     return (
         D?.isGameInvitesChannel() && (f = void 0),
-        l.h.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT" }),
+        i.h.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT" }),
         await a.A.unarchiveThreadIfNecessary(e),
         r.Bo.patch({
             url: s.Rsh.CHANNEL(e),
@@ -147,11 +147,11 @@ async function T(e, t) {
             rejectWithError: (0, r.fT)(),
         }).then(
             (t) => {
-                l.h.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS", channelId: e });
+                i.h.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS", channelId: e });
                 let n = D?.getGuildId();
-                return (null == n || D?.isThread() || i.A.checkGuildTemplateDirty(n), t);
+                return (null == n || D?.isThread() || l.A.checkGuildTemplateDirty(n), t);
             },
-            (e) => (l.h.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT_FAILURE", errors: e.body }), e),
+            (e) => (i.h.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT_FAILURE", errors: e.body }), e),
         )
     );
 }
@@ -159,29 +159,41 @@ async function S(e) {
     let t = u.A.getChannel(e);
     await r.Bo.del({ url: s.Rsh.CHANNEL(e), oldFormErrors: !0, rejectWithError: !0 });
     let n = t?.getGuildId();
-    (null == n || t?.isThread() || i.A.checkGuildTemplateDirty(n), E());
+    (null == n || t?.isThread() || l.A.checkGuildTemplateDirty(n), E());
 }
-let N = {
-    init: d,
-    open: function (e, t, n) {
-        (d(e, t, n), (0, o.id)(s.zgK.CHANNEL_SETTINGS));
+n.d(
+    t,
+    {},
+    {
+        Ay: {
+            init: d,
+            open: function (e, t, n) {
+                (d(e, t, n), (0, o.id)(s.zgK.CHANNEL_SETTINGS));
+            },
+            close: E,
+            setSection: _,
+            selectPermissionOverwrite: function (e) {
+                i.h.dispatch({ type: "CHANNEL_SETTINGS_OVERWRITE_SELECT", overwriteId: e });
+            },
+            updateChannel: c,
+            saveChannel: T,
+            deleteChannel: S,
+            updateVoiceChannelStatus: function (e, t) {
+                return r.Bo.put({
+                    url: s.Rsh.UPDATE_VOICE_CHANNEL_STATUS(e),
+                    body: { status: t },
+                    rejectWithError: (0, r.fT)(),
+                });
+            },
+            removeLinkedLobby: function (e) {
+                return r.Bo.del({ url: s.Rsh.CHANNEL_LINKED_LOBBY(e), rejectWithError: !0 });
+            },
+        },
+        D3: S,
+        RT: T,
+        Ts: d,
+        VN: E,
+        c4: _,
+        fy: c,
     },
-    close: E,
-    setSection: _,
-    selectPermissionOverwrite: function (e) {
-        l.h.dispatch({ type: "CHANNEL_SETTINGS_OVERWRITE_SELECT", overwriteId: e });
-    },
-    updateChannel: c,
-    saveChannel: T,
-    deleteChannel: S,
-    updateVoiceChannelStatus: function (e, t) {
-        return r.Bo.put({
-            url: s.Rsh.UPDATE_VOICE_CHANNEL_STATUS(e),
-            body: { status: t },
-            rejectWithError: (0, r.fT)(),
-        });
-    },
-    removeLinkedLobby: function (e) {
-        return r.Bo.del({ url: s.Rsh.CHANNEL_LINKED_LOBBY(e), rejectWithError: !0 });
-    },
-};
+);

@@ -1,4 +1,4 @@
-.row__02ff5 {
+.row_3MXiRB {
     border-bottom: var(--custom-emoji-picker-constants-category-separator-size) solid var(--border-subtle);
     display: flex;
     justify-content: center;
@@ -6,18 +6,18 @@
     padding-bottom: var(--custom-emoji-picker-constants-guild-category-icon-margin-verical)
 }
 
-.buttonHost__02ff5 {
+.buttonHost_3MXiRB {
     position: relative
 }
 
-.discoveryDot__02ff5 {
+.discoveryDot_3MXiRB {
     inset-inline-end: 0;
     pointer-events: none;
     position: absolute;
     top: 0
 }
 
-.button__02ff5 {
+.button_3MXiRB {
     --custom-emoji-packs-button-gradient-start-hsl: var(--illo-pink-40-hsl);
     --custom-emoji-packs-button-gradient-end-hsl: var(--illo-blue-50-hsl);
     align-items: center;
@@ -35,29 +35,29 @@
     width: var(--custom-emoji-picker-constants-unicode-category-icon-size)
 }
 
-.theme-light .button__02ff5 {
+.theme-light .button_3MXiRB {
     --custom-emoji-packs-button-gradient-start-hsl: var(--illo-pink-30-hsl);
     --custom-emoji-packs-button-gradient-end-hsl: var(--illo-blue-40-hsl)
 }
 
-.button__02ff5:hover {
+.button_3MXiRB:hover {
     background-color: var(--interactive-background-hover)
 }
 
-.enable-forced-colors .row__02ff5 {
+.enable-forced-colors .row_3MXiRB {
     border-bottom: 1px solid CanvasText
 }
 
-.enable-forced-colors .button__02ff5 {
+.enable-forced-colors .button_3MXiRB {
     background-image: none;
     border: 1px solid Canvas;
     color: ButtonText;
     transition: none
 }
 
-.enable-forced-colors .button__02ff5:hover {
+.enable-forced-colors .button_3MXiRB:hover {
     background: ButtonFace;
     border-color: ButtonText
 }
 
-/*# sourceMappingURL=861973.34c8bdaf72716f21.css.map*/
+/*# sourceMappingURL=861973.2bce477b2e4718fd.css.map*/

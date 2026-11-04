@@ -1,8 +1,7 @@
-n.d(t, { A: () => r, J: () => a });
 var i = n(477900);
 n(582128);
 var l = n(21878),
-    s = n(908239);
+    s = n(450624);
 function r(e) {
     let {
         channelMessageProps: { message: t, channel: n, compact: a = !1 },
@@ -44,24 +43,31 @@ function r(e) {
               }),
           });
 }
-function a(e, t, n) {
-    let {
-        message: l,
-        channel: a,
-        compact: o = !1,
-        renderThreadAccessory: d,
-        disableReactionCreates: c,
-        disableReactionUpdates: u,
-    } = e;
-    return (0, i.jsx)(s.OC, {
-        renderAccessories: r,
-        message: l,
-        channel: a,
-        compact: o,
-        hasSpoilerEmbeds: t,
-        hasBailedAst: n,
-        renderThreadAccessory: d,
-        disableReactionCreates: c,
-        disableReactionUpdates: u,
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        A: r,
+        J: function (e, t, n) {
+            let {
+                message: l,
+                channel: a,
+                compact: o = !1,
+                renderThreadAccessory: d,
+                disableReactionCreates: c,
+                disableReactionUpdates: u,
+            } = e;
+            return (0, i.jsx)(s.OC, {
+                renderAccessories: r,
+                message: l,
+                channel: a,
+                compact: o,
+                hasSpoilerEmbeds: t,
+                hasBailedAst: n,
+                renderThreadAccessory: d,
+                disableReactionCreates: c,
+                disableReactionUpdates: u,
+            });
+        },
+    },
+);

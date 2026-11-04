@@ -1,4 +1,4 @@
-@keyframes ripple__43deb {
+@keyframes ripple_cT9zhv {
     0% {
         opacity: 1;
         transform: scale(.4)
@@ -15,7 +15,7 @@
     }
 }
 
-@keyframes bounce__43deb {
+@keyframes bounce_cT9zhv {
     25% {
         transform: scale(.6)
     }
@@ -29,14 +29,14 @@
     }
 }
 
-.gifFavoriteButton__43deb {
+.gifFavoriteButton_cT9zhv {
     background-color: var(--background-base-low);
     border-radius: 5px;
     color: var(--icon-strong);
     padding: 6px
 }
 
-.gifFavoriteButton__43deb:after {
+.gifFavoriteButton_cT9zhv:after {
     border: 2px solid var(--yellow-300);
     border-radius: 50%;
     box-sizing: border-box;
@@ -52,50 +52,50 @@
     z-index: 5
 }
 
-.full-motion .gifFavoriteButton__43deb:after {
+.full-motion .gifFavoriteButton_cT9zhv:after {
     transition: all .15s ease-in-out
 }
 
-.gifFavoriteButton__43deb:focus,
-.gifFavoriteButton__43deb:hover {
+.gifFavoriteButton_cT9zhv:focus,
+.gifFavoriteButton_cT9zhv:hover {
     color: var(--yellow-300);
     transform: none
 }
 
-.gifFavoriteButton__43deb.selected__43deb {
+.gifFavoriteButton_cT9zhv.selected_cT9zhv {
     color: var(--yellow-300)
 }
 
-.gifFavoriteButton__43deb.selected__43deb.showPulse__43deb:after {
-    animation: ripple__43deb .45s ease
+.gifFavoriteButton_cT9zhv.selected_cT9zhv.showPulse_cT9zhv:after {
+    animation: ripple_cT9zhv .45s ease
 }
 
-.gifFavoriteButton__43deb.selected__43deb.showPulse__43deb .icon__43deb {
-    animation: bounce__43deb .4s linear
+.gifFavoriteButton_cT9zhv.selected_cT9zhv.showPulse_cT9zhv .icon_cT9zhv {
+    animation: bounce_cT9zhv .4s linear
 }
 
-.icon__43deb {
+.icon_cT9zhv {
     display: block;
     height: 100%;
     width: 100%
 }
 
-.enable-forced-colors .gifFavoriteButton__43deb {
+.enable-forced-colors .gifFavoriteButton_cT9zhv {
     background-color: ButtonFace;
     border: 1px solid ButtonFace;
     border-radius: 4px;
     color: ButtonText
 }
 
-.enable-forced-colors .gifFavoriteButton__43deb:focus,
-.enable-forced-colors .gifFavoriteButton__43deb:hover {
+.enable-forced-colors .gifFavoriteButton_cT9zhv:focus,
+.enable-forced-colors .gifFavoriteButton_cT9zhv:hover {
     border-color: ButtonText
 }
 
-.enable-forced-colors .gifFavoriteButton__43deb.selected__43deb {
+.enable-forced-colors .gifFavoriteButton_cT9zhv.selected_cT9zhv {
     background-color: HighlightText;
     border-color: Highlight;
     color: Highlight
 }
 
-/*# sourceMappingURL=166336.d6a35b78451f5f98.css.map*/
+/*# sourceMappingURL=166336.eb681ad46935054a.css.map*/

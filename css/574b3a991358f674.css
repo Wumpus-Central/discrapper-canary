@@ -1,0 +1,51 @@
+.panel_hyplEw {
+    gap: 16px;
+    padding: 8px
+}
+
+.panel_hyplEw,
+.panelGroup_hyplEw {
+    display: flex;
+    flex-direction: column
+}
+
+.panelGroup_hyplEw {
+    border-radius: 8px;
+    gap: 4px;
+    padding: 12px;
+    width: 300px
+}
+
+.panelGroup_hyplEw span {
+    transition: color .4s ease-in-out
+}
+
+.rightAligned_hyplEw {
+    align-items: flex-end
+}
+
+.measurement_hyplEw {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.measurementText_hyplEw {
+    flex: 1;
+    text-shadow: 0 0 2px #000
+}
+
+.measurementCheckbox_hyplEw {
+    flex: 0
+}
+
+.bottomPanelButton_hyplEw {
+    padding-top: 12px
+}
+
+.secondaryInfoText_hyplEw {
+    margin-inline-start: 8px
+}
+
+/*# sourceMappingURL=574b3a991358f674.css.map*/

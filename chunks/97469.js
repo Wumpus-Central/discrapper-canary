@@ -1,10 +1,9 @@
-n.d(t, { $i: () => _, NC: () => A, qo: () => E });
-var i = n(17928),
+var i = n(855986),
     r = n(462887),
     a = n(467135),
-    s = n(147248),
+    s = n(850333),
     l = n(875317),
-    o = n(363195),
+    o = n(413599),
     d = n(253932),
     c = n(652215);
 function u(e) {
@@ -21,21 +20,9 @@ function u(e) {
     return (0, r.q)(t) && n && null == i && !(d || s || l || o);
 }
 function _() {
-    let e = (0, l.fX)();
-    return u({
-        theme: o.A.theme,
-        darkSidebar: d.l$.getSetting(),
-        gradientPreset: s.A.gradientPreset,
-        clientThemeSettings: d.eh.getSetting(),
-        isCustomThemeEditorActive: a.ko.getState().isEditorActive(),
-        hasActiveGuildTheme: null != e,
-        isGuildThemePreviewActive: !1,
-    });
-}
-function E() {
     let e = d.eh.useSetting(),
         t = d.l$.useSetting(),
-        n = (0, a.ko)((e) => e.isEditorActive()),
+        n = (0, a.k)((e) => e.isEditorActive()),
         r = null != (0, l.Q)(),
         c = (0, l.gM)();
     return (0, i.bG)([o.A, s.A], () =>
@@ -50,6 +37,25 @@ function E() {
         }),
     );
 }
-function A() {
-    return E() ? c.NJ8.ASH : void 0;
-}
+n.d(
+    t,
+    {},
+    {
+        $i: function () {
+            let e = (0, l.fX)();
+            return u({
+                theme: o.A.theme,
+                darkSidebar: d.l$.getSetting(),
+                gradientPreset: s.A.gradientPreset,
+                clientThemeSettings: d.eh.getSetting(),
+                isCustomThemeEditorActive: a.k.getState().isEditorActive(),
+                hasActiveGuildTheme: null != e,
+                isGuildThemePreviewActive: !1,
+            });
+        },
+        NC: function () {
+            return _() ? c.NJ8.ASH : void 0;
+        },
+        qo: _,
+    },
+);

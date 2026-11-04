@@ -1,79 +1,79 @@
-i.d(n, { default: () => b });
-var l = i(477900);
-i(582128);
-var t = i(477782),
-    d = i(192308),
-    a = i(980707),
-    r = i(442433),
-    s = i(847767),
-    c = i(358367),
-    o = i(793574),
-    u = i(605691),
-    A = i(868548),
-    g = i(995102),
-    h = i(50268),
-    j = i(73028),
-    x = i(280450),
-    E = i(914853),
-    _ = i(708653),
-    M = i(297460),
-    N = i(652215),
-    X = i(105292);
+var t = n(477900);
+n(582128);
+var l = n(477782),
+    d = n(192308),
+    r = n(165862),
+    s = n(442433),
+    a = n(847767),
+    c = n(358367),
+    u = n(793574),
+    A = n(605691),
+    g = n(511904),
+    o = n(995102),
+    h = n(50268),
+    j = n(73028),
+    x = n(46653),
+    E = n(914853),
+    _ = n(708653),
+    M = n(297460),
+    N = n(652215),
+    X = n(792996);
 let b = (0, c.A)(
-    (0, s.A)(
+    (0, a.A)(
         function (e) {
-            let { channel: n, selected: s, onSelect: c, widgetType: N } = e,
-                b = n.isOwner(x.default.getId()),
-                p = (0, M.A)({ kind: "CHANNEL", channel: n, guildId: n.getGuildId?.() ?? null }, N),
-                U = (0, A.A)(n),
-                C = (0, g.A)(n),
-                { toggleFavoriteItem: I } = (0, _.Ay)(E.x.MESSAGES, n, N),
-                O = (0, u.A)(n, s),
-                k = (0, h.A)({ id: n.id, label: X.intl.string(X.t.gFHI3k) }),
-                v = b
-                    ? (0, l.jsx)(t.Dr, {
+            let { channel: i, selected: a, onSelect: c, widgetType: N } = e,
+                b = i.isOwner(x.default.getId()),
+                U = (0, M.A)({ kind: "CHANNEL", channel: i, guildId: i.getGuildId?.() ?? null }, N),
+                p = (0, g.A)(i),
+                C = (0, o.A)(i),
+                { toggleFavoriteItem: I } = (0, _.Ay)(E.x.MESSAGES, i, N),
+                O = (0, A.A)(i, a),
+                k = (0, h.A)({ id: i.id, label: X.intl.string(X.t.gFHI3k) }),
+                m = b
+                    ? (0, t.jsx)(l.Dr, {
                           id: "instant-invites",
                           label: X.intl.string(X.t.ngRFjZ),
                           action: () =>
-                              (0, d.openModalLazy)(async () => {
+                              (0, d.mM)(async () => {
                                   let { default: e } = await Promise.all([
-                                      i.e("403382"),
-                                      i.e("207998"),
-                                      i.e("817298"),
-                                      i.e("899052"),
-                                      i.e("66580"),
-                                      i.e("232305"),
-                                  ]).then(i.bind(i, 409352));
-                                  return (i) => (0, l.jsx)(e, { channelId: n.id, ...i });
+                                      n.e(876400),
+                                      n.e(207998),
+                                      n.e(817298),
+                                      n.e(25658),
+                                      n.e(66580),
+                                      n.e(319664),
+                                  ]).then(n.bind(n, 454963));
+                                  return (n) => (0, t.jsx)(e, { channelId: i.id, ...n });
                               }),
                       })
                     : null;
-            return null == n || n.isManaged()
+            return null == i || i.isManaged()
                 ? null
-                : (0, l.jsxs)(a.W, {
+                : (0, t.jsxs)(r.W, {
                       navId: "overlay-gdm-context",
                       "aria-label": X.intl.string(X.t.Xm41aV),
-                      onClose: r.Z_,
+                      onClose: s.Z_,
                       onSelect: c,
                       children: [
-                          (0, l.jsxs)(t.rX, { children: [U, p, I] }),
-                          (0, l.jsxs)(t.rX, {
+                          (0, t.jsxs)(l.rX, { children: [p, U, I] }),
+                          (0, t.jsxs)(l.rX, {
                               children: [
-                                  v,
-                                  (0, l.jsx)(t.Dr, {
+                                  m,
+                                  (0, t.jsx)(l.Dr, {
                                       id: "edit-gdm",
                                       label: X.intl.string(X.t["5Q9+/L"]),
-                                      action: () => (0, j.U)(n.id, o.A.GROUP_DM_CONTEXT_MENU),
+                                      action: () => (0, j.U)(i.id, u.A.GROUP_DM_CONTEXT_MENU),
                                   }),
                               ],
                           }),
-                          (0, l.jsx)(t.rX, { children: C }),
-                          (0, l.jsx)(t.rX, { children: O }),
-                          (0, l.jsx)(t.rX, { children: k }),
+                          (0, t.jsx)(l.rX, { children: C }),
+                          (0, t.jsx)(l.rX, { children: O }),
+                          (0, t.jsx)(l.rX, { children: k }),
                       ],
                   });
         },
         { object: N.ZSU.CONTEXT_MENU },
     ),
-    [o.A.CONTEXT_MENU, o.A.OVERLAY, o.A.GROUP_DM_MENU],
+    [u.A.CONTEXT_MENU, u.A.OVERLAY, u.A.GROUP_DM_MENU],
 );
+n.d(i, {}, { default: b });

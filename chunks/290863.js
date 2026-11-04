@@ -1,14 +1,14 @@
-(n.d(t, { A: () => G, m: () => O }), n(321073));
+n(321073);
 var i = n(812729),
     r = n.n(i),
     a = n(435558),
     s = n.n(a),
     l = n(350835),
-    o = n(17928),
+    o = n(855986),
     d = n(73153),
     c = n(682261),
-    u = n(935208),
-    _ = n(280450),
+    u = n(811091),
+    _ = n(46653),
     E = n(287809),
     A = n(652215);
 let h = Object.freeze([]),
@@ -50,7 +50,9 @@ function R(e) {
     let t = [],
         n = [];
     for (let i of e) i.type === l.$.PLAYING ? n.push(i) : t.push(i);
-    return n.length <= 1 ? e : [...t, [...n].sort(O)[0]].sort(O);
+    if (n.length <= 1) return e;
+    let i = [...n].sort(O)[0];
+    return [...t, i].sort(O);
 }
 function L(e, t) {
     ((p[e] = t), (m[e] = R(t)));
@@ -428,3 +430,4 @@ let G = new w(d.h, {
         ((I[t] = e.status), L(t, [...e.activities].sort(O)), (T[t] = [...e.hiddenActivities].sort(O)), delete S[t]);
     },
 });
+n.d(t, {}, { A: G, m: O });

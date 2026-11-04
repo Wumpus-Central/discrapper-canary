@@ -1,1 +1,1 @@
-e.exports = { S: "image__1859b", Y: "imageLoading__1859b" };
+e.exports = { S: "image_Uc0G8h", Y: "imageLoading_Uc0G8h" };

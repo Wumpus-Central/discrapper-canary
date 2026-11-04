@@ -1,4 +1,3 @@
-d.d(t, { t: () => i });
 var i = class l {
     static fromImageData(t) {
         let d = document.createElement("canvas");
@@ -12,7 +11,7 @@ var i = class l {
             (this.canvas = document.createElement("canvas")),
             (this.canvas.width = l.width),
             (this.canvas.height = l.height));
-        const t = this.canvas.getContext("2d");
+        let t = this.canvas.getContext("2d");
         t && t.drawImage(l, 0, 0);
     }
     checkCanvas() {
@@ -119,3 +118,4 @@ var i = class l {
         return Z ? (Z.drawImage(this.canvas, (a * i) / 2, 0, a * s, a * n, 0, 0, s, n), e) : null;
     }
 };
+d.d(t, {}, { t: i });

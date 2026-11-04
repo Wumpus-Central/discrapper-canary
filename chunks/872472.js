@@ -1,11 +1,11 @@
-(r.d(e, { A: () => I }), r(321073));
+r(321073);
 var i = r(575593),
     l = r(898461),
     s = r(474012),
     n = r(837015),
     u = r(203632),
     o = r(892118),
-    a = r(32731),
+    a = r(431955),
     d = r(520606),
     c = r(652215);
 function S(t) {
@@ -27,15 +27,15 @@ class I extends d.A {
     bundleItems;
     constructor(t) {
         if ((super(t), (this.skuProductLine = c.EZt.COLLECTIBLES), null != t.bundle_items)) {
-            const e = [];
-            for (const r of t.bundle_items) {
-                const t = S(r);
+            let e = [];
+            for (let r of t.bundle_items) {
+                let t = S(r);
                 null != t && e.push(t);
             }
             if (0 === e.length) throw Error("Bundle has no valid items");
             this.bundleItems = e;
         } else if (null != t.collectibles_item) {
-            const e = S(t.collectibles_item);
+            let e = S(t.collectibles_item);
             if (null == e) throw Error("Collectibles item not found");
             this.collectiblesItem = e;
         } else if (!t.skipValidation)
@@ -61,3 +61,4 @@ class I extends d.A {
         );
     }
 }
+r.d(e, {}, { A: I });

@@ -1,0 +1,49 @@
+.inputContainer_VoYXI5 {
+    position: relative
+}
+
+.emojiButtonContainer_VoYXI5 {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    inset-inline-start: var(--space-12);
+    position: absolute;
+    top: 0
+}
+
+.emojiButton_VoYXI5.fullOpacity_VoYXI5 {
+    opacity: 1
+}
+
+.emoji_VoYXI5 {
+    height: 20px;
+    width: 20px
+}
+
+.input_VoYXI5 {
+    padding-inline: 40px 36px
+}
+
+.clearButton_VoYXI5 {
+    height: 100%;
+    inset-inline-end: 0;
+    line-height: 0;
+    opacity: .6;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    transition: opacity .2s ease-in-out
+}
+
+.clearButton_VoYXI5:focus,
+.clearButton_VoYXI5:hover {
+    opacity: 1
+}
+
+.clearIcon_VoYXI5 {
+    color: var(--interactive-text-default);
+    height: 16px;
+    width: 16px
+}
+
+/*# sourceMappingURL=90504f9fd8af56e2.css.map*/

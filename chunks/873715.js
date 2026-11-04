@@ -1,21 +1,26 @@
-n.d(t, { J: () => a });
 var i = n(884868),
     r = n(192888);
-function a(e, t, n) {
-    return (0, r.W)(e, "control", n, {
-        id: t,
-        timeoutMs: (0, i.d5)(n),
-        retryMs: 400,
-        sourceMatch: "origin",
-        label: "control",
-    }).then(
-        (e) =>
-            "boolean" == typeof e?.ok && Array.isArray(e.results)
-                ? { status: "completed", response: e }
-                : { status: "failed", message: "the preview frame returned a malformed control result" },
-        (e) =>
-            e instanceof i.fq
-                ? { status: "failed", message: "the preview frame did not answer the control batch" }
-                : { status: "unavailable" },
-    );
-}
+n.d(
+    t,
+    {},
+    {
+        J: function (e, t, n) {
+            return (0, r.W)(e, "control", n, {
+                id: t,
+                timeoutMs: (0, i.d5)(n),
+                retryMs: 400,
+                sourceMatch: "origin",
+                label: "control",
+            }).then(
+                (e) =>
+                    "boolean" == typeof e?.ok && Array.isArray(e.results)
+                        ? { status: "completed", response: e }
+                        : { status: "failed", message: "the preview frame returned a malformed control result" },
+                (e) =>
+                    e instanceof i.fq
+                        ? { status: "failed", message: "the preview frame did not answer the control batch" }
+                        : { status: "unavailable" },
+            );
+        },
+    },
+);

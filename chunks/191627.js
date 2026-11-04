@@ -1,31 +1,3 @@
-n.d(t, {
-    EC: () => R,
-    Ef: () => D,
-    Gg: () => S,
-    H1: () => F,
-    MH: () => M,
-    NV: () => b,
-    PH: () => C,
-    QM: () => y,
-    Uy: () => f,
-    Y7: () => m,
-    bo: () => k,
-    dI: () => V,
-    fD: () => I,
-    h4: () => g,
-    he: () => L,
-    iN: () => U,
-    jZ: () => N,
-    kp: () => T,
-    lu: () => B,
-    ly: () => G,
-    nz: () => O,
-    qb: () => w,
-    tN: () => p,
-    u9: () => v,
-    vW: () => x,
-    zu: () => P,
-});
 var i,
     r,
     a,
@@ -37,35 +9,27 @@ var i,
     u,
     _ = n(323125),
     E = n(927813),
-    A = n(83152),
-    h = n(105292);
-let f = "RESTRICTED_HOURS_LAYER",
-    I = 30 * E.A.Millis.SECOND,
+    A = n(665956),
+    h = n(792996);
+let f = 30 * E.A.Millis.SECOND,
+    I = 5 * E.A.Millis.MINUTE,
     p = 5 * E.A.Millis.MINUTE,
-    m = 8,
-    T = 3,
-    g = 26,
-    S = 64,
-    N = (e, t) => `https://discord.com/feature/family-center/my-family/${e}/${t}`,
-    C = 4,
-    O = 5 * E.A.Millis.MINUTE,
-    R = "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    L = (0, _.dN)(
+    m = (0, _.dN)(
         Object.freeze({
             FAMILY_CENTER_SETTINGS: "/family-center/settings",
             FAMILY_CENTER_MY_FAMILY: "/family-center/my-family",
         }),
         [":", "?", "@"],
     );
-var y = (((i = {})[(i.PARENT = 1)] = "PARENT"), (i[(i.CHILD = 2)] = "CHILD"), i),
-    D =
+var T = (((i = {})[(i.PARENT = 1)] = "PARENT"), (i[(i.CHILD = 2)] = "CHILD"), i),
+    g =
         (((r = {})[(r.PENDING = 1)] = "PENDING"),
         (r[(r.ACTIVE = 2)] = "ACTIVE"),
         (r[(r.INACTIVE = 3)] = "INACTIVE"),
         (r[(r.DECLINED = 4)] = "DECLINED"),
         (r[(r.EXPIRED = 5)] = "EXPIRED"),
         r),
-    b =
+    S =
         (((a = {})[(a.USER_ADD = 1)] = "USER_ADD"),
         (a[(a.GUILD_ADD = 2)] = "GUILD_ADD"),
         (a[(a.USER_INTERACTION = 3)] = "USER_INTERACTION"),
@@ -75,7 +39,7 @@ var y = (((i = {})[(i.PARENT = 1)] = "PARENT"), (i[(i.CHILD = 2)] = "CHILD"), i)
         (a[(a.PURCHASES = 7)] = "PURCHASES"),
         (a[(a.GIFTS = 8)] = "GIFTS"),
         a),
-    v =
+    N =
         (((s = {}).ACTIVITY = "ACTIVITY"),
         (s.REQUESTS = "REQUESTS"),
         (s.SETTINGS = "SETTINGS"),
@@ -83,7 +47,7 @@ var y = (((i = {})[(i.PARENT = 1)] = "PARENT"), (i[(i.CHILD = 2)] = "CHILD"), i)
         (s.DATA_AND_PRIVACY = "DATA_AND_PRIVACY"),
         (s.SCREEN_TIME_CONTROLS = "SCREEN_TIME_CONTROLS"),
         s),
-    P =
+    C =
         (((l = {})[(l.ACTIVITY = 0)] = "ACTIVITY"),
         (l[(l.REQUESTS = 1)] = "REQUESTS"),
         (l[(l.SETTINGS = 2)] = "SETTINGS"),
@@ -91,9 +55,9 @@ var y = (((i = {})[(i.PARENT = 1)] = "PARENT"), (i[(i.CHILD = 2)] = "CHILD"), i)
         (l[(l.DATA_AND_PRIVACY = 4)] = "DATA_AND_PRIVACY"),
         (l[(l.SCREEN_TIME_CONTROLS = 5)] = "SCREEN_TIME_CONTROLS"),
         l),
-    M = (((o = {}).SIDENAV = "SIDENAV"), (o.SETTINGS = "SETTINGS"), o),
-    U = (((d = {})[(d.SIDENAV = 0)] = "SIDENAV"), (d[(d.SETTINGS = 1)] = "SETTINGS"), d),
-    w =
+    O = (((o = {}).SIDENAV = "SIDENAV"), (o.SETTINGS = "SETTINGS"), o),
+    R = (((d = {})[(d.SIDENAV = 0)] = "SIDENAV"), (d[(d.SETTINGS = 1)] = "SETTINGS"), d),
+    L =
         (((c = {})[(c.TabChange = 0)] = "TabChange"),
         (c[(c.ShowQRCodeModal = 1)] = "ShowQRCodeModal"),
         (c[(c.RevealQRCode = 2)] = "RevealQRCode"),
@@ -106,7 +70,7 @@ var y = (((i = {})[(i.PARENT = 1)] = "PARENT"), (i[(i.CHILD = 2)] = "CHILD"), i)
         (c[(c.ShareLink = 9)] = "ShareLink"),
         (c[(c.CopyLink = 10)] = "CopyLink"),
         c);
-let G = new Map([
+let y = new Map([
     [
         3,
         {
@@ -203,68 +167,91 @@ let G = new Map([
         },
     ],
 ]);
-var x =
+var D =
     (((u = {})[(u.GENERIC_ERROR = 0)] = "GENERIC_ERROR"),
     (u[(u.INELIGIBLE_FOR_FAMILY_CENTER = 1)] = "INELIGIBLE_FOR_FAMILY_CENTER"),
     (u[(u.PENDING_REQUEST_EXISTS = 2)] = "PENDING_REQUEST_EXISTS"),
     (u[(u.MAX_CONNECTIONS_REACHED = 3)] = "MAX_CONNECTIONS_REACHED"),
     u);
-let k = { 29e4: 1, 290002: 3, 290005: 2 },
-    F = {
-        0: {
-            header: () => h.intl.string(A.default.nGX8Co),
-            description: () => h.intl.string(A.default.Uss2dn),
-            icon: 1,
-        },
-        2: {
-            header: () => h.intl.string(A.default.tu0MRv),
-            description: (e) => {
-                let { email: t } = e;
-                return null != t
-                    ? h.intl.formatToPlainString(A.default.xNEkdx, { email: t })
-                    : h.intl.string(A.default.Xyjnwn);
+n.d(
+    t,
+    {},
+    {
+        EC: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        Ef: g,
+        H1: {
+            0: {
+                header: () => h.intl.string(A.default.nGX8Co),
+                description: () => h.intl.string(A.default.Uss2dn),
+                icon: 1,
             },
-            icon: 0,
-        },
-        3: {
-            header: (e) => {
-                let { isAdult: t } = e;
-                return t ? h.intl.string(A.default.bS5x94) : h.intl.string(A.default.MzX4RP);
+            2: {
+                header: () => h.intl.string(A.default.tu0MRv),
+                description: (e) => {
+                    let { email: t } = e;
+                    return null != t
+                        ? h.intl.formatToPlainString(A.default.xNEkdx, { email: t })
+                        : h.intl.string(A.default.Xyjnwn);
+                },
+                icon: 0,
             },
-            description: (e) => {
-                let { isAdult: t } = e;
-                return t
-                    ? h.intl.format(A.default.GKzqWi, {
-                          link: "https://support.discord.com/hc/articles/14155043715735",
-                      })
-                    : h.intl.format(A.default["69F+eS"], {
-                          link: "https://support.discord.com/hc/articles/14155060633623",
-                      });
+            3: {
+                header: (e) => {
+                    let { isAdult: t } = e;
+                    return t ? h.intl.string(A.default.bS5x94) : h.intl.string(A.default.MzX4RP);
+                },
+                description: (e) => {
+                    let { isAdult: t } = e;
+                    return t
+                        ? h.intl.format(A.default.GKzqWi, {
+                              link: "https://support.discord.com/hc/articles/14155043715735",
+                          })
+                        : h.intl.format(A.default["69F+eS"], {
+                              link: "https://support.discord.com/hc/articles/14155060633623",
+                          });
+                },
+                icon: 1,
             },
-            icon: 1,
+            1: {
+                header: () => h.intl.string(A.default.W9JLJh),
+                description: () =>
+                    h.intl.format(A.default.On5iRI, {
+                        link: "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731",
+                    }),
+                icon: 1,
+            },
         },
-        1: {
-            header: () => h.intl.string(A.default.W9JLJh),
-            description: () =>
-                h.intl.format(A.default.On5iRI, {
-                    link: "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731",
-                }),
-            icon: 1,
-        },
+        MH: O,
+        NV: S,
+        QM: T,
+        Uy: "RESTRICTED_HOURS_LAYER",
+        bo: { 29e4: 1, 290002: 3, 290005: 2 },
+        dI: () => ({
+            seconds: h.intl.string(A.default.Bqsamd),
+            minutes: A.default.kX3wJg,
+            hours: A.default.J18GbG,
+            yesterday: h.intl.string(A.default.Ln9zMn),
+            days: A.default.WRtySz,
+            date: A.default.Y3ZYtM,
+        }),
+        fD: f,
+        he: m,
+        iN: R,
+        jZ: (e, t) => `https://discord.com/feature/family-center/my-family/${e}/${t}`,
+        lu: () => ({
+            seconds: h.intl.string(A.default.CJdoee),
+            minutes: A.default.InzMn3,
+            hours: A.default.ErkYCI,
+            yesterday: h.intl.string(A.default.GvfssA),
+            days: A.default.pWig18,
+            date: A.default.MP3khg,
+        }),
+        ly: y,
+        nz: p,
+        qb: L,
+        tN: I,
+        u9: N,
+        vW: D,
+        zu: C,
     },
-    B = () => ({
-        seconds: h.intl.string(A.default.CJdoee),
-        minutes: A.default.InzMn3,
-        hours: A.default.ErkYCI,
-        yesterday: h.intl.string(A.default.GvfssA),
-        days: A.default.pWig18,
-        date: A.default.MP3khg,
-    }),
-    V = () => ({
-        seconds: h.intl.string(A.default.Bqsamd),
-        minutes: A.default.kX3wJg,
-        hours: A.default.J18GbG,
-        yesterday: h.intl.string(A.default.Ln9zMn),
-        days: A.default.WRtySz,
-        date: A.default.Y3ZYtM,
-    });
+);

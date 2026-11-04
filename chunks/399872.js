@@ -1,1 +1,1 @@
-e.exports = { N: "card__9827b" };
+t.exports = { N: "card_8pHodc" };

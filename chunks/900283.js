@@ -1,4 +1,3 @@
-n.d(t, { Q: () => a, x: () => s });
 var i,
     r = n(582128),
     a =
@@ -11,3 +10,4 @@ var i,
         (i.SWITCH = "switch"),
         i);
 let s = r.createContext({ onSelect: void 0 });
+n.d(t, {}, { Q: a, x: s });

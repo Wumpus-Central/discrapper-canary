@@ -1,9 +1,9 @@
-_.exports = {
-    wx: "header__78f69",
-    b: "closeButton__78f69",
-    DD: "title__78f69",
-    VA: "subtitle__78f69",
-    f9: "optionsList__78f69",
-    iv: "skip__78f69",
-    qr: "footer__78f69",
+t.exports = {
+    wx: "header_srE3KQ",
+    b: "closeButton_srE3KQ",
+    DD: "title_srE3KQ",
+    VA: "subtitle_srE3KQ",
+    f9: "optionsList_srE3KQ",
+    iv: "skip_srE3KQ",
+    qr: "footer_srE3KQ",
 };

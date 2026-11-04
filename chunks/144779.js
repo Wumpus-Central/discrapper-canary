@@ -1,4 +1,3 @@
-n.d(t, { F: () => r });
 var i,
     r =
         (((i = {}).END_CONTENT_LOAD = "end_content_load"),
@@ -7,3 +6,4 @@ var i,
         (i.VIEW_INTERNAL_SURFACE_IMPRESSION = "view_internal_surface_impression"),
         (i.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION = "view_external_paid_ad_placement_impression"),
         i);
+n.d(t, {}, { F: r });

@@ -1,6 +1,6 @@
 t.exports = {
-    Nk: "bugReporterSubmitModalRoot__341b5",
-    jE: "modalContent__341b5",
-    b: "closeButton__341b5",
-    KP: "submitText__341b5",
+    Nk: "bugReporterSubmitModalRoot_HbY48n",
+    jE: "modalContent_HbY48n",
+    b: "closeButton_HbY48n",
+    KP: "submitText_HbY48n",
 };

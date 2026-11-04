@@ -1,3 +1,154 @@
-e.exports = JSON.parse(
-    '{"wRLmM0":["Ob\xfdv\xe1k"],"qMj+2W":[[1,"userName"]," se p\u0159ipojil/a"],"u7LUkR":["zb\xfdv\xe1 ",[1,"userName"]],"nPRAZX":[[1,"userName"]," si p\u0159esedl/a na jin\xe9 m\xedsto: ",[1,"seatLabel"]],"zTbxKr":[[1,"userName"]," napsal/a pozn\xe1mku"],"DO8iXB":["Byla odebr\xe1na pozn\xe1mka od u\u017Eivatele ",[1,"userName"]],"gzrysL":[[1,"userName"]," zm\u011Bnil/a sv\u016Fj stav na: ",[1,"postureLabel"]],"vNuh/e":[[1,"userName"]," vymazal/a sv\u016Fj stav"],"f7g0DK":["Zp\u011Bt do ob\xfdv\xe1ku"],"uUhyVw":["Mrtv\xe1 rostlina"],"iXldTS":["Zobrazen\xed m\u0159\xed\u017Eky"],"93KE7U":["Kachna"],"yITFQ7":["Vadnouc\xed rostlina"],"zQkVWf":["Ob\xfdv\xe1k"],"c/OmBC":["M\xedstnost je te\u010F pln\xe1. Z\u016Fsta\u0148, mo\u017En\xe1 se brzy uvoln\xed m\xedsto."],"IrukuA":["\u017Div\xe1 rostlina"],"y33CVg":["Ob\xfdv\xe1k"],"3xb4VY":["Ob\xfdv\xe1k ",[1,"number"]],"t+GPi4":["P\u0159\xed\u0161t\xed stream"],"Vj+S0/":["Pozn\xe1mka v\xa0ob\xfdv\xe1ku"],"zzZaRe":["Pozn\xe1mky"],"w5Latp":["Pozn\xe1mka od ",[1,"userName"]],"IAcEEn":["Zanechat pozn\xe1mku"],"k4cbsb":["Dosa\u017Een limit pozn\xe1mek v\xa0m\xedstnosti"],"bUGP71":["Pozn\xe1mka zru\u0161ena"],"xyO7AD":["Stiskem kl\xe1vesy Enter sem vlo\u017E\xed\u0161 svou pozn\xe1mku. Stiskem kl\xe1vesy Esc ji zru\u0161\xed\u0161."],"NBm6jz":["Pozn\xe1mka se um\xeds\u0165uje vedle ",[1,"targetLabel"]],"lL1Y+d":["Zanechat pozn\xe1mku"],"JYlbK5":["P\u0159edm\u011Bty v\xa0m\xedstnosti"],"DYoT0n":["P\u0159ej\xedt do ob\xfdv\xe1ku"],"sV/+Cu":["Voln\xe1 m\xedsta \u2013 vyber si, kam si sedne\u0161"],"F9DcvR":["Voln\xe1 m\xedsta"],"/l5Wn+":[[6,"seatedCount",{"one":[[7]," osoba"],"few":[[7]," lid\xe9"],"other":[[7]," lid\xed"]},0,"cardinal"]," tady, ",[6,"openSeatCount",{"one":[[7]," voln\xe9 m\xedsto"],"few":[[7]," voln\xe1 m\xedsta"],"other":[[7]," voln\xfdch m\xedst"]},0,"cardinal"],", ",[6,"objectCount",{"one":[[7]," p\u0159edm\u011Bt"],"few":[[7]," p\u0159edm\u011Bty"],"other":[[7]," p\u0159edm\u011Bt\u016F"]},0,"cardinal"]],"xn1EI9":["Lid\xe9 tady"],"B0gnKP":["Akce s\xa0rostlinou"],"cPQCeg":["Kv\u011Btin\xe1\u010D"],"kEnnV1":["AFK"],"Iq4IWe":[[1,"username"],", na m\xedst\u011B ",[1,"seatLabel"],", je AFK"],"i338qh":["Deka"],"x38hbr":[[1,"username"],", na m\xedst\u011B ",[1,"seatLabel"],", s\xa0dekou"],"WsrDmY":["Kniha"],"WLBG6w":[[1,"username"],", na m\xedst\u011B ",[1,"seatLabel"],", s\xa0knihou"],"/4AL9E":["Ovlada\u010D"],"GZrfhf":[[1,"username"],", na m\xedst\u011B ",[1,"seatLabel"],", s\xa0ovlada\u010Dem"],"ViDycn":["Notebook"],"m5tldI":[[1,"username"],", na m\xedst\u011B ",[1,"seatLabel"],", s\xa0notebookem"],"Rqmi9/":["Vyber m\xedstnost, kterou chce\u0161 pou\u017E\xedt pro sv\u016Fj prostor."],"kmzWUc":["Vyber si m\xedstnost"],"crFI7e":[[1,"seatType"],", m\xedsto ",[1,"number"]],"LFdLjz":[[1,"seatType"],", ",[1,"position"]],"wxkoLF":["vzadu"],"CScWZe":["k\u0159eslo"],"lQKxC5":["\xfapln\u011B vlevo"],"iVfA9i":["\xfapln\u011B vpravo"],"8s37XL":["podlahov\xfd pol\u0161t\xe1\u0159"],"YpJ7QS":["vp\u0159edu"],"yG+xS0":["uprost\u0159ed"],"WMBV4i":["vlevo uprost\u0159ed"],"5ZigwU":["vpravo uprost\u0159ed"],"Qt29nt":["m\xedsto k\xa0st\xe1n\xed"],"xLrkpg":["sedadlo u\xa0okna"],"FlAboG":["Toto m\xedsto je obsazen\xe9."],"lkzfot":["Zadn\xed m\xedstnost"],"wjBOG8":["Gau\u010D"],"p7JgFM":["Dvousedadlo"],"WaL+LA":["Lev\xfd sal\xf3nek"],"E/jYGS":["Vyv\xfd\u0161en\xe1 \u010D\xe1st"],"ytIYuY":["Hern\xed PC"],"IE3e0y":["Krovy"],"UzA4FM":["Prav\xfd sal\xf3nek"],"C+LGlh":["Bo\u010Dn\xed skupina"],"NYm6Cb":[[1,"seatLabel"],", neobsazeno"],"+vMoL1":["Kdy\u017E se p\u0159ipoj\xed\u0161 do hlasov\xe9ho kan\xe1lu, nastav\xed se ti naposledy pou\u017Eit\xe9 zobrazen\xed \u2013 Ob\xfdvac\xed pokoj nebo M\u0159\xed\u017Eka \u2013 m\xedsto aby se v\u017Edy zobrazil Ob\xfdvac\xed pokoj. Ob\xfdvac\xed pokoj je funkce v\xa0Beta verzi."],"qYzpsI":["Zapamatovat moje posledn\xed zobrazen\xed"],"2Ll0vk":["Sd\xedl\xed obrazovku"],"0tpZJ0":["AFK"],"+rg7Lp":["Pracuji"],"7YL3BQ":["D\xe1v\xe1m si pauzu"],"LkY/of":["Hran\xed"],"LTAf2V":["P\u0159izp\u016Fsob si vzhled"],"gSS3O/":["Ob\xfdv\xe1k te\u010F nen\xed k\xa0dispozici."],"4bL+KW":[[1,"username"],", v\xa0",[1,"seatLabel"]],"zW6Hyu":["Zobrazit stream"],"hZobvN":["Sledovat stream od ",[1,"username"]],"aduS3B":["Zal\xedt rostlinu"]}',
-);
+(n.d(t, { V: () => u }), n(321073));
+var i = n(607399),
+    r = n(499979),
+    a = n(626584),
+    s = n(73153),
+    l = n(731854);
+function o(e, t) {
+    s.h.dispatch({
+        type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
+        context: l.x.DEFAULT,
+        userId: e,
+        videoToggleState: t,
+        persist: !1,
+        isAutomatic: !0,
+    });
+}
+var d = n(927813),
+    c = n(652215);
+class u {
+    logger = new a.A("VideoHealthManager");
+    windowLength;
+    fpsThreshold;
+    fpsWindowBorderlineCount;
+    backoffTimeSec;
+    disabled = !1;
+    perUserFpsWindow = {};
+    prevFramesCodec = {};
+    prevTimestamp = {};
+    streamDisabledUsers = new Set();
+    retryBackoffCache = {};
+    timeoutIdCache = {};
+    currentVideoAutoToggleState = {};
+    probingUserId;
+    enableQueue = [];
+    static defaultConfig = {
+        featureEnabled: i.Fr,
+        windowLength: 5,
+        allowedPoorFpsRatio: 1,
+        fpsThreshold: 5,
+        backoffTimeSec: 15,
+    };
+    constructor(e, t, n, i) {
+        ((this.windowLength = e),
+            (this.fpsThreshold = n),
+            (this.fpsWindowBorderlineCount = Math.ceil(e * t)),
+            (this.backoffTimeSec = i),
+            this.logger.enableNativeLogger(!0),
+            this.logger.info(`constructor with windowLength = ${this.windowLength},
+      fpsWindowBorderlineCount = ${this.fpsWindowBorderlineCount},
+      fpsThreshold = ${this.fpsThreshold},
+      backoffTimeSec = ${i}`));
+    }
+    calculateFps(e, t, n) {
+        if (
+            -1 === this.prevFramesCodec[e] ||
+            t < this.prevFramesCodec[e] ||
+            n < this.prevTimestamp[e] ||
+            n > this.prevTimestamp[e] + 1e3 * this.windowLength
+        )
+            return ((this.prevFramesCodec[e] = t), (this.prevTimestamp[e] = n), (this.perUserFpsWindow[e] = []), 0 / 0);
+        if (n < this.prevTimestamp[e] + 900) return 0 / 0;
+        let i = this.elapsedSeconds(n, this.prevTimestamp[e]);
+        this.prevTimestamp[e] = n;
+        let r = (t - this.prevFramesCodec[e]) / i;
+        return ((this.prevFramesCodec[e] = t), r);
+    }
+    updateFps(e, t, n) {
+        if (!this.disabled && !this.streamDisabledUsers.has(e)) {
+            let i = this.calculateFps(e, t, n);
+            if (!(i < 0) && Number.isFinite(i))
+                (this.perUserFpsWindow[e].push(i),
+                    this.perUserFpsWindow[e].length < this.windowLength ||
+                        (this.perUserFpsWindow[e].length > this.windowLength && this.perUserFpsWindow[e].shift(),
+                        this.perUserFpsWindow[e].filter((e) => e < this.fpsThreshold).length >=
+                        this.fpsWindowBorderlineCount
+                            ? (this.logger.info(`${e}: detected poor network quality, turning off video`),
+                              this.streamDisabledUsers.add(e),
+                              (this.currentVideoAutoToggleState[e] = c.bb8.DISABLED),
+                              o(e, c.bb8.DISABLED),
+                              this.startReenableBackoffTimer(e))
+                            : this.currentVideoAutoToggleState[e] === c.bb8.AUTO_PROBING &&
+                              ((this.currentVideoAutoToggleState[e] = c.bb8.AUTO_ENABLED),
+                              this.logger.info(
+                                  `acceptable conditions reached, will reset and send a AUTO_ENABLED for user ${e}`,
+                              ),
+                              o(e, c.bb8.AUTO_ENABLED)),
+                        this.probingUserId === e && ((this.probingUserId = void 0), this.tryReenableQueue())));
+        }
+    }
+    startReenableBackoffTimer(e) {
+        if (this.disabled) return;
+        this.logger.info(`startReenableBackoffTimer for user ${e}`);
+        let { lastBackoffTime: t, expBackoffFactor: n } = this.retryBackoffCache[e];
+        (null === t || n > 16 || this.elapsedSeconds((0, r.tB)(), t) > 600 ? (n = 1) : (n *= 2),
+            (this.retryBackoffCache[e] = { lastBackoffTime: (0, r.tB)(), expBackoffFactor: n }));
+        let i = n * this.backoffTimeSec * d.A.Millis.SECOND;
+        (this.logger.info(`starting backoff timer with time = ${i} milliseconds`),
+            (this.timeoutIdCache[e] = setTimeout(() => {
+                this.queueReenable(e);
+            }, i)));
+    }
+    queueReenable(e) {
+        (this.enableQueue.push(e), this.tryReenableQueue());
+    }
+    tryReenableQueue() {
+        if (!this.disabled && (null == this.probingUserId || !(this.probingUserId in this.perUserFpsWindow)))
+            for (let e = this.enableQueue.shift(); null != e && !this.reenableVideo(e); e = this.enableQueue.shift());
+    }
+    reenableVideo(e) {
+        return (
+            e in this.perUserFpsWindow &&
+            (this.logger.info(`reenableVideo called for user ${e} - time = ${(0, r.tB)()}`),
+            this.stateCleanupBeforeEnable(e),
+            (this.currentVideoAutoToggleState[e] = c.bb8.AUTO_PROBING),
+            (this.probingUserId = e),
+            o(e, c.bb8.AUTO_PROBING),
+            !0)
+        );
+    }
+    elapsedSeconds(e, t) {
+        return (e - t) / 1e3;
+    }
+    stateCleanupBeforeEnable(e) {
+        (this.logger.info("VideoHealthManager::stateCleanupBeforeEnable"),
+            (this.perUserFpsWindow[e] = []),
+            (this.prevFramesCodec[e] = -1),
+            this.streamDisabledUsers.delete(e));
+    }
+    getCurrentVideoToggleState(e) {
+        return this.currentVideoAutoToggleState[e];
+    }
+    createUser(e) {
+        (this.logger.info(`VideoHealthManager::createUser ${e}`),
+            e in this.perUserFpsWindow ||
+                ((this.perUserFpsWindow[e] = []),
+                (this.prevFramesCodec[e] = -1),
+                (this.currentVideoAutoToggleState[e] = c.bb8.NONE),
+                (this.retryBackoffCache[e] = { lastBackoffTime: null, expBackoffFactor: 1 })));
+    }
+    deleteUser(e) {
+        (this.logger.info(`VideoHealthManager::deleteUser ${e}`),
+            delete this.perUserFpsWindow[e],
+            delete this.prevFramesCodec[e],
+            delete this.retryBackoffCache[e],
+            delete this.currentVideoAutoToggleState[e],
+            this.streamDisabledUsers.delete(e),
+            e === this.probingUserId && ((this.probingUserId = void 0), this.tryReenableQueue()),
+            clearTimeout(this.timeoutIdCache[e]),
+            delete this.timeoutIdCache[e]);
+    }
+    disable() {
+        for (let e in ((this.disabled = !0), this.perUserFpsWindow)) this.deleteUser(e);
+    }
+}

@@ -1,0 +1,38 @@
+.content_gMy3gQ {
+    gap: var(--space-16)
+}
+
+.content_gMy3gQ,
+.radioOption_gMy3gQ {
+    display: flex;
+    flex-direction: column
+}
+
+.radioOption_gMy3gQ {
+    gap: var(--space-4)
+}
+
+.switchRow_gMy3gQ {
+    align-items: flex-start;
+    display: flex;
+    gap: var(--space-12)
+}
+
+.errors_gMy3gQ,
+.switchLabel_gMy3gQ {
+    flex-direction: column
+}
+
+.errorRow_gMy3gQ,
+.errors_gMy3gQ,
+.switchLabel_gMy3gQ {
+    display: flex;
+    gap: var(--space-4)
+}
+
+.errorRow_gMy3gQ {
+    align-items: center;
+    color: var(--text-feedback-critical)
+}
+
+/*# sourceMappingURL=967440d3abba4826.css.map*/

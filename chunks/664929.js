@@ -1,27 +1,32 @@
-n.d(t, { Rg: () => s, Yn: () => u, a8: () => o });
-var l = n(392054),
-    i = n(213404),
-    a = n(834968),
-    r = n(73510);
-function s(e) {
-    return e.type === l.Hf.BUILT_IN ? a.A : i.A;
-}
-function o(e) {
-    return `${e / 16}rem`;
-}
-function u(e, t) {
-    let n = t,
-        l = !1,
-        i = t.indexOf(":");
-    if (i >= 0) {
-        let e = t.lastIndexOf(" ", i);
-        e >= 0 ? ((t = t.substring(0, e)), (l = !0)) : (t = t.substring(0, i));
-    } else t = t.substring(0, t.length);
-    let a = t.split(" ", r.uA + 1);
-    return (
-        a.length > r.uA && ((l = !0), a.pop()),
-        (t = a.join(" ")),
-        (n.length > t.length || t.endsWith(" ")) && ((l = !0), (t = t.trimEnd())),
-        { text: t, parts: a, hasSpaceTerminator: l }
-    );
-}
+var i = e(392054),
+    s = e(213404),
+    r = e(834968);
+(e(73510),
+    e.d(
+        n,
+        {},
+        {
+            Rg: function (t) {
+                return t.type === i.Hf.BUILT_IN ? r.A : s.A;
+            },
+            Yn: function (t, n) {
+                let e = n,
+                    i = !1,
+                    s = n.indexOf(":");
+                if (s >= 0) {
+                    let t = n.lastIndexOf(" ", s);
+                    t >= 0 ? ((n = n.substring(0, t)), (i = !0)) : (n = n.substring(0, s));
+                } else n = n.substring(0, n.length);
+                let r = n.split(" ", 4);
+                return (
+                    r.length > 3 && ((i = !0), r.pop()),
+                    (n = r.join(" ")),
+                    (e.length > n.length || n.endsWith(" ")) && ((i = !0), (n = n.trimEnd())),
+                    { text: n, parts: r, hasSpaceTerminator: i }
+                );
+            },
+            a8: function (t) {
+                return `${t / 16}rem`;
+            },
+        },
+    ));

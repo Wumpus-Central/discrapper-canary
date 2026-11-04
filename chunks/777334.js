@@ -1,5 +1,4 @@
-n.d(t, { St: () => l, pj: () => s });
-var i = n(38405),
+var i = n(856383),
     r = n(41984);
 function a() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
@@ -13,13 +12,19 @@ function a() {
         },
     };
 }
-function s(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-        n = arguments.length > 2 ? arguments[2] : void 0;
-    i.A.captureException(e, a(t, n));
-}
-function l(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-        n = arguments.length > 2 ? arguments[2] : void 0;
-    return i.A.captureCrash(e, a(t, n));
-}
+n.d(
+    t,
+    {},
+    {
+        St: function (e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                n = arguments.length > 2 ? arguments[2] : void 0;
+            return i.A.captureCrash(e, a(t, n));
+        },
+        pj: function (e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                n = arguments.length > 2 ? arguments[2] : void 0;
+            i.A.captureException(e, a(t, n));
+        },
+    },
+);

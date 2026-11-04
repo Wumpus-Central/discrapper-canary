@@ -1,71 +1,28 @@
-((e.byteLength = function (t) {
-    var e = a(t),
-        r = e[0],
-        s = e[1];
-    return ((r + s) * 3) / 4 - s;
-}),
-    (e.toByteArray = function (t) {
-        var e,
-            r,
-            i = a(t),
-            o = i[0],
-            h = i[1],
-            f = new n(((o + h) * 3) / 4 - h),
-            c = 0,
-            l = h > 0 ? o - 4 : o;
-        for (r = 0; r < l; r += 4)
-            ((e =
-                (s[t.charCodeAt(r)] << 18) |
-                (s[t.charCodeAt(r + 1)] << 12) |
-                (s[t.charCodeAt(r + 2)] << 6) |
-                s[t.charCodeAt(r + 3)]),
-                (f[c++] = (e >> 16) & 255),
-                (f[c++] = (e >> 8) & 255),
-                (f[c++] = 255 & e));
-        return (
-            2 === h && ((e = (s[t.charCodeAt(r)] << 2) | (s[t.charCodeAt(r + 1)] >> 4)), (f[c++] = 255 & e)),
-            1 === h &&
-                ((e = (s[t.charCodeAt(r)] << 10) | (s[t.charCodeAt(r + 1)] << 4) | (s[t.charCodeAt(r + 2)] >> 2)),
-                (f[c++] = (e >> 8) & 255),
-                (f[c++] = 255 & e)),
-            f
+e.iI = function (t) {
+    for (var e, s = t.length, i = s % 3, n = [], o = 0, h = s - i; o < h; o += 16383)
+        n.push(
+            (function (t, e, s) {
+                for (var i, n = [], o = e; o < s; o += 3)
+                    ((i = ((t[o] << 16) & 0xff0000) + ((t[o + 1] << 8) & 65280) + (255 & t[o + 2])),
+                        n.push(r[(i >> 18) & 63] + r[(i >> 12) & 63] + r[(i >> 6) & 63] + r[63 & i]));
+                return n.join("");
+            })(t, o, o + 16383 > h ? h : o + 16383),
         );
-    }),
-    (e.fromByteArray = function (t) {
-        for (var e, s = t.length, n = s % 3, i = [], o = 0, h = s - n; o < h; o += 16383)
-            i.push(
-                (function (t, e, s) {
-                    for (var n, i = [], o = e; o < s; o += 3)
-                        ((n = ((t[o] << 16) & 0xff0000) + ((t[o + 1] << 8) & 65280) + (255 & t[o + 2])),
-                            i.push(r[(n >> 18) & 63] + r[(n >> 12) & 63] + r[(n >> 6) & 63] + r[63 & n]));
-                    return i.join("");
-                })(t, o, o + 16383 > h ? h : o + 16383),
-            );
-        return (
-            1 === n
-                ? i.push(r[(e = t[s - 1]) >> 2] + r[(e << 4) & 63] + "==")
-                : 2 === n &&
-                  i.push(r[(e = (t[s - 2] << 8) + t[s - 1]) >> 10] + r[(e >> 4) & 63] + r[(e << 2) & 63] + "="),
-            i.join("")
-        );
-    }));
+    return (
+        1 === i
+            ? n.push(r[(e = t[s - 1]) >> 2] + r[(e << 4) & 63] + "==")
+            : 2 === i && n.push(r[(e = (t[s - 2] << 8) + t[s - 1]) >> 10] + r[(e >> 4) & 63] + r[(e << 2) & 63] + "="),
+        n.join("")
+    );
+};
 for (
     var r = [],
         s = [],
-        n = "u" > typeof Uint8Array ? Uint8Array : Array,
-        i = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",
-        o = 0,
-        h = i.length;
-    o < h;
-    ++o
+        i = ("u" > typeof Uint8Array && Uint8Array, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"),
+        n = 0,
+        o = i.length;
+    n < o;
+    ++n
 )
-    ((r[o] = i[o]), (s[i.charCodeAt(o)] = o));
-function a(t) {
-    var e = t.length;
-    if (e % 4 > 0) throw Error("Invalid string. Length must be a multiple of 4");
-    var r = t.indexOf("=");
-    -1 === r && (r = e);
-    var s = r === e ? 0 : 4 - (r % 4);
-    return [r, s];
-}
+    ((r[n] = i[n]), (s[i.charCodeAt(n)] = n));
 ((s[45] = 62), (s[95] = 63));

@@ -1,4 +1,4 @@
-e.d(i, { Email: () => E });
+e.r(i);
 var r = e(783285),
     a = e(768611),
     s = e(200503),
@@ -9,7 +9,7 @@ var r = e(783285),
     u = e(963805),
     m = e(918676),
     p = e(598976),
-    v = e(497951);
+    v = e(428671);
 function c(t) {
     return "invalidEmail" === t ? "verification.errors.emailInvalid" : "serverError" === t ? "email.serverError" : t;
 }
@@ -19,7 +19,7 @@ var g = ({ config: t, manager: i, onFinish: e, onError: n }) => {
                 () => {
                     if (i) return i;
                     if (!t) throw Error("Email config is required");
-                    return (0, v.k)({ config: t });
+                    return (0, v.createEmailManager)({ config: t });
                 },
                 { manageLifecycle: !i },
             ),
@@ -124,4 +124,4 @@ var g = ({ config: t, manager: i, onFinish: e, onError: n }) => {
     },
     E = ({ config: t, manager: i, onFinish: e, onError: r }) =>
         (0, a.v)(n.t, { children: t || i ? (0, a.v)(g, { config: t, manager: i, onFinish: e, onError: r }) : null });
-(0, m.t)(E, "incode-email");
+((0, m.t)(E, "incode-email"), e.d(i, {}, { Email: E }));

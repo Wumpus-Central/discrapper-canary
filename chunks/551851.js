@@ -1,5 +1,4 @@
-n.d(t, { A: () => o });
-var i = n(17928),
+var i = n(855986),
     r = n(73153);
 let a = {};
 function s(e) {
@@ -23,3 +22,4 @@ class l extends i.Ay.PersistedStore {
     }
 }
 let o = new l(r.h, { VOICE_CATEGORY_COLLAPSE: s, VOICE_CATEGORY_EXPAND: s });
+n.d(t, {}, { A: o });

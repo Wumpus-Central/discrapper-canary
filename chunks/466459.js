@@ -1,8 +1,7 @@
-n.d(e, { h: () => u, o: () => c });
 var a = n(588234),
     i = n.n(a),
     r = n(575593),
-    l = n(17928),
+    l = n(855986),
     s = n(4227);
 function c(t, e) {
     let n = null != t.getPurchase(e.skuId),
@@ -23,6 +22,13 @@ function c(t, e) {
             return { isPurchased: n, isPartiallyOwnedBundle: !1, isPartiallyOwnedVariantsGroup: !1 };
     }
 }
-function u(t) {
-    return (0, l.cf)([s.A], () => c(s.A, t));
-}
+n.d(
+    e,
+    {},
+    {
+        h: function (t) {
+            return (0, l.cf)([s.A], () => c(s.A, t));
+        },
+        o: c,
+    },
+);

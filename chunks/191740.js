@@ -1,8 +1,1 @@
-_.exports = {
-    Vg: "grid__00a81",
-    Os: "group__00a81",
-    Mc: "tensDigit__00a81",
-    U2: "digit__00a81",
-    kx: "colon__00a81",
-    YY: "colon-tick__00a81",
-};
+a.exports = { Vg: "grid_UX6Pd6", Os: "group_UX6Pd6", Mc: "tensDigit_UX6Pd6", U2: "digit_UX6Pd6", kx: "colon_UX6Pd6" };

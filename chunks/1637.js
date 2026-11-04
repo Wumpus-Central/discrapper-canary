@@ -1,10 +1,10 @@
-_.exports = {
-    yn: "gameSection__124b6",
-    r9: "disabled__124b6",
-    Hy: "gameInstanceContainer__124b6",
-    Y_: "gameContainer__124b6",
-    Bq: "maxInstancesWarning__124b6",
-    xQ: "footerContainer__124b6",
-    UW: "warningContainer__124b6",
-    g4: "loadingContainer__124b6",
+e.exports = {
+    yn: "gameSection_P2q002",
+    r9: "disabled_P2q002",
+    Hy: "gameInstanceContainer_P2q002",
+    Y_: "gameContainer_P2q002",
+    Bq: "maxInstancesWarning_P2q002",
+    xQ: "footerContainer_P2q002",
+    UW: "warningContainer_P2q002",
+    g4: "loadingContainer_P2q002",
 };

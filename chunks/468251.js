@@ -1,1 +1,1 @@
-e.exports = { Hc: "formTitle__553e7", aO: "finePrint__553e7" };
+i.exports = { Hc: "formTitle_z5ZLH3", aO: "finePrint_z5ZLH3" };

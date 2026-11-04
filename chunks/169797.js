@@ -1,4 +1,3 @@
-n.d(t, { DJ: () => M, Jg: () => T, KT: () => b, lo: () => R, oH: () => L, s3: () => x });
 var l = n(477900),
     r = n(582128),
     i = n(503698),
@@ -11,12 +10,12 @@ var l = n(477900),
     f = n(430993),
     h = n(632088),
     m = n(500380),
-    p = n(423764),
+    p = n(956956),
     C = n(820287),
     y = n(708791),
     E = n(981036),
     _ = n(725836),
-    g = n(298208),
+    g = n(516106),
     I = n(520149),
     S = n(56763),
     A = n(652215),
@@ -86,7 +85,7 @@ function R(e) {
                 { direction: I ? "vertical" : "horizontal", align: I ? "stretch" : "center", justify: e }
             );
         }, [S, I]),
-        M = S ? (0, l.jsx)(C.A, { onClick: t }) : null;
+        T = S ? (0, l.jsx)(C.A, { onClick: t }) : null;
     return (0, l.jsxs)(u.j, {
         children: [
             (0, l.jsx)("div", { ref: d, className: a()(P.K4, i) }),
@@ -97,20 +96,20 @@ function R(e) {
                 fullWidth: !0,
                 padding: { ...v, bottom: I ? 8 : v.bottom },
                 children: [
-                    I ? null : M,
+                    I ? null : T,
                     I ? (0, l.jsx)(y.rI, {}) : null,
                     p ? (0, l.jsx)(y.Zr, { stripeExpressCheckoutComponent: s, fallbackComponent: m }) : m,
-                    I && null != M ? (0, l.jsx)("div", { className: P.aY, children: M }) : null,
+                    I && null != T ? (0, l.jsx)("div", { className: P.aY, children: T }) : null,
                 ],
             }),
         ],
     });
 }
-function M(e) {
+function T(e) {
     let { className: t } = e;
     return (0, l.jsx)("div", { className: a()(P.g4, t), children: (0, l.jsx)(S.I, {}) });
 }
-function T(e) {
+function M(e) {
     let { children: t, size: n = "md", maxHeight: r = "viewport", isModalContentLoading: i, ...a } = e;
     return (0, l.jsx)(_.e0, {
         children: (0, l.jsx)(o.d, {
@@ -118,41 +117,56 @@ function T(e) {
             ...a,
             maxHeight: r,
             contentOutsideContainer: (0, l.jsx)(h.A, {}),
-            children: i ? (0, l.jsx)(M, {}) : t,
+            children: i ? (0, l.jsx)(T, {}) : t,
         }),
     });
 }
-function b() {
-    return (0, l.jsx)(T, { transitionState: d.ip.ENTERED, onClose: A.tEg, size: "md", isModalContentLoading: !0 });
-}
-function L(e) {
-    let {
-        title: t,
-        gradientColor: n = "purple",
-        countryCode: r,
-        relocationCountryCode: i,
-        headerBadgeText: a,
-        headerBadgeIcon: s,
-        onBackClick: u,
-        primaryButtonProps: c,
-        children: d,
-        ...h
-    } = e;
-    return (0, l.jsx)(_.e0, {
-        children: (0, l.jsxs)(o.d, {
-            ...h,
-            children: [
-                (0, l.jsx)(x, {
-                    gradientColor: n,
-                    title: t,
-                    countryCode: r,
-                    relocationCountryCode: i,
-                    headerBadgeText: a,
-                    headerBadgeIcon: s,
+n.d(
+    t,
+    {},
+    {
+        DJ: T,
+        Jg: M,
+        KT: function () {
+            return (0, l.jsx)(M, {
+                transitionState: d.ip.ENTERED,
+                onClose: A.tEg,
+                size: "md",
+                isModalContentLoading: !0,
+            });
+        },
+        lo: R,
+        oH: function (e) {
+            let {
+                title: t,
+                gradientColor: n = "purple",
+                countryCode: r,
+                relocationCountryCode: i,
+                headerBadgeText: a,
+                headerBadgeIcon: s,
+                onBackClick: u,
+                primaryButtonProps: c,
+                children: d,
+                ...h
+            } = e;
+            return (0, l.jsx)(_.e0, {
+                children: (0, l.jsxs)(o.d, {
+                    ...h,
+                    children: [
+                        (0, l.jsx)(x, {
+                            gradientColor: n,
+                            title: t,
+                            countryCode: r,
+                            relocationCountryCode: i,
+                            headerBadgeText: a,
+                            headerBadgeIcon: s,
+                        }),
+                        (0, l.jsx)(f.c, { children: d }),
+                        (0, l.jsx)(R, { onBackClick: u, primaryButtonProps: c }),
+                    ],
                 }),
-                (0, l.jsx)(f.c, { children: d }),
-                (0, l.jsx)(R, { onBackClick: u, primaryButtonProps: c }),
-            ],
-        }),
-    });
-}
+            });
+        },
+        s3: x,
+    },
+);

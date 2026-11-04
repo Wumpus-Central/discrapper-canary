@@ -1,4 +1,4 @@
-(r.d(e, { f5: () => a }), r(321073));
+r(321073);
 var s = r(582128),
     i = r(575593);
 class f {
@@ -29,14 +29,20 @@ class f {
         }, new Map());
     }
 }
-function a(t) {
-    return s.useMemo(() => {
-        let e;
-        return {
-            firstProfileEffect: (e = new f(t.items)).firstProfileEffect,
-            firstAvatarDecoration: e.firstAvatarDecoration,
-            firstNameplate: e.firstNameplate,
-            firstProfileFrame: e.firstProfileFrame,
-        };
-    }, [t]);
-}
+r.d(
+    e,
+    {},
+    {
+        f5: function (t) {
+            return s.useMemo(() => {
+                let e;
+                return {
+                    firstProfileEffect: (e = new f(t.items)).firstProfileEffect,
+                    firstAvatarDecoration: e.firstAvatarDecoration,
+                    firstNameplate: e.firstNameplate,
+                    firstProfileFrame: e.firstProfileFrame,
+                };
+            }, [t]);
+        },
+    },
+);

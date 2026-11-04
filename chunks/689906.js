@@ -1,43 +1,48 @@
-s.d(E, { A: () => n });
-var _ = s(582128),
-    a = s(512750),
-    t = s(192308),
-    R = s(468689),
-    r = s(568065),
-    c = s(652215);
-function n(e, E) {
-    let s = _.useCallback(
-        (s) => {
-            if ((s.stopPropagation(), E.type !== r.o9.LEVEL))
-                switch (((0, t.closeModal)(r.Fq), E.skuId)) {
-                    case a.SL:
-                        R.A.open(e, c.BEX.TAG, c.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
-                        return;
-                    case a.aN:
-                        R.A.open(e, c.BEX.ROLES, c.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
-                        return;
-                    case a.FB:
-                        R.A.open(
-                            e,
-                            c.BEX.BOOST_PERKS,
-                            c.JJy.GUILD_POWERUPS_OVERVIEW_CARD,
-                            c.nd0.BOOST_PERKS_VANITY_URL,
-                        );
-                        return;
-                    case a.d0:
-                        R.A.open(e, c.BEX.GUILD_THEME, c.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
-                        return;
-                    case a.jF:
-                    case a.OJ:
-                    case a.Ht:
-                    case a.tv:
-                        ((0, t.closeAllModals)(), R.A.open(e, c.BEX.TAG, c.JJy.GUILD_POWERUPS_OVERVIEW_CARD));
-                        return;
-                    default:
-                        return;
-                }
+var t = _(582128),
+    s = _(512750),
+    R = _(192308),
+    a = _(727419),
+    r = _(568065),
+    n = _(652215);
+_.d(
+    E,
+    {},
+    {
+        A: function (e, E) {
+            let _ = t.useCallback(
+                (_) => {
+                    if ((_.stopPropagation(), E.type !== r.o9.LEVEL))
+                        switch (((0, R.Oo)(r.Fq), E.skuId)) {
+                            case s.SL:
+                                a.A.open(e, n.BEX.TAG, n.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
+                                return;
+                            case s.aN:
+                                a.A.open(e, n.BEX.ROLES, n.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
+                                return;
+                            case s.FB:
+                                a.A.open(
+                                    e,
+                                    n.BEX.BOOST_PERKS,
+                                    n.JJy.GUILD_POWERUPS_OVERVIEW_CARD,
+                                    n.nd0.BOOST_PERKS_VANITY_URL,
+                                );
+                                return;
+                            case s.d0:
+                                a.A.open(e, n.BEX.GUILD_THEME, n.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
+                                return;
+                            case s.jF:
+                            case s.OJ:
+                            case s.Ht:
+                            case s.tv:
+                                ((0, R.s7)(), a.A.open(e, n.BEX.TAG, n.JJy.GUILD_POWERUPS_OVERVIEW_CARD));
+                                return;
+                            default:
+                                return;
+                        }
+                },
+                [e, E],
+            );
+            return E.type === r.o9.PERK ? _ : void 0;
         },
-        [e, E],
-    );
-    return E.type === r.o9.PERK ? s : void 0;
-}
+    },
+);

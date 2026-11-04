@@ -1,35 +1,37 @@
-l.d(e, { U: () => r, j: () => p });
-var a = l(582128),
-    u = l(17928),
-    n = l(712440),
-    c = l(733110),
-    i = l(403362);
-function p(t, e) {
-    let { disableFetch: l = !1 } = e ?? {},
-        p = (0, u.yK)([c.default], () => t?.map((t) => c.default.getNewestTokenForApplication(t)).filter(i.Vq) ?? [], [
+var c = n(582128),
+    i = n(855986),
+    l = n(712440),
+    p = n(733110),
+    r = n(403362);
+function a(t, e) {
+    let { disableFetch: n = !1 } = e ?? {},
+        a = (0, i.yK)([p.A], () => t?.map((t) => p.A.getNewestTokenForApplication(t)).filter(r.Vq) ?? [], [t]),
+        o = (0, i.bG)([p.A], () => t?.every((t) => p.A.getFetchStateForApplication(t) === p.FetchState.FETCHED) ?? !1, [
             t,
         ]),
-        r = (0, u.bG)(
-            [c.default],
-            () => t?.every((t) => c.default.getFetchStateForApplication(t) === c.FetchState.FETCHED) ?? !1,
-            [t],
-        ),
-        f = (0, u.yK)(
-            [c.default],
-            () => t?.filter((t) => c.default.getFetchStateForApplication(t) === c.FetchState.NOT_FETCHED) ?? [],
+        u = (0, i.yK)(
+            [p.A],
+            () => t?.filter((t) => p.A.getFetchStateForApplication(t) === p.FetchState.NOT_FETCHED) ?? [],
             [t],
         );
     return (
-        a.useEffect(() => {
-            l || 0 === f.length || n.A.fetch(f);
-        }, [l, f]),
-        { tokens: p, fetched: r }
+        c.useEffect(() => {
+            n || 0 === u.length || l.A.fetch(u);
+        }, [n, u]),
+        { tokens: a, fetched: o }
     );
 }
-function r(t, e) {
-    let { tokens: l, fetched: u } = p(
-        a.useMemo(() => (null != t ? [t] : null), [t]),
-        e,
-    );
-    return { token: l.length > 0 ? l[0] : null, fetched: u };
-}
+n.d(
+    e,
+    {},
+    {
+        U: function (t, e) {
+            let { tokens: n, fetched: i } = a(
+                c.useMemo(() => (null != t ? [t] : null), [t]),
+                e,
+            );
+            return { token: n.length > 0 ? n[0] : null, fetched: i };
+        },
+        j: a,
+    },
+);

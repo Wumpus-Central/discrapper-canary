@@ -1,86 +1,107 @@
-n.d(t, { W: () => f });
 var i = n(830917),
     l = n(858899),
     s = n(157559),
     r = n(554375),
-    a = n(268429),
+    a = n(724165),
     o = n(61310),
-    d = n(73621),
-    c = n(174459),
+    d = n(534606),
+    c = n(129230),
     u = n(690521),
-    m = n(515718),
-    g = n(307731),
-    h = n(652215),
-    x = n(105292),
-    E = n(264572).Buffer;
-function j(e, t, n, i) {
+    m = n(515718);
+n(307731);
+var g = n(652215),
+    h = n(792996),
+    x = n(264572).hp;
+function E(e, t, n, i) {
     return (
-        c.default.track(h.HAw.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, { guild_id: n, file_size: t, upload_id: i }),
+        c.default.track(g.HAw.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, { guild_id: n, file_size: t, upload_id: i }),
         d.o.TOO_BIG
     );
 }
-async function f(e) {
-    let { data: t, file: n, guildId: f, uploadId: N, roles: p, image: A, hideErrorModal: I, analyticsLocation: b } = e,
-        S = a.A.fromBlob(o.f.EMOJI, n),
-        C = u.Ay.sanitizeEmojiName(n.name.split(".")[0]);
-    if (u.Ay.isFileTooBig(n)) {
-        if ("image/gif" === n.type || "image/webp" === n.type || "image/avif" === n.type)
-            return j(n.name, n.size, f, N);
-        else if (null != A) {
-            var _, v;
-            let e;
-            t = (0, i.h_)(A, 128, 128);
-            try {
-                e = u.Ay.isDataTooBig(t);
-            } catch (e) {
-                return j(n.name, n.size, f, N);
+n.d(
+    t,
+    {},
+    {
+        W: async function (e) {
+            let {
+                    data: t,
+                    file: n,
+                    guildId: j,
+                    uploadId: f,
+                    roles: N,
+                    image: p,
+                    hideErrorModal: A,
+                    analyticsLocation: I,
+                } = e,
+                b = a.A.fromBlob(o.f.EMOJI, n),
+                S = u.Ay.sanitizeEmojiName(n.name.split(".")[0]);
+            if (u.Ay.isFileTooBig(n)) {
+                if ("image/gif" === n.type || "image/webp" === n.type || "image/avif" === n.type)
+                    return E(n.name, n.size, j, f);
+                else if (null != p) {
+                    var C, _;
+                    let e;
+                    t = (0, i.h_)(p, 128, 128);
+                    try {
+                        e = u.Ay.isDataTooBig(t);
+                    } catch (e) {
+                        return E(n.name, n.size, j, f);
+                    }
+                    if (
+                        ((C = t),
+                        (_ = e),
+                        c.default.track(g.HAw.EMOJI_FILE_RESIZED, {
+                            is_animated: !1,
+                            file_type: n.type.split("/").pop(),
+                            original_file_size_bytes: n.size,
+                            resized_file_size_bytes: (0, m.EW)(C),
+                            resized_file_too_big: _,
+                        }),
+                        e)
+                    )
+                        return E(n.name, n.size, j, f);
+                }
             }
-            if (
-                ((_ = t),
-                (v = e),
-                c.default.track(h.HAw.EMOJI_FILE_RESIZED, {
-                    is_animated: !1,
-                    file_type: n.type.split("/").pop(),
-                    original_file_size_bytes: n.size,
-                    resized_file_size_bytes: (0, m.EW)(_),
-                    resized_file_too_big: v,
-                }),
-                e)
-            )
-                return j(n.name, n.size, f, N);
-        }
-    }
-    try {
-        let e = await S.getOriginalMd5(),
-            n = await (0, r.Gf)({ guildId: f, image: t, name: C, roles: p, analyticsLocation: b, originalMd5: e });
-        return (
-            c.default.track(h.HAw.EMOJI_UPLOAD_COMPLETED, { guild_id: f, upload_id: N }),
-            (0, l.P0)({ text: x.intl.string(x.t["r0w9m/"]), variant: "success" }),
-            n
-        );
-    } catch (r) {
-        let e,
-            n,
-            { body: i, status: l } = r;
-        return (
-            null != i &&
-                (i.code === h.t02.TOO_MANY_EMOJI
-                    ? ((e = x.intl.string(x.t["jP/Rqm"])), (n = d.o.TOO_MANY_EMOJI))
-                    : i.code === h.t02.TOO_MANY_ANIMATED_EMOJI
-                      ? ((e = x.intl.string(x.t["6v5dP/"])), (n = d.o.TOO_MANY_ANIMATED_EMOJI))
-                      : null != i.image || i.code === h.t02.INVALID_FILE_ASSET_SIZE
-                        ? (c.default.track(h.HAw.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
-                              guild_id: f,
-                              file_size: E.byteLength(t),
-                              upload_id: N,
-                          }),
-                          (e = x.intl.formatToPlainString(x.t.kIO9jy, { maxSize: g.EMOJI_MAX_FILESIZE_KB })),
-                          (n = d.o.TOO_BIG))
-                        : (null != i.image || i.code === h.t02.INVALID_FILE_ASSET_SIZE_RESIZE_ANIMATED) &&
-                          (n = d.o.RESIZE_ANIMATED)),
-            429 === l && ((e = x.intl.string(x.t.Whhv4w)), (n = d.o.RATE_LIMIT)),
-            null == e || I || s.A.show({ title: x.intl.string(x.t.iufib1), body: e }),
-            n
-        );
-    }
-}
+            try {
+                let e = await b.getOriginalMd5(),
+                    n = await (0, r.Gf)({
+                        guildId: j,
+                        image: t,
+                        name: S,
+                        roles: N,
+                        analyticsLocation: I,
+                        originalMd5: e,
+                    });
+                return (
+                    c.default.track(g.HAw.EMOJI_UPLOAD_COMPLETED, { guild_id: j, upload_id: f }),
+                    (0, l.P0)({ text: h.intl.string(h.t["r0w9m/"]), variant: "success" }),
+                    n
+                );
+            } catch (r) {
+                let e,
+                    n,
+                    { body: i, status: l } = r;
+                return (
+                    null != i &&
+                        (i.code === g.t02.TOO_MANY_EMOJI
+                            ? ((e = h.intl.string(h.t["jP/Rqm"])), (n = d.o.TOO_MANY_EMOJI))
+                            : i.code === g.t02.TOO_MANY_ANIMATED_EMOJI
+                              ? ((e = h.intl.string(h.t["6v5dP/"])), (n = d.o.TOO_MANY_ANIMATED_EMOJI))
+                              : null != i.image || i.code === g.t02.INVALID_FILE_ASSET_SIZE
+                                ? (c.default.track(g.HAw.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
+                                      guild_id: j,
+                                      file_size: x.byteLength(t),
+                                      upload_id: f,
+                                  }),
+                                  (e = h.intl.formatToPlainString(h.t.kIO9jy, { maxSize: 256 })),
+                                  (n = d.o.TOO_BIG))
+                                : (null != i.image || i.code === g.t02.INVALID_FILE_ASSET_SIZE_RESIZE_ANIMATED) &&
+                                  (n = d.o.RESIZE_ANIMATED)),
+                    429 === l && ((e = h.intl.string(h.t.Whhv4w)), (n = d.o.RATE_LIMIT)),
+                    null == e || A || s.A.show({ title: h.intl.string(h.t.iufib1), body: e }),
+                    n
+                );
+            }
+        },
+    },
+);

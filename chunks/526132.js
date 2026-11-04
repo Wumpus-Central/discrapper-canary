@@ -1,5 +1,4 @@
-t.d(c, { e: () => r, n: () => a });
-var u = t(17928),
+var u = t(855986),
     e = t(576705),
     i = t(652215);
 function a(n) {
@@ -12,6 +11,13 @@ function a(n) {
         c.can(i.xBc.SEND_MESSAGES, n)
     );
 }
-function r(n) {
-    return (0, u.bG)([e.A], () => a(n, e.A));
-}
+t.d(
+    c,
+    {},
+    {
+        e: function (n) {
+            return (0, u.bG)([e.A], () => a(n, e.A));
+        },
+        n: a,
+    },
+);

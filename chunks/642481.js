@@ -1,15 +1,14 @@
-n.d(t, { A: () => h, j: () => E });
 var a = n(477900),
-    l = n(582128),
-    r = n(503698),
-    s = n.n(r),
-    i = n(273875),
+    r = n(582128),
+    l = n(503698),
+    s = n.n(l),
+    i = n(195118),
     o = n(208756),
-    d = n(798618),
+    d = n(31188),
     c = n(916845),
     u = n(534514),
     f = n(834730),
-    m = n(353795),
+    m = n(566345),
     g = n(239027);
 function p(e) {
     let { title: t, body: n } = e;
@@ -28,7 +27,7 @@ function E(e) {
     let {
             title: t,
             body: n,
-            graphic: r,
+            graphic: l,
             size: u = "md",
             actions: f,
             gradientColor: E,
@@ -43,24 +42,24 @@ function E(e) {
             onNudgeChange: j,
             ...I
         } = e,
-        [y, T] = l.useState(b ?? "top");
-    l.useEffect(() => {
+        [y, T] = r.useState(b ?? "top");
+    r.useEffect(() => {
         null != b && T(b);
     }, [b]);
-    let C = l.useMemo(() => ({ align: x?.align ?? "center", customOffset: x?.customOffset }), [x]),
-        S = l.useCallback(() => {
+    let C = r.useMemo(() => ({ align: x?.align ?? "center", customOffset: x?.customOffset }), [x]),
+        S = r.useCallback(() => {
             h?.();
         }, [h]),
-        D = l.useCallback(
+        D = r.useCallback(
             (e) => {
                 h?.(e);
             },
             [h],
         ),
-        M = l.useCallback((e) => {
+        O = r.useCallback((e) => {
             T(e);
         }, []),
-        O = N ? g.caretHoverable : void 0,
+        M = N ? g.caretHoverable : void 0,
         P = {
             targetElementRef: I.targetElementRef,
             shouldShow: I.shouldShow,
@@ -69,7 +68,7 @@ function E(e) {
             caretConfig: C,
             onRequestClose: S,
             gradientColor: E,
-            onPositionChange: M,
+            onPositionChange: O,
             onNudgeChange: j,
             scrollBehavior: A,
             modal: R,
@@ -86,19 +85,19 @@ function E(e) {
             "data-mana-component": "popover",
             children: [
                 _ && (0, a.jsx)(c.q, { onClick: D, variant: null != E ? "color-mix" : void 0 }),
-                null != r &&
+                null != l &&
                     (0, a.jsx)("div", {
                         className: s()(g.graphic, { [g[`graphic--${u}`]]: null != u }),
                         children: (0, a.jsx)(m.v, {
-                            ...r,
-                            aspectRatio: r.aspectRatio ?? ("sm" === u ? "2/1" : "16/9"),
+                            ...l,
+                            aspectRatio: l.aspectRatio ?? ("sm" === u ? "2/1" : "16/9"),
                         }),
                     }),
                 (0, a.jsx)(p, { title: t, body: n }),
                 null != f && f.length > 0 ? (0, a.jsx)(o.Z, { actions: f, className: g.actionBar }) : null,
-                null != C && (0, a.jsx)(d.F, { className: O }),
+                null != C && (0, a.jsx)(d.F, { className: M }),
             ],
         }),
     });
 }
-let h = E;
+n.d(t, {}, { A: E, j: E });

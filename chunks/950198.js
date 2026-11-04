@@ -1,4 +1,3 @@
-n.d(e, { Jq: () => m, mP: () => d, mw: () => u });
 var a = n(477900);
 n(582128);
 var c = n(503698),
@@ -7,17 +6,6 @@ var c = n(503698),
     r = n(652215),
     t = n(539026);
 function u(s) {
-    return null != s && Object.values(r.fg2).includes(s) ? s : null;
-}
-function d(s) {
-    let { children: e, platformType: n } = s,
-        c = l.A.get(n);
-    return (0, a.jsx)("div", {
-        className: t.uX,
-        children: (0, a.jsxs)("div", { children: [(0, a.jsx)(m, { platform: c }), e] }),
-    });
-}
-function m(s) {
     let { platform: e, className: n } = s;
     return (0, a.jsxs)("div", {
         className: i()(t.ry, n),
@@ -28,3 +16,21 @@ function m(s) {
         ],
     });
 }
+n.d(
+    e,
+    {},
+    {
+        Jq: u,
+        mP: function (s) {
+            let { children: e, platformType: n } = s,
+                c = l.A.get(n);
+            return (0, a.jsx)("div", {
+                className: t.uX,
+                children: (0, a.jsxs)("div", { children: [(0, a.jsx)(u, { platform: c }), e] }),
+            });
+        },
+        mw: function (s) {
+            return null != s && Object.values(r.fg2).includes(s) ? s : null;
+        },
+    },
+);

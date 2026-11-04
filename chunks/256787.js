@@ -1,15 +1,3 @@
-n.d(t, {
-    IL: () => _,
-    Jq: () => A,
-    L0: () => u,
-    PN: () => I,
-    XQ: () => f,
-    Zm: () => E,
-    ef: () => h,
-    ki: () => c,
-    vf: () => p,
-    zd: () => m,
-});
 var i = n(554146);
 let r = [
         i.M.COLLECTIBLES_SHOP_ENTRY_MARKETING,
@@ -121,4 +109,4 @@ function p(e) {
 let m = Object.keys(i.M)
     .map((e) => parseInt(e))
     .filter((e) => !isNaN(e));
-m.filter(A);
+(m.filter(A), n.d(t, {}, { IL: _, Jq: A, L0: u, PN: I, XQ: f, Zm: E, ef: h, ki: c, vf: p, zd: m }));

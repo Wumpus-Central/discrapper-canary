@@ -1,10 +1,10 @@
-b.exports = {
-    Uh: "confirmModal__1b38b",
-    xK: "discordTag__1b38b",
-    jj: "avatarIcon__1b38b",
-    Xh: "username__1b38b",
-    D2: "discriminator__1b38b",
-    nS: "fromToWrapper__1b38b",
-    HT: "from__1b38b",
-    to: "to__1b38b",
+r.exports = {
+    Uh: "confirmModal_ruBjhS",
+    xK: "discordTag_ruBjhS",
+    jj: "avatarIcon_ruBjhS",
+    Xh: "username_ruBjhS",
+    D2: "discriminator_ruBjhS",
+    nS: "fromToWrapper_ruBjhS",
+    HT: "from_ruBjhS",
+    to: "to_ruBjhS",
 };

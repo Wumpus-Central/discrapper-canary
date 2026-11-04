@@ -1,8 +1,8 @@
 e.exports = {
-    Qs: "content__4f9de",
-    DD: "title__4f9de",
-    rf: "body__4f9de",
-    o1: "actions__4f9de",
-    X8: "dismiss__4f9de",
-    Nr: "card__4f9de",
+    Qs: "content_03X6FT",
+    DD: "title_03X6FT",
+    rf: "body_03X6FT",
+    o1: "actions_03X6FT",
+    X8: "dismiss_03X6FT",
+    Nr: "card_03X6FT",
 };

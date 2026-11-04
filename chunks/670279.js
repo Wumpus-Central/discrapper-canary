@@ -1,8 +1,8 @@
 e.exports = {
-    G3: "bodyText__959cb",
-    Hd: "joinOptions__959cb",
-    dZ: "joinOptionTab__959cb",
-    jn: "joinOptionContent__959cb",
-    A_: "uninteractive__959cb",
-    vu: "active__959cb",
+    G3: "bodyText_i0EgQh",
+    Hd: "joinOptions_i0EgQh",
+    dZ: "joinOptionTab_i0EgQh",
+    jn: "joinOptionContent_i0EgQh",
+    A_: "uninteractive_i0EgQh",
+    vu: "active_i0EgQh",
 };

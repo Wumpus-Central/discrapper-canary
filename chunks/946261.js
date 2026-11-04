@@ -1,23 +1,18 @@
-(n.r(t), n.d(t, { WebAudioSound: () => g, playGiftSound: () => I, voiceSinkId: () => f }));
 var i = n(435558),
     r = n.n(i),
     a = n(72978),
     s = n(731738),
-    l = n(807393),
+    l = n(913379),
     o = n(102597),
     d = n(904054),
-    c = n(477653),
+    c = n(718197),
     u = n(723702),
-    _ = n(38405),
+    _ = n(856383),
     E = n(257645);
 let A = "default",
     h = /^( Device)?( \([^()]+\))+$/,
     f = A;
-function I(e, t) {
-    let n = new Audio((0, o.A)(e));
-    ((n.volume = (0, d.A)(t)), n.play());
-}
-async function p() {
+async function I() {
     if (null != window.navigator.mediaDevices)
         try {
             var e, t;
@@ -38,8 +33,7 @@ async function p() {
                 return;
             }
             if (
-                ((d = r()(o).maxBy((e) => (0, a.stringSimilarity)(e.label, l.name))),
-                null == d || 0.6 > (0, a.stringSimilarity)(d.label, l.name))
+                ((d = r()(o).maxBy((e) => (0, a.jM)(e.label, l.name))), null == d || 0.6 > (0, a.jM)(d.label, l.name))
             ) {
                 f = A;
                 return;
@@ -49,15 +43,15 @@ async function p() {
             f = A;
         }
 }
-function m(e, t) {
+function p(e, t) {
     (l.A.increment({ name: s.K.NOTIFICATION_SOUND_PLAYBACK_FAILURE, tags: [`reason:${e}`] }),
         _.A.captureException(t, { tags: { source: "notification_sound_playback" } }));
 }
-function T(e) {
-    m("NotAllowedError" === e.name ? "autoplay_blocked" : "generic", e);
+function m(e) {
+    p("NotAllowedError" === e.name ? "autoplay_blocked" : "generic", e);
 }
-u.isPlatformEmbedded && (c.Ay.addChangeListener(p), p());
-let g = class {
+u.isPlatformEmbedded && (c.Ay.addChangeListener(I), I());
+let T = class {
     name;
     _volume;
     _playbackRate = 1;
@@ -84,7 +78,7 @@ let g = class {
         this.ensureAudio().then((e) => {
             ((e.loop = !0),
                 e.play().catch((e) => {
-                    this.trackNotificationFailure && T(e);
+                    this.trackNotificationFailure && m(e);
                 }));
         });
     }
@@ -92,7 +86,7 @@ let g = class {
         this.ensureAudio().then((e) => {
             ((e.loop = !1),
                 e.play().catch((e) => {
-                    this.trackNotificationFailure && T(e);
+                    this.trackNotificationFailure && m(e);
                 }));
         });
     }
@@ -142,7 +136,7 @@ let g = class {
                                           ? "decode_error"
                                           : "generic",
                                 n = Error(`could not play audio: ${e}`);
-                            (this.trackNotificationFailure && m(e, n), t(n));
+                            (this.trackNotificationFailure && p(e, n), t(n));
                         }),
                         (i.onended = () => this.destroyAudio()),
                         i.load());
@@ -151,3 +145,14 @@ let g = class {
         );
     }
 };
+n.d(
+    t,
+    { B: () => f },
+    {
+        C: function (e, t) {
+            let n = new Audio((0, o.A)(e));
+            ((n.volume = (0, d.A)(t)), n.play());
+        },
+        WebAudioSound: T,
+    },
+);

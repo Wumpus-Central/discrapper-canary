@@ -1,6 +1,9 @@
-n.d(t, {
-    O: () =>
-        function e(t) {
+var i = n(582128);
+n.d(
+    t,
+    {},
+    {
+        O: function e(t) {
             return "string" == typeof t || "number" == typeof t
                 ? t.toString()
                 : t instanceof Array
@@ -9,5 +12,5 @@ n.d(t, {
                     ? e(t.props.children)
                     : void 0;
         },
-});
-var i = n(582128);
+    },
+);

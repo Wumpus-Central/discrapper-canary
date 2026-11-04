@@ -1,1 +1,1 @@
-e.exports = { nM: "row_a8e0bb", _w: "channelCell_a8e0bb", t6: "scoreCell_a8e0bb" };
+e.exports = { nM: "row_urSing", _w: "channelCell_urSing", t6: "scoreCell_urSing" };

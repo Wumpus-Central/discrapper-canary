@@ -1,10 +1,9 @@
 r.exports = {
-    Nb: "featureBorder__65c15",
-    wU: "premiumFeatureBorder__65c15 featureBorder__65c15",
-    rY: "limitedFeatureBorder__65c15 featureBorder__65c15",
-    Tp: "background__65c15",
-    gI: "premiumBackground__65c15 background__65c15",
-    pm: "limitedBackground__65c15 background__65c15",
-    Ef: "newUpsellFeatureBorder__65c15 featureBorder__65c15",
-    st: "newUpsellBackground__65c15 background__65c15",
+    wU: "premiumFeatureBorder_qIotUB featureBorder_qIotUB",
+    rY: "limitedFeatureBorder_qIotUB featureBorder_qIotUB",
+    Tp: "background_qIotUB",
+    gI: "premiumBackground_qIotUB background_qIotUB",
+    pm: "limitedBackground_qIotUB background_qIotUB",
+    Ef: "newUpsellFeatureBorder_qIotUB featureBorder_qIotUB",
+    st: "newUpsellBackground_qIotUB background_qIotUB",
 };

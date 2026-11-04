@@ -1,8 +1,7 @@
-n.d(t, { A: () => u });
 var l = n(477900),
     r = n(582128),
     i = n(130147),
-    a = n(344346),
+    a = n(872200),
     s = n(309239);
 let u = r.memo(function (e) {
     let { user: t, guildId: n, nameplate: r, isHighlighted: u, size: c = "default" } = e,
@@ -32,3 +31,4 @@ let u = r.memo(function (e) {
         }),
     });
 });
+n.d(t, {}, { A: u });

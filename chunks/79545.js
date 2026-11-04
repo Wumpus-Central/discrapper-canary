@@ -1,8 +1,7 @@
-n.d(t, { P0: () => S, Pd: () => c, UA: () => d, V3: () => E, cc: () => _, wX: () => f });
 var l,
     i,
     r = n(412703),
-    s = n(77870),
+    s = n(61387),
     a = n(710969),
     o = n(977416),
     u = n(792620),
@@ -15,38 +14,46 @@ var l,
         (l[(l.EXPIRED = 5)] = "EXPIRED"),
         (l[(l.EXPIRED_CLAIMABLE = 6)] = "EXPIRED_CLAIMABLE"),
         (l[(l.EXPIRED_CLAIMED = 7)] = "EXPIRED_CLAIMED"),
-        l);
-function c(e) {
-    let t = e.userStatus?.enrolledAt != null,
-        n = e.userStatus?.completedAt != null,
-        l = e.userStatus?.claimedAt != null,
-        i = (0, s.fc)(e).percentComplete > 0;
-    return (0, o.Ic)(e) ? (l ? 7 : (0, a.if)(e) && n ? 6 : 5) : l ? 4 : t && n ? 3 : t && i ? 2 : +!!t;
-}
-function _(e) {
-    return (0, u.IO)(e) ? r.n.WATCH_VIDEO : Object.values(e.config.taskConfigV2.tasks)[0].type;
-}
-var E =
-    (((i = {})[(i.QUEST_BAR_FOOTER = 1)] = "QUEST_BAR_FOOTER"),
-    (i[(i.QUEST_HOME_TILE_FOOTER = 2)] = "QUEST_HOME_TILE_FOOTER"),
-    (i[(i.QUEST_EMBED = 3)] = "QUEST_EMBED"),
-    (i[(i.ACTIVITY_PANEL = 4)] = "ACTIVITY_PANEL"),
-    (i[(i.VOICE_CALL_HEADER = 5)] = "VOICE_CALL_HEADER"),
-    (i[(i.QUEST_HOME_TILE_V2_FOOTER = 6)] = "QUEST_HOME_TILE_V2_FOOTER"),
-    i);
-function f(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "primary";
-    return 6 === e ? "overlay-primary" : t;
-}
-function S(e) {
-    if (2 === e || 6 === e) return !1;
-    switch (e) {
-        case 1:
-        case 3:
-        case 4:
-        case 5:
-            return !0;
-        default:
-            return !1;
-    }
-}
+        l),
+    c =
+        (((i = {})[(i.QUEST_BAR_FOOTER = 1)] = "QUEST_BAR_FOOTER"),
+        (i[(i.QUEST_HOME_TILE_FOOTER = 2)] = "QUEST_HOME_TILE_FOOTER"),
+        (i[(i.QUEST_EMBED = 3)] = "QUEST_EMBED"),
+        (i[(i.ACTIVITY_PANEL = 4)] = "ACTIVITY_PANEL"),
+        (i[(i.VOICE_CALL_HEADER = 5)] = "VOICE_CALL_HEADER"),
+        (i[(i.QUEST_HOME_TILE_V2_FOOTER = 6)] = "QUEST_HOME_TILE_V2_FOOTER"),
+        i);
+n.d(
+    t,
+    {},
+    {
+        P0: function (e) {
+            if (2 === e || 6 === e) return !1;
+            switch (e) {
+                case 1:
+                case 3:
+                case 4:
+                case 5:
+                    return !0;
+                default:
+                    return !1;
+            }
+        },
+        Pd: function (e) {
+            let t = e.userStatus?.enrolledAt != null,
+                n = e.userStatus?.completedAt != null,
+                l = e.userStatus?.claimedAt != null,
+                i = (0, s.fc)(e).percentComplete > 0;
+            return (0, o.Ic)(e) ? (l ? 7 : (0, a.if)(e) && n ? 6 : 5) : l ? 4 : t && n ? 3 : t && i ? 2 : +!!t;
+        },
+        UA: d,
+        V3: c,
+        cc: function (e) {
+            return (0, u.IO)(e) ? r.n.WATCH_VIDEO : Object.values(e.config.taskConfigV2.tasks)[0].type;
+        },
+        wX: function (e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "primary";
+            return 6 === e ? "overlay-primary" : t;
+        },
+    },
+);

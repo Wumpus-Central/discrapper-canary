@@ -1,0 +1,189 @@
+@use "postcss-pxtorem";
+
+.card_hYPoP0 {
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    height: var(--custom-discover-static-guild-card-card-height);
+    overflow: hidden;
+    position: relative;
+    width: 200px
+}
+
+.card_hYPoP0,
+.iconMask_hYPoP0 {
+    background-color: var(--background-surface-high)
+}
+
+.iconMask_hYPoP0 {
+    padding: 4px
+}
+
+@keyframes placeholderPulse_hYPoP0 {
+    0% {
+        opacity: .6
+    }
+
+    50% {
+        opacity: .8
+    }
+
+    to {
+        opacity: .6
+    }
+}
+
+.cardPlaceholder_hYPoP0 {
+    animation: placeholderPulse_hYPoP0 1.8s ease-in-out infinite
+}
+
+.cardHeader_hYPoP0 {
+    display: block;
+    flex: 0 0 112px;
+    margin-bottom: 28px;
+    overflow: visible;
+    position: relative
+}
+
+.splash_hYPoP0 {
+    display: block;
+    inset-inline-start: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transform: scale(1)
+}
+
+.splash_hYPoP0,
+.splashImage_hYPoP0 {
+    height: 100%;
+    width: 100%
+}
+
+.splashImage_hYPoP0 {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.splashLoaded_hYPoP0 .splash_hYPoP0 {
+    opacity: 1
+}
+
+.guildIcon_hYPoP0 {
+    bottom: -21px;
+    inset-inline-start: 12px;
+    position: absolute
+}
+
+.defaultIcon_hYPoP0 {
+    align-items: center;
+    background-color: var(--brand-500);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+.acronym_hYPoP0 {
+    color: var(--white)
+}
+
+.avatar_hYPoP0 {
+    height: 100%;
+    width: 100%
+}
+
+.guildInfo_hYPoP0 {
+    align-content: stretch;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 0 12px 12px;
+    position: relative
+}
+
+.title_hYPoP0 {
+    align-items: center;
+    display: flex;
+    font-weight: var(--font-weight-semibold);
+    width: 100%
+}
+
+.verifiedIcon_hYPoP0 {
+    flex: 0 0 16px;
+    height: 16px;
+    margin-inline: -2px 4px;
+    width: 16px
+}
+
+.guildName_hYPoP0 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.descriptionContainer_hYPoP0 {
+    flex: 1 1 auto
+}
+
+.description_hYPoP0 {
+    margin: 8px 0;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis
+}
+
+.memberInfo_hYPoP0 {
+    display: flex;
+    flex: 0 0 auto;
+    justify-self: flex-end
+}
+
+.memberCount_hYPoP0 {
+    align-items: center;
+    display: flex;
+    margin-inline-end: 16px
+}
+
+.memberCount_hYPoP0:last-child {
+    margin-inline-end: 0
+}
+
+.memberDot_hYPoP0 {
+    border-radius: 50%;
+    flex-shrink: 0;
+    height: 8px;
+    margin-inline-end: 4px;
+    width: 8px
+}
+
+.dotOnline_hYPoP0 {
+    background-color: var(--green-360)
+}
+
+.dotOffline_hYPoP0 {
+    background-color: var(--text-muted)
+}
+
+.cardDisabled_hYPoP0 {
+    opacity: .4;
+    pointer-events: none
+}
+
+.cardSmall_hYPoP0 {
+    transform: scale(.8)
+}
+
+.theme-dark .card_hYPoP0 {
+    box-shadow: var(--shadow-border), var(--shadow-high)
+}
+
+.theme-dark .iconMask_hYPoP0 {
+    background-color: var(--background-mod-normal)
+}
+
+.theme-light .card_hYPoP0 {
+    box-shadow: var(--legacy-elevation-border), var(--elevation-medium)
+}
+
+/*# sourceMappingURL=fa4ee6f649937a1d.css.map*/

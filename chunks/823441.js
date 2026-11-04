@@ -1,7 +1,6 @@
-n.d(t, { A: () => l, K: () => s });
 var i = n(573648),
-    r = n(395671),
-    a = n(105292);
+    r = n(327891),
+    a = n(792996);
 let s = "twitch:";
 class l extends r.Ay {
     constructor(e) {
@@ -11,3 +10,4 @@ class l extends r.Ay {
         return i.A.get("twitch").icon.lightPNG;
     }
 }
+n.d(t, {}, { A: l, K: s });

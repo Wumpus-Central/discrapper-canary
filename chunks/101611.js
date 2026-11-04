@@ -1,27 +1,33 @@
-(n.d(t, { Lr: () => d, j4: () => c, jY: () => h }), n(938796));
+n(938796);
 var l = n(665260),
-    i = n(702841),
+    i = n(164636),
     r = n(696451),
     s = n(701785),
     a = n(65995),
     o = n(978165),
     u = n(340837);
-function c(e, t) {
-    let n = (0, o.A)(e),
-        l = (0, i.bG)([s.h], () => s.h.getNewMemberActions(e), [e]),
-        r = (0, i.bG)([a.A], () => a.A.getCompletedActions(e));
-    if (!n) return {};
-    let u = l?.findIndex((e) => e.channelId === t.id) ?? 0,
-        c = u >= 0 && null != l ? l[u] : null,
-        d = null != c && r?.[c.channelId] === !0;
-    return { channelAction: c, completed: d };
-}
-function d(e, t) {
-    let n = (0, i.bG)([s.h], () => s.h.getNewMemberActions(e)),
-        l = (0, i.bG)([a.A], () => a.A.getCompletedActions(e));
-    return n?.find((e) => l?.[e.channelId] !== !0 && e.channelId !== t);
-}
-function h(e) {
-    let t = (0, i.bG)([r.Ay], () => r.Ay.getSelfMember(e));
-    return (0, l.Lt)(t?.flags ?? 0, u.D.COMPLETED_HOME_ACTIONS);
-}
+n.d(
+    t,
+    {},
+    {
+        Lr: function (e, t) {
+            let n = (0, i.bG)([s.h], () => s.h.getNewMemberActions(e)),
+                l = (0, i.bG)([a.A], () => a.A.getCompletedActions(e));
+            return n?.find((e) => l?.[e.channelId] !== !0 && e.channelId !== t);
+        },
+        j4: function (e, t) {
+            let n = (0, o.A)(e),
+                l = (0, i.bG)([s.h], () => s.h.getNewMemberActions(e), [e]),
+                r = (0, i.bG)([a.A], () => a.A.getCompletedActions(e));
+            if (!n) return {};
+            let u = l?.findIndex((e) => e.channelId === t.id) ?? 0,
+                c = u >= 0 && null != l ? l[u] : null,
+                d = null != c && r?.[c.channelId] === !0;
+            return { channelAction: c, completed: d };
+        },
+        jY: function (e) {
+            let t = (0, i.bG)([r.Ay], () => r.Ay.getSelfMember(e));
+            return (0, l.Lt)(t?.flags ?? 0, u.D.COMPLETED_HOME_ACTIONS);
+        },
+    },
+);

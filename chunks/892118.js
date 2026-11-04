@@ -1,10 +1,6 @@
-n.d(t, { A: () => s, s: () => a });
 var i = n(575593),
     r = n(338535);
-function a(e) {
-    return e instanceof s;
-}
-class s extends r.A {
+class a extends r.A {
     label;
     layers;
     innerWidth;
@@ -22,10 +18,10 @@ class s extends r.A {
             (this.overflowHorizontal = e.overflowHorizontal));
     }
     static fromServer(e) {
-        let { inner_width: t, overflow_top: n, overflow_bottom: i, overflow_horizontal: r, ...a } = e;
-        return new s({
-            ...super.fromServer(a),
-            ...a,
+        let { inner_width: t, overflow_top: n, overflow_bottom: i, overflow_horizontal: r, ...s } = e;
+        return new a({
+            ...super.fromServer(s),
+            ...s,
             innerWidth: t,
             overflowTop: n,
             overflowBottom: i,
@@ -33,3 +29,13 @@ class s extends r.A {
         });
     }
 }
+n.d(
+    t,
+    {},
+    {
+        A: a,
+        s: function (e) {
+            return e instanceof a;
+        },
+    },
+);

@@ -1,0 +1,151 @@
+.details_G4pija {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-20);
+    min-width: 0
+}
+
+.header_G4pija {
+    align-items: center;
+    display: flex
+}
+
+.iconButton_G4pija {
+    border-radius: calc(var(--space-48)/4);
+    cursor: pointer;
+    display: flex;
+    position: relative
+}
+
+.uploadTile_G4pija {
+    align-items: center;
+    background: var(--background-mod-normal);
+    border: 1px solid var(--border-subtle);
+    box-sizing: border-box;
+    color: var(--icon-default);
+    height: var(--space-48);
+    justify-content: center;
+    width: var(--space-48)
+}
+
+.uploadTile_G4pija:focus-visible,
+.uploadTile_G4pija:hover {
+    background: var(--background-mod-strong);
+    color: var(--icon-strong)
+}
+
+.iconImage_G4pija {
+    border-radius: inherit;
+    height: var(--space-48);
+    width: var(--space-48)
+}
+
+.iconOverlay_G4pija {
+    align-items: center;
+    background: var(--background-scrim);
+    border-radius: inherit;
+    color: var(--icon-overlay-light);
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .15s ease-out
+}
+
+.iconButton_G4pija:focus-visible .iconOverlay_G4pija,
+.iconButton_G4pija:hover .iconOverlay_G4pija {
+    opacity: 1
+}
+
+.fileInput_G4pija {
+    display: none
+}
+
+.field_G4pija {
+    gap: var(--space-8)
+}
+
+.field_G4pija,
+.includes_G4pija {
+    display: flex;
+    flex-direction: column;
+    min-width: 0
+}
+
+.includes_G4pija {
+    gap: var(--space-4)
+}
+
+.contentRow_G4pija {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8);
+    min-height: var(--space-40);
+    min-width: 0
+}
+
+.contentIcon_G4pija {
+    color: var(--icon-muted);
+    flex: 0 0 auto
+}
+
+.appChannelsPrivate_G4pija {
+    align-items: center;
+    display: flex;
+    gap: var(--space-12);
+    justify-content: space-between
+}
+
+.sharedWith_G4pija {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.sharedRow_G4pija {
+    align-items: center;
+    display: flex;
+    gap: var(--space-12);
+    min-width: 0
+}
+
+div.guildIcon_G4pija {
+    border-radius: var(--radius-md);
+    flex: 0 0 auto;
+    height: calc(var(--space-32) + var(--space-4));
+    width: calc(var(--space-32) + var(--space-4))
+}
+
+.onlyMeIcon_G4pija {
+    background: var(--background-mod-normal);
+    border-radius: var(--radius-sm);
+    color: var(--icon-default);
+    display: inline-flex;
+    flex: 0 0 auto;
+    padding: var(--space-8)
+}
+
+.rowText_G4pija {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 0
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .iconOverlay_G4pija {
+        transition: none
+    }
+}
+
+.note_dJk4eQ {
+    contain: inline-size
+}
+
+.footerRule_dJk4eQ {
+    border-top: 1px solid var(--border-subtle);
+    margin-bottom: var(--space-8)
+}
+
+/*# sourceMappingURL=a16db831390b57ca.css.map*/

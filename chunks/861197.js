@@ -1,9 +1,8 @@
-n.d(t, { Ay: () => g });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
     a = n.n(s),
-    r = n(364522),
+    r = n(95362),
     o = n(235986),
     c = n(622695);
 class d extends l.PureComponent {
@@ -48,4 +47,4 @@ class m extends l.PureComponent {
         return (0, i.jsx)(o.A, { ...this.props });
     }
 }
-let g = m;
+n.d(t, {}, { Ay: m });

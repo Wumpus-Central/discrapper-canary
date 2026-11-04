@@ -1,2 +1,1 @@
-c.d(s, { B: () => d });
-let d = "OVERLAY_GAMES";
+c.d(s, {}, { B: "OVERLAY_GAMES" });

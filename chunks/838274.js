@@ -1,12 +1,17 @@
-n.d(t, { A: () => a });
 var i = n(582128),
     r = n(73153);
-function a(e) {
-    let { connectedEmbeddedActivity: t } = e,
-        n = t?.applicationId;
-    i.useEffect(() => {
-        null != t &&
-            null != n &&
-            r.h.dispatch({ type: "EMBEDDED_ACTIVITY_OPEN", location: t.location, applicationId: n });
-    }, [n, t]);
-}
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { connectedEmbeddedActivity: t } = e,
+                n = t?.applicationId;
+            i.useEffect(() => {
+                null != t &&
+                    null != n &&
+                    r.h.dispatch({ type: "EMBEDDED_ACTIVITY_OPEN", location: t.location, applicationId: n });
+            }, [n, t]);
+        },
+    },
+);

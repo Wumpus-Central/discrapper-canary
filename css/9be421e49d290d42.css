@@ -1,0 +1,107 @@
+.headerGuildName_d6AM8Z {
+    color: var(--text-strong)
+}
+
+.headerGuildBadge_d6AM8Z {
+    display: inline-block;
+    margin-block: 0;
+    margin-inline: 2px 4px
+}
+
+.flowerStar_d6AM8Z {
+    display: block
+}
+
+.modalContent_d6AM8Z {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.guildIcon_d6AM8Z {
+    margin-bottom: 16px;
+    margin-top: 16px
+}
+
+.header_d6AM8Z {
+    color: var(--text-default);
+    text-align: center
+}
+
+.guildDescription_d6AM8Z {
+    margin-top: 8px;
+    padding: 0 8px;
+    text-align: center
+}
+
+.choiceHeader_d6AM8Z {
+    align-self: flex-start;
+    margin-top: 32px
+}
+
+.options_d6AM8Z {
+    margin-top: 8px;
+    width: 100%
+}
+
+.optionContainer_d6AM8Z {
+    align-items: center;
+    background: var(--background-base-lower);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    padding: 12px
+}
+
+.optionContainer_d6AM8Z:hover {
+    background: var(--background-mod-normal);
+    cursor: pointer
+}
+
+.optionTextContainer_d6AM8Z {
+    flex: 1;
+    margin-inline: 12px 16px
+}
+
+.optionArrow_d6AM8Z {
+    color: var(--text-default)
+}
+
+.channelIcon_d6AM8Z,
+.optionEmoji_d6AM8Z {
+    height: 24px;
+    width: 24px
+}
+
+.channelIcon_d6AM8Z {
+    color: var(--channel-icon)
+}
+
+.channelTitleIcon_d6AM8Z {
+    color: var(--text-default);
+    margin-inline-end: 2px;
+    vertical-align: middle
+}
+
+.channelDescription_d6AM8Z {
+    color: var(--interactive-text-active)
+}
+
+.skip_d6AM8Z {
+    margin-top: 8px
+}
+
+.skipColor_d6AM8Z {
+    color: var(--interactive-text-default)
+}
+
+.skipColor_d6AM8Z:hover {
+    color: var(--interactive-text-hover)
+}
+
+.skipColor_d6AM8Z:active {
+    color: var(--interactive-text-active)
+}
+
+/*# sourceMappingURL=9be421e49d290d42.css.map*/

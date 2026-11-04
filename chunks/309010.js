@@ -3,7 +3,7 @@ n.d(t, { Ay: () => z, cX: () => F });
 var c = n(435558),
     u = n.n(c),
     _ = n(136722),
-    E = n(17928),
+    E = n(855986),
     A = n(506774),
     h = n(73153),
     f = n(717125),
@@ -11,11 +11,11 @@ var c = n(435558),
     p = n(976860),
     m = n(95701),
     T = n(403362),
-    g = n(280450),
+    g = n(46653),
     S = n(734057),
     N = n(808728),
     C = n(71393),
-    O = n(477653),
+    O = n(718197),
     R = n(576705),
     L = n(967198),
     y = n(652215),
@@ -51,7 +51,7 @@ function G() {
 }
 function x(e) {
     if (null != e) {
-        let t = N.Ay.getDefaultChannel(e);
+        let t = N.A.getDefaultChannel(e);
         if (null != t) return t.id;
     }
 }
@@ -145,7 +145,7 @@ class $ extends E.Ay.Store {
                 null != e.selectedChannelIds && (v = { ...e.selectedChannelIds, null: null }));
         }
         (this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type),
-            this.waitFor(g.default, S.A, f.A, N.Ay, C.A, O.Ay, R.A, L.A));
+            this.waitFor(g.default, S.A, f.A, N.A, C.A, O.Ay, R.A, L.A));
     }
     getChannelId(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],

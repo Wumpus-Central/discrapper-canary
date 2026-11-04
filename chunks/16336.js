@@ -1,6 +1,5 @@
 var r;
-(Object.defineProperty(t, "__esModule", { value: !0 }),
-    ((r = t.Key || (t.Key = {})).Unidentified = "Unidentified"),
+(((r = t.U || (t.U = {})).Unidentified = "Unidentified"),
     (r.Alt = "Alt"),
     (r.AltGraph = "AltGraph"),
     (r.CapsLock = "CapsLock"),

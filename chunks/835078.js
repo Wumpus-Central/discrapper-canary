@@ -1,9 +1,9 @@
-e.exports = {
-    pc: "navItem__4ccc5",
-    St: "navItemIconBadgeContainer__4ccc5",
-    vT: "animatedHalfPillContainer__4ccc5",
-    s: "tivNavItemIconContainer__4ccc5",
-    lJ: "tivNavItemIconContainerSelected__4ccc5",
-    Yc: "tivChannelTypeIcon__4ccc5",
-    R: "hidden__4ccc5",
+t.exports = {
+    pc: "navItem_zP0tg_",
+    St: "navItemIconBadgeContainer_zP0tg_",
+    vT: "animatedHalfPillContainer_zP0tg_",
+    s: "tivNavItemIconContainer_zP0tg_",
+    lJ: "tivNavItemIconContainerSelected_zP0tg_",
+    Yc: "tivChannelTypeIcon_zP0tg_",
+    R: "hidden_zP0tg_",
 };

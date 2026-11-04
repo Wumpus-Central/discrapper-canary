@@ -1,10 +1,10 @@
 e.exports = {
-    iE: "wrapper__7eee5",
-    Qs: "content__7eee5",
-    qW: "countdown__7eee5",
-    wx: "header__7eee5",
-    rf: "body__7eee5",
-    ne: "controls__7eee5",
-    FG: "overlayControls__7eee5",
-    RP: "exiting__7eee5",
+    iE: "wrapper_dfLAdA",
+    Qs: "content_dfLAdA",
+    qW: "countdown_dfLAdA",
+    wx: "header_dfLAdA",
+    rf: "body_dfLAdA",
+    ne: "controls_dfLAdA",
+    FG: "overlayControls_dfLAdA",
+    RP: "exiting_dfLAdA",
 };

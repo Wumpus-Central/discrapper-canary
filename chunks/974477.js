@@ -1,2 +1,1 @@
-n.d(t, { Y: () => i });
-let i = { hasDetectedGame: !1 };
+n.d(t, {}, { Y: { hasDetectedGame: !1 } });

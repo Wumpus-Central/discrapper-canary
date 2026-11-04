@@ -1,4 +1,3 @@
-n.d(t, { Ay: () => l, Zb: () => s });
 var i = n(600975),
     r = n(688151);
 let a = (0, i.C)({
@@ -9,8 +8,14 @@ let a = (0, i.C)({
     defaultConfig: { enabled: !1 },
     treatments: [{ id: 1, label: "Show past VC activity messages in system channel", config: { enabled: !0 } }],
 });
-function s(e, t) {
-    let { enabled: n } = a.useExperiment({ guildId: e, location: t }, { autoTrackExposure: !0 });
-    return n;
-}
-let l = a;
+n.d(
+    t,
+    {},
+    {
+        Ay: a,
+        Zb: function (e, t) {
+            let { enabled: n } = a.useExperiment({ guildId: e, location: t }, { autoTrackExposure: !0 });
+            return n;
+        },
+    },
+);

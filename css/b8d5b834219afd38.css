@@ -1,0 +1,81 @@
+.container_NkbMg8 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 300px
+}
+
+.title_NkbMg8 {
+    margin-bottom: var(--space-8)
+}
+
+.roleTip_NkbMg8,
+.subtitle_NkbMg8,
+.title_NkbMg8 {
+    text-align: center
+}
+
+.roleTip_NkbMg8 {
+    margin-top: 4px
+}
+
+.header_JG2DGL {
+    align-items: center;
+    background-color: unset;
+    box-shadow: none;
+    display: flex;
+    padding-bottom: 8px
+}
+
+.content_JG2DGL {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 16px;
+    padding-top: 8px
+}
+
+.icon_JG2DGL {
+    color: var(--icon-muted);
+    inset-inline-end: var(--space-24);
+    margin-inline-end: 8px
+}
+
+.divider_JG2DGL {
+    color: var(--border-subtle);
+    margin: 0 16px
+}
+
+.iconButton_JG2DGL {
+    inset-inline-end: 16px;
+    position: absolute
+}
+
+.iconButton_JG2DGL .icon_JG2DGL {
+    margin: 0
+}
+
+.iconButton_JG2DGL:hover {
+    cursor: pointer
+}
+
+.iconButton_JG2DGL:hover .icon_JG2DGL {
+    color: var(--interactive-text-active)
+}
+
+.enable-forced-colors .iconButton_JG2DGL {
+    background-color: ButtonFace;
+    border: 1px solid ButtonFace
+}
+
+.enable-forced-colors .iconButton_JG2DGL .icon_JG2DGL {
+    color: ButtonText
+}
+
+.enable-forced-colors .iconButton_JG2DGL:focus,
+.enable-forced-colors .iconButton_JG2DGL:hover {
+    border-color: ButtonText
+}
+
+/*# sourceMappingURL=b8d5b834219afd38.css.map*/

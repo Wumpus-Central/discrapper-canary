@@ -1,14 +1,14 @@
-(n.d(t, { NM: () => h, PQ: () => N, TX: () => p, WR: () => g, Zy: () => f, lc: () => I, u2: () => T }), n(321073));
+n(321073);
 var i = n(811315),
     r = n.n(i),
     a = n(166929),
     s = n(652896),
     l = n(929921),
     o = n(616356),
-    d = n(763827),
-    c = n(728557),
-    u = n(174459),
-    _ = n(738935),
+    d = n(495867),
+    c = n(753181),
+    u = n(129230),
+    _ = n(419490),
     E = n(696016),
     A = n(652215);
 function h(e) {
@@ -34,26 +34,9 @@ function f(e) {
     };
 }
 function I() {
-    return { clip_runtime: E.sT, current_clip_session_id: _.Ay.getActiveClipsSession()?.id };
+    return { clip_runtime: "v3", current_clip_session_id: _.Ay.getActiveClipsSession()?.id };
 }
-function p(e) {
-    let t = o.A.getCurrentUserActiveStream(),
-        n = null != t ? c.A.getRTCConnection((0, s._z)(t)) : null;
-    return {
-        ...f(e),
-        ...I(),
-        rtc_connection_id: n?.getRTCConnectionId(),
-        media_session_id: n?.getMediaSessionId(),
-        parent_media_session_id: d.A.getMediaSessionId(),
-        guild_id: e.guildId,
-        channel_id: e.channelId,
-        application_id: e.applicationId,
-        application_name: e.applicationName,
-        clip_uuid: e.id,
-        clip_event_timeline_size: e.timeline.length,
-    };
-}
-function m(e, t) {
+function p(e, t) {
     let n = new Map();
     for (let e in t.framesEncodedByEncoder) {
         let i = t.framesEncodedByEncoder[e],
@@ -99,53 +82,80 @@ function m(e, t) {
         saved_at: t.savedAt,
     };
 }
-function T(e, t, n, i) {
-    let r = m(e, t);
-    return (
-        (r.clip_save_time_ms = t.clipSaveTimeMs),
-        (r.clip_size_bytes = t.clipSizeBytes),
-        (r.clip_signal_types = (function (e) {
-            let t = [];
-            for (let n of e.timeline)
-                switch (n.signal.type) {
-                    case E.Gy.MANUAL:
-                        t.push("manual");
-                        break;
-                    case E.Gy.DISTRIBUTED:
-                        t.push("distributed");
-                        break;
-                    case E.Gy.LAUGHTER:
-                        t.push("laughter");
-                        break;
-                    case E.Gy.SHOUTING:
-                        t.push("shouting");
-                        break;
-                    case E.Gy.GAME_EVENT:
-                        t.push(`game_event:${n.signal.eventType}`);
-                }
-            return t;
-        })(n)),
-        null != i && Object.assign(r, i),
-        r
-    );
-}
-function g(e, t) {
-    let n = m(e, t);
-    return ((n.error_at = t.errorAt), (n.error_message = t.errorMessage), n);
-}
-function S(e, t) {
+function m(e, t) {
     if (null != t && !r()(t, e)) return t;
 }
-function N(e, t) {
-    let n = {
-        is_favorite: S(e.isFavorite, t.isFavorite),
-        title_length: S(e.name, t.name)?.length,
-        edit_start_time: S(e.editMetadata?.start, t.editMetadata?.start),
-        edit_end_time: S(e.editMetadata?.end, t.editMetadata?.end),
-        application_audio_enabled: S(e.editMetadata?.applicationAudio, t.editMetadata?.applicationAudio),
-        voice_audio_enabled: S(e.editMetadata?.voiceAudio, t.editMetadata?.voiceAudio),
-        soundboard_audio_enabled: S(e.editMetadata?.soundboardAudio, t.editMetadata?.soundboardAudio),
-        crop: S(e.editMetadata?.crop?.preset, t.editMetadata?.crop?.preset),
-    };
-    Object.values(n).every((e) => null == e) || u.default.track(A.HAw.CLIP_EDITED, { ...I(), clip_uuid: e.id, ...n });
-}
+n.d(
+    t,
+    {},
+    {
+        NM: h,
+        PQ: function (e, t) {
+            let n = {
+                is_favorite: m(e.isFavorite, t.isFavorite),
+                title_length: m(e.name, t.name)?.length,
+                edit_start_time: m(e.editMetadata?.start, t.editMetadata?.start),
+                edit_end_time: m(e.editMetadata?.end, t.editMetadata?.end),
+                application_audio_enabled: m(e.editMetadata?.applicationAudio, t.editMetadata?.applicationAudio),
+                voice_audio_enabled: m(e.editMetadata?.voiceAudio, t.editMetadata?.voiceAudio),
+                soundboard_audio_enabled: m(e.editMetadata?.soundboardAudio, t.editMetadata?.soundboardAudio),
+                crop: m(e.editMetadata?.crop?.preset, t.editMetadata?.crop?.preset),
+            };
+            Object.values(n).every((e) => null == e) ||
+                u.default.track(A.HAw.CLIP_EDITED, { ...I(), clip_uuid: e.id, ...n });
+        },
+        TX: function (e) {
+            let t = o.A.getCurrentUserActiveStream(),
+                n = null != t ? c.A.getRTCConnection((0, s._z)(t)) : null;
+            return {
+                ...f(e),
+                ...I(),
+                rtc_connection_id: n?.getRTCConnectionId(),
+                media_session_id: n?.getMediaSessionId(),
+                parent_media_session_id: d.A.getMediaSessionId(),
+                guild_id: e.guildId,
+                channel_id: e.channelId,
+                application_id: e.applicationId,
+                application_name: e.applicationName,
+                clip_uuid: e.id,
+                clip_event_timeline_size: e.timeline.length,
+            };
+        },
+        WR: function (e, t) {
+            let n = p(e, t);
+            return ((n.error_at = t.errorAt), (n.error_message = t.errorMessage), n);
+        },
+        Zy: f,
+        lc: I,
+        u2: function (e, t, n, i) {
+            let r = p(e, t);
+            return (
+                (r.clip_save_time_ms = t.clipSaveTimeMs),
+                (r.clip_size_bytes = t.clipSizeBytes),
+                (r.clip_signal_types = (function (e) {
+                    let t = [];
+                    for (let n of e.timeline)
+                        switch (n.signal.type) {
+                            case E.Gy.MANUAL:
+                                t.push("manual");
+                                break;
+                            case E.Gy.DISTRIBUTED:
+                                t.push("distributed");
+                                break;
+                            case E.Gy.LAUGHTER:
+                                t.push("laughter");
+                                break;
+                            case E.Gy.SHOUTING:
+                                t.push("shouting");
+                                break;
+                            case E.Gy.GAME_EVENT:
+                                t.push(`game_event:${n.signal.eventType}`);
+                        }
+                    return t;
+                })(n)),
+                null != i && Object.assign(r, i),
+                r
+            );
+        },
+    },
+);

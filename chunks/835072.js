@@ -1,4 +1,3 @@
-e.d(l, { A: () => N, f: () => T });
 var n = e(477900);
 e(582128);
 var a = e(350835),
@@ -31,28 +30,35 @@ function T(t) {
                   ? o.GameControllerIcon
                   : null;
 }
-function N(t) {
-    let {
-            activity: l,
-            textVariant: e,
-            textClassName: a,
-            iconClassName: i,
-            hideIcon: o = !1,
-            hideText: r = !1,
-            hideTooltip: s = !1,
-            canTruncate: u = !0,
-        } = t,
-        { text: p, tooltip: c } = (0, A.A)(l, !0),
-        d = T(l),
-        N = null != d && !o;
-    return (0, n.jsx)(x.A, {
-        icon: N ? (0, n.jsx)(m.A, { icon: d, className: i }) : void 0,
-        text: p ?? "",
-        textVariant: e,
-        textClassName: a,
-        hideTooltip: s,
-        canTruncate: u,
-        "aria-label": c ?? "",
-        hideText: r,
-    });
-}
+e.d(
+    l,
+    {},
+    {
+        A: function (t) {
+            let {
+                    activity: l,
+                    textVariant: e,
+                    textClassName: a,
+                    iconClassName: i,
+                    hideIcon: o = !1,
+                    hideText: r = !1,
+                    hideTooltip: s = !1,
+                    canTruncate: u = !0,
+                } = t,
+                { text: p, tooltip: c } = (0, A.A)(l, !0),
+                d = T(l),
+                N = null != d && !o;
+            return (0, n.jsx)(x.A, {
+                icon: N ? (0, n.jsx)(m.A, { icon: d, className: i }) : void 0,
+                text: p ?? "",
+                textVariant: e,
+                textClassName: a,
+                hideTooltip: s,
+                canTruncate: u,
+                "aria-label": c ?? "",
+                hideText: r,
+            });
+        },
+        f: T,
+    },
+);

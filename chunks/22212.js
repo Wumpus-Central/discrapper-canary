@@ -1,35 +1,40 @@
-n.d(t, { Cf: () => a, Jo: () => u, WD: () => c, X9: () => o, Yq: () => _, lP: () => d, xF: () => l });
-var i = n(174459),
+var i = n(129230),
     s = n(652215);
 function r(e) {
     let { targetUserId: t, tab: n, actionType: r } = e;
     i.default.track(s.HAw.FRIENDS_LIST_ITEM_ACTION, { target_user_id: t, tab: n, action_type: r });
 }
-function l(e) {
-    let { targetUserId: t, tab: n } = e;
-    r({ targetUserId: t, tab: n, actionType: "row_clicked" });
-}
-function c(e) {
-    let { targetUserId: t, tab: n } = e;
-    r({ targetUserId: t, tab: n, actionType: "message_clicked" });
-}
-function a(e) {
-    let { targetUserId: t, tab: n } = e;
-    r({ targetUserId: t, tab: n, actionType: "video_call_clicked" });
-}
-function o(e) {
-    let { targetUserId: t, tab: n } = e;
-    r({ targetUserId: t, tab: n, actionType: "voice_call_clicked" });
-}
-function d(e) {
-    let { targetUserId: t, tab: n } = e;
-    r({ targetUserId: t, tab: n, actionType: "remove_friend_clicked" });
-}
-function u(e) {
-    let { targetUserId: t, tab: n } = e;
-    r({ targetUserId: t, tab: n, actionType: "context_menu_interacted" });
-}
-function _(e) {
-    let { analyticsLocation: t, noteLength: n } = e;
-    i.default.track(s.HAw.FRIEND_REQUEST_NOTE_VIEWED, { location: t, note_length: n });
-}
+n.d(
+    t,
+    {},
+    {
+        Cf: function (e) {
+            let { targetUserId: t, tab: n } = e;
+            r({ targetUserId: t, tab: n, actionType: "video_call_clicked" });
+        },
+        Jo: function (e) {
+            let { targetUserId: t, tab: n } = e;
+            r({ targetUserId: t, tab: n, actionType: "context_menu_interacted" });
+        },
+        WD: function (e) {
+            let { targetUserId: t, tab: n } = e;
+            r({ targetUserId: t, tab: n, actionType: "message_clicked" });
+        },
+        X9: function (e) {
+            let { targetUserId: t, tab: n } = e;
+            r({ targetUserId: t, tab: n, actionType: "voice_call_clicked" });
+        },
+        Yq: function (e) {
+            let { analyticsLocation: t, noteLength: n } = e;
+            i.default.track(s.HAw.FRIEND_REQUEST_NOTE_VIEWED, { location: t, note_length: n });
+        },
+        lP: function (e) {
+            let { targetUserId: t, tab: n } = e;
+            r({ targetUserId: t, tab: n, actionType: "remove_friend_clicked" });
+        },
+        xF: function (e) {
+            let { targetUserId: t, tab: n } = e;
+            r({ targetUserId: t, tab: n, actionType: "row_clicked" });
+        },
+    },
+);

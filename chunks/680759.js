@@ -1,1 +1,1 @@
-e.exports = { g: "serverCard__49af9", $: "warning__49af9" };
+e.exports = { g: "serverCard_n_t6j4", $: "warning_n_t6j4" };

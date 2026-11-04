@@ -1,7 +1,6 @@
 var n, i, o, a;
 let s;
-(r.d(t, { O0: () => i, f$: () => n }),
-    ((o = n || (n = {})).symbol = Symbol.for("protobuf-ts/unknown")),
+(((o = n || (n = {})).symbol = Symbol.for("protobuf-ts/unknown")),
     (o.onRead = (e, t, r, n, i) => {
         (s(t) ? t[o.symbol] : (t[o.symbol] = [])).push({ no: r, wireType: n, data: i });
     }),
@@ -22,4 +21,5 @@ let s;
     (a[(a.LengthDelimited = 2)] = "LengthDelimited"),
     (a[(a.StartGroup = 3)] = "StartGroup"),
     (a[(a.EndGroup = 4)] = "EndGroup"),
-    (a[(a.Bit32 = 5)] = "Bit32"));
+    (a[(a.Bit32 = 5)] = "Bit32"),
+    r.d(t, { O0: () => i, f$: () => n }));

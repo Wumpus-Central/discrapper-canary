@@ -1,9 +1,9 @@
-(n.d(t, { CI: () => S, XM: () => I, e0: () => g, fK: () => m, s: () => T, tu: () => p }), n(938796), n(321073));
+(n(938796), n(321073));
 var i = n(477900),
     r = n(477782),
     a = n(192308),
     s = n(465532),
-    l = n(148494),
+    l = n(138399),
     o = n(626584),
     d = n(151282),
     c = n(859403),
@@ -12,63 +12,8 @@ var i = n(477900),
     E = n(896455),
     A = n(23395),
     h = n(381941),
-    f = n(105292);
-async function I(e) {
-    let { scheduledMessageId: t, content: n, flags: i } = e;
-    try {
-        (await (0, d.Eg)({ scheduledMessageId: t, content: n, flags: i }), (0, c.kb)());
-    } catch (e) {
-        (0, c.xP)(e.message);
-    }
-}
-async function p(e) {
-    try {
-        (await (0, d.mk)(e), (0, c.Re)());
-    } catch (e) {
-        (0, c.kM)(e.message);
-    }
-}
-async function m(e) {
-    try {
-        (await (0, d.fK)(e), (0, c.Ki)());
-    } catch (e) {
-        (0, c.Do)(e.message);
-    }
-}
-function T(e) {
-    let { channel: t } = e,
-        n = (0, _.FF)().map((e) =>
-            (0, i.jsx)(
-                r.Dr,
-                {
-                    id: e.label,
-                    label: e.label,
-                    action: () => s.A.changeScheduledMessage(t.id, { scheduledTimestamp: e.value.toISOString() }),
-                },
-                e.label,
-            ),
-        );
-    return (
-        n.push(
-            (0, i.jsxs)(i.Fragment, {
-                children: [
-                    (0, i.jsx)(r.bX, {}),
-                    (0, i.jsx)(
-                        r.Dr,
-                        {
-                            id: "custom-time",
-                            label: f.intl.string(f.t.stHooC),
-                            action: () => g({ channel: t, entryPoint: u.t.ATTACH_MENU }),
-                        },
-                        "custom-time",
-                    ),
-                ],
-            }),
-        ),
-        n
-    );
-}
-function g(e) {
+    f = n(792996);
+function I(e) {
     let {
         channel: t,
         defaultValue: r = (0, _.US)(),
@@ -86,7 +31,7 @@ function g(e) {
                   l.A.sendMessage(t.id, s, void 0, { scheduledTimestamp: e, location: h.Hx.APP_COMMAND });
               }
             : void 0);
-    (0, a.openModalLazy)(
+    (0, a.mM)(
         async () => {
             let { default: e } = await Promise.resolve().then(n.bind(n, 896455));
             return (n) => (0, i.jsx)(e, { ...n, channel: t, defaultValue: r, onSubmit: A, onClear: d });
@@ -94,15 +39,78 @@ function g(e) {
         { modalKey: E.t },
     );
 }
-function S(e) {
-    let { scheduledMessage: t } = e;
-    ((0, _.q8)({ entryPoint: u.t.INBOX, isEditing: !0, channelId: t.createArgs.channelId }),
-        (0, a.openModalLazy)(
-            async () => {
-                let { default: e } = await Promise.resolve().then(n.bind(n, 23395));
-                return (n) => (0, i.jsx)(e, { ...n, scheduledMessage: t });
+(new o.A("Scheduled Messages"),
+    n.d(
+        t,
+        {},
+        {
+            CI: function (e) {
+                let { scheduledMessage: t } = e;
+                ((0, _.q8)({ entryPoint: u.t.INBOX, isEditing: !0, channelId: t.createArgs.channelId }),
+                    (0, a.mM)(
+                        async () => {
+                            let { default: e } = await Promise.resolve().then(n.bind(n, 23395));
+                            return (n) => (0, i.jsx)(e, { ...n, scheduledMessage: t });
+                        },
+                        { modalKey: A.B },
+                    ));
             },
-            { modalKey: A.B },
-        ));
-}
-new o.A("Scheduled Messages");
+            XM: async function (e) {
+                let { scheduledMessageId: t, content: n, flags: i } = e;
+                try {
+                    (await (0, d.Eg)({ scheduledMessageId: t, content: n, flags: i }), (0, c.kb)());
+                } catch (e) {
+                    (0, c.xP)(e.message);
+                }
+            },
+            e0: I,
+            fK: async function (e) {
+                try {
+                    (await (0, d.fK)(e), (0, c.Ki)());
+                } catch (e) {
+                    (0, c.Do)(e.message);
+                }
+            },
+            s: function (e) {
+                let { channel: t } = e,
+                    n = (0, _.FF)().map((e) =>
+                        (0, i.jsx)(
+                            r.Dr,
+                            {
+                                id: e.label,
+                                label: e.label,
+                                action: () =>
+                                    s.A.changeScheduledMessage(t.id, { scheduledTimestamp: e.value.toISOString() }),
+                            },
+                            e.label,
+                        ),
+                    );
+                return (
+                    n.push(
+                        (0, i.jsxs)(i.Fragment, {
+                            children: [
+                                (0, i.jsx)(r.bX, {}),
+                                (0, i.jsx)(
+                                    r.Dr,
+                                    {
+                                        id: "custom-time",
+                                        label: f.intl.string(f.t.stHooC),
+                                        action: () => I({ channel: t, entryPoint: u.t.ATTACH_MENU }),
+                                    },
+                                    "custom-time",
+                                ),
+                            ],
+                        }),
+                    ),
+                    n
+                );
+            },
+            tu: async function (e) {
+                try {
+                    (await (0, d.mk)(e), (0, c.Re)());
+                } catch (e) {
+                    (0, c.kM)(e.message);
+                }
+            },
+        },
+    ));

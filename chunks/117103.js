@@ -1,4 +1,4 @@
-(i.r(t), i.d(t, { default: () => tm }));
+i.r(t);
 var n,
     r,
     o,
@@ -807,7 +807,7 @@ var n,
                         },
                         r = -1,
                         o = e ? e.length : 0;
-                    if ("number" == typeof o && o > -1 && o <= 0x1fffffffffffff) for (; ++r < o;) n(e[r], r, e);
+                    if ("number" == typeof o && o > -1 && o <= 0x1fffffffffffff) for (; ++r < o;) n(e[r], r);
                     else h(e, n);
                     return i;
                 }
@@ -3290,7 +3290,7 @@ var n,
                             s = this.getListenersAsObject(e);
                         for (o in s)
                             if (s.hasOwnProperty(o))
-                                for (r = 0, i = s[o].slice(0); r < i.length; r++)
+                                for (i = s[o].slice(0), r = 0; r < i.length; r++)
                                     (!0 === (n = i[r]).once && this.removeListener(e, n.listener),
                                         n.listener.apply(this, t || []) === this._getOnceReturnValue() &&
                                             this.removeListener(e, n.listener));
@@ -5119,7 +5119,7 @@ ${JSON.stringify(this.configuration, null, 2)}`));
                                 s = this.getWildcardCallbacks(e);
                             if (o) for (t = 0, i = (n = o.slice()).length; t < i && n[t]; ++t) n[t].apply(this, r);
                             if (s)
-                                for (t = 0, i = s.length, i = (n = s.slice()).length; t < i && n[t]; ++t)
+                                for (i = s.length, t = 0, i = (n = s.slice()).length; t < i && n[t]; ++t)
                                     n[t].apply(this, [e].concat(r));
                             return this;
                         }),
@@ -6964,7 +6964,7 @@ ${JSON.stringify(this.configuration, null, 2)}`));
             t.exports = class e {
                 constructor(t, d) {
                     if (((d = a(d)), t instanceof e))
-                        if (!!d.loose === t.loose && !!d.includePrerelease === t.includePrerelease) return t;
+                        if (t.loose === !!d.loose && t.includePrerelease === !!d.includePrerelease) return t;
                         else t = t.version;
                     else if ("string" != typeof t)
                         throw TypeError(`Invalid version. Must be a string. Got type "${typeof t}".`);
@@ -6973,7 +6973,7 @@ ${JSON.stringify(this.configuration, null, 2)}`));
                         (this.options = d),
                         (this.loose = !!d.loose),
                         (this.includePrerelease = !!d.includePrerelease));
-                    const c = t.trim().match(d.loose ? o[s.LOOSE] : o[s.FULL]);
+                    let c = t.trim().match(d.loose ? o[s.LOOSE] : o[s.FULL]);
                     if (!c) throw TypeError(`Invalid Version: ${t}`);
                     if (
                         ((this.raw = t),
@@ -11119,3 +11119,4 @@ let tm = (0, I.t)({
             n.JL.setOptions({ enabled: !1 }));
     },
 })();
+i.d(t, {}, { default: tm });

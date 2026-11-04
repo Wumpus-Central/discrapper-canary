@@ -1,7 +1,7 @@
 e.exports = {
-    PI: "messagePreviewContainer_f96002",
-    kL: "container_f96002",
-    wx: "header_f96002",
-    $r: "attachmentIcon_f96002",
-    hQ: "contentContainer_f96002",
+    PI: "messagePreviewContainer_QOd4rY",
+    kL: "container_QOd4rY",
+    wx: "header_QOd4rY",
+    $r: "attachmentIcon_QOd4rY",
+    hQ: "contentContainer_QOd4rY",
 };

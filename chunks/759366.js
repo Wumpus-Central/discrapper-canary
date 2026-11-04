@@ -1,7 +1,6 @@
-n.d(t, { A: () => d });
-var i = n(17928),
+var i = n(855986),
     r = n(73153),
-    a = n(935208);
+    a = n(811091);
 let s = new Set(),
     l = !1;
 ((s = new Set()), (l = !1));
@@ -28,7 +27,7 @@ let d = new o(r.h, {
                 (s = new Set(
                     Array.from(s)
                         .sort(a.default.compare)
-                        .slice(Math.floor(10))
+                        .slice(10)
                         .map((e) => e.toString()),
                 )),
             s.add(e.questId),
@@ -39,3 +38,4 @@ let d = new o(r.h, {
         return ((l = e.autoEnroll), !0);
     },
 });
+n.d(t, {}, { A: d });

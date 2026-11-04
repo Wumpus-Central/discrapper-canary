@@ -1,4 +1,3 @@
-n.d(t, { k: () => i });
 var r,
     i =
         (((r = {}).FATAL = "fatal"),
@@ -8,3 +7,4 @@ var r,
         (r.INFO = "info"),
         (r.DEBUG = "debug"),
         r);
+n.d(t, {}, { k: i });

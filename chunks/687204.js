@@ -1,12 +1,11 @@
-(Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.TIME_UNITS_PATTERN =
-        t.YEAR_PATTERN =
-        t.NUMBER_PATTERN =
-        t.TIME_UNIT_DICTIONARY =
-        t.INTEGER_WORD_DICTIONARY =
-        t.MONTH_DICTIONARY =
-        t.WEEKDAY_DICTIONARY =
-            void 0),
+((t.TIME_UNITS_PATTERN =
+    t.YEAR_PATTERN =
+    t.NUMBER_PATTERN =
+    t.TIME_UNIT_DICTIONARY =
+    t.V =
+    t.MONTH_DICTIONARY =
+    t.WEEKDAY_DICTIONARY =
+        void 0),
     (t.parseNumberPattern = i),
     (t.parseYear = function (e) {
         if (/v/i.test(e)) return -parseInt(e.replace(/[^0-9]+/gi, ""));
@@ -31,7 +30,7 @@ let n = r(798401),
     a = r(574253);
 function i(e) {
     let r = e.toLowerCase();
-    if (void 0 !== t.INTEGER_WORD_DICTIONARY[r]) return t.INTEGER_WORD_DICTIONARY[r];
+    if (void 0 !== t.V[r]) return t.V[r];
     if ("ein" === r || "einer" === r || "einem" === r || "einen" === r || "eine" === r) return 1;
     if (r.match(/wenigen/)) return 2;
     if (r.match(/halb/) || r.match(/halben/)) return 0.5;
@@ -99,7 +98,7 @@ function i(e) {
         dez: 12,
         "dez.": 12,
     }),
-    (t.INTEGER_WORD_DICTIONARY = {
+    (t.V = {
         eins: 1,
         eine: 1,
         einem: 1,
@@ -151,7 +150,7 @@ function i(e) {
         jahren: "year",
         jahres: "year",
     }),
-    (t.NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.INTEGER_WORD_DICTIONARY)}|[0-9]+|[0-9]+\\.[0-9]+|halb?|halbe?|einigen?|wenigen?|mehreren?)`),
+    (t.NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.V)}|[0-9]+|[0-9]+\\.[0-9]+|halb?|halbe?|einigen?|wenigen?|mehreren?)`),
     (t.YEAR_PATTERN =
         "(?:[0-9]{1,4}(?:\\s*[vn]\\.?\\s*(?:C(?:hr)?|(?:u\\.?|d\\.?(?:\\s*g\\.?)?)?\\s*Z)\\.?|\\s*(?:u\\.?|d\\.?(?:\\s*g\\.)?)\\s*Z\\.?)?)"));
 let s = `(${t.NUMBER_PATTERN})\\s{0,5}(${(0, n.matchAnyPattern)(t.TIME_UNIT_DICTIONARY)})\\s{0,5}`,

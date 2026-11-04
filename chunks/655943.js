@@ -1,7 +1,6 @@
-n.d(e, { A: () => h });
 var i = n(435558),
     l = n.n(i),
-    s = n(17928),
+    s = n(855986),
     r = n(73153),
     a = n(591552),
     d = n(555337),
@@ -78,3 +77,4 @@ let h = new g(r.h, {
         N = e === c.SD.ONBOARDING_ADVANCED;
     },
 });
+n.d(e, {}, { A: h });

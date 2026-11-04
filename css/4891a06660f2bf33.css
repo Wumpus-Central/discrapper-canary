@@ -1,0 +1,141 @@
+.upsellHeader_yLJWMA {
+    gap: 16px
+}
+
+.upsellHeader_yLJWMA,
+.upsellHeaderText_yLJWMA {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.upsellHeaderText_yLJWMA {
+    gap: 8px;
+    text-align: center
+}
+
+.upsellButtons_yLJWMA {
+    align-items: center;
+    display: flex;
+    gap: 16px
+}
+
+.valuesContainer_yLJWMA {
+    display: flex;
+    flex-direction: column;
+    gap: 32px
+}
+
+.valueContainer_yLJWMA {
+    align-items: center;
+    display: flex;
+    gap: 32px;
+    justify-content: center
+}
+
+.valueText_yLJWMA {
+    flex-basis: 50%;
+    gap: 12px
+}
+
+.upsellContainer_yLJWMA,
+.valueText_yLJWMA {
+    display: flex;
+    flex-direction: column
+}
+
+.upsellContainer_yLJWMA {
+    gap: 32px
+}
+
+.upsellPreview_yLJWMA {
+    background-color: var(--background-base-lower);
+    border-radius: var(--radius-sm);
+    flex-basis: 50%;
+    padding: 16px
+}
+
+.previewListItem_yLJWMA {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    border-radius: var(--radius-sm);
+    display: flex;
+    gap: 12px;
+    padding: 8px 12px;
+    position: relative
+}
+
+.previewListItem_yLJWMA.selected_yLJWMA {
+    background-color: var(--background-base-lowest)
+}
+
+.spacingSmall_yLJWMA {
+    gap: 8px
+}
+
+.spacingLarge_yLJWMA,
+.spacingSmall_yLJWMA {
+    display: flex;
+    flex-direction: column
+}
+
+.spacingLarge_yLJWMA {
+    gap: 12px
+}
+
+.uppercase_yLJWMA {
+    text-transform: none
+}
+
+.channelIcon_yLJWMA {
+    color: var(--text-strong);
+    width: 16px
+}
+
+.channel_yLJWMA {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.spaceBetween_yLJWMA {
+    justify-content: space-between
+}
+
+.checkbox_yLJWMA {
+    align-items: center;
+    border: 2px solid var(--interactive-text-default);
+    border-radius: var(--radius-xs);
+    height: 20px;
+    width: 20px
+}
+
+.checkbox_yLJWMA.selected_yLJWMA {
+    background-color: var(--brand-500);
+    border: 2px solid var(--brand-500)
+}
+
+.checkmark_yLJWMA {
+    color: var(--white);
+    height: 16px;
+    width: 16px
+}
+
+.checkboxCircle_yLJWMA {
+    align-items: center;
+    background-color: var(--brand-500);
+    border-radius: 20px;
+    display: flex;
+    height: 20px;
+    inset-inline-end: -8px;
+    justify-content: center;
+    position: absolute;
+    top: -8px;
+    width: 20px
+}
+
+.tooltip_yLJWMA {
+    margin-bottom: 16px
+}
+
+/*# sourceMappingURL=4891a06660f2bf33.css.map*/

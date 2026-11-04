@@ -1,0 +1,11 @@
+.button_zNz-f1 {
+    color: var(--text-subtle);
+    cursor: pointer
+}
+
+.button_zNz-f1:hover {
+    color: var(--text-strong);
+    text-decoration: underline
+}
+
+/*# sourceMappingURL=62c78546a83a411b.css.map*/

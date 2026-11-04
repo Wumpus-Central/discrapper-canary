@@ -1,36 +1,44 @@
-n.d(t, { p: () => S });
 var l = n(308528),
-    i = n(148494),
+    i = n(138399),
     r = n(355622),
     a = n(428249),
     s = n(451909),
     o = n(138298),
     u = n(940382),
-    c = n(358047),
+    c = n(799704),
     d = n(734057),
-    f = n(806150),
+    f = n(710272),
     A = n(381941);
-async function S(e) {
-    let { userId: t, content: n, location: S, openChannel: h = !0, whenReady: T = !1, entry: m, nonce: g } = e,
-        { valid: x, failureReason: E } = await (0, f.i)({ type: r.oU.NORMAL, content: n, channel: null });
-    if (!x) throw Error(E);
-    let R = h ? await l.A.openPrivateChannel({ recipientIds: t, location: S }) : await l.A.getOrEnsurePrivateChannel(t),
-        p = d.A.getChannel(R);
-    if (null == p) throw Error("Failed to open private channel");
-    let y = c.Ay.getSidebarState(c.fe);
-    if (
-        (h && y?.type === u.PE.VIEW_MESSAGE_REQUEST && y.channelId === p.id && o.A.closeChannelSidebar(c.fe), null != m)
-    )
-        (0, a.d)({
-            channel: p,
-            content: n,
-            entry: m,
-            whenReady: T,
-            doNotNotifyOnError: !1,
-            location: A.Hx.USER_PROFILE,
-        });
-    else {
-        let e = s.Ay.parse(p, n);
-        return i.A.sendMessage(p.id, e, T, { location: A.Hx.USER_PROFILE, nonce: g });
-    }
-}
+n.d(
+    t,
+    {},
+    {
+        p: async function (e) {
+            let { userId: t, content: n, location: S, openChannel: h = !0, whenReady: T = !1, entry: m, nonce: g } = e,
+                { valid: x, failureReason: E } = await (0, f.i)({ type: r.oU.NORMAL, content: n, channel: null });
+            if (!x) throw Error(E);
+            let R = h
+                    ? await l.A.openPrivateChannel({ recipientIds: t, location: S })
+                    : await l.A.getOrEnsurePrivateChannel(t),
+                p = d.A.getChannel(R);
+            if (null == p) throw Error("Failed to open private channel");
+            let y = c.Ay.getSidebarState(c.fe);
+            if (
+                (h && y?.type === u.PE.VIEW_MESSAGE_REQUEST && y.channelId === p.id && o.A.closeChannelSidebar(c.fe),
+                null != m)
+            )
+                (0, a.d)({
+                    channel: p,
+                    content: n,
+                    entry: m,
+                    whenReady: T,
+                    doNotNotifyOnError: !1,
+                    location: A.Hx.USER_PROFILE,
+                });
+            else {
+                let e = s.Ay.parse(p, n);
+                return i.A.sendMessage(p.id, e, T, { location: A.Hx.USER_PROFILE, nonce: g });
+            }
+        },
+    },
+);

@@ -1,4 +1,4 @@
-(r.r(t), r.d(t, { default: () => l }));
+r.r(t);
 var i = r(109624),
     s = r(696016);
 class a {
@@ -19,4 +19,4 @@ class a {
         this.emitSignal({ type: s.Gy.DISTRIBUTED, remoteTriggerUserId: e, remoteTriggerClipId: t });
     }
 }
-let l = (e) => new a(e);
+r.d(t, {}, { default: (e) => new a(e) });

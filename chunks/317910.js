@@ -1,36 +1,41 @@
-c.d(a, { A: () => _ });
 var e = c(477900);
 c(582128);
-var s = c(17928),
+var s = c(855986),
     A = c(477782),
     i = c(435183),
     t = c(526132),
     l = c(576705),
     r = c(652215),
-    h = c(105292);
-function _(n) {
-    let {
-        canManageChannels: a,
-        canManageRoles: c,
-        canManageWebhooks: _,
-        canAccessChannel: d,
-        canUnlinkChannel: o,
-    } = (0, s.cf)(
-        [l.A],
-        () => ({
-            canManageChannels: l.A.can(r.xBc.MANAGE_CHANNELS, n),
-            canManageRoles: l.A.can(r.xBc.MANAGE_ROLES, n),
-            canManageWebhooks: l.A.can(r.xBc.MANAGE_WEBHOOKS, n),
-            canAccessChannel: l.A.can(n.accessPermissions, n),
-            canUnlinkChannel: (0, t.n)(n, l.A),
-        }),
-        [n],
-    );
-    return !__OVERLAY__ && d && (a || c || _ || o)
-        ? (0, e.jsx)(A.Dr, {
-              id: "edit-channel",
-              label: n.type === r.rbe.GUILD_CATEGORY ? h.intl.string(h.t.zdPFs9) : h.intl.string(h.t["3gUsJb"]),
-              action: () => i.Ay.open(n.id),
-          })
-        : null;
-}
+    h = c(792996);
+c.d(
+    a,
+    {},
+    {
+        A: function (n) {
+            let {
+                canManageChannels: a,
+                canManageRoles: c,
+                canManageWebhooks: _,
+                canAccessChannel: d,
+                canUnlinkChannel: o,
+            } = (0, s.cf)(
+                [l.A],
+                () => ({
+                    canManageChannels: l.A.can(r.xBc.MANAGE_CHANNELS, n),
+                    canManageRoles: l.A.can(r.xBc.MANAGE_ROLES, n),
+                    canManageWebhooks: l.A.can(r.xBc.MANAGE_WEBHOOKS, n),
+                    canAccessChannel: l.A.can(n.accessPermissions, n),
+                    canUnlinkChannel: (0, t.n)(n, l.A),
+                }),
+                [n],
+            );
+            return !__OVERLAY__ && d && (a || c || _ || o)
+                ? (0, e.jsx)(A.Dr, {
+                      id: "edit-channel",
+                      label: n.type === r.rbe.GUILD_CATEGORY ? h.intl.string(h.t.zdPFs9) : h.intl.string(h.t["3gUsJb"]),
+                      action: () => i.Ay.open(n.id),
+                  })
+                : null;
+        },
+    },
+);

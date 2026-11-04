@@ -1,7 +1,7 @@
 e.exports = {
-    kL: "container_d8f25b",
-    Kk: "icon_d8f25b",
-    h_: "description_d8f25b",
-    Pf: "label_d8f25b",
-    UE: "arrow_d8f25b",
+    kL: "container_Ax3P1g",
+    Kk: "icon_Ax3P1g",
+    h_: "description_Ax3P1g",
+    Pf: "label_Ax3P1g",
+    UE: "arrow_Ax3P1g",
 };

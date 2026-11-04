@@ -1,30 +1,29 @@
-n.d(r, { A: () => o });
-var t,
-    s = n(477900);
+var s,
+    t = n(477900);
 n(582128);
-var l = n(503698),
-    i = n.n(l),
+var i = n(503698),
+    l = n.n(i),
     c = n(953727),
     u = n(256109);
-function a(e) {
+function a(r) {
     let {
-        width: r = 24,
+        width: e = 24,
         height: n = 24,
-        color: t = "currentColor",
-        direction: l,
+        color: s = "currentColor",
+        direction: i,
         foreground: a,
         className: o,
         title: T,
         ...h
-    } = e;
-    return (0, s.jsxs)("svg", {
+    } = r;
+    return (0, t.jsxs)("svg", {
         ...(0, c.A)(h),
-        width: r,
+        width: e,
         height: n,
-        className: i()(
+        className: l()(
             o,
-            (function (e) {
-                switch (e) {
+            (function (r) {
+                switch (r) {
                     case "LEFT":
                         return u.kb;
                     case "RIGHT":
@@ -38,28 +37,28 @@ function a(e) {
                     case "DOWN_RIGHT":
                         return u.Nu;
                     default:
-                        throw Error(`Invalid Direction ${e}`);
+                        throw Error(`Invalid Direction ${r}`);
                 }
-            })(l),
+            })(i),
         ),
         viewBox: "0 0 24 24",
         children: [
-            null != T ? (0, s.jsx)("title", { children: T }) : null,
-            (0, s.jsx)("polygon", {
+            null != T ? (0, t.jsx)("title", { children: T }) : null,
+            (0, t.jsx)("polygon", {
                 className: a,
-                fill: t,
+                fill: s,
                 fillRule: "nonzero",
                 points: "13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8",
             }),
         ],
     });
 }
-a.Directions =
-    (((t = {}).LEFT = "LEFT"),
-    (t.RIGHT = "RIGHT"),
-    (t.UP = "UP"),
-    (t.DOWN = "DOWN"),
-    (t.UP_LEFT = "UP_LEFT"),
-    (t.DOWN_RIGHT = "DOWN_RIGHT"),
-    t);
-let o = a;
+((a.Directions =
+    (((s = {}).LEFT = "LEFT"),
+    (s.RIGHT = "RIGHT"),
+    (s.UP = "UP"),
+    (s.DOWN = "DOWN"),
+    (s.UP_LEFT = "UP_LEFT"),
+    (s.DOWN_RIGHT = "DOWN_RIGHT"),
+    s)),
+    n.d(e, {}, { A: a }));

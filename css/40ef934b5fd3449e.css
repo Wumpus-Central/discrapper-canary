@@ -1,0 +1,52 @@
+.listLabel_1aE3l2 {
+    align-items: center;
+    display: flex;
+    gap: 2px;
+    margin-bottom: var(--space-4)
+}
+
+.infoIcon_1aE3l2 {
+    color: var(--text-muted);
+    margin-inline-start: var(--space-4)
+}
+
+.guildList_1aE3l2 {
+    display: flex;
+    flex-direction: column;
+    max-height: 400px
+}
+
+.guildRow_1aE3l2 {
+    align-items: center;
+    border-radius: var(--space-16);
+    cursor: pointer;
+    display: flex;
+    padding: var(--space-8);
+    transition: background-color .2s
+}
+
+.guildRow_1aE3l2:hover {
+    background-color: var(--background-mod-normal)
+}
+
+.guildIcon_1aE3l2 {
+    flex-shrink: 0;
+    margin-inline-end: var(--space-12)
+}
+
+.guildInfo_1aE3l2 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+    min-width: 0
+}
+
+.guildName_1aE3l2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+/*# sourceMappingURL=40ef934b5fd3449e.css.map*/

@@ -1,0 +1,142 @@
+.testimonialContainer_5ankAK {
+    background-color: var(--background-base-lower);
+    border-radius: 12px;
+    padding: 32px;
+    position: relative;
+    text-align: center
+}
+
+.userContainer_5ankAK {
+    align-items: center;
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    margin-top: 8px
+}
+
+.quotes_5ankAK {
+    color: var(--background-base-lowest);
+    font-size: 64px;
+    inset-inline-start: 12px;
+    position: absolute;
+    top: 0
+}
+
+.heroQuotes_5ankAK {
+    inset-inline-start: 24px;
+    top: 24px
+}
+
+.arrow_5ankAK {
+    bottom: -22px;
+    position: absolute
+}
+
+.arrowRight_5ankAK {
+    inset-inline-end: 32px
+}
+
+.arrowLeft_5ankAK {
+    inset-inline-start: 32px;
+    transform: scaleX(-1)
+}
+
+.testimonialHeroContainer_5ankAK {
+    background-color: var(--background-mod-subtle);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 150px;
+    overflow: hidden;
+    padding: 32px 40px;
+    position: relative;
+    text-align: center
+}
+
+.animatedContainer_5ankAK {
+    min-height: 120px;
+    position: relative
+}
+
+.testimonial_5ankAK {
+    min-height: 120px;
+    padding: 32px;
+    position: absolute
+}
+
+.testimonialsControls_5ankAK {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    margin: 8px 0
+}
+
+.container_THKl7E {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 0
+}
+
+.action_THKl7E {
+    align-items: center;
+    display: flex;
+    padding: 12px 20px;
+    transition: background-color .2s ease-in-out
+}
+
+.clickableAction_THKl7E {
+    cursor: pointer
+}
+
+.clickableAction_THKl7E:hover {
+    background-color: var(--background-mod-subtle)
+}
+
+.actionInfo_THKl7E {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 2px;
+    margin-inline-start: 8px
+}
+
+.channelIcon_THKl7E {
+    color: var(--channel-icon);
+    height: 20px;
+    width: 20px
+}
+
+.channelIconContainer_THKl7E,
+.rulesIconContainer_THKl7E,
+.tagIconContainer_THKl7E {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: 20px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px
+}
+
+.rulesIcon_THKl7E {
+    color: var(--channel-icon);
+    height: 16px;
+    width: 16px
+}
+
+.checkCircle_THKl7E {
+    color: var(--icon-muted)
+}
+
+.checkCircleCompleted_THKl7E {
+    color: var(--status-positive)
+}
+
+.icon_THKl7E {
+    border-radius: var(--radius-sm)
+}
+
+/*# sourceMappingURL=a72ec40fbe3931f8.css.map*/

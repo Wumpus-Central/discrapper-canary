@@ -1,1 +1,1 @@
-a.exports = { Nr: "card_ca15ae", rb: "mainContent_ca15ae", C: "copy_ca15ae" };
+r.exports = { Nr: "card_OQEDys", rb: "mainContent_OQEDys", C: "copy_OQEDys" };

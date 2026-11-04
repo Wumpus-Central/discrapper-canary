@@ -1,11 +1,10 @@
-t.d(r, { _: () => O, m: () => N });
 var a = t(477900),
     s = t(582128),
     n = t(503698),
     i = t.n(n),
-    d = t(149282),
+    d = t(883888),
     o = t(305003),
-    c = t(752079),
+    c = t(620882),
     l = t(521e3),
     A = t(758836),
     I = t(121615),
@@ -43,6 +42,19 @@ let N = {
         },
     },
 };
-function O() {
-    return { id: o.A.ORB_PROFILE_BADGE, icon: o.A.ORB_PROFILE_BADGE, iconSrc: C.A, description: "", isPreviewMode: !0 };
-}
+t.d(
+    r,
+    {},
+    {
+        _: function () {
+            return {
+                id: o.A.ORB_PROFILE_BADGE,
+                icon: o.A.ORB_PROFILE_BADGE,
+                iconSrc: C.A,
+                description: "",
+                isPreviewMode: !0,
+            };
+        },
+        m: N,
+    },
+);

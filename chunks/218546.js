@@ -1,4 +1,3 @@
-n.d(t, { K: () => r });
 var i,
     r =
         (((i = {}).DEFAULT = "default"),
@@ -8,3 +7,4 @@ var i,
         (i.ULTRA = "ultra"),
         (i.NITRO = "nitro"),
         i);
+n.d(t, {}, { K: r });

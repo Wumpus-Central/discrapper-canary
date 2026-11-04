@@ -1,4 +1,3 @@
-t.d(e, { N: () => r });
 var n,
     r =
         (((n = {}).LANDING = "landing"),
@@ -8,3 +7,4 @@ var n,
         (n.SUCCESS = "success"),
         (n.ERROR = "error"),
         n);
+t.d(e, {}, { N: r });

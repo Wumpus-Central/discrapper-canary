@@ -1,8 +1,8 @@
 e.exports = {
-    nE: "debugToolsPanel_fc3ff7",
-    Di: "resizeHandle_fc3ff7",
-    wx: "header_fc3ff7",
-    TG: "loadingBody_fc3ff7",
-    u1: "spinner_fc3ff7",
-    rf: "body_fc3ff7",
+    nE: "debugToolsPanel_-9CJCW",
+    Di: "resizeHandle_-9CJCW",
+    wx: "header_-9CJCW",
+    TG: "loadingBody_-9CJCW",
+    u1: "spinner_-9CJCW",
+    rf: "body_-9CJCW",
 };

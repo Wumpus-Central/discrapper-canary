@@ -1,1 +1,1 @@
-e.exports = { $: "tabBar__97b44", Y: "newTabButton__97b44" };
+e.exports = { $: "tabBar_lg7KTV", Y: "newTabButton_lg7KTV" };

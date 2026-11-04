@@ -1,4 +1,3 @@
-n.d(t, { b: () => a });
 var i,
     a =
         (((i = {})[(i.NONE = 0)] = "NONE"),
@@ -6,3 +5,4 @@ var i,
         (i[(i.ALMOST_HERE = 2)] = "ALMOST_HERE"),
         (i[(i.LAUNCHED = 3)] = "LAUNCHED"),
         i);
+n.d(t, {}, { b: a });

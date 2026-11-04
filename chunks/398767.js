@@ -1,0 +1,357 @@
+n.d(t, { A: () => U });
+var i = n(115560),
+    r = n(141931),
+    a = n(451988),
+    s = n(439372),
+    l = n(626584),
+    o = n(206885),
+    d = n(41984),
+    c = n(861862),
+    u = n(244055),
+    _ = n(977556),
+    E = n(495867),
+    A = n(531685),
+    h = n(129230),
+    f = n(927813),
+    I = n(973522),
+    p = n(253400);
+let m = new (class {
+    pids = new Set();
+    enabled = !1;
+    enable() {
+        if (!this.enabled) for (let e of ((this.enabled = !0), this.pids)) this.startMonitoringPid(e);
+    }
+    disable() {
+        if (this.enabled) {
+            for (let e of ((this.enabled = !1), this.pids)) p.Ay.SetSystemServicePerformanceMonitorEnabled(e, !1);
+            this.pids.clear();
+        }
+    }
+    reset() {
+        this.enabled = !1;
+    }
+    startMonitoringPid(e) {
+        (this.pids.add(e), this.enabled && p.Ay.SetSystemServicePerformanceMonitorEnabled(e, !0));
+    }
+    stopMonitoringPid(e) {
+        this.pids.has(e) &&
+            (this.pids.delete(e), this.enabled && p.Ay.SetSystemServicePerformanceMonitorEnabled(e, !1));
+    }
+    getSnapshot(e) {
+        return this.enabled && this.pids.has(e)
+            ? p.Ay.GetSystemServicePerformanceMonitorSnapshot(e)
+            : Promise.resolve(null);
+    }
+})();
+var T = n(986322),
+    g = n(687658),
+    S = n(384077),
+    N = n(321034);
+let C = new l.A("RunningGameSystemMetricsMonitor"),
+    O = [50, 95, 99];
+function R(e) {
+    let t = e.getReport(O);
+    return {
+        p50: t.percentiles[50] ?? 0,
+        p95: t.percentiles[95] ?? 0,
+        p99: t.percentiles[99] ?? 0,
+        avg: t.mean,
+        max: t.max,
+        min: t.min,
+    };
+}
+let L = new (class {
+    cpuHistogram = new g.d();
+    memoryHistogram = new g.d();
+    discordMemoryHistogram = new g.d();
+    lastCpuSnapshot = null;
+    samplingInterval = null;
+    enable() {
+        null == this.samplingInterval &&
+            (this.resetHistograms(),
+            (this.samplingInterval = setInterval(() => {
+                this.takeSample();
+            }, 1e3)));
+    }
+    disable() {
+        (null != this.samplingInterval && (clearInterval(this.samplingInterval), (this.samplingInterval = null)),
+            (this.lastCpuSnapshot = null),
+            this.resetHistograms());
+    }
+    getSnapshot() {
+        if (
+            [this.cpuHistogram, this.memoryHistogram, this.discordMemoryHistogram].every(
+                (e) => 0 === e.getReport().count,
+            )
+        )
+            return null;
+        let e = R(this.cpuHistogram),
+            t = R(this.memoryHistogram),
+            n = R(this.discordMemoryHistogram);
+        return (
+            this.resetHistograms(),
+            {
+                system_cpu_pct_p50: e.p50,
+                system_cpu_pct_p95: e.p95,
+                system_cpu_pct_p99: e.p99,
+                system_cpu_pct_avg: e.avg,
+                system_cpu_pct_max: e.max,
+                system_cpu_pct_min: e.min,
+                system_memory_pct_p50: t.p50,
+                system_memory_pct_p95: t.p95,
+                system_memory_pct_p99: t.p99,
+                system_memory_pct_avg: t.avg,
+                system_memory_pct_max: t.max,
+                system_memory_pct_min: t.min,
+                discord_memory_pct_p50: n.p50,
+                discord_memory_pct_p95: n.p95,
+                discord_memory_pct_p99: n.p99,
+                discord_memory_pct_avg: n.avg,
+                discord_memory_pct_max: n.max,
+                discord_memory_pct_min: n.min,
+            }
+        );
+    }
+    resetHistograms() {
+        ((this.cpuHistogram = new g.d()),
+            (this.memoryHistogram = new g.d()),
+            (this.discordMemoryHistogram = new g.d()));
+    }
+    async takeSample() {
+        (this.sampleDiscordMemory(), await this.sampleCpuAndMemory());
+    }
+    async sampleCpuAndMemory() {
+        try {
+            let e = await N.A.getSystemMetrics((0, S.uD)());
+            if (null == e) return;
+            if (e.memoryTotal > 0) {
+                let t = ((e.memoryTotal - e.memoryFree) / e.memoryTotal) * 100;
+                this.memoryHistogram.addSample(t);
+            }
+            if (null != this.lastCpuSnapshot) {
+                let t = e.cpuTotalTick - this.lastCpuSnapshot.cpuTotalTick,
+                    n = e.cpuTotalIdle - this.lastCpuSnapshot.cpuTotalIdle;
+                t > 0 && this.cpuHistogram.addSample(((t - n) / t) * 100);
+            }
+            this.lastCpuSnapshot = e;
+        } catch (e) {
+            C.warn("Failed to sample CPU/memory metrics", e?.message);
+        }
+    }
+    sampleDiscordMemory() {
+        try {
+            let e;
+            if (null == this.lastCpuSnapshot || this.lastCpuSnapshot.memoryTotal <= 0) return;
+            let t = N.A.getCurrentMemoryUsageKB();
+            if (null != t && t > 0) e = 1024 * t;
+            else {
+                let t = N.A.getMemoryUsageDetails();
+                if (null == t || (e = Object.values(t).reduce((e, t) => e + t, 0)) <= 0) return;
+            }
+            let n = (e / this.lastCpuSnapshot.memoryTotal) * 100;
+            this.discordMemoryHistogram.addSample(n);
+        } catch (e) {
+            C.warn("Failed to sample Discord memory metrics", e?.message);
+        }
+    }
+})();
+var y = n(863160),
+    D = n(652215);
+let b = new l.A("RunningGameHeartbeatManager"),
+    v = 5 * f.A.Millis.MINUTE;
+function P() {
+    let e = A.A.isFocused(),
+        t = A.A.isVisible();
+    return e ? "focused" : t ? "visible" : "hidden";
+}
+class M extends s.A {
+    heartbeatInterval = new a.IX();
+    gameSessions = new Map();
+    windowStateDurations = { focused: 0, visible: 0, hidden: 0 };
+    windowStateTrackingState = "hidden";
+    windowStateLastChangeTime = 0;
+    windowTrackingEnabled = !1;
+    actions = {
+        APPLICATIONS_FETCH_SUCCESS: () => this.scheduleHeartbeatTracking(),
+        GAMES_DATABASE_UPDATE: () => this.scheduleHeartbeatTracking(),
+        LOCAL_ACTIVITY_UPDATE: () => this.scheduleHeartbeatTracking(),
+        LOGOUT: () => this.handleLogout(),
+        POST_CONNECTION_OPEN: () => this.scheduleHeartbeatTracking(),
+        RUNNING_GAMES_CHANGE: (e) => this.handleRunningGamesChanged(e),
+        SYSTEM_SERVICE_INITIALIZE: (e) => this.handleSystemServiceInitialize(e),
+        WINDOW_FOCUS: () => this.handleWindowStateChange(),
+        WINDOW_VISIBILITY_CHANGE: () => this.handleWindowStateChange(),
+    };
+    handleSystemServiceInitialize(e) {
+        let { status: t, modules: n } = e;
+        n.includes("tool-service") && ("running" === t.state ? m.enable() : m.reset());
+    }
+    _terminate() {
+        (this.heartbeatInterval.stop(), m.disable(), L.disable(), this.disableWindowTracking());
+    }
+    handleLogout() {
+        (m.disable(),
+            L.disable(),
+            this.disableWindowTracking(),
+            this.gameSessions.clear(),
+            this.heartbeatInterval.stop());
+    }
+    enableWindowTracking() {
+        this.windowTrackingEnabled ||
+            ((this.windowTrackingEnabled = !0),
+            (this.windowStateDurations = { focused: 0, visible: 0, hidden: 0 }),
+            (this.windowStateTrackingState = P()),
+            (this.windowStateLastChangeTime = performance.now()));
+    }
+    disableWindowTracking() {
+        this.windowTrackingEnabled = !1;
+    }
+    handleWindowStateChange() {
+        if (!this.windowTrackingEnabled) return;
+        let e = performance.now();
+        ((this.windowStateDurations[this.windowStateTrackingState] += e - this.windowStateLastChangeTime),
+            (this.windowStateLastChangeTime = e),
+            (this.windowStateTrackingState = P()));
+    }
+    getWindowStateDurationsSnapshot() {
+        let e = performance.now();
+        ((this.windowStateDurations[this.windowStateTrackingState] += e - this.windowStateLastChangeTime),
+            (this.windowStateLastChangeTime = e));
+        let t = {
+            discord_window_focused_duration_ms: Math.round(this.windowStateDurations.focused),
+            discord_window_visible_duration_ms: Math.round(this.windowStateDurations.visible),
+            discord_window_hidden_duration_ms: Math.round(this.windowStateDurations.hidden),
+        };
+        return ((this.windowStateDurations = { focused: 0, visible: 0, hidden: 0 }), t);
+    }
+    peekWindowStateDurations() {
+        let e = performance.now() - this.windowStateLastChangeTime;
+        return {
+            discord_window_focused_duration_ms: Math.round(
+                this.windowStateDurations.focused + ("focused" === this.windowStateTrackingState ? e : 0),
+            ),
+            discord_window_visible_duration_ms: Math.round(
+                this.windowStateDurations.visible + ("visible" === this.windowStateTrackingState ? e : 0),
+            ),
+            discord_window_hidden_duration_ms: Math.round(
+                this.windowStateDurations.hidden + ("hidden" === this.windowStateTrackingState ? e : 0),
+            ),
+        };
+    }
+    scheduleHeartbeatTracking() {
+        if ((this.processSessionChanges(), 0 === this.gameSessions.size)) {
+            (this.heartbeatInterval.stop(), L.disable(), this.disableWindowTracking());
+            return;
+        }
+        (L.enable(),
+            this.enableWindowTracking(),
+            this.heartbeatInterval.isStarted() || this.heartbeatInterval.start(v, this.logRunningGameHeartbeats));
+    }
+    handleRunningGamesChanged = (e) => {
+        this.scheduleHeartbeatTracking();
+    };
+    stopMonitoringPidIfInactive(e) {
+        [...this.gameSessions.values()].some((t) => t.runningGame.pid === e) || m.stopMonitoringPid(e);
+    }
+    logHeartbeat(e, t, n, i, a) {
+        let s = e.runningGame,
+            l = performance.now(),
+            _ = t ? 0 : Math.round(l - e.lastHeartbeatTime);
+        e.lastHeartbeatTime = l;
+        let { gameId: A, gameName: f } = (0, I.wH)(s),
+            p = {
+                game_id: A,
+                game_name: f,
+                game_distributor: s.distributor,
+                game_distributor_game_id: s.sku,
+                game_metadata: (0, I.EQ)(s, null != s.processGame, (0, I.wH)((0, y.Un)(s)).gameId),
+                game_executable: (0, I.Ic)(s.exePath),
+                game_detection_enabled: (0, T.Xr)(s),
+                initial_heartbeat: t,
+                final_heartbeat: n,
+                game_session_id: e.sessionId,
+                duration_tracked_ms: _,
+                rtc_connection_id: E.A.getRTCConnectionId(),
+                media_session_id: E.A.getMediaSessionId(),
+            },
+            g = (function (e) {
+                if (!o.O) return null;
+                let t = c.default.getTrackedGameByPid(e);
+                return {
+                    overlay_state: t?.state ?? null,
+                    overlay_method: null != t ? d.Ue[t.overlayMethod] : null,
+                    overlay_version: u.A.getNativeModule()?.version() ?? 0,
+                };
+            })(s.pid),
+            S = { discord_window_state: P() };
+        return m
+            .getSnapshot(s.pid)
+            .then((e) => {
+                h.default.track(D.HAw.RUNNING_GAME_HEARTBEAT, {
+                    ...p,
+                    ...S,
+                    ...(a ?? {}),
+                    ...(e ?? {}),
+                    ...(i ?? {}),
+                    ...(g ?? {}),
+                });
+            })
+            .catch((e) => {
+                (t || e instanceof r.Fh || b.warn(`Failed to get performance snapshot for game ${s.id}`, e.message),
+                    h.default.track(D.HAw.RUNNING_GAME_HEARTBEAT, {
+                        ...p,
+                        ...S,
+                        ...(a ?? {}),
+                        ...(i ?? {}),
+                        ...(g ?? {}),
+                    }));
+            });
+    }
+    processSessionChanges() {
+        let e = T.Ay.getRunningGames(),
+            t = performance.now(),
+            n = new Set(),
+            r = this.windowTrackingEnabled ? this.peekWindowStateDurations() : null;
+        for (let a of e) {
+            if (a.isLauncher) continue;
+            let e = (function (e) {
+                if (null != e.processGame) return `social_sdk:${e.id}`;
+                let t = null != e.name ? e.name : "",
+                    n = `${e.id ?? e.exePath}:${t}`,
+                    i = e.distributor === D.d3x.ROBLOX ? (0, _.hD)(e) : null;
+                return (null != i && (n += `:${i}`), n);
+            })(a);
+            if ((n.add(e), this.gameSessions.has(e))) {
+                let n = this.gameSessions.get(e);
+                if (null == n) continue;
+                if (n.runningGame.pid !== a.pid) {
+                    let s = n.runningGame.pid,
+                        l = { sessionId: (0, i.A)(), lastHeartbeatTime: t, runningGame: a };
+                    (this.gameSessions.set(e, l),
+                        m.startMonitoringPid(a.pid),
+                        this.logHeartbeat(n, !1, !0, null, r).finally(() => {
+                            this.stopMonitoringPidIfInactive(s);
+                        }),
+                        this.logHeartbeat(l, !0, !1, null, null));
+                } else n.runningGame = a;
+            } else {
+                let n = { sessionId: (0, i.A)(), lastHeartbeatTime: t, runningGame: a };
+                (this.gameSessions.set(e, n), m.startMonitoringPid(a.pid), this.logHeartbeat(n, !0, !1, null, null));
+            }
+        }
+        for (let [e, t] of this.gameSessions)
+            if (!n.has(e)) {
+                this.gameSessions.delete(e);
+                let n = t.runningGame.pid;
+                this.logHeartbeat(t, !1, !0, null, r).finally(() => {
+                    this.stopMonitoringPidIfInactive(n);
+                });
+            }
+    }
+    logRunningGameHeartbeats = () => {
+        let e = L.getSnapshot(),
+            t = this.getWindowStateDurationsSnapshot();
+        for (let n of this.gameSessions.values()) this.logHeartbeat(n, !1, !1, e, t);
+    };
+}
+let U = new M();

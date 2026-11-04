@@ -1,4 +1,3 @@
-d.d(t, { t: () => s });
 var i = d(768611),
     e = d(242268),
     c = { primary: "IncodeButtonPrimary", secondary: "IncodeButtonSecondary", link: "IncodeButtonLink" },
@@ -45,3 +44,4 @@ var i = d(768611),
                     : o,
         });
     });
+d.d(t, {}, { t: s });

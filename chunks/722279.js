@@ -1,13 +1,12 @@
-(Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.TIME_UNITS_PATTERN =
-        t.YEAR_PATTERN =
-        t.ORDINAL_NUMBER_PATTERN =
-        t.NUMBER_PATTERN =
-        t.TIME_UNIT_DICTIONARY =
-        t.INTEGER_WORD_DICTIONARY =
-        t.MONTH_DICTIONARY =
-        t.WEEKDAY_DICTIONARY =
-            void 0),
+((t.TIME_UNITS_PATTERN =
+    t.YEAR_PATTERN =
+    t.ORDINAL_NUMBER_PATTERN =
+    t.NUMBER_PATTERN =
+    t.TIME_UNIT_DICTIONARY =
+    t.V =
+    t.MONTH_DICTIONARY =
+    t.WEEKDAY_DICTIONARY =
+        void 0),
     (t.parseNumberPattern = a),
     (t.parseOrdinalNumberPattern = function (e) {
         let t = e.toLowerCase();
@@ -35,8 +34,8 @@
 let n = r(798401);
 function a(e) {
     let r = e.toLowerCase();
-    return void 0 !== t.INTEGER_WORD_DICTIONARY[r]
-        ? t.INTEGER_WORD_DICTIONARY[r]
+    return void 0 !== t.V[r]
+        ? t.V[r]
         : "une" === r || "un" === r
           ? 1
           : r.match(/quelques?/)
@@ -102,7 +101,7 @@ function a(e) {
         dec: 12,
         "dec.": 12,
     }),
-    (t.INTEGER_WORD_DICTIONARY = {
+    (t.V = {
         un: 1,
         deux: 2,
         trois: 3,
@@ -141,7 +140,7 @@ function a(e) {
         "ann\xe9e": "year",
         "ann\xe9es": "year",
     }),
-    (t.NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.INTEGER_WORD_DICTIONARY)}|[0-9]+|[0-9]+\\.[0-9]+|une?\\b|quelques?|demi-?)`),
+    (t.NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.V)}|[0-9]+|[0-9]+\\.[0-9]+|une?\\b|quelques?|demi-?)`),
     (t.ORDINAL_NUMBER_PATTERN = "(?:[0-9]{1,2}(?:er)?)"),
     (t.YEAR_PATTERN = "(?:[1-9][0-9]{0,3}\\s*(?:AC|AD|p\\.\\s*C(?:hr?)?\\.\\s*n\\.)|[1-2][0-9]{3}|[5-9][0-9])"));
 let i = `(${t.NUMBER_PATTERN})\\s{0,5}(${(0, n.matchAnyPattern)(t.TIME_UNIT_DICTIONARY)})\\s{0,5}`,

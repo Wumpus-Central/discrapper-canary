@@ -1,4 +1,3 @@
-n.d(t, { d: () => l });
 var i = n(260447);
 class l extends i.z {
     getSentryAppContext() {
@@ -12,3 +11,4 @@ class l extends i.z {
         return { ...super.getSentryExtras(e), guildBoostSlotId: n ?? t?.id ?? null };
     }
 }
+n.d(t, {}, { d: l });

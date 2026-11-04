@@ -1,5 +1,4 @@
-i.d(t, { A: () => r });
-var n = i(17928),
+var n = i(855986),
     a = i(73153);
 let o = { canSeeEnableMonetizationForGuilds: new Set() };
 class s extends n.Ay.PersistedStore {
@@ -22,3 +21,4 @@ let r = new s(a.h, {
             (o.canSeeEnableMonetizationForGuilds = new Set(o.canSeeEnableMonetizationForGuilds).add(e.guildId));
     },
 });
+i.d(t, {}, { A: r });

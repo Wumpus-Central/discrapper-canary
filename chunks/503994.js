@@ -1,7 +1,7 @@
-e.exports = {
-    RJ: "formNotice_f43ba5",
-    $G: "formNoticeTitle_f43ba5",
-    Vz: "formNoticeBody_f43ba5",
-    Kk: "icon_f43ba5",
-    vV: "whiteText_f43ba5",
+o.exports = {
+    RJ: "formNotice_LiOD7I",
+    $G: "formNoticeTitle_LiOD7I",
+    Vz: "formNoticeBody_LiOD7I",
+    Kk: "icon_LiOD7I",
+    vV: "whiteText_LiOD7I",
 };

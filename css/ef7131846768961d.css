@@ -1,0 +1,128 @@
+.wrapper_ffBc3q {
+    width: 500px;
+    z-index: 1
+}
+
+.modalHeader_ffBc3q {
+    flex: 1;
+    padding-bottom: 16px
+}
+
+.header_ffBc3q {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.closeButton_ffBc3q.closeButton_ffBc3q {
+    inset-inline-end: 12px;
+    position: absolute;
+    top: 10px;
+    z-index: 3
+}
+
+.resultWrapper_ffBc3q {
+    align-items: center;
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    color: var(--primary-300);
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    height: 48px;
+    justify-content: space-between;
+    padding: 8px
+}
+
+.resultWrapper_ffBc3q:hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.sectionHeader_ffBc3q {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 32px;
+    padding-inline: var(--space-8)
+}
+
+.result_ffBc3q {
+    align-items: start;
+    display: flex;
+    flex: 1;
+    overflow: hidden
+}
+
+.resultAvatar_ffBc3q {
+    margin-inline-end: 10px
+}
+
+.resultIcon_ffBc3q {
+    align-items: center;
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: center;
+    opacity: .6;
+    width: 30px
+}
+
+.resultIconBackground_ffBc3q {
+    opacity: .6
+}
+
+.resultText_ffBc3q {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    font-weight: var(--font-weight-medium);
+    margin-inline-start: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.resultUsername_ffBc3q {
+    font-weight: var(--font-weight-normal);
+    margin-inline-start: 4px;
+    opacity: .5
+}
+
+.resultCategoryName_ffBc3q {
+    font-size: 10px;
+    line-height: 16px;
+    margin-inline-start: 4px;
+    text-transform: none
+}
+
+.resultCategoryName_ffBc3q,
+.resultGuildName_ffBc3q {
+    font-weight: var(--font-weight-medium);
+    opacity: .5
+}
+
+.resultGuildName_ffBc3q {
+    font-size: 14px;
+    margin-inline: 4px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.inviteButton_ffBc3q {
+    flex: none;
+    height: 32px;
+    transition: unset;
+    width: 72px
+}
+
+.results_ffBc3q {
+    height: 300px
+}
+
+.noResults_ffBc3q {
+    background: url("/assets/05207174d5432737.svg") no-repeat 50% 40%;
+    width: 100%
+}
+
+/*# sourceMappingURL=ef7131846768961d.css.map*/

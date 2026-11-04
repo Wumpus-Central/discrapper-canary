@@ -1,13 +1,12 @@
-n.d(t, { A: () => Q });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
     s = n.n(a),
     r = n(91871),
     o = n.n(r),
-    d = n(131937),
-    c = n(17928),
-    u = n(661531),
+    d = n(613412),
+    c = n(855986),
+    u = n(646514),
     h = n(939249),
     p = n(97808),
     m = n(778712),
@@ -24,76 +23,76 @@ var i = n(477900),
     E = n(59520),
     b = n(793574),
     S = n(688810),
-    T = n(139286),
-    _ = n(43189),
+    _ = n(139286),
+    T = n(43189),
     R = n(480890),
     O = n(812771),
     P = n(58736),
     L = n(267102),
     M = n(342296),
-    w = n(280450),
+    w = n(46653),
     U = n(696451),
     D = n(576705),
     V = n(996439),
     G = n(63995),
     k = n(113783),
-    B = n(518769),
+    B = n(597886),
     F = n(776781),
     z = n(105530),
     H = n(224648),
     W = n(374873);
 n(276831);
-var Y = n(806931),
-    $ = n(818348),
-    K = n(185431),
-    X = n(105292),
+var $ = n(806931),
+    Y = n(818348),
+    K = n(383899),
+    X = n(792996),
     q = n(645265);
 let Z = l.memo(function (e) {
     let { participant: t, channel: a, guildId: r, showRequestToSpeakActions: o = !1 } = e,
         { user: C, userNick: y, blocked: j, ignored: I, rtsState: N } = t,
         E = l.useRef(null),
-        _ = (0, L.Us)(),
+        T = (0, L.Us)(),
         { newestAnalyticsLocation: O } = (0, S.Ay)(b.A.AUDIENCE_TILE),
         P = (0, c.bG)([U.Ay], () => U.Ay.getMember(r, C.id)?.premiumSince != null, [r, C.id]),
         D = N === z.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
     function V(e) {
-        ((0, T.x)({
+        ((0, _.x)({
             type: d.ImpressionTypes.MENU,
             name: d.ImpressionNames.CALL_TILE_CONTEXT_MENU,
             properties: {
                 location: "StageAudienceSidebar",
                 is_tile_owner: C.id === w.default.getId(),
-                tile_type: Y.qs.USER,
+                tile_type: $.qs.USER,
             },
         }),
             (0, v.L3)(
                 e,
                 async () => {
                     let { default: e } = await Promise.all([
-                        n.e("463317"),
-                        n.e("893190"),
-                        n.e("189673"),
-                        n.e("882073"),
-                        n.e("797558"),
-                        n.e("691994"),
-                        n.e("229787"),
-                        n.e("576665"),
-                        n.e("624198"),
-                        n.e("715038"),
-                        n.e("245996"),
-                        n.e("529422"),
-                        n.e("823427"),
-                        n.e("242204"),
-                        n.e("307059"),
-                        n.e("449145"),
-                        n.e("343116"),
-                        n.e("470314"),
-                        n.e("70515"),
-                        n.e("404524"),
-                        n.e("654148"),
-                        n.e("666939"),
-                        n.e("281165"),
-                        n.e("184841"),
+                        n.e(463317),
+                        n.e(893190),
+                        n.e(189673),
+                        n.e(576432),
+                        n.e(797558),
+                        n.e(451162),
+                        n.e(229787),
+                        n.e(576665),
+                        n.e(624198),
+                        n.e(715038),
+                        n.e(245996),
+                        n.e(529422),
+                        n.e(823427),
+                        n.e(242204),
+                        n.e(307059),
+                        n.e(495861),
+                        n.e(343116),
+                        n.e(470314),
+                        n.e(70515),
+                        n.e(404524),
+                        n.e(654148),
+                        n.e(666939),
+                        n.e(281165),
+                        n.e(184841),
                     ]).then(n.bind(n, 107632));
                     return (t) =>
                         (0, i.jsx)(e, {
@@ -106,11 +105,11 @@ let Z = l.memo(function (e) {
                             showChatItems: !1,
                             onInteraction: (0, R.s)("GuildChannelUserContextMenu", O, {
                                 targetUserId: C.id,
-                                tileType: Y.qs.USER,
+                                tileType: $.qs.USER,
                             }),
                         });
                 },
-                { context: _ },
+                { context: T },
             ));
     }
     return (0, i.jsx)(M.A, {
@@ -153,172 +152,186 @@ let Z = l.memo(function (e) {
             }),
     });
 });
-function Q(e) {
-    var t;
-    let n,
-        a,
-        { channel: s, guildId: r, maxWidth: d } = e,
-        u = (0, F.Ni)(s.id),
-        h = (0, c.bG)([D.A], () => D.A.can($.xB.MANAGE_CHANNELS, s) || D.A.can($.xB.MANAGE_ROLES, s)),
-        p = (0, k.J2)(s.id),
-        m =
-            ((t = s.id),
-            (n = (0, c.bG)([G.A], () => [t, G.A.getParticipantsVersion(t)], [t], V.D)),
-            (a = l.useMemo(() => [...G.A.getMutableParticipants(n[0], B.ip.AUDIENCE)], [n])),
-            (0, E.J)(a, (0, H.Uo)(t))),
-        [f, g] = l.useState(""),
-        x = l.useDeferredValue(f),
-        v = u ? x.trim() : "",
-        b = "" !== v,
-        S = l.useMemo(() => {
-            if ("" === v) return m;
-            let e = v.toLowerCase();
-            return m.filter(
-                (t) =>
-                    o()(e, t.user.username.toLowerCase()) ||
-                    (null != t.user.globalName && o()(e, t.user.globalName.toLowerCase())) ||
-                    o()(e, t.userNick.toLowerCase()),
-            );
-        }, [m, v]),
-        T = [p.length, Math.max(1, S.length)],
-        R = (0, i.jsx)(P.Ay.Icon, {
-            icon: C.P,
-            tooltip: X.intl.string(X.t.cpT0Cq),
-            onClick: () => N.A.updateStageAudienceSidebarOpen(s.id, !1),
-        });
-    return (0, i.jsx)(O.A, {
-        sidebarType: O.X.StageAudienceSidebar,
-        maxWidth: d,
-        minWidth: 240,
-        floatingLayer: _.Ay,
-        children: (0, i.jsxs)("div", {
-            className: q.kL,
-            children: [
-                (0, i.jsxs)(P.Ay, {
-                    toolbar: R,
-                    "aria-label": X.intl.string(X.t.suRApw),
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            var t;
+            let n,
+                a,
+                { channel: s, guildId: r, maxWidth: d } = e,
+                u = (0, F.Ni)(s.id),
+                h = (0, c.bG)([D.A], () => D.A.can(Y.xB.MANAGE_CHANNELS, s) || D.A.can(Y.xB.MANAGE_ROLES, s)),
+                p = (0, k.J2)(s.id),
+                m =
+                    ((t = s.id),
+                    (n = (0, c.bG)([G.A], () => [t, G.A.getParticipantsVersion(t)], [t], V.D)),
+                    (a = l.useMemo(() => [...G.A.getMutableParticipants(n[0], B.ip.AUDIENCE)], [n])),
+                    (0, E.J)(a, (0, H.Uo)(t))),
+                [f, g] = l.useState(""),
+                x = l.useDeferredValue(f),
+                v = u ? x.trim() : "",
+                b = "" !== v,
+                S = l.useMemo(() => {
+                    if ("" === v) return m;
+                    let e = v.toLowerCase();
+                    return m.filter(
+                        (t) =>
+                            o()(e, t.user.username.toLowerCase()) ||
+                            (null != t.user.globalName && o()(e, t.user.globalName.toLowerCase())) ||
+                            o()(e, t.userNick.toLowerCase()),
+                    );
+                }, [m, v]),
+                _ = [p.length, Math.max(1, S.length)],
+                R = (0, i.jsx)(P.Ay.Icon, {
+                    icon: C.P,
+                    tooltip: X.intl.string(X.t.cpT0Cq),
+                    onClick: () => N.A.updateStageAudienceSidebarOpen(s.id, !1),
+                });
+            return (0, i.jsx)(O.A, {
+                sidebarType: O.X.StageAudienceSidebar,
+                maxWidth: d,
+                minWidth: 240,
+                floatingLayer: T.Ay,
+                children: (0, i.jsxs)("div", {
+                    className: q.kL,
                     children: [
-                        (0, i.jsx)(P.Ay.ChannelIcon, { icon: y.n, "aria-label": X.intl.string(X.t.suRApw) }),
-                        (0, i.jsx)(P.Ay.Title, { children: X.intl.string(X.t.suRApw) }),
+                        (0, i.jsxs)(P.Ay, {
+                            toolbar: R,
+                            "aria-label": X.intl.string(X.t.suRApw),
+                            children: [
+                                (0, i.jsx)(P.Ay.ChannelIcon, { icon: y.n, "aria-label": X.intl.string(X.t.suRApw) }),
+                                (0, i.jsx)(P.Ay.Title, { children: X.intl.string(X.t.suRApw) }),
+                            ],
+                        }),
+                        h || u
+                            ? (0, i.jsxs)("div", {
+                                  className: q.ne,
+                                  children: [
+                                      h ? (0, i.jsx)(W.d1, { useVerboseLabel: !0, channel: s }) : null,
+                                      u
+                                          ? (0, i.jsx)(j.I, {
+                                                query: f,
+                                                onChange: g,
+                                                onClear: () => g(""),
+                                                "aria-label": X.intl.string(K.default.sFXd49),
+                                                placeholder: X.intl.string(K.default.sFXd49),
+                                            })
+                                          : null,
+                                  ],
+                              })
+                            : null,
+                        (0, i.jsx)(I.OZ, {
+                            className: q.p_,
+                            sections: _,
+                            sectionHeight: function (e) {
+                                switch (e) {
+                                    case 0:
+                                        return 40 * (p.length > 0);
+                                    case 1:
+                                        return 40;
+                                }
+                                return 0;
+                            },
+                            rowHeight: function (e) {
+                                switch (e) {
+                                    case 0:
+                                        return 40;
+                                    case 1:
+                                        return S.length > 0 ? 40 : 88;
+                                }
+                                return 0;
+                            },
+                            renderRow: function (e) {
+                                let { section: t, row: n } = e;
+                                switch (t) {
+                                    case 0: {
+                                        let e = p[n];
+                                        return (0, i.jsx)(
+                                            Z,
+                                            { participant: e, channel: s, guildId: r, showRequestToSpeakActions: u },
+                                            `request-${e.id}`,
+                                        );
+                                    }
+                                    case 1: {
+                                        if (0 === S.length)
+                                            return (0, i.jsxs)(
+                                                "div",
+                                                {
+                                                    className: q.p$,
+                                                    children: [
+                                                        (0, i.jsx)(A.E, {
+                                                            variant: "body-lg/semibold",
+                                                            color: "text-strong",
+                                                            children: b
+                                                                ? X.intl.string(K.default.Hn6jKn)
+                                                                : X.intl.string(X.t.FsP3VU),
+                                                        }),
+                                                        (0, i.jsx)(A.E, {
+                                                            className: q.XG,
+                                                            variant: "body-sm/normal",
+                                                            color: "text-default",
+                                                            children: b
+                                                                ? X.intl.format(K.default["0lYpuQ"], { query: v })
+                                                                : X.intl.string(K.default.eo2IxJ),
+                                                        }),
+                                                    ],
+                                                },
+                                                "audience-empty",
+                                            );
+                                        let e = S[n];
+                                        return (0, i.jsx)(
+                                            Z,
+                                            { participant: e, channel: s, guildId: r },
+                                            `audience-${e.id}`,
+                                        );
+                                    }
+                                }
+                                return null;
+                            },
+                            renderSection: function (e) {
+                                let { section: t } = e;
+                                switch (t) {
+                                    case 0:
+                                        if (0 === p.length) break;
+                                        return (0, i.jsx)(
+                                            A.E,
+                                            {
+                                                className: q.bV,
+                                                variant: "body-xs/semibold",
+                                                color: "text-muted",
+                                                children: X.intl.formatToPlainString(X.t["5z7q5a"], {
+                                                    numHands: p.length,
+                                                }),
+                                            },
+                                            "requests-section",
+                                        );
+                                    case 1:
+                                        return (0, i.jsx)(
+                                            A.E,
+                                            {
+                                                className: q.bV,
+                                                variant: "body-xs/semibold",
+                                                color: "text-muted",
+                                                children: b
+                                                    ? X.intl.formatToPlainString(K.default.C6rvri, {
+                                                          filteredSize: S.length,
+                                                          totalSize: m.length,
+                                                      })
+                                                    : X.intl.formatToPlainString(X.t.vUrsZ9, {
+                                                          audienceSize: m.length,
+                                                      }),
+                                            },
+                                            "audience-section",
+                                        );
+                                }
+                                return null;
+                            },
+                        }),
                     ],
                 }),
-                h || u
-                    ? (0, i.jsxs)("div", {
-                          className: q.ne,
-                          children: [
-                              h ? (0, i.jsx)(W.d1, { useVerboseLabel: !0, channel: s }) : null,
-                              u
-                                  ? (0, i.jsx)(j.I, {
-                                        query: f,
-                                        onChange: g,
-                                        onClear: () => g(""),
-                                        "aria-label": X.intl.string(K.default.sFXd49),
-                                        placeholder: X.intl.string(K.default.sFXd49),
-                                    })
-                                  : null,
-                          ],
-                      })
-                    : null,
-                (0, i.jsx)(I.OZ, {
-                    className: q.p_,
-                    sections: T,
-                    sectionHeight: function (e) {
-                        switch (e) {
-                            case 0:
-                                return 40 * (p.length > 0);
-                            case 1:
-                                return 40;
-                        }
-                        return 0;
-                    },
-                    rowHeight: function (e) {
-                        switch (e) {
-                            case 0:
-                                return 40;
-                            case 1:
-                                return S.length > 0 ? 40 : 88;
-                        }
-                        return 0;
-                    },
-                    renderRow: function (e) {
-                        let { section: t, row: n } = e;
-                        switch (t) {
-                            case 0: {
-                                let e = p[n];
-                                return (0, i.jsx)(
-                                    Z,
-                                    { participant: e, channel: s, guildId: r, showRequestToSpeakActions: u },
-                                    `request-${e.id}`,
-                                );
-                            }
-                            case 1: {
-                                if (0 === S.length)
-                                    return (0, i.jsxs)(
-                                        "div",
-                                        {
-                                            className: q.p$,
-                                            children: [
-                                                (0, i.jsx)(A.E, {
-                                                    variant: "body-lg/semibold",
-                                                    color: "text-strong",
-                                                    children: b
-                                                        ? X.intl.string(K.default.Hn6jKn)
-                                                        : X.intl.string(X.t.FsP3VU),
-                                                }),
-                                                (0, i.jsx)(A.E, {
-                                                    className: q.XG,
-                                                    variant: "body-sm/normal",
-                                                    color: "text-default",
-                                                    children: b
-                                                        ? X.intl.format(K.default["0lYpuQ"], { query: v })
-                                                        : X.intl.string(K.default.eo2IxJ),
-                                                }),
-                                            ],
-                                        },
-                                        "audience-empty",
-                                    );
-                                let e = S[n];
-                                return (0, i.jsx)(Z, { participant: e, channel: s, guildId: r }, `audience-${e.id}`);
-                            }
-                        }
-                        return null;
-                    },
-                    renderSection: function (e) {
-                        let { section: t } = e;
-                        switch (t) {
-                            case 0:
-                                if (0 === p.length) break;
-                                return (0, i.jsx)(
-                                    A.E,
-                                    {
-                                        className: q.bV,
-                                        variant: "body-xs/semibold",
-                                        color: "text-muted",
-                                        children: X.intl.formatToPlainString(X.t["5z7q5a"], { numHands: p.length }),
-                                    },
-                                    "requests-section",
-                                );
-                            case 1:
-                                return (0, i.jsx)(
-                                    A.E,
-                                    {
-                                        className: q.bV,
-                                        variant: "body-xs/semibold",
-                                        color: "text-muted",
-                                        children: b
-                                            ? X.intl.formatToPlainString(K.default.C6rvri, {
-                                                  filteredSize: S.length,
-                                                  totalSize: m.length,
-                                              })
-                                            : X.intl.formatToPlainString(X.t.vUrsZ9, { audienceSize: m.length }),
-                                    },
-                                    "audience-section",
-                                );
-                        }
-                        return null;
-                    },
-                }),
-            ],
-        }),
-    });
-}
+            });
+        },
+    },
+);

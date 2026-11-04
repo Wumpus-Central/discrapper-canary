@@ -1,27 +1,26 @@
-n.d(t, { J3: () => y, sB: () => R });
 var i = n(477900),
     l = n(582128),
-    s = n(17928),
+    s = n(855986),
     r = n(821609),
     a = n(331322),
     o = n(793574),
     u = n(688810),
-    d = n(147248),
-    c = n(487245),
+    d = n(850333),
+    c = n(270746),
     g = n(793943),
-    m = n(10392),
+    m = n(739053),
     A = n(82498),
-    E = n(724651),
-    h = n(732280),
+    E = n(423814),
+    h = n(77528),
     S = n(792656),
     T = n(511484),
     p = n(811611),
-    f = n(174459),
+    f = n(129230),
     x = n(830543),
     _ = n(652215),
     I = n(385803),
-    N = n(202541),
-    b = n(105292),
+    N = n(682901),
+    b = n(792996),
     C = n(510081);
 function y() {
     ((0, g.nf)(g.HP.CLIENT_THEMES), (0, x.default)());
@@ -67,7 +66,7 @@ function O(e) {
         ? (0, i.jsx)("div", { className: C._$, children: t })
         : t;
 }
-function L() {
+function R() {
     let e = (0, s.bG)([d.A], () => d.A.isPreview),
         t = (0, h.V)()?.subscriptionTrial?.skuId === N.pe.TIER_2;
     return e && t
@@ -88,28 +87,35 @@ function L() {
           })
         : null;
 }
-function R() {
-    return (0, i.jsx)(c.Ay, {
-        type: c.v0.SETTINGS,
-        children: (0, i.jsxs)(O, {
-            children: [
-                (0, i.jsx)(c.ew, {
-                    isCoachmark: !1,
-                    renderCTAButtons: () => (0, i.jsx)(j, {}),
-                    headingClassName: C.EK,
-                    titleTextVariant: "body-md/semibold",
-                    titleClassName: C.cI,
-                    titleIconClassName: C.Hq,
+n.d(
+    t,
+    {},
+    {
+        J3: y,
+        sB: function () {
+            return (0, i.jsx)(c.Ay, {
+                type: c.v0.SETTINGS,
+                children: (0, i.jsxs)(O, {
+                    children: [
+                        (0, i.jsx)(c.ew, {
+                            isCoachmark: !1,
+                            renderCTAButtons: () => (0, i.jsx)(j, {}),
+                            headingClassName: C.EK,
+                            titleTextVariant: "body-md/semibold",
+                            titleClassName: C.cI,
+                            titleIconClassName: C.Hq,
+                        }),
+                        (0, i.jsx)(a.B, {
+                            direction: "horizontal",
+                            wrap: !0,
+                            gap: 8,
+                            padding: { top: 24 },
+                            children: (0, i.jsx)(c.Zg, { disabled: !1, size: I.ni.SIZE_48 }),
+                        }),
+                        (0, i.jsx)(R, {}),
+                    ],
                 }),
-                (0, i.jsx)(a.B, {
-                    direction: "horizontal",
-                    wrap: !0,
-                    gap: 8,
-                    padding: { top: 24 },
-                    children: (0, i.jsx)(c.Zg, { disabled: !1, size: I.ni.SIZE_48 }),
-                }),
-                (0, i.jsx)(L, {}),
-            ],
-        }),
-    });
-}
+            });
+        },
+    },
+);

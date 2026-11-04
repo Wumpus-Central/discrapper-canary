@@ -1,9 +1,8 @@
-s.d(t, { A: () => b });
 var n = s(477900),
     r = s(582128),
     a = s(492462),
     i = s(607399),
-    l = s(17928),
+    l = s(855986),
     o = s(825484),
     c = s(821609),
     d = s(73153),
@@ -12,13 +11,13 @@ var n = s(477900),
     p = s(15552),
     m = s(854378),
     N = s(701273),
-    E = s(572469),
+    E = s(397404),
     g = s(976860),
     f = s(210714),
-    y = s(280450),
-    A = s(625494),
+    y = s(46653),
+    A = s(188567),
     w = s(652215),
-    I = s(105292),
+    I = s(792996),
     x = s(498206),
     C = s(221851);
 l.Ay.initialize();
@@ -26,9 +25,9 @@ class v extends r.PureComponent {
     static defaultProps = { transitionTo: g.pX, replaceWith: g.bG };
     constructor(e) {
         super(e);
-        const t =
+        let t =
             this.props.location?.search != null && "" !== this.props.location.search
-                ? (0, a.parse)(this.props.location.search)
+                ? (0, a.qg)(this.props.location.search)
                 : null;
         this.state = {
             method: "",
@@ -210,10 +209,16 @@ class v extends r.PureComponent {
               : this.renderPasswordReset();
     }
 }
-let b = function (e) {
-    let t = (0, l.cf)([y.default], () => ({
-        mfaTicket: y.default.getMFATicket(),
-        mfaMethods: y.default.getMFAMethods(),
-    }));
-    return (0, n.jsx)(v, { ...e, ...t });
-};
+s.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let t = (0, l.cf)([y.default], () => ({
+                mfaTicket: y.default.getMFATicket(),
+                mfaMethods: y.default.getMFAMethods(),
+            }));
+            return (0, n.jsx)(v, { ...e, ...t });
+        },
+    },
+);

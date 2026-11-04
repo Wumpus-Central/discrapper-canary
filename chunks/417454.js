@@ -1,16 +1,15 @@
-s.d(l, { Ay: () => es, b_: () => Q });
 var n = s(477900),
     r = s(582128),
     i = s(503698),
     t = s.n(i),
     o = s(284009),
     a = s.n(o),
-    d = s(132500),
+    d = s(115560),
     c = s(837381),
-    u = s(887129),
+    u = s(116903),
     m = s(317097),
-    x = s(17928),
-    f = s(661531),
+    x = s(855986),
+    f = s(646514),
     h = s(858899),
     g = s(305866),
     b = s(138134),
@@ -23,13 +22,13 @@ var n = s(477900),
     y = s(265872),
     C = s(307301),
     w = s(442433),
-    P = s(66834),
+    P = s(778858),
     M = s(456412),
     _ = s(775602),
     E = s(63104),
     S = s(235986),
     k = s(915089),
-    I = s(468689),
+    I = s(727419),
     T = s(967144),
     G = s(69282),
     H = s(657048),
@@ -42,7 +41,7 @@ var n = s(477900),
     D = s(287809),
     J = s(488926),
     V = s(652215),
-    W = s(105292),
+    W = s(792996),
     F = s(371418);
 let X = () => Promise.resolve();
 function B() {
@@ -99,7 +98,7 @@ function Q(e) {
         z = r.useCallback(
             (e) => {
                 (0, w.L3)(e, async () => {
-                    let { default: e } = await Promise.all([s.e("638221"), s.e("715687")]).then(s.bind(s, 646938));
+                    let { default: e } = await Promise.all([s.e(638221), s.e(715687)]).then(s.bind(s, 646938));
                     return (l) => (0, n.jsx)(e, { ...l, id: u.id, label: W.intl.string(W.t.sMsaLg) });
                 });
             },
@@ -302,9 +301,16 @@ function ee(e) {
     );
 }
 let el = (0, M.A)(ee);
-function es(e) {
-    return (
-        (0, x.bG)([$.A], () => $.A.getGuildVersion(e.guild?.id)),
-        !1 === e.wrap ? (0, n.jsx)(el, { ...e }) : (0, n.jsx)(ee, { ...e })
-    );
-}
+s.d(
+    l,
+    {},
+    {
+        Ay: function (e) {
+            return (
+                (0, x.bG)([$.A], () => $.A.getGuildVersion(e.guild?.id)),
+                !1 === e.wrap ? (0, n.jsx)(el, { ...e }) : (0, n.jsx)(ee, { ...e })
+            );
+        },
+        b_: Q,
+    },
+);

@@ -1,7 +1,6 @@
-n.d(t, { A: () => d, l: () => u });
-var s = n(58703),
+var s = n(5377),
     i = n(927813),
-    a = n(935208),
+    a = n(811091),
     l = n(143413),
     o = n(652215);
 let r = 7 * i.A.Millis.MINUTE;
@@ -9,14 +8,6 @@ function c(e) {
     return null == e || "" === e ? null : e;
 }
 function u(e, t, n) {
-    return (
-        null == t ||
-        (t.type === o.TZK.MESSAGE && t.content.id === t.content.channel_id) ||
-        (t.type !== o.TZK.MESSAGE && t.type !== o.TZK.THREAD_STARTER_MESSAGE) ||
-        d(e, t.content, n)
-    );
-}
-function d(e, t, n) {
     return (
         !!(n.hasFlag(o.pr7.HAS_THREAD) || n.isCommandType()) ||
         t.blocked !== n.blocked ||
@@ -40,3 +31,18 @@ function d(e, t, n) {
               c(n.additionalName) !== c(t.additionalName))
     );
 }
+n.d(
+    t,
+    {},
+    {
+        A: u,
+        l: function (e, t, n) {
+            return (
+                null == t ||
+                (t.type === o.TZK.MESSAGE && t.content.id === t.content.channel_id) ||
+                (t.type !== o.TZK.MESSAGE && t.type !== o.TZK.THREAD_STARTER_MESSAGE) ||
+                u(e, t.content, n)
+            );
+        },
+    },
+);

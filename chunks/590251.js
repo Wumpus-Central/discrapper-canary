@@ -1,4 +1,3 @@
-r.d(e, { a: () => n });
 var t = r(477900),
     a = r(582128),
     c = r(503698),
@@ -46,3 +45,4 @@ class n extends a.Component {
         });
     }
 }
+r.d(e, {}, { a: n });

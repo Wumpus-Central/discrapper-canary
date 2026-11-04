@@ -1,4 +1,4 @@
-d.d(t, { Selfie: () => h });
+d.r(t);
 var i = d(768611),
     e = d(200503),
     c = d(628926),
@@ -7,17 +7,17 @@ var i = d(768611),
     n = d(360710),
     Z = d(585387),
     b = d(918676),
-    m = d(65092),
+    m = d(423649),
     o = !1,
     u = ({ config: l, manager: t, onFinish: c, onError: b }) => {
         (0, i._)(() => {
-            o || ((o = !0), d.e("136118").then(d.bind(d, 961941)));
+            o || ((o = !0), d.e(136118).then(d.bind(d, 961941)));
         }, []);
         let [u, h] = (0, e.u)(
             () => {
                 if (t) return t;
                 if (!l) throw Error("Selfie config is required when no manager is provided");
-                return (0, m.y6)({ config: l });
+                return (0, m.createSelfieManager)({ config: l });
             },
             { manageLifecycle: !t },
         );
@@ -36,4 +36,4 @@ var i = d(768611),
     },
     h = ({ config: l, manager: t, onFinish: d, onError: e }) =>
         (0, i.v)(c.t, { children: l || t ? (0, i.v)(u, { config: l, manager: t, onFinish: d, onError: e }) : null });
-(0, b.t)(h, "incode-selfie");
+((0, b.t)(h, "incode-selfie"), d.d(t, {}, { Selfie: h }));

@@ -1,7 +1,6 @@
-n.d(t, { A: () => _ });
 var i = n(435558),
     r = n.n(i),
-    a = n(17928),
+    a = n(855986),
     s = n(73153),
     l = n(927813);
 let o = { preferredRegions: null, lastTestTimestamp: null, lastGeoRankedOrder: null },
@@ -50,3 +49,4 @@ let _ = new u(s.h, {
             (d.lastTestTimestamp = Date.now()));
     },
 });
+n.d(t, {}, { A: _ });

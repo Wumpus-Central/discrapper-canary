@@ -1,12 +1,12 @@
 e.r(
-    (a.exports = {
-        wrapper: "wrapper__518a0",
-        critical: "critical__518a0",
-        success: "success__518a0",
-        baselayer: "baselayer__518a0",
-        default: "default__518a0",
-        icon: "icon__518a0",
-        content: "content__518a0",
-        customContent: "customContent__518a0",
+    (t.exports = {
+        wrapper: "wrapper_O41c2-",
+        critical: "critical_O41c2-",
+        success: "success_O41c2-",
+        baselayer: "baselayer_O41c2-",
+        default: "default_O41c2-",
+        icon: "icon_O41c2-",
+        content: "content_O41c2-",
+        customContent: "customContent_O41c2-",
     }),
 );

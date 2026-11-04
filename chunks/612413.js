@@ -1,4 +1,3 @@
-n.d(t, { Tp: () => o, mh: () => l, zA: () => r });
 var i = n(945810);
 let a = (0, i.mj)({
         kind: "user",
@@ -12,13 +11,20 @@ let a = (0, i.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     });
-function l(e) {
-    let { location: t } = e,
-        { enabled: n } = a.useConfig({ location: t });
-    return n;
-}
-function o(e) {
-    let { location: t } = e,
-        { enabled: n } = a.getConfig({ location: t });
-    return n;
-}
+n.d(
+    t,
+    {},
+    {
+        Tp: function (e) {
+            let { location: t } = e,
+                { enabled: n } = a.getConfig({ location: t });
+            return n;
+        },
+        mh: function (e) {
+            let { location: t } = e,
+                { enabled: n } = a.useConfig({ location: t });
+            return n;
+        },
+        zA: r,
+    },
+);

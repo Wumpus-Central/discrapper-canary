@@ -1,9 +1,8 @@
-n.d(t, { A: () => S });
 var i = n(435558),
     r = n.n(i),
     a = n(314116),
     s = n(308528),
-    l = n(148494),
+    l = n(138399),
     o = n(155718),
     d = n(47167),
     c = n(451909),
@@ -16,7 +15,7 @@ var i = n(435558),
     I = n(392054),
     p = n(73510),
     m = n(652215),
-    T = n(105292);
+    T = n(792996);
 function g(e) {
     return e === m.Z86.GIF.title ? T.intl.string(T.t["0vrCgJ"]) : "";
 }
@@ -95,18 +94,22 @@ let S = [
                 r = T.intl.formatToPlainString(T.t.hJ5Ap4, { name: i }),
                 o = T.intl.format(T.t.SSIVOu, { name: i }),
                 c = e.find((e) => "silent" === e.name)?.value ?? !1;
-            async function u() {
-                if (null != n)
-                    try {
-                        await s.A.closePrivateChannel(n.id, void 0, c);
-                    } catch (e) {
-                        l.A.sendBotMessage(n.id, T.intl.string(T.t["YOsuT/"]));
-                    }
-            }
             (n.isManaged() &&
                 ((r = T.intl.formatToPlainString(T.t.hVGjEW, { name: i })),
                 (o = T.intl.format(T.t.IK1Qvs, { name: i }))),
-                (0, a.A)({ title: r, subtitle: o, confirmText: T.intl.string(T.t["26C4oi"]), onConfirm: u }));
+                (0, a.A)({
+                    title: r,
+                    subtitle: o,
+                    confirmText: T.intl.string(T.t["26C4oi"]),
+                    onConfirm: async function () {
+                        if (null != n)
+                            try {
+                                await s.A.closePrivateChannel(n.id, void 0, c);
+                            } catch (e) {
+                                l.A.sendBotMessage(n.id, T.intl.string(T.t["YOsuT/"]));
+                            }
+                    },
+                }));
         },
     },
     {
@@ -183,3 +186,4 @@ let S = [
         integrationTitle: "sticker",
     },
 ];
+n.d(t, {}, { A: S });

@@ -1,10 +1,9 @@
-n.d(t, { W: () => h, v: () => m });
 var l = n(477900);
 n(582128);
 var r = n(503698),
     i = n.n(r),
     a = n(575593),
-    s = n(17928),
+    s = n(855986),
     u = n(834730),
     c = n(474012),
     o = n(607123),
@@ -26,34 +25,44 @@ function h(e) {
         ],
     });
 }
-function m(e) {
-    let { className: t, product: n, title: r, subtitle: m, badge: p } = e,
-        C = (0, s.bG)([d.default], () => d.default.getCurrentUser()),
-        y = (0, c.tP)(n);
-    return null == y
-        ? null
-        : (0, l.jsx)(h, {
-              className: t,
-              image: (0, l.jsx)("div", {
-                  className: f.yn,
-                  children: (0, l.jsx)("div", {
-                      className: i()(f.ML, {
-                          [f.M]: n?.type === a.R.AVATAR_DECORATION,
-                          [f.Hm]: n?.type === a.R.PROFILE_EFFECT,
-                          [f.hH]: n?.type === a.R.PROFILE_FRAME,
-                          [f.qF]: n?.type === a.R.NAMEPLATE,
-                          [f.l2]: n?.type === a.R.BUNDLE,
+n.d(
+    t,
+    {},
+    {
+        W: h,
+        v: function (e) {
+            let { className: t, product: n, title: r, subtitle: m, badge: p } = e,
+                C = (0, s.bG)([d.default], () => d.default.getCurrentUser()),
+                y = (0, c.tP)(n);
+            return null == y
+                ? null
+                : (0, l.jsx)(h, {
+                      className: t,
+                      image: (0, l.jsx)("div", {
+                          className: f.yn,
+                          children: (0, l.jsx)("div", {
+                              className: i()(f.ML, {
+                                  [f.M]: n?.type === a.R.AVATAR_DECORATION,
+                                  [f.Hm]: n?.type === a.R.PROFILE_EFFECT,
+                                  [f.hH]: n?.type === a.R.PROFILE_FRAME,
+                                  [f.qF]: n?.type === a.R.NAMEPLATE,
+                                  [f.l2]: n?.type === a.R.BUNDLE,
+                              }),
+                              children: (0, l.jsx)(o.pL, {
+                                  collectiblesItem: y,
+                                  user: C,
+                                  nameplatePreviewStyle: f.M4,
+                                  nameplatePreviewRescalerStyle: f.N1,
+                              }),
+                          }),
                       }),
-                      children: (0, l.jsx)(o.pL, {
-                          collectiblesItem: y,
-                          user: C,
-                          nameplatePreviewStyle: f.M4,
-                          nameplatePreviewRescalerStyle: f.N1,
-                      }),
-                  }),
-              }),
-              badge: p,
-              title: null != r && (0, l.jsx)(u.E, { variant: "body-md/medium", color: "text-default", children: r }),
-              body: null != m && (0, l.jsx)(u.E, { variant: "body-sm/medium", color: "text-muted", children: m }),
-          });
-}
+                      badge: p,
+                      title:
+                          null != r &&
+                          (0, l.jsx)(u.E, { variant: "body-md/medium", color: "text-default", children: r }),
+                      body:
+                          null != m && (0, l.jsx)(u.E, { variant: "body-sm/medium", color: "text-muted", children: m }),
+                  });
+        },
+    },
+);

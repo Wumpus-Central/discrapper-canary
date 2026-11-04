@@ -8,17 +8,17 @@ let n = r(115004),
         "^\\s*(\\-|\\\u2013|\\~|\\\u301C|[\xe0a]|\\?)\\s*(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s|:)?)?(?:\\s*(A\\.M\\.|P\\.M\\.|AM?|PM?))?(?=\\W|$)",
         "i",
     );
-class s {
+t.default = class e {
     pattern(e) {
         return a;
     }
-    extract(e, t) {
-        let r = e.createParsingResult(t.index + t[1].length, t[0].substring(t[1].length));
-        if (r.text.match(/^\d{4}$/) || ((r.start = s.extractTimeComponent(r.start.clone(), t)), !r.start))
-            return ((t.index += t[0].length), null);
-        let n = e.text.substring(t.index + t[0].length),
-            a = i.exec(n);
-        return (a && ((r.end = s.extractTimeComponent(r.start.clone(), a)), r.end && (r.text += a[0])), r);
+    extract(t, r) {
+        let n = t.createParsingResult(r.index + r[1].length, r[0].substring(r[1].length));
+        if (n.text.match(/^\d{4}$/) || ((n.start = e.extractTimeComponent(n.start.clone(), r)), !n.start))
+            return ((r.index += r[0].length), null);
+        let a = t.text.substring(r.index + r[0].length),
+            s = i.exec(a);
+        return (s && ((n.end = e.extractTimeComponent(n.start.clone(), s)), n.end && (n.text += s[0])), n);
     }
     static extractTimeComponent(e, t) {
         let r = 0,
@@ -47,5 +47,4 @@ class s {
         }
         return e;
     }
-}
-t.default = s;
+};

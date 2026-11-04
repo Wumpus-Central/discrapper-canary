@@ -1,4 +1,9 @@
-r.d(t, { A: () => n });
-function n(e, t) {
-    if (!e) throw Error("Invariant failed");
-}
+e.d(
+    r,
+    {},
+    {
+        A: function (t, r) {
+            if (!t) throw Error("Invariant failed");
+        },
+    },
+);

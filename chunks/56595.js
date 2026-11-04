@@ -1,4 +1,9 @@
-function i(e) {
-    return e.moderatorReporting?.moderatorReportingEnabled ?? !1;
-}
-n.d(t, { A: () => i });
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            return e.moderatorReporting?.moderatorReportingEnabled ?? !1;
+        },
+    },
+);

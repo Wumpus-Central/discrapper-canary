@@ -1,31 +1,36 @@
-n.d(t, { j: () => l, t: () => s });
 var i = n(403362),
     r = n(488995),
-    a = n(105292);
-function s(e) {
-    switch (e) {
-        case r.GlobalDiscoveryTab.SERVERS:
-            return a.intl.string(a.t["+Anbp9"]);
-        case r.GlobalDiscoveryTab.APPS:
-            return a.intl.string(a.t.bGwCoR);
-        case r.GlobalDiscoveryTab.QUESTS:
-            return a.intl.string(a.t.EcaD4e);
-        case r.GlobalDiscoveryTab.GAMES:
-            return a.intl.string(a.t.NTv8WZ);
-        default:
-            (0, i.xb)(e);
-    }
-}
-function l(e) {
-    if (e.startsWith("/discovery/applications")) return r.GlobalDiscoveryTab.APPS;
-    switch (e) {
-        case "/discovery/quests":
-            return r.GlobalDiscoveryTab.QUESTS;
-        case "/discovery/servers":
-            return r.GlobalDiscoveryTab.SERVERS;
-        case "/discovery/games":
-            return r.GlobalDiscoveryTab.GAMES;
-        default:
-            return r.GLOBAL_DISCOVERY_DEFAULT_TAB;
-    }
-}
+    a = n(792996);
+n.d(
+    t,
+    {},
+    {
+        j: function (e) {
+            if (e.startsWith("/discovery/applications")) return r.GlobalDiscoveryTab.APPS;
+            switch (e) {
+                case "/discovery/quests":
+                    return r.GlobalDiscoveryTab.QUESTS;
+                case "/discovery/servers":
+                    return r.GlobalDiscoveryTab.SERVERS;
+                case "/discovery/games":
+                    return r.GlobalDiscoveryTab.GAMES;
+                default:
+                    return r.Pd;
+            }
+        },
+        t: function (e) {
+            switch (e) {
+                case r.GlobalDiscoveryTab.SERVERS:
+                    return a.intl.string(a.t["+Anbp9"]);
+                case r.GlobalDiscoveryTab.APPS:
+                    return a.intl.string(a.t.bGwCoR);
+                case r.GlobalDiscoveryTab.QUESTS:
+                    return a.intl.string(a.t.EcaD4e);
+                case r.GlobalDiscoveryTab.GAMES:
+                    return a.intl.string(a.t.NTv8WZ);
+                default:
+                    (0, i.xb)(e);
+            }
+        },
+    },
+);

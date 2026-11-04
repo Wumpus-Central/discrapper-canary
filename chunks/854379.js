@@ -1,65 +1,77 @@
-(n.r(t), n.d(t, { default: () => A }));
+n.r(t);
 var s = n(477900),
-    i = n(582128),
-    u = n(621466),
+    u = n(582128),
+    i = n(621466),
     r = n(192308),
-    a = n(315710),
-    o = n(315246),
-    c = n(267102),
+    c = n(315710),
+    a = n(315246),
+    o = n(267102),
     l = n(712687),
-    d = n(625494),
+    d = n(188567),
     f = n(211401),
     p = n(500049),
-    v = n(524579),
+    v = n(621377),
     E = n(699803),
     L = n(60809),
-    O = n(652215),
-    b = n(732139);
-function h() {
+    b = n(652215),
+    O = n(732139);
+function j() {
     f.k(p.Se.DISMISSED);
 }
-let A = function (e) {
-    let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: f } = e,
-        A = i.useRef(null),
-        { renderWindow: T, windowDispatch: j } = i.useContext(c.Ay),
-        m = null != f,
-        S = (0, r.useIsModalAtTop)(f ?? ""),
-        y = i.useCallback(
-            (e) => {
-                if ((!m && (0, r.hasAnyModalOpen)()) || (m && !(S && n)) || l.A.isOpen() || e.defaultPrevented) return;
-                let { target: t } = e;
-                if ((0, u.vq)(t) && null != t.closest("." + L.Wx)) return;
-                for (; (0, u.vq)(t);) {
-                    if (t === A.current) return;
-                    if (t.classList.contains(L.KG) || t.classList.contains(L.Gu)) return void e.preventDefault();
-                    if (t.classList.contains(L.qp)) return;
-                    let n = [b.Do, o.n];
-                    if (t.classList.contains(L.TY) || n.includes(t.id)) return;
-                    t = t.parentNode;
-                }
-                h();
-                let s = (0, u.BF)(e)?.activeElement;
-                (null == s || "BODY" === s.tagName) && d._.dispatchToLastSubscribed(O.jej.TEXTAREA_FOCUS);
-            },
-            [n, S, m],
-        );
-    (i.useLayoutEffect(
-        () => (
-            T.addEventListener("mousedown", y),
-            T.addEventListener("contextmenu", y),
-            j.subscribe(O.jej.POPOUT_CLOSE, h),
-            () => {
-                (T.removeEventListener("mousedown", y),
-                    T.removeEventListener("contextmenu", y),
-                    j.unsubscribe(O.jej.POPOUT_CLOSE, h));
-            }
-        ),
-        [y, T, j],
-    ),
-        (0, a.tj)(A),
-        i.useEffect(() => {
-            ((!m && (0, r.hasAnyModalOpen)()) || (m && !S)) && h();
-        }, [S, m]));
-    let C = (0, E.A)();
-    return (0, s.jsx)(v.A, { ref: A, context: { channel: t, type: "channel" }, entrypoint: p.s4.TEXT, initHistory: C });
-};
+n.d(
+    t,
+    {},
+    {
+        default: function (e) {
+            let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: f } = e,
+                m = u.useRef(null),
+                { renderWindow: S, windowDispatch: T } = u.useContext(o.Ay),
+                h = null != f,
+                A = (0, r.LA)(f ?? ""),
+                C = u.useCallback(
+                    (e) => {
+                        if ((!h && (0, r.ue)()) || (h && !(A && n)) || l.A.isOpen() || e.defaultPrevented) return;
+                        let { target: t } = e;
+                        if ((0, i.vq)(t) && null != t.closest("." + L.Wx)) return;
+                        for (; (0, i.vq)(t);) {
+                            if (t === m.current) return;
+                            if (t.classList.contains(L.KG) || t.classList.contains(L.Gu))
+                                return void e.preventDefault();
+                            if (t.classList.contains(L.qp)) return;
+                            let n = [O.Do, a.n];
+                            if (t.classList.contains(L.TY) || n.includes(t.id)) return;
+                            t = t.parentNode;
+                        }
+                        j();
+                        let s = (0, i.BF)(e)?.activeElement;
+                        (null == s || "BODY" === s.tagName) && d._.dispatchToLastSubscribed(b.jej.TEXTAREA_FOCUS);
+                    },
+                    [n, A, h],
+                );
+            (u.useLayoutEffect(
+                () => (
+                    S.addEventListener("mousedown", C),
+                    S.addEventListener("contextmenu", C),
+                    T.subscribe(b.jej.POPOUT_CLOSE, j),
+                    () => {
+                        (S.removeEventListener("mousedown", C),
+                            S.removeEventListener("contextmenu", C),
+                            T.unsubscribe(b.jej.POPOUT_CLOSE, j));
+                    }
+                ),
+                [C, S, T],
+            ),
+                (0, c.tj)(m),
+                u.useEffect(() => {
+                    ((!h && (0, r.ue)()) || (h && !A)) && j();
+                }, [A, h]));
+            let k = (0, E.A)();
+            return (0, s.jsx)(v.A, {
+                ref: m,
+                context: { channel: t, type: "channel" },
+                entrypoint: p.s4.TEXT,
+                initHistory: k,
+            });
+        },
+    },
+);

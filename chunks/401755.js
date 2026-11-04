@@ -1,4 +1,3 @@
-n.d(t, { IZ: () => s, QB: () => a });
 var i,
     r,
     a =
@@ -20,3 +19,4 @@ var i,
         (r.LEAGUE_CLUBS = "PJ6VvgEJYg45"),
         (r.GITHUB_HACKATHON = "UqzZCTj2zfwy"),
         r);
+n.d(t, {}, { IZ: s, QB: a });

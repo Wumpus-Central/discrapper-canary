@@ -1,6 +1,5 @@
 let i;
-n.d(t, { A: () => o });
-var s = n(17928),
+var s = n(855986),
     r = n(73153);
 let l = !1;
 class a extends s.Ay.Store {
@@ -30,3 +29,4 @@ let o = new a(r.h, {
         ((l = !1), (i = null));
     },
 });
+n.d(t, {}, { A: o });

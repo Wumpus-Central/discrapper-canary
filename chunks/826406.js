@@ -1,0 +1,164 @@
+(n.d(t, { ML: () => d, FH: () => I, iQ: () => h, P4: () => E, pd: () => A, pX: () => T, hw: () => m }), n(321073));
+var i = n(284009),
+    r = n.n(i),
+    a = n(306173),
+    s = n(626584),
+    l = n(157016);
+let o = new s.A("libdiscoreExperiments"),
+    d = [],
+    c = Symbol("unknown");
+class u {
+    id;
+    inner = null;
+    cachedConfig = c;
+    constructor(e, t) {
+        ((this.id = e), d.push(this));
+    }
+    getEnabledFeatureName() {
+        let e = this.getCachedConfig();
+        return void 0 === e || e.treatmentId <= 0 ? null : `${this.id}:${e.treatmentId}`;
+    }
+    getCachedConfig() {
+        return (
+            this.cachedConfig === c &&
+                ((0, a.xd)() ? (this.cachedConfig = (0, a.Ih)().getConfig(this.id)) : (this.cachedConfig = void 0)),
+            this.cachedConfig
+        );
+    }
+    setExperiment(e) {
+        this.inner = e;
+    }
+    getCurrentConfig(e) {
+        r()(null != this.inner, "experiment must be set before reading the current config");
+        let t = e?.autoTrackExposure ?? !0;
+        return "getCurrentConfig" in this.inner
+            ? this.inner.getCurrentConfig({ location: "default" }, { autoTrackExposure: t })
+            : this.inner.getConfig({ location: "default" }, { autoTrackExposure: t });
+    }
+    trackExposureIfCachedConfigMatches(e) {
+        let t = this.getCachedConfig();
+        t?.treatmentId === e.treatmentId && this.getCurrentConfig();
+    }
+}
+class _ extends u {
+    label;
+    defaultValue;
+    constructor(e, t, n = !1) {
+        (super(e), (this.label = t), (this.defaultValue = n));
+    }
+    getLabel() {
+        return this.label;
+    }
+    getTreatments() {
+        return [{ treatmentId: 0 }, { treatmentId: 1 }];
+    }
+    getCachedEnabled() {
+        let e = this.getCachedConfig();
+        return null == e || -1 === e.treatmentId ? this.defaultValue : 1 === e.treatmentId;
+    }
+}
+let E = new (class extends u {
+        storeName;
+        constructor(e, t, n) {
+            (super(e, n), (this.storeName = t));
+        }
+        getCachedBridgedStoreMode() {
+            var e;
+            let t = this.getCachedConfig();
+            return "typescript" ===
+                (e = (() => {
+                    switch (t?.treatmentId ?? -1) {
+                        case 1:
+                            return "typescript-libdiscore-dual-read";
+                        case 2:
+                            return "libdiscore";
+                        default:
+                            return "typescript";
+                    }
+                })()) || (0, l.O)()
+                ? e
+                : "typescript";
+        }
+        getEnabledFeatureName() {
+            let e = this.getCachedBridgedStoreMode();
+            return "typescript" === e ? null : `BridgedStore[${this.storeName},${e}]`;
+        }
+        getLabel() {
+            return `libdiscore '${this.storeName}' Migration`;
+        }
+        getTreatments() {
+            return [{ treatmentId: 0 }, { treatmentId: 1 }, { treatmentId: 2 }];
+        }
+    })("2026-01-libdiscore-batch-store-refactor", "batch-store-refactor"),
+    A = new (class extends u {
+        MAX_EMISSIONS_PER_APP_LAUNCH = 5;
+        emissionsCount = 0;
+        getLabel() {
+            return "libdiscore Telemetry";
+        }
+        getTreatments() {
+            return [{ treatmentId: 0 }, { treatmentId: 1 }, { treatmentId: 2 }, { treatmentId: 3 }];
+        }
+        getMetricsSampleRate() {
+            let e = this.getCachedConfig();
+            switch (e?.treatmentId) {
+                case 1:
+                    return 0.01;
+                case 2:
+                    return 0.05;
+                case 3:
+                    return 1;
+                default:
+                    return 0;
+            }
+        }
+        didEmit() {
+            this.emissionsCount++;
+        }
+        shouldCollectMetrics() {
+            let e = this.getMetricsSampleRate();
+            return (
+                0 !== e &&
+                (1 === e || (!(this.emissionsCount >= this.MAX_EMISSIONS_PER_APP_LAUNCH) && Math.random() < e))
+            );
+        }
+    })("2025-09-libdiscore-telemetry"),
+    h = new _("2025-11-defer-load-late-lazy-cache", "Allow react to render before lazy cache is loaded");
+new _("2026-09-react-compiler-mobile", "React Compiler for mobile");
+class f extends u {
+    label;
+    treatmentCount;
+    getLabel() {
+        return this.label;
+    }
+    getTreatments() {
+        return Array.from({ length: this.treatmentCount }, (e, t) => ({ treatmentId: t }));
+    }
+    constructor(e, t, n) {
+        (super(e), (this.label = t), (this.treatmentCount = n));
+    }
+}
+let I = new f("2026-01-android-rmle", "Android Pull Mode Rendering", 4);
+(new f("2026-02-android-fresco-cache", "Android Fresco Cache", 3),
+    new _("2026-02-android-chat-mosaic-shared-pool", "Android Chat Mosaic Shared Pool"),
+    new _("2026-03-mobile-hermes-occupancy-target", "Android Hermes Occupancy Target"),
+    new _("2026-08-android-jank-per-screen", "Android Per-Screen Jank Aggregation"),
+    new f("2026-10-android-chat-preinflation", "Android Chat Preinflation", 3),
+    new f("2026-10-uimanager-experiments", "UIManager Experiments", 3),
+    new _("2026-10-android-ui-manager-constants-cache", "Android UIManager Constants Cache"),
+    new _("2026-09-ios-callkit-connected-on-rtc", "iOS: show CallKit connected only once voice flows"),
+    new _("2026-11-android-telecom", "Android: Support TelecomManager on Android"),
+    new _("2026-10-ios-jank-per-screen", "iOS Per-Screen Jank Aggregation"),
+    new _(
+        "2026-08-android-rn-reparenting-flag",
+        "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions",
+    ),
+    new f("2026-08-ios-objc-composed-image-cache", "iOS ObjC Composed Image Cache", 3));
+let p = !1;
+function m() {
+    return p;
+}
+function T() {
+    (0, a.xd)() &&
+        (o.info("Clearing libdiscore experiment cache and disabling sync"), (p = !0), (0, a.Ih)().clearCache());
+}

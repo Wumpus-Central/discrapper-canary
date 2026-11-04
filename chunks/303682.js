@@ -1,12 +1,11 @@
-i.d(t, { SelectFriendsModalScreens: () => N, default: () => _ });
 var s,
     a = i(477900),
     n = i(582128),
     r = i(503698),
     l = i.n(r),
-    u = i(17928),
+    u = i(855986),
     o = i(189213),
-    c = i(453318),
+    c = i(873200),
     d = i(821609),
     f = i(289873),
     h = i(803306),
@@ -14,16 +13,16 @@ var s,
     A = i(793574),
     S = i(688810),
     g = i(994500),
-    R = i(174459),
+    R = i(129230),
     m = i(975571),
     E = i(427262),
     C = i(326084),
     w = i(851746),
-    y = i(794783),
+    y = i(14021),
     M = i(972007),
-    x = i(809813),
+    x = i(810852),
     b = i(652215),
-    v = i(105292),
+    v = i(792996),
     I = i(989174);
 function j(e) {
     let { transitionState: t, onClose: i, onShare: s } = e,
@@ -204,31 +203,38 @@ var N =
     (s[(s.CONFIRMATION = 2)] = "CONFIRMATION"),
     (s[(s.REMINDER = 3)] = "REMINDER"),
     s);
-let _ = function (e) {
-    let { transitionState: t, onClose: i, startingScreen: s = 1 } = e,
-        r = (0, u.bG)([w.A], () => w.A.getReferralsRemaining()),
-        [l, o] = n.useState(s),
-        [c, d] = n.useState([]),
-        { analyticsLocations: h } = (0, S.Ay)([A.A.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
-    async function p(e) {
-        R.default.track(b.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: h });
-        let t = await (0, C.xm)(Object.values(e).map((e) => e.id));
-        (d(e.map((e) => ({ recipient: e, status: t.get(e.id) }))), o(2));
-    }
-    if (null === r) return (0, a.jsx)(f.y, {});
-    switch (l) {
-        case 2:
-            return (0, a.jsx)(x.TrialsSharedConfirmationModal, {
-                transitionState: t,
-                isReminderConfirmation: 3 === s,
-                results: c,
-                onClose: i,
-            });
-        case 1:
-            return (0, a.jsx)(j, { transitionState: t, onClose: i, onShare: p });
-        case 3:
-            return (0, a.jsx)(z, { transitionState: t, onClose: i, onShare: p });
-        default:
-            return;
-    }
-};
+i.d(
+    t,
+    {},
+    {
+        SelectFriendsModalScreens: N,
+        default: function (e) {
+            let { transitionState: t, onClose: i, startingScreen: s = 1 } = e,
+                r = (0, u.bG)([w.A], () => w.A.getReferralsRemaining()),
+                [l, o] = n.useState(s),
+                [c, d] = n.useState([]),
+                { analyticsLocations: h } = (0, S.Ay)([A.A.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
+            async function p(e) {
+                R.default.track(b.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: h });
+                let t = await (0, C.xm)(Object.values(e).map((e) => e.id));
+                (d(e.map((e) => ({ recipient: e, status: t.get(e.id) }))), o(2));
+            }
+            if (null === r) return (0, a.jsx)(f.y, {});
+            switch (l) {
+                case 2:
+                    return (0, a.jsx)(x.TrialsSharedConfirmationModal, {
+                        transitionState: t,
+                        isReminderConfirmation: 3 === s,
+                        results: c,
+                        onClose: i,
+                    });
+                case 1:
+                    return (0, a.jsx)(j, { transitionState: t, onClose: i, onShare: p });
+                case 3:
+                    return (0, a.jsx)(z, { transitionState: t, onClose: i, onShare: p });
+                default:
+                    return;
+            }
+        },
+    },
+);

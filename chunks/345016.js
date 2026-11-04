@@ -1,7 +1,7 @@
 e.exports = {
-    Vf: "previewTitle__6b741",
-    VH: "preview__6b741",
-    DZ: "messages__6b741",
-    HD: "avatars__6b741",
-    Jb: "previewRight__6b741",
+    Vf: "previewTitle_TpS9Es",
+    VH: "preview_TpS9Es",
+    DZ: "messages_TpS9Es",
+    HD: "avatars_TpS9Es",
+    Jb: "previewRight_TpS9Es",
 };

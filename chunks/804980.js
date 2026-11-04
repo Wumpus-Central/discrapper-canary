@@ -1,16 +1,15 @@
-n.d(t, { Ay: () => J, LN: () => Y });
 var i = n(477900),
     l = n(582128),
     r = n(503698),
     s = n.n(r),
-    a = n(17928),
+    a = n(855986),
     o = n(778712),
     u = n(866665),
     d = n(834730),
     c = n(821609),
     h = n(212245),
     f = n(933958),
-    g = n(62583),
+    g = n(211449),
     A = n(878549),
     p = n(969151),
     m = n(550151),
@@ -30,15 +29,15 @@ var i = n(477900),
     x = n(898879),
     w = n(293495),
     L = n(267102),
-    U = n(567249),
-    P = n(280450),
+    U = n(293432),
+    P = n(46653),
     b = n(186111),
     G = n(287809),
     F = n(403362),
     j = n(562153),
     k = n(652215),
     V = n(165610),
-    H = n(105292),
+    H = n(792996),
     B = n(782660);
 let W = ["embedded_background"];
 function Y(e) {
@@ -124,53 +123,63 @@ function z(e) {
         ],
     });
 }
-function J(e) {
-    let { participant: t, width: n, selected: r, interactible: s, channel: o } = e,
-        { analyticsLocations: u } = (0, y.Ay)(v.A.ACTIVITY_TILE),
-        { applicationId: d, frameId: c } = t,
-        h = (0, I.A)(),
-        f = (0, a.bG)([O.A], () => (0, V.ny)(O.A.getFrame(c)), [c]),
-        g = (0, L.Us)() === k.BRT.APP,
-        A = null != h && (0, p.H)(h.location) === o.id && h.applicationId === d,
-        m = f?.id,
-        _ = f?.data.layoutMode,
-        M = null != m || A,
-        P = null != m ? g : A,
-        [G] = (0, D.A)([d]),
-        { url: F } = (0, E.A)({ applicationId: d, names: W, size: 1024 }),
-        j = !r && P,
-        H = !P,
-        Y = (0, a.bG)([b.A, U.A], () => (0, T.A)({ LayerStore: b.A, PopoutWindowStore: U.A }));
-    return (
-        l.useEffect(() => {
-            if (j && null == m && null != h && !Y) {
-                let e = (0, N.A)(h.location.id, h.applicationId);
-                (0, C.cK)(e);
-            }
-        }, [j, m, h, Y]),
-        l.useEffect(() => {
-            j && null != m && _ !== V.y0.FOCUSED && R.A.updateFrameLayoutMode({ frameId: m, layoutMode: V.y0.FOCUSED });
-        }, [j, m, _]),
-        (0, i.jsx)(y.f5, {
-            value: u,
-            children: (0, i.jsxs)("div", {
-                className: B.kL,
-                children: [
-                    j && null != f && (0, i.jsx)(x.A, { className: B.pU, embedId: (0, w.YY)(f) }),
+n.d(
+    t,
+    {},
+    {
+        Ay: function (e) {
+            let { participant: t, width: n, selected: r, interactible: s, channel: o } = e,
+                { analyticsLocations: u } = (0, y.Ay)(v.A.ACTIVITY_TILE),
+                { applicationId: d, frameId: c } = t,
+                h = (0, I.A)(),
+                f = (0, a.bG)([O.A], () => (0, V.ny)(O.A.getFrame(c)), [c]),
+                g = (0, L.Us)() === k.BRT.APP,
+                A = null != h && (0, p.H)(h.location) === o.id && h.applicationId === d,
+                m = f?.id,
+                _ = f?.data.layoutMode,
+                M = null != m || A,
+                P = null != m ? g : A,
+                [G] = (0, D.A)([d]),
+                { url: F } = (0, E.A)({ applicationId: d, names: W, size: 1024 }),
+                j = !r && P,
+                H = !P,
+                Y = (0, a.bG)([b.A, U.A], () => (0, T.A)({ LayerStore: b.A, PopoutWindowStore: U.A }));
+            return (
+                l.useEffect(() => {
+                    if (j && null == m && null != h && !Y) {
+                        let e = (0, N.A)(h.location.id, h.applicationId);
+                        (0, C.cK)(e);
+                    }
+                }, [j, m, h, Y]),
+                l.useEffect(() => {
                     j &&
-                        null == f &&
-                        null != h &&
-                        (0, i.jsx)(S.A, { className: B.pU, embedId: (0, N.A)(h.location.id, d) }),
-                    H && null != G && null != F && "" !== F
-                        ? (0, i.jsx)("img", { className: B.j0, alt: G.name, src: F })
-                        : null,
-                    !M &&
-                        !r &&
-                        null != G &&
-                        (0, i.jsx)(z, { width: n, channel: o, participants: t.participants, application: G }),
-                    s || H ? null : (0, i.jsx)("div", { className: B.OB }),
-                ],
-            }),
-        })
-    );
-}
+                        null != m &&
+                        _ !== V.y0.FOCUSED &&
+                        R.A.updateFrameLayoutMode({ frameId: m, layoutMode: V.y0.FOCUSED });
+                }, [j, m, _]),
+                (0, i.jsx)(y.f5, {
+                    value: u,
+                    children: (0, i.jsxs)("div", {
+                        className: B.kL,
+                        children: [
+                            j && null != f && (0, i.jsx)(x.A, { className: B.pU, embedId: (0, w.YY)(f) }),
+                            j &&
+                                null == f &&
+                                null != h &&
+                                (0, i.jsx)(S.A, { className: B.pU, embedId: (0, N.A)(h.location.id, d) }),
+                            H && null != G && null != F && "" !== F
+                                ? (0, i.jsx)("img", { className: B.j0, alt: G.name, src: F })
+                                : null,
+                            !M &&
+                                !r &&
+                                null != G &&
+                                (0, i.jsx)(z, { width: n, channel: o, participants: t.participants, application: G }),
+                            s || H ? null : (0, i.jsx)("div", { className: B.OB }),
+                        ],
+                    }),
+                })
+            );
+        },
+        LN: Y,
+    },
+);

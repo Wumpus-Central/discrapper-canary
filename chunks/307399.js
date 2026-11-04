@@ -1,0 +1,268 @@
+(s.d(t, { default: () => L }), s(321073));
+var i = s(477900),
+    a = s(582128),
+    n = s(855986),
+    l = s(189213),
+    r = s(95477),
+    u = s(821609),
+    c = s(772707),
+    d = s(718213),
+    o = s(964486),
+    f = s(780964),
+    m = s(766075),
+    p = s(129230),
+    g = s(427262),
+    h = s(14021),
+    _ = s(470147),
+    S = s(233317),
+    I = s(503698),
+    N = s.n(I),
+    b = s(778712),
+    x = s(97808),
+    C = s(534514),
+    E = s(834730),
+    v = s(534890),
+    P = s(308528),
+    k = s(854627),
+    y = s(830543),
+    M = s(107198),
+    j = s(792996),
+    A = s(329476);
+function R(e) {
+    let { recipient: t, isSuccess: s, onClose: a } = e,
+        { avatarSrc: n, eventHandlers: l } = (0, k.A)({ userId: t?.id, size: b._3.SIZE_56 }),
+        r = g.Ay.getName(t),
+        c = !s;
+    return (0, i.jsxs)("div", {
+        className: N()(A.nM, { [A.z3]: c }),
+        children: [
+            (0, i.jsx)(x.eu, { src: n, "aria-label": r, size: b._3.SIZE_32, ...l }),
+            (0, i.jsxs)("div", {
+                className: A.Qs,
+                children: [
+                    (0, i.jsx)(C.D, {
+                        variant: "heading-sm/semibold",
+                        color: "text-strong",
+                        className: A.QC,
+                        children: r,
+                    }),
+                    c &&
+                        (0, i.jsx)(E.E, {
+                            variant: "body-xs/normal",
+                            color: "text-strong",
+                            className: A.kc,
+                            children: j.intl.format(M.default["Y/oMwY"], { userName: r }),
+                        }),
+                ],
+            }),
+            s &&
+                (0, i.jsx)(u.$, {
+                    variant: "secondary",
+                    size: "sm",
+                    text: j.intl.string(j.t["g33r/P"]),
+                    icon: v.ChatIcon,
+                    onClick: () => {
+                        var e;
+                        return ((e = t.id), void ((0, y.default)(), P.A.openPrivateChannel({ recipientIds: e }), a()));
+                    },
+                }),
+        ],
+    });
+}
+var U = s(88001),
+    w = s(652215),
+    D = s(593730);
+function T(e) {
+    let { onInvite: t, onClose: s, subscriptionId: c, ...o } = e,
+        [f, m] = a.useState([]),
+        [I, N] = a.useState(""),
+        b = (0, d.A)(I, 400),
+        x = (0, n.bG)([S.A], () => S.A.getNumAvailableInvites()),
+        {
+            eligibleUsers: C,
+            getNextRows: E,
+            hasError: v,
+            isFetching: P,
+        } = ((e) => {
+            let { subscriptionId: t, searchQuery: s } = e,
+                [i, n] = a.useState([]),
+                [l, r] = a.useState(0),
+                [u, c] = a.useState(!1),
+                [d, o] = a.useState(!1);
+            async function f(e) {
+                if (!u && null != e)
+                    try {
+                        (c(!0), o(!1));
+                        let i = await (0, _.EQ)(t, e, s);
+                        (n((t) => (0 === e ? i.users : [...t, ...i.users])), r(i.nextIndex));
+                    } catch (e) {
+                        o(!0);
+                    } finally {
+                        c(!1);
+                    }
+            }
+            return (
+                (0, a.useEffect)(() => {
+                    (r(0), f(0));
+                }, [t, s]),
+                { eligibleUsers: i, isFetching: u, hasError: d, getNextRows: () => f(l) }
+            );
+        })({ subscriptionId: c, searchQuery: b }),
+        [k, y] = a.useState(!1),
+        A = a.useCallback(
+            (e) => {
+                m((t) => t.filter((t) => !e.has(t.id)));
+            },
+            [m],
+        ),
+        R = a.useMemo(() => f.map((e) => ({ id: e.id, label: g.Ay.getName(e) })), [f]);
+    return v
+        ? (0, i.jsx)(l.a, {
+              size: "sm",
+              title: j.intl.string(M.default["54lM5y"]),
+              subtitle: j.intl.string(M.default.zrtwpV),
+              onClose: s,
+              actions: [],
+              ...o,
+          })
+        : 0 !== C.length || P || 0 !== b.length
+          ? (0, i.jsx)(l.a, {
+                size: "md",
+                title: j.intl.string(M.default["Um/7BM"]),
+                subtitle: j.intl.format(M.default.qSWXaf, {
+                    totalSeats: 5,
+                    premiumGroupProductName: (0, U.DP)(),
+                    helpCenterLink: U.TE,
+                }),
+                onClose: s,
+                input: (0, i.jsx)("div", {
+                    className: D.c,
+                    children: (0, i.jsx)(r.k, {
+                        value: I,
+                        onChange: N,
+                        placeholder: 0 === f.length ? j.intl.string(M.default.wRS8vo) : "",
+                        leading: { type: "tags", label: j.intl.string(M.default["Um/7BM"]), items: R, onRemove: A },
+                    }),
+                }),
+                actions: [],
+                actionBarInput: (0, i.jsx)(u.$, {
+                    variant: "primary",
+                    disabled: 0 === f.length || k,
+                    text: j.intl.string(M.default["5fZHp3"]),
+                    size: "md",
+                    fullWidth: !0,
+                    onClick: async () => {
+                        (p.default.track(w.HAw.PREMIUM_GROUP_INVITE_FRIENDS_CTA_CLICKED, {
+                            invited_user_ids: f.map((e) => e.id),
+                        }),
+                            y(!0),
+                            await t(f),
+                            y(!1));
+                    },
+                }),
+                ...o,
+                children: (0, i.jsx)(h.A, {
+                    users: C,
+                    isUserSelected: (e) => f.some((t) => t.id === e.id),
+                    onSelectionChange: (e, t) => {
+                        (m((s) => (t ? [...s, e] : s.filter((t) => t.id !== e.id))), t && N(""));
+                    },
+                    isUserDisabled: (e) => (f.length >= x && !f.some((t) => t.id === e.id)) || !e.eligible,
+                    isFetching: P,
+                    onFetchMore: E,
+                    searchQuery: b,
+                    emptySearchContent: {
+                        header: j.intl.string(M.default.gaamNe),
+                        body: j.intl.string(M.default.nQcM39),
+                    },
+                    className: D.p_,
+                    tooltipConfig: {
+                        text: (e) =>
+                            j.intl.formatToPlainString(M.default["5tzM9V"], {
+                                disabledUserName: g.Ay.getName(e),
+                                premiumGroupProductName: (0, U.DP)(),
+                            }),
+                        isActive: (e, t) => !!(t && !e.eligible),
+                    },
+                }),
+            })
+          : (0, i.jsx)(l.a, {
+                size: "sm",
+                title: j.intl.string(M.default.ONaJLH),
+                subtitle: j.intl.format(M.default["0LHbPc"], { helpCenterLink: U.TE }),
+                onClose: s,
+                actions: [],
+                ...o,
+            });
+}
+function z(e) {
+    let { onClose: t, inviteUsersResult: s, ...a } = e;
+    return (0, i.jsx)(c.k, {
+        graphic: {
+            type: "image",
+            src: "https://cdn.discordapp.com/assets/content/824b13be7b78cc0e651ea50dbb8e459044a59c44a6c15678761d9ef2739c7fc8.png",
+        },
+        gradientColor: "nitro-pink",
+        title: j.intl.formatToPlainString(M.default.MIiPur, {
+            premiumGroupProductName: (0, U.DP)(),
+            sentCount: s.filter((e) => e.isSuccess).length,
+        }),
+        subtitle: j.intl.format(M.default.olkQkj, {
+            onClick: () => {
+                (t(), (0, m.openUserSettings)(f.X.SUBSCRIPTIONS_PANEL));
+            },
+        }),
+        onClose: t,
+        ...a,
+        children: (0, i.jsx)("div", {
+            className: D.yk,
+            children: s.map((e) => (0, i.jsx)(R, { recipient: e.user, isSuccess: e.isSuccess, onClose: t }, e.user.id)),
+        }),
+    });
+}
+let L = function (e) {
+    let { subscription: t, isFromPurchaseFlow: s = !1, ...n } = e,
+        [l, r] = a.useState([]);
+    (0, o.Ay)(() => {
+        p.default.track(w.HAw.PREMIUM_GROUP_INVITE_FRIENDS_MODAL_VIEWED, {
+            source: s ? "purchase_flow" : "subscription_card",
+        });
+    });
+    let [u, c] = a.useState(1);
+    switch (u) {
+        case 1:
+            return (0, i.jsx)(T, {
+                ...n,
+                onInvite: async function (e) {
+                    let s = new Map(),
+                        i = [];
+                    for (let t of e) (s.set(t.id, t), i.push(t.id));
+                    let a = await (0, _.n2)(t.id, i);
+                    if (null == a) {
+                        (p.default.track(w.HAw.PREMIUM_GROUP_INVITE_FRIENDS_RESULT, {
+                            successful_user_ids: [],
+                            failed_user_ids: i,
+                        }),
+                            r(e.map((e) => ({ user: e, isSuccess: !1 }))),
+                            c(2));
+                        return;
+                    }
+                    let { invitedUsers: n, ineligibleUsers: l } = a;
+                    (p.default.track(w.HAw.PREMIUM_GROUP_INVITE_FRIENDS_RESULT, {
+                        successful_user_ids: n,
+                        failed_user_ids: l,
+                    }),
+                        r([
+                            ...n.map((e) => ({ user: s.get(e), isSuccess: !0 })),
+                            ...l.map((e) => ({ user: s.get(e), isSuccess: !1 })),
+                        ]),
+                        c(2));
+                },
+                subscriptionId: t.id,
+            });
+        case 2:
+            return (0, i.jsx)(z, { ...n, inviteUsersResult: l });
+        default:
+            return;
+    }
+};

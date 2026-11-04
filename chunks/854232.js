@@ -1,2 +1,1 @@
-n.d(t, { K: () => i });
-let i = "premium";
+n.d(t, {}, { K: "premium" });

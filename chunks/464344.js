@@ -1,29 +1,8 @@
-(k.r(i),
-    k.d(i, {
-        assets: () => m,
-        ddd: () => y,
-        default: () => h,
-        fr: () => s,
-        h: () => o,
-        ip: () => t,
-        layers: () => e,
-        markers: () => b,
-        metadata: () => n,
-        nm: () => p,
-        op: () => r,
-        v: () => x,
-        w: () => d,
-    }));
+k.r(i);
 var x = "5.7.5",
-    s = 200,
-    t = 0,
-    r = 400,
-    d = 400,
-    o = 400,
-    p = "Comp 1",
-    y = 0,
-    n = {},
-    m = [
+    s = "Comp 1",
+    t = {},
+    r = [
         {
             id: "0",
             layers: [
@@ -6674,7 +6653,7 @@ var x = "5.7.5",
             ],
         },
     ],
-    e = [
+    d = [
         {
             ddd: 0,
             refId: "0",
@@ -6700,5 +6679,36 @@ var x = "5.7.5",
             bm: 0,
         },
     ],
-    b = [],
-    h = { v: x, fr: 200, ip: 0, op: 400, w: 400, h: 400, nm: p, ddd: 0, metadata: n, assets: m, layers: e, markers: b };
+    o = [];
+k.d(
+    i,
+    {},
+    {
+        assets: r,
+        ddd: 0,
+        default: {
+            v: x,
+            fr: 200,
+            ip: 0,
+            op: 400,
+            w: 400,
+            h: 400,
+            nm: s,
+            ddd: 0,
+            metadata: t,
+            assets: r,
+            layers: d,
+            markers: o,
+        },
+        fr: 200,
+        h: 400,
+        ip: 0,
+        layers: d,
+        markers: o,
+        metadata: t,
+        nm: s,
+        op: 400,
+        v: x,
+        w: 400,
+    },
+);

@@ -1,7 +1,7 @@
 e.exports = {
-    Gf: "sectionTitle_d2a5f7",
-    SH: "titleExtraPadding_d2a5f7",
-    Qs: "content_d2a5f7",
-    Un: "errorContainer_d2a5f7",
-    z3: "error_d2a5f7",
+    Gf: "sectionTitle_ZWbFoF",
+    SH: "titleExtraPadding_ZWbFoF",
+    Qs: "content_ZWbFoF",
+    Un: "errorContainer_ZWbFoF",
+    z3: "error_ZWbFoF",
 };

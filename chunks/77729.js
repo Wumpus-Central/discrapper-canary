@@ -1,2 +1,2 @@
-n.d(t, { A: () => i });
 let i = window.DiscordNative;
+n.d(t, {}, { A: i });

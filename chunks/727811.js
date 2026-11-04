@@ -1,4 +1,3 @@
-A.d(e, { P: () => E });
 var C,
     E =
         (((C = {}).NOT_CLAIMED = "NOT_CLAIMED"),
@@ -6,3 +5,4 @@ var C,
         (C.CLAIMED = "CLAIMED"),
         (C.CANCELLATION_IN_PROGRESS = "CANCELLATION_IN_PROGRESS"),
         C);
+e.d(A, {}, { P: E });

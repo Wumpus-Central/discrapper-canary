@@ -1,6 +1,1 @@
-e.exports = {
-    Lb: "body-md/medium_a0365b",
-    KG: "rowItem_a0365b body-md/medium_a0365b",
-    HV: "last_a0365b",
-    vu: "active_a0365b",
-};
+e.exports = { KG: "rowItem_UHZEi_ body-md/medium_UHZEi_", HV: "last_UHZEi_", vu: "active_UHZEi_" };

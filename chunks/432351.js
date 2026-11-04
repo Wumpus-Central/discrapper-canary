@@ -1,4 +1,3 @@
-n.d(t, { A: () => o });
 var i = n(972347),
     r = n(651139),
     a = n(731854);
@@ -196,3 +195,4 @@ class o extends i.A {
     }
     setNoiseCancellationEnableStats(e) {}
 }
+n.d(t, {}, { A: o });

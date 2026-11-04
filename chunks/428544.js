@@ -1,16 +1,16 @@
-i.d(e, { Signature: () => y });
+i.r(e);
 var n = i(783285),
     s = i(768611),
     o = i(200503),
     r = i(628926),
     a = i(242268),
     h = i(326144);
-i(44263);
+i(685131);
 var l = i(264957),
     d = i(503679),
     c = i(918676),
     u = i(412319),
-    v = i(67068),
+    v = i(527703),
     _ = class {
         constructor(t, e, i, n) {
             if (
@@ -705,7 +705,7 @@ var f = ({ config: t, onFinish: e, onError: i }) => {
         let r,
             c,
             { t: u } = (0, n.n)(),
-            [_, p] = (0, o.u)(() => (0, v.y)({ config: t }), { autoLoad: !0 }),
+            [_, p] = (0, o.u)(() => (0, v.createSignatureManager)({ config: t }), { autoLoad: !0 }),
             [g, m] = (0, s.p)(!1),
             [f, y] = (0, s.p)(""),
             E = (0, s.l)(null),
@@ -716,33 +716,11 @@ var f = ({ config: t, onFinish: e, onError: i }) => {
                 E.current &&
                     (E.current.on(), E.current.clear(), m(!1), y(u("signature.cleared")), p.setSignatureValid(!1));
             }, [p, u]);
-        ((0, o.c)({ status: "finished" === _.status ? "finished" : "loading", onFinish: e }),
-            (0, s._)(() => {
-                x && (i?.(x), E.current?.on());
-            }, [x, i]));
-        let k = async () => {
-                let e = E.current;
-                if (!e) return;
-                let i = e.getSignatureWithWhiteBackground();
-                if (i)
-                    return t.sendBase64
-                        ? i.toDataURL("image/png").replace(/^data:image\/png;base64,/, "")
-                        : e.getBlob(i);
-            },
-            C = async () => {
-                let t = E.current;
-                if (!(!t || "capture" !== _.status || t.isEmpty())) {
-                    t.off();
-                    try {
-                        let e = await k();
-                        if (!e) return void t.on();
-                        p.submit(e);
-                    } catch {
-                        t.on();
-                    }
-                }
-            };
-        return "idle" === _.status || "finished" === _.status || "error" === _.status
+        return ((0, o.c)({ status: "finished" === _.status ? "finished" : "loading", onFinish: e }),
+        (0, s._)(() => {
+            x && (i?.(x), E.current?.on());
+        }, [x, i]),
+        "idle" === _.status || "finished" === _.status || "error" === _.status)
             ? null
             : "success" === _.status
               ? (0, s.v)(d.t, { status: "success", successTitle: u("signature.successTitle") })
@@ -788,7 +766,29 @@ var f = ({ config: t, onFinish: e, onError: i }) => {
                                 variant: "primary",
                                 disabled: !S,
                                 isLoading: b,
-                                onClick: C,
+                                onClick: async () => {
+                                    let e = E.current;
+                                    if (!(!e || "capture" !== _.status || e.isEmpty())) {
+                                        e.off();
+                                        try {
+                                            let i = await (async () => {
+                                                let e = E.current;
+                                                if (!e) return;
+                                                let i = e.getSignatureWithWhiteBackground();
+                                                if (i)
+                                                    return t.sendBase64
+                                                        ? i
+                                                              .toDataURL("image/png")
+                                                              .replace(/^data:image\/png;base64,/, "")
+                                                        : e.getBlob(i);
+                                            })();
+                                            if (!i) return void e.on();
+                                            p.submit(i);
+                                        } catch {
+                                            e.on();
+                                        }
+                                    }
+                                },
                                 children: u("signature.done"),
                             }),
                         }),
@@ -797,4 +797,4 @@ var f = ({ config: t, onFinish: e, onError: i }) => {
     },
     y = ({ config: t, onFinish: e, onError: i }) =>
         (0, s.v)(r.t, { children: t ? (0, s.v)(f, { config: t, onFinish: e, onError: i }) : null });
-(0, c.t)(y, "incode-signature");
+((0, c.t)(y, "incode-signature"), i.d(e, {}, { Signature: y }));

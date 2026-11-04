@@ -1,52 +1,60 @@
-n.d(t, { A: () => g });
 var i = n(477900),
     l = n(582128);
 n(580321);
-var a = n(17928),
+var a = n(855986),
     s = n(734057),
     r = n(309010),
-    o = n(625494),
-    d = n(446243),
+    o = n(188567),
+    d = n(303227),
     c = n(558076),
     u = n(360729),
     h = n(544299),
     p = n(932453),
     m = n(652215),
-    A = n(618922),
-    f = n(105292);
-function g(e) {
-    let { channelId: t, asset: n, position: g, width: x } = e,
-        C = (0, a.bG)([s.A], () => s.A.getChannel(t)?.guild_id),
-        { interactionsEnabled: y } = (0, u.mf)({ guildId: C, location: "GuildRoom" }, { autoTrackExposure: !1 }),
-        j = (0, a.bG)([c.A], () => null != c.A.getPendingNote(t)),
-        I = (0, a.bG)([c.A], () => c.A.getNotes(t).length >= 20),
-        N = (0, a.bG)([r.Ay], () => r.Ay.getVoiceChannelId() === t),
-        v = l.useRef(null),
-        E = l.useCallback(() => {
-            v.current?.focus();
-        }, []),
-        b = (0, h.Y1)(t);
-    l.useEffect(() => {
-        if (b)
-            return (
-                o._.subscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, E),
-                () => {
-                    o._.unsubscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, E);
-                }
-            );
-    }, [b, E]);
-    let S = l.useCallback(() => {
-        (0, d.WT)(t);
-    }, [t]);
-    return y
-        ? (0, i.jsx)(p.A, {
-              asset: n,
-              label: f.intl.string(I ? A.default.k4cbsb : A.default["lL1Y+d"]),
-              position: g,
-              width: x,
-              disabled: !N || j || I,
-              onClick: S,
-              innerRef: v,
-          })
-        : (0, i.jsx)(p.c, { asset: n, label: f.intl.string(A.default["lL1Y+d"]), position: g, width: x });
-}
+    A = n(687782),
+    f = n(792996);
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { channelId: t, asset: n, position: g, width: x } = e,
+                C = (0, a.bG)([s.A], () => s.A.getChannel(t)?.guild_id),
+                { interactionsEnabled: y } = (0, u.mf)(
+                    { guildId: C, location: "GuildRoom" },
+                    { autoTrackExposure: !1 },
+                ),
+                j = (0, a.bG)([c.A], () => null != c.A.getPendingNote(t)),
+                I = (0, a.bG)([c.A], () => c.A.getNotes(t).length >= 20),
+                N = (0, a.bG)([r.Ay], () => r.Ay.getVoiceChannelId() === t),
+                v = l.useRef(null),
+                E = l.useCallback(() => {
+                    v.current?.focus();
+                }, []),
+                b = (0, h.Y1)(t);
+            l.useEffect(() => {
+                if (b)
+                    return (
+                        o._.subscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, E),
+                        () => {
+                            o._.unsubscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, E);
+                        }
+                    );
+            }, [b, E]);
+            let S = l.useCallback(() => {
+                (0, d.WT)(t);
+            }, [t]);
+            return y
+                ? (0, i.jsx)(p.A, {
+                      asset: n,
+                      label: f.intl.string(I ? A.default.k4cbsb : A.default["lL1Y+d"]),
+                      position: g,
+                      width: x,
+                      disabled: !N || j || I,
+                      onClick: S,
+                      innerRef: v,
+                  })
+                : (0, i.jsx)(p.c, { asset: n, label: f.intl.string(A.default["lL1Y+d"]), position: g, width: x });
+        },
+    },
+);

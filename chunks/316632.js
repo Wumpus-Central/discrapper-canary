@@ -1,8 +1,8 @@
 e.exports = {
-    ne: "upsellOuter__50e68",
-    u4: "upsellInner__50e68",
-    ex: "upsellTitle__50e68",
-    ax: "nitroWheel__50e68",
-    VN: "close__50e68",
-    ut: "closeIcon__50e68",
+    ne: "upsellOuter_KxXBlr",
+    u4: "upsellInner_KxXBlr",
+    ex: "upsellTitle_KxXBlr",
+    ax: "nitroWheel_KxXBlr",
+    VN: "close_KxXBlr",
+    ut: "closeIcon_KxXBlr",
 };

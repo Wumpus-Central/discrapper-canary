@@ -1,4 +1,9 @@
-function i(e) {
-    ("u" > typeof window ? window.__DISCORD_DEVTOOLS : null)?.reportEvent?.(e);
-}
-n.d(t, { HF: () => i });
+n.d(
+    t,
+    {},
+    {
+        HF: function (e) {
+            ("u" > typeof window ? window.__DISCORD_DEVTOOLS : null)?.reportEvent?.(e);
+        },
+    },
+);

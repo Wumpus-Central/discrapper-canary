@@ -1,4 +1,3 @@
-s.d(a, { a: () => l, t: () => c });
 var t = s(477900);
 s(582128);
 var d = s(503698),
@@ -14,4 +13,4 @@ function l(e) {
         (0, t.jsx)(r.E, { variant: "body-sm/normal", className: i()(n[a], s, n[u]), style: p, ...o, children: l })
     );
 }
-l.Types = c;
+((l.Types = c), s.d(a, {}, { a: l, t: c }));

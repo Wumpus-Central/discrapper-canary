@@ -1,0 +1,49 @@
+.closeIcon_ET1lxk {
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    inset-inline-end: 16px;
+    position: absolute;
+    top: 16px
+}
+
+.content_ET1lxk {
+    padding-bottom: 16px;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text
+}
+
+.authenticationFailImage_ET1lxk,
+.authenticationRequiredImage_ET1lxk,
+.authenticationSuccessImage_ET1lxk {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    height: 115px;
+    margin-bottom: 32px
+}
+
+.images-light .authenticationRequiredImage_ET1lxk {
+    background-image: url("/assets/cd694220801c590b.svg")
+}
+
+.images-light .authenticationSuccessImage_ET1lxk {
+    background-image: url("/assets/2d7e4623239b7add.svg")
+}
+
+.images-light .authenticationFailImage_ET1lxk {
+    background-image: url("/assets/1d0f9bce7107cd19.svg")
+}
+
+.images-dark .authenticationRequiredImage_ET1lxk {
+    background-image: url("/assets/bdca7fcef55d224e.svg")
+}
+
+.images-dark .authenticationSuccessImage_ET1lxk {
+    background-image: url("/assets/5fcf9def81b3e3df.svg")
+}
+
+.images-dark .authenticationFailImage_ET1lxk {
+    background-image: url("/assets/7b29b27004afacd0.svg")
+}
+
+/*# sourceMappingURL=f6a7b6cce6a85bb6.css.map*/

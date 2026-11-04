@@ -1,32 +1,37 @@
-n.d(t, { Z: () => E });
 var i = n(477900);
 n(582128);
-var l = n(661531),
+var l = n(646514),
     a = n(996682),
     r = n(27989);
-function E(e) {
-    let {
-            size: t = "md",
-            width: n,
-            height: E,
-            color: s = l.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: d = "",
-            ...h
-        } = e,
-        o = (0, r.J)(t),
-        c = o?.width ?? n,
-        u = o?.height ?? E;
-    return (0, i.jsx)("svg", {
-        ...(0, a.A)(h),
-        xmlns: "http://www.w3.org/2000/svg",
-        width: c,
-        height: u,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        children: (0, i.jsx)("path", {
-            fill: "string" == typeof s ? s : s.css,
-            d: "M1 5a1 1 0 0 1 1-1h20a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1ZM1 12a1 1 0 0 1 1-1h20a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1ZM2 18a1 1 0 1 0 0 2h20a1 1 0 1 0 0-2H2Z",
-            className: d,
-        }),
-    });
-}
+n.d(
+    t,
+    {},
+    {
+        Z: function (e) {
+            let {
+                    size: t = "md",
+                    width: n,
+                    height: E,
+                    color: s = l.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: d = "",
+                    ...h
+                } = e,
+                o = (0, r.J)(t),
+                c = o?.width ?? n,
+                u = o?.height ?? E;
+            return (0, i.jsx)("svg", {
+                ...(0, a.A)(h),
+                xmlns: "http://www.w3.org/2000/svg",
+                width: c,
+                height: u,
+                fill: "none",
+                viewBox: "0 0 24 24",
+                children: (0, i.jsx)("path", {
+                    fill: "string" == typeof s ? s : s.css,
+                    d: "M1 5a1 1 0 0 1 1-1h20a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1ZM1 12a1 1 0 0 1 1-1h20a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1ZM2 18a1 1 0 1 0 0 2h20a1 1 0 1 0 0-2H2Z",
+                    className: d,
+                }),
+            });
+        },
+    },
+);

@@ -1,7 +1,6 @@
-n.d(t, { Ay: () => A, FT: () => m, X4: () => h, d8: () => p, m2: () => I, p_: () => f });
 var i = n(284009),
     r = n.n(i),
-    a = n(17928),
+    a = n(855986),
     s = n(609425),
     l = n(734057),
     o = n(696451),
@@ -10,11 +9,7 @@ var i = n(284009),
     u = n(994500),
     _ = n(287809),
     E = n(427262);
-function A(e, t) {
-    let n = h(e);
-    return (r()(null != n, "Result cannot be null because the message is not null"), t ?? n);
-}
-function h(e) {
+function A(e) {
     let t = (0, a.bG)([l.A], () => (null == e ? null : l.A.getChannel(e.channel_id))),
         n = e?.author?.id,
         i = t?.guild_id,
@@ -22,32 +17,24 @@ function h(e) {
         A = (0, a.bG)([_.default], () => _.default.getUser(n), [n]),
         h = E.Ay.useName(e?.author.bot ? e?.author : A),
         f = (0, a.bG)([c.A], () => c.A.getGuild(i), [i]),
-        I = r?.colorRoleId,
-        p = (0, a.bG)([d.A], () => (null != i && null != I ? d.A.getRole(i, I) : void 0), [i, I]),
-        m = (0, a.bG)([u.A], () => (null != n && t?.isPrivate() ? u.A.getNickname(n) : null)),
+        p = r?.colorRoleId,
+        m = (0, a.bG)([d.A], () => (null != i && null != p ? d.A.getRole(i, p) : void 0), [i, p]),
+        T = (0, a.bG)([u.A], () => (null != n && t?.isPrivate() ? u.A.getNickname(n) : null)),
         g = (0, s.A)({ userId: n, guildId: i });
     return null == e
         ? null
-        : T({
+        : I({
               user: e.author,
               channel: t,
               guild: f,
-              memberColorRole: p,
+              memberColorRole: m,
               userName: h,
               member: r,
-              friendNickname: m,
+              friendNickname: T,
               displayNameStyles: g,
           });
 }
-function f(e) {
-    let t = l.A.getChannel(e.channel_id);
-    return m(e.author, t);
-}
-function I(e, t) {
-    let n = p(e, t);
-    return (r()(null != n, "Result cannot be null because user and channel are not null"), n);
-}
-function p(e, t) {
+function h(e, t) {
     let n = e?.id,
         i = t?.guild_id,
         r = (0, a.bG)([o.Ay], () => (null == i || null == n ? null : o.Ay.getMember(i, n))),
@@ -56,7 +43,7 @@ function p(e, t) {
         A = (0, a.bG)([d.A], () => (null != i && null != _ ? d.A.getRole(i, _) : void 0), [i, _]),
         h = (0, a.bG)([u.A], () => (null != n && t?.isPrivate() ? u.A.getNickname(n) : null)),
         f = E.Ay.useName(e);
-    return T({
+    return I({
         user: e,
         channel: t,
         guild: l,
@@ -67,14 +54,14 @@ function p(e, t) {
         displayNameStyles: (0, s.A)({ userId: n, guildId: i }),
     });
 }
-function m(e, t) {
+function f(e, t) {
     let n = e?.id,
         i = t?.guild_id,
         r = c.A.getGuild(i),
         a = null == i || null == n ? null : o.Ay.getMember(i, n),
         s = null != i && a?.colorRoleId != null ? d.A.getRole(i, a.colorRoleId) : void 0,
         l = null != n && null != t && t.isPrivate() ? u.A.getNickname(n) : null;
-    return T({
+    return I({
         user: e,
         channel: t,
         guild: r,
@@ -84,7 +71,7 @@ function m(e, t) {
         displayNameStyles: e?.displayNameStyles,
     });
 }
-function T(e) {
+function I(e) {
     let {
             user: t,
             channel: n,
@@ -117,3 +104,24 @@ function T(e) {
                   displayNameStyles: o,
               };
 }
+n.d(
+    t,
+    {},
+    {
+        Ay: function (e, t) {
+            let n = A(e);
+            return (r()(null != n, "Result cannot be null because the message is not null"), t ?? n);
+        },
+        FT: f,
+        X4: A,
+        d8: h,
+        m2: function (e, t) {
+            let n = h(e, t);
+            return (r()(null != n, "Result cannot be null because user and channel are not null"), n);
+        },
+        p_: function (e) {
+            let t = l.A.getChannel(e.channel_id);
+            return f(e.author, t);
+        },
+    },
+);

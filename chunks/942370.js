@@ -1,4 +1,3 @@
-n.d(t, { T: () => l, _: () => r });
 var i,
     r = (((i = {}).RPC = "rpc"), (i.WEB = "web"), i);
 let l =
@@ -9,3 +8,4 @@ let l =
               IMGUI_APPLICATION_ID: "1412940519742636124",
           }
         : null;
+n.d(t, {}, { T: l, _: r });

@@ -1,4 +1,3 @@
-l.d(t, { A: () => A });
 var r = l(477900),
     a = l(582128),
     n = l(503698),
@@ -8,8 +7,8 @@ var r = l(477900),
     d = l(481859),
     o = l(441136),
     i = l(694403),
-    h = l(999915),
-    p = l(881140),
+    h = l(605275),
+    p = l(665911),
     f = l(816969),
     g = l(969490);
 let m = RegExp(`https?://${window.GLOBAL_ENV.CDN_HOST ?? ""}`);
@@ -89,4 +88,4 @@ class j extends a.PureComponent {
         return (0, r.jsx)("div", { className: s()(f.wD, e), children: u });
     }
 }
-let A = j;
+l.d(t, {}, { A: j });

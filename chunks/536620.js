@@ -1,7 +1,7 @@
 e.exports = {
-    kL: "container__808a1",
-    Qs: "content__808a1",
-    XG: "scroller__808a1",
-    gT: "scrollerContent__808a1",
-    jr: "headerBar__808a1",
+    kL: "container_BQIdmW",
+    Qs: "content_BQIdmW",
+    XG: "scroller_BQIdmW",
+    gT: "scrollerContent_BQIdmW",
+    jr: "headerBar_BQIdmW",
 };

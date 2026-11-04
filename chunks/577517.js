@@ -1,5 +1,4 @@
-n.d(t, { A: () => u });
-var i = n(17928),
+var i = n(855986),
     r = n(73153);
 let a = null,
     s = null,
@@ -35,18 +34,18 @@ class d extends i.Ay.PersistedStore {
     }
 }
 let c = new d(r.h, {
-        PARENTAL_CONSENT_WARNING_FETCH_SUCCESS: function (e) {
-            let { warning: t } = e;
-            ((l = t), (a = o()), c.persist());
-        },
-        PARENTAL_CONSENT_WARNING_MODAL_SHOWN: function () {
-            ((s = o()), c.persist());
-        },
-        PARENTAL_CONSENT_WARNING_CLEARED: function () {
-            ((l = null), c.persist());
-        },
-        LOGOUT: function () {
-            ((a = null), (s = null), (l = null), c.persist());
-        },
-    }),
-    u = c;
+    PARENTAL_CONSENT_WARNING_FETCH_SUCCESS: function (e) {
+        let { warning: t } = e;
+        ((l = t), (a = o()), c.persist());
+    },
+    PARENTAL_CONSENT_WARNING_MODAL_SHOWN: function () {
+        ((s = o()), c.persist());
+    },
+    PARENTAL_CONSENT_WARNING_CLEARED: function () {
+        ((l = null), c.persist());
+    },
+    LOGOUT: function () {
+        ((a = null), (s = null), (l = null), c.persist());
+    },
+});
+n.d(t, {}, { A: c });

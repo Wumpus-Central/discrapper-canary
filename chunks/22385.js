@@ -1,13 +1,12 @@
-_.d(t, { YG: () => i, xk: () => r });
 var u = _(196765);
-let i = "0",
-    s = { selectedGuildId: i },
-    r = (0, u.v)((e) => ({
-        ...s,
+let i = { selectedGuildId: "0" },
+    s = (0, u.v)((e) => ({
+        ...i,
         setSelectedGuildId: (t) => {
             e({ selectedGuildId: t });
         },
         reset: () => {
-            e(s);
+            e(i);
         },
     }));
+_.d(t, {}, { xk: s });

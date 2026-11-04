@@ -1,8 +1,8 @@
-e.exports = {
-    kL: "container__04119",
-    aD: "canceled__04119",
-    vu: "active__04119",
-    q$: "timeStatus__04119",
-    a6: "canceledStatus__04119",
-    vk: "clickable__04119",
+t.exports = {
+    kL: "container_7O1vgc",
+    aD: "canceled_7O1vgc",
+    vu: "active_7O1vgc",
+    q$: "timeStatus_7O1vgc",
+    a6: "canceledStatus_7O1vgc",
+    vk: "clickable_7O1vgc",
 };

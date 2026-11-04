@@ -1,0 +1,42 @@
+.subheaderContainer_L_XqWT {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .14);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-16)
+}
+
+.subHeaderTextContainer_L_XqWT {
+    align-items: center;
+    display: flex;
+    gap: var(--space-12)
+}
+
+.subHeaderText_L_XqWT {
+    display: flex;
+    flex-direction: column
+}
+
+.heading_L_XqWT {
+    color: var(--text-feedback-critical);
+    margin-bottom: 2px
+}
+
+.tagLine_L_XqWT {
+    color: var(--text-default)
+}
+
+.buttonContainer_L_XqWT {
+    align-items: center;
+    align-self: center;
+    display: flex;
+    gap: var(--space-12)
+}
+
+.shieldIcon_L_XqWT {
+    min-width: 24px
+}
+
+/*# sourceMappingURL=07ff106e2f1b7484.css.map*/

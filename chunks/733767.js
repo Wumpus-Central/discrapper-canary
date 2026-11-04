@@ -1,1 +1,1 @@
-p.exports = { p: "list__1760d", n: "row__1760d" };
+p.exports = { p: "list_UbI-y1", n: "row_UbI-y1" };

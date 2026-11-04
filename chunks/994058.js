@@ -1,14 +1,13 @@
-n.d(e, { default: () => o });
 var a = n(477900);
 n(582128);
-var i = n(980707),
+var i = n(165862),
     r = n(477782),
     l = n(442433),
     d = n(358367),
     s = n(793574),
     c = n(50268),
     h = n(317910),
-    u = n(105292);
+    u = n(792996);
 let o = (0, d.A)(
     function (t) {
         let { channel: e, onSelect: n } = t,
@@ -25,3 +24,4 @@ let o = (0, d.A)(
     },
     [s.A.CONTEXT_MENU, s.A.CHANNEL_LIST_DIRECTORY_CHANNEL_MENU],
 );
+n.d(e, {}, { default: o });

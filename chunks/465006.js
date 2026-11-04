@@ -1,8 +1,7 @@
-n.d(t, { Ay: () => d, V: () => i, ns: () => u });
-var l = n(17928),
+var l = n(855986),
     a = n(71393),
-    s = n(809526),
-    r = n(105292);
+    s = n(191850),
+    r = n(792996);
 function i(e) {
     let t = e?.guild_id,
         n = (0, l.bG)([a.A], () => (null != t ? (a.A.getGuild(t) ?? null) : null), [t]);
@@ -14,9 +13,16 @@ function i(e) {
             ? { kind: "guild", label: n.name, guild: n }
             : null;
 }
-function u(e) {
-    return "guild" === e.install_scope && null == e.guild_id && null == e.install_scope_setup;
-}
-function d(e) {
-    return i(e)?.label ?? null;
-}
+n.d(
+    t,
+    {},
+    {
+        Ay: function (e) {
+            return i(e)?.label ?? null;
+        },
+        V: i,
+        ns: function (e) {
+            return "guild" === e.install_scope && null == e.guild_id && null == e.install_scope_setup;
+        },
+    },
+);

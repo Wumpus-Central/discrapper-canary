@@ -1,51 +1,4 @@
-(n.d(t, {
-    AN: () => j,
-    Ar: () => ee,
-    DQ: () => V,
-    E: () => eY,
-    F1: () => eX,
-    GY: () => ev,
-    Ip: () => en,
-    Ju: () => em,
-    KJ: () => eu,
-    KP: () => $,
-    NS: () => q,
-    PZ: () => J,
-    Q0: () => ed,
-    Qd: () => W,
-    Sx: () => Z,
-    TO: () => x,
-    TY: () => ej,
-    Tz: () => F,
-    X9: () => e$,
-    Y2: () => w,
-    YW: () => eO,
-    Zy: () => tJ,
-    ak: () => ti,
-    eF: () => G,
-    fL: () => K,
-    he: () => k,
-    iL: () => ea,
-    ju: () => Q,
-    kW: () => et,
-    nT: () => el,
-    nx: () => eh,
-    oJ: () => eV,
-    oP: () => td,
-    tI: () => X,
-    tR: () => z,
-    te: () => tO,
-    uK: () => tN,
-    wL: () => tl,
-}),
-    n(393431),
-    n(532706),
-    n(42231),
-    n(232424),
-    n(949626),
-    n(767709),
-    n(65162),
-    n(321073));
+(n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(321073));
 var i,
     r,
     a,
@@ -74,7 +27,7 @@ var i,
     y = n(852015),
     D = n(144367),
     b = n(428420),
-    v = n(535384),
+    v = n(505816),
     P = n(406935),
     M = n(335871),
     U = n(813827),
@@ -2966,7 +2919,7 @@ class e2 extends v.G {
     }
 }
 let e3 = new e2();
-class e4 extends v.G {
+class e6 extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.AppearanceSettings", [
             { no: 1, name: "theme", kind: "enum", T: () => ["discord_protos.discord_users.v1.Theme", Z] },
@@ -3121,8 +3074,8 @@ class e4 extends v.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e5 = new e4();
-class e6 extends v.G {
+let e5 = new e6();
+class e4 extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.CustomUserThemeSettings", [
             { no: 1, name: "colors", kind: "scalar", repeat: 2, T: 9 },
@@ -3182,12 +3135,12 @@ class e6 extends v.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e7 = new e6();
-class e8 extends v.G {
+let e8 = new e4();
+class e7 extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ClientThemeSettings", [
             { no: 2, name: "background_gradient_preset_id", kind: "message", T: () => P.ZQ },
-            { no: 4, name: "custom_user_theme_settings", kind: "message", T: () => e7 },
+            { no: 4, name: "custom_user_theme_settings", kind: "message", T: () => e8 },
         ]);
     }
     create(e) {
@@ -3213,7 +3166,7 @@ class e8 extends v.G {
                     );
                     break;
                 case 4:
-                    r.customUserThemeSettings = e7.internalBinaryRead(e, e.uint32(), n, r.customUserThemeSettings);
+                    r.customUserThemeSettings = e8.internalBinaryRead(e, e.uint32(), n, r.customUserThemeSettings);
                     break;
                 default:
                     let a = n.readUnknownField;
@@ -3229,12 +3182,12 @@ class e8 extends v.G {
         (e.backgroundGradientPresetId &&
             P.ZQ.internalBinaryWrite(e.backgroundGradientPresetId, t.tag(2, y.O0.LengthDelimited).fork(), n).join(),
             e.customUserThemeSettings &&
-                e7.internalBinaryWrite(e.customUserThemeSettings, t.tag(4, y.O0.LengthDelimited).fork(), n).join());
+                e8.internalBinaryWrite(e.customUserThemeSettings, t.tag(4, y.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e9 = new e8();
+let e9 = new e7();
 class te extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.GuildFolders", [
@@ -4641,3 +4594,47 @@ class tQ extends v.G {
     }
 }
 let tJ = new tQ();
+n.d(
+    t,
+    {},
+    {
+        AN: j,
+        Ar: ee,
+        DQ: V,
+        E: eY,
+        F1: eX,
+        GY: ev,
+        Ip: en,
+        Ju: em,
+        KJ: eu,
+        KP: $,
+        NS: q,
+        PZ: J,
+        Q0: ed,
+        Qd: W,
+        Sx: Z,
+        TO: x,
+        TY: ej,
+        Tz: F,
+        X9: e$,
+        Y2: w,
+        YW: eO,
+        Zy: tJ,
+        ak: ti,
+        eF: G,
+        fL: K,
+        he: k,
+        iL: ea,
+        ju: Q,
+        kW: et,
+        nT: el,
+        nx: eh,
+        oJ: eV,
+        oP: td,
+        tI: X,
+        tR: z,
+        te: tO,
+        uK: tN,
+        wL: tl,
+    },
+);

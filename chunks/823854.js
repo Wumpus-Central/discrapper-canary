@@ -1,7 +1,6 @@
-n.d(l, { A: () => r });
-var t = n(17928),
+var t = n(855986),
     s = n(73153),
-    a = n(280450);
+    a = n(46653);
 class i extends t.Ay.Store {
     static displayName = "VoiceDareTrackingStore";
     initialize() {
@@ -24,3 +23,4 @@ class i extends t.Ay.Store {
     }
 }
 let r = new i(s.h, {});
+n.d(l, {}, { A: r });

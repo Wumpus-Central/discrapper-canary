@@ -1,9 +1,9 @@
-_.exports = {
-    iE: "wrapper__61a6b",
-    Bo: "flexWrapper__61a6b",
-    Sl: "image__61a6b",
-    Qq: "text__61a6b",
-    N4: "note__61a6b",
-    DD: "title__61a6b",
-    _$: "noBackground__61a6b",
+S.exports = {
+    iE: "wrapper_jScFSg",
+    Bo: "flexWrapper_jScFSg",
+    Sl: "image_jScFSg",
+    Qq: "text_jScFSg",
+    N4: "note_jScFSg",
+    DD: "title_jScFSg",
+    _$: "noBackground_jScFSg",
 };

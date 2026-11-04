@@ -1,4 +1,3 @@
-d.d(t, { t: () => tm });
 var i,
     e,
     c = d(768611),
@@ -27,8 +26,8 @@ var i,
 var p = S(Array.prototype.forEach),
     N = S(Array.prototype.lastIndexOf),
     M = S(Array.prototype.pop),
-    X = S(Array.prototype.push),
-    r = S(Array.prototype.splice),
+    r = S(Array.prototype.push),
+    X = S(Array.prototype.splice),
     y = S(String.prototype.toLowerCase),
     Y = S(String.prototype.toString),
     T = S(String.prototype.match),
@@ -820,8 +819,8 @@ var D = o([
                 CUSTOM_ELEMENT: lN,
             } = lt,
             { IS_ALLOWED_URI: lM } = lt,
-            lX = null,
-            lr = C({}, [...D, ...j, ...U, ...O, ...k]),
+            lr = null,
+            lX = C({}, [...D, ...j, ...U, ...O, ...k]),
             ly = null,
             lY = C({}, [...E, ...v, ...K, ...H]),
             lT = Object.seal(
@@ -932,7 +931,7 @@ var D = o([
                             (l7 = -1 === l6.indexOf(l.PARSER_MEDIA_TYPE) ? "text/html" : l.PARSER_MEDIA_TYPE)
                                 ? Y
                                 : y),
-                        (lX = z(l, "ALLOWED_TAGS") ? C({}, l.ALLOWED_TAGS, l8) : lr),
+                        (lr = z(l, "ALLOWED_TAGS") ? C({}, l.ALLOWED_TAGS, l8) : lX),
                         (ly = z(l, "ALLOWED_ATTR") ? C({}, l.ALLOWED_ATTR, l8) : lY),
                         (l1 = z(l, "ALLOWED_NAMESPACES") ? C({}, l.ALLOWED_NAMESPACES, Y) : l5),
                         (lB = z(l, "ADD_URI_SAFE_ATTR") ? C(x(lA), l.ADD_URI_SAFE_ATTR, l8) : lA),
@@ -974,18 +973,18 @@ var D = o([
                         lC && (lw = !1),
                         lF && (lU = !0),
                         lK &&
-                            ((lX = C({}, k)),
+                            ((lr = C({}, k)),
                             (ly = h(null)),
-                            !0 === lK.html && (C(lX, D), C(ly, E)),
-                            !0 === lK.svg && (C(lX, j), C(ly, v), C(ly, H)),
-                            !0 === lK.svgFilters && (C(lX, U), C(ly, v), C(ly, H)),
-                            !0 === lK.mathMl && (C(lX, O), C(ly, K), C(ly, H))),
+                            !0 === lK.html && (C(lr, D), C(ly, E)),
+                            !0 === lK.svg && (C(lr, j), C(ly, v), C(ly, H)),
+                            !0 === lK.svgFilters && (C(lr, U), C(ly, v), C(ly, H)),
+                            !0 === lK.mathMl && (C(lr, O), C(ly, K), C(ly, H))),
                         z(l, "ADD_TAGS") || (lI.tagCheck = null),
                         z(l, "ADD_ATTR") || (lI.attributeCheck = null),
                         l.ADD_TAGS &&
                             ("function" == typeof l.ADD_TAGS
                                 ? (lI.tagCheck = l.ADD_TAGS)
-                                : (lX === lr && (lX = x(lX)), C(lX, l.ADD_TAGS, l8))),
+                                : (lr === lX && (lr = x(lr)), C(lr, l.ADD_TAGS, l8))),
                         l.ADD_ATTR &&
                             ("function" == typeof l.ADD_ATTR
                                 ? (lI.attributeCheck = l.ADD_ATTR)
@@ -993,9 +992,9 @@ var D = o([
                         l.ADD_URI_SAFE_ATTR && C(lB, l.ADD_URI_SAFE_ATTR, l8),
                         l.FORBID_CONTENTS && (lH === lQ && (lH = x(lH)), C(lH, l.FORBID_CONTENTS, l8)),
                         l.ADD_FORBID_CONTENTS && (lH === lQ && (lH = x(lH)), C(lH, l.ADD_FORBID_CONTENTS, l8)),
-                        lE && (lX["#text"] = !0),
-                        lg && C(lX, ["html", "head", "body"]),
-                        lX.table && (C(lX, ["tbody"]), delete lV.tbody),
+                        lE && (lr["#text"] = !0),
+                        lg && C(lr, ["html", "head", "body"]),
+                        lr.table && (C(lr, ["tbody"]), delete lV.tbody),
                         l.TRUSTED_TYPES_POLICY)
                     ) {
                         if ("function" != typeof l.TRUSTED_TYPES_POLICY.createHTML)
@@ -1039,7 +1038,7 @@ var D = o([
                 );
             },
             ts = function (l) {
-                X(i.removed, { element: l });
+                r(i.removed, { element: l });
                 try {
                     q(l).removeChild(l);
                 } catch (t) {
@@ -1048,9 +1047,9 @@ var D = o([
             },
             tn = function (l, t) {
                 try {
-                    X(i.removed, { attribute: t.getAttributeNode(l), from: t });
+                    r(i.removed, { attribute: t.getAttributeNode(l), from: t });
                 } catch (l) {
-                    X(i.removed, { attribute: null, from: t });
+                    r(i.removed, { attribute: null, from: t });
                 }
                 if ((t.removeAttribute(l), "is" === l))
                     if (lU || lF)
@@ -1130,7 +1129,7 @@ var D = o([
                 if ((tu(lb.beforeSanitizeElements, l, null), tm(l))) return (ts(l), !0);
                 let d = l8(l.nodeName);
                 if (
-                    (tu(lb.uponSanitizeElement, l, { tagName: d, allowedTags: lX }),
+                    (tu(lb.uponSanitizeElement, l, { tagName: d, allowedTags: lr }),
                     (lx &&
                         l.hasChildNodes() &&
                         !to(l.firstElementChild) &&
@@ -1140,7 +1139,7 @@ var D = o([
                         (lx && 8 === l.nodeType && w(/<[/\w]/g, l.data)))
                 )
                     return (ts(l), !0);
-                if (!(lI.tagCheck instanceof Function && lI.tagCheck(d)) && (!lX[d] || lV[d])) {
+                if (!(lI.tagCheck instanceof Function && lI.tagCheck(d)) && (!lr[d] || lV[d])) {
                     if (
                         !lV[d] &&
                         tG(d) &&
@@ -1171,7 +1170,7 @@ var D = o([
                           p([lm, lo, lu], (l) => {
                               t = V(t, l, " ");
                           }),
-                          l.textContent !== t && (X(i.removed, { element: l.cloneNode() }), (l.textContent = t))),
+                          l.textContent !== t && (r(i.removed, { element: l.cloneNode() }), (l.textContent = t))),
                       tu(lb.afterSanitizeElements, l, null),
                       !1);
             },
@@ -1293,7 +1292,7 @@ var D = o([
                 if ((lD || ti(d), (i.removed = []), "string" == typeof l && (lv = !1), lv)) {
                     if (l.nodeName) {
                         let t = l8(l.nodeName);
-                        if (!lX[t] || lV[t]) throw R("root node is forbidden and cannot be sanitized in-place");
+                        if (!lr[t] || lV[t]) throw R("root node is forbidden and cannot be sanitized in-place");
                     }
                 } else if (l instanceof b)
                     (1 === (a = (e = tZ("\x3c!----\x3e")).ownerDocument.importNode(l, !0)).nodeType &&
@@ -1317,7 +1316,7 @@ var D = o([
                 let o = lg ? e.outerHTML : e.innerHTML;
                 return (
                     lg &&
-                        lX["!doctype"] &&
+                        lr["!doctype"] &&
                         e.ownerDocument &&
                         e.ownerDocument.doctype &&
                         e.ownerDocument.doctype.name &&
@@ -1340,12 +1339,12 @@ var D = o([
                 return (tl || ti({}), tW(l8(l), l8(t), d));
             }),
             (i.addHook = function (l, t) {
-                "function" == typeof t && X(lb[l], t);
+                "function" == typeof t && r(lb[l], t);
             }),
             (i.removeHook = function (l, t) {
                 if (void 0 !== t) {
                     let d = N(lb[l], t);
-                    return -1 === d ? void 0 : r(lb[l], d, 1)[0];
+                    return -1 === d ? void 0 : X(lb[l], d, 1)[0];
                 }
                 return M(lb[l]);
             }),
@@ -1484,15 +1483,15 @@ var lZ = (() => {
     lM = ln(/^(bull)([ \t][^\n]+?)?(?:\n|$)/)
         .replace(/bull/g, lo)
         .getRegex(),
-    lX =
+    lr =
         "address|article|aside|base|basefont|blockquote|body|caption|center|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption|figure|footer|form|frame|frameset|h[1-6]|head|header|hr|html|iframe|legend|li|link|main|menu|menuitem|meta|nav|noframes|ol|optgroup|option|p|param|search|section|summary|table|tbody|td|tfoot|th|thead|title|tr|track|ul",
-    lr = /<!--(?:-?>|[\s\S]*?(?:-->|$))/,
+    lX = /<!--(?:-?>|[\s\S]*?(?:-->|$))/,
     ly = ln(
         "^ {0,3}(?:<(script|pre|style|textarea)[\\s>][\\s\\S]*?(?:</\\1>[^\\n]*\\n+|$)|comment[^\\n]*(\\n+|$)|<\\?[\\s\\S]*?(?:\\?>\\n*|$)|<![A-Z][\\s\\S]*?(?:>\\n*|$)|<!\\[CDATA\\[[\\s\\S]*?(?:\\]\\]>\\n*|$)|</?(tag)(?: +|\\n|/?>)[\\s\\S]*?(?:(?:\\n[ 	]*)+\\n|$)|<(?!script|pre|style|textarea)([a-z][\\w-]*)(?:attribute)*? */?>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n[ 	]*)+\\n|$)|</(?!script|pre|style|textarea)[a-z][\\w-]*\\s*>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n[ 	]*)+\\n|$))",
         "i",
     )
-        .replace("comment", lr)
-        .replace("tag", lX)
+        .replace("comment", lX)
+        .replace("tag", lr)
         .replace("attribute", / +[a-zA-Z:_][\w.:-]*(?: *= *"[^"\n]*"| *= *'[^'\n]*'| *= *[^\s"'=<>`]+)?/)
         .getRegex(),
     lY = ln(lG)
@@ -1504,7 +1503,7 @@ var lZ = (() => {
         .replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n")
         .replace("list", " {0,3}(?:[*+-]|1[.)])[ \\t]")
         .replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)")
-        .replace("tag", lX)
+        .replace("tag", lr)
         .getRegex(),
     lT = {
         blockquote: ln(/^( {0,3}> ?(paragraph|[^\n]*)(?:\n|$))+/)
@@ -1533,7 +1532,7 @@ var lZ = (() => {
         .replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n")
         .replace("list", " {0,3}(?:[*+-]|1[.)])[ \\t]")
         .replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)")
-        .replace("tag", lX)
+        .replace("tag", lr)
         .getRegex(),
     lL = {
         ...lT,
@@ -1548,7 +1547,7 @@ var lZ = (() => {
             .replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n")
             .replace("list", " {0,3}(?:[*+-]|1[.)])[ \\t]")
             .replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)")
-            .replace("tag", lX)
+            .replace("tag", lr)
             .getRegex(),
     },
     lI = {
@@ -1556,7 +1555,7 @@ var lZ = (() => {
         html: ln(
             "^ *(?:comment *(?:\\n|\\s*$)|<(tag)[\\s\\S]+?</\\1> *(?:\\n{2,}|\\s*$)|<tag(?:\"[^\"]*\"|'[^']*'|\\s[^'\"/>\\s]*)*?/?> *(?:\\n{2,}|\\s*$))",
         )
-            .replace("comment", lr)
+            .replace("comment", lX)
             .replace(
                 /tag/g,
                 "(?!(?:a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)\\b)\\w+(?!:|[^\\w\\s@]*@)\\b",
@@ -1643,7 +1642,7 @@ var lZ = (() => {
             /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+(@)[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+(?![-_])/,
         )
         .getRegex(),
-    lQ = ln(lr).replace("(?:--\x3e|$)", "--\x3e").getRegex(),
+    lQ = ln(lX).replace("(?:--\x3e|$)", "--\x3e").getRegex(),
     lP = ln(
         "^comment|^</[a-zA-Z][\\w:-]*\\s*>|^<[a-zA-Z][\\w-]*(?:attribute)*?\\s*/?>|^<\\?[\\s\\S]*?\\?>|^<![a-zA-Z]+\\s[\\s\\S]*?>|^<!\\[CDATA\\[[\\s\\S]*?\\]\\]>",
     )
@@ -3239,26 +3238,6 @@ Please report this to https://github.com/markedjs/marked.`),
 function tb(l, t) {
     return tZ.parse(l, t);
 }
-function tm({ content: l, class: t, disallowedTags: d = [] }) {
-    return l
-        ? (0, c.v)("div", {
-              class: t,
-              children: (0, c.v)(c.t, {
-                  markup: (function (l, t) {
-                      let d = l.replace(/([^\s>])(<a\b)/gu, "$1\xa0$2").replace(/(<\/a>)([\p{L}\p{N}])/gu, "$1\xa0$2"),
-                          i = tb.parse(d);
-                      var e = le.sanitize(i, { FORBID_TAGS: t });
-                      let c = new DOMParser().parseFromString(e, "text/html");
-                      for (let l of Array.from(c.querySelectorAll("a")))
-                          (l.setAttribute("target", "_blank"), l.setAttribute("rel", "noopener noreferrer"));
-                      return c.body.innerHTML;
-                  })(l, d),
-                  type: "html",
-                  trim: !1,
-              }),
-          })
-        : null;
-}
 ((tb.options = tb.setOptions =
     function (l) {
         return (tZ.setOptions(l), (tb.defaults = tZ.defaults), (la = tb.defaults), tb);
@@ -3287,4 +3266,33 @@ function tm({ content: l, class: t, disallowedTags: d = [] }) {
     tb.walkTokens,
     tb.parseInline,
     ts.parse,
-    te.lex);
+    te.lex,
+    d.d(
+        t,
+        {},
+        {
+            t: function ({ content: l, class: t, disallowedTags: d = [] }) {
+                return l
+                    ? (0, c.v)("div", {
+                          class: t,
+                          children: (0, c.v)(c.t, {
+                              markup: (function (l, t) {
+                                  let d = l
+                                          .replace(/([^\s>])(<a\b)/gu, "$1\xa0$2")
+                                          .replace(/(<\/a>)([\p{L}\p{N}])/gu, "$1\xa0$2"),
+                                      i = tb.parse(d);
+                                  var e = le.sanitize(i, { FORBID_TAGS: t });
+                                  let c = new DOMParser().parseFromString(e, "text/html");
+                                  for (let l of Array.from(c.querySelectorAll("a")))
+                                      (l.setAttribute("target", "_blank"),
+                                          l.setAttribute("rel", "noopener noreferrer"));
+                                  return c.body.innerHTML;
+                              })(l, d),
+                              type: "html",
+                              trim: !1,
+                          }),
+                      })
+                    : null;
+            },
+        },
+    ));

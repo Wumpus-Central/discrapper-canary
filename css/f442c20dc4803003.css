@@ -1,0 +1,144 @@
+.root_dcNks8 {
+    align-items: center;
+    background: var(--background-surface-high);
+    border-radius: 8px;
+    box-shadow: var(--shadow-border), var(--shadow-high);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-width: 232px;
+    padding: 16px;
+    position: relative
+}
+
+.root_dcNks8.previewCamera_dcNks8 {
+    flex-direction: column-reverse;
+    overflow: hidden
+}
+
+.previewRoot_dcNks8 {
+    align-items: center;
+    background: var(--background-mod-normal);
+    display: flex;
+    justify-content: center
+}
+
+.preview_dcNks8,
+.previewRoot_dcNks8 {
+    inset: 0;
+    position: absolute
+}
+
+.preview_dcNks8:after {
+    background: linear-gradient(#18191c, transparent 84px, transparent 183px, #18191c);
+    content: "";
+    inset: 0;
+    position: absolute
+}
+
+.mainChannelInfo_dcNks8 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%
+}
+
+.mainChannelInfo_dcNks8 .titleGroup_dcNks8 {
+    max-width: 100%
+}
+
+.mainChannelInfo_dcNks8 .icon_dcNks8 {
+    margin: 16px 0
+}
+
+.mainChannelInfo_dcNks8 .subtitle_dcNks8,
+.mainChannelInfo_dcNks8 .title_dcNks8 {
+    text-align: center
+}
+
+.mainChannelInfo_dcNks8 .title_dcNks8 {
+    flex-shrink: 1;
+    margin-bottom: 2px;
+    min-width: 0;
+    overflow-wrap: break-word
+}
+
+.mainChannelInfo_dcNks8 .subtitle_dcNks8 {
+    margin-bottom: 24px
+}
+
+.previewChannelHeader_dcNks8 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    inset-inline-start: 0;
+    max-width: 100%;
+    padding-inline-start: 16px;
+    position: absolute;
+    top: 16px
+}
+
+.previewChannelHeader_dcNks8 .titleGroup_dcNks8 {
+    flex-shrink: 1;
+    min-width: 0
+}
+
+.previewChannelHeader_dcNks8 .icon_dcNks8 {
+    margin-inline-end: 16px
+}
+
+.previewChannelHeader_dcNks8 .subtitle_dcNks8,
+.previewChannelHeader_dcNks8 .title_dcNks8 {
+    color: var(--text-strong);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.wrapper_dcNks8 {
+    pointer-events: all;
+    z-index: 1001
+}
+
+.actionButton_dcNks8 {
+    line-height: 0
+}
+
+.fullRegionDropdownButtonOverride_dcNks8 {
+    padding: 0 4px
+}
+
+.actions_dcNks8 {
+    display: flex;
+    gap: 8px
+}
+
+.previewButton_dcNks8 {
+    margin-top: 16px
+}
+
+.guildIcon_dcNks8 {
+    align-items: center;
+    background-color: var(--background-base-low);
+    color: var(--text-default);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+.mask_dcNks8 {
+    display: block
+}
+
+.guildAcronym_dcNks8 {
+    font-size: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.guildIconWithoutImage_dcNks8 {
+    background-color: var(--background-base-low)
+}
+
+/*# sourceMappingURL=f442c20dc4803003.css.map*/

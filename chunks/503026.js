@@ -1,7 +1,6 @@
-n.d(t, { A: () => h });
 var i = n(477900);
 n(582128);
-var l = n(17928),
+var l = n(855986),
     r = n(696451),
     s = n(317525),
     a = n(71393),
@@ -12,34 +11,40 @@ var l = n(17928),
     g = n(900179),
     f = n(518477),
     m = n(652215),
-    p = n(105292);
-function h(e) {
-    let { userId: t, guildId: n, ...h } = e,
-        { trackUserProfileAction: x } = (0, u.NJ)(),
-        A = (0, l.bG)([a.A], () => a.A.getGuild(n)),
-        I = (0, l.bG)([r.Ay], () => r.Ay.getMember(n, t)),
-        v = I?.roles,
-        j = (0, l.yK)([s.A], () => s.A.getManyRoles(n, v ?? []).sort(d.m), [v, n]),
-        [b] = (0, l.yK)([o.A], () => [o.A.can(m.xBc.MANAGE_ROLES, A), o.A.getGuildVersion(n)]);
-    if (null == A) return null;
-    let y = b && null != I;
-    return 0 !== j.length || y
-        ? (0, i.jsx)(g.A, {
-              heading: p.intl.string(p.t["LPJmL/"]),
-              scrollTargetId: f.bk.ROLES,
-              ...h,
-              children: (0, i.jsx)(c.YR, {
-                  userId: t,
-                  guild: A,
-                  roles: j,
-                  onAddRole: () => {
-                      x({ action: "ADD_ROLE" });
-                  },
-                  onRemoveRole: () => {
-                      x({ action: "REMOVE_ROLE" });
-                  },
-                  allowEditing: !0,
-              }),
-          })
-        : null;
-}
+    p = n(792996);
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { userId: t, guildId: n, ...h } = e,
+                { trackUserProfileAction: x } = (0, u.NJ)(),
+                A = (0, l.bG)([a.A], () => a.A.getGuild(n)),
+                I = (0, l.bG)([r.Ay], () => r.Ay.getMember(n, t)),
+                v = I?.roles,
+                j = (0, l.yK)([s.A], () => s.A.getManyRoles(n, v ?? []).sort(d.m), [v, n]),
+                [b] = (0, l.yK)([o.A], () => [o.A.can(m.xBc.MANAGE_ROLES, A), o.A.getGuildVersion(n)]);
+            if (null == A) return null;
+            let y = b && null != I;
+            return 0 !== j.length || y
+                ? (0, i.jsx)(g.A, {
+                      heading: p.intl.string(p.t["LPJmL/"]),
+                      scrollTargetId: f.bk.ROLES,
+                      ...h,
+                      children: (0, i.jsx)(c.YR, {
+                          userId: t,
+                          guild: A,
+                          roles: j,
+                          onAddRole: () => {
+                              x({ action: "ADD_ROLE" });
+                          },
+                          onRemoveRole: () => {
+                              x({ action: "REMOVE_ROLE" });
+                          },
+                          allowEditing: !0,
+                      }),
+                  })
+                : null;
+        },
+    },
+);

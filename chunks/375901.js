@@ -1,5 +1,11 @@
-n.d(t, { D: () => l, j: () => i });
 let l = "chat-messages";
-function i(e, t) {
-    return `${l}-${e}-${t}`;
-}
+n.d(
+    t,
+    {},
+    {
+        D: l,
+        j: function (e, t) {
+            return `${l}-${e}-${t}`;
+        },
+    },
+);

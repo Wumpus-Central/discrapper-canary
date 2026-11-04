@@ -1,4 +1,3 @@
-d.d(t, { a: () => G, i: () => M, n: () => x, r: () => T, t: () => D });
 var i = d(249238),
     e = d(783285),
     c = d(768611),
@@ -74,66 +73,65 @@ var i = d(249238),
         );
     },
     p = null;
-async function N() {
-    return (
-        p ||
-        (p = d
-            .e("485311")
-            .then(d.bind(d, 535106))
-            .then((l) => (0, i.r)(l.default, 1))
-            .then((l) => l.default))
-    );
-}
-function M({
+function N({
     animationData: l,
     loop: t = !0,
-    autoplay: d = !0,
-    reverse: i = !1,
-    style: e,
-    className: a,
-    onComplete: s,
-    autoStop: n = !1,
-    stopFramePosition: Z,
+    autoplay: e = !0,
+    reverse: a = !1,
+    style: s,
+    className: n,
+    onComplete: Z,
+    autoStop: b = !1,
+    stopFramePosition: m,
 }) {
-    let b = (0, c.l)(null),
-        m = !i && d,
-        o = (0, c.l)({ container: b.current, renderer: "svg", loop: t, autoplay: m, animationData: l });
+    let o = (0, c.l)(null),
+        u = !a && e,
+        h = (0, c.l)({ container: o.current, renderer: "svg", loop: t, autoplay: u, animationData: l });
     return (
         (0, c._)(() => {
-            o.current = { container: b.current, renderer: "svg", loop: t, autoplay: m, animationData: l };
-        }, [l, t, m]),
+            h.current = { container: o.current, renderer: "svg", loop: t, autoplay: u, animationData: l };
+        }, [l, t, u]),
         (0, c._)(() => {
             let l, t;
-            if (!b.current) return;
-            let d = !0;
+            if (!o.current) return;
+            let e = !0;
             return (
-                N().then((e) => {
-                    d &&
-                        ((l = e.loadAnimation(o.current)),
-                        i && (l.setDirection(-1), l.goToAndPlay(l.totalFrames - 1, !0)),
-                        s && l.addEventListener("complete", s),
-                        n &&
+                (async function () {
+                    return (
+                        p ||
+                        (p = d
+                            .e(485311)
+                            .then(d.bind(d, 535106))
+                            .then((l) => (0, i.r)(l.default, 1))
+                            .then((l) => l.default))
+                    );
+                })().then((d) => {
+                    e &&
+                        ((l = d.loadAnimation(h.current)),
+                        a && (l.setDirection(-1), l.goToAndPlay(l.totalFrames - 1, !0)),
+                        Z && l.addEventListener("complete", Z),
+                        b &&
                             (t = window.setTimeout(() => {
                                 let t = l;
                                 if (!t) return;
-                                if (!Z) return void t.pause();
+                                if (!m) return void t.pause();
                                 let d = t.totalFrames;
                                 if (!d || d <= 0) return void t.stop();
-                                let i = "last" === Z ? Math.max(d - 1, 0) : "first" === Z ? 0 : Math.floor((d - 1) / 2);
+                                let i = "last" === m ? Math.max(d - 1, 0) : "first" === m ? 0 : Math.floor((d - 1) / 2);
                                 t.goToAndStop(i, !0);
                             }, 5e3)));
                 }),
                 () => {
-                    ((d = !1),
+                    ((e = !1),
                         void 0 !== t && window.clearTimeout(t),
-                        l && (s && l.removeEventListener("complete", s), l.destroy()));
+                        l && (Z && l.removeEventListener("complete", Z), l.destroy()));
                 }
             );
-        }, [s, i, n, Z]),
-        (0, c.v)("div", { ref: b, style: e, className: a, "aria-hidden": "true" })
+        }, [Z, a, b, m]),
+        (0, c.v)("div", { ref: o, style: s, className: n, "aria-hidden": "true" })
     );
 }
-var X = ["#007aff", "#006aff"].map(r).filter((l) => null !== l);
+var M = ["#007aff", "#006aff"].map(r).filter((l) => null !== l);
 function r(l) {
     let t = l.replace("#", "").trim();
     3 === t.length &&
@@ -146,13 +144,13 @@ function r(l) {
         ? [Number.parseInt(d[1], 16) / 255, Number.parseInt(d[2], 16) / 255, Number.parseInt(d[3], 16) / 255]
         : null;
 }
-function y(l, t) {
+function X(l, t) {
     return 0.02 >= Math.abs(l - t);
 }
-function Y(l, t, d) {
-    return X.some(([i, e, c]) => y(l, i) && y(t, e) && y(d, c));
+function y(l, t, d) {
+    return M.some(([i, e, c]) => X(l, i) && X(t, e) && X(d, c));
 }
-var T = ({
+var Y = ({
         className: l = "",
         animationData: t,
         title: d,
@@ -186,7 +184,7 @@ var T = ({
                                                 Array.isArray(i) &&
                                                     i.length >= 3 &&
                                                     i.every((l) => "number" == typeof l) &&
-                                                    Y(i[0], i[1], i[2]) &&
+                                                    y(i[0], i[1], i[2]) &&
                                                     ((i[0] = t[0]), (i[1] = t[1]), (i[2] = t[2]));
                                             })(t, d)
                                           : ("gf" === t.ty || "gs" === t.ty) &&
@@ -205,7 +203,7 @@ var T = ({
                                                         "number" == typeof i &&
                                                             "number" == typeof e &&
                                                             "number" == typeof c &&
-                                                            Y(i, e, c) &&
+                                                            y(i, e, c) &&
                                                             ((a[d + 1] = t[0]), (a[d + 2] = t[1]), (a[d + 3] = t[2]));
                                                     }
                                             })(t, d),
@@ -237,7 +235,7 @@ var T = ({
                         class: "IncodeBaseTutorialAnimationContainer",
                         "aria-hidden": "true",
                         children: h
-                            ? (0, c.v)(M, {
+                            ? (0, c.v)(N, {
                                   animationData: h,
                                   className: "IncodeBaseTutorialAnimation",
                                   autoStop: !0,
@@ -263,7 +261,7 @@ var T = ({
             ],
         });
     },
-    V = ({ canvas: l, mirrored: t }) => {
+    T = ({ canvas: l, mirrored: t }) => {
         let d = (0, c.l)(null);
         return (
             (0, c._)(() => {
@@ -281,7 +279,7 @@ var T = ({
             (0, c.v)("div", { ref: d, class: "IncodeCaptureAvatarHost", "aria-hidden": "true" })
         );
     },
-    L = ({ icon: l, title: t, className: d, isLoading: i }) => {
+    V = ({ icon: l, title: t, className: d, isLoading: i }) => {
         let e = (0, c.l)(null);
         return (
             (0, c._)(() => {
@@ -306,8 +304,8 @@ var T = ({
             })
         );
     },
-    I = { title: "Something went wrong", description: "Please try again later" },
-    z = {
+    L = { title: "Something went wrong", description: "Please try again later" },
+    I = {
         MASK_ERROR: { title: "notifications.mask", description: "notifications.maskDescription" },
         BRIGHTNESS_ERROR: { title: "notifications.brightness", description: "notifications.brightnessDescription" },
         LIVENESS_ERROR: { title: "notifications.spoof", description: "notifications.spoofDescription" },
@@ -319,13 +317,13 @@ var T = ({
         LENSES_ERROR: { title: "notifications.lenses", description: "notifications.lensesDescription" },
         FACE_NOT_FOUND: { title: "notifications.faceNotFound", description: "notifications.faceNotFoundDescription" },
         MULTIPLE_FACES: { title: "notifications.multiple", description: "notifications.multipleDescription" },
-        TOO_BLURRY_ERROR: I,
-        TOO_DARK_ERROR: I,
-        SERVER_ERROR: I,
-        FACE_CROPPING_FAILED: I,
-        FACE_TOO_SMALL: I,
-        PROCESSING_ERROR: I,
-        BAD_REQUEST: I,
+        TOO_BLURRY_ERROR: L,
+        TOO_DARK_ERROR: L,
+        SERVER_ERROR: L,
+        FACE_CROPPING_FAILED: L,
+        FACE_TOO_SMALL: L,
+        PROCESSING_ERROR: L,
+        BAD_REQUEST: L,
         USER_IS_NOT_RECOGNIZED: {
             title: "notifications.accessDenied",
             description: "notifications.accessDeniedDescription",
@@ -357,7 +355,7 @@ var T = ({
             description: "notifications.selfieImageLowQualityDescription",
         },
     },
-    w = [
+    z = [
         "LIVENESS_ERROR",
         "BRIGHTNESS_ERROR",
         "LENSES_ERROR",
@@ -386,19 +384,19 @@ var T = ({
         "HINT_NOT_PROVIDED",
         "SELFIE_IMAGE_LOW_QUALITY",
     ],
-    R = ({ error: l, attemptsRemaining: t, onTryAgain: d }) => {
+    w = ({ error: l, attemptsRemaining: t, onTryAgain: d }) => {
         let { t: i } = (0, e.n)();
         if (!l) return null;
         let { title: a, description: s } =
-                z[
+                I[
                     ((l) => {
                         let t = l.toUpperCase();
                         if (t.includes("HTTP 400") || t.includes("BAD_REQUEST")) return "BAD_REQUEST";
                         if (t.includes("HTTP 500") || t.includes("SERVER_ERROR")) return "SERVER_ERROR";
-                        for (let l of w) if (t.includes(l)) return l;
+                        for (let l of z) if (t.includes(l)) return l;
                         return null;
                     })(l) ?? l
-                ] ?? I,
+                ] ?? L,
             n = i(a) ?? a,
             Z = i(t <= 0 ? "notifications.selfieCaptureFailedDescription" : s);
         return (0, c.v)(G, {
@@ -409,7 +407,7 @@ var T = ({
             onButtonClick: d,
         });
     },
-    S = () =>
+    R = () =>
         (0, c.v)("div", {
             class: "IncodeCameraButton",
             children: (0, c.v)("svg", {
@@ -432,7 +430,7 @@ var T = ({
                 ],
             }),
         }),
-    C = (0, c.a)(({ onClick: l, disabled: t }, d) => {
+    S = (0, c.a)(({ onClick: l, disabled: t }, d) => {
         let { t: i } = (0, e.n)();
         return (0, c.v)("div", {
             class: "IncodeSelfieManualCapture",
@@ -453,144 +451,13 @@ var T = ({
                         disabled: t,
                         class: "IncodeSelfieManualCaptureButton",
                         "aria-label": i("selfiev2.manualCapture.captureButton"),
-                        children: (0, c.v)(S, {}),
+                        children: (0, c.v)(R, {}),
                     }),
                 }),
             ],
         });
     }),
-    x = ({ manager: l, state: t }) => {
-        let {
-                captureStatus: d,
-                stream: i,
-                detectionStatus: m,
-                attemptsRemaining: o,
-                uploadError: h,
-                assistedOnboarding: G,
-                ageAssurance: p,
-                onDeviceMode: N,
-                obfuscateWithAvatar: M,
-                avatarCanvas: X,
-                avatarVariant: r,
-            } = t,
-            [y, Y] = (0, c.p)(!1),
-            { t: T } = (0, e.n)(),
-            I = (0, c.l)(null),
-            z = M && "privacy-lens" === r && !!X;
-        return ((0, c._)(() => {
-            "manualCapture" === m && I.current?.focus();
-        }, [m]),
-        "initializing" === d)
-            ? (0, c.v)(Z.t, { spinnerConfig: { subtitle: T("loadingCircle.preparingCamera") } })
-            : "detecting" === d
-              ? "offline" === m
-                  ? (0, c.v)(s.t, { title: "No internet connection" })
-                  : (0, c.v)(s.t, {
-                        "data-testid": "capture-container",
-                        children: [
-                            (0, c.v)(n.t, {
-                                className: "IncodeCaptureVisuallyHidden",
-                                children: T("selfiev2.capture.title"),
-                            }),
-                            (0, c.v)(a.r, { size: 48 }),
-                            z
-                                ? (0, c.v)("p", {
-                                      class: "IncodePrivacyLensBanner",
-                                      children: T("selfiev2.capture.privacyLensMessage"),
-                                  })
-                                : null,
-                            (0, c.v)("div", {
-                                class: "IncodeCaptureContainer",
-                                children: [
-                                    (0, c.v)(W.n, {
-                                        borderState: y
-                                            ? "capturing"
-                                            : "detecting" === m
-                                              ? "idle"
-                                              : "getReady" === m || "getReadyFinished" === m
-                                                ? "loading"
-                                                : "success" === m
-                                                  ? "success"
-                                                  : "error" === m
-                                                    ? "error"
-                                                    : "idle",
-                                    }),
-                                    (0, c.v)("div", {
-                                        class: "IncodeCaptureFrame",
-                                        children: (0, c.v)("div", {
-                                            class: "IncodeCaptureVideoWrapper",
-                                            "aria-hidden": "true",
-                                            children: i
-                                                ? (0, c.v)(c.x, {
-                                                      children: [
-                                                          M
-                                                              ? (0, c.v)(V, { canvas: X, mirrored: !G })
-                                                              : (0, c.v)(g, { stream: i, mirrored: !G }),
-                                                          M && "privacy-lens" !== r
-                                                              ? null
-                                                              : (0, c.v)("div", {
-                                                                    class: "IncodeCaptureVideo",
-                                                                    children: (0, c.v)(W.r, {}),
-                                                                }),
-                                                      ],
-                                                  })
-                                                : null,
-                                        }),
-                                    }),
-                                    (0, c.v)(a.r, { size: 32 }),
-                                    m ? (0, c.v)(W.t, { detectionState: m, disabled: !!h || y }) : null,
-                                    "manualCapture" !== m || N
-                                        ? null
-                                        : (0, c.v)(C, {
-                                              ref: I,
-                                              onClick: () => {
-                                                  (Y(!0), l.capture());
-                                              },
-                                              disabled: y,
-                                          }),
-                                ],
-                            }),
-                            h
-                                ? (0, c.v)(R, {
-                                      error: h,
-                                      attemptsRemaining: o,
-                                      onTryAgain: () => {
-                                          (l.retryCapture(), Y(!1));
-                                      },
-                                  })
-                                : null,
-                        ],
-                    })
-              : "capturing" === d
-                ? (0, c.v)(s.t, {
-                      className: "IncodeCaptureCapturingPage",
-                      title: "Capturing",
-                      subtitle: "Taking photo...",
-                      children: (0, c.v)("div", {
-                          class: "IncodeCaptureCapturingActions",
-                          children: (0, c.v)(b.t, { isLoading: !0, children: "Capturing..." }),
-                      }),
-                  })
-                : "uploading" === d
-                  ? (0, c.v)(L, {
-                        className: "IncodeCaptureStatusUploading",
-                        isLoading: !0,
-                        icon: (0, c.v)(a.t, { size: 64 }),
-                        title: T(p ? "idv2.capture.processing.verifying" : "idv2.capture.processing.uploading"),
-                    })
-                  : "uploadError" === d
-                    ? (0, c.v)(R, {
-                          error: h,
-                          attemptsRemaining: o,
-                          onTryAgain: () => {
-                              (l.retryCapture(), Y(!1));
-                          },
-                      })
-                    : "success" === d
-                      ? (0, c.v)(L, { icon: (0, c.v)(u.t, { size: 64 }), title: T("idv2.capture.processing.success") })
-                      : null;
-    },
-    g = ({ stream: l, mirrored: t }) => {
+    C = ({ stream: l, mirrored: t }) => {
         let d = (0, c.l)(null);
         return (
             (0, c._)(() => {
@@ -605,30 +472,174 @@ var T = ({
                 class: t ? "IncodeCaptureVideoElement IncodeCaptureVideoMirrored" : "IncodeCaptureVideoElement",
             })
         );
-    },
-    D = ({ manager: l, ageAssurance: t = !1 }) => {
-        let { t: i } = (0, e.n)(),
-            [a, s] = (0, c.p)(!1),
-            [n, Z] = (0, c.p)(null);
-        (0, c._)(() => {
-            d.e("136118")
-                .then(d.bind(d, 961941))
-                .then((l) => {
-                    Z(l.default);
-                });
-        }, []);
-        let b = async () => {
-            (s(!0), await l.nextStep());
-        };
-        return (0, c.v)(T, {
-            animationData: n,
-            title: i(t ? "face.tutorial.ageAssuranceTitle" : "face.tutorial.title"),
-            titleId: "face-tutorial-heading",
-            subtitle: i(t ? "face.tutorial.ageAssuranceSubtitle" : "face.tutorial.subtitle"),
-            onContinue: b,
-            buttonText: i(t ? "face.tutorial.ageAssuranceStartCapture" : "face.tutorial.startCapture"),
-            disclaimerText: i("face.tutorial.autoCapture"),
-            isLoading: a,
-            className: "IncodeSelfieTutorial",
-        });
     };
+d.d(
+    t,
+    {},
+    {
+        a: G,
+        i: N,
+        n: ({ manager: l, state: t }) => {
+            let {
+                    captureStatus: d,
+                    stream: i,
+                    detectionStatus: m,
+                    attemptsRemaining: o,
+                    uploadError: h,
+                    assistedOnboarding: G,
+                    ageAssurance: p,
+                    onDeviceMode: N,
+                    obfuscateWithAvatar: M,
+                    avatarCanvas: r,
+                    avatarVariant: X,
+                } = t,
+                [y, Y] = (0, c.p)(!1),
+                { t: L } = (0, e.n)(),
+                I = (0, c.l)(null),
+                z = M && "privacy-lens" === X && !!r;
+            return ((0, c._)(() => {
+                "manualCapture" === m && I.current?.focus();
+            }, [m]),
+            "initializing" === d)
+                ? (0, c.v)(Z.t, { spinnerConfig: { subtitle: L("loadingCircle.preparingCamera") } })
+                : "detecting" === d
+                  ? "offline" === m
+                      ? (0, c.v)(s.t, { title: "No internet connection" })
+                      : (0, c.v)(s.t, {
+                            "data-testid": "capture-container",
+                            children: [
+                                (0, c.v)(n.t, {
+                                    className: "IncodeCaptureVisuallyHidden",
+                                    children: L("selfiev2.capture.title"),
+                                }),
+                                (0, c.v)(a.r, { size: 48 }),
+                                z
+                                    ? (0, c.v)("p", {
+                                          class: "IncodePrivacyLensBanner",
+                                          children: L("selfiev2.capture.privacyLensMessage"),
+                                      })
+                                    : null,
+                                (0, c.v)("div", {
+                                    class: "IncodeCaptureContainer",
+                                    children: [
+                                        (0, c.v)(W.n, {
+                                            borderState: y
+                                                ? "capturing"
+                                                : "detecting" === m
+                                                  ? "idle"
+                                                  : "getReady" === m || "getReadyFinished" === m
+                                                    ? "loading"
+                                                    : "success" === m
+                                                      ? "success"
+                                                      : "error" === m
+                                                        ? "error"
+                                                        : "idle",
+                                        }),
+                                        (0, c.v)("div", {
+                                            class: "IncodeCaptureFrame",
+                                            children: (0, c.v)("div", {
+                                                class: "IncodeCaptureVideoWrapper",
+                                                "aria-hidden": "true",
+                                                children: i
+                                                    ? (0, c.v)(c.x, {
+                                                          children: [
+                                                              M
+                                                                  ? (0, c.v)(T, { canvas: r, mirrored: !G })
+                                                                  : (0, c.v)(C, { stream: i, mirrored: !G }),
+                                                              M && "privacy-lens" !== X
+                                                                  ? null
+                                                                  : (0, c.v)("div", {
+                                                                        class: "IncodeCaptureVideo",
+                                                                        children: (0, c.v)(W.r, {}),
+                                                                    }),
+                                                          ],
+                                                      })
+                                                    : null,
+                                            }),
+                                        }),
+                                        (0, c.v)(a.r, { size: 32 }),
+                                        m ? (0, c.v)(W.t, { detectionState: m, disabled: !!h || y }) : null,
+                                        "manualCapture" !== m || N
+                                            ? null
+                                            : (0, c.v)(S, {
+                                                  ref: I,
+                                                  onClick: () => {
+                                                      (Y(!0), l.capture());
+                                                  },
+                                                  disabled: y,
+                                              }),
+                                    ],
+                                }),
+                                h
+                                    ? (0, c.v)(w, {
+                                          error: h,
+                                          attemptsRemaining: o,
+                                          onTryAgain: () => {
+                                              (l.retryCapture(), Y(!1));
+                                          },
+                                      })
+                                    : null,
+                            ],
+                        })
+                  : "capturing" === d
+                    ? (0, c.v)(s.t, {
+                          className: "IncodeCaptureCapturingPage",
+                          title: "Capturing",
+                          subtitle: "Taking photo...",
+                          children: (0, c.v)("div", {
+                              class: "IncodeCaptureCapturingActions",
+                              children: (0, c.v)(b.t, { isLoading: !0, children: "Capturing..." }),
+                          }),
+                      })
+                    : "uploading" === d
+                      ? (0, c.v)(V, {
+                            className: "IncodeCaptureStatusUploading",
+                            isLoading: !0,
+                            icon: (0, c.v)(a.t, { size: 64 }),
+                            title: L(p ? "idv2.capture.processing.verifying" : "idv2.capture.processing.uploading"),
+                        })
+                      : "uploadError" === d
+                        ? (0, c.v)(w, {
+                              error: h,
+                              attemptsRemaining: o,
+                              onTryAgain: () => {
+                                  (l.retryCapture(), Y(!1));
+                              },
+                          })
+                        : "success" === d
+                          ? (0, c.v)(V, {
+                                icon: (0, c.v)(u.t, { size: 64 }),
+                                title: L("idv2.capture.processing.success"),
+                            })
+                          : null;
+        },
+        r: Y,
+        t: ({ manager: l, ageAssurance: t = !1 }) => {
+            let { t: i } = (0, e.n)(),
+                [a, s] = (0, c.p)(!1),
+                [n, Z] = (0, c.p)(null);
+            return (
+                (0, c._)(() => {
+                    d.e(136118)
+                        .then(d.bind(d, 961941))
+                        .then((l) => {
+                            Z(l.default);
+                        });
+                }, []),
+                (0, c.v)(Y, {
+                    animationData: n,
+                    title: i(t ? "face.tutorial.ageAssuranceTitle" : "face.tutorial.title"),
+                    titleId: "face-tutorial-heading",
+                    subtitle: i(t ? "face.tutorial.ageAssuranceSubtitle" : "face.tutorial.subtitle"),
+                    onContinue: async () => {
+                        (s(!0), await l.nextStep());
+                    },
+                    buttonText: i(t ? "face.tutorial.ageAssuranceStartCapture" : "face.tutorial.startCapture"),
+                    disclaimerText: i("face.tutorial.autoCapture"),
+                    isLoading: a,
+                    className: "IncodeSelfieTutorial",
+                })
+            );
+        },
+    },
+);

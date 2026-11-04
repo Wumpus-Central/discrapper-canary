@@ -1,11 +1,10 @@
-i.d(n, { default: () => d });
 var e = i(477900),
     a = i(582128),
     o = i(189213),
     l = i(890497),
-    u = i(677420),
+    u = i(204300),
     r = i(200700),
-    s = i(105292);
+    s = i(792996);
 function c(t) {
     let { duration: n, onSelectDuration: i } = t,
         a = (0, r.ny)(),
@@ -22,41 +21,47 @@ function c(t) {
         selectionMode: "single",
     });
 }
-function d(t) {
-    let { action: n, triggerType: i, isEdit: l, onUpdateDuration: d, onClose: p, transitionState: C } = t,
-        [f, h] = a.useState(() =>
-            null != n.metadata.durationSeconds && n.metadata.durationSeconds > 0
-                ? n.metadata.durationSeconds
-                : r.DisableCommunicationDuration.DURATION_60_SEC,
-        ),
-        S = (0, u.x)(n.type, n, i);
-    if (null == S) return null;
-    let { headerText: D } = S;
-    return (0, e.jsx)(o.a, {
-        onClose: p,
-        transitionState: C,
-        title: D,
-        subtitle: s.intl.string(s.t.DWGBAh),
-        actions: [
-            {
-                text: s.intl.string(s.t["ETE/oC"]),
-                onClick: function () {
-                    p();
-                },
-                variant: "secondary",
-            },
-            {
-                text: l ? s.intl.string(s.t.bt75uw) : s.intl.string(s.t["R3BPH+"]),
-                onClick: function () {
-                    d(f);
-                },
-            },
-        ],
-        children: (0, e.jsx)(c, {
-            duration: f,
-            onSelectDuration: function (t) {
-                h(t);
-            },
-        }),
-    });
-}
+i.d(
+    n,
+    {},
+    {
+        default: function (t) {
+            let { action: n, triggerType: i, isEdit: l, onUpdateDuration: d, onClose: p, transitionState: C } = t,
+                [f, h] = a.useState(() =>
+                    null != n.metadata.durationSeconds && n.metadata.durationSeconds > 0
+                        ? n.metadata.durationSeconds
+                        : r.DisableCommunicationDuration.DURATION_60_SEC,
+                ),
+                S = (0, u.x)(n.type, n, i);
+            if (null == S) return null;
+            let { headerText: D } = S;
+            return (0, e.jsx)(o.a, {
+                onClose: p,
+                transitionState: C,
+                title: D,
+                subtitle: s.intl.string(s.t.DWGBAh),
+                actions: [
+                    {
+                        text: s.intl.string(s.t["ETE/oC"]),
+                        onClick: function () {
+                            p();
+                        },
+                        variant: "secondary",
+                    },
+                    {
+                        text: l ? s.intl.string(s.t.bt75uw) : s.intl.string(s.t["R3BPH+"]),
+                        onClick: function () {
+                            d(f);
+                        },
+                    },
+                ],
+                children: (0, e.jsx)(c, {
+                    duration: f,
+                    onSelectDuration: function (t) {
+                        h(t);
+                    },
+                }),
+            });
+        },
+    },
+);

@@ -1,4 +1,4 @@
-(n.r(s), n.d(s, { default: () => g }));
+n.r(s);
 var a = n(477900),
     l = n(582128),
     t = n(503698),
@@ -46,3 +46,4 @@ let g = l.memo(function (e) {
         ],
     });
 });
+n.d(s, {}, { default: g });

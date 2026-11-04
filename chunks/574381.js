@@ -1,25 +1,3 @@
-n.d(t, {
-    Aq: () => E,
-    Av: () => s,
-    Ct: () => A,
-    HZ: () => _,
-    Ls: () => T,
-    R0: () => C,
-    Sn: () => h,
-    cX: () => d,
-    cZ: () => O,
-    fg: () => r,
-    j9: () => c,
-    m0: () => f,
-    q4: () => p,
-    r_: () => N,
-    t1: () => S,
-    tn: () => m,
-    uF: () => o,
-    un: () => I,
-    uo: () => g,
-    xl: () => u,
-});
 var i,
     r = (((i = {}).WINDOWS = "WINDOWS"), (i.OSX = "OSX"), (i.LINUX = "LINUX"), (i.WEB = "WEB"), i);
 let a = "u" < typeof window ? null : window.DiscordNative,
@@ -38,60 +16,68 @@ function u() {
     return o() || d() || c();
 }
 function _() {
-    return "WEB" === g();
-}
-function E() {
-    return (
-        null != navigator.userAgent &&
-        null != navigator.userAgent.toLowerCase().match("(android ).+chrome/[.0-9]* mobile")
-    );
-}
-function A() {
-    return navigator.userAgent?.match(/android/i) != null;
-}
-function h() {
-    return navigator.userAgent?.match(/Macintosh/i) != null;
-}
-function f() {
-    return "android" === l;
-}
-function I() {
-    return "ios" === l;
-}
-function p() {
     return navigator.userAgent?.match(/OculusBrowser/i) != null;
 }
-function m() {
-    return p();
-}
-function T() {
-    return u() || p() || s;
-}
-function g() {
+function E() {
     return o() ? "WINDOWS" : d() ? "OSX" : c() ? "LINUX" : "WEB";
 }
-function S() {
-    return l;
-}
-function N() {
-    switch (l) {
-        case "ios":
-        case "android":
+n.d(
+    t,
+    {},
+    {
+        Av: s,
+        Ct: function () {
+            return navigator.userAgent?.match(/android/i) != null;
+        },
+        HZ: function () {
+            return "WEB" === E();
+        },
+        Ls: function () {
+            return u() || _() || s;
+        },
+        R0: function () {
+            let { userAgent: e } = window.navigator;
+            if (/Windows/i.test(e)) return /Phone/.test(e) ? "windows mobile" : "windows";
+            if (/(iPhone|iPad|iPod)/.test(e)) return "ios";
+            if (/Android/.test(e)) return "android";
+            if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return "blackberry";
+            if (/Mac/i.test(e))
+                return null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2 ? "ios" : "macos";
+            else if (/Linux/i.test(e)) return "linux";
+        },
+        Sn: function () {
+            return navigator.userAgent?.match(/Macintosh/i) != null;
+        },
+        cX: d,
+        cZ: function () {
+            return o() ? "win" : d() ? "osx" : void 0;
+        },
+        fg: r,
+        j9: c,
+        m0: function () {
+            return "android" === l;
+        },
+        q4: _,
+        r_: function () {
+            switch (l) {
+                case "ios":
+                case "android":
+                    return l;
+                default:
+                    return "web";
+            }
+        },
+        t1: function () {
             return l;
-        default:
-            return "web";
-    }
-}
-function C() {
-    let { userAgent: e } = window.navigator;
-    if (/Windows/i.test(e)) return /Phone/.test(e) ? "windows mobile" : "windows";
-    if (/(iPhone|iPad|iPod)/.test(e)) return "ios";
-    if (/Android/.test(e)) return "android";
-    if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return "blackberry";
-    if (/Mac/i.test(e))
-        return null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2 ? "ios" : "macos";
-    else if (/Linux/i.test(e)) return "linux";
-}
-function O() {
-    return o() ? "win" : d() ? "osx" : void 0;
-}
+        },
+        tn: function () {
+            return _();
+        },
+        uF: o,
+        un: function () {
+            return "ios" === l;
+        },
+        uo: E,
+        xl: u,
+    },
+);

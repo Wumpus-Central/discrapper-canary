@@ -1,0 +1,234 @@
+.container_x3HD6i {
+    align-items: stretch;
+    flex-direction: row;
+    margin-bottom: calc(var(--custom-modal-padding-bottom, 0px)*-1);
+    margin-top: calc(var(--custom-modal-padding-top, 0px)*-1);
+    max-height: 95vh;
+    min-height: 400px
+}
+
+.container_x3HD6i,
+.guildSidebar_x3HD6i {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    position: relative
+}
+
+.guildSidebar_x3HD6i {
+    align-items: center;
+    border-radius: 8px;
+    flex-direction: column;
+    margin: 8px 16px;
+    min-width: 400px;
+    padding: 12px;
+    width: 33%
+}
+
+.modal_x3HD6i {
+    box-sizing: border-box;
+    flex: 1;
+    max-height: 100%;
+    width: 100%
+}
+
+.modal_x3HD6i,
+.sequencer_x3HD6i {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.sequencer_x3HD6i {
+    justify-content: center;
+    min-height: 100%
+}
+
+.modalContent_x3HD6i::-webkit-scrollbar-track-piece:start {
+    margin-top: 4px
+}
+
+.modalContent_x3HD6i::-webkit-scrollbar-track-piece:end {
+    margin-bottom: 4px
+}
+
+.mainContentWrapper_x3HD6i {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    max-width: 720px;
+    padding: 60px 24px 36px
+}
+
+.content_x3HD6i {
+    margin-bottom: 20px;
+    max-width: 640px
+}
+
+.closeButton_x3HD6i {
+    inset-inline-end: 32px;
+    position: absolute;
+    top: 32px;
+    z-index: 2
+}
+
+.applicationIconContainer_x3HD6i {
+    display: flex;
+    justify-content: center
+}
+
+.applicationIcon_x3HD6i {
+    width: 88px
+}
+
+.header_x3HD6i {
+    margin: 8px 0
+}
+
+.footer_x3HD6i {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row-reverse;
+    gap: 16px;
+    justify-content: space-between;
+    padding: 8px 0;
+    position: relative;
+    width: 100%
+}
+
+.divider_x3HD6i {
+    border: none;
+    border-bottom: 1px solid var(--border-subtle);
+    margin: 24px 0
+}
+
+.submitButton_x3HD6i {
+    margin-inline-start: 12px
+}
+
+.formItem_x3HD6i {
+    margin-bottom: 24px;
+    text-align: initial
+}
+
+.resendButtonContainer_x3HD6i {
+    display: flex;
+    justify-content: center;
+    margin: 24px auto
+}
+
+.confirmation_x3HD6i {
+    box-shadow: var(--shadow-border), var(--shadow-high);
+    max-width: 440px;
+    text-align: center
+}
+
+.confirmation_x3HD6i,
+.confirmationContent_x3HD6i {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.confirmationContent_x3HD6i {
+    padding: 24px 24px 0
+}
+
+.confirmationButtonRow_x3HD6i {
+    background-color: var(--background-base-lower);
+    border-radius: 0 0 4px 4px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    margin-top: 24px;
+    padding: 12px 8px;
+    width: 100%
+}
+
+.confirmationButton_x3HD6i {
+    margin: 4px;
+    width: 100%
+}
+
+.confirmationTooltipContents_x3HD6i {
+    width: 100%
+}
+
+.confirmationButtonColumn_x3HD6i {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 12px 12px 20px
+}
+
+.notice_x3HD6i {
+    bottom: 0;
+    inset-inline-start: 0;
+    margin: 0 auto 16px;
+    max-width: 740px;
+    pointer-events: all;
+    position: absolute
+}
+
+.rejectionReasonLabel_x3HD6i {
+    margin-inline-end: 4px
+}
+
+.rejectionReason_x3HD6i {
+    color: var(--text-feedback-warning)
+}
+
+@media (max-width:880px) {
+    .container_x3HD6i {
+        flex-direction: column;
+        justify-content: flex-start;
+        max-height: unset;
+        padding-top: 60px
+    }
+
+    .guildSidebar_x3HD6i {
+        box-sizing: border-box;
+        padding: 20px 12px;
+        width: unset
+    }
+
+    .mainContentWrapper_x3HD6i {
+        height: unset
+    }
+
+    .sidebarCard_x3HD6i {
+        padding: 60px 0
+    }
+}
+
+.clanGdmConsentCheckbox_x3HD6i {
+    border-width: 2px;
+    margin-top: 24px
+}
+
+.disclaimerFooter_x3HD6i {
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.guildProfile_x3HD6i {
+    width: 280px;
+    z-index: 2
+}
+
+.sidebarGradientOverlay_x3HD6i {
+    border-radius: 8px;
+    opacity: .33;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 0
+}
+
+/*# sourceMappingURL=4a471398df63f702.css.map*/

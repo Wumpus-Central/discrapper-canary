@@ -1,5 +1,5 @@
-(n.d(t, { A: () => A }), n(667532));
-var i = n(17928),
+n(667532);
+var i = n(855986),
     l = n(73153),
     r = n(95701),
     s = n(734057),
@@ -69,3 +69,4 @@ let A = new g(l.h, {
         return ((c = i.history), (h = i.historySet), i.didChange);
     },
 });
+n.d(t, {}, { A: A });

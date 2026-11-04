@@ -1,4 +1,9 @@
-t.d(n, { J: () => r });
-function r() {
-    return null;
-}
+t.d(
+    n,
+    {},
+    {
+        J: function () {
+            return null;
+        },
+    },
+);

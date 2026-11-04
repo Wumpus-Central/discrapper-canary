@@ -1,7 +1,7 @@
-(n.d(t, { b: () => a }), n(134528), n(947204));
+(n(134528), n(947204));
 var l = n(719442),
     i = n(317681),
-    r = n(820066),
+    r = n(339200),
     s = n(551483);
 let a = {
     ...l.gB,
@@ -158,3 +158,4 @@ function u(e, t, n, l, i) {
         s = o(e.selection?.focus, t.focus, n, l, i);
     null == r || null == s || a.select(e, { anchor: r, focus: s });
 }
+n.d(t, {}, { b: a });

@@ -1,0 +1,121 @@
+n.d(t, { e: () => y, A: () => x });
+var i = n(477900),
+    l = n(582128),
+    r = n(503698),
+    s = n.n(r),
+    a = n(200192),
+    o = n(526701),
+    u = n(522937),
+    d = n(653766),
+    c = n(265872),
+    h = n(866665),
+    f = n(939249),
+    g = n(657043),
+    A = n(793574),
+    p = n(384059),
+    m = n(917592),
+    I = n(926641),
+    E = n(834730),
+    S = n(29160),
+    C = n(792996),
+    _ = n(177129);
+let N = function (e) {
+    let { className: t, hasVideo: n, text: l, hasConnectedChannel: r, textVariant: a = "body-md/medium" } = e,
+        o = n ? C.intl.string(C.t.IlHdW8) : C.intl.string(C.t.WsOisp);
+    return (0, i.jsx)(S.A, {
+        className: s()(t, _.H),
+        hoverText: r ? (0, i.jsx)(E.E, { variant: a, color: "currentColor", className: _.Q, children: o }) : null,
+        children: (0, i.jsx)(E.E, { variant: a, color: "currentColor", className: _.Q, children: l }),
+    });
+};
+var T = n(652215),
+    v = n(473718);
+let y = { [T.vkP.CONNECTED]: v.nf, [T.vkP.CONNECTING]: v._6, [T.vkP.ERROR]: v.Il },
+    M = { [T.bFR.FINE]: v.LP, [T.bFR.AVERAGE]: v.mq, [T.bFR.BAD]: v.yA, [T.bFR.UNKNOWN]: null },
+    D = { [T.bFR.FINE]: a.Q, [T.bFR.AVERAGE]: o.j, [T.bFR.BAD]: u.R, [T.bFR.UNKNOWN]: d.e };
+function R(e) {
+    let { quality: t, largePing: n, ...l } = e,
+        r = D[t];
+    return (0, i.jsx)(r, { className: s()(v.hU, { [v.kV]: n }), ...l });
+}
+function O(e) {
+    let { accessory: t, enlarged: n = !1, children: l } = e;
+    return null == t ? l : (0, i.jsxs)("div", { className: s()(v.Bs, { [v.F5]: n }), children: [l, t] });
+}
+function x(e) {
+    let {
+            quality: t,
+            lastPing: n,
+            state: r,
+            className: a,
+            children: o,
+            channelId: u,
+            childrenAsSubtitle: d,
+            connectionStatusTextVariant: E,
+            hasVideo: S,
+            statusAccessory: C,
+        } = e,
+        _ = l.useRef(null),
+        D = r === T.S7L.RTC_CONNECTED,
+        x = l.useCallback((e) => (0, i.jsx)(I.A, { ...e, channelId: u }), [u]),
+        { connectionStatus: w, connectionStatusText: L } = m.A.getStatus(r, S),
+        U = (0, g.KN)("RTCConnectionStatus");
+    return (0, i.jsxs)("div", {
+        className: v.pe,
+        children: [
+            (0, i.jsx)("div", {
+                className: s()(v.yH, M[t], a),
+                ref: _,
+                children: (0, i.jsx)(c.Y, {
+                    targetElementRef: _,
+                    renderPopout: x,
+                    position: "top",
+                    children: (e) => {
+                        let { onClick: l } = e;
+                        return (0, i.jsxs)(i.Fragment, {
+                            children: [
+                                D &&
+                                    (0, i.jsx)(h.m, {
+                                        text: t !== T.bFR.UNKNOWN && null != n ? `${n.toFixed(0)} ms` : null,
+                                        children: (0, i.jsx)(f.D, {
+                                            className: s()(v.xr, { [v.YJ]: d }),
+                                            onClick: (e) => {
+                                                ((0, p.XJ)(A.A.RTC_PANEL, p.OP.CONNECTION_STATUS), l(e));
+                                            },
+                                            children: (0, i.jsx)(R, { quality: t, largePing: d }),
+                                        }),
+                                    }),
+                                (0, i.jsxs)("div", {
+                                    className: v.ei,
+                                    children: [
+                                        d && U
+                                            ? null
+                                            : (0, i.jsx)(O, {
+                                                  accessory: C,
+                                                  children: (0, i.jsx)(f.D, {
+                                                      onClick: (e) => {
+                                                          ((0, p.XJ)(A.A.RTC_PANEL, p.OP.CONNECTION_STATUS), l(e));
+                                                      },
+                                                      children: (0, i.jsx)(N, {
+                                                          text: L,
+                                                          textVariant: E,
+                                                          hasVideo: S,
+                                                          className: y[w],
+                                                          hasConnectedChannel: null != u,
+                                                      }),
+                                                  }),
+                                              }),
+                                        d
+                                            ? (0, i.jsx)(O, { accessory: U ? C : null, enlarged: !0, children: o })
+                                            : null,
+                                    ],
+                                }),
+                            ],
+                        });
+                    },
+                }),
+            }),
+            d ? null : o,
+        ],
+    });
+}

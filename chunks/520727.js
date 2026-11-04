@@ -1,29 +1,8 @@
-(s.r(k),
-    s.d(k, {
-        assets: () => y,
-        ddd: () => l,
-        default: () => u,
-        fr: () => d,
-        h: () => i,
-        ip: () => o,
-        layers: () => e,
-        markers: () => m,
-        meta: () => h,
-        nm: () => n,
-        op: () => p,
-        v: () => t,
-        w: () => r,
-    }));
-var d = 60,
-    t = "5.9.6",
-    o = 0,
-    p = 209,
-    r = 74,
-    i = 123,
-    n = "frontdevicelottie",
-    l = 0,
-    m = [],
-    y = [
+s.r(k);
+var d = "5.9.6",
+    t = "frontdevicelottie",
+    o = [],
+    p = [
         {
             nm: "modal blur",
             fr: 60,
@@ -9543,7 +9522,7 @@ var d = 60,
             ],
         },
     ],
-    e = [
+    r = [
         {
             ty: 3,
             ddd: 0,
@@ -9592,5 +9571,36 @@ var d = 60,
             bm: 0,
         },
     ],
-    h = { a: "", d: "", tc: "", g: "Aninix" },
-    u = { fr: 60, v: t, ip: 0, op: 209, w: 74, h: 123, nm: n, ddd: 0, markers: m, assets: y, layers: e, meta: h };
+    i = { a: "", d: "", tc: "", g: "Aninix" };
+s.d(
+    k,
+    {},
+    {
+        assets: p,
+        ddd: 0,
+        default: {
+            fr: 60,
+            v: d,
+            ip: 0,
+            op: 209,
+            w: 74,
+            h: 123,
+            nm: t,
+            ddd: 0,
+            markers: o,
+            assets: p,
+            layers: r,
+            meta: i,
+        },
+        fr: 60,
+        h: 123,
+        ip: 0,
+        layers: r,
+        markers: o,
+        meta: i,
+        nm: t,
+        op: 209,
+        v: d,
+        w: 74,
+    },
+);

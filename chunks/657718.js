@@ -1,4 +1,3 @@
-n.d(t, { S: () => S, a: () => O });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -9,8 +8,8 @@ var i = n(477900),
     c = n(977067),
     u = n(559106),
     _ = n(27989),
-    E = n(432816),
-    A = n(570950),
+    E = n(116711),
+    A = n(470170),
     h = n(289873),
     f = n(834730),
     I = n(65406),
@@ -19,118 +18,6 @@ let m = { xs: "body-xs/medium", sm: "body-sm/medium", md: "body-md/medium" },
     T = { xs: "xxs", sm: "xs", md: "refresh_sm" },
     g = { xs: "sm", sm: "sm", md: "md" };
 function S(e) {
-    let {
-            role: t = "button",
-            variant: n = "primary",
-            size: a = "md",
-            text: _,
-            icon: A,
-            iconPosition: h = "start",
-            iconOpticalOffsetMargin: T = 0,
-            fullWidth: g = !1,
-            focusProps: S,
-            loading: R,
-            loadingStartedLabel: L,
-            loadingFinishedLabel: y,
-            rounded: D = !1,
-            type: b = "button",
-            rel: v,
-            onClick: P,
-            onDoubleClick: M,
-            onMouseEnter: U,
-            onMouseLeave: w,
-            onMouseUp: G,
-            onMouseDown: x,
-            onKeyDown: k,
-            disabled: F,
-            minWidth: B,
-            className: V,
-            style: H,
-            buttonRef: j,
-            ...W
-        } = e,
-        Y = (0, c.C)(),
-        K = Y?.size ?? a,
-        $ = Y?.fullWidth ?? g,
-        z = null != _,
-        X = r.useRef(null),
-        q = j ?? X,
-        Z = (0, i.jsx)(O, { icon: A, iconOpticalOffsetMargin: T, iconPosition: h, size: K, ref: q, disabled: F }),
-        Q = "expressive" === n,
-        J = r.useContext(d.C),
-        { theme: ee, i18n: et } = (0, E.G9)(),
-        en = (0, l.q)(ee),
-        ei = r.useRef(!1);
-    r.useEffect(() => {
-        (!0 === R && ((ei.current = !0), o.O.announce(L ?? et.BUTTON_LOADING_STARTED_LABEL)),
-            !1 === R && !0 === ei.current && (o.O.announce(y ?? et.BUTTON_LOADING_FINISHED_LABEL), (ei.current = !1)));
-    }, [R, L, y, et.BUTTON_LOADING_STARTED_LABEL, et.BUTTON_LOADING_FINISHED_LABEL]);
-    let er = (0, i.jsxs)("div", {
-            className: s()(I.buttonChildren, { [I.loading]: R }),
-            children: [
-                null != Z && "start" === h && Z,
-                z && (0, i.jsx)(f.E, { tag: "span", variant: m[K], color: "none", lineClamp: 1, children: _ }),
-                null != Z && "end" === h && Z,
-            ],
-        }),
-        ea = F || R,
-        es = B;
-    null != es && "number" == typeof es && (es = `${es}px`);
-    let el = (0, i.jsx)(u.vN, {
-        ...S,
-        children: (0, i.jsxs)("button", {
-            "data-mana-component": "button",
-            role: t,
-            "aria-busy": R,
-            className: s()(
-                I.button,
-                I[K],
-                (function (e, t) {
-                    switch (e) {
-                        case "togglebutton":
-                            return t ? p.GA : p.mQ;
-                        case "togglebutton-critical":
-                            return p.kD;
-                        case "togglebutton-icon-only":
-                            return p.e7;
-                        default:
-                            return I[e];
-                    }
-                })(n, z),
-                { [I.hasText]: z, [I.fullWidth]: $, [I.rounded]: D },
-            ),
-            ref: q,
-            rel: v,
-            type: b,
-            onClick: ea ? (e) => e.preventDefault() : P,
-            onDoubleClick: ea ? (e) => e.preventDefault() : M,
-            onMouseUp: ea ? void 0 : G,
-            onMouseDown: ea ? void 0 : x,
-            onKeyDown: ea ? void 0 : k,
-            onMouseEnter: ea ? void 0 : U,
-            onMouseLeave: ea ? void 0 : w,
-            disabled: F,
-            style: { "--__button-min-width": es },
-            ...W,
-            children: [
-                Q &&
-                    (0, i.jsx)(C, {
-                        hasReducedMotion: J.reducedMotion.enabled,
-                        buttonRef: q,
-                        isLightMode: en,
-                        disabled: F,
-                    }),
-                null == R
-                    ? (0, i.jsx)("div", { className: I.buttonChildrenWrapper, children: er })
-                    : (0, i.jsx)(N, { loading: R, size: K, children: er }),
-            ],
-        }),
-    });
-    return Q
-        ? (0, i.jsx)("div", { className: s()(I.expressiveWrapper, { [I.fullWidth]: $, [I.hasText]: z }), children: el })
-        : el;
-}
-function N(e) {
     let { children: t, loading: n, size: a } = e,
         l = r.useRef(null),
         [o, d] = r.useState(n);
@@ -166,7 +53,7 @@ function N(e) {
         })
     );
 }
-function C(e) {
+function N(e) {
     let { hasReducedMotion: t, buttonRef: n, isLightMode: a, disabled: l } = e,
         o = r.useRef(null);
     return (
@@ -211,7 +98,7 @@ function C(e) {
         })
     );
 }
-function O(e) {
+function C(e) {
     let { icon: t, iconOpticalOffsetMargin: n, iconPosition: a, size: s, ref: l, disabled: o } = e,
         d = null,
         [c, u] = r.useState(!1);
@@ -270,3 +157,134 @@ function O(e) {
         }
     return d;
 }
+n.d(
+    t,
+    {},
+    {
+        S: function (e) {
+            let {
+                    role: t = "button",
+                    variant: n = "primary",
+                    size: a = "md",
+                    text: _,
+                    icon: A,
+                    iconPosition: h = "start",
+                    iconOpticalOffsetMargin: T = 0,
+                    fullWidth: g = !1,
+                    focusProps: O,
+                    loading: R,
+                    loadingStartedLabel: L,
+                    loadingFinishedLabel: y,
+                    rounded: D = !1,
+                    type: b = "button",
+                    rel: v,
+                    onClick: P,
+                    onDoubleClick: M,
+                    onMouseEnter: U,
+                    onMouseLeave: w,
+                    onMouseUp: G,
+                    onMouseDown: x,
+                    onKeyDown: k,
+                    disabled: F,
+                    minWidth: B,
+                    className: V,
+                    style: H,
+                    buttonRef: j,
+                    ...W
+                } = e,
+                Y = (0, c.C)(),
+                K = Y?.size ?? a,
+                $ = Y?.fullWidth ?? g,
+                z = null != _,
+                X = r.useRef(null),
+                q = j ?? X,
+                Z = (0, i.jsx)(C, {
+                    icon: A,
+                    iconOpticalOffsetMargin: T,
+                    iconPosition: h,
+                    size: K,
+                    ref: q,
+                    disabled: F,
+                }),
+                Q = "expressive" === n,
+                J = r.useContext(d.C),
+                { theme: ee, i18n: et } = (0, E.G9)(),
+                en = (0, l.q)(ee),
+                ei = r.useRef(!1);
+            r.useEffect(() => {
+                (!0 === R && ((ei.current = !0), o.O.announce(L ?? et.BUTTON_LOADING_STARTED_LABEL)),
+                    !1 === R &&
+                        !0 === ei.current &&
+                        (o.O.announce(y ?? et.BUTTON_LOADING_FINISHED_LABEL), (ei.current = !1)));
+            }, [R, L, y, et.BUTTON_LOADING_STARTED_LABEL, et.BUTTON_LOADING_FINISHED_LABEL]);
+            let er = (0, i.jsxs)("div", {
+                    className: s()(I.buttonChildren, { [I.loading]: R }),
+                    children: [
+                        null != Z && "start" === h && Z,
+                        z && (0, i.jsx)(f.E, { tag: "span", variant: m[K], color: "none", lineClamp: 1, children: _ }),
+                        null != Z && "end" === h && Z,
+                    ],
+                }),
+                ea = F || R,
+                es = B;
+            null != es && "number" == typeof es && (es = `${es}px`);
+            let el = (0, i.jsx)(u.vN, {
+                ...O,
+                children: (0, i.jsxs)("button", {
+                    "data-mana-component": "button",
+                    role: t,
+                    "aria-busy": R,
+                    className: s()(
+                        I.button,
+                        I[K],
+                        (function (e, t) {
+                            switch (e) {
+                                case "togglebutton":
+                                    return t ? p.GA : p.mQ;
+                                case "togglebutton-critical":
+                                    return p.kD;
+                                case "togglebutton-icon-only":
+                                    return p.e7;
+                                default:
+                                    return I[e];
+                            }
+                        })(n, z),
+                        { [I.hasText]: z, [I.fullWidth]: $, [I.rounded]: D },
+                    ),
+                    ref: q,
+                    rel: v,
+                    type: b,
+                    onClick: ea ? (e) => e.preventDefault() : P,
+                    onDoubleClick: ea ? (e) => e.preventDefault() : M,
+                    onMouseUp: ea ? void 0 : G,
+                    onMouseDown: ea ? void 0 : x,
+                    onKeyDown: ea ? void 0 : k,
+                    onMouseEnter: ea ? void 0 : U,
+                    onMouseLeave: ea ? void 0 : w,
+                    disabled: F,
+                    style: { "--__button-min-width": es },
+                    ...W,
+                    children: [
+                        Q &&
+                            (0, i.jsx)(N, {
+                                hasReducedMotion: J.reducedMotion.enabled,
+                                buttonRef: q,
+                                isLightMode: en,
+                                disabled: F,
+                            }),
+                        null == R
+                            ? (0, i.jsx)("div", { className: I.buttonChildrenWrapper, children: er })
+                            : (0, i.jsx)(S, { loading: R, size: K, children: er }),
+                    ],
+                }),
+            });
+            return Q
+                ? (0, i.jsx)("div", {
+                      className: s()(I.expressiveWrapper, { [I.fullWidth]: $, [I.hasText]: z }),
+                      children: el,
+                  })
+                : el;
+        },
+        a: C,
+    },
+);

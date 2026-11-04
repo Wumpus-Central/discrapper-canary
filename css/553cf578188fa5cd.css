@@ -1,0 +1,18 @@
+.button_DjGQtl {
+    align-items: center;
+    color: var(--icon-subtle);
+    display: flex;
+    justify-content: center;
+    transition: color .2s ease
+}
+
+.button_DjGQtl:hover {
+    color: var(--icon-strong)
+}
+
+.enable-forced-colors .button_DjGQtl {
+    background-color: ButtonFace;
+    border: 1px solid ButtonText
+}
+
+/*# sourceMappingURL=553cf578188fa5cd.css.map*/

@@ -1,35 +1,35 @@
-.infoHeader__4c2e9 {
+.infoHeader_XcVISC {
     display: flex;
     flex-direction: column;
     flex-shrink: 0
 }
 
-.heading__4c2e9 {
+.heading_XcVISC {
     margin-bottom: 4px
 }
 
-.disabledReason__4c2e9 {
+.disabledReason_XcVISC {
     margin-top: 8px;
     opacity: .7
 }
 
-.learnMoreLink__4c2e9 {
+.learnMoreLink_XcVISC {
     margin-top: 4px
 }
 
-.sectionLabel__4c2e9 {
+.sectionLabel_XcVISC {
     flex-shrink: 0;
     padding-bottom: 8px;
     padding-top: 16px
 }
 
-.variantGroupLabelValue__4c2e9 {
+.variantGroupLabelValue_XcVISC {
     color: var(--text-default);
     font-weight: 600;
     margin-inline-start: 4px
 }
 
-.variantScrollArea__4c2e9 {
+.variantScrollArea_XcVISC {
     flex-shrink: 0;
     -webkit-mask-image: linear-gradient(180deg, #000 85%, transparent);
     mask-image: linear-gradient(180deg, #000 85%, transparent);
@@ -39,16 +39,16 @@
     scrollbar-width: none
 }
 
-.variantScrollArea__4c2e9::-webkit-scrollbar {
+.variantScrollArea_XcVISC::-webkit-scrollbar {
     height: 0;
     width: 0
 }
 
-.no-webkit-scrollbar .variantScrollArea__4c2e9 {
+.no-webkit-scrollbar .variantScrollArea_XcVISC {
     scrollbar-width: none
 }
 
-.errorMessage_a23fe0 {
+.errorMessage_Lj3xcc {
     align-items: center;
     background-color: var(--background-mod-subtle);
     border-radius: 4px;
@@ -56,4 +56,4 @@
     padding: 8px
 }
 
-/*# sourceMappingURL=334733.e517fec5347f6623.css.map*/
+/*# sourceMappingURL=334733.7440dd1235a8440b.css.map*/

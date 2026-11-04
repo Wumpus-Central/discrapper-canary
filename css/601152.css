@@ -1,9 +1,9 @@
-.container__5287f {
+.container_ejC3ZL {
     display: flex;
     position: relative
 }
 
-.container__5287f:before {
+.container_ejC3ZL:before {
     background: var(--custom-promotion-gradient);
     border-radius: 8px;
     content: "";
@@ -15,11 +15,11 @@
     z-index: -1
 }
 
-.containerHovered__5287f:before {
+.containerHovered_ejC3ZL:before {
     opacity: 1
 }
 
-.iconContainer__5287f {
+.iconContainer_ejC3ZL {
     align-items: center;
     display: flex;
     height: 20px;
@@ -29,7 +29,7 @@
     width: 20px
 }
 
-.giftBoxIcon__5287f {
+.giftBoxIcon_ejC3ZL {
     bottom: -6px;
     height: auto;
     inset-inline-start: -6px;
@@ -37,12 +37,12 @@
     width: 32px
 }
 
-.trinketsIcon__5287f {
+.trinketsIcon_ejC3ZL {
     position: relative;
     z-index: 3
 }
 
-.trinketsDecoration__5287f {
+.trinketsDecoration_ejC3ZL {
     height: 175%;
     inset-inline-start: -37.5%;
     position: absolute;
@@ -51,18 +51,18 @@
     z-index: 4
 }
 
-.button_aa63ab>.disabled_aa63ab {
+.button_plpOf8>.disabled_plpOf8 {
     color: var(--icon-muted);
     cursor: not-allowed
 }
 
-.container_aa63ab {
+.container_plpOf8 {
     align-items: center;
     display: flex;
     margin-inline-start: 0
 }
 
-.separator_aa63ab {
+.separator_plpOf8 {
     align-self: center;
     background-color: var(--border-normal);
     height: var(--chat-markup-line-height);
@@ -70,16 +70,16 @@
     width: 1px
 }
 
-.buttonContainer_aa63ab {
+.buttonContainer_plpOf8 {
     display: flex
 }
 
-.sendIcon_aa63ab {
+.sendIcon_plpOf8 {
     height: 20px !important;
     width: 20px !important
 }
 
-.button_aa63ab {
+.button_plpOf8 {
     box-sizing: border-box;
     margin-inline: 0;
     min-height: var(--space-32);
@@ -87,42 +87,42 @@
     padding: 4px
 }
 
-.buttonChild_aa63ab {
+.buttonChild_plpOf8 {
     transition: color .25s ease-in-out
 }
 
-.activeButtonChild_aa63ab {
+.activeButtonChild_plpOf8 {
     color: var(--text-brand)
 }
 
-.theme-dark .button_aa63ab:focus .activeButtonChild_aa63ab,
-.theme-dark .button_aa63ab:focus-within .activeButtonChild_aa63ab,
-.theme-dark .button_aa63ab:hover .activeButtonChild_aa63ab {
+.theme-dark .button_plpOf8:focus .activeButtonChild_plpOf8,
+.theme-dark .button_plpOf8:focus-within .activeButtonChild_plpOf8,
+.theme-dark .button_plpOf8:hover .activeButtonChild_plpOf8 {
     color: var(--brand-430)
 }
 
-.theme-dark .button_aa63ab:active .activeButtonChild_aa63ab {
+.theme-dark .button_plpOf8:active .activeButtonChild_plpOf8 {
     color: var(--brand-500)
 }
 
-.theme-light .activeInnerButton_aa63ab:focus,
-.theme-light .activeInnerButton_aa63ab:hover,
-.theme-light .buttonContainer_aa63ab:focus,
-.theme-light .buttonContainer_aa63ab:hover {
+.theme-light .activeInnerButton_plpOf8:focus,
+.theme-light .activeInnerButton_plpOf8:hover,
+.theme-light .buttonContainer_plpOf8:focus,
+.theme-light .buttonContainer_plpOf8:hover {
     color: var(--brand-560)
 }
 
-.theme-light .activeInnerButton_aa63ab:active,
-.theme-light .buttonContainer_aa63ab:active {
+.theme-light .activeInnerButton_plpOf8:active,
+.theme-light .buttonContainer_plpOf8:active {
     color: var(--brand-600)
 }
 
-.reduce-motion .button_aa63ab {
+.reduce-motion .button_plpOf8 {
     transition: unset
 }
 
-.container_aa63ab:before {
+.container_plpOf8:before {
     display: none
 }
 
-/*# sourceMappingURL=601152.bc376d6bdcf4b80a.css.map*/
+/*# sourceMappingURL=601152.280af6ee810bec6c.css.map*/

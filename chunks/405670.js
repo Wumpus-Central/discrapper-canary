@@ -1,77 +1,75 @@
-n.d(t, { Ay: () => E, K2: () => c, Kr: () => _, Lx: () => u, yc: () => d });
 var i,
     r,
     a = n(537812),
     s = n(882035),
     l = n(121894);
 n(876230);
-var o = n(932607);
-let d = { timestampSec: 0, duration: 10, maxTimestampSec: 0 };
-var c =
+var o = n(932607),
+    d =
         (((i = {}).UNKNOWN = "UNKNOWN"),
         (i.NOT_STARTED = "NOT_STARTED"),
         (i.IN_PROGRESS = "IN_PROGRESS"),
         (i.COMPLETED = "COMPLETED"),
         i),
-    u = (((r = {}).NONE = "NONE"), (r.FETCHING = "FETCHING"), (r.SUCCESS = "SUCCESS"), (r.FAILURE = "FAILURE"), r);
-let _ = (0, s.h)()(
-        (0, a.Zr)(
-            (e, t) => ({
-                volume: 0.3,
-                muted: !1,
-                videoProgress: {},
-                transcript: null,
-                setVolume: (t) => {
-                    (0, l.r)(() => e({ volume: t }));
-                },
-                setMuted: (t) => {
-                    (0, l.r)(() => e({ muted: t }));
-                },
-                setVideoProgress: (n, i, r) => {
-                    let a = Math.max(t().videoProgress[n]?.maxTimestampSec ?? 0, i);
-                    (0, l.r)(() =>
-                        e({
-                            videoProgress: {
-                                ...t().videoProgress,
-                                [n]: { timestampSec: i, duration: r, maxTimestampSec: a },
-                            },
-                        }),
-                    );
-                },
-                getVideoProgress: (e) => t().videoProgress[e],
-                getVideoProgressState: (e) => {
-                    let n = t().videoProgress[e];
-                    return null == n
-                        ? "UNKNOWN"
-                        : 0 === n.timestampSec
-                          ? "NOT_STARTED"
-                          : n.timestampSec >= n.duration
-                            ? "COMPLETED"
-                            : "IN_PROGRESS";
-                },
-                resetQuest: (n) => {
-                    (0, l.r)(() => {
-                        let { [n]: i, ...r } = t().videoProgress;
-                        e({ videoProgress: r });
-                    });
-                },
-                clearState: () => {
-                    (0, l.r)(() => {
-                        e({ videoProgress: {} });
-                    });
-                },
-                setTranscriptAsset: (t) => {
-                    (0, l.r)(() => {
-                        e({ transcript: t });
-                    });
-                },
-            }),
-            {
-                name: "videoQuestUIState",
-                storage: (0, a.KU)(() => o.A),
-                partialize: (e) => ({ volume: e.volume, muted: e.muted, videoProgress: e.videoProgress }),
-                version: 0,
+    c = (((r = {}).NONE = "NONE"), (r.FETCHING = "FETCHING"), (r.SUCCESS = "SUCCESS"), (r.FAILURE = "FAILURE"), r);
+let u = (0, s.h)()(
+    (0, a.Zr)(
+        (e, t) => ({
+            volume: 0.3,
+            muted: !1,
+            videoProgress: {},
+            transcript: null,
+            setVolume: (t) => {
+                (0, l.r)(() => e({ volume: t }));
             },
-        ),
+            setMuted: (t) => {
+                (0, l.r)(() => e({ muted: t }));
+            },
+            setVideoProgress: (n, i, r) => {
+                let a = Math.max(t().videoProgress[n]?.maxTimestampSec ?? 0, i);
+                (0, l.r)(() =>
+                    e({
+                        videoProgress: {
+                            ...t().videoProgress,
+                            [n]: { timestampSec: i, duration: r, maxTimestampSec: a },
+                        },
+                    }),
+                );
+            },
+            getVideoProgress: (e) => t().videoProgress[e],
+            getVideoProgressState: (e) => {
+                let n = t().videoProgress[e];
+                return null == n
+                    ? "UNKNOWN"
+                    : 0 === n.timestampSec
+                      ? "NOT_STARTED"
+                      : n.timestampSec >= n.duration
+                        ? "COMPLETED"
+                        : "IN_PROGRESS";
+            },
+            resetQuest: (n) => {
+                (0, l.r)(() => {
+                    let { [n]: i, ...r } = t().videoProgress;
+                    e({ videoProgress: r });
+                });
+            },
+            clearState: () => {
+                (0, l.r)(() => {
+                    e({ videoProgress: {} });
+                });
+            },
+            setTranscriptAsset: (t) => {
+                (0, l.r)(() => {
+                    e({ transcript: t });
+                });
+            },
+        }),
+        {
+            name: "videoQuestUIState",
+            storage: (0, a.KU)(() => o.A),
+            partialize: (e) => ({ volume: e.volume, muted: e.muted, videoProgress: e.videoProgress }),
+            version: 0,
+        },
     ),
-    E = _;
+);
+n.d(t, {}, { Ay: u, K2: d, Kr: u, Lx: c, yc: { timestampSec: 0, duration: 10, maxTimestampSec: 0 } });

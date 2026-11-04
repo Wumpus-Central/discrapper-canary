@@ -1,7 +1,6 @@
-n.d(t, { A: () => R });
 var i = n(477900),
     r = n(582128),
-    a = n(17928),
+    a = n(855986),
     s = n(625903),
     l = n(265872),
     o = n(688810),
@@ -13,12 +12,12 @@ var i = n(477900),
     A = n(734057),
     h = n(287809),
     f = n(964989),
-    I = n(24482),
+    I = n(879610),
     p = n(447404),
-    m = n(204651),
+    m = n(693409),
     T = n(806931),
-    g = n(202541),
-    S = n(105292),
+    g = n(682901),
+    S = n(792996),
     N = n(138302);
 function C(e) {
     let { className: t } = e;
@@ -33,49 +32,57 @@ function O(e) {
         ],
     });
 }
-function R(e) {
-    let { hideBadges: t = !1, stream: n, location: s, ...u } = e,
-        f = r.useRef(null),
-        { analyticsLocations: N, parentAnalyticsLocation: R } = (0, o.Ay)(),
-        L = (0, a.bG)([h.default], () => I.Ay.isPremium(h.default.getCurrentUser(), g.PremiumTypes.TIER_1)),
-        y = (0, a.bG)([A.A], () => A.A.getChannel(n?.channelId)),
-        D = r.useMemo(() => (null != n ? [n] : []), [n]),
-        b = r.useCallback(() => {
-            null != y && (0, E.A)(y.getGuildId(), y.id, N);
-        }, [y, N]);
-    if (null == n || null == y) return null;
-    let v = C;
-    return (
-        t || L || (v = O),
-        (0, i.jsx)(l.Y, {
-            targetElementRef: f,
-            position: "top",
-            renderPopout: (e) => {
-                let { closePopout: t } = e;
-                return (0, i.jsx)(p.A, {
-                    children: (0, i.jsx)(_.A, {
-                        channel: y,
-                        currentUser: h.default.getCurrentUser(),
-                        activeStreams: D,
-                        onClose: t,
-                        showReportOption: !0,
-                        handleGoLive: b,
-                        onInteraction: (0, c.s)("ManageStreamsButton", R ?? s, { entrypoint: T.GK.OTHER_BUTTON }),
-                    }),
-                });
-            },
-            animation: l.Y.Animation.FADE,
-            children: (e) =>
-                (0, i.jsx)(m.A, {
-                    ...e,
-                    buttonRef: f,
-                    label: S.intl.string(S.t.tmiYpF),
-                    iconComponent: v,
-                    onClick: (t) => {
-                        ((null != R || null != s) && (0, d.XJ)(R ?? s, d.OP.STREAM_SETTINGS), e?.onClick(t));
+n.d(
+    t,
+    {},
+    {
+        A: function (e) {
+            let { hideBadges: t = !1, stream: n, location: s, ...u } = e,
+                f = r.useRef(null),
+                { analyticsLocations: N, parentAnalyticsLocation: R } = (0, o.Ay)(),
+                L = (0, a.bG)([h.default], () => I.Ay.isPremium(h.default.getCurrentUser(), g.PremiumTypes.TIER_1)),
+                y = (0, a.bG)([A.A], () => A.A.getChannel(n?.channelId)),
+                D = r.useMemo(() => (null != n ? [n] : []), [n]),
+                b = r.useCallback(() => {
+                    null != y && (0, E.A)(y.getGuildId(), y.id, N);
+                }, [y, N]);
+            if (null == n || null == y) return null;
+            let v = C;
+            return (
+                t || L || (v = O),
+                (0, i.jsx)(l.Y, {
+                    targetElementRef: f,
+                    position: "top",
+                    renderPopout: (e) => {
+                        let { closePopout: t } = e;
+                        return (0, i.jsx)(p.A, {
+                            children: (0, i.jsx)(_.A, {
+                                channel: y,
+                                currentUser: h.default.getCurrentUser(),
+                                activeStreams: D,
+                                onClose: t,
+                                showReportOption: !0,
+                                handleGoLive: b,
+                                onInteraction: (0, c.s)("ManageStreamsButton", R ?? s, {
+                                    entrypoint: T.GK.OTHER_BUTTON,
+                                }),
+                            }),
+                        });
                     },
-                    ...u,
-                }),
-        })
-    );
-}
+                    animation: l.Y.Animation.FADE,
+                    children: (e) =>
+                        (0, i.jsx)(m.A, {
+                            ...e,
+                            buttonRef: f,
+                            label: S.intl.string(S.t.tmiYpF),
+                            iconComponent: v,
+                            onClick: (t) => {
+                                ((null != R || null != s) && (0, d.XJ)(R ?? s, d.OP.STREAM_SETTINGS), e?.onClick(t));
+                            },
+                            ...u,
+                        }),
+                })
+            );
+        },
+    },
+);

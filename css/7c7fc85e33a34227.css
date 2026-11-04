@@ -1,0 +1,27 @@
+.seperator_dYOeca {
+    border-bottom: 1px solid var(--border-subtle);
+    margin: 0 16px;
+    width: calc(100% - 32px)
+}
+
+.checklistRow_dYOeca {
+    cursor: pointer;
+    padding: 16px
+}
+
+.checklistRow_dYOeca:hover {
+    background-color: var(--background-mod-normal)
+}
+
+.checklistLabel_dYOeca {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-inline-start: 8px
+}
+
+.selectAllCheckbox_dYOeca {
+    background-color: var(--background-mod-normal)
+}
+
+/*# sourceMappingURL=7c7fc85e33a34227.css.map*/

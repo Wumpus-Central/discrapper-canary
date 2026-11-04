@@ -1,7 +1,6 @@
-n.d(t, { A: () => A });
 var i = n(284009),
     r = n.n(i),
-    a = n(17928),
+    a = n(855986),
     s = n(73153),
     l = n(365971);
 let o = null,
@@ -87,8 +86,8 @@ let E = new _(s.h, {
         return t.visible !== e.visible && (d.set(e.windowId, { ...t, visible: e.visible }), !0);
     },
 });
-Promise.resolve()
-    .then(n.bind(n, 174459))
+(Promise.resolve()
+    .then(n.bind(n, 129230))
     .then((e) => {
         let { addExtraAnalyticsDecorator: t } = e;
         t((e) => {
@@ -98,5 +97,5 @@ Promise.resolve()
                 ((e.client_viewport_width = t.width), (e.client_viewport_height = t.height));
             }
         });
-    });
-let A = E;
+    }),
+    n.d(t, {}, { A: E }));

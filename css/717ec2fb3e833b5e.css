@@ -1,0 +1,80 @@
+.questProgressWrapper_TTqPW3 {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.questProgressCopy_TTqPW3,
+.questProgressHint_TTqPW3 {
+    flex: 1 1 auto
+}
+
+.questAcceptedHeader_ja4B1_ {
+    display: flex;
+    flex-direction: row
+}
+
+.flex_ja4B1_ {
+    flex: 1
+}
+
+.headerText_ja4B1_ {
+    opacity: .7
+}
+
+.submenuWrapper_ja4B1_ {
+    cursor: pointer;
+    flex: 0 0 auto;
+    height: 20px;
+    opacity: .9;
+    position: relative;
+    transition: opacity .125s;
+    width: 20px
+}
+
+.submenuWrapper_ja4B1_:focus,
+.submenuWrapper_ja4B1_:hover {
+    opacity: 1
+}
+
+.submenuWrapper_ja4B1_:active {
+    opacity: .7
+}
+
+.questAcceptedHeader_ja4B1_ .submenuWrapper_ja4B1_ {
+    height: 24px;
+    width: 24px
+}
+
+.submenuIcon_ja4B1_ {
+    height: 16px;
+    inset-inline-start: 2px;
+    position: absolute;
+    top: 2px;
+    width: 16px
+}
+
+.questAcceptedHeader_ja4B1_ .submenuIcon_ja4B1_ {
+    inset-inline-start: 0;
+    top: 0
+}
+
+.interactiveNormal_ja4B1_ {
+    color: var(--interactive-text-default)
+}
+
+.divider_ja4B1_ {
+    background-color: var(--interactive-background-hover);
+    height: 1px;
+    margin-bottom: 12px;
+    width: 100%
+}
+
+.divider_b1ycD3 {
+    background-color: var(--interactive-background-hover);
+    height: 1px;
+    margin-bottom: 12px;
+    width: 100%
+}
+
+/*# sourceMappingURL=717ec2fb3e833b5e.css.map*/

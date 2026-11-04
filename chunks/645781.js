@@ -1,9 +1,9 @@
-_.exports = {
-    wx: "header__9f397",
-    Q6: "channelPrompt__9f397",
-    b: "closeButton__9f397",
-    J5: "guildName__9f397",
-    DD: "title__9f397",
-    VA: "subtitle__9f397",
-    SZ: "skipButton__9f397",
+p.exports = {
+    wx: "header_7dkpUR",
+    Q6: "channelPrompt_7dkpUR",
+    b: "closeButton_7dkpUR",
+    J5: "guildName_7dkpUR",
+    DD: "title_7dkpUR",
+    VA: "subtitle_7dkpUR",
+    SZ: "skipButton_7dkpUR",
 };

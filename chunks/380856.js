@@ -1,7 +1,6 @@
 e.exports = {
-    Nr: "card_fedacc",
-    wx: "header_fedacc",
-    IY: "coverArtPosition_fedacc",
-    Bn: "splashArt_fedacc coverArtPosition_fedacc",
-    rf: "body_fedacc",
+    Nr: "card_iVWY3l",
+    wx: "header_iVWY3l",
+    Bn: "splashArt_iVWY3l coverArtPosition_iVWY3l",
+    rf: "body_iVWY3l",
 };

@@ -1,15 +1,8 @@
-n.d(t, { Yy: () => d, fu: () => o, hL: () => l });
 var i = n(926675),
     r = n(540185),
     a = n(229231);
 let s = [r.x.CURRENT_GAMES, r.x.FAVORITE_GAMES, r.x.WANT_TO_PLAY_GAMES, r.x.PLAYED_GAMES];
-function l(e) {
-    return s.includes(e);
-}
-function o(e) {
-    return e instanceof d;
-}
-class d {
+class l {
     id;
     type;
     games;
@@ -39,7 +32,7 @@ class d {
     isEqual(e) {
         var t, n, i;
         return (
-            e instanceof d &&
+            e instanceof l &&
             e.type === this.type &&
             ((t = this.games),
             (n = e.games),
@@ -47,10 +40,10 @@ class d {
             t.length === n.length &&
                 t.every((e, t) =>
                     (function (e, t, n) {
-                        if (e.gameId !== t.gameId || ((0, a.y9)(n) && c(e.comment) !== c(t.comment))) return !1;
+                        if (e.gameId !== t.gameId || ((0, a.y9)(n) && o(e.comment) !== o(t.comment))) return !1;
                         if ((0, a.mS)(n)) {
-                            let n = c(e.tags),
-                                i = c(t.tags);
+                            let n = o(e.tags),
+                                i = o(t.tags);
                             if (
                                 (null === n) != (null === i) ||
                                 (null !== n && null !== i && (n.length !== i.length || !n.every((e, t) => e === i[t])))
@@ -72,6 +65,19 @@ class d {
         return { widgetEdited: this.type };
     }
 }
-function c(e) {
+function o(e) {
     return null == e || "" === e || (Array.isArray(e) && 0 === e.length) ? null : e;
 }
+n.d(
+    t,
+    {},
+    {
+        Yy: l,
+        fu: function (e) {
+            return e instanceof l;
+        },
+        hL: function (e) {
+            return s.includes(e);
+        },
+    },
+);

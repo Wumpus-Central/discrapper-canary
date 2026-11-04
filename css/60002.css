@@ -1,18 +1,18 @@
-.userTooltip__6b453 {
+.userTooltip_lXrdH_ {
     align-items: center;
     display: flex;
     font-size: 16px
 }
 
-.avatar__6b453 {
+.avatar_lXrdH_ {
     margin-inline-end: 8px
 }
 
-.discriminator__6b453 {
+.discriminator_lXrdH_ {
     opacity: .5
 }
 
-.icon__6b453 {
+.icon_lXrdH_ {
     border-radius: var(--size-4);
     height: 1em;
     margin-inline-end: 3px;
@@ -23,21 +23,21 @@
     width: 1em
 }
 
-.tabular__6b453 {
+.tabular_lXrdH_ {
     font-variant-numeric: tabular-nums
 }
 
-.icon__1bb46 {}
+.icon_cuLZqL {}
 
-.iconWrapper__1bb46 {
+.iconWrapper_cuLZqL {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none
 }
 
-.name__1bb46 {
+.name_cuLZqL {
     overflow: hidden;
     text-overflow: ellipsis
 }
 
-/*# sourceMappingURL=60002.0cdb59fd87b20679.css.map*/
+/*# sourceMappingURL=60002.c0af765b91457fb3.css.map*/

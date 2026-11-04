@@ -1,33 +1,25 @@
 function i() {
     try {
-        return "u" < typeof localStorage ? null : localStorage;
-    } catch {
-        return null;
-    }
-}
-function e() {
-    try {
         return "u" < typeof sessionStorage ? null : sessionStorage;
     } catch {
         return null;
     }
 }
-d.d(t, { n: () => i, r: () => e, t: () => s });
-let c = "motionSensorsPermissionsGranted",
-    a = "motionSensorsPermissionsDenied";
-var s = class l {
+let e = "motionSensorsPermissionsGranted",
+    c = "motionSensorsPermissionsDenied";
+var a = class l {
     static isIosMotionPermissionRequired() {
         return "u" > typeof DeviceMotionEvent && "function" == typeof DeviceMotionEvent.requestPermission;
     }
     static readSessionFlag(l) {
-        let t = e();
+        let t = i();
         return !!t && "true" === t.getItem(l);
     }
     static hasMotionPermissionGrantedInSession() {
-        return l.readSessionFlag(c);
+        return l.readSessionFlag(e);
     }
     static hasMotionPermissionDeniedInSession() {
-        return l.readSessionFlag(a);
+        return l.readSessionFlag(c);
     }
     constructor(t) {
         ((this._isRunning = !1),
@@ -107,12 +99,12 @@ var s = class l {
         return l.hasMotionPermissionDeniedInSession();
     }
     markMotionPermissionGrantedInSession() {
-        let l = e();
-        l && (l.setItem(c, String(!0)), l.removeItem(a), l.setItem("motionSensorsPermissionsRequested", String(!0)));
+        let l = i();
+        l && (l.setItem(e, String(!0)), l.removeItem(c), l.setItem("motionSensorsPermissionsRequested", String(!0)));
     }
     markMotionPermissionDeniedInSession() {
-        let l = e();
-        l && (l.setItem(a, String(!0)), l.removeItem(c));
+        let l = i();
+        l && (l.setItem(c, String(!0)), l.removeItem(e));
     }
     syncSessionPermission() {
         if (!l.isIosMotionPermissionRequired()) {
@@ -257,3 +249,18 @@ var s = class l {
         return d.x < t && d.y < t && d.z < t;
     }
 };
+d.d(
+    t,
+    {},
+    {
+        n: function () {
+            try {
+                return "u" < typeof localStorage ? null : localStorage;
+            } catch {
+                return null;
+            }
+        },
+        r: i,
+        t: a,
+    },
+);

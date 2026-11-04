@@ -1,10 +1,10 @@
-d.exports = {
-    Ie: "empty__99e7c",
-    TK: "headerText__99e7c",
-    _e: "privateChannelsHeaderContainer__99e7c",
-    Br: "privateChannelRecipientsInviteButtonIcon__99e7c",
-    $s: "headerActions__99e7c",
-    Mj: "moreButton__99e7c",
-    U2: "privateChannelRecipientsInviteButtonIconContainer__99e7c",
-    XG: "scroller__99e7c",
+e.exports = {
+    Ie: "empty_Bce46W",
+    TK: "headerText_Bce46W",
+    _e: "privateChannelsHeaderContainer_Bce46W",
+    Br: "privateChannelRecipientsInviteButtonIcon_Bce46W",
+    $s: "headerActions_Bce46W",
+    Mj: "moreButton_Bce46W",
+    U2: "privateChannelRecipientsInviteButtonIconContainer_Bce46W",
+    XG: "scroller_Bce46W",
 };
