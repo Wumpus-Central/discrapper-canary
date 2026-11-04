@@ -64,6 +64,7 @@
 }
 
 .productCardBadge_b8a6bd {
+    border-radius: var(--radius-round);
     display: flex;
     flex: 1;
     height: -moz-fit-content;
@@ -73,4 +74,4 @@
     min-width: 0
 }
 
-/*# sourceMappingURL=217991.031222a4d0830426.css.map*/
+/*# sourceMappingURL=217991.f3dfffc41024f5c4.css.map*/

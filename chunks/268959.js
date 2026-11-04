@@ -1,101 +1,114 @@
-n.d(t, { A: () => b, s: () => x });
+n.d(t, { A: () => k, s: () => b });
 var r = n(477900);
 n(582128);
 var i = n(503698),
     l = n.n(i),
     s = n(17928),
-    a = n(866665),
-    u = n(62010),
-    o = n(926321),
-    d = n(318254),
-    c = n(287809),
-    f = n(24482),
-    I = n(590180),
-    v = n(298072),
-    p = n(993408),
-    m = n(466459),
-    A = n(623373),
-    g = n(561769),
-    E = n(57020),
+    a = n(559106),
+    u = n(866665),
+    o = n(62010),
+    d = n(926321),
+    c = n(318254),
+    f = n(287809),
+    I = n(24482),
+    v = n(590180),
+    p = n(298072),
+    m = n(993408),
+    A = n(466459),
+    g = n(623373),
+    E = n(561769),
+    x = n(57020),
     h = n(105292),
     _ = n(31005);
-function x(e) {
-    let { className: t } = e;
-    return (0, r.jsx)(a.m, {
-        text: h.intl.string(h.t.dCou7i),
-        children: (0, r.jsx)("div", {
-            className: l()(t, _.$),
-            children: (0, r.jsx)(u.E, {
-                type: { text: h.intl.string(h.t["+drfVi"]) },
-                variant: "inverted",
-                icon: o.DiceIcon,
+let C = (e) => {
+        let { ref: t, ...n } = e;
+        return (0, r.jsx)(a.vN, { children: (0, r.jsx)("div", { ref: t, ...n }) });
+    },
+    b = (e) => {
+        let { className: t, tabIndex: n = 0 } = e,
+            i = h.intl.string(h.t["+drfVi"]);
+        return (0, r.jsx)(u.m, {
+            text: h.intl.string(h.t.dCou7i),
+            children: (0, r.jsx)(C, {
+                className: l()(t, _.$),
+                tabIndex: n,
+                role: "img",
+                "aria-label": i,
+                children: (0, r.jsx)(o.E, { type: { text: i }, variant: "inverted", icon: d.DiceIcon }),
             }),
-        }),
-    });
-}
-function C(e) {
-    let { product: t, badgeOverride: n, productBadgeOverride: i, className: a, prioritizedCurrency: o } = e,
-        { isPurchased: v, isPartiallyOwnedBundle: C } = (0, m.h)(t),
-        b = (0, p.G0)(t),
-        R = (0, s.bG)([I.A], () => I.A.getCategoryForProduct(t.skuId)),
-        k = t.categoryWillUnpublishAt ?? R?.unpublishedAt,
-        y = null != k ? (0, p.WU)(k) : null,
-        S = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
-        T = f.Ay.canUseShopDiscounts(S),
-        { isOrbExclusive: j } = (0, E.F)({ product: t, hasShopDiscount: T, prioritizedCurrency: o }),
-        O = n;
+        });
+    };
+function R(e) {
+    let {
+            product: t,
+            badgeOverride: n,
+            productBadgeOverride: i,
+            className: a,
+            prioritizedCurrency: u,
+            tabIndex: d,
+        } = e,
+        { isPurchased: p, isPartiallyOwnedBundle: C } = (0, A.h)(t),
+        R = (0, m.G0)(t),
+        k = (0, s.bG)([v.A], () => v.A.getCategoryForProduct(t.skuId)),
+        y = t.categoryWillUnpublishAt ?? k?.unpublishedAt,
+        S = null != y ? (0, m.WU)(y) : null,
+        T = (0, s.bG)([f.default], () => f.default.getCurrentUser()),
+        j = I.Ay.canUseShopDiscounts(T),
+        { isOrbExclusive: O } = (0, x.F)({ product: t, hasShopDiscount: j, prioritizedCurrency: u }),
+        P = n;
     if (
-        (null == O &&
+        (null == P &&
             (null != i
-                ? (O = g.AW.BADGE_OVERRIDE)
-                : (0, A.JQ)(t)
-                  ? (O = g.AW.DYNAMIC)
-                  : (0, p.HF)(k)
-                    ? (O = g.AW.LIMITED_TIME)
-                    : !C && !v && (0, p.aT)(t.skuId)
-                      ? (O = g.AW.NEW)
-                      : j
-                        ? (O = g.AW.ORBS_EXCLUSIVE)
-                        : b && (O = g.AW.NITRO_EXCLUSIVE)),
-        null == O || O === g.AW.NONE)
+                ? (P = E.AW.BADGE_OVERRIDE)
+                : (0, g.JQ)(t)
+                  ? (P = E.AW.DYNAMIC)
+                  : (0, m.HF)(y)
+                    ? (P = E.AW.LIMITED_TIME)
+                    : !C && !p && (0, m.aT)(t.skuId)
+                      ? (P = E.AW.NEW)
+                      : O
+                        ? (P = E.AW.ORBS_EXCLUSIVE)
+                        : R && (P = E.AW.NITRO_EXCLUSIVE)),
+        null == P || P === E.AW.NONE)
     )
         return null;
-    if (O === g.AW.DYNAMIC) return (0, r.jsx)(x, { className: a });
-    if (O === g.AW.ORBS_EXCLUSIVE)
+    if (P === E.AW.DYNAMIC) return (0, r.jsx)(b, { className: a, tabIndex: d });
+    if (P === E.AW.ORBS_EXCLUSIVE)
         return (0, r.jsx)("div", {
             className: l()(a, _.$),
-            children: (0, r.jsx)(u.E, { type: { text: h.intl.string(h.t["0TmQRG"]) }, variant: "inverted", icon: d.C }),
+            children: (0, r.jsx)(o.E, { type: { text: h.intl.string(h.t["0TmQRG"]) }, variant: "inverted", icon: c.C }),
         });
-    let P = null;
-    switch (O) {
-        case g.AW.LIMITED_TIME:
-            if (null != y) {
-                let e = y > 1 ? h.intl.formatToPlainString(h.t.Io7ozn, { days: y }) : h.intl.string(h.t.Bc13HF);
-                P = (0, r.jsx)(u.E, { type: { text: e }, variant: "inverted" });
-            } else P = (0, r.jsx)(u.E, { type: { text: h.intl.string(h.t["h/uBCR"]) }, variant: "inverted" });
+    let N = null;
+    switch (P) {
+        case E.AW.LIMITED_TIME:
+            if (null != S) {
+                let e = S > 1 ? h.intl.formatToPlainString(h.t.Io7ozn, { days: S }) : h.intl.string(h.t.Bc13HF);
+                N = (0, r.jsx)(o.E, { type: { text: e }, variant: "inverted" });
+            } else N = (0, r.jsx)(o.E, { type: { text: h.intl.string(h.t["h/uBCR"]) }, variant: "inverted" });
             break;
-        case g.AW.NEW:
-            P = (0, r.jsx)(u.E, { type: "new", variant: "inverted" });
+        case E.AW.NEW:
+            N = (0, r.jsx)(o.E, { type: "new", variant: "inverted" });
             break;
-        case g.AW.NITRO_EXCLUSIVE:
-            P = (0, r.jsx)(u.E, { type: { text: h.intl.string(h.t.X3Ekj8) }, variant: "inverted" });
+        case E.AW.NITRO_EXCLUSIVE:
+            N = (0, r.jsx)(o.E, { type: { text: h.intl.string(h.t.X3Ekj8) }, variant: "inverted" });
             break;
-        case g.AW.BADGE_OVERRIDE:
-            null != i && "" !== i && (P = (0, r.jsx)(u.E, { type: { text: i }, variant: "inverted" }));
+        case E.AW.BADGE_OVERRIDE:
+            null != i && "" !== i && (N = (0, r.jsx)(o.E, { type: { text: i }, variant: "inverted" }));
     }
-    return null == P ? null : (0, r.jsx)("div", { className: l()(a, _.$), children: P });
+    return null == N ? null : (0, r.jsx)("div", { className: l()(a, _.$), children: N });
 }
-let b = function (e) {
-    let { skuId: t, badgeOverride: n, className: i, prioritizedCurrency: l } = e,
-        s = (0, g.Vm)(t),
-        a = (0, v.Q)(s);
-    if (null == s || s.hideBadge) return null;
-    let u = (0, A.rb)(s, a);
-    return (0, r.jsx)(C, {
-        product: u,
+let k = function (e) {
+    let { skuId: t, badgeOverride: n, className: i, prioritizedCurrency: l, tabIndex: s } = e,
+        a = (0, E.Vm)(t),
+        u = (0, p.Q)(a);
+    if (null == a || a.hideBadge) return null;
+    let o = (0, g.rb)(a, u);
+    return (0, r.jsx)(R, {
+        product: o,
         badgeOverride: n,
-        productBadgeOverride: s.badgeOverride,
+        productBadgeOverride: a.badgeOverride,
         className: i,
         prioritizedCurrency: l,
+        tabIndex: s,
     });
 };

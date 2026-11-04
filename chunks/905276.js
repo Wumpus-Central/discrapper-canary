@@ -592,6 +592,7 @@ let tN = r.memo(function (t) {
                                     badgeOverride: g,
                                     className: Y,
                                     prioritizedCurrency: X,
+                                    tabIndex: q,
                                 }),
                                 !e &&
                                     (0, i.jsx)(th, {
