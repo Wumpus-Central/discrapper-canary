@@ -1175,7 +1175,15 @@ function tY() {
                     ? [tO.Q.STATS_ONLY]
                     : []).map((a) => ({ cardType: a, checkpointData: (0, tU.Go)(a, e, t) }));
         }, [e, t]),
-        [n, c] = h.useState(s.at(0)?.cardType),
+        [n, c] = h.useState(
+            () =>
+                (
+                    s.find((e) => {
+                        let { cardType: t } = e;
+                        return t === tO.Q.DEFAULT;
+                    }) ?? s.at(0)
+                )?.cardType,
+        ),
         o = s.find((e) => {
             let { cardType: t } = e;
             return t === n;
