@@ -6,7 +6,13 @@ let l = [
 ];
 var i = n(45938),
     r = n(202541);
-let a = new Set([r.gD.PREMIUM_MONTH_TIER_2, r.gD.PREMIUM_3_MONTH_TIER_2, r.gD.PREMIUM_YEAR_TIER_2]);
+let a = new Set([
+    r.gD.PREMIUM_MONTH_TIER_0,
+    r.gD.PREMIUM_YEAR_TIER_0,
+    r.gD.PREMIUM_MONTH_TIER_2,
+    r.gD.PREMIUM_3_MONTH_TIER_2,
+    r.gD.PREMIUM_YEAR_TIER_2,
+]);
 function s(e) {
     return a.has(e);
 }
