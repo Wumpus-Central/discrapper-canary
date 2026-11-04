@@ -1,4 +1,4 @@
-n.d(t, { default: () => e8 });
+n.d(t, { default: () => e6 });
 var i = n(477900),
     s = n(582128),
     r = n(131937),
@@ -33,7 +33,7 @@ var j = n(503698),
     M = n(963935),
     L = n(894858),
     _ = n(272053),
-    D = n(377980),
+    D = n(344987),
     O = n(939249),
     B = n(215566),
     K = n(105292),
@@ -894,7 +894,7 @@ var ek = n(280450),
     eM = n(287809),
     eL = n(152056),
     e_ = n(780964),
-    eD = n(455536),
+    eD = n(162887),
     eO = n(980707),
     eB = n(477782),
     eK = n(28863),
@@ -914,13 +914,13 @@ var ek = n(280450),
 function eJ() {
     let e = (0, eY.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "663198",
-        s = "a23f6a1580b6648a073266e4a3bd903c6b3544eb".substring(0, 7),
+        n = "663237",
+        s = "df72cfe17720777bbfaa864ec0b3f06a5f6da0cf".substring(0, 7),
         r = eV.A?.app.getVersion(),
         l = eV.A?.app.getBuildNumber(),
         o = eV.A?.app.getAppArch(),
         c = eX.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != c ? (0, eq.A)("1793746730937", !1) : null,
+        u = null != c ? (0, eq.A)("1793747430836", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();
@@ -1086,12 +1086,12 @@ function e2() {
     });
 }
 var e5 = n(402651),
-    e9 = n(669067),
+    e7 = n(669067),
     e4 = n(830543),
-    e7 = n(953056);
+    e9 = n(953056);
 let e3 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
-    e6 = new Map([[e_.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
-function e8(e) {
+    e8 = new Map([[e_.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
+function e6(e) {
     let { target: t, ...n } = e,
         l = eL.A.useField("query"),
         a = s.useCallback(() => {
@@ -1117,8 +1117,8 @@ function e8(e) {
               emptyState: tt,
               sidebarFooter: e2,
               onViewChange: function (e) {
-                  e3.has(e) || (0, e9._)(e);
-                  let t = e6.get(e);
+                  e3.has(e) || (0, e7._)(e);
+                  let t = e8.get(e);
                   (null != t &&
                       (0, c.x)({
                           type: r.ImpressionTypes.PANE,
@@ -1156,14 +1156,14 @@ function te() {
             [],
         ),
         (0, i.jsx)("div", {
-            className: e7.P,
+            className: e9.P,
             children: (0, i.jsx)(l.I, { size: "md", query: e, onFocus: n, onBlur: r, onChange: t, onClear: a }),
         })
     );
 }
 function tt() {
     return (0, i.jsxs)("div", {
-        className: e7.t,
+        className: e9.t,
         children: [
             (0, i.jsx)(a.E, { variant: "body-sm/semibold", color: "text-strong", children: K.intl.string(K.t.zihbmv) }),
             (0, i.jsx)(a.E, { variant: "body-sm/normal", color: "text-subtle", children: K.intl.string(K.t.XclvsB) }),

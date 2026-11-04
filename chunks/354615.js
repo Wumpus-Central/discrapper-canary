@@ -466,7 +466,7 @@ var K = a(503698),
 var et = a(789645),
     ea = a(110574),
     en = a(65593),
-    el = a(377980),
+    el = a(344987),
     ei = a(581298),
     es = a(393284),
     er = a(287809),
@@ -21634,7 +21634,7 @@ function vn() {
     });
 }
 var vl = a(963935),
-    vi = a(455536),
+    vi = a(162887),
     vs = a(555738);
 function vr(e) {
     let { title: t, initExpanded: a, highlightMode: n = "none", children: l } = e,
