@@ -8871,7 +8871,7 @@ class hr extends s.PureComponent {
                 friendsSidebarCollapsed: m,
             } = this.props,
             { threadSidebarWidth: p, isThreadSidebarFloating: g } = this.state,
-            x = h && (!A || !m),
+            x = h && s !== eo.DUB.FULL_SCREEN && (!A || !m),
             f = this.shouldRenderCall();
         if (i) return (0, l.jsx)(uQ, {});
         if (null == e) return (0, l.jsx)(u0.A, { channelId: this.props.channelId });
