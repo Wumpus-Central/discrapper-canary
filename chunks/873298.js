@@ -3355,10 +3355,19 @@ class tr extends v.G {
             { no: 2, name: "muted", kind: "scalar", T: 8 },
             { no: 3, name: "guild_visible", kind: "message", T: () => P._t },
             { no: 4, name: "auto_add_joined_threads", kind: "scalar", T: 8 },
+            { no: 5, name: "prune_inactive_threads", kind: "message", T: () => P._t },
+            { no: 6, name: "prune_inactive_threads_days", kind: "scalar", T: 13 },
+            { no: 7, name: "prune_all_favorited_threads", kind: "scalar", T: 8 },
         ]);
     }
     create(e) {
-        let t = { favoriteChannels: {}, muted: !1, autoAddJoinedThreads: !1 };
+        let t = {
+            favoriteChannels: {},
+            muted: !1,
+            autoAddJoinedThreads: !1,
+            pruneInactiveThreadsDays: 0,
+            pruneAllFavoritedThreads: !1,
+        };
         return (
             globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, D.x)(this, t, e),
@@ -3382,6 +3391,15 @@ class tr extends v.G {
                     break;
                 case 4:
                     r.autoAddJoinedThreads = e.bool();
+                    break;
+                case 5:
+                    r.pruneInactiveThreads = P._t.internalBinaryRead(e, e.uint32(), n, r.pruneInactiveThreads);
+                    break;
+                case 6:
+                    r.pruneInactiveThreadsDays = e.uint32();
+                    break;
+                case 7:
+                    r.pruneAllFavoritedThreads = e.bool();
                     break;
                 default:
                     let a = n.readUnknownField;
@@ -3423,7 +3441,11 @@ class tr extends v.G {
                 t.join().join());
         (!1 !== e.muted && t.tag(2, y.O0.Varint).bool(e.muted),
             e.guildVisible && P._t.internalBinaryWrite(e.guildVisible, t.tag(3, y.O0.LengthDelimited).fork(), n).join(),
-            !1 !== e.autoAddJoinedThreads && t.tag(4, y.O0.Varint).bool(e.autoAddJoinedThreads));
+            !1 !== e.autoAddJoinedThreads && t.tag(4, y.O0.Varint).bool(e.autoAddJoinedThreads),
+            e.pruneInactiveThreads &&
+                P._t.internalBinaryWrite(e.pruneInactiveThreads, t.tag(5, y.O0.LengthDelimited).fork(), n).join(),
+            0 !== e.pruneInactiveThreadsDays && t.tag(6, y.O0.Varint).uint32(e.pruneInactiveThreadsDays),
+            !1 !== e.pruneAllFavoritedThreads && t.tag(7, y.O0.Varint).bool(e.pruneAllFavoritedThreads));
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
