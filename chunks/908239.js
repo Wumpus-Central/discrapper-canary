@@ -3014,62 +3014,56 @@ var sy = n(44724),
     sw = n(467884),
     sB = n(661070);
 function sH(e) {
-    let t,
-        { guildOrApplication: n, skuIds: i, destinationGuildId: l, channelId: a, messageId: d } = e,
-        c = (0, sb.k)(),
-        m = (0, sO._)("SocialLayerStorefrontEmbed"),
-        h = "guild" === n.type ? n.guildId : void 0,
-        g = "application" === n.type ? n.applicationId : void 0,
-        p = (0, sU.A)({ applicationId: g, guildId: h }),
-        A = p?.storefront,
-        x = g ?? A?.applicationId,
-        E = (0, sS.h)(x),
-        v = A?.application?.name ?? E?.name ?? null,
-        C = "guild" === n.type ? n.guildId : ((0, sL.n5)(x) ?? null),
-        _ = (0, u.yK)([eB.A], () => (null == x ? [] : i.filter((e) => eB.A.get(e)?.applicationId === x)), [i, x]),
-        { analyticsLocations: j } = (0, I.Ay)(f.A.SLAYER_STOREFRONT_EMBED),
-        y = r.useMemo(() => ({ pageSection: "storefront_embed", placement: sM.Ye.MULTI_SKU_EMBED }), []),
-        N = r.useCallback(() => {
-            (null != x &&
+    let { guildOrApplication: t, skuIds: n, destinationGuildId: i, channelId: l, messageId: a } = e,
+        d = (0, sb.k)(),
+        c = (0, sO._)("SocialLayerStorefrontEmbed"),
+        m = "guild" === t.type ? t.guildId : void 0,
+        h = "application" === t.type ? t.applicationId : void 0,
+        g = (0, sU.A)({ applicationId: h, guildId: m }),
+        p = g?.storefront,
+        A = h ?? p?.applicationId,
+        x = (0, sS.h)(A),
+        E = p?.application?.name ?? x?.name ?? null,
+        v = "guild" === t.type ? t.guildId : ((0, sL.n5)(A) ?? null),
+        C = (0, u.yK)([eB.A], () => (null == A ? [] : n.filter((e) => eB.A.get(e)?.applicationId === A)), [n, A]),
+        { analyticsLocations: _ } = (0, I.Ay)(f.A.SLAYER_STOREFRONT_EMBED),
+        j = r.useMemo(() => ({ pageSection: "storefront_embed", placement: sM.Ye.MULTI_SKU_EMBED }), []),
+        y = r.useCallback(() => {
+            (null != A &&
                 eV.default.track(er.HAw.SLAYER_STOREFRONT_EMBED_SHOP_ALL_CLICKED, {
-                    application_id: x,
-                    application_name: v,
-                    guild_id: C,
-                    destination_guild_id: l,
-                    channel_id: a,
-                    message_id: d,
-                    sku_ids: _,
-                    sku_count: _.length,
+                    application_id: A,
+                    application_name: E,
+                    guild_id: v,
+                    destination_guild_id: i,
+                    channel_id: l,
+                    message_id: a,
+                    sku_ids: C,
+                    sku_count: C.length,
                 }),
-                (0, sy.default)("guild" === n.type ? { guildId: n.guildId } : { applicationId: n.applicationId }));
-        }, [x, v, a, l, n, d, C, _]),
-        b = r.useCallback(
+                (0, sy.default)("guild" === t.type ? { guildId: t.guildId } : { applicationId: t.applicationId }));
+        }, [A, E, l, i, t, a, v, C]),
+        N = r.useCallback(
             (e, t) => {
                 let { skuId: n, applicationId: i } = t;
-                (0, sG.R)({ skuId: n, applicationId: i, isStorefront: !1, analyticsLocations: j, contextKey: c });
+                (0, sG.R)({ skuId: n, applicationId: i, isStorefront: !1, analyticsLocations: _, contextKey: d });
             },
-            [j, c],
+            [_, d],
         ),
-        T = r.useCallback(
+        b = r.useCallback(
             (e, t, n) => {
-                if (null == x) return;
-                let i = sD.A.getStorefrontState(x)?.activePage ?? 0;
-                (0, sk.bG)(er.BVt.COLLECTIBLES_SHOP_GAME_SHOP(x, i, e, n));
+                if (null == A) return;
+                let i = sD.A.getStorefrontState(A)?.activePage ?? 0;
+                (0, sk.bG)(er.BVt.COLLECTIBLES_SHOP_GAME_SHOP(A, i, e, n));
             },
-            [x],
+            [A],
         );
-    if (!m) return null;
-    if (p?.state === "loading")
+    if (!c) return null;
+    if (g?.state === "loading")
         return (0, s.jsx)("div", { className: o()(sB.kL, sB.g4), children: (0, s.jsx)(tV.y, {}) });
-    if (null == A || null == x || 0 === _.length) return null;
-    let S =
-            null !=
-            (t = A.pages.find((e) => e.leaderboard?.backgroundImageAssetId != null)?.leaderboard
-                ?.backgroundImageAssetId)
-                ? (0, sR.YE)(A.applicationId, t, 1024, sL.pV)
-                : null,
-        k = A.logoAssetId ?? A.lightThemeLogoAssetId,
-        R = null != k ? (0, sR.YE)(x, k, 128) : null;
+    if (null == p || null == A || 0 === C.length) return null;
+    let T = (0, sL.NH)(p),
+        S = p.logoAssetId ?? p.lightThemeLogoAssetId,
+        k = null != S ? (0, sR.YE)(A, S, 128) : null;
     return (0, s.jsx)(sT.N, {
         theme: er.NJ8.DARK,
         children: (e) =>
@@ -3080,50 +3074,50 @@ function sH(e) {
                         "aria-hidden": !0,
                         className: sB.Tp,
                         children:
-                            null != S &&
-                            (0, s.jsx)("div", { className: sB.iL, style: { backgroundImage: `url(${S})` } }),
+                            null != T &&
+                            (0, s.jsx)("div", { className: sB.iL, style: { backgroundImage: `url(${T})` } }),
                     }),
                     (0, s.jsx)("div", {
                         className: sB.wx,
                         children: (0, s.jsxs)("div", {
                             className: sB.VW,
                             children: [
-                                null != R && (0, s.jsx)("img", { className: sB.wm, src: R, alt: "" }),
+                                null != k && (0, s.jsx)("img", { className: sB.wm, src: k, alt: "" }),
                                 (0, s.jsx)(e9.D, {
                                     className: sB.DD,
                                     variant: "heading-sm/semibold",
                                     color: "text-overlay-light",
                                     lineClamp: 1,
-                                    children: A.title,
+                                    children: p.title,
                                 }),
                                 (0, s.jsx)(eg.$, {
                                     variant: "overlay-primary",
                                     size: "sm",
                                     icon: eS.U,
                                     text: K.intl.string(K.t.RSyoZu),
-                                    onClick: N,
+                                    onClick: y,
                                 }),
                             ],
                         }),
                     }),
                     (0, s.jsx)(sM.E9, {
-                        newValue: y,
+                        newValue: j,
                         children: (0, s.jsx)(sP.J, {
-                            viewProductDetails: T,
+                            viewProductDetails: b,
                             children: (0, s.jsx)("div", {
-                                className: o()(sB.Vg, { [sB.Me]: _.length % 2 == 1 }),
-                                children: _.map((e, t) =>
+                                className: o()(sB.Vg, { [sB.Me]: C.length % 2 == 1 }),
+                                children: C.map((e, t) =>
                                     (0, s.jsx)(
                                         "div",
                                         {
-                                            className: o()(sB.ux, { [sB.Xv]: 0 === t && _.length % 2 == 1 }),
+                                            className: o()(sB.ux, { [sB.Xv]: 0 === t && C.length % 2 == 1 }),
                                             children: (0, s.jsx)(sw.Ay, {
                                                 className: sB.Nr,
                                                 skuId: e,
                                                 positionInSection: t,
                                                 variant: sw.s6.SMALL,
-                                                onClick: b,
-                                                analyticsLocations: j,
+                                                onClick: N,
+                                                analyticsLocations: _,
                                                 disableMultiSelect: !0,
                                             }),
                                         },

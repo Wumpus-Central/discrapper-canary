@@ -1,4 +1,4 @@
-s.d(t, { N: () => l });
+s.d(t, { N: () => d });
 var i = s(477900),
     a = s(582128),
     n = s(503698),
@@ -6,20 +6,22 @@ var i = s(477900),
     r = s(29477),
     u = s(494012),
     h = s(717421),
-    d = s(802859);
-function l(e) {
-    let { children: t, className: s, collapsibleContent: n, isExpanded: l } = e,
+    l = s(802859);
+function d(e) {
+    let { children: t, className: s, collapsibleContent: n, isExpanded: d } = e,
         [o, f] = a.useState(!1),
         [m, p] = a.useState(!0),
         [g, k] = a.useState(!1),
-        v = l ?? o,
-        { ref: x, height: N = 0 } = (0, u.Ay)(),
-        { ref: j, height: y = 0 } = (0, u.Ay)(),
-        C = (0, h.z)(
-            { height: v ? N + y : y, config: r.config.stiff, onRest: () => k(!0) },
+        v = d ?? o,
+        [x, N] = a.useState(v);
+    x !== v && (N(v), k(!1));
+    let { ref: j, height: y = 0 } = (0, u.Ay)(),
+        { ref: C, height: S = 0 } = (0, u.Ay)(),
+        b = (0, h.z)(
+            { height: v ? y + S : S, config: r.config.stiff, onRest: () => k(!0) },
             m ? "animate-never" : "respect-motion-settings",
         ),
-        b = a.useCallback(() => {
+        w = a.useCallback(() => {
             f(!o);
         }, [o, f]);
     return (
@@ -30,13 +32,13 @@ function l(e) {
             return () => clearTimeout(e);
         }, []),
         (0, i.jsx)("div", {
-            className: c()(d.uR, { [d.$M]: v }, s),
+            className: c()(l.uR, { [l.$M]: v }, s),
             children: (0, i.jsxs)(r.animated.div, {
-                className: c()(d.N0, { [d.Mm]: v && g }),
-                style: C,
+                className: c()(l.N0, { [l.Mm]: v && g }),
+                style: b,
                 children: [
-                    (0, i.jsx)("div", { ref: j, className: c()(d.wx, { [d.$M]: v }), children: t({ onClick: b }) }),
-                    (0, i.jsx)("div", { ref: x, inert: !v, children: n }),
+                    (0, i.jsx)("div", { ref: C, className: c()(l.wx, { [l.$M]: v }), children: t({ onClick: w }) }),
+                    (0, i.jsx)("div", { ref: j, inert: !v, children: n }),
                 ],
             }),
         })

@@ -3435,6 +3435,22 @@
     }
   },
   {
+    "name": "2026-08-social-layer-storefront-mobile-embed",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-08-split-payments",
     "kind": "user",
     "defaultConfig": {
@@ -5815,6 +5831,22 @@
   },
   {
     "name": "2026-10-slayer-storefront-single-sku-wide-header",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-10-social-layer-storefront-mobile-multi-sku-embed",
     "kind": "user",
     "defaultConfig": {
       "enabled": false

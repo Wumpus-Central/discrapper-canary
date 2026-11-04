@@ -1,28 +1,29 @@
 (n.d(t, {
-    Cv: () => w,
-    NE: () => C,
-    OY: () => F,
-    Q6: () => B,
-    S4: () => M,
-    Ww: () => b,
-    Ye: () => j,
-    aU: () => V,
-    bF: () => S,
-    c2: () => H,
-    eV: () => D,
-    fq: () => G,
-    jz: () => N,
-    mq: () => X,
-    n5: () => Z,
-    nG: () => $,
-    nY: () => q,
-    pV: () => g,
-    rG: () => Y,
-    sq: () => U,
-    uV: () => K,
-    wH: () => W,
-    xf: () => x,
-    zl: () => v,
+    Cv: () => G,
+    NE: () => O,
+    NH: () => g,
+    OY: () => B,
+    Q6: () => V,
+    S4: () => U,
+    Ww: () => v,
+    Ye: () => W,
+    aU: () => H,
+    bF: () => N,
+    c2: () => j,
+    eV: () => b,
+    fq: () => x,
+    jz: () => C,
+    mq: () => q,
+    n5: () => Q,
+    nG: () => z,
+    nY: () => Z,
+    pV: () => S,
+    rG: () => K,
+    sq: () => w,
+    uV: () => $,
+    wH: () => Y,
+    xf: () => k,
+    zl: () => P,
 }),
     n(321073),
     n(323874),
@@ -46,23 +47,27 @@ var i = n(435558),
     p = n(188275),
     m = n(652215),
     T = n(758836);
-let g = A.QB ? "webp" : "jpg";
-function S(e) {
+function g(e) {
+    let t = e.pages.find((e) => e.leaderboard?.backgroundImageAssetId != null)?.leaderboard?.backgroundImageAssetId;
+    return null != t ? (0, A.YE)(e.applicationId, t, 1024, S) : null;
+}
+let S = A.QB ? "webp" : "jpg";
+function N(e) {
     return null != e && e.productLine === m.EZt.SOCIAL_LAYER_GAME_ITEM;
 }
-function N(e) {
+function C(e) {
     if (f.A.getStorefrontGuildIds().has(e.id)) return !0;
     if ("type" in e) return !1;
-    let t = z(e, f.A.getApplicationIdFromGuildId(e.id));
+    let t = X(e, f.A.getApplicationIdFromGuildId(e.id));
     return !!f.A.hasStorefrontForApplicationId(t) || (e.features?.has(m.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
 }
-function C(e) {
+function O(e) {
     return { logoAssetId: e.logo_asset_id ?? null, lightThemeLogoAssetId: e.light_theme_logo_asset_id ?? null };
 }
-function O(e) {
+function R(e) {
     return null == e ? null : { label: e.label, tooltip: e.tooltip, icon: e.icon };
 }
-function R(e) {
+function L(e) {
     switch (e.type) {
         case I.X.SUBSCRIPTION:
             return { type: e.type, planIds: e.plan_ids, progress: e.progress ?? null };
@@ -78,52 +83,52 @@ function R(e) {
             return null;
     }
 }
-function L(e) {
+function y(e) {
     let t = e.id === p.ZX ? "nitro" : "default";
     return {
         id: e.id,
         endsAt: e.ends_at ?? null,
         flavor: e.flavor ?? t,
-        pdp: O(e.pdp),
+        pdp: R(e.pdp),
         storefront: null != e.storefront ? { headerText: e.storefront.header_text } : null,
-        checkout: O(e.checkout),
-        vcStream: O(e.vc_stream),
+        checkout: R(e.checkout),
+        vcStream: R(e.vc_stream),
         rewardStatus: e.reward_status ?? null,
-        rewardRequirements: (e.reward_requirements ?? []).map(R).filter((e) => null != e),
+        rewardRequirements: (e.reward_requirements ?? []).map(L).filter((e) => null != e),
     };
 }
-function y(e) {
+function D(e) {
     return e.type === I.X.SUBSCRIPTION;
 }
-function D(e) {
-    let t = e.find(y);
+function b(e) {
+    let t = e.find(D);
     return null != t && t.planIds.length > 0 ? t.planIds : null;
 }
-function b(e) {
+function v(e) {
     return e.type === I.X.OWNS_MIN_SKUS;
 }
-function v(e) {
-    let t = D(e);
+function P(e) {
+    let t = b(e);
     return null == t || 1 !== t.length ? {} : { initialPlanId: t[0], shouldDisallowPlanSelection: !0 };
 }
-function P(e) {
+function M(e) {
     if (null == e) return null;
     let t = new Date(e);
     return Number.isNaN(t.getTime()) ? null : t;
 }
-function M(e) {
+function U(e) {
     return {
         id: e.id,
-        publishedAt: P(e.published_at),
+        publishedAt: M(e.published_at),
         title: e.title,
         logoAssetId: e.logo_asset_id ?? null,
         lightThemeLogoAssetId: e.light_theme_logo_asset_id ?? null,
     };
 }
-function U(e) {
+function w(e) {
     return {
         id: e.id,
-        publishedAt: P(e.published_at),
+        publishedAt: M(e.published_at),
         applicationId: e.application_id,
         title: e.title,
         logoAssetId: e.logo_asset_id,
@@ -144,10 +149,10 @@ function U(e) {
         assets: r().keyBy(e.assets, "id"),
         application: null != e.application ? u.Ay.createFromServer(e.application) : void 0,
         storefrontPricing: null != e.storefront_pricing ? (0, d.Oj)(e.storefront_pricing) : void 0,
-        promotions: r().mapValues(e.promotions ?? {}, L),
+        promotions: r().mapValues(e.promotions ?? {}, y),
     };
 }
-function w(e, t) {
+function G(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { size: i = 512 } = n;
     if (
@@ -164,34 +169,34 @@ function w(e, t) {
               primaryIconLabel: r.label,
           };
 }
-function G(e) {
+function x(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { size: n = 512 } = t,
         i = e?.applicationId,
         r = e?.tenantMetadata?.socialLayer?.cardImageAssetId ?? e?.thumbnailAssetId;
     if (null != r && null != i) return h.A.toURLSafe((0, A.YE)(i, r, n, "webp"));
 }
-function x(e) {
+function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { size: n = 1024 } = t;
     if (e?.tenantMetadata?.socialLayer?.cardBackgroundImageAssetId != null && e?.applicationId != null)
-        return h.A.toURLSafe((0, A.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, n, g));
+        return h.A.toURLSafe((0, A.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, n, S));
 }
-function k(e, t, n, i) {
+function F(e, t, n, i) {
     let { tab: r, applicationId: s, skuId: l } = (0, a.parse)(t);
     return e.indexOf(m.BVt.COLLECTIBLES_SHOP) >= 0 && r === T.G2.GAME_SHOPS && s === n && (null == i || l === i);
 }
-function F(e, t) {
-    return null == e || k(location.pathname, location.search, t.applicationId)
+function B(e, t) {
+    return null == e || F(location.pathname, location.search, t.applicationId)
         ? `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${m.BVt.COLLECTIBLES_SHOP_GAME_SHOP(t.applicationId, void 0, t.id, t.slug)}`
         : `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${m.BVt.GAME_SHOP(e, t.id, t.slug)}`;
 }
-function B(e, t) {
-    return `${F(e, t)}
+function V(e, t) {
+    return `${B(e, t)}
 
 `;
 }
-function V(e, t) {
+function H(e, t) {
     let n = E.A.getGuildId(),
         i =
             null != n && location.pathname.indexOf((0, p.Ny)(n)) >= 0
@@ -200,16 +205,16 @@ function V(e, t) {
         r = new URL(`${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${i}`);
     return (r.searchParams.set("skuIds", t.join(",")), r.toString());
 }
-function H(e, t) {
-    return `${V(e, t)}
+function j(e, t) {
+    return `${H(e, t)}
 
 `;
 }
-function j(e) {
+function W(e) {
     let t = _.A.getGuild(e);
-    return null != t && N(t);
+    return null != t && C(t);
 }
-function W(e, t, n) {
+function Y(e, t, n) {
     return 0 === e.length
         ? { hasWishlist: !1, hasPopular: !1 }
         : {
@@ -231,32 +236,32 @@ function W(e, t, n) {
               }),
           };
 }
-function Y(e, t, n, i) {
-    return k(e, t, n) || (null != i && e.indexOf((0, p.Ny)(i)) >= 0);
-}
-function K(e) {
-    let { pathname: t, search: n, pageIndex: i = 0, applicationId: r, guildId: a, skuId: s } = e;
-    return k(t, n, r, s) || (null != a && t.includes(m.BVt.CHANNELS_GAME_SHOP(a, i, s)));
+function K(e, t, n, i) {
+    return F(e, t, n) || (null != i && e.indexOf((0, p.Ny)(i)) >= 0);
 }
 function $(e) {
+    let { pathname: t, search: n, pageIndex: i = 0, applicationId: r, guildId: a, skuId: s } = e;
+    return F(t, n, r, s) || (null != a && t.includes(m.BVt.CHANNELS_GAME_SHOP(a, i, s)));
+}
+function z(e) {
     let t = (0, s.bG)([f.A], () => f.A.getGuildIdFromApplicationId(e)),
         n = (0, o.h)(e);
     return { guildId: t ?? n?.guildId, application: n };
 }
-function z(e, t) {
+function X(e, t) {
     return t ?? (e?.gameApplicationIds?.length === 1 ? e.gameApplicationIds[0] : void 0);
 }
-function X(e) {
-    let t = f.A.getApplicationIdFromGuildId(e);
-    return z(_.A.getGuild(e), t);
-}
 function q(e) {
+    let t = f.A.getApplicationIdFromGuildId(e);
+    return X(_.A.getGuild(e), t);
+}
+function Z(e) {
     let t = (0, s.bG)([f.A], () => f.A.getApplicationIdFromGuildId(e));
-    return z(
+    return X(
         (0, s.bG)([_.A], () => _.A.getGuild(e), [e]),
         t,
     );
 }
-function Z(e) {
+function Q(e) {
     if (null != e) return f.A.getGuildIdFromApplicationId(e) ?? l.A.getApplication(e)?.guildId;
 }
