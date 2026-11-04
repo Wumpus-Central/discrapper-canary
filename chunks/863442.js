@@ -403,7 +403,7 @@ function em(e) {
     });
 }
 var eh = s(260498),
-    ef = s(281091);
+    ef = s(741907);
 function ex(e, t) {
     return e.guild_id === t || e.preview_guild_id === t;
 }
@@ -1110,10 +1110,10 @@ function e9(e) {
         s = t.find((t) => t.draft.localId === e);
     null != s && (e0(s), e2(t.filter((e) => e !== s)));
 }
-function e8(e) {
+function e3(e) {
     e.forEach(e0);
 }
-async function e3(e, t) {
+async function e8(e, t) {
     if ("fits" === (0, eZ.R9)(t, (0, eZ.Ft)(t))) return (0, v.vX)(e, t);
     let s = await (0, eZ.th)(t);
     if (null == s) throw Error("attachment over its size limit");
@@ -1132,10 +1132,10 @@ async function e4(e, t) {
     let a = e5;
     try {
         let e = await t(s);
-        return (e8(s), e);
+        return (e3(s), e);
     } catch (t) {
         throw (
-            e5 !== a ? e8(s) : ("" === z.A.getDraft(G) && (0, L.I)(G, e), e2([...s, ...e1.getState().attachments])), t
+            e5 !== a ? e3(s) : ("" === z.A.getDraft(G) && (0, L.I)(G, e), e2([...s, ...e1.getState().attachments])), t
         );
     }
 }
@@ -1268,7 +1268,7 @@ function tn(e) {
                                         a = await Promise.all(
                                             t.map((e) => {
                                                 let { file: t } = e;
-                                                return e3(s, t);
+                                                return e8(s, t);
                                             }),
                                         );
                                     } catch {

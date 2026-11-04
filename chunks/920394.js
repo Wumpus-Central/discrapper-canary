@@ -15,7 +15,7 @@ var t = o(477900),
     A = o(678793),
     C = o(955260),
     j = o(95264),
-    v = o(802645);
+    v = o(73588);
 function x(e) {
     let { projectId: n, guildId: o, onExport: x, onImport: _ } = e,
         k = (0, u.bG)([p.Ay], () => p.Ay.getProject(n), [n]),

@@ -24,7 +24,7 @@ var i = n(477900),
     O = n(688810),
     R = n(198052),
     L = n(97005),
-    y = n(281091),
+    y = n(741907),
     D = n(972013),
     b = n(751841),
     v = n(371169),
@@ -451,18 +451,18 @@ let e0 = new eJ(eZ.h, {
 var e1 = n(531685),
     e2 = n(583613);
 let e3 = "app-download-item",
-    e6 = "add-server-item";
+    e5 = "add-server-item";
 function e4() {
     return !1;
 }
-function e5(e) {
+function e6(e) {
     let t = eo.default.getMutableGuildStates();
     return (
         (e === eR.sFm.SERVER_DISCOVERY_BADGE && !e0.hasViewed(eR.sFm.SERVER_DISCOVERY_BADGE)) ||
-        (e !== e3 && e !== e6 && t[e ?? "null"]?.highImportanceMentionCount > 0)
+        (e !== e3 && e !== e5 && t[e ?? "null"]?.highImportanceMentionCount > 0)
     );
 }
-let e7 = (0, e2.L_)((e, t, n) => ["null", ...t, ...e, e6, eR.sFm.E3_SERVER_DISCOVERY_BADGE, e3]);
+let e7 = (0, e2.L_)((e, t, n) => ["null", ...t, ...e, e5, eR.sFm.E3_SERVER_DISCOVERY_BADGE, e3]);
 function e8(e) {
     let { ref: t, ...n } = e,
         r = (0, _.yK)([ej.Ay, eq.A, eo.default], () =>
@@ -477,7 +477,7 @@ function e8(e) {
         isUnread: e4,
         textUnread: eL.intl.string(eL.t.y2b7CA),
         textMention: eL.intl.string(eL.t.y2b7CA),
-        isMentioned: e5,
+        isMentioned: e6,
         animate: a,
         expandedFolders: s,
     });
@@ -1110,9 +1110,9 @@ var tJ = n(696292),
     t1 = n(533129),
     t2 = n(726845),
     t3 = n(837057),
-    t6 = n(310419),
+    t5 = n(310419),
     t4 = n(488995),
-    t5 = n(324580),
+    t6 = n(324580),
     t7 = n(190107);
 let t8 = function (e) {
     let { selected: t, onClick: n, questId: a, className: s, ref: l } = e,
@@ -1130,13 +1130,13 @@ let t8 = function (e) {
                 case t4.GlobalDiscoveryTab.SERVERS:
                     return (0, t3.transitionToGlobalDiscovery)({
                         tab: t4.GlobalDiscoveryTab.SERVERS,
-                        entrypoint: t5.J8.GUILDS_BAR,
+                        entrypoint: t6.J8.GUILDS_BAR,
                     });
                 case t4.GlobalDiscoveryTab.APPS:
                     return (0, t3.transitionToGlobalDiscovery)({
                         tab: t4.GlobalDiscoveryTab.APPS,
                         newSessionState: {
-                            entrypoint: { name: t6.sW.GLOBAL_DISCOVERY_BUTTON },
+                            entrypoint: { name: t5.sW.GLOBAL_DISCOVERY_BUTTON },
                             restorePreviousView: !0,
                         },
                     });
@@ -1473,9 +1473,9 @@ var nJ = n(739822),
     n1 = n(702841),
     n2 = n(817281),
     n3 = n(876740),
-    n6 = n(345942),
+    n5 = n(345942),
     n4 = n(676279),
-    n5 = n(866323),
+    n6 = n(866323),
     n7 = n(548118),
     n8 = n(327580);
 function n9(e) {
@@ -1487,7 +1487,7 @@ function n9(e) {
     let c = (0, p.r)(h.A.unsafe_rawColors.BRAND_500).hex(),
         u = (0, p.r)(h.A.unsafe_rawColors.PRIMARY_630).hex();
     r && null == t.icon && ((o.backgroundColor = c), (d.backgroundColor = u));
-    let _ = (0, n5.p)(n, { from: o, enter: d, leave: o, config: { duration: 100 }, onStart: a, onRest: l });
+    let _ = (0, n6.p)(n, { from: o, enter: d, leave: o, config: { duration: 100 }, onStart: a, onRest: l });
     return (0, i.jsx)(i.Fragment, {
         children: _(
             (e, n, r) =>
@@ -2558,7 +2558,7 @@ let iN = r.memo(function (e) {
         J = (0, n4.nr)() && !n0.Fr;
     r.useEffect(() => () => Q.cancel(), [Q]);
     let ee = r.useCallback(() => {
-            null != o ? (0, to.pX)(o, { state: ig }) : (0, n6.u)(b, { state: ig });
+            null != o ? (0, to.pX)(o, { state: ig }) : (0, n5.u)(b, { state: ig });
         }, [b, o]),
         et = r.useCallback(() => {
             if (null != o || null == d || I || !C) return;

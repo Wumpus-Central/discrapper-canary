@@ -1,39 +1,33 @@
-n.d(t, { A: () => o });
+n.d(t, { A: () => d });
 var i = n(17928),
     r = n(73153);
-let a = new Map();
-function s(e, t) {
-    return !((a.get(e) ?? 0) >= t) && (a.set(e, t), !0);
+let a = new Map(),
+    s = new Set();
+function l(e) {
+    (a.set(e, Date.now()), s.add(e));
 }
-class l extends i.Ay.Store {
+class o extends i.Ay.Store {
     static displayName = "ConjureServerProjectActivityStore";
-    getActivityAt(e) {
+    getTurnStartedAt(e) {
         return a.get(e) ?? null;
     }
 }
-let o = new l(r.h, {
+let d = new o(r.h, {
     CONJURE_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t } = e,
             n = !1;
-        for (let e of t) {
-            let t = null != e.last_activity_at ? Date.parse(e.last_activity_at) : NaN;
-            Number.isNaN(t) || (n = s(e.id, t) || n);
-        }
+        for (let e of t) !0 !== e.running ? s.delete(e.id) : s.has(e.id) || (l(e.id), (n = !0));
         return n;
     },
     CONJURE_PROJECT_RUNNING_UPDATE: function (e) {
-        let { projectId: t } = e;
-        return s(t, Date.now());
-    },
-    CONJURE_TURN_SETTLED: function (e) {
-        let { projectId: t } = e;
-        return s(t, Date.now());
+        let { projectId: t, running: n } = e;
+        return n ? (l(t), !0) : (s.delete(t), !1);
     },
     CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        return a.delete(t);
+        return (s.delete(t), a.delete(t));
     },
     LOGOUT: function () {
-        a = new Map();
+        ((a = new Map()), (s = new Set()));
     },
 });
