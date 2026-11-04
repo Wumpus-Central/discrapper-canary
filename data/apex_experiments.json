@@ -5548,6 +5548,22 @@
     }
   },
   {
+    "name": "2026-10-pinot-summary-management",
+    "kind": "guild",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-10-profile-default-tab-with-content",
     "kind": "user",
     "defaultConfig": null,
