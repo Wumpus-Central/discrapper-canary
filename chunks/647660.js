@@ -1,4 +1,4 @@
-t.d(n, { A: () => eW, N: () => eK });
+t.d(n, { A: () => eK, N: () => eO });
 var l = t(477900),
     r = t(582128),
     i = t(733004),
@@ -80,11 +80,11 @@ var z = t(588975),
     _ = t(258072),
     D = t(694403),
     H = t(332173),
-    U = t(679164),
-    J = t(734057),
+    J = t(679164),
+    U = t(734057),
     q = t(889558),
     B = t(376943);
-function K(e) {
+function O(e) {
     let n = B.En.exec(e);
     if (null != n) {
         let [, e, t, l, r] = n;
@@ -97,16 +97,16 @@ function K(e) {
         ? null
         : { guildId: l, channelId: r, messageId: i, parentChannelId: void 0, conversationId: (0, B.te)(a) };
 }
-var O = t(333421),
-    W = t(100392),
-    Z = t(836156);
-let V = /^dev:\/\//i,
+var W = t(333421),
+    K = t(100392),
+    V = t(836156);
+let Z = /^dev:\/\//i,
     Q = r.lazy(() => Promise.resolve().then(t.bind(t, 355435))),
-    X = r.lazy(async () => {
+    Y = r.lazy(async () => {
         let { ExperimentEmbed: e } = await Promise.resolve().then(t.bind(t, 950980));
         return { default: e };
     }),
-    Y = r.lazy(async () => {
+    X = r.lazy(async () => {
         let { PlaygroundEmbed: e } = await Promise.all([
             t.e(503634),
             t.e(761764),
@@ -127,11 +127,11 @@ function en(e) {
         t =
             (0, F.vS)(n) || (0, F.h4)(n)
                 ? (0, l.jsx)(Q, { url: n })
-                : (0, W.W0)(n)
-                  ? (0, l.jsx)(X, { url: n })
-                  : (0, Z.i)(n)
-                    ? (0, l.jsx)(Y, { url: n })
-                    : (0, O.my)(n)
+                : (0, K.W0)(n)
+                  ? (0, l.jsx)(Y, { url: n })
+                  : (0, V.i)(n)
+                    ? (0, l.jsx)(X, { url: n })
+                    : (0, W.my)(n)
                       ? (0, l.jsx)(ee, { url: n })
                       : null;
     return null == t ? null : (0, l.jsx)(r.Suspense, { fallback: null, children: t });
@@ -167,9 +167,9 @@ function eC(e) {
             isForumPost: c,
             hasAccess: h,
         } = (0, k.cf)(
-            [J.A, ev.default, ex.A],
+            [U.A, ev.default, ex.A],
             () => {
-                let e = J.A.getChannel(n);
+                let e = U.A.getChannel(n);
                 return {
                     name: null != e ? (0, el.m1)(e, ev.default, ex.A) : void 0,
                     iconType: (0, ej.QG)(e),
@@ -207,7 +207,7 @@ function eC(e) {
                 : void 0,
             onContextMenu: f
                 ? function (e) {
-                      let r = J.A.getChannel(n);
+                      let r = U.A.getChannel(n);
                       (0, G.L3)(e, async () => {
                           let { default: e } = await Promise.all([t.e(638221), t.e(343266), t.e(941427)]).then(
                               t.bind(t, 223998),
@@ -250,7 +250,7 @@ function eS(e) {
     let { id: n } = e,
         t = (0, d.p)(),
         r = t?.guildId,
-        i = (0, k.bG)([ep.A], () => (null != r ? ep.A.getRole(r, n)?.name : null) ?? eA.intl.string(eA.t.sKdZ6U), [
+        i = (0, k.bG)([ep.A], () => (null != r ? ep.A.getRole(r, n)?.name : null) ?? eA.intl.string(eA.t["YV4F/n"]), [
             r,
             n,
         ]);
@@ -315,13 +315,13 @@ function eM(e) {
 var eP = t(147190);
 function eL(e) {
     let { guildId: n, channelId: t, messageId: r, parentChannelId: i, conversationId: a } = e,
-        u = (0, k.bG)([J.A], () => (null != i && null == J.A.getChannel(t) ? i : t), [t, i]);
+        u = (0, k.bG)([U.A], () => (null != i && null == U.A.getChannel(t) ? i : t), [t, i]);
     return (0, l.jsx)(eC, { channelId: u, guildId: n, messageId: r, conversationId: a });
 }
 function ez(e) {
     let { url: n, name: i, interactive: a } = e,
         u = r.useCallback(async () => {
-            let e = await U.AN(n);
+            let e = await J.AN(n);
             (R.A.trackLinkClicked(e), (0, $.A)(e));
         }, [n]),
         s = r.useCallback(
@@ -355,11 +355,11 @@ function eD(e) {
 function eH(e) {
     switch (e.type) {
         case "paragraph":
-            return { ...e, value: eU(e.value) };
+            return { ...e, value: eJ(e.value) };
         case "heading":
-            return { ...e, value: { ...e.value, content: eU(e.value.content) } };
+            return { ...e, value: { ...e.value, content: eJ(e.value.content) } };
         case "small":
-            return { ...e, value: { content: eU(e.value.content) } };
+            return { ...e, value: { content: eJ(e.value.content) } };
         case "quote":
             return { ...e, value: e.value.map(eH) };
         case "list":
@@ -368,13 +368,13 @@ function eH(e) {
             return e;
     }
 }
-function eU(e) {
-    return e.map(eJ);
-}
 function eJ(e) {
+    return e.map(eU);
+}
+function eU(e) {
     switch (e.type) {
         case "link":
-            if ((null == e.value.text || 0 === e.value.text.length) && null != K(e.value.url)) return e;
+            if ((null == e.value.text || 0 === e.value.text.length) && null != O(e.value.url)) return e;
             return { type: "code", value: e.value.url };
         case "emoji":
             return "custom" === e.value.type ? { type: "text", value: (0, e_.u)(e.value.value.name) } : e;
@@ -382,16 +382,16 @@ function eJ(e) {
         case "italic":
         case "underline":
         case "strikethrough":
-            return { ...e, value: eU(e.value) };
+            return { ...e, value: eJ(e.value) };
         case "spoiler":
-            return { ...e, value: { ...e.value, content: eU(e.value.content) } };
+            return { ...e, value: { ...e.value, content: eJ(e.value.content) } };
         default:
             return e;
     }
 }
 var eq = t(254221);
 let eB = [];
-function eK(e, n) {
+function eO(e, n) {
     let { enabled: t, syntax: l } = n,
         i = (0, eF.n9)(t);
     return r.useMemo(() => {
@@ -403,7 +403,7 @@ function eK(e, n) {
         }
     }, [t, i, e, l]);
 }
-let eO = {
+let eW = {
     text: function (e) {
         let { node: n } = e;
         return (0, l.jsx)(h.z, { text: n.value });
@@ -435,7 +435,7 @@ let eO = {
             u = a?.noStyleAndInteraction === !0,
             s = null == n || 0 === n.length;
         if (s) {
-            let e = K(t);
+            let e = O(t);
             if (null != e) return (0, l.jsx)(eL, { ...e });
             let n = (0, _.h)(t);
             if (null != n) return (0, l.jsx)(ez, { url: t, name: n.name, interactive: !u });
@@ -465,7 +465,7 @@ let eO = {
                           .join("");
                   })(n),
             m = s ? (0, l.jsx)(h.z, { text: c }) : i;
-        if (V.test(t))
+        if (Z.test(t))
             return (0, l.jsxs)(l.Fragment, {
                 children: [(0, l.jsx)("span", { children: m }), (0, l.jsx)(en, { url: t })],
             });
@@ -595,7 +595,7 @@ let eO = {
         return null == r ? null : (0, l.jsx)(eT.A, { node: r });
     },
 };
-function eW(e) {
+function eK(e) {
     let {
         content: n,
         parsed: t,
@@ -606,9 +606,9 @@ function eW(e) {
     return (0, l.jsx)(u.tH, {
         fallbackRender: (e) => {
             let { error: t } = e;
-            return (0, l.jsx)(eV, { content: n, error: t });
+            return (0, l.jsx)(eZ, { content: n, error: t });
         },
-        children: (0, l.jsx)(eZ, {
+        children: (0, l.jsx)(eV, {
             content: n,
             parsed: t,
             allowJumboEmoji: r,
@@ -617,7 +617,7 @@ function eW(e) {
         }),
     });
 }
-function eZ(e) {
+function eV(e) {
     let { content: n, parsed: t, allowJumboEmoji: u, hideSingleLinkContent: s, redactRestrictedContent: o } = e;
     if (((0, eF.bf)(null == t), null != t && "error" in t)) throw t.error;
     let c = t?.ast ?? eB,
@@ -679,10 +679,10 @@ function eZ(e) {
         );
     return (0, l.jsx)(E.Provider, {
         value: d,
-        children: (0, l.jsx)(eG.L1, { children: (0, l.jsx)(i.$, { nodes: h, renderers: eO }) }, n),
+        children: (0, l.jsx)(eG.L1, { children: (0, l.jsx)(i.$, { nodes: h, renderers: eW }) }, n),
     });
 }
-function eV(e) {
+function eZ(e) {
     let { content: n, error: t } = e;
     return (
         r.useEffect(() => {
