@@ -270,6 +270,7 @@ function K(e) {
                                   "aria-activedescendant": Z && w >= 0 ? `${B}-${w}` : void 0,
                               }
                             : void 0),
+                        onClick: ea,
                     },
                     placeholder: Q ? "" : eo,
                     "aria-label": eo,
@@ -296,7 +297,7 @@ function K(e) {
                   (0, l.jsx)("div", {
                       className: i()(P.ON, { [P.Nz]: p }),
                       style: eg,
-                      children: (0, l.jsx)(o.D, { innerRef: A, ignoreKeyPress: !0, onClick: ea, children: em }),
+                      children: (0, l.jsx)("div", { ref: A, children: em }),
                   }),
           });
 }
