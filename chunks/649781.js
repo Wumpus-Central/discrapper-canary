@@ -31,7 +31,7 @@ var i = n(477900),
     P = n(260498),
     M = n(352571);
 let U = [];
-var w = n(29477),
+var w = n(736819),
     G = n(717421);
 let x = { friction: 28, tension: 600 };
 function k(e) {
@@ -451,18 +451,18 @@ let e0 = new eJ(eZ.h, {
 var e1 = n(531685),
     e2 = n(583613);
 let e3 = "app-download-item",
-    e4 = "add-server-item";
-function e5() {
+    e5 = "add-server-item";
+function e4() {
     return !1;
 }
 function e6(e) {
     let t = eo.default.getMutableGuildStates();
     return (
         (e === eR.sFm.SERVER_DISCOVERY_BADGE && !e0.hasViewed(eR.sFm.SERVER_DISCOVERY_BADGE)) ||
-        (e !== e3 && e !== e4 && t[e ?? "null"]?.highImportanceMentionCount > 0)
+        (e !== e3 && e !== e5 && t[e ?? "null"]?.highImportanceMentionCount > 0)
     );
 }
-let e7 = (0, e2.L_)((e, t, n) => ["null", ...t, ...e, e4, eR.sFm.E3_SERVER_DISCOVERY_BADGE, e3]);
+let e7 = (0, e2.L_)((e, t, n) => ["null", ...t, ...e, e5, eR.sFm.E3_SERVER_DISCOVERY_BADGE, e3]);
 function e8(e) {
     let { ref: t, ...n } = e,
         r = (0, _.yK)([ej.Ay, eq.A, eo.default], () =>
@@ -474,7 +474,7 @@ function e8(e) {
         ...n,
         ref: t,
         items: r,
-        isUnread: e5,
+        isUnread: e4,
         textUnread: eL.intl.string(eL.t.y2b7CA),
         textMention: eL.intl.string(eL.t.y2b7CA),
         isMentioned: e6,
@@ -1110,33 +1110,33 @@ var tJ = n(696292),
     t1 = n(533129),
     t2 = n(726845),
     t3 = n(837057),
-    t4 = n(310419),
-    t5 = n(488995),
+    t5 = n(310419),
+    t4 = n(488995),
     t6 = n(324580),
     t7 = n(190107);
 let t8 = function (e) {
     let { selected: t, onClick: n, questId: a, className: s, ref: l } = e,
         o = r.useCallback(() => {
-            (0, t1.WL)({ source: t5.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
-            let e = void 0 !== a ? t5.GlobalDiscoveryTab.QUESTS : t2.A.getField("selectedTab");
+            (0, t1.WL)({ source: t4.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
+            let e = void 0 !== a ? t4.GlobalDiscoveryTab.QUESTS : t2.A.getField("selectedTab");
             switch (e) {
-                case t5.GlobalDiscoveryTab.QUESTS:
+                case t4.GlobalDiscoveryTab.QUESTS:
                     return (0, t3.transitionToGlobalDiscovery)({
-                        tab: t5.GlobalDiscoveryTab.QUESTS,
+                        tab: t4.GlobalDiscoveryTab.QUESTS,
                         location: t7.rE.DISCOVERY_COMPASS,
                         questContent: tJ.u.DISCOVERY_COMPASS,
                         questId: a,
                     });
-                case t5.GlobalDiscoveryTab.SERVERS:
+                case t4.GlobalDiscoveryTab.SERVERS:
                     return (0, t3.transitionToGlobalDiscovery)({
-                        tab: t5.GlobalDiscoveryTab.SERVERS,
+                        tab: t4.GlobalDiscoveryTab.SERVERS,
                         entrypoint: t6.J8.GUILDS_BAR,
                     });
-                case t5.GlobalDiscoveryTab.APPS:
+                case t4.GlobalDiscoveryTab.APPS:
                     return (0, t3.transitionToGlobalDiscovery)({
-                        tab: t5.GlobalDiscoveryTab.APPS,
+                        tab: t4.GlobalDiscoveryTab.APPS,
                         newSessionState: {
-                            entrypoint: { name: t4.sW.GLOBAL_DISCOVERY_BUTTON },
+                            entrypoint: { name: t5.sW.GLOBAL_DISCOVERY_BUTTON },
                             restorePreviousView: !0,
                         },
                     });
@@ -1473,8 +1473,8 @@ var nJ = n(739822),
     n1 = n(702841),
     n2 = n(817281),
     n3 = n(876740),
-    n4 = n(345942),
-    n5 = n(676279),
+    n5 = n(345942),
+    n4 = n(676279),
     n6 = n(866323),
     n7 = n(548118),
     n8 = n(327580);
@@ -2555,10 +2555,10 @@ let iN = r.memo(function (e) {
         [H, Y] = r.useState(!1),
         [$, z] = r.useState(!1),
         [Q] = r.useState(() => new A.J_(70, () => z(!0))),
-        J = (0, n5.nr)() && !n0.Fr;
+        J = (0, n4.nr)() && !n0.Fr;
     r.useEffect(() => () => Q.cancel(), [Q]);
     let ee = r.useCallback(() => {
-            null != o ? (0, to.pX)(o, { state: ig }) : (0, n4.u)(b, { state: ig });
+            null != o ? (0, to.pX)(o, { state: ig }) : (0, n5.u)(b, { state: ig });
         }, [b, o]),
         et = r.useCallback(() => {
             if (null != o || null == d || I || !C) return;
