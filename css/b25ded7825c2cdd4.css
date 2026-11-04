@@ -52,7 +52,7 @@
 
 .theme_sO1rm5 {
     align-items: center;
-    border: 1px solid var(--border-subtle);
+    border: 1px solid var(--border-normal);
     border-radius: var(--radius-sm);
     cursor: pointer;
     display: flex;
@@ -71,6 +71,7 @@
 .circle_sO1rm5 {
     background-image: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, .3));
     border-radius: 50%;
+    box-shadow: inset 0 0 0 1px var(--border-normal);
     cursor: pointer;
     height: 36px;
     position: relative;
@@ -291,4 +292,4 @@
     overflow-y: auto
 }
 
-/*# sourceMappingURL=192fee0190a6f4c1.css.map*/
+/*# sourceMappingURL=b25ded7825c2cdd4.css.map*/
