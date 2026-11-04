@@ -2009,7 +2009,11 @@ function nU(e) {
 }
 let nB = [];
 function nK(e) {
-    return !0 !== e.upload ? null : R.intl.string(e.options.length > 0 ? T.default.dkzChE : T.default.ZZ641e);
+    return !0 !== e.upload
+        ? null
+        : 0 === e.options.length
+          ? R.intl.string(T.default.ZZ641e)
+          : R.intl.string(1 === e.options.length ? T.default["2g3gk9"] : T.default.dkzChE);
 }
 function nH(e) {
     return e?.kind === "image" || (e?.kind === "multi" && null != e.attachment);
