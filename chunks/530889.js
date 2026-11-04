@@ -1155,7 +1155,7 @@ async function eY() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "663975";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "664000";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
     let s = eH?.processUtils?.getLastCrash;
@@ -1501,7 +1501,7 @@ if (null == e8 || "0.0.0" !== e8.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e9 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new e$.A().log(
-    `[BUILD INFO] Release Channel: ${e9}, Build Number: 663975, Version Hash: 8f4588f03b892896eb83a2fd446911f8790a5f84`,
+    `[BUILD INFO] Release Channel: ${e9}, Build Number: 664000, Version Hash: 12d34bf7cfc8fe61a1cc58231c408194a94e5bd6`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -5473,7 +5473,6 @@ let sa = (0, ri.Fe)({
                 n.e("693173"),
                 n.e("956814"),
                 n.e("936001"),
-                n.e("288688"),
                 n.e("192444"),
                 n.e("34486"),
                 n.e("611900"),
@@ -25924,7 +25923,7 @@ let yA = "isHideDevBanner",
                     className: t_()(yE.Wz, yE.mr),
                     children: [
                         (0, v.jsx)(y_, { className: yE.Kk }),
-                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "663975" }),
+                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "664000" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -54754,6 +54753,7 @@ let YL = (0, t$.Fe)({
             n.e("860003"),
             n.e("396325"),
             n.e("808979"),
+            n.e("288688"),
             n.e("664430"),
             n.e("742239"),
             n.e("486672"),
@@ -54782,7 +54782,7 @@ let YL = (0, t$.Fe)({
             n.e("733771"),
             n.e("655602"),
             n.e("866008"),
-            n.e("766260"),
+            n.e("47991"),
             n.e("531158"),
             n.e("577337"),
             n.e("946039"),
@@ -55080,7 +55080,6 @@ let YL = (0, t$.Fe)({
             n.e("936001"),
             n.e("697354"),
             n.e("571180"),
-            n.e("288688"),
             n.e("192444"),
             n.e("143883"),
             n.e("379795"),

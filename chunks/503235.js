@@ -1,10 +1,11 @@
 (n.d(t, {
     C5: () => S,
+    Cz: () => R,
     Oq: () => N,
     Ux: () => p,
-    _K: () => O,
     cq: () => h,
     hw: () => f,
+    k0: () => L,
     p8: () => m,
     v2: () => C,
     v7: () => E,
@@ -125,21 +126,22 @@ function C(e, t) {
     }
     return n.join(", ");
 }
-function O(e, t) {
-    if (e === d.gr.FINALIZE_CHARACTER) return t.length > 0;
-    if (!(0, d.Rq)(e)) return !1;
-    let n = I[(0, d.UG)(e).characterStage];
-    return null != n && t.includes(f[n]);
+let O = {
+    [r.V.FACE]: u.default["4IdR/H"],
+    [r.V.OUTFIT]: u.default.NuujPd,
+    [r.V.HAT]: u.default.o1Zign,
+    [r.V.WEARABLE]: u.default.C0CzoH,
+    [r.V.AURA]: u.default["+9TbTS"],
+    [r.V.SHOES]: u.default.sTG4TS,
+};
+function R(e) {
+    let t = O[e];
+    return null != t ? _.intl.string(t) : void 0;
 }
-(r.V.FACE,
-    u.default["4IdR/H"],
-    r.V.OUTFIT,
-    u.default.NuujPd,
-    r.V.HAT,
-    u.default.o1Zign,
-    r.V.WEARABLE,
-    u.default.C0CzoH,
-    r.V.AURA,
-    u.default["+9TbTS"],
-    r.V.SHOES,
-    u.default.sTG4TS);
+function L(e, t) {
+    if (e === d.gr.FINALIZE_CHARACTER) return t[0];
+    if (!(0, d.Rq)(e)) return;
+    let { characterStage: n } = (0, d.UG)(e),
+        i = I[n];
+    if (null != i) return t.find((e) => e === f[i]);
+}

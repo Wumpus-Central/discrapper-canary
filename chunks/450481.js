@@ -53,9 +53,9 @@ function f(t) {
                 (null != g && (t.nameplate = g), Object.keys(t).length > 0 && (await (0, a._L)(t)));
                 {
                     let { popToast: t, showToast: e } = await Promise.all([
+                        n.e("288688"),
                         n.e("304823"),
                         n.e("223976"),
-                        n.e("288688"),
                         n.e("977260"),
                     ]).then(n.bind(n, 397927));
                     (t(), e({ text: w, duration: 6e3, position: "top" }));

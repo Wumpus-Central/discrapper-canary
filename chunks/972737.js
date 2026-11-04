@@ -7,9 +7,9 @@ function s(t) {
     let { body: n, ...r } = t;
     (0, a.openModalLazy)(async () => {
         let { VoidConfirmModal: t } = await Promise.all([
+            e.e("288688"),
             e.e("304823"),
             e.e("223976"),
-            e.e("288688"),
             e.e("977260"),
         ]).then(e.bind(e, 397927));
         return (e) =>

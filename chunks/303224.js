@@ -1311,9 +1311,9 @@ function no(e) {
             null != m.recurrenceRule && f && (0, V.DS)(o, m)
                 ? (0, g.openModalLazy)(async () => {
                       let { ConfirmModal: e } = await Promise.all([
+                          t.e("288688"),
                           t.e("304823"),
                           t.e("223976"),
-                          t.e("288688"),
                           t.e("977260"),
                       ]).then(t.bind(t, 397927));
                       return (n) =>

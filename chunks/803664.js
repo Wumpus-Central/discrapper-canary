@@ -35,9 +35,9 @@ function g(t) {
                         async () => {
                             let { ConfirmModal: t } = await Promise.all([
                                 n.e("454048"),
+                                n.e("288688"),
                                 n.e("304823"),
                                 n.e("223976"),
-                                n.e("288688"),
                                 n.e("977260"),
                             ]).then(n.bind(n, 397927));
                             return (e) =>
