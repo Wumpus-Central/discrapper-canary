@@ -1,5 +1,4 @@
 !(function (e) {
-    "use strict";
     var i =
             "stycze\u0144_luty_marzec_kwiecie\u0144_maj_czerwiec_lipiec_sierpie\u0144_wrzesie\u0144_pa\u017Adziernik_listopad_grudzie\u0144".split(
                 "_",
