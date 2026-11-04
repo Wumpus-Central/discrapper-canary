@@ -2039,7 +2039,6 @@ function lM(e) {
             type: "dynamic",
             component: lR.DynamicGraphicComponent.BADGE_DIRECTORY_NUX,
             props: { hasProgress: t, badgeIconUrls: t ? e.badgeIconUrls : void 0 },
-            aspectRatio: "21/9",
         },
         title: n.title,
         body: n.body,
@@ -2888,7 +2887,7 @@ function iB(e) {
         }, [r]),
         g = ed.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, iH.A)("1793831515955", !0);
+        let e = (0, iH.A)("1793831575284", !0);
         t =
             null != e
                 ? eL.intl.formatToPlainString(eL.t.wve4kg, { webBuildOverride: a.id, builtAt: e })

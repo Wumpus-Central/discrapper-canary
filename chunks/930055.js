@@ -1,5 +1,4 @@
 s.exports = {
-    Re: "assetRow_Dj1lPY",
     U6: "progressAssetRow_Dj1lPY",
     R2: "singleAssetRow_Dj1lPY badgeAssetRow_Dj1lPY",
     $Z: "pairAssetRow_Dj1lPY badgeAssetRow_Dj1lPY",

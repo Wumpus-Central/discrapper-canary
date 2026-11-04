@@ -1,0 +1,45 @@
+.progressAssetRow_Dj1lPY {
+    display: flex;
+    gap: var(--space-8);
+    height: 60px
+}
+
+.badgeAssetRow_Dj1lPY,
+.progressAssetRow_Dj1lPY {
+    align-items: center;
+    justify-content: center;
+    width: 160px
+}
+
+.badgeAssetRow_Dj1lPY {
+    display: grid;
+    height: 80px
+}
+
+.singleAssetRow_Dj1lPY {
+    grid-template-columns: 80px
+}
+
+.pairAssetRow_Dj1lPY {
+    grid-template-columns: 80px 80px
+}
+
+.trioAssetRow_Dj1lPY {
+    grid-template-columns: 44px 72px 44px;
+    height: auto
+}
+
+div:has(>.badgeAssetRow_Dj1lPY),
+div:has(>.progressAssetRow_Dj1lPY) {
+    aspect-ratio: auto
+}
+
+.badgeIcon_Dj1lPY {
+    aspect-ratio: 1;
+    display: block;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%
+}
+
+/*# sourceMappingURL=64da26b7058999c5.css.map*/

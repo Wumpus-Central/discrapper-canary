@@ -1,6 +1,6 @@
 n(321073);
 var i = n(70283);
-let l = [i.$.STREAMING, i.$.GAME_VARIETY, i.$.GAME_TIME, i.$.ACCOUNT_AGE];
+let r = [i.$.STREAMING, i.$.GAME_VARIETY, i.$.GAME_TIME, i.$.ACCOUNT_AGE];
 n.d(
     t,
     {},
@@ -18,14 +18,14 @@ n.d(
         z: function (e) {
             let t = new Map(e.map((e) => [e.badge_id, e])),
                 n = [];
-            for (let e of l) {
+            for (let e of r) {
                 let i = t.get(e);
                 if (i?.owned !== !0 || null == i.current_tier) continue;
-                let l = i.tiers.findIndex((e) => e.key === i.current_tier);
-                if (-1 === l) continue;
-                let r = i.tiers[l],
-                    c = r?.complex_icon_static_url ?? r?.simple_icon_url;
-                null != c && n.push({ iconUrl: c, tierIndex: l });
+                let r = i.tiers.findIndex((e) => e.key === i.current_tier);
+                if (-1 === r) continue;
+                let l = i.tiers[r],
+                    u = l?.simple_icon_url;
+                null != u && n.push({ iconUrl: u, tierIndex: r });
             }
             return n
                 .sort((e, t) => t.tierIndex - e.tierIndex)
