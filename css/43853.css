@@ -43,6 +43,11 @@
     margin-top: var(--space-12)
 }
 
+.updateBarOverlay_e92794 {
+    position: fixed;
+    z-index: 1003
+}
+
 .frameTarget_e92794 {
     flex: 1;
     min-height: 0;
@@ -60,4 +65,4 @@
     width: 64px
 }
 
-/*# sourceMappingURL=43853.d93e5009ea25c5d5.css.map*/
+/*# sourceMappingURL=43853.f19a537d2f88469a.css.map*/

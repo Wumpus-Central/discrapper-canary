@@ -1,76 +1,86 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => E });
 var i = n(477900),
     l = n(582128),
     a = n(991690),
     s = n(17928),
     r = n(765671),
     o = n(198052),
+    d = n(144399),
     c = n(228946),
-    d = n(343030),
-    u = n(317608),
-    h = n(378859),
-    p = n(269094),
-    m = n(35367),
-    A = n(130745),
-    f = n(267102),
-    g = n(51082),
-    x = n(280450),
-    C = n(488947),
-    y = n(806931),
-    j = n(885031),
-    I = n(105292),
-    N = n(649914);
-function v(e) {
+    u = n(343030),
+    h = n(317608),
+    p = n(378859),
+    m = n(269094),
+    A = n(35367),
+    f = n(130745),
+    g = n(267102),
+    x = n(51082),
+    C = n(280450),
+    y = n(488947),
+    j = n(806931),
+    I = n(885031),
+    N = n(105292),
+    v = n(649914);
+function E(e) {
     var t, n;
     let l,
         a,
-        { applicationId: c, channelId: d, guildId: u, renderPipOverlay: h } = e,
+        { applicationId: d, channelId: c, guildId: u, renderPipOverlay: h } = e,
         p =
-            ((t = (0, s.bG)([o.A], () => o.A.getParticipants(d), [d])),
-            (n = x.default.getId()),
+            ((t = (0, s.bG)([o.A], () => o.A.getParticipants(c), [c])),
+            (n = C.default.getId()),
             null !=
             (a =
-                (l = t.filter((e) => e.type !== y.lp.ACTIVITY && e.user?.id !== n && (0, g.Ay)(e))).find(
-                    (e) => e.type === y.lp.STREAM,
+                (l = t.filter((e) => e.type !== j.lp.ACTIVITY && e.user?.id !== n && (0, x.Ay)(e))).find(
+                    (e) => e.type === j.lp.STREAM,
                 ) ?? l[0])
                 ? [a]
                 : []),
         { ref: m, width: A, height: f } = (0, r.Ay)(),
-        C = p.length > 0 && null != A && null != f ? h?.(p, { width: A, height: f }) : null;
+        g = p.length > 0 && null != A && null != f ? h?.(p, { width: A, height: f }) : null;
     return (0, i.jsx)("div", {
-        className: N.MT,
+        className: v.MT,
         children: (0, i.jsx)("div", {
             ref: m,
-            className: N.dw,
-            children: (0, i.jsx)(E, { applicationId: c, channelId: d, guildId: u, overlay: C }),
+            className: v.dw,
+            children: (0, i.jsx)(b, { applicationId: d, channelId: c, guildId: u, overlay: g }),
         }),
     });
 }
-function E(e) {
+function b(e) {
     let { applicationId: t, channelId: n, guildId: s, overlay: r } = e,
         o = l.useMemo(() => ({ type: a.U.VOICE_CHANNEL, channelId: n, guildId: s }), [n, s]),
-        g = (0, C.w)((0, f.Us)()),
-        x = (0, m.A)({ applicationId: t, surface: o, hostWindowKey: g });
-    switch (((0, c.A)(t, null == g ? o : null), (0, A.A)(n), x.state)) {
-        case m.n.Launched:
-            if (null != g && x.frame.data.proxyTicketRefreshing) return (0, i.jsx)(h.j, {});
-            return null != g
+        x = (0, y.w)((0, g.Us)()),
+        C = (0, A.A)({ applicationId: t, surface: o, hostWindowKey: x });
+    switch (((0, c.A)(t, null == x ? o : null), (0, f.A)(n), C.state)) {
+        case A.n.Launched:
+            if (null != x && C.frame.data.proxyTicketRefreshing) return (0, i.jsx)(p.j, {});
+            return null != x
                 ? (0, i.jsxs)("div", {
-                      className: N.oI,
-                      children: [(0, i.jsx)(p.A, { frame: x.frame, application: x.application, className: N.Z7 }), r],
+                      className: v.oI,
+                      children: [
+                          (0, i.jsx)(m.A, { frame: C.frame, application: C.application, className: v.Z7 }),
+                          r,
+                          (0, i.jsx)(d.A, { frameId: C.frame.id }),
+                      ],
                   })
-                : (0, i.jsx)(u.A, { frameId: x.frame.id, level: d.A.WithinCallContent, className: N.Z7, overlay: r });
-        case m.n.RenderingElsewhere:
-            return (0, i.jsx)(h.A, { description: I.intl.string(I.t["2KIDX+"]) });
-        case m.n.NoApplication:
-            return (0, i.jsx)(h.A, { description: I.intl.string(j.default.TQptZV) });
-        case m.n.DoesNotSupportSurface:
-            return (0, i.jsx)(h.A, { description: I.intl.string(j.default["13FYwI"]) });
-        case m.n.Error:
-            return (0, i.jsx)(h.A, { heading: I.intl.string(I.t.VquUff), error: I.intl.string(I.t["Sd9D/R"]) });
-        case m.n.AwaitingLaunch:
-        case m.n.Loading:
-            return (0, i.jsx)(h.j, {});
+                : (0, i.jsx)(h.A, {
+                      frameId: C.frame.id,
+                      level: u.A.WithinCallContent,
+                      className: v.Z7,
+                      overlay: (0, i.jsxs)(i.Fragment, { children: [r, (0, i.jsx)(d.A, { frameId: C.frame.id })] }),
+                  });
+        case A.n.RenderingElsewhere:
+            return (0, i.jsx)(p.A, { description: N.intl.string(N.t["2KIDX+"]) });
+        case A.n.NoApplication:
+            return (0, i.jsx)(p.A, { description: N.intl.string(I.default.TQptZV) });
+        case A.n.DoesNotSupportSurface:
+            return (0, i.jsx)(p.A, { description: N.intl.string(I.default["13FYwI"]) });
+        case A.n.Error:
+            return (0, i.jsx)(p.A, { heading: N.intl.string(N.t.VquUff), error: N.intl.string(N.t["Sd9D/R"]) });
+        case A.n.AwaitingLaunch:
+        case A.n.Loading:
+            return (0, i.jsx)(p.j, {});
         default:
             return null;
     }

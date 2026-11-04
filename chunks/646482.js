@@ -8048,9 +8048,9 @@ let u5 = (0, ts.Fe)({
                 t.e("154168"),
                 t.e("979585"),
                 t.e("357718"),
-                t.e("563600"),
-            ]).then(t.bind(t, 203859)),
-        webpackId: 203859,
+                t.e("977584"),
+            ]).then(t.bind(t, 583219)),
+        webpackId: 583219,
         renderLoader: u9,
         name: "AppChannel",
     });

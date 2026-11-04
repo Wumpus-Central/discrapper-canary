@@ -949,6 +949,14 @@ function eq(e) {
     eV(["CONJURING_PROJECT_UPDATE"], (e) => {
         eW({ type: "CONJURE_PROJECT_RUNNING_UPDATE", projectId: e.project_id, running: !0 === e.running });
     }),
+    eV(["APPLICATION_FRAME_UPDATE"], (e) => {
+        eW({
+            type: "APPLICATION_FRAME_UPDATE",
+            projectId: e.project_id,
+            applicationId: e.application_id,
+            updatedAt: e.updated_at,
+        });
+    }),
     eV(["CONJURING_TURN_SETTLED"], (e) => {
         eW({
             type: "CONJURE_TURN_SETTLED",
@@ -2018,8 +2026,8 @@ let eJ = new c.A("ConnectionStore"),
     e1 = null,
     e2 = !0,
     e3 = null,
-    e5 = null;
-async function e6(e) {
+    e6 = null;
+async function e4(e) {
     ((e0 = Date.now()), (e1 = e.sessionId), V.handleConnectionOpen());
     let t = {},
         n = s.w.get("discord_update_restart_timestamp"),
@@ -2041,9 +2049,9 @@ async function e6(e) {
             null != e && ((t = { guildId: e.getGuildId(), channelId: r }), (0, _.A)(r));
         } else (p.A.setLastSessionVoiceChannelId(null != r ? r : null), o.default.selectVoiceChannel(null));
     }
-    (H.update(t, !0), (e2 = !1), (e5 = null));
+    (H.update(t, !0), (e2 = !1), (e6 = null));
 }
-function e4() {
+function e5() {
     H.update();
 }
 function e7() {
@@ -2104,10 +2112,10 @@ let tt = new te(l.h, {
         );
     },
     CONNECTION_OPEN: (e) => {
-        e6(e);
+        e4(e);
     },
     CONNECTION_RESUMED: function () {
-        e5 = null;
+        e6 = null;
     },
     CONNECTION_CLOSED: function () {
         (eJ.verbose("connection closed dispatched"), (e0 = Date.now()));
@@ -2119,7 +2127,7 @@ let tt = new te(l.h, {
     VOICE_CHANNEL_SELECT: function (e) {
         return (
             H.update({ guildId: e.guildId, channelId: e.channelId }),
-            (e5 = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
+            (e6 = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
             (0, N.isIOS)() &&
                 e3 === x.g6G.BACKGROUND &&
                 (null == e.channelId ? B.close(!0) : B.isClosed() && (j.V(!1), B.connect())),
@@ -2131,8 +2139,8 @@ let tt = new te(l.h, {
         return t.reduce((e, t) => {
             if (A.default.getId() !== t.userId) return e;
             if (t.sessionId === e1) {
-                if (null != e5)
-                    return (eJ.verbose("Ignoring voice state for own session due to VSU lock on channel:", e5), e);
+                if (null != e6)
+                    return (eJ.verbose("Ignoring voice state for own session due to VSU lock on channel:", e6), e);
                 H.setState({ guildId: t.guildId, channelId: t.channelId });
             } else {
                 if (t.guildId !== H.guildId) return e;
@@ -2151,7 +2159,7 @@ let tt = new te(l.h, {
     CALL_DELETE: function (e) {
         let { channelId: t } = e;
         if (t === H.channelId) {
-            if (e5 === t) return !1;
+            if (e6 === t) return !1;
             H.setState({ guildId: null, channelId: null });
         }
     },
@@ -2206,7 +2214,7 @@ let tt = new te(l.h, {
             !1
         );
     },
-    STREAM_CREATE: e4,
+    STREAM_CREATE: e5,
     STREAM_START: function (e) {
         let { streamType: t, guildId: n, channelId: i } = e;
         if (B.isSessionEstablished()) {
@@ -2232,7 +2240,7 @@ let tt = new te(l.h, {
     },
     STREAM_STOP: function (e) {
         let { streamKey: t } = e;
-        return (e9(t), e4(), !1);
+        return (e9(t), e5(), !1);
     },
     STREAM_SET_PAUSED: function (e) {
         let { streamKey: t, paused: n } = e;
@@ -2256,11 +2264,11 @@ let tt = new te(l.h, {
     RESET_SOCKET: function (e) {
         B.connectionState !== C.A.WILL_RECONNECT && B.resetSocketAndClearCacheOnError(e.args);
     },
-    CLIPS_SETTINGS_UPDATE: e4,
-    RUNNING_GAMES_CHANGE: e4,
+    CLIPS_SETTINGS_UPDATE: e5,
+    RUNNING_GAMES_CHANGE: e5,
     USER_SETTINGS_PROTO_UPDATE: function (e) {
         e.settings.type === eZ.oD.PRELOADED_USER_SETTINGS &&
             e.settings.proto.clips?.allowVoiceRecording != null &&
-            e4();
+            e5();
     },
 });

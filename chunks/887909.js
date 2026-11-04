@@ -1,8 +1,8 @@
 (n.r(t),
     n.d(t, {
-        OAuth2AuthorizeModal: () => e4,
+        OAuth2AuthorizeModal: () => e5,
         getOAuth2AuthorizeProps: () => tr,
-        OAuth2AuthorizePage: () => e6,
+        OAuth2AuthorizePage: () => e4,
         openOAuth2Modal: () => ti,
         openOAuth2ModalWithCreateGuildModal: () => tn,
         useOAuth2AuthorizeForm: () => te,
@@ -602,7 +602,7 @@ function e1(e) {
 }
 var e2 = n(613057),
     e3 = n(292502);
-let e5 = (0, F.Fe)({
+let e6 = (0, F.Fe)({
     createPromise: () =>
         Promise.all([
             n.e("166171"),
@@ -614,7 +614,9 @@ let e5 = (0, F.Fe)({
             n.e("779367"),
             n.e("552653"),
             n.e("85427"),
-            n.e("698584"),
+            n.e("66149"),
+            n.e("996969"),
+            n.e("281342"),
             n.e("967850"),
             n.e("291329"),
             n.e("64769"),
@@ -700,7 +702,7 @@ let e5 = (0, F.Fe)({
             n.e("570506"),
             n.e("539620"),
             n.e("225990"),
-            n.e("41402"),
+            n.e("818771"),
             n.e("935715"),
             n.e("248329"),
             n.e("93939"),
@@ -724,7 +726,7 @@ let e5 = (0, F.Fe)({
             n.e("716092"),
             n.e("784041"),
             n.e("371933"),
-            n.e("815859"),
+            n.e("147518"),
             n.e("547646"),
             n.e("288004"),
             n.e("231578"),
@@ -740,7 +742,7 @@ let e5 = (0, F.Fe)({
         ]).then(n.bind(n, 991054)),
     webpackId: 991054,
 });
-function e6() {
+function e4() {
     let e = (0, l.zy)(),
         t = r.useMemo(() => (0, J._)(e.search), [e.search]);
     (0, P.A)();
@@ -828,7 +830,7 @@ function e6() {
     }
     return (0, i.jsx)(eJ.$, {
         removeChildWrapper: !0,
-        children: (0, i.jsx)(e4, {
+        children: (0, i.jsx)(e5, {
             transitionState: I.i.ENTERED,
             ...t,
             showLogout: !0,
@@ -837,7 +839,7 @@ function e6() {
         }),
     });
 }
-function e4(e) {
+function e5(e) {
     let {
             label: t,
             title: n,
@@ -1058,8 +1060,8 @@ function te(e) {
             return { requestedScopes: t, accountScopes: n };
         }, [eq?.scopes, D, e$]),
         e2 = r.useMemo(() => (e$ ? E.iu(eq?.permissions ?? 0) : P) ?? Z.x3, [eq?.permissions, P, e$]),
-        e6 = r.useRef(!1),
-        [e4, te] = r.useState(ed ?? []),
+        e4 = r.useRef(!1),
+        [e5, te] = r.useState(ed ?? []),
         [tt, tn] = r.useState(null != ed && ed.length > 0);
     ((0, d.Ay)(() => {
         let e = $.default.getAnalyticsToken();
@@ -1068,12 +1070,12 @@ function te(e) {
             : (0, y.rQ)({ withAnalyticsToken: !0 }).catch(et.tEg);
     }),
         r.useEffect(() => {
-            if (!e6.current && null == ed) {
+            if (!e4.current && null == ed) {
                 if (!$.default.isAuthenticated()) return void (0, er.Vh)(eh, "oauth2_error_not_authenticated");
                 e();
             }
             async function e() {
-                e6.current = !0;
+                e4.current = !0;
                 try {
                     let { disclosures: e, allAcked: t } = await (0, w.vG)(A);
                     (tn(!t), te(e));
@@ -1082,7 +1084,7 @@ function te(e) {
                     if (401 === e) return void (0, er.Vh)(eh, "oauth2_error_failed_disclosures");
                     eN(Error(null != t.message ? t.message : `${Object.keys(t)[0]}: ${Object.values(t)[0]}`));
                 } finally {
-                    e6.current = !1;
+                    e4.current = !1;
                 }
             }
         }, [A, eh, ed, te, eN, tn, eg]));
@@ -1113,7 +1115,7 @@ function te(e) {
                         guildId: eY === u.b.GUILD_INSTALL && null != eb ? eb : void 0,
                         channelId: eY === u.b.GUILD_INSTALL && null != eP ? eP : void 0,
                     });
-                    if ((e && (await (0, w.Yx)(A, e4)), null != q))
+                    if ((e && (await (0, w.Yx)(A, e5)), null != q))
                         (q({ application: eI?.application, location: n.location, guild: eW, scopes: eZ, canceled: t }),
                             eo?.());
                     else if (null != n.location) {
@@ -1131,12 +1133,12 @@ function te(e) {
                         eO(!1));
                 }
             },
-            [ee, q, eI?.application, eW, eo, A, eZ, f, I, p, m, g, S, e2, ew, eb, eY, eE, eP, e4],
+            [ee, q, eI?.application, eW, eo, A, eZ, f, I, p, m, g, S, e2, ew, eb, eY, eE, eP, e5],
         ),
         ta = r.useRef(!1),
         ts = r.useCallback(async () => {
             if (!$.default.isAuthenticated()) return void (0, er.Vh)(eh, "oauth2_error_not_authenticated");
-            if (!e6.current && !ta.current) {
+            if (!e4.current && !ta.current) {
                 ta.current = !0;
                 try {
                     var e;
@@ -1271,7 +1273,7 @@ function te(e) {
             break;
         case "SELECT_INSTALL_TYPE":
             if (null == ez) return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e9, {}) };
-            ((t = (0, i.jsx)(e5, {
+            ((t = (0, i.jsx)(e6, {
                 application: ez,
                 onSelect: function (e) {
                     (eK(e), ep(null), eg("AUTHORIZE_SCOPES"));
@@ -1357,7 +1359,7 @@ function te(e) {
                 (0, i.jsx)(em, {
                     application: eI.application,
                     scopes: eZ,
-                    disclosures: e4,
+                    disclosures: e5,
                     redirectUri: eI.redirect_uri ?? null,
                     approximateGuildCount: void 0 !== e ? e : null,
                     isEmbeddedFlow: W,
@@ -1437,7 +1439,7 @@ function tn(e, t) {
     (0, H._9)() ? B.A.openCreateGuildModal({ onSuccess: (n) => ti({ ...e, guildId: n }, t) }) : ti(e, t);
 }
 function ti(e, t) {
-    (0, O.openModal)((t) => (0, i.jsx)(e4, { ...t, ...e, callback: tt.bind(null, e) }), { onCloseCallback: t });
+    (0, O.openModal)((t) => (0, i.jsx)(e5, { ...t, ...e, callback: tt.bind(null, e) }), { onCloseCallback: t });
 }
 function tr(e) {
     let { hostname: t = "", host: n, pathname: i, search: r } = Q.A.toURLSafe(e) ?? {};

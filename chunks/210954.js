@@ -1,4 +1,4 @@
-n.d(t, { A: () => O });
+n.d(t, { A: () => R });
 var i = n(477900);
 n(582128);
 var r = n(503698),
@@ -7,49 +7,50 @@ var r = n(503698),
     l = n(793574),
     o = n(688810),
     d = n(429913),
-    c = n(869146),
-    u = n(272812),
-    _ = n(461782),
-    E = n(334463),
-    A = n(343030),
-    h = n(91242),
-    f = n(317608),
-    I = n(113192),
-    p = n(165610),
-    m = n(652215),
-    T = n(411801),
-    g = n(967481),
-    S = n(969426);
-function N(e) {
+    c = n(144399),
+    u = n(869146),
+    _ = n(272812),
+    E = n(461782),
+    A = n(334463),
+    h = n(343030),
+    f = n(91242),
+    I = n(317608),
+    p = n(113192),
+    m = n(165610),
+    T = n(652215),
+    g = n(411801),
+    S = n(967481),
+    N = n(969426);
+function C(e) {
     let { onActive: t, onForceIdle: n } = e;
-    return (0, i.jsx)("div", { onMouseMove: t, onMouseDown: t, onMouseLeave: n, className: T.IU });
+    return (0, i.jsx)("div", { onMouseMove: t, onMouseDown: t, onMouseLeave: n, className: g.IU });
 }
-function C() {
-    let e = (0, s.bG)([h.A], () => (0, p.ny)(h.A.getMainFrame())),
+function O() {
+    let e = (0, s.bG)([f.A], () => (0, m.ny)(f.A.getMainFrame())),
         t = (0, d.h)(e?.applicationId),
-        n = (0, s.bG)([c.A], () => c.A.getWindowOpen(m.MLl.ACTIVITY_POPOUT)),
-        r = (0, s.bG)([E.A], () => E.A.isFrameHidden());
+        n = (0, s.bG)([u.A], () => u.A.getWindowOpen(T.MLl.ACTIVITY_POPOUT)),
+        r = (0, s.bG)([A.A], () => A.A.isFrameHidden());
     if (null == e || null == t || n) return null;
     let { layoutMode: l } = e.data,
-        o = l === p.y0.PIP && !r,
-        C = o && null != E.A.pipVideoWindow && null != E.A.pipFrameWindow;
-    return (0, i.jsx)(_.Ay, {
+        o = l === m.y0.PIP && !r,
+        O = o && null != A.A.pipVideoWindow && null != A.A.pipFrameWindow;
+    return (0, i.jsx)(E.Ay, {
         timeout: 2e3,
         children: (t) => {
             let { idle: n, onActive: s, onForceIdle: l } = t;
-            return (0, i.jsxs)(u.A, {
-                className: a()(T.zr, { [T.NW]: o, [S.a8]: o, [g.N7]: n, [T.p0]: o, [T.R]: r, [T.Gq]: C }),
+            return (0, i.jsxs)(_.A, {
+                className: a()(g.zr, { [g.NW]: o, [N.a8]: o, [S.N7]: n, [g.p0]: o, [g.R]: r, [g.Gq]: O }),
                 noBorder: !o,
                 children: [
-                    o ? (0, i.jsx)(N, { onActive: s, onForceIdle: l }) : null,
-                    (0, i.jsx)(f.A, {
+                    o ? (0, i.jsx)(C, { onActive: s, onForceIdle: l }) : null,
+                    (0, i.jsx)(I.A, {
                         frameId: e.id,
-                        level: A.A.AboveAppContent,
-                        className: a()(T.pU, { [T.p0]: o }),
+                        level: h.A.AboveAppContent,
+                        className: a()(g.pU, { [g.p0]: o }),
                         overlay: o
                             ? (0, i.jsx)("div", {
                                   className: "theme-dark",
-                                  children: (0, i.jsx)(I.v, {
+                                  children: (0, i.jsx)(p.v, {
                                       frame: e,
                                       idle: n,
                                       onMouseMove: s,
@@ -57,14 +58,14 @@ function C() {
                                       onMouseLeave: l,
                                   }),
                               })
-                            : null,
+                            : (0, i.jsx)(c.A, { frameId: e.id }),
                     }),
                 ],
             });
         },
     });
 }
-let O = () => {
+let R = () => {
     let { analyticsLocations: e } = (0, o.Ay)(l.A.FRAME_PIP);
-    return (0, i.jsx)(o.f5, { value: e, children: (0, i.jsx)(C, {}) });
+    return (0, i.jsx)(o.f5, { value: e, children: (0, i.jsx)(O, {}) });
 };
