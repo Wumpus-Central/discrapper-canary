@@ -1,8 +1,8 @@
 n.d(e, { m: () => N });
 var i = n(477900),
-    o = n(582128),
-    l = n(503698),
-    s = n.n(l),
+    l = n(582128),
+    o = n(503698),
+    s = n.n(o),
     a = n(534514),
     r = n(834730),
     c = n(331322),
@@ -17,21 +17,22 @@ var i = n(477900),
     A = n(132344);
 function N(t) {
     let { className: e, config: n } = t,
-        l = (0, m.T)(n.asset),
+        o = (0, m.T)(n.asset),
         N = (0, m.T)(n.backgroundAsset),
         j = (0, h.gc)(N),
-        v = o.useMemo(() => {
+        v = l.useMemo(() => {
             let t = n.gradient;
             if (null != t && null != t.colors && !(t.colors.length < 2))
                 return (0, h.K5)({ gradient: t.colors, angle: t.angle }, { defaultAngle: 180 });
         }, [n.gradient]),
         y = (0, h.x)(j, v),
-        I = null != n.textColor && "" !== n.textColor ? { color: n.textColor } : void 0;
+        I = null != n.textColor && "" !== n.textColor ? { color: n.textColor } : void 0,
+        T = n.helpArticle?.id;
     return (0, i.jsxs)("div", {
         className: s()(A.WR, e),
         style: y,
         children: [
-            null != l && (0, i.jsx)("img", { alt: "", className: A.TB, "aria-hidden": !0, src: l }),
+            null != o && (0, i.jsx)("img", { alt: "", className: A.TB, "aria-hidden": !0, src: o }),
             (0, i.jsxs)("div", {
                 className: A.QT,
                 children: [
@@ -66,11 +67,13 @@ function N(t) {
                                     });
                                 },
                             }),
-                            (0, i.jsx)(d.$, {
-                                variant: "secondary",
-                                text: g.intl.string(g.t.hvVgAZ),
-                                onClick: () => window.open(p.A.getArticleURL(0x27a74db36617), "_blank"),
-                            }),
+                            null != T &&
+                                "" !== T &&
+                                (0, i.jsx)(d.$, {
+                                    variant: "secondary",
+                                    text: g.intl.string(g.t.hvVgAZ),
+                                    onClick: () => window.open(p.A.getArticleURL(T), "_blank"),
+                                }),
                         ],
                     }),
                 ],
