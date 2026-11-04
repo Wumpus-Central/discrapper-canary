@@ -187,8 +187,8 @@ function G(e) {
         { theme: K } = (0, o.wR)(),
         W = (0, u.bG)([_.A], () => (null != p ? _.A.get(p.id) : null)),
         Y = (0, S.b2)(R),
-        q = G === U.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
-    function z(e) {
+        z = G === U.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
+    function q(e) {
         return B
             ? H.intl.formatToPlainString(w.default.pDiwHe, { premiumGroupProductName: (0, N.DP)(), totalSeats: N.LM })
             : e.skuId === j.pe.TIER_0
@@ -272,7 +272,7 @@ function G(e) {
                         variant: "body-md/medium",
                         color: "interactive-text-default",
                         className: F.Qq,
-                        children: z(e),
+                        children: q(e),
                     }),
                     (0, r.jsx)(c.E, {
                         variant: "body-md/medium",
@@ -289,7 +289,7 @@ function G(e) {
                 variant: "body-md/medium",
                 color: "interactive-text-default",
                 className: F.Qq,
-                children: z(e),
+                children: q(e),
             })));
     }
     let [Q, V] = i.useState(!1),
@@ -317,14 +317,14 @@ function G(e) {
                     : H.intl.string(H.t.TkTvBz)),
         T)
     )
-        return (0, r.jsx)(L.A, { type: $(), text: t, buttonText: n, hideClose: y || q, onClose: X, buttonLoading: Q });
+        return (0, r.jsx)(L.A, { type: $(), text: t, buttonText: n, hideClose: y || z, onClose: X, buttonLoading: Q });
     let J = (0, I.z4)(l);
     return (0, r.jsxs)("div", {
         className: F.EL,
         children: [
             !J && (0, r.jsx)(b, { type: $(), theme: K }),
             t,
-            y || q
+            y || z
                 ? null
                 : (0, r.jsx)("div", {
                       "data-button-hoisted-classname-wrapper": !0,
@@ -346,16 +346,21 @@ function Z(e) {
         f = (0, u.bG)([E.A], () => E.A.get(t));
     s()(null != f, "Missing plan");
     let h = (0, u.bG)([y.A], () => y.A.getGiftCode(f.skuId)),
-        { quantity: _, checkoutSessionId: g } = (0, m.t4)((e) => ({
+        {
+            quantity: _,
+            checkoutSessionId: g,
+            isRecurringGiftCheckout: I,
+        } = (0, m.t4)((e) => ({
             quantity: e.quantity,
             checkoutSessionId: e.contextMetadata.loadId,
+            isRecurringGiftCheckout: e.getIsRecurringGiftCheckout(),
         })),
-        I = (0, u.bG)([y.A], () => y.A.isGiftCodeDeliveryReady(g), [g]);
+        S = (0, u.bG)([y.A], () => y.A.isGiftCodeDeliveryReady(g), [g]);
     return (0, r.jsx)(p.A, {
-        giftCode: h,
+        giftCode: I ? null : h,
         giftCount: _,
         checkoutSessionId: g,
-        giftCodeDeliveryReady: I,
+        giftCodeDeliveryReady: S,
         shouldUsePostPurchaseRecipientDelivery: l,
         subscriptionPlan: f,
         onClose: n,

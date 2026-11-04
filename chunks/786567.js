@@ -340,8 +340,7 @@ function X(e) {
         ek = (0, x.Mq)(e_),
         ew = (0, j.lo)(eM),
         eD = {};
-    (en && (eD.is_recurring = !0),
-        (eD.gift_style = eN),
+    ((eD.gift_style = eN),
         (eD.reward_sku_ids = ek && !en ? eL : []),
         ew === j.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD &&
             (a()(null != eM, "Gift recipient must be set at purchase review step for these gift options."),
