@@ -1,4 +1,4 @@
-n.d(t, { Ed: () => f, T_: () => S, Wl: () => A, zJ: () => T });
+n.d(t, { Ed: () => f, T_: () => N, Wl: () => A, iA: () => S, zJ: () => T });
 var l = n(477900),
     o = n(582128),
     i = n(503698),
@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(169797),
     C = n(848584);
 n(652215);
-var p = n(758476),
-    h = n(105292),
+var h = n(758476),
+    p = n(105292),
     m = n(66414);
 function f(e) {
     let { className: t, shouldShowUnifiedHeader: n, headerBadgeConfig: o } = e;
@@ -89,57 +89,63 @@ function T(e) {
     );
 }
 function S(e) {
+    let { children: t } = e;
+    return (0, l.jsx)("div", { className: m.uh, children: t });
+}
+function N(e) {
     let {
             upperInlineNoticeProps: t,
             upperInlineNoticeContent: n,
-            planSelectContent: o,
-            purchaseItemContent: i,
-            subscriptionDetailsContent: a,
-            isStepLoading: u,
-            paymentMethodContent: d,
-            invoiceSummaryContent: E,
-            promotionalNoticeContent: _,
-            legalContent: y,
-            invoiceTotalDueLabel: g = h.intl.string(p.default.R0cZsM),
-            invoiceTotalDueValue: S,
-            shouldShowGlobalNotices: N,
-            showUpperNoticesAboveGlobalNotices: O,
-            footerInlineNoticeProps: k,
-            footerInlineNoticeContent: x,
-            headerBadgeConfig: I,
-            className: v,
+            planSelectContent: i,
+            purchaseItemContent: a,
+            subscriptionDetailsContent: u,
+            isStepLoading: d,
+            paymentMethodContent: E,
+            invoiceSummaryContent: _,
+            promotionalNoticeContent: y,
+            tenantProvidesPromotionalNoticeContainer: g,
+            legalContent: N,
+            invoiceTotalDueLabel: O = p.intl.string(h.default.R0cZsM),
+            invoiceTotalDueValue: k,
+            shouldShowGlobalNotices: x,
+            showUpperNoticesAboveGlobalNotices: I,
+            footerInlineNoticeProps: v,
+            footerInlineNoticeContent: j,
+            headerBadgeConfig: w,
+            className: P,
         } = e,
-        { setCheckoutFooterLineItemNode: j } = (0, s.ck)();
-    return u
-        ? (0, l.jsx)(f, { className: v, shouldShowUnifiedHeader: !0 })
+        { setCheckoutFooterLineItemNode: F } = (0, s.ck)(),
+        b = o.useMemo(() => (null == y ? null : g ? y : (0, l.jsx)(S, { children: y })), [y, g]);
+    return d
+        ? (0, l.jsx)(f, { className: P, shouldShowUnifiedHeader: !0 })
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsxs)("div", {
-                      className: r()(v, { [m.pg]: null == E }),
+                      className: r()(P, { [m.pg]: null == _ }),
                       children: [
                           null != n
                               ? n
                               : (0, l.jsx)(T, {
                                     upperInlineNoticeProps: t,
-                                    shouldShowGlobalNotices: N,
-                                    showUpperNoticesAboveGlobalNotices: O,
+                                    shouldShowGlobalNotices: x,
+                                    showUpperNoticesAboveGlobalNotices: I,
                                 }),
-                          o,
-                          null != o && null != i && (0, l.jsx)("div", { className: m.ls }),
                           i,
-                          null != a && (0, l.jsx)("div", { className: m.P3, children: a }),
-                          (0, l.jsx)("div", { className: m.Jv, children: d }),
-                          null != E && (0, l.jsx)("div", { className: m.ZF, children: E }),
+                          null != i && null != a && (0, l.jsx)("div", { className: m.ls }),
+                          a,
+                          null != u && (0, l.jsx)("div", { className: m.P3, children: u }),
+                          (0, l.jsx)("div", { className: m.Jv, children: E }),
+                          null != _ && (0, l.jsx)("div", { className: m.ZF, children: _ }),
                       ],
                   }),
-                  (0, l.jsx)(s.UY, { children: (0, l.jsx)(c.f, { headerBadgeConfig: I }) }),
+                  (0, l.jsx)(s.UY, { children: (0, l.jsx)(c.f, { headerBadgeConfig: w }) }),
                   (0, l.jsxs)(s.bx, {
                       children: [
-                          (0, l.jsx)("div", { ref: j }),
-                          null != g && null != S && (0, l.jsx)(C.Qf, { className: m.NR, label: g, value: S }),
-                          null != _ ? (0, l.jsx)("div", { className: m.uh, children: _ }) : null,
-                          y,
-                          null != x ? x : (0, l.jsx)(A, { footerInlineNoticeProps: k }),
+                          (0, l.jsx)("div", { ref: F }),
+                          null != O && null != k && (0, l.jsx)(C.Qf, { className: m.NR, label: O, value: k }),
+                          b,
+                          N,
+                          null != j ? j : (0, l.jsx)(A, { footerInlineNoticeProps: v }),
                       ],
                   }),
               ],

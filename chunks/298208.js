@@ -1,4 +1,4 @@
-n.d(t, { y0: () => ea, Ni: () => es, t4: () => eo, Q9: () => el, y$: () => ed });
+n.d(t, { y0: () => es, Ni: () => el, t4: () => ed, Q9: () => eo, y$: () => ec });
 var i = n(882035),
     r = n(428865),
     a = n(315069),
@@ -312,18 +312,19 @@ var q = n(811315),
     Z = n.n(q),
     Q = n(529412),
     J = n(75304),
-    ee = n(442467),
-    et = n(371710),
-    en = n(120700),
-    ei = n(758476),
-    er = n(705822);
-let ea = 1,
-    [es, el] = (0, T.A)();
-function eo(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
-    return el()(e, t);
-}
+    ee = n(860841),
+    et = n(442467),
+    en = n(371710),
+    ei = n(120700),
+    er = n(758476),
+    ea = n(705822);
+let es = 1,
+    [el, eo] = (0, T.A)();
 function ed(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
+    return eo()(e, t);
+}
+function ec(e) {
     let {
         checkoutInitParameters: t,
         startingValues: n,
@@ -509,7 +510,7 @@ function ed(e) {
                 },
                 resetPaymentAuthentication: () => e({ ...Y }),
             },
-            ...(0, er.e)(e, i),
+            ...(0, ea.e)(e, i),
             ...((_ = []),
             {
                 getPaymentSourceNotices: () => {
@@ -596,10 +597,14 @@ function ed(e) {
                     }
                 }
                 return {
+                    getPremiumInvoicePlanId: () => {
+                        let { selectedPlanId: t, getGiftSubscriptionPlanId: n } = e();
+                        return n() ?? t ?? null;
+                    },
                     getIsPlanSwitchLoading: () => {
-                        let { checkoutInvoicePreview: t, selectedPlanId: n, getGiftSubscriptionPlanId: i } = e(),
-                            r = i() ?? n;
-                        return null != t && null != r && null == t.findInvoiceItemByPlanId(r);
+                        let { checkoutInvoicePreview: t, getPremiumInvoicePlanId: n } = e(),
+                            i = n();
+                        return null != t && null != i && null == t.findInvoiceItemByPlanId(i);
                     },
                     getShouldDisallowPlanSelection: () => {
                         let t = e().getTenantParams(J.C.PREMIUM_CHECKOUT);
@@ -667,6 +672,52 @@ function ed(e) {
                         let a = i(t ?? r);
                         return null == a || 0 === a.length || a.includes(n) ? n : void 0;
                     },
+                    getPremiumInvoiceDiscriminator: (t) => {
+                        let { isTrial: n } = t,
+                            { isGift: i, getGiftSubscriptionPlanId: r } = e();
+                        return null != r()
+                            ? ee.u$.SUBSCRIPTION_NEW_PURCHASE
+                            : i
+                              ? ee.u$.PREMIUM_GIFT
+                              : n
+                                ? ee.u$.PREMIUM_WITH_TRIAL
+                                : ee.u$.SUBSCRIPTION_NEW_PURCHASE;
+                    },
+                    getPremiumDiscriminatedInvoicePreview: (t) => {
+                        let { invoiceError: n, isTrial: i } = t,
+                            { getPremiumInvoiceDiscriminator: r, getGenericDiscriminatedInvoicePreview: a } = e();
+                        return a({ invoiceTypeDiscriminator: r({ isTrial: i }), invoiceError: n });
+                    },
+                    getGenericDiscriminatedInvoicePreview: (t) => {
+                        let { invoiceTypeDiscriminator: n, invoiceError: i } = t,
+                            {
+                                checkoutInvoicePreview: r,
+                                renewalInvoicePreview: a,
+                                getIsPlanSwitchLoading: s,
+                                get: l,
+                            } = e(),
+                            o = l("primaryInvoicesError");
+                        return null == r
+                            ? null
+                            : (0, ee.Qh)({
+                                  invoiceTypeDiscriminator: n,
+                                  checkoutInvoicePreview: r,
+                                  renewalInvoicePreview: a,
+                                  planSwitchLoading: s(),
+                                  error: o ?? i,
+                              });
+                    },
+                    getInvoiceSubscriptionPeriodEnd: () => {
+                        let { checkoutInvoicePreview: t } = e();
+                        if (null != t) return t.subscriptionPeriodEnd;
+                    },
+                    getInvoiceHasQuantityDiscount: () => {
+                        let { checkoutInvoicePreview: t, getPremiumInvoicePlanId: n } = e(),
+                            i = n();
+                        if (null == t || null == i) return !1;
+                        let { subscriptionPlanInvoiceItem: r } = (0, C.Sb)(t, i);
+                        return r?.discounts.some((e) => e.type === K.iS.QUANTITY_DISCOUNT) ?? !1;
+                    },
                 };
             })(i),
             ...{
@@ -681,11 +732,11 @@ function ed(e) {
                 setHasAppliedRecurringGiftDefaults: (t) => e({ hasAppliedRecurringGiftDefaults: t }),
                 getIsRecurringGiftCheckout: () => {
                     let { isRecurringGift: e, selectedPlanId: t } = i();
-                    return e && null != t && (0, et.dI)(t);
+                    return e && null != t && (0, en.dI)(t);
                 },
                 getGiftSubscriptionPlanId: () => {
                     let { selectedPlanId: e, getIsRecurringGiftCheckout: t } = i();
-                    return null != e && t() ? (0, et.o_)(e) : null;
+                    return null != e && t() ? (0, en.o_)(e) : null;
                 },
             },
             ...{
@@ -734,7 +785,7 @@ function ed(e) {
                                 return !0;
                         }
                         if (
-                            ((r && !c) || a === en.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT) &&
+                            ((r && !c) || a === ei.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT) &&
                             (null == t || !t.canRedeemTrial())
                         )
                             return !0;
@@ -749,10 +800,10 @@ function ed(e) {
                     return null === r && t
                         ? H.intl.string(H.t.CpOiEO)
                         : l
-                          ? H.intl.string(ei.default["7r4HPu"])
+                          ? H.intl.string(er.default["7r4HPu"])
                           : null != n
                             ? n
-                            : H.intl.string(ei.default.BPzQj4);
+                            : H.intl.string(er.default.BPzQj4);
                 },
                 getCheckoutReviewButtonProps: (e) => {
                     let {
@@ -769,7 +820,7 @@ function ed(e) {
                         A = !_ && !E("isCheckoutDataLoading"),
                         h = l?.text;
                     null == h &&
-                        (h = u === L.VVm.SUBSCRIPTION ? H.intl.string(H.t.YScQSF) : H.intl.string(ei.default.BPzQj4));
+                        (h = u === L.VVm.SUBSCRIPTION ? H.intl.string(H.t.YScQSF) : H.intl.string(er.default.BPzQj4));
                     let f = l?.variant,
                         I = c({ hasPaymentSources: a, tenantProvidedButtonText: h }),
                         p = {
@@ -819,7 +870,7 @@ function ed(e) {
                                 };
                 },
             },
-            ...(0, ee.d)(e, i),
+            ...(0, et.d)(e, i),
             get: (e) => (null != E[e] ? E[e]() : null),
             contextMetadata: a,
             order: l,
@@ -862,14 +913,14 @@ function ed(e) {
             setSelectedSkuId: (t) =>
                 e((e) => {
                     let n = t ?? void 0;
-                    return n === e.selectedSkuId ? e : { selectedSkuId: n, quantity: ea };
+                    return n === e.selectedSkuId ? e : { selectedSkuId: n, quantity: es };
                 }),
             setSelectedPlanId: function (t) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { shouldUpdateQuantity: !0 },
                     i = t ?? void 0;
-                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: ea }) : e({ selectedPlanId: i });
+                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: es }) : e({ selectedPlanId: i });
             },
-            quantity: ea,
+            quantity: es,
             setQuantity: (t) => e({ quantity: t }),
             fetchCheckoutInvoicePreviewRequest: null,
             setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: P(t, i) }),

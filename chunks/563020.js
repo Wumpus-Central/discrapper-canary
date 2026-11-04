@@ -134,9 +134,8 @@ function T(e, t) {
     };
 }
 function g(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : t.id,
-        i = (0, c.Z)(e.invoiceItems);
-    return { subscriptionPlanInvoiceItem: i.find((e) => e.subscriptionPlanId === n), coalescedInvoiceItems: i };
+    let n = (0, c.Z)(e.invoiceItems);
+    return { subscriptionPlanInvoiceItem: n.find((e) => e.subscriptionPlanId === t), coalescedInvoiceItems: n };
 }
 function S(e, t) {
     let n,
@@ -171,7 +170,7 @@ function S(e, t) {
 function N(e, t) {
     var n;
     let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : t.id,
-        { subscriptionPlanInvoiceItem: r, coalescedInvoiceItems: l } = g(e, t, i);
+        { subscriptionPlanInvoiceItem: r, coalescedInvoiceItems: l } = g(e, i ?? t.id);
     if (null == r)
         throw new s.v({
             message: "Expected newPlanInvoiceItem",

@@ -1,21 +1,24 @@
-n.d(t, { R: () => d, i: () => c });
+n.d(t, { R: () => m, i: () => d });
 var l = n(582128),
     i = n(724651),
     r = n(732280),
-    a = n(120700),
-    s = n(298208),
-    o = n(652215),
-    u = n(202541);
-function c() {
+    a = n(563020),
+    s = n(120700),
+    o = n(298208),
+    u = n(652215),
+    c = n(202541);
+function d() {
     let {
-            selectedSkuId: e,
-            isPremium: t,
-            isPremiumGroupPurchase: n,
-            referralTrialOfferId: a,
-            isGift: o,
-        } = (0, s.t4)((e) => {
+            checkoutInvoicePreview: e,
+            selectedSkuId: t,
+            isPremium: n,
+            isPremiumGroupPurchase: s,
+            referralTrialOfferId: u,
+            isGift: d,
+        } = (0, o.t4)((e) => {
             let t = e.get("selectedPlanAttributes");
             return {
+                checkoutInvoicePreview: e.checkoutInvoicePreview,
                 selectedSkuId: e.selectedSkuId,
                 referralTrialOfferId: e.referralTrialOfferId,
                 isGift: e.isGift,
@@ -23,45 +26,47 @@ function c() {
                 isPremiumGroupPurchase: t.isPremiumGroupPurchase,
             };
         }),
-        c = (0, r.V)(a ?? void 0),
-        d = !n && !o && null != e,
-        m = !!(d && null != c && u.kb[c.trialId].skus.includes(e) && !n),
-        p = (0, i.O)(),
-        C =
-            null != e &&
-            null != p &&
-            null != p.discount &&
-            null != p.discount.planIds &&
-            p.discount.planIds.some((t) => u.hd[t].skuId === e),
-        h = !!(d && null != p && C);
+        m = (0, r.V)(u ?? void 0),
+        p = !s && !d && null != t,
+        h = !!(p && null != m && c.kb[m.trialId].skus.includes(t) && !s),
+        C = (0, i.O)(),
+        f =
+            null != t &&
+            null != C &&
+            null != C.discount &&
+            null != C.discount.planIds &&
+            C.discount.planIds.some((e) => c.hd[e].skuId === t),
+        E = !!(p && null != C && f),
+        S = l.useMemo(() => null != C && null != C.discount && null != e && (0, a.Ro)(e, C.discount.id), [C, e]);
     return l.useMemo(
         () => ({
-            isPremium: t,
-            isPremiumGroupPurchase: n,
-            isEligibleForTrial: m,
-            isEligibleForDiscount: h,
-            userTrialOffer: c,
-            discountOffer: p,
+            isPremium: n,
+            isPremiumGroupPurchase: s,
+            isEligibleForTrial: h,
+            isEligibleForDiscount: E,
+            userTrialOffer: m,
+            discountOffer: C,
+            currentInvoiceHasMatchingDiscountOffer: S,
         }),
-        [t, n, m, h, c, p],
+        [n, s, h, E, m, C, S],
     );
 }
-function d(e) {
+function m(e) {
     let { hasOpenInvoice: t } = e,
         {
             activeSubscription: n,
             unifiedCheckoutFlow: i,
             setStartingIsInPastDueCheckout: r,
-        } = (0, s.t4)((e) => ({
+        } = (0, o.t4)((e) => ({
             activeSubscription: e.activeSubscription,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
             setStartingIsInPastDueCheckout: e.setStartingIsInPastDueCheckout,
         })),
-        u = i === a.C.PREMIUM_CHECKOUT && null != n && n.status === o.Dmq.PAST_DUE && t;
+        a = i === s.C.PREMIUM_CHECKOUT && null != n && n.status === u.Dmq.PAST_DUE && t;
     return (
         l.useEffect(() => {
-            u && r(!0);
-        }, [u, r]),
-        u
+            a && r(!0);
+        }, [a, r]),
+        a
     );
 }

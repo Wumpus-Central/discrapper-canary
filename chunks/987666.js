@@ -3,7 +3,7 @@ var l = n(477900);
 n(582128);
 var i = n(888751),
     r = n(563020),
-    a = n(400612),
+    a = n(860841),
     s = n(818824),
     o = n(25149),
     u = n(298208);
@@ -15,8 +15,8 @@ function c(e) {
             discriminatedInvoicePreview: d,
             overrideRenewalDate: m,
             fractionalPremiumInfo: p,
-            isInvoiceBilledImmediately: C = !0,
-            unifiedLegalType: h,
+            isInvoiceBilledImmediately: h = !0,
+            unifiedLegalType: C,
             discountOffer: f,
             subscriptionTrial: E,
         } = e,
@@ -30,7 +30,7 @@ function c(e) {
         A = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? I,
         P = (0, r.de)({
             overrideRenewalDate: m,
-            currentInvoice: C ? I : void 0,
+            currentInvoice: h ? I : void 0,
             renewalInvoice: A,
             isSubscriptionUpdate: null != c,
             fractionalPremiumInfo: p,
@@ -41,7 +41,7 @@ function c(e) {
         }),
         _ = {
             purchaseButtonText: g,
-            totalDue: C ? I.total : 0,
+            totalDue: h ? I.total : 0,
             renewalPrice: v,
             multiPeriodDiscountAttributes: x,
             currency: I.currency,
@@ -50,7 +50,7 @@ function c(e) {
             startDate: P,
         };
     return (0, l.jsx)(o._P, {
-        variant: { type: h, ..._ },
+        variant: { type: C, ..._ },
         paymentSourceType: n,
         immediateDelivery: S,
         isExpressCheckout: y,
