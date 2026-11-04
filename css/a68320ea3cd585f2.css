@@ -157,4 +157,29 @@
     padding-inline-end: 6px
 }
 
-/*# sourceMappingURL=455c44a41f0c68e3.css.map*/
+.keycapsField_0PgvPQ {
+    align-self: stretch;
+    display: flex;
+    flex: 1 1 auto;
+    min-width: 0;
+    position: relative
+}
+
+.keycapsInput_0PgvPQ,
+.recorderContainer_0PgvPQ.recording_0PgvPQ .keycapsInput_0PgvPQ {
+    caret-color: transparent;
+    color: transparent
+}
+
+.keycaps_0PgvPQ {
+    align-items: center;
+    display: flex;
+    inset-block: 0;
+    inset-inline: var(--space-10) 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    z-index: 2
+}
+
+/*# sourceMappingURL=a68320ea3cd585f2.css.map*/

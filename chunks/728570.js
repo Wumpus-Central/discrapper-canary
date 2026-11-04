@@ -16862,33 +16862,35 @@ let fW = (0, h.zZ)(S.X.CLIPS_CAPTURE_SETTINGS_CATEGORY, {
 var fQ = n(271597),
     fJ = n(417270),
     f$ = n(847825);
-let f0 = () => {
-        let e = (0, _.bG)([la.Ay], () => la.Ay.getKeybindForAction(I.hCu.SAVE_CLIP, !0));
-        tE()(null != e, "Save clip keybind unset");
-        let t = !(0, fG.E)(),
-            n = (0, fD.H)(),
-            i = (0, lS.Xt)(e.shortcut, (0, lS.OH)("alt+c")),
-            l = x.useRef(null),
-            s = x.useCallback(
-                (t) => {
-                    iZ.A.setKeybind({ ...e, shortcut: t });
+let f0 = (e) => {
+        let { keycaps: t } = e,
+            n = (0, _.bG)([la.Ay], () => la.Ay.getKeybindForAction(I.hCu.SAVE_CLIP, !0));
+        tE()(null != n, "Save clip keybind unset");
+        let i = !(0, fG.E)(),
+            l = (0, fD.H)(),
+            s = (0, lS.Xt)(n.shortcut, (0, lS.OH)("alt+c")),
+            r = x.useRef(null),
+            a = x.useCallback(
+                (e) => {
+                    iZ.A.setKeybind({ ...n, shortcut: e });
                 },
-                [e],
+                [n],
             ),
-            r = x.useCallback(() => {
-                iZ.A.setKeybind({ ...e, shortcut: (0, lS.OH)("alt+c") });
-            }, [e]);
+            o = x.useCallback(() => {
+                iZ.A.setKeybind({ ...n, shortcut: (0, lS.OH)("alt+c") });
+            }, [n]);
         return (0, f.jsx)(lu.D, {
-            label: V.intl.string(n ? fV.default["8Cx5u+"] : V.t.pf54EU),
-            description: V.intl.string(n ? fV.default.sved3b : V.t["QyB/jK"]),
+            label: V.intl.string(l ? fV.default["8Cx5u+"] : V.t.pf54EU),
+            description: V.intl.string(l ? fV.default.sved3b : V.t["QyB/jK"]),
             layout: "horizontal-responsive",
             children: (0, f.jsx)("div", {
                 className: f$.g,
                 children: (0, f.jsx)(lh.A, {
-                    ref: l,
-                    disabled: t,
-                    defaultValue: e.shortcut,
-                    onChange: s,
+                    ref: r,
+                    disabled: i,
+                    defaultValue: n.shortcut,
+                    onChange: a,
+                    keycaps: t,
                     trailingActions: (0, f.jsxs)(f.Fragment, {
                         children: [
                             (0, f.jsx)(lg.m, {
@@ -16899,10 +16901,10 @@ let f0 = () => {
                                     icon: iW.F,
                                     size: "sm",
                                     variant: "secondary",
-                                    disabled: t,
+                                    disabled: i,
                                     "aria-label": V.intl.string(fV.default.bUtubv),
                                     onClick: (e) => {
-                                        (e.stopPropagation(), l.current?.toggleRecordMode());
+                                        (e.stopPropagation(), r.current?.toggleRecordMode());
                                     },
                                 }),
                             }),
@@ -16914,10 +16916,10 @@ let f0 = () => {
                                     icon: fJ.RetryIcon,
                                     size: "sm",
                                     variant: "secondary",
-                                    disabled: t || (n && i),
+                                    disabled: i || (l && s),
                                     "aria-label": V.intl.string(fV.default.Kyk1Tp),
                                     onClick: (e) => {
-                                        (e.stopPropagation(), r());
+                                        (e.stopPropagation(), o());
                                     },
                                 }),
                             }),
@@ -16942,17 +16944,18 @@ let f0 = () => {
             return e && t;
         },
         useSearchTerms: f1.useSearchTerms,
-        Component: f0,
+        Component: () => (0, f.jsx)(f0, { keycaps: !0 }),
     }),
-    f3 = () => {
-        let e = (0, _.bG)([la.Ay], () => la.Ay.getKeybindForAction(I.hCu.SAVE_CLIP, !0)),
-            t = (0, _.bG)([la.Ay], () => la.Ay.getKeybindForAction(I.hCu.SAVE_SCREENSHOT, !0));
-        (tE()(null != e, "Save clip keybind unset"), tE()(null != t, "Save screenshot keybind unset"));
-        let n = x.useCallback(
+    f3 = (e) => {
+        let { keycaps: t } = e,
+            n = (0, _.bG)([la.Ay], () => la.Ay.getKeybindForAction(I.hCu.SAVE_CLIP, !0)),
+            i = (0, _.bG)([la.Ay], () => la.Ay.getKeybindForAction(I.hCu.SAVE_SCREENSHOT, !0));
+        (tE()(null != n, "Save clip keybind unset"), tE()(null != i, "Save screenshot keybind unset"));
+        let l = x.useCallback(
             (e) => {
-                iZ.A.setKeybind({ ...t, shortcut: e });
+                iZ.A.setKeybind({ ...i, shortcut: e });
             },
-            [t],
+            [i],
         );
         return (0, f.jsx)(lu.D, {
             label: V.intl.string(V.t["0U/hj7"]),
@@ -16960,7 +16963,7 @@ let f0 = () => {
             layout: "horizontal",
             children: (0, f.jsx)("div", {
                 className: f$.g,
-                children: (0, f.jsx)(lh.A, { defaultValue: t.shortcut, onChange: n }),
+                children: (0, f.jsx)(lh.A, { defaultValue: i.shortcut, onChange: l, keycaps: t }),
             }),
         });
     },
@@ -16982,7 +16985,7 @@ let f0 = () => {
                 );
             return e && t && n;
         },
-        Component: f3,
+        Component: () => (0, f.jsx)(f3, { keycaps: !0 }),
     }),
     f4 = (0, h.zD)(S.X.CLIPS_ENABLE, {
         useTitle: () => V.intl.string(V.t.h8rgrK),

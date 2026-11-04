@@ -6,4 +6,7 @@ _.exports = {
     bZ: "keybindInput_0PgvPQ " + t(409757).hF,
     UD: "buttonContainer_0PgvPQ",
     Sq: "trailingActions_0PgvPQ",
+    F9: "keycapsField_0PgvPQ",
+    N7: "keycapsInput_0PgvPQ",
+    LZ: "keycaps_0PgvPQ",
 };
