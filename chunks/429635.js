@@ -1,18 +1,18 @@
-var n = l(582128),
-    r = l(733391),
-    u = l(376680);
-l.d(
-    e,
+var i = n(582128),
+    r = n(733391),
+    a = n(376680);
+n.d(
+    t,
     {},
     {
-        A: function (t) {
-            let { applicationId: e, guildId: l } = t,
-                o = (0, u.A)({ applicationId: e, guildId: l });
+        A: function (e) {
+            let { applicationId: t, guildId: n } = e,
+                s = (0, a.A)({ applicationId: t, guildId: n });
             return (
-                n.useEffect(() => {
-                    null != e ? (0, r.ap)(e, { eager: !1 }) : null != l && (0, r.Rw)(l, { eager: !1 });
-                }, [e, l]),
-                o
+                i.useEffect(() => {
+                    null != t ? (0, r.ap)(t, { eager: !1 }) : null != n && (0, r.Rw)(n, { eager: !1 });
+                }, [t, n]),
+                s
             );
         },
     },

@@ -1,20 +1,20 @@
-var n = l(855986),
-    r = l(832163);
-l.d(
-    e,
+var i = n(855986),
+    r = n(832163);
+n.d(
+    t,
     {},
     {
-        A: function (t) {
-            let { applicationId: e, guildId: l } = t;
-            return (0, n.bG)(
+        A: function (e) {
+            let { applicationId: t, guildId: n } = e;
+            return (0, i.bG)(
                 [r.A],
                 () =>
-                    null != e
-                        ? r.A.getStorefrontDataForApplicationId(e)
-                        : null != l
-                          ? r.A.getStorefrontData(l)
+                    null != t
+                        ? r.A.getStorefrontDataForApplicationId(t)
+                        : null != n
+                          ? r.A.getStorefrontData(n)
                           : void 0,
-                [e, l],
+                [t, n],
             );
         },
     },

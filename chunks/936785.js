@@ -1,8 +1,8 @@
 l(582128);
-var n = l(318254),
-    r = l(278416),
+var r = l(318254),
+    n = l(278416),
     u = l(403581);
-let o = { ORBS: n.C, TAG: r.TagIcon, NITRO: u.t },
+let a = { ORBS: r.C, TAG: n.TagIcon, NITRO: u.t },
     i = "{value}";
 l.d(
     e,
@@ -12,7 +12,7 @@ l.d(
             return null == t ? null : t.includes(i) ? (null == e ? null : t.replaceAll(i, String(e))) : t;
         },
         LZ: function (t) {
-            return null != t ? o[t] : void 0;
+            return null != t ? a[t] : void 0;
         },
         RD: function (t) {
             return null != t ? new Date(t) : null;
