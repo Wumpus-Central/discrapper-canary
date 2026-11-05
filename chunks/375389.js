@@ -4,13 +4,13 @@ var S,
     O,
     R,
     N,
-    c,
     u,
+    c,
     L,
     d,
     C,
-    p,
     g,
+    p,
     D = E(214958),
     M = E.n(D);
 function P() {
@@ -93,6 +93,9 @@ if (null != H) {
             (i.distro = e.distro),
             (i.runtime_environment = e.runtime_environment),
             (i.display_server = e.display_server));
+    } else if ("win32" === E) {
+        let e = H.os.buildRevision;
+        null != e && (i.os_build_revision = e.toString());
     }
 }
 function y(e, t) {
@@ -258,7 +261,7 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == s.release_channel || "" === s.release_channel) &&
         (s.release_channel = l.split("-")[0]),
-    isNaN((I = parseInt("665406", 10))) || (s.client_build_number = I),
+    isNaN((I = parseInt("665413", 10))) || (s.client_build_number = I),
     null == (a = H?.app.getBuildNumber()) || isNaN(a) || (s.native_build_number = a),
     (s.client_event_source = (function () {
         try {
@@ -742,18 +745,18 @@ var ea =
         R),
     eO = (((N = {}).ASC = "asc"), (N.DESC = "desc"), N),
     eR =
-        (((c = {}).PRICE = "price"),
-        (c.ALPHABETICAL = "alphabetical"),
-        (c.RECENCY = "recency"),
-        (c.POPULARITY = "popularity"),
-        (c.RELEVANCE = "relevance"),
-        c),
-    eN =
-        (((u = {}).PREMIUM_TIER_2_1_HOUR = "1271583180566036480"),
-        (u.PREMIUM_TIER_2_1_DAY = "1298745361602449479"),
-        (u.PREMIUM_TIER_2_3_DAY = "1333912750274904064"),
+        (((u = {}).PRICE = "price"),
+        (u.ALPHABETICAL = "alphabetical"),
+        (u.RECENCY = "recency"),
+        (u.POPULARITY = "popularity"),
+        (u.RELEVANCE = "relevance"),
         u),
-    ec =
+    eN =
+        (((c = {}).PREMIUM_TIER_2_1_HOUR = "1271583180566036480"),
+        (c.PREMIUM_TIER_2_1_DAY = "1298745361602449479"),
+        (c.PREMIUM_TIER_2_3_DAY = "1333912750274904064"),
+        c),
+    eu =
         (((L = {}).HOME = "home"),
         (L.CATALOG = "catalog"),
         (L.ORBS = "orbs"),
@@ -791,7 +794,7 @@ var ea =
     eO.DESC,
     eR.POPULARITY,
     eO.DESC);
-var eu = (((d = {}).ABOUT = "about"), (d.STORE = "store"), d),
+var ec = (((d = {}).ABOUT = "about"), (d.STORE = "store"), d),
     eL =
         (((C = {}).GENERAL = "general"),
         (C.IMAGES = "images"),
@@ -908,7 +911,7 @@ let ed = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             GLOBAL_DISCOVERY_APPS_CATEGORY: (e) => `/discovery/applications/categories/${e}`,
             GLOBAL_DISCOVERY_APPS_PROFILE: (e) => `/discovery/applications/${e}`,
             GLOBAL_DISCOVERY_APPS_PROFILE_SECTION: (e, t) => `/discovery/applications/${e}/${t}`,
-            GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU: (e, t) => `/discovery/applications/${e}/${eu.STORE}/${t}`,
+            GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU: (e, t) => `/discovery/applications/${e}/${ec.STORE}/${t}`,
             GLOBAL_DISCOVERY_APPS_SEARCH: "/discovery/applications/search",
             GUILD_MEMBER_VERIFICATION: (e) => `/member-verification/${e}`,
             GUILD_MEMBER_VERIFICATION_FOR_HUB: (e, t) => `/member-verification-for-hub/${e}${null != t ? `/${t}` : ""}`,
@@ -963,7 +966,7 @@ let ed = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             REPORT_SECOND_LOOK: "/report-review",
             COLLECTIBLES_SHOP: "/shop",
             COLLECTIBLES_SHOP_GAME_SHOP: (e, t, E, n) => {
-                let r = `/shop?tab=${ec.GAME_SHOPS}&applicationId=${e}`;
+                let r = `/shop?tab=${eu.GAME_SHOPS}&applicationId=${e}`;
                 return (
                     null != t && (r += `&pageIndex=${t}`),
                     null != E && (r += `&skuId=${E}`),
@@ -990,29 +993,29 @@ let ed = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
         }),
         [":", "?", "@"],
     ),
-    ep = new Set(
+    eg = new Set(
         Object.values(
-            (((p = {}).CONJURE = "conjuring"),
-            (p.CONJURE_PROJECT = "conjure"),
-            (p.ROLE_SUBSCRIPTIONS = "role-subscriptions"),
-            (p.SERVER_MONETIZATION_ONBOARDING = "server-monetization-onboarding"),
-            (p.GAME_SHOP = "game-shop"),
-            (p.GUILD_SHOP = "shop"),
-            (p.MEMBER_APPLICATIONS = "member-applications"),
-            (p.GUILD_HOME = "@home"),
-            (p.CHANNEL_BROWSER = "channel-browser"),
-            (p.GUILD_ONBOARDING = "onboarding"),
-            (p.CUSTOMIZE_COMMUNITY = "customize-community"),
-            (p.MEMBER_SAFETY = "member-safety"),
-            (p.GUILD_BOOSTS = "boosts"),
-            (p.GAME_SERVERS = "game-servers"),
-            (p.REPORT_TO_MOD = "report-to-mod"),
-            (p.GUILD_OFFICIAL_MESSAGES = "official-messages"),
-            (p.GUILD_SPACE = "guild-space"),
-            p),
+            (((g = {}).CONJURE = "conjuring"),
+            (g.CONJURE_PROJECT = "conjure"),
+            (g.ROLE_SUBSCRIPTIONS = "role-subscriptions"),
+            (g.SERVER_MONETIZATION_ONBOARDING = "server-monetization-onboarding"),
+            (g.GAME_SHOP = "game-shop"),
+            (g.GUILD_SHOP = "shop"),
+            (g.MEMBER_APPLICATIONS = "member-applications"),
+            (g.GUILD_HOME = "@home"),
+            (g.CHANNEL_BROWSER = "channel-browser"),
+            (g.GUILD_ONBOARDING = "onboarding"),
+            (g.CUSTOMIZE_COMMUNITY = "customize-community"),
+            (g.MEMBER_SAFETY = "member-safety"),
+            (g.GUILD_BOOSTS = "boosts"),
+            (g.GAME_SERVERS = "game-servers"),
+            (g.REPORT_TO_MOD = "report-to-mod"),
+            (g.GUILD_OFFICIAL_MESSAGES = "official-messages"),
+            (g.GUILD_SPACE = "guild-space"),
+            g),
         ),
     );
-function eg(e, t) {
+function ep(e, t) {
     let { optional: E = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     return new X(`:${eS()(e)}(${t})${E ? "?" : ""}`);
 }
@@ -1040,12 +1043,12 @@ function eg(e, t) {
 }),
     new Set(
         Object.values(
-            (((g = {}).GUILD_HOME = "home"),
-            (g.SERVER_GUIDE = "guide"),
-            (g.CHANNEL_BROWSER = "browse"),
-            (g.CUSTOMIZE_COMMUNITY = "customize"),
-            (g.LINKED_ROLES = "linked-roles"),
-            g),
+            (((p = {}).GUILD_HOME = "home"),
+            (p.SERVER_GUIDE = "guide"),
+            (p.CHANNEL_BROWSER = "browse"),
+            (p.CUSTOMIZE_COMMUNITY = "customize"),
+            (p.LINKED_ROLES = "linked-roles"),
+            p),
         ),
     ));
 let eD = {
@@ -1053,13 +1056,13 @@ let eD = {
         let { name: e = "guildId", optional: t = !1 } =
                 arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             E = ed.map(eS()).join("|");
-        return eg(e, `${E}|\\d+`, { optional: t });
+        return ep(e, `${E}|\\d+`, { optional: t });
     },
     channelId() {
         let { name: e = "channelId", optional: t = !1 } =
                 arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            E = [...ep].map(eS()).join("|");
-        return eg(e, `${E}|\\d+`, { optional: t });
+            E = [...eg].map(eS()).join("|");
+        return ep(e, `${E}|\\d+`, { optional: t });
     },
 };
 var eM = E(806163);

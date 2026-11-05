@@ -363,6 +363,9 @@ if (null != eE) {
             (a.distro = e.distro),
             (a.runtime_environment = e.runtime_environment),
             (a.display_server = e.display_server));
+    } else if ("win32" === n) {
+        let e = eE.os.buildRevision;
+        null != e && (a.os_build_revision = e.toString());
     }
 }
 function eA() {
@@ -536,7 +539,7 @@ eT(
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("665406", 10))) || (l.client_build_number = d),
+    isNaN((d = parseInt("665413", 10))) || (l.client_build_number = d),
     null == (c = eE?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {
