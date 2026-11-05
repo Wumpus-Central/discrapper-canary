@@ -18,6 +18,7 @@ if (
         null == window.GLOBAL_ENV.NETWORKING_ENDPOINT &&
         null == window.GLOBAL_ENV.BRAINTREE_KEY &&
         null == window.GLOBAL_ENV.STRIPE_KEY &&
+        null == window.GLOBAL_ENV.STRIPE_KEYS_BY_MERCHANT_ACCOUNT_ID &&
         null == window.GLOBAL_ENV.ADYEN_KEY &&
         null == window.GLOBAL_ENV.PROJECT_ENV &&
         null == window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT &&

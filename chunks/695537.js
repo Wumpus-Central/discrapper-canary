@@ -1,5 +1,5 @@
 r.d(t, { qn: () => l, DL: () => a, yu: () => i });
-var n = r(71532);
+var n = r(558740);
 function l(e) {
     let t = null != e ? e.billing_facet : null,
         r = null != t ? t.order_signing_deferral_context : null;
@@ -15,21 +15,21 @@ async function i(e) {
     let { payment_redirect_context: t, stripe_3ds_context: r } = e;
     if (null != t) return void a(t);
     if (null != r)
-        return void (await (async function (e) {
-            let { client_secret: t, payment_method_id: r } = e;
-            if (null == t) throw Error("Stripe 3DS context has no client secret");
-            let l = await (async function () {
-                    let e = await (0, n.Cv)();
-                    if (null == e) throw Error("Stripe is not loaded");
-                    return e;
-                })(),
-                a = await (async function (e, t) {
+        return void (await (async function (e, t) {
+            let { client_secret: r, payment_method_id: l } = e;
+            if (null == r) throw Error("Stripe 3DS context has no client secret");
+            let a = await (async function (e) {
+                    let t = await (0, n.Cv)(e);
+                    if (null == t) throw Error("Stripe is not loaded");
+                    return t;
+                })(t),
+                i = await (async function (e, t) {
                     let { error: r, paymentIntent: n } = await e.retrievePaymentIntent(t);
                     if (null != r) throw Error(`Could not retrieve the payment intent: ${r.message}`);
                     if (null == n) throw Error("Payment intent does not exist");
                     return n;
-                })(l, t);
-            switch (a.status) {
+                })(a, r);
+            switch (i.status) {
                 case "succeeded":
                 case "processing":
                     return;
@@ -40,15 +40,15 @@ async function i(e) {
                         let { error: n } = await e.confirmCardPayment(t, r);
                         if (null != n) throw Error(`Card authentication failed: ${n.message}`);
                     })(
-                        l,
-                        t,
+                        a,
+                        r,
                         (function (e, t) {
                             if ("requires_payment_method" === e.status && null != t) return { payment_method: t };
-                        })(a, r),
+                        })(i, l),
                     );
                 default:
-                    throw Error(`Unexpected payment intent status: ${a.status}`);
+                    throw Error(`Unexpected payment intent status: ${i.status}`);
             }
-        })(r));
+        })(r, e.payment_gateway_merchant_account_id));
     throw Error("Order signing deferral context has no action the client can complete");
 }
