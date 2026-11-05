@@ -19,8 +19,8 @@ var s = r(435558),
     A = r(734057),
     D = r(696451),
     b = r(495867),
-    E = r(412780),
-    v = r(994500),
+    v = r(412780),
+    E = r(994500),
     x = r(287809),
     C = r(427262),
     S = r(289873),
@@ -32,14 +32,14 @@ var s = r(435558),
     I = r(761508),
     B = r(684339),
     w = r(259264),
-    M = r(718197);
+    M = r(754712);
 (r(134528), r(947204));
 var T = r(796873),
     G = r.n(T),
     L = r(229659),
     U = r(646514),
-    q = r(707554),
-    O = r(404778),
+    O = r(707554),
+    q = r(404778),
     W = r(603349),
     $ = r(378885);
 let V = ["firCount", "nackCount"];
@@ -59,7 +59,7 @@ class H extends a.PureComponent {
                     className: $.l5,
                     align: f.A.Align.START,
                     children: [
-                        (0, n.jsx)(f.A.Child, { children: (0, n.jsx)(q.H, { className: $.DD, children: e }) }),
+                        (0, n.jsx)(f.A.Child, { children: (0, n.jsx)(O.H, { className: $.DD, children: e }) }),
                         Array.isArray(r)
                             ? (0, n.jsx)(f.A.Child, { grow: 1, wrap: !0, children: r })
                             : (0, n.jsxs)(f.A.Child, {
@@ -73,7 +73,7 @@ class H extends a.PureComponent {
                     ],
                 }),
                 null !== s && (0, n.jsx)(f.A.Child, { className: $.JB, children: s }, null != a ? `${a}-${i}` : i),
-                (0, n.jsx)(O.c, { className: $.yF }),
+                (0, n.jsx)(q.c, { className: $.yF }),
             ],
         });
     }
@@ -168,6 +168,7 @@ let K = {
     opPreemptiveExpand: "Preemptive Expand Frames",
     opSilence: "Silent Frames",
     outboundBitrateEstimate: "Outbound Bitrate Estimate",
+    outputDeviceUnderruns: "Output Device Underruns",
     pacerDelay: "Pacer Delay",
     packetsLost: "Packets Lost",
     packetsReceived: "Packets Received",
@@ -396,7 +397,7 @@ function el(e) {
         i = en[t] ?? ei,
         s = ea[t],
         l =
-            E.iA[t] &&
+            v.iA[t] &&
             (Array.isArray(r) && r.length > 0 && "number" == typeof r[0].value
                 ? (0, n.jsx)(L.A, { converter: s, dataPoints: r, width: 300, height: 100 })
                 : "number" == typeof r
@@ -432,8 +433,8 @@ function ep(e) {
         g = (0, o.bG)([x.default], () => (u && null != s ? x.default.getUser(s) : null)),
         A = (0, o.bG)([D.Ay], () => (u && null != F && null != s ? D.Ay.getNick(F, s) : null));
     if (null == t || (u && null == s) || 0 === t.length) return (0, n.jsx)(S.y, { type: S.y.Type.SPINNING_CIRCLE });
-    let v = d;
-    u && null != g && (v = `${d} \u{2014} ${A ?? C.Ay.getName(g)}`);
+    let E = d;
+    u && null != g && (E = `${d} \u{2014} ${A ?? C.Ay.getName(g)}`);
     let j = t.map((e, t) => {
             let r, a;
             return (0, n.jsx)(
@@ -467,8 +468,8 @@ function ep(e) {
                         : void 0 === n
                           ? -1
                           : r - n
-                    : E.iA[e] !== E.iA[t]
-                      ? E.iA[e]
+                    : v.iA[e] !== v.iA[t]
+                      ? v.iA[e]
                           ? 1
                           : -1
                       : e > t
@@ -518,7 +519,7 @@ function ep(e) {
                     basis: "100%",
                     children: (0, n.jsx)(k.l, {
                         label: "Simulcast Override",
-                        value: E.Ay.getSimulcastDebugOverride(s, r),
+                        value: v.Ay.getSimulcastDebugOverride(s, r),
                         onSelectionChange: (e) => {
                             m.z0(s, r, e);
                         },
@@ -531,7 +532,7 @@ function ep(e) {
     return (0, n.jsxs)(R.B, {
         gap: 16,
         children: [
-            (0, n.jsx)(c.D, { variant: "heading-sm/medium", children: v }),
+            (0, n.jsx)(c.D, { variant: "heading-sm/medium", children: E }),
             (0, n.jsx)(I.V, {
                 type: "top",
                 look: "brand",
@@ -651,10 +652,10 @@ function eA(e) {
         })
     );
 }
-let eD = o.Ay.connectStores([E.Ay], (e) => {
+let eD = o.Ay.connectStores([v.Ay], (e) => {
         let { context: t, index: r, videoStreams: n } = e,
-            a = E.Ay.getAllStats(t)[r],
-            { section: i } = (0, E.Bz)(E.Ay.getSection());
+            a = v.Ay.getAllStats(t)[r],
+            { section: i } = (0, v.Bz)(v.Ay.getSection());
         if (null == i) throw Error("Unrecognized section format");
         let s = null;
         return (
@@ -674,9 +675,9 @@ let eD = o.Ay.connectStores([E.Ay], (e) => {
             showUserInfo: !0,
         });
     }),
-    eb = o.Ay.connectStores([E.Ay], (e) => {
+    eb = o.Ay.connectStores([v.Ay], (e) => {
         let { context: t, index: r } = e,
-            n = E.Ay.getAllStats(t)[r];
+            n = v.Ay.getAllStats(t)[r];
         return { outbound: null != n ? n.rtp.outbound : null };
     })(function (e) {
         let { outbound: t, context: r, index: a } = e;
@@ -689,7 +690,7 @@ let eD = o.Ay.connectStores([E.Ay], (e) => {
             showSimulcastOverride: !1,
         });
     }),
-    eE = {
+    ev = {
         activityFrames: { key: "activityFramesConsumed", suffix: "Consumed" },
         hdrFrames: { key: "hdrFramesCapable", suffix: "Capable" },
         hybridDxgiFrames: { key: "hybridDxgiFramesUnique", suffix: "Unique" },
@@ -699,7 +700,7 @@ let eD = o.Ay.connectStores([E.Ay], (e) => {
         hybridGraphicsCaptureFrames: { key: "hybridGraphicsCaptureFramesUnique", suffix: "Unique" },
         hybridVideohookFrames: { key: "hybridVideohookFramesUnique", suffix: "Unique" },
     },
-    ev = [
+    eE = [
         "activityFrames",
         "activityFramesDropped",
         "hdrFrames",
@@ -721,7 +722,7 @@ let eD = o.Ay.connectStores([E.Ay], (e) => {
         "x11Frames",
         "pipewireFrames",
     ],
-    ex = new Set([...ev, ...Object.values(eE).map((e) => e.key)]);
+    ex = new Set([...eE, ...Object.values(ev).map((e) => e.key)]);
 class eC extends a.PureComponent {
     render() {
         let { screenshare: e } = this.props;
@@ -734,11 +735,11 @@ class eC extends a.PureComponent {
                           (function (e) {
                               let t = null != e.hybridGdiBitBltFrames && null != e.hybridGdiPrintWindowFrames,
                                   r = [];
-                              for (let a of ev) {
+                              for (let a of eE) {
                                   if ("hybridGdiFrames" === a && t) continue;
                                   let i = e[a];
                                   if (void 0 === i) continue;
-                                  let s = eE[a],
+                                  let s = ev[a],
                                       l = null != s ? e[s.key] : void 0;
                                   null != s && void 0 !== l
                                       ? r.push(
@@ -774,30 +775,36 @@ var eS = r(967198),
     eN = r(917592);
 class ek extends a.PureComponent {
     render() {
-        let { transport: e, mediaSessionId: t, hidePersonalInformation: r, hostname: a } = this.props;
+        let {
+            transport: e,
+            outputDeviceUnderruns: t,
+            mediaSessionId: r,
+            hidePersonalInformation: a,
+            hostname: i,
+        } = this.props;
         if (null == e) return (0, n.jsx)(S.y, { type: S.y.Type.SPINNING_CIRCLE });
-        let i = { ...e, hostname: a },
-            s = l().map(i, (e, t) => {
-                if ("receiverReports" !== t && !er[t] && (!r || "localAddress" !== t))
+        let s = { ...e, hostname: i, ...(null != t && { outputDeviceUnderruns: t }) },
+            o = l().map(s, (e, t) => {
+                if ("receiverReports" !== t && !er[t] && (!a || "localAddress" !== t))
                     return (0, n.jsx)(el, { label: t, value: e }, t);
             }),
-            o = new Map();
-        l().forEach(i.receiverReports, (e) => {
+            d = new Map();
+        l().forEach(s.receiverReports, (e) => {
             let t = Array.isArray(e.bitrate) ? e.bitrate.at(-1)?.value : e.bitrate,
-                r = o.get(e.id) ?? {};
+                r = d.get(e.id) ?? {};
             (null != t && (r.bitrate = t / 1e3),
                 null != e.fractionLost && (r.lost = (100 * e.fractionLost) / 256),
                 null != e.rtt && (r.rtt = e.rtt),
-                o.set(e.id, r));
+                d.set(e.id, r));
         });
-        let d = Array.from(o, (e) => {
+        let u = Array.from(d, (e) => {
                 let [t, r] = e,
                     n = x.default.getUser(t);
                 var a = eP.Ay.getNickname(eS.A.getGuildId(), void 0, n);
                 return (null == a && (a = null != n ? n.username : t), { id: t, displayName: a, ...r });
             }),
-            u = l().sortBy(d, (e) => e.displayName),
-            m = l().map(u, function (e) {
+            m = l().sortBy(u, (e) => e.displayName),
+            p = l().map(m, function (e) {
                 let { id: t, displayName: r, bitrate: a, lost: i, rtt: s } = e,
                     l = [];
                 return (
@@ -854,18 +861,18 @@ class ek extends a.PureComponent {
             children: [
                 (0, n.jsx)(c.D, {
                     variant: "heading-sm/medium",
-                    children: eh.intl.string(eh.t.wU9IN2) + (null != t ? " - " + t : ""),
+                    children: eh.intl.string(eh.t.wU9IN2) + (null != r ? " - " + r : ""),
                 }),
-                ec(s),
-                0 === m.length ? null : (0, n.jsx)(O.c, { className: ed.SX }),
-                ec(m),
+                ec(o),
+                0 === p.length ? null : (0, n.jsx)(q.c, { className: ed.SX }),
+                ec(p),
             ],
         });
     }
 }
-let eI = o.Ay.connectStores([E.Ay, b.A, ej.A, eR.A], (e) => {
+let eI = o.Ay.connectStores([v.Ay, b.A, ej.A, eR.A], (e) => {
     let { context: t, index: r } = e,
-        n = E.Ay.getAllStats(t)[r],
+        n = v.Ay.getAllStats(t)[r],
         a =
             t === eo.x.STREAM
                 ? Object.values(eR.A.getRTCConnections()).find(
@@ -875,6 +882,7 @@ let eI = o.Ay.connectStores([E.Ay, b.A, ej.A, eR.A], (e) => {
     return {
         hidePersonalInformation: ej.A.hidePersonalInformation,
         transport: null != n ? n.transport : null,
+        outputDeviceUnderruns: n?.audioDevice?.output?.bufferViolations,
         mediaSessionId: b.A.getMediaSessionId(),
         hostname: eN.A.getShortHostname(a),
     };
@@ -892,7 +900,7 @@ function ew(e, t, r, a, i) {
         (s.push({ section: h.Fq.HEADER, label: eh.intl.formatToPlainString(eh.t.PK5fOC, { context: e }) }),
         null != o &&
             s.push({
-                section: (0, E.Xi)(e, eB.zWA.TRANSPORT, r),
+                section: (0, v.Xi)(e, eB.zWA.TRANSPORT, r),
                 label: eh.intl.string(eh.t.wU9IN2),
                 element: eI,
                 elementProps: { context: e, index: r },
@@ -900,14 +908,14 @@ function ew(e, t, r, a, i) {
         null == p ||
             l().isEmpty(p) ||
             s.push({
-                section: (0, E.Xi)(e, eB.zWA.OUTBOUND, r),
+                section: (0, v.Xi)(e, eB.zWA.OUTBOUND, r),
                 label: eh.intl.string(eh.t["3u0gII"]),
                 element: eb,
                 elementProps: { context: e, index: r },
             }),
         null != y &&
             s.push({
-                section: (0, E.Xi)(e, eB.zWA.CAMERA, r),
+                section: (0, v.Xi)(e, eB.zWA.CAMERA, r),
                 label: eh.intl.string(eh.t["2AGBWH"]),
                 element: ey,
                 elementProps: { context: e, index: r, camera: y },
@@ -919,7 +927,7 @@ function ew(e, t, r, a, i) {
             var l;
             let o = x.default.getUser(s),
                 p = D.Ay.getNick(i, s),
-                h = (0, E.Xi)(e, s, r);
+                h = (0, v.Xi)(e, s, r);
             null != c[s] &&
                 c[s].length > 0 &&
                 t.push({
@@ -967,8 +975,8 @@ function ew(e, t, r, a, i) {
 }
 function eM() {
     let { defaultStats: e, streamStats: t } = (0, o.bG)(
-            [E.Ay],
-            () => ({ defaultStats: E.Ay.getAllStats(eo.x.DEFAULT), streamStats: E.Ay.getAllStats(eo.x.STREAM) }),
+            [v.Ay],
+            () => ({ defaultStats: v.Ay.getAllStats(eo.x.DEFAULT), streamStats: v.Ay.getAllStats(eo.x.STREAM) }),
             [],
             o.My,
         ),
@@ -977,7 +985,7 @@ function eM() {
         s = t.find((e) => null != e.clips)?.clips,
         l = (0, o.bG)([g.A], () => g.A.theme),
         d = (0, F.NC)(),
-        u = (0, o.bG)([E.Ay], () => E.Ay.getSection()),
+        u = (0, o.bG)([v.Ay], () => v.Ay.getSection()),
         f = (function (e) {
             let {
                     defaultStats: t,
@@ -1020,7 +1028,7 @@ function eM() {
                                       (0, n.jsx)(c.D, {
                                           className: $.HA,
                                           variant: "heading-lg/semibold",
-                                          children: (0, y.m1)(l, x.default, v.A),
+                                          children: (0, y.m1)(l, x.default, E.A),
                                       }),
                               },
                           ]
@@ -1041,7 +1049,7 @@ function eM() {
         })({
             defaultStats: e,
             streamStats: t,
-            videoStreams: (0, o.bG)([E.Ay], () => E.Ay.getVideoStreams()),
+            videoStreams: (0, o.bG)([v.Ay], () => v.Ay.getVideoStreams()),
             screenshare: i,
             clips: s,
             channel: r,
@@ -1055,7 +1063,7 @@ function eM() {
             [],
         ),
         a.useEffect(() => {
-            f.some((e) => e.section === u) || u === E.EM || m.c4(E.EM);
+            f.some((e) => e.section === u) || u === v.EM || m.c4(v.EM);
         }, [f, u]),
         (0, n.jsx)(p.A, { theme: l, sidebarTheme: d, section: u, onSetSection: m.c4, sections: f })
     );

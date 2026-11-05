@@ -64,7 +64,7 @@ var i = s(477900),
     eu = s(706787),
     ep = s(46653),
     em = s(111162),
-    eA = s(718197),
+    eA = s(754712),
     eh = s(290863),
     ex = s(485296),
     eI = s(977997),
@@ -196,7 +196,7 @@ let ew = [eP.lp.ACTIVITY],
         let e1 = t.useCallback(() => {
                 null != ej && _.default.toggleLocalMute(ej, eL.x.STREAM);
             }, [ej]),
-            e8 = t.useCallback(
+            e2 = t.useCallback(
                 (e) => {
                     j?.(x, e);
                 },
@@ -208,7 +208,7 @@ let ew = [eP.lp.ACTIVITY],
                 },
                 [y, x],
             ),
-            e2 = t.useCallback(
+            e8 = t.useCallback(
                 (e, l, s) => {
                     T?.(x, e, l, s);
                 },
@@ -316,8 +316,8 @@ let ew = [eP.lp.ACTIVITY],
                                     "aria-label": e4,
                                     className: eG.lG,
                                     onDoubleClick: e6,
-                                    onContextMenu: (e) => e2(e, x.type === eP.lp.STREAM),
-                                    onClick: e8,
+                                    onContextMenu: (e) => e8(e, x.type === eP.lp.STREAM),
+                                    onClick: e2,
                                     onMouseDown: N,
                                     onKeyDown: f,
                                     focusProps: { offset: 1 },
@@ -370,7 +370,7 @@ let ew = [eP.lp.ACTIVITY],
                                                   localVideoDisabled: eV,
                                                   videoToggleState: ez,
                                                   hideAudioIcon: eF,
-                                                  onContextMenu: e2,
+                                                  onContextMenu: e8,
                                                   onToggleMute: e1,
                                                   participantUserId: ej,
                                                   channel: C,

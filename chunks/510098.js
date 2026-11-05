@@ -3476,6 +3476,7 @@ class ti extends p.A {
         return Promise.reject(Error("Audio debug state is not supported."));
     }
     setAudioInputBypassSystemProcessing(e) {}
+    setAudioOutputBufferDurationMs(e) {}
     setLoopback(e, t) {
         e && null == this.loopback
             ? (this.enable(),

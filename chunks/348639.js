@@ -244,20 +244,20 @@ var t0 = i(119191),
 function t8(t) {
     t && (0, tw.Ak)(k.c, 0.4, void 0, void 0, { trackNotificationFailure: !0 });
 }
-let t9 = { noStyleAndInteraction: !0, formatInline: !0, hideSimpleEmbedContent: !1 };
-function t2(t) {
+let t2 = { noStyleAndInteraction: !0, formatInline: !0, hideSimpleEmbedContent: !1 };
+function t9(t) {
     let { message: e } = t,
-        i = (0, tV.ld)(t9, "textChatNotification"),
+        i = (0, tV.ld)(t2, "textChatNotification"),
         n = (0, tU.j)({ excluded: tU.Z }),
         l = (0, tM.N)(e.content, { enabled: i, syntax: n });
-    return (0, z.jsx)(tV.Ay, { message: e, options: t9, parsed: l });
+    return (0, z.jsx)(tV.Ay, { message: e, options: t2, parsed: l });
 }
 var t3 = i(554146),
-    t7 = i(298990),
-    t5 = i(429913),
+    t5 = i(298990),
+    t7 = i(429913),
     t4 = i(263577),
     t6 = i(826673),
-    et = i(718197),
+    et = i(754712),
     ee = i(907357),
     ei = i(487887),
     en = i(731854),
@@ -265,7 +265,7 @@ var t3 = i(554146),
     ea = i(302933);
 function er(t) {
     let { game: e } = t,
-        i = (0, t5.h)(e.id);
+        i = (0, t7.h)(e.id);
     return null == i ? null : (0, z.jsx)(t4.V, { src: i.getIconURL(ei.iu.LARGE), size: 40 });
 }
 let es = 5 * U.A.Millis.SECOND,
@@ -668,7 +668,7 @@ let eL = new eb(o.h, {
                                 (l("unlock"),
                                     u.A.updateNotificationStatus(i),
                                     u.A.setInputLocked(!1, P.A.getTargetPID()),
-                                    (0, t7.qf)(e, !1, $.BRT.POPOUT));
+                                    (0, t5.qf)(e, !1, $.BRT.POPOUT));
                             }));
                         break;
                     }
@@ -916,7 +916,7 @@ let eL = new eb(o.h, {
                 return {
                     icon: a,
                     title: r,
-                    body: e.content.length > 0 ? (0, z.jsx)(t2, { message: e }) : s,
+                    body: e.content.length > 0 ? (0, z.jsx)(t9, { message: e }) : s,
                     unreadAccessory: (t) => (l ? (0, z.jsx)(tk.A, { unread: !0, hovered: t }) : null),
                     hint: (t, e) =>
                         t || !e || (!l && (0, tF.$)())

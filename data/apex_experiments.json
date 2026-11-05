@@ -5963,6 +5963,31 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-10-windows-playout-buffer-duration",
+    "defaultConfig": {
+      "windowsOutputBufferDurationMs": null
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "windowsOutputBufferDurationMs": 30
+      },
+      "2": {
+        "windowsOutputBufferDurationMs": 40
+      },
+      "3": {
+        "windowsOutputBufferDurationMs": 50
+      },
+      "4": {
+        "windowsOutputBufferDurationMs": 60
+      }
+    }
+  },
+  {
     "name": "2026-11-autoclips-ea-upsell",
     "kind": "user",
     "defaultConfig": null,

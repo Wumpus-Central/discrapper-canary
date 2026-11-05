@@ -181,6 +181,7 @@ class o extends i.A {
     releaseNativeDesktopVideoSourcePickerStream() {}
     setMaybePreprocessMute(e) {}
     setAudioInputBypassSystemProcessing(e) {}
+    setAudioOutputBufferDurationMs(e) {}
     fetchAsyncResources(e) {
         return Promise.resolve();
     }

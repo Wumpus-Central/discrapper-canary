@@ -2094,6 +2094,9 @@ class ei extends d.A {
     setAudioInputBypassSystemProcessing(e) {
         (0, v.lE)().setTransportOptions({ bypassSystemProcessing: e });
     }
+    setAudioOutputBufferDurationMs(e) {
+        (0, v.lE)().setTransportOptions({ windowsOutputBufferDurationMs: e });
+    }
     setInputVolume(e) {
         (0, v.lE)().setInputVolume((e ?? 100) / 100);
     }
