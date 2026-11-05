@@ -11,8 +11,8 @@ let c = null,
     _ = !1,
     E = { suggestedGamesIds: [], suggestedWishlistGamesIds: [] },
     A = !1,
-    h = !1,
-    f = !1;
+    f = !1,
+    h = !1;
 class I extends a.Ay.Store {
     initialize() {
         this.waitFor(l.default);
@@ -34,22 +34,25 @@ class I extends a.Ay.Store {
     getWidgetUpdates() {
         let e = this.getSaveablePendingWidgets();
         if (null == e || null == u) return { changedWidgets: e ?? [], removedWidgets: [], hasOrderChanges: !1 };
-        let t = new Map(u.map((e) => [e.id, e])),
-            n = new Map(e.map((e) => [e.id, e])),
-            i = [],
-            r = [];
-        for (let [e, r] of n) {
-            let n = t.get(e);
-            (null != n && r.isEqual(n)) || i.push(r);
+        let t = (e) => e.id ?? e.getUniqueKey(),
+            n = new Map(u.map((e) => [t(e), e])),
+            i = new Map(e.map((e) => [t(e), e])),
+            r = [],
+            a = [];
+        for (let [e, t] of i) {
+            let i = n.get(e);
+            (null != i && t.isEqual(i)) || r.push(t);
         }
-        for (let [e, i] of t) n.has(e) || r.push(i);
-        let a = !1;
-        for (let t = 0; t < e.length; t++)
-            if (e[t]?.id !== u[t]?.id) {
-                a = !0;
+        for (let [e, t] of n) i.has(e) || a.push(t);
+        let s = !1;
+        for (let [n, i] of e.entries()) {
+            let e = u[n];
+            if (null == e || t(i) !== t(e)) {
+                s = !0;
                 break;
             }
-        return { changedWidgets: i, removedWidgets: r, hasOrderChanges: a };
+        }
+        return { changedWidgets: r, removedWidgets: a, hasOrderChanges: s };
     }
     getChangedWidgets() {
         let { changedWidgets: e } = this.getWidgetUpdates();
@@ -74,10 +77,10 @@ class I extends a.Ay.Store {
         return A;
     }
     get suggestedFetchIsLoading() {
-        return h;
+        return f;
     }
     get suggestedFetchAttempted() {
-        return f;
+        return h;
     }
     get suggestedGameIds() {
         return E;
@@ -105,13 +108,13 @@ let p = new I(s.h, {
     },
     WIDGET_SUGGESTED_FETCH_SUCCESS: function (e) {
         let { suggestedGamesIds: t, suggestedWishlistGamesIds: n } = e;
-        ((E.suggestedGamesIds = t), (E.suggestedWishlistGamesIds = n), (h = !1), (A = !1));
+        ((E.suggestedGamesIds = t), (E.suggestedWishlistGamesIds = n), (f = !1), (A = !1));
     },
     WIDGET_SUGGESTED_FETCH_FAILURE: function () {
-        ((A = !0), (h = !1));
+        ((A = !0), (f = !1));
     },
     WIDGET_SUGGESTED_FETCH_START: function () {
-        ((h = !0), (A = !1), (f = !0));
+        ((f = !0), (A = !1), (h = !0));
     },
     WIDGET_PENDING_CLEAR: function () {
         ((c = null), (u = null));
