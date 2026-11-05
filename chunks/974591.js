@@ -40,9 +40,9 @@ let w = new L.A("HexagonActionCreators"),
     R = 5 * P.A.Millis.SECOND,
     O = null;
 var F = s(207803),
-    G = s(84540),
+    Y = s(84540),
     B = s(652215),
-    Y = s(836602),
+    G = s(836602),
     H = s(696451),
     U = s(427262),
     z = s(403581),
@@ -708,7 +708,7 @@ let ew = a.memo(function (e) {
 var eR = s(834730),
     eO = s(885574),
     eF = s(73392),
-    eG = s(599715);
+    eY = s(599715);
 let eB = a.memo(function (e) {
     let t,
         { selectedFontId: s, setSelectedFontId: n, displayName: r, className: o } = e,
@@ -736,7 +736,7 @@ let eB = a.memo(function (e) {
                 ],
             }),
             (0, l.jsxs)("div", {
-                className: i()(e_.fh, eG.qW),
+                className: i()(e_.fh, eY.qW),
                 style: { "--custom-dns-tile-columns": N },
                 children: [
                     u.map((e) => {
@@ -750,7 +750,7 @@ let eB = a.memo(function (e) {
                                 text: o,
                                 asContainer: !0,
                                 children: (0, l.jsxs)(es.D, {
-                                    className: i()(eG.SO, eG.j4, { [eG.wH]: a }),
+                                    className: i()(eY.SO, eY.j4, { [eY.wH]: a }),
                                     onClick: () => {
                                         (n(e), r && h(e));
                                     },
@@ -759,7 +759,7 @@ let eB = a.memo(function (e) {
                                         (0, l.jsx)(eR.E, {
                                             variant: "body-lg/semibold",
                                             color: a ? "text-strong" : "text-default",
-                                            className: i()(eG.FH, t.className),
+                                            className: i()(eY.FH, t.className),
                                             children: "Gg",
                                         }),
                                         r && (0, l.jsx)("div", { className: e_.s1, "aria-hidden": !0 }),
@@ -772,7 +772,7 @@ let eB = a.memo(function (e) {
                     g &&
                         p &&
                         (0, l.jsxs)("div", {
-                            className: eG.Lb,
+                            className: eY.Lb,
                             children: [
                                 (0, l.jsx)(eO.CircleInformationIcon, { size: "lg" }),
                                 (0, l.jsx)(eR.E, {
@@ -787,7 +787,7 @@ let eB = a.memo(function (e) {
         ],
     });
 });
-var eY = s(821609),
+var eG = s(821609),
     eH = s(90302),
     eU = s(87719),
     ez = s(465794),
@@ -795,25 +795,40 @@ var eY = s(821609),
     eJ = s(682901),
     eW = s(7212);
 function eV(e) {
-    let { onApply: t, onSurpriseMe: s, onClose: a, canApply: n, isPremiumTryItOut: i = !1, banner: r } = e,
-        o = (0, eK.L)(eJ.PremiumTypes.TIER_2),
-        d = (0, l.jsx)(eY.$, {
+    let {
+            onApply: t,
+            onSurpriseMe: s,
+            onClose: n,
+            canApply: i,
+            entryPoint: r,
+            isPremiumTryItOut: o = !1,
+            banner: d,
+        } = e,
+        c = (0, eK.L)(eJ.PremiumTypes.TIER_2),
+        u = a.useCallback(() => {
+            x.default.track(B.HAw.DISPLAY_NAME_STYLES_NITRO_CLICKED, { cta: I.vY.BUTTON, entry_point: r });
+        }, [r]),
+        f = a.useCallback(() => {
+            (x.default.track(B.HAw.DISPLAY_NAME_STYLES_NITRO_CLICKED, { cta: I.vY.LINK, entry_point: r }),
+                (0, eU.x)(n));
+        }, [r, n]),
+        h = (0, l.jsx)(eG.$, {
             variant: "secondary",
             size: "md",
             onClick: s,
             icon: { type: "rive", asset: eH.m, riveProps: { dataBinding: { fill: K.A.colors.ICON_STRONG } } },
             text: X.intl.string(V.default.NOGFds),
         }),
-        c = (0, l.jsxs)("div", {
+        g = (0, l.jsxs)("div", {
             className: eW.k0,
             children: [
-                d,
+                h,
                 (0, l.jsx)(et.m, {
                     text: X.intl.string(V.default.cVTpnj),
-                    shouldShow: !n,
-                    children: (0, l.jsx)(eY.$, {
+                    shouldShow: !i,
+                    children: (0, l.jsx)(eG.$, {
                         onClick: t,
-                        disabled: !n,
+                        disabled: !i,
                         text: X.intl.string(X.t["1Qm822"]),
                         variant: "primary",
                         size: "md",
@@ -822,21 +837,22 @@ function eV(e) {
                 }),
             ],
         }),
-        u = null != r ? (0, l.jsxs)("div", { className: eW.f4, children: [r, c] }) : c,
-        f = (0, l.jsxs)("div", {
+        p = null != d ? (0, l.jsxs)("div", { className: eW.f4, children: [d, g] }) : g,
+        N = (0, l.jsxs)("div", {
             className: eW.UD,
             children: [
-                d,
+                h,
                 (0, l.jsx)(ez.A, {
                     premiumModalAnalyticsLocation: {
                         section: B.JJy.DISPLAY_NAME_STYLES_MODAL_FOOTER,
                         object: B.ZSU.PREMIUM_UPSELL_BUTTON,
                     },
                     subscriptionTier: eJ.pe.TIER_2,
+                    onClick: u,
                 }),
             ],
         }),
-        h = (0, l.jsxs)("div", {
+        S = (0, l.jsxs)("div", {
             className: eW.UX,
             children: [
                 (0, l.jsxs)("div", {
@@ -850,20 +866,16 @@ function eV(e) {
                             variant: "body-md/medium",
                             color: "text-default",
                             className: eW.h_,
-                            children: X.intl.format(V.default.PWf0xS, {
-                                onClickNitro: () => {
-                                    (x.default.track(B.HAw.DISPLAY_NAME_STYLES_NITRO_CLICKED), (0, eU.x)(a));
-                                },
-                            }),
+                            children: X.intl.format(V.default.PWf0xS, { onClickNitro: f }),
                         }),
                     ],
                 }),
-                f,
+                N,
             ],
         }),
-        g = (0, l.jsxs)("div", { className: eW.UX, children: [r, f] }),
-        p = null != r ? g : h;
-    return (0, l.jsx)(m.jl, { "data-migration-pending": !0, className: eW.qr, children: i || o ? u : p });
+        E = (0, l.jsxs)("div", { className: eW.UX, children: [d, N] }),
+        A = null != d ? E : S;
+    return (0, l.jsx)(m.jl, { "data-migration-pending": !0, className: eW.qr, children: o || c ? p : A });
 }
 var eX = s(366010),
     e$ = s(43990),
@@ -899,9 +911,9 @@ function tn(e) {
         f = (0, eX.M)(m),
         [h, g] = (0, a.useState)(f),
         p = (0, e4.Ay)(t.id, null),
-        { pendingChanges: S, tryItOutChanges: E } = (0, c.cf)([Y.A], () => ({
-            pendingChanges: Y.A.getPendingChanges(s?.id),
-            tryItOutChanges: Y.A.getTryItOutChanges(),
+        { pendingChanges: S, tryItOutChanges: E } = (0, c.cf)([G.A], () => ({
+            pendingChanges: G.A.getPendingChanges(s?.id),
+            tryItOutChanges: G.A.getTryItOutChanges(),
         })),
         {
             pendingAvatar: A,
@@ -923,7 +935,7 @@ function tn(e) {
         R = u ? void 0 : v,
         O = u ? E.tryItOutBanner : C,
         F = u ? E.tryItOutThemeColors : y,
-        { bannerSrc: G } = (0, te.A)({ displayProfile: p, size: 413, canAnimate: !1, pendingBanner: O }),
+        { bannerSrc: Y } = (0, te.A)({ displayProfile: p, size: 413, canAnimate: !1, pendingBanner: O }),
         { userNameplate: H, guildNameplate: U, pendingNameplate: z } = (0, N.rv)(t, s?.id),
         K = (0, e1.WK)(U);
     h && !f ? (m = B.NJ8.DARK) : !h && f && (m = B.NJ8.LIGHT);
@@ -937,7 +949,7 @@ function tn(e) {
     return (0, l.jsxs)("div", {
         className: ta._l,
         children: [
-            null != G &&
+            null != Y &&
                 (0, l.jsx)(tt.A, {
                     user: t,
                     displayProfile: p,
@@ -945,7 +957,7 @@ function tn(e) {
                     className: ta.LX,
                     pendingThemeColors: F,
                     forceUserTheme: !0,
-                    children: (0, l.jsx)("div", { className: ta.b8, style: { backgroundImage: `url(${G})` } }),
+                    children: (0, l.jsx)("div", { className: ta.b8, style: { backgroundImage: `url(${Y})` } }),
                 }),
             (0, l.jsx)(e$.N, {
                 theme: m,
@@ -1121,9 +1133,9 @@ function tN(e) {
         $ =
             ((t = U.Ay.useName(W)),
             (0, c.bG)(
-                [Y.A, H.Ay],
+                [G.A, H.Ay],
                 () => {
-                    let e = Y.A.getPendingChanges(v);
+                    let e = G.A.getPendingChanges(v);
                     if (null == v) return e.pendingGlobalName;
                     let { pendingNickname: t } = e;
                     return "" === t ? null : (t ?? H.Ay.getNick(v, W?.id));
@@ -1223,7 +1235,7 @@ function tN(e) {
                             } finally {
                                 p.current = !1;
                             }
-                        } else u ? (0, F.EW)(e) : (0, G.p)({ guildId: c, displayNameStyles: e });
+                        } else u ? (0, F.EW)(e) : (0, Y.p)({ guildId: c, displayNameStyles: e });
                         (x.default.track(B.HAw.DISPLAY_NAME_STYLES_APPLIED, {
                             font_name: d.x[l],
                             effect_name: o.z[n],
@@ -1316,7 +1328,7 @@ function tN(e) {
                 (0, _.as)(t) > 1 ? ev((e) => ({ ...e, [t]: s })) : ex((e) => ({ ...e, [t]: s[0] })),
                 x.default.track(B.HAw.DISPLAY_NAME_STYLES_SURPRISE_ME));
         }, [eP, eu, ef, ev, ex]),
-        eG = a.useCallback(
+        eY = a.useCallback(
             (e) => {
                 eh
                     ? ev((t) => {
@@ -1375,7 +1387,7 @@ function tN(e) {
                                               ej,
                                               {
                                                   selectedColors: e_,
-                                                  setSelectedColors: eG,
+                                                  setSelectedColors: eY,
                                                   selectedEffectId: em,
                                                   className: tg._,
                                                   defaultColor: eg.defaultColors[0],
@@ -1401,6 +1413,7 @@ function tN(e) {
                               onClose: P,
                               canApply: ek || ei,
                               analyticsLocations: ey,
+                              entryPoint: eo,
                               isPremiumTryItOut: L,
                               banner: eL ? (0, l.jsx)(tu, { owner: J, displayNameStyles: en }) : void 0,
                           }),

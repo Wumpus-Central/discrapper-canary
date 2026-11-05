@@ -1,0 +1,109 @@
+.frame__vwHFq {
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: calc(var(--custom-modal-padding-bottom)*-1);
+    margin-top: calc(var(--custom-modal-padding-top)*-1);
+    min-height: 0;
+    overflow: hidden;
+    position: relative
+}
+
+.scroll__vwHFq {
+    min-height: 0;
+    overflow-y: auto
+}
+
+.close__vwHFq {
+    inset-inline-end: var(--space-8);
+    position: absolute;
+    top: var(--space-8)
+}
+
+.art__vwHFq {
+    align-items: center;
+    background: var(--background-surface-higher);
+    display: flex;
+    height: 280px;
+    justify-content: center
+}
+
+.artImage__vwHFq {
+    box-sizing: border-box;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    padding: var(--space-32);
+    width: 100%
+}
+
+.content__vwHFq {
+    gap: var(--space-16);
+    padding: 0 var(--space-48) var(--space-48)
+}
+
+.content__vwHFq,
+.intro__vwHFq {
+    display: flex;
+    flex-direction: column
+}
+
+.intro__vwHFq {
+    gap: var(--space-12);
+    margin-bottom: var(--space-8);
+    margin-top: var(--space-16);
+    text-align: center
+}
+
+.cards__vwHFq {
+    display: grid;
+    gap: var(--space-16);
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+}
+
+.card__vwHFq {
+    background: var(--background-mod-muted);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-16)
+}
+
+.card__vwHFq>svg {
+    margin-bottom: var(--space-12)
+}
+
+.note__vwHFq {
+    text-align: center
+}
+
+.pickerContent__vwHFq {
+    padding-inline: var(--space-32)
+}
+
+.actions__vwHFq {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    margin-top: var(--space-16);
+    max-width: 392px;
+    width: 100%
+}
+
+@media (max-width:600px) {
+    .content__vwHFq {
+        padding: var(--space-24)
+    }
+
+    .art__vwHFq {
+        height: 192px
+    }
+
+    .cards__vwHFq {
+        grid-template-columns: minmax(0, 1fr)
+    }
+}
+
+/*# sourceMappingURL=1efd986f340e7cfb.css.map*/
