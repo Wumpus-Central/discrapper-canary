@@ -1,3 +1,30 @@
+.heading_gt10gI {
+    margin-bottom: var(--space-24)
+}
+
+.card_gt10gI {
+    align-items: flex-start;
+    aspect-ratio: 530/236;
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: var(--radius-lg);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: var(--space-16);
+    padding: var(--space-24);
+    width: 460px
+}
+
+.titleArea_gt10gI {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    max-width: 200px
+}
+
 .tile_i9BE2q {
     background: var(--background-base-low);
     border-radius: var(--radius-sm);
@@ -318,4 +345,4 @@
     animation: skeletonPulse_b0Gizz 2s ease-in-out infinite alternate
 }
 
-/*# sourceMappingURL=6cca73cf6da42a22.css.map*/
+/*# sourceMappingURL=f19ef03b73940a45.css.map*/

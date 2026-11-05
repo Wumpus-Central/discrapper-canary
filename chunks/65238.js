@@ -194,6 +194,7 @@ class a extends i.A {
                                                         type: r.hE.COLLECTION_SALE,
                                                         collectionId: e.collection_id,
                                                         countdownStyle: e.countdown_style,
+                                                        showUpsellBlocks: e.show_upsell_blocks ?? !1,
                                                         navigation:
                                                             t?.tab != null
                                                                 ? { tab: { title: t.tab.title, icon: t.tab.icon } }
