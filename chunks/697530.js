@@ -2,9 +2,9 @@
 var l = t(435558),
     r = t.n(l);
 t(309613);
-let i = t(346344).newStemmer("english");
+var i = t(83956);
 function a(e) {
-    return i.stem(e);
+    return (0, i.W)(e);
 }
 let u = new Set([
     "a",
