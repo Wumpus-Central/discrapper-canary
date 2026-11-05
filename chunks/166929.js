@@ -161,7 +161,8 @@ function S(e) {
 }
 function N(e) {
     if (null == e) return "unknown";
-    for (let t of Object.keys(g)) if (e.toLowerCase().includes(t)) return g[t];
+    for (let t of ((e = e.replace(/\s+\(fallback from:.*\)$/i, "")), Object.keys(g)))
+        if (e.toLowerCase().includes(t)) return g[t];
     return "uncategorized";
 }
 function C(e) {
