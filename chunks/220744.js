@@ -1115,22 +1115,27 @@ function t_(e) {
                                 (0, i.jsx)(th, {
                                     played: m,
                                     totalCount: l.application_count,
-                                    children: (0, i.jsx)(b.E, {
-                                        variant: "body-xs/medium",
-                                        color: "text-default",
-                                        lineClamp: 1,
-                                        className: eW.p,
-                                        children: g,
+                                    children: (0, i.jsxs)("div", {
+                                        className: eW.c_,
+                                        children: [
+                                            (0, i.jsx)(b.E, {
+                                                variant: "body-xs/medium",
+                                                color: "text-default",
+                                                lineClamp: 1,
+                                                className: eW.p,
+                                                children: g,
+                                            }),
+                                            null != p &&
+                                                (0, i.jsx)(b.E, {
+                                                    variant: "body-xs/medium",
+                                                    color: "text-muted",
+                                                    lineClamp: 1,
+                                                    className: eW.p,
+                                                    children: p,
+                                                }),
+                                        ],
                                     }),
                                 }),
-                                null != p &&
-                                    (0, i.jsx)(b.E, {
-                                        variant: "body-xs/medium",
-                                        color: "text-muted",
-                                        lineClamp: 1,
-                                        className: eW.p,
-                                        children: p,
-                                    }),
                             ],
                         }),
                     ],

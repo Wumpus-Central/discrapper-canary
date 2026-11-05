@@ -10,6 +10,7 @@ i.exports = {
     vj: "rankRing_i8iX4X",
     gt: "hiddenAvatar_i8iX4X",
     WD: "labels_i8iX4X",
+    c_: "pillarMetrics_i8iX4X",
     p: "pillarMetric_i8iX4X",
     IY: "pillarName_i8iX4X",
     dR: "medalBadge_i8iX4X",
