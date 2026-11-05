@@ -129,10 +129,6 @@ n.d(
                         let { game: t } = e;
                         return _(t);
                     }),
-                    gamesByCoplayUsers: s.games_by_coplay_users.map((e) => {
-                        let { game: t } = e;
-                        return _(t);
-                    }),
                     numUsersPlayedEveryDay: s.num_users_played_every_day,
                 },
             };

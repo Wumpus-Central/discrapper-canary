@@ -6,7 +6,6 @@ let l = [
         { list: "gamesByPlayers", label: a.default.b4s18j },
         { list: "newGamesByPlayers", label: a.default.DcxpNj },
         { list: "indieGamesByPlayers", label: a.default.OAUTki },
-        { list: "gamesByCoplayUsers", label: a.default.ioC4Qg },
         { list: "gamesByStreamWatchMinutes", label: a.default.M1L00s },
     ],
     o = {
