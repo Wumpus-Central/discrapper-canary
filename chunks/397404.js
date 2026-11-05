@@ -208,6 +208,7 @@ function w(e) {
                             onChange: m,
                             value: h,
                             type: "password",
+                            revealable: !0,
                             autoComplete: "password",
                             spellCheck: "false",
                             disabled: o,

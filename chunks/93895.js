@@ -404,6 +404,7 @@ function ev(e) {
                 children: (0, l.jsx)(R.k, {
                     label: A.intl.string(A.t["CIGa+7"]),
                     type: "password",
+                    revealable: !0,
                     value: n,
                     error: o,
                     onChange: r,

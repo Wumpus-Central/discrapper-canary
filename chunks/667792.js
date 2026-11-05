@@ -1,8 +1,8 @@
 n(801541);
-var s = n(477900),
-    r = n(582128),
-    i = n(284009),
-    a = n.n(i),
+var r = n(477900),
+    s = n(582128),
+    a = n(284009),
+    i = n.n(a),
     l = n(889137),
     u = n(855986),
     o = n(189213),
@@ -13,8 +13,8 @@ var s = n(477900),
     g = n(631670),
     p = n(546727),
     x = n(576326),
-    f = n(836602),
-    b = n(287809),
+    b = n(836602),
+    f = n(287809),
     v = n(879610);
 n(652215);
 var U = n(792996),
@@ -25,50 +25,50 @@ n.d(
     {
         default: function (e) {
             var t;
-            let { transitionState: n, onClose: i } = e,
-                C = (0, u.bG)([b.default], () => {
-                    let e = b.default.getCurrentUser();
-                    return (a()(null != e, "ChangeUsernameModal: currentUser cannot be undefined"), e);
+            let { transitionState: n, onClose: a } = e,
+                C = (0, u.bG)([f.default], () => {
+                    let e = f.default.getCurrentUser();
+                    return (i()(null != e, "ChangeUsernameModal: currentUser cannot be undefined"), e);
                 }),
-                E = r.useMemo(() => v.Ay.canEditDiscriminator(C) && !C.hasUniqueUsername(), [C]),
-                [y, k] = r.useState(C.username),
-                [w, R] = r.useState(C.discriminator),
-                [S, q] = r.useState(""),
-                [A, L] = r.useState(!1),
-                T = (0, u.bG)([f.A], () => f.A.getErrors()),
+                E = s.useMemo(() => v.Ay.canEditDiscriminator(C) && !C.hasUniqueUsername(), [C]),
+                [y, k] = s.useState(C.username),
+                [w, R] = s.useState(C.discriminator),
+                [S, q] = s.useState(""),
+                [A, L] = s.useState(!1),
+                T = (0, u.bG)([b.A], () => b.A.getErrors()),
                 W = C.hasUniqueUsername(),
                 z = (0, x.i)(y, W, !1, C.username),
-                M = r.useRef(null),
-                B = r.useMemo(() => T?.username?.[0] ?? T?.discriminator?.[0], [T]);
-            r.useEffect(() => {
+                M = s.useRef(null),
+                B = s.useMemo(() => T?.username?.[0] ?? T?.discriminator?.[0], [T]);
+            s.useEffect(() => {
                 n === c.ip.ENTERED && M.current?.focus();
             }, [n]);
             let D = w !== C.discriminator;
-            return (0, s.jsx)("form", {
+            return (0, r.jsx)("form", {
                 onSubmit: async function (e) {
                     (e.preventDefault(), L(!0));
                     let t = await (0, g._L)({ username: y, discriminator: E ? w : void 0, password: S });
-                    (L(!1), t?.ok && i());
+                    (L(!1), t?.ok && a());
                 },
-                children: (0, s.jsx)(o.a, {
-                    onClose: i,
+                children: (0, r.jsx)(o.a, {
+                    onClose: a,
                     transitionState: n,
                     title: U.intl.string(U.t.m5or54),
                     subtitle: U.intl.string(U.t.SLJvy0),
                     actions: [
-                        { variant: "secondary", text: U.intl.string(U.t["ETE/oC"]), onClick: i },
+                        { variant: "secondary", text: U.intl.string(U.t["ETE/oC"]), onClick: a },
                         { variant: "primary", text: U.intl.string(U.t.i4jeWR), type: "submit", loading: A },
                     ],
-                    children: (0, s.jsxs)(d.B, {
+                    children: (0, r.jsxs)(d.B, {
                         gap: 16,
                         children: [
-                            (0, s.jsxs)("div", {
+                            (0, r.jsxs)("div", {
                                 children: [
-                                    (0, s.jsxs)(d.B, {
+                                    (0, r.jsxs)(d.B, {
                                         direction: "horizontal",
                                         gap: 4,
                                         children: [
-                                            (0, s.jsx)(m.k, {
+                                            (0, r.jsx)(m.k, {
                                                 label: U.intl.string(U.t.TWzdWj),
                                                 error: B,
                                                 name: "username",
@@ -90,7 +90,7 @@ n.d(
                                                     )),
                                             }),
                                             !C.hasUniqueUsername() &&
-                                                (0, s.jsx)(m.k, {
+                                                (0, r.jsx)(m.k, {
                                                     name: "discriminator",
                                                     "aria-label": U.intl.string(U.t.ozumaN),
                                                     maxLength: 4,
@@ -102,7 +102,7 @@ n.d(
                                         ],
                                     }),
                                     D
-                                        ? (0, s.jsx)(h.E, {
+                                        ? (0, r.jsx)(h.E, {
                                               variant: "body-xs/normal",
                                               color: "text-default",
                                               className: j.Z,
@@ -111,10 +111,11 @@ n.d(
                                         : null,
                                 ],
                             }),
-                            (0, s.jsx)(m.k, {
+                            (0, r.jsx)(m.k, {
                                 label: U.intl.string(U.t.TmdnJ3),
                                 error: T?.password?.[0],
                                 type: "password",
+                                revealable: !0,
                                 value: S,
                                 onChange: q,
                             }),

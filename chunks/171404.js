@@ -6315,6 +6315,7 @@ function sk() {
                                 }),
                                 (0, r.jsx)(f.k, {
                                     type: "password",
+                                    revealable: !0,
                                     fullWidth: !0,
                                     value: a,
                                     onChange: n,

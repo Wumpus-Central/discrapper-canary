@@ -68,10 +68,10 @@ var m = e(858899),
     y = e(181658),
     p = e(836602),
     R = e(613412),
-    O = e(499785);
-function v() {
+    v = e(499785);
+function O() {
     let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return O.A.put({
+    return v.A.put({
         url: C.Rsh.USER_EMAIL,
         trackedActionData: {
             event: R.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,
@@ -107,7 +107,7 @@ function M(t) {
                         try {
                             let { token: t } = await (async function (t) {
                                 return (
-                                    await O.A.post({
+                                    await v.A.post({
                                         url: C.Rsh.USER_EMAIL_VERIFY_CODE,
                                         body: { code: t },
                                         trackedActionData: {
@@ -143,7 +143,7 @@ function M(t) {
                             if (!d) {
                                 k(!0);
                                 try {
-                                    (await v(!0),
+                                    (await O(!0),
                                         (0, m.P0)({ text: _.intl.string(_.t["84yeoz"]), variant: "success" }));
                                 } catch (n) {
                                     let t = new y.A(n).getAnyErrorMessage();
@@ -177,7 +177,7 @@ function I(t) {
                 onClick: async function (t) {
                     (t.preventDefault(), E(!0));
                     try {
-                        (await v(), n());
+                        (await O(), n());
                     } catch (n) {
                         let t = new y.A(n).getAnyErrorMessage();
                         null != t && (0, m.P0)({ text: t, variant: "critical" });
@@ -247,6 +247,7 @@ function T(t) {
                         label: _.intl.string(_.t.TmdnJ3),
                         error: k?.password?.[0],
                         type: "password",
+                        revealable: !0,
                         value: C,
                         onChange: N,
                     }),

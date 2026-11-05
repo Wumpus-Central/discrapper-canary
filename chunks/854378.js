@@ -16,8 +16,8 @@ var r = n(503698),
     I = n(682163),
     p = n(53505),
     m = n(975571),
-    T = n(652215),
-    g = n(792996),
+    g = n(652215),
+    T = n(792996),
     S = n(498206);
 let N = s.eu;
 function C(e) {
@@ -65,7 +65,7 @@ function D(e) {
                     onSubmit: s,
                     children: l,
                     expanded: o = !1,
-                    theme: d = T.NJ8.DARK,
+                    theme: d = g.NJ8.DARK,
                     style: c,
                     transparent: u = !1,
                 } = e;
@@ -101,15 +101,15 @@ function D(e) {
                     className: t,
                     children: [
                         (0, i.jsx)(u.$, {
-                            text: g.intl.format(g.t.JoS1i3, { platform: (0, p.Vf)() }),
+                            text: T.intl.format(T.t.JoS1i3, { platform: (0, p.Vf)() }),
                             variant: "secondary",
                             fullWidth: !0,
                             onClick: () => window.open((0, p.SU)()),
                         }),
                         (0, i.jsx)(y, {
                             className: S.UM,
-                            children: g.intl.format(g.t.wO1VBk, {
-                                supportedBrowserURL: m.A.getArticleURL(T.MVz.SUPPORTED_BROWSERS),
+                            children: T.intl.format(T.t.wO1VBk, {
+                                supportedBrowserURL: m.A.getArticleURL(g.MVz.SUPPORTED_BROWSERS),
                             }),
                         }),
                     ],
@@ -127,7 +127,7 @@ function D(e) {
                               className: a()(S.Io, S.L1, l && S.Z6),
                               children: [
                                   (0, i.jsx)("i", { className: S._o }),
-                                  d({ className: o, children: g.intl.format(g.t["LC+S+m"], { membersOnline: n }) }),
+                                  d({ className: o, children: T.intl.format(T.t["LC+S+m"], { membersOnline: n }) }),
                               ],
                           })),
                       (0, i.jsxs)(h.A, {
@@ -139,7 +139,7 @@ function D(e) {
                                   className: a()(S.Io, l && S.Z6),
                                   children: [
                                       (0, i.jsx)("i", { className: S.jk }),
-                                      d({ className: o, children: g.intl.format(g.t.zRl6XR, { count: r }) }),
+                                      d({ className: o, children: T.intl.format(T.t.zRl6XR, { count: r }) }),
                                   ],
                               }),
                           ],
@@ -170,39 +170,41 @@ function D(e) {
                         className: s,
                         setRef: l,
                         type: o = "text",
-                        onChange: d,
-                        autoComplete: u,
-                        autoFocus: _,
-                        maxLength: E,
-                        spellCheck: A,
-                        name: h,
-                        description: I,
-                        required: p,
-                        onFocus: m,
+                        revealable: d,
+                        onChange: u,
+                        autoComplete: _,
+                        autoFocus: E,
+                        maxLength: A,
+                        spellCheck: h,
+                        name: I,
+                        description: p,
+                        required: m,
+                        onFocus: g,
                         onBlur: T,
                     } = e,
-                    g = (0, f.GV)(),
-                    S = (0, i.jsx)(c.k, {
-                        name: h,
+                    S = (0, f.GV)(),
+                    N = (0, i.jsx)(c.k, {
+                        name: I,
                         type: o,
+                        revealable: d,
                         value: a,
                         inputRef: l,
                         placeholder: r,
                         "aria-label": t,
-                        onChange: d,
-                        autoComplete: u,
-                        autoFocus: _,
-                        maxLength: E,
-                        spellCheck: A,
-                        id: g,
-                        onFocus: m,
+                        onChange: u,
+                        autoComplete: _,
+                        autoFocus: E,
+                        maxLength: A,
+                        spellCheck: h,
+                        id: S,
+                        onFocus: g,
                         onBlur: T,
                         label: t,
                         error: n,
-                        required: p,
-                        description: I,
+                        required: m,
+                        description: p,
                     });
-                return null != s ? (0, i.jsx)("div", { className: s, children: S }) : S;
+                return null != s ? (0, i.jsx)("div", { className: s, children: N }) : N;
             },
             tK: function (e) {
                 let { className: t, children: n } = e;
@@ -219,7 +221,7 @@ function D(e) {
                                   tag: "span",
                                   variant: "body-md/normal",
                                   color: "text-default",
-                                  children: g.intl.string(g.t["/8WWvE"]),
+                                  children: T.intl.string(T.t["/8WWvE"]),
                               }),
                               (0, i.jsx)(C, {
                                   className: S.yj,

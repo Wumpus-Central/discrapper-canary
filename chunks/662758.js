@@ -6,9 +6,9 @@ var s = a(477900),
     i = a(95477),
     d = a(792996),
     c = a(41002);
-function u(t) {
+function u(e) {
     let {
-            title: e,
+            title: t,
             actionText: a,
             children: u,
             transitionState: b,
@@ -18,9 +18,9 @@ function u(t) {
             skipErrorMsgAbortCode: m,
             onPasswordChange: x,
             variant: C = "primary",
-        } = t,
-        [f, k] = n.useState(""),
-        [v, w] = n.useState(null),
+        } = e,
+        [v, f] = n.useState(""),
+        [k, w] = n.useState(null),
         [g, j] = n.useState(!1),
         N = n.useCallback(async () => {
             await p();
@@ -34,30 +34,30 @@ function u(t) {
                   })
                 : null;
     return (0, s.jsx)("form", {
-        onSubmit: function (t) {
-            (t.preventDefault(),
+        onSubmit: function (e) {
+            (e.preventDefault(),
                 j(!0),
-                y(f)
+                y(v)
                     .then(
-                        (t) => p(t ?? void 0),
-                        (t) => {
-                            var e;
-                            null != t.body &&
-                                (h?.(t.body),
-                                (e = t.body),
-                                (null == m || e?.code !== m) &&
-                                    (t.body.password
-                                        ? (w(t.body.password), j(!1))
-                                        : t.body.message && (w(t.body.message), j(!1))));
+                        (e) => p(e ?? void 0),
+                        (e) => {
+                            var t;
+                            null != e.body &&
+                                (h?.(e.body),
+                                (t = e.body),
+                                (null == m || t?.code !== m) &&
+                                    (e.body.password
+                                        ? (w(e.body.password), j(!1))
+                                        : e.body.message && (w(e.body.message), j(!1))));
                         },
                     )
                     .finally(() => j(!1)));
         },
         children: (0, s.jsxs)(l.a, {
-            title: e,
+            title: t,
             actions: [
                 { text: d.intl.string(d.t["ETE/oC"]), onClick: N, variant: "secondary" },
-                { text: a ?? d.intl.string(d.t["cY+Oob"]), type: "submit", variant: C, disabled: g || 0 === f.length },
+                { text: a ?? d.intl.string(d.t["cY+Oob"]), type: "submit", variant: C, disabled: g || 0 === v.length },
             ],
             onClose: N,
             transitionState: b,
@@ -68,21 +68,22 @@ function u(t) {
                     children: [
                         (0, s.jsx)(i.k, {
                             type: "password",
+                            revealable: !0,
                             label: d.intl.string(d.t["CIGa+7"]),
                             autoComplete: "current-password",
                             autoFocus: !0,
-                            value: f,
-                            onChange: function (t) {
-                                (x?.(t), k(t));
+                            value: v,
+                            onChange: function (e) {
+                                (x?.(e), f(e));
                             },
                             required: !0,
                         }),
-                        null != v && "" !== v
+                        null != k && "" !== k
                             ? (0, s.jsxs)(r.E, {
                                   variant: "body-xs/normal",
                                   color: "text-feedback-critical",
                                   className: c.z3,
-                                  children: [" ", v, " "],
+                                  children: [" ", k, " "],
                               })
                             : null,
                     ],
@@ -91,4 +92,4 @@ function u(t) {
         }),
     });
 }
-((u.key = () => "password-confirm-modal"), a.d(e, {}, { default: u }));
+((u.key = () => "password-confirm-modal"), a.d(t, {}, { default: u }));

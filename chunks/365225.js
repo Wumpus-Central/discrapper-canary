@@ -19,9 +19,9 @@ var r = s(477900),
     R = s(139286),
     S = s(15552),
     P = s(854378),
-    k = s(952116),
-    y = s(397404),
-    b = s(557722),
+    b = s(952116),
+    k = s(397404),
+    y = s(557722),
     x = s(148864),
     _ = s(916226),
     T = s(976860),
@@ -178,6 +178,7 @@ class G extends n.PureComponent {
                         onChange: (e) => this.setState({ password: e }),
                         name: "password",
                         type: "password",
+                        revealable: !0,
                         setRef: this.setPasswordRef,
                         autoComplete: "current-password",
                         spellCheck: "false",
@@ -238,7 +239,7 @@ class G extends n.PureComponent {
     }
     renderMFA() {
         let e = { ticket: this.props.mfaTicket, methods: this.props.mfaMethods };
-        return (0, r.jsx)(y.t, {
+        return (0, r.jsx)(k.t, {
             mfaFinish: this.handleTokenSubmitMFA,
             mfaChallenge: e,
             onEarlyClose: () => {
@@ -278,7 +279,7 @@ class G extends n.PureComponent {
     renderPhonePasswordRecovery() {
         let { phoneVerifyError: e } = this.state;
         return (0, r.jsx)(p.c, {
-            children: (0, r.jsx)(k.A, {
+            children: (0, r.jsx)(b.A, {
                 title: U.intl.string(U.t["+xqy3d"]),
                 subtitle: U.intl.format(U.t.ef4uZ7, { onResendClick: this.handleResendCode }),
                 error: e,
@@ -320,7 +321,7 @@ class G extends n.PureComponent {
     handlePasswordReset = async (e) => {
         this.setState({ phoneVerifyError: null, errors: {} });
         try {
-            let { token: t } = await b.A.verifyPhone(this.getFullLogin(), e, !1, !0);
+            let { token: t } = await y.A.verifyPhone(this.getFullLogin(), e, !1, !0);
             this.setState({ resetPasswordPhoneToken: t });
         } catch (e) {
             null != e.body && null != e.body.message && this.setState({ phoneVerifyError: e.body.message });
@@ -331,7 +332,7 @@ class G extends n.PureComponent {
         return m.A.loginMFAv2({ code: s, ticket: r, mfaType: t, isMultiAccount: !0 });
     };
     handleResendCode = () => {
-        b.A.resendCode(this.getFullLogin());
+        y.A.resendCode(this.getFullLogin());
     };
     handleReset = (e) => {
         (e?.preventDefault(),

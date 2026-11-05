@@ -148,6 +148,7 @@ class v extends r.PureComponent {
                             onChange: (e) => this.setState({ password: e }),
                             error: d,
                             type: "password",
+                            revealable: !0,
                             autoComplete: "new-password",
                             required: !0,
                         }),

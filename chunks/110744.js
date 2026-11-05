@@ -17,10 +17,10 @@ var a = i(477900),
     g = i(315290),
     b = i(792996),
     A = i(27977);
-function N(t) {
+function v(t) {
     let { email: e, setEmail: i, claimRequired: p, onSuccess: C, onClose: f } = t,
-        [N, S] = s.useState(),
-        [v, _] = s.useState(""),
+        [v, N] = s.useState(),
+        [S, _] = s.useState(""),
         [y, k] = s.useState(""),
         [E, w] = s.useState(!1);
     return (
@@ -51,11 +51,11 @@ function N(t) {
                     children: (0, a.jsx)("form", {
                         className: A.oB,
                         onSubmit: async function (t) {
-                            (t.preventDefault(), w(!0), S(""), k(""));
+                            (t.preventDefault(), w(!0), N(""), k(""));
                             try {
-                                (await (0, h.KD)({ email: e, password: v }), w(!1), C());
+                                (await (0, h.KD)({ email: e, password: S }), w(!1), C());
                             } catch (t) {
-                                (t?.body?.email && S(t.body.email), t?.body?.password && k(t.body.password), w(!1));
+                                (t?.body?.email && N(t.body.email), t?.body?.password && k(t.body.password), w(!1));
                             }
                         },
                         children: (0, a.jsxs)(o.B, {
@@ -64,14 +64,15 @@ function N(t) {
                                 (0, a.jsx)(c.k, {
                                     label: b.intl.string(b.t.dI4d4S),
                                     value: e,
-                                    error: N,
+                                    error: v,
                                     onChange: (t) => i(t),
                                     autoFocus: !0,
                                 }),
                                 (0, a.jsx)(c.k, {
                                     label: b.intl.string(b.t["CIGa+7"]),
                                     type: "password",
-                                    value: v,
+                                    revealable: !0,
+                                    value: S,
                                     error: y,
                                     onChange: (t) => _(t),
                                 }),
@@ -81,7 +82,7 @@ function N(t) {
                                     fullWidth: !0,
                                     type: "submit",
                                     loading: E,
-                                    disabled: 0 === e.length || 0 === v.length,
+                                    disabled: 0 === e.length || 0 === S.length,
                                 }),
                                 p &&
                                     (0, a.jsx)("div", {
@@ -101,7 +102,7 @@ function N(t) {
         })
     );
 }
-function S(t) {
+function N(t) {
     let { email: e, claimRequired: i, onClose: l } = t,
         o = i ? b.t.D7trIB : b.t.JNWX7G;
     return (
@@ -170,12 +171,12 @@ i.d(
                 ? (0, a.jsx)(n.EO, {
                       transitionState: i,
                       parentComponent: "ClaimAccountModal",
-                      children: (0, a.jsx)(S, { email: r, claimRequired: l, onClose: e }),
+                      children: (0, a.jsx)(N, { email: r, claimRequired: l, onClose: e }),
                   })
                 : (0, a.jsx)(n.EO, {
                       transitionState: i,
                       parentComponent: "ClaimAccountModal",
-                      children: (0, a.jsx)(N, {
+                      children: (0, a.jsx)(v, {
                           email: r,
                           setEmail: o,
                           claimRequired: l,

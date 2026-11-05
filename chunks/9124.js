@@ -1,4 +1,4 @@
-s.d(e, { default: () => S });
+s.d(e, { default: () => R });
 var n = s(477900),
     i = s(582128),
     a = s(855986),
@@ -67,6 +67,7 @@ class f extends i.PureComponent {
                     (0, n.jsx)(p.k, {
                         label: m.intl.string(m.t["CIGa+7"]),
                         type: "password",
+                        revealable: !0,
                         value: i,
                         error: e,
                         onChange: this.handlePasswordChange,
@@ -130,8 +131,8 @@ var E = s(836602),
     y = s(774914),
     k = s(870570),
     v = s(287809),
-    R = s(446868);
-let S = function (t) {
+    b = s(446868);
+let R = function (t) {
     let { transitionState: e, onClose: s } = t,
         { formState: h, errors: d } = (0, a.cf)([E.A], () => ({
             formState: E.A.getFormState(),
@@ -139,9 +140,9 @@ let S = function (t) {
         })),
         g = (0, a.bG)([v.default], () => v.default.getCurrentUser()),
         p = (0, a.bG)([k.A], () => k.A.getAction()),
-        c = !R.A.isEmailReverification(p),
-        [C, S] = i.useState(!0),
-        b = h === u.XlH.SUBMITTING;
+        c = !b.A.isEmailReverification(p),
+        [C, R] = i.useState(!0),
+        S = h === u.XlH.SUBMITTING;
     function x(t) {
         return d?.[t]?.[0] ?? "";
     }
@@ -152,11 +153,11 @@ let S = function (t) {
         email: g?.email,
         emailError: A,
         passwordError: P,
-        submitting: b,
-        canResend: C && !b && g?.email != null && 0 === A.length && 0 === P.length,
+        submitting: S,
+        canResend: C && !S && g?.email != null && 0 === A.length && 0 === P.length,
         canChange: c,
         onChangeEmailClick: function () {
-            S(!1);
+            R(!1);
         },
         onVerify: function (t, e) {
             ((0, o._L)({ email: t, password: e }).then((t) => {
@@ -167,7 +168,7 @@ let S = function (t) {
                           0 === A.length &&
                           (0, r.P0)({ text: m.intl.string(m.t.R0RpRX), variant: "critical" }));
             }),
-                S(!0));
+                R(!0));
         },
         onResend: function () {
             l.A.verifyResend();
