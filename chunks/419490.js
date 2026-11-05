@@ -52,9 +52,9 @@ let I = "default",
     G = {
         clipsSettings: w,
         hardwareClassification: null,
-        hardwareClassificationForDecoupled: null,
         hardwareClassificationVersion: 0,
         clipsDefaultSettingsState: _,
+        hasAutoEnabledClipsForHardware: !1,
         newClipIds: [],
         hasClips: !1,
         hasTakenDecoupledClip: !1,
@@ -115,7 +115,7 @@ class V extends r.Ay.DeviceSettingsStore {
         }),
         (e) => ({ ...e, hasClips: e.hasClips ?? !1 }),
         (e) => ({ ...e, clipsSettings: { ...e.clipsSettings, decoupledClipsEnabled: w.decoupledClipsEnabled } }),
-        (e) => ({ ...e, hardwareClassificationForDecoupled: e.hardwareClassificationForDecoupled ?? null }),
+        (e) => e,
         (e) => e,
         (e) => ({ ...e, newClipIds: e.newClipIds ?? [], newClipIDs: void 0 }),
         (e) => ({
@@ -193,6 +193,15 @@ class V extends r.Ay.DeviceSettingsStore {
                       },
                   },
         (e) => ({ ...e, clipsDefaultSettingsState: e.clipsDefaultSettingsState ?? _ }),
+        (e) => {
+            let { hardwareClassification: t } = e;
+            return {
+                ...e,
+                hasAutoEnabledClipsForHardware:
+                    t === u.k9.MEETS_AUTO_ENABLE ||
+                    (t === u.k9.MEETS_MINIMUM && (e.hasClips || e.hasTakenDecoupledClip)),
+            };
+        },
     ];
     initialize(e) {
         (null != e && (G = e),
@@ -257,9 +266,6 @@ class V extends r.Ay.DeviceSettingsStore {
     }
     getHardwareClassification() {
         return G.hardwareClassification;
-    }
-    getHardwareClassificationForDecoupled() {
-        return G.hardwareClassificationForDecoupled;
     }
     getHardwareClassificationVersion() {
         return G.hardwareClassificationVersion;
@@ -397,10 +403,16 @@ let H = new V(a.h, {
         CLIPS_APPLY_DEFAULT_SETTINGS: function (e) {
             let { classification: t, decision: n } = e,
                 i = G.hardwareClassification;
+            ((G.hardwareClassificationVersion = 3), (G.hardwareClassification = t));
+            let r =
+                    G.clipsDefaultSettingsState.clipsEnabledSource === u.$D.UNSET &&
+                    t === u.k9.MEETS_AUTO_ENABLE &&
+                    !G.hasAutoEnabledClipsForHardware,
+                a = r && !G.clipsSettings.clipsEnabled;
             if (
-                ((G.hardwareClassificationVersion = 2),
-                (G.hardwareClassification = t),
-                (G.hardwareClassificationForDecoupled = t),
+                (r &&
+                    ((G.clipsSettings = { ...G.clipsSettings, clipsEnabled: !0 }),
+                    (G.hasAutoEnabledClipsForHardware = !0)),
                 null != n)
             ) {
                 let { clipsEnabled: e, defaultState: t } = (function (e) {
@@ -428,15 +440,10 @@ let H = new V(a.h, {
                     defaultState: G.clipsDefaultSettingsState,
                     clipsEnabled: G.clipsSettings.clipsEnabled,
                     decision: n,
-                    previousHardwareClassification: i,
+                    previousHardwareClassification: a ? u.k9.MEETS_AUTO_ENABLE : i,
                 });
                 G = { ...G, clipsSettings: { ...G.clipsSettings, clipsEnabled: e }, clipsDefaultSettingsState: t };
-                return;
             }
-            G.clipsDefaultSettingsState.clipsEnabledSource === u.$D.UNSET &&
-                t === u.k9.MEETS_AUTO_ENABLE &&
-                i !== u.k9.MEETS_AUTO_ENABLE &&
-                (G.clipsSettings.clipsEnabled = !0);
         },
         CLIPS_INIT: function () {
             L = null;
