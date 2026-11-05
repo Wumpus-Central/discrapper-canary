@@ -4,19 +4,19 @@ var i = n(412703),
     s = n(933958),
     l = n(91242),
     o = n(973522),
-    d = n(986322),
+    d = n(397369),
     c = n(652896),
     u = n(227309),
     _ = n(977556),
     E = n(616356),
     A = n(760751),
-    h = n(607567),
-    f = n(927813),
+    f = n(607567),
+    h = n(927813),
     I = n(403362),
     p = n(7891),
     m = n(859703),
-    g = n(506988),
-    T = n(759366),
+    T = n(506988),
+    g = n(759366),
     S = n(590202),
     N = n(851936),
     C = n(977416),
@@ -25,21 +25,21 @@ var i = n(412703),
     L = n(814793),
     y = n(221596),
     D = n(165610);
-let b = +f.A.Millis.MINUTE,
-    v = +f.A.Millis.SECOND,
+let b = +h.A.Millis.MINUTE,
+    v = +h.A.Millis.SECOND,
     P = (0, N.L)({ location: y.rE.QUESTS_MANAGER });
 function M(e) {
     return !(0, C.Ic)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
 }
 function U(e) {
-    let t = T.A.getState().autoEnroll,
+    let t = g.A.getState().autoEnroll,
         n = m.A.quests;
     for (let i of (0, O.jm)(n, e))
         if (t && 1)
             return (0, p.Oy)(i.id, {
-                questContent: g.uF.RUNNING_ACTIVITY,
+                questContent: T.uF.RUNNING_ACTIVITY,
                 questContentCTA: S.Cy.START_QUEST,
-                sourceQuestContent: g.uF.RUNNING_ACTIVITY,
+                sourceQuestContent: T.uF.RUNNING_ACTIVITY,
             });
 }
 function w(e) {
@@ -55,7 +55,7 @@ class G extends a.A {
         let t = m.A.quests.get(e);
         if (null == t || null == t.config || null == t.userStatus) return b;
         let { progressSeconds: n, targetSeconds: r } = (0, R.Yh)(t, i.o.DESKTOP),
-            a = Math.max(0, (r - n) * f.A.Millis.SECOND);
+            a = Math.max(0, (r - n) * h.A.Millis.SECOND);
         return a <= b ? a + v : b;
     };
     initiateHeartbeat = (e, t, n) => {
@@ -203,7 +203,7 @@ class G extends a.A {
     getActivelyProgressingStreamOnDesktopQuests() {
         let e = new Map(),
             t = E.A.getCurrentUserActiveStream();
-        if (null == t || 2 > h.Ay.countVoiceStatesForChannel(t.channelId)) return e;
+        if (null == t || 2 > f.Ay.countVoiceStatesForChannel(t.channelId)) return e;
         let n = E.A.getStreamerActiveStreamMetadata();
         if (null == n) return e;
         P.log("~ getActivelyProgressingStreamOnDesktopQuestIds -> Active stream metadata: ", n);

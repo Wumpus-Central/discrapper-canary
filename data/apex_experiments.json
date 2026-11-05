@@ -5989,6 +5989,22 @@
     }
   },
   {
+    "name": "2026-11-mac-steam-sku-detection",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-11-nitro-upload-badge",
     "kind": "user",
     "defaultConfig": {

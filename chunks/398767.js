@@ -11,8 +11,8 @@ var i = n(115560),
     _ = n(977556),
     E = n(495867),
     A = n(531685),
-    h = n(129230),
-    f = n(927813),
+    f = n(129230),
+    h = n(927813),
     I = n(973522),
     p = n(253400);
 let m = new (class {
@@ -43,8 +43,8 @@ let m = new (class {
             : Promise.resolve(null);
     }
 })();
-var g = n(986322),
-    T = n(687658),
+var T = n(397369),
+    g = n(687658),
     S = n(384077),
     N = n(321034);
 let C = new l.A("RunningGameSystemMetricsMonitor"),
@@ -61,9 +61,9 @@ function R(e) {
     };
 }
 let L = new (class {
-    cpuHistogram = new T.d();
-    memoryHistogram = new T.d();
-    discordMemoryHistogram = new T.d();
+    cpuHistogram = new g.d();
+    memoryHistogram = new g.d();
+    discordMemoryHistogram = new g.d();
     lastCpuSnapshot = null;
     samplingInterval = null;
     enable() {
@@ -113,9 +113,9 @@ let L = new (class {
         );
     }
     resetHistograms() {
-        ((this.cpuHistogram = new T.d()),
-            (this.memoryHistogram = new T.d()),
-            (this.discordMemoryHistogram = new T.d()));
+        ((this.cpuHistogram = new g.d()),
+            (this.memoryHistogram = new g.d()),
+            (this.discordMemoryHistogram = new g.d()));
     }
     async takeSample() {
         (this.sampleDiscordMemory(), await this.sampleCpuAndMemory());
@@ -158,7 +158,7 @@ let L = new (class {
 var y = n(863160),
     D = n(652215);
 let b = new l.A("RunningGameHeartbeatManager"),
-    v = 5 * f.A.Millis.MINUTE;
+    v = 5 * h.A.Millis.MINUTE;
 function P() {
     let e = A.A.isFocused(),
         t = A.A.isVisible();
@@ -258,15 +258,15 @@ class M extends s.A {
             l = performance.now(),
             _ = t ? 0 : Math.round(l - e.lastHeartbeatTime);
         e.lastHeartbeatTime = l;
-        let { gameId: A, gameName: f } = (0, I.wH)(s),
+        let { gameId: A, gameName: h } = (0, I.wH)(s),
             p = {
                 game_id: A,
-                game_name: f,
+                game_name: h,
                 game_distributor: s.distributor,
                 game_distributor_game_id: s.sku,
                 game_metadata: (0, I.EQ)(s, null != s.processGame, (0, I.wH)((0, y.Un)(s)).gameId),
                 game_executable: (0, I.Ic)(s.exePath),
-                game_detection_enabled: (0, g.Xr)(s),
+                game_detection_enabled: (0, T.Xr)(s),
                 initial_heartbeat: t,
                 final_heartbeat: n,
                 game_session_id: e.sessionId,
@@ -274,7 +274,7 @@ class M extends s.A {
                 rtc_connection_id: E.A.getRTCConnectionId(),
                 media_session_id: E.A.getMediaSessionId(),
             },
-            T = (function (e) {
+            g = (function (e) {
                 if (!o.O) return null;
                 let t = c.default.getTrackedGameByPid(e);
                 return {
@@ -287,28 +287,28 @@ class M extends s.A {
         return m
             .getSnapshot(s.pid)
             .then((e) => {
-                h.default.track(D.HAw.RUNNING_GAME_HEARTBEAT, {
+                f.default.track(D.HAw.RUNNING_GAME_HEARTBEAT, {
                     ...p,
                     ...S,
                     ...(a ?? {}),
                     ...(e ?? {}),
                     ...(i ?? {}),
-                    ...(T ?? {}),
+                    ...(g ?? {}),
                 });
             })
             .catch((e) => {
                 (t || e instanceof r.Fh || b.warn(`Failed to get performance snapshot for game ${s.id}`, e.message),
-                    h.default.track(D.HAw.RUNNING_GAME_HEARTBEAT, {
+                    f.default.track(D.HAw.RUNNING_GAME_HEARTBEAT, {
                         ...p,
                         ...S,
                         ...(a ?? {}),
                         ...(i ?? {}),
-                        ...(T ?? {}),
+                        ...(g ?? {}),
                     }));
             });
     }
     processSessionChanges() {
-        let e = g.Ay.getRunningGames(),
+        let e = T.Ay.getRunningGames(),
             t = performance.now(),
             n = new Set(),
             r = this.windowTrackingEnabled ? this.peekWindowStateDurations() : null;

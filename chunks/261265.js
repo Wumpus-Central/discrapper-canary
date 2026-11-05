@@ -1,7 +1,7 @@
 var i = n(439372),
     r = n(826673),
     a = n(68656),
-    s = n(986322),
+    s = n(397369),
     l = n(11044),
     o = n(153488),
     d = n(832163),
@@ -10,7 +10,7 @@ var i = n(439372),
     _ = n(437614),
     E = n(13981),
     A = n(652215);
-class h extends i.A {
+class f extends i.A {
     actions = {
         LOGOUT: () => (0, E.ik)({ type: "logout" }),
         RUNNING_GAMES_CHANGE: (e) => this.handleRunningGamesChange(e),
@@ -40,5 +40,5 @@ class h extends i.A {
             }
     };
 }
-let f = new h();
-n.d(t, {}, { A: f });
+let h = new f();
+n.d(t, {}, { A: h });

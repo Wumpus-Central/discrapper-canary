@@ -1,6 +1,6 @@
 n.d(t, { A: () => m });
 var i = n(439372),
-    r = n(986322),
+    r = n(397369),
     a = n(287809),
     s = n(977997),
     l = n(572164),
@@ -11,8 +11,8 @@ var i = n(439372),
     _ = n(696016),
     E = n(171251),
     A = n(826685),
-    h = n(876474),
-    f = n(190443);
+    f = n(876474),
+    h = n(190443);
 function I(e, t) {
     return !!c.Ay.getEnableAutoclipping() && d.A.hasCapability(t ?? r.Ay.getVisibleGame()?.id, e);
 }
@@ -51,8 +51,8 @@ class p extends i.A {
                 {
                     type: "application",
                     name: "league-of-legends",
-                    applicationId: h.m,
-                    isEnabled: () => I(_.pZ.GAME_EVENTS, h.m),
+                    applicationId: f.m,
+                    isEnabled: () => I(_.pZ.GAME_EVENTS, f.m),
                     importHandler: () => n.e(95052).then(n.bind(n, 743047)),
                 },
                 {
@@ -72,8 +72,8 @@ class p extends i.A {
                 {
                     type: "application",
                     name: "rocket-league",
-                    applicationId: f.e,
-                    isEnabled: () => I(_.pZ.GAME_EVENTS, f.e),
+                    applicationId: h.e,
+                    isEnabled: () => I(_.pZ.GAME_EVENTS, h.e),
                     importHandler: () => n.e(760821).then(n.bind(n, 999828)),
                 },
             ]))

@@ -7,13 +7,13 @@ var r = n(284009),
     o = n(855986),
     d = n(205693),
     c = n(73153),
-    u = n(986322);
+    u = n(397369);
 n(321073);
 var _ = n(499979),
     E = n(451988),
     A = n(420410),
-    h = n(507821);
-class f {
+    f = n(507821);
+class h {
     _report;
     _pids;
     constructor() {
@@ -79,8 +79,8 @@ class f {
 var I = n(419490),
     p = n(572164),
     m = n(680725),
-    g = n(973522),
-    T = n(967347),
+    T = n(973522),
+    g = n(967347),
     S = n(929921),
     N = n(46653),
     C = n(734057),
@@ -249,7 +249,7 @@ class j extends A.A {
     videoStreamStats;
     streamContext;
     streamKey;
-    soundshareStats = new f();
+    soundshareStats = new h();
     updateVideoStreamId;
     _firstFrameDelivered = !1;
     screenshareFinishedCount = 0;
@@ -378,29 +378,29 @@ class j extends A.A {
     }
     initializeEvents() {
         let e = !1;
-        (this.on(h.q.State, (e, t, n) => {
+        (this.on(f.q.State, (e, t, n) => {
             (c.h.dispatch({ type: "RTC_CONNECTION_STATE", state: e, ...t, ...n, streamKey: this.streamKey }),
                 e === M.S7L.RTC_CONNECTED &&
                     (this._connection?.on(
                         d.yq.ScreenshareFinish,
-                        (e, t, n, i, r, a, s, l, o, d, c, u, _, E, A, h, f, I, p, m, S, N, C, O, R, L) => {
+                        (e, t, n, i, r, a, s, l, o, d, c, u, _, E, A, f, h, I, p, m, S, N, C, O, R, L) => {
                             let y = this.analyticsContext.getStreamApplicationFromHistory(
                                 this.screenshareFinishedCount,
                             );
                             this.screenshareFinishedCount++;
-                            let { gameName: D, gameId: P, exe: U, distributor: w } = (0, g.wH)(y),
+                            let { gameName: D, gameId: P, exe: U, distributor: w } = (0, T.wH)(y),
                                 G = this.getMediaSessionId(),
                                 x = this.getRTCConnectionId(),
                                 k = (d ?? 0) + (c ?? 0) + (u ?? 0) + (_ ?? 0) + (E ?? 0);
-                            (0, T.w)().then((g) => {
-                                let T =
-                                        null != g
+                            (0, g.w)().then((T) => {
+                                let g =
+                                        null != T
                                             ? {
-                                                  cpu_brand: g.cpu_brand,
-                                                  cpu_vendor: g.cpu_vendor,
-                                                  cpu_memory: g.cpu_memory,
-                                                  gpu_brand: g.gpu_brand,
-                                                  gpu_memory: g.gpu_memory,
+                                                  cpu_brand: T.cpu_brand,
+                                                  cpu_vendor: T.cpu_vendor,
+                                                  cpu_memory: T.cpu_memory,
+                                                  gpu_brand: T.gpu_brand,
+                                                  gpu_memory: T.gpu_memory,
                                               }
                                             : null,
                                     y =
@@ -410,7 +410,7 @@ class j extends A.A {
                                         (i ?? 0) +
                                         (r ?? 0) +
                                         (a ?? 0) +
-                                        (h ?? 0) +
+                                        (f ?? 0) +
                                         (m ?? 0) +
                                         (p ?? 0) +
                                         (R ?? 0) +
@@ -431,12 +431,12 @@ class j extends A.A {
                                     hybrid_gdi_bitblt_frames_unique: _,
                                     hybrid_gdi_printwindow_frames_unique: E,
                                     skip_history_json: A,
-                                    quartz_frames: h,
+                                    quartz_frames: f,
                                     screencapturekit_frames: m,
                                     go_live_camera_frames: p,
                                     total_frames: y,
                                     total_frames_unique: k,
-                                    desktop_capturer_type: f,
+                                    desktop_capturer_type: h,
                                     media_session_id: G,
                                     rtc_connection_id: x,
                                     context: B.x.STREAM,
@@ -456,7 +456,7 @@ class j extends A.A {
                                     pipewire_frames: O,
                                     x11_frames: R,
                                     videohook_backend: L,
-                                    ...T,
+                                    ...g,
                                 });
                             });
                         },
@@ -599,7 +599,7 @@ class j extends A.A {
                         this.errorTimer.stop();
                     })));
         }),
-            this.on(h.q.Video, (t, n, i, r, a) => {
+            this.on(f.q.Video, (t, n, i, r, a) => {
                 let s = (0, G.Iy)(this.streamKey);
                 s.guildId === t &&
                     s.channelId === n &&
@@ -607,7 +607,7 @@ class j extends A.A {
                     (null == this.getMediaSessionId() || e || (this.trackVideoStartStats(), (e = !0)),
                     this.updateVideoStreamId(r, a));
             }),
-            this.on(h.q.VideoSourceQualityChanged, (e, t, n, i, r, a) => {
+            this.on(f.q.VideoSourceQualityChanged, (e, t, n, i, r, a) => {
                 let s = n === N.default.getId();
                 c.h.dispatch({
                     type: "MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED",
@@ -619,10 +619,10 @@ class j extends A.A {
                     context: a,
                 });
             }),
-            this.on(h.q.SecureFramesUpdate, () => {
+            this.on(f.q.SecureFramesUpdate, () => {
                 c.h.dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
             }),
-            this.on(h.q.RosterMapUpdate, (e) => {
+            this.on(f.q.RosterMapUpdate, (e) => {
                 c.h.dispatch({ type: "RTC_CONNECTION_ROSTER_MAP_UPDATE", userIds: e });
             }));
     }
@@ -644,7 +644,7 @@ class j extends A.A {
         let { streamRegion: e, streamApplication: t, streamSourceType: n, actionContext: i } = this.analyticsContext,
             { ownerId: r, guildId: a } = this.streamContext,
             s = D.A.getRegion(y.A.getHostname()),
-            { gameName: l, gameId: o, exe: d, distributor: c, sku: u, gameMetadata: _ } = (0, g.wH)(t);
+            { gameName: l, gameId: o, exe: d, distributor: c, sku: u, gameMetadata: _ } = (0, T.wH)(t);
         return {
             channel_id: this.channelId,
             rtc_connection_id: this.getRTCConnectionId(),
@@ -777,8 +777,8 @@ var W = n(834757),
     X = n(55010);
 let z = {},
     q = {},
-    Z = {},
     Q = {},
+    Z = {},
     J = {},
     ee = {},
     et = M.SO9.THEATRE,
@@ -839,7 +839,7 @@ class ea extends o.Ay.Store {
         return null != t ? t.getMaxViewers() : null;
     }
     getStreamSourceId(e) {
-        return Q[e];
+        return Z[e];
     }
     getLastNonZeroRemoteVideoSinkWantsTime(e) {
         return ee[e];
@@ -920,8 +920,8 @@ let es = new ea(
                           (t.setActionContext(r), t.setNativePickerStyleUsed(d), n && t.trackStart());
                       }),
                       null == a && (a = o),
-                      (Q[E] = s),
-                      (Z[E] = a),
+                      (Z[E] = s),
+                      (Q[E] = a),
                       null != a)
                   ) {
                       let e = u.Ay.getGameForPID(a);
@@ -945,8 +945,8 @@ let es = new ea(
                           let { analyticsContext: n, isOwner: i } = e;
                           (n.setActionContext(t), i && n.trackEnd());
                       }),
-                      (Q[n] = null),
                       (Z[n] = null),
+                      (Q[n] = null),
                       delete J[n]);
               },
               STREAM_CREATE: function (e) {
@@ -954,7 +954,7 @@ let es = new ea(
                       o = en[t],
                       d = (0, G.Iy)(t);
                   if (null == o && null != n) {
-                      (null == Z[t] && (q[t] = null), null == q[t] && null == Q[t] && (q[t] = (0, W.Ee)(d, $.A)));
+                      (null == Q[t] && (q[t] = null), null == q[t] && null == Z[t] && (q[t] = (0, W.Ee)(d, $.A)));
                       let e = new H({
                           streamRegion: s,
                           streamApplication: q[t],
@@ -970,7 +970,7 @@ let es = new ea(
                                   else return "screen";
                               else if (platform?.name === "Safari") return "window";
                               return "unknown";
-                          })(Q[t]),
+                          })(Z[t]),
                           actionContext: z[t]?.appContext,
                           numViewers: null != l ? l.length : 0,
                           goLiveModalDurationMs: J[t],

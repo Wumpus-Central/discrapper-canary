@@ -10,13 +10,13 @@ var i = n(435558),
     _ = n(760751),
     E = n(189081),
     A = n(927813),
-    h = n(403362),
-    f = n(723702),
+    f = n(403362),
+    h = n(723702),
     I = n(953384),
-    p = n(986322),
+    p = n(397369),
     m = n(765741),
-    g = n(863160);
-class T extends o.A {
+    T = n(863160);
+class g extends o.A {
     intervalId;
     nonGameIntervalId;
     canonicalGameIdByPid = {};
@@ -47,9 +47,9 @@ class T extends o.A {
     }
     fetchRunningGameRecords(e) {
         let t = e.games
-            .flatMap((e) => (null != e.processGame ? [e, (0, g.Un)(e)] : [e]))
+            .flatMap((e) => (null != e.processGame ? [e, (0, T.Un)(e)] : [e]))
             .map((e) => e.id ?? _.A.findGame(e)?.id)
-            .filter(h.Vq);
+            .filter(f.Vq);
         0 !== t.length && u.I.fetchMany(...t.map((e) => [e]));
     }
     prefetchSdkApplications() {
@@ -63,7 +63,7 @@ class T extends o.A {
         d.YY.fetchMany(...t);
     }
     handlePostConnectionOpen() {
-        ((0, f.xl)() && !E.A.fetched && (0, l.Yq)(),
+        ((0, h.xl)() && !E.A.fetched && (0, l.Yq)(),
             s.A.getDetectableGames(),
             s.A.getDetectableBlocklist(),
             (this.intervalId = setInterval(
@@ -85,5 +85,5 @@ class T extends o.A {
                 (clearInterval(this.nonGameIntervalId), (this.nonGameIntervalId = void 0)));
     }
 }
-let S = new T();
+let S = new g();
 n.d(t, {}, { A: S });

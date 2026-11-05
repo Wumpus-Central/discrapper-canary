@@ -9,7 +9,7 @@ let i;
     Dv: () => q,
     ND: () => J,
     Ni: () => ee,
-    un: () => Z,
+    un: () => Q,
     VE: () => z,
 }),
     n(321073));
@@ -24,22 +24,22 @@ var r = n(164636),
     _ = n(173660),
     E = n(435558),
     A = n(620632),
-    h = n(793574),
-    f = n(121681),
+    f = n(793574),
+    h = n(121681),
     I = n(807348),
-    p = n(986322),
+    p = n(397369),
     m = n(734057),
-    g = n(495867),
-    T = n(309010),
+    T = n(495867),
+    g = n(309010),
     S = n(129230);
 n(980504);
 var N = n(652215),
     C = n(682901);
 function O(e, t, n, i, r) {
-    let a = m.A.getChannel(T.Ay.getVoiceChannelId()),
+    let a = m.A.getChannel(g.Ay.getVoiceChannelId()),
         s = a?.getGuildId(),
-        l = g.A.getMediaSessionId(),
-        o = g.A.getRTCConnectionId(),
+        l = T.A.getMediaSessionId(),
+        o = T.A.getRTCConnectionId(),
         d = p.Ay.getCurrentGameForAnalytics()?.name,
         c = s !== n.guildId && "0" !== n.guildId,
         u = "0" === n.guildId ? "default" : c ? "custom-external" : "custom",
@@ -82,7 +82,7 @@ var b = n(716365);
 function v(e) {
     let t = new AbortController(),
         n = (0, E.throttle)((n) => {
-            T.Ay.getVoiceChannelId() !== e && t.abort();
+            g.Ay.getVoiceChannelId() !== e && t.abort();
         }, 1e3);
     return { abortController: t, onRequestProgress: n };
 }
@@ -120,7 +120,7 @@ function Y(e) {
 function K(e, t, n, i) {
     ((0, x.qP)(t, e),
         (function (e, t, n, i, r) {
-            let a = null != t.emojiId ? f.Ay.getCustomEmojiById(t.emojiId) : null,
+            let a = null != t.emojiId ? h.Ay.getCustomEmojiById(t.emojiId) : null,
                 { abortController: s, onRequestProgress: l } = v(e),
                 o = { sound_id: t.soundId, emoji_id: t.emojiId, emoji_name: t.emojiName ?? a?.name };
             ("0" !== t.guildId && (o.source_guild_id = t.guildId),
@@ -181,7 +181,7 @@ async function X(e) {
                 }).then(N.FXj, () => {
                     if (i.signal.aborted) return;
                 }),
-                    O([h.A.CHANNEL_CALL], n, t, I.ib.ENTRY));
+                    O([f.A.CHANNEL_CALL], n, t, I.ib.ENTRY));
             })(s, a, __OVERLAY__));
     }
 }
@@ -199,12 +199,12 @@ function q(e, t) {
     (0, c.TG)(
         e,
         (n) => {
-            ((n.joinSound = void 0), Q({ guildId: e, changeType: I.Vr.REMOVED, soundType: I.ib.ENTRY, location: t }));
+            ((n.joinSound = void 0), Z({ guildId: e, changeType: I.Vr.REMOVED, soundType: I.ib.ENTRY, location: t }));
         },
         c.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function Z(e, t, n) {
+function Q(e, t, n) {
     (0, c.TG)(
         e,
         (i) => {
@@ -212,12 +212,12 @@ function Z(e, t, n) {
                 a = r ? I.FH.DEFAULT : I.FH.CUSTOM,
                 s = null != i.joinSound ? I.Vr.UPDATED : I.Vr.ADDED;
             ((i.joinSound = { soundId: t.soundId, guildId: r ? "0" : t.guildId }),
-                Q({ guildId: e, changeType: s, soundSource: a, soundType: I.ib.ENTRY, location: n }));
+                Z({ guildId: e, changeType: s, soundSource: a, soundType: I.ib.ENTRY, location: n }));
         },
         c.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function Q(e) {
+function Z(e) {
     let { guildId: t, changeType: n, soundType: i, soundSource: r, location: a } = e;
     S.default.track(N.HAw.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, {
         location_stack: a,

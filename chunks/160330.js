@@ -2,7 +2,7 @@ var i = n(115560),
     r = n(350835),
     a = n(77729),
     s = n(47167),
-    l = n(986322),
+    l = n(397369),
     o = n(985253),
     d = n(616356),
     c = n(46653),
@@ -10,8 +10,8 @@ var i = n(115560),
     _ = n(495867),
     E = n(994500),
     A = n(894768),
-    h = n(287809),
-    f = n(696016),
+    f = n(287809),
+    h = n(696016),
     I = n(792996);
 n.d(
     t,
@@ -19,13 +19,13 @@ n.d(
     {
         A: function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "manual",
-                t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.nQ.CLIP,
+                t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h.nQ.CLIP,
                 n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
                 p = arguments.length > 3 ? arguments[3] : void 0,
                 m = arguments.length > 4 ? arguments[4] : void 0,
                 {
-                    sourceName: g,
-                    sourceApplicationId: T,
+                    sourceName: T,
+                    sourceApplicationId: g,
                     activity: S,
                     isVoiceOnly: N,
                 } = (function () {
@@ -42,11 +42,11 @@ n.d(
                         })(),
                         a = e?.id ?? i?.id,
                         c = e?.sourceName ?? i?.name,
-                        f = _.A.getChannelId(),
-                        I = null == c && null != f;
+                        h = _.A.getChannelId(),
+                        I = null == c && null != h;
                     if (I) {
-                        let e = null != f ? u.A.getChannel(f) : null;
-                        c = null != e ? (0, s.m1)(e, h.default, E.A) : "";
+                        let e = null != h ? u.A.getChannel(h) : null;
+                        c = null != e ? (0, s.m1)(e, f.default, E.A) : "";
                     }
                     let p = (0, o.A)(a),
                         m = A.A.getUnfilteredActivities(!0).filter(function (e) {
@@ -78,7 +78,7 @@ n.d(
                 let { signal: t } = e;
                 "userId" in t && null != t.userId && R.add(t.userId);
             });
-            let L = N && t === f.nQ.CLIP ? f.nQ.VOICE_CLIP : t,
+            let L = N && t === h.nQ.CLIP ? h.nQ.VOICE_CLIP : t,
                 y = Date.now(),
                 D = a.A.ntpClock?.getSyncInfo(),
                 b = D?.synced === !0 ? y + D.offsetMs : void 0;
@@ -87,8 +87,8 @@ n.d(
                 createdAt: y,
                 syncTimestamp: b,
                 version: 6,
-                applicationName: g ?? I.intl.string(I.t.qtSJxb),
-                applicationId: T,
+                applicationName: T ?? I.intl.string(I.t.qtSJxb),
+                applicationId: g,
                 activity: S,
                 users: Array.from(R),
                 clipMethod: e,
@@ -97,7 +97,7 @@ n.d(
                 timeline: n,
                 decision: p,
                 gameSessionId: m,
-                remoteClipId: p?.signal?.type === f.Gy.DISTRIBUTED ? p.signal.remoteTriggerClipId : void 0,
+                remoteClipId: p?.signal?.type === h.Gy.DISTRIBUTED ? p.signal.remoteTriggerClipId : void 0,
                 length: 0,
                 thumbnail: "",
                 type: L,

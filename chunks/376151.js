@@ -2,7 +2,7 @@ var i = n(350835),
     r = n(451988),
     a = n(439372),
     s = n(855511),
-    l = n(986322),
+    l = n(397369),
     o = n(977556),
     d = n(754712),
     c = n(495867),
@@ -10,8 +10,8 @@ var i = n(350835),
     _ = n(485296),
     E = n(607567),
     A = n(927813),
-    h = n(149468),
-    f = n(652215);
+    f = n(149468),
+    h = n(652215);
 let I = +A.A.Millis.MINUTE;
 class p extends a.A {
     _currentUserSpeaking = !1;
@@ -52,7 +52,7 @@ class p extends a.A {
         if (this._currentUserSpeaking) {
             let e = c.A.getChannelId(),
                 t = c.A.getGuildId();
-            (0, h.zV)(f.HAw.START_SPEAKING, {
+            (0, f.zV)(h.HAw.START_SPEAKING, {
                 mode: d.Ay.getMode(),
                 priority: _.A.isCurrentUserPrioritySpeaking(),
                 channel: e,
@@ -71,7 +71,7 @@ class p extends a.A {
         if (d.Ay.isDeaf() || !this._anyoneElseSpeaking) return;
         let e = c.A.getChannelId(),
             t = c.A.getGuildId();
-        (0, h.zV)(f.HAw.START_LISTENING, {
+        (0, f.zV)(h.HAw.START_LISTENING, {
             mute: d.Ay.isMute(),
             anyone_priority: _.A.isAnyonePrioritySpeaking(),
             channel: e,

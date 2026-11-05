@@ -1,4 +1,4 @@
-n.d(t, { A: () => Z });
+n.d(t, { A: () => Q });
 var i = n(115560),
     r = n(499979),
     a = n(73153),
@@ -7,17 +7,17 @@ var i = n(115560),
     o = n(77729),
     d = n(626584),
     c = n(973522),
-    u = n(986322),
+    u = n(397369),
     _ = n(41984),
     E = n(861862),
     A = n(592598),
-    h = n(157257),
-    f = n(228342),
+    f = n(157257),
+    h = n(228342),
     I = n(373954),
     p = n(129230),
     m = n(253400),
-    g = n(9302),
-    T = n(365971),
+    T = n(9302),
+    g = n(365971),
     S = n(427603),
     N = n(506774);
 class C {
@@ -411,7 +411,7 @@ class P {
     async getAnalytics() {
         let e = this.overlayMethod ?? _.Ue.Disabled,
             t = {
-                setting_is_enabled: f.default.enabled,
+                setting_is_enabled: h.default.enabled,
                 setting_method: this.getSettingMethod(),
                 setting_display_user: I.default.getDisplayUserMode(),
                 setting_display_name: I.default.getDisplayNameMode(),
@@ -511,7 +511,7 @@ class P {
     }
 }
 function M() {
-    let e = f.default.getFocusedPID();
+    let e = h.default.getFocusedPID();
     if (null == e || -1 === e || !E.default.isOverlayOOPEnabledForPid(e)) return null;
     let t = E.default.getTrackedGameByPid(e);
     return null == t || null == t.gameName || null == t.gameId || t.state !== _.AR.OVERLAY_RENDERING
@@ -531,7 +531,7 @@ function U(e) {
     for (let t of e.removed) (P.destroy(t), L.verbose("handleRunningGamesChange removed", t));
 }
 function w(e) {
-    if (e.pid === g.DEV_PID) return;
+    if (e.pid === T.DEV_PID) return;
     let t = P.getByPid(e.pid);
     (L.verbose("OVERLAY_SET_INPUT_LOCKED", t), null == t)
         ? L.error("OVERLAY_SET_INPUT_LOCKED: Unable to find game", e, P.debug)
@@ -557,14 +557,14 @@ function x(e) {
 }
 function k(e) {
     if (
-        (L.verbose("OVERLAY_FOCUSED", e), P.gameSetAllUnfocused(), null == e.pid || e.pid === g.DEV_PID || -1 === e.pid)
+        (L.verbose("OVERLAY_FOCUSED", e), P.gameSetAllUnfocused(), null == e.pid || e.pid === T.DEV_PID || -1 === e.pid)
     )
         return;
     let t = P.getByPid(e.pid);
     null == t ? L.error("OVERLAY_FOCUSED: Game not found", e, P.debug) : t.gameSetFocused(!0);
 }
 function F(e) {
-    if ((L.verbose("SOUNDBOARD_SET_OVERLAY_ENABLED", e), e.pid === g.DEV_PID)) return;
+    if ((L.verbose("SOUNDBOARD_SET_OVERLAY_ENABLED", e), e.pid === T.DEV_PID)) return;
     let t = P.getByPid(e.pid);
     null == t
         ? L.error("SOUNDBOARD_SET_OVERLAY_ENABLED: Game not found", e, P.debug)
@@ -609,17 +609,17 @@ function H(e) {
 }
 function j(e) {
     let t = (0, S.A)();
-    null != t && t !== g.DEV_PID && -1 !== t && (L.verbose("AUDIO_TOGGLE_SELF_MUTE", e), P.handleMuteToggled());
+    null != t && t !== T.DEV_PID && -1 !== t && (L.verbose("AUDIO_TOGGLE_SELF_MUTE", e), P.handleMuteToggled());
 }
 function W(e) {
     L.verbose("WINDOW_FOCUS", e);
-    let t = (0, T.Xg)();
+    let t = (0, g.Xg)();
     e.windowId !== t
         ? L.verbose("WINDOW_FOCUS: Not main window", { action: e, mainWindowId: t })
         : P.desktopSetFocused(e.focused);
 }
 function Y(e) {
-    if (e.pid === g.DEV_PID || -1 === e.pid) return;
+    if (e.pid === T.DEV_PID || -1 === e.pid) return;
     let t = P.getByPid(e.pid);
     null == t ? L.error("OVERLAY_SUCCESSFULLY_SHOWN: Game not found", e, P.debug) : (t.successfullyShown = !0);
 }
@@ -660,7 +660,7 @@ class X {
 class z {
     static handleMessageAcked(e) {
         L.verbose("MESSAGE_ACKED", e);
-        let t = h.A.getGame();
+        let t = f.A.getGame();
         null == t
             ? L.error("Game not found.")
             : a.h.dispatch({ type: "OVERLAY_MESSAGE_EVENT_ACTION", eventType: "ack", gameName: t.name, gameId: t.id });
@@ -668,7 +668,7 @@ class z {
     static handleMessageCreate(e) {
         if (e.message.state !== O.cmJ.SENDING) return;
         L.verbose("MESSAGE_CREATE", e, Error().stack);
-        let t = h.A.getGame();
+        let t = f.A.getGame();
         null == t
             ? L.error("Game not found.")
             : a.h.dispatch({
@@ -700,4 +700,4 @@ class q extends l.A {
               OVERLAY_TRACK_STATE_CHANGED: $,
           };
 }
-let Z = new q();
+let Q = new q();

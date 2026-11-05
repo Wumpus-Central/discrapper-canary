@@ -21,17 +21,17 @@ var i = n(435558),
     _ = n(696451),
     E = n(317525),
     A = n(71393),
-    h = n(754712),
-    f = n(576705),
+    f = n(754712),
+    h = n(576705),
     I = n(290863),
     p = n(495867),
     m = n(994500),
-    g = n(309010),
-    T = n(967198),
+    T = n(309010),
+    g = n(967198),
     S = n(977997),
     N = n(129230),
     C = n(488926),
-    O = n(986322),
+    O = n(397369),
     R = n(652215),
     L = n(746080);
 function y(e) {
@@ -53,7 +53,7 @@ function y(e) {
         guild_num_voice_channels: l,
         guild_num_roles: n,
         guild_member_num_roles: null != r ? r.roles.length : 0,
-        guild_member_perms: String(f.A.getGuildPermissions(t) ?? C.x3),
+        guild_member_perms: String(h.A.getGuildPermissions(t) ?? C.x3),
         guild_is_vip: t.features.has(R.GuildFeatures.VIP_REGIONS),
         is_member: null != r,
         num_voice_channels_active: (function (e) {
@@ -84,7 +84,7 @@ function b(e) {
         channel_id: e.id,
         channel_type: e.type,
         channel_size_total: e.isPrivate() ? e.recipients.length : 0,
-        channel_member_perms: String(null != n ? (f.A.getChannelPermissions(e) ?? C.x3) : C.x3),
+        channel_member_perms: String(null != n ? (h.A.getChannelPermissions(e) ?? C.x3) : C.x3),
         channel_hidden: t,
     };
 }
@@ -93,7 +93,7 @@ function v(e) {
     if (null == e) return null;
     let n = d.A.getChannel(e);
     if (null == n) return null;
-    let i = h.Ay.isVideoEnabled(),
+    let i = f.Ay.isVideoEnabled(),
         r = p.A.getMediaSessionId();
     return {
         channel_id: n.id,
@@ -112,8 +112,8 @@ function P(e) {
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (N.default.isThrottled(e)) return;
     let i = !("location" in t) || t.location !== R.ThZ.GUILD_CREATE_INVITE_SUGGESTION,
-        r = "guild_id" in t ? t.guild_id : i ? T.A.getGuildId() : null,
-        a = "channel_id" in t ? t.channel_id : i ? g.Ay.getChannelId(r) : null,
+        r = "guild_id" in t ? t.guild_id : i ? g.A.getGuildId() : null,
+        a = "channel_id" in t ? t.channel_id : i ? T.Ay.getChannelId(r) : null,
         s = d.A.getChannel(a),
         l = null == s ? (r ?? null) : s.isPrivate() ? null : (s.getGuildId() ?? r ?? null),
         o = {

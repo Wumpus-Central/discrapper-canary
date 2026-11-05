@@ -1,6 +1,6 @@
 var i = n(56562),
     r = n(626584),
-    a = n(986322),
+    a = n(397369),
     s = n(760751),
     l = n(253400),
     o = n(777334),
@@ -35,7 +35,7 @@ function A(e) {
     let t = s.A.findGame(e)?.id;
     return null != t && E.has(t);
 }
-let h = new Set([i.aI.UNKNOWN, i.aI.FULLSCREEN]);
+let f = new Set([i.aI.UNKNOWN, i.aI.FULLSCREEN]);
 n.d(
     t,
     {},
@@ -71,7 +71,7 @@ n.d(
                 case i.aI.UNKNOWN:
                     var r;
                     let a;
-                    return h.has(
+                    return f.has(
                         0 ===
                             (a = Object.keys((r = e.fullscreenHistory))
                                 .map(Number)

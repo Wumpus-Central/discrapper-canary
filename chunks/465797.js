@@ -2,13 +2,13 @@ let i, r, a;
 var s = n(855986),
     l = n(73153),
     o = n(54827),
-    d = n(986322),
+    d = n(397369),
     c = n(189081),
     u = n(674378),
     _ = n(723702),
     E = n(986120),
     A = n(652215);
-class h extends s.Ay.Store {
+class f extends s.Ay.Store {
     static displayName = "CloudSyncStore";
     initialize() {
         (this.waitFor(c.A, d.Ay), _.isPlatformEmbedded && E.T(), (i = {}), (r = new Set()), (a = []));
@@ -21,7 +21,7 @@ class h extends s.Ay.Store {
         return r.has(n);
     }
 }
-let f = new h(l.h, {
+let h = new f(l.h, {
     GAME_CLOUD_SYNC_START: function (e) {
         let { applicationId: t, branchId: n } = e,
             i = (0, u.gW)(t, n);
@@ -58,4 +58,4 @@ let f = new h(l.h, {
         return ((a = e), !1);
     },
 });
-n.d(t, {}, { A: f });
+n.d(t, {}, { A: h });

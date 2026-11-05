@@ -3,7 +3,7 @@ var i = n(665260),
     r = n(855986),
     a = n(73153),
     s = n(77729),
-    l = n(986322),
+    l = n(397369),
     o = n(46653),
     d = n(741394);
 let c = (0, n(945810).mj)({
@@ -16,13 +16,13 @@ var u = n(696016);
 let _ = { clipsEnabledSource: u.$D.UNSET, version: 0, enableAutoclipping: null };
 var E = n(458977),
     A = n(110742),
-    h = n(652215),
-    f = n(753070);
+    f = n(652215),
+    h = n(753070);
 let I = "default",
     p = "Discord Clips",
     m = {},
-    g = {},
-    T = [],
+    T = {},
+    g = [],
     S = 0,
     N = null,
     C = null,
@@ -39,7 +39,7 @@ let I = "default",
     w = {
         clipsEnabled: !1,
         storageLocation: I,
-        clipsQuality: { resolution: f.on.RESOLUTION_1080, frameRate: f.kn.FPS_60, bitratePercent: 75 },
+        clipsQuality: { resolution: h.on.RESOLUTION_1080, frameRate: h.kn.FPS_60, bitratePercent: 75 },
         clipsLength: u.LX.SECONDS_30,
         remindersEnabled: !0,
         decoupledClipsEnabled: !1,
@@ -76,7 +76,7 @@ function F(e, t) {
 }
 function B(e) {
     if (!E.A.getConfig({ location: "trackClipMessage" }).enableDistributedClips) return !1;
-    let t = e.attachments?.filter((e) => (0, i.Lt)(e.flags ?? 0, h.sbO.IS_CLIP)) ?? [];
+    let t = e.attachments?.filter((e) => (0, i.Lt)(e.flags ?? 0, f.sbO.IS_CLIP)) ?? [];
     if (0 === t.length || P.has(e.id)) return !1;
     let n = (function (e, t) {
         let n = [];
@@ -89,7 +89,7 @@ function B(e) {
     P.set(e.id, n);
     let r = (function (e) {
             let { message_reference: t } = e;
-            if (t?.message_id != null && (null == t.type || t.type === h.SH7.DEFAULT)) return t.message_id;
+            if (t?.message_id != null && (null == t.type || t.type === f.SH7.DEFAULT)) return t.message_id;
         })(e),
         a = !(null == r || e.author?.id !== o.default.getId() || b.has(r)) && (b.add(r), !0),
         s = !1;
@@ -183,13 +183,13 @@ class V extends r.Ay.DeviceSettingsStore {
         },
         (e) => e,
         (e) =>
-            e.clipsSettings.clipsQuality.frameRate !== f.kn.FPS_15
+            e.clipsSettings.clipsQuality.frameRate !== h.kn.FPS_15
                 ? e
                 : {
                       ...e,
                       clipsSettings: {
                           ...e.clipsSettings,
-                          clipsQuality: { ...e.clipsSettings.clipsQuality, frameRate: f.kn.FPS_30 },
+                          clipsQuality: { ...e.clipsSettings.clipsQuality, frameRate: h.kn.FPS_30 },
                       },
                   },
         (e) => ({ ...e, clipsDefaultSettingsState: e.clipsDefaultSettingsState ?? _ }),
@@ -227,14 +227,14 @@ class V extends r.Ay.DeviceSettingsStore {
         return m[e];
     }
     getClipByRemoteId(e) {
-        let t = g[e];
+        let t = T[e];
         if (null != t) return m[t];
     }
     getClipCandidates() {
         return x().flatMap((e) => e.candidates);
     }
     getPendingMontageClips() {
-        return T;
+        return g;
     }
     getUserAgnosticState() {
         return G;
@@ -329,7 +329,7 @@ let H = new V(a.h, {
                 t.isCandidate ||
                     ((G = { ...G, newClipIds: [...(G.newClipIds ?? []), t.id] }),
                     (m[t.id] = t),
-                    null != t.remoteClipId && (g[t.remoteClipId] = t.id),
+                    null != t.remoteClipId && (T[t.remoteClipId] = t.id),
                     (G.hasClips = !0)));
         },
         CLIPS_PROMOTE_CLIP_CANDIDATE: function (e) {
@@ -371,25 +371,25 @@ let H = new V(a.h, {
         },
         CLIPS_LOAD_DIRECTORY_SUCCESS: function (e) {
             for (let t of ((m = {}), e.clips))
-                t.isCandidate || ((m[t.id] = t), null != t.remoteClipId && (g[t.remoteClipId] = t.id));
+                t.isCandidate || ((m[t.id] = t), null != t.remoteClipId && (T[t.remoteClipId] = t.id));
             G.hasClips = Object.keys(m).length > 0;
         },
         CLIPS_DELETE_CLIP: function (e) {
             let t = m[e.id];
             for (let t of x()) t.removeCandidate(e.id);
             (delete m[e.id],
-                t?.remoteClipId != null && delete g[t.remoteClipId],
+                t?.remoteClipId != null && delete T[t.remoteClipId],
                 (G.hasClips = Object.keys(m).length > 0));
         },
         CLIPS_UPDATE_METADATA: function (e) {
             let { clip: t } = e;
             if (t.isCandidate) return !1;
-            ((m[t.id] = t), null != t.remoteClipId && (g[t.remoteClipId] = t.id));
+            ((m[t.id] = t), null != t.remoteClipId && (T[t.remoteClipId] = t.id));
         },
         RTC_CONNECTION_FLAGS: function (e) {
             R[e.userId] = {
-                clipsEnabled: (0, i.Lt)(e.flags, h.Ajs.CLIPS_ENABLED),
-                allowVoiceRecording: (0, i.Lt)(e.flags, h.Ajs.ALLOW_VOICE_RECORDING),
+                clipsEnabled: (0, i.Lt)(e.flags, f.Ajs.CLIPS_ENABLED),
+                allowVoiceRecording: (0, i.Lt)(e.flags, f.Ajs.ALLOW_VOICE_RECORDING),
             };
         },
         CLIPS_SHOW_CALL_WARNING: function (e) {
@@ -475,9 +475,9 @@ let H = new V(a.h, {
         },
         CLIPS_MONTAGE_RENDER_START: function (e) {
             let { clip: t } = e;
-            T = [
+            g = [
                 t,
-                ...T.filter((e) => {
+                ...g.filter((e) => {
                     let { id: n } = e;
                     return n !== t.id;
                 }),
@@ -485,7 +485,7 @@ let H = new V(a.h, {
         },
         CLIPS_MONTAGE_RENDER_DONE: function (e) {
             let { clip: t, session: n } = e;
-            ((T = T.filter((e) => {
+            ((g = g.filter((e) => {
                 let { id: n } = e;
                 return n !== t.id;
             })),
@@ -495,7 +495,7 @@ let H = new V(a.h, {
         },
         CLIPS_MONTAGE_RENDER_ERROR: function (e) {
             let { clipId: t } = e;
-            T = T.filter((e) => {
+            g = g.filter((e) => {
                 let { id: n } = e;
                 return n !== t;
             });

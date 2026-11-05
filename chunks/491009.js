@@ -11,28 +11,28 @@ var i = n(812729),
     _ = n(933958),
     E = n(182892),
     A = n(587895),
-    h = n(685396),
-    f = n(986322),
+    f = n(685396),
+    h = n(397369),
     I = n(765741),
     p = n(863160),
     m = n(671389);
-let g = [n(732755).A, m.Ay],
-    T = [];
+let T = [n(732755).A, m.Ay],
+    g = [];
 function S() {
     let e = [];
-    for (let t of g) {
+    for (let t of T) {
         let n = t.getActivity();
         null != n && e.push(n);
     }
-    return !r()(e, T) && ((T = e), !0);
+    return !r()(e, g) && ((g = e), !0);
 }
 class N extends c.Ay.Store {
     static displayName = "FirstPartyRichPresenceStore";
     initialize() {
-        this.syncWith(g, S);
+        this.syncWith(T, S);
     }
     getActivities() {
-        return T;
+        return g;
     }
 }
 let C = new N(u.h);
@@ -56,7 +56,7 @@ function B() {
         t = y.G2.getSetting();
     null != t &&
         ("0" === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) &&
-        e.push((0, h.F)(t));
+        e.push((0, f.F)(t));
     let n = C.getActivities();
     e.push(...n);
     let i = M.A.getStream();
@@ -67,16 +67,16 @@ function B() {
         null != n.application_id && (a.add(n.name), e.push(n));
     });
     let l = null != b.A.getCurrentUserActiveStream(),
-        d = f.Ay.getVisibleGame();
+        d = h.Ay.getVisibleGame();
     if (l) {
         let e = b.A.getStreamerActiveStreamMetadata(),
-            t = f.Ay.getVisibleRunningGames(),
+            t = h.Ay.getVisibleRunningGames(),
             n = null;
         (e?.pid != null && (n = t.find((t) => t.pid === e.pid) ?? null),
             null == n && e?.id != null && (n = t.find((t) => t.id === e.id) ?? null),
             null != n ? (null == F && (F = n.start ?? Date.now()), (d = n)) : (F = null));
     } else F = null;
-    let c = null != d ? f.Ay.getSdkResolutionForPID(d.pid) : void 0,
+    let c = null != d ? h.Ay.getSdkResolutionForPID(d.pid) : void 0,
         u = null != c && c.type !== p.r.UNRESOLVED ? c.game.id : void 0,
         _ = w.A.getRemoteActivities(),
         E =
@@ -119,13 +119,13 @@ function B() {
             ...(0, R.CO)(d),
         });
     }
-    let g = L.A.getActivity();
-    return (null != g && e.push({ type: o.$.LISTENING, ...g }), !r()(x, e) && ((x = e), !0));
+    let T = L.A.getActivity();
+    return (null != T && e.push({ type: o.$.LISTENING, ...T }), !r()(x, e) && ((x = e), !0));
 }
 class V extends c.Ay.Store {
     static displayName = "LocalActivityStore";
     initialize() {
-        (this.waitFor(A.A, b.A, v.A, _.Ay, M.A, C, P.A, f.Ay, U.Ay, w.A, I.A, L.A, D.A), this.syncWith([C], () => B()));
+        (this.waitFor(A.A, b.A, v.A, _.Ay, M.A, C, P.A, h.Ay, U.Ay, w.A, I.A, L.A, D.A), this.syncWith([C], () => B()));
     }
     getActivities() {
         return x;

@@ -1,7 +1,7 @@
 var i = n(855986),
     r = n(73153),
     a = n(50258),
-    s = n(986322),
+    s = n(397369),
     l = n(723702),
     o = n(57757),
     d = n(974477);
@@ -15,10 +15,10 @@ function A() {
         e !== u && ((u = e) && ((c = { ...c, hasDetectedGame: !0 }), (0, o.v)({ location: "GameModeRunningGame" })), !0)
     );
 }
-function h() {
+function f() {
     return (u && (0, o.v)({ location: "GameModeExperimentAssignment" }), !1);
 }
-class f extends i.Ay.DeviceSettingsStore {
+class h extends i.Ay.DeviceSettingsStore {
     static displayName = "GameModeStore";
     static persistKey = "GameModeStore";
     static migrations = [
@@ -36,7 +36,7 @@ class f extends i.Ay.DeviceSettingsStore {
         return (
             (c = { enabled: e?.enabled, hasDetectedGame: e?.hasDetectedGame ?? d.Y.hasDetectedGame }),
             this.syncWith([s.Ay], A),
-            this.syncWith([a.A], h),
+            this.syncWith([a.A], f),
             A()
         );
     }
@@ -74,7 +74,7 @@ class f extends i.Ay.DeviceSettingsStore {
         return E;
     }
 }
-let I = new f(r.h, {
+let I = new h(r.h, {
     GAME_MODE_SET_ENABLED: function (e) {
         return c.enabled !== e.enabled && ((c = { ...c, enabled: e.enabled }), !0);
     },
