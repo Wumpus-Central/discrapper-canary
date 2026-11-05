@@ -16,7 +16,7 @@ var a = s(477900),
     v = s(989145),
     j = s(639519),
     p = s(540665),
-    N = s(371169),
+    N = s(233470),
     y = s(391712);
 async function b(e) {
     let { start: t, ...s } = e,
@@ -1101,15 +1101,15 @@ let e0 = (0, eB.D)(() => ({ attachments: [] }));
 function e1(e) {
     e0.setState({ attachments: e });
 }
-function e6(e) {
+function e2(e) {
     0 !== e.length && e1([...e0.getState().attachments, ...e.map(eJ)]);
 }
-function e9(e) {
+function e6(e) {
     let { attachments: t } = e0.getState(),
         s = t.find((t) => t.draft.localId === e);
     null != s && (eQ(s), e1(t.filter((e) => e !== s)));
 }
-function e2(e) {
+function e9(e) {
     e.forEach(eQ);
 }
 e$.h.subscribe("LOGOUT", function () {
@@ -1143,7 +1143,7 @@ function tt(e) {
         X = n.useMemo(() => U().map((e) => ({ ...e, image: Z[e.id] })), []),
         J =
             ((t = e0.useField("attachments")),
-            (s = (0, eX.sm)(e6)),
+            (s = (0, eX.sm)(e2)),
             {
                 attachments: (l = n.useMemo(
                     () =>
@@ -1158,9 +1158,9 @@ function tt(e) {
                         })(t),
                     [t],
                 )),
-                addFiles: e6,
+                addFiles: e2,
                 pasteFiles: s,
-                removeAttachment: e9,
+                removeAttachment: e6,
                 hasErrors: l.some((e) => "error" === e.draft.status),
             }),
         { attachments: Q, addFiles: ee } = J,
@@ -1241,11 +1241,11 @@ function tt(e) {
                         let a = e8;
                         try {
                             let e = await t(s);
-                            return (e2(s), e);
+                            return (e9(s), e);
                         } catch (t) {
                             throw (
                                 e8 !== a
-                                    ? e2(s)
+                                    ? e9(s)
                                     : ("" === T.A.getDraft(F) && (0, P.I)(F, e),
                                       e1([...s, ...e0.getState().attachments])),
                                 t

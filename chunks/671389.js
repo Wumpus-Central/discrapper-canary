@@ -99,7 +99,7 @@ let b = new D(a.h, {
                     let [e, { ensureConnection: t }] = await Promise.all([
                         (async function () {
                             if ("success" !== A.Ay.getOwnedProjectsFetchState()) {
-                                let { listProjects: e } = await Promise.resolve().then(n.bind(n, 371169));
+                                let { listProjects: e } = await Promise.resolve().then(n.bind(n, 233470));
                                 (await e(),
                                     await new Promise((e) => {
                                         function t() {

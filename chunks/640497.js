@@ -16180,7 +16180,7 @@ var p2 = n(499466),
     p3 = n(667419),
     p5 = n(776162),
     p6 = n(191827),
-    p4 = n(371169),
+    p4 = n(233470),
     p8 = n(361729);
 let p7 = {
     [I.uss.VOICE_V3]: S.X.OVERLAY_WIDGETS_VOICE,
