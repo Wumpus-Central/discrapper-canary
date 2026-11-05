@@ -92,6 +92,14 @@ let f = new h(r.h, {
                 l.has(e) || c.add(e);
             }));
     },
+    GLOBAL_DISCOVERY_GAMES_TRENDING_FETCH_SUCCESS: function (e) {
+        let { data: t } = e;
+        if (0 === t.games.length) return !1;
+        t.games.forEach((e) => {
+            let { game: t } = e;
+            (l.set(t.id, new s.A(t)), c.delete(t.id), d.delete(t.id));
+        });
+    },
     GAME_FETCH_FAILURE: function (e) {
         let { gameIds: t } = e;
         t.forEach((e) => {

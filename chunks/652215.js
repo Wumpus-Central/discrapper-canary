@@ -1141,6 +1141,7 @@ let nL = Object.freeze({
         NON_GAMES_DETECTABLE: "/applications/non-games/detectable",
         GAMES: "/games",
         GAMES_AUTOCOMPLETE: "/games/autocomplete",
+        GAMES_TRENDING: "/games/trending",
         APPLICATION_ICON: (e, t) => `/applications/${e}/app-icons/${t}.png`,
         APPLICATION_RPC: (e) => `/oauth2/applications/${e}/rpc`,
         APPLICATION_ASSETS: (e) => `/oauth2/applications/${e}/assets`,

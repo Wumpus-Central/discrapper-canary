@@ -341,6 +341,7 @@
   "NON_GAMES_DETECTABLE": "/applications/non-games/detectable",
   "GAMES": "/games",
   "GAMES_AUTOCOMPLETE": "/games/autocomplete",
+  "GAMES_TRENDING": "/games/trending",
   "APPLICATION_ICON": "/applications/:param/app-icons/:param.png",
   "APPLICATION_RPC": "/oauth2/applications/:param/rpc",
   "APPLICATION_ASSETS": "/oauth2/applications/:param/assets",
