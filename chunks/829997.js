@@ -30,7 +30,6 @@ n.d(
                     walls: { absorption: { low: 0.2, mid: 0.25, high: 0.25 }, scattering: 0.6 },
                 },
             },
-            positioning: { model: "", params: {} },
         },
     },
 );

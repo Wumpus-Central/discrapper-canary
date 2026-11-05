@@ -5,31 +5,30 @@ var i = n(734057),
     l = n(835002),
     o = n(792996),
     d = n(664188),
-    c = n(665956),
-    u = n(307805);
+    c = n(307805);
 n.d(
     t,
     {},
     {
         $: function (e, t, n) {
-            let _ = r.default.getUser(t),
-                E = i.A.getChannel(n),
-                A = a.Ay.getName(E?.guild_id, E?.id, _) ?? s.Ay.getGlobalName(_);
+            let u = r.default.getUser(t),
+                _ = i.A.getChannel(n),
+                E = a.Ay.getName(_?.guild_id, _?.id, u) ?? s.Ay.getGlobalName(u);
             switch (e) {
                 case l.OB.IGNORE_SUCCESS:
-                    return o.intl.formatToPlainString(o.t["+joqrP"], { username: A });
+                    return o.intl.formatToPlainString(o.t["+joqrP"], { username: E });
                 case l.OB.UNIGNORE_SUCCESS:
-                    return o.intl.formatToPlainString(o.t.THExKa, { username: A });
+                    return o.intl.formatToPlainString(o.t.THExKa, { username: E });
                 case l.OB.BLOCK_SUCCESS:
-                    return o.intl.formatToPlainString(o.t.XXPrIs, { username: A });
+                    return o.intl.formatToPlainString(o.t.XXPrIs, { username: E });
                 case l.OB.UNBLOCK_SUCCESS:
-                    return o.intl.formatToPlainString(o.t.uExcGX, { username: A });
+                    return o.intl.formatToPlainString(o.t.uExcGX, { username: E });
                 case l.OB.MUTE_SUCCESS:
-                    return o.intl.formatToPlainString(o.t.X4NtYb, { username: A });
+                    return o.intl.formatToPlainString(o.t.X4NtYb, { username: E });
                 case l.OB.UNMUTE_SUCCESS:
-                    return o.intl.formatToPlainString(o.t.tRaBfY, { username: A });
+                    return o.intl.formatToPlainString(o.t.tRaBfY, { username: E });
                 case l.OB.REPORT_SUCCESS:
-                    return o.intl.formatToPlainString(o.t.FOptFU, { username: A });
+                    return o.intl.formatToPlainString(o.t.FOptFU, { username: E });
                 case l.OB.AGE_VERIFICATION_ERROR:
                     return o.intl.string(o.t.c6kn6F);
                 case l.OB.AGE_VERIFICATION_FAE_FAILED:
@@ -43,15 +42,13 @@ n.d(
                 case l.OB.GENERIC_ERROR:
                     return o.intl.string(o.t.zBpoc7);
                 case l.OB.REPORT_TO_MOD_SUCCESS:
-                    return o.intl.string(u.default.iBypeZ);
+                    return o.intl.string(c.default.iBypeZ);
                 case l.OB.SAFETY_FEEDBACK_SUCCESS:
                     return o.intl.string(o.t.TcFR5k);
                 case l.OB.EXISTING_USER_AGE_GATE_SUCCESS:
                     return o.intl.string(o.t["susqq/"]);
                 case l.OB.AGE_VERIFICATION_METHOD_UNAVAILABLE:
                     return o.intl.string(d.default.vVwFCK);
-                case l.OB.FAMILY_CENTER_TEEN_SETTINGS_SAVE_ERROR:
-                    return o.intl.string(c.default.fZG8IY);
                 default:
                     return o.intl.string(o.t["+c5xtT"]);
             }
