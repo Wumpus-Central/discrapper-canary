@@ -1415,7 +1415,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e4 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e4}, Build Number: 666292, Version Hash: a7fa6bfbdb8443272c1d8dddeb1b661ef42650f4`,
+    `[BUILD INFO] Release Channel: ${e4}, Build Number: 666297, Version Hash: 6338c4723e84daf6a2a9d44b85e6c23a2f073c15`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -1487,7 +1487,7 @@ let e4 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "666292";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "666297";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -3241,7 +3241,6 @@ let rf = (0, i9.Fe)({
             n.e(649351),
             n.e(777848),
             n.e(211349),
-            n.e(709204),
             n.e(519125),
             n.e(993611),
             n.e(154663),
@@ -5445,7 +5444,6 @@ let st = (0, i9.Fe)({
                 n.e(444790),
                 n.e(87641),
                 n.e(874913),
-                n.e(709204),
                 n.e(488292),
                 n.e(239734),
                 n.e(515818),
@@ -23780,7 +23778,6 @@ function O0(e) {
                     n.e(649351),
                     n.e(777848),
                     n.e(211349),
-                    n.e(709204),
                     n.e(519125),
                     n.e(993611),
                     n.e(154663),
@@ -25907,7 +25904,7 @@ let yl = "isHideDevBanner",
                     className: td()(ys.Wz, ys.mr),
                     children: [
                         (0, v.jsx)(ya, { className: ys.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "666292" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "666297" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -55019,7 +55016,6 @@ let W1 = (0, tW.Fe)({
             n.e(886492),
             n.e(874913),
             n.e(761764),
-            n.e(709204),
             n.e(488292),
             n.e(239734),
             n.e(515818),
