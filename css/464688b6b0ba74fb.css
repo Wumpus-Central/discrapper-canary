@@ -11,12 +11,9 @@
 }
 
 .eventName_hVh8FI {
-    display: -webkit-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    margin: 0
+    clip-path: inset(0 0 max(0px, calc(100% - 2lh - var(--space-4) + 1px)) 0);
+    margin: calc(var(--space-4)*-1) 0 0;
+    padding-top: var(--space-4)
 }
 
 .channelNotice_hVh8FI {
@@ -27,6 +24,10 @@
 
 .channelNotice_hVh8FI>*+* {
     margin-top: 8px
+}
+
+.channelNotice_hVh8FI>.eventName_hVh8FI {
+    margin-top: var(--space-4)
 }
 
 .singleLine_hVh8FI {
@@ -277,4 +278,4 @@
     background-color: ButtonFace
 }
 
-/*# sourceMappingURL=148faede54db5dd2.css.map*/
+/*# sourceMappingURL=464688b6b0ba74fb.css.map*/

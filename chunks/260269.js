@@ -845,7 +845,13 @@ let nA = l.memo(function (e) {
                         }),
                 ],
             }),
-            (0, s.jsx)(tb.D, { color: "text-strong", variant: "heading-sm/semibold", className: nc.eq, children: r }),
+            (0, s.jsx)(tb.D, {
+                color: "text-strong",
+                variant: "heading-sm/semibold",
+                lineClamp: 2,
+                className: nc.eq,
+                children: r,
+            }),
             (0, s.jsxs)("div", {
                 className: tQ()(nc.fI, nc.pF),
                 children: [
@@ -948,6 +954,7 @@ function nE(e) {
                             children: (0, s.jsx)(tn.E, {
                                 color: "text-strong",
                                 variant: "body-md/semibold",
+                                lineClamp: 2,
                                 className: nc.eq,
                                 children: t.name,
                             }),
